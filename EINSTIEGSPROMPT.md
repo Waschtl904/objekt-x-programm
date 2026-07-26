@@ -1,220 +1,301 @@
 # Einstiegsprompt — Neue Chat-Session
 
-> Diese Datei als Einstieg in jeden neuen Chat kopieren.  
-> Stand: **18. Juli 2026 — nach NEU-170d (DAG-Audit NEU-28/161/162 abgeschlossen).**
-
-> **Hinweis:** Dieses Arbeitsdokument spiegelt den Stand vom 18. Juli 2026 und wurde seither
-> nicht fortgeschrieben. Der aktuelle Programmstand (NEU-221d, 26. Juli 2026) steht in
-> [README.md](README.md), [STATUS.md](STATUS.md) und [OFFENE_PROBLEME.md](OFFENE_PROBLEME.md).
-> Die dort beschriebene Ordnerstruktur (`katalog/`, `werkzeuge/`) gilt für das private
-> Arbeitsjournal; in dieser öffentlichen Fassung liegen die Dokumente in thematischen
-> Strängen — siehe [INDEX.md](INDEX.md).
+> Diese Datei als Einstieg in jeden neuen Chat kopieren.
+> **Stand: 26. Juli 2026 — nach NEU-221d (Nullmodusaudit des Feshbach-Tripels).**
 
 ---
 
 ## Kontext: Wer ich bin und woran ich arbeite
 
-Ich bin Mathematiker und arbeite an einem langfristigen, eigenständigen Forschungsprogramm
-zur Riemannschen Hypothese (RH). Das Programm ist in mehrere GitHub-Repositories aufgeteilt
-(alle unter dem Account **Waschtl904**) und wird durch einen lakatosianisch strukturierten
-**Fragenkatalog** koordiniert.
+Ich arbeite an einem langfristigen, eigenständigen Forschungsprogramm zur Riemannschen
+Hypothese (RH). Das Programm ist auf mehrere GitHub-Repositories unter dem Account
+**Waschtl904** verteilt und wird durch einen lakatosianisch strukturierten Fragenkatalog
+koordiniert: jede Aussage trägt eine explizite epistemische Statusmarke, negative Resultate
+sind gleichrangige Ergebnisse, und jeder offene Punkt hat eine eindeutige Knoten-ID.
 
-Das ist kein Einsteiger- oder Hobbyansatz — die Repos enthalten echte mathematische Papiere
-(LaTeX), die von einem KI-Assistenten mitentwickelt wurden.
+Das ist kein Einsteigeransatz. Die Repos enthalten ausgearbeitete mathematische Texte, die
+im Dialog mit KI-Assistenten entstanden sind. Es gibt **keinen Beweis der RH** — das Ziel
+ist eine belastbare Spektralrealisierung, und der Weg dorthin ist dokumentiert
+einschließlich aller Sackgassen.
 
 ---
 
-## GitHub-Struktur
-
-### Zentrale Dach-Repos
+## Repositories
 
 | Repo | Inhalt |
 |---|---|
-| [`rh-fragenkatalog`](https://github.com/Waschtl904/rh-fragenkatalog) | **Zentrales Dach.** Lakatosianischer Fragenkatalog NEU-1–NEU-162. Privates Arbeitsjournal; die öffentliche Fassung ist [`objekt-x-programm`](https://github.com/Waschtl904/objekt-x-programm). |
-| [`prolate-primes-paper`](https://github.com/Waschtl904/prolate-primes-paper) | Funktionalanalysis H_c, SOT-Limes, Spektralstruktur. |
-| [`prolate-gram-coercivity`](https://github.com/Waschtl904/prolate-gram-coercivity) | Gram-Koerzivität, Edge-Block, XXII-Programm. |
+| [`objekt-x-programm`](https://github.com/Waschtl904/objekt-x-programm) | **Öffentliche Hauptfassung.** 324 Dokumente in neun thematischen Strängen. Enthält README, INDEX, STATUS, GLOSSAR, OFFENE_PROBLEME, KONVENTIONEN, CHANGELOG. |
+| [`rh-fragenkatalog`](https://github.com/Waschtl904/rh-fragenkatalog) | Privates Arbeitsjournal, historische Struktur `katalog/` + `werkzeuge/`. |
+| [`prolate-primes-paper`](https://github.com/Waschtl904/prolate-primes-paper) | Funktionalanalysis $H_c$, SOT-Limes, Spektralstruktur (TeX). |
+| [`prolate-gram-coercivity`](https://github.com/Waschtl904/prolate-gram-coercivity) | Gram-Koerzivität, Edge-Block, XXII-Programm (TeX). |
 
-### Repo-Struktur `rh-fragenkatalog`
+### Struktur von `objekt-x-programm`
 
 ```
-katalog/          NEU-XXX_*.md          Forschungsjournal-Einträge NEU-1 bis NEU-162
-werkzeuge/        neu{XX}_*.md          Analytische Hilfsätze, Verifikationsblätter (neu10–neu56)
-grundlegung/      *.md                  Axiome, Basiskonzepte, epistemische Fundierung (stabil)
-offene_probleme/  OFFENE_PROBLEME.md    Konsolidierte Problemliste
-CHANGELOG.md                           Sitzungsprotokoll
-REFERENCES.md                          Literatur
-EINSTIEGSPROMPT.md                     Diese Datei
-README.md                              Überblick
+00-grundlegung/               Minimalaxiome, Ebenen I–XVI, Spektraltriage
+01-primkanten-werkzeuge/      NEU-003 – NEU-056   Wodzicki, Feshbach, Fourier-Hebung, Nelson
+02-jacobi-limes/              NEU-058 – NEU-090   Weyl-Funktion, Divisorgraph, Schleifenspuren
+03-weil-form-statistik/       NEU-091 – NEU-120   Bochner-Tor, GUE-Formfaktor, Herglotz-Weil
+04-grenzoperator-renormierung/NEU-121 – NEU-150   PSWF, Selbstenergie, Mangoldt-Spur, Mellin
+05-primkanal-fourierladung/   NEU-151 – NEU-173   Kanalgewichte, L3°-Zeugenroute, Typfundament
+06-hochschild-bc-algebra/     NEU-174 – NEU-219z  HH⁴, Derivationen, B^log, O-219-No-Go
+07-weil-explizitformel/       NEU-220 – NEU-221d  Gammafaktor, Kontur, Krein, Hankel, Momentquelle
+audits/                       Quer-Audits und Methodik
+INDEX.md  STATUS.md  OFFENE_PROBLEME.md  GLOSSAR.md  KONVENTIONEN.md  CHANGELOG.md
 ```
+
+**Dateinamenkonvention:** `NEU-NNN[suffix]_Titel.md` mit dreistelliger, nullaufgefüllter
+Nummer. Die Katalog-ID im Text bleibt unverändert — `NEU-058_...` gehört zu Eintrag NEU-58.
 
 ---
 
 ## Objekt X — Fünfschicht-Profil
 
 ```
-(A_2D^r, [σ̃₂], [L₃], Wres_BC^{top}, m →^p pm)
+Objekt X = (A_2D^r, [ω̃₂], [L₃], Wres_BC^top, m →^p pm)
 ```
 
-**RH-Äquivalenz:**
+Fünfte Schicht: relative Primkanten $m \to pm$ mit
+$\mathcal H_{\mathrm{rel},N} = \bigoplus_{p\le N}\bigoplus_m \mathcal H_{m\to pm}$.
+
+### Zwei RH-Äquivalenzen
+
 ```
-RH ⟺ Spec(lim A_N^{Jac,-}) ⊂ ℝ
+(1) Jacobi-Kanal   RH ⟺ Spec(lim A_N^{Jac,-}) ⊂ ℝ           ⚠[M]  NEU-63D
+(2) Hankel-Kanal   RH ⟺ H_N^(0) ⪰ 0 ∧ H_N^(1) ⪰ 0  ∀N       ✓[M]  NEU-220w
+                   mit μ_k = −(k+1)/(2k+2)! · (log Ξ)^(2k+2)(0)
+                   H_N^(0) = (μ_{i+j}),  H_N^(1) = (μ_{i+j+1})
 ```
+
+Der Hankel-Kanal ist die stärkste unkonditionale Äquivalenz des Programms — beide
+Richtungen sind bewiesen. **Was fehlt, ist nicht die Äquivalenz, sondern eine adelische
+Quelle für die Positivität der Momentfolge.** Genau daran arbeitet der aktive Strang.
 
 ---
 
-## Stand des Fragenkatalogs (nach NEU-170d, 18. Juli 2026)
-
-### Gesicherte Hauptkette (Auswahl)
+## Gesicherter Kern (Auswahl)
 
 | Bereich | Einträge | Kernresultat |
 |---|---|---|
-| Formfaktor / Weil | NEU-100–112 | Tests, Kalibrierung, Jacobi-Realisierung |
-| Bombieri-Normalisierung | NEU-113–120 | Grenzübergang, $C_\xi$-Fix |
-| Jacobi-Grenzoperator | NEU-121–123 | Renormierungsbarriere, Dreifachsumme |
-| Spektralmaß / Herglotz | NEU-119, 124 | Spurklassentest |
-| PSWF-Brücke + Koerzivität | NEU-125, 130 | Prä-Lanczos-Metrik |
-| Edge-Schur-Nelson-Lemma | NEU-131 | Abstraktes Dreistufen-Lemma |
-| Primkantenraum | NEU-132–133 | PSWF-Abel-Rahmen, Primschalen |
-| Welt-2-Entscheidung | NEU-135D | $\|\varepsilon_p\|^2=1$; $\log p$ als Kopplungsgewicht |
-| Mangoldt-Renormierung | NEU-141 | $R_p \gtrsim p/\log p$; drei Spurklassen-Ebenen |
-| T2-Audit + Abschluss | NEU-142–143 | Edge vs. Vertex; T2 fertig (unter Orthogonalitätsbedingung) |
-| Nelson / Konfinement | NEU-53–56 (werkzeuge) | $\gamma_N = C/\log N$ widerlegt; SA bleibt; Weg B Standard |
-| Fourierhebung, rel. Primclock | NEU-42 (werkzeuge) | $T_p^{\mathrm{rel}} = \log p$; $e^{-sT_p^{\mathrm{rel}}} = p^{-s}$ |
-
-### Wichtige gesicherte Einzelresultate
+| Primkantenraum | NEU-44, 44.X/X' | $\mathcal H_{\mathrm{rel},N}$ notwendig; Kantendiagonalität; Rang-1-$C_p^{\mathrm{rel}}$ |
+| Fourier-Hebung | NEU-42 | $T_p^{\mathrm{rel}} = \log p$; $e^{-sT_p^{\mathrm{rel}}} = p^{-s}$ |
+| Nelson / Konfinement | NEU-53–56 | $iJ^-$ wesentlich selbstadjungiert (konditional); $\gamma_N = C/\log N$ widerlegt; Weg B Standard |
+| Welt-2-Entscheidung | NEU-135D | $\lVert\varepsilon_p\rVert^2 = 1$; $\lvert c_p\rvert^2 = O((\log p)^2/p)$ |
+| Selbstenergie | NEU-136/137 | $\Sigma_{\mathrm{rel}}^{\mathrm{ren}}(\beta)$ konvergent, spurklassig für $\Re\beta>0$ |
+| Mangoldt-Spur | NEU-141 | $\operatorname{Tr}(R\Sigma_{\mathrm{rel}}^{\mathrm{ren}}) = -\zeta'/\zeta(\beta)$, $\Re\beta>1$; $R_p \ge p/\log p$ |
+| Koeffiziententyp | NEU-216 | $\mathcal B^{\log}$ submultiplikativ **ohne** Renormierung; $\mathcal A^{\log}$; $D_g(A_{\mathrm{alg}})\subseteq\mathcal A^{\log}$ |
+| Cup-Aufstieg | NEU-218 | $L^{\mathrm{cup}}_{g;\mathbf p}\in Z^4(A_{\mathrm{alg}},M)_g$ |
+| Xi-Masterkontur | NEU-220k | exakte Vorzeichen, Faktor 2, Polbuchhaltung, keine Doppelzählung |
+| Hankel-Kriterium | NEU-220w | vollständige Hierarchie RH-äquivalent, beide Richtungen |
 
 ```
-H_{rel,N} = ⊕_{p≤N} ⊕_m H_{m→pm}     relativer Graphraum (NEU-44)
-Ψ_p = -us·log(p)·ℓ_{s,m}·Π_{J,N}(e_{u+ps}V_{pm})  Hebungsvektor (NEU-42 §10)
-T_p^rel = log p  auf reinem p-Kopplungskanal         (NEU-42, Satz 42.2)
-Σ_rel^ren(β) = Σ_p p^{-β}/(1-p^{-β}) P_p           renormierte Selbstenergie
-Tr(R Σ_rel^ren(β)) = -ζ'/ζ(β)  für Re(β) > 1        (NEU-141)
+H_rel,N          = ⊕_{p≤N} ⊕_m H_{m→pm}                         (NEU-44)
+T_p^rel          = log p  auf reinem p-Kopplungskanal            (NEU-42, Satz 42.2)
+Σ_rel^ren(β)     = Σ_p p^{−β}/(1−p^{−β})·P_p                     (NEU-136)
+Tr(R·Σ_rel^ren)  = −ζ'/ζ(β),  Re β > 1                           (NEU-141)
+M_Ξ(w)           = ⟨Ω_X, (I − wJ_X)^{−1} Ω_X⟩   ← Zielnormalform (NEU-220w/221c)
 ```
+
+Vollständige Bilanz einschließlich aller No-Gos: [`STATUS.md`](STATUS.md).
 
 ---
 
-## Aktueller Hauptengpass: Zweifache Blockade des $[L_3]$-Pfades
+## Wie das Programm hierher kam — drei abgeschlossene Strangwechsel
 
-**Volldokumentation:** [`05-primkanal-fourierladung/NEU-170d_DAG_Audit_NEU28_NEU162_bereinigt.md`](05-primkanal-fourierladung/NEU-170d_DAG_Audit_NEU28_NEU162_bereinigt.md)
+Wichtig für jede neue Session, damit alte Routen nicht versehentlich neu geöffnet werden.
 
-### Hauptdiagnose
+### 1. Der $[L_3]$-Repräsentantenpfad ist blockiert (NEU-161 – NEU-173)
 
-> Der Einmodenansatz liefert eine algebraisch nichtverschwindende skalare Vorfaktorstruktur,
-> aber weder seine Herkunft aus $[L_3]$ noch das Nichtverschwinden des Zielkantenvektors
-> $E_{1;\,1\to p}^{\mathrm{rel}}$ ist bewiesen.
-
-Der Hauptpfad ist **zweifach blockiert** — logisch unabhängig:
+Die Zeugenroute über die Fourierladung $L_3^\circ$ ließ sich nicht schließen. Die
+Quellenkegel-Audits ergaben:
 
 ```
-Blockade 1 (Herkunft):  [L₃] ↛ L₃° = e₁V₁     (Typbrücke fehlt)
-Blockade 2 (Zielkante): (p-1)log p ≠ 0 ↛ C_p(e_{1-p}V_p) ≠ 0  (ohne E_{1;1→p}^rel ≠ 0)
+[O-170b-1]        NEU-20 konstruiert L₃                          ✓[M]neg
+[O-170c-2g]       NEU-28 konstruiert L₃ oder beweist C_L ≠ 0     ✓[M]neg
+[O-170c-2j-audit] NEU-162 beweist keinen geladenen Koeffizienten ✓[M]neg
+[O-170c-2k-audit] dP^ch = P^ch d in Quellen nicht konstruiert    ✓[M]neg
 ```
 
-### Abgeschlossene Auditbefunde (NEU-170d)
+Zweifache, logisch unabhängige Blockade: die Typbrücke $[L_3] \to L_3^\circ = e_1V_1$ fehlt,
+und das Nichtverschwinden des Zielkantenvektors $E_{1;1\to p}^{\mathrm{rel}}$ ist unbewiesen.
+NEU-162 wählt $L_3^\circ = e_1V_1$ als **rechenzulässige, nicht herkunftszulässige** Wahl —
+alle Resultate ab NEU-162/163 sind konditional unter $[H\text{-}163\text{-}1]$.
+Volldokumentation: [`NEU-170d`](05-primkanal-fourierladung/NEU-170d_DAG_Audit_NEU28_NEU162_bereinigt.md).
 
-| Punkt | Inhalt | Status |
-|---|---|---|
-| `[O-170b-1]` | NEU-20 konstruiert $L_3$ | `✓[M]neg` |
-| `[O-170c-2g]` | NEU-28 konstruiert $L_3$ oder beweist $C_L \neq 0$ | `✓[M]neg` |
-| `[O-170c-2i-audit]` | NEU-161 weist $s\neq 0$ korrekt als Eingangsannahme aus | `✓[M]` |
-| `[O-170c-2j-audit]` | NEU-162 beweist keinen geladenen Koeffizienten von $[L_3]$ | `✓[M]neg` |
-| `[O-170c-2k-audit]` | $dP^{\mathrm{ch}}=P^{\mathrm{ch}}d$ in Quellen nicht konstruiert | `✓[M]neg` |
+### 2. Die kohomologische Route endet im O-219-No-Go (NEU-174 – NEU-219z)
 
-### Offene Punkte (Auswahl)
-
-| Punkt | Inhalt | Status |
-|---|---|---|
-| `[O-170b-2]` | Raumtyp von $L_3$ | `?[O]` |
-| `[O-170b-4]` | $\sigma_{L_3}: [L_3] \mapsto L_3$ | `?[O]` |
-| `[O-170c-2h]` | $a=L_3$ typzulässig in NEU-28-Spurformel | `?[O]` |
-| `[O-170c-2i]` | $P^{\mathrm{ch}}(L_3^\circ)\neq 0$ | `?[O]` |
-| `[O-170c-2j-exist]` | $\exists L\in\mathrm{Rep}([L_3])$ mit $P^{\mathrm{ch}}(L)\neq 0$ | `?[O]` |
-| `[O-170c-2k-exist]` | $P^{\mathrm{ch}}$ als Kettenprojektor neu konstruierbar? | `?[O]` |
-| `[O-170c-2ℓ]` | $[P^{\mathrm{ch}}]([L_3])\neq 0$ | **gesperrt** bis `[O-170c-2k-exist]` |
-
-### NEU-162/163 richtig eingeordnet
-
-NEU-162 wählt $L_3^\circ = e_1V_1$ als **rechenzulässige, nicht herkunftszulässige** Wahl.
-Alle Resultate ab NEU-162/163 sind konditionale Aussagen innerhalb des Testmodells:
+Der Cup-Aufstieg zu $HH^4$ gelang (NEU-218), der kanonische Basislift ist typkorrekt —
+aber nicht zyklisch:
 
 ```
-[H-163-1]: L₃° = e₁V₁          (externe Modellwahl, nicht aus [L₃] hergeleitet)
-[H-163-2]: E_{1;1→p}^rel ≠ 0  (offen — NEU-163 reduziert darauf, beweist es nicht)
-[H-163-3]: Lift-Bedingungen   (gegebenenfalls offen)
+Theorem (O-219-NoGo), NEU-219u:
+  L̃₀ ∈ Z⁴(A_alg, I₀)     typkorrekter Hochschildkozykel   ✓[M]
+  tΦ₀ = g^{−β} Φ₀  mit  g^{−β} ≠ 1
+  ⇒ keine gewöhnliche zyklische Klasse in HC⁴(A_alg)
 ```
+
+Der Faktor $g^{-\beta}$ ist **eingabeunabhängig** und wird durch die Spektraleigenschaft von
+$U_{g^{-1}}$ im KMS-Zustand strukturell erzwungen. Kein Orbitgewicht $\lambda$ kompensiert ihn.
+Zulässige Reparaturen: Orbitshift $\kappa\neq 0$, Ladungsneutralisation, andere
+Koeffizientenkategorie (parazyklisch/$\sigma$-zyklisch/getwistet) — oder Pfad `[O-219-6]`,
+die Weil-/Gammafaktorpaarung.
+
+Weitere gesicherte No-Gos dieses Stranges: $Z(A_{\mathbb Q})_g = 0$ für $g\neq 1_\Gamma$
+(NEU-182/183), globaler Bimodul-No-go (NEU-215), Charakterkern-No-go (NEU-209).
+
+### 3. Der Weil-Strang liefert die aktuelle Architektur (NEU-220 – NEU-221d)
+
+Pfad `[O-219-6]` wurde beschritten und führte über Gammafaktor, Konturtransport,
+Nullstellenpaar-Kreinraum und Spektraldeterminante zum Hankel-Kriterium. Auf dem Weg
+gesicherte No-Gos: gewöhnliche Hilbertspur unzureichend (NEU-220e), Off-Axis-Trägheit und
+Similarity-No-Go (NEU-220t), gewöhnliche Spurklassen-Determinante für $\Xi$ ausgeschlossen
+(NEU-220u).
 
 ---
 
-## Nächste sinnvolle Knoten
+## Aktueller Hauptengpass: Quellseitige Typisierung des Feshbach-Tripels
 
-### Upstream — Hauptpfad (Priorität)
+**Volldokumentation:** [`NEU-221d`](07-weil-explizitformel/NEU-221d_Direktextraktion_NEU46_Zyklischer_Sektor_und_Nullmodusaudit.md)
 
-**Route A — konkrete Repräsentantenbrücke:**
+### Zielnormalform (NEU-221c)
 
-```
-A0: Rep_op([L₃]) typkorrekt definieren
-    (L ∈ C⁴(B₃,B₃)? B₃? A_BC^an? End(H)?)
-A1: Rep_op([L₃]) ≠ ∅
-A2: L ↦ L|_diag und C_L(L) definieren
-A3: ∃ L ∈ Rep_op([L₃]) : C_L(L) ≠ 0
-    ⇒ erst dann: L° := C_L(L)^{-1} L
-A4: ∃ L ∈ Rep_op([L₃]) : C_L(L)≠0 ∧ P^ch(L)≠0
-```
-
-**Route B — kohomologisch (Neuaufbau erforderlich):**
+Gesucht sind $J_X \ge 0$ und $\Omega_X \in \mathcal H_X$ mit
 
 ```
-[O-170c-2k-exist]: dP^ch = P^ch d konstruieren?
-⇒ dann [O-170c-2ℓ]: [P^ch]([L₃]) ≠ 0?
+M_Ξ(w) = ⟨Ω_X, (I − w J_X)^{−1} Ω_X⟩        μ_k = ⟨Ω_X, J_X^k Ω_X⟩
 ```
 
-### Konditional — Testmodell $[H\text{-}163\text{-}1]$
+Kandidat aus der vorhandenen adelischen Feshbach-Geometrie:
 
-- **NEU-163:** Nichtverschwindung und Separation von $E_{1;\,1\to p}^{\mathrm{rel}}$
+```
+Ω_{X,N} = (D_N^rel)^{−1} Ψ_N        J_{X,N} = (D_N^rel)^{−2}
+```
+
+### Hauptdiagnose NEU-221d
+
+> $D_N^{\mathrm{rel}}$ ist selbstadjungiert, aber
+> $(\mathcal H_N^{\mathrm{rel}}, D_N^{\mathrm{rel}}, \Psi_N)$ ist **noch kein vollständig
+> typisiertes zyklisches Tripel**.
+
+| Teilfrage | Status |
+|---|---|
+| $D_N^{\mathrm{rel}}$ selbstadjungiert | `✓[M]` über NEU-53/54 |
+| $\Psi_p = C_p^{\mathrm{rel}}\varepsilon_p$ formal definiert | `✓[K]_part` — NEU-46 §1, Gl. 46.5–6 |
+| $\varepsilon_p, \Psi_p$ als konkrete Hilbertvektoren typisiert | `?[O]` |
+| $\lVert\Psi_N\rVert$ quellseitig fixiert | `?[O]` |
+| $E_{D_N^{\mathrm{rel}}}(\{0\})\Psi_N = 0$ | `?[O]` |
+| $\int\lvert\lambda\rvert^{-2k-2}d\mu_{\Psi_N} < \infty$, $k=0,1,2$ | `?[O]` |
+| vollständig gekoppelte endlich-archimedische Geometrie | `?[O]` |
+
+### Abhängigkeitsgraph der Sperren
+
+```
+NEU-46 (vorhanden)
+  ├── Selbstadjungiertheit: ✓[M]  (NEU-53/54)
+  ├── Formale Vektordefinition: ✓[K]_part
+  │
+  ├── [O-221-1c1a]  Vektorkonkretisierung / Normierung
+  │       ↓ Voraussetzung für
+  ├── [O-221-1c1b]  Nullmodustest  E_D({0})Ψ_N = 0
+  │       ↓ Voraussetzung für
+  ├── [O-221-1c1c]  Inverse Momente  k = 0,1,2
+  │       ↓ schaltet frei
+  │   Ω_{X,N} und J_{X,N}   ← GESPERRT bis hierher
+  │
+  └── [O-221-1c1d]  Globale Kopplung in D_scatt,N   (parallel, unabhängig)
+```
+
+`[O-221-1c1d]` fragt, ob $D_{\mathrm{scatt},N}$ tatsächlich globale Kopplung zwischen den
+Primblöcken erzeugt oder nur unabhängige lokale Blöcke vorliegen. Auch ein vollständig
+typisiertes **lokales** Tripel $(\mathcal H_p^{\mathrm{rel}}, D_{rel,p}^-, \Psi_p)$ wäre kein
+Objekt-X-Kandidat ohne kohärente Kopplung über $p$. Diese Frage darf **nicht** mit der
+Vektornormierung vermischt werden.
+
+### Strategische Einordnung
+
+Der kritische Pfad ist auf **konkrete Vektor- und Spektralbedingungen** reduziert. Die
+Selbstadjungiertheitsfrage ist erledigt; abstrakte Positivitätsargumente fügen nichts hinzu.
+Fortschritt hängt ausschließlich an der quellgetreuen Extraktion aus NEU-46 und, falls
+nötig, der Schließung von `[O-221-1c1a–d]`.
 
 ---
 
-## Drei gleichzeitig offene Hauptstränge
+## Gleichzeitig offene Nebenstränge
 
 | Strang | Letzter Stand | Nächste Aufgabe |
 |---|---|---|
-| **A: $[L_3]$-Repräsentantenpfad** | NEU-170d — zweifach blockiert | Route A, Schritt A0: $\mathrm{Rep}_{\mathrm{op}}([L_3])$ definieren |
-| **B: Regulierte Spur (krit. Streifen)** | NEU-141 — $\operatorname{Tr}_{\mathrm{reg}}(R\Sigma)$ für $0<\Re\beta\leq 1$ | NEU-141.D |
-| **C: Singulärwert-Wachstum $J^-$** | NEU-56 (werkzeuge) — Engpass lokalisiert | NEU-57: $s_k(J^-|_{H_{\mathrm{rel}}^{\mathrm{eff}}})$ |
+| **A: Adelische Momentquelle** (primär) | NEU-221d — Sperren lokalisiert | `[O-221-1c1a]`: $\Psi_N$ konkretisieren und normieren |
+| **B: Positivitätsquelle Hankel** | NEU-220w — Modell konditional | $(\mu_k)$ aus adelischer Konstruktion, nicht aus RH |
+| **C: Regulierte Spur (krit. Streifen)** | NEU-141 | NEU-141.D: Regularisierungsschema für $0<\Re\beta\le 1$ |
+| **D: Singulärwert-Wachstum $J^-$** | NEU-56 | $s_k(J^-\vert_{H_{\mathrm{rel}}^{\mathrm{eff}}})$ divergent oder akkumulierend? |
+| **E: Schur-Test exakt** | NEU-55 | $\sup_a\sum_b\lvert\Theta_{ba}\rvert/\ell(a) < \infty$ exakt statt heuristisch |
+| **F: Erweiterbarkeit punktierter Kozykel** | NEU-188 | `[O-188-0..3]`: $H$ mit $\alpha_k(H)-H\in\mathrm{LC}(\hat{\mathbb Z})$ |
+| **G: Rückrichtung RH** | — | $\operatorname{Spec}\subset\mathbb R \Rightarrow \mathrm{RH}$ |
+
+Stränge C–G sind offen, stehen aber nicht an der aktiven Front. Vollständige Liste mit
+Verzweigungsbedingungen: [`OFFENE_PROBLEME.md`](OFFENE_PROBLEME.md).
 
 ---
 
 ## Epistemologische Marker
 
 ```
-✓ [M]      = mathematisch gesichert
-✓ [M]neg   = negativer Befund gesichert (Quellennegativ)
-⚠ [M]      = intern gesichert, extern offen
-✗ [M]      = Obstruktion gesichert / widerlegt
-?[O]        = explizit offen
-✓ [R]      = methodisches Resultat (Reduktionssatz)
-[H-xxx]     = Eingangshypothese / externe Modellwahl
+✓ [M]       mathematisch gesichert — vollständiger Beweis im Dokument
+✓ [K]       konstruktiv/typgeprüft — Objekt wohldefiniert, Konsequenzen offen
+✓ [K/M]     konstruiert mit bewiesenen Teilaussagen
+✓ [M]neg    negativer Befund gesichert (Quellennegativ)
+✓ [M]_part  teilweise geschlossen
+✓ [R]       methodisches Resultat / Reduktionssatz
+⚠ [M]       konditional — gilt unter benannter offener Voraussetzung
+✗ [M]       Obstruktion gesichert / widerlegt
+? [O]       explizit offen
+[H-xxx]     Eingangshypothese / externe Modellwahl
+[O-xxx]     Knoten-ID im Abhängigkeits-DAG
 ```
 
 ---
 
 ## Arbeitsregeln
 
-- **Lakatosianische Epistemik:** Jede Aussage erhält einen Status.
-- **Kein Kartenhaus:** Offene Probleme werden als solche markiert.
-- **Sprache:** Deutsch für Diskussion, LaTeX für Formeln.
-- **GitHub:** Alle wesentlichen Ergebnisse direkt ins Repo schreiben.
-- **NEU-Nummern:** Strikt fortlaufend. Nächste freie Nummer: **NEU-163** (konditional unter $[H\text{-}163\text{-}1]$) oder neues Blatt für Route A.
-- **Werkzeuge:** Die frühen Werkzeugblätter NEU-3 bis NEU-56 liegen in `01-primkanten-werkzeuge/`. Vor Quellensuche immer auch dort nachschauen.
-- **Quellenbasiert:** Keine Behauptung ohne direkten Dateinachweis. Verzeichnislisting ≠ Datei gelesen.
+- **Lakatosianische Epistemik.** Jede Aussage erhält einen Status. Kein Kartenhaus:
+  offene Punkte werden als offen markiert, auch wenn es den Fortschritt kleiner aussehen lässt.
+- **Quellenbasiert.** Keine Behauptung ohne direkten Dateinachweis. Ein Verzeichnislisting
+  ist **nicht** dasselbe wie eine gelesene Datei. Bei Bezug auf einen früheren Eintrag: Datei
+  öffnen und die relevante Stelle zitieren.
+- **Konventionen haben Vorrang.** Bei Widersprüchen zwischen einem Katalogeintrag und
+  [`KONVENTIONEN.md`](KONVENTIONEN.md) gilt die Konventionsdatei. Besonders relevant:
+  $\rho_k$ ist **nicht** unital, $\sigma_k$ schon; $T_a := \sigma_a$.
+- **Negative Resultate sind Ergebnisse.** Ein sauber geschlossenes No-Go ist wertvoller
+  als ein offener Kandidat.
+- **Keine Wiederöffnung geschlossener Routen.** Vor jedem neuen Ansatz prüfen, ob er unter
+  eines der No-Gos in [`STATUS.md`](STATUS.md) §3 fällt.
+- **Sprache.** Deutsch für die Diskussion, LaTeX für Formeln.
+- **Nummerierung.** Strikt fortlaufend. Nächste freie Nummer: **NEU-221e** innerhalb des
+  Momentquellen-Strangs, **NEU-222** für einen neuen Strang.
+- **Frühe Werkzeugblätter.** NEU-3 bis NEU-56 liegen in `01-primkanten-werkzeuge/`.
+  Vor jeder Quellensuche auch dort nachsehen — viele Primärdefinitionen stehen dort,
+  nicht in den späteren Katalogeinträgen.
+- **Repo-Pflege.** Wesentliche Ergebnisse direkt als Datei ins Repo; CHANGELOG, STATUS und
+  OFFENE_PROBLEME mitführen.
 
 ---
 
-## Sofortige erste Aufgabe für neue Session
+## Sofortige erste Aufgabe für eine neue Session
 
-1. Lies [`05-primkanal-fourierladung/NEU-170d_DAG_Audit_NEU28_NEU162_bereinigt.md`](05-primkanal-fourierladung/NEU-170d_DAG_Audit_NEU28_NEU162_bereinigt.md) vollständig.
-2. Entscheide, welcher Strang bearbeitet werden soll:
-   - **Route A (empfohlen):** Definition von $\mathrm{Rep}_{\mathrm{op}}([L_3])$ — Schritt A0.
-   - **Route B:** Konstruktion von $P^{\mathrm{ch}}$ als Kettenprojektor.
-   - **Konditional:** NEU-163 unter $[H\text{-}163\text{-}1]$.
-3. Vor jeder Quellenaussage: Datei direkt lesen, nicht nur Listing.
+1. Lies [`NEU-221d`](07-weil-explizitformel/NEU-221d_Direktextraktion_NEU46_Zyklischer_Sektor_und_Nullmodusaudit.md)
+   vollständig, dann [`NEU-221c`](07-weil-explizitformel/NEU-221c_Zyklischer_Feshbach-Weyl_Kandidat_und_quadratische_Resolvente.md)
+   für die Zielnormalform und [`NEU-220w`](07-weil-explizitformel/NEU-220w_Hankelvollstaendigkeit_Moment-GNS_und_semifinite_Atomizitaet.md)
+   für das Hankel-Kriterium.
+
+2. Öffne die Quelle [`NEU-046`](01-primkanten-werkzeuge/NEU-046_x3_renormierte_relative_determinante_weyl_korrekturen.md)
+   und extrahiere **quellgetreu**, was dort über $(\mathcal H_N^{\mathrm{rel}}, D_N^{\mathrm{rel}}, \Psi_N)$
+   samt Skalarprodukt und Kopplungsnormalisierung tatsächlich belegt ist. Nichts ergänzen,
+   was nicht dasteht.
+
+3. Wähle den Knoten:
+   - **`[O-221-1c1a]` (empfohlen):** $\varepsilon_p, \Psi_p$ als konkrete Hilbertvektoren
+     typisieren und $\lVert\Psi_N\rVert$ quellseitig fixieren. Blockiert alles Weitere.
+   - **`[O-221-1c1d]` (parallel möglich):** globaler Kopplungsgehalt von $D_{\mathrm{scatt},N}$ —
+     echte Kopplung über $p$ oder nur lokale Blöcke?
+
+4. Vor jeder Quellenaussage: Datei direkt lesen, nicht nur das Listing.

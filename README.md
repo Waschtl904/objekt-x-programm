@@ -7,7 +7,7 @@ lückenlos nachvollziehbare Kette aus Konstruktionen, Tests, Audits und No-Go-Re
 
 > **Stand:** 26. Juli 2026 · **letzter Eintrag:** NEU-221d · **324 Forschungsdokumente**
 
-[Gesamtindex](INDEX.md) · [Statusregister](STATUS.md) · [Offene Probleme](OFFENE_PROBLEME.md) · [Glossar](GLOSSAR.md) · [Konventionen](KONVENTIONEN.md) · [Literatur](REFERENCES.md)
+[Gesamtindex](INDEX.md) · [Statusregister](STATUS.md) · [Offene Probleme](OFFENE_PROBLEME.md) · [Glossar](GLOSSAR.md) · [Konventionen](KONVENTIONEN.md) · [Literatur](REFERENCES.md) · [Einstiegsprompt](EINSTIEGSPROMPT.md)
 
 ---
 
@@ -174,6 +174,11 @@ NEU-174 (Hochschild-Komplex) → NEU-176 (geladene $HH^4$-Klasse) → NEU-195 (B
 
 **Wer nur die harten Ergebnisse sucht**
 [STATUS.md](STATUS.md) listet gesicherte Sätze, No-Gos und konditionale Resultate ohne Zwischenschritte.
+
+**Wer am Programm mitarbeiten will**
+[EINSTIEGSPROMPT.md](EINSTIEGSPROMPT.md) fasst den vollständigen Arbeitskontext auf Stand NEU-221d
+zusammen — Architektur, geschlossene Routen, aktuelle Sperren, Arbeitsregeln und den nächsten
+konkreten Knoten. Gedacht als Einstiegstext für eine neue Arbeits- oder KI-Sitzung.
 
 ---
 
