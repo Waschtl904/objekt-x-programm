@@ -281,6 +281,11 @@ Das ist zugleich die Frage nach der Singulärwertasymptotik $s_k(J^-|_{H^{\mathr
 
 ### G4 — Testschacht statt Großgrabung: die singuläre Route entscheiden
 
+> **Priorität (Stand NEU-221e).** Wird nur ein Strang zuerst bearbeitet, ist G4 der
+> schärfere Entscheidungstest: Beide Ausgänge sind informativ. G3 bleibt parallel der
+> wichtigste spektrale Knoten zu HP-2, hat aber nicht denselben Ja/Nein-Charakter.
+> Siehe [Ebene XVI, XVI-D/P4](00-grundlegung/ebene-XVI-objekt-x.md).
+
 Vor weiterer Investition in die HH-Schicht: einen schmalen, tiefen Test auf [O-207-5b] und
 [O-209-5/6]. Ergebnis entweder „singuläre Route trägt" — dann ist der Weg frei — oder
 „trägt nicht" — dann ist die kohomologische Schicht von X nach heutigem Wissen leer, und

@@ -431,10 +431,16 @@ Gilt nur, solange die kohomologische Schicht Bestandteil der Konstruktion bleibe
 | P4.3 | Randtermkontrolle | — | `❓[O]` `[O-207-5b]` |
 | P4.4 | Charakterkernmenge $Z_g$ | — | `❓[O]` `[O-209-5/6]` |
 
-> **Entscheidungsknoten.** P4 ist nach P3.1/P3.2/P3.4 der **letzte bekannte**
-> Konstruktionsweg für die geladene Klasse. Scheitert P4.3/P4.4, hat die kohomologische
-> Schicht von $X$ nach heutigem Wissensstand keinen bekannten Konstruktionsweg mehr.
-> Dieser Knoten ist vor weiterer Investition in P3 zu entscheiden.
+> **Entscheidungsknoten — höchste Priorität bei serieller Bearbeitung.** P4 ist nach
+> P3.1/P3.2/P3.4 der **letzte bekannte** Konstruktionsweg für die geladene Klasse.
+> Scheitert P4.3/P4.4, hat die kohomologische Schicht von $X$ nach heutigem Wissensstand
+> keinen bekannten Konstruktionsweg mehr. Dieser Knoten ist vor weiterer Investition in P3
+> zu entscheiden.
+>
+> P4 ist der **schärfere** Entscheidungstest: Beide Ausgänge sind informativ — ein
+> positiver hält die HH-Schicht am Leben, ein negativer schließt sie nach heutigem Wissen
+> ab. P5 (→ HP-2) bleibt parallel der wichtigste **spektrale** Knoten, hat aber nicht
+> denselben Ja/Nein-Charakter.
 
 ### P5 — Vergleichsoperator-/Konfinementpfad
 
