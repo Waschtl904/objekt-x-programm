@@ -37,7 +37,17 @@ stärkere No-Go-Klasse als NEU-56.
 
 Sperrvermerk: „$D_N$ diskret $\Rightarrow$ $D_\infty$ kompakt resolvent" ist unzulässig.
 
-Nachfolgeknoten `[O-223-2]`. XVI-D/P5 entsprechend korrigiert.
+**Revision 2 (Gegenlese).** Zwei Präzisierungen: (a) Die Reduktion ist eine
+**Graphnormklasse** $\lVert\tilde Lx\rVert+\lVert x\rVert\asymp\lVert\lvert D_{\mathrm{rel}}\rvert x\rVert+\lVert x\rVert$,
+keine Operatorgleichheit — der Suchraum kollabiert auf eine Kompaktheitsfrage, nicht auf
+einen Operator. (b) **Vorzeichenkorrektur:** $(1+(J^-)^2)^{1/2}$ aus NEU-56 §7 ist typwidrig,
+da $(J^-)^*=-J^-$ (54.3) und damit $1+(J^-)^2=1-D_{\mathrm{rel}}^2\not\ge1$; korrekt ist
+$(1+D_{\mathrm{rel}}^2)^{1/2}$. `✓[M]_neg` Ferner: der reduzierende Spektralraum
+$E_{D_{\mathrm{rel}}}(\mathbb R\setminus\{0\})\mathcal H=\mathcal H^{\mathrm{eff}}$ ist eine
+eigene offene Bedingung, in 55.0 nicht belegt; Kernabspaltung allein genügt nicht.
+Binärer Test mit negativem Zeugen und Weyl-Folge aufgenommen.
+
+Nachfolgeknoten `[O-223-2]` mit Teilknoten a–d. XVI-D/P5 entsprechend korrigiert.
 
 ---
 

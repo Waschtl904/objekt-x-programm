@@ -156,9 +156,9 @@ Nach Dringlichkeit geordnet.
 | 2 | `[O-220-1]` | Adelische Quellkonstruktion der positiven Momentfolge (RH-stark) | NEU-220w / NEU-221 |
 | 3 | `[O-161]` | Existiert ein explizit konstruiertes $\ell_{s_0,m_0}\neq 0$ mit $s_0\neq 0$ in $L_3^\circ = \sum_{s,m}\ell_{s,m}e_sV_m$? | NEU-161/162 |
 | 4 | `[O-141-D]` | Regularisierungsschema für $\operatorname{Tr}_{\mathrm{reg}}(R\Sigma_{\mathrm{rel}}^{\mathrm{ren}})$ im kritischen Streifen $0<\Re\beta\le 1$ | NEU-141 |
-| 5 | `[O-223-2]` | **Typkorrigiert (NEU-223):** $s_k(J^-)$ ist für unbeschränktes $J^-$ nicht definiert. Frage: Ist $(1+(J^-)^2)^{-1/2}$ kompakt auf $\mathcal H_{\mathrm{rel}}^{\mathrm{eff}}$? Alternativ: $\sum_p \operatorname{Tr}\lvert M_p(z)\rvert<\infty$ gleichmäßig auf Kompakta | NEU-56/223 |
+| 5 | `[O-223-2]` | **Typkorrigiert (NEU-223):** $s_k(J^-)$ ist für unbeschränktes $J^-$ nicht definiert. Kanonisch über $D_{\mathrm{rel}}$: Ist $(1+D_{\mathrm{rel}}^2)^{-1/2}$ kompakt auf $\mathcal H_{\mathrm{rel}}^{\mathrm{eff}}$? Teilknoten a–d Alternativ: $\sum_p \operatorname{Tr}\lvert M_p(z)\rvert<\infty$ gleichmäßig auf Kompakta | NEU-56/223 |
 | 6 | `[X.3.25]` | Gilt $\sup_a \sum_b \lvert\Theta_{ba}\rvert/\ell(a) < \infty$ exakt statt nur heuristisch? | NEU-55 |
-| 6b | `[O-223-2]` | Ist $(1+(J^-)^2)^{-1/2}$ kompakt auf $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$? Die $\tilde L$-Klasse ist auf diesen einen Kandidaten reduziert; ein negativer Ausgang wäre eine stärkere No-Go-Klasse als NEU-56 | NEU-223 |
+| 6b | `[O-223-2]` | Ist $(1+D_{\mathrm{rel}}^2)^{-1/2}$ kompakt auf $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$? Die $\tilde L$-Klasse ist auf **eine Graphnormklasse** reduziert; ein negativer Ausgang wäre eine stärkere No-Go-Klasse als NEU-56 | NEU-223 |
 | 7 | `[O-188-0..3]` | Existiert $H\notin \mathrm{LC}(\hat{\mathbb Z})$ mit $\alpha_k(H)-H\in\mathrm{LC}(\hat{\mathbb Z})$ für alle $k$, verträglich mit allen Kreuzrelationen? | NEU-188 |
 | 8 | — | Rückrichtung: $\operatorname{Spec}\subset\mathbb R \Rightarrow \mathrm{RH}$ | — |
 

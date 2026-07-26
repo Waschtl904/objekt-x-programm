@@ -456,7 +456,10 @@ Gilt nur, solange die kohomologische Schicht Bestandteil der Konstruktion bleibe
 | # | Anforderung | Status |
 |---|---|---|
 | P5.1 | Vergleichsoperator $\tilde L$ mit $\lVert J^- x\rVert \lesssim \lVert \tilde L x\rVert$ (Schur/Nelson) **und** $\lVert D_{\mathrm{rel}}x\rVert + \lVert x\rVert \ge c\lVert \tilde L x\rVert$ (Konfinement) | `❓[O]` NEU-56 (VI) |
-| P5.2 | **Typkorrigiert (NEU-223).** Für unbeschränktes $J^-$ sind gewöhnliche Singulärwerte nicht definiert. Relevantes Objekt: Ist $(1+(J^-)^2)^{-1/2}$ kompakt auf $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$? | `❓[O]` `[O-223-2]` |
+| P5.2 | **Typkorrigiert (NEU-223 Rev. 2).** $s_k(J^-)$ ist für unbeschränktes $J^-$ nicht definiert. Kanonisch über $D_{\mathrm{rel}}$: Ist $(1+D_{\mathrm{rel}}^2)^{-1/2}$ kompakt auf $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$? | `❓[O]` `[O-223-2d]` |
+| P5.2a | $\dim\ker D_{\mathrm{rel}}$ und exakte Beschreibung des Kerns | `❓[O]` `[O-223-2a]` |
+| P5.2b | Ist $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}=(\ker D_{\mathrm{rel}})^\perp$ **reduzierend**, d.h. $E_{D_{\mathrm{rel}}}(\mathbb R\setminus\{0\})\mathcal H_{\mathrm{rel}}=\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$? In NEU-55 (55.0) nicht belegt | `❓[O]` `[O-223-2b]` |
+| P5.2c | Graphnormbeschränkte Orthonormalfolge in $\operatorname{Dom}(D_{\mathrm{rel}})\cap\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$ konstruieren oder ausschließen (negativer Zeuge bzw. Weyl-Folge) | `❓[O]` `[O-223-2c]` |
 | P5.3 | Schur-Test exakt statt heuristisch: $\sup_a\sum_b\lvert\Theta_{ba}\rvert/\ell(a)<\infty$ | `❓[O]` NEU-55 |
 | P5.4 | Skalare Normierung $\gamma_N$ ist als Mechanismus verbraucht — P5.1 muss ohne sie auskommen | `✗[M]` NEU-56 Satz 56.2 |
 
@@ -473,8 +476,21 @@ P5 ist der einzige registrierte Zugang zu HP-2 (vgl. C.4), aber nicht der einzig
 >    trivial wird und die Verträglichkeitsbedingung entfällt.
 >
 > **G3 ist damit keine Suchaufgabe nach einem Vergleichsoperator mehr, sondern eine
-> Spektralfrage:** Ist $(1+(J^-)^2)^{-1/2}$ kompakt auf $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$?
-> Ein negativer Ausgang wäre eine **erheblich stärkere** No-Go-Klasse als NEU-56.
+> Spektralfrage:** Ist $(1+D_{\mathrm{rel}}^2)^{-1/2}$ kompakt auf $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$?
+>
+> **Zwei Präzisierungen (Rev. 2).** Erstens ist die Reduktion eine **Graphnormklasse**, keine
+> Operatorgleichheit: $\lVert\tilde Lx\rVert+\lVert x\rVert \asymp \lVert\lvert D_{\mathrm{rel}}\rvert x\rVert+\lVert x\rVert$.
+> Es können formal verschiedene $\tilde L$ darin liegen; für die Kompaktheit ist das
+> unerheblich, da graphnormäquivalente Einbettungen gleichzeitig kompakt sind. Der Suchraum
+> kollabiert auf **eine Kompaktheitsfrage**, nicht auf einen Operator. Zweitens ist der in
+> NEU-56 §7 genannte Ausdruck $(1+(J^-)^2)^{1/2}$ **typwidrig**: wegen $(J^-)^*=-J^-$ (54.3)
+> gilt $(J^-)^2=-D_{\mathrm{rel}}^2$, also $1+(J^-)^2=1-D_{\mathrm{rel}}^2 \not\ge 1$.
+> Korrekt ist $(1+D_{\mathrm{rel}}^2)^{1/2}$. `✓[M]_neg`
+>
+> **Umfang eines negativen Ausgangs.** Ausgeschlossen wäre die gesamte erzwungene
+> Vergleichsoperatorklasse des gegenwärtigen relativen Jacobi-/Feshbachmodells — **nicht**,
+> dass eine anders konstruierte Realisierung $H_X$ HP-2 erfüllt. `[O-223-2]` ist ein binärer
+> Strukturtest des HP-Profils (C.1), **keine Sperre** für den Stieltjeskanal (C.2).
 > Vollständige Typisierung: [`NEU-223`](../01-primkanten-werkzeuge/NEU-223_Quellenaudit_alternativer_Vergleichsoperator_Schur_Konfinement_und_kompakter_Resolvent.md).
 
 ---

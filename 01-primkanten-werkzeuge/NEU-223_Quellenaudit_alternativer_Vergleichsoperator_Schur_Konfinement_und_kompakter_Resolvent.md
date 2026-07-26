@@ -2,7 +2,7 @@
 
 **Katalog-ID:** NEU-223
 **Knoten:** `[O-223-1-alternative-comparison-operator-source-audit]`
-**Stand:** 26. Juli 2026
+**Stand:** 26. Juli 2026 · **Revision 2** (Graphnormklasse statt Operatorgleichheit; Vorzeichenkorrektur $(J^-)^2$)
 **Typ:** Reines Quellenaudit von NEU-52 bis NEU-56 — **keine** Konstruktion eines $\tilde L$
 **Zweck:** Den einzigen registrierten Pfad zu HP-2 so exakt typisieren, dass weder
 Selbstadjungiertheit mit Konfinement noch Konfinement mit Kompaktheit verwechselt werden kann
@@ -21,14 +21,19 @@ Zwei Befunde stehen bereits in den Quellen und ändern die Zielnormalform:
 
 G3 betrifft damit ausschließlich das **HP-Profil** (XVI-C.1), nicht den Jacobi-Kanal.
 
-**(ii) Die zulässige Klasse von $\tilde L$ ist quellenseitig bereits auf einen Punkt reduziert.**
-NEU-56 §1 zeigt, dass (N1) und (K) zusammen $L \simeq \lvert D_{\mathrm{rel}}\rvert$ erzwingen,
-und NEU-56 §7 benennt den daraus folgenden kanonischen Kandidaten
-$\tilde L = (1+(J^-)^2)^{1/2}$ samt der Feststellung, dass dann (K) **trivial** ist und
-die gesamte Frage auf das Wachstum der Singulärwerte zusammenfällt.
+**(ii) Die zulässige Klasse von $\tilde L$ ist quellenseitig auf eine *Graphnormklasse* reduziert.**
+NEU-56 §1 zeigt, dass (N1) und (K) zusammen $L \simeq \lvert D_{\mathrm{rel}}\rvert$ erzwingen.
+Das ist **keine Operatorgleichheit**: es können formal verschiedene $\tilde L$ in dieser Klasse
+existieren. Für die Kompaktheitsfrage ist das unerheblich, weil graphnormäquivalente
+Domäneneinbettungen gleichzeitig kompakt oder nicht kompakt sind. Der Suchraum kollabiert
+also nicht auf einen Operator, wohl aber auf **eine einzige Kompaktheitsfrage** — und diese
+wird kanonisch über $D_{\mathrm{rel}}$ selbst gestellt, nicht über $J^-$ (§6).
+
+**(iii) Quellenfehler in NEU-56 §7 (Revision 2).** Der dort genannte Kandidat
+$(1+(J^-)^2)^{1/2}$ ist typwidrig; korrekt ist $(1+D_{\mathrm{rel}}^2)^{1/2}$. Nachweis in §6.1.
 
 $$
-\boxed{\ [O\text{-}223\text{-}1] \quad \checkmark[M] \ \text{(Typisierung abgeschlossen; }\tilde L\text{-Klasse auf einen Kandidaten reduziert)}}
+\boxed{\ [O\text{-}223\text{-}1] \quad \checkmark[M] \ \text{(Typisierung abgeschlossen; }\tilde L\text{-Klasse auf eine Graphnormklasse reduziert)}}
 $$
 
 ---
@@ -269,80 +274,153 @@ nur umschreibt. Die Quellen belegen mehr — und zwar in beide Richtungen der Or
 > scheitert trotzdem — und zwar an (K), also am *anderen* Ende als die skalaren Varianten,
 > die an Schur scheitern. Vergrößern von $L$ hilft (N1)/(N2) und schadet (K); Verkleinern
 > umgekehrt. Damit ist keine Rekalibrierung in der von $L$ erzeugten Ordnungsklasse frei —
-> weder äquivalente noch echt größere. Genau das ist der Inhalt der strukturellen Pointe
-> $L\simeq\lvert D_{\mathrm{rel}}\rvert$ aus §1.
+> weder äquivalente noch echt größere.
+
+### 5.2 Die Reduktion ist eine Graphnormklasse, keine Operatorgleichheit
+
+Aus $J^-\lesssim\tilde L$ und $\tilde L\lesssim\lvert D_{\mathrm{rel}}\rvert$ zusammen mit der
+in NEU-56 §1 verwendeten Gegenrichtung folgt für jeden zulässigen Vergleichsoperator:
 
 $$
-\boxed{\ \text{Verboten sind sämtliche } \tilde L, \text{ die nicht } \asymp \lvert D_{\mathrm{rel}}\rvert \text{ sind — in beide Richtungen.}\ }
+\boxed{\ \lVert\tilde Lx\rVert + \lVert x\rVert \ \asymp\ \bigl\lVert\lvert D_{\mathrm{rel}}\rvert x\bigr\rVert + \lVert x\rVert \ }
 $$
 
-### 5.2 Der kanonische Kandidat steht bereits in der Quelle
-
-NEU-56 §7 nennt drei Anforderungen an $\tilde L$:
-
-1. $\tilde L$ hat kompakten Resolventen (Eigenwerte $\to\infty$, endliche Multiplizität auf $\mathcal H_{\mathrm{rel}}^{\mathrm{eff}}$),
-2. $\tilde L \lesssim \lvert D_{\mathrm{rel}}\rvert$ — echtes Konfinement, **nicht** über das skalare $\gamma_N$ erzwungen,
-3. Verträglichkeit: $[J^-,\tilde L]$ Schur-kontrolliert.
-
-und den daraus folgenden Kandidaten, wörtlich:
-
-> *„$\tilde L$ als Funktion von $J^-$ selbst, z.B. $\tilde L = (1+(J^-)^2)^{1/2}$: dann ist
-> (K) trivial ($\tilde L = \lvert D_{\mathrm{rel}}\rvert$), aber Kompaktheit des Resolventen
-> wird zur Frage über das Wachstum der singulären Werte von $J^-$ auf
-> $\mathcal H_{\mathrm{rel}}^{\mathrm{eff}}$ — das ist der eigentliche, bisher nicht
-> adressierte Spektralpunkt."*
-
-Mit dieser Wahl sind die Anforderungen 2 und 3 automatisch erfüllt: (K) gilt mit Gleichheit,
-und $[J^-,\tilde L]$ entfällt als eigenständige Bedingung, da $\tilde L$ eine Funktion von
-$J^-$ ist. **Übrig bleibt allein Anforderung 1.**
+> **Präzisierung (Revision 2).** In dieser Klasse können formal verschiedene Operatoren
+> liegen. Der Suchraum kollabiert daher **nicht** notwendig auf einen einzigen Operator.
+> Für die Kompaktheit ist das jedoch unerheblich: graphnormäquivalente Domäneneinbettungen
+> sind gleichzeitig kompakt oder nicht kompakt. Der Suchraum kollabiert also auf **eine
+> einzige Kompaktheitsfrage**.
 
 $$
-\boxed{\ \text{Die } \tilde L\text{-Klasse ist quellenseitig auf einen Kandidaten reduziert. G3 ist damit keine Suchaufgabe mehr, sondern eine Spektralfrage.}\ }
+\boxed{\ \text{G3 ist keine Suchaufgabe nach einem Vergleichsoperator mehr, sondern eine Spektralfrage über } D_{\mathrm{rel}}. \ }
 $$
+
+### 5.3 Die drei Anforderungen aus NEU-56 §7
+
+NEU-56 §7 verlangt von $\tilde L$: (1) kompakter Resolvent auf $\mathcal H_{\mathrm{rel}}^{\mathrm{eff}}$,
+(2) $\tilde L\lesssim\lvert D_{\mathrm{rel}}\rvert$ ohne Erzwingung über skalares $\gamma_N$,
+(3) $[J^-,\tilde L]$ Schur-kontrolliert. Wählt man $\tilde L$ als Funktion von
+$\lvert D_{\mathrm{rel}}\rvert$, sind (2) und (3) automatisch erfüllt. **Übrig bleibt allein (1).**
 
 ---
 
-## 6. `[O-223-1d]` — Kompakte Einbettung: Typkorrektur
+## 6. `[O-223-1d]` — Kompaktheit: Typkorrektur in zwei Stufen
 
-### 6.1 Die Formulierung in Ebene XVI war typwidrig
+### 6.1 Erste Stufe: Vorzeichenkorrektur am Quellenkandidaten
 
-XVI-D/P5.2 fragt nach $s_k(J^-\vert_{\mathcal H_{\mathrm{rel}}^{\mathrm{eff}}})$. Für einen
-**unbeschränkten** Operator sind gewöhnliche Singulärwerte nicht ohne Weiteres definiert.
+NEU-56 §7 nennt wörtlich $\tilde L = (1+(J^-)^2)^{1/2}$. Dieser Ausdruck ist **typwidrig**.
 
-Typkorrekte Objekte:
+Aus NEU-54 (54.3) und Z. 47 sowie NEU-53 §2 gilt in den Quellen ausdrücklich
 
-| Objekt | Bedeutung |
-|---|---|
-| $(\tilde L + i)^{-1} \in \mathcal K(\mathcal H_{\mathrm{rel}}^{\mathrm{eff}})$ | kompakter Resolvent von $\tilde L$ |
-| $J^-(1+(J^-)^2)^{-1/2}$ | beschränkt, aber **nicht** kompakt (Betrag $\to 1$) — als Testobjekt ungeeignet |
-| $(1+(J^-)^2)^{-1/2}$ | **das relevante Objekt**: kompakt $\iff$ $\tilde L$ hat kompakten Resolventen |
-| $\operatorname{Dom}(\tilde L)\hookrightarrow \mathcal H_{\mathrm{rel}}^{\mathrm{eff}}$ mit $\tilde L$-Graphnorm | kompakt $\iff$ dasselbe |
+$$
+(J^-)_{ab} = -\overline{(J^-)_{ba}}, \qquad (J_N^-)^* = -J_N^- ,
+\tag{54.3}
+$$
 
-Was NEU-55/56 tatsächlich kontrollieren:
+also ist $J^-$ **schiefadjungiert** — genau deshalb wird $iJ^-$ symmetrisch und
+$D_{\mathrm{rel}} = \overline{iJ^-}$ selbstadjungiert (55.18, 56.9). Daraus folgt
 
-- **NEU-55 (55.9):** $J^-L^{-1} \in \mathcal B(\mathcal H)$ — **Beschränktheit**, nicht Kompaktheit.
+$$
+D_{\mathrm{rel}}^2 = (iJ^-)^2 = -(J^-)^2, \qquad\text{also}\qquad
+1+(J^-)^2 = 1 - D_{\mathrm{rel}}^2 .
+$$
+
+Der Ausdruck $1+(J^-)^2$ ist damit **nicht** $\ge 1$, sondern $\le 1$, und seine Wurzel
+existiert im Allgemeinen nicht. Gemeint — und im Weiteren verwendet — ist
+
+$$
+\boxed{\ \tilde L \;=\; \bigl(1+\lvert J^-\rvert^2\bigr)^{1/2} \;=\; \bigl(1+D_{\mathrm{rel}}^2\bigr)^{1/2} \;\ \text{mit}\ \; \lvert J^-\rvert = \bigl((J^-)^*J^-\bigr)^{1/2} = \lvert D_{\mathrm{rel}}\rvert . \ }
+$$
+
+> **Status.** `✓[M]_neg` gegen die Schreibweise in NEU-56 §7. Die *Absicht* der Quelle —
+> $\tilde L$ als Funktion von $J^-$, sodass (K) trivial wird — bleibt unberührt und korrekt;
+> korrigiert wird allein die Symbolform. Die Identität mit $\lvert D_{\mathrm{rel}}\rvert$ ist
+> hier aus der Quelldefinition $D_{\mathrm{rel}}=\overline{iJ^-}$ und (54.3) belegt, nicht aus
+> formaler Symbolrechnung übernommen.
+
+### 6.2 Zweite Stufe: die kanonische Formulierung läuft über $D_{\mathrm{rel}}$
+
+Da $D_{\mathrm{rel}}$ selbstadjungiert ist (56.9), sind äquivalent:
+
+$$
+(D_{\mathrm{rel}} - i)^{-1} \in \mathcal K
+\quad\Longleftrightarrow\quad
+\bigl(1+D_{\mathrm{rel}}^2\bigr)^{-1/2} \in \mathcal K
+\quad\Longleftrightarrow\quad
+\operatorname{Dom}(D_{\mathrm{rel}}) \hookrightarrow \mathcal H_{\mathrm{rel}} \ \text{kompakt (Graphnorm).}
+$$
+
+Diese Form ist typologisch sicherer als jede über $J^-$, weil $J^-$ erst nach Multiplikation
+mit $i$ und Abschluss selbstadjungiert wird.
+
+Was NEU-55/56 demgegenüber tatsächlich kontrollieren:
+
+- **NEU-55 (55.9):** $J^-L^{-1}\in\mathcal B(\mathcal H)$ — **Beschränktheit**, nicht Kompaktheit.
 - **NEU-54 (54.16/54.17):** $L^{-1}$ kompakt, *„da $\ell(p,m,r,u)\to\infty$ entlang der Basis"*; zusammen mit (K) folgt $(D_{\mathrm{rel}}-i)^{-1}\in\mathcal K$.
 
-> **Konsequenz.** Die Kompaktheit von $L^{-1}$ ist gesichert (Diagonaloperator mit
-> divergierenden Einträgen). Verloren geht nicht die Kompaktheit von $L$, sondern die
-> Brücke (K) zwischen $L$ und $D_{\mathrm{rel}}$. Bei $\tilde L = \lvert D_{\mathrm{rel}}\rvert$
-> ist die Brücke trivial — dafür ist die Kompaktheit nicht mehr geschenkt.
+> **Konsequenz.** Die Kompaktheit von $L^{-1}$ war nie das Problem. Verloren geht nicht sie,
+> sondern die Brücke (K) zwischen $L$ und $D_{\mathrm{rel}}$. Bei
+> $\tilde L\asymp\lvert D_{\mathrm{rel}}\rvert$ ist die Brücke trivial — dafür ist die
+> Kompaktheit nicht mehr geschenkt.
 
-### 6.2 Die korrekt gestellte Frage
+### 6.3 Der Kernschritt und was er *nicht* leistet
+
+Ist $\dim\ker D_{\mathrm{rel}} = \infty$, so wirkt $(1+D_{\mathrm{rel}}^2)^{-1/2}$ auf dem Kern
+als **Identität**; der volle Operator kann dann nicht kompakt sein. Die Restriktion auf
 
 $$
-\boxed{\ \text{Ist } \bigl(1+(J^-)^2\bigr)^{-1/2} \ \text{kompakt auf } \mathcal H_{\mathrm{rel}}^{\mathrm{eff}}\,? \ }
+\mathcal H_{\mathrm{rel}}^{\mathrm{eff}} := \bigl(\ker D_{\mathrm{rel}}\bigr)^{\perp}
 $$
 
-Äquivalent: Divergiert die Eigenwertfolge von $\lvert D_{\mathrm{rel}}\rvert$ auf
-$\mathcal H_{\mathrm{rel}}^{\mathrm{eff}}$, oder akkumuliert sie?
+ist dann zwingend (vgl. 55.PRE). Sie ist aber **nur zulässig, wenn dieser Raum den Operator
+reduziert**, d.h. wenn er mit dem Spektralprojektor übereinstimmt:
 
-Notwendige Vorbedingung aus (55.PRE): $\ker(J^-)$ darf nicht mit unendlicher Multiplizität
-in den betrachteten Raum eingehen — deshalb die Restriktion auf
-$\mathcal H_{\mathrm{rel}}^{\mathrm{eff}} = \ker(J^-)^\perp$.
+$$
+\boxed{\ E_{D_{\mathrm{rel}}}\bigl(\mathbb R\setminus\{0\}\bigr)\,\mathcal H_{\mathrm{rel}} \;=\; \mathcal H_{\mathrm{rel}}^{\mathrm{eff}} \ }
+$$
 
-Zweites Kriterium aus NEU-56 §7: *„Spurklasse-Kriterium über $K_{pq}$ (NEU-51): falls
-$\sum_p \operatorname{Tr}\lvert M_p(z)\rvert < \infty$ gleichmäßig, ergäbe sich diskretes
+Bei Selbstadjungiertheit ist das kanonisch formulierbar und **muss belegt werden**, nicht
+vorausgesetzt. NEU-55 (55.0) definiert $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$ über
+$\overline{\operatorname{Ran}(J^-)}=\ker(J^-)^\perp$ ohne diesen Nachweis.
+
+> **Sperrvermerk (Revision 2).** Das Entfernen eines unendlichdimensionalen Nullraums
+> **genügt nicht**. Auch danach kann wesentliches Spektrum bei einem $\lambda\neq 0$ oder
+> eine beschränkte Folge nichtverschwindender Eigenwerte unendlicher Multiplizität vorliegen.
+> Der Schluss „Kern abgespalten $\Rightarrow$ kompakter reduzierter Resolvent" ist unzulässig.
+
+### 6.4 Der binäre Test
+
+**Negativer Zeuge.** Es genügt, eine orthonormale Folge
+$x_n \in \operatorname{Dom}(D_{\mathrm{rel}}) \cap \mathcal H_{\mathrm{rel}}^{\mathrm{eff}}$
+zu konstruieren mit
+
+$$
+\sup_n \bigl(\lVert x_n\rVert + \lVert D_{\mathrm{rel}}x_n\rVert\bigr) < \infty .
+$$
+
+Dann ist die Graphnormeinbettung nicht kompakt, also
+$(1+D_{\mathrm{rel}}^2)^{-1/2}\vert_{\mathcal H_{\mathrm{rel}}^{\mathrm{eff}}} \notin \mathcal K$.
+
+Stärkere Variante — **Weyl-Folge**:
+$\lVert x_n\rVert = 1$, $x_n \rightharpoonup 0$, $\lVert(D_{\mathrm{rel}}-\lambda)x_n\rVert \to 0$.
+Dann liegt $\lambda$ im wesentlichen Spektrum.
+
+**Positiver Beweis.** Für jedes $R<\infty$ muss der Graphnormball
+
+$$
+\bigl\{x \in \mathcal H_{\mathrm{rel}}^{\mathrm{eff}} : \lVert x\rVert^2 + \lVert D_{\mathrm{rel}}x\rVert^2 \le R\bigr\}
+$$
+
+in $\mathcal H_{\mathrm{rel}}^{\mathrm{eff}}$ präkompakt sein. Spektral äquivalent:
+
+$$
+\dim E_{\lvert D_{\mathrm{rel}}\rvert}\bigl([0,T]\bigr)\,\mathcal H_{\mathrm{rel}}^{\mathrm{eff}} < \infty \quad \forall\, T<\infty,
+$$
+
+und die nichtverschwindenden Eigenwerte müssen betragsmäßig gegen unendlich laufen.
+
+Zweites, unabhängiges Kriterium aus NEU-56 §7: *„Spurklasse-Kriterium über $K_{pq}$ (NEU-51):
+falls $\sum_p \operatorname{Tr}\lvert M_p(z)\rvert < \infty$ gleichmäßig, ergäbe sich diskretes
 Spektrum — zu prüfen."* `❓[O]`
 
 ---
@@ -360,29 +438,31 @@ Für jede zentrale Aussage getrennt geführt.
 | Erzwungene Rate $\gamma_N \le K/(N\log N)$ | — | `✓[M]` (56.6) | — |
 | Konfinement (K) | — | — | `✗[M]` verletzt (56.7/56.8) |
 | Essentielle Selbstadjungiertheit | — | — | `✓[M]` (56.9) |
+| $\sigma(D_{\mathrm{rel},N})$ diskret | `✓[M]` (NEU-53 §2, *„Harmlos"*) | — | **kein Übertrag** |
 
 > **Sperrvermerk.** Ein endlicher Jacobi- oder Graphoperator besitzt trivialerweise
-> kompakten Resolventen. HP-2 betrifft **nicht** die endlichen Trunkierungen, sondern die
+> kompakten Resolventen; NEU-53 §2 hält das für $D_{\mathrm{rel},N}$ ausdrücklich fest und
+> nennt es *„harmlos"*. HP-2 betrifft **nicht** die endlichen Trunkierungen, sondern die
 > unendliche bzw. renormierte Realisierung. Der Schluss
 > $$D_N \text{ hat diskretes Spektrum} \;\Longrightarrow\; D_\infty \text{ hat kompakten Resolventen}$$
 > ist **unzulässig** und in keiner Quelle behauptet.
 
 ---
 
-## 8. Zielnormalform — revidiert
+## 8. Zielnormalform — revidiert (Revision 2)
 
 Der im Auftrag vorgeschlagene Zielzustand lautete: $\exists\,\tilde L\ge 1$ mit
 $\lVert J^-x\rVert \le a\lVert\tilde Lx\rVert + b\lVert x\rVert$,
 $\lVert\tilde Lx\rVert \le C(\lVert D_{\mathrm{rel}}x\rVert + \lVert x\rVert)$ und
 $(\tilde L+i)^{-1}\in\mathcal K(\mathcal H_{\mathrm{rel}})$.
 
-Nach §5.2 kollabiert das: Mit $\tilde L = (1+(J^-)^2)^{1/2}$ sind die ersten beiden
-Bedingungen automatisch erfüllt. Die Zielnormalform reduziert sich auf
+Nach §5.2 kollabiert das auf eine Graphnormklasse, und nach §6.2 ist deren kanonischer
+Repräsentant $D_{\mathrm{rel}}$ selbst. Die Zielnormalform lautet damit:
 
 $$
 \boxed{\
-\bigl(1+(J^-)^2\bigr)^{-1/2} \in \mathcal K\bigl(\mathcal H_{\mathrm{rel}}^{\mathrm{eff}}\bigr)
-\quad\text{auf } \mathcal D_0^{\mathrm{eff}},
+\bigl(1+D_{\mathrm{rel}}^2\bigr)^{-1/2}\Big\vert_{\mathcal H_{\mathrm{rel}}^{\mathrm{eff}}} \in \mathcal K\bigl(\mathcal H_{\mathrm{rel}}^{\mathrm{eff}}\bigr),
+\quad\text{mit}\quad E_{D_{\mathrm{rel}}}(\mathbb R\setminus\{0\})\,\mathcal H_{\mathrm{rel}} = \mathcal H_{\mathrm{rel}}^{\mathrm{eff}}
 \ }
 $$
 
@@ -394,8 +474,26 @@ für die Selbstadjungiertheit, auf der alles aufbaut.
 | Ausgang | Bedeutung |
 |---|---|
 | **kompakt** | HP-2 erfüllt; HP-3 bis HP-6 werden anschließend prüfbar; Weg A wieder offen |
-| **nicht kompakt** | HP-2 für diesen Kandidaten `✗[M]`. Da die $\tilde L$-Klasse auf einen Punkt reduziert ist, wäre das eine **erheblich stärkere No-Go-Klasse** als NEU-56 — nicht mehr „dieser Mechanismus", sondern „jeder Vergleichsoperator in der erzwungenen Ordnungsklasse" |
-| **unentschieden** | Knoten bleibt offen, aber mit typkorrekt gestellter Frage statt der bisherigen typwidrigen Singulärwertformulierung |
+| **nicht kompakt** | Erheblich stärker als NEU-56: nicht nur $L$ und seine Rekalibrierungen scheitern, sondern die **kanonische $D_{\mathrm{rel}}$-Realisierung besitzt keinen kompakten reduzierten Resolventen** |
+| **unentschieden** | Knoten bleibt offen, aber mit typkorrekt gestellter Frage |
+
+### Reichweite eines negativen Ergebnisses — Umfangsklausel
+
+$$
+\boxed{\ \text{Ausgeschlossen wäre die gesamte erzwungene Vergleichsoperatorklasse des gegenwärtigen relativen Jacobi-/Feshbachmodells.} \ }
+$$
+
+**Nicht ausgeschlossen wäre**, dass eine anders konstruierte Realisierung $H_X$ von Objekt X
+HP-2 erfüllt. Ein negatives Ergebnis wäre ein No-Go über *dieses Modell*, nicht über X.
+
+**Ebenso nicht betroffen:**
+
+$$
+\boxed{\ \text{HP-2 entscheidet über den Spektraltyp, nicht über die RH-Hinrichtung durch Selbstadjungiertheit.} \ }
+$$
+
+`[O-223-2]` ist ein scharfer, binärer Strukturtest des **HP-Profils** (XVI-C.1), aber
+**keine Sperre** für den schwächeren Jacobi- oder Stieltjeskanal (XVI-C.2).
 
 ---
 
@@ -409,34 +507,35 @@ für die Selbstadjungiertheit, auf der alles aufbaut.
 | Konstanten nicht uniform in $N$ | `✓[M]` |
 | (K) ist kein Bestandteil des Nelson-Kriteriums | `✓[M]` |
 | (N1)+(K) erzwingen $L\simeq\lvert D_{\mathrm{rel}}\rvert$ | `✓[M]` (56 §1) |
+| Reduktion ist **Graphnormklasse**, keine Operatorgleichheit | `✓[M]` abgeleitet (§5.2) |
 | No-Go betrifft nur diesen $L$ mit skalarem $\gamma_N$; A′, B1, B2 verbraucht | `✓[M]` |
 | Rekalibrierungen scheitern in **beiden** Ordnungsrichtungen | `✓[M]` abgeleitet (§5.1) |
-| $\tilde L$-Klasse auf $(1+(J^-)^2)^{1/2}$ reduziert | `✓[M]` (56 §7) |
-| Typkorrektur: relevantes Objekt ist $(1+(J^-)^2)^{-1/2}$, nicht $s_k(J^-)$ | `✓[M]` |
-| Kompaktheit von $(1+(J^-)^2)^{-1/2}$ auf $\mathcal H_{\mathrm{rel}}^{\mathrm{eff}}$ | **`❓[O]`** — der Knoten |
+| **$(1+(J^-)^2)^{1/2}$ in NEU-56 §7 ist typwidrig; korrekt $(1+D_{\mathrm{rel}}^2)^{1/2}$** | **`✓[M]_neg`** (§6.1) |
+| Kanonische Formulierung über $D_{\mathrm{rel}}$, drei äquivalente Formen | `✓[M]` (§6.2) |
+| Reduzierende Eigenschaft $E_{D_{\mathrm{rel}}}(\mathbb R\setminus\{0\})\mathcal H=\mathcal H^{\mathrm{eff}}$ | **`❓[O]`** — in 55.0 nicht belegt |
+| Kernabspaltung genügt nicht (wesentliches Spektrum bei $\lambda\neq0$ möglich) | `✓[M]` (§6.3) |
+| Kompaktheit von $(1+D_{\mathrm{rel}}^2)^{-1/2}$ auf $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$ | **`❓[O]`** — der Knoten |
 | Spurklassekriterium $\sum_p\operatorname{Tr}\lvert M_p(z)\rvert<\infty$ | `❓[O]` (NEU-51) |
-| Exakter Schur-Test (55.9), Nelson-Bed. 1 (55.5) | `❓[O]` / `✓/⚠[M]` heuristisch |
+| Exakter Schur-Test (55.9) / Nelson-Bed. 1 (55.5) | `❓[O]` / `✓/⚠[M]` heuristisch |
 | **Gesamtstatus `[O-223-1]`** | **`✓[M]`** (Typisierung), Folgeknoten offen |
 
 ---
 
-## 10. Nächster atomarer Knoten
+## 10. Nachfolgeknoten `[O-223-2]` — vier Teilschritte
 
 $$
-\boxed{\ [O\text{-}223\text{-}2\text{-compactness-of-inverse-modulus-on-effective-space}] \ }
+\boxed{\ [O\text{-}223\text{-}2\text{-spectral-type-of-the-forced-operator}] \ }
 $$
 
-Zu klären, in dieser Reihenfolge:
+| Teilknoten | Aufgabe | Status |
+|---|---|---|
+| `[O-223-2a]` | $\dim\ker D_{\mathrm{rel}}$ und **exakte Beschreibung** des Kerns. Die flachen Achsen $r=0$, $n=1$ (54.12) sind Kandidaten, aber kein Beweis der Gleichheit $\ker(J^-)=\operatorname{span}\{\ldots\}$ | `❓[O]` |
+| `[O-223-2b]` | $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}} = (\ker D_{\mathrm{rel}})^\perp$ als **reduzierender** Spektralraum: $E_{D_{\mathrm{rel}}}(\mathbb R\setminus\{0\})\mathcal H_{\mathrm{rel}} = \mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$ | `❓[O]` |
+| `[O-223-2c]` | Konstruktion einer graphnormbeschränkten Orthonormalfolge in $\operatorname{Dom}(D_{\mathrm{rel}})\cap\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$ — **oder** Ausschluss einer solchen | `❓[O]` |
+| `[O-223-2d]` | $(1+D_{\mathrm{rel}}^2)^{-1/2}\vert_{\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}} \in\mathcal K$? | `❓[O]` |
 
-1. **Kerngröße.** Ist $\dim\ker(J^-) = \infty$? Falls ja, ist die Restriktion auf
-   $\mathcal H_{\mathrm{rel}}^{\mathrm{eff}}$ zwingend (55.PRE) — und die Wohldefiniertheit
-   der Projektion zu belegen.
-2. **Eigenwertdivergenz.** Divergiert das Spektrum von $\lvert D_{\mathrm{rel}}\rvert$ auf
-   $\mathcal H_{\mathrm{rel}}^{\mathrm{eff}}$ mit endlicher Multiplizität?
-3. **Alternativkriterium.** Trägt $\sum_p\operatorname{Tr}\lvert M_p(z)\rvert<\infty$
-   gleichmäßig auf Kompakta (NEU-51)?
-4. **Grundlagen nachziehen.** Exakter Beweis von (55.9) und (55.5) — sie tragen die
-   Selbstadjungiertheit, auf der die gesamte Frage beruht.
+Parallel nachzuziehen (tragen die Selbstadjungiertheit, auf der alles beruht): exakter
+Beweis von (55.9) und (55.5).
 
 ---
 
@@ -444,10 +543,19 @@ Zu klären, in dieser Reihenfolge:
 
 | Referenz | Verwendet für |
 |---|---|
-| NEU-52 | Graphbasis $\eta_a$; Warnung 52.D0 (Graphbasis $\neq$ Eigenbasis) |
-| NEU-53 | Operatorstatus $D_{\mathrm{rel}}$, Weg A / Weg B |
-| NEU-54 | (54.SEP), $\mathcal D_0$, $L$ und $\ell(a)$, (N1)/(N2), flache Achsen, (K), (54.17) |
-| NEU-55 | $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$, (55.PRE), Matrixkriterien, Kommutatorformel, $\gamma_N$-Doppelrolle |
-| NEU-56 | Rate $\gamma_N\le K/(N\log N)$, Satz 56.1/56.2/56.3, Optionen B1/B2, (56.12), $\tilde L$-Agenda §7 |
 | NEU-51 | Spurklassekriterium via $K_{pq}$ |
+| NEU-52 | Graphbasis $\eta_a$; Warnung 52.D0 (Graphbasis $\neq$ Eigenbasis) |
+| NEU-53 | Operatorstatus $D_{\mathrm{rel}}$, Weg A / Weg B, $J_N^{-*}=-J_N^-$ (§2) |
+| NEU-54 | (54.SEP), $\mathcal D_0$, $L$ und $\ell(a)$, (N1)/(N2), (54.3) Schiefadjungiertheit, flache Achsen, (K), (54.17) |
+| NEU-55 | $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$, (55.PRE), Matrixkriterien, Kommutatorformel, $\gamma_N$-Doppelrolle |
+| NEU-56 | Rate $\gamma_N\le K/(N\log N)$, Satz 56.1/56.2/56.3, §4 (RH braucht nur SA), Optionen B1/B2, (56.12), $\tilde L$-Agenda §7 |
 | NEU-220u | HP-1–HP-7, insbesondere HP-2/HP-3 |
+
+---
+
+## Revisionsverlauf
+
+| Rev. | Datum | Änderung |
+|---|---|---|
+| 1 | 26. Juli 2026 | Erstfassung des Quellenaudits NEU-52–56 |
+| **2** | 26. Juli 2026 | §5.2 Reduktion als **Graphnormklasse** statt Operatorgleichheit. §6.1 **Vorzeichenkorrektur**: $(1+(J^-)^2)^{1/2}$ in NEU-56 §7 typwidrig wegen $(J^-)^*=-J^-$; korrekt $(1+D_{\mathrm{rel}}^2)^{1/2}$. §6.2 kanonische Formulierung über $D_{\mathrm{rel}}$. §6.3 reduzierender Spektralraum als eigene offene Bedingung; Kernabspaltung genügt nicht. §6.4 binärer Test mit negativem Zeugen und Weyl-Folge. §8 Umfangsklausel. §10 vier Teilknoten `[O-223-2a–d]`. |

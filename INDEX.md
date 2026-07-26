@@ -26,7 +26,7 @@ Zurueck zum [Repository-Start](README.md).
 
 | ID | Dokument | Status |
 |---|---|---|
-| `—` | [Ebene XVI — Objekt X: Kanonisches Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md) | ✓M·26 ✓K·1 ⚠M·6 ✗M·2 |
+| `—` | [Ebene XVI — Objekt X: Kanonisches Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md) | ✓M·27 ✓K·1 ⚠M·6 ✗M·2 |
 | `—` | [Kritischer Pfad — Gesamtuebersicht (Stand: 1. Juli 2026, NEU-114)](00-grundlegung/kritischer_pfad_aktuell.md) | ⚠M·5 ✗M·2 ?O·10 |
 | `—` | [Objekt X — Minimalaxiome und epistemischer Status](00-grundlegung/objekt_x_minimalaxiome.md) | — |
 | `—` | [X-P1.3a — Spektralrealisierungs-Triage](00-grundlegung/objekt_x_p1_3a_spektraltriage.md) | — |
@@ -109,7 +109,7 @@ Zurueck zum [Repository-Start](README.md).
 | `NEU-54` | [X.3.24: Essentielle Selbstadjungiertheit via Nelson-Kommutator; Konfinement-Test](01-primkanten-werkzeuge/NEU-054_x3_nelson_selbstadjungiertheit_konfinement.md) | — |
 | `NEU-55` | [X.3.25: Matrixabschätzungsblatt — Nelson-Bedingungen für \(iJ^-\)](01-primkanten-werkzeuge/NEU-055_x3_nelson_matrixabschaetzung_schur.md) | — |
 | `NEU-56` | [X.3.26: γ_N-Wahl, Konfinement-Obstruktion und Richtungsbefund Weg A/B](01-primkanten-werkzeuge/NEU-056_x3_gammaN_konfinement_obstruktion.md) | ?O·2 |
-| `NEU-223` | [Quellenaudit: alternativer Vergleichsoperator, Schur, Konfinement und kompakter Resolvent](01-primkanten-werkzeuge/NEU-223_Quellenaudit_alternativer_Vergleichsoperator_Schur_Konfinement_und_kompakter_Resolvent.md) | ✓M·23 ⚠M·7 ✗M·6 ?O·5 |
+| `NEU-223` | [Quellenaudit: alternativer Vergleichsoperator, Schur, Konfinement und kompakter Resolvent](01-primkanten-werkzeuge/NEU-223_Quellenaudit_alternativer_Vergleichsoperator_Schur_Konfinement_und_kompakter_Resolvent.md) | ✓M·27 ⚠M·7 ✗M·5 ?O·10 |
 
 ## Jacobi-Limes, Weyl-Funktion und Divisorgraph
 
