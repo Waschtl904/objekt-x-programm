@@ -181,9 +181,17 @@ $K_N(z)=V_N^*(D_{\mathrm{rel}}-z)^{-1}V_N$ mit $V_p=C_p^{\mathrm{rel}}$.
   $r\mapsto r+pm$ entspricht $s\mapsto s+m$. In zusammengesetzten Sektoren enthält $J^-$
   zusätzliche Teilersprünge $d\mid M$; nur für $p\mid d$ bleibt die $u$-Klasse erhalten. Die
   Einzelkettenform ist dort **nicht** der vollständige Operator.
-- Die Summationsreichweite über $u$ ist ein **echter Regulator**. Sie entscheidet über
-  Definiertheit, Beschränktheit und möglicherweise über $\mathcal S_1$ gegen $\mathcal S_2$.
-  Sie darf **nicht** nachträglich an $\Xi$-Daten angepasst werden.
+- **Die Summationsreichweite über $u$ ist die Hebungswahl** (NEU-228). Sie ist kein neuer
+  Freiheitsgrad: $V_p(\cdot)=\widetilde\omega_2(\widehat\varepsilon_p,\cdot)$ mit
+  $\widehat\varepsilon_p=e_0V_p+f_p$, $f_p\in\ker\pi_{\mathrm{prim}}\setminus\{0\}$ (NEU-153).
+  Damit ist $[O\text{-}226\text{-}3]\equiv[O\text{-}153]$ — die **Hebungsunabhängigkeit**.
+- **Der naive Projektorregulator ist widerlegt:** $\pi_{\mathrm{prim}}$ wählt $u=0$, und wegen
+  des Faktors $-us\log p$ wird dann $V_p=0$. Zulässig ist $\{u\neq0\}$.
+- Ohne 153.A/B ist die Schattenklasse von $K(z)$ **hebungsabhängig**. Der Hebungsparameter
+  $f_p$ darf **nicht** so gewählt werden, dass $\mathcal S_2\setminus\mathcal S_1$ oder die
+  $\Xi$-Identität herauskommt.
+- **Zuerst zu prüfen:** ist $\mathcal L_p$ überhaupt nichtleer? NEU-153 Z.207 schließt den
+  leeren Fall nicht aus; dann entfiele die ganze Feshbach-Linie.
 - Ein Nicht-$\mathcal S_1$-Zeuge ist **nur möglich, wenn $V\notin\mathcal S_2$**, denn
   $\operatorname{Tr}\operatorname{Im}K_N(z)\le\lVert V\rVert_2^2/y$.
 
@@ -191,8 +199,9 @@ $K_N(z)=V_N^*(D_{\mathrm{rel}}-z)^{-1}V_N$ mit $V_p=C_p^{\mathrm{rel}}$.
 
 | Knoten | Aufgabe |
 |---|---|
-| `[O-226-3]` | $u$-Regulator intrinsisch bestimmen |
-| `[O-226-4]` | Quellhilbertraum und Gramoperator konstruieren |
+| `[O-228-2]` | **Zuerst:** Ist die Hebungsfaser $\mathcal L_p$ überhaupt nichtleer? (NEU-153 Z.207) |
+| `[O-153-A/B]` | Hebungsunabhängigkeit — $\Psi_p'=\Psi_p$ oder $\lVert\Psi_p'\rVert=\lVert\Psi_p\rVert$ |
+| `[O-226-4]` | Gramoperator $g^{(p)}_{0u}$, $g^{(p)}_{uu}$ (= NEU-153 §D.0.5) |
 | `[O-226-5]` | $K(z)\in\mathcal S_2$ prüfen |
 | `[O-226-6]` | $K(z)\notin\mathcal S_1$ prüfen |
 | `[O-226-7]` | $\det_2(I-K(z))$ mit der Weil-/$\Xi$-Schicht vergleichen |

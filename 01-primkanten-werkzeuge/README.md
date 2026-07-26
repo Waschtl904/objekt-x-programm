@@ -2,7 +2,7 @@
 
 NEU-3 – NEU-57. Aufbau der relativen Primkanten-Algebra, Wodzicki-Residuum, Feshbach-Reduktion, Fourier-Hebung mit Mangoldt-Faktor und Nelson-Selbstadjungiertheit.
 
-**62 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
+**63 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
 
 | ID | Dokument | Status |
 |---|---|---|
@@ -68,6 +68,7 @@ NEU-3 – NEU-57. Aufbau der relativen Primkanten-Algebra, Wodzicki-Residuum, Fe
 | `NEU-225` | [Primfaserdiagonalisierung: $D_{\mathrm{rel}}$ als Transportgenerator](NEU-225_Primfaserdiagonalisierung_Transportgenerator_und_Schichtenverschiebung.md) | ✓M·22 ⚠M·2 ✗M·1 ?O·7 |
 | `NEU-226` | [Quellenaudit NEU-51/77: globaler Feshbach-Transfer, Schattenklasse, Primkanalüberlappung](NEU-226_Quellenaudit_globaler_Feshbach_Transfer_Schattenklasse_und_Primkanalueberlappung.md) | ✓M·26 ⚠M·11 ✗M·1 ?O·1 |
 | `NEU-227` | [Koordinatenwörterbuch und Spektralmaßform des Feshbach-Transfers](NEU-227_Koordinatenwoerterbuch_und_Spektralmassform_des_Feshbach_Transfers.md) | ✓M·9 ⚠M·2 ?O·6 |
+| `NEU-228` | [Der $u$-Regulator ist die Hebungswahl: Rücklauf in die alte Barriere](NEU-228_Der_u_Regulator_ist_die_Hebungswahl_Ruecklauf_in_die_alte_Barriere.md) | ✓M·20 ?O·16 |
 
 ---
 

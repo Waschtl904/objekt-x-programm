@@ -2,11 +2,57 @@
 
 Sitzungsprotokoll des Objekt-X-Programms, neueste Einträge zuerst.
 
-> **Aktueller Stand: NEU-227 — 26. Juli 2026**
+> **Aktueller Stand: NEU-228 — 26. Juli 2026**
 
 Die Einträge ab NEU-162 sind aus der Commit-Historie des Arbeitsjournals rekonstruiert und
 zu thematischen Blöcken zusammengefasst. Für Details siehe die jeweiligen Dokumente über
 den [Gesamtindex](INDEX.md).
+
+---
+
+## [NEU-228] — 26. Juli 2026: Der $u$-Regulator ist die Hebungswahl
+
+$$[O\text{-}226\text{-}3] \equiv [O\text{-}153] \equiv [O\text{-}221\text{-}1c1a0]$$
+
+**Die $u$-Summe ist kein Regulator.** NEU-153 definiert
+$\Psi_p(\widehat\varepsilon_p)=\Pi_{W_{\mathrm{res}}}\widetilde\omega_2(\widehat\varepsilon_p,L_3^\circ)$.
+Mit (43.1) und $\widehat\varepsilon_p=\sum_u a_{p,u}e_uV_p$ ist die Summe in (51.2) die
+**Hebungsentwicklung**; NEU-51 schreibt sie mit $a_{p,u}\equiv1$. Der Regulator sitzt
+eingangsseitig und ist auf die affine Faser $\mathcal L_p$ eingeschränkt — nicht frei, aber
+auch nicht eindeutig.
+
+**Option R2 widerlegt.** $\pi_{\mathrm{prim}}(e_0V_p)=\varepsilon_p$, $\pi_{\mathrm{prim}}(e_uV_p)=0$
+für $u\neq0$ (153 Z.179). Der Projektor selektiert also $u=0$ — und der Kopplungsfaktor
+$-us\log p$ verschwindet dort. $V_p^{\mathrm{can}}=0$. Eindeutigkeit und Nichtnullheit sind mit
+$\pi_{\mathrm{prim}}$ **nicht** gleichzeitig erfüllbar; zulässig ist $\{u\neq0\}$. `✓[M]_neg`
+Genau deshalb verlangt NEU-153 Z.188 $f_p\neq0$.
+
+**Symmetrie-No-Go tritt nicht ein.** $\pi_{\mathrm{prim}}U_k\neq U_k\pi_{\mathrm{prim}}$ — der
+$p$-Kanal bricht die Fouriertranslation geometrisch. Die Einzelmodenselektion scheitert nicht
+an einer Symmetrie, sondern am Kopplungsfaktor. `✓[M]`
+
+**`[O-226-4]` ebenfalls nicht neu.** Der Gramoperator $g^{(p)}_{uu}$, $g^{(p)}_{0u}$ steht in
+NEU-153 §D.0.5 (Z.461/462) und ist dort seit 13. Juli 2026 offen, samt Positivität und
+Vollständigkeit von $\mathcal H_p^{\mathrm{lift}}$.
+
+**Rücklauf.** Ohne 153.A (starke Vektorinvarianz) oder 153.B (schwache Norminvarianz) ist $V$
+und damit die Schattenklasse von $K(z)$ **hebungsabhängig**. Zwei unabhängige Zugänge — die
+Primkanalgewichte aus Strang 05 und der Feshbach-Transfer aus Strang 01 — enden am selben
+Knoten. Keine Rückschritt, sondern Konvergenz: er ist die Wohldefiniertheitsbedingung der
+gesamten Transferschicht.
+
+**Leerfaser-Risiko `[O-228-2]`, neue Priorität 1.** NEU-153 Z.207: liegt $e_0V_p$ normiert und
+$\perp\ker\pi_{\mathrm{prim}}$ bei positiv definiter verbundener Form, ist $\mathcal L_p$ leer
+— dann existiert keine zulässige Kopplung und die Feshbach-Linie entfällt. Quellenseitig
+nicht ausgeschlossen. Sperrvermerk: keine Schattenklassenrechnung davor.
+
+**Reichweitenkorrektur.** $V\notin\mathcal S_2$ ist **notwendig** für den Nicht-$\mathcal S_1$-
+Zeugen; $V\in\mathcal S_4$ ist **hinreichend**, nicht notwendig für $K(z)\in\mathcal S_2$ —
+der Resolvent kann zusätzlich glätten.
+
+Regulatoroptionen abschließend klassifiziert: R1 (freie Gewichte) `✓[M]_neg` Anti-Fitting,
+R2 `✓[M]_neg`, R3 (freies $U_p$) `✓[M]_neg`, R4 (Hebungswahl) `❓[O]` — intrinsisch genau dann,
+wenn 153.A/B gilt.
 
 ---
 

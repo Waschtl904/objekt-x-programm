@@ -1,6 +1,6 @@
 # Objekt X — Bestandsaufnahme und Steckbrief
 
-**Stand: 26. Juli 2026 (nach NEU-227)**
+**Stand: 26. Juli 2026 (nach NEU-228)**
 
 Eine Inventur nach 324 Dokumenten: Was wissen wir über Objekt X, was ist ausgeschlossen,
 wo bricht die Konstruktion, und welche Grabungsschnitte sind als nächste sinnvoll.
@@ -58,6 +58,29 @@ vollständige Weil-Form.
 Die endlichen Kollapsoperatoren aus NEU-77 liefern **keine** Schattenklassenkontrolle des
 Grenzoperators, da dort nur starke bzw. punktweise Konvergenz auf endlich getragenen Vektoren
 vorliegt.
+
+**Rücklauf in die alte Barriere (NEU-228).** Der als Einstiegspunkt vorgesehene
+„$u$-Regulator" ist kein neuer Freiheitsgrad. Die $u$-Summe in (51.2) ist die Entwicklung
+einer **Hebung** $\widehat\varepsilon_p$, denn NEU-153 definiert
+$\Psi_p(\widehat\varepsilon_p)=\Pi_{W_{\mathrm{res}}}\widetilde\omega_2(\widehat\varepsilon_p,L_3^\circ)$.
+Damit gilt
+
+$$[O\text{-}226\text{-}3] \equiv [O\text{-}153] \equiv [O\text{-}221\text{-}1c1a0] \quad\text{— die Hebungsunabhängigkeit.}$$
+
+Der naive Ausweg über den Primkanalprojektor ist widerlegt: $\pi_{\mathrm{prim}}$ selektiert
+$u=0$, und der Kopplungsfaktor $-us\log p$ vernichtet dann alles. Zulässig ist
+$\widehat\varepsilon_p=e_0V_p+f_p$ mit $f_p\in\ker\pi_{\mathrm{prim}}$, $f_p\neq0$ — eine
+unendlichdimensionale affine Wahl.
+
+**Das ist kein Rückschritt, sondern eine Konvergenz.** Zwei unabhängige Zugänge — die
+Primkanalgewichte aus Strang 05 und der Feshbach-Transfer aus Strang 01 — enden am selben
+Knoten. Er ist damit nicht mehr eine Nebenfrage, sondern die Wohldefiniertheitsbedingung der
+gesamten Transferschicht.
+
+**Registriertes Leerfaser-Risiko.** NEU-153 Z.207 schließt nicht aus, dass $\mathcal L_p$ leer
+ist. Dann existierte keine zulässige Kopplung $V_p$ und die Feshbach-Linie entfiele — ohne
+dass damit HP-2 für Objekt X oder der Jacobi-/Stieltjeskanal widerlegt wären. Diese Prüfung
+steht vor jeder Schattenklassenrechnung.
 
 ---
 
