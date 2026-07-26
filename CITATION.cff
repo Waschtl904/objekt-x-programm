@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+title: "Objekt-X-Programm — Ein lakatosianisches Forschungsjournal zur Riemannschen Hypothese"
+message: "Wenn Sie dieses Material verwenden, zitieren Sie es bitte wie unten angegeben."
+type: dataset
+authors:
+  - family-names: Schmalnauer
+    given-names: Sebastian
+    country: AT
+abstract: >-
+  Offengelegtes Forschungsjournal zu spektralen, nichtkommutativen und
+  arithmetischen Zugängen zur Riemannschen Hypothese. Zentral ist "Objekt X",
+  ein aus relativer Primkanten-Algebra, Hochschild-Klassen und der
+  Wodzicki-Residuum-Spurform auf der Bost-Connes-Algebra zusammengesetztes
+  Operatorobjekt. 324 Dokumente in neun thematischen Strängen, jeweils mit
+  expliziter epistemischer Statusmarke nach lakatosianischer Methodik.
+  Negative Resultate und No-Go-Theoreme sind gleichrangig dokumentiert.
+  Das Repository enthält keinen Beweis der Riemannschen Hypothese und ist
+  nicht peer-reviewed.
+keywords:
+  - Riemannsche Hypothese
+  - Riemann hypothesis
+  - Bost-Connes-Algebra
+  - nichtkommutative Geometrie
+  - Hochschild-Kohomologie
+  - Weil-Explizitformel
+  - Spektraltheorie
+  - Hankel-Positivität
+  - prolate sphäroidale Wellenfunktionen
+  - Lakatos
+license: CC-BY-4.0
+repository-code: "https://github.com/Waschtl904/objekt-x-programm"
+version: "NEU-221d"
+date-released: "2026-07-26"
