@@ -100,7 +100,7 @@ die Positivität der Momentfolge unabhängig liefert.
 | Direkt-Summe | Obstruktion für den kollektiven Birman–Schwinger-Operator | NEU-50 |
 | Dichte | kanalabhängige Kopplung erfüllt die Dichtebedingung der Labelmenge nicht | NEU-82 |
 | Nilpotenz | Barriere für Spur und Determinante | NEU-86 |
-| Normierung | Bruch zwischen Spurklasse und Mangoldt-Spur; $R_p \ge p/\log p$ unbeschränkt | NEU-140/141 |
+| Normierung | Bruch zwischen Spurklasse und Mangoldt-Spur; $R_p \gtrsim p/\log p$ unbeschränkt | NEU-140/141 |
 | Skalar-Renormierung | keine skalare Renormierung der Jacobi-Koeffizienten möglich | NEU-123.H |
 | Nullkozykel regulär | $Z(A_{\mathbb Q})_g = 0$ für $g\neq 1_\Gamma$ | NEU-182/183 |
 | Nullkozykel verdreht | $Z^0(A,{}_{\mathrm{id}}A_{\sigma_\beta}) = 0$ für $\Re\beta>0$ | NEU-183 |

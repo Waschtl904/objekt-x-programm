@@ -272,7 +272,7 @@ $$
 | Anforderung | Status | Knoten |
 |---|---|---|
 | $D_N^{\mathrm{rel}} = (D_N^{\mathrm{rel}})^*$ | `✓[M]` über NEU-53/54 | — |
-| $\Psi_p = C_p^{\mathrm{rel}}\varepsilon_p$ als konkreter Hilbertvektor, $\lVert\Psi_N\rVert$ fixiert | `✓[M]_part` | `[O-221-1c1a]`, NEU-221e |
+| $\Psi_p[\widehat\varepsilon_p]$ **nach Hebungswahl** typisiert; intrinsischer Vektor und intrinsische Norm $\lVert\Psi_N\rVert$ noch offen | `✓[M]_part` | `[O-221-1c1a]`, NEU-221e |
 | **Hebungsunabhängigkeit des zyklischen Spektralmaßes** $\mu_{\Psi_p}^{D_N^{\mathrm{rel}}}$ | `❓[O]` | `[O-221-1c1a0]`, NEU-221e |
 | $E_{D}(\{0\})\Psi_N = 0$ | `❓[O]` | `[O-221-1c1b]` |
 | $\int\lvert\lambda\rvert^{-2k-2}\,d\mu_{\Psi_N} < \infty$, $k=0,1,2$ | `❓[O]` | `[O-221-1c1c]` |
@@ -289,8 +289,16 @@ durch Normierung entschieden:
 
 Norminvarianz entspricht nur dem Test $f\equiv 1$. Erforderlich ist Invarianz von
 $\langle\Psi_p[\widehat\varepsilon_p], f(D_N^{\mathrm{rel}})\Psi_p[\widehat\varepsilon_p]\rangle$
-für **alle** beschränkten Borelfunktionen $f$; als vollständiger Test genügt die
-Resolventenfamilie $f_w(\lambda) = (\lambda-w)^{-1}$ bzw. $(\lambda^2-w)^{-1}$.
+für **alle** beschränkten Borelfunktionen $f$.
+
+Zwei Testfamilien leisten dabei **nicht** dasselbe. Die gewöhnliche Resolventenfamilie
+$f_z(\lambda) = (\lambda-z)^{-1}$, $z\in\mathbb C\setminus\mathbb R$, bestimmt das
+**vollständige** Spektralmaß $\mu_\Psi^{D}$. Die gerade Familie
+$f_w(\lambda) = (\lambda^2-w)^{-1}$ bestimmt nur das Bildmaß unter $\lambda\mapsto\lambda^2$,
+also $\mu_\Psi^{D^2}$ — das genügt für den Stieltjeskandidaten und seine **geraden**
+inversen Momente, aber **nicht** für die vollständige Hebungsunabhängigkeit von
+$\mu_\Psi^{D}$. NEU-46 formuliert die vollständige Weyl-Funktion mit der gewöhnlichen
+Resolvente von $D_{\mathrm{rel},p}^{-}$.
 
 ### C.2.2 — Der indefinite Fall `spectral` — Typwarnung
 
@@ -380,14 +388,14 @@ tatsächlich erzwingt.
 
 | # | Anforderung | Erzwungen durch | Status |
 |---|---|---|---|
-| P1.1 | Echte Off-Diagonal-Kopplung $K_{pq}\neq 0$ für $p\neq q$; eine orthogonale primweise Direktzerlegung **sowohl** des zyklischen Vektors **als auch** des Operators erzeugt die nötige globale Kopplung nicht | NEU-50, 51, 207, 209 | Anforderung |
+| P1.1 | Nichtverschwindender Off-Diagonal-Anteil $K^{\mathrm{off}} \neq 0$; falls vollständige Nichtzerlegbarkeit benötigt wird: der Primkopplungsgraph besitzt keinen nichttrivialen entkoppelten Block. **Nicht** gefordert ist $K_{pq}\neq 0$ für *jedes* Paar $p\neq q$ — das ginge über die No-Gos hinaus. Eine orthogonale primweise Direktzerlegung **sowohl** des zyklischen Vektors **als auch** des Operators erzeugt die nötige globale Kopplung nicht | NEU-50, 51, 207, 209 | Anforderung |
 | P1.2 | Gradierte Normierung (Diagonalmatrix $D_N$) statt eines Skalars $\kappa_N$ | NEU-78, 82, 83, 123.H | Anforderung |
 | P1.3 | Dichte Trägerstruktur $\kappa_N\asymp N$, nicht rein primzahlindiziert | NEU-82, 83 | Anforderung |
-| P1.4 | T2-Orthogonalität $\langle\Psi_p,\Psi_q\rangle = 0$ | — | **Voraussetzung, nicht Satz** — `❓[O]` `[O-144-1]` |
+| P1.4 | **Primkantendiagonalität der quellseitig induzierten $\mathrm{Wres}$-Paarung.** In einer ausdrücklich orthogonalen Direktsumme ist $\langle\Psi_p,\Psi_q\rangle=0$ definitorisch und kein Satz; offen ist, ob die aus $\mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}}$ **induzierte** Paarung diese Diagonalität liefert. Der Pullback $\kappa^*\mathrm{Wres}$ tut es nicht (NEU-44.X3). Genau deshalb trennt NEU-43 den graph-erweiterten vom kollabierten Raum | — | `❓[O]` `[O-144-1]` |
 | P1.5 | Nichtüberzählung: $\dim\ker(1-\mathcal K_\infty(\rho)) = m_\rho$ | — | `❓[O]` NEU-49 Satz 49.3, „Kern-Engpass" |
 | P1.6 | Spurklassenkriterium für die volle gekoppelte Matrix, formuliert über die echte Spektralbasis von $D_{\mathrm{rel}}$ | — | `❓[O]` NEU-51/52; Eigenbasis existiert nicht explizit |
 | P1.7 | Intrinsizität von $\mathrm{Wres}_{\mathrm{rel}}$ aus $\mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}}$ | — | `❓[O]` NEU-44.X3 (vgl. A.7) |
-| P1.8 | **Hebungsabstieg:** $\widetilde T_p^{\mathrm{raw}}(\Delta_p^{\mathrm{adm}}) \subseteq \mathcal N_{\mathrm{Wres,rel}}$, mit $\Delta_p^{\mathrm{adm}} = \mathcal A_p^{\mathrm{adm}} - \mathcal A_p^{\mathrm{adm}}$ als Differenzmenge — nicht $\mathcal A_p^{\mathrm{adm}}$ selbst, nicht der Tangentialraum | — | **gesperrt** NEU-221e, `[O-221-1c1a0]` |
+| P1.8 | **Hebungsabstieg:** $\widetilde T_p^{\mathrm{raw}}(\Delta_p^{\mathrm{adm}}) \subseteq \mathcal N_{\mathrm{Wres,rel}}$ mit $\Delta_p^{\mathrm{adm}} = \mathcal A_p^{\mathrm{adm}} - \mathcal A_p^{\mathrm{adm}}$. Bei $0\in\mathcal A_p^{\mathrm{adm}}$ ist dies wegen der Linearität von $\widetilde T_p^{\mathrm{raw}}$ **äquivalent** zum Test auf ganz $\mathcal A_p^{\mathrm{adm}}$. Ein Test nur auf dem Tangentialraum (157.4) ist **nicht** ausreichend | — | **gesperrt** NEU-221e, `[O-221-1c1a0]` |
 | P1.9 | Beschränktheit und Rang von $T_p^{\mathrm{rel}}$ auf **ganz** $B_{3,p}^{\mathrm{lift}}$ — folgt **nicht** aus der Rang-eins-Eigenschaft von $C_p[\widehat\varepsilon_p]$ (eindimensionaler Definitionsraum) | — | `❓[O]` NEU-221e |
 | P1.10 | Exakt zulässige Liftmenge $\widehat{\mathcal E}_p^{\mathrm{adm}}$ vollständig formalisieren; postulierte, nicht konstruierte Operatoren ($R_{p,j}$, NEU-165b) sind unzulässig | — | `❓[O]` NEU-157 rev.3 |
 | P1.11 | Liftstabilisator bestimmen; Normierung allein erzwingt **keine** Phasenäquivalenz zweier zulässiger Hebungen | — | `❓[O]` NEU-221e §6 |
@@ -396,7 +404,7 @@ tatsächlich erzwingt.
 
 | # | Anforderung | Status |
 |---|---|---|
-| P2.1 | Unbeschränkte Operatoren und regulierte Spuren im Bereich $0<\Re\beta\le 1$; $R_p \ge p/\log p$ ist unbeschränkt | `✓[M]` NEU-140/141 |
+| P2.1 | Unbeschränkte Operatoren und regulierte Spuren im Bereich $0<\Re\beta\le 1$; $R_p \gtrsim p/\log p$ ist unbeschränkt (die Quelle beweist keine untere Schranke mit Konstante exakt $1$) | `✓[M]` NEU-140/141/144 |
 | P2.2 | Regularisierungsschema für $\operatorname{Tr}_{\mathrm{reg}}(R\Sigma_{\mathrm{rel}}^{\mathrm{ren}})$ im kritischen Streifen | `❓[O]` `[O-144-3]` |
 | P2.3 | Quantitative Schranken im Primschalen-Abel-Lemma; Kancellation „gefährdet nahe $\beta_0\approx s$" | `❓[O]` NEU-133 |
 

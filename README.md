@@ -118,7 +118,7 @@ T_p^rel(e_u0 V_p)= −u0·s0·log(p)·ℓ_{s0,m0}·E_*^rel               (NEU-42
 Σ_rel^ren(β)     = Σ_p p^{−β}/(1−p^{−β})·P_p                      (NEU-136)
 Tr(R·Σ_rel^ren)  = −ζ'/ζ(β),  Re β > 1                            (NEU-141)
 |c_p|²           = O((log p)² / p)                                (NEU-135D)
-R_p              = log(p)/|c_p|² ≥ p/log(p)   [unbeschränkt]      (NEU-141)
+R_p              = log(p)/|c_p|² ≳ p/log(p)   [unbeschränkt]      (NEU-141)
 μ_k              = −(k+1)/(2k+2)!·(log Ξ)^(2k+2)(0)               (NEU-220w)
 ```
 

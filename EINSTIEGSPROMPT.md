@@ -84,7 +84,7 @@ Quelle für die Positivität der Momentfolge.** Genau daran arbeitet der aktive 
 | Nelson / Konfinement | NEU-53–56 | $iJ^-$ wesentlich selbstadjungiert (konditional); $\gamma_N = C/\log N$ widerlegt; Weg B Standard |
 | Welt-2-Entscheidung | NEU-135D | $\lVert\varepsilon_p\rVert^2 = 1$; $\lvert c_p\rvert^2 = O((\log p)^2/p)$ |
 | Selbstenergie | NEU-136/137 | $\Sigma_{\mathrm{rel}}^{\mathrm{ren}}(\beta)$ konvergent, spurklassig für $\Re\beta>0$ |
-| Mangoldt-Spur | NEU-141 | $\operatorname{Tr}(R\Sigma_{\mathrm{rel}}^{\mathrm{ren}}) = -\zeta'/\zeta(\beta)$, $\Re\beta>1$; $R_p \ge p/\log p$ |
+| Mangoldt-Spur | NEU-141 | $\operatorname{Tr}(R\Sigma_{\mathrm{rel}}^{\mathrm{ren}}) = -\zeta'/\zeta(\beta)$, $\Re\beta>1$; $R_p \gtrsim p/\log p$ |
 | Koeffiziententyp | NEU-216 | $\mathcal B^{\log}$ submultiplikativ **ohne** Renormierung; $\mathcal A^{\log}$; $D_g(A_{\mathrm{alg}})\subseteq\mathcal A^{\log}$ |
 | Cup-Aufstieg | NEU-218 | $L^{\mathrm{cup}}_{g;\mathbf p}\in Z^4(A_{\mathrm{alg}},M)_g$ |
 | Xi-Masterkontur | NEU-220k | exakte Vorzeichen, Faktor 2, Polbuchhaltung, keine Doppelzählung |

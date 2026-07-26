@@ -133,17 +133,31 @@ $\Delta_p^{\mathrm{adm}} = K_p$ **noch** Linearität von $\Delta_p^{\mathrm{adm}
 > $$\mathcal A_p^{\mathrm{adm}}(\widehat\varepsilon_p^{\,0}) = \bigl\{k \in K_p^{\mathrm{hom}} : k \in \mathcal Q_p(\widehat\varepsilon_p^{\,0}),\; F_{p,\alpha}(\widehat\varepsilon_p^{\,0}+k)=0\ \forall\alpha\bigr\}$$
 > mit $\widehat{\mathcal E}_p^{\mathrm{adm}} = \widehat\varepsilon_p^{\,0} + \mathcal A_p^{\mathrm{adm}}(\widehat\varepsilon_p^{\,0})$.
 >
-> Daraus folgt
+> Daraus folgt mengenmäßig
 > $$\Delta_p^{\mathrm{adm}} = \mathcal A_p^{\mathrm{adm}} - \mathcal A_p^{\mathrm{adm}},$$
-> also die **Differenzmenge**, nicht $\mathcal A_p^{\mathrm{adm}}$ selbst. Da
-> $\mathcal A_p^{\mathrm{adm}}$ als Teilmenge einer Quadrik im Allgemeinen kein
-> Vektorraum ist, ist die Differenzmenge im Allgemeinen **echt größer**:
-> $$\mathcal A_p^{\mathrm{adm}} \subseteq \Delta_p^{\mathrm{adm}}, \qquad \text{Gleichheit nur bei } 0 \in \mathcal A_p^{\mathrm{adm}} \text{ und Abgeschlossenheit unter Differenzen.}$$
-> Ein Abstiegstest auf $\mathcal A_p^{\mathrm{adm}}$ allein ist daher **nicht hinreichend**;
-> der Test muss auf $\Delta_p^{\mathrm{adm}}$ laufen. Ebenso genügt der Tangentialraum
-> $\mathrm{Tan}_{\widehat\varepsilon_p^{\,0}}\mathfrak L_p^{\mathrm{adm}}$ (157.4) nicht —
-> NEU-157 §157.F hält selbst fest, dass ein Tangentialvektor „noch kein exakt zulässiger
-> Liftwechsel" ist.
+> also die **Differenzmenge**. Da $\mathcal A_p^{\mathrm{adm}}$ als Teilmenge einer Quadrik
+> im Allgemeinen kein Vektorraum ist, ist sie im Allgemeinen **echt größer** als
+> $\mathcal A_p^{\mathrm{adm}}$.
+>
+> **Der Nullraumtest wird dadurch jedoch nicht stärker.** Ist der Ausgangslift selbst
+> zulässig, also $0\in\mathcal A_p^{\mathrm{adm}}$, so gilt wegen der Linearität von
+> $\widetilde T_p^{\mathrm{raw}}$ und weil $\mathcal N_{\mathrm{Wres,rel}}$ ein linearer
+> Raum ist:
+> $$\boxed{\ \widetilde T_p^{\mathrm{raw}}\bigl(\Delta_p^{\mathrm{adm}}\bigr) \subseteq \mathcal N_{\mathrm{Wres,rel}}
+> \iff \widetilde T_p^{\mathrm{raw}}\bigl(\mathcal A_p^{\mathrm{adm}}\bigr) \subseteq \mathcal N_{\mathrm{Wres,rel}}.\ }$$
+> *Beweis.* „$\Leftarrow$": Für $a,b\in\mathcal A_p^{\mathrm{adm}}$ ist
+> $\widetilde T_p^{\mathrm{raw}}(a-b) = \widetilde T_p^{\mathrm{raw}}(a) - \widetilde T_p^{\mathrm{raw}}(b) \in \mathcal N_{\mathrm{Wres,rel}}$,
+> da $\mathcal N_{\mathrm{Wres,rel}}$ unter Differenzen abgeschlossen ist.
+> „$\Rightarrow$": Wegen $a = a - 0$ und $0\in\mathcal A_p^{\mathrm{adm}}$ ist
+> $\mathcal A_p^{\mathrm{adm}} \subseteq \Delta_p^{\mathrm{adm}}$. $\square$
+>
+> **Nicht** hinreichend ist dagegen ein Test auf dem Tangentialraum
+> $\mathrm{Tan}_{\widehat\varepsilon_p^{\,0}}\mathfrak L_p^{\mathrm{adm}}$ (157.4) oder auf
+> einer echten Teilmenge der zulässigen Änderungen — NEU-157 §157.F hält selbst fest, dass
+> ein Tangentialvektor „noch kein exakt zulässiger Liftwechsel" ist.
+>
+> Die Voraussetzung $0\in\mathcal A_p^{\mathrm{adm}}$ ist genau die Zulässigkeit des
+> Ausgangslifts, deren Prüfung NEU-157 §157.C ausdrücklich verlangt.
 
 ---
 
@@ -215,9 +229,15 @@ $\mathcal H_{\mathrm{rel},p,N}$.
 Bei festem $L_3^\circ$ ist die Rohkopplung in der ersten Variablen **linear**:
 
 $$
-\boxed{\ \widetilde T_p^{\mathrm{raw}}(x) := \widetilde\omega_2^{\mathrm{rel}}\bigl(x, L_3^\circ\bigr)
+\boxed{\ \widetilde T_{p,N}^{\mathrm{raw}}(x) := \Pi_{\mathrm{rel},J,N}\,\widetilde\omega_2\bigl(x, L_3^\circ\bigr)
 \in \mathscr V_{\mathrm{rel},p,N}^{\mathrm{pre}}.\ }
 $$
+
+> **Typhinweis.** Die Projektion $\Pi_{\mathrm{rel},J,N}$ in den kantenmarkierten relativen
+> Rohzielraum steht hier **sichtbar** in der Definition. Wird stattdessen kurz
+> $\widetilde\omega_2^{\mathrm{rel}}$ geschrieben, muss ausdrücklich gesagt werden, dass
+> diese Notation die Projektion bereits enthält. Der Index $N$ wird im Folgenden
+> unterdrückt, wo keine Verwechslung droht.
 
 Mit der Fourierregel $\widetilde\omega_2(e_uV_p, e_sV_m) = -u\,s\,\log(p)\, e_{u+ps}V_{pm}$
 gilt auf Basiselementen
@@ -276,6 +296,12 @@ $$
 \tag{221e.1}
 $$
 
+> **Äquivalente Testform.** Ist der Ausgangslift zulässig ($0\in\mathcal A_p^{\mathrm{adm}}$),
+> so ist (221e.1) wegen der Linearität von $\widetilde T_p^{\mathrm{raw}}$ äquivalent zu
+> $\widetilde T_p^{\mathrm{raw}}(\mathcal A_p^{\mathrm{adm}}) \subseteq \mathcal N_{\mathrm{Wres,rel}}$
+> (Beweis in §2.2). Der Test darf also auf $\mathcal A_p^{\mathrm{adm}}$ gerechnet werden.
+> Unzulässig bleibt ein Test nur auf dem Tangentialraum oder auf einer echten Teilmenge.
+
 Die stärkere Bedingung
 
 $$
@@ -333,6 +359,31 @@ Phasengruppe $U(1)$. `✓[M]`, bedingt durch Nichtnullheit und Kanalgleichheit.
 > $*$ setzt die positive Hilbertrealisierung voraus; im indefiniten Fall ist die
 > Phasenschlussfolgerung nicht verfügbar.
 
+### 6.1 — Quellenkorrektur: $C_pC_p^{\#}$ ist nicht automatisch ein Projektor
+
+NEU-41 (41.9) zeigt
+
+$$
+C_pC_p^{\#}x = \Psi_p\,\langle\Psi_p, x\rangle_{\mathrm{Wres}}
+$$
+
+und bezeichnet $C_pC_p^{\#}$ anschließend als „Rang-eins-**Projektor** auf den
+$\mathrm{Wres}$-zyklischen Vektor $\Psi_p$", Status `✓[M]`. Aus (41.9) folgt jedoch
+
+$$
+\bigl(C_pC_p^{\#}\bigr)^2 = \langle\Psi_p,\Psi_p\rangle_{\mathrm{Wres}}\; C_pC_p^{\#}.
+$$
+
+Es handelt sich daher sicher um einen **Rang-eins-Operator**, aber nur dann um einen
+**Projektor**, wenn $\langle\Psi_p,\Psi_p\rangle_{\mathrm{Wres}} = 1$.
+
+> Die $\mathrm{Wres}$-Normierung der **Eingangshebung**,
+> $h_p(\widehat\varepsilon_p,\widehat\varepsilon_p) = 1$ (NEU-41 §3), normiert den Lift, nicht
+> das **Bild** $\Psi_p$. Sie beweist die Ausgangsnormierung $\langle\Psi_p,\Psi_p\rangle = 1$
+> nicht. Wegen der Normalisierungs-Firewall (NEU-221) ist der Begriff „Projektor" zu
+> vermeiden, solange die Norm von $\Psi_p$ nicht quellseitig bewiesen ist. `✓[M]_neg`
+> gegen die uneingeschränkte Projektorbezeichnung in NEU-41.
+
 ---
 
 ## 7. Spektralmaßinvarianz
@@ -349,13 +400,19 @@ $$
 
 für **alle** beschränkten Borelfunktionen $f$ unabhängig von $\widehat\varepsilon_p$ ist.
 
-Als erster vollständiger Test genügt die Resolventenfamilie
+Zwei Testfamilien sind zu unterscheiden — sie leisten **nicht** dasselbe:
 
-$$
-f_w(\lambda) = (\lambda - w)^{-1}, \quad w \notin \mathbb R,
-\qquad\text{bzw. für den Stieltjeskandidaten}\qquad
-f_w(\lambda) = (\lambda^2 - w)^{-1}.
-$$
+| Familie | Bestimmt | Reichweite |
+|---|---|---|
+| $f_z(\lambda) = (\lambda - z)^{-1}$, $z\in\mathbb C\setminus\mathbb R$ | das **vollständige** Spektralmaß $\mu_\Psi^{D}$ | voller Test der Hebungsunabhängigkeit |
+| $f_w(\lambda) = (\lambda^2 - w)^{-1}$ | nur das Bildmaß unter $\lambda\mapsto\lambda^2$, also $(\lambda^2)_*\mu_\Psi^{D} = \mu_\Psi^{D^2}$ | genügt für den Stieltjeskandidaten und seine **geraden** inversen Momente |
+
+> **Präzisierung.** Die gewöhnliche Resolventenfamilie bestimmt das vollständige
+> $D$-Spektralmaß. Für den NEU-221-Stieltjeskandidaten genügt schwächer die **gerade**
+> Resolventenfamilie, die das zyklische Spektralmaß von $D^2$ bestimmt. Die gerade Familie
+> reicht **nicht** für die vollständige Hebungsunabhängigkeit von $\mu_\Psi^{D}$.
+> NEU-46 formuliert die vollständige Weyl-Funktion mit der **gewöhnlichen** Resolvente von
+> $D_{\mathrm{rel},p}^{-}$.
 
 > **Kernpunkt.** Die bloße Norminvarianz entspricht nur dem Test $f \equiv 1$ und ist
 > **nicht ausreichend**. Genau hier liegt der Unterschied zwischen NEU-41 (Normierung) und
@@ -410,15 +467,25 @@ $$
 \Psi_N = \bigoplus_{p\le N} \Psi_p .
 $$
 
-Falls diese Summe als **orthogonale** Hilbertdirektsumme mit primkantendiagonaler relativer
-Paarung konstruiert ist, gilt
+In der **ausdrücklich orthogonalen** relativen Hilbertdirektsumme
+$\mathcal H_{\mathrm{rel},N} = \bigoplus_{p\le N}^{\perp}\mathcal H_{\mathrm{rel},p,N}$ gilt
 
 $$
-\boxed{\ \lVert \Psi_N \rVert^2 = \sum_{p\le N} \lVert \Psi_p \rVert^2. \ }
+\boxed{\ \Bigl\lVert \bigoplus_{p\le N}\Psi_p \Bigr\rVert^2 = \sum_{p\le N} \lVert \Psi_p \rVert^2. \ }
 $$
 
-Nach Kollaps in den gewöhnlichen Jacobi-Raum ist diese Orthogonalität **nicht automatisch**
-erhalten — verschiedene Primkanten können im selben Zielsektor kollidieren (NEU-43/44).
+> **Was hier Definition ist und was Satz.** In der orthogonalen Direktsumme ist die
+> Additivität der Normquadrate **definitorisch**, kein Resultat. Sie gilt **nicht**
+> automatisch
+> 1. im kollabierten Jacobi-Raum — verschiedene Primkanten können im selben Zielsektor
+>    kollidieren (NEU-43/44);
+> 2. für die ungeprüfte Pullback-Paarung $\kappa^*\mathrm{Wres}$;
+> 3. im indefiniten Raum als **positive** Normidentität.
+>
+> Die eigentliche offene Frage lautet daher nicht „gilt Orthogonalität?", sondern:
+> $$\boxed{\ \text{Ist die quellseitig induzierte } \mathrm{Wres}\text{-Paarung primkantendiagonal?}\ }$$
+> Genau deshalb trennt NEU-43 den graph-erweiterten Raum vom kollabierten Zielraum. Dies
+> ist die präzise Form von `[O-144-1]` (T2-Orthogonalität) auf der relativen Ebene.
 
 > **Trennung zweier Fragen.** Die Vektordirektsumme entscheidet **nicht** über die globale
 > Kopplung des Spektralmaßes. Besitzt $D_N^{\mathrm{rel}}$ Off-Diagonalblöcke zwischen
@@ -439,8 +506,13 @@ Dies ist genau die Frage von `[O-221-1c1d]` und darf nicht mit der Vektornormier
 | $K_p = \ker\pi_{\mathrm{prim},p}$ | `✓[M]` |
 | Wres-Normierung ist quadratisch, $\mathcal Q_p$ kein Vektorraum | `✓[M]` |
 | exakt zulässige Liftmenge $\widehat{\mathcal E}_p^{\mathrm{adm}}$ vollständig formalisiert | `?[O]` — NEU-157-R1–R3 unvollständig |
-| relative Roh-/Quotientkopplung exakt getrennt typisiert | `✓[K]_part` als notwendige Typisierung |
-| $\Delta_p^{\mathrm{adm}} = \mathcal A_p^{\mathrm{adm}} - \mathcal A_p^{\mathrm{adm}}$, im Allgemeinen echt größer als $\mathcal A_p^{\mathrm{adm}}$ | `✓[M]` (editorischer Querabgleich §2.2) |
+| relative Roh-/Quotientkopplung exakt getrennt typisiert, Projektion $\Pi_{\mathrm{rel},J,N}$ sichtbar | `✓[K]_part` als notwendige Typisierung |
+| $\Delta_p^{\mathrm{adm}} = \mathcal A_p^{\mathrm{adm}} - \mathcal A_p^{\mathrm{adm}}$, mengenmäßig i. A. echt größer | `✓[M]` (§2.2) |
+| **Testäquivalenz:** bei $0\in\mathcal A_p^{\mathrm{adm}}$ ist der Test auf $\mathcal A_p^{\mathrm{adm}}$ äquivalent zu dem auf $\Delta_p^{\mathrm{adm}}$ | `✓[M]` (§2.2) |
+| Test auf dem Tangentialraum (157.4) allein | **unzureichend**, NEU-157 §157.F |
+| $C_pC_p^{\#}$ ist Projektor | nur bei $\langle\Psi_p,\Psi_p\rangle = 1$; Bezeichnung in NEU-41 überzogen — `✓[M]_neg` (§6.1) |
+| gerade Resolventenfamilie bestimmt $\mu_\Psi^{D}$ | `✓[M]_neg` — sie bestimmt nur $\mu_\Psi^{D^2}$ (§7) |
+| $\Psi_p[\widehat\varepsilon_p]$ nach Hebungswahl typisiert; intrinsischer Vektor und intrinsische Norm | `✓[K]_part` / `?[O]` |
 | Quotientabstieg auf $\Delta_p^{\mathrm{adm}}$ | **gesperrt**, solange $\Delta_p^{\mathrm{adm}}$ nicht bestimmt ist |
 | stärkere Inklusion auf ganz $K_p$ | `?[O]`, hinreichend, nicht notwendigerweise äquivalent |
 | Liftstabilisator | `?[O]` |

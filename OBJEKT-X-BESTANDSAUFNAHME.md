@@ -89,7 +89,7 @@ ergibt das ein überraschend scharfes Fahndungsbild.
 
 | # | Eigenschaft, die X haben MUSS | Erzwungen durch |
 |---|---|---|
-| **S1** | **Echte Off-Diagonal-Kopplung** zwischen Primkanälen: $K_{pq}\neq 0$ für $p\neq q$. Keine direkte Summe, keine Blockdiagonale, keine Kette. | NEU-50, 207, 209 |
+| **S1** | **Nichtverschwindender Off-Diagonal-Anteil** $K^{\mathrm{off}}\neq 0$; kein nichttrivial entkoppelter Block im Primkopplungsgraph. Nicht gefordert: $K_{pq}\neq 0$ für jedes Paar. Keine direkte Summe, keine Blockdiagonale, keine Kette. | NEU-50, 207, 209 |
 | **S2** | **Mehrdimensionales Bewertungsgitter** statt eindimensionaler Kette, mit **gemeinsamer, punktkonzentrierter Singularität** ($\operatorname{Sing}\subseteq Z_g$) statt separierbarer Struktur auf Koordinatenhyperflächen. | NEU-207, 209 |
 | **S3** | **Gradierte, nicht skalare Normierung** — eine Diagonalmatrix $D_N$, kein Skalar $\kappa_N$. Und sie muss **intrinsisch** aus der Operatorstruktur folgen (Anti-Fitting). | NEU-78, 82, 83, 123.H |
 | **S4** | **Dichte Trägerstruktur** ($\kappa_N \asymp N$), nicht dünn/rein primzahlindiziert. | NEU-82, 83 |
@@ -169,7 +169,7 @@ macht.
 | 3 | Spurklasse global | Off-Diagonal-Terme existieren generisch; das Kriterium braucht die echte Spektralbasis von $D_{\mathrm{rel}}$ — die es nicht gibt (Graphbasis ≠ Eigenbasis). | NEU-51/52 |
 | 4 | Konfinement | kompakter Resolvent blockiert (siehe §2.1) | NEU-56 |
 | 5 | Kritischer Streifen | Spurformel nur für $\Re\beta>1$ | NEU-141/144 |
-| 6 | T2-Orthogonalität | $\langle\Psi_p,\Psi_q\rangle = 0$ ist **Voraussetzung, nicht Satz**. Quelle selbst: „noch kein formaler Beweis". Trägt die gesamte primdiagonale Struktur von $R$. | NEU-144 [O-144-1] |
+| 6 | Primkantendiagonalität | In der orthogonalen Direktsumme ist $\langle\Psi_p,\Psi_q\rangle = 0$ definitorisch; offen ist, ob die **induzierte** Wres-Paarung primkantendiagonal ist. Quelle: „noch kein formaler Beweis". Trägt die primdiagonale Struktur von $R$. | NEU-144 [O-144-1] |
 | 7 | Zyklisches Tripel | $(\mathcal H_N^{\mathrm{rel}}, D_N^{\mathrm{rel}}, \Psi_N)$ nicht vollständig typisiert | NEU-221d |
 | 8 | Abel-Lemma quantitativ | Kanalgewichte unbekannt; Kancellation „gefährdet nahe $\beta_0\approx s$" — gerade nahe möglicher Nullstellenlagen | NEU-133 |
 | 9 | RH-Tautologie | 220s–w konstruiert aus der Nullstellenliste bzw. unter RH-Annahme | NEU-220s–w |
