@@ -4,7 +4,7 @@ Verdichtete Gesamtbilanz des Programms ohne Zwischenschritte. Für die vollstän
 Dokumentliste siehe [INDEX.md](INDEX.md), für die Verzweigungsbedingungen der offenen
 Knoten [OFFENE_PROBLEME.md](OFFENE_PROBLEME.md).
 
-> Stand: 26. Juli 2026 · letzter Eintrag NEU-221e
+> Stand: 26. Juli 2026 · letzter Eintrag NEU-222
 
 Verbindliche Karte aller Bedingungen an Objekt X, nach logischen Ebenen getrennt:
 [Ebene XVI — Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md).

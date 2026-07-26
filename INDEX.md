@@ -1,6 +1,6 @@
 # Gesamtindex
 
-Vollstaendiges Register aller **325** Forschungsdokumente des Objekt-X-Programms, geordnet nach thematischen Straengen. Innerhalb eines Strangs ist nach Journalnummer sortiert.
+Vollstaendiges Register aller **326** Forschungsdokumente des Objekt-X-Programms, geordnet nach thematischen Straengen. Innerhalb eines Strangs ist nach Journalnummer sortiert.
 
 Zurueck zum [Repository-Start](README.md).
 
@@ -14,7 +14,7 @@ Zurueck zum [Repository-Start](README.md).
 | [Weil-Quadratform und Nullstellenstatistik](03-weil-form-statistik/README.md) | 31 | Quadratischer Pivot zur Weil-Form, Bochner-Tor, Goldston–Montgomery-Transfer, GUE-/Poisson-Formfaktortest,… |
 | [Grenzoperator, Selbstenergie und Mangoldt-Spur](04-grenzoperator-renormierung/README.md) | 41 | Jacobi-Grenzoperator und Spektralmass, Renormierungsbarrieren der Dreifachsumme, PSWF-Bruecke, renormalisierte… |
 | [Primkanalgewichte und Fourierladung](05-primkanal-fourierladung/README.md) | 33 | Nichtentartung und Hebungsunabhaengigkeit der Primkanalgewichte, Rohkopplungsquotient, Zeugenroute fuer die… |
-| [Hochschild-Kohomologie der BC-Algebra](06-hochschild-bc-algebra/README.md) | 78 | Minimaler Hochschild-Komplex, geladene HH4-Klassen, Zentrums- und Nullkozykeltests, singulaere aeussere Derivationen,… |
+| [Hochschild-Kohomologie der BC-Algebra](06-hochschild-bc-algebra/README.md) | 79 | Minimaler Hochschild-Komplex, geladene HH4-Klassen, Zentrums- und Nullkozykeltests, singulaere aeussere Derivationen,… |
 | [Weil-Explizitformel, Krein-Raum und Hankelpositivitaet](07-weil-explizitformel/README.md) | 29 | Gammafaktor und Mellin-Normierung, Konturtransport zur Explizitformel, Nullstellenpaar-Kreinraum, Spektraldeterminante… |
 | [Quer-Audits und Methodik](audits/README.md) | 4 | Straenge-uebergreifende Korrekturaudits und methodische |
 
@@ -26,7 +26,7 @@ Zurueck zum [Repository-Start](README.md).
 
 | ID | Dokument | Status |
 |---|---|---|
-| `—` | [Ebene XVI — Objekt X: Kanonisches Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md) | ✓M·23 ⚠M·6 ✗M·2 ?O·39 |
+| `—` | [Ebene XVI — Objekt X: Kanonisches Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md) | ✓M·26 ✓K·1 ⚠M·6 ✗M·2 |
 | `—` | [Kritischer Pfad — Gesamtuebersicht (Stand: 1. Juli 2026, NEU-114)](00-grundlegung/kritischer_pfad_aktuell.md) | ⚠M·5 ✗M·2 ?O·10 |
 | `—` | [Objekt X — Minimalaxiome und epistemischer Status](00-grundlegung/objekt_x_minimalaxiome.md) | — |
 | `—` | [X-P1.3a — Spektralrealisierungs-Triage](00-grundlegung/objekt_x_p1_3a_spektraltriage.md) | — |
@@ -278,7 +278,7 @@ Zurueck zum [Repository-Start](README.md).
 
 ## Hochschild-Kohomologie der BC-Algebra
 
-[Strangübersicht](06-hochschild-bc-algebra/README.md) — 78 Dokumente
+[Strangübersicht](06-hochschild-bc-algebra/README.md) — 79 Dokumente
 
 | ID | Dokument | Status |
 |---|---|---|
@@ -360,6 +360,7 @@ Zurueck zum [Repository-Start](README.md).
 | `NEU-219y` | [Direktaudit: Zieltypbrücke für $D_g$ von NEU-211 über NEU-216/217](06-hochschild-bc-algebra/NEU-219y_Direktaudit_Dg_Zieltypbruecke_NEU211_NEU217.md) | ✓M·2 |
 | `NEU-219y` | [Unit-Slot-Zeuge und Abschluss des kanonischen Basislift-Rotationspfads](06-hochschild-bc-algebra/NEU-219y_Unit-Slot-Zeuge_und_Abschluss_des_Basislift-Rotationspfads.md) | — |
 | `NEU-219z` | [Expliziter Cup-Rotationsaudit](06-hochschild-bc-algebra/NEU-219z_Expliziter_Cup-Rotationsaudit.md) | — |
+| `NEU-222` | [Trassenaudit der singulären Route: Statuskorrektur und offene Restknoten](06-hochschild-bc-algebra/NEU-222_Trassenaudit_singulaere_Route_Statuskorrektur_und_offene_Restknoten.md) | ✓M·27 ✓K·5 ?O·6 |
 
 ## Weil-Explizitformel, Krein-Raum und Hankelpositivitaet
 
@@ -395,7 +396,7 @@ Zurueck zum [Repository-Start](README.md).
 | `NEU-221` | [Adelische Momentquelle für den positiven Weil-Operator](07-weil-explizitformel/NEU-221_Adelische_Momentquelle_fuer_den_positiven_Weil-Operator.md) | ✓M·3 ?O·7 |
 | `NEU-221c` | [Zyklischer Feshbach-Weyl-Kandidat und quadratische Resolvente](07-weil-explizitformel/NEU-221c_Zyklischer_Feshbach-Weyl_Kandidat_und_quadratische_Resolvente.md) | ✓M·1 ✓K·2 ?O·5 |
 | `NEU-221d` | [Direktextraktion NEU-46: Zyklischer Sektor und Nullmodusaudit](07-weil-explizitformel/NEU-221d_Direktextraktion_NEU46_Zyklischer_Sektor_und_Nullmodusaudit.md) | ✓M·2 ✓K·1 |
-| `NEU-221e` | [Affine Hebungsfaser, Wres-Quotient und Spektralmaßabstieg des relativen Kopplungsvektors](07-weil-explizitformel/NEU-221e_Affine_Hebungsfaser_Wres-Quotient_und_Spektralmassabstieg_Psip.md) | ✓M·11 ✓K·1 ?O·4 ?O·7 |
+| `NEU-221e` | [Affine Hebungsfaser, Wres-Quotient und Spektralmaßabstieg des relativen Kopplungsvektors](07-weil-explizitformel/NEU-221e_Affine_Hebungsfaser_Wres-Quotient_und_Spektralmassabstieg_Psip.md) | ✓M·16 ✓K·2 ?O·4 ?O·8 |
 
 ## Quer-Audits und Methodik
 

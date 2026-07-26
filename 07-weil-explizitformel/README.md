@@ -34,7 +34,7 @@ NEU-220 – NEU-221d. Gammafaktor und Mellin-Normierung, Konturtransport zur Exp
 | `NEU-221` | [Adelische Momentquelle für den positiven Weil-Operator](NEU-221_Adelische_Momentquelle_fuer_den_positiven_Weil-Operator.md) | ✓M·3 ?O·7 |
 | `NEU-221c` | [Zyklischer Feshbach-Weyl-Kandidat und quadratische Resolvente](NEU-221c_Zyklischer_Feshbach-Weyl_Kandidat_und_quadratische_Resolvente.md) | ✓M·1 ✓K·2 ?O·5 |
 | `NEU-221d` | [Direktextraktion NEU-46: Zyklischer Sektor und Nullmodusaudit](NEU-221d_Direktextraktion_NEU46_Zyklischer_Sektor_und_Nullmodusaudit.md) | ✓M·2 ✓K·1 |
-| `NEU-221e` | [Affine Hebungsfaser, Wres-Quotient und Spektralmaßabstieg des relativen Kopplungsvektors](NEU-221e_Affine_Hebungsfaser_Wres-Quotient_und_Spektralmassabstieg_Psip.md) | ✓M·11 ✓K·1 ?O·4 ?O·7 |
+| `NEU-221e` | [Affine Hebungsfaser, Wres-Quotient und Spektralmaßabstieg des relativen Kopplungsvektors](NEU-221e_Affine_Hebungsfaser_Wres-Quotient_und_Spektralmassabstieg_Psip.md) | ✓M·16 ✓K·2 ?O·4 ?O·8 |
 
 ---
 

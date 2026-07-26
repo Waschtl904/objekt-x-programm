@@ -428,19 +428,28 @@ Gilt nur, solange die kohomologische Schicht Bestandteil der Konstruktion bleibe
 |---|---|---|---|
 | P4.1 | Echte Singularität bei 0: $H \in \mathrm{LC}(\hat{\mathbb Z}\setminus\{0\})\setminus\mathrm{LC}(\hat{\mathbb Z})$ — reguläre Potentiale sind im Kommutatorquotienten unsichtbar | NEU-196, 200 | `✓[M]` |
 | P4.2 | Gemeinsame, punktkonzentrierte Singularität $\operatorname{Sing}\subseteq Z_g$ statt separierbarer Struktur auf Koordinatenhyperflächen | NEU-207, 209 | Anforderung |
-| P4.3 | Randtermkontrolle | — | `❓[O]` `[O-207-5b]` |
-| P4.4 | Charakterkernmenge $Z_g$ | — | `❓[O]` `[O-209-5/6]` |
+| P4.3 | $Z_g = \{0\}$ für alle $g=m/n\neq 1$ | NEU-210 `[O-210-1]`, Pontrjagin | **`✓[M]` geschlossen** |
+| P4.4 | Faktoriales Ursprungspotential $X_N$ mit $\operatorname{Sing}(X)=\{0\}$ | NEU-210 `[O-210-2]` | **`✓[K]` geschlossen** |
+| P4.5 | Transportband $P_j \le E_{L_j/k} \le P_{j-k}$; normkonvergente Kommutatoren | NEU-210 `[O-210-3]` | `✓[M]` |
+| P4.6 | Geladene äußere Derivation $D_g : A_{\mathrm{alg}}\to A_{C^*}$, nicht $A_{C^*}$-inner | NEU-211 `[O-211-3/4]`, global NEU-217 | `✓[M]` |
+| P4.7 | Technische Restknoten `[O-212-5]`, `[O-213-3/5]`, `[O-214-4b]`, `[O-217-1d]` | — | `❓[O]`, keine Existenzentscheidungen |
+| P4.8 | Knoten der **verlassenen** Gitterroute: `[O-206-4]`, `[O-207-5b]`, `[O-207-5c]`, `[O-208-5]` | — | `❓[O]`, für die faktoriale Trasse gegenstandslos |
 
-> **Entscheidungsknoten — höchste Priorität bei serieller Bearbeitung.** P4 ist nach
-> P3.1/P3.2/P3.4 der **letzte bekannte** Konstruktionsweg für die geladene Klasse.
-> Scheitert P4.3/P4.4, hat die kohomologische Schicht von $X$ nach heutigem Wissensstand
-> keinen bekannten Konstruktionsweg mehr. Dieser Knoten ist vor weiterer Investition in P3
-> zu entscheiden.
+> **Statuskorrektur (NEU-222, 26. Juli 2026).** Revision 2 führte P4 als offenen
+> Entscheidungsknoten und „letzten bekannten Konstruktionsweg". Das war **falsch**:
+> `[O-209-5]` und `[O-209-6]` sind seit dem 20. Juli durch NEU-210 geschlossen, und
+> `[O-207-5b]` gehört zur verlassenen mehrdimensionalen Gitterroute, nicht zur faktorialen
+> Trasse.
 >
-> P4 ist der **schärfere** Entscheidungstest: Beide Ausgänge sind informativ — ein
-> positiver hält die HH-Schicht am Leben, ein negativer schließt sie nach heutigem Wissen
-> ab. P5 (→ HP-2) bleibt parallel der wichtigste **spektrale** Knoten, hat aber nicht
-> denselben Ja/Nein-Charakter.
+> **Die singuläre Route wurde beschritten und trägt bis $HH^4$**: NEU-210 (Potential,
+> $Z_g=\{0\}$, Transportband) → NEU-211 ($D_g$, Nichtinnerheit) → NEU-212/216 (Zieltyp
+> $\mathcal A^\infty$, $\mathcal A^{\log}$) → NEU-217 (globale Nichtinnerheit) →
+> NEU-218 (Cup-Aufstieg). Sie endet **nicht** an der Konstruktion, sondern an der
+> **Zyklizität** (NEU-219u).
+>
+> Die kohomologische Schicht von $X$ ist damit **nicht leer**, sondern gebaut und
+> blockiert. Der aktive Nachfolgeknoten ist `[O-219-6]` (P3.3), nicht P4.
+> Vollständiger Trassenbeleg: [`NEU-222`](../06-hochschild-bc-algebra/NEU-222_Trassenaudit_singulaere_Route_Statuskorrektur_und_offene_Restknoten.md).
 
 ### P5 — Vergleichsoperator-/Konfinementpfad
 

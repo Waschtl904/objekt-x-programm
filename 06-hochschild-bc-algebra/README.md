@@ -2,7 +2,7 @@
 
 NEU-174 – NEU-219z. Minimaler Hochschild-Komplex, geladene HH4-Klassen, Zentrums- und Nullkozykeltests, singulaere aeussere Derivationen, logarithmischer Koeffiziententyp und der O-219-Rotationsstrang.
 
-**78 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
+**79 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
 
 | ID | Dokument | Status |
 |---|---|---|
@@ -84,6 +84,7 @@ NEU-174 – NEU-219z. Minimaler Hochschild-Komplex, geladene HH4-Klassen, Zentru
 | `NEU-219y` | [Direktaudit: Zieltypbrücke für $D_g$ von NEU-211 über NEU-216/217](NEU-219y_Direktaudit_Dg_Zieltypbruecke_NEU211_NEU217.md) | ✓M·2 |
 | `NEU-219y` | [Unit-Slot-Zeuge und Abschluss des kanonischen Basislift-Rotationspfads](NEU-219y_Unit-Slot-Zeuge_und_Abschluss_des_Basislift-Rotationspfads.md) | — |
 | `NEU-219z` | [Expliziter Cup-Rotationsaudit](NEU-219z_Expliziter_Cup-Rotationsaudit.md) | — |
+| `NEU-222` | [Trassenaudit der singulären Route: Statuskorrektur und offene Restknoten](NEU-222_Trassenaudit_singulaere_Route_Statuskorrektur_und_offene_Restknoten.md) | ✓M·27 ✓K·5 ?O·6 |
 
 ---
 

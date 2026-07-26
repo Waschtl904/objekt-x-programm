@@ -2,11 +2,35 @@
 
 Sitzungsprotokoll des Objekt-X-Programms, neueste Einträge zuerst.
 
-> **Aktueller Stand: NEU-221e — 26. Juli 2026**
+> **Aktueller Stand: NEU-222 — 26. Juli 2026**
 
 Die Einträge ab NEU-162 sind aus der Commit-Historie des Arbeitsjournals rekonstruiert und
 zu thematischen Blöcken zusammengefasst. Für Details siehe die jeweiligen Dokumente über
 den [Gesamtindex](INDEX.md).
+
+---
+
+## [NEU-222] — 26. Juli 2026: Trassenaudit der singulären Route — Statuskorrektur
+
+**Reines Quellenaudit. Ergebnis: Die als offen geführte Entscheidungsfrage war überholt.**
+
+`[O-209-5]` und `[O-209-6]` sind seit dem 20. Juli durch NEU-210 geschlossen
+($Z_g=\{0\}$ exakt via Pontrjagin; faktoriales Ursprungspotential mit
+$\operatorname{Sing}(X)=\{0\}$). `[O-207-5b]` gehört zur verlassenen mehrdimensionalen
+Gitterroute; die faktoriale Kette erreicht Normkonvergenz direkt über das Transportband
+$P_j \le E_{L_j/k} \le P_{j-k}$ und fällt damit in die von NEU-207 ausdrücklich
+offengelassene Klasse der approximativen Ketten.
+
+**Die singuläre Route trägt bis $HH^4$:** NEU-210 → 211 ($D_g$, Nichtinnerheit) →
+212/216 (Zieltyp) → 217 (globale Nichtinnerheit) → 218 (Cup-Aufstieg). Sie endet an der
+**Zyklizität** (NEU-219u), nicht an der Konstruktion.
+
+Korrigiert: Ebene XVI XVI-D/P4 (führte geschlossene Knoten als offen und P4 als
+Entscheidungsknoten), Bestandsaufnahme §4.1 („kohomologische Schicht steuert auf Leere
+zu" — zurückgenommen) und die G4-Priorisierung (entfällt; G3 rückt auf Rang eins).
+
+Verbleibend offen auf der Trasse: `[O-212-5]`, `[O-213-3/5]`, `[O-214-4b]`, `[O-217-1d]` —
+technische Restknoten, keine Existenzentscheidungen.
 
 ---
 

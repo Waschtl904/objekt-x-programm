@@ -213,6 +213,13 @@ $K_{pq}$, Konfinement) sprechen gegen eine schnelle Erfüllbarkeit.
 
 ### 4.1 Die kohomologische Schicht steuert auf Leere zu
 
+> **Zurückgenommen durch NEU-222 (26. Juli 2026).** Dieser Abschnitt ist überholt.
+> `[O-209-5]` und `[O-209-6]` waren zum Zeitpunkt der Analyse bereits durch NEU-210
+> geschlossen; `[O-207-5b]` gehört zu einer verlassenen Nebenroute. Die singuläre Route
+> wurde beschritten und trägt bis $HH^4$ (NEU-210 → 211 → 212/216 → 217 → 218); sie endet
+> an der Zyklizität (NEU-219u), nicht an der Konstruktion. Die kohomologische Schicht ist
+> nicht leer. Der Text unten bleibt als Protokoll des damaligen Kenntnisstands stehen.
+
 Drei No-Go-Cluster laufen auf dieselbe Engstelle zu:
 
 - **NEU-182/183:** Das Zentrum ist trivial — beide Cup-Produkt-Routen (regulär und verdreht) sind tot.
@@ -281,10 +288,10 @@ Das ist zugleich die Frage nach der Singulärwertasymptotik $s_k(J^-|_{H^{\mathr
 
 ### G4 — Testschacht statt Großgrabung: die singuläre Route entscheiden
 
-> **Priorität (Stand NEU-221e).** Wird nur ein Strang zuerst bearbeitet, ist G4 der
-> schärfere Entscheidungstest: Beide Ausgänge sind informativ. G3 bleibt parallel der
-> wichtigste spektrale Knoten zu HP-2, hat aber nicht denselben Ja/Nein-Charakter.
-> Siehe [Ebene XVI, XVI-D/P4](00-grundlegung/ebene-XVI-objekt-x.md).
+> **Gegenstandslos (NEU-222).** Der Entscheidungstest ist bereits beantwortet: Die
+> singuläre Route trägt bis $HH^4$ und blockiert erst an der Zyklizität. G4 entfällt;
+> G3 (alternativer Vergleichsoperator, → HP-2) rückt damit auf Rang eins der offenen
+> Grabungsschnitte. Beleg: [`NEU-222`](06-hochschild-bc-algebra/NEU-222_Trassenaudit_singulaere_Route_Statuskorrektur_und_offene_Restknoten.md).
 
 Vor weiterer Investition in die HH-Schicht: einen schmalen, tiefen Test auf [O-207-5b] und
 [O-209-5/6]. Ergebnis entweder „singuläre Route trägt" — dann ist der Weg frei — oder
