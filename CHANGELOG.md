@@ -2,11 +2,42 @@
 
 Sitzungsprotokoll des Objekt-X-Programms, neueste Einträge zuerst.
 
-> **Aktueller Stand: NEU-222 — 26. Juli 2026**
+> **Aktueller Stand: NEU-223 — 26. Juli 2026**
 
 Die Einträge ab NEU-162 sind aus der Commit-Historie des Arbeitsjournals rekonstruiert und
 zu thematischen Blöcken zusammengefasst. Für Details siehe die jeweiligen Dokumente über
 den [Gesamtindex](INDEX.md).
+
+---
+
+## [NEU-223] — 26. Juli 2026: Vergleichsoperator, Schur, Konfinement, kompakter Resolvent
+
+**Quellenaudit NEU-52–56. Zwei Befunde ändern die Zielnormalform.**
+
+1. **HP-2 ist für die RH-Hinrichtung nicht erforderlich.** NEU-56 §4: Für
+   $\mathrm{Spec}\subset\mathbb R$ genügt Selbstadjungiertheit; der Engpass entscheidet nur
+   über den Spektraltyp. G3 betrifft ausschließlich das HP-Profil.
+2. **Die $\tilde L$-Klasse ist quellenseitig auf einen Kandidaten reduziert.** (N1) verlangt
+   $L$ groß, (K) verlangt $L$ klein, zusammen $L\simeq\lvert D_{\mathrm{rel}}\rvert$
+   (NEU-56 §1). NEU-56 §7 nennt $\tilde L=(1+(J^-)^2)^{1/2}$: (K) wird trivial, die
+   Verträglichkeitsbedingung entfällt.
+
+Vier Aussagen strikt getrennt: Selbstadjungiertheit (N1)/(N2), Vergleichsoperatorabschätzung,
+Konfinement (K), kompakte Einbettung. Die Trennungsregel (54.SEP) stand bereits in NEU-54.
+Konstanten sind **nicht** uniform in $N$; (55.16) wächst wie $\gamma_N m\log m$.
+
+Verbrauchte Freiheitsgrade: skalares $\gamma_N$ (A, A′), separables $m$-Gewicht (B1 —
+partielles Konfinement nur in der $r$-Achse), $L$-Rekalibrierung (B2 — rettet Schur, ruiniert
+(K)). Abgeleitet: Rekalibrierungen scheitern in **beiden** Ordnungsrichtungen.
+
+Typkorrektur: $s_k(J^-)$ ist für unbeschränktes $J^-$ nicht definiert. Relevantes Objekt ist
+$(1+(J^-)^2)^{-1/2}$; die Zielnormalform kollabiert auf dessen Kompaktheit auf
+$\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$. Ein negativer Ausgang wäre eine erheblich
+stärkere No-Go-Klasse als NEU-56.
+
+Sperrvermerk: „$D_N$ diskret $\Rightarrow$ $D_\infty$ kompakt resolvent" ist unzulässig.
+
+Nachfolgeknoten `[O-223-2]`. XVI-D/P5 entsprechend korrigiert.
 
 ---
 
