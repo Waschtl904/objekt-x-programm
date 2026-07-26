@@ -456,11 +456,26 @@ Gilt nur, solange die kohomologische Schicht Bestandteil der Konstruktion bleibe
 | # | Anforderung | Status |
 |---|---|---|
 | P5.1 | Vergleichsoperator $\tilde L$ mit $\lVert J^- x\rVert \lesssim \lVert \tilde L x\rVert$ (Schur/Nelson) **und** $\lVert D_{\mathrm{rel}}x\rVert + \lVert x\rVert \ge c\lVert \tilde L x\rVert$ (Konfinement) | `❓[O]` NEU-56 (VI) |
-| P5.2 | Singulärwertasymptotik $s_k(J^-\vert_{H^{\mathrm{eff}}_{\mathrm{rel}}})$: divergent oder akkumulierend? | `❓[O]` — Blatt NEU-57 existiert nicht |
+| P5.2 | **Typkorrigiert (NEU-223).** Für unbeschränktes $J^-$ sind gewöhnliche Singulärwerte nicht definiert. Relevantes Objekt: Ist $(1+(J^-)^2)^{-1/2}$ kompakt auf $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$? | `❓[O]` `[O-223-2]` |
 | P5.3 | Schur-Test exakt statt heuristisch: $\sup_a\sum_b\lvert\Theta_{ba}\rvert/\ell(a)<\infty$ | `❓[O]` NEU-55 |
 | P5.4 | Skalare Normierung $\gamma_N$ ist als Mechanismus verbraucht — P5.1 muss ohne sie auskommen | `✗[M]` NEU-56 Satz 56.2 |
 
 P5 ist der einzige registrierte Zugang zu HP-2 (vgl. C.4), aber nicht der einzig denkbare.
+
+> **Präzisierung (NEU-223, 26. Juli 2026).** Zwei Befunde aus dem Quellenaudit:
+>
+> 1. **HP-2 ist für die RH-Hinrichtung nicht erforderlich.** NEU-56 §4: Für
+>    $\mathrm{Spec}\subset\mathbb R$ genügt die Selbstadjungiertheit; der Engpass entscheidet
+>    nur über den *Typ* des Spektrums. P5 betrifft ausschließlich das HP-Profil (XVI-C.1).
+> 2. **Die $\tilde L$-Klasse ist auf einen Kandidaten reduziert.** (N1) verlangt $L$ groß,
+>    (K) verlangt $L$ klein; zusammen erzwingen sie $L\simeq\lvert D_{\mathrm{rel}}\rvert$
+>    (NEU-56 §1). NEU-56 §7 benennt daraufhin $\tilde L = (1+(J^-)^2)^{1/2}$, wodurch (K)
+>    trivial wird und die Verträglichkeitsbedingung entfällt.
+>
+> **G3 ist damit keine Suchaufgabe nach einem Vergleichsoperator mehr, sondern eine
+> Spektralfrage:** Ist $(1+(J^-)^2)^{-1/2}$ kompakt auf $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$?
+> Ein negativer Ausgang wäre eine **erheblich stärkere** No-Go-Klasse als NEU-56.
+> Vollständige Typisierung: [`NEU-223`](../01-primkanten-werkzeuge/NEU-223_Quellenaudit_alternativer_Vergleichsoperator_Schur_Konfinement_und_kompakter_Resolvent.md).
 
 ---
 

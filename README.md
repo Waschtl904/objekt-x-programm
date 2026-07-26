@@ -5,7 +5,7 @@
 Spektrale, nichtkommutative und arithmetische Zugänge zur RH — dokumentiert als
 lückenlos nachvollziehbare Kette aus Konstruktionen, Tests, Audits und No-Go-Resultaten.
 
-> **Stand:** 26. Juli 2026 · **letzter Eintrag:** NEU-222 · **326 Forschungsdokumente**
+> **Stand:** 26. Juli 2026 · **letzter Eintrag:** NEU-223 · **327 Forschungsdokumente**
 
 [Kontrollblatt Objekt X](00-grundlegung/ebene-XVI-objekt-x.md) · [Gesamtindex](INDEX.md) · [Statusregister](STATUS.md) · [Offene Probleme](OFFENE_PROBLEME.md) · [Glossar](GLOSSAR.md) · [Konventionen](KONVENTIONEN.md) · [Literatur](REFERENCES.md) · [Einstiegsprompt](EINSTIEGSPROMPT.md)
 

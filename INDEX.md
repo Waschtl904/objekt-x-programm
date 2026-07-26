@@ -1,6 +1,6 @@
 # Gesamtindex
 
-Vollstaendiges Register aller **326** Forschungsdokumente des Objekt-X-Programms, geordnet nach thematischen Straengen. Innerhalb eines Strangs ist nach Journalnummer sortiert.
+Vollstaendiges Register aller **327** Forschungsdokumente des Objekt-X-Programms, geordnet nach thematischen Straengen. Innerhalb eines Strangs ist nach Journalnummer sortiert.
 
 Zurueck zum [Repository-Start](README.md).
 
@@ -9,7 +9,7 @@ Zurueck zum [Repository-Start](README.md).
 | Strang | Dokumente | Inhalt |
 |---|---|---|
 | [Grundlegung](00-grundlegung/README.md) | 19 | Axiome, Ebenenaufbau I–XVI, epistemische Fundierung und die Definition von Objekt |
-| [Primkanten-Algebra und Werkzeuge](01-primkanten-werkzeuge/README.md) | 57 | Aufbau der relativen Primkanten-Algebra, Wodzicki-Residuum, Feshbach-Reduktion, Fourier-Hebung mit Mangoldt-Faktor und… |
+| [Primkanten-Algebra und Werkzeuge](01-primkanten-werkzeuge/README.md) | 58 | Aufbau der relativen Primkanten-Algebra, Wodzicki-Residuum, Feshbach-Reduktion, Fourier-Hebung mit Mangoldt-Faktor und… |
 | [Jacobi-Limes, Weyl-Funktion und Divisorgraph](02-jacobi-limes/README.md) | 33 | Jacobi-Grenzwert der Feshbach-Kette, arithmetische Identifikation der Weyl-/Stieltjes-Funktion, Divisorpfade,… |
 | [Weil-Quadratform und Nullstellenstatistik](03-weil-form-statistik/README.md) | 31 | Quadratischer Pivot zur Weil-Form, Bochner-Tor, Goldston–Montgomery-Transfer, GUE-/Poisson-Formfaktortest,… |
 | [Grenzoperator, Selbstenergie und Mangoldt-Spur](04-grenzoperator-renormierung/README.md) | 41 | Jacobi-Grenzoperator und Spektralmass, Renormierungsbarrieren der Dreifachsumme, PSWF-Bruecke, renormalisierte… |
@@ -48,7 +48,7 @@ Zurueck zum [Repository-Start](README.md).
 
 ## Primkanten-Algebra und Werkzeuge
 
-[Strangübersicht](01-primkanten-werkzeuge/README.md) — 57 Dokumente
+[Strangübersicht](01-primkanten-werkzeuge/README.md) — 58 Dokumente
 
 | ID | Dokument | Status |
 |---|---|---|
@@ -109,6 +109,7 @@ Zurueck zum [Repository-Start](README.md).
 | `NEU-54` | [X.3.24: Essentielle Selbstadjungiertheit via Nelson-Kommutator; Konfinement-Test](01-primkanten-werkzeuge/NEU-054_x3_nelson_selbstadjungiertheit_konfinement.md) | — |
 | `NEU-55` | [X.3.25: Matrixabschätzungsblatt — Nelson-Bedingungen für \(iJ^-\)](01-primkanten-werkzeuge/NEU-055_x3_nelson_matrixabschaetzung_schur.md) | — |
 | `NEU-56` | [X.3.26: γ_N-Wahl, Konfinement-Obstruktion und Richtungsbefund Weg A/B](01-primkanten-werkzeuge/NEU-056_x3_gammaN_konfinement_obstruktion.md) | ?O·2 |
+| `NEU-223` | [Quellenaudit: alternativer Vergleichsoperator, Schur, Konfinement und kompakter Resolvent](01-primkanten-werkzeuge/NEU-223_Quellenaudit_alternativer_Vergleichsoperator_Schur_Konfinement_und_kompakter_Resolvent.md) | ✓M·23 ⚠M·7 ✗M·6 ?O·5 |
 
 ## Jacobi-Limes, Weyl-Funktion und Divisorgraph
 
