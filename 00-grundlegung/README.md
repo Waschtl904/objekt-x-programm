@@ -6,7 +6,7 @@ Axiome, Ebenenaufbau I–XVI, epistemische Fundierung und die Definition von Obj
 
 | ID | Dokument | Status |
 |---|---|---|
-| `—` | [Ebene XVI — Objekt X: Minimalaxiomsystem](ebene-XVI-objekt-x.md) | ✓M·18 ✓R·2 ⚠M·8 ?O·7 |
+| `—` | [Ebene XVI — Objekt X: Kanonisches Kontrollblatt](ebene-XVI-objekt-x.md) | ✓M·23 ⚠M·6 ✗M·2 ?O·39 |
 | `—` | [Kritischer Pfad — Gesamtuebersicht (Stand: 1. Juli 2026, NEU-114)](kritischer_pfad_aktuell.md) | ⚠M·5 ✗M·2 ?O·10 |
 | `—` | [Objekt X — Minimalaxiome und epistemischer Status](objekt_x_minimalaxiome.md) | — |
 | `—` | [X-P1.3a — Spektralrealisierungs-Triage](objekt_x_p1_3a_spektraltriage.md) | — |

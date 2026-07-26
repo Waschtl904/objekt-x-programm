@@ -5,9 +5,9 @@
 Spektrale, nichtkommutative und arithmetische Zugänge zur RH — dokumentiert als
 lückenlos nachvollziehbare Kette aus Konstruktionen, Tests, Audits und No-Go-Resultaten.
 
-> **Stand:** 26. Juli 2026 · **letzter Eintrag:** NEU-221d · **324 Forschungsdokumente**
+> **Stand:** 26. Juli 2026 · **letzter Eintrag:** NEU-221e · **325 Forschungsdokumente**
 
-[Gesamtindex](INDEX.md) · [Statusregister](STATUS.md) · [Offene Probleme](OFFENE_PROBLEME.md) · [Glossar](GLOSSAR.md) · [Konventionen](KONVENTIONEN.md) · [Literatur](REFERENCES.md) · [Einstiegsprompt](EINSTIEGSPROMPT.md)
+[Kontrollblatt Objekt X](00-grundlegung/ebene-XVI-objekt-x.md) · [Gesamtindex](INDEX.md) · [Statusregister](STATUS.md) · [Offene Probleme](OFFENE_PROBLEME.md) · [Glossar](GLOSSAR.md) · [Konventionen](KONVENTIONEN.md) · [Literatur](REFERENCES.md) · [Einstiegsprompt](EINSTIEGSPROMPT.md)
 
 ---
 
@@ -85,7 +85,7 @@ solche Fälle sind im [Gesamtindex](INDEX.md) sichtbar.
 | [04 — Grenzoperator und Renormierung](04-grenzoperator-renormierung/README.md) | 41 | NEU-121 – NEU-150: Jacobi-Grenzoperator, PSWF-Brücke, Selbstenergie, Mangoldt-Spur, Mellin-Finite-Part |
 | [05 — Primkanal und Fourierladung](05-primkanal-fourierladung/README.md) | 33 | NEU-151 – NEU-173: Kanalgewichte, Rohkopplungsquotient, Zeugenroute für $L_3^\circ$, Typfundament |
 | [06 — Hochschild-Kohomologie der BC-Algebra](06-hochschild-bc-algebra/README.md) | 78 | NEU-174 – NEU-219z: geladene $HH^4$-Klassen, Zentrumstests, singuläre Derivationen, $\mathcal B^{\log}$, O-219-No-Go |
-| [07 — Weil-Explizitformel und Hankelpositivität](07-weil-explizitformel/README.md) | 28 | NEU-220 – NEU-221d: Gammafaktor, Konturtransport, Krein-Raum, Spektraldeterminante, Hankel-Hierarchie |
+| [07 — Weil-Explizitformel und Hankelpositivität](07-weil-explizitformel/README.md) | 29 | NEU-220 – NEU-221e: Gammafaktor, Konturtransport, Krein-Raum, Spektraldeterminante, Hankel-Hierarchie |
 | [Audits und Methodik](audits/README.md) | 4 | Strangübergreifende Korrekturaudits und Strukturdiagnosen |
 
 Jeder Strangordner enthält eine eigene `README.md` mit vollständiger Dokumenttabelle.
@@ -149,7 +149,8 @@ oder getwistet-zyklisch) oder einen echten Orbitshift $\kappa \neq 0$.
 
 | Strang | Engpass | Status |
 |---|---|---|
-| **Weil-Momentquelle** (primär) | Typisierung des Feshbach-Tripels $(\mathcal H_N^{\mathrm{rel}}, D_N^{\mathrm{rel}}, \Psi_N)$ als vollständig zyklisches Tripel; $\lVert\Psi_N\rVert$, Nullmodusfreiheit, inverse Momente | `❓ [O]` NEU-221d |
+| **Weil-Momentquelle** (primär) | Hebungsabstieg: gilt $\widetilde T_p^{\mathrm{raw}}(\Delta_p^{\mathrm{adm}}) \subseteq \mathcal N_{\mathrm{Wres,rel}}$? Normgleichheit genügt nicht — verlangt ist Invarianz des zyklischen Spektralmaßes | `❓ [O]` NEU-221e, `[O-221-1c1a0]` |
+| **Zyklisches Tripel** | $\lVert\Psi_N\rVert$, Nullmodusfreiheit, inverse Momente $k=0,1,2$ | `❓ [O]` NEU-221d, `[O-221-1c1b/c]` |
 | **Adelische Quellkonstruktion** | Positive Momentfolge $(\mu_k)$ aus einer adelischen Quelle konstruieren (RH-stark) | `❓ [O]` NEU-220w |
 | **Fourierladung $L_3^\circ$** | Explizites $\ell_{s_0,m_0}\neq 0$ konstruieren | `❓ [O]` NEU-161/162 |
 | **Regulierte Spur im kritischen Streifen** | $\operatorname{Tr}_{\mathrm{reg}}(R\Sigma_{\mathrm{rel}}^{\mathrm{ren}})$ für $0<\Re\beta\le 1$ | `❓ [O]` NEU-141.D |
@@ -176,7 +177,7 @@ NEU-174 (Hochschild-Komplex) → NEU-176 (geladene $HH^4$-Klasse) → NEU-195 (B
 [STATUS.md](STATUS.md) listet gesicherte Sätze, No-Gos und konditionale Resultate ohne Zwischenschritte.
 
 **Wer am Programm mitarbeiten will**
-[EINSTIEGSPROMPT.md](EINSTIEGSPROMPT.md) fasst den vollständigen Arbeitskontext auf Stand NEU-221d
+[EINSTIEGSPROMPT.md](EINSTIEGSPROMPT.md) fasst den vollständigen Arbeitskontext auf Stand NEU-221e
 zusammen — Architektur, geschlossene Routen, aktuelle Sperren, Arbeitsregeln und den nächsten
 konkreten Knoten. Gedacht als Einstiegstext für eine neue Arbeits- oder KI-Sitzung.
 

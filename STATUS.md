@@ -4,7 +4,10 @@ Verdichtete Gesamtbilanz des Programms ohne Zwischenschritte. Für die vollstän
 Dokumentliste siehe [INDEX.md](INDEX.md), für die Verzweigungsbedingungen der offenen
 Knoten [OFFENE_PROBLEME.md](OFFENE_PROBLEME.md).
 
-> Stand: 26. Juli 2026 · letzter Eintrag NEU-221d
+> Stand: 26. Juli 2026 · letzter Eintrag NEU-221e
+
+Verbindliche Karte aller Bedingungen an Objekt X, nach logischen Ebenen getrennt:
+[Ebene XVI — Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md).
 
 ---
 
@@ -148,7 +151,8 @@ Nach Dringlichkeit geordnet.
 
 | # | Knoten | Frage | Eintrag |
 |---|---|---|---|
-| 1 | `[O-221-1c1]` | Ist $(\mathcal H_N^{\mathrm{rel}}, D_N^{\mathrm{rel}}, \Psi_N)$ ein vollständig typisiertes zyklisches Tripel? Offen: Typisierung von $\varepsilon_p,\Psi_p$ als Hilbertvektoren, $\lVert\Psi_N\rVert$, $E_{D}(\{0\})\Psi_N = 0$, $\int\lvert\lambda\rvert^{-2k-2}d\mu_{\Psi_N}<\infty$ für $k=0,1,2$ | NEU-221d |
+| 1 | `[O-221-1c1a0]` | Gilt $\widetilde T_p^{\mathrm{raw}}(\Delta_p^{\mathrm{adm}}) \subseteq \mathcal N_{\mathrm{Wres,rel}}$? Erfordert: $\widehat{\mathcal E}_p^{\mathrm{adm}}$ vollständig definieren, Rohzielraum und Wres-Radikal fixieren, Test auf der Differenzmenge rechnen. Normgleichheit genügt nicht — verlangt ist Invarianz des zyklischen Spektralmaßes | NEU-221e |
+| 1b | `[O-221-1c1b/c/d]` | $E_{D}(\{0\})\Psi_N = 0$; $\int\lvert\lambda\rvert^{-2k-2}d\mu_{\Psi_N}<\infty$ für $k=0,1,2$; globale Kopplung in $D_{\mathrm{scatt},N}$ | NEU-221d |
 | 2 | `[O-220-1]` | Adelische Quellkonstruktion der positiven Momentfolge (RH-stark) | NEU-220w / NEU-221 |
 | 3 | `[O-161]` | Existiert ein explizit konstruiertes $\ell_{s_0,m_0}\neq 0$ mit $s_0\neq 0$ in $L_3^\circ = \sum_{s,m}\ell_{s,m}e_sV_m$? | NEU-161/162 |
 | 4 | `[O-141-D]` | Regularisierungsschema für $\operatorname{Tr}_{\mathrm{reg}}(R\Sigma_{\mathrm{rel}}^{\mathrm{ren}})$ im kritischen Streifen $0<\Re\beta\le 1$ | NEU-141 |
@@ -167,6 +171,8 @@ Nach Dringlichkeit geordnet.
 | NEU-1 – NEU-9 (ohne NEU-3) | Vorlaufeinträge vor Beginn der systematischen Journalführung; nicht als eigene Blätter erhalten |
 | NEU-57 | als eigenes Blatt nie angelegt — der Knoten (Singulärwert-Wachstum von $J^-$) wird in NEU-56 geführt |
 | NEU-129, NEU-191, NEU-198, NEU-221a/b | im Journal übersprungen; der inhaltliche Anschluss läuft über den jeweils folgenden Eintrag |
+
+**Hinweis zur Ebenentrennung (ab Ebene XVI Revision 2):** HP-1–HP-7 sind **Realisierungsbedingungen** für $H_X$, keine Axiome von $X$. Das Stieltjes-Profil des NEU-221-Strangs impliziert das HP-Profil **nicht**.
 
 ---
 

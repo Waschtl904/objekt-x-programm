@@ -2,11 +2,54 @@
 
 Sitzungsprotokoll des Objekt-X-Programms, neueste Einträge zuerst.
 
-> **Aktueller Stand: NEU-221d — 26. Juli 2026**
+> **Aktueller Stand: NEU-221e — 26. Juli 2026**
 
 Die Einträge ab NEU-162 sind aus der Commit-Historie des Arbeitsjournals rekonstruiert und
 zu thematischen Blöcken zusammengefasst. Für Details siehe die jeweiligen Dokumente über
 den [Gesamtindex](INDEX.md).
+
+---
+
+## [NEU-221e] — 26. Juli 2026: Hebungsfaser, Wres-Quotient, Spektralmaßabstieg
+
+**Typaudit des Kopplungsvektors. Das exakte Abstiegskriterium ist bewiesen, seine
+Verifikation gesperrt. `[O-221-1c1a]` steigt von `?[O]` auf `✓[M]_part`.**
+
+Die Kernkorrektur: Weil NEU-46 den relativen Vektor als **zyklischen** Vektor einer
+Weyl-Funktion verwendet, ist die Hebungsfrage **nicht** durch Normgleichheit entschieden.
+Verschieden gewählte, gleich normierte Hebungen können verschiedene Resolventenmatrixstellen,
+Spektralmaße und inverse Momente erzeugen.
+
+Drei Ebenen werden getrennt: algebraische affine Liftfaser $\widehat\varepsilon_p^{\,0}+K_p$ ·
+exakt zulässige normierte Liftmenge $\widehat{\mathcal E}_p^{\mathrm{adm}}$ ·
+Wres-Quotientbildung im **relativen** Zielraum.
+
+| Ergebnis | Status |
+|---|---|
+| Exaktes Abstiegskriterium $\widetilde T_p^{\mathrm{raw}}(\Delta_p^{\mathrm{adm}}) \subseteq \mathcal N_{\mathrm{Wres,rel}}$ | `✓[M]` |
+| Roh- und quotientierte Kopplung typologisch getrennt: $T_p^{\mathrm{rel}} = Q_{\mathrm{Wres,rel}}\circ\widetilde T_p^{\mathrm{raw}}$ | `✓[K]_part` |
+| $\Delta_p^{\mathrm{adm}} = \mathcal A_p^{\mathrm{adm}} - \mathcal A_p^{\mathrm{adm}}$ ist die **Differenzmenge**, im Allgemeinen echt größer als $\mathcal A_p^{\mathrm{adm}}$ (157.2) | `✓[M]` |
+| Ungeladener Rohkandidat $e_0V_p$ ausgeschlossen — $\widetilde T_p^{\mathrm{raw}}(e_0V_p)=0$ | `✓[M]_neg` |
+| Rang-eins-Bildstabilisator ist $U(1)$ — nur im **positiven** Hilbertraumfall | `✓[M]` konditional |
+| Verifikation des Abstiegs auf $\Delta_p^{\mathrm{adm}}$ | **gesperrt** |
+| Beschränktheit/Rang von $T_p^{\mathrm{rel}}$ auf ganz $B_{3,p}^{\mathrm{lift}}$ | `?[O]` |
+| Spektralmaßinvarianz, Liftstabilisator, intrinsische Sektion | `?[O]` |
+
+Vier Typkorrekturen gegenüber dem Vorentwurf: das Wres-Radikal muss **vor** dem Quotienten
+formuliert werden; $K_p$ ist nicht die Menge zulässiger Hebungsänderungen; der Zielraum muss
+der **kantenmarkierte** relative Raum sein; Rang eins und Beschränktheit von
+$C_p[\widehat\varepsilon_p]$ folgen aus dem eindimensionalen Definitionsraum und sagen nichts
+über die Rohabbildung.
+
+Typwarnungen: Bei indefiniter Form ist das Radikal **nicht** die Menge isotroper Vektoren.
+Der Schluss $C_pC_p^{\#}=C_p'C_p'^{\#} \Rightarrow \Psi_p'=e^{i\theta}\Psi_p$ setzt die positive
+Hilbertrealisierung voraus.
+
+Nächster atomarer Knoten: `[O-221-1c1a0-admissible-difference-locus-and-raw-relative-coupling]`.
+
+Parallel: **Ebene XVI Revision 2** — das Axiomenregister wurde von Stand NEU-114 auf NEU-221e
+nachgezogen und in ein Kontrollblatt mit drei logischen Ebenen umgebaut.
+Siehe [`00-grundlegung/ebene-XVI-objekt-x.md`](00-grundlegung/ebene-XVI-objekt-x.md).
 
 ---
 

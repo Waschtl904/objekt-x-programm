@@ -1,7 +1,9 @@
 # Einstiegsprompt — Neue Chat-Session
 
 > Diese Datei als Einstieg in jeden neuen Chat kopieren.
-> **Stand: 26. Juli 2026 — nach NEU-221d (Nullmodusaudit des Feshbach-Tripels).**
+> **Stand: 26. Juli 2026 — nach NEU-221e (Hebungsfaser, Wres-Quotient, Spektralmaßabstieg).**
+>
+> Verbindliche Karte aller Bedingungen an Objekt X: [Ebene XVI — Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md).
 
 ---
 
@@ -39,7 +41,7 @@ einschließlich aller Sackgassen.
 04-grenzoperator-renormierung/NEU-121 – NEU-150   PSWF, Selbstenergie, Mangoldt-Spur, Mellin
 05-primkanal-fourierladung/   NEU-151 – NEU-173   Kanalgewichte, L3°-Zeugenroute, Typfundament
 06-hochschild-bc-algebra/     NEU-174 – NEU-219z  HH⁴, Derivationen, B^log, O-219-No-Go
-07-weil-explizitformel/       NEU-220 – NEU-221d  Gammafaktor, Kontur, Krein, Hankel, Momentquelle
+07-weil-explizitformel/       NEU-220 – NEU-221e  Gammafaktor, Kontur, Krein, Hankel, Momentquelle
 audits/                       Quer-Audits und Methodik
 INDEX.md  STATUS.md  OFFENE_PROBLEME.md  GLOSSAR.md  KONVENTIONEN.md  CHANGELOG.md
 ```
@@ -143,7 +145,7 @@ die Weil-/Gammafaktorpaarung.
 Weitere gesicherte No-Gos dieses Stranges: $Z(A_{\mathbb Q})_g = 0$ für $g\neq 1_\Gamma$
 (NEU-182/183), globaler Bimodul-No-go (NEU-215), Charakterkern-No-go (NEU-209).
 
-### 3. Der Weil-Strang liefert die aktuelle Architektur (NEU-220 – NEU-221d)
+### 3. Der Weil-Strang liefert die aktuelle Architektur (NEU-220 – NEU-221e)
 
 Pfad `[O-219-6]` wurde beschritten und führte über Gammafaktor, Konturtransport,
 Nullstellenpaar-Kreinraum und Spektraldeterminante zum Hankel-Kriterium. Auf dem Weg
@@ -224,7 +226,7 @@ nötig, der Schließung von `[O-221-1c1a–d]`.
 
 | Strang | Letzter Stand | Nächste Aufgabe |
 |---|---|---|
-| **A: Adelische Momentquelle** (primär) | NEU-221d — Sperren lokalisiert | `[O-221-1c1a]`: $\Psi_N$ konkretisieren und normieren |
+| **A: Adelische Momentquelle** (primär) | NEU-221e — Abstiegskriterium bewiesen, Verifikation gesperrt | `[O-221-1c1a0]`: $\Delta_p^{\mathrm{adm}}$ und Rohkopplung vor dem Wres-Quotienten bestimmen |
 | **B: Positivitätsquelle Hankel** | NEU-220w — Modell konditional | $(\mu_k)$ aus adelischer Konstruktion, nicht aus RH |
 | **C: Regulierte Spur (krit. Streifen)** | NEU-141 | NEU-141.D: Regularisierungsschema für $0<\Re\beta\le 1$ |
 | **D: Singulärwert-Wachstum $J^-$** | NEU-56 | $s_k(J^-\vert_{H_{\mathrm{rel}}^{\mathrm{eff}}})$ divergent oder akkumulierend? |

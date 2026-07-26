@@ -1,18 +1,61 @@
 # Offene Probleme — Konsolidierte Liste
 
-> **Aktuelle Front: 26. Juli 2026 — NEU-221d**  
+> **Aktuelle Front: 26. Juli 2026 — NEU-221e**  
 > Der untere Teil dieser Datei ist der konsolidierte Stand vom 15. Juli 2026 (NEU-161 rev.5).
 > Er bleibt gültig, soweit er nicht durch die aktuelle Front überholt ist.
 
-Kompakte Gesamtbilanz: [STATUS.md](STATUS.md) · Alle Dokumente: [INDEX.md](INDEX.md)
+Kompakte Gesamtbilanz: [STATUS.md](STATUS.md) · Alle Dokumente: [INDEX.md](INDEX.md) ·
+Verbindliche Karte aller Bedingungen an Objekt X: [Ebene XVI — Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md)
+
+> **Ebenentrennung beachten.** HP-1–HP-7 sind Realisierungsbedingungen für $H_X$, keine
+> Axiome von $X$. Das Stieltjes-Profil des NEU-221-Strangs impliziert das HP-Profil **nicht**
+> — Fortschritt an `[O-221-1c1a–d]` darf nicht als Fortschritt an HP-2/HP-3 verbucht werden.
 
 ---
 
-# Teil I — Aktuelle Front (Stand NEU-221d)
+# Teil I — Aktuelle Front (Stand NEU-221e)
 
-## Priorität 1 — Adelische Momentquelle
+## Priorität 1 — Hebungsabstieg des Kopplungsvektors
 
-### `[O-221-1c1]`: Zyklisches Tripel für den Weil-Momentoperator ❓ [O]
+### `[O-221-1c1a0]`: Zulässige Differenzmenge und Rohkopplung ❓ [O]
+
+> Eröffnet: 26. Juli 2026 — NEU-221e · Vorgänger `[O-221-1c1a]` `✓[M]_part`
+
+**Ausgangslage.** NEU-46 verwendet den relativen Vektor als **zyklischen** Vektor einer
+Weyl-Funktion. Damit ist die Hebungsfrage **nicht** durch Normgleichheit entschieden:
+Verschieden gewählte, gleich normierte Hebungen können verschiedene
+Resolventenmatrixstellen, Spektralmaße und inverse Momente erzeugen. Norminvarianz
+entspricht nur dem Test $f\equiv 1$.
+
+**Bewiesenes Kriterium (NEU-221e).** Der Kopplungsvektor steigt genau dann von der
+Hebungsfaser auf den primitiven Kanal ab, wenn
+
+$$\widetilde T_p^{\mathrm{raw}}\bigl(\Delta_p^{\mathrm{adm}}\bigr) \subseteq \mathcal N_{\mathrm{Wres,rel}},
+\qquad \Delta_p^{\mathrm{adm}} = \mathcal A_p^{\mathrm{adm}} - \mathcal A_p^{\mathrm{adm}}.$$
+
+Die stärkere Inklusion auf ganz $K_p$ ist hinreichend, aber nur äquivalent, wenn jede
+Kernrichtung als Differenz exakt zulässiger Hebungen realisiert wird — nicht bewiesen.
+
+**Drei Aufgaben des Knotens:**
+
+1. Alle Bedingungen an eine Hebung als homogen-linear, affin, quadratisch oder nichtlinear
+   klassifizieren und $\widehat{\mathcal E}_p^{\mathrm{adm}}$ vollständig definieren.
+   Postulierte, nicht konstruierte Operatoren ($R_{p,j}$, NEU-165b) sind unzulässig.
+2. Rohzielraum $\mathscr V_{\mathrm{rel},p,N}^{\mathrm{pre}}$, Wres-Radikal
+   $\mathcal N_{\mathrm{Wres,rel}}$ und Quotientenabbildung explizit fixieren.
+3. Den Test auf Erzeugern bzw. expliziten Kurven in $\Delta_p^{\mathrm{adm}}$ rechnen.
+
+**Typwarnungen.** Bei indefiniter Form ist das Radikal **nicht** die Menge isotroper
+Vektoren. Der Schluss von $C_pC_p^{\#}=C_p'C_p'^{\#}$ auf Phasenäquivalenz setzt die
+positive Hilbertrealisierung voraus. Die Rang-eins-Eigenschaft von
+$C_p[\widehat\varepsilon_p]$ folgt aus dem eindimensionalen Definitionsraum und sagt nichts
+über Rang oder Beschränktheit von $T_p^{\mathrm{rel}}$.
+
+**Forschungsdokument:** [`NEU-221e`](07-weil-explizitformel/NEU-221e_Affine_Hebungsfaser_Wres-Quotient_und_Spektralmassabstieg_Psip.md)
+
+---
+
+### `[O-221-1c1b/c/d]`: Zyklisches Tripel für den Weil-Momentoperator ❓ [O]
 
 > Eröffnet: 26. Juli 2026 — NEU-221d
 
