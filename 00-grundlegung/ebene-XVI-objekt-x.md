@@ -456,9 +456,14 @@ Gilt nur, solange die kohomologische Schicht Bestandteil der Konstruktion bleibe
 | # | Anforderung | Status |
 |---|---|---|
 | P5.1 | Vergleichsoperator $\tilde L$ mit $\lVert J^- x\rVert \lesssim \lVert \tilde L x\rVert$ (Schur/Nelson) **und** $\lVert D_{\mathrm{rel}}x\rVert + \lVert x\rVert \ge c\lVert \tilde L x\rVert$ (Konfinement) | `❓[O]` NEU-56 (VI) |
-| P5.2 | **Typkorrigiert (NEU-223 Rev. 2).** $s_k(J^-)$ ist für unbeschränktes $J^-$ nicht definiert. Kanonisch über $D_{\mathrm{rel}}$: Ist $(1+D_{\mathrm{rel}}^2)^{-1/2}$ kompakt auf $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$? | `❓[O]` `[O-223-2d]` |
-| P5.2a | $\dim\ker D_{\mathrm{rel}}$ und exakte Beschreibung des Kerns | `❓[O]` `[O-223-2a]` |
-| P5.2b | Ist $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}=(\ker D_{\mathrm{rel}})^\perp$ **reduzierend**, d.h. $E_{D_{\mathrm{rel}}}(\mathbb R\setminus\{0\})\mathcal H_{\mathrm{rel}}=\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$? In NEU-55 (55.0) nicht belegt | `❓[O]` `[O-223-2b]` |
+| P5.2 | **Auf dem vollen Raum entschieden (NEU-224 §4):** $(1+D_{\mathrm{rel}}^2)^{-1/2}\notin\mathcal K(\mathcal H_{\mathrm{rel}})$, da der Operator auf dem unendlichdimensionalen $\ker D_{\mathrm{rel}}$ als Identität wirkt. $D_{\mathrm{rel}}$ hat **keinen** kompakten Resolventen auf $\mathcal H_{\mathrm{rel}}$ | **`✗[M]`** |
+| P5.2′ | Offen bleibt allein der **reduzierte** Fall $D_{\mathrm{rel}}\vert_{(\ker D_{\mathrm{rel}})^\perp}$ | `❓[O]` `[O-224-1d]` |
+| P5.2a | $\dim\ker D_{\mathrm{rel}} = \infty$ über die Faser $m=1$; $\gamma_N$- und $N$-unabhängig (NEU-224 §3.2/3.3) | `✓[M]` |
+| P5.2a′ | **`✓[M]_neg`:** Die flache Achse $r=0$ (NEU-54 §5) ist flache Achse von $\Theta_N$, **nicht** von $J^-=\frac12(\Theta_N-\Theta_N^\dagger)$. Rückwärtskanten aus $r=-n$ tragen $\gamma_N n\log n\neq0$ | `✓[M]_neg` |
+| P5.2a″ | **`✓[M]_neg`:** $\mathcal D_0^{\mathrm{eff}}$ nach (55.0) verlangt $r\neq0$ **und** $m>1$ und ist damit echt kleiner als $(\ker D_{\mathrm{rel}})^\perp$ sowie nicht invariant. Korrekt ist $\{m>1\}$ allein | `✓[M]_neg` |
+| P5.2a‴ | Restkern in den Sektoren $m>1$; Abschlusskontrolle | `❓[O]` `[O-224-1b/1c]` |
+| P5.2b | $(\ker D_{\mathrm{rel}})^\perp$ reduziert $D_{\mathrm{rel}}$ **automatisch** (Spektralsatz, NEU-224 §5.1) | `✓[M]` |
+| P5.2b′ | Offen bleibt nur: $\overline{\operatorname{Ran}(J_0^-)} = (\ker D_{\mathrm{rel}})^\perp$ (Präabschluss gegen Abschluss) | `❓[O]` |
 | P5.2c | Graphnormbeschränkte Orthonormalfolge in $\operatorname{Dom}(D_{\mathrm{rel}})\cap\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$ konstruieren oder ausschließen (negativer Zeuge bzw. Weyl-Folge) | `❓[O]` `[O-223-2c]` |
 | P5.3 | Schur-Test exakt statt heuristisch: $\sup_a\sum_b\lvert\Theta_{ba}\rvert/\ell(a)<\infty$ | `❓[O]` NEU-55 |
 | P5.4 | Skalare Normierung $\gamma_N$ ist als Mechanismus verbraucht — P5.1 muss ohne sie auskommen | `✗[M]` NEU-56 Satz 56.2 |

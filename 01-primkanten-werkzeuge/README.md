@@ -2,7 +2,7 @@
 
 NEU-3 – NEU-57. Aufbau der relativen Primkanten-Algebra, Wodzicki-Residuum, Feshbach-Reduktion, Fourier-Hebung mit Mangoldt-Faktor und Nelson-Selbstadjungiertheit.
 
-**58 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
+**59 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
 
 | ID | Dokument | Status |
 |---|---|---|
@@ -64,6 +64,7 @@ NEU-3 – NEU-57. Aufbau der relativen Primkanten-Algebra, Wodzicki-Residuum, Fe
 | `NEU-55` | [X.3.25: Matrixabschätzungsblatt — Nelson-Bedingungen für \(iJ^-\)](NEU-055_x3_nelson_matrixabschaetzung_schur.md) | — |
 | `NEU-56` | [X.3.26: γ_N-Wahl, Konfinement-Obstruktion und Richtungsbefund Weg A/B](NEU-056_x3_gammaN_konfinement_obstruktion.md) | ?O·2 |
 | `NEU-223` | [Quellenaudit: alternativer Vergleichsoperator, Schur, Konfinement und kompakter Resolvent](NEU-223_Quellenaudit_alternativer_Vergleichsoperator_Schur_Konfinement_und_kompakter_Resolvent.md) | ✓M·27 ⚠M·7 ✗M·5 ?O·10 |
+| `NEU-224` | [Kernbestimmung: flache Achsen, Antisymmetrisierung und der effektive Raum](NEU-224_Kernbestimmung_flache_Achsen_Antisymmetrisierung_und_effektiver_Raum.md) | ✓M·22 ⚠M·5 ✗M·1 ?O·8 |
 
 ---
 

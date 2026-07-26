@@ -2,11 +2,48 @@
 
 Sitzungsprotokoll des Objekt-X-Programms, neueste Einträge zuerst.
 
-> **Aktueller Stand: NEU-223 — 26. Juli 2026**
+> **Aktueller Stand: NEU-224 — 26. Juli 2026**
 
 Die Einträge ab NEU-162 sind aus der Commit-Historie des Arbeitsjournals rekonstruiert und
 zu thematischen Blöcken zusammengefasst. Für Details siehe die jeweiligen Dokumente über
 den [Gesamtindex](INDEX.md).
+
+---
+
+## [NEU-224] — 26. Juli 2026: Kernbestimmung, Antisymmetrisierung und effektiver Raum
+
+**`[O-223-2a]` ergab ein Ergebnis und drei Quellenkorrekturen.**
+
+**Quellenkritik.** NEU-27/31/33 definieren $\Theta(e_rV_n)=r\log(n)e_{r+n}V_n$ als reine
+Aufwärtsverschiebung. NEU-37 (37.1) und NEU-35/70 definieren $J_N^-$ als **Antisymmetrisierung**
+$\frac12(\Theta_N-\Theta_N^\dagger)$. Der Träger (55.1)/(55.3) beschreibt daher $\Theta_N$,
+**nicht** $J^-$, und ist mit $(J^-)^*=-J^-$ (54.3) unverträglich. `✓[M]_neg`
+Die Betragsabschätzungen (55.5)/(55.9)/(55.12) sind davon **unberührt** (Faktor $\le2$);
+die Obstruktion aus NEU-56 bleibt gültig.
+
+**Widerlegt.** Die flache Achse $r=0$ (NEU-54 §5) ist flache Achse von $\Theta_N$, nicht von
+$J^-$: die Rückwärtskanten aus $r=-n$ tragen $\gamma_N n\log n\neq0$. `✓[M]_neg`
+
+**Ergebnis.** Die Faser $m=1$ (bzw. $n=1$) liegt vollständig im Kern — beide Kantenrichtungen
+tragen $\log 1=0$ — und ist unendlichdimensional, unabhängig von $\gamma_N$ und $N$. Also
+$\dim\ker D_{\mathrm{rel}}=\infty$, und $(1+D_{\mathrm{rel}}^2)^{-1/2}$ wirkt dort als
+Identität:
+
+$$D_{\mathrm{rel}} \text{ besitzt auf } \mathcal H_{\mathrm{rel}} \text{ keinen kompakten Resolventen.} \quad \times[M]$$
+
+**Weitere Korrektur.** $\mathcal D_0^{\mathrm{eff}}$ nach (55.0) verlangt $r\neq0$ **und**
+$m>1$ und ist damit echt kleiner als $(\ker D_{\mathrm{rel}})^\perp$ sowie nicht invariant
+unter $J^-$. Korrekt ist $\{m>1\}$ allein. `✓[M]_neg`
+
+**Vereinfachung.** $(\ker D_{\mathrm{rel}})^\perp$ reduziert $D_{\mathrm{rel}}$ automatisch
+(Spektralsatz); NEU-223 Rev. 2 hatte das zu Unrecht als schweren Knoten geführt. Offen bleibt
+nur die Identifikation mit dem Präabschlussbild $\overline{\operatorname{Ran}(J_0^-)}$.
+
+**Redaktionsschulden:** Normierung $\frac12$ (NEU-37) gegen $\frac{1}{2i}$ (NEU-35/62) — nur
+erstere ist schiefadjungiert; explizite $\eta$-Definition samt Skalarprodukt fehlt;
+$(r,n)\leftrightarrow(p,m,r,u)$-Übersetzung fehlt.
+
+Nachfolgeknoten `[O-224-1a–d]`. XVI-D/P5 entsprechend korrigiert.
 
 ---
 
