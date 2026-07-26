@@ -1,6 +1,6 @@
 # Gesamtindex
 
-Vollstaendiges Register aller **330** Forschungsdokumente des Objekt-X-Programms, geordnet nach thematischen Straengen. Innerhalb eines Strangs ist nach Journalnummer sortiert.
+Vollstaendiges Register aller **331** Forschungsdokumente des Objekt-X-Programms, geordnet nach thematischen Straengen. Innerhalb eines Strangs ist nach Journalnummer sortiert.
 
 Zurueck zum [Repository-Start](README.md).
 
@@ -9,7 +9,7 @@ Zurueck zum [Repository-Start](README.md).
 | Strang | Dokumente | Inhalt |
 |---|---|---|
 | [Grundlegung](00-grundlegung/README.md) | 19 | Axiome, Ebenenaufbau I–XVI, epistemische Fundierung und die Definition von Objekt |
-| [Primkanten-Algebra und Werkzeuge](01-primkanten-werkzeuge/README.md) | 61 | Aufbau der relativen Primkanten-Algebra, Wodzicki-Residuum, Feshbach-Reduktion, Fourier-Hebung mit Mangoldt-Faktor und… |
+| [Primkanten-Algebra und Werkzeuge](01-primkanten-werkzeuge/README.md) | 62 | Aufbau der relativen Primkanten-Algebra, Wodzicki-Residuum, Feshbach-Reduktion, Fourier-Hebung mit Mangoldt-Faktor und… |
 | [Jacobi-Limes, Weyl-Funktion und Divisorgraph](02-jacobi-limes/README.md) | 33 | Jacobi-Grenzwert der Feshbach-Kette, arithmetische Identifikation der Weyl-/Stieltjes-Funktion, Divisorpfade,… |
 | [Weil-Quadratform und Nullstellenstatistik](03-weil-form-statistik/README.md) | 31 | Quadratischer Pivot zur Weil-Form, Bochner-Tor, Goldston–Montgomery-Transfer, GUE-/Poisson-Formfaktortest,… |
 | [Grenzoperator, Selbstenergie und Mangoldt-Spur](04-grenzoperator-renormierung/README.md) | 41 | Jacobi-Grenzoperator und Spektralmass, Renormierungsbarrieren der Dreifachsumme, PSWF-Bruecke, renormalisierte… |
@@ -26,7 +26,7 @@ Zurueck zum [Repository-Start](README.md).
 
 | ID | Dokument | Status |
 |---|---|---|
-| `—` | [Ebene XVI — Objekt X: Kanonisches Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md) | ✓M·40 ✓K·1 ⚠M·8 ✗M·4 |
+| `—` | [Ebene XVI — Objekt X: Kanonisches Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md) | ✓M·44 ✓K·1 ⚠M·8 ✗M·4 |
 | `—` | [Kritischer Pfad — Gesamtuebersicht (Stand: 1. Juli 2026, NEU-114)](00-grundlegung/kritischer_pfad_aktuell.md) | ⚠M·5 ✗M·2 ?O·10 |
 | `—` | [Objekt X — Minimalaxiome und epistemischer Status](00-grundlegung/objekt_x_minimalaxiome.md) | — |
 | `—` | [X-P1.3a — Spektralrealisierungs-Triage](00-grundlegung/objekt_x_p1_3a_spektraltriage.md) | — |
@@ -48,7 +48,7 @@ Zurueck zum [Repository-Start](README.md).
 
 ## Primkanten-Algebra und Werkzeuge
 
-[Strangübersicht](01-primkanten-werkzeuge/README.md) — 61 Dokumente
+[Strangübersicht](01-primkanten-werkzeuge/README.md) — 62 Dokumente
 
 | ID | Dokument | Status |
 |---|---|---|
@@ -113,6 +113,7 @@ Zurueck zum [Repository-Start](README.md).
 | `NEU-224` | [Kernbestimmung: flache Achsen, Antisymmetrisierung und der effektive Raum](01-primkanten-werkzeuge/NEU-224_Kernbestimmung_flache_Achsen_Antisymmetrisierung_und_effektiver_Raum.md) | ✓M·22 ⚠M·5 ✗M·1 ?O·8 |
 | `NEU-225` | [Primfaserdiagonalisierung: $D_{\mathrm{rel}}$ als Transportgenerator](01-primkanten-werkzeuge/NEU-225_Primfaserdiagonalisierung_Transportgenerator_und_Schichtenverschiebung.md) | ✓M·22 ⚠M·2 ✗M·1 ?O·7 |
 | `NEU-226` | [Quellenaudit NEU-51/77: globaler Feshbach-Transfer, Schattenklasse, Primkanalüberlappung](01-primkanten-werkzeuge/NEU-226_Quellenaudit_globaler_Feshbach_Transfer_Schattenklasse_und_Primkanalueberlappung.md) | ✓M·26 ⚠M·11 ✗M·1 ?O·1 |
+| `NEU-227` | [Koordinatenwörterbuch und Spektralmaßform des Feshbach-Transfers](01-primkanten-werkzeuge/NEU-227_Koordinatenwoerterbuch_und_Spektralmassform_des_Feshbach_Transfers.md) | ✓M·9 ⚠M·2 ?O·6 |
 
 ## Jacobi-Limes, Weyl-Funktion und Divisorgraph
 

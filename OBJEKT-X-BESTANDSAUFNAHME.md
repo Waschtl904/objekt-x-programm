@@ -1,12 +1,63 @@
 # Objekt X — Bestandsaufnahme und Steckbrief
 
-**Stand: 26. Juli 2026 (nach NEU-221d)**
+**Stand: 26. Juli 2026 (nach NEU-227)**
 
 Eine Inventur nach 324 Dokumenten: Was wissen wir über Objekt X, was ist ausgeschlossen,
 wo bricht die Konstruktion, und welche Grabungsschnitte sind als nächste sinnvoll.
 
 Grundlage: systematische Auswertung von `00-grundlegung/` (Soll-Profil), 22 No-Go-Dokumenten
 (Negativbild) und der Konstruktionskette NEU-42 bis NEU-221d (Positivbestand).
+
+---
+
+## 0. Schichtenverschiebung nach NEU-225/227
+
+Die bisherige Erwartung, der relative Jacobi-Operator $D_{\mathrm{rel}}=\overline{iJ^-}$ könne
+selbst die kompakte Hilbert–Pólya-Schicht liefern, ist **zurückgenommen**.
+
+Auf jeder primären Transportkette ist $D_{\mathrm{rel}}$ unitär auf einen translationsartigen
+Differentialoperator zurückführbar; bereits ein solcher Sektor besitzt absolutstetigen
+Spektraltyp. Zusätzlich enthält der volle relative Raum eine unendlichdimensionale Nullfaser.
+$D_{\mathrm{rel}}$ besitzt daher weder auf dem vollen Raum noch auf dem kernreduzierten
+Primsektor einen kompakten Resolventen.
+
+Das ist **kein** Scheitern des Jacobi- oder RH-Kanals: NEU-56 §4 hält fest, dass
+Selbstadjungiertheit für die RH-Hinrichtung genügt und der kompakte Resolvent nur den
+Spektraltyp betrifft.
+
+$$\boxed{D_{\mathrm{rel}} \text{ ist der primarithmetische Transport- und Streugenerator.}}$$
+
+Der neue Kandidat für die kompakte bzw. Hilbert–Schmidt-Schicht ist der gekoppelte
+Feshbach-/Birman–Schwinger-Transfer $K_N(z)=V_N^*(D_{\mathrm{rel}}-z)^{-1}V_N$ mit
+$V_p=C_p^{\mathrm{rel}}$.
+
+**Drei Korrekturen sind dabei verbindlich.**
+
+1. $K_N(z)$ ist auch bei festem $N$ **nicht** automatisch endlich-rangig. Die Quelldomäne der
+   Kopplung wird von sämtlichen $e_sV_m$ aufgespannt (51.2); jeder Primkanal bleibt
+   unendlichdimensional. Die frühere finite-Rang-Reduktion auf $\bigoplus_{p\le N}\mathbb C\varepsilon_p$
+   war typologisch falsch.
+2. Die Off-Diagonalterme entstehen **nicht notwendig** durch Mischung in $D_{\mathrm{rel}}$.
+   Sie folgen bereits aus der Überlappung der Kopplungsbilder in der BC-Algebra:
+   $\eta_{p;m;s,u}\leftrightarrow e_{u+ps}V_{pm}$, und verschiedene Faktorisierungen desselben
+   Zielsektors erzeugen nichtorthogonale Bildräume.
+3. Die Eigenbasisdarstellung aus NEU-51 ist nach dem absolutstetigen Spektralbefund
+   unzulässig. Sie wird ersetzt durch
+   $\int_{\mathbb R}(\lambda-z)^{-1}\,d\langle V_pa,E_{D_{\mathrm{rel}}}(\lambda)V_qb\rangle$.
+
+**Neue Hauptlinie:**
+
+$$\text{singuläre HH-Struktur} \to D_{\mathrm{rel}} \text{ (Transport/Streuung)} \to K(z) \text{ (Feshbach-Transfer)} \to \mathcal S_2\setminus\mathcal S_1 \to \det\nolimits_2 \to \text{Weil-/}\Xi\text{-Schicht}$$
+
+Dies ist eine **Arbeitshypothese**. Offen sind: die intrinsische Wahl des $u$-Regulators in
+$V_p$; der Quellhilbertraum und sein Gramoperator; die Hilbert–Schmidt-Eigenschaft von $K(z)$;
+ein unabhängiger Nicht-Spurklassen-Zeuge (nur möglich, wenn $V\notin\mathcal S_2$); die
+Carleman-Determinantenidentität; der intrinsische zyklische Vektor; die Rückbindung an die
+vollständige Weil-Form.
+
+Die endlichen Kollapsoperatoren aus NEU-77 liefern **keine** Schattenklassenkontrolle des
+Grenzoperators, da dort nur starke bzw. punktweise Konvergenz auf endlich getragenen Vektoren
+vorliegt.
 
 ---
 

@@ -126,11 +126,28 @@ $p,u$ unbewegt. Also $\Theta\eta_{p;m;r,u}=\sum_{n\mid m}\alpha_n r\,\eta_{p;m;r
 $\alpha_n=-\gamma_N\log n$; wegen $\log1=0$ tragen nur Teiler $n>1$ bei. Die Faser $m$ ist
 invariant.
 
-> **Wörterbuchkonflikt `⚠[M]` (NEU-226 §4).** (55.3) liest den Shift als $r\to r+n$ mit
-> $n\mid m$ und Koeffizient $\propto r\log n$; (51.2) liest ihn als $s\to s+m$ mit Koeffizient
-> $(u+ps)\log(pm)$. Beide sind strukturell gleich (linearer Koeffizient, konstante
-> Schrittweite) und liefern denselben Transportgeneratorbefund, sind aber nicht identisch.
-> Zu entscheiden in `[O-226-2]`.
+> **Koordinatenwörterbuch — aufgelöst durch NEU-227 §1.** (55.3) und (51.2) sind keine
+> konkurrierenden Definitionen, sondern **zwei Stufen derselben Konstruktion**: (51.2)
+> definiert die *Kopplung* $V_p$, (55.3) die *Dynamik* von $J^-$. Verbindlich ist
+>
+> $$\eta_{p;m;s,u} \longleftrightarrow e_RV_M, \qquad M=pm, \qquad R=u+ps.$$
+>
+> Die volle Sektorverschiebung $R\mapsto R+M$ ist wegen $u+ps+pm=u+p(s+m)$ identisch mit
+> $s\mapsto s+m$; auch das Gewicht stimmt, $R\log M=(u+ps)\log(pm)$. Ein allgemeiner Sprung
+> $R\mapsto R\pm d$ bleibt genau dann in derselben $u$-Restklasse, wenn $p\mid d$; für
+> $p\nmid d$ mischt er $u$-Klassen. Im Primsektor $M=p$ entfällt $d=1$ wegen $\log1=0$, und
+> $d=p$ erfüllt $p\mid d$ — die Einzelkettenrechnung aus NEU-225 ist dort **vollständig und
+> gerechtfertigt**. In zusammengesetzten Sektoren ist sie es nicht. `✓[M]`
+
+**Spektraldarstellung.** $D_{\mathrm{rel}}$ hat **keine** Eigenwerte (NEU-225). Verwende
+ausschließlich das projektionswertige Spektralmaß $E_{D_{\mathrm{rel}}}$ und die
+Kreuzspektralmaße $\mu^{a,b}_{pq}(B)=\langle V_pa,E_D(B)V_qb\rangle$, also
+$\langle a,K_{pq}(z)b\rangle=\int_{\mathbb R}(\lambda-z)^{-1}d\mu^{a,b}_{pq}(\lambda)$ (NEU-227 §2).
+Keine Eigenbasisformeln.
+
+**$u$-Regulator.** Die Summationsreichweite über $u$ in (51.2) ist ein **echter Regulator**
+(51.1). Sie entscheidet über Definiertheit, Beschränktheit und den Übergang $\mathcal S_1$
+gegen $\mathcal S_2$. Sie darf **nicht** nachträglich an $\Xi$-Daten angepasst werden.
 
 **Effektiver Raum.** Verbindlich ist
 $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}=(\ker D_{\mathrm{rel}})^\perp=E_{D_{\mathrm{rel}}}(\mathbb R\setminus\{0\})\mathcal H_{\mathrm{rel}}$.

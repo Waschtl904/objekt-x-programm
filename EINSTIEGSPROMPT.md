@@ -155,6 +155,54 @@ Similarity-No-Go (NEU-220t), gewöhnliche Spurklassen-Determinante für $\Xi$ au
 
 ---
 
+## Aktuelle Hauptlinie nach NEU-227
+
+Der relative Operator $D_{\mathrm{rel}}=\overline{iJ^-}$ ist selbstadjungiert, aber **kein**
+konfinierender Hilbert–Pólya-Operator. Seine Primketten sind translations- bzw.
+dilatationsartig und besitzen absolutstetiges Spektrum; der volle Raum enthält zusätzlich eine
+unendlichdimensionale Nullfaser.
+
+$$\boxed{D_{\mathrm{rel}} \text{ erzeugt die primarithmetische Transport- und Streugeometrie.}}$$
+
+Der Kandidat für spektrale Kompaktheit ist nicht $D_{\mathrm{rel}}$ selbst, sondern
+$K_N(z)=V_N^*(D_{\mathrm{rel}}-z)^{-1}V_N$ mit $V_p=C_p^{\mathrm{rel}}$.
+
+**Wichtige Korrekturen — bitte strikt beachten.**
+
+- $K_N(z)$ ist auch bei festem $N$ **nicht** automatisch endlich-rangig. Die Quelldomäne der
+  Kopplung enthält sämtliche Fourier- und Monoidmoden $e_sV_m$ (51.2).
+- Die Kreuzterme $K_{pq}(z)$ entstehen durch **Überlappung der Kopplungsbilder** in der
+  BC-Algebra. $D_{\mathrm{rel}}$ selbst kann dabei kanalerhaltend bleiben.
+- Die NEU-51-Eigenbasisformeln (51.3)/(51.4)/(51.7) sind **unzulässig**. Verwende
+  ausschließlich das projektionswertige Spektralmaß:
+  $\mu^{a,b}_{pq}(B)=\langle V_pa,E_{D_{\mathrm{rel}}}(B)V_qb\rangle$ und
+  $\langle a,K_{pq}(z)b\rangle=\int_{\mathbb R}(\lambda-z)^{-1}d\mu^{a,b}_{pq}(\lambda)$.
+- **Koordinaten sind kompatibel:** $\eta_{p;m;s,u}\leftrightarrow e_{u+ps}V_{pm}$. Die Bewegung
+  $r\mapsto r+pm$ entspricht $s\mapsto s+m$. In zusammengesetzten Sektoren enthält $J^-$
+  zusätzliche Teilersprünge $d\mid M$; nur für $p\mid d$ bleibt die $u$-Klasse erhalten. Die
+  Einzelkettenform ist dort **nicht** der vollständige Operator.
+- Die Summationsreichweite über $u$ ist ein **echter Regulator**. Sie entscheidet über
+  Definiertheit, Beschränktheit und möglicherweise über $\mathcal S_1$ gegen $\mathcal S_2$.
+  Sie darf **nicht** nachträglich an $\Xi$-Daten angepasst werden.
+- Ein Nicht-$\mathcal S_1$-Zeuge ist **nur möglich, wenn $V\notin\mathcal S_2$**, denn
+  $\operatorname{Tr}\operatorname{Im}K_N(z)\le\lVert V\rVert_2^2/y$.
+
+**Arbeitsplan:**
+
+| Knoten | Aufgabe |
+|---|---|
+| `[O-226-3]` | $u$-Regulator intrinsisch bestimmen |
+| `[O-226-4]` | Quellhilbertraum und Gramoperator konstruieren |
+| `[O-226-5]` | $K(z)\in\mathcal S_2$ prüfen |
+| `[O-226-6]` | $K(z)\notin\mathcal S_1$ prüfen |
+| `[O-226-7]` | $\det_2(I-K(z))$ mit der Weil-/$\Xi$-Schicht vergleichen |
+
+Arbeite strikt typbewusst: **keine** diskrete Eigenbasis für $D_{\mathrm{rel}}$, **keine**
+automatische Primkanalorthogonalität, **keine** Schattenklassenschlüsse aus bloßer starker
+Konvergenz der endlichen Trunkierungen (NEU-77 (D)/(E)).
+
+---
+
 ## Aktueller Hauptengpass: Quellseitige Typisierung des Feshbach-Tripels
 
 **Volldokumentation:** [`NEU-221d`](07-weil-explizitformel/NEU-221d_Direktextraktion_NEU46_Zyklischer_Sektor_und_Nullmodusaudit.md)

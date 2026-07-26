@@ -2,11 +2,51 @@
 
 Sitzungsprotokoll des Objekt-X-Programms, neueste Einträge zuerst.
 
-> **Aktueller Stand: NEU-226 — 26. Juli 2026**
+> **Aktueller Stand: NEU-227 — 26. Juli 2026**
 
 Die Einträge ab NEU-162 sind aus der Commit-Historie des Arbeitsjournals rekonstruiert und
 zu thematischen Blöcken zusammengefasst. Für Details siehe die jeweiligen Dokumente über
 den [Gesamtindex](INDEX.md).
+
+---
+
+## [NEU-227] — 26. Juli 2026: Koordinatenwörterbuch und Spektralmaßform
+
+**Beide Vorschaltknoten geschlossen.**
+
+**`[O-226-2]` `✓[M]` — kein Entweder-oder.** (51.2) definiert die *Kopplung* $V_p$, (55.3) die
+*Dynamik* von $J^-$; NEU-42 trennt beides bereits. Verbindliches Wörterbuch:
+$\eta_{p;m;s,u}\leftrightarrow e_RV_M$, $M=pm$, $R=u+ps$. Wegen $u+ps+pm=u+p(s+m)$ ist
+$R\mapsto R+M$ identisch mit $s\mapsto s+m$; auch das Gewicht stimmt,
+$R\log M=(u+ps)\log(pm)$. Ein Sprung $R\mapsto R\pm d$ hält die $u$-Restklasse genau dann,
+wenn $p\mid d$. **Rückwirkung:** Im Primsektor entfällt $d=1$ wegen $\log1=0$ und $d=p$
+erfüllt $p\mid d$ — die Annahme „bei festem $u$" aus NEU-225 §3 ist damit **gerechtfertigt**,
+nicht bloß gesetzt. Die alte Darstellung wird nicht negativ geschlossen; zurückgerollt ist nur
+ihre Verwendung ohne Wörterbuch.
+
+**`[O-226-1]` `✓[K/M]` — Spektralmaßform.** Kreuzspektralmaß
+$\mu^{a,b}_{pq}(B)=\langle V_pa,E_D(B)V_qb\rangle$, komplexes endliches Borelmaß mit
+$\lvert\mu\rvert(\mathbb R)\le\lVert V_pa\rVert\lVert V_qb\rVert$. Ersatz für (51.3):
+$\langle a,K_{pq}(z)b\rangle=\int(\lambda-z)^{-1}d\mu^{a,b}_{pq}$. Ersatz für (51.4):
+$M_{pq}(B)=V_p^*E_D(B)V_q$. Ersatz für (51.7):
+$\lvert D-z\rvert^{-1/2}V\in\mathcal S_2$. Das Spurklassekriterium
+$K_N(z)=B_z^*U_zB_z$, $B_z=\lvert D-z\rvert^{-1/2}V$, wurde nachgerechnet: $U_z$ und
+$\lvert D-z\rvert^{-1/2}$ sind beide Borelfunktionen von $D$ und kommutieren.
+
+**Abgeleitet.** Aus $\operatorname{Tr}\operatorname{Im}K_N(z)\le\lVert V\rVert_2^2/y$ folgt:
+der Nicht-$\mathcal S_1$-Zeuge ist **nur möglich, wenn $V\notin\mathcal S_2$**. Das verschärft
+die Vermutung $V\in\mathcal S_4\setminus\mathcal S_2$ zur Notwendigkeit — hinreichend ist es
+nicht, da die Spektralmasse ins Unendliche entweichen kann. `[O-226-6]` hängt damit direkt an
+`[O-226-3]`.
+
+NEU-46s lokale Streudateninterpretation bleibt gültig, nur von der Eigenbasisannahme befreit.
+
+**Der Einstiegspunkt ist verschoben:** nicht die Schattenklassensumme, sondern der
+$u$-Regulator `[O-226-3]` und der Gramoperator des überlappenden Kopplungsraums `[O-226-4]`.
+Regel: der Regulator darf nicht nachträglich an $\Xi$-Daten angepasst werden.
+
+BESTANDSAUFNAHME (neuer §0) und EINSTIEGSPROMPT auf die neue Hauptlinie umgestellt;
+KONVENTIONEN um Wörterbuch, Spektraldarstellung und Regulatorregel ergänzt.
 
 ---
 

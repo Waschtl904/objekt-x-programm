@@ -4,7 +4,7 @@ Verdichtete Gesamtbilanz des Programms ohne Zwischenschritte. Für die vollstän
 Dokumentliste siehe [INDEX.md](INDEX.md), für die Verzweigungsbedingungen der offenen
 Knoten [OFFENE_PROBLEME.md](OFFENE_PROBLEME.md).
 
-> Stand: 26. Juli 2026 · letzter Eintrag NEU-226
+> Stand: 26. Juli 2026 · letzter Eintrag NEU-227
 
 Verbindliche Karte aller Bedingungen an Objekt X, nach logischen Ebenen getrennt:
 [Ebene XVI — Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md).
@@ -156,7 +156,7 @@ Nach Dringlichkeit geordnet.
 | 2 | `[O-220-1]` | Adelische Quellkonstruktion der positiven Momentfolge (RH-stark) | NEU-220w / NEU-221 |
 | 3 | `[O-161]` | Existiert ein explizit konstruiertes $\ell_{s_0,m_0}\neq 0$ mit $s_0\neq 0$ in $L_3^\circ = \sum_{s,m}\ell_{s,m}e_sV_m$? | NEU-161/162 |
 | 4 | `[O-141-D]` | Regularisierungsschema für $\operatorname{Tr}_{\mathrm{reg}}(R\Sigma_{\mathrm{rel}}^{\mathrm{ren}})$ im kritischen Streifen $0<\Re\beta\le 1$ | NEU-141 |
-| 5 | `[O-223-2]` | **Typkorrigiert (NEU-223):** $s_k(J^-)$ ist für unbeschränktes $J^-$ nicht definiert. **Vollständig `✗[M]` entschieden** (NEU-224/225). Voller Raum: $\dim\ker D_{\mathrm{rel}}=\infty$ über die Faser $m=1$. Reduzierter Raum: $D_{\mathrm{rel}}\vert_{\mathcal H_{p,a}}\cong 2ic_p\,d/dt$, absolutstetig. $D_{\mathrm{rel}}$ ist ein **Transportgenerator**. Neue Hauptlinie: Feshbach-Transfer $K_N(z)$. Vorschaltknoten `[O-226-1]`: NEU-51 setzt eine nicht existierende Eigenbasis voraus und muss auf Spektralmaßform umgeschrieben werden Alternativ: $\sum_p \operatorname{Tr}\lvert M_p(z)\rvert<\infty$ gleichmäßig auf Kompakta | NEU-56/223 |
+| 5 | `[O-223-2]` | **Typkorrigiert (NEU-223):** $s_k(J^-)$ ist für unbeschränktes $J^-$ nicht definiert. **Vollständig `✗[M]` entschieden** (NEU-224/225). Voller Raum: $\dim\ker D_{\mathrm{rel}}=\infty$ über die Faser $m=1$. Reduzierter Raum: $D_{\mathrm{rel}}\vert_{\mathcal H_{p,a}}\cong 2ic_p\,d/dt$, absolutstetig. $D_{\mathrm{rel}}$ ist ein **Transportgenerator**. Neue Hauptlinie: Feshbach-Transfer $K_N(z)$. Vorschaltknoten `[O-226-1]` und `[O-226-2]` **geschlossen** (NEU-227): Spektralmaßform und Koordinatenwörterbuch stehen. Neuer Einstiegspunkt: `[O-226-3]` $u$-Regulator und `[O-226-4]` Gramoperator Alternativ: $\sum_p \operatorname{Tr}\lvert M_p(z)\rvert<\infty$ gleichmäßig auf Kompakta | NEU-56/223 |
 | 6 | `[X.3.25]` | Gilt $\sup_a \sum_b \lvert\Theta_{ba}\rvert/\ell(a) < \infty$ exakt statt nur heuristisch? | NEU-55 |
 | 6b | `[O-223-2]` | **Auf dem vollen Raum negativ entschieden (NEU-224).** Offen: reduzierter Fall. Ferner `✓[M]_neg` gegen die flache Achse $r=0$ (NEU-54 §5) und gegen $\mathcal D_0^{\mathrm{eff}}$ nach (55.0); ein negativer Ausgang wäre eine stärkere No-Go-Klasse als NEU-56 | NEU-223 |
 | 7 | `[O-188-0..3]` | Existiert $H\notin \mathrm{LC}(\hat{\mathbb Z})$ mit $\alpha_k(H)-H\in\mathrm{LC}(\hat{\mathbb Z})$ für alle $k$, verträglich mit allen Kreuzrelationen? | NEU-188 |
