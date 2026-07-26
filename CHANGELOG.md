@@ -2,11 +2,55 @@
 
 Sitzungsprotokoll des Objekt-X-Programms, neueste Einträge zuerst.
 
-> **Aktueller Stand: NEU-225 — 26. Juli 2026**
+> **Aktueller Stand: NEU-226 — 26. Juli 2026**
 
 Die Einträge ab NEU-162 sind aus der Commit-Historie des Arbeitsjournals rekonstruiert und
 zu thematischen Blöcken zusammengefasst. Für Details siehe die jeweiligen Dokumente über
 den [Gesamtindex](INDEX.md).
+
+---
+
+## [NEU-226] — 26. Juli 2026: Quellenaudit NEU-51/77 — Feshbach-Transfer und Primkanalüberlappung
+
+**Drei Befunde, davon einer gegen NEU-225 selbst.**
+
+**Widerlegt: der endliche-$N$-Befund.** $K_N(z)$ ist bei festem $N$ **nicht** endlich-rangig.
+Nach (51.2) ist die Quelldomäne von $V_p$ von allen $e_sV_m$ aufgespannt, und (51.3) trägt
+Doppelindizes $K_{pq}(s)_{(r,n),(t,m)}$: jeder Primkanal ist für sich unendlichdimensional.
+Die $\mathcal S_1$-Bedingung (51.7) summiert innerhalb jedes Primkanals über $n,r,u$ und ist
+`?[O]`. $\mathcal S_2\setminus\mathcal S_1$ ist bei festem $N$ **nicht** ausgeschlossen, und
+$\det_2$ wird von (51.8)/(51.9) ausdrücklich schon für endliches $N$ geführt. `✓[M]_neg`
+
+**Beantwortet: der Kreuztermmechanismus.** Satz 51.3 (51.5): $\mathcal K_N\neq\bigoplus_pK_p$,
+*„weil die $\eta_{p;n;r,u}$ keine kanaldiagonale Basis erzwingen"*. Der Mechanismus ist die
+**Überlappung der Primkanalbilder**: nach (51.2) gilt $\eta_{p;m;s,u}\sim e_{u+ps}V_{pm}$, und
+verschiedene $(p,m)$ treffen dasselbe $V_{pm}$. $D_{\mathrm{rel}}$ selbst bleibt
+kanalerhaltend — die Off-Diagonalität sitzt in der Kopplung, nicht im Operator. `✓[M]`
+
+**Zurückgerollt: NEU-225 §1.2.** Die dortige Festlegung, die $\eta$-Familie sei global
+orthonormal, ist damit falsch. Verbindlich bleibt nur Orthonormalität **innerhalb** einer
+Kette bei festem $(p,m,u)$. `✓[M]_neg` Die Primfaserdiagonalisierung aus NEU-225 ist
+unberührt und gilt in beiden Indexlesarten.
+
+**Blocker.** (51.3)/(51.4)/(51.7) setzen $D_{\mathrm{rel}}\eta_\alpha=\lambda_\alpha\eta_\alpha$
+voraus. Nach NEU-225 hat $D_{\mathrm{rel}}$ rein absolutstetiges Spektrum und keine
+Eigenwerte; NEU-52 (52.D0) hatte das bereits verboten. Die Schattenklassenkriterien sind in
+dieser Form nicht auswertbar. Vorschaltknoten `[O-226-1]`: auf Spektralmaßform umschreiben.
+
+**NEU-77.** Die Feshbach-Identität $\Pi_NS_NR_ND_{BC,N}\Pi_N^*=J_N^-$ ist bei endlichem $N$
+exakt ohne Fehlerterm `✓[M]`. Der Limes ist jedoch nur punktweise auf endlich getragenen
+Vektoren, **nicht** normkonvergent (Punkt D), und der Normierungsfaktor $\lvert S_N\rvert^{-1}$
+ist offen (Punkt E). Schattenklassen sind keine punktweisen Invarianten — die Klasse von
+$K(z)$ ist daher aus den $K_N(z)$ **nicht** erschließbar.
+
+**Bestätigt.** $V_p=C_p^{\mathrm{rel}}$ steht quellenseitig fest. Der $\operatorname{Im}K(z)\ge0$-
+Zeuge ist zulässig, da NEU-225 §1.1 Option B (selbstadjungiert) verbindlich gemacht hat.
+Freiheitsgrad ist der $u$-Regulator (51.1): *„Diese Wahl entscheidet später über
+$\mathcal S_1$ vs. $\mathcal S_2$."*
+
+Revidierte Reihenfolge: `[O-226-1]` Spektralmaßform, `[O-226-2]` Wörterbuchkonflikt
+(55.3) gegen (51.2), `[O-226-3]` $u$-Regulator, `[O-226-4]` orthonormale Primkanalbasis —
+danach erst die Schattenklassensummen.
 
 ---
 

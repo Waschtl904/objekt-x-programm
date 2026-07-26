@@ -102,15 +102,35 @@ selbstadjungiert. Die Schreibweise $\frac{1}{2i}(\Theta_N-\Theta_N^{\mathrm{Wres
 ab sofort $S_N := \frac{1}{2i}(\Theta_N-\Theta_N^\dagger) = -iJ_N^-$. Beide dürfen nicht
 gleichgesetzt werden.
 
-**Graphbasis.** $\{\eta_{p;m;r,u}\}$ ist eine **Orthonormalbasis** von $\mathcal H_{\mathrm{rel}}$,
-$\langle\eta_{p;m;r,u},\eta_{p';m';r',u'}\rangle=\delta_{pp'}\delta_{mm'}\delta_{rr'}\delta_{uu'}$
-(quellenintern aus (55.4)). Sie ist **keine Eigenbasis** von $D_{\mathrm{rel}}$ (52.D0).
+**Graphbasis — korrigiert durch NEU-226 §4.** Die $\eta$-Familie ist **nicht** global
+orthonormal. Verbindlich ist nur die Orthonormalität **innerhalb** einer Kette bei festem
+$(p,m,u)$:
+
+$$\langle\eta_{p;m;r,u},\eta_{p;m;r',u}\rangle=\delta_{rr'}$$
+
+Über verschiedene $(p,m,u)$ hinweg ist das Skalarprodukt **unbestimmt und generisch $\neq0$**:
+nach (51.2) gilt $\eta_{p;m;s,u}\sim e_{u+ps}V_{pm}$, und verschiedene $(p,m)$ treffen dasselbe
+$V_{pm}$ (etwa $2\cdot3=3\cdot2$). Genau diese Überlappung erzeugt die Off-Diagonalterme
+$K_{pq}\neq0$ (51.5). Die frühere Festlegung
+$\langle\cdot,\cdot\rangle=\delta_{pp'}\delta_{mm'}\delta_{rr'}\delta_{uu'}$ aus NEU-225 §1.2
+ist **zurückgerollt**. `✓[M]_neg`
+
+Die Familie ist ferner **keine Eigenbasis** von $D_{\mathrm{rel}}$ (52.D0) — nach NEU-225 hat
+$D_{\mathrm{rel}}$ überhaupt keine Eigenwerte. Formeln, die eine Eigenzerlegung
+$D_{\mathrm{rel}}\eta_\alpha=\lambda_\alpha\eta_\alpha$ ansetzen (so (51.3)/(51.4)/(51.7)),
+müssen auf Spektralmaßform umgeschrieben werden.
 
 **Wörterbuch $(r,n)\leftrightarrow(p,m,r,u)$.** $r\in\mathbb Z$ Charakterindex, unter $\Theta$
 um $+n$ verschoben; $n$ Isometrieindex, **erhalten**; $m$ Fasernummer, Kanten nur für $n\mid m$;
 $p,u$ unbewegt. Also $\Theta\eta_{p;m;r,u}=\sum_{n\mid m}\alpha_n r\,\eta_{p;m;r+n,u}$ mit
 $\alpha_n=-\gamma_N\log n$; wegen $\log1=0$ tragen nur Teiler $n>1$ bei. Die Faser $m$ ist
 invariant.
+
+> **Wörterbuchkonflikt `⚠[M]` (NEU-226 §4).** (55.3) liest den Shift als $r\to r+n$ mit
+> $n\mid m$ und Koeffizient $\propto r\log n$; (51.2) liest ihn als $s\to s+m$ mit Koeffizient
+> $(u+ps)\log(pm)$. Beide sind strukturell gleich (linearer Koeffizient, konstante
+> Schrittweite) und liefern denselben Transportgeneratorbefund, sind aber nicht identisch.
+> Zu entscheiden in `[O-226-2]`.
 
 **Effektiver Raum.** Verbindlich ist
 $\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}=(\ker D_{\mathrm{rel}})^\perp=E_{D_{\mathrm{rel}}}(\mathbb R\setminus\{0\})\mathcal H_{\mathrm{rel}}$.

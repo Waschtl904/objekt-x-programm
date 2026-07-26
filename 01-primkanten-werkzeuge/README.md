@@ -2,7 +2,7 @@
 
 NEU-3 – NEU-57. Aufbau der relativen Primkanten-Algebra, Wodzicki-Residuum, Feshbach-Reduktion, Fourier-Hebung mit Mangoldt-Faktor und Nelson-Selbstadjungiertheit.
 
-**60 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
+**61 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
 
 | ID | Dokument | Status |
 |---|---|---|
@@ -66,6 +66,7 @@ NEU-3 – NEU-57. Aufbau der relativen Primkanten-Algebra, Wodzicki-Residuum, Fe
 | `NEU-223` | [Quellenaudit: alternativer Vergleichsoperator, Schur, Konfinement und kompakter Resolvent](NEU-223_Quellenaudit_alternativer_Vergleichsoperator_Schur_Konfinement_und_kompakter_Resolvent.md) | ✓M·27 ⚠M·7 ✗M·5 ?O·10 |
 | `NEU-224` | [Kernbestimmung: flache Achsen, Antisymmetrisierung und der effektive Raum](NEU-224_Kernbestimmung_flache_Achsen_Antisymmetrisierung_und_effektiver_Raum.md) | ✓M·22 ⚠M·5 ✗M·1 ?O·8 |
 | `NEU-225` | [Primfaserdiagonalisierung: $D_{\mathrm{rel}}$ als Transportgenerator](NEU-225_Primfaserdiagonalisierung_Transportgenerator_und_Schichtenverschiebung.md) | ✓M·22 ⚠M·2 ✗M·1 ?O·7 |
+| `NEU-226` | [Quellenaudit NEU-51/77: globaler Feshbach-Transfer, Schattenklasse, Primkanalüberlappung](NEU-226_Quellenaudit_globaler_Feshbach_Transfer_Schattenklasse_und_Primkanalueberlappung.md) | ✓M·26 ⚠M·11 ✗M·1 ?O·1 |
 
 ---
 
