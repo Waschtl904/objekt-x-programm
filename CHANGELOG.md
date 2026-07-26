@@ -2,11 +2,58 @@
 
 Sitzungsprotokoll des Objekt-X-Programms, neueste Einträge zuerst.
 
-> **Aktueller Stand: NEU-224 — 26. Juli 2026**
+> **Aktueller Stand: NEU-225 — 26. Juli 2026**
 
 Die Einträge ab NEU-162 sind aus der Commit-Historie des Arbeitsjournals rekonstruiert und
 zu thematischen Blöcken zusammengefasst. Für Details siehe die jeweiligen Dokumente über
 den [Gesamtindex](INDEX.md).
+
+---
+
+## [NEU-225] — 26. Juli 2026: Primfaserdiagonalisierung — $D_{\mathrm{rel}}$ ist ein Transportgenerator
+
+**Der reduzierte kompakte Resolvent ist ausgeschlossen. HP-2 ist die falsche Forderung an diese Schicht.**
+
+**Konventionsbereinigung.** $J_N^-=\frac12(\Theta_N-\Theta_N^\dagger)$ (37.1) ist verbindlich;
+$\frac{1}{2i}(\cdots)$ aus NEU-35/62 heißt ab sofort $S_N$ und ist ein anderer,
+selbstadjungierter Operator. $\{\eta_{p;m;r,u\}}$ orthonormal (quellenintern über 55.4).
+Wörterbuch $(r,n)\leftrightarrow(p,m,r,u)$ festgeschrieben. Siehe KONVENTIONEN.md.
+
+**Reaudit NEU-56.** Der Widerspruch in Satz 56.1/56.2 benutzt ausschließlich Testvektoren,
+keine Invarianz und keine Spektralrestriktion. **Satz 56.2 bleibt gültig**; nur die
+Raumbezeichnung wird korrigiert.
+
+**Rechnung.** Auf der Primfaser $m=p$ ist der einzige Teiler $>1$ gleich $p$, also
+$J^-\eta_r=\frac{\alpha_p}{2}(r\eta_{r+p}-(r-p)\eta_{r-p})$. Zerlegung nach $r\bmod p$ liefert
+Ketten $J^-e_k=c_p((k+\delta)e_{k+1}-(k-1+\delta)e_{k-1})$ mit $c_p=\frac12\gamma_N p\log p$ —
+ein **Dilatationsgenerator**, keine konfinierende Jacobi-Matrix. Fourier:
+$\mathcal FD_{\mathrm{rel}}\mathcal F^{-1}=ic_p[2\sin\theta\,\partial_\theta+\cos\theta]-c_p(2\delta-1)\sin\theta$.
+Logarithmische Koordinate $t=\log\tan(\theta/2)$ und beschränkte Eichung entfernen den
+$\operatorname{sech}$-Term:
+
+$$D_{\mathrm{rel}}\big|_{\mathcal H_{p,a}}\cong 2ic_p\,d/dt \ \text{ auf } L^2(\mathbb R)^{\oplus2}.$$
+
+Rein absolutstetiges Spektrum $\mathbb R$, keine Eigenwerte, also kein Kern in den
+Primsektoren und $\mathcal H_p\subseteq(\ker D_{\mathrm{rel}})^\perp$. Explizite
+graphnormbeschränkte Orthonormalfolge (verschobene Buckel) — realisierungsunabhängig.
+
+$$\text{Auch der reduzierte kompakte Resolvent ist ausgeschlossen.} \quad \times[M]$$
+
+Numerisch kontrolliert: Schiefsymmetrie exakt, Fourierform auf $6{,}9\cdot10^{-7}$, Buckel
+orthonormal bei konstanter Graphnorm.
+
+**Offener Vorbehalt:** Ist $\mathcal D_0$ ein Kern der selbstadjungierten Realisierung?
+Das ist derselbe Vorbehalt wie in (55.17) und trägt nicht das Ergebnis. `[O-225-1]`
+
+**Schichtenverschiebung.** $D_{\mathrm{rel}}$ ist ein Streu-/Transportgenerator, kein
+Hilbert–Pólya-Operator. Konfinement scheiterte in NEU-56 strukturell, nicht an der Wahl von
+$\gamma_N$ oder $L$. Das kompakte Objekt sollte eine Ebene später entstehen, als
+Feshbach-/Birman–Schwinger-Transfer $K_N(z)=V_N^*(D_{\mathrm{rel}}-z)^{-1}V_N$ — dort könnten
+HP-2, HP-3, HP-5 und die zyklische Weyl-Funktion zusammentreffen. **Arbeitshypothese**,
+kein Ergebnis: `[O-225-2]`, neue Hauptlinie.
+
+Unberührt: HP-2 ist für Objekt X nicht widerlegt, nur für $H_X=D_{\mathrm{rel}}$. Die
+RH-Hinrichtung braucht nur Selbstadjungiertheit (NEU-56 §4).
 
 ---
 

@@ -86,3 +86,32 @@ $$\mathcal A_h^{\log}\mathcal A_{h'}^{\log}\subseteq\mathcal A_{hh'}^{\log}, \qq
 | 2026-07-21 | Typ. Regel; $C_\sigma(k)$; $J(k)$ |
 | 2026-07-21 | $T_a:=\sigma_a$; Mittelwertlemma; Transportstab. |
 | 2026-07-21 | Vollst. Audit: scharfe Konstanten, submultiplik. Norm, $G_{a,d}$ explizit, $\mathcal A^{\log}$ |
+
+
+---
+
+## Operatorkonventionen X.3 (verbindlich ab NEU-225)
+
+**Antisymmetrisierte Kopplung.** Verbindlich ist
+
+$$J_N^- := \tfrac12\bigl(\Theta_N-\Theta_N^\dagger\bigr) \qquad (37.1)$$
+
+Nur diese Fassung erfüllt $(J_N^-)^*=-J_N^-$ (54.3) und macht $D_{\mathrm{rel}}=\overline{iJ^-}$
+selbstadjungiert. Die Schreibweise $\frac{1}{2i}(\Theta_N-\Theta_N^{\mathrm{Wres}})$ aus NEU-35
+(Z. 220) und NEU-62 (Z. 98) bezeichnet einen **anderen, selbstadjungierten** Operator und heißt
+ab sofort $S_N := \frac{1}{2i}(\Theta_N-\Theta_N^\dagger) = -iJ_N^-$. Beide dürfen nicht
+gleichgesetzt werden.
+
+**Graphbasis.** $\{\eta_{p;m;r,u}\}$ ist eine **Orthonormalbasis** von $\mathcal H_{\mathrm{rel}}$,
+$\langle\eta_{p;m;r,u},\eta_{p';m';r',u'}\rangle=\delta_{pp'}\delta_{mm'}\delta_{rr'}\delta_{uu'}$
+(quellenintern aus (55.4)). Sie ist **keine Eigenbasis** von $D_{\mathrm{rel}}$ (52.D0).
+
+**Wörterbuch $(r,n)\leftrightarrow(p,m,r,u)$.** $r\in\mathbb Z$ Charakterindex, unter $\Theta$
+um $+n$ verschoben; $n$ Isometrieindex, **erhalten**; $m$ Fasernummer, Kanten nur für $n\mid m$;
+$p,u$ unbewegt. Also $\Theta\eta_{p;m;r,u}=\sum_{n\mid m}\alpha_n r\,\eta_{p;m;r+n,u}$ mit
+$\alpha_n=-\gamma_N\log n$; wegen $\log1=0$ tragen nur Teiler $n>1$ bei. Die Faser $m$ ist
+invariant.
+
+**Effektiver Raum.** Verbindlich ist
+$\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}=(\ker D_{\mathrm{rel}})^\perp=E_{D_{\mathrm{rel}}}(\mathbb R\setminus\{0\})\mathcal H_{\mathrm{rel}}$.
+Die Fassung aus (55.0) mit $r\neq0$ **und** $m>1$ ist echt kleiner und nicht invariant (NEU-224 §5.3).

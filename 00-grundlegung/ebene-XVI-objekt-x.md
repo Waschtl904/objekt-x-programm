@@ -457,11 +457,14 @@ Gilt nur, solange die kohomologische Schicht Bestandteil der Konstruktion bleibe
 |---|---|---|
 | P5.1 | Vergleichsoperator $\tilde L$ mit $\lVert J^- x\rVert \lesssim \lVert \tilde L x\rVert$ (Schur/Nelson) **und** $\lVert D_{\mathrm{rel}}x\rVert + \lVert x\rVert \ge c\lVert \tilde L x\rVert$ (Konfinement) | `❓[O]` NEU-56 (VI) |
 | P5.2 | **Auf dem vollen Raum entschieden (NEU-224 §4):** $(1+D_{\mathrm{rel}}^2)^{-1/2}\notin\mathcal K(\mathcal H_{\mathrm{rel}})$, da der Operator auf dem unendlichdimensionalen $\ker D_{\mathrm{rel}}$ als Identität wirkt. $D_{\mathrm{rel}}$ hat **keinen** kompakten Resolventen auf $\mathcal H_{\mathrm{rel}}$ | **`✗[M]`** |
-| P5.2′ | Offen bleibt allein der **reduzierte** Fall $D_{\mathrm{rel}}\vert_{(\ker D_{\mathrm{rel}})^\perp}$ | `❓[O]` `[O-224-1d]` |
+| P5.2′ | **Auch der reduzierte Fall entschieden (NEU-225).** Auf jeder Primfaser gilt $D_{\mathrm{rel}}\vert_{\mathcal H_{p,a}}\cong 2ic_p\,d/dt$ auf $L^2(\mathbb R)^{\oplus2}$, $c_p=\frac12\gamma_N p\log p$: rein absolutstetiges Spektrum $\mathbb R$, keine Eigenwerte, also $\mathcal H_p\subseteq(\ker D_{\mathrm{rel}})^\perp$. Graphnormbeschränkte Orthonormalfolge explizit | **`✗[M]`** |
+| P5.2″ | **Diagnose:** $D_{\mathrm{rel}}$ ist ein **Transportgenerator**, kein Hilbert–Pólya-Operator. Konfinement scheiterte in NEU-56 nicht an der Wahl von $\gamma_N$ oder $L$, sondern strukturell | `✓[M]` |
+| P5.3 | **Schichtenverschiebung.** Das kompakte Objekt sollte eine Ebene später entstehen: Feshbach-/Birman–Schwinger-Transfer $K_N(z)=V_N^*(D_{\mathrm{rel}}-z)^{-1}V_N$. Dort könnten HP-2, HP-3 ($\mathcal S_2\setminus\mathcal S_1$), HP-5 ($\det_2$) und die zyklische Weyl-Funktion zusammentreffen | `❓[O]` `[O-225-2]` **Arbeitshypothese** |
 | P5.2a | $\dim\ker D_{\mathrm{rel}} = \infty$ über die Faser $m=1$; $\gamma_N$- und $N$-unabhängig (NEU-224 §3.2/3.3) | `✓[M]` |
 | P5.2a′ | **`✓[M]_neg`:** Die flache Achse $r=0$ (NEU-54 §5) ist flache Achse von $\Theta_N$, **nicht** von $J^-=\frac12(\Theta_N-\Theta_N^\dagger)$. Rückwärtskanten aus $r=-n$ tragen $\gamma_N n\log n\neq0$ | `✓[M]_neg` |
 | P5.2a″ | **`✓[M]_neg`:** $\mathcal D_0^{\mathrm{eff}}$ nach (55.0) verlangt $r\neq0$ **und** $m>1$ und ist damit echt kleiner als $(\ker D_{\mathrm{rel}})^\perp$ sowie nicht invariant. Korrekt ist $\{m>1\}$ allein | `✓[M]_neg` |
-| P5.2a‴ | Restkern in den Sektoren $m>1$; Abschlusskontrolle | `❓[O]` `[O-224-1b/1c]` |
+| P5.2a‴ | Primsektoren $m=p$: **kein** Restkern (Impulsoperator hat keine Eigenwerte) | `✓[M]` |
+| P5.2a⁗ | Sektoren $m$ nicht prim; Abschlusskontrolle; ist $\mathcal D_0$ ein Kern? | `❓[O]` `[O-225-1/3]` |
 | P5.2b | $(\ker D_{\mathrm{rel}})^\perp$ reduziert $D_{\mathrm{rel}}$ **automatisch** (Spektralsatz, NEU-224 §5.1) | `✓[M]` |
 | P5.2b′ | Offen bleibt nur: $\overline{\operatorname{Ran}(J_0^-)} = (\ker D_{\mathrm{rel}})^\perp$ (Präabschluss gegen Abschluss) | `❓[O]` |
 | P5.2c | Graphnormbeschränkte Orthonormalfolge in $\operatorname{Dom}(D_{\mathrm{rel}})\cap\mathcal H^{\mathrm{eff}}_{\mathrm{rel}}$ konstruieren oder ausschließen (negativer Zeuge bzw. Weyl-Folge) | `❓[O]` `[O-223-2c]` |
@@ -470,6 +473,12 @@ Gilt nur, solange die kohomologische Schicht Bestandteil der Konstruktion bleibe
 
 P5 ist der einzige registrierte Zugang zu HP-2 (vgl. C.4), aber nicht der einzig denkbare.
 
+> **Reaudit NEU-56 (NEU-225 §2).** Der Widerspruch in Satz 56.1/56.2 argumentiert
+> ausschließlich über **Testvektoren** $\eta_a$ mit festem $r,n$ und benutzt weder Invarianz
+> noch Spektralrestriktion. **Satz 56.2 bleibt daher gültig**; korrigiert wird nur die
+> Raumbezeichnung. Zurückgerollt ist allein die Aussage, $\{r\neq0, m>1\}$ spanne einen
+> reduzierenden oder kernfreien Spektralraum auf. `✓[M]`
+>
 > **Präzisierung (NEU-223, 26. Juli 2026).** Zwei Befunde aus dem Quellenaudit:
 >
 > 1. **HP-2 ist für die RH-Hinrichtung nicht erforderlich.** NEU-56 §4: Für
