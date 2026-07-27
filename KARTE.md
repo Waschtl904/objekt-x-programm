@@ -210,10 +210,12 @@ objekt-x-programm/
 ├── NEU-221_Adelische_Momentquelle_fuer_den_positiven_Weil-Operator.md
 ├── NEU-221c_Zyklischer_Feshbach-Weyl_Kandidat_und_quadratische_Resolvente.md
 ├── NEU-221d_Direktextraktion_NEU46_Zyklischer_Sektor_und_Nullmodusaudit.md
-└── NEU-221e_Affine_Hebungsfaser_Wres-Quotient_und_Spektralmassabstieg_Psip.md
+├── NEU-221e_Affine_Hebungsfaser_Wres-Quotient_und_Spektralmassabstieg_Psip.md
+└── NEU-242_Abschlussaudit_O229-3B1f-b1_Kettenabbildungs-Negativbefund.md  ← NEU (27.07.2026)
 ```
 
-**Hinweis:** NEU-221a, NEU-221b fehlen (keine entsprechenden Dateien im Ordner).
+**Hinweis:** NEU-221a, NEU-221b fehlen (keine entsprechenden Dateien im Ordner).  
+**Hinweis:** NEU-222 bis NEU-241 fehlen in diesem Ordner (Nummernsprung; kein Inhalt vorhanden).
 
 ---
 
@@ -227,9 +229,9 @@ objekt-x-programm/
 | 04-grenzoperator-renormierung | 121–150 (+ Varianten) | ~40+ |
 | 05-primkanal-fourierladung | 151–173 (+ Varianten) | ~30+ |
 | 06-hochschild-bc-algebra | 174–222 (+ Varianten a–z) | ~75 |
-| 07-weil-explizitformel | 220–221e | ~29 |
+| 07-weil-explizitformel | 220–221e, 242 | ~30 |
 
 ---
 
-*Diese Datei wurde maschinell durch direktes Auslesen aller Verzeichnisse erstellt.
+*Diese Datei wurde maschinell durch direktes Auslesen aller Verzeichnisse erstellt.  
 Bitte bei neuen Dateien manuell oder per Skript aktualisieren.*
