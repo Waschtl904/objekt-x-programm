@@ -212,7 +212,8 @@ objekt-x-programm/
 ├── NEU-221d_Direktextraktion_NEU46_Zyklischer_Sektor_und_Nullmodusaudit.md
 ├── NEU-221e_Affine_Hebungsfaser_Wres-Quotient_und_Spektralmassabstieg_Psip.md
 ├── NEU-242_Abschlussaudit_O229-3B1f-b1_Kettenabbildungs-Negativbefund.md
-└── NEU-243_Kompatibilitaetsfirewall_Quell-Zielkomplex_Nichttrivialitaet.md  ← NEU (27.07.2026)
+├── NEU-243_Kompatibilitaetsfirewall_Quell-Zielkomplex_Nichttrivialitaet.md
+└── NEU-244_Quotient-first-Zielarchitektur_und_tautologischer_Cone-No-Go.md  ← NEU (27.07.2026)
 ```
 
 **Hinweis:** NEU-221a, NEU-221b fehlen (keine entsprechenden Dateien im Ordner).  
@@ -230,7 +231,7 @@ objekt-x-programm/
 | 04-grenzoperator-renormierung | 121–150 (+ Varianten) | ~40+ |
 | 05-primkanal-fourierladung | 151–173 (+ Varianten) | ~30+ |
 | 06-hochschild-bc-algebra | 174–222 (+ Varianten a–z) | ~75 |
-| 07-weil-explizitformel | 220–221e, 242, 243 | ~31 |
+| 07-weil-explizitformel | 220–221e, 242–244 | ~32 |
 
 ---
 
