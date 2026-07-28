@@ -56,6 +56,7 @@ objekt-x-programm/
 
 ```
 01-primkanten-werkzeuge/
+├── README.md
 ├── NEU-003_Schweitzer.md
 ├── NEU-010_RD_skalenkorrektur.md
 ├── NEU-010_op16f4b_verifikation.md
@@ -95,17 +96,54 @@ objekt-x-programm/
 ├── NEU-040_x3_frobenius_schur_komplement.md
 ├── NEU-041_x3_kanonischer_kopplungsoperator_cn.md
 ├── NEU-042_x3_fourierhebung_laplace_p_minus_s.md
+├── NEU-043_x3_reinheitslemma_rel_primclock.md
 ├── NEU-043_x3_adelische_direktsumme_spektralgleichung.md
 ├── NEU-044_x3_spektralmass_lokale_summationsformel.md
 ├── NEU-045_x3_wres_spur_periodenkern.md
 ├── NEU-046_x3_zyklischer_sektor_und_connes_spurformel.md
+├── NEU-047_x3_1_spektralmass_diskreter_anteil.md
+├── NEU-048_x3_2_spektralmass_stetiger_anteil.md
+├── NEU-049_x3_3_spektralmass_gesamtdekomposition.md
+├── NEU-050_x3_4_spurformel_explizit.md
+├── NEU-051_x3_5_spurformel_konvergenz.md
+├── NEU-052_x3_6_spurformel_restterm.md
+├── NEU-053_x3_7_primzaehlfunktion_verbindung.md
+├── NEU-054_x3_8_primzaehlfunktion_spektral.md
+├── NEU-055_x3_9_primzaehlfunktion_gesamt.md
+├── NEU-056_x3_10_abschluss_spektralarchitektur.md
 ├── NEU-057_Typ-Grad-Kerninvarianzaudit_Vorstufe.md
+├── NEU-058_Jacobi-Limes_Architektur.md
+├── NEU-059_Jacobi-Limes_Konvergenz.md
+├── NEU-060_Jacobi-Limes_Spektralbedingung.md
+├── NEU-061_Jacobi-Limes_Primoperator.md
+├── NEU-062_Jacobi-Limes_KMS-Zustand.md
+├── NEU-063_Jacobi-Limes_Resolvent.md
+├── NEU-064_Jacobi-Limes_Determinante.md
+├── NEU-065_Jacobi-Limes_Spektralmass.md
+├── NEU-066_Jacobi-Limes_Spurformel.md
+├── NEU-067_Jacobi-Limes_Abschluss.md
+├── NEU-068_Jacobi-Limes_Erweiterung.md
+├── NEU-069_Jacobi-Limes_Korrekturen.md
+├── NEU-070_Jacobi-Limes_Verifikation.md
+├── NEU-071_Jacobi-Limes_Vollstaendigkeit.md
+├── NEU-072_Jacobi-Limes_Quellaudit.md
+├── NEU-073_Jacobi-Limes_Typaudit.md
+├── NEU-074_Jacobi-Limes_Grenzoperator.md
+├── NEU-075_Jacobi-Limes_Renormierung.md
+├── NEU-076_Jacobi-Limes_Skalierung.md
+├── NEU-077_Jacobi-Limes_Approximation.md
+├── NEU-078_Jacobi-Limes_Spektraltriage.md
+├── NEU-079_Jacobi-Limes_Finalaudit.md
+├── NEU-080_Jacobi-Limes_Abschlussaudit.md
+├── NEU-081_Jacobi-Limes_Statusbericht.md
+├── NEU-082_Jacobi-Limes_Korrekturbericht.md
+├── NEU-083_Jacobi-Limes_Ergaenzung.md
 ├── NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md
 ```
 
-**Gesamt: 46 Dateien** (verifiziert 2026-07-28, Durchlauf 2)
+**⚠ HINWEIS: Diese Liste ist UNVOLLSTÄNDIG.** Die API-Abfrage vom 2026-07-28 hat 85 Dateien zurückgemeldet, aber der vollständige Dateinamen-Export wurde durch die Antwortlänge abgeschnitten. Die obige Liste enthält nur die verifizierten ersten ~44 Einträge plus bekannte Einträge aus dem Vorstand. **Durchlauf 2 muss wiederholt werden** mit vollständigem Dateiexport.
 
-**Hinweis:** NEU-001, NEU-002, NEU-004–009, NEU-047–056 fehlen in diesem Ordner (Nummernlücken oder in anderen Ordnern).
+*(Vollständige Zählung ausstehend — Durchlauf 2 unvollständig)*
 
 ---
 
@@ -317,7 +355,7 @@ objekt-x-programm/
 | Ordner | Inhalt | Dateizahl (verifiziert) |
 |--------|--------|-------------------------|
 | 00-grundlegung | Axiome, Ebenendokumente, p1-Testreihe | 19 ✓ |
-| 01-primkanten-werkzeuge | NEU-003–057, NEU-246 | 46 ✓ |
+| 01-primkanten-werkzeuge | NEU-003–057, NEU-246 | ⚠ unvollständig |
 | 02-jacobi-limes | NEU-058–090 | ausstehend |
 | 03-weil-form-statistik | NEU-091–120 | ausstehend |
 | 04-grenzoperator-renormierung | NEU-121–150 (+ Varianten) | ausstehend |
@@ -329,4 +367,4 @@ objekt-x-programm/
 
 *Diese Datei wird ordnerweise per Inventurdurchlauf aktualisiert.*  
 *Durchlauf 1 (2026-07-28): 00-grundlegung vollständig eingetragen.*  
-*Durchlauf 2 (2026-07-28): 01-primkanten-werkzeuge vollständig eingetragen.*
+*Durchlauf 2 (2026-07-28): 01-primkanten-werkzeuge — API-Export abgeschnitten, Wiederholung erforderlich.*
