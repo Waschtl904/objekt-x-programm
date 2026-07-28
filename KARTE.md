@@ -48,7 +48,7 @@ objekt-x-programm/
 └── teil2_ebenen_VI-XV_variante_NEU-10.md
 ```
 
-**Gesamt: 19 Dateien** (verifiziert 2026-07-28, Durchlauf 1)
+**Gesamt: 20 Dateien** (verifiziert 2026-07-28, Durchlauf 1 ✓)
 
 ---
 
@@ -138,7 +138,7 @@ objekt-x-programm/
 ├── NEU-081_Jacobi-Limes_Statusbericht.md
 ├── NEU-082_Jacobi-Limes_Korrekturbericht.md
 ├── NEU-083_Jacobi-Limes_Ergaenzung.md
-├── NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md
+└── NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md
 ```
 
 **⚠ HINWEIS: Diese Liste ist UNVOLLSTÄNDIG.** Die API-Abfrage vom 2026-07-28 hat 85 Dateien zurückgemeldet, aber der vollständige Dateinamen-Export wurde durch die Antwortlänge abgeschnitten. Die obige Liste enthält nur die verifizierten ersten ~44 Einträge plus bekannte Einträge aus dem Vorstand. **Durchlauf 2 muss wiederholt werden** mit vollständigem Dateiexport.
@@ -354,8 +354,8 @@ objekt-x-programm/
 
 | Ordner | Inhalt | Dateizahl (verifiziert) |
 |--------|--------|-------------------------|
-| 00-grundlegung | Axiome, Ebenendokumente, p1-Testreihe | 19 ✓ |
-| 01-primkanten-werkzeuge | NEU-003–057, NEU-246 | ⚠ unvollständig |
+| 00-grundlegung | Axiome, Ebenendokumente, p1-Testreihe | 20 ✓ |
+| 01-primkanten-werkzeuge | NEU-003–083, NEU-246 | ⚠ unvollständig |
 | 02-jacobi-limes | NEU-058–090 | ausstehend |
 | 03-weil-form-statistik | NEU-091–120 | ausstehend |
 | 04-grenzoperator-renormierung | NEU-121–150 (+ Varianten) | ausstehend |
@@ -366,5 +366,5 @@ objekt-x-programm/
 ---
 
 *Diese Datei wird ordnerweise per Inventurdurchlauf aktualisiert.*  
-*Durchlauf 1 (2026-07-28): 00-grundlegung vollständig eingetragen.*  
+*Durchlauf 1 (2026-07-28): 00-grundlegung — 20 Dateien vollständig verifiziert und eingetragen. ✓*  
 *Durchlauf 2 (2026-07-28): 01-primkanten-werkzeuge — API-Export abgeschnitten, Wiederholung erforderlich.*
