@@ -145,8 +145,8 @@ objekt-x-programm/
 
 **Gesamt: 85 Inhaltsdateien + README.md = 86 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 2 ✓)
 
-**Hinweis:** Alter Bestand NEU-003–056 (Klassische Primkanten-Werkzeuge) + neuere Einträge NEU-223–249 (O229-Unterknoten, Koszul-Audit, Typbrücken) landen physisch in diesem Ordner.  
-**Hinweis:** NEU-057 ist nicht in diesem Ordner vorhanden — ggf. in anderem Strang oder noch nicht committed.  
+**Hinweis:** Alter Bestand NEU-003–056 + neuere Einträge NEU-223–249 (O229-Unterknoten, Koszul-Audit, Typbrücken) landen physisch in diesem Ordner.  
+**Hinweis:** NEU-057 ist nicht in diesem Ordner vorhanden.  
 **Hinweis:** NEU-246 liegt auch in `07-weil-explizitformel/` — Doppelung prüfen.
 
 ---
@@ -156,39 +156,39 @@ objekt-x-programm/
 ```
 02-jacobi-limes/
 ├── README.md
-├── NEU-058_Jacobi_Limes_Operator_Wohldefiniertheit.md
-├── NEU-059_Jacobi_Limes_Spektralschranken.md
-├── NEU-060_Jacobi_Limes_Resolventenkonvergenz.md
-├── NEU-061_Jacobi_Limes_Spurklassenbedingung.md
-├── NEU-062_Jacobi_Limes_Spektralmass_Konvergenz.md
-├── NEU-063_Jacobi_Limes_Selbstadjungiertheit.md
-├── NEU-064_Jacobi_Limes_Kerncharakterisierung.md
-├── NEU-065_Jacobi_Limes_Spektralzerlegung.md
-├── NEU-066_Jacobi_Limes_Resolventennorm.md
-├── NEU-067_Jacobi_Limes_Spektralmass_Identifikation.md
-├── NEU-068_Jacobi_Limes_Konvergenzrate.md
-├── NEU-069_Jacobi_Limes_Regularitaet.md
-├── NEU-070_Jacobi_Limes_Operatornorm.md
-├── NEU-071_Jacobi_Limes_Kompaktheit.md
-├── NEU-072_Jacobi_Limes_Spektralfolge.md
-├── NEU-073_Jacobi_Limes_Diagonalstruktur.md
-├── NEU-074_Jacobi_Limes_Offdiagonalabfall.md
-├── NEU-075_Jacobi_Limes_Spektralmass_Stetigkeit.md
-├── NEU-076_Jacobi_Limes_Spurform.md
-├── NEU-077_Jacobi_Limes_Resolventenentwicklung.md
-├── NEU-078_Jacobi_Limes_Spektralmass_Absolutstetigkeit.md
-├── NEU-079_Jacobi_Limes_Punktspektrum.md
-├── NEU-080_Jacobi_Limes_Wesentliches_Spektrum.md
-├── NEU-081_Jacobi_Limes_Spektralluecke.md
-├── NEU-082_Jacobi_Limes_Bodenenergie.md
-├── NEU-083_Jacobi_Limes_Spektralmass_Support.md
-├── NEU-084_Jacobi_Limes_Spektralmass_Momente.md
-├── NEU-085_Jacobi_Limes_Orthogonalitaet.md
-├── NEU-086_Jacobi_Limes_Normierung.md
-├── NEU-087_Jacobi_Limes_Vollstaendigkeit.md
-├── NEU-088_Jacobi_Limes_Resolvente_Approximation.md
-├── NEU-089_Jacobi_Limes_Spektralmass_Eindeutigkeit.md
-└── NEU-090_Jacobi_Limes_Abschluss.md
+├── NEU-058_skalenbilanz_obstruktion.md
+├── NEU-059_jacobi_limes_spektralmass.md
+├── NEU-060_core_konvergenz_resolventen_stabilitaet.md
+├── NEU-061_lokale_matrixstabilisierung_core_konvergenz.md
+├── NEU-062_normalisierungsrigiditat_jacobi_limes.md
+├── NEU-063_arithmetische_identifikation_weyl_funktion.md
+├── NEU-064_endliche_weyl_funktionen_euler_bruchstruktur.md
+├── NEU-065_feshbach_jacobi_determinante_xi_funktion.md
+├── NEU-066_geschlossene_divisorpfade_trace_feshbach.md
+├── NEU-067_primitive_orbit_reduktion_mangoldt.md
+├── NEU-068_moebius_feshbach_identitaet_mangoldt.md
+├── NEU-069_primitive_zykluszerlegung_divisorgraph.md
+├── NEU-070_nicht_backtracking_ihara_divisorgraph.md
+├── NEU-071_quotientierung_periodisierung_divisorfluss.md
+├── NEU-072_adelischer_skalierungsquotient_BC_zeitlaengen.md
+├── NEU-073_theta_matrix_BC_derivation_vergleich.md
+├── NEU-074_identifikation_Vn_BC_isometrie_mu_n.md
+├── NEU-075_kreuzprodukt_faktorisierung_theta.md
+├── NEU-076_faser_symboloperator_no_go.md
+├── NEU-077_Feshbach_Kollaps.md
+├── NEU-078_Normierungs_NoGo_Feshbach_Skalierung.md
+├── NEU-079_Kanalzahl_Skalierung_Jacobi_Limes.md
+├── NEU-080_Effektive_Jacobi_Skalierung.md
+├── NEU-081_Feshbach_vs_Jacobi_Gewichtsstabilitaet.md
+├── NEU-082_Kanalabhaengige_Kopplung_Dichtebedingung.md
+├── NEU-083_Mangoldt_Extraktion_Dreifachkonflikt.md
+├── NEU-084_Orbit_Trunkierung_Zeilennorm_Barriere.md
+├── NEU-085_Starker_Null_Limes_Wandernde_Fenster.md
+├── NEU-086_Nilpotenz_Barriere_Jacobi_Schliessung.md
+├── NEU-087_Jacobi_Schliessung_Schleifeninvarianten.md
+├── NEU-088_Relative_Resolventdeterminante_Schleifenspur.md
+├── NEU-089_Hoehere_Schleifen_Asymptotische_Quadratisierung.md
+└── NEU-090_Zweite_Schleifenspur_z_Rigiditaet.md
 ```
 
 **Gesamt: 33 Inhaltsdateien + README.md = 34 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 3 ✓)
@@ -219,9 +219,7 @@ objekt-x-programm/
 └── … (weitere NEU-106–120 + README)
 ```
 
-**Gesamt: (API-Rückgabe abgeschnitten; sichtbar NEU-091–105; vollständige Reihe bis NEU-120 erwartet)** (API-verifiziert 2026-07-28, Durchlauf 4 ✓ partiell)
-
-**Hinweis:** API-Antwort war bei NEU-105 abgeschnitten. Reihe NEU-091–120 vollständig erwartet (analog 02); READ­ME vorhanden.
+**⚠ API-Antwort bei NEU-105 abgeschnitten — Dateinamen ab NEU-106 noch nicht verifiziert, Platzhalter!** (Durchlauf 4 partiell)
 
 ---
 
@@ -275,7 +273,7 @@ objekt-x-programm/
 
 **Gesamt: 41 Inhaltsdateien + README.md = 42 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 5 ✓)
 
-**Hinweis:** NEU-123 hat 9 Varianten (A–I + Hauptdatei + 2 F-Duplikate). NEU-126 und NEU-129 fehlen (keine entsprechenden Dateien im Ordner).
+**Hinweis:** NEU-123 hat 9 Varianten (A–I + Hauptdatei + 2 F-Duplikate). NEU-126 und NEU-129 fehlen.
 
 ---
 
@@ -321,7 +319,7 @@ objekt-x-programm/
 
 **Gesamt: 33 Inhaltsdateien + README.md = 34 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 6 ✓)
 
-**Hinweis:** NEU-166b ist doppelt vorhanden (Rollen_Provenienz… und Typ_Domaenen_…). NEU-170 hat 4 Varianten (a–d).
+**Hinweis:** NEU-166b ist doppelt vorhanden (zwei verschiedene Dateien mit gleicher Nummer). NEU-170 hat 4 Varianten (a–d).
 
 ---
 
@@ -411,9 +409,9 @@ objekt-x-programm/
 └── NEU-222_Trassenaudit_singulaere_Route_Statuskorrektur_und_offene_Restknoten.md
 ```
 
-**Hinweis:** NEU-191, NEU-198 fehlen (keine entsprechenden Dateien im Ordner).
+**Hinweis:** NEU-191, NEU-198 fehlen. NEU-183, NEU-193, NEU-217, NEU-218, NEU-219, NEU-219u, NEU-219y je doppelt vorhanden.
 
-*(Detaillierte Einzelauflistung aus Vorstand übernommen; Vollzählung ausstehend, Durchlauf 7)*
+*(Dateinamen aus Durchlauf 2026-07-28 übernommen — noch nicht per separatem API-Abruf für diesen Ordner verifiziert, Durchlauf 7 ausstehend)*
 
 ---
 
@@ -458,11 +456,9 @@ objekt-x-programm/
 └── NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md
 ```
 
-**Hinweis:** NEU-221a, NEU-221b fehlen (keine entsprechenden Dateien im Ordner).  
-**Hinweis:** NEU-222 bis NEU-241 fehlen in diesem Ordner (Nummernsprung — diese liegen in 01 und 06).  
-**Hinweis:** NEU-246 liegt auch in `01-primkanten-werkzeuge/` — Doppelung prüfen.
+**Hinweis:** NEU-221a, NEU-221b fehlen. NEU-222–NEU-241 fehlen hier (liegen in 01 und 06). NEU-246 auch in `01` — Doppelung prüfen.
 
-*(Detaillierte Einzelauflistung aus Vorstand übernommen; Vollzählung ausstehend, Durchlauf 8)*
+*(Dateinamen aus Durchlauf 2026-07-28 übernommen — noch nicht per separatem API-Abruf für diesen Ordner verifiziert, Durchlauf 8 ausstehend)*
 
 ---
 
@@ -473,18 +469,19 @@ objekt-x-programm/
 | 00-grundlegung | Axiome, Ebenendokumente, p1-Testreihe | 20 ✓ |
 | 01-primkanten-werkzeuge | NEU-003–056, NEU-044R/X/Xprime, NEU-223–249 | 86 ✓ |
 | 02-jacobi-limes | NEU-058–090 | 34 ✓ |
-| 03-weil-form-statistik | NEU-091–120 (partiell verifiziert) | ≥15 ✓ partiell |
+| 03-weil-form-statistik | NEU-091–120 (ab NEU-106 unverifiziert!) | ≥15 ⚠ partiell |
 | 04-grenzoperator-renormierung | NEU-121–150 + Varianten A–I | 42 ✓ |
 | 05-primkanal-fourierladung | NEU-151–173 + Varianten a–d | 34 ✓ |
-| 06-hochschild-bc-algebra | NEU-174–222 + Varianten a–z | ausstehend |
-| 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | ausstehend |
+| 06-hochschild-bc-algebra | NEU-174–222 + Varianten a–z | ausstehend ⚠ |
+| 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | ausstehend ⚠ |
 
 ---
 
 *Diese Datei wird ordnerweise per Inventurdurchlauf aktualisiert.*  
 *Durchlauf 1 (2026-07-28): 00-grundlegung — 20 Dateien vollständig verifiziert. ✓*  
 *Durchlauf 2 (2026-07-28): 01-primkanten-werkzeuge — 86 Dateien API-verifiziert. ✓*  
-*Durchlauf 3 (2026-07-28): 02-jacobi-limes — 34 Dateien vollständig verifiziert. ✓*  
-*Durchlauf 4 (2026-07-28): 03-weil-form-statistik — API-Antwort bei NEU-105 abgeschnitten; partiell verifiziert. ✓ partiell*  
+*Durchlauf 3 (2026-07-28): 02-jacobi-limes — 34 Dateien vollständig verifiziert (echte Namen). ✓*  
+*Durchlauf 3-fix (2026-07-28): 02-jacobi-limes Dateinamen korrigiert — vorherige Version hatte erfundene Namen. ✓*  
+*Durchlauf 4 (2026-07-28): 03-weil-form-statistik — API-Antwort bei NEU-105 abgeschnitten; partiell verifiziert. ⚠*  
 *Durchlauf 5 (2026-07-28): 04-grenzoperator-renormierung — 42 Dateien vollständig verifiziert. ✓*  
 *Durchlauf 6 (2026-07-28): 05-primkanal-fourierladung — 34 Dateien vollständig verifiziert. ✓*
