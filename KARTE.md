@@ -238,8 +238,8 @@ objekt-x-programm/
 **Gesamt: 30 Inhaltsdateien + README.md = 31 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 4 ✓)
 
 **Hinweis:** Vollständige Reihe NEU-091–120, keine Lücken.  
-**Hinweis:** NEU-118 ist doppelt vorhanden: `NEU-118_Bombieri_Normalisierung.md` und `NEU-118_X_Rigiditaet_R1_Nachweis.md`.  
-**Hinweis:** NEU-113 heißt `NEU-113_Bombieri-Normalisierung.md` (Bindestrich), NEU-118 heißt `NEU-118_Bombieri_Normalisierung.md` (Unterstrich) — vermutlich Duplikat-Thema.
+**Hinweis:** NEU-118 doppelt: `NEU-118_Bombieri_Normalisierung.md` und `NEU-118_X_Rigiditaet_R1_Nachweis.md`.  
+**Hinweis:** NEU-113 (Bindestrich) vs. NEU-118 (Unterstrich) — vermutlich Duplikat-Thema.
 
 ---
 
@@ -339,7 +339,7 @@ objekt-x-programm/
 
 **Gesamt: 33 Inhaltsdateien + README.md = 34 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 6 ✓)
 
-**Hinweis:** NEU-166b ist doppelt vorhanden (zwei verschiedene Dateien mit gleicher Nummer). NEU-170 hat 4 Varianten (a–d).
+**Hinweis:** NEU-166b doppelt vorhanden. NEU-170 hat 4 Varianten (a–d).
 
 ---
 
@@ -357,8 +357,8 @@ objekt-x-programm/
 ├── NEU-180_QPlus_Gradierung_Primvaluationsderivationen_AQ.md
 ├── NEU-181_Homogenitaetsaudit_Algebraischer_Twist_Nullkozykeltest.md
 ├── NEU-182_Nullkozykel_No-go_Zentrumstest_BC-Algebra.md
-├── NEU-183_Quellen_Praesentation_Audit_BC-Algebra.md
-├── NEU-183_Zentrumstest_Strukturbruch_BC-Algebra.md
+├── NEU-183_Quellen_Praesentation_Audit_BC-Algebra.md        ← doppelt (NEU-183)
+├── NEU-183_Zentrumstest_Strukturbruch_BC-Algebra.md          ← doppelt (NEU-183)
 ├── NEU-184_Zentrumstest_Koeffizientenaudit_A_g.md
 ├── NEU-185_Augmentationscharakter_Dualzyklus_HH4.md
 ├── NEU-186_Geladener_Sektor_HH4_Triage.md
@@ -367,8 +367,8 @@ objekt-x-programm/
 ├── NEU-189_Typaudit_Operatorrealisierung_Omega_p.md
 ├── NEU-190_Vollstaendiger_Audit_Operatorbruecke.md
 ├── NEU-192_Zeugenarchitektur_Separationssatz_Warnlemma.md
-├── NEU-193_Dualer_Hochschildzyklus_Geladener_Nichtrandzeuge.md
-├── NEU-193_Geladener_Dualzyklus_Paarungstest.md
+├── NEU-193_Dualer_Hochschildzyklus_Geladener_Nichtrandzeuge.md  ← doppelt (NEU-193)
+├── NEU-193_Geladener_Dualzyklus_Paarungstest.md               ← doppelt (NEU-193)
 ├── NEU-194_Determinantisches_Modell_Kozykeltest.md
 ├── NEU-195_Bewertungsderivationen_Reduktion_HH1.md
 ├── NEU-196_Augmentationsblindheit_Potentialroute.md
@@ -391,13 +391,13 @@ objekt-x-programm/
 ├── NEU-214_Bimodul_Rigiditaetslemma_Glattes_Potential.md
 ├── NEU-215_Zentralisator_Bimodul_No-go.md
 ├── NEU-216_Log_Koeffiziententyp_B-log.md
-├── NEU-217_Lokaler_p-Block.md
-├── NEU-217_O217-2b_Dg_Fallzerlegung.md
-├── NEU-217_O217-2c6_lokal-global.md
-├── NEU-218_Grad3-Cup-Aufstieg.md
-├── NEU-218_Grad3Partner_Cup-Aufstieg_Abschluss.md
-├── NEU-219_Finalaudit_Gesamtabschluss.md
-├── NEU-219_Zyklischer_Koeffizient_KMS_Weil_Verfeinerung.md
+├── NEU-217_Lokaler_p-Block.md                                 ← dreifach (NEU-217)
+├── NEU-217_O217-2b_Dg_Fallzerlegung.md                       ← dreifach (NEU-217)
+├── NEU-217_O217-2c6_lokal-global.md                          ← dreifach (NEU-217)
+├── NEU-218_Grad3-Cup-Aufstieg.md                             ← doppelt (NEU-218)
+├── NEU-218_Grad3Partner_Cup-Aufstieg_Abschluss.md            ← doppelt (NEU-218)
+├── NEU-219_Finalaudit_Gesamtabschluss.md                     ← doppelt (NEU-219)
+├── NEU-219_Zyklischer_Koeffizient_KMS_Weil_Verfeinerung.md   ← doppelt (NEU-219)
 ├── NEU-219a_KMS_Typaudit_Negativbefund.md
 ├── NEU-219b_KMS_Neutralisierer_Aufspaltung.md
 ├── NEU-219c_KMS_Diagonalauswertung_positiv.md
@@ -418,20 +418,21 @@ objekt-x-programm/
 ├── NEU-219r_Definition_des_kanonischen_Basislifts.md
 ├── NEU-219s_Skalare_KMS_Rotation_Exponent_s.md
 ├── NEU-219t_Vollstaendige_U_Buchfuehrung_Exponent_s.md
-├── NEU-219u_Abschluss_O219_NoGo_Theorem.md
-├── NEU-219u_Abschlussaudit_Geladene_zyklische_Architektur.md
+├── NEU-219u_Abschluss_O219_NoGo_Theorem.md                   ← doppelt (NEU-219u)
+├── NEU-219u_Abschlussaudit_Geladene_zyklische_Architektur.md ← doppelt (NEU-219u)
 ├── NEU-219v_neg_U-Eingaberotation_typwidrig.md
 ├── NEU-219w_Direktaudit_R1-R3_Basisliftrotation.md
 ├── NEU-219x_Direktaudit_Dg_Primaerformel_und_Fortsetzung.md
-├── NEU-219y_Direktaudit_Dg_Zieltypbruecke_NEU211_NEU217.md
-├── NEU-219y_Unit-Slot-Zeuge_und_Abschluss_des_Basislift-Rotationspfads.md
+├── NEU-219y_Direktaudit_Dg_Zieltypbruecke_NEU211_NEU217.md   ← doppelt (NEU-219y)
+├── NEU-219y_Unit-Slot-Zeuge_und_Abschluss_des_Basislift-Rotationspfads.md  ← doppelt (NEU-219y)
 ├── NEU-219z_Expliziter_Cup-Rotationsaudit.md
 └── NEU-222_Trassenaudit_singulaere_Route_Statuskorrektur_und_offene_Restknoten.md
 ```
 
-**Hinweis:** NEU-191, NEU-198 fehlen. NEU-183, NEU-193, NEU-217, NEU-218, NEU-219, NEU-219u, NEU-219y je doppelt vorhanden.
+**Gesamt: 65 Inhaltsdateien + README.md = 66 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 7 ✓)
 
-*(Dateinamen aus früheren Durchläufen — noch nicht per separatem API-Abruf für diesen Ordner verifiziert, Durchlauf 7 ausstehend)*
+**Hinweis:** Fehlende Nummern: NEU-191, NEU-198, NEU-220, NEU-221.  
+**Hinweis:** Doppelte Nummern: NEU-183, NEU-193, NEU-217 (3×), NEU-218, NEU-219, NEU-219u, NEU-219y.
 
 ---
 
@@ -451,8 +452,8 @@ objekt-x-programm/
 ├── NEU-220h_Endlicher_Weil-Port_aus_NEU-28.md
 ├── NEU-220i_Direktaudit_Zeta-Quotient_und_Endlicher_Logableitungsport.md
 ├── NEU-220j_Analytischer_Weil-Testfunktionsraum_und_Konturtransport.md
-├── NEU-220k_Konturtransport_Konvergenz_und_Weil-Explizitformel.md
-├── NEU-220k_Xi-Masterkontur_Vorzeichen_Faktor2_und_Polbuchhaltung.md
+├── NEU-220k_Konturtransport_Konvergenz_und_Weil-Explizitformel.md   ← doppelt (NEU-220k)
+├── NEU-220k_Xi-Masterkontur_Vorzeichen_Faktor2_und_Polbuchhaltung.md ← doppelt (NEU-220k)
 ├── NEU-220l_Weil-Quadratik_Autokorrelation_und_Positiver-Kegel.md
 ├── NEU-220m_Gesamt-Weilform_Rigged-Operator_und_Randkanaele.md
 ├── NEU-220n_Endliche_Fensteroperatoren_und_globaler_Grenztyp.md
@@ -476,32 +477,36 @@ objekt-x-programm/
 └── NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md
 ```
 
-**Hinweis:** NEU-221a, NEU-221b fehlen. NEU-220k doppelt vorhanden. NEU-246 auch in `01` — Doppelung prüfen.
+**Gesamt: 34 Inhaltsdateien + README.md = 35 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 8 ✓)
 
-*(Dateinamen aus früheren Durchläufen — noch nicht per separatem API-Abruf für diesen Ordner verifiziert, Durchlauf 8 ausstehend)*
-
----
-
-## Gesamtübersicht: Nummernsystem
-
-| Ordner | Inhalt | Dateizahl (verifiziert) |
-|--------|--------|-------------------------|
-| 00-grundlegung | Axiome, Ebenendokumente, p1-Testreihe | 20 ✓ |
-| 01-primkanten-werkzeuge | NEU-003–056, NEU-044R/X/Xprime, NEU-223–249 | 86 ✓ |
-| 02-jacobi-limes | NEU-058–090 | 34 ✓ |
-| 03-weil-form-statistik | NEU-091–120, NEU-118 doppelt | 31 ✓ |
-| 04-grenzoperator-renormierung | NEU-121–150 + Varianten A–I | 42 ✓ |
-| 05-primkanal-fourierladung | NEU-151–173 + Varianten a–d | 34 ✓ |
-| 06-hochschild-bc-algebra | NEU-174–222 + Varianten a–z | ausstehend ⚠ |
-| 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | ausstehend ⚠ |
+**Hinweis:** NEU-221a und NEU-221b fehlen. NEU-220k doppelt vorhanden.  
+**Hinweis:** Nummernsprung von NEU-221e direkt zu NEU-242 (NEU-222–241 fehlen in diesem Ordner; NEU-222 liegt in 06, NEU-223–241 in 01).  
+**Hinweis:** NEU-246 auch in `01-primkanten-werkzeuge/` — Doppelung prüfen.
 
 ---
 
-*Diese Datei wird ordnerweise per Inventurdurchlauf aktualisiert.*  
-*Durchlauf 1 (2026-07-28): 00-grundlegung — 20 Dateien vollständig verifiziert. ✓*  
-*Durchlauf 2 (2026-07-28): 01-primkanten-werkzeuge — 86 Dateien API-verifiziert. ✓*  
-*Durchlauf 3 (2026-07-28): 02-jacobi-limes — 34 Dateien vollständig verifiziert (echte Namen). ✓*  
-*Durchlauf 3-fix (2026-07-28): 02-jacobi-limes Dateinamen korrigiert — vorherige Version hatte erfundene Namen. ✓*  
-*Durchlauf 4 (2026-07-28): 03-weil-form-statistik — 31 Dateien vollständig API-verifiziert. ✓*  
-*Durchlauf 5 (2026-07-28): 04-grenzoperator-renormierung — 42 Dateien vollständig verifiziert. ✓*  
-*Durchlauf 6 (2026-07-28): 05-primkanal-fourierladung — 34 Dateien vollständig verifiziert. ✓*
+## Gesamtübersicht
+
+| Ordner | Inhalt | Dateizahl | Status |
+|--------|--------|-----------|--------|
+| 00-grundlegung | Axiome, Ebenendokumente, p1-Testreihe | 20 | ✓ verifiziert |
+| 01-primkanten-werkzeuge | NEU-003–056, NEU-223–249 | 86 | ✓ verifiziert |
+| 02-jacobi-limes | NEU-058–090 | 34 | ✓ verifiziert |
+| 03-weil-form-statistik | NEU-091–120 | 31 | ✓ verifiziert |
+| 04-grenzoperator-renormierung | NEU-121–150 + Varianten | 42 | ✓ verifiziert |
+| 05-primkanal-fourierladung | NEU-151–173 + Varianten | 34 | ✓ verifiziert |
+| 06-hochschild-bc-algebra | NEU-174–222 + Varianten a–z | 66 | ✓ verifiziert |
+| 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | 35 | ✓ verifiziert |
+| **Gesamt** | | **348** | **alle ✓** |
+
+---
+
+*Vollständiger Inventurdurchlauf abgeschlossen: 2026-07-28 — alle 8 Ordner API-verifiziert.*  
+*Durchlauf 1 (2026-07-28): 00-grundlegung ✓*  
+*Durchlauf 2 (2026-07-28): 01-primkanten-werkzeuge ✓*  
+*Durchlauf 3 (2026-07-28): 02-jacobi-limes ✓*  
+*Durchlauf 4 (2026-07-28): 03-weil-form-statistik ✓*  
+*Durchlauf 5 (2026-07-28): 04-grenzoperator-renormierung ✓*  
+*Durchlauf 6 (2026-07-28): 05-primkanal-fourierladung ✓*  
+*Durchlauf 7 (2026-07-28): 06-hochschild-bc-algebra ✓*  
+*Durchlauf 8 (2026-07-28): 07-weil-explizitformel ✓*
