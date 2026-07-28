@@ -48,7 +48,7 @@ objekt-x-programm/
 └── teil2_ebenen_VI-XV_variante_NEU-10.md
 ```
 
-**Gesamt: 20 Dateien** (verifiziert 2026-07-28, Durchlauf 1 ✓)
+**Gesamt: 20 Dateien** (API-verifiziert 2026-07-28, Durchlauf 1 ✓)
 
 ---
 
@@ -201,6 +201,7 @@ objekt-x-programm/
 
 ```
 03-weil-form-statistik/
+├── README.md
 ├── NEU-091_Quadratischer_Pivot_Weil_Form.md
 ├── NEU-092_Testkegel_Quadratischer_Weil_Lift.md
 ├── NEU-093_Korrelationskern_Lift_Mangoldt_Masse.md
@@ -216,10 +217,29 @@ objekt-x-programm/
 ├── NEU-103_Entfaltungskarte_Phasenvergleich.md
 ├── NEU-104_Lokaler_Formfaktor_Test.md
 ├── NEU-105_Lokaler_Rampen_Test_GUE_Poisson.md
-└── … (weitere NEU-106–120 + README)
+├── NEU-106_Geglaettete_Nullstellenexpansion_Restkanal.md
+├── NEU-107_Lokale_Formfaktor_Annahme_Rampen_Aequivalenz.md
+├── NEU-108_Rampenform_versus_Weil_Quadratform.md
+├── NEU-109_Hauptsymboltest_Weil_Rekonstruktion.md
+├── NEU-110_Symboltest_Rampenkanal_versus_Weil_Kanal.md
+├── NEU-111_Herglotz_Weil_Bruecke_Jacobi_Realisierung.md
+├── NEU-112_Herglotz_Weil_Test_Nullstellenterm_Renormierung.md
+├── NEU-113_Bombieri-Normalisierung.md
+├── NEU-114_Rueckbindung_Spektralschatten_Objekt_X.md
+├── NEU-115_Weil-Distribution_Interface.md
+├── NEU-116_Rueckbindungstest_Wres_Wxi.md
+├── NEU-117_X_Rigiditaet_R1.md
+├── NEU-118_Bombieri_Normalisierung.md
+├── NEU-118_X_Rigiditaet_R1_Nachweis.md
+├── NEU-119_Spektralmass_Jacobi_zu_Herglotz.md
+└── NEU-120_Bombieri_Normalisierung_Herglotz_Grenzuebergang.md
 ```
 
-**⚠ API-Antwort bei NEU-105 abgeschnitten — Dateinamen ab NEU-106 noch nicht verifiziert, Platzhalter!** (Durchlauf 4 partiell)
+**Gesamt: 30 Inhaltsdateien + README.md = 31 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 4 ✓)
+
+**Hinweis:** Vollständige Reihe NEU-091–120, keine Lücken.  
+**Hinweis:** NEU-118 ist doppelt vorhanden: `NEU-118_Bombieri_Normalisierung.md` und `NEU-118_X_Rigiditaet_R1_Nachweis.md`.  
+**Hinweis:** NEU-113 heißt `NEU-113_Bombieri-Normalisierung.md` (Bindestrich), NEU-118 heißt `NEU-118_Bombieri_Normalisierung.md` (Unterstrich) — vermutlich Duplikat-Thema.
 
 ---
 
@@ -411,7 +431,7 @@ objekt-x-programm/
 
 **Hinweis:** NEU-191, NEU-198 fehlen. NEU-183, NEU-193, NEU-217, NEU-218, NEU-219, NEU-219u, NEU-219y je doppelt vorhanden.
 
-*(Dateinamen aus Durchlauf 2026-07-28 übernommen — noch nicht per separatem API-Abruf für diesen Ordner verifiziert, Durchlauf 7 ausstehend)*
+*(Dateinamen aus früheren Durchläufen — noch nicht per separatem API-Abruf für diesen Ordner verifiziert, Durchlauf 7 ausstehend)*
 
 ---
 
@@ -456,9 +476,9 @@ objekt-x-programm/
 └── NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md
 ```
 
-**Hinweis:** NEU-221a, NEU-221b fehlen. NEU-222–NEU-241 fehlen hier (liegen in 01 und 06). NEU-246 auch in `01` — Doppelung prüfen.
+**Hinweis:** NEU-221a, NEU-221b fehlen. NEU-220k doppelt vorhanden. NEU-246 auch in `01` — Doppelung prüfen.
 
-*(Dateinamen aus Durchlauf 2026-07-28 übernommen — noch nicht per separatem API-Abruf für diesen Ordner verifiziert, Durchlauf 8 ausstehend)*
+*(Dateinamen aus früheren Durchläufen — noch nicht per separatem API-Abruf für diesen Ordner verifiziert, Durchlauf 8 ausstehend)*
 
 ---
 
@@ -469,7 +489,7 @@ objekt-x-programm/
 | 00-grundlegung | Axiome, Ebenendokumente, p1-Testreihe | 20 ✓ |
 | 01-primkanten-werkzeuge | NEU-003–056, NEU-044R/X/Xprime, NEU-223–249 | 86 ✓ |
 | 02-jacobi-limes | NEU-058–090 | 34 ✓ |
-| 03-weil-form-statistik | NEU-091–120 (ab NEU-106 unverifiziert!) | ≥15 ⚠ partiell |
+| 03-weil-form-statistik | NEU-091–120, NEU-118 doppelt | 31 ✓ |
 | 04-grenzoperator-renormierung | NEU-121–150 + Varianten A–I | 42 ✓ |
 | 05-primkanal-fourierladung | NEU-151–173 + Varianten a–d | 34 ✓ |
 | 06-hochschild-bc-algebra | NEU-174–222 + Varianten a–z | ausstehend ⚠ |
@@ -482,6 +502,6 @@ objekt-x-programm/
 *Durchlauf 2 (2026-07-28): 01-primkanten-werkzeuge — 86 Dateien API-verifiziert. ✓*  
 *Durchlauf 3 (2026-07-28): 02-jacobi-limes — 34 Dateien vollständig verifiziert (echte Namen). ✓*  
 *Durchlauf 3-fix (2026-07-28): 02-jacobi-limes Dateinamen korrigiert — vorherige Version hatte erfundene Namen. ✓*  
-*Durchlauf 4 (2026-07-28): 03-weil-form-statistik — API-Antwort bei NEU-105 abgeschnitten; partiell verifiziert. ⚠*  
+*Durchlauf 4 (2026-07-28): 03-weil-form-statistik — 31 Dateien vollständig API-verifiziert. ✓*  
 *Durchlauf 5 (2026-07-28): 04-grenzoperator-renormierung — 42 Dateien vollständig verifiziert. ✓*  
 *Durchlauf 6 (2026-07-28): 05-primkanal-fourierladung — 34 Dateien vollständig verifiziert. ✓*
