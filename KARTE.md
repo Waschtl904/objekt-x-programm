@@ -1,6 +1,6 @@
 # KARTE — Vollständige Verzeichnisstruktur des Repositorys `objekt-x-programm`
 
-> Direkt aus dem Repository verifiziert. Stand: 2026-07-28.
+> Direkt aus dem Repository verifiziert. Stand: 2026-07-28 (Bereinigungsdurchlauf).
 
 ---
 
@@ -48,7 +48,7 @@ objekt-x-programm/
 └── teil2_ebenen_VI-XV_variante_NEU-10.md
 ```
 
-**Gesamt: 20 Dateien** (API-verifiziert 2026-07-28, Durchlauf 1 ✓)
+**Gesamt: 20 Dateien** (API-verifiziert 2026-07-28 ✓)
 
 ---
 
@@ -135,7 +135,7 @@ objekt-x-programm/
 ├── NEU-240_O229-3B1f-a_Minimalitaetsaudit_kohomologischer_Mechanismus.md
 ├── NEU-241_O229-3B1f-b_Kettenabbildungs-Audit_Rohkopplung.md
 ├── NEU-242_O229-3B1f-b1_Quell-und-Zielkomplex-Audit_Tpraw.md
-├── NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md
+├── NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md    ← auch in 07
 ├── NEU-247_Tensor-Lift-Bewertungsableitungen_Typbruecke.md
 ├── NEU-247a_Praezisierungen_Typbruecke.md
 ├── NEU-247b_Domaenenpraezisierung_P5_und_Auditplan_c2b2a.md
@@ -143,11 +143,9 @@ objekt-x-programm/
 └── NEU-249_Praezisierungen_Notation_Konstruktion_Stabilitaet.md
 ```
 
-**Gesamt: 85 Inhaltsdateien + README.md = 86 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 2 ✓)
+**Gesamt: 85 Inhaltsdateien + README.md = 86 Dateien gesamt** (API-verifiziert 2026-07-28 ✓)
 
-**Hinweis:** Alter Bestand NEU-003–056 + neuere Einträge NEU-223–249 (O229-Unterknoten, Koszul-Audit, Typbrücken) landen physisch in diesem Ordner.  
-**Hinweis:** NEU-057 ist nicht in diesem Ordner vorhanden.  
-**Hinweis:** NEU-246 liegt auch in `07-weil-explizitformel/` — Doppelung prüfen.
+**Hinweis:** NEU-057 fehlt. NEU-246 auch in `07-weil-explizitformel/` vorhanden — Doppelung, Klärung ausstehend.
 
 ---
 
@@ -191,9 +189,7 @@ objekt-x-programm/
 └── NEU-090_Zweite_Schleifenspur_z_Rigiditaet.md
 ```
 
-**Gesamt: 33 Inhaltsdateien + README.md = 34 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 3 ✓)
-
-**Hinweis:** Vollständige Reihe NEU-058–090, keine Lücken.
+**Gesamt: 33 Inhaltsdateien + README.md = 34 Dateien gesamt** (API-verifiziert 2026-07-28 ✓)
 
 ---
 
@@ -229,17 +225,15 @@ objekt-x-programm/
 ├── NEU-115_Weil-Distribution_Interface.md
 ├── NEU-116_Rueckbindungstest_Wres_Wxi.md
 ├── NEU-117_X_Rigiditaet_R1.md
-├── NEU-118_Bombieri_Normalisierung.md
-├── NEU-118_X_Rigiditaet_R1_Nachweis.md
+├── NEU-118_Bombieri_Normalisierung.md              ← doppelt (NEU-118a)
+├── NEU-118_X_Rigiditaet_R1_Nachweis.md            ← doppelt (NEU-118b)
 ├── NEU-119_Spektralmass_Jacobi_zu_Herglotz.md
 └── NEU-120_Bombieri_Normalisierung_Herglotz_Grenzuebergang.md
 ```
 
-**Gesamt: 30 Inhaltsdateien + README.md = 31 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 4 ✓)
+**Gesamt: 30 Inhaltsdateien + README.md = 31 Dateien gesamt** (API-verifiziert 2026-07-28 ✓)
 
-**Hinweis:** Vollständige Reihe NEU-091–120, keine Lücken.  
-**Hinweis:** NEU-118 doppelt: `NEU-118_Bombieri_Normalisierung.md` und `NEU-118_X_Rigiditaet_R1_Nachweis.md`.  
-**Hinweis:** NEU-113 (Bindestrich) vs. NEU-118 (Unterstrich) — vermutlich Duplikat-Thema.
+**Hinweis:** NEU-118 doppelt: `_Bombieri_Normalisierung` (=118a) und `_X_Rigiditaet_R1_Nachweis` (=118b). Bereinigung ausstehend.
 
 ---
 
@@ -257,7 +251,7 @@ objekt-x-programm/
 ├── NEU-123D_Paritaetskorrektur_Dreifachsumme.md
 ├── NEU-123E_Sparse_Shift_Barriere.md
 ├── NEU-123F_Ergebnisse.md
-├── NEU-123F_Numerische_Diagnose_Dreifachsumme.md
+├── NEU-123F_Numerische_Diagnose_Dreifachsumme.md  ← 123F doppelt
 ├── NEU-123G_Zweite_Offdiagonale_Skaleninkohaerenz.md
 ├── NEU-123H_No_scalar_renormalization.md
 ├── NEU-123I_Gradierte_Renormierung_Herglotz.md
@@ -291,9 +285,9 @@ objekt-x-programm/
 └── NEU-150_Rueckbindung_Mellin_Operator_Spur.md
 ```
 
-**Gesamt: 41 Inhaltsdateien + README.md = 42 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 5 ✓)
+**Gesamt: 41 Inhaltsdateien + README.md = 42 Dateien gesamt** (API-verifiziert 2026-07-28 ✓)
 
-**Hinweis:** NEU-123 hat 9 Varianten (A–I + Hauptdatei + 2 F-Duplikate). NEU-126 und NEU-129 fehlen.
+**Hinweis:** NEU-126 und NEU-129 bewusst fehlend (siehe kritischer_pfad_aktuell.md). NEU-123F doppelt.
 
 ---
 
@@ -322,7 +316,7 @@ objekt-x-programm/
 ├── NEU-166_Einmoden_Zweimoden_Test_Zeugen.md
 ├── NEU-166a_Typ_Domaenen_Deszentaudit_Tp.md
 ├── NEU-166b_Rollen_Provenienzentscheidung_Rp_Tp.md
-├── NEU-166b_Typ_Domaenen_Deszentaudit_Tp_Fallverzweigung.md
+├── NEU-166b_Typ_Domaenen_Deszentaudit_Tp_Fallverzweigung.md  ← 166b doppelt
 ├── NEU-167_Lineare_Kernbedingungen_vs_Fourierladungsbedingung.md
 ├── NEU-167b_Abschluss_O167-2_Keine_Kernbedingungen_NEU157_NEU44.md
 ├── NEU-168_Nichtverschwindensgeometrie_Exakt_Zulaessige_Liftmenge.md
@@ -337,13 +331,25 @@ objekt-x-programm/
 └── NEU-173_Delta_Audit_NEU20_NEU28_Typfundament_Quellenkegel.md
 ```
 
-**Gesamt: 33 Inhaltsdateien + README.md = 34 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 6 ✓)
+**Gesamt: 33 Inhaltsdateien + README.md = 34 Dateien gesamt** (API-verifiziert 2026-07-28 ✓)
 
-**Hinweis:** NEU-166b doppelt vorhanden. NEU-170 hat 4 Varianten (a–d).
+**Hinweis:** NEU-166b doppelt vorhanden (zwei verschiedene Inhalte).
 
 ---
 
 ## 06-hochschild-bc-algebra
+
+### Doppelungen — Bereinigungsplan
+
+| Originalnummer | Datei A (Primärversion) | Datei B (→ logischer Name) | Status |
+|---|---|---|---|
+| NEU-183 | `_Quellen_Praesentation_Audit_BC-Algebra` | `_Zentrumstest_Strukturbruch_BC-Algebra` → **NEU-183b** | ⚠ offen |
+| NEU-193 | `_Dualer_Hochschildzyklus_Geladener_Nichtrandzeuge` | `_Geladener_Dualzyklus_Paarungstest` → **NEU-193b** | ⚠ offen |
+| NEU-217 | `_Lokaler_p-Block` | `_O217-2b_Dg_Fallzerlegung` → **NEU-217b**; `_O217-2c6_lokal-global` → **NEU-217c** | ⚠ offen |
+| NEU-218 | `_Grad3-Cup-Aufstieg` | `_Grad3Partner_Cup-Aufstieg_Abschluss` → **NEU-218b** | ⚠ offen |
+| NEU-219 | `_Finalaudit_Gesamtabschluss` | `_Zyklischer_Koeffizient_KMS_Weil_Verfeinerung` → **NEU-219-ZKW** | ⚠ offen |
+| NEU-219u | `_Abschluss_O219_NoGo_Theorem` | `_Abschlussaudit_Geladene_zyklische_Architektur` → **NEU-219u-rev** | ⚠ offen |
+| NEU-219y | `_Direktaudit_Dg_Zieltypbruecke_NEU211_NEU217` | `_Unit-Slot-Zeuge_und_Abschluss_des_Basislift-Rotationspfads` → **NEU-219y-b** | ⚠ offen |
 
 ```
 06-hochschild-bc-algebra/
@@ -357,8 +363,8 @@ objekt-x-programm/
 ├── NEU-180_QPlus_Gradierung_Primvaluationsderivationen_AQ.md
 ├── NEU-181_Homogenitaetsaudit_Algebraischer_Twist_Nullkozykeltest.md
 ├── NEU-182_Nullkozykel_No-go_Zentrumstest_BC-Algebra.md
-├── NEU-183_Quellen_Praesentation_Audit_BC-Algebra.md        ← doppelt (NEU-183)
-├── NEU-183_Zentrumstest_Strukturbruch_BC-Algebra.md          ← doppelt (NEU-183)
+├── NEU-183_Quellen_Praesentation_Audit_BC-Algebra.md          ← NEU-183a
+├── NEU-183_Zentrumstest_Strukturbruch_BC-Algebra.md            ← NEU-183b (umbenennen)
 ├── NEU-184_Zentrumstest_Koeffizientenaudit_A_g.md
 ├── NEU-185_Augmentationscharakter_Dualzyklus_HH4.md
 ├── NEU-186_Geladener_Sektor_HH4_Triage.md
@@ -366,13 +372,15 @@ objekt-x-programm/
 ├── NEU-188_Erweiterungsobstruktion_Derivationen_BC.md
 ├── NEU-189_Typaudit_Operatorrealisierung_Omega_p.md
 ├── NEU-190_Vollstaendiger_Audit_Operatorbruecke.md
+│   [NEU-191 fehlt]
 ├── NEU-192_Zeugenarchitektur_Separationssatz_Warnlemma.md
-├── NEU-193_Dualer_Hochschildzyklus_Geladener_Nichtrandzeuge.md  ← doppelt (NEU-193)
-├── NEU-193_Geladener_Dualzyklus_Paarungstest.md               ← doppelt (NEU-193)
+├── NEU-193_Dualer_Hochschildzyklus_Geladener_Nichtrandzeuge.md  ← NEU-193a
+├── NEU-193_Geladener_Dualzyklus_Paarungstest.md                 ← NEU-193b (umbenennen)
 ├── NEU-194_Determinantisches_Modell_Kozykeltest.md
 ├── NEU-195_Bewertungsderivationen_Reduktion_HH1.md
 ├── NEU-196_Augmentationsblindheit_Potentialroute.md
 ├── NEU-197_Kommutatorquotient_Dualdetektor.md
+│   [NEU-198 fehlt]
 ├── NEU-199_Generatorformel_Potentialderivation_Quotiententest.md
 ├── NEU-200_Regulaere_Potentiale_unsichtbar.md
 ├── NEU-201_Singulaeres_Potential_Kommutatorquotient_Sichtbarkeit.md
@@ -391,13 +399,13 @@ objekt-x-programm/
 ├── NEU-214_Bimodul_Rigiditaetslemma_Glattes_Potential.md
 ├── NEU-215_Zentralisator_Bimodul_No-go.md
 ├── NEU-216_Log_Koeffiziententyp_B-log.md
-├── NEU-217_Lokaler_p-Block.md                                 ← dreifach (NEU-217)
-├── NEU-217_O217-2b_Dg_Fallzerlegung.md                       ← dreifach (NEU-217)
-├── NEU-217_O217-2c6_lokal-global.md                          ← dreifach (NEU-217)
-├── NEU-218_Grad3-Cup-Aufstieg.md                             ← doppelt (NEU-218)
-├── NEU-218_Grad3Partner_Cup-Aufstieg_Abschluss.md            ← doppelt (NEU-218)
-├── NEU-219_Finalaudit_Gesamtabschluss.md                     ← doppelt (NEU-219)
-├── NEU-219_Zyklischer_Koeffizient_KMS_Weil_Verfeinerung.md   ← doppelt (NEU-219)
+├── NEU-217_Lokaler_p-Block.md                                    ← NEU-217a
+├── NEU-217_O217-2b_Dg_Fallzerlegung.md                           ← NEU-217b (umbenennen)
+├── NEU-217_O217-2c6_lokal-global.md                              ← NEU-217c (umbenennen)
+├── NEU-218_Grad3-Cup-Aufstieg.md                                  ← NEU-218a
+├── NEU-218_Grad3Partner_Cup-Aufstieg_Abschluss.md                 ← NEU-218b (umbenennen)
+├── NEU-219_Finalaudit_Gesamtabschluss.md                          ← NEU-219a
+├── NEU-219_Zyklischer_Koeffizient_KMS_Weil_Verfeinerung.md        ← NEU-219-ZKW (umbenennen)
 ├── NEU-219a_KMS_Typaudit_Negativbefund.md
 ├── NEU-219b_KMS_Neutralisierer_Aufspaltung.md
 ├── NEU-219c_KMS_Diagonalauswertung_positiv.md
@@ -418,21 +426,21 @@ objekt-x-programm/
 ├── NEU-219r_Definition_des_kanonischen_Basislifts.md
 ├── NEU-219s_Skalare_KMS_Rotation_Exponent_s.md
 ├── NEU-219t_Vollstaendige_U_Buchfuehrung_Exponent_s.md
-├── NEU-219u_Abschluss_O219_NoGo_Theorem.md                   ← doppelt (NEU-219u)
-├── NEU-219u_Abschlussaudit_Geladene_zyklische_Architektur.md ← doppelt (NEU-219u)
+├── NEU-219u_Abschluss_O219_NoGo_Theorem.md                        ← NEU-219u-a
+├── NEU-219u_Abschlussaudit_Geladene_zyklische_Architektur.md      ← NEU-219u-rev (umbenennen)
 ├── NEU-219v_neg_U-Eingaberotation_typwidrig.md
 ├── NEU-219w_Direktaudit_R1-R3_Basisliftrotation.md
 ├── NEU-219x_Direktaudit_Dg_Primaerformel_und_Fortsetzung.md
-├── NEU-219y_Direktaudit_Dg_Zieltypbruecke_NEU211_NEU217.md   ← doppelt (NEU-219y)
-├── NEU-219y_Unit-Slot-Zeuge_und_Abschluss_des_Basislift-Rotationspfads.md  ← doppelt (NEU-219y)
+├── NEU-219y_Direktaudit_Dg_Zieltypbruecke_NEU211_NEU217.md        ← NEU-219y-a
+├── NEU-219y_Unit-Slot-Zeuge_und_Abschluss_des_Basislift-Rotationspfads.md  ← NEU-219y-b (umbenennen)
 ├── NEU-219z_Expliziter_Cup-Rotationsaudit.md
+│   [NEU-220, NEU-221 → in 07-weil-explizitformel]
 └── NEU-222_Trassenaudit_singulaere_Route_Statuskorrektur_und_offene_Restknoten.md
 ```
 
-**Gesamt: 65 Inhaltsdateien + README.md = 66 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 7 ✓)
+**Gesamt: 65 Inhaltsdateien + README.md = 66 Dateien gesamt** (API-verifiziert 2026-07-28 ✓)
 
-**Hinweis:** Fehlende Nummern: NEU-191, NEU-198, NEU-220, NEU-221.  
-**Hinweis:** Doppelte Nummern: NEU-183, NEU-193, NEU-217 (3×), NEU-218, NEU-219, NEU-219u, NEU-219y.
+**Fehlende Nummern:** NEU-191, NEU-198, NEU-220, NEU-221 (letztere in 07).
 
 ---
 
@@ -452,8 +460,8 @@ objekt-x-programm/
 ├── NEU-220h_Endlicher_Weil-Port_aus_NEU-28.md
 ├── NEU-220i_Direktaudit_Zeta-Quotient_und_Endlicher_Logableitungsport.md
 ├── NEU-220j_Analytischer_Weil-Testfunktionsraum_und_Konturtransport.md
-├── NEU-220k_Konturtransport_Konvergenz_und_Weil-Explizitformel.md   ← doppelt (NEU-220k)
-├── NEU-220k_Xi-Masterkontur_Vorzeichen_Faktor2_und_Polbuchhaltung.md ← doppelt (NEU-220k)
+├── NEU-220k_Konturtransport_Konvergenz_und_Weil-Explizitformel.md      ← 220k-a
+├── NEU-220k_Xi-Masterkontur_Vorzeichen_Faktor2_und_Polbuchhaltung.md   ← 220k-b (umbenennen)
 ├── NEU-220l_Weil-Quadratik_Autokorrelation_und_Positiver-Kegel.md
 ├── NEU-220m_Gesamt-Weilform_Rigged-Operator_und_Randkanaele.md
 ├── NEU-220n_Endliche_Fensteroperatoren_und_globaler_Grenztyp.md
@@ -467,6 +475,7 @@ objekt-x-programm/
 ├── NEU-220v_Stieltjesfunktion_Resolventenspur_und_Hankelpositivitaet.md
 ├── NEU-220w_Hankelvollstaendigkeit_Moment-GNS_und_semifinite_Atomizitaet.md
 ├── NEU-221_Adelische_Momentquelle_fuer_den_positiven_Weil-Operator.md
+│   [NEU-221a, NEU-221b fehlen]
 ├── NEU-221c_Zyklischer_Feshbach-Weyl_Kandidat_und_quadratische_Resolvente.md
 ├── NEU-221d_Direktextraktion_NEU46_Zyklischer_Sektor_und_Nullmodusaudit.md
 ├── NEU-221e_Affine_Hebungsfaser_Wres-Quotient_und_Spektralmassabstieg_Psip.md
@@ -474,14 +483,12 @@ objekt-x-programm/
 ├── NEU-243_Kompatibilitaetsfirewall_Quell-Zielkomplex_Nichttrivialitaet.md
 ├── NEU-244_Quotient-first-Zielarchitektur_und_tautologischer_Cone-No-Go.md
 ├── NEU-245_c2a_Operatortypaudit_NEU195_NEU216.md
-└── NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md
+└── NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md    ← auch in 01
 ```
 
-**Gesamt: 34 Inhaltsdateien + README.md = 35 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 8 ✓)
+**Gesamt: 34 Inhaltsdateien + README.md = 35 Dateien gesamt** (API-verifiziert 2026-07-28 ✓)
 
-**Hinweis:** NEU-221a und NEU-221b fehlen. NEU-220k doppelt vorhanden.  
-**Hinweis:** Nummernsprung von NEU-221e direkt zu NEU-242 (NEU-222–241 fehlen in diesem Ordner; NEU-222 liegt in 06, NEU-223–241 in 01).  
-**Hinweis:** NEU-246 auch in `01-primkanten-werkzeuge/` — Doppelung prüfen.
+**Hinweis:** NEU-220k doppelt. NEU-221a/b fehlen. NEU-246 Doppelung mit 01.
 
 ---
 
@@ -501,12 +508,24 @@ objekt-x-programm/
 
 ---
 
-*Vollständiger Inventurdurchlauf abgeschlossen: 2026-07-28 — alle 8 Ordner API-verifiziert.*  
-*Durchlauf 1 (2026-07-28): 00-grundlegung ✓*  
-*Durchlauf 2 (2026-07-28): 01-primkanten-werkzeuge ✓*  
-*Durchlauf 3 (2026-07-28): 02-jacobi-limes ✓*  
-*Durchlauf 4 (2026-07-28): 03-weil-form-statistik ✓*  
-*Durchlauf 5 (2026-07-28): 04-grenzoperator-renormierung ✓*  
-*Durchlauf 6 (2026-07-28): 05-primkanal-fourierladung ✓*  
-*Durchlauf 7 (2026-07-28): 06-hochschild-bc-algebra ✓*  
-*Durchlauf 8 (2026-07-28): 07-weil-explizitformel ✓*
+## Offene Bereinigungsaufgaben
+
+| Priorität | Problem | Aktion |
+|-----------|---------|--------|
+| 🔴 hoch | NEU-217 dreifach (06) | 217b, 217c umbenennen |
+| 🔴 hoch | NEU-219 doppelt (06) | 219-ZKW umbenennen |
+| 🔴 hoch | NEU-219u doppelt (06) | 219u-rev umbenennen |
+| 🔴 hoch | NEU-219y doppelt (06) | 219y-b umbenennen |
+| 🟡 mittel | NEU-183 doppelt (06) | 183b umbenennen |
+| 🟡 mittel | NEU-193 doppelt (06) | 193b umbenennen |
+| 🟡 mittel | NEU-218 doppelt (06) | 218b umbenennen |
+| 🟡 mittel | NEU-220k doppelt (07) | 220k-b umbenennen |
+| 🟡 mittel | NEU-118 doppelt (03) | 118b umbenennen |
+| 🟢 niedrig | NEU-246 in 01+07 | Klären: welcher Ordner kanonisch? |
+| 🟢 niedrig | NEU-166b doppelt (05) | Klären: inhaltlich identisch? |
+| 🟢 niedrig | NEU-123F doppelt (04) | Klären: inhaltlich identisch? |
+
+---
+
+*Inventurdurchlauf abgeschlossen: 2026-07-28 — alle 8 Ordner API-verifiziert.*  
+*Bereinigungsplan erstellt: 2026-07-28 — Umbenennung ausstehend (nächster Schritt).*
