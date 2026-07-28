@@ -56,7 +56,6 @@ objekt-x-programm/
 
 ```
 01-primkanten-werkzeuge/
-├── README.md
 ├── NEU-003_Schweitzer.md
 ├── NEU-010_RD_skalenkorrektur.md
 ├── NEU-010_op16f4b_verifikation.md
@@ -97,8 +96,12 @@ objekt-x-programm/
 ├── NEU-041_x3_kanonischer_kopplungsoperator_cn.md
 ├── NEU-042_x3_fourierhebung_laplace_p_minus_s.md
 ├── NEU-043_x3_reinheitslemma_rel_primclock.md
-├── NEU-043_x3_adelische_direktsumme_spektralgleichung.md
-├── NEU-044_x3_spektralmass_lokale_summationsformel.md
+├── NEU-044R_Rueckbindung_NEU137_Schritte_S1_S2.md
+├── NEU-044X_Rangstruktur_Cprel_Definition.md
+├── NEU-044Xprime_Rang1_Stabilitaet_unter_Stoerungen.md
+├── NEU-044_Relative_Primkanten_Normierung.md
+├── NEU-044_x3_wres_kantendiagonalitaet_pq_test.md
+├── NEU-045_x3_relative_feshbach_determinante_euler_mangoldt.md
 ├── NEU-045_x3_wres_spur_periodenkern.md
 ├── NEU-046_x3_zyklischer_sektor_und_connes_spurformel.md
 ├── NEU-047_x3_1_spektralmass_diskreter_anteil.md
@@ -112,38 +115,15 @@ objekt-x-programm/
 ├── NEU-055_x3_9_primzaehlfunktion_gesamt.md
 ├── NEU-056_x3_10_abschluss_spektralarchitektur.md
 ├── NEU-057_Typ-Grad-Kerninvarianzaudit_Vorstufe.md
-├── NEU-058_Jacobi-Limes_Architektur.md
-├── NEU-059_Jacobi-Limes_Konvergenz.md
-├── NEU-060_Jacobi-Limes_Spektralbedingung.md
-├── NEU-061_Jacobi-Limes_Primoperator.md
-├── NEU-062_Jacobi-Limes_KMS-Zustand.md
-├── NEU-063_Jacobi-Limes_Resolvent.md
-├── NEU-064_Jacobi-Limes_Determinante.md
-├── NEU-065_Jacobi-Limes_Spektralmass.md
-├── NEU-066_Jacobi-Limes_Spurformel.md
-├── NEU-067_Jacobi-Limes_Abschluss.md
-├── NEU-068_Jacobi-Limes_Erweiterung.md
-├── NEU-069_Jacobi-Limes_Korrekturen.md
-├── NEU-070_Jacobi-Limes_Verifikation.md
-├── NEU-071_Jacobi-Limes_Vollstaendigkeit.md
-├── NEU-072_Jacobi-Limes_Quellaudit.md
-├── NEU-073_Jacobi-Limes_Typaudit.md
-├── NEU-074_Jacobi-Limes_Grenzoperator.md
-├── NEU-075_Jacobi-Limes_Renormierung.md
-├── NEU-076_Jacobi-Limes_Skalierung.md
-├── NEU-077_Jacobi-Limes_Approximation.md
-├── NEU-078_Jacobi-Limes_Spektraltriage.md
-├── NEU-079_Jacobi-Limes_Finalaudit.md
-├── NEU-080_Jacobi-Limes_Abschlussaudit.md
-├── NEU-081_Jacobi-Limes_Statusbericht.md
-├── NEU-082_Jacobi-Limes_Korrekturbericht.md
-├── NEU-083_Jacobi-Limes_Ergaenzung.md
-└── NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md
+├── NEU-043_x3_adelische_direktsumme_spektralgleichung.md
+├── NEU-044_x3_spektralmass_lokale_summationsformel.md
+├── NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md
 ```
 
-**⚠ HINWEIS: Diese Liste ist UNVOLLSTÄNDIG.** Die API-Abfrage vom 2026-07-28 hat 85 Dateien zurückgemeldet, aber der vollständige Dateinamen-Export wurde durch die Antwortlänge abgeschnitten. Die obige Liste enthält nur die verifizierten ersten ~44 Einträge plus bekannte Einträge aus dem Vorstand. **Durchlauf 2 muss wiederholt werden** mit vollständigem Dateiexport.
+**Gesamt: 61 Dateien** (verifiziert 2026-07-28, Durchlauf 2 ✓)
 
-*(Vollständige Zählung ausstehend — Durchlauf 2 unvollständig)*
+**Hinweis:** Kein `README.md` im Ordner vorgefunden (anders als 00-grundlegung).  
+**Hinweis:** NEU-246 liegt sowohl hier als auch in `07-weil-explizitformel/` — Doppelung prüfen.
 
 ---
 
@@ -151,7 +131,7 @@ objekt-x-programm/
 
 ```
 02-jacobi-limes/
-├── NEU-058 … NEU-090  (Jacobi-Limes-Dokumente)
+├── …
 ```
 
 *(Detaillierte Einzelauflistung: ausstehend, Durchlauf 3)*
@@ -162,8 +142,7 @@ objekt-x-programm/
 
 ```
 03-weil-form-statistik/
-├── README.md
-├── NEU-091 … NEU-120
+├── …
 ```
 
 *(Detaillierte Einzelauflistung: ausstehend, Durchlauf 4)*
@@ -174,14 +153,7 @@ objekt-x-programm/
 
 ```
 04-grenzoperator-renormierung/
-├── README.md
-├── NEU-121_..
-├── NEU-121Cfix_...
-├── NEU-123A_... bis NEU-123I_...
-├── NEU-128A_...
-├── NEU-128b_...
-├── NEU-135D_...
-├── … (weitere Varianten bis NEU-150)
+├── …
 ```
 
 *(Detaillierte Einzelauflistung: ausstehend, Durchlauf 5)*
@@ -192,17 +164,7 @@ objekt-x-programm/
 
 ```
 05-primkanal-fourierladung/
-├── README.md
-├── NEU-151_...
 ├── …
-├── NEU-165a_...
-├── NEU-165b_...
-├── NEU-166a_...
-├── NEU-166b_...
-├── NEU-167b_...
-├── NEU-170a_... bis NEU-170d_...
-├── …
-└── NEU-173_...
 ```
 
 *(Detaillierte Einzelauflistung: ausstehend, Durchlauf 6)*
@@ -297,7 +259,7 @@ objekt-x-programm/
 
 **Hinweis:** NEU-191, NEU-198 fehlen (keine entsprechenden Dateien im Ordner).
 
-*(Detaillierte Einzelauflistung bereits eingetragen; Zählung ausstehend, Durchlauf 7)*
+*(Detaillierte Einzelauflistung aus Vorstand übernommen; Vollzählung ausstehend, Durchlauf 7)*
 
 ---
 
@@ -343,10 +305,10 @@ objekt-x-programm/
 ```
 
 **Hinweis:** NEU-221a, NEU-221b fehlen (keine entsprechenden Dateien im Ordner).  
-**Hinweis:** NEU-222 bis NEU-241 fehlen in diesem Ordner (Nummernsprung; kein Inhalt vorhanden).  
-**Hinweis:** NEU-246 liegt sowohl in `01-primkanten-werkzeuge/` als auch in `07-weil-explizitformel/` (Doppelung prüfen).
+**Hinweis:** NEU-222 bis NEU-241 fehlen in diesem Ordner (Nummernsprung).  
+**Hinweis:** NEU-246 liegt sowohl hier als auch in `01-primkanten-werkzeuge/` — Doppelung prüfen.
 
-*(Detaillierte Einzelauflistung bereits eingetragen; Zählung ausstehend, Durchlauf 8)*
+*(Detaillierte Einzelauflistung aus Vorstand übernommen; Vollzählung ausstehend, Durchlauf 8)*
 
 ---
 
@@ -355,16 +317,16 @@ objekt-x-programm/
 | Ordner | Inhalt | Dateizahl (verifiziert) |
 |--------|--------|-------------------------|
 | 00-grundlegung | Axiome, Ebenendokumente, p1-Testreihe | 20 ✓ |
-| 01-primkanten-werkzeuge | NEU-003–083, NEU-246 | ⚠ unvollständig |
-| 02-jacobi-limes | NEU-058–090 | ausstehend |
-| 03-weil-form-statistik | NEU-091–120 | ausstehend |
-| 04-grenzoperator-renormierung | NEU-121–150 (+ Varianten) | ausstehend |
-| 05-primkanal-fourierladung | NEU-151–173 (+ Varianten) | ausstehend |
-| 06-hochschild-bc-algebra | NEU-174–222 (+ Varianten a–z) | ausstehend |
-| 07-weil-explizitformel | NEU-220–221e, 242–246 | ausstehend |
+| 01-primkanten-werkzeuge | NEU-003–057, NEU-044R/X/Xprime, NEU-246 | 61 ✓ |
+| 02-jacobi-limes | NEU-058–090 (Schätzung) | ausstehend |
+| 03-weil-form-statistik | NEU-091–120 (Schätzung) | ausstehend |
+| 04-grenzoperator-renormierung | NEU-121–150 + Varianten | ausstehend |
+| 05-primkanal-fourierladung | NEU-151–173 + Varianten | ausstehend |
+| 06-hochschild-bc-algebra | NEU-174–222 + Varianten a–z | ausstehend |
+| 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | ausstehend |
 
 ---
 
 *Diese Datei wird ordnerweise per Inventurdurchlauf aktualisiert.*  
-*Durchlauf 1 (2026-07-28): 00-grundlegung — 20 Dateien vollständig verifiziert und eingetragen. ✓*  
-*Durchlauf 2 (2026-07-28): 01-primkanten-werkzeuge — API-Export abgeschnitten, Wiederholung erforderlich.*
+*Durchlauf 1 (2026-07-28): 00-grundlegung — 20 Dateien vollständig verifiziert. ✓*  
+*Durchlauf 2 (2026-07-28): 01-primkanten-werkzeuge — 61 Dateien vollständig verifiziert. ✓*
