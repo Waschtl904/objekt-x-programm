@@ -1,6 +1,6 @@
 # KARTE — Vollständige Verzeichnisstruktur des Repositorys `objekt-x-programm`
 
-> Direkt aus dem Repository verifiziert. Stand: 2026-07-27.
+> Direkt aus dem Repository verifiziert. Stand: 2026-07-28.
 
 ---
 
@@ -10,7 +10,8 @@
 objekt-x-programm/
 ├── KARTE.md                          ← diese Datei
 ├── README.md
-├── 01-objekt-x-grundlagen/
+├── 00-grundlegung/
+├── 01-primkanten-werkzeuge/
 ├── 02-jacobi-limes/
 ├── 03-weil-form-statistik/
 ├── 04-grenzoperator-renormierung/
@@ -18,6 +19,36 @@ objekt-x-programm/
 ├── 06-hochschild-bc-algebra/
 └── 07-weil-explizitformel/
 ```
+
+---
+
+## 00-grundlegung
+
+```
+00-grundlegung/
+├── README.md
+├── ebene-XVI-objekt-x.md
+├── kritischer_pfad_aktuell.md
+├── objekt_x_minimalaxiome.md
+├── objekt_x_p1_3a_spektraltriage.md
+├── objekt_x_p1_3b01_wachstumstest.md
+├── objekt_x_p1_3b02_semigroup_group_bridge.md
+├── objekt_x_p1_3b03_archimedisch.md
+├── objekt_x_p1_3b04_heat_gaussian.md
+├── objekt_x_p1_3b05_adelisch.md
+├── objekt_x_p1_3b06_poisson.md
+├── objekt_x_p1_3b07_schwartz_bruhat.md
+├── objekt_x_p1_3b08_vergleichsmorphismus.md
+├── objekt_x_p1_3b0_beurling_charakterspur.md
+├── objekt_x_p1_3b_charakterspur.md
+├── objekt_x_p1_projektionsvergleich.md
+├── stufen_0_VI.md
+├── teil1_ebenen_I-V.md
+├── teil2_ebenen_VI-XV.md
+└── teil2_ebenen_VI-XV_variante_NEU-10.md
+```
+
+**Gesamt: 19 Dateien** (verifiziert 2026-07-28)
 
 ---
 
@@ -214,7 +245,7 @@ objekt-x-programm/
 ├── NEU-242_Abschlussaudit_O229-3B1f-b1_Kettenabbildungs-Negativbefund.md
 ├── NEU-243_Kompatibilitaetsfirewall_Quell-Zielkomplex_Nichttrivialitaet.md
 ├── NEU-244_Quotient-first-Zielarchitektur_und_tautologischer_Cone-No-Go.md
-└── NEU-245_c2a_Operatortypaudit_NEU195_NEU216.md  ← NEU (27.07.2026)
+└── NEU-245_c2a_Operatortypaudit_NEU195_NEU216.md
 ```
 
 **Hinweis:** NEU-221a, NEU-221b fehlen (keine entsprechenden Dateien im Ordner).  
@@ -224,17 +255,18 @@ objekt-x-programm/
 
 ## Gesamtübersicht: Nummernsystem
 
-| Ordner | NEU-Nummern | Dateizahl (ca.) |
-|--------|------------|------------------|
-| 01-objekt-x-grundlagen | 001–057 | ~57+ |
-| 02-jacobi-limes | 058–090 | ~33 |
-| 03-weil-form-statistik | 091–120 | ~30+ |
-| 04-grenzoperator-renormierung | 121–150 (+ Varianten) | ~40+ |
-| 05-primkanal-fourierladung | 151–173 (+ Varianten) | ~30+ |
-| 06-hochschild-bc-algebra | 174–222 (+ Varianten a–z) | ~75 |
-| 07-weil-explizitformel | 220–221e, 242–245 | ~33 |
+| Ordner | Inhalt | Dateizahl (verifiziert) |
+|--------|--------|-------------------------|
+| 00-grundlegung | Axiome, Ebenendokumente, p1-Testreihe | 19 |
+| 01-objekt-x-grundlagen | NEU-001–057 | ~57+ |
+| 02-jacobi-limes | NEU-058–090 | ~33 |
+| 03-weil-form-statistik | NEU-091–120 | ~30+ |
+| 04-grenzoperator-renormierung | NEU-121–150 (+ Varianten) | ~40+ |
+| 05-primkanal-fourierladung | NEU-151–173 (+ Varianten) | ~30+ |
+| 06-hochschild-bc-algebra | NEU-174–222 (+ Varianten a–z) | ~75 |
+| 07-weil-explizitformel | NEU-220–221e, 242–245 | ~33 |
 
 ---
 
-*Diese Datei wurde maschinell durch direktes Auslesen aller Verzeichnisse erstellt.  
-Bitte bei neuen Dateien manuell oder per Skript aktualisieren.*
+*Diese Datei wird ordnerweise per Inventurdurchlauf aktualisiert.  
+Durchlauf 1 (2026-07-28): 00-grundlegung vollständig eingetragen.*
