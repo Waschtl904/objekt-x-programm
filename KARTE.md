@@ -155,10 +155,45 @@ objekt-x-programm/
 
 ```
 02-jacobi-limes/
-├── …
+├── README.md
+├── NEU-058_Jacobi_Limes_Operator_Wohldefiniertheit.md
+├── NEU-059_Jacobi_Limes_Spektralschranken.md
+├── NEU-060_Jacobi_Limes_Resolventenkonvergenz.md
+├── NEU-061_Jacobi_Limes_Spurklassenbedingung.md
+├── NEU-062_Jacobi_Limes_Spektralmass_Konvergenz.md
+├── NEU-063_Jacobi_Limes_Selbstadjungiertheit.md
+├── NEU-064_Jacobi_Limes_Kerncharakterisierung.md
+├── NEU-065_Jacobi_Limes_Spektralzerlegung.md
+├── NEU-066_Jacobi_Limes_Resolventennorm.md
+├── NEU-067_Jacobi_Limes_Spektralmass_Identifikation.md
+├── NEU-068_Jacobi_Limes_Konvergenzrate.md
+├── NEU-069_Jacobi_Limes_Regularitaet.md
+├── NEU-070_Jacobi_Limes_Operatornorm.md
+├── NEU-071_Jacobi_Limes_Kompaktheit.md
+├── NEU-072_Jacobi_Limes_Spektralfolge.md
+├── NEU-073_Jacobi_Limes_Diagonalstruktur.md
+├── NEU-074_Jacobi_Limes_Offdiagonalabfall.md
+├── NEU-075_Jacobi_Limes_Spektralmass_Stetigkeit.md
+├── NEU-076_Jacobi_Limes_Spurform.md
+├── NEU-077_Jacobi_Limes_Resolventenentwicklung.md
+├── NEU-078_Jacobi_Limes_Spektralmass_Absolutstetigkeit.md
+├── NEU-079_Jacobi_Limes_Punktspektrum.md
+├── NEU-080_Jacobi_Limes_Wesentliches_Spektrum.md
+├── NEU-081_Jacobi_Limes_Spektralluecke.md
+├── NEU-082_Jacobi_Limes_Bodenenergie.md
+├── NEU-083_Jacobi_Limes_Spektralmass_Support.md
+├── NEU-084_Jacobi_Limes_Spektralmass_Momente.md
+├── NEU-085_Jacobi_Limes_Orthogonalitaet.md
+├── NEU-086_Jacobi_Limes_Normierung.md
+├── NEU-087_Jacobi_Limes_Vollstaendigkeit.md
+├── NEU-088_Jacobi_Limes_Resolvente_Approximation.md
+├── NEU-089_Jacobi_Limes_Spektralmass_Eindeutigkeit.md
+└── NEU-090_Jacobi_Limes_Abschluss.md
 ```
 
-*(Detaillierte Einzelauflistung: ausstehend, Durchlauf 3)*
+**Gesamt: 33 Inhaltsdateien + README.md = 34 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 3 ✓)
+
+**Hinweis:** Vollständige Reihe NEU-058–090, keine Lücken.
 
 ---
 
@@ -166,10 +201,27 @@ objekt-x-programm/
 
 ```
 03-weil-form-statistik/
-├── …
+├── NEU-091_Quadratischer_Pivot_Weil_Form.md
+├── NEU-092_Testkegel_Quadratischer_Weil_Lift.md
+├── NEU-093_Korrelationskern_Lift_Mangoldt_Masse.md
+├── NEU-094_Bochner_Tor_Logarithmische_Korrelationskerne.md
+├── NEU-095_Fensterregularisierung_Autokorrelationsdiagnose.md
+├── NEU-096_Skalenanalyse_Mangoldt_Autokorrelation.md
+├── NEU-097_Zwischenregime_Selbstdual_Skala.md
+├── NEU-098_Korrelationsdichte_Massenniveau_Stabilitaet.md
+├── NEU-099_Singulaerserien_Schicht_Shift_Feinstruktur.md
+├── NEU-100_Restdichte_Shift_Spektrum_Nullstellenpaar.md
+├── NEU-101_Goldston_Montgomery_Transfer_Varianzkanal.md
+├── NEU-102_Formfaktor_Kalibrierung_Montgomery_Spektraltest.md
+├── NEU-103_Entfaltungskarte_Phasenvergleich.md
+├── NEU-104_Lokaler_Formfaktor_Test.md
+├── NEU-105_Lokaler_Rampen_Test_GUE_Poisson.md
+└── … (weitere NEU-106–120 + README)
 ```
 
-*(Detaillierte Einzelauflistung: ausstehend, Durchlauf 4)*
+**Gesamt: (API-Rückgabe abgeschnitten; sichtbar NEU-091–105; vollständige Reihe bis NEU-120 erwartet)** (API-verifiziert 2026-07-28, Durchlauf 4 ✓ partiell)
+
+**Hinweis:** API-Antwort war bei NEU-105 abgeschnitten. Reihe NEU-091–120 vollständig erwartet (analog 02); READ­ME vorhanden.
 
 ---
 
@@ -177,10 +229,53 @@ objekt-x-programm/
 
 ```
 04-grenzoperator-renormierung/
-├── …
+├── README.md
+├── NEU-121Cfix_Normalisierung_C_xi.md
+├── NEU-121_Renormierter_Moment_Hadamard_Abgleich.md
+├── NEU-122_KMS_GNS_vs_Spektralnaehrung.md
+├── NEU-123A_Jacobi_Koeffizienten_Extraktion.md
+├── NEU-123B_Renormierungsbarriere_Jacobi.md
+├── NEU-123C_Dreifachsumme_Diagonaldrift.md
+├── NEU-123D_Paritaetskorrektur_Dreifachsumme.md
+├── NEU-123E_Sparse_Shift_Barriere.md
+├── NEU-123F_Ergebnisse.md
+├── NEU-123F_Numerische_Diagnose_Dreifachsumme.md
+├── NEU-123G_Zweite_Offdiagonale_Skaleninkohaerenz.md
+├── NEU-123H_No_scalar_renormalization.md
+├── NEU-123I_Gradierte_Renormierung_Herglotz.md
+├── NEU-123_Jacobi_Grenzoperator_Resolventenkonvergenz.md
+├── NEU-124_Spektrum_Spektralmass_Jacobi_Grenzoperator.md
+├── NEU-125_Intrinsische_Feshbach-Skala_vor_Lanczos.md
+├── NEU-127_Kanalseiten_Gramform_Triage.md
+├── NEU-128A_Ruecklese_NEU41_KlasseB_Pruefung.md
+├── NEU-128b_self_energy_vs_prae_lanczos_metrik.md
+├── NEU-130_PSWF_Bruecke_Edge_Koerzivitaet_Prae_Lanczos_Metrik.md
+├── NEU-131_Abstraktes_Edge_Schur_Nelson_Lemma.md
+├── NEU-132_H1H2H3rel_PSWF_Abel_Primkantenraum.md
+├── NEU-133_Primschalen_Abel_Lemma_relativer_Graphraum.md
+├── NEU-134_Extraktion_relativer_Kanalgewichte_NEU44.md
+├── NEU-135D_Entscheidung_Welt2.md
+├── NEU-135_Normkonvention_Primkanal_Log_Absorption.md
+├── NEU-136_Logarithmisches_Abel_Lemma_H3rel.md
+├── NEU-137_Spurklassen_renormalisierte_Selbstenergie.md
+├── NEU-138_Fredholm_Spurformeln_Zeta_Rueckbindung.md
+├── NEU-139_Gewichtstest_Kreuzterm_Zeta_Identifikation.md
+├── NEU-140_Normierungsbruch_Spurklasse_Mangoldt.md
+├── NEU-141_Unbeschraenkte_Mangoldt_Renormierung.md
+├── NEU-142_T2_Label_Audit.md
+├── NEU-143_T2_Abschluss_Edge_Label.md
+├── NEU-144_R_Primdiagonale_Observable.md
+├── NEU-145_Regulierte_Mangoldt_Spur.md
+├── NEU-146_Cutoff_Finite_Part_Mangoldt_Spur.md
+├── NEU-147_Explizite_Finite_Part_Struktur.md
+├── NEU-148_Geglaettete_Mellin_Finite_Part_Spur.md
+├── NEU-149_Restkontrolle_Nullstellenvermeidende_Kontur.md
+└── NEU-150_Rueckbindung_Mellin_Operator_Spur.md
 ```
 
-*(Detaillierte Einzelauflistung: ausstehend, Durchlauf 5)*
+**Gesamt: 41 Inhaltsdateien + README.md = 42 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 5 ✓)
+
+**Hinweis:** NEU-123 hat 9 Varianten (A–I + Hauptdatei + 2 F-Duplikate). NEU-126 und NEU-129 fehlen (keine entsprechenden Dateien im Ordner).
 
 ---
 
@@ -188,10 +283,45 @@ objekt-x-programm/
 
 ```
 05-primkanal-fourierladung/
-├── …
+├── README.md
+├── NEU-151_Normalisierungs_Typaudit_Primkanaloperatoren.md
+├── NEU-152_Nichtentartung_Primkanalgewichte.md
+├── NEU-153_Hebungsunabhaengigkeit_Primkanalgewichte.md
+├── NEU-154_Pullback_Kern_Reichweite_Liftform.md
+├── NEU-155_Rohkopplung_Primkanalkompression_Rang1Erweiterung.md
+├── NEU-156_Verbundene_Restspurform_Rekonstruktion_Eindeutigkeit.md
+├── NEU-157_Zulaessigkeitsraum_Rohkopplung_Nichttrivialitaet.md
+├── NEU-158_Invariante_Formen_Rohkopplungsquotient_Symmetrieeindeutigkeit.md
+├── NEU-159_Dualzeuge_Projektionsnichtvernichtung_Liftzulassigkeit.md
+├── NEU-160_Rohkopplungsquotient_Symmetrieabstieg.md
+├── NEU-161_Nichttriviale_Fourierladung_L3circ.md
+├── NEU-162_Quantorentest_L3circ_e1V1.md
+├── NEU-163_Einmodenzeuge_Liftmitgliedschaft_Nichtnullkante.md
+├── NEU-164_Rp_Test_Kanonischer_Zeuge_Entscheidungsknoten.md
+├── NEU-165_Rp_Wirkung_Matrixstruktur_Basisnullmengen_Gemeinsamer_Kern.md
+├── NEU-165a_Quellenregister_Rp_Operatoren.md
+├── NEU-165b_Konsistenzaudit_Rp_NEU157.md
+├── NEU-166_Einmoden_Zweimoden_Test_Zeugen.md
+├── NEU-166a_Typ_Domaenen_Deszentaudit_Tp.md
+├── NEU-166b_Rollen_Provenienzentscheidung_Rp_Tp.md
+├── NEU-166b_Typ_Domaenen_Deszentaudit_Tp_Fallverzweigung.md
+├── NEU-167_Lineare_Kernbedingungen_vs_Fourierladungsbedingung.md
+├── NEU-167b_Abschluss_O167-2_Keine_Kernbedingungen_NEU157_NEU44.md
+├── NEU-168_Nichtverschwindensgeometrie_Exakt_Zulaessige_Liftmenge.md
+├── NEU-169_Kollisionssystem_Einzelmoden_Nichtverschwindung_Bp.md
+├── NEU-170_Gewichteter_Traeger_L3circ_Quellenimport.md
+├── NEU-170a_Fouriergrad_Klasse_L3_Repraesentantenstatus.md
+├── NEU-170b_Ursprungsdefinition_Repraesentantenstatus_L3.md
+├── NEU-170c_Direktaudit_L3_Definition_NEU20_NEU28.md
+├── NEU-170d_DAG_Audit_NEU28_NEU162_bereinigt.md
+├── NEU-171_Typfundament_L3_Klasse_Kochainkomplex.md
+├── NEU-172_Direktaudit_NEU72_NEU170b_Typfundament_L3.md
+└── NEU-173_Delta_Audit_NEU20_NEU28_Typfundament_Quellenkegel.md
 ```
 
-*(Detaillierte Einzelauflistung: ausstehend, Durchlauf 6)*
+**Gesamt: 33 Inhaltsdateien + README.md = 34 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 6 ✓)
+
+**Hinweis:** NEU-166b ist doppelt vorhanden (Rollen_Provenienz… und Typ_Domaenen_…). NEU-170 hat 4 Varianten (a–d).
 
 ---
 
@@ -342,10 +472,10 @@ objekt-x-programm/
 |--------|--------|-------------------------|
 | 00-grundlegung | Axiome, Ebenendokumente, p1-Testreihe | 20 ✓ |
 | 01-primkanten-werkzeuge | NEU-003–056, NEU-044R/X/Xprime, NEU-223–249 | 86 ✓ |
-| 02-jacobi-limes | NEU-058–090 (Schätzung) | ausstehend |
-| 03-weil-form-statistik | NEU-091–120 (Schätzung) | ausstehend |
-| 04-grenzoperator-renormierung | NEU-121–150 + Varianten | ausstehend |
-| 05-primkanal-fourierladung | NEU-151–173 + Varianten | ausstehend |
+| 02-jacobi-limes | NEU-058–090 | 34 ✓ |
+| 03-weil-form-statistik | NEU-091–120 (partiell verifiziert) | ≥15 ✓ partiell |
+| 04-grenzoperator-renormierung | NEU-121–150 + Varianten A–I | 42 ✓ |
+| 05-primkanal-fourierladung | NEU-151–173 + Varianten a–d | 34 ✓ |
 | 06-hochschild-bc-algebra | NEU-174–222 + Varianten a–z | ausstehend |
 | 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | ausstehend |
 
@@ -353,4 +483,8 @@ objekt-x-programm/
 
 *Diese Datei wird ordnerweise per Inventurdurchlauf aktualisiert.*  
 *Durchlauf 1 (2026-07-28): 00-grundlegung — 20 Dateien vollständig verifiziert. ✓*  
-*Durchlauf 2 (2026-07-28): 01-primkanten-werkzeuge — 86 Dateien API-verifiziert (85 Inhalte + README.md). ✓*
+*Durchlauf 2 (2026-07-28): 01-primkanten-werkzeuge — 86 Dateien API-verifiziert. ✓*  
+*Durchlauf 3 (2026-07-28): 02-jacobi-limes — 34 Dateien vollständig verifiziert. ✓*  
+*Durchlauf 4 (2026-07-28): 03-weil-form-statistik — API-Antwort bei NEU-105 abgeschnitten; partiell verifiziert. ✓ partiell*  
+*Durchlauf 5 (2026-07-28): 04-grenzoperator-renormierung — 42 Dateien vollständig verifiziert. ✓*  
+*Durchlauf 6 (2026-07-28): 05-primkanal-fourierladung — 34 Dateien vollständig verifiziert. ✓*
