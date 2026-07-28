@@ -48,19 +48,64 @@ objekt-x-programm/
 └── teil2_ebenen_VI-XV_variante_NEU-10.md
 ```
 
-**Gesamt: 19 Dateien** (verifiziert 2026-07-28)
+**Gesamt: 19 Dateien** (verifiziert 2026-07-28, Durchlauf 1)
 
 ---
 
-## 01-objekt-x-grundlagen
+## 01-primkanten-werkzeuge
 
 ```
-01-objekt-x-grundlagen/
-├── README.md
-├── NEU-001 … NEU-057  (Grundlagen-Dokumente)
+01-primkanten-werkzeuge/
+├── NEU-003_Schweitzer.md
+├── NEU-010_RD_skalenkorrektur.md
+├── NEU-010_op16f4b_verifikation.md
+├── NEU-010_op16f_beurling_groupoid.md
+├── NEU-011_e2_11_berechnung.md
+├── NEU-012_fx1_verifikation.md
+├── NEU-013_ausschneidung.md
+├── NEU-013_r1_e20_uebertragung.md
+├── NEU-014_kms_zustand.md
+├── NEU-015_op4_frobenius.md
+├── NEU-015_r3_bv_op2.md
+├── NEU-016_op3_1_monoidladung.md
+├── NEU-016_op3_modular_spur.md
+├── NEU-017_op3_1_2_aequivarianter_lift.md
+├── NEU-018_op3_2_lambda_mod.md
+├── NEU-019_op3_3_wodzicki.md
+├── NEU-020_op3_4_c_rs_nicht_null.md
+├── NEU-021_op4_1c_diagonaltrennung.md
+├── NEU-022_op4_1c2_euler_kontraktion.md
+├── NEU-023_op4_1c3_diagonal_neutralitaet.md
+├── NEU-024_op4_1d_rechte_nicht_ausgeartheit.md
+├── NEU-025_op4_1top_spaltbarkeit.md
+├── NEU-026_x2_spektralformel_architektur.md
+├── NEU-027_x2_1_bc_resolvent.md
+├── NEU-028_x2_2_primseiten_identifikation.md
+├── NEU-029_x2_3_cauchy_spurformel.md
+├── NEU-030_x3_bc_operatorbild.md
+├── NEU-031_x3_wres_gns_determinante.md
+├── NEU-032_x3_connes_kompass.md
+├── NEU-033_x3_bc_approximanten.md
+├── NEU-034_x3_spektrum_theta_kopplung.md
+├── NEU-035_x3_wres_adjungierung_theta.md
+├── NEU-036_x3_determinantenkonvergenz.md
+├── NEU-037_x3_jacobi_resolvent_mangoldt.md
+├── NEU-038_x3_kms_jacobi_mangoldt.md
+├── NEU-039_x3_verbundene_wres_spur_primoperator.md
+├── NEU-040_x3_frobenius_schur_komplement.md
+├── NEU-041_x3_kanonischer_kopplungsoperator_cn.md
+├── NEU-042_x3_fourierhebung_laplace_p_minus_s.md
+├── NEU-043_x3_adelische_direktsumme_spektralgleichung.md
+├── NEU-044_x3_spektralmass_lokale_summationsformel.md
+├── NEU-045_x3_wres_spur_periodenkern.md
+├── NEU-046_x3_zyklischer_sektor_und_connes_spurformel.md
+├── NEU-057_Typ-Grad-Kerninvarianzaudit_Vorstufe.md
+├── NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md
 ```
 
-*(Detaillierte Einzelauflistung: siehe README.md im Ordner)*
+**Gesamt: 46 Dateien** (verifiziert 2026-07-28, Durchlauf 2)
+
+**Hinweis:** NEU-001, NEU-002, NEU-004–009, NEU-047–056 fehlen in diesem Ordner (Nummernlücken oder in anderen Ordnern).
 
 ---
 
@@ -70,6 +115,8 @@ objekt-x-programm/
 02-jacobi-limes/
 ├── NEU-058 … NEU-090  (Jacobi-Limes-Dokumente)
 ```
+
+*(Detaillierte Einzelauflistung: ausstehend, Durchlauf 3)*
 
 ---
 
@@ -81,6 +128,8 @@ objekt-x-programm/
 ├── NEU-091 … NEU-120
 ```
 
+*(Detaillierte Einzelauflistung: ausstehend, Durchlauf 4)*
+
 ---
 
 ## 04-grenzoperator-renormierung
@@ -88,7 +137,7 @@ objekt-x-programm/
 ```
 04-grenzoperator-renormierung/
 ├── README.md
-├── NEU-121_...
+├── NEU-121_..
 ├── NEU-121Cfix_...
 ├── NEU-123A_... bis NEU-123I_...
 ├── NEU-128A_...
@@ -96,6 +145,8 @@ objekt-x-programm/
 ├── NEU-135D_...
 ├── … (weitere Varianten bis NEU-150)
 ```
+
+*(Detaillierte Einzelauflistung: ausstehend, Durchlauf 5)*
 
 ---
 
@@ -115,6 +166,8 @@ objekt-x-programm/
 ├── …
 └── NEU-173_...
 ```
+
+*(Detaillierte Einzelauflistung: ausstehend, Durchlauf 6)*
 
 ---
 
@@ -206,6 +259,8 @@ objekt-x-programm/
 
 **Hinweis:** NEU-191, NEU-198 fehlen (keine entsprechenden Dateien im Ordner).
 
+*(Detaillierte Einzelauflistung bereits eingetragen; Zählung ausstehend, Durchlauf 7)*
+
 ---
 
 ## 07-weil-explizitformel
@@ -245,11 +300,15 @@ objekt-x-programm/
 ├── NEU-242_Abschlussaudit_O229-3B1f-b1_Kettenabbildungs-Negativbefund.md
 ├── NEU-243_Kompatibilitaetsfirewall_Quell-Zielkomplex_Nichttrivialitaet.md
 ├── NEU-244_Quotient-first-Zielarchitektur_und_tautologischer_Cone-No-Go.md
-└── NEU-245_c2a_Operatortypaudit_NEU195_NEU216.md
+├── NEU-245_c2a_Operatortypaudit_NEU195_NEU216.md
+└── NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md
 ```
 
 **Hinweis:** NEU-221a, NEU-221b fehlen (keine entsprechenden Dateien im Ordner).  
-**Hinweis:** NEU-222 bis NEU-241 fehlen in diesem Ordner (Nummernsprung; kein Inhalt vorhanden).
+**Hinweis:** NEU-222 bis NEU-241 fehlen in diesem Ordner (Nummernsprung; kein Inhalt vorhanden).  
+**Hinweis:** NEU-246 liegt sowohl in `01-primkanten-werkzeuge/` als auch in `07-weil-explizitformel/` (Doppelung prüfen).
+
+*(Detaillierte Einzelauflistung bereits eingetragen; Zählung ausstehend, Durchlauf 8)*
 
 ---
 
@@ -257,16 +316,17 @@ objekt-x-programm/
 
 | Ordner | Inhalt | Dateizahl (verifiziert) |
 |--------|--------|-------------------------|
-| 00-grundlegung | Axiome, Ebenendokumente, p1-Testreihe | 19 |
-| 01-objekt-x-grundlagen | NEU-001–057 | ~57+ |
-| 02-jacobi-limes | NEU-058–090 | ~33 |
-| 03-weil-form-statistik | NEU-091–120 | ~30+ |
-| 04-grenzoperator-renormierung | NEU-121–150 (+ Varianten) | ~40+ |
-| 05-primkanal-fourierladung | NEU-151–173 (+ Varianten) | ~30+ |
-| 06-hochschild-bc-algebra | NEU-174–222 (+ Varianten a–z) | ~75 |
-| 07-weil-explizitformel | NEU-220–221e, 242–245 | ~33 |
+| 00-grundlegung | Axiome, Ebenendokumente, p1-Testreihe | 19 ✓ |
+| 01-primkanten-werkzeuge | NEU-003–057, NEU-246 | 46 ✓ |
+| 02-jacobi-limes | NEU-058–090 | ausstehend |
+| 03-weil-form-statistik | NEU-091–120 | ausstehend |
+| 04-grenzoperator-renormierung | NEU-121–150 (+ Varianten) | ausstehend |
+| 05-primkanal-fourierladung | NEU-151–173 (+ Varianten) | ausstehend |
+| 06-hochschild-bc-algebra | NEU-174–222 (+ Varianten a–z) | ausstehend |
+| 07-weil-explizitformel | NEU-220–221e, 242–246 | ausstehend |
 
 ---
 
-*Diese Datei wird ordnerweise per Inventurdurchlauf aktualisiert.  
-Durchlauf 1 (2026-07-28): 00-grundlegung vollständig eingetragen.*
+*Diese Datei wird ordnerweise per Inventurdurchlauf aktualisiert.*  
+*Durchlauf 1 (2026-07-28): 00-grundlegung vollständig eingetragen.*  
+*Durchlauf 2 (2026-07-28): 01-primkanten-werkzeuge vollständig eingetragen.*
