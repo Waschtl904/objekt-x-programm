@@ -56,6 +56,7 @@ objekt-x-programm/
 
 ```
 01-primkanten-werkzeuge/
+├── README.md
 ├── NEU-003_Schweitzer.md
 ├── NEU-010_RD_skalenkorrektur.md
 ├── NEU-010_op16f4b_verifikation.md
@@ -102,28 +103,51 @@ objekt-x-programm/
 ├── NEU-044_Relative_Primkanten_Normierung.md
 ├── NEU-044_x3_wres_kantendiagonalitaet_pq_test.md
 ├── NEU-045_x3_relative_feshbach_determinante_euler_mangoldt.md
-├── NEU-045_x3_wres_spur_periodenkern.md
-├── NEU-046_x3_zyklischer_sektor_und_connes_spurformel.md
-├── NEU-047_x3_1_spektralmass_diskreter_anteil.md
-├── NEU-048_x3_2_spektralmass_stetiger_anteil.md
-├── NEU-049_x3_3_spektralmass_gesamtdekomposition.md
-├── NEU-050_x3_4_spurformel_explizit.md
-├── NEU-051_x3_5_spurformel_konvergenz.md
-├── NEU-052_x3_6_spurformel_restterm.md
-├── NEU-053_x3_7_primzaehlfunktion_verbindung.md
-├── NEU-054_x3_8_primzaehlfunktion_spektral.md
-├── NEU-055_x3_9_primzaehlfunktion_gesamt.md
-├── NEU-056_x3_10_abschluss_spektralarchitektur.md
-├── NEU-057_Typ-Grad-Kerninvarianzaudit_Vorstufe.md
-├── NEU-043_x3_adelische_direktsumme_spektralgleichung.md
-├── NEU-044_x3_spektralmass_lokale_summationsformel.md
+├── NEU-046_x3_renormierte_relative_determinante_weyl_korrekturen.md
+├── NEU-047_x3_archimedische_separation_hadamard_divisor.md
+├── NEU-048_x3_residuenbilanz_divisorneutralitaet.md
+├── NEU-049_x3_birman_schwinger_indexsatz.md
+├── NEU-050_x3_kollektiver_birman_schwinger_operator.md
+├── NEU-051_x3_resolventenmatrixelement_kpq.md
+├── NEU-052_x3_spektralbasis_graphbasis_drel.md
+├── NEU-053_x3_operatorstatus_drel_selbstadjungiertheit.md
+├── NEU-054_x3_nelson_selbstadjungiertheit_konfinement.md
+├── NEU-055_x3_nelson_matrixabschaetzung_schur.md
+├── NEU-056_x3_gammaN_konfinement_obstruktion.md
+├── NEU-223_Quellenaudit_alternativer_Vergleichsoperator_Schur_Konfinement_und_kompakter_Resolvent.md
+├── NEU-224_Kernbestimmung_flache_Achsen_Antisymmetrisierung_und_effektiver_Raum.md
+├── NEU-225_Primfaserdiagonalisierung_Transportgenerator_und_Schichtenverschiebung.md
+├── NEU-226_Quellenaudit_globaler_Feshbach_Transfer_Schattenklasse_und_Primkanalueberlappung.md
+├── NEU-227_Koordinatenwoerterbuch_und_Spektralmassform_des_Feshbach_Transfers.md
+├── NEU-228_Der_u_Regulator_ist_die_Hebungswahl_Ruecklauf_in_die_alte_Barriere.md
+├── NEU-228b_Leerfaserpruefung_Gramblock_Orthogonalitaet.md
+├── NEU-229_Intrinsische_verbundene_Form_und_Mischblock_Gram_Geometrie_der_Hebungsfaser.md
+├── NEU-230_O229-2a_Symmetrieklassifikation_kanonischer_Randvektor.md
+├── NEU-231_O229-2a-ii_Wres_Aequivarianz_Fixraum_vs_Nullraum.md
+├── NEU-232_O229-2a-ii-2b_NEU041_Brueckenaudit.md
+├── NEU-233_O229-2_Hauptknoten_Update_part.md
+├── NEU-234_O229-2a-iii_Ladungsgraduierung_Pch.md
+├── NEU-235_O229-2a-i_GNS_Typisierung_Rohzielraum_Einbettung.md
+├── NEU-236_O229-2a_und_O229-2_Formaler_Abschluss_neg_Quelle.md
+├── NEU-237_O229-3_Minimales_Randdatum_Eroeffnung.md
+├── NEU-238_O229-3B_Kohomologisches_Randdatum_und_3B1_Transgression.md
+├── NEU-239_O229-3B1_Quellenaudit_Abschluss_und_Konstruktionsdesiderat.md
+├── NEU-240_O229-3B1f-a_Minimalitaetsaudit_kohomologischer_Mechanismus.md
+├── NEU-241_O229-3B1f-b_Kettenabbildungs-Audit_Rohkopplung.md
+├── NEU-242_O229-3B1f-b1_Quell-und-Zielkomplex-Audit_Tpraw.md
 ├── NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md
+├── NEU-247_Tensor-Lift-Bewertungsableitungen_Typbruecke.md
+├── NEU-247a_Praezisierungen_Typbruecke.md
+├── NEU-247b_Domaenenpraezisierung_P5_und_Auditplan_c2b2a.md
+├── NEU-248_c2b2a_Wohldefiniertheit_Tensoroperator.md
+└── NEU-249_Praezisierungen_Notation_Konstruktion_Stabilitaet.md
 ```
 
-**Gesamt: 61 Dateien** (verifiziert 2026-07-28, Durchlauf 2 ✓)
+**Gesamt: 85 Inhaltsdateien + README.md = 86 Dateien gesamt** (API-verifiziert 2026-07-28, Durchlauf 2 ✓)
 
-**Hinweis:** Kein `README.md` im Ordner vorgefunden (anders als 00-grundlegung).  
-**Hinweis:** NEU-246 liegt sowohl hier als auch in `07-weil-explizitformel/` — Doppelung prüfen.
+**Hinweis:** Alter Bestand NEU-003–056 (Klassische Primkanten-Werkzeuge) + neuere Einträge NEU-223–249 (O229-Unterknoten, Koszul-Audit, Typbrücken) landen physisch in diesem Ordner.  
+**Hinweis:** NEU-057 ist nicht in diesem Ordner vorhanden — ggf. in anderem Strang oder noch nicht committed.  
+**Hinweis:** NEU-246 liegt auch in `07-weil-explizitformel/` — Doppelung prüfen.
 
 ---
 
@@ -305,8 +329,8 @@ objekt-x-programm/
 ```
 
 **Hinweis:** NEU-221a, NEU-221b fehlen (keine entsprechenden Dateien im Ordner).  
-**Hinweis:** NEU-222 bis NEU-241 fehlen in diesem Ordner (Nummernsprung).  
-**Hinweis:** NEU-246 liegt sowohl hier als auch in `01-primkanten-werkzeuge/` — Doppelung prüfen.
+**Hinweis:** NEU-222 bis NEU-241 fehlen in diesem Ordner (Nummernsprung — diese liegen in 01 und 06).  
+**Hinweis:** NEU-246 liegt auch in `01-primkanten-werkzeuge/` — Doppelung prüfen.
 
 *(Detaillierte Einzelauflistung aus Vorstand übernommen; Vollzählung ausstehend, Durchlauf 8)*
 
@@ -317,7 +341,7 @@ objekt-x-programm/
 | Ordner | Inhalt | Dateizahl (verifiziert) |
 |--------|--------|-------------------------|
 | 00-grundlegung | Axiome, Ebenendokumente, p1-Testreihe | 20 ✓ |
-| 01-primkanten-werkzeuge | NEU-003–057, NEU-044R/X/Xprime, NEU-246 | 61 ✓ |
+| 01-primkanten-werkzeuge | NEU-003–056, NEU-044R/X/Xprime, NEU-223–249 | 86 ✓ |
 | 02-jacobi-limes | NEU-058–090 (Schätzung) | ausstehend |
 | 03-weil-form-statistik | NEU-091–120 (Schätzung) | ausstehend |
 | 04-grenzoperator-renormierung | NEU-121–150 + Varianten | ausstehend |
@@ -329,4 +353,4 @@ objekt-x-programm/
 
 *Diese Datei wird ordnerweise per Inventurdurchlauf aktualisiert.*  
 *Durchlauf 1 (2026-07-28): 00-grundlegung — 20 Dateien vollständig verifiziert. ✓*  
-*Durchlauf 2 (2026-07-28): 01-primkanten-werkzeuge — 61 Dateien vollständig verifiziert. ✓*
+*Durchlauf 2 (2026-07-28): 01-primkanten-werkzeuge — 86 Dateien API-verifiziert (85 Inhalte + README.md). ✓*
