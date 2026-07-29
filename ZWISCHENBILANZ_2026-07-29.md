@@ -1,6 +1,6 @@
 # GPT-Audit-Zwischenbilanz
 
-**Stand: 29. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131**
+**Stand: 29. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136**
 
 Dieses Dokument sichert den Gesprächsstand des laufenden GPT-Auditdurchlaufs
 für die Verwendung in einem neuen Chat-Kontext. Es wird am Ende des Gesamtdurchlaufs
@@ -33,8 +33,7 @@ zu einem vollständigen Übergabe-Prompt zusammengefasst.
 | **Gesamt** | | **348** | **alle ✅** |
 
 **Hinweis (03):** NEU-118 liegt doppelt vor (`Bombieri_Normalisierung` und `X_Rigiditaet_R1_Nachweis`)
-— beide als separate Dateien in KARTE.md eingetragen. Thematisches Duplikat mit NEU-113 (Bombieri-Normalisierung)
-ist vermerkt; keine strukturelle Auswirkung.
+— beide als separate Dateien in KARTE.md eingetragen. Thematisches Duplikat mit NEU-113 vermerkt.
 
 ---
 
@@ -91,13 +90,6 @@ fest: 𝔅 := A_Q, C₃^HH(𝔅) = 𝔅^⊗4, Bd₃^HH(𝔅) = im b₄.
 | NEU-090-Konstantengrenzwert T_N(z) → γ²/2 | **falsch** (tatsächlich → 0) |
 | Direkter ξ-Determinantenanschluss | **nicht erreicht** |
 
-**Zentraler Strukturbefund:**
-Arithmetische Masse verschwindet im starken Limes, kann aber in
-relativen/wandernden Objekten überleben. Reine Shift-Determinanten sind trivial.
-Symmetrisierung erzeugt Schleifen, aber zunächst Λ². Resolventen können
-divergierende Massen dämpfen. Weil-Positivität und Gramstruktur müssen
-vor jedem HP- oder Determinantenansatz kommen.
-
 #### 03-weil-form-statistik (31 Dateien, NEU-091–120)
 
 | Teilpfad | Endurteil |
@@ -109,35 +101,62 @@ vor jedem HP- oder Determinantenansatz kommen.
 | Skalenkorrektur √N → √(N/log N) | kritische Korrektur, Klasse-B-Rücksetzung erzwungen |
 | Weil-Explizitformel-Anschluss | strukturell vorbereitet, aber nicht vollzogen |
 
-**Schlüsselbeitrag:**
-Ordner 03 liefert das statistische Gerüst, auf das spätere HP-Argumente aufbauen
-müssen. Insbesondere: Gramstruktur und Weil-Positivität sind Voraussetzung,
-kein Ergebnis — dies ist das von Ordner 02 angekündigte Leitprinzip.
-
 #### 04-grenzoperator-renormierung — Teilergebnis: NEU-128A/B, NEU-130, NEU-131
 
 | Datei | Hauptaussage | Tragfähiger Kern | Problem / Lücke | Status |
 |---|---|---|---|---|
-| NEU-128A | Σ_N(β) sei Klasse-B-Gram-Self-Energy | Hebungsabhängigkeit, Wirkungsebene und endliches Rationalitäts-No-Go korrekt erkannt | Wres-Adjungierung wird als Hilbertadjungierung behandelt; Positivität und Projektoreigenschaft unbelegt | ✅[M]_part |
-| NEU-128B | Self-Energy liegt auf Zielseite, Prä-Lanczos-Metrik bleibt offen | fixer Parameter vs. Spektralparameter; Zweistufentest sinnvoll | Skalar-Vektor-Typfehler; positive Gramfaktorisierung unbelegt; post-Krylov-Zuschreibung und Liftformeln untypisiert | ✅[M]_part |
-| NEU-130 | PSWF als Modell für Edge-/Prä-Lanczos-Koerzivität | sinnvolle methodische Analogie | keine formale Brücke; B-strong falsch als Energieform bezeichnet; X-Projektionen nur heuristisch | ⚠️[M] |
-| NEU-131 | B-strong + Kancellation → Nelson-/Schur-Energie | erkennt, dass Punktkontrolle allein nicht genügt | falscher Faktor c^{1/2}; widersprüchliche Skalen; keine Kancellation in Absolutsumme; abstraktes Lemma undefiniert | ⚠️[M], Lemma ✗[M] |
-
-**Hinweis:** NEU-129 fehlt im Ordner; NEU-130 bezeichnet sich selbst als Ergänzung zu NEU-129.
-Die direkte Lanczos-Prüfung aus NEU-129 ist damit im Quellenbestand nicht abgedeckt: ✅[M]_neg,Quelle.
+| NEU-128A | Σ_N(β) sei Klasse-B-Gram-Self-Energy | Hebungsabhängigkeit, Wirkungsebene und Rationalitäts-No-Go korrekt | Wres-Adj. wird als Hilbert-Adj. behandelt; Positivität unbelegt | ✅[M]_part |
+| NEU-128B | Self-Energy liegt auf Zielseite, Prä-Lanczos-Metrik offen | fixer Parameter vs. Spektralparameter; Zweistufentest sinnvoll | Skalar-Vektor-Typfehler; Gramfaktorisierung unbelegt; post-Krylov untypisiert | ✅[M]_part |
+| NEU-130 | PSWF als Modell für Edge-/Prä-Lanczos-Koerzivität | sinnvolle methodische Analogie | keine formale Brücke; B-strong falsch als Energieform; X-Projektionen nur heuristisch | ⚠️[M] |
+| NEU-131 | B-strong + Kancellation → Nelson-/Schur-Energie | erkennt, dass Punktkontrolle allein nicht genügt | falscher Faktor c^{1/2}; widersprüchliche Skalen; Lemma undefiniert | ⚠️[M], Lemma ✗[M] |
 
 **Ersetzte Aussagen (128A/B/130/131):**
-- `C_pC_p^#` ist kein Projektor — nur formale Wres-Rang-eins-Abbildung (NEU-128B ersetzt NEU-128A)
+- `C_pC_p^#` ist kein Projektor — nur formale Wres-Rang-eins-Abbildung
 - `Σ_N(β) ≥ 0` im Hilbertraumsinn: ✅[M]_neg,Quelle — nur Wres-Rang-eins-Summe gesichert
-- `A_{ij} := c^{1/2}P_{ij}` ist falsch normiert — korrekt: `A_{ij} := c^{-1/2}P_{ij}` (NEU-131)
+- `A_{ij} := c^{1/2}P_{ij}` ist falsch normiert — korrekt: `A_{ij} := c^{-1/2}P_{ij}`
 - PSWF-Brückensatz (B-strong + Kancellation → Nelson-/Schur-Kontrolle): offen, ?[O]
 
+**Gesamtbeitrag:** Block verschiebt Klasse-B-Route nicht nach vorn. Einziger belastbarer
+Befund: C_NC_N^# ist zielseitige Wres-Rang-eins-Self-Energy — nicht hebungsunabhängig,
+nicht positiv im Hilbertraumsinn, nicht Prä-Lanczos-typisiert.
+
+#### 04-grenzoperator-renormierung — Teilergebnis: NEU-132–136
+
+| Datei | Hauptaussage | Tragfähiger Kern | Problem / Lücke | Status |
+|---|---|---|---|---|
+| NEU-132 | H1/H2/H3-rel sollen PSWF-Abel auf Primkanäle übertragen | Sinnvolle Trennung von Punkt-, Amplituden- und Schalenfragen | H1-rel ist falsch; p^{iu} kancelliert auf [P,2P] nicht gleichmäßig; Schurmechanismus unbelegt | ⚠️[M] |
+| NEU-133 | Primschalen-Abel-Lemma | Grundsummen Σ1/p und Σlog p/p korrekt | Abel-Formel falsch typisiert; H1 falsch; O(log M) mit O(log N) verwechselt; Lanczos-Äquivalenzen falsch | ⚠️[M] |
+| NEU-134 | Prüfung von A_p = p|C_p|² | Nützlicher quantitativer Prüfstein; Normformel konditional korrekt | NEU-44 ist Rekonstruktion; B_p=O(1/p) offen; Szenario 1 löst Doppelbarriere nicht | ✅[M]_part |
+| NEU-135 | Zwei mögliche Normkonventionen | Typisch sinnvolle Modellunterscheidung | Eulerprodukt bestimmt keine Hilbertraumnorm; „Natürlichkeit" nur Heuristik | ✅[K/M] |
+| NEU-135D | Festlegung \|ε_p\|=1 | Klare Programmkonvention | Zirkuläre Provenienz mit NEU-44; A_p=O(log²p) nur bedingt; zitierte Spurformel nicht in aktueller NEU-44 | ✅[K/M] |
+| NEU-136 | Renormalisierte Self-Energy soll konvergieren und spurklassig sein | Algebraische Zerlegung; bedingte p^{-β}-Summierbarkeit | Rohdivergenz nicht bewiesen; falsche log³N-Skala; Topologien vermischt; ^♯ ≠ ^* offen | ✅[M]_part |
+
+**Hinweis:** NEU-136 trägt intern den Titel „Renormalisierte Selbstenergie: Zerlegung,
+Konvergenz und Topologietest" — kein Abel-Lemma. Beweist auch keines.
+
+**Zentraler No-Go (NEU-132/133):**
+Für festes reelles u gilt:
+
+    |Σ_{P≤p<2P} p^{iu}| ≍_u P/log P    [×[M]]
+
+Die Phase p^{iu} erzeugt auf dyadischen Primschalen keine gleichmäßige Kancellation —
+der Phasenbereich u·log 2 ist unabhängig von P. H1-rel in seiner aktuellen Form:
+negativ geschlossen.
+
+**Korrektur Rohsummenasymptotik (NEU-136):**
+
+    Falsch: Σ_{p≤N} (log p)²/p ~ (1/3)(log N)³
+    Richtig: Σ_{p≤N} (log p)²/p ~ (1/2)(log N)²    [×[M]]
+
+**Zirkuläre Provenienz (NEU-135D ↔ NEU-44):**
+NEU-135D begründet |ε_p|=1 mit NEU-44; NEU-44 bezeichnet diese Norm als
+„Axiom/Konvention, NEU-135.D". Entscheidung ist Programmkonvention, kein Quellenbefund.
+
 **Gesamtbeitrag des Blocks zu Objekt X:**
-Der Block verschiebt die Klasse-B-Route **nicht** nach vorn. Nicht konstruiert sind:
-W_N, W_N^{1/2}B_NW_N^{1/2}, X → W_N, oder eine Hilbertisierung mit C_N^# = C_N*.
-Einziger belastbarer Befund: C_NC_N^# ist relativ zur gewählten Fourier-Hebung
-eine zielseitige Wres-Rang-eins-Self-Energy — nach Projektion Π_{J,N},
-nicht hebungsunabhängig, nicht positiv im Hilbertraumsinn, nicht Prä-Lanczos-typisiert.
+Block widerlegt seinen eigenen Kancellationsmechanismus. Kein Fortschritt beim
+Abel-/Primclock-Pfad. Tragfähiger Prüfstein: B_p =? O(1/p) — quantitative
+Normfrage bleibt offen. NEU-136 eröffnet konditionalen Fredholm-Pfad (β-Dämpfung),
+der aber nicht mit Weil-Form oder archimedischer Schicht verbunden ist.
 
 ---
 
@@ -153,11 +172,9 @@ nicht hebungsunabhängig, nicht positiv im Hilbertraumsinn, nicht Prä-Lanczos-t
 | J-123-4 | ⚠️ ersetzt | Aussage 1 von 5 korrigiert |
 | J-123-5 | ⚠️ ersetzt | Aussage 2 von 5 korrigiert |
 | J-123-6 | ⚠️ ersetzt | Aussage 3 von 5 korrigiert |
-| J-123-7 | ✅ negativ abgeschlossen | kein weiteres Vorgehen nötig |
+| J-123-7 | ✅ negativ abgeschlossen | |
 | J-123-8 | ✅ negativ abgeschlossen | |
 | J-123-9 | ✅ negativ abgeschlossen | |
-
-5 ersetzte Aussagen, 3 abgeschlossene negative Befunde.
 
 #### NEU-124/125/127-Block (W-124-1 bis W-127-4)
 
@@ -174,9 +191,6 @@ nicht hebungsunabhängig, nicht positiv im Hilbertraumsinn, nicht Prä-Lanczos-t
 | W-127-3 | ⚠️ Typanforderung | Eingabebedingung für NEU-128ff. verschärft |
 | W-127-4 | ✅ bestätigt | |
 
-Kritische Skalakorrektur erzwingt Klasse-B-Rücksetzung in W-125-1;
-Typanforderung in W-127-3 definiert Eintrittsbedingung für NEU-128ff.
-
 #### NEU-128A/B/130/131-Block (B-128 / P-130 / P-131)
 
 | Knoten | Status | Bemerkung |
@@ -185,47 +199,75 @@ Typanforderung in W-127-3 definiert Eintrittsbedingung für NEU-128ff.
 | B-128-2 | ✅[M]_neg,Quelle | C_NC_N^# ≥ 0 im Hilbertraumsinn — nicht belegt |
 | B-128-3 | ?[O] | Hebungsunabhängigkeit offen |
 | B-128-4 | ?[O] | Σ_N(β) als feste Prä-Lanczos-Metrik offen |
-| B-128-5 | ✅[M]_neg | β = s zugleich als Self-Energy und feste Metrik — ausgeschlossen |
+| B-128-5 | ✅[M]_neg | β=s als Self-Energy und feste Metrik — ausgeschlossen |
 | P-130-1 | ?[O] | PSWF als formale Brücke zu W_N offen |
 | P-131-1 | ✅[M]_neg | B-strong allein liefert keine Nelson-Energie |
 | P-131-2 | ?[O] | abstraktes Edge-Schur-Nelson-Lemma offen |
 | P-131-3 | ✗[M] | A_{ij} = c^{1/2}P_{ij} als normierte Amplitude — falsch |
 
+#### NEU-132–136-Block (A-132 / A-133 / A-134 / A-135 / A-136)
+
+| Knoten | Status | Bemerkung |
+|--------|--------|-----------|
+| A-132-1 | ✗[M] | Primclock-H1 auf dyadischen Primschalen — falsch |
+| A-132-2 | ✗[M] | H1/H2/H3-rel als Lanczos-Transfer — in aktueller Form falsch |
+| A-133-1 | ✅[M] | Primschalen-Grundsummen Σ1/p, Σlog p/p korrekt |
+| A-133-2 | ✗[M] | angegebenes Primschalen-Abel-Lemma — falsch |
+| A-134-1 | ✅[K/M] | \|c_p\|² = (log p)²B_p im rekonstruierten Modell |
+| A-134-2 | ?[O] | B_p = O(1/p) — offen, zentraler Prüfstein |
+| A-135-1 | ✅[K/M] | \|ε_p\|=1 als Konvention |
+| A-135-2 | ✅[M]_neg,Quelle | Quellenbeweis dieser Norm — nicht vorhanden |
+| A-136-1 | ✅[M] | Σ = Σ^∞ + Σ^ren algebraisch korrekt |
+| A-136-2 | ✗[M] | Σ^∞ divergiert log-kubisch — falsch (log-quadratisch) |
+| A-136-3 | ✅[K/M] | Σ^ren(β) ∈ S₁ unter Rang-eins-Hilbertisierung + B_p=O(1/p) |
+| A-136-4 | ✅[M]_neg | Lösung der Lanczos-Doppelbarriere — nicht erreicht |
+
 ---
 
 ### Noch ausstehend (GPT-Audit)
 
-- **04-grenzoperator-renormierung** (NEU-132–150, weiter laufend — ab NEU-132)
+- **04-grenzoperator-renormierung** (NEU-137–150, weiter laufend — ab NEU-137)
 - **05-primkanal-fourierladung** (NEU-151–173, 34 Dateien)
 - **06-hochschild-bc-algebra** (NEU-174–222, 66 Dateien)
 - **07-weil-explizitformel** (NEU-220–246, 35 Dateien)
+
+**Prüfpflichten für NEU-137ff.:**
+1. `(C_p^rel)^♯ =? (C_p^rel)^*` — Wres vs. Hilbert-Adjungierung
+2. `B_p = O(1/p)` — offen
+3. `Σ_{p≤N} (log p)²/p ≍ (log N)²` — nicht log-kubisch
+4. Operatornormkonvergenz ≠ Spurklassenzugehörigkeit
+5. NEU-138/139: Fredholm-Determinante erzeugt lineare Mangoldt-Gewichte oder
+   nur quadratische |c_p|² + Kreuzterme?
 
 ---
 
 ## Aktueller Forschungsstand (aus ebene-XVI-objekt-x.md)
 
 **Aktiver Hauptknoten:** [O-221-1c1a0] — Hebungsunabhängigkeit des zyklischen
-Spektralmasses μ_{Ψ_p}^{D_N^rel} (NEU-221e). Das ist der Wohldefiniertheitskern
-der gesamten Stieltjes-Linie.
+Spektralmasses μ_{Ψ_p}^{D_N^rel} (NEU-221e).
 
 **Parallelknoten:** [O-228-2] — Leerfaser-Risiko: Falls e₀V_p normiert und
-⊥ ker π_prim bei positiv definiter Form, dann L_p = ∅ — keine zulässige Kopplung V_p.
+⊥ ker π_prim bei positiv definiter Form, dann L_p = ∅.
 
 **Gesperrte Pfade:**
 - Direkter HP-Operator aus D_rel: negativ geschlossen
-- Mapping-Cone aus vorhandenem Quellenbestand: negativ geschlossen [O-229-3B.1f-b.1]
-- KMS-Fixvektor als Randvektor: negativ geschlossen [O-229-2]
-- Rohkopplung allein, beliebige Liftwahl, Ladungsprojektor, Nulldifferential:
-  alle ausgeschlossen
-- β = s als gleichzeitige Self-Energy und feste Metrik: ausgeschlossen [B-128-5]
+- Mapping-Cone aus vorhandenem Quellenbestand: negativ geschlossen
+- KMS-Fixvektor als Randvektor: negativ geschlossen
+- Rohkopplung allein, beliebige Liftwahl, Ladungsprojektor, Nulldifferential: ausgeschlossen
+- β=s als gleichzeitige Self-Energy und feste Metrik: ausgeschlossen [B-128-5]
 - B-strong allein → Nelson-Energie: ausgeschlossen [P-131-1]
 - A_{ij} = c^{1/2}P_{ij} als normierte Amplitude: falsch [P-131-3]
+- **H1-rel: Primclock p^{iu} auf dyadischen Schalen:** negativ geschlossen [A-132-1]
+- **Abel-Lemma in der Formulierung von NEU-133:** negativ geschlossen [A-133-2]
+- **Σ^∞ divergiert log-kubisch:** falsch, log-quadratisch [A-136-2]
+- **NEU-136 als Lösung der Lanczos-Doppelbarriere:** negativ [A-136-4]
 
 **Offene Konstruktionsaufgaben:**
-1. Intrinsischer, nichttrivialer Quellkomplex für Λ_p (Koszul-Kandidat NEU-246/247, Typbarriere)
+1. Intrinsischer Quellkomplex für Λ_p (Koszul-Kandidat NEU-246/247, Typbarriere)
 2. Prä-Lanczos-Metrik W_N mit Hebungsunabhängigkeit [B-128-3/4]
-3. PSWF-Brückensatz: B-strong + quantitative Oszillationsbedingung → Nelson-/Schur-Kontrolle [P-131-2]
-4. Prüfung ob NEU-44 Operatorgewichte liefert oder nur relativen Graph-Hilbertraum (NEU-134)
+3. PSWF-Brückensatz mit quantitativer Oszillationsbedingung [P-131-2]
+4. B_p =? O(1/p) — zentraler quantitativer Prüfstein [A-134-2]
+5. Fredholm-Determinante: lineare vs. quadratische Mangoldt-Gewichte (NEU-138/139)
 
 ---
 
@@ -240,20 +282,21 @@ Ordner     Hauptleistung                              Hauptengpass
 02         Strukturdiagnosen, Quadratformstrategie    HP-Weg ausgeräumt
 03         Gram-Priorität etabliert, Skalakorrektur   R1-Rigiditätsnachweis offen
            √N → √(N/log N) erzwungen
-04 (part)  Klasse-B-Route präzisiert; Wres ≠ Hilbert  W_N / Prä-Lanczos-Metrik
-           klar herausgearbeitet; Normfehler (131)    fehlt vollständig
-           identifiziert und korrigiert
+04 (part)  Wres ≠ Hilbert-Adj. verbindlich;           W_N / Prä-Lanczos-Metrik
+           Normfehler (131) korrigiert;               fehlt vollständig;
+           H1-rel (Primclock) negativ geschlossen;    B_p=O(1/p) offen;
+           log³N-Fehler (136) korrigiert;             Fredholm-Weg unklar
+           konditionaler Fredholm-Pfad skizziert
 ```
 
-**Leitprinzip (aus 02, bestätigt durch 03):**
-Weil-Positivität und Gramstruktur zuerst — Hilbert–Pólya oder Determinante
-erst danach.
+**Leitprinzip:** Weil-Positivität und Gramstruktur zuerst — HP oder Determinante erst danach.
 
-**Neues Strukturprinzip (aus 04 Teilergebnis):**
-Wres-Adjungierung (^#) ≠ Hilbertraum-Adjungierung (^*) — diese Unterscheidung
-ist ab NEU-128 verbindlich in alle weiteren Auditschritte einzutragen.
+**Strukturprinzip (ab NEU-128):** `^♯` (Wres) ≠ `^*` (Hilbert) — verbindlich in alle weiteren Schritte.
+
+**Neues Negativresultat (ab NEU-132):** Primclock p^{iu} auf dyadischen Primschalen
+liefert keine gleichmäßige Kancellation. H1-rel in aktueller Form: geschlossen.
 
 ---
 
 *Zwischenbilanz aktualisiert: 2026-07-29 — GPT-Audit-Durchlauf laufend.*
-*Nächster Schritt: NEU-132 (04-grenzoperator-renormierung, Abel/PSWF-Block).*
+*Nächster Schritt: NEU-137 (04-grenzoperator-renormierung, Spurklassen/Fredholm-Block).*
