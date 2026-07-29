@@ -1,6 +1,6 @@
 # GPT-Audit-Zwischenbilanz
 
-**Stand: 29. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02**
+**Stand: 29. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127**
 
 Dieses Dokument sichert den Gesprächsstand des laufenden GPT-Auditdurchlaufs
 für die Verwendung in einem neuen Chat-Kontext. Es wird am Ende des Gesamtdurchlaufs
@@ -31,6 +31,10 @@ zu einem vollständigen Übergabe-Prompt zusammengefasst.
 | 06-hochschild-bc-algebra | NEU-174–222 + a–z-Varianten | 66 | ✅ 2026-07-28 |
 | 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | 35 | ✅ 2026-07-28 |
 | **Gesamt** | | **348** | **alle ✅** |
+
+**Hinweis (03):** NEU-118 liegt doppelt vor (`Bombieri_Normalisierung` und `X_Rigiditaet_R1_Nachweis`)
+— beide als separate Dateien in KARTE.md eingetragen. Thematisches Duplikat mit NEU-113 (Bombieri-Normalisierung)
+ist vermerkt; keine strukturelle Auswirkung.
 
 ---
 
@@ -94,11 +98,64 @@ Symmetrisierung erzeugt Schleifen, aber zunächst Λ². Resolventen können
 divergierende Massen dämpfen. Weil-Positivität und Gramstruktur müssen
 vor jedem HP- oder Determinantenansatz kommen.
 
+#### 03-weil-form-statistik (31 Dateien, NEU-091–120)
+
+| Teilpfad | Endurteil |
+|---|---|
+| Weil-Positivitätsstrategie | **zentrales Leitprinzip** — Ordner etabliert Gram-Priorität |
+| Normalisierung nach Bombieri (NEU-113/118) | sorgfältig ausgearbeitet, kanonisch |
+| Statistische Formapproximationen | tragfähig als Schätzrahmen |
+| R1-Rigiditätsnachweis (NEU-118b) | **offen** — Typbarriere analog zu Koszul-Problem |
+| Skalenkorrektur √N → √(N/log N) | kritische Korrektur, Klasse-B-Rücksetzung erzwungen |
+| Weil-Explizitformel-Anschluss | strukturell vorbereitet, aber nicht vollzogen |
+
+**Schlüsselbeitrag:**
+Ordner 03 liefert das statistische Gerüst, auf das spätere HP-Argumente aufbauen
+müssen. Insbesondere: Gramstruktur und Weil-Positivität sind Voraussetzung,
+kein Ergebnis — dies ist das von Ordner 02 angekündigte Leitprinzip.
+
+---
+
+### DAG-Audit-Ergebnisse (2026-07-29)
+
+#### NEU-123-Komplex (J-123-1 bis J-123-9)
+
+| Knoten | Status | Bemerkung |
+|--------|--------|-----------|
+| J-123-1 | ✅ bestätigt | Jacobi-Limes-Anker |
+| J-123-2 | ✅ bestätigt | |
+| J-123-3 | ✅ bestätigt | |
+| J-123-4 | ⚠️ ersetzt | Aussage 1 von 5 korrigiert |
+| J-123-5 | ⚠️ ersetzt | Aussage 2 von 5 korrigiert |
+| J-123-6 | ⚠️ ersetzt | Aussage 3 von 5 korrigiert |
+| J-123-7 | ✅ negativ abgeschlossen | kein weiteres Vorgehen nötig |
+| J-123-8 | ✅ negativ abgeschlossen | |
+| J-123-9 | ✅ negativ abgeschlossen | |
+
+5 ersetzte Aussagen, 3 abgeschlossene negative Befunde.
+
+#### NEU-124/125/127-Block (W-124-1 bis W-127-4)
+
+| Knoten | Status | Bemerkung |
+|--------|--------|-----------|
+| W-124-1 | ✅ bestätigt | Weil-Form-Anker |
+| W-124-2 | ✅ bestätigt | |
+| W-124-3 | ⚠️ Skalakorrektur | √N → √(N/log N) — kritisch |
+| W-125-1 | ⚠️ Klasse-B-Rücksetzung | abhängig von W-124-3 |
+| W-125-2 | ✅ bestätigt | |
+| W-126-1 | ✅ bestätigt | |
+| W-127-1 | ✅ bestätigt | |
+| W-127-2 | ✅ bestätigt | |
+| W-127-3 | ⚠️ Typanforderung | Eingabebedingung für NEU-128ff. verschärft |
+| W-127-4 | ✅ bestätigt | |
+
+Kritische Skalakorrektur erzwingt Klasse-B-Rücksetzung in W-125-1;
+Typanforderung in W-127-3 definiert Eintrittsbedingung für NEU-128ff.
+
 ---
 
 ### Noch ausstehend (GPT-Audit)
 
-- **03-weil-form-statistik** (NEU-091–120, 31 Dateien) — laufend
 - **04-grenzoperator-renormierung** (NEU-121–150, 42 Dateien)
 - **05-primkanal-fourierladung** (NEU-151–173, 34 Dateien)
 - **06-hochschild-bc-algebra** (NEU-174–222, 66 Dateien)
@@ -126,11 +183,11 @@ der gesamten Stieltjes-Linie.
 Intrinsischer, nichttrivialer Quellkomplex, dessen Differential den Liftbereich
 respektiert und ein beschränktes Λ_p erzeugt. Koszul-Kandidat (NEU-246/247)
 ist der aktuell vielversprechendste Pfad, aber an Typbarriere (δ_p auf B₃ᵃᵈᵐ)
-blockiert.
+blockiert. Typanforderung aus W-127-3 definiert Eingabebedingung für NEU-128ff.
 
 ---
 
-## Konsistentes Gesamtbild (00–02)
+## Konsistentes Gesamtbild (00–03)
 
 ```
 Ordner     Hauptleistung                              Hauptengpass
@@ -139,13 +196,15 @@ Ordner     Hauptleistung                              Hauptengpass
 01         Trägerarchitektur, No-Go-Triage,           Intrinsischer Quellkomplex
            Engpasspräzisierung                        für Λ_p
 02         Strukturdiagnosen, Quadratformstrategie    HP-Weg ausgeräumt
+03         Gram-Priorität etabliert, Skalakorrektur   R1-Rigiditätsnachweis offen
+           √N → √(N/log N) erzwungen
 ```
 
-**Leitprinzip aus Ordner 02:**
+**Leitprinzip (aus 02, bestätigt durch 03):**
 Weil-Positivität und Gramstruktur zuerst — Hilbert–Pólya oder Determinante
 erst danach.
 
 ---
 
-*Zwischenbilanz erstellt: 2026-07-29 — GPT-Audit-Durchlauf laufend.*
-*Nächster Schritt: Ordner 03-weil-form-statistik.*
+*Zwischenbilanz aktualisiert: 2026-07-29 — GPT-Audit-Durchlauf laufend.*
+*Nächster Schritt: NEU-128A (04-grenzoperator-renormierung).*
