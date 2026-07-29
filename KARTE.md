@@ -1,6 +1,7 @@
 # KARTE — Vollständige Verzeichnisstruktur des Repositorys `objekt-x-programm`
 
-> Direkt aus dem Repository verifiziert. Stand: 2026-07-28 (Bereinigungsdurchlauf).
+> Direkt aus dem Repository verifiziert. Stand: 2026-07-28 (Bereinigungsdurchlauf).  
+> Auditstand aktualisiert: 2026-07-29 (NEU-123-Komplex + NEU-124/125/127).
 
 ---
 
@@ -508,6 +509,63 @@ objekt-x-programm/
 
 ---
 
+## DAG-Auditstand (2026-07-29)
+
+### NEU-123-Komplex — $\checkmark[M]_\mathrm{part}$ (abgeschlossen 2026-07-29)
+
+| Knoten | Aussage | Status |
+|--------|---------|--------|
+| J-123-1 | $b_{1,N} \to 0$ | $\checkmark[M]$ |
+| J-123-2 | $m_{\delta_1,N}(z) \to -1/z$ | $\checkmark[M]$ |
+| J-123-3 | Unrenormierter $\delta_1$-Pfad $\not\to m_\mathrm{arith}$ | $\checkmark[M]_\mathrm{neg}$ |
+| J-123-4 | $a_{1,N}/b_{1,N} \to \infty$ | $\warning[M]$ heuristisch; $?[O]$ streng |
+| J-123-5 | $b_{2,N}/b_{1,N} \to \infty$ | $\warning[M]$ numerisch; $?[O]$ streng |
+| J-123-6 | Kein Skalar $\kappa_N$ bei Quotientendivergenz | $\checkmark[K/M]$ unter J-123-5 |
+| J-123-7 | $D_N^{-1}A_ND_N$ als selbstadjungierte Rettung im festen $\ell^2$ | $\checkmark[M]_\mathrm{neg}$ |
+| J-123-8 | Gewichteter Hilbertraum oder $D_NA_ND_N$ | $?[O]$ |
+| J-123-9 | Intrinsische Vor-Lanczos-/Feshbach-Renormierung | $?[O]$ |
+
+**Abgeschlossene negative Befunde:**
+- Unrenormierte NEU-87-Jacobi-Schließung liefert am Startvektor $\delta_1$ nur $m(z) = -1/z$
+- $D_N^{-1}A_ND_N$ im festen $\ell^2$ nicht selbstadjungiert → kein Herglotz-Operator
+- $\mu_\Omega^A(\mathbb{R}) < \infty \neq \mu_\xi(\mathbb{R}) = \infty$ → wörtliche Vektormaß-Zielidentifikation ausgeschlossen
+
+**Ersetzte Aussagen:**
+- $b_{1,N}\to0 \Rightarrow A_\infty$ vollständig diagonal → **falsch**; korrekt: nur $e_0$ entkoppelt
+- $T_N \asymp N^3$ (NEU-123C) → **ersetzt** durch bedingt $T_N \asymp N^2\log N$
+- Cauchy-Schwarz liefert untere Schranke für $T_N$ → **$\times[M]$**
+- $b_{2,N}/b_{1,N} \sim N$ (NEU-123G) → **$\times[M]$**; nur: wächst stark im beobachteten Bereich
+- Exakte Identität $D_N = a_{1,N}/b_{1,N}$ → **$\times[M]$**; nur asymptotisch äquivalent
+
+---
+
+### NEU-124/125/127-Block — $\checkmark[M]_\mathrm{part}$ (abgeschlossen 2026-07-29)
+
+| Knoten | Aussage | Status |
+|--------|---------|--------|
+| W-124-1 | Aktivierung NEU-124 im unrenormierten Modell | $\checkmark[M]_\mathrm{neg}$ |
+| W-124-2 | $\mu_\Omega^{A_\infty} = \mu_\xi$ für Hilbertraumvektor / volles Nullstellenzählmaß | $\checkmark[M]_\mathrm{neg}$ |
+| W-125-1 | Skalare Lanczos-Kovarianz | $\checkmark[M]$ |
+| W-125-2 | NEU-79 liefert intrinsische $\sqrt{N}$-Skala | $\times[M]$ |
+| W-125-3 | Skalare Renormierung scheitert vollständig | $\checkmark[K/M]$ unter Quotientendivergenz |
+| W-127-1 | Gemeinsamer Prä-Lanczos-Raum $\mathcal{H}_N^\mathrm{pre}$ | $?[O]$ |
+| W-127-2 | $C_N^\# = C_N^*$ in einer positiven Hilbertisierung | $?[O]$ |
+| W-127-3 | $C_N^\# C_N$ als fertige positive Grammetrik | $\times[M]$ |
+| W-127-4 | Intrinsisches positives nichtskalares $W_N$ | $?[O]$ |
+
+**Verbindliche Korrekturen:**
+- Kritische Skala: $c_N^\mathrm{crit} \sim \sqrt{N}$ → **falsch**; korrekt: $c_N^\mathrm{crit} \sim \frac{1}{\gamma}\sqrt{\frac{N}{\log N}}$
+- Kanalzahl aus NEU-79: $\kappa_N = |\Sigma_N|$, nicht $\sqrt{N}$; $\sqrt{N} \sim N$ algebraisch falsch
+- Klasse-B zurückgesetzt: $C_N^\#$ ist Wres-/Frobenius-Adjungierung ≠ Hilbert-adjungiert; $C_N^\# C_N \geq 0$ im Hilbertraumsinn **nicht** gesichert
+- Maßziel neu typisiert: wörtliche Gleichung $\mu_{\Omega_\infty}^{A_\infty} = \mu_\xi$ ausgeschlossen für gewöhnliche Vektorzustände
+
+**Typanforderung für NEU-128ff. (verbindlich):**  
+Jede Prä-Lanczos-Konstruktion muss zunächst $\mathcal{H}_N^\mathrm{pre}$, $B_N^\mathrm{pre}$, $W_N \geq c_N I > 0$, $\Omega_N \in \mathcal{H}_N^\mathrm{pre}$, $|\Omega_N| = 1$ angeben. Erst dann ist $W_N^{1/2} B_N^\mathrm{pre} W_N^{1/2}$ typkorrekt definiert.
+
+**Nächster Auditblock:** NEU-128A (Prüffokus: erkennt die Datei $C_N^\# \neq C_N^*$?) → NEU-128b ($\Sigma_N(\beta)$ als feste Metrik oder nur Schur-Komplementterm?)
+
+---
+
 ## Offene Bereinigungsaufgaben
 
 | Priorität | Problem | Aktion |
@@ -528,4 +586,5 @@ objekt-x-programm/
 ---
 
 *Inventurdurchlauf abgeschlossen: 2026-07-28 — alle 8 Ordner API-verifiziert.*  
-*Bereinigungsplan erstellt: 2026-07-28 — Umbenennung ausstehend (nächster Schritt).*
+*Bereinigungsplan erstellt: 2026-07-28 — Umbenennung ausstehend (nächster Schritt).*  
+*DAG-Auditstand aktualisiert: 2026-07-29 — NEU-123-Komplex (11 Dateien) + NEU-124/125/127-Block (3 Dateien) geschlossen.*
