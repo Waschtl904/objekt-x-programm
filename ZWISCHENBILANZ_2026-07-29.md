@@ -1,6 +1,6 @@
 # GPT-Audit-Zwischenbilanz
 
-**Stand: 29. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136 + Audit NEU-137–140 + Audit NEU-141–145**
+**Stand: 29. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136 + Audit NEU-137–140 + Audit NEU-141–145 + Audit NEU-146–150 (offen, Mellinfehler) + Audit NEU-151–155**
 
 Dieses Dokument sichert den Gesprächsstand des laufenden GPT-Auditdurchlaufs
 für die Verwendung in einem neuen Chat-Kontext. Es wird am Ende des Gesamtdurchlaufs
@@ -161,38 +161,6 @@ fest: 𝔅 := A_Q, C₃^HH(𝔅) = 𝔅^⊗4, Bd₃^HH(𝔅) = im b₄.
 | NEU-144 | R als selbstadjungierter primdiagonaler Operator | Korrigierte Diagonalkonstruktion möglich; gewöhnliche Spur für Re s > 1 korrekt | T2 überbewertet; Nichtentartung offen; Domain falsch gewichtet; Unbeschränktheit nur bedingt | ✓[M]_part |
 | NEU-145 | Regulierte Spur := meromorphe Fortsetzung von −ζ'/ζ | Gewöhnliche gegen regulierte Spur klar getrennt; R·Σ im krit. Streifen nicht spurklassig korrekt festgestellt | Zirkuläre Definition; Nullstellen importiert; kein Operatorbezug; Residuen-, Cutoff- und Wärmeskalenfehler | ✓[M]_part |
 
-**Detailbefunde NEU-141–145:**
-
-*T2-Provenienz:*
-- NEU-132/133 definieren **keine** orthogonale Kantensumme ⊕_(m,p)^⊥ H_{m→pm} → ✓[M]_neg,Quelle
-- NEU-143 ist nur ein bedingtes Lemma: Voraussetzung angenommen, nicht aus Primärquellen abgeleitet → T2 = ✓[K/M], nicht ✓[M]
-- Abhängigkeitszirkel: NEU-143 nimmt Edge-Label an → NEU-44 materialisiert Edge-Label und verweist auf NEU-143 → NEU-144 erklärt T2 für bewiesen → **kein unabhängiger Quellenbeweis**
-- P_p ist kein Projektor: P_p = |c_p|²·π_p, nicht idempotent → ×[M]; P_p·P_q = 0 (p ≠ q) unter T2 bleibt tragfähig
-
-*Nichtentartung c_p ≠ 0:*
-- c_p = 0 ⟺ B_p = 0; B_p > 0 nicht bewiesen → **?[O]**
-- R als Observable auf allen Primkanälen erst nach Nichtentartungsnachweis wohldefiniert → **?[O]**
-
-*Definitionsbereich von R (NEU-144 falsch):*
-- NEU-144 verwendet: Σ_p R_p²|ξ_p|² < ∞ (unnormalisierte Basis)
-- Korrekt für x = Σ_p ξ_p Ψ_p: **Σ_p R_p²|ξ_p|²|c_p|² < ∞** → ×[M]
-
-*Korrigierter konditionaler Operatorsatz:*
-Unter (i) orthogonaler Edge-Label-Zerlegung ⊕_p^⊥ ℂ·e_p, (ii) c_p ≠ 0, (iii) R·e_p = R_p·e_p mit R_p = log(p)/|c_p|², (iv) R = 0 auf ℋ_ℙ^⊥ gilt:
-- R·Σ(s) ∈ 𝒦 für Re s > 0 — **kompakt** (stärker als Dateien behaupten)
-- R·Σ(s) ∈ S₁ ⟺ Re s > 1
-- Tr(R·Σ(s)) = −ζ'/ζ(s) für Re s > 1 (algebraisch korrekt, zielwertgesteuert)
-- Gesamtstatus: ✓[K/M]
-
-*NEU-145 — regulierte Spur:*
-- Definition Tr_reg(R·Σ(s)) := −ζ'/ζ(s) ist zulässig als explizit deklarierte Zieldefinition → ✓[K/M]
-- Als operatorielle Rückbindung: **×[M]** (Nullstellen importiert, nicht hergeleitet)
-- RH-Äquivalenz ist tautologische Umformulierung → ⚠[M]
-- Residuum an nichttrivialer Nullstelle ρ: **−m_ρ** (nicht −1, sofern Vielfachheit > 1) → ×[M]
-- Cutoffformel (glatt): Σ_p χ_Λ(R_p)·log(p)/(p^s−1), nicht Σ_{R_p≤Λ}(…) → ×[M]
-- Wärmespur: R_p ~ p/log p nicht bewiesen, nur R_p ≳ p/log p konditional → ⚠[M]
-- (R+ε)⁻¹R-Regularisierung scheitert (nähert sich 1 für große R_p) → ✓[M]_neg; (1+εR)⁻¹ ist offener Kandidat
-
 **Aktualisierte DAG-Knoten nach NEU-141–145:**
 
 | Knoten | Aussage | Status |
@@ -211,39 +179,119 @@ Unter (i) orthogonaler Edge-Label-Zerlegung ⊕_p^⊥ ℂ·e_p, (ii) c_p ≠ 0, 
 | [Reg-145-3] | RH aus Polgeometrie der definierten Spur | ⚠[M] — tautologische Umformulierung |
 | [Reg-145-4] | (R+ε)⁻¹R-Regularisierung | ✓[M]_neg |
 
+**Gesamtstatus Block NEU-141–145:** ✓[M]_part
+
+---
+
+#### 05-primkanal-fourierladung — Teilergebnis: NEU-151–155
+
+**Zentraler Befund des Blocks:**
+
+> Der stärkste Fortschritt liegt in NEU-155: Rohkopplung T_p, induzierter
+> Primkanaloperator C_p^[ε̂_p] und Rang-eins-Erweiterung C_p^rel[ε̂_p]
+> werden erstmals sauber getrennt. Dadurch werden zentrale Konstruktionen
+> aus NEU-151 und NEU-154 nachträglich typologisch ungültig.
+
+| Datei | Hauptaussage | Tragfähiger Kern | Problem / Lücke | Status |
+|---|---|---|---|---|
+| NEU-151 | Rang-eins-Modell und Normaudit | Normidentitäten ‖C_p^rel‖_{S₁,S₂} = |c_p|; P_p ≠ π_p; Notationsbereinigung | Rang genau 1 offen; obere Schranke und Finite-Part falsch als bewiesen importiert | ✓[M]_part |
+| NEU-152 | Gleichmäßige Nichtentartung von c_p | Reduktion auf B_p ≥ A/p; Auslöschungsanalyse; Vorrang von NEU-153 erkannt | Keine Koeffizientenwerte; keine obere oder untere Schranke; Phase von c_p nicht kanonisch | ✓[M]_part |
+| NEU-153 | Hebungsunabhängigkeit und Liftgeometrie | Starke/schwache Invarianz sauber getrennt; positive und semidefinite Modellgeometrie | Quell-/Zielnorm offen; zweite Variationsformel falsch (Faktor 2); Projektionsnichtvernichtung fehlt | ✓[M]_part |
+| NEU-154 | Pullback über C_p^rel auf Liftvektoren | Abstrakte Quotienten- und Reichweitenideen | Zentraler Operator wirkt auf falschem Raum; Injektivität mit Rang ≤ 1 unvereinbar; globale Skalierung unzulässig | ⚠[M], Kernpullback ×[M] |
+| NEU-155 | Trennung von Rohkopplung, Primkanaloperator und Rang-eins-Erweiterung | Wesentliche Typkorrektur; Rohkopplungsquotient sinnvoll konditionalisiert | B₃ᵃᵈᵐ, Pullback und Einbettungsisometrie offen; Endformel erneut typfalsch | ✓[M]_part |
+
+**Detailbefunde NEU-151–155:**
+
+*Drei widerlegte Statusmarker (NEU-151):*
+- Obere Schranke O((log p)²/p): von NEU-151 als gesichert übernommen, von NEU-152 selbst als unbewiesene Annahme identifiziert → **?[O]** (zurückgestuft von ✓[M])
+- Skalarer Finite-Part aus NEU-148/149: NEU-148 verwechselt Primlabel-Cutoff φ(p/X) mit Primpotenzcutoff φ(p^k/X); Mellin-Integrand falsch → **×[M]**
+- „Kein Import hängt an offener Hypothese": widerlegt durch obige beiden Punkte → **×[M]**
+
+*Rang-eins-Situation nach NEU-155:*
+- rang C_p^rel ≤ 1: **✓[M]** (folgt trivial aus Rang-eins-Struktur)
+- rang C_p^rel = 1 für alle p: **?[O]** (erfordert c_p ≠ 0, nicht bewiesen)
+
+*Zweite Variationsformel in NEU-153:*
+- NEU-153 schreibt d²/dt²|_{t=0} |A + tB + t²C|² = 2|B|² + 2Re⟨A,C⟩
+- Korrekt ist: 2|B|² + **4**Re⟨A,C⟩ → **×[M]**
+
+*Pullback-Situation nach NEU-155:*
+- Alter Pullback (NEU-154): ⟨C_p^rel x, C_p^rel y⟩ auf Liftvektoren → **×[M]** (falscher Operatortyp)
+- Neuer offener Kandidat (NEU-155): q_conn(x) =? |T_p x|² bzw. ⟨T_p x, T_p y⟩ → **?[O]**
+- Unter diesem Kandidat gilt T_p(v_p) = 0, also q_conn(v_p) = 0 ≠ 1: positive-definite Kugelgeometrie aus NEU-153 nicht anwendbar
+
+*Ebenenarchitektur (stärkster positiver Befund):*
+> intrinsische Rohkopplung T_p → Hebungsauswertung → eindimensionaler Primkanal C_p^[ε̂_p] → Rang-eins-Erweiterung C_p^rel[ε̂_p]
+
+Die Rang-eins-Struktur entsteht erst durch Kompression auf den eindimensionalen Primkanal, nicht aus einer Degeneration der ursprünglichen Kopplung.
+
+*Interner Typfehler im Endbefund NEU-155:*
+- NEU-155 schreibt C_p^rel[ε̂_p](v_p) ~ Ψ_p; v_p liegt weder in ℂε_p noch im dritten Schichtkanal → **×[M]**
+
+**DAG-Knoten nach NEU-151–155:**
+
+| Knoten | Aussage | Status |
+|---|---|---|
+| [P-151-1] | rang C_p^rel ≤ 1 | ✓[M] |
+| [P-151-2] | rang C_p^rel = 1 | ?[O] |
+| [P-151-3] | P_p = |c_p|²·π_p, P_p ≠ π_p allgemein | ✓[M] |
+| [P-151-4] | |c_p|² = O((log p)²/p) | ?[O] — zurückgestuft |
+| [P-152-1] | B_p ≥ A/p | ?[O] |
+| [P-152-2] | c_p ≠ 0 für alle p | ?[O] |
+| [P-153-1] | Ψ_p hebungsunabhängig (Vektor) | ?[O] |
+| [P-153-2] | |Ψ_p| hebungsunabhängig (Norm) | ?[O] |
+| [P-153-3] | |c_p|² intrinsisches Primgewicht | ✓[M]_neg — im derzeitigen hebungsrelativen Modell |
+| [P-153-4] | zweite Variationsformel | ×[M] |
+| [P-154-1] | Pullback über C_p^rel auf Liftvektoren | ×[M] |
+| [P-155-1] | Drei-Operatoren-Trennung T_p / C_p^[ε̂_p] / C_p^rel[ε̂_p] | ✓[M]_part |
+| [P-155-2] | q_conn(x) =? |T_p x|² | ?[O] |
+| [P-155-3] | ℒ_p^ch ≠ ∅ ⟺ T_p(ℰ_p^ch) ≠ {0} | ✓[K/M] unter Rohpullback und Domänenannahmen |
+| [P-155-4] | ι_{J,N} isometrisch | ?[O] |
+| [P-155-5] | B₃ᵃᵈᵐ typgenau identifiziert | ?[O] |
+
 **Stärkster positiver Satz des Blocks:**
-> Unter Edge-Label und Nichtentartung ist R·Σ(s) kompakt für Re s > 0 und spurklassig genau für Re s > 1.
+> T_p, C_p^[ε̂_p] und C_p^rel[ε̂_p] sind drei verschiedene, klar typisierte Abbildungen.
 
 **Stärkster negativer Satz des Blocks:**
-> Tr_reg := −ζ'/ζ ist eine definitorische Rückeinsetzung, keine operatorielle Herleitung.
+> |c_p|² ist derzeit kein wohldefiniertes intrinsisches Primgewicht.
 
 **Was der Block nicht erreicht:**
-- log p wird nicht aus X abgeleitet — es ist per Definition R_p = log(p)/|c_p|² eingebaut
-- Analytische Fortsetzung nicht aus Operator gewonnen, sondern direkt als −ζ'/ζ eingesetzt
-- Fehlend: Gammafaktor, Polkompensation, ξ-Funktion, Autokorrelation, Weil-Form, positive Gesamtgramform
-- Tr(R·Σ) ≠ −Ξ'/Ξ ≠ Q_Weil
+- Wohldefiniertheits- oder Nichtentartungsnachweis für c_p
+- Intrinsische Formulierung einer skalaren Primgröße
+- Rückbindung an Weil-Form oder von-Mangoldt-Summe
+- q_conn = |T_p ·|² bleibt eine neue Rekonstruktion ohne Quellenbasis
 
-**Gesamtstatus Block NEU-141–145:** ✓[M]_part
+**Gesamtstatus Block NEU-151–155:** ✓[M]_part
 
 ---
 
 ### Noch ausstehend in 04-grenzoperator-renormierung
 
-NEU-146 bis NEU-150 (Abschlussblock):
+NEU-146 bis NEU-150 (Abschlussblock) — **Mellinfehler aus NEU-148/149 bereits als Vorabinformation bekannt** (durch Rückbindung in NEU-151-Audit identifiziert):
 
 | Datei | Thema |
 |---|---|
 | NEU-146 | Cutoff-Finite-Part-Mangoldt-Spur |
 | NEU-147 | Explizite Finite-Part-Struktur |
-| NEU-148 | Geglättete Mellin-Finite-Part-Spur |
-| NEU-149 | Restkontrolle / Nullstellenvermeidende Kontur |
+| NEU-148 | Geglättete Mellin-Finite-Part-Spur — **Mellinfehler: φ(p/X) statt φ(p^k/X)** |
+| NEU-149 | Restkontrolle / Nullstellenvermeidende Kontur — abhängig von NEU-148 |
 | NEU-150 | Rückbindung Mellin-Operatorspur |
 
-**Leitfragen für NEU-146–150:**
-1. Wird der Finite-Part unabhängig aus Primzahlsummen berechnet, oder wird −ζ'/ζ erneut als Ziel eingesetzt?
-2. Werden Pole bei Nullstellen durch eine Konturrechnung hergeleitet, oder bereits in die Kontur / den Subtraktionsterm eingebaut?
-3. Ist der R-Cutoff ohne zweiseitige Abschätzung für R_p überhaupt mit einem Primzahlcutoff vergleichbar?
-4. Bleiben Mellinvariable, Operatorparameter und Spurregularisierungsparameter typgetrennt?
+---
+
+### Noch ausstehend in 05-primkanal-fourierladung
+
+| Dateien | Thema | Nächster Auditblock |
+|---|---|---|
+| NEU-156–160 | Verbundene Restspurform, Zulässigkeitsraum, invariante Formen, Dualzeuge, Rohkopplungsquotient | **als nächstes** |
+| NEU-161–173 + Varianten | Weitere Primkanal-Fourierladungsstruktur | danach |
+
+**Offene Leitfragen für NEU-156–160:**
+1. Ist B₃ᵃᵈᵐ typgenau als Ketten-, Koketten- oder Formraum identifiziert?
+2. Wird q_conn(x) = |T_p x|² als Rekonstruktion ausgewiesen oder als Quellenbefund ausgegeben?
+3. Erfordert T_p(e_u V_p) ≠ 0 echte Projektionsnichtvernichtung, nicht nur injektive Labels?
+4. Trägt der Rohquotient mehrere invariante Formen — und wird dies als Eindeutigkeitsbarriere behandelt?
+5. Ist der Dualzeuge auf dem typkorrekten Zielraum von T_p definiert?
 
 ---
 
@@ -251,8 +299,8 @@ NEU-146 bis NEU-150 (Abschlussblock):
 
 | Ordner | Verbleibende Dateien | Priorität |
 |---|---|---|
-| 04-grenzoperator-renormierung | NEU-146–150 (5 Dateien) | **als nächstes** |
-| 05-primkanal-fourierladung | NEU-151–173 + Varianten (34 Dateien) | danach |
+| 04-grenzoperator-renormierung | NEU-146–150 (5 Dateien) | parallel ausstehend |
+| 05-primkanal-fourierladung | NEU-156–173 + Varianten (ca. 29 Dateien) | **als nächstes** |
 | 06-hochschild-bc-algebra | NEU-174–222 + a–z (66 Dateien) | danach |
 | 07-weil-explizitformel | NEU-220–221e, NEU-242–246 (35 Dateien) | abschließend |
 
@@ -263,9 +311,12 @@ NEU-146 bis NEU-150 (Abschlussblock):
 | Knoten | Beschreibung | Zuletzt aktiv |
 |---|---|---|
 | Intrinsische positive Primkopplung | Hauptengpass: keine Quelle für Λ_p oder b_p in KMS/HH/Wres | NEU-229 (01) |
-| B₃ᵃᵈᵐ-Provenienz | Koszul-Lift typgeblockt | NEU-243–249 (01) |
-| Nichtentartung c_p ≠ 0 | B_p > 0 nicht bewiesen | NEU-134, NEU-144; → NEU-152 |
+| B₃ᵃᵈᵐ-Provenienz | Koszul-Lift typgeblockt; jetzt auch in 05 als [P-155-5] offen | NEU-243–249 (01), NEU-155 (05) |
+| Nichtentartung c_p ≠ 0 | B_p > 0 nicht bewiesen; obere Schranke ebenfalls zurückgestuft auf ?[O] | NEU-134, NEU-152 |
 | Edge-Label-Direktsumme | In NEU-132/133 nicht formal definiert; nur in rekonstruiertem NEU-44 | NEU-142/143/144 (04) |
 | R-Cutoff ↔ Primzahlcutoff | Einseitige Schranke R_p ≳ p/log p reicht nicht für Äquivalenz | NEU-145; → NEU-146–150 |
 | Operatorielle Regularisierung Tr_reg | Kein unabhängiger Cutoff/Wärme/Finite-Part-Satz bewiesen | NEU-145; → NEU-146–150 |
+| Mellinfehler NEU-148/149 | φ(p/X) statt φ(p^k/X); betrifft alle Importe aus NEU-148/149 | NEU-151 (05) via Rückbindung |
 | Feshbach-Transfer K(z) | Arbeitshypothese, nicht geschlossen | NEU-229 (01) |
+| Rohkopplungs-Pullback q_conn = |T_p·|² | Neue Rekonstruktion, kein Quellenbefund; Wohldefiniertheit offen | NEU-155 (05) |
+| Hebungsunabhängigkeit |c_p|² | Kein intrinsisches Primgewicht solange Norminvarianz offen | NEU-153 (05) |
