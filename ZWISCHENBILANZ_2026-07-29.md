@@ -1,6 +1,6 @@
 # GPT-Audit-Zwischenbilanz
 
-**Stand: 29. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127**
+**Stand: 29. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131**
 
 Dieses Dokument sichert den Gesprächsstand des laufenden GPT-Auditdurchlaufs
 für die Verwendung in einem neuen Chat-Kontext. Es wird am Ende des Gesamtdurchlaufs
@@ -114,6 +114,31 @@ Ordner 03 liefert das statistische Gerüst, auf das spätere HP-Argumente aufbau
 müssen. Insbesondere: Gramstruktur und Weil-Positivität sind Voraussetzung,
 kein Ergebnis — dies ist das von Ordner 02 angekündigte Leitprinzip.
 
+#### 04-grenzoperator-renormierung — Teilergebnis: NEU-128A/B, NEU-130, NEU-131
+
+| Datei | Hauptaussage | Tragfähiger Kern | Problem / Lücke | Status |
+|---|---|---|---|---|
+| NEU-128A | Σ_N(β) sei Klasse-B-Gram-Self-Energy | Hebungsabhängigkeit, Wirkungsebene und endliches Rationalitäts-No-Go korrekt erkannt | Wres-Adjungierung wird als Hilbertadjungierung behandelt; Positivität und Projektoreigenschaft unbelegt | ✅[M]_part |
+| NEU-128B | Self-Energy liegt auf Zielseite, Prä-Lanczos-Metrik bleibt offen | fixer Parameter vs. Spektralparameter; Zweistufentest sinnvoll | Skalar-Vektor-Typfehler; positive Gramfaktorisierung unbelegt; post-Krylov-Zuschreibung und Liftformeln untypisiert | ✅[M]_part |
+| NEU-130 | PSWF als Modell für Edge-/Prä-Lanczos-Koerzivität | sinnvolle methodische Analogie | keine formale Brücke; B-strong falsch als Energieform bezeichnet; X-Projektionen nur heuristisch | ⚠️[M] |
+| NEU-131 | B-strong + Kancellation → Nelson-/Schur-Energie | erkennt, dass Punktkontrolle allein nicht genügt | falscher Faktor c^{1/2}; widersprüchliche Skalen; keine Kancellation in Absolutsumme; abstraktes Lemma undefiniert | ⚠️[M], Lemma ✗[M] |
+
+**Hinweis:** NEU-129 fehlt im Ordner; NEU-130 bezeichnet sich selbst als Ergänzung zu NEU-129.
+Die direkte Lanczos-Prüfung aus NEU-129 ist damit im Quellenbestand nicht abgedeckt: ✅[M]_neg,Quelle.
+
+**Ersetzte Aussagen (128A/B/130/131):**
+- `C_pC_p^#` ist kein Projektor — nur formale Wres-Rang-eins-Abbildung (NEU-128B ersetzt NEU-128A)
+- `Σ_N(β) ≥ 0` im Hilbertraumsinn: ✅[M]_neg,Quelle — nur Wres-Rang-eins-Summe gesichert
+- `A_{ij} := c^{1/2}P_{ij}` ist falsch normiert — korrekt: `A_{ij} := c^{-1/2}P_{ij}` (NEU-131)
+- PSWF-Brückensatz (B-strong + Kancellation → Nelson-/Schur-Kontrolle): offen, ?[O]
+
+**Gesamtbeitrag des Blocks zu Objekt X:**
+Der Block verschiebt die Klasse-B-Route **nicht** nach vorn. Nicht konstruiert sind:
+W_N, W_N^{1/2}B_NW_N^{1/2}, X → W_N, oder eine Hilbertisierung mit C_N^# = C_N*.
+Einziger belastbarer Befund: C_NC_N^# ist relativ zur gewählten Fourier-Hebung
+eine zielseitige Wres-Rang-eins-Self-Energy — nach Projektion Π_{J,N},
+nicht hebungsunabhängig, nicht positiv im Hilbertraumsinn, nicht Prä-Lanczos-typisiert.
+
 ---
 
 ### DAG-Audit-Ergebnisse (2026-07-29)
@@ -152,11 +177,25 @@ kein Ergebnis — dies ist das von Ordner 02 angekündigte Leitprinzip.
 Kritische Skalakorrektur erzwingt Klasse-B-Rücksetzung in W-125-1;
 Typanforderung in W-127-3 definiert Eintrittsbedingung für NEU-128ff.
 
+#### NEU-128A/B/130/131-Block (B-128 / P-130 / P-131)
+
+| Knoten | Status | Bemerkung |
+|--------|--------|-----------|
+| B-128-1 | ✅[M] relativ zur Hebung | C_NC_N^# als Wres-Rang-eins-Summe |
+| B-128-2 | ✅[M]_neg,Quelle | C_NC_N^# ≥ 0 im Hilbertraumsinn — nicht belegt |
+| B-128-3 | ?[O] | Hebungsunabhängigkeit offen |
+| B-128-4 | ?[O] | Σ_N(β) als feste Prä-Lanczos-Metrik offen |
+| B-128-5 | ✅[M]_neg | β = s zugleich als Self-Energy und feste Metrik — ausgeschlossen |
+| P-130-1 | ?[O] | PSWF als formale Brücke zu W_N offen |
+| P-131-1 | ✅[M]_neg | B-strong allein liefert keine Nelson-Energie |
+| P-131-2 | ?[O] | abstraktes Edge-Schur-Nelson-Lemma offen |
+| P-131-3 | ✗[M] | A_{ij} = c^{1/2}P_{ij} als normierte Amplitude — falsch |
+
 ---
 
 ### Noch ausstehend (GPT-Audit)
 
-- **04-grenzoperator-renormierung** (NEU-121–150, 42 Dateien)
+- **04-grenzoperator-renormierung** (NEU-132–150, weiter laufend — ab NEU-132)
 - **05-primkanal-fourierladung** (NEU-151–173, 34 Dateien)
 - **06-hochschild-bc-algebra** (NEU-174–222, 66 Dateien)
 - **07-weil-explizitformel** (NEU-220–246, 35 Dateien)
@@ -178,16 +217,19 @@ der gesamten Stieltjes-Linie.
 - KMS-Fixvektor als Randvektor: negativ geschlossen [O-229-2]
 - Rohkopplung allein, beliebige Liftwahl, Ladungsprojektor, Nulldifferential:
   alle ausgeschlossen
+- β = s als gleichzeitige Self-Energy und feste Metrik: ausgeschlossen [B-128-5]
+- B-strong allein → Nelson-Energie: ausgeschlossen [P-131-1]
+- A_{ij} = c^{1/2}P_{ij} als normierte Amplitude: falsch [P-131-3]
 
-**Offene Konstruktionsaufgabe:**
-Intrinsischer, nichttrivialer Quellkomplex, dessen Differential den Liftbereich
-respektiert und ein beschränktes Λ_p erzeugt. Koszul-Kandidat (NEU-246/247)
-ist der aktuell vielversprechendste Pfad, aber an Typbarriere (δ_p auf B₃ᵃᵈᵐ)
-blockiert. Typanforderung aus W-127-3 definiert Eingabebedingung für NEU-128ff.
+**Offene Konstruktionsaufgaben:**
+1. Intrinsischer, nichttrivialer Quellkomplex für Λ_p (Koszul-Kandidat NEU-246/247, Typbarriere)
+2. Prä-Lanczos-Metrik W_N mit Hebungsunabhängigkeit [B-128-3/4]
+3. PSWF-Brückensatz: B-strong + quantitative Oszillationsbedingung → Nelson-/Schur-Kontrolle [P-131-2]
+4. Prüfung ob NEU-44 Operatorgewichte liefert oder nur relativen Graph-Hilbertraum (NEU-134)
 
 ---
 
-## Konsistentes Gesamtbild (00–03)
+## Konsistentes Gesamtbild (00–03 + 04 Teilergebnis)
 
 ```
 Ordner     Hauptleistung                              Hauptengpass
@@ -198,13 +240,20 @@ Ordner     Hauptleistung                              Hauptengpass
 02         Strukturdiagnosen, Quadratformstrategie    HP-Weg ausgeräumt
 03         Gram-Priorität etabliert, Skalakorrektur   R1-Rigiditätsnachweis offen
            √N → √(N/log N) erzwungen
+04 (part)  Klasse-B-Route präzisiert; Wres ≠ Hilbert  W_N / Prä-Lanczos-Metrik
+           klar herausgearbeitet; Normfehler (131)    fehlt vollständig
+           identifiziert und korrigiert
 ```
 
 **Leitprinzip (aus 02, bestätigt durch 03):**
 Weil-Positivität und Gramstruktur zuerst — Hilbert–Pólya oder Determinante
 erst danach.
 
+**Neues Strukturprinzip (aus 04 Teilergebnis):**
+Wres-Adjungierung (^#) ≠ Hilbertraum-Adjungierung (^*) — diese Unterscheidung
+ist ab NEU-128 verbindlich in alle weiteren Auditschritte einzutragen.
+
 ---
 
 *Zwischenbilanz aktualisiert: 2026-07-29 — GPT-Audit-Durchlauf laufend.*
-*Nächster Schritt: NEU-128A (04-grenzoperator-renormierung).*
+*Nächster Schritt: NEU-132 (04-grenzoperator-renormierung, Abel/PSWF-Block).*
