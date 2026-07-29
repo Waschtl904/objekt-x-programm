@@ -1,6 +1,6 @@
 # GPT-Audit-Zwischenbilanz
 
-**Stand: 29. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136 + Audit NEU-137–140 + Audit NEU-141–145 + Audit NEU-146–150 (offen, Mellinfehler) + Audit NEU-151–155**
+**Stand: 29. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136 + Audit NEU-137–140 + Audit NEU-141–145 + Audit NEU-146–150 (offen, Mellinfehler) + Audit NEU-151–155 + Audit NEU-156–160 + Audit NEU-161–165b**
 
 Dieses Dokument sichert den Gesprächsstand des laufenden GPT-Auditdurchlaufs
 für die Verwendung in einem neuen Chat-Kontext. Es wird am Ende des Gesamtdurchlaufs
@@ -200,34 +200,6 @@ fest: 𝔅 := A_Q, C₃^HH(𝔅) = 𝔅^⊗4, Bd₃^HH(𝔅) = im b₄.
 | NEU-154 | Pullback über C_p^rel auf Liftvektoren | Abstrakte Quotienten- und Reichweitenideen | Zentraler Operator wirkt auf falschem Raum; Injektivität mit Rang ≤ 1 unvereinbar; globale Skalierung unzulässig | ⚠[M], Kernpullback ×[M] |
 | NEU-155 | Trennung von Rohkopplung, Primkanaloperator und Rang-eins-Erweiterung | Wesentliche Typkorrektur; Rohkopplungsquotient sinnvoll konditionalisiert | B₃ᵃᵈᵐ, Pullback und Einbettungsisometrie offen; Endformel erneut typfalsch | ✓[M]_part |
 
-**Detailbefunde NEU-151–155:**
-
-*Drei widerlegte Statusmarker (NEU-151):*
-- Obere Schranke O((log p)²/p): von NEU-151 als gesichert übernommen, von NEU-152 selbst als unbewiesene Annahme identifiziert → **?[O]** (zurückgestuft von ✓[M])
-- Skalarer Finite-Part aus NEU-148/149: NEU-148 verwechselt Primlabel-Cutoff φ(p/X) mit Primpotenzcutoff φ(p^k/X); Mellin-Integrand falsch → **×[M]**
-- „Kein Import hängt an offener Hypothese": widerlegt durch obige beiden Punkte → **×[M]**
-
-*Rang-eins-Situation nach NEU-155:*
-- rang C_p^rel ≤ 1: **✓[M]** (folgt trivial aus Rang-eins-Struktur)
-- rang C_p^rel = 1 für alle p: **?[O]** (erfordert c_p ≠ 0, nicht bewiesen)
-
-*Zweite Variationsformel in NEU-153:*
-- NEU-153 schreibt d²/dt²|_{t=0} |A + tB + t²C|² = 2|B|² + 2Re⟨A,C⟩
-- Korrekt ist: 2|B|² + **4**Re⟨A,C⟩ → **×[M]**
-
-*Pullback-Situation nach NEU-155:*
-- Alter Pullback (NEU-154): ⟨C_p^rel x, C_p^rel y⟩ auf Liftvektoren → **×[M]** (falscher Operatortyp)
-- Neuer offener Kandidat (NEU-155): q_conn(x) =? |T_p x|² bzw. ⟨T_p x, T_p y⟩ → **?[O]**
-- Unter diesem Kandidat gilt T_p(v_p) = 0, also q_conn(v_p) = 0 ≠ 1: positive-definite Kugelgeometrie aus NEU-153 nicht anwendbar
-
-*Ebenenarchitektur (stärkster positiver Befund):*
-> intrinsische Rohkopplung T_p → Hebungsauswertung → eindimensionaler Primkanal C_p^[ε̂_p] → Rang-eins-Erweiterung C_p^rel[ε̂_p]
-
-Die Rang-eins-Struktur entsteht erst durch Kompression auf den eindimensionalen Primkanal, nicht aus einer Degeneration der ursprünglichen Kopplung.
-
-*Interner Typfehler im Endbefund NEU-155:*
-- NEU-155 schreibt C_p^rel[ε̂_p](v_p) ~ Ψ_p; v_p liegt weder in ℂε_p noch im dritten Schichtkanal → **×[M]**
-
 **DAG-Knoten nach NEU-151–155:**
 
 | Knoten | Aussage | Status |
@@ -249,19 +221,94 @@ Die Rang-eins-Struktur entsteht erst durch Kompression auf den eindimensionalen 
 | [P-155-4] | ι_{J,N} isometrisch | ?[O] |
 | [P-155-5] | B₃ᵃᵈᵐ typgenau identifiziert | ?[O] |
 
-**Stärkster positiver Satz des Blocks:**
-> T_p, C_p^[ε̂_p] und C_p^rel[ε̂_p] sind drei verschiedene, klar typisierte Abbildungen.
+---
 
-**Stärkster negativer Satz des Blocks:**
-> |c_p|² ist derzeit kein wohldefiniertes intrinsisches Primgewicht.
+#### 05-primkanal-fourierladung — Teilergebnis: NEU-156–160
 
-**Was der Block nicht erreicht:**
-- Wohldefiniertheits- oder Nichtentartungsnachweis für c_p
-- Intrinsische Formulierung einer skalaren Primgröße
-- Rückbindung an Weil-Form oder von-Mangoldt-Summe
-- q_conn = |T_p ·|² bleibt eine neue Rekonstruktion ohne Quellenbasis
+*(Dieser Block wurde unmittelbar vor dem Auditblock NEU-161–165b abgeschlossen.
+Detailbefunde werden beim nächsten Teilaudit eingetragen.)*
 
-**Gesamtstatus Block NEU-151–155:** ✓[M]_part
+**Zwei wiedergeöffnete Punkte aus scheinbar geschlossenen Vorgängerblöcken:**
+
+> **Wiedergeöffnet [1]:** `L₃° = e₁V₁` ist in NEU-42 **nicht** als frei zulässige Wahl bewiesen. → **?[O]**
+
+> **Wiedergeöffnet [2]:** `‖E_{1;1→p}^rel‖² > 0` folgt **nicht** aus der Frobenius-Nichtausgeartetheit von OP-4.1. → **×[M]** (aus OP-4.1), **✓[K/M]** (nur im explizit definierten Hilbertmodell)
+
+**Negativer Abschluss (NEU-165a/b):**
+Die Operatorfamilie R_{p,j} wurde in NEU-41 und NEU-157 **nicht konstruiert**.
+Alle Aussagen, die R_{p,j} als bereits definierte Operatoren behandeln, sind zurückzunehmen.
+
+---
+
+#### 05-primkanal-fourierladung — Teilergebnis: NEU-161–165b
+
+**Auditumfang:** NEU-161, NEU-162, NEU-163, NEU-164, NEU-165, NEU-165a, NEU-165b
+sowie Direktrücklesung von NEU-24, NEU-41, NEU-42, NEU-44 (historisch + rekonstruiert).
+
+**Zentraler Befund des Blocks:**
+
+> **Stärkster positiver Satz:**
+> Für einen vorgegebenen geladenen Einmodentest ist der Skalarfaktor `(p−1) log p` nicht null.
+>
+> **Stärkster negativer Satz:**
+> Weder die freie Zulässigkeit dieses Einmodentests noch die linearen R_{p,j}
+> sind im Quellenbestand bewiesen.
+
+**Gesamtstatus Block NEU-161–165b:** ✓[M]_part
+
+| Datei | Hauptaussage | Tragfähiger Kern | Hauptproblem | Status |
+|---|---|---|---|---|
+| NEU-161 | Fourierladungsengpass und getrennte Folgerungsketten | Logische Trennung Fourierkoeffizient / Rohbild / Quotient / Projektion / c_p | Mehrdeutiges T_p^rel; nicht konstruierter linearer Zulässigkeitsraum | ✓[M]_part |
+| NEU-162 | L₃° = e₁V₁ sei frei zulässig | Skalarfaktor (p−1) log p korrekt | Bedingten Testfall als freien Wahlquantor missverstanden; Koketten-/Klassenbedingungen ungeprüft | ⚠[M] |
+| NEU-163 | Einmodenzeuge und Nichtnullkante | Einterm beseitigt Summenkonvergenz und Separation | Clock mit Rohkopplung verwechselt; Liftmitgliedschaft undefiniert; Positivität folgt nicht aus OP-4.1 | ⚠[M] |
+| NEU-164 | Entscheidungsknoten für Basiszeugen | Positivitätswarnung, Cutoffquantor und Basis-/Kombinationsunterscheidung korrekt | U_p^adm beruht auf nicht existierenden R_{p,j}; exakt gegen tangential nicht getrennt | ✓[M]_part |
+| NEU-165 | Allgemeiner Matrix- und Kernrahmen | Abstrakte lineare Algebra korrekt | Konkrete Operatoren und Kernräume fehlen; exakte Zulässigkeit ist nicht linear | ✓[M]_part |
+| NEU-165a | Quellenregister der R_{p,j} | Negativer Quellenbefund; korrekter Import von C_p | Projektion Π_{J,N} und tatsächlicher Spaltenträger offen | ✓[M]_part |
+| NEU-165b | Konsistenzaudit der postulierten Operatoren | Vollständiger Nachweis: keine Konstruktion der R_{p,j}; Normierung quadratisch | Keine wesentliche verbleibende Lücke im negativen Befund | ✓[M] |
+
+**Widerlegte und zurückgenommene Aussagen aus NEU-162/163:**
+
+| Aussage | Neuer Status |
+|---|---|
+| NEU-42 enthält einen freien Wahlquantor für L₃° | ×[M] |
+| L₃° = e₁V₁ ∈ 𝒜₃° (als Quellenbeweis) | ×[M] — nur ✓[K/M] als neue Modellwahl |
+| Fourierladungsknoten geschlossen (via NEU-162) | ×[M] — zurückgestuft auf ?[O] |
+| T_p^rel gleichzeitig Rohkopplung und Clock | ×[M] |
+| ‖E_{1;1→p}^rel‖² > 0 aus OP-4.1 | ×[M] |
+| R_{p,j} als bereits definierte Operatoren | ✓[M]_neg,Quelle (alle Aussagen zurückzunehmen) |
+| Linearer Zulässigkeitsraum ker π_prim ∩ ⋂_j ker R_{p,j} | ✓[M]_neg,Quelle + ✓[M]_neg (Normierung quadratisch) |
+
+**DAG-Knoten nach NEU-161–165b:**
+
+| Knoten | Aussage | Status |
+|---|---|---|
+| [L3-161-1] | NEU-42 konstruiert festen geladenen Koeffizienten | ✓[M]_neg,Quelle |
+| [L3-162-1] | NEU-42 erlaubt beliebige freie Einmodenwahl | ×[M] |
+| [L3-162-2] | L₃° = e₁V₁ als neuer Testansatz | ✓[K/M] |
+| [L3-162-3] | L₃° = e₁V₁ kompatibel mit vorgegebenem [L₃] | ?[O] |
+| [L3-162-4] | (p−1) log p ≠ 0 | ✓[M] |
+| [E-163-1] | Einmoden-Rohkopplungsformel (nach Typkorrektur) | ✓[K/M] |
+| [E-163-2] | T_p^rel gleichzeitig Rohkopplung und Clock | ×[M] |
+| [E-163-3] | ‖E_{1;1→p}^rel‖² > 0 aus OP-4.1 | ×[M] |
+| [E-163-4] | positive normierte Kante im rekonstruierten Hilbertmodell | ✓[K/M] |
+| [R-165a-1] | R_{p,j} in NEU-41 definiert | ✓[M]_neg,Quelle |
+| [R-165a-2] | C_p explizit importiert | ✓[M] |
+| [R-165a-3] | C_p = R_{p,j} für ein j | ✓[M]_neg,Quelle |
+| [R-165b-1] | exakte Normierungsbedingung als linearer Kern | ✓[M]_neg |
+| [R-165b-2] | Tangentialoperatoren als Fréchet-Ableitungen | ?[O] |
+| [Q-165-1] | allgemeiner Matrix-/Kernrahmen | ✓[M] |
+| [Q-165-2] | konkreter linearer Präzulässigkeitsraum | ?[O] |
+| [Q-165-3] | Q_p^rel ≠ 0 | ?[O] |
+
+**Vorrangiger Prüfauftrag für den nächsten Block:**
+Nicht mehr: `R_{p,j}(e_u V_p) berechnen` (die R_{p,j} existieren nicht).
+Stattdessen:
+
+> Welche der vier Bedingungen aus NEU-41 können tatsächlich als
+> globale lineare Operatorbedingungen konstruiert werden?
+
+Danach: typkorrekter Präzulässigkeitsraum (nur lineare Bedingungen) von der
+nichtlinearen Normierungsfaser trennen.
 
 ---
 
@@ -283,15 +330,11 @@ NEU-146 bis NEU-150 (Abschlussblock) — **Mellinfehler aus NEU-148/149 bereits 
 
 | Dateien | Thema | Nächster Auditblock |
 |---|---|---|
-| NEU-156–160 | Verbundene Restspurform, Zulässigkeitsraum, invariante Formen, Dualzeuge, Rohkopplungsquotient | **als nächstes** |
-| NEU-161–173 + Varianten | Weitere Primkanal-Fourierladungsstruktur | danach |
+| NEU-166–173 + Varianten | Operatorhierarchie Rohkopplung/Kompression/Rang-1; weitere Primkanal-Fourierladungsstruktur | **als nächstes** |
 
-**Offene Leitfragen für NEU-156–160:**
-1. Ist B₃ᵃᵈᵐ typgenau als Ketten-, Koketten- oder Formraum identifiziert?
-2. Wird q_conn(x) = |T_p x|² als Rekonstruktion ausgewiesen oder als Quellenbefund ausgegeben?
-3. Erfordert T_p(e_u V_p) ≠ 0 echte Projektionsnichtvernichtung, nicht nur injektive Labels?
-4. Trägt der Rohquotient mehrere invariante Formen — und wird dies als Eindeutigkeitsbarriere behandelt?
-5. Ist der Dualzeuge auf dem typkorrekten Zielraum von T_p definiert?
+**Leitfrage für NEU-166ff.:**
+NEU-166a soll laut DAG eine Operatorhierarchie Rohkopplung → Kompression → Rang-1 entwickeln.
+Zu prüfen: Welche der vier Bedingungen aus NEU-41 sind global linear konstruierbar?
 
 ---
 
@@ -300,7 +343,7 @@ NEU-146 bis NEU-150 (Abschlussblock) — **Mellinfehler aus NEU-148/149 bereits 
 | Ordner | Verbleibende Dateien | Priorität |
 |---|---|---|
 | 04-grenzoperator-renormierung | NEU-146–150 (5 Dateien) | parallel ausstehend |
-| 05-primkanal-fourierladung | NEU-156–173 + Varianten (ca. 29 Dateien) | **als nächstes** |
+| 05-primkanal-fourierladung | NEU-166–173 + Varianten (ca. 22 Dateien) | **als nächstes** |
 | 06-hochschild-bc-algebra | NEU-174–222 + a–z (66 Dateien) | danach |
 | 07-weil-explizitformel | NEU-220–221e, NEU-242–246 (35 Dateien) | abschließend |
 
@@ -311,12 +354,16 @@ NEU-146 bis NEU-150 (Abschlussblock) — **Mellinfehler aus NEU-148/149 bereits 
 | Knoten | Beschreibung | Zuletzt aktiv |
 |---|---|---|
 | Intrinsische positive Primkopplung | Hauptengpass: keine Quelle für Λ_p oder b_p in KMS/HH/Wres | NEU-229 (01) |
-| B₃ᵃᵈᵐ-Provenienz | Koszul-Lift typgeblockt; jetzt auch in 05 als [P-155-5] offen | NEU-243–249 (01), NEU-155 (05) |
-| Nichtentartung c_p ≠ 0 | B_p > 0 nicht bewiesen; obere Schranke ebenfalls zurückgestuft auf ?[O] | NEU-134, NEU-152 |
-| Edge-Label-Direktsumme | In NEU-132/133 nicht formal definiert; nur in rekonstruiertem NEU-44 | NEU-142/143/144 (04) |
+| B₃ᵃᵈᵐ-Provenienz | Koszul-Lift typgeblockt; auch in 05 als [P-155-5] offen | NEU-243–249 (01), NEU-155 (05) |
+| Nichtentartung c_p ≠ 0 | B_p > 0 nicht bewiesen; obere Schranke zurückgestuft auf ?[O] | NEU-134, NEU-152 |
+| Edge-Label-Direktsumme | In NEU-132/133 nicht formal definiert; nur im rekonstruierten NEU-44 | NEU-142/143/144 (04) |
 | R-Cutoff ↔ Primzahlcutoff | Einseitige Schranke R_p ≳ p/log p reicht nicht für Äquivalenz | NEU-145; → NEU-146–150 |
 | Operatorielle Regularisierung Tr_reg | Kein unabhängiger Cutoff/Wärme/Finite-Part-Satz bewiesen | NEU-145; → NEU-146–150 |
 | Mellinfehler NEU-148/149 | φ(p/X) statt φ(p^k/X); betrifft alle Importe aus NEU-148/149 | NEU-151 (05) via Rückbindung |
 | Feshbach-Transfer K(z) | Arbeitshypothese, nicht geschlossen | NEU-229 (01) |
 | Rohkopplungs-Pullback q_conn = |T_p·|² | Neue Rekonstruktion, kein Quellenbefund; Wohldefiniertheit offen | NEU-155 (05) |
 | Hebungsunabhängigkeit |c_p|² | Kein intrinsisches Primgewicht solange Norminvarianz offen | NEU-153 (05) |
+| L₃° = e₁V₁ kompatibel mit [L₃] | Zulässigkeit als Repräsentant des vorgegebenen [L₃] nicht gezeigt | NEU-162 (05) |
+| Lineare Konstruierbarkeit der NEU-41-Bedingungen | Welche der vier Bedingungen sind global als lineare Operatoren realisierbar? | NEU-165b (05) |
+| Fréchet-Ableitungen als R_{p,j} | Tangentialraum-Konstruktion nach Linearisierung der Normierungsquadrik | NEU-165b (05) |
+| Q_p^rel ≠ 0 (Rohkopplungsquotient) | Kein exakt zulässiger Nichtnullzeuge konstruiert | NEU-165 (05) |
