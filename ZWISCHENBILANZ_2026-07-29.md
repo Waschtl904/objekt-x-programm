@@ -1,6 +1,6 @@
 # GPT-Audit-Zwischenbilanz
 
-**Stand: 29. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136 + Audit NEU-137–140 + Audit NEU-141–145 + Audit NEU-146–150 (offen, Mellinfehler) + Audit NEU-151–155 + Audit NEU-156–160 + Audit NEU-161–165b**
+**Stand: 29. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136 + Audit NEU-137–140 + Audit NEU-141–145 + Audit NEU-146–150 (offen, Mellinfehler) + Audit NEU-151–155 + Audit NEU-156–160 + Audit NEU-161–165b + Audit NEU-166–168**
 
 Dieses Dokument sichert den Gesprächsstand des laufenden GPT-Auditdurchlaufs
 für die Verwendung in einem neuen Chat-Kontext. Es wird am Ende des Gesamtdurchlaufs
@@ -300,15 +300,132 @@ sowie Direktrücklesung von NEU-24, NEU-41, NEU-42, NEU-44 (historisch + rekonst
 | [Q-165-2] | konkreter linearer Präzulässigkeitsraum | ?[O] |
 | [Q-165-3] | Q_p^rel ≠ 0 | ?[O] |
 
-**Vorrangiger Prüfauftrag für den nächsten Block:**
-Nicht mehr: `R_{p,j}(e_u V_p) berechnen` (die R_{p,j} existieren nicht).
-Stattdessen:
+---
 
-> Welche der vier Bedingungen aus NEU-41 können tatsächlich als
-> globale lineare Operatorbedingungen konstruiert werden?
+#### 05-primkanal-fourierladung — Teilergebnis: NEU-166–168
 
-Danach: typkorrekter Präzulässigkeitsraum (nur lineare Bedingungen) von der
-nichtlinearen Normierungsfaser trennen.
+**Auditumfang:** NEU-166, NEU-166a, NEU-166b (zwei Fassungen: Provenienzprotokoll
+und Fallverzweigung), NEU-167, NEU-167b, NEU-168.
+Primärquellen direkt zurückgelesen: NEU-41 und NEU-157 (revidierte Fassung).
+
+**Zentraler negativer Befund:**
+
+> **Die bisherige Zeugenroute k ∈ ker C_p \ ker T_p ist weder typkorrekt
+> noch äquivalent zur Quellenforderung.**
+>
+> NEU-41 verlangt Hebungsunabhängigkeit von C_p · C_p#, nicht von C_p selbst.
+> Außerdem existiert im auditierten Quellenkegel kein unabhängiger transversaler
+> Detektor T̃_p.
+
+**Stärkster positiver Satz:**
+Auf dem kontrollierten endlichen Modenbereich kann die Rohkopplung über
+Fourierkoeffizienten und ein lineares Kollisionssystem analysiert werden.
+
+**Stärkster negativer Satz:**
+Die bisherige Kerntrennungsformel verwendet den falschen Operator und eine
+zu starke Hebungsinvarianz.
+
+**Gesamtstatus Block NEU-166–168:** ✓[M]_part
+
+| Datei | Tragfähiger Kern | Hauptfehler oder Lücke | Status |
+|---|---|---|---|
+| NEU-166 | Ein-/Zweimoden-Lineare-Algebra; Normierungslemma abstrakt korrekt | C_p auf falschem Raum; unbekanntes T_p; Kernbedingung nicht quellenäquivalent | ⚠[M] |
+| NEU-166a | Absoluter/relativer Zeuge, Domänen- und Quotientenaudit | Quadriknotation falsch; ΔC_p = 0 zu stark; T̃_p nicht konstruiert | ✓[M]_part |
+| NEU-166b – Provenienz | Gutes Quellenstatusprotokoll | Entscheidungsmatrix nicht ausgefüllt; kein tatsächlicher Entscheidungsabschluss | ✓[M]_part |
+| NEU-166b – Fallverzweigung | R_{p,j} negativ geschlossen; modale Rohformel erkannt | Doppel-ID; nur lokale Auswertung; Koeffizientennotation unklar; kein globaler Detektor | ✓[M]_part |
+| NEU-167 | Fourier-Nichtverschwindung korrekt von Kerngleichungen getrennt | Topologie und globale Domäne von P_p^ch fehlen | ✓[M]_part |
+| NEU-167b | Keine weiteren linearen Kernoperatoren im Quellenkegel | Hebungsunabhängigkeit zu stark als C_p-Kern gelesen; Versionswiderspruch NEU-167/167b | ✓[M]_part |
+| NEU-168 | Endlicher Koeffizientenfaktor, Kollisionssystem und Quadrikschnitt sinnvoll | P_p^ch und G_p^raw werden außerhalb ihrer Domäne auf M_p angewandt | ✓[M]_part |
+
+**Zentraler Typfehler (NEU-166):**
+NEU-41 definiert C_p : ℂε_p → H_{J,N} — der Operator nimmt einen Vektor des
+eindimensionalen Primärraums als Argument, nicht einen Liftvektor k ∈ K_p.
+NEU-166 schreibt dagegen C_p(k), ker C_p ∩ K_p, C_p = Π_{J,N}G_p — diese
+Ausdrücke sind mit dem Quellentyp von C_p nicht komponierbar. **Status: ×[M]**
+
+Typkorrekte Ersatznotation erfordert eine liftseitige Schattenabbildung:
+`𝒞_p : D_p^lift → H_{J,N}`, sodass `𝒞_p = Π_{J,N} G_p` auf kontrolliertem
+Rohbereich gilt. Nicht typkorrekt: `C_p = Π_{J,N} G_p`.
+
+**Quellenforderung falsch verengt (NEU-166/166a/167b):**
+NEU-41 fordert Hebungsunabhängigkeit von C_p' · C_p'# (Gram-Invariante),
+nicht C_p = C_p'. Die Kernbedingung ΔC_p(h) = 0 bzw. K_p^allow ⊆ ker 𝒞_p
+ist nur eine starke hinreichende Spezialform — sie schließt Phasen- und andere
+Gram-erhaltende Veränderungen aus, obwohl diese die Quellenbedingung erfüllen.
+**Status als Äquivalenz: ×[M]**; **Status als bewusst gewählte starke Unterroute: ✓[K/M]**
+
+Die quellentreue Invariante ist die operatorwertige Abbildung:
+`Φ_p : ε̂ ↦ C_p^[ε̂] · C_p^[ε̂]#`
+
+**Doppelbelegung NEU-166b:**
+Zwei verschiedene Dokumente besitzen dieselbe Katalogkennung. Erforderlich:
+Umbenennung in `NEU-166b-arch` (Methodisches Protokoll) und `NEU-166b-dec`
+(Partielle Fallentscheidung) oder ein expliziter Ersetzungsvermerk.
+
+**Positiver Dreifachbefund (NEU-167/167b):**
+1. Absolute und relative Zeugenfragen sind verschieden. ✓[M]
+2. Die Fourierladungsforderung ist keine lineare Kerngleichung. ✓[M]_neg,Quelle
+3. Im auditierten Quellenkegel existiert keine zusätzliche Familie linearer
+   Zulässigkeitsoperatoren: A_p = ∅, K_p^hom = K_p. ✓[M]_neg,Quelle
+
+**Negativer Hauptbefund (kein transversaler Detektor):**
+Die Quellen liefern die präprojektive Rohkopplungsformel, die Jacobi-Projektion
+und den hebungsabhängigen Primkanaloperator — aber keinen davon unabhängigen
+Operator T̃_p mit eigener Geometrie. **Status: ✓[M]_neg,Quelle**
+Damit fehlt dem Kerntrennungsprogramm derzeit sein zweiter Operator.
+
+**Widerlegte und zurückgenommene Aussagen:**
+
+| Aussage | Neuer Status |
+|---|---|
+| k ∈ ker C_p \ ker T_p als Zeugenroute | ×[M] |
+| C_p = Π_{J,N} G_p (Operatorfaktorisierung) | ×[M] |
+| K_p^allow ⊆ ker 𝒞_p als Äquivalenz zur Quellenforderung | ×[M] |
+| R_{p,j} + T̃_p quellenfest vorhanden (Fall 2) | ✓[M]_neg,Quelle |
+| A_p ≠ ∅ (weitere lineare Zulässigkeitsoperatoren) | ✓[M]_neg,Quelle |
+| M_p ⊆ D(P_p^ch) ∩ D(G_p^raw) | ?[O] — Domainlücke |
+| Konvergenzfreiheit auf D_{p,fin}^ch bei unendlichem (s,m)-Träger | ×[M] |
+
+**DAG-Knoten nach NEU-166–168:**
+
+| Knoten | Aussage | Status |
+|---|---|---|
+| [O-166-C] | C_p auf Liftvariationen definiert | ×[M] |
+| [O-166-𝒞] | 𝒞_p : D_p^lift → H_{J,N} typkorrekt definiert | ✓[K/M] auf kontrollierten modalen Hebungen |
+| [O-166-Φ] | C_p^[ε̂] · C_p^[ε̂]# als korrekte Invariante | ✓[M] als Quellenlesart; positive Hilbertinterpretation konditional |
+| [O-166-ker] | ΔC_p = 0 ⟺ Δ(C_p · C_p#) = 0 | ×[M] |
+| [O-166a-T] | unabhängiger transversaler Detektor T̃_p | ✓[M]_neg,Quelle |
+| [O-166b-Fall2] | R_{p,j} + T̃_p quellenfest vorhanden | ✓[M]_neg,Quelle |
+| [O-166b-Fall3a] | modale Roh-Auswertungsformel | ✓[K/M] |
+| [O-167-1] | zusätzliche Nullmoden-Kernbedingung in NEU-41 | ✓[M]_neg,Quelle |
+| [O-167-2] | weitere L_{p,a} aus NEU-44/157 | ✓[M]_neg,Quelle |
+| [O-167-A] | A_p = ∅, K_p^hom = K_p | ✓[M]_neg,Quelle im auditierten Quellenkegel |
+| [O-168-dom] | M_p ⊆ D(P_p^ch) ∩ D(G_p^raw) | ?[O] |
+| [O-168-coll] | ker B_p vollständig bestimmt | ?[O] |
+| [O-168-wit] | M_p ⊄ ker G_p^raw | ?[O] |
+
+**Korrigierte Architektur (Zusammenfassung):**
+
+| Objekt | Korrekte Definition |
+|---|---|
+| C_p^[ε̂] | Primkanaloperator: ℂε_p → H_{J,N}, liftabhängig |
+| 𝒞_p | Liftseitige Schattenabbildung: D_p^lift → H_{J,N} |
+| Φ_p(ε̂) | Gram-Invariante: C_p^[ε̂] · C_p^[ε̂]# |
+| G_p^raw | Präprojektiver Rohoperator: D_p^raw → Y_p^raw |
+| Zeugenfaser (quelltreu) | {ε̂, ε̂' ∈ 𝔏_p^adm : Φ_p(ε̂') = Φ_p(ε̂), aber G_p^raw(ε̂') ≠ G_p^raw(ε̂)} |
+| Zeugenfaser (stark, Spezialfall) | ker 𝒞_p \ ker T̃_p — zulässig, aber nicht vollständig |
+
+**Nächster Prüfauftrag (NEU-169–173):**
+
+Besonders zu prüfen:
+1. Ob der gewichtete Träger {(s,m) : ℓ_{s,m} ≠ 0} für das tatsächliche L₃°
+   aus einer Primärquelle folgt
+2. Ob L₃° überhaupt als konkreter Kozyklus und nicht nur als Klasse [L₃]
+   definiert ist
+3. Ob NEU-169 ein Kollisionsresultat für einen quellenfesten Operator oder
+   nur für einen frei gewählten Testrepräsentanten beweist
+
+Verbleibende Dateien: NEU-169, NEU-170, NEU-170a/b/c/d, NEU-171, NEU-172, NEU-173
 
 ---
 
@@ -330,11 +447,7 @@ NEU-146 bis NEU-150 (Abschlussblock) — **Mellinfehler aus NEU-148/149 bereits 
 
 | Dateien | Thema | Nächster Auditblock |
 |---|---|---|
-| NEU-166–173 + Varianten | Operatorhierarchie Rohkopplung/Kompression/Rang-1; weitere Primkanal-Fourierladungsstruktur | **als nächstes** |
-
-**Leitfrage für NEU-166ff.:**
-NEU-166a soll laut DAG eine Operatorhierarchie Rohkopplung → Kompression → Rang-1 entwickeln.
-Zu prüfen: Welche der vier Bedingungen aus NEU-41 sind global linear konstruierbar?
+| NEU-169–173 + Varianten | L₃°-Quellenimport, Typfundament, Kollisionssystem | **als nächstes** |
 
 ---
 
@@ -343,7 +456,7 @@ Zu prüfen: Welche der vier Bedingungen aus NEU-41 sind global linear konstruier
 | Ordner | Verbleibende Dateien | Priorität |
 |---|---|---|
 | 04-grenzoperator-renormierung | NEU-146–150 (5 Dateien) | parallel ausstehend |
-| 05-primkanal-fourierladung | NEU-166–173 + Varianten (ca. 22 Dateien) | **als nächstes** |
+| 05-primkanal-fourierladung | NEU-169–173 + Varianten (ca. 9 Dateien) | **als nächstes** |
 | 06-hochschild-bc-algebra | NEU-174–222 + a–z (66 Dateien) | danach |
 | 07-weil-explizitformel | NEU-220–221e, NEU-242–246 (35 Dateien) | abschließend |
 
@@ -367,3 +480,8 @@ Zu prüfen: Welche der vier Bedingungen aus NEU-41 sind global linear konstruier
 | Lineare Konstruierbarkeit der NEU-41-Bedingungen | Welche der vier Bedingungen sind global als lineare Operatoren realisierbar? | NEU-165b (05) |
 | Fréchet-Ableitungen als R_{p,j} | Tangentialraum-Konstruktion nach Linearisierung der Normierungsquadrik | NEU-165b (05) |
 | Q_p^rel ≠ 0 (Rohkopplungsquotient) | Kein exakt zulässiger Nichtnullzeuge konstruiert | NEU-165 (05) |
+| Kein unabhängiger transversaler Detektor T̃_p | Im auditierten Quellenkegel nicht konstruiert — zweiter Operator des Kerntrennungsprogramms fehlt | NEU-166–168 (05) |
+| Quellenforderung als Gram-Invariante Φ_p | C_p · C_p# statt C_p = const; Zeugengeometrie muss auf Φ_p aufgebaut werden | NEU-166–168 (05) |
+| Domainerweiterung P_p^ch und G_p^raw auf M_p | Operatoren nur auf endlichem Modenraum definiert; vollständige Lifte nicht erfasst | NEU-168 (05) |
+| L₃°-Träger aus Primärquelle | Ob {(s,m) : ℓ_{s,m} ≠ 0} quellenfest folgt | NEU-169–170 (05, ausstehend) |
+| L₃° als konkreter Kozyklus vs. Klasse | Ob Repräsentant oder nur [L₃] definiert ist | NEU-170b/c/d (05, ausstehend) |
