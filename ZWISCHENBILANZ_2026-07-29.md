@@ -1,6 +1,6 @@
 # GPT-Audit-Zwischenbilanz
 
-**Stand: 29. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136**
+**Stand: 29. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136 + Audit NEU-137–140**
 
 Dieses Dokument sichert den Gesprächsstand des laufenden GPT-Auditdurchlaufs
 für die Verwendung in einem neuen Chat-Kontext. Es wird am Ende des Gesamtdurchlaufs
@@ -158,6 +158,72 @@ Abel-/Primclock-Pfad. Tragfähiger Prüfstein: B_p =? O(1/p) — quantitative
 Normfrage bleibt offen. NEU-136 eröffnet konditionalen Fredholm-Pfad (β-Dämpfung),
 der aber nicht mit Weil-Form oder archimedischer Schicht verbunden ist.
 
+#### 04-grenzoperator-renormierung — Teilergebnis: NEU-137–140
+
+| Datei | Hauptaussage | Tragfähiger Kern | Problem / Lücke | Status |
+|---|---|---|---|---|
+| NEU-137 | Renormalisierte Selbstenergie Σ^ren(β) ∈ S₁ | Majorantenbeweis korrekt unter Hilbert-(^*)-Modell und offener Normabschätzung; bedingte Fredholm-Existenz; reparierter β↓0-Divergenzbeweis | Abschätzung B_p=O(1/p) nicht bewiesen; zirkuläre Statusschließung (134→135D→44.X→44.R→137); angegebene untere Divergenzschranke falsch | ✅[M]_part |
+| NEU-138 | Fredholm-Determinante det(1−zΣ) und Potenzspurformeln; RH-Äquivalenz über z-Nullstellen | Standard-Fredholm-Infrastruktur konditional korrekt; erste Spur linear, keine Kreuzterme nötig | primweise Eigenwerte erfordern T2; Produkt ist kein Zeta-Eulerprodukt; z-Nullstellen bei positivem Σ reell → kein RH-Signal | ✅[M]_part |
+| NEU-139 | T1 (|c_p|²=log p) und T2 (Primkanäle ⊥) als Gewichts- und Kreuzterntests | Beide Tests diagnostisch sinnvoll; Rang-eins-Kreuztermformel |⟨Ψ_p,Ψ_q⟩|² korrekt; T2 → primdiagonale Faktorisierung ✅[K/M] | Formel für Tr(Σ²) trägt falschen (Σw_p)²-Faktor; summierbare Kreuzterme ≠ 0; T1+T2 reicht nicht für Zeta-Determinante | ✅[M]_part |
+| NEU-140 | Gewöhnliche Spur ist gedämpft; R_p=log p/|c_p|² soll Mangoldt-Gewicht restaurieren | Drei-Schichten-Trennung (arith. Gewicht ≠ Hilbertnorm ≠ gew. Spur) richtig; Tr(RΣ) formal korrekt für Re(s)>1 | B_p=O(1/p) offen; c_p≠0 unbewiesen; R unbeschränkt unter Dämpfungsabschätzung; Konstruktion zielwertgesteuert (tautologisch); Determinante bleibt falsch | ✅[M]_part |
+
+**Zentraler Strukturbruch (NEU-137–140):**
+
+Spurklassensummierbarkeit und exakte Mangoldt-Normalisierung ziehen in
+entgegengesetzte Richtungen und sind im gewöhnlichen Spurklassenrahmen
+nicht gleichzeitig erreichbar:
+
+    Für S₁ (Re s > 0) nötig:      |c_p|² ≲ (log p)²/p  →  0
+    Für Mangoldt-Spur nötig:      |c_p|² = log p        →  ∞
+
+Status: ✅[K/M]_neg (unter der offenen Dämpfungsabschätzung).
+
+**Zirkuläre Verifikationsschleife (NEU-137, Abschnitt 3.3):**
+
+    NEU-134: B_p=O(1/p) offen
+    → NEU-135D: bedingte Folgerung als operativer Satz gesetzt
+    → NEU-44.X: importiert als verifizierte Abschätzung
+    → NEU-44.R / NEU-137: Kernsatz „vollständig bewiesen"
+
+Dies ist kein Beweis. Status der behaupteten vollständigen Schließung: ✗[M].
+
+**T1 leistet nur Spur-Identifikation, nicht Determinanten-Identifikation:**
+
+Selbst unter T1 gilt nur:
+
+    Tr Σ(β) = −ζ'/ζ(β)    (für β > 1)
+
+Es folgt nicht: det(1−zΣ) = ζ(β)^{±1}.
+Die Fredholm-Koeffizienten höherer Ordnung (unter T2) lauten:
+
+    Σ_p (log p · p^{−β} / (1−p^{−β}))^n  ≠  höhere Koeff. von −log ζ(β)
+
+**Operator R ist unbeschränkt und tautologisch:**
+
+Unter der Dämpfungsabschätzung folgt R_p = log p/|c_p|² ≥ (1/C)·p/log p → ∞.
+Der Operator schreibt das Zielgewicht log p per Definition ein — keine
+intrinsische Herleitung aus Objekt X. Tr(RΣ) = −ζ'/ζ gilt nur für Re(s)>1;
+im kritischen Streifen nötig: regulierte Spur, finite part, Mellin-Regularisierung
+oder andere Operatorarchitektur.
+
+**Korrigierter konditionaler Hauptsatz (Satz 137–140^corr):**
+
+Unter |c_p|² ≤ C(log p)²/p und P_p ≥ 0, Rang ≤ 1:
+
+    Σ^ren(s) ∈ S₁  für Re(s)>0,  gleichmäßig für Re(s)≥s₀>0.
+    |Σ(β)|_{S₁} → ∞  (β↓0), falls mindestens ein P_{p₀} ≠ 0.
+    Unter T2: det(1−zΣ) = ∏_p (1 − z·|c_p|²·p^{−β}/(1−p^{−β}))
+    Unter T1+T2 gilt nur: Tr Σ(β) = −ζ'/ζ(β)  (β>1); nicht det = ζ^{±1}.
+
+Status: ✅[K/M]. Offene Voraussetzung: B_p=O(1/p).
+
+**Fehlende Bestandteile für Weil-/ξ-Rückbindung (auch unter T1+T2):**
+- Archimedischer Gammafaktor
+- Polkompensation
+- Vollständige explizite Formel
+- Autokorrelation zur quadratischen Weil-Form
+- Positive Gram-Realisierung der Gesamtform
+
 ---
 
 ### DAG-Audit-Ergebnisse (2026-07-29)
@@ -222,22 +288,45 @@ der aber nicht mit Weil-Form oder archimedischer Schicht verbunden ist.
 | A-136-3 | ✅[K/M] | Σ^ren(β) ∈ S₁ unter Rang-eins-Hilbertisierung + B_p=O(1/p) |
 | A-136-4 | ✅[M]_neg | Lösung der Lanczos-Doppelbarriere — nicht erreicht |
 
+#### NEU-137–140-Block (S-137 / F-138 / T-139 / R-140)
+
+| Knoten | Status | Bemerkung |
+|--------|--------|-----------|
+| S-137-1 | ✅[K/M] | C_p^rel Rang ≤ 1 im rekonstruierten Hilbert-(^*)-Modell |
+| S-137-2 | ?[O] | |c_p|² = O((log p)²/p) — zentraler offener Prüfstein |
+| S-137-3 | ✅[K/M] | Σ^ren(s) ∈ S₁ unter [S-137-2] |
+| S-137-4 | ✗[M] | angegebene untere Divergenzschranke |Σ(β)|≳Σ(log p)²/p^{1+β} — falsch |
+| S-137-5 | ✅[K/M] | β↓0-Singularität unter mindestens einem nichttrivialen Kanal |
+| S-137-6 | ✗[M] | behauptete unbedingte Schließung via NEU-134→135D→44.X→44.R — zirkulär, kein Beweis |
+| S-137-7 | ✅[K/M] | Rang genau 1 (c_p≠0) — für S₁ nicht nötig, für R_p-Definition zwingend — ?[O] |
+| F-138-1 | ✅[K/M] | Fredholm-Determinante det(1−zΣ) existiert und ist ganz — unter Spurklasse |
+| F-138-2 | ✅[K/M] | λ_p = w_p|c_p|² als primweise Eigenwerte — nur unter T2 |
+| F-138-3 | ✅[M]_neg | det(1−zΣ) = Zeta-Eulerprodukt — widerlegt |
+| F-138-4 | ✅[M]_neg | RH-Äquivalenz über z-Nullstellen bei festem β>0 — widerlegt (Nullstellen reell positiv wegen Positivität) |
+| T1-139 | ✅[K/M]_neg | |c_p|²=log p — negativ unter offener Dämpfungsabschätzung |
+| T2-139 | ?[O] | ⟨Ψ_p,Ψ_q⟩=0 (p≠q) — offen |
+| K-139 | ✗[M] | Formel für Tr(Σ²) in NEU-139 trägt falschen (Σw_p)²-Faktor |
+| R-140-1 | ?[O] | R_p = log p/|c_p|² auf allen Primkanälen — offen wegen c_p≠0 |
+| R-140-2 | ✅[K/M]_neg | R beschränkt — negativ unter Dämpfungsabschätzung (R_p ≥ p/(C log p)→∞) |
+| R-140-3 | ✅[K/M] | RΣ(s) ∈ S₁ — nur für Re(s)>1 |
+| R-140-4 | ✗[M] | Tr(RΣ) als intrinsische Mangoldt-Herleitung — zielwertgesteuert, tautologisch |
+
 ---
 
 ### Noch ausstehend (GPT-Audit)
 
-- **04-grenzoperator-renormierung** (NEU-137–150, weiter laufend — ab NEU-137)
+- **04-grenzoperator-renormierung** (NEU-141–150, laufend — ab NEU-141)
 - **05-primkanal-fourierladung** (NEU-151–173, 34 Dateien)
 - **06-hochschild-bc-algebra** (NEU-174–222, 66 Dateien)
 - **07-weil-explizitformel** (NEU-220–246, 35 Dateien)
 
-**Prüfpflichten für NEU-137ff.:**
-1. `(C_p^rel)^♯ =? (C_p^rel)^*` — Wres vs. Hilbert-Adjungierung
-2. `B_p = O(1/p)` — offen
-3. `Σ_{p≤N} (log p)²/p ≍ (log N)²` — nicht log-kubisch
-4. Operatornormkonvergenz ≠ Spurklassenzugehörigkeit
-5. NEU-138/139: Fredholm-Determinante erzeugt lineare Mangoldt-Gewichte oder
-   nur quadratische |c_p|² + Kreuzterme?
+**Prüfpflichten für NEU-141ff. (aus Audit NEU-137–140):**
+1. Wird `c_p ≠ 0` tatsächlich bewiesen?
+2. Beweist die Edge-Label-Struktur `π_p · π_q = 0` (p≠q) — d.h. T2?
+3. Wird R auf einem dichten Definitionsbereich als selbstadjungierter Operator konstruiert?
+4. Wird streng erkannt, dass RΣ(s) ∈ S₁ nur für Re(s)>1 gilt?
+5. Wird die regulierte Spur im kritischen Streifen unabhängig hergeleitet oder
+   lediglich als analytische Fortsetzung von −ζ'/ζ eingesetzt?
 
 ---
 
@@ -261,13 +350,20 @@ Spektralmasses μ_{Ψ_p}^{D_N^rel} (NEU-221e).
 - **Abel-Lemma in der Formulierung von NEU-133:** negativ geschlossen [A-133-2]
 - **Σ^∞ divergiert log-kubisch:** falsch, log-quadratisch [A-136-2]
 - **NEU-136 als Lösung der Lanczos-Doppelbarriere:** negativ [A-136-4]
+- **det(1−zΣ^ren) = Zeta-Eulerprodukt:** widerlegt [F-138-3]
+- **RH-Signal aus z-Nullstellen von det(1−zΣ) bei festem β>0:** widerlegt [F-138-4]
+- **T1+T2 → Zeta-Determinante:** widerlegt [K-139 / F-138-3]
+- **Tr(RΣ) als intrinsische Mangoldt-Herleitung:** tautologisch [R-140-4]
+- **R beschränkt:** negativ unter Dämpfungsabschätzung [R-140-2]
 
 **Offene Konstruktionsaufgaben:**
 1. Intrinsischer Quellkomplex für Λ_p (Koszul-Kandidat NEU-246/247, Typbarriere)
 2. Prä-Lanczos-Metrik W_N mit Hebungsunabhängigkeit [B-128-3/4]
 3. PSWF-Brückensatz mit quantitativer Oszillationsbedingung [P-131-2]
-4. B_p =? O(1/p) — zentraler quantitativer Prüfstein [A-134-2]
-5. Fredholm-Determinante: lineare vs. quadratische Mangoldt-Gewichte (NEU-138/139)
+4. B_p =? O(1/p) — zentraler quantitativer Prüfstein [A-134-2 / S-137-2]
+5. c_p ≠ 0 — Nichtentartung aller relevanten Primkanäle [S-137-7]
+6. T2: ⟨Ψ_p,Ψ_q⟩=0 — Primkanalorthogonalität [T2-139]
+7. Regulierte Spur im kritischen Streifen (jenseits gewöhnlicher S₁) [R-140-3]
 
 ---
 
@@ -285,8 +381,10 @@ Ordner     Hauptleistung                              Hauptengpass
 04 (part)  Wres ≠ Hilbert-Adj. verbindlich;           W_N / Prä-Lanczos-Metrik
            Normfehler (131) korrigiert;               fehlt vollständig;
            H1-rel (Primclock) negativ geschlossen;    B_p=O(1/p) offen;
-           log³N-Fehler (136) korrigiert;             Fredholm-Weg unklar
-           konditionaler Fredholm-Pfad skizziert
+           log³N-Fehler (136) korrigiert;             Fredholm-Weg strukturell
+           konditionaler Fredholm-Pfad skizziert;     blockiert: S₁ ↔ Mangoldt
+           Strukturbruch S₁ ↔ Mangoldt-Norm           unvereinbar in gew. Rahmen;
+           aufgedeckt; det-RH-Weg widerlegt           regulierte Spur nötig
 ```
 
 **Leitprinzip:** Weil-Positivität und Gramstruktur zuerst — HP oder Determinante erst danach.
@@ -296,7 +394,14 @@ Ordner     Hauptleistung                              Hauptengpass
 **Neues Negativresultat (ab NEU-132):** Primclock p^{iu} auf dyadischen Primschalen
 liefert keine gleichmäßige Kancellation. H1-rel in aktueller Form: geschlossen.
 
+**Neues Strukturresultat (ab NEU-137–140):** Spurklassensummierbarkeit (S₁, Re s>0)
+und direkte Mangoldt-Normalisierung (|c_p|²=log p) sind im gewöhnlichen Spurklassenrahmen
+nicht gleichzeitig erreichbar. Die Fredholm-Determinante liefert kein Zeta-Eulerprodukt
+und kein RH-Signal. Nur die erste Fredholm-Spur ist (unter T1+T2, β>1) mit −ζ'/ζ
+identifizierbar. Der kritische Streifen erfordert eine andere Klasse von Operatoren
+(regulierte Spur, relative Determinante, andere Architektur).
+
 ---
 
-*Zwischenbilanz aktualisiert: 2026-07-29 — GPT-Audit-Durchlauf laufend.*
-*Nächster Schritt: NEU-137 (04-grenzoperator-renormierung, Spurklassen/Fredholm-Block).*
+*Zwischenbilanz aktualisiert: 2026-07-29, 16:29 CEST — GPT-Audit-Durchlauf laufend.*
+*Nächster Schritt: NEU-141 (04-grenzoperator-renormierung, Unbeschränkte-Mangoldt-Renormierung).*
