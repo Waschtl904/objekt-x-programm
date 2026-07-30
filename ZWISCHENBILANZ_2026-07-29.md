@@ -1,6 +1,6 @@
 # GPT-Audit-Zwischenbilanz
 
-**Stand: 29. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136 + Audit NEU-137–140 + Audit NEU-141–145 + Audit NEU-146–150 (offen, Mellinfehler) + Audit NEU-151–155 + Audit NEU-156–160 + Audit NEU-161–165b + Audit NEU-166–168**
+**Stand: 30. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136 + Audit NEU-137–140 + Audit NEU-141–145 + Audit NEU-146–150 (offen, Mellinfehler) + Audit NEU-151–155 + Audit NEU-156–160 + Audit NEU-161–165b + Audit NEU-166–168 + Audit NEU-179–185**
 
 Dieses Dokument sichert den Gesprächsstand des laufenden GPT-Auditdurchlaufs
 für die Verwendung in einem neuen Chat-Kontext. Es wird am Ende des Gesamtdurchlaufs
@@ -34,6 +34,8 @@ zu einem vollständigen Übergabe-Prompt zusammengefasst.
 
 **Hinweis (03):** NEU-118 liegt doppelt vor (`Bombieri_Normalisierung` und `X_Rigiditaet_R1_Nachweis`)
 — beide als separate Dateien in KARTE.md eingetragen. Thematisches Duplikat mit NEU-113 vermerkt.
+
+**Hinweis (06):** NEU-183 liegt doppelt vor (`Quellen_Praesentation_Audit_BC-Algebra` und `Zentrumstest_Strukturbruch_BC-Algebra`) — zwei verschiedene Dokumente unter derselben Kennung, keine explizite Ersetzungsrelation vorhanden.
 
 ---
 
@@ -415,17 +417,99 @@ Damit fehlt dem Kerntrennungsprogramm derzeit sein zweiter Operator.
 | Zeugenfaser (quelltreu) | {ε̂, ε̂' ∈ 𝔏_p^adm : Φ_p(ε̂') = Φ_p(ε̂), aber G_p^raw(ε̂') ≠ G_p^raw(ε̂)} |
 | Zeugenfaser (stark, Spezialfall) | ker 𝒞_p \ ker T̃_p — zulässig, aber nicht vollständig |
 
-**Nächster Prüfauftrag (NEU-169–173):**
+---
 
-Besonders zu prüfen:
-1. Ob der gewichtete Träger {(s,m) : ℓ_{s,m} ≠ 0} für das tatsächliche L₃°
-   aus einer Primärquelle folgt
-2. Ob L₃° überhaupt als konkreter Kozyklus und nicht nur als Klasse [L₃]
-   definiert ist
-3. Ob NEU-169 ein Kollisionsresultat für einen quellenfesten Operator oder
-   nur für einen frei gewählten Testrepräsentanten beweist
+#### 06-hochschild-bc-algebra — Teilergebnis: NEU-179–185
 
-Verbleibende Dateien: NEU-169, NEU-170, NEU-170a/b/c/d, NEU-171, NEU-172, NEU-173
+**Auditumfang:** NEU-179, NEU-180, NEU-181, NEU-182, NEU-183 (Präsentationsaudit),
+NEU-183 (Zentrumstest), NEU-184, NEU-185.
+
+**Zentraler positiver Befund:**
+> Der erste echte BC-interne HH⁴-Satz:
+> **HH⁴(A_Q^alg, A_Q^alg) ≠ 0** für den algebraischen BC-Kern —
+> belegt durch einen expliziten neutralen Vierkozykel Ω_p und Augmentationspaarung ⟨Ω_p, z^ε_p⟩ = 24.
+
+**Zentraler negativer Befund:**
+> Beide untersuchten Nullkozykel-Routen für geladene Klassen scheitern:
+> kein zentrales Element vom Grad g ≠ 1 (reguläres Modul),
+> kein verdrehter Nullkozykel für Re β > 0 (verdrehtes Modul).
+
+**Kritische Quellenkorrektur:**
+Die Relation μ_n e(r) = e(r/n) μ_n ist auf Q/Z nicht kanonisch — r/n ist dort
+nicht eindeutig definiert. Die korrekte Standardrelation lautet:
+μ_n e(r) μ_n* = (1/n) Σ_{ns=r} e(s).
+Die typkorrekten gerichteten Formeln sind: e(s)μ_m = μ_m e(ms) und μ_n* e(s) = e(ns) μ_n*.
+**Status der falschen Relation: ×[M]**
+
+**Doppelbelegung NEU-183:**
+Zwei verschiedene Dateien besitzen dieselbe Kennung NEU-183 — keine explizite
+Ersetzungsrelation vorhanden. Analog zur Doppelbelegung NEU-166b.
+
+**Dateitabelle:**
+
+| Datei | Tragfähiger Kern | Hauptproblem | Status |
+|---|---|---|---|
+| NEU-179 | Kein automatischer HH-Transfer; direkte Ableitungsroute sinnvoll | Äußerlichkeit der D_p offen; geladenes Nullkozykel noch nicht vorhanden | ✓[M]_part |
+| NEU-180 | Q_+^×-Gradierung, Primvaluationsderivationen und algebraischer Twist | Quellenpräsentation später falsch angegeben; algebraisch gegen C*-topologisch nicht getrennt | ✓[M]_part |
+| NEU-181 | Homogenitäts- und Generatorreduktion grundsätzlich richtig | R4/R5 fehlerhaft; Nullkozykelexistenz noch ungelöst | ✓[M]_part |
+| NEU-182 | Norm-No-go für verdrehte Nullkozykel bei Re β > 0 | Kein allgemeiner No-go für geladenes HH⁴ | ✓[M]_part |
+| NEU-183 – Präsentation | Gradierung und C*-Normroute reparierbar | Falsche Standardrelationen und falsche homogene Normalform | ⚠[M] |
+| NEU-183 – Zentrum | Erkennt die Bedeutung des Zentrums | Nichtkanonisches r/q, falsche Zentralitätsbehauptung, kein Koeffizientenaudit | ⚠[M], Beweis ×[M] |
+| NEU-184 | Vollständiger Koeffizientenaudit: Z(A)_g = 0 für g ≠ 1 | Relationsprovenienz muss korrigiert werden | ✓[M]_part, Hauptsatz ✓[M] |
+| NEU-185 | Augmentationszyklus und echter Nichtrandbeweis für Ω_p | Relationscheck unvollständig; Ergebnis nur algebraisch und neutral | ✓[M]_part, Hauptsatz ✓[M] |
+
+**DAG-Knoten nach NEU-179–185:**
+
+| Knoten | Aussage | Status |
+|---|---|---|
+| [BC-180-grad] | A_Q^alg = ⊕_{g∈Q_+^×} A_g | ✓[M] nach Präsentationskorrektur |
+| [BC-180-D_p] | D_p(a_g) = v_p(g) a_g ist Derivation | ✓[M] |
+| [BC-180-comm] | [D_p, D_q] = 0 | ✓[M] |
+| [BC-179-outer] | D_p ist äußere Derivation | ?[O] |
+| [BC-181-twist] | σ_β(a_g) = g^{-β} a_g | ✓[K/M] auf algebraischem Kern |
+| [BC-182-tw0] | Z⁰(A, M_{σ_β}) = {0} für Re β > 0 | ✓[M]_neg |
+| [BC-183-R4] | μ_n e(r) = e(r/n) μ_n als Standardrelation | ×[M] |
+| [BC-183-NF] | r ∈ (1/lcm(m,n)) Z/Z als vollständige Normalform | ×[M] |
+| [BC-184-center] | Z(A)_g = {0} für g ≠ 1 | ✓[M] |
+| [BC-184-reg0] | geladener regulärer Nullkozykel | ✓[M]_neg |
+| [BC-185-eps] | ε : A_Q^alg → ℂ (Augmentationscharakter) | ✓[M] |
+| [BC-185-cycle] | ∂z^ε_p = 0 | ✓[M] |
+| [BC-185-Omega] | b Ω_p = 0 | ✓[M] |
+| [BC-185-pair] | ⟨Ω_p, z^ε_p⟩ = 24 | ✓[M] |
+| [BC-185-HH4] | [Ω_p] ≠ 0 in algebraischem HH⁴(A,A) | ✓[M] |
+| [BC-185-charge] | [Ω_p] geladen (Grad g ≠ 1) | ✓[M]_neg — tatsächlich neutral, Grad 1 |
+| [BC-185-cont] | [Ω_p] ≠ 0 in kontinuierlichem HH⁴ | ?[O] |
+| [BC-185-L3] | [Ω_p] identifiziert mit [L₃^orig] | ?[O] |
+| [BC-185-op] | ρ_op(Ω_p) wohldefiniert | ✓[M]_neg,Quelle |
+
+**Widerlegte und zurückgenommene Aussagen:**
+
+| Aussage | Neuer Status |
+|---|---|
+| μ_n e(r) = e(r/n) μ_n als Standardrelation | ×[M] |
+| r ∈ (1/lcm(m,n)) Z/Z als vollständige homogene Normalform | ×[M] |
+| μ_n μ_n* ∈ Z(A) (Bereichsprojektionen zentral) | ×[M] |
+| Zentrumssatz via erstem NEU-183-Beweis | ×[M] — repariert durch NEU-184 |
+| [Ω_p] besitzt Grad g ≠ 1 (geladene Klasse) | ×[M] — deg Ω_p = 1 (neutral) |
+
+**Reichweitengrenzen des HH⁴-Satzes:**
+- Nur algebraische Hochschildkohomologie des algebraischen BC-Kerns
+- Keine zyklische Kohomologieklasse; keine beschränkte Kokette
+- Keine Operatorrealisierung auf einem Hilbertraum
+- Keine Identifikation mit [L₃^orig]
+- Kein Beweis von HH⁴_cont(A_Q, A_Q) ≠ 0
+- Keine Implikation für Q_Weil ≥ 0
+
+**Korrigierter Hauptsatz des Blocks (NEU-179–185^corr):**
+1. D_p(a_g) = v_p(g) a_g sind paarweise kommutierende Hochschild-Derivationen. ✓[M]
+2. Ω_p = Alt(D_{p1} ⌣ D_{p2} ⌣ D_{p3} ⌣ D_{p4}) ist neutraler Vierkozykel mit ⟨Ω_p, z^ε_p⟩ = 24, also [Ω_p] ≠ 0. ✓[M]
+3. Z(A_Q^alg)_g = {0} für g ≠ 1 — kein regulärer geladener Nullkozykel. ✓[M]_neg
+4. Z⁰(A, M_{σ_β}) = {0} für Re β > 0 — kein positiv verdrehter Nullkozykel. ✓[M]_neg
+5. Die geladene Faktorroute u ⌣ Ω_p ist in beiden Nullkozykelmodellen blockiert. ✓[M]
+
+**Nächster Auditblock (06-hochschild-bc-algebra):**
+NEU-186, NEU-187, NEU-188, NEU-189, NEU-190
+— Geladener HH⁴-Sektor, Restriktionssatz, Erweiterungsobstruktion, Operatorbrücke.
 
 ---
 
@@ -447,7 +531,7 @@ NEU-146 bis NEU-150 (Abschlussblock) — **Mellinfehler aus NEU-148/149 bereits 
 
 | Dateien | Thema | Nächster Auditblock |
 |---|---|---|
-| NEU-169–173 + Varianten | L₃°-Quellenimport, Typfundament, Kollisionssystem | **als nächstes** |
+| NEU-169–173 + Varianten | L₃°-Quellenimport, Typfundament, Kollisionssystem | ausstehend |
 
 ---
 
@@ -456,8 +540,8 @@ NEU-146 bis NEU-150 (Abschlussblock) — **Mellinfehler aus NEU-148/149 bereits 
 | Ordner | Verbleibende Dateien | Priorität |
 |---|---|---|
 | 04-grenzoperator-renormierung | NEU-146–150 (5 Dateien) | parallel ausstehend |
-| 05-primkanal-fourierladung | NEU-169–173 + Varianten (ca. 9 Dateien) | **als nächstes** |
-| 06-hochschild-bc-algebra | NEU-174–222 + a–z (66 Dateien) | danach |
+| 05-primkanal-fourierladung | NEU-169–173 + Varianten (ca. 9 Dateien) | ausstehend |
+| 06-hochschild-bc-algebra | NEU-186–222 + a–z (ca. 58 Dateien) | **als nächstes: NEU-186–190** |
 | 07-weil-explizitformel | NEU-220–221e, NEU-242–246 (35 Dateien) | abschließend |
 
 ---
@@ -485,3 +569,8 @@ NEU-146 bis NEU-150 (Abschlussblock) — **Mellinfehler aus NEU-148/149 bereits 
 | Domainerweiterung P_p^ch und G_p^raw auf M_p | Operatoren nur auf endlichem Modenraum definiert; vollständige Lifte nicht erfasst | NEU-168 (05) |
 | L₃°-Träger aus Primärquelle | Ob {(s,m) : ℓ_{s,m} ≠ 0} quellenfest folgt | NEU-169–170 (05, ausstehend) |
 | L₃° als konkreter Kozyklus vs. Klasse | Ob Repräsentant oder nur [L₃] definiert ist | NEU-170b/c/d (05, ausstehend) |
+| D_p äußere Derivation | D_p ∈ Z¹(A,A) — ob D_p ∉ B¹(A,A) | NEU-179 (06) |
+| [Ω_p] in kontinuierlichem HH⁴ | Algebraische Klasse ≠ 0 impliziert nicht topologische Nichttrivialität | NEU-185 (06) |
+| [Ω_p] Identifikation mit [L₃^orig] | Kein Brückensatz vorhanden | NEU-185 (06) |
+| Operatorbrücke ρ_op(Ω_p) | Keine Abbildung Z⁴(A,A) → End(ℋ) konstruiert | NEU-185/189–190 (06, ausstehend) |
+| Geladene HH⁴-Klasse (direkte Route) | Faktorroute blockiert; direkte Konstruktion in NEU-186ff. offen | NEU-186–190 (06, als nächstes) |
