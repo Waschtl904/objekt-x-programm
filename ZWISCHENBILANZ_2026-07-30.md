@@ -1,6 +1,6 @@
 # GPT-Audit-Zwischenbilanz
 
-**Stand: 30. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136 + Audit NEU-137–140 + Audit NEU-141–145 + Audit NEU-146–150 (offen, Mellinfehler) + Audit NEU-151–155 + Audit NEU-156–160 + Audit NEU-161–165b + Audit NEU-166–168 + Audit NEU-179–185 + Audit NEU-186–190 + Audit NEU-192–195 + Direktaudit NEU-196**
+**Stand: 30. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136 + Audit NEU-137–140 + Audit NEU-141–145 + Audit NEU-146–150 (offen, Mellinfehler) + Audit NEU-151–155 + Audit NEU-156–160 + Audit NEU-161–165b + Audit NEU-166–168 + Audit NEU-179–185 + Audit NEU-186–190 + Audit NEU-192–195 + Direktaudit NEU-196 + Direktaudit NEU-197**
 
 Dieses Dokument sichert den Gesprächsstand des laufenden GPT-Auditdurchlaufs
 für die Verwendung in einem neuen Chat-Kontext.
@@ -164,7 +164,7 @@ Das faktorielle Schalenpotential H(x) = j auf j!ẑ \ (j+1)!ẑ liefert eine nic
 H(kx) − H(x) ∉ LC(ẑ)    für alle k > 1
 
 Der Kandidat erweitert sich nicht zu einer geladenen Derivation der BC-Algebra. Der offene Knoten ist jetzt präzise:
-**„Finde ein nichtfortsetzbares punktiertes Potential mit gleichzeitig regulären multiplikativen Differenzen.“**
+**„Finde ein nichtfortsetzbares punktiertes Potential mit gleichzeitig regulären multiplikativen Differenzen."**
 
 **Zweiter wichtiger Befund:**
 Im gesamten auditierten Katalog NEU-1–188 ist keine Abbildung Z⁴(A,A) → O(H) oder HH⁴(A,A) → O(H) konstruiert. Status: ✓[M]_neg,Quelle.
@@ -382,26 +382,6 @@ Der globale Ausschluss aller Primzahlen bleibt damit logisch **offen**.
 | Vollständige Aussage \(\varepsilon\circ D_H=0\) auf ganz \(A\) | ?[O] | Werte auf \(e(r)\) und Transfergeneratoren nicht vollständig geprüft |
 | **Gesamtstatus der Datei** | **✓[M]_part** | Starkes Lemma, aber überdehnte No-go-Reichweite |
 
-#### Korrigierter Beitrag zu Objekt X
-
-NEU-196 liefert keinen positiven Bau eines lokalen Kanals, keiner geladenen Hochschildklasse und keiner Operatorrealisierung. Der belastbare Beitrag ist ein begrenztes negatives Strukturresultat:
-
-\[
-\text{Regulierte Skalierungsdefekte eines punktierten Potentials können am Punkt }0\text{ keinen Augmentationswert tragen.}
-\]
-
-Damit ist die naive Kombination
-
-\[
-\text{punktierter Defekt} + \text{Auswertung bei }0 + \text{NEU-193-Zyklus}
-\]
-
-für koprime Primkanäle ausgeschlossen. Für das Gesamtprogramm bedeutet das:
-- kein Fortschritt zur Operatorbrücke \(HH^1\) oder \(HH^4\to \mathcal O(\mathcal H)\),
-- kein Beitrag zur Positivität der Weil-Form,
-- kein konstruierter geladener BC-Kozykel,
-- aber eine präzise Lokalisierung: Ein erfolgreicher Zeuge müsste echte Singularitäts-, Rand- oder Transferinformation erfassen und dürfte nicht nur auf \(F_k(0)\) reduzieren.
-
 #### Neue DAG-Knoten nach Direktaudit NEU-196
 
 | Knoten | Aussage | Status |
@@ -417,12 +397,130 @@ für koprime Primkanäle ausgeschlossen. Für das Gesamtprogramm bedeutet das:
 | [O-193-Aug-transfer] | Modifizierter oder transferempfindlicher Dualzeuge | ?[O] |
 | [O-193-5] | Geladener Nichttrivialitätsnachweis | ?[O] |
 
-**Gesamturteil zu NEU-196:**
+**Gesamturteil zu NEU-196:** ✓[M]_part
+
+---
+
+### 06-hochschild-bc-algebra — Direktaudit NEU-197
+
+**Auditumfang:**
+Geprüft: `NEU-197_Kommutatorquotient_Dualdetektor.md` vollständig, mit Rückverweisen auf NEU-193, NEU-195, NEU-196 (auditiert).
+
+**Interpretationsfreier Primärextrakt:**
+NEU-197 leistet in sieben Schritten Folgendes:
+1. **Partieller Kommutatorquotient** \(\mathcal C_{h,\mathbf p} := \sum_{i=1}^4 [\mu_{p_i}, A_{h/p_i}] \subseteq A_h\) und \(Q_{h,\mathbf p} := A_h / \mathcal C_{h,\mathbf p}\) werden als homogene Objekte definiert.
+2. **Allgemeiner Dualkettenkandidat** \(z_{\varphi_h}^{\mathbf p}\) als alternierende Summe über \(S_4\) mit homogenem Funktional \(\varphi_h \in A_h^\vee\).
+3. **Zykluskriterium:** \(\partial z_{\varphi_h}^{\mathbf p} = 0 \iff \varphi_h(\mathcal C_{h,\mathbf p}) = 0\), d.h. vollständige Klassifikation durch \(Q_{h,\mathbf p}^\vee\).
+4. **Paarungsformel:** \(\langle \Omega_{D_g,\mathbf p}, z_{\varphi_h}^{\mathbf p}\rangle = 4!\,\varphi_h(Y_{D_g,\mathbf p})\) mit \(Y_{D_g,\mathbf p} = D_g(\mu_{p_1})\mu_{p_2}\mu_{p_3}\mu_{p_4} \in A_h\).
+5. **Universelles Detektionskriterium:** \(\exists\,\varphi_h\) Zyklus mit nicht-null Paarung \(\iff [Y_{D_g,\mathbf p}] \neq 0\) in \(Q_{h,\mathbf p}\).
+6. **Logische Einordnung von NEU-196:** \(\varepsilon_h\) annulliert \([Y_{D_g,\mathbf p}]\) — das schließt nicht \([Y_{D_g,\mathbf p}]=0\) ein.
+7. **Atomarer Restknoten** \([O\text{-}197\text{-}4]\): \([D_g^H(\mu_{p_1})\mu_{p_2}\mu_{p_3}\mu_{p_4}] \neq 0\) in \(Q_{gP,\mathbf p}\)?
+
+#### Satz 197: Wohldefiniertheit von \(Q_{h,\mathbf p}\)
+
+**Prüfergebnis:**
+Der partielle Kommutatorquotient ist wohldefiniert. Für \(a \in A_{h/p_i}\) gilt \(\mu_{p_i} a, a\mu_{p_i} \in A_h\) — direkt aus der Gradierungsdefinition der BC-Algebra. Der Quotient \(A_h/\mathcal C_{h,\mathbf p}\) ist ein gewöhnlicher Vektorraumquotient; keine Algebraquotientenstruktur wird gefordert.
+
+**Korrektur des Dateistatus:** NEU-197 trägt intern \(\checkmark[K]\) für diesen Knoten. Das ist zu schwach: die Gradierungseigenschaft ist ein direktes Axiom der algebraischen BC-Algebra, nicht eine zusätzliche Konditionalvoraussetzung.
+
+**Status:**
+- `[O-197-1]` — \(Q_{h,\mathbf p}\) wohldefiniert und homogen: **✓[M]** (Korrektur von NEU-197's eigenem ✓[K])
+
+#### Zykluskriterium (Satz 197.7)
+
+**Prüfergebnis:**
+Die Berechnung der Randterme ist korrekt. Äußere Randterme liegen in verschiedenen Gradsektoren, weshalb keine Kreuzauslöschung auftreten kann. Die Kommutativität \(\mu_{p_i}\mu_{p_j}=\mu_{p_j}\mu_{p_i}\) (gültig in der algebraischen BC-Algebra) eliminiert die inneren Randterme. Die vollständige Klassifikation
 \[
-\boxed{\text{NEU-196} \quad \checkmark[M]_{\mathrm{part}}}
+\{\varphi_h : \partial z_{\varphi_h}^{\mathbf p} = 0\} \cong Q_{h,\mathbf p}^\vee
+\]
+ist korrekt.
+
+**Status:**
+- `[O-197-2]` — vollständige Klassifikation der Zyklusfunktionale durch \(Q_{h,\mathbf p}^\vee\): **✓[M]**
+
+#### Paarungsformel (197.10)
+
+**Prüfergebnis:**
+Der Gradcheck \(Y_{D_g,\mathbf p} = D_g(\mu_{p_1})\mu_{p_2}\mu_{p_3}\mu_{p_4} \in A_{gP}=A_h\) ist korrekt. Der Kollapsschritt (alle 24 Permutationsauswertungen fallen auf denselben Wert) ist strukturell plausibel: die Kommutativität der \(\mu_{p_k}\) erlaubt Umsortierung, wodurch jeder Term mit \(D_g\) am \(\mu_{p_j}\)-Slot (\(j>1\)) in das Bild des \([\mu_{p_j},\cdot]\)-Kommutators fällt und von \(\varphi_h|_{\mathcal C_{h,\mathbf p}}=0\) eliminiert wird. Dieser Schritt ist jedoch **nicht vollständig explizit ausgeführt**.
+
+**Status:**
+- `[O-197-Paar]` — Paarungsformel \(\langle\Omega_{D_g,\mathbf p}, z_{\varphi_h}^{\mathbf p}\rangle = 4!\,\varphi_h(Y_{D_g,\mathbf p})\): **✓[M]_part**
+
+#### Universelles Detektionskriterium (197.11)
+
+**Prüfergebnis:**
+Beide Richtungen sind korrekt. Die Rückrichtung benutzt algebraische Dualitätstrennung in einem beliebigen Vektorraum — das gilt für unendlich-dimensionale Räume ebenso.
+
+**Umfangsklausel:** Das Kriterium ist rein algebraisch. In der C\*-topologischen Fassung wäre zusätzlich Normkontinuität des gesuchten Funktionals zu fordern; das wird weder behauptet noch geleistet.
+
+**Status:**
+- `[O-197-3]` — universelles Detektionskriterium: **✓[M]** (algebraisch; kein topologischer Anspruch)
+
+#### Logische Einordnung von NEU-196
+
+NEU-197 schärft den Befund von NEU-196 präzise:
+
+> NEU-196: ein bestimmtes Funktional (\(\varepsilon\)) ist blind gegenüber \([Y]\).
+> NEU-197: alle möglichen Zyklusfunktionale sind blind \(\iff [Y]=0\) in \(Q_{h,\mathbf p}\).
+
+Das behebt exakt die überdehnte No-go-Formulierung aus NEU-196.
+
+**Ergänzung aus dem NEU-196-Audit:** Da `[O-195-A2b]` offen ist (Nennerprimfall \(p\mid n\)), gilt auch hier: der Restknoten `[O-197-4]` ist vollständig nur für Primzahlen mit \(p\nmid n\) formuliert. Für \(p\mid n\) müsste \(Y_{D_g^H,\mathbf p}\) aus der Transferformel berechnet werden.
+
+#### Atomarer Restknoten [O-197-4]
+
+\[
+[D_g^H(\mu_{p_1})\mu_{p_2}\mu_{p_3}\mu_{p_4}] \neq 0 \quad\text{in}\quad Q_{gP,\mathbf p}?
 \]
 
-Satz 196.1 ist korrekt und nützlich. Die daraus abgeleitete vollständige Schließung der NEU-188-Potentialroute ist jedoch nicht gerechtfertigt. Der korrekte No-go betrifft nur die typisierte, koprime Defektformel und den konkreten Augmentationszeugen.
+Für \(p_1\nmid n\) gilt mit der koprimen Formel:
+\[
+Y_{D_g^H,\mathbf p} = \mu_{mP}F_{p_1}\mu_n^*.
+\]
+Die Frage reduziert sich auf: liegt \(F_{p_1} \in \sum_j (1-\alpha_{p_j})B\) oder nicht? Das ist die Kommutatorquotienten-Frage in \(B\), die NEU-199 weiterführt.
+
+**Status:**
+- `[O-197-4]` — \([Y_{D_g^H,\mathbf p}]\neq 0\) in \(Q_{gP,\mathbf p}\): **?[O]**, präzise reduziert auf \(B\)-Quotiententest
+
+#### Zielraum singulärer Kommutatoren
+
+Für singuläre Implementierer \(T_H\notin A\) liegen die Kommutatoren \([T_H,\mu_k]\) genau dann in \(A_h\), wenn \(F_k=\alpha_k(H)-H\in B=\operatorname{LC}(\widehat{\mathbb Z})\). Außerhalb dieser Regularitätsbedingung ist der Kommutator kein Element von \(A\) und kann dem Quotienten \(Q_{h,\mathbf p}\) nicht zugeführt werden.
+
+#### Fortschritt im Programm
+
+NEU-197 **löst den \(D_g\)-Knoten nicht**, sondern **schärft ihn äquivalent um**:
+- Früher: „Finde \(D_g\) mit \(\varepsilon(D_g(\mu_p))\neq 0\)."
+- Jetzt: „Entscheide, ob \([D_g^H(\mu_{p_1})\mu_{p_2}\mu_{p_3}\mu_{p_4}] \neq 0\) in \(Q_{gP,\mathbf p}\)."
+
+Das ist eine echte Verschärfung: der neue Knoten ist äquivalent zum alten (via 197.11), aber konkret auswertbar als \(B\)-Quotientenentscheidung.
+
+#### Dateistatus NEU-197
+
+| Bestandteil | Auditstatus | Befund |
+|---|---|---|
+| \(Q_{h,\mathbf p}\) wohldefiniert und homogen | ✓[M] | Gradierungsaxiom direkt; ✓[K] in Datei zu schwach |
+| Zykluskriterium (197.6)–(197.8) | ✓[M] | Vollständige Klassifikation korrekt |
+| Paarungsformel (197.10) | ✓[M]_part | Kollapsschritt der 24 Permutationen nicht vollständig ausgeführt |
+| Universelles Detektionskriterium (197.11) | ✓[M] | Algebraisch korrekt; kein topologischer Anspruch |
+| Logische Trennung NEU-196/NEU-197 | ✓[M] | Behebt überdehnte No-go-Formulierung aus NEU-196 |
+| Atomarer Restknoten \([O\text{-}197\text{-}4]\) | ?[O] | Reduziert auf \(B\)-Quotiententest; korrekt offen gelassen |
+| Zielraum singulärer Kommutatoren | ✓[M]_part | Nur wenn \(F_k\in B\); außerhalb kein \(A\)-Element |
+| **Gesamtstatus der Datei** | **✓[M]_part** | Starker algebraischer Rahmen, ein Kollapsschritt unvollständig |
+
+#### Neue DAG-Knoten nach Direktaudit NEU-197
+
+| Knoten | Aussage | Status |
+|---|---|---|
+| [O-197-1] | \(Q_{h,\mathbf p}\) wohldefiniert und homogen | ✓[M] (Korrektur von ✓[K] in NEU-197) |
+| [O-197-2] | Vollständige Klassifikation: Zyklusfunktionale ≅ \(Q_{h,\mathbf p}^\vee\) | ✓[M] |
+| [O-197-Paar] | Paarungsformel \(\langle\Omega,z_{\varphi_h}\rangle = 4!\,\varphi_h(Y)\) | ✓[M]_part |
+| [O-197-3] | Universelles Detektionskriterium: \([Y]\neq 0 \iff \exists\) Detektor | ✓[M] (algebraisch) |
+| [O-197-4] | \([D_g^H(\mu_{p_1})\mu_{p_2}\mu_{p_3}\mu_{p_4}]\neq 0\) in \(Q_{gP,\mathbf p}\)? | ?[O] |
+| [O-197-top] | C\*-topologische Version des Detektionskriteriums | ?[O] |
+
+**Gesamturteil zu NEU-197:** ✓[M]_part
+
+Starker algebraischer Rahmen. Das universelle Detektionskriterium ist das bisher präziseste Instrument für den \(D_g\)-Nachweis. Einzige Lücke: der Kollapsschritt der 24-Permutations-Paarung ist nicht vollständig ausgeführt. Atomarer Restknoten `[O-197-4]` korrekt als \(B\)-Quotiententest identifiziert.
 
 ---
 
@@ -432,17 +530,16 @@ Satz 196.1 ist korrekt und nützlich. Die daraus abgeleitete vollständige Schli
 |---|---|---|
 | 04-grenzoperator-renormierung | NEU-146–150 (Mellinfehler bekannt) | parallel |
 | 05-primkanal-fourierladung | NEU-169–173 + Varianten | ausstehend |
-| 06-hochschild-bc-algebra | NEU-197–202 (Kommutatorquotient, singuläres Potential; NEU-198 fehlt) | als nächstes |
+| 06-hochschild-bc-algebra | NEU-199–202 (NEU-198 fehlt im Repository) | als nächstes |
 | 06-hochschild-bc-algebra | NEU-203–222 + a–z | danach |
 | 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | abschließend |
 
 **Fehlende Dateien:** NEU-191 (nach NEU-190, vor NEU-192), NEU-198 (nicht im Repository).
 
-**Prüffragen für NEU-197–202:**
-1. Liefert der Kommutatorquotient einen wohldefinierten Dualdetektor?
-2. In welchem Zielraum liegen die singulären Kommutatoren?
-3. Lösen NEU-201/202 den offenen \(D_g\)-Knoten aus NEU-195, oder konstruieren sie nur eine Derivation in einem vergrößerten Koeffizientenmodul?
-4. Gibt es ein punktiertes Potential mit \(\alpha_k(H)-H \in LC(ẑ)\) für alle benötigten \(k\) — oder wird gezeigt, dass kein solches existiert?
+**Prüffragen für NEU-199–202:**
+1. Löst NEU-199 die \(B\)-Quotientenentscheidung für \([O-197-4]\)?
+2. Konstruiert NEU-201/202 eine Derivation nur in einem vergrößerten Koeffizientenmodul, oder wird \([D_g]\neq 0\) in \(HH^1(A,A)_g\) selbst nachgewiesen?
+3. Welche Rolle spielen Nennerprimfälle \(p\mid n\) in NEU-199–202?
 
 ---
 
@@ -462,9 +559,10 @@ Satz 196.1 ist korrekt und nützlich. Die daraus abgeleitete vollständige Schli
 | D_p äußerliche Derivation | D_p ∈ Z¹(A,A) \ B¹(A,A) offen | NEU-179 (06) |
 | [Ω_p] in kontinuierlichem HH⁴ | Algebraisch ≠ 0 impliziert nicht topologisch | NEU-185 (06) |
 | Operatorbrücke ρ_op(Ω_p) | Keine Abbildung Z⁴(A,A) → End(H) | NEU-185/189–190 (06) |
-| Geladene HH⁴-Klasse via D_g | ∃ D_g mit ε(D_g(μ_p)) ≠ 0 offen; nach NEU-196 nur koprimer No-go gesichert | NEU-196 (06) |
+| Geladene HH⁴-Klasse via D_g | ∃ D_g mit ε(D_g(μ_p)) ≠ 0 offen; äquivalent zu [O-197-4]: [Y]≠0 in Q_{gP,p} | NEU-197 (06) |
+| B-Quotiententest [O-197-4] | [μ_{mP} F_{p_1} μ_n*] ≠ 0 in Q_{gP,p}? F_{p_1} ∉ Σ_j(1−α_{p_j})B? | NEU-197/NEU-199 (06) |
 | Multiplikatorroute x_g | ∃ x_g: ε(x_g) ≠ 0 und [A,x_g]·Im(Ω_p) = 0 | NEU-195 (06) |
 | Punktiertes Potential mit α_k-Regularität | ∃ H nichtfortsetzbar mit α_k(H)−H ∈ LC(ẑ) für alle k | NEU-188 (06) |
 | HH¹(A,A)_g ≠ 0 | Geladene äußerliche Derivation der BC-Algebra | NEU-188 / NEU-196 (06) |
-| Kommutatorquotient als Dualdetektor | Wohldefiniertheit + Zielraum offen | NEU-197–202 (06, ausstehend) |
 | Augmentationsblindheit singulärer Potentiale | Nur koprimer Defektsektor gesichert; Transferfälle offen | NEU-196 (06) |
+| C*-topologisches Detektionskriterium | Normkontinuierliches Zyklusfunktional gefordert | NEU-197 (06) |
