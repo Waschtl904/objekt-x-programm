@@ -1,12 +1,12 @@
 # GPT-Audit-Zwischenbilanz
 
-**Stand: 30. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136 + Audit NEU-137–140 + Audit NEU-141–145 + Audit NEU-146–150 (offen, Mellinfehler) + Audit NEU-151–155 + Audit NEU-156–160 + Audit NEU-161–165b + Audit NEU-166–168 + Audit NEU-179–185 + Audit NEU-192–195**
+**Stand: 30. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136 + Audit NEU-137–140 + Audit NEU-141–145 + Audit NEU-146–150 (offen, Mellinfehler) + Audit NEU-151–155 + Audit NEU-156–160 + Audit NEU-161–165b + Audit NEU-166–168 + Audit NEU-179–185 + Audit NEU-186–190 + Audit NEU-192–195**
 
 Dieses Dokument sichert den Gesprächsstand des laufenden GPT-Auditdurchlaufs
 für die Verwendung in einem neuen Chat-Kontext.
 
-> **Hinweis:** Diese Datei ersetzt `ZWISCHENBILANZ_2026-07-29.md` und den früheren Stand vom Morgen des 30. Juli 2026.
-> Alle früheren Inhalte sind vollständig übernommen und um die Blöcke NEU-174–178 und NEU-192–195 erweitert.
+> **Hinweis:** Diese Datei ist der kanonische Bilanzstand per 30.07.2026 (Abend).
+> NEU-191 fehlt im Repository — nach NEU-190 folgt direkt NEU-192.
 
 ---
 
@@ -32,8 +32,9 @@ für die Verwendung in einem neuen Chat-Kontext.
 | 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | 35 | ✅ 2026-07-28 |
 | **Gesamt** | | **348** | **alle ✅** |
 
-**Hinweis (03):** NEU-118 doppelt (`Bombieri_Normalisierung` + `X_Rigiditaet_R1_Nachweis`); thematisches Duplikat mit NEU-113.
-**Hinweis (06):** NEU-183 doppelt (`Quellen_Praesentation_Audit_BC-Algebra` + `Zentrumstest_Strukturbruch_BC-Algebra`); NEU-193 doppelt (erste Fassung + Revision 2). Keine expliziten Ersetzungsrelationen.
+**Hinweis (03):** NEU-118 doppelt; thematisches Duplikat mit NEU-113.
+**Hinweis (06):** NEU-183 doppelt; NEU-193 doppelt. Keine expliziten Ersetzungsrelationen.
+**Fehlende Dateien:** NEU-191, NEU-198 (nicht im Repository vorhanden).
 
 ---
 
@@ -58,7 +59,7 @@ Referenz- und Kontrollordner. Maßgeblich: `ebene-XVI-objekt-x.md` (Revision 2).
 | Mapping-Cone-Pfad | quellenmäßig **blockiert** (NEU-242) |
 | B₃ᵃᵈᵐ-Provenienz | **ungeklärt** |
 
-**Engpass (NEU-229):** Rohkopplung liefert β_p = 0 (T_p^raw · e_p = 0). Koszul-Kandidat d_K blockiert an Typbarriere (B₃ᵃᵈᵐ). NEU-249: 𝔅 := A_Q verbindlich festgelegt.
+**Engpass (NEU-229):** Rohkopplung liefert β_p = 0. Koszul-Kandidat blockiert an Typbarriere. NEU-249: 𝔅 := A_Q verbindlich festgelegt.
 
 ---
 
@@ -118,8 +119,7 @@ Referenz- und Kontrollordner. Maßgeblich: `ebene-XVI-objekt-x.md` (Revision 2).
 ### 06-hochschild-bc-algebra — Block NEU-174–178
 
 **Stärkster positiver Befund:**
-Im Polynommodell S_p = C[x₁,x₂,x₃,x₄]: expliziter geladener Vierkozykel L_ν mit Paarung 24 —
-[L_ν] ≠ 0 in HH⁴(S_p, S_p). ✓[M]
+Im Polynommodell S_p = C[x₁,x₂,x₃,x₄]: expliziter geladener Vierkozykel L_ν mit Paarung 24 — [L_ν] ≠ 0 in HH⁴(S_p, S_p). ✓[M]
 
 **Keine Übertragung auf A_Q:** kein Transfer S_p → A_Q, keine Identifikation mit [L₃^orig], keine Operatorrealisierung.
 
@@ -136,17 +136,12 @@ Im Polynommodell S_p = C[x₁,x₂,x₃,x₄]: expliziter geladener Vierkozykel 
 ### 06-hochschild-bc-algebra — Block NEU-179–185
 
 **Stärkster positiver Befund:**
-Erster echter BC-interner HH⁴-Satz: HH⁴(A_Q^alg, A_Q^alg) ≠ 0
-durch expliziten neutralen Vierkozykel Ω_p mit Augmentationspaarung ⟨Ω_p, z^ε_p⟩ = 24.
+Erster echter BC-interner HH⁴-Satz: HH⁴(A_Q^alg, A_Q^alg) ≠ 0 durch expliziten neutralen Vierkozykel Ω_p mit Augmentationspaarung ⟨Ω_p, z^ε_p⟩ = 24.
 
 **Stärkster negativer Befund:**
-Beide Nullkozykel-Routen für geladene Klassen scheitern:
-Z(A)_g = 0 für g ≠ 1; Z°(A, M_{σ_β}) = 0 für Re β > 0.
+Beide Nullkozykel-Routen für geladene Klassen scheitern: Z(A)_g = 0 für g ≠ 1; Z°(A, M_{σ_β}) = 0 für Re β > 0.
 
-**Kritische Quellenkorrektur:**
-μ_n e(r) = e(r/n) μ_n ist auf Q/Z nicht kanonisch. Korrekte Standardrelation:
-μ_n e(r) μ_n* = (1/n) Σ_{ns=r} e(s).
-Korrekte gerichtete Formeln: e(s)μ_m = μ_m e(ms); μ_n* e(s) = e(ns) μ_n*. **Status: ×[M]**
+**Kritische Quellenkorrektur:** μ_n e(r) = e(r/n) μ_n ist nicht kanonisch. Korrekte Standardrelation: μ_n e(r) μ_n* = (1/n) Σ_{ns=r} e(s). Status: ×[M]
 
 | Datei | Tragfähiger Kern | Hauptproblem | Status |
 |---|---|---|---|
@@ -159,78 +154,85 @@ Korrekte gerichtete Formeln: e(s)μ_m = μ_m e(ms); μ_n* e(s) = e(ns) μ_n*. **
 | NEU-184 | Z(A)_g = 0 für g ≠ 1 vollständig | Relationsprovenienz muss korrigiert werden | ✓[M]_part, Hauptsatz ✓[M] |
 | NEU-185 | Augmentationszyklus; ⟨Ω_p, z^ε_p⟩ = 24; [HH⁴] ≠ 0 | Nur algebraisch + neutral | ✓[M]_part, Hauptsatz ✓[M] |
 
-**Korrigierter Hauptsatz (NEU-179–185^corr):**
-1. D_p(a_g) = v_p(g)a_g: paarweise kommutierende Hochschild-Derivationen. ✓[M]
-2. Ω_p = Alt(D_{p1} ⌣ D_{p2} ⌣ D_{p3} ⌣ D_{p4}): neutraler Vierkozykel, ⟨Ω_p, z^ε_p⟩ = 24. ✓[M]
-3. Z(A_Q^alg)_g = 0 für g ≠ 1. ✓[M]_neg
-4. Z°(A, M_{σ_β}) = 0 für Re β > 0. ✓[M]_neg
-5. Geladene Faktorroute u ⌣ Ω_p in beiden Nullkozykelmodellen blockiert. ✓[M]
+---
+
+### 06-hochschild-bc-algebra — Block NEU-186–190
+
+**Entscheidender neuer Befund:**
+Das faktorielle Schalenpotential H(x) = j auf j!ẑ \ (j+1)!ẑ liefert eine nichttriviale Gruppenalgebra-Klasse in HH¹(B, A)_g, aber:
+
+H(kx) − H(x) ∉ LC(ẑ)    für alle k > 1
+
+Der Kandidat erweitert sich nicht zu einer geladenen Derivation der BC-Algebra. Der offene Knoten ist jetzt präzise:
+**„Finde ein nichtfortsetzbares punktiertes Potential mit gleichzeitig regulären multiplikativen Differenzen.“**
+
+**Zweiter wichtiger Befund:**
+Im gesamten auditierten Katalog NEU-1–188 ist keine Abbildung Z⁴(A,A) → O(H) oder HH⁴(A,A) → O(H) konstruiert. Status: ✓[M]_neg,Quelle.
+
+| Datei | Tragfähiger Kern | Hauptproblem | Status |
+|---|---|---|---|
+| NEU-186 | Innere Derivationen sind Koränder; uD_p-Test; Cup-Triage | Nur spezielle Cup-Routen erfasst | ✓[M]_part |
+| NEU-187 | HH¹(A,A)_g ↪ HH¹(B,A)_g injektiv; H¹(G,B_{ρd}) ≠ 0; Klassenklassifikation | Homogene Normalform zu reduzieren; kein Transfer zur BC-Algebra | ✓[M]_part |
+| NEU-188 | K2 immer lösbar; Eindeutigkeit y_k,z_k; konditionaler Äußerlichkeitssatz; Erweiterungsbedingung formuliert | T_H nur formal; faktorielles H scheitert bei α_k-Differenz | ✓[M]_part |
+| NEU-189 | Ω_p ist Vierkokette, kein Einzeloperator; Korandinvarianz als eigener Knoten | Downstream-Tabelle zu stark; Spektraltripel/KK typologisch vermischt | ✓[M]_part |
+| NEU-190 | Negativer Quellenbefund Operatorbrücke (gesamter Katalog NEU-1–188) | Fehler zu NEU-20; Grundkörpernotation; Kandidatenliste nicht typkorrekt | ✓[M]_part, Hauptbefund ✓[M]_neg,Quelle |
+
+**Korrigierter Hauptsatz (NEU-186–190^corr):**
+1. uD_p ist Derivation ⇔ u ∈ Z(A); für g ≠ 1 keine solchen geladenen Derivationen. ✓[M]_neg
+2. HH¹(A,A)_g ↪ HH¹(B,A)_g für g ≠ 1. ✓[M]
+3. H¹(G, B_{ρd}) ≅ LC(ẑ\{0}) / LC(ẑ)|_{ẑ\{0}} ≠ 0. ✓[M]
+4. Das faktorielle Schalenpotential repräsentiert eine nichttriviale eingeschränkte Klasse, aber H(kx)−H(x) ∉ LC(ẑ) für alle k>1. ✓[M]_neg
+5. Ob ein anderes nichtfortsetzbares Potential mit regulären multiplikativen Differenzen existiert: ?[O]
+6. Kein Abbildung Z⁴(A,A) → O(H) im geprüften Katalog. ✓[M]_neg,Quelle
+
+**Neue DAG-Knoten (NEU-186–190):**
+
+| Knoten | Aussage | Status |
+|---|---|---|
+| [HH1-186-inner] | [ad_{u_g}] = 0 in HH¹(A,A)_g | ✓[M] |
+| [HH1-186-uD] | uD_p Derivation ⇔ u ∈ Z(A) | ✓[M] |
+| [HH1-186-charged-uD] | u_gD_p für g≠1: keine Derivation | ✓[M]_neg |
+| [HH1-187-res] | HH¹(A,A)_g ↪ HH¹(B,A)_g | ✓[M] |
+| [HH1-187-target] | HH¹(B,A)_g ≠ 0 | ✓[M] |
+| [HH1-187-class] | H¹(G,B_{ρd}) ≅ LC(ẑ\{0})/LC(ẑ)| | ✓[M] |
+| [HH1-188-fact] | H_fact erweitert sich nicht zur BC-Algebra | ✓[M]_neg |
+| [HH1-188-general] | ∃ H nichtfortsetzbar mit α_kH−H ∈ B | ?[O] |
+| [HH1-188-system] | Vollständiges differenziertes Relationssystem | ?[O] |
+| [HH1-188-uniq] | Eindeutigkeit von y_k, z_k | ✓[M] |
+| [HH1-188-outer] | Erfolgreiche punktierte Erweiterung ist äußerlich | ✓[K/M] |
+| [HH1-A] | HH¹(A,A)_g ≠ 0 | ?[O] |
+| [HH4-charged] | HH⁴(A,A)_ch ≠ 0 | ?[O] |
+| [OP-189-cochain] | Ω_p ist Vierkokette, kein Einzeloperator | ✓[M] |
+| [OP-189-factor] | ρ_op steigt auf HH⁴ ab | ?[O] |
+| [OP-189-nonzero] | ρ_op([Ω_p]) ≠ 0 | ?[O] |
+| [OP-190-source] | ρ_op im Katalog konstruiert | ✓[M]_neg,Quelle |
+| [OP-190-impossibility] | Operatorbrücke mathematisch unmöglich | nicht bewiesen, nicht behauptet |
 
 ---
 
 ### 06-hochschild-bc-algebra — Block NEU-192–195
 
-**Auditumfang:** NEU-192, NEU-193 (erste Fassung + Revision 2), NEU-194, NEU-195.
-**Hinweis:** NEU-193 doppelt (Planungsdokument vs. vollständige Konstruktion); NEU-191 und NEU-198 fehlen im Repository.
-
 **Stärkster positiver Befund:**
 Erster expliziter und geschlossener geladener Hochschild-Dualzyklus:
-
-  z_{-λ}^{g,p} = Σ_{π∈S₄} sgn(π) · ε_{gP} ⊗ μ_{p_π(1)} ⊗ ··· ⊗ μ_{p_π(4)}
-
-mit ε_q = ε ∘ P_q, P = p₁p₂p₃p₄, λ = log g.
-∂z = 0 vollständig berechnet. Gewicht: −λ. Nichtverschwindend. **✓[M]**
+z_{-λ}^{g,p} = Σ_{π∈S₄} sgn(π) · ε_{gP} ⊗ μ_{p_π(1)} ⊗ ··· ⊗ μ_{p_π(4)}
+mit δz = 0 vollständig berechnet. Gewicht: −λ. Nichtverschwindend. ✓[M]
 
 **Stärkster negativer Befund:**
-Weder symmetrische noch determinantische Vierkokette erzeugt eine geladene Kohomologieklasse:
-- NEU-176-Schablone (symmetrisch): Alt₄L = 0 ⇒ Paarung = 0. ✓[M]_neg
-- Determinantischer Kandidat (NEU-194): Paarung = 24, aber bL ≠ 0. ✓[M]_neg
-
-**Gesamtstatus: ✓[M]_part**
+Weder symmetrische noch determinantische Vierkokette erzeugt eine geladene Kohomologieklasse.
 
 | Datei | Tragfähiger Kern | Hauptproblem | Status |
 |---|---|---|---|
-| NEU-192 | Gewichtsstabilität b(C³_{fin,λ}) ⊆ C⁴_{fin,λ}; Separationssatz; Warnlemma | Nur abstrakter Dualzeuge; nur Unterkomplex; keine Operatorrealisierung | ✓[M]_part |
-| NEU-193 – 1. Fassung | Duale Zeitwirkung; Gegengewichtsbedingung λ+μ=0 | Äußere Modulwirkungen in Randformel vertauscht; Funktionalgewicht zu restriktiv; Zyklus unnötig gesperrt | ⚠[M] |
+| NEU-192 | Gewichtsstabilität; Separationssatz; Warnlemma | Nur abstrakter Dualzeuge; nur Unterkomplex | ✓[M]_part |
+| NEU-193 – 1. Fassung | Duale Zeitwirkung; Gegengewichtsbedingung | Randformel vertauscht; Zyklus unnötig gesperrt | ⚠[M] |
 | NEU-193 – Revision 2 | Expliziter geladener Zyklus; Randtest; Alternierungsfilter | Kein geladener Kozykel mit nichtverschwindender Paarung | ✓[M]_part |
-| NEU-194 | Alternierender Vierkochain; Paarung = 24; Slotfunktionale korrekt | Hochschildkorand ≠ 0; struktureller No-go zu breit | ✓[M]_part |
-| NEU-195 | Neutraler Vierkozykel [Ω_p] ≠ 0 bestätigt; konditionale Cup-Route; innerer No-go | Keine D_g konstruiert; „Reduktion auf HH¹“ nur hinreichend | ✓[M]_part |
+| NEU-194 | Alternierender Vierkochain; Paarung = 24 | Hochschildkorand ≠ 0 | ✓[M]_part |
+| NEU-195 | Neutraler Vierkozykel [Ω_p] ≠ 0 bestätigt; konditionale Cup-Route | Keine D_g konstruiert | ✓[M]_part |
 
 **Korrigierter Hauptsatz (NEU-192–195^corr):**
 1. z_{-λ}^{g,p} ∈ Z₄(A,A^∨)_{-λ}: nichtverschwindend. ✓[M]
-2. ⟨L, z_{-λ}⟩ = 4! · ε(Alt₄L(μ_{p1},...,μ_{p4})). ✓[M]
-3. Symmetrischer No-go: vollständig symmetrische Vierkokette paart zu null. ✓[M]_neg
-4. Determinantischer No-go: bL_λ^det ≠ 0. ✓[M]_neg
-5. Cup-Route (konditional): ∃ D_g mit ε(D_g(μ_p)) ≠ 0 ⇒ Alt(D_g ⌣ δ_{p2} ⌣ δ_{p3} ⌣ δ_{p4}) nichttrivialer geladener Vierkozykel. ✓[K/M]
-
-**Neue DAG-Knoten (NEU-192–195):**
-
-| Knoten | Aussage | Status |
-|---|---|---|
-| [Z-192-weight] | b(C³_{fin,λ}) ⊆ C⁴_{fin,λ} | ✓[M] |
-| [Z-192-sep] | algebraische Separationsäquivalenz | ✓[M] |
-| [Z-192-full] | Subkomplex-Nichtrand ⇒ Nichtrand in vollem C•(A,A) | ?[O] |
-| [Z-192-trace] | zeitinvariante Auswertung detektiert λ ≠ 0 | ✓[M]_neg |
-| [Z-193-dual] | ε_q = ε ∘ P_q wohldefiniert und ≠ 0 | ✓[M] |
-| [Z-193-cycle] | z_{-λ}^{g,p} ∈ Z₄(A,A^∨)_{-λ} | ✓[M] |
-| [Z-193-alt] | Paarung reduziert auf Alt₄L | ✓[M] |
-| [Z-193-sym] | Symmetrische NEU-176-Schablone: Paarung = 0 | ✓[M]_neg |
-| [Z-194-pair] | ⟨L_λ^det, z_{-λ}⟩ = 24 | ✓[M] |
-| [Z-194-coc] | bL_λ^det = 0 | ✓[M]_neg |
-| [Z-195-neutral] | [Ω_p] ≠ 0 in HH⁴(A,A)₀ | ✓[M] |
-| [Z-195-cup] | D_g ⇒ Ω_{D_g,p} geladener Kozykel | ✓[K/M] |
-| [Z-195-pair] | ⟨Ω_{D_g,p}, z_{-λ}⟩ = 24 · ε(D_g(μ_p)) | ✓[K/M] |
-| [Z-195-inner] | D_g inner ⇒ [Ω_{D_g,p}] = 0 | ✓[M]_neg |
-| [Z-195-D_g] | ∃ D_g mit ε(D_g(μ_p)) ≠ 0 | ?[O] |
-| [Z-195-mult] | ∃ x_g: ε(x_g) ≠ 0, [A,x_g]·Im(Ω_p) = 0 | ?[O] |
-| [HH4-charged] | HH⁴(A,A)_g ≠ 0 (g ≠ 1) | ?[O] |
-| [OP-bridge] | HH⁴(A,A) → O(H) | ✓[M]_neg,Quelle |
-
-**Beitrag zu Objekt X:**
-- Zeugenarchitektur ist nicht mehr die Hauptblockade.
-- Neue präzise Blockade: „Finde einen geladenen alternierenden Vierkozykel mit nichtverschwindender Auswertung auf Primisometrien.“
-- Suchraum eingeengt auf derivationsartige, Cup/Shuffle- oder gradübergreifende Konstruktionen.
-- Keine Operator- oder Primkanalbrücke; kein Weil-Positivitätsfortschritt.
+2. Symmetrischer No-go: vollständig symmetrische Vierkokette paart zu null. ✓[M]_neg
+3. Determinantischer No-go: bL_λ^det ≠ 0. ✓[M]_neg
+4. Cup-Route konditional: ∃ D_g mit ε(D_g(μ_p)) ≠ 0 ⇒ nichttrivialer geladener Vierkozykel. ✓[K/M]
 
 ---
 
@@ -240,18 +242,18 @@ Weder symmetrische noch determinantische Vierkokette erzeugt eine geladene Kohom
 |---|---|---|
 | 04-grenzoperator-renormierung | NEU-146–150 (Mellinfehler bekannt) | parallel |
 | 05-primkanal-fourierladung | NEU-169–173 + Varianten | ausstehend |
-| 06-hochschild-bc-algebra | NEU-186–191 (geladener HH⁴, Restriktionssatz) | als nächstes |
-| 06-hochschild-bc-algebra | NEU-196–202 (Augmentationsblindheit, Kommutatorquotient, singuläres Potential) | dann |
+| 06-hochschild-bc-algebra | NEU-196–202 (Augmentationsblindheit, Kommutatorquotient, singuläres Potential) | als nächstes |
 | 06-hochschild-bc-algebra | NEU-203–222 + a–z | danach |
 | 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | abschließend |
 
-**Fehlende Dateien:** NEU-191, NEU-198 (nicht im Repository vorhanden).
+**Fehlende Dateien:** NEU-191 (nach NEU-190, vor NEU-192), NEU-198 (nicht im Repository).
 
 **Prüffragen für NEU-196–202:**
 1. Annihiliert die Augmentation jede singuläre Potentialderivation notwendigerweise?
 2. Liefert der Kommutatorquotient einen wohldefinierten Dualdetektor?
 3. In welchem Zielraum liegen die singulären Kommutatoren?
 4. Lösen NEU-201/202 den offenen D_g-Knoten aus NEU-195, oder konstruieren sie nur eine Derivation in einem vergrößerten Koeffizientenmodul?
+5. **(neu)** Gibt es ein punktiertes Potential mit α_k(H)−H ∈ LC(ẑ) für alle benötigten k — oder wird gezeigt, dass kein solches existiert?
 
 ---
 
@@ -267,11 +269,13 @@ Weder symmetrische noch determinantische Vierkokette erzeugt eine geladene Kohom
 | Feshbach-Transfer K(z) | Arbeitshypothese | NEU-229 (01) |
 | L₃° = e₁V₁ kompatibel mit [L₃] | Zulässigkeit nicht gezeigt | NEU-162 (05) |
 | R_{p,j}-Konstruktion | Negativ geschlossen; kein transversaler Detektor T̃_p | NEU-165b/166–168 (05) |
-| Gram-Invariante Φ_p = C_p · C_p# | Zeugengeometrie muss auf Φ_p aufgebaut werden | NEU-166–168 (05) |
-| D_p äußere Derivation | D_p ∈ Z¹(A,A) \ B¹(A,A) offen | NEU-179 (06) |
+| Gram-Invariante Φ_p = C_p·C_p# | Zeugengeometrie muss auf Φ_p aufgebaut werden | NEU-166–168 (05) |
+| D_p äußerliche Derivation | D_p ∈ Z¹(A,A) \ B¹(A,A) offen | NEU-179 (06) |
 | [Ω_p] in kontinuierlichem HH⁴ | Algebraisch ≠ 0 impliziert nicht topologisch | NEU-185 (06) |
 | Operatorbrücke ρ_op(Ω_p) | Keine Abbildung Z⁴(A,A) → End(H) | NEU-185/189–190 (06) |
 | Geladene HH⁴-Klasse via D_g | ∃ D_g mit ε(D_g(μ_p)) ≠ 0 offen | NEU-195 (06) |
 | Multiplikatorroute x_g | ∃ x_g: ε(x_g) ≠ 0 und [A,x_g]·Im(Ω_p) = 0 | NEU-195 (06) |
+| Punktiertes Potential mit α_k-Regularität | ∃ H nichtfortsetzbar mit α_k(H)−H ∈ LC(ẑ) für alle k | NEU-188 (06) |
+| HH¹(A,A)_g ≠ 0 | Geladene äußerliche Derivation der BC-Algebra | NEU-188 (06) |
 | Kommutatorquotient als Dualdetektor | Wohldefiniertheit + Zielraum offen | NEU-197–202 (06, ausstehend) |
 | Augmentationsblindheit singulärer Potentiale | Ob ε notwendig D_g annihiliert | NEU-196 (06, ausstehend) |
