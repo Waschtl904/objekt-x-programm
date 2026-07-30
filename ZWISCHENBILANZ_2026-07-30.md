@@ -1,213 +1,277 @@
-# Zwischenbilanz — Stand 2026-07-30
+# GPT-Audit-Zwischenbilanz
 
-**Auditstand:** nach Blöcken 00–05 (vollständig) + 06-hochschild-bc-algebra Block 1 (NEU-174–178)
-**Nächster Schritt:** NEU-179 (Transfertriage Geladene Nullkozykel A_Q)
+**Stand: 30. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136 + Audit NEU-137–140 + Audit NEU-141–145 + Audit NEU-146–150 (offen, Mellinfehler) + Audit NEU-151–155 + Audit NEU-156–160 + Audit NEU-161–165b + Audit NEU-166–168 + Audit NEU-179–185 + Audit NEU-192–195**
 
----
+Dieses Dokument sichert den Gesprächsstand des laufenden GPT-Auditdurchlaufs
+für die Verwendung in einem neuen Chat-Kontext.
 
-## Gesamtübersicht Ordner
-
-| Ordner | Dateien | Status |
-|--------|---------|--------|
-| 00-grundlegung | 20 | ✅ verifiziert |
-| 01-primkanten-werkzeuge | 86 | ✅ verifiziert |
-| 02-jacobi-limes | 34 | ✅ verifiziert |
-| 03-weil-form-statistik | 31 | ✅ verifiziert |
-| 04-grenzoperator-renormierung | 42 | ✅ verifiziert |
-| 05-primkanal-fourierladung | 34 | ✅ verifiziert |
-| 06-hochschild-bc-algebra | 79 (gesamt) | 🔄 laufend — Block 1 (NEU-174–178) abgeschlossen |
-| 07-weil-explizitformel | — | ⚠️ ausstehend |
+> **Hinweis:** Diese Datei ersetzt `ZWISCHENBILANZ_2026-07-29.md` und den früheren Stand vom Morgen des 30. Juli 2026.
+> Alle früheren Inhalte sind vollständig übernommen und um die Blöcke NEU-174–178 und NEU-192–195 erweitert.
 
 ---
 
-## Auditbericht: NEU-174 bis NEU-178
-### Einstieg in Ordner 06-hochschild-bc-algebra
+## Repo-Koordinaten
+
+- **Repository:** `Waschtl904/objekt-x-programm`
+- **Kanonisches Kontrollblatt:** `00-grundlegung/ebene-XVI-objekt-x.md` — Revision 2, Stand NEU-221e
+- **Navigationskarte:** `KARTE.md` im Root — vollständig API-verifiziert, alle 8 Ordner, 348 Dateien total
 
 ---
 
-### 0. Auditumfang
+## Verifikationsstand KARTE.md
 
-Vollständig geprüft wurden:
+| Ordner | Inhalt | Dateizahl | Verifikation |
+|--------|--------|-----------|-------------|
+| 00-grundlegung | Axiome, Ebenendokumente, p1-Testreihe | 20 | ✅ 2026-07-28 |
+| 01-primkanten-werkzeuge | NEU-003–056, NEU-223–249 | 86 | ✅ 2026-07-28 |
+| 02-jacobi-limes | NEU-058–090 | 34 | ✅ 2026-07-28 |
+| 03-weil-form-statistik | NEU-091–120 | 31 | ✅ 2026-07-28 |
+| 04-grenzoperator-renormierung | NEU-121–150 + Varianten | 42 | ✅ 2026-07-28 |
+| 05-primkanal-fourierladung | NEU-151–173 + Varianten | 34 | ✅ 2026-07-28 |
+| 06-hochschild-bc-algebra | NEU-174–222 + a–z-Varianten | 66 | ✅ 2026-07-28 |
+| 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | 35 | ✅ 2026-07-28 |
+| **Gesamt** | | **348** | **alle ✅** |
 
-- `NEU-174_Minimaler_Hochschild_Komplex_BC_Zeitwirkung.md`
-- `NEU-175_Gewichtraumkomplex_Geladener_Kettenprojektor_BC.md`
-- `NEU-176_Konstruktion_Nichttriviale_Geladene_4Kohomologieklasse.md`
-- `NEU-177_Direkter_Kozykeltest_Gewichteter_Dualzyklus.md`
-- `NEU-178_Vier_Prim_Polynommodell_Geladene_HH4_Klasse.md`
-
-Der Ordner enthält laut aktuellem Repository **79 Dokumente** von NEU-174 bis NEU-222. Der vorliegende Block bildet dessen ersten zusammenhängenden Konstruktionsstrang.
-
-Zur Typprüfung wurde außerdem NEU-72 zurückgelesen. Dort wird $A_{\mathbb Q}$ als komplexe BC-$C^*$-Algebra mit
-$$\sigma_t(\mu_n) = n^{it}\mu_n$$
-und Generatorgewicht $\log n$ dargestellt.
-
----
-
-### 1. Gesamturteil
-
-Der Block enthält zwei klar getrennte Ergebnisse.
-
-#### 1.1 Positives Modellergebnis
-
-Für $S_{\mathbf p} = \mathbb C[x_1,x_2,x_3,x_4]$ konstruiert NEU-178 einen expliziten Hochschild-Vierkozykel
-$$L_\nu(a_1,a_2,a_3,a_4) = x^\nu \det\bigl(D_i(a_j)\bigr)_{i,j=1}^4, \qquad D_i = x_i\frac{\partial}{\partial x_i},$$
-einen passenden dualen Vierzyklus und eine nichtverschwindende Paarung
-$$\langle L_\nu, z_{-\lambda_\nu}\rangle = 24.$$
-
-Damit ist
-$$[L_\nu] \ne 0 \quad\text{in}\quad HH^4(S_{\mathbf p}, S_{\mathbf p})$$
-innerhalb dieses Polynommodells tatsächlich bewiesen.
-
-**Status:** $\boxed{\checkmark[M]}$ relativ zum ausdrücklich definierten Polynommodell, und $\boxed{\checkmark[K/M]}$ als konstruktiver Modellbaustein für das Forschungsprogramm.
-
-#### 1.2 Keine Übertragung auf Objekt (X)
-
-Nicht bewiesen sind:
-- $HH^4(A_{\mathbb Q}, A_{\mathbb Q})_{\mathrm{ch}} \ne 0$
-- eine Übertragung von $S_{\mathbf p}$ auf die BC-Algebra
-- eine Identifikation mit der historischen Klasse $[L_3]$
-- eine Operatorrealisierung $\rho_{\mathrm{op}}(L_\nu)$
-- eine Verbindung zur ganzzahligen Fourierladung $s$ aus den früheren Primkanalformeln
-
-NEU-178 erklärt die fehlende Transferbrücke selbst ausdrücklich.
-
-**Gesamtstatus des Blocks:** $\boxed{\checkmark[M]_{\mathrm{part}}}$
+**Hinweis (03):** NEU-118 doppelt (`Bombieri_Normalisierung` + `X_Rigiditaet_R1_Nachweis`); thematisches Duplikat mit NEU-113.
+**Hinweis (06):** NEU-183 doppelt (`Quellen_Praesentation_Audit_BC-Algebra` + `Zentrumstest_Strukturbruch_BC-Algebra`); NEU-193 doppelt (erste Fassung + Revision 2). Keine expliziten Ersetzungsrelationen.
 
 ---
 
-### 2. Interpretationsfreier Primärextrakt
+## GPT-Audit-Fortschritt
 
-#### 2.1 NEU-174
-
-NEU-174 beginnt ausdrücklich eine neue Konstruktion. Es setzt $B_3 := A_{\mathbb Q}$ und führt zwei Koeffizientenmodelle ein: $M_{\mathrm{untw}} = B_3$ sowie $M_\sigma = {}_{\mathrm{id}}B_{3,\sigma}$.
-
-Danach wird der algebraische Hochschild-Kokettenraum $\operatorname{Hom}(B_3^{\otimes n}, M)$ mit dem üblichen Hochschild-Kodifferential $b$ definiert. Die Datei beansprucht $b^2 = 0$. Anschließend wird aus einer Algebraautomorphismengruppe $\alpha_t$ und einer kompatiblen Modulwirkung $\alpha_t^M$ die Kokettenwirkung gebildet und $b\alpha_t^C = \alpha_t^Cb$ behauptet. Schließlich wird unter einer zusätzlichen Kompaktheitsannahme eine diskrete Fourierzerlegung vorgeschlagen.
-
-#### 2.2 NEU-175
-
-NEU-175 korrigiert drei Punkte:
-- $B_3^{\mathrm{mod}} := A_{\mathbb Q}$ ist eine Modellwahl, keine Identifikation mit dem historisch gemeinten $B_3$.
-- $M_{\mathrm{untw}}$ ist das reguläre, nicht das symmetrische Bimodul.
-- Im verdrehten Fall wird zusätzlich benötigt: $\alpha_t\sigma = \sigma\alpha_t$.
-
-Außerdem erkennt die Datei, dass die BC-Zeit eine $\mathbb R$-Wirkung und keine periodische Kreiswirkung ist. Statt einer vollständigen Fourierreihe definiert sie den algebraischen Eigenkokettenkomplex $\bigoplus_\lambda^{\mathrm{alg}} C_\lambda^n$, wobei $C_\lambda^n = \{\varphi : \alpha_t^C\varphi = e^{it\lambda}\varphi\}$. Auf diesem Raum wird der geladene Projektor $P^{\mathrm{ch}} = \sum_{\lambda\ne 0} P_\lambda$ definiert und $P^{\mathrm{ch}}b = bP^{\mathrm{ch}}$ bewiesen.
-
-#### 2.3 NEU-176
-
-NEU-176 sucht einen geladenen Vierkokettenkandidaten. Die Datei erkennt ausdrücklich, dass weder $bL_{3,\lambda} = 0$ noch $L_{3,\lambda} \notin bC^3_{\mathrm{fin},\lambda}$ aus der Gewichtseigenschaft folgen. Beide Kernpunkte bleiben offen.
-
-#### 2.4 NEU-177
-
-NEU-177 typisiert einen möglichen Nichtrandzeugen durch $\operatorname{Hom}_{\mathbb C}(M, \mathbb C)$ und den Hochschild-Kettenkomplex $M^\vee \otimes (B_3^{\mathrm{mod}})^{\otimes 4}$. Ein Zeuge für einen Kokettenvektor vom Gewicht $\lambda$ muss bei invarianten Paarungen das Gegengewicht $-\lambda$ tragen. NEU-177 konstruiert aber selbst noch keinen konkreten Kozykel oder Zyklus.
-
-#### 2.5 NEU-178
-
-NEU-178 wechselt zu einem eigenständigen Polynommodell $S_{\mathbf p} = \mathbb C[x_1,x_2,x_3,x_4]$ mit Zeitwirkung $e^{it\log p_j}x_j$. Der Vierkozykel $L_\nu(a_1,\ldots,a_4) = x^\nu \det(D_i(a_j))$ trägt Gewicht $\lambda_\nu = \sum_j \nu_j \log p_j \ne 0$. Die Paarung mit dem antisymmetrisierten Dualzyklus ergibt 24, wodurch die Nichttrivialität der Klasse bewiesen wird. Die Datei begrenzt das Resultat ausdrücklich auf dieses Modell.
+### 00-grundlegung
+Referenz- und Kontrollordner. Maßgeblich: `ebene-XVI-objekt-x.md` (Revision 2). Gültigkeitsetiketten (`global`, `bridge`, `spectral`, `Feshbach`, `HH`, `route-conditional`) und Konstruktionspfade P0–P5 kanonisch definiert.
 
 ---
 
-### 3. Dateitabelle
+### 01-primkanten-werkzeuge (86 Dateien, NEU-003–056 + NEU-223–249)
+
+| Schicht | Endurteil |
+|---|---|
+| A₂Dʳ als analytischer Träger | substanziell entwickelt |
+| BC-KMS/Skalierung | stark als Hintergrundstruktur |
+| [ω̃₂] ≠ 0, [L₃] ≠ 0 — frühe Beweise | **nicht tragfähig** |
+| Roher Shift / direkter Hilbert–Pólya-Operator | **negativ ausgeräumt** |
+| D_rel kompakter Resolvent | **strukturell ausgeschlossen** (NEU-225) |
+| Feshbach-Transfer K(z) | ernsthafte Arbeitshypothese, **offen** |
+| Intrinsische positive Primkopplung | **zentraler Hauptengpass** |
+| Mapping-Cone-Pfad | quellenmäßig **blockiert** (NEU-242) |
+| B₃ᵃᵈᵐ-Provenienz | **ungeklärt** |
+
+**Engpass (NEU-229):** Rohkopplung liefert β_p = 0 (T_p^raw · e_p = 0). Koszul-Kandidat d_K blockiert an Typbarriere (B₃ᵃᵈᵐ). NEU-249: 𝔅 := A_Q verbindlich festgelegt.
+
+---
+
+### 02-jacobi-limes (34 Dateien, NEU-058–090)
+
+| Teilpfad | Endurteil |
+|---|---|
+| Direkter Jacobi-Limes A_N → D_rel | durch NEU-224/225 überholt |
+| BC-Zeit als Quelle von log p | **strukturell stark** |
+| NEU-090-Konstantengrenzwert T_N(z) → γ²/2 | **falsch** (→ 0) |
+| Direkter ξ-Determinantenanschluss | **nicht erreicht** |
+
+---
+
+### 03-weil-form-statistik (31 Dateien, NEU-091–120)
+
+| Teilpfad | Endurteil |
+|---|---|
+| Weil-Positivitätsstrategie | **zentrales Leitprinzip** |
+| Normalisierung nach Bombieri (NEU-113/118) | sorgfältig ausgearbeitet, kanonisch |
+| R1-Rigiditätsnachweis (NEU-118b) | **offen** |
+| Skalenkorrektur √N → √(N/log N) | kritische Korrektur, Klasse-B-Rücksetzung |
+| Weil-Explizitformel-Anschluss | strukturell vorbereitet, nicht vollzogen |
+
+---
+
+### 04-grenzoperator-renormierung
+
+| Datei(en) | Tragfähiger Kern | Hauptproblem | Status |
+|---|---|---|---|
+| NEU-128A/B | Primkanal-Operator C_p^rel, c_p-Notation | Herkunft c_p aus X nicht gezeigt | ✓[M]_part |
+| NEU-130 | Σ_rel^ren ∈ S₁ (Re β > 0) | Konditional auf |c_p|²-Schranke | ✓[K/M] |
+| NEU-131 | Tr(Σ_rel^ren) = −ζ'/ζ für Re β > 1 | Zielgewicht R_p definiert, nicht hergeleitet | ✓[M]_part |
+| NEU-132–133 | Primschalen, Kanalnormen | Keine formale orthogonale Direktsumme | ✓[M]_part |
+| NEU-134 | |c_p|² = (log p)² B_p | B_p > 0 nicht bewiesen | ?[O] |
+| NEU-135D | |c_p|² = O((log p)²/p) | Quellprovenienz offen | ✓[K/M] |
+| NEU-136 | Verbindung Jacobi-Limes → Grenzoperator | Überholt durch NEU-224/225 | ✓[M]_neg |
+| NEU-137–140 | S₁-Konvergenz, Kanalnormierung, Spurhierarchie | Konditional; R-Operator noch offen | ✓[K/M] / ✓[M]_part |
+| NEU-141–145 | Drei Spurebenen; regulierte Spur := −ζ'/ζ | Zirkuläre Definition; Nullstellen importiert | ✓[M]_part |
+
+**NEU-146–150: ausstehend** — Mellinfehler in NEU-148/149 (φ(p/X) statt φ(p^k/X)) bereits bekannt.
+
+---
+
+### 05-primkanal-fourierladung
+
+| Datei(en) | Tragfähiger Kern | Hauptproblem | Status |
+|---|---|---|---|
+| NEU-151–155 | Rang-1-Modell; Typkorrektur Rohkopplung/Operator | B₃ᵃᵈᵐ, Pullback offen | ✓[M]_part |
+| NEU-161–165b | (p−1)log p ≠ 0; R_{p,j} negativ geschlossen | Freie Zulässigkeit L₃° nicht bewiesen | ✓[M]_part / ⚠[M] |
+| NEU-166–168 | Gram-Invariante Φ_p = C_p·C_p# korrekt; A_p = ∅ | C_p auf falschem Raum; kein transversaler Detektor T̃_p | ✓[M]_part / ⚠[M] |
+
+**NEU-169–173 + Varianten: ausstehend.**
+
+---
+
+### 06-hochschild-bc-algebra — Block NEU-174–178
+
+**Stärkster positiver Befund:**
+Im Polynommodell S_p = C[x₁,x₂,x₃,x₄]: expliziter geladener Vierkozykel L_ν mit Paarung 24 —
+[L_ν] ≠ 0 in HH⁴(S_p, S_p). ✓[M]
+
+**Keine Übertragung auf A_Q:** kein Transfer S_p → A_Q, keine Identifikation mit [L₃^orig], keine Operatorrealisierung.
 
 | Datei | Tragfähiger Kern | Hauptproblem | Status |
-|-------|-----------------|--------------|--------|
-| NEU-174 | Reguläres/verdrehtes Bimodul; $b$; $b^2=0$; induzierte Zeitwirkung | Grundkörper widersprüchlich ($\mathbb Q$ oder $\mathbb R$); Tensorprodukt/Stetigkeit offen; vollständige Fourierzerlegung falsch | $\checkmark[M]_{\mathrm{part}}$ |
-| NEU-175 | Algebraischer Eigenkokettenkomplex; $P^{\mathrm{ch}}$; Kommutation mit $b$; Kohomologieabstieg | Nur Teilkomplex; kein historischer $B_3$-Nachweis; „Kettenprojektor" falsch benannt | $\checkmark[M]_{\mathrm{part}}$ |
-| NEU-176 | Kozykel- und Nichtrandbedingung korrekt getrennt | Kandidatenformel nicht vollständig getypt; Gewichtsbuchhaltung passt nicht zur Formel | $\warning[M]$ |
-| NEU-177 | Dualmodul, Kettenkomplex, Gegengewicht und Nichtrandkriterium korrekt | Kein konkreter Kozykel oder Zyklus auf $A_{\mathbb Q}$; Folgedatei falsch angekündigt | $\checkmark[M]_{\mathrm{part}}$ |
-| NEU-178 | Expliziter geladener Vierkozykel, Dualzyklus und Nichttrivialitätsbeweis im Polynommodell | Kein Transfer auf $A_{\mathbb Q}$; keine Operatorrealisierung; falscher Ladungstyp für NEU-169 | $\checkmark[M]$ im Modell, $\checkmark[K/M]$ für Objekt (X) |
+|---|---|---|---|
+| NEU-174 | b²=0; bα_t=α_tb; reguläres/verdrehtes Bimodul | Widersprüchlicher Grundkörper; Fourierzerlegung falsch | ✓[M]_part |
+| NEU-175 | Algebraischer Eigenkokettenkomplex; P^ch | Nur Teilkomplex; kein hist. B₃-Nachweis | ✓[M]_part |
+| NEU-176 | Kozykel-/Nichtrandbedingung korrekt getrennt | Kandidatenformel nicht vollständig getypt | ⚠[M] |
+| NEU-177 | Dualmodul, Kettenkomplex, Gegengewicht korrekt | Kein konkreter Kozykel oder Zyklus | ✓[M]_part |
+| NEU-178 | Expliziter Vierkozykel, Dualzyklus, Paarung=24 im Polynommodell | Kein Transfer auf A_Q; falscher Ladungstyp für NEU-169 | ✓[M] im Modell, ✓[K/M] für Objekt X |
 
 ---
 
-### 4. Kritische Ladungsunterscheidung
+### 06-hochschild-bc-algebra — Block NEU-179–185
 
-Der Begriff „geladen" bezeichnet in verschiedenen Ordnern verschiedene Strukturen.
+**Stärkster positiver Befund:**
+Erster echter BC-interner HH⁴-Satz: HH⁴(A_Q^alg, A_Q^alg) ≠ 0
+durch expliziten neutralen Vierkozykel Ω_p mit Augmentationspaarung ⟨Ω_p, z^ε_p⟩ = 24.
 
-**Frühere Fourierladung (Primkanalstrang):** ganzzahliger Index $s \in \mathbb Z$ in Basisvektoren $e_s V_m$; die Rohkopplung benötigt konkret $s\ell_{s,m} \ne 0$.
+**Stärkster negativer Befund:**
+Beide Nullkozykel-Routen für geladene Klassen scheitern:
+Z(A)_g = 0 für g ≠ 1; Z°(A, M_{σ_β}) = 0 für Re β > 0.
 
-**BC-Zeitgewicht (NEU-174–178):** reelles Zeitgewicht $\lambda \in \mathbb R$ mit $\alpha_t^C L = e^{it\lambda} L$; im Polynommodell $\lambda_\nu = \sum_j \nu_j \log p_j$.
+**Kritische Quellenkorrektur:**
+μ_n e(r) = e(r/n) μ_n ist auf Q/Z nicht kanonisch. Korrekte Standardrelation:
+μ_n e(r) μ_n* = (1/n) Σ_{ns=r} e(s).
+Korrekte gerichtete Formeln: e(s)μ_m = μ_m e(ms); μ_n* e(s) = e(ns) μ_n*. **Status: ×[M]**
 
-**Keine vorhandene Identifikation:** Es ist nicht konstruiert $\lambda \ne 0 \Rightarrow s \ne 0$, und es gibt keine Abbildung $C_\lambda^4 \to \operatorname{span}\{e_s V_m\}_{s\ne 0}$. Daher folgt aus NEU-178 nicht $\operatorname{supp}^\times(L_3^\circ) \ne \varnothing$ im Sinne von NEU-169.
+| Datei | Tragfähiger Kern | Hauptproblem | Status |
+|---|---|---|---|
+| NEU-179 | Kein automatischer HH-Transfer; direkte Ableitungsroute sinnvoll | D_p äußerlich offen | ✓[M]_part |
+| NEU-180 | Q_+^×-Gradierung, Primvaluationsderivationen | Quellenpräsentation später falsch | ✓[M]_part |
+| NEU-181 | Homogenitäts- und Generatorreduktion | R4/R5 fehlerhaft | ✓[M]_part |
+| NEU-182 | Norm-No-go für verdrehte Nullkozykel (Re β > 0) | Kein allgemeiner No-go für geladenes HH⁴ | ✓[M]_part |
+| NEU-183 – Präsentation | Gradierung, C*-Normroute reparierbar | Falsche Standardrelationen | ⚠[M] |
+| NEU-183 – Zentrum | Bedeutung des Zentrums erkannt | Nichtkanonisches r/q; falscher Beweis | ⚠[M], Beweis ×[M] |
+| NEU-184 | Z(A)_g = 0 für g ≠ 1 vollständig | Relationsprovenienz muss korrigiert werden | ✓[M]_part, Hauptsatz ✓[M] |
+| NEU-185 | Augmentationszyklus; ⟨Ω_p, z^ε_p⟩ = 24; [HH⁴] ≠ 0 | Nur algebraisch + neutral | ✓[M]_part, Hauptsatz ✓[M] |
 
-**Status:** $\boxed{\checkmark[M]_{\mathrm{neg,Quelle}}}$ — dies ist der wichtigste noch offene Typknoten des Blocks.
-
----
-
-### 5. Ersetzte und korrigierte Aussagen
-
-**Grundkörper:** Zu streichen: Grundkörper $\mathbb Q$ oder $\mathbb R$. Festzulegen: $\boxed{\text{Grundkörper} = \mathbb C}$.
-
-**Hochschildkomplex:** Zu präzisieren: $\boxed{\operatorname{Hom}_{\mathbb C}(B_3^{\otimes_{\mathrm{alg}} n}, M)}$. Ein kontinuierlicher Komplex wäre ein separates Projekt.
-
-**Fourierzerlegung:** Zu streichen: $\bigoplus_{k\in\mathbb Z} C_k^n$ aus bloßer BC-Zeitwirkung. Korrekt: $\bigoplus_{\lambda\in\mathbb R}^{\mathrm{alg}} C_\lambda^n$ als Teilkomplex der endlichen Summen tatsächlich vorhandener Eigenkoketten.
-
-**Kandidatenformel (NEU-176):** Zu ersetzen durch
-$$\varphi(a_1,a_2,a_3,a_4) = \sum_k m_k f_{k,1}(a_1)f_{k,2}(a_2)f_{k,3}(a_3)f_{k,4}(a_4)$$
-mit expliziten Typen und Gewichten von $m_k$ und $f_{k,j}$. Auch diese Reparatur garantiert noch nicht $b\varphi = 0$.
-
-**Ergebnis NEU-178:** Korrekt: $HH^4(S_{\mathbf p}, S_{\mathbf p})_{\lambda_\nu} \ne 0$. Nicht korrekt (noch): $HH^4(A_{\mathbb Q}, A_{\mathbb Q})_{\mathrm{ch}} \ne 0$.
-
----
-
-### 6. Korrigierter Hauptsatz des Blocks
-
-**Satz 174–178 (korr.)** Sei $B$ eine komplexe assoziative Algebra, $M$ ein komplexes $B$-Bimodul, $C^n(B,M) = \operatorname{Hom}_{\mathbb C}(B^{\otimes_{\mathrm{alg}} n}, M)$, $\alpha_t$ eine Algebraautomorphismengruppe und $\alpha_t^M$ eine kompatible Modulwirkung. Dann:
-
-1. $b^2 = 0$.
-2. $b\alpha_t^C = \alpha_t^C b$.
-3. $\bigoplus_{\lambda\in\mathbb R}^{\mathrm{alg}} C_\lambda^\bullet$ ist ein Unterkomplex.
-4. $P^{\mathrm{ch}} = \sum_{\lambda\ne 0} P_\lambda$ kommutiert mit $b$ und steigt auf dessen Kohomologie ab.
-5. Für das Polynommodell $S_{\mathbf p} = \mathbb C[x_1,x_2,x_3,x_4]$ existiert für jedes $\nu \ne 0$ eine explizite Klasse $[L_\nu] \ne 0$ in $HH^4(S_{\mathbf p}, S_{\mathbf p})$ mit BC-Zeitgewicht $\lambda_\nu = \sum_j \nu_j \log p_j \ne 0$.
-
-Dieser Satz liefert weder einen Transfer nach $A_{\mathbb Q}$ noch eine Operatorrealisierung oder eine ganzzahlige Fourierladung. **Status:** $\boxed{\checkmark[M]}$
+**Korrigierter Hauptsatz (NEU-179–185^corr):**
+1. D_p(a_g) = v_p(g)a_g: paarweise kommutierende Hochschild-Derivationen. ✓[M]
+2. Ω_p = Alt(D_{p1} ⌣ D_{p2} ⌣ D_{p3} ⌣ D_{p4}): neutraler Vierkozykel, ⟨Ω_p, z^ε_p⟩ = 24. ✓[M]
+3. Z(A_Q^alg)_g = 0 für g ≠ 1. ✓[M]_neg
+4. Z°(A, M_{σ_β}) = 0 für Re β > 0. ✓[M]_neg
+5. Geladene Faktorroute u ⌣ Ω_p in beiden Nullkozykelmodellen blockiert. ✓[M]
 
 ---
 
-### 7. Aktualisierter DAG-Stand (Block NEU-174–178)
+### 06-hochschild-bc-algebra — Block NEU-192–195
 
-| Knoten | Inhalt | Status |
-|--------|--------|--------|
-| H-174-1 | $B_3^{\mathrm{mod}}$ als komplexe Algebra festgelegt | $\times[M]$ (widersprüchlicher Grundkörper) |
-| H-174-2 | $M_{\mathrm{untw}}$ reguläres Bimodul | $\checkmark[M]$ |
-| H-174-3 | $M_\sigma$ verdrehtes Bimodul | $\checkmark[M]$ |
-| H-174-4 | $b^2 = 0$ | $\checkmark[M]$ |
-| H-174-5 | $b\alpha_t^C = \alpha_t^Cb$ | $\checkmark[M]$ unter Modulkompatibilität |
-| H-174-σ | $\alpha_t\sigma = \sigma\alpha_t$ | $?[O]$ |
-| H-174-top | algebraischer oder kontinuierlicher Komplex | $?[O]$ |
-| H-175-1 | $C_{\mathrm{fin}}^\bullet$ algebraischer Gewichtsunterkomplex | $\checkmark[M]$ |
-| H-175-2 | $P^{\mathrm{ch}}b = bP^{\mathrm{ch}}$ | $\checkmark[M]$ |
-| H-175-3 | $[P^{\mathrm{ch}}]$ auf $H^\bullet(C_{\mathrm{fin}})$ | $\checkmark[M]$ |
-| H-175-full | $C_{\mathrm{fin}}^\bullet = C^\bullet$ | $?[O]$ |
-| H-176-1 | Kandidatenformel vollständig typisiert | $\times[M]$ |
-| H-176-2 | $bL_{3,\lambda} = 0$ auf $A_{\mathbb Q}$ | $?[O]$ |
-| H-176-3 | $[L_{3,\lambda}] \ne 0$ auf $A_{\mathbb Q}$ | $?[O]$ |
-| H-177-1 | dualer Kettenkomplex und Adjungiertheit | $\checkmark[M]$ |
-| H-177-2 | Gegengewichtsbedingung | $\checkmark[M]$ |
-| H-178-1 | $[L_\nu] \ne 0$ in $HH^4(S_{\mathbf p}, S_{\mathbf p})$ | $\checkmark[M]$ |
-| H-178-2 | $\lambda_\nu \ne 0$ | $\checkmark[M]$ |
-| H-178-transfer | $HH^4(S_{\mathbf p}) \to HH^4(A_{\mathbb Q})$ | $?[O]$ |
-| H-178-orig | $[L_\nu] = [L_3^{\mathrm{orig}}]$ | $?[O]$ |
-| H-178-op | $\rho_{\mathrm{op}}(L_\nu)$ | $\checkmark[M]_{\mathrm{neg,Quelle}}$ |
-| H-178-charge | $\lambda_\nu \ne 0 \Rightarrow s \ne 0$ in $e_s V_m$ | $\checkmark[M]_{\mathrm{neg,Quelle}}$ |
+**Auditumfang:** NEU-192, NEU-193 (erste Fassung + Revision 2), NEU-194, NEU-195.
+**Hinweis:** NEU-193 doppelt (Planungsdokument vs. vollständige Konstruktion); NEU-191 und NEU-198 fehlen im Repository.
+
+**Stärkster positiver Befund:**
+Erster expliziter und geschlossener geladener Hochschild-Dualzyklus:
+
+  z_{-λ}^{g,p} = Σ_{π∈S₄} sgn(π) · ε_{gP} ⊗ μ_{p_π(1)} ⊗ ··· ⊗ μ_{p_π(4)}
+
+mit ε_q = ε ∘ P_q, P = p₁p₂p₃p₄, λ = log g.
+∂z = 0 vollständig berechnet. Gewicht: −λ. Nichtverschwindend. **✓[M]**
+
+**Stärkster negativer Befund:**
+Weder symmetrische noch determinantische Vierkokette erzeugt eine geladene Kohomologieklasse:
+- NEU-176-Schablone (symmetrisch): Alt₄L = 0 ⇒ Paarung = 0. ✓[M]_neg
+- Determinantischer Kandidat (NEU-194): Paarung = 24, aber bL ≠ 0. ✓[M]_neg
+
+**Gesamtstatus: ✓[M]_part**
+
+| Datei | Tragfähiger Kern | Hauptproblem | Status |
+|---|---|---|---|
+| NEU-192 | Gewichtsstabilität b(C³_{fin,λ}) ⊆ C⁴_{fin,λ}; Separationssatz; Warnlemma | Nur abstrakter Dualzeuge; nur Unterkomplex; keine Operatorrealisierung | ✓[M]_part |
+| NEU-193 – 1. Fassung | Duale Zeitwirkung; Gegengewichtsbedingung λ+μ=0 | Äußere Modulwirkungen in Randformel vertauscht; Funktionalgewicht zu restriktiv; Zyklus unnötig gesperrt | ⚠[M] |
+| NEU-193 – Revision 2 | Expliziter geladener Zyklus; Randtest; Alternierungsfilter | Kein geladener Kozykel mit nichtverschwindender Paarung | ✓[M]_part |
+| NEU-194 | Alternierender Vierkochain; Paarung = 24; Slotfunktionale korrekt | Hochschildkorand ≠ 0; struktureller No-go zu breit | ✓[M]_part |
+| NEU-195 | Neutraler Vierkozykel [Ω_p] ≠ 0 bestätigt; konditionale Cup-Route; innerer No-go | Keine D_g konstruiert; „Reduktion auf HH¹“ nur hinreichend | ✓[M]_part |
+
+**Korrigierter Hauptsatz (NEU-192–195^corr):**
+1. z_{-λ}^{g,p} ∈ Z₄(A,A^∨)_{-λ}: nichtverschwindend. ✓[M]
+2. ⟨L, z_{-λ}⟩ = 4! · ε(Alt₄L(μ_{p1},...,μ_{p4})). ✓[M]
+3. Symmetrischer No-go: vollständig symmetrische Vierkokette paart zu null. ✓[M]_neg
+4. Determinantischer No-go: bL_λ^det ≠ 0. ✓[M]_neg
+5. Cup-Route (konditional): ∃ D_g mit ε(D_g(μ_p)) ≠ 0 ⇒ Alt(D_g ⌣ δ_{p2} ⌣ δ_{p3} ⌣ δ_{p4}) nichttrivialer geladener Vierkozykel. ✓[K/M]
+
+**Neue DAG-Knoten (NEU-192–195):**
+
+| Knoten | Aussage | Status |
+|---|---|---|
+| [Z-192-weight] | b(C³_{fin,λ}) ⊆ C⁴_{fin,λ} | ✓[M] |
+| [Z-192-sep] | algebraische Separationsäquivalenz | ✓[M] |
+| [Z-192-full] | Subkomplex-Nichtrand ⇒ Nichtrand in vollem C•(A,A) | ?[O] |
+| [Z-192-trace] | zeitinvariante Auswertung detektiert λ ≠ 0 | ✓[M]_neg |
+| [Z-193-dual] | ε_q = ε ∘ P_q wohldefiniert und ≠ 0 | ✓[M] |
+| [Z-193-cycle] | z_{-λ}^{g,p} ∈ Z₄(A,A^∨)_{-λ} | ✓[M] |
+| [Z-193-alt] | Paarung reduziert auf Alt₄L | ✓[M] |
+| [Z-193-sym] | Symmetrische NEU-176-Schablone: Paarung = 0 | ✓[M]_neg |
+| [Z-194-pair] | ⟨L_λ^det, z_{-λ}⟩ = 24 | ✓[M] |
+| [Z-194-coc] | bL_λ^det = 0 | ✓[M]_neg |
+| [Z-195-neutral] | [Ω_p] ≠ 0 in HH⁴(A,A)₀ | ✓[M] |
+| [Z-195-cup] | D_g ⇒ Ω_{D_g,p} geladener Kozykel | ✓[K/M] |
+| [Z-195-pair] | ⟨Ω_{D_g,p}, z_{-λ}⟩ = 24 · ε(D_g(μ_p)) | ✓[K/M] |
+| [Z-195-inner] | D_g inner ⇒ [Ω_{D_g,p}] = 0 | ✓[M]_neg |
+| [Z-195-D_g] | ∃ D_g mit ε(D_g(μ_p)) ≠ 0 | ?[O] |
+| [Z-195-mult] | ∃ x_g: ε(x_g) ≠ 0, [A,x_g]·Im(Ω_p) = 0 | ?[O] |
+| [HH4-charged] | HH⁴(A,A)_g ≠ 0 (g ≠ 1) | ?[O] |
+| [OP-bridge] | HH⁴(A,A) → O(H) | ✓[M]_neg,Quelle |
+
+**Beitrag zu Objekt X:**
+- Zeugenarchitektur ist nicht mehr die Hauptblockade.
+- Neue präzise Blockade: „Finde einen geladenen alternierenden Vierkozykel mit nichtverschwindender Auswertung auf Primisometrien.“
+- Suchraum eingeengt auf derivationsartige, Cup/Shuffle- oder gradübergreifende Konstruktionen.
+- Keine Operator- oder Primkanalbrücke; kein Weil-Positivitätsfortschritt.
 
 ---
 
-### 8. Gesamtbeitrag zu Objekt (X)
+## Ausstehende Blöcke
 
-**Erstmals ein echter Vierkozykelbeweis:** Im Unterschied zu den früheren symbolischen $L_3$-Verwendungen enthält NEU-178 eine vollständig explizite Vierkokette, einen Kozykelbeweis, einen expliziten Dualzyklus, eine nichtverschwindende Paarung und damit einen echten Nichtrandbeweis. Dies ist ein substantieller mathematischer Fortschritt.
+| Ordner | Dateien | Priorität |
+|---|---|---|
+| 04-grenzoperator-renormierung | NEU-146–150 (Mellinfehler bekannt) | parallel |
+| 05-primkanal-fourierladung | NEU-169–173 + Varianten | ausstehend |
+| 06-hochschild-bc-algebra | NEU-186–191 (geladener HH⁴, Restriktionssatz) | als nächstes |
+| 06-hochschild-bc-algebra | NEU-196–202 (Augmentationsblindheit, Kommutatorquotient, singuläres Potential) | dann |
+| 06-hochschild-bc-algebra | NEU-203–222 + a–z | danach |
+| 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | abschließend |
 
-**Der Fortschritt ist modellintern:** Das Ergebnis lebt in $\mathbb C[x_1,x_2,x_3,x_4]$, nicht in der BC-Algebra. Es zeigt, dass eine vierdimensionale kommutative Algebra mit logarithmischer Zeitgraduierung geladene $HH^4$-Klassen tragen *kann* — nicht, dass die konkrete BC-Algebra dieselbe Struktur besitzt.
+**Fehlende Dateien:** NEU-191, NEU-198 (nicht im Repository vorhanden).
 
-**Noch keine Primkanalbrücke:** NEU-169 benötigt einen Operatorrepräsentanten $L_3^\circ = \sum_{s,m} \ell_{s,m} e_s V_m$ mit $s\ell_{s,m} \ne 0$. NEU-178 liefert dagegen eine multilineare Kokette mit Zeitgewicht $\lambda_\nu$. Zwischen beiden fehlt: Kokette → Operator → Kreis-Fouriergrad.
+**Prüffragen für NEU-196–202:**
+1. Annihiliert die Augmentation jede singuläre Potentialderivation notwendigerweise?
+2. Liefert der Kommutatorquotient einen wohldefinierten Dualdetektor?
+3. In welchem Zielraum liegen die singulären Kommutatoren?
+4. Lösen NEU-201/202 den offenen D_g-Knoten aus NEU-195, oder konstruieren sie nur eine Derivation in einem vergrößerten Koeffizientenmodul?
 
 ---
 
-### 9. Nächster Auditblock
+## Persistente offene Knoten (ordnerübergreifend)
 
-Vorrangig zu prüfen (NEU-179–185):
-
-- ob das Vier-Prim-Polynommodell tatsächlich in $A_{\mathbb Q}$ eingebettet werden kann
-- ob die Primvaluationsderivationen die BC-Relationen respektieren
-- ob ein behaupteter Nullkozykel wegen fehlender Zentralität scheitert
-- ob der Augmentationscharakter auf der tatsächlichen BC-Algebra existiert und der vorgeschlagene Dualzyklus wirklich geschlossen ist
-
-**Nächster Einstieg:** NEU-179 (`Transfertriage_Geladene_Nullkozykel_AQ`)
+| Knoten | Beschreibung | Zuletzt aktiv |
+|---|---|---|
+| Intrinsische positive Primkopplung | Hauptengpass: keine Quelle für Λ_p / b_p | NEU-229 (01) |
+| B₃ᵃᵈᵐ-Provenienz | Koszul-Lift typgeblockt | NEU-155 (05), NEU-249 (01) |
+| Nichtentartung c_p ≠ 0 | B_p > 0 nicht bewiesen | NEU-134, NEU-152 |
+| Edge-Label-Direktsumme | Nicht formal definiert | NEU-142–144 (04) |
+| Mellinfehler NEU-148/149 | φ(p/X) statt φ(p^k/X) | NEU-151 (05) |
+| Feshbach-Transfer K(z) | Arbeitshypothese | NEU-229 (01) |
+| L₃° = e₁V₁ kompatibel mit [L₃] | Zulässigkeit nicht gezeigt | NEU-162 (05) |
+| R_{p,j}-Konstruktion | Negativ geschlossen; kein transversaler Detektor T̃_p | NEU-165b/166–168 (05) |
+| Gram-Invariante Φ_p = C_p · C_p# | Zeugengeometrie muss auf Φ_p aufgebaut werden | NEU-166–168 (05) |
+| D_p äußere Derivation | D_p ∈ Z¹(A,A) \ B¹(A,A) offen | NEU-179 (06) |
+| [Ω_p] in kontinuierlichem HH⁴ | Algebraisch ≠ 0 impliziert nicht topologisch | NEU-185 (06) |
+| Operatorbrücke ρ_op(Ω_p) | Keine Abbildung Z⁴(A,A) → End(H) | NEU-185/189–190 (06) |
+| Geladene HH⁴-Klasse via D_g | ∃ D_g mit ε(D_g(μ_p)) ≠ 0 offen | NEU-195 (06) |
+| Multiplikatorroute x_g | ∃ x_g: ε(x_g) ≠ 0 und [A,x_g]·Im(Ω_p) = 0 | NEU-195 (06) |
+| Kommutatorquotient als Dualdetektor | Wohldefiniertheit + Zielraum offen | NEU-197–202 (06, ausstehend) |
+| Augmentationsblindheit singulärer Potentiale | Ob ε notwendig D_g annihiliert | NEU-196 (06, ausstehend) |
