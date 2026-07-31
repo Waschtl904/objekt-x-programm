@@ -1,11 +1,11 @@
 # GPT-Audit-Zwischenbilanz
 
-**Stand: 31. Juli 2026 — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136 + Audit NEU-137–140 + Audit NEU-141–145 + Audit NEU-146–150 (offen, Mellinfehler) + Audit NEU-151–155 + Audit NEU-156–160 + Audit NEU-161–165b + Audit NEU-166–168 + Audit NEU-179–185 + Audit NEU-186–190 + Audit NEU-192–195 + Direktaudit NEU-196 + Direktaudit NEU-197 + Direktaudit NEU-199–202**
+**Stand: 31. Juli 2026 (Abend) — nach vollständiger Auswertung der Ordner 00, 01, 02, 03 + DAG-Audit NEU-123–127 + Audit NEU-128A/B/130/131 + Audit NEU-132–136 + Audit NEU-137–140 + Audit NEU-141–145 + Audit NEU-146–150 (offen, Mellinfehler) + Audit NEU-151–155 + Audit NEU-156–160 + Audit NEU-161–165b + Audit NEU-166–168 + Audit NEU-179–185 + Audit NEU-186–190 + Audit NEU-192–195 + Direktaudit NEU-196 + Direktaudit NEU-197 + Direktaudit NEU-199 + Direktaudit NEU-200 (vertieft) + Direktaudit NEU-201 + Direktaudit NEU-202**
 
 Dieses Dokument sichert den Gesprächsstand des laufenden GPT-Auditdurchlaufs
 für die Verwendung in einem neuen Chat-Kontext.
 
-> **Hinweis:** Diese Datei ist der kanonische Bilanzstand per 31.07.2026.
+> **Hinweis:** Diese Datei ist der kanonische Bilanzstand per 31.07.2026 (Abend).
 > NEU-191 und NEU-198 fehlen im Repository. Nach NEU-190 folgt direkt NEU-192; nach NEU-197 direkt NEU-199.
 
 ---
@@ -159,12 +159,7 @@ Beide Nullkozykel-Routen für geladene Klassen scheitern: Z(A)_g = 0 für g ≠ 
 ### 06-hochschild-bc-algebra — Block NEU-186–190
 
 **Entscheidender neuer Befund:**
-Das faktorielle Schalenpotential H(x) = j auf j!ẑ \ (j+1)!ẑ liefert eine nichttriviale Gruppenalgebra-Klasse in HH¹(B, A)_g, aber:
-
-H(kx) − H(x) ∉ LC(ẑ)    für alle k > 1
-
-Der Kandidat erweitert sich nicht zu einer geladenen Derivation der BC-Algebra. Der offene Knoten ist jetzt präzise:
-**„Finde ein nichtfortsetzbares punktiertes Potential mit gleichzeitig regulären multiplikativen Differenzen."**
+Das faktorielle Schalenpotential H(x) = j auf j!ẑ \ (j+1)!ẑ liefert eine nichttriviale Gruppenalgebra-Klasse in HH¹(B, A)_g, aber H(kx) − H(x) ∉ LC(ẑ) für alle k > 1. Der Kandidat erweitert sich nicht zu einer geladenen Derivation der BC-Algebra.
 
 **Zweiter wichtiger Befund:**
 Im gesamten auditierten Katalog NEU-1–188 ist keine Abbildung Z⁴(A,A) → O(H) oder HH⁴(A,A) → O(H) konstruiert. Status: ✓[M]_neg,Quelle.
@@ -172,10 +167,10 @@ Im gesamten auditierten Katalog NEU-1–188 ist keine Abbildung Z⁴(A,A) → O(
 | Datei | Tragfähiger Kern | Hauptproblem | Status |
 |---|---|---|---|
 | NEU-186 | Innere Derivationen sind Koränder; uD_p-Test; Cup-Triage | Nur spezielle Cup-Routen erfasst | ✓[M]_part |
-| NEU-187 | HH¹(A,A)_g ↪ HH¹(B,A)_g injektiv; H¹(G,B_{ρd}) ≠ 0; Klassenklassifikation | Homogene Normalform zu reduzieren; kein Transfer zur BC-Algebra | ✓[M]_part |
-| NEU-188 | K2 immer lösbar; Eindeutigkeit y_k,z_k; konditionaler Äußerlichkeitssatz; Erweiterungsbedingung formuliert | T_H nur formal; faktorielles H scheitert bei α_k-Differenz | ✓[M]_part |
+| NEU-187 | HH¹(A,A)_g ↪ HH¹(B,A)_g injektiv; H¹(G,B_{ρd}) ≠ 0; Klassenklassifikation | Homogene Normalform zu reduzieren; kein Transfer | ✓[M]_part |
+| NEU-188 | K2 immer lösbar; Eindeutigkeit y_k,z_k; konditionaler Äußerlichkeitssatz | T_H nur formal; faktorielles H scheitert bei α_k-Differenz | ✓[M]_part |
 | NEU-189 | Ω_p ist Vierkokette, kein Einzeloperator; Korandinvarianz als eigener Knoten | Downstream-Tabelle zu stark; Spektraltripel/KK typologisch vermischt | ✓[M]_part |
-| NEU-190 | Negativer Quellenbefund Operatorbrücke (gesamter Katalog NEU-1–188) | Fehler zu NEU-20; Grundkörpernotation; Kandidatenliste nicht typkorrekt | ✓[M]_part, Hauptbefund ✓[M]_neg,Quelle |
+| NEU-190 | Negativer Quellenbefund Operatorbrücke (Katalog NEU-1–188) | Fehler zu NEU-20; Grundkörpernotation; Kandidatenliste nicht typkorrekt | ✓[M]_part, Hauptbefund ✓[M]_neg,Quelle |
 
 ---
 
@@ -235,166 +230,219 @@ Weder symmetrische noch determinantische Vierkokette erzeugt eine geladene Kohom
 
 ### 06-hochschild-bc-algebra — Direktaudit NEU-199
 
-**Auditumfang:** `NEU-199_Generatorformel_Potentialderivation_Quotiententest.md` vollständig. Rückverweise auf NEU-188, NEU-196, NEU-197 (alle auditiert); NEU-198 fehlt im Repository (referenziert aber nicht prüfbar).
-
-**Interpretationsfreier Primärextrakt:**
-NEU-199 führt die Potentialroute aus NEU-188 konkret weiter: Für ein lokal konstantes punktiertes Potential H und gekürztes Gewicht g = m/n wird der singulä­re Implementierer u_H = μ_m H μ_n* als Kommutatoransatz D_g^H(a) = [u_H, a] eingeführt. NEU-199 leistet in vier Hauptschritten:
-
-1. **Generatorformel im teilerfremden Sektor (199.11):** D_g^H(μ_k) = μ_{mk} F_k μ_n* für (k,n)=1, F_k = α_k(H)−H ∈ B. Gradcheck korrekt: deg = mk/n = gk. Semigruppenrelation (199.14) und Isometrierelation (199.15) vollständig verifiziert.
-2. **Formel für μ_k* (199.12):** D_g^H(μ_k*) = −μ_m F_k μ_{nk}* für (k,mn)=1. Gradcheck korrekt.
-3. **Quotienten-Koeffizient (199.18):** G_i^H = α_{P/p_i}(F_{p_i}) = α_P(H) − α_{P/p_i}(H) für p_j ∤ mn. Gradcheck und Abhängigkeit von i korrekt.
-4. **B-Quotientenreduktion (199.20–199.21):** Y_{g,H,p,i} ∈ C_{gP,p} ⟺ G_i^H ∈ Σ_j (1−α_{p_j})B. Das ist der erste explizit auswertbare Koeffiziententest.
-
-#### Prüfbefunde NEU-199
-
-**Tragfähiger Kern:**
-- Generatorformeln (199.11), (199.12), (199.14), (199.15), (199.16): alle rechnerisch korrekt.
-- B-Quotientenreduktion: vollständige Äquivalenz korrekt, setzt isolierten Normalformblock (mP, n) voraus.
-- Arbeitsreihenfolge (199.K) und Testmatrix (199.I): methodisch sauber.
-
-**Fehler / Lücken:**
-- NEU-199 setzt NEU-198 ([O-198-1/2/3]) als abgeschlossen voraus. NEU-198 fehlt im Repository. Soweit die referenzierten Knoten [O-198-1/2/3] kohomologische Faktorisierung des Obstruktionspfeils meinen, ist der Kettennachweis nicht vollständig überprüfbar, aber die isolierte Aussage von NEU-199 ist davon unabhängig korrekt.
-- Formel für Gruppenalgebrasektor (199.10): D_g^H(e(r)) = μ_m c_r^H μ_n* mit c_r^H := H(e(nr)−e(mr)) — diese Schreibweise ist notationell unscharf (H wirkt auf ẑ, nicht auf Gruppenelemente). Sachlich korrekt wenn H auf den Komponenten von e(nr) und e(mr) ausgewertet wird; die Formel ist aber nicht vollständig typisiert.
-- Nicht-teilerfremder Sektor (k,mn)>1: explizit als offener Knoten [O-199-1]_noncopr markiert. Richtig so.
-- Testmatrix 199.I komplett leer — kein konkretes Beispiel gerechnet. Das ist kein Fehler (NEU-200 folgt), aber eine Aussage über den Stand.
+*(Vollständiger Text in ZWISCHENBILANZ_2026-07-31.md, 1. Version)*
 
 | Knoten | Status | Inhalt |
 |---|---|---|
 | [O-199-1] | ✓[M]_part | D_g^H(μ_k) = μ_{mk}F_kμ_n* für (k,n)=1 |
 | [O-199-2] | ✓[M]_part | Relationenaudit vollständig auf S_{m,n} |
-| [O-199-3]_copr | ?[O] | B-Quotiententest (199.21): G_i^H ∈ Σ_j(1−α_{p_j})B? |
-| [O-199-1]_noncopr | ?[O] | Transfer-/Projektionsformel für (k,mn)>1 |
+| [O-199-3]_copr | ?[O] | B-Quotiententest (199.21) |
+| [O-199-1]_noncopr | ?[O] | Transferformel für (k,mn)>1 |
 | [O-199-4] | ?[O] | gesperrt bis Fall J.3 |
 
 **Gesamtstatus NEU-199:** ✓[M]_part
 
-Starker arithmetischer Rahmen. Erster explizit auswertbarer Koeffiziententest. Testmatrix leer — Anschluss an NEU-200 korrekt.
+---
+
+### 06-hochschild-bc-algebra — Direktaudit NEU-200 (vertieft)
+
+**Auditumfang:** `NEU-200_Regulaere_Potentiale_unsichtbar.md` vollständig; Generatorformeln NEU-199; Detektionskriterium NEU-197; aktuelle Ordnerliste (NEU-198 fehlt).
+
+**Interpretationsfreier Primärextrakt:**
+NEU-200 beweist für H ∈ B = LC(ẑ) die Identität G_i^H = −(1−α_{p_i})α_{P/p_i}(H) ∈ (1−α_{p_i})B ⊆ Σ_j(1−α_{p_j})B, liefert einen expliziten Kommutatorzeuge a_{i,H} und untersucht das Beispiel H_N = **1**_{Nẑ}. Der regulare Untersektor [O-199-3]_reg wird negativ geschlossen.
 
 ---
 
-### 06-hochschild-bc-algebra — Direktaudit NEU-200
+#### Abschnitt 3 — Verschwindungssatz [O-200-1]
 
-**Auditumfang:** `NEU-200_Regulaere_Potentiale_unsichtbar.md` vollständig.
+Die Kernidentität G_i^H = α_P(H) − α_{P/p_i}(H) = −(1−α_{p_i})α_{P/p_i}(H) folgt direkt aus der Kommutativität der Skalierungswirkungen. Da B unter allen α_k stabil ist, liegt −α_{P/p_i}(H) ∈ B. Somit G_i^H ∈ (1−α_{p_i})B ⊆ Σ_j(1−α_{p_j})B.
 
-**Interpretationsfreier Primärextrakt:**
-NEU-200 schließt den regulären Untersektor [O-199-3]_reg vollständig ab: Für alle H ∈ B = LC(ẑ) verschwindet die Quotientenklasse [G_i^H] in B/Σ_j(1−α_{p_j})B.
+**Korrekt. Vollständiger algebraischer Verschwindungssatz.**
 
-#### Hauptsatz (200.1)
+**Umfangsklausel:** Bewiesen ist die Unsichtbarkeit von G_i^H im speziellen Quotienten B/Σ_j(1−α_{p_j})B für jedes H ∈ B. Nicht bewiesen: Unsichtbarkeit beliebiger regularer Derivationen, geladener HH-Klassen oder anderer Zeugen.
 
-**Kernidentität:** G_i^H = α_P(H) − α_{P/p_i}(H) = −(1−α_{p_i})α_{P/p_i}(H) für H ∈ B.
+| Knoten | Status |
+|---|---|
+| [O-200-1] G_i^H ∈ (1−α_{p_i})B | **✓[M]** |
 
-Da α_{P/p_i}(H) ∈ B, liegt G_i^H ∈ (1−α_{p_i})B ⊆ Σ_j(1−α_{p_j})B. Der Beweis ist vollständig und korrekt.
+---
 
-**Expliziter Kommutatorzeuge (200.3):** Y_{g,H,p,i} = [μ_{p_i}, a_{i,H}] mit a_{i,H} = −μ_{mP/p_i} α_{P/p_i}(H) μ_n*. Vollständig ausgerechnet und korrekt.
+#### Abschnitt 4 — Stärkerer Hauptbefund: Regulare Potentialderivationen sind inner [O-200-inner]
 
-**Konkretes Beispiel H_N = 1_{Nẑ} (200.5–200.8):**
-- α_k(H_N) = 1_{N/gcd(N,k) · ẑ}: korrekte Berechnung.
-- Spezialfall p_i ∤ N: G_i^{H_N} = 0 als Funktion. Korrekt.
-- Spezialfall p_i | N: G_i^{H_N} ≠ 0 als Funktion, aber [G_i^{H_N}] = 0 im Quotienten. Korrekt und wichtig: trennt Nichtverschwindung als Funktion von Nichtverschwindung im Quotienten.
+Dies ist der in NEU-200 **nicht ausgeschöpfte**, aber mathematisch zwingend gültige Hauptsatz:
 
-**Strukturelle Bedeutung:** [G_i^H] ist eine Rand-Singularitätsobstruktion — ein positiver Quotientenbefund kann nur aus einem echt punktierten, bei 0 nicht regulär fortsetzbaren Potential kommen.
+Für H ∈ B liegt der Implementierer u_H = μ_m H μ_n* bereits im algebraischen BC-Kern: u_H ∈ A_g. Daher ist D_g^H(a) = [u_H, a] eine auf ganz A definierte **innere** Derivation:
 
-**Keine Fehler gefunden.** Alle Rechnungen korrekt, alle Behauptungen scharf formuliert.
+> D_g^H = ±b(u_H), also [D_g^H] = 0 in HH¹(A,A)_g.
 
-| Knoten | Status | Inhalt |
+Dieser Schluss benötigt weder den koprimen Generatoraudit aus NEU-199 noch den Kommutatorquotienten aus NEU-197. Er gilt automatisch für alle Generatoren und sämtliche BC-Relationen.
+
+**Präzise No-go-Klausel:** Ausgeschlossen ist ausschließlich die Klasse D_g^H = ad(μ_m H μ_n*) mit H ∈ LC(ẑ) als Quelle einer nichttrivialen Klasse in HH¹(A,A)_g. Nicht ausgeschlossen: äußere Derivationen ohne reguläres Potential, singuläre Potentiale, Derivationen mit größerem Koeffizientenbimodul.
+
+| Knoten | Status |
+|---|---|
+| [O-200-inner] [D_g^H] = 0 in HH¹(A,A)_g für H ∈ B | **✓[M]_neg** |
+
+---
+
+#### Abschnitt 5 — Konsequenz für den Viercup-Kozykel [O-200-cup]
+
+Da [D_g^H] = 0, verschwindet auch das Cup-Produkt dieser Klasse mit den neutralen Bewertungsderivationen. Daher:
+
+> [Ω_{D_g^H, p}] = 0 in HH⁴(A,A)_g.
+
+Ω_{D_g^H, p} paart nicht nur mit dem Augmentationszyklus oder den NEU-197-Zyklen zu null, sondern mit **jedem** algebraischen Hochschild-Vierzyklus. Das ist ein stärkerer No-go als die bloße Quotientenunsichtbarkeit.
+
+**Umfangsklausel:** Ausgeschlossen ist nur der Cup-Kozykel mit geladener Faktor-Derivation D_g^H (H ∈ B). Nicht ausgeschlossen: andere geladene Einskokzikelfaktoren.
+
+| Knoten | Status |
+|---|---|
+| [O-200-cup] [Ω_{D_g^H,p}] = 0 in HH⁴(A,A)_g für H ∈ B | **✓[M]_neg** |
+
+---
+
+#### Abschnitt 6 — Expliziter Kommutatorzeuge [O-200-2]
+
+NEU-200 setzt a_{i,H} = −μ_{mP/p_i} α_{P/p_i}(H) μ_n* ∈ A_{gP/p_i}. Die Rechnung [μ_{p_i}, a_{i,H}] = μ_{mP} G_i^H μ_n* = Y_{g,H,p,i} ist vollständig korrekt.
+
+**Wichtige Feststellung:** Dieser Zeuge beweist mehr als bloß ε([u_H, a]) = 0. Er zeigt das tatsächliche Verschwinden des relevanten Zielelements im **partiellen Kommutatorquotienten** Q_{gP,p}. Die Augmentationsblindheit ist nur eine schwächere Konsequenz.
+
+| Knoten | Status |
+|---|---|
+| [O-200-2] Y_{g,H,p,i} = [μ_{p_i}, a_{i,H}] ∈ C_{gP,p} | **✓[M]** |
+
+---
+
+#### Abschnitt 8 — Typfehler bei overlineΘ [O-200-Theta]
+
+NEU-200 schreibt overlineΘ_{g,p,i}([D_g^H]) = 0 (Formel 200.4). Die dafür benötigte Datei NEU-198 existiert im Repository nicht. NEU-197 definiert das Zielelement Y und den Quotienten Q_{gP,p}, aber **keine vollständig typisierte Abbildung** mit der Bezeichnung overlineΘ_{g,p,i}.
+
+**Korrekte Ersatzformeln** (unabhängig von der fehlenden Θ-Definition):
+- [Y_{g,H,p,i}] = 0 in Q_{gP,p} ✓[M]
+- [D_g^H] = 0 in HH¹(A,A)_g ✓[M]
+
+Falls später eine wohldefinierte lineare Abbildung overlineΘ: HH¹(A,A)_g → Q_{gP,p} konstruiert wird, folgt ihr Wert null bereits aus [D_g^H] = 0.
+
+| Knoten | Status |
+|---|---|
+| [O-200-Theta] Definition von overlineΘ_{g,p,i} | **✓[M]_neg,Quelle** (NEU-198 fehlt) |
+| Formel (200.4) wie notiert | **⚠[M]** |
+
+---
+
+#### Abschnitt 9 — Beispiel H_N [O-200-HN]
+
+Fur H_N = **1**_{Nẑ}: α_k(H_N) = **1**_{N/gcd(N,k) · ẑ} — korrekte Berechnung. G_i^{H_N} = **1**_{N/gcd(N,P)·ẑ} − **1**_{N/gcd(N,P/p_i)·ẑ}.
+
+- Spezialfall p_i ∤ N: gcd(N,P) = gcd(N,P/p_i), also G_i^{H_N} = 0. ✓[M]
+- Spezialfall p_i | N: G_i^{H_N} ≠ 0 als Funktion, aber [G_i^{H_N}] = 0 im Quotienten. ✓[M]
+
+**Wichtige Trennung:** G_i^{H_N} ≠ 0 als Funktion vs. [G_i^{H_N}] ≠ 0 als Quotientenklasse — korrekt und methodisch wertvoll.
+
+| Knoten | Status |
+|---|---|
+| [O-200-HN] Formeln für H_N vollständig | **✓[M]** |
+
+---
+
+#### Abschnitt 10 — Terminologische Warnung: „Korand“
+
+NEU-200 bezeichnet −(1−α_{p_i})α_{P/p_i}(H_N) als „expliziten Korand“. Das ist ohne Zusatz missverständlich: G_i^H ist ein Element des Koeffizientenraums B, kein Hochschild-Kozykel. Die Formel zeigt nur, dass es im Bild des Differenzoperators (1−α_{p_i}) liegt.
+
+**Korrekte Formulierung:** G_i^H ist eine explizite (1−α_{p_i})-Differenz und daher im B-Quotienten trivial. Separat davon ist D_g^H tatsächlich ein Hochschild-Einskorand (weil inner).
+
+| Knoten | Status |
+|---|---|
+| Bezeichnung von G_i^H als Hochschild-Korand | **⚠[M]** |
+
+---
+
+#### Abschnitt 11 — Überdehnte Interpretation der „Rand-Singularitätsobstruktion“
+
+NEU-200 behauptet, [G_i^H] messe „exakt“, ob der formale primitive Ausdruck −α_{P/p_i}(H) durch regulare Funktionen ersetzt werden kann. Der Quotiententest prüft jedoch ob G_i^H ∈ Σ_j(1−α_{p_j})f_j — das ist im Allgemeinen **schwächer** als die Existenz eines einzelnen Primitiven f mit (1−α_{p_i})f. Ein Koeffizient kann durch eine Kombination mehrerer Primrichtungen quotiententrivial werden, ohne dass das formale Primitive in der p_i-Richtung allein regulr ersetzt werden kann.
+
+**Präzise Ersatzformel:** [G_i^H] misst exakt, ob G_i^H ∈ Σ_j(1−α_{p_j})B — nicht mehr.
+
+| Knoten | Status |
+|---|---|
+| Interpretation „exakte Primitive-Ersetzbarkeit“ | **⚠[M]** |
+
+---
+
+#### Abschnitt 12 — Singularität: notwendig, nicht hinreichend
+
+NEU-200 folgert korrekt: [G_i^H] ≠ 0 ⇒ H ∉ B. Ein positiver Quotientenbefund erfordert also ein nicht fortsetzbares Potential.
+
+**Die Umkehrung gilt nicht:** H ∉ B ⇏ [G_i^H] ≠ 0. Auch bei singulärem H kann G_i^H ∈ Σ_j(1−α_{p_j})B liegen. Singularität ist nur eine **notwendige**, keine **hinreichende** Bedingung für einen positiven Quotiententest.
+
+NEU-200 behauptet die falsche Umkehrung nicht ausdrücklich, aber die Formulierung „genau bei einem solchen singulären Potential“ sollte abgeschwächt werden.
+
+| Knoten | Status |
+|---|---|
+| [O-200-sing-necessary] [G_i^H] ≠ 0 ⇒ H ∉ B | **✓[M]** |
+| H ∉ B ⇒ [G_i^H] ≠ 0 (falsche Umkehrung) | **×[M]** (nicht von NEU-200 behauptet, aber implizit) |
+
+---
+
+#### Dateistatus NEU-200
+
+| Bestandteil | Status | Befund |
 |---|---|---|
-| [O-199-3]_reg | ✓[M]_neg | Alle H ∈ LC(ẑ) sind Quotienten-unsichtbar |
-| [O-199-3]_sing | ?[O] | Test mit echt punktiertem H bei 0 singulär ausständig |
-| [O-199-1]_noncopr | ?[O] | Unverändert offen |
+| Identität G_i^H = −(1−α_{p_i})α_{P/p_i}(H) | ✓[M] | Direkte Skalierungsrechnung |
+| Quotientenverschwinden für alle H ∈ B | ✓[M]_neg | Regularer Potentialsektor ausgeschlossen |
+| Expliziter Kommutatorzeuge a_{i,H} | ✓[M] | Y = [μ_{p_i}, a_{i,H}] |
+| Augmentationsblindheit | ✓[M] | Schwache Konsequenz des Kommutatorbefunds |
+| Innerheit von D_g^H für H ∈ B | ✓[M]_neg | **Stärkerer, in der Datei nicht ausgeschöpfter No-go** |
+| Nichttrivialität in HH¹(A,A)_g | ×[M] | Tatsächlich [D_g^H] = 0 |
+| Cup-Klasse in HH⁴(A,A)_g | ×[M] | Cup-Produkt mit Nullklasse ist null |
+| Formel für H_N | ✓[M] | Vollständig korrekt |
+| Trennung G ≠ 0 gegen [G] = 0 | ✓[M] | Korrekte Quotientenunterscheidung |
+| Bezeichnung von G als „Korand“ | ⚠[M] | Differenzoperator und Hochschild-Rand werden vermischt |
+| Definition von overlineΘ | ✓[M]_neg,Quelle | NEU-198 fehlt; Abbildung nicht typisiert |
+| „Exakte“ Primitive-Ersetzbarkeit | ⚠[M] | Quotient erlaubt Summen über mehrere Primrichtungen |
+| Singularität als notwendige Bedingung | ✓[M] | Positiver Test für H ∈ B unmöglich |
+| Singularität als hinreichende Bedingung | ×[M] | Singuläres H kann dennoch quotiententrivial sein |
+| Allgemeiner No-go für alle regularen Derivationen | ✓[M]_neg,Quelle | In NEU-200 nicht bewiesen |
+| **Gesamtstatus** | **✓[M]_part** | Korrekter No-go, aber Typ- und Interpretationskorrekturen nötig |
 
-**Gesamtstatus NEU-200:** ✓[M]
-
-Fehlerfreier, vollständiger Abschluss des regulären Untersektors. Engpass klar isoliert: singuläre Potentiale.
+**Stattdessen korrekte Hauptaussage:**
+> H ∈ B ⇒ u_H ∈ A_g ⇒ D_g^H = ad(u_H) ⇒ [D_g^H] = 0 ∈ HH¹(A,A)_g ⇒ [Ω_{D_g^H,p}] = 0 ∈ HH⁴(A,A)_g.
 
 ---
 
 ### 06-hochschild-bc-algebra — Direktaudit NEU-201
 
-**Auditumfang:** `NEU-201_Singulaeres_Potential_Kommutatorquotient_Sichtbarkeit.md` vollständig.
-
-**Interpretationsfreier Primärextrakt:**
-NEU-201 formuliert den singulären Testknoten [O-199-3]_sing als drei parallele Teilfragen:
-
-- **201.A:** Existiert ein singuläres H_sing ∈ B \B_reg mit [H_sing, μ_k] ∉ [B,B] für mindestens ein k?
-- **201.B:** Ist der KMS-Quotiententest G_i^{H_sing} ≠ 0 in B/[B,B]?
-- **201.C:** Ist der Sichtbarkeitsmechanismus kompatibel mit [O-197-4]?
-
-**Kandidat H_sing = Σ_p (1/log p) μ_p e(1/p).**
-
-#### Prüfbefunde NEU-201
-
-**Fehler in der Typbeschreibung (Abschnitt 201.2):**
-NEU-201 definiert „singuläres H ∈ B" als ein Element mit Koeffizientenfolge nicht in ℓ¹(ℕ). Diese Definition ist nicht mit der Standarddefinition der BC-Algebra kompatibel — B = C*(ℚ/ℤ) ⋊ ℕ ist eine C*-Algebra, und Elemente der Form Σ a_n μ_n mit Σ ||a_n μ_n|| < ∞ bilden einen dichten Unterraum. Die Klassifikation „singulär vs. regulär" in NEU-201 stimmt nicht mit der in NEU-199/200 verwendeten Unterscheidung überein: dort bedeutet H ∈ LC(ẑ) „regulär" und H ∈ LC(ẑ\{0})\LC(ẑ) „singulär" (punktiert). Der Kandidat H_sing aus 201.A ist konzeptuell ein Kandidat der zweiten Art, aber die Definition in NEU-201 macht das nicht explizit.
-
-**Formel (199.10) in Abschnitt 201.3 fehlzitiert:**
-NEU-201 schreibt D_g^H(μ_k) = g(k)·[H, μ_k]_B mit einem Gewichtscharakter g(k). Das ist **nicht** die Generatorformel aus NEU-199 (199.11), die D_g^H(μ_k) = μ_{mk} F_k μ_n* lautet — ein strukturierter Kommutatorterm, kein skalares Vielfaches eines B-Kommutators. NEU-201 vereinfacht die Formel auf eine Form, die typologisch nicht korrekt ist.
-
-**Status der Teilfragen:**
-- 201.A: Kandidat H_sing noch nicht geprüft auf Norm-Konvergenz in B. NEU-202 schließt den Knoten negativ.
-- 201.B/C: offen, ohne Fehler in der Fragestellung selbst.
+*(Vollständiger Text in ZWISCHENBILANZ_2026-07-31.md, 1. Version)*
 
 | Knoten | Status | Inhalt |
 |---|---|---|
-| 201.A | ?[O] → ✓[M]_neg (durch NEU-202) | Kandidat H_sing ∉ B |
+| 201.A | ✓[M]_neg (durch NEU-202) | Kandidat H_sing ∉ B |
 | 201.B | ?[O] | KMS-Test für singuläres H ausständig |
 | 201.C | ?[O] | HH⁴-Kompatibilität ausständig |
 
-**Gesamtstatus NEU-201:** ✓[M]_part (Fragestellungen sauber, Kandidaten-Typisierung fehlerhaft, Formelreferenz falsch)
+**Fehler in NEU-201:** Typbeschreibung „singuläres H ∈ B“ inkonsistent mit Sprachgebrauch NEU-199/200; Generatorformel 201.3 fehlzitiert (D_g^H(μ_k) = g(k)·[H,μ_k]_B statt μ_{mk}F_kμ_n*).
+
+**Gesamtstatus NEU-201:** ✓[M]_part
 
 ---
 
 ### 06-hochschild-bc-algebra — Direktaudit NEU-202
 
-**Auditumfang:** `NEU-202_Konvergenz_Singulaerer_Zeuge_Kommutatorquotient.md` vollständig. Selbst-Revision des ursprünglichen Drei-Fehler-Audits.
-
-**Interpretationsfreier Primärextrakt:**
-NEU-202 widerlegt den Kandidaten H_sing = Σ_p (1/log p) μ_p e(1/p) in drei unabhängigen Schritten.
-
-#### [O-202-conv] — Norm-Konvergenz ausgeschlossen ✓[M]_neg
-
-**Augmentations-Schranke:** ε: B → ℂ ist stetig mit ||ε|| = 1. Für Partialsummen H_F gilt ||H_{F'} − H_F|| ≥ |ε(H_{F'} − H_F)| = Σ_{p ∈ F'\F} 1/log p. Da Σ_p 1/log p = +∞ (Mertens' zweiter Satz), sind die Partialsummen nicht norm-Cauchy. H_sing ∉ B.
-
-**Korrekt. Beweis vollständig.**
-
-Zusätzlich: ℓ²-Behauptung Σ_p 1/(log p)² < ∞ ebenfalls falsch (gezeigt durch π(x)/(log x)² → ∞). Nicht-Orthogonalität der Summanden (μ_p* μ_q ≠ 0 für gcd(p,q)=1) korrekt bemerkt.
-
-**Typfehler:** μ_p e(1/p) liegt in Grad p der BC-Algebra — die ursprüngliche Behauptung H_sing ∈ B war falsch typisiert. ✓[M]_neg.
-
-#### [O-202-comm] — Kommutatorformel (endlich) ✓[M]_part
-
-Endliche Formel [H_F, μ_2] = Σ_{p ∈ F} (1/log p) μ_{2p}(e(2/p)−e(1/p)) ist korrekt.
-
-**Korrektur p=2-Term:** e(1/2) ≠ −1 als Algebrenelement (e(1/2) ist ein Gruppenelement mit e(1/2)² = 1, aber nicht der Skalar −1). Der korrekte p=2-Term lautet (1/log 2) μ_4 (1 − e(1/2)). Korrekt in der Revision.
-
-#### [O-202-KMS] — KMS-Test verschwindet ✓[M]_neg
-
-**Schlüsselargument:** Jeder Term μ_{2p}(e(2/p)−e(1/p)) ist homogen bzgl. σ_t mit Gewicht 2p ≠ 1. KMS-Zustände sind zeitinvariant: φ_β ∘ σ_t = φ_β. Daher φ_β(a) = (2p)^{it} φ_β(a) ∀t, woraus φ_β(a) = 0 für alle homogenen a mit nichttrivialem Gewicht folgt.
-
-**Ergebnis:** φ_β([H_F, μ_2]) = 0 für jede endliche Partialsumme. Der ursprüngliche KMS-Wert (4^{1-β}/ζ(β) · 2/log 2) entstand durch irrtümliche Auswertung von φ_β(μ_4) anstelle von φ_β(μ_4 μ_4*). ✓[M]_neg.
-
-**Kein Fehler in der Revision.** Die Selbstkorrektur ist vollständig und korrekt durchgeführt.
-
-**Kritische Anmerkung zu NEU-202:**
-Die Anforderungen an den nächsten Kandidaten (Abschnitt 202: Anforderungen) sind mathematisch sauber formuliert:
-1. Augmentationsbedingung ε(x_p) = 0 für alle p.
-2. Norm-Cauchy: Σ_p ||c_p x_p|| < ∞.
-3. Quotienten-Detektor: Spur-artiges oder Ext¹-Funktional (kein allgemeiner KMS-Zustand).
-
-Kandidatenskizze z_p = μ_p μ_p* − μ_{p+1} μ_{p+1}*: ε(z_p) = 0, aber Norm-Abschätzung ||Σ_p c_p z_p|| und Kommutator-Test sind Gegenstand von NEU-203.
+*(Vollständiger Text in ZWISCHENBILANZ_2026-07-31.md, 1. Version)*
 
 | Knoten | Status | Inhalt |
 |---|---|---|
 | [O-202-conv] | ✓[M]_neg | H_sing ∉ B: Augmentationsdivergenz, Nicht-Orthogonalität, Typfehler |
 | [O-202-comm] | ✓[M]_part | Endliche Kommutatorformel korrekt; p=2-Term korrigiert |
-| [O-202-KMS] | ✓[M]_neg | KMS-Test verschwindet auf allen homogenen Termen mit Gewicht ≠ 1 |
+| [O-202-KMS] | ✓[M]_neg | KMS-Test verschwindet auf homogenen Termen mit Gewicht ≠ 1 |
 | 201.A (Kandidat) | ✓[M]_neg | H_sing existiert nicht in B |
 | [O-199-3]_sing | ?[O] | Unverändert offen — benötigt neuen wohldefinierten Kandidaten |
 
-**Gesamtstatus NEU-202:** ✓[M]_neg (Gesamtkandidat widerlegt; Revision intern vollständig und korrekt)
+**Gesamtstatus NEU-202:** ✓[M]_neg (Gesamtkandidat widerlegt; Revision intern vollständig korrekt)
 
 ---
 
-## Neue DAG-Knoten nach Direktaudit NEU-199–202
+## Aktualisierter DAG-Gesamtstand nach Direktaudit NEU-199–202 (vertieft)
 
 | Knoten | Aussage | Status |
 |---|---|---|
@@ -403,13 +451,21 @@ Kandidatenskizze z_p = μ_p μ_p* − μ_{p+1} μ_{p+1}*: ε(z_p) = 0, aber Norm
 | [O-199-3]_copr | B-Quotiententest (199.21) für p_j ∤ mn | ?[O] |
 | [O-199-3]_reg | Alle H ∈ LC(ẑ) Quotienten-unsichtbar | ✓[M]_neg |
 | [O-199-3]_sing | Echt punktiertes H bei 0 singulär sichtbar im Quotienten? | ?[O] |
-| [O-199-1]_noncopr | Generatorformel für (k,mn)>1: Transfer-/Projektionsformeln | ?[O] |
+| [O-199-1]_noncopr | Generatorformel für (k,mn)>1 | ?[O] |
 | [O-199-4] | Neue geladene HH¹-Quelle außerhalb der Potentialroute | ?[O] gesperrt |
-| [O-202-conv] | H_sing = Σ (1/log p) μ_p e(1/p) ∉ B | ✓[M]_neg |
-| [O-202-comm] | Endliche Kommutatorformel für H_F | ✓[M]_part |
+| [O-200-1] | G_i^H ∈ (1−α_{p_i})B | ✓[M] |
+| [O-200-2] | Y_{g,H,p,i} = [μ_{p_i}, a_{i,H}] ∈ C_{gP,p} | ✓[M] |
+| [O-200-inner] | [D_g^H] = 0 in HH¹(A,A)_g für H ∈ B | ✓[M]_neg |
+| [O-200-cup] | [Ω_{D_g^H,p}] = 0 in HH⁴(A,A)_g für H ∈ B | ✓[M]_neg |
+| [O-200-Theta] | Definition von overlineΘ_{g,p,i} | ✓[M]_neg,Quelle (NEU-198 fehlt) |
+| [O-200-HN] | Formeln für H_N = **1**_{Nẑ} vollständig | ✓[M] |
+| [O-200-sing-necessary] | [G_i^H] ≠ 0 ⇒ H ∉ B | ✓[M] |
+| [O-regular-der-general] | Äußere geladene Derivationen außerhalb der Potentialroute? | ?[O] |
+| [O-202-conv] | H_sing ∉ B | ✓[M]_neg |
+| [O-202-comm] | Endliche Kommutatorformel | ✓[M]_part |
 | [O-202-KMS] | KMS-Funktional verschwindet auf homogenen Termen ≠ Grad 1 | ✓[M]_neg |
 | 201.A | Singulärer Zeuge H_sing via Kandidat NEU-201 | ✓[M]_neg |
-| 201.B | KMS-Quotiententest für neuen singulären Kandidaten | ?[O] |
+| 201.B | KMS-Quotiententest für neuen Kandidaten | ?[O] |
 | 201.C | HH⁴-Defekt bei singulärem H | ?[O] |
 
 ---
@@ -419,16 +475,17 @@ Kandidatenskizze z_p = μ_p μ_p* − μ_{p+1} μ_{p+1}*: ε(z_p) = 0, aber Norm
 | Ordner | Dateien | Priorität |
 |---|---|---|
 | 04-grenzoperator-renormierung | NEU-146–150 (Mellinfehler bekannt) | parallel |
-| 05-primkanal-fourierladung | NEU-169–173 + Varianten | ausstehend |
+| 05-primkanal-fourierladung | NEU-169–173 + Varianten | ausständig |
 | 06-hochschild-bc-algebra | **NEU-203–222 + a–z** | als nächstes |
 | 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | abschließend |
 
 **Fehlende Dateien:** NEU-191 (nach NEU-190), NEU-198 (nach NEU-197).
 
 **Prüffragen für NEU-203 ff.:**
-1. Ist der Kandidat z_p = μ_p μ_p* − μ_{p+1} μ_{p+1}* norm-summierbar mit ε(z_p) = 0?
+1. Ist der Kandidat z_p = μ_pμ_p* − μ_{p+1}μ_{p+1}* norm-summierbar mit ε(z_p) = 0?
 2. Liefert ein z_p-basiertes Potential einen nichtverschwindenden B-Quotiententest?
-3. Welche Rolle spielen Nennerprimfälle p | n in den Folgedateien NEU-203–205?
+3. Welche Rolle spielen Nennerprimfälle p | n in den Folgedateien?
+4. Kann eine Kombination von Potentialen in mehreren Primrichtungen den Quotienten sichtbar machen, ohne dass ein einzelnes Primitives existiert?
 
 ---
 
@@ -453,5 +510,6 @@ Kandidatenskizze z_p = μ_p μ_p* − μ_{p+1} μ_{p+1}*: ε(z_p) = 0, aber Norm
 | Singulärer Zeuge [O-199-3]_sing | Wohldefiniertes H ∈ LC(ẑ\{0})\LC(ẑ) mit regulären Differenzen F_k ∈ B | NEU-202/203 (06) |
 | Generatorformel nicht-koprim | D_g^H(μ_k) für (k,mn)>1: Transferformel ausständig | NEU-199 (06) |
 | Multiplikatorroute x_g | ∃ x_g: ε(x_g) ≠ 0 und [A,x_g]·Im(Ω_p) = 0 | NEU-195 (06) |
-| HH¹(A,A)_g ≠ 0 | Geladene äußerliche Derivation der BC-Algebra | NEU-188 / NEU-196 (06) |
+| HH¹(A,A)_g ≠ 0 | Geladene äußerliche Derivation der BC-Algebra | NEU-188/196/200 (06) |
 | C*-topologisches Detektionskriterium | Normkontinuierliches Zyklusfunktional gefordert | NEU-197 (06) |
+| Äußere Derivationen außerhalb der Potentialroute | [O-regular-der-general] | NEU-200 (06) |
