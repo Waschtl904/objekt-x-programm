@@ -1,8 +1,9 @@
 # GPT-Audit-Zwischenbilanz (Aktiv)
 
-**Stand: 1. August 2026 — Aktiv-Bilanz für den laufenden Chat-Kontext**
+**Stand: 1. August 2026, 13:00 Uhr — Aktiv-Bilanz für den laufenden Chat-Kontext**
 
-> Detailtexte aller Audits NEU-128–202 stehen in `ARCHIV-AUDIT-2026-07.md`.
+> Detailtexte aller Audits NEU-128–201 stehen in `ARCHIV-AUDIT-2026-07.md`.
+> Vollständiger Revisionsaudit NEU-202 in `ARCHIV-AUDIT-NEU202-REVISION.md`.
 > Vollständige Verifikationshistorie in `ZWISCHENBILANZ_2026-07-31.md`.
 > Fehlende Dateien: NEU-191, NEU-198.
 
@@ -42,7 +43,7 @@
 | Direktaudit NEU-199 | NEU-199 | Generatorformel (199.11) ✓; B-Quotiententest formuliert; nicht-koprimer Sektor ?[O] | ✓[M]_part |
 | Direktaudit NEU-200 (vertieft) | NEU-200 | G_i^H∈(1−α_{p_i})B ✓; D_g^H inner ✓[M]_neg; Cup-No-go ✓[M]_neg; Θ-Def. fehlt | ✓[M]_part |
 | Direktaudit NEU-201 | NEU-201 | Typbruch B, Q falsch, Formel erfunden, Kandidat widerlegt | **×[M]** |
-| Direktaudit NEU-202 | NEU-202 | H_sing∉B (Augm.-Divergenz) ✓[M]_neg; Endformel ✓; KMS→0 ✓[M]_neg | ✓[M]_neg |
+| Revisionsaudit NEU-202 | NEU-202 | H_sing∉B (Augm.-Div.) ✓[M]_neg; endl. Kommutatorformel ✓[M]; KMS→0 ✓[M]_neg; Mertens ×[M]; Gradmischung kein C*-Typfehler ×[M]; 201.B/C ursprüngl. ×[M]; z_p-Route ×[M] | **✓[M]_part** |
 
 ---
 
@@ -66,10 +67,20 @@
 | [O-201-KMS-candidate] | KMS-Detektion der endlichen Primkommutatoren | ✓[M]_neg |
 | [O-201-HH4] | δ(H_sing)∈HH⁴(B) durch b_4 auf H_sing | ×[M] |
 | [O-201-HH1] | Konkreter Kandidat erzeugt D_g∈Der(A,A)_g | ×[M] |
-| [O-202-conv] | H_sing∉B | ✓[M]_neg |
+| [O-202-conv] | H_sing∉B (Normkonvergenz; Augm.-Divergenz) | ✓[M]_neg |
+| [O-202-weak] | H_sing schwach konvergent in B | ✓[M]_neg |
+| [O-202-SOT/WOT-faithful] | H_F konvergiert in einer treuen Darstellung | ✓[M]_neg |
 | [O-202-KMS] | KMS-Funktional→0 auf homogenen Termen ≠1 | ✓[M]_neg |
+| [O-202-full-quot] | Interner Kommutator liefert Klasse in B/[B,B] | ✓[M]_neg |
+| [O-202-comm-inf] | Unendlicher Kommutator [H_sing,μ_2] | ×[M] |
+| [O-202-quot-conv] | H_F konvergiert in Norm von B/overline{[B,B]} | ✓[M]_neg |
+| [O-201-B-original] | KMS-Zustände bilden universellen Quotientendual | ×[M] |
+| [O-201-C-original] | b_4(H_sing) erzeugt Klasse in HH⁴ | ×[M] |
+| [O-202-next-augmentation] | ε(x_p)=0 termweise: notwendige Konvergenzbedingung | ×[M] |
+| [O-202-next-absolute] | Σ||c_px_p||<∞: notwendige Normkonvergenzbedingung | ×[M] |
+| [O-202-zp] | Projektionsdifferenzen z_p führen geladene Potentialroute fort | ×[M] |
 | 201.A | Singulärer Zeuge via NEU-201-Kandidat | ✓[M]_neg |
-| 201.B | KMS-Quotiententest via NEU-201-Kandidat | ✓[M]_neg |
+| 201.B-original | KMS-Quotiententest via NEU-201-Kandidat | ×[M] |
 
 ### Abgeschlossene Knoten (positiv)
 
@@ -82,7 +93,8 @@
 | [O-200-HN] | Formeln für H_N=**1**_{Nẑ} vollständig | ✓[M] |
 | [O-200-sing-necessary] | [G_i^H]≠0 ⇒ H∉B | ✓[M] |
 | [O-201-finite-comm] | [H_F,μ_k]=Σ_{p∈F}(log p)^{-1}μ_{pk}(e(k/p)−e(1/p)) | ✓[M]_part |
-| [O-202-comm] | Endliche Kommutatorformel (p=2-Term korrigiert) | ✓[M]_part |
+| [O-202-comm-fin] | Endliche Kommutatorformel vollständig korrekt (p=2-Term korrigiert) | ✓[M] |
+| [O-202-eps-C*] | Augmentationscharakter erstreckt sich auf volle BC-C*-Algebra | ✓[K/M] |
 
 ### Offene Knoten
 
@@ -93,9 +105,10 @@
 | [O-199-1]_noncopr | Generatorformel für (k,mn)>1 | mittel |
 | [O-197-4] | [Y]≠0 in Q_{gP,p} — atomarer Restknoten | hoch |
 | [O-199-4] | Neue geladene HH¹-Quelle außerhalb Potentialroute | gesperrt |
-| [O-201-general-external] | Externer Implementierer T∉A mit [T,A]⊂A | offen |
+| [O-external-implementer] | Externer Implementierer T∉A mit [T,A]⊂A, deg T=g | offen |
 | [O-201-target] | Allgemeiner externer Implementierer: Zielraum | offen |
-| 201.C | HH⁴-Kompatibilität für singuläres H | offen |
+| [O-202-distributional] | H_sing in Distributionen-, Bidual- oder Regularisierungsraum | ?[O] |
+| 201.C-neu | Cup- oder Dualzyklusknoten: vollständig neu typisiert | offen |
 | HH¹(A,A)_g≠0 | Geladene äußerliche Derivation der BC-Algebra | Hauptziel |
 
 ---
@@ -123,18 +136,23 @@
 
 ## Nächste Schritte
 
-**Unmittelbar (NEU-203 ff.):**
-1. Ist z_p = μ_pμ_p* − μ_{p+1}μ_{p+1}* norm-summierbar mit ε(z_p)=0?
-2. Liefert ein z_p-basiertes Potential [G_i^H]≠0 im B-Quotienten?
-3. Welche Rolle spielen Nennerprimfälle p|n?
-4. Kann eine Kombination in mehreren Primrichtungen den Quotienten sichtbar machen ohne einzelnes Primitives?
+**Unmittelbar (NEU-203):**
+
+Thema: **Projektionsdifferenzen und Kommutatortrivialität**.
+
+Die z_p-Route (μ_pμ_p*−μ_{p+1}μ_{p+1}*) ist als Kandidat für die geladene Potentialroute widerlegt (×[M]) — neutral, intern, Kommutator im vollen Quotienten trivial. Zu klären:
+
+1. Gibt es einen **externen** Implementierer T∉A mit deg T=g, [T,A]⊂A und [T,μ_k] nichttrivial im Quotienten?
+2. Kann man die **Norm-Cauchy-Bedingung** für nicht-absolute Koeffizientenfolgen erfüllen (bedingter Reihenansatz)?
+3. Existiert ein Regularisierungsraum (Bidual, Verteilungen), in dem H_sing in einem geeigneten Sinn konvergiert?
 
 **Korrigierte Kernforderung an nächsten Kandidaten:**
 ```
 H ∈ LC(Zhat \ {0}) \ LC(Zhat)
 mit: α_{p_j}(H) − H ∈ LC(Zhat) für alle nötigen p_j
-und: G_i^H = α_P(H) − α_{P/p_i}(H) ∉ Σ_j (1−α_{p_j}) LC(Zhat)
+und: G_i^H = α_P(H) − α_{P/p_i}(H) ∉ Σ_j(1−α_{p_j})LC(Zhat)
 ```
+H muss homogenen Grad g haben. Gradmischung ist kein C*-Fehler für volle Algebra, schließt aber die Verwendung in der homogenen Potentialroute aus.
 
 **Ausstehende Blöcke:**
 
