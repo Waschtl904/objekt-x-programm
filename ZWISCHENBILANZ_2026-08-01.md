@@ -1,9 +1,10 @@
 # GPT-Audit-Zwischenbilanz (Aktiv)
 
-**Stand: 1. August 2026, 13:00 Uhr — Aktiv-Bilanz für den laufenden Chat-Kontext**
+**Stand: 2. August 2026, 12:33 Uhr — Aktiv-Bilanz für den laufenden Chat-Kontext**
 
 > Detailtexte aller Audits NEU-128–201 stehen in `ARCHIV-AUDIT-2026-07.md`.
-> Vollständiger Revisionsaudit NEU-202 in `ARCHIV-AUDIT-NEU202-REVISION.md`.
+> Revisionsaudit NEU-202 in `ARCHIV-AUDIT-NEU202-REVISION.md`.
+> Direktaudit NEU-203 in `ARCHIV-AUDIT-NEU203.md`.
 > Vollständige Verifikationshistorie in `ZWISCHENBILANZ_2026-07-31.md`.
 > Fehlende Dateien: NEU-191, NEU-198.
 
@@ -43,7 +44,8 @@
 | Direktaudit NEU-199 | NEU-199 | Generatorformel (199.11) ✓; B-Quotiententest formuliert; nicht-koprimer Sektor ?[O] | ✓[M]_part |
 | Direktaudit NEU-200 (vertieft) | NEU-200 | G_i^H∈(1−α_{p_i})B ✓; D_g^H inner ✓[M]_neg; Cup-No-go ✓[M]_neg; Θ-Def. fehlt | ✓[M]_part |
 | Direktaudit NEU-201 | NEU-201 | Typbruch B, Q falsch, Formel erfunden, Kandidat widerlegt | **×[M]** |
-| Revisionsaudit NEU-202 | NEU-202 | H_sing∉B (Augm.-Div.) ✓[M]_neg; endl. Kommutatorformel ✓[M]; KMS→0 ✓[M]_neg; Mertens ×[M]; Gradmischung kein C*-Typfehler ×[M]; 201.B/C ursprüngl. ×[M]; z_p-Route ×[M] | **✓[M]_part** |
+| Revisionsaudit NEU-202 | NEU-202 | H_sing∉B ✓[M]_neg; endl. Kommutatorformel ✓[M]; KMS→0 ✓[M]_neg; Mertens ×[M]; Gradmischung kein C*-Typfehler ×[M]; 201.B/C urspr. ×[M]; z_p-Route ×[M] | **✓[M]_part** |
+| Direktaudit NEU-203 | NEU-203 | E_n,z_p∈B_alg ✓[M]; ε(z_p)=0 ✓[M]; ‖z_p‖=1 ✓[M]; z_p∈[A,A] ✓[M]; Normkonvergenz⇒inner ✓[M]_neg; [O-203-4] überdehnt ×[M]; Criterion ✓[K/M]; z_p-Reihenknoten ?[O]; dyad. Mechanismus ✓[M]_part | **✓[M]_part** |
 
 ---
 
@@ -60,27 +62,32 @@
 | [O-201-type-B] | B=LC(ẑ) vs. volle BC-C*-Algebra vermischt | ×[M] |
 | [O-201-Q] | Q_{h,p} als Quotient [D,e(μ_k)]/[…]_reg | ×[M] |
 | [O-201-charge] | H_sing mit festem neutralen Potentialgrad | ×[M] |
-| [O-201-A-conv] | H_sing=Σ_p(log p)^{-1}μ_pe(1/p) konvergiert in BC-C* | ✓[M]_neg |
+| [O-201-A-conv] | H_sing konvergiert in BC-C* | ✓[M]_neg |
 | [O-201-infinite-comm] | [H_sing,μ_k] als Algebraelement | ×[M] |
-| [O-201-full-quot] | Interner Kommutator liefert nichttriviale Klasse in B/[B,B] | ✓[M]_neg |
+| [O-201-full-quot] | Interner Kommutator liefert Klasse in B/[B,B] | ✓[M]_neg |
 | [O-201-KMS-univ] | KMS-Zustände trennen B/[B,B] oder Q_{h,p} | ×[M] |
 | [O-201-KMS-candidate] | KMS-Detektion der endlichen Primkommutatoren | ✓[M]_neg |
-| [O-201-HH4] | δ(H_sing)∈HH⁴(B) durch b_4 auf H_sing | ×[M] |
+| [O-201-HH4] | δ(H_sing)∈HH⁴(B) durch b_4 | ×[M] |
 | [O-201-HH1] | Konkreter Kandidat erzeugt D_g∈Der(A,A)_g | ×[M] |
-| [O-202-conv] | H_sing∉B (Normkonvergenz; Augm.-Divergenz) | ✓[M]_neg |
+| [O-202-conv] | H_sing∉B (Augm.-Divergenz) | ✓[M]_neg |
 | [O-202-weak] | H_sing schwach konvergent in B | ✓[M]_neg |
-| [O-202-SOT/WOT-faithful] | H_F konvergiert in einer treuen Darstellung | ✓[M]_neg |
+| [O-202-SOT/WOT-faithful] | H_F konvergiert in treuer Darstellung | ✓[M]_neg |
 | [O-202-KMS] | KMS-Funktional→0 auf homogenen Termen ≠1 | ✓[M]_neg |
 | [O-202-full-quot] | Interner Kommutator liefert Klasse in B/[B,B] | ✓[M]_neg |
 | [O-202-comm-inf] | Unendlicher Kommutator [H_sing,μ_2] | ×[M] |
 | [O-202-quot-conv] | H_F konvergiert in Norm von B/overline{[B,B]} | ✓[M]_neg |
-| [O-201-B-original] | KMS-Zustände bilden universellen Quotientendual | ×[M] |
+| [O-201-B-original] | KMS-Zustände als universeller Quotientendual | ×[M] |
 | [O-201-C-original] | b_4(H_sing) erzeugt Klasse in HH⁴ | ×[M] |
 | [O-202-next-augmentation] | ε(x_p)=0 termweise: notwendige Konvergenzbedingung | ×[M] |
-| [O-202-next-absolute] | Σ||c_px_p||<∞: notwendige Normkonvergenzbedingung | ×[M] |
-| [O-202-zp] | Projektionsdifferenzen z_p führen geladene Potentialroute fort | ×[M] |
+| [O-202-next-absolute] | Absolute Normsummierbarkeit: notwendige Konvergenzbedingung | ×[M] |
+| [O-202-zp] | z_p-Route führt geladene Potentialroute fort | ×[M] |
 | 201.A | Singulärer Zeuge via NEU-201-Kandidat | ✓[M]_neg |
 | 201.B-original | KMS-Quotiententest via NEU-201-Kandidat | ×[M] |
+| [O-203-2] | Normkonvergenter Implementierer erzeugt nur innere Derivation | ✓[M]_neg |
+| [O-203-3] | Beschränkte trizielle Funktionale detektieren Normgrenzwerte aus overline{[A,A]} nicht | ✓[M]_neg |
+| [O-203-F] | Vollständige Drei-Fall-Klassifikation F.1–F.3 | ✓[M]_neg,Quelle |
+| [O-203-4-original] | Knoten [O-203-4] als z_p-Reihenform durch NEU-204 bewiesen | ×[M] |
+| [O-203-geladene-route] | Geladene Route durch NEU-203 | ✓[M]_neg,Quelle |
 
 ### Abgeschlossene Knoten (positiv)
 
@@ -90,24 +97,33 @@
 | [O-199-2] | Relationenaudit S_{m,n}: Semigruppenregel, Isometrie | ✓[M]_part |
 | [O-200-1] | G_i^H∈(1−α_{p_i})B | ✓[M] |
 | [O-200-2] | Y_{g,H,p,i}=[μ_{p_i},a_{i,H}]∈C_{gP,p} | ✓[M] |
-| [O-200-HN] | Formeln für H_N=**1**_{Nẑ} vollständig | ✓[M] |
+| [O-200-HN] | Formeln für H_N vollständig | ✓[M] |
 | [O-200-sing-necessary] | [G_i^H]≠0 ⇒ H∉B | ✓[M] |
-| [O-201-finite-comm] | [H_F,μ_k]=Σ_{p∈F}(log p)^{-1}μ_{pk}(e(k/p)−e(1/p)) | ✓[M]_part |
-| [O-202-comm-fin] | Endliche Kommutatorformel vollständig korrekt (p=2-Term korrigiert) | ✓[M] |
+| [O-201-finite-comm] | Endliche Kommutatorformel H_F | ✓[M]_part |
+| [O-202-comm-fin] | Endliche Kommutatorformel (p=2-Term korrigiert) | ✓[M] |
 | [O-202-eps-C*] | Augmentationscharakter erstreckt sich auf volle BC-C*-Algebra | ✓[K/M] |
+| [O-203-type] | E_n,z_p∈B_alg; [z_p,e(r)]=0 | ✓[M] |
+| [O-203-1a] | ε(z_p)=0 | ✓[M] |
+| [O-203-1b] | ‖z_p‖=1 | ✓[M] |
+| [O-203-1c] | z_p∈[A_alg,A_alg] | ✓[M] |
+| [O-203-criterion] | Kommutatorregularisierungsschema: nicht-Cauchy-Implementierer, Cauchy-Generatorkommutatoren | ✓[K/M] |
+| [O-203-4b] | Gesättigte dyadische Folge X_N: D:A_alg→A_C* neutral und ohne Implementierer | ✓[M]_part |
 
 ### Offene Knoten
 
 | Knoten | Aussage | Priorität |
 |---|---|---|
-| [O-199-3]_sing | Echt punktiertes H mit F_{p_j}∈B und [G_i^H]≠0 | **nächster Schritt** |
+| [O-203-4a] | Feste Reihe Σ c_p z_p divergiert, Kommutatorreihe konvergiert, Derivation nichtinner | **nächster Schritt** |
+| [O-203-4c] | D(A_alg)⊂A_alg (algebraische Wertigkeit) | hoch |
+| [O-203-4d] | Geladene Variante deg D=g≠1 | hoch |
+| [O-199-3]_sing | Echt punktiertes H mit F_{p_j}∈B und [G_i^H]≠0 | hoch |
 | [O-199-3]_copr | B-Quotiententest für p_j∤mn | hoch |
 | [O-199-1]_noncopr | Generatorformel für (k,mn)>1 | mittel |
 | [O-197-4] | [Y]≠0 in Q_{gP,p} — atomarer Restknoten | hoch |
 | [O-199-4] | Neue geladene HH¹-Quelle außerhalb Potentialroute | gesperrt |
 | [O-external-implementer] | Externer Implementierer T∉A mit [T,A]⊂A, deg T=g | offen |
 | [O-201-target] | Allgemeiner externer Implementierer: Zielraum | offen |
-| [O-202-distributional] | H_sing in Distributionen-, Bidual- oder Regularisierungsraum | ?[O] |
+| [O-202-distributional] | H_sing in Distributionen-/Bidualraum | ?[O] |
 | 201.C-neu | Cup- oder Dualzyklusknoten: vollständig neu typisiert | offen |
 | HH¹(A,A)_g≠0 | Geladene äußerliche Derivation der BC-Algebra | Hauptziel |
 
@@ -127,7 +143,7 @@
 | D_p äußerliche Derivation | D_p∈Z¹(A,A)\B¹(A,A) offen | NEU-179 |
 | [Ω_p] in kont. HH⁴ | Algebraisch≠0 ⇏ topologisch | NEU-185 |
 | Operatorbrücke ρ_op(Ω_p) | Keine Abbildung Z⁴(A,A)→End(H) | NEU-185/190 |
-| B-Quotiententest [O-199-3]_sing | Wohldefiniertes H∈LC(ẑ\{0})\LC(ẑ) mit F_k∈B | NEU-202/203 |
+| B-Quotiententest [O-199-3]_sing | Wohldefiniertes H∈LC(ẑ\{0})\LC(ẑ) mit F_k∈B | NEU-203/204 |
 | Generatorformel nicht-koprim | D_g^H(μ_k) für (k,mn)>1 | NEU-199 |
 | Multiplikatorroute x_g | ∃x_g: ε(x_g)≠0 und [A,x_g]·Im(Ω_p)=0 | NEU-195 |
 | C*-topolog. Detektionskriterium | Normkont. Zyklusfunktional gefordert | NEU-197 |
@@ -136,23 +152,20 @@
 
 ## Nächste Schritte
 
-**Unmittelbar (NEU-203):**
+**Unmittelbar: NEU-204 — Dyadische Schalen und analytische äußere Derivation**
 
-Thema: **Projektionsdifferenzen und Kommutatortrivialität**.
+NEU-203 liefert zwei belastbare methodische Einsichten:
+1. **Normkonvergenz des Implementierers** kann keine äußere Derivation erzeugen: x∈A_{C*} ⇒ ad(x) inner.
+2. **Kommutatorregularisierungsschema** [O-203-criterion]: nichtkonvergenter Implementierer X_N + konvergente Generatorkommutatoren → Grenzderivation möglich.
 
-Die z_p-Route (μ_pμ_p*−μ_{p+1}μ_{p+1}*) ist als Kandidat für die geladene Potentialroute widerlegt (×[M]) — neutral, intern, Kommutator im vollen Quotienten trivial. Zu klären:
+Offen aus NEU-203:
+- [O-203-4a]: Feste z_p-Reihe mit diverg. Implementierer aber konvergenten Kommutatoren und nichtinnerer Derivation
+- [O-203-4c]: D(A_alg)⊂A_alg (algebraische Wertigkeit)
+- [O-203-4d]: Geladene Variante deg D=g≠1
 
-1. Gibt es einen **externen** Implementierer T∉A mit deg T=g, [T,A]⊂A und [T,μ_k] nichttrivial im Quotienten?
-2. Kann man die **Norm-Cauchy-Bedingung** für nicht-absolute Koeffizientenfolgen erfüllen (bedingter Reihenansatz)?
-3. Existiert ein Regularisierungsraum (Bidual, Verteilungen), in dem H_sing in einem geeigneten Sinn konvergiert?
-
-**Korrigierte Kernforderung an nächsten Kandidaten:**
-```
-H ∈ LC(Zhat \ {0}) \ LC(Zhat)
-mit: α_{p_j}(H) − H ∈ LC(Zhat) für alle nötigen p_j
-und: G_i^H = α_P(H) − α_{P/p_i}(H) ∉ Σ_j(1−α_{p_j})LC(Zhat)
-```
-H muss homogenen Grad g haben. Gradmischung ist kein C*-Fehler für volle Algebra, schließt aber die Verwendung in der homogenen Potentialroute aus.
+**Typwarnung für NEU-204 und folgende:** Strikt zu unterscheiden:
+- A_alg / [A_alg, A_alg] (algebraischer Quotient)
+- A_{C*} / overline{[A_{C*}, A_{C*}]} (normabgeschlossener Quotient)
 
 **Ausstehende Blöcke:**
 
@@ -160,5 +173,5 @@ H muss homogenen Grad g haben. Gradmischung ist kein C*-Fehler für volle Algebr
 |---|---|---|
 | 04-grenzoperator-renormierung | NEU-146–150 | Mellinfehler bekannt |
 | 05-primkanal-fourierladung | NEU-169–173 + Varianten | ausstehend |
-| 06-hochschild-bc-algebra | NEU-203–222 + a–z | **als nächstes** |
+| 06-hochschild-bc-algebra | NEU-204–222 + a–z | **als nächstes** |
 | 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | abschließend |
