@@ -1,10 +1,10 @@
 # GPT-Audit-Zwischenbilanz (Aktiv)
 
-**Stand: 2. August 2026, 12:33 Uhr — Aktiv-Bilanz für den laufenden Chat-Kontext**
+**Stand: 2. August 2026, 21:30 Uhr — Aktiv-Bilanz für den laufenden Chat-Kontext**
 
 > Detailtexte aller Audits NEU-128–201 stehen in `ARCHIV-AUDIT-2026-07.md`.
 > Revisionsaudit NEU-202 in `ARCHIV-AUDIT-NEU202-REVISION.md`.
-> Direktaudit NEU-203 in `ARCHIV-AUDIT-NEU203.md`.
+> Direktaudits NEU-203 und NEU-204 in `ARCHIV-AUDIT-NEU203.md` und `ARCHIV-AUDIT-NEU204.md`.
 > Vollständige Verifikationshistorie in `ZWISCHENBILANZ_2026-07-31.md`.
 > Fehlende Dateien: NEU-191, NEU-198.
 
@@ -46,6 +46,7 @@
 | Direktaudit NEU-201 | NEU-201 | Typbruch B, Q falsch, Formel erfunden, Kandidat widerlegt | **×[M]** |
 | Revisionsaudit NEU-202 | NEU-202 | H_sing∉B ✓[M]_neg; endl. Kommutatorformel ✓[M]; KMS→0 ✓[M]_neg; Mertens ×[M]; Gradmischung kein C*-Typfehler ×[M]; 201.B/C urspr. ×[M]; z_p-Route ×[M] | **✓[M]_part** |
 | Direktaudit NEU-203 | NEU-203 | E_n,z_p∈B_alg ✓[M]; ε(z_p)=0 ✓[M]; ‖z_p‖=1 ✓[M]; z_p∈[A,A] ✓[M]; Normkonvergenz⇒inner ✓[M]_neg; [O-203-4] überdehnt ×[M]; Criterion ✓[K/M]; z_p-Reihenknoten ?[O]; dyad. Mechanismus ✓[M]_part | **✓[M]_part** |
+| Direktaudit NEU-204 | NEU-204 | X_N nicht norm-Cauchy ✓[M]; Generatorkommutatoren konvergieren ✓[M]; D:A_alg→A_C* wohldefiniert ✓[M]; [D]≠0 in HH¹(A_alg,A_C*)_1 ✓[M]; D(A_alg)⊄A_alg ✓[M]_neg; neutral, nicht geladen ✓[M]_neg | **✓[M]_part** |
 
 ---
 
@@ -88,6 +89,10 @@
 | [O-203-F] | Vollständige Drei-Fall-Klassifikation F.1–F.3 | ✓[M]_neg,Quelle |
 | [O-203-4-original] | Knoten [O-203-4] als z_p-Reihenform durch NEU-204 bewiesen | ×[M] |
 | [O-203-geladene-route] | Geladene Route durch NEU-203 | ✓[M]_neg,Quelle |
+| [O-204-bounded-extension] | Beschränkte Fortsetzung auf A_C* | ✓[M]_neg |
+| [O-204-4] | D(A_alg)⊂A_alg für diesen Kandidaten | ✓[M]_neg |
+| [O-204-5] | Geladener Grad g≠1 für diesen Kandidaten | ✓[M]_neg |
+| [O-204-cup] | Cup-/Dualzyklusbrücke in NEU-204 | ✓[M]_neg,Quelle |
 
 ### Abgeschlossene Knoten (positiv)
 
@@ -107,16 +112,28 @@
 | [O-203-1b] | ‖z_p‖=1 | ✓[M] |
 | [O-203-1c] | z_p∈[A_alg,A_alg] | ✓[M] |
 | [O-203-criterion] | Kommutatorregularisierungsschema: nicht-Cauchy-Implementierer, Cauchy-Generatorkommutatoren | ✓[K/M] |
-| [O-203-4b] | Gesättigte dyadische Folge X_N: D:A_alg→A_C* neutral und ohne Implementierer | ✓[M]_part |
+| [O-203-4b] | Gesättigte dyadische Folge X_N: D:A_alg→A_C* neutral und ohne Implementierer | ✓[M] |
+| [O-204-geom] | Dyadische Projektionsgeometrie vollständig korrekt | ✓[M] |
+| [O-204-1] | Gesättigte dyadische Folge X_N ist nicht norm-Cauchy | ✓[M] |
+| [O-204-shift] | Verschiebungsrelationen korrekt | ✓[M] |
+| [O-204-comm-fin] | Vollständige endliche Kommutatorformel mit Sättigungsterm | ✓[M] |
+| [O-204-2a] | Alle Generatorkommutatoren [X_N,g] konvergieren in A_C* | ✓[M] |
+| [O-204-2] | D:A_alg→A_C* ist wohldefinierte neutrale Derivation | ✓[M] |
+| [O-204-unbdd] | D ist bezüglich der C*-Norm unbeschränkt | ✓[M] |
+| [O-204-3] | Kein Implementierer x∈A_C* | ✓[M] |
+| [O-204-unbounded-implementer] | Unbeschränkter diagonaler Implementierer in Semigruppendarstellung | ✓[M] |
+| [O-204-HH1-analytic] | [D]≠0 in HH¹(A_alg,A_C*)_1 | ✓[M] |
 
 ### Offene Knoten
 
 | Knoten | Aussage | Priorität |
 |---|---|---|
-| [O-203-4a] | Feste Reihe Σ c_p z_p divergiert, Kommutatorreihe konvergiert, Derivation nichtinner | **nächster Schritt** |
+| [O-203-4a] | Feste Reihe Σ c_p z_p divergiert, Kommutatorreihe konvergiert, Derivation nichtinner | hoch |
 | [O-203-4c] | D(A_alg)⊂A_alg (algebraische Wertigkeit) | hoch |
 | [O-203-4d] | Geladene Variante deg D=g≠1 | hoch |
-| [O-199-3]_sing | Echt punktiertes H mit F_{p_j}∈B und [G_i^H]≠0 | hoch |
+| [O-204-closable] | D beziehungsweise iD abschließbar? | **nächster Schritt** |
+| [O-204-cup] | Cup-Aufstieg nach HH⁴(A_alg,A_C*) und typisierter Dualzeuge | hoch |
+| [O-199-3]_sing | Geladene A_alg-wertige singuläre Potentialderivation | hoch |
 | [O-199-3]_copr | B-Quotiententest für p_j∤mn | hoch |
 | [O-199-1]_noncopr | Generatorformel für (k,mn)>1 | mittel |
 | [O-197-4] | [Y]≠0 in Q_{gP,p} — atomarer Restknoten | hoch |
@@ -152,20 +169,23 @@
 
 ## Nächste Schritte
 
-**Unmittelbar: NEU-204 — Dyadische Schalen und analytische äußere Derivation**
+**Unmittelbar: NEU-205 — Geladener dyadischer Twist und Generatorfehlerterm**
 
-NEU-203 liefert zwei belastbare methodische Einsichten:
-1. **Normkonvergenz des Implementierers** kann keine äußere Derivation erzeugen: x∈A_{C*} ⇒ ad(x) inner.
-2. **Kommutatorregularisierungsschema** [O-203-criterion]: nichtkonvergenter Implementierer X_N + konvergente Generatorkommutatoren → Grenzderivation möglich.
+NEU-204 liefert den ersten echten positiven Teiltreffer dieses Teilstrangs:
+1. **Kommutatorregularisierung** erzeugt eine echte äußere Hochschild-1-Klasse im erweiterten Koeffizientenmodul:
+   [D] ≠ 0 in HH¹(A_alg, A_C*)_1.
+2. Die Konstruktion bleibt jedoch **neutral** und **A_C***-wertig; sie erreicht weder den geladenen noch den algebraischen Zieltyp.
 
-Offen aus NEU-203:
-- [O-203-4a]: Feste z_p-Reihe mit diverg. Implementierer aber konvergenten Kommutatoren und nichtinnerer Derivation
-- [O-203-4c]: D(A_alg)⊂A_alg (algebraische Wertigkeit)
-- [O-203-4d]: Geladene Variante deg D=g≠1
+Offen nach NEU-204:
+- [O-203-4a]: feste z_p-Reihe statt gesättigter dyadischer Folge
+- [O-204-closable]: Abschließbarkeit / Geschlossenheit von D bzw. iD
+- [O-204-cup]: typisierte Cup-Brücke HH¹(A_alg,A_C*) → HH⁴(A_alg,A_C*)
+- geladener Twist mit Grad g≠1 und Kontrolle des Generatorfehlerterms
 
-**Typwarnung für NEU-204 und folgende:** Strikt zu unterscheiden:
-- A_alg / [A_alg, A_alg] (algebraischer Quotient)
-- A_{C*} / overline{[A_{C*}, A_{C*}]} (normabgeschlossener Quotient)
+**Typische strikte Trennungen ab jetzt:**
+- HH¹(A_alg, A_alg)_g  vs.  HH¹(A_alg, A_C*)_1
+- algebraische Werte  vs.  stetige, nicht lokal konstante Diagonalwerte
+- Implementierer in A_C*  vs.  unbeschränkte diagonale Implementierer in Darstellungen
 
 **Ausstehende Blöcke:**
 
@@ -173,5 +193,5 @@ Offen aus NEU-203:
 |---|---|---|
 | 04-grenzoperator-renormierung | NEU-146–150 | Mellinfehler bekannt |
 | 05-primkanal-fourierladung | NEU-169–173 + Varianten | ausstehend |
-| 06-hochschild-bc-algebra | NEU-204–222 + a–z | **als nächstes** |
+| 06-hochschild-bc-algebra | NEU-205–222 + a–z | **als nächstes** |
 | 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | abschließend |
