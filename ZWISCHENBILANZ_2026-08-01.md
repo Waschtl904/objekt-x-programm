@@ -1,10 +1,10 @@
 # GPT-Audit-Zwischenbilanz (Aktiv)
 
-**Stand: 2. August 2026, 21:30 Uhr — Aktiv-Bilanz für den laufenden Chat-Kontext**
+**Stand: 2. August 2026, 21:57 Uhr — Aktiv-Bilanz für den laufenden Chat-Kontext**
 
 > Detailtexte aller Audits NEU-128–201 stehen in `ARCHIV-AUDIT-2026-07.md`.
 > Revisionsaudit NEU-202 in `ARCHIV-AUDIT-NEU202-REVISION.md`.
-> Direktaudits NEU-203 und NEU-204 in `ARCHIV-AUDIT-NEU203.md` und `ARCHIV-AUDIT-NEU204.md`.
+> Direktaudits NEU-203, NEU-204 und NEU-205 in `ARCHIV-AUDIT-NEU203.md`, `ARCHIV-AUDIT-NEU204.md` und `ARCHIV-AUDIT-NEU205.md`.
 > Vollständige Verifikationshistorie in `ZWISCHENBILANZ_2026-07-31.md`.
 > Fehlende Dateien: NEU-191, NEU-198.
 
@@ -47,6 +47,7 @@
 | Revisionsaudit NEU-202 | NEU-202 | H_sing∉B ✓[M]_neg; endl. Kommutatorformel ✓[M]; KMS→0 ✓[M]_neg; Mertens ×[M]; Gradmischung kein C*-Typfehler ×[M]; 201.B/C urspr. ×[M]; z_p-Route ×[M] | **✓[M]_part** |
 | Direktaudit NEU-203 | NEU-203 | E_n,z_p∈B_alg ✓[M]; ε(z_p)=0 ✓[M]; ‖z_p‖=1 ✓[M]; z_p∈[A,A] ✓[M]; Normkonvergenz⇒inner ✓[M]_neg; [O-203-4] überdehnt ×[M]; Criterion ✓[K/M]; z_p-Reihenknoten ?[O]; dyad. Mechanismus ✓[M]_part | **✓[M]_part** |
 | Direktaudit NEU-204 | NEU-204 | X_N nicht norm-Cauchy ✓[M]; Generatorkommutatoren konvergieren ✓[M]; D:A_alg→A_C* wohldefiniert ✓[M]; [D]≠0 in HH¹(A_alg,A_C*)_1 ✓[M]; D(A_alg)⊄A_alg ✓[M]_neg; neutral, nicht geladen ✓[M]_neg | **✓[M]_part** |
+| Direktaudit NEU-205 | NEU-205 | Grundformel [V_g,e(r)] korrekt ✓[M]; Standardrelationen falsch orientiert ×[M]; Divergenz für alle nichttrivialen r falsch ×[M]; drei dyadische geladene Kandidaten scheitern dennoch ✓[M]_neg; Architektur (III) nicht ausgeschlossen ?[O] | **✓[M]_part** |
 
 ---
 
@@ -93,6 +94,11 @@
 | [O-204-4] | D(A_alg)⊂A_alg für diesen Kandidaten | ✓[M]_neg |
 | [O-204-5] | Geladener Grad g≠1 für diesen Kandidaten | ✓[M]_neg |
 | [O-204-cup] | Cup-/Dualzyklusbrücke in NEU-204 | ✓[M]_neg,Quelle |
+| [O-205-1] | Linksplatzierung V_g X_N scheitert für jeden festen g≠1 an einem Generator | ✓[M]_neg |
+| [O-205-2] | Rechtsplatzierung X_N V_g scheitert ebenso | ✓[M]_neg |
+| [O-205-3] | Sandwich μ_m X_N μ_n* scheitert ebenso | ✓[M]_neg |
+| [O-205-4a] | Divergenz für alle r∉(m−n)^(-1)Z | ×[M] |
+| [O-205-5b] | Nichttriviale Projektion in A_g, g≠1 | ✓[M]_neg |
 
 ### Abgeschlossene Knoten (positiv)
 
@@ -123,6 +129,9 @@
 | [O-204-3] | Kein Implementierer x∈A_C* | ✓[M] |
 | [O-204-unbounded-implementer] | Unbeschränkter diagonaler Implementierer in Semigruppendarstellung | ✓[M] |
 | [O-204-HH1-analytic] | [D]≠0 in HH¹(A_alg,A_C*)_1 | ✓[M] |
+| [O-205-basic] | [μ_m μ_n*, e(r)] = μ_m(e(nr)-e(mr))μ_n* | ✓[M] |
+| [O-205-4b] | Alle drei konkreten dyadischen Ladungsansätze scheitern | ✓[M]_neg |
+| [O-206-model] | Homogene biorthogonale Partialisometrieschalen als Modelltyp | ✓[K/M] |
 
 ### Offene Knoten
 
@@ -131,8 +140,12 @@
 | [O-203-4a] | Feste Reihe Σ c_p z_p divergiert, Kommutatorreihe konvergiert, Derivation nichtinner | hoch |
 | [O-203-4c] | D(A_alg)⊂A_alg (algebraische Wertigkeit) | hoch |
 | [O-203-4d] | Geladene Variante deg D=g≠1 | hoch |
-| [O-204-closable] | D beziehungsweise iD abschließbar? | **nächster Schritt** |
+| [O-204-closable] | D beziehungsweise iD abschließbar? | hoch |
 | [O-204-cup] | Cup-Aufstieg nach HH⁴(A_alg,A_C*) und typisierter Dualzeuge | hoch |
+| [O-205-5c] | Existenz eines relationsangepassten N-abhängigen homogenen Twists | hoch |
+| [O-206-transport] | Normkonvergenz der μ_k- und μ_k*-Kommutatoren | **nächster Schritt** |
+| [O-charged-analytic] | Geladene äußere Derivation A_alg→A_C* | hoch |
+| [O-charged-algebraic] | Geladene äußere Derivation A_alg→A_alg | hoch |
 | [O-199-3]_sing | Geladene A_alg-wertige singuläre Potentialderivation | hoch |
 | [O-199-3]_copr | B-Quotiententest für p_j∤mn | hoch |
 | [O-199-1]_noncopr | Generatorformel für (k,mn)>1 | mittel |
@@ -169,23 +182,17 @@
 
 ## Nächste Schritte
 
-**Unmittelbar: NEU-205 — Geladener dyadischer Twist und Generatorfehlerterm**
+**Unmittelbar: NEU-206 — Homogene Partialisometrieschalen, Orthogonalität und Charakterkern**
 
-NEU-204 liefert den ersten echten positiven Teiltreffer dieses Teilstrangs:
-1. **Kommutatorregularisierung** erzeugt eine echte äußere Hochschild-1-Klasse im erweiterten Koeffizientenmodul:
-   [D] ≠ 0 in HH¹(A_alg, A_C*)_1.
-2. Die Konstruktion bleibt jedoch **neutral** und **A_C***-wertig; sie erreicht weder den geladenen noch den algebraischen Zieltyp.
-
-Offen nach NEU-204:
-- [O-203-4a]: feste z_p-Reihe statt gesättigter dyadischer Folge
-- [O-204-closable]: Abschließbarkeit / Geschlossenheit von D bzw. iD
-- [O-204-cup]: typisierte Cup-Brücke HH¹(A_alg,A_C*) → HH⁴(A_alg,A_C*)
-- geladener Twist mit Grad g≠1 und Kontrolle des Generatorfehlerterms
+NEU-205 liefert einen belastbaren, aber engen Ausschluss:
+1. Die drei naiven geladenen dyadischen Platzierungen `V_g X_N`, `X_N V_g` und `μ_m X_N μ_n*` scheitern jeweils daran, dass für jedes feste `g ≠ 1` mindestens ein Charaktergenerator `e(r)` einen divergenten Kommutator erzeugt.
+2. Nicht bewiesen und sogar falsch ist die stärkere Behauptung, dies geschehe für **jeden** nichttrivialen Charakter `r`.
+3. Ein relationsangepasster, `N`-abhängiger homogener Twist bleibt offen; deshalb ist die Partialisometriearchitektur der nächste natürliche Modelltyp.
 
 **Typische strikte Trennungen ab jetzt:**
-- HH¹(A_alg, A_alg)_g  vs.  HH¹(A_alg, A_C*)_1
-- algebraische Werte  vs.  stetige, nicht lokal konstante Diagonalwerte
-- Implementierer in A_C*  vs.  unbeschränkte diagonale Implementierer in Darstellungen
+- kandidatenspezifischer No-go  vs.  allgemeiner Ausschluss geladener Architektur
+- dyadischer Schwanz  vs.  Charakterkern mit Zweierpotenz- bzw. ungeradem Anteil
+- geladene Analytik `A_alg → A_C*`  vs.  geladene algebraische Wertigkeit `A_alg → A_alg`
 
 **Ausstehende Blöcke:**
 
@@ -193,5 +200,5 @@ Offen nach NEU-204:
 |---|---|---|
 | 04-grenzoperator-renormierung | NEU-146–150 | Mellinfehler bekannt |
 | 05-primkanal-fourierladung | NEU-169–173 + Varianten | ausstehend |
-| 06-hochschild-bc-algebra | NEU-205–222 + a–z | **als nächstes** |
+| 06-hochschild-bc-algebra | NEU-206–222 + a–z | **als nächstes** |
 | 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | abschließend |
