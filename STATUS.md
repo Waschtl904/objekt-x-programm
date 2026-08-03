@@ -4,10 +4,13 @@ Verdichtete Gesamtbilanz des Programms ohne Zwischenschritte. Für die vollstän
 Dokumentliste siehe [INDEX.md](INDEX.md), für die Verzweigungsbedingungen der offenen
 Knoten [OFFENE_PROBLEME.md](OFFENE_PROBLEME.md).
 
-> Stand: 26. Juli 2026 · letzter Eintrag NEU-228
+> Stand: 3. August 2026 · letzter Eintrag NEU-228 · Direktaudits NEU-210/211 verbucht
 
 Verbindliche Karte aller Bedingungen an Objekt X, nach logischen Ebenen getrennt:
 [Ebene XVI — Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md).
+
+Kanonisches Eingangsblatt für den HH-Strang:
+[AUDITSTAND-2026-08-03.md](AUDITSTAND-2026-08-03.md).
 
 ---
 
@@ -23,6 +26,22 @@ Verbindliche Karte aller Bedingungen an Objekt X, nach logischen Ebenen getrennt
 | `❓ [O]` | offener Knoten |
 
 Zusätze: `_part` teilweise geschlossen · `_neg` negativ geschlossen · `[K/M]` konstruktiv mit bewiesenen Teilaussagen.
+
+---
+
+## Statuskorrekturen 2026-08-03 (Direktaudit NEU-210/211)
+
+| Knoten | Alte Aussage | Neue Aussage | Status |
+|---|---|---|---|
+| [O-209-6c] | $M_{g,r}X_N \to 0$ in Norm | **widerlegt** — Gegenbeispiel $m=2,n=1,r=\tfrac{1}{2}$ | `✗[M]` |
+| [O-209-6d] | (neu) | $M_{g,r}X_N$ schließlich konstant | `✓[M]` |
+| [O-211-3] geschrieben | $D_g(e(r)) := 0$ | **widerlegt** — verletzt BC-Kreuzrelation | `✗[M]` |
+| [O-211-3corr] | (neu) | $D_g^{\mathrm{corr}}(e(r)) = \mu_m C_{m,n;r} \mu_n^*$ | `✓[M]` |
+| [O-charged-HH1-analytic] | offen | $[D_g^{\mathrm{corr}}] \neq 0$ in $HH^1(A_{\mathrm{alg}}, A_{C^*})_g$ — **erster gesicherter positiver HH-Befund im geladenen Sektor** | `✓[M]` |
+| NEU-222 §0 | „[O-209-6] vollständig geschlossen" | Nur [O-209-6a/b/d] geschlossen; [O-209-6c] `✗[M]` | Auditwarnung |
+| HH-Kette NEU-212–218 | als tragfähig auf Basis NEU-211 | **Beweispflicht:** Kompatibilität mit $D_g^{\mathrm{corr}}$ zu prüfen | `?[O]` re-audit |
+
+Vollständige Belege: [ARCHIV-AUDIT-NEU210.md](ARCHIV-AUDIT-NEU210.md), [ARCHIV-AUDIT-NEU211.md](ARCHIV-AUDIT-NEU211.md).
 
 ---
 
@@ -89,6 +108,7 @@ die Positivität der Momentfolge unabhängig liefert.
 | Lokaler $p$-Block, globale Nichtinnerheit, Grad-1-Pfad geschlossen | NEU-217 |
 | Cup-Aufstieg: $L^{\mathrm{cup}}_{g;\mathbf p}\in Z^4(A_{\mathrm{alg}},M)_g$ | NEU-218 |
 | Vollständige $U_{g^{-1}}$-Buchführung, $s=-1$ global bewiesen | NEU-219t |
+| **[O-charged-HH1-analytic]** $[D_g^{\mathrm{corr}}]\neq 0$ in $HH^1(A_{\mathrm{alg}},A_{C^*})_g$ | **NEU-211 (nach Direktaudit 2026-08-03)** |
 
 ---
 
@@ -106,8 +126,10 @@ die Positivität der Momentfolge unabhängig liefert.
 | Nullkozykel verdreht | $Z^0(A,{}_{\mathrm{id}}A_{\sigma_\beta}) = 0$ für $\Re\beta>0$ | NEU-183 |
 | Augmentationsblindheit | reguläre Potentiale sind im Kommutatorquotienten unsichtbar | NEU-196/200 |
 | Charakterkern | Singularträger separierbarer Primkanäle, Ketten-No-go | NEU-207/209 |
+| **[O-209-6c]** | $M_{g,r}X_N \to 0$ — **widerlegt** (Direktaudit 2026-08-03) | NEU-210 / ARCHIV-AUDIT-NEU210 |
+| **[O-211-3] geschrieben** | $D_g(e(r)):=0$ — **widerlegt** (Direktaudit 2026-08-03) | NEU-211 / ARCHIV-AUDIT-NEU211 |
 | Bimodul | globaler Bimodul-No-go via Zentralisatorbeweis | NEU-215 |
-| **O-219** | $t\Phi_0 = g^{-\beta}\Phi_0$ mit $g^{-\beta}\neq 1$ — der kanonische Basislift liefert **keine** gewöhnliche zyklische Klasse in $HC^4(A_{\mathrm{alg}})$ | NEU-219u |
+| **O-219** | $t\Phi_0 = g^{-\beta}\Phi_0$ mit $g^{-\beta}\neq 1$ — **keine gewöhnliche zyklische Klasse in $HC^4(A_{\mathrm{alg}})$** | NEU-219u |
 | Off-Axis | Trägheitsklassifikation aller Metrikblöcke; Positivitäts-No-Go und Similarity-No-Go | NEU-220t |
 | Determinante | gewöhnliche Spurklassen-Determinante für $\Xi$ ausgeschlossen | NEU-220u |
 | Hilbertspur | operatorischer Ursprung von $\Lambda_\Gamma$ erfordert semifinite, nicht gewöhnliche Spur | NEU-220e |
@@ -151,15 +173,15 @@ Nach Dringlichkeit geordnet.
 
 | # | Knoten | Frage | Eintrag |
 |---|---|---|---|
-| 1 | `[O-221-1c1a0]` | Gilt $\widetilde T_p^{\mathrm{raw}}(\Delta_p^{\mathrm{adm}}) \subseteq \mathcal N_{\mathrm{Wres,rel}}$? Erfordert: $\widehat{\mathcal E}_p^{\mathrm{adm}}$ vollständig definieren, Rohzielraum und Wres-Radikal fixieren, Test auf der Differenzmenge rechnen. Normgleichheit genügt nicht — verlangt ist Invarianz des zyklischen Spektralmaßes | NEU-221e |
-| 1b | `[O-221-1c1b/c/d]` | $E_{D}(\{0\})\Psi_N = 0$; $\int\lvert\lambda\rvert^{-2k-2}d\mu_{\Psi_N}<\infty$ für $k=0,1,2$; globale Kopplung in $D_{\mathrm{scatt},N}$ | NEU-221d |
+| 0 | **HH-Kette re-audit** | NEU-212→216→217→218→222: Kompatibilität mit $D_g^{\mathrm{corr}}(e(r))=\mu_mC_{m,n;r}\mu_n^*$ | AUDITSTAND-2026-08-03 |
+| 1 | `[O-221-1c1a0]` | Gilt $\widetilde T_p^{\mathrm{raw}}(\Delta_p^{\mathrm{adm}}) \subseteq \mathcal N_{\mathrm{Wres,rel}}$? | NEU-221e |
+| 1b | `[O-221-1c1b/c/d]` | $E_{D}(\{0\})\Psi_N = 0$; inverse Momente; globale Kopplung in $D_{\mathrm{scatt},N}$ | NEU-221d |
 | 2 | `[O-220-1]` | Adelische Quellkonstruktion der positiven Momentfolge (RH-stark) | NEU-220w / NEU-221 |
-| 3 | `[O-161]` | Existiert ein explizit konstruiertes $\ell_{s_0,m_0}\neq 0$ mit $s_0\neq 0$ in $L_3^\circ = \sum_{s,m}\ell_{s,m}e_sV_m$? | NEU-161/162 |
-| 4 | `[O-141-D]` | Regularisierungsschema für $\operatorname{Tr}_{\mathrm{reg}}(R\Sigma_{\mathrm{rel}}^{\mathrm{ren}})$ im kritischen Streifen $0<\Re\beta\le 1$ | NEU-141 |
-| 5 | `[O-223-2]` | **Typkorrigiert (NEU-223):** $s_k(J^-)$ ist für unbeschränktes $J^-$ nicht definiert. **Vollständig `✗[M]` entschieden** (NEU-224/225). Voller Raum: $\dim\ker D_{\mathrm{rel}}=\infty$ über die Faser $m=1$. Reduzierter Raum: $D_{\mathrm{rel}}\vert_{\mathcal H_{p,a}}\cong 2ic_p\,d/dt$, absolutstetig. $D_{\mathrm{rel}}$ ist ein **Transportgenerator**. Neue Hauptlinie: Feshbach-Transfer $K_N(z)$. Vorschaltknoten `[O-226-1]` und `[O-226-2]` **geschlossen** (NEU-227): Spektralmaßform und Koordinatenwörterbuch stehen. **Rücklauf (NEU-228):** $[O\text{-}226\text{-}3]\equiv[O\text{-}153]$ — der $u$-Regulator ist die Hebungswahl. Zuerst `[O-228-2]`: ist $\mathcal L_p$ nichtleer? Alternativ: $\sum_p \operatorname{Tr}\lvert M_p(z)\rvert<\infty$ gleichmäßig auf Kompakta | NEU-56/223 |
-| 6 | `[X.3.25]` | Gilt $\sup_a \sum_b \lvert\Theta_{ba}\rvert/\ell(a) < \infty$ exakt statt nur heuristisch? | NEU-55 |
-| 6b | `[O-223-2]` | **Auf dem vollen Raum negativ entschieden (NEU-224).** Offen: reduzierter Fall. Ferner `✓[M]_neg` gegen die flache Achse $r=0$ (NEU-54 §5) und gegen $\mathcal D_0^{\mathrm{eff}}$ nach (55.0); ein negativer Ausgang wäre eine stärkere No-Go-Klasse als NEU-56 | NEU-223 |
-| 7 | `[O-188-0..3]` | Existiert $H\notin \mathrm{LC}(\hat{\mathbb Z})$ mit $\alpha_k(H)-H\in\mathrm{LC}(\hat{\mathbb Z})$ für alle $k$, verträglich mit allen Kreuzrelationen? | NEU-188 |
+| 3 | `[O-161]` | Existiert ein explizit konstruiertes $\ell_{s_0,m_0}\neq 0$ mit $s_0\neq 0$? | NEU-161/162 |
+| 4 | `[O-141-D]` | Regularisierungsschema für $\operatorname{Tr}_{\mathrm{reg}}$ im kritischen Streifen $0<\Re\beta\le 1$ | NEU-141 |
+| 5 | `[O-223-2]` | Feshbach-Transfer $K_N(z)$; Leerfaser-Risiko $\mathcal L_p$; $\sum_p\operatorname{Tr}|M_p(z)|<\infty$ | NEU-56/223/228 |
+| 6 | `[X.3.25]` | $\sup_a \sum_b \lvert\Theta_{ba}\rvert/\ell(a) < \infty$ exakt? | NEU-55 |
+| 7 | `[O-188-0..3]` | $H\notin\mathrm{LC}(\hat{\mathbb Z})$ mit $\alpha_k(H)-H\in\mathrm{LC}(\hat{\mathbb Z})$? | NEU-188 |
 | 8 | — | Rückrichtung: $\operatorname{Spec}\subset\mathbb R \Rightarrow \mathrm{RH}$ | — |
 
 ---
