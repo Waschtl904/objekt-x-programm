@@ -1,10 +1,10 @@
 # GPT-Audit-Zwischenbilanz (Aktiv)
 
-**Stand: 3. August 2026, 17:00 Uhr — Aktiv-Bilanz für den laufenden Chat-Kontext**
+**Stand: 3. August 2026, 17:20 Uhr — Aktiv-Bilanz für den laufenden Chat-Kontext**
 
 > Detailtexte aller Audits NEU-128–201 stehen in `ARCHIV-AUDIT-2026-07.md`.
 > Revisionsaudit NEU-202 in `ARCHIV-AUDIT-NEU202-REVISION.md`.
-> Direktaudits NEU-203–208 in den jeweiligen `ARCHIV-AUDIT-NEU20x.md`-Dateien.
+> Direktaudits NEU-203–209 in den jeweiligen `ARCHIV-AUDIT-NEU20x.md`-Dateien.
 > Vollständige Verifikationshistorie in `ZWISCHENBILANZ_2026-07-31.md`.
 > Fehlende Dateien: NEU-191, NEU-198.
 
@@ -51,6 +51,7 @@
 | Direktaudit NEU-206 | NEU-206 | w_j biorthogonal ✓[M]; eventuale e(r)-Kommutation ✓[M]; L(r)=q nicht minimal ×[M]; Sättigungsterm W_N unkontrolliert ×[M]; Transportgeometrie E_{L/(L,k)} offen; feste k₀-Kette neg. | **✓[M]_part** |
 | Direktaudit NEU-207 | NEU-207 | Ketten-No-go ✓[M]_neg; Bewertungsgitter ✓[M]; Prim-/Rechteckschalen ✓[M]; radiale Funktion auf festem Gitter ✓[M]; radiale Funktion unter Refinement ✓[M]_neg; allg. Koeffizientenarchitektur ?[O] | **✓[M]_part** |
 | Direktaudit NEU-208 | NEU-208 | Separierbare Primpotentiale ✓[M]; Normfehler Max→Summe korrigiert ✓[M]; D:A_alg→A_C* neutral ✓[M]; **[D]≠0 in HH¹(A_alg,A_C*)_1 ✓[M]**; algebraischer Zieltyp ✓[M]_neg; naiver Sandwich ✓[M]_neg; allg. geladene Kopplung ?[O] | **✓[M]_part** |
+| Direktaudit NEU-209 | NEU-209 | Sing(X̃_p)=K_p ✓[M]; Charakterkern Z_g={0} ✓[M]; naiver separierbarer Sandwichansatz ✓[M]_neg; Separierbarkeit nicht notwendig ×[M]; reiner Tailkandidat ×[M]; schwache Charakterkonvergenz via NEU-210 ✓[M] | **✓[M]_part** |
 
 ---
 
@@ -60,28 +61,25 @@
 
 | Knoten | Aussage | Status |
 |---|---|---|
-| [O-207-1] | Exakt transportgeschlossene totale Kette für ≥2 Primrichtungen | ✓[M]_neg |
-| [O-207-2] | Bewertungsgitter als exakter Transportindex | ✓[M] |
-| [O-207-3a/3b] | Prim- und Rechteckschalenformeln | ✓[M] |
-| [O-207-4a] | Charakterkerne als obere Mengen | ✓[M] |
-| [O-207-5a-fixed] | c(α)=log(2+|α|₁) unbeschränkt und festgitter-translationsflach | ✓[M] |
-| [O-207-5a-ref] | Radiale Funktion unter Primrefinement normstabil | ✓[M]_neg |
-| [O-208-1] | Radiale Architektur nicht refinementstabil | ✓[M]_neg |
-| [O-208-2] | Separierbare Primpotentiale algebraisch konstruiert | ✓[M] |
-| [O-208-3a/3b] | Refinementstabilität für μ_k, μ_k*, e(r) | ✓[M] |
-| [O-208-4a/4b/4c] | Einzelkanalnorm, korrigierte Summennorm, Grenzderivation | ✓[M] |
-| [O-208-HH1-analytic] | [D]≠0 in HH¹(A_alg,A_C*)_1 | ✓[M] |
-| [O-208-algebraic] | D(A_alg)⊄A_alg für logarithmische Primkanäle | ✓[M]_neg |
-| [O-208-5a] | Naiver geladener Sandwichansatz | ✓[M]_neg |
+| [O-209-1a] | X̃_{p,N}|_{K_p}=c_N-c_0→∞ | ✓[M] |
+| [O-209-1b] | Sing(X̃_p)=K_p punktweise | ✓[M] |
+| [O-209-2] | p∤L ⇒ ||M|_{K_p}||=||M|| und ||MX̃_{p,N}||→∞ | ✓[M] |
+| [O-209-3] | Naiver positiver separierbarer Sandwichansatz | ✓[M]_neg |
+| [O-209-4a] | Z_g als geschlossene Untergruppe | ✓[M] |
+| [O-209-5] | Z_g={0} für g≠1 | ✓[M] |
+| [O-209-separable-necessary] | μ_k-Konvergenz erzwingt Separierbarkeit | ×[M] |
+| [O-209-tail] | Reines Tailpotential f(N)E_lcm besitzt konvergente μ_k-Kommutatoren | ×[M] |
+| [O-209-6b] | Ursprungspotential mit konvergenten Transportdifferenzen und konvergentem M_{g,r}X_N | ✓[M] durch NEU-210 |
 
 ### Offene Knoten (Priorität)
 
 | Knoten | Aussage | Priorität |
 |---|---|---|
-| [O-208-5b] | Gemeinsam lokalisierte geladene Architektur mit separierbaren Differenzen | **nächster Schritt** |
+| [O-210-generator] | Vollständiger geladener Generatoraudit | **nächster Schritt** |
+| [O-209-4c] | Allgemeiner Singularträgerzwang für beliebige Approximationen | hoch |
+| [O-209-6a] | Starke Absorption M_{g,r}X_N→0 für alle r | hoch |
 | [O-charged-HH1-analytic] | Geladene äußere Klasse in HH¹(A_alg,A_C*)_g, g≠1 | hoch |
 | [O-charged-HH1-algebraic] | Geladene äußere Klasse in HH¹(A_alg,A_alg)_g | hoch |
-| [O-206-4a/4b/4c] | Normkonvergenz μ_k, μ_k*-Kommutatoren; Refinementzerlegung | hoch |
 | [O-204-cup] | Cup-Aufstieg nach HH⁴ und typisierter Dualzeuge | hoch |
 | [O-197-4] | [Y]≠0 in Q_{gP,p} | hoch |
 
@@ -90,32 +88,32 @@
 ## Gesamtbild Objekt X (Stand 2026-08-03)
 
 **Belastbare Architektur:**
-> Bewertungsgitter + homogene Partialisometrieschalen + refinementstabile Primpotentiale + Kommutatorregularisierung
+> Bewertungsgitter + homogene Partialisometrieschalen + refinementstabile Primpotentiale + Kommutatorregularisierung + Ursprungslokalisierung
 
 **Gesicherter positiver Kern:**
 > [D]≠0 in HH¹(A_alg,A_C*)₁ — neutraler analytischer Kanal vollständig.
 
-**Präziser Engpass:**
-> Finde refinementstabile geladene Koeffizienten, deren Kommutatoren mit e(r), μ_k, μ_k* gleichzeitig konvergieren, und beweise anschließend Nichtinnerheit.
+**Präziser geladener Engpass:**
+> Gesucht ist eine bei 0 lokalisierte geladene Schalenarchitektur mit gleichmäßig beschränktem Transportband, normkonvergenten μ_k-/μ_k*-Kommutatoren und konvergentem M_{g,r}X_N.
 
 **Ehrlichstes Gesamturteil:**
 > Deutlicher konzeptioneller Fortschritt, aber noch kein Durchbruch zum Kern von Objekt X.
-> Die negative Auditsequenz hat den Suchraum stark eingeengt — das ist kein Rückschritt, sondern Präzisionsgewinn.
+> NEU-209 liefert einen starken geometrischen Ausschluss, aber noch keine geladene Derivation, keine HH¹-Klasse und keine Cup-/HH⁴-Brücke.
 
 ---
 
 ## Nächste Schritte
 
-**Unmittelbar: NEU-209 — Singulärer Träger separierbarer Primkanäle und Charakterkern-No-go**
+**Unmittelbar: NEU-210 — Faktorielle Ursprungssingularität, Transportband und Charakterabsorption**
 
-NEU-208 liefert den belastbaren Kern:
-1. Separierbare logarithmische Primpotentiale X_{p,N} sind algebraisch konstruiert und refinementstabil.
-2. Neutral: [D]≠0 in HH¹(A_alg,A_C*)₁ gesichert.
-3. Algebraischer Zieltyp: D(A_alg)⊄A_alg — diese Konstruktion verlässt den algebraischen Rahmen.
-4. Naiver geladener Sandwichansatz μ_m(Σ X̃_p)μ_n* scheitert: Singularität liegt auf getrennten Koordinatenhyperflächen, Charakterfehler bleiben sichtbar.
+NEU-209 liefert den belastbaren Kern:
+1. Punktweise Singularität der separierbaren Primkanäle liegt exakt auf den Koordinatenhyperflächen K_p.
+2. Für jeden geladenen Grad g≠1 ist der gemeinsame Charakterkern trivial: Z_g={0}.
+3. Der naive positive separierbare Sandwichansatz scheitert unter kofinalem Primrefinement.
+4. Ein reines Tailpotential am Ursprung scheitert am Isometrietransport; erforderlich ist eine gesättigte Schalenarchitektur mit beschränktem Transportband.
 
 **Zentrale offene Frage:**
-Wie lässt sich eine gemeinsam lokalisierte geladene Singularität konstruieren, deren Transportdifferenzen primweise separierbar bleiben?
+Wie konstruiert man ein bei 0 lokalisiertes geladenes Potential mit gesättigten Schalen, gleichmäßig kontrollierten Transportdifferenzen und anschließendem Nichtinnerheitsnachweis?
 
 **Ausstehende Blöcke:**
 
@@ -123,5 +121,5 @@ Wie lässt sich eine gemeinsam lokalisierte geladene Singularität konstruieren,
 |---|---|---|
 | 04-grenzoperator-renormierung | NEU-146–150 | Mellinfehler bekannt |
 | 05-primkanal-fourierladung | NEU-169–173 + Varianten | ausstehend |
-| 06-hochschild-bc-algebra | NEU-209–222 + a–z | **als nächstes** |
+| 06-hochschild-bc-algebra | NEU-210–222 + a–z | **als nächstes** |
 | 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | abschließend |
