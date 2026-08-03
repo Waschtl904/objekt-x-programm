@@ -1,10 +1,10 @@
 # GPT-Audit-Zwischenbilanz (Aktiv)
 
-**Stand: 2. August 2026, 21:57 Uhr — Aktiv-Bilanz für den laufenden Chat-Kontext**
+**Stand: 3. August 2026, 05:27 Uhr — Aktiv-Bilanz für den laufenden Chat-Kontext**
 
 > Detailtexte aller Audits NEU-128–201 stehen in `ARCHIV-AUDIT-2026-07.md`.
 > Revisionsaudit NEU-202 in `ARCHIV-AUDIT-NEU202-REVISION.md`.
-> Direktaudits NEU-203, NEU-204 und NEU-205 in `ARCHIV-AUDIT-NEU203.md`, `ARCHIV-AUDIT-NEU204.md` und `ARCHIV-AUDIT-NEU205.md`.
+> Direktaudits NEU-203, NEU-204, NEU-205 und NEU-206 in den jeweiligen `ARCHIV-AUDIT-NEU20x.md`-Dateien.
 > Vollständige Verifikationshistorie in `ZWISCHENBILANZ_2026-07-31.md`.
 > Fehlende Dateien: NEU-191, NEU-198.
 
@@ -48,6 +48,7 @@
 | Direktaudit NEU-203 | NEU-203 | E_n,z_p∈B_alg ✓[M]; ε(z_p)=0 ✓[M]; ‖z_p‖=1 ✓[M]; z_p∈[A,A] ✓[M]; Normkonvergenz⇒inner ✓[M]_neg; [O-203-4] überdehnt ×[M]; Criterion ✓[K/M]; z_p-Reihenknoten ?[O]; dyad. Mechanismus ✓[M]_part | **✓[M]_part** |
 | Direktaudit NEU-204 | NEU-204 | X_N nicht norm-Cauchy ✓[M]; Generatorkommutatoren konvergieren ✓[M]; D:A_alg→A_C* wohldefiniert ✓[M]; [D]≠0 in HH¹(A_alg,A_C*)_1 ✓[M]; D(A_alg)⊄A_alg ✓[M]_neg; neutral, nicht geladen ✓[M]_neg | **✓[M]_part** |
 | Direktaudit NEU-205 | NEU-205 | Grundformel [V_g,e(r)] korrekt ✓[M]; Standardrelationen falsch orientiert ×[M]; Divergenz für alle nichttrivialen r falsch ×[M]; drei dyadische geladene Kandidaten scheitern dennoch ✓[M]_neg; Architektur (III) nicht ausgeschlossen ?[O] | **✓[M]_part** |
+| Direktaudit NEU-206 | NEU-206 | w_j biorthogonal ✓[M]; eventuale e(r)-Kommutation ✓[M]; L(r)=q nicht minimal ×[M]; Sättigungsterm W_N unkontrolliert ×[M]; Transportgeometrie E_{L/(L,k)} offen; feste k₀-Kette neg. | **✓[M]_part** |
 
 ---
 
@@ -99,6 +100,9 @@
 | [O-205-3] | Sandwich μ_m X_N μ_n* scheitert ebenso | ✓[M]_neg |
 | [O-205-4a] | Divergenz für alle r∉(m−n)^(-1)Z | ×[M] |
 | [O-205-5b] | Nichttriviale Projektion in A_g, g≠1 | ✓[M]_neg |
+| [O-206-2d] | Beliebiger Sättigungsterm W_N∈A_g erhält e(r)-Stabilität | ×[M] |
+| [O-206-dyadic] | q_j μ_{2^a} = μ_{2^a} q_{(j-a)+} (für j<a) | ×[M] |
+| [O-206-fixed-k0] | Feste geometrische Kette L_{j+1}=k₀L_j erschöpft alle Charakterkerne | ✓[M]_neg |
 
 ### Abgeschlossene Knoten (positiv)
 
@@ -131,21 +135,30 @@
 | [O-204-HH1-analytic] | [D]≠0 in HH¹(A_alg,A_C*)_1 | ✓[M] |
 | [O-205-basic] | [μ_m μ_n*, e(r)] = μ_m(e(nr)-e(mr))μ_n* | ✓[M] |
 | [O-205-4b] | Alle drei konkreten dyadischen Ladungsansätze scheitern | ✓[M]_neg |
-| [O-206-model] | Homogene biorthogonale Partialisometrieschalen als Modelltyp | ✓[K/M] |
+| [O-206-1a] | Minimaler Charakterkern: L_min(g,r)=ord((n-m)r)=q/gcd(q,n-m) | ✓[M] |
+| [O-206-1b] | Erschöpfungskette L_j=lcm(L_min(g,r_1),...,L_min(g,r_j)) | ✓[M] |
+| [O-206-2a] | w_j=μ_m q_j μ_n*∈A_g sind Partialisometrien und biorthogonal | ✓[M] |
+| [O-206-2b] | Für jedes feste r: [w_j,e(r)]=0 für alle j≥J(r) | ✓[M] |
+| [O-206-2c] | Ungesättigte Partialsummen besitzen stabile e(r)-Kommutatoren | ✓[M] |
+| [O-206-2e] | Natürliche Sättigung W_N=μ_m P_N μ_n* löst die e(r)-Seite | ✓[K/M] |
+| [O-206-3] | Vier Transportformeln für E_L und μ_k, μ_k* | ✓[M] |
 
 ### Offene Knoten
 
 | Knoten | Aussage | Priorität |
 |---|---|---|
+| [O-206-4a] | Normkonvergenz der μ_k-Kommutatoren | **nächster Schritt** |
+| [O-206-4b] | Normkonvergenz der μ_k*-Kommutatoren | **nächster Schritt** |
+| [O-206-4c] | Refinementzerlegung der Projektionen E_{L_j/(L_j,k)} | **nächster Schritt** |
+| [O-206-no-go] | Allgemeiner No-go für jede lineare Charakterkernkette | hoch |
+| [O-205-5c] | Existenz eines relationsangepassten N-abhängigen homogenen Twists | hoch |
+| [O-charged-analytic] | Geladene äußere Derivation A_alg→A_C* | hoch |
+| [O-charged-algebraic] | Geladene äußere Derivation A_alg→A_alg | hoch |
 | [O-203-4a] | Feste Reihe Σ c_p z_p divergiert, Kommutatorreihe konvergiert, Derivation nichtinner | hoch |
 | [O-203-4c] | D(A_alg)⊂A_alg (algebraische Wertigkeit) | hoch |
 | [O-203-4d] | Geladene Variante deg D=g≠1 | hoch |
 | [O-204-closable] | D beziehungsweise iD abschließbar? | hoch |
 | [O-204-cup] | Cup-Aufstieg nach HH⁴(A_alg,A_C*) und typisierter Dualzeuge | hoch |
-| [O-205-5c] | Existenz eines relationsangepassten N-abhängigen homogenen Twists | hoch |
-| [O-206-transport] | Normkonvergenz der μ_k- und μ_k*-Kommutatoren | **nächster Schritt** |
-| [O-charged-analytic] | Geladene äußere Derivation A_alg→A_C* | hoch |
-| [O-charged-algebraic] | Geladene äußere Derivation A_alg→A_alg | hoch |
 | [O-199-3]_sing | Geladene A_alg-wertige singuläre Potentialderivation | hoch |
 | [O-199-3]_copr | B-Quotiententest für p_j∤mn | hoch |
 | [O-199-1]_noncopr | Generatorformel für (k,mn)>1 | mittel |
@@ -182,17 +195,16 @@
 
 ## Nächste Schritte
 
-**Unmittelbar: NEU-206 — Homogene Partialisometrieschalen, Orthogonalität und Charakterkern**
+**Unmittelbar: NEU-207 — Bewertungsgitter, Primschalentransport und Ketten-No-go**
 
-NEU-205 liefert einen belastbaren, aber engen Ausschluss:
-1. Die drei naiven geladenen dyadischen Platzierungen `V_g X_N`, `X_N V_g` und `μ_m X_N μ_n*` scheitern jeweils daran, dass für jedes feste `g ≠ 1` mindestens ein Charaktergenerator `e(r)` einen divergenten Kommutator erzeugt.
-2. Nicht bewiesen und sogar falsch ist die stärkere Behauptung, dies geschehe für **jeden** nichttrivialen Charakter `r`.
-3. Ein relationsangepasster, `N`-abhängiger homogener Twist bleibt offen; deshalb ist die Partialisometriearchitektur der nächste natürliche Modelltyp.
+NEU-206 liefert den belastbaren Kern:
+1. Biorthogonale homogene Partialisometrieschalen `w_j=μ_m q_j μ_n*∈A_g` existieren und kommutieren mit jedem festen `e(r)` ab einer von `r` abhängigen Schale.
+2. Der minimale Charakterkern ist `L_min(g,r)=q/gcd(q,n-m)`, nicht `q`.
+3. Noch ungelöst: Die Quotientenprojektionen `E_{L_j/(L_j,k)}` liegen im Allgemeinen nicht auf der Erschöpfungskette; die Normkonvergenz der Isometriekommutatoren ist vollständig offen.
+4. Feste geometrische Ketten `L_{j+1}=k₀ L_j` können nicht alle Charakterkerne absorbieren.
 
-**Typische strikte Trennungen ab jetzt:**
-- kandidatenspezifischer No-go  vs.  allgemeiner Ausschluss geladener Architektur
-- dyadischer Schwanz  vs.  Charakterkern mit Zweierpotenz- bzw. ungeradem Anteil
-- geladene Analytik `A_alg → A_C*`  vs.  geladene algebraische Wertigkeit `A_alg → A_alg`
+**Zentrale offene arithmetische Frage:**
+Wie lässt sich die Divisibilitätsgeometrie `L↦L/(L,k)` auf einer gemeinsamen Schalenverfeinerung kontrollieren?
 
 **Ausstehende Blöcke:**
 
@@ -200,5 +212,5 @@ NEU-205 liefert einen belastbaren, aber engen Ausschluss:
 |---|---|---|
 | 04-grenzoperator-renormierung | NEU-146–150 | Mellinfehler bekannt |
 | 05-primkanal-fourierladung | NEU-169–173 + Varianten | ausstehend |
-| 06-hochschild-bc-algebra | NEU-206–222 + a–z | **als nächstes** |
+| 06-hochschild-bc-algebra | NEU-207–222 + a–z | **als nächstes** |
 | 07-weil-explizitformel | NEU-220–221e, NEU-242–246 | abschließend |
