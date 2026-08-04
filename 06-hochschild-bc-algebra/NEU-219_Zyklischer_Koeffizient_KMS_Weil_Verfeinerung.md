@@ -1,38 +1,68 @@
 # NEU-219 — Zyklischer Koeffiziententyp und Weil-/KMS-Verfeinerung der geladenen Cup-Klasse
 
 **DAG-Position:** Direkter Nachfolger von NEU-218 (Commit 9e1dd12).  
-**Voraussetzung:** $[D_g] \smile [\Theta^\wedge_{p_1,p_2,p_3}] \neq 0 \in HH^4(A_{\mathrm{alg}}, \mathfrak{M}^{\log}_{\mathrm{glob}})_g$ — vollständig bewiesen.  
-**Status gesamt:** Audit-Knoten; Einzelknoten teils ?[O].
+**Voraussetzung:** $[D_g^{\mathrm{corr}}] \smile [\Theta^\wedge_{p_1,p_2,p_3}] \neq 0 \in HH^4(A_{\mathrm{alg}}, \mathfrak{M}^{\log}_{\mathrm{glob}})_g$ — vollständig bewiesen.  
+**Status gesamt:** $\checkmark[M]_{\mathrm{part}}$
+
+> **AUDITKORREKTUR 2026-08-04** — Direktaudit NEU-219 (Ursprungsknoten).  
+> Durchgehend ist $D_g^{\mathrm{corr}}$ statt $D_g$ zu verwenden.  
+> Revidierter Gesamtstatus: $\checkmark[M]_{\mathrm{part}}$.
 
 ---
 
-## Korrektur zu NEU-218: Wachstumsaussage
+## 1. Ausgangslage
 
-In NEU-218 wurde das Wachstum von $\mathcal{F}_N(G_q)(x_N)$ unpräzise als „Superpolynomial“ bezeichnet. Die korrekte Aussage ist:
-
-Bewiesen ist
+Setze:
 $$
-\mathcal{F}_N(G_q)(x_N) \ge N^3\bigl(c_{J_N} - c_{K_N}\bigr),
-$$
-mit $c_{J_N} - c_{K_N} \to \infty$, also
-$$
-N^{-3}\|\mathcal{F}_N(G_q)\|_\infty \longrightarrow \infty.
+A = A_{\mathrm{alg}}, \qquad M = \mathfrak{M}^{\log}_{\mathrm{glob}}.
 $$
 
-Mit der bekannten Abschätzung $v_q((J+1)!) \sim J/(q-1)$ ergibt sich $J_N \asymp N$, $K_N = O(\log N)$, und damit
+Verbindlich ist die korrigierte geladene Derivation $D_g^{\mathrm{corr}}: A \to M$.
+
+Für vier paarweise verschiedene Hilfsprimzahlen $q, p_1, p_2, p_3$ mit $P = p_1 p_2 p_3$ gilt:
+$$
+\eta_{q,P} := D_g^{\mathrm{corr}}(\mu_q)\mu_P = \mu_{mqP}\,\sigma_P(G_q)\,\mu_n^*.
+$$
+
+Der partielle Quotiententest aus NEU-218 beweist bereits:
+$$
+\eta_{q,P} \notin C_{H;R} := \sum_{r \in R}[\mu_r, M_{H/r}].
+$$
+
+Der volle Kommutatorquotient $M/[A,M]$ wird dadurch nicht entschieden. NEU-218 erklärt ihn ausdrücklich für offen und für den algebraischen $HH^4$-Beweis nicht erforderlich.
+
+Bereits gesichert (Statuskorrektur gegenüber NEU-218-interner Vorsichtsformulierung):
+$$
+\boxed{[\mathrm{SO\text{-}Q}_{\mathrm{part}}] \quad \checkmark[M]}, \qquad
+\boxed{[L^{\mathrm{cup}}_{g;\mathbf{p}}] \neq 0 \in HH^4(A,M)_g \quad \checkmark[M].}
+$$
+
+---
+
+## 2. Wachstumskorrektur zu NEU-218
+
+$$
+\boxed{[O\text{-}219\text{-growth}] \quad \checkmark[M].}
+$$
+
+Bewiesen ist:
+$$
+\mathcal{F}_N(G_q)(x_N) \ge N^3\bigl(c_{J_N} - c_{K_N}\bigr), \qquad c_{J_N} - c_{K_N} \longrightarrow \infty.
+$$
+
+Mit $J_N \asymp N$, $K_N = O(\log N)$ folgt genauer:
 $$
 \mathcal{F}_N(G_q)(x_N) \gtrsim N^3 \log N.
 $$
 
-Das Wachstum ist **superkubisch**, aber nicht superpolynomial. Für den Widerspruchsbeweis genügt dies vollständig, da die Koinvariantenschranke nur $O(N^3)$ erlaubt.
+Das Wachstum ist **superkubisch**, nicht superpolynomial. Für den Widerspruchsbeweis genügt dies vollständig, da die Koinvariantenschranke nur $O(N^3)$ erlaubt.
 
 ---
 
-## Typbefund: Koeffizientenmodul
+## 3. Typbefund: Koeffizientenmodul
 
-$M = \mathfrak{M}^{\log}_{\mathrm{glob}}$ ist zunächst nur ein $A_{\mathrm{alg}}$-Bimodul. Für einen allgemeinen Bimodul existiert **keine** kanonische zyklische Struktur und kein unmittelbar anwendbarer Connes-$B$-Operator auf den $M$-wertigen Hochschildkochains. Die Frage, ob $[L^{\mathrm{cup}}_{g;\mathbf{p}}]$ eine zyklische oder getwistete zyklische Verfeinerung besitzt, ist daher eigenständig.
+$M = \mathfrak{M}^{\log}_{\mathrm{glob}}$ ist zunächst nur ein $A_{\mathrm{alg}}$-Bimodul. Für einen allgemeinen Bimodul existiert **keine** kanonische Connes-$B$-Struktur auf den $M$-wertigen Hochschildkochains. Die Frage, ob $[L^{\mathrm{cup}}_{g;\mathbf{p}}]$ eine zyklische oder getwistete zyklische Verfeinerung besitzt, ist daher eigenständig zu untersuchen.
 
-Strategische Reihenfolge:
 $$
 \boxed{
 HH^4\text{-Klasse} \;\longrightarrow\; \text{globaler zyklischer Koeffizient} \;\longrightarrow\; \text{KMS-/Weil-Paarung} \;\longrightarrow\; \text{Operatorrealisierung}.
@@ -41,182 +71,286 @@ $$
 
 ---
 
-## [O-219-0] — Direktaudit: Anwendbare zyklische Koeffiziententheorie
+## 4. [O-219-0] — Zyklischer Koeffiziententyp
 
-**Status:** ?[O] — Klassifikationsknoten
+$$
+\boxed{[O\text{-}219\text{-}0] \quad \checkmark[M]_{\mathrm{part}}.}
+$$
 
 Zu entscheiden: Welche zyklische Koeffiziententheorie ist auf $M$ anwendbar?
 
-- **(A) Gewöhnlich zyklisch:** Es existiert $\tau_M: M \to \mathbb{C}$ mit globaler Tracialität
+- **(A) Gewöhnlich zyklisch:** Es existiert $\tau: M \to \mathbb{C}$ mit
 $$
-\boxed{\tau_M(am) = \tau_M(ma) \quad \forall a \in A_{\mathrm{alg}},\ m \in M.} \tag{T}
+\tau(am) = \tau(ma) \qquad \forall a \in A_{\mathrm{alg}},\ m \in M.
 $$
-Dann faktorisiert $\tau_M$ über $M/[A_{\mathrm{alg}}, M]$, und die skalare Form
-$$
-\Phi_{g;\mathbf{p}}(a_0, \ldots, a_4) := \tau_M\!\left(a_0 L^{\mathrm{cup}}_{g;\mathbf{p}}(a_1, \ldots, a_4)\right)
-$$
-wird ein Kandidat für einen periodisch-zyklischen Kozykel.
+Dann faktorisiert $\tau$ über $M/[A,M]$.
 
-- **(B) KMS/twisted-cyclic:** Kein global traciales Funktional erfüllt (NV). Dann muss ein Twistautomorphismus $\sigma_{i\beta}$ konstruiert werden mit
+- **(B) KMS-getwistet:** Kein global traciales Funktional. Benötigt wird ein Twistautomorphismus $\theta_\beta := \alpha_{i\beta}$ mit
 $$
-\tau_\beta(am) = \tau_\beta\!\left(m\,\sigma_{i\beta}(a)\right).
+\omega_\beta(am) = \omega_\beta\!\left(m\,\theta_\beta(a)\right).
 $$
-Dies erfordert einen eigenen Typwechsel: getwisteter Rand, getwistete Zyklizität, Paarung mit $L^{\mathrm{cup}}$. Eine gewöhnliche KMS-Identität darf **nicht** ohne diesen Typwechsel als zyklischer Beweis verwendet werden.
 
-Die Entscheidung (A) vs. (B) hängt direkt von [O-219-1] ab.
+**Einschränkung (Auditkorrektur):** Die Alternative A/B ist nicht erschöpfend. Weitere Möglichkeiten umfassen: gewöhnliche zyklische Koeffizienten, getwistete zyklische Koeffizienten, Hopf-zyklische oder SAYD-Koeffizienten, Morita-induzierte oder markierte Module, andere nichttraciale Dualmodule. Außerdem ist der getwistete Pfad unabhängig von einer negativen Entscheidung des Vollquotienten untersuchbar. Der Satz „Die Entscheidung A versus B hängt direkt von O-219-1 ab" ist zu stark und wird gestrichen.
 
 ---
 
-## [O-219-1] — Voller Kommutatorquotient
-
-**Status:** ?[O] — primär
+## 5. [O-219-1] — Voller Kommutatorquotient
 
 $$
-\boxed{[O\text{-}219\text{-}1]: \quad \overline{D_g(\mu_q)\mu_P} \neq 0 \text{ in } M/[A_{\mathrm{alg}}, M] \quad ?[O].}
+\boxed{[O\text{-}219\text{-}1]: \quad \eta_{q,P} \stackrel{?}{\notin} [A_{\mathrm{alg}}, M] \quad ?[O].}
 $$
 
-Hierzu ist zu entscheiden, ob $D_g(\mu_q)\mu_P \notin [A_{\mathrm{alg}}, M]$.
+Dabei ist $[A,M] = \operatorname{span}_{\mathbb{C}}\{am - ma : a \in A,\ m \in M\}$.
 
-In Normalform (aus NEU-218, (7.1)):
+Der partielle Quotient $C_{H;R}$ ist ein Unterraum:
 $$
-D_g(\mu_q)\mu_P = \mu_{mqP}\,\sigma_P(G_q)\,\mu_n^*.
+C_{H;R} \subseteq [A,M] \cap M_H.
 $$
 
-**Bekannt aus NEU-218:** $D_g(\mu_q)\mu_P \notin C_{H;R}$ (partieller Quotient ✓[K/M]).  
-**Offen:** Ob $[A_{\mathrm{alg}}, M]$ größer als $C_{H;R}$ ist und das Element absorbiert.
+Aus $\eta_{q,P} \notin C_{H;R}$ folgt **nicht** $\eta_{q,P} \notin [A,M]$.
 
-Relevanz: Ein positiver Befund liefert ein global zentrales duales Funktional und ermöglicht Pfad (A).
+Rein algebraisch gilt die Äquivalenz:
+$$
+\boxed{[O\text{-}219\text{-}1a\text{-alg}] \equiv [O\text{-}219\text{-}1]: \quad ?[O].}
+$$
+Es existiert genau dann $\tau \in M^\vee$ mit $\tau([A,M]) = 0$ und $\tau(\eta_{q,P}) \neq 0$, wenn $\eta_{q,P} \notin [A,M]$.
 
 ---
 
-## [O-219-2] — Globales traciales Funktional und skalare Hochschildform
+## 6. KMS-Zustand als direkter Detektor — No-go
 
-**Status:** ?[O] (bedingt durch [O-219-1])
-
-Voraussetzung: $[O\text{-}219\text{-}1]$ positiv. Dann existiert
 $$
-\tau_M: M/[A_{\mathrm{alg}}, M] \longrightarrow \mathbb{C}
-$$
-mit
-$$
-\tau_M\!\left(D_g(\mu_q)\mu_P\right) \neq 0. \tag{NV}
+\boxed{[O\text{-}219\text{-}1a\text{-KMS}] \quad \checkmark[M]_{\mathrm{neg}}.}
 $$
 
-Zu konstruieren ist die skalare Hochschildform:
+Die BC-Zeitentwicklung wirkt auf homogenen Elementen durch $\alpha_t(a_h) = h^{it} a_h$. Für einen BC-KMS-Zustand $\omega_\beta$ gilt:
+$$
+\omega_\beta(ma) = h^{-\beta}\,\omega_\beta(am).
+$$
+
+Das Zielelement $\eta_{q,P}$ besitzt den homogenen Grad $H = gqP = mqP/n \neq 1$. Mit $b = 1$ folgt:
+$$
+\omega_\beta(\eta_{q,P}) = H^{-\beta}\,\omega_\beta(\eta_{q,P}).
+$$
+
+Für $\beta > 0$ und $H \neq 1$ ergibt sich:
+$$
+\boxed{\omega_\beta\!\left(D_g^{\mathrm{corr}}(\mu_q)\mu_P\right) = 0}
+$$
+für jeden BC-KMS-Zustand mit $\beta > 0$.
+
+**Umfangsklausel:** Ausgeschlossen wird ein gewöhnlicher BC-KMS-Zustand als direktes nichtverschwindendes traciales Detektorfunktional für das nichtneutrale Zielelement $\eta_{q,P}$. Nicht ausgeschlossen sind total gradkompensierte KMS-Formen oder andere getwistete Koeffizientenarchitekturen.
+
+---
+
+## 7. [O-219-2] — Skalare Hochschildform $\Phi$
+
+**Konditional auf $[O\text{-}219\text{-}1]$ positiv.**
+
+**Auditkorrektur — Gradfehler:**
+
+$$
+\boxed{[O\text{-}219\text{-}2\text{-degree}] \quad \times[M].}
+$$
+
+Eine skalare zyklische $n$-Kochaine besitzt $n+1$ Argumente. Damit ist
+$$
+\Phi(a_0, \ldots, a_4)
+$$
+eine Kochaine vom Grad **4**, nicht vom Grad 5. Die frühere Behauptung $\Phi \in Z^5(A, \mathbb{C})$ ist falsch. Korrekt ist:
+$$
+\boxed{\Phi \in \operatorname{Hom}_{\mathbb{C}}(A^{\otimes 5}, \mathbb{C}),}
+$$
+also eine skalare Hochschild-/zyklische Kochaine vom Grad 4.
+
+**Hochschildgeschlossenheit (konditional):**
+
+$$
+\boxed{[O\text{-}219\text{-}2\text{-closed}] \quad \checkmark[M] \text{ konditional auf } [O\text{-}219\text{-}1].}
+$$
+
+Sei $L = L^{\mathrm{cup}}_{g;\mathbf{p}} \in Z^4(A, M)$ und $\tau$ $A$-zentral. Dann:
+$$
+(b\Phi)(a_0, \ldots, a_5) = \tau\!\left(a_0\,(bL)(a_1, \ldots, a_5)\right) = 0.
+$$
+Beim äußeren Randterm wird genau die Tracialität $\tau(a_5 a_0 m) = \tau(a_0 m a_5)$ verwendet. Keine zusätzliche Hochschildrechnung erforderlich.
+
+Bei $\tau(\eta_{q,P}) \neq 0$ liefert die Eingabe $(1, \mu_q, \mu_{p_1}, \mu_{p_2}, \mu_{p_3})$:
+$$
+\Phi(1, \mu_q, \mu_{p_1}, \mu_{p_2}, \mu_{p_3}) = \left(\prod_{i=1}^3 \log p_i\right)\tau(\eta_{q,P}) \neq 0.
+$$
+
+---
+
+## 8. [O-219-3] — Zyklizitätstest
+
+$$
+\boxed{[O\text{-}219\text{-}3] \quad ?[O].}
+$$
+
+Die Zyklizitätsbedingung für eine skalare Kochaine vom Grad 4 lautet:
+$$
+\boxed{(\lambda\Phi)(a_0, a_1, a_2, a_3, a_4) = \Phi(a_4, a_0, a_1, a_2, a_3),}
+$$
+weil $(-1)^4 = 1$. Zu entscheiden: $\lambda\Phi = \Phi$.
+
+**Auditkorrektur — Reparaturbehauptung gestrichen:**
+
+Die frühere Behauptung „$(1-\lambda)\Phi \in \operatorname{im}(b)$ impliziert Zyklizität durch Korrekturterm" gilt **nicht** allgemein und wird gestrichen. Gesucht wäre eine Kochaine $\chi$ mit $(1-\lambda)(\Phi - b\chi) = 0$, was $(1-\lambda)\Phi = (1-\lambda)b\chi$ erfordert. Die bloße Existenz eines $\Psi$ mit $(1-\lambda)\Phi = b\Psi$ liefert keine solche $\chi$. Es sind zusätzliche Kompatibilitätsbedingungen im zyklischen Bikomplex erforderlich.
+
+---
+
+## 9. [O-219-4] — Connes-$B$-Operator
+
+$$
+\boxed{[O\text{-}219\text{-}4] \quad \warning[M].}
+$$
+
+**Auditkorrektur:** Im kozyklischen gemischten Komplex senkt $B$ den Kochaingrad:
+$$
+B: C^4 \longrightarrow C^3.
+$$
+
+$B\Phi$ ist daher **kein** „Kozykel höherer Ordnung", sondern eine Kochaine vom Grad 3.
+
+Für eine normalisierte zyklische Kochaine gilt unter Standardkonvention bereits $B\Phi = 0$. Der eigentliche unabhängige Haupttest ist daher zunächst $\lambda\Phi = \Phi$. Anschließend ist die Einordnung in den zyklischen bzw. periodischen Komplex sauber anzugeben.
+
+**Auditkorrektur — Zieltyp:** Die frühere Notation $HP^*(A)^\vee$ ist nicht korrekt begründet. Eine skalare periodisch-zyklische Kochaine definiert eine Klasse in $HP^{\mathrm{ev}}(A)$ bzw. im algebraischen periodisch-zyklischen Kohomologiekomplex, nicht automatisch im Dual eines bereits definierten $HP^*$.
+
+---
+
+## 10. [O-219-5] — Getwisteter KMS-Pfad
+
+$$
+\boxed{[O\text{-}219\text{-}5a] \quad \checkmark[K/M].}
+$$
+$$
+\boxed{[O\text{-}219\text{-}5b] \quad ?[O].}
+$$
+
+Zur Vermeidung einer Kollision mit den arithmetischen Transporten $\sigma_k$ heißt der Twist:
+$$
+\boxed{\theta_\beta := \alpha_{i\beta}.}
+$$
+
+Für homogene Elemente: $\theta_\beta(a_h) = h^{-\beta} a_h$, mit Inversem $\theta_\beta^{-1}(a_h) = h^\beta a_h$.
+
+Die KMS-Gleichung liefert:
+$$
+\omega_\beta\!\left(am - m\,\theta_\beta(a)\right) = 0.
+$$
+
+Der getwistete Modulkommutatorraum ist:
+$$
+[A,M]_{\theta_\beta} := \operatorname{span}\!\left\{am - m\,\theta_\beta(a)\right\}.
+$$
+
+Der KMS-Pfad benötigt anschließend:
+- getwisteten Hochschildrand $b_{\theta_\beta}$;
+- getwisteten Rotationsoperator $\lambda_{\theta_\beta}$;
+- getwisteten Koeffizientenmodul;
+- total neutralen Auswertungszyklus.
+
+**Gradkompensation:**
+
+$$
+\boxed{[O\text{-}219\text{-}5b\text{-degree}] \quad \checkmark[M].}
+$$
+
+Da ein KMS-Zustand jedes nichtneutrale homogene Element annihiliert, muss eine skalare Fünffachform insgesamt Grad 1 besitzen. Für die konkrete Zieleingabe mit $\eta_{q,P}$ muss daher $a_0$ den Grad $n/(mqP)$ tragen.
+
+**Getwistete Zyklizität und Nichtnullpaarung:**
+
+$$
+\boxed{[O\text{-}219\text{-}5b\text{-nonzero/cyclic}] \quad ?[O].}
+$$
+
+---
+
+## 11. [O-219-6] — Weil-, Primzahlpotenz- und Gammafaktorpaarung
+
+$$
+\boxed{[O\text{-}219\text{-}6] \quad ?[O].}
+$$
+
+NEU-219 nennt: Weil-Distributionspaarung, Primzahlpotenzkopplung, Gammafaktorpaarung. Es werden jedoch keine der folgenden Daten definiert: $\mathcal{S}_{\mathrm{Weil}}$, $W: C^4_{\mathrm{cyc}}(A) \to \mathbb{C}$, $\Lambda_\infty: \mathcal{S}_\infty \to \mathbb{C}$, oder eine typisierte Abbildung, die $\Gamma'/\Gamma$ bzw. Primzahlpotenzterme erzeugt. Dieser Block ist ausschließlich ein Forschungsziel.
+
+---
+
+## 12. Buchungsposten
+
 $$
 \boxed{
-\Phi_{g;\mathbf{p}}(a_0, \ldots, a_4)
-:= \tau_M\!\left(a_0\, L^{\mathrm{cup}}_{g;\mathbf{p}}(a_1, \ldots, a_4)\right).
+\text{Die algebraische }HH^4\text{-Klasse ist gesichert;}\quad
+\text{eine zyklische oder KMS-getwistete Verfeinerung noch nicht.}
 }
 $$
 
-Zu prüfen: $\Phi_{g;\mathbf{p}} \in Z^5(A_{\mathrm{alg}}, \mathbb{C})$ (Hochschildgeschlossenheit der skalierten Form).
+---
+
+## 13. Revidierte Knotenstatustabelle
+
+| Knoten | Revidierter Status | Befund |
+|--------|-------------------|--------|
+| Wachstumskorrektur | $\checkmark[M]$ | Superkubisch, genauer $\gtrsim N^3 \log N$ |
+| Koeffizienten-Typbefund | $\checkmark[M]$ | Allgemeiner Bimodul besitzt keine kanonische zyklische Struktur |
+| $[O\text{-}219\text{-}0]$ | $\checkmark[M]_{\mathrm{part}}$ | Gewöhnlich/getwistet korrekt getrennt, aber nicht erschöpfend |
+| $[O\text{-}219\text{-}1]$ | $?[O]$ | Voller Kommutatorquotient |
+| $[O\text{-}219\text{-}1a\text{-alg}]$ | $?[O]$ | Nur duale Umformulierung von O-219-1 |
+| $[O\text{-}219\text{-}1a\text{-KMS}]$ | $\checkmark[M]_{\mathrm{neg}}$ | BC-KMS-Zustand annihiliert das nichtneutrale Zielelement |
+| Existenz von $\tau$ aus positivem Vollquotient | $\checkmark[K/M]$ | Rein algebraische Separation |
+| $\Phi \in Z^5(A,\mathbb{C})$ | $\times[M]$ | Fünf Argumente bedeuten Grad 4; korrekter Zieltyp $\operatorname{Hom}(A^{\otimes 5},\mathbb{C})$ |
+| Hochschildgeschlossenheit von $\Phi$ | $\checkmark[M]$ konditional | Folgt automatisch aus $bL=0$ und Zentralität von $\tau$ |
+| $[O\text{-}219\text{-}3]$ | $?[O]$ | Zyklizität nicht berechnet |
+| „$b$-exakter Defekt automatisch reparierbar" | $\times[M]$ | Zusätzliche Kompatibilität erforderlich — gestrichen |
+| $[O\text{-}219\text{-}4]$ | $\warning[M]$ | $B$ senkt Grad; periodischer Zieltyp falsch notiert |
+| $[O\text{-}219\text{-}5a]$ | $\checkmark[K/M]$ | Getwisteter Quotient und Algebraautomorphismus |
+| $[O\text{-}219\text{-}5b]$ | $?[O]$ | Getwisteter Rand, Zyklizität und Nichtnullpaarung |
+| $[O\text{-}219\text{-}6]$ | $?[O]$ | Weil-/Primzahlpotenz-/Gammafaktorpfad |
 
 ---
 
-## [O-219-3] — Zyklizitätstest
-
-**Status:** ?[O] (bedingt durch [O-219-2])
-
-Zu entscheiden:
-$$
-\boxed{(1-\lambda)\Phi_{g;\mathbf{p}} = 0 \quad \text{oder} \quad \text{exakter Zyklizitätsdefekt.}}
-$$
-
-Hier ist $\lambda$ der Zyklizitätsoperator $(\lambda f)(a_0, \ldots, a_n) = (-1)^n f(a_n, a_0, \ldots, a_{n-1})$.
-
-Falls $(1-\lambda)\Phi \neq 0$ aber exakt (d.h. im Bild von $b$ auf Hochschildkochains): zyklischer Normierungsdefekt, reparierbar durch Korrekturterm.  
-Falls $(1-\lambda)\Phi = 0$: $\Phi$ ist direkt ein zyklischer Kozykel.
-
----
-
-## [O-219-4] — Connes-$B$-Operator
-
-**Status:** ?[O] (bedingt durch [O-219-3])
-
-$$
-\boxed{B\Phi_{g;\mathbf{p}} = 0 \quad \text{beziehungsweise negative Entscheidung.}}
-$$
-
-Falls $b\Phi = 0$ und $B\Phi = 0$: $\Phi$ definiert eine periodisch-zyklische Klasse in $HP^*(A_{\mathrm{alg}})^\vee$.  
-Falls $B\Phi \neq 0$: Analyse des Defekts $B\Phi$ als eigenständiger Kozykel höherer Ordnung.
-
----
-
-## [O-219-5] — KMS-/twisted-cyclic Ersatzpfad
-
-**Status:** ?[O]\_sekundar (aktiviert falls [O-219-1] negativ oder [O-219-3] scheitert)
-
-Zu konstruieren:
-1. **Twistautomorphismus** $\sigma_{i\beta} \in \mathrm{Aut}(A_{\mathrm{alg}})$ aus der KMS-Dynamik
-2. **Getwisteter Hochschildrand** $b_\sigma$ mit $b_\sigma^2 = 0$
-3. **Getwistete Zyklizität** $(1-\lambda_\sigma)\Phi_\beta = 0$
-4. **Paarung** $\langle L^{\mathrm{cup}}_{g;\mathbf{p}},\ z_{\varphi,\sigma}\rangle \neq 0$
-
-Eine gewöhnliche KMS-Identität darf **nicht ohne diesen Typwechsel** als zyklischer Beweis verwendet werden.
-
----
-
-## [O-219-6] — Weil-, Primzahlpotenz- und Gammafaktorpaarung
-
-**Status:** ?[O]\_sekundar
-
-Nach Entscheidung des zyklischen Koeffiziententyps:
-- Weil-Distributions-Paarung $W(\Phi_{g;\mathbf{p}})$
-- Primzahlpotenz-Kopplung via $\sigma_P$-Spektrum
-- Gammafaktor-Paarung (archimedischer Beitrag)
-
-Diese Knoten sind erst nach [O-219-3] oder [O-219-5] sinnvoll angehbar.
-
----
-
-## DAG-Struktur NEU-219
+## 14. Revidierter DAG
 
 ```
-NEU-218: [L^cup] != 0 in HH^4(A,M)_g                             [K/M]
-      |
- [O-219-0]  Direktaudit zyklischer Koeffiziententyp (A) vs (B)   ?[O]
-      |
-      +-- Pfad (A): Gewoehnlich zyklisch
-      |       |
-      |   [O-219-1]  D_g(mu_q)*mu_P not in [A,M]                 ?[O] primaer
-      |       |
-      |   [O-219-2]  tau_M, skalare Form Phi_{g;p}                ?[O]
-      |       |
-      |   [O-219-3]  (1-lambda)Phi = 0 oder Defekt               ?[O]
-      |       |
-      |   [O-219-4]  B*Phi = 0, periodisch-zyklische Klasse       ?[O]
-      |
-      +-- Pfad (B): KMS/twisted-cyclic (falls (A) scheitert)
-              |
-          [O-219-5]  Twistautomorphismus, getwisteter Rand,
-                     getwistete Zyklizitaet, Paarung              ?[O] sekundaer
-              |
-          [O-219-6]  Weil-/Primzahlpotenz-/Gammafaktorpaarung     ?[O] sekundaer
+NEU-218
+[L^cup] != 0 in HH^4(A,M)_g                              ✓[M]
+        |
+        v
+[O-219-0] zyklischer Koeffiziententyp                     ✓[M]_part
+        |
+        +-- gewöhnlicher Pfad
+        |       |
+        |       +-- [O-219-1] eta notin [A,M]             ?[O]
+        |       |
+        |       +-- algebraisches zentrales tau            ✓[K/M] kond.
+        |       |
+        |       +-- skalare Grad-4-Form Phi                ✓[M] kond.
+        |       |
+        |       +-- bPhi=0                                  ✓[M] kond.
+        |       |
+        |       +-- lambda Phi = Phi                        ?[O]
+        |       |
+        |       +-- zyklische/periodische Einordnung        ?[O]
+        |
+        +-- BC-KMS-Zustand als direkter Detektor            ✓[M]_neg
+        |
+        +-- getwisteter Pfad
+        |       |
+        |       +-- theta_beta = alpha_{ibeta}              ✓[K/M]
+        |       |
+        |       +-- getwisteter Quotient                    ✓[K/M]
+        |       |
+        |       +-- Gradkompensation                        ✓[M]
+        |       |
+        |       +-- b_theta Phi_beta = 0                    ?[O]
+        |       |
+        |       +-- lambda_theta Phi_beta = Phi_beta         ?[O]
+        |
+        +-- Weil-/Primzahlpotenz-/Gammafaktorpaarung        ?[O]
 ```
 
 ---
 
-## Revidierte Gesamtstatustabelle (NEU-218 + NEU-219)
-
-| Knoten | Inhalt | Status |
-|--------|--------|--------|
-| [O-218-1a–1d] | Quellbefund, $\delta_p^{(0)}$, $\Theta^\wedge$, Paarung | ✓[M/K/M] |
-| [O-218-2–3] | Bimodulisom., Cup-Kozykel | ✓[K/M] |
-| [O-218-4] | Augmentationsnull, Typaudit | ✓[M]\_part |
-| [SO-Q\_sigma] | Følner-Wachstum, $G_q \notin \sum(1-\sigma_r)B^{\log}$ | ✓[M] |
-| [SO-Q\_part] | $D_g(\mu_q)\mu_P \notin C_{H;R}$ | ✓[K/M] |
-| [O-218-4-nichtaug] | $\varphi$, $z_\varphi$, Paarung (12.1) | ✓[K/M] |
-| **Cup-Aufstieg** | $[L^{\mathrm{cup}}_{g;\mathbf{p}}] \neq 0 \in HH^4(A,M)_g$ | **✓[K/M]** |
-| [O-219-0] | Zyklischer Koeffiziententyp | ?[O] |
-| [O-219-1] | $D_g(\mu_q)\mu_P \notin [A,M]$ (voller Quotient) | ?[O] primär |
-| [O-219-2] | $\tau_M$, $\Phi_{g;\mathbf{p}}$ | ?[O] |
-| [O-219-3] | $(1-\lambda)\Phi = 0$ | ?[O] |
-| [O-219-4] | $B\Phi = 0$ | ?[O] |
-| [O-219-5] | KMS/twisted-cyclic Ersatzpfad | ?[O]\_sek |
-| [O-219-6] | Weil-/Gammafaktor-Paarung | ?[O]\_sek |
-
----
-
-**Commit-Referenz:** Nachfolger von 9e1dd12 (NEU-218).  
-**Primärer nächster Audit:** [O-219-1] — voller Kommutatorquotient $D_g(\mu_q)\mu_P \notin [A_{\mathrm{alg}}, M]$.
+**Commit-Referenz:** Auditkorrektur 2026-08-04, Nachfolger von 9e1dd12 (NEU-218).  
+**Primärer nächster Audit:** `NEU-219a_KMS_Typaudit_Negativbefund.md`
