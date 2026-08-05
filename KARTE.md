@@ -2,7 +2,7 @@
 
 > Direkt aus dem Repository verifiziert. Stand: 2026-07-28 (Bereinigungsdurchlauf).  
 > Auditstand aktualisiert: 2026-07-29 (NEU-123-Komplex + NEU-124/125/127 + NEU-128A/B/130–145 + NEU-151–155).  
-> Strukturupdate: 2026-08-05 (NEU-245b in 07 eingetragen).
+> Strukturupdate: 2026-08-05 (NEU-245b in 07 eingetragen; 06 vollständig aufgelistet; NEU-250 aus 06 entfernt).
 
 ---
 
@@ -319,10 +319,102 @@ Nächster Auditblock: NEU-156–160.
 
 ```
 06-hochschild-bc-algebra/
-[Inhalt noch nicht einzeln aufgeführt — NEU-174 bis NEU-222 + a–z-Varianten]
+├── README.md
+├── NEU-174_Minimaler_Hochschild_Komplex_BC_Zeitwirkung.md
+├── NEU-175_Gewichtraumkomplex_Geladener_Kettenprojektor_BC.md
+├── NEU-176_Konstruktion_Nichttriviale_Geladene_4Kohomologieklasse.md
+├── NEU-177_Direkter_Kozykeltest_Gewichteter_Dualzyklus.md
+├── NEU-178_Vier_Prim_Polynommodell_Geladene_HH4_Klasse.md
+├── NEU-179_Transfertriage_Geladene_Nullkozykel_AQ.md
+├── NEU-180_QPlus_Gradierung_Primvaluationsderivationen_AQ.md
+├── NEU-181_Homogenitaetsaudit_Algebraischer_Twist_Nullkozykeltest.md
+├── NEU-182_Nullkozykel_No-go_Zentrumstest_BC-Algebra.md
+├── NEU-183_Quellen_Praesentation_Audit_BC-Algebra.md
+├── NEU-183_Zentrumstest_Strukturbruch_BC-Algebra.md
+├── NEU-184_Zentrumstest_Koeffizientenaudit_A_g.md
+├── NEU-185_Augmentationscharakter_Dualzyklus_HH4.md
+├── NEU-186_Geladener_Sektor_HH4_Triage.md
+├── NEU-187_Restriktionssatz_geladene_Derivationen.md
+├── NEU-188_Erweiterungsobstruktion_Derivationen_BC.md
+├── NEU-189_Typaudit_Operatorrealisierung_Omega_p.md
+├── NEU-190_Vollstaendiger_Audit_Operatorbruecke.md
+├── NEU-192_Zeugenarchitektur_Separationssatz_Warnlemma.md
+├── NEU-193_Dualer_Hochschildzyklus_Geladener_Nichtrandzeuge.md
+├── NEU-193_Geladener_Dualzyklus_Paarungstest.md
+├── NEU-194_Determinantisches_Modell_Kozykeltest.md
+├── NEU-195_Bewertungsderivationen_Reduktion_HH1.md
+├── NEU-196_Augmentationsblindheit_Potentialroute.md
+├── NEU-197_Kommutatorquotient_Dualdetektor.md
+├── NEU-199_Generatorformel_Potentialderivation_Quotiententest.md
+├── NEU-200_Regulaere_Potentiale_unsichtbar.md
+├── NEU-201_Singulaeres_Potential_Kommutatorquotient_Sichtbarkeit.md
+├── NEU-202_Konvergenz_Singulaerer_Zeuge_Kommutatorquotient.md
+├── NEU-203_Projektionsdifferenzen_Kommutatortrivialitaet.md
+├── NEU-204_Dyadische_Schalen_Singulaere_Aeussere_Derivation.md
+├── NEU-205_Geladener_Dyadischer_Twist_Generatorfehlerterm.md
+├── NEU-206_Homogene_Partialisometrieschalen_Orthogonalitaet_und_Charakterkern.md
+├── NEU-207_Bewertungsgitter_Primschalentransport_und_Ketten_NoGo.md
+├── NEU-208_Separierbare_Primpotentiale_Refinementstabilitaet.md
+├── NEU-209_Singulartraeger_Separierbarer_Primkanaele_und_Charakterkern_NoGo.md
+├── NEU-210_Faktoriale_Ursprungssingularitaet_Transportband_und_Charakterabsorption.md
+├── NEU-211_Nichtteilerfremder_Faktorialaudit_Geladene_Aeussere_Derivation.md
+├── NEU-212_Zieltypbruecke_Intermediares_Koeffizientenmodul.md
+├── NEU-213_Revisionsaudit_NEU212_Bimodul_Regularisierung.md
+├── NEU-214_Bimodul_Rigiditaetslemma_Glattes_Potential.md
+├── NEU-215_Zentralisator_Bimodul_No-go.md
+├── NEU-216_Log_Koeffiziententyp_B-log.md
+├── NEU-217_Lokaler_p-Block.md
+├── NEU-217_O217-2b_Dg_Fallzerlegung.md
+├── NEU-217_O217-2c6_lokal-global.md
+├── NEU-218_Grad3-Cup-Aufstieg.md
+├── NEU-218_Grad3Partner_Cup-Aufstieg_Abschluss.md
+├── NEU-219_BLOCKAUDIT_I_KMS_Twist_Triage.md
+├── NEU-219_Finalaudit_Gesamtabschluss.md
+├── NEU-219_Zyklischer_Koeffizient_KMS_Weil_Verfeinerung.md
+├── NEU-219a_KMS_Typaudit_Negativbefund.md
+├── NEU-219b_KMS_Neutralisierer_Aufspaltung.md
+├── NEU-219c_KMS_Diagonalauswertung_positiv.md
+├── NEU-219d_Getwisteter_Rand_Ladungsobstruktion.md
+├── NEU-219e_Koeffizientenlinie_Typaudit.md
+├── NEU-219f_Gewichtssektor_Zyklisierung_Pfadentscheidung.md
+├── NEU-219g_Hopf_Typaudit_SAYD_Ausschluss.md
+├── NEU-219h_Dilatationspfad_Audit.md
+├── NEU-219i_Laca_Dilatation_Quellenabgleich.md
+├── NEU-219j_Adelischer_Lift_Koeffizientenmodul.md
+├── NEU-219k_Multiplikator_Paarung_Morita_Audit.md
+├── NEU-219l_Algebraischer_Eckkern_und_Morita-Induktion.md
+├── NEU-219m_Negativaudit_Orbit-Direktheit_und_markierte_Realisierung.md
+├── NEU-219n_Tagged_Module_Weight_Omega_tag.md
+├── NEU-219o_Cyclic_Orientation_Setup.md
+├── NEU-219p_Orbit_Index_Function.md
+├── NEU-219q_Orbit_Index_Audit.md
+├── NEU-219r_Definition_des_kanonischen_Basislifts.md
+├── NEU-219s_Skalare_KMS_Rotation_Exponent_s.md
+├── NEU-219t_Vollstaendige_U_Buchfuehrung_Exponent_s.md
+├── NEU-219u_Abschluss_O219_NoGo_Theorem.md
+├── NEU-219u_Abschlussaudit_Geladene_zyklische_Architektur.md
+├── NEU-219v_neg_U-Eingaberotation_typwidrig.md
+├── NEU-219w_Direktaudit_R1-R3_Basisliftrotation.md
+├── NEU-219x_Direktaudit_Dg_Primaerformel_und_Fortsetzung.md
+├── NEU-219y_Direktaudit_Dg_Zieltypbruecke_NEU211_NEU217.md
+├── NEU-219y_Unit-Slot-Zeuge_und_Abschluss_des_Basislift-Rotationspfads.md
+├── NEU-219z_Expliziter_Cup-Rotationsaudit.md
+├── NEU-220_Eroeffnung_Archimedischer_Weil_Gammafaktorpfad.md
+├── NEU-220a_Direktaudit_O220-1a_Normalisierung_archimedischer_Term.md
+├── NEU-220c_Direktaudit_O220-1c_Positivitaetsklassifikation_Archimedischer_Multiplikator.md
+├── NEU-222_Trassenaudit_singulaere_Route_Statuskorrektur_und_offene_Restknoten.md
+└── README.md (s.o.)
 ```
 
-**Gesamt: 65 Inhaltsdateien + README.md = 66 Dateien gesamt** (API-verifiziert 2026-07-28 ✓)
+**Gesamt: 84 Inhaltsdateien + README.md = 85 Dateien gesamt** (API-verifiziert 2026-08-05 ✓)
+
+**Hinweise:**
+- NEU-191 fehlt in der API-Liste (Lücke zwischen NEU-190 und NEU-192).
+- NEU-198 fehlt in der API-Liste (Lücke zwischen NEU-197 und NEU-199).
+- NEU-219u doppelt: `_Abschluss_O219_NoGo_Theorem` und `_Abschlussaudit_Geladene_zyklische_Architektur` — Klärung ausstehend.
+- NEU-219y doppelt: `_Direktaudit_Dg_Zieltypbruecke_NEU211_NEU217` und `_Unit-Slot-Zeuge_...` — Klärung ausstehend.
+- NEU-220, NEU-220a, NEU-220c, NEU-222 sind thematisch bereits im 07-Strang (Weil-Explizitformel). Formale Umsortierung noch offen.
+- NEU-250 wurde am 2026-08-05 aus diesem Ordner entfernt (Fehlablage); korrekte Version liegt in `07-weil-explizitformel/` als `NEU-245b`.
 
 ---
 
