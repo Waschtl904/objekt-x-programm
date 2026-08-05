@@ -1,7 +1,8 @@
 # KARTE — Vollständige Verzeichnisstruktur des Repositorys `objekt-x-programm`
 
 > Direkt aus dem Repository verifiziert. Stand: 2026-07-28 (Bereinigungsdurchlauf).  
-> Auditstand aktualisiert: 2026-07-29 (NEU-123-Komplex + NEU-124/125/127 + NEU-128A/B/130–145 + NEU-151–155).
+> Auditstand aktualisiert: 2026-07-29 (NEU-123-Komplex + NEU-124/125/127 + NEU-128A/B/130–145 + NEU-151–155).  
+> Strukturupdate: 2026-08-05 (NEU-245b in 07 eingetragen).
 
 ---
 
@@ -329,9 +330,44 @@ Nächster Auditblock: NEU-156–160.
 
 ```
 07-weil-explizitformel/
-[Inhalt noch nicht einzeln aufgeführt — NEU-220–221e, NEU-242–246 + weitere]
+├── README.md
+├── NEU-220_Gammafaktor_Quelltyp_und_Zielraum.md
+├── NEU-220a_Mellin-Normierung_und_Involutionskompatibilitaet.md
+├── NEU-220b_Gamma-Distribution_Stetigkeit_Realitaet_und_Normalisierung.md
+├── NEU-220c_Repositoryaudit_Weil-Normierung_und_Gamma-Vorfaktor.md
+├── NEU-220d_Archimedische_Rohform_Polseparation_und_Symmetrieaequivalenz.md
+├── NEU-220e_Operatorischer_Ursprung_Semifinite_Spur_und_Hilbertspur-NoGo.md
+├── NEU-220f_Archimedischer_Streufaktor_und_Zeitverzoegerungsoperator.md
+├── NEU-220g_Schwacher_endlich-archimedischer_Anschluss.md
+├── NEU-220h_Endlicher_Weil-Port_aus_NEU-28.md
+├── NEU-220i_Direktaudit_Zeta-Quotient_und_Endlicher_Logableitungsport.md
+├── NEU-220j_Analytischer_Weil-Testfunktionsraum_und_Konturtransport.md
+├── NEU-220k_Konturtransport_Konvergenz_und_Weil-Explizitformel.md
+├── NEU-220k_Xi-Masterkontur_Vorzeichen_Faktor2_und_Polbuchhaltung.md
+├── NEU-220l_Weil-Quadratik_Autokorrelation_und_Positiver-Kegel.md
+├── NEU-220m_Gesamt-Weilform_Rigged-Operator_und_Randkanaele.md
+├── NEU-220n_Endliche_Fensteroperatoren_und_globaler_Grenztyp.md
+├── NEU-220o_Randflucht_Resolvententreue_und_erweiterter_Polkanal.md
+├── NEU-220p_Erweiterter_Graphenraum_Nichtabschliessbare_Randspur_und_Blockrealisierung.md
+├── NEU-220q_Prim-Pol-Renormierung_Temperiertheit_und_RH-Grenztyp.md
+├── NEU-220r_Nullstellenmass_Nichtabschliessbares_Sampling_und_bedingtes_Spektralmodell.md
+├── NEU-220s_Nullstellenpaar_Kreinraum_OffAxis-Defekt_und_positive_Metrik.md
+├── NEU-220t_Metrikblock_Klassifikation_OffAxis-Traegheit_und_Similarity-NoGo.md
+├── NEU-220u_Spektraldeterminante_Schattenklasse_und_Resolventenspur.md
+├── NEU-220v_Stieltjesfunktion_Resolventenspur_und_Hankelpositivitaet.md
+├── NEU-220w_Hankelvollstaendigkeit_Moment-GNS_und_semifinite_Atomizitaet.md
+├── NEU-221_Adelische_Momentquelle_fuer_den_positiven_Weil-Operator.md
+├── NEU-221c_Zyklischer_Feshbach-Weyl_Kandidat_und_quadratische_Resolvente.md
+├── NEU-221d_Direktextraktion_NEU46_Zyklischer_Sektor_und_Nullmodusaudit.md
+├── NEU-221e_Affine_Hebungsfaser_Wres-Quotient_und_Spektralmassabstieg_Psip.md
+├── NEU-242_Abschlussaudit_O229-3B1f-b1_Kettenabbildungs-Negativbefund.md
+├── NEU-243_Kompatibilitaetsfirewall_Quell-Zielkomplex_Nichttrivialitaet.md
+├── NEU-244_Quotient-first-Zielarchitektur_und_tautologischer_Cone-No-Go.md
+├── NEU-245_c2a_Operatortypaudit_NEU195_NEU216.md
+└── NEU-245b_Typaudit_O220-1f0_Mindestarchitektur_globale_Archimedes-Prim-Kopplung.md  ← NEU 2026-08-05
 ```
 
-**Gesamt: 34 Inhaltsdateien + README.md = 35 Dateien gesamt** (API-verifiziert 2026-07-28 ✓)
+**Gesamt: 35 Inhaltsdateien + README.md = 36 Dateien gesamt** (Stand: 2026-08-05)
 
-**Hinweis:** NEU-246 auch in `01-primkanten-werkzeuge/` vorhanden — Doppelung, Klärung ausstehend.
+**Hinweis:** NEU-246 auch in `01-primkanten-werkzeuge/` vorhanden — Doppelung, Klärung ausstehend.  
+**Strukturhinweis:** NEU-242–245b sind Nachläufer der laufenden O-229/O-220-Front und gehören thematisch zum 07-Strang (Weil-Positivität, Operatortypaudit). Kein Ordnerwechsel nötig.
