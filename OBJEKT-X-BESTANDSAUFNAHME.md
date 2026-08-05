@@ -1,209 +1,139 @@
 # Objekt X — Bestandsaufnahme und Steckbrief
 
-**Stand: 26. Juli 2026 (nach NEU-228)**
+**Stand: 5. August 2026 (nach NEU-219-Finalaudit, NEU-220c und Abgleich mit NEU-223/225/227)**
 
-Eine Inventur nach 324 Dokumenten: Was wissen wir über Objekt X, was ist ausgeschlossen,
+Eine Inventur nach 324+ Dokumenten: Was wissen wir über Objekt X, was ist ausgeschlossen,
 wo bricht die Konstruktion, und welche Grabungsschnitte sind als nächste sinnvoll.
 
-Grundlage: systematische Auswertung von `00-grundlegung/` (Soll-Profil), 22 No-Go-Dokumenten
-(Negativbild) und der Konstruktionskette NEU-42 bis NEU-221d (Positivbestand).
+**Neue verbindliche Resultate seit der letzten Fassung:**
+- $[D_g^{\mathrm{corr}}]\smile[\Theta^\wedge]\neq 0$.
+- $t\Phi_0\neq C\Phi_0$ für alle $C\in\mathbb C$.
+- $\operatorname{ind}_-(Q_\infty)=\operatorname{ind}_+(Q_\infty)=\infty$.
+- Der alte Vergleichsoperatorpfad NEU-56(VI) / „NEU-57“ ist durch NEU-223 zusammen mit den Spektralbefunden aus NEU-225/227 **negativ geschlossen**.
+
+Grundlage: systematische Auswertung von `00-grundlegung/` (Soll-Profil), 22 No-Go-Dokumenten,
+späteren Direkt- und Revisionsaudits sowie der Konstruktionskette NEU-42 bis NEU-221e,
+ergänzt um die Positivitätsklassifikation des archimedischen Kanals aus NEU-220c.
 
 ---
 
-## 0. Schichtenverschiebung nach NEU-225/227
+## 0. Schichtenverschiebung nach NEU-223/225/227 und NEU-220c
 
 Die bisherige Erwartung, der relative Jacobi-Operator $D_{\mathrm{rel}}=\overline{iJ^-}$ könne
-selbst die kompakte Hilbert–Pólya-Schicht liefern, ist **zurückgenommen**.
+selbst die kompakte Hilbert–Pólya-Schicht liefern, ist **endgültig zurückgenommen**.
 
-Auf jeder primären Transportkette ist $D_{\mathrm{rel}}$ unitär auf einen translationsartigen
-Differentialoperator zurückführbar; bereits ein solcher Sektor besitzt absolutstetigen
-Spektraltyp. Zusätzlich enthält der volle relative Raum eine unendlichdimensionale Nullfaser.
-$D_{\mathrm{rel}}$ besitzt daher weder auf dem vollen Raum noch auf dem kernreduzierten
-Primsektor einen kompakten Resolventen.
+NEU-223 zeigt: Jeder zulässige Vergleichsoperator für den alten Schur-/Konfinement-Pfad
+reduziert sich auf dieselbe Graphnormklasse wie $|D_{\mathrm{rel}}|$. Die Suche nach einem
+„anderen Vergleichsoperator“ kollabiert damit auf dieselbe Kompaktheitsfrage des reduzierten
+$D_{\mathrm{rel}}$ selbst.
 
-Das ist **kein** Scheitern des Jacobi- oder RH-Kanals: NEU-56 §4 hält fest, dass
-Selbstadjungiertheit für die RH-Hinrichtung genügt und der kompakte Resolvent nur den
-Spektraltyp betrifft.
+NEU-225/227 liefern den Spektralbefund: Auf jeder primären Transportkette ist
+$D_{\mathrm{rel}}$ unitär auf einen translationsartigen Differentialoperator zurückführbar;
+bereits ein solcher Sektor besitzt absolutstetigen Spektraltyp. Zusätzlich enthält der volle
+relative Raum eine unendlichdimensionale Nullfaser. $D_{\mathrm{rel}}$ besitzt daher weder auf
+dem vollen Raum noch auf dem kernreduzierten Primsektor einen kompakten Resolventen.
 
-$$\boxed{D_{\mathrm{rel}} \text{ ist der primarithmetische Transport- und Streugenerator.}}$$
+$$\boxed{D_{\mathrm{rel}} \text{ ist nicht der kompakte Hilbert–Pólya-Operator von Objekt X.}}$$
 
-Der neue Kandidat für die kompakte bzw. Hilbert–Schmidt-Schicht ist der gekoppelte
-Feshbach-/Birman–Schwinger-Transfer $K_N(z)=V_N^*(D_{\mathrm{rel}}-z)^{-1}V_N$ mit
-$V_p=C_p^{\mathrm{rel}}$.
+Das ist **kein** Scheitern des Jacobi- oder RH-Kanals: Selbstadjungiertheit genügt für die
+RH-Hinrichtung; der kompakte Resolvent betrifft den gewünschten Spektraltyp des HP-Modells.
+Was wegfällt, ist nur der **lokale Vergleichsoperatorpfad** innerhalb der Graphnormklasse von
+$D_{\mathrm{rel}}$.
 
-**Drei Korrekturen sind dabei verbindlich.**
+Gleichzeitig zeigt NEU-220c: Der exakt normalisierte archimedische Weil-Term besitzt einen
+unendlichdimensionalen negativen und positiven Index,
+$$\boxed{\operatorname{ind}_-(Q_\infty)=\operatorname{ind}_+(Q_\infty)=\infty,}$$
+und weder der Polterm noch irgendeine endlich-rangige Korrektur kann diesen negativen Sektor
+beseitigen.
 
-1. $K_N(z)$ ist auch bei festem $N$ **nicht** automatisch endlich-rangig. Die Quelldomäne der
-   Kopplung wird von sämtlichen $e_sV_m$ aufgespannt (51.2); jeder Primkanal bleibt
-   unendlichdimensional. Die frühere finite-Rang-Reduktion auf $\bigoplus_{p\le N}\mathbb C\varepsilon_p$
-   war typologisch falsch.
-2. Die Off-Diagonalterme entstehen **nicht notwendig** durch Mischung in $D_{\mathrm{rel}}$.
-   Sie folgen bereits aus der Überlappung der Kopplungsbilder in der BC-Algebra:
-   $\eta_{p;m;s,u}\leftrightarrow e_{u+ps}V_{pm}$, und verschiedene Faktorisierungen desselben
-   Zielsektors erzeugen nichtorthogonale Bildräume.
-3. Die Eigenbasisdarstellung aus NEU-51 ist nach dem absolutstetigen Spektralbefund
-   unzulässig. Sie wird ersetzt durch
-   $\int_{\mathbb R}(\lambda-z)^{-1}\,d\langle V_pa,E_{D_{\mathrm{rel}}}(\lambda)V_qb\rangle$.
+**Revidierte Objekt-X-Hauptlinie:**
 
-**Neue Hauptlinie:**
+$$\text{lokale Primkanäle} + W_\infty \longrightarrow \text{globale Kopplungsform} \longrightarrow \text{positive Vervollständigung} \longrightarrow H_X$$
 
-$$\text{singuläre HH-Struktur} \to D_{\mathrm{rel}} \text{ (Transport/Streuung)} \to K(z) \text{ (Feshbach-Transfer)} \to \mathcal S_2\setminus\mathcal S_1 \to \det\nolimits_2 \to \text{Weil-/}\Xi\text{-Schicht}$$
-
-Dies ist eine **Arbeitshypothese**. Offen sind: die intrinsische Wahl des $u$-Regulators in
-$V_p$; der Quellhilbertraum und sein Gramoperator; die Hilbert–Schmidt-Eigenschaft von $K(z)$;
-ein unabhängiger Nicht-Spurklassen-Zeuge (nur möglich, wenn $V\notin\mathcal S_2$); die
-Carleman-Determinantenidentität; der intrinsische zyklische Vektor; die Rückbindung an die
-vollständige Weil-Form.
-
-Die endlichen Kollapsoperatoren aus NEU-77 liefern **keine** Schattenklassenkontrolle des
-Grenzoperators, da dort nur starke bzw. punktweise Konvergenz auf endlich getragenen Vektoren
-vorliegt.
-
-**Rücklauf in die alte Barriere (NEU-228).** Der als Einstiegspunkt vorgesehene
-„$u$-Regulator" ist kein neuer Freiheitsgrad. Die $u$-Summe in (51.2) ist die Entwicklung
-einer **Hebung** $\widehat\varepsilon_p$, denn NEU-153 definiert
-$\Psi_p(\widehat\varepsilon_p)=\Pi_{W_{\mathrm{res}}}\widetilde\omega_2(\widehat\varepsilon_p,L_3^\circ)$.
-Damit gilt
-
-$$[O\text{-}226\text{-}3] \equiv [O\text{-}153] \equiv [O\text{-}221\text{-}1c1a0] \quad\text{— die Hebungsunabhängigkeit.}$$
-
-Der naive Ausweg über den Primkanalprojektor ist widerlegt: $\pi_{\mathrm{prim}}$ selektiert
-$u=0$, und der Kopplungsfaktor $-us\log p$ vernichtet dann alles. Zulässig ist
-$\widehat\varepsilon_p=e_0V_p+f_p$ mit $f_p\in\ker\pi_{\mathrm{prim}}$, $f_p\neq0$ — eine
-unendlichdimensionale affine Wahl.
-
-**Das ist kein Rückschritt, sondern eine Konvergenz.** Zwei unabhängige Zugänge — die
-Primkanalgewichte aus Strang 05 und der Feshbach-Transfer aus Strang 01 — enden am selben
-Knoten. Er ist damit nicht mehr eine Nebenfrage, sondern die Wohldefiniertheitsbedingung der
-gesamten Transferschicht.
-
-**Registriertes Leerfaser-Risiko.** NEU-153 Z.207 schließt nicht aus, dass $\mathcal L_p$ leer
-ist. Dann existierte keine zulässige Kopplung $V_p$ und die Feshbach-Linie entfiele — ohne
-dass damit HP-2 für Objekt X oder der Jacobi-/Stieltjeskanal widerlegt wären. Diese Prüfung
-steht vor jeder Schattenklassenrechnung.
+Die bisherige Linie
+$$\text{singuläre HH-Struktur} \to D_{\mathrm{rel}} \text{ (Transport/Streuung)} \to K(z) \to \det\nolimits_2 \to \Xi$$
+bleibt als **Transfer-/Streuungsunterpfad** erhalten, ist aber noch kein Abguss von Objekt X.
 
 ---
 
 ## 1. Die Kernbeobachtung: Wir haben den Abdruck, nicht das Objekt
 
-### 1.1 Das Axiomenregister ist 107 Einträge alt
+### 1.1 Das Axiomenregister ist weiter veraltet, aber der Steckbrief ist schärfer
 
 Die einzige systematische Beschreibung von Objekt X — [`ebene-XVI-objekt-x.md`](00-grundlegung/ebene-XVI-objekt-x.md)
 mit den Positivbedingungen X.1–X.10 und den Ausschlussbedingungen X.neg.1–X.neg.7 — trägt
-den Stand **NEU-114 (1. Juli 2026)**. Seither sind 107 Journaleinträge entstanden. Keiner
-davon wurde in das Register zurückgeschrieben.
+den Stand NEU-114. Das zweite Axiomensystem, [`objekt_x_minimalaxiome.md`](00-grundlegung/objekt_x_minimalaxiome.md),
+steht weiterhin auf `✗[H]`. Beide Register sind veraltet.
 
-Das zweite Axiomensystem, [`objekt_x_minimalaxiome.md`](00-grundlegung/objekt_x_minimalaxiome.md)
-mit A1–A7, stammt vom 17. Juni und steht durchgehend auf `✗ [H]` — reine Hypothese.
+**Neu ist aber:** Der Steckbrief von X ist inzwischen wesentlich schärfer. Neben den 22 No-Go-
+Resultaten liegen jetzt zwei weitere strukturelle Sperren vor:
+- der Abschluss des lokalen Vergleichsoperatorpfads durch NEU-223/225/227,
+- die Negativitätsklassifikation des archimedischen Kanals durch NEU-220c.
 
-**Es gibt also zwei nicht identische Axiomatisierungen von X, beide veraltet.**
+### 1.2 Die Drift ist bestätigt, aber die Antworten liegen inzwischen vor
 
-### 1.2 X kommt in der späteren Arbeit fast nicht mehr vor
+Nach NEU-56 brach die direkte X-Arbeit weitgehend ab; gearbeitet wurde an Spektralschatten,
+BC-Kohomologie und Weil-Form. Die vier Rückbindungstests aus NEU-114 wurden formal nie
+weitergeführt.
 
-Anteil der Dokumente, die Objekt X inhaltlich behandeln:
-
-| Strang | Dokumente mit X | Anteil |
-|---|---|---|
-| 00-grundlegung | 8 von 20 | 40 % |
-| 01-primkanten-werkzeuge | 29 von 58 | 50 % |
-| 02-jacobi-limes | 0 von 34 | **0 %** |
-| 03-weil-form-statistik | 7 von 32 | 22 % |
-| 04-grenzoperator-renormierung | 1 von 42 | **2 %** |
-| 05-primkanal-fourierladung | 3 von 34 | 9 % |
-| 06-hochschild-bc-algebra | 5 von 79 | **6 %** |
-| 07-weil-explizitformel | 3 von 29 | 10 % |
-
-Nach NEU-56 (29. Juni) bricht die direkte X-Arbeit ab. Was danach kommt, ist Arbeit am
-**Spektralschatten** $\Pi_\gamma(X)$ und an der BC-Kohomologie — beides legitim und
-notwendig, aber nicht dasselbe.
-
-### 1.3 Die vier Rückbindungstests wurden nie ausgeführt
-
-NEU-114 (1. Juli) erkannte genau diese Drift und richtete vier Tests ein, um den
-Spektralschatten wieder an X zu binden:
-
-```
-Test 114.1  HH²  [ω̃₂]      → Herglotz-Kanal        ❓[O]
-Test 114.2  HH⁴  [L₃]      → Obstruktionsterm      ❓[O]
-Test 114.3  Wres^top       → Q_Weil                ❓[O]
-Test 114.4  m → p^k m      → Λ(p^k)                ⚠[M]
-```
-
-Die Zeichenfolge `114.` erscheint danach in **keinem einzigen** der 105 Dokumente ab
-NEU-117. Die Tests wurden geöffnet und liegengelassen.
-
-**Das ist die eigentliche Diagnose.** Nicht mangelnder Fortschritt — die Grabung war
-außerordentlich produktiv — sondern: Der Grabungsschnitt hat sich vom Fundplatz entfernt,
-und die Fundkartierung wurde nicht mitgeführt.
-
-### 1.4 Die gute Nachricht
-
-Viele dieser Tests sind inzwischen **implizit beantwortet**, nur eben nicht verbucht:
-
-- **Test 114.2** ist faktisch durch den gesamten 06-Strang bearbeitet und endet im
-  O-219-No-Go (NEU-219u): Der kanonische Weg von $[L_3]$ zu einer zyklischen Klasse ist
-  ausgeschlossen.
-- **Test 114.3** wurde in NEU-116 teilweise ausgeführt und lieferte den **Vierschichtensatz**
-  $$X_{\mathrm{skel}} \neq X \neq X^{\mathrm{val}} \neq W_\xi^{\mathrm{norm}}, \tag{116.0.V}$$
-  mit dem Befund, dass der Faktor $\Theta_{1/2}$ **extern** zu $X$ ist (116.C.15, `✓[M]`).
-  Das ist eine echte Aussage über X: Die archimedische Normierung gehört nicht zur
-  Residuenstruktur, sondern muss hinzugefügt werden.
-- **Test 114.4** hängt weiterhin an der T2-Orthogonalität, die NEU-144 selbst als
-  unbewiesen markiert.
-
-Ein großer Teil der Antwort liegt also bereits vor und muss nur gehoben werden.
+Viele Antworten liegen aber inzwischen **implizit** vor und müssen nur verbucht werden:
+- Test 114.2 ist durch den 06-Strang negativ beantwortet (Zyklizitätsblockade).
+- Test 114.3 ist durch den Vierschichtensatz NEU-116 und den externen Faktor
+  $\Theta_{1/2}$ teilweise beantwortet.
+- Der archimedische Teil ist mit NEU-220a/b/c nicht positiv lokal realisierbar; der offene
+  Pfad ist daher **global gekoppelt**, nicht lokal getrennt.
 
 ---
 
 ## 2. Der Steckbrief: Was X sein muss
 
-Der eigentliche Ertrag von 22 No-Go-Resultaten ist nicht, was ausgeschlossen wurde, sondern
-was dadurch **erzwungen** ist. Jedes No-Go dreht sich in eine Positivforderung um. Zusammen
-ergibt das ein überraschend scharfes Fahndungsbild.
+Der eigentliche Ertrag der No-Go- und Auditkette ist ein positives Fahndungsbild. Zusammen mit
+den neueren Befunden ergibt sich jetzt:
 
 | # | Eigenschaft, die X haben MUSS | Erzwungen durch |
 |---|---|---|
-| **S1** | **Nichtverschwindender Off-Diagonal-Anteil** $K^{\mathrm{off}}\neq 0$; kein nichttrivial entkoppelter Block im Primkopplungsgraph. Nicht gefordert: $K_{pq}\neq 0$ für jedes Paar. Keine direkte Summe, keine Blockdiagonale, keine Kette. | NEU-50, 207, 209 |
-| **S2** | **Mehrdimensionales Bewertungsgitter** statt eindimensionaler Kette, mit **gemeinsamer, punktkonzentrierter Singularität** ($\operatorname{Sing}\subseteq Z_g$) statt separierbarer Struktur auf Koordinatenhyperflächen. | NEU-207, 209 |
-| **S3** | **Gradierte, nicht skalare Normierung** — eine Diagonalmatrix $D_N$, kein Skalar $\kappa_N$. Und sie muss **intrinsisch** aus der Operatorstruktur folgen (Anti-Fitting). | NEU-78, 82, 83, 123.H |
-| **S4** | **Dichte Trägerstruktur** ($\kappa_N \asymp N$), nicht dünn/rein primzahlindiziert. | NEU-82, 83 |
-| **S5** | **Nicht-naive Topologie**: X ist kein gewöhnlicher starker Operatorlimes, sondern wird erst durch Zusatzstruktur sichtbar (wandernde Fenster, Funktionale, $N$-abhängige Testtopologie). | NEU-85 |
-| **S6** | **Semifinite statt gewöhnlicher Spur**; **Carleman-Determinante $\det_2$** statt Fredholm-Determinante; Schattenklasse zwingend $\mathcal S_2 \setminus \mathcal S_1$. | NEU-86, 220e, 220u |
-| **S7** | **Vermittlung über echte Zwischenobjekte** $\Pi_\gamma$ und $W_\xi$. X ist strukturell höherstufig als jede seiner Projektionen; $X \neq m_{\mathrm{arith}}$ ist kategorial. | NEU-114, 115, 116 |
-| **S8** | **Keine zentralen Cup-Faktoren, keine globalen Bimodul-Retraktionen** — das Zentrum ist trivial ($Z(A_{C^*}) = \mathbb C\cdot 1$). | NEU-182, 183, 215 |
-| **S9** | **Echte Singularität bei 0**: $H \in \mathrm{LC}(\hat{\mathbb Z}\setminus\{0\}) \setminus \mathrm{LC}(\hat{\mathbb Z})$. Regularität ist hier der Feind der Nichttrivialität. | NEU-196, 200 |
-| **S10** | **Getwistete/parazyklische Kohomologie** oder Orbitshift $\kappa\neq 0$ — die naivste Cup-mit-KMS-Form ist ausgeschlossen. | NEU-219u |
+| **S1** | **Nichtverschwindender Off-Diagonal-Anteil** $K^{\mathrm{off}}\neq 0$; kein nichttrivial entkoppelter Block im Primkopplungsgraph. | NEU-50, 207, 209 |
+| **S2** | **Mehrdimensionales Bewertungsgitter** mit gemeinsamer, punktkonzentrierter Singularität statt separierbarer Koordinatenstruktur. | NEU-207, 209 |
+| **S3** | **Gradierte, nicht skalare Normierung** — eine Diagonalmatrix $D_N$, kein Skalar $\kappa_N$. | NEU-78, 82, 83, 123.H |
+| **S4** | **Dichte Trägerstruktur** ($\kappa_N\asymp N$), nicht dünn/rein primzahlindiziert. | NEU-82, 83 |
+| **S5** | **Nicht-naive Topologie**: X wird erst durch Zusatzstruktur sichtbar, nicht als gewöhnlicher starker Limes. | NEU-85 |
+| **S6** | **Semifinite statt gewöhnlicher Spur**; **Carleman-Determinante $\det_2$** statt Fredholm-Determinante; Schattenklasse $\mathcal S_2\setminus\mathcal S_1$. | NEU-86, 220e, 220u |
+| **S7** | **Vermittlung über echte Zwischenobjekte** $\Pi_\gamma$ und $W_\xi$; X ist strukturell höherstufig als jede Projektion. | NEU-114, 115, 116 |
+| **S8** | **Keine zentralen Cup-Faktoren, keine globalen Bimodul-Retraktionen**. | NEU-182, 183, 215 |
+| **S9** | **Echte Singularität bei 0**: $H\in\mathrm{LC}(\hat{\mathbb Z}\setminus\{0\})\setminus\mathrm{LC}(\hat{\mathbb Z})$. | NEU-196, 200 |
+| **S10** | **Getwistete/parazyklische Kohomologie** oder Orbitshift $\kappa\neq 0$; naive Cup-mit-KMS-Form ausgeschlossen. | NEU-219u |
 | **S11** | **Unbeschränkte Operatoren und regulierte Spuren** im RH-relevanten Bereich $0<\Re\beta\le 1$. | NEU-140, 141, 220t |
+| **S12** | **Global gekoppelte Positivität.** Der archimedische Weil-Term besitzt einen unendlichdimensionalen negativen Spektralsektor. Weder der Polterm noch irgendeine endlich-rangige Korrektur kann ihn positiv machen. Objekt X darf daher keine orthogonale direkte Summe isoliert positiver lokaler Kanäle sein; erforderlich ist eine echte nichtdiagonale Archimedes–Prim-Kopplung $B_{\infty,\mathrm{pr}}$, gegebenenfalls zusammen mit nichttrivialen $B_{pq}$. | NEU-220a, 220c |
 
-Dazu kommt das explizite Kriterienbündel für die Spektralkomponente aus NEU-220u — der
-präziseste Steckbrief, den das Programm besitzt:
+Dazu kommt das explizite Kriterienbündel für die Spektralkomponente aus NEU-220u — jetzt mit korrigierter Lesart:
 
 | Kriterium | Forderung | Aktueller Stand |
 |---|---|---|
-| **HP-1** | $H_X = H_X^*$ | `⚠[M]` — NEU-53/55, unter Nelson-Bedingungen |
-| **HP-2** | $H_X$ hat kompakten Resolventen | **`✗[M]` über Vergleichsoperator $L$** (NEU-56, V); `❓[O]` über einen *anderen* Vergleichsoperator (NEU-56, VI) |
-| **HP-3** | $H_X^{-1} \in \mathcal S_2\setminus\mathcal S_1$ | `❓[O]` — hängt an HP-2 |
-| **HP-4** | $N_{H_X}(T) = \frac{T}{\pi}\log\frac{T}{2\pi} - \frac{T}{\pi} + O(\log T)$ | `❓[O]` |
-| **HP-5** | $\det{}_2(I - zH_X^{-1}) = \Xi(z)/\Xi(0)$ | `❓[O]` |
-| **HP-6** | Determinantenidentität aus Spur-/Streu-/relativer Determinantenformel | `❓[O]` |
-| **HP-7** | Nullstellenlagen nirgends als Eingabedaten | **verletzt** im gesamten 220s–w-Strang, dort selbst als `?[O], RH-stark` markiert |
+| **HP-1** | $H_X = H_X^*$ | `⚠[M]` — für $D_{\mathrm{rel}}$ unter Nelson-Bedingungen; für einen global gekoppelten $H_X$ offen |
+| **HP-2** | $H_X$ hat kompakten Resolventen | **`✗[M]` für $D_{\mathrm{rel}}$ und alle zulässigen graphnormäquivalenten Vergleichsoperatoren**; NEU-223 reduziert die Klasse auf die Kompaktheitsfrage von $D_{\mathrm{rel}}$, NEU-225/227 schließen diese negativ. **Ein anderer global gekoppelter Operator $H_X$ bleibt `?[O]`.** |
+| **HP-3** | $H_X^{-1}\in\mathcal S_2\setminus\mathcal S_1$ | `?[O]` — nicht mehr an einen lokalen Vergleichsoperatorpfad zu binden |
+| **HP-4** | $N_{H_X}(T)=\frac{T}{\pi}\log\frac{T}{2\pi}-\frac{T}{\pi}+O(\log T)$ | `?[O]` |
+| **HP-5** | $\det_2(I-zH_X^{-1})=\Xi(z)/\Xi(0)$ | `?[O]` |
+| **HP-6** | Determinantenidentität aus Spur-/Streu-/relativer Determinantenformel | `?[O]` |
+| **HP-7** | Nullstellenlagen nirgends als Eingabedaten | **verletzt** im 220s–w-Strang, dort selbst als `?[O], RH-stark` markiert |
 
-### 2.1 Die schärfste Kollision im Katalog
+### 2.1 Die schärfste Kollision im Katalog — revidiert
 
-> **HP-2 fordert kompakten Resolventen. NEU-56 Satz 56.2 schließt genau das aus.**
+Die alte Fassung führte HP-2 und den alternativen Vergleichsoperatorpfad als noch offene
+Spannung. Das ist überholt.
 
-NEU-56 (29. Juni) zeigt: Globaler Schur-Test und Konfinement sind mit *einem* Skalar
-$\gamma_N$ unvereinbar. Der erzwungene Schur-Wert $\gamma_N = K/(N\log N)$ lässt $J^-$
-relativ zu $L$ verschwinden, damit ist (K) verletzt und Weg A verschlossen — `✗[M]`.
-Das Programm wich daraufhin auf Weg B (Spektralmaß) aus.
+> **HP-2 ist für $D_{\mathrm{rel}}$ und alle zulässigen lokalen Vergleichsoperatoren negativ geschlossen.**
 
-Fast einen Monat später leitet NEU-220u unabhängig HP-1–HP-7 her, und **HP-2 ist genau die
-Bedingung, die Weg A verlangt hätte**. Die beiden Dokumente liegen 165 Katalogeinträge
-auseinander und kennen einander nicht.
+NEU-223 zeigt, dass jeder zulässige Vergleichsoperator auf dieselbe Graphnormklasse wie
+$|D_{\mathrm{rel}}|$ zurückfällt. NEU-225/227 zeigen, dass $D_{\mathrm{rel}}$ translationsartigen,
+absolutstetigen Spektraltyp besitzt und keinen kompakten reduzierten Resolventen hat.
 
-NEU-56 lässt eine Tür offen — Punkt (VI): *„Weg A bleibt offen über einen anderen
-Vergleichsoperator"*, `❓[O]`. Dieser Knoten wurde am 29. Juni geöffnet und **nie wieder
-angefasst**; ein Blatt NEU-57 existiert bis heute nicht.
+Damit ist der alte G3-/„NEU-57“-Pfad **nicht schlafend, sondern abgeschlossen**.
+
+**Offen bleibt nur noch die globale Version der Frage:**
+> Gibt es einen anderen, global gekoppelten Operator $H_X$, dessen Konfinement nicht aus der
+> Graphnorm von $D_{\mathrm{rel}}$ allein stammt und der eine echte Archimedes–Prim-Kopplung
+> bereits in seiner Konstruktion enthält?
 
 ---
 
@@ -230,194 +160,141 @@ Mangoldt-Spur  Tr(R·Σ_rel^ren) = −ζ'/ζ(β)                        ✓[M]  
 kritischer Streifen 0 < Re β ≤ 1                                 ❓[O]  [O-144-3]
 ```
 
-Das ist die stärkste durchgehende Verbindung von der Primkantenstruktur zur Zetafunktion,
-die das Programm besitzt. Sie ist echt — und sie endet exakt dort, wo die RH eine Aussage
-macht.
+Das bleibt die stärkste durchgehende Verbindung von der Primkantenstruktur zur Zetafunktion.
+Sie ist echt — aber sie endet weiterhin genau dort, wo die RH eine Aussage macht.
 
-### 3.2 Die neun Bruchstellen
+### 3.2 Die revidierten Bruchstellen
 
 | # | Bruchstelle | Kern | Quelle |
 |---|---|---|---|
-| 1 | Primkanten-Kollaps | $T_{\mathrm{rel}}$ auf dem kollabierten Raum nicht wohldefiniert ohne Kantenmarkierung; $\kappa^*\mathrm{Wres}$ **nicht** kantendiagonal. Geschlossen durch **Definition**, nicht durch Beweis — Intrinsizität offen. | NEU-43 Satz 43.3, NEU-44.X3 |
-| 2 | Nichtüberzählung | $\dim\ker(1-\mathcal K_\infty(\rho)) = m_\rho$ ist „Kern-Engpass". Genau der Punkt, an dem die Konstruktion die Nullstellen berühren müsste, **ohne sie als Input zu nehmen**. | NEU-49 Satz 49.3 |
-| 3 | Spurklasse global | Off-Diagonal-Terme existieren generisch; das Kriterium braucht die echte Spektralbasis von $D_{\mathrm{rel}}$ — die es nicht gibt (Graphbasis ≠ Eigenbasis). | NEU-51/52 |
-| 4 | Konfinement | kompakter Resolvent blockiert (siehe §2.1) | NEU-56 |
-| 5 | Kritischer Streifen | Spurformel nur für $\Re\beta>1$ | NEU-141/144 |
-| 6 | Primkantendiagonalität | In der orthogonalen Direktsumme ist $\langle\Psi_p,\Psi_q\rangle = 0$ definitorisch; offen ist, ob die **induzierte** Wres-Paarung primkantendiagonal ist. Quelle: „noch kein formaler Beweis". Trägt die primdiagonale Struktur von $R$. | NEU-144 [O-144-1] |
-| 7 | Zyklisches Tripel | $(\mathcal H_N^{\mathrm{rel}}, D_N^{\mathrm{rel}}, \Psi_N)$ nicht vollständig typisiert | NEU-221d |
-| 8 | Abel-Lemma quantitativ | Kanalgewichte unbekannt; Kancellation „gefährdet nahe $\beta_0\approx s$" — gerade nahe möglicher Nullstellenlagen | NEU-133 |
-| 9 | RH-Tautologie | 220s–w konstruiert aus der Nullstellenliste bzw. unter RH-Annahme | NEU-220s–w |
+| 1 | Primkanten-Kollaps | $T_{\mathrm{rel}}$ auf dem kollabierten Raum nicht wohldefiniert ohne Kantenmarkierung; Intrinsizität offen. | NEU-43, NEU-44.X3 |
+| 2 | Nichtüberzählung | $\dim\ker(1-\mathcal K_\infty(\rho))=m_\rho$ bleibt Kern-Engpass. | NEU-49 |
+| 3 | Spurklasse global | Off-Diagonal-Terme generisch; Kriterium braucht echte Spektralbasis von $D_{\mathrm{rel}}$. | NEU-51/52 |
+| 4 | Lokaler Konfinementpfad | **negativ geschlossen**: kein alternativer Vergleichsoperator innerhalb der Graphnormklasse von $|D_{\mathrm{rel}}|$ kann HP-2 retten. | NEU-223, 225, 227 |
+| 5 | Kritischer Streifen | Spurformel nur für $\Re\beta>1$. | NEU-141/144 |
+| 6 | Primkantendiagonalität | Induzierte Wres-Paarung primkantendiagonal weiterhin offen. | NEU-144 [O-144-1] |
+| 7 | Zyklisches Tripel | $(\mathcal H_N^{\mathrm{rel}},D_N^{\mathrm{rel}},\Psi_N)$ nicht vollständig typisiert. | NEU-221d |
+| 8 | Abel-Lemma quantitativ | Kanalgewichte unbekannt; Kancellation nahe möglicher Nullstellenlagen gefährdet. | NEU-133 |
+| 9 | RH-Tautologie | 220s–w nutzt Nullstellenliste bzw. RH-nahe Positivität; nicht als nichttautologischer Konstruktionspfad verwendbar. | NEU-220s–w |
+| 10 | Archimedische Negativität | Der lokale archimedische Kanal ist nicht positiv und nicht durch endlich-rangige Defekte reparierbar. | NEU-220c |
 
-### 3.3 Der Feshbach-Kandidat NEU-221
+### 3.3 Der Feshbach-Kandidat NEU-221 — Status präzisiert
 
-NEU-46 liefert die lokale Weyl-Funktion
-$$M_p(z) = \langle \Psi_p, (z - D^-_{rel,p})^{-1}\Psi_p\rangle, \qquad \Psi_p := C_p^{\mathrm{rel}}\varepsilon_p$$
-und die Zerlegung $D_{\mathrm{Fesh}} = D_{\mathrm{Euler}}^{\mathrm{conn}}\cdot D_{\mathrm{Jac}}\cdot D_{\mathrm{scatt}}$.
-Beides ist, so NEU-221d wörtlich, „formal korrekt aufgeschrieben".
+Der gekoppelte Feshbach-/Birman–Schwinger-Transfer
+$$K_N(z)=V_N^*(D_{\mathrm{rel}}-z)^{-1}V_N$$
+bleibt ein ernstzunehmender Kandidat für die Transfer-/Streuungsschicht. Er ist jedoch
+**noch kein Abguss von Objekt X**, sondern eine Arbeitshypothese mit offenen Kopplungs-,
+Schattenklassen- und Rückbindungsfragen.
 
-**Was NEU-46 nicht enthält:** ein explizites globales Skalarprodukt auf $\mathcal H_N^{\mathrm{rel}}$
-und eine Kopplungsnormalisierung für $\Psi_N$. Daher die vier Sperren:
-
-```
-[O-221-1c1a]  Vektorkonkretisierung / Normierung  ‖Ψ_N‖
-      ↓
-[O-221-1c1b]  Nullmodusfreiheit  E_D({0})Ψ_N = 0
-      ↓
-[O-221-1c1c]  inverse Momente  ∫|λ|^{−2k−2} dμ_{Ψ_N} < ∞,  k = 0,1,2
-      ↓
-   Ω_{X,N} = (D_N^rel)^{−1}Ψ_N  und  J_{X,N} = (D_N^rel)^{−2}   ← gesperrt
-
-[O-221-1c1d]  globale Kopplung in D_scatt,N        (parallel, unabhängig)
-```
-
-**Wichtige Typbeobachtung:** Der 221-Weg zielt auf ein *zyklisches Vektormodell*
-($\mu_k = \langle\Omega_X, J_X^k\Omega_X\rangle$), nicht auf den vollen HP-Steckbrief.
-Die Bedingung `[O-221-1c1c]` ist eine **vektorrelative Abschwächung** von HP-3: Sie fordert
-Endlichkeit inverser Momente bezüglich $\mu_{\Psi_N}$, nicht $H_X^{-1}\in\mathcal S_2$ für
-den ganzen Operator. Selbst wenn alle vier Sperren fallen, hat man damit ein
-Stieltjes-Modell — noch keinen Hilbert–Pólya-Operator.
-
-Die Quellen behaupten **kein** bewiesenes Hindernis gegen [O-221-1c1a–d]. Aber drei
-vorgelagerte, seit Wochen offene Engpässe (Nichtüberzählung, Spurklassenkriterium für
-$K_{pq}$, Konfinement) sprechen gegen eine schnelle Erfüllbarkeit.
+Wesentlich ist jetzt: Selbst eine erfolgreiche Typisierung von $K(z)$ würde den neuen Knoten
+S12 / $[O\text{-}220\text{-}1f_0]$ noch nicht automatisch lösen. Denn der archimedische
+Negativsektor verlangt eine **globale Positivitätsarchitektur**, nicht bloß einen lokalen
+zyklischen oder streuungstheoretischen Kandidaten.
 
 ---
 
 ## 4. Die zwei ernsten Risiken
 
-### 4.1 Die kohomologische Schicht steuert auf Leere zu
+### 4.1 Die kohomologische Schicht endet an der Zyklizität, nicht an der Leere
 
-> **Zurückgenommen durch NEU-222 (26. Juli 2026).** Dieser Abschnitt ist überholt.
-> `[O-209-5]` und `[O-209-6]` waren zum Zeitpunkt der Analyse bereits durch NEU-210
-> geschlossen; `[O-207-5b]` gehört zu einer verlassenen Nebenroute. Die singuläre Route
-> wurde beschritten und trägt bis $HH^4$ (NEU-210 → 211 → 212/216 → 217 → 218); sie endet
-> an der Zyklizität (NEU-219u), nicht an der Konstruktion. Die kohomologische Schicht ist
-> nicht leer. Der Text unten bleibt als Protokoll des damaligen Kenntnisstands stehen.
+Die alte Leere-Diagnose ist überholt. Die singuläre Route trägt bis $HH^4$ und blockiert erst
+an der Zyklizität. Damit ist die kohomologische Schicht nicht leer, aber auch noch nicht in
+eine positive Operatorarchitektur überführt.
 
-Drei No-Go-Cluster laufen auf dieselbe Engstelle zu:
+Der positive Befund $[D_g^{\mathrm{corr}}]\smile[\Theta^\wedge]\neq0$ stärkt diese Schicht,
+löst aber das Positivitätsproblem von S12 nicht.
 
-- **NEU-182/183:** Das Zentrum ist trivial — beide Cup-Produkt-Routen (regulär und verdreht) sind tot.
-- **NEU-215:** Kein globaler Bimoduloperator retrahiert $A_{C^*}$ nichttrivial.
-- **NEU-196/200:** Reguläre Potentiale verschwinden im Kommutatorquotienten.
+### 4.2 Das Tautologieproblem bleibt scharf
 
-Damit ist die geladene Klasse weder über zentrale Elemente noch über globale Retraktionen
-noch über reguläre Potentiale erzeugbar. Übrig bleibt **allein die echt singuläre Route**
-(NEU-207/209, Randtermkontrolle [O-207-5b], gemeinsame Charakterkernmenge $Z_g$).
+NEU-220t zeigt: Eine positive, invertierbare Metrik im Kreinraum-Modell existiert genau dann,
+wenn RH gilt. Jede Reparatur innerhalb dieses Modells ist damit selbst RH-tautologisch.
 
-> Scheitert auch diese, hat die HH-Schicht von X **keinen bekannten Konstruktionsweg mehr**.
-
-Das ist eine Aussage, die eine Entscheidung verlangt, bevor weiter investiert wird.
-
-### 4.2 Das Tautologieproblem
-
-NEU-220t zeigt: Eine positive, invertierbare Metrik im Kreinraum-Modell existiert **genau
-dann, wenn RH gilt**. Jede Reparatur innerhalb dieses Modells ist damit selbst RH-tautologisch.
-Der 220-Strang ist sich dessen bewusst und markiert alle betroffenen Knoten als
-`?[O], RH-stark`; NEU-220u formuliert es direkt:
-
-> „Die bloße Äquivalenz ist noch kein Fortschritt gegen RH. Der Fortschritt müsste in der
-> quellseitigen (adelischen) Konstruktion von $H_X$ liegen."
-
-Der 220-Strang ist damit richtig einzuordnen: nicht als Fortschritt Richtung Beweis,
-sondern als **Kriteriengewinnung**. Sein Ertrag ist HP-1–HP-7 und das Hankel-Kriterium —
-ein präzises Lastenheft. NEU-221 ist der erste Versuch, es nicht-tautologisch zu erfüllen.
+Der 220-Strang liefert also weiterhin **Kriteriengewinnung**, aber keinen nichttautologischen
+Beweisweg. Das heutige archimedische Negativitätsresultat verschärft das noch: Selbst lokal ist
+keine positive Hilbertraumrealisierung vorhanden; eine Lösung müsste global gekoppelt und
+quellseitig konstruiert sein.
 
 ---
 
-## 5. Fünf Grabungsschnitte
+## 5. Vier aktive Grabungsschnitte
 
-### G1 — Fundkartierung nachziehen: Ebene XVI auf NEU-221d
+### G1 — Fundkartierung synchronisieren: Ebene XVI / Bestandsaufnahme aktualisieren
 
-Aufwand gering, Ertrag hoch. Konkret:
+Diese Fassung selbst ist der erste Schritt: S1–S12, HP-1–HP-7 und der Abschluss des alten
+Vergleichsoperatorpfads sind jetzt an einem Ort verbucht.
 
-- X.neg.8 bis X.neg.29 aus den 22 No-Gos formulieren (die Liste steht in §2 als S1–S11).
-- X.1–X.10 auf den aktuellen Stand bringen; insbesondere X.2 (Spektralbedingung) durch
-  HP-1–HP-7 ersetzen, X.8 um die Konfinement-Obstruktion ergänzen.
-- Die beiden Axiomensysteme A1–A7 und X.1–X.10 explizit gegeneinander stellen und
-  entscheiden, welches führt.
+Nächster Unterpunkt: die kanonische Registerdatei `00-grundlegung/ebene-XVI-objekt-x.md`
+entsprechend synchronisieren.
 
-### G2 — Fundauswertung: die vier Rückbindungstests abschließen
-
-Sie sind teilweise längst beantwortet. Konkret zu verbuchen:
+### G2 — Die vier Rückbindungstests explizit abschließen
 
 | Test | Was inzwischen vorliegt | Restaufgabe |
 |---|---|---|
 | 114.1 HH² → Herglotz | wenig | offen halten |
-| 114.2 HH⁴ → Obstruktion | O-219-No-Go (NEU-219u) | negativ verbuchen, Reparaturpfade als Nachfolger eintragen |
-| 114.3 Wres → Q_Weil | Vierschichtensatz NEU-116; $\Theta_{1/2}$ extern | Ergebnis als `✓[M]_part` verbuchen, Restlücke IT-2 benennen |
+| 114.2 HH⁴ → Obstruktion | O-219-No-Go + spätere Korrekturen | negativ/teilpositiv sauber verbuchen |
+| 114.3 Wres → Q_Weil | Vierschichtensatz, externer $\Theta_{1/2}$, archimedischer No-Go | neue globale Kopplungsfrage eintragen |
 | 114.4 Primkanten → Λ | hängt an T2-Orthogonalität | mit [O-144-1] zusammenlegen |
 
-### G3 — Den 27 Tage schlafenden Knoten wecken: NEU-57
+### G3 — Alter Vergleichsoperatorpfad abgeschlossen, neuer Operatorpfad offen
 
-NEU-56 (VI) — *Weg A über einen anderen Vergleichsoperator* — ist der einzige offene Pfad
-zu HP-2, und HP-2 ist Voraussetzung für HP-3 bis HP-6. Solange dieser Knoten geschlossen
-bleibt, kann der HP-Steckbrief prinzipiell nicht erfüllt werden. Konkrete Frage:
+**Nicht mehr:** „NEU-57 wieder öffnen“.  
+**Sondern:**
 
-> Gibt es einen Vergleichsoperator $\tilde L$, der gleichzeitig
-> $\|J^-x\| \lesssim \|\tilde Lx\|$ (Schur/Nelson) und $\|D_{\mathrm{rel}}x\| + \|x\| \ge c\|\tilde Lx\|$ (Konfinement)
-> erlaubt — also die in NEU-56 §1 gezeigte Zwangslage $\tilde L \simeq |D_{\mathrm{rel}}|$ nicht
-> in einen Widerspruch treibt?
+> NEU-223 reduziert alle zulässigen Vergleichsoperatoren auf die Graphnormklasse von
+> $|D_{\mathrm{rel}}|$. Da $D_{\mathrm{rel}}$ translationsartigen, absolutstetigen
+> Spektraltyp und keinen kompakten reduzierten Resolventen besitzt, ist dieser Weg negativ
+> geschlossen.
 
-Das ist zugleich die Frage nach der Singulärwertasymptotik $s_k(J^-|_{H^{\mathrm{eff}}_{\mathrm{rel}}})$.
+**Neuer Nachfolgeknoten:**
+> Existiert ein anderer, global gekoppelter Operator $H_X$, dessen Konfinement nicht aus der
+> Graphnorm von $D_{\mathrm{rel}}$ allein stammt?
 
-### G4 — Testschacht statt Großgrabung: die singuläre Route entscheiden
+### G4 — Neuer Hauptknoten: $[O\text{-}220\text{-}1f_0]$
 
-> **Gegenstandslos (NEU-222).** Der Entscheidungstest ist bereits beantwortet: Die
-> singuläre Route trägt bis $HH^4$ und blockiert erst an der Zyklizität. G4 entfällt;
-> G3 (alternativer Vergleichsoperator, → HP-2) rückt damit auf Rang eins der offenen
-> Grabungsschnitte. Beleg: [`NEU-222`](06-hochschild-bc-algebra/NEU-222_Trassenaudit_singulaere_Route_Statuskorrektur_und_offene_Restknoten.md).
+$$\boxed{[O\text{-}220\text{-}1f_0]\quad \text{Existiert eine kanonische Kopplung }B_{\infty,\mathrm{pr}},\text{ durch welche die vollständige globale Blockform positiv wird?}}$$
 
-Vor weiterer Investition in die HH-Schicht: einen schmalen, tiefen Test auf [O-207-5b] und
-[O-209-5/6]. Ergebnis entweder „singuläre Route trägt" — dann ist der Weg frei — oder
-„trägt nicht" — dann ist die kohomologische Schicht von X nach heutigem Wissen leer, und
-das Programm sollte sich ganz auf die analytische Schiene (Feshbach/Weil) konzentrieren.
-Beides ist ein Fortschritt. Der teure Fall ist, es offen zu lassen.
+Arbeitsnormalform:
+$$
+\mathcal Q_X = \begin{pmatrix}A_\infty & B_{\infty,\mathrm{pr}}\\ B_{\infty,\mathrm{pr}}^* & A_{\mathrm{pr}}\end{pmatrix},
+$$
+mit ausdrücklich festzuhaltendem Negativbefund
+$$A_\infty\ngeq0,\qquad A_\infty+R\ngeq0 \text{ für jede endlich-rangige Korrektur }R.$$
 
-### G5 — Numerik als unabhängige Sonde
+Dies ist jetzt der **aktive Hauptknoten** der positiven Konstruktion.
 
-Das Programm ist zu 100 % analytisch. Drei Rechnungen wären billig und sofort
-aussagekräftig:
+### G5 — Numerischer Kopplungspilot als nächste Sonde
 
-1. **Zielwerte erzeugen.** $\mu_k = -\frac{k+1}{(2k+2)!}(\log\Xi)^{(2k+2)}(0)$ ist numerisch
-   berechenbar. Damit liegen die Zahlen vor, die **jede** Konstruktion reproduzieren muss —
-   und die Hankelmatrizen $H_N^{(0)}, H_N^{(1)}$ lassen sich für kleine $N$ direkt auf
-   Positivität prüfen. Das validiert zugleich die Formel aus NEU-220w.
-2. **Die Sperren testen, bevor man sie beweist.** $D_N^{\mathrm{rel}}$ und $\Psi_N$ für
-   $N = 50, 100, 500$ explizit aufstellen und numerisch nachsehen: Wie verhält sich
-   $\|\Psi_N\|$? Liegt ein Nullmodus vor? Konvergieren $\int|\lambda|^{-2k-2}d\mu_{\Psi_N}$?
-   Das entscheidet [O-221-1c1a–c] empirisch in Stunden statt analytisch in Wochen.
-3. **Off-Diagonal-Kopplung messen.** $K_{pq}$ für kleine $p,q$ numerisch — trägt S1
-   tatsächlich, oder ist die Kopplung asymptotisch vernachlässigbar? Das prüft zugleich
-   [O-221-1c1d].
-
-Vorhandene Infrastruktur: [`Riemann`](https://github.com/Waschtl904/Riemann) (Python) und
-[`arith-spectral-bridge`](https://github.com/Waschtl904/arith-spectral-bridge) (Jupyter).
+Sobald $[O\text{-}220\text{-}1f_0]$ typisiert ist, sollte ein numerischer Pilot folgen:
+endliche Blockmodelle
+$$\mathcal Q_{S,N}=\begin{pmatrix}A_{\infty,N} & B_{\infty,S,N}\\ B_{\infty,S,N}^* & A_{S,N}\end{pmatrix}$$
+prüfen, um zu testen, ob echte Primkopplungen negative archimedische Eigenrichtungen anheben
+können. Das ersetzt keinen Beweis, entscheidet aber früh, ob die globale Kopplungsidee in die
+richtige Richtung weist.
 
 ---
 
-## 6. Antwort auf die Ausgangsfrage
+## 6. Antwort auf die Ausgangsfrage — revidiert
 
-**Können wir Aussagen über X treffen?** Ja, und zwar deutlich schärfere als vor einem Monat.
-Elf erzwungene Struktureigenschaften S1–S11 plus ein siebenteiliges Kriterienbündel
-HP-1–HP-7. Das ist ein Fahndungsbild, kein Nebel.
+**Können wir Aussagen über X treffen?** Ja, deutlich schärfer als zuvor. Zwölf erzwungene
+Struktureigenschaften S1–S12 plus HP-1–HP-7 liefern heute ein präzises Fahndungsbild.
 
-**Können wir es konstruieren?** Nein. Die Kette Primkanten → Selbstenergie → Mangoldt-Spur
-trägt bis $\Re\beta>1$ und bricht genau am kritischen Streifen. Der Feshbach-Kandidat ist
-formal notiert, aber nicht typisiert.
+**Können wir es konstruieren?** Noch nicht. Der alte lokale Vergleichsoperatorpfad ist
+negativ geschlossen, und der isolierte archimedische Kanal ist lokal nicht positiv.
 
-**Können wir es eingrenzen?** Das ist genau das, was passiert ist — nur unverbucht.
-22 No-Gos haben den Möglichkeitsraum massiv verkleinert. An zwei Stellen so stark, dass
-Leere droht (§4.1) oder Tautologie (§4.2).
+**Können wir es eingrenzen?** Ja — stärker als je zuvor. Der Raum möglicher Kandidaten ist
+nicht nur kleiner geworden; seine verbleibende Form ist jetzt wesentlich präziser:
+Objekt X muss global gekoppelt, nichtdiagonal und positiv nur auf der Ebene der vollständigen
+Blockform sein.
 
-**Die archäologische Analogie trägt, aber mit einer Korrektur.** Wir graben nicht das
-Objekt aus. Wir haben das Erdreich rundum abgetragen und dabei einen **Hohlraum** freigelegt,
-dessen Wände immer schärfer werden. Was fehlt, ist der Abguss: die Sammlung aller
-Wandbedingungen an einem Ort, gegen die ein Kandidat geprüft werden kann. Das ist G1, und
-es ist die billigste und wirksamste nächste Maßnahme.
+**Die archäologische Analogie gilt weiter, aber präziser.** Wir haben nicht nur den Hohlraum
+freigelegt, sondern jetzt auch eine weitere harte Wand entdeckt: der archimedische Kanal ist
+lokal indefinit. Ein Abguss kann deshalb nicht aus lokal passenden Einzelstücken bestehen,
+sondern nur aus einer globalen, miteinander verriegelten Form.
 
 ---
 
-*Grundlagendokumente dieser Auswertung: Soll-Profil aus `00-grundlegung/`, Negativbild aus
-22 No-Go-Dokumenten, Positivbestand aus der Konstruktionskette NEU-42 bis NEU-221d.
-Alle Statusmarken unverändert aus den Quellen übernommen. Die Synthesen in §2, §4 und §5
-sind Ableitungen aus den Quellen, keine Quellenaussagen.*
+*Grundlagendokumente dieser Fassung: Soll-Profil aus `00-grundlegung/`, Negativbild aus den
+No-Go-Dokumenten, Positivbestand aus NEU-42 bis NEU-221e, Vergleichsoperatorabschluss aus
+NEU-223/225/227, archimedische Positivitätsklassifikation aus NEU-220c. Alle Statusmarken
+wurden gegenüber der Vorfassung bewusst revidiert, wo spätere Audits die frühere Diagnose
+überholt haben.*
