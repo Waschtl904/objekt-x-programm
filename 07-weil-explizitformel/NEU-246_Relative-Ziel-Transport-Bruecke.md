@@ -1,11 +1,15 @@
 # NEU-246 — Relative-Ziel–Transport-Brücke
 
+> **Rückstufungsvermerk (NEU-247, 2026-08-06):** Der Direktaudit NEU-247 stuft die zentrale Behauptung dieser Datei zurück. \(\iota_{p,N}^{(1)}\) ist **keine bewiesene intrinsische Wres-Hilbertbrücke**, sondern höchstens eine **konditionale, koordinatenabhängige Modellsektion** \(\checkmark[K/M]\). Konkrete Fehler: (a) die Indexidentifikation \(\eta_{p;p;a,k}\) widerspricht dem Koordinatenwörterbuch \(\eta_{p;m;s,u}\leftrightarrow e_RV_M\) und unterdrückt den \(u\)-Regulator; (b) aus nichtverschwindenden Diagonalwerten wurde fälschlich Radikaltrivialität gefolgert (\(\times[M]\)); (c) die Normierung \(E_r\mapsto\tfrac1{\sqrt{w_{p,r}}}\eta_r\) ist falsch, korrekt wäre \(E_r\mapsto\sqrt{w_{p,r}}\eta_r\) (\(\times[M]\)); (d) die Indexkorrespondenz in §6 ist kein Operatorintertwining. Der neue vorgelagerte Knoten ist \([O\text{-}246/0]\) — Wres-Sektionsunabhängigkeit im Primsektor —, nicht die Positivität von \(w_{p,r}\). Vollständiger Audit: [NEU-247](./NEU-247_Direktaudit_NEU246_Ruckstufung_Koordinatensektion.md).
+
+---
+
 **Kennung:** NEU-246  
 **Ordner:** `07-weil-explizitformel/`  
 **Datum:** 2026-08-06  
 **Vorgänger:** NEU-245f — Transportmittelwert- und Nullstellenaudit  
-**Knoten:** \([O\text{-}245f/1]\) — Relative-Ziel–Transport-Brücke  
-**Nachfolger:** \([O\text{-}246/1]\) — Mittelwertabstieg durch Wres-Quotient
+**Knoten:** \([O\text{-}245f/1]\) — Relative-Ziel–Transport-Brücke (Status: nach NEU-247 zurückgestuft, siehe Vermerk oben)  
+**Nachfolger:** \([O\text{-}246/0]\) — Wres-Sektionsunabhängigkeit im Primsektor (statt ursprünglich \([O\text{-}246/1]\))
 
 ---
 
@@ -32,7 +36,7 @@ Die sechs in NEU-245f §17 formulierten Bedingungen sind:
 5. Behandlung der zusammengesetzten Zielsektoren \(pm\);
 6. Definition des Mittelwertfunktionals auf dem Quotienten.
 
-Der vorliegende Audit prüft diese Bedingungen und trifft für jede eine begründete Statusbuchung.
+Der vorliegende Audit prüft diese Bedingungen und trifft für jede eine begründete Statusbuchung. **Hinweis:** Die nachfolgenden Statusbuchungen wurden durch NEU-247 als teils fehlerhaft identifiziert; siehe Rückstufungsvermerk oben und NEU-247 §2/§11 für die korrigierte Fassung.
 
 ---
 
@@ -103,31 +107,23 @@ NEU-225 hält explizit fest: Zusammengesetzte Fasern mit \(m_0\ne p\) sind nicht
 
 ---
 
-## 3 — Bedingung 1: Indexübereinstimmung
+## 3 — Bedingung 1: Indexübereinstimmung *(nach NEU-247: ⚠[M], siehe Vermerk)*
 
 Ein relativer Basisvektor \(E^{\mathrm{rel}}_{r;\,m\xrightarrow p pm}\) landen im Transportraum der Zielfaser \(pm\). Für \(m=1\) ist das \(pm=p\), also genau der von NEU-225 behandelte Primsektor.
 
-Dort ist die Restklasse \(a=r\bmod p\), und der Transportketten-Index \(\nu=\lfloor r/p\rfloor\). Der natürliche Kandidat für die Brückenabbildung ist daher:
+Dort ist die Restklasse \(a=r\bmod p\), und der Transportketten-Index \(\nu=\lfloor r/p\rfloor\). Der ursprünglich vorgeschlagene Kandidat für die Brückenabbildung war:
 
 \[
-\boxed{
 \iota_{p,N}^{(1)}:
 E^{\mathrm{rel}}_{r;\,1\xrightarrow p p}
 \longmapsto
 \eta_{p;\,p;\,(r\bmod p),\,(\lfloor r/p\rfloor)}
-}
 \]
 
-also \(b_{p,1,r,\nu}=\delta_{\nu,\lfloor r/p\rfloor}\), alle anderen Koeffizienten null.
-
-Die Indexbedingungen des Zielraums sind damit erfüllt:
-- Primzahl: \(p\) auf beiden Seiten gleich;
-- Zielfaser: \(pm=p\) auf beiden Seiten;
-- Restklasse: \(r\bmod p\) korrekt;
-- Transportkette: \(\lfloor r/p\rfloor\) eindeutig.
+**NEU-247 zeigt:** Dies widerspricht dem Koordinatenwörterbuch \(\eta_{p;m;s,u}\leftrightarrow e_RV_M\), \(R=u+ps\), wonach \(\eta_{p;p;a,k}\leftrightarrow e_{k+pa}V_{p^2}\) und nicht \(e_{a+pk}V_{p^2}\) entspricht. Korrekt wäre \(s=k,\,u=a\), also \(\eta_{p;p;k,a}\). Zudem unterdrückt die Formel den unabhängigen \(u\)-Regulatorparameter aus NEU-225.
 
 \[
-\boxed{[O\text{-}245f/1\text{-index}] \quad \checkmark[M]_{\mathrm{m=1}}}
+\boxed{[O\text{-}245f/1\text{-index}] \quad \warning[M]\ \text{(korrigiert von NEU-247, ursprünglich fälschlich }\checkmark[M]\text{)}}
 \]
 
 Für \(m>1\) ist der Zielsektor \(pm\) zusammengesetzt. NEU-225 liefert für diesen Fall keine Transportbasis. Bedingung 1 ist deshalb für \(m>1\) nicht erfüllbar auf dem gegenwärtigen Quellenstand.
@@ -138,7 +134,7 @@ Für \(m>1\) ist der Zielsektor \(pm\) zusammengesetzt. NEU-225 liefert für die
 
 ---
 
-## 4 — Bedingung 2: Kompatibilität mit dem Wres-Radikal
+## 4 — Bedingung 2: Kompatibilität mit dem Wres-Radikal *(nach NEU-247: ✗[M]→?[O], siehe Vermerk)*
 
 Das Wres-Radikal \(\mathcal N_{\mathrm{Wres,rel}}\) ist der Kern der Wres-Paarung auf \(\mathscr V_{p,N}^{\mathrm{target}}\). Damit \(\iota_{p,N}^{(1)}\) auf den Quotienten absteigt, muss gelten:
 
@@ -146,65 +142,40 @@ Das Wres-Radikal \(\mathcal N_{\mathrm{Wres,rel}}\) ist der Kern der Wres-Paarun
 \mathcal N_{\mathrm{Wres,rel}} \subseteq \ker \iota_{p,N}^{(1)}.
 \]
 
-NEU-221e beschreibt das Radikal durch die Bedingung, dass die Wres-Paarung zweier Vektoren verschwindet. Im Primsektor \(m=1\) sind die Basisbasisvektoren \(E^{\mathrm{rel}}_{r;\,1\xrightarrow p p}\) nach NEU-221e paarweise nicht-ausgearteter Wres-Typ, d.h.:
+Die ursprüngliche Argumentation folgerte aus nichtverschwindenden Diagonalwerten \(c_{r,r}\ne0\) ein triviales Radikal. **NEU-247 widerlegt dies:** Eine Matrix wie \(\begin{pmatrix}1&1\\1&1\end{pmatrix}\) hat nichtverschwindende Diagonale, aber nichttriviales Radikal. Die vollständige Grammatrix \(h_{\mathrm{Wres,rel}}(E_r,E_{r'})\) fehlt; sie ist für die Radikalbestimmung notwendig.
 
 \[
-\operatorname{Wres}(E^{\mathrm{rel}}_{r;\,1\xrightarrow p p},E^{\mathrm{rel}}_{r';\,1\xrightarrow p p})=c_{r,r'}\ne0\quad\text{für }r=r'.
-\]
-
-Daraus folgt: Im Primsektor \(m=1\) ist das Radikal trivial (kein Basisvektor liegt im Radikal), und \(\iota_{p,N}^{(1)}\) ist automatisch radikalkompatibel.
-
-\[
-\boxed{[O\text{-}245f/1\text{-radical-m1}] \quad \checkmark[M]}
-\]
-
-Ob die Paarungsformel aus NEU-221e tatsächlich \(c_{r,r}\ne0\) für alle Primfaser-Basisvektoren impliziert, ist im Detail an der konkreten Wres-Trace-Formel abzulesen. NEU-221e benennt hier keine Ausnahme; das Ergebnis ist daher quellenkonsistent, aber nicht als Satz in NEU-221e ausgedrückt.
-
-\[
-\boxed{[O\text{-}245f/1\text{-radical-wres-nondeg}] \quad \checkmark[K/M]}
+\boxed{[O\text{-}245f/1\text{-radical-m1}] \quad ?[O]\ \text{(korrigiert von NEU-247, ursprünglich fälschlich }\checkmark[M]\text{)}}
 \]
 
 ---
 
-## 5 — Bedingung 3: Abstieg auf den positiven relativen Hilbertraum
+## 5 — Bedingung 3: Abstieg auf den positiven relativen Hilbertraum *(nach NEU-247: ✗[M]→?[O], siehe Vermerk)*
 
-NEU-221e verwendet die Wres-Paarung zur Konstruktion eines positiven relativen Hilbertraums \(\mathscr H_{\mathrm{rel},p}\) durch GNS-ähnliche Vervollständigung. NEU-225 stellt den Transportraum \(\ell^2\)-Seite bereit.
-
-Für die Abbildung \(\iota_{p,N}^{(1)}\) ist zu prüfen, ob die Wres-Norm auf dem Bildraum mit der \(\ell^2\)-Norm auf dem Transportraum übereinstimmt. Setze:
+Die ursprüngliche normerhaltende Brücke war behauptet als:
 
 \[
-\|E^{\mathrm{rel}}_{r;\,1\xrightarrow p p}\|_{\mathrm{Wres}}^2
-=
-\operatorname{Wres}(E^{\mathrm{rel}}_{r},E^{\mathrm{rel}}_{r})
-=:w_{p,r}.
-\]
-
-Dann ist die normerhaltende Brücke:
-
-\[
-\boxed{
 \iota_{p,N}^{\mathrm{norm}}:
 E^{\mathrm{rel}}_{r;\,1\xrightarrow p p}
 \longmapsto
-\frac{1}{\sqrt{w_{p,r}}}\,\eta_{p;p;(r\bmod p),(\lfloor r/p\rfloor)}
-}
+\frac{1}{\sqrt{w_{p,r}}}\,\eta_{p;p;(r\bmod p),(\lfloor r/p\rfloor)},
+\qquad
+w_{p,r}:=\|E^{\mathrm{rel}}_{r}\|_{\mathrm{Wres}}^2.
 \]
 
-falls \(w_{p,r}>0\) für alle \(r\). Der Wert \(w_{p,r}\) ist in NEU-221e nicht explizit berechnet. Er hängt von der Wres-Trace-Formel auf \(e_r V_p\) ab (NEU-41, NEU-220a).
+**NEU-247 zeigt den Normierungsfehler:** Mit \(\|\eta_r\|=1\) gilt \(\|\tfrac1{\sqrt{w_{p,r}}}\eta_r\|^2=1/w_{p,r}\ne w_{p,r}=\|E_r\|^2\) (außer im Sonderfall \(w_{p,r}=1\)). Die korrekte isometrische Formel wäre \(E_r\mapsto\sqrt{w_{p,r}}\,\eta_r\), konditional zu einer noch unbewiesenen diagonalen positiven Grammatrix.
 
 \[
-\boxed{[O\text{-}245f/1\text{-hilbert-descent}] \quad \checkmark[K/M]}
+\boxed{[O\text{-}245f/1\text{-hilbert-descent}] \quad ?[O]\ \text{(Normierung falsch, korrigiert von NEU-247)}}
 \]
 
-Die Bedingung \(w_{p,r}>0\) ist quellenkonsistent (Wres-positiv-Typ im Primsektor), aber als vollständige Aussage offen.
-
 \[
-\boxed{[O\text{-}245f/1\text{-wres-positivity}] \quad ?[O]}
+\boxed{[O\text{-}245f/1\text{-wres-positivity}] \quad ?[O]\ \text{(nachrangig gegenüber neuem Knoten }[O\text{-}246/0]\text{)}}
 \]
 
 ---
 
-## 6 — Bedingung 4: Intertwining
+## 6 — Bedingung 4: Intertwining *(nach NEU-247: bestätigt ?[O], Modellstatus präzisiert)*
 
 Zu prüfen ist:
 
@@ -218,26 +189,14 @@ D_{\mathrm{transport}}\,\iota_{p,N}^{(1)}
 
 **Transportseite:** \(D_{\mathrm{transport}}\) ist in NEU-225 der Primfaser-Transportoperator mit Spektraldarstellung über die Eichrelation \(D_{\mathrm{pot}}=U^{-1}D_0 U\).
 
-Die natürliche Modellidentifikation ist: \(E^{\mathrm{rel}}_{r;\,1\xrightarrow p p}\) ist ein Träger-Eigenzustand mit Wellenvektor \(k=\lfloor r/p\rfloor\) in der Primfaser-Kette der Restklasse \(a=r\bmod p\). Unter dieser Identifikation würde:
-
-\[
-D_{\mathrm{rel}}\,E^{\mathrm{rel}}_{r}
-\overset{?}{=}
-\iota_{p,N}^{(1)-1}D_{\mathrm{transport}}\,\eta_{p;p;a,k}
-\]
-
-den Intertwining-Satz ergeben.
-
-Jedoch: \(D_{\mathrm{rel}}\) ist auf dem Quellenraum der NEU-221e-Konstruktion nicht explizit definiert. Die Kopplungsformel liefert das Bild des Kopplungsoperators, nicht eine Eigenwertgleichung. Daher ist Bedingung 4 offen.
+Die ursprünglich als "Modellidentifikation kohärent" gebuchte Aussage, \(E^{\mathrm{rel}}_{r}\) sei ein "Träger-Eigenzustand", ist nach NEU-247 §7.1 **nicht zulässig**: Die \(\eta\)-Basis ist eine Graph-/Kopplungsbasis ohne normale Eigenvektoren (rein absolut kontinuierliches Spektrum des Transportgenerators). Ein tautologischer Pullback \(D_E:=\iota^{-1}D_{\mathrm{transport}}\iota\) erfüllt die Intertwining-Gleichung nur definitorisch und beweist keine Übereinstimmung mit einem quellenseitigen \(D_{\mathrm{rel}}\).
 
 \[
 \boxed{[O\text{-}245f/1\text{-intertwining}] \quad ?[O]}
 \]
 
-Die natürliche Modellidentifikation ist dennoch kohärent: Falls ein Operator \(D_{\mathrm{rel}}\) mit den richtigen Eigenschaften definiert werden kann, würde die Indexabbildung aus §3 die Intertwining-Bedingung erfüllen.
-
 \[
-\boxed{[O\text{-}245f/1\text{-intertwining-model}] \quad \checkmark[K/M]}
+\boxed{[O\text{-}245f/1\text{-intertwining-model}] \quad \checkmark[K/M]\ \text{(nur als tautologischer Pullback, kein Beweis)}}
 \]
 
 ---
@@ -251,22 +210,18 @@ Für \(m>1\) ist der Zielsektor \(pm\) zusammengesetzt. NEU-225 gibt hier keine 
 - Verträglichkeit der Eichphasen verschiedener Primkomponenten;
 - ein explizites Tensorprodukt-Intertwining.
 
-**Strategie B — Direkte Basisdefinition.** Man erklärt \(\mathscr H_{\mathrm{rel},p,m}\) für \(m>1\) einfach als den durch \(\{E^{\mathrm{rel}}_{r;\,m\xrightarrow p pm}\}\) aufgespannten Hilbertraum mit der induzierten Wres-Norm und transportiert die Kopplungskoeffizienten ohne Diagonalisierung.
-
-Strategie B ist für die Mittelwertfrage ausreichend, sofern man nur die bilineare Bedingungsgleichung aus NEU-245f §11 ausschreiben, nicht aber diagonalisieren möchte.
-
-Für die Spektralfrage (Eigenwerte, Stieltjes-Funktion, Hankel-Positivität) ist Strategie A notwendig.
+**Strategie B — Direkte Basisdefinition.** *(nach NEU-247 §9: Diese "Strategie" setzt die offenen Probleme Positivität, Radikal, Liftunabhängigkeit bereits voraus und ist keine abgeschlossene Konstruktion.)*
 
 \[
 \boxed{[O\text{-}245f/1\text{-composite-structureA}] \quad ?[O]}
 \]
 \[
-\boxed{[O\text{-}245f/1\text{-composite-structureB}] \quad \checkmark[K/M]}
+\boxed{[O\text{-}245f/1\text{-composite-structureB}] \quad ?[O]\ \text{(zurückgestuft von }\checkmark[K/M]\text{, siehe NEU-247 §9)}}
 \]
 
 ---
 
-## 8 — Bedingung 6: Mittelwertfunktional auf dem Quotienten
+## 8 — Bedingung 6: Mittelwertfunktional auf dem Quotienten *(nach NEU-247: ?[O], siehe Vermerk)*
 
 NEU-245f §12 identifiziert die offene Frage:
 
@@ -274,10 +229,10 @@ NEU-245f §12 identifiziert die offene Frage:
 \mathcal N_{\mathrm{Wres,rel}}\subseteq\ker\mathcal M_{p,a} \quad?[O]
 \]
 
-Im Primsektor \(m=1\) ist das Radikal trivial (Bedingung 2). Damit ist die Quotientenkompatibilität des Mittelwertfunktionals im Primsektor automatisch erfüllt:
+Die ursprüngliche Buchung erklärte den Abstieg im Primsektor für automatisch, da das Radikal als trivial behauptet wurde. **Da dieser Radikalnachweis nach NEU-247 §5 falsch ist, fällt der Mittelwertabstieg zurück auf offen:**
 
 \[
-\boxed{[O\text{-}245f/1\text{-mean-quotient-m1}] \quad \checkmark[M]}
+\boxed{[O\text{-}245f/1\text{-mean-quotient-m1}] \quad ?[O]\ \text{(korrigiert von NEU-247, ursprünglich fälschlich }\checkmark[M]\text{)}}
 \]
 
 Für zusammengesetzte Sektoren \(m>1\) kann das Radikal nichtrivial sein. Das Mittelwertfunktional \(\mathcal M_{p,a}\) ist dort noch nicht definiert (da der Transportraum fehlt). Bedingung 6 ist für \(m>1\) offen.
@@ -288,15 +243,15 @@ Für zusammengesetzte Sektoren \(m>1\) kann das Radikal nichtrivial sein. Das Mi
 
 ---
 
-## 9 — Explizite Mittelwertkoeffizienten im konstruierten Rahmen
+## 9 — Explizite Mittelwertkoeffizienten im konstruierten Rahmen *(konditional, Normierungsfehler siehe Vermerk)*
 
-Mit der Brückenabbildung aus §3 und der normierten Version aus §5 kann die Mittelwertbedingung aus NEU-245f §11 im Primsektor \(m=1\) jetzt voll explizit geschrieben werden. Setze:
+Mit der ursprünglich vorgeschlagenen Brückenabbildung aus §3 und der **fehlerhaft normierten** Version aus §5 lautete die formal aufgeschriebene Mittelwertbedingung. **NEU-247 §6/§8 stellt fest, dass diese Formel wegen des Normierungsfehlers keine intrinsische Quotientenformel ist** und bei korrigierter Zuordnung \(E_r\mapsto\sqrt{w_{p,r}}\eta_r\) die Gewichtsfaktoren invertiert werden müssten. Setze weiterhin formal:
 
 \[
 a = r\bmod p,\qquad k = \lfloor r/p\rfloor,\qquad \alpha_{p,a}=\tfrac{2a}{p}-1.
 \]
 
-Die Koeffizientenformel aus NEU-245f §8 ergibt:
+Die ursprüngliche (fehlerhaft normierte) Formel:
 
 \[
 \mathcal M_{p,a}^+(\iota_{p,N}(E^{\mathrm{rel}}_{r;\,1\to p}))
@@ -305,116 +260,71 @@ Die Koeffizientenformel aus NEU-245f §8 ergibt:
 \frac{\pi\,e^{i\pi k/2}}{\Gamma\!\left(\frac34+\frac{k+\alpha_{p,a}}{2}\right)\Gamma\!\left(\frac34-\frac{k+\alpha_{p,a}}{2}\right)}.
 \]
 
-Die Mittelwertbedingung für einen Rohkopplungsterm:
-
-\[
-\boxed{
-\sum_{r}\,
-c_r\cdot
-\frac{e^{i\pi \lfloor r/p\rfloor/2}}
-{\Gamma\!\left(\frac34+\frac{\lfloor r/p\rfloor+\alpha_{p,r\bmod p}}{2}\right)
-\Gamma\!\left(\frac34-\frac{\lfloor r/p\rfloor+\alpha_{p,r\bmod p}}{2}\right)}
-=0.
-}
-\]
-
-Dies ist die vollständig explizite, quellenkonsistente Form der Mittelwert-Auslöschungsbedingung im Primsektor, konditional zur Wres-Positivität \(w_{p,r}>0\).
+sollte durch die konditional korrekte Version mit \(\sqrt{w_{p,r}}\) statt \(1/\sqrt{w_{p,r}}\) ersetzt werden, sobald \(w_{p,r}\) intrinsisch definiert ist (siehe NEU-247 §4, §14).
 
 ---
 
-## 10 — Gesamturteil
+## 10 — Gesamturteil *(nach NEU-247 zurückgestuft, siehe Vermerk oben)*
 
 \[
-\boxed{[O\text{-}245f/1] \quad \checkmark[M]_{\mathrm{part}}}
+\boxed{[O\text{-}245f/1] \quad \checkmark[M]_{\mathrm{part}}\ \to\ \text{Hauptbehauptung: }\checkmark[M]_{\mathrm{neg,Quelle}};\ \text{tatsächlich erreicht: }\checkmark[K/M]}
 \]
 
-Die sechs Bedingungen werden wie folgt bewertet:
+Die sechs Bedingungen, **korrigiert gemäß NEU-247**:
 
-| Bedingung | Primsektor \(m=1\) | Zusammengesetzt \(m>1\) |
+| Bedingung | Primsektor \(m=1\) (korrigiert) | Zusammengesetzt \(m>1\) |
 |---|---|---|
-| 1 — Indexübereinstimmung | \(\checkmark[M]\) | \(?[O]\) |
-| 2 — Wres-Radikalkompatibilität | \(\checkmark[K/M]\) | \(?[O]\) |
-| 3 — Hilbert-Abstieg | \(\checkmark[K/M]\) | \(?[O]\) |
-| 4 — Intertwining | \(\checkmark[K/M]\) (Modell) | \(?[O]\) |
+| 1 — Indexübereinstimmung | \(\warning[M]\) | \(?[O]\) |
+| 2 — Wres-Radikalkompatibilität | \(?[O]\) | \(?[O]\) |
+| 3 — Hilbert-Abstieg | \(?[O]\) | \(?[O]\) |
+| 4 — Intertwining | \(?[O]\) | \(?[O]\) |
 | 5 — Zusammengesetzte Fasern | (nicht betroffen) | \(?[O]\) |
-| 6 — Mittelwert auf Quotient | \(\checkmark[M]\) | \(?[O]\) |
+| 6 — Mittelwert auf Quotient | \(?[O]\) | \(?[O]\) |
 
-Im Primsektor \(m=1\) ist die Brückenabbildung \(\iota_{p,N}^{(1)}\) konstruiert und alle sechs Bedingungen sind entweder bestätigt oder in einem kohärenten Modellsinn erreichbar. Die einzige verbleibende echte Unbekannte im Primsektor ist \(w_{p,r}>0\).
-
----
-
-## 11 — Nächster atomarer Knoten
-
-\[
-\boxed{[O\text{-}246/1] \quad \text{Wres-Positivität im Primsektor und Mittelwertabstieg.}}
-\]
-
-### Arbeitsauftrag
-
-Zu zeigen oder zu widerlegen:
-
-\[
-\operatorname{Wres}(E^{\mathrm{rel}}_{r;\,1\xrightarrow p p},\,E^{\mathrm{rel}}_{r;\,1\xrightarrow p p}) > 0
-\qquad\text{für alle }r\in\mathbb Z.
-\]
-
-Hierfür ist die Wres-Trace-Formel aus NEU-41/NEU-220a auf den Bildvektor der Rohkopplung anzuwenden und das Vorzeichen des Diagonalwerts zu bestimmen.
+Einzig bewiesen ist die reine arithmetische Zerlegung \(r=a+pk\). Alle übrigen Punkte sind entweder offen oder als Modellrechnung, nicht als Beweis, zu buchen. Siehe NEU-247 für den vollständigen Direktaudit und die korrigierte Statusbuchung \([O\text{-}246\text{-a}]\) bis \([O\text{-}246\text{-j}]\).
 
 ---
 
-## 12 — Repository-Korrekturblock
+## 11 — Nächster atomarer Knoten *(ersetzt durch NEU-247 §14)*
+
+> **Ersetzt:** Der ursprünglich hier formulierte Knoten \([O\text{-}246/1]\) (Wres-Positivität \(w_{p,r}>0\)) kommt nach NEU-247 zu früh. Der tatsächlich nächste Knoten ist:
+>
+> \[
+> \boxed{[O\text{-}246/0] \quad \text{Wres-Sektionsunabhängigkeit im Primsektor.}}
+> \]
+>
+> Zu entscheiden: Gilt \(\eta_{p;p;s+t,u-pt}\in\mathcal N_{\mathrm{Wres,rel}}\) für alle \(s,u,t\in\mathbb Z\)? Details, Arbeitsauftrag und Begründung: siehe [NEU-247](./NEU-247_Direktaudit_NEU246_Ruckstufung_Koordinatensektion.md) §14.
+
+---
+
+## 12 — Repository-Korrekturblock *(historisch, siehe NEU-247 §16 für korrigierte Fassung)*
 
 ```text
-AUDIT [O-245f/1]
+AUDIT [O-245f/1] — HISTORISCHE FASSUNG, DURCH NEU-247 KORRIGIERT
 
-Brückenabbildung Primsektor m=1:
+Brückenabbildung Primsektor m=1 (fehlerhaft, siehe NEU-247 §3.2):
   iota_{p,N}^{(1)}:
   E_rel_{r; 1->p}
   |--> eta_{p; p; (r mod p); floor(r/p)}
 
-  Normiert:
+  Normiert (Normierungsfehler, siehe NEU-247 §6):
   E_rel_{r; 1->p}
   |--> (1/sqrt(w_{p,r})) eta_{p; p; (r mod p); floor(r/p)}
 
-Bedingungen m=1:
-  Index:          checkmark[M]
-  Radikal:        checkmark[K/M]  (triviales Radikal im Primsektor)
-  Hilbert:        checkmark[K/M]  (erfordert w_{p,r}>0)
-  Intertwining:   checkmark[K/M]  (Modellidentifikation kohärent)
-  Komposita:      nicht betroffen
-  Mittelwert:     checkmark[M]
+Bedingungen m=1 (korrigierter Status siehe NEU-247 §11):
+  Index:          warning[M]  (urspruenglich faelschlich checkmark[M])
+  Radikal:        ?[O]        (urspruenglich faelschlich checkmark[K/M])
+  Hilbert:        ?[O]        (urspruenglich faelschlich checkmark[K/M])
+  Intertwining:   ?[O]        (urspruenglich faelschlich checkmark[K/M])
+  Komposita:      ?[O]
+  Mittelwert:     ?[O]        (urspruenglich faelschlich checkmark[M])
 
-Offene Punkte:
-  w_{p,r} > 0:   ?[O]   --> naechster Knoten [O-246/1]
-  m>1:           ?[O]   --> zusammengesetzte Fasern
+Naechster Knoten (korrigiert):
+  [O-246/0]
+  Wres-Sektionsunabhaengigkeit im Primsektor.
+  (statt urspruenglich [O-246/1] Wres-Positivitaet)
 
-Explizite Mittelwertbedingung im Primsektor:
-  sum_r c_r *
-  exp(i pi floor(r/p) / 2) /
-  [Gamma(3/4 + (floor(r/p) + alpha_{p, r mod p})/2)
-   Gamma(3/4 - (floor(r/p) + alpha_{p, r mod p})/2)]
-  = 0
-
-  mit alpha_{p,a} = 2a/p - 1.
-
-Status:
-  [O-245f/1]                              checkmark[M]_part
-  [O-245f/1-index]                        checkmark[M]_m=1
-  [O-245f/1-index-composite]              ?[O]
-  [O-245f/1-radical-m1]                   checkmark[M]
-  [O-245f/1-radical-wres-nondeg]          checkmark[K/M]
-  [O-245f/1-hilbert-descent]              checkmark[K/M]
-  [O-245f/1-wres-positivity]              ?[O]
-  [O-245f/1-intertwining]                 ?[O]
-  [O-245f/1-intertwining-model]           checkmark[K/M]
-  [O-245f/1-composite-structureA]         ?[O]
-  [O-245f/1-composite-structureB]         checkmark[K/M]
-  [O-245f/1-mean-quotient-m1]             checkmark[M]
-  [O-245f/1-mean-quotient-composite]      ?[O]
-
-Naechster Knoten:
-  [O-246/1]
-  Wres-Positivität im Primsektor und Mittelwertabstieg.
+Vollstaendiger Audit: NEU-247
 ```
 
 ---
