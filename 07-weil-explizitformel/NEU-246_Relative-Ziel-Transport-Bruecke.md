@@ -1,6 +1,6 @@
 # NEU-246 — Relative-Ziel–Transport-Brücke
 
-> **Rückstufungsvermerk (NEU-247, 2026-08-06):** Der Direktaudit NEU-247 stuft die zentrale Behauptung dieser Datei zurück. \(\iota_{p,N}^{(1)}\) ist **keine bewiesene intrinsische Wres-Hilbertbrücke**, sondern höchstens eine **konditionale, koordinatenabhängige Modellsektion** \(\checkmark[K/M]\). Konkrete Fehler: (a) die Indexidentifikation \(\eta_{p;p;a,k}\) widerspricht dem Koordinatenwörterbuch \(\eta_{p;m;s,u}\leftrightarrow e_RV_M\) und unterdrückt den \(u\)-Regulator; (b) aus nichtverschwindenden Diagonalwerten wurde fälschlich Radikaltrivialität gefolgert (\(\times[M]\)); (c) die Normierung \(E_r\mapsto\tfrac1{\sqrt{w_{p,r}}}\eta_r\) ist falsch, korrekt wäre \(E_r\mapsto\sqrt{w_{p,r}}\eta_r\) (\(\times[M]\)); (d) die Indexkorrespondenz in §6 ist kein Operatorintertwining. Der neue vorgelagerte Knoten ist \([O\text{-}246/0]\) — Wres-Sektionsunabhängigkeit im Primsektor —, nicht die Positivität von \(w_{p,r}\). Vollständiger Audit: [NEU-247](./NEU-247_Direktaudit_NEU246_Ruckstufung_Koordinatensektion.md).
+> **Rückstufungsvermerk (NEU-247, 2026-08-06; korrigiert durch NEU-248, 2026-08-06):** Der Direktaudit NEU-247 stuft die zentrale Behauptung dieser Datei zurück. \(\iota_{p,N}^{(1)}\) ist **keine bewiesene intrinsische Wres-Hilbertbrücke**, sondern höchstens eine **konditionale, koordinatenabhängige Modellsektion** \(\checkmark[K/M]\). Konkrete Fehler: (a) die Indexidentifikation \(\eta_{p;p;a,k}\) widerspricht dem Koordinatenwörterbuch \(\eta_{p;m;s,u}\leftrightarrow e_RV_M\) und unterdrückt den \(u\)-Regulator; (b) aus nichtverschwindenden Diagonalwerten wurde fälschlich Radikaltrivialität gefolgert (\(\times[M]\)); (c) die Normierung \(E_r\mapsto\tfrac1{\sqrt{w_{p,r}}}\eta_r\) ist falsch, korrekt wäre \(E_r\mapsto\sqrt{w_{p,r}}\eta_r\) (\(\times[M]\)); (d) die Indexkorrespondenz in §6 ist kein Operatorintertwining. Der von NEU-247 vorgeschlagene Knoten \([O\text{-}246/0]\) — „Wres-Sektionsunabhängigkeit im Primsektor“ — wurde durch **NEU-248** seinerseits als **falsch formuliert und typwidrig** identifiziert: Die dort verwendete Formel \(\eta_{p;p;s+t,u-pt}\in\mathcal N_{\mathrm{Wres,rel}}\) ist ohne Differenzbildung falsch (sie würde bereits für \(t=0\) das gesamte Radikal fordern), und auch die korrigierte Differenzformel \(\eta_{p;p;s+t,u-pt}-\eta_{p;p;s,u}\in\mathcal N_{\mathrm{Wres,rel}}\) ist typwidrig, da \(\mathcal N_{\mathrm{Wres,rel}}\) im \(E\)-Rohzielraum liegt, die \(\eta\)-Vektoren dagegen im Transporthilbertraum. Der tatsächlich nächste Knoten ist \([O\text{-}246/0\mathrm{corr}]\) — Gewichteter Kollisionsoperator und kanonisches Rechtsinverses. Vollständiger Audit: [NEU-247](./NEU-247_Direktaudit_NEU246_Ruckstufung_Koordinatensektion.md); Typkorrektur und Nachfolgeknoten: [NEU-248](./NEU-248_Direktaudit_O246-0_Kollisionsoperator_Rechtsinverses.md).
 
 ---
 
@@ -8,8 +8,8 @@
 **Ordner:** `07-weil-explizitformel/`  
 **Datum:** 2026-08-06  
 **Vorgänger:** NEU-245f — Transportmittelwert- und Nullstellenaudit  
-**Knoten:** \([O\text{-}245f/1]\) — Relative-Ziel–Transport-Brücke (Status: nach NEU-247 zurückgestuft, siehe Vermerk oben)  
-**Nachfolger:** \([O\text{-}246/0]\) — Wres-Sektionsunabhängigkeit im Primsektor (statt ursprünglich \([O\text{-}246/1]\))
+**Knoten:** \([O\text{-}245f/1]\) — Relative-Ziel–Transport-Brücke (Status: nach NEU-247/NEU-248 zurückgestuft, siehe Vermerk oben)  
+**Nachfolger:** \([O\text{-}246/0\mathrm{corr}]\) — Gewichteter Kollisionsoperator und kanonisches Rechtsinverses (statt ursprünglich \([O\text{-}246/1]\) beziehungsweise \([O\text{-}246/0]\))
 
 ---
 
@@ -36,7 +36,7 @@ Die sechs in NEU-245f §17 formulierten Bedingungen sind:
 5. Behandlung der zusammengesetzten Zielsektoren \(pm\);
 6. Definition des Mittelwertfunktionals auf dem Quotienten.
 
-Der vorliegende Audit prüft diese Bedingungen und trifft für jede eine begründete Statusbuchung. **Hinweis:** Die nachfolgenden Statusbuchungen wurden durch NEU-247 als teils fehlerhaft identifiziert; siehe Rückstufungsvermerk oben und NEU-247 §2/§11 für die korrigierte Fassung.
+Der vorliegende Audit prüft diese Bedingungen und trifft für jede eine begründete Statusbuchung. **Hinweis:** Die nachfolgenden Statusbuchungen wurden durch NEU-247 als teils fehlerhaft identifiziert; siehe Rückstufungsvermerk oben und NEU-247 §2/§11 sowie NEU-248 für die korrigierte Fassung.
 
 ---
 
@@ -170,7 +170,7 @@ w_{p,r}:=\|E^{\mathrm{rel}}_{r}\|_{\mathrm{Wres}}^2.
 \]
 
 \[
-\boxed{[O\text{-}245f/1\text{-wres-positivity}] \quad ?[O]\ \text{(nachrangig gegenüber neuem Knoten }[O\text{-}246/0]\text{)}}
+\boxed{[O\text{-}245f/1\text{-wres-positivity}] \quad ?[O]\ \text{(nachrangig gegenüber neuem Knoten }[O\text{-}246/0\mathrm{corr}]\text{)}}
 \]
 
 ---
@@ -260,11 +260,11 @@ Die ursprüngliche (fehlerhaft normierte) Formel:
 \frac{\pi\,e^{i\pi k/2}}{\Gamma\!\left(\frac34+\frac{k+\alpha_{p,a}}{2}\right)\Gamma\!\left(\frac34-\frac{k+\alpha_{p,a}}{2}\right)}.
 \]
 
-sollte durch die konditional korrekte Version mit \(\sqrt{w_{p,r}}\) statt \(1/\sqrt{w_{p,r}}\) ersetzt werden, sobald \(w_{p,r}\) intrinsisch definiert ist (siehe NEU-247 §4, §14).
+sollte durch die konditional korrekte Version mit \(\sqrt{w_{p,r}}\) statt \(1/\sqrt{w_{p,r}}\) ersetzt werden, sobald \(w_{p,r}\) intrinsisch definiert ist (siehe NEU-247 §4, §14, sowie NEU-248 §6).
 
 ---
 
-## 10 — Gesamturteil *(nach NEU-247 zurückgestuft, siehe Vermerk oben)*
+## 10 — Gesamturteil *(nach NEU-247/NEU-248 zurückgestuft, siehe Vermerk oben)*
 
 \[
 \boxed{[O\text{-}245f/1] \quad \checkmark[M]_{\mathrm{part}}\ \to\ \text{Hauptbehauptung: }\checkmark[M]_{\mathrm{neg,Quelle}};\ \text{tatsächlich erreicht: }\checkmark[K/M]}
@@ -281,26 +281,30 @@ Die sechs Bedingungen, **korrigiert gemäß NEU-247**:
 | 5 — Zusammengesetzte Fasern | (nicht betroffen) | \(?[O]\) |
 | 6 — Mittelwert auf Quotient | \(?[O]\) | \(?[O]\) |
 
-Einzig bewiesen ist die reine arithmetische Zerlegung \(r=a+pk\). Alle übrigen Punkte sind entweder offen oder als Modellrechnung, nicht als Beweis, zu buchen. Siehe NEU-247 für den vollständigen Direktaudit und die korrigierte Statusbuchung \([O\text{-}246\text{-a}]\) bis \([O\text{-}246\text{-j}]\).
+Einzig bewiesen ist die reine arithmetische Zerlegung \(r=a+pk\). Alle übrigen Punkte sind entweder offen oder als Modellrechnung, nicht als Beweis, zu buchen. Siehe NEU-247 für den vollständigen Direktaudit und die korrigierte Statusbuchung \([O\text{-}246\text{-a}]\) bis \([O\text{-}246\text{-j}]\), sowie NEU-248 für die Typkorrektur des daraus abgeleiteten Knotens.
 
 ---
 
-## 11 — Nächster atomarer Knoten *(ersetzt durch NEU-247 §14)*
+## 11 — Nächster atomarer Knoten *(ersetzt durch NEU-247 §14, seinerseits typkorrigiert durch NEU-248)*
 
-> **Ersetzt:** Der ursprünglich hier formulierte Knoten \([O\text{-}246/1]\) (Wres-Positivität \(w_{p,r}>0\)) kommt nach NEU-247 zu früh. Der tatsächlich nächste Knoten ist:
+> **Ersetzt:** Der ursprünglich hier formulierte Knoten \([O\text{-}246/1]\) (Wres-Positivität \(w_{p,r}>0\)) kommt nach NEU-247 zu früh. NEU-247 §14 schlug daraufhin \([O\text{-}246/0]\) — „Wres-Sektionsunabhängigkeit im Primsektor“ vor, formuliert als: Gilt \(\eta_{p;p;s+t,u-pt}\in\mathcal N_{\mathrm{Wres,rel}}\) für alle \(s,u,t\in\mathbb Z\)?
+>
+> **Von NEU-248 korrigiert:** Diese Formel ist ohne Differenzbildung falsch — sie würde bereits für \(t=0\) fordern, dass \(\eta_{p;p;s,u}\in\mathcal N_{\mathrm{Wres,rel}}\) gilt, und damit sämtliche betreffenden Basisvektoren im Quotienten vernichten. Die formal korrigierte Differenzformel \(\eta_{p;p;s+t,u-pt}-\eta_{p;p;s,u}\in\mathcal N_{\mathrm{Wres,rel}}\) ist **weiterhin typwidrig**, denn \(\mathcal N_{\mathrm{Wres,rel}}\) liegt nach NEU-221e im \(E\)-Rohzielraum, während die \(\eta\)-Vektoren nach NEU-225 im orthonormalen Transporthilbertraum liegen — beide Differenzen leben in verschiedenen Räumen und sind ohne eine explizite Abbildung zwischen ihnen keine wohldefinierte Aussage.
+>
+> Der tatsächlich nächste Knoten ist daher:
 >
 > \[
-> \boxed{[O\text{-}246/0] \quad \text{Wres-Sektionsunabhängigkeit im Primsektor.}}
+> \boxed{[O\text{-}246/0\mathrm{corr}] \quad \text{Gewichteter Kollisionsoperator und kanonisches Rechtsinverses.}}
 > \]
 >
-> Zu entscheiden: Gilt \(\eta_{p;p;s+t,u-pt}\in\mathcal N_{\mathrm{Wres,rel}}\) für alle \(s,u,t\in\mathbb Z\)? Details, Arbeitsauftrag und Begründung: siehe [NEU-247](./NEU-247_Direktaudit_NEU246_Ruckstufung_Koordinatensektion.md) §14.
+> Dieser Knoten ersetzt den Radikaltest durch die korrekt typisierte algebraische Kollapsabbildung \(\kappa_p^{\mathrm{alg}}:\eta_{p;p;s,u}\mapsto E^{\mathrm{rel}}_{u+ps;1\to p}\), die Analyse ihres Kerns, den Nachweis der Unbeschränktheit des ungewichteten Hilbertkollapses, das gewichtete Faser-\(\ell^2\)-Beschränktheitskriterium \(\sup_R\sum_{u+ps=R}|b_{s,u}|^2<\infty\) und den kanonischen Rechtsinverse-Kandidaten \(\iota_{p,b}\). Details, Arbeitsauftrag und vollständige Begründung: siehe [NEU-247](./NEU-247_Direktaudit_NEU246_Ruckstufung_Koordinatensektion.md) §14 und [NEU-248](./NEU-248_Direktaudit_O246-0_Kollisionsoperator_Rechtsinverses.md).
 
 ---
 
-## 12 — Repository-Korrekturblock *(historisch, siehe NEU-247 §16 für korrigierte Fassung)*
+## 12 — Repository-Korrekturblock *(historisch, siehe NEU-247 §16 und NEU-248 §10 für korrigierte Fassung)*
 
 ```text
-AUDIT [O-245f/1] — HISTORISCHE FASSUNG, DURCH NEU-247 KORRIGIERT
+AUDIT [O-245f/1] — HISTORISCHE FASSUNG, DURCH NEU-247/NEU-248 KORRIGIERT
 
 Brückenabbildung Primsektor m=1 (fehlerhaft, siehe NEU-247 §3.2):
   iota_{p,N}^{(1)}:
@@ -319,12 +323,22 @@ Bedingungen m=1 (korrigierter Status siehe NEU-247 §11):
   Komposita:      ?[O]
   Mittelwert:     ?[O]        (urspruenglich faelschlich checkmark[M])
 
-Naechster Knoten (korrigiert):
-  [O-246/0]
-  Wres-Sektionsunabhaengigkeit im Primsektor.
-  (statt urspruenglich [O-246/1] Wres-Positivitaet)
+Naechster Knoten (zweifach korrigiert):
+  Schritt 1 (NEU-247): [O-246/0] Wres-Sektionsunabhaengigkeit im Primsektor
+    Formel (fehlerhaft, ohne Differenz):
+      eta_{p;p;s+t,u-pt} in N_Wres,rel
 
-Vollstaendiger Audit: NEU-247
+  Schritt 2 (NEU-248): Formel- und Typkorrektur
+    - korrigierte Differenzformel (weiterhin typwidrig):
+        eta_{p;p;s+t,u-pt} - eta_{p;p;s,u} in N_Wres,rel
+    - Grund: N_Wres,rel liegt im E-Rohzielraum, eta im Transporthilbertraum.
+    - korrektes Objekt: kappa_p^alg: eta_{p;p;s,u} |--> E_rel_{u+ps;1->p}
+
+  Tatsaechlich naechster Knoten:
+    [O-246/0corr]
+    Gewichteter Kollisionsoperator und kanonisches Rechtsinverses.
+
+Vollstaendiger Audit: NEU-247, NEU-248
 ```
 
 ---
