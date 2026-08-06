@@ -7,6 +7,8 @@
 **Knoten:** \([O\text{-}245c/1]\)  
 **Nachfolger (gesperrt bis Abschluss):** \([O\text{-}245c/2]\) — Identitätsaudit \(M_{X,N}(w)\to M_\Xi(w)\)
 
+> **Korrekturblock K1–K5 eingearbeitet** (2026-08-06): vier Überbuchungen und ein Exponentenfehler aus dem Erstaudit berichtigt; Näheres in Abschnitt 10.
+
 ---
 
 ## Gegenstand
@@ -40,68 +42,77 @@ Noch keine höheren Momente, noch kein Vergleich mit \(M_\Xi\).
 \mathcal{H}_N^{\mathrm{rel}} = \mathcal{H}_{N,\mathrm{raw}} \big/ \mathcal{N}_{W_{\mathrm{res}},\mathrm{rel}}
 \]
 
-der GNS-Abschluss über die relative Wres-Paarung eingeführt (NEU-221e §2.1–2.2).
+als GNS-Abschluss über die relative Wres-Paarung eingeführt (NEU-221e §2.1–2.2).
 
 **Befund:** Die Quotientenkonstruktion ist als abstrakter Hilbertraum vollständig definiert. Die Norm stammt aus der induzierten Wres-Paarung. ✓
 
-**Offener Punkt:** Die explizite Orthonormalbasis oder ein konkretes Spektraldichteobjekt für \(\mathcal{H}_N^{\mathrm{rel}}\) wird in keiner Quelle bis NEU-245c angegeben. Für [O-245c/1] genügt die abstrakte Definition; für [O-245c/2] wird eine direktere Beschreibung erforderlich sein.
+**Offener Punkt:** Eine explizite Orthonormalbasis oder ein konkretes Spektraldichteobjekt für \(\mathcal{H}_N^{\mathrm{rel}}\) wird in keiner Quelle bis NEU-245c angegeben. Für [O-245c/1] genügt die abstrakte Definition; für [O-245c/2] wird eine direktere Beschreibung erforderlich sein.
 
 ---
 
-### 1.2 \(D_N^{\mathrm{rel}}\) — Domäne und Selbstadjungiertheit
+### 1.2 \(D_N^{\mathrm{rel}}\) — Domäne, Symmetrie und essentielle Selbstadjungiertheit
 
 **Frage:** Ist \(D_N^{\mathrm{rel}}\) mit Domäne und Selbstadjungiertheit definiert?
 
-**Quellenlage (NEU-221c, NEU-221d):**  
-\(D_N^{\mathrm{rel}}\) wird als zyklischer Feshbach-Weyl-Kandidat auf dem Raum \(\mathcal{H}_N^{\mathrm{rel}}\) eingeführt. In NEU-221c §3 wird eine quadratische Resolventenstruktur angegeben; in NEU-221d §2 wird ein Nullmodusaudit durchgeführt.
+**Quellenlage:**  
+\(D_N^{\mathrm{rel}}\) wird in NEU-221c als zyklischer Feshbach-Weyl-Kandidat mit quadratischer Resolventenstruktur eingeführt. NEU-221d behauptet, die essentielle Selbstadjungiertheit sei durch NEU-53/54 abgeschlossen.
 
-Die Selbstadjungiertheit von \(D_N^{\mathrm{rel}}\) wird in NEU-221c als Postulat aus der zyklischen Feshbach-Weyl-Architektur übernommen, nicht aus einem konkreten Nelson-Kriterium oder Cayley-Argument für den Quotienten hergeleitet.
+**[K1] Korrektur — Quellenseitige Präzisierung:**  
+Die Buchung in NEU-221d ist zu stark:
 
-**Befund \(\checkmark[M]_{\mathrm{part}}\):**
+- **NEU-53** bezeichnet die essentielle Selbstadjungiertheit als **offenen ersten Beweisengpass**.
+- **NEU-54** formuliert die Nelson-Bedingungen, beweist sie aber **nicht**.
+- **NEU-55** erhält essentielle Selbstadjungiertheit nur **konditional** unter den noch offenen Schur-/Nelson-Abschätzungen.
 
-- Formale Selbstadjungiertheit: **postuliert, nicht konstruktiv bewiesen** im Quotienten.
-- Domäne: \(\mathcal{D}(D_N^{\mathrm{rel}})\subseteq\mathcal{H}_N^{\mathrm{rel}}\) nicht explizit charakterisiert.
-- Spektralmassexistenz \(\mu_{\Psi_N}\): nur unter der Annahme zugänglich, dass \(\Psi_N\) zyklisch und \(D_N^{\mathrm{rel}}\) tatsächlich selbstadjungiert ist.
-
-**Konsequenz für [O-245c/1]:** Die Auditpunkte 2–4 sind nur bedingt zugänglich. Sie setzen die postulierte Selbstadjungiertheit voraus. Das ist transparent zu vermerken.
-
----
-
-### 1.3 \(\Psi_N \in \mathcal{H}_N^{\mathrm{rel}}\) — konkreter Vektor
-
-**Frage:** Ist \(\Psi_N\) als konkreter Vektor konstruiert, nicht nur als formaler Lift?
-
-**Quellenlage (NEU-221e, NEU-221d):**  
-\(\Psi_N\) wird in NEU-221e als affiner Lift einer Basissektion \(\psi_p\) über die relative Hebungsfaser eingeführt. Der Lift ist **hebungsabhängig** (NEU-221e §6.1, Quellenkritik an NEU-41 §41.9).
-
-Nach dem Rückrollpunkt in NEU-221e (Gegenlesungskorrekturen 2026-07-28):
-
-> Der Test auf \(A_p^{\mathrm{adm}}\) ist äquivalent zum Test auf \(\Delta_p^{\mathrm{adm}}\) wegen Linearität von \(T_{\mathrm{raw}}\) und des Radikals \(\mathcal{N}_{W_{\mathrm{res}},\mathrm{rel}}\).
-
-Das heißt: \(\Psi_N\) **als Klasse in \(\mathcal{H}_N^{\mathrm{rel}}\)** ist wohldefiniert, sobald \(\psi_p \in A_p^{\mathrm{adm}}\). Die Klassendarstellung ist hebungsunabhängig modulo \(\mathcal{N}\).
-
-**Befund:** Als Element von \(\mathcal{H}_N^{\mathrm{rel}}\) ist \(\Psi_N\) durch die Quotientenstruktur wohldefiniert. Ein konkreter Repräsentant erfordert eine Wahl, aber die Klasse ist eindeutig. ✓ (unter den Voraussetzungen von NEU-221e)
-
----
-
-## 2 — Kanonizität von \(\Psi_N\)
-
-**Kernfrage:**
+Verbindlich gilt daher:
 
 \[
-\Psi_N \text{ unabhängig von der gewählten Hebung?}
+D_N^{\mathrm{rel}} \text{ symmetrisch} \quad \checkmark[M]
+\]
+\[
+D_N^{\mathrm{rel}} \text{ wesentlich selbstadjungiert} \quad ?[O]
 \]
 
-**Analyse:**
+---
 
-Verschiedene Hebungen \(\tilde\psi_p,\, \tilde\psi_p'\) mit \(\tilde\psi_p - \tilde\psi_p' \in \mathcal{N}_{W_{\mathrm{res}},\mathrm{rel}}\) liefern **dieselbe Klasse** \(\Psi_N \in \mathcal{H}_N^{\mathrm{rel}}\). Die Klasse ist daher hebungsunabhängig.
+### 1.3 \(\Psi_N \in \mathcal{H}_N^{\mathrm{rel}}\) — Quotientabstieg und Kanonizität
 
-**Einschränkung:** Die **Norm** \(\|\Psi_N\|\) und damit das Spektralmaß \(\mu_{\Psi_N}\) hängen von der induzierten Wres-Paarung ab. Diese Paarung ist intrinsisch für den Quotienten, nicht von der Hebungswahl abhängig. ✓
+**Frage:** Ist \(\Psi_N\) als kanonischer, hebungsunabhängiger Vektor konstruiert?
 
-**Kritischer Punkt — Wres-Normierung:**  
-NEU-221e §6.1 hält fest, dass \(\Psi_N\) durch die Wres-Normierung der Eingangshebung **nicht automatisch** auf \(\|\Psi_N\|=1\) normiert ist. Die Normierung ist eine separate Wahl.
+**Quellenlage (NEU-221e):**  
+NEU-221e beweist das Quotientabstiegskriterium:
 
-Das wird für Punkt 5 (Normierung) entscheidend.
+\[
+\widetilde{T}_p^{\mathrm{raw}}\bigl(\Delta_p^{\mathrm{adm}}\bigr) \subseteq \mathcal{N}_{W_{\mathrm{res}},\mathrm{rel}}
+\]
+
+genau dann, wenn die Bildklasse unabhängig von der zulässigen Hebung ist.
+
+**[K2] Korrektur:**  
+NEU-221e sagt ausdrücklich, dass diese Inklusion **weder für \(\Delta_p^{\mathrm{adm}}\) noch für den stärkeren Raum \(K_p\) bewiesen** ist. Spektralmaßinvarianz und intrinsische Sektion bleiben offen.
+
+Damit ist **nicht** gesichert:
+
+\[
+\Psi_p[\widehat{\varepsilon}_p'] = \Psi_p[\widehat{\varepsilon}_p] \quad \text{für alle zulässigen Hebungen.}
+\]
+
+Verbindlich:
+
+\[
+\text{Quotientabstiegskriterium} \quad \checkmark[M]
+\]
+\[
+\Psi_N \text{ als intrinsische, hebungsunabhängige Klasse} \quad ?[O]
+\]
+
+Auch das zugehörige Spektralmaß \(\mu_{\Psi_N}^{D_N^{\mathrm{rel}}}\) ist damit noch nicht intrinsisch fixiert.
+
+---
+
+## 2 — Kanonizität von \(\Psi_N\) — Zusammenfassung
+
+Das Quotientabstiegskriterium ist quellenseitig formuliert \(\checkmark[M]\), aber der tatsächliche intrinsische Abstieg ist nicht durchgeführt. Das bedeutet: Die Existenz von \(\Psi_N\) als wohldefinierter Quotientenklasse steht unter der Voraussetzung, dass die noch offene Inklusion bestätigt wird.
 
 ---
 
@@ -114,23 +125,24 @@ Das wird für Punkt 5 (Normierung) entscheidend.
 \]
 
 **Präzisierung gegenüber NEU-221c:**  
-Es ist **nicht** erforderlich, dass \(0 \in \rho(D_N^{\mathrm{rel}})\) global gilt. Ein globaler Kern \(\ker D_N^{\mathrm{rel}} \neq \{0\}\) wäre zulässig, sofern \(\Psi_N\) orthogonal dazu ist.
+Es ist nicht erforderlich, dass \(0 \in \rho(D_N^{\mathrm{rel}})\) global gilt. Ein globaler Kern \(\ker D_N^{\mathrm{rel}} \neq \{0\}\) wäre zulässig, sofern \(\Psi_N\) orthogonal dazu ist.
 
-**Quellenlage:**  
-NEU-221d §2 enthält ein Nullmodusaudit für den zyklischen Sektor aus NEU-46. Das Ergebnis ist:
+**[K3] Korrektur:**  
+NEU-245d (Erstfassung) behauptete, NEU-221d bestätige \(E_{D_N^{\mathrm{rel}}}(\{0\})\Psi_N=0\) für den NEU-46-Sektor. Das ist falsch.
 
-> Die Direktextraktion aus NEU-46 ergibt \(E_{D_N}(\{0\})\Psi_N = 0\) für die dort konstruierte Familie.
+NEU-221d führt diese Bedingung als **offenen Folgeknoten \([O\text{-}221\text{-}1c1b]\)** mit Status \(?[O]\). Die Niedrigenergieabschätzung wird dort als **zu beweisende Bedingung** formuliert, nicht als Ergebnis.
 
-**Befund \(\checkmark[M]_{\mathrm{part}}\):**
+Verbindlich:
 
-- Für den **zyklischen NEU-46-Sektor**: Nullmodusfreiheit bestätigt (NEU-221d).
-- Für den **allgemeinen adelischen Quotienten**: Übertragung nicht explizit durchgeführt. Die Konstruktion in NEU-221e setzt voraus, dass \(\psi_p \in A_p^{\mathrm{adm}}\) zulässig ist; ob daraus \(E_{D_N}(\{0\})\Psi_N=0\) allgemein folgt, ist nicht bewiesen.
+\[
+\boxed{E_{D_N^{\mathrm{rel}}}(\{0\})\,\Psi_N=0 \quad ?[O]}
+\]
 
-**Konsequenz:** Nullmodusfreiheit partiell gesichert (NEU-46-Sektor), allgemein offen.
+und zwar sowohl für den NEU-46-Kandidaten als auch für den allgemeinen adelischen Quotienten.
 
 ---
 
-## 4 — Existenz des Basismoments
+## 4 — Existenz des Basismoments und Niedrigenergie-Kriterium
 
 **Zu zeigen:**
 
@@ -146,42 +158,71 @@ Wenn diese Bedingung erfüllt ist:
 \Omega_{X,N} := (D_N^{\mathrm{rel}})^{-1}\,\Psi_N \quad \text{wohldefiniert}, \qquad m_{0,N} = \|\Omega_{X,N}\|^2.
 \]
 
-**Analyse:**
+### [K4] Korrektur — Niedrigenergie-Schwelle ist \(\alpha > 2\), nicht \(\alpha > 1\)
 
-Notwendige Vorbedingung: Punkt 3 (Nullmodusfreiheit) muss gelten, damit der inverse Operator \((D_N^{\mathrm{rel}})^{-1}\) auf \(\Psi_N\) definierbar ist (ggf. als reduzierter Inverse auf dem Spektralsektor).
+Setze
 
-**Quellenlage:**  
-Keine Quelle bis NEU-245c gibt eine explizite Abschätzung von \(\int|\lambda|^{-2}\,d\mu_{\Psi_N}(\lambda)\) an.
+\[
+F_N(\varepsilon) = \mu_{\Psi_N}\bigl((-\varepsilon,\varepsilon)\setminus\{0\}\bigr).
+\]
 
-**Befund \(\checkmark[M]_{\mathrm{neg,Quelle}}\) für Punkt 4:**
+Die Konvergenz \(m_{0,N} < \infty\) ist äquivalent zu
 
-- Die **Existenz** von \(m_{0,N}\) als reelle Zahl ist quellenseitig **nicht belegt**.
-- Aus der zyklischen Feshbach-Weyl-Architektur folgt, dass \(\mu_{\Psi_N}\) ein Spektralmaß auf \(\mathbb{R}\setminus\{0\}\) ist (unter Annahme von Punkt 3). Ob \(|\lambda|^{-2}\) dazu integrierbar ist, hängt vom Verhalten von \(\mu_{\Psi_N}\) nahe \(0\) ab.
-- Für den NEU-46-Sektor: Die quadratische Resolventenstruktur aus NEU-221c gibt \((D_N^{\mathrm{rel}})^2\)-Formeln, aber keine direkte \(L^2(\mu)\)-Abschätzung mit Gewicht \(|\lambda|^{-2}\).
+\[
+\int_0^{\varepsilon_0} \frac{F_N(r)}{r^3}\,dr < \infty.
+\]
 
-**Was fehlt:** Eine explizite Wachstumsabschätzung für \(\mu_{\Psi_N}((-\epsilon,\epsilon)\setminus\{0\})\) für kleines \(\epsilon>0\), die zeigt, dass diese Masse schnell genug gegen 0 geht, um \(\int|\lambda|^{-2}\,d\mu<\infty\) zu sichern.
+*Herleitung:* Durch Layered-cake-Umschreiben gilt
+
+\[
+\int_0^{\varepsilon_0} |\lambda|^{-2}\,d\mu(\lambda)
+= \int_0^{\varepsilon_0} \frac{F_N(r)}{r^3}\,dr + \text{(konvergenter Randterm)}.
+\]
+
+Für eine Potenzschranke \(F_N(r) = O(r^\alpha)\) entsteht
+
+\[
+\int_0^{\varepsilon_0} r^{\alpha-3}\,dr,
+\]
+
+welche **genau für \(\alpha > 2\)** konvergiert. Die bisher eingetragene Schwelle \(\alpha > 1\) ist **falsch**.
+
+Außerdem gilt notwendig:
+
+\[
+m_{0,N} < \infty \quad \Longrightarrow \quad F_N(\varepsilon) = o(\varepsilon^2).
+\]
+
+**Schwellentabelle für höhere Momente:**
+
+| Moment | Bedingung | Hinreichende Potenzschranke |
+|---|---|---|
+| \(m_{0,N}\) | \(\int |\lambda|^{-2}\,d\mu < \infty\) | \(F_N(\varepsilon) = O(\varepsilon^\alpha),\; \alpha > 2\) |
+| \(m_{1,N}\) | \(\int |\lambda|^{-4}\,d\mu < \infty\) | \(\alpha > 4\) |
+| \(m_{2,N}\) | \(\int |\lambda|^{-6}\,d\mu < \infty\) | \(\alpha > 6\) |
+| \(m_{k,N}\) | \(\int |\lambda|^{-2k-2}\,d\mu < \infty\) | \(\alpha > 2k+2\) |
+
+**Befund:** \(\checkmark[M]_{\mathrm{neg,Quelle}}\) — keine Quelle bis NEU-245c liefert eine Abschätzung von \(F_N\) nahe 0.
 
 ---
 
 ## 5 — Normierung
 
-**Regel:** Die Normierung von \(\Psi_N\) darf **nicht nachträglich** so gewählt werden, dass \(m_{0,N}=\mu_0\). Das wäre tautologisch.
+**Regel:** Die Normierung von \(\Psi_N\) darf nicht nachträglich so gewählt werden, dass \(m_{0,N}=\mu_0\). Das wäre tautologisch.
 
-**Audit:**
+Die Konstruktion in NEU-221e lässt die Skalierung von \(\Psi_N\) durch die Wres-Paarung bestimmen, nicht durch eine \(m_{0,N}\)-Forderung. Tautologieschutz ist **strukturell vorhanden** \(\checkmark[M]\).
 
-Die Konstruktion in NEU-221e lässt die Skalierung von \(\Psi_N\) durch die Wres-Paarung bestimmen, nicht durch eine \(m_{0,N}\)-Forderung. Insofern ist der Tautologieschutz **strukturell vorhanden**.
-
-**Unterscheidung (für das Protokoll):**
+**Unterscheidung (Protokoll):**
 
 | Begriff | Status |
 |---|---|
-| Existenz von \(m_{0,N}\) | offen — Punkt 4 nicht belegt |
-| Arithmetisch kanonischer Wert von \(m_{0,N}\) | offen — setzt Existenz + adelische Quellennormierung voraus |
-| Tautologieschutz | ✓ — Normierung kommt aus Wres-Struktur |
+| Existenz von \(m_{0,N}\) | \(?[O]\) — Punkt 4 nicht belegt |
+| Arithmetisch kanonischer Wert von \(m_{0,N}\) | \(?[O]\) — setzt Existenz + adelische Quellennormierung voraus |
+| Tautologieschutz | \(\checkmark[M]\) |
 
 ---
 
-## 6 — M1-Kompatibilität: Typ von \(D_N^{\mathrm{rel}}\)
+## 6 — M1-Kompatibilität: Architekturtyp und globaler Kopplungsgehalt
 
 **Typfrage:**
 
@@ -189,57 +230,74 @@ Die Konstruktion in NEU-221e lässt die Skalierung von \(\Psi_N\) durch die Wres
 D_N^{\mathrm{rel}} \neq \bigoplus_{p \le N} D_{p,N}^{\mathrm{rel}} \quad\text{quellenseitig belegt?}
 \]
 
-**Analyse:**
+**Quellenlage (NEU-221c, NEU-221d, NEU-245b):**  
+\(D_N^{\mathrm{rel}}\) wird als zyklischer Feshbach-Weyl-Kandidat mit Mischblock-Struktur eingeführt. Die zyklische Konstruktion aus NEU-46 erzwingt eine nicht-diagonale Kopplungsarchitektur.
 
-In NEU-221c wird \(D_N^{\mathrm{rel}}\) als **zyklischer** Feshbach-Weyl-Kandidat eingeführt — explizit mit Mischblock-Struktur. NEU-221d §2 verweist auf den zyklischen Sektor aus NEU-46, der eine nicht-diagonale Kopplungsstruktur erzwingt.
+**[K5] Korrektur:**  
+NEU-221d führt den konkreten globalen Kopplungsgehalt als offenen Knoten \([O\text{-}221\text{-}1c1d]\). NEU-221e warnt, dass eine Vektordirektsumme allein **keine gekoppelte Spektralmaßstruktur** erzeugt.
 
-In NEU-245b wurde M1 als Mindestarchitektur (globale Archimedes-Prim-Kopplung, kein direktes Summen-Zerfallen) positiv bewertet.
+Verbindlich:
 
-**Befund \(\checkmark[M]\) für M1-Typfrage:**  
-Die Quellen NEU-221c + NEU-221d + NEU-245b belegen gemeinsam, dass \(D_N^{\mathrm{rel}}\) im zyklischen Sektor einen echten globalen Feshbach-Anteil besitzt. Die direkte Summe lokaler Blöcke wäre unverträglich mit der zyklischen Konstruktion.
+\[
+\text{M1-kompatibler Konstruktionstyp} \quad \checkmark[K/M]
+\]
+\[
+\text{konkreter globaler Kopplungsgehalt} \quad ?[O]
+\]
 
 Quantitative Positivitätswirkung (M1-Stärke) wird hier nicht bewertet — das ist Teil von [O-245c/2].
 
 ---
 
-## 7 — Gesamtbilanz [O-245c/1]
+## 7 — Revidierte Gesamtbilanz [O-245c/1]
 
-| Prüfpunkt | Befund |
+| Aussage | Status |
 |---|---|
-| \(\mathcal{H}_N^{\mathrm{rel}}\) definiert | ✓ (Quotient, abstrakt) |
-| \(D_N^{\mathrm{rel}}\) mit Domäne + Selbstadjungiertheit | \(\checkmark[M]_{\mathrm{part}}\) (postuliert, nicht konstruktiv) |
-| \(\Psi_N \in \mathcal{H}_N^{\mathrm{rel}}\) als Klasse | ✓ (hebungsunabhängig mod \(\mathcal{N}\)) |
-| Kanonizität \(\Psi_N\) | ✓ (Klassendarstellung eindeutig) |
-| Nullmodusfreiheit \(E_{D_N}(\{0\})\Psi_N=0\) | \(\checkmark[M]_{\mathrm{part}}\) (NEU-46-Sektor ✓; allgemein offen) |
-| Existenz \(m_{0,N} < \infty\) | \(\checkmark[M]_{\mathrm{neg,Quelle}}\) (keine Abschätzung vorhanden) |
-| Tautologieschutz Normierung | ✓ |
-| M1-Typfrage | ✓ |
+| Relativer Ziel- und Quotiententyp | \(\checkmark[K/M]_{\mathrm{part}}\) |
+| Symmetrie von \(D_N^{\mathrm{rel}}\) | \(\checkmark[M]\) |
+| Essentielle Selbstadjungiertheit | \(?[O]\) |
+| Quotientabstiegskriterium für \(\Psi_N\) | \(\checkmark[M]\) |
+| Tatsächlicher intrinsischer Abstieg von \(\Psi_N\) | \(?[O]\) |
+| Nullmodusfreiheit | \(?[O]\) |
+| \(m_{0,N}<\infty\) | \(\checkmark[M]_{\mathrm{neg,Quelle}}\) |
+| Tautologieschutz Normierung | \(\checkmark[M]\) |
+| M1-kompatibler Architekturtyp | \(\checkmark[K/M]\) |
+| Konkreter globaler Kopplungsgehalt | \(?[O]\) |
 
-**Gesamtstatus:** \(\checkmark[M]_{\mathrm{part}}\)
+**Gesamtstatus:**
+
+\[
+\boxed{[O\text{-}245c/1] \quad \checkmark[M]_{\mathrm{part}}}
+\]
+
+Die Freigabe von \([O\text{-}245c/2]\) bleibt gesperrt.
 
 ---
 
-## 8 — Offene Fragen und Folgeknoten
+## 8 — Nächster atomarer Knoten
 
-### Für [O-245c/1]-Vervollständigung nötig
-
-1. **Selbstadjungiertheit konstruktiv:** Nelson-Kriterium oder Cayley-Argument für \(D_N^{\mathrm{rel}}\) im Quotienten. Oder expliziter Verweis auf eine Quelle, die das leistet.
-
-2. **Nullmodusfreiheit allgemein:** Abstieg der NEU-221d-Aussage vom NEU-46-Sektor auf den allgemeinen adelischen Quotienten. Kandidatenquelle: NEU-221e §2.2 (Linearitätsargument) — ausreichen könnte, dass \(\psi_p \in A_p^{\mathrm{adm}}\) bereits die Nullmodusfreiheit erzwingt.
-
-3. **Existenz \(m_{0,N}\):** Explizite Abschätzung
-   \[
-   \mu_{\Psi_N}((-\epsilon,\epsilon)\setminus\{0\}) = O(\epsilon^\alpha), \quad \alpha > 1
-   \]
-   aus der zyklischen Feshbach-Weyl-Resolventenstruktur (NEU-221c §3). Das ist der eigentliche mathematische Kern von [O-245c/1].
-
-### Freigeschaltet nach positivem Abschluss
+Der nächste Schritt ist nicht unmittelbar der Vergleich \(M_{X,N}\to M_\Xi\), sondern:
 
 \[
-[O\text{-}245c/2]: \quad M_{X,N}(w) \longrightarrow M_\Xi(w)
+\boxed{[O\text{-}245d/1] \quad \text{Niedrigenergie-Spektralmassenaudit}}
 \]
 
-Identitätsaudit der Momentfolge. Erst nach Punkt 3 oben.
+Sein erster Test:
+
+1. \(\mu_{\Psi_N}(\{0\}) = 0\)
+2. \(\displaystyle\int_0^{\varepsilon_0} \frac{F_N(r)}{r^3}\,dr < \infty\)
+3. Idealerweise eine sichtbare Spektrallücke:
+\[
+\operatorname{supp}\mu_{\Psi_N} \cap (-\delta_N,\delta_N) = \varnothing
+\]
+
+Erst nach positivem Abschluss von Punkt 2 (mindestens) ist
+
+\[
+\Omega_{X,N} = (D_N^{\mathrm{rel}})^{-1}\Psi_N
+\]
+
+als belastbarer zyklischer Vektor definiert und \([O\text{-}245c/2]\) freigeschaltet.
 
 ---
 
@@ -253,6 +311,20 @@ Identitätsaudit der Momentfolge. Erst nach Punkt 3 oben.
 | NEU-221e | Affine Hebungsfaser, Wres-Quotient, Spektralmassabstieg \(\Psi_p\) |
 | NEU-245b | Typaudit \([O\text{-}220\text{-}1f_0]\), Mindestarchitektur, globale Archimedes-Prim-Kopplung |
 | NEU-245c | Audit Feshbach-Weyl-Kandidat gegen \([O\text{-}245b/1]\), M1–M4 |
+
+---
+
+## 10 — Korrekturprotokoll
+
+Eingearbeitete Korrekturen gegenüber der Erstfassung (2026-08-06):
+
+| Block | Korrektur | Quelle |
+|---|---|---|
+| K1 | Selbstadjungiertheit: NEU-221d-Buchung übernommen; jetzt quellenkritisch aufgelöst in Symmetrie \(\checkmark[M]\) vs. essentielle SA \(?[O]\) | NEU-53, NEU-54, NEU-55 |
+| K2 | Kanonizität: Quotientabstiegskriterium \(\checkmark[M]\) vs. tatsächlicher intrinsischer Abstieg \(?[O]\); Spektralmaßinvarianz offen | NEU-221e |
+| K3 | Nullmodusfreiheit: auch für NEU-46-Sektor nicht belegt; Knoten \([O\text{-}221\text{-}1c1b]\) mit \(?[O]\) | NEU-221d |
+| K4 | Exponentenschwelle: \(\alpha>1\) ersetzt durch \(\alpha>2\); vollständige Layered-cake-Herleitung ergänzt; Schwellentabelle für \(m_{k,N}\) eingefügt | NEU-221d |
+| K5 | M1-Kopplungsgehalt: Architekturtyp \(\checkmark[K/M]\) vs. konkrete globale Kopplung \(?[O]\) | NEU-221d \([O\text{-}221\text{-}1c1d]\), NEU-221e |
 
 ---
 
