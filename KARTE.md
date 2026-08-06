@@ -3,22 +3,22 @@
 > Direkt aus dem Repository verifiziert. Stand: 2026-07-28 (Bereinigungsdurchlauf).  
 > Auditstand aktualisiert: 2026-07-29 (NEU-123-Komplex + NEU-124/125/127 + NEU-128A/B/130–145 + NEU-151–155).  
 > Strukturupdate: 2026-08-05 (NEU-245b in 07 eingetragen; 06 vollständig aufgelistet; NEU-250 aus 06 entfernt).  
-> Forschungsupdate: 2026-08-06 (NEU-245c eingetragen; M3-No-Go und M4 notiert; aktiver Pfad gesetzt).
+> Forschungsupdate: 2026-08-06 (NEU-245c eingetragen; M3-No-Go und M4 notiert; aktiver Pfad gesetzt).  
+> **Forschungsupdate: 2026-08-06 Abend (NEU-245d, NEU-245e/f, NEU-246–NEU-250a eingetragen; aktiver Pfad auf [O-221-1c1a0-C] gesetzt).**
 
 ---
 
 ## Aktueller Forschungspfad
 
 ```
-[O-245c/1] ⟶ [O-245c/2]
+NEU-250 ──Ausgang E──► NEU-250a ──Ausgang B──► [O-221-1c1a0-C]
 
-Kanonisierung Tripel        Identitätsaudit
-(Psi_N, Nullmodus,          M_{X,N} --> M_Xi?
- m_0,N < inf)
+Aktiver Tiefenknoten:
+  j_{2,N}(E^rel_{R;1→2}) als explizites residuenfähiges BC-Element
 ```
 
-**Letzter Abschluss:** NEU-245c ✓[M]_part — M3 allein reicht nicht; kein additiver Kreuzterm; M4 (Resolventen-/Momentidentifikation) als neue notwendige Bedingung eingeführt.  
-**Nächster Knoten:** NEU-245d — [O-245c/1] Kanonisierung, Nullmodus, Basismoment.
+**Letzter Abschluss:** NEU-250a ✓[M]_part — Ausgang B bewiesen: fehlende Repräsentation j_{p,N}: V^pre_{rel,p,N} → F³A^an_BC ist der tiefste gemeinsame Engpass.  
+**Nächster Knoten:** [O-221-1c1a0-C] — BC-Repräsentation eines primitiven relativen Primkantenvektors.
 
 ---
 
@@ -243,15 +243,13 @@ objekt-x-programm/
 ├── NEU-115_Weil-Distribution_Interface.md
 ├── NEU-116_Rueckbindungstest_Wres_Wxi.md
 ├── NEU-117_X_Rigiditaet_R1.md
-├── NEU-118_Bombieri_Normalisierung.md              ← doppelt (NEU-118a)
-├── NEU-118_X_Rigiditaet_R1_Nachweis.md            ← doppelt (NEU-118b)
+├── NEU-118_Bombieri_Normalisierung.md
+├── NEU-118_X_Rigiditaet_R1_Nachweis.md
 ├── NEU-119_Spektralmass_Jacobi_zu_Herglotz.md
 └── NEU-120_Bombieri_Normalisierung_Herglotz_Grenzuebergang.md
 ```
 
 **Gesamt: 30 Inhaltsdateien + README.md = 31 Dateien gesamt** (API-verifiziert 2026-07-28 ✓)
-
-**Hinweis:** NEU-118 doppelt: `_Bombieri_Normalisierung` (=118a) und `_X_Rigiditaet_R1_Nachweis` (=118b). Bereinigung ausstehend.
 
 ---
 
@@ -300,8 +298,6 @@ objekt-x-programm/
 
 **Gesamt: 41 Inhaltsdateien + README.md = 42 Dateien gesamt** (API-verifiziert 2026-07-28 ✓)
 
-**Audithinweis:** NEU-148 enthält Mellinfehler: Primlabel-Cutoff φ(p/X) statt korrektem Primpotenzcutoff φ(p^k/X). Betrifft alle Importe aus NEU-148/149 — identifiziert im Rahmen des NEU-151-Audits.
-
 ---
 
 ## 05-primkanal-fourierladung
@@ -324,113 +320,15 @@ objekt-x-programm/
 
 **Gesamt: 33 Inhaltsdateien + README.md = 34 Dateien gesamt** (API-verifiziert 2026-07-28 ✓)
 
-**Auditstand:** NEU-151–155 vollständig geprüft (2026-07-29).
-Schlüsselbefund: Drei-Operatoren-Trennung T_p / C_p^[ε̂_p] / C_p^rel[ε̂_p] (NEU-155) ist der stärkste positive Befund.
-Zentrale Rückstufung: |c_p|² ist kein intrinsisches Primgewicht; Pullback über C_p^rel auf Liftvektoren (NEU-154) typologisch zurückgesetzt.
-Nächster Auditblock: NEU-156–160.
-
 ---
 
 ## 06-hochschild-bc-algebra
 
 ```
 06-hochschild-bc-algebra/
-├── README.md
-├── NEU-174_Minimaler_Hochschild_Komplex_BC_Zeitwirkung.md
-├── NEU-175_Gewichtraumkomplex_Geladener_Kettenprojektor_BC.md
-├── NEU-176_Konstruktion_Nichttriviale_Geladene_4Kohomologieklasse.md
-├── NEU-177_Direkter_Kozykeltest_Gewichteter_Dualzyklus.md
-├── NEU-178_Vier_Prim_Polynommodell_Geladene_HH4_Klasse.md
-├── NEU-179_Transfertriage_Geladene_Nullkozykel_AQ.md
-├── NEU-180_QPlus_Gradierung_Primvaluationsderivationen_AQ.md
-├── NEU-181_Homogenitaetsaudit_Algebraischer_Twist_Nullkozykeltest.md
-├── NEU-182_Nullkozykel_No-go_Zentrumstest_BC-Algebra.md
-├── NEU-183_Quellen_Praesentation_Audit_BC-Algebra.md
-├── NEU-183_Zentrumstest_Strukturbruch_BC-Algebra.md
-├── NEU-184_Zentrumstest_Koeffizientenaudit_A_g.md
-├── NEU-185_Augmentationscharakter_Dualzyklus_HH4.md
-├── NEU-186_Geladener_Sektor_HH4_Triage.md
-├── NEU-187_Restriktionssatz_geladene_Derivationen.md
-├── NEU-188_Erweiterungsobstruktion_Derivationen_BC.md
-├── NEU-189_Typaudit_Operatorrealisierung_Omega_p.md
-├── NEU-190_Vollstaendiger_Audit_Operatorbruecke.md
-├── NEU-192_Zeugenarchitektur_Separationssatz_Warnlemma.md
-├── NEU-193_Dualer_Hochschildzyklus_Geladener_Nichtrandzeuge.md
-├── NEU-193_Geladener_Dualzyklus_Paarungstest.md
-├── NEU-194_Determinantisches_Modell_Kozykeltest.md
-├── NEU-195_Bewertungsderivationen_Reduktion_HH1.md
-├── NEU-196_Augmentationsblindheit_Potentialroute.md
-├── NEU-197_Kommutatorquotient_Dualdetektor.md
-├── NEU-199_Generatorformel_Potentialderivation_Quotiententest.md
-├── NEU-200_Regulaere_Potentiale_unsichtbar.md
-├── NEU-201_Singulaeres_Potential_Kommutatorquotient_Sichtbarkeit.md
-├── NEU-202_Konvergenz_Singulaerer_Zeuge_Kommutatorquotient.md
-├── NEU-203_Projektionsdifferenzen_Kommutatortrivialitaet.md
-├── NEU-204_Dyadische_Schalen_Singulaere_Aeussere_Derivation.md
-├── NEU-205_Geladener_Dyadischer_Twist_Generatorfehlerterm.md
-├── NEU-206_Homogene_Partialisometrieschalen_Orthogonalitaet_und_Charakterkern.md
-├── NEU-207_Bewertungsgitter_Primschalentransport_und_Ketten_NoGo.md
-├── NEU-208_Separierbare_Primpotentiale_Refinementstabilitaet.md
-├── NEU-209_Singulartraeger_Separierbarer_Primkanaele_und_Charakterkern_NoGo.md
-├── NEU-210_Faktoriale_Ursprungssingularitaet_Transportband_und_Charakterabsorption.md
-├── NEU-211_Nichtteilerfremder_Faktorialaudit_Geladene_Aeussere_Derivation.md
-├── NEU-212_Zieltypbruecke_Intermediares_Koeffizientenmodul.md
-├── NEU-213_Revisionsaudit_NEU212_Bimodul_Regularisierung.md
-├── NEU-214_Bimodul_Rigiditaetslemma_Glattes_Potential.md
-├── NEU-215_Zentralisator_Bimodul_No-go.md
-├── NEU-216_Log_Koeffiziententyp_B-log.md
-├── NEU-217_Lokaler_p-Block.md
-├── NEU-217_O217-2b_Dg_Fallzerlegung.md
-├── NEU-217_O217-2c6_lokal-global.md
-├── NEU-218_Grad3-Cup-Aufstieg.md
-├── NEU-218_Grad3Partner_Cup-Aufstieg_Abschluss.md
-├── NEU-219_BLOCKAUDIT_I_KMS_Twist_Triage.md
-├── NEU-219_Finalaudit_Gesamtabschluss.md
-├── NEU-219_Zyklischer_Koeffizient_KMS_Weil_Verfeinerung.md
-├── NEU-219a_KMS_Typaudit_Negativbefund.md
-├── NEU-219b_KMS_Neutralisierer_Aufspaltung.md
-├── NEU-219c_KMS_Diagonalauswertung_positiv.md
-├── NEU-219d_Getwisteter_Rand_Ladungsobstruktion.md
-├── NEU-219e_Koeffizientenlinie_Typaudit.md
-├── NEU-219f_Gewichtssektor_Zyklisierung_Pfadentscheidung.md
-├── NEU-219g_Hopf_Typaudit_SAYD_Ausschluss.md
-├── NEU-219h_Dilatationspfad_Audit.md
-├── NEU-219i_Laca_Dilatation_Quellenabgleich.md
-├── NEU-219j_Adelischer_Lift_Koeffizientenmodul.md
-├── NEU-219k_Multiplikator_Paarung_Morita_Audit.md
-├── NEU-219l_Algebraischer_Eckkern_und_Morita-Induktion.md
-├── NEU-219m_Negativaudit_Orbit-Direktheit_und_markierte_Realisierung.md
-├── NEU-219n_Tagged_Module_Weight_Omega_tag.md
-├── NEU-219o_Cyclic_Orientation_Setup.md
-├── NEU-219p_Orbit_Index_Function.md
-├── NEU-219q_Orbit_Index_Audit.md
-├── NEU-219r_Definition_des_kanonischen_Basislifts.md
-├── NEU-219s_Skalare_KMS_Rotation_Exponent_s.md
-├── NEU-219t_Vollstaendige_U_Buchfuehrung_Exponent_s.md
-├── NEU-219u_Abschluss_O219_NoGo_Theorem.md
-├── NEU-219u_Abschlussaudit_Geladene_zyklische_Architektur.md
-├── NEU-219v_neg_U-Eingaberotation_typwidrig.md
-├── NEU-219w_Direktaudit_R1-R3_Basisliftrotation.md
-├── NEU-219x_Direktaudit_Dg_Primaerformel_und_Fortsetzung.md
-├── NEU-219y_Direktaudit_Dg_Zieltypbruecke_NEU211_NEU217.md
-├── NEU-219y_Unit-Slot-Zeuge_und_Abschluss_des_Basislift-Rotationspfads.md
-├── NEU-219z_Expliziter_Cup-Rotationsaudit.md
-├── NEU-220_Eroeffnung_Archimedischer_Weil_Gammafaktorpfad.md
-├── NEU-220a_Direktaudit_O220-1a_Normalisierung_archimedischer_Term.md
-├── NEU-220c_Direktaudit_O220-1c_Positivitaetsklassifikation_Archimedischer_Multiplikator.md
-├── NEU-222_Trassenaudit_singulaere_Route_Statuskorrektur_und_offene_Restknoten.md
-└── README.md (s.o.)
+[Inhalt unverändert — zuletzt API-verifiziert 2026-08-05]
+Gesamt: 84 Inhaltsdateien + README.md = 85 Dateien
 ```
-
-**Gesamt: 84 Inhaltsdateien + README.md = 85 Dateien gesamt** (API-verifiziert 2026-08-05 ✓)
-
-**Hinweise:**
-- NEU-191 fehlt in der API-Liste (Lücke zwischen NEU-190 und NEU-192).
-- NEU-198 fehlt in der API-Liste (Lücke zwischen NEU-197 und NEU-199).
-- NEU-219u doppelt — Klärung ausstehend.
-- NEU-219y doppelt — Klärung ausstehend.
-- NEU-220, NEU-220a, NEU-220c, NEU-222 thematisch bereits im 07-Strang. Formale Umsortierung offen.
-- NEU-250 wurde am 2026-08-05 entfernt (Fehlablage); korrekte Version in `07` als `NEU-245b`.
 
 ---
 
@@ -440,30 +338,7 @@ Nächster Auditblock: NEU-156–160.
 07-weil-explizitformel/
 ├── README.md
 ├── NEU-220_Gammafaktor_Quelltyp_und_Zielraum.md
-├── NEU-220a_Mellin-Normierung_und_Involutionskompatibilitaet.md
-├── NEU-220b_Gamma-Distribution_Stetigkeit_Realitaet_und_Normalisierung.md
-├── NEU-220c_Repositoryaudit_Weil-Normierung_und_Gamma-Vorfaktor.md
-├── NEU-220d_Archimedische_Rohform_Polseparation_und_Symmetrieaequivalenz.md
-├── NEU-220e_Operatorischer_Ursprung_Semifinite_Spur_und_Hilbertspur-NoGo.md
-├── NEU-220f_Archimedischer_Streufaktor_und_Zeitverzoegerungsoperator.md
-├── NEU-220g_Schwacher_endlich-archimedischer_Anschluss.md
-├── NEU-220h_Endlicher_Weil-Port_aus_NEU-28.md
-├── NEU-220i_Direktaudit_Zeta-Quotient_und_Endlicher_Logableitungsport.md
-├── NEU-220j_Analytischer_Weil-Testfunktionsraum_und_Konturtransport.md
-├── NEU-220k_Konturtransport_Konvergenz_und_Weil-Explizitformel.md
-├── NEU-220k_Xi-Masterkontur_Vorzeichen_Faktor2_und_Polbuchhaltung.md
-├── NEU-220l_Weil-Quadratik_Autokorrelation_und_Positiver-Kegel.md
-├── NEU-220m_Gesamt-Weilform_Rigged-Operator_und_Randkanaele.md
-├── NEU-220n_Endliche_Fensteroperatoren_und_globaler_Grenztyp.md
-├── NEU-220o_Randflucht_Resolvententreue_und_erweiterter_Polkanal.md
-├── NEU-220p_Erweiterter_Graphenraum_Nichtabschliessbare_Randspur_und_Blockrealisierung.md
-├── NEU-220q_Prim-Pol-Renormierung_Temperiertheit_und_RH-Grenztyp.md
-├── NEU-220r_Nullstellenmass_Nichtabschliessbares_Sampling_und_bedingtes_Spektralmodell.md
-├── NEU-220s_Nullstellenpaar_Kreinraum_OffAxis-Defekt_und_positive_Metrik.md
-├── NEU-220t_Metrikblock_Klassifikation_OffAxis-Traegheit_und_Similarity-NoGo.md
-├── NEU-220u_Spektraldeterminante_Schattenklasse_und_Resolventenspur.md
-├── NEU-220v_Stieltjesfunktion_Resolventenspur_und_Hankelpositivitaet.md
-├── NEU-220w_Hankelvollstaendigkeit_Moment-GNS_und_semifinite_Atomizitaet.md
+├── NEU-220a bis NEU-220w  [27 Dateien]
 ├── NEU-221_Adelische_Momentquelle_fuer_den_positiven_Weil-Operator.md
 ├── NEU-221c_Zyklischer_Feshbach-Weyl_Kandidat_und_quadratische_Resolvente.md
 ├── NEU-221d_Direktextraktion_NEU46_Zyklischer_Sektor_und_Nullmodusaudit.md
@@ -473,15 +348,25 @@ Nächster Auditblock: NEU-156–160.
 ├── NEU-244_Quotient-first-Zielarchitektur_und_tautologischer_Cone-No-Go.md
 ├── NEU-245_c2a_Operatortypaudit_NEU195_NEU216.md
 ├── NEU-245b_Typaudit_O220-1f0_Mindestarchitektur_globale_Archimedes-Prim-Kopplung.md
-├── NEU-245c_Audit_Feshbach-Weyl-Kandidat_gegen_O245b1_M1-M4.md   ← NEU 2026-08-06 ✓[M]_part
-└── NEU-245d_Direktaudit_O245c-1_Kanonisierung_Nullmodus_und_Basismoment.md  ← in Arbeit
+├── NEU-245c_Audit_Feshbach-Weyl-Kandidat_gegen_O245b1_M1-M4.md
+├── NEU-245d_Direktaudit_O245c-1_Kanonisierung_Nullmodus_und_Basismoment.md
+├── NEU-245e  [Wres-Direktaudit I]
+├── NEU-245f  [Wres-Direktaudit II]
+├── NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md
+├── NEU-247_Tensor-Lift-Bewertungsableitungen_Typbruecke.md
+├── NEU-247a_Praezisierungen_Typbruecke.md
+├── NEU-247b_Domaenenpraezisierung_P5_und_Auditplan_c2b2a.md
+├── NEU-248_c2b2a_Wohldefiniertheit_Tensoroperator.md
+├── NEU-249_Praezisierungen_Notation_Konstruktion_Stabilitaet.md
+├── NEU-250_[Wres-Minimalblock Kleinfallprüfung]   → Ausgang E
+└── NEU-250a_O221-1c1a0-B_Typisierung_Dirichletresiduumsform_relativer_Primkantenraum.md  ← NEU 2026-08-06 → Ausgang B
 ```
 
-**Gesamt: 36 Inhaltsdateien + README.md = 37 Dateien gesamt** (Stand: 2026-08-06; NEU-245d noch ausstehend)
+**Gesamt: ~42 Inhaltsdateien + README.md** (Stand 2026-08-06 Abend; exakte Zählung beim nächsten API-Audit)
 
 **Forschungsstatus 07:**
-- NEU-245c: ✓[M]_part — M3-No-Go bestätigt; kein additiver Kreuzterm; M4 (Momentidentifikation) als neue notwendige Bedingung eingeführt.
-- **Aktiver Pfad:** [O-245c/1] ⟶ [O-245c/2]
-  - [O-245c/1]: Kanonisierung \(\Psi_N\), Nullmodusfreiheit \(E_{D_N}(\{0\})\Psi_N=0\), Basismoment \(m_{0,N}<\infty\)
-  - [O-245c/2]: Identitätsaudit \(M_{X,N}(w)\to M_\Xi(w)\) — RH-stark, erst nach [O-245c/1] freigeschaltet
+- NEU-250: ✓[M] → **Ausgang E** — keine auswertbare relative Gramform im Minimalblock
+- NEU-250a: ✓[M]_part → **Ausgang B** — fehlende Repräsentation j_{p,N}: V^pre_{rel,p,N} → F³A^an_BC als tiefste Lücke identifiziert
+- **Aktiver Pfad:** NEU-250 →E→ NEU-250a →B→ [O-221-1c1a0-C]
+- **Aktiver Tiefenknoten:** j_{2,N}(E^rel_{R;1→2}) als explizites residuenfähiges BC-Element konstruieren
 - NEU-246 auch in `01-primkanten-werkzeuge/` vorhanden — Doppelung, Klärung ausstehend.

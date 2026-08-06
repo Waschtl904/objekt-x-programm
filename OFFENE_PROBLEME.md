@@ -1,8 +1,7 @@
 # Offene Probleme — Konsolidierte Liste
 
 > **Aktuelle Front: 6. August 2026 — NEU-250a**  
-> Der untere Teil dieser Datei ist der konsolidierte Stand vom 15. Juli 2026 (NEU-161 rev.5).
-> Er bleibt gültig, soweit er nicht durch die aktuelle Front überholt ist.
+> Vorgängerstand: NEU-221e (26. Juli 2026). Der untere Teil dieser Datei ist der konsolidierte Stand vom 15. Juli 2026 (NEU-161 rev.5). Er bleibt gültig, soweit er nicht durch die aktuelle Front überholt ist.
 
 Kompakte Gesamtbilanz: [STATUS.md](STATUS.md) · Alle Dokumente: [INDEX.md](INDEX.md) ·
 Verbindliche Karte aller Bedingungen an Objekt X: [Ebene XVI — Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md)
@@ -15,39 +14,43 @@ Verbindliche Karte aller Bedingungen an Objekt X: [Ebene XVI — Kontrollblatt](
 
 # Teil I — Aktuelle Front (Stand NEU-250a)
 
-## Priorität 0 — Aktiver Tiefenknoten (neu: 6. August 2026)
+## Priorität 0 — Neuer aktiver Tiefenknoten
 
 ### `[O-221-1c1a0-C]`: BC-Repräsentation eines primitiven relativen Primkantenvektors ❓ [O]
 
-> Eröffnet: 6. August 2026 — NEU-250a (Ausgang B) · Vorgänger `[O-221-1c1a0-B]` `✓[M]_part`
+> Eröffnet: 6. August 2026 — NEU-250a · Vorgänger NEU-250 → Ausgang E → NEU-250a → Ausgang B
 
-**DAG-Kette:**
-$$\text{NEU-250} \longrightarrow \boxed{\text{Ausgang E}} \longrightarrow \text{NEU-250a} \longrightarrow \boxed{\text{Ausgang B}} \longrightarrow [O\text{-}221\text{-}1c1a0\text{-C}]$$
+**Ausgangslage.** NEU-250a (Knoten [O-221-1c1a0-B]) hat bewiesen: Die BC-Residuenarchitektur (NEU-15–25) stellt keine Repräsentationsabbildung
 
-**Ausgangslage.** NEU-250a hat bewiesen: Die BC-Residuenarchitektur (NEU-15–25) liefert keine Repräsentationsabbildung
 $$j_{p,N}: \mathscr V_{\mathrm{rel},p,N}^{\mathrm{pre}} \longrightarrow F^3A_{\mathrm{BC}}^{\mathrm{an}}$$
-aus den vorhandenen Quellen. Ohne $j_{p,N}$ sind relative Wres-Paarung, Grammatrix, Radikal und Hebungsabstieg sämtlich untypisiert.
 
-**Kleinstes Ziel dieses Knotens:**
+bereit. Dies ist die tiefste gemeinsame Lücke des gesamten Wres-Strangs.
 
-Für $p=2$ und einen einzelnen primitiven Erzeuger $E^{\mathrm{rel}}_{R;1\to2}$ ist
-$$j_{2,N}\!\left(E^{\mathrm{rel}}_{R;1\to2}\right)$$
-als explizites, residuenfähiges BC-Element oder als expliziter BC-Kozykel zu konstruieren.
+**Minimalziel dieses Knotens.** Für $p=2$ und einen einzelnen primitiven Erzeuger $E^{\mathrm{rel}}_{R;1\to2}$ ist ein explizites BC-Element oder BC-Kozykel
 
-**Sechs Pflichtbedingungen:**
+$$j_{2,N}\left(E^{\mathrm{rel}}_{R;1\to2}\right)$$
 
-| Nr. | Bedingung | Status |
+zu konstruieren, das folgende sechs Bedingungen erfüllt:
+
+| Nr. | Bedingung | Inhalt |
 |---|---|---|
-| C1 | Typkorrektheit: $j_{2,N}(E_R) \in F^3A_{\mathrm{BC}}^{\mathrm{an}}$ | \u2753 [O] |
-| C2 | Linearität | \u2753 [O] |
-| C3 | Indexverträglichkeit (BC-Monoid- und Fourierindizes) | \u2753 [O] |
-| C4 | Involutionsverträglichkeit: $j_{2,N}(E_R)^*$ explizit berechenbar | \u2753 [O] |
-| C5 | Residuenfähigkeit: $\lambda_\beta^{\mathrm{mod}}(R_3(j_{2,N}(E_R)^* j_{2,N}(E_{R'})))$ bei $\beta=1$ auswertbar | \u2753 [O] |
-| C6 | Nichttautologie: $j_{2,N}$ darf nicht so definiert werden, dass der Gramwert definitionsgemäß entsteht | \u2753 [O] |
+| 1 | Typkorrektheit | $j_{2,N}(E_R)\in F^3A_{\mathrm{BC}}^{\mathrm{an}}$ oder äquivalentem Residuumsmodul |
+| 2 | Linearität | $j_{2,N}(\alpha E_R+\beta E_{R'})=\alpha j_{2,N}(E_R)+\beta j_{2,N}(E_{R'})$ |
+| 3 | Indexverträglichkeit | Indizes $p,m,R$ aus BC-Monoid-/Fourierindizes rekonstruierbar |
+| 4 | Involutionsverträglichkeit | $j_{2,N}(E_R)^*$ explizit berechenbar |
+| 5 | Residuenfähigkeit | $\lambda_\beta^{\mathrm{mod}}(R_3(j_{2,N}(E_R)^* j_{2,N}(E_{R'})))$ bei $\beta=1$ auswertbar |
+| 6 | Nichttautologie | $j_{2,N}$ darf nicht so definiert werden, dass ein gewünschter Gramwert definitionsgemäß entsteht |
 
-**Primärquellen:** NEU-15–25 (`01-primkanten-werkzeuge/`) für BC-Architektur; NEU-221e für relativen Rohzielraum.
+**Erst danach** darf der erste konkrete Gramwert $h_{2,N}(E_R,E_{R'})$ berechnet werden.
 
 **Forschungsdokument:** [`NEU-250a`](07-weil-explizitformel/NEU-250a_O221-1c1a0-B_Typisierung_Dirichletresiduumsform_relativer_Primkantenraum.md)
+
+**DAG-Position:**
+```
+NEU-250 ──E──► NEU-250a ──B──► [O-221-1c1a0-C]  ← aktiver Knoten
+                                       ↓
+                              [O-221-1c1a0] (Hebungsabstieg, übergeordnet)
+```
 
 ---
 
@@ -55,14 +58,13 @@ als explizites, residuenfähiges BC-Element oder als expliziter BC-Kozykel zu ko
 
 ### `[O-221-1c1a0]`: Zulässige Differenzmenge und Rohkopplung ❓ [O]
 
-> Eröffnet: 26. Juli 2026 — NEU-221e · Vorgänger `[O-221-1c1a]` `✓[M]_part`  
-> **Hinweis:** Dieser Knoten setzt `[O-221-1c1a0-C]` als Vorläufer voraus.
+> Eröffnet: 26. Juli 2026 — NEU-221e · Vorgänger `[O-221-1c1a]` `✓[M]_part`
+> **Präzisierung 6. August 2026:** Vorläufer `[O-221-1c1a0-C]` freigeschaltet und als nächster Konstruktionsschritt eingetragen.
 
 **Ausgangslage.** NEU-46 verwendet den relativen Vektor als **zyklischen** Vektor einer
 Weyl-Funktion. Damit ist die Hebungsfrage **nicht** durch Normgleichheit entschieden:
 Verschieden gewählte, gleich normierte Hebungen können verschiedene
-Resolventenmatrixstellen, Spektralmaße und inverse Momente erzeugen. Norminvarianz
-entspricht nur dem Test $f\equiv 1$.
+Resolventenmatrixstellen, Spektralmaße und inverse Momente erzeugen.
 
 **Bewiesenes Kriterium (NEU-221e).** Der Kopplungsvektor steigt genau dann von der
 Hebungsfaser auf den primitiven Kanal ab, wenn
@@ -70,11 +72,7 @@ Hebungsfaser auf den primitiven Kanal ab, wenn
 $$\widetilde T_p^{\mathrm{raw}}\bigl(\Delta_p^{\mathrm{adm}}\bigr) \subseteq \mathcal N_{\mathrm{Wres,rel}},
 \qquad \Delta_p^{\mathrm{adm}} = \mathcal A_p^{\mathrm{adm}} - \mathcal A_p^{\mathrm{adm}}.$$
 
-**Drei Aufgaben des Knotens:**
-
-1. Alle Bedingungen an eine Hebung klassifizieren und $\widehat{\mathcal E}_p^{\mathrm{adm}}$ vollständig definieren.
-2. Rohzielraum $\mathscr V_{\mathrm{rel},p,N}^{\mathrm{pre}}$, Wres-Radikal $\mathcal N_{\mathrm{Wres,rel}}$ und Quotientenabbildung explizit fixieren.
-3. Den Test auf Erzeugern bzw. expliziten Kurven in $\Delta_p^{\mathrm{adm}}$ rechnen.
+**Neuer Vorläufer (NEU-250a).** Das Wres-Radikal $\mathcal N_{\mathrm{Wres,rel}}$ ist erst nach Konstruktion von $j_{p,N}$ verfügbar. Daher ist `[O-221-1c1a0-C]` als Pflichtvorläufer eingetragen.
 
 **Forschungsdokument:** [`NEU-221e`](07-weil-explizitformel/NEU-221e_Affine_Hebungsfaser_Wres-Quotient_und_Spektralmassabstieg_Psip.md)
 
@@ -111,7 +109,7 @@ $J_{X,N} = (D_N^{\mathrm{rel}})^{-2}$ als verfügbar markiert werden dürfen?
 **Ausgangslage:** Die Äquivalenz
 $\mathrm{RH} \iff H_N^{(0)}\succeq 0 \wedge H_N^{(1)}\succeq 0\ \forall N$
 ist unkonditional bewiesen (NEU-220w). Was fehlt, ist eine **unabhängige Quelle** für die
-Positivität der Momentfolge $\mu_k = -\tfrac{k+1}{(2k+2)!}(\log\Xi)^{(2k+2)}(0)$.
+Positivität der Momentfolge.
 
 **Forschungsdokument:** [`NEU-220w`](07-weil-explizitformel/NEU-220w_Hankelvollstaendigkeit_Moment-GNS_und_semifinite_Atomizitaet.md)
 
@@ -126,8 +124,8 @@ Positivität der Momentfolge $\mu_k = -\tfrac{k+1}{(2k+2)!}(\log\Xi)^{(2k+2)}(0)
 | Reparaturpfad | Anforderung | Status |
 |---|---|---|
 | Orbitshift | Lift mit $\kappa \neq 0$ | Neue Konstruktion, eigener Knoten |
-| Ladungsneutralisation | algebraische Neutralisation vor zyklischer Auswertung | Neue Konstruktion |
-| Andere Koeffizientenkategorie | parazyklisch, $\sigma$-zyklisch, getwistet-zyklisch | `[O-219-5]` teilweise beschritten |
+| Ladungsneutralisation | algebraische Neutralisation | Neue Konstruktion |
+| Andere Koeffizientenkategorie | parazyklisch, $\sigma$-zyklisch | `[O-219-5]` teilweise beschritten |
 | Weil-/Gammafaktorpaarung | gewöhnliche Zyklizität ersetzen | **aktiv beschritten** ab NEU-220 |
 
 **Forschungsdokument:** [`NEU-219u`](06-hochschild-bc-algebra/NEU-219u_Abschluss_O219_NoGo_Theorem.md)
@@ -155,11 +153,7 @@ Positivität der Momentfolge $\mu_k = -\tfrac{k+1}{(2k+2)!}(\log\Xi)^{(2k+2)}(0)
 
 > Eröffnet: 15. Juli 2026
 
-**Frage:** Existiert ein explizit konstruierter Fourierkoeffizient $\ell_{s_0,m_0}\neq 0$ mit $s_0\neq 0$ in $L_3^\circ = \sum_{s,m}\ell_{s,m}e_sV_m$?
-
-**Quellenprüfungsbefund (161.A):** Früheste Quelle ist NEU-42 §10. Dort ist $s\neq 0$ **Rechenbedingung, kein Ergebnis**.
-
-**Ausgangsbefund:** $?[O]$ — Nichttrivialität nur vorausgesetzt.
+**Frage:** Existiert ein explizit konstruierter Fourierkoeffizient $\ell_{s_0,m_0}\neq 0$ mit $s_0\neq 0$?
 
 ---
 
@@ -171,12 +165,6 @@ Positivität der Momentfolge $\mu_k = -\tfrac{k+1}{(2k+2)!}(\log\Xi)^{(2k+2)}(0)
 
 **Frage:** Gilt $\operatorname{Tr}_{\mathrm{reg}}(R\Sigma_{\mathrm{rel}}^{\mathrm{ren}})$ für $0 < \Re\beta \leq 1$?
 
-| Ebene | Objekt | Status |
-|---|---|---|
-| S1-Existenz | $\Sigma_{\mathrm{rel}}^{\mathrm{ren}}(\beta)$, $\Re\beta > 0$ | ✓ [M] NEU-137 |
-| Mangoldt-Spur gewöhnlich | $R\Sigma_{\mathrm{rel}}^{\mathrm{ren}}(\beta)$, $\Re\beta > 1$ | ✓ [M] |
-| Regulierte Spur (krit. Streifen) | $\operatorname{Tr}_{\mathrm{reg}}$, $0 < \Re\beta \leq 1$ | ❓ [O] |
-
 ---
 
 ### NEU-57: Singulärwert-Wachstum von $J^-$ ❓ [O]
@@ -187,62 +175,36 @@ Positivität der Momentfolge $\mu_k = -\tfrac{k+1}{(2k+2)!}(\log\Xi)^{(2k+2)}(0)
 
 ## Offen (mittelfristig)
 
-### X.3.25: Schur-Test exakt (Nelson-Bed. 1) ❓ [O]
+### X.3.25 / X.3.24 / X.3.23 / X.3.16 / X.3.14 / X.2.1 / OP-4
 
-### X.3.24: Essentielle Selbstadjungiertheit von $iJ^-$ ⚠ [M] (unter Bedingungen)
-
-### X.3.23: Spektralalternativen für $D_{\mathrm{rel}}$ ❓ [O]
-
-### X.3.16: Intrinsizität von $Wres_{\mathrm{rel}}$ ❓ [O]
-
-### X.3.14: Gamma-Faktor-Intrinsifizierung ❓ [O]
-
-### X.2.1: Rückrichtung RH ❓ [O]
-
-### OP-4: Frobenius-Funktional auf $A_{2D}^r$ ❓ [O]
+> Unverändert gegenüber Stand NEU-161 rev.5 — siehe Archivversion.
 
 ---
 
 ## Abgeschlossene Probleme
 
-### NEU-144 bis NEU-160 (Juli 2026)
+### NEU-246 bis NEU-250 (6. August 2026)
 
 | Eintrag | Thema | Resultat |
 |---|---|---|
-| NEU-144–150 | Spurklassen, Selbstenergie, Kanalgewichte | ✓/⚠ [M] |
-| NEU-151–160 | Zeugenroute, Kantengeometrie, Separationsbedingungen | ✓/⚠ [M] |
-| **NEU-161 rev.1–5** | Zeugenroute Grundstruktur bis Quellenprüfungsabschluss | ✓ [M] Protokoll |
+| NEU-246 | Typ-Grad-Kerninvarianzaudit, Koszul-Kandidat | ✓ [M] |
+| NEU-247, 247a, 247b | Tensor-Lift Typbrücke, Domänenpräzisierung | ✓ [M] |
+| NEU-248 | Wohldefiniertheit Tensoroperator | ✓ [M] |
+| NEU-249 | Präzisierungen Notation/Konstruktion/Stabilität | ✓ [M] |
+| NEU-250 | Wres-Minimalblock Kleinfallprüfung | ✓ [M] → **Ausgang E** |
+| NEU-250a | Typisierung Dirichletresiduumsform, relativer Primkantenraum | ✓ [M]_part → **Ausgang B** |
+
+### NEU-144 bis NEU-160 (Juli 2026)
+
+> Vollständige Dokumentation in den thematischen Strangordnern. Stand unverändert.
 
 ### NEU-57 bis NEU-143 (29. Juni — 9. Juli 2026)
 
-| Eintrag | Thema | Resultat |
-|---|---|---|
-| NEU-57 | Singulärwert-Wachstum $J^-$ | Engpass eröffnet ❓ [O] |
-| NEU-100–112 | Formfaktor, Weil, Jacobi-Realisierung | ✓ [M] |
-| NEU-113–120 | Bombieri-Normalisierung, $C_\xi$-Fix | ✓ [M] |
-| NEU-125, 130 | PSWF-Brücke, Prä-Lanczos-Metrik | ✓ [M] |
-| NEU-131 | Edge-Schur-Nelson-Lemma (abstrakt) | ✓ [M] |
-| NEU-135D | Welt-2-Entscheidung; $\|\varepsilon_p\|^2=1$ | ✓ [M] |
-| NEU-141 | $R_p\gtrsim p/\log p$; drei Spurklassen-Ebenen | ✓ [M] (S1+S2); ❓ [O] (S3) |
+> Vollständige Dokumentation in den thematischen Strangordnern. Stand unverändert.
 
 ### NEU-1 bis NEU-56 (19. — 29. Juni 2026)
 
-| Problem | Zugang | Resultat |
-|---|---|---|
-| OP-1: Spektralinvarianz $A_{2D}^r$ | NEU-10 | ✓ [M] |
-| OP-2: $[\omega_2]\neq 0$ | NEU-15 | ✓ [M] |
-| OP-3: $[L_3]\neq 0$ | NEU-17–20 | $C'_{4,1}\neq 0$ ✓ [M] |
-| OP-4.1: Frobenius-Wodzicki | NEU-21–25 | ✓ [M] |
-| Mangoldt-Schicht (X.3.9) | NEU-39 | ✓ [M] |
-| Kanonischer Kopplungsoperator | NEU-41 | ✓ [M] |
-| Laplace-Realisierung $p^{-s}$ | NEU-42 | ✓ [M] |
-| Reinheitslemma Graph | NEU-43 | ✓ [M] |
-| $pq$-Kollisionstest | NEU-44 | ✓ [M] |
-| Weyl-Korrekturen $M_p(z)$ | NEU-46 | ✓/⚠ [M] |
-| Birman-Schwinger-Indexsatz | NEU-49 | ✓/✗ [M] |
-| Spektralbasis $\eta$ vs. Eigenbasis | NEU-52 | ✓/✗ [M] |
-| Nelson-Strategie + flache Achsen | NEU-54 | ⚠ [M] |
-| $\gamma_N$-Spannung / Konfinement | NEU-56 | ✗/✓ [M] |
+> Stand unverändert.
 
 ---
 
@@ -264,13 +226,6 @@ Sigma_rel^ren(beta) = Sum_p p^{-beta}/(1-p^{-beta}) P_p              ✓ [M]
 Tr(R Sigma_rel^ren(beta)) = -zeta'/zeta(beta)  fuer Re(beta) > 1     ✓ [M] (NEU-141)
 Tr_reg(R Sigma_rel^ren(beta))  fuer 0 < Re(beta) <= 1                ❓ [O] (NEU-141.D)
 
-Nelson-Energieoperator:
-L eta_{p;m;r,u} = ell(p,m,r,u) eta                                    ✓ [M]
-iJ^- wesentlich s.a. auf D_0^eff  [unter Nelson-Bed.]                ✓ [M] unter Bed.
-
-Weg A (kompakter Resolvent) ueber L:                                  ✗ [M] (NEU-56)
-Weg B (Spektralmass):                                                 ✓ [M] robuster Standard
-
-Aktueller Haupt-Engpass (6. August 2026):
-j_{2,N}(E^rel_{R;1->2}) als BC-Element konstruieren  =>  [O-221-1c1a0-C]
+Aktueller Haupt-Engpass (Wres-Strang):
+  j_{2,N}(E^rel_{R;1->2}) als explizites residuenfaehiges BC-Element  => [O-221-1c1a0-C]
 ```
