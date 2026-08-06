@@ -1,8 +1,8 @@
 # Weil-Explizitformel, Krein-Raum und Hankelpositivitaet
 
-NEU-220 – NEU-221d. Gammafaktor und Mellin-Normierung, Konturtransport zur Explizitformel, Nullstellenpaar-Kreinraum, Spektraldeterminante und die RH-aequivalente Hankel-Hierarchie.
+NEU-220 – NEU-250a. Gammafaktor und Mellin-Normierung, Konturtransport zur Explizitformel, Nullstellenpaar-Kreinraum, Spektraldeterminante und die RH-äquivalente Hankel-Hierarchie; relativer Wres-Minimalblock und Typisierung der Dirichletresiduumsform.
 
-**29 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
+**31 Dokumente.** Zurück zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
 
 | ID | Dokument | Status |
 |---|---|---|
@@ -30,11 +30,21 @@ NEU-220 – NEU-221d. Gammafaktor und Mellin-Normierung, Konturtransport zur Exp
 | `NEU-220t` | [Metrikblock-Klassifikation, Off-Axis-Trägheit und Similarity-No-Go](NEU-220t_Metrikblock_Klassifikation_OffAxis-Traegheit_und_Similarity-NoGo.md) | ✓M·16 ?O·6 |
 | `NEU-220u` | [Spektraldeterminante, Schattenklasse und Resolventenspur](NEU-220u_Spektraldeterminante_Schattenklasse_und_Resolventenspur.md) | ✓M·7 ✓K·2 ?O·6 |
 | `NEU-220v` | [Stieltjesfunktion, Resolventenspur und Hankelpositivität](NEU-220v_Stieltjesfunktion_Resolventenspur_und_Hankelpositivitaet.md) | ✓M·6 ?O·2 |
-| `NEU-220w` | [Hankelvollständigkeit, Moment-GNS-Weyl-Modell und semifinite Atomizität](NEU-220w_Hankelvollstaendigkeit_Moment-GNS_und_semifinite_Atomizitaet.md) | ✓M·4 ?O·4 |
+| `NEU-220w` | [Hankervollständigkeit, Moment-GNS-Weyl-Modell und semifinite Atomizität](NEU-220w_Hankervollstaendigkeit_Moment-GNS_und_semifinite_Atomizitaet.md) | ✓M·4 ?O·4 |
 | `NEU-221` | [Adelische Momentquelle für den positiven Weil-Operator](NEU-221_Adelische_Momentquelle_fuer_den_positiven_Weil-Operator.md) | ✓M·3 ?O·7 |
 | `NEU-221c` | [Zyklischer Feshbach-Weyl-Kandidat und quadratische Resolvente](NEU-221c_Zyklischer_Feshbach-Weyl_Kandidat_und_quadratische_Resolvente.md) | ✓M·1 ✓K·2 ?O·5 |
 | `NEU-221d` | [Direktextraktion NEU-46: Zyklischer Sektor und Nullmodusaudit](NEU-221d_Direktextraktion_NEU46_Zyklischer_Sektor_und_Nullmodusaudit.md) | ✓M·2 ✓K·1 |
 | `NEU-221e` | [Affine Hebungsfaser, Wres-Quotient und Spektralmaßabstieg des relativen Kopplungsvektors](NEU-221e_Affine_Hebungsfaser_Wres-Quotient_und_Spektralmassabstieg_Psip.md) | ✓M·16 ✓K·2 ?O·4 ?O·8 |
+| `NEU-250` | [Expliziter relativer Wres-Minimalblock für p=2 — Ausgang E: keine auswertbare relative Gramform](NEU-250_Expliziter_relativer_Wres-Minimalblock_fuer_p2.md) | ✓M·neg |
+| `NEU-250a` | [Typisierung und explizite Dirichletresiduumsform auf dem relativen Primkantenraum — Ausgang B](NEU-250a_O221-1c1a0-B_Typisierung_Dirichletresiduumsform_relativer_Primkantenraum.md) | ✓M·part → **[O-221-1c1a0-C]** |
+
+---
+
+## Aktiver Forschungsknoten
+
+**`[O-221-1c1a0-C]`** — BC-Repräsentation eines primitiven relativen Primkantenvektors
+
+Kleinstes Ziel: \(j_{2,N}(E^{\mathrm{rel}}_{R;1\to2})\) als explizites residuenfähiges BC-Element konstruieren.
 
 ---
 
