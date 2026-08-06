@@ -5,7 +5,7 @@
 **Datum:** 2026-08-06  
 **Auditgegenstand:** `07-weil-explizitformel/NEU-246_Relative-Ziel-Transport-Bruecke.md`, Commit `ab442b1`  
 **Vorgänger:** NEU-246 — Relative-Ziel–Transport-Brücke  
-**Nachfolger:** \([O\text{-}246/0]\) — Wres-Sektionsunabhängigkeit im Primsektor
+**Nachfolger:** \([O\text{-}246/0\mathrm{corr}]\) — Gewichteter Kollisionsoperator und kanonisches Rechtsinverses
 
 ---
 
@@ -103,14 +103,26 @@ Aus \(R=u+ps\) folgt für jedes \(t\in\mathbb Z\): \(R=(u-pt)+p(s+t)\). Derselbe
 (s,u)\sim(s+t,u-pt).
 \]
 
-Die Wahl \(u=a\), \(s=k\) ist die euklidische Standardsektion dieser Darstellung — arithmetisch ausgezeichnet, aber nicht automatisch Wres-intrinsisch. Damit die Sektion unabhängig von der Hebung wäre, müsste mindestens gelten:
+Die Wahl \(u=a\), \(s=k\) ist die euklidische Standardsektion dieser Darstellung — arithmetisch ausgezeichnet, aber nicht automatisch Wres-intrinsisch. Der zunächst formulierte nächste Knoten \([O\text{-}246/0]\) lautete deshalb: Zu prüfen sei, ob die verschiedenen Darstellungen durch eine Radikalbedingung identifiziert werden. **NEU-248 korrigiert diese Formulierung doppelt:**
+
+1. Die dort zunächst geschriebene Formel
+   \[
+   \eta_{p;p;s+t,u-pt}\in\mathcal N_{\mathrm{Wres,rel}}
+   \]
+   ist bereits formal falsch, da sie für \(t=0\) jede einzelne Basis \(\eta_{p;p;s,u}\) ins Radikal zwingen würde.
+2. Auch die differenzierte Version
+   \[
+   \eta_{p;p;s+t,u-pt}-\eta_{p;p;s,u}\in\mathcal N_{\mathrm{Wres,rel}}
+   \]
+   ist typwidrig, weil \(\mathcal N_{\mathrm{Wres,rel}}\) im \(E\)-Rohzielraum liegt, die \(\eta\)-Vektoren aber im Transporthilbertraum.
+
+Die richtige Frage ist daher **nicht** eine Radikalidentifikation von \(\eta\)-Differenzen, sondern die Existenz und Geometrie der algebraischen Kollapsabbildung
 
 \[
-\eta_{p;p;s+t,u-pt}\in\mathcal N_{\mathrm{Wres,rel}}
-\qquad\text{für alle zulässigen }(s,u,t).
+\kappa_p^{\mathrm{alg}}:\eta_{p;p;s,u}\longmapsto E^{\mathrm{rel}}_{u+ps;1\to p},
 \]
 
-Eine solche Radikalidentifikation ist in den geprüften Quellen nicht bewiesen. Liftunabhängigkeit und die zugehörige Wres-Grammatrix werden dort als offen geführt.
+ihres Kerns und eines ggf. gewichteten kanonischen Rechtsinversen. Genau dies ist der durch NEU-248 eingeführte Nachfolgeknoten \([O\text{-}246/0\mathrm{corr}]\).
 
 \[
 \boxed{\text{intrinsische Quotientenabbildung: }?[O]}
@@ -304,7 +316,7 @@ Gesamturteil bleibt: \(\boxed{\text{NEU-246: }\checkmark[M]_{\mathrm{part}}}\).
 \text{NEU-221e} &\to \text{algebraischer Rohzielraum, formaler Quotient}\\
 \text{NEU-225/227} &\to \text{Primtransport, Koordinatenwörterbuch}\\
 &\searrow\\
-[O\text{-}246/0] &\to \text{Sektionsunabhängigkeit und vollständige Wres-Grammatrix}\\
+[O\text{-}246/0\mathrm{corr}] &\to \text{gewichteter Kollisionsoperator, Kern, Rechtsinverses}\\
 \downarrow\\
 [O\text{-}246/0\mathrm b] &\to \text{Radikal und positive Gramfaktorisierung}\\
 \downarrow\\
@@ -329,18 +341,30 @@ Die frühere Buchung \([O\text{-}246/1]: w_{p,r}>0\) kommt zu früh: Positivitä
 ## 14 — Nächster atomarer Forschungsauftrag
 
 \[
-\boxed{[O\text{-}246/0]:\ \text{Wres-Sektionsunabhängigkeit im Primsektor}}
+\boxed{[O\text{-}246/0\mathrm{corr}]:\ \text{Gewichteter Kollisionsoperator und kanonisches Rechtsinverses}}
 \]
 
-Für festes \(p\) ist zu entscheiden, ob für alle \(s,u,t\in\mathbb Z\):
+Für festes \(p\) sind sauber zu trennen und zu prüfen:
 
-\[
-\eta_{p;p;s+t,u-pt}\in\mathcal N_{\mathrm{Wres,rel}}
-\]
+1. die algebraische Kollapsabbildung
+   \[
+   \kappa_p^{\mathrm{alg}}:\eta_{p;p;s,u}\longmapsto E^{\mathrm{rel}}_{u+ps;1\to p},
+   \]
+2. ihr Kern, algebraisch erzeugt durch Kollisionsdifferenzen entlang der Fasern \(u+ps=R\),
+3. die Obstruktion des ungewichteten Hilbertkollapses wegen unendlich großer Fasern,
+4. das gewichtete Beschränktheitskriterium
+   \[
+   \sup_R\sum_{u+ps=R}|b_{s,u}|^2<\infty,
+   \]
+5. der minimale Rechtsinverse-Kandidat
+   \[
+   \iota_{p,b}(E_R)=\frac1{B_R}\sum_{u+ps=R}\overline{b_{s,u}}\,\eta_{p;p;s,u},
+   \qquad
+   B_R=\sum_{u+ps=R}|b_{s,u}|^2,
+   \]
+6. und schließlich die Rückbindung der Hebungsunabhängigkeit an die bereits bestehende Barriere \([O\text{-}221\text{-}1c1a]\)/\([O\text{-}153\text{-A/B}]\).
 
-gilt. Dazu ist aus der tatsächlichen Wres-Quelle die vollständige Paarung \(G_p((s,u),(s',u'))\) zu berechnen oder eindeutig zu definieren. Anschließend ist zu prüfen, ob die Invarianzbedingung für alle Testindizes gilt.
-
-Nur bei positivem Ausgang faktorisiert das Koordinatenwörterbuch \((s,u)\mapsto R=u+ps\) durch den Wres-Quotienten. Erst dann ist die euklidische Wahl \(R=a+pk\) eine intrinsische Sektion, und erst danach sind \(w_{p,r}\), Radikal, Positivität und Hilbertintertwining sinnvoll prüfbar.
+Nur wenn die Gewichte quellenseitig kanonisch und hebungsunabhängig sind, erhält man daraus eine intrinsische Sektion oder Hilbertbrücke.
 
 ---
 
@@ -354,14 +378,14 @@ Nur bei positivem Ausgang faktorisiert das Koordinatenwörterbuch \((s,u)\mapsto
 
 Sie ist im besten Fall eine konditionale, koordinatenabhängige Modellsektion. In der geschriebenen Form ist sie zusätzlich durch eine Indexvertauschung beziehungsweise ungeklärte Reindexierung und durch die falsche Normierung \(1/\sqrt{w_{p,r}}\) belastet.
 
-Der nächste Knoten ist daher nicht die Positivität von \(w_{p,r}\), sondern die vorgelagerte Frage, ob das vorhandene Koordinatenwörterbuch überhaupt intrinsisch durch den Wres-Quotienten faktorisiert.
+Der nächste Knoten ist daher nicht die Positivität von \(w_{p,r}\), sondern die vorgelagerte und inzwischen präzisierte Frage, ob das vorhandene Koordinatenwörterbuch über einen gewichteten Kollisionsoperator intrinsisch durch den Wres-Quotienten faktorisiert.
 
 ---
 
 ## 16 — Repository-Korrekturblock
 
 ```text
-AUDIT NEU-246 (Direktaudit NEU-247)
+AUDIT NEU-246 (Direktaudit NEU-247, korrigiert durch NEU-248)
 
 Gesamturteil NEU-246:            checkmark[M]_part
 Hauptbehauptung (Hilbertbruecke): checkmark[M]_neg,Quelle
@@ -390,9 +414,18 @@ Quellenverweis korrigiert:
                         -> NEU-221e -> NEU-228b/229.
 
 Naechster Knoten:
-  [O-246/0]  Wres-Sektionsunabhaengigkeit im Primsektor.
-  Zu pruefen: eta_{p;p;s+t,u-pt} in N_Wres,rel  fuer alle s,u,t?
-  Erfordert vollstaendige Paarung G_p((s,u),(s',u')).
+  Fruehere Formulierung (zurueckgezogen):
+    [O-246/0]  Wres-Sektionsunabhaengigkeit im Primsektor.
+    Formel (falsch): eta_{p;p;s+t,u-pt} in N_Wres,rel
+
+  Korrektur durch NEU-248:
+    - differenzierte Formel waere formal naeherliegend,
+      aber ebenfalls typwidrig;
+    - korrektes Objekt ist kappa_p^alg: eta_{p;p;s,u} |--> E_rel_{u+ps;1->p}
+
+  Tatsaechlich naechster Knoten:
+    [O-246/0corr]
+    Gewichteter Kollisionsoperator und kanonisches Rechtsinverses.
 
 Endurteil:
   iota_{p,N}^{(1)} ist keine bewiesene intrinsische Wres-Hilbertbruecke,
