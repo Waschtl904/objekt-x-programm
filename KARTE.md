@@ -2,7 +2,23 @@
 
 > Direkt aus dem Repository verifiziert. Stand: 2026-07-28 (Bereinigungsdurchlauf).  
 > Auditstand aktualisiert: 2026-07-29 (NEU-123-Komplex + NEU-124/125/127 + NEU-128A/B/130–145 + NEU-151–155).  
-> Strukturupdate: 2026-08-05 (NEU-245b in 07 eingetragen; 06 vollständig aufgelistet; NEU-250 aus 06 entfernt).
+> Strukturupdate: 2026-08-05 (NEU-245b in 07 eingetragen; 06 vollständig aufgelistet; NEU-250 aus 06 entfernt).  
+> Forschungsupdate: 2026-08-06 (NEU-245c eingetragen; M3-No-Go und M4 notiert; aktiver Pfad gesetzt).
+
+---
+
+## Aktueller Forschungspfad
+
+```
+[O-245c/1] ⟶ [O-245c/2]
+
+Kanonisierung Tripel        Identitätsaudit
+(Psi_N, Nullmodus,          M_{X,N} --> M_Xi?
+ m_0,N < inf)
+```
+
+**Letzter Abschluss:** NEU-245c ✓[M]_part — M3 allein reicht nicht; kein additiver Kreuzterm; M4 (Resolventen-/Momentidentifikation) als neue notwendige Bedingung eingeführt.  
+**Nächster Knoten:** NEU-245d — [O-245c/1] Kanonisierung, Nullmodus, Basismoment.
 
 ---
 
@@ -411,10 +427,10 @@ Nächster Auditblock: NEU-156–160.
 **Hinweise:**
 - NEU-191 fehlt in der API-Liste (Lücke zwischen NEU-190 und NEU-192).
 - NEU-198 fehlt in der API-Liste (Lücke zwischen NEU-197 und NEU-199).
-- NEU-219u doppelt: `_Abschluss_O219_NoGo_Theorem` und `_Abschlussaudit_Geladene_zyklische_Architektur` — Klärung ausstehend.
-- NEU-219y doppelt: `_Direktaudit_Dg_Zieltypbruecke_NEU211_NEU217` und `_Unit-Slot-Zeuge_...` — Klärung ausstehend.
-- NEU-220, NEU-220a, NEU-220c, NEU-222 sind thematisch bereits im 07-Strang (Weil-Explizitformel). Formale Umsortierung noch offen.
-- NEU-250 wurde am 2026-08-05 aus diesem Ordner entfernt (Fehlablage); korrekte Version liegt in `07-weil-explizitformel/` als `NEU-245b`.
+- NEU-219u doppelt — Klärung ausstehend.
+- NEU-219y doppelt — Klärung ausstehend.
+- NEU-220, NEU-220a, NEU-220c, NEU-222 thematisch bereits im 07-Strang. Formale Umsortierung offen.
+- NEU-250 wurde am 2026-08-05 entfernt (Fehlablage); korrekte Version in `07` als `NEU-245b`.
 
 ---
 
@@ -456,10 +472,16 @@ Nächster Auditblock: NEU-156–160.
 ├── NEU-243_Kompatibilitaetsfirewall_Quell-Zielkomplex_Nichttrivialitaet.md
 ├── NEU-244_Quotient-first-Zielarchitektur_und_tautologischer_Cone-No-Go.md
 ├── NEU-245_c2a_Operatortypaudit_NEU195_NEU216.md
-└── NEU-245b_Typaudit_O220-1f0_Mindestarchitektur_globale_Archimedes-Prim-Kopplung.md  ← NEU 2026-08-05
+├── NEU-245b_Typaudit_O220-1f0_Mindestarchitektur_globale_Archimedes-Prim-Kopplung.md
+├── NEU-245c_Audit_Feshbach-Weyl-Kandidat_gegen_O245b1_M1-M4.md   ← NEU 2026-08-06 ✓[M]_part
+└── NEU-245d_Direktaudit_O245c-1_Kanonisierung_Nullmodus_und_Basismoment.md  ← in Arbeit
 ```
 
-**Gesamt: 35 Inhaltsdateien + README.md = 36 Dateien gesamt** (Stand: 2026-08-05)
+**Gesamt: 36 Inhaltsdateien + README.md = 37 Dateien gesamt** (Stand: 2026-08-06; NEU-245d noch ausstehend)
 
-**Hinweis:** NEU-246 auch in `01-primkanten-werkzeuge/` vorhanden — Doppelung, Klärung ausstehend.  
-**Strukturhinweis:** NEU-242–245b sind Nachläufer der laufenden O-229/O-220-Front und gehören thematisch zum 07-Strang (Weil-Positivität, Operatortypaudit). Kein Ordnerwechsel nötig.
+**Forschungsstatus 07:**
+- NEU-245c: ✓[M]_part — M3-No-Go bestätigt; kein additiver Kreuzterm; M4 (Momentidentifikation) als neue notwendige Bedingung eingeführt.
+- **Aktiver Pfad:** [O-245c/1] ⟶ [O-245c/2]
+  - [O-245c/1]: Kanonisierung \(\Psi_N\), Nullmodusfreiheit \(E_{D_N}(\{0\})\Psi_N=0\), Basismoment \(m_{0,N}<\infty\)
+  - [O-245c/2]: Identitätsaudit \(M_{X,N}(w)\to M_\Xi(w)\) — RH-stark, erst nach [O-245c/1] freigeschaltet
+- NEU-246 auch in `01-primkanten-werkzeuge/` vorhanden — Doppelung, Klärung ausstehend.
