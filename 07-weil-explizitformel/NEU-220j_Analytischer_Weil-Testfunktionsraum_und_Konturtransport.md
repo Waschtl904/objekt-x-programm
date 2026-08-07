@@ -72,6 +72,8 @@ $$
 $\mathcal{W}$ ist ein Untervektorraum von $\mathcal{O}(\mathbb C)\cap\mathcal{PW}$
 (ganze PW-Funktionen mit Symmetrie $F(1-s)=F(s)$).
 
+**Topologie auf $\mathcal{W}$ (autoritativ):** $\mathcal{W}$ trägt die von $C_{c,\mathrm{even}}^\infty(\mathbb{R})$ via $g \mapsto F_h$ transportierte LF-Topologie (induktiver Limes der Fréchet-Räume $C_{c,\mathrm{even}}^\infty([-R,R])$, $R\nearrow\infty$). Die Abbildung $g\mapsto F_h$ ist eine topologische Bijektion. Stetigkeit von $F_h\mapsto I_{\mathrm{fin},\sigma}(h)$ als Funktional auf $\mathcal{W}$ folgt unmittelbar aus der Stetigkeit der Fouriertransformation auf $C_c^\infty(\mathbb{R})$.
+
 ---
 
 ## 2. Konturkompatible endliche Form für $\sigma>1$
@@ -276,6 +278,7 @@ PD-5a1  checkmark[M]_part
   |-- [Sfin-RH-obstruction-v0] checkmark[M]_neg  (NEU-220i)
   |-- Lambda_{fin,sigma} sigma>1  checkmark[K/M]  (NEU-220i/j)
   |-- Weil-Testkern F_h, W-Raum  checkmark[M]     (NEU-220j Abschnitt 1)
+  |-- Topologie auf W: LF-Transport von C_{c,even}^infty(R)  checkmark[M]  (NEU-220j Abschnitt 1.3)
   |-- I_{fin,sigma} sigma-unabh.  checkmark[M]     (NEU-220j Abschnitt 2)
   |-- Buchhaltungsentscheidung   checkmark[M]     (NEU-220j: Variante B, xi'/xi)
   |-- F_h(rho) ohne RH           checkmark[M]     (NEU-220j Abschnitt 3)
@@ -286,6 +289,6 @@ PD-5a1  checkmark[M]_part
 
 ---
 
-*Datei: `katalog/NEU-220j_Analytischer_Weil-Testfunktionsraum_und_Konturtransport.md` | 26. Juli 2026*  
-*Kernresultat: $\mathcal{W}$-Raum konstruiert; $I_{\mathrm{fin},\sigma}$ $\sigma$-unabhängig ✓[M]; Buchhaltung Variante B gewählt; $F_h(\rho)$ ohne RH-Annahme; Engpass präzisiert*  
+*Datei: `katalog/NEU-220j_Analytischer_Weil-Testfunktionsraum_und_Konturtransport.md` | 26. Juli 2026 (Topologie-Patch: 07. August 2026)*  
+*Kernresultat: $\mathcal{W}$-Raum konstruiert; Topologie: LF-Transport von $C_{c,\mathrm{even}}^\infty(\mathbb{R})$ \checkmark[M]; $I_{\mathrm{fin},\sigma}$ $\sigma$-unabhängig \checkmark[M]; Buchhaltung Variante B gewählt; $F_h(\rho)$ ohne RH-Annahme; Engpass präzisiert*  
 *Quellen: NEU-220i (§1–2), NEU-220d–f ($\Lambda_\Gamma$)*
