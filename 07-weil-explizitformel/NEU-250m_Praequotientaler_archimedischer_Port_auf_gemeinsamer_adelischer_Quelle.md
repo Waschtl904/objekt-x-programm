@@ -28,37 +28,43 @@ darf erst global, nach gemeinsamer Faktorisierung, entstehen.
 
 ---
 
-## M1 — Quellenidentität: Ist $\mathcal{S}_{\rm adel}$ derselbe Raum wie $\mathcal{G}_W$?
+## M1 — Quellenidentität und adelisch-archimedischer Port
 
 **Was zu klären ist:**  
 NEU-250k (und die 250g–i-Serie) verwenden $\mathcal{S}_{\rm adel}$ als gemeinsame adelische Quelle.  
-NEU-220j definiert einen analytischen Weil-Testfunktionsraum (im Folgenden $\mathcal{G}_W$) für den Konturtransport der archimedischen Weil-Explizitformel.  
+NEU-220j definiert den archimedischen Weil-Testfunktionsraum $\mathcal{W}$ für den Konturtransport der archimedischen Weil-Explizitformel.
 
-**Quellenbestand (NEU-220j):**  
-NEU-220j beschreibt $\mathcal{G}_W$ als Raum von Testfunktionen, die auf der Mellin-Linie analytisch sind und mit der Konturnormierung aus NEU-220k kompatibel sind. Konkret: Funktionen $g$ mit $g(s)$ holomorph in einem Streifen um Re$(s) = 1/2$ und mit geeignetem Abfall.
+**Befund aus NEU-250n (§N-C, Korrektur K1):**  
+Der frühere direkte Pfeil
+$$
+\iota_\infty: \mathcal{S}_{\rm adel} \longrightarrow \mathcal{G}_W
+$$
+ist als **einstufige Abbildung nicht korrekt**. Die Notation $\mathcal{G}_W$ ist zu ersetzen durch $\mathcal{W}$ (den eigentlichen Weil-Testfunktionsraum aus NEU-220j). Darüber hinaus setzt die Abbildung eine kanonische Extraktion der archimedischen Komponente $f_\infty$ aus $f \in \mathcal{S}(\mathbb{A}_\mathbb{Q})$ voraus — diese ist **bislang nicht kanonisch definiert** und stellt die eigentliche offene Lücke dar.
 
-**Quellenbestand ($\mathcal{S}_{\rm adel}$):**  
-NEU-250k/220j bezeichnen $\mathcal{S}_{\rm adel}$ als adelischen Schwartz-Bruhat-Raum $\mathcal{S}(\mathbb{A}_\mathbb{Q})$ mit Fourier-selbstdualer Normierung. Die Weil-Explizitformel in NEU-220k ist genau für $f \in \mathcal{S}(\mathbb{A}_\mathbb{Q})$ aufgestellt, wobei $g = $ Mellin-Transformierte von $|x|^{1/2}f$.
-
-**Befund M1:**  
-Die Beziehung zwischen $\mathcal{S}_{\rm adel} = \mathcal{S}(\mathbb{A}_\mathbb{Q})$ und $\mathcal{G}_W$ ist nicht bloß eine Namensgleichheit, sondern eine **Mellin-Abbildung**:
+**Korrekte zweistufige Struktur (per NEU-250n):**
 
 $$
-\boxed{\iota_\infty: \mathcal{S}_{\rm adel} \longrightarrow \mathcal{G}_W, \qquad f \longmapsto g_f(s) := \int_0^\infty f_\infty(x)|x|^{s-1/2}\,d^\times x,} \qquad (M1)
+\boxed{\mathcal{S}_{\rm adel} \xrightarrow{\,r_{\infty,W}\,} \mathcal{S}_{\infty,W} \xrightarrow{\,\iota_\infty^{\rm loc}\,} \mathcal{W}} \qquad (M1)
 $$
 
-wobei $f_\infty$ die archimedische Komponente von $f \in \mathcal{S}(\mathbb{A}_\mathbb{Q})$ bezeichnet.
+mit
+- $r_{\infty,W}: \mathcal{S}_{\rm adel} \to \mathcal{S}_{\infty,W}$: archimedische Restriktion/Projektion aus dem adelischen Raum — **?[O]**, kanonische Konstruktion noch offen
+- $\iota_\infty^{\rm loc}: \mathcal{S}_{\infty,W} \to \mathcal{W}$: lokale archimedische Mellin-Einbettung — $\checkmark[K/M]$, aus NEU-220j/k gesichert
+
+**Zur Notation $f_\infty$:**  
+Die in älteren Knoten (und der Vorfassung dieses Dokuments) verwendete Formulierung, man könne aus $f \in \mathcal{S}(\mathbb{A}_\mathbb{Q})$ einfach dessen „archimedische Komponente $f_\infty$“ nehmen, ist **bislang nicht kanonisch definiert**. Für ein allgemeines adelisches $f$ ist die Zerlegung $f = f_\infty \otimes f_{\rm fin}$ nur im Tensorprodukt-Sinne für einfache Tensoren unmittelbar sinnvoll; für allgemeine $f \in \mathcal{S}(\mathbb{A}_\mathbb{Q})$ fehlt eine kanonische Projektion $f \mapsto f_\infty$. Dies ist genau der Inhalt der offenen Stelle $r_{\infty,W}$.
 
 **Was zu zeigen bleibt $[O\text{-}250m/1]$:**
 
-1. Ist $\iota_\infty$ wohldefiniert und stetig (als Abbildung von Fréchet-Räumen)?
-2. Ist $\iota_\infty$ surjektiv oder zumindest dicht auf dem für NEU-220k benötigten Unterraum?
-3. Hängt $\iota_\infty$ von der archimedischen Zerlegung $f = f_\infty \otimes f_{\rm fin}$ ab, oder kann sie kanonisch auf ganz $\mathcal{S}_{\rm adel}$ erweitert werden?
+1. Konstruktion von $r_{\infty,W}: \mathcal{S}_{\rm adel} \to \mathcal{S}_{\infty,W}$ als kanonische Abbildung (nicht nur auf einfachen Tensoren).
+2. Stetigkeit von $r_{\infty,W}$ als Abbildung von Fréchet-Räumen.
+3. Verträglichkeit: $\iota_\infty^{\rm loc} \circ r_{\infty,W}$ soll die in NEU-220k benötigte Mellin-Abbildung reproduzieren.
 
-Bis zur Klärung dieser drei Punkte gilt:
+Bis zur Klärung dieser Punkte gilt:
 
 $$
-\iota_\infty: \mathcal{S}_{\rm adel} \to \mathcal{G}_W \qquad \checkmark[K]\text{ (kanonischer Kandidat)}, \qquad ?[O]\text{ (Wohldefiniertheit/Stetigkeit)} \qquad (M1\text{-Status})
+r_{\infty,W}: \mathcal{S}_{\rm adel} \to \mathcal{S}_{\infty,W} \quad ?[O] \qquad
+\iota_\infty^{\rm loc}: \mathcal{S}_{\infty,W} \to \mathcal{W} \quad \checkmark[K/M] \qquad (M1\text{-Status})
 $$
 
 ---
@@ -194,12 +200,13 @@ $$
 ## Stufenplan und Abhängigkeits-DAG
 
 ```
-[O-250m/1]: Quellenidentität S_adel / G_W
-    -> iota_infty wohldefiniert und stetig  ?[O]
+[O-250m/1]: Konstruktion r_{infty,W}: S_adel -> S_{infty,W}
+    -> kanonische adelisch-archimedische Restriktion  ?[O]
+    -> Nachfolger: NEU-250o
 
 [O-250m/2]: Polarisierung B_W(a,b) auf S_adel
     -> Wohldefiniertheit und hermitesche Symmetrie  ?[O]
-    -> setzt M1 voraus
+    -> setzt [O-250m/1] voraus
 
 [O-250m/3]: Faktorisierungstest B_Lambda + B_infty
     -> Existenz von K_X und T_infty mit richtigem Kreuzblock  ?[O]
@@ -213,15 +220,10 @@ $$
 **Welcher Schritt ist atomar und als nächster zugänglich:**
 
 $$
-\boxed{[O\text{-}250m/1]: \text{ Wohldefiniertheit von }\iota_\infty: \mathcal{S}_{\rm adel}\to\mathcal{G}_W \text{ als Mellin-Abbildung.}}
+\boxed{[O\text{-}250m/1]: \text{ Konstruktion von }r_{\infty,W}: \mathcal{S}_{\rm adel}\to\mathcal{S}_{\infty,W} \text{ als kanonische adelisch-archimedische Restriktion.}}
 $$
 
-Dieser Schritt benötigt keine neuen globalen Konstruktionen. Er erfordert nur:
-- die archimedische Komponente $f_\infty$ von $f\in\mathcal{S}(\mathbb{A}_\mathbb{Q})$ zu isolieren,
-- die Mellin-Transformation auf dem Streifen Re$(s)\in(0,1)$ zu kontrollieren,
-- zu prüfen, ob das Ergebnis in $\mathcal{G}_W$ (dem Testfunktionsraum von NEU-220j) liegt.
-
-Das ist eine lokale analytische Aufgabe — keine neue globale Struktur.
+Dieser Schritt ist Gegenstand von NEU-250o.
 
 ---
 
@@ -229,11 +231,11 @@ Das ist eine lokale analytische Aufgabe — keine neue globale Struktur.
 
 | Schritt | Frage | Quellenstand | Status |
 |---|---|---|---|
-| M1 | $\iota_\infty: \mathcal{S}_{\rm adel}\to\mathcal{G}_W$ kanonisch? | NEU-220j: Mellin-Struktur vorhanden | $\checkmark[K]$, $?[O]$ (Stetigkeit) |
+| M1 | $r_{\infty,W}: \mathcal{S}_{\rm adel}\to\mathcal{S}_{\infty,W}$ kanonisch? $\iota_\infty^{\rm loc}: \mathcal{S}_{\infty,W}\to\mathcal{W}$ | NEU-220j: lokaler Mellin gesichert; $r_{\infty,W}$ offen | $r_{\infty,W}\;?[O]$, $\iota_\infty^{\rm loc}\;\checkmark[K/M]$ |
 | M2 | $b_\infty(a,b)$ als sesquilineare Form, nicht pos. Hilbert | NEU-220d: Indefinitheit gesichert | $\checkmark[M]$ |
 | M3 | Polarisierung $B_W(a,b)$ wohldefiniert | NEU-220l/250h: Diagonale bekannt | $\checkmark[K]$, $?[O]$ (Wohldefiniertheit) |
 | M4 | Faktorisierung $B_\Lambda+B_\infty$ auf $\mathcal{S}_{\rm adel}$ | NEU-250g–i: $B_\Lambda$ bekannt | $?[O]$ — Hauptziel |
-| $[O\text{-}250m/1]$ | nächster atomarer Schritt: Mellin-Abbildung | NEU-220j | $?[O]$ |
+| $[O\text{-}250m/1]$ | nächster atomarer Schritt: $r_{\infty,W}$ konstruieren | NEU-250o | $?[O]$ |
 
 ---
 
@@ -244,13 +246,14 @@ Das ist eine lokale analytische Aufgabe — keine neue globale Struktur.
 | NEU-220b/c | Archimedische Weil-Distribution $W_\infty$, Normierung |
 | NEU-220d (7ff3afe) | Archimedische Rohform indefinit; Polseparation |
 | NEU-220g (7c4f74a) | Schwacher endlich-archimedischer Anschluss; früherer Versuch |
-| NEU-220j (781653e) | Analytischer Weil-Testfunktionsraum $\mathcal{G}_W$, Konturtransport |
+| NEU-220j (78165f9) | Analytischer Weil-Testfunktionsraum $\mathcal{W}$, Konturtransport |
 | NEU-220k | Masterkontur, Weil-Explizitformel, Vorzeichenbuchhaltung |
 | NEU-220l (1dc07b3) | Weil-Quadratik, Autokorrelation, Positiver Kegel |
 | NEU-221c (b0f4e02) | Verbot orthogonaler Primkanal-Direktsumme |
 | NEU-250g–i | Lokale Arithmetik: $B_\Lambda$ konstruiert |
-| NEU-250k (dbd892a) | K3-Firewall: $\|T_{\mathcal{M}}a\|^2$ nicht isoliert zulässig |
+| NEU-250k (01b484e) | K3-Firewall: $\|T_{\mathcal{M}}a\|^2$ nicht isoliert zulässig; K1 ?[O] |
 | NEU-250l (27894d5) | J-B aktiv: kein Streublock-Mediator; $T_\infty$ primärer Pfad |
+| NEU-250n (e0f2f70) | Direktaudit M1: N-C; $r_{\infty,W}$ als eigentliche offene Lücke identifiziert |
 
 ---
 
