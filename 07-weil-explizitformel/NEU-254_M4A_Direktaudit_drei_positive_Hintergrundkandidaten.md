@@ -2,158 +2,105 @@
 
 **Katalog-ID:** NEU-254  
 **Ordner:** `07-weil-explizitformel`  
-**Datum:** 2026-08-07  
-**Auftrag:** M4-A-Direktaudit — Vergleich von NEU-220e, NEU-220w, NEU-221 als Kandidaten für ein kanonisches positives Hintergrundskalarprodukt $\langle\cdot,\cdot\rangle_0$ auf $\mathcal{A}_{\rm PW}$ mit $B_W(a,b)=\langle a,A_Xb\rangle_0$; Rollenklassifikation; Hauptpfad für M4-A.  
-**Gesamtausgang:** Kein Kandidat liefert direkt die M4-A-Lösung; Rollenklassifikation $\checkmark[K/M]$; Hauptpfad $\checkmark[K/M]$ identifiziert; Normierungs-Firewall übernommen.  
+**Datum:** 2026-08-07 (Patch: 2026-08-07)  
+**Auftrag:** M4-A-Direktaudit — Vergleich von NEU-220e, NEU-220w, NEU-221 als Kandidaten für ein kanonisches positives Hintergrundskalarprodukt $\langle\cdot,\cdot\rangle_0$ auf $\mathcal{A}_{\rm PW}$ mit $B_W(a,b)=\langle a,A_Xb\rangle_0$.  
+**Patch:** $R_{\rm PW}^{-1}$ $\times[M]$ (nicht definiert: $R_{\rm PW}$ surjektiv, nicht injektiv, großer Kern); kanonischer Rechtsinverser $S_{\rm PW}$ mit $R_{\rm PW}S_{\rm PW}=I$ eingeführt; Transport-Ergebnis $\langle S_{\rm PW}a,S_{\rm PW}b\rangle_{\rm Haar}=\langle a,b\rangle_{L^2(\mathbb{R},du)}$ vorläufig gebucht; Haar-Transport-Sektion überarbeitet.  
+**Vorl. Status:** Rollenklassifikation $\checkmark[K/M]$; $H_0=L^2(\mathbb{R},du)$ vorläufig $?[O\to]$; Beschränktheit/Abschließbarkeit → NEU-255.  
 **Vorgänger:** NEU-253 M4 (Patch), NEU-252 M3 (Patch), NEU-220e, NEU-220w, NEU-221
 
 ---
 
 ## 0. Ausgangslage
 
-M4-A fragt (NEU-253 \S3):
+M4-A fragt (NEU-253 §3):
 $$
 \boxed{\text{Existiert aus der adelischen/arithmetischen Struktur kanonisch ein positives }\langle\cdot,\cdot\rangle_0\text{ mit }B_W(a,b)=\langle a,A_Xb\rangle_0\,?} \qquad (0\text{-Goal})
 $$
 
-Drei Kandidaten aus dem Repo werden systematisch verglichen. Die zentrale Vorbedingung aus NEU-221:
-
+Normierungs-Firewall (NEU-221 §0):
 $$
-\boxed{\text{Normierungs-Firewall: }\mathcal{N}_X,\tau_X,T_X\text{ müssen quellseitig fixiert sein, bevor Momente getestet werden.}} \qquad (0\text{-Fire})
+\boxed{\mathcal{N}_X,\tau_X,T_X\text{ müssen quellseitig fixiert sein; kein Fitten auf }\mu_0,\mu_1.} \qquad (0\text{-Fire})
 $$
-
-Nachträgliches Fitten auf $\mu_0,\mu_1$ invalidiert jeden Kandidaten.
 
 ---
 
 ## 1. Kandidat I: NEU-220e — Semifinite Spur
 
-### 1.1 Was NEU-220e liefert
-
-NEU-220e konstruiert:
+**Was NEU-220e liefert:**
 $$
-\mathcal{N}_\infty=L^\infty(\mathbb{R},dt),\qquad \tau_\infty(M_a)=\int a(t)\,dt,
-$$
-und die semifinite Realisierung des Gamma-Funktionals:
-$$
-\Lambda_\Gamma(h)=\frac{1}{2\pi}\tau_\infty(M_{\gamma_\infty h}).
+\mathcal{N}_\infty=L^\infty(\mathbb{R},dt),\qquad\tau_\infty(M_a)=\int a(t)\,dt,\qquad\Lambda_\Gamma(h)=\frac{1}{2\pi}\tau_\infty(M_{\gamma_\infty h}).
 $$
 
-$\gamma_\infty$ wird per Funktionalkalkül eingesetzt; intrinsischer Ursprung von $\gamma_\infty$ ist laut NEU-220e selbst noch offen.
-
-### 1.2 Was NEU-220e nicht liefert
-
-- $\tau_\infty$ ist kein inneres Produkt auf $\mathcal{A}_{\rm PW}$, sondern ein Spurzustand.
-- Die Spur realisiert nur den **Gamma-Block** $B_\Gamma$; Polterm $B_{\rm pole}$ und Primzahlpotenzterm $B_{\rm fin}$ fehlen.
-- Es gibt kein $\langle a,b\rangle_0$ aus $\tau_\infty$, das $B_W=B_{\rm pole}+B_\Gamma+B_{\rm fin}$ vollständig trägt.
-
-### 1.3 Urteil
+$\tau_\infty$ realisiert nur den **Gamma-Block** $B_\Gamma$; die vollständige Form $B_W=B_{\rm pole}+B_\Gamma+B_{\rm fin}$ wird nicht getragen. Kein $\langle a,b\rangle_0$ auf $\mathcal{A}_{\rm PW}$ aus $\tau_\infty$ allein.
 
 $$
-\boxed{\text{NEU-220e: wertvoller archimedischer Baustein; kein vollständiges M4-A-}\langle\cdot,\cdot\rangle_0.}\quad\checkmark[K/M] \qquad (1\text{-Verdict})
+\boxed{\text{NEU-220e: archimedischer Baustein; kein vollständiges M4-A-}\langle\cdot,\cdot\rangle_0.}\quad\checkmark[K/M] \qquad (1\text{-Verdict})
 $$
 
 | Kriterium | NEU-220e |
 |---|---|
-| RH-frei positiv? | $\checkmark$ (lokal, Gamma-Block) |
+| RH-frei positiv? | $\checkmark$ (lokal, $B_\Gamma$) |
 | Volles $B_W$? | $\times$ (nur $B_\Gamma$) |
-| Kanonisch aus Struktur? | $\checkmark$ teilweise ($\gamma_\infty$ noch offen) |
-| Rolle | Archimedischer Baustein für $B_\Gamma$ |
+| Kanonisch? | $\checkmark$ teilweise |
+| Rolle | Archimedischer Baustein |
 
 ---
 
 ## 2. Kandidat II: NEU-220w — Moment-GNS
 
-### 2.1 Was NEU-220w liefert
-
-NEU-220w konstruiert aus den $\Xi$-Momenten $\mu_k$ einen Hilbertraum:
+**Was NEU-220w liefert:**
 $$
 \mathcal{H}_\Xi^{\rm mom},\qquad J_\Xi,\qquad M_\Xi(w)=\langle\Omega_\Xi,(I-wJ_\Xi)^{-1}\Omega_\Xi\rangle.
 $$
 
-Das ist formal genau der Typ, den M4-A sucht: ein vollständiger Hilbertraum mit Resolventenoperator.
-
-### 2.2 Das RH-Problem
-
-Die benötigte Positivität
+**RH-Problem:** Die benötigte Positivität $\mathcal{L}_\Xi(p^*p)\ge0$, $\mathcal{L}_\Xi(xp^*p)\ge0$ ist laut NEU-220w RH-äquivalent.
 $$
-\mathcal{L}_\Xi(p^*p)\ge0,\qquad\mathcal{L}_\Xi(xp^*p)\ge0
-$$
-ist laut NEU-220w selbst **RH-äquivalent**. Ein $\langle\cdot,\cdot\rangle_0$ aus NEU-220w wäre:
-$$
-\langle p,q\rangle_0:=\mathcal{L}_\Xi(q^*p)\quad\times[M]\text{ als RH-freie Konstruktion.} \qquad (2\text{-Err})
+\langle p,q\rangle_0:=\mathcal{L}_\Xi(q^*p)\quad\times[M]\text{ als RH-freie Konstruktionsquelle.} \qquad (2\text{-Err})
 $$
 
-Damit wäre die gesuchte positive Geometrie aus einer RH-äquivalenten Positivität gebaut — das ist die zentrale Firewall aus NEU-253 \S6.
-
-### 2.3 Rolle als Kontrollmodell
-
-NEU-220w beschreibt **sehr präzise**, welchen Typ von Hilbertraumstruktur $\mathcal{H}_\Xi^{\rm mom}$ Objekt X am Ende erzeugen müsste. Es ist damit ein wertvoller **Ziel- und Kontrollrahmen**: Wenn M4-A eine kanonische RH-freie Quelle findet, muss sie denselben Zieltyp reproduzieren.
-
-### 2.4 Urteil
+**Rolle:** NEU-220w ist das Ziel- und Kontrollmodell: Was M4-A konstruiert, muss am Ende denselben Typ wie $\mathcal{H}_\Xi^{\rm mom}$ reproduzieren.
 
 $$
-\boxed{\text{NEU-220w: Kontroll- und Zielmodell; keine RH-freie Konstruktionsquelle.}\quad\checkmark[K/M]} \qquad (2\text{-Verdict})
+\boxed{\text{NEU-220w: Kontroll-/Zielmodell; Konstruktionsquelle }\times[M]\text{ (RH-äquiv.)}}\quad\checkmark[K/M] \qquad (2\text{-Verdict})
 $$
 
 | Kriterium | NEU-220w |
 |---|---|
 | RH-frei positiv? | $\times$ (RH-äquivalent) |
-| Volles $B_W$? | indirekt $\checkmark$ (nach Momentidentitäten) |
-| Kanonisch aus Struktur? | $\checkmark$ nach Momentdaten |
-| Rolle | Ziel-/Kontrollmodell, keine Konstruktion |
+| Volles $B_W$? | indirekt $\checkmark$ |
+| Kanonisch? | $\checkmark$ nach Momentdaten |
+| Rolle | Kontroll-/Zielmodell |
 
 ---
 
 ## 3. Kandidat III: NEU-221 — Adelische Momentquelle
 
-### 3.1 Was NEU-221 richtig macht
-
-NEU-221 dreht die Richtung korrekt um: nicht Positivität aus $\Xi$ voraussetzen, sondern ein positives BC-/KMS-Objekt finden, dessen Momente anschließend mit den $\Xi$-Momenten übereinstimmen. Normierungs-Firewall: $\mathcal{N}_X,\tau_X,T_X$ zuerst fixieren. Der stärkste Kandidat war:
+**Strukturprinzip (übernommen):** $T_X=B_X^{-1}\ge0$; Momente $\mu_0,\mu_1,\mu_2$ als Frühtests; keine freien Skalierungsparameter. Stärkster Kandidat in NEU-221 war:
 $$
-\boxed{D_{\rm Spec,N}^{\rm rel}=D_{\rm Jac}\cdot D_{\rm scatt},\qquad\text{relativer Feshbach-/Weyl-Sektor + Eulerkanal + archimedischer Kanal.}} \qquad (3\text{-NEU221})
+\boxed{D_{\rm Spec,N}^{\rm rel}=D_{\rm Jac}\cdot D_{\rm scatt},\quad\text{Euler+Feshbach/Weyl+archimedisch (gemeinsame Determinante, keine direkte Summe)}.} \qquad (3\text{-NEU221})
 $$
 
-konzeptionell als **gemeinsame relative Determinanten-/Resolventenstruktur**, nicht als direkte Summe.
+**Technischer Stand seit NEU-221:**
 
-### 3.2 Was seit NEU-221 gelernt wurde
-
-- $D_{\rm scatt,N}$ war in NEU-250l **nicht als echter Operator konstruiert** (untypisierter Strang).
-- Der alte Feshbach-/Wres-Strang hatte Typisierungslücken.
-- Andererseits liefern die neuen Strukturen:
-
-$$
-P_{\rm Haar},\quad J_{1/2},\quad R_{\rm PW},\quad\text{BC/Frobenius-Primkanal (NEU-250b--h)},\quad\tau_\infty\text{ (NEU-220e)}
-$$
-
-viel konkretere Bausteine. Insbesondere ist jetzt $\mathcal{S}_{\rm adel}^{\rm amp}\twoheadrightarrow\mathcal{A}_{\rm PW}$ surjektiv (NEU-250r), und die vollständige hermitesche Form $B_W$ ist typkorrekt definiert (NEU-252). Diese Basis hat NEU-221 nicht gehabt.
-
-### 3.3 Technischer Status
-
-NEU-221 ist **konzeptionell der stärkste Pfad**, aber technisch in Teilen überholt:
-
-| Baustein aus NEU-221 | Heutiger Status |
+| Baustein | Status |
 |---|---|
-| Normierungs-Firewall | $\checkmark$ unverändert gültig |
-| Euler $\mathcal{P}_N(\beta)$ = Mangoldt-Quelle | $\checkmark$ Rolle bestätigt durch NEU-250ff |
+| Normierungs-Firewall | $\checkmark$ |
+| $T_X=B_X^{-1}$ als Arbeitsvariable | $\checkmark$ |
+| $\mu_0,\mu_1,\mu_2$ als Frühtests | $\checkmark$ |
 | $D_{\rm scatt,N}$ als Operator | $\times[M]$ (NEU-250l untypisiert) |
-| Feshbach/Weyl-Quellregion | $\checkmark$ Richtung korrekt, Re-Audit nötig |
-| Archimedische Kopplung separat | $\times$ (muss integriert sein, nicht direkte Summe) |
-| $T_X=B_X^{-1}\ge0$ als Arbeitsvariable | $\checkmark$ übernehmen |
-| Momente $\mu_0,\mu_1,\mu_2$ als Frühtest | $\checkmark$ übernehmen |
-
-### 3.4 Urteil
+| Feshbach/Weyl-Quellregion (Richtung) | $\checkmark$ Re-Audit nötig |
+| Archimedische Kopplung separat | $\times$ (muss integriert, nicht direkte Summe) |
 
 $$
-\boxed{\text{NEU-221: konzeptionell stärkster Pfad; technisch Re-Audit gegen NEU-250ff nötig.}\quad\checkmark[K/M]} \qquad (3\text{-Verdict})
+\boxed{\text{NEU-221: konzeptionell stärkster Pfad; technisch Re-Audit gegen NEU-250ff nötig.}}\quad\checkmark[K/M] \qquad (3\text{-Verdict})
 $$
 
 | Kriterium | NEU-221 |
 |---|---|
 | RH-frei positiv? | Ziel $\checkmark$; noch nicht konstruiert |
-| Volles $B_W$? | Ziel $\checkmark$ (Pol+$\Gamma$+Prim aus gemeinsamer Determinante) |
-| Kanonisch aus Struktur? | Ziel $\checkmark$; Typisierung partiell offen |
-| Rolle | Hauptpfad; technisches Re-Audit fällig |
+| Volles $B_W$? | Ziel $\checkmark$ |
+| Kanonisch? | Ziel $\checkmark$; teilweise offen |
+| Rolle | Hauptpfad, Re-Audit fällig |
 
 ---
 
@@ -161,44 +108,78 @@ $$
 
 | Kandidat | RH-frei positiv? | Volles $B_W$? | Kanonisch? | Heutiger Status |
 |---|---|---|---|---|
-| NEU-220e semifinite Spur | $\checkmark$ (Gamma) | $\times$ ($B_\Gamma$ allein) | $\checkmark$ teilw. | Archimedischer Baustein |
-| NEU-220w Moment-GNS | $\times$ (RH-äquiv.) | indirekt $\checkmark$ | $\checkmark$ nach Momente | Kontroll-/Zielmodell, Firewall |
+| NEU-220e semifinite Spur | $\checkmark$ ($B_\Gamma$) | $\times$ | $\checkmark$ teilw. | Archimedischer Baustein |
+| NEU-220w Moment-GNS | $\times$ (RH-äquiv.) | indirekt $\checkmark$ | $\checkmark$ nach Momente | Kontroll-/Zielmodell |
 | NEU-221 adelische Quelle | Ziel $\checkmark$ | Ziel $\checkmark$ | Ziel $\checkmark$ | Hauptpfad, Re-Audit nötig |
 
 ---
 
-## 5. Neue Quelle: $R_{\rm PW}$-Struktur als M4-A-Kandidat
+## 5. Haar-Transport: Reparatur und Befund
 
-### 5.1 Die zentrale Frage
+### 5.1 Typfehler $R_{\rm PW}^{-1}$ $\times[M]$
+
+Die erste Fassung schrieb:
+$$
+\langle a,b\rangle_0:=\langle R_{\rm PW}^{-1}a,R_{\rm PW}^{-1}b\rangle_{\rm Haar}\quad\times[M]. \qquad (5\text{-OldErr})
+$$
+
+NEU-250r beweist $R_{\rm PW}:\mathcal{S}_{\rm adel}^{\rm amp}\twoheadrightarrow\mathcal{A}_{\rm PW}$ als **surjektiv**, nicht injektiv. $R_{\rm PW}$ hat einen großen Kern; für ein $a\in\mathcal{A}_{\rm PW}$ gibt es viele adelische Urbilder. Das Symbol $R_{\rm PW}^{-1}a$ ist ohne weitere Wahl nicht eindeutig.
+
+### 5.2 Kanonischer Lift $S_{\rm PW}$ (NEU-250r)
+
+Aus NEU-250r existiert der explizite kanonische Rechtsinverse:
+$$
+\boxed{S_{\rm PW}a=h_a\otimes\mathbf{1}_{\widehat{\mathbb{Z}}},\qquad h_a(x)=\begin{cases}x^{-1/2}a(\log x),&x>0,\\0,&x\le0,\end{cases}\qquad R_{\rm PW}S_{\rm PW}=I.} \qquad (5\text{-Lift})
+$$
+
+### 5.3 Transport-Satz
+
+Mit $\operatorname{vol}(\widehat{\mathbb{Z}})=1$:
+$$
+\langle S_{\rm PW}a,S_{\rm PW}b\rangle_{L^2(\mathbb{A})}=\int_0^\infty x^{-1}\overline{a(\log x)}b(\log x)\,dx=\int_{\mathbb{R}}\overline{a(u)}b(u)\,du.
+$$
+$$
+\boxed{\langle S_{\rm PW}a,S_{\rm PW}b\rangle_{\rm Haar}=\langle a,b\rangle_{L^2(\mathbb{R},du)}.} \qquad (5\text{-Transport})
+$$
+
+### 5.4 Hilbertraumformulierung
+
+Der Haar-Port auf Hilbertraumebene:
+$$
+\overline{R}_{\rm PW}:L^2(\mathbb{A}_{\mathbb{Q}})\longrightarrow L^2(\mathbb{R},du):
+$$
+Endliche Variablen mit $\mathbf{1}_{\widehat{\mathbb{Z}}}$ paaren, auf $x>0$ beschränken, dann $J_{1/2}$ anwenden. $J_{1/2}:L^2(\mathbb{R}_+,dx)\to L^2(\mathbb{R},du)$ ist **unitär**:
+$$
+\int_{\mathbb{R}}|e^{u/2}h(e^u)|^2\,du=\int_0^\infty|h(x)|^2\,dx. \qquad (5\text{-Unit})
+$$
+
+$S_{\rm PW}$ ist der adjungierte isometrische Lift; $\overline{R}_{\rm PW}S_{\rm PW}=I$. Damit:
+$$
+\boxed{L^2(\mathbb{A}_{\mathbb{Q}})/\ker\overline{R}_{\rm PW}\cong L^2(\mathbb{R},du).} \qquad (5\text{-Quot})
+$$
+
+### 5.5 Strategische Einordnung
+
+Der kanonische Haar-Majorant ist nach Transport schlicht $L^2(\mathbb{R},du)$. Die Primzahlarithmetik steckt nach dem Quotienten nicht mehr sichtbar in $H_0$, sondern muss vollständig im Realisierungsoperator $A_X$ bzw. seiner Domäne und Spektralstruktur sitzen. Das ist **nicht** ein Problem, sondern ein plausibler Befund: einfacher Hilbertraum, hochgradig arithmetischer Operator.
+
+Was noch nicht behauptet wird:
+$$
+\boxed{\text{"Adelische positive Geometrie gefunden" — noch nicht. Beschränktheit/Abschließbarkeit von }A_X\text{ offen.}} \qquad (5\text{-Caveat})
+$$
+
+### 5.6 Status
 
 $$
-\boxed{\text{Kann aus }P_{\rm Haar},\,J_{1/2},\,R_{\rm PW},\,\text{BC/Frobenius-Primkanal},\,\tau_\infty\text{ ein positives }\langle a,b\rangle_0\text{ gebaut werden, bevor }B_W\text{ hineinkommt?}} \qquad (5\text{-Core})
+R_{\rm PW}^{-1}\text{ als Konstruktion}\quad\times[M]\;(\text{nicht definiert; }R_{\rm PW}\text{ surjektiv, großer Kern}) \qquad (5\text{-a})
 $$
-
-Das wäre viel stärker als NEU-220w als GNS-Lösung zu nehmen.
-
-### 5.2 Kandidatenbausteine
-
-**Haarsches $L^2$-Produkt auf $\mathcal{S}_{\rm adel}^{\rm amp}$:**
 $$
-\langle F,G\rangle_{\rm Haar}:=\int_{\mathbb{A}_\mathbb{Q}}F(x)\overline{G(x)}\,d\mu_{\rm Haar}(x). \qquad (5\text{-Haar})
+\langle S_{\rm PW}a,S_{\rm PW}b\rangle_{\rm Haar}=\langle a,b\rangle_{L^2(\mathbb{R},du)}\quad\checkmark[K/M] \qquad (5\text{-b})
 $$
-Positiv, kanonisch, adelisch. Zu prüfen: Ist $B_W^{\rm adel}(F,G)=\langle F,A_X^{\rm adel}G\rangle_{\rm Haar}$ für einen beschränkten oder abschließbaren $A_X^{\rm adel}$?
-
-**Port-Transport:**
-Mittels $R_{\rm PW}:\mathcal{S}_{\rm adel}^{\rm amp}\twoheadrightarrow\mathcal{A}_{\rm PW}$ könnte das Haar-Produkt auf $\mathcal{A}_{\rm PW}$ transportiert werden:
 $$
-\langle a,b\rangle_0:=\langle R_{\rm PW}^{-1}a,R_{\rm PW}^{-1}b\rangle_{\rm Haar}. \qquad (5\text{-Transport})
+L^2(\mathbb{A}_{\mathbb{Q}})/\ker\overline{R}_{\rm PW}\cong L^2(\mathbb{R},du)\quad\checkmark[K/M] \qquad (5\text{-c})
 $$
-Vorbedingung: $R_{\rm PW}$ ist surjektiv, aber nicht injektiv auf der vollen Sadelamp; Rechts-Inverse muss kontrolliert gewählt werden.
-
-**BC/Frobenius-Primkanal:**
-Der Frobenius-Primkanal aus NEU-250b--h liefert die von-Mangoldt-Gewichte. Ob er ein positives Skalarprodukt trägt, hängt von seiner Darstellung als positiver Spurzustand ab — das ist der direkte Anschluss an die NEU-221-Idee mit neuem Typenrahmen.
-
-### 5.3 Status
-
 $$
-\text{Haar-Transport-Kandidat: }?[O]\text{ (Beschränktheit/Abschließbarkeit von }A_X^{\rm adel}\text{ unklar)} \qquad (5\text{-status})
+H_0=L^2(\mathbb{R},du)\text{ als M4-A-Majorante vorläufig }?[O\to]\text{ (Vollbeweis in NEU-255)} \qquad (5\text{-d})
 $$
 
 ---
@@ -206,28 +187,28 @@ $$
 ## 6. M4-A Hauptpfad
 
 $$
-\boxed{\text{Hauptpfad M4-A: NEU-221-Idee vollständig gegen NEU-250ff re-auditiert.}} \qquad (6\text{-Main})
+\boxed{\text{Hauptpfad M4-A: NEU-221-Strukturprinzip + Haar-Transport + Koisometriebeweis (NEU-255).}} \qquad (6\text{-Main})
 $$
 
-Konkret:
-
-1. **NEU-221-Strukturprinzip übernehmen:** $T_X=B_X^{-1}\ge0$; Normierungs-Firewall; Momente $\mu_0,\mu_1,\mu_2$ als Frühtests.
-2. **Bausteine neu typisieren:** $P_{\rm Haar}$, $J_{1/2}$, $R_{\rm PW}$, BC/Frobenius-Primkanal (NEU-250b--h), $\tau_\infty$ (NEU-220e) als neue Quellarsenal.
-3. **$D_{\rm scatt,N}$ nicht verwenden:** NEU-250l $\times[M]$; Feshbach-/Weyl-Quellregion nur nach Re-Typisierung.
-4. **Gemeinsame Determinantenstruktur:** Pol + $\Gamma$ + Prim sollen aus einer einzigen kanonischen Resolventenstruktur kommen, nicht als direkte Summe.
-5. **Haar-Transport prüfen:** $\langle\cdot,\cdot\rangle_{\rm Haar}$ auf $\mathcal{S}_{\rm adel}^{\rm amp}$ als Majorante; $A_X^{\rm adel}$ Beschränktheit/Abschließbarkeit via NEU-253 \S3-Kette.
-6. **NEU-220w als Kontrollmodell:** Am Ende muss $\langle\cdot,\cdot\rangle_0$ denselben Typ wie $\mathcal{H}_\Xi^{\rm mom}$ reproduzieren.
+1. NEU-221-Normierungs-Firewall, $T_X=B_X^{-1}\ge0$, Momente $\mu_0,\mu_1,\mu_2$ übernehmen.
+2. Koisometriebeweis $\overline{R}_{\rm PW}$ vollständig in NEU-255.
+3. $\langle a,b\rangle_0=\langle a,b\rangle_{L^2(\mathbb{R})}$ kanonisch buchen.
+4. $|B_W(a,b)|\le C\|a\|_2\|b\|_2$ testen (Beschränktheit erwartet zu scheitern).
+5. Falls Scheitern: Abschließbarkeits-/Selbstadjungiertheitskette (NEU-253 §3-Chain).
+6. NEU-220w als Kontrollmodell am Ende.
 
 ---
 
 ## 7. Statusbuchungen
 
-$$\text{NEU-220e: Gamma-Block-Baustein, kein vollständiges M4-A-}\langle\cdot,\cdot\rangle_0\quad\checkmark[K/M] \qquad (7\text{-a})$$
-$$\text{NEU-220w: Kontroll-/Zielmodell; Konstruktionsquelle }\times[M]\text{ (RH-äquivalent)}\quad\checkmark[K/M] \qquad (7\text{-b})$$
-$$\text{NEU-221: konzeptionell stärkster Pfad; }D_{\rm scatt,N}\;\times[M]\text{; Normierungs-Firewall }\checkmark\quad\checkmark[K/M] \qquad (7\text{-c})$$
-$$\text{Haar-Transport-Kandidat: }?[O] \qquad (7\text{-d})$$
-$$\text{M4-A-Hauptpfad identifiziert (neo-NEU-221 gegen NEU-250ff)}\quad\checkmark[K/M] \qquad (7\text{-e})$$
-$$\text{M4-A gesamt}\quad?[O] \qquad (7\text{-M4A})$$
+$$\text{NEU-220e: Gamma-Baustein, kein vollständiges }\langle\cdot,\cdot\rangle_0\quad\checkmark[K/M] \qquad (7\text{-a})$$
+$$\text{NEU-220w: Zielmodell; Konstruktionsquelle }\times[M]\quad\checkmark[K/M] \qquad (7\text{-b})$$
+$$\text{NEU-221: stärkster Pfad; }D_{\rm scatt,N}\;\times[M]\text{; Firewall }\checkmark\quad\checkmark[K/M] \qquad (7\text{-c})$$
+$$R_{\rm PW}^{-1}\text{ als Konstruktion}\quad\times[M] \qquad (7\text{-d})$$
+$$\langle S_{\rm PW}a,S_{\rm PW}b\rangle_{\rm Haar}=\langle a,b\rangle_{L^2(\mathbb{R})}\quad\checkmark[K/M] \qquad (7\text{-e})$$
+$$L^2(\mathbb{A})/\ker\overline{R}_{\rm PW}\cong L^2(\mathbb{R})\quad\checkmark[K/M] \qquad (7\text{-f})$$
+$$\text{M4-A Hauptpfad identifiziert}\quad\checkmark[K/M] \qquad (7\text{-g})$$
+$$\text{Beschränktheit/Abschließbarkeit }A_X\quad?[O]\text{ → NEU-255} \qquad (7\text{-h})$$
 
 ---
 
@@ -235,16 +216,15 @@ $$\text{M4-A gesamt}\quad?[O] \qquad (7\text{-M4A})$$
 
 | Referenz | SHA | Inhalt |
 |---|---|---|
-| NEU-253 | a95d3b5 | M4 Rahmen; Rad, Signatur-Firewall, M4-A Zwei-Fälle |
+| NEU-253 | a95d3b5 | M4 Rahmen; Rad; Signatur-Firewall; M4-A Zwei-Fälle |
 | NEU-252 (Patch) | 4ee78ed | $B_W$ hermitesch; $B_W^{\rm adel}$ |
 | NEU-220e | 9a1f3c2 | Semifinite Spur $\tau_\infty$; $\Lambda_\Gamma$ |
-| NEU-220w | f1bce0f | Moment-GNS; $\mathcal{H}_\Xi^{\rm mom}$; Hankel-RH-Modell |
-| NEU-221 | f678057 | Adelische Momentquelle; Normierungs-Firewall; $T_X=B_X^{-1}$ |
-| NEU-250b--h | div. | BC/Frobenius-Primkanal |
-| NEU-250r (Patch) | bd1c0ab | $R_{\rm PW}$ surjektiv; $\mathcal{S}_{\rm adel}^{\rm amp}$ |
+| NEU-220w | f1bce0f | Moment-GNS; $\mathcal{H}_\Xi^{\rm mom}$; Kontrollmodell |
+| NEU-221 | f678057 | Normierungs-Firewall; $T_X=B_X^{-1}$; Feshbach-Quellregion |
+| NEU-250r (Patch) | bd1c0ab | $S_{\rm PW}$; $R_{\rm PW}S_{\rm PW}=I$; $\mathcal{S}_{\rm adel}^{\rm amp}$ |
 | NEU-220l | 1dc07b3 | $B_W\ge0\Leftrightarrow$ RH |
 
 ---
 
 *Lizenz: CC BY 4.0 — Objekt-X-Programm, öffentliche Fassung.*  
-*Erstellt 2026-08-07.*
+*Erstellt 2026-08-07. Patch 2026-08-07: $R_{\rm PW}^{-1}$ $\times[M]$ → $S_{\rm PW}$; Transport-Satz $\checkmark$; Haar-Koisometrie vorläufig $\checkmark$.*
