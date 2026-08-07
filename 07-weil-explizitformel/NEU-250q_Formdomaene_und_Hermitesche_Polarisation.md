@@ -2,14 +2,14 @@
 
 **Katalog-ID:** NEU-250q  
 **Ordner:** `07-weil-explizitformel`  
-**Datum:** 2026-08-07  
-**Auftrag:** Vier Aufgaben: (1) Gauß-Gegenbeweis vollständig ins Repo; (2) Konvergenzbereich von $B_{\rm fin}$ auf $\mathcal{S}_\infty$ bestimmen; (3) Q-A/B/C-Entscheidung; (4) strategische Konsequenz für M3.  
-**Gesamtausgang:** Formdomänen-Engpass bestätigt; Q-A vorrangig; M3-Freigabe erst nach Q-A-Prüfung.  
-**Vorgänger:** NEU-250m (M2-Patch), NEU-250p ($J_{1/2}$-Kette $\checkmark$), NEU-220l (Weil-Quadratik)
+**Datum:** 2026-08-07 (Patch: 2026-08-07)  
+**Auftrag:** Vier Aufgaben: (1) Gauß-Gegenbeweis; (2) Konvergenzbereich $B_{\rm fin}$; (3) Q-A/B/C-Entscheidung; (4) Strategische Konsequenz. Patch: Q-A korrigiert; zwei Zielräume unterschieden; Realitäts-Firewall.  
+**Gesamtausgang:** Q-A in erster Fassung $\times[M]$; korrigierter Q-A mit $\mathcal{C}_W$ $\checkmark[K/M]$; $\widetilde{\mathcal{S}}_{\rm adel}^W$ nicht dicht $\to$ NEU-250r.  
+**Vorgänger:** NEU-250m (M2-Patch), NEU-250p ($J_{1/2}$-Kette), NEU-220l, NEU-220j
 
 ---
 
-## 0. Der neue Engpass in einem Satz
+## 0. Der Engpass
 
 $$
 \boxed{J_{1/2}P_{\rm Haar}:\mathcal{S}(\mathbb{A}_\mathbb{Q})\to\mathcal{S}_\infty\text{ typkorrekt, aber }\mathcal{S}_\infty\not\subset\operatorname{Dom}(B_{\rm fin}).} \qquad (0\text{-Gap})
@@ -21,69 +21,38 @@ $$
 
 **Testelement:**
 $$
-F(x_\infty,x_{\rm fin})=e^{-x_\infty^2}\mathbf{1}_{\hat{\mathbb{Z}}}(x_{\rm fin}). \qquad (1\text{-Test})
-$$
-
-**Kette $J_{1/2}\circ P_{\rm Haar}$:**
-$$
-P_{\rm Haar}F(x)=e^{-x^2},\qquad
-a(y):=(\Phi J_{1/2}P_{\rm Haar}F)(y)=e^{y/2}e^{-e^{2y}}\in\mathcal{S}_\infty. \qquad (1\text{-Image})
+F(x_\infty,x_{\rm fin})=e^{-x_\infty^2}\mathbf{1}_{\hat{\mathbb{Z}}}(x_{\rm fin}),\quad a(y)=e^{y/2}e^{-e^{2y}}\in\mathcal{S}_\infty. \qquad (1\text{-Test})
 $$
 
 **Autokorrelation exakt:**
 $$
-g_a(t)=\int_{\mathbb{R}}a(v)\overline{a(v-t)}\,dv
-=\frac{\sqrt{\pi}}{2}\frac{e^{-t/2}}{\sqrt{1+e^{-2t}}}\qquad(t>0). \qquad (1\text{-Autocorr})
+\boxed{g_a(\log n)=\frac{\sqrt{\pi}}{2}\frac{n^{-1/2}}{\sqrt{1+n^{-2}}}.} \qquad (1\text{-Autocorr})
 $$
 
-*Herleitung:* Substitution $u=e^v$, $w=e^{v-t}=e^{-t}u$:
+*Herleitung:* Substitution $u=e^v$:
 $$
-g_a(t)=\int_0^\infty u^{1/2}e^{-u^2}\cdot(e^{-t}u)^{1/2}e^{-e^{-2t}u^2}\,\frac{du}{u}
-=e^{-t/2}\int_0^\infty e^{-(1+e^{-2t})u^2}\,du
-=\frac{\sqrt{\pi}}{2}\frac{e^{-t/2}}{\sqrt{1+e^{-2t}}}.
+g_a(t)=e^{-t/2}\int_0^\infty e^{-(1+e^{-2t})u^2}\,du=\frac{\sqrt{\pi}}{2}\frac{e^{-t/2}}{\sqrt{1+e^{-2t}}}.
 $$
 
-**Wert bei $t=\log n$:**
+**Primterm:**
 $$
-g_a(\log n)=\frac{\sqrt{\pi}}{2}\frac{n^{-1/2}}{\sqrt{1+n^{-2}}}. \qquad (1\text{-Value})
-$$
-
-**Primterm mit $B_{\rm fin}$ (NEU-250m M2.3):**
-$$
-B_{\rm fin}(a,a)=-2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt{n}}\,g_a(\log n)
-=-\sqrt{\pi}\sum_{n\ge2}\frac{\Lambda(n)}{n\sqrt{1+n^{-2}}}. \qquad (1\text{-Sum})
-$$
-
-**Divergenz:**
-$$
-\frac{\Lambda(n)}{n\sqrt{1+n^{-2}}}\sim\frac{\Lambda(n)}{n}\qquad(n\to\infty),
-\qquad\sum_{n\ge2}\frac{\Lambda(n)}{n}=+\infty. \qquad (1\text{-Div})
+B_{\rm fin}(a,a)=-\sqrt{\pi}\sum_{n\ge2}\frac{\Lambda(n)}{n\sqrt{1+n^{-2}}}\sim-\sqrt{\pi}\sum_n\frac{\Lambda(n)}{n}=-\infty. \qquad (1\text{-Div})
 $$
 
 $$
-\boxed{B_{\rm fin}(a,a)=-\infty\text{ für }a=J_{1/2}P_{\rm Haar}F.\quad B_{\rm fin}\text{ nicht auf ganz }\mathcal{S}_\infty\text{ definiert.}} \qquad (1\text{-NoGo})
+\boxed{B_{\rm fin}(a,a)=-\infty\text{ für }a=J_{1/2}P_{\rm Haar}F.} \qquad (1\text{-NoGo})
 $$
 
 ---
 
-## 2. Konvergenzbereich von $B_{\rm fin}$ auf $\mathcal{S}_\infty$
+## 2. Konvergenzbereich von $B_{\rm fin}$
 
-$B_{\rm fin}(a,a)$ konvergiert genau dann absolut, wenn
+$B_{\rm fin}(a,a)$ konvergiert absolut genau dann, wenn
 $$
-\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt{n}}\,|g_a(\log n)|<\infty. \qquad (2\text{-Conv})
-$$
-
-Da $\Lambda(n)/\sqrt{n}\sim (\log p)/\sqrt{p}$ auf Primzahlpotenzen und $\sim 0$ sonst, ist (2-Conv) äquivalent zu:
-$$
-\sum_p\frac{\log p}{\sqrt{p}}\,|g_a(\log p)|<\infty. \qquad (2\text{-Conv-Primes})
+\sum_p\frac{\log p}{\sqrt{p}}|g_a(\log p)|<\infty. \qquad (2\text{-Conv})
 $$
 
-**Hinreichende Bedingung:** Falls $|g_a(t)|\le C\,e^{-(1/2+\varepsilon)t}$ für ein $\varepsilon>0$ und alle $t\ge1$, dann
-$$
-\sum_p\frac{\log p}{\sqrt{p}}|g_a(\log p)|\le C\sum_p\frac{\log p}{p^{1+\varepsilon}}<\infty.
-$$
-
-Der Paley-Wiener-Unterraum $\mathcal{S}_{\infty,W}=\Phi^{-1}(C_c^\infty(\mathbb{R};\mathbb{R})_{\rm even})\subset\mathcal{S}_\infty$ erfüllt diese Bedingung: für kompakt getragenes $\Phi a$ ist $g_a$ schneller als jedes $e^{-ct}$.
+Hinreichend: $|g_a(t)|\le Ce^{-(1/2+\varepsilon)t}$ für ein $\varepsilon>0$.
 
 $$
 \boxed{\operatorname{Dom}(B_{\rm fin})\supset\mathcal{S}_{\infty,W},\quad\operatorname{Dom}(B_{\rm fin})\not\supset\mathcal{S}_\infty.} \qquad (2\text{-Dom})
@@ -91,101 +60,149 @@ $$
 
 ---
 
-## 3. Q-A / Q-B / Q-C: Drei Optionen
+## 3. Q-A — Fehlerkorrektur
 
-### Q-A — Kleinerer adelischer Unterraum
+### 3.1 Erste Fassung (zurückgezogen)
 
-**Idee:** Statt ganz $\mathcal{S}(\mathbb{A}_\mathbb{Q})$ einen Unterraum $\mathcal{S}_{\rm adel}^W$ wählen, dessen Bild unter $J_{1/2}\circ P_{\rm Haar}$ in $\mathcal{S}_{\infty,W}$ oder zumindest im Konvergenzbereich von $B_{\rm fin}$ liegt.
-
-**Natürlicher Kandidat:** Elemente $F\in\mathcal{S}(\mathbb{A}_\mathbb{Q})$, für die $P_{\rm Haar}F$ kompakten Träger hat (d.h.\ $P_{\rm Haar}F\in C_c^\infty(\mathbb{R})$). Dann landet $J_{1/2}P_{\rm Haar}F$ in $\mathcal{S}_{\infty,W}$, und $B_{\rm fin}$ konvergiert.
-
-**Offen:** Ist dieser Unterraum groß genug (dicht, separierend)? Entsteht er kanonisch aus der adelischen Struktur?
+Die erste Fassung definierte
+$$
+\mathcal{S}_{\rm adel}^W:=\{F\in\mathcal{S}(\mathbb{A}_\mathbb{Q}):P_{\rm Haar}F\in C_c^\infty(\mathbb{R})\}
+$$
+und behauptete $C_c^\infty(\mathbb{R})\xrightarrow{J_{1/2}}\mathcal{S}_{\infty,W}$.
 
 $$
-\boxed{\text{Q-A: Unterraum }\mathcal{S}_{\rm adel}^W:=\{F\in\mathcal{S}(\mathbb{A}_\mathbb{Q}):P_{\rm Haar}F\in C_c^\infty(\mathbb{R})\}.} \qquad (3\text{-QA})
+\boxed{C_c^\infty(\mathbb{R})\xrightarrow{J_{1/2}}\mathcal{S}_{\infty,W}\quad\times[M].} \qquad (3\text{-OldNoGo})
 $$
 
-### Q-B — Regularisierung von $B_{\rm fin}$ auf $\mathcal{S}_\infty$
+### 3.2 Gegenbeispiel
 
-**Idee:** Die Partialsumme $B_{\rm fin}^N(a,b):=-2\sum_{n=2}^{N}\frac{\Lambda(n)}{\sqrt{n}}g_{a,b}(\log n)$ divergiert für $N\to\infty$ in allgemeiner Lage. Eine Regularisierung könnte z.B.\ über Zeta-Regularisierung $\sum_n\Lambda(n)n^{-1-s}$ bei $s\to0$ oder über einen Abschneidekern $\phi_T(n)$ erfolgen.
+Nehme $h\in C_c^\infty(\mathbb{R})$ mit $h(x)=1$ in einer Umgebung von $0$. Dann:
+$$
+(\Phi J_{1/2}h)(y)=e^{y/2}h(e^y).
+$$
+Für alle hinreichend negativen $y$ gilt $e^y\approx0$, also $h(e^y)=1$, also
+$$
+(\Phi J_{1/2}h)(y)=e^{y/2}\neq 0\quad\text{für beliebig negative }y.
+$$
 
-**Nachteil:** Die Regularisierung müsste zur Weil-Explizitformel kompatibel sein. Das ist eine nicht-triviale Bedingung.
+Kein kompakter Träger in der Logkoordinate:
+$$
+\boxed{J_{1/2}h\notin\mathcal{S}_{\infty,W}.} \qquad (3\text{-Cex})
+$$
+
+Dieselbe $h(0)\neq0$-Situation erzeugt überdies den Grenzabfall $e^{-t/2}$ in der Autokorrelation — denselben Mechanismus wie im Gauß-Beispiel. $P_{\rm Haar}F\in C_c^\infty(\mathbb{R})$ reicht also nicht einmal allgemein für $B_{\rm fin}$-Konvergenz.
+
+### 3.3 Zwei korrekte Zielräume
+
+**Für $B_{\rm fin}$-Konvergenz** (ohne Realität/Geradheit):
+$$
+\boxed{\mathcal{C}_{\rm conv}:=C_c^\infty((0,\infty);\mathbb{C}).} \qquad (3\text{-Cconv})
+$$
+Für $h\in\mathcal{C}_{\rm conv}$ gilt $h(e^y)=0$ für alle $|y|>R$ (kompakt weg von $0$), also hat $\Phi J_{1/2}h$ kompakten Träger $\Rightarrow$ $B_{\rm fin}$-Konvergenz.
+
+**Für den reell-selbstdualen Weil-Kern:**
+$$
+\boxed{\mathcal{C}_W:=\{h\in C_c^\infty((0,\infty);\mathbb{R}):h(1/x)=x\,h(x)\}.} \qquad (3\text{-CW})
+$$
+
+Herleitung der Selbstdualitätsbedingung: $g:=\Phi J_{1/2}h$ gerade bedeutet $g(y)=g(-y)$, d.h.\
+$$
+e^{y/2}h(e^y)=e^{-y/2}h(e^{-y}).
+$$
+Mit $x=e^y$:
+$$
+h(1/x)=x\,h(x).\qquad\checkmark
+$$
+
+**Bijektion:**
+$$
+\boxed{J_{1/2}:\mathcal{C}_W\xrightarrow{\;\sim\;}\mathcal{S}_{\infty,W}.\quad\checkmark[K/M]} \qquad (3\text{-Bij})
+$$
+
+Rückrichtung: Für $g\in C_{c,\rm even}^\infty(\mathbb{R};\mathbb{R})$ setze $h(x):=x^{-1/2}g(\log x)$. Dann $h\in\mathcal{C}_W$ und $\Phi J_{1/2}h=g$.
+
+### 3.4 Korrigierter Q-A-Unterraum
 
 $$
-\boxed{\text{Q-B: }B_{\rm fin}^{\rm reg}\text{ via Zeta-/Abschneidungsregularisierung — offen, nicht‑trivial.}} \qquad (3\text{-QB})
+\boxed{\widetilde{\mathcal{S}}_{\rm adel}^W:=P_{\rm Haar}^{-1}(\mathcal{C}_W)\subset\mathcal{S}(\mathbb{A}_\mathbb{Q}).} \qquad (3\text{-QA-corr})
 $$
 
-### Q-C — $J_{1/2}\circ P_{\rm Haar}$ falscher Port
-
-**Idee:** Der Gauß-Gegenbeweis zeigt, dass das Bild von $J_{1/2}\circ P_{\rm Haar}$ zu groß ist. Vielleicht ist der richtige adelische Port einer, der direkt in $\mathcal{S}_{\infty,W}$ landet — z.B.\ durch Wahl eines anderen endlichen Vektors $\phi_{\rm fin}^0\in\mathcal{S}(\mathbb{A}_{\mathbb{Q},\rm fin})$ mit Kompaktheit-erzwingender Eigenschaft.
-
-**Nachteil:** Das würde den Kanonizitätsbefund von NEU-250p ($\mathbf{1}_{\hat{\mathbb{Z}}}$ ist kanonisch) aufgeben.
-
+Kette:
 $$
-\boxed{\text{Q-C: Alternativer Port mit Kompaktheits-Bedingung — offen; Kanonizitätsverlust.}} \qquad (3\text{-QC})
+\boxed{\widetilde{\mathcal{S}}_{\rm adel}^W\xrightarrow{P_{\rm Haar}}\mathcal{C}_W\xrightarrow{J_{1/2}}\mathcal{S}_{\infty,W}\xrightarrow{\mathcal{M}_\infty}\mathcal{W}.\quad\checkmark[K/M]_{\rm cond}} \qquad (3\text{-QA-Chain})
 $$
 
 ---
 
-## 4. Entscheidung: Vorrangige Option
+## 4. Nichtdichtheit von $\widetilde{\mathcal{S}}_{\rm adel}^W$ in $\mathcal{S}(\mathbb{A}_\mathbb{Q})$
+
+Für jedes $F\in\widetilde{\mathcal{S}}_{\rm adel}^W$ gilt $(P_{\rm Haar}F)(-1)=0$, weil $\mathcal{C}_W\subset C_c^\infty((0,\infty))$ auf $(0,\infty)$ getragen ist.
+
+Das Auswertungsfunktional
+$$
+L:F\longmapsto(P_{\rm Haar}F)(-1)
+$$
+ist ein nichttriviales stetiges lineares Funktional auf $\mathcal{S}(\mathbb{A}_\mathbb{Q})$ (Auswertung bei $x_\infty=-1$, $x_{\rm fin}\in\hat{\mathbb{Z}}$). Also:
+$$
+\widetilde{\mathcal{S}}_{\rm adel}^W\subset\ker L\quad\subsetneq\quad\mathcal{S}(\mathbb{A}_\mathbb{Q}).
+$$
 
 $$
-\boxed{\text{Q-A vorrangig: }
-\mathcal{S}_{\rm adel}^W\text{ ist der natürlichste kleinste Unterraum, kanonisch und ohne Regularisierung.}} \qquad (4\text{-Decision})
+\boxed{\widetilde{\mathcal{S}}_{\rm adel}^W\text{ ist nicht dicht in }\mathcal{S}(\mathbb{A}_\mathbb{Q}).} \qquad (4\text{-NoDense})
 $$
 
-**Begründung:**
-- Q-A braucht keine Regularisierungstheorie (Q-B) und keinen Kanonizitätsverlust (Q-C).
-- $\mathcal{S}_{\rm adel}^W$ ist durch eine natürliche Kompaktheits-Bedingung auf der additiven Schwartz-Ebene definiert.
-- Die Kette bleibt:
-$$
-\mathcal{S}_{\rm adel}^W\xrightarrow{P_{\rm Haar}}C_c^\infty(\mathbb{R})\xrightarrow{J_{1/2}}\mathcal{S}_{\infty,W}\xrightarrow{\mathcal{M}_\infty}\mathcal{W}. \qquad (4\text{-Chain})
-$$
-- Diese Kette ist vollständig typkorrekt und $B_{\rm fin}$ konvergiert.
-- Offen bleibt: Ist $\mathcal{S}_{\rm adel}^W$ groß genug? $\to$ nächster Knoten.
+Dieses Ergebnis ist vollständig vor Anlage von NEU-250r negativ entschieden.
 
 ---
 
-## 5. Strategische Konsequenz
+## 5. Strategische Neubewertung
 
-Der Befund ist kein Rückschritt, sondern eine Präzisierung:
+Nichtdichtheit bedeutet nicht Unbrauchbarkeit. Zwei Interpretationen:
 
 $$
 \boxed{\begin{aligned}
-&\text{Die natürliche adelische Quelle }\mathcal{S}(\mathbb{A}_\mathbb{Q})\text{ ist größer als der bisherige Weil-Testbereich.}\\
-&\text{Der selbstduale Unterraum }\mathcal{S}_{\rm adel}^W\text{ ist der Kandidat für die globale Formdomäne.}\\
-&\text{Ob dieser Unterraum die richtige Größe für Objekt X hat, ist die nächste Frage.}
+&\text{(i) Die Quelle von Objekt X ist von Anfang an ein selbstdualer Teilraum,}\\
+&\quad\text{nicht dicht in der vollen Schwartz-Bruhat-Algebra — dann ist }\\
+&\quad\widetilde{\mathcal{S}}_{\rm adel}^W\text{ der richtige Raum, vorausgesetzt seine Größe wird begründet.}\\
+&\text{(ii) Es gibt einen weiteren kanonischen adelischen Unterraum,}\\
+&\quad\text{der }\mathcal{C}_{\rm conv}\text{ oder }\mathcal{C}_W\text{ trifft und größer ist.}
 \end{aligned}} \qquad (5\text{-Strat})
 $$
 
-M3 (Gram-Geometrie) wird erst nach Bestätigung von Q-A freigegeben.
+---
+
+## 6. Realitäts-Firewall für M3
+
+NEU-220j definiert seinen Testkern mit **reell-geraden** $g$: das ist ein reeller Vektorraum. Für die hermitesche sesquilineare Polarisation $(a,b)\mapsto g_{a,b}(t)$ benötigt man dagegen einen **komplexen** linearen Raum, wie er in NEU-220l mit $C_c^\infty(\mathbb{R};\mathbb{C})$ erscheint.
+
+$$
+\boxed{\text{reell-gerader Weil-Kern }(\mathcal{C}_W)\neq\text{komplexe Formdomäne für }B_W(a,b).} \qquad (6\text{-Firewall})
+$$
+
+Diese Unterscheidung muss beim Übergang zu M3 explizit gemacht werden. $\to$ **NEU-250r**.
 
 ---
 
-## 6. Statusbuchungen
+## 7. Statusbuchungen
 
 $$
-g_{a,b}(t)=\tfrac12(\langle a,U_tb\rangle+\langle U_ta,b\rangle)\quad\checkmark[K/M]\qquad(\text{NEU-250m M2-Patch}) \qquad (6\text{-a})
-$$
-
-$$
-B_{\rm fin}(a,b)=-2\sum_n\frac{\Lambda(n)}{\sqrt{n}}g_{a,b}(\log n)\quad\checkmark[K/M] \qquad (6\text{-b})
+B_{\rm fin}(a,a)=-\infty\text{ für }a=J_{1/2}P_{\rm Haar}(e^{-x^2}\mathbf{1}_{\hat{\mathbb{Z}}})\quad\checkmark[K/M] \qquad (7\text{-a})
 $$
 
 $$
-\mathcal{S}_\infty\not\subset\operatorname{Dom}(B_{\rm fin})\quad\checkmark[K/M]\qquad(\text{Gauß-Gegenbeweis}) \qquad (6\text{-c})
+C_c^\infty(\mathbb{R})\xrightarrow{J_{1/2}}\mathcal{S}_{\infty,W}\quad\times[M]\qquad(\text{Gegenbeispiel \S3.2}) \qquad (7\text{-b})
 $$
 
 $$
-\mathcal{S}_{\infty,W}\subset\operatorname{Dom}(B_{\rm fin})\quad\checkmark[K/M] \qquad (6\text{-d})
+J_{1/2}:\mathcal{C}_W\xrightarrow{\sim}\mathcal{S}_{\infty,W}\quad\checkmark[K/M] \qquad (7\text{-c})
 $$
 
 $$
-\mathcal{S}_{\rm adel}^W:=\{F\in\mathcal{S}(\mathbb{A}_\mathbb{Q}):P_{\rm Haar}F\in C_c^\infty(\mathbb{R})\}\quad?[O]\quad\to\text{Größe/Kanonizität} \qquad (6\text{-e})
+\widetilde{\mathcal{S}}_{\rm adel}^W\text{ nicht dicht in }\mathcal{S}(\mathbb{A}_\mathbb{Q})\quad\checkmark[K/M]\qquad(\ker L\subsetneq\mathcal{S}(\mathbb{A}_\mathbb{Q})) \qquad (7\text{-d})
 $$
 
 $$
-\text{M3 Freigabe}\quad?[O]\quad\to\text{nach Q-A-Bestätigung} \qquad (6\text{-f})
+\text{Realitäts-Firewall: }\mathcal{C}_W\neq\text{komplexe Formdomäne}\quad\to\text{NEU-250r} \qquad (7\text{-e})
 $$
 
 ---
@@ -194,13 +211,13 @@ $$
 
 | Referenz | SHA | Inhalt |
 |---|---|---|
-| NEU-250m | ecc1c3b | M2-Patch; $g_{a,b}$, $B_{\rm fin}$, Domain-Warnung |
-| NEU-250p | 56ba1f7 | $J_{1/2}$-Kette $\checkmark$; Weil-Selbstdualität |
-| NEU-220l | 1dc07b3 | Weil-Quadratik, $-2$-Vorfaktor, $\mathcal{A}_{\rm PW}$-Domain |
-| NEU-220j | 41e28cf | $\mathcal{S}_{\infty,W}$, $\mathcal{W}$, Paley-Wiener |
-| NEU-245c | 1ef32ab | $\mathcal{S}_{\rm adel}$ $?[O]$ |
+| NEU-250m | ecc1c3b | M2-Patch; $B_{\rm fin}$, Domain-Warnung |
+| NEU-250p | 56ba1f7 | $J_{1/2}$-Kette; Weil-Selbstdualität |
+| NEU-220l | 1dc07b3 | Weil-Quadratik, $\mathcal{A}_{\rm PW}$-Domain |
+| NEU-220j | 41e28cf | $\mathcal{S}_{\infty,W}$, reell-gerader Kern |
+| **NEU-250r** | **neu** | **Audit: Selbstdualer adelischer Testunterraum, Nichtdichtheit, Realitäts-Firewall** |
 
 ---
 
 *Lizenz: CC BY 4.0 — Objekt-X-Programm, öffentliche Fassung.*  
-*Erstellt 2026-08-07.*
+*Erstellt 2026-08-07. Patch 2026-08-07: Q-A erste Fassung $\times[M]$; Gegenbeispiel; $\mathcal{C}_{\rm conv}$/$\mathcal{C}_W$ unterschieden; Bijektion $J_{1/2}:\mathcal{C}_W\to\mathcal{S}_{\infty,W}$; Nichtdichtheit; Realitäts-Firewall.*
