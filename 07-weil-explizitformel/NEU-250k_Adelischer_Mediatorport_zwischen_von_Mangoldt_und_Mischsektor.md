@@ -4,7 +4,7 @@
 **Ordner:** `07-weil-explizitformel`  
 **Datum:** 2026-08-07  
 **Vorgänger:** NEU-250j (Trägertrennung), NEU-245b/c (M1–M4, S_adel-Mindestarchitektur), NEU-250h (Quellenabbildung, primitiver Kanal)  
-**Status:** K1 ✓[M], K2 ?[O] mit Konstruktionsbedingungen, K3 ✓[M]_{neg}, K4 ?[O] Kandidat
+**Status:** K1 ?[O], K2 ?[O] mit Konstruktionsbedingungen, K3 ✓[M]_{neg}, K4 ?[O] Kandidat
 
 ---
 
@@ -49,7 +49,7 @@ $$
 **Typbedingung (M2, aus NEU-245b):** Der $p$-adische Block $W_p$ muss vollständig im Bewertungsderivations-Typ $\mathcal{B}_{\rm val}$ liegen. Ein Koszul-Additiv aus $\mathcal{B}_{\log}$ ist nicht zulässig (NEU-245b, M2; NEU-245c, §3).
 
 **Aktueller Status:**
-- Architektur und Typ: ✓[M], aus NEU-245b (verbindlich)
+- Architektur und Typ: ?[O] — NEU-245b/c liefern nur die Mindestarchitektur-Vorgabe eines gemeinsamen Quellenraums; Existenz und vollständiger Typ von $\mathcal{S}_{\rm adel}$ sind noch nicht konstruktiv belegt (per NEU-250n, §Korrektur K1)
 - Konkrete Abbildung $T_\Lambda$: ✓[M] auf $\mathcal{P}^*$ (NEU-250g–i liefern lokale Zutaten, NEU-250h den Port)
 - Konkrete Abbildung $T_{\mathcal{M}}$: ?[O] (K2 unten)
 - Konkrete Abbildung $T_\infty$: ?[O], verwiesen an NEU-221c/d/e (archimedischer Port, M4c)
@@ -75,7 +75,7 @@ f \mapsto \langle\Psi_N, J_{X,N}^k\,\Psi_N\rangle
 $$
 durch den Feshbach-Weyl-Kandidaten. Auf dem Mischsektor $\mathcal{H}_{\mathcal{M}}$ erzeugen Vektoren der Form $j_{R,M}$ ($M\in\mathcal{M}$) durch die $\Theta$-Wirkung und die Kreuzspektralmaße $\mu^{a,b}_{pq}$ (KONVENTIONEN.md §X.3) nicht-diagonale Beträge.
 
-Ein nichtтриvialer Port wäre dann:
+Ein nichttrivialer Port wäre dann:
 $$
 T_{\mathcal{M}}(f) := \text{Projektion auf } \mathcal{H}_{\mathcal{M}} \text{ der Feshbach-Streukomponente von } D_{\rm scatt,N}(f). \qquad (2)
 $$
@@ -109,7 +109,7 @@ $$
 Dann erscheint $\|T_{\mathcal{M}}a\|^2$ nicht direkt in der Spektralformel; stattdessen entsteht ein effektiver $\mathcal{H}_\Lambda\to\mathcal{H}_\Lambda$-Kreuzblock. Dies erfordert einen wohldefinierten Operator $A_{\mathcal{M}}$ auf dem Mischsektor (noch nicht konstruiert).
 
 **Option B: Nulling durch Typ-Bedingung.**  
-Wenn $T_{\mathcal{M}}$ ausschließlich in den Off-Diagonalbeitrag $\operatorname{Re}\langle T_\Lambda a, T_{\mathcal{M}}a\rangle$ eingeht, und $\|T_{\mathcal{M}}a\|^2$ durch eine geeignete Nullteilungsbedingung verschwindet (z.B. $T_{\mathcal{M}}$ nilpotent oder als Randwert definiert), entfällt der Selbstterm struktuell. Diese Option ist konservativer, aber enger.
+Wenn $T_{\mathcal{M}}$ ausschließlich in den Off-Diagonalbeitrag $\operatorname{Re}\langle T_\Lambda a, T_{\mathcal{M}}a\rangle$ eingeht, und $\|T_{\mathcal{M}}a\|^2$ durch eine geeignete Nullteilungsbedingung verschwindet (z.B. $T_{\mathcal{M}}$ nilpotent oder als Randwert definiert), entfällt der Selbstterm strukturell. Diese Option ist konservativer, aber enger.
 
 $$
 \boxed{\|T_{\mathcal{M}}a\|^2\text{ als isolierter positiver Weilterm: nicht zulässig (M1, NEU-220t). Option A oder B erforderlich.}} \quad(\checkmark[M]_{\rm neg})
@@ -158,7 +158,7 @@ Die strukturelle Position der NEU-250g–k-Serie ist jetzt:
 | NEU-250h | $T_\Lambda(a)$: Quellenabbildung primitiver Kanal, $\operatorname{Re}\langle a,U_{\log p}a\rangle$ | ✓[M] |
 | NEU-250i | $\Lambda(p^k)/\sqrt{p^k}\,\delta_{RR'}$ vollständig auf $\mathcal{P}^*$ | ✓[M] |
 | NEU-250j | Trägertrennung: $\operatorname{supp}\Lambda\cap\operatorname{supp}(K_{pq}\text{-Koll.})=\varnothing$ | ✓[M] |
-| NEU-250k | Drei-Port-Architektur, K3-Firewall, K4-Grammatik | K1✓, K2?[O], K3✓$_{\rm neg}$, K4?[O] |
+| NEU-250k | Drei-Port-Architektur, K3-Firewall, K4-Grammatik | K1?[O], K2?[O], K3✓$_{\rm neg}$, K4?[O] |
 
 Die **offene Hauptfrage** lautet jetzt präzise:
 
@@ -187,6 +187,7 @@ Wenn $[O\text{-}250k/1]$ negativ (J-B), ist $\mathcal{H}_{\mathcal{M}}$ geometri
 | NEU-250h (NEU-250h.md) | $T_\Lambda$ auf primitivem Kanal, lokale Zutaten |
 | NEU-250i (73153ee) | Vollständiger primitiver Koeffizient $\Lambda(p^k)/\sqrt{p^k}$ |
 | NEU-250j (d855de8) | Trägertrennung $\mathcal{P}^*$ vs. $\mathcal{M}$, J-A/J-B |
+| NEU-250n (e0f2f70) | Direktaudit adelisch-archimedische Quellbrücke; fordert K1-Rückstufung |
 | KONVENTIONEN.md §X.3 | $K_{pq}$-Überlappung, Kreuzspektralmaße, Spektralmaßwarnung |
 
 ---
