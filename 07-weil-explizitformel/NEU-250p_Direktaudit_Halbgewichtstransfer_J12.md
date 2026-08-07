@@ -2,10 +2,10 @@
 
 **Katalog-ID:** NEU-250p  
 **Ordner:** `07-weil-explizitformel`  
-**Datum:** 2026-08-07  
-**Auftrag:** Vier atomare Beweise für die Kette $\mathcal{S}(\mathbb{A}_\mathbb{Q})\xrightarrow{P_{\rm Haar}}\mathcal{S}(\mathbb{R})\xrightarrow{J_{1/2}}\mathcal{S}_\infty\xrightarrow{\mathcal{M}_\infty}\mathcal{S}(\mathbb{R})_t$.  
-**Gesamtausgang:** $\checkmark[K/M]$ für alle vier Punkte. Die kritische Zentrierung $s=\tfrac12+it$ entsteht aus dem Typwechsel additiv$\to$multiplikativ, nicht durch Annahme.  
-**Vorgänger:** NEU-250o (Fehlerkorrektur: $P_{\rm Haar}\to\mathcal{S}(\mathbb{R})$, nicht $\mathcal{S}_\infty$; $J_{1/2}$-Kette hier bewiesen)
+**Datum:** 2026-08-07 (Patch: 2026-08-07)  
+**Auftrag:** Vier atomare Beweise für die Kette $\mathcal{S}(\mathbb{A}_\mathbb{Q})\xrightarrow{P_{\rm Haar}}\mathcal{S}(\mathbb{R})\xrightarrow{J_{1/2}}\mathcal{S}_\infty\xrightarrow{\mathcal{M}_\infty}\mathcal{S}(\mathbb{R})_t$. Zusätzlich: $J_\alpha$-Familie und Weil-Selbstdualität.  
+**Gesamtausgang:** $\checkmark[K/M]$ für Beweise 1–4. Alte (8-d) $\times[M]$; neue (8-d-korr): Typkorrektheit $(\alpha>0)$ + Weil-Selbstdualität $\Rightarrow\alpha=\tfrac12$ $\checkmark[K/M]$.  
+**Vorgänger:** NEU-250o (Fehlerkorrektur: $P_{\rm Haar}\to\mathcal{S}(\mathbb{R})$; $J_{1/2}$-Kette hier bewiesen)
 
 ---
 
@@ -23,28 +23,17 @@ $$
 } \qquad (0\text{-Chain})
 $$
 
-Zu beweisen sind vier Punkte. Alle gelten unter der Arbeitsannahme $\mathcal{S}_{\rm adel}:=\mathcal{S}(\mathbb{A}_\mathbb{Q})$ aus NEU-250o (1-Cond).
+Arbeitsannahme: $\mathcal{S}_{\rm adel}:=\mathcal{S}(\mathbb{A}_\mathbb{Q})$ (NEU-250o, 1-Cond).
 
 ---
 
-## 1. Beweis 1: $P_{\rm Haar}$ ist wohldefiniert und stetig
+## 1. Beweis 1: $P_{\rm Haar}$ wohldefiniert und stetig
 
-**Definition:**
 $$
-\boxed{P_{\rm Haar}F(x_\infty) := \int_{\hat{\mathbb{Z}}} F(x_\infty, x_{\rm fin})\,dx_{\rm fin},
-\qquad\phi_{\rm fin}^0 = \mathbf{1}_{\hat{\mathbb{Z}}}.} \qquad (1\text{-Def})
+\boxed{P_{\rm Haar}F(x_\infty) := \int_{\hat{\mathbb{Z}}} F(x_\infty, x_{\rm fin})\,dx_{\rm fin}.} \qquad (1\text{-Def})
 $$
 
-**Wohldefiniertheit.** Für $F\in\mathcal{S}(\mathbb{A}_\mathbb{Q})$ ist $F$ lokal konstant in $x_{\rm fin}$ mit kompaktem Träger. Das Integral über $\hat{\mathbb{Z}}$ ist damit ein endliches Integral über eine kompakte Gruppe mit Haarmaß $\operatorname{vol}(\hat{\mathbb{Z}})=1$. Absolut konvergent.
-
-**Bild $P_{\rm Haar}F\in\mathcal{S}(\mathbb{R})$.** Da $F\in\mathcal{S}(\mathbb{A}_\mathbb{Q})$, gilt für jede Halbnorm:
-$$
-\sup_{x_\infty\in\mathbb{R}}|x_\infty|^n |\partial_{x_\infty}^k P_{\rm Haar}F(x_\infty)|
-\le \int_{\hat{\mathbb{Z}}} \sup_{x_\infty}|x_\infty|^n|\partial_{x_\infty}^k F(x_\infty,x_{\rm fin})|\,dx_{\rm fin} < \infty.
-$$
-Also $P_{\rm Haar}F\in\mathcal{S}(\mathbb{R})$.
-
-**Stetigkeit.** Die Halbnormen von $P_{\rm Haar}F$ werden durch entsprechende Halbnormen von $F$ majorisiert (Standardargument via Lebesgue-Dominanz). $P_{\rm Haar}$ ist stetig in LF-Topologien.
+Für $F\in\mathcal{S}(\mathbb{A}_\mathbb{Q})$ ist das Integral absolut konvergent ($\hat{\mathbb{Z}}$ kompakt, $\operatorname{vol}(\hat{\mathbb{Z}})=1$). Jede Schwartz-Halbnorm von $P_{\rm Haar}F$ wird durch entsprechende Halbnormen von $F$ majorisiert.
 
 $$
 \boxed{P_{\rm Haar}:\mathcal{S}(\mathbb{A}_\mathbb{Q})\longrightarrow\mathcal{S}(\mathbb{R})\quad\checkmark[K/M].} \qquad (1\text{-Result})
@@ -52,123 +41,133 @@ $$
 
 ---
 
-## 2. Beweis 2: $J_{1/2}:\mathcal{S}(\mathbb{R})\to\mathcal{S}_\infty$ stetig
+## 2. Beweis 2: $J_\alpha$-Familie und $J_{1/2}:\mathcal{S}(\mathbb{R})\to\mathcal{S}_\infty$ stetig
+
+### 2.1 Allgemeine $J_\alpha$-Familie
 
 **Definition:**
 $$
-\boxed{J_{1/2}h(x) := x^{1/2}h(x),\qquad x>0.} \qquad (2\text{-Def})
+\boxed{J_\alpha h(x) := x^\alpha h(x),\qquad x>0,\quad\alpha>0.} \qquad (2\text{-Def})
 $$
 
-**Zu zeigen:** $(\Phi J_{1/2}h)(y) = e^{y/2}h(e^y)\in\mathcal{S}(\mathbb{R})$ für alle $h\in\mathcal{S}(\mathbb{R})$.
+**Satz:** Für jedes $\alpha>0$ gilt $J_\alpha:\mathcal{S}(\mathbb{R})\to\mathcal{S}_\infty$ stetig.
 
-Setze $G(y):=e^{y/2}h(e^y)$. Wir prüfen die Schwartz-Bedingungen:
+*Beweis.* Setze $G_\alpha(y):=(\Phi J_\alpha h)(y)=e^{\alpha y}h(e^y)$.
 
-**Fall $y\to-\infty$:** Es gilt $e^y\to 0^+$. Da $h\in\mathcal{S}(\mathbb{R})$, ist $h$ insbesondere beschränkt: $|h(e^y)|\le C$. Damit:
-$$
-|G(y)| = e^{y/2}|h(e^y)| \le C\,e^{y/2} \longrightarrow 0.
-$$
-Der Faktor $e^{y/2}$ erzeugt **exponentiellen Abfall** für $y\to-\infty$, auch wenn $h(0)\neq 0$. Das ist genau das, was an $e^{-x^2}$ (dem Gegenbeispiel aus NEU-250o) gefehlt hat.
-
-**Ableitung:** $G'(y) = \frac12 e^{y/2}h(e^y) + e^{y/2}\cdot e^y h'(e^y)$. Der erste Term fällt wie oben; der zweite: $e^{y/2}\cdot e^y |h'(e^y)| = e^{3y/2}|h'(e^y)|$. Für $y\to-\infty$: $e^{3y/2}\to 0$; $h'$ beschränkt. Abfall gesichert.
-
-**Fall $y\to+\infty$:** $e^y\to+\infty$. Da $h\in\mathcal{S}(\mathbb{R})$, gilt $|h(e^y)|\le C_N e^{-Ny}$ für alle $N\ge 0$ (Schwartz-Abfall bei $+\infty$). Dann:
-$$
-|G(y)| = e^{y/2}|h(e^y)| \le C_N e^{y/2}\cdot e^{-Ny} = C_N e^{(\frac12-N)y}\longrightarrow 0
-$$
-für $N>\tfrac12$. Jede Potenz $|y|^m$ wird dominiert.
-
-**Alle Ableitungen** $\frac{d^k}{dy^k}G(y)$ haben dieselbe Struktur: Polynome in $e^y$ und Ableitungen von $h$, multipliziert mit $e^{y/2}$. Das Schwartz-Abfallverhalten überträgt sich induktiv.
+- **$y\to-\infty$:** $|G_\alpha(y)|=e^{\alpha y}|h(e^y)|\le C\,e^{\alpha y}\to 0$ (da $\alpha>0$ und $h$ beschränkt). Exponentieller Abfall für **alle** $\alpha>0$.
+- **$y\to+\infty$:** $|h(e^y)|\le C_N e^{-Ny}$ für alle $N\ge 0$ (Schwartz-Abfall). Also $|G_\alpha(y)|\le C_N e^{(\alpha-N)y}\to 0$ für $N>\alpha$.
+- **Ableitungen:** Induktiv: $\frac{d^k}{dy^k}G_\alpha(y)$ ist eine endliche Summe von Termen $e^{(\alpha+j)y}h^{(j)}(e^y)$ ($0\le j\le k$), alle Schwartz. $\square$
 
 $$
-\boxed{J_{1/2}:\mathcal{S}(\mathbb{R})\longrightarrow\mathcal{S}_\infty\quad\checkmark[K/M].} \qquad (2\text{-Result})
+\boxed{J_\alpha:\mathcal{S}(\mathbb{R})\longrightarrow\mathcal{S}_\infty\quad\checkmark[K/M]\quad\text{für alle }\alpha>0.} \qquad (2\text{-Result})
 $$
 
-**Stetigkeit:** Die Schwartz-Halbnormen von $\Phi J_{1/2}h$ werden durch Halbnormen von $h$ majorisiert (Kettenregel, endliche Summen). $J_{1/2}$ ist stetig.
+### 2.2 Konsequenz für (8-d) der ersten Fassung
 
----
-
-## 3. Beweis 3: $\mathcal{M}_\infty\circ J_{1/2}$ ist exakt die Tate-Mellinform bei $s=\tfrac12+it$
-
-**Ausgangspunkt** (NEU-220a, autoritativ):
-$$
-\mathcal{M}_\infty f(t) = \int_0^\infty f(x)\,x^{it}\,\frac{dx}{x}. \qquad (3\text{-Mellin})
-$$
-
-**Einsetzen** $f = J_{1/2}h = x^{1/2}h(x)$:
-$$
-\mathcal{M}_\infty(J_{1/2}h)(t)
-= \int_0^\infty x^{1/2}h(x)\cdot x^{it}\,\frac{dx}{x}
-= \int_0^\infty h(x)\,x^{\frac12+it}\,\frac{dx}{x}.
-$$
+Da $J_\alpha\to\mathcal{S}_\infty$ für **alle** $\alpha>0$ funktioniert, erzwingt der Typwechsel $\mathcal{S}(\mathbb{R})\to\mathcal{S}_\infty$ allein nur $\alpha>0$, nicht $\alpha=\tfrac12$.
 
 $$
-\boxed{\mathcal{M}_\infty(J_{1/2}h)(t) = \int_0^\infty h(x)\,x^{1/2+it}\,d^\times x.} \qquad (3\text{-Tate})
-$$
-
-Das ist exakt Tates lokale Zetafunktion am reellen Ort:
-$$
-Z(h,s)\big|_{s=\frac12+it} = \int_{\mathbb{R}_+^\times} h(x)\,|x|^{\frac12+it}\,d^\times x. \qquad (3\text{-TateZeta})
-$$
-
-**Kernaussage:**
-
-$$
-\boxed{\text{Der Faktor }x^{1/2}\text{ entsteht aus dem Typwechsel }\mathcal{S}(\mathbb{R})\to\mathcal{S}_\infty\text{, nicht durch Annahme der RH.}} \qquad (3\text{-Origin})
-$$
-
-Die kritische Zentrierung $s=\tfrac12+it$ ist eine Konsequenz des additiv-zu-multiplikativ-Typwechsels, der durch $J_{1/2}$ realisiert wird.
-
-$$
-\boxed{\mathcal{M}_\infty\circ J_{1/2}\circ P_{\rm Haar}:\mathcal{S}(\mathbb{A}_\mathbb{Q})\longrightarrow\mathcal{S}(\mathbb{R})_t\quad\checkmark[K/M].} \qquad (3\text{-Result})
+\boxed{\text{Alte (8-d): }\alpha=\tfrac12\text{ folgt allein aus dem Typwechsel}\quad\times[M].} \qquad (2\text{-NoGo})
 $$
 
 ---
 
-## 4. Beweis 4: Paritäts- und Faktor-2-Check ($\mathbb{R}^\times$ vs. $\mathbb{R}_+^\times$)
+## 3. Beweis 3: $\mathcal{M}_\infty\circ J_\alpha = Z_{\rm Tate}^+(\cdot,\alpha+it)$
 
-### 4.1 Das Problem
-
-Tates lokale Zetaintegrale laufen über $\mathbb{R}^\times = \mathbb{R}_+^\times \sqcup \mathbb{R}_-^\times$. NEU-220a arbeitet auf $\mathbb{R}_+^\times$. Damit:
+**Einsetzen** $f=J_\alpha h$ in die autoritative Mellin-Formel (NEU-220a):
 
 $$
-Z_{\rm Tate}(h,s) = \int_{\mathbb{R}^\times} h(x)|x|^s\,d^\times x
-= \int_0^\infty h(x)x^s\,\frac{dx}{x} + \int_0^\infty h(-x)x^s\,\frac{dx}{x}. \qquad (4\text{-Split})
+\mathcal{M}_\infty(J_\alpha h)(t)
+=\int_0^\infty x^\alpha h(x)\cdot x^{it}\,\frac{dx}{x}
+=\int_0^\infty h(x)\,x^{\alpha+it}\,\frac{dx}{x}.
 $$
 
-### 4.2 Für gerades $h$
-
-Falls $h(-x)=h(x)$ (gerade Funktion):
 $$
-Z_{\rm Tate}(h,s) = 2\int_0^\infty h(x)x^s\,\frac{dx}{x} = 2\,\mathcal{M}_\infty(J_{1/2}h)(t)\big|_{J_{1/2}h\,\text{gerade}}. \qquad (4\text{-Even})
+\boxed{\mathcal{M}_\infty(J_\alpha h)(t) = Z_{\rm Tate}^+(h,\alpha+it)
+:= \int_0^\infty h(x)\,x^{\alpha+it}\,d^\times x.} \qquad (3\text{-Tate})
 $$
 
-**Faktor 2** tritt auf, wenn man vom vollen $\mathbb{R}^\times$ auf $\mathbb{R}_+^\times$ einschränkt.
+Hinweis: $Z_{\rm Tate}^+$ bezeichnet den **positiven Halbachsenanteil** von Tates lokaler Zeta-Funktion (nur $\mathbb{R}_+^\times$, nicht volles $\mathbb{R}^\times$). Die vollständige Tate-Zeta läuft über $\mathbb{R}^\times$ und ergibt bei geradem $h$ einen zusätzlichen Faktor 2 (siehe Beweis 4).
 
-### 4.3 Für allgemeines $h$
-
-Das Integral über $\mathbb{R}_+^\times$ allein ist:
-$$
-\int_0^\infty h(x)x^{1/2+it}\,\frac{dx}{x} = Z_{\rm Tate}^+(h,\tfrac12+it). \qquad (4\text{-Half})
-$$
-
-Das ist die **Halbachsen-Tate-Mellin** und der natürliche Ausgangspunkt in NEU-220a-Koordinaten.
-
-### 4.4 Paritätsbedingung
-
-Für die Involutionskompatibilität (NEU-220a §3, Satz PD-2b) ist ohnehin die reell-gerade Unterklasse relevant. Auf dieser gilt:
-$$
-\boxed{Z_{\rm Tate}(h,\tfrac12+it) = 2\,Z_{\rm Tate}^+(h,\tfrac12+it).} \qquad (4\text{-Rel})
-$$
-
-Der Faktor 2 ist eine globale Normierungskonstante, die an dieser Stelle bewusst offen gehalten wird (Vorfaktor-Audit analog zu NEU-220a §6).
+Damit:
 
 $$
-\boxed{\text{Kein versteckter Vorzeichen- oder Paritätsfehler. Faktor 2 bei geradem }h\text{ explizit benannt.}\quad\checkmark[K/M].} \qquad (4\text{-Result})
+\boxed{(\mathcal{M}_\infty\circ J_\alpha\circ P_{\rm Haar}\,F)(t)
+= Z_{\rm Tate}^+(P_{\rm Haar}F,\,\alpha+it).\quad\checkmark[K/M].} \qquad (3\text{-Result})
 $$
 
 ---
 
-## 5. Gesamtergebnis
+## 4. Beweis 4: Parität und Faktor-2-Check ($\mathbb{R}^\times$ vs.\ $\mathbb{R}_+^\times$)
+
+Tates lokale Zetafunktion am reellen Ort:
+$$
+Z_{\rm Tate}(h,s) = \int_{\mathbb{R}^\times}h(x)|x|^s\,d^\times x
+= \int_0^\infty h(x)x^s\,d^\times x + \int_0^\infty h(-x)x^s\,d^\times x. \qquad (4\text{-Split})
+$$
+
+Für **gerades $h$** (d.h.\ $h(-x)=h(x)$; die Geradheitsbedingung gilt für $h$, nicht für $J_\alpha h$, da letzteres nur auf $x>0$ definiert ist):
+$$
+\boxed{Z_{\rm Tate}(h,s)=2\,Z_{\rm Tate}^+(h,s)\quad\text{für gerades }h.} \qquad (4\text{-Even})
+$$
+
+Faktor 2 ist eine Normierungskonstante; kein Vorzeichen- oder Paritätsfehler. Vorfaktor-Audit analog NEU-220a §6 bewusst offen gehalten.
+
+$$
+\boxed{\text{Kein versteckter Vorzeichen- oder Paritätsfehler.}\quad\checkmark[K/M].} \qquad (4\text{-Result})
+$$
+
+---
+
+## 5. Selektion $\alpha=\tfrac12$ durch Weil-Selbstdualität
+
+### 5.1 Ausgangspunkt: Weil-Symmetrie aus NEU-220a
+
+NEU-220a (Satz PD-2d, autoritativ) fixiert:
+$$
+\boxed{s\longleftrightarrow 1-s \qquad\Longleftrightarrow\qquad t\longleftrightarrow -t.} \qquad (5\text{-Weil})
+$$
+
+Diese Symmetrie ist bekannt und unabhängig von RH.
+
+### 5.2 Invarianzbedingung
+
+Nimm allgemein $s=\alpha+it$ mit $\alpha>0$ fest. Unter $s\mapsto 1-s$:
+$$
+1-s = (1-\alpha)-it.
+$$
+
+Die vertikale Linie $\Re s=\alpha$ wird auf die Linie $\Re s=1-\alpha$ abgebildet. Sie ist genau dann **invariant** unter der Weil-Symmetrie, wenn
+$$
+\alpha = 1-\alpha,
+$$
+also:
+$$
+\boxed{\alpha = \tfrac12.} \qquad (5\text{-Fix})
+$$
+
+### 5.3 Was das bedeutet
+
+Der archimedische Port $\mathcal{M}_\infty\circ J_\alpha\circ P_{\rm Haar}$ wertet auf der Linie $\Re s=\alpha+it$ aus. Damit er mit der bekannten Weil-Symmetrie $s\mapsto 1-s$ kompatibel ist — d.h.\ der Port selbst auf einer selbstdualen Linie zentriert ist — muss $\alpha=\tfrac12$ gewählt werden.
+
+### 5.4 Was das nicht bedeutet
+
+Dieser Schritt beweist **nicht** die Riemann-Hypothese. Die Funktionalgleichung und die Symmetrieachse $\Re s=\tfrac12$ sind bekannt. Wir erklären hier nur, warum unser archimedischer Port, wenn er Weil-kompatibel sein soll, genau bei $\alpha=\tfrac12$ zentriert werden muss. Ob die Nullstellen auf dieser Achse liegen, bleibt offen.
+
+### 5.5 Neue Buchung (ersetzt alte (8-d))
+
+$$
+\boxed{\text{Typkorrektheit }(\alpha>0)+\text{Weil-Selbstdualität }(s\mapsto1-s)\;\Longrightarrow\;\alpha=\tfrac12.\quad\checkmark[K/M].} \qquad (5\text{-Result})
+$$
+
+Oder kompakt:
+$$
+\boxed{\text{Typkorrektheit }+\text{Selbstdualität}\;\Longrightarrow\;\alpha=\tfrac12.} \qquad (8\text{-d-korr})
+$$
+
+---
+
+## 6. Gesamtergebnis
 
 $$
 \boxed{
@@ -179,40 +178,29 @@ $$
 \mathcal{S}_\infty
 \xrightarrow{\;\mathcal{M}_\infty\;\checkmark[K/M]\;}
 \mathcal{S}(\mathbb{R})_t.
-} \qquad (5\text{-Chain})
+} \qquad (6\text{-Chain})
 $$
 
-Die Komposition:
-
+Masterformel:
 $$
 \boxed{
 (\mathcal{M}_\infty\circ J_{1/2}\circ P_{\rm Haar}\,F)(t)
-= \int_0^\infty (P_{\rm Haar}F)(x)\,x^{1/2+it}\,d^\times x
-= Z_{\rm Tate}^+\!\left(P_{\rm Haar}F,\,\tfrac12+it\right).
-} \qquad (5\text{-Master})
+= Z_{\rm Tate}^+\!\left(P_{\rm Haar}F,\,\tfrac12+it\right)
+= \int_0^\infty (P_{\rm Haar}F)(x)\,x^{1/2+it}\,d^\times x.
+} \qquad (6\text{-Master})
 $$
 
-Das ist eine **typkorrekte adelisch-archimedische Brücke**, deren $\tfrac12$-Gewicht die kritische Zentrierung kanonisch erzeugt.
-
----
-
-## 6. Strategische Konsequenz für Objekt X
-
-Der $J_{1/2}$-Transfer zeigt:
+**Warum $\alpha=\tfrac12$, präzise:**
 
 $$
 \boxed{
 \begin{aligned}
-&\text{Die kritische Gerade }\Re(s)=\tfrac12\text{ ist kein Postulat,}\\
-&\text{sondern eine Konsequenz des Typwechsels}\\
-&\mathcal{S}(\mathbb{R})_{\rm additiv}\xrightarrow{J_{1/2}}\mathcal{S}_\infty^{\rm multiplikativ}.
+&\text{Der Typwechsel }\mathcal{S}(\mathbb{R})\xrightarrow{J_\alpha}\mathcal{S}_\infty\text{ erlaubt alle }\alpha>0.\\
+&\text{Die Weil-Symmetrie }s\mapsto1-s\text{ (NEU-220a, PD-2d) selektiert eindeutig }\alpha=\tfrac12.\\
+&\tfrac12\text{ ist der einzige selbstduale Wert innerhalb der typkorrekten Familie }J_\alpha.
 \end{aligned}
-} \qquad (6\text{-RH})
+} \qquad (6\text{-Why})
 $$
-
-Für M3 (Polarisation) und die gemeinsame Gramgeometrie ergibt sich:
-- Die Hermitesche Polarisation $g_a(t)=\operatorname{Re}\langle a,U_ta\rangle\leadsto g_{a,b}(t)$ sollte jetzt über $\mathcal{S}_\infty$ (nicht $\mathcal{S}_{\infty,W}$) formuliert werden.
-- Die adelische Quelle $P_{\rm Haar}F\in\mathcal{S}(\mathbb{R})$ liefert nach $J_{1/2}$ ein Element von $\mathcal{S}_\infty$ — Ausgangspunkt für das erste gekoppelte endliche Modell.
 
 ---
 
@@ -222,7 +210,7 @@ Für M3 (Polarisation) und die gemeinsame Gramgeometrie ergibt sich:
 |---|---|
 | $\mathcal{S}_{\rm adel}:=\mathcal{S}(\mathbb{A}_\mathbb{Q})$ Topologie | $?[O]$ — NEU-245c |
 | Faktor-2 Normierung (gerades $h$) | Bewusst offen, Vorfaktor-Audit später |
-| $J_{1/2}$-Bild in $\mathcal{S}_{\infty,W}$? | Nein (nicht kompakt getragen) — NEU-250o Befund bleibt |
+| $J_{1/2}$-Bild in $\mathcal{S}_{\infty,W}$? | Nein (nicht kompakt getragen) — NEU-250o |
 | M3 Polarisation über $\mathcal{S}_\infty$ | Nächster Schritt |
 
 ---
@@ -234,15 +222,19 @@ P_{\rm Haar}:\mathcal{S}(\mathbb{A}_\mathbb{Q})\to\mathcal{S}(\mathbb{R})\quad\c
 $$
 
 $$
-J_{1/2}:\mathcal{S}(\mathbb{R})\to\mathcal{S}_\infty\quad\checkmark[K/M]\qquad(\text{Beweis 2}) \qquad (8\text{-b})
+J_\alpha:\mathcal{S}(\mathbb{R})\to\mathcal{S}_\infty\quad\checkmark[K/M]\quad\forall\,\alpha>0\qquad(\text{Beweis 2}) \qquad (8\text{-b})
 $$
 
 $$
-\mathcal{M}_\infty\circ J_{1/2}\circ P_{\rm Haar} = Z_{\rm Tate}^+(\cdot,\tfrac12+it)\quad\checkmark[K/M]\qquad(\text{Beweis 3+4}) \qquad (8\text{-c})
+\mathcal{M}_\infty\circ J_\alpha\circ P_{\rm Haar} = Z_{\rm Tate}^+(\cdot,\alpha+it)\quad\checkmark[K/M]\qquad(\text{Beweis 3+4}) \qquad (8\text{-c})
 $$
 
 $$
-\text{Kritische Zentrierung aus Typwechsel, nicht aus RH-Annahme}\quad\checkmark[K/M] \qquad (8\text{-d})
+\boxed{\text{Alte (8-d): }\alpha=\tfrac12\text{ aus Typwechsel allein}\quad\times[M].} \qquad (8\text{-d-alt, zurückgezogen})
+$$
+
+$$
+\boxed{\text{(8-d-korr): Typkorrektheit }(\alpha>0)+\text{Weil-Selbstdualität}\;\Rightarrow\;\alpha=\tfrac12\quad\checkmark[K/M].} \qquad (8\text{-d-korr})
 $$
 
 ---
@@ -252,7 +244,7 @@ $$
 | Referenz | SHA | Inhalt |
 |---|---|---|
 | NEU-250o | 18ebb2a | Fehlerkorrektur; $P_{\rm Haar}\to\mathcal{S}(\mathbb{R})$; $J_{1/2}$-Kette hier |
-| NEU-220a | 653c8a9 | $\mathcal{M}_\infty$ autoritativ; $\mathcal{S}_\infty$-Definition |
+| NEU-220a | 653c8a9 | $\mathcal{M}_\infty$ autoritativ; $\mathcal{S}_\infty$-Definition; Weil-Symmetrie PD-2d |
 | NEU-220j | 41e28cf | $\mathcal{W}$, LF-Topologie |
 | NEU-245c | 1ef32ab | $\mathcal{S}_{\rm adel}$ Konstruktion $?[O]$ |
 | NEU-250m | ce1a7af | M1--M4; M3 Polarisation $?[O]$ |
@@ -260,4 +252,4 @@ $$
 ---
 
 *Lizenz: CC BY 4.0 — Objekt-X-Programm, öffentliche Fassung.*  
-*Erstellt 2026-08-07.*
+*Erstellt 2026-08-07. Patch 2026-08-07: (8-d) $\times[M]$; $J_\alpha$-Familie $\forall\alpha>0$; Weil-Selbstdualität selektiert $\alpha=\tfrac12$ $\checkmark[K/M]$; $Z_{\rm Tate}^+$ klargestellt; Geradheitsbedingung auf $h$ bezogen.*
