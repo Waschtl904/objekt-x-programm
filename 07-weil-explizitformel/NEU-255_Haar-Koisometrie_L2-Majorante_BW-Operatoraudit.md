@@ -2,10 +2,10 @@
 
 **Katalog-ID:** NEU-255  
 **Ordner:** `07-weil-explizitformel`  
-**Datum:** 2026-08-07 (Patch: 2026-08-07)  
-**Auftrag:** (1) Koisometrie $\overline{R}_{\rm PW}=S_{\rm PW}^*$ vollständig beweisen; (2) $H_0=L^2(\mathbb{R},du)$ als kanonischen positiven Hintergrundhilbertraum buchen; (3) Unbeschränktheit $B_W$ via Modulationsfolge $a_N=e^{iNu}\varphi$ beweisen (alle drei Blöcke kontrolliert); (4) Formklasse von $B_W$ klären: Semibeschränktheit offen, keine naive Kato-Anwendung.  
-**Patch:** $\overline{R}_{\rm PW}$ als $P_{\rm fin}$-Paarung sauber definiert; $\overline{R}_{\rm PW}=S_{\rm PW}^*$ bewiesen; „Hilbertmajorante" $\times[M]$ $\to$ „Hintergrundhilbertraum"; Unbeschränktheitsnachweis via Modulationsfolge $\checkmark[K/M]$; Kato-Fehler korrigiert.  
-**Vorläufiger Status:** Koisometrie $\checkmark[K/M]$; $H_0=L^2(\mathbb{R},du)$ $\checkmark[K/M]$; $B_W$ unbeschränkt $\checkmark[K/M]$; Semibeschränktheit $?[O]$; Formklasse $?[O]$; $A_X$ $?[O]$.  
+**Datum:** 2026-08-07 (Patch 2: 2026-08-07)  
+**Auftrag:** (1) Koisometrie $\overline{R}_{\rm PW}=S_{\rm PW}^*$ vollständig beweisen; (2) $H_0=L^2(\mathbb{R},du)$ als kanonischen positiven Hintergrundhilbertraum buchen; (3) Unbeschränktheit $B_W$ via Modulationsfolge $a_N=e^{iNu}\varphi$ rigoros beweisen; (4) Formklasse $B_W$ klären: Semibeschränktheit offen.  
+**Patch 2:** $P_{\rm fin}\to L^2(\mathbb{R},dx)$ typisiert, erst $P_+\to L^2(\mathbb{R}_+,dx)$; kein kompakter Fourier-Support für $\hat\varphi\in\mathcal{S}$ (Paley-Wiener); zweibumpige Evenisierungsformel für $h_{a_N,a_N}$; Plancherel mit $2\pi$; Gamma-Asymptotik via Kern/Schwanzzerlegung; $C_\Gamma>0$ gebucht, exakter Wert $\to$ NEU-220k.  
+**Status:** Koisometrie $\checkmark[K/M]$; $H_0=L^2(\mathbb{R},du)$ $\checkmark[K/M]$; $B_W$ unbeschränkt $\checkmark[K/M]$ (mit $C_\Gamma>0$); Semibeschränktheit $?[O]$; Formklasse $?[O]$; $A_X$ $?[O]$.  
 **Vorgänger:** NEU-254 (Patch), NEU-253, NEU-252 (Patch), NEU-250r (Patch)
 
 ---
@@ -19,7 +19,12 @@ $$
 
 **Zentralfrage M4-A** (NEU-253 §3):
 $$
-\boxed{B_W(a,b)=\langle a,A_Xb\rangle_0\,?\qquad\text{Welche Operator-/Formklasse besitzt }B_W\text{ relativ zu }H_0=L^2(\mathbb{R},du)?} \qquad (0\text{-Goal})
+\boxed{\text{Welche Operator-/Formklasse besitzt }B_W\text{ relativ zu }H_0=L^2(\mathbb{R},du)?} \qquad (0\text{-Goal})
+$$
+
+**Fourierkonvention** (fixiert in NEU-252/NEU-220k):
+$$
+\boxed{\hat f(t)=\int_{\mathbb{R}}f(u)e^{itu}\,du,\qquad\|\hat f\|_2^2=2\pi\|f\|_2^2.} \qquad (0\text{-Four})
 $$
 
 ---
@@ -32,58 +37,49 @@ $$
 \boxed{S_{\rm PW}a=h_a\otimes\mathbf{1}_{\widehat{\mathbb{Z}}},\qquad h_a(x)=\begin{cases}x^{-1/2}a(\log x),&x>0,\\0,&x\le0,\end{cases}\qquad R_{\rm PW}S_{\rm PW}=I.} \qquad (1\text{-Lift})
 $$
 
-### 1.2 $P_{\rm fin}$: saubere Definition von $\overline{R}_{\rm PW}$
+### 1.2 $P_{\rm fin}$ und $P_+$: korrekte Typkette
 
-**Typkorrektur** (erste Fassung $\times[M]$): $F(\cdot,\mathbf{1}_{\widehat{\mathbb{Z}}})$ ist für ein $L^2(\mathbb{A})$-Element kein typkorrekter Ausdruck.
+**Schritt 1 — endliche Paarung** $P_{\rm fin}:L^2(\mathbb{A}_{\mathbb{Q}})\to L^2(\mathbb{R},dx)$:
+$$
+\boxed{(P_{\rm fin}F)(x):=\int_{\mathbb{A}_f}F(x,y)\,\mathbf{1}_{\widehat{\mathbb{Z}}}(y)\,d\mu_{\rm fin}(y),\qquad P_{\rm fin}:L^2(\mathbb{A})\longrightarrow L^2(\mathbb{R},dx).} \qquad (1\text{-Pfin})
+$$
+Wohldefiniert und kontraktiv nach Cauchy-Schwarz mit $\|\mathbf{1}_{\widehat{\mathbb{Z}}}\|_{L^2(\mathbb{A}_f)}^2=\mu_{\rm fin}(\widehat{\mathbb{Z}})=1$.
 
-**Korrekte Definition:** Sei $\mathbb{A}=\mathbb{R}\times\mathbb{A}_f$ mit $\mathbb{A}_f=\widehat{\mathbb{Q}}$ (endlicher Adel). Definiere die **endliche Paarung**:
+**Schritt 2 — Positivitätsbeschränkung** $P_+:L^2(\mathbb{R},dx)\to L^2(\mathbb{R}_+,dx)$:
 $$
-\boxed{(P_{\rm fin}F)(x):=\int_{\mathbb{A}_f}F(x,y)\,\mathbf{1}_{\widehat{\mathbb{Z}}}(y)\,d\mu_{\rm fin}(y)\in L^2(\mathbb{R}_+,dx),} \qquad (1\text{-Pfin})
+(P_+f)(x):=f(x)\cdot\mathbf{1}_{x>0}. \qquad (1\text{-Pplus})
 $$
-wohldefiniert für $F\in L^2(\mathbb{A})$ als $L^2(\mathbb{R}_+)$-Wert nach Cauchy-Schwarz (endliche Paarung mit $\mathbf{1}_{\widehat{\mathbb{Z}}}\in L^2(\mathbb{A}_f,d\mu_{\rm fin})$, $\|\mathbf{1}_{\widehat{\mathbb{Z}}}\|^2=\mu_{\rm fin}(\widehat{\mathbb{Z}})=1$).
 
-Sei $P_+$ die Beschränkung auf $x>0$. Dann:
+**Vollständige Typkette:**
 $$
-\boxed{\overline{R}_{\rm PW}:=J_{1/2}\circ P_+\circ P_{\rm fin}:L^2(\mathbb{A}_{\mathbb{Q}})\longrightarrow L^2(\mathbb{R},du).} \qquad (1\text{-Rbar})
+\boxed{\overline{R}_{\rm PW}:=J_{1/2}\circ P_+\circ P_{\rm fin}:L^2(\mathbb{A}_{\mathbb{Q}})\xrightarrow{P_{\rm fin}}L^2(\mathbb{R},dx)\xrightarrow{P_+}L^2(\mathbb{R}_+,dx)\xrightarrow{J_{1/2}}L^2(\mathbb{R},du).} \qquad (1\text{-Rbar})
 $$
 
 ### 1.3 Unitarität von $J_{1/2}$
 
 $$
-J_{1/2}:L^2(\mathbb{R}_+,dx)\to L^2(\mathbb{R},du),\qquad(J_{1/2}f)(u)=e^{u/2}f(e^u). \qquad (1\text{-J12})
+(J_{1/2}f)(u):=e^{u/2}f(e^u),\qquad\|J_{1/2}f\|_{L^2(\mathbb{R},du)}^2=\int_\mathbb{R}|e^{u/2}f(e^u)|^2\,du\underset{x=e^u}{=}\int_0^\infty|f(x)|^2\,dx=\|f\|_{L^2(\mathbb{R}_+)}^2.
 $$
-
 $$
-\|J_{1/2}f\|^2=\int_{\mathbb{R}}|e^{u/2}f(e^u)|^2\,du\underset{x=e^u}{=}\int_0^\infty|f(x)|^2\,dx=\|f\|^2. \qquad (1\text{-Isom})
-$$
-
-$$
-\boxed{J_{1/2}\text{ unitär.}\quad\checkmark[K/M]} \qquad (1\text{-Unit})
+\boxed{J_{1/2}:L^2(\mathbb{R}_+,dx)\overset{\sim}{\longrightarrow}L^2(\mathbb{R},du)\text{ unitär.}\quad\checkmark[K/M]} \qquad (1\text{-Unit})
 $$
 
 ### 1.4 $\overline{R}_{\rm PW}=S_{\rm PW}^*$: Beweis
 
-Für $F\in L^2(\mathbb{A})$, $a\in\mathcal{A}_{\rm PW}\subset L^2(\mathbb{R},du)$:
+Für $F\in L^2(\mathbb{A})$, $a\in\mathcal{A}_{\rm PW}$:
 $$
-\langle\overline{R}_{\rm PW}F,a\rangle_{L^2(\mathbb{R})}=\langle J_{1/2}P_+P_{\rm fin}F,a\rangle_{L^2(\mathbb{R})}=\langle P_+P_{\rm fin}F,J_{1/2}^*a\rangle_{L^2(\mathbb{R}_+)}. \qquad (1\text{-Adj1})
-$$
-
-Da $J_{1/2}$ unitär: $J_{1/2}^*=J_{1/2}^{-1}$, $(J_{1/2}^{-1}a)(x)=x^{-1/2}a(\log x)=h_a(x)$. Also:
-$$
-=\int_0^\infty\overline{(P_{\rm fin}F)(x)}\cdot h_a(x)\,dx=\int_0^\infty\int_{\mathbb{A}_f}\overline{F(x,y)}\,\mathbf{1}_{\widehat{\mathbb{Z}}}(y)\,d\mu_{\rm fin}(y)\cdot h_a(x)\,dx. \qquad (1\text{-Adj2})
+\langle\overline{R}_{\rm PW}F,a\rangle_{L^2(\mathbb{R},du)}=\langle J_{1/2}P_+P_{\rm fin}F,a\rangle=\langle P_+P_{\rm fin}F,J_{1/2}^{-1}a\rangle_{L^2(\mathbb{R}_+)}.
 $$
 
-Andererseits:
+$(J_{1/2}^{-1}a)(x)=x^{-1/2}a(\log x)=h_a(x)$ für $x>0$. Damit:
 $$
-\langle F,S_{\rm PW}a\rangle_{L^2(\mathbb{A})}=\int_{\mathbb{A}}\overline{F(x,y)}(h_a\otimes\mathbf{1}_{\widehat{\mathbb{Z}}})(x,y)\,d\mu_{\rm Haar}=\int_0^\infty\int_{\mathbb{A}_f}\overline{F(x,y)}\,\mathbf{1}_{\widehat{\mathbb{Z}}}(y)\,d\mu_{\rm fin}(y)\cdot h_a(x)\,dx. \qquad (1\text{-Adj3})
+=\int_0^\infty\overline{(P_{\rm fin}F)(x)}\cdot h_a(x)\,dx=\int_0^\infty\int_{\mathbb{A}_f}\overline{F(x,y)}\,\mathbf{1}_{\widehat{\mathbb{Z}}}(y)\,d\mu_{\rm fin}(y)\cdot h_a(x)\,dx=\langle F,S_{\rm PW}a\rangle_{L^2(\mathbb{A})}.
 $$
-
-Beide Ausdrücke stimmen überein:
 $$
-\boxed{\langle\overline{R}_{\rm PW}F,a\rangle_{L^2(\mathbb{R})}=\langle F,S_{\rm PW}a\rangle_{L^2(\mathbb{A})},\quad\text{also }\overline{R}_{\rm PW}=S_{\rm PW}^*.\quad\checkmark[K/M]} \qquad (1\text{-Adj})
+\boxed{\overline{R}_{\rm PW}=S_{\rm PW}^*.\quad\checkmark[K/M]} \qquad (1\text{-Adj})
 $$
 
-Da $\langle S_{\rm PW}a,S_{\rm PW}b\rangle=\langle a,b\rangle_{L^2(\mathbb{R})}$ (NEU-254 §5.3), ist $S_{\rm PW}$ isometrisch, $\overline{R}_{\rm PW}S_{\rm PW}=I$, also $\overline{R}_{\rm PW}$ **Koisometrie**:
+$S_{\rm PW}$ isometrisch (NEU-254 §5.3) $\Rightarrow$ $\overline{R}_{\rm PW}S_{\rm PW}=I$ $\Rightarrow$ $\overline{R}_{\rm PW}$ **Koisometrie**:
 $$
 \boxed{L^2(\mathbb{A}_{\mathbb{Q}})/\ker\overline{R}_{\rm PW}\cong L^2(\mathbb{R},du).\quad\checkmark[K/M]} \qquad (1\text{-Quot})
 $$
@@ -92,168 +88,189 @@ $$
 
 ## 2. Kanonischer positiver Hintergrundhilbertraum $H_0=L^2(\mathbb{R},du)$
 
-**Terminologiekorrektur** (erste Fassung $\times[M]$): „Hilbertmajorante" suggeriert, dass die Form $B_W$ durch die Norm kontrolliert wird. Da $B_W$ bzgl. $\|\cdot\|_2$ unbeschränkt ist (§3), ist $H_0$ keine $B_W$-Majorante im Formsinne.
-
 $$
-\boxed{H_0=L^2(\mathbb{R},du)\text{ ist der kanonische positive }\textbf{Hintergrundhilbertraum}.\quad\checkmark[K/M]} \qquad (2\text{-H0})
+\boxed{\langle a,b\rangle_0:=\langle a,b\rangle_{L^2(\mathbb{R},du)}.\quad H_0=L^2(\mathbb{R},du)\text{ kanonischer positiver Hintergrundhilbertraum.}\quad\checkmark[K/M]} \qquad (2\text{-H0})
 $$
 
-Eigenschaften:
-- **RH-unabhängig**: aus Haar-Maß und $J_{1/2}$, ohne $B_W$.
-- **Kanonisch adelisch**: kein Fitten auf $\mu_k$; Normierung durch Lebesgue-Maß vollständig fixiert.
-- **Dichte**: $\mathcal{A}_{\rm PW}=C_c^\infty(\mathbb{R})\subset H_0$ dicht.
-- **Kein Formkontroll-Anspruch**: $B_W$ kann unbeschränkt oder indefinit auf $H_0$ sein.
-
-Die Primzahlarithmetik steckt nach dem Quotient nicht sichtbar in $H_0$, sondern vollständig im Realisierungsoperator $A_X$ bzw. seiner Formstruktur.
+Eigenschaften: RH-unabhängig; kanonisch adelisch; kein Fitten; $\mathcal{A}_{\rm PW}\subset H_0$ dicht. Kein Formkontroll-Anspruch: $B_W$ ist bzgl. $\|\cdot\|_0$ unbeschränkt (§3).
 
 ---
 
-## 3. Unbeschränktheit $B_W$: Modulationstest
+## 3. Unbeschränktheit $B_W$: Modulationstest (rigoros)
 
-**Typkorrektur** (erste Fassung $\times[M]$): Unbeschränktheitsnachweis über getrennte Konzentrationsfolgen für $B_{\rm pole}$ und Hochfrequenzfolgen für $B_\Gamma$ ist ungültig, weil Blockkompensationen möglich sind. Unbeschränkte Summanden $\Rightarrow$ unbeschränkte Summe gilt nicht.
-
-**Korrekte Folge: Modulationstest.** Sei $\varphi\in C_c^\infty(\mathbb{R})$ mit $\|\varphi\|_2=1$, $\operatorname{supp}\varphi\subset[-R,R]$. Setze:
+**Folge:** Sei $\varphi\in C_c^\infty(\mathbb{R})$, $\varphi\neq0$, $\|\varphi\|_2=1$, $\operatorname{supp}\varphi\subset[-R,R]$. Setze:
 $$
-\boxed{a_N(u):=e^{iNu}\varphi(u),\qquad N\in\mathbb{R},\quad\|a_N\|_2=1,\quad\operatorname{supp}a_N=\operatorname{supp}\varphi.} \qquad (3\text{-aN})
+\boxed{a_N(u):=e^{iNu}\varphi(u),\qquad N>0,\quad\|a_N\|_2=\|\varphi\|_2=1.} \qquad (3\text{-aN})
 $$
 
-Der Träger ist für alle $N$ gleich; die Frequenz wird verschoben.
+**Paley-Wiener-Hinweis:** $\varphi\in C_c^\infty\Rightarrow\hat\varphi\in\mathcal{S}(\mathbb{R})$, insbesondere $\hat\varphi\notin C_c(\mathbb{R})$. Der Support von $\hat\varphi$ ist nicht kompakt. Das Fourierbild ist
+$$
+\hat a_N(t)=\hat\varphi(t-N)\in\mathcal{S}(\mathbb{R}), \qquad (3\text{-Fourier})
+$$
+mit Schwartz-Abfall in $t$, verschoben um $N$.
 
 ### 3.1 Primzahlpotenzblock $B_{\rm fin}$
 
-$g_{a_N,a_N}\in C_c^\infty(\mathbb{R})_{\rm even}$ mit $\operatorname{supp}g_{a_N,a_N}\subset[-2R,2R]$ für alle $N$. Die Primzahlpotenzsumme enthält daher nur endlich viele $p^k$ mit $\log p^k\le 2R$. Die Summanden oszillieren in $N$, aber die Anzahl und die $\Lambda(p^k)$-Gewichte sind von $N$ unabhängig:
-
+Die Korrelationsfunktion $C_{a_N,a_N}(t)=\langle a_N,U_t a_N\rangle$ und die Evenisierung $g_{a_N,a_N}(t)=\frac{1}{2}(C_{a_N,a_N}(t)+C_{a_N,a_N}(-t))$ tragen in $t$ den Support von $C_{\varphi,\varphi}$, also $\operatorname{supp}g_{a_N,a_N}\subset[-2R,2R]$ für alle $N$. Die Primzahlpotenzsumme enthält daher nur Terme mit $\log p^k\le 2R$, endlich viele, mit $N$-unabhängigen Gewichten $\Lambda(p^k)$:
 $$
 \boxed{B_{\rm fin}(a_N,a_N)=O(1)\quad(N\to\infty).} \qquad (3\text{-Bfin})
 $$
 
 ### 3.2 Polblock $B_{\rm pole}$
 
-Aus NEU-252 hat $B_{\rm pole}$ die Form $B_{\rm pole}(a,b)=h_{a,b}(i/2)+h_{a,b}(-i/2)$ (bzw. entsprechende Symmetrisierung). Hier ist $h_{a_N,a_N}(z)=\int_\mathbb{R} g_{a_N,a_N}(u)e^{izu}\,du$. Für $z=\pm i/2$ fest ist das ein Fourier-Integral einer kompakt getragenen $C_c^\infty$-Funktion, deren Träger in $N$ konstant bleibt; die Amplitude skaliert durch die hochfrequente Phase $e^{iNu}$ in $g_{a_N,a_N}$ per Riemann-Lebesgue gegen Null:
-
+Aus NEU-252: $B_{\rm pole}(a,b)=h_{a,b}(i/2)+h_{a,b}(-i/2)$ (mit $h_{a,b}=\widehat{g_{a,b}}$, Polsymmetrisierung). Das Fouriertransformierte $h_{a_N,a_N}(z)=\int g_{a_N,a_N}(t)e^{izt}\,dt$ ist das Fourier-Integral einer für alle $N$ auf $[-2R,2R]$ getragenen glatten Funktion, ausgewertet bei den festen Werten $z=\pm i/2$. Die hochfrequente Modulation $e^{iNt}$ in $g_{a_N,a_N}$ bewirkt per Riemann-Lebesgue:
 $$
 \boxed{B_{\rm pole}(a_N,a_N)\to0\quad(N\to\infty).} \qquad (3\text{-Bpole})
 $$
 
-### 3.3 Gamma-Block $B_\Gamma$
+### 3.3 Gamma-Block $B_\Gamma$: zweibumpige Struktur und Kern/Schwanz
 
-Aus NEU-252/NEU-220b hat das Gamma-Symbol asymptotisch:
+**Evenisierung:** Die Korrelation auf der Diagonale ergibt:
 $$
-\gamma_\infty(t)=\tfrac{1}{2}\log|t|+O(1)\quad(|t|\to\infty). \qquad (3\text{-GamAsy})
-$$
-
-Das Fourierbild $\widehat{a_N}(t)=\hat{\varphi}(t-N)$ ist nach $t=N$ verschoben mit $\|\hat{a_N}\|_2=\|\hat\varphi\|_2=1$. Daher:
-$$
-B_\Gamma(a_N,a_N)=\int_\mathbb{R}|\hat\varphi(t-N)|^2\,\gamma_\infty(t)\,dt=\int_\mathbb{R}|\hat\varphi(s)|^2\,\gamma_\infty(s+N)\,ds. \qquad (3\text{-BGam1})
+g_{a_N,a_N}(t)=\tfrac{1}{2}\bigl(e^{iNt}C_{\varphi,\varphi}(t)+e^{-iNt}C_{\varphi,\varphi}(-t)\bigr). \qquad (3\text{-Even})
 $$
 
-Mit $\gamma_\infty(s+N)=\frac{1}{2}\log|s+N|+O(1)=\frac{1}{2}\log N+O(1)$ gleichmäßig auf $\operatorname{supp}\hat\varphi$ (für $N\gg\|\hat\varphi\|_{\rm supp}$):
+Nach Fouriertransformation (Konvention $(0\text{-Four})$):
 $$
-\boxed{B_\Gamma(a_N,a_N)=\tfrac{c}{2}\log N+O(1),\quad c=\int_\mathbb{R}|\hat\varphi(s)|^2\,ds=\|\hat\varphi\|_2^2=1>0.} \qquad (3\text{-BGam2})
+h_{a_N,a_N}(s)=\widehat{g_{a_N,a_N}}(s)=\tfrac{1}{2}\bigl(\widehat{C_{\varphi,\varphi}}(s-N)+\widehat{C_{\varphi,\varphi}}(s+N)\bigr). \qquad (3\text{-TwoBump})
 $$
+
+Das Spektrum von $h_{a_N,a_N}$ besteht aus **zwei verschobenen Paketen** bei $+N$ und $-N$.
+
+**Gamma-Block** (NEU-252 §3):
+$$
+B_\Gamma(a_N,a_N)=2\Lambda_\Gamma(h_{a_N,a_N})=2\cdot\frac{1}{2\pi}\tau_\infty(M_{\gamma_\infty\cdot h_{a_N,a_N}})=\frac{1}{\pi}\int_{\mathbb{R}}\gamma_\infty(s)\,h_{a_N,a_N}(s)\,ds. \qquad (3\text{-BGam0})
+$$
+
+Da $h_{a_N,a_N}$ symmetrisch und beide Pakete gleichwertig beitragen, genügt es, das Paket bei $+N$ zu betrachten (das bei $-N$ trägt durch Symmetrie von $\gamma_\infty$ denselben Beitrag):
+$$
+B_\Gamma(a_N,a_N)=\frac{1}{\pi}\int_{\mathbb{R}}\gamma_\infty(s)\,\widehat{C_{\varphi,\varphi}}(s-N)\,ds+\frac{1}{\pi}\int_{\mathbb{R}}\gamma_\infty(s)\,\widehat{C_{\varphi,\varphi}}(s+N)\,ds. \qquad (3\text{-BGam1})
+$$
+
+Betrachte das Paket bei $+N$ (Substitution $s=N+r$):
+$$
+I_+(N):=\int_{\mathbb{R}}\gamma_\infty(N+r)\,\widehat{C_{\varphi,\varphi}}(r)\,dr. \qquad (3\text{-BGam2})
+$$
+
+$\widehat{C_{\varphi,\varphi}}\in\mathcal{S}(\mathbb{R})$ (Schwartz-Abfall). **Kern/Schwanz-Zerlegung** bei $\delta=N/2$:
+$$
+I_+(N)=\underbrace{\int_{|r|\le N/2}\gamma_\infty(N+r)\,\widehat{C_{\varphi,\varphi}}(r)\,dr}_{I_{\rm kern}}+\underbrace{\int_{|r|>N/2}\gamma_\infty(N+r)\,\widehat{C_{\varphi,\varphi}}(r)\,dr}_{I_{\rm Schwanz}}. \qquad (3\text{-Split})
+$$
+
+**Kernteil $I_{\rm kern}$:** Für $|r|\le N/2$: $\log|N+r|=\log N+\log|1+r/N|=\log N+O(|r|/N)$ gleichmäßig. Mit $\operatorname{Re}\gamma_\infty(t)=\frac{1}{2}\log|t|+O(1)$ (NEU-220b):
+$$
+I_{\rm kern}=\bigl(\tfrac{1}{2}\log N+O(1)\bigr)\int_{|r|\le N/2}\widehat{C_{\varphi,\varphi}}(r)\,dr+O\Bigl(\tfrac{1}{N}\int_{\mathbb{R}}|r|\,|\widehat{C_{\varphi,\varphi}}(r)|\,dr\Bigr). \qquad (3\text{-Kern})
+$$
+
+Der Fehlerterm ist $O(N^{-1})$ weil $\widehat{C_{\varphi,\varphi}}\in\mathcal{S}$. Mit $\int_{\mathbb{R}}\widehat{C_{\varphi,\varphi}}(r)\,dr=2\pi C_{\varphi,\varphi}(0)=2\pi\|\varphi\|_2^2=2\pi>0$:
+$$
+I_{\rm kern}=\bigl(\tfrac{1}{2}\log N+O(1)\bigr)\cdot(2\pi+O(e^{-cN}))+O(N^{-1})=\pi\log N+O(1). \qquad (3\text{-Kern2})
+$$
+
+**Schwanzteil $I_{\rm Schwanz}$:** $|\gamma_\infty(N+r)|\le C(\log(N+|r|)+1)\le C(\log|r|+\log N+1)$ für großes $|r|$. Da $\widehat{C_{\varphi,\varphi}}$ Schwartz-Abfall hat:
+$$
+|I_{\rm Schwanz}|\le C\int_{|r|>N/2}(\log|r|+\log N)|\widehat{C_{\varphi,\varphi}}(r)|\,dr=O(e^{-cN})\cdot\text{poly}(N)=O(1). \qquad (3\text{-Tail})
+$$
+
+**Paket bei $-N$ (Substitution $s=-N+r$):** Liefert $I_-(N)=I_+(N)+O(1)$ durch Symmetrie $\gamma_\infty(-t)=\overline{\gamma_\infty(t)}$ und $\operatorname{Re}\gamma_\infty$ gerade.
+
+**Gesamt:**
+$$
+\boxed{B_\Gamma(a_N,a_N)=C_\Gamma\log N+O(1),\qquad C_\Gamma>0,} \qquad (3\text{-BGam3})
+$$
+mit $C_\Gamma=\frac{2}{\pi}\cdot\pi=2$ bis zum vollständigen Normierungsabgleich mit dem in NEU-220k fixierten $2\pi$-Vorfaktor. Der exakte Wert $C_\Gamma$ ist erst nach diesem Abgleich zu buchen; die Positivität $C_\Gamma>0$ ist durch $(3\text{-Kern2})$ und $\|\varphi\|_2=1>0$ gesichert.
 
 ### 3.4 Gesamtbefund
 
 $$
-B_W(a_N,a_N)=\underbrace{B_{\rm fin}(a_N,a_N)}_{O(1)}+\underbrace{B_{\rm pole}(a_N,a_N)}_{o(1)}+\underbrace{B_\Gamma(a_N,a_N)}_{\frac{1}{2}\log N+O(1)}=\tfrac{1}{2}\log N+O(1)\longrightarrow+\infty. \qquad (3\text{-Sum})
+B_W(a_N,a_N)=\underbrace{B_{\rm fin}(a_N,a_N)}_{O(1)}+\underbrace{B_{\rm pole}(a_N,a_N)}_{o(1)}+\underbrace{B_\Gamma(a_N,a_N)}_{C_\Gamma\log N+O(1)}=C_\Gamma\log N+O(1)\longrightarrow+\infty. \qquad (3\text{-Sum})
 $$
 
 $$
-\boxed{B_W(a_N,a_N)=\tfrac{1}{2}\log N+O(1)\quad\text{bei }\|a_N\|_2=1.\quad\checkmark[K/M]} \qquad (3\text{-Unbdd})
+\boxed{B_W(a_N,a_N)=C_\Gamma\log N+O(1),\quad C_\Gamma>0,\quad\|a_N\|_2=1.\quad\checkmark[K/M]} \qquad (3\text{-Unbdd})
 $$
-
 $$
 \boxed{B_W\text{ ist nicht beschränkt auf }H_0=L^2(\mathbb{R},du).\quad\checkmark[K/M]} \qquad (3\text{-Final})
 $$
 
-Fall 1 (Riesz direkt) aus NEU-253 §3 scheidet aus.
+Fall 1 (Riesz direkt) scheidet aus. Exakter Vorfaktor $C_\Gamma$ nach NEU-220k-Normierungsabgleich.
 
 ---
 
-## 4. Formklasse von $B_W$: Semibeschränktheit und Kato
+## 4. Formklasse von $B_W$: Semibeschränktheit und Szenarien
 
 ### 4.1 Dichte hermitesche Form
 
-$$
-\mathcal{A}_{\rm PW}=C_c^\infty(\mathbb{R})\subset L^2(\mathbb{R},du)\text{ dicht.}\qquad B_W\text{ hermitesch auf }\mathcal{A}_{\rm PW}\times\mathcal{A}_{\rm PW}\quad(\text{NEU-252 }\checkmark). \qquad (4\text{-Dense})
-$$
+$\mathcal{A}_{\rm PW}=C_c^\infty(\mathbb{R})\subset L^2(\mathbb{R},du)$ dicht; $B_W$ hermitesch (NEU-252 $\checkmark$).
 
-$B_W$ ist dicht definierte hermitesche Sesquilinearform. Das allein liefert keine selbstadjungierte Realisierung.
-
-### 4.2 Semibeschränktheit — offene Frage
-
-**Typkorrektur** (erste Fassung $\times[M]$): NEU-255 erster Fassung schrieb „Kato-Darstellungssatz $\Rightarrow$ $A_X\ge-\lambda I$". Das setzt Semibeschränktheit bereits voraus; sie folgt nicht aus bloßer Abschließbarkeit.
-
-Der Kato-Darstellungssatz (Kato 1966, §VI.2) gilt für **semibeschränkte geschlossene** Formen. Er benötigt:
-1. $B_W$ abschließbar,
-2. $B_W\ge-\lambda\|\cdot\|_0^2$ für ein $\lambda\in\mathbb{R}$ (Semibeschränktheit),
-3. Geschlossenheit der Abschließung.
-
-Keines dieser drei Punkte ist aktuell bewiesen.
+### 4.2 RH-Firewall für Semibeschränktheit
 
 $$
-\boxed{\text{Ist }B_W\text{ unterhalbbeschränkt?}\quad?[O]} \qquad (4\text{-Semi})
+\boxed{B_W(a,a)<0\text{ für auch nur ein }a\in\mathcal{A}_{\rm PW}\Longrightarrow\neg\text{RH}.} \qquad (4\text{-Fire})
 $$
 
-Der Modulationstest §3 zeigt $B_W(a_N,a_N)\to+\infty$, also ist $B_W$ nach oben unbeschränkt. Über eine untere Schranke sagt das noch nichts.
+(Aus NEU-220l: $B_W\ge0$ auf $\mathcal{A}_{\rm PW}$ $\Leftrightarrow$ RH.) Ein expliziter Nachweis der Verletzung der unteren Schranke wäre damit bereits eine RH-Widerlegung.
 
-### 4.3 Drei Szenarien für $B_W \rightsquigarrow A_X$
-
-**Szenario 1 — Semibeschränkt und abschließbar:** Kato-Darstellungssatz anwendbar; $A_X\ge-\lambda I$ selbstadjungiert; $B_W$ wird von einer $H_0$-Sobolev-artigen Norm kontrolliert.
-
-**Szenario 2 — Nicht semibeschränkt (indefinit nach unten):** Kato nicht anwendbar. Es gibt Folgen $b_n\in\mathcal{A}_{\rm PW}$, $\|b_n\|_0=1$, $B_W(b_n,b_n)\to-\infty$. Dann ist eine indefinite Operator-/Krein-Realisierung nötig (vgl. NEU-220s/t). Das wäre nach NEU-220l/253 §4 mit $\neg\text{RH}$ kompatibel oder könnte eine Block-Kompensationsstruktur zeigen.
-
-**Szenario 3 — Abschließbarkeit scheitert:** $B_W$ ist nicht closable auf $L^2(\mathbb{R})$; die $H_0$-Topologie ist für $B_W$ ungeeignet.
-
+**Der RH-freie produktive Auftrag für NEU-256:**
 $$
-\boxed{\text{Formklasse }B_W\text{ relativ zu }H_0:\quad?[O]\quad\text{(Szenarien 1--3 ungeklärt)}} \qquad (4\text{-Class})
+\boxed{\exists\lambda\in\mathbb{R}:\;B_W(a,a)\ge-\lambda\|a\|_2^2\quad\forall a\in C_c^\infty(\mathbb{R})\;?} \qquad (4\text{-Semi})
 $$
 
-### 4.4 Nächste Schritte
+Wenn $(4\text{-Semi})$ unabhängig von RH beweisbar ist, existiert eine geschlossene semibeschränkte Form und der Kato-Darstellungssatz liefert einen kanonischen selbstadjungierten $A_X$ auf $H_0$.
 
-1. **Untere Schranke testen:** Gibt es $\lambda$ mit $B_W(a,a)\ge-\lambda\|a\|_2^2$ für alle $a\in\mathcal{A}_{\rm PW}$?
-2. **Gamma-Block allein:** $B_\Gamma\ge0$ gilt wegen $\gamma_\infty(t)\ge0$ für $|t|\ge t_0$? Oder hat $B_\Gamma$ negative Richtungen?
-3. **Polblock:** $B_{\rm pole}(a,a)\to0$ (§3.2) — ist $B_{\rm pole}$ kompakt relativ zu $B_\Gamma$?
-4. Falls Szenario 2: $B_W$ als Kreinraumform; Verbindung zu NEU-220s/t.
+### 4.3 Drei Szenarien
+
+**Szenario 1 — Semibeschränkt:** $B_W\ge-\lambda\|\cdot\|_0^2$; Kato anwendbar; $A_X\ge-\lambda I$ selbstadjungiert; Arithmetik im Spektrum.
+
+**Szenario 2 — Nicht semibeschränkt:** $\exists b_n$, $\|b_n\|_0=1$, $B_W(b_n,b_n)\to-\infty$. Nach $(4\text{-Fire})$ wäre das $\neg$RH. Krein-Realisierung nötig (NEU-220s/t).
+
+**Szenario 3 — Abschließbarkeit scheitert:** $H_0$ ungeeignet; andere Topologie nötig.
+
+$$
+\boxed{\text{Semibeschränktheit }B_W\text{ auf }L^2(\mathbb{R}):\quad?[O]\quad\to\text{NEU-256}} \qquad (4\text{-Open})
+$$
+
+### 4.4 Selbstadjungierte/Krein-Realisierung $A_X$
+
+$$
+\boxed{\text{Welcher Operator }A_X\text{ auf }L^2(\mathbb{R},du)\text{ repräsentiert die vollständige }B_W?\quad?[O]} \qquad (4\text{-ObjX})
+$$
 
 ---
 
 ## 5. Signatur-Firewall (NEU-253 §4)
 
-Sobald $A_X$ in einem der drei Szenarien konstruiert ist:
 $$
 \sigma_-(A_X)\neq\emptyset\iff\mathcal{H}_-\neq0\iff\neg\text{RH}. \qquad (5\text{-Fire})
 $$
-
-Szenario 2 wäre mit $\neg\text{RH}$ kompatibel, aber nicht dasselbe: Das negative Spektrum müsste aus der vollständigen $B_W$ (nicht einzelner Block) stammen.
 
 ---
 
 ## 6. Verhältnis zu NEU-221-Momenten
 
-Falls $A_X\ge0$ (Szenario 1 mit Positivität aus M4-D), dann $T_X=A_X^{-1}\ge0$:
+Falls $A_X\ge0$ konstruiert (M4-D $\checkmark$), dann $T_X=A_X^{-1}$:
 $$
-\tau_{L^2}(T_X^{k+1})\stackrel{?}{=}\mu_k\quad(k=0,1,2,\ldots). \qquad (6\text{-Moment})
+\tau_{L^2}(T_X^{k+1})\stackrel{?}{=}\mu_k.\qquad\text{Normierungs-Firewall: alles durch }B_W\text{ und }L^2\text{-Maß fixiert.} \qquad (6\text{-Mom})
 $$
-
-Normierungs-Firewall (NEU-221 §0): $A_X$ durch $B_W$ und $L^2$-Maß kanonisch fixiert — kein Fitten.
 
 ---
 
 ## 7. Statusbuchungen
 
-$$J_{1/2}:L^2(\mathbb{R}_+,dx)\to L^2(\mathbb{R},du)\text{ unitär}\quad\checkmark[K/M] \qquad (7\text{-a})$$
-$$P_{\rm fin}:L^2(\mathbb{A})\to L^2(\mathbb{R}_+,dx)\text{ sauber definiert als }L^2(\mathbb{A}_f)\text{-Paarung}\quad\checkmark[K/M] \qquad (7\text{-b})$$
-$$\overline{R}_{\rm PW}=J_{1/2}P_+P_{\rm fin},\quad\overline{R}_{\rm PW}=S_{\rm PW}^*\quad\checkmark[K/M] \qquad (7\text{-c})$$
+$$J_{1/2}\text{ unitär}\quad\checkmark[K/M] \qquad (7\text{-a})$$
+$$P_{\rm fin}:L^2(\mathbb{A})\to L^2(\mathbb{R},dx);\;P_+:L^2(\mathbb{R})\to L^2(\mathbb{R}_+)\quad\checkmark[K/M] \qquad (7\text{-b})$$
+$$\overline{R}_{\rm PW}=J_{1/2}P_+P_{\rm fin};\;\overline{R}_{\rm PW}=S_{\rm PW}^*\quad\checkmark[K/M] \qquad (7\text{-c})$$
 $$L^2(\mathbb{A})/\ker\overline{R}_{\rm PW}\cong L^2(\mathbb{R},du)\quad\checkmark[K/M] \qquad (7\text{-d})$$
-$$H_0=L^2(\mathbb{R},du)\text{ kanonischer positiver Hintergrundhilbertraum (nicht "Majorante")}\quad\checkmark[K/M] \qquad (7\text{-e})$$
-$$B_W(a_N,a_N)=\tfrac12\log N+O(1),\;\|a_N\|_2=1\quad\checkmark[K/M] \qquad (7\text{-f})$$
-$$B_W\text{ unbeschränkt auf }H_0\quad\checkmark[K/M] \qquad (7\text{-g})$$
-$$B_W\text{ dicht definierte hermitesche Form auf }\mathcal{A}_{\rm PW}\subset L^2\quad\checkmark[K/M] \qquad (7\text{-h})$$
-$$\text{Semibeschränktheit }B_W\quad?[O] \qquad (7\text{-i})$$
-$$\text{Abschließbarkeit }B_W\text{ auf }L^2(\mathbb{R})\quad?[O] \qquad (7\text{-j})$$
-$$\text{Formklasse }B_W\text{ (Szenario 1--3)}\quad?[O] \qquad (7\text{-k})$$
-$$\text{Selbstadjungierte/Krein-Realisierung }A_X\quad?[O] \qquad (7\text{-l})$$
+$$H_0=L^2(\mathbb{R},du)\text{ kanonischer positiver Hintergrundhilbertraum}\quad\checkmark[K/M] \qquad (7\text{-e})$$
+$$\hat a_N=\hat\varphi(\cdot-N)\in\mathcal{S},\text{ kein kompakter Support (Paley-Wiener)}\quad\checkmark[K/M] \qquad (7\text{-f})$$
+$$h_{a_N,a_N}\text{ zweibumpig bei }\pm N\text{ (Evenisierung)}\quad\checkmark[K/M] \qquad (7\text{-g})$$
+$$B_{\rm fin}(a_N,a_N)=O(1);\;B_{\rm pole}(a_N,a_N)\to0\quad\checkmark[K/M] \qquad (7\text{-h})$$
+$$B_\Gamma(a_N,a_N)=C_\Gamma\log N+O(1),\;C_\Gamma>0\quad\checkmark[K/M] \qquad (7\text{-i})$$
+$$\text{Exakter Wert }C_\Gamma\text{ (NEU-220k-Normierungsabgleich)}\quad?[O\to\text{NEU-220k}] \qquad (7\text{-j})$$
+$$B_W\text{ unbeschränkt auf }H_0\quad\checkmark[K/M] \qquad (7\text{-k})$$
+$$B_W\text{ dicht definierte hermitesche Form}\quad\checkmark[K/M] \qquad (7\text{-l})$$
+$$\text{Semibeschränktheit }B_W;\;\text{Formklasse}\quad?[O]\to\text{NEU-256} \qquad (7\text{-m})$$
+$$A_X\text{ selbstadjungiert/Krein}\quad?[O] \qquad (7\text{-n})$$
 
 ---
 
@@ -261,15 +278,17 @@ $$\text{Selbstadjungierte/Krein-Realisierung }A_X\quad?[O] \qquad (7\text{-l})$$
 
 | Referenz | SHA | Inhalt |
 |---|---|---|
-| NEU-254 (Patch) | 34c471d | Rollenvergleich; $S_{\rm PW}$-Transport-Satz |
+| NEU-254 (Patch) | 34c471d | $S_{\rm PW}$-Transport; Haar-Koisometrie vorl. |
 | NEU-253 (Patch) | a95d3b5 | M4 Rahmen; Signatur-Firewall; M4-A Zwei-Fälle |
-| NEU-252 (Patch) | 4ee78ed | $B_W$ hermitesch; $B_{\rm pole}+B_\Gamma+B_{\rm fin}$; $\gamma_\infty$ Asymptoik |
+| NEU-252 (Patch) | 4ee78ed | $B_W$ hermitesch; Blöcke; $B_\Gamma=2\Lambda_\Gamma(h_{a,b})$ |
 | NEU-250r (Patch) | bd1c0ab | $S_{\rm PW}$; $R_{\rm PW}S_{\rm PW}=I$ |
-| NEU-221 | f678057 | Normierungs-Firewall; $T_X=B_X^{-1}$; Momente $\mu_k$ |
+| NEU-220b | 3a7f2c1 | $\operatorname{Re}\gamma_\infty(t)=\tfrac12\log|t|+O(1)$ |
+| NEU-220k | 8d4e9b2 | Fixierte $2\pi$-Fourierkonvention; $C_\Gamma$-Normierung |
+| NEU-221 | f678057 | Normierungs-Firewall; $\mu_k$ |
 | NEU-220l | 1dc07b3 | $B_W\ge0\Leftrightarrow$ RH |
-| NEU-220s/t | 7c1a3f9/d8b2e51 | Kreinraum-Klassifikation; indefinite Realisierung |
+| NEU-220s/t | div. | Kreinraum; indefinite Realisierung |
 
 ---
 
 *Lizenz: CC BY 4.0 — Objekt-X-Programm, öffentliche Fassung.*  
-*Erstellt 2026-08-07. Patch 2026-08-07: $P_{\rm fin}$ sauber; $\overline{R}_{\rm PW}=S_{\rm PW}^*$ bewiesen; „Majorante" $\times[M]$; Modulationstest $\checkmark$; Kato-Fehler korrigiert; Semibeschränktheit offen.*
+*Erstellt 2026-08-07. Patch 2: $P_{\rm fin}\to L^2(\mathbb{R})$ Typkette; Paley-Wiener-Warnung; zweibumpige Evenisierung; Kern/Schwanz-Beweis; $C_\Gamma>0$; Kato-Firewall.*
