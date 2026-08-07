@@ -49,7 +49,7 @@ Unter $\Phi$: $(\Phi f^\sharp)(y) = \overline{f(e^{-y})} = \overline{(\Phi f)(-y
 $$\boxed{\mathcal{M}_\infty f(t) := \int_0^\infty f(x)\, x^{it}\, \frac{dx}{x}, \qquad t \in \mathbb{R}.}$$
 
 Unter $x = e^y$:
-$$\mathcal{M}_\infty f(t) = \int_{\mathbb{R}} (\Phi f)(y)\, e^{ity}\, dy = \widehat{\Phi f}(t) \cdot 2\pi$$
+$$\mathcal{M}_\infty f(t) = \int_{\mathbb{R}} (\Phi f)(y)\, e^{ity}\, dy = \widehat{\Phi f}(t)$$
 *(mit der Konvention $\hat{g}(t) = \int g(y)e^{ity}\,dy$).*
 
 **Satz PD-2a** (Isomorphismus).
@@ -205,3 +205,4 @@ beginnen. Zu beweisen ist dort:
 |---|---|
 | `NEU-220_Gammafaktor_Quelltyp_und_Zielraum.md` | Übergeordneter Rahmenknoten |
 | `NEU-219_Finalaudit_Gesamtabschluss.md` | Exportursprung `[O-219-6]` |
+| `NEU-250n_Direktaudit_adelisch_archimedische_Quellbruecke_iota_infty.md` | Korrekturquelle: $2\pi$-Fehler in Sektion 2 identifiziert und behoben |
