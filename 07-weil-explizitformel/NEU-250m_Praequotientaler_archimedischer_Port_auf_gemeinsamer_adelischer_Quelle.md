@@ -49,7 +49,7 @@ $$
 
 mit
 - $r_{\infty,W}: \mathcal{S}_{\rm adel} \to \mathcal{S}_{\infty,W}$: archimedische Restriktion/Projektion aus dem adelischen Raum — **?[O]**, kanonische Konstruktion noch offen
-- $\iota_\infty^{\rm loc}: \mathcal{S}_{\infty,W} \to \mathcal{W}$: lokale archimedische Mellin-Einbettung — $\checkmark[K/M]$, aus NEU-220j/k gesichert
+- $\iota_\infty^{\rm loc}: \mathcal{S}_{\infty,W} \to \mathcal{W}$: lokale archimedische Mellin-Einbettung — $\checkmark[K/M]$, aus NEU-220a ($\mathcal{M}_\infty$ als Fourier nach $x = e^y$) + NEU-220j ($\mathcal{W}$) + NEU-250n (lokale Brücke) gesichert
 
 **Zur Notation $f_\infty$:**  
 Die in älteren Knoten (und der Vorfassung dieses Dokuments) verwendete Formulierung, man könne aus $f \in \mathcal{S}(\mathbb{A}_\mathbb{Q})$ einfach dessen „archimedische Komponente $f_\infty$“ nehmen, ist **bislang nicht kanonisch definiert**. Für ein allgemeines adelisches $f$ ist die Zerlegung $f = f_\infty \otimes f_{\rm fin}$ nur im Tensorprodukt-Sinne für einfache Tensoren unmittelbar sinnvoll; für allgemeine $f \in \mathcal{S}(\mathbb{A}_\mathbb{Q})$ fehlt eine kanonische Projektion $f \mapsto f_\infty$. Dies ist genau der Inhalt der offenen Stelle $r_{\infty,W}$.
@@ -57,7 +57,7 @@ Die in älteren Knoten (und der Vorfassung dieses Dokuments) verwendete Formulie
 **Was zu zeigen bleibt $[O\text{-}250m/1]$:**
 
 1. Konstruktion von $r_{\infty,W}: \mathcal{S}_{\rm adel} \to \mathcal{S}_{\infty,W}$ als kanonische Abbildung (nicht nur auf einfachen Tensoren).
-2. Stetigkeit von $r_{\infty,W}$ als Abbildung von Fréchet-Räumen.
+2. Nach vollständiger Typisierung und Festlegung der Topologien von $\mathcal{S}_{\rm adel}$ und $\mathcal{S}_{\infty,W}$: Stetigkeit von $r_{\infty,W}$ prüfen.
 3. Verträglichkeit: $\iota_\infty^{\rm loc} \circ r_{\infty,W}$ soll die in NEU-220k benötigte Mellin-Abbildung reproduzieren.
 
 Bis zur Klärung dieser Punkte gilt:
@@ -243,6 +243,7 @@ Dieser Schritt ist Gegenstand von NEU-250o.
 
 | Referenz | Inhalt |
 |---|---|
+| NEU-220a (7964e36) | $\mathcal{M}_\infty$ als Fourier nach $x=e^y$; Mellin-Normierung |
 | NEU-220b/c | Archimedische Weil-Distribution $W_\infty$, Normierung |
 | NEU-220d (7ff3afe) | Archimedische Rohform indefinit; Polseparation |
 | NEU-220g (7c4f74a) | Schwacher endlich-archimedischer Anschluss; früherer Versuch |
