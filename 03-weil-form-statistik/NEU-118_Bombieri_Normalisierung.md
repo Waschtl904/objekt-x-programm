@@ -1,171 +1,66 @@
-# NEU-118 — Bombieri-Normalisierung: direkter Konvergenztest m_{Omega,N} -> m_arith
+# NEU-118 — Bombieri-Normalisierung: Herglotz-Funktion und Spektralmaß
 
-**Stand: 3. Juli 2026**
+**Stand:** 1. Juli 2026 | **Patch:** 8. August 2026 (Pass-A Gruppe E, E-4/6)
+**Prüfart:** TARGETED-REAUDIT + teilweise SUPERSEDED durch NEU-119/P02
+**Vorgänger:** NEU-117 (Rigidität R1)
+**Nächste Nummer:** NEU-119
 
-> **Programmatischer Neubeginn.**
-> NEU-117 beendet die Objekt-X-Diagnose.
-> Ab NEU-118 gilt: Nur explizite Operatoren, Kerne, Maße, Transformierte.
-> Keine weiteren Strukturaxiome.
-
----
-
-## Hauptkette (Erinnerung)
-
-```
-m_{Omega,N}  --?>  m_arith  -->  Herglotz  <-->  RH
-
-  m_arith = Pi_gamma(X) = Spektralschatten              (NEU-114)
-  m_arith Herglotz  <=>  RH                             (NEU-63D, ⚠[M])
-  m_{Omega,N} -> m_arith: FLASCHENHALS (NEU-113 offen)  ?[O]
-```
-
-NEU-118 greift diesen Flaschenhals direkt an.
+> **Patch-Übersicht:** Verwechslung $\mu_{\rm arith}$ (Maß) $\leftrightarrow$ $m_{\rm arith}(z)$ (Funktion) und falsche Gamma-/Pol-Spektralanteile korrigiert.
 
 ---
 
-## NEU-118.1 — Was ist m_{Omega,N} exakt?
+## Def. NEU-118.1 (korrigiert) — Zwei getrennte Objekte
 
-```
-Zu klären:
-  (a) Welcher Raum? L^2, Schwartz, Masse auf R/C?
-  (b) Welche Formel?
-      m_{Omega,N}(z) = ??
-      Kandidat aus Feshbach-Kette:
-        m_{Omega,N}(z) = Tr(Pi_N (A_N^{Jac,-} - z)^{-1} Pi_N)
-        oder eine Transformierte davon.
-  (c) Welche Normierung?
-      Referenz: Bombieri (2000), Weil-Funktional.
-      Konkrete Normierungskonstante aus NEU-113 zu fixieren.
-  (d) Ist m_{Omega,N} bereits in NEU-77--113 explizit hingeschrieben?
-      Falls ja: Stelle angeben.
-      Falls nein: Das IST der erste Schritt.
-```
+Es gibt **zwei verschiedene** Objekte:
 
-## NEU-118.2 — Was ist m_arith exakt?
+**Das Herglotz-Spektralmaß** (ein Radon-Maß auf $\mathbb{R}$):
+$$\boxed{\mu_{\rm arith} = \sum_{\gamma\in\Gamma}m_\gamma\,\delta_\gamma.}$$
+Unter RH: rein atomares Maß auf $\Gamma$. **Keine** Gamma-/Pol-/Primbeiträge.
 
-```
-Aus NEU-112 (gesichert ✓[M]):
-  m_arith = Stieltjes-Nullstellenmass:
-    m_arith = sum_gamma delta_gamma
-  wobei gamma die nicht-trivialen Nullstellen von zeta(s) durchlaeuft.
+**Die Herglotz-Funktion** (holomorph auf $\mathbb{C}^+$):
+$$\boxed{m_{\rm arith}(z) = \int_{\mathbb{R}}\frac{d\mu_{\rm arith}(t)}{t-z} = \sum_{\gamma\in\Gamma}\frac{m_\gamma}{\gamma-z}.}$$
 
-Alternativ:
-  m_arith ist der Herglotz-Traeger des Nullstellenanteils
-  von Q_Weil (Bombieri-Funktional), NICHT Q_Weil selbst.
+> **Patch-Notiz 118.1:** Ursprünglicher Text wechselt zwischen „$m_{\rm arith}$ ist ein Radon-Maß" und „$m_{\rm arith}(z)$ ist eine Herglotz-Funktion" — das sind zwei verschiedene Objekte; der Wechsel ist ein Typfehler.
 
-Zielraum:
-  m_arith ist ein positives Radon-Mass auf R
-  (falls RH gilt; sonst komplexes Mass mit Anteilen ausserhalb R).
-  RH <=> m_arith(C \ R) = 0.
-```
-
-## NEU-118.3 — Welche Konvergenz wird behauptet?
-
-```
-Drei moegliche Konvergenztypen (zu entscheiden):
-
-  (K1) Schwache Konvergenz als Masse:
-       m_{Omega,N}  --w-->  m_arith
-       d.h.: integral f dm_{Omega,N} -> integral f dm_arith
-       fuer alle f in C_b(R) (oder C_c(R)).
-
-  (K2) Herglotz-Konvergenz:
-       m_{Omega,N}(z) -> m_arith(z)  lokal gleichmaessig fuer Im(z) > 0.
-       (Konvergenz der Herglotz-/Nevanlinna-Darstellungen)
-
-  (K3) Verteilungskonvergenz:
-       Im Sinne von S'(R) oder temperierten Distributionen.
-
-  Relevanz:
-       Fuer den RH-Schluss genuegt (K2): Herglotz-Konvergenz
-       sichert, dass der Limes selbst Herglotz ist,
-       falls die m_{Omega,N} gleichmaessig Herglotz sind.
-
-  Offene Frage:
-       Sind m_{Omega,N} fuer alle N Herglotz-Funktionen?
-       (d.h. Im(m_{Omega,N}(z)) >= 0 fuer Im(z) > 0)       ?[O]
-```
-
-## NEU-118.4 — Wo scheitert oder gelingt die Bombieri-Normalisierung?
-
-```
-Aus NEU-113 (offen, Flaschenhals):
-
-  Bombieri-Normalisierung bedeutet:
-    Q_{Omega,N}[f]  --?>  Q_Weil[f]
-
-  wobei:
-    Q_{Omega,N}[f] = <Pi_N f(H_N) Pi_N>  (oder aequivalente Form)
-    Q_Weil[f] = Q_zeros + Q_Gamma + Q_poles + Q_prime
-                (Bombieri 2000, explizite Formel)
-
-  Bekannte Schwierigkeit:
-    Q_Gamma, Q_poles, Q_prime = archimedische/Gamma-Terme.
-    Diese tauchen in der Feshbach-Kette NICHT natuerlich auf;
-    sie kommen aus dem funktionalen Gleichungsterm.
-
-  Erste konkrete Frage fuer NEU-118:
-    Enthaelt die Feshbach-Kette (NEU-77--111) einen Term,
-    der nach Normalisierung mit Q_Gamma + Q_poles + Q_prime
-    uebereinstimmt?
-    Falls nein: Wo liegt die Luecke?
-    Falls ja: Welche Normierungskonstante schliesst sie?    ?[O]
-
-  Zweite konkrete Frage:
-    Q_zeros[f] = sum_gamma |f-hat(gamma)|^2
-    Stimmt die Feshbach-Spur Tr(Pi_N f(H_N)^2 Pi_N) nach N->infty
-    mit sum_gamma |f-hat(gamma)|^2 ueberein (bis auf Fehlerterm)?  ?[O]
-```
+**Status: ✓[M]**
 
 ---
 
-## NEU-118.5 — Arbeitsplan
+## ~~Behauptung NEU-118.2~~ — Gamma-/Pol-Spektralanteile in $m_{\rm arith}$ — **×[M] SUPERSEDED**
 
-```
-Schritt 1: m_{Omega,N} explizit hinschreiben.
-  Quelle: NEU-77--113 systematisch nach expliziter Formel durchsuchen.
-  Ziel: Eine einzige Formel, kein Verweis auf Axiome.
+> **Patch-Notiz 118.2:** Gamma-/Pol-/Primbeiträge gehören zur arithmetischen Zerlegung von
+> $W_\xi^{\rm norm}$, nicht als zusätzliche Spektralmassen in $\mu_{\rm arith}$.
+> Unter RH ist $\mu_{\rm arith}$ ein reines Nullstellenmaß.
 
-Schritt 2: Herglotz-Eigenschaft von m_{Omega,N} pruefen.
-  Frage: Im(m_{Omega,N}(z)) >= 0 fuer Im(z) > 0?
-  Werkzeug: Schur-Test, Positivitaet des Spektralmasses von A_N^{Jac,-}.
-
-Schritt 3: Q_zeros-Term isolieren.
-  Feshbach-Spur auf Q_zeros[f] = sum_gamma |f-hat(gamma)|^2 testen.
-  Normierungskonstante aus Bombieri fixieren.
-
-Schritt 4: Gamma/Pol/Prim-Terme.
-  Pruefen ob archimedische Terme in der Kette vorhanden oder fehlend.
-  Falls fehlend: Luecke als Befund festhalten (kein Axiom!).
-
-Schritt 5: Konvergenzaussage formulieren.
-  m_{Omega,N} -> m_arith in welchem Sinne?
-  Bedingungen dafuer explizit angeben.
-```
+**Status: ×[M] SUPERSEDED** (vgl. NEU-112 Patch D-2/6, NEU-119 Patch E-5/6, P02)
 
 ---
 
-## NEU-118.6 — Statusmatrix (Eröffnungsstand)
+## Satz NEU-118.3 — Herglotz $\Leftrightarrow$ RH ✓[M]
+
+$$\boxed{m_{\rm arith}\text{ ist Herglotz}\quad\Longleftrightarrow\quad\text{RH.}}$$
+
+- Unter RH: alle Pole von $m_{\rm arith}$ auf $\mathbb{R}$ $\Rightarrow$ Herglotz ✓
+- Ohne RH: Off-line-Nullstellen erzeugen Pole in $\mathbb{C}^+$ $\Rightarrow$ Herglotz zerstört
+
+**Status: ✓[M]** (vgl. NEU-111.1, Patch D-1/6)
+
+---
+
+## Status-Übersicht
 
 | Punkt | Inhalt | Status |
-|---|---|---|
-| m_{Omega,N} explizit | Formel aus Feshbach-Kette | ?[O] — Schritt 1 |
-| m_arith explizit | Stieltjes-Mass sum delta_gamma | ✓[M] (NEU-112) |
-| Herglotz-Eigenschaft m_{Omega,N} | Im >= 0 fuer Im(z)>0? | ?[O] — Schritt 2 |
-| Q_zeros-Identifikation | Feshbach-Spur = Bombieri-Nullstellenterm? | ?[O] — Schritt 3 |
-| Gamma/Pol/Prim-Terme | In Feshbach-Kette vorhanden? | ?[O] — Schritt 4 |
-| Konvergenztyp | schwach / Herglotz / Verteilung? | ?[O] — Schritt 5 |
-| m_{Omega,N} -> m_arith | Gesamtkonvergenz | ?[O] — Hauptziel |
+|-------|--------|--------|
+| 118.1 | $\mu_{\rm arith}$ (Maß) vs $m_{\rm arith}(z)$ (Funktion) | ✓[M] |
+| 118.2 | Gamma-/Pol-Anteile in $m_{\rm arith}$ | ×[M] SUPERSEDED |
+| 118.3 | Herglotz $\Leftrightarrow$ RH | ✓[M] |
 
 ---
 
-## Anschlüsse
+## Verweise
 
-| Voraussetzung | Quelle |
-|---|---|
-| Feshbach-Kette NEU-77--111 | NEU-77--111 |
-| m_arith = Pi_gamma(X), Stieltjes-Mass | NEU-112, NEU-114 |
-| Bombieri-Normalisierung (offen) | NEU-113 |
-| m_arith Herglotz <=> RH | NEU-63D ⚠[M] |
-| Keine weiteren Strukturaxiome | NEU-117.B |
-| Hauptkette m_{Omega,N}->m_arith->Herglotz<->RH | kritischer_pfad_aktuell.md |
+- NEU-119 (Patch E-5/6): Spektralmaß-Definition; Selbstadjungiertheit konditional
+- NEU-111 (Patch D-1/6): $m_{\rm arith}$ Herglotz $\Leftrightarrow$ RH
+- NEU-112 (Patch D-2/6): $\mu_{\rm arith}=\sum m_\gamma\delta_\gamma$
+- **Bombieri:** *Remarks on Weil's quadratic functional* (2000)
+- **Connes:** *Trace formula* (1999)
