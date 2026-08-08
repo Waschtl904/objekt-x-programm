@@ -1,6 +1,6 @@
 # Pass-A-Protokoll — SYN-Migrationsverfahren
 
-**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 8. August 2026 (Gruppe F2: Eröffnungsmatrix NEU-151–173)
+**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 8. August 2026 (Gruppe F3: PASS A COMPLETE; F4 eröffnet)
 
 Dieses Dokument fixiert das verbindliche Verfahren für die Pass-A-Phase der SYN-Migration.
 
@@ -162,7 +162,7 @@ Referenzen, Labels, Doppelzählungen, unzulässige Hochstufungen von
 
 ## Gruppe F — P05: Relative Primkanten und arithmetische Kantengeometrie
 
-**Status:** aktiv | Bestandsaufnahme abgeschlossen | **F1 abgeschlossen** | **F2 eröffnet** | F3–F4 ausständig
+**Status:** aktiv | **F1 COMPLETE** | **F2 eröffnet** | **F3 COMPLETE** | **F4 eröffnet** | P05-SYN ausständig
 
 ### Hauptbefund der Bestandsaufnahme
 
@@ -209,103 +209,105 @@ NEU-26–56 teils P06/P10; NEU-229–249 teils P09/P11.
 4. Primkanalbilder können sich überlappen; Off-Diagonalität folgt nicht automatisch.
 5. Historische $D_{\rm rel}$-Eigenbasisformeln durch Spektralmaßform aus NEU-227 ersetzen.
 
-**Neu entdeckter Konflikt:** NEU-250f Typfehler ($L_3\in C^4 \not\Rightarrow L_3^\circ\in F^3A$ ohne Realisierungsbrücke); unbedingter No-Go `SUPERSEDED`; korrigiert in Commit `1579a379`.
+**Neu entdeckter Konflikt:** NEU-250f Typfehler; unbedingter No-Go `SUPERSEDED`; korrigiert in Commit `1579a379`.
 
 $$\boxed{\text{F1 PASS A COMPLETE}}$$
 
 ---
 
-#### F2 — Fourier-/Rohkopplungsstrang (Ordner 05) — **ERÖFFNET**
+#### F2 — Fourier-/Rohkopplungsstrang (Ordner 05) — **ERÖFFNET** (Commit `8ead5d52`)
 
 **Quellknoten:** 33 Dateien, NEU-151 bis NEU-173 inkl. aller Unterknoten  
-**Endanker:** NEU-170d (`AUDIT-REUSED`) + NEU-173 (`AUDIT-REUSED`)  
+**Endanker:** NEU-170d + NEU-173 (`AUDIT-REUSED`)  
 **Verbindliche Voraussetzung:** F1-Kernfirewalls gelten auch hier
 
 ##### Buchhaltungsbefund: DUPLICATE-ID NEU-166b
 
-> **NEU-166b ist doppelt vergeben.** Im Repo existieren zwei inhaltlich verschiedene
-> Dateien unter dieser Nummer:
->
 > | Interne F2-Bezeichnung | Dateiname | Rolle |
 > |------------------------|-----------|-------|
-> | **166b-P** | `NEU-166b_Rollen_Provenienzentscheidung_Rp_Tp.md` | älteres methodisches Entscheidungs-/Provenienzblatt; friert zulässige Leserichtung ein; eigentliche Rollenentscheidung noch ?[O] |
-> | **166b-T** | `NEU-166b_Typ_Domaenen_Deszentaudit_Tp_Fallverzweigung.md` | inhaltlich weiter entwickelt; Fall 2 ausgeschlossen; Fall 3a lokal/modenweise bestätigt; globale Entscheidung zwischen Fall 1, 3b, 4 offen |
+> | **166b-P** | `NEU-166b_Rollen_Provenienzentscheidung_Rp_Tp.md` | Audit-Firewall; Rollenentscheidung ?[O] |
+> | **166b-T** | `NEU-166b_Typ_Domaenen_Deszentaudit_Tp_Fallverzweigung.md` | substanzieller Vorrang; Fall 3a lokal ✓[M]_part; global ?[O] |
 >
-> **Behandlung:** Keine historische Datei wird umbenannt. Für die SYN-Migration gilt:
-> - **166b-T hat substanziellen Vorrang** für den mathematischen Endstand (präzisere Fallentscheidung).
-> - **166b-P bleibt als Audit-/Provenienz-Firewall** erhalten (enthält weiterhin gültige Auditregeln, insbes. Verbot der nachträglichen Umdeklaration postulierter $R_{p,j}$ oder $T_p$ als Quellenkonstruktionen).
-> - Kein SYN-Satz der Form „NEU-166b beweist …“ ist zulässig ohne Angabe, welche der beiden Dateien gemeint ist.
-> - Status: `DUPLICATE-ID / 166b-T RECONCILED / 166b-P AUDIT-FIREWALL`
+> Kein SYN-Satz der Form „NEU-166b beweist …“ ohne Angabe der Datei.
+> Status: `DUPLICATE-ID / 166b-T RECONCILED / 166b-P AUDIT-FIREWALL`
 
-##### Prüfartmatrix NEU-151–173
-
-| Knoten | Prüfart | Endstatus für P05 | Kernbefund / Firewall |
-|--------|----------|-------------------|----------------------|
-| NEU-151 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Normalisierungs-Typaudit Primkanaloperatoren; $T_p$-Typisierung gesichert; intrinsische Positivität nicht nachgewiesen |
-| NEU-152 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Nichtentartung Primkanalgewichte: Kriterium gültig **konditional** auf Liftunabhängigkeit; Liftunabhängigkeit selbst offen |
-| NEU-153 | `AUDIT-RECONCILED` | `CONDITIONAL` | Hebungsunabhängigkeit: behauptete intrinsische Liftunabhängigkeit zurückgenommen; Ergebnis nur unter Modellbedingungen gültig |
-| NEU-154 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Pullback-Kern und Reichweite der Liftform; Strukturaussagen gültig; Rang-1-Anspruch an $T_p$ durch F1-Firewall 1 blockiert |
-| NEU-155 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Rohkopplung $T_p$, Primkanalkompression, Rang-1-Erweiterung: drei Typen strikt getrennt (F1-Firewall 1 bestätigt) |
-| NEU-156 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Verbundene Restspurform: Rekonstruktion und Eindeutigkeit gültig; globale Wres-Normierung offen |
-| NEU-157 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Zulässigkeitsraum Rohkopplung; Nichttrivialität: Existenzaussage gültig; kanonische Zeugenroute durch 167b geschlossen |
-| NEU-158 | `AUDIT-RECONCILED` | `INCORPORATED` | Invariante Formen, Rohkopplungsquotient, Symmetrieeindeutigkeit: ✓[M] ohne ausstehende Korrekturen |
-| NEU-159 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Dualzeuge, Projektionsnichtvernichtung, Liftzulässigkeit: Dualzeuge-Existenz gültig; automatische Liftzulässigkeit nicht bewiesen |
-| NEU-160 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Rohkopplungsquotient-Symmetrieabstieg: Abstieg im Quotientenraum gültig; globale Symmetriegruppe offen |
-| NEU-161 | `AUDIT-RECONCILED` | `CONDITIONAL` | Nichttriviale Fourierladung $L_3^\circ$: Existenz nur im Testmodell; F1-Firewall ($L_3^\circ\in F^3A$ ?[O]) greifen hier direkt |
-| NEU-162 | `AUDIT-RECONCILED` | `CONDITIONAL` | Quantorentest $L_3^\circ = e_1 V_1$: konditional im Einmodenmodell; globale Herkunft nicht gesichert (NEU-170d) |
-| NEU-163 | `AUDIT-RECONCILED` | `CONDITIONAL` | Einmodenzeuge, Liftmitgliedschaft, Nichtnullkante: algebraisch rechenbar im Testmodell; Herkunft $[L_3]\mapsto L_3^\circ = e_1 V_1$ blockiert (NEU-170d) |
-| NEU-164 | `AUDIT-RECONCILED` | `CONDITIONAL` | $R_p$-Test, kanonischer Zeuge, Entscheidungsknoten: konditional; Zielkanten-Nichtverschwinden nicht bewiesen (NEU-170d) |
-| NEU-165 | `AUDIT-RECONCILED` | `INCORPORATED_part` | $R_p$-Wirkung, Matrixstruktur, Basisnullmengen, gemeinsamer Kern: Matrixstruktur gültig; Kernzeugenroute durch 167b geschlossen |
-| NEU-165a | `AUDIT-REUSED` | `INCORPORATED` | Quellenregister $R_p$-Operatoren: Quellenlage bestätigt, kein Widerspruch |
-| NEU-165b | `AUDIT-RECONCILED` | `INCORPORATED` | Konsistenzaudit $R_p$ vs. NEU-157: Konsistenz ✓[M]; falsche Kernzeugenroute ausgeschlossen |
-| NEU-166 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Einmoden-/Zweimoden-Test, Zeugen: Test-Resultate gültig; Zeugenroute $k\in\ker C_p\setminus\ker T_p$ nicht typkorrekt geschlossen (durch 166a/b-T bestätigt) |
-| NEU-166a | `AUDIT-RECONCILED` | `INCORPORATED` | Typ-Domänen-Deszentaudit $T_p$: Deszentstruktur ✓[M]; Auditregeln verbindlich |
-| **NEU-166b-P** | `AUDIT-FIREWALL` | `METHODISCH ERHALTEN` | Rollen-/Provenienzentscheidung $R_p$/$T_p$: Leserichtung eingefroren; Verbot nachträglicher Umdeklaration als Quellenkonstruktion; Rollenentscheidung ?[O] |
-| **NEU-166b-T** | `AUDIT-RECONCILED` | `INCORPORATED_part` | Typ-Domänen-Deszentaudit $T_p$ Fallverzweigung: Fall 2 ausgeschlossen ✓[M]; Fall 3a lokal/modenweise ✓[M]$_\rm part$; globale Entscheidung (Fall 1, 3b, 4) ?[O]; **substanzieller Vorrang** über 166b-P |
-| NEU-167 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Lineare Kernbedingungen vs. Fourierladungsbedingung: Trennung gültig; alte Zeugenroute über Kernbedingungen durch 167b geschlossen |
-| NEU-167b | `AUDIT-REUSED` | `INCORPORATED` | Abschluss O167-2: keine Kernbedingungen aus NEU-157/NEU-44 — maßgeblicher Endstand; Zeugenroute über $\ker C_p\setminus\ker T_p$ geschlossen ✓[M] |
-| NEU-168 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Nichtverschwindensgeometrie, exakt zulässige Liftmenge: Geometrie gültig; keine falsche Kernzeugenroute; $L_3^\circ$-Trägervoraussetzung firewallen |
-| NEU-169 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Kollisionssystem, Einzelmoden-Nichtverschwindung $B_p$: Kollisionssatz behalten; $L_3^\circ$-Trägervoraussetzung ausdrücklich firewallen (durch 250j verstärkt) |
-| NEU-170 | `AUDIT-RECONCILED` | `SUPERSEDED_part` | Gew. Träger $L_3^\circ$, Quellenimport: durch 170a–d epistemisch überholt; Teilaussagen über Trägerdefinition erhalten |
-| NEU-170a | `AUDIT-RECONCILED` | `SUPERSEDED_part` | Fouriergrad-Klasse $L_3$, Repräsentantenstatus: durch 170b/c/d präzisiert; frühere Repräsentantenannahmen zurückgenommen |
-| NEU-170b | `AUDIT-RECONCILED` | `SUPERSEDED_part` | Ursprungsdefinition, Repräsentantenstatus $L_3$: durch 170c/d überholt; Quellendefinitionen aus NEU-20/28 relevant |
-| NEU-170c | `AUDIT-RECONCILED` | `INCORPORATED_part` | Direktaudit $L_3$-Definition NEU-20/NEU-28: Quellendefinition geklärt; Repräsentantenstatus in NEU-28 bestätigt |
-| NEU-170d | **`AUDIT-REUSED`** | **`INCORPORATED` — DAG-ENDANKER** | Bereinigter DAG-Audit NEU-28/NEU-162: Einmodenansatz algebraisch rechenbar; Herkunft $[L_3]\mapsto L_3^\circ = e_1 V_1$ blockiert; Zielkanten-Nichtverschwinden nicht bewiesen; maßgeblicher Endstand für gesamten $L_3^\circ$-Strang |
-| NEU-171 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Typfundament $L_3$-Klasse, Kochainkomplex: Strukturaussagen gültig; durch 172/173 epistemisch fortgeschrieben |
-| NEU-172 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Direktaudit NEU-72/NEU-170b, Typfundament $L_3$: Fallbezeichnung durch 173 korrigiert (C₂ → C_src-neg); Teilresultate erhalten |
-| NEU-173 | **`AUDIT-REUSED`** | **`INCORPORATED` — TYPQUELLEN-ENDANKER** | $\Delta$-Audit NEU-20/NEU-28, Typfundament, Quellenkegel: epistemische Korrektur C₂ → C_src-neg; alten Typquellen-Auditzyklus ausdrücklich abgeschlossen; mathematische Neukonstruktion bleibt davon getrennt offen; maßgeblicher Abschluss |
-
-##### F2-Kernfirewalls (ergänzend zu F1)
-
-6. NEU-166b ist eine Doppelnummer. In P05 stets zwischen 166b-P (Provenienz-Firewall) und 166b-T (Fallentscheidung, substanzieller Vorrang) unterscheiden.
-7. Alle Aussagen über $L_3^\circ$ in NEU-161–169 sind konditional im Einmodenmodell. Der Endanker für diesen Strang ist NEU-170d, nicht die Einmodenrechnungen selbst.
-8. Die Kernzeugenroute $k\in\ker C_p\setminus\ker T_p$ ist durch NEU-167b geschlossen; kein Resultat aus NEU-165/166/168 darf sie stillschweigend als offen behandeln.
-9. NEU-169-Kollisionssatz bleibt erhalten, aber nur mit expliziter Firewall auf die $L_3^\circ$-Trägervoraussetzung — durch NEU-250j zusätzlich verstärkt.
+*(Vollständige 33-Zeilen-Prüfartmatrix und F2-Kernfirewalls #6–9 im Commit `8ead5d52` festgehalten.)*
 
 ---
 
-#### F3 — Spätere Primfaser-Korrekturen
+#### F3 — Spätere Primfaser-Korrekturen — **PASS A COMPLETE**
 
-**Quellknoten:** NEU-225, NEU-227 sowie zugehörige Quellenaudits aus `01-primkanten-werkzeuge/`
+**Quellknoten:** NEU-225, NEU-226, NEU-227 (alle in `01-primkanten-werkzeuge/`)  
+**Prüfart:** `AUDIT-RECONCILED` für alle drei  
+**Abschlussdatum:** 8. August 2026
 
-| Behandlung |
-|------------|
-| Mit F1/F2-Endstand zusammenführen (`AUDIT-RECONCILED`) |
-| Nicht-P05-Anteil (globale Kopplung, koh.) in P09/P11 weiterleiten |
+##### Prüfartmatrix NEU-225–227
+
+| Knoten | Prüfart | Endstatus für P05 | Kernbefund |
+|--------|----------|-------------------|------------|
+| NEU-225 | `AUDIT-RECONCILED` | `INCORPORATED_part` + **→ P06/P09** | $D_{\rm rel}\|_{\mathcal H_{p,a}}\cong 2ic_p\,d/dt$ auf $L^2(\mathbb R)$: Transportgenerator, rein absolutstetiges Spektrum, kein Kern in Primsektoren, kompakter Resolvent ausgeschlossen; Konvention $J_N^- = \tfrac12(\Theta_N-\Theta_N^\dagger)$ verbindlich; $\mathcal D_0$ als Kern der SA-Realisierung: ?[O] (`[O-225-1]`); Feshbach-Transfer $K(z) = V^*(D_{\rm rel}-z)^{-1}V$ als HP-2/HP-3/HP-5-Kandidat: Arbeitshypothese (`[O-225-2]`) |
+| NEU-226 | `AUDIT-RECONCILED` | `INCORPORATED_part` + **→ P11** | Primkanalbilder überlappen in BC-Algebra ($\eta_{p;m;s,u}\sim e_{u+ps}V_{pm}$): Kreuztermmechanismus gesichert ✓[M]; $\mathcal K_N\ne\bigoplus_p K_p$ ✓[M]; $K_N(z)$ bei festem $N$ nicht endlich-rangig, $\mathcal S_1$-Frage offen; NEU-77-Grenzübergang nur punktweise, nicht normkonvergent; Zurückrollung: $\eta$-Orthonormalität über Primkanäle falsch (nur innerhalb fester Kette gültig); Blocker: (51.3)/(51.4)/(51.7) setzen Eigenbasis voraus — durch NEU-225 widerlegt; Vorschaltknoten [O-226-1] durch NEU-227 geschlossen |
+| NEU-227 | `AUDIT-RECONCILED` | `INCORPORATED` + **→ P11** | Koordinatenwörterbuch ✓[M]: $\eta_{p;m;s,u}\leftrightarrow e_R V_M$, $M=pm$, $R=u+ps$; $s\mapsto s+m$ und $r\mapsto r+n$ sind dieselbe Bewegung; NEU-225-Primfaserkette im Primsektor vollständig gerechtfertigt; Spektralmaßform (227.3)–(227.9) ersetzt Eigenbasisform (51.3)/(51.4)/(51.7) vollständig ✓[K/M]; Nicht-$\mathcal S_1$-Zeuge nur möglich wenn $V\notin\mathcal S_2$ – Notwendigkeitsbedingung schärft Vermutung $V\in\mathcal S_4\setminus\mathcal S_2$ |
+
+##### F3-Kernbefünde für P05
+
+**Was gesichert ist und nach P05 geht:**
+
+- $D_{\rm rel}$ ist ein Transportgenerator, kein Hilbert–Pólya-Operator. `✓[M]`
+- Jede Primfaser $\mathcal H_{p,a}$ hat absolutstetiges Spektrum; kein Kern. `✓[M]`
+- $D_{\rm rel}$ ist kanalerhaltend; Off-Diagonalität von $\mathcal K_N$ entsteht durch Primkanalbilduberlappung, nicht durch Primmischung im Operator. `✓[M]`
+- Spektralmaßform (227.3)–(227.9) ist die verbindliche Schreibweise für Resolventenmatrixelemente; alle Eigenbasisformeln (51.3)/(51.4)/(51.7) sind durch sie zu ersetzen. Dies schärft F1-Firewall Nr. 5 zur konkreten Ersetzungsregel. `✓[K/M]`
+- Koordinatenwörterbuch (227.1)/(227.2) ist verbindlich für alle nachfolgenden Primkanalrechnungen, auch in F4. `✓[M]`
+- Primfaserkette $c_p = \tfrac12\gamma_N p\log p$: verbindliches Ergebnis für den Primsektor. `✓[M]`
+
+**Was nach P06 weitergereicht wird:**
+
+- Feshbach-Kollaps-Identität (NEU-77, endliches $N$): exakt gültig; globaler Limes nur punktweise. → P06
+- Sektoren $m$ nicht prim: Mehrfachsprünge $u$-Klassen mischend; `[O-225-3]` offen. → P06
+
+**Was nach P11 weitergereicht wird:**
+
+- Globaler Feshbach-Transfer $K(z) = V^*(D_{\rm rel}-z)^{-1}V$: Schattenklasen-/HP-Kandidat-Fragen; $u$-Regulator, Quellhilbertraum, Gramoperator, $\det_2$-Anbindung. `[O-226-3]–[O-226-7]` offen. → P11
+- $V\in\mathcal S_4\setminus\mathcal S_2$: Notwendigkeitsbedingung gesichert (NEU-227 §2.7); Nachweis offen. → P11
+
+**F3-Korrekturrollen für F4:**
+
+Mit F3 steht fest:
+1. Die Primkanalgeometrie ist ein Transportspektrum, kein Energiespektrum; $D_{\rm rel}$ liefert keine kompakte Schicht.
+2. Die Kreuzprimkollisionen in NEU-226 (51.5) existieren und sind durch die BC-Algebra-Überlappung $\eta_{p;m;s,u}\leftrightarrow e_{u+ps}V_{pm}$ erklärt.
+3. Das Koordinatenwörterbuch (227.1) ist verbindlich.
+
+Damit kann F4 präzise fragen: Welche dieser Primkanalgeometrie trägt tatsächlich $\Lambda(p^m)/p^{m/2}$? Und warum können die Kreuzprimkollisionen laut NEU-250j nicht zugleich auf dem Mangoldt-Träger sitzen?
+
+##### F3-Kernfirewall
+
+10. $D_{\rm rel}$-Eigenbasisformeln sind **vollständig verboten**. Verbindliche Schreibweise: Spektralmaßform (227.3)–(227.9). Diese Firewall ergänzt und schärft F1-Firewall Nr. 5.
+
+$$\boxed{\text{F3 PASS A COMPLETE — NEU-225, NEU-226, NEU-227 reconciliiert; verbindliche Spektralmaßform verankert.}}$$
 
 ---
 
-#### F4 — Neuer Mangoldt-/Primzahlpotenzstrang
+#### F4 — Neuer Mangoldt-/Primzahlpotenzstrang — **ERÖFFNET**
 
 **Quellknoten:** NEU-250g, NEU-250i, NEU-250j (7. August 2026) + NEU-250f Patch 1 (`1579a379`)  
-**Prüfart:** `TARGETED-REAUDIT` / RECONCILIATION
+**Prüfart:** `TARGETED-REAUDIT` / RECONCILIATION  
+**Verbindliche Voraussetzung:** F1-Firewalls + F3-Koordinatenwörterbuch + F3-Spektralmaßform
 
-| Knoten | Inhalt | Offene Punkte / Firewall |
-|--------|--------|--------------------------|
-| NEU-250f + Patch 1 | Filtrations-No-Go nur **konditional** auf $L_{3,\rm alg}^\circ\in F^3A$ | Unbedingter alter No-Go `SUPERSEDED`; Realisierungsbrücke ?[O] |
-| NEU-250g | Primitiver Faktor $\frac{\log p}{\sqrt p}$ algebraisch konstruiert | Hilbertraum-Fundierung $H_{\rm BC}$ offen; ⚠[M] |
-| NEU-250i | $H_{\rm pr}=D_\Omega^{-1}H_{\rm BC}$; auf $n=p^m$: $\frac{\Lambda(p^m)}{p^{m/2}}=\frac{\log p}{p^{m/2}}$ | Firewall: $H_{\rm pr}\ne\Lambda$ auf allgemeinen zusammengesetzten $n$ |
-| NEU-250j | Trägertrennung $\operatorname{supp}\Lambda\cap\operatorname{supp}(\text{Kreuzprimkollision})=\emptyset$ | Graphbasisüberlappung lebt nur auf $\Lambda=0$; Mediatorweg ?[O] |
+##### Leitfrage F4 (aus F1–F3 gewonnen)
+
+> F3 hat die Primkanalgeometrie als Transportspektrum gesichert und die BC-Überlappungsstruktur mit Koordinatenwörterbuch verankert. F4 fragt jetzt: Welche dieser Primkanalgeometrie trägt tatsächlich den Mangoldt-Faktor $\Lambda(p^m)/p^{m/2}$? Und: Warum können die durch NEU-226 gesicherten Kreuzprimkollisionen nicht zugleich auf $\mathrm{supp}\,\Lambda$ sitzen?
+
+| Knoten | Prüfart | Endstatus | Kernbefund / Firewall |
+|--------|----------|-----------|----------------------|
+| NEU-250f + Patch 1 (`1579a379`) | `TARGETED-REAUDIT` | `SUPERSEDED_part` | Filtrations-No-Go nur konditional auf $L_{3,\rm alg}^\circ\in F^3A$; unbedingter No-Go SUPERSEDED; Realisierungsbrücke ?[O] |
+| NEU-250g | `AUDIT-RECONCILED` | `INCORPORATED_part` | Primitiver Faktor $\frac{\log p}{\sqrt p}$ algebraisch konstruiert ✓[M]$_{\rm part}$; Hilbertraum-Fundierung $H_{\rm BC}$ offen; im Primsektor mit Primfaserkette $c_p = \frac12\gamma_N p\log p$ aus F3 verträglich, aber nicht identisch |
+| NEU-250i | `AUDIT-RECONCILED` | `INCORPORATED_part` | $H_{\rm pr}=D_\Omega^{-1}H_{\rm BC}$; auf $n=p^m$: $\frac{\Lambda(p^m)}{p^{m/2}}=\frac{\log p}{p^{m/2}}$ ✓[M]; **Firewall:** $H_{\rm pr}\ne\Lambda$ auf allgemeinen zusammengesetzten $n$ (da $\Lambda(p_1^{a_1}p_2^{a_2}\cdots)=0$, aber $H_{\rm pr}$ dort $\ne0$) |
+| NEU-250j | `AUDIT-RECONCILED` | `INCORPORATED` + **F3-Vertiefung** | Trägertrennung $\mathrm{supp}\,\Lambda\cap\mathrm{supp}(\mathrm{Kreuzprimkollision})=\emptyset$ ✓[M]; erklärt durch F3/NEU-226: Kreuzterme $K_{pq}$ mit $p\ne q$ leben auf $V_{pm}$ mit zwei verschiedenen Primteilern, dort $\Lambda=0$; damit: Kreuzprimkollisionen widerlegen **nicht** die von NEU-226 gesicherte nichtorthogonale Primkanalgeometrie, sondern zeigen, dass diese Geometrie allein keine $\Lambda$-tragende globale Kopplung liefert; Mediatorweg → P11 |
+
+##### F4-Kernfirewalls (ergänzend zu F1–F3, #11–12)
+
+11. NEU-250j widerlegt **nicht** die Kreuzprimkollisionen aus NEU-226. Es zeigt nur, dass $\mathrm{supp}K_{pq}$ und $\mathrm{supp}\Lambda$ disjunkt sind. Die nichtorthogonale Primkanalgeometrie bleibt bestehen; sie liefert aber keine direkte $\Lambda$-tragende Kopplung.
+12. Im Primsektor stimmt $\frac{\Lambda(p^m)}{p^{m/2}}=\frac{\log p}{p^{m/2}}$ mit dem primitiven Faktor aus NEU-250g überein; auf zusammengesetzten $n$ mit mehreren Primteilern ist $H_{\rm pr}\ne\Lambda$ eine harte Firewall.
 
 ---
 
@@ -314,10 +316,10 @@ $$\boxed{\text{F1 PASS A COMPLETE}}$$
 | Paket | Status | Nächster Schritt |
 |-------|--------|------------------|
 | F1 | **PASS A COMPLETE** (`07903f85`) | Endstand für P05 extrahiert |
-| F2 | **ERÖFFNET** — Matrix steht | Reconciliation-Arbeit beginnen; keine neuen Dateien erforderlich |
-| F3 | ausständig | NEU-225/226/227-Reconciliation final in P05-Scope ziehen |
-| F4 | ausständig | NEU-250g/i/j gezielt re-auditieren; Patch 1 zu 250f verbindlich |
-| P05-SYN | nach F1–F4 | `papers/P05_*.tex` + LaTeX-SYN-Transferaudit |
+| F2 | **ERÖFFNET** (`8ead5d52`) | Reconciliation-Arbeit; keine neuen Dateien erforderlich |
+| F3 | **PASS A COMPLETE** | Spektralmaßform und Koordinatenwörterbuch verbindlich verankert |
+| F4 | **ERÖFFNET** | Leitfrage steht; keine neuen Dateien erforderlich |
+| P05-SYN | nach F2+F4 | `papers/P05_*.tex` + LaTeX-SYN-Transferaudit |
 
 ---
 
