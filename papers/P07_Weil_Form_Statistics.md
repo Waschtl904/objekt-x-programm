@@ -1,9 +1,9 @@
 # P07 — Weil-Form Statistics:
 Correlation Channels, Form-Factor Limits and Herglotz Interfaces
 
-**Status:** Patch 2/2 (8. August 2026) — Prä-Freigabestand für SYN-Finalaudit
+**Status:** Patch 3/3 (8. August 2026) — SYN FINAL AUDITED
 **Basis:** PASS-A-PROTOKOLL.md (`baa3975b`); NEU-101 Patch 2 (`7ff336e2`)
-**Patch-Commits:** Skelett (`94c25130`) → Patch 1 (`596317bb`) → Patch 2 (dieser Commit)
+**Patch-Commits:** Skelett (`94c25130`) → Patch 1 (`596317bb`) → Patch 2 (`c6751e80`) → Patch 3 (dieser Commit)
 
 > *Patch-Notizen gehören ins PASS-A-PROTOKOLL und die NEU-Knoten.*
 > *Das SYN-Paper enthält nur bereinigte Definitionen, Sätze und Statusangaben.*
@@ -88,10 +88,17 @@ Im Zwischenregime $1\ll T\ll M_N$ liefert die Feinstrukturanalyse (NEU-098–100
 $$\mathcal V(M,H) := \frac1M\int_M^{2M}(\psi(x+H)-\psi(x)-H)^2\,dx.$$
 
 **Satz 3.2 (GM-Varianzasymptotik, CONDITIONAL).**
-$$\text{RH + Strong Pair Correlation}\;\Longleftrightarrow\;
-\mathcal V(M,H)\sim H\log(M/H)\quad(1\leq H\leq M).$$
-Historischer Normierungsfehler war ein falscher Faktor $H/M$ ($\to H/M\cdot\log(M/H)$ statt $H\log(M/H)$).
+Unter RH gilt für jedes feste $\varepsilon>0$ uniform in $1\leq H\leq M^{1-\varepsilon}$:
+$$\text{SPC}\;\Longleftrightarrow\;
+\mathcal V(M,H)\sim H\log(M/H).$$
+Die Äquivalenz ist im Sinne der Goldston–Montgomery-Uniformitätsbereiche zu verstehen;
+für $H\asymp M$ gelten abweichende Skalenregimes.
 [NEU-101: CONDITIONAL; GM 1987]
+
+**Korollar 3.2a (Selbstdualer Testwert).**
+Der kanonische selbstduale Punkt $H=\sqrt{M}$ liegt im Gültigkeitsbereich. Konditional unter RH + SPC:
+$$\mathcal V(M,\sqrt{M})\sim \sqrt{M}\log\sqrt{M} = \tfrac12\sqrt{M}\log M.$$
+[NEU-101: CONDITIONAL]
 
 **Def. 3.3 (Lokales Formfaktor-Ersatzobjekt).**
 $\mathcal P^{\rm unf}_{N,H}$ (unnormalisiert, lokal) ersetzt das global normierte $\mathcal S_{N,H}$ (verworfen). [NEU-104: ✓[M]$_{\rm part}$]
@@ -121,6 +128,14 @@ wobei $\mu_{\rm arith}=\sum_{\gamma\in\Gamma}m_\gamma\delta_\gamma$ das **reine 
 Die Summe $\sum_\gamma m_\gamma/(\gamma-z)$ konvergiert im kanonisch symmetrischen Sinn.
 [NEU-111, NEU-112, NEU-118: ✓[M]]
 
+Die allgemeine Herglotz–Nevanlinna-Darstellung erlaubt zusätzlich einen Term $bz$ mit $b\geq 0$.
+Für unser spezielles $m_{\rm arith}=-\Xi'/\Xi$ gilt jedoch $b=0$:
+Wegen der symmetrischen $\pm\gamma$-Paarung der Nullstellen und der Hadamard-Darstellung von $\Xi$
+konvergiert $\sum_{\gamma>0} m_\gamma\bigl(\tfrac1{\gamma-z}+\tfrac1{-\gamma-z}\bigr)$
+dank $\sum_\gamma m_\gamma/\gamma^2<\infty$ ohne zusätzlichen linearen Anteil.
+Die obige Darstellung enthält daher keinen $bz$-Term.
+[NEU-111, NEU-118: ✓[M]]
+
 **Satz 4.2 (Herglotz $\Leftrightarrow$ RH).**
 $$m_{\rm arith}\text{ ist Herglotz}\quad\Longleftrightarrow\quad\text{RH.}$$
 [NEU-111.1: ✓[M]]
@@ -141,6 +156,7 @@ $$m_{\rm arith}\rightsquigarrow W_\xi^{\rm norm}
 \quad\text{und getrennt}\quad
 a\to g_{a,b}\to h_{a,b}\to B_W(a,b).$$
 Ohne Autokorrelationspaarung kein direkter Vergleich; P02 als kanonische Definitionsebene.
+[P02]
 
 **Offen.** $m_{\rm arith}=\Pi_\gamma(X)$: ?[O] [NEU-114]
 
@@ -204,7 +220,8 @@ $$A_N^{\rm Jac,-} \stackrel{?[O]}{\longrightarrow} m_{\Omega,N}
 | Skalentriage: $T=O(1)$ Rang-eins-Kollaps | PROVED | NEU-096 |
 | Zwischenregime $1\ll T\ll M_N$ Weil-tauglich | OPEN | NEU-096/097 |
 | Hardy–Littlewood Singulärserien-Hauptterm | CONDITIONAL (Siebheuristik) | NEU-098 |
-| $\mathcal V(M,H)\sim H\log(M/H)$ | CONDITIONAL (RH + SPC, GM 1987) | NEU-101 |
+| $\mathcal V(M,H)\sim H\log(M/H)$ uniform in $1\leq H\leq M^{1-\varepsilon}$ | CONDITIONAL (RH + SPC, GM 1987) | NEU-101 |
+| Selbstdualer Testwert $\mathcal V(M,\sqrt{M})\sim\tfrac12\sqrt{M}\log M$ | CONDITIONAL (RH + SPC) | NEU-101 |
 | $\mathcal P^{\rm unf}_{N,H}$ lokales Formfaktor-Ersatzobjekt | PROVED$_{\rm part}$ | NEU-104 |
 | LFF $\Rightarrow$ Rampenasymptotik (einseitig) | PROVED$_{\rm part}$ | NEU-107 |
 | LFF $\Leftrightarrow$ Rampenform (Biimplikation) | NO-GO (nur $\Rightarrow$) | NEU-107 |
@@ -213,9 +230,10 @@ $$A_N^{\rm Jac,-} \stackrel{?[O]}{\longrightarrow} m_{\Omega,N}
 | $m_{\rm arith}$ Herglotz $\Leftrightarrow$ RH | PROVED | NEU-111 |
 | $\mu_{\rm arith}=\sum m_\gamma\delta_\gamma$ (reines Nullstellenmaß) | PROVED | NEU-112/118 |
 | $m_{\rm arith}$ in Nevanlinna-Form (symmetrische Konvergenz) | PROVED (Typisierung) | NEU-111/118 |
+| Linearer Nevanlinna-Koeffizient $b=0$ (kein $bz$-Term) | PROVED | NEU-111/118 |
 | $W_\xi^{\rm norm}=W_{\rm zeros}$ (keine Doppelzählung) | PROVED | NEU-113/115 |
 | Kanonische Positivierungsbrücke $Q_{\rm zeros}=\sum m_\gamma|\widehat\phi|^2$ | PROVED | NEU-112/113 |
-| Einzigkeit der Positivierungsbrücke | NOT PROVED | — |
+| Einzigkeit der Positivierungsbrücke | OPEN | — |
 | $m_{\rm arith}=\Pi_\gamma(X)$ | OPEN | NEU-114 |
 | $A_N^{\rm Jac,-}$ selbstadjungiert | OPEN | NEU-119 |
 | Nevanlinna-Renormierung $(c_N,a_N)$, Tail-Kontrolle | OPEN | NEU-120 |
@@ -239,4 +257,4 @@ $$A_N^{\rm Jac,-} \stackrel{?[O]}{\longrightarrow} m_{\Omega,N}
 ---
 
 *Fehlerhistorie, Patch-Notizen, Provenienz: PASS-A-PROTOKOLL.md + `03-weil-form-statistik/NEU-091–120`.*
-*Nächster Schritt nach Finalaudit: `papers/P07_Weil_Form_Statistics.tex`*
+*Nächster Schritt: `papers/P07_Weil_Form_Statistics.tex` (neuer Chat).*
