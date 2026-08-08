@@ -2,11 +2,12 @@
 
 **Katalog-ID:** NEU-257  
 **Ordner:** `07-weil-explizitformel`  
-**Datum:** 2026-08-07 (Patch: 2026-08-07)  
+**Datum:** 2026-08-07 (Patch: 2026-08-07; Patch 2: 2026-08-08)  
 **Auftrag:** Vier Buchungen: (1) $L^2$-Semibeschränktheit $\Leftrightarrow$ RH; (2) Nicht-Abschließbarkeit auf Haar-$L^2$ unter RH via Alpay-Jorgensen; (3) Kato/KLMN $\times[M]$; (4) $H_0=L^2$ Reinterpretation, $\mathcal{H}_W\cong L^2(\tau)$.  
 **Patch:** Reed-Simon-Kurzschluss $\times[M]$; Alpay-Jorgensen als Hauptbeweis Nicht-Abschließbarkeit; explizite Folge mit Form-Cauchy-Nachweis; $\pm\gamma_0$-Indexfehler korrigiert; $\mathcal{H}_W\cong L^2(\tau)$ via Suzuki 2025.  
-**Status:** Buchungen (1)(3)(4) $\checkmark[K/M]$; (2) $\checkmark[K/M]$ nach Normabgleich.  
-**Vorgänger:** NEU-256 (Patch), NEU-255 (Patch 2), NEU-220l
+**Patch 2:** §2.3 vollständig geschlossen. Fehler in $(2\text{-DiffOther})$ ($1/n$-Vorfaktor) und $(2\text{-FCauchy})$ (fehlende $|\gamma-\gamma_0|$-Abhängigkeit) behoben. Neue Majorante mit Schwartz-Abfall und Summierbarkeit via Riemann–von Mangoldt. Annahme $m_\gamma=O(1)$ wird nicht benötigt und nicht verwendet.  
+**Status:** Alle Buchungen $\checkmark[K/M]$; Normierungsvorbehalt $(1\text{-Norm})$ durch NEU-258 Patch 1 geschlossen.  
+**Vorgänger:** NEU-256 (Patch), NEU-255 (Patch 2), NEU-220l, NEU-258 (Patch 1)
 
 ---
 
@@ -29,7 +30,7 @@ $$
 W_\lambda(a*\tilde a)=B_W(a,a)+\lambda\|a\|_2^2\ge0. \qquad (1\text{-PD})
 $$
 
-**Bochner-Schwartz** (Reed-Simon II, Thm.~IX.10): Jede positiv-semidefinite Distribution auf $\mathbb{R}$ ist temperiert. Da $\delta_0\in\mathcal{S}'$:
+**Bochner-Schwartz** (Reed-Simon II, Thm. IX.10): Jede positiv-semidefinite Distribution auf $\mathbb{R}$ ist temperiert. Da $\delta_0\in\mathcal{S}'$:
 $$
 \boxed{W\in\mathcal{S}'(\mathbb{R}).} \qquad (1\text{-Temp})
 $$
@@ -40,7 +41,7 @@ $$
 \boxed{\text{RH}\iff W\in\mathcal{S}'(\mathbb{R}).} \qquad (1\text{-BJ})
 $$
 
-Nach Benedetto-Joyner (explizit: \emph{If $W$ is tempered then the Riemann hypothesis holds}); vgl. auch Bombieri 2000 §3, Weil 1952. Die Rückrichtung RH $\Rightarrow$ $W\in\mathcal{S}'$ folgt aus dem Weil-Positivitätskriterium (Suzuki 2011, Formel (0.1)):
+Nach Benedetto-Joyner (\emph{If $W$ is tempered then the Riemann hypothesis holds}); vgl. auch Bombieri 2000 §3, Weil 1952. Die Rückrichtung RH $\Rightarrow$ $W\in\mathcal{S}'$ folgt aus dem Weil-Positivitätskriterium (Suzuki 2011, Formel (0.1)):
 $$
 \text{RH}\Longrightarrow B_W(a,a)\ge0\quad\forall a\in C_c^\infty(\mathbb{R}). \qquad (1\text{-WeilPos})
 $$
@@ -53,14 +54,10 @@ $$
 \boxed{\exists\lambda<\infty:\;B_W(a,a)\ge-\lambda\|a\|_2^2\;\forall a\in C_c^\infty\quad\Longleftrightarrow\quad\text{RH}.} \qquad (1\text{-Equiv})
 $$
 
-**Vorbehalt:** Gültig unter exaktem Identifikationsabgleich $W_{\rm NEU-252}=W_{\rm Weil-Lit}$ (Repo-Normalisierung gegenüber NEU-220k-Fourierkonvention). $\to ?[O]$ NEU-220k.
+Der Normierungsabgleich $W_{\rm NEU-252}=W_{\rm Weil-Lit}$ ist durch NEU-258 Patch 1 $(6\text{-ID})$ geschlossen.
 
 $$
-\text{Normierungsabgleich }W_{\rm NEU-252}=W_{\rm Weil-Lit}\quad?[O]\to\text{NEU-220k} \qquad (1\text{-Norm})
-$$
-
-$$
-\boxed{L^2\text{-Semibeschränktheit von }B_W\Leftrightarrow\text{RH.}\quad\checkmark[K/M]\text{ (vorbehaltlich }1\text{-Norm)}} \qquad (1\text{-Final})
+\boxed{L^2\text{-Semibeschränktheit von }B_W\Leftrightarrow\text{RH.}\quad\checkmark[K/M]} \qquad (1\text{-Final})
 $$
 
 ---
@@ -86,71 +83,110 @@ Für translationsinvariante Formen der Gestalt
 $$
 q_\sigma(f)=\int_{\mathbb{R}}|\hat f(t)|^2\,d\sigma(t)
 $$
-gilt nach Alpay-Jorgensen (2012, Thm.~3.4; vgl. auch Fukushima-Oshima-Takeda, Rmk.~1.3.5):
+gilt nach Alpay-Jorgensen (2012, Thm. 3.4; vgl. auch Fukushima-Oshima-Takeda, Rmk. 1.3.5):
 $$
 \boxed{q_\sigma\text{ ist auf }L^2(\mathbb{R},dx)\text{ abschließbar}\quad\Longleftrightarrow\quad\sigma\ll dx.} \qquad (2\text{-AJ})
 $$
 
 Anwendung: $B_W(a,a)=q_{\mu_W}(a)$ mit $\mu_W\perp dt$. Absolutstetigkeitsbedingung $(2\text{-AJ})$ ist verletzt:
 $$
-\boxed{B_W\text{ ist auf }H_0=L^2(\mathbb{R},du)\text{ nicht abschließbar.}\quad\checkmark[K/M]\text{ (unter RH, vorbehaltlich }1\text{-Norm)}} \qquad (2\text{-NonClose})
+\boxed{B_W\text{ ist auf }H_0=L^2(\mathbb{R},du)\text{ nicht abschließbar.}\quad\checkmark[K/M]\text{ (unter RH)}} \qquad (2\text{-NonClose})
 $$
 
-### 2.3 Explizite Folge (Illustration, mit vollständigem Beweis)
+### 2.3 Explizite Folge (vollständiger Beweis)
 
-Die explizite Folge dient der Illustration; sie benötigt den Form-Cauchy-Nachweis.
+Die explizite Folge ergänzt Alpay-Jorgensen mit einem direkten Konstruktionsbeweis. **Keine** Annahme über Multiplizitäten ($m_\gamma=O(1)$ ist unbekannt und wird nicht benötigt).
 
-$\times[M]$ **Vorherige Fassung:** Der Schluss $a_n\to0$ in $L^2$ und $q(a_n)\ge c>0$ allein beweist keine Nicht-Abschließbarkeit. Das Abschließbarkeitskriterium (Reed-Simon X.23) verlangt zusätzlich, dass $(a_n)$ Form-Cauchy ist: $B_W(a_n-a_m,a_n-a_m)\to0$.
-
-**Korrigierte Folge:** Fixiere $\gamma_0\in\Gamma$, $\phi\in C_c^\infty(\mathbb{R})$, $\phi\ge0$, $\hat\phi(0)=\int\phi\,dv\neq0$. Setze:
+**Setup.** Sei $\Phi:=\widehat\varphi$ mit $\varphi\in C_c^\infty(\mathbb{R})$, $\varphi\ge0$, $\Phi(0)=\int\varphi\,dv\neq0$. Fixiere $\gamma_0\in\Gamma$ und setze:
 $$
-a_n(u):=\frac{1}{n}\,e^{+i\gamma_0 u}\phi(u/n),\qquad n\ge1. \qquad (2\text{-Folge})
+a_n(u):=\frac{1}{n}\,e^{+i\gamma_0 u}\varphi(u/n),\qquad n\ge1. \qquad (2\text{-Folge})
 $$
 
-**Indexkorrektur:** Wir verwenden $e^{+i\gamma_0 u}$ damit $\hat a_n(-\gamma_0)=\hat\phi(0)$ (nicht $e^{-i\gamma_0 u}$, das würde $\hat a_n(+\gamma_0)$ treffen, was wegen des $(-\gamma)$-Arguments in $(2\text{-Spec})$ dasselbe leistet, muss aber konsistent gewählt werden):
+**Fouriertransformation.** Für alle $\gamma\in\mathbb{R}$:
 $$
-\hat a_n(-\gamma_0)=\int e^{-i\gamma_0 u}\cdot\frac{1}{n}e^{+i\gamma_0 u}\phi(u/n)\,du=\frac{1}{n}\int\phi(u/n)\,du=\int\phi(v)\,dv=\hat\phi(0)\neq0. \qquad (2\text{-Four})
+\hat a_n(-\gamma) = \int_{\mathbb{R}} e^{-i\gamma u}\cdot\frac{1}{n}e^{+i\gamma_0 u}\varphi(u/n)\,du = \int_{\mathbb{R}} e^{i(\gamma_0-\gamma)nv}\varphi(v)\,dv = \Phi(n(\gamma_0-\gamma)). \qquad (2\text{-Four})
 $$
+(Substitution $v=u/n$, $du=n\,dv$, Faktor $1/n$ kürzt sich.)
 
 **$L^2$-Norm:**
 $$
-\|a_n\|_2^2=\frac{1}{n^2}\int|\phi(u/n)|^2\,du=\frac{1}{n}\|\phi\|_2^2\longrightarrow0. \qquad (2\text{-L2})
+\|a_n\|_2^2=\frac{1}{n^2}\int|\varphi(u/n)|^2\,du=\frac{1}{n}\|\varphi\|_2^2\longrightarrow0. \qquad (2\text{-L2})
 $$
 
-**Formwert:**
+**Atomwert am ausgewählten Atom.** Für $\gamma=\gamma_0$:
 $$
-B_W(a_n,a_n)\ge m_{\gamma_0}|\hat a_n(-\gamma_0)|^2=m_{\gamma_0}|\hat\phi(0)|^2>0\quad\forall n. \qquad (2\text{-Form})
-$$
-
-**Form-Cauchy-Nachweis** ($B_W(a_n-a_m,a_n-a_m)\to0$): Für $n\neq m$:
-$$
-a_n(u)-a_m(u)=\frac{1}{n}e^{+i\gamma_0 u}\phi(u/n)-\frac{1}{m}e^{+i\gamma_0 u}\phi(u/m). \qquad (2\text{-Diff})
+\hat a_n(-\gamma_0) = \Phi(0)\neq0\quad\forall n. \qquad (2\text{-Atom})
 $$
 
+**Formwert.** Unter RH und mit der Spektraldarstellung $(2\text{-Spec})$:
 $$
-\widehat{(a_n-a_m)}(-\gamma_0)=\hat\phi(0)-\hat\phi(0)=0. \qquad (2\text{-DiffFour})
-$$
-
-Für alle anderen Nullstellenordinaten $\gamma\neq\gamma_0$:
-$$
-|\widehat{(a_n-a_m)}(-\gamma)|=\left|\hat\phi\left(\tfrac{n(-\gamma+\gamma_0)}{1}\right)\cdot\tfrac{1}{n}-\hat\phi\left(\tfrac{m(-\gamma+\gamma_0)}{1}\right)\cdot\tfrac{1}{m}\right|. \qquad (2\text{-DiffOther})
+B_W(a_n,a_n) = \sum_{\gamma\in\Gamma} m_\gamma|\hat a_n(-\gamma)|^2 = m_{\gamma_0}|\Phi(0)|^2 + \sum_{\gamma\neq\gamma_0}m_\gamma|\Phi(n(\gamma_0-\gamma))|^2. \qquad (2\text{-Form})
 $$
 
-Genauer: $\hat a_n(-\gamma)=\frac{1}{n}\int e^{-i\gamma u}e^{+i\gamma_0 u}\phi(u/n)\,du=\int e^{i(\gamma_0-\gamma)nv}\phi(v)\,dv=\hat\phi(n(\gamma_0-\gamma))$ (nach Substitution $v=u/n$ und angepasster Konvention, $n$-Skalierung).
-
-Für $\gamma\neq\gamma_0$: Schwartz-Abfall $|\hat\phi(n(\gamma_0-\gamma))|\le C_k\cdot n^{-k}$ für alle $k$. Also:
+Der zweite Term verschwindet für $n\to\infty$ (Summierbarkeitsargument, siehe Form-Cauchy unten), also:
 $$
-B_W(a_n-a_m,a_n-a_m)=\sum_{\gamma\neq\gamma_0}m_\gamma|\hat\phi(n(\gamma_0-\gamma))-\hat\phi(m(\gamma_0-\gamma))|^2\le 2\sum_{\gamma\neq\gamma_0}m_\gamma\cdot C_k^2\cdot\min(n,m)^{-2k}. \qquad (2\text{-FCauchy})
+B_W(a_n,a_n)\longrightarrow m_{\gamma_0}|\Phi(0)|^2>0. \qquad (2\text{-FormLimit})
 $$
 
-Falls $\sum_{\gamma\neq\gamma_0}m_\gamma<\infty$ (d.h. endlich viele Nullstellen mit nennenswertem Gewicht in einem festen Abstandsfenster, oder Schwartz-Abfall überwiegt): $B_W(a_n-a_m,a_n-a_m)\to0$. Im allgemeinen Fall ist zusätzlich zu zeigen, dass die Summe $\sum_\gamma m_\gamma$ genügend konvergiert; das folgt aus bekannten Wachstumssätzen für $N(T)=\#\{\gamma\le T\}\sim\frac{T}{2\pi}\log T$ und den $m_\gamma$-Abschätzungen aus NEU-220b/Suzuki.
+**Form-Cauchy-Nachweis** ($B_W(a_n-a_m,a_n-a_m)\to0$).
 
-**Zusammenfassung der expliziten Folge:**
+Für $\gamma=\gamma_0$:
 $$
-a_n\to0\text{ in }L^2,\quad B_W(a_n,a_n)\ge c>0,\quad B_W(a_n-a_m,a_n-a_m)\to0\quad\checkmark[K/M]\text{ (unter Konvergenzbedingung an }m_\gamma\text{)} \qquad (2\text{-Illust})
+(\hat a_n-\hat a_m)(-\gamma_0) = \Phi(0)-\Phi(0) = 0. \qquad (2\text{-DiffAtom})
+$$
+Der problematische Atomterm verschwindet exakt.
+
+Für $\gamma\neq\gamma_0$ und $M:=\min(n,m)$: Da $\varphi\in C_c^\infty(\mathbb{R})$ ist $\Phi=\hat\varphi\in\mathcal{S}(\mathbb{R})$. Für jedes $N\ge1$ gilt die Schwartz-Abschätzung
+$$
+|\Phi(x)|\le C_N(1+|x|)^{-N}. \qquad (2\text{-Schwartz})
 $$
 
-**Der Hauptbeweis bleibt Alpay-Jorgensen** $(2\text{-AJ})$; die explizite Folge ist Illustration.
+Daher:
+$$
+|\hat a_n(-\gamma)-\hat a_m(-\gamma)| \le |\Phi(n(\gamma_0-\gamma))|+|\Phi(m(\gamma_0-\gamma))| \le 2C_N\bigl(1+M|\gamma-\gamma_0|\bigr)^{-N}. \qquad (2\text{-DiffBound})
+$$
+
+Somit:
+$$
+\boxed{B_W(a_n-a_m,a_n-a_m)\le 4C_N^2\sum_{\gamma\neq\gamma_0}m_\gamma\bigl(1+M|\gamma-\gamma_0|\bigr)^{-2N}.} \qquad (2\text{-FCMaj})
+$$
+
+**Summierbarkeit von $S_N$.** Da die Nullstellen von $\xi$ isoliert sind, gilt für das feste $\gamma_0$:
+$$
+\delta_{\gamma_0}:=\inf_{\gamma\neq\gamma_0}|\gamma-\gamma_0|>0. \qquad (2\text{-Sep})
+$$
+
+Auf der Menge $|\gamma-\gamma_0|\ge\delta_{\gamma_0}$ ist $(1+M|\gamma-\gamma_0|)^{-2N}\le M^{-2N}|\gamma-\gamma_0|^{-2N}$, also genügt die Konvergenz von
+$$
+S_N := \sum_{\gamma\neq\gamma_0}m_\gamma|\gamma-\gamma_0|^{-2N}. \qquad (2\text{-SN})
+$$
+
+Für große $|\gamma|$ gilt $|\gamma-\gamma_0|\asymp|\gamma|$, also genügt die Konvergenz von $\sum_{\gamma}m_\gamma(1+|\gamma|)^{-2N}$.
+
+Nach **Riemann–von Mangoldt** zählt $N(T):=\#\{\gamma\in\Gamma:\gamma\le T\}$ (mit Multiplizitäten) die Nullstellen mit
+$$
+N(T) = O(T\log T). \qquad (2\text{-RvM})
+$$
+
+Mittels partieller Summation (Stieltjes-Integration) für $s=2N>1$:
+$$
+\sum_{\gamma}m_\gamma(1+|\gamma|)^{-s} = s\int_1^\infty N(t)\,(1+t)^{-s-1}\,dt \ll \int_1^\infty t\log t\cdot t^{-s-1}\,dt = \int_1^\infty t^{-s}\log t\,dt < \infty. \qquad (2\text{-Abel})
+$$
+
+Das Integral konvergiert für $s>1$, also bereits für $N\ge1$. Somit $S_N<\infty$ für alle $N\ge1$, und:
+$$
+B_W(a_n-a_m,a_n-a_m) \le 4C_N^2 S_N\cdot M^{-2N} = O\!\left(\min(n,m)^{-2N}\right) \longrightarrow 0. \qquad (2\text{-FCauchy})
+$$
+
+**Zusammenfassung der expliziten Folge.**
+
+$$
+\boxed{a_n\to0\text{ in }L^2,\quad B_W(a_n-a_m,a_n-a_m)\to0,\quad B_W(a_n,a_n)\longrightarrow m_{\gamma_0}|\Phi(0)|^2>0.\quad\checkmark[K/M]\text{ (unter RH)}} \qquad (2\text{-Illust})
+$$
+
+Das ist das klassische Abschließbarkeitswiderlegungsschema: $(a_n)$ ist $B_W$-Cauchy mit $a_n\to0$ in $L^2$, aber $B_W(a_n,a_n)\not\to0$. Also ist $B_W$ nicht abschließbar auf $L^2(\mathbb{R})$.
+
+**Der Hauptbeweis bleibt Alpay-Jorgensen** $(2\text{-AJ})$; die explizite Folge ist vollständiger eigenständiger Direktbeweis.
 
 ---
 
@@ -188,7 +224,7 @@ $$
 
 ### 4.1 Natürlicher Abschluss unter RH: $\mathcal{H}_W\cong L^2(\tau)$
 
-Nach Suzuki (2025, §2, Thm.~2.1): Definiere das Spektralmaß
+Nach Suzuki (2025, §2, Thm. 2.1): Definiere das Spektralmaß
 $$
 d\tau(\lambda):=\sum_{\gamma\in\Gamma}m_\gamma\,\delta(\lambda-\gamma)\,d\lambda,\qquad L^2(\tau):=\left\{(S(\gamma))_\gamma:\sum_\gamma m_\gamma|S(\gamma)|^2<\infty\right\}. \qquad (4\text{-tau})
 $$
@@ -198,7 +234,7 @@ $$
 \boxed{\mathcal{H}_W\cong L^2(\tau)\cong\ell^2(\Gamma,m_\gamma),\qquad a\mapsto(\sqrt{m_\gamma}\,\hat a(-\gamma))_{\gamma\in\Gamma}.} \qquad (4\text{-HW})
 $$
 
-**Konditional:** $(4\text{-HW})$ gilt unter RH. Ohne RH ist $\mathcal{H}_W$ nicht als positives Hilbert-$\ell^2$ realisierbar (Suzuki betont: der globale Weil-Hilbertraum lässt sich in dieser Form nicht ohne RH definieren). Das passt zu unserem Befund: $H_0=L^2$ ist RH-frei korrekt konstruiert; der Schritt $H_0\to\mathcal{H}_W$ ist der RH-abhängige Sprung.
+**Konditional:** $(4\text{-HW})$ gilt unter RH. Das passt zu unserem Befund: $H_0=L^2$ ist RH-frei korrekt konstruiert; der Schritt $H_0\to\mathcal{H}_W$ ist der RH-abhängige Sprung.
 
 $$
 \boxed{\mathcal{H}_W\cong\ell^2(\Gamma,m_\gamma)\quad\checkmark[K/M]\text{ (konditional unter RH, via Suzuki 2025)}} \qquad (4\text{-Final})
@@ -206,12 +242,9 @@ $$
 
 ### 4.2 Strategische Folge
 
-Die Objekt-X-Frage schlärft sich:
 $$
 \boxed{\text{Kann man }\mathcal{H}_W\cong\ell^2(\Gamma,m_\gamma)\text{ RH-frei aus BC/Adelen konstruieren, ohne Nullstellen einzusetzen?}} \qquad (4\text{-ObjX})
 $$
-
-Das ist nach aktuellem Stand die wahrscheinlichste Form von Objekt X: kein gewöhnlicher selbstadjungierter Operator auf Haar-$L^2$, sondern eine singuläre arithmetische Spektralgeometrie, deren RH-freie Konstruktion den Kern von M4-B/C bildet.
 
 ---
 
@@ -228,20 +261,20 @@ $$
 
 ## 6. Statusbuchungen
 
-$$L^2\text{-Semibeschränktheit }B_W\Leftrightarrow\text{RH (vorbehaltlich Normabgleich)}\quad\checkmark[K/M]\qquad(6\text{-a})$$
+$$L^2\text{-Semibeschränktheit }B_W\Leftrightarrow\text{RH}\quad\checkmark[K/M]\qquad(6\text{-a})$$
 $$\text{Bochner-Schwartz: Semibeschränktheit}\Rightarrow W\in\mathcal{S}'\Rightarrow\text{RH (Benedetto-Joyner)}\quad\checkmark[K/M]\qquad(6\text{-b})$$
 $$\text{Reed-Simon-Kurzschluss }a_n\to0+q(a_n)\ge c>0\Rightarrow\text{Nichtabschließbarkeit}\quad\times[M]\qquad(6\text{-c})$$
 $$\text{Alpay-Jorgensen: }q_\sigma\text{ abschließbar}\Leftrightarrow\sigma\ll dx\quad\checkmark[K/M]\qquad(6\text{-d})$$
 $$\mu_W\perp dt\Rightarrow B_W\text{ nicht abschließbar auf }L^2\text{ (unter RH)}\quad\checkmark[K/M]\qquad(6\text{-e})$$
-$$\text{Explizite Folge: }a_n\to0,\;B_W(a_n,a_n)\ge c,\;B_W(a_n-a_m,a_n-a_m)\to0\quad\checkmark[K/M]\text{ (m. Konvergenzbedingung }m_\gamma)\qquad(6\text{-f})$$
-$$\pm\gamma_0\text{-Indexfehler korrigiert: }e^{+i\gamma_0 u}\Rightarrow\hat a_n(-\gamma_0)=\hat\phi(0)\quad\checkmark[K/M]\qquad(6\text{-g})$$
+$$\text{Explizite Folge: vollständiger Direktbeweis (Schwartz-Majorante + Riemann-von-Mangoldt)}\quad\checkmark[K/M]\text{ (unter RH)}\qquad(6\text{-f})$$
+$$\pm\gamma_0\text{-Indexfehler korrigiert: }e^{+i\gamma_0 u}\Rightarrow\hat a_n(-\gamma_0)=\Phi(0)\quad\checkmark[K/M]\qquad(6\text{-g})$$
 $$\text{Semibeschränktheit + Abschließbarkeit auf }L^2\text{ unvereinbar}\quad\checkmark[K/M]\qquad(6\text{-h})$$
 $$\text{Kato/KLMN auf }H_0=L^2\quad\times[M]\qquad(6\text{-i})$$
 $$\text{KLMN-Kandidat NEU-256 unter RH}\quad\times[M]\qquad(6\text{-j})$$
 $$H_0=L^2\text{: Referenzraum ja, Abschlussraum nein}\quad\checkmark[K/M]\qquad(6\text{-k})$$
 $$\mathcal{H}_W\cong\ell^2(\Gamma,m_\gamma)\text{ (konditional RH, Suzuki 2025)}\quad\checkmark[K/M]\qquad(6\text{-l})$$
-$$\text{Normierungsabgleich NEU-220k}\quad?[O]\qquad(6\text{-m})$$
-$$\text{RH-freie Konstruktion }\mathcal{H}_W\text{ aus BC/Adelen}\quad?[O]\to\text{NEU-258}\qquad(6\text{-n})$$
+$$\text{Normierungsabgleich NEU-220k: geschlossen durch NEU-258 Patch 1}\quad\checkmark[K/M]\qquad(6\text{-m})$$
+$$\text{RH-freie Konstruktion }\mathcal{H}_W\text{ aus BC/Adelen}\quad?[O]\to\text{NEU-259}\qquad(6\text{-n})$$
 
 ---
 
@@ -253,16 +286,17 @@ $$\text{RH-freie Konstruktion }\mathcal{H}_W\text{ aus BC/Adelen}\quad?[O]\to\te
 | NEU-255 (Patch 2) | bcc932d | $H_0=L^2$; Koisometrie |
 | NEU-220l | 1dc07b3 | $B_W\ge0\Leftrightarrow$ RH |
 | NEU-220k | 8d4e9b2 | $2\pi$-Fourierkonvention; Normierung |
-| NEU-220b | 3a7f2c1 | $\gamma_\infty$ Asymptoik; $m_\gamma$-Wachstum |
+| NEU-220b | 3a7f2c1 | $\gamma_\infty$ Asymptotik; $m_\gamma$-Wachstum |
+| NEU-258 (Patch 1) | 4eeb501 | $W_{\rm NEU-252}=W_{\rm Lit}$ $(6\text{-ID})$; schließt $(1\text{-Norm})$ |
 | Weil 1952 | — | Positivitätskriterium; Spektraldarstellung |
 | Suzuki 2011/2025 | — | $\mathcal{H}_W\cong L^2(\tau)$; Screw-Function |
 | Benedetto-Joyner | — | $W\in\mathcal{S}'\Leftrightarrow$ RH |
-| Alpay-Jorgensen 2012 | Thm.~3.4 | $q_\sigma$ abschließbar $\Leftrightarrow\sigma\ll dx$ |
+| Alpay-Jorgensen 2012 | Thm. 3.4 | $q_\sigma$ abschließbar $\Leftrightarrow\sigma\ll dx$ |
 | Bochner-Schwartz | Reed-Simon II, IX.10 | Positiv-definite Distribution temperiert |
-| Fukushima-Oshima-Takeda | Rmk.~1.3.5 | Abschließbarkeit translationsinvarianter Formen |
-| Reed-Simon X | Thm.~X.23 | Abschließbarkeitskriterium (für Form-Cauchy-Illustration) |
+| Riemann–von Mangoldt | — | $N(T)=O(T\log T)$; Summierbarkeit $(2\text{-Abel})$ |
+| Reed-Simon X | Thm. X.23 | Abschließbarkeitskriterium |
 
 ---
 
 *Lizenz: CC BY 4.0 — Objekt-X-Programm, öffentliche Fassung.*  
-*Erstellt 2026-08-07. Patch: Alpay-Jorgensen Hauptbeweis; Reed-Simon-Kurzschluss $\times[M]$; Folge Form-Cauchy vollständig; $\pm\gamma_0$-Index korrigiert; Suzuki 2025 $\mathcal{H}_W\cong L^2(\tau)$.*
+*Erstellt 2026-08-07. Patch (2026-08-07): Alpay-Jorgensen Hauptbeweis; Reed-Simon-Kurzschluss $\times[M]$. Patch 2 (2026-08-08): §2.3 vollständig geschlossen; Schwartz-Majorante mit $|\gamma-\gamma_0|$-Abhängigkeit; Summierbarkeit via Riemann–von Mangoldt ohne Multiplizitätsannahme; $(2\text{-DiffOther})$-$1/n$-Fehler und $(2\text{-FCauchy})$-Lücke behoben; $m_\gamma=O(1)$ nicht verwendet.*
