@@ -1,0 +1,604 @@
+\documentclass[11pt,a4paper]{amsart}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array,booktabs,longtable}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Satz}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Korollar}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Bemerkung}
+\newtheorem{openproblem}[theorem]{Offenes Problem}
+
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\SPC}{\mathrm{SPC}}
+\newcommand{\LFF}{\mathrm{LFF}}
+
+\title[P07 --- Weil-Form Statistics]{P07 --- Weil-Form Statistics:\\
+Correlation Channels, Form-Factor Limits and Herglotz Interfaces}
+\author{Objekt-X-Programm}
+\date{2026-08-08}
+
+\begin{document}
+
+\begin{abstract}
+Wir organisieren die quadratische Weilform-Statistik in fünf konzeptionellen
+Schichten: den quadratischen Pivot und seinen Positivitätsbereich, die
+Korrelationsstruktur mit Bochner-Lift und Skalenanalyse, den
+Formfaktor-/Rampenkanal mit Goldston--Montgomery-Varianz und offenem Symboltest,
+das Herglotz-Interface zwischen linearer Distribution und quadratischer
+Weil-Geometrie sowie die konditionale Jacobi-/Herglotz-Realisierungsarchitektur.
+Das Manuskript konsolidiert ausschließlich den auditierten Endstand von
+NEU-091--120. Es ist ein internes SYN-Manuskript; eine Behauptung der
+Publikationsreife ist damit nicht verbunden.
+\end{abstract}
+
+\maketitle
+
+% ----------------------------------------------------------------
+\section{Quadratischer Pivot und Positivitätsrahmen}
+% ----------------------------------------------------------------
+
+\begin{theorem}[Determinanten-No-Go]\label{thm:det-no-go}
+Im festen $z$-Regime gilt
+\[
+  D_N(z)\xrightarrow[N\to\infty]{}e^{-\gamma^2/4}.
+\]
+Der Grenzwert ist damit $z$-unabhängig. Folglich entsteht in diesem Regime
+kein direkter nichttrivialer $\xi$-Anschluss über den Determinantenweg.
+\end{theorem}
+
+\begin{remark}[Status]
+Theorem~\ref{thm:det-no-go} ist das gesicherte Negativresultat aus NEU-091,
+Status $\checkmark[M]_{\rm neg}$.
+\end{remark}
+
+\begin{definition}[Quadratischer Pivot]\label{def:quadratic-pivot}
+Unabhängig vom Determinantenansatz wird
+\[
+  Q_N(\varphi)
+  :=\gamma^2\sum_{r,n}\Lambda(n)^2\,W_N(r,n)\,\varphi(r,n)
+\]
+als separates quadratisches Mangoldt-Objekt eingeführt.
+\end{definition}
+
+\begin{theorem}[Testkegel-Positivität]\label{thm:test-cone}
+Für $\phi$ im vorgesehenen Testkegel $\mathcal C$ gilt
+\[
+  Q_N[\phi]\ge 0.
+\]
+\end{theorem}
+
+\begin{openproblem}[Bilinearer Lift]\label{op:bilinear-lift}
+Offen bleibt, ob der echte bilineare Lift $B_N(f,g)$ mit Kreuztermen
+$\Lambda(m)\Lambda(n)$ auf dem vollen Schwartzraum $\mathcal S$
+positiv-semidefinit ist.
+\end{openproblem}
+
+% ----------------------------------------------------------------
+\section{Korrelationsstruktur und Skalenanalyse}
+% ----------------------------------------------------------------
+
+\begin{proposition}[Abstrakte PSD-Architektur]\label{prop:psd-architecture}
+Sei $\rho_N=(\rho_N(a,b))_{a,b}$ eine positiv-semidefinite Matrix mit
+$\rho_N(a,a)=1$. Dann ist
+\[
+  K_N(a,b):=\sqrt{\kappa_a\kappa_b}\,\rho_N(a,b)
+\]
+positiv-semidefinit.
+\end{proposition}
+
+\begin{definition}[Logarithmischer Bochner-Kandidat]\label{def:bochner-candidate}
+Als logarithmischer Kandidat wird
+\[
+  \rho_N((r,m),(r,n))
+  :=\Psi_N\!\left(\log\frac{m}{n}\right)
+\]
+betrachtet, wobei $\Psi_N$ positiv-definit im Bochner-Sinn ist und
+\[
+  \Psi_N(t)=\int_{\mathbb R}e^{it\xi}\,d\nu_N(\xi)
+\]
+für ein positives Maß $\nu_N$ besitzt.
+\end{definition}
+
+\begin{openproblem}[Kanonische Wahl von $\rho_N$]\label{op:rho-canonical}
+Die abstrakte PSD-Architektur bestimmt noch keine kanonische Wahl von $\rho_N$.
+\end{openproblem}
+
+\begin{theorem}[Skalentriage]\label{thm:scale-triage}
+Mit $M_N$ als Kurzintervallparameter und $T=M_N^\theta$ ergeben sich drei
+Regime:
+\begin{center}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.19\textwidth}
+                >{\raggedright\arraybackslash}p{0.34\textwidth}
+                >{\raggedright\arraybackslash}p{0.35\textwidth}}
+\toprule
+Regime & Verhalten & Bedeutung\\
+\midrule
+$T=O(1)$
+& Rang-eins-/Grobmittelungs-Kollaps
+& zu grob für einen Weil-Anschluss\\
+$1\ll T\ll M_N$
+& nichttrivialer Kandidatenbereich
+& Weil-Tauglichkeit offen\\
+$T\gg M_N$
+& Diagonal-Kollaps
+& zu fein; kein Weil-Anschluss\\
+\bottomrule
+\end{tabular}
+\normalsize
+\end{center}
+\end{theorem}
+
+\begin{proposition}[Feinstruktur des Zwischenregimes]\label{prop:fine-structure}
+Im Zwischenregime $1\ll T\ll M_N$ ist der auditierte Endstand:
+\begin{enumerate}
+  \item Der Singulärserien-Hauptterm steht unter der
+        Hardy--Littlewood-Siebheuristik und ist daher \emph{CONDITIONAL}.
+  \item Die Restdichte $\Delta_N$ und der Übergang zum Shift-Spektrum bleiben
+        als gesicherter Bestandteil der Feinstrukturanalyse erhalten.
+  \item Die Weil-Tauglichkeit des Zwischenregimes bleibt offen.
+\end{enumerate}
+\end{proposition}
+
+% ----------------------------------------------------------------
+\section{Formfaktor-/Rampenkanal}
+% ----------------------------------------------------------------
+
+\begin{definition}[Dyadische Kurzintervallvarianz]\label{def:gm-variance}
+Mit $\psi(x)=\sum_{n\le x}\Lambda(n)$ sei
+\[
+  \mathcal V(M,H)
+  :=\frac1M\int_M^{2M}
+  \bigl(\psi(x+H)-\psi(x)-H\bigr)^2\,dx.
+\]
+\end{definition}
+
+\begin{theorem}[Goldston--Montgomery-Varianzasymptotik, CONDITIONAL]
+\label{thm:gm}
+Unter RH gilt für jedes feste $\varepsilon>0$, uniform im entsprechenden
+Goldston--Montgomery-Bereich
+\[
+  1\le H\le M^{1-\varepsilon},
+\]
+die konditionale Äquivalenz
+\[
+  \SPC
+  \quad\Longleftrightarrow\quad
+  \mathcal V(M,H)\sim H\log(M/H).
+\]
+Für $H\asymp M$ gelten abweichende Skalenregimes.
+\end{theorem}
+
+\begin{remark}[Status]
+Theorem~\ref{thm:gm} ist \emph{CONDITIONAL}; die Varianzasymptotik folgt nicht
+aus RH allein. Dies ist der synchronisierte Endstand von NEU-101 und P07
+\cite{GoldstonMontgomery1987}.
+\end{remark}
+
+\begin{corollary}[Selbstdualer Testwert]\label{cor:self-dual}
+Am kanonischen selbstdualen Punkt $H=\sqrt M$ gilt konditional unter RH und SPC
+\[
+  \mathcal V(M,\sqrt M)
+  \sim \sqrt M\log\sqrt M
+  =\frac12\sqrt M\log M.
+\]
+\end{corollary}
+
+\begin{definition}[Lokales Formfaktor-Ersatzobjekt]\label{def:local-form-factor}
+Das unnormalisierte lokale Objekt $\mathcal P^{\rm unf}_{N,H}$ ersetzt das
+verworfene global normierte Objekt $\mathcal S_{N,H}$. Sein gesicherter Umfang
+ist nur partiell, entsprechend $\checkmark[M]_{\rm part}$ in NEU-104.
+\end{definition}
+
+\begin{theorem}[Rampenasymptotik, einseitig]\label{thm:ramp-one-way}
+Im auditierten Setup gilt
+\[
+  \LFF=1
+  \quad\Longrightarrow\quad
+  \text{universelle Rampenmassenasymptotik}.
+\]
+Die Umkehrung ist nicht bewiesen.
+\end{theorem}
+
+\begin{theorem}[LFF-Typisierungswarnung]\label{thm:lff-firewall}
+Der lokale Formfaktor allein konstruiert oder identifiziert
+$Q_{\rm Weil}$ nicht.
+\end{theorem}
+
+\begin{openproblem}[Lokaler Symboltest]\label{op:symbol-test}
+Der Hauptsymboltest
+\[
+  \sigma_{\rm loc}(Q_{\rm Weil})\stackrel{?}{=}|\alpha|
+\]
+bleibt offen. Weder Gleichheit noch Ungleichheit ist im auditierten Block
+bewiesen.
+\end{openproblem}
+
+% ----------------------------------------------------------------
+\section{Linearer Herglotz-Kanal versus quadratische Weil-Geometrie}
+% ----------------------------------------------------------------
+
+\begin{remark}[Verbindliche Fourier- und Weil-Konventionen]
+\label{rem:p02-conventions}
+Die Fourierkonvention und die vollständige hermitesche Weil-Typisierung werden
+aus P02 übernommen. Insbesondere gilt
+\[
+  \widehat f(t)=\int_{\mathbb R}f(u)e^{itu}\,du,
+\]
+und die quadratische Ebene bleibt typgetrennt als
+\[
+\begin{aligned}
+  (a,b)&\longmapsto g_{a,b}\longmapsto h_{a,b}\\
+       &\longmapsto B_W(a,b).
+\end{aligned}
+\]
+Der adelische Port $R_{\rm PW}$ sowie die komponentenweise Definition von
+$B_W$ werden daher nicht erneut dupliziert. P03 dient hier nur dem
+Stil- und Konventionsabgleich.
+\end{remark}
+
+\begin{definition}[Arithmetische Herglotzfunktion in Nevanlinna-Form]
+\label{def:m-arith}
+Unter RH sei
+\[
+  \Gamma:=\{\gamma\in\mathbb R:\xi(1/2-i\gamma)=0\},
+  \qquad
+  \mu_{\rm arith}:=\sum_{\gamma\in\Gamma}m_\gamma\delta_\gamma.
+\]
+Das Maß $\mu_{\rm arith}$ ist das reine Nullstellenmaß; Gamma-, Pol- und
+Primterme sind keine zusätzlichen Bestandteile dieses Herglotz-Spektralmaßes.
+Die zugehörige arithmetische Funktion wird in der Form
+\[
+  m_{\rm arith}(z)
+  =A+\int_{\mathbb R}
+  \left(\frac1{t-z}-\frac{t}{1+t^2}\right)\,d\mu_{\rm arith}(t),
+  \qquad
+  A=\Re m_{\rm arith}(i)\in\mathbb R,
+\]
+geschrieben. Die äquivalente Nullstellensumme ist im kanonisch symmetrischen
+Sinn zu verstehen.
+\end{definition}
+
+\begin{proposition}[Verschwinden des linearen Nevanlinna-Terms]
+\label{prop:b-zero}
+Die allgemeine Herglotz--Nevanlinna-Darstellung erlaubt einen zusätzlichen
+Term $bz$ mit $b\ge0$. Für das hier betrachtete spezielle
+$m_{\rm arith}=-\Xi'/\Xi$ gilt jedoch $b=0$. Wegen der symmetrischen
+$\pm\gamma$-Paarung und der Hadamard-Darstellung konvergiert
+\[
+  \sum_{\gamma>0}m_\gamma
+  \left(\frac1{\gamma-z}+\frac1{-\gamma-z}\right)
+\]
+unter Verwendung von
+\[
+  \sum_\gamma\frac{m_\gamma}{\gamma^2}<\infty
+\]
+ohne zusätzlichen linearen Anteil.
+\end{proposition}
+
+\begin{theorem}[Herglotz-Kriterium]\label{thm:herglotz-rh}
+Für die arithmetische Funktion gilt
+\[
+  m_{\rm arith}\text{ ist Herglotz}
+  \quad\Longleftrightarrow\quad
+  \RH.
+\]
+\end{theorem}
+
+\begin{definition}[Normierte Weil-Distribution]\label{def:weil-distribution}
+Nullstellenseite und arithmetische Seite sind zwei Darstellungen derselben
+normierten Distribution:
+\[
+  W_\xi^{\rm norm}
+  =W_{\rm zeros}
+  =W_{\rm pole/triv}+W_\Gamma+W_{\rm prime}.
+\]
+Sie sind nicht miteinander zu addieren.
+\end{definition}
+
+\begin{theorem}[Kanonische Positivierungsbrücke]\label{thm:positivity-bridge}
+Mit Involution und Faltungskonvention aus P02 liefert
+\[
+  \Phi=\phi^\ast *\phi
+\]
+die Identität
+\[
+  W_\xi^{\rm norm}[\Phi]
+  =Q_{\rm zeros}[\phi]
+  =\sum_{\gamma\in\Gamma}
+    m_\gamma\,|\widehat\phi(\gamma)|^2.
+\]
+Dies ist die im Programm verwendete kanonische Positivierungsbrücke.
+Ihre Einzigkeit ist nicht bewiesen.
+\end{theorem}
+
+\begin{theorem}[Interface-Schutzsatz]\label{thm:interface-firewall}
+Die lineare und die quadratische Ebene bleiben typgetrennt:
+\[
+\begin{aligned}
+  m_{\rm arith}&\rightsquigarrow W_\xi^{\rm norm},\\
+  a,b&\longmapsto g_{a,b}\longmapsto h_{a,b}
+       \longmapsto B_W(a,b).
+\end{aligned}
+\]
+Ohne Autokorrelations-/Positivierungspaarung wird
+$m_{\rm arith}$ nicht direkt mit der quadratischen Weilform identifiziert.
+\end{theorem}
+
+\begin{openproblem}[Rückbindung an Objekt X]\label{op:pi-gamma}
+Die vorgeschlagene Identifikation
+\[
+  m_{\rm arith}=\Pi_\gamma(X)
+\]
+bleibt offen.
+\end{openproblem}
+
+% ----------------------------------------------------------------
+\section{Jacobi-/Herglotz-Realisierung: konditionale Architektur}
+% ----------------------------------------------------------------
+
+\begin{definition}[Spektralmaß bei selbstadjungierter Realisierung]
+\label{def:spectral-measure}
+Angenommen, $A_N^{\rm Jac,-}$ besitzt eine selbstadjungierte Realisierung, und
+$\Omega_N$ sei normiert, $\|\Omega_N\|=1$. Dann definiert man
+\[
+  \mu_{\Omega,N}(B)
+  :=\langle\Omega_N,E_{A_N}(B)\Omega_N\rangle
+\]
+und
+\[
+  m_{\Omega,N}(z)
+  :=\langle\Omega_N,(A_N^{\rm Jac,-}-z)^{-1}\Omega_N\rangle
+  =\int_{\mathbb R}\frac{d\mu_{\Omega,N}(\lambda)}{\lambda-z}.
+\]
+Damit gilt
+\[
+  \mu_{\Omega,N}(\mathbb R)=1.
+\]
+\end{definition}
+
+\begin{openproblem}[Selbstadjungiertheit des Jacobi-Kandidaten]
+\label{op:jacobi-selfadjoint}
+Für den konkreten Kandidaten
+\[
+  A_N^{\rm Jac,-}=H_N+\beta_NJ_N^-
+\]
+ist eine selbstadjungierte Realisierung nicht bewiesen.
+\end{openproblem}
+
+\begin{definition}[Nevanlinna-normalisierte Approximanten]
+\label{def:renorm-approximants}
+Da $\mu_{\Omega,N}(\mathbb R)=1$, während
+$\mu_{\rm arith}$ unendliche Gesamtmasse besitzt, ist für einen möglichen
+Grenzübergang eine positive Skalierung einzuführen:
+\[
+  \widetilde\mu_N:=c_N\mu_{\Omega,N},
+  \qquad c_N>0.
+\]
+Die Nevanlinna-kompatible Form lautet
+\[
+  \widetilde m_N^{\rm ren}(z)
+  :=a_N+\int_{\mathbb R}
+  \left(\frac1{t-z}-\frac{t}{1+t^2}\right)\,d\widetilde\mu_N(t),
+  \qquad a_N\in\mathbb R.
+\]
+Nur unter zusätzlicher Symmetrie reduziert sich dies auf eine reine Skalierung
+$c_Nm_{\Omega,N}$.
+\end{definition}
+
+\begin{theorem}[Konditionale Herglotz-Firewall]
+\label{thm:conditional-firewall}
+Falls echte Herglotzfunktionen lokal gleichmäßig in $\mathbb C^+$ gegen
+$m_{\rm arith}$ konvergieren,
+\[
+  \widetilde m_N^{\rm ren}
+  \xrightarrow[N\to\infty]{\rm loc.\,unif.}
+  m_{\rm arith},
+\]
+und die nichtdegenerierte Herglotzstruktur im Grenzübergang erhalten bleibt,
+dann ist $m_{\rm arith}$ Herglotz und damit gilt RH:
+\[
+  \widetilde m_N^{\rm ren}\to m_{\rm arith}
+  \quad\Longrightarrow\quad
+  m_{\rm arith}\text{ Herglotz}
+  \quad\Longrightarrow\quad
+  \RH.
+\]
+\end{theorem}
+
+\begin{openproblem}[Daten für den Jacobi-/Herglotz-Grenzübergang]
+\label{op:jacobi-limit}
+Der Grenzübergang selbst bleibt offen. Insbesondere fehlen:
+\begin{enumerate}
+  \item eine korrekte selbstadjungierte Realisierung von
+        $A_N^{\rm Jac,-}$;
+  \item eine kanonische Wahl von $\Omega_N$;
+  \item eine kanonische Skalierung $c_N>0$ und Kontrolle der Konstanten
+        $a_N\in\mathbb R$;
+  \item vague/lokale Maßkonvergenz
+        $\widetilde\mu_N\to\mu_{\rm arith}$;
+  \item Kontrolle der Nevanlinna-Gewichte, etwa von
+        \[
+          \int_{\mathbb R}
+          \frac{d\widetilde\mu_N(t)}{1+t^2};
+        \]
+  \item Tail-Kontrolle, die aus der Maßkonvergenz die benötigte lokal
+        gleichmäßige Konvergenz der Herglotzfunktionen ableiten lässt.
+\end{enumerate}
+Vague Konvergenz allein wird ausdrücklich nicht als hinreichend behauptet.
+\end{openproblem}
+
+\begin{remark}[Konditionale Architektur]\label{rem:conditional-chain}
+Die offene Architektur lautet
+\[
+  A_N^{\rm Jac,-}
+  \stackrel{?[O]}{\longrightarrow}
+  m_{\Omega,N}
+  \stackrel{c_N,a_N}{\longrightarrow}
+  \widetilde m_N^{\rm ren}
+  \stackrel{?[O]}{\longrightarrow}
+  m_{\rm arith}.
+\]
+\end{remark}
+
+% ----------------------------------------------------------------
+\section{Statusmatrix}
+% ----------------------------------------------------------------
+
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.55\textwidth}
+                  >{\raggedright\arraybackslash}p{0.21\textwidth}
+                  >{\raggedright\arraybackslash}p{0.15\textwidth}}
+\toprule
+Aussage & Status & Quelle\\
+\midrule
+\endfirsthead
+\toprule
+Aussage & Status & Quelle\\
+\midrule
+\endhead
+$D_N(z)\to e^{-\gamma^2/4}$ (Determinanten-No-Go)
+& PROVED & NEU-091\\
+Quadratischer Pivot $Q_N$
+& PROVED (Definition) & NEU-091\\
+Testkegel-Positivität $Q_N[\phi]\ge0$ auf $\mathcal C$
+& PROVED & NEU-092\\
+Bilinearer Lift $B_N(f,g)$ positiv-semidefinit auf $\mathcal S$
+& OPEN & NEU-092\\
+Abstrakte PSD-Architektur $K_N$ aus $\rho_N$
+& PROVED & NEU-093\\
+Logarithmischer Bochner-Kandidat $\Psi_N$
+& PROVED & NEU-094\\
+Kanonische Wahl von $\rho_N$
+& OPEN & NEU-093\\
+Skalentriage: $T\gg M_N$ Diagonal-Kollaps
+& PROVED & NEU-096\\
+Skalentriage: $T=O(1)$ Rang-eins-Kollaps
+& PROVED & NEU-096\\
+Zwischenregime $1\ll T\ll M_N$ Weil-tauglich
+& OPEN & NEU-096/097\\
+Hardy--Littlewood Singulärserien-Hauptterm
+& CONDITIONAL & NEU-098\\
+$\mathcal V(M,H)\sim H\log(M/H)$ uniform in
+$1\le H\le M^{1-\varepsilon}$
+& CONDITIONAL (RH+SPC) & NEU-101\\
+$\mathcal V(M,\sqrt M)\sim\frac12\sqrt M\log M$
+& CONDITIONAL (RH+SPC) & NEU-101\\
+$\mathcal P^{\rm unf}_{N,H}$ lokales Formfaktor-Ersatzobjekt
+& PROVED$_{\rm part}$ & NEU-104\\
+$\LFF\Rightarrow$ Rampenasymptotik
+& PROVED$_{\rm part}$ & NEU-107\\
+$\LFF\Leftrightarrow$ Rampenform
+& NO-GO; nur $\Rightarrow$ & NEU-107\\
+LFF allein identifiziert $Q_{\rm Weil}$ nicht
+& PROVED$_{\rm part}$ (Typwarnung) & NEU-108\\
+$\sigma_{\rm loc}(Q_{\rm Weil})\stackrel?=|\alpha|$
+& OPEN & NEU-110\\
+$m_{\rm arith}$ Herglotz $\Leftrightarrow$ RH
+& PROVED & NEU-111\\
+$\mu_{\rm arith}=\sum m_\gamma\delta_\gamma$ (reines Nullstellenmaß)
+& PROVED & NEU-112/118\\
+$m_{\rm arith}$ in Nevanlinna-Form (symmetrische Konvergenz)
+& PROVED (Typisierung) & NEU-111/118\\
+Linearer Nevanlinna-Koeffizient $b=0$
+& PROVED & NEU-111/118\\
+$W_\xi^{\rm norm}=W_{\rm zeros}$ (keine Doppelzählung)
+& PROVED & NEU-113/115\\
+Kanonische Positivierungsbrücke
+$Q_{\rm zeros}=\sum m_\gamma|\widehat\phi|^2$
+& PROVED & NEU-112/113\\
+Einzigkeit der Positivierungsbrücke
+& OPEN & ---\\
+$m_{\rm arith}=\Pi_\gamma(X)$
+& OPEN & NEU-114\\
+$A_N^{\rm Jac,-}$ selbstadjungiert
+& OPEN & NEU-119\\
+Nevanlinna-Renormierung $(c_N,a_N)$ und Tail-Kontrolle
+& OPEN & NEU-120\\
+Vague Konvergenz $\widetilde\mu_N\to\mu_{\rm arith}$
+& OPEN & NEU-120\\
+$\widetilde m_N^{\rm ren}\to m_{\rm arith}\Rightarrow\RH$
+& CONDITIONAL & NEU-120\\
+$\mu_{\Omega,N}(\mathbb R)=1$ ohne $c_N$ genügt
+& NO-GO & NEU-120\\
+Pole $\pm i/2$ in $m_{\rm arith}$
+& NO-GO & NEU-120\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+% ----------------------------------------------------------------
+\section{Provenienz und Manuskriptstatus}
+% ----------------------------------------------------------------
+
+\begin{remark}[Kompakte Provenienz]\label{rem:provenance}
+Dieses Manuskript konsolidiert NEU-091--120 unter
+\texttt{PASS-A-PROTOKOLL.md}. Direkte Markdown-Quelle ist
+\texttt{papers/P07\_Weil\_Form\_Statistics.md} im Status
+\emph{SYN FINAL AUDITED}, Commit \texttt{6a162f92}; die
+Goldston--Montgomery-Synchronisierung von NEU-101 liegt in Commit
+\texttt{92d731d1}. P02 liefert die hier referenzierten kanonischen
+Fourier-, Paley--Wiener- und Weilform-Konventionen. P03 wurde nur für
+SYN-Stil und Konventionskonsistenz herangezogen; es werden daraus keine
+zusätzlichen P07-Aussagen importiert.
+\end{remark}
+
+\begin{remark}[LaTeX-SYN-Finalaudit]\label{rem:audit-status}
+Der LaTeX-Transferaudit ist abgeschlossen. Geprüft wurden ausschließlich
+Markdown--LaTeX-Übereinstimmung, Formeltranskription,
+Fourier-/Mellin-Konventionen, Satzstatus,
+Definition-versus-Hypothese-versus-Open-Problem, Referenzen, Labels,
+Doppelzählungen, unzulässige Hochstufungen und Kompilierbarkeit.
+Es wurde kein neuer mathematischer Konflikt gefunden und kein Forschungsknoten
+NEU-091--120 wieder geöffnet. Die in der Markdown-Fassung typographisch
+verkürzte Interface-Kette wurde gemäß der verbindlichen P02-Typisierung als
+$(a,b)\mapsto g_{a,b}\mapsto h_{a,b}\mapsto B_W(a,b)$ geschrieben.
+Damit trägt diese Fassung den internen Status
+\[
+  \boxed{\texttt{P07\_Weil\_Form\_Statistics.tex}\text{ --- SYN FROZEN }\checkmark[K/M]}.
+\]
+\end{remark}
+
+\begin{thebibliography}{9}
+
+\bibitem{Bombieri2000}
+E.~Bombieri,
+\emph{Remarks on Weil's quadratic functional in the theory of prime numbers},
+2000.
+
+\bibitem{Connes1999}
+A.~Connes,
+\emph{Trace formula in noncommutative geometry and the zeros of the Riemann
+zeta function},
+1999.
+
+\bibitem{GoldstonMontgomery1987}
+D.~A.~Goldston and H.~L.~Montgomery,
+\emph{Pair correlation of zeros and primes in short intervals},
+in \emph{Analytic Number Theory}, 1987, pp.~183--203.
+
+\bibitem{Akhiezer1965}
+N.~I.~Akhiezer,
+\emph{The Classical Moment Problem},
+1965.
+
+\bibitem{Simon2011}
+B.~Simon,
+\emph{Szeg\H{o}'s Theorem and Its Descendants},
+2011.
+
+\bibitem{HardyLittlewood1923}
+G.~H.~Hardy and J.~E.~Littlewood,
+\emph{Some problems of Partitio Numerorum III},
+1923.
+
+\end{thebibliography}
+
+\end{document}
