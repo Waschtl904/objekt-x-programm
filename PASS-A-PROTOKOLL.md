@@ -1,6 +1,6 @@
 # Pass-A-Protokoll — SYN-Migrationsverfahren
 
-**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 8. August 2026 (F3 Primäraudit-Patch — doppelt geprüft)
+**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 8. August 2026 (F4 Primäraudit + Provenienz-Patch; gültiger Zweitcheck ausständig)
 
 Dieses Dokument fixiert das verbindliche Verfahren für die Pass-A-Phase der SYN-Migration.
 
@@ -151,7 +151,7 @@ Referenzen, Labels, Doppelzählungen, unzulässige Hochstufungen von
 
 | Gruppe | SYN-Ziel | Quellbestand | Reihenfolge |
 |--------|----------|--------------|-------------|
-| **F** | **P05** | `01-primkanten-werkzeuge/` + relevante Knoten aus `05-primkanal-fourierladung/` | **aktiv** |
+| **F** | **P05** | `01-primkanten-werkzeuge/` + relevante Knoten aus `05-primkanal-fourierladung/` und `07-weil-explizitformel/` | **aktiv** |
 | G | P06 | `02-jacobi-limes/` + zugehörige Jacobi-/Feshbach-Knoten | nach F |
 | H | P08 | `04-grenzoperator-renormierung/` + zugehörige Renormierungs-/Grenzoperator-Knoten | nach G |
 | I | P09 | `06-hochschild-bc-algebra/` + BC-relevante Quellen | nach H |
@@ -162,7 +162,7 @@ Referenzen, Labels, Doppelzählungen, unzulässige Hochstufungen von
 
 ## Gruppe F — P05: Relative Primkanten und arithmetische Kantengeometrie
 
-**Status:** aktiv | **F1 COMPLETE** | **F2 eröffnet** | **F3 COMPLETE (doppelt geprüft)** | **F4 eröffnet** | P05-SYN ausständig
+**Status:** aktiv | **F1 COMPLETE** | **F2 eröffnet** | **F3 COMPLETE (doppelt geprüft)** | **F4 PRIMARY AUDIT COMPLETE / gültiger Zweitcheck ausständig** | P05-SYN ausständig
 
 ### Hauptbefund der Bestandsaufnahme
 
@@ -178,6 +178,8 @@ Typquellenpfad, epistemische Korrektur C₂ → C_src-neg).
 **Schlüsselbeobachtung Ordner 01:** Thematisch zu zerlegen.
 Nur ein Teil gehört nach P05; NEU-010–25 → primär P09/P05-Referenz;
 NEU-26–56 teils P06/P10; NEU-229–249 teils P09/P11.
+
+**Schlüsselbeobachtung F4:** Die Provenienz ist ordnerübergreifend. NEU-250g/i/j liegen in `01-primkanten-werkzeuge/`; die spätere Korrektur-/Endstandkette NEU-250h/k/l/m/n/o/p/q/r liegt in `07-weil-explizitformel/`. Ein F4-Check nur in Ordner 01 ist unvollständig.
 
 ### Paketstruktur Gruppe F
 
@@ -292,34 +294,85 @@ Damit kann F4 präzise fragen: Welche Teile dieser Geometrie tragen tatsächlich
 
 10. Die diskrete Eigenbasisdarstellung aus NEU-51 — (51.3), (51.4), (51.7) — ist **SUPERSEDED** und durch die projektionswertige Spektralmaßform (227.3)–(227.9) aus NEU-227 zu ersetzen. Dies betrifft die unzulässige Annahme einer diskreten Eigenbasis $D_{\rm rel}\eta_\alpha=\lambda_\alpha\eta_\alpha$; der Spektralsatz selbst ist nicht berührt. Diese Firewall ergänzt und schärft F1-Firewall Nr. 5.
 
-$$\boxed{\text{F3 PASS A COMPLETE — doppelt geprüft: Repo-Check (193ee6d9) + Primäraudit-Patch (dieser Commit)}}$$
+$$\boxed{\text{F3 PASS A COMPLETE — doppelt geprüft: Repo-Check (193ee6d9) + Primäraudit-Patch (87b82b1a)}}$$
 
 ---
 
-#### F4 — Neuer Mangoldt-/Primzahlpotenzstrang — **ERÖFFNET** (Arbeitshypothesen; TARGETED-REAUDIT ausständig)
+#### F4 — Neuer Mangoldt-/Primzahlpotenzstrang — **PRIMARY AUDIT COMPLETE / gültiger Zweitcheck ausständig**
 
-**Quellknoten:** NEU-250g, NEU-250i, NEU-250j (7. August 2026) + NEU-250f Patch 1 (`1579a379`)  
-**Prüfart:** `TARGETED-REAUDIT` / RECONCILIATION — **noch nicht durchgeführt**  
+**Primäraudit:** `audits/AUDIT-2026-08-08_F4_Primaeraudit_Mangoldt_Primzahlpotenz_Mediator.md`  
+**Commits:** Erstaudit `1de01140`; Provenienz-/Scope-Patch `b87b3514`  
+**Prüfart:** `TARGETED-REAUDIT` / `AUDIT-RECONCILED`  
 **Verbindliche Voraussetzung:** F1-Firewalls + F3-Koordinatenwörterbuch + F3-Spektralmaßform  
-**Verfahren:** Primäraudit zuerst (mathematisch), danach Repo-/Konsistenzcheck; erst dann PASS A COMPLETE
+**Verfahren:** mathematischer Primäraudit abgeschlossen; erster externer Repo-Check `INVALID-SCOPE`; pfadgebundener unabhängiger Zweitcheck ausständig; erst danach `F4 PASS A COMPLETE`.
 
-> **Achtung:** Die Endstatuszeilen aus Commit `193ee6d9` (z. B. `INCORPORATED_part`, `SUPERSEDED_part`) sind **vorläufige Arbeitshypothesen** aus dem Repo-Check. Der vereinbarte TARGETED-REAUDIT von NEU-250g/i/j hat noch nicht stattgefunden. Kein F4-Status darf als PASS A COMPLETE gelesen werden.
+##### Ordnerübergreifende Provenienz — verbindlich
 
-##### Leitfrage F4 (aus F1–F3 gewonnen)
+Die Quellkette ist **nicht** in einem einzigen Ordner abgelegt:
 
-> F3 hat die Primkanalgeometrie als Transportspektrum gesichert und die BC-Überlappungsstruktur mit Koordinatenwörterbuch verankert. F4 fragt: Welche dieser Geometrie trägt tatsächlich den Mangoldt-Faktor $\Lambda(p^m)/p^{m/2}$? Und: Warum können die generischen Kreuzterme $K_{pq}$ ($p\ne q$) laut NEU-250j nicht zugleich auf $\mathrm{supp}\,\Lambda$ sitzen?
+| Knoten | exakter Repo-Pfad | Rolle |
+|--------|-------------------|-------|
+| NEU-250g | `01-primkanten-werkzeuge/NEU-250g_Modulare_Halbgewichtung_und_primitiver_Weilfaktor.md` | primitiver BC-Halbgewichts-/Weilfaktor |
+| NEU-250i | `01-primkanten-werkzeuge/NEU-250i_Primzahlpotenzsektor_Gradnormierte_BC_Energie_und_vollstaendiger_von_Mangoldt_Faktor.md` | Primzahlpotenz-/Mangoldt-Realisierung |
+| NEU-250j | `01-primkanten-werkzeuge/NEU-250j_Traegertrennung_von_Mangoldt_Sektoren_und_Primfaserüberlappungen.md` | Trägertrennung / P11-Grenze |
+| NEU-250f Patch 1 | `07-weil-explizitformel/NEU-250f_PATCH1_Typkorrektur_F3_Kochain_vs_Algebraelement.md` | Typkorrektur |
+| NEU-250h | `07-weil-explizitformel/NEU-250h_Quellenabbildung_und_Testfunktionswert_im_primitiven_Weilkanal.md` | Testfunktionswert |
+| NEU-250k | `07-weil-explizitformel/NEU-250k_Adelischer_Mediatorport_zwischen_von_Mangoldt_und_Mischsektor.md` | Mediatorarchitektur |
+| NEU-250l | `07-weil-explizitformel/NEU-250l_Streublock-Mediatoraudit_und_Entscheidung_J-A_J-B.md` | **Mediator-Endanker** |
+| NEU-250m | `07-weil-explizitformel/NEU-250m_Praequotientaler_archimedischer_Port_auf_gemeinsamer_adelischer_Quelle.md` | spätere Quellen-/Portfortsetzung |
+| NEU-250n | `07-weil-explizitformel/NEU-250n_Direktaudit_adelisch_archimedische_Quellbruecke_iota_infty.md` | K1-/Quellenkorrektur |
+| NEU-250o | `07-weil-explizitformel/NEU-250o_Adelisch_archimedischer_Port_r_infty_W.md` | Fehlerkorrektur Quellenport |
+| NEU-250p | `07-weil-explizitformel/NEU-250p_Direktaudit_Halbgewichtstransfer_J12.md` | archimedischer $J_{1/2}$-Audit; **nicht** BC-$h_n^{\rm bal}$ |
+| NEU-250q | `07-weil-explizitformel/NEU-250q_Formdomaene_und_Hermitesche_Polarisation.md` | Primzahlpotenz-Konvergenz/Formdomäne |
+| NEU-250r | `07-weil-explizitformel/NEU-250r_Komplexer_Amplitudenport_und_Aufloesung_Realitaets-Firewall.md` | späterer Amplitudenport |
 
-| Knoten | Prüfart | Vorläufiger Arbeitsstand (nicht geprüft) | Offen / Firewall |
-|--------|----------|-------------------------------------------|------------------|
-| NEU-250f + Patch 1 (`1579a379`) | `TARGETED-REAUDIT` | Filtrations-No-Go nur konditional auf $L_{3,\rm alg}^\circ\in F^3A$; unbedingter No-Go SUPERSEDED | Realisierungsbrücke ?[O] |
-| NEU-250g | `AUDIT-RECONCILED` | Primitiver Faktor $\frac{\log p}{\sqrt p}$ algebraisch konstruiert | Hilbertraum-Fundierung $H_{\rm BC}$ offen; $\mathcal S_4$-Einordnung nicht aus F3 übertragbar |
-| NEU-250i | `AUDIT-RECONCILED` | $H_{\rm pr}=D_\Omega^{-1}H_{\rm BC}$; $\Lambda(p^m)/p^{m/2}=\log p/p^{m/2}$ im Primsektor | **Firewall:** $H_{\rm pr}\ne\Lambda$ auf zusammengesetzten $n$ mit mehreren Primteilern |
-| NEU-250j | `AUDIT-RECONCILED` | Trägertrennung $\mathrm{supp}\,\Lambda\cap\mathrm{supp}(K_{pq})=\emptyset$ für $p\ne q$ | Widerleg nicht nichtorthogonale Geometrie (F3-Firewall 11); Mediatorweg → P11 |
+> **Scope-Firewall:** Ein F4-Repo-Check nur in `01-primkanten-werkzeuge/` ist unvollständig. Der erste externe Gegencheck behauptete fälschlich, NEU-250h/k/l/n existierten nicht und nach 250j gebe es keine späteren 250-Knoten. Deshalb zählt er als `INVALID-SCOPE` und **nicht** als unabhängige Zweitprüfung.
 
-##### Verbindliche F4-Firewalls (aus F1–F3, gelten schon jetzt)
+##### Primärauditmatrix F4
 
-11. NEU-250j widerlegt **nicht** die in F3 gesicherten generischen Kreuzterme $K_{pq}\ne0$ aus NEU-226. Es zeigt nur die Trägertrennung $\mathrm{supp}\,K_{pq}\cap\mathrm{supp}\,\Lambda=\emptyset$ für $p\ne q$. Die nichtorthogonale Primkanalgeometrie bleibt bestehen.
-12. Im Primsektor stimmt $\Lambda(p^m)/p^{m/2}=\log p/p^{m/2}$ mit dem primitiven Faktor aus NEU-250g überein; auf zusammengesetzten $n$ mit mehreren Primteilern ist $H_{\rm pr}\ne\Lambda$ eine harte Firewall.
+| Knoten | Prüfart | Endstatus für P05 | Heute gültiger Kernbefund |
+|--------|----------|-------------------|---------------------------|
+| NEU-250f + Patch 1 | `TARGETED-REAUDIT` (F1) | `SUPERSEDED_part / CONDITIONAL` | Unbedingter Filtrations-No-Go über $L_3^\circ\in F^3A$ typfehlerhaft; korrekt nur konditional auf ein realisiertes Algebraelement $L_{3,\rm alg}^\circ$; Realisierungsbrücke `?[O]`. |
+| NEU-250g | `TARGETED-REAUDIT` | `INCORPORATED_part` | Im primitiven $p$-Kanal algebraisch $h_p^{\rm bal}=p^{-1/2}I$ und Faktor $\log p/\sqrt p$; Hilbert-Selbstadjungiertheit, Abschluss, Domäne und globaler Funktionalkalkül von $H_{\rm BC}$ offen. |
+| NEU-250h | `AUDIT-RECONCILED` | `INCORPORATED_part` | $g_a(\log p)=\operatorname{Re}\langle a,U_{\log p}a\rangle$ typkorrekt; Matrixkoeffizient, **kein Normquadrat**; H3 globale Faktorisierung `?[O]`. |
+| NEU-250i | `TARGETED-REAUDIT` | `INCORPORATED_part / CONDITIONAL` | Zahlentheoretisch $\Lambda(p^m)/p^{m/2}=\log p/p^{m/2}$ `✓[M]`; operatorische Realisierung ist nicht unbedingter Satz, weil 250i das allgemeine $h_n^{\rm bal}=n^{-1/2}I$ NEU-250g zuschreibt, während dort nur der primitive $p$-Kanal gerechnet wird; zusätzlich Hilbert-Funktionalkalkül offen. $H_{\rm pr}\ne\Lambda$ auf Zahlen mit mehreren Primteilern bleibt Firewall. |
+| NEU-250j | `TARGETED-REAUDIT` | `INCORPORATED_part` + **→ P11** | $pm_p=qm_q=M$, $p\ne q$ ⇒ $M$ besitzt ≥2 verschiedene Primteiler ⇒ $\Lambda(M)=0$; daher direkte Kreuzprimkollision ∩ Mangoldt-Träger = ∅ `✓[M]`. Generische Nichtorthogonalität aus F3 bleibt bestehen. Pauschale globale Eigenwertfreiheit wird nicht übernommen; gesichert ist sie für die auditierten Primsektoren. |
+| NEU-250k | `AUDIT-RECONCILED` | **→ P11** | Drei-Port-Grammatik Zieltyp; $T_{\mathcal M}$ nicht konstruiert; K1 durch 250n korrigiert. |
+| NEU-250l | `AUDIT-REUSED` | **MEDIATOR-ENDANKER → P11** | Kein explizit typisierter $D_{\rm scatt,N}$; quotientengebundener Weg hängt am Wres-Quotienten; keine kanonische $P_{\mathcal M}$. J-B vorläufig aktiv als **Quellenbefund**, J-A mathematisch `?[O]`; kein struktureller Mediator-No-Go. |
+| NEU-250n | `AUDIT-REUSED` | Korrekturquelle **→ P11** | $\mathcal S_{\rm adel}$ ist Architekturplatzhalter und kein fertig konstruierter topologischer gemeinsamer Quellenraum. |
+
+##### Spätere Korrekturprüfung 250o–r
+
+NEU-250o–r wurden als Superseding-Scan mitgelesen. Sie korrigieren und typisieren den adelisch-archimedischen Quellen-/Amplitudenport, schließen aber **nicht** das isolierte BC-Generalisationgap in NEU-250i und ändern den Mediator-Endstatus aus NEU-250l nicht. Insbesondere ist NEU-250p der archimedische Halbgewichtstransfer $J_{1/2}$ und kein Beweis von $h_n^{\rm bal}=n^{-1/2}I$.
+
+##### Verbindliche F4-Firewalls nach Primäraudit
+
+11. **Trägertrennung ≠ Orthogonalitäts-No-Go.** NEU-250j widerlegt nicht die generische Nichtorthogonalität aus NEU-226/227; es trennt den Mangoldt-Träger von der direkten Kreuzprimkollision.
+12. **Arithmetische Identität ≠ Operatorrealisierung.** $\Lambda(p^m)/\sqrt{p^m}=\log p/p^{m/2}$ ist `✓[M]`; die Realisierung über $h_{p^m}^{\rm bal}$ und $H_{\rm pr}^{1/2}$ bleibt bis zum allgemeinen $n$-Lemma und zur Hilbert-Fundierung `CONDITIONAL`.
+13. **250g bleibt primitiver Kanal.** $h_p^{\rm bal}=p^{-1/2}I$ und $\log p/\sqrt p$ dürfen nicht ohne Beweis zu $h_n^{\rm bal}=n^{-1/2}I$ für alle $n$ hochgestuft werden.
+14. **250h-Matrixkoeffizient ist kein Normquadrat.** $g_a(x)=\operatorname{Re}\langle a,U_xa\rangle$ kann negativ oder null sein; kein lokaler positiver Gramterm folgt daraus.
+15. **Keine globale Eigenwertbehauptung aus 250j.** Primsektoren: a.c.-Spektrum / keine Eigenwerte `✓[M]`; zusammengesetzte $m$-Sektoren bleiben gemäß `[O-225-3]` offen.
+16. **Mediatorstatus:** NEU-250l ist Endanker. J-B ist `✓[M]_{neg,prov}` als Quellenbefund, nicht `✓[M]_{neg}` als struktureller Unmöglichkeitssatz; J-A bleibt `?[O]` und geht nach P11.
+17. **Gemeinsame Quelle:** $\mathcal S_{\rm adel}$ nicht als fertig konstruierter topologischer Raum behaupten; NEU-250n korrigiert K1 auf `?[O]`.
+18. **Ordnerübergreifende Provenienz:** F4 darf nicht aus `01-primkanten-werkzeuge/` allein auditiert werden; `07-weil-explizitformel/NEU-250h…r` ist zwingend mitzulesen.
+
+##### P05-Endstand aus F4 nach Primäraudit
+
+**Übernehmbar:**
+- primitiver algebraischer Faktor $\log p/\sqrt p$: `✓[M]_{part}`;
+- Testfunktionsfaktor $g_a(\log p)=\operatorname{Re}\langle a,U_{\log p}a\rangle$: `✓[M]`;
+- arithmetische Identität $\Lambda(p^m)/\sqrt{p^m}=\log p/p^{m/2}$: `✓[M]`;
+- Trägertrennung direkte Kreuzprimkollision vs. Mangoldt-Träger: `✓[M]`;
+- Nichtorthogonale Primkanalgeometrie wird dadurch nicht widerlegt.
+
+**Nur konditional / offen:**
+- allgemeine BC-Halbgewichtung $h_n^{\rm bal}=n^{-1/2}I$ für alle $n$;
+- vollständige operatorische Primzahlpotenzrealisierung über $H_{\rm pr}^{1/2}$;
+- Hilbert-Selbstadjungiertheit / Abschluss / globaler Funktionalkalkül von $H_{\rm BC}$ und $H_{\rm pr}$.
+
+**Weiterleitung:** Feshbach-/Spektralmaß-/Schattenklasse → P06; Mediator, gemeinsame adelische Quelle, Gramblock-Kopplung und J-A/J-B → P11.
+
+$$\boxed{\text{F4 PRIMARY AUDIT COMPLETE — gültiger pfadgebundener Zweitcheck ausständig}}$$
 
 ---
 
@@ -328,10 +381,10 @@ $$\boxed{\text{F3 PASS A COMPLETE — doppelt geprüft: Repo-Check (193ee6d9) + 
 | Paket | Status | Nächster Schritt |
 |-------|--------|------------------|
 | F1 | **PASS A COMPLETE** (`07903f85`) | Endstand für P05 extrahiert |
-| F2 | **ERÖFFNET** (`8ead5d52`) | Reconciliation-Arbeit; keine neuen Dateien erforderlich |
-| F3 | **PASS A COMPLETE — doppelt geprüft** | Spektralmaßform und Koordinatenwörterbuch verbindlich verankert |
-| F4 | **ERÖFFNET** (Vorläufiger Arbeitsstand) | Primäraudit NEU-250g/i/j zuerst; danach Repo-Check; dann PASS A COMPLETE |
-| P05-SYN | nach F2+F4 | `papers/P05_*.tex` + LaTeX-SYN-Transferaudit |
+| F2 | **ERÖFFNET** (`8ead5d52`) | Reconciliation-Endstatus formal abschließen; keine neuen Dateien erforderlich |
+| F3 | **PASS A COMPLETE — doppelt geprüft** (`87b82b1a`) | Spektralmaßform und Koordinatenwörterbuch verbindlich verankert |
+| F4 | **PRIMARY AUDIT COMPLETE** (`1de01140`, Patch `b87b3514`) | **pfadgebundener unabhängiger Zweitcheck**; erst danach PASS A COMPLETE |
+| P05-SYN | nach F2 + gültigem F4-Zweitcheck | `papers/P05_*.tex` + LaTeX-SYN-Transferaudit |
 
 ---
 
@@ -342,4 +395,4 @@ $$\boxed{\text{F3 PASS A COMPLETE — doppelt geprüft: Repo-Check (193ee6d9) + 
 - Zwischenbilanzen: `ZWISCHENBILANZ_2026-07-29.md` bis `2026-08-01.md`
 - Auditstand HH-Strang: `AUDITSTAND-2026-08-03.md`
 - Forschungsknoten (abgeschlossen): `03-weil-form-statistik/`
-- Forschungsknoten (aktiv): `01-primkanten-werkzeuge/`, `05-primkanal-fourierladung/`
+- Forschungsknoten (aktiv): `01-primkanten-werkzeuge/`, `05-primkanal-fourierladung/`, `07-weil-explizitformel/`
