@@ -1,188 +1,80 @@
-# NEU-115 — Weil-Distribution als Interface zwischen Spektralschatten und Objekt X
+# NEU-115 — Weil-Distribution Interface
 
-**Stand: 1. Juli 2026**
-
----
-
-## Ausgangslage (nach NEU-114)
-
-Nach dem Kursabgleich NEU-114 existieren zwei parallele Spuren:
-
-```
-Spur A:  Pi_gamma(X) = m_arith  ->  Q_Weil
-Spur B:  X  ->  W_res^top       ->  Q_Weil
-```
-
-Der direkte Vergleich
-
-```
-W_res^top  ->?  Q_Weil         (Test 114.3)
-```
-
-ist jedoch kategorial zu grob:
-
-- `W_res^top` ist eine **Spur-/Distributionsstruktur** (lineare Form)
-- `Q_Weil` ist eine **Quadratform** (bilinear, nach Faltung/Pairing entstanden)
-
-Eine direkte Identifikation würde eine neue kategoriale Vermischung erzeugen —
-analog zum No-Go `X = m_arith` (NEU-114).
+**Stand:** 1. Juli 2026 | **Patch:** 8. August 2026 (Pass-A Gruppe E, E-3/6)
+**Prüfart:** TARGETED-REAUDIT
+**Vorgänger:** NEU-114 (Patch E-2/6)
+**Nächste Nummer:** NEU-116
 
 ---
 
-## Neues Zwischenobjekt: Weil-Distribution W_xi
+## Ausgangspunkt
 
-**Definition 115.1 — Weil-Distribution (explizite-Formel-Distribution):**
-
-```
-W_xi  :  PW_t  ->  C
-```
-
-definiert durch die vier normalisierten Beiträge der expliziten Formel:
-
-```
-W_xi  =  W_zeros  +  W_Gamma  +  W_prime  +  W_{pole/triv}
-```
-
-wobei:
-
-```
-W_zeros[f]      =  sum_gamma  f-hat(gamma)          (Nullstellenbeitrag, linear)
-W_Gamma[f]      =  archimedischer/Gamma-Beitrag
-W_prime[f]      =  sum_p sum_k  f(log p^k) log p    (Primzahlbeitrag)
-W_{pole/triv}[f]=  Pol- und triviale Nullstellen-Beitraege
-```
-
-`W_xi` ist eine **lineare Distribution** auf dem Paley-Wiener-Raum `PW_t`.
-
-**Übergang zur Quadratform:**
-
-Die Weil-Quadratform entsteht erst durch Pairing mit dem geeigneten
-Bombieri-Testfunktionsobjekt:
-
-```
-Q_Weil[f]  =  < W_xi, f* * f >
-```
-
-oder in der aequivalenten Bombieri-Normalisierung auf `PW_t`.
+NEU-115 typisiert das Interface zwischen linearer Weil-Distribution und quadratischer Weilform. Die zentrale Unterscheidung ist korrekt und wichtig. Ein alter Doppelzählungsfehler (identisch NEU-113.2) wird hier korrigiert.
 
 ---
 
-## Neue Rückbindungsarchitektur (ab NEU-115)
+## Satz NEU-115.1 — Lineare Distribution ≠ Quadratform ✓[M]
 
-```
-Spur A:   m_arith  -->  W_xi  -->  Q_Weil
-Spur B:   W_res^top -->  W_xi  -->  Q_Weil
-```
+$$\boxed{W_\xi^{\rm norm}[\Phi]\text{ ist linear in }\Phi.}$$
+$$\boxed{Q_{\rm Weil}[\phi] = B_W(\phi,\phi)\text{ ist quadratisch in }\phi.}$$
 
-Beide Spuren treffen sich **nicht** direkt in `Q_Weil`, sondern im gemeinsamen
-Zwischenobjekt `W_xi` auf dem Bombieri-Testfunktionsraum `PW_t`.
+Diese Unterscheidung ist der methodische Kern des Interface. Ohne den Autokorrelationslift $\Phi=\phi^**\phi$ sind beide Objekte nicht vergleichbar.
 
-**Vollständige Kette (Spur B):**
-
-```
-X  ->  W_res^top  ->  W_xi  ->  Q_Weil  ->  RH
-```
-
-**Vollständige Kette (Spur A):**
-
-```
-Pi_gamma(X) = m_arith  ->  W_xi  ->  Q_Weil  ->  RH
-```
+**Status: ✓[M]**
 
 ---
 
-## Präzisierter Test 114.3 (ersetzt den Originaltest)
+## ~~Def. NEU-115.2 (ursprünglich)~~ — Vierteilige $W_\xi$-Summe — **×[M] SUPERSEDED**
 
-**Originaltest 114.3 (zu grob):**
+> **Patch-Notiz (Pass-A, 8. Aug. 2026):** Der aktuelle Text definiert
+> $W_\xi = W_{\rm zeros}+W_\Gamma+W_{\rm prime}+W_{\rm pole/triv}$,
+> dieselbe vierteilige Summe, die NEU-113.7 bereits als Doppelzählung
+> ($= 2W_{\rm zeros}$) identifiziert hat.
 
-```
-W_res^top  ->?  Q_Weil
-```
+## Def. NEU-115.2 (korrigiert) — Normierte Weil-Distribution
 
-**Präzisierter Test 115.A (NEU-115):**
+$$\boxed{W_\xi^{\rm norm} = W_{\rm zeros} = W_{\rm pole/triv}+W_\Gamma+W_{\rm prime}.}$$
 
-```
-W_res^top  =?  W_xi    auf dem Bombieri-Testfunktionsraum PW_t
-```
+Die Nullstellenseite und die arithmetische Seite sind äquivalente Darstellungen derselben Distribution — nicht zu addieren.
 
-Status: ❓[O]  <- zentraler Rückbindungstest (NEU-116)
-
-Erst wenn diese Gleichheit der Distributionen/Spuren gilt, folgt:
-
-```
-W_res^top  ->  Q_Weil
-```
+**Status: ✓[M]**
 
 ---
 
-## No-Go NEU-115 (kategorialer Schutzsatz)
+## Satz NEU-115.3 — Autokorrelationslift als Brücke ✓[M]
 
-**Satz 115.0 (No-Go, kategorial):**
+$$W_\xi^{\rm norm}[\phi^**\phi] = Q_{\rm zeros}[\phi] = \sum_{\gamma\in\Gamma}m_\gamma|\widehat\phi(\gamma)|^2.$$
 
-```
-W_res^top  =  Q_Weil
-```
+Dies ist die einzige korrekte Brücke zwischen linearer Distribution und Quadratform.
 
-ist **kategorial falsch**. ✗[M]
-
-Begründung: `W_res^top` ist eine lineare Spur-/Distributionsform;
-`Q_Weil` ist eine quadratische Form. Sie leben auf verschiedenen
-kategorialen Ebenen.
-
-**Korrekte Kette:**
-
-```
-W_res^top  =?  W_xi,     W_xi  ~>  Q_Weil
-```
+**Status: ✓[M]** ($\to$ P02)
 
 ---
 
-## Satzstatusmatrix (NEU-115)
+## Satz NEU-115.4 — Interface-Schutzsatz ✓[M]
 
-| Satz | Inhalt | Status |
-|---|---|---|
-| 115.0 | `W_res^top = Q_Weil` ist kategorial falsch | ✗[M] |
-| 115.1 | Definition W_xi als lineare Weil-Distribution auf PW_t | ✓[M] |
-| 115.2 | Q_Weil = < W_xi, f* * f > (Pairing-Konstruktion) | ✓/⚠[M] |
-| 115.3 | m_arith -> W_xi (Spur A Interface) | ❓[O] |
-| 115.4 | W_res^top =? W_xi (Spur B Interface, Test 115.A) | ❓[O] |
-| 115.5 | Konvergenz/Normierung W_xi auf PW_t exakt | ❓[O] (NEU-113) |
+$$\boxed{W_\xi^{\rm norm}[\Phi]\text{ für allg. }\Phi\text{ nicht direkt mit }Q_{\rm Weil}[\phi]\text{ vergleichbar.}}$$
+
+Der Vergleich erfordert: (1) gemeinsamer Testfunktionsraum, (2) Fourier-Konvention, (3) Autokorrelationspaarung.
+
+**Status: ✓[M]** (Interface-Firewall)
 
 ---
 
-## Konsequenzen für die Arbeitsteilung
+## Status-Übersicht
 
-```
-NEU-113:  Bombieri-Normalisierung von RECHTS
-          Q_Weil = < W_xi, f* * f > exakt fixieren
-          Vorzeichen, Normierung, Konvergenz auf PW_t
-          <- Flaschenhals Spur A
-
-NEU-115:  Definition des gemeinsamen Interface W_xi
-          Zwei-Spuren-Architektur (dieses Dokument)
-
-NEU-116:  Rückbindungstest W_res^top =? W_xi
-          Zentraler Test Spur B
-          <- Flaschenhals Spur B (präzisiert)
-```
+| Punkt | Inhalt | Status |
+|-------|--------|--------|
+| 115.1 | Linear $\neq$ Quadratform | ✓[M] |
+| 115.2 | $W_\xi^{\rm norm}=W_{\rm zeros}$ (keine Vierfachsumme) | ✓[M] |
+| 115.3 | Autokorrelationslift als Brücke | ✓[M] |
+| 115.4 | Interface-Schutzsatz | ✓[M] |
 
 ---
 
-## Aktualisierter kritischer Pfad (ab NEU-115)
+## Verweise
 
-```
-Feshbach-Kollaps (NEU-77)                      [M]
-  +
-Herglotz-Weil-Brücke (NEU-112)                [M]/?[O]
-  m_arith = Pi_gamma(X)
-  +
-NEU-113: Bombieri-Normalisierung               <- FLASCHENHALS SPUR A
-  W_xi auf PW_t: W_zeros/W_Gamma/W_prime/W_pole exakt
-  Q_Weil = < W_xi, f* * f >
-  +
-NEU-115: Interface W_xi definiert              [M] (dieses Dokument)
-  +
-NEU-116: Rückbindungstest W_res^top =? W_xi   <- FLASCHENHALS SPUR B
-  +
-m_arith(z) Herglotz  <=>  RH  (NEU-63D)       ⚠[M]
-```
+- NEU-113 (Patch E-1/6): Doppelzählungswarnung NEU-113.7
+- NEU-112 (Patch D-2/6): Autokorrelationslift
+- **P02** (kanonische Referenz)
+- **Bombieri:** *Remarks on Weil's quadratic functional* (2000)
