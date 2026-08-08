@@ -1,4 +1,4 @@
-# Aktueller Stand — 2026-08-08 (Audit-Update 2)
+# Aktueller Stand — 2026-08-08 (Audit-Update 3)
 
 ---
 
@@ -9,9 +9,9 @@ $$\text{NEU-Serie}\to\text{SYN-Entwurf}\to\text{SYN-Direktaudit}\to\text{kanonis
 | Manuskript | Audit-Status |
 |---|---|
 | P01 | Entwurf (P01-Audit ausstehend) |
-| P02 | Patch 2 (2026-08-08): $\mathcal{S}_{\rm adel}^{\rm amp}$, $R_{\rm PW}$, $g_{a,b}$ korrigiert; freizugeben nach Gegenprüfung |
-| P03 | $\checkmark$ SYN-Audit 2026-08-08 **kanonische Tagesreferenz** |
-| P04 | $\checkmark$ SYN-Audit 2026-08-08 (Forschungsfront: NEU-260b.2) |
+| **P02** | $\checkmark$ **kanonische Tagesreferenz** (Patch 3, 2026-08-08) |
+| **P03** | $\checkmark$ **kanonische Tagesreferenz** (2026-08-08) |
+| P04 | $\checkmark$ SYN-Audit (Forschungsfront: NEU-260b.2) |
 
 ---
 
@@ -20,7 +20,7 @@ $$\text{NEU-Serie}\to\text{SYN-Entwurf}\to\text{SYN-Direktaudit}\to\text{kanonis
 | ID | Titel | Status | Quellknoten |
 |---|---|---|---|
 | **P01** | BC Prime Power Weights | Entwurf (Audit ausstehend) | NEU-250b–j |
-| **P02** | Adelic Weil Amplitude Port | Patch 2 (Audit-Freigabe ausstehend) | NEU-250n–r, 252 |
+| **P02** | Adelic Weil Amplitude Port | $\checkmark$ **kanonische Tagesreferenz** | NEU-250n–r, 252 |
 | **P03** | Haar-$L^2$ Firewall | $\checkmark$ **kanonische Tagesreferenz** | NEU-253–258 |
 | **P04** | Finite Weil Geometry | $\checkmark$ (Forschungsfront aktiv) | NEU-259–260b.2 |
 
@@ -31,62 +31,59 @@ $$\text{NEU-Serie}\to\text{SYN-Entwurf}\to\text{SYN-Direktaudit}\to\text{kanonis
 | Knoten | Titel | Status |
 |---|---|---|
 | NEU-260a | $\lambda$-Gauge-Audit | $\checkmark[K/M]$ |
-| NEU-260b | $\theta$-Selektionsaudit | $\checkmark[K/M]$ (Parität $\to\mathbb{Z}_2$) |
-| NEU-260b.1 | $\mathbb{Z}_2$-Selektion (Kandidaten) | $\checkmark[K/M]$ (Patch 2: Stetigkeit $\times$, KMS-Lücke, Frob-Konvention) |
+| NEU-260b | $\theta$-Selektionsaudit | $\checkmark[K/M]$ |
+| NEU-260b.1 | $\mathbb{Z}_2$-Selektion | $\checkmark[K/M]$ (Patch 2) |
 | **NEU-260b.2** | Paritätsselektion durch Suzuki-Grenzfunktion | $\checkmark[K/M]$ **höchste Priorität** |
 | NEU-260c | Grenznormalisierung $\phi(a,z)$ | $?[O]$ |
 | NEU-260d | $J_{a,b}$-Geometrie | $?[O]$ |
 
 ---
 
-## Zentrale offene Leitfrage (aktualisiert)
+## Zentrale offene Leitfrage
 
 $$\boxed{\text{Kann die analytische Suzuki-Grenzstruktur }+P\text{ bereits eindeutig erzwingen?}}$$
 
-Konkret (NEU-260b.2 $\checkmark[K/M]$, konditional):
+Konkret (NEU-260b.2, konditional):
 $$\text{Suzuki-Grenzrelation}\Longrightarrow\varepsilon(a)=+1\text{ asymptotisch.}$$
 
-Was noch offen bleibt:
-1. Suzukis Grenzrelation selbst beweisen (impliziert RH).
-2. Asymptotisches $\varepsilon=+1$ auf alle $a>0$ propagieren ($\to$ nach Konstruktion analytischer Familie).
-3. Falls Suzuki-Argument nicht reicht: BC/KMS oder Frobenius als Vorzeichen-Selektor (nachrangig, Typisierungslücken bekannt).
+Offene Teilfragen:
+1. Suzukis Grenzrelation beweisen (impliziert RH).
+2. Asymptotisches $\varepsilon=+1$ auf alle $a>0$ propagieren (benötigt analytische Familie s.a. Erweiterungen; noch keine Quelle).
+3. BC/KMS, Frobenius als Vorzeichen-Selektor: nachrangig; Typisierungslücken bekannt.
 
-~~Wie wählen Stetigkeit/BC/Frobenius das Vorzeichen?~~ (veraltet, ersetzt durch Suzuki-Grenzstruktur-Frage)
-
----
-
-## Hart gebuchte Resultate (vollständige Liste)
-
-$$W_{\rm NEU\text{-}252}=W_{\rm Lit}\quad\checkmark[K/M]\quad\text{(NEU-258)}$$
-$$B_W\text{ semibeschränkt auf }C_c^\infty(\mathbb{R})\text{ rel. }L^2(du)\Leftrightarrow\text{RH}\quad\checkmark[K/M]\quad\text{(NEU-257)}$$
-$$B_W\text{ nicht abschließbar auf }L^2(du)\text{ unter RH (}\mu_W\not\ll du\text{)}\quad\checkmark[K/M]\quad\text{(NEU-257)}$$
-$$\text{KLMN auf }L^2(\mathbb{R}):\;\times[M]\quad\text{(NEU-257)}$$
-$$\mathcal{H}_W\cong\ell^2(\Gamma,m_\gamma)\text{ unter RH}\quad\checkmark[K/M]\quad\text{(NEU-257, Suzuki 2025)}$$
-$$Q_W^a\text{ semibeschränkt, abschließbar auf }L^2(-a,a)\quad\checkmark[K/M]\quad\text{(NEU-259)}$$
-$$A_a=A_a^*,\text{ diskretes Spektrum, }\lambda_a\text{ stetig in }a\quad\checkmark[K/M]\quad\text{(NEU-259)}$$
-$$\lambda_{\rm can}(a)=\lambda_a-1\text{ (bequeme Konvention; }\lambda=0\text{ RH-konditional)}\quad\checkmark[K/M]\quad\text{(NEU-260a)}$$
-$$\mathcal{H}(T_{a,\lambda_1})\cong\mathcal{H}(T_{a,\lambda_2})\quad\checkmark[K/M]\quad\text{(NEU-260a)}$$
-$$U_a:\mathcal{N}_{+,a}\to\mathcal{N}_{-,a}\text{ intrinsisch; }\mathcal{N}_{\pm}=\operatorname{span}\{v_\pm\},\;T_av_\pm=e^{\pm x}\quad\checkmark[K/M]\quad\text{(NEU-260b)}$$
-$$PA_a=A_aP\quad\checkmark[M]/\text{Suzuki 2026}$$
-$$Pv_+=v_-\quad\checkmark[K/M]\quad\text{(NEU-260b)}$$
-$$U(1)\xrightarrow{\text{Parität}}\{+P,-P\}\cong\mathbb{Z}_2\quad\checkmark[K/M]\quad\text{(NEU-260b)}$$
-$$W(a,0;-z)=-W(a,0;z)\quad(+P\text{-Zweig ungerade})\quad\checkmark[K/M]\quad\text{(NEU-260b.2)}$$
-$$W(a,\pi;-z)=+W(a,\pi;z)\quad(-P\text{-Zweig gerade})\quad\checkmark[K/M]\quad\text{(NEU-260b.2)}$$
-$$F(-z)=-F(z),\;F(z)=cz+O(z^3),\;c\neq0\quad\checkmark[K/M]\quad\text{(NEU-260b.2)}$$
-$$\theta=\pi\text{ inkompatibel mit Suzuki-Grenzrelation (Hurwitz/Rouché)}\quad\checkmark[K/M]\text{ (konditional)}\quad\text{(NEU-260b.2)}$$
-$$\varepsilon(a)=+1\text{ für hinreichend großes }a\text{ (konditional auf Grenzrelation)}\quad\checkmark[K/M]\text{ (konditional)}\quad\text{(NEU-260b.2)}$$
-$$\Lambda(p^k)/\sqrt{p^k}\text{ aus BC/Frobenius}\quad\checkmark[K/M]\quad\text{(NEU-250-Serie)}$$
+~~Wie wählen Stetigkeit/BC/Frobenius das Vorzeichen?~~ (veraltet)
 
 ---
 
-## Objekt-X-Hypothese (aktuell)
+## Hart gebuchte Resultate
 
-$$\text{Objekt X} = \left\{\mathcal{H}(T_a^{\rm w}),\;J_{a,b},\;\overline{\mathscr{D}}_{a,\varepsilon(a)\cdot P}\right\}_{0<a<b}$$
-
-mit $\varepsilon(a)=+1$ asymptotisch (konditional), $\phi(a,z)$ (offen), $J_{a,b}$ (offen).
-
-Unter RH (Objekt-X-Konjektur): $\mathcal{K}_X:=\varinjlim_a\mathcal{H}(T_a)\xrightarrow{\rm RH}\mathcal{H}_W\cong\ell^2(\Gamma,m_\gamma)$.
+$$W_{\rm NEU\text{-}252}=W_{\rm Lit}\quad\checkmark[K/M]$$
+$$\mathcal{S}_{\rm adel}^{\rm amp}=\{F\in\mathcal{S}(\mathbb{A}_\mathbb{Q}):(P_{\rm Haar}F)|_{(0,\infty)}\in C_c^\infty\}\quad\checkmark[K/M]$$
+$$(R_{\rm PW}F)(u)=e^{u/2}(P_{\rm Haar}F)(e^u)\quad\checkmark[K/M]$$
+$$g_{a,b}(u)=\tfrac12[C_{a,b}(u)+C_{a,b}(-u)],\;C_{a,b}=a*\check{\bar b}\quad\checkmark[K/M]$$
+$$g_{b,a}=\overline{g_{a,b}},\quad g_{a,a}=\operatorname{Re}C_{a,a}\in\mathbb{R},\quad g_{a,a}(0)=\|a\|_2^2\quad\checkmark[K/M]$$
+$$\widehat{g_{a,a}}(t)=\tfrac12(|\hat a(t)|^2+|\hat a(-t)|^2)\ge0\;(\text{positiv-definit})\quad\checkmark[K/M]$$
+$$g_{a,a}\ge0\text{ punktweise}\quad\times[M]\text{ (Gegenbeispiel: }a=\varphi-\varphi(\cdot-L)\text{)}$$
+$$B_W\text{ semibeschränkt auf }C_c^\infty\text{ rel. }L^2(du)\Leftrightarrow\text{RH}\quad\checkmark[K/M]$$
+$$B_W\text{ nicht abschließbar auf }L^2(du)\text{ unter RH}\quad\checkmark[K/M]$$
+$$\text{KLMN}\times[M]\quad\mathcal{H}_W\cong\ell^2(\Gamma,m_\gamma)\text{ unter RH}\quad\checkmark[K/M]$$
+$$\mathcal{N}_{\pm}=\operatorname{span}\{v_\pm\},\;T_av_\pm=e^{\pm x}\quad\checkmark[K/M]$$
+$$PA_a=A_aP\;(\text{Suzuki 2026})\quad Pv_+=v_-\quad\checkmark[K/M]$$
+$$U(1)\xrightarrow{\text{Parität}}\{+P,-P\}\cong\mathbb{Z}_2\quad\checkmark[K/M]$$
+$$W(a,0;-z)=-W(a,0;z),\;W(a,\pi;-z)=+W(a,\pi;z)\quad\checkmark[K/M]$$
+$$F(-z)=-F(z),\;F(z)=cz+O(z^3),\;c\neq0\quad\checkmark[K/M]$$
+$$\theta=\pi\text{ inkompatibel mit Suzuki-Grenzrelation (Hurwitz/Rouché)}\quad\checkmark[K/M]\text{ (konditional)}$$
+$$\varepsilon(a)=+1\text{ für hinreichend großes }a\text{ (konditional auf Grenzrelation)}\quad\checkmark[K/M]\text{ (konditional)}$$
 
 ---
 
-*Zuletzt aktualisiert: 2026-08-08 (SYN-Audit Update 2: P02 Patch 2; Leitfrage auf Suzuki-Grenzstruktur fokussiert; NEU-260b.2 als höchste Priorität)*
+## Objekt-X-Hypothese
+
+$$\text{Objekt X}=\left\{\mathcal{H}(T_a^{\rm w}),\;J_{a,b},\;\overline{\mathscr{D}}_{a,\varepsilon(a)\cdot P}\right\}_{0<a<b}$$
+
+mit $\varepsilon(a)=+1$ asymptotisch (konditional), $J_{a,b}$ und $\phi(a,z)$ offen.\\
+Unter RH (Konjektur): $\mathcal{K}_X:=\varinjlim_a\mathcal{H}(T_a)\to\mathcal{H}_W\cong\ell^2(\Gamma,m_\gamma)$.
+
+---
+
+*Zuletzt aktualisiert: 2026-08-08 (P02 Patch 3 freigegeben; P02+P03 kanonische Tagesreferenzen)*

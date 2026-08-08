@@ -10,7 +10,7 @@
 \newtheorem{remark}[theorem]{Remark}
 
 \title{P02 --- Adelic Weil Amplitude Port and Complete Hermitian Weil Form\\
-\normalsize SYN-Audit: 2026-08-08 (Patch 2)}
+\normalsize SYN-Audit: 2026-08-08 (Patch 3 --- kanonische Tagesreferenz)}
 \author{Objekt-X-Programm}
 \date{2026-08-08}
 
@@ -19,21 +19,20 @@
 
 \begin{abstract}
 We consolidate NEU-250n--r and NEU-252 (Patch).
-The port from the adelic amplitude space $\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$
-to the Weil form $B_W$ proceeds in two distinct stages.
-First, $R_{\mathrm{PW}}$ maps a single adelic amplitude
-$F\in\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$ to a compactly supported test
-function $a\in\mathcal{A}_{\mathrm{PW}}=C_c^\infty(\mathbb{R};\mathbb{C})$.
-Second, a pair $(a,b)$ is polarised to
-$g_{a,b}\in\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}=C_c^\infty(\mathbb{R};\mathbb{C})_{\mathrm{even}}$
-via the sesquilinear even\-isation $g_{a,b}(u)=\tfrac12[C_{a,b}(u)+C_{a,b}(-u)]$,
-$C_{a,b}:=a*\check{\bar{b}}$.
-Polarising $B_W$ yields the three-block M3 form
-$B_{\mathrm{pole}}+B_\Gamma+B_{\mathrm{fin}}$.
-All results are RH-free.
-\textbf{Patch 2 (2026-08-08):} Exact definition of
-$\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$ and $R_{\mathrm{PW}}$
-restored from NEU-250r; sesquilinear evenisation corrected.
+The port from $\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$
+to $B_W$ proceeds in two distinct stages:
+$R_{\mathrm{PW}}$ maps $F\mapsto a\in\mathcal{A}_{\mathrm{PW}}=C_c^\infty(\mathbb{R};\mathbb{C})$;
+the sesquilinear evenisation $(a,b)\mapsto g_{a,b}$
+gives $g_{a,b}\in\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}$.
+Key properties of $g_{a,b}$: sesquilinear, even, Hermitian
+($g_{b,a}=\overline{g_{a,b}}$), and $g_{a,a}$ is
+\emph{positive-definite} (non-negative Fourier transform)
+but \emph{not} pointwise non-negative.
+All results are RH-free.\\
+\textbf{Patch 3 (2026-08-08):}
+Pointwise positivity $g_{a,a}\ge0$ removed ($\times[M]$,
+counterexample given); Hermitian symmetry and positive-definiteness
+correctly stated; $P_{\mathrm{Haar}}$ explicitly typed.
 \end{abstract}
 
 \section{Fourier Convention (NEU-220k, binding)}
@@ -47,10 +46,19 @@ The $2\pi$-factor from Parseval is globally absorbed.
 
 \section{Adelic Amplitude Space (exact definition, NEU-250r)}
 
-\begin{definition}[Haar projection]
-Let $P_{\mathrm{Haar}}: \mathcal{S}(\mathbb{A}_{\mathbb{Q}})\to C^\infty((0,\infty);\mathbb{C})$
-denote the standard Haar-measure projection of the adelic Schwartz space
-onto the archimedean amplitude.
+\begin{definition}[Haar projection, explicit]
+For $F\in\mathcal{S}(\mathbb{A}_{\mathbb{Q}})$, the Haar projection onto
+the archimedean component is
+\[
+  \boxed{
+  (P_{\mathrm{Haar}}F)(x)
+  := \int_{\mathbb{A}_{\mathbb{Q},f}} F(x,y)\,dy,
+  \qquad \operatorname{vol}(\widehat{\mathbb{Z}})=1.
+  }
+\]
+Here $x\in\mathbb{R}_{>0}$ and $y$ runs over the finite adeles
+$\mathbb{A}_{\mathbb{Q},f}$, integrated against the Haar measure
+normalised by $\operatorname{vol}(\widehat{\mathbb{Z}})=1$.
 \end{definition}
 
 \begin{definition}[Adelic amplitude space, NEU-250r $\checkmark$]
@@ -61,15 +69,13 @@ onto the archimedean amplitude.
   (P_{\mathrm{Haar}}F)|_{(0,\infty)} \in C_c^\infty((0,\infty);\mathbb{C})
   \bigr\}.}
 \]
-Compact support of $(P_{\mathrm{Haar}}F)|_{(0,\infty)}$ is the
-precise condition ensuring absolute convergence of the
-finite prime-power sum in $B_{\mathrm{fin}}$.
+Compact support of $(P_{\mathrm{Haar}}F)|_{(0,\infty)}$ ensures
+absolute convergence of $B_{\mathrm{fin}}$.
 \end{definition}
 
 \section{Stage 1: Port Map $R_{\mathrm{PW}}$ (exact formula, NEU-250r)}
 
 \begin{theorem}[Port map, NEU-250n--r $\checkmark$]
-The map
 \[
   \boxed{
   R_{\mathrm{PW}} : \mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}
@@ -78,56 +84,96 @@ The map
   (R_{\mathrm{PW}}F)(u) := e^{u/2}(P_{\mathrm{Haar}}F)(e^u),
   \quad u\in\mathbb{R},}
 \]
-is well-defined and $\mathbb{C}$-linear, with image in
-$\mathcal{A}_{\mathrm{PW}}:=C_c^\infty(\mathbb{R};\mathbb{C})$.
-
-The logarithmic reparametrisation $t=\log x$ and the factor $e^{u/2}$
-exactly match the Mellin-to-Fourier change of variables and the standard
-weight for the Weil functional.
+with $\mathcal{A}_{\mathrm{PW}}:=C_c^\infty(\mathbb{R};\mathbb{C})$.
+The reparametrisation $t=\log x$ and factor $e^{u/2}$ implement the
+Mellin-to-Fourier change of variables with standard Weil weight.
 \end{theorem}
 
-\section{Stage 2: Sesquilinear Evenisation to $\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}$}
+\section{Stage 2: Sesquilinear Evenisation}
 
 \begin{definition}[Cross-correlation kernel]
-For $a,b\in\mathcal{A}_{\mathrm{PW}}$, set
+For $a,b\in\mathcal{A}_{\mathrm{PW}}$:
 \[
   C_{a,b}(u) := (a*\check{\bar{b}})(u)
-  = \int_{\mathbb{R}} a(u+t)\,\overline{b(t)}\,dt, \qquad u\in\mathbb{R}.
+  = \int_{\mathbb{R}} a(u+t)\,\overline{b(t)}\,dt.
 \]
 \end{definition}
 
 \begin{definition}[Sesquilinear evenisation, NEU-250r $\checkmark$]
 \[
   \boxed{
-  g_{a,b}(u) := \tfrac{1}{2}\bigl[C_{a,b}(u) + C_{a,b}(-u)\bigr]
-  = \tfrac{1}{2}\bigl[(a*\check{\bar{b}})(u) + (a*\check{\bar{b}})(-u)\bigr].}
+  g_{a,b}(u) := \tfrac{1}{2}\bigl[C_{a,b}(u) + C_{a,b}(-u)\bigr].}
 \]
 \end{definition}
 
-\begin{proposition}[Properties of $g_{a,b}$, $\checkmark$]
+\begin{proposition}[Properties of $g_{a,b}$]
+\label{prop:gab}
+Let $a,b\in\mathcal{A}_{\mathrm{PW}}$. Then:
 \begin{enumerate}
-\item $g_{a,b}\in C_c^\infty(\mathbb{R};\mathbb{C})_{\mathrm{even}}$, i.e.\ $g_{a,b}\in\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}$.
-\item $g_{a,b}$ is sesquilinear: linear in $a$, antilinear in $b$.
-\item $g_{a,a}\ge0$ on $\mathbb{R}$.
+\item \textbf{Even, compactly supported:}
+  $g_{a,b}\in C_c^\infty(\mathbb{R};\mathbb{C})_{\mathrm{even}}$,
+  i.e.\ $g_{a,b}\in\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}$.
+\item \textbf{Sesquilinear:} $g_{a,b}$ is $\mathbb{C}$-linear in $a$
+  and antilinear in $b$.
+\item \textbf{Hermitian symmetry:}
+  $g_{b,a}(u) = \overline{g_{a,b}(u)}$.
+\item \textbf{Diagonal formula:}
+  $g_{a,a}(u) = \operatorname{Re}C_{a,a}(u)\in\mathbb{R}$
+  and $g_{a,a}(0)=\|a\|_{L^2}^2$.
+\item \textbf{Positive-definiteness:}
+  $\widehat{g_{a,a}}(t)
+  =\tfrac{1}{2}\bigl(|\hat{a}(t)|^2+|\hat{a}(-t)|^2\bigr)\ge0$.
+\item \textbf{Pointwise positivity fails ($\times[M]$):}
+  In general $g_{a,a}(u)\not\ge0$ for all $u$
+  (see counterexample below).
 \end{enumerate}
 \begin{proof}
-(Geradheit) $g_{a,b}(-u)=\tfrac12[C_{a,b}(-u)+C_{a,b}(u)]=g_{a,b}(u)$.\quad
-(Sesquilinearit\"at) $C_{a,b}$ is linear in $a$ and antilinear in $b$; the same
-holds for $u\mapsto C_{a,b}(-u)$, hence for $g_{a,b}$.\quad
-(Positivit\"at) $g_{a,a}(u)=\mathrm{Re}\,C_{a,a}(u)$
-and $C_{a,a}$ is the autocorrelation of $a$, which has non-negative
-Fourier transform.
+(1)~Evenness: $g_{a,b}(-u)=\tfrac12[C_{a,b}(-u)+C_{a,b}(u)]=g_{a,b}(u)$.
+Compact support follows from $a,b\in C_c^\infty$.\quad
+(2)~Sesquilinearity: $C_{a,b}$ is linear in $a$, antilinear in $b$;
+the same holds for $u\mapsto C_{a,b}(-u)$, hence for $g_{a,b}$.\quad
+(3)~Hermitian symmetry: $C_{b,a}(u)=\overline{C_{a,b}(-u)}$, so
+$g_{b,a}(u)=\tfrac12[C_{b,a}(u)+C_{b,a}(-u)]
+=\tfrac12[\overline{C_{a,b}(-u)}+\overline{C_{a,b}(u)}]
+=\overline{g_{a,b}(u)}$.\quad
+(4)~Diagonal: $g_{a,a}=\tfrac12[C_{a,a}+\overline{C_{a,a}}]=\operatorname{Re}C_{a,a}$
+(using $C_{a,a}(-u)=\overline{C_{a,a}(u)}$ for real $a$, and by
+continuous extension for complex $a$). At $u=0$:
+$C_{a,a}(0)=\int|a(t)|^2dt=\|a\|_{L^2}^2\in\mathbb{R}$.\quad
+(5)~Positive-definiteness: with our Fourier convention,
+$\widehat{C_{a,a}}(t)=|\hat{a}(t)|^2$ and
+$\widehat{C_{a,a}(-\cdot)}(t)=|\hat{a}(-t)|^2$, hence
+$\widehat{g_{a,a}}(t)=\tfrac12(|\hat{a}(t)|^2+|\hat{a}(-t)|^2)\ge0$.\quad
+(6)~See counterexample.
 \end{proof}
 \end{proposition}
 
-\begin{remark}[Type error in earlier draft corrected]
-The draft contained
-$g_{a,b}(u)=\tfrac12(a*\check{\bar{b}})(u)+\tfrac12(b*\check{\bar{a}})(u)$.
-This interchanges $a$ and $b$ in the second term.
-Since in general
-$C_{b,a}(u)=\overline{C_{a,b}(-u)}\neq C_{a,b}(-u)$,
-the draft formula is neither the same operation nor necessarily even.
-The correct formula uses $C_{a,b}(u)+C_{a,b}(-u)$.
+\begin{remark}[Counterexample: pointwise positivity fails, $\times[M]$]
+Choose real $0\ne\varphi\in C_c^\infty(\mathbb{R})$ with support
+in $[0,\delta]$, $\delta$ small, and $L>2\delta$. Set
+$a(t):=\varphi(t)-\varphi(t-L)$.
+The supports of $\varphi(\cdot)$ and $\varphi(\cdot-L)$ are disjoint, so
+\[
+  C_{a,a}(L)
+  = \int a(L+t)\overline{a(t)}\,dt
+  = \int\varphi(L+t)\overline{\varphi(t)}\,dt
+  -\int\varphi(t)\overline{\varphi(t)}\,dt
+  = 0 - \|\varphi\|_2^2.
+\]
+(The first integral vanishes because $\varphi(L+\cdot)$ and
+$\varphi(\cdot)$ have disjoint supports.)
+Since $a$ is real, $C_{a,a}(L)=C_{a,a}(-L)$, so
+\[
+  g_{a,a}(L)
+  = \tfrac12\bigl(C_{a,a}(L)+C_{a,a}(-L)\bigr)
+  = -\|\varphi\|_2^2 < 0. \qquad\times[M]
+\]
+Note: $\widehat{g_{a,a}}\ge0$ nevertheless (Proposition~\ref{prop:gab}(5)).
+The error in an earlier draft was the inference
+``non-negative Fourier transform $\Rightarrow$ pointwise non-negative'';
+the correct implication is: non-negative Fourier transform
+$\Leftrightarrow$ positive-definite, which does not imply
+pointwise non-negativity.
 \end{remark}
 
 \section{Complete Hermitian Weil Form (NEU-252 Patch, M3)}
@@ -147,11 +193,15 @@ The correct formula uses $C_{a,b}(u)+C_{a,b}(-u)$.
 \]
 \end{definition}
 
+\begin{remark}[Sign of $B_{\mathrm{fin}}$]
+Since $g_{a,a}(u)$ is not pointwise non-negative,
+$B_{\mathrm{fin}}(a,a)$ does not have a definite sign from the prime-sum alone.
+This is consistent with the RH-conditional nature of semiboundedness (P03).
+\end{remark}
+
 \begin{theorem}[Identification with literature, NEU-258 $\checkmark$]
 $W_{\mathrm{NEU}\text{-}252} = W_{\mathrm{Lit}}$
-(Weil 1952, Bombieri 2000, Suzuki 2011/2025):
-all $2\pi$-factors, the sign $-2\Lambda(n)/\sqrt{n}$,
-coordinate $s=\tfrac{1}{2}+it$, and pole terms agree exactly.
+(Weil 1952, Bombieri 2000, Suzuki 2011/2025).
 \end{theorem}
 
 \section{Canonical compression formula}
@@ -165,24 +215,19 @@ coordinate $s=\tfrac{1}{2}+it$, and pole terms agree exactly.
   }
 \]
 
-\begin{remark}[Two distinct stages]
-The first arrow $R_{\mathrm{PW}}$ acts on a single amplitude
-$F\mapsto a=(R_{\mathrm{PW}}F)$.
-The second arrow acts on a pair $(a,b)\mapsto g_{a,b}$,
-and is sesquilinear (not just linear). Merging these two stages is a type error.
-\end{remark}
-
 \section{Audit status}
 
-SYN-Audit Patch 2: 2026-08-08.\newline
-Corrections from Patch 1:\newline
-(a) $\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$ restored to exact NEU-250r definition
-  via $P_{\mathrm{Haar}}$-projection;\newline
-(b) $R_{\mathrm{PW}}$: exact formula $(R_{\mathrm{PW}}F)(u)=e^{u/2}(P_{\mathrm{Haar}}F)(e^u)$ restored;\newline
-(c) $g_{a,b}$: corrected to sesquilinear evenisation
-  $\tfrac12[C_{a,b}(u)+C_{a,b}(-u)]$;
-  draft error (swap of $a,b$ in second term) documented.\newline
-Source nodes: NEU-250n, 250o, 250p, 250q, 250r, NEU-252 (Patch)
-(archive-nodes/07-weil-explizitformel/).
+SYN-Audit Patch 3 (kanonische Tagesreferenz): 2026-08-08.\newline
+Patches from draft to Patch 3:\newline
+(a) $\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$: exact NEU-250r definition via $P_{\mathrm{Haar}}$.\newline
+(b) $R_{\mathrm{PW}}$: exact formula $(R_{\mathrm{PW}}F)(u)=e^{u/2}(P_{\mathrm{Haar}}F)(e^u)$.\newline
+(c) $g_{a,b}$: corrected to $\tfrac12[C_{a,b}(u)+C_{a,b}(-u)]$
+  (draft error with swapped $a,b$ removed).\newline
+(d) Pointwise positivity $g_{a,a}\ge0$: $\times[M]$,
+  counterexample $a=\varphi-\varphi(\cdot-L)$ added.\newline
+(e) Correct properties: Hermitian symmetry $g_{b,a}=\overline{g_{a,b}}$,
+  diagonal formula, positive-definiteness $\widehat{g_{a,a}}\ge0$.\newline
+(f) $P_{\mathrm{Haar}}$ explicitly typed with Haar normalisation.\newline
+Source nodes: NEU-250n, 250o, 250p, 250q, 250r, NEU-252 (Patch).
 
 \end{document}
