@@ -1,0 +1,84 @@
+\documentclass[11pt,a4paper]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{P03 --- Haar-$L^2$ Firewall: $B_W$ Cannot Close on $L^2(\mathbb{R},du)$}
+\author{Objekt-X-Programm}
+\date{2026-08-08 (SYN, Entwurf)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We consolidate NEU-253--258 and the NEU-257 Patch.
+We show: (i) $L^2$-semiboundedness of $B_W \Leftrightarrow$ RH;
+(ii) under RH, $B_W$ is not closable on Haar-$L^2(\mathbb{R},du)$;
+(iii) Kato/KLMN on $L^2(\mathbb{R},du)$ fails ($\times[M]$).
+We identify $\mathcal{H}_W \cong \ell^2(\Gamma,m_\gamma)$ under RH
+(Suzuki 2025). The correct Weil Hilbert geometry is singular
+relative to Lebesgue measure. All statements RH-conditional
+as indicated.
+\end{abstract}
+
+\section{Background Space and Semiboundedness}
+
+\begin{theorem}[$L^2$-Semiboundedness $\Leftrightarrow$ RH, NEU-257 $\checkmark$]
+\[
+  B_W \text{ is semibounded on } L^2(\mathbb{R},du) \iff \mathrm{RH}.
+\]
+\end{theorem}
+
+\section{Non-Closability under RH}
+
+\begin{theorem}[Non-closability, NEU-257 $\checkmark$]
+Assuming RH,
+\[
+  B_W \text{ is not closable on } L^2(\mathbb{R},du).
+\]
+\end{theorem}
+
+\begin{proof}
+The spectral measure $\mu_W = \sum_\gamma m_\gamma\delta_\gamma$ is
+singular with respect to Lebesgue measure; the Bochner--Schwartz
+construction requires a translation-invariant measure compatible
+with $\mu_W$, which $du$ is not. See NEU-257 Patch for full argument.
+\end{proof}
+
+\section{Kato/KLMN No-Go}
+
+\begin{theorem}[Kato/KLMN $\times[M]$, NEU-257 $\checkmark$]
+The Kato--Lions--Milgram--Necas theorem does not apply to
+$B_W$ on $H_0=L^2(\mathbb{R},du)$.
+\end{theorem}
+
+\section{Weil Hilbert Space under RH}
+
+\begin{theorem}[Weil Hilbert space, Suzuki 2025, NEU-257 $\checkmark$]
+Assuming RH,
+\[
+  \mathcal{H}_W \cong L^2(\tau) \cong \ell^2(\Gamma,m_\gamma).
+\]
+\end{theorem}
+
+\section{Consequence: Correct Geometry is Singular}
+
+\begin{remark}
+The correct Weil Hilbert geometry is not an operator on
+$L^2(\mathbb{R},du)$; it is a singular spectral geometry
+supported on zero-ordinates. This motivates the finite
+interval construction of P04.
+\end{remark}
+
+\section{Source Nodes}
+
+NEU-253, 254, 255, 256, 257 (Patch), 258
+(archive-nodes/07-weil-explizitformel/).
+
+\end{document}

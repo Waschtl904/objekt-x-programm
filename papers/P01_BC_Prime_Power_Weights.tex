@@ -1,0 +1,72 @@
+\documentclass[11pt,a4paper]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{P01 --- BC Prime-Power Weights and Local Arithmetic Structure}
+\author{Objekt-X-Programm}
+\date{2026-08-08 (SYN, Entwurf)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We consolidate the local arithmetic results of NEU-250b--j.
+Starting from the Bost--Connes (BC) C*-dynamical system and
+the Frobenius--Nakayama construction, we derive that the
+von-Mangoldt weight $\Lambda(p^k)/\sqrt{p^k}$ arises canonically
+from BC/Frobenius/energy, and we establish the support
+separation between primes and prime powers at the local level.
+All results are unconditional (RH-free).
+\end{abstract}
+
+\section{Setup: BC System and Local Data}
+
+\begin{definition}[BC C*-dynamical system]
+Let $(\mathcal{A}_{\mathrm{BC}}, \sigma_t)$ denote the
+Bost--Connes system with time evolution $\sigma_t(\mu_n)=n^{it}\mu_n$.
+For each prime power $p^k$, the Frobenius element $\mathrm{Frob}_{p^k}$
+acts on the arithmetic side via the Nakayama functor.
+\end{definition}
+
+\begin{theorem}[Prime-power weight derivation, NEU-250b--j $\checkmark$]
+Let $E_{p^k}$ denote the energy eigenvalue at level $p^k$.
+Then
+\[
+  \frac{\Lambda(p^k)}{\sqrt{p^k}} 
+  = \frac{\log p}{p^{k/2}}
+\]
+arises as the BC/Frobenius/Nakayama--energy contribution, canonically
+and RH-free.
+\end{theorem}
+
+\begin{proof}
+See NEU-250b--j (archive-nodes/07-weil-explizitformel/) for the full
+derivation. Consolidated here: the half-integer power $p^{-k/2}$ comes
+from the modular weight; $\log p$ comes from the time-derivative of the
+Frobenius eigenvalue $p^{it}$ at $t=0$.
+\end{proof}
+
+\begin{proposition}[Support separation, NEU-250j $\checkmark$]
+The prime-power contributions are supported on $\{p^k : k\ge 1\}$
+and are mutually disjoint for distinct prime powers.
+\end{proposition}
+
+\begin{remark}[No-Go record]
+Earlier attempts (NEU-220 series) to derive $\Lambda(p^k)/\sqrt{p^k}$
+directly from a global L2 operator were abandoned; the local
+BC/Frobenius approach is the correct level of description.
+\end{remark}
+
+\section{Source Nodes}
+
+NEU-250b, 250c, 250d, 250e, 250f, 250g, 250h, 250i, 250j
+(archive-nodes/07-weil-explizitformel/).
+
+\end{document}

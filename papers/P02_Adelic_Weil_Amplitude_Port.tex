@@ -1,0 +1,98 @@
+\documentclass[11pt,a4paper]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{P02 --- Adelic Weil Amplitude Port and Complete Hermitian Weil Form}
+\author{Objekt-X-Programm}
+\date{2026-08-08 (SYN, Entwurf)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We consolidate NEU-250n--r and NEU-252 (Patch).
+Starting from the adelic amplitude space $\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$,
+we construct the port map $R_{\mathrm{PW}}$ to the Paley--Wiener
+target $\mathcal{A}_{\mathrm{PW}}$, extend to complex amplitudes,
+polarise to the full hermitian Weil form $B_W$, and
+identify the three blocks $B_{\mathrm{pole}}+B_\Gamma+B_{\mathrm{fin}}$
+in M3 form. All results are RH-free.
+\end{abstract}
+
+\section{Fourier Convention (NEU-220k, binding)}
+
+\begin{definition}[Fourier convention]
+\[
+  \hat f(t) := \int_{\mathbb{R}} f(u)\,e^{itu}\,du.
+\]
+The $2\pi$-factor from Parseval is globally absorbed.
+\end{definition}
+
+\section{Adelic Amplitude Space and Port Map}
+
+\begin{definition}[Adelic amplitude space]
+$\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$ consists of
+admissible adelic test pairs $(a,b)$ with $a,b\in\mathcal{S}(\mathbb{R})$,
+complex amplitudes included.
+\end{definition}
+
+\begin{theorem}[Port map and Paley--Wiener target, NEU-250n--r $\checkmark$]
+The port map
+\[
+  R_{\mathrm{PW}}: \mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}
+  \longrightarrow \mathcal{A}_{\mathrm{PW}},
+  \qquad (a,b)\mapsto g_{a,b}
+\]
+is well-defined, and the image lies in $\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}$,
+the space of even complex Schwartz functions.
+\end{theorem}
+
+\section{Complete Hermitian Weil Form (NEU-252 Patch, M3)}
+
+\begin{definition}[Weil form, M3]
+\[
+  B_W(a,a) = B_{\mathrm{pole}}(a,a) + B_\Gamma(a,a) + B_{\mathrm{fin}}(a,a),
+\]
+with
+\[
+  B_{\mathrm{fin}}(a,a) = -2\sum_{n\ge 2}\frac{\Lambda(n)}{\sqrt{n}}\,g_{a,a}(\log n),
+\]
+\[
+  B_{\mathrm{pole}}(a,a) = \hat g_{a,a}(i/2)+\hat g_{a,a}(-i/2),
+\]
+\[
+  B_\Gamma(a,a) = \int_{\mathbb{R}}|\hat a(t)|^2\,\mathrm{Re}\,\gamma_\infty(t)\,dt.
+\]
+\end{definition}
+
+\begin{theorem}[Normierung: Repo = Literatur, NEU-258 $\checkmark$]
+With the Fourier convention above,
+$W_{\mathrm{NEU}\text{-}252} = W_{\mathrm{Lit}}$ (Weil 1952, Bombieri 2000,
+Suzuki 2011/2025): all factors $2\pi$, sign in $-2\Lambda(n)/\sqrt{n}$,
+coordinate $s=\tfrac12+it$, and pole terms agree exactly.
+\end{theorem}
+
+\section{Canonical compression formula}
+
+\[
+  \boxed{
+  \mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}
+  \xrightarrow{R_{\mathrm{PW}}} \mathcal{A}_{\mathrm{PW}}
+  \xrightarrow{(a,b)\mapsto g_{a,b}} \mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}
+  \xrightarrow{\mathrm{Weil}} B_W.
+  }
+\]
+
+\section{Source Nodes}
+
+NEU-250n, 250o, 250p, 250q, 250r, NEU-252 (Patch)
+(archive-nodes/07-weil-explizitformel/).
+
+\end{document}

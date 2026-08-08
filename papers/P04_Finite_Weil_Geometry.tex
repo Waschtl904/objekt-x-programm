@@ -1,0 +1,128 @@
+\documentclass[11pt,a4paper]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{P04 --- Finite Weil Geometry and the Objekt-X Interface}
+\author{Objekt-X-Programm}
+\date{2026-08-08 (SYN, in Arbeit)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We consolidate NEU-259, 260a, 260b (in progress).
+For each $a>0$, Suzuki (2026) constructs RH-free a
+self-adjoint operator $A_a$, a Hilbert space $\mathcal{H}(T_a)$,
+and a family $\overline{\mathscr{D}}_{a,\theta}$ of self-adjoint
+first-order extensions whose eigenvalues converge (conjecturally)
+to the imaginary parts of the non-trivial zeros.
+We identify the canonical RH-free shift $\lambda_{\mathrm{can}}(a)=\lambda_a-1$,
+exhibit the gauge freedom $\theta\mapsto\theta+\beta-\alpha$,
+and formulate the arithmetic canonicity problem: does
+the BC/adelic involution canonically pair the deficiency
+lines $\mathcal{N}_{+,a}\leftrightarrow\mathcal{N}_{-,a}$?
+\end{abstract}
+
+\section{Operator chain (Suzuki 2026, RH-free)}
+
+\begin{theorem}[Operator chain, NEU-259 $\checkmark$]
+For every $a>0$, the following objects exist unconditionally:
+\[
+  Q_W^a \longrightarrow A_a \longrightarrow T_{a,\lambda} := A_a-\lambda I
+  \longrightarrow \mathcal{H}(T_{a,\lambda})
+  \longrightarrow \overline{\mathscr{D}}_{a,\theta}.
+\]
+Specifically:
+\begin{enumerate}
+\item $Q_W^a$ is semibounded and closable on $L^2(-a,a)$.
+\item $A_a = A_a^*$ with discrete spectrum bounded below.
+\item For $\lambda < \lambda_a := \inf\sigma(A_a)$:
+  $T_{a,\lambda} > 0$ and $\mathcal{H}(T_{a,\lambda})$ is a Hilbert space.
+\item $\overline{\mathscr{D}}_{a,\theta} = (\overline{\mathscr{D}}_{a,\theta})^*$
+  on $\mathcal{H}(T_{a,\lambda})$ for each $\theta\in[0,2\pi)$,
+  deficiency indices $(1,1)$.
+\end{enumerate}
+\end{theorem}
+
+\section{Canonical RH-free shift}
+
+\begin{proposition}[RH-free gauge fix, NEU-260a $\checkmark$]
+\[
+  \lambda_{\mathrm{can}}(a) := \lambda_a - 1, \qquad
+  T_a^{\mathrm{can}} = A_a - (\lambda_a-1)I \ge I > 0.
+\]
+This is unconditional. The choice $\lambda=0$ requires RH
+($A_a > 0$ holds under RH by Suzuki).
+\end{proposition}
+
+\section{Gauge freedom and intrinsic datum $U_a$}
+
+\begin{proposition}[Gauge freedom, NEU-260b $\checkmark$]
+Under $v_\pm \mapsto e^{i\alpha_\pm}v_\pm$, the parameter transforms
+as $\theta\mapsto\theta+\beta-\alpha$. The intrinsic datum is the
+unitary operator
+\[
+  U_a:\mathcal{N}_{+,a}\longrightarrow\mathcal{N}_{-,a},
+\]
+where $\mathcal{N}_{\pm,a} = \ker(\mathscr{D}_a^*\mp i)$.
+The number $\theta$ is only a coordinate after a choice of bases.
+\end{proposition}
+
+\section{Arithmetic canonicity problem (open)}
+
+\begin{conjecture}[Reflection symmetry, NEU-260b $?[O]$]
+The Weil form satisfies
+\[
+  Q_W^a(f,f) = Q_W^a(\tilde f,\tilde f), \qquad
+  \tilde f(x) := \overline{f(-x)}.
+\]
+If true, the reflection $x\mapsto -x$ provides the canonical
+pairing $U_a^\sigma:\mathcal{N}_{+,a}\to\mathcal{N}_{-,a}$ with
+$\theta_{\mathrm{can}}(a)=0$.
+\end{conjecture}
+
+\begin{conjecture}[Suzuki limit, Suzuki 2026]
+\[
+  e^{\phi(a,z)} W(a,\theta(a);z) \longrightarrow
+  \frac{z^2 \xi(1/2-iz)}{\xi'(1/2-iz)},
+  \quad a\to\infty,\text{ locally uniform.}
+\]
+Suzuki notes that $\phi\equiv 0$ may suffice.
+\end{conjecture}
+
+\section{Objekt-X hypothesis}
+
+\begin{definition}[Objekt X, NEU-259/260 $?[O]$]
+\[
+  \text{Objekt X} := \left\{\mathcal{H}(T_{a,\lambda_{\mathrm{can}}(a)}),\;
+  J_{a,b},\; \overline{\mathscr{D}}_{a,\theta(a)}\right\}_{0<a<b},
+\]
+with arithmetic-canonical $\theta(a)$, $\phi(a,z)$, $J_{a,b}$.
+Under RH: $\mathcal{K}_X := \varinjlim_a\mathcal{H}(T_a)
+\xrightarrow{\mathrm{RH}}\mathcal{H}_W\cong\ell^2(\Gamma,m_\gamma)$.
+\end{definition}
+
+\section{Open problems (P04)}
+
+\begin{enumerate}
+\item $Q_W^a$-reflection symmetry $\Rightarrow$ $\theta_{\mathrm{can}}(a)=0$? (NEU-260b)
+\item Grenznormalisierung $\phi(a,z)$: arithmetic determination? (NEU-260c)
+\item Canonical $J_{a,b}$ with intertwining
+  $J_{a,b}\overline{\mathscr{D}}_{a,\theta(a)}\subset
+  \overline{\mathscr{D}}_{b,\theta(b)}J_{a,b}$? (NEU-260d)
+\end{enumerate}
+
+\section{Source Nodes}
+
+NEU-259 (final, Patch 2), NEU-260a (Patch), NEU-260b
+(active/).
+
+\end{document}
