@@ -2,8 +2,9 @@
 
 **Katalog-ID:** NEU-260a  
 **Ordner:** `07-weil-explizitformel`  
-**Datum:** 2026-08-07  
-**Auftrag:** (1) Topologische Äquivalenz $\mathcal{H}(T_{a,\lambda_1})\cong\mathcal{H}(T_{a,\lambda_2})$ $\checkmark[K/M]$; (2) Spektralinvarianz $\sigma(\overline{\mathscr{D}}_{a,\theta}^{(\lambda_1)})\stackrel{?}{=}\sigma(\overline{\mathscr{D}}_{a,\theta'}^{(\lambda_2)})$ $?[O]$.  
+**Datum:** 2026-08-07 (Patch: 2026-08-08)  
+**Auftrag:** (1) Topologische Äquivalenz $\mathcal{H}(T_{a,\lambda_1})\cong\mathcal{H}(T_{a,\lambda_2})$ $\checkmark[K/M]$; (2) Spektralinvarianz $\sigma(\overline{\mathscr{D}}_{a,\theta}^{(\lambda_1)})\stackrel{?}{=}\sigma(\overline{\mathscr{D}}_{a,\theta'}^{(\lambda_2)})$ $?[O]$; (3) RH-freier Gauge-Fix $\lambda_{\rm can}(a):=\lambda_a-1$ $\checkmark[K/M]$.  
+**Patch:** $\lambda=0$ als RH-konditional markiert; $\lambda_{\rm can}(a)=\lambda_a-1$ als RH-freier kanonischer Gauge-Fix eingetragen.  
 **Vorgänger:** NEU-260 (Hauptknoten)  
 
 ---
@@ -16,9 +17,11 @@ $$
 $$
 Auf jedem existiert eine $S^1$-Familie $\overline{\mathscr{D}}_{a,\theta}^{(\lambda)}$ von sa. Erweiterungen von $i\frac{d}{dx}$.
 
-**Frage 1 (Topologie):** $\mathcal{H}(T_{a,\lambda_1})\cong\mathcal{H}(T_{a,\lambda_2})$ kanonisch?
+**Frage 1 (Topologie):** $\mathcal{H}(T_{a,\lambda_1})\cong\mathcal{H}(T_{a,\lambda_2})$ kanonisch? $\checkmark[K/M]$
 
-**Frage 2 (Spektrum):** $\sigma(\overline{\mathscr{D}}_{a,\theta}^{(\lambda_1)}) = \sigma(\overline{\mathscr{D}}_{a,\theta'(\lambda_1,\lambda_2,\theta)}^{(\lambda_2)})$ für geeignetes $\theta'$?
+**Frage 2 (Spektrum):** $\sigma(\overline{\mathscr{D}}_{a,\theta}^{(\lambda_1)}) = \sigma(\overline{\mathscr{D}}_{a,\theta'(\lambda_1,\lambda_2,\theta)}^{(\lambda_2)})$? $?[O]$
+
+**Frage 3 (Gauge-Fix):** Welche Wahl $\lambda(a)$ ist RH-frei kanonisch? $\checkmark[K/M]$ (Patch)
 
 ---
 
@@ -69,7 +72,7 @@ $$
 \overline{\mathscr{D}}_{a,\theta}^{(\lambda_1)} \quad\xmapsto{\iota_{\lambda_1,\lambda_2}}\quad \overline{\mathscr{D}}_{a,\theta'(\lambda_1,\lambda_2,\theta)}^{(\lambda_2)}. \qquad (2\text{-Transport})
 $$
 
-Die Defizienträume $\mathcal{N}_{\pm i}^{(\lambda)} := \ker(\mathscr{D}_a^{*,(\lambda)}\mp i)$ sind je eindimensional und werden durch $\iota_{\lambda_1,\lambda_2}$ isomorph abgebildet, aber **nicht notwendig unitär**. Die Parametrisierungsverschiebung $\theta\mapsto\theta'$ hängt davon ab, wie $\iota_{\lambda_1,\lambda_2}$ die normierten Defizientvektoren dreht.
+Die Defizienträume $\mathcal{N}_{\pm,a}^{(\lambda)} := \ker(\mathscr{D}_a^{*,(\lambda)}\mp i)$ sind je eindimensional und werden durch $\iota_{\lambda_1,\lambda_2}$ isomorph abgebildet, aber nicht unitär. Die Parametrisierungsverschiebung $\theta\mapsto\theta'$ hängt davon ab, wie $\iota_{\lambda_1,\lambda_2}$ die normierten Defizientvektoren dreht.
 
 $$
 \boxed{\exists\,\theta'(\lambda_1,\lambda_2,\theta)\text{ s.d. }\sigma\left(\overline{\mathscr{D}}_{a,\theta}^{(\lambda_1)}\right) = \sigma\left(\overline{\mathscr{D}}_{a,\theta'}^{(\lambda_2)}\right)?\quad?[O]} \qquad (2\text{-SpecInv})
@@ -83,33 +86,47 @@ $$
 \sigma(W(a,\theta;z))\text{ ist }\lambda\text{-unabhängig: Suzuki-Erwartung, kein Satz.}\quad?[O] \qquad (2\text{-Suzuki})
 $$
 
-### 2.3 Praktische Konsequenz
+---
 
-Solange $(2\text{-SpecInv})$ offen ist, soll jeder folgende Knoten eine explizite Wahl $\lambda(a)$ mitführen. Natürlicher Kandidat: $\lambda(a)=0$ (falls $\lambda_a>0$) oder eine arithmetisch motivierte Wahl $\to$ NEU-260b kann $\lambda=0$ als Konvention setzen, falls die $\theta$-Selektion unabhängig von $\lambda$ formulierbar ist.
+## 3. RH-freier Gauge-Fix (Patch) $\checkmark[K/M]$
+
+### 3.1 Warum $\lambda=0$ nicht als RH-freie Konvention taugt
+
+Suzuki darf unter RH $\lambda=0$ wählen, weil RH $\Rightarrow$ $A_a>0$ $\forall a$. Aber:
 
 $$
-\text{Kanonische }\lambda(a)\text{-Konvention: niedrige Priorität; nach NEU-260b neu bewerten.}\quad?[O] \qquad (2\text{-Conv})
+\boxed{\lambda=0\text{ ist RH-konditional: }T_{a,0}=A_a>0\text{ gilt nur unter RH.}\quad\times[M]\text{ als RH-freie Konvention.}} \qquad (3\text{-RH0})
 $$
+
+Scheitert RH, existiert ein $a_0$ mit $\lambda_{a_0} = \inf\sigma(A_{a_0}) < 0$. Dann wäre $T_{a_0,0}=A_{a_0}$ nicht positiv, und $\mathcal{H}(T_{a_0,0})$ in Suzukis Sinn nicht verfügbar.
+
+### 3.2 Kanonischer RH-freier Gauge-Fix
+
+$$
+\boxed{\lambda_{\rm can}(a) := \lambda_a - 1, \qquad T_a^{\rm can} := A_a - (\lambda_a-1)I = (A_a-\lambda_a I) + I \ge I > 0.\quad\checkmark[K/M]\text{ (RH-frei)}} \qquad (3\text{-Can})
+$$
+
+**Warum das funktioniert:** $\lambda_a = \inf\sigma(A_a)$ existiert RH-frei (Suzuki beweist seine Existenz und Stetigkeit in $a$). Damit ist $A_a - \lambda_a I \ge 0$ und $T_a^{\rm can} = (A_a-\lambda_a I)+I \ge I$ unabhängig vom Vorzeichen von $\lambda_a$.
+
+**Warum $-1$:** Der Verschiebungswert $1$ korrespondiert mit den Defizienzpunkten $\pm i$ in der von-Neumann-Theorie (Konvention $\mathscr{D}_a^* \pm iI$). Andere Werte $\delta>0$ wären topologisch äquivalent; $\delta=1$ ist die natürliche Wahl.
+
+$$
+\boxed{\lambda=0\text{ RH-konditional;}\quad\lambda_{\rm can}(a)=\lambda_a-1\text{ RH-freier Gauge-Fix.}\quad\checkmark[K/M]} \qquad (3\text{-Summary})
+$$
+
+**Konsequenz für folgende Knoten:** NEU-260b und spätere Knoten verwenden $\lambda=\lambda_{\rm can}(a)=\lambda_a-1$ als Standardwahl. Die Spektralinvarianzfrage $(2\text{-SpecInv})$ bleibt offen, hat aber mit dieser Konvention niedrige operative Priorität.
 
 ---
 
-## 3. Statusbuchungen
+## 4. Statusbuchungen
 
-$$\mathcal{H}(T_{a,\lambda_1})\cong\mathcal{H}(T_{a,\lambda_2})\text{ (kanonisch)}\quad\checkmark[K/M]\qquad(3\text{-a})$$
-$$C_{\lambda_1,\lambda_2,a}=(\lambda_a-\lambda_1)/(\lambda_a-\lambda_2)\quad\checkmark[K/M]\qquad(3\text{-b})$$
-$$\lambda\text{ ist Gauge für Hilbertraumtopologie}\quad\checkmark[K/M]\qquad(3\text{-c})$$
-$$\sigma(\overline{\mathscr{D}}_{a,\theta}^{(\lambda_1)})=\sigma(\overline{\mathscr{D}}_{a,\theta'}^{(\lambda_2)})\text{ (Spektralinvarianz)}\quad?[O]\qquad(3\text{-d})$$
-$$\theta\mapsto\theta'(\lambda_1,\lambda_2,\theta)\text{ (Parametrisierungsverschiebung)}\quad?[O]\qquad(3\text{-e})$$
-$$\lambda\text{-Unabhängigkeit }W(a,\theta;z)\text{-Nullstellen (Suzuki): Erwartung, kein Satz}\quad?[O]\qquad(3\text{-f})$$
-$$\lambda(a)=0\text{ als Konvention nach NEU-260b neu bewerten}\quad?[O]\qquad(3\text{-g})$$
-
----
-
-## 4. Übergang zu NEU-260b
-
-$$
-\boxed{\lambda\text{-Audit: Topologie }\checkmark[K/M].\quad\text{Spektralinvarianz: }?[O]\text{ (präzise eingegrenzt).}\quad\text{Nächster Knoten: NEU-260b }(\theta\text{-Selektion).}} \qquad (4\text{-Close})
-$$
+$$\mathcal{H}(T_{a,\lambda_1})\cong\mathcal{H}(T_{a,\lambda_2})\text{ (kanonisch)}\quad\checkmark[K/M]\qquad(4\text{-a})$$
+$$C_{\lambda_1,\lambda_2,a}=(\lambda_a-\lambda_1)/(\lambda_a-\lambda_2)\quad\checkmark[K/M]\qquad(4\text{-b})$$
+$$\lambda\text{ ist Gauge für Hilbertraumtopologie}\quad\checkmark[K/M]\qquad(4\text{-c})$$
+$$\lambda=0\text{ ist RH-konditional}\quad\times[M]\text{ als RH-freie Konvention}\qquad(4\text{-d})$$
+$$\lambda_{\rm can}(a):=\lambda_a-1,\;T_a^{\rm can}\ge I\quad\checkmark[K/M]\text{ (RH-frei)}\qquad(4\text{-e})$$
+$$\sigma(\overline{\mathscr{D}}_{a,\theta}^{(\lambda_1)})=\sigma(\overline{\mathscr{D}}_{a,\theta'}^{(\lambda_2)})\text{ (Spektralinvarianz)}\quad?[O]\text{ (niedrige Priorität)}\qquad(4\text{-f})$$
+$$\lambda\text{-Unabhängigkeit }W(a,\theta;z)\text{-Nullstellen (Suzuki): Erwartung, kein Satz}\quad?[O]\qquad(4\text{-g})$$
 
 ---
 
@@ -119,11 +136,11 @@ $$
 |---|---|---|
 | NEU-260 | Hauptknoten | Klassifikation |
 | NEU-259 (Patch 2) | 7ce07e0 | $\lambda$ als Gauge abgestuft |
-| Suzuki 2026 | Abstract, §2 | $T_{a,\lambda}$, $W(a,\theta;z)$, $\lambda$-Erwartung |
-| von Neumann | — | Defizienträume, $\theta$-Parametrisierung |
+| Suzuki 2026 | Abstract, \S{}2 | $T_{a,\lambda}$, $\mathcal{H}(T_{a,\lambda})$, $\lambda_a$ stetig, $\lambda=0$ unter RH |
+| von Neumann | — | Defizienträume, Defizienzpunkte $\pm i$ |
 | Kato 1966 | — | Formäquivalenz |
 
 ---
 
 *Lizenz: CC BY 4.0 — Objekt-X-Programm, öffentliche Fassung.*  
-*Erstellt 2026-08-07. Schließt $\lambda$-Topologiefrage $\checkmark$; öffnet Spektralinvarianz präzise $?[O]$. Gibt NEU-260b frei.*
+*Erstellt 2026-08-07. Patch 2026-08-08: $\lambda_{\rm can}(a)=\lambda_a-1$ als RH-freier Gauge-Fix $\checkmark[K/M]$. Gibt NEU-260b frei.*
