@@ -1,194 +1,72 @@
-# NEU-114 — Rückbindung des Spektralschattens an Objekt X
+# NEU-114 — Rückbindung: Spektralschatten und Objekt X
 
-**Stand: 1. Juli 2026 | Patch: 4. Juli 2026 (m_{Omega,N}-Verweis)**
-
----
-
-## Ausgangsbefund
-
-Die Analyse NEU-77–113 hat nicht Objekt X selbst konstruiert, sondern dessen
-spektrale Projektion auf die kritische γ-Achse freigelegt.
-Der aktuelle Pfad
-
-```
-A_N^{Jac,-}  ->  m_{Omega,N}  ->  m_arith  ->  Q_Weil
-```
-
-ist daher als **Spektralschatten-Spur** von X zu klassifizieren, nicht als
-Konstruktion von X selbst.
-
-> **Patch (4. Juli 2026):**
-> m_{Omega,N} ist **nicht** in NEU-77–83 als definierte Größe vorhanden.
-> Definition (Weyl-Herglotz-Funktion des Jacobi-Operators) und Statusbewertung: **NEU-119**.
-> Übergang m_{Omega,N} -> m_arith (Bombieri-Normalisierung): **NEU-120** (offen).
+**Stand:** 1. Juli 2026 | **Patch:** 8. August 2026 (Pass-A Gruppe E, E-2/6)
+**Prüfart:** TARGETED-REAUDIT
+**Vorgänger:** NEU-113 (Patch E-1/6)
+**Nächste Nummer:** NEU-115
 
 ---
 
-## Originalstruktur von Objekt X
+## Ausgangspunkt
 
-Objekt X ist höherdimensional und kohomologisch-kategorial definiert
-(Ebene XVI, ebene-XVI-objekt-x.md):
+NEU-113 etabliert $W_\xi^{\rm norm}$ und den Autokorrelationslift. NEU-114 fragt: Gibt es ein Objekt $X$, dessen Spektralschatten $\Pi_\gamma(X)$ genau $m_{\rm arith}$ ergibt?
 
-```
-(A_2D^r,  [omega_2],  [L_3],  W_{res,BC}^{top},  m -> p^k m)
-```
-
-Die Nullstellen der Zeta-Funktion erscheinen in diesem Profil nur als
-Projektion X.2 — nicht als Definition von X.
-
-Daher gilt:
-
-```
-m_arith  =/=  X
-```
-
-Korrekt ist höchstens:
-
-```
-m_arith = Pi_gamma(X)
-```
-
-falls die Rückbindung der oberen Schichten gelingt.
+**Schutzsatz:** $m_{\rm arith}$ ist nicht dasselbe wie $X$ selbst — eine Typisierungswarnung, keine Identifikation.
 
 ---
 
-## Zwei parallele Spuren (ab NEU-114)
+## Satz NEU-114.1 — Typisierungswarnung: $m_{\rm arith} \neq X$ ✓[M]
 
-| Spur | Inhalt | Status |
-|---|---|---|
-| Spektralschatten-Spur | NEU-77–113: Feshbach / Jacobi / Herglotz / Weil | aktiv |
-| X-Rückbindungs-Spur | HH2 / HH4 / W_res^top / Frobenius / Primkanten | reaktiviert |
+$$\boxed{m_{\rm arith} \neq X \text{ als Objekte.}}$$
 
-Der aktuelle Pfad gilt als:
+$m_{\rm arith}(z)$ ist eine skalare Herglotz-Funktion (unter RH). $X$ ist ein hypothetischer Operator/Spektralobjekt. Selbst wenn $X$ existiert, ist $m_{\rm arith}$ nur ein skalarer Schatten davon.
 
-```
-aktueller Pfad  =  Pi_gamma-Analyse von X
-```
-
-Nicht:
-
-```
-aktueller Pfad  =  X
-```
+**Status: ✓[M]** (Typisierungswarnung)
 
 ---
 
-## Kommutativitätsdiagramm
+## ~~Satz NEU-114.2 (ursprünglich)~~ — $m_{\rm arith}=\Pi_\gamma(X)$ als ✓[M] — **KORRIGIERT**
 
-```
-X  ---[W_res^top, omega_2, L_3]-->  kohomologisch-topologische Spurform
-|                                            |
-Pi_N                                         ?
-|                                            |
-A_N^{Jac,-}  ---[m_{Omega,N}]-->  m_arith  ->  Q_Weil
-                      ^
-                      |
-              Definition: NEU-119
-              Uebergang -> m_arith: NEU-120 (offen)
-```
+> **Patch-Notiz (Pass-A, 8. Aug. 2026):** Der aktuelle Text bucht
+> $m_{\rm arith}=\Pi_\gamma(X)$ als ✓[M],
+> obwohl die Datei selbst sagt, dies gelte nur, falls die Rückbindung gelingt.
+> Die Tests 114.3–114.5 stehen weiterhin offen.
+> Eine bedingte Aussage als unbedingte zu buchen ist ein Statusfehler.
 
-Die offene Frage ist nicht mehr nur:
+## Satz NEU-114.2 (korrigiert) — Spektralschatten-Kandidat
 
-```
-m_{Omega,N}  ->  m_arith
-```
+$$\boxed{m_{\rm arith} = \Pi_\gamma(X) \quad ?[O].}$$
 
-sondern:
+Falls eine Spektralprojektion $\Pi_\gamma$ von $X$ konstruiert wird und korrekt zurückbindet, ist $m_{\rm arith}$ ein Kandidat für deren Spektralschatten — nicht $X$ selbst. Der Rückbindungstest ist offen.
 
-```
-Pi_gamma(W_res^top, [omega_2], [L_3], KMS)  =?=  m_arith / Q_Weil
-```
+**Status: ?[O]** (konditional; Rückbindung unbewiesen)
 
 ---
 
-## Vier Rückbindungstests
+## Tests NEU-114.3–5 — Rückbindungstests
 
-**Test 114.1 — HH2-Test:**
+**Test A:** Nullstellen-Spektrum: $\sigma(\Pi_\gamma(X)) \stackrel{?}{=} \Gamma$ ?[O]
 
-```
-[omega_2]  ->?  arithmetische Variation des Herglotz-Kanals
-```
+**Test B:** Herglotz-Charakter: $\Pi_\gamma(X)$ erzeugt Herglotz-Funktion $\Leftrightarrow$ Selbstadjungiertheit von $X$ auf kritischer Linie ?[O]
 
-Status: ❓[O]
+**Test C:** Rückbindungsgleichung: $\langle\Omega,(\Pi_\gamma(X)-z)^{-1}\Omega\rangle \stackrel{?}{=} m_{\rm arith}(z)$ ?[O]
 
-**Test 114.2 — HH4-/Sekundärtest:**
-
-```
-[L_3]  ->?  Anomalie-/Obstruktionsterm der Projektion
-```
-
-Status: ❓[O]
-
-**Test 114.3 — Spurform-Test:**
-
-```
-W_{res,BC}^{top}  ->?  Q_Weil  (oder Bombieri-Normalisierung)
-```
-
-Status: ❓[O]  ← zentraler Rückbindungstest
-
-**Test 114.4 — Primkanten-Test:**
-
-```
-m -> p^k m  ->?  Lambda(p^k) = log p  (Primterm explizite Formel)
-```
-
-Status: ⚠[M] (log n gesichert, Lambda(n) via Möbius ausstehend, NEU-67/75)
+**Status: ?[O]** (alle drei Tests offen)
 
 ---
 
-## Statuskorrektur der Äquivalenz
+## Status-Übersicht
 
-Der Satz
-
-```
-RH  <=>  m_arith Herglotz   (NEU-63D)
-```
-
-gehört zur **Spektralschatten-Spur**.
-
-Der X-vollständige Satz lautet:
-
-```
-X  --Pi_gamma-->  m_arith    und    m_arith Herglotz  <=>  RH
-```
-
-Also:
-
-```
-X  =>  Pi_gamma(X) = m_arith  =>  RH-Kanal
-```
-
-Nicht:
-
-```
-X  =  m_arith
-```
+| Punkt | Inhalt | Status |
+|-------|--------|--------|
+| 114.1 | $m_{\rm arith}\neq X$ Typisierungswarnung | ✓[M] |
+| 114.2 | $m_{\rm arith}=\Pi_\gamma(X)$ | ?[O] |
+| 114.3–5 | Rückbindungstests A/B/C | ?[O] |
 
 ---
 
-## Satzstatusmatrix
+## Verweise
 
-| Satz | Inhalt | Status |
-|---|---|---|
-| 114.0 | m_arith = Pi_gamma(X), nicht X selbst | ✓[M] |
-| 114.1 | HH2-Rückbindung [omega_2] -> Herglotz-Kanal | ❓[O] |
-| 114.2 | HH4-Rückbindung [L_3] -> Obstruktionsterm | ❓[O] |
-| 114.3 | Spurform W_res^top -> Q_Weil | ❓[O] |
-| 114.4 | Primkanten m->p^k m -> Lambda(p^k) | ⚠[M] |
-| 114.5 | Vollständige Rückbindung: Pi_gamma(X) = m_arith/Q_Weil | ❓[O] |
-| 114.P | m_{Omega,N} Definitionslücke geschlossen: NEU-119 | ✓[M] |
-
----
-
-## Konsequenz für NEU-113
-
-NEU-113 (Bombieri-Normalisierung) bleibt gültig und notwendig — es ist der
-notwendige Abschluss der Spektralschatten-Spur. Aber sein Status ist:
-
-```
-NEU-113 beweist hoechstens X.2-Projektion, nicht X selbst.
-```
-
-Erst wenn alle vier Tests in NEU-114 bestehen, darf der Spektralschattenpfad
-als Projektion des ursprünglichen Objekts X gelten.
+- NEU-113 (Patch E-1/6): $W_\xi^{\rm norm}$, Autokorrelationslift
+- NEU-111 (Patch D-1/6): $m_{\rm arith}$ Herglotz $\Leftrightarrow$ RH
+- **Connes:** *Trace formula* (1999) — Ad-Class-Space als Kandidat für $X$
