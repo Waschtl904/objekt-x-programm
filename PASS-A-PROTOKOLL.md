@@ -1,6 +1,6 @@
 # Pass-A-Protokoll — SYN-Migrationsverfahren
 
-**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 8. August 2026 (Abschlusscommit)
+**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 8. August 2026 (Buchhaltungskorrektur)
 
 Dieses Dokument fixiert das verbindliche Verfahren für die Pass-A-Phase der SYN-Migration.
 
@@ -63,7 +63,7 @@ Vor jedem Batch:
 | NEU-095 | `AUDIT-REUSED` | INCORPORATED | Fensterregularisierung und Autokorrelationsdiagnose |
 | NEU-096 | `AUDIT-REUSED` | INCORPORATED | Skalenanalyse Mangoldt; selbstduale Skala |
 | NEU-097 | `AUDIT-REUSED` | INCORPORATED | Zwischenregime; selbstdualer Übergang |
-| NEU-098 | `AUDIT-RECONCILED` | INCORPORATED + ✓[M]\(_\rm neg\) | Hardy–Littlewood konditional; Singulärserien-Hauptterm ✓[M]; zwei lokale SUPERSEDED-Schritte |
+| NEU-098 | `AUDIT-RECONCILED` | INCORPORATED + ✓[M]$_\rm neg$ | Hardy–Littlewood konditional; Singulärserien-Hauptterm ✓[M]; zwei lokale SUPERSEDED-Schritte |
 | NEU-099 | `AUDIT-REUSED` | INCORPORATED | Singulärserien-Schicht; Shift-Feinstruktur |
 | NEU-100 | `AUDIT-REUSED` | INCORPORATED | Restdichte $\Delta_N$; Übergang zum Shift-Spektrum |
 
@@ -78,7 +78,7 @@ Vor jedem Batch:
 | NEU-101 | `AUDIT-RECONCILED` + `TARGETED-REAUDIT` | `SUPERSEDED(A,B,C)` + `OPEN(D)` | GM-Normierung $H\log(M/H)$; Transferlemma ?[O] |
 | NEU-102 | `AUDIT-RECONCILED` | `SUPERSEDED(A)` + `INCORPORATED(B,F)` + `OPEN(D,E)` | $L^2$-Integrabilitätsfehler; No-Go (B) unabhängig gültig |
 | NEU-103 | `AUDIT-REUSED` | `INCORPORATED` | Entfaltungskarte unabhängig von 101/102-Fehlern |
-| NEU-104 | `AUDIT-RECONCILED` + `TARGETED-REAUDIT` | `INCORPORATED` ✓[M]\(_\rm part\) | No-Go abstrakt korrekt; $\mathcal{S}_{N,H}$ SUPERSEDED |
+| NEU-104 | `AUDIT-RECONCILED` + `TARGETED-REAUDIT` | `INCORPORATED` ✓[M]$_\rm part$ | No-Go abstrakt korrekt; $\mathcal{S}_{N,H}$ SUPERSEDED |
 | NEU-105 | `AUDIT-REUSED` | `INCORPORATED` | Binärer Falsifizierbarkeitssatz gültig |
 | NEU-106 | `AUDIT-REUSED` | `INCORPORATED(1,2,5)` + `OPEN(heuristisch)` | Epistemische Trennung RH $\not\Rightarrow$ GUE |
 | NEU-107 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` | 107.2 Biimplikation → Einwegimplikation; 107.5 Normierung |
@@ -104,12 +104,12 @@ Vor jedem Batch:
 **Abgeschlossen:** 8. August 2026 | **Commits:** E-1/6 `78b06719` → E-6/6 `904eb29b`
 
 | Knoten | Prüfart | Endstatus | Kernbefund |
-|--------|----------|-----------|-----------|
+|--------|----------|-----------|------------|
 | NEU-113 | `AUDIT-RECONCILED` | `PATCH ANGEWENDET` / **SUPERSEDED BY P02** | Mellin-Zentrierung $x^{-1/2}$; Doppelzählung; $W_\xi^{\rm norm}=W_{\rm zeros}$ |
 | NEU-114 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` | $m_{\rm arith}=\Pi_\gamma(X)$ von ✓[M] auf ?[O] |
 | NEU-115 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` | Vierteilige Summe → $W_\xi^{\rm norm}=W_{\rm zeros}$; Interface-Firewall ✓[M] |
-| NEU-116 | `AUDIT-REUSED` | `INCORPORATED`\(_\rm part\) + **→ P10/P11** | $W_{\rm res}^{\rm top}\stackrel?=W_\xi^{\rm norm}$: ?[O]; lokale Faktoren → BC-Strang besser abgesichert |
-| NEU-117 | `AUDIT-REUSED` | `INCORPORATED`\(_\rm part\) + **→ P10/P11** | $\operatorname{Aut}(\mathbb N,\cdot)\cong\operatorname{Sym}(\mathbb P)$: ✓[M]; globale Rigidität konditional |
+| NEU-116 | `AUDIT-REUSED` | `INCORPORATED`$_\rm part$ + **→ P10/P11** | $W_{\rm res}^{\rm top}\stackrel?=W_\xi^{\rm norm}$: ?[O]; lokale Faktoren → BC-Strang besser abgesichert |
+| NEU-117 | `AUDIT-REUSED` | `INCORPORATED`$_\rm part$ + **→ P10/P11** | $\operatorname{Aut}(\mathbb N,\cdot)\cong\operatorname{Sym}(\mathbb P)$: ✓[M]; globale Rigidität konditional |
 | NEU-118 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` / teilweise SUPERSEDED durch NEU-119/P02 | $\mu_{\rm arith}$ (Maß) vs $m_{\rm arith}(z)$ (Funktion) Typfehler; Gamma-/Pol-Anteile $\times$[M] |
 | NEU-119 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` | Selbstadjungiertheit ?[O]; Eigenvektor-Cond. $\times$[M]; O3 Gamma $\times$[M] SUPERSEDED |
 | NEU-120 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` | 4$\times$ $\times$[M] gestrichen; Firewall ?[O]; vague Konvergenz eingebracht |
@@ -143,17 +143,27 @@ Referenzen, Labels, Doppelzählungen, unzulässige Hochstufungen von
 
 ## Nächste Batch-Reihenfolge
 
-| Gruppe | Knoten | Priorität |
-|--------|--------|-----------|
-| F | NEU-121–130 | **als nächstes** |
-| G | NEU-131–140 | nach F |
-| … | … | … |
+> **Wichtiger Hinweis zur Systematik:** Die Gruppen F, G, H, … folgen **nicht** der
+> historischen NEU-Nummerierung, sondern der thematischen Abhängigkeitsreihenfolge
+> gemäß `00-uebersicht/SYN_MIGRATIONSPROTOKOLL.md`. NEU-Nummern und Themenordner
+> sind nicht mehr deckungsgleich; viele spätere Knoten gehören rückwirkend zu
+> früheren Themen. Maximale Wiederverwendung vorhandener Audits gilt in jedem Batch.
+
+| Gruppe | SYN-Ziel | Quellbestand | Reihenfolge |
+|--------|----------|--------------|-------------|
+| **F** | **P05** | `01-primkanten-werkzeuge/` + relevante Knoten aus `05-primkanal-fourierladung/` | **als nächstes** |
+| G | P06 | `02-jacobi-limes/` + zugehörige Jacobi-/Feshbach-Knoten | nach F |
+| H | P08 | `04-grenzoperator-renormierung/` + zugehörige Renormierungs-/Grenzoperator-Knoten | nach G |
+| I | P09 | `06-hochschild-bc-algebra/` + BC-relevante Quellen | nach H |
+| … | P10/P11/P12 | repo-weite thematische Pakete | nach Abhängigkeiten |
+| Abschluss | **P00** | `00-grundlegung/` + Gesamt-DAG + alle SYN-Endstände | **zuletzt** |
 
 ---
 
 ## Querverweise
 
-- Audit-Archive: `ARCHIV-AUDIT-2026-07.md`, `ARCHIV-AUDIT-NEU202-212.md` u. a.
+- Verbindlicher Migrationsplan: `00-uebersicht/SYN_MIGRATIONSPROTOKOLL.md`
+- Audit-Archive: `ARCHIV-AUDIT-2026-07.md`, `ARCHIV-AUDIT-NEU202-212.md` u. a.
 - Zwischenbilanzen: `ZWISCHENBILANZ_2026-07-29.md` bis `2026-08-01.md`
 - Auditstand HH-Strang: `AUDITSTAND-2026-08-03.md`
 - Forschungsknoten: `03-weil-form-statistik/`
