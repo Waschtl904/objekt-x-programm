@@ -1,6 +1,6 @@
 # Pass-A-Protokoll — SYN-Migrationsverfahren
 
-**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 8. August 2026 (Buchhaltungskorrektur)
+**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 8. August 2026 (Gruppe-F-Eröffnung)
 
 Dieses Dokument fixiert das verbindliche Verfahren für die Pass-A-Phase der SYN-Migration.
 
@@ -108,7 +108,7 @@ Vor jedem Batch:
 | NEU-113 | `AUDIT-RECONCILED` | `PATCH ANGEWENDET` / **SUPERSEDED BY P02** | Mellin-Zentrierung $x^{-1/2}$; Doppelzählung; $W_\xi^{\rm norm}=W_{\rm zeros}$ |
 | NEU-114 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` | $m_{\rm arith}=\Pi_\gamma(X)$ von ✓[M] auf ?[O] |
 | NEU-115 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` | Vierteilige Summe → $W_\xi^{\rm norm}=W_{\rm zeros}$; Interface-Firewall ✓[M] |
-| NEU-116 | `AUDIT-REUSED` | `INCORPORATED`$_\rm part$ + **→ P10/P11** | $W_{\rm res}^{\rm top}\stackrel?=W_\xi^{\rm norm}$: ?[O]; lokale Faktoren → BC-Strang besser abgesichert |
+| NEU-116 | `AUDIT-REUSED` | `INCORPORATED`$_\rm part$ + **→ P10/P11** | $W_{\rm res}^{\rm top}\stackrel?=W_\xi^{\rm norm}$: ?[O]; lokale Faktoren → BC-Strang |
 | NEU-117 | `AUDIT-REUSED` | `INCORPORATED`$_\rm part$ + **→ P10/P11** | $\operatorname{Aut}(\mathbb N,\cdot)\cong\operatorname{Sym}(\mathbb P)$: ✓[M]; globale Rigidität konditional |
 | NEU-118 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` / teilweise SUPERSEDED durch NEU-119/P02 | $\mu_{\rm arith}$ (Maß) vs $m_{\rm arith}(z)$ (Funktion) Typfehler; Gamma-/Pol-Anteile $\times$[M] |
 | NEU-119 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` | Selbstadjungiertheit ?[O]; Eigenvektor-Cond. $\times$[M]; O3 Gamma $\times$[M] SUPERSEDED |
@@ -151,7 +151,7 @@ Referenzen, Labels, Doppelzählungen, unzulässige Hochstufungen von
 
 | Gruppe | SYN-Ziel | Quellbestand | Reihenfolge |
 |--------|----------|--------------|-------------|
-| **F** | **P05** | `01-primkanten-werkzeuge/` + relevante Knoten aus `05-primkanal-fourierladung/` | **als nächstes** |
+| **F** | **P05** | `01-primkanten-werkzeuge/` + relevante Knoten aus `05-primkanal-fourierladung/` | **aktiv** |
 | G | P06 | `02-jacobi-limes/` + zugehörige Jacobi-/Feshbach-Knoten | nach F |
 | H | P08 | `04-grenzoperator-renormierung/` + zugehörige Renormierungs-/Grenzoperator-Knoten | nach G |
 | I | P09 | `06-hochschild-bc-algebra/` + BC-relevante Quellen | nach H |
@@ -160,10 +160,101 @@ Referenzen, Labels, Doppelzählungen, unzulässige Hochstufungen von
 
 ---
 
+## Gruppe F — P05: Relative Primkanten und arithmetische Kantengeometrie
+
+**Status:** Eröffnet 8. August 2026 | Bestandsaufnahme abgeschlossen | Pakete F1–F4 definiert
+
+### Hauptbefund der Bestandsaufnahme
+
+Für P05 ist **kein neuer Vollaudit** erforderlich. Der Großteil des Quellbestands in
+`01-primkanten-werkzeuge/` und `05-primkanal-fourierladung/` wurde im früheren
+Gesamtdurchlauf bereits auditiert. Die eigentliche neue Arbeit konzentriert sich auf
+die Versorgung der alten Primkanten-/Fourierarchitektur mit den jungen Knoten
+NEU-250g/i/j (7. August 2026), die nach dem alten Auditdurchlauf entstanden sind.
+
+**Schlüsselbeobachtung Ordner 05:** Kein Grund für `NEW-DIRECT-AUDIT`.
+Endanker sind NEU-170d (bereinigter DAG-Audit) und NEU-173 (abgeschlossener
+Typquellenpfad, epistemische Korrektur C₂ → C_src-neg).
+
+**Schlüsselbeobachtung Ordner 01:** Thematisch zu zerlegen.
+Nur ein Teil gehört nach P05; NEU-010–25 → primär P09/P05-Referenz;
+NEU-26–56 teils P06/P10; NEU-229–249 teils P09/P11.
+
+### Paketstruktur Gruppe F
+
+#### F1 — Historische Primkantenbasis
+
+**Quellknoten:** NEU-039–045 + 44-Familie (44, 44X, 44X′)
+
+| Inhalt | Behandlung |
+|--------|------------|
+| Verbundene Wres-Spur, Primoperator, Kopplung | Vorhandene Audits einsammeln; nur Endstand extrahieren |
+| Fourierhebung, relative Primkante, Kantendiagonalität | `AUDIT-RECONCILED` (keine Neukonstruktion) |
+
+#### F2 — Fourier-/Rohkopplungsstrang (Ordner 05)
+
+**Quellknoten:** NEU-151–173 (inkl. Unterknoten 165a/b, 166a/b, 167b, 170a–d)
+
+| Knotenbereich | Prüfart | Behandlung |
+|---------------|----------|------------|
+| NEU-151–155 | `AUDIT-RECONCILED` | Gültige Teilresultate + No-Gos extrahieren |
+| NEU-156–160 | `AUDIT-RECONCILED` | Spätere Quellenkorrekturen berücksichtigen |
+| NEU-161–165b | `AUDIT-RECONCILED` | Modellrechnung von unbedingter Aussage trennen |
+| NEU-166–168 | `AUDIT-RECONCILED` | Falsche Kernzeugenroute ($k\in\ker C_p\setminus\ker T_p$) nicht übernehmen |
+| NEU-169 | `AUDIT-RECONCILED` | Kollisionssatz behalten; Trägervoraussetzung ($L_3^\circ$) firewallen |
+| NEU-170–170c | `AUDIT-RECONCILED` | Durch 170d/173 epistemisch bereinigen |
+| NEU-170d | `AUDIT-REUSED` | Maßgeblicher DAG-Endstand |
+| NEU-171 | `AUDIT-RECONCILED` | Durch 172/173 fortgeschrieben |
+| NEU-172 | `AUDIT-RECONCILED` | Fallbezeichnung durch 173 korrigiert |
+| NEU-173 | `AUDIT-REUSED` | Maßgeblicher Abschluss des alten Typquellenpfads |
+
+**Typkorrekturen bereits festgehalten:**
+Rohkopplung $T_p$, induzierter Primkanaloperator und Rang-eins-Erweiterung
+sind getrennt zu halten; behauptete intrinsische Positivität / Liftunabhängigkeit
+zurückgenommen; Zeugenpfad $k\in\ker C_p\setminus\ker T_p$ ist nicht typkorrekt geschlossen.
+
+#### F3 — Spätere Primfaser-Korrekturen
+
+**Quellknoten:** NEU-225, NEU-227 sowie zugehörige Quellenaudits aus `01-primkanten-werkzeuge/`
+
+| Behandlung |
+|------------|
+| Mit F1/F2-Endstand zusammenführen (`AUDIT-RECONCILED`) |
+| Nicht-P05-Anteil (globale Kopplung, koh.) in P09/P11 weiterleiten |
+
+#### F4 — Neuer Mangoldt-/Primzahlpotenzstrang
+
+**Quellknoten:** NEU-250g, NEU-250i, NEU-250j (alle 7. August 2026)
+
+**Prüfart: `TARGETED-REAUDIT` / RECONCILIATION** — jünger als der alte Gesamtaudit;
+verändern direkt frühere P05-Aussagen zu Mangoldt-Gewichten und Primkanalüberlappungen.
+
+| Knoten | Inhalt | Offene Punkte |
+|--------|--------|---------------|
+| NEU-250g | Primitiver Faktor $\frac{\log p}{p}$ algebraisch konstruiert | Hilbertraum-Fundierung $H_{\rm BC}$: ⚠[M] (offen) |
+| NEU-250i | Gradnormierte Energie $H_{\rm pr}=D_\Omega^{-1}H_{\rm BC}$; auf $n=p^m$: $\frac{\Lambda(p^m)}{p^{m/2}}=\frac{\log p}{p^{m/2}}$ | Firewall: $H_{\rm pr}\ne\Lambda$ auf allgemeinen zusammengesetzten $n$ |
+| NEU-250j | Trägertrennung bewiesen: $\operatorname{supp}\Lambda\cap\operatorname{supp}(\text{Kreuzprimkollision})=\emptyset$ | Graphbasisüberlappung $p^{m_p}=q^{m_q}$ ($p\ne q$) nur auf $\Lambda=0$; Mediatorweg → ?[O] |
+
+**Wichtigster Befund NEU-250j:** Die alten Graphüberlappungen leben genau auf
+Zahlen mit $\ge 2$ verschiedenen Primteilern, wo $\Lambda=0$. Folglich kann
+Graphbasisüberlappung allein keine globale Objekt-X-Kopplung liefern;
+der Mediatorweg bleibt ausdrücklich offen.
+
+### Pass-A-Abschlussschritt Gruppe F
+
+Nach Abschluss der Pakete F1–F4 wird aus dem Endstand:
+- der gültige mathematische Boden für P05 bestimmt,
+- die LaTeX-SYN-Fassung `papers/P05_*.tex` analog zu P07 erzeugt,
+- ein LaTeX-Transferaudit (nicht Vollneuaudit) durchgeführt,
+- dieser Eintrag mit `PASS A COMPLETE` und Commit-Referenzen versiegelt.
+
+---
+
 ## Querverweise
 
 - Verbindlicher Migrationsplan: `00-uebersicht/SYN_MIGRATIONSPROTOKOLL.md`
-- Audit-Archive: `ARCHIV-AUDIT-2026-07.md`, `ARCHIV-AUDIT-NEU202-212.md` u. a.
+- Audit-Archive: `ARCHIV-AUDIT-2026-07.md`, `ARCHIV-AUDIT-NEU202-212.md` u. a.
 - Zwischenbilanzen: `ZWISCHENBILANZ_2026-07-29.md` bis `2026-08-01.md`
 - Auditstand HH-Strang: `AUDITSTAND-2026-08-03.md`
-- Forschungsknoten: `03-weil-form-statistik/`
+- Forschungsknoten (abgeschlossen): `03-weil-form-statistik/`
+- Forschungsknoten (aktiv): `01-primkanten-werkzeuge/`, `05-primkanal-fourierladung/`
