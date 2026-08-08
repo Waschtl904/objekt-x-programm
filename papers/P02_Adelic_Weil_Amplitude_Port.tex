@@ -10,7 +10,7 @@
 \newtheorem{remark}[theorem]{Remark}
 
 \title{P02 --- Adelic Weil Amplitude Port and Complete Hermitian Weil Form\\
-\normalsize SYN-Audit: 2026-08-08}
+\normalsize SYN-Audit: 2026-08-08 (Patch 2)}
 \author{Objekt-X-Programm}
 \date{2026-08-08}
 
@@ -25,10 +25,15 @@ First, $R_{\mathrm{PW}}$ maps a single adelic amplitude
 $F\in\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$ to a compactly supported test
 function $a\in\mathcal{A}_{\mathrm{PW}}=C_c^\infty(\mathbb{R};\mathbb{C})$.
 Second, a pair $(a,b)$ is polarised to
-$g_{a,b}\in\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}=C_c^\infty(\mathbb{R};\mathbb{C})_{\mathrm{even}}$.
+$g_{a,b}\in\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}=C_c^\infty(\mathbb{R};\mathbb{C})_{\mathrm{even}}$
+via the sesquilinear even\-isation $g_{a,b}(u)=\tfrac12[C_{a,b}(u)+C_{a,b}(-u)]$,
+$C_{a,b}:=a*\check{\bar{b}}$.
 Polarising $B_W$ yields the three-block M3 form
 $B_{\mathrm{pole}}+B_\Gamma+B_{\mathrm{fin}}$.
 All results are RH-free.
+\textbf{Patch 2 (2026-08-08):} Exact definition of
+$\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$ and $R_{\mathrm{PW}}$
+restored from NEU-250r; sesquilinear evenisation corrected.
 \end{abstract}
 
 \section{Fourier Convention (NEU-220k, binding)}
@@ -40,44 +45,90 @@ All results are RH-free.
 The $2\pi$-factor from Parseval is globally absorbed.
 \end{definition}
 
-\section{Adelic Amplitude Space}
+\section{Adelic Amplitude Space (exact definition, NEU-250r)}
 
-\begin{definition}[Adelic amplitude space, NEU-250n]
-$\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$ consists of adelic amplitudes $F$
-admissible for the Weil explicit formula: finite-prime contributions are
-arithmetically weighted, archimedean component lies in the Paley--Wiener
-class, and all sums over prime powers converge absolutely.
+\begin{definition}[Haar projection]
+Let $P_{\mathrm{Haar}}: \mathcal{S}(\mathbb{A}_{\mathbb{Q}})\to C^\infty((0,\infty);\mathbb{C})$
+denote the standard Haar-measure projection of the adelic Schwartz space
+onto the archimedean amplitude.
 \end{definition}
 
-\section{Stage 1: Port Map $R_{\mathrm{PW}}$}
+\begin{definition}[Adelic amplitude space, NEU-250r $\checkmark$]
+\[
+  \boxed{
+  \mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}} :=
+  \bigl\{\, F\in\mathcal{S}(\mathbb{A}_{\mathbb{Q}}) :
+  (P_{\mathrm{Haar}}F)|_{(0,\infty)} \in C_c^\infty((0,\infty);\mathbb{C})
+  \bigr\}.}
+\]
+Compact support of $(P_{\mathrm{Haar}}F)|_{(0,\infty)}$ is the
+precise condition ensuring absolute convergence of the
+finite prime-power sum in $B_{\mathrm{fin}}$.
+\end{definition}
+
+\section{Stage 1: Port Map $R_{\mathrm{PW}}$ (exact formula, NEU-250r)}
 
 \begin{theorem}[Port map, NEU-250n--r $\checkmark$]
-There is a well-defined $\mathbb{C}$-linear map
+The map
 \[
+  \boxed{
   R_{\mathrm{PW}} : \mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}
   \longrightarrow \mathcal{A}_{\mathrm{PW}},
   \qquad
-  \mathcal{A}_{\mathrm{PW}} := C_c^\infty(\mathbb{R};\mathbb{C}),
+  (R_{\mathrm{PW}}F)(u) := e^{u/2}(P_{\mathrm{Haar}}F)(e^u),
+  \quad u\in\mathbb{R},}
 \]
-mapping a single adelic amplitude $F$ to a compactly supported,
-smooth, complex-valued test function $a=R_{\mathrm{PW}}(F)$.
+is well-defined and $\mathbb{C}$-linear, with image in
+$\mathcal{A}_{\mathrm{PW}}:=C_c^\infty(\mathbb{R};\mathbb{C})$.
 
-The compact support is essential: it ensures absolute convergence
-of the finite prime-power sum
-$B_{\mathrm{fin}}(a,a)=-2\sum_{n\ge 2}\frac{\Lambda(n)}{\sqrt{n}}\,g_{a,a}(\log n)$.
+The logarithmic reparametrisation $t=\log x$ and the factor $e^{u/2}$
+exactly match the Mellin-to-Fourier change of variables and the standard
+weight for the Weil functional.
 \end{theorem}
 
-\section{Stage 2: Polarisation to $\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}$}
+\section{Stage 2: Sesquilinear Evenisation to $\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}$}
 
-\begin{definition}[Even polarisation, NEU-250r]
+\begin{definition}[Cross-correlation kernel]
 For $a,b\in\mathcal{A}_{\mathrm{PW}}$, set
 \[
-  g_{a,b}(u) := \tfrac{1}{2}\bigl(a*\check{\bar{b}}\bigr)(u)
-  + \tfrac{1}{2}\bigl(b*\check{\bar{a}}\bigr)(u), \qquad u\in\mathbb{R},
+  C_{a,b}(u) := (a*\check{\bar{b}})(u)
+  = \int_{\mathbb{R}} a(u+t)\,\overline{b(t)}\,dt, \qquad u\in\mathbb{R}.
 \]
-where $\check{f}(u):=f(-u)$. Then
-$g_{a,b}\in\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}:=C_c^\infty(\mathbb{R};\mathbb{C})_{\mathrm{even}}$.
 \end{definition}
+
+\begin{definition}[Sesquilinear evenisation, NEU-250r $\checkmark$]
+\[
+  \boxed{
+  g_{a,b}(u) := \tfrac{1}{2}\bigl[C_{a,b}(u) + C_{a,b}(-u)\bigr]
+  = \tfrac{1}{2}\bigl[(a*\check{\bar{b}})(u) + (a*\check{\bar{b}})(-u)\bigr].}
+\]
+\end{definition}
+
+\begin{proposition}[Properties of $g_{a,b}$, $\checkmark$]
+\begin{enumerate}
+\item $g_{a,b}\in C_c^\infty(\mathbb{R};\mathbb{C})_{\mathrm{even}}$, i.e.\ $g_{a,b}\in\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}$.
+\item $g_{a,b}$ is sesquilinear: linear in $a$, antilinear in $b$.
+\item $g_{a,a}\ge0$ on $\mathbb{R}$.
+\end{enumerate}
+\begin{proof}
+(Geradheit) $g_{a,b}(-u)=\tfrac12[C_{a,b}(-u)+C_{a,b}(u)]=g_{a,b}(u)$.\quad
+(Sesquilinearit\"at) $C_{a,b}$ is linear in $a$ and antilinear in $b$; the same
+holds for $u\mapsto C_{a,b}(-u)$, hence for $g_{a,b}$.\quad
+(Positivit\"at) $g_{a,a}(u)=\mathrm{Re}\,C_{a,a}(u)$
+and $C_{a,a}$ is the autocorrelation of $a$, which has non-negative
+Fourier transform.
+\end{proof}
+\end{proposition}
+
+\begin{remark}[Type error in earlier draft corrected]
+The draft contained
+$g_{a,b}(u)=\tfrac12(a*\check{\bar{b}})(u)+\tfrac12(b*\check{\bar{a}})(u)$.
+This interchanges $a$ and $b$ in the second term.
+Since in general
+$C_{b,a}(u)=\overline{C_{a,b}(-u)}\neq C_{a,b}(-u)$,
+the draft formula is neither the same operation nor necessarily even.
+The correct formula uses $C_{a,b}(u)+C_{a,b}(-u)$.
+\end{remark}
 
 \section{Complete Hermitian Weil Form (NEU-252 Patch, M3)}
 
@@ -108,21 +159,29 @@ coordinate $s=\tfrac{1}{2}+it$, and pole terms agree exactly.
 \[
   \boxed{
   \mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}
-  \xrightarrow{R_{\mathrm{PW}}} \mathcal{A}_{\mathrm{PW}}
-  \xrightarrow{(a,b)\mapsto g_{a,b}} \mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}
+  \xrightarrow{\;F\mapsto a\;} \mathcal{A}_{\mathrm{PW}}
+  \xrightarrow{\;(a,b)\mapsto g_{a,b}\;} \mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}
   \xrightarrow{\mathrm{Weil}} B_W.
   }
 \]
 
 \begin{remark}[Two distinct stages]
-The first arrow $R_{\mathrm{PW}}$ acts on a single adelic amplitude
-$F\mapsto a$. The second arrow acts on a pair $(a,b)\mapsto g_{a,b}$.
-Merging these two stages is a type error.
+The first arrow $R_{\mathrm{PW}}$ acts on a single amplitude
+$F\mapsto a=(R_{\mathrm{PW}}F)$.
+The second arrow acts on a pair $(a,b)\mapsto g_{a,b}$,
+and is sesquilinear (not just linear). Merging these two stages is a type error.
 \end{remark}
 
 \section{Audit status}
 
-SYN-Audit: 2026-08-08. Type error from draft corrected.
+SYN-Audit Patch 2: 2026-08-08.\newline
+Corrections from Patch 1:\newline
+(a) $\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$ restored to exact NEU-250r definition
+  via $P_{\mathrm{Haar}}$-projection;\newline
+(b) $R_{\mathrm{PW}}$: exact formula $(R_{\mathrm{PW}}F)(u)=e^{u/2}(P_{\mathrm{Haar}}F)(e^u)$ restored;\newline
+(c) $g_{a,b}$: corrected to sesquilinear evenisation
+  $\tfrac12[C_{a,b}(u)+C_{a,b}(-u)]$;
+  draft error (swap of $a,b$ in second term) documented.\newline
 Source nodes: NEU-250n, 250o, 250p, 250q, 250r, NEU-252 (Patch)
 (archive-nodes/07-weil-explizitformel/).
 
