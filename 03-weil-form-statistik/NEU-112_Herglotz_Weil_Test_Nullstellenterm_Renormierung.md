@@ -1,142 +1,164 @@
-# NEU-112 — Herglotz-Weil-Test: Nullstellenterm und Renormierung
+# NEU-112 — Herglotz-Weil-Test: Nullstellenterm und Normierungsinterface
 
-**Stand:** 1. Juli 2026  
-**Vorgänger:** NEU-111 (Pfadordnung; \(m_{\mathrm{arith}}\) primär; Herglotz-Weil-Test und Jacobi-Realisierungstest)  
+**Stand:** 1. Juli 2026 | **Patch:** 8. August 2026 (Pass-A Gruppe D, Patch D-2/2)
+**Vorgänger:** NEU-111 (Herglotz-Weil-Brücke; \(m_{\rm arith}\) Herglotz \(\Leftrightarrow\) RH; signed-\(\Gamma\))
 **Nächste Nummer:** NEU-113
 
----
-
-## Ausgangspunkt
-
-NEU-111 stellt zwei präzise Tests auf. NEU-112 führt Test 1 (Herglotz-Weil-Test) durch und trennt den strukturell positiven Befund (Nullstellenterm) vom offenen Teil (Renormierung).
+> **Überblick (Patch):** NEU-112 versucht den Schritt von \(m_{\rm arith}\) zur quadratischen Weil-Form.
+> Vier Punkte waren fehlerhaft; NEU-113 supersediert 112.2/3 mit der korrekten Behandlung.
+> Der konzeptionelle Kern — **lineare \(\to\) quadratische Ebene** muss durch Autokorrelation gehoben werden — bleibt richtig und wichtig.
 
 ---
 
-## Satz NEU-112.1 — Stieltjes-Struktur von \(m_{\mathrm{arith}}\)
+## ~~Satz NEU-112.1 (ursprünglich)~~ — Herglotz-Maß-Zerlegung — **×[M] SUPERSEDED**
 
-Unter RH liegen die nichttrivialen Nullstellen bei \(\rho = \frac{1}{2}+i\gamma\). Die logarithmische Ableitung liefert formal:
+> **Audit-Befund (Pass-A, 8. Aug. 2026):** Die ursprüngliche Zerlegung
+> \(\mu_\xi = \sum_\gamma\delta_\gamma + \mu_{\Gamma,\rm ren}\)
+> ist falsch. Gamma-, Pol- und Primbeiträge sind keine zusätzlichen Atome des Herglotz-Spektralmaßes;
+> sie stammen aus der faktoriellen Zerlegung der expliziten Formel,
+> nicht aus \(m_{\rm arith}=-\Xi'/\Xi\).
+
+## Satz NEU-112.1 (korrigiert) — Herglotz-Spektralmaß von \(m_{\rm arith}\)
+
+Unter RH ist das Herglotz-Spektralmaß von
+\(m_{\rm arith}(z) = -\Xi'(z)/\Xi(z)\)
+das **rein atomare Nullstellenmaß**:
 
 $$
-m_{\mathrm{arith}}(z)
-= -i\frac{\xi'}{\xi}\!\left(\tfrac{1}{2}+iz\right)
-\sim
-\sum_\gamma \frac{1}{\gamma-z}
-+ m_{\Gamma,\mathrm{ren}}(z),
+\boxed{\mu_{\rm arith} = \sum_{\gamma\in\Gamma} m_\gamma\,\delta_\gamma.}
 $$
 
-wobei \(m_{\Gamma,\mathrm{ren}}\) die archimedischen und polaren Renormierungsbeiträge trägt. Das zugehörige Spektralmaß auf der reellen \(\gamma\)-Achse ist:
+\(\Gamma = \{\gamma\in\mathbb{R} : \xi(\tfrac{1}{2}-i\gamma)=0\}\),
+\(m_\gamma\geq 1\) die Nullstellenmultiplizität.
 
-$$
-\mu_\xi = \sum_\gamma \delta_\gamma + \mu_{\Gamma,\mathrm{ren}}.
-$$
-
-Das ist ein Stieltjes-Nullstellenmaß auf der richtigen Achse.
+Gamma-, Pol- und Primbeiträge entstehen bei der arithmetischen Seite der **expliziten Formel** über
+\(s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)\) — sie sind keine zusätzlichen Spektralatome von \(m_{\rm arith}\).
 
 **Status: \(\checkmark[M]\)** (unter RH)
 
 ---
 
-## Satz NEU-112.2 — Nullstellenterm-Test: strukturell positiv
+## ~~Satz NEU-112.2 (ursprünglich)~~ — Stieltjes-Kern \(\to\) Quadratbetrag — **×[M] SUPERSEDED**
 
-Auf Bombieris Paley\u2013Wiener-Testfunktionsraum \(PW_t\) erscheint der Nullstellenterm der Weil-Form als:
+> **Audit-Befund:** Die ursprüngliche Fassung behauptete, die Stieltjes-Darstellung
+> \(\sum_\gamma 1/(\gamma-z)\) wirke durch Residuen so, dass \(\sum_\gamma|\hat f(\gamma)|^2\) entsteht.
+> Das ist ein **Typfehler**: eine lineare Auswertung liefert zunächst
+> \(W_{\rm zeros}[\Phi] = \sum_\gamma m_\gamma\,\widehat\Phi(\gamma)\) — ein lineares Funktional.
+> Der Quadratbetrag entsteht erst durch den Autokorrelationslift \(\Phi=\phi^**\phi\).
+> **NEU-113.2–3 supersediert diese Fassung.**
+
+## Satz NEU-112.2 (korrigiert) — Autokorrelationslift und Quadratform
+
+**Schritt 1:** Lineare Weil-Auswertung:
 
 $$
-Q_{\mathrm{zeros}}[f] = \sum_\gamma |\widehat{f}(\gamma)|^2
+W_{\rm zeros}[\Phi] = \sum_{\gamma\in\Gamma} m_\gamma\,\widehat\Phi(\gamma).
 $$
 
-(in geeigneter Bombieri-Normalisierung). Der Nullstellenanteil von \(m_{\mathrm{arith}}\) liefert genau diesen Term: Die Stieltjes-Darstellung \(\sum_\gamma 1/(\gamma-z)\) wirkt auf \(\widehat{f}\) durch Residuen-Auswertung bei \(z=\gamma\) und erzeugt \(\sum_\gamma |\widehat{f}(\gamma)|^2\).
+**Schritt 2:** Autokorrelationslift. Setze \(\Phi = \phi^* * \phi\), dann gilt \(\widehat\Phi(\gamma) = |\widehat\phi(\gamma)|^2\), und man erhält die Quadratform:
 
 $$
-\boxed{\text{Der Herglotz-Nullstellenanteil passt strukturell zu Bombieris Nullstellenterm.}}
+\boxed{Q_{\rm zeros}[\phi]
+:= W_{\rm zeros}[\phi^**\phi]
+= \sum_{\gamma\in\Gamma} m_\gamma\,|\widehat\phi(\gamma)|^2.
+\quad\checkmark[M]}
 $$
 
-**Status: \(\checkmark/\warning[M]\)** (struktureller Befund; Normalisierungsdetails offen)
+Dies ist praktisch derselbe Typfix wie der spätere Kanonisierungsschritt
+\(a \to g_{a,a} \to h_{a,a} \to B_W(a,a)\) in P02.
+
+> **Literaturvergleich:** NEU-113.2–3 schreibt denselben Lift korrekt und supersediert
+> die ursprüngliche Fassung dieses Satzes.
+
+**Status: \(\checkmark[M]\)** (korrigierte Fassung; SUPERSEDED durch NEU-113)
 
 ---
 
-## Satz NEU-112.3 — Schutzformulierung
+## ~~Satz NEU-112.3 (ursprünglich)~~ — Vierfachsumme — **×[M] SUPERSEDED**
+
+> **Audit-Befund:** Die ursprüngliche Gleichung
+> \(Q_{\rm Weil} = Q_{\rm zeros} + Q_\Gamma + Q_{\rm poles} + Q_{\rm prime}\)
+> doppelzählt alle Terme: NEU-113 stellt ausdrücklich fest,
+> dass \(W_{\rm zeros} = W_{\rm pole/triv}+W_\Gamma+W_{\rm prime}\)
+> und daher \(W_{\rm zeros}+W_\Gamma+W_{\rm prime}+W_{\rm pole/triv} = 2W_{\rm zeros}\).
+
+## Satz NEU-112.3 (korrigiert) — Zero-side = arithmetic-side
+
+Die normalisierte Weil-Distribution ist \(\underline{\rm entweder}\):
 
 $$
-\boxed{m_{\mathrm{arith}} \text{ ist nicht }Q_{\mathrm{Weil}},
-\text{ sondern der Herglotz-Träger seines Nullstellenanteils.}}
+W_\xi^{\rm norm} = W_{\rm zeros},
 $$
 
-Die volle Weil-Form enthält zusätzlich:
+\(\underline{\rm oder}\) äquivalent ausgedrückt als arithmetische Seite:
 
 $$
-Q_{\mathrm{Weil}}[f]
-= Q_{\mathrm{zeros}}[f]
-+ Q_{\Gamma}[f]
-+ Q_{\mathrm{poles/trivial}}[f]
-+ Q_{\mathrm{prime}}[f],
+W_\xi^{\rm norm} = W_{\rm pole/triv}+W_\Gamma+W_{\rm prime},
 $$
 
-und alle Terme müssen auf demselben Testfunktionsraum mit derselben Fourier-/Mellin-Normalisierung und denselben Vorzeichenkonventionen stehen.
+aber **nicht** deren Summe. Der Schutzgedanke — \(m_{\rm arith}\) ist nicht dasselbe Objekt wie die quadratische Weilform — ist korrekt; die Begründung erfolgt über **linear vs.\ quadratisch / Testfunktionspaarung**, nicht über eine additive Zerlegung.
 
-**Status: \(\checkmark[M]\)**
+**Status: \(\checkmark[M]\)** (Doppelzählung beseitigt; NEU-113 supersediert)
 
 ---
 
-## Test NEU-112.4 — Renormierungstest (offen)
+## ~~Satz NEU-112.4 (ursprünglich)~~ — Typfehler Funktion vs.\ Funktional — **×[M] SUPERSEDED**
 
-Der eigentliche offene Punkt ist nicht der Nullstellenterm, sondern:
+> **Audit-Befund:** Die ursprüngliche Gleichung verglich links eine Funktion von \(z\)
+> (\(m_{\Gamma,\rm ren}(z)+\cdots\)) mit rechts Funktionalen/Quadratformen in \(f\)
+> (\(Q_\Gamma[f]+\cdots\)). Das ist ein echter Typfehler.
+
+## Satz NEU-112.4 (retypisiert) — Normierungsinterface als lineares Distributionsobjekt
+
+Die korrekt gestellte Frage lautet: Für welche Fourierkonvention und welchen Testfunktionsraum gilt
 
 $$
-m_{\Gamma,\mathrm{ren}}(z)
-+
-\text{Pol-/triviale Nullstellen-Terme}
-+
-\text{Primseite}
-\stackrel{?}{=}
-Q_\Gamma[f] + Q_{\mathrm{poles}}[f] + Q_{\mathrm{prime}}[f]
+\boxed{W_\xi^{\rm norm}[\Phi] = E_{0,1}[\Phi] + G[\Phi] - P[\Phi] \quad ?[O]}
 $$
 
-auf Bombieris Testfunktionsraum in exakter Normalisierung.
+wobei \(E_{0,1}\), \(G\), \(P\) die Standard-Weil-Terme (triviale Nullstellen, Gamma-Faktor, Pole) sind und alle drei auf demselben Testobjekt \(\Phi\) mit derselben Fourierkonvention ausgewertet werden. Diese Frage ist—in exakt dieser Form—von **NEU-113** korrekt aufgenommen und formuliert worden.
 
-Zwei mögliche Ausfälle:
-- **Test 1 scheitert:** \(m_{\mathrm{arith}}\) ist falsch normalisiert \(\Rightarrow\) Skalierungskorrektur nötig
-- **Test 1 gelingt, Test 2 scheitert:** \(m_{\mathrm{arith}}\) ist nur der Nullstellenkanal; archimedische Terme fehlen noch
-
-**Status: \(\checkmark[M]\)** (Test formuliert) / **\(?[O]\)** (Auswertung offen)
+**Status: ?[O] / SUPERSEDED durch NEU-113**
 
 ---
 
-## Tabellarische Statusklassifikation
+## Strategische Notiz — Die zwei Ebenen der Migration
 
-| Satz | Inhalt | Status |
-|------|--------|--------|
-| 112.1 | \(m_{\mathrm{arith}}\) Stieltjes-Nullstellenmaß \(\sum_\gamma\delta_\gamma\) | \(\checkmark[M]\) |
-| 112.2 | Nullstellenterm \(\leadsto \sum_\gamma|\widehat{f}(\gamma)|^2\) strukturell | \(\checkmark/\warning[M]\) |
-| 112.3 | Schutz: \(m_{\mathrm{arith}}\) = Herglotz-Träger, nicht \(Q_{\mathrm{Weil}}\) | \(\checkmark[M]\) |
-| 112.4 | Renormierungstest: \(m_{\Gamma,\mathrm{ren}}+\text{Pol}+\text{Prim} \stackrel{?}{=} Q_{\Gamma}+Q_{\mathrm{poles}}+Q_{\mathrm{prime}}\) | \(?[O]\) |
-| 112.5 | Jacobi-Anschluss erst nach \(m_{\Omega,N}\to m_{\mathrm{arith}}\) | \(?[O]\) |
+Gruppe D zeigt den konzeptionellen Fortschritt von P02:
+
+| Alte Kette (NEU-111/112) | Neue Kette (P02/NEU-113ff.) |
+|---|---|
+| \(m_{\rm arith}\longrightarrow Q_{\rm Weil}\) (fast unmittelbar) | Zwei getrennte Ebenen |
+| Ebene vermischt | **Lineare Weil-Distribution** \(W_\xi^{\rm norm}[\Phi]\) |
+| Typfehler linear/quadratisch | **Autokorrelationslift** \(\Phi=\phi^**\phi\) |
+| | **Hermitesche Weilform** \(B_W(a,b)\) |
+
+$$
+\boxed{
+m_{\rm arith} \rightsquigarrow W_\xi^{\rm norm}
+\quad\text{und getrennt}\quad
+a\to g_{a,b}\to h_{a,b}\to B_W(a,b).
+}
+$$
 
 ---
 
-## Neue Leitfrage für NEU-113
+## Statusübersicht (korrigiert)
 
-$$
-\boxed{\text{Bombieri-Normalisierung exakt fixieren: }
-f \mapsto \widehat{f},\;
-Q_{\mathrm{zeros}}[f],\;
-Q_\Gamma[f],\;
-Q_{\mathrm{prime}}[f].}
-$$
-
-Konkrete Schritte:
-1. Bombieri-Testfunktionsraum \(PW_t\): gerade \(L^2\)-Funktionen, Träger \([-t,t]\), Fourier-Normalisierung
-2. \(Q_{\mathrm{zeros}}[f] = \sum_\rho \widehat{f}(\rho)\): Summation über alle \(\rho\) oder nur kritische?
-3. \(Q_\Gamma[f]\): Welche Mellin-Normalisierung? Verbindung zu PSWF-Korrekturen Connes\u2013Consani?
-4. \(Q_{\mathrm{prime}}[f] = \sum_p \sum_{k\ge1} f(k\log p)\log p / p^{k/2}\)?
-5. Einsetzen: \(m_{\mathrm{arith}}\) Stieltjes in Bombieri-Form \(\Rightarrow\) Vergleich Vorzeichen und Normierung
-6. Danach: \(m_{\Omega,N}\to m_{\mathrm{arith}} \Rightarrow Q_{\Omega,N}\to Q_{\mathrm{Weil}}?\)
+| Punkt | Aussage | Status |
+|-------|---------|--------|
+| 112.1 | \(\mu_{\rm arith}=\sum_\gamma m_\gamma\delta_\gamma\) (kein Gamma/Pol/Prim-Anteil) | ✓[M] |
+| 112.2 | Autokorrelationslift \(Q_{\rm zeros}[\phi]=\sum_\gamma m_\gamma|\hat\phi(\gamma)|^2\) | ✓[M] |
+| 112.3 | Zero-side = arithmetic-side; keine Vierfachsumme | ✓[M] |
+| 112.4 | Normierungsinterface \(W_\xi^{\rm norm}[\Phi]=E_{0,1}+G-P\) | ?[O] / → NEU-113 |
 
 ---
 
 ## Verweise
 
-- NEU-111: Pfadordnung; Herglotz-Weil-Test
-- NEU-63D: \(m_{\mathrm{arith}}(z)\) Herglotz \(\Leftrightarrow\) RH
+- **NEU-113 (Bombieri-Normalisierung):** Supersediert 112.2–3; Autokorrelationslift und korrekte Weil-Gleichung
+- NEU-111 (Patch D-1/2): \(m_{\rm arith}\), signed-\(\Gamma\)
 - **Bombieri:** *Remarks on Weil's quadratic functional in number theory* (2000)
 - **Connes:** *Trace formula in noncommutative geometry* (1999)
-- Connes & Consani: PSWF-Korrekturen archimedisch
+- Weil: *Sur les formules explicites de la théorie des nombres premiers* (1952)
+- NEU-119: \(m_{\Omega,N}\)-Definition (noch offen)
