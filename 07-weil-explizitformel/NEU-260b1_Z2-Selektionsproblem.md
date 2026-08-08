@@ -2,128 +2,108 @@
 
 **Katalog-ID:** NEU-260b.1  
 **Ordner:** `07-weil-explizitformel`  
-**Datum:** 2026-08-08  
-**Auftrag:** Selektion $\varepsilon(a)\in\{+1,-1\}$ im von-Neumann-Parameter $U_a^X=\varepsilon(a)\cdot P|_{\mathcal{N}_{+,a}}$. Suzuki + Weil-Parität liefern Reduktion $U(1)\to\mathbb{Z}_2$ (NEU-260b $\checkmark[K/M]$). Gesucht: arithmetischer Mechanismus für $\varepsilon(a)$.
+**Datum:** 2026-08-08 (Patch: 2026-08-08b)  
+**Patch:** Stetigkeitsargument als reine Propagation zurückgestuft; analytische Familie-Behauptung gestrichen; KMS-Kandidat als typisierungsunvollständig markiert; Frobenius-Konventionsproblem notiert. Stattdessen: NEU-260b.2 als stärkster analytischer Kandidat freigeschaltet.
 
 ---
 
-## 0. Was wir haben und was fehlt
+## 0. Was wir haben
 
 **Gesichert (NEU-260b $\checkmark[K/M]$):**
 $$
 \boxed{U_a^X = \varepsilon(a)\cdot P|_{\mathcal{N}_{+,a}}, \qquad \varepsilon(a)\in\{+1,-1\}.} \qquad (0\text{-Form})
 $$
+In Suzuki-Trivialisierung: $\varepsilon=+1\leftrightarrow\theta=0$, $\varepsilon=-1\leftrightarrow\theta=\pi$.
 
-In Suzuki-Trivialisierung ($T_av_\pm=e^{\pm x}$):
-- $\varepsilon(a)=+1 \leftrightarrow \theta(a)=0$
-- $\varepsilon(a)=-1 \leftrightarrow \theta(a)=\pi$
+---
 
-**Suzuki-Grenzkonjektur:** $W(a,\theta(a);z)\to z^2\xi(1/2-iz)/\xi'(1/2-iz)$ für $a\to\infty$. Suzuki formuliert dies für einen (bisher nicht explizit fixierten) $\theta$-Zweig.
+## 1. Kandidat I: Stetigkeitsargument — nur Propagation, keine Selektion $\times[M]$
 
-**Offene Frage:**
+Es stimmt: Ein stetiges $\varepsilon:(0,\infty)\to\{+1,-1\}$ ist konstant. Aber sowohl $\varepsilon\equiv+1$ als auch $\varepsilon\equiv-1$ sind stetig. **Stetigkeit kann niemals zwischen den zwei Zweigen wählen**, sondern nur eine anderweitig erfolgte Auswahl bei einem Referenzpunkt $a_0$ global fortsetzen.
+
 $$
-\boxed{\text{Was wählt }\varepsilon(a)\text{? Ist }\varepsilon(a)=+1\text{ für alle }a>0, \text{ oder ist }\varepsilon(a)\text{ ein arithmetisches Datum?}} \qquad (0\text{-Q})
+\boxed{\text{Stetigkeitsargument: Propagation, keine Selektion.}\quad\times[M]\text{ als Selektionsmechanismus.}} \qquad (1\text{-Prop})
+$$
+
+**Gestrichene Behauptung:** "für kleine $a$, wo die Erweiterung analytisch in $a$ ist" --- Suzuki beweist Stetigkeit von $\lambda_a$, aber keine bereits konstruierte analytische Familie ausgewählter selbstadjungierter Erweiterungen. Zu streichen bis Quelle vorliegt.
+
+$$
+\text{Analytische Familie ausgewählter sa. Erweiterungen: nicht in Suzuki, keine Quelle.}\quad?[O] \qquad (1\text{-Analytic})
 $$
 
 ---
 
-## 1. Kandidat I: Globale Kompatibilität / Grenzwert-Konsistenz
+## 2. Kandidat II: Parität + Suzuki-Grenzstruktur — stärkster Kandidat
 
-### 1.1 Konstanzargument
+Dieser Kandidat wird vollständig in **NEU-260b.2** entwickelt.
 
-Falls $\varepsilon:(0,\infty)\to\{+1,-1\}$ stetig wäre und für kleine $a$ (wo die Erweiterung analytisch in $a$ ist) auf einem Wert liegt, ist $\varepsilon(a)=\text{const}$ auf jeder Zusammenhangskomponente.
-
-**Frage:** Ist $a\mapsto U_a^X$ stetig (in einem geeigneten Sinn) und $\varepsilon(a)$ deswegen konstant?
-
+Kernaussage (Vorschau):
 $$
-\varepsilon\text{ global konstant aus Stetigkeitsargument}\quad?[O] \qquad (1\text{-Const})
+\boxed{\text{Suzuki-Grenzrelation + Paritätsreduktion }\Longrightarrow\varepsilon(a)=+1\text{ für hinreichend großes }a.} \qquad (2\text{-Preview})
 $$
 
-### 1.2 Grenzwert-Konsistenz
-
-Falls der Grenzwert
-$$
-\lim_{a\to\infty} W(a,\theta(a);z) = \frac{z^2\xi(1/2-iz)}{\xi'(1/2-iz)}
-$$
-nur für $\theta=0$ (und nicht $\theta=\pi$) Nullstellen genau auf der kritischen Geraden hat, wäre $\varepsilon(a)=+1$ aus der Grenzfunktion erzwungen.
+Dieser Schluss ist konditional auf Suzukis Grenzrelation (die ihrerseits offen ist und RH implizieren würde). Er beweist weder die Grenzrelation noch RH. Aber er zeigt: Falls der Suzuki-Grenzmechanismus der richtige ist, ist der $\mathbb{Z}_2$-Zweig nicht frei.
 
 $$
-\varepsilon(a)=+1\text{ aus Grenzwert-Konsistenz (nur }\theta=0\text{ korrekte Nullstellenlage)}\quad?[O] \qquad (1\text{-Limit})
-$$
-
-**Wichtig:** $(1\text{-Limit})$ wäre RH-konditional, wenn die Nullstellen-auf-kritischer-Geraden-Eigenschaft nur unter RH gilt. Muss sorgfältig separiert werden.
-
----
-
-## 2. Kandidat II: BC/Adelen-Orientierung
-
-### 2.1 Fragestellung
-
-Die BC/adelische Struktur trägt eine natürliche Orientierung (z.B. aus dem Vorzeichen der KMS-Zeitentwicklung, der modularen Involution, oder der Frobenius-Orientierung $\mathrm{Frob}_p$ vs. $\mathrm{Frob}_p^{-1}$).
-
-Frage: Induziert diese Orientierung ein kanonisches $\varepsilon_{\rm BC}\in\{+1,-1\}$?
-
-$$
-\boxed{\varepsilon_{\rm BC}\in\{+1,-1\}\text{ aus BC/adelischer Orientierung}\quad?[O]} \qquad (2\text{-BC})
-$$
-
-### 2.2 Konkrete Quelle: KMS-Zeitpfeil
-
-Die KMS-Bedingung bei inverser Temperatur $\beta$ definiert einen Zeitpfeil: $\sigma_t(a)=e^{itH}ae^{-itH}$ für $t>0$ (Vorwärtsentwicklung). Dieser Zeitpfeil ist mit einem $\mathbb{Z}_2$-Vorzeichen assoziiert (Vorwärts vs. Rückwärts).
-
-Falls $\varepsilon_{\rm BC}=+1$ der Vorwärtsentwicklung entspricht, wäre $\theta_{\rm can}(a)=0$ KMS-kanonisch.
-
-$$
-\varepsilon_{\rm BC}=+1\leftrightarrow\text{KMS-Vorwärtszeitpfeil}\quad?[O] \qquad (2\text{-KMS})
-$$
-
-### 2.3 Konkrete Quelle: Frobenius-Orientierung
-
-Für jede Primzahl $p$ hat $\mathrm{Frob}_p$ eine kanonische Richtung (arithmetische Normierung: $\mathrm{Frob}_p x = x^p$ auf dem Residuenkörper). Das Vorzeichen $\varepsilon_p\in\{+1,-1\}$ könnte global ein $\varepsilon(a)$ induzieren.
-
-$$
-\varepsilon(a)\text{ aus Frobenius-Orientierung}\quad?[O] \qquad (2\text{-Frob})
+\text{Priorität: NEU-260b.2 bearbeiten.}\quad\to\text{NEU-260b.2} \qquad (2\text{-Prio})
 $$
 
 ---
 
-## 3. Kandidat III: Adelische Orientierung / Weil-Gruppe
+## 3. Kandidat III: BC/KMS-Zeitpfeil — Typisierungslücke $?[O]$
 
-### 3.1 Éléments d'analyse
-
-Die Weil-Gruppe $W_\mathbb{Q}$ hat eine kanonische Orientierung (Artin-Reziprozitätsabbildung). Ob diese auf den Defizienzraum $\mathcal{N}_{+,a}$ wirkt und ein Vorzeichen induziert:
-
+Ein BC-System $(\mathcal{A}_{\rm BC},\sigma_t)$ ist eine $C^*$-Algebra mit Einparametergruppe $(\sigma_t)_{t\in\mathbb{R}}$. Positive und negative Zeiten gehören beide zur Struktur. Die KMS-Bedingung beschreibt Gleichgewichtszustände; sie liefert **keinen automatischen Mechanismus**
 $$
-\varepsilon(a)\text{ aus Weil-Gruppenorientierung}\quad?[O] \qquad (3\text{-Weil})
+\{\text{BC/KMS-Datum}\}\longrightarrow\{+1,-1\}.
 $$
 
----
+Uns fehlt vollständig die typisierte Brücke:
+$$
+\boxed{\text{BC/KMS-Datum}\longrightarrow\operatorname{Hom}_{\rm unitary}(\mathcal{N}_{+,a},\mathcal{N}_{-,a})\quad\text{fehlt.}\quad?[O]} \qquad (3\text{-Gap})
+$$
 
-## 4. Strategische Einschätzung
-
-**Stärkster Kandidat (kurzfristig):** $(1\text{-Const})$ --- Stetigkeitsargument liefert $\varepsilon=\text{const}$ ohne Arithmetik. Falls $\varepsilon(a_0)=+1$ für ein explizit berechenbares $a_0$, folgt $\varepsilon\equiv+1$ global.
-
-**Stärkster Kandidat (langfristig/Objekt X):** $(2\text{-BC})$ --- BC/KMS-Zeitpfeil oder Frobenius-Orientierung wählt $\varepsilon$ kanonisch. Das wäre echter neuer Mechanismus, der über Suzuki hinausgeht.
-
-**Schönstes Ergebnis:** Falls beide übereinstimmen ($\varepsilon_{\rm Suzuki}=\varepsilon_{\rm BC}=+1$), ist $\theta_{\rm can}(a)=0$ sowohl analytisch als auch arithmetisch ausgezeichnet.
+Der KMS-Kandidat bleibt interessant (der Hamiltonoperator $H$ mit $\log n$-Energien hat arithmetische Kanonizität), aber die Aussage "KMS-Vorwärtszeit $=+1$" ist Motivation, kein Satz. Erst eine explizite Wirkung auf $\mathcal{N}_{\pm,a}$ würde daraus Mathematik.
 
 $$
-\boxed{\text{Nächster Schritt: Stetigkeitsargument für }\varepsilon\text{ prüfen; dann BC/KMS-Zeitpfeil-Kandidat.}} \qquad (4\text{-Next})
+\text{KMS-Kandidat: interessant, aber typisierungsunvollständig.}\quad?[O] \qquad (3\text{-Status})
 $$
 
 ---
 
-## 5. Statusbuchungen
+## 4. Kandidat IV: Frobenius-Orientierung — Konventionsproblem $?[O]$
 
-$$U_a^X=\varepsilon(a)P|_{\mathcal{N}_{+,a}},\;\varepsilon\in\{+1,-1\}\quad\checkmark[K/M]\text{ (von NEU-260b)}\qquad(5\text{-a})$$
-$$\varepsilon(a)=+1\leftrightarrow\theta=0,\quad\varepsilon(a)=-1\leftrightarrow\theta=\pi\quad\checkmark[K/M]\qquad(5\text{-b})$$
-$$\varepsilon\text{ global konstant aus Stetigkeitsargument}\quad?[O]\qquad(5\text{-c})$$
-$$\varepsilon=+1\text{ aus Grenzwert-Konsistenz}\quad?[O]\qquad(5\text{-d})$$
-$$\varepsilon_{\rm BC}\in\{+1,-1\}\text{ aus BC/KMS-Zeitpfeil}\quad?[O]\qquad(5\text{-e})$$
-$$\varepsilon\text{ aus Frobenius-Orientierung}\quad?[O]\qquad(5\text{-f})$$
-$$\varepsilon\text{ aus adelischer/Weil-Gruppenorientierung}\quad?[O]\qquad(5\text{-g})$$
+"Arithmetischer" und "geometrischer" Frobenius sind inverse Standardkonventionen ($\mathrm{Frob}_p x=x^p$ arithmetisch, $x\mapsto x^{1/p}$ geometrisch). Solange keine explizite Wirkung
+$$
+\mathrm{Frob}_p^{(\pm)}: \mathcal{N}_{+,a}\longrightarrow\mathcal{N}_{-,a}
+$$
+konstruiert ist, bleibt das Vorzeichen $\varepsilon_{\rm Frob}\in\{+1,-1\}$ konventionsabhängig.
+
+$$
+\text{Frobenius-Kandidat: Konventionsproblem unaufgelöst; keine explizite Wirkung auf }\mathcal{N}_{\pm,a}.\quad?[O] \qquad (4\text{-Frob})
+$$
 
 ---
 
-*Lizenz: CC BY 4.0 — Objekt-X-Programm.*  
-*Erstellt 2026-08-08. Von NEU-260b freigegeben. Kernfrage: $\varepsilon(a)\in\{+1,-1\}$.*
+## 5. Priorisierung
+
+| Kandidat | Status | Urteil |
+|---|---|---|
+| Stetigkeitsargument | Nur Propagation, keine Selektion | $\times[M]$ als Selektor |
+| **Parität + Suzuki-Grenzstruktur** | $\varepsilon=+1$ für gr. $a$ konditional auf Grenzrelation | **stärkster Kandidat** $\to$ NEU-260b.2 |
+| KMS-Zeitpfeil | Typisierungslücke offen | $?[O]$ |
+| Frobenius-Orientierung | Konventionsproblem | $?[O]$ |
+| Adel./Weil-Gruppe | Hypothese | $?[O]$ |
+
+---
+
+## 6. Statusbuchungen
+
+$$\varepsilon\text{ stetig }\Rightarrow\varepsilon=\text{const: stimmt, aber keine Selektion}\quad\times[M]\qquad(6\text{-a})$$
+$$\text{Analytische Familie aus Suzuki: keine Quelle}\quad?[O]\qquad(6\text{-b})$$
+$$\text{BC/KMS-Datum}\to\operatorname{Hom}_{\rm unitary}(\mathcal{N}_+,\mathcal{N}_-)\text{: Brücke fehlt}\quad?[O]\qquad(6\text{-c})$$
+$$\text{Frobenius arith/geom: Konventionsproblem}\quad?[O]\qquad(6\text{-d})$$
+$$\varepsilon=+1\text{ für gr. }a\text{ aus Suzuki-Grenzrelation (konditional)}\quad?[O]\to\text{NEU-260b.2}\qquad(6\text{-e})$$
+
+---
+
+*Patch 2026-08-08b. Gibt NEU-260b.2 frei.*
