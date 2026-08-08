@@ -1,6 +1,6 @@
 # Pass-A-Protokoll — SYN-Migrationsverfahren
 
-**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 8. August 2026 (Gruppe F1 abgeschlossen; NEU-250f Patch 1 gebucht)
+**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 8. August 2026 (Gruppe F2: Eröffnungsmatrix NEU-151–173)
 
 Dieses Dokument fixiert das verbindliche Verfahren für die Pass-A-Phase der SYN-Migration.
 
@@ -162,7 +162,7 @@ Referenzen, Labels, Doppelzählungen, unzulässige Hochstufungen von
 
 ## Gruppe F — P05: Relative Primkanten und arithmetische Kantengeometrie
 
-**Status:** aktiv | Bestandsaufnahme abgeschlossen | **F1 abgeschlossen** | F2–F4 ausständig
+**Status:** aktiv | Bestandsaufnahme abgeschlossen | **F1 abgeschlossen** | **F2 eröffnet** | F3–F4 ausständig
 
 ### Hauptbefund der Bestandsaufnahme
 
@@ -181,7 +181,7 @@ NEU-26–56 teils P06/P10; NEU-229–249 teils P09/P11.
 
 ### Paketstruktur Gruppe F
 
-#### F1 — Historische Primkantenbasis — **ABGESCHLOSSEN**
+#### F1 — Historische Primkantenbasis — **ABGESCHLOSSEN** (Commit `07903f85`)
 
 **Quellknoten:** NEU-039–045 + 44-Familie (44, 44X, 44X′, 44R)  
 **Korrekturquellen:** NEU-151–155, NEU-226/227, Gegenlese-Commit `eae87a62`, NEU-250f Patch 1 (`1579a379`)  
@@ -195,69 +195,94 @@ NEU-26–56 teils P06/P10; NEU-229–249 teils P09/P11.
 | NEU-042 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Resolvent/Laplace-Trennung ✓[M]; relativer Log-Zuwachs $\log(pm)-\log m=\log p$ ✓[M]; $L_3^\circ$-spezifische Kanalrealisierung nicht unbedingter Satz |
 | NEU-043 | `AUDIT-RECONCILED` | `INCORPORATED_part` + `OPEN` | Edge-gelabelte $p$-Reinheit im ausdrücklich definierten Graphraum; Reinheit nach Kollaps nicht automatisch; induzierte `Wres`-Kantendiagonalität offen |
 | NEU-044 (pq-Test) | `AUDIT-RECONCILED` | `INCORPORATED` + ✓[M]$_\rm neg$ | Kollaps löscht Primkantenlabel; keine automatische Kantendiagonalität/kein funktoriell eindeutiger relativer Clock im kollabierten Raum |
-| NEU-044 (Normierungsblatt) | `AUDIT-RECONCILED` | `AUDIT-ONLY / DEFINITION` | Kanonische Quellenrekonstruktion und Normkonvention, ausdrücklich kein mathematisches Herkunftsresultat; orthogonale Edge-Summe ist Definition |
-| NEU-044X | `AUDIT-RECONCILED` | `INCORPORATED_part` | Im gewählten eindimensionalen induzierten Modell Rang $\le1$ und Rang-1-Normidentitäten; Rang $=1$ verlangt $c_p\ne0$, intrinsisches Nichtverschwinden nicht bewiesen |
+| NEU-044 (Normierungsblatt) | `AUDIT-RECONCILED` | `AUDIT-ONLY / DEFINITION` | Kanonische Quellenrekonstruktion und Normkonvention; ausdrücklich kein mathematisches Herkunftsresultat |
+| NEU-044X | `AUDIT-RECONCILED` | `INCORPORATED_part` | Im gewählten eindimensionalen induzierten Modell Rang $\le1$; intrinsisches Nichtverschwinden $c_p\ne0$ nicht bewiesen |
 | NEU-044X′ | `AUDIT-RECONCILED` | `CONDITIONAL` | Rangstabilität unter skalaren normkonvergenten Grenzwerten; uniformer endlicher Rang unter Gram-Triage nur plausibel/bedingt |
-| NEU-044R | `AUDIT-RECONCILED` | `SUPERSEDED_part / CONDITIONAL` | Spurklassen-Rückbindung nur unter Rang-/Gewichtsannahmen; spätere NEU-152/153 verhindern die unbedingte Lesart „Kernsatz vollständig bewiesen“ |
-| NEU-045 | `AUDIT-RECONCILED` | `INCORPORATED_part` + **→ P06** | Euler-Unterdeterminante/logarithmische Ableitung im endlichen Primblock gültig; volle orthogonal primblockweise Feshbach-Geometrie nicht intrinsisch gesichert; globale Überlappung und Spektralmaßform → NEU-226/227 |
+| NEU-044R | `AUDIT-RECONCILED` | `SUPERSEDED_part / CONDITIONAL` | Spurklassen-Rückbindung nur unter Rang-/Gewichtsannahmen; NEU-152/153 verhindern unbedingte Lesart |
+| NEU-045 | `AUDIT-RECONCILED` | `INCORPORATED_part` + **→ P06** | Euler-Unterdeterminante gültig; Feshbach-Geometrie nicht intrinsisch gesichert; globale Überlappung und Spektralmaßform → NEU-226/227 |
 
-**F1-Kernfirewalls für P05:**
+**F1-Kernfirewalls für P05** (verbindlich für alle späteren F-Pakete):
 
-1. Drei Typen strikt trennen:
-   \[
-   T_p\quad\neq\quad C_p^{[\widehat\varepsilon_p]}\quad\neq\quad C_p^{\rm rel}[\widehat\varepsilon_p].
-   \]
-   Die Rang-eins-Eigenschaft des eindimensional induzierten $C_p$ sagt nichts über den Rang der Rohkopplung $T_p$.
-2. $|c_p|^2$ ist ohne Hebungsabstieg/-unabhängigkeit kein intrinsisches Primgewicht; Nichtentartung bleibt offen.
-3. Orthogonalität in einer künstlich orthogonalen Edge-Direktsumme ist definitorisch. Offen ist die Kantendiagonalität der **quellseitig induzierten** `Wres`-Paarung; der kollabierte Pullback liefert sie nicht.
-4. Die tatsächlichen Primkanalbilder können sich überlappen. Off-Diagonalität entsteht aus $\operatorname{Ran}V_p\not\perp\operatorname{Ran}V_q$, nicht notwendig durch Primmischung des Operators $D_{\rm rel}$.
-5. Historische Eigenbasisformeln für $D_{\rm rel}$ sind durch die Spektralmaßform aus NEU-227 zu ersetzen; Schattenklassenfragen bleiben am $u$-Regulator/Quellhilbertraum offen.
+1. $T_p \ne C_p^{[\widehat\varepsilon_p]} \ne C_p^{\rm rel}[\widehat\varepsilon_p]$ — drei Typen stets trennen.
+2. $|c_p|^2$ ohne Hebungsabstieg/-unabhängigkeit kein intrinsisches Primgewicht.
+3. Kantendiagonalität der quellseitig induzierten `Wres`-Paarung ist offen; definitorische Orthogonalität zählt nicht.
+4. Primkanalbilder können sich überlappen; Off-Diagonalität folgt nicht automatisch.
+5. Historische $D_{\rm rel}$-Eigenbasisformeln durch Spektralmaßform aus NEU-227 ersetzen.
 
-**Neu entdeckter Konflikt beim F1-Reconciliation:** NEU-250f schloss aus
-\[
-L_3\in C^4(F^3A,F^3A)
-\]
-unzulässig auf einen standalone Algebrarepräsentanten $L_3^\circ\in F^3A$ und daraus auf $\ell_{s,1}=0$. Ein Hochschild-4-Kochain ist ohne Realisierungs-/Auswertungsbrücke kein Algebraelement. Dieser Typfehler kollidiert mit NEU-170d/173 und wurde in
-`07-weil-explizitformel/NEU-250f_PATCH1_Typkorrektur_F3_Kochain_vs_Algebraelement.md`
-(Commit `1579a379`) korrigiert.
+**Neu entdeckter Konflikt:** NEU-250f Typfehler ($L_3\in C^4 \not\Rightarrow L_3^\circ\in F^3A$ ohne Realisierungsbrücke); unbedingter No-Go `SUPERSEDED`; korrigiert in Commit `1579a379`.
 
-Korrigierter Satz:
-\[
-L_{3,\rm alg}^\circ\in F^3A
-\Longrightarrow
-\ell_{s,1}=0\ \forall s
-\Longrightarrow
-P_{m=1}\widetilde T_p^{\rm raw}=0
-\qquad \checkmark[M].
-\]
-Die Existenz/Typisierung eines solchen konkreten $L_{3,\rm alg}^\circ$ ist im auditierten Quellenkegel nicht bewiesen. Der **unbedingte** NEU-250f-No-Go ist daher `SUPERSEDED`; die typkorrekte Realisierungsfrage bleibt `?[O]`.
+$$\boxed{\text{F1 PASS A COMPLETE}}$$
 
-**F1-Endurteil:**
-\[
-\boxed{\text{F1 PASS A COMPLETE — kein historischer Kopplungs-/Wres-Anspruch wird unqualifiziert nach P05 übernommen.}}
-\]
+---
 
-#### F2 — Fourier-/Rohkopplungsstrang (Ordner 05)
+#### F2 — Fourier-/Rohkopplungsstrang (Ordner 05) — **ERÖFFNET**
 
-**Quellknoten:** NEU-151–173 (inkl. Unterknoten 165a/b, 166a/b, 167b, 170a–d)
+**Quellknoten:** 33 Dateien, NEU-151 bis NEU-173 inkl. aller Unterknoten  
+**Endanker:** NEU-170d (`AUDIT-REUSED`) + NEU-173 (`AUDIT-REUSED`)  
+**Verbindliche Voraussetzung:** F1-Kernfirewalls gelten auch hier
 
-| Knotenbereich | Prüfart | Behandlung |
-|---------------|----------|------------|
-| NEU-151–155 | `AUDIT-RECONCILED` | Gültige Teilresultate + No-Gos extrahieren |
-| NEU-156–160 | `AUDIT-RECONCILED` | Spätere Quellenkorrekturen berücksichtigen |
-| NEU-161–165b | `AUDIT-RECONCILED` | Modellrechnung von unbedingter Aussage trennen |
-| NEU-166–168 | `AUDIT-RECONCILED` | Falsche Kernzeugenroute ($k\in\ker C_p\setminus\ker T_p$) nicht übernehmen |
-| NEU-169 | `AUDIT-RECONCILED` | Kollisionssatz behalten; Trägervoraussetzung ($L_3^\circ$) firewallen |
-| NEU-170–170c | `AUDIT-RECONCILED` | Durch 170d/173 epistemisch bereinigen |
-| NEU-170d | `AUDIT-REUSED` | Maßgeblicher DAG-Endstand |
-| NEU-171 | `AUDIT-RECONCILED` | Durch 172/173 fortgeschrieben |
-| NEU-172 | `AUDIT-RECONCILED` | Fallbezeichnung durch 173 korrigiert |
-| NEU-173 | `AUDIT-REUSED` | Maßgeblicher Abschluss des alten Typquellenpfads |
+##### Buchhaltungsbefund: DUPLICATE-ID NEU-166b
 
-**Typkorrekturen bereits festgehalten:**
-Rohkopplung $T_p$, induzierter Primkanaloperator und Rang-eins-Erweiterung
-sind getrennt zu halten; behauptete intrinsische Positivität / Liftunabhängigkeit
-zurückgenommen; Zeugenpfad $k\in\ker C_p\setminus\ker T_p$ ist nicht typkorrekt geschlossen.
+> **NEU-166b ist doppelt vergeben.** Im Repo existieren zwei inhaltlich verschiedene
+> Dateien unter dieser Nummer:
+>
+> | Interne F2-Bezeichnung | Dateiname | Rolle |
+> |------------------------|-----------|-------|
+> | **166b-P** | `NEU-166b_Rollen_Provenienzentscheidung_Rp_Tp.md` | älteres methodisches Entscheidungs-/Provenienzblatt; friert zulässige Leserichtung ein; eigentliche Rollenentscheidung noch ?[O] |
+> | **166b-T** | `NEU-166b_Typ_Domaenen_Deszentaudit_Tp_Fallverzweigung.md` | inhaltlich weiter entwickelt; Fall 2 ausgeschlossen; Fall 3a lokal/modenweise bestätigt; globale Entscheidung zwischen Fall 1, 3b, 4 offen |
+>
+> **Behandlung:** Keine historische Datei wird umbenannt. Für die SYN-Migration gilt:
+> - **166b-T hat substanziellen Vorrang** für den mathematischen Endstand (präzisere Fallentscheidung).
+> - **166b-P bleibt als Audit-/Provenienz-Firewall** erhalten (enthält weiterhin gültige Auditregeln, insbes. Verbot der nachträglichen Umdeklaration postulierter $R_{p,j}$ oder $T_p$ als Quellenkonstruktionen).
+> - Kein SYN-Satz der Form „NEU-166b beweist …“ ist zulässig ohne Angabe, welche der beiden Dateien gemeint ist.
+> - Status: `DUPLICATE-ID / 166b-T RECONCILED / 166b-P AUDIT-FIREWALL`
+
+##### Prüfartmatrix NEU-151–173
+
+| Knoten | Prüfart | Endstatus für P05 | Kernbefund / Firewall |
+|--------|----------|-------------------|----------------------|
+| NEU-151 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Normalisierungs-Typaudit Primkanaloperatoren; $T_p$-Typisierung gesichert; intrinsische Positivität nicht nachgewiesen |
+| NEU-152 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Nichtentartung Primkanalgewichte: Kriterium gültig **konditional** auf Liftunabhängigkeit; Liftunabhängigkeit selbst offen |
+| NEU-153 | `AUDIT-RECONCILED` | `CONDITIONAL` | Hebungsunabhängigkeit: behauptete intrinsische Liftunabhängigkeit zurückgenommen; Ergebnis nur unter Modellbedingungen gültig |
+| NEU-154 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Pullback-Kern und Reichweite der Liftform; Strukturaussagen gültig; Rang-1-Anspruch an $T_p$ durch F1-Firewall 1 blockiert |
+| NEU-155 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Rohkopplung $T_p$, Primkanalkompression, Rang-1-Erweiterung: drei Typen strikt getrennt (F1-Firewall 1 bestätigt) |
+| NEU-156 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Verbundene Restspurform: Rekonstruktion und Eindeutigkeit gültig; globale Wres-Normierung offen |
+| NEU-157 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Zulässigkeitsraum Rohkopplung; Nichttrivialität: Existenzaussage gültig; kanonische Zeugenroute durch 167b geschlossen |
+| NEU-158 | `AUDIT-RECONCILED` | `INCORPORATED` | Invariante Formen, Rohkopplungsquotient, Symmetrieeindeutigkeit: ✓[M] ohne ausstehende Korrekturen |
+| NEU-159 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Dualzeuge, Projektionsnichtvernichtung, Liftzulässigkeit: Dualzeuge-Existenz gültig; automatische Liftzulässigkeit nicht bewiesen |
+| NEU-160 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Rohkopplungsquotient-Symmetrieabstieg: Abstieg im Quotientenraum gültig; globale Symmetriegruppe offen |
+| NEU-161 | `AUDIT-RECONCILED` | `CONDITIONAL` | Nichttriviale Fourierladung $L_3^\circ$: Existenz nur im Testmodell; F1-Firewall ($L_3^\circ\in F^3A$ ?[O]) greifen hier direkt |
+| NEU-162 | `AUDIT-RECONCILED` | `CONDITIONAL` | Quantorentest $L_3^\circ = e_1 V_1$: konditional im Einmodenmodell; globale Herkunft nicht gesichert (NEU-170d) |
+| NEU-163 | `AUDIT-RECONCILED` | `CONDITIONAL` | Einmodenzeuge, Liftmitgliedschaft, Nichtnullkante: algebraisch rechenbar im Testmodell; Herkunft $[L_3]\mapsto L_3^\circ = e_1 V_1$ blockiert (NEU-170d) |
+| NEU-164 | `AUDIT-RECONCILED` | `CONDITIONAL` | $R_p$-Test, kanonischer Zeuge, Entscheidungsknoten: konditional; Zielkanten-Nichtverschwinden nicht bewiesen (NEU-170d) |
+| NEU-165 | `AUDIT-RECONCILED` | `INCORPORATED_part` | $R_p$-Wirkung, Matrixstruktur, Basisnullmengen, gemeinsamer Kern: Matrixstruktur gültig; Kernzeugenroute durch 167b geschlossen |
+| NEU-165a | `AUDIT-REUSED` | `INCORPORATED` | Quellenregister $R_p$-Operatoren: Quellenlage bestätigt, kein Widerspruch |
+| NEU-165b | `AUDIT-RECONCILED` | `INCORPORATED` | Konsistenzaudit $R_p$ vs. NEU-157: Konsistenz ✓[M]; falsche Kernzeugenroute ausgeschlossen |
+| NEU-166 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Einmoden-/Zweimoden-Test, Zeugen: Test-Resultate gültig; Zeugenroute $k\in\ker C_p\setminus\ker T_p$ nicht typkorrekt geschlossen (durch 166a/b-T bestätigt) |
+| NEU-166a | `AUDIT-RECONCILED` | `INCORPORATED` | Typ-Domänen-Deszentaudit $T_p$: Deszentstruktur ✓[M]; Auditregeln verbindlich |
+| **NEU-166b-P** | `AUDIT-FIREWALL` | `METHODISCH ERHALTEN` | Rollen-/Provenienzentscheidung $R_p$/$T_p$: Leserichtung eingefroren; Verbot nachträglicher Umdeklaration als Quellenkonstruktion; Rollenentscheidung ?[O] |
+| **NEU-166b-T** | `AUDIT-RECONCILED` | `INCORPORATED_part` | Typ-Domänen-Deszentaudit $T_p$ Fallverzweigung: Fall 2 ausgeschlossen ✓[M]; Fall 3a lokal/modenweise ✓[M]$_\rm part$; globale Entscheidung (Fall 1, 3b, 4) ?[O]; **substanzieller Vorrang** über 166b-P |
+| NEU-167 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Lineare Kernbedingungen vs. Fourierladungsbedingung: Trennung gültig; alte Zeugenroute über Kernbedingungen durch 167b geschlossen |
+| NEU-167b | `AUDIT-REUSED` | `INCORPORATED` | Abschluss O167-2: keine Kernbedingungen aus NEU-157/NEU-44 — maßgeblicher Endstand; Zeugenroute über $\ker C_p\setminus\ker T_p$ geschlossen ✓[M] |
+| NEU-168 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Nichtverschwindensgeometrie, exakt zulässige Liftmenge: Geometrie gültig; keine falsche Kernzeugenroute; $L_3^\circ$-Trägervoraussetzung firewallen |
+| NEU-169 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Kollisionssystem, Einzelmoden-Nichtverschwindung $B_p$: Kollisionssatz behalten; $L_3^\circ$-Trägervoraussetzung ausdrücklich firewallen (durch 250j verstärkt) |
+| NEU-170 | `AUDIT-RECONCILED` | `SUPERSEDED_part` | Gew. Träger $L_3^\circ$, Quellenimport: durch 170a–d epistemisch überholt; Teilaussagen über Trägerdefinition erhalten |
+| NEU-170a | `AUDIT-RECONCILED` | `SUPERSEDED_part` | Fouriergrad-Klasse $L_3$, Repräsentantenstatus: durch 170b/c/d präzisiert; frühere Repräsentantenannahmen zurückgenommen |
+| NEU-170b | `AUDIT-RECONCILED` | `SUPERSEDED_part` | Ursprungsdefinition, Repräsentantenstatus $L_3$: durch 170c/d überholt; Quellendefinitionen aus NEU-20/28 relevant |
+| NEU-170c | `AUDIT-RECONCILED` | `INCORPORATED_part` | Direktaudit $L_3$-Definition NEU-20/NEU-28: Quellendefinition geklärt; Repräsentantenstatus in NEU-28 bestätigt |
+| NEU-170d | **`AUDIT-REUSED`** | **`INCORPORATED` — DAG-ENDANKER** | Bereinigter DAG-Audit NEU-28/NEU-162: Einmodenansatz algebraisch rechenbar; Herkunft $[L_3]\mapsto L_3^\circ = e_1 V_1$ blockiert; Zielkanten-Nichtverschwinden nicht bewiesen; maßgeblicher Endstand für gesamten $L_3^\circ$-Strang |
+| NEU-171 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Typfundament $L_3$-Klasse, Kochainkomplex: Strukturaussagen gültig; durch 172/173 epistemisch fortgeschrieben |
+| NEU-172 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Direktaudit NEU-72/NEU-170b, Typfundament $L_3$: Fallbezeichnung durch 173 korrigiert (C₂ → C_src-neg); Teilresultate erhalten |
+| NEU-173 | **`AUDIT-REUSED`** | **`INCORPORATED` — TYPQUELLEN-ENDANKER** | $\Delta$-Audit NEU-20/NEU-28, Typfundament, Quellenkegel: epistemische Korrektur C₂ → C_src-neg; alten Typquellen-Auditzyklus ausdrücklich abgeschlossen; mathematische Neukonstruktion bleibt davon getrennt offen; maßgeblicher Abschluss |
+
+##### F2-Kernfirewalls (ergänzend zu F1)
+
+6. NEU-166b ist eine Doppelnummer. In P05 stets zwischen 166b-P (Provenienz-Firewall) und 166b-T (Fallentscheidung, substanzieller Vorrang) unterscheiden.
+7. Alle Aussagen über $L_3^\circ$ in NEU-161–169 sind konditional im Einmodenmodell. Der Endanker für diesen Strang ist NEU-170d, nicht die Einmodenrechnungen selbst.
+8. Die Kernzeugenroute $k\in\ker C_p\setminus\ker T_p$ ist durch NEU-167b geschlossen; kein Resultat aus NEU-165/166/168 darf sie stillschweigend als offen behandeln.
+9. NEU-169-Kollisionssatz bleibt erhalten, aber nur mit expliziter Firewall auf die $L_3^\circ$-Trägervoraussetzung — durch NEU-250j zusätzlich verstärkt.
+
+---
 
 #### F3 — Spätere Primfaser-Korrekturen
 
@@ -268,50 +293,38 @@ zurückgenommen; Zeugenpfad $k\in\ker C_p\setminus\ker T_p$ ist nicht typkorrekt
 | Mit F1/F2-Endstand zusammenführen (`AUDIT-RECONCILED`) |
 | Nicht-P05-Anteil (globale Kopplung, koh.) in P09/P11 weiterleiten |
 
+---
+
 #### F4 — Neuer Mangoldt-/Primzahlpotenzstrang
 
-**Quellknoten:** NEU-250g, NEU-250i, NEU-250j (7. August 2026)  
-**Cross-Paket-Korrektur:** NEU-250f Patch 1 (`1579a379`)
-
-**Prüfart: `TARGETED-REAUDIT` / RECONCILIATION** — jünger als der alte Gesamtaudit;
-verändern direkt frühere P05-Aussagen zu Mangoldt-Gewichten und Primkanalüberlappungen.
+**Quellknoten:** NEU-250g, NEU-250i, NEU-250j (7. August 2026) + NEU-250f Patch 1 (`1579a379`)  
+**Prüfart:** `TARGETED-REAUDIT` / RECONCILIATION
 
 | Knoten | Inhalt | Offene Punkte / Firewall |
 |--------|--------|--------------------------|
-| NEU-250f + Patch 1 | Filtrations-No-Go nur **konditional** auf eine konkrete Algebrarealisierung $L_{3,\rm alg}^\circ\in F^3A$ | Unbedingter alter No-Go `SUPERSEDED`; Realisierungsbrücke ?[O] |
-| NEU-250g | Primitiver Faktor $\frac{\log p}{\sqrt p}$ algebraisch konstruiert | Hilbertraum-Fundierung $H_{\rm BC}$ / globaler Funktionalkalkül offen; Motivation zum „endgültig geschlossenen“ alten $L_3$-Pfad durch Patch 1 zu schwächen |
-| NEU-250i | Gradnormierte Energie $H_{\rm pr}=D_\Omega^{-1}H_{\rm BC}$; auf $n=p^m$: $\frac{\Lambda(p^m)}{p^{m/2}}=\frac{\log p}{p^{m/2}}$ | Firewall: $H_{\rm pr}\ne\Lambda$ auf allgemeinen zusammengesetzten $n$ |
-| NEU-250j | Trägertrennung: $\operatorname{supp}\Lambda\cap\operatorname{supp}(\text{Kreuzprimkollision})=\emptyset$ | Kreuzprimkollision $p\,m_p=q\,m_q=M$ ($p\ne q$) nur für $M$ mit mindestens zwei verschiedenen Primteilern; Mediatorweg → ?[O] |
+| NEU-250f + Patch 1 | Filtrations-No-Go nur **konditional** auf $L_{3,\rm alg}^\circ\in F^3A$ | Unbedingter alter No-Go `SUPERSEDED`; Realisierungsbrücke ?[O] |
+| NEU-250g | Primitiver Faktor $\frac{\log p}{\sqrt p}$ algebraisch konstruiert | Hilbertraum-Fundierung $H_{\rm BC}$ offen; ⚠[M] |
+| NEU-250i | $H_{\rm pr}=D_\Omega^{-1}H_{\rm BC}$; auf $n=p^m$: $\frac{\Lambda(p^m)}{p^{m/2}}=\frac{\log p}{p^{m/2}}$ | Firewall: $H_{\rm pr}\ne\Lambda$ auf allgemeinen zusammengesetzten $n$ |
+| NEU-250j | Trägertrennung $\operatorname{supp}\Lambda\cap\operatorname{supp}(\text{Kreuzprimkollision})=\emptyset$ | Graphbasisüberlappung lebt nur auf $\Lambda=0$; Mediatorweg ?[O] |
 
-**Wichtigster Befund NEU-250j:** Die alten Graphüberlappungen leben genau auf
-Zahlen mit mindestens zwei verschiedenen Primteilern, wo $\Lambda=0$. Folglich kann
-Graphbasisüberlappung allein keine globale Objekt-X-Kopplung liefern;
-der Mediatorweg bleibt ausdrücklich offen.
+---
 
 ### F-Roadmap
 
 | Paket | Status | Nächster Schritt |
 |-------|--------|------------------|
-| F1 | **PASS A COMPLETE** | Endstand ist für P05 extrahiert |
-| F2 | aktiv als nächstes | NEU-151–173 gegen F1-Firewalls und Endanker 170d/173 schließen |
-| F3 | danach | NEU-225/226/227-Reconciliation final in P05-Scope ziehen |
-| F4 | danach | NEU-250g/i/j gezielt re-auditieren; Patch 1 zu 250f verbindlich berücksichtigen |
-| P05-SYN | nach F1–F4 | `papers/P05_*.tex` erzeugen + LaTeX-SYN-Transferaudit |
-
-### Pass-A-Abschlussschritt Gruppe F
-
-Nach Abschluss der Pakete F1–F4 wird aus dem Endstand:
-- der gültige mathematische Boden für P05 bestimmt,
-- die LaTeX-SYN-Fassung `papers/P05_*.tex` analog zu P07 erzeugt,
-- ein LaTeX-Transferaudit (nicht Vollneuaudit) durchgeführt,
-- dieser Eintrag mit `PASS A COMPLETE` und Commit-Referenzen versiegelt.
+| F1 | **PASS A COMPLETE** (`07903f85`) | Endstand für P05 extrahiert |
+| F2 | **ERÖFFNET** — Matrix steht | Reconciliation-Arbeit beginnen; keine neuen Dateien erforderlich |
+| F3 | ausständig | NEU-225/226/227-Reconciliation final in P05-Scope ziehen |
+| F4 | ausständig | NEU-250g/i/j gezielt re-auditieren; Patch 1 zu 250f verbindlich |
+| P05-SYN | nach F1–F4 | `papers/P05_*.tex` + LaTeX-SYN-Transferaudit |
 
 ---
 
 ## Querverweise
 
 - Verbindlicher Migrationsplan: `00-uebersicht/SYN_MIGRATIONSPROTOKOLL.md`
-- Audit-Archive: `ARCHIV-AUDIT-2026-07.md`, `ARCHIV-AUDIT-NEU202-212.md` u. a.
+- Audit-Archive: `ARCHIV-AUDIT-2026-07.md`, `ARCHIV-AUDIT-NEU202-212.md` u. a.
 - Zwischenbilanzen: `ZWISCHENBILANZ_2026-07-29.md` bis `2026-08-01.md`
 - Auditstand HH-Strang: `AUDITSTAND-2026-08-03.md`
 - Forschungsknoten (abgeschlossen): `03-weil-form-statistik/`
