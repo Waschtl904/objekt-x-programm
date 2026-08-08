@@ -2,243 +2,144 @@
 
 **Katalog-ID:** NEU-260b  
 **Ordner:** `07-weil-explizitformel`  
-**Datum:** 2026-08-08  
-**Auftrag:** Vier Tests: (1) Defizienzlinien exakt typisieren; (2) Gauge-Freiheit $\theta\mapsto\theta+\beta-\alpha$ beweisen; (3) BC/KMS/Frobenius-Quellenbestand für kanonisches $U_a:\mathcal{N}_{+,a}\to\mathcal{N}_{-,a}$ auditieren; (4) falls ja, explizite Koordinate $e^{i\theta(a)}$ ablesen.  
-**Standardwahl:** $\lambda=\lambda_{\rm can}(a)=\lambda_a-1$ aus NEU-260a $\checkmark[K/M]$.  
-**Vorgänger:** NEU-260a $\checkmark$, NEU-260 (Hauptknoten), NEU-250-Serie  
+**Datum:** 2026-08-08 (Patch: 2026-08-08b)  
+**Patch:** (i) Typfehler $\mathcal{N}_{\pm}=\operatorname{span}\{e^{\pm x}\}$ korrigiert; (ii) $PA_a=A_aP$ als Satz (Suzuki) eingetragen; (iii) Parität liefert $U_a^P$, $\theta=0$ in Suzuki-Basis; (iv) Parität reduziert $U(1)\to\mathbb{Z}_2$; kein eindeutiger Beweis $\theta=0$. Gibt NEU-260b.1 frei.
 
 ---
 
-## 0. Leitfrage
+## 0. Leitfrage (aktualisiert)
 
-$$
-\boxed{\text{Konstruiert BC/KMS/Frobenius/Adelen kanonisch eine unitäre Identifikation }U_a:\mathcal{N}_{+,a}\longrightarrow\mathcal{N}_{-,a}?} \qquad (0\text{-Lead})
-$$
-
-Nicht: "Findet BC eine Zahl $\theta(a)$?" (Koordinate hängt von Basiswahl ab.)
-
-Sondern: "Konstruiert BC ein geometrisches Datum $U_a$, aus dem nach Wahl einer kanonischen Basentrivialisierung die Koordinate $e^{i\theta(a)}$ abgelesen werden kann?"
+Nicht mehr: "Finde kanonisches $U_a:N_+\to N_-$."  
+Sondern nach diesem Knoten: **Parität reduziert $U(1)$ auf $\mathbb{Z}_2=\{+P,-P\}$. Was wählt das Vorzeichen?** $\to$ NEU-260b.1.
 
 ---
 
-## Test 1 — Defizienzlinien exakt typisieren
+## 1. Defizienzlinien: Korrektur des Typfehlers
 
-### 1.1 Minimaler Operator und Adjungierter
-
-Auf $\mathcal{H}(T_a^{\rm can})$ (Standardwahl $\lambda=\lambda_{\rm can}(a)$) mit $\mathscr{D}_a = i\frac{d}{dx}$ auf $C_c^\infty(-a,a)$:
-
+**Falsch** ($\times[M]$):
 $$
-\mathscr{D}_a^*f = i\frac{d}{dx}f\quad\text{auf}\quad\operatorname{Dom}(\mathscr{D}_a^*) = \{f\in\mathcal{H}(T_a^{\rm can}) : f\text{ abs. stetig, }f'\in\mathcal{H}(T_a^{\rm can})\}. \qquad (1\text{-Adj})
+\mathcal{N}_{\pm,a} = \operatorname{span}\{e^{\pm x}\}. \qquad\times[M]
 $$
 
-### 1.2 Defizienzräume
-
+**Richtig** ($\checkmark[M]$/Quelle: Suzuki 2026 $\S$2):
 $$
-\boxed{\mathcal{N}_{+,a} := \ker(\mathscr{D}_a^* - i\cdot\mathrm{Id}) = \operatorname{span}\{e^{x}\}\cap\mathcal{H}(T_a^{\rm can}),} \qquad (1\text{-Np})
-$$
-$$
-\boxed{\mathcal{N}_{-,a} := \ker(\mathscr{D}_a^* + i\cdot\mathrm{Id}) = \operatorname{span}\{e^{-x}\}\cap\mathcal{H}(T_a^{\rm can}).} \qquad (1\text{-Nm})
+\boxed{\mathcal{N}_{\pm,a} = \operatorname{span}\{v_\pm\}, \qquad T_a v_\pm = e^{\pm x}.} \qquad (1\text{-Def})\quad\checkmark[M]
 $$
 
-**Defizienzindizes:** $(n_+,n_-)=(1,1)$ auf $(-a,a)$ für jedes $a<\infty$. $\checkmark[K/M]$ (Standard; $e^{\pm x}\in L^2(-a,a)$).
+Die Exponentialfunktionen $e^{\pm x}$ leben auf der $T_a$-Bildseite. Die Defizienzvektoren $v_\pm\in\mathcal{H}(T_a)$ sind Urbilder unter dem Operator $T_a$.
 
-### 1.3 Kanonische (un-normierte) Vektoren
+**Defizienzindizes:** $(n_+,n_-)=(1,1)$ auf $(-a,a)$, $a<\infty$. $\checkmark[K/M]$
 
-Kanonische Erzeuger (vor Normierung):
+---
+
+## 2. Gauge-Freiheit: $\theta\mapsto\theta+\beta-\alpha$ $\checkmark[K/M]$
+
+Unter $v_\pm\mapsto e^{i\alpha_\pm}v_\pm$: $\theta\mapsto\theta+\beta-\alpha$.
+
 $$
-\mathbf{e}_{+,a}(x) := e^x \cdot \mathbf{1}_{(-a,a)}, \qquad \mathbf{e}_{-,a}(x) := e^{-x} \cdot \mathbf{1}_{(-a,a)}. \qquad (1\text{-Gen})
-$$
-
-**Normen** in $\mathcal{H}(T_a^{\rm can})$: explizit berechenbar, abhängig von $Q_W^a$ auf $\{e^{\pm x}\}$. Diese Normen sind reell und positiv; die Phasen von $\mathbf{e}_{\pm,a}$ sind durch die reelle Funktion $e^{\pm x}$ fixiert --- aber nur bis zu einer komplexen Skalierung $\mathbf{e}_{\pm,a}\mapsto e^{i\alpha_{\pm}}\mathbf{e}_{\pm,a}$.
-
-$$
-\text{Defizienzlinien } \mathcal{N}_{\pm,a} \text{ eindimensional, kanonische Erzeuger } e^{\pm x}: \quad\checkmark[K/M] \qquad (1\text{-Done})
+\boxed{U_a:\mathcal{N}_{+,a}\to\mathcal{N}_{-,a}\text{ ist intrinsisches geometrisches Datum; }\theta\text{ ist nur Koordinate.}\quad\checkmark[K/M]} \qquad (2\text{-Intrinsic})
 $$
 
 ---
 
-## Test 2 — Gauge-Freiheit: $\theta\mapsto\theta+\beta-\alpha$ $\checkmark[K/M]$
+## 3. Parität: $PA_a=A_aP$ (Satz, Suzuki 2026)
 
-### 2.1 von-Neumann-Parametrisierung
-
-Suzuki wählt normierte Defizientvektoren
-$$
-v_{+} = \frac{\mathbf{e}_{+,a}}{\|\mathbf{e}_{+,a}\|_{T_a}}, \qquad v_{-} = \frac{\mathbf{e}_{-,a}}{\|\mathbf{e}_{-,a}\|_{T_a}}, \qquad (2\text{-Norm})
-$$
-und setzt $w_\theta = v_+ + e^{i\theta}v_-$. Die selbstadjungierte Erweiterung $\overline{\mathscr{D}}_{a,\theta}$ wird durch den Graphen von $w_\theta$ definiert.
-
-### 2.2 Phasenfreiheit
-
-Ersetzt man
-$$
-v_+ \mapsto e^{i\alpha}v_+, \qquad v_- \mapsto e^{i\beta}v_-, \qquad (2\text{-Phase})
-$$
-so transformiert der Erweiterungsvektor:
-$$
-w_\theta = v_+ + e^{i\theta}v_- \quad\longmapsto\quad e^{i\alpha}v_+ + e^{i(\theta+\beta)}v_- = e^{i\alpha}\left(v_+ + e^{i(\theta+\beta-\alpha)}v_-\right). \qquad (2\text{-Trans})
-$$
-
-Da der Graph von $w_\theta$ und $e^{i\alpha}w_\theta$ dieselbe selbstadjungierte Erweiterung definieren:
-$$
-\boxed{\theta\mapsto\theta+\beta-\alpha \quad \Rightarrow \quad \overline{\mathscr{D}}_{a,\theta}\cong\overline{\mathscr{D}}_{a,\theta+\beta-\alpha}.\quad\checkmark[K/M]} \qquad (2\text{-Gauge})
-$$
-
-**Fazit:** Die Zahl $\theta\in[0,2\pi)$ ist **keine intrinsische Größe**. Intrinsisch ist der unitäre Operator
-$$
-\boxed{U_a : \mathcal{N}_{+,a} \longrightarrow \mathcal{N}_{-,a}, \qquad U_a := \text{von-Neumann-Parameter (basisunabhängig definiert).}} \qquad (2\text{-Ua})
-$$
-
-Nach Wahl orthonormierter Basen $\{v_+\}$, $\{v_-\}$ erscheint $U_a$ als $e^{i\theta}$; $\theta$ selbst hängt von dieser Basiswahl ab.
-
----
-
-## Test 3 — BC/KMS/Frobenius-Quellenbestand für $U_a$ $?[O]$
-
-### 3.1 Was benötigt wird
-
-Gesucht: eine kanonische unitäre Abbildung
-$$
-U_a^{\rm BC} : \mathcal{N}_{+,a} \longrightarrow \mathcal{N}_{-,a} \qquad (3\text{-Need})
-$$
-die aus der Struktur von BC/KMS/Frobenius/Adelen folgt, ohne Basiswahl.
-
-### 3.2 Kandidat I: Modulare Konjugation $J_{\rm KMS}$
-
-Im BC-/KMS-Formalismus existiert eine **modulare Konjugation** $J$ (antiunitäre Involution, $J^2=1$), die Erzeuger und Vernichter vertauscht. Auf der archimedischen Seite entspricht sie der Komplex-Konjugation kombiniert mit der Involution $x\mapsto -x$ (Spiegelung am Ursprung).
-
-**Wirkung auf Defizienträume:** Unter der Spiegelung $\sigma: x\mapsto -x$:
-$$
-\mathbf{e}_{+,a}(x) = e^x \quad\xmapsto{\sigma}\quad e^{-x} = \mathbf{e}_{-,a}(x). \qquad (3\text{-Refl})
-$$
-
-Die Spiegelung $\sigma$ liefert also eine natürliche lineare Abbildung
-$$
-U_a^\sigma : \mathcal{N}_{+,a} \to \mathcal{N}_{-,a}, \qquad U_a^\sigma (c\cdot\mathbf{e}_{+,a}) = c\cdot\mathbf{e}_{-,a}. \qquad (3\text{-Sigma})
-$$
-
-**Status:** $U_a^\sigma$ ist wohldefiniert als lineare Abbildung zwischen eindimensionalen Räumen. Sie ist **unitär** genau dann, wenn $\|\mathbf{e}_{+,a}\|_{T_a}=\|\mathbf{e}_{-,a}\|_{T_a}$.
+### 3.1 Der Satz
 
 $$
-\|\mathbf{e}_{+,a}\|_{T_a}^2 = Q_W^a(e^x,e^x) - \lambda_{\rm can}\|e^x\|_2^2, \qquad \|\mathbf{e}_{-,a}\|_{T_a}^2 = Q_W^a(e^{-x},e^{-x}) - \lambda_{\rm can}\|e^{-x}\|_2^2. \qquad (3\text{-Norms})
+\boxed{P f(x):=f(-x), \qquad PA_a = A_aP.\quad\checkmark[M]/\text{Suzuki 2026 }\S2} \qquad (3\text{-Comm})
 $$
 
-Da $Q_W^a$ durch das Primblock-Gewicht $-2\Lambda(n)/\sqrt{n}\cdot g(\log n)$ und den $\Gamma$-Block bestimmt wird, und $\|e^x\|_{L^2(-a,a)}=\|e^{-x}\|_{L^2(-a,a)}$ (Symmetrie des Intervalls), hängt die Gleichheit der Normen davon ab, ob $Q_W^a$ selbst symmetrisch unter $x\mapsto -x$ ist.
+Beweis-Skizze (Suzuki): Der Kernel $W^a(x,y)$ des Weil-Operators ist gerade, also $W^a(-x,-y)=W^a(x,y)$, damit kommutiert $P$ mit dem Integraloperator, der $A_a$ definiert.
+
+### 3.2 Konsequenzen
 
 $$
-Q_W^a(f,f)=Q_W^a(\tilde f,\tilde f)\text{ mit }\tilde f(x):=\overline{f(-x)}?\quad?[O] \qquad (3\text{-Sym})
+PT_a = T_aP \quad\Rightarrow\quad \|Pv\|_{T_a}^2 = \langle T_aPv,Pv\rangle = \langle PT_av,Pv\rangle = \|v\|_{T_a}^2. \qquad (3\text{-Unit})
 $$
 
-**Physikalische Deutung:** $(3\text{-Sym})$ ist die Selbstdualität der Weil-Form unter der kanonischen Involution der adelischen Struktur. Diese Involution ist strukturell im BC-Strang vorhanden (Spiegelung im adelischen Multiplika-tionsfeld), muss aber explizit auf $Q_W^a$ geprüft werden.
-
-### 3.3 Kandidat II: Frobenius-Phase
-
-Aus der lokalen BC/Frobenius-Struktur könnte eine kanonische Phase
 $$
-e^{i\varphi_p} \in U(1) \qquad (3\text{-Frob})
-$$
-pro Primzahl $p$ entstehen (etwa aus der Frobenius-Spurformel oder dem Nakayama-Funktionalkalkül). Ein Produkt über alle $p$ wäre dann
-$$
-e^{i\varphi} = \prod_p e^{i\varphi_p}. \qquad (3\text{-FrobProd})
+\boxed{P:\mathcal{H}(T_a)\to\mathcal{H}(T_a)\text{ ist unitär.}\quad\checkmark[K/M]} \qquad (3\text{-Punit})
 $$
 
-**Problem:** Ein konvergentes Produkt über alle Primzahlen wäre außerordentlich unwahrscheinlich ohne zusätzliche Struktur. Dieser Kandidat ist spekulativer als Kandidat~I.
+### 3.3 Parität vertauscht Defizienzräume
 
+Auf dem Kern: $\mathscr{D}_a = i\frac{d}{dx}$, also
 $$
-\text{Frobenius-Phase als globales Produkt: spekulative Kandidatur.}\quad?[O] \qquad (3\text{-FrobStatus})
-$$
-
-### 3.4 Kandidat III: Hecke-Symmetrie
-
-Hecke-Operatoren $T_p$ auf dem adelischen Ring haben kanonische Selbstdualität (Petersson-Pairing). Falls sie auf $\mathcal{N}_{\pm,a}$ wirken, könnten sie $U_a$ als Intertwiner auswählen.
-
-$$
-\text{Hecke-Wirkung auf }\mathcal{N}_{\pm,a}:\quad?[O] \qquad (3\text{-Hecke})
+\mathscr{D}_a P f = i(Pf)' = i(-f'(-x)) = -P(if'(x)) = -P\mathscr{D}_a f. \qquad (3\text{-Anti})
 $$
 
-### 3.5 Favorit: Modulare Konjugation / Spiegelungssymmetrie
-
-Kandidat I hat den größten strukturellen Vorteil: er braucht kein konvergentes Produkt, sondern nur die Symmetriefrage $(3\text{-Sym})$.
-
 $$
-\boxed{\text{Primärer BC-Eintrittspunkt: Modulare Konjugation / Spiegelung }x\mapsto -x.\quad?[O]\to\text{Test 4}} \qquad (3\text{-Fav})
+\boxed{\mathscr{D}_aP = -P\mathscr{D}_a.\quad\checkmark[K/M]} \qquad (3\text{-AntiComm})
+$$
+
+Für $v_+\in\mathcal{N}_{+,a}$: $\mathscr{D}_a^*(Pv_+) = -P\mathscr{D}_a^* v_+ = -P(iv_+) = -i(Pv_+)$, also
+$$
+\boxed{P:\mathcal{N}_{+,a}\longrightarrow\mathcal{N}_{-,a}\text{ linear und unitär.}\quad\checkmark[K/M]} \qquad (3\text{-Map})
 $$
 
 ---
 
-## Test 4 — Explizite Koordinate $e^{i\theta(a)}$ (konditional auf Test 3) $?[O]$
+## 4. $U_a^P = P|_{\mathcal{N}_{+,a}}$ als von-Neumann-Parameter
 
-Falls Test 3 ergibt $U_a^\sigma$ ist unitär (d.h. $(3\text{-Sym})$ gilt), und nach Wahl der kanonischen normierten Basen
+### 4.1 In Suzuki-Basis: $\theta=0$
+
+Suzuki definiert $v_\pm$ via $T_av_\pm = e^{\pm x}$. Wegen $PT_a=T_aP$:
 $$
-v_+ := \frac{\mathbf{e}_{+,a}}{\|\mathbf{e}_{+,a}\|_{T_a}}, \qquad v_- := \frac{\mathbf{e}_{-,a}}{\|\mathbf{e}_{-,a}\|_{T_a}}, \qquad (4\text{-Bases})
-$$
-transportiert $U_a^\sigma v_+ = v_-$, also $e^{i\theta(a)}=1$, d.h.
-$$
-\boxed{\theta_{\rm can}(a) = 0\quad\text{(falls Spiegelungssymmetrie von }Q_W^a\text{ gilt).}\quad?[O]\to\text{zu beweisen}} \qquad (4\text{-Theta0})
+T_a(Pv_+) = P(T_av_+) = Pe^x = e^{-x} = T_av_-. \qquad (4\text{-Comp})
 $$
 
-Wenn $(3\text{-Sym})$ nicht gilt, ist $U_a^\sigma$ nicht unitär; man müsste stattdessen normieren:
+Da $T_a$ injektiv (weil $T_a\ge cI>0$):
 $$
-U_a^{\sigma,{\rm norm}} v_+ = e^{i\theta(a)} v_-, \qquad e^{i\theta(a)} = \frac{\|\mathbf{e}_{+,a}\|_{T_a}}{\|\mathbf{e}_{-,a}\|_{T_a}}\in\mathbb{R}_{>0}\cap S^1=\{1\} \qquad\text{nur falls Normen gleich.} \qquad (4\text{-Norm})
-$$
-
-Ein reellwertiges Verhältnis $\|\mathbf{e}_{+,a}\|/\|\mathbf{e}_{-,a}\|\neq 1$ wäre eine Amplitude, kein Phasenfaktor. Das wäre kein Element von $U(1)$ und könnte nicht direkt als von-Neumann-Parameter verwendet werden.
-
-$$
-\theta_{\rm can}(a)=0\Leftrightarrow\|\mathbf{e}_{+,a}\|_{T_a}=\|\mathbf{e}_{-,a}\|_{T_a}\Leftrightarrow Q_W^a\text{ ist symmetrisch unter }x\mapsto-x.\quad?[O] \qquad (4\text{-Equiv})
+\boxed{Pv_+ = v_-.\quad\checkmark[K/M]} \qquad (4\text{-PvEquality})
 $$
 
----
-
-## 5. Zusammenfassung und Strategische Einschätzung
-
+Damit: $U_a^P(v_+) = v_- = e^{i\cdot 0}v_-$, also in Suzuki-Basis
 $$
-\boxed{\text{Kernfrage: Gilt }Q_W^a(f,f)=Q_W^a(\tilde f,\tilde f)\text{ mit }\tilde f(x)=\overline{f(-x)}?} \qquad (5\text{-Core})
+\boxed{\theta_{P,\rm Suzuki} = 0.\quad\checkmark[K/M]\text{ (in Suzuki-Trivialisierung)}} \qquad (4\text{-Theta0})
 $$
 
-Falls ja: $\theta_{\rm can}(a)=0$, d.h. die Spiegelungsinvolution $x\mapsto -x$ wählt kanonisch die selbstadjungierte Erweiterung $\overline{\mathscr{D}}_{a,0}$ aus. Das wäre ein echter neuer Mechanismus: eine arithmetisch motivierte selbstadjungierte Erweiterung, nicht eine frei gewählte.
+### 4.2 Parität reduziert $U(1)$ auf $\mathbb{Z}_2$
 
-Falls nein: $Q_W^a$ bricht die Spiegelungssymmetrie; dann muss die Asymmetrie $\|\mathbf{e}_{+,a}\|\neq\|\mathbf{e}_{-,a}\|$ verstanden werden, und es braucht einen anderen Kandidaten für $U_a$.
+$-U_a^P = -P|_{\mathcal{N}_{+,a}}$ ist ebenfalls eine legitime unitäre Abbildung $\mathcal{N}_+\to\mathcal{N}_-$ und entspricht $\theta=\pi$.
 
-**Struktureller Hinweis:** Die Weil-Explizitformel in M3-Form (NEU-252) enthält:
-- $B_{\rm fin}$: symmetrisch unter $g\mapsto\tilde g$ (da $\Lambda(n)/\sqrt{n}$ reell und $g(\log n)$ bei reellem $g$ symmetrisierbar).
-- $B_\Gamma$: durch $\operatorname{Re}\gamma_\infty(t)$ definiert, symmetrisch unter $t\mapsto -t$ (reeller Gammafaktor).
-- $B_{\rm pole}$: $\hat g(i/2)+\hat g(-i/2)$, symmetrisch unter $g\mapsto\tilde g$ falls $g$ reell.
-
-Vorläufige Einschätzung: $Q_W^a$ **könnte** symmetrisch unter $x\mapsto -x$ sein, muss aber explizit geprüft werden.
+Allgemein: Parität $\mathfrak{D}(\overline{\mathscr{D}}_{a,\theta})\to\mathfrak{D}(\overline{\mathscr{D}}_{a,-\theta})$. Paritätsstabile Erweiterungen:
+$$
+\theta = -\theta\pmod{2\pi} \quad\Leftrightarrow\quad \theta\in\{0,\pi\}.
+$$
 
 $$
-Q_W^a\text{-Spiegelungssymmetrie: strukturell plausibel, noch nicht bewiesen.}\quad?[O] \qquad (5\text{-Plaus})
+\boxed{U(1)\xrightarrow{\text{Parität}}\{+P,-P\}\cong\mathbb{Z}_2.\quad\checkmark[K/M]} \qquad (4\text{-Z2})
+$$
+
+$$
+\boxed{\text{Parität reduziert Erweiterungsfreiheit von }U(1)\text{ auf }\mathbb{Z}_2.\quad\text{Kein Beweis }¹eindeutig }\theta=0.} \qquad (4\text{-Firewall})
 $$
 
 ---
 
-## 6. Offene Punkte
+## 5. Statusbuchungen
 
-$$\text{Defizienzlinien }\mathcal{N}_{\pm,a}=\operatorname{span}\{e^{\pm x}\}\cap\mathcal{H}(T_a^{\rm can})\quad\checkmark[K/M]\qquad(6\text{-a})$$
-$$\theta\text{-Gauge-Freiheit: }\theta\mapsto\theta+\beta-\alpha\quad\checkmark[K/M]\qquad(6\text{-b})$$
-$$U_a\text{ als intrinsisches geometrisches Datum (statt numerischem }\theta)\quad\checkmark[K/M]\qquad(6\text{-c})$$
-$$Q_W^a(f,f)=Q_W^a(\tilde f,\tilde f)\text{ mit }\tilde f(x)=\overline{f(-x)}?\quad?[O]\qquad(6\text{-d})$$
-$$U_a^\sigma\text{ unitär }\Leftrightarrow\|\mathbf{e}_{+,a}\|=\|\mathbf{e}_{-,a}\|\quad?[O]\qquad(6\text{-e})$$
-$$\theta_{\rm can}(a)=0\text{ falls Spiegelungssymmetrie}\quad?[O]\qquad(6\text{-f})$$
-$$\text{Frobenius-Phase als globales Produkt: spekulative Kandidatur}\quad?[O]\qquad(6\text{-g})$$
-$$\text{Hecke-Wirkung auf }\mathcal{N}_{\pm,a}\quad?[O]\qquad(6\text{-h})$$
-
----
-
-## 7. Abhängigkeiten
-
-| Referenz | SHA/Quelle | Inhalt |
-|---|---|---|
-| NEU-260a (Patch) | 371412d | $\lambda_{\rm can}=\lambda_a-1$ $\checkmark$ |
-| NEU-260 | Hauptknoten | Klassifikation $\theta$ als echtes Selektionsdatum |
-| NEU-258 | 1fa3745 | $W_{\rm NEU-252}=W_{\rm Lit}$ $\checkmark$ |
-| NEU-252 (Patch) | 4ee78ed | $B_W=B_{\rm pole}+B_\Gamma+B_{\rm fin}$ |
-| NEU-250-Serie | div. | $\Lambda(p^k)/\sqrt{p^k}$ aus BC/Frobenius |
-| Suzuki 2026 | \S{}2, Def. | $\overline{\mathscr{D}}_{a,\theta}$, $W(a,\theta;z)$ |
-| von Neumann | \S{}III | sa. Erweiterungen, Defizienträume, Gauge-Freiheit |
-| BC/KMS-Strang | div. | modulare Konjugation, Spiegelungsinvolution |
+$$\mathcal{N}_{\pm}=\operatorname{span}\{e^{\pm x}\}\quad\times[M]\text{ Typfehler}\qquad(5\text{-a})$$
+$$T_av_\pm=e^{\pm x},\;\mathcal{N}_{\pm}=\operatorname{span}\{v_\pm\}\quad\checkmark[M]/\text{Quelle}\qquad(5\text{-b})$$
+$$PA_a=A_aP\quad\checkmark[M]/\text{Suzuki 2026}\qquad(5\text{-c})$$
+$$P:\mathcal{H}(T_a)\to\mathcal{H}(T_a)\text{ unitär}\quad\checkmark[K/M]\qquad(5\text{-d})$$
+$$\mathscr{D}_aP=-P\mathscr{D}_a\quad\checkmark[K/M]\qquad(5\text{-e})$$
+$$P:\mathcal{N}_{+,a}\to\mathcal{N}_{-,a}\text{ linear-unitär}\quad\checkmark[K/M]\qquad(5\text{-f})$$
+$$Pv_+=v_-\text{ (in Suzuki-Trivialisierung)}\quad\checkmark[K/M]\qquad(5\text{-g})$$
+$$\theta_{P,\rm Suzuki}=0\quad\checkmark[K/M]\text{ (in Suzuki-Basis)}\qquad(5\text{-h})$$
+$$\text{Parität erzwingt eindeutig }\theta=0\quad\times[M]\qquad(5\text{-i})$$
+$$U(1)\xrightarrow{\text{Parität}}\mathbb{Z}_2=\{+P,-P\}\quad\checkmark[K/M]\qquad(5\text{-j})$$
+$$\varepsilon(a)\in\{+1,-1\}\text{ Restfreiheit}\quad?[O]\to\text{NEU-260b.1}\qquad(5\text{-k})$$
 
 ---
 
-*Lizenz: CC BY 4.0 — Objekt-X-Programm, öffentliche Fassung.*  
-*Erstellt 2026-08-08. Kernfrage: $Q_W^a$-Spiegelungssymmetrie $(5\text{-Core})$. Nächster Schritt: expliziter Normenvergleich $\|\mathbf{e}_{+,a}\|_{T_a}$ vs. $\|\mathbf{e}_{-,a}\|_{T_a}$.*
+## 6. Übergang
+
+$$
+\boxed{\text{NEU-260b: Weil-Parität reduziert }U(1)\to\mathbb{Z}_2.\quad\text{Nächster Knoten: NEU-260b.1 (}\varepsilon(a)\in\{+1,-1\}\text{).}}
+$$
+
+---
+
+*Patch 2026-08-08b. Gibt NEU-260b.1 frei.*
