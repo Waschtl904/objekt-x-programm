@@ -2,9 +2,10 @@
 
 **Katalog-ID:** NEU-258  
 **Ordner:** `07-weil-explizitformel`  
-**Datum:** 2026-08-07  
-**Auftrag:** Einmaliger formaler Abgleich aller Normierungsfaktoren: Fourierkonvention, Polterme, Gammafaktor, Primzahlpotenzgewicht, Koordinate $s=\frac{1}{2}+it$. Schlie\ss{}t NEU-257 Buchung $(1\text{-Norm})$.  
-**Vorgänger:** NEU-257 (Patch), NEU-252 (Patch), NEU-220k
+**Datum:** 2026-08-07 (Patch 1: 2026-08-08)  
+**Auftrag:** Einmaliger formaler Abgleich aller Normierungsfaktoren: Fourierkonvention, Polterme, Gammafaktor, Primzahlpotenzgewicht, Koordinate $s=\frac{1}{2}+it$. Schließt NEU-257 Buchung $(1\text{-Norm})$.  
+**Patch 1:** §4–6 vollständig neu typisiert. Vier Fehler behoben: (i) fehlender $1/\pi$-Faktor in $B_\Gamma$; (ii) Testfunktionsebenen-Verwechslung $\hat g = \hat a$; (iii) fehlerhafte $\operatorname{Re}\gamma_\infty$-Definition ohne $1/2$-Faktor; (iv) algebraisch falsche $p^{-k/2}$-Nennerform im Prim-Literaturausdruck.  
+**Vorgänger:** NEU-257 (Patch), NEU-252 (Patch), NEU-220k, NEU-220b, NEU-220d
 
 ---
 
@@ -20,7 +21,7 @@ $$
 \boxed{\hat f(t):=\int_{\mathbb{R}}f(u)\,e^{itu}\,du,\qquad\|\hat f\|_2^2=2\pi\|f\|_2^2.} \qquad (1\text{-FC})
 $$
 
-Das ist die **analyst's convention** mit $e^{+itu}$ (nicht $e^{-itu}$). Suzuki 2011/2025 verwendet dieselbe Konvention (vgl. Suzuki 2011, S.~1, Notation). Bombieri 2000 \S{}3 setzt ebenfalls $\hat f(s)=\int f(u)e^{su}\,du$ auf $\operatorname{Re}(s)=0$, also $s=it$, identisch zu $(1\text{-FC})$.
+Das ist die **analyst's convention** mit $e^{+itu}$ (nicht $e^{-itu}$). Suzuki 2011/2026 verwendet dieselbe Konvention (vgl. Suzuki 2011, S. 1, Notation). Bombieri 2000 §3 setzt ebenfalls $\hat f(s)=\int f(u)e^{su}\,du$ auf $\operatorname{Re}(s)=0$, also $s=it$, identisch zu $(1\text{-FC})$.
 
 $$
 \text{Fourierkonvention: Repo = Literatur.}\quad\checkmark[K/M] \qquad (1\text{-FC-Check})
@@ -39,7 +40,7 @@ $$
 \hat g(t)=\int_{\mathbb{R}}g(u)\,e^{itu}\,du=\hat h\left(\tfrac{1}{2}+it\right):=H\left(\tfrac{1}{2}+it\right). \qquad (2\text{-Coord})
 $$
 
-Suzuki (2011, (0.1)) und Weil (1952, \S{}5) schreiben das Positivitätskriterium in der Form:
+Suzuki (2011, (0.1)) und Weil (1952, §5) schreiben das Positivitätskriterium in der Form:
 $$
 \sum_\rho H(\rho)+\text{Polterme}+\text{Primterme}\ge0 \qquad (2\text{-Weil})
 $$
@@ -53,14 +54,14 @@ $$
 
 ## 3. Polterme
 
-Die Repo-Polterme (NEU-252, \S{}3, $(\text{A-Pole})$):
+Die Repo-Polterme (NEU-252, §3, $(\text{A-Pole})$):
 $$
-B_{\rm pole}(a,a)=h_{a,a}\left(\tfrac{i}{2}\right)+h_{a,a}\left(-\tfrac{i}{2}\right),\qquad h_{a,a}(z)=\widehat{g_{a,a}}(z). \qquad (3\text{-Repo})
+B_{\rm pole}(a,b) = h_{a,b}\!\left(\tfrac{i}{2}\right)+h_{a,b}\!\left(-\tfrac{i}{2}\right),\qquad h_{a,b}(z):=\widehat{g_{a,b}}(z). \qquad (3\text{-Repo})
 $$
 
-Die Weil-Explizitformel-Polterme (Bombieri 2000 \S{}3; Suzuki 2011 (0.1)): In der additiven Koordinate $u=\log x$ kommen Beiträge von $s=1$ (trivialer Pol) und $s=0$ (Pol bei $0$), entsprechend Auswertungen von $H$ bei $\frac{1}{2}+i\cdot\frac{i}{2}=0$ und $\frac{1}{2}+i\cdot(-\frac{i}{2})=1$, also
+Die Weil-Explizitformel-Polterme (Bombieri 2000 §3; Suzuki 2011 (0.1)): In der additiven Koordinate $u=\log x$ kommen Beiträge von $s=1$ (trivialer Pol) und $s=0$ (Pol bei $0$), entsprechend Auswertungen von $H$ bei $\frac{1}{2}+i\cdot\frac{i}{2}=0$ und $\frac{1}{2}+i\cdot(-\frac{i}{2})=1$, also
 $$
-H(0)+H(1)=\widehat{g_{a,a}}\left(\tfrac{i}{2}\right)+\widehat{g_{a,a}}\left(-\tfrac{i}{2}\right)=B_{\rm pole}(a,a). \qquad (3\text{-Lit})
+H(0)+H(1)=\widehat{g_{a,b}}\!\left(\tfrac{i}{2}\right)+\widehat{g_{a,b}}\!\left(-\tfrac{i}{2}\right)=B_{\rm pole}(a,b). \qquad (3\text{-Lit})
 $$
 
 $$
@@ -71,58 +72,85 @@ $$
 
 ## 4. Gammafaktor / archimedischer Block
 
-Der Repo-Gammablock (NEU-252 \S{}3; NEU-220b):
+**Definitionen** (NEU-220b, NEU-220d, NEU-252; autoritativ):
 $$
-B_\Gamma(a,a)=\int_{\mathbb{R}}|\hat a(t)|^2\operatorname{Re}\gamma_\infty(t)\,dt,\qquad\operatorname{Re}\gamma_\infty(t)=\operatorname{Re}\frac{\Gamma'}{\Gamma}\left(\tfrac{1}{4}+\tfrac{it}{2}\right)+\text{const}. \qquad (4\text{-Repo})
+\boxed{h_{a,b}(z) := \widehat{g_{a,b}}(z) = \int_{\mathbb{R}} g_{a,b}(u)\,e^{izu}\,du} \qquad (4\text{-hab})
 $$
-
-In der Weil-Explizitformel (Bombieri 2000 \S{}3; Suzuki 2011 (0.1)) erscheint der archimedische Beitrag:
-$$
-\frac{1}{2\pi}\int_{-\infty}^{\infty}H\left(\tfrac{1}{2}+it\right)\operatorname{Re}\left(-\frac{\Gamma'}{\Gamma}\left(\tfrac{1}{4}+\tfrac{it}{2}\right)\right)dt+\cdots \qquad (4\text{-Lit})
-$$
-
-Mit $(1\text{-FC})$ und $H(\frac{1}{2}+it)=\hat g(t)=\hat a(t)$ (nach Koordinatenwechsel $(2\text{-Coord})$) stimmen $(4\text{-Repo})$ und $(4\text{-Lit})$ bis auf den globalen $2\pi$-Faktor aus der Parsevalidentität überein. Der $2\pi$-Faktor ist durch NEU-220k fest absorbiert.
+$h_{a,b}$ ist eine ganze Paley-Wiener-Funktion (NEU-252).
 
 $$
-\text{Gammafaktor: Repo = Literatur (bis auf absorbiertem }2\pi\text{ aus NEU-220k).}\quad\checkmark[K/M] \qquad (4\text{-Check})
+\boxed{\gamma_\infty(t) := -\frac{1}{2}\log\pi + \frac{1}{2}\psi\!\left(\frac{1}{4}+\frac{it}{2}\right)} \qquad (4\text{-gam})
+$$
+wobei $\psi = \Gamma'/\Gamma$ die Digammafunktion bezeichnet. Diese Definition stimmt mit NEU-220b überein.
+
+$$
+\boxed{\Lambda_\Gamma(h) := \frac{1}{2\pi}\int_{\mathbb{R}} \gamma_\infty(t)\,h(t)\,dt} \qquad (4\text{-LamGam})
+$$
+
+**Masterform** (NEU-220k, NEU-252; autoritativ, Faktor $2$ darf nicht stillschweigend entfernt werden):
+$$
+\boxed{B_\Gamma(a,b) := 2\Lambda_\Gamma(h_{a,b}).} \qquad (4\text{-BG-Master})
+$$
+
+**Diagonalkorollar.** Auf der Diagonale gilt
+$$
+h_{a,a}(t) = \widehat{g_{a,a}}(t) = \frac{1}{2}\bigl(|\hat a(t)|^2+|\hat a(-t)|^2\bigr), \qquad (4\text{-diag-h})
+$$
+und $\operatorname{Re}\gamma_\infty(t)$ ist gerade. Daher:
+$$
+\boxed{B_\Gamma(a,a) = \frac{1}{\pi}\int_{\mathbb{R}} |\hat a(t)|^2 \operatorname{Re}\gamma_\infty(t)\,dt.} \qquad (4\text{-BG-diag})
+$$
+
+Äquivalent (nach Auflösen von $(4\text{-gam})$):
+$$
+\boxed{B_\Gamma(a,a) = \frac{1}{2\pi}\int_{\mathbb{R}} \left[\operatorname{Re}\psi\!\left(\frac{1}{4}+\frac{it}{2}\right)-\log\pi\right]|\hat a(t)|^2\,dt.} \qquad (4\text{-BG-Suzuki})
+$$
+
+Das ist genau Suzukis archimedischer Fourierblock (2026).
+
+**Literaturabgleich.** In der Weil-Explizitformel (Bombieri 2000 §3; Suzuki 2011 (0.1); Suzuki 2026) erscheint der archimedische Beitrag:
+$$
+\frac{1}{2\pi}\int_{-\infty}^{\infty}\left[\operatorname{Re}\psi\!\left(\tfrac{1}{4}+\tfrac{it}{2}\right)-\log\pi\right]|\hat a(t)|^2\,dt. \qquad (4\text{-Lit})
+$$
+
+Nach $(4\text{-BG-Suzuki})$ gilt $(4\text{-BG-diag}) = (4\text{-Lit})$. ✓
+
+$$
+\text{Gammafaktor: Repo = Literatur (exakt, ohne Absorptionsbehauptung).}\quad\checkmark[K/M] \qquad (4\text{-Check})
 $$
 
 ---
 
 ## 5. Primzahlpotenzgewicht
 
-Der Repo-Primblock (verbindliche M3-Form, NEU-252, $(\text{A-Fin})$):
+**Repo-Primblock** (verbindliche M3-Form, NEU-252, $(\text{A-Fin})$):
 $$
-\boxed{B_{\rm fin}(a,a)=-2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt{n}}\,g_{a,a}(\log n).} \qquad (5\text{-Repo})
-$$
-
-Die Literatur-Weil-Explizitformel (Bombieri 2000, (3.2); Suzuki 2011, (0.1)):
-$$
--\sum_{n=p^k}\Lambda(p^k)\left(\frac{h(p^k)}{p^{k/2}}+\frac{h(p^{-k})}{p^{-k/2}}\right)=-2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt{n}}\,h(n) \qquad (5\text{-Lit})
-$$
-(die Symmetrisierung $h(n)+h(n^{-1})$ ergibt Faktor $2$ durch $h$ reell und $h(n^{-1})=h(e^{-\log n})=g_{a,a}(-\log n)=g_{a,a}(\log n)$ bei symmetrischem $g_{a,a}$; vgl. NEU-252 \S{}2).
-
-Mit $h(n)=g_{a,a}(\log n)$ und der Koordinate $u=\log n$:
-$$
-(5\text{-Repo})=(5\text{-Lit}).\quad\checkmark[K/M] \qquad (5\text{-Check})
+\boxed{B_{\rm fin}(a,b)=-2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt{n}}\,g_{a,b}(\log n).} \qquad (5\text{-Repo})
 $$
 
+**Literaturabgleich.** Suzukis kanonische Weil-Distribution (Suzuki 2026, Bombieri 2000 (3.2)) hat für beide Richtungen denselben Faktor $\Lambda(n)/\sqrt{n}$:
 $$
-\text{Vorfaktor }-2\Lambda(n)/\sqrt{n}\text{: Repo = Literatur.}\quad\checkmark[K/M] \qquad (5\text{-Final})
+-\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt{n}}\bigl[g(\log n)+g(-\log n)\bigr]. \qquad (5\text{-Lit})
+$$
+
+Für gerades $g_{a,b}$ (d.h. $g_{a,b}(-u)=g_{a,b}(u)$) gilt $g_{a,b}(-\log n)=g_{a,b}(\log n)$, also stimmen $(5\text{-Repo})$ und $(5\text{-Lit})$ überein.
+
+$$
+\text{Vorfaktor }-2\Lambda(n)/\sqrt{n}\text{: Repo = Literatur.}\quad\checkmark[K/M] \qquad (5\text{-Check})
 $$
 
 ---
 
 ## 6. Gesamtidentifikation
 
-Alle vier Bestandteile stimmen überein:
+Alle fünf Bestandteile stimmen überein:
 
 | Bestandteil | Repo (NEU-252/220k) | Literatur | Status |
 |---|---|---|---|
-| Fourierkonvention | $\hat f(t)=\int fe^{itu}du$ | Suzuki 2011; Bombieri 2000 | $\checkmark[K/M]$ |
+| Fourierkonvention | $\hat f(t)=\int fe^{itu}du$ | Suzuki 2011/2026; Bombieri 2000 | $\checkmark[K/M]$ |
 | Koordinate | $s=\frac{1}{2}+it$, $t\in\mathbb{R}$ | Weil 1952; Suzuki 2011 | $\checkmark[K/M]$ |
-| Polterme | $\hat g(i/2)+\hat g(-i/2)$ | $H(0)+H(1)$ | $\checkmark[K/M]$ |
-| Gammafaktor | $\operatorname{Re}\gamma_\infty(t)$ | $-\operatorname{Re}\Gamma'/\Gamma(\frac{1}{4}+\frac{it}{2})$ | $\checkmark[K/M]$ |
+| Polterme | $h_{a,b}(i/2)+h_{a,b}(-i/2)$ | $H(0)+H(1)$ | $\checkmark[K/M]$ |
+| Gammafaktor | $B_\Gamma=2\Lambda_\Gamma(h_{a,b})$, $\Lambda_\Gamma=\frac{1}{2\pi}\int\gamma_\infty h$ | Suzuki 2026 $(4\text{-Lit})$ | $\checkmark[K/M]$ |
 | Primvorfaktor | $-2\Lambda(n)/\sqrt{n}$ | $-2\Lambda(n)/\sqrt{n}$ | $\checkmark[K/M]$ |
 
 $$
@@ -133,7 +161,7 @@ $$
 
 ## 7. Freigeschaltete NEU-257-Buchungen
 
-Mit $(6\text{-ID})$ sind jetzt alle vier NEU-257-Buchungen ohne Vorbehalt hart:
+Mit $(6\text{-ID})$ ist der Normierungsvorbehalt $(1\text{-Norm})$ aus NEU-257 geschlossen. Alle vier NEU-257-Buchungen sind jetzt ohne Vorbehalt hart:
 
 $$
 \boxed{L^2\text{-Semibeschränktheit von }B_W\Longleftrightarrow\text{RH.}\quad\checkmark[K/M]} \qquad (7\text{-a})
@@ -145,7 +173,7 @@ $$
 \boxed{\text{Kato/KLMN auf }H_0=L^2(\mathbb{R},du):\;\times[M].} \qquad (7\text{-c})
 $$
 $$
-\boxed{\mathcal{H}_W\cong L^2(\tau)\cong\ell^2(\Gamma,m_\gamma)\quad\checkmark[K/M]\text{ (konditional unter RH, Suzuki 2025).}} \qquad (7\text{-d})
+\boxed{\mathcal{H}_W\cong L^2(\tau)\cong\ell^2(\Gamma,m_\gamma)\quad\checkmark[K/M]\text{ (konditional unter RH, Suzuki 2025/2026).}} \qquad (7\text{-d})
 $$
 
 ---
@@ -174,9 +202,9 @@ $$
 
 ## 9. Statusbuchungen
 
-$$W_{\rm NEU-252}=W_{\rm Lit}\text{ (alle Faktoren)}\quad\checkmark[K/M]\qquad(9\text{-a})$$
+$$W_{\rm NEU-252}=W_{\rm Lit}\text{ (alle fünf Faktoren)}\quad\checkmark[K/M]\qquad(9\text{-a})$$
 $$\text{NEU-257 Buchung }(1\text{-Norm}): \text{geschlossen}\quad\checkmark[K/M]\qquad(9\text{-b})$$
-$$\text{NEU-257 Buchungen (1)–(4): alle hart}\quad\checkmark[K/M]\qquad(9\text{-c})$$
+$$\text{NEU-257 Buchungen (1)–(4): alle hart (vorbehaltlos)}\quad\checkmark[K/M]\qquad(9\text{-c})$$
 $$\text{Forschungsfrage NEU-259}\quad?[O]\qquad(9\text{-d})$$
 
 ---
@@ -185,16 +213,18 @@ $$\text{Forschungsfrage NEU-259}\quad?[O]\qquad(9\text{-d})$$
 
 | Referenz | SHA/Quelle | Inhalt |
 |---|---|---|
-| NEU-257 (Patch) | f710da3 | Alle vier Firewall-Buchungen (mit Normvorbehalt) |
-| NEU-252 (Patch) | 4ee78ed | $B_W=B_{\rm pole}+B_\Gamma+B_{\rm fin}$ M3-Formeln |
-| NEU-220k | 8d4e9b2 | $2\pi$-Fourierkonvention verbindlich |
+| NEU-257 (Patch) | 160433a | Alle vier Firewall-Buchungen (Normvorbehalt jetzt geschlossen) |
+| NEU-252 (Patch) | 3d6b091 | $B_W=B_{\rm pole}+B_\Gamma+B_{\rm fin}$, M3-Formeln, $h_{a,b}:=\widehat{g_{a,b}}$ |
+| NEU-220k (Masterkontur) | dc45cf8 | $\Lambda_\Gamma$-Normierung; Faktor-2-Warnung; verbindlich |
+| NEU-220d | 7ff3afe | $\Lambda_\Gamma(h)=\frac{1}{2\pi}\int\gamma_\infty h$; archimedische Rohform |
+| NEU-220b | 01c6d23 | $\gamma_\infty(t)=-\frac{1}{2}\log\pi+\frac{1}{2}\psi(\frac{1}{4}+\frac{it}{2})$; autoritativ |
 | Weil 1952 | — | Explizitformel; Positivitätskriterium |
-| Bombieri 2000 | \S{}3, (3.2) | Normierungsform der Explizitformel |
-| Suzuki 2011 | (0.1), (1.2) | Weil-Positivitätskriterium $C_c^\infty$; $\mathcal{H}_W\cong L^2(\tau)$ |
-| Suzuki 2025 | Thm.~2.1 | $\mathcal{H}_W\cong\ell^2(\Gamma,m_\gamma)$ explizit |
+| Bombieri 2000 | §3, (3.2) | Normierungsform der Explizitformel |
+| Suzuki 2011 | (0.1), (1.2) | Weil-Positivitätskriterium; $\mathcal{H}_W\cong L^2(\tau)$ |
+| Suzuki 2025/2026 | Thm. 2.1 | $\mathcal{H}_W\cong\ell^2(\Gamma,m_\gamma)$ explizit; archimedischer Fourierblock |
 | Benedetto-Joyner | — | $W\in\mathcal{S}'\Leftrightarrow$ RH |
 
 ---
 
 *Lizenz: CC BY 4.0 — Objekt-X-Programm, öffentliche Fassung.*  
-*Erstellt 2026-08-07. Schlie\ss{}t NEU-257 $(1\text{-Norm})$; gibt NEU-259 frei.*
+*Erstellt 2026-08-07. Patch 1 (2026-08-08): §4–6 vollständig neu typisiert. Vier Fehler behoben: $1/\pi$-Faktor, Testfunktionsebenen, $\gamma_\infty$-Definition, Prim-Literatur-Zwischenform. Schließt NEU-257 $(1\text{-Norm})$; gibt NEU-259 frei.*
