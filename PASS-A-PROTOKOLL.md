@@ -1,6 +1,6 @@
 # Pass-A-Protokoll — SYN-Migrationsverfahren
 
-**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 8. August 2026 (Gruppe F3: PASS A COMPLETE; F4 eröffnet)
+**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 8. August 2026 (F3 Primäraudit-Patch — doppelt geprüft)
 
 Dieses Dokument fixiert das verbindliche Verfahren für die Pass-A-Phase der SYN-Migration.
 
@@ -162,7 +162,7 @@ Referenzen, Labels, Doppelzählungen, unzulässige Hochstufungen von
 
 ## Gruppe F — P05: Relative Primkanten und arithmetische Kantengeometrie
 
-**Status:** aktiv | **F1 COMPLETE** | **F2 eröffnet** | **F3 COMPLETE** | **F4 eröffnet** | P05-SYN ausständig
+**Status:** aktiv | **F1 COMPLETE** | **F2 eröffnet** | **F3 COMPLETE (doppelt geprüft)** | **F4 eröffnet** | P05-SYN ausständig
 
 ### Hauptbefund der Bestandsaufnahme
 
@@ -235,79 +235,91 @@ $$\boxed{\text{F1 PASS A COMPLETE}}$$
 
 ---
 
-#### F3 — Spätere Primfaser-Korrekturen — **PASS A COMPLETE**
+#### F3 — Spätere Primfaser-Korrekturen — **PASS A COMPLETE (doppelt geprüft)**
 
 **Quellknoten:** NEU-225, NEU-226, NEU-227 (alle in `01-primkanten-werkzeuge/`)  
 **Prüfart:** `AUDIT-RECONCILED` für alle drei  
+**Verfahren:** Repo-/Konsistenzcheck Perplexity (Commit `193ee6d9`) + Primäraudit mathematisch (dieser Commit)  
 **Abschlussdatum:** 8. August 2026
 
-##### Prüfartmatrix NEU-225–227
+> **Primäraudit-Patch:** Vier epistemische Korrekturen gegenüber Commit `193ee6d9`:
+> 1. **NEU-227 / $V\notin\mathcal S_2$:** Nicht „Notwendigkeitsbedingung für $V\in\mathcal S_4\setminus\mathcal S_2$ gesichert“, sondern: $V\notin\mathcal S_2$ ist notwendig damit der Nicht-$\mathcal S_1$-Zeuge überhaupt funktionieren kann. Der $\mathcal S_4$-Teil der Vermutung ist durch NEU-227 nicht gestützt und bleibt reine strukturelle Arbeitshypothese.
+> 2. **NEU-226 / Kreuzterme:** Quellenaussage lautet „generisch $K_{pq}\ne0$“, nicht „für jedes $p\ne q$ unbedingt“. Formulierung korrigiert: Primkanalbilder können nichttrivial überlappen; Primblockdiagonalität ist nicht strukturell erzwungen.
+> 3. **Firewall 10:** Nicht „jede $D_{\rm rel}$-Eigenbasisformel verboten“ (das würde den Spektralsatz treffen), sondern: die diskrete Eigenbasisdarstellung (51.3)/(51.4)/(51.7) aus NEU-51 ist SUPERSEDED und durch die projektionswertige Spektralmaßform (227.3)–(227.9) aus NEU-227 zu ersetzen.
+> 4. **Weiterleitungskorrektur:** NEU-225 primär nach P06 (nicht P09); NEU-226/227 Feshbach-/Schattenklassen-/Spektralmaßanteile nach P06, nichtorthogonaler globaler Kopplungsmechanismus nach P11.
+
+##### Prüfartmatrix NEU-225–227 (korrigierte Fassung)
 
 | Knoten | Prüfart | Endstatus für P05 | Kernbefund |
 |--------|----------|-------------------|------------|
-| NEU-225 | `AUDIT-RECONCILED` | `INCORPORATED_part` + **→ P06/P09** | $D_{\rm rel}\|_{\mathcal H_{p,a}}\cong 2ic_p\,d/dt$ auf $L^2(\mathbb R)$: Transportgenerator, rein absolutstetiges Spektrum, kein Kern in Primsektoren, kompakter Resolvent ausgeschlossen; Konvention $J_N^- = \tfrac12(\Theta_N-\Theta_N^\dagger)$ verbindlich; $\mathcal D_0$ als Kern der SA-Realisierung: ?[O] (`[O-225-1]`); Feshbach-Transfer $K(z) = V^*(D_{\rm rel}-z)^{-1}V$ als HP-2/HP-3/HP-5-Kandidat: Arbeitshypothese (`[O-225-2]`) |
-| NEU-226 | `AUDIT-RECONCILED` | `INCORPORATED_part` + **→ P11** | Primkanalbilder überlappen in BC-Algebra ($\eta_{p;m;s,u}\sim e_{u+ps}V_{pm}$): Kreuztermmechanismus gesichert ✓[M]; $\mathcal K_N\ne\bigoplus_p K_p$ ✓[M]; $K_N(z)$ bei festem $N$ nicht endlich-rangig, $\mathcal S_1$-Frage offen; NEU-77-Grenzübergang nur punktweise, nicht normkonvergent; Zurückrollung: $\eta$-Orthonormalität über Primkanäle falsch (nur innerhalb fester Kette gültig); Blocker: (51.3)/(51.4)/(51.7) setzen Eigenbasis voraus — durch NEU-225 widerlegt; Vorschaltknoten [O-226-1] durch NEU-227 geschlossen |
-| NEU-227 | `AUDIT-RECONCILED` | `INCORPORATED` + **→ P11** | Koordinatenwörterbuch ✓[M]: $\eta_{p;m;s,u}\leftrightarrow e_R V_M$, $M=pm$, $R=u+ps$; $s\mapsto s+m$ und $r\mapsto r+n$ sind dieselbe Bewegung; NEU-225-Primfaserkette im Primsektor vollständig gerechtfertigt; Spektralmaßform (227.3)–(227.9) ersetzt Eigenbasisform (51.3)/(51.4)/(51.7) vollständig ✓[K/M]; Nicht-$\mathcal S_1$-Zeuge nur möglich wenn $V\notin\mathcal S_2$ – Notwendigkeitsbedingung schärft Vermutung $V\in\mathcal S_4\setminus\mathcal S_2$ |
+| NEU-225 | `AUDIT-RECONCILED` | `INCORPORATED_part` + **→ P06** | $D_{\rm rel}\|_{\mathcal H_{p,a}}\cong 2ic_p\,d/dt$ auf $L^2(\mathbb R)$: Transportgenerator, rein absolutstetiges Spektrum, kein Kern in Primsektoren, kompakter Resolvent ausgeschlossen ✓[M]; Primfaserkette $c_p=\tfrac12\gamma_N p\log p$ verbindlich ✓[M]; Konvention $J_N^- = \tfrac12(\Theta_N-\Theta_N^\dagger)$, Option B ($\mathcal D_{\rm rel}=iJ_N^-$ selbstadjungiert) verbindlich ✓[M]; Domainenvorbehalt $\mathcal D_0$ separat geführt: ?[O] (`[O-225-1]`); Feshbach-Transfer als HP-Kandidat: Arbeitshypothese (`[O-225-2]`); $\eta$-Orthogonalitäts-Rollen**rollung in NEU-226 beschädigt die Primkettenrechnung nicht** (Primsektor: nur ein Sprung, $u$-Restklasse erhalten, durch NEU-227 bestätigt) |
+| NEU-226 | `AUDIT-RECONCILED` | `INCORPORATED_part` + **→ P06/P11** | Kreuztermmechanismus: Primkanalbilder können nichttrivial überlappen ($\eta_{p;m;s,u}\sim e_{u+ps}V_{pm}$, verschiedene $(p,m)$ auf demselben $V_{pm}$); **generisch** $K_{pq}\ne0$ für $p\ne q$ ✓[M]; **Primblockdiagonalität nicht strukturell erzwungen** (keine unbedingte Gleichheit $\mathcal K_N=\bigoplus_p K_p$) ✓[M]; $K_N(z)$ bei festem $N$ nicht endlich-rangig: Rang-$\pi(N)$-Annahme widerlegt ✓[M]_neg; $\mathcal S_1$-Frage durch $u$-Regulator offen; NEU-77-Limes nur punktweise, Schattennormen nicht kontrolliert ✓[M]; $\eta$-Orthogonalität über Primkanäle zurückgerollt (nur innerhalb fester Kette gültig) ✓[M]; Blocker (51.3)/(51.4)/(51.7): Eigenbasisannahme verletzt NEU-52/225, durch Spektralmaßform zu ersetzen; Feshbach-/Schattenklassenanteil → P06; nichtorthogonale globale Kopplung → P11 |
+| NEU-227 | `AUDIT-RECONCILED` | `INCORPORATED` + **→ P06/P11** | Koordinatenwörterbuch ✓[M]: $\eta_{p;m;s,u}\leftrightarrow e_R V_M$, $M=pm$, $R=u+ps$; $s\mapsto s+m$ und $r\mapsto r+n$ sind dieselbe Bewegung; im Primsektor vollständig gerechtfertigt ✓[M]; Spektralmaßform (227.3)–(227.9) SUPERSEDED die Eigenbasisform (51.3)/(51.4)/(51.7) vollständig ✓[K/M]; Polarzerlegungsargument nachgerechnet ✓[M]; **Nicht-$\mathcal S_1$-Zeuge erfordert $V\notin\mathcal S_2$** als Notwendigkeitsbedingung für den Zeugenmechanismus ✓[M] — der $\mathcal S_4$-Teil der Vermutung $V\in\mathcal S_4\setminus\mathcal S_2$ ist durch NEU-227 **nicht** gestützt und bleibt strukturelle Arbeitshypothese; Spektralmaßform → P06; $u$-Regulator/Quellhilbertraum/Gramoperator/$\det_2$ → P11 |
 
-##### F3-Kernbefünde für P05
+##### F3-Kernbefünde für P05 (korrigierte Fassung)
 
 **Was gesichert ist und nach P05 geht:**
 
-- $D_{\rm rel}$ ist ein Transportgenerator, kein Hilbert–Pólya-Operator. `✓[M]`
+- $D_{\rm rel}$ ist ein Transportgenerator, kein Hilbert–Pólya-Operator; kompakter Resolvent ausgeschlossen. `✓[M]`
 - Jede Primfaser $\mathcal H_{p,a}$ hat absolutstetiges Spektrum; kein Kern. `✓[M]`
-- $D_{\rm rel}$ ist kanalerhaltend; Off-Diagonalität von $\mathcal K_N$ entsteht durch Primkanalbilduberlappung, nicht durch Primmischung im Operator. `✓[M]`
-- Spektralmaßform (227.3)–(227.9) ist die verbindliche Schreibweise für Resolventenmatrixelemente; alle Eigenbasisformeln (51.3)/(51.4)/(51.7) sind durch sie zu ersetzen. Dies schärft F1-Firewall Nr. 5 zur konkreten Ersetzungsregel. `✓[K/M]`
-- Koordinatenwörterbuch (227.1)/(227.2) ist verbindlich für alle nachfolgenden Primkanalrechnungen, auch in F4. `✓[M]`
+- $D_{\rm rel}$ ist kanalerhaltend; **generisch** können Primkanalbilder überlappen und $K_{pq}\ne0$ für $p\ne q$ erzeugen; Primblockdiagonalität ist nicht strukturell erzwungen. `✓[M]`
+- Spektralmaßform (227.3)–(227.9): verbindliche Schreibweise, ersetzt (51.3)/(51.4)/(51.7). Dies schärft F1-Firewall Nr. 5 zur konkreten SUPERSEDED-Ersetzungsregel. `✓[K/M]`
+- Koordinatenwörterbuch (227.1)/(227.2): verbindlich auch für F4. `✓[M]`
 - Primfaserkette $c_p = \tfrac12\gamma_N p\log p$: verbindliches Ergebnis für den Primsektor. `✓[M]`
 
 **Was nach P06 weitergereicht wird:**
 
 - Feshbach-Kollaps-Identität (NEU-77, endliches $N$): exakt gültig; globaler Limes nur punktweise. → P06
-- Sektoren $m$ nicht prim: Mehrfachsprünge $u$-Klassen mischend; `[O-225-3]` offen. → P06
+- Schattenklassenkriterien (227.6)–(227.9): Spurklasse/Hilbert-Schmidt-Entscheidung. → P06
+- Sektoren $m$ nicht prim: Mehrfachsprünge mischen $u$-Klassen; `[O-225-3]` offen. → P06
 
 **Was nach P11 weitergereicht wird:**
 
-- Globaler Feshbach-Transfer $K(z) = V^*(D_{\rm rel}-z)^{-1}V$: Schattenklasen-/HP-Kandidat-Fragen; $u$-Regulator, Quellhilbertraum, Gramoperator, $\det_2$-Anbindung. `[O-226-3]–[O-226-7]` offen. → P11
-- $V\in\mathcal S_4\setminus\mathcal S_2$: Notwendigkeitsbedingung gesichert (NEU-227 §2.7); Nachweis offen. → P11
+- Nichtorthogonaler globaler Kopplungsmechanismus: $u$-Regulator, Quellhilbertraum $\mathscr E$, Gramoperator, Orthonormalisierung der überlappenden Primkanalbilder. `[O-226-3]–[O-226-7]` offen. → P11
+- $\det_2(I-K(z))$ gegen Weil-/$\Xi$-Schicht. → P11
+- $V\notin\mathcal S_2$ als Notwendigkeitsbedingung für den Nicht-$\mathcal S_1$-Zeugenmechanismus gesichert; $V\in\mathcal S_4$ als strukturelle Arbeitshypothese (durch NEU-227 nicht bewiesen). → P11
 
 **F3-Korrekturrollen für F4:**
 
 Mit F3 steht fest:
 1. Die Primkanalgeometrie ist ein Transportspektrum, kein Energiespektrum; $D_{\rm rel}$ liefert keine kompakte Schicht.
-2. Die Kreuzprimkollisionen in NEU-226 (51.5) existieren und sind durch die BC-Algebra-Überlappung $\eta_{p;m;s,u}\leftrightarrow e_{u+ps}V_{pm}$ erklärt.
+2. Generisch können Primkanalbilder überlappen; Primblockdiagonalität ist nicht strukturell erzwungen.
 3. Das Koordinatenwörterbuch (227.1) ist verbindlich.
 
-Damit kann F4 präzise fragen: Welche dieser Primkanalgeometrie trägt tatsächlich $\Lambda(p^m)/p^{m/2}$? Und warum können die Kreuzprimkollisionen laut NEU-250j nicht zugleich auf dem Mangoldt-Träger sitzen?
+Damit kann F4 präzise fragen: Welche Teile dieser Geometrie tragen tatsächlich $\Lambda(p^m)/p^{m/2}$? Und warum können die generischen Kreuzterme $K_{pq}$ laut NEU-250j nicht zugleich auf $\mathrm{supp}\,\Lambda$ sitzen?
 
-##### F3-Kernfirewall
+##### F3-Kernfirewall (korrigierte Fassung)
 
-10. $D_{\rm rel}$-Eigenbasisformeln sind **vollständig verboten**. Verbindliche Schreibweise: Spektralmaßform (227.3)–(227.9). Diese Firewall ergänzt und schärft F1-Firewall Nr. 5.
+10. Die diskrete Eigenbasisdarstellung aus NEU-51 — (51.3), (51.4), (51.7) — ist **SUPERSEDED** und durch die projektionswertige Spektralmaßform (227.3)–(227.9) aus NEU-227 zu ersetzen. Dies betrifft die unzulässige Annahme einer diskreten Eigenbasis $D_{\rm rel}\eta_\alpha=\lambda_\alpha\eta_\alpha$; der Spektralsatz selbst ist nicht berührt. Diese Firewall ergänzt und schärft F1-Firewall Nr. 5.
 
-$$\boxed{\text{F3 PASS A COMPLETE — NEU-225, NEU-226, NEU-227 reconciliiert; verbindliche Spektralmaßform verankert.}}$$
+$$\boxed{\text{F3 PASS A COMPLETE — doppelt geprüft: Repo-Check (193ee6d9) + Primäraudit-Patch (dieser Commit)}}$$
 
 ---
 
-#### F4 — Neuer Mangoldt-/Primzahlpotenzstrang — **ERÖFFNET**
+#### F4 — Neuer Mangoldt-/Primzahlpotenzstrang — **ERÖFFNET** (Arbeitshypothesen; TARGETED-REAUDIT ausständig)
 
 **Quellknoten:** NEU-250g, NEU-250i, NEU-250j (7. August 2026) + NEU-250f Patch 1 (`1579a379`)  
-**Prüfart:** `TARGETED-REAUDIT` / RECONCILIATION  
-**Verbindliche Voraussetzung:** F1-Firewalls + F3-Koordinatenwörterbuch + F3-Spektralmaßform
+**Prüfart:** `TARGETED-REAUDIT` / RECONCILIATION — **noch nicht durchgeführt**  
+**Verbindliche Voraussetzung:** F1-Firewalls + F3-Koordinatenwörterbuch + F3-Spektralmaßform  
+**Verfahren:** Primäraudit zuerst (mathematisch), danach Repo-/Konsistenzcheck; erst dann PASS A COMPLETE
+
+> **Achtung:** Die Endstatuszeilen aus Commit `193ee6d9` (z. B. `INCORPORATED_part`, `SUPERSEDED_part`) sind **vorläufige Arbeitshypothesen** aus dem Repo-Check. Der vereinbarte TARGETED-REAUDIT von NEU-250g/i/j hat noch nicht stattgefunden. Kein F4-Status darf als PASS A COMPLETE gelesen werden.
 
 ##### Leitfrage F4 (aus F1–F3 gewonnen)
 
-> F3 hat die Primkanalgeometrie als Transportspektrum gesichert und die BC-Überlappungsstruktur mit Koordinatenwörterbuch verankert. F4 fragt jetzt: Welche dieser Primkanalgeometrie trägt tatsächlich den Mangoldt-Faktor $\Lambda(p^m)/p^{m/2}$? Und: Warum können die durch NEU-226 gesicherten Kreuzprimkollisionen nicht zugleich auf $\mathrm{supp}\,\Lambda$ sitzen?
+> F3 hat die Primkanalgeometrie als Transportspektrum gesichert und die BC-Überlappungsstruktur mit Koordinatenwörterbuch verankert. F4 fragt: Welche dieser Geometrie trägt tatsächlich den Mangoldt-Faktor $\Lambda(p^m)/p^{m/2}$? Und: Warum können die generischen Kreuzterme $K_{pq}$ ($p\ne q$) laut NEU-250j nicht zugleich auf $\mathrm{supp}\,\Lambda$ sitzen?
 
-| Knoten | Prüfart | Endstatus | Kernbefund / Firewall |
-|--------|----------|-----------|----------------------|
-| NEU-250f + Patch 1 (`1579a379`) | `TARGETED-REAUDIT` | `SUPERSEDED_part` | Filtrations-No-Go nur konditional auf $L_{3,\rm alg}^\circ\in F^3A$; unbedingter No-Go SUPERSEDED; Realisierungsbrücke ?[O] |
-| NEU-250g | `AUDIT-RECONCILED` | `INCORPORATED_part` | Primitiver Faktor $\frac{\log p}{\sqrt p}$ algebraisch konstruiert ✓[M]$_{\rm part}$; Hilbertraum-Fundierung $H_{\rm BC}$ offen; im Primsektor mit Primfaserkette $c_p = \frac12\gamma_N p\log p$ aus F3 verträglich, aber nicht identisch |
-| NEU-250i | `AUDIT-RECONCILED` | `INCORPORATED_part` | $H_{\rm pr}=D_\Omega^{-1}H_{\rm BC}$; auf $n=p^m$: $\frac{\Lambda(p^m)}{p^{m/2}}=\frac{\log p}{p^{m/2}}$ ✓[M]; **Firewall:** $H_{\rm pr}\ne\Lambda$ auf allgemeinen zusammengesetzten $n$ (da $\Lambda(p_1^{a_1}p_2^{a_2}\cdots)=0$, aber $H_{\rm pr}$ dort $\ne0$) |
-| NEU-250j | `AUDIT-RECONCILED` | `INCORPORATED` + **F3-Vertiefung** | Trägertrennung $\mathrm{supp}\,\Lambda\cap\mathrm{supp}(\mathrm{Kreuzprimkollision})=\emptyset$ ✓[M]; erklärt durch F3/NEU-226: Kreuzterme $K_{pq}$ mit $p\ne q$ leben auf $V_{pm}$ mit zwei verschiedenen Primteilern, dort $\Lambda=0$; damit: Kreuzprimkollisionen widerlegen **nicht** die von NEU-226 gesicherte nichtorthogonale Primkanalgeometrie, sondern zeigen, dass diese Geometrie allein keine $\Lambda$-tragende globale Kopplung liefert; Mediatorweg → P11 |
+| Knoten | Prüfart | Vorläufiger Arbeitsstand (nicht geprüft) | Offen / Firewall |
+|--------|----------|-------------------------------------------|------------------|
+| NEU-250f + Patch 1 (`1579a379`) | `TARGETED-REAUDIT` | Filtrations-No-Go nur konditional auf $L_{3,\rm alg}^\circ\in F^3A$; unbedingter No-Go SUPERSEDED | Realisierungsbrücke ?[O] |
+| NEU-250g | `AUDIT-RECONCILED` | Primitiver Faktor $\frac{\log p}{\sqrt p}$ algebraisch konstruiert | Hilbertraum-Fundierung $H_{\rm BC}$ offen; $\mathcal S_4$-Einordnung nicht aus F3 übertragbar |
+| NEU-250i | `AUDIT-RECONCILED` | $H_{\rm pr}=D_\Omega^{-1}H_{\rm BC}$; $\Lambda(p^m)/p^{m/2}=\log p/p^{m/2}$ im Primsektor | **Firewall:** $H_{\rm pr}\ne\Lambda$ auf zusammengesetzten $n$ mit mehreren Primteilern |
+| NEU-250j | `AUDIT-RECONCILED` | Trägertrennung $\mathrm{supp}\,\Lambda\cap\mathrm{supp}(K_{pq})=\emptyset$ für $p\ne q$ | Widerleg nicht nichtorthogonale Geometrie (F3-Firewall 11); Mediatorweg → P11 |
 
-##### F4-Kernfirewalls (ergänzend zu F1–F3, #11–12)
+##### Verbindliche F4-Firewalls (aus F1–F3, gelten schon jetzt)
 
-11. NEU-250j widerlegt **nicht** die Kreuzprimkollisionen aus NEU-226. Es zeigt nur, dass $\mathrm{supp}K_{pq}$ und $\mathrm{supp}\Lambda$ disjunkt sind. Die nichtorthogonale Primkanalgeometrie bleibt bestehen; sie liefert aber keine direkte $\Lambda$-tragende Kopplung.
-12. Im Primsektor stimmt $\frac{\Lambda(p^m)}{p^{m/2}}=\frac{\log p}{p^{m/2}}$ mit dem primitiven Faktor aus NEU-250g überein; auf zusammengesetzten $n$ mit mehreren Primteilern ist $H_{\rm pr}\ne\Lambda$ eine harte Firewall.
+11. NEU-250j widerlegt **nicht** die in F3 gesicherten generischen Kreuzterme $K_{pq}\ne0$ aus NEU-226. Es zeigt nur die Trägertrennung $\mathrm{supp}\,K_{pq}\cap\mathrm{supp}\,\Lambda=\emptyset$ für $p\ne q$. Die nichtorthogonale Primkanalgeometrie bleibt bestehen.
+12. Im Primsektor stimmt $\Lambda(p^m)/p^{m/2}=\log p/p^{m/2}$ mit dem primitiven Faktor aus NEU-250g überein; auf zusammengesetzten $n$ mit mehreren Primteilern ist $H_{\rm pr}\ne\Lambda$ eine harte Firewall.
 
 ---
 
@@ -317,8 +329,8 @@ $$\boxed{\text{F3 PASS A COMPLETE — NEU-225, NEU-226, NEU-227 reconciliiert; v
 |-------|--------|------------------|
 | F1 | **PASS A COMPLETE** (`07903f85`) | Endstand für P05 extrahiert |
 | F2 | **ERÖFFNET** (`8ead5d52`) | Reconciliation-Arbeit; keine neuen Dateien erforderlich |
-| F3 | **PASS A COMPLETE** | Spektralmaßform und Koordinatenwörterbuch verbindlich verankert |
-| F4 | **ERÖFFNET** | Leitfrage steht; keine neuen Dateien erforderlich |
+| F3 | **PASS A COMPLETE — doppelt geprüft** | Spektralmaßform und Koordinatenwörterbuch verbindlich verankert |
+| F4 | **ERÖFFNET** (Vorläufiger Arbeitsstand) | Primäraudit NEU-250g/i/j zuerst; danach Repo-Check; dann PASS A COMPLETE |
 | P05-SYN | nach F2+F4 | `papers/P05_*.tex` + LaTeX-SYN-Transferaudit |
 
 ---
