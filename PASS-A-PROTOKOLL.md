@@ -124,12 +124,28 @@ Alle 30 Knoten bereinigt. Methodennachweis: 30 Knoten + vorhandene Audits $\long
 
 ---
 
+## P07 — SYN-Freigabe
+
+**LaTeX-Fassung:** `papers/P07_Weil_Form_Statistics.tex`  
+**Basis:** `papers/P07_Weil_Form_Statistics.md` — `SYN FINAL AUDITED`, Commit `6a162f92`; synchronisiert mit NEU-101 Patch 3, Commit `92d731d1`  
+**Knotenbasis:** NEU-091–120 / `PASS A COMPLETE`  
+**Prüfart:** LaTeX-SYN-Transferaudit; kein Vollneuaudit der 30 Forschungsknoten  
+**Ergebnis:** `SYN FROZEN ✓[K/M]`
+
+Geprüft wurden ausschließlich `.md` ↔ `.tex`, Formeltranskription,
+Fourier-/Mellin-Konventionen, Satzstatus, Definition-vs.-Hypothese-vs.-Open-Problem,
+Referenzen, Labels, Doppelzählungen, unzulässige Hochstufungen von
+`OPEN/CONDITIONAL` und LaTeX-Kompilierbarkeit.
+
+**Auditbefund:** kein neuer mathematischer Konflikt; kein NEU-Knoten wieder geöffnet.
+
+---
+
 ## Nächste Batch-Reihenfolge
 
 | Gruppe | Knoten | Priorität |
 |--------|--------|-----------|
-| **P07** | SYN-Paper (NEU-091–120 Endstand) | **als nächstes** |
-| F | NEU-121–130 | nach P07 |
+| F | NEU-121–130 | **als nächstes** |
 | G | NEU-131–140 | nach F |
 | … | … | … |
 
