@@ -9,56 +9,69 @@
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{remark}[theorem]{Remark}
 
-\title{P03 --- Haar-$L^2$ Firewall: $B_W$ Cannot Close on $L^2(\mathbb{R},du)$}
+\title{P03 --- Haar-$L^2$ Firewall: $B_W$ Cannot Close on $L^2(\mathbb{R},du)$\\
+\normalsize SYN-Audit: 2026-08-08}
 \author{Objekt-X-Programm}
-\date{2026-08-08 (SYN, Entwurf)}
+\date{2026-08-08}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
 We consolidate NEU-253--258 and the NEU-257 Patch.
-We show: (i) $L^2$-semiboundedness of $B_W \Leftrightarrow$ RH;
-(ii) under RH, $B_W$ is not closable on Haar-$L^2(\mathbb{R},du)$;
-(iii) Kato/KLMN on $L^2(\mathbb{R},du)$ fails ($\times[M]$).
-We identify $\mathcal{H}_W \cong \ell^2(\Gamma,m_\gamma)$ under RH
-(Suzuki 2025). The correct Weil Hilbert geometry is singular
-relative to Lebesgue measure. All statements RH-conditional
-as indicated.
+(i)~Semiboundedness of $B_W$ on $C_c^\infty(\mathbb{R})$ relative
+to the Haar-$L^2$ norm is equivalent to RH.
+(ii)~Under RH, $B_W$ is not closable on $L^2(\mathbb{R},du)$,
+by the criterion: a quadratic form $q_\mu$ closable on
+$L^2(dx)$ if and only if $\mu\ll dx$.
+(iii)~Kato--Lions--Milgram--Nelson (KLMN) on $L^2(\mathbb{R},du)$ fails.
+Under RH: $\mathcal{H}_W\cong\ell^2(\Gamma,m_\gamma)$
+(Suzuki 2025). All conditional statements are RH-conditional.
 \end{abstract}
 
-\section{Background Space and Semiboundedness}
+\section{Precise semiboundedness statement}
 
 \begin{theorem}[$L^2$-Semiboundedness $\Leftrightarrow$ RH, NEU-257 $\checkmark$]
+There exists $\lambda>0$ such that
 \[
-  B_W \text{ is semibounded on } L^2(\mathbb{R},du) \iff \mathrm{RH}.
+  B_W(a,a) \ge -\lambda\|a\|_{L^2(du)}^2
+  \quad\forall\, a\in C_c^\infty(\mathbb{R})
 \]
+if and only if RH holds.
+
+\emph{Precision:} Semiboundedness is relative to the Haar-$L^2$
+norm $\|a\|_{L^2(du)}$, evaluated on the test core $C_c^\infty(\mathbb{R})$.
 \end{theorem}
 
-\section{Non-Closability under RH}
+\section{Non-closability criterion and proof}
 
 \begin{theorem}[Non-closability, NEU-257 $\checkmark$]
-Assuming RH,
-\[
-  B_W \text{ is not closable on } L^2(\mathbb{R},du).
-\]
+Assume RH. Then $B_W$ is not closable on $L^2(\mathbb{R},du)$.
 \end{theorem}
 
 \begin{proof}
-The spectral measure $\mu_W = \sum_\gamma m_\gamma\delta_\gamma$ is
-singular with respect to Lebesgue measure; the Bochner--Schwartz
-construction requires a translation-invariant measure compatible
-with $\mu_W$, which $du$ is not. See NEU-257 Patch for full argument.
+The spectral measure of $B_W$ is
+$\mu_W = \sum_\gamma m_\gamma\delta_\gamma$
+(sum over imaginary parts of non-trivial zeros).
+The relevant criterion is:
+\[
+  q_\mu\text{ closable on }L^2(dx) \iff \mu\ll dx.
+\]
+Since $\mu_W$ is a discrete (hence singular) measure with respect
+to Lebesgue measure $du$, the condition $\mu_W\ll du$ fails.
+Hence $B_W$ (as a quadratic form on $C_c^\infty(\mathbb{R})\subset L^2(du)$)
+is not closable.
 \end{proof}
 
-\section{Kato/KLMN No-Go}
+\section{Kato--Lions--Milgram--Nelson No-Go}
 
-\begin{theorem}[Kato/KLMN $\times[M]$, NEU-257 $\checkmark$]
-The Kato--Lions--Milgram--Necas theorem does not apply to
+\begin{theorem}[KLMN $\times[M]$, NEU-257 $\checkmark$]
+The Kato--Lions--Milgram--Nelson theorem does not apply to
 $B_W$ on $H_0=L^2(\mathbb{R},du)$.
+\emph{KLMN = Kato--Lions--Milgram--Nelson.}
 \end{theorem}
 
-\section{Weil Hilbert Space under RH}
+\section{Weil Hilbert space under RH}
 
 \begin{theorem}[Weil Hilbert space, Suzuki 2025, NEU-257 $\checkmark$]
 Assuming RH,
@@ -67,18 +80,24 @@ Assuming RH,
 \]
 \end{theorem}
 
-\section{Consequence: Correct Geometry is Singular}
+\section{Consequence}
 
 \begin{remark}
-The correct Weil Hilbert geometry is not an operator on
-$L^2(\mathbb{R},du)$; it is a singular spectral geometry
-supported on zero-ordinates. This motivates the finite
-interval construction of P04.
+The correct Weil Hilbert geometry is singular relative to
+Lebesgue measure. Specifically, $\mu_W\not\ll du$, so no
+Friedrichs extension of $B_W$ on $L^2(du)$ exists. This
+motivates the finite-interval construction of P04.
 \end{remark}
 
-\section{Source Nodes}
+\section{Audit status}
 
-NEU-253, 254, 255, 256, 257 (Patch), 258
+SYN-Audit: 2026-08-08. Three clarifications from draft:
+(a)~Semiboundedness now stated precisely on $C_c^\infty$ relative
+to Haar-$L^2$ norm;
+(b)~Non-closability proof cites the explicit criterion
+$q_\mu$ closable $\Leftrightarrow$ $\mu\ll dx$;
+(c)~KLMN acronym corrected (Lions--Milgram--Nelson, not Nec\v{a}s).
+Source nodes: NEU-253, 254, 255, 256, 257 (Patch), 258
 (archive-nodes/07-weil-explizitformel/).
 
 \end{document}

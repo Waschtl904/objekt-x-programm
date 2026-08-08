@@ -9,50 +9,75 @@
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{remark}[theorem]{Remark}
 
-\title{P02 --- Adelic Weil Amplitude Port and Complete Hermitian Weil Form}
+\title{P02 --- Adelic Weil Amplitude Port and Complete Hermitian Weil Form\\
+\normalsize SYN-Audit: 2026-08-08}
 \author{Objekt-X-Programm}
-\date{2026-08-08 (SYN, Entwurf)}
+\date{2026-08-08}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
 We consolidate NEU-250n--r and NEU-252 (Patch).
-Starting from the adelic amplitude space $\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$,
-we construct the port map $R_{\mathrm{PW}}$ to the Paley--Wiener
-target $\mathcal{A}_{\mathrm{PW}}$, extend to complex amplitudes,
-polarise to the full hermitian Weil form $B_W$, and
-identify the three blocks $B_{\mathrm{pole}}+B_\Gamma+B_{\mathrm{fin}}$
-in M3 form. All results are RH-free.
+The port from the adelic amplitude space $\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$
+to the Weil form $B_W$ proceeds in two distinct stages.
+First, $R_{\mathrm{PW}}$ maps a single adelic amplitude
+$F\in\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$ to a compactly supported test
+function $a\in\mathcal{A}_{\mathrm{PW}}=C_c^\infty(\mathbb{R};\mathbb{C})$.
+Second, a pair $(a,b)$ is polarised to
+$g_{a,b}\in\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}=C_c^\infty(\mathbb{R};\mathbb{C})_{\mathrm{even}}$.
+Polarising $B_W$ yields the three-block M3 form
+$B_{\mathrm{pole}}+B_\Gamma+B_{\mathrm{fin}}$.
+All results are RH-free.
 \end{abstract}
 
 \section{Fourier Convention (NEU-220k, binding)}
 
 \begin{definition}[Fourier convention]
 \[
-  \hat f(t) := \int_{\mathbb{R}} f(u)\,e^{itu}\,du.
+  \hat{f}(t) := \int_{\mathbb{R}} f(u)\,e^{itu}\,du.
 \]
 The $2\pi$-factor from Parseval is globally absorbed.
 \end{definition}
 
-\section{Adelic Amplitude Space and Port Map}
+\section{Adelic Amplitude Space}
 
-\begin{definition}[Adelic amplitude space]
-$\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$ consists of
-admissible adelic test pairs $(a,b)$ with $a,b\in\mathcal{S}(\mathbb{R})$,
-complex amplitudes included.
+\begin{definition}[Adelic amplitude space, NEU-250n]
+$\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$ consists of adelic amplitudes $F$
+admissible for the Weil explicit formula: finite-prime contributions are
+arithmetically weighted, archimedean component lies in the Paley--Wiener
+class, and all sums over prime powers converge absolutely.
 \end{definition}
 
-\begin{theorem}[Port map and Paley--Wiener target, NEU-250n--r $\checkmark$]
-The port map
+\section{Stage 1: Port Map $R_{\mathrm{PW}}$}
+
+\begin{theorem}[Port map, NEU-250n--r $\checkmark$]
+There is a well-defined $\mathbb{C}$-linear map
 \[
-  R_{\mathrm{PW}}: \mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}
+  R_{\mathrm{PW}} : \mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}
   \longrightarrow \mathcal{A}_{\mathrm{PW}},
-  \qquad (a,b)\mapsto g_{a,b}
+  \qquad
+  \mathcal{A}_{\mathrm{PW}} := C_c^\infty(\mathbb{R};\mathbb{C}),
 \]
-is well-defined, and the image lies in $\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}$,
-the space of even complex Schwartz functions.
+mapping a single adelic amplitude $F$ to a compactly supported,
+smooth, complex-valued test function $a=R_{\mathrm{PW}}(F)$.
+
+The compact support is essential: it ensures absolute convergence
+of the finite prime-power sum
+$B_{\mathrm{fin}}(a,a)=-2\sum_{n\ge 2}\frac{\Lambda(n)}{\sqrt{n}}\,g_{a,a}(\log n)$.
 \end{theorem}
+
+\section{Stage 2: Polarisation to $\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}$}
+
+\begin{definition}[Even polarisation, NEU-250r]
+For $a,b\in\mathcal{A}_{\mathrm{PW}}$, set
+\[
+  g_{a,b}(u) := \tfrac{1}{2}\bigl(a*\check{\bar{b}}\bigr)(u)
+  + \tfrac{1}{2}\bigl(b*\check{\bar{a}}\bigr)(u), \qquad u\in\mathbb{R},
+\]
+where $\check{f}(u):=f(-u)$. Then
+$g_{a,b}\in\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}:=C_c^\infty(\mathbb{R};\mathbb{C})_{\mathrm{even}}$.
+\end{definition}
 
 \section{Complete Hermitian Weil Form (NEU-252 Patch, M3)}
 
@@ -60,23 +85,22 @@ the space of even complex Schwartz functions.
 \[
   B_W(a,a) = B_{\mathrm{pole}}(a,a) + B_\Gamma(a,a) + B_{\mathrm{fin}}(a,a),
 \]
-with
 \[
   B_{\mathrm{fin}}(a,a) = -2\sum_{n\ge 2}\frac{\Lambda(n)}{\sqrt{n}}\,g_{a,a}(\log n),
 \]
 \[
-  B_{\mathrm{pole}}(a,a) = \hat g_{a,a}(i/2)+\hat g_{a,a}(-i/2),
+  B_{\mathrm{pole}}(a,a) = \hat{g}_{a,a}(i/2)+\hat{g}_{a,a}(-i/2),
 \]
 \[
-  B_\Gamma(a,a) = \int_{\mathbb{R}}|\hat a(t)|^2\,\mathrm{Re}\,\gamma_\infty(t)\,dt.
+  B_\Gamma(a,a) = \int_{\mathbb{R}}|\hat{a}(t)|^2\,\mathrm{Re}\,\gamma_\infty(t)\,dt.
 \]
 \end{definition}
 
-\begin{theorem}[Normierung: Repo = Literatur, NEU-258 $\checkmark$]
-With the Fourier convention above,
-$W_{\mathrm{NEU}\text{-}252} = W_{\mathrm{Lit}}$ (Weil 1952, Bombieri 2000,
-Suzuki 2011/2025): all factors $2\pi$, sign in $-2\Lambda(n)/\sqrt{n}$,
-coordinate $s=\tfrac12+it$, and pole terms agree exactly.
+\begin{theorem}[Identification with literature, NEU-258 $\checkmark$]
+$W_{\mathrm{NEU}\text{-}252} = W_{\mathrm{Lit}}$
+(Weil 1952, Bombieri 2000, Suzuki 2011/2025):
+all $2\pi$-factors, the sign $-2\Lambda(n)/\sqrt{n}$,
+coordinate $s=\tfrac{1}{2}+it$, and pole terms agree exactly.
 \end{theorem}
 
 \section{Canonical compression formula}
@@ -90,9 +114,16 @@ coordinate $s=\tfrac12+it$, and pole terms agree exactly.
   }
 \]
 
-\section{Source Nodes}
+\begin{remark}[Two distinct stages]
+The first arrow $R_{\mathrm{PW}}$ acts on a single adelic amplitude
+$F\mapsto a$. The second arrow acts on a pair $(a,b)\mapsto g_{a,b}$.
+Merging these two stages is a type error.
+\end{remark}
 
-NEU-250n, 250o, 250p, 250q, 250r, NEU-252 (Patch)
+\section{Audit status}
+
+SYN-Audit: 2026-08-08. Type error from draft corrected.
+Source nodes: NEU-250n, 250o, 250p, 250q, 250r, NEU-252 (Patch)
 (archive-nodes/07-weil-explizitformel/).
 
 \end{document}

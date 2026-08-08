@@ -10,119 +10,166 @@
 \newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem{remark}[theorem]{Remark}
 
-\title{P04 --- Finite Weil Geometry and the Objekt-X Interface}
+\title{P04 --- Finite Weil Geometry and the Objekt-X Interface\\
+\normalsize SYN-Audit: 2026-08-08}
 \author{Objekt-X-Programm}
-\date{2026-08-08 (SYN, in Arbeit)}
+\date{2026-08-08 (in Arbeit)}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-We consolidate NEU-259, 260a, 260b (in progress).
-For each $a>0$, Suzuki (2026) constructs RH-free a
-self-adjoint operator $A_a$, a Hilbert space $\mathcal{H}(T_a)$,
-and a family $\overline{\mathscr{D}}_{a,\theta}$ of self-adjoint
-first-order extensions whose eigenvalues converge (conjecturally)
-to the imaginary parts of the non-trivial zeros.
-We identify the canonical RH-free shift $\lambda_{\mathrm{can}}(a)=\lambda_a-1$,
-exhibit the gauge freedom $\theta\mapsto\theta+\beta-\alpha$,
-and formulate the arithmetic canonicity problem: does
-the BC/adelic involution canonically pair the deficiency
-lines $\mathcal{N}_{+,a}\leftrightarrow\mathcal{N}_{-,a}$?
+We consolidate NEU-259, 260a, 260b, 260b.1.
+For each $a>0$, Suzuki (2026) constructs RH-free a self-adjoint
+operator $A_a$, Hilbert space $\mathcal{H}(T_a)$, and a family
+$\overline{\mathscr{D}}_{a,\theta}$ of self-adjoint extensions
+parametrised by $\theta\in U(1)$.
+
+Main results (RH-free, unconditional):
+\begin{enumerate}
+\item Canonical working normalization:
+  $\lambda_{\mathrm{w}}(a):=\lambda_a-1$, $T_a^{\mathrm{w}}\ge I$
+  (any $c>0$ works; $c=1$ is our fixed choice).
+\item Gauge freedom: $\theta\mapsto\theta+\beta-\alpha$;
+  intrinsic datum is $U_a:\mathcal{N}_{+,a}\to\mathcal{N}_{-,a}$.
+\item \textbf{Parity reduces $U(1)$ to $\mathbb{Z}_2$}:
+  Suzuki's $PA_a=A_aP$ implies $Pv_+=v_-$, so
+  $U_a\in\{+P,-P\}$, i.e.\ $\theta_{\mathrm{can}}(a)\in\{0,\pi\}$.
+\end{enumerate}
+
+Open (Objekt-X interface):
+$\mathbb{Z}_2$-selection $\varepsilon(a)\in\{+1,-1\}$,
+boundary normalization $\phi(a,z)$, transition maps $J_{a,b}$.
 \end{abstract}
 
 \section{Operator chain (Suzuki 2026, RH-free)}
 
 \begin{theorem}[Operator chain, NEU-259 $\checkmark$]
-For every $a>0$, the following objects exist unconditionally:
-\[
-  Q_W^a \longrightarrow A_a \longrightarrow T_{a,\lambda} := A_a-\lambda I
-  \longrightarrow \mathcal{H}(T_{a,\lambda})
-  \longrightarrow \overline{\mathscr{D}}_{a,\theta}.
-\]
-Specifically:
+For every $a>0$, unconditionally:
 \begin{enumerate}
 \item $Q_W^a$ is semibounded and closable on $L^2(-a,a)$.
-\item $A_a = A_a^*$ with discrete spectrum bounded below.
-\item For $\lambda < \lambda_a := \inf\sigma(A_a)$:
-  $T_{a,\lambda} > 0$ and $\mathcal{H}(T_{a,\lambda})$ is a Hilbert space.
-\item $\overline{\mathscr{D}}_{a,\theta} = (\overline{\mathscr{D}}_{a,\theta})^*$
-  on $\mathcal{H}(T_{a,\lambda})$ for each $\theta\in[0,2\pi)$,
-  deficiency indices $(1,1)$.
+\item $A_a=A_a^*$, discrete spectrum bounded below;
+  $\lambda_a:=\inf\sigma(A_a)$ exists and is continuous in $a$.
+\item For $\lambda<\lambda_a$: $T_{a,\lambda}:=A_a-\lambda I>0$
+  and $\mathcal{H}(T_{a,\lambda})$ is a Hilbert space.
+\item $\overline{\mathscr{D}}_{a,\theta}=(\overline{\mathscr{D}}_{a,\theta})^*$
+  on $\mathcal{H}(T_{a,\lambda})$, deficiency indices $(1,1)$.
 \end{enumerate}
 \end{theorem}
 
-\section{Canonical RH-free shift}
+\section{Canonical working normalization (RH-free)}
 
-\begin{proposition}[RH-free gauge fix, NEU-260a $\checkmark$]
+\begin{proposition}[$\lambda=0$ is RH-conditional; fixed normalization, NEU-260a $\checkmark$]
+For any $c>0$, $\lambda_{a,c}:=\lambda_a-c$ gives $T_{a,c}\ge cI>0$
+unconditionally. We fix $c=1$ as canonical working normalization:
 \[
-  \lambda_{\mathrm{can}}(a) := \lambda_a - 1, \qquad
-  T_a^{\mathrm{can}} = A_a - (\lambda_a-1)I \ge I > 0.
+  \lambda_{\mathrm{w}}(a) := \lambda_a-1, \qquad T_a^{\mathrm{w}} \ge I.
 \]
-This is unconditional. The choice $\lambda=0$ requires RH
-($A_a > 0$ holds under RH by Suzuki).
+This is a convenient choice, not the mathematically unique one.
+$\lambda=0$ requires RH and is not used as a canonical convention.
 \end{proposition}
 
 \section{Gauge freedom and intrinsic datum $U_a$}
 
 \begin{proposition}[Gauge freedom, NEU-260b $\checkmark$]
-Under $v_\pm \mapsto e^{i\alpha_\pm}v_\pm$, the parameter transforms
-as $\theta\mapsto\theta+\beta-\alpha$. The intrinsic datum is the
-unitary operator
+The deficiency spaces are
 \[
-  U_a:\mathcal{N}_{+,a}\longrightarrow\mathcal{N}_{-,a},
+  \mathcal{N}_{\pm,a} = \operatorname{span}\{v_\pm\},
+  \qquad T_a^{\mathrm{w}}\, v_\pm = e^{\pm x}.
 \]
-where $\mathcal{N}_{\pm,a} = \ker(\mathscr{D}_a^*\mp i)$.
-The number $\theta$ is only a coordinate after a choice of bases.
+\emph{Note: $e^{\pm x}$ are on the image side of $T_a^{\mathrm{w}}$;
+the deficiency vectors $v_\pm$ are their preimages in $\mathcal{H}(T_a^{\mathrm{w}})$.}
+
+Under $v_\pm\mapsto e^{i\alpha_\pm}v_\pm$: $\theta\mapsto\theta+\beta-\alpha$.
+The intrinsic datum is the unitary operator
+\[
+  U_a:\mathcal{N}_{+,a}\longrightarrow\mathcal{N}_{-,a}.
+\]
+$\theta$ is only a coordinate after a choice of bases.
 \end{proposition}
 
-\section{Arithmetic canonicity problem (open)}
+\section{Parity reduces $U(1)$ to $\mathbb{Z}_2$}
 
-\begin{conjecture}[Reflection symmetry, NEU-260b $?[O]$]
-The Weil form satisfies
+\begin{theorem}[Parity theorem, NEU-260b $\checkmark$]
+Let $P\,f(x):=f(-x)$ (linear, not antilinear). Suzuki (2026, \S2)
+proves $PA_a=A_aP$ (the Weil kernel is even: $W^a(-x,-y)=W^a(x,y)$).
+
+Consequences:
+\begin{enumerate}
+\item $PT_a^{\mathrm{w}} = T_a^{\mathrm{w}} P$, so $P$ extends
+  to a unitary on $\mathcal{H}(T_a^{\mathrm{w}})$.
+\item $\mathscr{D}_a P = -P\mathscr{D}_a$, so
+  $P:\mathcal{N}_{+,a}\to\mathcal{N}_{-,a}$ linearly and unitarily.
+\item Since $T_a^{\mathrm{w}}(Pv_+)=P(T_a^{\mathrm{w}}v_+)=Pe^x=e^{-x}=T_a^{\mathrm{w}}v_-$
+  and $T_a^{\mathrm{w}}$ is injective:
+  \[
+    Pv_+ = v_-.
+  \]
+\item Parity-stable extensions require $\theta=-\theta\pmod{2\pi}$, i.e.\
+  $\theta\in\{0,\pi\}$.
+\end{enumerate}
+
 \[
-  Q_W^a(f,f) = Q_W^a(\tilde f,\tilde f), \qquad
-  \tilde f(x) := \overline{f(-x)}.
+  \boxed{U(1) \xrightarrow{\mathrm{parity}} \{+P,-P\} \cong \mathbb{Z}_2.}
 \]
-If true, the reflection $x\mapsto -x$ provides the canonical
-pairing $U_a^\sigma:\mathcal{N}_{+,a}\to\mathcal{N}_{-,a}$ with
-$\theta_{\mathrm{can}}(a)=0$.
-\end{conjecture}
+
+In Suzuki's trivialization: $U_a^P=+P$ corresponds to $\theta=0$;
+$-P$ corresponds to $\theta=\pi$.
+\end{theorem}
+
+\section{Open problems (Objekt-X interface)}
+
+\begin{enumerate}
+\item \textbf{$\mathbb{Z}_2$-selection} (NEU-260b.1, $?[O]$): Does
+  continuity in $a$ force $\varepsilon(a)=\mathrm{const}$? Does
+  BC/KMS time-arrow or Frobenius orientation select
+  $\varepsilon(a)=+1$?
+\item \textbf{Boundary normalization} $\phi(a,z)$ (NEU-260c, $?[O]$):
+  arithmetic determination; Suzuki notes $\phi\equiv 0$ may suffice.
+\item \textbf{Transition maps} $J_{a,b}$ (NEU-260d, $?[O]$):
+  canonical construction with intertwining
+  $J_{a,b}\overline{\mathscr{D}}_{a,\theta(a)}\subset
+  \overline{\mathscr{D}}_{b,\theta(b)}J_{a,b}$.
+\end{enumerate}
+
+\section{Objekt-X hypothesis}
+
+\begin{definition}[Objekt X, $?[O]$]
+\[
+  \text{Objekt X} := \left\{\mathcal{H}(T_a^{\mathrm{w}}),\;
+  J_{a,b},\; \overline{\mathscr{D}}_{a,\theta(a)}\right\}_{0<a<b}.
+\]
+\end{definition}
 
 \begin{conjecture}[Suzuki limit, Suzuki 2026]
 \[
   e^{\phi(a,z)} W(a,\theta(a);z) \longrightarrow
-  \frac{z^2 \xi(1/2-iz)}{\xi'(1/2-iz)},
-  \quad a\to\infty,\text{ locally uniform.}
+  \frac{z^2\xi(1/2-iz)}{\xi'(1/2-iz)}, \quad a\to\infty.
 \]
-Suzuki notes that $\phi\equiv 0$ may suffice.
 \end{conjecture}
 
-\section{Objekt-X hypothesis}
-
-\begin{definition}[Objekt X, NEU-259/260 $?[O]$]
+\begin{conjecture}[Inductive limit, Objekt-X hypothesis]
+The inductive limit
 \[
-  \text{Objekt X} := \left\{\mathcal{H}(T_{a,\lambda_{\mathrm{can}}(a)}),\;
-  J_{a,b},\; \overline{\mathscr{D}}_{a,\theta(a)}\right\}_{0<a<b},
+  \mathcal{K}_X := \varinjlim_a\mathcal{H}(T_a^{\mathrm{w}})
+  \xrightarrow{\mathrm{RH}} \mathcal{H}_W \cong \ell^2(\Gamma,m_\gamma)
 \]
-with arithmetic-canonical $\theta(a)$, $\phi(a,z)$, $J_{a,b}$.
-Under RH: $\mathcal{K}_X := \varinjlim_a\mathcal{H}(T_a)
-\xrightarrow{\mathrm{RH}}\mathcal{H}_W\cong\ell^2(\Gamma,m_\gamma)$.
-\end{definition}
+exists and is isomorphic to the Weil Hilbert space.
+This is an open conjecture; $J_{a,b}$ are not yet constructed.
+\end{conjecture}
 
-\section{Open problems (P04)}
+\section{Audit status}
 
-\begin{enumerate}
-\item $Q_W^a$-reflection symmetry $\Rightarrow$ $\theta_{\mathrm{can}}(a)=0$? (NEU-260b)
-\item Grenznormalisierung $\phi(a,z)$: arithmetic determination? (NEU-260c)
-\item Canonical $J_{a,b}$ with intertwining
-  $J_{a,b}\overline{\mathscr{D}}_{a,\theta(a)}\subset
-  \overline{\mathscr{D}}_{b,\theta(b)}J_{a,b}$? (NEU-260d)
-\end{enumerate}
-
-\section{Source Nodes}
-
-NEU-259 (final, Patch 2), NEU-260a (Patch), NEU-260b
-(active/).
+SYN-Audit: 2026-08-08. Corrections from draft:
+(a) Deficiency spaces corrected: $\mathcal{N}_{\pm}=\operatorname{span}\{v_\pm\}$,
+  $T_av_\pm=e^{\pm x}$ (not $\operatorname{span}\{e^{\pm x}\}$);
+(b) Parity $P$ is linear (not antilinear); reflection symmetry
+  conjecture replaced by the parity theorem;
+(c) Main result: $U(1)\to\mathbb{Z}_2$, not $\theta_{\mathrm{can}}=0$;
+(d) $\lambda_{\mathrm{w}}(a)=\lambda_a-1$ marked as canonical
+  working normalization, not mathematically unique;
+(e) Inductive limit $\mathcal{K}_X$ marked as open conjecture.
+Source nodes: NEU-259 (Patch 2), NEU-260a (Patch 2),
+NEU-260b (Patch), NEU-260b.1 (active/).
 
 \end{document}
