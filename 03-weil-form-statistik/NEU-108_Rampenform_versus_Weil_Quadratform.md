@@ -1,142 +1,107 @@
 # NEU-108 — Rampenform versus Weil-Quadratform
 
-**Stand:** 1. Juli 2026  
-**Vorgänger:** NEU-107 (\(\mathrm{LFF}_{N,H}(A)\); Rampen-Äquivalenz; Stärke-Hierarchie)  
+**Stand:** 1. Juli 2026 | **Patch:** 8. August 2026 (Pass-A Gruppe C, Patch 4/5)
+**Vorgänger:** NEU-107 (\(\mathrm{LFF}_{N,H}(A)\); Rampen-Äquivalenz korrigiert; Stärke-Hierarchie als Typaussage)
 **Nächste Nummer:** NEU-109
 
 ---
 
 ## Ausgangspunkt
 
-NEU-107 zeigt: \(\mathrm{LFF}_{N,H}(A) \Leftrightarrow R_{N,H,A}(\varepsilon) \sim \varepsilon^2/A^2\). NEU-108 klärt, ob daraus bereits eine Weil-Quadratform folgt.
-
-**Schutzsatz vorweg:** Das entfaltete Leistungsspektrum liefert höchstens einen lokalen universellen Rampenanteil. Die Weil-Quadratform ist ein arithmetisches Objekt; ihre Positivität ist RH-relevant.
+NEU-107 zeigt (nach Patch): LFF \(\Rightarrow\) Rampe, aber nicht umgekehrt. NEU-108 klärt, ob aus LFF eine Weil-Quadratform folgt oder konstruiert werden kann.
 
 ---
 
-## Satz NEU-108.1 — Linearer Funktional, keine Quadratform
+## Satz NEU-108.1 — Lineares Funktional, keine Quadratform
 
-Der Ausdruck
+$$\Phi \mapsto c\int \Phi(\alpha)|\alpha|\,d\alpha$$
 
-$$
-\Phi \mapsto c\int \Phi(\alpha)|\alpha|\,d\alpha
-$$
+ist ein **lineares Funktional** in \(\Phi\), keine Quadratform. Positivität gilt nur auf dem positiven Testkegel (\(\Phi \geq 0\)).
 
-ist ein **lineares Funktional** in \(\Phi\), keine Quadratform. Er ist positiv nur auf dem positiven Testkegel:
-
-$$
-\Phi \geq 0 \;\Rightarrow\; c\int\Phi(\alpha)|\alpha|\,d\alpha \geq 0.
-$$
-
-Für allgemeines \(\Phi \in C_c(\mathbb{R})\) gibt es kein Positivitätsargument.
-
-**Status: \(\checkmark[M]\)**
+**Status: ✓[M]**
 
 ---
 
 ## Definition NEU-108.2 — Quadratische Rampenform
 
-Eine echte positive Quadratform entsteht durch:
+$$Q_{\mathrm{ramp}}[g] := c\int_{\mathbb{R}} |\alpha|\,|g(\alpha)|^2\,d\alpha.$$
 
-$$
-Q_{\mathrm{ramp}}[g] := c\int_{\mathbb{R}} |\alpha|\,|g(\alpha)|^2\,d\alpha.
-$$
+Positiv (\(Q_{\mathrm{ramp}}[g] \geq 0\)); gewichtete \(L^2\)-Halbnorm mit Gewicht \(|\alpha|\).
 
-Diese Form ist positiv (\(Q_{\mathrm{ramp}}[g] \geq 0\) für alle \(g\)) und entspricht einer gewichteten \(L^2\)-Norm mit Gewicht \(|\alpha|\).
-
-**Status: \(\checkmark[M]\)** (Definition)
+**Status: ✓[M]** (Definition)
 
 ---
 
-## Satz NEU-108.3 — \(Q_{\mathrm{ramp}}\) ist universell, nicht zeta-spezifisch
+## Satz NEU-108.3 — \(Q_{\mathrm{ramp}}\) universell, nicht zeta-spezifisch
 
 $$
-\boxed{Q_{\mathrm{ramp}}[g] = c\int|\alpha||g(\alpha)|^2\,d\alpha \text{ ist immer positiv, unabhängig von }\zeta.}
+\boxed{Q_{\mathrm{ramp}}[g] = c\int|\alpha||g(\alpha)|^2\,d\alpha \text{ ist immer nicht-negativ, unabhängig von }\zeta.}
 $$
 
-Begründung: Die Positivität folgt aus dem positiven Multiplikator \(|\alpha|\). Sie enthält keine Information über die Lage der Zeta-Nullstellen. Daher ist \(Q_{\mathrm{ramp}}\) kein RH-relevantes Positivitätsobjekt.
+Die Nicht-Negativität folgt aus dem Multiplikator \(|\alpha| \geq 0\) allein, ohne Information über Zeta-Nullstellen.
 
-Die Weil-Quadratform dagegen:
-- ist an die arithmetische explizite Formel gebunden
-- ist positiv semidefinit genau dann, wenn RH gilt (Bombieri-Formulierung)
-- trägt globale Paar- und archimedische Struktur
-
-**Status: \(\checkmark[M]\)**
+**Status: ✓[M]**
 
 ---
 
-## Satz NEU-108.4 — No-Go: \(\mathrm{LFF} \not\Rightarrow Q_{\mathrm{Weil}}\)
+## Satz NEU-108.4 — LFF allein identifiziert \(Q_{\mathrm{Weil}}\) nicht
+
+> **Patch-Notiz (Pass-A, 8. Aug. 2026):** Die ursprüngliche Fassung formulierte einen harten logischen No-Go
+> \(\mathrm{LFF} \not\Rightarrow Q_{\mathrm{Weil}}\).
+> Eine mathematische Nichtimplikation \(A \not\Rightarrow B\) erfordert
+> einen Gegenbeweis oder ein Gegenmodell; die bloße Tatsache, dass LFF weniger
+> offensichtliche Information enthält, reicht nicht aus.
+> Der harte No-Go wird daher zurückgezogen.
 
 $$
-\boxed{\mathrm{LFF}_{N,H}(A) \;\not\Rightarrow\; Q_{\mathrm{Weil}}.}
+\boxed{\text{LFF allein konstruiert bzw.\ identifiziert }Q_{\mathrm{Weil}}\text{ nicht.}}
 $$
 
-Korrekt ist nur:
+Das ist eine **Typisierungswarnung**: LFF beschreibt ein lokales/universelles Verhalten; \(Q_{\mathrm{Weil}}\) kodiert globale arithmetische Positivität über die Spurformel. Ob LFF unter Zusatzbedingungen \(Q_{\mathrm{Weil}}\) impliziert oder nicht, ist mathematisch offen.
 
-$$
-\mathrm{LFF}_{N,H}(A) \;\Rightarrow\; Q_{\mathrm{ramp}} \quad\text{(lokal, universell).}
-$$
-
-\(\mathrm{LFF}\) ist **notwendig** als Montgomery-kompatibles Signal, aber **nicht hinreichend** für die volle Weil-Quadratform.
-
-**Status: \(\checkmark/\warning[M]\)** (No-Go)
+**Status: ✓[M]_part** (Typisierungswarnung gültig; harter logischer No-Go zurückgezogen)
 
 ---
 
 ## Satz NEU-108.5 — Fehlende Terme zur Weil-Rekonstruktion
 
-Für eine Weil-Identifikation benötigt man zusätzlich:
+Für eine vollständige Weil-Identifikation wären zusätzlich nötig:
 
 $$
 Q_{\mathrm{ramp}}
 \;+\;
 \underbrace{\text{archimedische Terme}}_{\text{reeller/komplexer Platz}}
 \;+\;
-\underbrace{\text{Prim-/Singulärserien-Renormalisierung}}_{\text{lokale Faktoren}}
+\underbrace{\text{Prim-/Singulärserie-Renormalisierung}}_{\text{lokale Faktoren}}
 \;+\;
 \underbrace{\text{globale Paarstruktur}}_{\text{volle Paarabstandsdichte}}
 \;\stackrel{?}{=}\;
 Q_{\mathrm{Weil}}.
 $$
 
-Diese Rekonstruktion ist die Leitfrage für NEU-109.
+Ob diese Terme ausreichen und konsistent kombiniert werden können, ist nicht bewiesen.
 
-**Status: \(?[O]\)** (offene Rekonstruktionsfrage)
+**Status: ?[O]**
 
 ---
 
-## Tabellarische Statusklassifikation
+## Tabellarische Statusklassifikation (korrigiert)
 
 | Satz | Inhalt | Status |
 |------|--------|--------|
-| 108.1 | \(\int\Phi|\alpha|\) nur lineares Funktional | \(\checkmark[M]\) |
-| 108.2 | \(Q_{\mathrm{ramp}}[g] = c\int|\alpha||g|^2\) | \(\checkmark[M]\) (Def.) |
-| 108.3 | \(Q_{\mathrm{ramp}}\) universell, nicht zeta-spezifisch | \(\checkmark[M]\) |
-| 108.4 | No-Go: \(\mathrm{LFF} \not\Rightarrow Q_{\mathrm{Weil}}\) | \(\checkmark/\warning[M]\) |
-| 108.5 | Fehlende Terme: archimedisch + Renorm + global | \(?[O]\) |
-
----
-
-## Neue Leitfrage für NEU-109
-
-$$
-\boxed{\text{Welche Zusatzterme fehlen, um aus }Q_{\mathrm{ramp}}\text{ die volle }Q_{\mathrm{Weil}}\text{ zu rekonstruieren?}}
-$$
-
-Konkrete Schritte:
-1. **Archimedische Terme:** Beitrag des reellen/komplexen Platzes in der Weil-Formel (\(\Gamma\)-Faktoren, Residuum von \(\xi'/\xi\))
-2. **Primterm-Renormierung:** Lokale Faktoren \(\log p\) vs.\ \(\log|\alpha|\)-Struktur
-3. **Globale Paarstruktur:** Vollständige Paarabstandsdichte vs.\ lokales Rampenprofil
-4. **Connes\u2013Consani:** Weil-Positivität als Trace-Formel-Phänomen; Verbindung zu \(\mathcal{H}_N\)
+| 108.1 | \(\int\Phi|\alpha|\) lineares Funktional | ✓[M] |
+| 108.2 | \(Q_{\mathrm{ramp}}[g] = c\int|\alpha||g|^2\) | ✓[M] |
+| 108.3 | \(Q_{\mathrm{ramp}}\) universell, nicht zeta-spezifisch | ✓[M] |
+| 108.4 | LFF identifiziert \(Q_{\mathrm{Weil}}\) nicht allein — Typisierungswarnung | ✓[M]_part |
+| 108.5 | Fehlende Terme; Rekonstruktionsfrage offen | ?[O] |
 
 ---
 
 ## Verweise
 
-- NEU-107: \(\mathrm{LFF}_{N,H}(A)\); Rampen-Äquivalenz
+- NEU-107 (Patch 3/5): LFF (korrigiert); Rampenform
 - NEU-106: Epistemisch RH \(\not\Rightarrow\) GUE
-- **Bombieri:** *Remarks on Weil's quadratic functional* (2000)
-- **Connes:** *Trace formula in noncommutative geometry* (1999)
-- Connes & Consani: *On the notion of geometry over \(\mathbb{F}_1\)* (2010)
+- **Bombieri:** *Remarks on Weil's quadratic functional in number theory* (2000)
+- **Connes:** *Trace formula in noncommutative geometry and the zeros of the Riemann zeta function* (1999)
 - Goldston & Montgomery: *Pair correlation* (1987)
 - Montgomery: *Pair correlation of zeros* (1973)
