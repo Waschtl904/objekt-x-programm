@@ -1,155 +1,152 @@
 # NEU-111 — Herglotz-Weil-Brücke und Jacobi-Realisierung
 
-**Stand:** 1. Juli 2026  
-**Vorgänger:** NEU-110 (Ausgang B; Pfadtrennung Weil- vs. Rampenkanal)  
+**Stand:** 1. Juli 2026 | **Patch:** 8. August 2026 (Pass-A Gruppe D, Patch D-1/2)
+**Vorgänger:** NEU-110 (Symboltest \(\sigma_{\mathrm{loc}}(Q_{\mathrm{Weil}})\stackrel{?}{=}|\alpha|\); Ausgang A/B offen nach Patch)
 **Nächste Nummer:** NEU-112
 
 ---
 
-## Ausgangspunkt
+## ~~Ausgangspunkt (ursprünglich)~~ — **×[M] SUPERSEDED**
 
-NEU-110 erzwingt Ausgang B: Der Weil-Kanal läuft über die lineare explizite Formel, nicht über den Rampenkanal. NEU-111 ordnet die Objekte des Weil-Kanals in ihrer logischen Abhängigkeit.
+> **Patch-Notiz (Pass-A, 8. Aug. 2026):** Die ursprüngliche Fassung begann mit der Aussage,
+> NEU-110 habe **Ausgang B** (\(\sigma_{\mathrm{loc}}(Q_{\mathrm{Weil}})\neq|\alpha|\)) erzwungen.
+> Das ist nach dem Patch von NEU-110 (Gruppe C, Patch 5/5) nicht mehr gültig:
+> Der Symboltest ist offen; weder Ausgang A noch B ist bewiesen.
+> NEU-111 darf den linearen Herglotz-Weil-Kanal untersuchen,
+> aber nicht mehr behaupten, NEU-110 habe ihn erzwungen.
 
-**Leitprinzip:**
+## Ausgangspunkt (korrigiert)
 
 $$
-\boxed{m_{\mathrm{arith}} \text{ ist der primäre Weil-Kandidat; }
-A_N^{\mathrm{Jac},-} \text{ ist nur ein Realisierungs-/Approximationskandidat.}}
+\boxed{\text{Unabhängig von der offenen Symbolfrage (NEU-110) untersuchen wir den linearen Herglotz-Weil-Kanal.}}
 $$
+
+Die lineare explizite Formel und die Connes-Spurformel legen nahe, dass \(m_{\rm arith}\) als Herglotz-Funktion die richtige Eingangsgröße für eine Weil-Identifikation ist. Ob der Rampenkanal (NEU-110) dieselbe oder eine andere Struktur realisiert, hängt vom offenen Symboltest ab.
 
 ---
 
-## Satz NEU-111.1 — Primärer Weil-Kandidat: \(m_{\mathrm{arith}}(z)\)
+## Satz NEU-111.1 — \(m_{\rm arith}\) Herglotz \(\Leftrightarrow\) RH (korrigierte Typisierung)
 
-Aus NEU-63D ist
-
-$$
-m_{\mathrm{arith}}(z)
-:= -i\frac{\xi'}{\xi}\!\left(\tfrac{1}{2}+iz\right)
-$$
-
-eine Herglotz-Funktion genau dann, wenn RH gilt. Unter RH hat sie die Stieltjes-Darstellung:
+Definitionen:
 
 $$
-m_{\mathrm{arith}}(z)
-\sim
-\sum_{\gamma}
-\frac{1}{\gamma - z}
-+ \text{Renormierung},
+\Xi(z) := \xi\!\left(\tfrac{1}{2}+iz\right), \qquad
+m_{\rm arith}(z) := -\frac{\Xi'(z)}{\Xi(z)} = -i\,\frac{\xi'}{\xi}\!\left(\tfrac{1}{2}+iz\right).
 $$
 
-wobei \(\rho = \tfrac{1}{2}+i\gamma\) über die kritischen Nullstellen läuft. Das ist ein **ein-teilchenartiges** Spektralobjekt auf derselben Achse wie Bombieris Weil-Funktional.
+Unter RH ist die Menge der normierten Nullstellen
 
-**Status: ✓[M]** (aus NEU-63D)
+$$
+\Gamma := \{\gamma\in\mathbb{R} : \xi(\tfrac{1}{2}-i\gamma)=0\},
+$$
+
+und mit den zugehörigen Multiplizitäten \(m_\gamma \geq 1\) gilt die **signed-\(\Gamma\)-Darstellung** (kanonisch symmetrisch konvergent):
+
+$$
+\boxed{m_{\rm arith}(z) = \sum_{\gamma\in\Gamma} \frac{m_\gamma}{\gamma - z}.}
+$$
+
+Der Herglotz-Charakter folgt aus der Hadamard-Darstellung von \(\xi'/\xi\); off-line Nullstellen würden Pole von \(m_{\rm arith}\) in \(\mathbb{C}^+\) erzeugen und den Herglotz-Charakter zerstören.
+
+> **Typisierungsnotiz:** Die vage Schreibweise \(\sum_\gamma \frac{1}{\gamma-z} + \text{Renormierung}\)
+> ohne signed-\(\Gamma\), Multiplizitäten und Typ der Renormierung ist **durch diese Fassung ersetzt**.
+> Gamma-, Pol- und Primbeiträge sind keine zusätzlichen Atome des Herglotz-Spektralmaßes;
+> sie erscheinen bei der faktoriellen Zerlegung der expliziten Formel über
+> \(s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)\), aber nicht im Herglotz-Spektralmaß von \(m_{\rm arith}\).
+
+**Status: \(\checkmark[M]\)** (unter RH; signed-\(\Gamma\)+Multiplizitäten)
 
 ---
 
-## Satz NEU-111.2 — Pfadordnung
+## Satz NEU-111.2 — Pfadordnung (Architektur)
 
-Die korrekte Abhängigkeitsordnung lautet:
-
-$$
-m_{\mathrm{arith}}
-\longrightarrow
-\text{Bombieri/Weil-Testfunktionsraum}
-\longrightarrow
-Q_{\mathrm{Weil}},
-$$
-
-und erst sekundär:
+Die angestrebte Kette lautet:
 
 $$
-A_N^{\mathrm{Jac},-}
-\longrightarrow
-m_{\Omega,N}(z) := \langle \Omega,(A_N^{\mathrm{Jac},-}-z)^{-1}\Omega\rangle
-\longrightarrow
-m_{\mathrm{arith}}.
+A_N^{\rm Jac,-} \;\longrightarrow\; m_{\Omega,N} \;\longrightarrow\; m_{\rm arith}.
 $$
 
-Der direkte Sprung \(A_N^{\mathrm{Jac},-} \to\) Connes-Adèle-Class-Spurformel ist **unzulässig**, solange nicht gezeigt ist:
-1. \(m_{\Omega,N} \to m_{\mathrm{arith}}\) lokal gleichmäßig auf \(\mathbb{C}^+\)
-2. Die entstehende Spur hat auf Bombieris/Connes' Testfunktionsraum dieselbe Renormalisierung wie \(Q_{\mathrm{Weil}}\)
+> **Patch-Notiz:** Zum Zeitpunkt von NEU-111 war \(m_{\Omega,N}\) noch nicht sauber definiert.
+> NEU-119 stellt ausdrücklich fest, dass weder \(\Omega_N\) noch \(m_{\Omega,N}\) in dieser Phase
+> sauber typisiert waren, und lässt die kanonische Wahl von \(\Omega_N\) weiterhin offen.
+> Der Pfeil \(A_N^{\rm Jac,-}\to m_{\Omega,N}\to m_{\rm arith}\) ist daher in NEU-111
+> **Programmarchitektur**, kein konstruierter mathematischer Pfeil.
 
-**Status: ✓[M]**
+Der rettbare Kern:
+
+$$
+\boxed{m_{\Omega,N} \to m_{\rm arith} \text{ muss bewiesen werden,
+ bevor die Jacobi-Struktur mit der Weil-Geometrie identifiziert wird.}}
+$$
+
+Das ist der richtige methodische Schutz: keine Identifikation vor Typisierung.
+
+**Status: \(\checkmark[M]_{\rm part}\)** (Architektur korrekt; \(m_{\Omega,N}\) erst in NEU-119 definiert)
 
 ---
 
-## Satz NEU-111.3 — No-Go: Beliebiges Jacobi-Spektralmaß ist kein Connes-Weil-Objekt
+## Satz NEU-111.3 — Jacobi-Positivität: Typisierungs-Firewall
+
+> **Patch-Notiz:** Die ursprüngliche Fassung formulierte einen harten No-Go:
+> ein beliebiges Jacobi-Spektralmaß sei kein Connes-Weil-Objekt.
+> Als allgemeiner mathematischer Ausschlusssatz ist das nicht bewiesen:
+> ein speziell konstruiertes Jacobi-Maß könnte prinzipiell gerade das gewünschte
+> Spektralmaß realisieren. Der No-Go wird zur **Typisierungs-Firewall** abgeschwächt.
 
 $$
-\boxed{\text{Ein beliebiges positives Jacobi-Spektralmaß ist noch kein Connes-Weil-Objekt.}}
+\boxed{\text{Jacobi-Positivität allein identifiziert kein Weil-/Connes-Objekt.}}
 $$
 
-Begründung: Connes' Spurformel ist nicht „Spektralmaß allgemein", sondern eine spezifische Scaling-Action-/Adèle-Class-Spurstruktur mit archimedischen PSWF-Korrekturen (Connes–Consani). Der Jacobi-Operator muss diese Struktur erst über \(m_{\Omega,N} \to m_{\mathrm{arith}}\) und den korrekten Testfunktionsraum nachweisen.
+Ohne zusätzliche arithmetische Information (Nullstellenstruktur, explizite Formel, Adele-Class-Space) führt ein positives Jacobi-Spektralmaß nicht automatisch auf \(Q_{\rm Weil}\).
 
-**Status: ✓[M]** (No-Go)
+**Status: \(\checkmark[M]_{\rm part}\)** (Typisierungswarnung gültig; harter No-Go zurückgezogen)
 
 ---
 
-## Definition NEU-111.4 — Zwei präzise Flaschenhals-Tests
+## Satz NEU-111.4 — Die beiden Flaschenhälse
 
 **Test 1 — Herglotz-Weil-Test:**
 
 $$
-m_{\mathrm{arith}}
-\stackrel{?}{\longmapsto}
-Q_{\mathrm{Weil}}
+m_{\rm arith}(z) \stackrel{?}{\longrightarrow} W_\xi^{\rm norm}[\Phi]
 $$
 
-auf dem Paley–Wiener-/kompakt getragenen Testfunktionsraum von Bombieri. Konkret: Gibt es einen natürlichen Auswertungsoperator
+Das Herglotz-Objekt \(m_{\rm arith}\) muss über einen Autokorrelations-/Amplitudenlift in die lineare Weil-Distribution überführt werden. Der Lift ist durch den Positivierungsschritt \(\Phi = \phi^* * \phi\) in NEU-113 später expliziert.
+
+**Status: ?[O]**
+
+**Test 2 — Jacobi-Limes:**
 
 $$
-T:\; f \mapsto \int m_{\mathrm{arith}}(t)\hat{f}(t)\,dt
+m_{\Omega,N}(z) \stackrel{?}{\longrightarrow} m_{\rm arith}(z) \quad (N\to\infty)
 $$
 
-der mit Bombieris Weil-Quadratform zusammenfällt?
+Dieser Grenzübergang erfordert die kanonische Wahl von \(\Omega_N\), die in **NEU-119** erst definiert (und deren Existenz dort noch als offen bezeichnet) wird.
 
-**Status: ❓[O]**
-
-**Test 2 — Jacobi-Realisierungstest:**
-
-$$
-m_{\Omega,N}(z) \stackrel{?}{\longrightarrow} m_{\mathrm{arith}}(z)
-$$
-
-lokal gleichmäßig auf \(\mathbb{C}^+\) (bzw. im Sinne schwacher Konvergenz der Spektralmaße). Erst wenn dieser Test besteht, ist \(A_N^{\mathrm{Jac},-}\) eine legitime endliche Jacobi-Realisierung des Weil-Kanals.
-
-**Status: ❓[O]**
+**Status: ?[O]** (offener Schritt; \(m_{\Omega,N}\)-Struktur: NEU-119)
 
 ---
 
-## Tabellarische Statusklassifikation
+## Statusübersicht
 
-| Satz | Inhalt | Status |
-|------|--------|--------|
-| 111.1 | \(m_{\mathrm{arith}}\) primärer Weil-Kandidat (Stieltjes/Herglotz) | ✓[M] |
-| 111.2 | Pfadordnung: \(m_{\mathrm{arith}} \to Q_{\mathrm{Weil}}\) vor \(A_N^{\mathrm{Jac},-}\) | ✓[M] |
-| 111.3 | No-Go: Jacobi-Spektralmaß ≠ Connes-Weil | ✓[M] |
-| 111.4a | Herglotz-Weil-Test: \(m_{\mathrm{arith}} \stackrel{?}{\to} Q_{\mathrm{Weil}}\) | ❓[O] |
-| 111.4b | Jacobi-Realisierungstest: \(m_{\Omega,N} \stackrel{?}{\to} m_{\mathrm{arith}}\) | ❓[O] |
-
----
-
-## Neue Leitfrage für NEU-112
-
-$$
-\boxed{m_{\mathrm{arith}}(z) \stackrel{?}{\longmapsto} Q_{\mathrm{Weil}}\quad\text{(Herglotz-Weil-Test auf Bombieri-Testfunktionsraum)}}
-$$
-
-Konkrete Schritte:
-1. Bombieris Testfunktionsraum präzise aufschreiben (Paley–Wiener \(PW_t\); gerade \(L^2\)-Funktionen, Träger \([-t,t]\))
-2. Weil-Quadratform \(Q_{\mathrm{Weil}}[f]\) nach Bombieri explizit ausschreiben (archimedischer Term + Primterm + Nullstellenterm)
-3. \(m_{\mathrm{arith}}(z)\) Stieltjes-Darstellung in Bombieri-Normalisierung einsetzen
-4. Vergleich: stimmen Nullstellenterm und \(\sum_\gamma 1/(\gamma-z)\)-Beitrag überein?
-5. Archimedischer Rest: \(\Gamma\)-Terme in Bombieri = archimedische PSWF-Terme in Connes–Consani?
+| Punkt | Aussage | Status |
+|-------|---------|--------|
+| 111.0 | Ausgangspunkt: unabhängig von Symbolfrage | ✓[M] (korrigiert) |
+| 111.1 | \(m_{\rm arith}\) Herglotz \(\Leftrightarrow\) RH; signed-\(\Gamma\)+Multiplizitäten | ✓[M] |
+| 111.2 | Pfadordnung \(A_N^{\rm Jac,-}\to m_{\Omega,N}\to m_{\rm arith}\); Architektur | ✓[M]_part |
+| 111.3 | Jacobi-Positivität identifiziert kein Weil-Objekt | ✓[M]_part |
+| 111.4a | Herglotz-Weil-Test | ?[O] |
+| 111.4b | Jacobi-Limes \(m_{\Omega,N}\to m_{\rm arith}\) | ?[O] |
 
 ---
 
 ## Verweise
 
-- NEU-63D: \(m_{\mathrm{arith}}(z)\) Herglotz \(\Leftrightarrow\) RH
-- NEU-91: \(A_N^{\mathrm{Jac},-}\) Jacobi-Operator
-- NEU-110: Ausgang B; Pfadtrennung
-- **Bombieri:** *Remarks on Weil's quadratic functional* (2000) — Paley–Wiener-Raum; \(Q_{\mathrm{Weil}}\) explizit
-- **Connes:** *Trace formula in noncommutative geometry* (1999)
-- **Connes & Consani:** Scaling-Action / archimedische PSWF-Terme
+- **Bombieri:** *Remarks on Weil's quadratic functional in number theory* (2000)
+- **Connes:** *Trace formula in noncommutative geometry and the zeros of the Riemann zeta function* (1999)
+- **Hadamard:** Produktdarstellung von \(\xi\)
+- NEU-110 (Patch 5/5): Symboltest offen; Ausgang A/B beide offen
+- **NEU-113:** Autokorrelationslift \(\Phi=\phi^**\phi\); \(W_{\rm zeros}[\Phi]\to Q_{\rm zeros}[\phi]\)
+- **NEU-119:** Definition \(m_{\Omega,N}\); kanonische \(\Omega_N\)-Wahl offen
+- NEU-91: Jacobi-Operator \(A_N^{\rm Jac,-}\)
+- NEU-63D: \(m_{\rm arith}(z)\) Herglotz \(\Leftrightarrow\) RH (frühere Herleitung)
