@@ -10,7 +10,7 @@
 \newtheorem{remark}[theorem]{Remark}
 
 \title{P03 --- Haar-$L^2$ Firewall: $B_W$ Cannot Close on $L^2(\mathbb{R},du)$\\
-\normalsize SYN-Re-Audit: 2026-08-08 (Sync Patch~2 --- Freeze Candidate)}
+\normalsize SYN-Re-Audit: 2026-08-08 (Sync Patch~3 --- FROZEN $\checkmark[K/M]$)}
 \author{Objekt-X-Programm}
 \date{2026-08-08}
 
@@ -30,7 +30,7 @@ An explicit sequence confirms this directly.
 All conditional statements are RH-conditional.
 $\Gamma$ is the signed zero set (Definition~\ref{def:gamma}).
 Normalisation: $B_{W,\mathrm{NEU}\text{-}252}=B_{W,\mathrm{Lit}}$
-(P02, Theorem~\ref{thm:lit-id} therein, NEU-258 Patch~1, $\checkmark[K/M]$).
+(P02, Theorem~\texttt{thm:lit-id}, NEU-258 Patch~1, $\checkmark[K/M]$).
 \end{abstract}
 
 % ---------------------------------------------------------------
@@ -38,7 +38,7 @@ Normalisation: $B_{W,\mathrm{NEU}\text{-}252}=B_{W,\mathrm{Lit}}$
 % ---------------------------------------------------------------
 
 \begin{remark}[Conventions, from P02]\label{rem:conv}
-All definitions are canonical in P02 (Patch~3.4).
+All definitions are canonical in P02 (Patch~3.5, FROZEN).
 Fourier convention: P02 Definition~1.1 (NEU-220k, binding).
 On the core $\mathcal{A}_{\mathrm{PW}}:=C_c^\infty(\mathbb{R};\mathbb{C})
 \subset L^1(\mathbb{R})\cap L^2(\mathbb{R})$,
@@ -130,14 +130,14 @@ Hence $a_n\to0$ in $L^2$ and $(a_n)$ is $B_W$-Cauchy,
 but $B_W(a_n,a_n)\not\to0$: $B_W$ is not closable.
 \begin{proof}
 (1)~Substitution $v=u/n$: $\|a_n\|_2^2=n^{-1}\|\varphi\|_2^2$.
-(2)~Substitute $v=u/n$ in $\widehat{a_n}(-\gamma)$;
+(2)~Substitute $v=u/n$;
 the $1/n$ and $n$ cancel, leaving $\Phi(n(\gamma_0-\gamma))$.
 (3)~At $\gamma_0$: the difference vanishes exactly.
 For $\gamma\ne\gamma_0$, $\varphi\in\mathcal{S}$ gives
 $|\Phi(x)|\le C_N(1+|x|)^{-N}$, so the sum is bounded
-by $C\sum_{\gamma\ne\gamma_0}m_\gamma(1+M|\gamma-\gamma_0|)^{-2N}$,
-which vanishes as $M=\min(n,m)\to\infty$
-by Riemann--von Mangoldt summability (NEU-257 eq.~$(2\text{-Abel})$).
+by $C\sum_{\gamma\ne\gamma_0}m_\gamma(1+M|\gamma-\gamma_0|)^{-2N}$
+($M=\min(n,m)$), which vanishes as $M\to\infty$
+by Riemann--von Mangoldt summability.
 (4)~The $\gamma_0$-term is constant; all others vanish. $\square$
 \end{proof}
 \end{proposition}
@@ -183,19 +183,17 @@ RH-free construction of $\mathcal{H}_W$ from BC/adelic data: NEU-259 ($?[O]$).
 \section{Audit Status}
 % ---------------------------------------------------------------
 
-Sync Patch~2 (Freeze Candidate): 2026-08-08.
+\textbf{FROZEN $\checkmark[K/M]$: 2026-08-08 (Sync Patch~3).}
 
 \medskip
 \noindent Changes relative to Re-Audit Patch~1:
 \begin{enumerate}
-\item[(a)] Fourier convention in \S1 no longer re-states Plancherel formula;
-  P02 Definition~1.1 cited as canonical source.
-  On core $C_c^\infty\subset L^1\cap L^2$: Plancherel
-  $\|\hat f\|_2^2=2\pi\|f\|_2^2$ noted locally. \textbf{[new]}
-\item[(b)] All three references to ``P02 Theorem~7.1'' replaced by
-  stable label reference
-  ``P02 Theorem~\texttt{thm:lit-id}'' (NEU-258 Patch~1).
-  Robust against future section renumbering. \textbf{[new]}
+\item[(a)] Fourier convention in \S1 cites P02 Definition~1.1 as canonical source;
+  Plancherel noted locally for $C_c^\infty\subset L^1\cap L^2$ (Sync Patch~2).
+\item[(b)] All references to ``P02 Theorem~7.1'' replaced by stable
+  \texttt{thm:lit-id} (Sync Patch~2).
+\item[(c)] Abstract: cross-document \texttt{\textbackslash ref\{thm:lit-id\}} replaced
+  by \texttt{\textbackslash texttt\{thm:lit-id\}} (Sync Patch~3). \textbf{[new]}
 \end{enumerate}
 
 \medskip

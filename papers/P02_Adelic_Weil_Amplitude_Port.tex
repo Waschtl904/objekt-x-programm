@@ -10,7 +10,7 @@
 \newtheorem{remark}[theorem]{Remark}
 
 \title{P02 --- Adelic Weil Amplitude Port and Complete Hermitian Weil Form\\
-\normalsize SYN-Re-Audit: 2026-08-08 (Patch~3.4 --- Freeze Candidate)}
+\normalsize SYN-Re-Audit: 2026-08-08 (Patch~3.5 --- FROZEN $\checkmark[K/M]$)}
 \author{Objekt-X-Programm}
 \date{2026-08-08}
 
@@ -34,11 +34,9 @@ component by component;
 the polarisation identity is a derived consistency proposition.
 All $2\pi$-factors are kept explicit; no global absorption convention is used.
 All results are RH-free.\\
-\textbf{Patch 3.4 (2026-08-08, Freeze Candidate):}
-Fourier $L^2$-extension corrected ($(2\pi)^{-1/2}\mathcal{F}$ is unitary,
-not $\mathcal{F}$ itself);
-pole-term Hermitian proof corrected via
-$h_{b,a}(z)=\overline{h_{a,b}(-\bar z)}$ and evenness.
+\textbf{Patch 3.5 (2026-08-08, FROZEN):}
+$C_{b,a}$-proof rewritten cleanly;
+``$h_{a,b}\notin\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}$'' qualified to ``in general''.
 \end{abstract}
 
 % ---------------------------------------------------------------
@@ -67,8 +65,7 @@ No global absorption convention is used.
 % ---------------------------------------------------------------
 
 \begin{definition}[Haar projection, explicit]\label{def:haar}
-For $F\in\mathcal{S}(\mathbb{A}_{\mathbb{Q}})$, define
-$P_{\mathrm{Haar}}:\mathcal{S}(\mathbb{A}_{\mathbb{Q}})\to\mathcal{S}(\mathbb{R})$ by
+For $F\in\mathcal{S}(\mathbb{A}_{\mathbb{Q}})$:
 \[
   \boxed{
   (P_{\mathrm{Haar}}F)(x)
@@ -116,8 +113,8 @@ and $F_a(x,y):=h_a(x)\,\mathbf{1}_{\widehat{\mathbb{Z}}}(y)$.
 Since $\operatorname{supp}(a)\Subset\mathbb{R}$,
 we have $\operatorname{supp}(h_a)\Subset(0,\infty)$,
 so $h_a\in C_c^\infty(\mathbb{R})\subset\mathcal{S}(\mathbb{R})$.
-With $\mathbf{1}_{\widehat{\mathbb{Z}}}\in\mathcal{S}(\mathbb{A}_{\mathbb{Q},f})$,
-we get $F_a\in\mathcal{S}(\mathbb{A}_{\mathbb{Q}})$.
+With $\mathbf{1}_{\widehat{\mathbb{Z}}}\in\mathcal{S}(\mathbb{A}_{\mathbb{Q},f})$
+we get $F_a\in\mathcal{S}(\mathbb{A}_{\mathbb{Q}})$;
 $P_{\mathrm{Haar}}F_a=h_a$, so $(R_{\mathrm{PW}}F_a)(u)=e^{u/2}h_a(e^u)=a(u)$.
 \hfill$\checkmark[K/M]$
 \end{proof}
@@ -150,16 +147,14 @@ For $a,b\in\mathcal{A}_{\mathrm{PW}}$, the Weil test kernel is
 \]
 Here $\mathcal{H}_{\mathrm{PW}}^{\mathbb{C}}$ denotes the space of entire
 functions of exponential type that are even and Schwartz-class on $\mathbb{R}$.
-Note: $h_{a,b}$ is entire of exponential type,
-hence $h_{a,b}\notin\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}$
-(the latter requires compact support on $\mathbb{R}$).
+In general, $h_{a,b}\notin\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}$: a nonzero entire
+Fourier transform cannot have compact support on $\mathbb{R}$ (Paley--Wiener).
 
 The key conjugation identity is:
 \[
   \boxed{h_{b,a}(z) = \overline{h_{a,b}(-\bar{z})}.}
 \]
-In particular, since $h_{a,b}$ is even ($h_{a,b}(-z)=h_{a,b}(z)$),
-we have $h_{b,a}(z)=\overline{h_{a,b}(\bar{z})}$.
+Since $h_{a,b}$ is even, this gives $h_{b,a}(z)=\overline{h_{a,b}(\bar{z})}$.
 
 The diagonal restriction is:
 \[
@@ -188,33 +183,33 @@ Let $a,b\in\mathcal{A}_{\mathrm{PW}}$. Then:
 \begin{proof}
 \textit{(1) Even, compactly supported.}
 Evenness: $g_{a,b}(-u)=\tfrac12[C_{a,b}(-u)+C_{a,b}(u)]=g_{a,b}(u)$.
-Compact support and smoothness: convolution of compactly supported smooth functions.
+Compact support and smoothness follow from $a,b\in C_c^\infty(\mathbb{R})$.
 
 \textit{(2) Sesquilinearity.}
 $C_{a,b}(u)$ is $\mathbb{C}$-linear in $a$ and antilinear in $b$;
 the same holds for $u\mapsto C_{a,b}(-u)$.
 
 \textit{(3) Hermitian symmetry.}
-Substitute $s:=u-t$:
-$C_{b,a}(u)=\int b(u+t)\overline{a(t)}\,dt=\overline{\int a(u+t)\overline{b(t+u-u)}\cdots}$.
-More directly: $C_{b,a}(u)=\overline{C_{a,b}(-u)}$ (substitution $s:=t-u$
-in $C_{a,b}(-u)=\int a(-u+t)\overline{b(t)}\,dt$ gives
-$\int a(s)\overline{b(s+u)}\,ds=\overline{\int a(s)^*b(s+u)^*\cdots}$;
-more carefully: $C_{b,a}(u)=\int b(u+t)\overline{a(t)}\,dt$;
-substitute $s=t$: $=\overline{\int a(t)\overline{b(u+t)}\,dt}=\overline{C_{a,b}(-u)}\cdot(-1\to+u)$).
-Directly: swap $a\leftrightarrow b$ and use
-$C_{b,a}(u)=\overline{C_{a,b}(-u)}$. Then
-$g_{b,a}(u)=\tfrac12[\overline{C_{a,b}(-u)}+\overline{C_{a,b}(u)}]=\overline{g_{a,b}(u)}$.
+Substitute $s:=t-u$ in $C_{a,b}(-u)=\int a(t-u)\,\overline{b(t)}\,dt$:
+\[
+  \overline{C_{a,b}(-u)}
+  = \int_{\mathbb{R}} \overline{a(t-u)}\,b(t)\,dt
+  = \int_{\mathbb{R}} b(s+u)\,\overline{a(s)}\,ds
+  = C_{b,a}(u),
+\]
+where $s=t-u$. Hence
+$g_{b,a}(u)=\tfrac12[C_{b,a}(u)+C_{b,a}(-u)]
+=\tfrac12[\overline{C_{a,b}(-u)}+\overline{C_{a,b}(u)}]=\overline{g_{a,b}(u)}$.
 
 \textit{(4) Diagonal formula.}
-Substitute $s:=t-u$ in $C_{a,a}(-u)=\int a(-u+t)\overline{a(t)}\,dt$:
-$=\int a(s)\overline{a(s+u)}\,ds=\overline{C_{a,a}(u)}$.
-Hence $g_{a,a}(u)=\tfrac12(C_{a,a}(u)+\overline{C_{a,a}(u)})=\operatorname{Re}C_{a,a}(u)$.
+Apply (3) with $b=a$:
+$C_{a,a}(-u)=\overline{C_{a,a}(u)}$,
+hence $g_{a,a}(u)=\operatorname{Re}C_{a,a}(u)$.
 At $u=0$: $g_{a,a}(0)=\|a\|_{L^2}^2$.
 
 \textit{(5) Positive-definiteness.}
-$a\in C_c^\infty\subset L^1\cap L^2$, so $\hat a$ is defined pointwise.
-$\widehat{C_{a,a}}(t)=|\hat a(t)|^2$ and
+$a\in C_c^\infty\subset L^1\cap L^2$.
+$\widehat{C_{a,a}}(t)=|\hat a(t)|^2$,
 $\widehat{C_{a,a}(-\cdot)}(t)=|\hat a(-t)|^2$,
 so $h_{a,a}(t)=\tfrac12(|\hat a(t)|^2+|\hat a(-t)|^2)\ge0$.
 
@@ -287,58 +282,47 @@ The factor~$2$ arises from evenness, not from a convention choice.
 Each component satisfies $B_\bullet(b,a)=\overline{B_\bullet(a,b)}$.
 \begin{proof}
 \textit{Pole term.}
-Since $g_{b,a}=\overline{g_{a,b}}$ (Proposition~\ref{prop:gab}(3)),
-the Fourier transforms satisfy (for $z\in\mathbb{C}$):
-\[
-  h_{b,a}(z)
-  = \int_{\mathbb{R}}g_{b,a}(u)e^{izu}\,du
-  = \int_{\mathbb{R}}\overline{g_{a,b}(u)}e^{izu}\,du
-  = \overline{\int_{\mathbb{R}}g_{a,b}(u)e^{-i\bar{z}u}\,du}
-  = \overline{h_{a,b}(-\bar{z})}.
-\]
-Since $h_{a,b}$ is even, $h_{a,b}(-\bar{z})=h_{a,b}(\bar{z})$, so
-$h_{b,a}(z)=\overline{h_{a,b}(\bar{z})}$.
-Applying at $z=i/2$: $\bar{z}=-i/2$, so
-$h_{b,a}(i/2)=\overline{h_{a,b}(-i/2)}$.
-Applying at $z=-i/2$: $\bar{z}=i/2$, so
-$h_{b,a}(-i/2)=\overline{h_{a,b}(i/2)}$.
-Therefore:
-\[
-  B_{\mathrm{pole}}(b,a)
-  =h_{b,a}(i/2)+h_{b,a}(-i/2)
-  =\overline{h_{a,b}(-i/2)}+\overline{h_{a,b}(i/2)}
-  =\overline{B_{\mathrm{pole}}(a,b)}.
-\]
+From Definition~\ref{def:hab}, $h_{b,a}(z)=\overline{h_{a,b}(-\bar{z})}$.
+At $z=i/2$: $\bar{z}=-i/2$, so
+$h_{b,a}(i/2)=\overline{h_{a,b}(-i/2)}=\overline{h_{a,b}(i/2)}$
+(using evenness $h_{a,b}(-i/2)=h_{a,b}(i/2)$).
+At $z=-i/2$: $\bar{z}=i/2$, so
+$h_{b,a}(-i/2)=\overline{h_{a,b}(i/2)}=\overline{h_{a,b}(-i/2)}$.
+Hence
+$B_{\mathrm{pole}}(b,a)=h_{b,a}(i/2)+h_{b,a}(-i/2)
+=\overline{h_{a,b}(i/2)}+\overline{h_{a,b}(-i/2)}
+=\overline{B_{\mathrm{pole}}(a,b)}$.
+
 \textit{Gamma term.}
-On $\mathbb{R}$, $h_{b,a}(t)=\overline{h_{a,b}(-t)}=\overline{h_{a,b}(t)}$
-(evenness of $h_{a,b}$ in the last step).
-\[
-  B_\Gamma(b,a)=\frac{1}{\pi}\int\gamma_\infty(t)\overline{h_{a,b}(t)}\,dt
-  =\overline{\frac{1}{\pi}\int\overline{\gamma_\infty(t)}h_{a,b}(t)\,dt}.
-\]
-Substituting $t\mapsto -t$ and using $\gamma_\infty(-t)=\overline{\gamma_\infty(t)}$
-and evenness of $h_{a,b}$:
+On $\mathbb{R}$: $h_{b,a}(t)=\overline{h_{a,b}(-t)}=\overline{h_{a,b}(t)}$
+(evenness of $h_{a,b}$). So
+$B_\Gamma(b,a)=\frac{1}{\pi}\int\gamma_\infty\overline{h_{a,b}}\,dt
+=\overline{\frac{1}{\pi}\int\overline{\gamma_\infty}h_{a,b}\,dt}$.
+Substituting $t\mapsto-t$ and using
+$\overline{\gamma_\infty(t)}=\gamma_\infty(-t)$ and evenness of $h_{a,b}$:
 $\int\overline{\gamma_\infty(t)}h_{a,b}(t)\,dt
 =\int\gamma_\infty(-t)h_{a,b}(t)\,dt
-=\int\gamma_\infty(t)h_{a,b}(t)\,dt$,
-so $B_\Gamma(b,a)=\overline{B_\Gamma(a,b)}$.
+=\int\gamma_\infty(t)h_{a,b}(t)\,dt$.
+Hence $B_\Gamma(b,a)=\overline{B_\Gamma(a,b)}$.
 
 \textit{Finite term.}
-$g_{b,a}=\overline{g_{a,b}}$, so
-$B_{\mathrm{fin}}(b,a)=\overline{B_{\mathrm{fin}}(a,b)}$. $\square$
+$g_{b,a}=\overline{g_{a,b}}$ (Proposition~\ref{prop:gab}(3)),
+so $B_{\mathrm{fin}}(b,a)=\overline{B_{\mathrm{fin}}(a,b)}$.
+\hfill$\square$
 \end{proof}
 \end{proposition}
 
 \begin{corollary}[Diagonal: gamma block]\label{cor:bgamma-diag}
-For $a\in\mathcal{A}_{\mathrm{PW}}$, insert $h_{a,a}(t)=\tfrac12(|\hat a(t)|^2+|\hat a(-t)|^2)$
+For $a\in\mathcal{A}_{\mathrm{PW}}$, insert
+$h_{a,a}(t)=\tfrac12(|\hat a(t)|^2+|\hat a(-t)|^2)$
 into $B_\Gamma(a,a)=\frac{1}{\pi}\int\gamma_\infty(t)h_{a,a}(t)\,dt$.
-Substitute $t\mapsto -t$ in the second half and use
-$\gamma_\infty(-t)=\overline{\gamma_\infty(t)}$:
+Substitute $t\mapsto -t$ in the $|\hat a(-t)|^2$-half,
+using $\gamma_\infty(-t)=\overline{\gamma_\infty(t)}$:
 \[
-  \frac{1}{\pi}\int\gamma_\infty(t)\tfrac12|\hat a(-t)|^2\,dt
-  =\frac{1}{\pi}\int\overline{\gamma_\infty(t)}\tfrac12|\hat a(t)|^2\,dt.
+  \tfrac{1}{\pi}\int\gamma_\infty(t)\tfrac12|\hat a(-t)|^2\,dt
+  =\tfrac{1}{\pi}\int\overline{\gamma_\infty(t)}\tfrac12|\hat a(t)|^2\,dt.
 \]
-Adding both halves:
+Adding both halves, the imaginary parts cancel:
 \[
   \boxed{B_\Gamma(a,a)
   = \frac{1}{\pi}\int_{\mathbb{R}}|\hat{a}(t)|^2\,\operatorname{Re}\gamma_\infty(t)\,dt
@@ -350,55 +334,47 @@ Adding both halves:
 
 \begin{remark}[$2\pi$-bookkeeping]\label{rem:2pi}
 Factor chain for $B_\Gamma(a,a)$:
-(1)~$B_\Gamma=\frac{1}{\pi}\int\gamma_\infty h_{a,b}\,dt$
-(from $2\cdot\frac{1}{2\pi}$).
-(2)~On the diagonal: $h_{a,a}=\frac12(|\hat a|^2+|\hat a(-\cdot)|^2)$.
+(1)~$B_\Gamma(a,b)=\frac{1}{\pi}\int\gamma_\infty h_{a,b}\,dt$
+(from $2\cdot\frac{1}{2\pi}=\frac{1}{\pi}$).
+(2)~On the diagonal: $h_{a,a}=\tfrac12(|\hat a|^2+|\hat a(-\cdot)|^2)$.
 (3)~The $\pm t$-pairing via $\gamma_\infty(-t)=\overline{\gamma_\infty(t)}$
-combines the two halves: $\frac12+\frac12=1$, extracting $\operatorname{Re}\gamma_\infty$.
-(4)~Net: $\frac{1}{\pi}\cdot\frac12\cdot 2=\frac{1}{\pi}$.
-The factor~$2$ in step~(3) comes from the \emph{$\pm t$-pairing}, not
-from the product chain alone.
+combines the two halves and extracts $\operatorname{Re}\gamma_\infty$.
+(4)~Net prefactor: $\tfrac{1}{\pi}\cdot\tfrac12\cdot2=\tfrac{1}{\pi}$.
+The extra factor~$2$ in step~(3) comes from the \emph{$\pm t$-pairing},
+not from the definition product chain alone.
 \end{remark}
 
 \begin{proposition}[Hermitian sesquilinearity]\label{prop:bw-sesquilinear}
-$B_W$ is Hermitian sesquilinear: linear in $a$, antilinear in $b$,
-and $B_W(b,a)=\overline{B_W(a,b)}$.
+$B_W$ is Hermitian sesquilinear and $B_W(b,a)=\overline{B_W(a,b)}$.
 \begin{proof}
-Sesquilinearity: each component is sesquilinear by construction.
-Hermitian symmetry: Proposition~\ref{prop:hermitian}. $\square$
+Sesquilinearity by construction; Hermitian symmetry by
+Proposition~\ref{prop:hermitian}. $\square$
 \end{proof}
 \end{proposition}
 
 \begin{proposition}[Polarisation consistency]\label{prop:polarisation}
-Set $Q_W(a):=B_W(a,a)$. Then
-\[
-  B_W(a,b)
-  = \tfrac{1}{4}\bigl(
-    Q_W(a+b)-Q_W(a-b)
-    +iQ_W(a+ib)-iQ_W(a-ib)
-  \bigr).
-\]
+$B_W(a,b)=\tfrac14(Q_W(a+b)-Q_W(a-b)+iQ_W(a+ib)-iQ_W(a-ib))$
+where $Q_W(a):=B_W(a,a)$.
 \begin{proof}
-Standard polarisation identity for Hermitian sesquilinear forms
-(Proposition~\ref{prop:bw-sesquilinear}). $\square$
+Standard polarisation identity for Hermitian sesquilinear forms. $\square$
 \end{proof}
 \end{proposition}
 
 \begin{remark}[Sign of $B_{\mathrm{fin}}$]
 $B_{\mathrm{fin}}(a,a)$ has no definite sign
 (since $g_{a,a}$ is not pointwise non-negative, Remark~\ref{rem:counterex}).
-Semiboundedness is RH-conditional (P03).
+Semiboundedness is RH-conditional (P03). $\square$
 \end{remark}
 
 \begin{theorem}[Identification with literature, NEU-258 Patch~1
   $\checkmark[K/M]$]\label{thm:lit-id}
 $B_{W,\mathrm{NEU}\text{-}252} = B_{W,\mathrm{Lit}}$
 (Weil 1952, Bombieri 2000, Suzuki 2011/2025).
-All five components are matched: Fourier convention,
+All five components matched: Fourier convention,
 $\gamma_\infty$ (including $\frac{1}{2}$-factor),
 $\Lambda_\Gamma$ (including $\frac{1}{2\pi}$),
 $B_\Gamma$ diagonal (factor $\frac{1}{\pi}$),
-and $B_{\mathrm{fin}}$ (evenness of $g_{a,b}$).
+$B_{\mathrm{fin}}$ (evenness of $g_{a,b}$).
 \end{theorem}
 
 % ---------------------------------------------------------------
@@ -419,10 +395,10 @@ and $B_{\mathrm{fin}}$ (evenness of $g_{a,b}$).
 \section{Audit Status}
 % ---------------------------------------------------------------
 
-Patch~3.4 (Freeze Candidate): 2026-08-08.
+\textbf{FROZEN $\checkmark[K/M]$: 2026-08-08 (Patch~3.5).}
 
 \medskip
-\noindent All patches from draft to Patch~3.4:
+\noindent All patches from draft to Patch~3.5:
 \begin{enumerate}
 \item[(a)] $\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$: exact NEU-250r definition.
 \item[(b)] $R_{\mathrm{PW}}$: exact formula; surjectivity with explicit right inverse.
@@ -431,20 +407,21 @@ Patch~3.4 (Freeze Candidate): 2026-08-08.
 \item[(e)] Pointwise positivity $\times[M]$; counterexample in Remark~\ref{rem:counterex}.
 \item[(f)] $P_{\mathrm{Haar}}$ fully typed (Patch~3.1).
 \item[(g)] $B_W$ defined componentwise (Patch~3.2).
-\item[(h)] NEU-258 Patch~1 as source node; lit-id $\checkmark[K/M]$.
-\item[(i)] Fourier: $L^1$ pointwise + $L^1\cap L^2$ Plancherel +
-  $L^2$-extension; $(2\pi)^{-1/2}\mathcal{F}$ unitary (Patch~3.3/3.4).
-\item[(j)] $h_{a,b}\in\mathcal{H}_{\mathrm{PW}}^{\mathbb{C}}$, $h_{a,b}\notin\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}$ (Patch~3.3).
-\item[(k)] $\gamma_\infty(-t)=\overline{\gamma_\infty(t)}$ in Definition~\ref{def:gammainfty} (Patch~3.3).
+\item[(h)] NEU-258 Patch~1 as source node; \texttt{thm:lit-id} $\checkmark[K/M]$.
+\item[(i)] Fourier: $L^1$ pointwise, $L^1\cap L^2$ Plancherel,
+  $L^2$-extension; $(2\pi)^{-1/2}\mathcal{F}$ unitary (Patches~3.3/3.4).
+\item[(j)] $h_{a,b}\in\mathcal{H}_{\mathrm{PW}}^{\mathbb{C}}$; ``in general
+  $\notin\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}$'' (Paley--Wiener, Patch~3.5).
+\item[(k)] $\gamma_\infty(-t)=\overline{\gamma_\infty(t)}$ in
+  Definition~\ref{def:gammainfty} (Patch~3.3).
 \item[(l)] $h_{b,a}(z)=\overline{h_{a,b}(-\bar z)}$ in Definition~\ref{def:hab};
-used in Proposition~\ref{prop:hermitian} (Patch~3.4). \textbf{[new]}
-\item[(m)] Pole-term Hermitian proof corrected: no longer claims $\bar z=z$;
-uses $h_{b,a}(\pm i/2)$ via conjugation + evenness (Patch~3.4). \textbf{[new]}
-\item[(n)] $L^2$-extension: ``unitary isomorphism'' corrected to
-``$(2\pi)^{-1/2}\mathcal{F}$ is unitary'' (Patch~3.4). \textbf{[new]}
-\item[(o)] $2\pi$-bookkeeping remark: factor~$2$ from $\pm t$-pairing
-clarified (Patch~3.3/3.4).
-\item[(p)] All $g_{a,b}$ proofs and counterexample fully in document (Patch~3.3).
+  used in Proposition~\ref{prop:hermitian} (Patch~3.4).
+\item[(m)] Pole-term proof: corrected via $h_{b,a}(\pm i/2)$ from
+  conjugation + evenness; no longer claims $\bar z=z$ (Patch~3.4).
+\item[(n)] $C_{b,a}$ proof rewritten cleanly via $s=t-u$
+  substitution (Patch~3.5). \textbf{[new]}
+\item[(o)] $2\pi$-bookkeeping: factor~$2$ from $\pm t$-pairing (Patch~3.3/3.4).
+\item[(p)] $g_{a,b}$ proofs and counterexample fully in document (Patch~3.3).
 \item[(q)] Canonical compression: $\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}
   \to\mathcal{H}_{\mathrm{PW}}^{\mathbb{C}}$ (Patch~3.3).
 \end{enumerate}
