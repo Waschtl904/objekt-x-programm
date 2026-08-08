@@ -1,7 +1,7 @@
 # NEU-104 — Lokaler Formfaktor-Test in der entfalteten Variable
 
-**Stand:** 1. Juli 2026  
-**Vorgänger:** NEU-103 (Entfaltungskarte \(\gamma \sim \tau T\); \(\rho_T = \log T/2\pi\); \(\mathcal{S}^{\mathrm{unf}}_{N,H}(\alpha)\))  
+**Stand:** 1. Juli 2026 | **Patch:** 8. August 2026 (Pass-A Gruppe C, Patch 2/5)
+**Vorgänger:** NEU-103 (Entfaltungskarte \(\gamma \sim \tau T\); \(\rho_T = \log T/2\pi\); \(\mathcal{S}^{\mathrm{unf}}_{N,H}(\alpha)\))
 **Nächste Nummer:** NEU-105
 
 ---
@@ -10,31 +10,37 @@
 
 NEU-103 liefert die korrekte Entfaltungskarte \(\alpha = \tau T \rho_T\). NEU-104 präzisiert, in welchem Sinn der Formfaktorvergleich formuliert werden darf.
 
-**Schutzsatz vorweg:** Der Montgomery/GUE-Formfaktor \(K(\alpha) = |\alpha|\mathbf{1}_{|\alpha|\leq 1} + \mathbf{1}_{|\alpha|>1}\) ist auf \(\mathbb{R}\) **nicht integrierbar**. Ein global normiertes Spektralprofil kann nicht gegen \(K\) konvergieren.
+**Schutzsatz vorweg:** Der Montgomery/GUE-Formfaktor \(K(\alpha) = |\alpha|\mathbf{1}_{|\alpha|\leq 1} + \mathbf{1}_{|\alpha|>1}\) ist auf \(\mathbb{R}\) **nicht integrierbar** (\(\int_{\mathbb{R}} K(\alpha)\,d\alpha = +\infty\)). Ein global normiertes Spektralprofil mit Gesamtmasse 1 kann daher nicht gegen \(K\) konvergieren.
 
 ---
 
 ## Satz NEU-104.1 — No-Go: Globaler Formfaktorvergleich
 
-$$
-\boxed{\text{Ein global normiertes Spektralprofil }\mathcal{S}^{\mathrm{unf}}_{N,H}\text{ (Gesamtmasse 1) kann nicht global gegen }K(\alpha)\text{ konvergieren.}}
-$$
-
-Begründung: Die entfaltete normierte Dichte ist
+**Abstrakter Kern (repariert):**
 
 $$
-\frac{1}{T\rho_T}\mathcal{S}_{N,H}\!\left(\frac{\alpha}{T\rho_T}\right),
+\boxed{\text{Kein nicht-negatives normiertes Maß mit Gesamtmasse 1 kann schwach gegen }K(\alpha)\text{ konvergieren, da }\int_{\mathbb{R}}K(\alpha)\,d\alpha = +\infty.}
 $$
 
-mit Gesamtmasse \(1\). Aber \(\int_{-\infty}^{\infty} K(\alpha)\,d\alpha = +\infty\). Globale Konvergenz ist dimensionswidrig.
+Dieser No-Go gilt **unabhängig von der konkreten Wahl des Spektralprofils** und erfordert kein spezifisches Eingabeobjekt.
 
-**Status: \(\checkmark[M]\)** (No-Go)
+> **Patch-Notiz (Pass-A, 8. Aug. 2026):** Die ursprüngliche Fassung dieses Satzes verwendete die normierte Dichte \(\mathcal{S}_{N,H}\) aus NEU-102.1 als konkretes Objekt. Da \(\mathcal{E}_{N,H}(\tau)\) ein endliches trigonometrisches Polynom und damit periodisch ist, gilt
+>
+> $$\int_{\mathbb{R}}|\mathcal{E}_{N,H}(\tau)|^2\,d\tau = \infty,$$
+>
+> sofern \(\mathcal{E}_{N,H}\not\equiv 0\). Der Nenner im Ausdruck für \(\mathcal{S}_{N,H}\) ist daher undefiniert.
+>
+> **\(\mathcal{S}_{N,H}\) aus NEU-102.1 als globale \(L^2(\mathbb{R})\)-Normierung: SUPERSEDED.**
+>
+> Der abstrakte No-Go (Gesamtmasse 1 gegen nichtintegrierbares \(K\)) bleibt vollständig gültig: **✓[M]_part** in aktueller Fassung; nach expliziter Retypisierung auf ein Periodenmittel oder endliches Fenster: **✓[M]_neg**.
+
+**Status: ✓[M]_part** (abstraktes No-Go korrekt; Typisierung auf \(\mathcal{S}_{N,H}\) SUPERSEDED)
 
 ---
 
 ## Definition NEU-104.2 — Unnormalisiertes entfaltetes Leistungsspektrum
 
-Definiere das **unnormalisierte** entfaltete Leistungsspektrum:
+Das korrekte Ersatzobjekt (unabhängig von \(\mathcal{S}_{N,H}\)) ist das **unnormalisierte** entfaltete Leistungsspektrum:
 
 $$
 \mathcal{P}^{\mathrm{unf}}_{N,H}(\alpha)
@@ -43,9 +49,9 @@ $$
 
 wobei \(\alpha = \tau T\rho_T\), \(T = M/H\), \(\rho_T = \log T/2\pi\).
 
-Dieses Objekt trägt keine globale Normierung und kann lokal gegen \(K(\alpha)\) verglichen werden.
+Dieses Objekt trägt keine globale Normierung und ist für lokalen Vergleich mit \(K(\alpha)\) auf kompakten Fenstern geeignet.
 
-**Status: \(\checkmark[M]\)** (Definition)
+**Status: ✓[M]** (Definition; gültiges Ersatzobjekt für SUPERSEDED \(\mathcal{S}_{N,H}\))
 
 ---
 
@@ -59,9 +65,9 @@ $$
 c \int \Phi(\alpha)\,K(\alpha)\,d\alpha,
 $$
 
-für eine von \(\Phi\) unabhängige Normierungskonstante \(c = c_{N,H}\).
+für eine von \(\Phi\) unabhängige Konstante \(c = c_{N,H}\).
 
-**Äquivalente Fensterversion:** Auf festem Fenster \([-A, A]\):
+**Fensterversion:** Auf festem Fenster \([-A, A]\):
 
 $$
 \mathcal{S}^{\mathrm{unf}}_{N,H,A}(\alpha)
@@ -70,80 +76,33 @@ $$
 K_A(\alpha) := \frac{K(\alpha)}{\int_{-A}^{A} K(u)\,du}.
 $$
 
-Dann lautet der **Montgomery-Test**:
-
-$$
-\mathcal{S}^{\mathrm{unf}}_{N,H,A} \;\stackrel{?}{\longrightarrow}\; K_A
-\quad\text{für jedes feste }A,
-$$
-
-unter der Entfaltung \(\alpha = \tau T \log T / 2\pi\).
-
-**Status: \(?[O]\)** (Test offen)
+**Status: ✓[M]** (Definition; Test offen)
 
 ---
 
 ## Satz NEU-104.4 — GUE vs. Poisson: Rampe-Plateau-Test
 
-Der entscheidende diagnostische Test ist das Verhalten bei kleinen \(\alpha\):
-
 | Statistik | Formfaktor | Verhalten bei \(\alpha \approx 0\) |
 |---|---|---|
-| Poisson (unkorreliert) | \(K_{\mathrm{Pois}}(\alpha) = 1\) | Plateau |
-| GUE / Montgomery | \(K_{\mathrm{GUE}}(\alpha) \sim |\alpha|\) | **Rampe** (Nullstellenrepulsion) |
+| Poisson | \(K_{\mathrm{Pois}}(\alpha) = 1\) | Plateau |
+| GUE / Montgomery | \(K_{\mathrm{GUE}}(\alpha) \sim |\alpha|\) | Rampe |
 
 $$
 \boxed{K_{\mathrm{GUE}}(\alpha) \sim |\alpha| \text{ bei } \alpha \approx 0 \quad\text{vs.}\quad K_{\mathrm{Pois}}(\alpha) = 1.}
 $$
 
-Wenn das entfaltete Rest-Spektrum \(\mathcal{P}^{\mathrm{unf}}_{N,H}\) bei kleinem \(\alpha\) **nicht abfällt** (Plateau statt Rampe), ist der Restkanal Poisson-artig und **nicht** Montgomery-kompatibel.
-
-**Status: \(?[O]\)** (Entscheidungstest, NEU-105)
+**Status: ?[O]** (Entscheidungstest \(\to\) NEU-105)
 
 ---
 
-## Satz NEU-104.5 — Bogomolny\u2013Keating: Semiklassische Deutung
-
-Bogomolny\u2013Keating arbeiten in der Random-Matrix-/Trace-Formula-Analogie der Riemann-Nullstellen. Das ist strukturell relevant als **semiklassische Deutung** der Formfaktorstruktur, aber **kein Ersatz** für den Goldston\u2013Montgomery-Transfer.
+## Satz NEU-104.5 — Bogomolny–Keating: Semiklassische Deutung
 
 | Kanal | Rolle | Status |
 |---|---|---|
-| Goldston\u2013Montgomery | arithmetischer Transferkanal (Varianz \(\leftrightarrow\) Paarkorr.) | Primär \(\warning[M]\) |
-| Bogomolny\u2013Keating | semiklassische Deutung der Formfaktorstruktur | Heuristisch \(?[H]\) |
+| Goldston–Montgomery | arithmetischer Transferkanal | Primär ✓[M] (konditional) |
+| Bogomolny–Keating | semiklassische Deutung | Heuristisch ?[H] |
 
-**Status: \(?[H]\)** (heuristisch; nicht als Beweisschritt zitiern)
-
----
-
-## Gesamte Kette (NEU-100 bis 104)
-
-$$
-\Delta_N(h)
-\;\longrightarrow\;
-\mathcal{E}_{N,H}(\tau)
-\;\longrightarrow\;
-\mathcal{P}^{\mathrm{unf}}_{N,H}(\alpha)
-\;\stackrel{?}{\longrightarrow}\;
-K_A(\alpha)
-\;\stackrel{?}{\longrightarrow}\;
-Q_{\mathrm{Weil}}.
-$$
-
-Schritt \(\mathcal{P}^{\mathrm{unf}} \to K_A\): lokal, gegen Testfunktionen oder Fenster \([-A,A]\).  
-Schritt \(K_A \to Q_{\mathrm{Weil}}\): später (NEU-106+).
-
----
-
-## Neue Leitfrage für NEU-105
-
-$$
-\boxed{\text{Rampe oder Plateau? }\mathcal{P}^{\mathrm{unf}}_{N,H}(\alpha)\text{ bei }\alpha \approx 0.}
-$$
-
-Konkrete Schritte:
-1. Explizite-Formel-Entwicklung von \(\Delta_N(h)\) bis zu Termen \(\sum_\rho M_N^{\rho-1} e^{i\gamma h/M}\)
-2. Paarweise \(|\sum_\rho|^2\)-Terme bei \(\alpha \approx 0\) auswerten
-3. Vergleich mit \(K_{\mathrm{GUE}}(\alpha) \sim |\alpha|\)
+**Status: ?[H]** (heuristisch; nicht als Beweisschritt zitieren)
 
 ---
 
@@ -151,22 +110,22 @@ Konkrete Schritte:
 
 | Punkt | Aussage | Status |
 |-------|---------|--------|
-| (A) | No-Go: globaler \(\mathcal{S}^{\mathrm{unf}} \to K\) | \(\checkmark[M]\) |
-| (B) | \(\mathcal{P}^{\mathrm{unf}}_{N,H}(\alpha)\) unnorm. Leistungsspektrum | \(\checkmark[M]\) (Def.) |
-| (C) | Lokaler Test mit \(\Phi\) oder Fenster \([-A,A]\) | \(\checkmark[M]\) (Def.) |
-| (D) | \(\mathcal{S}^{\mathrm{unf}}_{N,H,A} \to K_A\) | \(?[O]\) |
-| (E) | GUE Rampe \(\sim|\alpha|\) vs.\ Poisson Plateau | \(?[O]\) (NEU-105) |
-| (F) | BK semiklassisch, heuristisch | \(?[H]\) |
+| (A) | No-Go: kein global normiertes Maß \(\to K\) — abstrakt korrekt; \(\mathcal{S}_{N,H}\) SUPERSEDED | ✓[M]_part |
+| (B) | \(\mathcal{P}^{\mathrm{unf}}_{N,H}(\alpha)\) unnorm. Leistungsspektrum (gültiges Ersatzobjekt) | ✓[M] |
+| (C) | Lokaler Test mit \(\Phi\) oder Fenster \([-A,A]\) | ✓[M] |
+| (D) | \(\mathcal{S}^{\mathrm{unf}}_{N,H,A} \to K_A\) | ?[O] |
+| (E) | GUE Rampe \(\sim|\alpha|\) vs.\ Poisson Plateau | ?[O] |
+| (F) | BK semiklassisch, heuristisch | ?[H] |
 
 ---
 
 ## Verweise
 
 - NEU-103: Entfaltungskarte \(\alpha = \tau T\rho_T\)
-- NEU-102: No-Go direkter \(r(u)\)-Vergleich
+- **NEU-102:** \(\mathcal{S}_{N,H}\) — globale \(L^2(\mathbb{R})\)-Normierung **SUPERSEDED** (Integrabilitatsfehler)
 - **Montgomery:** *Pair correlation of zeros* (1973)
 - **Goldston & Montgomery:** *Pair correlation, primes in short intervals* (1987)
 - **Montgomery & Soundararajan:** *Primes in short intervals* (2004)
 - Bogomolny & Keating: *Gutzwiller's trace formula* (heuristisch)
-- Keating & Snaith: *Random matrix theory and \(L\)-functions* (2000)
-- Connes: *Trace formula* (1999) (spätere Weil-Schnittstelle)
+- Keating & Snaith: *Random matrix theory and L-functions* (2000)
+- Connes: *Trace formula* (1999)
