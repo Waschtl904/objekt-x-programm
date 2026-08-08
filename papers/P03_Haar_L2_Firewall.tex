@@ -10,7 +10,7 @@
 \newtheorem{remark}[theorem]{Remark}
 
 \title{P03 --- Haar-$L^2$ Firewall: $B_W$ Cannot Close on $L^2(\mathbb{R},du)$\\
-\normalsize SYN-Audit: 2026-08-08}
+\normalsize SYN-Re-Audit: 2026-08-08 (Patch~1)}
 \author{Objekt-X-Programm}
 \date{2026-08-08}
 
@@ -18,86 +18,279 @@
 \maketitle
 
 \begin{abstract}
-We consolidate NEU-253--258 and the NEU-257 Patch.
+We consolidate NEU-253--258 and NEU-257 Patches 1--3.
 (i)~Semiboundedness of $B_W$ on $C_c^\infty(\mathbb{R})$ relative
-to the Haar-$L^2$ norm is equivalent to RH.
-(ii)~Under RH, $B_W$ is not closable on $L^2(\mathbb{R},du)$,
-by the criterion: a quadratic form $q_\mu$ closable on
-$L^2(dx)$ if and only if $\mu\ll dx$.
-(iii)~Kato--Lions--Milgram--Nelson (KLMN) on $L^2(\mathbb{R},du)$ fails.
-Under RH: $\mathcal{H}_W\cong\ell^2(\Gamma,m_\gamma)$
-(Suzuki 2025). All conditional statements are RH-conditional.
+to the Haar-$L^2$ norm is equivalent to RH (NEU-257 \S1).
+(ii)~Under RH, $B_W$ is not closable on $L^2(\mathbb{R},du)$:
+its spectral measure $\mu_W=\sum_{\gamma\in\Gamma}m_\gamma\delta_{-\gamma}$
+is purely atomic and singular with respect to Lebesgue measure,
+so the Alpay--Jorgensen criterion $q_\mu$ closable~$\Leftrightarrow$~$\mu\ll dx$
+fails (NEU-257 \S2.2).
+An explicit non-closability sequence confirms this directly
+(NEU-257 \S2.3, Patches 2+3).
+(iii)~Kato--Lions--Milgram--Nelson (KLMN) on $L^2(\mathbb{R},du)$ fails
+(NEU-257 \S3).
+(iv)~Under RH: $\mathcal{H}_W\cong\ell^2(\Gamma,m_\gamma)$
+(Suzuki 2025, NEU-257 \S4).
+All conditional statements are RH-conditional.
+$\Gamma$ denotes the signed zero set (Definition~\ref{def:gamma});
+$W_{\mathrm{NEU}\text{-}252}=W_{\mathrm{Lit}}$ is established in NEU-258 Patch~1
+(see P02 Theorem~7.1).
 \end{abstract}
 
-\section{Precise semiboundedness statement}
+% ---------------------------------------------------------------
+\section{Conventions and Setup}
+% ---------------------------------------------------------------
 
-\begin{theorem}[$L^2$-Semiboundedness $\Leftrightarrow$ RH, NEU-257 $\checkmark$]
-There exists $\lambda>0$ such that
+\begin{remark}[Conventions, from P02]
+Fourier convention (P02 Definition~1.1, NEU-220k, binding):
+\[
+  \hat f(t) := \int_{\mathbb R} f(u)\,e^{itu}\,du,
+  \qquad \|\hat f\|_2^2 = 2\pi\|f\|_2^2.
+\]
+All $2\pi$-factors are kept explicitly.
+Base space: $H_0 := L^2(\mathbb{R},du)$,
+core: $\mathcal{A}_{\mathrm{PW}}:=C_c^\infty(\mathbb{R};\mathbb{C})$.
+$B_W(a,b)$ is the complete Hermitian Weil form of P02 Definition~6.1.
+Identification $W_{\mathrm{NEU}\text{-}252}=W_{\mathrm{Lit}}$:
+$\checkmark[K/M]$ (P02 Theorem~7.1, NEU-258 Patch~1).
+\end{remark}
+
+\begin{definition}[Signed zero set, NEU-257 Patch~3]\label{def:gamma}
+Let
+\[
+  \boxed{\Gamma := \{\gamma\in\mathbb{R} : \xi(1/2-i\gamma)=0\}}
+\]
+(without multiplicity). Under RH, $\Gamma\subset\mathbb{R}$ and
+$-\gamma\in\Gamma$ whenever $\gamma\in\Gamma$.
+Write $m_\gamma>0$ for the multiplicity of $\gamma$.
+The counting function
+\[
+  N_\Gamma(T) := \sum_{\substack{\gamma\in\Gamma\\|\gamma|\le T}} m_\gamma
+  = O(T\log T)
+\]
+satisfies Riemann--von Mangoldt (both halves: $N_\Gamma(T)=2N(T)+O(1)$).
+\end{definition}
+
+% ---------------------------------------------------------------
+\section{Precise Semiboundedness Statement}
+% ---------------------------------------------------------------
+
+\begin{theorem}[$L^2$-Semiboundedness $\Leftrightarrow$ RH,
+  NEU-257 \S1 $\checkmark[K/M]$]\label{thm:semibdd}
+There exists $\lambda\ge 0$ such that
 \[
   B_W(a,a) \ge -\lambda\|a\|_{L^2(du)}^2
   \quad\forall\, a\in C_c^\infty(\mathbb{R})
 \]
 if and only if RH holds.
 
-\emph{Precision:} Semiboundedness is relative to the Haar-$L^2$
-norm $\|a\|_{L^2(du)}$, evaluated on the test core $C_c^\infty(\mathbb{R})$.
+\emph{Proof sketch.}
+($\Rightarrow$)~Semiboundedness implies $W_\lambda:=W+\lambda\delta_0$ is
+positive-semidefinite, hence tempered by Bochner--Schwartz
+(Reed--Simon II, Thm.~IX.10).
+Then $W\in\mathcal{S}'(\mathbb{R})$, which implies RH
+(Benedetto--Joyner; Bombieri 2000~\S3).
+($\Leftarrow$)~Under RH, $B_W\ge 0$ (Weil positivity criterion,
+Suzuki 2011 eq.~(0.1)), so $\lambda=0$ suffices. \hfill$\checkmark[K/M]$
 \end{theorem}
 
-\section{Non-closability criterion and proof}
+% ---------------------------------------------------------------
+\section{Spectral Representation under RH}
+% ---------------------------------------------------------------
 
-\begin{theorem}[Non-closability, NEU-257 $\checkmark$]
-Assume RH. Then $B_W$ is not closable on $L^2(\mathbb{R},du)$.
+\begin{theorem}[Spectral representation, Suzuki 2011/2025,
+  NEU-257 \S2.1 $\checkmark[K/M]$]\label{thm:spec}
+Assume RH. Then:
+\[
+  \boxed{B_W(a,b) = \sum_{\gamma\in\Gamma} m_\gamma\,
+    \hat a(-\gamma)\,\overline{\hat b(-\gamma)},}
+\]
+with representing spectral measure
+\[
+  \mu_W = \sum_{\gamma\in\Gamma} m_\gamma\,\delta_{-\gamma}.
+\]
+$\mu_W$ is purely atomic and $\mu_W\perp du$.
+\end{theorem}
+
+% ---------------------------------------------------------------
+\section{Non-Closability: Alpay--Jorgensen Criterion}
+% ---------------------------------------------------------------
+
+\begin{theorem}[Non-closability, NEU-257 \S2.2
+  $\checkmark[K/M]$]\label{thm:nonclosable}
+Assume RH. Then $B_W$ is not closable on $H_0=L^2(\mathbb{R},du)$.
 \end{theorem}
 
 \begin{proof}
-The spectral measure of $B_W$ is
-$\mu_W = \sum_\gamma m_\gamma\delta_\gamma$
-(sum over imaginary parts of non-trivial zeros).
-The relevant criterion is:
+By Theorem~\ref{thm:spec}, $B_W(a,a)=q_{\mu_W}(a)$
+where $q_\sigma(f):=\int|\hat f(t)|^2\,d\sigma(t)$.
+Alpay--Jorgensen (2012, Thm.~3.4):
 \[
-  q_\mu\text{ closable on }L^2(dx) \iff \mu\ll dx.
+  q_\sigma\text{ closable on }L^2(\mathbb{R},dx)
+  \iff \sigma\ll dx.
 \]
-Since $\mu_W$ is a discrete (hence singular) measure with respect
-to Lebesgue measure $du$, the condition $\mu_W\ll du$ fails.
-Hence $B_W$ (as a quadratic form on $C_c^\infty(\mathbb{R})\subset L^2(du)$)
-is not closable.
+Since $\mu_W=\sum_{\gamma\in\Gamma}m_\gamma\delta_{-\gamma}$
+is purely atomic, $\mu_W\perp du$, so the closability condition
+fails.\hfill$\square$
 \end{proof}
 
-\section{Kato--Lions--Milgram--Nelson No-Go}
+% ---------------------------------------------------------------
+\section{Explicit Non-Closability Sequence}
+% ---------------------------------------------------------------
 
-\begin{theorem}[KLMN $\times[M]$, NEU-257 $\checkmark$]
+\begin{proposition}[Direct non-closability, NEU-257 \S2.3
+  Patches~2+3 $\checkmark[K/M]$]\label{prop:explicit}
+Assume RH and the spectral representation (Theorem~\ref{thm:spec}).
+Fix any $\gamma_0\in\Gamma$ with $\gamma_0>0$,
+and choose $\varphi\in C_c^\infty(\mathbb{R})$ with
+$\Phi(0):=\widehat\varphi(0)\ne 0$.
+Define
+\[
+  a_n(u) := \frac{1}{n}\,e^{i\gamma_0 u}\varphi(u/n),
+  \qquad n\ge1.
+\]
+Then:
+\begin{enumerate}
+\item $\|a_n\|_2^2 = \frac{1}{n}\|\varphi\|_2^2\to 0$;
+  in particular $a_n\to 0$ in $L^2(\mathbb{R})$.
+\item $\widehat{a_n}(-\gamma) = \Phi(n(\gamma_0-\gamma))$ for all
+  $\gamma\in\mathbb{R}$, so $\widehat{a_n}(-\gamma_0)=\Phi(0)\ne 0$
+  for all $n$.
+\item $B_W(a_n-a_m,a_n-a_m)=O(\min(n,m)^{-2N})$ for every $N\ge1$,
+  i.e.\ $(a_n)$ is $B_W$-Cauchy.
+\item $B_W(a_n,a_n)\to m_{\gamma_0}|\Phi(0)|^2>0$.
+\end{enumerate}
+Hence $(a_n)$ is $B_W$-Cauchy with $a_n\to 0$ in $L^2$ but
+$B_W(a_n,a_n)\not\to 0$: $B_W$ is not closable on $L^2(\mathbb{R},du)$.
+\end{proposition}
+
+\begin{proof}
+(1)~Substitution $v=u/n$:
+$\|a_n\|_2^2 = n^{-2}\int|\varphi(u/n)|^2\,du = n^{-1}\|\varphi\|_2^2$.
+
+(2)~$\widehat{a_n}(-\gamma)=\int e^{-i\gamma u}\cdot\frac1n e^{i\gamma_0 u}
+\varphi(u/n)\,du$;
+substitute $v=u/n$, $du=n\,dv$, the factor $1/n$ cancels:
+$=\int e^{in(\gamma_0-\gamma)v}\varphi(v)\,dv=\Phi(n(\gamma_0-\gamma))$.
+At $\gamma=\gamma_0$: $\Phi(0)$.
+
+(3)~At $\gamma=\gamma_0$ the difference $(\widehat{a_n}-\widehat{a_m})(-\gamma_0)
+=\Phi(0)-\Phi(0)=0$ exactly.
+For $\gamma\ne\gamma_0$, set $M:=\min(n,m)$.
+Since $\varphi\in C_c^\infty$ we have $\Phi\in\mathcal{S}$:
+$|\Phi(x)|\le C_N(1+|x|)^{-N}$ for all $N\ge1$.
+Hence
+$|\widehat{a_n}(-\gamma)-\widehat{a_m}(-\gamma)|
+\le 2C_N(1+M|\gamma-\gamma_0|)^{-N}$.
+Summing:
+\[
+  B_W(a_n-a_m,a_n-a_m)
+  \le 4C_N^2\sum_{\gamma\in\Gamma,\,\gamma\ne\gamma_0}
+    m_\gamma(1+M|\gamma-\gamma_0|)^{-2N}.
+\]
+Isolation of $\gamma_0$ (zeros are isolated): $\delta_0:=
+\inf_{\gamma\in\Gamma,\gamma\ne\gamma_0}|\gamma-\gamma_0|>0$.
+For $s=2N>1$ and $N_\Gamma(T)=O(T\log T)$,
+partial summation gives
+$\sum_{\gamma\in\Gamma}m_\gamma(1+|\gamma|)^{-2N}<\infty$,
+so the sum $S_N<\infty$ and
+$B_W(a_n-a_m,a_n-a_m)=O(M^{-2N})\to 0$.
+
+(4)~The contributions from $\gamma\ne\gamma_0$ vanish by the same
+bound; at $\gamma_0$ the term $m_{\gamma_0}|\Phi(0)|^2$ is constant.
+\hfill$\square$
+\end{proof}
+
+% ---------------------------------------------------------------
+\section{Incompatibility of Semiboundedness and Closability}
+% ---------------------------------------------------------------
+
+\begin{corollary}[Incompatibility, NEU-257 \S3
+  $\checkmark[K/M]$]\label{cor:incompatible}
+Semiboundedness and $L^2$-closability of $B_W$ are mutually
+exclusive:
+if $B_W$ is semibounded on $L^2(\mathbb{R},du)$ then RH holds
+(Theorem~\ref{thm:semibdd}),
+but under RH, $B_W$ is not closable on $L^2(\mathbb{R},du)$
+(Theorem~\ref{thm:nonclosable}).
+\end{corollary}
+
+% ---------------------------------------------------------------
+\section{KLMN No-Go}
+% ---------------------------------------------------------------
+
+\begin{theorem}[KLMN $\times[M]$, NEU-257 \S3
+  $\checkmark[K/M]$]\label{thm:klmn}
 The Kato--Lions--Milgram--Nelson theorem does not apply to
 $B_W$ on $H_0=L^2(\mathbb{R},du)$.
-\emph{KLMN = Kato--Lions--Milgram--Nelson.}
+KLMN requires a closed semibounded form;
+Corollary~\ref{cor:incompatible} shows that $B_W$ cannot be both
+semibounded and closable on $H_0$.
 \end{theorem}
 
-\section{Weil Hilbert space under RH}
+% ---------------------------------------------------------------
+\section{Weil Hilbert Space under RH}
+% ---------------------------------------------------------------
 
-\begin{theorem}[Weil Hilbert space, Suzuki 2025, NEU-257 $\checkmark$]
-Assuming RH,
+\begin{theorem}[Weil Hilbert space, Suzuki 2025,
+  NEU-257 \S4 $\checkmark[K/M]$]\label{thm:hw}
+Assume RH. The natural completion of $\mathcal{A}_{\mathrm{PW}}$
+with respect to $B_W$ is
 \[
-  \mathcal{H}_W \cong L^2(\tau) \cong \ell^2(\Gamma,m_\gamma).
+  \boxed{\mathcal{H}_W \cong L^2(\tau) \cong \ell^2(\Gamma,m_\gamma),
+  \qquad a\mapsto (\sqrt{m_\gamma}\,\hat a(-\gamma))_{\gamma\in\Gamma}.}
 \]
+This space is singular relative to $L^2(\mathbb{R},du)$:
+$\mu_W\not\ll du$, so no Friedrichs extension of $B_W$ on
+$L^2(du)$ exists.
 \end{theorem}
-
-\section{Consequence}
 
 \begin{remark}
-The correct Weil Hilbert geometry is singular relative to
-Lebesgue measure. Specifically, $\mu_W\not\ll du$, so no
-Friedrichs extension of $B_W$ on $L^2(du)$ exists. This
-motivates the finite-interval construction of P04.
+This motivates the finite-interval construction of P04.
+The question whether $\mathcal{H}_W\cong\ell^2(\Gamma,m_\gamma)$
+can be constructed RH-free from BC/adelic data is tracked as
+NEU-259 ($?[O]$, see \texttt{SYN\_PROVENIENZ.md}).
 \end{remark}
 
-\section{Audit status}
+% ---------------------------------------------------------------
+\section{Audit Status}
+% ---------------------------------------------------------------
 
-SYN-Audit: 2026-08-08. Three clarifications from draft:
-(a)~Semiboundedness now stated precisely on $C_c^\infty$ relative
-to Haar-$L^2$ norm;
-(b)~Non-closability proof cites the explicit criterion
-$q_\mu$ closable $\Leftrightarrow$ $\mu\ll dx$;
-(c)~KLMN acronym corrected (Lions--Milgram--Nelson, not Nec\v{a}s).
-Source nodes: NEU-253, 254, 255, 256, 257 (Patch), 258
-(archive-nodes/07-weil-explizitformel/).
+SYN-Re-Audit Patch~1: 2026-08-08.
+
+\medskip
+\noindent Changes relative to initial SYN-Audit (2026-08-08):
+\begin{enumerate}
+\item[(a)] $\Gamma$ corrected to signed zero set
+  (Definition~\ref{def:gamma}); $\mu_W=\sum_{\gamma\in\Gamma}m_\gamma
+  \delta_{-\gamma}$ (not only positive half).
+  Source: NEU-257 Patch~3.
+\item[(b)] Spectral representation (Theorem~\ref{thm:spec})
+  inserted; the Alpay--Jorgensen proof now cites it explicitly.
+\item[(c)] Explicit non-closability sequence
+  (Proposition~\ref{prop:explicit}) with full proof added;
+  source: NEU-257 Patches 2+3 (Schwartz majorant +
+  Riemann--von Mangoldt summability, no $m_\gamma=O(1)$ needed).
+\item[(d)] Incompatibility corollary
+  (Corollary~\ref{cor:incompatible}) made explicit.
+\item[(e)] KLMN theorem (Theorem~\ref{thm:klmn}) now cites
+  Corollary~\ref{cor:incompatible} as its logical basis.
+\item[(f)] Normisation identification $W_{\mathrm{NEU}\text{-}252}
+  =W_{\mathrm{Lit}}$ recorded as closed ($\checkmark[K/M]$,
+  P02 Theorem~7.1, NEU-258 Patch~1).
+\item[(g)] Conventions section added, referencing P02 as
+  canonical source for all definitions.
+\item[(h)] Source nodes updated.
+\end{enumerate}
+
+\medskip
+\noindent Source nodes: NEU-253, 254, 255 (Patch~2), 256 (Patch),
+257 (Patches 1--3), 258 (Patch~1).\\
+External references: Alpay--Jorgensen 2012 Thm.~3.4;
+Bochner--Schwartz (Reed--Simon II, IX.10);
+Benedetto--Joyner; Bombieri 2000 \S3;
+Suzuki 2011 eq.~(0.1), 2025 \S2 Thm.~2.1;
+Riemann--von Mangoldt.
 
 \end{document}
