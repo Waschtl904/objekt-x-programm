@@ -1,6 +1,6 @@
 # Pass-A-Protokoll — SYN-Migrationsverfahren
 
-**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 8. August 2026 (Gruppe-F-Eröffnung)
+**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 8. August 2026 (Gruppe F1 abgeschlossen; NEU-250f Patch 1 gebucht)
 
 Dieses Dokument fixiert das verbindliche Verfahren für die Pass-A-Phase der SYN-Migration.
 
@@ -104,7 +104,7 @@ Vor jedem Batch:
 **Abgeschlossen:** 8. August 2026 | **Commits:** E-1/6 `78b06719` → E-6/6 `904eb29b`
 
 | Knoten | Prüfart | Endstatus | Kernbefund |
-|--------|----------|-----------|------------|
+|--------|----------|-----------|-----------|
 | NEU-113 | `AUDIT-RECONCILED` | `PATCH ANGEWENDET` / **SUPERSEDED BY P02** | Mellin-Zentrierung $x^{-1/2}$; Doppelzählung; $W_\xi^{\rm norm}=W_{\rm zeros}$ |
 | NEU-114 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` | $m_{\rm arith}=\Pi_\gamma(X)$ von ✓[M] auf ?[O] |
 | NEU-115 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` | Vierteilige Summe → $W_\xi^{\rm norm}=W_{\rm zeros}$; Interface-Firewall ✓[M] |
@@ -162,15 +162,14 @@ Referenzen, Labels, Doppelzählungen, unzulässige Hochstufungen von
 
 ## Gruppe F — P05: Relative Primkanten und arithmetische Kantengeometrie
 
-**Status:** Eröffnet 8. August 2026 | Bestandsaufnahme abgeschlossen | Pakete F1–F4 definiert
+**Status:** aktiv | Bestandsaufnahme abgeschlossen | **F1 abgeschlossen** | F2–F4 ausständig
 
 ### Hauptbefund der Bestandsaufnahme
 
 Für P05 ist **kein neuer Vollaudit** erforderlich. Der Großteil des Quellbestands in
 `01-primkanten-werkzeuge/` und `05-primkanal-fourierladung/` wurde im früheren
-Gesamtdurchlauf bereits auditiert. Die eigentliche neue Arbeit konzentriert sich auf
-die Versorgung der alten Primkanten-/Fourierarchitektur mit den jungen Knoten
-NEU-250g/i/j (7. August 2026), die nach dem alten Auditdurchlauf entstanden sind.
+Gesamtdurchlauf bereits auditiert. Die neue Arbeit besteht überwiegend aus Reconciliation;
+bei einer konkreten Kollision greift gezielt `TARGETED-REAUDIT`.
 
 **Schlüsselbeobachtung Ordner 05:** Kein Grund für `NEW-DIRECT-AUDIT`.
 Endanker sind NEU-170d (bereinigter DAG-Audit) und NEU-173 (abgeschlossener
@@ -182,14 +181,61 @@ NEU-26–56 teils P06/P10; NEU-229–249 teils P09/P11.
 
 ### Paketstruktur Gruppe F
 
-#### F1 — Historische Primkantenbasis
+#### F1 — Historische Primkantenbasis — **ABGESCHLOSSEN**
 
-**Quellknoten:** NEU-039–045 + 44-Familie (44, 44X, 44X′)
+**Quellknoten:** NEU-039–045 + 44-Familie (44, 44X, 44X′, 44R)  
+**Korrekturquellen:** NEU-151–155, NEU-226/227, Gegenlese-Commit `eae87a62`, NEU-250f Patch 1 (`1579a379`)  
+**Prüfart:** überwiegend `AUDIT-RECONCILED`; ein neu entdeckter Typkonflikt → `TARGETED-REAUDIT` (NEU-250f)
 
-| Inhalt | Behandlung |
-|--------|------------|
-| Verbundene Wres-Spur, Primoperator, Kopplung | Vorhandene Audits einsammeln; nur Endstand extrahieren |
-| Fourierhebung, relative Primkante, Kantendiagonalität | `AUDIT-RECONCILED` (keine Neukonstruktion) |
+| Knoten | Prüfart | Endstatus für P05 | Heute gültiger Kernbefund |
+|--------|----------|-------------------|---------------------------|
+| NEU-039 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Endlicher abstrakter Euler-Primoperator und $-\partial_\beta\log\det(1-\mathcal P_N)=\zeta_N'/\zeta_N$ algebraisch gültig; intrinsische `Wres`/$L_3^\circ$-Normalisierung nicht nachgewiesen |
+| NEU-040 | `AUDIT-RECONCILED` | `INCORPORATED_part` + **→ P06** | Schur-Komplement-Identitäten formal gültig bei typisierten Blöcken; kanonischer `Wres`-Koppler und $z$–$\beta$-Intertwining offen |
+| NEU-041 | `AUDIT-RECONCILED` | `INCORPORATED_part` + `OPEN` | Basisformel für $\widetilde\omega_2$ und Nullmodus-Obstruktion gültig; Kopplungsoperator nur relativ zu Hebungswahl; Hebungsabstieg/-unabhängigkeit offen; `C_pC_p^\#` nicht automatisch Projektor |
+| NEU-042 | `AUDIT-RECONCILED` | `INCORPORATED_part` | Resolvent/Laplace-Trennung ✓[M]; relativer Log-Zuwachs $\log(pm)-\log m=\log p$ ✓[M]; $L_3^\circ$-spezifische Kanalrealisierung nicht unbedingter Satz |
+| NEU-043 | `AUDIT-RECONCILED` | `INCORPORATED_part` + `OPEN` | Edge-gelabelte $p$-Reinheit im ausdrücklich definierten Graphraum; Reinheit nach Kollaps nicht automatisch; induzierte `Wres`-Kantendiagonalität offen |
+| NEU-044 (pq-Test) | `AUDIT-RECONCILED` | `INCORPORATED` + ✓[M]$_\rm neg$ | Kollaps löscht Primkantenlabel; keine automatische Kantendiagonalität/kein funktoriell eindeutiger relativer Clock im kollabierten Raum |
+| NEU-044 (Normierungsblatt) | `AUDIT-RECONCILED` | `AUDIT-ONLY / DEFINITION` | Kanonische Quellenrekonstruktion und Normkonvention, ausdrücklich kein mathematisches Herkunftsresultat; orthogonale Edge-Summe ist Definition |
+| NEU-044X | `AUDIT-RECONCILED` | `INCORPORATED_part` | Im gewählten eindimensionalen induzierten Modell Rang $\le1$ und Rang-1-Normidentitäten; Rang $=1$ verlangt $c_p\ne0$, intrinsisches Nichtverschwinden nicht bewiesen |
+| NEU-044X′ | `AUDIT-RECONCILED` | `CONDITIONAL` | Rangstabilität unter skalaren normkonvergenten Grenzwerten; uniformer endlicher Rang unter Gram-Triage nur plausibel/bedingt |
+| NEU-044R | `AUDIT-RECONCILED` | `SUPERSEDED_part / CONDITIONAL` | Spurklassen-Rückbindung nur unter Rang-/Gewichtsannahmen; spätere NEU-152/153 verhindern die unbedingte Lesart „Kernsatz vollständig bewiesen“ |
+| NEU-045 | `AUDIT-RECONCILED` | `INCORPORATED_part` + **→ P06** | Euler-Unterdeterminante/logarithmische Ableitung im endlichen Primblock gültig; volle orthogonal primblockweise Feshbach-Geometrie nicht intrinsisch gesichert; globale Überlappung und Spektralmaßform → NEU-226/227 |
+
+**F1-Kernfirewalls für P05:**
+
+1. Drei Typen strikt trennen:
+   \[
+   T_p\quad\neq\quad C_p^{[\widehat\varepsilon_p]}\quad\neq\quad C_p^{\rm rel}[\widehat\varepsilon_p].
+   \]
+   Die Rang-eins-Eigenschaft des eindimensional induzierten $C_p$ sagt nichts über den Rang der Rohkopplung $T_p$.
+2. $|c_p|^2$ ist ohne Hebungsabstieg/-unabhängigkeit kein intrinsisches Primgewicht; Nichtentartung bleibt offen.
+3. Orthogonalität in einer künstlich orthogonalen Edge-Direktsumme ist definitorisch. Offen ist die Kantendiagonalität der **quellseitig induzierten** `Wres`-Paarung; der kollabierte Pullback liefert sie nicht.
+4. Die tatsächlichen Primkanalbilder können sich überlappen. Off-Diagonalität entsteht aus $\operatorname{Ran}V_p\not\perp\operatorname{Ran}V_q$, nicht notwendig durch Primmischung des Operators $D_{\rm rel}$.
+5. Historische Eigenbasisformeln für $D_{\rm rel}$ sind durch die Spektralmaßform aus NEU-227 zu ersetzen; Schattenklassenfragen bleiben am $u$-Regulator/Quellhilbertraum offen.
+
+**Neu entdeckter Konflikt beim F1-Reconciliation:** NEU-250f schloss aus
+\[
+L_3\in C^4(F^3A,F^3A)
+\]
+unzulässig auf einen standalone Algebrarepräsentanten $L_3^\circ\in F^3A$ und daraus auf $\ell_{s,1}=0$. Ein Hochschild-4-Kochain ist ohne Realisierungs-/Auswertungsbrücke kein Algebraelement. Dieser Typfehler kollidiert mit NEU-170d/173 und wurde in
+`07-weil-explizitformel/NEU-250f_PATCH1_Typkorrektur_F3_Kochain_vs_Algebraelement.md`
+(Commit `1579a379`) korrigiert.
+
+Korrigierter Satz:
+\[
+L_{3,\rm alg}^\circ\in F^3A
+\Longrightarrow
+\ell_{s,1}=0\ \forall s
+\Longrightarrow
+P_{m=1}\widetilde T_p^{\rm raw}=0
+\qquad \checkmark[M].
+\]
+Die Existenz/Typisierung eines solchen konkreten $L_{3,\rm alg}^\circ$ ist im auditierten Quellenkegel nicht bewiesen. Der **unbedingte** NEU-250f-No-Go ist daher `SUPERSEDED`; die typkorrekte Realisierungsfrage bleibt `?[O]`.
+
+**F1-Endurteil:**
+\[
+\boxed{\text{F1 PASS A COMPLETE — kein historischer Kopplungs-/Wres-Anspruch wird unqualifiziert nach P05 übernommen.}}
+\]
 
 #### F2 — Fourier-/Rohkopplungsstrang (Ordner 05)
 
@@ -224,21 +270,33 @@ zurückgenommen; Zeugenpfad $k\in\ker C_p\setminus\ker T_p$ ist nicht typkorrekt
 
 #### F4 — Neuer Mangoldt-/Primzahlpotenzstrang
 
-**Quellknoten:** NEU-250g, NEU-250i, NEU-250j (alle 7. August 2026)
+**Quellknoten:** NEU-250g, NEU-250i, NEU-250j (7. August 2026)  
+**Cross-Paket-Korrektur:** NEU-250f Patch 1 (`1579a379`)
 
 **Prüfart: `TARGETED-REAUDIT` / RECONCILIATION** — jünger als der alte Gesamtaudit;
 verändern direkt frühere P05-Aussagen zu Mangoldt-Gewichten und Primkanalüberlappungen.
 
-| Knoten | Inhalt | Offene Punkte |
-|--------|--------|---------------|
-| NEU-250g | Primitiver Faktor $\frac{\log p}{p}$ algebraisch konstruiert | Hilbertraum-Fundierung $H_{\rm BC}$: ⚠[M] (offen) |
+| Knoten | Inhalt | Offene Punkte / Firewall |
+|--------|--------|--------------------------|
+| NEU-250f + Patch 1 | Filtrations-No-Go nur **konditional** auf eine konkrete Algebrarealisierung $L_{3,\rm alg}^\circ\in F^3A$ | Unbedingter alter No-Go `SUPERSEDED`; Realisierungsbrücke ?[O] |
+| NEU-250g | Primitiver Faktor $\frac{\log p}{\sqrt p}$ algebraisch konstruiert | Hilbertraum-Fundierung $H_{\rm BC}$ / globaler Funktionalkalkül offen; Motivation zum „endgültig geschlossenen“ alten $L_3$-Pfad durch Patch 1 zu schwächen |
 | NEU-250i | Gradnormierte Energie $H_{\rm pr}=D_\Omega^{-1}H_{\rm BC}$; auf $n=p^m$: $\frac{\Lambda(p^m)}{p^{m/2}}=\frac{\log p}{p^{m/2}}$ | Firewall: $H_{\rm pr}\ne\Lambda$ auf allgemeinen zusammengesetzten $n$ |
-| NEU-250j | Trägertrennung bewiesen: $\operatorname{supp}\Lambda\cap\operatorname{supp}(\text{Kreuzprimkollision})=\emptyset$ | Graphbasisüberlappung $p^{m_p}=q^{m_q}$ ($p\ne q$) nur auf $\Lambda=0$; Mediatorweg → ?[O] |
+| NEU-250j | Trägertrennung: $\operatorname{supp}\Lambda\cap\operatorname{supp}(\text{Kreuzprimkollision})=\emptyset$ | Kreuzprimkollision $p\,m_p=q\,m_q=M$ ($p\ne q$) nur für $M$ mit mindestens zwei verschiedenen Primteilern; Mediatorweg → ?[O] |
 
 **Wichtigster Befund NEU-250j:** Die alten Graphüberlappungen leben genau auf
-Zahlen mit $\ge 2$ verschiedenen Primteilern, wo $\Lambda=0$. Folglich kann
+Zahlen mit mindestens zwei verschiedenen Primteilern, wo $\Lambda=0$. Folglich kann
 Graphbasisüberlappung allein keine globale Objekt-X-Kopplung liefern;
 der Mediatorweg bleibt ausdrücklich offen.
+
+### F-Roadmap
+
+| Paket | Status | Nächster Schritt |
+|-------|--------|------------------|
+| F1 | **PASS A COMPLETE** | Endstand ist für P05 extrahiert |
+| F2 | aktiv als nächstes | NEU-151–173 gegen F1-Firewalls und Endanker 170d/173 schließen |
+| F3 | danach | NEU-225/226/227-Reconciliation final in P05-Scope ziehen |
+| F4 | danach | NEU-250g/i/j gezielt re-auditieren; Patch 1 zu 250f verbindlich berücksichtigen |
+| P05-SYN | nach F1–F4 | `papers/P05_*.tex` erzeugen + LaTeX-SYN-Transferaudit |
 
 ### Pass-A-Abschlussschritt Gruppe F
 
@@ -253,7 +311,7 @@ Nach Abschluss der Pakete F1–F4 wird aus dem Endstand:
 ## Querverweise
 
 - Verbindlicher Migrationsplan: `00-uebersicht/SYN_MIGRATIONSPROTOKOLL.md`
-- Audit-Archive: `ARCHIV-AUDIT-2026-07.md`, `ARCHIV-AUDIT-NEU202-212.md` u. a.
+- Audit-Archive: `ARCHIV-AUDIT-2026-07.md`, `ARCHIV-AUDIT-NEU202-212.md` u. a.
 - Zwischenbilanzen: `ZWISCHENBILANZ_2026-07-29.md` bis `2026-08-01.md`
 - Auditstand HH-Strang: `AUDITSTAND-2026-08-03.md`
 - Forschungsknoten (abgeschlossen): `03-weil-form-statistik/`
