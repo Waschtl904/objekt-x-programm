@@ -1,6 +1,6 @@
 # Pass-A-Protokoll — SYN-Migrationsverfahren
 
-**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 9. August 2026 (F4 `PASS A COMPLETE` — doppelt geprüft)
+**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 9. August 2026 (F2 `PASS A COMPLETE` — doppelt geprüft; Gruppe F vollständig)
 
 Dieses Dokument fixiert das verbindliche Verfahren für die Pass-A-Phase der SYN-Migration.
 
@@ -151,7 +151,7 @@ Referenzen, Labels, Doppelzählungen, unzulässige Hochstufungen von
 
 | Gruppe | SYN-Ziel | Quellbestand | Reihenfolge |
 |--------|----------|--------------|-------------|
-| **F** | **P05** | `01-primkanten-werkzeuge/` + relevante Knoten aus `05-primkanal-fourierladung/` und `07-weil-explizitformel/` | **aktiv** |
+| **F** | **P05** | `01-primkanten-werkzeuge/` + relevante Knoten aus `05-primkanal-fourierladung/` und `07-weil-explizitformel/` | **Pass A abgeschlossen; P05-SYN jetzt aktiv** |
 | G | P06 | `02-jacobi-limes/` + zugehörige Jacobi-/Feshbach-Knoten | nach F |
 | H | P08 | `04-grenzoperator-renormierung/` + zugehörige Renormierungs-/Grenzoperator-Knoten | nach G |
 | I | P09 | `06-hochschild-bc-algebra/` + BC-relevante Quellen | nach H |
@@ -162,14 +162,14 @@ Referenzen, Labels, Doppelzählungen, unzulässige Hochstufungen von
 
 ## Gruppe F — P05: Relative Primkanten und arithmetische Kantengeometrie
 
-**Status:** aktiv | **F1 COMPLETE** | **F2 eröffnet** | **F3 COMPLETE (doppelt geprüft)** | **F4 PASS A COMPLETE (doppelt geprüft)** | P05-SYN ausständig
+**Status:** **PASS A COMPLETE** | **F1 COMPLETE** | **F2 COMPLETE (doppelt geprüft)** | **F3 COMPLETE (doppelt geprüft)** | **F4 COMPLETE (doppelt geprüft)** | **P05-SYN freigegeben**
 
 ### Hauptbefund der Bestandsaufnahme
 
 Für P05 ist **kein neuer Vollaudit** erforderlich. Der Großteil des Quellbestands in
 `01-primkanten-werkzeuge/` und `05-primkanal-fourierladung/` wurde im früheren
-Gesamtdurchlauf bereits auditiert. Die neue Arbeit besteht überwiegend aus Reconciliation;
-bei einer konkreten Kollision greift gezielt `TARGETED-REAUDIT`.
+Gesamtdurchlauf bereits auditiert. Die neue Arbeit bestand überwiegend aus Reconciliation;
+bei konkreten Kollisionen griff gezielt `TARGETED-REAUDIT`.
 
 **Schlüsselbeobachtung Ordner 05:** Kein Grund für `NEW-DIRECT-AUDIT`.
 Endanker sind NEU-170d (bereinigter DAG-Audit) und NEU-173 (abgeschlossener
@@ -217,10 +217,14 @@ $$\boxed{\text{F1 PASS A COMPLETE}}$$
 
 ---
 
-#### F2 — Fourier-/Rohkopplungsstrang (Ordner 05) — **ERÖFFNET** (Commit `8ead5d52`)
+#### F2 — Fourier-/Rohkopplungsstrang (Ordner 05) — **PASS A COMPLETE (doppelt geprüft)**
 
 **Quellknoten:** 33 Dateien, NEU-151 bis NEU-173 inkl. aller Unterknoten  
 **Endanker:** NEU-170d + NEU-173 (`AUDIT-REUSED`)  
+**Primäraudit:** `audits/AUDIT-2026-08-09_F2_Primaeraudit_Fourier_Rohkopplung.md`  
+**Zweitcheck:** `audits/AUDIT-2026-08-09_F2_Zweitcheck_Pfadgebunden.md`  
+**Commits:** Eröffnung `8ead5d52`; Primäraudit `b6a97e27`; Zweitcheck `27a5fe2e`; Versiegelung `4c4c13e8`  
+**Verfahren:** bestehende Audits + Endanker + gezielte Reaudits; unabhängiger pfadgebundener Gegencheck samt Mini-Nachtrag ohne Gegenbefund  
 **Verbindliche Voraussetzung:** F1-Kernfirewalls gelten auch hier
 
 ##### Buchhaltungsbefund: DUPLICATE-ID NEU-166b
@@ -228,12 +232,40 @@ $$\boxed{\text{F1 PASS A COMPLETE}}$$
 > | Interne F2-Bezeichnung | Dateiname | Rolle |
 > |------------------------|-----------|-------|
 > | **166b-P** | `NEU-166b_Rollen_Provenienzentscheidung_Rp_Tp.md` | Audit-Firewall; Rollenentscheidung ?[O] |
-> | **166b-T** | `NEU-166b_Typ_Domaenen_Deszentaudit_Tp_Fallverzweigung.md` | substanzieller Vorrang; Fall 3a lokal ✓[M]_part; global ?[O] |
+> | **166b-T** | `NEU-166b_Typ_Domaenen_Deszentaudit_Tp_Fallverzweigung.md` | substanzieller Vorrang; Fall 3a lokal ✓[M]$_{part}$; global ?[O] |
 >
 > Kein SYN-Satz der Form „NEU-166b beweist …“ ohne Angabe der Datei.
 > Status: `DUPLICATE-ID / 166b-T RECONCILED / 166b-P AUDIT-FIREWALL`
 
-*(Vollständige 33-Zeilen-Prüfartmatrix und F2-Kernfirewalls #6–9 im Commit `8ead5d52` festgehalten.)*
+##### F2-Endstand für P05
+
+**Übernehmbar:**
+- strikte Typtrennung $T_p\neq C_p^{[\widehat\varepsilon_p]}\neq C_p^{\rm rel}[\widehat\varepsilon_p]$;
+- Nullmodusobstruktion auf der kontrollierten modalen Formel;
+- Rang $\le1$ des eindimensional induzierten Primkanaloperators, ohne Rangbehauptung über $T_p$;
+- kontrollierte finite/modale Rohkopplungsformel und fest-primer Restklassen-/Faltungs-Kollisionssatz aus NEU-169;
+- exakte Liftzulässigkeit ist nicht durch das alte lineare Kernmodell beschrieben;
+- negativer Quellenbefund: kein quellenfest hergeleiteter geladener Repräsentant $L_3^\circ$ im alten Pfad.
+
+**Nicht unbedingter P05-Satz:**
+- intrinsisches $c_p\neq0$, Hebungsunabhängigkeit oder Nichtentartung;
+- exakt zulässiger Nichtnullzeuge;
+- konkrete Irreduzibilität/Einzigkeit der verbundenen Form;
+- globale Operatorverlängerung/Quotientendeszent;
+- $L_3^\circ=e_1V_1$ als aus $[L_3]$ hergeleitete Wahl.
+
+**Endanker-/Statusfirewalls:**
+- NEU-157: exakter Zeuge `?[O]`;
+- NEU-158/159/160: abstrakte Sätze `✓[M]`, konkrete Realisierung `?[O]`/`CONDITIONAL`;
+- NEU-166a/166b-T: keine globale Verlängerung/Deszent; Fall 3a nur lokal/modenweise;
+- NEU-169 und NEU-250j behandeln verschiedene Kollisionsbegriffe;
+- NEU-170c ist Zwischenstand, NEU-170d maßgeblicher DAG-Endanker;
+- NEU-172 `C₂` ist durch NEU-173 `C_src-neg` superseded;
+- NEU-173: Quellenbefund `✓[M]_neg`, mathematische Neukonstruktion `?[O]`.
+
+**Weiterleitungen:** Quotienten-/Feshbach-/Hilbertisierung/Spektralmaß → P06; $L_3$/Hochschild-Typfundament → P09; globale nichtorthogonale Kopplung/Gramarchitektur → P11.
+
+$$\boxed{\text{F2 PASS A COMPLETE — doppelt geprüft}}$$
 
 ---
 
@@ -258,7 +290,7 @@ $$\boxed{\text{F1 PASS A COMPLETE}}$$
 | NEU-226 | `AUDIT-RECONCILED` | `INCORPORATED_part` + **→ P06/P11** | Kreuztermmechanismus: Primkanalbilder können nichttrivial überlappen ($\eta_{p;m;s,u}\sim e_{u+ps}V_{pm}$, verschiedene $(p,m)$ auf demselben $V_{pm}$); **generisch** $K_{pq}\ne0$ für $p\ne q$ ✓[M]; **Primblockdiagonalität nicht strukturell erzwungen** (keine unbedingte Gleichheit $\mathcal K_N=\bigoplus_p K_p$) ✓[M]; $K_N(z)$ bei festem $N$ nicht endlich-rangig: Rang-$\pi(N)$-Annahme widerlegt ✓[M]$_{neg}$; $\mathcal S_1$-Frage durch $u$-Regulator offen; NEU-77-Limes nur punktweise, Schattennormen nicht kontrolliert ✓[M]; $\eta$-Orthogonalität über Primkanäle zurückgerollt (nur innerhalb fester Kette gültig) ✓[M]; Blocker (51.3)/(51.4)/(51.7): Eigenbasisannahme verletzt NEU-52/225, durch Spektralmaßform zu ersetzen; Feshbach-/Schattenklassenanteil → P06; nichtorthogonale globale Kopplung → P11 |
 | NEU-227 | `AUDIT-RECONCILED` | `INCORPORATED` + **→ P06/P11** | Koordinatenwörterbuch ✓[M]: $\eta_{p;m;s,u}\leftrightarrow e_R V_M$, $M=pm$, $R=u+ps$; $s\mapsto s+m$ und $r\mapsto r+n$ sind dieselbe Bewegung; im Primsektor vollständig gerechtfertigt ✓[M]; Spektralmaßform (227.3)–(227.9) SUPERSEDED die Eigenbasisform (51.3)/(51.4)/(51.7) vollständig ✓[K/M]; Polarzerlegungsargument nachgerechnet ✓[M]; **Nicht-$\mathcal S_1$-Zeuge erfordert $V\notin\mathcal S_2$** als Notwendigkeitsbedingung für den Zeugenmechanismus ✓[M] — der $\mathcal S_4$-Teil der Vermutung $V\in\mathcal S_4\setminus\mathcal S_2$ ist durch NEU-227 **nicht** gestützt und bleibt strukturelle Arbeitshypothese; Spektralmaßform → P06; $u$-Regulator/Quellhilbertraum/Gramoperator/$\det_2$ → P11 |
 
-##### F3-Kernbefünde für P05 (korrigierte Fassung)
+##### F3-Kernbefunde für P05 (korrigierte Fassung)
 
 **Was gesichert ist und nach P05 geht:**
 
@@ -392,10 +424,14 @@ $$\boxed{\text{F4 PASS A COMPLETE — doppelt geprüft.}}$$
 | Paket | Status | Nächster Schritt |
 |-------|--------|------------------|
 | F1 | **PASS A COMPLETE** (`07903f85`) | Endstand für P05 extrahiert |
-| F2 | **ERÖFFNET** (`8ead5d52`) | **jetzt nächster aktiver Punkt:** Reconciliation-Endstatus formal abschließen; keine neuen Vollaudits |
+| F2 | **PASS A COMPLETE — doppelt geprüft** (`27a5fe2e`, `4c4c13e8`) | Endstand für P05 extrahiert |
 | F3 | **PASS A COMPLETE — doppelt geprüft** (`87b82b1a`) | Spektralmaßform und Koordinatenwörterbuch verbindlich verankert |
 | F4 | **PASS A COMPLETE — doppelt geprüft** (`20e7e07e`, `4d7ea3fc`) | abgeschlossen |
-| P05-SYN | **nach F2-Abschluss** | `papers/P05_*.tex` + LaTeX-SYN-Transferaudit |
+| P05-SYN | **FREIGEGEBEN** | `papers/P05_*.tex` erstellen/aktualisieren + LaTeX-SYN-Transferaudit |
+
+\[
+\boxed{\text{GRUPPE F — PASS A COMPLETE. P05-SYN ist der nächste aktive Schritt.}}
+\]
 
 ---
 
