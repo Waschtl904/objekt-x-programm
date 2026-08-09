@@ -1,9 +1,10 @@
 # P09 — Bost–Connes, Hochschild and Charged Cohomology
 
-**Status:** SYN CANDIDATE — PRIMÄRCHECK PATCHED  
+**Status:** SYN FINAL AUDITED  
 **Datum:** 9. August 2026  
 **Pass-A-Basis:** `audits/AUDIT-2026-08-09_P09_PassA_FINAL_SEAL.md`  
 **SYN-Primärcheck:** `audits/AUDIT-2026-08-09_P09_SYN_Primaercheck.md`  
+**SYN-Zweitcheck:** `audits/AUDIT-2026-08-09_P09_SYN_Zweitcheck_Pfadgebunden.md`  
 **Scope:** BC-/Hochschild-Strang `06-hochschild-bc-algebra/`, NEU-174–219 + NEU-222 als reiner Superseding-Scan  
 
 > Dieses SYN-Paper enthält ausschließlich den am 9. August 2026 reconciliierten Endstand. Historische Zwischenbehauptungen werden nicht als aktive Resultate übernommen. Insbesondere sind `D_g(e(r))=0`, die starke NEU-212-Regularisierung und `t\Phi_0=g^{-\beta}\Phi_0` für den kanonischen Basislift `SUPERSEDED`.
@@ -330,7 +331,7 @@ Für die Standard-Letztrandkonvention ist
 }
 \]
 
-Mit dieser Orientierung und $bL=0$ folgt
+Mit dieser Orientierung und $bL=0$ folgt im bewiesenen Gibbs-Bereich $\beta>1$
 
 \[
 \boxed{
@@ -343,7 +344,7 @@ b^{\sigma_\beta}\Phi_{\beta,\chi}=0,
 
 ### Satz 5.4 — Ladungsobstruktion des konkreten I4-Repräsentanten
 
-Für diese rohe KMS-Kochain gilt
+Für die rohe I4-KMS-Kochain gilt strukturell
 
 \[
 \boxed{
@@ -352,7 +353,7 @@ T_{\sigma_\beta}\Phi_{\beta,\chi}
 }
 \]
 
-Für $g\neq1$, $\beta>0$ liegt sie damit in einem nichttrivialen $T$-Eigenraum und ist kein standardmäßiger getwisteter zyklischer Kozykel.
+Im **bewiesenen Nichtnullbereich $\beta>1$** und für $g\neq1$ liegt sie damit in einem nichttrivialen $T$-Eigenraum und ist kein standardmäßiger getwisteter zyklischer Kozykel. Für den durch die Gibbs-Rechnung nicht kontrollierten Grenzbereich wird keine zusätzliche Nichtnullaussage importiert.
 
 **Präzedenz-Firewall:** Diese Aussage betrifft $\Phi_{\beta,\chi}$ aus I4. Sie ist nicht mit dem späteren kanonischen Basislift $\Phi_0$ zu identifizieren.
 
@@ -543,7 +544,7 @@ t\Phi_0\neq C\Phi_0
 }
 \]
 
-Dies ist der autoritative kanonische Rotations-No-go.
+Dies ist der autoritative kanonische Rotations-No-go im bewiesenen KMS-Bereich.
 
 ### Firewall 8.5 — Was dadurch nicht ausgeschlossen ist
 
