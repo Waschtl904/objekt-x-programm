@@ -1,6 +1,6 @@
 # Pass-A-Protokoll — SYN-Migrationsverfahren
 
-**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 8. August 2026 (F4 Primäraudit + Provenienz-Patch; gültiger Zweitcheck ausständig)
+**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 9. August 2026 (F4 `PASS A COMPLETE` — doppelt geprüft)
 
 Dieses Dokument fixiert das verbindliche Verfahren für die Pass-A-Phase der SYN-Migration.
 
@@ -162,7 +162,7 @@ Referenzen, Labels, Doppelzählungen, unzulässige Hochstufungen von
 
 ## Gruppe F — P05: Relative Primkanten und arithmetische Kantengeometrie
 
-**Status:** aktiv | **F1 COMPLETE** | **F2 eröffnet** | **F3 COMPLETE (doppelt geprüft)** | **F4 PRIMARY AUDIT COMPLETE / gültiger Zweitcheck ausständig** | P05-SYN ausständig
+**Status:** aktiv | **F1 COMPLETE** | **F2 eröffnet** | **F3 COMPLETE (doppelt geprüft)** | **F4 PASS A COMPLETE (doppelt geprüft)** | P05-SYN ausständig
 
 ### Hauptbefund der Bestandsaufnahme
 
@@ -241,7 +241,7 @@ $$\boxed{\text{F1 PASS A COMPLETE}}$$
 
 **Quellknoten:** NEU-225, NEU-226, NEU-227 (alle in `01-primkanten-werkzeuge/`)  
 **Prüfart:** `AUDIT-RECONCILED` für alle drei  
-**Verfahren:** Repo-/Konsistenzcheck Perplexity (Commit `193ee6d9`) + Primäraudit mathematisch (dieser Commit)  
+**Verfahren:** Repo-/Konsistenzcheck Perplexity (Commit `193ee6d9`) + Primäraudit mathematisch (`87b82b1a`)  
 **Abschlussdatum:** 8. August 2026
 
 > **Primäraudit-Patch:** Vier epistemische Korrekturen gegenüber Commit `193ee6d9`:
@@ -254,8 +254,8 @@ $$\boxed{\text{F1 PASS A COMPLETE}}$$
 
 | Knoten | Prüfart | Endstatus für P05 | Kernbefund |
 |--------|----------|-------------------|------------|
-| NEU-225 | `AUDIT-RECONCILED` | `INCORPORATED_part` + **→ P06** | $D_{\rm rel}\|_{\mathcal H_{p,a}}\cong 2ic_p\,d/dt$ auf $L^2(\mathbb R)$: Transportgenerator, rein absolutstetiges Spektrum, kein Kern in Primsektoren, kompakter Resolvent ausgeschlossen ✓[M]; Primfaserkette $c_p=\tfrac12\gamma_N p\log p$ verbindlich ✓[M]; Konvention $J_N^- = \tfrac12(\Theta_N-\Theta_N^\dagger)$, Option B ($\mathcal D_{\rm rel}=iJ_N^-$ selbstadjungiert) verbindlich ✓[M]; Domainenvorbehalt $\mathcal D_0$ separat geführt: ?[O] (`[O-225-1]`); Feshbach-Transfer als HP-Kandidat: Arbeitshypothese (`[O-225-2]`); $\eta$-Orthogonalitäts-Rollen**rollung in NEU-226 beschädigt die Primkettenrechnung nicht** (Primsektor: nur ein Sprung, $u$-Restklasse erhalten, durch NEU-227 bestätigt) |
-| NEU-226 | `AUDIT-RECONCILED` | `INCORPORATED_part` + **→ P06/P11** | Kreuztermmechanismus: Primkanalbilder können nichttrivial überlappen ($\eta_{p;m;s,u}\sim e_{u+ps}V_{pm}$, verschiedene $(p,m)$ auf demselben $V_{pm}$); **generisch** $K_{pq}\ne0$ für $p\ne q$ ✓[M]; **Primblockdiagonalität nicht strukturell erzwungen** (keine unbedingte Gleichheit $\mathcal K_N=\bigoplus_p K_p$) ✓[M]; $K_N(z)$ bei festem $N$ nicht endlich-rangig: Rang-$\pi(N)$-Annahme widerlegt ✓[M]_neg; $\mathcal S_1$-Frage durch $u$-Regulator offen; NEU-77-Limes nur punktweise, Schattennormen nicht kontrolliert ✓[M]; $\eta$-Orthogonalität über Primkanäle zurückgerollt (nur innerhalb fester Kette gültig) ✓[M]; Blocker (51.3)/(51.4)/(51.7): Eigenbasisannahme verletzt NEU-52/225, durch Spektralmaßform zu ersetzen; Feshbach-/Schattenklassenanteil → P06; nichtorthogonale globale Kopplung → P11 |
+| NEU-225 | `AUDIT-RECONCILED` | `INCORPORATED_part` + **→ P06** | $D_{\rm rel}\|_{\mathcal H_{p,a}}\cong 2ic_p\,d/dt$ auf $L^2(\mathbb R)$: Transportgenerator, rein absolutstetiges Spektrum, kein Kern in Primsektoren, kompakter Resolvent ausgeschlossen ✓[M]; Primfaserkette $c_p=\tfrac12\gamma_N p\log p$ verbindlich ✓[M]; Konvention $J_N^- = \tfrac12(\Theta_N-\Theta_N^\dagger)$, Option B ($\mathcal D_{\rm rel}=iJ_N^-$ selbstadjungiert) verbindlich ✓[M]; Domainenvorbehalt $\mathcal D_0$ separat geführt: ?[O] (`[O-225-1]`); Feshbach-Transfer als HP-Kandidat: Arbeitshypothese (`[O-225-2]`); $\eta$-Orthogonalitäts-Rollenrollung in NEU-226 beschädigt die Primkettenrechnung nicht (Primsektor: nur ein Sprung, $u$-Restklasse erhalten, durch NEU-227 bestätigt) |
+| NEU-226 | `AUDIT-RECONCILED` | `INCORPORATED_part` + **→ P06/P11** | Kreuztermmechanismus: Primkanalbilder können nichttrivial überlappen ($\eta_{p;m;s,u}\sim e_{u+ps}V_{pm}$, verschiedene $(p,m)$ auf demselben $V_{pm}$); **generisch** $K_{pq}\ne0$ für $p\ne q$ ✓[M]; **Primblockdiagonalität nicht strukturell erzwungen** (keine unbedingte Gleichheit $\mathcal K_N=\bigoplus_p K_p$) ✓[M]; $K_N(z)$ bei festem $N$ nicht endlich-rangig: Rang-$\pi(N)$-Annahme widerlegt ✓[M]$_{neg}$; $\mathcal S_1$-Frage durch $u$-Regulator offen; NEU-77-Limes nur punktweise, Schattennormen nicht kontrolliert ✓[M]; $\eta$-Orthogonalität über Primkanäle zurückgerollt (nur innerhalb fester Kette gültig) ✓[M]; Blocker (51.3)/(51.4)/(51.7): Eigenbasisannahme verletzt NEU-52/225, durch Spektralmaßform zu ersetzen; Feshbach-/Schattenklassenanteil → P06; nichtorthogonale globale Kopplung → P11 |
 | NEU-227 | `AUDIT-RECONCILED` | `INCORPORATED` + **→ P06/P11** | Koordinatenwörterbuch ✓[M]: $\eta_{p;m;s,u}\leftrightarrow e_R V_M$, $M=pm$, $R=u+ps$; $s\mapsto s+m$ und $r\mapsto r+n$ sind dieselbe Bewegung; im Primsektor vollständig gerechtfertigt ✓[M]; Spektralmaßform (227.3)–(227.9) SUPERSEDED die Eigenbasisform (51.3)/(51.4)/(51.7) vollständig ✓[K/M]; Polarzerlegungsargument nachgerechnet ✓[M]; **Nicht-$\mathcal S_1$-Zeuge erfordert $V\notin\mathcal S_2$** als Notwendigkeitsbedingung für den Zeugenmechanismus ✓[M] — der $\mathcal S_4$-Teil der Vermutung $V\in\mathcal S_4\setminus\mathcal S_2$ ist durch NEU-227 **nicht** gestützt und bleibt strukturelle Arbeitshypothese; Spektralmaßform → P06; $u$-Regulator/Quellhilbertraum/Gramoperator/$\det_2$ → P11 |
 
 ##### F3-Kernbefünde für P05 (korrigierte Fassung)
@@ -265,7 +265,7 @@ $$\boxed{\text{F1 PASS A COMPLETE}}$$
 - $D_{\rm rel}$ ist ein Transportgenerator, kein Hilbert–Pólya-Operator; kompakter Resolvent ausgeschlossen. `✓[M]`
 - Jede Primfaser $\mathcal H_{p,a}$ hat absolutstetiges Spektrum; kein Kern. `✓[M]`
 - $D_{\rm rel}$ ist kanalerhaltend; **generisch** können Primkanalbilder überlappen und $K_{pq}\ne0$ für $p\ne q$ erzeugen; Primblockdiagonalität ist nicht strukturell erzwungen. `✓[M]`
-- Spektralmaßform (227.3)–(227.9): verbindliche Schreibweise, ersetzt (51.3)/(51.4)/(51.7). Dies schärft F1-Firewall Nr. 5 zur konkreten SUPERSEDED-Ersetzungsregel. `✓[K/M]`
+- Spektralmaßform (227.3)–(227.9): verbindliche Schreibweise, ersetzt (51.3)/(51.4)/(51.7). Dies schärft F1-Firewall Nr. 5 zur konkreten SUPERSEDED-Ersetzungsregel. `✓[K/M]`
 - Koordinatenwörterbuch (227.1)/(227.2): verbindlich auch für F4. `✓[M]`
 - Primfaserkette $c_p = \tfrac12\gamma_N p\log p$: verbindliches Ergebnis für den Primsektor. `✓[M]`
 
@@ -292,19 +292,20 @@ Damit kann F4 präzise fragen: Welche Teile dieser Geometrie tragen tatsächlich
 
 ##### F3-Kernfirewall (korrigierte Fassung)
 
-10. Die diskrete Eigenbasisdarstellung aus NEU-51 — (51.3), (51.4), (51.7) — ist **SUPERSEDED** und durch die projektionswertige Spektralmaßform (227.3)–(227.9) aus NEU-227 zu ersetzen. Dies betrifft die unzulässige Annahme einer diskreten Eigenbasis $D_{\rm rel}\eta_\alpha=\lambda_\alpha\eta_\alpha$; der Spektralsatz selbst ist nicht berührt. Diese Firewall ergänzt und schärft F1-Firewall Nr. 5.
+10. Die diskrete Eigenbasisdarstellung aus NEU-51 — (51.3), (51.4), (51.7) — ist **SUPERSEDED** und durch die projektionswertige Spektralmaßform (227.3)–(227.9) aus NEU-227 zu ersetzen. Dies betrifft die unzulässige Annahme einer diskreten Eigenbasis $D_{\rm rel}\eta_\alpha=\lambda_\alpha\eta_\alpha$; der Spektralsatz selbst ist nicht berührt. Diese Firewall ergänzt und schärft F1-Firewall Nr. 5.
 
 $$\boxed{\text{F3 PASS A COMPLETE — doppelt geprüft: Repo-Check (193ee6d9) + Primäraudit-Patch (87b82b1a)}}$$
 
 ---
 
-#### F4 — Neuer Mangoldt-/Primzahlpotenzstrang — **PRIMARY AUDIT COMPLETE / gültiger Zweitcheck ausständig**
+#### F4 — Neuer Mangoldt-/Primzahlpotenzstrang — **PASS A COMPLETE (doppelt geprüft)**
 
 **Primäraudit:** `audits/AUDIT-2026-08-08_F4_Primaeraudit_Mangoldt_Primzahlpotenz_Mediator.md`  
-**Commits:** Erstaudit `1de01140`; Provenienz-/Scope-Patch `b87b3514`  
+**Zweitcheck:** `audits/AUDIT-2026-08-09_F4_Zweitcheck_Pfadgebunden.md`  
+**Commits:** Erstaudit `1de01140`; Provenienz-/Scope-Patch `b87b3514`; Zweitcheck `20e7e07e`; Primäraudit-Versiegelung `4d7ea3fc`  
 **Prüfart:** `TARGETED-REAUDIT` / `AUDIT-RECONCILED`  
 **Verbindliche Voraussetzung:** F1-Firewalls + F3-Koordinatenwörterbuch + F3-Spektralmaßform  
-**Verfahren:** mathematischer Primäraudit abgeschlossen; erster externer Repo-Check `INVALID-SCOPE`; pfadgebundener unabhängiger Zweitcheck ausständig; erst danach `F4 PASS A COMPLETE`.
+**Verfahren:** mathematischer Primäraudit + gültiger unabhängiger pfadgebundener Zweitcheck. Der erste externe Repo-Check bleibt `INVALID-SCOPE` und zählt nicht.
 
 ##### Ordnerübergreifende Provenienz — verbindlich
 
@@ -328,6 +329,14 @@ Die Quellkette ist **nicht** in einem einzigen Ordner abgelegt:
 
 > **Scope-Firewall:** Ein F4-Repo-Check nur in `01-primkanten-werkzeuge/` ist unvollständig. Der erste externe Gegencheck behauptete fälschlich, NEU-250h/k/l/n existierten nicht und nach 250j gebe es keine späteren 250-Knoten. Deshalb zählt er als `INVALID-SCOPE` und **nicht** als unabhängige Zweitprüfung.
 
+##### Gültiger Zweitcheck
+
+Der pfadgebundene Gegencheck `20e7e07e` las die oben fixierte Quellkette direkt und bestätigte:
+
+1. **A — all-$n$-BC-Halbgewicht:** `NICHT GEFUNDEN als Beweis`. NEU-250g rechnet den primitiven $p$-Kanal; die all-$n$-Rückreferenz in NEU-250i ist im aktuellen Quellenkegel nicht gedeckt.
+2. **B1 — Mediatorstatus:** `NEIN`, NEU-250m–r superseden NEU-250l nicht. J-B bleibt Quellenbefund; J-A bleibt `?[O]`.
+3. **B2 — globale Spektralbehauptung:** `NEIN`, NEU-250m–r beweisen keine Eigenwertfreiheit von $D_{\rm rel}$ auf sämtlichen Mischsektoren. `[O-225-3]` bleibt offen.
+
 ##### Primärauditmatrix F4
 
 | Knoten | Prüfart | Endstatus für P05 | Heute gültiger Kernbefund |
@@ -345,7 +354,7 @@ Die Quellkette ist **nicht** in einem einzigen Ordner abgelegt:
 
 NEU-250o–r wurden als Superseding-Scan mitgelesen. Sie korrigieren und typisieren den adelisch-archimedischen Quellen-/Amplitudenport, schließen aber **nicht** das isolierte BC-Generalisationgap in NEU-250i und ändern den Mediator-Endstatus aus NEU-250l nicht. Insbesondere ist NEU-250p der archimedische Halbgewichtstransfer $J_{1/2}$ und kein Beweis von $h_n^{\rm bal}=n^{-1/2}I$.
 
-##### Verbindliche F4-Firewalls nach Primäraudit
+##### Verbindliche F4-Firewalls
 
 11. **Trägertrennung ≠ Orthogonalitäts-No-Go.** NEU-250j widerlegt nicht die generische Nichtorthogonalität aus NEU-226/227; es trennt den Mangoldt-Träger von der direkten Kreuzprimkollision.
 12. **Arithmetische Identität ≠ Operatorrealisierung.** $\Lambda(p^m)/\sqrt{p^m}=\log p/p^{m/2}$ ist `✓[M]`; die Realisierung über $h_{p^m}^{\rm bal}$ und $H_{\rm pr}^{1/2}$ bleibt bis zum allgemeinen $n$-Lemma und zur Hilbert-Fundierung `CONDITIONAL`.
@@ -356,7 +365,7 @@ NEU-250o–r wurden als Superseding-Scan mitgelesen. Sie korrigieren und typisie
 17. **Gemeinsame Quelle:** $\mathcal S_{\rm adel}$ nicht als fertig konstruierter topologischer Raum behaupten; NEU-250n korrigiert K1 auf `?[O]`.
 18. **Ordnerübergreifende Provenienz:** F4 darf nicht aus `01-primkanten-werkzeuge/` allein auditiert werden; `07-weil-explizitformel/NEU-250h…r` ist zwingend mitzulesen.
 
-##### P05-Endstand aus F4 nach Primäraudit
+##### P05-Endstand aus F4
 
 **Übernehmbar:**
 - primitiver algebraischer Faktor $\log p/\sqrt p$: `✓[M]_{part}`;
@@ -372,7 +381,9 @@ NEU-250o–r wurden als Superseding-Scan mitgelesen. Sie korrigieren und typisie
 
 **Weiterleitung:** Feshbach-/Spektralmaß-/Schattenklasse → P06; Mediator, gemeinsame adelische Quelle, Gramblock-Kopplung und J-A/J-B → P11.
 
-$$\boxed{\text{F4 PRIMARY AUDIT COMPLETE — gültiger pfadgebundener Zweitcheck ausständig}}$$
+$$\boxed{\text{F4 PASS A COMPLETE — doppelt geprüft.}}$$
+
+**Epistemische Firewall:** Der Abschluss von F4 ist eine Audit-/Migrationsaussage. Er löst keine der oben als `?[O]` oder `CONDITIONAL` markierten mathematischen Konstruktionen.
 
 ---
 
@@ -381,17 +392,17 @@ $$\boxed{\text{F4 PRIMARY AUDIT COMPLETE — gültiger pfadgebundener Zweitcheck
 | Paket | Status | Nächster Schritt |
 |-------|--------|------------------|
 | F1 | **PASS A COMPLETE** (`07903f85`) | Endstand für P05 extrahiert |
-| F2 | **ERÖFFNET** (`8ead5d52`) | Reconciliation-Endstatus formal abschließen; keine neuen Dateien erforderlich |
+| F2 | **ERÖFFNET** (`8ead5d52`) | **jetzt nächster aktiver Punkt:** Reconciliation-Endstatus formal abschließen; keine neuen Vollaudits |
 | F3 | **PASS A COMPLETE — doppelt geprüft** (`87b82b1a`) | Spektralmaßform und Koordinatenwörterbuch verbindlich verankert |
-| F4 | **PRIMARY AUDIT COMPLETE** (`1de01140`, Patch `b87b3514`) | **pfadgebundener unabhängiger Zweitcheck**; erst danach PASS A COMPLETE |
-| P05-SYN | nach F2 + gültigem F4-Zweitcheck | `papers/P05_*.tex` + LaTeX-SYN-Transferaudit |
+| F4 | **PASS A COMPLETE — doppelt geprüft** (`20e7e07e`, `4d7ea3fc`) | abgeschlossen |
+| P05-SYN | **nach F2-Abschluss** | `papers/P05_*.tex` + LaTeX-SYN-Transferaudit |
 
 ---
 
 ## Querverweise
 
 - Verbindlicher Migrationsplan: `00-uebersicht/SYN_MIGRATIONSPROTOKOLL.md`
-- Audit-Archive: `ARCHIV-AUDIT-2026-07.md`, `ARCHIV-AUDIT-NEU202-212.md` u. a.
+- Audit-Archive: `ARCHIV-AUDIT-2026-07.md`, `ARCHIV-AUDIT-NEU202-212.md` u. a.
 - Zwischenbilanzen: `ZWISCHENBILANZ_2026-07-29.md` bis `2026-08-01.md`
 - Auditstand HH-Strang: `AUDITSTAND-2026-08-03.md`
 - Forschungsknoten (abgeschlossen): `03-weil-form-statistik/`
