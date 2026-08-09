@@ -225,7 +225,7 @@ Damit ist der rohe Satz `m_{Omega,N}->m_arith` nur eine stärkere Spezialform, n
 - `m_arith` Herglotz `iff` RH: `✓[M]` gemäß eingefrorenem P07.
 - lokale gleichmäßige Konvergenz geeigneter Herglotz-Approximanten `=> RH`: `✓[M]` als logische Implikation.
 - Existenz/kanonische Wahl einer solchen Approximantenfolge: `?[O]`.
-- bloße Spektralnäherung der Ordinaten `sigma(A_N)->{Im rho}`: kein RH-Beweis; diagnostisch בלבד, wie NEU-122 selbst korrekt warnt.
+- bloße Spektralnäherung der Ordinaten `sigma(A_N)->{Im rho}`: kein RH-Beweis; nur diagnostisch, wie NEU-122 selbst korrekt warnt.
 
 ---
 
