@@ -2,7 +2,7 @@
 
 **Datum:** 9. August 2026  
 **SYN-Ziel:** P09 — BC + Hochschild  
-**Status:** `PASS A OPEN`  
+**Status:** `PASS A OPEN — I1 COMPLETE, I2 NEXT`  
 **Voraussetzung:** P01 dependency-reconciled durch `AUDIT-2026-08-09_P01_Dependency_Reaudit_vor_P09.md`  
 **Hauptquellblock:** `06-hochschild-bc-algebra/`
 
@@ -59,13 +59,25 @@ Offen/exportiert bleiben u.a. ein zyklischer/getwistet-zyklischer Ersatzrepraese
 
 ## 4. Paketstruktur Gruppe I / P09
 
-### I1 — Algebraischer BC/Hochschild-Grundblock
+### I1 — Algebraischer BC/Hochschild-Grundblock — **PASS A COMPLETE**
 
 **Quellen:** NEU-174–190 (mit Doppeldatei NEU-183)  
-**Themen:** minimaler Hochschild-Komplex, Zeitwirkung/Gewichtssektoren, geladene HH4-Kandidaten, Zentrum/nullkozykel, Bewertungsderivationen, Operatorbruecken.  
-**Pruefziel:** Welche geladenen Klassen/Konstruktionen sind echte Endresultate, welche nur Polynom-/Subalgebramodelle, welche Operatorbruecken bleiben offen?
+**Audit:** `audits/AUDIT-2026-08-09_P09_I1_BC_Hochschild_Grundblock_Reconciliation.md`  
+**Commit:** `bf636a2d`  
+**Pruefart:** ueberwiegend `AUDIT-RECONCILED` / `AUDIT-REUSED`  
+**Endstand:**
+- `B_3^mod:=A_Q` und `C_fin^•` liefern einen algebraischen Modell-/Gewichtraumrahmen; keine Herkunftsidentifikation und kein Hilbertraumprojektor.
+- geladene nichttriviale HH4-Klasse im separaten Vier-Prim-Modell `S_p`: `INCORPORATED_model`, kein automatischer Transfer nach `A_Q`;
+- auf `A_Q^alg`: `[Omega_p] != 0` in `HH^4(A,A)` mit unnormalisierter Alternierung und Paarungswert `24`, aber `deg_Gamma Omega_p=1_Gamma` (neutral);
+- `HH^4(A,A)_ch != 0?` bleibt offen;
+- verdrehter Nullkozykel-No-go (`Re beta>0`) und regulaerer geladener Zentrum-No-go sind getrennte lokale BC-Strukturresultate;
+- NEU-183-Zentrum-Zwischenbeweis ist durch NEU-184 rev2 `SUPERSEDED`;
+- NEU-187 beweist nicht die volle geladene BC-Derivation: punktierte Gruppenkozykel ja, Erweiterung offen;
+- NEU-190: fehlende Operatorbruecke nur `✓[M]_neg,Quelle`, kein mathematischer Unmoeglichkeitssatz.
 
-### I2 — Aeussere Derivationen und singulaere Potentialroute
+**Gegencheck:** ausstehend; fuenf atomare Gegencheckfragen stehen im I1-Auditblatt. Ein konkreter Gegenbefund oeffnet nur den betroffenen Punkt erneut.
+
+### I2 — Aeussere Derivationen und singulaere Potentialroute — **NAECHSTER AKTIVER BLOCK**
 
 **Quellen:** NEU-192–211 (mit Doppeldatei NEU-193; Nummernluecken als Live-Inventar akzeptieren)  
 **Themen:** Dualzeugen, HH1-Reduktion, Kommutatorquotient, regulaere/singulaere Potentiale, dyadische/faktorielle Schalen, Charakterkern- und Transport-No-Gos.  
@@ -99,19 +111,30 @@ Offen/exportiert bleiben u.a. ein zyklischer/getwistet-zyklischer Ersatzrepraese
 
 ## 5. Routing-Firewalls
 
-- **P09:** algebraische BC/Hochschild-/KMS-/Koeffizientenstruktur, belastbare Cup-/Derivationsresultate und deren No-Gos.
-- **P10:** reine ausgeschlossene Kandidaten, sofern sie als allgemeine No-Go-Saetze formulierbar sind.
+- **P09:** algebraische BC/Hochschild-/KMS-/Koeffizientenstruktur, belastbare Cup-/Derivationsresultate und die No-Gos, die zur Typisierung der verbleibenden Suchraeume notwendig sind.
+- **P10:** kondensierte Sammlung allgemeiner/isolierter ausgeschlossener Kandidaten; P09-Struktur-No-Gos duerfen dort spaeter gespiegelt, aber nicht aus P09 entfernt werden, wenn sie fuer die Architektur notwendig sind.
 - **P11:** globale nichtorthogonale Gramkopplung, intrinsische Quellhilbertisierung, Mediator und Objekt-X-Gesamtgeometrie.
 - **P12:** finite-to-infinite Weil-Grenzfragen.
 
 P09 darf weder die P11-Quell-/Gramstruktur vorwegnehmen noch aus einer Hochschildklasse unmittelbar einen Hilbert–Polya-Operator ableiten.
 
+### Aktiver Routing-Entscheidungspunkt I2/I6 → P10
+
+Der externe Gegencheck zur P09-Eroeffnung hat korrekt markiert, dass NEU-222 als spaeter Superseding-Scan mehrere No-Gos der singulaeren Route beruehren kann. Deshalb gilt verbindlich:
+
+> **Keine Vorab-Auslagerung der I2-No-Gos nach P10.** Erst I2 wird gegen I6/NEU-222 reconciliiert. Danach wird pro Aussage entschieden:
+> - `P09-CORE-NOGO`: fuer die BC/Hochschild-Architektur notwendig → bleibt in P09 (ggf. Spiegelung in P10),
+> - `P10-NOGO`: isolierter ausgeschlossener Kandidat ohne notwendigen P09-Strukturwert → nach P10,
+> - `SUPERSEDED`: durch spaeteren Knoten ersetzt → nur Provenienz.
+
 ---
 
 ## 6. Naechster Arbeitsschritt
 
-Pass-A startet mit **I1**, jedoch nach der verbindlichen Regel `Auditsuche zuerst`: vorhandene Direktaudits, Zwischenbilanzen und spaetere Korrekturanker werden vor jedem neuen mathematischen Reaudit gesucht.
+I1 ist abgeschlossen und wartet auf den externen Gegencheck. Parallel ist der naechste aktive Pass-A-Block:
 
 \[
-\boxed{\text{P09 PASS A OPEN — I1 als naechstes Paket.}}
+\boxed{\text{P09 PASS A OPEN — I1 COMPLETE; I2 NEU-192–211 NEXT.}}
 \]
+
+I2 folgt weiterhin der Regel `Auditsuche zuerst`; NEU-222 wird als spaeter I6-Superseding-Scan verbindlich mitgefuehrt.
