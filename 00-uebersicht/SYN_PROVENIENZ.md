@@ -35,13 +35,14 @@
 | P07 | Patch 5 / P10-Reconciliation; Determinante auf `D_N->1` synchronisiert; LFF-Umkehrung OPEN | `FROZEN ✓[K/M]` | 2026-08-09 |
 | P08 | Markdown `31c93d50`; LaTeX `d283c34c`; Transferaudit `3f12e0ef` | `FROZEN ✓[K/M]` | 2026-08-09 |
 | P09 | Pass-A-Seal `28b5cba5`; Markdown `8346733e`; LaTeX `26f9d60e`; Transferaudit `e724b5a7` | `FROZEN ✓[K/M]` | 2026-08-09 |
-| P10 | Pass-A FINAL SEAL `b8be0d6f`; Inventar final reconciliiert | `PASS-A SEALED` — SYN noch nicht geschrieben | 2026-08-09 |
+| P10 | Pass-A Seal `b8be0d6f`; Markdown `d307654c`; LaTeX `bc42bdff`; FINAL SEAL `449f361e` | `FROZEN ✓[K/M]` | 2026-08-09 |
+| P11 | globale Kopplung + Objekt-X-Kandidatengeometrie | `ACTIVE` — nächster verbindlicher Block | 2026-08-09 |
 
 **Freeze-Ausnahme P07:** P07 wurde nach seinem Freeze ausschließlich wegen eines neuen konkreten Cross-SYN-Gegenbefunds aus P06 G-T4/G-T5 eng begrenzt wieder geöffnet und danach in Markdown/LaTeX erneut synchron eingefroren. Dies entspricht der Migrationsregel; andere P05–P09-Blöcke wurden nicht pauschal wieder geöffnet.
 
 ---
 
-## Block-Provenienz P05–P10
+## Block-Provenienz P05–P11
 
 | Block | Primäre SYN-Rolle | Bindender Endstand | Provenienzstatus |
 |---|---|---|---|
@@ -50,7 +51,8 @@
 | P07 | Weil-Form-Statistik, Herglotz-Interface | Patch 5 bindend: `D_N->1` nur modell-/skalenspezifisch; `LFF=>Rampe` bewiesen, Umkehrung OPEN | `FROZEN / P10-RECONCILED` |
 | P08 | Grenzoperator, Renormierung, Finite Part | modellrelative/conditionale Spur-/Mangoldt-Stränge; Primeclock-H1 ungewichtet No-Go; gewichteter Ersatz offen | `FROZEN / RECONCILED` |
 | P09 | BC, Hochschild, geladene Kohomologie, Zyklizität | positiver geladener Hochschildpfad; kanonischer Rotations-No-Go mit expliziten Firewalls | `FROZEN / RECONCILED` |
-| P10 | kondensierte No-Go-Sammlung | Pass-A-Inventar P05–P09, Gegencheck, Cross-SYN-Reaudit und FINAL SEAL abgeschlossen | `PASS-A SEALED / SYN-MIGRATION FREIGEGEBEN` |
+| P10 | kondensierte No-Go-Sammlung | N01–N54 reconciliiert, N15 retired, O01–O29 offen sichtbar; Markdown/LaTeX transferauditiert | `FROZEN ✓[K/M]` |
+| P11 | globale Kopplung und Objekt-X-Kandidatengeometrie | nächster aktiver Block; muss alle P10-Scope-Firewalls respektieren | `ACTIVE` |
 
 ---
 
@@ -69,18 +71,17 @@
 | NEU-258 (Patch 1) | P02 | §6 (`thm:lit-id`) | Literaturidentifikation $B_{W,\text{NEU-252}}=B_{W,\text{Lit}}$ | `INCORPORATED` ✓[K/M] |
 | NEU-259 | P03/P12? | — | RH-freie $\mathcal H_W$-Konstruktion | `OPEN` ?[O] |
 
-> Diese Tabelle ist **keine erneute Einzelinventur aller historischen NEU-Dateien**. Für P05–P09 ist der jeweilige eingefrorene SYN-Endstand samt Pass-A-/Reaudit-Provenienz die bindende Blockreferenz. P10 führt die Negativ-/OPEN-Provenienz zusätzlich explizit in seiner Pass-A-Matrix.
+> Diese Tabelle ist **keine erneute Einzelinventur aller historischen NEU-Dateien**. Für P05–P10 ist der jeweilige eingefrorene SYN-Endstand samt Pass-A-/Reaudit-/Transferprovenienz die bindende Blockreferenz. P10 führt seine Negativ-/OPEN-Provenienz zusätzlich explizit in der final reconciliierten Pass-A-Matrix.
 
 ---
 
-## Offene Migrationspakete nach P10 Pass-A
+## Offene Migrationspakete nach P10 Freeze
 
-Die früher hier aufgeführten P05–P09-Pakete sind inzwischen SYN-migriert und eingefroren. Offen sind nun:
+P05–P10 sind SYN-migriert und eingefroren. Offen sind nun:
 
 | Block | Ziel | Status / Priorität |
 |---|---|---|
-| No-Go-Sammlung | P10 | **nächster Schritt:** SYN aus versiegeltem Pass-A-Inventar schreiben |
-| Globale Kopplung + Objekt-X-Geometrie | P11 | danach; benötigt P05–P09 und darf P10-No-Gos nicht überdehnen |
+| Globale Kopplung + Objekt-X-Geometrie | P11 | **nächster aktiver Block**; P10-Firewalls bindend |
 | Finite-to-Infinite Weil-Geometrie | P12 | aktive Forschungsfront auf Basis P02/P04 |
 | Survey + DAG | P00 | nach den vorigen Blöcken konsolidieren |
 
@@ -100,8 +101,8 @@ Die früher hier aufgeführten P05–P09-Pakete sind inzwischen SYN-migriert und
 | P07 | Weil Form, Statistics and RH-Equivalent Positivity Criteria | **FROZEN / P10-RECONCILED** |
 | P08 | Renormalized Prime Operators and Finite-Part Structures | **FROZEN** |
 | P09 | Bost–Connes and Hochschild Structures | **FROZEN** |
-| P10 | No-Go Theorems for Canonical Global Coupling | **PASS-A SEALED; SYN NEXT** |
-| P11 | Global Coupling and the Object-X Candidate Geometry | $B_{pq}$, Objekt-X-Axiome |
+| P10 | No-Go Theorems for Canonical Global Coupling | **FROZEN** |
+| P11 | Global Coupling and the Object-X Candidate Geometry | **ACTIVE NEXT** — $B_{pq}$, globale Gramkopplung, Objekt-X-Axiome |
 | P12 | Finite-to-Infinite Weil Geometry | $J_{a,b}$, $a\to\infty$, aktive Forschungsfront |
 
 ---
