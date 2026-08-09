@@ -1,11 +1,12 @@
 # P10 — No-Go Theorems for Canonical Global Coupling
 
-**Status:** SYN DRAFT — Pass-A SEALED; Direktaudit ausstehend  
+**Status:** SYN CANDIDATE — Primärcheck Patch 1; pfadgebundener Zweitcheck ausstehend  
 **Datum:** 9. August 2026  
 **Pass-A-Basis:** `audits/AUDIT-2026-08-09_P10_PassA_FINAL_SEAL.md`  
 **Inventar:** `audits/AUDIT-2026-08-09_P10_PassA_Inventar_NoGo_Matrix_P05-P09.md`  
 **Gegencheck:** `audits/AUDIT-2026-08-09_P10_PassA_Gegencheck_Pfadgebunden.md`  
 **Targeted-Reaudit:** `audits/AUDIT-2026-08-09_P10_Targeted_Reaudit_P07_NEU091_vs_P06_GT4_GT5.md`  
+**SYN-Primärcheck:** `audits/AUDIT-2026-08-09_P10_SYN_Primaercheck.md`  
 **Scope:** kondensierte Negativ-, SUPERSEDED- und OPEN-Reconciliation aus den eingefrorenen SYN-Blöcken P05–P09  
 
 > P10 ist kein Katalog universeller Unmöglichkeitssätze. Ein Negativbefund schließt immer nur die exakt auditierte Behauptung, Konstruktion, Skalierung oder Schlussweise aus. `SUPERSEDED`, `NO-GO`, Kandidaten-No-Go, Implikationssperre und `OPEN` bleiben strikt getrennt.
@@ -76,7 +77,7 @@ aber für die Umkehrung
 \boxed{\mathrm{Rampe}\Longrightarrow\mathrm{LFF}}
 \]
 
-liegt weder Beweis noch Gegenbeweis vor. Daher ist `P10-N15` **RETIRED / MOVED TO P10-O29**.
+liegt weder Beweis noch Gegenbeispiel vor. Daher ist `P10-N15` **RETIRED / MOVED TO P10-O29**.
 
 ---
 
@@ -108,7 +109,11 @@ Aus endlich vielen Primlabels bis $N$ folgt im auditierten Modell nicht
 
 wenn die einzelnen Primfasern weiterhin unendlich viele interne Indizes besitzen. Endlicher Rang kann erst aus einer zusätzlichen echten Fasertrunkierung folgen. [`P10-N02`]
 
-### Satz 2.3 — Auditierter Primfaser-Transport ist kein diskreter HP-Endoperator
+### Satz 2.3 — Der auditierte zusätzliche Source-Cone erzwingt keinen neuen homogenen Kern
+
+Im explizit auditierten Source-Cone liefern zusätzliche nichttriviale lineare Abbildungen $L_{p,a}$ keinen neuen homogenen Kern der dort verlangten Art. Dieser Negativbefund betrifft ausschließlich diese geprüfte Quellarchitektur. Operatoren außerhalb dieses Source-Cones oder eine andere intrinsische Quellkonstruktion bleiben offen. [`P10-N03`]
+
+### Satz 2.4 — Auditierter Primfaser-Transport ist kein diskreter HP-Endoperator
 
 Der auf der auditierten Primfaser realisierte Transportgenerator vom Typ
 
@@ -118,7 +123,7 @@ Der auf der auditierten Primfaser realisierte Transportgenerator vom Typ
 
 hat dort rein absolut kontinuierliches Spektrum und keinen kompakten Resolventen. Er ist daher in dieser Realisierung kein diskreter Hilbert–Pólya-Endoperator. Nicht ausgeschlossen sind ein global gekoppelter Endoperator, eine andere Hilbertisierung oder zusätzliche zusammengesetzte Sektoren. [`P10-N04`, historischer diskreter Eigenbasisstand `P10-N05` SUPERSEDED]
 
-### Satz 2.4 — Matrixkoeffizient ist keine automatische Normquadratform
+### Satz 2.5 — Matrixkoeffizient ist keine automatische Normquadratform
 
 Für
 
@@ -128,7 +133,7 @@ g_a(\log p)=\operatorname{Re}\langle a,U_{\log p}a\rangle
 
 folgt aus der Unitarität von $U_t$ nicht automatisch $g_a(\log p)\ge0$. Der Matrixkoeffizient ist nicht ohne Zusatzstruktur als Normquadrat zu lesen. [`P10-N06`]
 
-### Satz 2.5 — Gemischte Zahlen sperren die naive Mangoldt-Energielesart
+### Satz 2.6 — Gemischte Zahlen sperren die naive Mangoldt-Energielesart
 
 Eine historische gradnormierte Prime-edge-Energie reproduziert auf gemischten Zahlen nicht automatisch die Mangoldt-Funktion; insbesondere
 
@@ -138,7 +143,7 @@ Eine historische gradnormierte Prime-edge-Energie reproduziert auf gemischten Za
 
 Damit ist diese naive Energieidentifikation ausgeschlossen. Ein echter Prime-Power-/Mangoldt-Mediator bleibt möglich. [`P10-N07`]
 
-### Satz 2.6 — Drei historische Typ-/Symmetrieformeln sind gesperrt
+### Satz 2.7 — Drei historische Typ-/Symmetrieformeln sind gesperrt
 
 Im auditierten Jacobi-/Divisorgraph-Scope gelten die Firewalls:
 
@@ -551,7 +556,7 @@ Die offene Hauptfrage bleibt, ob eine kanonische globale Quelle und Kopplung exi
 
 Bindende Primärquelle für die vollständige ID-Auflösung `P10-N01` bis `P10-N54` sowie `P10-O01` bis `P10-O29` ist die final reconciliierte Pass-A-Matrix. Dieser SYN-Text kondensiert ihre Mathematik, ersetzt aber nicht ihre Zeilenprovenienz.
 
-P10 darf erst nach eigenständigem SYN-Direktaudit eingefroren werden. Erst danach ist der geplante nächste Block
+P10 darf erst nach eigenständigem pfadgebundenem SYN-Zweitcheck eingefroren werden. Erst danach ist der geplante nächste Block
 
 \[
 \boxed{\text{P11 — Global Coupling and the Object-X Candidate Geometry}}
@@ -561,4 +566,4 @@ prozedural freizugeben.
 
 ---
 
-*Interner SYN-Entwurf des Objekt-X-Programms. Keine Behauptung eines RH-Beweises oder einer bereits konstruierten Objekt-X-Endstruktur.*
+*Interner SYN-Kandidat des Objekt-X-Programms. Keine Behauptung eines RH-Beweises oder einer bereits konstruierten Objekt-X-Endstruktur.*
