@@ -34,9 +34,9 @@ Formfaktor-/Rampenkanal mit Goldston--Montgomery-Varianz und offenem Symboltest,
 das Herglotz-Interface zwischen linearer Distribution und quadratischer
 Weil-Geometrie sowie die konditionale Jacobi-/Herglotz-Realisierungsarchitektur.
 Das Manuskript konsolidiert ausschließlich den auditierten Endstand von
-NEU-091--120 einschließlich NEU-120 Patch 2 vom 9. August 2026. Es ist ein
-internes SYN-Manuskript; eine Behauptung der Publikationsreife ist damit nicht
-verbunden.
+NEU-091--120 einschließlich NEU-120 Patch 2 und der P10-Reconciliation vom
+9. August 2026. Es ist ein internes SYN-Manuskript; eine Behauptung der
+Publikationsreife ist damit nicht verbunden.
 \end{abstract}
 
 \maketitle
@@ -45,18 +45,35 @@ verbunden.
 \section{Quadratischer Pivot und Positivitätsrahmen}
 % ----------------------------------------------------------------
 
-\begin{theorem}[Determinanten-No-Go]\label{thm:det-no-go}
-Im festen $z$-Regime gilt
+\begin{theorem}[Determinanten-No-Go, reconciliert]\label{thm:det-no-go}
+Im konkreten NEU-088--90-Modellscope
 \[
-  D_N(z)\xrightarrow[N\to\infty]{}e^{-\gamma^2/4}.
+  h_r=r,\qquad M_N=\frac{N}{\log N},\qquad z\text{ fest und zulässig},
 \]
-Der Grenzwert ist damit $z$-unabhängig. Folglich entsteht in diesem Regime
-kein direkter nichttrivialer $\xi$-Anschluss über den Determinantenweg.
+gilt nach dem späteren P06-Targeted-Reaudit
+\[
+  T_N(z)\to0,\qquad \|C_N(z)\|_{HS}\to0,
+\]
+und damit
+\[
+  \boxed{D_N(z)\xrightarrow[N\to\infty]{}1.}
+\]
+Der Grenzwert ist $z$-unabhängig und nullstellenfrei. Folglich entsteht aus
+dieser konkreten Skalierung kein direkter nichttrivialer $C\xi(z)$-Anschluss
+über den Determinantenweg.
 \end{theorem}
 
-\begin{remark}[Status]
-Theorem~\ref{thm:det-no-go} ist das gesicherte Negativresultat aus NEU-091,
-Status $\checkmark[M]_{\rm neg}$.
+\begin{remark}[Status und Scope]
+Die historische NEU-091-Aussage
+\[
+  D_N(z)\to e^{-\gamma^2/4}
+\]
+ist durch P06 G-T4/G-T5 und den P10-Targeted-Reaudit
+\texttt{f0be54c5} \emph{SUPERSEDED}. Der korrigierte Befund
+$D_N(z)\to1$ hat Status $\checkmark[M]_{\rm neg}$ im angegebenen
+Modellscope. Daraus folgt ausdrücklich kein universeller Feshbach-, Fredholm-
+oder Determinanten-No-Go; andere Skalierungen, Renormierungen und
+$\det_2$/Weil-Hilbertisierungen bleiben offen.
 \end{remark}
 
 \begin{definition}[Quadratischer Pivot]\label{def:quadratic-pivot}
@@ -215,7 +232,11 @@ Im auditierten Setup gilt
   \quad\Longrightarrow\quad
   \text{universelle Rampenmassenasymptotik}.
 \]
-Die Umkehrung ist nicht bewiesen.
+Die Umkehrung
+\[
+  \text{Rampenform}\Longrightarrow\LFF
+\]
+ist nicht bewiesen und nicht widerlegt; sie bleibt offen.
 \end{theorem}
 
 \begin{theorem}[LFF-Typisierungswarnung]\label{thm:lff-firewall}
@@ -504,8 +525,10 @@ Aussage & Status & Quelle\\
 Aussage & Status & Quelle\\
 \midrule
 \endhead
-$D_N(z)\to e^{-\gamma^2/4}$ (Determinanten-No-Go)
-& PROVED & NEU-091\\
+$D_N(z)\to1$ im NEU-088--90-Scaling; kein nichttrivialer $C\xi(z)$-Grenzwert aus dieser Skalierung
+& PROVED$_{\rm neg}$ (modell-/skalenspezifisch) & P06 G-T4/G-T5; P10\\
+$D_N(z)\to e^{-\gamma^2/4}$ im selben Scaling
+& SUPERSEDED & NEU-091; P10\\
 Quadratischer Pivot $Q_N$
 & PROVED (Definition) & NEU-091\\
 Testkegel-Positivität $Q_N[\phi]\ge0$ auf $\mathcal C$
@@ -537,8 +560,8 @@ $\mathcal P^{\rm unf}_{N,H}$ lokales Formfaktor-Ersatzobjekt
 & PROVED$_{\rm part}$ & NEU-104\\
 $\LFF\Rightarrow$ Rampenasymptotik
 & PROVED$_{\rm part}$ & NEU-107\\
-$\LFF\Leftrightarrow$ Rampenform
-& NO-GO; nur $\Rightarrow$ & NEU-107\\
+Rampenform $\Rightarrow\LFF$
+& OPEN; nicht bewiesen/widerlegt & NEU-107; P10\\
 LFF allein identifiziert $Q_{\rm Weil}$ nicht
 & PROVED$_{\rm part}$ (Typwarnung) & NEU-108\\
 $\sigma_{\rm loc}(Q_{\rm Weil})\stackrel?=|\alpha|$
@@ -589,24 +612,26 @@ Pole $\pm i/2$ in $m_{\rm arith}$
 Dieses Manuskript konsolidiert NEU-091--120 unter
 \texttt{PASS-A-PROTOKOLL.md}. Direkte Markdown-Quelle ist
 \texttt{papers/P07\_Weil\_Form\_Statistics.md} im Status
-\emph{SYN FINAL AUDITED}, Patch 4 vom 9. August 2026. Die
-Goldston--Montgomery-Synchronisierung von NEU-101 liegt in Commit
+\emph{SYN FINAL AUDITED / P10-RECONCILED}, Patch 5 vom 9. August 2026.
+Die Goldston--Montgomery-Synchronisierung von NEU-101 liegt in Commit
 \texttt{92d731d1}; die Symmetriepräzisierung $A=0$ und der notwendige Test
 $a_N\to0$ liegen in NEU-120 Patch 2, Commit \texttt{410d0a91}, und im
-Targeted-Reaudit \texttt{57441d87}. P02 liefert die hier referenzierten
-kanonischen Fourier-, Paley--Wiener- und Weilform-Konventionen. P03 wurde nur
-für SYN-Stil und Konventionskonsistenz herangezogen; es werden daraus keine
-zusätzlichen P07-Aussagen importiert.
+Targeted-Reaudit \texttt{57441d87}. Die Determinanten-Reconciliation liegt im
+P10-Targeted-Reaudit \texttt{f0be54c5}; die LFF-Rückstufung auf OPEN für die
+Umkehrung ist durch den P10-Gegencheck \texttt{c77a101} gebunden. P02 liefert
+die hier referenzierten kanonischen Fourier-, Paley--Wiener- und
+Weilform-Konventionen. P03 wurde nur für SYN-Stil und
+Konventionskonsistenz herangezogen; es werden daraus keine zusätzlichen
+P07-Aussagen importiert.
 \end{remark}
 
 \begin{remark}[LaTeX-SYN-Finalaudit]\label{rem:audit-status}
-Der ursprüngliche LaTeX-Transferaudit ist abgeschlossen. Patch 4 ist ein
-lokaler SYN-Transfer aus NEU-120 Patch 2 und dem Targeted-Reaudit; er ändert
-keine bereits eingefrorene GM-Aussage. Geprüft wurden insbesondere
-Formeltranskription, Satzstatus, Typisierung und die Trennung zwischen
-notwendiger Bedingung $a_N\to0$ und der weiterhin offenen eigentlichen
-Konvergenz. Kein historischer Forschungsknoten wird dadurch zu einer
-RH-unabhängigen Konvergenzaussage hochgestuft. Damit bleibt der interne Status
+Der ursprüngliche LaTeX-Transferaudit ist abgeschlossen. Patch 5 ist eine eng
+begrenzte P10-Reconciliation: Er ersetzt ausschließlich den durch P06 G-T4/G-T5
+supersedierten Determinantengrenzwert und korrigiert die logisch zu starke
+Biimplikationsklassifikation im LFF/Rampenkanal. Kein historischer
+Forschungsknoten wird dadurch zu einer RH-unabhängigen Konvergenzaussage
+hochgestuft. Damit bleibt der interne Status
 \[
   \boxed{\texttt{P07\_Weil\_Form\_Statistics.tex}\text{ --- SYN FROZEN }\checkmark[K/M]}.
 \]
