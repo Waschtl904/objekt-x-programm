@@ -94,3 +94,34 @@ Es ersetzt weder die NEU-Forschungsknoten noch deren Audits und Patches.
 - **Weiterleitung:** gesicherte No-Gos → P10; intrinsische Lift-/Gram-/T2-/Nichtentartungs- und globale Schatten/Fredholm-Geometrie → P11; Finite-to-Infinite-Weil-Grenzfragen → P12
 
 ---
+
+## P09 — Bost–Connes, Hochschild and Charged Cohomology
+
+- **LaTeX-Ziel:** `papers/P09_BC_Hochschild_and_Charged_Cohomology.tex`
+- **Kanonische Markdown-Quelle:** `papers/P09_BC_Hochschild_and_Charged_Cohomology.md`
+- **Markdown-Status:** `SYN FINAL AUDITED`
+- **Markdown-Erstcommit:** `cc2aa9ab`
+- **Markdown-Primärpatch:** `a8129839` — exakte I1-Algebra `A_Q^alg`, fehlende Live-Provenienz NEU-191/198, NEU-205 Architecture III ausdrücklich offen
+- **Markdown-Finalcommit:** `8346733e` — Zweitcheck-Patch; I4-Nichtnull-/Zyklizitäts-No-go auf den bewiesenen Gibbs-Bereich `β>1` begrenzt
+- **Pass-A-Basis:** `audits/AUDIT-2026-08-09_P09_PassA_FINAL_SEAL.md`, Commit `28b5cba5`; I1–I6 vollständig versiegelt
+- **Knotenbasis:** `06-hochschild-bc-algebra/`, NEU-174–219 pfad-/rollenbasiert; NEU-222 ausschließlich als Superseding-Scan; NEU-191/198 fehlen live und werden nicht als Primärautorität verwendet
+- **I1-Seal:** Gegencheck `12e12f12`
+- **I2-Seal:** Gegencheck `438aca8e`
+- **I3-Seal:** Gegencheck `88b36912`
+- **I4-Seal:** Gegencheck `362ddd68`
+- **I5-Seal:** Gegencheck `136ed71d`
+- **I6-Superseding-Scan:** `audits/AUDIT-2026-08-09_P09_I6_NEU222_Superseding_Scan.md`, Commit `4ebcb90c`
+- **SYN-Primärcheck:** `audits/AUDIT-2026-08-09_P09_SYN_Primaercheck.md`, Commit `9558a4b5`; drei lokale Präzisierungen, kein Kerngegenbefund
+- **SYN-Zweitcheck:** `audits/AUDIT-2026-08-09_P09_SYN_Zweitcheck_Pfadgebunden.md`, Commit `50456f21`; nach lokaler `β>1`-Präzisierung ohne konkreten Gegenbefund
+- **LaTeX-Commit:** `26f9d60e`
+- **LaTeX-Transferaudit:** `audits/AUDIT-2026-08-09_P09_LaTeX_SYN_Transferaudit.md`, Commit `e724b5a7`; Urteil `OHNE KONKRETEN TRANSFERGEGENBEFUND`
+- **LaTeX-Kompilierung:** kein erfolgreicher lokaler Compile behauptet; Container konnte den Raw-GitHub-Endpunkt in dieser Sitzung nicht per DNS auflösen; Live-Quelltext stattdessen direkt transferauditiert
+- **LaTeX-Endstatus:** `SYN FROZEN ✓[K/M]`
+- **Kernbefund:** neutrale algebraische Klasse `[Ω_p]≠0` auf `A_Q^alg`; korrigierte geladene äußere Klasse `[D_g^corr]≠0` in `HH^1(A_alg,A_C*)_g`; logarithmischer Zieltyp und globaler Bimodul; stärkster positiver Befund
+  ` [D_g^corr]⌣[Θ^wedge]≠0 in HH^4(A_alg,M_glob^log)_g`; keine automatische Selbstkoeffizientenklasse
+- **KMS-/Zyklizitätsbefund:** gradneutralisierte I4-KMS-Kochain ist für `β>1` nichtnull und getwistet-Hochschild; Standard-Zyklisierung des geladenen Gewichtssektors scheitert; I4-`Phi_{β,χ}` bleibt strikt vom I5-Basislift `Phi_0` getrennt
+- **Adelischer Endbefund:** Laca-Dilatation, exakte algebraische Ecke, Orbitkollaps `N_k=N_0`, markierte Ersatzstruktur; kanonischer Lift `L~_0∈Z^4(A_alg,I_0)` mit `κ=ε=0`; historisches `s=-1` und `tPhi_0=g^{-β}Phi_0` `SUPERSEDED`; autoritativ `tPhi_0≠C Phi_0` für jedes konstante `C` im bewiesenen KMS-Bereich
+- **Zentrale Firewalls:** voller Quotient `M/[A,M]` offen; `β=1` offen; NEU-205 Architecture III offen; anderer zyklischer/getwistet-zyklischer Repräsentant offen; genuin orbitverschiebender Lift offen; keine Weil-/Gamma-, Gram-, Hilbert–Pólya- oder Objekt-X-Konstruktion, kein RH-Beweis
+- **Weiterleitung:** isolierte Kandidaten-No-gos → P10; globale nichtorthogonale Gram-/Mediator-/Objekt-X-Geometrie → P11; Weil-/Gamma-Pfad → NEU-220; finite-to-infinite Weil-Grenzen nach Bedarf → P12
+
+---
