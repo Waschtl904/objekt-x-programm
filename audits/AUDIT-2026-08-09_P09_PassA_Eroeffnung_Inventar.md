@@ -2,7 +2,7 @@
 
 **Datum:** 9. August 2026  
 **SYN-Ziel:** P09 — BC + Hochschild  
-**Status:** `PASS A OPEN — I1 SEALED, I2 ACTIVE`  
+**Status:** `PASS A OPEN — I1 SEALED, I2 COMPLETE / COUNTERCHECK PENDING`  
 **Voraussetzung:** P01 dependency-reconciled durch `AUDIT-2026-08-09_P01_Dependency_Reaudit_vor_P09.md`  
 **Hauptquellblock:** `06-hochschild-bc-algebra/`
 
@@ -79,11 +79,27 @@ Offen/exportiert bleiben u.a. ein zyklischer/getwistet-zyklischer Ersatzrepraese
 
 **Seal-Regel:** I1 wird nur bei einem konkreten neuen mathematischen Gegenbefund punktuell wieder geoeffnet.
 
-### I2 — Aeussere Derivationen und singulaere Potentialroute — **AKTIVER BLOCK**
+### I2 — Aeussere Derivationen und singulaere Potentialroute — **PASS A COMPLETE / COUNTERCHECK PENDING**
 
-**Quellen:** NEU-192–211 (mit Doppeldatei NEU-193; Nummernluecken als Live-Inventar akzeptieren)  
-**Themen:** Dualzeugen, HH1-Reduktion, Kommutatorquotient, regulaere/singulaere Potentiale, dyadische/faktorielle Schalen, Charakterkern- und Transport-No-Gos.  
-**Pruefziel:** spaetere Revisionsknoten gegen fruehe Potentialkandidaten reconciliieren; keine historische Singularitaetsbehauptung ohne Spaetanker migrieren.
+**Quellen:** NEU-192–211 (mit Doppeldatei NEU-193; NEU-198 als fehlende Live-Quelle protokolliert)  
+**Audit:** `audits/AUDIT-2026-08-09_P09_I2_Aeussere_Derivationen_Singulaere_Potentialroute_Reconciliation.md`  
+**Audit-Commit:** `6aba82cf`  
+**Pruefart:** `AUDIT-RECONCILED` / `AUDIT-REUSED` + gezielte `TARGETED-REAUDIT`-Punkte  
+**Endstand:**
+- zweiter NEU-193 konstruiert einen geladenen Dualzyklus; die Paarung sieht exakt den alternierenden Vier-Slot-Anteil;
+- symmetrische NEU-176-Schablone ist fuer diesen Zeugen strukturell blind; determinantisches Modell paart mit `24`, ist aber kein Hochschildkozykel;
+- NEU-196 schliesst nur den Augmentationsdetektor gegen punktierte Potentiale aus, nicht die Klasse selbst;
+- NEU-197 liefert den partiellen Kommutatorquotienten als universellen algebraischen Detektor;
+- NEU-201 positiver Primreihenkandidat ist durch NEU-202 `SUPERSEDED`;
+- NEU-204 realisiert singulaere Kommutatorregularisierung positiv, jedoch neutral und `A_{C^*}`-wertig;
+- NEU-205 besitzt mehrere Quellfehler: Sandwichformel und „Divergenz fuer jedes r“ sind `×[M]`; drei konkrete dyadische Ladungsplatzierungen bleiben kandidatenspezifisch negativ; Architektur III bleibt `?[O]`;
+- NEU-208: Primkanaele nicht orthogonal; korrekt `||B_k|| = sum_{p|k} log((v_p(k)+2)/2)`, nicht Max-Norm;
+- NEU-209/210 erzwingen gemeinsame Ursprungslokalisierung; `M(0)=0 => MX_N` schliesslich konstant, nicht notwendig `->0`;
+- NEU-211 wird nur als korrigierter Knoten gelesen: `D_g^corr(e(r))=mu_m C_{m,n;r} mu_n^*` und punktweise Normkonvergenz auf jedem festen `a in A_alg`;
+- stärkster positiver I2-Befund: `[D_g^corr] != 0` in `HH^1(A_alg,A_{C^*})_g`, `g!=1`;
+- algebraische geladene Klasse in `HH^1(A_alg,A_alg)_g` und geladener HH4-Cup-Aufstieg bleiben offen und gehen an I3.
+
+**Seal-Regel:** I2 wird nach externem Gegencheck ohne Befund versiegelt; bei konkretem Gegenbefund nur atomare Wiedereroeffnung.
 
 ### I3 — Koeffizientenmodule, Bimodul-No-Go und Cup-Aufstieg
 
@@ -120,23 +136,24 @@ Offen/exportiert bleiben u.a. ein zyklischer/getwistet-zyklischer Ersatzrepraese
 
 P09 darf weder die P11-Quell-/Gramstruktur vorwegnehmen noch aus einer Hochschildklasse unmittelbar einen Hilbert–Polya-Operator ableiten.
 
-### Aktiver Routing-Entscheidungspunkt I2/I6 → P10
+### I2/I6 → P10-Routing — nach I2-Reconciliation präzisiert
 
-Der externe Gegencheck zur P09-Eroeffnung hat korrekt markiert, dass NEU-222 als spaeter Superseding-Scan mehrere No-Gos der singulaeren Route beruehren kann. Deshalb gilt verbindlich:
+I2 hat die No-Gos in drei Klassen getrennt:
 
-> **Keine Vorab-Auslagerung der I2-No-Gos nach P10.** Erst I2 wird gegen I6/NEU-222 reconciliiert. Danach wird pro Aussage entschieden:
-> - `P09-CORE-NOGO`: fuer die BC/Hochschild-Architektur notwendig → bleibt in P09 (ggf. Spiegelung in P10),
-> - `P10-NOGO`: isolierter ausgeschlossener Kandidat ohne notwendigen P09-Strukturwert → nach P10,
-> - `SUPERSEDED`: durch spaeteren Knoten ersetzt → nur Provenienz.
+- `P09-CORE-NOGO`: strukturell notwendig fuer die positive BC/Hochschild-Architektur; bleibt in P09, spaetere Spiegelung in P10 moeglich;
+- `P10-NOGO`: rein kandidatenspezifischer Ausschluss, z.B. der verworfene NEU-201-Primreihenkandidat;
+- `SUPERSEDED`: falsche oder spaeter korrigierte Zwischenbehauptung.
+
+NEU-222 bleibt ein spaeter Kontrollscan, aber nicht uneingeschraenkt autoritativ: seine pauschale Schliessung von `[O-209-6]` und seine alte skalare Rotationsformel werden durch spaetere Direktaudits bzw. den August-Finalaudit begrenzt.
 
 ---
 
 ## 6. Naechster Arbeitsschritt
 
-I1 ist extern gegengeprueft und versiegelt. Aktiver Pass-A-Block:
+I1 ist versiegelt. I2 ist als Pass-A-Paket fertig, aber noch nicht extern versiegelt:
 
 \[
-\boxed{\text{P09 PASS A OPEN — I1 SEALED; I2 NEU-192–211 ACTIVE.}}
+\boxed{\text{P09 PASS A OPEN — I1 SEALED; I2 COMPLETE / COUNTERCHECK PENDING.}}
 \]
 
-I2 folgt der Regel `Auditsuche zuerst`. Der Auditordner enthaelt derzeit kein eigenstaendiges historisches I2-Gesamtaudit; daher werden die spaeten Revisions-/Auditknoten innerhalb des Quellenstrangs sowie NEU-222 und NEU-219y als Reconciliation-Anker verwendet.
+Die fünf atomaren Gegencheckfragen stehen in §15 des I2-Auditblatts. Nach Gegencheck ohne Befund wird I2 versiegelt und I3 (NEU-212–218) aktiviert.
