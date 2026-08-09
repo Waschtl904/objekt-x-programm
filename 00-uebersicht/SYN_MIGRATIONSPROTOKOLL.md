@@ -85,7 +85,7 @@ Eine Aktion „300 Dateien → 10 Papers“ ohne Einzelkontrolle birgt drei Risi
 - **Provenienzverlust**: Die Herkunft einer Aussage wird nicht eingetragen; später nicht mehr nachvollziehbar.
 - **Konventionsdrift**: Zwei verschiedene Normierungen (z. B. $\gamma_\infty$ mit und ohne $1/2$-Faktor) werden gemischt.
 
-Ein KI-Agent kann sehr viel mechanische Arbeit übernehmen (Dateien lesen, Querverweise einsammeln, LaTeX anlegen, Provenienz eintragen, Commits pushen). Die mathematische Entscheidung „Was ist gültig, was superseded, was No-Go, was offen?“ bleibt blockweise unter Kontrolle.
+Ein KI-Agent kann sehr viel mechanische Arbeit übernehmen (Dateien lesen, Querverweise einsammeln, LaTeX anlegen, Provenienz eintragen, Commits pushen). Die mathematische Entscheidung „Was ist gültig, was superseded, was No-Go, was offen?“ bleibt aber blockweise unter Kontrolle.
 
 ---
 
@@ -114,7 +114,7 @@ Grobe Erwartung: 300–400 Knoten → 10–15 Blöcke → 10–15 SYN-Papers.
 | 6 | Grenzoperator + Renormierung | P08 | P02, P05 |
 | 7 | BC + Hochschild | P09 | P01 |
 | 8 | No-Go-Sammlung | P10 | P05–P09 + eindeutige Negativ-/OPEN-Reconciliation |
-| 9 | Globale Kopplung + Objekt-X | P11 | P05–P09 |
+| 9 | Globale Kopplung + Objekt-X | P11 | P05–P10 |
 | 10 | Finite-to-Infinite Weil | P12 | P02, P04 |
 | 11 | Survey + DAG | P00 | alle vorigen |
 
@@ -129,17 +129,21 @@ Grobe Erwartung: 300–400 Knoten → 10–15 Blöcke → 10–15 SYN-Papers.
 | P07 | `SYN FROZEN ✓[K/M]` | Weil-Form Statistics abgeschlossen; nach P10-Cross-SYN-Reaudit eng begrenzt als Patch 5 synchronisiert und wieder eingefroren |
 | P08 | `SYN FROZEN ✓[K/M]` | Grenzoperator + Renormierung abgeschlossen; Markdown-Finalcommit `31c93d50`, LaTeX `d283c34c`, Transferaudit `3f12e0ef` |
 | P09 | `SYN FROZEN ✓[K/M]` | BC + Hochschild abgeschlossen; Pass-A-Seal `28b5cba5`, Markdown-Finalcommit `8346733e`, LaTeX `26f9d60e`, Transferaudit `e724b5a7` |
-| **P10** | **`PASS-A SEALED`** | FINAL SEAL `b8be0d6f`; No-Go-/SUPERSEDED-/OPEN-Inventar reconciliiert; **SYN-Migration als nächster Schritt freigegeben, noch nicht ausgeführt** |
+| **P10** | **`SYN FROZEN ✓[K/M]`** | Pass-A Seal `b8be0d6f`; Markdown `d307654c`; LaTeX `bc42bdff`; FINAL SEAL `449f361e` |
+| **P11** | **NÄCHSTER AKTIVER BLOCK** | globale Kopplung + Objekt-X-Kandidatengeometrie; P10-Firewalls bindend |
 
-P05–P09 werden nicht erneut geöffnet, sofern kein neuer konkreter mathematischer Gegenbefund gegen ihren eingefrorenen Endstand auftaucht. Die P07-Wiederöffnung im P10-Pass war genau eine solche eng begrenzte Ausnahme und ist abgeschlossen.
+P05–P10 werden nicht erneut geöffnet, sofern kein neuer konkreter mathematischer Gegenbefund gegen ihren eingefrorenen Endstand auftaucht. Die P07-Wiederöffnung im P10-Pass war genau eine solche eng begrenzte Ausnahme und ist abgeschlossen.
 
-Verbindlicher nächster Arbeitsschritt ist damit **P10-SYN aus dem versiegelten Pass-A-Inventar**. Für P10 gilt besonders:
+Verbindlicher nächster Arbeitsschritt ist damit **P11 — Global Coupling and the Object-X Candidate Geometry**.
 
-- P09-CORE-NOGOs dürfen gespiegelt, aber nicht aus P09 entfernt oder zu stärkeren universellen No-Gos hochgestuft werden;
-- `P10-N15` ist retired und nach `P10-O29` verschoben;
-- `Rampe => LFF` bleibt OPEN;
-- `D_N->1` ist nur ein modell-/skalenspezifischer No-Go gegen den konkreten NEU-088–90-Determinantenpfad;
-- OPEN-/CONDITIONAL-Punkte müssen im SYN sichtbar erhalten bleiben.
+Für P11 gelten insbesondere die aus P10 eingefrorenen Firewalls:
+
+- lokale Primfaser-Realisierungen dürfen nicht als globaler Hilbert–Pólya-Endoperator ausgegeben werden;
+- endliche Feshbachidentitäten dürfen nicht als globale Schatten-/Fredholm-Grenztheorie behandelt werden;
+- der NEU-088–90-Determinantenkollaps `D_N->1` darf nicht auf andere Determinanten-/Fredholmarchitekturen ausgedehnt werden;
+- `OPEN`/`CONDITIONAL` darf nicht als negatives Resultat umgedeutet werden;
+- `P10-N15` bleibt retired und `P10-O29` OPEN;
+- P09-Unit-Slot- und Standard-SAYD-No-Gos dürfen nicht auf nichtkanonische, andere Koeffizienten- oder Weil-/Gamma-korrigierte Konstruktionen ausgedehnt werden.
 
 ---
 
