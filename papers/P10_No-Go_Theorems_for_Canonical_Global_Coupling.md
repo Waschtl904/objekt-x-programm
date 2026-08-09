@@ -1,12 +1,13 @@
 # P10 — No-Go Theorems for Canonical Global Coupling
 
-**Status:** SYN CANDIDATE — Primärcheck Patch 1; pfadgebundener Zweitcheck ausstehend  
+**Status:** SYN FINAL AUDITED  
 **Datum:** 9. August 2026  
 **Pass-A-Basis:** `audits/AUDIT-2026-08-09_P10_PassA_FINAL_SEAL.md`  
 **Inventar:** `audits/AUDIT-2026-08-09_P10_PassA_Inventar_NoGo_Matrix_P05-P09.md`  
 **Gegencheck:** `audits/AUDIT-2026-08-09_P10_PassA_Gegencheck_Pfadgebunden.md`  
 **Targeted-Reaudit:** `audits/AUDIT-2026-08-09_P10_Targeted_Reaudit_P07_NEU091_vs_P06_GT4_GT5.md`  
 **SYN-Primärcheck:** `audits/AUDIT-2026-08-09_P10_SYN_Primaercheck.md`  
+**SYN-Zweitcheck:** `audits/AUDIT-2026-08-09_P10_SYN_Zweitcheck_Pfadgebunden.md`  
 **Scope:** kondensierte Negativ-, SUPERSEDED- und OPEN-Reconciliation aus den eingefrorenen SYN-Blöcken P05–P09  
 
 > P10 ist kein Katalog universeller Unmöglichkeitssätze. Ein Negativbefund schließt immer nur die exakt auditierte Behauptung, Konstruktion, Skalierung oder Schlussweise aus. `SUPERSEDED`, `NO-GO`, Kandidaten-No-Go, Implikationssperre und `OPEN` bleiben strikt getrennt.
@@ -556,7 +557,7 @@ Die offene Hauptfrage bleibt, ob eine kanonische globale Quelle und Kopplung exi
 
 Bindende Primärquelle für die vollständige ID-Auflösung `P10-N01` bis `P10-N54` sowie `P10-O01` bis `P10-O29` ist die final reconciliierte Pass-A-Matrix. Dieser SYN-Text kondensiert ihre Mathematik, ersetzt aber nicht ihre Zeilenprovenienz.
 
-P10 darf erst nach eigenständigem pfadgebundenem SYN-Zweitcheck eingefroren werden. Erst danach ist der geplante nächste Block
+Der Markdown-SYN-Endstand ist durch Primär- und pfadgebundenen Zweitcheck auditiert. Die LaTeX-Fassung darf nur noch als inhaltsgleicher Transfer dieses Endstands erzeugt und separat transferauditiert werden. Erst danach ist der geplante nächste Block
 
 \[
 \boxed{\text{P11 — Global Coupling and the Object-X Candidate Geometry}}
@@ -566,4 +567,4 @@ prozedural freizugeben.
 
 ---
 
-*Interner SYN-Kandidat des Objekt-X-Programms. Keine Behauptung eines RH-Beweises oder einer bereits konstruierten Objekt-X-Endstruktur.*
+*Interner SYN-Endstand des Objekt-X-Programms. Keine Behauptung eines RH-Beweises oder einer bereits konstruierten Objekt-X-Endstruktur.*
