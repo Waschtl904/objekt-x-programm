@@ -1,8 +1,11 @@
 # P08 — Renormalized Prime Operators and Finite-Part Structures
 
-**Status:** SYN DRAFT — Pass-A migriert; SYN-Direktaudit ausständig  
+**Status:** SYN FINAL AUDITED  
 **Datum:** 9. August 2026  
 **Pass-A-Basis:** `audits/AUDIT-2026-08-09_P08_PassA_FINAL_SEAL.md`  
+**SYN-Primärcheck:** `audits/AUDIT-2026-08-09_P08_SYN_Primaercheck.md` — Commit `f3330c2f`  
+**SYN-Zweitcheck:** `audits/AUDIT-2026-08-09_P08_SYN_Zweitcheck_Pfadgebunden.md` — Commit `3d3b8864`  
+**LaTeX-Transferaudit:** `audits/AUDIT-2026-08-09_P08_LaTeX_SYN_Transferaudit.md` — Commit `3f12e0ef`  
 **Scope:** Live-Block `04-grenzoperator-renormierung/`, NEU-121–150 gemäß P08-Inventar  
 
 > Dieses SYN-Paper enthält ausschließlich den am 9. August 2026 versiegelten P08-Endstand. Historische Hochstufungen, die im Pass-A-Audit gesperrt wurden, werden nicht als positive Resultate übernommen. `?[O]`, `CONDITIONAL`, `×[M]` und modellrelative Aussagen bleiben sichtbar.
@@ -979,4 +982,4 @@ $$
 }
 $$
 
-**Aktueller Status:** `SYN DRAFT`. Vor Freeze sind SYN-Primärcheck, pfadgebundener SYN-Zweitcheck, LaTeX-Übertragung und LaTeX-Transferaudit erforderlich.
+**Aktueller Status:** `SYN FINAL AUDITED`. Primärcheck, pfadgebundener Zweitcheck, LaTeX-Übertragung und LaTeX-Transferaudit sind abgeschlossen; die Root-Provenienz kann P08 als `SYN FROZEN ✓[K/M]` buchen.
