@@ -8,6 +8,7 @@
 **Targeted-Reaudit:** `audits/AUDIT-2026-08-09_P10_Targeted_Reaudit_P07_NEU091_vs_P06_GT4_GT5.md`  
 **SYN-Primärcheck:** `audits/AUDIT-2026-08-09_P10_SYN_Primaercheck.md`  
 **SYN-Zweitcheck:** `audits/AUDIT-2026-08-09_P10_SYN_Zweitcheck_Pfadgebunden.md`  
+**LaTeX-Transferaudit:** `audits/AUDIT-2026-08-09_P10_LaTeX_Transferaudit.md`  
 **Scope:** kondensierte Negativ-, SUPERSEDED- und OPEN-Reconciliation aus den eingefrorenen SYN-Blöcken P05–P09  
 
 > P10 ist kein Katalog universeller Unmöglichkeitssätze. Ein Negativbefund schließt immer nur die exakt auditierte Behauptung, Konstruktion, Skalierung oder Schlussweise aus. `SUPERSEDED`, `NO-GO`, Kandidaten-No-Go, Implikationssperre und `OPEN` bleiben strikt getrennt.
@@ -377,7 +378,7 @@ Für die dort definierte absolute Schnellabfallbedingung gilt nicht
 A_{\rm alg}\subset A^\infty.
 \]
 
-Schon $1$ und die algebraischen Erzeuger liegen nicht im behaupteten Zieltyp. Auch die konkrete Regularisierung $G/\log(\nu+2)$ ist nicht Schwartz. Diese historische Route ist `SUPERSEDED` durch logarithmische Zieltypen. [`P10-N39`, `P10-N40`]
+Schon $1$ und $e(r)$ liegen nicht im behaupteten Zieltyp. Auch die konkrete Regularisierung $G/\log(\nu+2)$ ist nicht Schwartz. Diese historische Route ist `SUPERSEDED` durch logarithmische Zieltypen. [`P10-N39`, `P10-N40`]
 
 ### Satz 6.3 — Schwartz-Inkremente und divergierende Shellgewichte sind inkompatibel
 
@@ -557,7 +558,7 @@ Die offene Hauptfrage bleibt, ob eine kanonische globale Quelle und Kopplung exi
 
 Bindende Primärquelle für die vollständige ID-Auflösung `P10-N01` bis `P10-N54` sowie `P10-O01` bis `P10-O29` ist die final reconciliierte Pass-A-Matrix. Dieser SYN-Text kondensiert ihre Mathematik, ersetzt aber nicht ihre Zeilenprovenienz.
 
-Der Markdown-SYN-Endstand ist durch Primär- und pfadgebundenen Zweitcheck auditiert. Die LaTeX-Fassung darf nur noch als inhaltsgleicher Transfer dieses Endstands erzeugt und separat transferauditiert werden. Erst danach ist der geplante nächste Block
+Der Markdown-SYN-Endstand ist durch Primär- und pfadgebundenen Zweitcheck auditiert. Der LaTeX-Transferaudit hat anschließend ausschließlich die N39/N40-Formulierung auf die dokumentierten Gegenbeispiele $1$ und $e(r)$ verengt; der mathematische Status bleibt unverändert. Die LaTeX-Fassung muss dieselbe Präzisierung tragen. Erst nach dem finalen Transfervergleich ist der geplante nächste Block
 
 \[
 \boxed{\text{P11 — Global Coupling and the Object-X Candidate Geometry}}
