@@ -1,6 +1,6 @@
 # P05 — Relative Prime Channels and Arithmetic Edge Geometry
 
-**Status:** SYN DRAFT 1 — kanonische Markdown-Quelle; LaTeX-Transferaudit ausständig  
+**Status:** SYN DRAFT 2 — kanonische Markdown-Quelle; unabhängiger Inhaltscheck ausständig  
 **Datum:** 9. August 2026  
 **Pass-A-Basis:** Gruppe F `PASS A COMPLETE`, `PASS-A-PROTOKOLL.md`, Commit `9c23fc49`  
 **F2-Primäraudit:** `audits/AUDIT-2026-08-09_F2_Primaeraudit_Fourier_Rohkopplung.md`, Commit `b6a97e27`; versiegelt `4c4c13e8`  
@@ -350,6 +350,16 @@ NEU-166a/166b liefern keine unbedingte globale Erweiterung von $T_p^{\rm pre}$, 
 
 ## §6 — Transportgeometrie der auditierten Primsektoren
 
+### Notationskonvention 6.0 — Transportkoeffizient
+
+NEU-225 verwendet historisch ebenfalls das Symbol $c_p$ für den Transportkoeffizienten $\frac12\gamma_Np\log p$. Dieses Symbol ist in §§1–2 bereits für die hebungsabhängige Primkanal-Amplitude belegt. P05 disambiguiert daher rein redaktionell:
+
+$$
+\boxed{\kappa_p^{\rm tr}:=\frac12\gamma_Np\log p.}
+$$
+
+Diese Umbenennung verändert keine mathematische Aussage aus NEU-225.
+
 ### Satz 6.1 — Transportnormalform
 
 Auf einer auditierten Primfaser $\mathcal H_{p,a}$ gilt die unitäre Transportnormalform
@@ -357,13 +367,7 @@ Auf einer auditierten Primfaser $\mathcal H_{p,a}$ gilt die unitäre Transportno
 $$
 D_{\rm rel}\big|_{\mathcal H_{p,a}}
 \cong
-2ic_p\frac{d}{dt},
-$$
-
-mit der Primfaserkette
-
-$$
-c_p=\frac12\gamma_N p\log p.
+2i\kappa_p^{\rm tr}\frac{d}{dt}.
 $$
 
 [NEU-225; F3: `✓[M]`]
@@ -617,19 +621,19 @@ P05 behauptet keine dieser globalen Konstruktionen bereits gelöst zu haben.
 | geladener $L_3^\circ$ aus $[L_3]$ hergeleitet | `?[O]` | NEU-170d/173 |
 | abstrakte Quotienten-/Intertwining-Lemmata | `✓[M]` | F2 |
 | konkrete $Q_p\neq0$, unitäre Wirkung, Irreduzibilität | `?[O]` / `CONDITIONAL` | F2 |
-| Transportnormalform von $D_{\rm rel}$ in Primsektoren | `✓[M]` | F3 |
+| Transportnormalform $D_{\rm rel}\cong2i\kappa_p^{\rm tr}d/dt$ in Primsektoren | `✓[M]` | F3 |
 | reines a.c.-Spektrum / kein Kern in auditierten Primsektoren | `✓[M]` | F3 |
 | globale Spektralaussage in zusammengesetzten Sektoren | `?[O]` | `[O-225-3]` |
 | projektionswertige Spektralmaßform | `✓[K/M]` | F3 |
 | Primkanalbilder können nichttrivial überlappen | `✓[M]` | F3 |
-| Primblockdiagonalität strukturell erzwungen | `×[M]` als allgemeine Behauptung | F3 |
+| Primblockdiagonalität ist nicht strukturell erzwungen | `✓[M]` | F3 |
 | primitiver Faktor $\log p/\sqrt p$ | `✓[M]_{part}` | F4 |
 | $g_a(\log p)=\operatorname{Re}\langle a,U_{\log p}a\rangle$ | `✓[M]` | F4 |
 | $\Lambda(p^m)/\sqrt{p^m}=\log p/p^{m/2}$ | `✓[M]` | F4 |
 | $h_n^{\rm bal}=n^{-1/2}I$ für alle $n$ | `CONDITIONAL` / Beweis nicht gefunden | F4 |
 | vollständige operatorische Primzahlpotenzrealisierung | `CONDITIONAL` | F4 |
 | Kreuzprimkollision $\cap\operatorname{supp}\Lambda=\varnothing$ | `✓[M]` | F4 |
-| Kreuzprim-Trägertrennung erzwingt Primorthogonalität | `×[M]` als Schlussfolgerung | F4 |
+| Kreuzprim-Trägertrennung impliziert keine Primorthogonalität | `✓[M]` | F3/F4 |
 
 ---
 
@@ -675,4 +679,4 @@ $$
 }
 $$
 
-**Aktueller Status:** `SYN DRAFT 1`. Vor einer Einfrierung sind ein unabhängiger SYN-Inhaltscheck, die LaTeX-Übertragung und der LaTeX-SYN-Transferaudit erforderlich.
+**Aktueller Status:** `SYN DRAFT 2`. Vor einer Einfrierung sind ein unabhängiger SYN-Inhaltscheck, die LaTeX-Übertragung und der LaTeX-SYN-Transferaudit erforderlich.
