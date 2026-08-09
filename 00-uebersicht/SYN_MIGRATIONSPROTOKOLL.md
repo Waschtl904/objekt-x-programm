@@ -127,9 +127,10 @@ Grobe Erwartung: 300–400 Knoten → 10–15 Blöcke → 10–15 SYN-Papers.
 | P05 | `SYN FROZEN ✓[K/M]` | Primkanten + Fourier-Ladung abgeschlossen |
 | P06 | `SYN FROZEN ✓[K/M]` | Jacobi–Feshbach + Divisorgraph abgeschlossen; LaTeX-Transferaudit `1b1a7173` |
 | P07 | `SYN FROZEN ✓[K/M]` | Weil-Form Statistics abgeschlossen |
-| **P08** | **NÄCHSTER AKTIVER BLOCK** | Grenzoperator + Renormierung; Voraussetzung P02/P05 erfüllt |
+| P08 | `SYN FROZEN ✓[K/M]` | Grenzoperator + Renormierung abgeschlossen; Markdown-Finalcommit `31c93d50`, LaTeX `d283c34c`, Transferaudit `3f12e0ef` |
+| **P09** | **NÄCHSTER AKTIVER BLOCK** | BC + Hochschild; Voraussetzung P01 gemäß Blockplan |
 
-Verbindliche nächste Pass-A-Gruppe ist damit **H → P08**. P06 wird nicht erneut geöffnet, sofern kein neuer konkreter Widerspruch gegen den eingefrorenen Endstand auftaucht.
+Verbindlicher nächster Migrationsblock ist damit **P09**. P05–P08 werden nicht erneut geöffnet, sofern kein neuer konkreter Widerspruch gegen ihren eingefrorenen Endstand auftaucht.
 
 ---
 
