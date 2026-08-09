@@ -1,6 +1,6 @@
 # Synthese-Manuskripte — Index
 
-**Stand:** 2026-08-08  
+**Stand:** 2026-08-09  
 **Stufen:** SYN (konsolidiert, intern) | PUB (publikationsreif)
 
 ---
@@ -23,6 +23,9 @@
 | P02 | `P02_Adelic_Weil_Amplitude_Port.tex` | Adelic Weil Amplitude Port | SYN | Entwurf |
 | P03 | `P03_Haar_L2_Firewall.tex` | Haar-$L^2$ Firewall | SYN | Entwurf |
 | P04 | `P04_Finite_Weil_Geometry.tex` | Finite Weil Geometry & Objekt-X-Schnittstelle | SYN | In Arbeit |
+| P05 | `P05_Relative_Prime_Channels_and_Arithmetic_Edge_Geometry.tex` | Relative Prime Channels and Arithmetic Edge Geometry | SYN | **FROZEN ✓[K/M]** |
+| P06 | `P06_Jacobi_Feshbach_and_Divisor_Graph.tex` | Jacobi–Feshbach and Divisor Graph | SYN | **FROZEN ✓[K/M]** |
+| P07 | `P07_Weil_Form_Statistics.tex` | Weil-Form Statistics | SYN | **FROZEN ✓[K/M]** |
 
 ---
 
