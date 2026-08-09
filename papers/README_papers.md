@@ -26,6 +26,7 @@
 | P05 | `P05_Relative_Prime_Channels_and_Arithmetic_Edge_Geometry.tex` | Relative Prime Channels and Arithmetic Edge Geometry | SYN | **FROZEN ✓[K/M]** |
 | P06 | `P06_Jacobi_Feshbach_and_Divisor_Graph.tex` | Jacobi–Feshbach and Divisor Graph | SYN | **FROZEN ✓[K/M]** |
 | P07 | `P07_Weil_Form_Statistics.tex` | Weil-Form Statistics | SYN | **FROZEN ✓[K/M]** |
+| P08 | `P08_Renormalized_Prime_Operators_and_Finite_Part_Structures.tex` | Renormalized Prime Operators and Finite-Part Structures | SYN | **FROZEN ✓[K/M]** |
 
 ---
 
