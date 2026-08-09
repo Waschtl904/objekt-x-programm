@@ -56,16 +56,20 @@ Es ersetzt weder die NEU-Forschungsknoten noch deren Audits und Patches.
 - **LaTeX-Ziel:** `papers/P07_Weil_Form_Statistics.tex`
 - **Kanonische Markdown-Quelle:** `papers/P07_Weil_Form_Statistics.md`
 - **Markdown-Status:** `SYN FINAL AUDITED`
-- **Markdown-Finalcommit:** `6a162f92`
+- **Markdown-Finalcommit:** `22f07a31`
 - **Pass-A-Basis:** `PASS-A-PROTOKOLL.md`; Abschluss NEU-091–120, Commit `baa3975b`
-- **Synchronisationscommit:** NEU-101 Patch 3, Commit `92d731d1`
+- **GM-Synchronisationscommit:** NEU-101 Patch 3, Commit `92d731d1`
+- **Externcheck-Targeted-Reaudit:** `audits/AUDIT-2026-08-09_P07_Externcheck_GM_aN_Targeted-Reaudit.md`, Commit `57441d87`
+- **NEU-120 Patch 2:** Commit `410d0a91` — kanonische Zentrierung `A=Re m_arith(i)=0`; notwendiger Test `m_N^ren→m_arith` lokal gleichmäßig `⇒ a_N→0`
 - **Knotenbasis:** NEU-091–120
 - **Superseding SYN-Konventionen:** P02 für die kanonische Fourier-/Paley-Wiener-/Weilform-Typisierung
 - **P03-Rolle:** Stil- und Konventionsabgleich; keine zusätzlichen P07-Aussagen importiert
-- **LaTeX-Prüfart:** reiner SYN-Transferaudit; kein Vollneuaudit von NEU-091–120
-- **LaTeX-Commit:** `12c77795`
+- **Externcheck-Befund:** behaupteter `H=M`-Fehler trifft den Live-Stand nicht; P07 verwendet `H=√M`. Der GM-$H$-Bereich `1≤H≤M^{1-ε}` bleibt nach Quellengegencheck unverändert; keine falsche Untergrenze `M^ε` importiert.
+- **LaTeX-Prüfart:** lokaler SYN-Transfer von Patch 4; kein Vollneuaudit von NEU-091–120
+- **LaTeX-Erstcommit:** `12c77795`
+- **LaTeX-Patch-4-Commit:** `e2ab077f`
 - **LaTeX-Endstatus:** `SYN FROZEN ✓[K/M]`
-- **Auditbefund:** kein neuer mathematischer Konflikt; kein NEU-Knoten wieder geöffnet
+- **Auditbefund:** kein neuer Konflikt im GM-Korollar; neue notwendige Symmetrie-/Normalisierungsbedingung `a_N→0` bewiesen; eigentliche Jacobi/Herglotz-Konvergenz und Tail-Kontrolle bleiben offen
 
 ---
 
