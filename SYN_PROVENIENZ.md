@@ -28,6 +28,29 @@ Es ersetzt weder die NEU-Forschungsknoten noch deren Audits und Patches.
 
 ---
 
+## P06 — Jacobi–Feshbach and Divisor Graph
+
+- **LaTeX-Ziel:** `papers/P06_Jacobi_Feshbach_and_Divisor_Graph.tex`
+- **Kanonische Markdown-Quelle:** `papers/P06_Jacobi_Feshbach_and_Divisor_Graph.md`
+- **Markdown-Status:** `SYN FINAL AUDITED`
+- **Markdown-Finalcommit:** `1ab1f004`
+- **Pass-A-Basis:** Gruppe G (`P06 PASS A COMPLETE — doppelt geprüft`), `PASS-A-PROTOKOLL.md`, Commit `e32cfecb`; technischer Notationsfix `5bd6ff06`
+- **Knotenbasis:** historischer Kern NEU-058–090; GX1 NEU-040/045/046–056; GX2 NEU-223–228; P06/P11-Interface NEU-228b/229
+- **Targeted-Reaudits:** G-T1 NEU-050 `fbff73d9`; G-T2 NEU-062 `2b6cb2e8`; G-T3 NEU-066 `d8746ea1`; G-T4 NEU-090 `52197cdd`; G-T5 NEU-089 `dd0fd3a3`
+- **Pass-A-Zweitcheck:** `audits/AUDIT-2026-08-09_P06_PassA_Zweitcheck_Pfadgebunden.md`, Commit `b40af085`; Urteil `OHNE KONKRETEN GEGENBEFUND`
+- **SYN-Primärcheck:** `audits/AUDIT-2026-08-09_P06_SYN_Primaercheck.md`, Commit `b077a814`; zwei lokale Draftkorrekturen, danach kein verbleibender Gegenbefund
+- **SYN-Zweitcheck:** `audits/AUDIT-2026-08-09_P06_SYN_Zweitcheck_Pfadgebunden.md`, Commit `7c570498`; Urteil `P06-SYN-ZWEITCHECK OHNE KONKRETEN GEGENBEFUND`
+- **SYN-Draftkorrektur:** `10c06c4` — kollektiver Koppler `V_N` als Zeilenoperator statt orthogonaler Ziel-Direktsumme; Bipartitheit nur als hinreichende Zusatzbedingung
+- **LaTeX-Prüfart:** reiner SYN-Transferaudit; kein Vollneuaudit der historischen NEU-Knoten
+- **LaTeX-Erstcommit:** `d7d76c7d`
+- **LaTeX-Kompilierung:** lokal zweimal `pdflatex`, Exit-Code 0, 8 Seiten, keine undefinierten Referenzen
+- **LaTeX-Transferaudit:** `audits/AUDIT-2026-08-09_P06_LaTeX_SYN_Transferaudit.md`, Commit `1b1a7173`
+- **LaTeX-Endstatus:** `SYN FROZEN ✓[K/M]`
+- **Kernbefund:** Transportgenerator statt HP-Endoperator; Kreuzspektralmaßform statt diskreter NEU-051-Eigenbasis; endliche Feshbachidentität ohne Schattennormlimes; konkrete NEU-088–90-Schleifenskalierung kollabiert auf `D_N(z)→1`, ohne allgemeinen Feshbach-No-Go
+- **Weiterleitung:** intrinsische Lift-/Quell-/Gramgeometrie, Mischblock `β_p`, globale nichtorthogonale Kopplung und globale Fredholm-/Schattenrealisierung → P11; zusammengesetzte Sektoren `[O-225-3]` bleiben offen
+
+---
+
 ## P07 — Weil-Form Statistics
 
 - **LaTeX-Ziel:** `papers/P07_Weil_Form_Statistics.tex`
