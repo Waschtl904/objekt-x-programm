@@ -1,8 +1,9 @@
 # P09 — Bost–Connes, Hochschild and Charged Cohomology
 
-**Status:** SYN CANDIDATE — PASS A SEALED  
+**Status:** SYN CANDIDATE — PRIMÄRCHECK PATCHED  
 **Datum:** 9. August 2026  
 **Pass-A-Basis:** `audits/AUDIT-2026-08-09_P09_PassA_FINAL_SEAL.md`  
+**SYN-Primärcheck:** `audits/AUDIT-2026-08-09_P09_SYN_Primaercheck.md`  
 **Scope:** BC-/Hochschild-Strang `06-hochschild-bc-algebra/`, NEU-174–219 + NEU-222 als reiner Superseding-Scan  
 
 > Dieses SYN-Paper enthält ausschließlich den am 9. August 2026 reconciliierten Endstand. Historische Zwischenbehauptungen werden nicht als aktive Resultate übernommen. Insbesondere sind `D_g(e(r))=0`, die starke NEU-212-Regularisierung und `t\Phi_0=g^{-\beta}\Phi_0` für den kanonischen Basislift `SUPERSEDED`.
@@ -11,13 +12,13 @@
 
 ## Abstract
 
-P09 konsolidiert den Bost–Connes-/Hochschild-Strang des Objekt-X-Programms. Der algebraische Grundblock besitzt eine nichttriviale **neutrale** Hochschild-4-Klasse; eine geladene Selbstkoeffizientenklasse folgt daraus nicht. Der entscheidende geladene Fortschritt entsteht stattdessen über eine singuläre faktoriale Potentialroute. Sie liefert für jeden nichtneutralen Grad `g` eine korrigierte äußere Derivation
+P09 konsolidiert den Bost–Connes-/Hochschild-Strang des Objekt-X-Programms. Der algebraische Grundblock besitzt auf $A_{\mathbb Q}^{\rm alg}$ eine nichttriviale **neutrale** Hochschild-4-Klasse; eine geladene Selbstkoeffizientenklasse folgt daraus nicht. Der entscheidende geladene Fortschritt entsteht stattdessen über eine singuläre faktoriale Potentialroute. Sie liefert für jeden nichtneutralen Grad $g$ eine korrigierte äußere Derivation
 
 \[
 [D_g^{\rm corr}]\neq0\in HH^1(A_{\rm alg},A_{C^*})_g,
 \]
 
-die nicht algebraisch wertig ist. Ein logarithmischer Koeffiziententyp `B^log/A^log` und der globale Bimodul `M_glob^log` reparieren die Zieltypfrage ohne einen nachträglichen Bimodul-Glätter. Über einen Grad-3-Partner entsteht anschließend der nichttriviale geladene Cup
+die nicht algebraisch wertig ist. Ein logarithmischer Koeffiziententyp $\mathcal B^{\log}/\mathcal A^{\log}$ und der globale Bimodul $\mathfrak M_{\rm glob}^{\log}$ reparieren die Zieltypfrage ohne einen nachträglichen Bimodul-Glätter. Über einen Grad-3-Partner entsteht anschließend der nichttriviale geladene Cup
 
 \[
 \boxed{
@@ -27,7 +28,7 @@ die nicht algebraisch wertig ist. Ein logarithmischer Koeffiziententyp `B^log/A^
 }
 \]
 
-Die weitere zyklische Verfeinerung ist jedoch nicht automatisch möglich. Eine gradneutralisierte KMS-Auswertung liefert für `beta>1` einen nichtverschwindenden getwisteten Hochschildkozykel, aber der Standard-Zyklisierungsschritt annihiliert den nichttrivialen Gewichtssektor. Im adelischen Dilatationsmodell existiert ein kanonischer Basislift `L~_0`, doch ein expliziter Unit-Slot-Zeuge beweist stärker
+Die weitere zyklische Verfeinerung ist jedoch nicht automatisch möglich. Eine gradneutralisierte KMS-Auswertung liefert für $\beta>1$ einen nichtverschwindenden getwisteten Hochschildkozykel, aber der Standard-Zyklisierungsschritt annihiliert den nichttrivialen Gewichtssektor. Im adelischen Dilatationsmodell existiert ein kanonischer Basislift $\widetilde L_0$, doch ein expliziter Unit-Slot-Zeuge beweist stärker
 
 \[
 \boxed{t\Phi_0\neq C\Phi_0\qquad\forall C\in\mathbb C.}
@@ -37,11 +38,19 @@ Damit besitzt der kanonische skalare Lift keine globale konstante Rotationseigen
 
 ---
 
-## §1 — Bindende Typ- und Statusfirewalls
+## §1 — Bindende Typ-, Notations- und Statusfirewalls
 
 ### 1.1 Algebraischer Kern und Koeffizienten
 
-`A_alg` bezeichnet den algebraischen Bost–Connes-Kern. Drei Koeffiziententypen sind strikt zu unterscheiden:
+Im I1-Grundblock wird die Algebra ausdrücklich als
+
+\[
+\boxed{A:=A_{\mathbb Q}^{\rm alg}}
+\]
+
+geführt. In den späteren I2–I5-Dateien wird derselbe algebraische BC-Kern überwiegend mit $A_{\rm alg}$ bezeichnet; P09 verwendet diese Kurznotation ab hier, ohne einen Algebrawechsel zu behaupten.
+
+Drei Koeffiziententypen sind strikt zu unterscheiden:
 
 \[
 A_{\rm alg}
@@ -52,7 +61,7 @@ A_{\rm alg}
 \mathfrak M_{\rm glob}^{\log}\subset\mathcal A^{\log}.
 \]
 
-Aus einer nichttrivialen Klasse mit Koeffizienten in `A_{C^*}` oder `M_glob^log` folgt **keine** nichttriviale Selbstkoeffizientenklasse in `HH^*(A_alg,A_alg)`.
+Aus einer nichttrivialen Klasse mit Koeffizienten in $A_{C^*}$ oder $\mathfrak M_{\rm glob}^{\log}$ folgt **keine** nichttriviale Selbstkoeffizientenklasse in $HH^*(A_{\rm alg},A_{\rm alg})$.
 
 ### 1.2 Korrigierte geladene Derivation
 
@@ -73,7 +82,7 @@ D_g^{\rm corr}(e(r))
 }
 \]
 
-Die Grenzdefinition entsteht als **punktweiser Normgrenzwert auf jedem festen** `a in A_alg`; eine gleichmäßige Konvergenz in Derivationsoperatornorm wird nicht behauptet.
+Die Grenzdefinition entsteht als **punktweiser Normgrenzwert auf jedem festen** $a\in A_{\rm alg}$; eine gleichmäßige Konvergenz in Derivationsoperatornorm wird nicht behauptet.
 
 ### 1.3 Faktoriale Absorption
 
@@ -83,7 +92,7 @@ Die historische starke Behauptung
 M X_N\to0
 \]
 
-ist `×[M]`. Korrekt ist die stärkere strukturelle Präzisierung in anderer Richtung:
+ist `×[M]`. Korrekt ist
 
 \[
 \boxed{M(0)=0\Longrightarrow MX_N\text{ ist für }N\gg1\text{ exakt konstant}.}
@@ -93,19 +102,24 @@ ist `×[M]`. Korrekt ist die stärkere strukturelle Präzisierung in anderer Ric
 
 Ein nichttrivialer Hochschild-Cup in Grad 4 liefert weder automatisch eine gewöhnliche zyklische Klasse noch eine getwistete, KMS- oder Hopf-zyklische Klasse. Diese Übergänge werden in P09 separat auditiert.
 
+### 1.5 Provenienz-Firewall
+
+Die Katalognummern **NEU-191** und **NEU-198** fehlen im Live-Bestand des geprüften Strangs. Insbesondere wird NEU-198 in späteren Dateien referenziert, kann aber nicht als eigenständige Primärquelle verwendet werden. P09 leitet aus diesen fehlenden Dateien **keine** positive SYN-Aussage allein ab.
+
 ---
 
 ## §2 — Algebraischer BC/Hochschild-Grundblock
 
 ### Satz 2.1 — Neutraler algebraischer HH4-Befund
 
-Der neutrale Grundblock liefert eine nichttriviale algebraische Hochschild-4-Klasse
+Für vier verschiedene Primrichtungen liefert der neutrale Grundblock eine nichttriviale algebraische Hochschild-4-Klasse
 
 \[
-\boxed{[\Omega_p]\neq0\in HH^4(A_{\rm alg},A_{\rm alg})_1.}
+\boxed{[\Omega_p]\neq0\in HH^4(A_{\mathbb Q}^{\rm alg},A_{\mathbb Q}^{\rm alg}),
+\qquad \deg_\Gamma\Omega_p=1_\Gamma.}
 \]
 
-Der verwendete Alternierungsnachweis ist unnormalisiert; die ausgezeichnete Paarung besitzt entsprechend den Faktor `4!=24`.
+Der verwendete Alternierungsnachweis ist unnormalisiert; die ausgezeichnete Paarung besitzt entsprechend den Faktor $4!=24$.
 
 ### Firewall 2.2 — Kein geladener Selbstkoeffiziententransfer
 
@@ -120,13 +134,17 @@ Die frühen geladenen Polynom-/Produktmodelle sind Modellkonstruktionen oder wer
 
 ### Satz 2.3 — Alternierungs-No-go für die frühe symmetrische Schablone
 
-Der geladene Dualzyklus sieht nur den vollständig alternierenden Anteil `Alt_4 L`. Die frühe symmetrische Produktschablone besitzt
+Der geladene Dualzyklus sieht nur den vollständig alternierenden Anteil $\operatorname{Alt}_4L$. Die frühe symmetrische Produktschablone besitzt
 
 \[
 \operatorname{Alt}_4L=0
 \]
 
-und ist für diesen Zeugen unsichtbar. Ein determinantischer Modellkandidat kann zwar mit Wert `24` paaren, scheitert aber am Hochschildrand. Dies ist ein struktureller Kandidaten-No-go, kein globaler No-go für geladene `HH^4`.
+und ist für diesen Zeugen unsichtbar. Ein determinantischer Modellkandidat kann zwar mit Wert $24$ paaren, scheitert aber am Hochschildrand. Dies ist ein struktureller Kandidaten-No-go, kein globaler No-go für geladene $HH^4$.
+
+### Firewall 2.4 — Modellklasse ist keine BC-Klasse
+
+Im separaten Vier-Prim-Polynommodell $S_p$ existiert eine geladene Modellklasse. Sie wird nicht als Klasse auf $A_{\mathbb Q}^{\rm alg}$ migriert.
 
 ---
 
@@ -134,7 +152,7 @@ und ist für diesen Zeugen unsichtbar. Ein determinantischer Modellkandidat kann
 
 ### Satz 3.1 — Charakterkern und Ursprungssingularität
 
-Für jeden nichtneutralen reduzierten Grad `g=m/n` gilt
+Für jeden nichtneutralen reduzierten Grad $g=m/n$ gilt
 
 \[
 \boxed{Z_g=\{0\}.}
@@ -158,16 +176,15 @@ Der frühere No-go gegen **exakt** unter allen Primtransporten geschlossene tota
 
 ### Satz 3.2 — Normkonvergente Transportdefekte
 
-Für feste Generatoren entstehen normkonvergente Transportdefekte `G_{a,d}`. Der korrekte August-Endstand umfasst sowohl die nichtteilerfremden gcd-/Nica-Fälle als auch den Charakterterm der geladenen Derivation.
+Für feste Generatoren entstehen normkonvergente Transportdefekte $G_{a,d}$. Der korrekte August-Endstand umfasst sowohl die nichtteilerfremden gcd-/Nica-Fälle als auch den Charakterterm der geladenen Derivation.
 
 ### Satz 3.3 — Geladene analytische Nichtinnerheit
 
-Für `g!=1` gilt
+Für $g\neq1$ gilt
 
 \[
 \boxed{
-[D_g^{\rm corr}]
-eq0
+[D_g^{\rm corr}]\neq0
 \in HH^1(A_{\rm alg},A_{C^*})_g.
 }
 \]
@@ -176,7 +193,7 @@ Die Nichtinnerheit wird durch einen Offdiagonaltest gegen beschränkte Implement
 
 ### Firewall 3.4 — Kein algebraischer Zieltyp
 
-Die konkrete faktoriale Derivation landet im Allgemeinen nicht in `A_alg`. Daher bleibt
+Die konkrete faktoriale Derivation landet im Allgemeinen nicht in $A_{\rm alg}$. Daher bleibt
 
 \[
 HH^1(A_{\rm alg},A_{\rm alg})_g\neq0
@@ -186,13 +203,23 @@ für diesen Kandidaten offen.
 
 ### No-go 3.5 — Reguläre Potentiale und nachträgliche Glättung
 
-Normkonvergente Potentialimplementierer liefern nur innere bzw. im relevanten Quotienten unsichtbare Derivationen. Außerdem gilt ein Bimodul-Rigiditäts-No-go: Ein globaler normstetiger `A_alg`-Bimoduloperator
+Normkonvergente Potentialimplementierer liefern nur innere bzw. im relevanten Quotienten unsichtbare Derivationen. Außerdem gilt ein Bimodul-Rigiditäts-No-go: Ein globaler normstetiger $A_{\rm alg}$-Bimoduloperator
 
 \[
 R:A_{C^*}\to\mathcal A^\infty\subsetneq A_{C^*}
 \]
 
 kann nicht als nichttrivialer universeller Glätter die Zieltypfrage lösen.
+
+### Firewall 3.6 — Reichweite des NEU-205-No-gos
+
+Die drei konkreten dyadischen L/R/S-Platzierungen aus NEU-205 bleiben nach Korrektur der Sandwichformel Kandidaten-No-gos. **Nicht** ausgeschlossen ist die dort relation-adaptierte, $N$-abhängige „Architektur III“:
+
+\[
+\boxed{[\text{NEU-205 Architecture III}]\quad ?[O].}
+\]
+
+P09 stuft diesen offenen Reparaturraum nicht zu einem universellen No-go hoch.
 
 ---
 
@@ -208,13 +235,13 @@ Die kanonische Reparatur des gescheiterten Schwartz-Zieltyps ist die direkte Kon
 }
 \]
 
-mit stabilen Operationen `sigma_k`, `rho_k`, `T_a` und
+mit stabilen Operationen $\sigma_k$, $\rho_k$, $T_a$ und
 
 \[
 G_{a,d}\in\mathcal B^{\log}.
 \]
 
-Daraus entsteht die graduierte algebraische `*`-Algebra `A^log`.
+Daraus entsteht die graduierte algebraische $*$-Algebra $\mathcal A^{\log}$.
 
 ### Satz 4.2 — Zieltypbrücke
 
@@ -230,7 +257,7 @@ D_g^{\rm corr}(A_{\rm alg})\subseteq\mathcal A^{\log},
 
 ### Satz 4.3 — Globaler Koeffizientenbimodul
 
-Der globale logarithmische Bimodul `M_glob^log` ist unter der `A_alg`-Bimodulstruktur und den benötigten Transporten stabil. Damit
+Der globale logarithmische Bimodul $\mathfrak M_{\rm glob}^{\log}$ ist unter der $A_{\rm alg}$-Bimodulstruktur und den benötigten Transporten stabil. Damit
 
 \[
 \boxed{
@@ -239,11 +266,11 @@ Der globale logarithmische Bimodul `M_glob^log` ist unter der `A_alg`-Bimodulstr
 }
 \]
 
-Lokale stärkere Behauptungen mit `M_{g,p}^log` werden nicht migriert, solange die volle lokale Bimodultypisierung fehlt.
+Lokale stärkere Behauptungen mit $M_{g,p}^{\log}$ werden nicht migriert, solange die volle lokale Bimodultypisierung fehlt.
 
 ### Satz 4.4 — Nichttrivialer geladener Cup
 
-Für drei geeignete Primrichtungen besitzt der Grad-3-Partner `Theta^wedge` einen typkorrekten Cup mit der geladenen Derivation. Der Mehrparameter-Følner-Nachweis konstruiert einen partiellen Modulquotienten, einen Dualzeugen und eine nichtverschwindende Paarung. Daraus folgt
+Für drei geeignete Primrichtungen besitzt der Grad-3-Partner $\Theta^\wedge$ einen typkorrekten Cup mit der geladenen Derivation. Der Mehrparameter-Følner-Nachweis konstruiert einen partiellen Modulquotienten, einen Dualzeugen und eine nichtverschwindende Paarung. Daraus folgt
 
 \[
 \boxed{
@@ -261,7 +288,7 @@ Der Beweis benötigt **nicht** den vollen Quotienten
 \mathfrak M_{\rm glob}^{\log}/[A_{\rm alg},\mathfrak M_{\rm glob}^{\log}].
 \]
 
-Dessen Struktur bleibt offen. Ebenso folgt aus Satz 4.4 keine Klasse in `HH^4(A_alg,A_alg)_g`.
+Dessen Struktur bleibt offen. Ebenso folgt aus Satz 4.4 keine Klasse in $HH^4(A_{\rm alg},A_{\rm alg})_g$.
 
 ---
 
@@ -269,17 +296,17 @@ Dessen Struktur bleibt offen. Ebenso folgt aus Satz 4.4 keine Klasse in `HH^4(A_
 
 ### Satz 5.1 — Direkter geladener KMS-Detektor verschwindet
 
-Für ein homogenes nichtneutrales Zielelement `eta` erzwingt die KMS-Gleichung
+Für ein homogenes nichtneutrales Zielelement $\eta$ erzwingt die KMS-Gleichung
 
 \[
 \boxed{\omega_\beta(\eta)=0\qquad(\beta>0).}
 \]
 
-Ein KMS-Zustand ist keine gewöhnliche Spur und annihiliert im Allgemeinen nicht den gewöhnlichen Modulkommutatorraum `[A,M]`.
+Ein KMS-Zustand ist keine gewöhnliche Spur und annihiliert im Allgemeinen nicht den gewöhnlichen Modulkommutatorraum $[A,M]$.
 
 ### Satz 5.2 — Explizite Gradneutralisierung
 
-Ein Gegenfaktor vom inversen Gesamtgrad neutralisiert die KMS-Gewichtsauslöschung. Für `beta>1` reduziert die ausgezeichnete Auswertung auf
+Ein Gegenfaktor vom inversen Gesamtgrad neutralisiert die KMS-Gewichtsauslöschung. Für $\beta>1$ reduziert die ausgezeichnete Auswertung auf
 
 \[
 \omega_{\beta,\chi}(\sigma_P(G_q)),
@@ -291,7 +318,7 @@ und es gilt für alle extremalen Gibbs-Zustände im bewiesenen Bereich
 \boxed{\omega_{\beta,\chi}(\sigma_P(G_q))>0.}
 \]
 
-Der kritische Fall `beta=1` wird durch diese Gibbs-Rechnung nicht entschieden.
+Der kritische Fall $\beta=1$ wird durch diese Gibbs-Rechnung nicht entschieden.
 
 ### Satz 5.3 — Korrekte Twistkonvention
 
@@ -303,7 +330,7 @@ Für die Standard-Letztrandkonvention ist
 }
 \]
 
-Mit dieser Orientierung und `bL=0` folgt
+Mit dieser Orientierung und $bL=0$ folgt
 
 \[
 \boxed{
@@ -325,9 +352,9 @@ T_{\sigma_\beta}\Phi_{\beta,\chi}
 }
 \]
 
-Für `g!=1`, `beta>0` liegt sie damit in einem nichttrivialen `T`-Eigenraum und ist kein standardmäßiger getwisteter zyklischer Kozykel.
+Für $g\neq1$, $\beta>0$ liegt sie damit in einem nichttrivialen $T$-Eigenraum und ist kein standardmäßiger getwisteter zyklischer Kozykel.
 
-**Präzedenz-Firewall:** Diese Aussage betrifft `Phi_{beta,chi}` aus I4. Sie ist nicht mit dem späteren kanonischen Basislift `Phi_0` zu identifizieren.
+**Präzedenz-Firewall:** Diese Aussage betrifft $\Phi_{\beta,\chi}$ aus I4. Sie ist nicht mit dem späteren kanonischen Basislift $\Phi_0$ zu identifizieren.
 
 ---
 
@@ -343,27 +370,27 @@ C^\bullet_{\sigma,w}(A),
 T\varphi=w\varphi,
 \]
 
-ist ein `b^sigma`-Unterkomplex. Für `w!=1` wird dieser Sektor jedoch bei der gewöhnlichen Invarianten-/Koinvarianten-Zyklisierung annihiliert, da `1-T` dort invertierbar ist.
+ist ein $b^\sigma$-Unterkomplex. Für $w\neq1$ wird dieser Sektor jedoch bei der gewöhnlichen Invarianten-/Koinvarianten-Zyklisierung annihiliert, da $1-T$ dort invertierbar ist.
 
 ### Satz 6.2 — Externe Eigenlinie ist keine zyklische Koeffiziententheorie
 
-Eine externe eindimensionale Eigenlinie kann den `T`-Eigenwert formal kompensieren, definiert aber weder die benötigten Koflächen, Kodegenerationen noch einen zyklischen Rotationsoperator.
+Eine externe eindimensionale Eigenlinie kann den $T$-Eigenwert formal kompensieren, definiert aber weder die benötigten Koflächen, Kodegenerationen noch einen zyklischen Rotationsoperator.
 
 ### Satz 6.3 — Kein eindimensionales unitales äquivariantes A-Bimodul
 
-Es existiert für `beta>0` kein eindimensionales unital-nichtdegeneriertes `sigma_beta`-äquivariantes `A_alg`-Bimodul, das den gewünschten modularen Reparaturtyp liefert.
+Es existiert für $\beta>0$ kein eindimensionales unital-nichtdegeneriertes $\sigma_\beta$-äquivariantes $A_{\rm alg}$-Bimodul, das den gewünschten modularen Reparaturtyp liefert.
 
 ### Satz 6.4 — Standard-SAYD-Kollision
 
-Die `Q_+^x`-Gradierung liefert kanonisch eine **Koaktion**, nicht bereits eine kanonische Aktion der Gruppenalgebra. Der reparierte minimale Hopf-Typ
+Die $\mathbb Q_+^\times$-Gradierung liefert kanonisch eine **Koaktion**, nicht bereits eine kanonische Aktion der Gruppenalgebra. Der reparierte minimale Hopf-Typ
 
 \[
 \mathcal H_\beta=\mathbb C[\mathbb Z]
 \]
 
-wirkt durch `sigma_beta`. Im Standard-SAYD-Setup kollidieren jedoch exakter KMS-Twist, Ladungskompensation und Stabilität. Damit repariert der Standard-SAYD-Pfad die Ladungsobstruktion nicht.
+wirkt durch $\sigma_\beta$. Im Standard-SAYD-Setup kollidieren jedoch exakter KMS-Twist, Ladungskompensation und Stabilität. Damit repariert der Standard-SAYD-Pfad die Ladungsobstruktion nicht.
 
-Ein nichtstandardmäßiger `A`-relativer Hopf-Koeffizient bleibt offen.
+Ein nichtstandardmäßiger $A$-relativer Hopf-Koeffizient bleibt offen.
 
 ---
 
@@ -385,11 +412,11 @@ mit Crossed Product
 \widetilde A=C_0(\mathbb A_f)\rtimes_\gamma\mathbb Q_+^\times.
 \]
 
-Für `e=1_{\widehat Z}` gilt die Full-Corner-Realisierung des BC-Systems.
+Für $e=1_{\widehat{\mathbb Z}}$ gilt die Full-Corner-Realisierung des BC-Systems.
 
 ### Satz 7.2 — Exakte algebraische Ecke
 
-Für den gewählten algebraischen Kern gilt nicht nur C*-Morita-Äquivalenz, sondern die explizit nachgerechnete Gleichheit
+Für den gewählten algebraischen Kern gilt nicht nur $C^*$-Morita-Äquivalenz, sondern die explizit nachgerechnete Gleichheit
 
 \[
 \boxed{e\widetilde A_{\rm alg}e=j_A(A_{\rm alg}).}
@@ -415,7 +442,7 @@ Daher ist die globale unmarkierte Multiplikationsabbildung der algebraischen Orb
 
 ### Satz 7.4 — Markiertes Modulgewicht
 
-Auf `N_tag` existiert eine typkorrekte Eigenfamilie `Omega_lambda`. Die Multiplikation mit `U_{g^{-1}}` erhält den Orbitindex; sie ist **nicht** der externe Shift `T^{-1}`.
+Auf $\mathcal N_{\rm tag}$ existiert eine typkorrekte Eigenfamilie $\Omega_\lambda$. Die Multiplikation mit $U_{g^{-1}}$ erhält den Orbitindex; sie ist **nicht** der externe Shift $T^{-1}$.
 
 ---
 
@@ -423,7 +450,7 @@ Auf `N_tag` existiert eine typkorrekte Eigenfamilie `Omega_lambda`. Die Multipli
 
 ### Satz 8.1 — Kanonischer Basislift
 
-Der kanonische Ecklift wird erstmals explizit definiert durch
+Der kanonische Ecklift wird explizit definiert durch
 
 \[
 \boxed{
@@ -449,19 +476,19 @@ Die Recovery-Identität ist typkorrekt als Inklusion
 \iota_{M_0\hookrightarrow N_0}
 \]
 
-zu lesen; nach Eckkompression erhält man `id_{M_0}`.
+zu lesen; nach Eckkompression erhält man $\operatorname{id}_{M_0}$.
 
 ### Satz 8.2 — Grad und Orbitindex sind verschieden
 
-Der Lift trägt weiterhin den BC-Grad `g`, lebt aber vollständig im Orbit-Nullsummanden:
+Der Lift trägt weiterhin den BC-Grad $g$, lebt aber vollständig im Orbit-Nullsummanden:
 
 \[
 \boxed{\kappa=0,\qquad\varepsilon=0.}
 \]
 
-Damit ist jedes Orbitgewicht `lambda` auf dem kanonischen Lift wirkungslos.
+Damit ist jedes Orbitgewicht $\lambda$ auf dem kanonischen Lift wirkungslos.
 
-### Rollback 8.3 — Kein globaler Exponent `s`
+### Rollback 8.3 — Kein globaler Exponent s
 
 Die historischen Zwischenbehauptungen
 
@@ -505,7 +532,7 @@ während
 \neq0
 \]
 
-für `beta>1` und die zulässigen extremalen KMS-Zustände.
+für $\beta>1$ und die zulässigen extremalen KMS-Zustände.
 
 Daher
 
@@ -535,22 +562,23 @@ Diese Möglichkeiten werden außerhalb des kanonischen Basislifts weitergeführt
 
 Nach der P09-Reconciliation bleiben insbesondere offen:
 
-1. **Geladene Selbstkoeffizientenklasse:**
+1. **Geladene Selbstkoeffizientenklasse in Grad 1:**
    \[
    HH^1(A_{\rm alg},A_{\rm alg})_g\neq0\quad ?
    \]
-2. **Geladene HH4-Selbstkoeffizientenklasse:**
+2. **Geladene Selbstkoeffizientenklasse in Grad 4:**
    \[
    HH^4(A_{\rm alg},A_{\rm alg})_g\neq0\quad ?
    \]
-3. volle Struktur von `M/[A,M]`;
+3. volle Struktur von $\mathfrak M_{\rm glob}^{\log}/[A_{\rm alg},\mathfrak M_{\rm glob}^{\log}]$;
 4. topologische Banach-/Fréchet-Vervollständigung des logarithmischen Zieltyps;
 5. lokale Resttypisierung `[O-217-1d]`, `[O-217-2b-5]`, `[O-217-2c-5land]`;
-6. KMS-Grenzfall `beta=1` in der I4-Diagonalauswertung;
-7. nichtstandardmäßiger `A`-relativer Hopf-Koeffizient;
+6. KMS-Grenzfall $\beta=1$ in der I4-Diagonalauswertung;
+7. nichtstandardmäßiger $A$-relativer Hopf-Koeffizient;
 8. `[O-219-cyclic-representative]`;
 9. genuin orbitverschiebender nichtkanonischer Lift;
-10. `[O-219-6]` — Weil-/Gammafaktorpaarung.
+10. `[O-219-6]` — Weil-/Gammafaktorpaarung;
+11. die relation-adaptierte NEU-205-Architektur III.
 
 ---
 
@@ -580,7 +608,7 @@ P09 schließt einen langen Suchstrang mit einem klaren asymmetrischen Ergebnis:
 }
 \]
 
-aber
+mit dem präzisen Koeffiziententyp $\mathfrak M_{\rm glob}^{\log}$, aber
 
 \[
 \boxed{
@@ -593,5 +621,4 @@ Der positive Kern ist keine bloße formale Konstruktion: Die geladene äußere D
 \[
 \boxed{
 \text{P09 enthält keinen RH-Beweis und konstruiert Objekt X nicht.}
-}
 \]
