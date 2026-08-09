@@ -1,6 +1,6 @@
 # P06 — Jacobi–Feshbach and Divisor Graph
 
-**Status:** SYN DRAFT — aus versiegeltem P06-Pass-A-Endstand destilliert; SYN-Primärcheck ausständig  
+**Status:** SYN DRAFT — Primärcheck-Korrekturen angewendet; Primärcheck-Endurteil ausständig  
 **Datum:** 9. August 2026  
 **Pass-A-Basis:** Gruppe G `P06 PASS A COMPLETE — doppelt geprüft`, `PASS-A-PROTOKOLL.md`, Commit `e32cfecb`; rein technischer Notationsfix `5bd6ff06`  
 **Primärreconciliation:** `audits/AUDIT-2026-08-09_P06_PassA_Primaerreconciliation.md`, Commit `3e9b816d`  
@@ -24,10 +24,12 @@ Wir konsolidieren die Jacobi–Feshbach- und Divisorgraph-Schicht des Objekt-X-P
 Sei $D_{\rm rel}$ ein selbstadjungiert realisierter relativer Transportgenerator auf dem jeweils zugelassenen Hilbertraum und seien $V_p$ typisierte Primkanalabbildungen. Für endlichen Primcutoff $N$ bezeichnet
 
 $$
-V_N:=\bigoplus_{p\le N}V_p
+\boxed{
+V_N:=\sum_{p\le N}V_p
+}
 $$
 
-formal den kollektiven Koppler. Für $z\in\mathbb C\setminus\mathbb R$ wird die Birman–Schwinger-/Feshbach-Blockarchitektur geschrieben als
+formal den kollektiven Koppler beziehungsweise Zeilenoperator, sobald die beteiligten Quell- und Zieltypen eine solche Summe zulassen. Das Symbol bezeichnet **keine orthogonale Direktsumme der Zielbilder**. Für $z\in\mathbb C\setminus\mathbb R$ wird die Birman–Schwinger-/Feshbach-Blockarchitektur geschrieben als
 
 $$
 \boxed{
@@ -227,7 +229,7 @@ $$
 Eine Graphgewichtung durch logarithmische Gesamtwegstrecke darf daher nicht mit der von-Mangoldt-Gewichtung identifiziert werden.  
 [G-T3: `✓[M]`]
 
-### Satz 4.4 — Ungerade Spuren benötigen echte Bipartitheit
+### Satz 4.4 — Ungerade Spuren: $r$-Gradierung reicht nicht
 
 Eine bloße $r$-Gradierung impliziert nicht
 
@@ -236,7 +238,7 @@ $$
 \qquad\forall j\ge0.
 $$
 
-Das entsprechende strukturelle Kriterium ist echte Bipartitheit des symmetrisierten Graphen.  
+Eine robuste strukturelle Zusatzbedingung, die ungerade geschlossene Pfade ausschließt und damit die entsprechenden ungeraden Spuren zum Verschwinden bringt, ist echte Bipartitheit des symmetrisierten Graphen.  
 [G-T3: `✓[M]`]
 
 ### Firewall 4.5 — Historische konkrete Normalisierung nicht kanonisch
