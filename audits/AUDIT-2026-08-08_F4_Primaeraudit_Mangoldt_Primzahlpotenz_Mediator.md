@@ -1,10 +1,11 @@
 # F4-Primäraudit — Mangoldt-/Primzahlpotenzstrang und Mediatorstatus
 
 **Datum:** 8. August 2026  
+**Abschluss:** 9. August 2026  
 **SYN-Ziel:** P05 — Relative Prime Channels and Arithmetic Edge Geometry  
 **Prüfart:** `TARGETED-REAUDIT` / `AUDIT-RECONCILED`  
-**Verfahren:** mathematischer Primäraudit; erster externer Repo-Check wegen nachgewiesenem Scope-Fehler **nicht als Gegenprüfung gewertet**; pfadgebundener Zweitcheck noch ausständig  
-**Status dieses Auditblatts:** Primäraudit abgeschlossen; **F4 noch nicht `PASS A COMPLETE`** bis gültige Gegenprüfung erfolgt
+**Verfahren:** mathematischer Primäraudit; erster externer Repo-Check `INVALID-SCOPE`; zweiter pfadgebundener Gegencheck gültig und ohne Gegenbefund (`20e7e07e`)  
+**Status dieses Auditblatts:** **`F4 PASS A COMPLETE` — doppelt geprüft**
 
 ---
 
@@ -57,7 +58,27 @@ $$
 \boxed{\text{Gegencheck 1: INVALID-SCOPE — nicht als unabhängige F4-Verifikation zählen.}}
 $$
 
-Sein Befund, dass kein allgemeines BC-Lemma $h_n^{\rm bal}=n^{-1/2}I$ nachgewiesen wurde, stimmt mit dem Primäraudit überein, kann wegen des unvollständigen Suchraums aber **nicht** als repo-weite Bestätigung gewertet werden. Der nächste Gegencheck muss pfadgebunden erfolgen.
+Sein Befund, dass kein allgemeines BC-Lemma $h_n^{\rm bal}=n^{-1/2}I$ nachgewiesen wurde, stimmt mit dem Primäraudit überein, kann wegen des unvollständigen Suchraums aber **nicht** als repo-weite Bestätigung gewertet werden.
+
+### 0.3 Zweiter externer Gegencheck: gültig
+
+Der zweite Gegencheck wurde an die in §0.1 fixierten exakten Pfade gebunden und las die gesamte relevante Kette direkt. Der Nachweis ist separat archiviert in
+
+`audits/AUDIT-2026-08-09_F4_Zweitcheck_Pfadgebunden.md`
+
+(Commit `20e7e07e`).
+
+Er prüfte genau die drei offenen Auditfragen:
+
+1. **All-$n$-BC-Halbgewicht:** kein Beweis von $h_n^{\rm bal}=n^{-1/2}I$ für alle $n\ge1$ gefunden; NEU-250g bleibt primitive $p$-Rechnung, NEU-250i enthält insofern eine ungedeckte Rückreferenz.
+2. **Mediator-Supersession:** NEU-250m–r superseden den NEU-250l-Endstand nicht; kein vollständig typisierter $D_{\rm scatt,N}$, keine kanonische $P_{\mathcal M}$, J-A bleibt `?[O]`.
+3. **Globale Spektral-Supersession:** NEU-250m–r beweisen keine Eigenwertfreiheit von $D_{\rm rel}$ auf sämtlichen zusammengesetzten/Mischsektoren; `[O-225-3]` bleibt offen.
+
+Damit gilt:
+
+$$
+\boxed{\text{Gegencheck 2: VALID — kein Gegenbefund.}}
+$$
 
 ---
 
@@ -191,7 +212,7 @@ Der spätere Scan NEU-250o–r verändert diesen Mediator-Endstatus nicht. Er ko
 
 ---
 
-## 5. Verbindliche F4-Firewalls nach Primäraudit
+## 5. Verbindliche F4-Firewalls nach Primäraudit und Zweitcheck
 
 11. **Trägertrennung ≠ Orthogonalitäts-No-Go.** NEU-250j widerlegt nicht die generische Nichtorthogonalität aus NEU-226/227; es trennt den Mangoldt-Träger von der direkten Kreuzprimkollision.
 12. **Arithmetische Identität ≠ Operatorrealisierung.** $\Lambda(p^m)/\sqrt{p^m}=\log p/p^{m/2}$ ist `✓[M]`; die Realisierung über $h_{p^m}^{\rm bal}$ und $H_{\rm pr}^{1/2}$ bleibt bis zum allgemeinen $n$-Lemma und zur Hilbert-Fundierung konditional.
@@ -204,7 +225,7 @@ Der spätere Scan NEU-250o–r verändert diesen Mediator-Endstatus nicht. Er ko
 
 ---
 
-## 6. P05-Endstand aus F4 nach Primäraudit
+## 6. P05-Endstand aus F4
 
 ### Darf nach P05 übernommen werden
 
@@ -233,22 +254,19 @@ Der spätere Scan NEU-250o–r verändert diesen Mediator-Endstatus nicht. Er ko
 
 ---
 
-## 7. F4-Primärurteil
+## 7. F4-Abschlussurteil
 
-$$
-\boxed{\text{F4 PRIMARY AUDIT COMPLETE — mit zwei epistemischen Rückstufungen und erweitertem Scope.}}
-$$
-
-Die zwei zentralen Rückstufungen sind:
+Der Primäraudit isolierte zwei epistemische Rückstufungen:
 
 1. **NEU-250i:** vollständige operatorische Primzahlpotenzrealisierung von `✓[M]` auf `CONDITIONAL / INCORPORATED_part`, bis das allgemeine $n$-Halbgewichtslemma und der Operator-Funktionalkalkül belegt sind.
 2. **NEU-250j:** pauschale globale „keine Eigenwerte“-Nebenbehauptung wird nicht übernommen; nur die auditierten Primsektoren sind gesichert. Die Trägertrennung selbst bleibt `✓[M]`.
 
-**Gegencheck 1:** `INVALID-SCOPE` — wegen der falschen Behauptung, NEU-250h/k/l/n und spätere 250-Knoten existierten nicht im Repo; zählt nicht als Zweitprüfung.
+Der gültige pfadgebundene Zweitcheck (`20e7e07e`) bestätigt beide Rückstufungen und findet außerdem keine spätere Supersession des Mediator-Endstands aus NEU-250l.
 
-**Noch ausständig vor `F4 PASS A COMPLETE`:** ein **pfadgebundener unabhängiger Gegencheck** dieses Auditblatts. Er muss die in §0.1 fixierten Dateien direkt lesen und nur zwei Sachfragen prüfen:
+Damit ist die Pass-A-Bedingung erfüllt:
 
-1. Existiert in `01-primkanten-werkzeuge/NEU-250g…j` oder `07-weil-explizitformel/NEU-250h…r` ein tatsächlicher Beweis des allgemeinen BC-Lemmas $h_n^{\rm bal}=n^{-1/2}I$ für alle $n\ge1$?
-2. Gibt es in derselben expliziten Kette eine spätere Aussage, die den Mediator-Endstatus von NEU-250l oder die Spektral-Firewall zu NEU-250j mathematisch superseded?
+$$
+\boxed{\text{F4 PASS A COMPLETE — doppelt geprüft.}}
+$$
 
-Ohne konkreten Quellfund bleibt der Primäraudit-Endstand unverändert.
+**Epistemische Firewall:** Dieser Abschluss bedeutet ausschließlich, dass der aktuell gültige F4-Quellenstand konsistent auditiert, korrigiert und unabhängig gegengeprüft ist. Die offenen Operator-, Hilbert-, Mischsektor- und Mediatorprobleme bleiben `?[O]` bzw. `CONDITIONAL` wie oben ausgewiesen.
