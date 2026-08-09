@@ -4,9 +4,11 @@
 **SYN-Ziel:** P05 — Relative Prime Channels and Arithmetic Edge Geometry  
 **Quellbestand:** 33 Dateien in `05-primkanal-fourierladung/`, NEU-151 bis NEU-173 inklusive Unterknoten  
 **Eröffnungsstand:** Commit `8ead5d52cea9a0e62c73f72fc48964cd9b5688ae`  
+**Primäraudit-Commit:** `b6a97e2706f9a925b1cbe09535462ee7658d5ac7`  
+**Zweitcheck:** `audits/AUDIT-2026-08-09_F2_Zweitcheck_Pfadgebunden.md`, Commit `27a5fe2e40cc760ef20b0ad29ce25b46f5ab1b1f`  
 **Endanker:** NEU-170d + NEU-173  
 **Prüfart:** `AUDIT-RECONCILED` mit gezielten `TARGETED-REAUDIT`-Checks an kollidierenden Statusaussagen  
-**Status dieses Auditblatts:** `F2 PRIMARY AUDIT COMPLETE / unabhängiger pfadgebundener Zweitcheck ausständig`
+**Status dieses Auditblatts:** `F2 PASS A COMPLETE — doppelt geprüft`
 
 ---
 
@@ -24,7 +26,7 @@ F2 wird nicht als neuer Vollaudit der 33 historischen Dateien behandelt. Maßgeb
 
 Die Eröffnungsmatrix aus Commit `8ead5d52` war eine Arbeitsmatrix. Der Primäraudit prüft nur dort neu, wo ein konkreter Status-, Typ- oder Provenienzkonflikt sichtbar ist. NEU-170d ist der epistemisch bereinigte DAG-Endanker für den $L_3^\circ$-/Einmodenstrang; NEU-173 ist der Endanker für den alten Typquellenpfad.
 
-**Wichtig:** `PASS A COMPLETE` bedeutet Migrationsabschluss, nicht Lösung aller mathematischen offenen Punkte. F2 wird erst nach einem unabhängigen pfadgebundenen Zweitcheck versiegelt.
+**Wichtig:** `PASS A COMPLETE` bedeutet Migrationsabschluss, nicht Lösung aller mathematischen offenen Punkte. Der unabhängige pfadgebundene Zweitcheck samt Mini-Nachtrag ist ohne konkreten Gegenbefund abgeschlossen; alle `?[O]`-, `CONDITIONAL`- und partiellen Status bleiben unverändert.
 
 ---
 
@@ -161,17 +163,16 @@ P05 übernimmt aus F2 nur die für relative Primkanäle und arithmetische Kanten
 
 ---
 
-## 7. Primärurteil
+## 7. Endurteil nach Zweitcheck
+
+Der unabhängige pfadgebundene Gegencheck prüfte die 33 vorgegebenen Quelldateien, die sieben Primäraudit-Korrekturen A–G und die Weiterleitungen. Ein formaler Zwischenfehler („alle gelesen“ bei gleichzeitig nicht direkt gelesenen NEU-159/160/166b-T) wurde vor der Versiegelung durch einen gezielten Mini-Nachtrag geschlossen. Dieser las genau diese drei Dateien direkt und bestätigte die Primäraudit-Befunde ohne Gegenbefund.
+
+Verbindlicher Zweitcheck-Nachweis:
+
+`audits/AUDIT-2026-08-09_F2_Zweitcheck_Pfadgebunden.md` — Commit `27a5fe2e40cc760ef20b0ad29ce25b46f5ab1b1f`.
 
 \[
-\boxed{\text{F2 PRIMARY AUDIT COMPLETE — unabhängiger pfadgebundener Zweitcheck ausständig.}}
+\boxed{\text{F2 PASS A COMPLETE — doppelt geprüft.}}
 \]
 
-Der Primäraudit schließt F2 **noch nicht** als `PASS A COMPLETE`. Der Zweitcheck soll keine neue mathematische Interpretation liefern, sondern ausschließlich prüfen:
-
-1. ob alle 33 Quellknoten erfasst sind,
-2. ob eine Statuszeile den aktuellen Quelldateien oder den Endankern NEU-170d/173 widerspricht,
-3. ob eine Weiterleitung P05/P06/P09/P11 offensichtlich falsch ist,
-4. ob die sieben in §3 genannten Korrekturen korrekt und vollständig sind.
-
-Erst nach einem Gegencheck ohne konkreten Gegenbefund wird F2 im `PASS-A-PROTOKOLL.md` versiegelt.
+**Epistemische Firewall:** Dieses Siegel bestätigt den reconcilierten Migrationsstand. Es schließt insbesondere weder die exakt zulässige Zeugenexistenz noch Hebungsunabhängigkeit, konkrete Irreduzibilität, globale Operatorverlängerung, $L_3$-Realisierung oder andere als `?[O]`/`CONDITIONAL` geführte mathematische Punkte.
