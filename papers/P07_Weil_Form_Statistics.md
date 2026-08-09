@@ -1,9 +1,10 @@
 # P07 — Weil-Form Statistics:
 Correlation Channels, Form-Factor Limits and Herglotz Interfaces
 
-**Status:** Patch 3/3 (8. August 2026) — SYN FINAL AUDITED
-**Basis:** PASS-A-PROTOKOLL.md (`baa3975b`); NEU-101 Patch 2 (`7ff336e2`)
-**Patch-Commits:** Skelett (`94c25130`) → Patch 1 (`596317bb`) → Patch 2 (`c6751e80`) → Patch 3 (dieser Commit)
+**Status:** Patch 4/4 (9. August 2026) — SYN FINAL AUDITED  
+**Basis:** PASS-A-PROTOKOLL.md (`baa3975b`); NEU-101 Patch 3 (`92d731d1`); NEU-120 Patch 2 (`410d0a91`)  
+**Targeted-Reaudit:** `audits/AUDIT-2026-08-09_P07_Externcheck_GM_aN_Targeted-Reaudit.md` (`57441d87`)  
+**Patch-Commits:** Skelett (`94c25130`) → Patch 1 (`596317bb`) → Patch 2 (`c6751e80`) → Patch 3 (`6a162f92`) → Patch 4 (dieser Commit)
 
 > *Patch-Notizen gehören ins PASS-A-PROTOKOLL und die NEU-Knoten.*
 > *Das SYN-Paper enthält nur bereinigte Definitionen, Sätze und Statusangaben.*
@@ -100,6 +101,8 @@ Der kanonische selbstduale Punkt $H=\sqrt{M}$ liegt im Gültigkeitsbereich. Kond
 $$\mathcal V(M,\sqrt{M})\sim \sqrt{M}\log\sqrt{M} = \tfrac12\sqrt{M}\log M.$$
 [NEU-101: CONDITIONAL]
 
+**Reaudit-Firewall.** Ein externer Gegencheck beanstandete irrtümlich eine Spezialisierung $H=M$. Der Live-Stand verwendet $H=\sqrt M$. Auch der Bereich $1\le H\le M^{1-\varepsilon}$ bleibt nach Quellengegencheck unverändert; die Untergrenze $M^\varepsilon$ gehört zur korrespondierenden Pair-Correlation-$T$-Seite. [P07 Targeted-Reaudit `57441d87`: AUDIT-RECONCILED]
+
 **Def. 3.3 (Lokales Formfaktor-Ersatzobjekt).**
 $\mathcal P^{\rm unf}_{N,H}$ (unnormalisiert, lokal) ersetzt das global normierte $\mathcal S_{N,H}$ (verworfen). [NEU-104: ✓[M]$_{\rm part}$]
 
@@ -118,15 +121,18 @@ $$\sigma_{\rm loc}(Q_{\rm Weil}) \stackrel{?}{=} |\alpha|. \qquad ?[O]$$
 
 ## §4 — Linearer Herglotz-Kanal versus quadratische Weil-Geometrie
 
-*Basis: NEU-111–115; kanonische Ebene: P02*
+*Basis: NEU-111–115; kanonische Ebene: P02; Symmetriepräzisierung: NEU-120 Patch 2*
 
 **Def. 4.1 (Herglotz-Funktion — Nevanlinna-Form).**
 Unter RH:
 $$m_{\rm arith}(z) = A + \int_{\mathbb R}\left(\frac1{t-z}-\frac{t}{1+t^2}\right)d\mu_{\rm arith}(t),$$
 wobei $\mu_{\rm arith}=\sum_{\gamma\in\Gamma}m_\gamma\delta_\gamma$ das **reine Nullstellenmaß** ist
-(keine Gamma-/Pol-/Primbeiträge) und $A=\Re\,m_{\rm arith}(i)\in\mathbb R$.
+(keine Gamma-/Pol-/Primbeiträge). Für die kanonische Zentrierung
+$$\Xi(z)=\xi\!\left(\tfrac12+iz\right),\qquad m_{\rm arith}(z)=-\Xi'(z)/\Xi(z)$$
+gilt wegen $\Xi(-z)=\Xi(z)$ und der reellen Symmetrie
+$$\boxed{A=\Re\,m_{\rm arith}(i)=0.}$$
 Die Summe $\sum_\gamma m_\gamma/(\gamma-z)$ konvergiert im kanonisch symmetrischen Sinn.
-[NEU-111, NEU-112, NEU-118: ✓[M]]
+[NEU-111, NEU-112, NEU-118; NEU-120 Patch 2: ✓[M]]
 
 Die allgemeine Herglotz–Nevanlinna-Darstellung erlaubt zusätzlich einen Term $bz$ mit $b\geq 0$.
 Für unser spezielles $m_{\rm arith}=-\Xi'/\Xi$ gilt jedoch $b=0$:
@@ -181,8 +187,18 @@ $$\widetilde\mu_N := c_N\,\mu_{\Omega,N}.$$
 Die zugehörigen Nevanlinna-normalisierten Approximanten:
 $$\widetilde m_N^{\rm ren}(z) := a_N + \int_{\mathbb R}\left(\frac1{t-z}-\frac{t}{1+t^2}\right)d\widetilde\mu_N(t),
 \quad c_N>0,\; a_N\in\mathbb R.$$
-$a_N$ kann von Null verschieden sein; nur bei zusätzlicher Symmetrie reduziert sich
-das auf eine blosse Skalierung $c_N m_{\Omega,N}$.
+$a_N$ kann bei endlichem $N$ von Null verschieden sein; nur bei zusätzlicher Symmetrie reduziert sich
+das auf eine bloße Skalierung $c_N m_{\Omega,N}$.
+
+**Satz 5.2a (Notwendiger Symmetrie-/Normalisierungstest).**
+Bei $z=i$ gilt exakt
+$$\frac1{t-i}-\frac{t}{1+t^2}=\frac{i}{1+t^2},$$
+also
+$$\Re\widetilde m_N^{\rm ren}(i)=a_N.$$
+Da für das Ziel $\Re m_{\rm arith}(i)=0$ gilt, folgt aus lokaler gleichmäßiger Konvergenz notwendig
+$$\boxed{\widetilde m_N^{\rm ren}\xrightarrow{\rm loc.glm.}m_{\rm arith}\quad\Longrightarrow\quad a_N\to0.}$$
+Dies ist keine zusätzliche RH-Annahme, sondern ein notwendiger Test für jede erfolgreiche Approximation.
+[NEU-120.3 Patch 2: ✓[M]]
 
 **Satz 5.3 (Konditionale Firewall).**
 $$\boxed{\widetilde m_N^{\rm ren}(z)\xrightarrow{N\to\infty}m_{\rm arith}(z)
@@ -192,7 +208,7 @@ $$\boxed{\widetilde m_N^{\rm ren}(z)\xrightarrow{N\to\infty}m_{\rm arith}(z)
 
 Offene Voraussetzungen:
 1. $A_N^{\rm Jac,-}$ selbstadjungiert [NEU-119: ?[O]]
-2. Renormierungsfolge $c_N>0$, Gewichtsfolge $a_N\in\mathbb R$ passend gewählt
+2. Renormierungsfolge $c_N>0$, Gewichtsfolge $a_N\in\mathbb R$ passend gewählt; jede erfolgreiche Folge muss zusätzlich $a_N\to0$ erfüllen [NEU-120.3: ✓[M] notwendige Bedingung]
 3. Kontrolle der Nevanlinna-Gewichte: $\int d\widetilde\mu_N(t)/(1+t^2)$ kontrolliert
 4. Vague Konvergenz $\widetilde\mu_N\to\mu_{\rm arith}$ allein impliziert **nicht** automatisch
    lokale gleichmäßige Konvergenz von $\widetilde m_N^{\rm ren}$ — Tail-Kontrolle nötig
@@ -222,6 +238,7 @@ $$A_N^{\rm Jac,-} \stackrel{?[O]}{\longrightarrow} m_{\Omega,N}
 | Hardy–Littlewood Singulärserien-Hauptterm | CONDITIONAL (Siebheuristik) | NEU-098 |
 | $\mathcal V(M,H)\sim H\log(M/H)$ uniform in $1\leq H\leq M^{1-\varepsilon}$ | CONDITIONAL (RH + SPC, GM 1987) | NEU-101 |
 | Selbstdualer Testwert $\mathcal V(M,\sqrt{M})\sim\tfrac12\sqrt{M}\log M$ | CONDITIONAL (RH + SPC) | NEU-101 |
+| Externer $H=M$-Gegenbefund gegen Korollar 3.2a | NO-GO / trifft Live-Stand nicht | P07 Targeted-Reaudit |
 | $\mathcal P^{\rm unf}_{N,H}$ lokales Formfaktor-Ersatzobjekt | PROVED$_{\rm part}$ | NEU-104 |
 | LFF $\Rightarrow$ Rampenasymptotik (einseitig) | PROVED$_{\rm part}$ | NEU-107 |
 | LFF $\Leftrightarrow$ Rampenform (Biimplikation) | NO-GO (nur $\Rightarrow$) | NEU-107 |
@@ -230,6 +247,7 @@ $$A_N^{\rm Jac,-} \stackrel{?[O]}{\longrightarrow} m_{\Omega,N}
 | $m_{\rm arith}$ Herglotz $\Leftrightarrow$ RH | PROVED | NEU-111 |
 | $\mu_{\rm arith}=\sum m_\gamma\delta_\gamma$ (reines Nullstellenmaß) | PROVED | NEU-112/118 |
 | $m_{\rm arith}$ in Nevanlinna-Form (symmetrische Konvergenz) | PROVED (Typisierung) | NEU-111/118 |
+| Zielkonstante $A=\Re m_{\rm arith}(i)=0$ | PROVED | NEU-120.3 |
 | Linearer Nevanlinna-Koeffizient $b=0$ (kein $bz$-Term) | PROVED | NEU-111/118 |
 | $W_\xi^{\rm norm}=W_{\rm zeros}$ (keine Doppelzählung) | PROVED | NEU-113/115 |
 | Kanonische Positivierungsbrücke $Q_{\rm zeros}=\sum m_\gamma|\widehat\phi|^2$ | PROVED | NEU-112/113 |
@@ -237,6 +255,7 @@ $$A_N^{\rm Jac,-} \stackrel{?[O]}{\longrightarrow} m_{\Omega,N}
 | $m_{\rm arith}=\Pi_\gamma(X)$ | OPEN | NEU-114 |
 | $A_N^{\rm Jac,-}$ selbstadjungiert | OPEN | NEU-119 |
 | Nevanlinna-Renormierung $(c_N,a_N)$, Tail-Kontrolle | OPEN | NEU-120 |
+| lokale glm. Konvergenz $\widetilde m_N^{\rm ren}\to m_{\rm arith}$ erzwingt $a_N\to0$ | PROVED (notwendige Bedingung) | NEU-120.3 |
 | Vague Konvergenz $\widetilde\mu_N\to\mu_{\rm arith}$ | OPEN | NEU-120 |
 | Konditionale Firewall $\widetilde m_N^{\rm ren}\to m_{\rm arith}\Rightarrow$ RH | CONDITIONAL | NEU-120 |
 | $\mu_{\Omega,N}(\mathbb R)=1$ ohne $c_N$ genügt | NO-GO (Massendiskrepanz) | NEU-120 |
@@ -256,5 +275,5 @@ $$A_N^{\rm Jac,-} \stackrel{?[O]}{\longrightarrow} m_{\Omega,N}
 
 ---
 
-*Fehlerhistorie, Patch-Notizen, Provenienz: PASS-A-PROTOKOLL.md + `03-weil-form-statistik/NEU-091–120`.*
-*Nächster Schritt: `papers/P07_Weil_Form_Statistics.tex` (neuer Chat).*
+*Fehlerhistorie, Patch-Notizen, Provenienz: PASS-A-PROTOKOLL.md + `03-weil-form-statistik/NEU-091–120` + P07 Targeted-Reaudit `57441d87`.*
+*LaTeX-Fassung: `papers/P07_Weil_Form_Statistics.tex`.*
