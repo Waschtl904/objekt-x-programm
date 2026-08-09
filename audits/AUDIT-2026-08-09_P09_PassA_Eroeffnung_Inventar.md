@@ -2,7 +2,7 @@
 
 **Datum:** 9. August 2026  
 **SYN-Ziel:** P09 — BC + Hochschild  
-**Status:** `PASS A OPEN — I1 COMPLETE, I2 NEXT`  
+**Status:** `PASS A OPEN — I1 SEALED, I2 ACTIVE`  
 **Voraussetzung:** P01 dependency-reconciled durch `AUDIT-2026-08-09_P01_Dependency_Reaudit_vor_P09.md`  
 **Hauptquellblock:** `06-hochschild-bc-algebra/`
 
@@ -59,11 +59,13 @@ Offen/exportiert bleiben u.a. ein zyklischer/getwistet-zyklischer Ersatzrepraese
 
 ## 4. Paketstruktur Gruppe I / P09
 
-### I1 — Algebraischer BC/Hochschild-Grundblock — **PASS A COMPLETE**
+### I1 — Algebraischer BC/Hochschild-Grundblock — **PASS A COMPLETE / SEALED**
 
 **Quellen:** NEU-174–190 (mit Doppeldatei NEU-183)  
 **Audit:** `audits/AUDIT-2026-08-09_P09_I1_BC_Hochschild_Grundblock_Reconciliation.md`  
-**Commit:** `bf636a2d`  
+**Audit-Commit:** `bf636a2d`  
+**Gegencheck:** `audits/AUDIT-2026-08-09_P09_I1_Gegencheck_Pfadgebunden.md`  
+**Gegencheck-Commit:** `12e12f12` — `VALID`, kein Gegenbefund  
 **Pruefart:** ueberwiegend `AUDIT-RECONCILED` / `AUDIT-REUSED`  
 **Endstand:**
 - `B_3^mod:=A_Q` und `C_fin^•` liefern einen algebraischen Modell-/Gewichtraumrahmen; keine Herkunftsidentifikation und kein Hilbertraumprojektor.
@@ -75,9 +77,9 @@ Offen/exportiert bleiben u.a. ein zyklischer/getwistet-zyklischer Ersatzrepraese
 - NEU-187 beweist nicht die volle geladene BC-Derivation: punktierte Gruppenkozykel ja, Erweiterung offen;
 - NEU-190: fehlende Operatorbruecke nur `✓[M]_neg,Quelle`, kein mathematischer Unmoeglichkeitssatz.
 
-**Gegencheck:** ausstehend; fuenf atomare Gegencheckfragen stehen im I1-Auditblatt. Ein konkreter Gegenbefund oeffnet nur den betroffenen Punkt erneut.
+**Seal-Regel:** I1 wird nur bei einem konkreten neuen mathematischen Gegenbefund punktuell wieder geoeffnet.
 
-### I2 — Aeussere Derivationen und singulaere Potentialroute — **NAECHSTER AKTIVER BLOCK**
+### I2 — Aeussere Derivationen und singulaere Potentialroute — **AKTIVER BLOCK**
 
 **Quellen:** NEU-192–211 (mit Doppeldatei NEU-193; Nummernluecken als Live-Inventar akzeptieren)  
 **Themen:** Dualzeugen, HH1-Reduktion, Kommutatorquotient, regulaere/singulaere Potentiale, dyadische/faktorielle Schalen, Charakterkern- und Transport-No-Gos.  
@@ -131,10 +133,10 @@ Der externe Gegencheck zur P09-Eroeffnung hat korrekt markiert, dass NEU-222 als
 
 ## 6. Naechster Arbeitsschritt
 
-I1 ist abgeschlossen und wartet auf den externen Gegencheck. Parallel ist der naechste aktive Pass-A-Block:
+I1 ist extern gegengeprueft und versiegelt. Aktiver Pass-A-Block:
 
 \[
-\boxed{\text{P09 PASS A OPEN — I1 COMPLETE; I2 NEU-192–211 NEXT.}}
+\boxed{\text{P09 PASS A OPEN — I1 SEALED; I2 NEU-192–211 ACTIVE.}}
 \]
 
-I2 folgt weiterhin der Regel `Auditsuche zuerst`; NEU-222 wird als spaeter I6-Superseding-Scan verbindlich mitgefuehrt.
+I2 folgt der Regel `Auditsuche zuerst`. Der Auditordner enthaelt derzeit kein eigenstaendiges historisches I2-Gesamtaudit; daher werden die spaeten Revisions-/Auditknoten innerhalb des Quellenstrangs sowie NEU-222 und NEU-219y als Reconciliation-Anker verwendet.
