@@ -1,0 +1,665 @@
+\documentclass[11pt,a4paper]{amsart}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array,booktabs,longtable}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Satz}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Bemerkung}
+\newtheorem{openproblem}[theorem]{Offenes Problem}
+
+\newcommand{\LFF}{\mathrm{LFF}}
+\newcommand{\OPEN}{\mathrm{OPEN}}
+
+\title[P10 --- No-Go Theorems]{P10 --- No-Go Theorems for Canonical Global Coupling}
+\author{Objekt-X-Programm}
+\date{2026-08-09}
+
+\begin{document}
+
+\begin{abstract}
+P10 sammelt die bis zum 9. August 2026 eindeutig auditierten Negativbefunde aus den
+SYN-Blöcken P05--P09 und ordnet sie nach mathematischem Typ. Ziel ist nicht,
+den Suchraum künstlich zu verkleinern, sondern falsche Abkürzungen dauerhaft
+zu sperren. Lokale Primfaser- und Rang-eins-Modelle liefern nicht automatisch
+die globale positive Geometrie von Objekt~X; der auditierte
+Primfaser-Transportgenerator ist kein diskreter Hilbert--Pólya-Endoperator;
+eine endliche Feshbachidentität beweist keine globale Schatten-/Fredholm-
+Grenzstruktur; und der konkrete NEU-088--90-Determinantenpfad mit
+$h_r=r$ und $M_N=N/\log N$ kollabiert auf $D_N(z)\to1$ statt auf einen
+nichttrivialen $C\xi(z)$-Grenzwert. Zugleich bleibt
+$\LFF\Rightarrow\mathrm{Rampe}$ nur einseitig bewiesen und
+$\mathrm{Rampe}\Rightarrow\LFF$ offen. Mehrere historische Jacobi-,
+Primeclock-, Mellin-, Finite-Part-, KMS-, zyklische und Hopf-Reparaturen
+scheitern in ihrem konkreten Scope. Keiner dieser Befunde schließt eine
+globale nichtorthogonale positive Gram-/Hilbertraumstruktur mit
+Primzahlpotenzkanälen, archimedischem Anteil und echter globaler Kopplung aus.
+P10 enthält keinen RH-Beweis und konstruiert Objekt~X nicht.
+\end{abstract}
+
+\maketitle
+
+% ----------------------------------------------------------------
+\section{Statussemantik und Anti-Overreach-Firewall}
+% ----------------------------------------------------------------
+
+\begin{remark}[Vier logisch verschiedene Klassen]\label{rem:status}
+P10 trennt strikt:
+\begin{enumerate}
+  \item \emph{NO-GO}: eine exakt formulierte Behauptung oder Konstruktion ist
+        im angegebenen Scope widerlegt;
+  \item \emph{Kandidaten-/Scope-No-Go}: ein konkreter Modellpfad oder eine
+        Schlussweise scheitert, ohne Alternativen auszuschließen;
+  \item \emph{SUPERSEDED}: eine historische Formel oder Typisierung ist durch
+        einen späteren korrigierten Stand ersetzt;
+  \item \emph{OPEN / CONDITIONAL}: weder bewiesen noch widerlegt und damit
+        ausdrücklich kein No-Go.
+\end{enumerate}
+\end{remark}
+
+\begin{remark}[Präzedenzregel]\label{rem:precedence}
+Verbindlich ist die Reihenfolge
+\[
+\text{P10 FINAL SEAL / Matrix}
+>
+\text{P10 Gegencheck / Targeted-Reaudit}
+>
+\text{lokal synchronisierter SYN-Stand}
+>
+\text{historischer NEU-Stand}.
+\]
+\end{remark}
+
+\begin{remark}[Retired Slot P10-N15]\label{rem:n15}
+Der historische Slot P10-N15 ist kein aktiver No-Go. Der auditierte P07-Block
+beweist
+\[
+  \boxed{\LFF\Longrightarrow\mathrm{Rampe}},
+\]
+aber für
+\[
+  \boxed{\mathrm{Rampe}\Longrightarrow\LFF}
+\]
+liegt weder Beweis noch Gegenbeispiel vor. Der Slot ist daher
+\emph{RETIRED / MOVED TO P10-O29}.
+\end{remark}
+
+% ----------------------------------------------------------------
+\section{Primkanal-, Lift-, Projektor- und Spektralfirewalls}
+% ----------------------------------------------------------------
+
+\begin{theorem}[Gewichteter Rang-eins-Kanal]\label{thm:n01}
+Für das auditierte induzierte Rang-eins-Modell
+\[
+  P_p=|c_p|^2\Pi_p^{(1)}
+\]
+gilt
+\[
+  P_p^2=|c_p|^2P_p.
+\]
+Ohne zusätzliche Normierung $|c_p|^2=1$ ist $P_p$ daher nicht automatisch ein
+orthogonaler Projektor. Andere normierte Projektoren und andere
+Primkanalrealisierungen bleiben möglich. \emph{[P10-N01]}
+\end{theorem}
+
+\begin{theorem}[Endlich viele Primlabels erzwingen keinen endlichen Rang]
+\label{thm:n02}
+Aus endlich vielen Primlabels bis $N$ folgt nicht
+\[
+  \operatorname{rank}K_N\le\pi(N),
+\]
+wenn die Primfasern weiterhin unendlich viele interne Indizes besitzen.
+Eine zusätzliche echte Fasertrunkierung kann den Rang dagegen endlich machen.
+\emph{[P10-N02]}
+\end{theorem}
+
+\begin{theorem}[Source-Cone-Firewall]\label{thm:n03}
+Im explizit auditierten Source-Cone liefern zusätzliche nichttriviale lineare
+Abbildungen $L_{p,a}$ keinen neuen homogenen Kern der dort verlangten Art.
+Dieser Befund betrifft ausschließlich die geprüfte Quellarchitektur;
+Operatoren außerhalb dieses Source-Cones und andere intrinsische
+Quellkonstruktionen bleiben offen. \emph{[P10-N03]}
+\end{theorem}
+
+\begin{theorem}[Primfaser-Transport ist kein diskreter HP-Endoperator]
+\label{thm:n04}
+Der auditierte Transportgenerator vom Typ
+\[
+  2i\kappa\frac{d}{dt}
+\]
+hat auf der geprüften Primfaser rein absolut kontinuierliches Spektrum und
+keinen kompakten Resolventen. Er ist in dieser Realisierung kein diskreter
+Hilbert--Pólya-Endoperator. Ein späterer global gekoppelter Endoperator, eine
+andere Hilbertisierung oder zusätzliche zusammengesetzte Sektoren werden nicht
+ausgeschlossen. \emph{[P10-N04; N05 SUPERSEDED]}
+\end{theorem}
+
+\begin{theorem}[Matrixkoeffizient ist kein automatisches Normquadrat]
+\label{thm:n06}
+Aus der Unitarität von $U_t$ folgt für
+\[
+  g_a(\log p)=\operatorname{Re}\langle a,U_{\log p}a\rangle
+\]
+nicht automatisch $g_a(\log p)\ge0$. \emph{[P10-N06]}
+\end{theorem}
+
+\begin{theorem}[Naive Mangoldt-Energielesart]\label{thm:n07}
+Eine historische gradnormierte Prime-edge-Energie reproduziert auf gemischten
+Zahlen nicht automatisch die Mangoldt-Funktion; insbesondere ist
+\[
+  \Lambda(6)=0.
+\]
+Ein echter Prime-Power-/Mangoldt-Mediator bleibt möglich. \emph{[P10-N07]}
+\end{theorem}
+
+\begin{proposition}[Historische Typ- und Symmetrieformeln]\label{prop:n08n10}
+Im auditierten Jacobi-/Divisorgraph-Scope gelten:
+\begin{enumerate}
+  \item $J_N^-:=\frac12(\Theta_N-\Theta_N^\dagger)$ ist schiefadjungiert;
+        $S_N=-iJ_N^-$ ist der selbstadjungierte Kandidat. \emph{[P10-N08]}
+  \item Für $k>1$ gilt nicht $\log(p^k)=\Lambda(p^k)$. \emph{[P10-N09]}
+  \item Eine reine $r$-Gradierung erzwingt ohne zusätzliche echte
+        Bipartitheit nicht das Verschwinden aller ungeraden Spuren.
+        \emph{[P10-N10]}
+\end{enumerate}
+\end{proposition}
+
+% ----------------------------------------------------------------
+\section{Feshbach-, Fredholm- und Determinantenfirewalls}
+% ----------------------------------------------------------------
+
+\begin{theorem}[Finite Feshbachidentität ist keine globale Konvergenztheorie]
+\label{thm:n11}
+Eine endliche Feshbach-/Schur-Komplement-Identität beweist für sich allein
+weder globale Operatorgrenzen noch Hilbert--Schmidt-, Spurklassen- oder
+Fredholm-Konvergenz. Dafür sind separat bewiesene uniforme Schatten- und
+Grenzabschätzungen erforderlich. \emph{[P10-N11]}
+\end{theorem}
+
+\begin{theorem}[Reconciliertes Determinanten-No-Go im NEU-088--90-Scope]
+\label{thm:n12}
+Im konkreten Modell
+\[
+  h_r=r,\qquad M_N=\frac{N}{\log N},\qquad z\text{ fest und zulässig},
+\]
+gilt nach dem späteren P06-Reaudit
+\[
+  T_N(z)=O_z\!\left(\frac{\log\log N}{\log N}\right)\to0,
+\]
+ferner
+\[
+  \|C_N(z)\|_{HS}\to0,
+  \qquad
+  \operatorname{Tr}(C_N(z)^k)\to0\quad(k\ge2),
+\]
+und damit
+\[
+  \boxed{D_N(z)\to1.}
+\]
+Diese konkrete Skalierung liefert keinen nichttrivialen
+$C\xi(z)$-Determinantengrenzwert. \emph{[P10-N12]}
+\end{theorem}
+
+\begin{remark}[SUPERSEDED-Historie]\label{rem:n13n14}
+Die historische Aussage
+\[
+  D_N(z)\to e^{-\gamma^2/4}
+\]
+ist für denselben Modellscope \emph{SUPERSEDED}; sie ist kein zweiter No-Go.
+\emph{[P10-N14]} Für komplexes $z$ gilt allgemein
+\[
+  \|C\|_{HS}^2=\operatorname{Tr}(C^*C),
+\]
+nicht $\operatorname{Tr}(C^2)$. Die historische Selbstadjungiertheits-/
+Hilbert--Schmidt-Lesart ist entsprechend ersetzt. \emph{[P10-N13]}
+\end{remark}
+
+\begin{remark}[Was der Determinantenbefund nicht ausschließt]
+\label{rem:det-open}
+Offen bleiben andere Skalierungen, zusätzliche Renormierungen, globale
+Feshbach-Transfers, Fredholm- oder $\det_2$-Konstruktionen und eine
+Determinantenstruktur nach vorheriger Weil-Hilbertisierung.
+\end{remark}
+
+% ----------------------------------------------------------------
+\section{Weil-, Formfaktor- und Herglotzfirewalls}
+% ----------------------------------------------------------------
+
+\begin{theorem}[LFF ist keine vollständige Weilform-Konstruktion]
+\label{thm:n16}
+Der lokale Formfaktor allein konstruiert oder identifiziert $Q_{\rm Weil}$
+nicht. Eine zusätzliche Typisierungs-, Autokorrelations- oder
+Positivierungsbrücke bleibt erforderlich. \emph{[P10-N16]}
+\end{theorem}
+
+\begin{theorem}[Massendiskrepanz im unrenormierten Spektralmaß]
+\label{thm:n17}
+Für einen normierten zyklischen Vektor gilt
+\[
+  \mu_{\Omega,N}(\mathbb R)=1,
+\]
+während das arithmetische Zielmaß unendliche Gesamtmasse besitzt. Das
+unskalierte Wahrscheinlichkeitsmaß genügt daher nicht als direkte
+Approximation. Eine Renormierung $c_N>0$ und Nevanlinna-/Tail-Kontrolle bleiben
+erforderlich. \emph{[P10-N17]}
+\end{theorem}
+
+\begin{theorem}[Vage Maßkonvergenz genügt nicht automatisch]
+\label{thm:n18}
+Aus $\widetilde\mu_N\to\mu_{\rm arith}$ im vagen Sinn folgt bei unendlicher
+Zielmasse nicht automatisch lokal gleichmäßige Konvergenz der zugehörigen
+Nevanlinna-/Herglotzfunktionen. Geeignete Tail- und Gewichtskontrolle muss
+separat bewiesen werden. \emph{[P10-N18]}
+\end{theorem}
+
+\begin{remark}[SUPERSEDED Pol-Lesart]\label{rem:n19}
+Pole $\pm i/2$ gehören nicht als Pole in das kanonisch zentrierte
+Nullstellen-Herglotzobjekt
+\[
+  m_{\rm arith}=-\Xi'/\Xi.
+\]
+Gamma-/Polbeiträge gehören auf die getrennte explizite-Formel-Seite.
+\emph{[P10-N19]}
+\end{remark}
+
+% ----------------------------------------------------------------
+\section{Jacobi-, Prä-Lanczos- und Renormierungsfirewalls}
+% ----------------------------------------------------------------
+
+\begin{theorem}[Unrenormierter erster Lanczos-Kanal kollabiert]
+\label{thm:n20}
+Für den auditierten Startvektor $q_0=e_1$ gilt
+\[
+  b_{1,N}\sim\gamma\sqrt{\frac{\log N}{N}}\to0.
+\]
+Diese unrenormierte direkt symmetrisierte Jacobi-Folge besitzt daher keinen
+nichtdegenerierten ersten Grenzparameter $b_1>0$. \emph{[P10-N20]}
+\end{theorem}
+
+\begin{theorem}[Startvektor-Resolvente liefert nicht $m_{\rm arith}$]
+\label{thm:n21}
+Im selben unrenormierten Kanal konvergiert die Startvektor-Resolvente gegen
+\[
+  -\frac1z,
+\]
+nicht gegen $m_{\rm arith}$. \emph{[P10-N21]}
+\end{theorem}
+
+\begin{theorem}[Erste Lanczos-Kante entscheidet nicht den Gesamtoperator]
+\label{thm:n22}
+Aus $b_{1,N}\to0$ folgt nicht, dass alle höheren Offdiagonalen verschwinden
+oder ein möglicher Grenzoperator global diagonal ist. \emph{[P10-N22]}
+\end{theorem}
+
+\begin{proposition}[Self-Energy-, Skalierungs- und Schur-Firewalls]
+\label{prop:n23n25}
+Folgende historische Schritte sind gesperrt:
+\begin{enumerate}
+  \item Vektorwertige Self-Energy und skalare Quadratformsumme dürfen nicht
+        identifiziert werden. \emph{[P10-N23, SUPERSEDED]}
+  \item Aus $P_{kl}\le Cc^{1/2}$ und $A_{kl}=P_{kl}c^{1/2}$ folgt
+        $A_{kl}=O(c)$, nicht $O(1)$. \emph{[P10-N24]}
+  \item Phasige Cancellation kontrolliert nicht automatisch
+        $\sup_i\sum_{j\ne i}|T_{ij}|$. \emph{[P10-N25]}
+\end{enumerate}
+\end{proposition}
+
+\begin{theorem}[Ungewichtete Primeclock-H1-Schranke]
+\label{thm:n26n27}
+Die historische Behauptung
+\[
+  \left|\sum_{p\in[P,2P]}p^{-iu}\right|\le\frac{C}{|u|}
+\]
+mit $P$-unabhängigem $C$ ist für festes $u$ falsch. Damit ist auch der konkret
+hiervon abhängige NEU-133-Abel/H1-Kern in dieser ungewichteten Form nicht
+bewiesen. Ein korrekt gewichtetes Primeclock-/Abel-Ersatzlemma bleibt offen.
+\emph{[P10-N26, P10-N27]}
+\end{theorem}
+
+\begin{proposition}[Spur- und Normierungsfirewalls]\label{prop:n28n32}
+Es gelten die korrigierten Firewalls:
+\begin{enumerate}
+  \item
+  \[
+    \sum_{p\le N}\frac{(\log p)^2}{p}
+    \sim\frac12(\log N)^2,
+  \]
+  nicht $\frac13(\log N)^3$. \emph{[P10-N28, SUPERSEDED]}
+  \item Divergenz eines Rohanteils folgt nicht allein aus einer oberen
+        Schranke für $|c_p|^2$. \emph{[P10-N29]}
+  \item Allgemein gilt nicht $\|CC^*\|_{S_1}=\|C\|_{op}^2$; für
+        Hilbert--Schmidt-$C$ gilt
+        \[
+          \|CC^*\|_{S_1}=\|C\|_{S_2}^2.
+        \]
+        \emph{[P10-N30]}
+  \item Spurklasse allein liefert keine primeweise Eigenwert-/Eulerprodukt-
+        Lesart ohne zusätzliche Primdiagonalität/T2. \emph{[P10-N31]}
+  \item Die historische zweite-Spur-Formel mit zusätzlichem Gesamtfaktor ist
+        ersetzt durch
+        \[
+          \operatorname{Tr}(\Sigma^2)
+          =\sum_{p,q}w_pw_q\operatorname{Tr}(P_pP_q).
+        \]
+        \emph{[P10-N32, SUPERSEDED]}
+\end{enumerate}
+\end{proposition}
+
+\begin{theorem}[$\vartheta$ ist nicht $\psi$: Prime-only-Mellin-Firewall]
+\label{thm:n33n36}
+Ein Prime-only-Cutoff darf die Nullstellenterme der vollen
+$\psi$-Explizitformel nicht ohne Prime-Power-Korrektur übernehmen. Der direkte
+Import von
+\[
+  -\frac{\zeta'}{\zeta}(\beta+s)
+\]
+für die historische Prime-only-Summe $S_{\varphi,X}$ ist nicht korrekt; der
+passende volle Mangoldt-Kanal ist $\Psi_{\varphi,X}$.
+\emph{[P10-N33, P10-N34]}
+
+Für die dort verwendete Mellintransformierte gilt außerdem nicht allgemein
+``ganz und $\widehat\varphi(0)=1$''; im auditierten Setup liegt ein einfacher
+Pol mit Residuum $1$ vor. \emph{[P10-N35, SUPERSEDED]}
+
+Die historische $\Psi-S$-Differenzformel ist ersetzt; die korrigierte
+Prime-Power-Differenz lautet
+\[
+  \sum_{k\ge2,p}\log p\,
+  \bigl[\varphi(p^k/X)-\varphi(p/X)\bigr]p^{-k\beta}.
+\]
+\emph{[P10-N36]}
+\end{theorem}
+
+\begin{theorem}[Analytische Fortsetzung ist noch keine operatorielle
+Finite-Part-Realisierung]\label{thm:n37}
+Eine Definition
+\[
+  \operatorname{Tr}_{\rm reg}
+  :=\operatorname{AC}\!\left[-\frac{\zeta'}{\zeta}\right]
+\]
+beweist für sich allein keinen operatoriellen Cutoff-/Finite-Part-Grenzwert.
+Eine echte Operatorrealisierung bleibt offen. \emph{[P10-N37]}
+\end{theorem}
+
+% ----------------------------------------------------------------
+\section{Hochschild-, KMS-, zyklische und Hopf-Firewalls}
+% ----------------------------------------------------------------
+
+\begin{theorem}[Frühe geladene HH4-Schablone]\label{thm:n38}
+Der frühe symmetrische geladene Grad-4-Kandidat besitzt im auditierten Scope
+verschwindende volle Alternation. Das schließt diesen Kandidaten aus, nicht
+beliebige geladene $HH^4$-Klassen. \emph{[P10-N38]}
+\end{theorem}
+
+\begin{theorem}[NEU-212-Schwartz-Zieltyp]\label{thm:n39n40}
+Für die dort definierte absolute Schnellabfallbedingung gilt nicht
+\[
+  A_{\rm alg}\subset A^\infty.
+\]
+Schon $1$ und die algebraischen Erzeuger liegen nicht im behaupteten Zieltyp.
+Auch die konkrete Regularisierung $G/\log(\nu+2)$ ist nicht Schwartz. Diese
+historische Route ist durch logarithmische Zieltypen ersetzt.
+\emph{[P10-N39, P10-N40]}
+\end{theorem}
+
+\begin{theorem}[Schwartz-Inkremente und divergierende Shellgewichte]
+\label{thm:n41}
+Die für die singuläre Potentialroute benötigten divergierenden Gewichte sind
+mit der historischen Schwartz-Inkrementforderung im auditierten Aufbau nicht
+vereinbar. Andere Regularitätsarchitekturen werden nicht ausgeschlossen.
+\emph{[P10-N41]}
+\end{theorem}
+
+\begin{theorem}[Kein nichttrivialer universeller globaler Bimodul-Glätter]
+\label{thm:n42}
+Ein globaler normstetiger $A_{\rm alg}$-Bimoduloperator
+\[
+  R:A_{C^*}\to A^\infty\subsetneq A_{C^*}
+\]
+muss im auditierten unitalen Zentralisator-Scope trivial sein. Ein
+nachträglicher universeller Glätter repariert daher den historischen Zieltyp
+nicht. Direkt definierte logarithmische Zielräume bleiben möglich.
+\emph{[P10-N42; P09-CORE-NOGO]}
+\end{theorem}
+
+\begin{theorem}[Reguläre Implementierer und konkrete L/R/S-Platzierungen]
+\label{thm:n43n44}
+Normkonvergente Potentialimplementierer liefern im relevanten Quotienten nur
+innere/invisible Derivationen. Außerdem scheitern die drei konkret auditierten
+dyadischen L/R/S-Platzierungen. Die relation-adaptierte Architecture~III bleibt
+offen. \emph{[P10-N43, P10-N44]}
+\end{theorem}
+
+\begin{remark}[SUPERSEDED Quotientenroute]\label{rem:n45}
+Der frühe Baker-/Log-Gewichts-Separationsansatz beweist den vollen Quotienten
+$M/[A,M]$ nicht. Für den positiven Cup-Beweis genügt ein partieller Quotient;
+der volle Quotient bleibt offen. \emph{[P10-N45, SUPERSEDED]}
+\end{remark}
+
+\begin{theorem}[Direkter geladener KMS-Detektor]\label{thm:n46}
+Für ein homogenes nichtneutrales Zielelement und $\beta>0$ verschwindet die
+direkte KMS-Auswertung. Nichtverschwindende Detektoren benötigen eine explizite
+Gradneutralisierung. \emph{[P10-N46]}
+\end{theorem}
+
+\begin{theorem}[Konkreter I4-KMS-Kozykel]\label{thm:n47}
+Im bewiesenen Bereich $\beta>1$ gilt
+\[
+  T_{\sigma_\beta}\Phi_{\beta,\chi}
+  =g^{-\beta}\Phi_{\beta,\chi},
+  \qquad g\ne1.
+\]
+Der konkrete I4-Repräsentant ist dort nicht bereits ein invariant
+getwistet-zyklischer Repräsentant. Andere Repräsentanten oder
+Koeffiziententheorien bleiben offen. \emph{[P10-N47]}
+\end{theorem}
+
+\begin{theorem}[Standard-Zyklisierung annihiliert nichttriviale
+Gewichtssektoren]\label{thm:n48}
+In einem parazyklischen Eigenraum mit Gewicht $w\ne1$ ist $1-T$ invertierbar;
+der Sektor verschwindet daher unter gewöhnlicher Invarianten-/Koinvarianten-
+Zyklisierung. \emph{[P10-N48]}
+\end{theorem}
+
+\begin{theorem}[Externe Eigenlinie ist noch keine zyklische
+Koeffiziententheorie]\label{thm:n49}
+Eine formale eindimensionale Eigenlinie kompensiert zwar einen Eigenwert,
+liefert aber ohne passende Koflächen-, Kodegenerations- und Rotationsstruktur
+keine zyklische Koeffiziententheorie. \emph{[P10-N49]}
+\end{theorem}
+
+\begin{theorem}[Zwei minimale Koeffizientenreparaturen scheitern]
+\label{thm:n50n51}
+Im auditierten Scope scheitern sowohl ein eindimensionales unital-
+nichtdegeneriertes $\sigma_\beta$-äquivariantes $A_{\rm alg}$-Bimodul als auch
+der minimale Standard-SAYD-Pfad über $H_\beta=\mathbb C[\mathbb Z]$, wenn
+exakter KMS-Twist, Ladungskompensation und Stabilität gleichzeitig verlangt
+werden. Ein nichtstandardmäßiger $A$-relativer Hopf-Koeffizient bleibt offen.
+\emph{[P10-N50, P10-N51]}
+\end{theorem}
+
+\begin{theorem}[Unmarkierte Orbitmodule verlieren den Orbitindex]
+\label{thm:n52}
+Für die gesättigten unmarkierten Orbitmodule gilt
+\[
+  N_k=N_0.
+\]
+Sie können verschiedene Orbitgrade daher nicht injektiv kodieren. Eine extern
+markierte Orbitsumme bleibt möglich. \emph{[P10-N52]}
+\end{theorem}
+
+\begin{theorem}[Kanonischer skalarer Basislift besitzt keine konstante globale
+Rotationseigenrelation]\label{thm:n53}
+Für den kanonischen Basislift $\widetilde L_0$ und den daraus gebildeten
+Kozykel $\Phi_0$ gilt im bewiesenen KMS-Bereich $\beta>1$
+\[
+  \boxed{t\Phi_0\ne C\Phi_0\qquad\forall C\in\mathbb C.}
+\]
+Andere zyklische/getwistet-zyklische Repräsentanten, orbitverschiebende
+nichtkanonische Lifts, andere Koeffizienten und Weil-/Gamma-Korrekturen bleiben
+offen. \emph{[P10-N53; P09-CORE-NOGO]}
+\end{theorem}
+
+\begin{remark}[Historische Rotationsformeln]\label{rem:n54}
+Die Formeln $t\Phi_0=g^{-\beta}\Phi_0$ und $s=-1$ für den kanonischen Basislift
+sind \emph{SUPERSEDED}. \emph{[P10-N54]}
+\end{remark}
+
+% ----------------------------------------------------------------
+\section{Positiver Restbestand}
+% ----------------------------------------------------------------
+
+\begin{remark}[P10 ist eine Firewall-Sammlung]
+P05--P09 liefern zugleich positive Bausteine: relative Primkanäle und ihre
+Quell-/Liftgeometrie, finite Feshbach-/Schur-Komplement-Identitäten im korrekten
+endlichen Scope, den Weilform-/Herglotz-Rahmen, korrigierte Prime-Power-/
+Mangoldt- und Spurformeln sowie im P09-Strang eine nichttriviale geladene
+äußere Derivation in größerem Koeffizientenraum und den nichttrivialen geladenen
+Hochschild-Cup in $\mathfrak M_{\rm glob}^{\log}$. P10 ist deshalb keine
+Negativbilanz des Gesamtprogramms.
+\end{remark}
+
+% ----------------------------------------------------------------
+\section{OPEN / CONDITIONAL: ausdrücklich außerhalb des No-Go-Scope}
+% ----------------------------------------------------------------
+
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.12\textwidth}
+                  >{\raggedright\arraybackslash}p{0.62\textwidth}
+                  >{\raggedright\arraybackslash}p{0.18\textwidth}}
+\toprule
+ID & Offener Punkt & Status\\
+\midrule
+\endfirsthead
+\toprule
+ID & Offener Punkt & Status\\
+\midrule
+\endhead
+P10-O01 & $c_p\ne0$ für alle Primkanäle & OPEN\\
+P10-O02 & Liftunabhängigkeit und universelle Asymptotik von $|c_p|^2$ & OPEN\\
+P10-O03 & neuer intrinsischer Ursprung von $L_3$ / vollständiges Zieltuple & OPEN\\
+P10-O04 & voller balancierter Prime-Power-Lift $h_n^{\rm bal}=n^{-1/2}I$ & OPEN\\
+P10-O05 & globale Primorthogonalität bzw. globale Kreuzblöcke & OPEN\\
+P10-O06 & intrinsische $\gamma_N=1$-Rigidität & OPEN\\
+P10-O07 & $S_4\setminus S_2$-Grenzstruktur / globale Schatten-Fredholm-Brücke & OPEN\\
+P10-O08 & Selbstadjungiertheit des historischen $A_N^{\rm Jac,-}$ & OPEN\\
+P10-O09 & kanonische Nevanlinna-Renormierung $(c_N,a_N)$ und Tail-Kontrolle & OPEN\\
+P10-O10 & $m_{\rm arith}=\Pi_\gamma(X)$ & OPEN\\
+P10-O11 & $b_{2,N}/b_{1,N}\to\infty$ & OPEN\\
+P10-O12 & allgemeines skalares Renormierungs-No-Go & CONDITIONAL auf O11\\
+P10-O13 & intrinsische positive nichtskalare Prä-Lanczos-Metrik $W_N$ & OPEN\\
+P10-O14 & intrinsische Schranke $|c_p|^2=O((\log p)^2/p)$ & OPEN / CONDITIONAL\\
+P10-O15 & intrinsisches T2 und $c_p\ne0$ & OPEN\\
+P10-O16 & gewichtetes Primeclock-/Abel-Ersatzlemma & OPEN\\
+P10-O17 & quantitativer/uniformer $\Psi/S$-Transfer & OPEN\\
+P10-O18 & uniforme nullstellenvermeidende Kontur + volle Residuenzählung & OPEN\\
+P10-O19 & operatorielle $\operatorname{Tr}_{\rm reg}$-/Finite-Part-Realisierung & OPEN\\
+P10-O20 & lokaler $M_{g,p}^{\log}$ als voller $A_{(p),\rm alg}$-Bimodul & OPEN\\
+P10-O21 & voller Quotient $M/[A,M]$ & OPEN\\
+P10-O22 & $HH^1(A_{\rm alg},A_{\rm alg})_g$ und $HH^4(A_{\rm alg},A_{\rm alg})_g$ & OPEN\\
+P10-O23 & $\beta=1$ in der I4-Gibbs-Auswertung & OPEN\\
+P10-O24 & anderer zyklischer/getwistet-zyklischer Repräsentant & OPEN\\
+P10-O25 & genuin orbitverschiebender nichtkanonischer Lift & OPEN\\
+P10-O26 & nichtstandardmäßiger $A$-relativer Hopf-Koeffizient & OPEN\\
+P10-O27 & NEU-205 Architecture III & OPEN\\
+P10-O28 & Weil-/Gamma-Korrektur des zyklischen/kohomologischen Pfads & OPEN\\
+P10-O29 & Rampenform $\Rightarrow$ LFF & OPEN\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+% ----------------------------------------------------------------
+\section{Objekt-X-Firewall}
+% ----------------------------------------------------------------
+
+\begin{theorem}[P10 ist kein Existenz-No-Go für Objekt X]\label{thm:objectx-firewall}
+Aus P10 folgt nicht
+\[
+  \text{``Objekt X existiert nicht''.}
+\]
+Außerhalb der ausgeschlossenen konkreten Pfade bleiben insbesondere
+\[
+  \boxed{
+  \text{globale nichtorthogonale Gramkopplung}
+  +\text{ Primzahlpotenzkanäle}
+  +\text{ archimedischer Kanal}
+  +\text{ positive globale Weil-Geometrie}.}
+\]
+Die offene Hauptfrage bleibt, ob eine kanonische globale Quelle und Kopplung
+existiert, deren positive Vervollständigung die vollständige Weilform
+realisiert.
+\end{theorem}
+
+% ----------------------------------------------------------------
+\section{Kompakte Statusmatrix}
+% ----------------------------------------------------------------
+
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.29\textwidth}
+                  >{\raggedright\arraybackslash}p{0.62\textwidth}}
+\toprule
+Familie & Bindender P10-Endstand\\
+\midrule
+\endfirsthead
+\toprule
+Familie & Bindender P10-Endstand\\
+\midrule
+\endhead
+Primkanal-/Projektor-No-Gos
+& konkrete Rang-, Projektor-, Positivitäts- und Mangoldt-Abkürzungen gesperrt\\
+Primfaser-Spektrum
+& auditierter Transportgenerator kein diskreter HP-Endoperator\\
+Feshbach
+& finite Identität gültig; globaler Schatten-/Fredholm-Transfer offen\\
+Determinante NEU-088--90
+& $D_N(z)\to1$; nichttrivialer $C\xi$-Grenzwert in dieser Skalierung ausgeschlossen\\
+Historischer Wert $e^{-\gamma^2/4}$
+& SUPERSEDED\\
+LFF/Rampe
+& LFF $\Rightarrow$ Rampe bewiesen$_{\rm part}$; Umkehrung OPEN\\
+Jacobi Startvektor
+& unrenormierter Kanal kollabiert; Alternativen offen\\
+Primeclock H1
+& ungewichtet NO-GO; gewichteter Ersatz OPEN\\
+Mellin/Prime-only
+& historische Prime-only-Importe korrigiert / teilweise SUPERSEDED\\
+Finite Part
+& analytische Fortsetzungsdefinition ist kein operatorieller Grenzbeweis\\
+P09 Koeffizienten
+& mehrere kanonische Glätter-/1D-/Standard-SAYD-Routen NO-GO\\
+P09 Rotation
+& kanonischer skalarer Basislift: $t\Phi_0\ne C\Phi_0$\\
+Objekt X global
+& ausdrücklich OPEN; von P10 nicht widerlegt\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+% ----------------------------------------------------------------
+\section{Provenienz und Manuskriptstatus}
+% ----------------------------------------------------------------
+
+\begin{remark}[Bindende Quellen]
+Bindende Primärquelle für die vollständige ID-Auflösung P10-N01--P10-N54 und
+P10-O01--P10-O29 ist die final reconciliierte Pass-A-Matrix
+\texttt{AUDIT-2026-08-09\_P10\_PassA\_Inventar\_NoGo\_Matrix\_P05-P09.md}.
+Der Pass-A FINAL SEAL, der pfadgebundene Gegencheck und der Targeted-Reaudit
+P06/P07 besitzen die im Markdown-SYN festgelegte Präzedenz. Die direkte
+Markdown-Quelle ist
+\texttt{papers/P10\_No-Go\_Theorems\_for\_Canonical\_Global\_Coupling.md}
+im Status \emph{SYN FINAL AUDITED}.
+\end{remark}
+
+\begin{remark}[Transferstatus]
+Diese LaTeX-Fassung ist ausschließlich als inhaltsgleicher Transfer des
+geprüften Markdown-Endstands angelegt. Sie darf erst nach eigenständigem
+LaTeX-Transferaudit als eingefroren gelten. Erst danach ist P11 ---
+\emph{Global Coupling and the Object-X Candidate Geometry} --- prozedural
+freizugeben.
+\end{remark}
+
+\end{document}
