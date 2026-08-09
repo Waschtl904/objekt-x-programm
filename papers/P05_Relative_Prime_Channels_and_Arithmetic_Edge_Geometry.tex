@@ -1,0 +1,603 @@
+\documentclass[11pt,a4paper]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath,amssymb,amsthm,mathrsfs}
+\usepackage{array,booktabs,longtable}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Satz}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Korollar}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Bemerkung}
+\newtheorem{openproblem}[theorem]{Offenes Problem}
+
+\newcommand{\stM}{\ensuremath{\checkmark[M]}}
+\newcommand{\stKM}{\ensuremath{\checkmark[K/M]}}
+\newcommand{\stMneg}{\ensuremath{\checkmark[M]_{\rm neg}}}
+\newcommand{\stMpart}{\ensuremath{\checkmark[M]_{\rm part}}}
+\newcommand{\Open}{\texttt{?[O]}}
+\newcommand{\Conditional}{\textsc{Conditional}}
+
+\title[P05 --- Relative Prime Channels]{P05 --- Relative Prime Channels and Arithmetic Edge Geometry}
+\author{Objekt-X-Programm}
+\date{2026-08-09}
+
+\begin{document}
+
+\begin{abstract}
+Wir konsolidieren die lokale Primkanal- und Primkantengeometrie des
+Objekt-X-Programms in typisierter Form. Strikt getrennt werden die Rohkopplung
+$T_p$, der von einer gewählten Primhebung induzierte Kanaloperator
+$C_p^{[\widehat\varepsilon_p]}$ und seine relative Rang-eins-Realisierung
+$C_p^{\rm rel}[\widehat\varepsilon_p]$. Die exakte Liftzulässigkeit ist
+nichtlinear, ein allgemeiner exakt zulässiger Nichtnullzeuge ist nicht
+konstruiert, und die Herkunft eines geladenen Repräsentanten $L_3^\circ$
+bleibt offen. Gesichert sind die kontrollierte modale Rohkopplung, die
+feste-$p$-Kollisions- und Restklassenstruktur, die Transportnatur von
+$D_{\rm rel}$ in den auditierten Primsektoren, die Spektralmaßdarstellung,
+mögliche nichtorthogonale Primkanalbilder und die Trägertrennung direkter
+Kreuzprimkollisionen vom von-Mangoldt-Träger. Die vollständige operatorische
+Primzahlpotenzrealisierung bleibt konditional.
+\end{abstract}
+
+\maketitle
+
+\begin{remark}[Provenienz und Status]\label{rem:provenance}
+Kanonische Markdown-Quelle ist
+\texttt{papers/P05\_Relative\_Prime\_Channels\_and\_Arithmetic\_Edge\_Geometry.md},
+Status \texttt{SYN FINAL AUDITED}, Commit \texttt{bc49413f}. Die Pass-A-Basis
+ist Gruppe F, \texttt{PASS A COMPLETE}, Commit \texttt{9c23fc49}. Der
+P05-SYN-Primärcheck liegt in
+\texttt{audits/AUDIT-2026-08-09\_P05\_SYN\_Primaercheck.md}
+(Commit \texttt{54374bdf}), der unabhängige pfadgebundene Zweitcheck in
+\texttt{audits/AUDIT-2026-08-09\_P05\_SYN\_Zweitcheck\_Pfadgebunden.md}
+(Commit \texttt{f50f3502}) mit dem Urteil
+\emph{P05-SYN-GEGENCHECK OHNE KONKRETEN GEGENBEFUND}. Die Synthese hebt keinen
+offenen mathematischen Punkt hoch.
+\end{remark}
+
+\section{Typisierte Primkanalarchitektur}
+
+\begin{definition}[Drei verschiedene Operatorrollen]\label{def:three-roles}
+Für jede Primzahl $p$ werden die drei Rollen strikt getrennt:
+\[
+\boxed{T_p\neq C_p^{[\widehat\varepsilon_p]}\neq
+C_p^{\rm rel}[\widehat\varepsilon_p].}
+\]
+$T_p$ ist die Rohkopplung auf dem kontrollierten Fourier-/BC-Quellbereich,
+$C_p^{[\widehat\varepsilon_p]}$ der von einer gewählten Primhebung induzierte
+Kanaloperator und $C_p^{\rm rel}[\widehat\varepsilon_p]$ die relative,
+modellrelativ eindimensional induzierte Realisierung. Rang- oder Normaussagen
+über $C_p^{\rm rel}$ dürfen nicht auf $T_p$ übertragen werden.
+\end{definition}
+
+\begin{remark}[Status]
+Die Typtrennung ist die verbindliche F1/F2-Firewall, Status \stKM.
+\end{remark}
+
+\begin{theorem}[Nullmodusobstruktion]\label{thm:null-mode}
+Auf der kontrollierten modalen Rohkopplungsformel gilt
+\[
+T_p(e_0V_p)=0.
+\]
+Der ungechargte Fouriermodus erzeugt daher in diesem lokalen Modell keine
+Rohkopplung.
+\end{theorem}
+
+\begin{remark}[Status]
+Theorem~\ref{thm:null-mode} hat Status \stM\ auf dem kontrollierten
+Definitionsbereich; Provenienz NEU-041/155.
+\end{remark}
+
+\begin{remark}[SYN-Notation: Rang-eins-Projektion]
+Historisch wurde für die orthogonale Rang-eins-Projektion teilweise $\pi_p$
+verwendet. Da NEU-158/160 $\pi_p$ zugleich für eine Symmetriedarstellung
+benutzen, schreibt P05
+\[
+\boxed{\Pi_p^{(1)}:=|e_1^{(p)}\rangle\langle e_1^{(p)}|.}
+\]
+\end{remark}
+
+\begin{theorem}[Rang-eins-Aussage nur für die induzierte Ebene]
+\label{thm:rank-one}
+Im eindimensional induzierten relativen Modell gilt
+\[
+\operatorname{rank}C_p^{\rm rel}[\widehat\varepsilon_p]\le1.
+\]
+Für
+\[
+P_p=|c_p|^2\Pi_p^{(1)},\qquad
+(\Pi_p^{(1)})^2=\Pi_p^{(1)}
+\]
+folgt
+\[
+P_p^2=|c_p|^2P_p.
+\]
+Insbesondere ist $P_p$ im Allgemeinen kein orthogonaler Projektor.
+\end{theorem}
+
+\begin{remark}[Status]
+Theorem~\ref{thm:rank-one} ist modellrelativ \stM.
+\end{remark}
+
+\begin{openproblem}[Intrinsisches Primgewicht]\label{op:intrinsic-cp}
+Aus der Rang-eins-Struktur folgt weder unbedingtes $c_p\neq0$ noch
+Hebungsunabhängigkeit von $|c_p|^2$ oder die termweise Asymptotik
+\[
+|c_p|^2\asymp\frac{(\log p)^2}{p}.
+\]
+Nichtentartung und Hebungsunabhängigkeit bleiben \Open.
+\end{openproblem}
+
+\section{Liftgeometrie und exakte Zulässigkeit}
+
+\begin{remark}[SYN-Notation: Liftkern und Liftform]
+Die historischen F2-Blätter verwenden $K_p$ für den Kern der primitiven
+Projektion. Da F3 $K_p,K_{pq}$ für Prim-/Feshbachblöcke verwendet, setzt P05
+\[
+\boxed{\mathscr K_p^{\rm lift}:=\ker\pi_{\rm prim}.}
+\]
+Die verbundene Liftform wird zur Abgrenzung vom späteren BC-Halbgewicht als
+\[
+\boxed{h_p^{\rm conn}}
+\]
+geschrieben. Beide Änderungen sind reine SYN-Disambiguierungen.
+\end{remark}
+
+\begin{definition}[Primitive Liftfaser]
+Die Fourier-geladenen Richtungen
+\[
+E_p^{\rm ch}:=\operatorname{span}\{e_uV_p:u\neq0\}
+\]
+liegen algebraisch in $\mathscr K_p^{\rm lift}$.
+\end{definition}
+
+\begin{theorem}[Quadratische Normierungsbedingung]\label{thm:quadratic-lift}
+Für eine Liftänderung $k$ relativ zu einem Basispunkt
+$\widehat\varepsilon_p^{\,0}$ besitzt die exakte Normierungsbedingung die Form
+\[
+2\operatorname{Re}h_p^{\rm conn}(\widehat\varepsilon_p^{\,0},k)
++h_p^{\rm conn}(k,k)=0.
+\]
+Sie ist daher keine homogene lineare Kerngleichung.
+\end{theorem}
+
+\begin{remark}[Status]
+Theorem~\ref{thm:quadratic-lift} hat Status \stM\ (NEU-157 rev.3 / 165b).
+\end{remark}
+
+\begin{theorem}[Keine zusätzliche lineare Kernfamilie im auditierten Quellenkegel]
+\label{thm:no-extra-linear-kernel}
+Im explizit auditierten Quellenkegel liefern NEU-157 und NEU-44 keine
+zusätzlichen nichttrivialen Operatoren
+\[
+L_{p,a}:\mathscr K_p^{\rm lift}\longrightarrow Y_{p,a}
+\]
+mit exakter Zulässigkeitsbedingung $L_{p,a}(k)=0$. In diesem Quellenkegel gilt
+\[
+\mathscr K_p^{\rm hom}=\mathscr K_p^{\rm lift}.
+\]
+\end{theorem}
+
+\begin{remark}[Scope]
+Theorem~\ref{thm:no-extra-linear-kernel} ist \stMneg\ als Quellenbefund,
+nicht als globaler mathematischer Unmöglichkeitssatz.
+\end{remark}
+
+\begin{openproblem}[Exakt zulässiger Nichtnullzeuge]
+Ein vollständiger Beweis der Existenz eines exakt zulässigen $k$ mit
+\[
+T_p(k)\neq0
+\]
+liegt im auditierten Quellenstand nicht vor. Präprojektive und infinitesimale
+Satzschemata sind gültig; die Integration in die exakte nichtlineare
+Zulässigkeitsmenge bleibt \Open.
+\end{openproblem}
+
+\section{Rohkopplung und feste-$p$-Kollisionsgeometrie}
+
+\begin{definition}[Modale Rohkopplung]\label{def:modal-raw}
+Für $u\neq0$ lautet die kontrollierte präprojektive Formel
+\[
+T_p^{\rm pre}(e_uV_p)
+=-\sum_{s,m}\ell_{s,m}\,u\,s\log p\;e_{u+ps}V_{pm}.
+\]
+Sie ist ausschließlich auf dem kontrollierten modalen Quellbereich zu
+verwenden und liefert keine automatische globale Operatorverlängerung.
+\end{definition}
+
+\begin{theorem}[Injektivität bei festem Eingangsmodus]
+Für festes $p$ und festes $u$ ist
+\[
+(s,m)\longmapsto(u+ps,pm)
+\]
+injektiv. Verschiedene Summanden eines einzelnen Eingangsmodus kollidieren
+nicht in derselben algebraischen Zielkoordinate. Status \stM.
+\end{theorem}
+
+\begin{corollary}[Bedingte Einzelmoden-Nichtverschwindung]
+Definiere
+\[
+\operatorname{supp}^{\times}(L_3^\circ)
+:=\{(s,m):s\ell_{s,m}\neq0\}.
+\]
+Dann gilt auf dem kontrollierten modalen Bereich
+\[
+\operatorname{supp}^{\times}(L_3^\circ)\neq\varnothing
+\Longrightarrow T_p^{\rm pre}(e_uV_p)\neq0\qquad(u\neq0).
+\]
+Die Nichtleerheitsvoraussetzung ist im alten Quellenpfad nicht hergeleitet;
+die Herkunft bleibt \Open.
+\end{corollary}
+
+\begin{theorem}[Restklassen-/Faltungszerlegung]\label{thm:convolution}
+Für eine Zielkollision innerhalb eines festen Primkanals gilt
+\[
+(u,s,m)\sim_p(u',s',m')
+\Longleftrightarrow
+m=m',\qquad u-u'=p(s'-s).
+\]
+Nach Zerlegung in Restklassen $c\in\mathbb Z/p\mathbb Z$ wird das
+Mehrmoden-Kernproblem zu
+\[
+x^{(c)}*b^{(m)}=0.
+\]
+\end{theorem}
+
+\begin{remark}[Firewall]
+Theorem~\ref{thm:convolution} betrifft einen festen Primkanal $p$ und ist
+von einer Kreuzprimkollision $p\neq q$ der Form $pm_p=qm_q$ zu trennen.
+\end{remark}
+
+\section{Herkunftsblockade des geladenen $L_3^\circ$}
+
+\begin{proposition}[Rechenzulässig ist nicht herkunftszulässig]
+Die Modellwahl $L_3^\circ=e_1V_1$ ist innerhalb des historischen Testmodells
+rechenzulässig und liefert etwa $(p-1)\log p\neq0$. Daraus folgt nicht, dass
+$e_1V_1$ aus $[L_3]$ hergeleitet oder kanonisch gewählt ist. Die Herkunft ist
+\Conditional/\Open.
+\end{proposition}
+
+\begin{theorem}[Typ- und Ladungsblockade sind unabhängig]
+NEU-170d trennt
+\[
+[L_3]\not\longmapsto L_3^\circ=e_1V_1
+\]
+und
+\[
+(p-1)\log p\neq0
+\not\Longrightarrow C_p(e_{1-p}V_p)\neq0.
+\]
+Ein positiver Skalarfaktor konstruiert weder einen typisierten Repräsentanten
+noch die benötigte nichtverschwindende relative Zielkante.
+\end{theorem}
+
+\begin{proposition}[Endstatus des alten Typquellenpfads]
+Im auditierten Quellenkegel ist kein vollständiges Tupel
+\[
+(B_3,M,C^\bullet,b,L_3,\rho_{\rm op})
+\]
+konstruiert. Dies ist \stMneg\ als Quellenbefund und \Open\ als mathematische
+Neukonstruktionsfrage. Außerdem ist $\delta_{\rm BC}:A_Q\to A_Q$ eine
+Algebraableitung und nicht das Hochschild-Kodifferential
+$b:C^n(B_3,M)\to C^{n+1}(B_3,M)$.
+\end{proposition}
+
+\section{Quotienten- und Symmetriearchitektur}
+
+\begin{remark}[SYN-Notation: Quotient und Darstellung]
+NEU-159/160 verwenden $Q_p$ für den Rohkopplungsquotienten. Zur Abgrenzung
+vom lokalen Weil-Beitrag schreibt P05
+\[
+\boxed{\mathscr Q_p^{\rm quot}:=Q_p^{(\mathrm{NEU\text{-}159/160)}}.
+\]
+Die historische Symmetriedarstellung wird als
+\[
+\boxed{\pi_p^{\rm sym}:G_p\to\mathcal U(\mathscr Q_p^{\rm quot})}
+\]
+geschrieben.
+\end{remark}
+
+\begin{proposition}[Abstrakte Quotientenstruktur]
+Gesichert bleiben die positive Quotientenform nach Nullraumfaktorisierung,
+die skaliert-isometrische Identifikation mit dem abgeschlossenen Bildraum,
+das allgemeine Nullraumabstiegslemma und das Intertwining-zu-Unitärität-Lemma.
+Status \stM.
+\end{proposition}
+
+\begin{theorem}[Abstrakter Kommutantensatz]
+Für eine konkrete unitäre Darstellung $\pi_p^{\rm sym}$ auf
+$\mathscr Q_p^{\rm quot}$ sind beschränkte positive semidefinite
+$G_p$-invariante Formen genau dann skalare Vielfache einer Referenzform, wenn
+\[
+\pi_p^{\rm sym}(G_p)'=\mathbb C I.
+\]
+Status \stM.
+\end{theorem}
+
+\begin{openproblem}[Konkrete Quotientenrealisierung]
+Nicht automatisch mitbewiesen sind
+$\mathscr Q_p^{\rm quot}\neq\{0\}$, eine konkrete unitäre Wirkung
+$\pi_p^{\rm sym}$, deren Irreduzibilität und die konkrete Eindeutigkeit der
+verbundenen Form. Status \Open/\Conditional.
+\end{openproblem}
+
+\begin{remark}[Firewall]
+NEU-166a/166b liefern keine unbedingte globale Erweiterung von $T_p^{\rm pre}$,
+keinen vollständigen Definitionsbereich, keinen Quotientendeszent und keinen
+kanonischen transversalen Detektor. Fall 3a ist nur lokal/modenweise
+formelmäßig bestätigt; die globale Fallentscheidung bleibt \Open.
+\end{remark}
+
+\section{Transportgeometrie der auditierten Primsektoren}
+
+\begin{remark}[SYN-Notation: Transportkoeffizient]
+NEU-225 verwendet historisch ebenfalls $c_p$ für den Transportkoeffizienten.
+P05 disambiguiert rein redaktionell durch
+\[
+\boxed{\kappa_p^{\rm tr}:=\frac12\gamma_Np\log p.}
+\]
+\end{remark}
+
+\begin{theorem}[Transportnormalform]\label{thm:transport}
+Auf einer auditierten Primfaser $\mathcal H_{p,a}$ gilt
+\[
+D_{\rm rel}\big|_{\mathcal H_{p,a}}
+\cong2i\kappa_p^{\rm tr}\frac{d}{dt}
+\quad\text{auf}\quad
+L^2(\mathbb R)\oplus L^2(\mathbb R).
+\]
+Status \stM.
+\end{theorem}
+
+\begin{corollary}[Spektraltyp im auditierten Primsektor]
+In den auditierten Primsektoren besitzt $D_{\rm rel}$ rein absolutstetiges
+Spektrum und keinen Kern; ein kompakter Resolvent ist ausgeschlossen. Damit
+ist $D_{\rm rel}$ dort ein Transportgenerator und kein bereits gefundener
+Hilbert--Pólya-Operator.
+\end{corollary}
+
+\begin{openproblem}[Zusammengesetzte Sektoren]
+Für nichtprimitive beziehungsweise zusammengesetzte $m$-Sektoren können
+Mehrfachsprünge Restklassen mischen. Eine globale Spektralaussage über alle
+Mischsektoren ist nicht bewiesen. \texttt{[O-225-3]} bleibt \Open.
+\end{openproblem}
+
+\begin{theorem}[Spektralmaß statt diskreter Eigenbasis]\label{thm:spectral-measure}
+Die historische diskrete Eigenbasisdarstellung wird durch die
+projektionswertige Spektralmaßform ersetzt. Für $V_p,V_q$ definiere
+\[
+\mu_{pq}^{a,b}(B):=\langle V_pa,E_D(B)V_qb\rangle.
+\]
+Dann lautet die verbindliche Resolventenschreibweise
+\[
+\langle a,K_{pq}(z)b\rangle
+=\int_{\mathbb R}\frac{d\mu_{pq}^{a,b}(\lambda)}{\lambda-z}.
+\]
+Status \stKM.
+\end{theorem}
+
+\section{Nichtorthogonale Primkanalgeometrie}
+
+\begin{definition}[Koordinatenwörterbuch]
+\[
+\eta_{p;m;s,u}\longleftrightarrow e_RV_M,
+\qquad M=pm,\quad R=u+ps.
+\]
+Diese Koordinatenidentifikation ist insbesondere im Primsektor vollständig
+kontrolliert. Status \stM.
+\end{definition}
+
+\begin{theorem}[Primkanalbilder müssen nicht orthogonal sein]
+\label{thm:nonorthogonal}
+Verschiedene Primkanalbilder können nichttrivial überlappen. Daher ist
+\[
+\mathcal K_N\stackrel{?}{=}\bigoplus_pK_p
+\]
+nicht strukturell erzwungen. Kreuzblöcke $K_{pq}$ können generisch
+nichtverschwinden; dies behauptet nicht $K_{pq}\neq0$ für jedes $p\neq q$.
+Status \stM.
+\end{theorem}
+
+\begin{remark}[Mechanismus]
+Die Off-Diagonalität kann aus
+$\operatorname{Ran}V_p\not\perp\operatorname{Ran}V_q$ entstehen, ohne dass
+$D_{\rm rel}$ selbst Primlabels mischen muss.
+\end{remark}
+
+\section{Arithmetische Primzahlpotenzgewichte}
+
+\begin{proposition}[Primitiver algebraischer Halbgewichtsfaktor]
+Im primitiven $p$-Kanal wird algebraisch
+\[
+h_p^{\rm bal}=p^{-1/2}I
+\]
+und damit der lokale Faktor $\log p/\sqrt p$ erhalten. Status \stMpart;
+Hilbert-Selbstadjungiertheit, Abschließbarkeit, Domäne und globaler
+Funktionalkalkül sind damit nicht bewiesen.
+\end{proposition}
+
+\begin{theorem}[Testfunktionswert als Matrixkoeffizient]
+Für die Autokorrelation gilt
+\[
+g_a(x)=\operatorname{Re}\langle a,U_xa\rangle_{L^2(\mathbb R)},
+\]
+insbesondere
+\[
+\boxed{g_a(\log p)=\operatorname{Re}\langle a,U_{\log p}a\rangle.}
+\]
+Der Ausdruck ist ein unitärer Matrixkoeffizient und kein Normquadrat. Status
+\stM.
+\end{theorem}
+
+\begin{theorem}[Arithmetische Primzahlpotenzidentität]
+\label{thm:mangoldt-primepower}
+Für jede Primzahlpotenz $p^m$ gilt
+\[
+\boxed{\frac{\Lambda(p^m)}{\sqrt{p^m}}
+=\frac{\log p}{p^{m/2}}.}
+\]
+Dies ist eine arithmetische Identität, Status \stM.
+\end{theorem}
+
+\begin{remark}[Firewall: keine vollständige Operatorrealisierung]
+Im Quellenstand ist kein vollständiger Beweis
+\[
+h_n^{\rm bal}=n^{-1/2}I\qquad(n\ge1)
+\]
+gefunden. Die Rückreferenz in NEU-250i ist durch NEU-250g nicht gedeckt.
+Daher bleibt
+\[
+h_{p^m}^{\rm bal}\bigl(H_{\rm pr}^{1/2}E_R,H_{\rm pr}^{1/2}E_{R'}\bigr)
+=\frac{\log p}{p^{m/2}}\delta_{RR'}
+\]
+\Conditional.
+\end{remark}
+
+\begin{remark}[Firewall: $H_{\rm pr}$ ist nicht $\Lambda$]
+Die formal gradnormierte BC-Energie darf nicht mit $\Lambda$ auf allen
+natürlichen Zahlen identifiziert werden. Beispielsweise gilt $\Lambda(6)=0$,
+während die gradnormierte Energie nicht automatisch verschwindet.
+\end{remark}
+
+\section{Trägertrennung: direkte Kreuzprimkollision versus Mangoldt-Träger}
+
+\begin{theorem}[Kreuzprimkollision erzeugt keinen Mangoldt-Trägerpunkt]
+\label{thm:support-separation}
+Seien $p\neq q$ Primzahlen und $pm_p=qm_q=M$. Dann besitzt $M$ mindestens
+zwei verschiedene Primteiler und daher $\Lambda(M)=0$. Folglich
+\[
+\boxed{\operatorname{supp}\Lambda\cap
+\operatorname{supp}(\text{direkte Kreuzprimkollision})=\varnothing.}
+\]
+Status \stM.
+\end{theorem}
+
+\begin{remark}[Firewall]
+Theorem~\ref{thm:support-separation} widerspricht
+Theorem~\ref{thm:nonorthogonal} nicht. Die Trägertrennung beweist weder
+globale Primorthogonalität noch globales Verschwinden der Kreuzblöcke.
+\end{remark}
+
+\section{Schnittstellen zu den Folgesynthesen}
+
+\begin{proposition}[Routing nach P06]
+Nach P06 gehen Schur-/Feshbach-Komplementfragen, globale Quotienten- und
+Deszentfragen, Spektralmaß-/Schattenklassenkriterien, $u$-Regulator und
+Quellhilbertisierung sowie die offenen zusammengesetzten Sektoren
+\texttt{[O-225-3]}.
+\end{proposition}
+
+\begin{proposition}[Routing nach P09]
+Nach P09 gehen das Typfundament
+\[
+(B_3,M,C^\bullet,b,L_3,\rho_{\rm op}),
+\]
+die Konstruktion eines typkorrekten Repräsentanten von $[L_3]$ und die
+strikte Trennung von $\delta_{\rm BC}$ und Hochschild-$b$.
+\end{proposition}
+
+\begin{proposition}[Routing nach P11]
+Nach P11 gehen gemeinsame globale Quellenräume, Gramoperatoren der
+überlappenden Primkanalbilder, globale Off-Diagonalblöcke, der Mediatorstatus
+J-A/J-B und die Verbindung zwischen arithmetischer Trägerstruktur und globaler
+Weil-Geometrie. P05 behauptet keine dieser globalen Konstruktionen bereits
+gelöst zu haben.
+\end{proposition}
+
+\section{Statusmatrix}
+
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.51\textwidth}
+>{\raggedright\arraybackslash}p{0.23\textwidth}
+>{\raggedright\arraybackslash}p{0.16\textwidth}}
+\toprule
+Aussage & Status & Quelle/Paket\\
+\midrule
+\endfirsthead
+\toprule
+Aussage & Status & Quelle/Paket\\
+\midrule
+\endhead
+$T_p\neq C_p^{[\widehat\varepsilon_p]}\neq C_p^{\rm rel}[\widehat\varepsilon_p]$
+& \stKM\ Typfirewall & F1/F2\\
+$T_p(e_0V_p)=0$ & \stM & F1/F2\\
+$\operatorname{rank}C_p^{\rm rel}\le1$ im induzierten Modell
+& \stM\ modellrelativ & F1/F2\\
+intrinsisches $c_p\neq0$ / Nichtentartung & \Open & F1/F2\\
+Hebungsunabhängigkeit & \Open & F2\\
+quadratische Normierungsbedingung & \stM & F2\\
+zusätzliche lineare Kernfamilie im auditierten Quellenkegel
+& \stMneg\ Quellenbefund & F2\\
+exakt zulässiger Nichtnullzeuge & \Open & F2\\
+feste-$p$-Injektivität und Faltungskollision & \stM & F2\\
+geladener $L_3^\circ$ aus $[L_3]$ hergeleitet & \Open & NEU-170d/173\\
+abstrakte Quotienten-/Intertwining-Lemmata & \stM & F2\\
+konkrete Quotientenrealisierung / Irreduzibilität
+& \Open/\Conditional & F2\\
+Transportnormalform in Primsektoren & \stM & F3\\
+reines a.c.-Spektrum / kein Kern in auditierten Primsektoren & \stM & F3\\
+globale Spektralaussage in zusammengesetzten Sektoren
+& \Open & \texttt{[O-225-3]}\\
+projektionswertige Spektralmaßform & \stKM & F3\\
+Primkanalbilder können nichttrivial überlappen & \stM & F3\\
+Primblockdiagonalität ist nicht strukturell erzwungen & \stM & F3\\
+primitiver Faktor $\log p/\sqrt p$ & \stMpart & F4\\
+$g_a(\log p)=\operatorname{Re}\langle a,U_{\log p}a\rangle$ & \stM & F4\\
+$\Lambda(p^m)/\sqrt{p^m}=\log p/p^{m/2}$ & \stM & F4\\
+$h_n^{\rm bal}=n^{-1/2}I$ für alle $n$
+& \Conditional; Beweis nicht gefunden & F4\\
+vollständige operatorische Primzahlpotenzrealisierung & \Conditional & F4\\
+Kreuzprimkollision $\cap\operatorname{supp}\Lambda=\varnothing$ & \stM & F4\\
+Trägertrennung impliziert keine Primorthogonalität & \stM & F3/F4\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{Offene Kernfragen nach P05}
+
+\begin{enumerate}
+\item \textbf{Liftintrinsik:} hebungsunabhängige, nichtentartete Primkanalgröße
+$|c_p|^2$.
+\item \textbf{Exakte Zulässigkeit:} exakt zulässiger geladener Lift mit
+nichtverschwindender Rohkopplung.
+\item \textbf{$L_3$-Herkunft:} typisierte Repräsentantenbrücke von $[L_3]$.
+\item \textbf{Globale Deszendenz:} vollständiger Definitionsbereich und
+Quotientendeszent der Rohkopplung.
+\item \textbf{Zusammengesetzte Sektoren:} Spektral- und Restklassengeometrie
+jenseits der auditierten Primfasern.
+\item \textbf{Primzahlpotenzoperator:} allgemeine BC-Halbgewichtung und
+Hilbert-Fundierung des gradnormierten Operators.
+\item \textbf{Globale Gramgeometrie:} nichtorthogonale globale Kopplung der
+lokalen Primkanalbilder mit dem archimedischen Kanal.
+\end{enumerate}
+
+\section{SYN-Endurteil}
+
+Der konsolidierte lokale Bestand
+\[
+\boxed{\begin{gathered}
+\text{lokale Rohkopplung}+\text{nichtlineare Liftgeometrie}\\
++\text{Transportprimfasern}+\text{nichtorthogonale Kanalbilder}\\
++\text{arithmetische Trägertrennung}
+\end{gathered}}
+\]
+ist miteinander kompatibel, bildet aber noch keine globale
+Objekt-X-Realisierung. Der Schutzsatz der weiteren Migration lautet
+\[
+\boxed{\begin{gathered}
+\text{lokale Primkanalstruktur}\neq\text{globale positive Gramkopplung}\\
+\neq\text{Hilbert--Pólya-Operator}
+\end{gathered}}.
+\]
+
+\begin{remark}[SYN-Endstatus]
+Die Markdown-Inhaltsstufe ist \texttt{SYN FINAL AUDITED}. Diese LaTeX-Fassung
+enthält keine Statushochstellung und keine neue mathematische Behauptung. Der
+LaTeX-SYN-Transferaudit ergab keinen Status-, Typ-, Formel- oder
+Routingkonflikt. Endstatus: \texttt{SYN FROZEN} \stKM.
+\end{remark}
+
+\end{document}
