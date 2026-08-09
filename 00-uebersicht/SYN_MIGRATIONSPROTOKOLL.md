@@ -54,7 +54,7 @@ Migration stoppen
     ↓
 Fehler auditieren
     ↓
-korrigieren (Patch auf NEU-Knoten)
+korrigieren / gezielt reconciliieren
     ↓
 erst dann SYN freigeben
 ```
@@ -63,7 +63,7 @@ erst dann SYN freigeben
 
 ## Was mit fehlerhaften historischen Knoten passiert
 
-Ein fehlerhafter historischer Knoten wird **nicht** umgeschrieben. Er bleibt als historischer Zustand im Laborbuch und erhält in der Provenienzmatrix den Tag `SUPERSEDED` oder `AUDIT-ONLY` mit Verweis auf den korrigierenden Patch.
+Ein fehlerhafter historischer Knoten wird **nicht** umgeschrieben. Er bleibt als historischer Zustand im Laborbuch und erhält in der Provenienzmatrix den Tag `SUPERSEDED` oder `AUDIT-ONLY` mit Verweis auf den korrigierenden Patch/Reaudit.
 
 **Beispiel aus der Praxis (2026-08-08):**
 
@@ -71,7 +71,7 @@ Ein fehlerhafter historischer Knoten wird **nicht** umgeschrieben. Er bleibt als
 |---|---|---|---|
 | NEU-258 (vor Patch 1) | $B_\Gamma(a,a)=\int|\hat a|^2\operatorname{Re}\gamma_\infty\,dt$ (ohne $1/\pi$) | `SUPERSEDED` | NEU-258 Patch 1 |
 | NEU-257 (vor Patch 3) | $\Gamma$ = positive Ordinaten | `SUPERSEDED` | NEU-257 Patch 3 |
-| NEU-257 (vor Patch 2) | $(2\text{-DiffOther})$: $1/n$-Vorfaktor falsch | `SUPERSEDED` | NEU-257 Patch 2 |
+| NEU-257 (vor Patch 2) | `(2-DiffOther)`: $1/n$-Vorfaktor falsch | `SUPERSEDED` | NEU-257 Patch 2 |
 
 Das SYN-Paper übernimmt nur die korrigierten Fassungen.
 
@@ -85,7 +85,7 @@ Eine Aktion „300 Dateien → 10 Papers“ ohne Einzelkontrolle birgt drei Risi
 - **Provenienzverlust**: Die Herkunft einer Aussage wird nicht eingetragen; später nicht mehr nachvollziehbar.
 - **Konventionsdrift**: Zwei verschiedene Normierungen (z. B. $\gamma_\infty$ mit und ohne $1/2$-Faktor) werden gemischt.
 
-Ein KI-Agent kann sehr viel mechanische Arbeit übernehmen (Dateien lesen, Querverweise einsammeln, LaTeX anlegen, Provenienz eintragen, Commits pushen). Die mathematische Entscheidung „Was ist gültig, was superseded, was No-Go, was offen?“ bleibt aber blockweise unter Kontrolle.
+Ein KI-Agent kann sehr viel mechanische Arbeit übernehmen (Dateien lesen, Querverweise einsammeln, LaTeX anlegen, Provenienz eintragen, Commits pushen). Die mathematische Entscheidung „Was ist gültig, was superseded, was No-Go, was offen?“ bleibt blockweise unter Kontrolle.
 
 ---
 
@@ -102,7 +102,7 @@ Grobe Erwartung: 300–400 Knoten → 10–15 Blöcke → 10–15 SYN-Papers.
 
 ---
 
-## Blockplan (Entwurf, nach P02/P03-Abschluss)
+## Blockplan
 
 | Reihenfolge | Block | Geschätzter SYN | Voraussetzung |
 |---|---|---|---|
@@ -113,7 +113,7 @@ Grobe Erwartung: 300–400 Knoten → 10–15 Blöcke → 10–15 SYN-Papers.
 | 5 | Jacobi–Feshbach + Divisorgraph | P06 | unabhängig |
 | 6 | Grenzoperator + Renormierung | P08 | P02, P05 |
 | 7 | BC + Hochschild | P09 | P01 |
-| 8 | No-Go-Sammlung | P10 | alle ×[M]-Knoten |
+| 8 | No-Go-Sammlung | P10 | P05–P09 + eindeutige Negativ-/OPEN-Reconciliation |
 | 9 | Globale Kopplung + Objekt-X | P11 | P05–P09 |
 | 10 | Finite-to-Infinite Weil | P12 | P02, P04 |
 | 11 | Survey + DAG | P00 | alle vorigen |
@@ -125,15 +125,21 @@ Grobe Erwartung: 300–400 Knoten → 10–15 Blöcke → 10–15 SYN-Papers.
 | SYN | Status | Bemerkung |
 |---|---|---|
 | P05 | `SYN FROZEN ✓[K/M]` | Primkanten + Fourier-Ladung abgeschlossen |
-| P06 | `SYN FROZEN ✓[K/M]` | Jacobi–Feshbach + Divisorgraph abgeschlossen; LaTeX-Transferaudit `1b1a7173` |
-| P07 | `SYN FROZEN ✓[K/M]` | Weil-Form Statistics abgeschlossen |
+| P06 | `SYN FROZEN ✓[K/M]` | Jacobi–Feshbach + Divisorgraph abgeschlossen; LaTeX-Transferaudit `1b1a7173`; G-T4/G-T5 bindend |
+| P07 | `SYN FROZEN ✓[K/M]` | Weil-Form Statistics abgeschlossen; nach P10-Cross-SYN-Reaudit eng begrenzt als Patch 5 synchronisiert und wieder eingefroren |
 | P08 | `SYN FROZEN ✓[K/M]` | Grenzoperator + Renormierung abgeschlossen; Markdown-Finalcommit `31c93d50`, LaTeX `d283c34c`, Transferaudit `3f12e0ef` |
-| **P09** | **`SYN FROZEN ✓[K/M]`** | BC + Hochschild abgeschlossen; Pass-A-Seal `28b5cba5`, Markdown-Finalcommit `8346733e`, LaTeX `26f9d60e`, Transferaudit `e724b5a7` |
-| **P10** | **NÄCHSTER AKTIVER BLOCK** | kondensierte No-Go-Sammlung; nur bereits eindeutig auditierte Negativbefunde übernehmen |
+| P09 | `SYN FROZEN ✓[K/M]` | BC + Hochschild abgeschlossen; Pass-A-Seal `28b5cba5`, Markdown-Finalcommit `8346733e`, LaTeX `26f9d60e`, Transferaudit `e724b5a7` |
+| **P10** | **`PASS-A SEALED`** | FINAL SEAL `b8be0d6f`; No-Go-/SUPERSEDED-/OPEN-Inventar reconciliiert; **SYN-Migration als nächster Schritt freigegeben, noch nicht ausgeführt** |
 
-P05–P09 werden nicht erneut geöffnet, sofern kein neuer konkreter mathematischer Gegenbefund gegen ihren eingefrorenen Endstand auftaucht.
+P05–P09 werden nicht erneut geöffnet, sofern kein neuer konkreter mathematischer Gegenbefund gegen ihren eingefrorenen Endstand auftaucht. Die P07-Wiederöffnung im P10-Pass war genau eine solche eng begrenzte Ausnahme und ist abgeschlossen.
 
-Verbindlicher nächster Migrationsblock ist damit **P10**. Für P10 gilt besonders: P09-CORE-NOGOs dürfen gespiegelt, aber nicht aus P09 entfernt oder zu stärkeren universellen No-Gos hochgestuft werden.
+Verbindlicher nächster Arbeitsschritt ist damit **P10-SYN aus dem versiegelten Pass-A-Inventar**. Für P10 gilt besonders:
+
+- P09-CORE-NOGOs dürfen gespiegelt, aber nicht aus P09 entfernt oder zu stärkeren universellen No-Gos hochgestuft werden;
+- `P10-N15` ist retired und nach `P10-O29` verschoben;
+- `Rampe => LFF` bleibt OPEN;
+- `D_N->1` ist nur ein modell-/skalenspezifischer No-Go gegen den konkreten NEU-088–90-Determinantenpfad;
+- OPEN-/CONDITIONAL-Punkte müssen im SYN sichtbar erhalten bleiben.
 
 ---
 
