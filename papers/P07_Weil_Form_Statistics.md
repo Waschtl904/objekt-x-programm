@@ -1,10 +1,10 @@
 # P07 — Weil-Form Statistics:
 Correlation Channels, Form-Factor Limits and Herglotz Interfaces
 
-**Status:** Patch 4/4 (9. August 2026) — SYN FINAL AUDITED  
+**Status:** Patch 5/5 (9. August 2026) — SYN FINAL AUDITED / P10-RECONCILED  
 **Basis:** PASS-A-PROTOKOLL.md (`baa3975b`); NEU-101 Patch 3 (`92d731d1`); NEU-120 Patch 2 (`410d0a91`)  
-**Targeted-Reaudit:** `audits/AUDIT-2026-08-09_P07_Externcheck_GM_aN_Targeted-Reaudit.md` (`57441d87`)  
-**Patch-Commits:** Skelett (`94c25130`) → Patch 1 (`596317bb`) → Patch 2 (`c6751e80`) → Patch 3 (`6a162f92`) → Patch 4 (dieser Commit)
+**Targeted-Reaudits:** `audits/AUDIT-2026-08-09_P07_Externcheck_GM_aN_Targeted-Reaudit.md` (`57441d87`); `audits/AUDIT-2026-08-09_P10_Targeted_Reaudit_P07_NEU091_vs_P06_GT4_GT5.md` (`f0be54c5`)  
+**Patch-Commits:** Skelett (`94c25130`) → Patch 1 (`596317bb`) → Patch 2 (`c6751e80`) → Patch 3 (`6a162f92`) → Patch 4 (`e2ab077f`) → Patch 5 (dieser Commit)
 
 > *Patch-Notizen gehören ins PASS-A-PROTOKOLL und die NEU-Knoten.*
 > *Das SYN-Paper enthält nur bereinigte Definitionen, Sätze und Statusangaben.*
@@ -24,13 +24,21 @@ und die konditionale Jacobi-Realisierungsarchitektur.
 
 ## §1 — Quadratischer Pivot und Positivitätsrahmen
 
-*Basis: NEU-091, NEU-092*
+*Basis: NEU-091, NEU-092; spätere Reconciliation: P06 G-T4/G-T5 + P10 Targeted-Reaudit*
 
-**Satz 1.1 (Determinanten-No-Go).**
-$$D_N(z) \xrightarrow{N\to\infty} e^{-\gamma^2/4}$$
-im festen $z$-Regime ($z$ fest, $N\to\infty$), also $z$-unabhängig.
-Daraus folgt: kein direkter $\xi$-Anschluss über den Determinantenweg im festen $z$-Regime.
-[NEU-091: ✓[M]$_{\rm neg}$]
+**Satz 1.1 (Determinanten-No-Go, reconciliert).**
+Im konkreten NEU-088–90-Modellscope
+$$h_r=r,\qquad M_N=\frac{N}{\log N},\qquad z\text{ fest und zulässig},$$
+gilt nach dem späteren P06-Targeted-Reaudit
+$$T_N(z)\to0,\qquad \|C_N(z)\|_{HS}\to0,$$
+und damit
+$$\boxed{D_N(z)\xrightarrow{N\to\infty}1.}$$
+Der Grenzwert ist $z$-unabhängig und nullstellenfrei. Folglich entsteht aus **dieser konkreten Skalierung** kein direkter nichttrivialer $C\xi(z)$-Anschluss über den Determinantenweg.
+
+Die historische NEU-091-Aussage
+$$D_N(z)\to e^{-\gamma^2/4}$$
+ist durch P06 G-T4/G-T5 **SUPERSEDED**. Daraus folgt ausdrücklich **kein** universeller Feshbach-, Fredholm- oder Determinanten-No-Go; andere Skalierungen, Renormierungen und $\det_2$/Weil-Hilbertisierungen bleiben offen.
+[P06 G-T4/G-T5; P10 Targeted-Reaudit `f0be54c5`: ✓[M]$_{\rm neg}$ im Modellscope]
 
 **Def. 1.2 (Quadratischer Pivot).**
 $$Q_N(\varphi) := \gamma^2\sum_{r,n}\Lambda(n)^2 W_N(r,n)\varphi(r,n).$$
@@ -107,7 +115,9 @@ $$\mathcal V(M,\sqrt{M})\sim \sqrt{M}\log\sqrt{M} = \tfrac12\sqrt{M}\log M.$$
 $\mathcal P^{\rm unf}_{N,H}$ (unnormalisiert, lokal) ersetzt das global normierte $\mathcal S_{N,H}$ (verworfen). [NEU-104: ✓[M]$_{\rm part}$]
 
 **Satz 3.4 (Rampenasymptotik, einseitig).** LFF $=1$ $\Rightarrow$ universelle Rampenmassenasymptotik.
-Umkehrung nicht bewiesen. [NEU-107: ✓[M]$_{\rm part}$]
+Die Umkehrung
+$$\text{Rampenform}\Rightarrow\mathrm{LFF}$$
+ist **nicht bewiesen und nicht widerlegt**; sie bleibt `?[O]`. [NEU-107: ✓[M]$_{\rm part}$ für den Einwegpfeil; P10-Gegencheck `c77a101`: OPEN für die Umkehrung]
 
 **Satz 3.5 (LFF-Typisierungswarnung).**
 $$\text{LFF allein konstruiert oder identifiziert }Q_{\rm Weil}\text{ nicht.}$$
@@ -225,7 +235,8 @@ $$A_N^{\rm Jac,-} \stackrel{?[O]}{\longrightarrow} m_{\Omega,N}
 
 | Aussage | Status | Quelle |
 |---------|--------|--------|
-| $D_N(z)\to e^{-\gamma^2/4}$ (Determinanten-No-Go) | PROVED | NEU-091 |
+| $D_N(z)\to1$ im NEU-088–90-Scaling; kein nichttrivialer $C\xi(z)$-Grenzwert aus dieser Skalierung | PROVED$_{neg}$ (modell-/skalenspezifisch) | P06 G-T4/G-T5; P10 Targeted-Reaudit |
+| $D_N(z)\to e^{-\gamma^2/4}$ im selben Scaling | SUPERSEDED / NO-GO als historische Behauptung | NEU-091; P10 Targeted-Reaudit |
 | Quadratischer Pivot $Q_N$ (Mangoldt-Objekt) | PROVED (Definition) | NEU-091 |
 | Testkegel-Positivität $Q_N[\phi]\geq 0$ auf $\mathcal C$ | PROVED | NEU-092 |
 | Bilinearer Lift $B_N(f,g)$ pos.-semidef. auf $\mathcal S$ | OPEN | NEU-092 |
@@ -239,9 +250,9 @@ $$A_N^{\rm Jac,-} \stackrel{?[O]}{\longrightarrow} m_{\Omega,N}
 | $\mathcal V(M,H)\sim H\log(M/H)$ uniform in $1\leq H\leq M^{1-\varepsilon}$ | CONDITIONAL (RH + SPC, GM 1987) | NEU-101 |
 | Selbstdualer Testwert $\mathcal V(M,\sqrt{M})\sim\tfrac12\sqrt{M}\log M$ | CONDITIONAL (RH + SPC) | NEU-101 |
 | Externer $H=M$-Gegenbefund gegen Korollar 3.2a | NO-GO / trifft Live-Stand nicht | P07 Targeted-Reaudit |
-| $\mathcal P^{\rm unf}_{N,H}$ lokales Formfaktor-Ersatzobjekt | PROVED$_{\rm part}$ | NEU-104 |
-| LFF $\Rightarrow$ Rampenasymptotik (einseitig) | PROVED$_{\rm part}$ | NEU-107 |
-| LFF $\Leftrightarrow$ Rampenform (Biimplikation) | NO-GO (nur $\Rightarrow$) | NEU-107 |
+| $\mathcal P^{\rm unf}_{N,H}$ lokales Formfaktor-Ersatzobjekt | PROVED$_{part}$ | NEU-104 |
+| LFF $\Rightarrow$ Rampenasymptotik (einseitig) | PROVED$_{part}$ | NEU-107 |
+| Rampenform $\Rightarrow$ LFF | OPEN (nicht bewiesen, nicht widerlegt) | NEU-107; P10-Gegencheck |
 | LFF allein identifiziert $Q_{\rm Weil}$ nicht | PROVED (Typisierungswarnung) | NEU-108 |
 | Symboltest $\sigma_{\rm loc}(Q_{\rm Weil})\stackrel?=|\alpha|$ | OPEN | NEU-110 |
 | $m_{\rm arith}$ Herglotz $\Leftrightarrow$ RH | PROVED | NEU-111 |
@@ -275,5 +286,5 @@ $$A_N^{\rm Jac,-} \stackrel{?[O]}{\longrightarrow} m_{\Omega,N}
 
 ---
 
-*Fehlerhistorie, Patch-Notizen, Provenienz: PASS-A-PROTOKOLL.md + `03-weil-form-statistik/NEU-091–120` + P07 Targeted-Reaudit `57441d87`.*
+*Fehlerhistorie, Patch-Notizen, Provenienz: PASS-A-PROTOKOLL.md + `03-weil-form-statistik/NEU-091–120` + P07 Targeted-Reaudits `57441d87`, `f0be54c5`.*
 *LaTeX-Fassung: `papers/P07_Weil_Form_Statistics.tex`.*
