@@ -1,0 +1,303 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\geometry{margin=2.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+
+\title{P09 --- Bost--Connes, Hochschild and Charged Cohomology}
+\author{Objekt-X-Programm}
+\date{9. August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\textbf{Status: SYN FINAL AUDITED}
+\end{center}
+
+\paragraph{Auditbasis.}
+Pass-A: \texttt{AUDIT-2026-08-09-P09-PassA-FINAL-SEAL};
+SYN-Primärcheck: \texttt{AUDIT-2026-08-09-P09-SYN-Primaercheck};
+SYN-Zweitcheck: \texttt{AUDIT-2026-08-09-P09-SYN-Zweitcheck-Pfadgebunden}.
+Der Scope ist der BC-/Hochschild-Strang NEU-174--219; NEU-222 wird ausschließlich als Superseding-Scan verwendet.
+
+\begin{abstract}
+P09 konsolidiert den Bost--Connes-/Hochschild-Strang des Objekt-X-Programms. Auf
+$A_{\mathbb Q}^{\rm alg}$ existiert eine nichttriviale neutrale Hochschild-4-Klasse. Der geladene Fortschritt entsteht über eine singuläre faktoriale Potentialroute und eine korrigierte äußere Derivation
+\[
+ [D_g^{\rm corr}]\neq0\in HH^1(A_{\rm alg},A_{C^*})_g.
+\]
+Ein logarithmischer Koeffiziententyp und der globale Bimodul
+$\mathfrak M_{\rm glob}^{\log}$ erlauben den nichttrivialen geladenen Cup
+\[
+ \boxed{[D_g^{\rm corr}]\smile[\Theta^\wedge]\neq0
+ \in HH^4(A_{\rm alg},\mathfrak M_{\rm glob}^{\log})_g.}
+\]
+Die zyklische Verfeinerung ist nicht automatisch möglich. Für $\beta>1$ liefert eine gradneutralisierte KMS-Auswertung einen nichtverschwindenden getwisteten Hochschildkozykel; im adelischen Dilatationsmodell besitzt der kanonische Basislift dagegen keine globale konstante Rotationseigenrelation:
+\[
+ \boxed{t\Phi_0\neq C\Phi_0\qquad\forall C\in\mathbb C.}
+\]
+P09 konstruiert weder einen zyklischen Ersatzrepräsentanten noch eine Weil-/Gamma-, Gram-, Hilbert--Pólya- oder Objekt-X-Endstruktur und enthält keinen RH-Beweis.
+\end{abstract}
+
+\section{Typ-, Notations- und Statusfirewalls}
+
+Im I1-Grundblock setzen wir
+\[
+ \boxed{A:=A_{\mathbb Q}^{\rm alg}}.
+\]
+In den späteren Dateien wird derselbe algebraische BC-Kern überwiegend mit $A_{\rm alg}$ bezeichnet. Drei Koeffiziententypen sind strikt zu unterscheiden:
+\[
+ A_{\rm alg}\subset A_{C^*},\qquad
+ \mathcal A^{\log}\subset A_{C^*},\qquad
+ \mathfrak M_{\rm glob}^{\log}\subset\mathcal A^{\log}.
+\]
+Eine nichttriviale Klasse mit Koeffizienten in $A_{C^*}$ oder $\mathfrak M_{\rm glob}^{\log}$ impliziert keine nichttriviale Selbstkoeffizientenklasse in $HH^*(A_{\rm alg},A_{\rm alg})$.
+
+Historische Formeln mit $D_g(e(r))=0$ sind superseded. Bindend ist
+\[
+ \boxed{D_g^{\rm corr}(e(r))=\mu_m C_{m,n;r}\mu_n^*,\qquad g=m/n.}
+\]
+Die Grenzdefinition ist nur als punktweiser Normgrenzwert auf jedem festen $a\in A_{\rm alg}$ gebucht; gleichmäßige Konvergenz in Derivationsoperatornorm wird nicht behauptet.
+
+Ebenso ist $MX_N\to0$ falsch. Korrekt ist
+\[
+ \boxed{M(0)=0\Longrightarrow MX_N\text{ ist für }N\gg1\text{ exakt konstant}.}
+\]
+
+Die Katalognummern NEU-191 und NEU-198 fehlen im Live-Bestand. Aus diesen fehlenden Dateien wird keine positive SYN-Aussage allein abgeleitet.
+
+\section{Algebraischer BC/Hochschild-Grundblock}
+
+Für vier verschiedene Primrichtungen liefert der neutrale Grundblock
+\[
+ \boxed{[\Omega_p]\neq0\in HH^4(A_{\mathbb Q}^{\rm alg},A_{\mathbb Q}^{\rm alg}),
+ \qquad \deg_\Gamma\Omega_p=1_\Gamma.}
+\]
+Die Alternierung ist unnormalisiert; die ausgezeichnete Paarung besitzt den Faktor $4!=24$.
+
+Daraus folgt nicht
+\[
+ HH^4(A_{\rm alg},A_{\rm alg})_g\neq0\qquad(g\neq1).
+\]
+Die geladene Klasse im separaten Vier-Prim-Polynommodell $S_p$ wird nicht als BC-Klasse migriert.
+
+Der geladene Dualzyklus sieht den vollständig alternierenden Anteil $\operatorname{Alt}_4L$. Die frühe symmetrische Produktschablone besitzt $\operatorname{Alt}_4L=0$. Ein determinantischer Modellkandidat paart zwar mit Wert $24$, scheitert aber am Hochschildrand. Das ist ein Kandidaten-No-go, kein globaler No-go für geladenes $HH^4$.
+
+\section{Singuläre Potentialroute und geladene HH1-Klasse}
+
+Für jeden nichtneutralen reduzierten Grad $g=m/n$ gilt
+\[
+ \boxed{Z_g=\{0\}.}
+\]
+Die faktoriale Kette
+\[
+ L_j=(j+1)!,\qquad P_j=1_{L_j\widehat{\mathbb Z}}
+\]
+liefert $\operatorname{Sing}(X)=\{0\}$. Der ältere No-go gegen exakt unter allen Primtransporten geschlossene totale Teilbarkeitsketten widerspricht dieser Konstruktion nicht, weil die faktoriale Route mit einem normkontrollierten Transportband arbeitet.
+
+Die korrigierte geladene Derivation erfüllt für $g\neq1$
+\[
+ \boxed{[D_g^{\rm corr}]\neq0\in HH^1(A_{\rm alg},A_{C^*})_g.}
+\]
+Ihre Nichtinnerheit wird durch einen Offdiagonaltest gegen beschränkte Implementierer nachgewiesen. Sie landet im Allgemeinen nicht in $A_{\rm alg}$; deshalb bleibt eine geladene Selbstkoeffizientenklasse in $HH^1(A_{\rm alg},A_{\rm alg})_g$ offen.
+
+Normkonvergente Potentialimplementierer liefern nur innere beziehungsweise im relevanten Quotienten unsichtbare Derivationen. Ein globaler normstetiger $A_{\rm alg}$-Bimoduloperator
+\[
+ R:A_{C^*}\to\mathcal A^\infty\subsetneq A_{C^*}
+\]
+kann nicht als nichttrivialer universeller Glätter die Zieltypfrage lösen.
+
+Die drei konkreten dyadischen L/R/S-Platzierungen aus NEU-205 bleiben Kandidaten-No-gos. Die relation-adaptierte, $N$-abhängige ``Architecture III'' bleibt ausdrücklich offen.
+
+\section{Logarithmischer Koeffiziententyp und geladener HH4-Cup}
+
+Die Reparatur des gescheiterten Schwartz-Zieltyps ist die direkte Konstruktion
+\[
+ \boxed{\mathcal B_{\rm alg}\subsetneq\mathcal B^{\log}\subsetneq C(\widehat{\mathbb Z})}
+\]
+mit stabilen Operationen $\sigma_k$, $\rho_k$, $T_a$ und $G_{a,d}\in\mathcal B^{\log}$. Daraus entsteht die graduierte algebraische $*$-Algebra $\mathcal A^{\log}$.
+
+Es gilt
+\[
+ \boxed{D_g^{\rm corr}(A_{\rm alg})\subseteq\mathcal A^{\log},\qquad
+ [D_g^{\rm corr}]\neq0\in HH^1(A_{\rm alg},\mathcal A^{\log})_g.}
+\]
+Für den globalen logarithmischen Bimodul folgt stärker
+\[
+ \boxed{[D_g^{\rm corr}]\neq0\in HH^1(A_{\rm alg},\mathfrak M_{\rm glob}^{\log})_g.}
+\]
+Lokale stärkere Behauptungen mit $M_{g,p}^{\log}$ werden ohne vollständige lokale Bimodultypisierung nicht migriert.
+
+Der Mehrparameter-Følner-Nachweis konstruiert einen partiellen Modulquotienten, einen Dualzeugen und eine nichtverschwindende Paarung. Damit
+\[
+ \boxed{[D_g^{\rm corr}]\smile[\Theta^\wedge]\neq0
+ \in HH^4(A_{\rm alg},\mathfrak M_{\rm glob}^{\log})_g.}
+\]
+Der Beweis benötigt nicht den vollen Quotienten
+$\mathfrak M_{\rm glob}^{\log}/[A_{\rm alg},\mathfrak M_{\rm glob}^{\log}]$; dessen Struktur bleibt offen. Ebenso folgt keine Klasse in $HH^4(A_{\rm alg},A_{\rm alg})_g$.
+
+\section{KMS-Neutralisierung und getwisteter Hochschildkozykel}
+
+Für ein homogenes nichtneutrales Zielelement $\eta$ erzwingt die KMS-Gleichung
+\[
+ \boxed{\omega_\beta(\eta)=0\qquad(\beta>0).}
+\]
+Ein KMS-Zustand ist keine gewöhnliche Spur und annihiliert im Allgemeinen nicht $[A,M]$.
+
+Nach expliziter Gradneutralisierung reduziert die ausgezeichnete Auswertung für $\beta>1$ auf
+\[
+ \omega_{\beta,\chi}(\sigma_P(G_q)),
+\]
+und für alle extremalen Gibbs-Zustände im bewiesenen Bereich gilt
+\[
+ \boxed{\omega_{\beta,\chi}(\sigma_P(G_q))>0.}
+\]
+Der Fall $\beta=1$ wird durch diese Gibbs-Rechnung nicht entschieden.
+
+Für die Standard-Letztrandkonvention ist
+\[
+ \boxed{\sigma_\beta=\alpha_{-i\beta}=\theta_\beta^{-1}.}
+\]
+Im bewiesenen Gibbs-Bereich folgt
+\[
+ \boxed{b^{\sigma_\beta}\Phi_{\beta,\chi}=0,\qquad
+ 0\neq\Phi_{\beta,\chi}\in Z^4_{\sigma_\beta,\mathrm{Hoch}}(A_{\rm alg}).}
+\]
+Strukturell gilt für diese rohe I4-Kochain
+\[
+ \boxed{T_{\sigma_\beta}\Phi_{\beta,\chi}=g^{-\beta}\Phi_{\beta,\chi}.}
+\]
+Im bewiesenen Nichtnullbereich $\beta>1$ und für $g\neq1$ ist dieser konkrete Repräsentant deshalb nicht standardmäßig getwistet-zyklisch. Diese Aussage betrifft $\Phi_{\beta,\chi}$, nicht den späteren kanonischen Basislift $\Phi_0$.
+
+\section{Parazyklische und Hopf-SAYD-No-gos}
+
+Der $w$-Eigenraum von $T$ ist ein $b^\sigma$-Unterkomplex. Für $w\neq1$ wird er bei gewöhnlicher Invarianten-/Koinvarianten-Zyklisierung annihiliert, weil $1-T$ dort invertierbar ist.
+
+Eine externe eindimensionale Eigenlinie kompensiert den $T$-Eigenwert nur formal und definiert keine zyklische Koeffiziententheorie. Für $\beta>0$ existiert außerdem kein eindimensionales unital-nichtdegeneriertes $\sigma_\beta$-äquivariantes $A_{\rm alg}$-Bimodul des benötigten Typs.
+
+Die $\mathbb Q_+^\times$-Gradierung liefert kanonisch eine Koaktion, nicht bereits eine kanonische Gruppenalgebra-Aktion. Der minimale reparierte Hopf-Typ
+\[
+ \mathcal H_\beta=\mathbb C[\mathbb Z]
+\]
+wirkt durch $\sigma_\beta$. Im Standard-SAYD-Setup kollidieren exakter KMS-Twist, Ladungskompensation und Stabilität. Ein nichtstandardmäßiger $A$-relativer Hopf-Koeffizient bleibt offen.
+
+\section{Adelische Dilatation, Morita-Ecke und Orbitmarkierung}
+
+Die BC-Endomorphismen besitzen die adelische automorphe Dilatation
+\[
+ \widetilde B=C_0(\mathbb A_f),\qquad (\gamma_rF)(a)=F(r^{-1}a),
+\]
+mit
+\[
+ \widetilde A=C_0(\mathbb A_f)\rtimes_\gamma\mathbb Q_+^\times.
+\]
+Für $e=1_{\widehat{\mathbb Z}}$ gilt die Full-Corner-Realisierung. Für den gewählten algebraischen Kern ist zusätzlich explizit nachgerechnet
+\[
+ \boxed{e\widetilde A_{\rm alg}e=j_A(A_{\rm alg}).}
+\]
+Der Eckprojektor ist algebraisch voll, und der Kern besitzt lokale Einheiten.
+
+Die unmarkierten gesättigten Orbitmodule kollabieren:
+\[
+ \boxed{N_k=N_0\qquad\forall k\in\mathbb Z.}
+\]
+Daher ist die globale unmarkierte Multiplikationsabbildung nicht injektiv. Die Orbitinformation wird extern markiert:
+\[
+ \mathcal N_{\rm tag}=\bigoplus_{k\in\mathbb Z}^{\rm alg}N_0\delta_k.
+\]
+Auf $\mathcal N_{\rm tag}$ existiert eine typkorrekte Eigenfamilie $\Omega_\lambda$. Die Multiplikation mit $U_{g^{-1}}$ erhält den Orbitindex und ist nicht der externe Shift $T^{-1}$.
+
+\section{Kanonischer Basislift und endgültiger Rotations-No-go}
+
+Der kanonische Ecklift ist
+\[
+ \boxed{\widetilde L_0=\eta_0\circ j_M\circ L^{\rm cup}:
+ A_{\rm alg}^{\otimes4}\to I_0,}
+\]
+und
+\[
+ \boxed{\widetilde L_0\in Z^4(A_{\rm alg},I_0).}
+\]
+Die Recovery-Identität ist als Inklusion
+\[
+ \Pi_0\circ\eta_0=\iota_{M_0\hookrightarrow N_0}
+\]
+zu lesen; nach Eckkompression erhält man $\operatorname{id}_{M_0}$.
+
+Der Lift trägt den BC-Grad $g$, lebt aber vollständig im Orbit-Nullsummanden:
+\[
+ \boxed{\kappa=0,\qquad\varepsilon=0.}
+\]
+Daher ist jedes Orbitgewicht $\lambda$ auf dem kanonischen Lift wirkungslos.
+
+Die historischen Zwischenbehauptungen
+\[
+ t\Phi_0=g^{-\beta}\Phi_0,
+ \qquad s=-1
+\]
+sind superseded. KMS, Twistkommutation und Gradinformation liefern keine Rotation von $L(a_0,a_1,a_2,a_3)$ zu $L(a_1,a_2,a_3,a_4)$.
+
+Für das Unit-Slot-Tupel
+\[
+ (a_0,a_1,a_2,a_3,a_4)=(\mu_P^*,\mu_{p_1},\mu_{p_2},\mu_{p_3},1)
+\]
+gilt
+\[
+ \Phi_0(a_0,\ldots,a_4)=0,
+\]
+während für $\beta>1$
+\[
+ (t\Phi_0)(a_0,\ldots,a_4)
+ =-\left(\prod_{i=1}^3\log p_i\right)n^{-\beta}\omega_{\beta,\chi}(G_P)\neq0.
+\]
+Folglich
+\[
+ \boxed{t\Phi_0\neq C\Phi_0\qquad\forall C\in\mathbb C.}
+\]
+Das schließt den kanonischen skalaren Basislift ab, nicht jedoch andere zyklische/getwistet-zyklische Repräsentanten, genuin orbitverschiebende nichtkanonische Lifte, andere Koeffizientenkategorien oder archimedische Korrekturen.
+
+\section{Offene Endknoten}
+
+Offen bleiben insbesondere:
+\begin{enumerate}[label=\arabic*.]
+\item eine geladene Selbstkoeffizientenklasse in $HH^1(A_{\rm alg},A_{\rm alg})_g$;
+\item eine geladene Selbstkoeffizientenklasse in $HH^4(A_{\rm alg},A_{\rm alg})_g$;
+\item die volle Struktur von $\mathfrak M_{\rm glob}^{\log}/[A_{\rm alg},\mathfrak M_{\rm glob}^{\log}]$;
+\item die topologische Banach-/Fréchet-Vervollständigung des logarithmischen Zieltyps;
+\item die lokalen Resttypisierungen [O-217-1d], [O-217-2b-5], [O-217-2c-5land];
+\item der KMS-Grenzfall $\beta=1$ in der I4-Diagonalauswertung;
+\item ein nichtstandardmäßiger $A$-relativer Hopf-Koeffizient;
+\item [O-219-cyclic-representative];
+\item ein genuin orbitverschiebender nichtkanonischer Lift;
+\item [O-219-6], die Weil-/Gammafaktorpaarung;
+\item die relation-adaptierte NEU-205-Architecture III.
+\end{enumerate}
+
+\section{Routing und Gesamturteil}
+
+P10 darf isolierte Kandidaten-No-gos spiegeln; strukturtragende No-gos bleiben auch in P09. Die globale nichtorthogonale Gramkopplung, der Mediator zwischen Primkanälen und archimedischem Anteil und die Objekt-X-Gesamtgeometrie gehören nach P11. Der Weil-/Gamma-Pfad wird ab NEU-220 weitergeführt.
+
+Der P09-Endstand lautet:
+\[
+ \boxed{\text{geladene Hochschildstruktur: positiv bis }HH^4
+ \text{ mit Koeffizienten }\mathfrak M_{\rm glob}^{\log},}
+\]
+aber
+\[
+ \boxed{\text{kanonische skalare zyklische Rotation: negativ.}}
+\]
+Die Koeffizienten- und Zyklizitätsfirewalls verhindern einen automatischen Schluss auf eine zyklische Klasse, eine Weil-Identität oder einen Hilbert--Pólya-Operator.
+
+\begin{center}
+\fbox{\parbox{0.84\textwidth}{\centering
+P09 enthält keinen RH-Beweis und konstruiert Objekt X nicht.}}
+\end{center}
+
+\end{document}
