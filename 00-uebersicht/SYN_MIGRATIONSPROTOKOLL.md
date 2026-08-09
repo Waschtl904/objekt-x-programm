@@ -30,7 +30,7 @@ Erst aus dieser Zusammenschau entsteht der **gültige mathematische Endstand**, 
 
 ## Migrationsfluss
 
-```
+```text
 NEU-Knoten
 + Audits
 + Patches
@@ -49,7 +49,7 @@ Block eingefroren
 
 Wenn beim SYN-Schreiben ein neuer Widerspruch entdeckt wird:
 
-```
+```text
 Migration stoppen
     ↓
 Fehler auditieren
@@ -83,7 +83,7 @@ Eine Aktion „300 Dateien → 10 Papers“ ohne Einzelkontrolle birgt drei Risi
 
 - **Fehlerübernahme**: Ein alter `×[M]`-Knoten wird versehentlich als gültiges Resultat eingebaut.
 - **Provenienzverlust**: Die Herkunft einer Aussage wird nicht eingetragen; später nicht mehr nachvollziehbar.
-- **Konventionsdrift**: Zwei verschiedene Normierungen (z. B. $\gamma_\infty$ mit und ohne $1/2$-Faktor) werden gemischt.
+- **Konventionsdrift**: Zwei verschiedene Normierungen (z. B. $\gamma_\infty$ mit und ohne $1/2$-Faktor) werden gemischt.
 
 Ein KI-Agent kann sehr viel mechanische Arbeit übernehmen (Dateien lesen, Querverweise einsammeln, LaTeX anlegen, Provenienz eintragen, Commits pushen). Die mathematische Entscheidung „Was ist gültig, was superseded, was No-Go, was offen?“ bleibt aber blockweise unter Kontrolle.
 
@@ -128,9 +128,12 @@ Grobe Erwartung: 300–400 Knoten → 10–15 Blöcke → 10–15 SYN-Papers.
 | P06 | `SYN FROZEN ✓[K/M]` | Jacobi–Feshbach + Divisorgraph abgeschlossen; LaTeX-Transferaudit `1b1a7173` |
 | P07 | `SYN FROZEN ✓[K/M]` | Weil-Form Statistics abgeschlossen |
 | P08 | `SYN FROZEN ✓[K/M]` | Grenzoperator + Renormierung abgeschlossen; Markdown-Finalcommit `31c93d50`, LaTeX `d283c34c`, Transferaudit `3f12e0ef` |
-| **P09** | **NÄCHSTER AKTIVER BLOCK** | BC + Hochschild; Voraussetzung P01 gemäß Blockplan |
+| **P09** | **`SYN FROZEN ✓[K/M]`** | BC + Hochschild abgeschlossen; Pass-A-Seal `28b5cba5`, Markdown-Finalcommit `8346733e`, LaTeX `26f9d60e`, Transferaudit `e724b5a7` |
+| **P10** | **NÄCHSTER AKTIVER BLOCK** | kondensierte No-Go-Sammlung; nur bereits eindeutig auditierte Negativbefunde übernehmen |
 
-Verbindlicher nächster Migrationsblock ist damit **P09**. P05–P08 werden nicht erneut geöffnet, sofern kein neuer konkreter Widerspruch gegen ihren eingefrorenen Endstand auftaucht.
+P05–P09 werden nicht erneut geöffnet, sofern kein neuer konkreter mathematischer Gegenbefund gegen ihren eingefrorenen Endstand auftaucht.
+
+Verbindlicher nächster Migrationsblock ist damit **P10**. Für P10 gilt besonders: P09-CORE-NOGOs dürfen gespiegelt, aber nicht aus P09 entfernt oder zu stärkeren universellen No-Gos hochgestuft werden.
 
 ---
 
