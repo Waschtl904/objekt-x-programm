@@ -1,0 +1,777 @@
+\documentclass[11pt,a4paper]{amsart}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array,booktabs,longtable}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Satz}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Korollar}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Bemerkung}
+\newtheorem{openproblem}[theorem]{Offenes Problem}
+
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\FP}{\operatorname{FP}}
+\newcommand{\AC}{\operatorname{AC}}
+
+\title[P08 --- Renormalized Prime Operators]{P08 --- Renormalized Prime Operators and Finite-Part Structures}
+\author{Objekt-X-Programm}
+\date{2026-08-09}
+
+\begin{document}
+
+\begin{abstract}
+P08 konsolidiert zwei logisch getrennte Stränge des Grenzoperator- und
+Renormierungsprogramms. Der erste ist eine Renormierungsdiagnose für endliche
+Jacobi-Modelle: die erste Lanczos-Kante kollabiert streng und eine mögliche
+Divergenz von $b_{2,N}/b_{1,N}$ würde eine skalare Renormierung ausschließen,
+ohne eine nichtskalare Prä-Lanczos-Metrik zu konstruieren. Der zweite Strang
+untersucht renormalisierte Primoperatoren, Mangoldt-Spuren und
+Finite-Part-Strukturen. Eine feste-$\beta$-Spurklasse ist nur konditional im
+relativen Rang-eins-Modell verfügbar. Der exakte Mellin-Kanal ist die
+glättete Mangoldt-Summe $\Psi_{\varphi,X}$, nicht die Prime-only-Summe mit
+Cutoff $\varphi(p/X)$. Die operatorielle Identifikation eines konkreten
+Finite Parts mit der analytischen Fortsetzung von $-\zeta'/\zeta$ bleibt
+offen. Es wird weder Objekt X noch ein Hilbert--Pólya-Endoperator konstruiert,
+und kein RH-Beweis behauptet.
+\end{abstract}
+
+\maketitle
+
+% ----------------------------------------------------------------
+\section{Bindende Typ- und Statusfirewalls}
+% ----------------------------------------------------------------
+
+\begin{remark}[P05-Scope]\label{rem:p05-scope}
+Für P08 gilt
+\[
+  \operatorname{rank}C_p^{\rm rel}\le1
+\]
+nur in der induzierten relativen Modellrealisierung. Der gewichtete
+Rang-eins-Operator ist
+\[
+  P_p=|c_p|^2\Pi_p^{(1)},
+\]
+und im Allgemeinen kein orthogonaler Projektor. Nichtentartung $c_p\ne0$,
+Liftunabhängigkeit von $|c_p|^2$ und eine intrinsische termweise Asymptotik
+bleiben offen.
+\end{remark}
+
+\begin{remark}[Zwei Jacobi-Typen]\label{rem:jacobi-types}
+Die endliche direkt symmetrische Schließung
+\[
+  A_N^{\rm sym}=B_N^\Lambda=J_N^\Lambda+(J_N^\Lambda)^*
+\]
+ist selbstadjungiert. Davon ist der historische antisymmetrische Pfad zu
+trennen:
+\[
+  J_N^-:=\frac12(\Theta_N-\Theta_N^\dagger),
+  \qquad
+  S_N:=\frac1{2i}(\Theta_N-\Theta_N^\dagger)=-iJ_N^-.
+\]
+$J_N^-$ ist schiefadjungiert, $S_N$ selbstadjungiert. Eine konkrete
+selbstadjungierte Realisierung des historischen $A_N^{\rm Jac,-}$ bleibt
+offen.
+\end{remark}
+
+\begin{definition}[Analytische Regularisierungsdefinition]
+\label{def:trreg}
+Die Schreibweise
+\[
+  \Tr_{\rm reg}(R\Sigma)(\beta)
+  :=\AC\!\left[-\frac{\zeta'}{\zeta}\right](\beta)
+\]
+ist eine Definition. Sie ist keine operatorielle Herleitung eines
+Cutoff-Grenzwerts.
+\end{definition}
+
+% ----------------------------------------------------------------
+\section{Moment-/KMS-Eingang und Herglotz-Grenze}
+% ----------------------------------------------------------------
+
+\begin{theorem}[Korrigierte $\xi$-Konstante]\label{thm:cxi}
+Für die in NEU-121 verwendete Größe gilt
+\[
+  C_\xi=-\frac{\xi'(0)}{\xi(0)}
+  =1+\frac{\gamma_E}{2}-\frac12\log(4\pi)
+  \approx0.0230957.
+\]
+Der historische Zahlenwert $-0.5493$ ist gesperrt und superseded.
+\end{theorem}
+
+\begin{theorem}[KMS/GNS-Normalisierung]\label{thm:gns-normalization}
+Sei
+\[
+  \tau_{\beta,N}(T)=\sum_{n\le N}n^{-\beta}\langle e_n,Te_n\rangle,
+  \qquad Z_{\beta,N}=\tau_{\beta,N}(1),
+\]
+und $\varphi_{\beta,N}=Z_{\beta,N}^{-1}\tau_{\beta,N}$. Dann lautet die
+korrigierte GNS-Normalisierung
+\[
+  \widehat\Omega=Z^{-1/2}\Omega_\tau.
+\]
+Für $\beta=1$ gilt
+\[
+  Z_{1,N}^{-1}\sim\frac1{\log N}.
+\]
+Die historischen Formeln $Z^{+1/2}\Omega_\tau$ und $R_N\sim\log N$ werden
+nicht übernommen.
+\end{theorem}
+
+\begin{theorem}[Herglotz-Firewall]\label{thm:herglotz-firewall}
+P07 fixiert
+\[
+  m_{\rm arith}\text{ ist Herglotz}\quad\Longleftrightarrow\quad\RH.
+\]
+Daher gilt für echte Herglotz-Approximanten die logische Implikation
+\[
+  \widetilde m_N^{\rm ren}
+  \xrightarrow{\rm loc.\,unif.}m_{\rm arith}
+  \Longrightarrow
+  m_{\rm arith}\text{ Herglotz}
+  \Longrightarrow\RH.
+\]
+Die Existenz und kanonische Wahl einer solchen Approximantenfolge wird damit
+nicht bewiesen.
+\end{theorem}
+
+\begin{openproblem}[KMS/GNS--Jacobi-Brücke]\label{op:kms-jacobi}
+Offen bleiben eine vorab fixierte selbstadjungierte GNS-Observable mit der
+gewünschten Lanczos-Darstellung, die Formkompatibilität mit der
+Bombieri-/Weil-Geometrie, die konkrete Selbstadjungiertheit des historischen
+$A_N^{\rm Jac,-}$ sowie die kanonische Nevanlinna-Normalisierung und
+Tail-Kontrolle.
+\end{openproblem}
+
+% ----------------------------------------------------------------
+\section{Renormierungsdiagnose des symmetrischen Jacobi-Pfads}
+% ----------------------------------------------------------------
+
+\begin{theorem}[Kollaps der ersten Lanczos-Kante]\label{thm:b1-collapse}
+Für den direkt symmetrisierten endlichen Kandidaten gilt
+\[
+  a_{0,N}=0,
+\]
+und
+\[
+  b_{1,N}
+  =\frac{\gamma}{N}\sqrt{\sum_{n=2}^{N-1}\Lambda(n)^2}
+  \asymp\gamma\sqrt{\frac{\log N}{N}}
+  \longrightarrow0.
+\]
+Damit scheitert die unrenormierte nichtdegenerierte Eintrittsbedingung
+$b_{1,N}\to b_1>0$.
+\end{theorem}
+
+\begin{corollary}[Startvektor-Weylkanal]\label{cor:start-weyl}
+Aus $A_N^{\rm sym}e_0=b_{1,N}e_1$ folgt für
+$z\in\mathbb C\setminus\mathbb R$
+\[
+  \langle e_0,(A_N^{\rm sym}-z)^{-1}e_0\rangle
+  \longrightarrow-\frac1z.
+\]
+Der unrenormierte Startvektor-Kanal kann daher nicht $m_{\rm arith}$ liefern.
+\end{corollary}
+
+\begin{remark}[Keine globale Diagonalität]\label{rem:no-global-diag}
+Aus $b_{1,N}\to0$ folgt nicht, dass alle höheren Offdiagonalparameter
+verschwinden oder ein Grenzoperator insgesamt diagonal wird. Diese historische
+Folgerung ist ein No-Go.
+\end{remark}
+
+\begin{proposition}[Skalare Lanczos-Kovarianz]\label{prop:lanczos-cov}
+Für $c_N>0$ gilt
+\[
+  A_N\mapsto c_NA_N
+  \Longrightarrow
+  a_{j,N}\mapsto c_Na_{j,N},\qquad
+  b_{j,N}\mapsto c_Nb_{j,N}.
+\]
+Insbesondere ist $b_{2,N}/b_{1,N}$ unter positiver skalarer
+Prä-Lanczos-Skalierung invariant.
+\end{proposition}
+
+\begin{proposition}[Abstraktes No-scalar-Lemma]\label{prop:no-scalar}
+Falls
+\[
+  \frac{b_{2,N}}{b_{1,N}}\longrightarrow\infty,
+\]
+kann keine positive skalare Folge $\kappa_N$ beide Größen
+$b_{1,N}/\kappa_N$ und $b_{2,N}/\kappa_N$ gegen endliche positive Grenzwerte
+schicken.
+\end{proposition}
+
+\begin{openproblem}[Zweite Kante und Prä-Lanczos-Geometrie]
+\label{op:wn}
+Die endlichen Daten liefern starke Evidenz für Wachstum von
+$b_{2,N}/b_{1,N}$, beweisen aber den Grenzwert gegen $\infty$ nicht. Ebenso
+bleibt die Konstruktion einer intrinsischen positiven nichtskalaren
+Prä-Lanczos-Geometrie $W_N$ offen. Die Barriere diagnostiziert einen möglichen
+Bedarf; sie konstruiert $W_N$ nicht.
+\end{openproblem}
+
+% ----------------------------------------------------------------
+\section{Prä-Lanczos-/Grammetrik und lokale No-Gos}
+% ----------------------------------------------------------------
+
+\begin{remark}[Ebenentrennung]\label{rem:levels}
+Eine Jacobi-seitige Self-Energy ist noch keine intrinsische
+Prä-Lanczos-Metrik. Ein Kandidat $W_N$ müsste vor Lanczos auf der
+Quell-/Feshbach-Ebene konstruiert werden.
+\end{remark}
+
+\begin{proposition}[Korrekte Rang-eins-Form im Modell]\label{prop:rank-one-form}
+Im historischen Rang-eins-Modell lautet die Operatorform
+\[
+  \Sigma_N(\beta)x
+  =\sum_p w_p(\beta)\Psi_p\langle\Psi_p,x\rangle,
+\]
+beziehungsweise die Quadratform
+\[
+  \langle x,\Sigma_N(\beta)x\rangle
+  =\sum_p w_p(\beta)|\langle\Psi_p,x\rangle|^2.
+\]
+Die historische Vektor-gleich-Skalar-Formel wird nicht übernommen.
+\end{proposition}
+
+\begin{remark}[Paper-VII-Skalierungs-No-Go]\label{rem:h3-nogo}
+Aus $P_{kl}\le C_2c^{1/2}$ und $A_{kl}=P_{kl}c^{1/2}$ folgt
+$A_{kl}=O(c)$, nicht $O(1)$. Die historische H3-Verifikation mit dieser
+Skalierung ist gesperrt.
+\end{remark}
+
+\begin{remark}[Cancellation-No-Go]\label{rem:cancellation-nogo}
+Phasencancellation signierter dyadischer Summen kontrolliert keine absolute
+Schur-Zeilensumme. Das Modell
+\[
+  T_{ij}=\frac{e^{i\alpha(i-j)}}{|i-j|}
+\]
+weist Cancellation auf, während
+\[
+  \sum_{j\ne i}|T_{ij}|\asymp\log N.
+\]
+Eine korrekte Nelson-/Schur-Brücke benötigt daher einen separaten
+Operatornorm-, Quadratsummen-, $TT^*$-, Cotlar- oder Orthogonalitätsmechanismus.
+\end{remark}
+
+\begin{remark}[PSWF-Route]\label{rem:pswf}
+Die PSWF-/Edge-Koerzivitätsidee bleibt Methodenheuristik. Insbesondere wird
+keine Operatoridentifikation $D_{\rm rel}=\overline{iJ^-}$ und keine konkrete
+Prä-Lanczos-Metrik daraus abgeleitet.
+\end{remark}
+
+% ----------------------------------------------------------------
+\section{Renormalisierte Selbstenergie und feste-$\beta$-Spurklasse}
+% ----------------------------------------------------------------
+
+\begin{definition}[Algebraische $\beta$-Zerlegung]\label{def:beta-split}
+Aus
+\[
+  \frac1{1-p^{-\beta}}
+  =1+\frac{p^{-\beta}}{1-p^{-\beta}}
+\]
+folgt formal
+\[
+  \Sigma_{\rm rel}(\beta)
+  =\Sigma_{\rm rel}^{\infty}+\Sigma_{\rm rel}^{\rm ren}(\beta),
+\]
+mit
+\[
+  \Sigma_{\rm rel}^{\rm ren}(\beta)
+  :=\sum_p\frac{p^{-\beta}}{1-p^{-\beta}}P_p.
+\]
+\end{definition}
+
+\begin{remark}[Rohanteil-Firewall]\label{rem:raw-firewall}
+Aus den vorhandenen Upper Bounds folgt weder die Divergenz noch die
+Nicht-Regularisierbarkeit von $\Sigma_{\rm rel}^{\infty}$. Die korrekte
+PNT-Vergleichsasymptotik lautet
+\[
+  \sum_{p\le N}\frac{(\log p)^2}{p}
+  \sim\frac12(\log N)^2,
+\]
+nicht $\frac13(\log N)^3$.
+\end{remark}
+
+\begin{proposition}[Konditionale feste-$\beta$-Spurklasse]
+\label{prop:s1-fixed-beta}
+Unter
+\[
+  \operatorname{rank}C_p^{\rm rel}\le1
+  \quad\text{im relativen Modell}
+\]
+und
+\[
+  |c_p|^2=O\!\left(\frac{(\log p)^2}{p}\right)
+\]
+folgt für jedes feste reelle $\beta>0$
+\[
+  \Sigma_{\rm rel}^{\rm ren}(\beta)\in\mathcal S_1,
+\]
+gleichmäßig für $\beta\ge\beta_0>0$. Dies ist ein konditionaler
+modellrelativer Satz. T2 und $c_p\ne0$ sind keine Voraussetzungen dieses
+reinen $\mathcal S_1$-Schritts.
+\end{proposition}
+
+\begin{openproblem}[Quantitative Kanalnorm]\label{op:cp-bound}
+Die Schranke
+\[
+  |c_p|^2=O\!\left(\frac{(\log p)^2}{p}\right)
+\]
+ist intrinsisch nicht bewiesen. Ihr Modellursprung enthält insbesondere den
+offenen Schritt $B_p=O(1/p)$.
+\end{openproblem}
+
+\begin{proposition}[Fredholm-Basistheorie]\label{prop:fredholm-base}
+Sobald $\Sigma_{\rm rel}^{\rm ren}(\beta)\in\mathcal S_1$ vorliegt, sind die
+gewöhnliche Fredholm-Determinante und die Potenzspuren im
+Standard-Schattenrahmen definiert. Ohne T2 sind die primweisen Gewichte jedoch
+nicht automatisch Eigenwerte der Gesamtsumme; ein reines Euler-/Ihara-Produkt
+folgt nicht aus der Spurklasse allein.
+\end{proposition}
+
+\begin{proposition}[Korrekte zweite Spur]\label{prop:trace2}
+Im endlichen beziehungsweise spurklassigen Scope gilt formal
+\[
+  \Tr(\Sigma^2)=\sum_{p,q}w_pw_q\Tr(P_pP_q).
+\]
+Die historische Formel mit einem zusätzlichen Gesamtfaktor wird nicht
+übernommen.
+\end{proposition}
+
+% ----------------------------------------------------------------
+\section{T2, Nichtentartung und Mangoldt-Observable}
+% ----------------------------------------------------------------
+
+\begin{lemma}[Konditionale Edge-Label-Orthogonalität]\label{lem:t2}
+Falls eine intrinsisch gerechtfertigte orthogonale Zerlegung
+\[
+  W_{\rm res,rel}=\bigoplus_{(m,p)}^\perp H_{m\to pm}
+\]
+vorliegt, sind verschiedene Primlabelkanäle orthogonal. Die Herleitung dieser
+orthogonalen Summe aus der ursprünglichen BC-Geometrie ist nicht geschlossen;
+intrinsisches T2 bleibt offen.
+\end{lemma}
+
+\begin{openproblem}[Nichtentartung]\label{op:nonzero-cp}
+Ein allgemeiner Beweis
+\[
+  c_p\ne0\qquad\text{für alle relevanten Primzahlen}
+\]
+liegt nicht vor.
+\end{openproblem}
+
+\begin{definition}[Primdiagonale Mangoldt-Observable, conditional]
+\label{def:mangoldt-r}
+Unter T2, $c_p\ne0$ und einer abgeschlossenen primdiagonalen
+Hilbertraumrealisierung kann formal
+\[
+  R_p^{\rm Mang}:=\frac{\log p}{|c_p|^2}
+\]
+definiert werden. Im modellrelativen Rang-eins-Scope gilt dann
+\[
+  \Tr(RP_p)=\log p.
+\]
+Eine konkrete selbstadjungierte Operatorrealisierung von $R$ bleibt offen.
+Unter der zusätzlichen konditionalen Kanalnormschranke folgt lediglich
+\[
+  R_p^{\rm Mang}\gtrsim\frac{p}{\log p};
+\]
+eine Asymptotik ist nicht bewiesen.
+\end{definition}
+
+\begin{proposition}[Gewöhnliche Mangoldt-Spur]\label{prop:mangoldt-trace}
+Im primdiagonalen Modell gilt für $\Re\beta>1$ formal
+\[
+  \Tr\bigl(R\Sigma_{\rm rel}^{\rm ren}(\beta)\bigr)
+  =\sum_p\frac{\log p\,p^{-\beta}}{1-p^{-\beta}}
+  =-\frac{\zeta'}{\zeta}(\beta).
+\]
+Dies ist ein konditionaler Modellsatz im gewöhnlichen absoluten
+Konvergenzgebiet und keine Finite-Part-Aussage.
+\end{proposition}
+
+% ----------------------------------------------------------------
+\section{Scharfer Primcutoff und Prime-only-Firewall}
+% ----------------------------------------------------------------
+
+\begin{definition}[Prime-only-Cutoff]\label{def:sharp-prime-cutoff}
+\[
+  S_X(\beta)
+  :=\sum_{p\le X}\frac{\log p\,p^{-\beta}}{1-p^{-\beta}}
+  =\sum_{k\ge1}T_k(X,\beta),
+\]
+\[
+  T_k(X,\beta):=\sum_{p\le X}\log p\,p^{-k\beta}.
+\]
+\end{definition}
+
+\begin{theorem}[PNT-Hauptterm]\label{thm:prime-layer-main}
+Für festes $k\beta$ mit $\Re(k\beta)<1$ gilt
+\[
+  T_k(X,\beta)
+  \sim\frac{X^{1-k\beta}}{1-k\beta}.
+\]
+Für $k\beta=1$ tritt $\log X$ auf. Am Rand $\Re(k\beta)=1$,
+$k\beta\ne1$, ist der Hauptterm beschränkt oszillierend und besitzt im
+Allgemeinen keinen Grenzwert.
+\end{theorem}
+
+\begin{remark}[$\vartheta$ ist nicht $\psi$]\label{rem:theta-psi}
+$T_k$ ist eine Prime-only-Summe über
+\[
+  \vartheta(X)=\sum_{p\le X}\log p,
+\]
+während die klassische explizite Formel direkt
+\[
+  \psi(X)=\sum_{p^j\le X}\log p
+\]
+beschreibt. Ein direkter Import der $\psi$-Nullstellenterme in $T_k$ ohne
+Primpotenz-/Möbiuskorrektur ist gesperrt. Die RH-Verbindung bleibt nur als
+partielle Richtungsstruktur erhalten; ein vollständiger Prime-only-
+Äquivalenzsatz ist offen.
+\end{remark}
+
+% ----------------------------------------------------------------
+\section{Der korrekte Mellin-Kanal}
+% ----------------------------------------------------------------
+
+\begin{definition}[Testfunktion und Mellintransformierte]
+\label{def:mellin-test}
+Sei $\varphi\in C_c^\infty([0,\infty))$ mit $\varphi(x)=1$ nahe $0$. Für
+$\Re s>0$ sei
+\[
+  \widehat\varphi(s)
+  :=\int_0^\infty\varphi(x)x^{s-1}\,dx.
+\]
+Die Mellintransformierte besitzt eine meromorphe Fortsetzung mit einfachem
+Pol bei $s=0$ und
+\[
+  \operatorname{Res}_{s=0}\widehat\varphi(s)=1.
+\]
+Sie wird weder als ganz noch durch einen endlichen Wert
+$\widehat\varphi(0)=1$ normiert.
+\end{definition}
+
+\begin{definition}[Geglättete Mangoldt-Summe]\label{def:psi-smooth}
+\[
+  \Psi_{\varphi,X}(\beta)
+  :=\sum_{n\ge1}\Lambda(n)\varphi(n/X)n^{-\beta}
+  =\sum_{p,k\ge1}\log p\,\varphi(p^k/X)p^{-k\beta}.
+\]
+\end{definition}
+
+\begin{theorem}[Exakte Mellin-Darstellung]\label{thm:psi-mellin}
+Für
+\[
+  c>\max(0,1-\Re\beta)
+\]
+gilt
+\[
+  \Psi_{\varphi,X}(\beta)
+  =\frac1{2\pi i}\int_{(c)}\widehat\varphi(s)X^s
+  \left(-\frac{\zeta'}{\zeta}(\beta+s)\right)\,ds.
+\]
+\end{theorem}
+
+\begin{remark}[Prime-only-Mellin-No-Go]\label{rem:s-mellin-nogo}
+Für
+\[
+  S_{\varphi,X}(\beta)
+  =\sum_p\varphi(p/X)\frac{\log p\,p^{-\beta}}{1-p^{-\beta}}
+\]
+entsteht nach Mellin-Inversion
+\[
+  \sum_{p,k\ge1}\log p\,p^{-k\beta-s},
+\]
+nicht
+\[
+  -\frac{\zeta'}{\zeta}(\beta+s)
+  =\sum_{p,k\ge1}\log p\,p^{-k\beta-ks}.
+\]
+Die historische NEU-148.A-Identität ist deshalb gesperrt.
+\end{remark}
+
+\begin{proposition}[Korrekte $\Psi/S$-Differenz]\label{prop:psi-s-diff}
+Algebraisch gilt
+\[
+  \Psi_{\varphi,X}(\beta)-S_{\varphi,X}(\beta)
+  =\sum_{k\ge2}\sum_p\log p\,
+  [\varphi(p^k/X)-\varphi(p/X)]p^{-k\beta}.
+\]
+Für $\Re\beta>1/2$ ist die höhere-Primpotenzreihe absolut summierbar. Der für
+die Finite-Part-Anwendung benötigte quantitative/uniforme Transfer bleibt im
+versiegelten P08-Endstand offen; hier wird keine neue Hochstufung vorgenommen.
+\end{proposition}
+
+% ----------------------------------------------------------------
+\section{Konturrest und analytischer Finite Part}
+% ----------------------------------------------------------------
+
+\begin{proposition}[Mellin-Pol bei $s=0$]\label{prop:mellin-zero-pole}
+Ist $\beta$ keine Polstelle von $-\zeta'/\zeta$, dann liefert der Pol von
+$\widehat\varphi$ bei $s=0$ im korrigierten $\Psi$-Strang
+\[
+  \operatorname{Res}_{s=0}
+  \left[
+    \widehat\varphi(s)X^s
+    \left(-\frac{\zeta'}{\zeta}(\beta+s)\right)
+  \right]
+  =-\frac{\zeta'}{\zeta}(\beta).
+\]
+\end{proposition}
+
+\begin{proposition}[Fixed-contour Restlemma, conditional]
+\label{prop:fixed-contour}
+Auf einer fest gewählten linken Kontur $\Gamma_{-M}$ mit
+$\Re s\le-M<0$ und quantitativ positivem Abstand von allen relevanten Polen
+gilt $|X^s|\le X^{-M}$. Zusammen mit geeignetem vertikalem Mellin-Abfall und
+einer passenden Wachstumskontrolle von $\zeta'/\zeta$ ergibt sich conditional
+\[
+  R_{\varphi,X}(\beta)=O(X^{-M}).
+\]
+\end{proposition}
+
+\begin{openproblem}[Uniforme Kontur und Residuenzählung]
+\label{op:uniform-contour}
+Eine einheitliche nullstellenvermeidende Kontur für einen variierenden
+kompakten $\beta$-Bereich sowie die vollständige uniforme Residuenzählung sind
+nicht bewiesen. Für kontinuierliches $K$ ist
+\[
+  \{\omega-\beta:\beta\in K\}
+\]
+insbesondere nicht diskret.
+\end{openproblem}
+
+\begin{openproblem}[Analytischer Finite Part]\label{op:analytic-fp}
+Nach Abzug aller nichtverschwindenden Residuenbeiträge ist das Ziel
+\[
+  \FP_{X\to\infty}^{\varphi}\Psi_{\varphi,X}(\beta)
+  \stackrel?=-\frac{\zeta'}{\zeta}(\beta).
+\]
+Das fixed-contour Lemma ist ein konditionaler Baustein; der vollständige
+uniforme Abschluss bleibt offen.
+\end{openproblem}
+
+% ----------------------------------------------------------------
+\section{Operatorielle Primlabel-Brücke und Cutoff-Hierarchie}
+% ----------------------------------------------------------------
+
+\begin{definition}[Primlabel-Observable, conditional]\label{def:np}
+Unter einer intrinsisch gerechtfertigten orthogonalen Primzerlegung und
+Nichtentartung kann formal
+\[
+  N_{\mathbb P}\Psi_p=p\Psi_p
+\]
+definiert werden. Für eine orthogonale, nicht notwendig normierte Familie
+lautet die natürliche Multiplikationsdomäne
+\[
+  \sum_p p^2|\xi_p|^2\|\Psi_p\|^2<\infty,
+\]
+wobei auch das orthogonale Komplement festzulegen ist.
+\end{definition}
+
+\begin{proposition}[Formale Primlabel-Spuridentität]\label{prop:np-trace}
+Im primdiagonalen Modell gilt algebraisch
+\[
+  \Tr\!\left(
+    \varphi(N_{\mathbb P}/X)R\Sigma_{\rm rel}^{\rm ren}(\beta)
+  \right)
+  =S_{\varphi,X}(\beta).
+\]
+Dies ist ein konditionaler modellrelativer Satz.
+\end{proposition}
+
+\begin{openproblem}[Primlabel-Finite-Part]\label{op:np-fp}
+Offen ist
+\[
+  \FP_{X\to\infty}^{N_{\mathbb P}}
+  \Tr\!\left(
+    \varphi(N_{\mathbb P}/X)R\Sigma_{\rm rel}^{\rm ren}(\beta)
+  \right)
+  \stackrel?=-\frac{\zeta'}{\zeta}(\beta).
+\]
+Dazu fehlen insbesondere der $\Psi/S$-Transfer in der benötigten Stärke und
+die uniforme analytische Rest-/Residuenkontrolle.
+\end{openproblem}
+
+\begin{openproblem}[$R$-Cutoff]\label{op:r-cutoff}
+Ein Cutoff $\varphi(R/\Lambda)$ ist nicht automatisch äquivalent zum
+Primlabel-Cutoff. Selbst die Zusatzannahme
+\[
+  R_p\asymp\frac{p}{\log p}
+\]
+würde nur grobe Skalenvergleichbarkeit liefern. Zur Identifikation von
+Finite Parts ist eine stärkere quantitative Asymptotik samt Fehlerkontrolle
+nötig.
+\end{openproblem}
+
+% ----------------------------------------------------------------
+\section{Zwei getrennte P08-Stränge}
+% ----------------------------------------------------------------
+
+\begin{remark}[Strang A: Renormierungsdiagnose]\label{rem:strand-a}
+Gesichert ist $b_{1,N}\to0$. Der strenge Grenzwert
+$b_{2,N}/b_{1,N}\to\infty$ bleibt offen. Falls er bewiesen wird, greift das
+abstrakte No-scalar-Lemma. Eine positive nichtskalare Prä-Lanczos-Geometrie
+$W_N$ bleibt dennoch eine separate offene Konstruktion.
+\end{remark}
+
+\begin{remark}[Strang B: Mangoldt/Mellin-Operatorbrücke]
+\label{rem:strand-b}
+Die korrekte Reihenfolge ist:
+\begin{enumerate}
+  \item modellrelative Rangstruktur plus quantitative $c_p$-Obergrenze
+        $\Rightarrow$ feste-$\beta$-$\mathcal S_1$ conditional;
+  \item T2 plus Nichtentartung plus abgeschlossene Primzerlegung
+        $\Rightarrow$ primdiagonales $R$ conditional;
+  \item exakte $\Psi_{\varphi,X}$-Mellin-Darstellung;
+  \item uniforme Rest-/Residuenzählung;
+  \item $\Psi/S$-Transfer;
+  \item operatorielle Primlabel-Brücke;
+  \item separater Vergleich zum $R$-Cutoff.
+\end{enumerate}
+Keine Stufe darf durch Definition~\ref{def:trreg} ersetzt werden.
+\end{remark}
+
+% ----------------------------------------------------------------
+\section{Statusmatrix}
+% ----------------------------------------------------------------
+
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.57\textwidth}
+                  >{\raggedright\arraybackslash}p{0.25\textwidth}
+                  >{\raggedright\arraybackslash}p{0.10\textwidth}}
+\toprule
+Aussage & Status & Quelle\\
+\midrule
+\endfirsthead
+\toprule
+Aussage & Status & Quelle\\
+\midrule
+\endhead
+korrigiertes $C_\xi\approx0.0230957$ & PROVED & 121Cfix\\
+alter $C_\xi$-Wert $-0.5493$ & NO-GO/SUPERSEDED & 121\\
+$\widehat\Omega=Z^{-1/2}\Omega_\tau$ & PROVED & 122\\
+$Z_{1,N}^{-1}\sim1/\log N$ & PROVED & 121/122\\
+historisches $A_N^{\rm Jac,-}$ selbstadjungiert & OPEN & H-T1\\
+KMS/GNS $\to$ Jacobi / Formkompatibilität & OPEN & 122\\
+$A_N^{\rm sym}$ endlich selbstadjungiert & PROVED & 123A\\
+$b_{1,N}\asymp\gamma\sqrt{\log N/N}\to0$ & PROVED$_{\rm neg}$ & 123A\\
+Startvektor-Resolvente $\to-1/z$ & PROVED$_{\rm neg}$ & H-T2\\
+$b_1\to0\Rightarrow$ gesamter Limes diagonal & NO-GO & 123A\\
+$b_{2,N}/b_{1,N}\to\infty$ & OPEN & 123F/G\\
+abstraktes No-scalar-Lemma & CONDITIONAL & 123H\\
+intrinsisches positives nichtskalares $W_N$ & OPEN & H-T3\\
+gewichteter Rang-eins-Operator ist Projektor & NO-GO & 128A\\
+NEU-128b Operator/Skalar-Formel & NO-GO & 128b\\
+PSWF $\Rightarrow$ konkrete Prä-Lanczos-Metrik & HEURISTIC/OPEN & 130\\
+Paper-VII-H3-Skalierung & NO-GO & 131\\
+Cancellation $\Rightarrow$ absolute Schur-Zeilensumme & NO-GO & 131\\
+algebraische $\beta$-Zerlegung & PROVED & 136\\
+$\sum_{p\le N}(\log p)^2/p\sim\frac12(\log N)^2$ & PROVED & H-T4\\
+Rohdivergenz aus Upper Bound & NO-GO & 136\\
+$|c_p|^2=O((\log p)^2/p)$ intrinsisch & OPEN/CONDITIONAL & 134--135D\\
+feste-$\beta$ $\Sigma_{\rm rel}^{\rm ren}\in\mathcal S_1$ & CONDITIONAL MODEL & 137\\
+Fredholm-Basistheorie aus $\mathcal S_1$ & CONDITIONAL & 137/138\\
+primeweise Eigenwert-/Eulerproduktlesart ohne T2 & NO-GO & 138\\
+korrekte zweite Spur & PROVED & 139\\
+intrinsisches T2 & OPEN & 142/143\\
+$c_p\ne0$ für alle Primkanäle & OPEN & P05/H-T4\\
+primdiagonales Mangoldt-$R$ & CONDITIONAL/OPEN & 140--144\\
+gewöhnliche Mangoldt-Spur für $\Re\beta>1$ & CONDITIONAL MODEL & 141/144\\
+$\Tr_{\rm reg}:=\AC[-\zeta'/\zeta]$ & DEFINITION & 145\\
+Prime-only-Schichtzerlegung & PROVED & 146\\
+Prime-only-Explizitformel ohne $\vartheta/\psi$-Korrektur & NO-GO & 147\\
+RH-Verbindung des Prime-only-Defekts & PARTIAL/OPEN & 147\\
+Mellin-Identität für $S_{\varphi,X}$ & NO-GO & 148\\
+Mellin-Identität für $\Psi_{\varphi,X}$ & PROVED & H-T5\\
+$\widehat\varphi$ ganz / $\widehat\varphi(0)=1$ & NO-GO & 148\\
+$\operatorname{Res}_0\widehat\varphi=1$ & PROVED & 149\\
+historische $\Psi-S$-Differenzformel & NO-GO & 148.6\\
+quantitativer/uniformer $\Psi/S$-Transfer & OPEN & H-T5\\
+fixed-contour Restlemma für $\Psi$ & CONDITIONAL & 149\\
+uniforme Kontur und vollständige Residuen & OPEN & 149\\
+Primlabel-Observable $N_{\mathbb P}$ & CONDITIONAL & 150\\
+Primlabel-Spuridentität & CONDITIONAL MODEL & 150\\
+Primlabel-Finite-Part $=-\zeta'/\zeta$ & OPEN & 150\\
+operatorielle Realisierung von $\Tr_{\rm reg}$ & OPEN & 145/150\\
+$R$-Cutoff-Transfer & OPEN & 146/150\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+% ----------------------------------------------------------------
+\section{Offene Kernfragen und Routing}
+% ----------------------------------------------------------------
+
+\begin{openproblem}[Root-Blocker nach P08]\label{op:root-blockers}
+Offen bleiben insbesondere:
+\begin{enumerate}
+  \item konkrete KMS/GNS--Jacobi-Realisierung und Formkompatibilität;
+  \item der strenge Nachweis $b_{2,N}/b_{1,N}\to\infty$;
+  \item Konstruktion eines intrinsischen positiven nichtskalaren $W_N$;
+  \item intrinsische Definition und quantitative Kontrolle von $|c_p|^2$;
+  \item intrinsisches T2;
+  \item Nichtentartung $c_p\ne0$;
+  \item selbstadjungierte Mangoldt-$R$-Realisierung;
+  \item uniforme Mellin-Kontur und vollständige Residuenzählung;
+  \item der $\Psi/S$-Transfer in der für Finite Parts nötigen Stärke;
+  \item Primlabel-Finite-Part und operatorielle Realisierung von $\Tr_{\rm reg}$;
+  \item der quantitative $R$-Cutoff-Transfer;
+  \item Grenzoperator-/Spektralmaßidentifikation des NEU-124-Pfads.
+\end{enumerate}
+\end{openproblem}
+
+\begin{remark}[Routing]\label{rem:routing}
+Gesicherte negative Resultate werden nach P10 geroutet. Intrinsische
+Lift-/Quell-/Gramgeometrie, T2, Nichtentartung und globale
+Fredholm-/Schattenfragen gehören nach P11. Finite-to-Infinite-Weil-Grenzfragen
+werden nach P12 beziehungsweise spätere Grenzblöcke weitergereicht.
+\end{remark}
+
+% ----------------------------------------------------------------
+\section{Provenienz und SYN-Endurteil}
+% ----------------------------------------------------------------
+
+\begin{remark}[Provenienz]\label{rem:provenance}
+Dieses Manuskript konsolidiert den Live-Block
+\texttt{04-grenzoperator-renormierung} gemäß
+\texttt{audits/AUDIT-2026-08-09\_P08\_PassA\_FINAL\_SEAL.md}.
+Die kanonische detaillierte Markdown-Quelle ist
+\texttt{papers/P08\_Renormalized\_Prime\_Operators\_and\_Finite\_Part\_Structures.md}.
+Die dortige Knotenprovenienz führt die 41 Live-Dokumente einschließlich der
+beiden NEU-123F-Dateien. P05, P06 und P07 werden nur als bereits eingefrorene
+Typ-/Spektral-/Herglotz-Firewalls benutzt.
+\end{remark}
+
+\begin{remark}[Schutzsatz]\label{rem:final-firewall}
+Der belastbare P08-Kern ist
+\[
+  \boxed{
+  \text{Jacobi-Kollapsdiagnose}
+  \;\oplus\;
+  \text{conditional feste-}\beta\text{-Spurklasse}
+  \;\oplus\;
+  \text{exakter Mangoldt-Mellin-Kanal}
+  }
+\]
+mit offenen Operator- und Cutoff-Brücken. Insbesondere
+\[
+  \boxed{
+  \text{analytische Fortsetzung von }-\zeta'/\zeta
+  \ne
+  \text{bereits konstruierter operatorieller Finite Part}
+  \ne
+  \text{Hilbert--Pólya-/Objekt-X-Operator}.
+  }
+\]
+\end{remark}
+
+\end{document}
