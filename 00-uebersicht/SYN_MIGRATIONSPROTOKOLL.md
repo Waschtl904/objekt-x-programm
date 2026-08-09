@@ -1,6 +1,6 @@
 # SYN-Migrationsprotokoll
 
-**Stand:** 2026-08-08  
+**Stand:** 2026-08-09  
 **Zweck:** Verbindliche Regel für die schrittweise Überführung von NEU-Knoten in SYN-Papers.
 
 ---
@@ -120,4 +120,17 @@ Grobe Erwartung: 300–400 Knoten → 10–15 Blöcke → 10–15 SYN-Papers.
 
 ---
 
-*Lizenz: CC BY 4.0 — Objekt-X-Programm, 2026-08-08.*
+## Aktueller Migrationsstand — 9. August 2026
+
+| SYN | Status | Bemerkung |
+|---|---|---|
+| P05 | `SYN FROZEN ✓[K/M]` | Primkanten + Fourier-Ladung abgeschlossen |
+| P06 | `SYN FROZEN ✓[K/M]` | Jacobi–Feshbach + Divisorgraph abgeschlossen; LaTeX-Transferaudit `1b1a7173` |
+| P07 | `SYN FROZEN ✓[K/M]` | Weil-Form Statistics abgeschlossen |
+| **P08** | **NÄCHSTER AKTIVER BLOCK** | Grenzoperator + Renormierung; Voraussetzung P02/P05 erfüllt |
+
+Verbindliche nächste Pass-A-Gruppe ist damit **H → P08**. P06 wird nicht erneut geöffnet, sofern kein neuer konkreter Widerspruch gegen den eingefrorenen Endstand auftaucht.
+
+---
+
+*Lizenz: CC BY 4.0 — Objekt-X-Programm, 2026-08-09.*
