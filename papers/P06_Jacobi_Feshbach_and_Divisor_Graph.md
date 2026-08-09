@@ -1,12 +1,13 @@
 # P06 — Jacobi–Feshbach and Divisor Graph
 
-**Status:** SYN PRIMARY AUDITED — unabhängiger SYN-Zweitcheck ausständig  
+**Status:** SYN FINAL AUDITED — kanonische Markdown-Quelle; LaTeX-Transfer freigegeben  
 **Datum:** 9. August 2026  
 **Pass-A-Basis:** Gruppe G `P06 PASS A COMPLETE — doppelt geprüft`, `PASS-A-PROTOKOLL.md`, Commit `e32cfecb`; rein technischer Notationsfix `5bd6ff06`  
 **Primärreconciliation:** `audits/AUDIT-2026-08-09_P06_PassA_Primaerreconciliation.md`, Commit `3e9b816d`  
 **Targeted-Reaudits:** G-T1 `fbff73d9`, G-T2 `2b6cb2e8`, G-T3 `d8746ea1`, G-T4 `52197cdd`, G-T5 `dd0fd3a3`  
 **Unabhängiger Pass-A-Zweitcheck:** `audits/AUDIT-2026-08-09_P06_PassA_Zweitcheck_Pfadgebunden.md`, Commit `b40af085`; Urteil `OHNE KONKRETEN GEGENBEFUND`  
 **P06-SYN-Primärcheck:** `audits/AUDIT-2026-08-09_P06_SYN_Primaercheck.md`, Commit `b077a814`; zwei lokale Draft-Korrekturen angewendet, kein verbleibender Gegenbefund  
+**P06-SYN-Zweitcheck:** `audits/AUDIT-2026-08-09_P06_SYN_Zweitcheck_Pfadgebunden.md`, Commit `7c570498`; Urteil `P06-SYN-ZWEITCHECK OHNE KONKRETEN GEGENBEFUND`  
 
 > Dieses SYN-Paper enthält ausschließlich den nach Gruppe G gültigen Endstand. Historische Jacobi-/Feshbach-Fehlversuche werden nur soweit erwähnt, wie sie eine heute verbindliche Firewall oder einen modellbezogenen No-Go-Befund begründen. `PASS A COMPLETE` ist eine Audit-/Migrationsaussage und löst keine offenen Lift-, Gram-, Schatten- oder Objekt-X-Probleme.
 
