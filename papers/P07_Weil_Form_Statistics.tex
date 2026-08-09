@@ -22,7 +22,7 @@
 \title[P07 --- Weil-Form Statistics]{P07 --- Weil-Form Statistics:\\
 Correlation Channels, Form-Factor Limits and Herglotz Interfaces}
 \author{Objekt-X-Programm}
-\date{2026-08-08}
+\date{2026-08-09}
 
 \begin{document}
 
@@ -34,8 +34,9 @@ Formfaktor-/Rampenkanal mit Goldston--Montgomery-Varianz und offenem Symboltest,
 das Herglotz-Interface zwischen linearer Distribution und quadratischer
 Weil-Geometrie sowie die konditionale Jacobi-/Herglotz-Realisierungsarchitektur.
 Das Manuskript konsolidiert ausschließlich den auditierten Endstand von
-NEU-091--120. Es ist ein internes SYN-Manuskript; eine Behauptung der
-Publikationsreife ist damit nicht verbunden.
+NEU-091--120 einschließlich NEU-120 Patch 2 vom 9. August 2026. Es ist ein
+internes SYN-Manuskript; eine Behauptung der Publikationsreife ist damit nicht
+verbunden.
 \end{abstract}
 
 \maketitle
@@ -191,6 +192,16 @@ Am kanonischen selbstdualen Punkt $H=\sqrt M$ gilt konditional unter RH und SPC
 \]
 \end{corollary}
 
+\begin{remark}[Externer GM-Gegencheck]\label{rem:external-gm}
+Ein externer Gegencheck beanstandete eine vermeintliche Spezialisierung
+$H=M$. Diese steht im Live-Manuskript nicht; der selbstduale Punkt ist
+$H=\sqrt M$. Der erneute Quellenabgleich bestätigte außerdem den auf der
+Kurzintervallseite verwendeten Bereich $1\le H\le M^{1-\varepsilon}$.
+Die Untergrenze $M^\varepsilon$ gehört in der klassischen Äquivalenz zur
+korrespondierenden Pair-Correlation-$T$-Seite und wird hier nicht als
+zusätzliche $H$-Untergrenze importiert.
+\end{remark}
+
 \begin{definition}[Lokales Formfaktor-Ersatzobjekt]\label{def:local-form-factor}
 Das unnormalisierte lokale Objekt $\mathcal P^{\rm unf}_{N,H}$ ersetzt das
 verworfene global normierte Objekt $\mathcal S_{N,H}$. Sein gesicherter Umfang
@@ -258,12 +269,19 @@ Die zugehörige arithmetische Funktion wird in der Form
 \[
   m_{\rm arith}(z)
   =A+\int_{\mathbb R}
-  \left(\frac1{t-z}-\frac{t}{1+t^2}\right)\,d\mu_{\rm arith}(t),
-  \qquad
-  A=\Re m_{\rm arith}(i)\in\mathbb R,
+  \left(\frac1{t-z}-\frac{t}{1+t^2}\right)\,d\mu_{\rm arith}(t)
 \]
-geschrieben. Die äquivalente Nullstellensumme ist im kanonisch symmetrischen
-Sinn zu verstehen.
+geschrieben. Für die kanonische Zentrierung
+\[
+  \Xi(z)=\xi\!\left(\frac12+iz\right),
+  \qquad m_{\rm arith}(z)=-\frac{\Xi'(z)}{\Xi(z)},
+\]
+folgt aus $\Xi(-z)=\Xi(z)$ und der reellen Symmetrie
+\[
+  \boxed{A=\Re m_{\rm arith}(i)=0.}
+\]
+Die äquivalente Nullstellensumme ist im kanonisch symmetrischen Sinn zu
+verstehen.
 \end{definition}
 
 \begin{proposition}[Verschwinden des linearen Nevanlinna-Terms]
@@ -393,6 +411,27 @@ Nur unter zusätzlicher Symmetrie reduziert sich dies auf eine reine Skalierung
 $c_Nm_{\Omega,N}$.
 \end{definition}
 
+\begin{theorem}[Notwendiger Symmetrie-/Normalisierungstest]
+\label{thm:aN-zero}
+Bei $z=i$ gilt
+\[
+  \frac1{t-i}-\frac{t}{1+t^2}=\frac{i}{1+t^2},
+\]
+also
+\[
+  \Re\widetilde m_N^{\rm ren}(i)=a_N.
+\]
+Da $\Re m_{\rm arith}(i)=0$, folgt notwendig
+\[
+  \boxed{
+  \widetilde m_N^{\rm ren}
+  \xrightarrow[N\to\infty]{\rm loc.\,unif.}m_{\rm arith}
+  \quad\Longrightarrow\quad a_N\to0.}
+\]
+Dies ist keine zusätzliche RH-Annahme, sondern eine notwendige Konsequenz der
+bereits offenen lokalen gleichmäßigen Konvergenz.
+\end{theorem}
+
 \begin{theorem}[Konditionale Herglotz-Firewall]
 \label{thm:conditional-firewall}
 Falls echte Herglotzfunktionen lokal gleichmäßig in $\mathbb C^+$ gegen
@@ -421,7 +460,8 @@ Der Grenzübergang selbst bleibt offen. Insbesondere fehlen:
         $A_N^{\rm Jac,-}$;
   \item eine kanonische Wahl von $\Omega_N$;
   \item eine kanonische Skalierung $c_N>0$ und Kontrolle der Konstanten
-        $a_N\in\mathbb R$;
+        $a_N\in\mathbb R$, wobei jede erfolgreiche Folge nach
+        Theorem~\ref{thm:aN-zero} notwendig $a_N\to0$ erfüllen muss;
   \item vague/lokale Maßkonvergenz
         $\widetilde\mu_N\to\mu_{\rm arith}$;
   \item Kontrolle der Nevanlinna-Gewichte, etwa von
@@ -491,6 +531,8 @@ $1\le H\le M^{1-\varepsilon}$
 & CONDITIONAL (RH+SPC) & NEU-101\\
 $\mathcal V(M,\sqrt M)\sim\frac12\sqrt M\log M$
 & CONDITIONAL (RH+SPC) & NEU-101\\
+Externer $H=M$-Gegenbefund gegen das aktuelle Korollar
+& NO-GO; trifft Live-Stand nicht & Targeted Reaudit\\
 $\mathcal P^{\rm unf}_{N,H}$ lokales Formfaktor-Ersatzobjekt
 & PROVED$_{\rm part}$ & NEU-104\\
 $\LFF\Rightarrow$ Rampenasymptotik
@@ -507,6 +549,8 @@ $\mu_{\rm arith}=\sum m_\gamma\delta_\gamma$ (reines Nullstellenmaß)
 & PROVED & NEU-112/118\\
 $m_{\rm arith}$ in Nevanlinna-Form (symmetrische Konvergenz)
 & PROVED (Typisierung) & NEU-111/118\\
+$A=\Re m_{\rm arith}(i)=0$
+& PROVED & NEU-120.3\\
 Linearer Nevanlinna-Koeffizient $b=0$
 & PROVED & NEU-111/118\\
 $W_\xi^{\rm norm}=W_{\rm zeros}$ (keine Doppelzählung)
@@ -522,6 +566,9 @@ $A_N^{\rm Jac,-}$ selbstadjungiert
 & OPEN & NEU-119\\
 Nevanlinna-Renormierung $(c_N,a_N)$ und Tail-Kontrolle
 & OPEN & NEU-120\\
+Lokale glm. Konvergenz $\widetilde m_N^{\rm ren}\to m_{\rm arith}$
+$\Rightarrow a_N\to0$
+& PROVED (notwendige Bedingung) & NEU-120.3\\
 Vague Konvergenz $\widetilde\mu_N\to\mu_{\rm arith}$
 & OPEN & NEU-120\\
 $\widetilde m_N^{\rm ren}\to m_{\rm arith}\Rightarrow\RH$
@@ -542,25 +589,24 @@ Pole $\pm i/2$ in $m_{\rm arith}$
 Dieses Manuskript konsolidiert NEU-091--120 unter
 \texttt{PASS-A-PROTOKOLL.md}. Direkte Markdown-Quelle ist
 \texttt{papers/P07\_Weil\_Form\_Statistics.md} im Status
-\emph{SYN FINAL AUDITED}, Commit \texttt{6a162f92}; die
+\emph{SYN FINAL AUDITED}, Patch 4 vom 9. August 2026. Die
 Goldston--Montgomery-Synchronisierung von NEU-101 liegt in Commit
-\texttt{92d731d1}. P02 liefert die hier referenzierten kanonischen
-Fourier-, Paley--Wiener- und Weilform-Konventionen. P03 wurde nur für
-SYN-Stil und Konventionskonsistenz herangezogen; es werden daraus keine
+\texttt{92d731d1}; die Symmetriepräzisierung $A=0$ und der notwendige Test
+$a_N\to0$ liegen in NEU-120 Patch 2, Commit \texttt{410d0a91}, und im
+Targeted-Reaudit \texttt{57441d87}. P02 liefert die hier referenzierten
+kanonischen Fourier-, Paley--Wiener- und Weilform-Konventionen. P03 wurde nur
+für SYN-Stil und Konventionskonsistenz herangezogen; es werden daraus keine
 zusätzlichen P07-Aussagen importiert.
 \end{remark}
 
 \begin{remark}[LaTeX-SYN-Finalaudit]\label{rem:audit-status}
-Der LaTeX-Transferaudit ist abgeschlossen. Geprüft wurden ausschließlich
-Markdown--LaTeX-Übereinstimmung, Formeltranskription,
-Fourier-/Mellin-Konventionen, Satzstatus,
-Definition-versus-Hypothese-versus-Open-Problem, Referenzen, Labels,
-Doppelzählungen, unzulässige Hochstufungen und Kompilierbarkeit.
-Es wurde kein neuer mathematischer Konflikt gefunden und kein Forschungsknoten
-NEU-091--120 wieder geöffnet. Die in der Markdown-Fassung typographisch
-verkürzte Interface-Kette wurde gemäß der verbindlichen P02-Typisierung als
-$(a,b)\mapsto g_{a,b}\mapsto h_{a,b}\mapsto B_W(a,b)$ geschrieben.
-Damit trägt diese Fassung den internen Status
+Der ursprüngliche LaTeX-Transferaudit ist abgeschlossen. Patch 4 ist ein
+lokaler SYN-Transfer aus NEU-120 Patch 2 und dem Targeted-Reaudit; er ändert
+keine bereits eingefrorene GM-Aussage. Geprüft wurden insbesondere
+Formeltranskription, Satzstatus, Typisierung und die Trennung zwischen
+notwendiger Bedingung $a_N\to0$ und der weiterhin offenen eigentlichen
+Konvergenz. Kein historischer Forschungsknoten wird dadurch zu einer
+RH-unabhängigen Konvergenzaussage hochgestuft. Damit bleibt der interne Status
 \[
   \boxed{\texttt{P07\_Weil\_Form\_Statistics.tex}\text{ --- SYN FROZEN }\checkmark[K/M]}.
 \]
