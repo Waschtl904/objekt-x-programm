@@ -2,9 +2,9 @@
 
 **Datum:** 9. August 2026  
 **SYN-Ziel:** P10 — kondensierte No-Go-Sammlung  
-**Prüfart:** `AUDIT-REUSED` + `AUDIT-RECONCILED`; ein konkreter `TARGETED-REAUDIT`  
+**Prüfart:** `AUDIT-REUSED` + `AUDIT-RECONCILED`; ein konkreter `TARGETED-REAUDIT`; unabhängiger pfadgebundener Gegencheck  
 **Quellenbasis:** eingefrorene SYN-Papers P05–P09, ihre Pass-A-/Targeted-Reaudits, `SYN_MIGRATIONSPROTOKOLL.md`, `SYN_PROVENIENZ.md`  
-**Status:** **PASS-A INVENTAR V1 COMPLETE — Kandidatenmatrix reconciliiert; P07-Lokalsynchronisation aus Targeted-Reaudit noch auszuführen.**
+**Status:** **PASS-A INVENTAR FINAL RECONCILED — P07-Lokalsynchronisation ausgeführt; Gegencheck eingearbeitet; READY FOR FINAL SEAL.**
 
 > **Leitregel:** Ein Kandidaten-No-Go ist niemals ein universeller mathematischer No-Go. Jede Zeile trägt deshalb ihren exakten Scope und ein explizites „nicht ausgeschlossen“.
 
@@ -31,6 +31,16 @@ Ein konkreter Cross-SYN-Konflikt wurde gefunden und separat reconciliiert:
 Auditanker:
 
 `audits/AUDIT-2026-08-09_P10_Targeted_Reaudit_P07_NEU091_vs_P06_GT4_GT5.md`
+
+Die lokale P07-Synchronisation ist anschließend in Markdown und LaTeX ausgeführt worden. Der pfadgebundene P10-Gegencheck hat zusätzlich genau eine materielle Überklassifizierung korrigiert:
+
+- `LFF => Rampe` bleibt `✓[M]_part`;
+- `Rampe => LFF` ist **nicht bewiesen und nicht widerlegt** und wird als `P10-O29` geführt;
+- der historische Slot `P10-N15` ist damit **RETIRED / MOVED TO OPEN** und kein aktiver P10-No-Go.
+
+Gegencheckanker:
+
+`audits/AUDIT-2026-08-09_P10_PassA_Gegencheck_Pfadgebunden.md`
 
 Die Datei `00-uebersicht/SYN_PROVENIENZ.md` ist gegenüber dem aktuellen Migrationsprotokoll organisatorisch zurück: ihr sichtbarer Stand endet vor der vollständigen P05–P09-Freeze-Buchung. Für den aktuellen Blockstatus ist daher `00-uebersicht/SYN_MIGRATIONSPROTOKOLL.md` maßgeblich. Das ist ein **Buchhaltungsbefund**, kein mathematischer No-Go.
 
@@ -61,7 +71,7 @@ Die Datei `00-uebersicht/SYN_PROVENIENZ.md` ist gegenüber dem aktuellen Migrati
 | ID | Quelle | Konkret ausgeschlossene Behauptung/Konstruktion | Exakter mathematischer Scope | Status | Provenienz | Was ausdrücklich **nicht** ausgeschlossen ist | Ziel |
 |---|---|---|---|---|---|---|---|
 | P10-N14 | P07 + P06 G-T4/G-T5 | `D_N(z)->exp(-gamma^2/4)` im NEU-088–90-Scaling | exakt derselbe historische Determinantenpfad wie P10-N12 | `×[M]` | `SUPERSEDED` | korrigierter `D_N->1`-Befund | `SUPERSEDED-only` |
-| P10-N15 | P07/NEU-107 | LFF sei äquivalent zur Rampenform | dort bewiesener Formfaktor-/Rampenkanal | `✓[M]_part`; nur `LFF => Rampe` | `NO-GO` gegen Biimplikation | stärkere Zusatzannahmen, die eine Umkehrung liefern könnten | `P10-NOGO` Kandidat |
+| P10-N15 | P07/NEU-107; P10-Gegencheck | historischer Slot für die behauptete Biimplikation LFF ↔ Rampenform | Gegencheck: nur `LFF => Rampe` bewiesen; Umkehrung unentschieden | `RETIRED` | `MOVED TO P10-O29` | `Rampe => LFF` bleibt offen; Zusatzannahmen könnten eine Umkehrung liefern | `NOT A NOGO` |
 | P10-N16 | P07/NEU-108 | LFF allein konstruiere/identifiziere `Q_Weil` | Typisierungsinterface LFF → quadratische Weil-Geometrie | `✓[M]_part` Negativdiagnose | `NO-GO` | LFF plus zusätzliche Autokorrelations-/Typisierungsbrücke | `P10-NOGO` Scope |
 | P10-N17 | P07/NEU-120 | ein unskaliertes Wahrscheinlichkeits-Spektralmaß `mu_{Omega,N}` mit Gesamtmasse 1 genüge zur Approximation des unendlichen Zielmaßes | Jacobi/Herglotz-Maßarchitektur | `✓[M]_neg` Massendiskrepanz | `NO-GO` | Renormierung `c_N>0` plus Nevanlinna-Konstante/Tail-Kontrolle | `P10-NOGO` |
 | P10-N18 | P07/NEU-120 | vage Maßkonvergenz impliziere automatisch lokal gleichmäßige Konvergenz der Nevanlinna/Herglotz-Funktionen | unendliche Zielmasse; Nevanlinna-normalisierte Approximanten | `✓[M]_neg` als Implikationssperre | `NO-GO` | vague Konvergenz plus geeignete Tail-/Gewichtskontrolle | `P10-NOGO` Scope |
@@ -148,6 +158,7 @@ Diese Punkte werden in der Matrix absichtlich sichtbar gehalten, damit P10 den S
 | P10-O26 | P09 | nichtstandardmäßiger `A`-relativer Hopf-Koeffizient | nur Standard-SAYD-Pfad geschlossen | `OPEN—not a no-go` |
 | P10-O27 | P09 | NEU-205 Architecture III | drei konkrete Platzierungen scheitern, relation-adaptierte Architektur bleibt offen | `OPEN—not a no-go` |
 | P10-O28 | P09 | Weil-/Gamma-Korrektur des zyklischen/kohomologischen Pfads | vom kanonischen Rotations-No-Go ausdrücklich nicht erfasst | `OPEN—not a no-go` |
+| P10-O29 | P07/NEU-107; P10-Gegencheck | `Rampenform => LFF` | der auditierte Block beweist nur `LFF => Rampe`; für die Umkehrung liegt weder Beweis noch Gegenbeweis vor | `OPEN—not a no-go` |
 
 ---
 
@@ -171,7 +182,7 @@ P07:\ D_N\to e^{-\gamma^2/4}
 P06\ G\text{-}T4/G\text{-}T5:\ D_N\to1.
 \]
 
-Entscheidung: späterer P06-Targeted-Reaudit hat Präzedenz; P07-Wert `SUPERSEDED`.
+Entscheidung: späterer P06-Targeted-Reaudit hat Präzedenz; P07-Wert `SUPERSEDED`. P07 Markdown und LaTeX sind inzwischen lokal auf diesen Stand synchronisiert.
 
 Kein weiterer mathematischer Cross-SYN-Widerspruch wurde in P05–P09 gefunden. Die übrigen scheinbaren Spannungen sind Scope-Unterschiede oder bewusst offene Voraussetzungen.
 
@@ -189,7 +200,8 @@ Die Matrix bestätigt die geplante typologische Organisation:
 6. **Renormierungs-/Finite-Part-No-Gos** — N17–N19, N24–N37.
 7. **Primkanal-/Lift-/Projektor-Firewalls** — N01–N07.
 8. **Historische Formelfehler / `SUPERSEDED`** — insbesondere N05, N08–N09, N13–N14, N19, N23, N28, N32, N35–N36, N39–N40, N45, N54.
-9. **Nicht-No-Gos / offene Alternativen** — P10-O01 bis P10-O28.
+9. **Retired Slot** — N15 ist nach Gegencheck kein No-Go; Inhalt nach O29 verschoben.
+10. **Nicht-No-Gos / offene Alternativen** — P10-O01 bis P10-O29.
 
 ---
 
@@ -209,11 +221,11 @@ Die Trennlinie
 
 ist für alle oben erfassten P05–P09-Einträge explizit gesetzt.
 
-**Noch kein P10-SYN schreiben.** Vor einem Pass-A-Seal sind noch diese prozeduralen Punkte sinnvoll:
+**Noch kein P10-SYN schreiben.** Die für den Seal vorgesehenen prozeduralen Schritte sind nun erfüllt:
 
-1. P07 Markdown/LaTeX lokal mit dem Targeted-Reaudit synchronisieren;
-2. einen unabhängigen pfadgebundenen Gegencheck dieser Matrix durchführen;
-3. nur falls dieser Gegencheck neue konkrete Konflikte findet, gezielte Reaudits eröffnen;
-4. danach `P10 PASS-A FINAL SEAL`.
+1. P07 Markdown/LaTeX lokal mit dem Targeted-Reaudit synchronisiert — `COMPLETE`;
+2. unabhängiger pfadgebundener Gegencheck der Matrix — `COMPLETE`;
+3. neu gefundene Konflikte gezielt reconciliiert — Determinante `COMPLETE`, LFF-Rückstufung `COMPLETE`;
+4. damit ist `P10 PASS-A FINAL SEAL` prozedural freigegeben.
 
 Die offene Hauptarchitektur des Objekt-X-Programms wird durch dieses Inventar nicht negativ bewertet. Insbesondere globale nichtorthogonale Gramkopplung, intrinsische Lift-/Quellgeometrie, Weil-/Gamma-Pfad und finite-to-infinite Weil-Grenzstruktur bleiben außerhalb des P10-No-Go-Scope.
