@@ -1,12 +1,14 @@
 # P05 — Relative Prime Channels and Arithmetic Edge Geometry
 
-**Status:** SYN DRAFT 4 — kanonische Markdown-Quelle; unabhängiger Inhaltscheck ausständig  
+**Status:** SYN FINAL AUDITED — kanonische Markdown-Quelle; LaTeX-Transfer freigegeben  
 **Datum:** 9. August 2026  
 **Pass-A-Basis:** Gruppe F `PASS A COMPLETE`, `PASS-A-PROTOKOLL.md`, Commit `9c23fc49`  
 **F2-Primäraudit:** `audits/AUDIT-2026-08-09_F2_Primaeraudit_Fourier_Rohkopplung.md`, Commit `b6a97e27`; versiegelt `4c4c13e8`  
 **F2-Zweitcheck:** `audits/AUDIT-2026-08-09_F2_Zweitcheck_Pfadgebunden.md`, Commit `27a5fe2e`  
 **F3-Endstand:** Primäraudit-Patch `87b82b1a`  
 **F4-Endstand:** Zweitcheck `20e7e07e`, Versiegelung `4d7ea3fc`  
+**P05-SYN-Primärcheck:** `audits/AUDIT-2026-08-09_P05_SYN_Primaercheck.md`, Commit `54374bdf`  
+**P05-SYN-Zweitcheck:** `audits/AUDIT-2026-08-09_P05_SYN_Zweitcheck_Pfadgebunden.md`, Commit `f50f3502`; Urteil `OHNE KONKRETEN GEGENBEFUND`  
 
 > Dieses SYN-Paper enthält ausschließlich den nach F1–F4 gültigen Endstand. Historische Fehlversuche werden nur als Firewalls oder No-Go-Befunde erwähnt. `PASS A COMPLETE` bedeutet Migrationsabschluss, nicht Lösung der offenen mathematischen Probleme.
 
@@ -682,7 +684,7 @@ P05 schließt den lokalen Syntheseblock, lässt aber insbesondere folgende Frage
 
 ---
 
-## §13 — SYN-Endurteil dieses Entwurfs
+## §13 — SYN-Endurteil
 
 Die lokale Primkanalgeometrie ist nach Gruppe F deutlich schärfer typisiert als in den historischen Knoten:
 
@@ -710,4 +712,4 @@ $$
 }
 $$
 
-**Aktueller Status:** `SYN DRAFT 4`. Vor einer Einfrierung sind ein unabhängiger SYN-Inhaltscheck, die LaTeX-Übertragung und der LaTeX-SYN-Transferaudit erforderlich.
+**Aktueller Status:** `SYN FINAL AUDITED`. Der unabhängige P05-SYN-Gegencheck ergab keinen konkreten Gegenbefund. Die Markdown-Inhaltsstufe ist abgeschlossen; als nächster Schritt folgt die reine LaTeX-SYN-Übertragung mit anschließendem Transferaudit.
