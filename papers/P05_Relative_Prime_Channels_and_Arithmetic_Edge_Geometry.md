@@ -1,6 +1,6 @@
 # P05 — Relative Prime Channels and Arithmetic Edge Geometry
 
-**Status:** SYN DRAFT 2 — kanonische Markdown-Quelle; unabhängiger Inhaltscheck ausständig  
+**Status:** SYN DRAFT 3 — kanonische Markdown-Quelle; unabhängiger Inhaltscheck ausständig  
 **Datum:** 9. August 2026  
 **Pass-A-Basis:** Gruppe F `PASS A COMPLETE`, `PASS-A-PROTOKOLL.md`, Commit `9c23fc49`  
 **F2-Primäraudit:** `audits/AUDIT-2026-08-09_F2_Primaeraudit_Fourier_Rohkopplung.md`, Commit `b6a97e27`; versiegelt `4c4c13e8`  
@@ -98,13 +98,17 @@ Nichtentartung und Hebungsunabhängigkeit bleiben offen.
 
 ## §2 — Liftgeometrie und exakte Zulässigkeit
 
+### Notationskonvention 2.0 — Liftkern
+
+Die historischen F2-Blätter verwenden $K_p$ für den Kern der primitiven Projektion. Da F3 dieselbe Buchstabenfamilie $K_p,K_{pq}$ für Prim-/Feshbachblöcke verwendet, schreibt P05 für den Liftkern eindeutig
+
+$$
+\boxed{\mathscr K_p^{\rm lift}:=\ker\pi_{\rm prim}.}
+$$
+
+Dies ist eine reine SYN-Disambiguierung.
+
 ### Def. 2.1 — Primitive Liftfaser
-
-Sei $\pi_{\rm prim}$ die primitive Projektion und
-
-$$
-K_p:=\ker \pi_{\rm prim}.
-$$
 
 Die Fourier-geladenen Richtungen
 
@@ -112,7 +116,7 @@ $$
 E_p^{\rm ch}:=\operatorname{span}\{e_uV_p:u\neq0\}
 $$
 
-liegen algebraisch in $K_p$.
+liegen algebraisch in $\mathscr K_p^{\rm lift}$.
 
 ### Satz 2.2 — Die Normierungsbedingung ist quadratisch
 
@@ -130,13 +134,13 @@ Sie ist daher keine homogene lineare Kerngleichung.
 Im explizit auditierten Quellenkegel liefern NEU-157 und NEU-44 keine zusätzlichen nichttrivialen Operatoren
 
 $$
-L_{p,a}:K_p\to Y_{p,a}
+L_{p,a}:\mathscr K_p^{\rm lift}\to Y_{p,a}
 $$
 
 mit exakter Zulässigkeitsbedingung $L_{p,a}(k)=0$. In diesem Quellenkegel gilt daher für die postulierte homogene Kernfamilie
 
 $$
-K_p^{\rm hom}=K_p.
+\mathscr K_p^{\rm hom}=\mathscr K_p^{\rm lift}.
 $$
 
 Dies ist ein negativer Quellenbefund, kein globaler mathematischer Unmöglichkeitssatz.  
@@ -302,6 +306,16 @@ $$
 
 ## §5 — Quotienten- und Symmetriearchitektur
 
+### Notationskonvention 5.0 — Quotientenraum
+
+NEU-159/160 verwenden $Q_p$ für den Rohkopplungsquotienten. Im globalen Objekt-X-Programm ist $Q_p$ zugleich für den lokalen Weil-Beitrag reserviert. P05 schreibt deshalb für den F2-Quotientenraum
+
+$$
+\boxed{\mathscr Q_p^{\rm quot}:=Q_p^{(\mathrm{NEU\text{-}159/160)}.}
+$$
+
+Auch dies ist ausschließlich eine SYN-Disambiguierung.
+
 ### Satz 5.1 — Abstrakte Quotientenstruktur
 
 Auf der abstrakten Ebene sind folgende Aussagen gültig:
@@ -315,7 +329,7 @@ Auf der abstrakten Ebene sind folgende Aussagen gültig:
 
 ### Satz 5.2 — Abstrakter Kommutantensatz
 
-Für eine konkrete unitäre Darstellung $\pi_p$ gilt: Beschränkte positive semidefinite $G_p$-invariante Formen sind genau dann skalare Vielfache einer Referenzform, wenn
+Für eine konkrete unitäre Darstellung $\pi_p$ auf $\mathscr Q_p^{\rm quot}$ gilt: Beschränkte positive semidefinite $G_p$-invariante Formen sind genau dann skalare Vielfache einer Referenzform, wenn
 
 $$
 \pi_p(G_p)'=\mathbb C I.
@@ -329,13 +343,13 @@ Dies ist der abstrakte Schur-/Kommutantenmechanismus.
 Nicht automatisch mitbewiesen sind:
 
 $$
-Q_p\neq\{0\},
+\mathscr Q_p^{\rm quot}\neq\{0\},
 $$
 
 eine konkrete unitäre Wirkung
 
 $$
-\pi_p:G_p\to\mathcal U(Q_p),
+\pi_p:G_p\to\mathcal U(\mathscr Q_p^{\rm quot}),
 $$
 
 deren Irreduzibilität und damit die konkrete Eindeutigkeit der verbundenen Form.  
@@ -367,7 +381,9 @@ Auf einer auditierten Primfaser $\mathcal H_{p,a}$ gilt die unitäre Transportno
 $$
 D_{\rm rel}\big|_{\mathcal H_{p,a}}
 \cong
-2i\kappa_p^{\rm tr}\frac{d}{dt}.
+2i\kappa_p^{\rm tr}\frac{d}{dt}
+\quad\text{auf}\quad
+L^2(\mathbb R)\oplus L^2(\mathbb R).
 $$
 
 [NEU-225; F3: `✓[M]`]
@@ -428,7 +444,7 @@ Es identifiziert die Primkantenkoordinaten mit den BC-Koordinaten und ist insbes
 Verschiedene Primkanalbilder können nichttrivial überlappen. Daher ist eine globale Primblockdiagonalität
 
 $$
-\mathcal K_N=\bigoplus_p K_p
+\mathcal K_N\stackrel?=\bigoplus_p K_p
 $$
 
 nicht strukturell erzwungen. Kreuzblöcke $K_{pq}$ können generisch nichtverschwinden; dies ist keine Aussage, dass sie für jedes $p\neq q$ zwingend ungleich null sind.  
@@ -620,7 +636,7 @@ P05 behauptet keine dieser globalen Konstruktionen bereits gelöst zu haben.
 | feste-$p$-Restklassen-/Faltungskollision | `✓[M]` | F2 |
 | geladener $L_3^\circ$ aus $[L_3]$ hergeleitet | `?[O]` | NEU-170d/173 |
 | abstrakte Quotienten-/Intertwining-Lemmata | `✓[M]` | F2 |
-| konkrete $Q_p\neq0$, unitäre Wirkung, Irreduzibilität | `?[O]` / `CONDITIONAL` | F2 |
+| konkrete $\mathscr Q_p^{\rm quot}\neq0$, unitäre Wirkung, Irreduzibilität | `?[O]` / `CONDITIONAL` | F2 |
 | Transportnormalform $D_{\rm rel}\cong2i\kappa_p^{\rm tr}d/dt$ in Primsektoren | `✓[M]` | F3 |
 | reines a.c.-Spektrum / kein Kern in auditierten Primsektoren | `✓[M]` | F3 |
 | globale Spektralaussage in zusammengesetzten Sektoren | `?[O]` | `[O-225-3]` |
@@ -679,4 +695,4 @@ $$
 }
 $$
 
-**Aktueller Status:** `SYN DRAFT 2`. Vor einer Einfrierung sind ein unabhängiger SYN-Inhaltscheck, die LaTeX-Übertragung und der LaTeX-SYN-Transferaudit erforderlich.
+**Aktueller Status:** `SYN DRAFT 3`. Vor einer Einfrierung sind ein unabhängiger SYN-Inhaltscheck, die LaTeX-Übertragung und der LaTeX-SYN-Transferaudit erforderlich.
