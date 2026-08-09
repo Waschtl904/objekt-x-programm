@@ -1,6 +1,6 @@
 # Pass-A-Protokoll — SYN-Migrationsverfahren
 
-**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 9. August 2026 (F2 `PASS A COMPLETE` — doppelt geprüft; Gruppe F vollständig)
+**Erstellt:** 8. August 2026 | **Zuletzt aktualisiert:** 9. August 2026 (P06 `PASS A COMPLETE` — doppelt geprüft; P06-SYN freigegeben)
 
 Dieses Dokument fixiert das verbindliche Verfahren für die Pass-A-Phase der SYN-Migration.
 
@@ -110,7 +110,7 @@ Vor jedem Batch:
 | NEU-115 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` | Vierteilige Summe → $W_\xi^{\rm norm}=W_{\rm zeros}$; Interface-Firewall ✓[M] |
 | NEU-116 | `AUDIT-REUSED` | `INCORPORATED`$_\rm part$ + **→ P10/P11** | $W_{\rm res}^{\rm top}\stackrel?=W_\xi^{\rm norm}$: ?[O]; lokale Faktoren → BC-Strang |
 | NEU-117 | `AUDIT-REUSED` | `INCORPORATED`$_\rm part$ + **→ P10/P11** | $\operatorname{Aut}(\mathbb N,\cdot)\cong\operatorname{Sym}(\mathbb P)$: ✓[M]; globale Rigidität konditional |
-| NEU-118 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` / teilweise SUPERSEDED durch NEU-119/P02 | $\mu_{\rm arith}$ (Maß) vs $m_{\rm arith}(z)$ (Funktion) Typfehler; Gamma-/Pol-Anteile $\times$[M] |
+| NEU-118 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` / teilweise SUPERSEDED durch NEU-119/P02 | $\mu_{\rm arith}$ (Maß) vs $m_\rm arith(z)$ (Funktion) Typfehler; Gamma-/Pol-Anteile $\times$[M] |
 | NEU-119 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` | Selbstadjungiertheit ?[O]; Eigenvektor-Cond. $\times$[M]; O3 Gamma $\times$[M] SUPERSEDED |
 | NEU-120 | `TARGETED-REAUDIT` | `PATCH ANGEWENDET` | 4$\times$ $\times$[M] gestrichen; Firewall ?[O]; vague Konvergenz eingebracht |
 
@@ -151,8 +151,8 @@ Referenzen, Labels, Doppelzählungen, unzulässige Hochstufungen von
 
 | Gruppe | SYN-Ziel | Quellbestand | Reihenfolge |
 |--------|----------|--------------|-------------|
-| **F** | **P05** | `01-primkanten-werkzeuge/` + relevante Knoten aus `05-primkanal-fourierladung/` und `07-weil-explizitformel/` | **Pass A abgeschlossen; P05-SYN jetzt aktiv** |
-| G | P06 | `02-jacobi-limes/` + zugehörige Jacobi-/Feshbach-Knoten | nach F |
+| F | P05 | `01-primkanten-werkzeuge/` + relevante Knoten aus `05-primkanal-fourierladung/` und `07-weil-explizitformel/` | **Pass A abgeschlossen; P05 `SYN FROZEN ✓[K/M]`** |
+| **G** | **P06** | `02-jacobi-limes/` + zugehörige Jacobi-/Feshbach-Knoten | **Pass A abgeschlossen; P06-SYN jetzt aktiv** |
 | H | P08 | `04-grenzoperator-renormierung/` + zugehörige Renormierungs-/Grenzoperator-Knoten | nach G |
 | I | P09 | `06-hochschild-bc-algebra/` + BC-relevante Quellen | nach H |
 | … | P10/P11/P12 | repo-weite thematische Pakete | nach Abhängigkeiten |
@@ -162,7 +162,7 @@ Referenzen, Labels, Doppelzählungen, unzulässige Hochstufungen von
 
 ## Gruppe F — P05: Relative Primkanten und arithmetische Kantengeometrie
 
-**Status:** **PASS A COMPLETE** | **F1 COMPLETE** | **F2 COMPLETE (doppelt geprüft)** | **F3 COMPLETE (doppelt geprüft)** | **F4 COMPLETE (doppelt geprüft)** | **P05-SYN freigegeben**
+**Status:** **PASS A COMPLETE** | **F1 COMPLETE** | **F2 COMPLETE (doppelt geprüft)** | **F3 COMPLETE (doppelt geprüft)** | **F4 COMPLETE (doppelt geprüft)** | **P05 SYN FROZEN ✓[K/M]**
 
 ### Hauptbefund der Bestandsaufnahme
 
@@ -427,11 +427,67 @@ $$\boxed{\text{F4 PASS A COMPLETE — doppelt geprüft.}}$$
 | F2 | **PASS A COMPLETE — doppelt geprüft** (`27a5fe2e`, `4c4c13e8`) | Endstand für P05 extrahiert |
 | F3 | **PASS A COMPLETE — doppelt geprüft** (`87b82b1a`) | Spektralmaßform und Koordinatenwörterbuch verbindlich verankert |
 | F4 | **PASS A COMPLETE — doppelt geprüft** (`20e7e07e`, `4d7ea3fc`) | abgeschlossen |
-| P05-SYN | **FREIGEGEBEN** | `papers/P05_*.tex` erstellen/aktualisieren + LaTeX-SYN-Transferaudit |
+| P05-SYN | **SYN FROZEN ✓[K/M]** | abgeschlossen |
 
 \[
-\boxed{\text{GRUPPE F — PASS A COMPLETE. P05-SYN ist der nächste aktive Schritt.}}
+\boxed{\text{GRUPPE F — PASS A COMPLETE. P05 SYN FROZEN ✓[K/M].}}
 \]
+
+---
+
+## Gruppe G — P06: Jacobi–Feshbach + Divisorgraph
+
+**Status:** **PASS A COMPLETE — doppelt geprüft** | **P06-SYN freigegeben**
+
+**Eröffnungsinventar:** `audits/AUDIT-2026-08-09_P06_PassA_Eroeffnung_Inventar.md`, Commit `4c18fb78`  
+**Primärreconciliation:** `audits/AUDIT-2026-08-09_P06_PassA_Primaerreconciliation.md`, Commit `3e9b816d`  
+**Unabhängiger Zweitcheck:** `audits/AUDIT-2026-08-09_P06_PassA_Zweitcheck_Pfadgebunden.md`, Commit `b40af085`  
+**Prüfart:** `AUDIT-REUSED` / `AUDIT-RECONCILED` + fünf `TARGETED-REAUDIT`; `NEW-DIRECT-AUDIT: 0`.
+
+### G-Buchhaltung und Scope
+
+- Historischer Kern: 33/33 Forschungsknoten NEU-058–090 in `02-jacobi-limes/`; kein Vollneuaudit erforderlich.
+- Historische Feshbach-Brücke GX1: NEU-040, NEU-045, NEU-046–056.
+- Superseding-Schicht GX2: NEU-223–228.
+- NEU-228b/229: P06/P11-Interface bzw. Blocker, keine bereits konstruierte P06-Grundlage.
+- Targeted-Reaudits: G-T1 NEU-050, G-T2 NEU-062, G-T3 NEU-066, G-T4 NEU-090, G-T5 NEU-089.
+
+### G-Endstand — verbindliche Korrekturen
+
+1. **NEU-050 / Birman–Schwinger:** Die Blockarchitektur $K_{pq}(z)=V_p^*(D_{\rm rel}-z)^{-1}V_q$ bleibt formal gültig; universelles paarweises Nichtverschwinden ist nicht bewiesen. Primkanalbilder können generisch überlappen; Primblockdiagonalität ist nicht strukturell erzwungen.
+2. **NEU-062 / Normalisierung:** $J_N^-=\frac12(\Theta_N-\Theta_N^\dagger)$ und $S_N=\frac1{2i}(\Theta_N-\Theta_N^\dagger)=-iJ_N^-$ strikt trennen; $\gamma_N=1$ ist kein bewiesener intrinsischer Struktursatz.
+3. **NEU-066 / Divisorpfade:** Endliche Trace-/Pfadgeometrie bleibt; $\log(p^k)\ne\Lambda(p^k)$ für $k>1$; $r$-Gradierung allein erzwingt kein Verschwinden aller ungeraden Spuren.
+4. **NEU-090 / zweite Schleife:** Der historische Grenzwert $T_N(z)\to\gamma^2/2$ ist `×[M]`. Korrekt ist auf $M_N=N/\log N$
+   $$T_N(z)=O_z\!\left(\frac{\log\log N}{\log N}\right)\to0.$$
+5. **NEU-089 / höhere Schleifen:** Für komplexes $z$ ist $C_N(z)$ im Allgemeinen nicht selbstadjungiert; korrekt ist $\|C_N\|_{HS}^2=\operatorname{Tr}(C_N^*C_N)$. Im konkreten endlichen NEU-088–90-Modell gilt
+   $$\|C_N(z)\|_{HS}^2=O_z\!\left(\frac{\log\log N}{\log N}\right)\to0,$$
+   daher alle festen Schleifenterme $\to0$ und
+   $$\log D_N(z)\to0,\qquad D_N(z)\to1.$$
+   Dies ist **kein allgemeiner Feshbach-No-Go** für Objekt X.
+
+### G-Firewalls
+
+1. Transportgenerator $D_{\rm rel}$ ≠ Hilbert–Pólya-Endoperator.
+2. Diskrete Eigenbasisformeln NEU-051 (51.3)/(51.4)/(51.7) sind `SUPERSEDED`; verbindlich ist die projektionswertige Spektralmaßform aus NEU-227.
+3. Festes Primcutoff $N$ bedeutet nicht endlicher Rang von $K_N$.
+4. Endliche Feshbachidentität bedeutet nicht Schattennormkontrolle des globalen Grenzübergangs.
+5. Der $u$-Regulator ist Hebungswahl, kein freier Regularisierungsparameter.
+6. Zusammengesetzte Sektoren `[O-225-3]` bleiben offen.
+7. Intrinsische Liftunabhängigkeit, Quellhilbertisierung, Gramoperator, $\beta_p$ und globale nichtorthogonale Kopplungsgeometrie gehören nach P11.
+
+### Unabhängiger Zweitcheck
+
+Der pfadgebundene Gegencheck bestätigte Inventar, G-T1–G-T5, Spektral-/Schattenfirewalls und P06/P11-Routing **ohne konkreten mathematischen Gegenbefund**. Eine im Chat abgeschnitten übertragene Zeile zu G-T5 wurde vor der Versiegelung direkt gegen den Live-Audit geprüft; die Übertragungsauffälligkeit war rein formal und änderte kein mathematisches Urteil.
+
+\[
+\boxed{\text{P06 PASS A COMPLETE — doppelt geprüft.}}
+\]
+
+\[
+\boxed{\text{P06-SYN FREIGEGEBEN.}}
+\]
+
+**Epistemische Firewall:** Die Versiegelung ist eine Audit-/Migrationsaussage. Alle als `?[O]`, `CONDITIONAL`, `INCORPORATED_part` oder P11-Blocker geführten mathematischen Punkte behalten ihren Status. Objekt X ist weiterhin nicht konstruiert; kein RH-Beweis wird behauptet.
 
 ---
 
