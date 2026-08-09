@@ -68,3 +68,25 @@ Es ersetzt weder die NEU-Forschungsknoten noch deren Audits und Patches.
 - **Auditbefund:** kein neuer mathematischer Konflikt; kein NEU-Knoten wieder geöffnet
 
 ---
+
+## P08 — Renormalized Prime Operators and Finite-Part Structures
+
+- **LaTeX-Ziel:** `papers/P08_Renormalized_Prime_Operators_and_Finite_Part_Structures.tex`
+- **Kanonische Markdown-Quelle:** `papers/P08_Renormalized_Prime_Operators_and_Finite_Part_Structures.md`
+- **Markdown-Status:** `SYN FINAL AUDITED`
+- **Markdown-Erstcommit:** `29101001`
+- **Markdown-Finalcommit:** `31c93d50`
+- **Pass-A-Basis:** `audits/AUDIT-2026-08-09_P08_PassA_FINAL_SEAL.md`, Commit `964c602b`; H-T1 bis H-T5 vollständig reconciliiert
+- **Knotenbasis:** Live-Block `04-grenzoperator-renormierung/`, NEU-121–150 gemäß Inventar; NEU-126/129 fehlen live; NEU-123F liegt in zwei verschiedenen Dateien vor
+- **SYN-Primärcheck:** `audits/AUDIT-2026-08-09_P08_SYN_Primaercheck.md`, Commit `f3330c2f`; Urteil `OHNE KONKRETEN GEGENBEFUND`
+- **SYN-Zweitcheck:** `audits/AUDIT-2026-08-09_P08_SYN_Zweitcheck_Pfadgebunden.md`, Commit `3d3b8864`; Urteil `OHNE KONKRETEN GEGENBEFUND`
+- **LaTeX-Prüfart:** reiner SYN-Transferaudit; kein erneuter Vollaudit von NEU-121–150
+- **LaTeX-Commit:** `d283c34c`
+- **LaTeX-Transferaudit:** `audits/AUDIT-2026-08-09_P08_LaTeX_SYN_Transferaudit.md`, Commit `3f12e0ef`; Urteil `OHNE KONKRETEN GEGENBEFUND`
+- **LaTeX-Kompilierung:** in dieser Sitzung nicht ausgeführt; Connector-Datei nicht lokal materialisiert, Container ohne DNS zum Raw-GitHub-Endpunkt; kein erfolgreicher Compile wird behauptet
+- **LaTeX-Endstatus:** `SYN FROZEN ✓[K/M]`
+- **Kernbefund:** strenger Kollaps `b_{1,N}→0` im unrenormierten symmetrischen Jacobi-Pfad; feste-`β`-Spurklasse nur `CONDITIONAL ✓[M]_{model}` unter modellrelativem Rang-`≤1` plus quantitativer `c_p`-Schranke; T2 und Nichtentartung erst für primdiagonales Mangoldt-`R`; exakter Mellin-Kanal über `Ψ_{φ,X}`; Prime-only-`S_{φ,X}`-Mellin-Identität gesperrt; operatorieller Finite Part bleibt offen
+- **Zentrale Firewall:** `Tr_reg := AC[-ζ'/ζ]` bleibt Definition und beweist keine operatorielle Regularisierung; keine Objekt-X-/Hilbert–Pólya-Konstruktion, kein RH-Beweis
+- **Weiterleitung:** gesicherte No-Gos → P10; intrinsische Lift-/Gram-/T2-/Nichtentartungs- und globale Schatten/Fredholm-Geometrie → P11; Finite-to-Infinite-Weil-Grenzfragen → P12
+
+---
