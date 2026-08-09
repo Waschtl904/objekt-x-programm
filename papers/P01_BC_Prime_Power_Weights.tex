@@ -1,72 +1,116 @@
 \documentclass[11pt,a4paper]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{hyperref}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{definition}[theorem]{Definition}
 \newtheorem{remark}[theorem]{Remark}
+\newtheorem{openproblem}[theorem]{Open Problem}
 
 \title{P01 --- BC Prime-Power Weights and Local Arithmetic Structure}
 \author{Objekt-X-Programm}
-\date{2026-08-08 (SYN, Entwurf)}
+\date{2026-08-09}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-We consolidate the local arithmetic results of NEU-250b--j.
-Starting from the Bost--Connes (BC) C*-dynamical system and
-the Frobenius--Nakayama construction, we derive that the
-von-Mangoldt weight $\Lambda(p^k)/\sqrt{p^k}$ arises canonically
-from BC/Frobenius/energy, and we establish the support
-separation between primes and prime powers at the local level.
-All results are unconditional (RH-free).
+We record the reconciled local Bost--Connes prime-power layer used as a
+prerequisite for P09.  The primitive $p$-channel produces the algebraic factor
+$\log p/\sqrt p$, and the arithmetic identity
+$\Lambda(p^m)/\sqrt{p^m}=\log p/p^{m/2}$ is unconditional.  The stronger
+all-$n$ operator realization and the Hilbert-space functional calculus remain
+open.  The support-separation statement from NEU-250j is retained without
+upgrading it to an orthogonality theorem.
 \end{abstract}
 
-\section{Setup: BC System and Local Data}
+\section{Primitive BC prime channel}
 
-\begin{definition}[BC C*-dynamical system]
-Let $(\mathcal{A}_{\mathrm{BC}}, \sigma_t)$ denote the
-Bost--Connes system with time evolution $\sigma_t(\mu_n)=n^{it}\mu_n$.
-For each prime power $p^k$, the Frobenius element $\mathrm{Frob}_{p^k}$
-acts on the arithmetic side via the Nakayama functor.
-\end{definition}
-
-\begin{theorem}[Prime-power weight derivation, NEU-250b--j $\checkmark$]
-Let $E_{p^k}$ denote the energy eigenvalue at level $p^k$.
-Then
+\begin{proposition}[Primitive local factor]
+On the explicitly treated primitive channel $j_R=e_RV_p$, the audited
+algebraic relations are
 \[
-  \frac{\Lambda(p^k)}{\sqrt{p^k}} 
-  = \frac{\log p}{p^{k/2}}
+  h_p^{\rm bal}=p^{-1/2}I,
+  \qquad
+  H_{\rm BC}j_R=(\log p)j_R.
 \]
-arises as the BC/Frobenius/Nakayama--energy contribution, canonically
-and RH-free.
-\end{theorem}
-
-\begin{proof}
-See NEU-250b--j (archive-nodes/07-weil-explizitformel/) for the full
-derivation. Consolidated here: the half-integer power $p^{-k/2}$ comes
-from the modular weight; $\log p$ comes from the time-derivative of the
-Frobenius eigenvalue $p^{it}$ at $t=0$.
-\end{proof}
-
-\begin{proposition}[Support separation, NEU-250j $\checkmark$]
-The prime-power contributions are supported on $\{p^k : k\ge 1\}$
-and are mutually disjoint for distinct prime powers.
+Hence the primitive local contribution carries the factor
+\[
+  \boxed{\frac{\log p}{\sqrt p}}.
+\]
+This statement is only an algebraic/partial realization.  Self-adjointness,
+closure, domains and a global Hilbert functional calculus for $H_{\rm BC}$
+are not supplied here.
 \end{proposition}
 
-\begin{remark}[No-Go record]
-Earlier attempts (NEU-220 series) to derive $\Lambda(p^k)/\sqrt{p^k}$
-directly from a global L2 operator were abandoned; the local
-BC/Frobenius approach is the correct level of description.
+\section{Prime-power arithmetic}
+
+\begin{theorem}[Arithmetic prime-power identity]
+For every prime $p$ and every integer $m\ge1$,
+\[
+  \boxed{
+  \frac{\Lambda(p^m)}{\sqrt{p^m}}
+  =\frac{\log p}{p^{m/2}}.
+  }
+\]
+This is a purely arithmetic and RH-free identity.
+\end{theorem}
+
+\begin{openproblem}[All-$n$ operator realization]
+The general operator formula
+\[
+  h_n^{\rm bal}=n^{-1/2}I\qquad(n\ge1)
+\]
+is not proved in the audited source cone.  NEU-250g computes the primitive
+$p$-channel, whereas the all-$n$ extension invoked in NEU-250i lacks an
+independent general lemma.  Consequently the full prime-power operator
+realization through $h_{p^m}^{\rm bal}$ or $H_{\rm pr}$ remains conditional.
+No global operator identity $H_{\rm pr}=\Lambda$ is asserted.
+\end{openproblem}
+
+\section{Support separation}
+
+\begin{theorem}[Mangoldt support versus direct cross-prime collision]
+Let $p\ne q$ be primes and suppose
+\[
+  pm_p=qm_q=M.
+\]
+Then $M$ has at least two distinct prime divisors and therefore
+\[
+  \Lambda(M)=0.
+\]
+Thus, for the direct cross-prime collision considered in NEU-250j,
+\[
+  \boxed{
+  \operatorname{supp}\Lambda
+  \cap
+  \operatorname{supp}(\text{direct cross-prime collision})
+  =\varnothing.
+  }
+\]
+\end{theorem}
+
+\begin{remark}[Firewall]
+Support separation is not a theorem of Hilbert-space orthogonality or of
+pairwise disjoint prime-channel images.  The nonorthogonal prime-channel
+geometry retained in P05 is unaffected.
 \end{remark}
 
-\section{Source Nodes}
+\section{Status and provenance}
 
-NEU-250b, 250c, 250d, 250e, 250f, 250g, 250h, 250i, 250j
-(archive-nodes/07-weil-explizitformel/).
+The authoritative reconciliation is
+\texttt{audits/AUDIT-2026-08-09\_P01\_Dependency\_Reaudit\_vor\_P09.md},
+based on the doubly checked F4 end state of the NEU-250f--r chain.
+The canonical Markdown source is
+\texttt{papers/P01\_BC\_Prime\_Power\_Weights.md}.
+
+\[
+  \boxed{\text{P01 --- SYN FINAL AUDITED; dependency-reconciled for P09}.}
+\]
+
+No Riemann-hypothesis proof, Object-X construction, or global
+Hilbert--P\'olya realization is claimed.
 
 \end{document}
