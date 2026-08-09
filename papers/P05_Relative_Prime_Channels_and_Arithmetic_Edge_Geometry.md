@@ -1,6 +1,6 @@
 # P05 — Relative Prime Channels and Arithmetic Edge Geometry
 
-**Status:** SYN DRAFT 3 — kanonische Markdown-Quelle; unabhängiger Inhaltscheck ausständig  
+**Status:** SYN DRAFT 4 — kanonische Markdown-Quelle; unabhängiger Inhaltscheck ausständig  
 **Datum:** 9. August 2026  
 **Pass-A-Basis:** Gruppe F `PASS A COMPLETE`, `PASS-A-PROTOKOLL.md`, Commit `9c23fc49`  
 **F2-Primäraudit:** `audits/AUDIT-2026-08-09_F2_Primaeraudit_Fourier_Rohkopplung.md`, Commit `b6a97e27`; versiegelt `4c4c13e8`  
@@ -52,7 +52,15 @@ $$
 Der ungechargte Fouriermodus erzeugt daher in diesem lokalen Modell keine Rohkopplung.  
 [NEU-041/155; F1/F2: `✓[M]` auf dem kontrollierten Definitionsbereich]
 
-### Satz 1.3 — Rang-eins-Aussage nur für die induzierte Ebene
+### Notationskonvention 1.3 — Rang-eins-Projektion
+
+Historisch wurde für die orthogonale Rang-eins-Projektion teilweise $\pi_p$ verwendet. Da NEU-158/160 $\pi_p$ zugleich für eine Symmetriedarstellung benutzen, schreibt P05
+
+$$
+\boxed{\Pi_p^{(1)}:=|e_1^{(p)}\rangle\langle e_1^{(p)}|.}
+$$
+
+### Satz 1.4 — Rang-eins-Aussage nur für die induzierte Ebene
 
 Im eindimensional induzierten relativen Modell gilt
 
@@ -63,9 +71,9 @@ $$
 Für den zugehörigen gewichteten positiven Rang-eins-Operator
 
 $$
-P_p=|c_p|^2\pi_p,
+P_p=|c_p|^2\Pi_p^{(1)},
 \qquad
-\pi_p^2=\pi_p,
+(\Pi_p^{(1)})^2=\Pi_p^{(1)},
 $$
 
 gilt
@@ -77,7 +85,7 @@ $$
 Insbesondere ist $P_p$ im Allgemeinen kein orthogonaler Projektor.  
 [F1/F2: `✓[M]` modellrelativ]
 
-### Firewall 1.4 — Kein intrinsisches Primgewicht aus dem Rang-eins-Modell
+### Firewall 1.5 — Kein intrinsisches Primgewicht aus dem Rang-eins-Modell
 
 Aus den obigen Identitäten folgt nicht unbedingtes
 
@@ -98,7 +106,7 @@ Nichtentartung und Hebungsunabhängigkeit bleiben offen.
 
 ## §2 — Liftgeometrie und exakte Zulässigkeit
 
-### Notationskonvention 2.0 — Liftkern
+### Notationskonvention 2.0 — Liftkern und verbundene Liftform
 
 Die historischen F2-Blätter verwenden $K_p$ für den Kern der primitiven Projektion. Da F3 dieselbe Buchstabenfamilie $K_p,K_{pq}$ für Prim-/Feshbachblöcke verwendet, schreibt P05 für den Liftkern eindeutig
 
@@ -106,7 +114,13 @@ $$
 \boxed{\mathscr K_p^{\rm lift}:=\ker\pi_{\rm prim}.}
 $$
 
-Dies ist eine reine SYN-Disambiguierung.
+Ebenso wird die im Liftstrang verwendete verbundene Form zur Abgrenzung vom späteren BC-Halbgewicht $h_p^{\rm bal}$ als
+
+$$
+\boxed{h_p^{\rm conn}}
+$$
+
+notiert. Beide Änderungen sind reine SYN-Disambiguierungen.
 
 ### Def. 2.1 — Primitive Liftfaser
 
@@ -123,7 +137,8 @@ liegen algebraisch in $\mathscr K_p^{\rm lift}$.
 Für eine Liftänderung $k$ relativ zu einem Basispunkt $\widehat\varepsilon_p^{\,0}$ besitzt die exakte Normierungsbedingung die Form
 
 $$
-2\operatorname{Re}h_p(\widehat\varepsilon_p^{\,0},k)+h_p(k,k)=0.
+2\operatorname{Re}h_p^{\rm conn}(\widehat\varepsilon_p^{\,0},k)
++h_p^{\rm conn}(k,k)=0.
 $$
 
 Sie ist daher keine homogene lineare Kerngleichung.  
@@ -306,7 +321,7 @@ $$
 
 ## §5 — Quotienten- und Symmetriearchitektur
 
-### Notationskonvention 5.0 — Quotientenraum
+### Notationskonvention 5.0 — Quotientenraum und Symmetriedarstellung
 
 NEU-159/160 verwenden $Q_p$ für den Rohkopplungsquotienten. Im globalen Objekt-X-Programm ist $Q_p$ zugleich für den lokalen Weil-Beitrag reserviert. P05 schreibt deshalb für den F2-Quotientenraum
 
@@ -314,7 +329,13 @@ $$
 \boxed{\mathscr Q_p^{\rm quot}:=Q_p^{(\mathrm{NEU\text{-}159/160)}.}
 $$
 
-Auch dies ist ausschließlich eine SYN-Disambiguierung.
+Die historische Darstellung $\pi_p:G_p\to\mathcal U(Q_p)$ wird entsprechend als
+
+$$
+\boxed{\pi_p^{\rm sym}:G_p\to\mathcal U(\mathscr Q_p^{\rm quot})}
+$$
+
+geschrieben, um sie von der früheren Rang-eins-Projektion zu unterscheiden.
 
 ### Satz 5.1 — Abstrakte Quotientenstruktur
 
@@ -329,10 +350,10 @@ Auf der abstrakten Ebene sind folgende Aussagen gültig:
 
 ### Satz 5.2 — Abstrakter Kommutantensatz
 
-Für eine konkrete unitäre Darstellung $\pi_p$ auf $\mathscr Q_p^{\rm quot}$ gilt: Beschränkte positive semidefinite $G_p$-invariante Formen sind genau dann skalare Vielfache einer Referenzform, wenn
+Für eine konkrete unitäre Darstellung $\pi_p^{\rm sym}$ auf $\mathscr Q_p^{\rm quot}$ gilt: Beschränkte positive semidefinite $G_p$-invariante Formen sind genau dann skalare Vielfache einer Referenzform, wenn
 
 $$
-\pi_p(G_p)'=\mathbb C I.
+\pi_p^{\rm sym}(G_p)'=\mathbb C I.
 $$
 
 Dies ist der abstrakte Schur-/Kommutantenmechanismus.  
@@ -346,13 +367,7 @@ $$
 \mathscr Q_p^{\rm quot}\neq\{0\},
 $$
 
-eine konkrete unitäre Wirkung
-
-$$
-\pi_p:G_p\to\mathcal U(\mathscr Q_p^{\rm quot}),
-$$
-
-deren Irreduzibilität und damit die konkrete Eindeutigkeit der verbundenen Form.  
+eine konkrete unitäre Wirkung $\pi_p^{\rm sym}$, deren Irreduzibilität und damit die konkrete Eindeutigkeit der verbundenen Form.  
 [NEU-158–160: `?[O]` / `CONDITIONAL`]
 
 ### Firewall 5.4 — Kein globaler Deszent aus der lokalen Formel
@@ -629,7 +644,7 @@ P05 behauptet keine dieser globalen Konstruktionen bereits gelöst zu haben.
 | $\operatorname{rank}C_p^{\rm rel}\le1$ im eindimensional induzierten Modell | `✓[M]` modellrelativ | F1/F2 |
 | intrinsisches $c_p\neq0$ / Nichtentartung | `?[O]` | F1/F2 |
 | starke oder schwache Hebungsunabhängigkeit | `?[O]` | F2 |
-| Normierungsbedingung ist quadratisch | `✓[M]` | F2 |
+| Normierungsbedingung mit $h_p^{\rm conn}$ ist quadratisch | `✓[M]` | F2 |
 | zusätzliche lineare $L_{p,a}$-Kernfamilie im auditierten Quellenkegel | `✓[M]_{neg}` Quellenbefund | F2 |
 | exakt zulässiger Nichtnullzeuge | `?[O]` | F2 |
 | feste-$p$-Injektivität $(s,m)\mapsto(u+ps,pm)$ | `✓[M]` | F2 |
@@ -695,4 +710,4 @@ $$
 }
 $$
 
-**Aktueller Status:** `SYN DRAFT 3`. Vor einer Einfrierung sind ein unabhängiger SYN-Inhaltscheck, die LaTeX-Übertragung und der LaTeX-SYN-Transferaudit erforderlich.
+**Aktueller Status:** `SYN DRAFT 4`. Vor einer Einfrierung sind ein unabhängiger SYN-Inhaltscheck, die LaTeX-Übertragung und der LaTeX-SYN-Transferaudit erforderlich.
