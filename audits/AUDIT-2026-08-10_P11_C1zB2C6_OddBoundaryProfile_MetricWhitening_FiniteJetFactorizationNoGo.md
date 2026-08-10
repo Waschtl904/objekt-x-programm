@@ -88,7 +88,7 @@ C6 zieht daraus die strukturelle Konsequenz
 }
 \]
 
-Sie lässt sich kanonisch vollständig trivialisierten. Das verbleibende Problem ist metrisch: Wie verhalten sich die terminalabhängigen Hilbertmetriken auf denselben verschachtelten Boundary-Profilen?
+Sie lässt sich kanonisch vollständig trivialisieren. Das verbleibende Problem ist metrisch: Wie verhalten sich die terminalabhängigen Hilbertmetriken auf denselben verschachtelten Boundary-Profilen?
 
 Das ist eine echte Reduktion des C5-Cauchy-Problems und keine Umbenennung desselben.
 
@@ -1038,8 +1038,8 @@ Nicht supersediert werden:
 - B2-B;
 - C3;
 - C4;
-- C5s absolute Odd-Divergenz;
-- C5s Cross-Terminal-Firewall.
+- die in C5 bewiesene absolute Odd-Divergenz;
+- die C5-Cross-Terminal-Firewall.
 
 Insbesondere bleibt
 
