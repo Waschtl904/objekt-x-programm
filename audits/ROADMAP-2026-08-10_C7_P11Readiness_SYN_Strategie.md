@@ -1,7 +1,8 @@
 # ROADMAP-2026-08-10: C7 → P11-Readiness → SYN → Seal
 
-**Status beim Anlegen:** C6 abgeschlossen (letzter Knoten: C1zB2C5c). PASS-A ACTIVE.  
-**Ziel:** Kontrollierter, gategestützter Abschluss bis SYN und anschließendes Seal.
+**Status beim Anlegen:** C6 abgeschlossen (letzter P11/C6-Phasen-Knoten: C1zB2C5c). PASS-A ACTIVE.  
+**Sync nach C7a:** 2026-08-10 | Commit `a6d9c0a106cabe21e6092ab2536c4c64aa72658b`  
+**Ziel:** Kontrollierter, gatgestützter Abschluss bis SYN und anschließendes Seal.
 
 ---
 
@@ -22,14 +23,47 @@ C6 hat keine generische offene Liste hinterlassen, sondern genau **einen abgegre
 ### Scope (hart begrenzt)
 C7 adressiert **ausschließlich** die drei aus C6z exportierten Punkte. Es gibt keine neuen Stränge außerhalb dieses Residuals.
 
-### Knotenstruktur
-C7 wird von Anfang an auf **C7a–C7d plus einen Abschlussknoten** begrenzt:
+### Knotenstruktur und aktueller Stand
 
-- **C7a** – Quasi-Null-Nichtapproximation (R2): Beweis oder Widerlegung der starken asymptotischen Aussage
-- **C7b** – Observability von \(J_T(\beta)\) (R3): Direktaudit des Alignment-Mechanismus
-- **C7c** – Window-Lower-Transfer: Abhängig von C7a/C7b; nur bei positivem Ausgang weiterführen
-- **C7d** – Konsequenzaudit: Welche P11-Aussage folgt aus C7a–C7c?
-- **C7-CLOSE** – Abschlussknoten mit explizitem Entscheid
+| Knoten | Titel | Rolle | Status |
+|--------|-------|-------|--------|
+| **C7a** | ActualJumpCoefficientCensus | R3: Exakte Typisierung von \(J_T(\beta)\); konstruktive Hub/Rest/Identitäts-Zerlegung; Protected Pair \((x_T, -x_T)\); Zieltyp auf integrierte Observability korrigiert | ✅ **DONE** (`a6d9c0a`) |
+| **C7b** | ProtectedJumpPair\_OffDiagonalGram\_IntegratedObservabilityTest | Kernfrage: Kann \(G_T / X \to 0\) auf P11-relevanter Skala gezeigt werden? | 🔵 offen |
+| **C7c** | Window-Lower-Transfer | Nur bei positivem C7b-Ausgang; untere Fenster-Transferschranke | ⏳ wartet |
+| **C7d** | Konsequenzaudit | Welche P11-Aussage folgt aus C7a–C7c? | ⏳ wartet |
+| **C7-CLOSE** | Abschlussknoten | Expliziter Gate-Entscheid | ⏳ wartet |
+
+### Was C7a geliefert hat
+
+C7a hat mehr geliefert als eine Sprung-Auflistung:
+
+- **Exakte Typisierung** des Residualkoeffizienten:
+\[
+J_T(\beta) = J_{h,T}(\beta) - \lambda_T J_{1,T}(\beta) - \lambda_T J_{g,T}(\beta), \quad g_T = R_T^* R_T \mathbf{1}_T
+\]
+- **Kandidat = tatsächlicher Breakpoint:** \(\beta \in B_T^{\mathrm{act}}\) genau dann, wenn \(J_T(\beta) = 0\) nach allen Cancellations
+- **Protected Pair (C6i-geschützt):** An \(x_T = T^{-1/2}\log(q_T/2)\), \(q_T \in \{3,5\}\) verschwinden Rest- und Identitätssprung exakt:
+\[
+|J_T(x_T)| = |J_{h,T}(x_T)| \geq j^* > 0, \quad J_T(-x_T) = -J_T(x_T)
+\]
+- **Starker neuer Satz** (integrierte Positivität für festes \(T\)):
+\[
+\lim_{X\to\infty} \frac{1}{2X}\int_{-X}^X |P_T(\xi)|^2\,d\xi = \sum_{\beta \in B_T^{\mathrm{act}}} |J_T(\beta)|^2 \geq 2{j^*}^2
+\]
+- **Korrektur des Zieltyps:** Globale punktweise Schranke \(|P_T(\xi)| \geq c|\xi|\|r_T\|\) kann nicht stimmen (\(P_T(\xi) = O_T(\xi^2)\) nahe 0). Verfolgt wird **integrierte Observability**.
+- **Baker/Wüstholz eingeordnet:** Klassische Resultate über lineare Formen in Logarithmen betreffen Lageabstände; sie kontrollieren nicht die Cancellation der Koeffizienten in \(P_T\). C7a nutzt sie bewusst noch nicht.
+
+### Mathematischer Eingang für C7b
+
+C7a isoliert die Offdiagonalinterferenz:
+\[
+G_T = \sum_{\beta \neq \gamma} |\beta - \gamma| \cdot |J_T(\beta) J_T(\gamma)|
+\]
+mit der exakten Schranke:
+\[
+\frac{1}{2X}\int_{-X}^X |P_T(\xi)|^2\,d\xi \geq 2{j^*}^2 - \frac{G_T}{X}
+\]
+C7b hat damit **genau eine Kernfrage:** Kann \(G_T / X\) auf einer mit \(T\) kontrollierten Frequenzskala klein genug gemacht werden?
 
 ### Entscheidgabel in C7-CLOSE
 Nach C7-CLOSE gibt es genau zwei Pfade — kein automatisches C8:
@@ -100,13 +134,22 @@ Das Paper entsteht **erst aus dem versiegelten Stand**. Es ist dann:
 
 ---
 
-## 8. Zusammenfassung des aktuellen Standorts
+## 8. Aktueller Standort
 
 ```
-C6 abgeschlossen
+C6 abgeschlossen (letzter Knoten: P11/C1zB2C5c)
       ↓
-   C7 (C7a–C7d + C7-CLOSE)
-   [begrenzt auf R2, R3, Window-Lower-Transfer]
+   C7a ✅ ActualJumpCoefficientCensus (a6d9c0a)
+   [J_T(beta) exakt typisiert; Protected Pair; integrierte Positivität bewiesen]
+      ↓
+   C7b 🔵 ProtectedJumpPair_OffDiagonalGram_IntegratedObservabilityTest
+   [Kernfrage: G_T/X → 0 auf P11-relevanter Skala?]
+      ↓
+   C7c ⏳ Window-Lower-Transfer
+      ↓
+   C7d ⏳ Konsequenzaudit
+      ↓
+   C7-CLOSE ⏳
       ↓
    P11-Readiness-Audit
    [Gate: alle Hauptsätze, kritische [O], Firewalls]
@@ -121,8 +164,6 @@ C6 abgeschlossen
    papers/P11
 ```
 
-**Wir wissen jetzt ziemlich genau, was zwischen uns und SYN steht. Das ist für den Projektfortschritt ein wichtiger Unterschied gegenüber dem Zustand vor C6.**
-
 ---
 
-*Protokolliert: 2026-08-10 | Basis: C6z-Exportpunkte | Verantwortlich: PASS-A ACTIVE*
+*Initiales Protokoll: 2026-08-10 | Sync nach C7a: 2026-08-10 20:56 CEST | PASS-A ACTIVE*
