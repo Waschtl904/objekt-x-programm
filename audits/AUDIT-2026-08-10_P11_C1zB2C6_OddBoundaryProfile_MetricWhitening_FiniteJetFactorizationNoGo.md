@@ -30,7 +30,7 @@ Der Knoten beweist drei positive Strukturresultate und einen präzise abgegrenzt
 3. Der ungerade Terminal-Gauge ist exakt das **metrische Whitening einer festen Profilinklusion**.
 4. Kein Transportmodell, das die volle ungerade Hilbertgeometrie durch einen **festen endlichen Jetquotienten** faktorisieren will, kann treu beziehungsweise isometrisch sein.
 
-Nicht bewiesen wird:
+Nicht bewiesen wird
 
 \[
 \boxed{
@@ -40,7 +40,7 @@ W_{R,S,-}^{[\infty]}.
 }
 \]
 
-Die offene Frage wird vielmehr auf die asymptotische Hilbertgeometrie einer terminalabhängigen Familie von Metriken auf einem bereits algebraisch trivialisierten Boundary-Profil-Direktsystem reduziert.
+Die offene Frage wird auf die asymptotische Hilbertgeometrie einer terminalabhängigen Familie von Metriken auf einem bereits algebraisch trivialisierten Boundary-Profil-Direktsystem reduziert.
 
 ---
 
@@ -56,8 +56,9 @@ C5 hat zwei entscheidende Tatsachen gesiegelt:
 =
 \int_{-R}^{R}
 \operatorname{sgn}(u)
-\left(\int_0^{|u|}e^{(z-1/2)s}\,ds\right)
-f(u)\,du
+\left(
+\int_0^{|u|}e^{(z-1/2)s}\,ds
+\right)f(u)\,du
 \]
 
 ist transition-kompatibel:
@@ -79,15 +80,15 @@ f=0.
 
 Damit ist der ungerade Source-Vektor durch sein vollständiges analytisches Boundary-Profil eindeutig bestimmt.
 
-C6 zieht daraus die bislang nicht formulierte strukturelle Konsequenz:
+C6 zieht daraus die strukturelle Konsequenz
 
 \[
 \boxed{
-\text{Im ungeraden Kanal ist nicht mehr die algebraische Source-Transition das Problem.}
+\text{Im ungeraden Kanal ist die algebraische Source-Transition nicht mehr das offene Problem.}
 }
 \]
 
-Sie kann kanonisch vollständig trivialisiert werden. Das verbleibende Problem ist ausschließlich metrisch: Wie verhalten sich die terminalabhängigen Hilbertmetriken auf denselben verschachtelten Boundary-Profilen?
+Sie lässt sich kanonisch vollständig trivialisierten. Das verbleibende Problem ist metrisch: Wie verhalten sich die terminalabhängigen Hilbertmetriken auf denselben verschachtelten Boundary-Profilen?
 
 Das ist eine echte Reduktion des C5-Cauchy-Problems und keine Umbenennung desselben.
 
@@ -140,7 +141,7 @@ und zeigt die exakte Kompatibilität
 \tag{C1zB2C6.2}
 \]
 
-C4 bleibt außerdem als No-Go bestehen: keine feste endliche Jetstufe erfasst die gesamte Boundary-Hierarchie.
+C4 bleibt als No-Go bestehen: keine feste endliche Jetstufe erfasst die gesamte Boundary-Hierarchie.
 
 ## 1.3 C5 — Parität und vollständiger analytischer Boundary-Transform
 
@@ -154,7 +155,7 @@ C5 liefert
 \mathcal K_{X,R}^-
 \]
 
-und die Injektivität von `mathfrak B_R` auf `mathcal K_{X,R}^-`.
+und die Injektivität von `\mathfrak B_R` auf `\mathcal K_{X,R}^-`.
 
 Für jeden nichtzero glatten kompakten ungeraden Testvektor divergiert die absolute Zukunftsmetrik. Diese Aussage wird hier **nicht** abgeschwächt oder überschrieben.
 
@@ -168,7 +169,7 @@ B2-B bleibt bestehen: der naive Haar-`L^2`-Grenzendpunkt ist nicht der gesuchte 
 
 ## 1.5 C5d/C5e sind nur Vergleich, kein Import
 
-Im geraden Kanal existiert ein positiver Gamma-Grenzoperator `Gamma_R^+`, aus dem C5e einen starken Grenzgauge konstruiert.
+Im geraden Kanal existiert ein positiver Gamma-Grenzoperator `\Gamma_R^+`, aus dem C5e einen starken Grenzgauge konstruiert.
 
 Im ungeraden Kanal existiert ein solcher positiver absoluter Terminalgrenzoperator gerade **nicht**. Daher wird der C5e-Beweis nicht übertragen.
 
@@ -189,7 +190,7 @@ Für jedes `R>0` definiere
 \tag{C1zB2C6.3}
 \]
 
-Da `mathfrak B_R` auf `mathcal K_{X,R}^-` injektiv ist, besitzt jeder Profilvektor
+Da `\mathfrak B_R` auf `\mathcal K_{X,R}^-` injektiv ist, besitzt jeder Profilvektor
 
 \[
 F\in\mathscr A_R^-
@@ -203,7 +204,7 @@ f=\mathfrak B_R^{-1}F.
 
 Wichtig ist die Typisierung:
 
-- `mathscr A_R^-` ist zunächst nur ein linearer Bildraum in `Hol(C)`;
+- `\mathscr A_R^-` ist zunächst nur ein linearer Bildraum in `\operatorname{Hol}(\mathbb C)`;
 - es wird **keine** fremde Hardy-, Bergman-, Paley-Wiener- oder sonstige Funktionsraumnorm geraten;
 - die Hilbertstruktur wird erst in §5 exakt aus der bereits vorhandenen `X`-Graphgeometrie transportiert.
 
@@ -263,7 +264,7 @@ Das native ungerade Direktsystem
 (\mathcal K_{X,R}^-,J_{R,S}^-)
 \]
 
-ist durch die Boundary-Transforms `mathfrak B_R` algebraisch isomorph zum verschachtelten Inklusionssystem
+ist durch die Boundary-Transforms `\mathfrak B_R` algebraisch isomorph zum verschachtelten Inklusionssystem
 
 \[
 (\mathscr A_R^-,\iota_{R,S}).
@@ -279,7 +280,7 @@ buchstäblich als Inklusion derselben ganzen Funktionen.
 
 ### Beweis
 
-Injektivität von `mathfrak B_R` auf dem ungeraden Sektor ist C5. Gleichung (C1zB2C6.1) liefert (C1zB2C6.4) und (C1zB2C6.5). Der Kokyklus folgt entweder aus C2 oder unmittelbar aus der Transitivität von Mengeninklusionen. `□`
+Injektivität von `\mathfrak B_R` auf dem ungeraden Sektor ist C5. Gleichung (C1zB2C6.1) liefert (C1zB2C6.4) und (C1zB2C6.5). Der Kokyklus folgt entweder aus C2 oder unmittelbar aus der Transitivität von Mengeninklusionen. `□`
 
 Status:
 
@@ -322,11 +323,11 @@ besitzt damit die kanonische Realisierung
 \tag{C1zB2C6.7}
 \]
 
-Die Abbildung sendet die Direktgrenzklasse eines Source-Vektors `f_R` auf die ganze Funktion `mathfrak B_R(.;f_R)`.
+Die Abbildung sendet die Direktgrenzklasse eines Source-Vektors `f_R` auf die ganze Funktion `\mathfrak B_R(\cdot;f_R)`.
 
-Sie ist wohldefiniert wegen (C1zB2C6.1) und injektiv wegen der C5-Vollständigkeit im ungeraden Sektor.
+Sie ist wohldefiniert wegen (C1zB2C6.1). Sind zwei Repräsentanten auf verschiedenen Horizonten demselben Profil zugeordnet, werden beide in einen gemeinsamen größeren Horizont fortgesetzt; dort erzwingt die Injektivität von `\mathfrak B` auf dem ungeraden Sektor ihre Gleichheit. Also ist die Direktgrenzabbildung injektiv.
 
-**Firewall:** (C1zB2C6.7) ist ein **algebraischer** Direktgrenzsatz. Es wird noch keine terminalstabile Hilbertnorm und keine Hilbertvervollständigung auf `mathscr A_bdry^-` behauptet.
+**Firewall:** (C1zB2C6.7) ist ein **algebraischer** Direktgrenzsatz. Es wird noch keine terminalstabile Hilbertnorm und keine Hilbertvervollständigung auf `\mathscr A_{\rm bdry}^-` behauptet.
 
 Gerade diese fehlende metrische Vervollständigung ist das verbleibende Problem.
 
@@ -334,7 +335,7 @@ Gerade diese fehlende metrische Vervollständigung ist das verbleibende Problem.
 
 # 5. Die native X-Hilbertstruktur auf dem Boundary-Profilraum
 
-C5 hatte ausdrücklich davor gewarnt, eine externe Funktionsraumnorm auf `mathscr A_R^-` zu postulieren.
+C5 hatte ausdrücklich davor gewarnt, eine externe Funktionsraumnorm auf `\mathscr A_R^-` zu postulieren.
 
 Hier wird keine solche Norm postuliert. Stattdessen transportieren wir exakt die bereits vorhandene Graphhilbertstruktur.
 
@@ -372,7 +373,7 @@ Dann ist
 
 per Definition unitär.
 
-Damit ist `mathscr A_R^-` vollständig: seine Vollständigkeit ist nichts Neues, sondern exakt die transportierte Vollständigkeit von `mathcal K_{X,R}^-`.
+Damit ist `\mathscr A_R^-` bezüglich `h_R` vollständig: seine Vollständigkeit ist nichts Neues, sondern exakt die transportierte Vollständigkeit von `\mathcal K_{X,R}^-`.
 
 Die Inklusion
 
@@ -392,7 +393,13 @@ ist bezüglich `h_R,h_S` genau so beschränkt wie `J_{R,S}^-`, denn
 
 # 6. Zukunftsmetriken als reine Profil-Metrikvergleichsoperatoren
 
-Fixiere `R<T`. Für `F,G in mathscr A_R^-` kann die Terminalmetrik `h_T` wegen
+Fixiere `R<T`. Für
+
+\[
+F,G\in\mathscr A_R^-
+\]
+
+kann die Terminalmetrik `h_T` wegen
 
 \[
 \mathscr A_R^-\subseteq\mathscr A_T^-
@@ -400,7 +407,7 @@ Fixiere `R<T`. Für `F,G in mathscr A_R^-` kann die Terminalmetrik `h_T` wegen
 
 auf dieselben Profile eingeschränkt werden.
 
-Aus der Injektivität von `mathfrak B_T` und der Transition-Kompatibilität folgt
+Aus der Injektivität von `\mathfrak B_T` und der Transition-Kompatibilität folgt
 
 \[
 \boxed{
@@ -444,7 +451,7 @@ G_{R,T}^-
 \tag{C1zB2C6.11}
 \]
 
-auf dem Hilbertraum `(mathscr A_R^-,h_R)`.
+auf dem Hilbertraum `(\mathscr A_R^-,h_R)`.
 
 Da `G_{R,T}^-` bei endlichem Horizont beschränkt, positiv und strikt invertierbar ist, besitzt `M_{R,T}` dieselben Eigenschaften.
 
@@ -456,7 +463,7 @@ h_T(F,G)=h_R(M_{R,T}F,G).}
 \tag{C1zB2C6.12}
 \]
 
-Damit ist die absolute ungerade Zukunftsmetrik nichts anderes als der Riesz-Vergleich zwischen
+Damit ist die absolute ungerade Zukunftsmetrik der Riesz-Vergleich zwischen
 
 \[
 h_R
@@ -465,8 +472,6 @@ h_T|_{\mathscr A_R^-}
 \]
 
 auf **demselben Boundary-Profilraum**.
-
-Das ist die zentrale metrische Reformulierung von C6.
 
 ---
 
@@ -506,7 +511,7 @@ M_{S,T}
 
 Damit ist auch der C2-Metrikkokyklus vollständig in der Boundary-Profilgeometrie sichtbar.
 
-Es wurde nichts verloren: C6 hat die native Algebra `J` entfernt, aber ihre gesamte Hilbertgeometrie in die Familie `M_{R,T}` übertragen.
+Es wurde nichts verloren: C6 hat die native Algebra `J` trivialisiert, aber ihre gesamte Hilbertgeometrie in die Familie `M_{R,T}` übertragen.
 
 ---
 
@@ -545,7 +550,7 @@ M_{R,T}^{-1/2}.
 
 ## Satz C1zB2C6.2
 
-Der gesamte ungerade finite-horizon Terminaltransport ist nach Boundary-Trivialisierung ein reines **metrisches Whitening** der terminalunabhängigen Profilinklusion `iota_{R,S}`.
+Der gesamte ungerade finite-horizon Terminaltransport ist nach Boundary-Trivialisierung ein reines **metrisches Whitening** der terminalunabhängigen Profilinklusion `\iota_{R,S}`.
 
 Insbesondere:
 
@@ -576,16 +581,18 @@ Für `R<T` definiere
 \tag{C1zB2C6.16}
 \]
 
-Da `(G_{R,T}^-)^{-1/2}` invertierbar ist und `mathfrak B_R` auf dem ungeraden Sektor injektiv ist, ist auch
+Da `(G_{R,T}^-)^{-1/2}` invertierbar ist und `\mathfrak B_R` auf dem ungeraden Sektor injektiv ist, ist auch
 
 \[
 \mathfrak B_{R,T}^{\rm wh}:
-\mathcal K_{X,R}^-	o\mathscr A_R^-
+\mathcal K_{X,R}^-
+\to
+\mathscr A_R^-
 \]
 
 bijektiv.
 
-Für `R<S<T` berechnen wir:
+Für `R<S<T` berechnen wir
 
 \[
 \begin{aligned}
@@ -625,7 +632,7 @@ W_{R,S,-}^{[T]}
 \tag{C1zB2C6.17}
 \]
 
-Äquivalent:
+Äquivalent
 
 \[
 \boxed{
@@ -633,14 +640,16 @@ W_{R,S,-}^{[T]}
 =
 (\mathfrak B_{S,T}^{\rm wh})^{-1}
 \iota_{R,S}
-\mathfrak B_{R,T}^{\rm wh}.
+\mathfrak B_{R,T}^{\rm wh},
 }
 \tag{C1zB2C6.18}
 \]
 
+wobei die Inverse auf dem Bild von `\mathfrak B_{S,T}^{\rm wh}` genommen wird.
+
 Damit ist der finite-horizon Gauge eindeutig als der Transport charakterisiert, der das **gewhitete vollständige Boundary-Profil** bewahrt.
 
-Auf Jetebene folgt für jedes `m>=0`
+Auf Jetebene folgt für jedes `m\ge0`
 
 \[
 \boxed{
@@ -660,7 +669,7 @@ Dies ist eine exakte moving-covector-Identität. Sie ist **noch kein Grenzwertsa
 
 # 10. Kanonische Jetfiltration des ungeraden Profilraums
 
-Für `m>=0` definiere im Source-Raum
+Für `m\ge0` definiere im Source-Raum
 
 \[
 \mathcal F_R^{[m]}
@@ -711,12 +720,12 @@ C4-Kompatibilität liefert
 \tag{C1zB2C6.22}
 \]
 
-C4 bewies außerdem die lineare Unabhängigkeit der Jetfunktionale. Deshalb ist auf jeder Stufe das nächste Funktional nicht durch die vorherigen erzeugt. Insbesondere ist
+C4 bewies außerdem die lineare Unabhängigkeit der Jetfunktionale auf dem ungeraden Testsektor. Daher ist `\beta_R^{(m)}` nicht Linearkombination der Vorgänger `\beta_R^{(0)},\ldots,\beta_R^{(m-1)}`. Folglich ist seine Einschränkung auf `\mathcal F_R^{[m]}` nicht null. Also
 
 \[
 \mathscr A_R^{-,[m+1]}
 \subsetneq
-\mathscr A_R^{-,[m]}
+\mathscr A_R^{-,[m]},
 \]
 
 und der Quotient
@@ -728,7 +737,7 @@ und der Quotient
 \tag{C1zB2C6.23}
 \]
 
-ist eindimensional, mit kanonischer Koordinate `F^{(m)}(0)`.
+ist eindimensional, mit kanonischer Quotientenkoordinate `F^{(m)}(0)`.
 
 **Firewall:** Diese eindimensionalen Quotienten erzeugen noch **keine kanonische orthogonale Direktzerlegung** des Hilbertraums. Die Filtration ist kanonisch; die Wahl von Komplementen wäre zusätzliche Struktur.
 
@@ -769,7 +778,7 @@ Aus C5 folgt
 \bigcap_{M\ge0}E_M=\{0\}.
 \]
 
-Da die Dimension nur endlich oft echt fallen kann, existiert ein `M(E)` mit
+Die Dimension kann nur endlich oft echt fallen. Nach Stabilisierung müsste die Folge konstant bleiben; wegen des trivialen Gesamtschnitts kann die stabile Dimension nur null sein. Also existiert ein `M(E)` mit
 
 \[
 \boxed{
@@ -797,8 +806,7 @@ injektiv.
 
 Wegen (C1zB2C6.2) besitzt `J_{R,S}E` exakt dieselben Jetkoordinaten.
 
-Dies ist ein nützlicher **finite-dimensional screening theorem**:
-Jedes feste endlichdimensionale ungerade Testfenster lässt sich durch endlich viele kanonische Jetkoordinaten treu darstellen.
+Dies ist ein nützlicher **finite-dimensional screening theorem**: Jedes feste endlichdimensionale ungerade Testfenster lässt sich durch endlich viele kanonische Jetkoordinaten treu darstellen.
 
 **Aber:** `M(E)` hängt von `E` ab. Es gibt keinen hieraus folgenden universellen endlichen Jetcutoff für den gesamten ungeraden Hilbertraum.
 
@@ -806,17 +814,19 @@ Jedes feste endlichdimensionale ungerade Testfenster lässt sich durch endlich v
 
 # 12. Hauptsatz III — No-Go für feste endliche Jetfaktorisierung des vollen ungeraden Transports
 
-Fixiere `M>=0` und definiere
+Fixiere `M\ge0` und definiere
 
 \[
 \mathcal J_R^M:
-\mathcal K_{X,R}^-	o\mathbb C^{M+1},
+\mathcal K_{X,R}^-
+\to
+\mathbb C^{M+1},
 \qquad
-\mathcal J_R^M f
+\mathcal J_R^Mf
 =(\beta_R^{(0)}f,\ldots,\beta_R^{(M)}f).
 \]
 
-Da `mathcal K_{X,R}^-` unendlichdimensional ist und `mathcal J_R^M` endlichdimensionalen Rang besitzt, ist
+Der ungerade Hilbertraum ist unendlichdimensional; etwa der in C5 verwendete glatte kompakte ungerade Testkern ist dicht und unendlichdimensional. Da `\mathcal J_R^M` endlichdimensionalen Rang besitzt, ist
 
 \[
 \ker\mathcal J_R^M
@@ -824,11 +834,11 @@ Da `mathcal K_{X,R}^-` unendlichdimensional ist und `mathcal J_R^M` endlichdimen
 
 unendlichdimensional.
 
-C4 liefert sogar explizit nichtzero glatte ungerade Richtungen, die beliebig viele Anfangsjets vernichten.
+C4 liefert darüber hinaus nichtzero glatte ungerade Richtungen, die beliebig viele Anfangsjets vernichten.
 
 ## Satz C1zB2C6.3
 
-Kein Modell des vollen ungeraden relativen Transports, das **ausschließlich durch einen festen endlichen Jetquotienten faktorisieren** soll, kann treu oder isometrisch auf `mathcal K_{X,R}^-` sein.
+Kein Modell des vollen ungeraden relativen Transports, das **ausschließlich durch einen festen endlichen Jetquotienten faktorisieren** soll, kann treu oder isometrisch auf `\mathcal K_{X,R}^-` sein.
 
 Präzise: Ist eine lineare Abbildung `T_R` von der Form
 
@@ -837,7 +847,7 @@ T_R
 =\Phi_R\mathcal J_R^M
 \]
 
-für irgendeine lineare Abbildung `Phi_R`, dann gilt
+für irgendeine lineare Abbildung `\Phi_R`, dann gilt
 
 \[
 \ker\mathcal J_R^M
@@ -866,7 +876,7 @@ Status:
 
 Dieser No-Go sagt **nicht**, dass jede finite-rank Korrektur eines ansonsten unendlichdimensionalen Operators unmöglich ist.
 
-Er sagt ausschließlich:
+Er sagt ausschließlich
 
 \[
 \boxed{
@@ -911,11 +921,19 @@ M_{R,U}^{-1/2}.
 \tag{C1zB2C6.27}
 \]
 
-Für `F in mathscr A_R^-` gilt entsprechend
+Für
+
+\[
+F\in\mathscr A_R^-
+\]
+
+gilt entsprechend
 
 \[
 \boxed{
-\|(\widetilde W_{R,S}^{[U]}-\widetilde W_{R,S}^{[T]})F\|_{h_S}^2
+\|(
+\widetilde W_{R,S}^{[U]}-
+\widetilde W_{R,S}^{[T]})F\|_{h_S}^2
 =
 2\|F\|_{h_R}^2
 -2\operatorname{Re}
@@ -924,7 +942,7 @@ h_R(F,\widetilde{\mathscr K}_{R,S}^{T,U}F).
 \tag{C1zB2C6.28}
 \]
 
-Damit lautet die noch offene ungerade Kernfrage nun ohne native Source-Transition:
+Damit lautet die noch offene ungerade Kernfrage nun ohne native Source-Transition
 
 \[
 \boxed{
@@ -938,7 +956,7 @@ M_{R,U}^{-1/2}
 \tag{C1zB2C6.29}
 \]
 
-Die Inklusion `iota_{R,S}` ist fest. Die gesamte Schwierigkeit steckt in den **Cross-Terminal-Winkeln der Profilmetriken**.
+Die Inklusion `\iota_{R,S}` ist fest. Die gesamte Schwierigkeit steckt in den **Cross-Terminal-Winkeln der Profilmetriken**.
 
 Das ist die präziseste Reduktion des ungeraden Terminalproblems, die aus C2–C5 derzeit folgt.
 
@@ -968,7 +986,7 @@ h_T(F,F)\to+\infty.}
 \tag{C1zB2C6.30}
 \]
 
-auf einem dichten, über `mathfrak B_R` transportierten ungeraden Testkern.
+auf einem dichten, über `\mathfrak B_R` transportierten ungeraden Testkern.
 
 Damit ist klar:
 
@@ -986,9 +1004,9 @@ Dies erklärt strukturell, warum C5e nicht einfach kopiert werden kann.
 |---|---|---|
 | C1y | translationsinvariante Operatorregulatoren lösen den Hub/Rest-Konflikt im C1y-Scope nicht | bleibt vollständig bestehen; C6 benutzt rand-/sourceabhängige Boundary-Koordinaten statt Translationsmultiplikatoren |
 | B2-A | Gamma-präkonditionierter Schurterm liefert keine endliche Schattenklasse | bleibt bestehen; keine Schattenbehauptung |
-| B2-B | naiver Haar-`L^2`-Grenzendpunkt ist strukturell unzureichend; kein Normresolventenabschluss | bleibt bestehen; `mathscr A_bdry^-` ist zunächst nur algebraischer Direktgrenzraum |
+| B2-B | naiver Haar-`L^2`-Grenzendpunkt ist strukturell unzureichend; kein Normresolventenabschluss | bleibt bestehen; `\mathscr A_{\rm bdry}^-` ist zunächst nur algebraischer Direktgrenzraum |
 | C3 | rohe Terminalmetrik divergiert in einer Boundary-Richtung | bleibt bestehen |
-| C4 | unendliche Jet-Hierarchie; kein fester endlicher Jet reicht für die gesamte Boundary-Struktur | wird präzisiert, nicht überschrieben: finite-dimensional reichen endlich viele Jets, global aber kein fixer endlicher Jetquotient |
+| C4 | unendliche Jet-Hierarchie; kein fester endlicher Jet reicht für die gesamte Boundary-Struktur | wird präzisiert, nicht überschrieben: endlichdimensional reichen endlich viele Jets, global aber kein fixer endlicher Jetquotient |
 | C5 | vollständiger Jet = gesamter ungerader Sektor; Cross-Terminal-Kern bleibt offen | direkte Grundlage von C6; offene Cross-Terminal-Frage bleibt offen |
 | C5e | gerader Terminal-Gauge besitzt Gamma-Grenzwert | nur Vergleich; kein Import in den ungeraden Kanal |
 
@@ -1004,7 +1022,7 @@ C6 supersediert **nur** die unscharfe Formulierung
 
 Diese Formulierung ist jetzt zu schwach.
 
-Korrekt ist:
+Korrekt ist
 
 \[
 \boxed{
@@ -1038,7 +1056,7 @@ vollständig offen.
 
 # 17. Konsequenz für die Gesamtarchitektur von P11
 
-Der gerade und ungerade Kanal besitzen nach C5e/C6 nun **verschiedene, aber präzise typisierte Grenzarchitekturen**:
+Der gerade und ungerade Kanal besitzen nach C5e/C6 nun **verschiedene, aber präzise typisierte Grenzarchitekturen**.
 
 ### Gerader Kanal
 
@@ -1070,7 +1088,7 @@ G_{R,T}^-\to ?
 
 stellen; C3–C5 haben gezeigt, warum das der falsche absolute Grenztest ist.
 
-Nach C6 ist der minimale neue Angriffspunkt:
+Nach C6 ist der minimale neue Angriffspunkt
 
 \[
 \boxed{
@@ -1114,7 +1132,7 @@ Der operative Zieltest bleibt der profilierte Cross-Terminal-Kern (C1zB2C6.27).
 }
 \]
 
-Der wesentliche Fortschritt ist:
+Der wesentliche Fortschritt ist
 
 \[
 \boxed{
@@ -1124,7 +1142,7 @@ Der wesentliche Fortschritt ist:
 }
 \]
 
-wobei `iota_{R,S}` nur noch die feste Inklusion derselben analytischen Boundary-Profile ist.
+wobei `\iota_{R,S}` nur noch die feste Inklusion derselben analytischen Boundary-Profile ist.
 
 Damit ist die **algebraische** Seite des ungeraden Direktsystems geklärt. Die noch offene mathematische Substanz sitzt vollständig in der **relativen terminalen Metrikgeometrie** der Familie `M_{R,T}` und insbesondere in den Cross-Terminal-Produkten ihrer positiven Quadratwurzeln.
 
