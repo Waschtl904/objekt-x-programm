@@ -1,0 +1,326 @@
+% ============================================================
+% P11 — Induktiver Hilbert-Grenzraum mit quellenkanonischer
+%        arithmetischer Metrik
+% ============================================================
+% STATUS: PASS-A ACTIVE — kein SYN, kein Seal
+% Letzter stabiler Knoten: C5e (2026-08-10)
+% Offener Kanal: Ungerader relativer Terminal-Transport (C6ff.)
+% Dieses Manuskript ist der kanonische Sammelpunkt der
+% derzeit gültigen Architektur. Es enthält noch keine
+% vollständigen Beweise — diese liegen in audits/.
+% ============================================================
+
+\documentclass[12pt,a4paper]{amsart}
+
+% --- Pakete ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage[margin=2.5cm]{geometry}
+
+% --- Theorem-Umgebungen ---
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{construction}[theorem]{Construction}
+
+% --- Operatoren und Notation ---
+\newcommand{\KXR}{K_{X,R}}
+\newcommand{\KXRp}{K_{X,R}^{+}}
+\newcommand{\KXRm}{K_{X,R}^{-}}
+\newcommand{\JRS}{J_{R,S}}
+\newcommand{\JRSp}{J_{R,S}^{+}}
+\newcommand{\GRT}{G_{R,T}}
+\newcommand{\GRTp}{G_{R,T}^{+}}
+\newcommand{\GammaRp}{\Gamma_R^{+}}
+\newcommand{\qRT}{q_{R,T}}
+\newcommand{\qRTp}{q_{R,T}^{+}}
+\newcommand{\qGammaR}{q_{\Gamma,R}^{+}}
+\newcommand{\WRST}[1]{W_{R,S,#1}^{[T]}}
+\newcommand{\WRSGamma}[1]{W_{R,S,#1}^{[\Gamma]}}
+\newcommand{\betaR}{\beta_R}
+\newcommand{\BR}{B_R}
+\newcommand{\CRG}{C_{\Gamma,R}}
+\newcommand{\HR}{H_R}
+\newcommand{\LR}{L_R}
+\newcommand{\Mosco}{\xrightarrow{\mathrm{M}}}
+\newcommand{\sconv}{\xrightarrow{\mathrm{s}}}
+
+% ============================================================
+\begin{document}
+% ============================================================
+
+\title{Induktiver Hilbert-Grenzraum mit quellenkanonischer
+  arithmetischer Metrik}
+
+\author{Sebastian Schmalnauer}
+
+\address{Objekt-X-Programm, P11}
+
+\email{sebastian.schmalnauer@gmx.at}
+
+\date{Stand: 10. August 2026 (PASS-A ACTIVE)}
+
+\keywords{Hilbert-Grenzraum, induktives System, arithmetische Metrik,
+  Boundary-Jet, Feshbach-Kolligation, Mosco-Konvergenz,
+  gerader Terminaltransport, Riemannsche Hypothese}
+
+\subjclass[2020]{11M26, 46C05, 47A10, 46E22}
+
+\begin{abstract}
+Wir konstruieren einen induktiven Hilbert-Grenzraum $K_X$ mit
+quellenkanonischer arithmetischer Metrik als spektralen Träger
+für die Weil-Explizitformel. Das induktive System
+$\{\KXR, \JRS\}$ wird mit einem kohärenten Gram-Kernel
+$q_R^X(f) = \|\CRG^{1/2} f\|^2 + \|\LR \HR^* f\|^2$
+ausgestattet. Die quellenkanonische Metrik ist flach im endlichen
+Bereich (C2). Eine Paritätszerlegung trennt den geraden Sektor
+(vollständig kontrolliert: Mosco-Konvergenz, starke
+Resolventen-Konvergenz, kohärenter isometrischer Terminaltransport)
+vom ungeraden Sektor (offen: relativer Terminal-Transport via
+Boundary-Jet). Der vorliegende Text dokumentiert den derzeit
+gültigen Architekturstand; vollständige Beweise liegen im
+\texttt{audits/}-Verzeichnis des Repositoriums.
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+
+% ============================================================
+\section{Introduction}
+\label{sec:intro}
+% ============================================================
+
+% TODO: Motivation — quellenerstes Kopplungsproblem.
+% Warum reicht L^2(R) nicht (B2-B, P03)?
+% Warum kein translationsinvarianter Operator (C1y)?
+% Warum kein S_p für p < infty (B2-A)?
+% Ziel: spektraler Träger für Weil-Explizitformel.
+
+\begin{remark}[Status]
+  Dieser Abschnitt ist noch nicht ausgearbeitet.
+  Abhängigkeiten: P03 (Haar-L$^2$-Ausschluss), B2-A, B2-B, C1y.
+\end{remark}
+
+% ============================================================
+\section{Finite source graph spaces}
+\label{sec:source-graphs}
+% ============================================================
+
+% TODO: Definition der endlichen Quellgraphen K_{X,R}.
+% Gram-Realisierung q_R^X.
+% Bounded injective transitions J_{R,S}.
+% Kokyklus-Bedingung.
+% Hauptquelle: C1 (Gramkernel-Konstruktion).
+
+\begin{definition}[Kohärentes induktives System]
+  \label{def:ind-system}
+  % Placeholder — aus C1 zu befüllen.
+  Es sei $\{\KXR, \JRS\}_{R < S}$ ein induktives System von
+  Hilberträumen mit beschränkten injektiven Transitionen und
+  Gram-Realisierung
+  \[
+    q_R^X(f) = \|\CRG^{1/2} f\|^2 + \|\LR \HR^* f\|^2.
+  \]
+\end{definition}
+
+\begin{remark}[Provenienz]
+  Konstruktion in Audit-Knoten~C1; Gram-Kernel-Vollständigkeit
+  in~C1b--C1z.
+\end{remark}
+
+% ============================================================
+\section{BC-valued incidence and prime-power geometry}
+\label{sec:bc-geometry}
+% ============================================================
+
+% TODO: BC-GCD-Geometrie, prime-power Labelstruktur.
+% Hauptquelle: C1k, C1k2.
+
+\begin{remark}[Status]
+  Abschnitt offen. Abhängigkeiten: C1k, C1k2, P09.
+\end{remark}
+
+% ============================================================
+\section{Feshbach colligation and future metrics}
+\label{sec:feshbach}
+% ============================================================
+
+% TODO: Feshbach-/Graphraumapparat.
+% Zukunftsmetriken: absolute Divergenz im ungeraden Sektor.
+% Hauptquelle: C1zB1, C1zB2, C3.
+
+\begin{remark}[Status]
+  Abschnitt offen. Abhängigkeiten: C1zB1, C1zB2, C1zB2C3.
+\end{remark}
+
+% ============================================================
+\section{Finite terminal-gauge trivialization}
+\label{sec:terminal-gauge-finite}
+% ============================================================
+
+% TODO: C2 — Metrik-Kokyklus ist flach.
+% W_{R,S}^{[T]} isometrisch für jedes endliche T.
+% Das ist die finite Terminal-Gauge-Struktur.
+
+\begin{theorem}[Flache finite Terminal-Gauge, C2]
+  \label{thm:flat-gauge}
+  % Placeholder.
+  Für jedes endliche $T$ ist der Metrik-Kokyklus
+  $W_{R,S}^{[T]}$ isometrisch.
+\end{theorem}
+
+\begin{remark}[Provenienz]
+  Beweis in Audit-Knoten~C2.
+\end{remark}
+
+% ============================================================
+\section{Boundary asymptotics and parity decomposition}
+\label{sec:parity}
+% ============================================================
+
+% TODO: Kanonischer Boundary-Jet (beta_R^{(0)}, beta_R^{(1)}, ...).
+% Exhaustion des ungeraden Source-Sektors:
+%   \bigcap_m ker(beta_R^{(m)}) = K_{X,R}^+.
+% Hauptquelle: C3, C4, C5.
+
+\begin{theorem}[Boundary-Jet exhaustiert ungeraden Sektor, C4]
+  \label{thm:boundary-jet}
+  % Placeholder.
+  Es gilt
+  \[
+    \bigcap_{m \geq 0} \ker \betaR^{(m)} = \KXRp.
+  \]
+\end{theorem}
+
+\begin{remark}[Provenienz]
+  Beweis in Audit-Knoten~C4 (kein endlichdimensionaler Randquotient).
+\end{remark}
+
+% ============================================================
+\section{Even sector: Mosco convergence of quadratic forms}
+\label{sec:even-mosco}
+% ============================================================
+
+% TODO: sigma_T(J_{R,T} f) = O_f(T^{-1}) -> 0 für glattes gerades f.
+% Mosco-Konvergenz q_{R,T}^+ ->^M q_{Gamma,R}^+.
+% Starke Resolventenkonvergenz G_{R,T}^+ -> Gamma_R^+.
+% Hauptquelle: C5c, C5d.
+
+\begin{theorem}[Mosco-Konvergenz gerader Sektor, C5d]
+  \label{thm:mosco-even}
+  % Placeholder.
+  Es gilt
+  \[
+    \qRTp \Mosco \qGammaR
+    \quad \text{und} \quad
+    \GRTp \sconv \GammaRp.
+  \]
+\end{theorem}
+
+\begin{remark}[Provenienz]
+  Beweis in Audit-Knoten~C5c--C5d.
+\end{remark}
+
+% ============================================================
+\section{Even sector: coherent terminal-gauge limit}
+\label{sec:even-terminal}
+% ============================================================
+
+% TODO: Hauptresultat C5e.
+% W_{R,S,+}^{[T]} ->^s W_{R,S,+}^{[Gamma]} stark.
+% W_{R,S,+}^{[Gamma]} = (Gamma_S^+)^{1/2} J_{R,S}^+ (Gamma_R^+)^{-1/2}.
+% Isometrisch + kokyklisch: W_{S,U,+}^{[Gamma]} W_{R,S,+}^{[Gamma]} = W_{R,U,+}^{[Gamma]}.
+% Trick: Moving-Test-Vektor, keine globale Quadratwurzel-Konvergenz nötig.
+
+\begin{theorem}[Gerader Terminal-Gauge-Limes, C5e]
+  \label{thm:even-terminal}
+  Für jedes feste $R < S$ gilt auf dem gesamten geraden Graphraum
+  $\KXRp$:
+  \[
+    \WRST{+} \sconv \WRSGamma{+},
+  \]
+  wobei
+  \[
+    \WRSGamma{+} = (\Gamma_S^+)^{1/2} \JRSp (\GammaRp)^{-1/2}.
+  \]
+  Der Limes-Operator $\WRSGamma{+}$ ist isometrisch und
+  erfüllt die Kokyklus-Bedingung
+  \[
+    W_{S,U,+}^{[\Gamma]} \, W_{R,S,+}^{[\Gamma]} = W_{R,U,+}^{[\Gamma]}.
+  \]
+\end{theorem}
+
+\begin{remark}[Firewall]
+  Die globale Konvergenz $(G_{S,T}^+)^{1/2} \to (\Gamma_S^+)^{1/2}$
+  bleibt unbewiesen und wird nicht benötigt.
+  Der Beweis verwendet einen Moving-Test-Vektor
+  $y_T = B_T^{-1/2} g$, der die Target-Quadratwurzel eliminiert.
+\end{remark}
+
+\begin{remark}[Provenienz]
+  Vollständiger Beweis (816 Zeilen) in
+  \texttt{audits/AUDIT-2026-08-10\_P11\_C1zB2C5e\_EvenTerminalGauge\_TargetSquareRootConvergence.md},
+  Commit \texttt{f65bf0b}.
+\end{remark}
+
+% ============================================================
+\section{Odd sector: boundary jet and relative transport}
+\label{sec:odd-open}
+% ============================================================
+
+% TODO: OFFENER KNOTEN.
+% Absolute Zukunftsmetrik divergiert (gesiegelt).
+% Boundary-Jet B_R(z; f) ist das kanonische analytische Objekt.
+% W_{R,S,-}^{[T]} Cauchy-Konvergenz: offen.
+% Ungerader relativer Terminal-Transport: nächster Hauptknoten (C6ff.).
+
+\begin{remark}[Offener Status]
+  Dieser Abschnitt entspricht dem mathematisch offenen Knoten
+  des Programms (Stand 10. August 2026). Die absolute
+  Zukunftsmetrik im ungeraden Sektor divergiert (Audit-Knoten
+  C1zB2C, B2-B). Der Boundary-Jet $\BR(z; f)$ ist das
+  kanonische analytische Objekt für den relativen Transport;
+  die Cauchy-Konvergenz von $W_{R,S,-}^{[T]}$ ist offen.
+\end{remark}
+
+% ============================================================
+\section{Object-X implications and remaining obstruction}
+\label{sec:obstruction}
+% ============================================================
+
+% TODO: Verbindung zur Weil-Explizitformel.
+% Verbindung zur Riemannschen Hypothese.
+% Was fehlt noch: ungerader Kanal + spektrale Einbettung.
+
+\begin{remark}[Status]
+  Abschnitt offen. Hängt von Abschnitt~\ref{sec:odd-open} ab.
+\end{remark}
+
+% ============================================================
+% Literatur (Placeholder — aus REFERENCES.md zu befüllen)
+% ============================================================
+
+\begin{thebibliography}{99}
+
+\bibitem{P01} Schmalnauer, S. \textit{[P01 — Titel aus papers/]},
+  Objekt-X-Programm, 2025.
+
+\bibitem{P03} Schmalnauer, S. \textit{[P03 — Haar-L$^2$-Ausschluss]},
+  Objekt-X-Programm, 2025.
+
+\bibitem{P05} Schmalnauer, S. \textit{[P05 — SYN]},
+  Objekt-X-Programm, 2025.
+
+% Weitere Einträge aus REFERENCES.md zu ergänzen.
+
+\end{thebibliography}
+
+\end{document}
