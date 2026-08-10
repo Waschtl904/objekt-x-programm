@@ -1,8 +1,9 @@
 # ROADMAP-2026-08-10: C7 → P11-Readiness → SYN → Seal
 
-**Status beim Anlegen:** C6 abgeschlossen (letzter P11/C6-Phasen-Knoten: C1zB2C5c). PASS-A ACTIVE.  
+**Status beim Anlegen:** C6 abgeschlossen (letzter Knoten: C6z — `C6Closure_ResidualSpectralBlocker_CompletionDecision`). PASS-A ACTIVE.  
 **Sync nach C7a:** 2026-08-10 | Commit `a6d9c0a106cabe21e6092ab2536c4c64aa72658b`  
-**Ziel:** Kontrollierter, gatgestützter Abschluss bis SYN und anschließendes Seal.
+**Roadmap-Firewall-Sync:** 2026-08-10 | vier mathematische Schreibfehler aus dem Zwischenstand korrigiert  
+**Ziel:** Kontrollierter, gategestützter Abschluss bis SYN und anschließendes Seal.
 
 ---
 
@@ -28,7 +29,7 @@ C7 adressiert **ausschließlich** die drei aus C6z exportierten Punkte. Es gibt 
 | Knoten | Titel | Rolle | Status |
 |--------|-------|-------|--------|
 | **C7a** | ActualJumpCoefficientCensus | R3: Exakte Typisierung von \(J_T(\beta)\); konstruktive Hub/Rest/Identitäts-Zerlegung; Protected Pair \((x_T, -x_T)\); Zieltyp auf integrierte Observability korrigiert | ✅ **DONE** (`a6d9c0a`) |
-| **C7b** | ProtectedJumpPair\_OffDiagonalGram\_IntegratedObservabilityTest | Kernfrage: Kann \(G_T / X \to 0\) auf P11-relevanter Skala gezeigt werden? | 🔵 offen |
+| **C7b** | ProtectedJumpPair\_OffDiagonalGram\_IntegratedObservabilityTest | Kernfrage: Kann \(\mathfrak G_T / X \to 0\) auf P11-relevanter Skala gezeigt werden? | 🔵 offen |
 | **C7c** | Window-Lower-Transfer | Nur bei positivem C7b-Ausgang; untere Fenster-Transferschranke | ⏳ wartet |
 | **C7d** | Konsequenzaudit | Welche P11-Aussage folgt aus C7a–C7c? | ⏳ wartet |
 | **C7-CLOSE** | Abschlussknoten | Expliziter Gate-Entscheid | ⏳ wartet |
@@ -39,31 +40,38 @@ C7a hat mehr geliefert als eine Sprung-Auflistung:
 
 - **Exakte Typisierung** des Residualkoeffizienten:
 \[
-J_T(\beta) = J_{h,T}(\beta) - \lambda_T J_{1,T}(\beta) - \lambda_T J_{g,T}(\beta), \quad g_T = R_T^* R_T \mathbf{1}_T
+J_T(\beta) = J_{h,T}(\beta) - \lambda_T J_{1,T}(\beta) - \lambda_T J_{g,T}(\beta), \quad g_T = R_T^* R_T \mathbf{1}_T.
 \]
-- **Kandidat = tatsächlicher Breakpoint:** \(\beta \in B_T^{\mathrm{act}}\) genau dann, wenn \(J_T(\beta) = 0\) nach allen Cancellations
-- **Protected Pair (C6i-geschützt):** An \(x_T = T^{-1/2}\log(q_T/2)\), \(q_T \in \{3,5\}\) verschwinden Rest- und Identitätssprung exakt:
+- **Kandidat versus tatsächlicher Breakpoint:** \(\beta \in \mathcal B_T^{\mathrm{act}}\) genau dann, wenn \(J_T(\beta) \neq 0\) nach allen Cancellations.
+- **Protected Pair (C6i-geschützt):** An
 \[
-|J_T(x_T)| = |J_{h,T}(x_T)| \geq j^* > 0, \quad J_T(-x_T) = -J_T(x_T)
+x_T = T-\frac12\log(q_T/2),\qquad q_T\in\{3,5\},
+\]
+verschwinden Rest- und Identitätssprung exakt:
+\[
+|J_T(x_T)| = |J_{h,T}(x_T)| \geq j_* > 0, \quad J_T(-x_T) = -J_T(x_T).
 \]
 - **Starker neuer Satz** (integrierte Positivität für festes \(T\)):
 \[
-\lim_{X\to\infty} \frac{1}{2X}\int_{-X}^X |P_T(\xi)|^2\,d\xi = \sum_{\beta \in B_T^{\mathrm{act}}} |J_T(\beta)|^2 \geq 2{j^*}^2
+\lim_{X\to\infty} \frac{1}{2X}\int_{-X}^X |P_T(\xi)|^2\,d\xi = \sum_{\beta \in \mathcal B_T^{\mathrm{act}}} |J_T(\beta)|^2 \geq 2j_*^2.
 \]
 - **Korrektur des Zieltyps:** Globale punktweise Schranke \(|P_T(\xi)| \geq c|\xi|\|r_T\|\) kann nicht stimmen (\(P_T(\xi) = O_T(\xi^2)\) nahe 0). Verfolgt wird **integrierte Observability**.
 - **Baker/Wüstholz eingeordnet:** Klassische Resultate über lineare Formen in Logarithmen betreffen Lageabstände; sie kontrollieren nicht die Cancellation der Koeffizienten in \(P_T\). C7a nutzt sie bewusst noch nicht.
 
 ### Mathematischer Eingang für C7b
 
-C7a isoliert die Offdiagonalinterferenz:
+C7a isoliert die absolute Offdiagonalgröße:
 \[
-G_T = \sum_{\beta \neq \gamma} |\beta - \gamma| \cdot |J_T(\beta) J_T(\gamma)|
+\boxed{
+\mathfrak G_T = \sum_{\beta \neq \gamma}
+\frac{|J_T(\beta)J_T(\gamma)|}{|\beta-\gamma|}.
+}
 \]
-mit der exakten Schranke:
+Mit der exakten finite-horizon Gram-Identität folgt die hinreichende Schranke
 \[
-\frac{1}{2X}\int_{-X}^X |P_T(\xi)|^2\,d\xi \geq 2{j^*}^2 - \frac{G_T}{X}
+\frac{1}{2X}\int_{-X}^X |P_T(\xi)|^2\,d\xi \geq 2j_*^2 - \frac{\mathfrak G_T}{X}.
 \]
-C7b hat damit **genau eine Kernfrage:** Kann \(G_T / X\) auf einer mit \(T\) kontrollierten Frequenzskala klein genug gemacht werden?
+C7b hat damit **genau eine Kernfrage:** Kann \(\mathfrak G_T/X\) auf einer mit \(T\) kontrollierten Frequenzskala klein genug gemacht werden — oder ist diese absolute Hülle selbst zu stark und muss durch eine skalenadaptierte bzw. signierte Gram-Kontrolle ersetzt werden?
 
 ### Entscheidgabel in C7-CLOSE
 Nach C7-CLOSE gibt es genau zwei Pfade — kein automatisches C8:
@@ -137,13 +145,13 @@ Das Paper entsteht **erst aus dem versiegelten Stand**. Es ist dann:
 ## 8. Aktueller Standort
 
 ```
-C6 abgeschlossen (letzter Knoten: P11/C1zB2C5c)
+C6 abgeschlossen (letzter Knoten: C6z)
       ↓
    C7a ✅ ActualJumpCoefficientCensus (a6d9c0a)
    [J_T(beta) exakt typisiert; Protected Pair; integrierte Positivität bewiesen]
       ↓
    C7b 🔵 ProtectedJumpPair_OffDiagonalGram_IntegratedObservabilityTest
-   [Kernfrage: G_T/X → 0 auf P11-relevanter Skala?]
+   [Kernfrage: mathfrak G_T/X → 0 auf P11-relevanter Skala?]
       ↓
    C7c ⏳ Window-Lower-Transfer
       ↓
