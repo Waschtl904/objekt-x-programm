@@ -47,7 +47,7 @@ J_T(\beta) = J_{h,T}(\beta) - \lambda_T J_{1,T}(\beta) - \lambda_T J_{g,T}(\beta
 - **Kandidat vs. tatsächlicher Breakpoint:** \(\beta \in \mathcal{B}_T^{\mathrm{act}}\) genau dann, wenn \(J_T(\beta) \neq 0\) nach allen Cancellations. *(Korrektur: \(\neq 0\), nicht \(= 0\))*
 - **Protected Pair (C6i-geschützt):** An
 \[
-x_T = T^{-1/2}\log(q_T/2), \quad q_T \in \{3,5\},
+x_T = T-\frac12\log(q_T/2), \quad q_T \in \{3,5\},
 \]
 verschwinden Rest- und Identitätssprung exakt:
 \[
@@ -96,11 +96,11 @@ Mit \(\delta_T^{\mathrm{act}} = \min_{\beta \neq \gamma}|\beta-\gamma|\) und C6z
 \mathfrak{G}_T \lesssim \frac{T^4 e^{4T}}{\delta_T^{\mathrm{act}}}, \qquad
 \frac{\mathfrak{G}_T}{X_T} \lesssim \frac{1}{T e^{5T} \delta_T^{\mathrm{act}}} \quad (X_T \asymp T^5 e^{9T}).
 \]
-Eine Schranke
+Eine natürliche hinreichende Schranke ist
 \[
-\delta_T^{\mathrm{act}} \gg T e^{-5T}
+\delta_T^{\mathrm{act}} \gg \frac{e^{-5T}}{T}.
 \]
-würde genügen — aber C6v verhindert, diesen Satz aus der Kandidatengeometrie zu ziehen. *(Korrektur: \(T e^{-5T}\), nicht \(T^{-5T}\) oder andere fehlerhafte Varianten)*
+Die stärkere Bedingung \(\delta_T^{\mathrm{act}}\gg T e^{-5T}\) würde ebenfalls genügen, ist aber nicht die aus der obigen Abschätzung natürliche Skala. C6v verhindert ohnehin, einen solchen Satz aus der Kandidatengeometrie allein zu ziehen.
 
 #### Korrigierter R3-Zieltyp
 Nicht mehr \(\mathfrak{G}_T / X_T \to 0\), sondern das **signierte Kriterium**:
