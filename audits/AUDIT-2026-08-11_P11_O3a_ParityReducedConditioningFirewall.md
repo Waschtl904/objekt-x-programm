@@ -468,6 +468,7 @@ Die Divergenz entsteht durch paritätsasymmetrische Skalierung (even: Gamma-Lime
 \kappa(A^{R,-}_{T,U}) \to \infty
 \not\Rightarrow
 W^{[T]}_{R,S,-} \text{ konvergiert nicht stark.}
+}
 \]
 
 Selbst ein odd-sector conditioning No-Go wäre noch nicht Nichtkonvergenz des relativ gewichteten Terminal-Gauges.
