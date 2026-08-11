@@ -6,6 +6,7 @@
 **Abhängigkeiten:** C2, C5 (§6–§14), C5d
 **Modus:** `PASS-A ACTIVE`
 **Scope:** Vier Resultate; kein O4, keine Residualroute, kein SYN, kein Seal.
+**Patch:** 1 — GPT-Gegencheck: Gamma/Schur-Identität, Rayleigh-Normalisierung und O3a.4-Firewall korrigiert.
 
 ---
 
@@ -97,11 +98,26 @@ Wähle $0 \neq f_- \in C^\infty_{c,\mathrm{odd}}((-R,R))$. Nach C5 (Satz C1zB2C5
 m(f_-) := \min\{m \geq 0 : \beta_R^{(m)}(f_-) \neq 0\} < \infty,
 \]
 
-und
+und C4/C5 liefern für den Schurterm
+
+\[
+\sigma_U(J_{R,U}f_-)
+\geq c_{f_-} \frac{e^U}{U^{2m(f_-)+3}}
+\longrightarrow +\infty.
+\]
+
+Mit der exakten C4-Metrikzerlegung
 
 \[
 \langle G_{R,U} f_-, f_- \rangle_{X,R}
-= \sigma_U(J_{R,U}f_-)
+= q_{\Gamma,R}(f_-) + \sigma_U(J_{R,U}f_-)
+\]
+
+und $q_{\Gamma,R}(f_-)\geq0$ folgt daher
+
+\[
+\langle G_{R,U} f_-, f_- \rangle_{X,R}
+\geq \sigma_U(J_{R,U}f_-)
 \geq c_{f_-} \frac{e^U}{U^{2m(f_-)+3}}
 \longrightarrow +\infty.
 \]
@@ -116,10 +132,18 @@ Da $T$ fest ist, gilt $\langle G_{R,T} f_-, f_-\rangle_{X,R} < \infty$. Also
 woraus $\|A^R_{T,U}\| \to \infty$ folgt.
 
 **Schritt 3 — Gerade Richtung bleibt beschränkt.**
-Wähle $0 \neq f_+ \in C^\infty_{c,\mathrm{even}}((-R,R))$. Nach C5d: $\sigma_U(J_{R,U}f_+) = O_{R,f_+}(U^{-1}) \cdot e^U / e^U$ konvergiert gegen die endliche Gamma-Grenzform, d.h.
+Wähle $0 \neq f_+ \in C^\infty_{c,\mathrm{even}}((-R,R))$. Nach C5d gilt exakt
 
 \[
-\langle G_{R,U} f_+, f_+\rangle \longrightarrow q_{\Gamma,R}(f_+) < \infty.
+\sigma_U(J_{R,U}f_+) = O_{R,f_+}(U^{-1}) \longrightarrow 0.
+\]
+
+Mit derselben Metrikzerlegung folgt
+
+\[
+\langle G_{R,U} f_+, f_+\rangle
+= q_{\Gamma,R}(f_+) + \sigma_U(J_{R,U}f_+)
+\longrightarrow q_{\Gamma,R}(f_+) < \infty.
 \]
 
 Daher
@@ -131,13 +155,19 @@ Daher
 \longrightarrow \frac{q_{\Gamma,R}(f_+)}{\langle G_{R,T}f_+,f_+\rangle} < \infty.
 \]
 
+Somit existiert für alle hinreichend großen $U$ eine Konstante $c=c(R,T,f_+)>0$ mit
+
+\[
+\|(A^R_{T,U})^{-1}\|\ge c.
+\]
+
 **Schritt 4 — Konditionszahl.**
 Damit gilt
 
 \[
 \kappa(A^R_{T,U})
 = \|A^R_{T,U}\| \cdot \|(A^R_{T,U})^{-1}\|
-\geq \|A^R_{T,U}\| \cdot c > 0
+\geq c\,\|A^R_{T,U}\|
 \longrightarrow +\infty,
 \]
 
@@ -257,18 +287,41 @@ und daher
 
 ### Beweis
 
-Die Formeln (O3a.3-sup) und (O3a.3-inf) folgen direkt aus der spektralen Charakterisierung der Operatornorm und der Inversen-Norm auf einem separablen Hilbertraum, zusammen mit der quadratischen Formdarstellung
+Für $x=G_{R,T}^{1/2}f$ gilt die normierte Rayleigh-Identität
 
 \[
-\langle A^{R,-}_{T,U} x, x\rangle_{X,R}
-= \rho_{T,U}(G_{R,T}^{-1/2}x)
+\boxed{
+\frac{\langle A^{R,-}_{T,U}x,x\rangle_{X,R}}{\|x\|_{X,R}^2}
+= \rho_{T,U}(G_{R,T}^{-1/2}x).
+}
+\tag{O3a.3-Rayleigh}
 \]
 
-für $x = G_{R,T}^{1/2}f \in G_{R,T}^{1/2}(\mathcal{K}^-_{X,R})$.
+Äquivalent:
 
-Die Paritätsinvarianz aller Metrikoperatoren (O3a.2) garantiert, dass das Variationsproblem auf $\mathcal{K}^-_{X,R}$ verbleibt.
+\[
+\langle A^{R,-}_{T,U}x,x\rangle_{X,R}
+= \|x\|_{X,R}^2\,\rho_{T,U}(G_{R,T}^{-1/2}x).
+\]
 
-(O3a-core) ist dann die direkte Konsequenz aus (O3a.3-sup)/(O3a.3-inf) und der Definition der Konditionszahl. $\square$
+Da $G_{R,T}^{1/2}$ beschränkt invertierbar ist und wegen der Paritätsinvarianz $\mathcal K^-_{X,R}$ bijektiv auf sich abbildet, läuft $x\neq0$ genau dann durch den ganzen odd Sektor, wenn $f\neq0$ dies tut.
+
+Für den positiven invertierbaren Operator $A^{R,-}_{T,U}$ gilt daher nach der Rayleigh-Variationscharakterisierung
+
+\[
+\|A^{R,-}_{T,U}\|=\sup_{x\neq0}\frac{\langle A^{R,-}_{T,U}x,x\rangle}{\|x\|^2}
+=\sup_{f\neq0}\rho_{T,U}(f),
+\]
+
+sowie
+
+\[
+\|(A^{R,-}_{T,U})^{-1}\|^{-1}
+=\inf_{x\neq0}\frac{\langle A^{R,-}_{T,U}x,x\rangle}{\|x\|^2}
+=\inf_{f\neq0}\rho_{T,U}(f).
+\]
+
+(O3a-core) folgt unmittelbar. $\square$
 
 ### Interpretation
 
@@ -290,54 +343,76 @@ q^X_U(J_{R,U}f_-) \geq c_{f_-} \frac{e^U}{U^{2m(f_-)+3}}
 
 ### Begründung
 
-Die Untergrenze zeigt, dass $\rho_{T,U}(f_-)$ für jeden einzelnen $f_-$ divergiert. Für (O3a-core) ist aber der **Quotient von Supremum und Infimum** über alle ungeraden Richtungen entscheidend.
+C4/C5 zeigen für jeden **fixierten nichttrivialen glatten odd Testvektor** $f_-$ mit erstem nichtverschwindendem Jet $m(f_-)$ eine punktweise Divergenzuntergrenze. Diese Schranke ist weder eine obere Asymptotik noch uniform über der odd Einheitsphäre.
 
-Konkret: Wenn alle ungeraden Richtungen dieselbe leading-order Skalierung $\sim e^U$ teilen — also
-
-\[
-\rho_{T,U}(f_-) \asymp \frac{e^U}{U^{2m(f_-)+3} \cdot \langle G_{R,T}f_-,f_-\rangle}
-\]
-
-mit demselben Exponenten für alle $f_-$ unabhängig von $m(f_-)$ — dann könnte
+Damit kontrolliert sie insbesondere nicht die beiden globalen Variationsgrößen
 
 \[
-\frac{\sup \rho_{T,U}}{\inf \rho_{T,U}} \longrightarrow C < \infty
+\sup_{0\neq f_-\in\mathcal K^-_{X,R}}\rho_{T,U}(f_-),
+\qquad
+\inf_{0\neq f_-\in\mathcal K^-_{X,R}}\rho_{T,U}(f_-),
 \]
 
-nicht ausgeschlossen werden. Ein Vektor mit $m=5$ könnte durch einen anderen, vom Konstantenmode-Zertifikat nicht erfassten Mechanismus mit derselben Größenordnung $e^U / U^3$ wachsen.
+deren Quotient nach (O3a-core) die Konditionszahl bestimmt.
 
-Für den Nachweis $\kappa(A^{R,-}_{T,U}) \to \infty$ wird daher mindestens eine der folgenden zusätzlichen Strukturen benötigt:
+Ein Vektor, für den die Konstantenmode nur die schwächere Untergrenze
 
 \[
-\boxed{
-\text{(a) obere Schranke: } q^X_U(J_{R,U}f_-) \lesssim C(f_-)\frac{e^U}{U^{2m(f_-)+3}},
-}
+\frac{e^U}{U^{2m+3}}
 \]
 
-oder
+zertifiziert, könnte durch einen anderen, vom C4-Konstantenmode-Zertifikat nicht erfassten Mechanismus tatsächlich deutlich schneller wachsen — etwa in derselben dominanten Größenordnung wie ein Vektor mit kleinerem $m$. Die C4-Untergrenze bestimmt also die tatsächliche leading order nicht.
+
+Für einen Nachweis von
 
 \[
-\boxed{
-\text{(b) asymptotische Zwei-Seiten-Schärfe: } q^X_U(J_{R,U}f_-) \asymp C(f_-)\frac{e^U}{U^{2m(f_-)+3}},
-}
+\kappa(A^{R,-}_{T,U})\to\infty
 \]
 
-oder
+über die Boundary-Jet-Hierarchie genügt daher beispielsweise eine der folgenden schärferen Informationen:
 
 \[
 \boxed{
-\text{(c) Gauge-Intertwining: } \mathscr{E}^{T,U}_{R,S}(C^{T\to U}_R)^{-1} \to 0 \text{ stark auf odd Core.}
+\text{(a) passende obere Schranken für zwei geeignete odd Richtungen,}
 }
 \]
 
-Falls (b) gilt, folgt sofort: Wähle $f_-$ mit $m(f_-)=0$ und $g_-$ mit $m(g_-)=1$. Dann
+oder stärker
+
+\[
+\boxed{
+\text{(b) asymptotische Zwei-Seiten-Schärfe: }
+q^X_U(J_{R,U}f_-)
+\asymp C(f_-)\frac{e^U}{U^{2m(f_-)+3}}.
+}
+\]
+
+Falls (b) für zwei feste Vektoren $f_-,g_-$ mit $m(f_-)=0$ und $m(g_-)=1$ gilt, dann
 
 \[
 \frac{\rho_{T,U}(f_-)}{\rho_{T,U}(g_-)}
-\asymp \frac{U^5}{U^3} = U^2 \longrightarrow \infty,
+\asymp C_{f_-,g_-,R,T}\,U^2 \longrightarrow \infty,
 \]
 
-woraus $\kappa(A^{R,-}_{T,U}) \geq U^2 / C \to \infty$ und $\chi^{R,-}_{T,U} \to \infty$ folgen würde. $\square$
+woraus unmittelbar
+
+\[
+\kappa(A^{R,-}_{T,U})\to\infty,
+\qquad
+\chi^{R,-}_{T,U}\to\infty
+\]
+
+folgen würde. $\square$
+
+### Alternative Route außerhalb des Konditionsnachweises
+
+Eine direkte Gauge-/Cross-Terminal-Intertwining-Abschätzung kann weiterhin eine **alternative Route zum ursprünglichen Transportproblem** liefern. Sie ist jedoch nicht als hinreichende Bedingung für
+
+\[
+\kappa(A^{R,-}_{T,U})\to\infty
+\]
+
+zu buchen und wird deshalb von der Boundary-Jet-Konditionsliste getrennt.
 
 ### Nächster Suchauftrag
 
@@ -347,9 +422,9 @@ woraus $\kappa(A^{R,-}_{T,U}) \geq U^2 / C \to \infty$ und $\chi^{R,-}_{T,U} \to
 }
 \]
 
-Gesucht: ein Ausdruck $q^X_U(Jf) = \text{expliziter erster-Jet-Term} + \text{kontrollierter Rest}$, der (a) oder (b) liefert.
+Gesucht: ein Ausdruck $q^X_U(Jf) = \text{expliziter erster-Jet-Term} + \text{kontrollierter Rest}$, der für geeignete odd Richtungen eine obere Schranke oder eine Zwei-Seiten-Asymptotik liefert.
 
-Falls ja: odd-sector conditioning No-Go beweisbar.
+Falls ja: odd-sector conditioning No-Go möglicherweise direkt beweisbar.
 Falls nein: neuer Lemma-Knoten `sharp odd boundary-jet asymptotics` zu eröffnen.
 
 ---
@@ -393,10 +468,9 @@ Die Divergenz entsteht durch paritätsasymmetrische Skalierung (even: Gamma-Lime
 \kappa(A^{R,-}_{T,U}) \to \infty
 \not\Rightarrow
 W^{[T]}_{R,S,-} \text{ konvergiert nicht stark.}
-}
 \]
 
-Selbst ein odd-sector conditioning No-Go wäre noch nicht Nichtkonvergenz des relativ gewhiteten Terminal-Gauges.
+Selbst ein odd-sector conditioning No-Go wäre noch nicht Nichtkonvergenz des relativ gewichteten Terminal-Gauges.
 
 ### O3a-FW3 — Produktgröße ist das Ziel
 
@@ -429,7 +503,7 @@ Daraus wird keine beliebige gemeinsame $T, U \to \infty$-Aussage abgeleitet.
 \text{C4–C5d upper-bound audit}
 \longrightarrow
 \begin{cases}
-\chi^{R,-}_{T,U} \to \infty \text{ beweisen (Ausgang B/C)}, \\
+\chi^{R,-}_{T,U} \to \infty \text{ beweisen, falls Zwei-Seiten-Kontrolle gelingt}, \\
 \text{oder: sharp-jet-Lemma eröffnen.}
 \end{cases}
 }
