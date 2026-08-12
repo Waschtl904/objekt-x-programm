@@ -744,20 +744,9 @@ For fixed $R$ and fixed nonzero smooth odd $f_-$,
  }
 \tag{6.1}\label{eq:odd-asymptotic}
 \]
-The proof uses
-\[
- \langle\mathbf1_T,(I+R_T^*R_T)\mathbf1_T\rangle=2T+O(1),
-\]
-a signed mean-zero future-edge certificate, prime-cell quadrature, and the full-rest
-martingale lift of Section~\ref{sec:feshbach}.
 \end{theorem}
 
-\begin{remark}[Current proof status]\label{rem:odd-proof}
-Theorem~\ref{thm:odd} is an audited result.  The present draft still records its proof
-architecture rather than the full certificate/quadrature/squeeze proof.  Those pieces
-are completed in the committed audit chain and will be expanded in the dedicated proof
-completion pass.
-\end{remark}
+\input{P11_sections/P11_Odd_Asymptotic_FullProof}
 
 Fix a base terminal $T_0>R$.  The fixed-vector Rayleigh quotient satisfies
 \[
@@ -784,157 +773,7 @@ one has
 
 \input{P11_sections/P11_TC1_MixedJet}
 
-\section{Jensen geometry as a sufficient diagnostic route}\label{sec:jensen}
-
-Fix $0<R<S<T_0<U$ and restrict to odd sectors.  Set
-\[
- A_R:=A_{T_0,U}^{R,-},
- \qquad
- A_S:=A_{T_0,U}^{S,-},
- \qquad
- W:=W_{R,S,-}^{[T_0]}.
-\]
-Then
-\[
- W^*A_SW=A_R,
- \qquad W^*W=I.
-\]
-Define
-\[
- D:=W^*A_S^{1/2}W,
- \qquad
- \mathscr J:=A_R^{1/2}-D\ge0,
-\]
-\[
- \boxed{
- \Theta:=A_R^{-1/4}\mathscr J A_R^{-1/4},
- \qquad 0\le\Theta\le I,
- }
-\]
-and
-\[
- \chi:=\|A_R^{1/4}\|\,\|A_R^{-1/4}\|=\kappa(A_R)^{1/4}.
-\]
-
-\begin{proposition}[Relative Jensen Rayleigh formula]\label{prop:jensen}
-\[
- \boxed{
- \|\Theta\|
- =\sup_{y\ne0}
- \left[
- 1-
- \frac{\langle A_S^{1/2}Wy,Wy\rangle}
-      {\langle A_R^{1/2}y,y\rangle}
- \right].
- }
-\]
-\end{proposition}
-
-Let
-\[
- P:=WW^*,
- \qquad
- Q:=A_S^{1/2}WA_R^{-1/2},
-\]
-\[
- \mathscr N:=(I-P)Q,
- \qquad
- \mathscr K:=I-W^*Q.
-\]
-Since $W$ is an isometry, $P$ is the orthogonal projection onto $\Ran W$.  The exact
-defect balance is
-\[
- \boxed{
- \mathscr K+\mathscr K^*
- =\mathscr K^*\mathscr K+\mathscr N^*\mathscr N.
- }
-\]
-Moreover
-\[
- \mathscr K=A_R^{1/4}\Theta A_R^{-1/4},
-\]
-so
-\[
- \boxed{
- \frac12\|\mathscr N\|^2
- \le\|\mathscr K\|
- \le\chi\|\Theta\|.
- }
-\]
-
-\begin{corollary}[Beyond-all-orders necessity for this route]\label{cor:beyond}
-If the sufficient product mechanism
-\[
- \chi_{T_0,U}^{R,-}\|\Theta_{T_0,U}^-\|\to0
-\]
-holds, then
-\[
- \boxed{\forall N>0:\qquad U^N\|\Theta_{T_0,U}^-\|\to0.}
-\]
-\end{corollary}
-
-\begin{remark}[Critical logical firewall]\label{rem:product}
-This is a statement about one sufficient comparison mechanism.  The current theory does
-not prove
-\[
- \text{strong terminal transport}
- \Longrightarrow
- \chi\|\Theta\|\to0.
-\]
-Hence obstruction of the product mechanism would not prove nonconvergence of the strong
-terminal transport.
-\end{remark}
-
-\section{Second-moment and complement diagnostics}\label{sec:diagnostic}
-
-Define
-\[
- \mathscr B:=(I-P)A_SW.
-\]
-Then
-\[
- \mathscr B=0
- \quad\Longleftrightarrow\quad
- A_S\Ran W\subseteq\Ran W.
-\]
-
-\begin{proposition}[Second-moment compression variance]\label{prop:second}
-\[
- \boxed{
- \mathscr B^*\mathscr B
- =W^*A_S^2W-A_R^2
- =:\Delta_2\ge0.
- }
-\]
-Furthermore
-\[
- \boxed{
- \|\Theta\|
- \ge
- \frac{\|\Delta_2\|}{8\|A_R\|\|A_S\|}.
- }
-\]
-\end{proposition}
-
-Put
-\[
- \nu_2:=\frac{\|\Delta_2\|}{\|A_R\|\|A_S\|}.
-\]
-A polynomial lower bound for the actual P11 family would contradict the
-beyond-all-orders requirement of Corollary~\ref{cor:beyond}.  Such a lower bound is not
-proved here.
-
-The exact future cross-Gram representation uses the fixed-$T_0$ complement
-\[
- \mathcal C^-_{S,T_0}(R)
- :=\ker(J_{R,S}^*G_{S,T_0})\cap\KXR{S}^{-}.
-\]
-For $f\in\KXR{R}^{-}$ and $g\in\mathcal C^-_{S,T_0}(R)$, the norm of $\mathscr B$ is
-controlled exactly by
-\[
- \langle(G_{S,U}-G_{S,T_0})J_{R,S}f,g\rangle
-\]
-after the fixed metric normalizations.
+\input{P11_sections/P11_O3_Diagnostic_Proofs}
 
 \subsection{Explicit rough complement and logarithmic gate}
 
@@ -989,42 +828,7 @@ the current Jensen-product sufficiency route.  It would still not rule out stron
 terminal transport itself.
 \end{openproblem}
 
-\subsection{Dirichlet--Riesz reduction}
-
-Write
-\[
- u_h:=G_{R,T_0}^{-1}J_{R,S}^*G_{S,T_0}h,
- \qquad
- g_h=h-J_{R,S}u_h.
-\]
-Then $J_{R,T_0}u_h$ is the $T_0$-metric orthogonal projection of $J_{S,T_0}h$ onto
-$\Ran J_{R,T_0}$.  Equivalently,
-\[
- q_{T_0}^X(E_Ru_h,E_Rv)
- =q_{T_0}^X(E_Sh,E_Rv)
- \qquad(v\in\KXR{R}).
-\]
-The forcing decomposes as
-\[
- r_h=r_{\Gamma,h}+r_{\sigma,h}.
-\]
-For smooth interior $h$, the Gamma forcing has arbitrary finite logarithmic regularity;
-the committed theory gives only $L^2$ control for the Schur forcing.  Consequently
-\[
- \boxed{
- u_h
- =(C_{\Gamma,R}+\Sigma_R^{[T_0]})^{-1}r_h
- \in\mathcal D(C_{\Gamma,R}).
- }
-\]
-No result here upgrades this operator-domain gain to the threshold in
-Open Problem~\ref{open:log}.
-
-\begin{remark}[Dirichlet Fourier firewall]\label{rem:dirichlet}
-The metric inverse $G_{R,T_0}^{-1}$ is not the global Fourier multiplier
-$(1+g_\infty)^{-1}$.  The finite-window source compression is a genuine Dirichlet/Riesz
-problem and cannot be replaced by global symbol inversion.
-\end{remark}
+\input{P11_sections/P11_O3j_Reconciliation}
 
 \section{The open strong terminal transport problem}\label{sec:open}
 
@@ -1105,8 +909,8 @@ The absolute future metrics do not possess a bounded terminal limit.  Their odd 
 is organized by a complete pullback-compatible integral-jet hierarchy.  Nevertheless
 the normalized relative transport has an exact cross-terminal Cauchy kernel.  Smooth odd
 vectors form a dense graph core, and both diagonal and mixed fixed-pair Schur asymptotics
-are now explicit.  The leading normalized fixed-pair geometry becomes asymptotically
-rank one, so the direct bottleneck has moved to subleading finite-jet Gram and square-root
+are explicit.  The leading normalized fixed-pair geometry becomes asymptotically rank
+one, so the direct bottleneck has moved to subleading finite-jet Gram and square-root
 control rather than to the existence of a mixed bilinear coefficient.
 
 Strong odd terminal transport has still not been proved or disproved.  Separately,
@@ -1128,5 +932,12 @@ Accordingly, the current status is
  \text{P11-wide global closure: open.}
  }
 \]
+
+\begin{thebibliography}{9}
+\bibitem{GuthMaynard2026}
+Larry Guth and James Maynard,
+\emph{New large value estimates for Dirichlet polynomials},
+Annals of Mathematics \textbf{203} (2026), no.~2, 623--675.
+\end{thebibliography}
 
 \end{document}
