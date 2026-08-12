@@ -109,8 +109,15 @@ Let $U_t$ denote translation on the ambient real line and write
 \[
  D_s:=U_{s/2}-U_{-s/2}.
 \]
-For $0<R<S$, $E_{R,S}$ denotes zero extension from $(-R,R)$ to $(-S,S)$; $E_R$
-denotes zero extension to $L^2(\mathbb R)$.
+For $0<R<S$, $E_{R,S}$ denotes zero extension from $(-R,R)$ to $(-S,S)$.  We write
+\[
+ E_R:\mathscr H_R\to L^2(\mathbb R)
+\]
+for zero extension to the real line and
+\[
+ \boxed{P_R:=E_R^*}
+\]
+for restriction to $(-R,R)$.
 
 \subsection{Finite-adic martingale coordinates and source-dependent cutoff}
 
@@ -153,7 +160,8 @@ projections.  Hence
  (\mathsf Q_RF)(u):=\mathsf Q_R(u)F(u)
 \]
 defines a positive orthogonal projection on the corresponding finite-adic
-$L^2$-field.  Moreover
+$L^2$-field.  Moreover, with the convention that the sum is empty when
+$J_{p,R}(u)=0$,
 \[
  \mathsf Q_R(u)\eta_{p,k}
  =\sqrt{p-1}\sum_{j=0}^{\min(k-1,J_{p,R}(u)-1)}
@@ -532,19 +540,48 @@ Furthermore
 This proves~\eqref{4.1}.  Injectivity and the cocycle are inherited from zero extension.
 \end{proof}
 
-For $R<T$ define the positive terminal metric operator
+\begin{corollary}[Fixed-source lower bound]\label{cor:transition-lower}
+For $0<R<T$,
 \[
- \boxed{G_{R,T}:=J_{R,T}^*J_{R,T}\in\mathcal B(\KXR{R}).}
+ \boxed{
+ q_T^X(E_{R,T}f)
+ \ge\frac{1}{1+\|H_R\|^2}\,q_R^X(f).
+ }
 \tag{4.4}
 \]
-It is boundedly invertible because $J_{R,T}$ is bounded below on the fixed source level
-in the committed finite-horizon geometry.
+Hence $J_{R,T}$ is bounded below on $\KXR{R}$.
+\end{corollary}
+
+\begin{proof}
+Positivity of the Schur term and exact Gamma compatibility give
+\[
+ q_T^X(E_{R,T}f)
+ \ge\mathfrak c_{\Gamma,T}[E_{R,T}f]
+ =\mathfrak c_{\Gamma,R}[f].
+\]
+Equation~\eqref{3.3} gives
+\[
+ q_R^X(f)\le(1+\|H_R\|^2)\mathfrak c_{\Gamma,R}[f],
+\]
+which proves~\eqref{4.4}.
+\end{proof}
+
+Define the positive terminal metric operator
+\[
+ \boxed{G_{R,T}:=J_{R,T}^*J_{R,T}\in\mathcal B(\KXR{R}).}
+\tag{4.5}
+\]
+By Corollary~\ref{cor:transition-lower},
+\[
+ G_{R,T}\ge(1+\|H_R\|^2)^{-1}I,
+\]
+so $G_{R,T}$ is boundedly invertible.
 
 \begin{proposition}[Pullback identity]\label{prop:pullback}
 For $0<R<S<T$,
 \[
  \boxed{J_{R,S}^*G_{S,T}J_{R,S}=G_{R,T}.}
-\tag{4.5}
+\tag{4.6}
 \]
 \end{proposition}
 
@@ -561,24 +598,24 @@ Define
  W_{R,S}^{[T]}
  :=G_{S,T}^{1/2}J_{R,S}G_{R,T}^{-1/2}.
  }
-\tag{4.6}
+\tag{4.7}
 \]
 
 \begin{theorem}[Finite-terminal isometry and cocycle]\label{thm:terminal-isometry}
 For every $0<R<S<T$,
 \[
  \boxed{(W_{R,S}^{[T]})^*W_{R,S}^{[T]}=I.}
-\tag{4.7}
+\tag{4.8}
 \]
 Whenever $0<R<S<U<T$,
 \[
  \boxed{W_{S,U}^{[T]}W_{R,S}^{[T]}=W_{R,U}^{[T]}.}
-\tag{4.8}
+\tag{4.9}
 \]
 \end{theorem}
 
 \begin{proof}
-Equation~\eqref{4.7} follows from~\eqref{4.5}; the cocycle follows by cancellation of
+Equation~\eqref{4.8} follows from~\eqref{4.6}; the cocycle follows by cancellation of
 the middle factors and~\eqref{4.3}.
 \end{proof}
 
