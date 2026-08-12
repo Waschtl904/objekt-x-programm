@@ -1,6 +1,71 @@
 % P11 paper module: reconciled TC1 mixed-jet bilinear asymptotic.
 % Canonical inputs: C4, C5, O3c, O3d-I2, TC1-MIX + reconciliation.
 
+\begin{proof}[Proof of Corollary~\ref{cor:conditioning}]
+For the positive relative metric
+\[
+ A_{T_0,U}^{R,-}
+ =G_{R,T_0}^{-1/2}G_{R,U}G_{R,T_0}^{-1/2}
+\]
+its Rayleigh quotient, after the substitution
+$x=G_{R,T_0}^{1/2}f$, is
+\[
+ \frac{\langle A_{T_0,U}^{R,-}x,x\rangle}{\|x\|^2}
+ =\rho_{T_0,U}(f)
+ :=\frac{\langle G_{R,U}f,f\rangle}
+ {\langle G_{R,T_0}f,f\rangle}.
+\tag{COND.1}\label{eq:conditioning-rayleigh}
+\]
+Hence
+\[
+ \kappa(A_{T_0,U}^{R,-})
+ =\frac{\sup_{f\ne0}\rho_{T_0,U}(f)}
+ {\inf_{f\ne0}\rho_{T_0,U}(f)}.
+\tag{COND.2}\label{eq:conditioning-kappa}
+\]
+
+We need fixed odd test directions with arbitrarily separated first jets.  On the odd
+smooth core the functionals $\beta_R^{(0)},\dots,\beta_R^{(M)}$ are linearly independent:
+if
+\[
+ \sum_{j=0}^{M}a_j I_j(r)=0\qquad(0<r<R),
+\]
+differentiation gives
+\[
+ e^{-r/2}\sum_{j=0}^{M}a_jr^j=0,
+\]
+so all $a_j=0$.  Therefore, for every $M\ge1$, there exists
+$f_M\in C_c^\infty((-R,R))_{\rm odd}$ with
+\[
+ \beta_R^{(0)}(f_M)=\cdots=\beta_R^{(M-1)}(f_M)=0,
+ \qquad
+ \beta_R^{(M)}(f_M)\ne0.
+\tag{COND.3}\label{eq:conditioning-testjets}
+\]
+Choose also $f_0$ with $\beta_R^{(0)}(f_0)\ne0$.
+
+Theorem~\ref{thm:odd} gives, with fixed positive constants depending on the chosen
+vectors and $T_0$,
+\[
+ \rho_{T_0,U}(f_0)
+ \sim C_0\frac{e^U}{U^2},
+ \qquad
+ \rho_{T_0,U}(f_M)
+ \sim C_M\frac{e^U}{U^{2M+2}}.
+\]
+Thus
+\[
+ \kappa(A_{T_0,U}^{R,-})
+ \ge\frac{\rho_{T_0,U}(f_0)}{\rho_{T_0,U}(f_M)}
+ \ge c_MU^{2M}
+\tag{COND.4}\label{eq:conditioning-polylower}
+\]
+for all sufficiently large $U$.  Given $N>0$, choose $M>N/2$ to obtain
+$U^{-N}\kappa(A_{T_0,U}^{R,-})\to\infty$.  Since
+$\chi=\kappa^{1/4}$, choosing $M>2N$ similarly gives
+$U^{-N}\chi_{T_0,U}^{R,-}\to\infty$.
+\end{proof}
+
 \subsection{Mixed-jet bilinear terminal asymptotic}\label{subsec:mixed-jet}
 
 The diagonal asymptotic of Theorem~\ref{thm:odd} admits a fixed-pair sesquilinear
