@@ -1,0 +1,167 @@
+% P11 paper module: reconciled TC1 mixed-jet bilinear asymptotic.
+% Canonical inputs: C4, C5, O3c, O3d-I2, TC1-MIX + reconciliation.
+
+\subsection{Mixed-jet bilinear terminal asymptotic}\label{subsec:mixed-jet}
+
+The diagonal asymptotic of Theorem~\ref{thm:odd} admits a fixed-pair sesquilinear
+extension.  The point is not naive polarization: if two vectors have different first
+jets, their mixed term occurs below the leading diagonal scale.  Instead one isolates
+the asymptotically exhaustive constant-mode rank-one part.
+
+For fixed smooth odd $f$ define
+\[
+ h_T(f):=H_T^*J_{R,T}f,
+ \qquad
+ A_T:=I+R_T^*R_T,
+\]
+\[
+ \ell_T(f):=\langle h_T(f),\mathbf1_T\rangle,
+ \qquad
+ d_T:=\langle\mathbf1_T,A_T\mathbf1_T\rangle.
+\tag{MJ.1}
+\]
+Then
+\[
+ \sigma_T(Jf,Jg)=\langle h_T(f),A_T^{-1}h_T(g)\rangle.
+\tag{MJ.2}
+\]
+The boundary expansion of Theorem~\ref{thm:jet-expansion} and the sharp constant-mode
+estimate used in Theorem~\ref{thm:odd} give independently, for first jet $m=m(f)$,
+\[
+ \ell_T(f)
+ =-\sqrt2\,c_m\beta_R^{(m)}(f)
+ \frac{e^{T/2}}{T^{m+1/2}}(1+O(T^{-1})),
+\tag{MJ.3}
+\]
+\[
+ \boxed{d_T=2T+O(1).}
+\tag{MJ.4}
+\]
+Hence the rank-one form
+\[
+ \rho_T(f,g):=\frac{\ell_T(f)\overline{\ell_T(g)}}{d_T}
+\tag{MJ.5}
+\]
+is determined without using the total Schur asymptotic.
+
+\begin{theorem}[Mixed-jet bilinear asymptotic]\label{thm:mixed-jet}
+Let $f,g\in C_c^\infty((-R,R))_{\rm odd}$ be nonzero, with first nonvanishing integral
+jets $m=m(f)$ and $n=m(g)$.  Then
+\[
+ \boxed{
+ \sigma_T(J_{R,T}f,J_{R,T}g)
+ =c_mc_n\,
+ \beta_R^{(m)}(f)\overline{\beta_R^{(n)}(g)}
+ \frac{e^T}{T^{m+n+2}}
+ \bigl(1+o_{R,f,g}(1)\bigr).
+ }
+\tag{MJ.6}
+\]
+\end{theorem}
+
+\begin{proof}
+Set
+\[
+ x_f:=A_T^{-1/2}h_T(f),
+ \qquad
+ v_T:=A_T^{1/2}\mathbf1_T,
+\]
+and let $P_{v_T}$ be the orthogonal projection onto $\mathbb Cv_T$.  Since
+\[
+ \sigma_T(Jf,Jg)=\langle x_f,x_g\rangle,
+ \qquad
+ \ell_T(f)=\langle x_f,v_T\rangle,
+ \qquad
+ d_T=\|v_T\|^2,
+\]
+the remainder
+\[
+ D_T(f,g):=\sigma_T(Jf,Jg)-\rho_T(f,g)
+\]
+has the exact Gram representation
+\[
+ \boxed{
+ D_T(f,g)
+ =\langle(I-P_{v_T})x_f,(I-P_{v_T})x_g\rangle.
+ }
+\tag{MJ.7}
+\]
+Thus $D_T$ is positive semidefinite and
+\[
+ |D_T(f,g)|^2\le D_T(f,f)D_T(g,g).
+\tag{MJ.8}
+\]
+
+For $f$ with first jet $m$, equations~\eqref{MJ.3}--\eqref{MJ.4} give independently
+\[
+ \rho_T(f,f)
+ =c_m^2|\beta_R^{(m)}(f)|^2
+ \frac{e^T}{T^{2m+2}}(1+O(T^{-1})).
+\tag{MJ.9}
+\]
+Theorem~\ref{thm:odd} gives the same leading term for
+$\sigma_T(Jf,Jf)$.  Since $D_T(f,f)\ge0$,
+\[
+ D_T(f,f)
+ =o\!\left(\frac{e^T}{T^{2m+2}}\right).
+\tag{MJ.10}
+\]
+The analogous statement holds for $g$ with first jet $n$.  Cauchy--Schwarz in
+\eqref{MJ.8} therefore yields
+\[
+ D_T(f,g)
+ =o\!\left(\frac{e^T}{T^{m+n+2}}\right).
+\tag{MJ.11}
+\]
+Finally, equations~\eqref{MJ.3}--\eqref{MJ.5} give
+\[
+ \rho_T(f,g)
+ =c_mc_n\beta_R^{(m)}(f)\overline{\beta_R^{(n)}(g)}
+ \frac{e^T}{T^{m+n+2}}(1+O(T^{-1})),
+\]
+which proves~\eqref{MJ.6}.
+\end{proof}
+
+\begin{remark}[Why the proof is not circular]\label{rem:mixed-noncircular}
+The matching asymptotic~\eqref{MJ.9} is computed from the boundary expansion and
+$d_T=2T+O(1)$ before the total diagonal asymptotic is invoked.  It is not inferred from
+$\sigma_T(Jf,Jf)\sim\rho_T(f,f)$.  This independence is essential to the positive
+remainder argument.
+\end{remark}
+
+\begin{corollary}[Fixed-pair angle collapse]\label{cor:mixed-angle}
+For every fixed nonzero smooth odd pair as above,
+\[
+ \boxed{
+ \frac{\sigma_T(Jf,Jg)}
+ {\sigma_T(Jf,Jf)^{1/2}\sigma_T(Jg,Jg)^{1/2}}
+ \longrightarrow
+ \frac{\beta_R^{(m)}(f)\overline{\beta_R^{(n)}(g)}}
+ {|\beta_R^{(m)}(f)|\,|\beta_R^{(n)}(g)|}.
+ }
+\tag{MJ.12}
+\]
+In particular the modulus tends to one.
+\end{corollary}
+
+\begin{remark}[Fixed-pair firewall]\label{rem:mixed-firewall}
+Theorem~\ref{thm:mixed-jet} is not uniform on the odd unit sphere and does not control
+$T$-dependent vectors, spectral subspaces, condition numbers, or inverse square roots.
+The leading normalized Gram geometry on any collection of fixed smooth odd vectors is
+asymptotically rank one.  Precisely for that reason the subleading jet directions can
+control $G_{R,T}^{-1/2}$.
+\end{remark}
+
+\begin{openproblem}[Finite-jet Gram and square-root gate]\label{open:finite-jet-sqrt}
+On a fixed finite-dimensional jet-adapted subspace, obtain an asymptotic expansion deep
+enough to control the rescaled Gram matrix and its positive and inverse square roots.
+Can such control be made compatible between the $R$- and $S$-levels so that the
+cross-terminal kernel~\eqref{DT.22} satisfies the strong Cauchy criterion
+\eqref{DT.23}?
+\end{openproblem}
+
+No convergence
+\[
+ K_{R,S}^{T,U}\to I
+\]
+or strong Cauchy convergence of $W_{R,S,-}^{[T]}$ is claimed here.
