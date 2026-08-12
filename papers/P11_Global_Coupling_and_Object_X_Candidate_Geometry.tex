@@ -15,9 +15,9 @@
 \newtheorem{openproblem}[theorem]{Offenes Problem}
 
 \newcommand{\KX}{\mathcal K_X}
+\newcommand{\KXR}[1]{\mathcal K_{X,#1}}
 \newcommand{\HG}{\mathscr H_{\log}}
 \newcommand{\Ran}{\operatorname{Ran}}
-\newcommand{\dist}{\operatorname{dist}}
 
 \title[P11 --- Global Coupling]{P11 --- Global Coupling and the Object-X Candidate Geometry}
 \author{Objekt-X-Programm}
@@ -31,49 +31,46 @@ Object~X and isolates, without overclaim, the remaining passage to a global term
 geometry.  The construction combines a source-windowed archimedean Gamma form with a
 finite-horizon Feshbach--Schur contribution and equips the resulting graph spaces with
 positive terminal metric operators.  Their normalized transition maps are exact
-isometries and satisfy finite-level pullback and cocycle identities.  Relative future
-metrics admit an exact compression identity, and a second normalization yields an
-isometric modulus map.  On the odd sector, the future Schur term has a sharp fixed-vector
-asymptotic of size $e^T/T^{2m+2}$, which forces superpolynomial growth of the associated
-fixed-base-terminal condition number.  This makes one natural Jensen-product route to
-terminal convergence extremely restrictive and motivates a separate second-moment and
-range-leakage diagnostic.  That diagnostic is developed only as a sufficient comparison
-mechanism: its failure would not imply failure of strong terminal transport.
+isometries.  Relative future metrics satisfy an exact compression identity, and a second
+normalization gives an isometric modulus map.  On the odd sector, the future Schur term
+has a sharp fixed-vector asymptotic of size $e^T/T^{2m+2}$; at fixed base terminal this
+forces superpolynomial growth of the associated odd condition number.  Consequently one
+natural Jensen-product route to terminal convergence would require a square-root
+compression defect that decays faster than every inverse power.
 
-The central unresolved source-level problem remains the strong odd terminal limit
+The central unresolved source-level problem remains
 \[
- W_{R,S,-}^{[T]}\xrightarrow[T\to\infty]{\rm strong}W_{R,S,-}^{[\infty]}.
+ W_{R,S,-}^{[T]}\xrightarrow[T\to\infty]{\rm strong}?W_{R,S,-}^{[\infty]}.
 \]
-P11 does not prove this limit, does not prove its failure, does not construct a final
-global Object~X, and contains no proof of the Riemann hypothesis.  The paper therefore
-separates three levels throughout: proved finite-horizon structure, route-specific
-diagnostics, and open global obligations.
+P11 proves neither this limit nor its failure, does not construct a final global
+Object~X, and contains no proof of the Riemann hypothesis.  The paper separates proved
+finite-horizon structure, route-specific diagnostics, and open global obligations.
 \end{abstract}
 
 \maketitle
 
 \section{Scope, status semantics and non-claims}\label{sec:scope}
 
-The purpose of P11 is to organize the positive finite-horizon geometry that survives the
-preceding no-go analysis and to state precisely what is still missing for a global
-Object-X construction.  The finite-window theory developed below is mathematically
-nontrivial, but it must not be identified with the global limit problem.
+P11 organizes the positive finite-horizon geometry that survives the preceding no-go
+analysis and states precisely what remains missing for a global Object-X construction.
+The finite-window theory below must not be identified with the global limit problem.
 
-\begin{remark}[Three logically distinct levels]\label{rem:three-levels}
-We distinguish throughout:
+\begin{remark}[Three distinct levels]\label{rem:levels}
+We distinguish:
 \begin{enumerate}
   \item \emph{finite-horizon structure}: exact Hilbert-space, Feshbach, metric and
         comparison identities at fixed windows;
-  \item \emph{terminal transport}: asymptotic compatibility of the normalized maps as
-        the terminal horizon tends to infinity;
-  \item \emph{P11-wide global geometry}: a canonical nonorthogonal global Gram/mediator
-        realization, including the eventual source/adelic and Fredholm/Schatten layers.
+  \item \emph{terminal transport}: asymptotic compatibility of normalized maps as the
+        terminal horizon tends to infinity;
+  \item \emph{P11-wide global geometry}: a canonical nonorthogonal global
+        Gram/mediator realization, including eventual source/adelic and
+        Fredholm/Schatten layers.
 \end{enumerate}
 A statement at one level is never silently promoted to the next.
 \end{remark}
 
 \begin{remark}[Non-claims]\label{rem:nonclaims}
-The present draft does not assert any of the following:
+The present draft does not assert
 \[
 W_{R,S,-}^{[T]}\to W_{R,S,-}^{[\infty]}\quad\text{strongly},
 \]
@@ -82,85 +79,83 @@ W_{R,S,-}^{[T]}\to W_{R,S,-}^{[\infty]}\quad\text{strongly},
 \qquad
 \chi_-\|\Theta_-\|\to0,
 \]
-any polynomial lower witness for the actual P11 family, any global Fredholm determinant,
+any polynomial lower witness for the actual P11 family, a global Fredholm determinant,
 a final global Hilbert space $\KX$, or the Riemann hypothesis.
 \end{remark}
 
 \begin{remark}[Draft provenance]\label{rem:provenance}
 This first paper draft is distilled from the canonical P11 master ledger.  Historical
-audit nodes remain proof provenance, but superseded formulations are not treated as
-independent inputs.  In particular, the full-rest transfer is used only in its repaired
-martingale form, the old primitive form-domination shortcut is not assumed, and the
-O3 diagnostic branch is kept separate from the original strong transport target.
+audit nodes remain proof provenance.  Superseded formulations are not independent
+inputs: the full-rest transfer is used only in its repaired martingale form, the old
+primitive form-domination shortcut is not assumed, and the O3 branch is kept separate
+from the original strong transport target.
 \end{remark}
 
 \section{Fixed-window source geometry}\label{sec:source}
 
-Fix $R>0$ and write
+Fix $R>0$ and set
 \[
-  \mathscr H_R:=L^2(-R,R).
+ \mathscr H_R:=L^2(-R,R).
 \]
 For $0<R<S$, let
 \[
-  J_{R,S}:\mathscr H_R\longrightarrow\mathscr H_S
+ J_{R,S}:\mathscr H_R\longrightarrow\mathscr H_S
 \]
-denote zero extension.  If a common terminal horizon $T>S$ is fixed, we also write
+be zero extension.  At a common terminal horizon $T>S$ we also write
 $E_R=J_{R,T}$ and $E_S=J_{S,T}$.
 
-The archimedean part is encoded by the positive Fourier weight
+The archimedean source form is encoded by
 \[
  m_\Gamma(\xi):=1+g_\infty(\xi),
+ \qquad
+ m_\Gamma(\xi)\asymp\log(2+|\xi|).
 \]
-where the committed source-windowed Gamma construction satisfies
-\[
-  m_\Gamma(\xi)\asymp \log(2+|\xi|).
-\]
-The corresponding closed form on $\mathscr H_R$ is
+Define
 \[
  \mathfrak c_{\Gamma,R}[f,g]
  =\frac1{2\pi}\int_{\mathbb R}
-   m_\Gamma(\xi)
-   \widehat{E_Rf}(\xi)
-   \overline{\widehat{E_Rg}(\xi)}\,d\xi.
+ m_\Gamma(\xi)\widehat{E_Rf}(\xi)
+ \overline{\widehat{E_Rg}(\xi)}\,d\xi.
 \]
-We denote its positive selfadjoint operator by $C_{\Gamma,R}$.
+Let $C_{\Gamma,R}$ be the positive selfadjoint operator represented by this closed form.
 
-\begin{proposition}[Gamma graph space]\label{prop:gamma-graph}
-For every fixed $R>0$, the form $\mathfrak c_{\Gamma,R}$ is densely defined, closed and
-positive.  Its form domain, equipped with the graph norm, defines the native source
-space
+\begin{proposition}[Gamma graph space]\label{prop:gamma}
+For every fixed $R>0$, $\mathfrak c_{\Gamma,R}$ is densely defined, closed and positive.
+Its graph completion defines the native source space
 \[
- \KX_R:=\bigl(\mathcal D(\mathfrak c_{\Gamma,R}),\|\cdot\|_{X,R}\bigr).
+ \KXR{R}:=\bigl(\mathcal D(\mathfrak c_{\Gamma,R}),\|\cdot\|_{X,R}\bigr).
 \]
-Moreover $C_{\Gamma,R}\ge I$.  Since $m_\Gamma(\xi)\to\infty$, the fixed-window graph
-embedding into $L^2(-R,R)$ is compact, hence the finite-window Gamma realization has
-compact resolvent.
+Moreover
+\[
+ C_{\Gamma,R}\ge I.
+\]
+The committed finite-window Gamma theorem gives compact embedding of this graph space
+into $L^2(-R,R)$ and hence compact resolvent for the finite-window Gamma realization.
 \end{proposition}
 
-\begin{remark}[Logarithmic, not Sobolev, regularity]\label{rem:log-reg}
-The native form norm corresponds to the logarithmic threshold
+\begin{remark}[Logarithmic, not Sobolev, regularity]\label{rem:log}
+Up to equivalent fixed-window norms, the native form threshold is
 \[
  \mathcal D(\mathfrak c_{\Gamma,R})
  \simeq
- \left\{f:\int \log(2+|\xi|)\,|\widehat{E_Rf}(\xi)|^2\,d\xi<\infty\right\}.
+ \left\{f:\int\log(2+|\xi|)|\widehat{E_Rf}(\xi)|^2d\xi<\infty\right\}.
 \]
-It does not force membership of the entire form domain in any fixed positive Sobolev
-space $H^s$, $s>0$.
+It does not force the entire form domain into any fixed $H^s$, $s>0$.
 \end{remark}
 
 \section{Finite-horizon Feshbach geometry}\label{sec:feshbach}
 
 At terminal horizon $T>R$, the source couples to a hub/rest system.  The exact
-finite-horizon Schur contribution has the operator form
+finite-horizon Schur contribution is
 \[
  \Sigma_T
- =H_T\,(I+R_T^*R_T)^{-1}H_T^*\ge0.
+ =H_T(I+R_T^*R_T)^{-1}H_T^*\ge0.
 \]
-The source-restricted terminal form is therefore
+The source-restricted terminal form is
 \[
  q_T^X(E_Rf,E_Rg)
  =\mathfrak c_{\Gamma,R}[f,g]
- +\langle \Sigma_R^{[T]}f,g\rangle_{L^2(-R,R)},
+ +\langle\Sigma_R^{[T]}f,g\rangle_{L^2(-R,R)},
 \]
 where
 \[
@@ -168,70 +163,65 @@ where
 \]
 is bounded, positive and selfadjoint.
 
-\begin{proposition}[Bounded Schur perturbation]\label{prop:schur-bounded}
-For every fixed $R<T$, the operator
+\begin{proposition}[Bounded Schur perturbation]\label{prop:bounded-schur}
+For fixed $R<T$,
 \[
  F_R^{[T]}:=C_{\Gamma,R}+\Sigma_R^{[T]}
 \]
-is positive selfadjoint with
+is positive selfadjoint and
 \[
  \mathcal D(F_R^{[T]})=\mathcal D(C_{\Gamma,R}).
 \]
-In particular the finite-horizon Schur term does not alter the operator domain; it is a
-bounded positive perturbation of the Dirichlet Gamma realization.
 \end{proposition}
 
 \begin{proof}
-The operator $\Sigma_R^{[T]}$ is bounded and selfadjoint because
-$(I+R_T^*R_T)^{-1}$ is a positive contraction and $H_T$ is bounded at fixed $T$.
-The standard bounded selfadjoint perturbation theorem gives the domain identity and
-selfadjointness of $F_R^{[T]}$.
+$(I+R_T^*R_T)^{-1}$ is a positive contraction and $H_T$ is bounded at fixed $T$;
+hence $\Sigma_R^{[T]}$ is a bounded selfadjoint perturbation.  The standard bounded
+perturbation theorem yields the claim.
 \end{proof}
 
 \subsection{Full-rest martingale representation}
 
-The rest Gram is not a direct orthogonal sum over prime powers $k$ inside a fixed prime
-sector.  The correct positive decomposition is instead indexed by prime/martingale-depth
-pairs $(p,a)$.  For
+The rest Gram is not an orthogonal direct sum over prime powers $k$ inside a fixed prime
+sector.  Its exact positive decomposition is indexed instead by prime/martingale-depth
+pairs $(p,a)$.  With
 \[
  \Phi_{p,a,T}[f](u)
- :=\sum_{k\ge a+1}p^{-3k/4}K_{k\log p}f(u)
+ :=\sum_{k\ge a+1}p^{-3k/4}K_{k\log p}f(u),
 \]
-and the corresponding source cells $\Omega_{p,a,T}$, the residual bilinear form is
+one has
 \[
  \mathfrak R_T(f,g)
  =\sum_p(\log p)(p-1)\sum_{a\ge0}p^a
-   \int_{\Omega_{p,a,T}}
-   \Phi_{p,a,T}[f](u)\overline{\Phi_{p,a,T}[g](u)}\,du.
+ \int_{\Omega_{p,a,T}}
+ \Phi_{p,a,T}[f](u)\overline{\Phi_{p,a,T}[g](u)}\,du.
 \]
-Thus there is a canonical analysis operator $\widetilde R_T$ satisfying
+Thus a canonical full analysis operator $\widetilde R_T$ satisfies
 \[
  \boxed{\widetilde R_T^*\widetilde R_T=R_T^*R_T.}
 \]
 
-\begin{remark}[Primitive form-domination firewall]\label{rem:primitive-fw}
-No use is made of the unproved global form inequality
+\begin{remark}[Primitive form-domination firewall]\label{rem:primitive}
+We do not assume
 \[
- R_T^*R_T\stackrel?\ge (R_T^{(1)})^*R_T^{(1)}.
+ R_T^*R_T\stackrel?\ge(R_T^{(1)})^*R_T^{(1)}.
 \]
-Prime powers inside one prime sector are nonorthogonal, so that inequality is not an
-automatic consequence of channel decomposition.  The required future-certificate
-transfer is instead obtained through the full martingale analysis operator
-$\widetilde R_T$ and the exponentially small higher-prime-power tail in the future
-$a=0$ channel.
+Different prime powers in one prime sector are nonorthogonal, so this form order is not
+automatic.  The needed future-certificate transfer is instead obtained through the full
+martingale analysis operator and the exponentially small higher-prime-power future tail.
 \end{remark}
 
 \section{Terminal metric operators and normalized transports}\label{sec:terminal}
 
-The fixed-window source spaces carry their native graph inner products.  For $R<T$, let
+For $R<T$, let
 \[
- J_{R,T}:\KX_R\longrightarrow\KX_T
+ J_{R,T}:\KXR{R}\longrightarrow\KXR{T}
 \]
-be the terminal embedding.  Define the terminal metric operator
+be the terminal embedding and define
 \[
- \boxed{G_{R,T}:=J_{R,T}^*J_{R,T}\in\mathcal B(\KX_R).}
+ \boxed{G_{R,T}:=J_{R,T}^*J_{R,T}\in\mathcal B(\KXR{R}).}
 \]
-It is positive and boundedly invertible.
+The operator $G_{R,T}$ is positive and boundedly invertible.
 
 \begin{proposition}[Pullback identity]\label{prop:pullback}
 For $0<R<S<T$,
@@ -241,15 +231,14 @@ For $0<R<S<T$,
 \end{proposition}
 
 \begin{proof}
-Using $J_{S,T}J_{R,S}=J_{R,T}$,
+Since $J_{S,T}J_{R,S}=J_{R,T}$,
 \[
  J_{R,S}^*G_{S,T}J_{R,S}
- =J_{R,S}^*J_{S,T}^*J_{S,T}J_{R,S}
  =J_{R,T}^*J_{R,T}=G_{R,T}.
 \]
 \end{proof}
 
-The normalized terminal transport is
+Define
 \[
  \boxed{
  W_{R,S}^{[T]}
@@ -257,40 +246,54 @@ The normalized terminal transport is
  }
 \]
 
-\begin{theorem}[Finite-terminal isometry]\label{thm:terminal-isometry}
+\begin{theorem}[Finite-terminal isometry and cocycle]\label{thm:terminal-isometry}
 For every $0<R<S<T$,
 \[
  \boxed{(W_{R,S}^{[T]})^*W_{R,S}^{[T]}=I.}
 \]
-Hence $W_{R,S}^{[T]}$ is an isometry.  The family satisfies the compatible
-finite-terminal cocycle identities whenever the windows are nested.
+Thus $W_{R,S}^{[T]}$ is an isometry.  More explicitly, whenever
+\[
+ 0<R<S<U<T,
+\]
+the same-terminal maps satisfy
+\[
+ \boxed{W_{S,U}^{[T]}W_{R,S}^{[T]}=W_{R,U}^{[T]}.}
+\]
 \end{theorem}
 
 \begin{proof}
-By Proposition~\ref{prop:pullback},
+The isometry follows from Proposition~\ref{prop:pullback}:
 \[
 \begin{aligned}
- (W_{R,S}^{[T]})^*W_{R,S}^{[T]}
- &=G_{R,T}^{-1/2}J_{R,S}^*G_{S,T}J_{R,S}G_{R,T}^{-1/2}\\
- &=I.
+(W_{R,S}^{[T]})^*W_{R,S}^{[T]}
+&=G_{R,T}^{-1/2}J_{R,S}^*G_{S,T}J_{R,S}G_{R,T}^{-1/2}\\
+&=I.
 \end{aligned}
 \]
-The cocycle follows from the same pullback identity and functoriality of the nested
-zero-extension maps.
+For the cocycle, the middle factors cancel and
+\[
+\begin{aligned}
+W_{S,U}^{[T]}W_{R,S}^{[T]}
+&=G_{U,T}^{1/2}J_{S,U}G_{S,T}^{-1/2}
+  G_{S,T}^{1/2}J_{R,S}G_{R,T}^{-1/2}\\
+&=G_{U,T}^{1/2}J_{R,U}G_{R,T}^{-1/2}
+ =W_{R,U}^{[T]}.
+\end{aligned}
+\]
 \end{proof}
 
-\begin{remark}[Finite isometry is not terminal convergence]\label{rem:not-limit}
-The exact identity in Theorem~\ref{thm:terminal-isometry} is a fixed-$T$ statement.  It
-does not imply that the family $W_{R,S}^{[T]}$ is Cauchy as $T\to\infty$.
+\begin{remark}[Finite isometry is not terminal convergence]\label{rem:notlimit}
+Theorem~\ref{thm:terminal-isometry} is exact at fixed terminal horizon.  It does not
+imply that $W_{R,S}^{[T]}$ is Cauchy as $T\to\infty$.
 \end{remark}
 
 \section{Relative future metrics}\label{sec:relative}
 
 Fix
 \[
- 0<R<S<T<U.
+ 0<R<S<T<U
 \]
-On the $R$- and $S$-source spaces define the relative future metrics
+and define
 \[
  A_R^{T,U}:=G_{R,T}^{-1/2}G_{R,U}G_{R,T}^{-1/2},
 \]
@@ -300,154 +303,137 @@ On the $R$- and $S$-source spaces define the relative future metrics
 Write $W=W_{R,S}^{[T]}$.
 
 \begin{theorem}[Exact relative compression]\label{thm:relative-compression}
-The future metrics satisfy
 \[
  \boxed{W^*A_S^{T,U}W=A_R^{T,U}.}
 \]
 \end{theorem}
 
 \begin{proof}
-Insert the definitions and use twice the pullback identity
-$J_{R,S}^*G_{S,V}J_{R,S}=G_{R,V}$, first for $V=T$ and then for $V=U$.
+Insert the definitions and use the pullback identity for $V=T$ and $V=U$.
 \end{proof}
 
-Define the second normalized map
+Define
 \[
- Q:=\bigl(A_S^{T,U}\bigr)^{1/2}
- W\bigl(A_R^{T,U}\bigr)^{-1/2}.
+ Q:=\bigl(A_S^{T,U}\bigr)^{1/2}W\bigl(A_R^{T,U}\bigr)^{-1/2}.
 \]
 
-\begin{corollary}[Modulus isometry]\label{cor:modulus-isometry}
+\begin{corollary}[Modulus isometry]\label{cor:modulus}
 \[
  \boxed{Q^*Q=I.}
 \]
 \end{corollary}
 
-\begin{proof}
-This is immediate from Theorem~\ref{thm:relative-compression}.
-\end{proof}
-
-\begin{remark}[What the first-power identity does not give]\label{rem:first-power}
-The compression
+\begin{remark}[First-power firewall]\label{rem:firstpower}
+The exact identity
 \[
  W^*A_SW=A_R
 \]
-does not by itself imply invariance of $\Ran W$ under $A_S$, nor does it determine the
-compression of $A_S^{1/2}$.  This is the origin of the Jensen/range defect studied below.
+does not imply invariance of $\Ran W$ under $A_S$, and it does not determine the
+compression of $A_S^{1/2}$.  The missing information is genuine square-root/range
+geometry.
 \end{remark}
 
 \section{Odd future asymptotics and conditioning}\label{sec:odd}
 
-The odd sector detects a sharp future growth mechanism.  Let
+Let
 \[
- f_-\in C_c^\infty((-R,R)),\qquad f_-(-u)=-f_-(u),
+ f_-\in C_c^\infty((-R,R)),
+ \qquad f_-(-u)=-f_-(u),
 \]
 and let
 \[
  m:=\min\{j\ge0:\beta_R^{(j)}(f_-)\ne0\}
 \]
-be the first nonvanishing integral jet.  Here the functionals
-$\beta_R^{(j)}$ are the canonical integral jets of the source kernel expansion; they are
-not local boundary derivatives.
-
-Set
+be the first nonvanishing \emph{integral} jet.  These $\beta_R^{(j)}$ are not local
+boundary derivatives.  Put
 \[
  c_m:=\binom{2m}{m}4^{-m}.
 \]
 
-\begin{theorem}[Sharp fixed-vector odd future asymptotic]\label{thm:odd-asymptotic}
-For fixed $R$ and fixed nonzero smooth odd $f_-$ as above,
+\begin{theorem}[Sharp fixed-vector odd future asymptotic]\label{thm:odd}
+For fixed $R$ and fixed nonzero smooth odd $f_-$,
 \[
  \boxed{
  \sigma_T(J_{R,T}f_-)
  =c_m^2|\beta_R^{(m)}(f_-)|^2
-  \frac{e^T}{T^{2m+2}}\bigl(1+o(1)\bigr).
+ \frac{e^T}{T^{2m+2}}(1+o(1)).
  }
 \]
-The proof uses the exact constant-mode denominator
+The proof uses
 \[
  \langle\mathbf1_T,(I+R_T^*R_T)\mathbf1_T\rangle=2T+O(1),
 \]
 a signed mean-zero future-edge certificate, prime-cell quadrature, and the full-rest
-martingale lift from Section~\ref{sec:feshbach}.
+martingale lift of Section~\ref{sec:feshbach}.
 \end{theorem}
 
-\begin{remark}[Proof status in Draft 0.1]\label{rem:odd-proof}
-The theorem is an audited result, but this first paper draft records only the proof
-architecture.  The final P11 proof will expand the constant-mode estimate, the signed
-certificate cost, the prime quadrature and the full-rest squeeze into self-contained
-lemmas rather than cite the historical audit chain.
+\begin{remark}[Draft 0.1 proof status]\label{rem:odd-proof}
+Theorem~\ref{thm:odd} is an audited result.  The first draft records its proof
+architecture; the next proof pass must expand the constant-mode estimate, signed
+certificate cost, prime quadrature and full-rest squeeze into self-contained lemmas.
 \end{remark}
 
-Fix now a base terminal horizon $T_0>R$.  The relative odd metric on the fixed source
-space has Rayleigh quotient
-\[
- \rho_{T_0,U}(f)
- =\frac{\langle G_{R,U}f,f\rangle}
-        {\langle G_{R,T_0}f,f\rangle}.
-\]
-Theorem~\ref{thm:odd-asymptotic} yields, for the fixed vector $f_-$,
+Fix a base terminal $T_0>R$.  The fixed-vector Rayleigh quotient satisfies
 \[
  \rho_{T_0,U}(f_-)
+ :=\frac{\langle G_{R,U}f_-,f_-\rangle}
+         {\langle G_{R,T_0}f_-,f_-\rangle}
  \sim C_{T_0,f_-}\frac{e^U}{U^{2m+2}}.
 \]
-Since the order $m$ can be chosen arbitrarily large within the odd test core, the
-condition number of the odd relative metric obeys the following strong divergence.
+The audited odd comparison theorem then yields:
 
 \begin{corollary}[Superpolynomial odd conditioning]\label{cor:conditioning}
 For every $N>0$,
 \[
  \boxed{
- U^{-N}\kappa\bigl(A_{T_0,U}^{R,-}\bigr)\longrightarrow\infty.
+ U^{-N}\kappa(A_{T_0,U}^{R,-})\longrightarrow\infty.
  }
 \]
-Consequently, for
+Thus, with
 \[
- \chi_{T_0,U}^{R,-}
- :=\kappa\bigl(A_{T_0,U}^{R,-}\bigr)^{1/4},
+ \chi_{T_0,U}^{R,-}:=\kappa(A_{T_0,U}^{R,-})^{1/4},
 \]
-one also has
+one has
 \[
  \boxed{
- \forall N>0:\qquad
- U^{-N}\chi_{T_0,U}^{R,-}\longrightarrow\infty.
+ \forall N>0:\qquad U^{-N}\chi_{T_0,U}^{R,-}\longrightarrow\infty.
  }
 \]
 \end{corollary}
 
 \section{Jensen geometry as a sufficient diagnostic route}\label{sec:jensen}
 
-Fix $0<R<S<T_0<U$ and restrict to odd sectors.  Write
+Fix $0<R<S<T_0<U$ and restrict to odd sectors.  Set
 \[
- A_R:=A_{T_0,U}^{R,-},\qquad
- A_S:=A_{T_0,U}^{S,-},\qquad
+ A_R:=A_{T_0,U}^{R,-},
+ \qquad
+ A_S:=A_{T_0,U}^{S,-},
+ \qquad
  W:=W_{R,S,-}^{[T_0]}.
 \]
 Then
 \[
  W^*A_SW=A_R,
-\qquad W^*W=I.
+ \qquad W^*W=I.
 \]
 Define
 \[
  D:=W^*A_S^{1/2}W,
-\qquad
+ \qquad
  \mathscr J:=A_R^{1/2}-D\ge0,
 \]
-and the symmetrized Jensen defect
 \[
  \boxed{
  \Theta:=A_R^{-1/4}\mathscr J A_R^{-1/4},
- \qquad 0\le\Theta\le I.
+ \qquad 0\le\Theta\le I,
  }
 \]
-Further set
+and
 \[
- \chi:=\|A_R^{1/4}\|\,\|A_R^{-1/4}\|
- =\kappa(A_R)^{1/4}.
+ \chi:=\|A_R^{1/4}\|\,\|A_R^{-1/4}\|=\kappa(A_R)^{1/4}.
 \]
 
-\begin{proposition}[Relative Jensen Rayleigh formula]\label{prop:jensen-rayleigh}
+\begin{proposition}[Relative Jensen Rayleigh formula]\label{prop:jensen}
 \[
  \boxed{
  \|\Theta\|
@@ -461,16 +447,19 @@ Further set
 \]
 \end{proposition}
 
-Let $P:=WW^*$, which is the orthogonal projection onto the closed range of the isometry
-$W$, and define
+Let
 \[
+ P:=WW^*,
+ \qquad
  Q:=A_S^{1/2}WA_R^{-1/2},
-\quad
+\]
+\[
  \mathscr N:=(I-P)Q,
-\quad
+ \qquad
  \mathscr K:=I-W^*Q.
 \]
-The exact defect balance is
+Since $W$ is an isometry, $P$ is the orthogonal projection onto the closed range
+$\Ran W$.  The exact defect balance is
 \[
  \boxed{
  \mathscr K+\mathscr K^*
@@ -481,7 +470,7 @@ Moreover
 \[
  \mathscr K=A_R^{1/4}\Theta A_R^{-1/4},
 \]
-so that
+so
 \[
  \boxed{
  \frac12\|\mathscr N\|^2
@@ -495,29 +484,29 @@ If the sufficient product mechanism
 \[
  \chi_{T_0,U}^{R,-}\|\Theta_{T_0,U}^-\|\to0
 \]
-holds, then for every $N>0$,
+holds, then
 \[
- \boxed{U^N\|\Theta_{T_0,U}^-\|\to0.}
+ \boxed{
+ \forall N>0:\qquad U^N\|\Theta_{T_0,U}^-\|\to0.
+ }
 \]
-Thus this particular route can succeed only if the odd Jensen defect decays faster than
-every inverse power of $U$.
 \end{corollary}
 
-\begin{remark}[Critical logical firewall]\label{rem:product-fw}
-Corollary~\ref{cor:beyond} concerns a \emph{sufficient comparison mechanism}.  The
-present theory does not prove
+\begin{remark}[Critical logical firewall]\label{rem:product}
+This is a statement about one sufficient comparison mechanism.  The current theory does
+not prove
 \[
  \text{strong terminal transport}
  \Longrightarrow
  \chi\|\Theta\|\to0.
 \]
-Therefore a future obstruction to the product mechanism would not be a proof of
-nonconvergence of $W_{R,S,-}^{[T]}$.
+Hence obstruction of the product mechanism would not prove nonconvergence of the strong
+terminal transport.
 \end{remark}
 
 \section{Second-moment and complement diagnostics}\label{sec:diagnostic}
 
-The missing information in the Jensen problem is genuine range geometry.  Define
+Define
 \[
  \mathscr B:=(I-P)A_SW.
 \]
@@ -527,9 +516,8 @@ Then
  \quad\Longleftrightarrow\quad
  A_S\Ran W\subseteq\Ran W.
 \]
-Since $A_S$ is selfadjoint, this is the reducing-subspace case.
 
-\begin{proposition}[Second-moment compression variance]\label{prop:second-moment}
+\begin{proposition}[Second-moment compression variance]\label{prop:second}
 \[
  \boxed{
  \mathscr B^*\mathscr B
@@ -537,7 +525,7 @@ Since $A_S$ is selfadjoint, this is the reducing-subspace case.
  =:\Delta_2\ge0.
  }
 \]
-Moreover
+Furthermore
 \[
  \boxed{
  \|\Theta\|
@@ -547,45 +535,42 @@ Moreover
 \]
 \end{proposition}
 
-Define the dimensionless second-moment witness
+Put
 \[
- \nu_2
- :=\frac{\|\Delta_2\|}{\|A_R\|\|A_S\|}.
+ \nu_2:=\frac{\|\Delta_2\|}{\|A_R\|\|A_S\|}.
 \]
-A polynomial lower bound for the actual family would therefore contradict the
-beyond-all-orders requirement of Corollary~\ref{cor:beyond}.  Such a lower bound is
-\emph{not} proved in the present paper.
+A polynomial lower bound for the actual P11 family would contradict the
+beyond-all-orders requirement of Corollary~\ref{cor:beyond}.  Such a lower bound is not
+proved here.
 
-The exact future cross-Gram representation uses the fixed $T_0$ complement
+The exact future cross-Gram representation uses the fixed-$T_0$ complement
 \[
  \mathcal C^-_{S,T_0}(R)
- :=\ker(J_{R,S}^*G_{S,T_0})\cap\KX_S^-.
+ :=\ker(J_{R,S}^*G_{S,T_0})\cap\KXR{S}^{-}.
 \]
-For $f\in\KX_R^-$ and $g\in\mathcal C^-_{S,T_0}(R)$,
+For $f\in\KXR{R}^{-}$ and $g\in\mathcal C^-_{S,T_0}(R)$, the norm of $\mathscr B$ is
+controlled exactly by the future cross-Gram
 \[
- \langle\mathscr By,z\rangle
- =\langle(G_{S,U}-G_{S,T_0})J_{R,S}f,g\rangle
+ \langle(G_{S,U}-G_{S,T_0})J_{R,S}f,g\rangle
 \]
-after the natural metric normalizations.  This identifies the missing second-moment
-information with a scalar future cross-Gram between the old range and its fixed-terminal
-Gram complement.
+after the fixed metric normalizations.
 
-\subsection{The explicit rough complement and the logarithmic gate}
+\subsection{Explicit rough complement and logarithmic gate}
 
-Let $h\in C_c^\infty((-S,S))$ be a nonzero smooth odd annulus vector supported away from
-$[-R,R]$.  With
+Choose a nonzero smooth odd annulus vector $h\in C_c^\infty((-S,S))$ supported away from
+$[-R,R]$ and define
 \[
  \Pi^{\rm raw}
  :=J_{R,S}G_{R,T_0}^{-1}J_{R,S}^*G_{S,T_0},
 \]
-set
 \[
  \boxed{g_h:=(I-\Pi^{\rm raw})h.}
 \]
 Then
 \[
  g_h\in\mathcal C^-_{S,T_0}(R),
- \qquad g_h\ne0,
+ \qquad
+ g_h\ne0,
 \]
 and $g_h$ is compactly supported.  Its first nonzero integral jet has finite order
 $m_h$.
@@ -594,33 +579,34 @@ For
 \[
  \HG^\alpha(\mathbb R)
  :=\left\{F\in L^2:
- \int [\log(2+|\xi|)]^{2\alpha}|\widehat F(\xi)|^2d\xi<\infty
+ \int[\log(2+|\xi|)]^{2\alpha}|\widehat F(\xi)|^2d\xi<\infty
  \right\},
 \]
-one has the translation estimate
+one has
 \[
  F\in\HG^\alpha
- \quad\Longrightarrow\quad
- \|\tau_hF-F\|_2
- =o\bigl((\log(1/h))^{-\alpha}\bigr).
+ \Longrightarrow
+ \|\tau_tF-F\|_2
+ =o\bigl((\log(1/t))^{-\alpha}\bigr)
+ \qquad(t\downarrow0).
 \]
-The robust prime-cell quadrature therefore closes for a compact odd vector with first
-jet $m$ once
+The robust prime-cell quadrature closes for a compact odd vector with first integral jet
+$m$ once
 \[
  E_Sf\in\HG^{m+3/2}.
 \]
-The native Gamma form supplies only the baseline exponent $1/2$; the required additional
+The native Gamma form supplies only the baseline exponent $1/2$; the additional required
 logarithmic order is $m+1$.
 
-\begin{openproblem}[Logarithmic complement regularity]\label{open:log-complement}
-Does the explicit complement vector $g_h$ satisfy
+\begin{openproblem}[Logarithmic complement regularity]\label{open:log}
+Does the explicit $g_h$ satisfy
 \[
  E_Sg_h\in\HG^{m_h+3/2},
 \]
 or at least the corresponding direct translation-modulus condition on the prime-cell
-scale?  A positive answer would produce a polynomial second-moment witness and hence
-rule out the current Jensen-product sufficiency route.  It would still not rule out
-strong terminal transport itself.
+scale?  A positive answer would produce a polynomial second-moment witness and rule out
+the current Jensen-product sufficiency route.  It would still not rule out strong
+terminal transport itself.
 \end{openproblem}
 
 \subsection{Dirichlet--Riesz reduction}
@@ -628,23 +614,22 @@ strong terminal transport itself.
 Write
 \[
  u_h:=G_{R,T_0}^{-1}J_{R,S}^*G_{S,T_0}h,
-\qquad
+ \qquad
  g_h=h-J_{R,S}u_h.
 \]
-Then $J_{R,T_0}u_h$ is the orthogonal projection of $J_{S,T_0}h$ onto
-$\Ran J_{R,T_0}$ in the $T_0$ Object-X metric.  Equivalently,
+Then $J_{R,T_0}u_h$ is the $T_0$-metric orthogonal projection of $J_{S,T_0}h$ onto
+$\Ran J_{R,T_0}$.  Equivalently,
 \[
  q_{T_0}^X(E_Ru_h,E_Rv)
  =q_{T_0}^X(E_Sh,E_Rv)
- \qquad(v\in\KX_R).
+ \qquad(v\in\KXR{R}).
 \]
-The forcing decomposes into a Gamma part and a Schur part,
+The forcing decomposes as
 \[
  r_h=r_{\Gamma,h}+r_{\sigma,h}.
 \]
-For smooth interior $h$, the Gamma part has arbitrary finite logarithmic regularity,
-whereas the committed theory gives only $L^2$ control for the Schur forcing
-$r_{\sigma,h}$.  Since the Schur term is bounded,
+For smooth interior $h$, the Gamma forcing has arbitrary finite logarithmic regularity;
+the committed theory gives only $L^2$ control for the Schur forcing.  Consequently
 \[
  \boxed{
  u_h
@@ -652,19 +637,18 @@ $r_{\sigma,h}$.  Since the Schur term is bounded,
  \in\mathcal D(C_{\Gamma,R}).
  }
 \]
-No theorem in the present draft upgrades this operator-domain gain to the threshold in
-Open Problem~\ref{open:log-complement}.
+No result here upgrades this operator-domain gain to the threshold in
+Open Problem~\ref{open:log}.
 
-\begin{remark}[Dirichlet Fourier firewall]\label{rem:dirichlet-fw}
+\begin{remark}[Dirichlet Fourier firewall]\label{rem:dirichlet}
 The metric inverse $G_{R,T_0}^{-1}$ is not the global Fourier multiplier
 $(1+g_\infty)^{-1}$.  The finite-window source compression is a genuine Dirichlet/Riesz
-problem and must not be replaced by a global symbol inversion.
+problem and cannot be replaced by global symbol inversion.
 \end{remark}
 
-\section{The open strong terminal transport problem}\label{sec:open-transport}
+\section{The open strong terminal transport problem}\label{sec:open}
 
-The finite-terminal maps of Theorem~\ref{thm:terminal-isometry} form the central
-source-level transport family.  The original asymptotic target is
+The original source-level target is
 \[
  \boxed{
  W_{R,S,-}^{[T]}
@@ -674,41 +658,39 @@ source-level transport family.  The original asymptotic target is
 \]
 
 \begin{openproblem}[Strong odd terminal transport]\label{open:transport}
-For fixed $0<R<S$, is the family $W_{R,S,-}^{[T]}$ strongly Cauchy as the common terminal
-horizon $T\to\infty$?  Equivalently, can the source-level cross-terminal Cauchy kernel be
-controlled on the full odd graph space?
+For fixed $0<R<S$, is $W_{R,S,-}^{[T]}$ strongly Cauchy as the common terminal horizon
+$T\to\infty$?  Can the exact source-level cross-terminal Cauchy kernel be controlled on
+the full odd graph space?
 \end{openproblem}
 
-\begin{remark}[Two research directions]\label{rem:two-directions}
+\begin{remark}[Two research directions]\label{rem:routes}
 The current theory leaves two distinct directions:
 \begin{enumerate}
-  \item a \emph{direct transport route}, attacking the cross-terminal Cauchy asymptotic
-        itself;
-  \item the \emph{O3 diagnostic route}, studying whether the sufficient
-        Jensen-product mechanism is compatible with the superpolynomial odd
-        conditioning.
+  \item a direct transport route attacking the cross-terminal Cauchy asymptotic itself;
+  \item the O3 diagnostic route asking whether the sufficient Jensen-product mechanism
+        is compatible with the superpolynomial odd conditioning.
 \end{enumerate}
 The second route is not a semantic replacement for the first.
 \end{remark}
 
-Residual observability, signed/clustered finite-band estimates and related quantities
-may contribute to a direct route, but no equivalence between those diagnostics and
-strong terminal transport is asserted here.
+Residual observability, signed/clustered finite-band estimates and related quantities may
+contribute to a direct route, but no equivalence between those diagnostics and strong
+terminal transport is asserted here.
 
 \section{Global obligations beyond the finite-horizon core}\label{sec:global}
 
 Even a solution of Open Problem~\ref{open:transport} would not by itself complete the
-full P11 program.  The historical P11 scope also carries genuinely global obligations.
+full historical P11 scope.
 
 \begin{openproblem}[Global nonorthogonal Gram/mediator closure]\label{open:gram}
-Construct a canonical global positive geometry in which the local prime-power channels
-and the archimedean contribution arise from one nonorthogonal source/mediator mechanism,
+Construct a canonical global positive geometry in which local prime-power channels and
+the archimedean contribution arise from one nonorthogonal source/mediator mechanism,
 rather than from an external additive juxtaposition.
 \end{openproblem}
 
 \begin{openproblem}[Canonical source/adelic realization]\label{open:adelic}
 Identify a global source space and canonical realization compatible with the finite
-source-window geometry and with the adelic/Weil amplitude port, including the correct
+source-window geometry and the adelic/Weil amplitude port, including the correct
 prime-power and archimedean normalization.
 \end{openproblem}
 
@@ -720,22 +702,20 @@ formalism.  Finite Feshbach identities alone do not provide such a limit.
 
 \section{Conclusion}\label{sec:conclusion}
 
-The finite-horizon Object-X candidate geometry is substantially more rigid than a mere
-collection of local channels.  It provides a closed logarithmic Gamma graph space,
-positive Feshbach corrections, exact terminal pullback metrics, normalized transition
-isometries, relative future compression, a second modulus isometry, and sharp odd
-fixed-vector future asymptotics.  These results are compatible with a source-first
-nonorthogonal geometry and survive the earlier no-go analysis.
+The finite-horizon Object-X candidate geometry provides a closed logarithmic Gamma graph
+space, positive Feshbach corrections, exact terminal pullback metrics, normalized
+transition isometries, relative future compression, a modulus isometry, and sharp odd
+fixed-vector future asymptotics.  These results survive the preceding no-go analysis and
+form a coherent source-first finite-horizon structure.
 
-At the same time, the main asymptotic bottleneck is explicit.  Strong odd terminal
-transport remains open.  The superpolynomial odd conditioning shows that one natural
-Jensen-product sufficiency route would require beyond-all-orders decay of a square-root
-compression defect.  The second-moment/complement analysis reduces a possible
-obstruction to a concrete logarithmic regularity problem, but that problem is still
-open and, even if resolved negatively for the product route, would not decide the
-original strong transport question.
+The main asymptotic bottleneck is nevertheless still open.  Strong odd terminal
+transport has not been proved or disproved.  Superpolynomial odd conditioning shows that
+one natural Jensen-product sufficiency route would require beyond-all-orders decay of a
+square-root compression defect.  The second-moment/complement analysis reduces a
+possible obstruction to a concrete logarithmic regularity question, but resolving that
+diagnostic route would still not by itself decide the original strong transport problem.
 
-Accordingly, the mathematically correct current status is:
+Accordingly, the current status is
 \[
  \boxed{
  \text{finite-horizon structural core: proved;}
