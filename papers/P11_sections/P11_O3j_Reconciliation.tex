@@ -1,0 +1,139 @@
+% P11 paper module: canonical O3j reconciliation for the Dirichlet--Riesz reduction.
+
+\subsection{Dirichlet--Riesz reduction and the Gamma-action reconciliation}\label{subsec:o3j-reconciled}
+
+Keep $0<R<S<T_0$ fixed and let
+$h\in C_c^\infty((-S,S))$ be the smooth odd annulus vector used above, with support
+disjoint from $[-R,R]$.  Define
+\[
+ u_h:=G_{R,T_0}^{-1}J_{R,S}^*G_{S,T_0}h,
+ \qquad
+ g_h=h-J_{R,S}u_h.
+\tag{OJ.1}\label{eq:o3j-uh}
+\]
+Then $J_{R,T_0}u_h$ is the $T_0$-metric orthogonal projection of
+$J_{S,T_0}h$ onto $\Ran J_{R,T_0}$.  On the underlying $L^2$ spaces this means
+\[
+ q_{T_0}^X(E_{R,T_0}u_h,E_{R,T_0}v)
+ =q_{T_0}^X(E_{S,T_0}h,E_{R,T_0}v)
+ \qquad(v\in\KXR{R}).
+\tag{OJ.2}\label{eq:o3j-variational}
+\]
+Here $E_{R,T_0}$ and $E_{S,T_0}$ are the ordinary $L^2$ zero-extension maps; this
+notation is kept distinct from the graph maps $J_{R,S}$.
+
+Let
+\[
+ \Sigma_R^{[T_0]}
+ :=E_{R,T_0}^*\Sigma_{T_0}E_{R,T_0}.
+\tag{OJ.3}\label{eq:o3j-schur-restriction}
+\]
+It is bounded, positive and selfadjoint on $L^2(-R,R)$.  Equation
+\eqref{eq:o3j-variational} is therefore the weak equation
+\[
+ (C_{\Gamma,R}+\Sigma_R^{[T_0]})u_h=r_h,
+ \qquad
+ r_h=r_{\Gamma,h}+r_{\sigma,h},
+\tag{OJ.4}\label{eq:o3j-forcing-equation}
+\]
+where
+\[
+ r_{\Gamma,h}
+ :=E_{R,T_0}^*C_{\Gamma,T_0}E_{S,T_0}h,
+ \qquad
+ r_{\sigma,h}
+ :=E_{R,T_0}^*\Sigma_{T_0}E_{S,T_0}h.
+\tag{OJ.5}\label{eq:o3j-forcing-split}
+\]
+The second term belongs to $L^2(-R,R)$ by boundedness.  The first term requires a
+careful operator-domain argument; it is here that the earlier shortcut is replaced.
+
+\begin{lemma}[Gamma action on the smooth interior core]\label{lem:gamma-smooth-action}
+Let $T>0$ and $\phi\in C_c^\infty((-T,T))$.  Put
+\[
+ \boxed{
+ \mathcal G_\phi
+ :=\mathcal F^{-1}\!\left(m_\Gamma\widehat{E_T\phi}\right).
+ }
+\tag{OJ.6}\label{eq:gamma-Gphi}
+\]
+Then
+\[
+ \mathcal G_\phi\in H^N(\mathbb R)
+ \qquad\text{for every finite }N,
+\tag{OJ.7}\label{eq:gamma-Gphi-sobolev}
+\]
+and
+\[
+ \boxed{
+ \phi\in\mathcal D(C_{\Gamma,T}),
+ \qquad
+ C_{\Gamma,T}\phi=P_T\mathcal G_\phi.
+ }
+\tag{OJ.8}\label{eq:gamma-smooth-action}
+\]
+\end{lemma}
+
+\begin{proof}
+Since $\phi$ is smooth and compactly supported strictly inside $(-T,T)$,
+$\widehat{E_T\phi}$ is Schwartz.  The multiplier
+$m_\Gamma(\xi)\asymp\log(2+|\xi|)$ has only logarithmic growth, so
+$m_\Gamma\widehat{E_T\phi}$ has every finite polynomial $L^2$ moment; this proves
+\eqref{eq:gamma-Gphi-sobolev}.  For every Gamma-form vector $v$,
+Plancherel gives
+\[
+ \mathfrak c_{\Gamma,T}[\phi,v]
+ =\langle P_T\mathcal G_\phi,v\rangle_{L^2(-T,T)}.
+\]
+The representation theorem for the closed positive form therefore puts this particular
+$\phi$ in the operator domain and identifies the operator action as in
+\eqref{eq:gamma-smooth-action}.  No general assertion that every smooth vector belongs
+to the operator domain of an arbitrary form-defined operator is being used.
+\end{proof}
+
+Apply Lemma~\ref{lem:gamma-smooth-action} to
+\[
+ \phi:=E_{S,T_0}h\in C_c^\infty((-T_0,T_0)).
+\]
+Then
+\[
+ r_{\Gamma,h}=P_R\mathcal G_\phi.
+\tag{OJ.9}\label{eq:o3j-gamma-forcing}
+\]
+The restriction is arbitrarily Sobolev-regular on the fixed interval $(-R,R)$.  After
+zero extension at $\pm R$ there may be fixed boundary jumps, but such jumps have Fourier
+decay $O(|\xi|^{-1})$; consequently
+\[
+ E_Rr_{\Gamma,h}
+ \in\bigcap_{\alpha<\infty}\HG^\alpha(\mathbb R).
+\tag{OJ.10}\label{eq:o3j-gamma-logregular}
+\]
+In particular $r_{\Gamma,h}\in L^2(-R,R)$, and hence $r_h\in L^2(-R,R)$.
+
+Since $\Sigma_R^{[T_0]}$ is a bounded selfadjoint perturbation of $C_{\Gamma,R}$,
+\[
+ \mathcal D(C_{\Gamma,R}+\Sigma_R^{[T_0]})
+ =\mathcal D(C_{\Gamma,R}).
+\]
+Solving~\eqref{eq:o3j-forcing-equation} therefore gives the genuine operator-domain
+gain
+\[
+ \boxed{
+ u_h
+ =(C_{\Gamma,R}+\Sigma_R^{[T_0]})^{-1}r_h
+ \in\mathcal D(C_{\Gamma,R}).
+ }
+\tag{OJ.11}\label{eq:o3j-domain-gain}
+\]
+
+\begin{remark}[O3j firewall]\label{rem:o3j-firewall}
+The argument proves neither
+\[
+ E_Ru_h\in\HG^{m_h+3/2}
+\]
+nor higher logarithmic regularity of the Schur forcing $r_{\sigma,h}$.  The
+Dirichlet/log-resolvent bootstrap required by the complement gate remains open.  Also,
+$G_{R,T_0}^{-1}$ is not replaced by the global Fourier multiplier
+$m_\Gamma^{-1}$; the finite-window metric inverse remains a genuine Dirichlet/Riesz
+operator.
+\end{remark}
