@@ -1,0 +1,342 @@
+% P11 paper module: direct terminal bridge (C3/C4/C5/TC0)
+% Canonical inputs: P11-C1z-B2-C3/C4/C5 and P11-TC0.
+
+\section{Absolute terminal obstruction, integral jets and direct Cauchy geometry}\label{sec:direct-terminal}
+
+The finite-terminal isometries of Section~\ref{sec:terminal} do not arise from a
+bounded limit of the unnormalised metric operators.  The correct direct problem is
+instead cross-terminal.  We first record the boundary data that drive the absolute
+growth.
+
+\subsection{Canonical integral jets}
+
+For $m\ge0$ and $0\le r\le R$ define
+\[
+ \boxed{I_m(r):=\int_0^r s^m e^{-s/2}\,ds}
+\tag{DT.1}
+\]
+and
+\[
+ \boxed{
+ \beta_R^{(m)}(f)
+ :=\int_{-R}^{R}\operatorname{sgn}(u)I_m(|u|)f(u)\,du.
+ }
+\tag{DT.2}
+\]
+Put
+\[
+ c_m:=\frac{\binom{2m}{m}}{4^m}.
+\tag{DT.3}
+\]
+For $T>R$ let
+\[
+ \mathbf1_T:=1_{(-T,T)},
+ \qquad
+ A_T:=I+R_T^*R_T,
+\]
+and write
+\[
+ \ell_T(f):=\langle J_{R,T}f,H_T\mathbf1_T\rangle.
+\tag{DT.4}
+\]
+
+\begin{theorem}[Full constant-mode boundary expansion]\label{thm:jet-expansion}
+For every fixed $M\ge0$ and $f\in C_c^\infty((-R,R))$,
+\[
+ \boxed{
+ \ell_T(f)
+ =-\sqrt2\,e^{T/2}T^{-1/2}
+ \sum_{m=0}^{M}\frac{c_m}{T^m}\beta_R^{(m)}(f)
+ +O_{R,M,f}(e^{T/2}T^{-M-3/2}).
+ }
+\tag{DT.5}
+\]
+Moreover the jets are exactly compatible with zero extension:
+\[
+ \boxed{
+ \beta_S^{(m)}(J_{R,S}f)=\beta_R^{(m)}(f)
+ \qquad(0<R<S,\ m\ge0).
+ }
+\tag{DT.6}
+\]
+\end{theorem}
+
+\begin{proof}
+On the old source window the hub applied to the constant mode is exactly
+\[
+ H_T\mathbf1_T(u)
+ =-\operatorname{sgn}(u)\Phi_T(|u|),
+\]
+where
+\[
+ \Phi_T(r)
+ =\sum_{\substack{p^k:\ e^{2(T-r)}<p^k\le e^{2T}}}
+ \sqrt{\log p}\,p^{-3k/4}.
+\tag{DT.7}
+\]
+The terms $k\ge2$ are exponentially smaller than every scale
+$e^{T/2}T^{-N}$ on fixed $0\le r\le R$.  For the primitive part, partial summation with
+$\vartheta(x)=x+O(xe^{-c\sqrt{\log x}})$ gives
+\[
+ \Phi_T(r)
+ =\sqrt2\,e^{T/2}T^{-1/2}
+ \int_0^r e^{-s/2}\left(1-\frac{s}{T}\right)^{-1/2}ds
+ +O_R(e^{T/2}e^{-c'\sqrt T}).
+\tag{DT.8}
+\]
+The binomial expansion
+\[
+ (1-z)^{-1/2}=\sum_{m=0}^{M}c_mz^m+O_M(z^{M+1})
+\]
+is uniform for $0\le s\le R$ and large $T$.  Substitution into~\eqref{DT.8}, followed
+by integration against $-\operatorname{sgn}(u)f(u)$, proves~\eqref{DT.5}.  Equation
+\eqref{DT.6} is immediate because zero extension does not change the integral over the
+old support.
+\end{proof}
+
+\subsection{No bounded absolute terminal metric}
+
+The Schur form at terminal horizon $T$ is
+\[
+ \sigma_T(g,h)
+ :=\langle H_T^*g,A_T^{-1}H_T^*h\rangle.
+\tag{DT.9}
+\]
+The elementary variational inequality
+\[
+ \langle h,A_T^{-1}h\rangle
+ \ge\frac{|\langle h,e\rangle|^2}{\langle e,A_Te\rangle}
+\tag{DT.10}
+\]
+with $e=\mathbf1_T$ yields
+\[
+ \sigma_T(J_{R,T}f)
+ \ge\frac{|\ell_T(f)|^2}{\langle\mathbf1_T,A_T\mathbf1_T\rangle}.
+\tag{DT.11}
+\]
+The source-conditioned rest satisfies the coarse but sufficient estimate
+\[
+ \langle\mathbf1_T,A_T\mathbf1_T\rangle=O(T^2).
+\tag{DT.12}
+\]
+
+\begin{theorem}[Absolute terminal-metric no-go]\label{thm:absolute-no-go}
+For every $R>0$ there exists nonzero $f\in C_c^\infty((0,R))$ and $c_f>0$ such that
+\[
+ \boxed{
+ \sigma_T(J_{R,T}f)\ge c_f\frac{e^T}{T^3}
+ \qquad(T\gg1).
+ }
+\tag{DT.13}
+\]
+Consequently
+\[
+ \|G_{R,T}\|\longrightarrow\infty,
+\]
+and there is no bounded operator $G_{R,\infty}\in\mathcal B(\KXR{R})$ to which
+$G_{R,T}$ converges strongly, weakly, or in norm on all of $\KXR{R}$.
+\end{theorem}
+
+\begin{proof}
+Choose $f\ge0$, $f\not\equiv0$, supported in $(0,R)$.  Then
+$\beta_R^{(0)}(f)>0$, so Theorem~\ref{thm:jet-expansion} gives
+$|\ell_T(f)|\asymp_f e^{T/2}T^{-1/2}$.  Equations~\eqref{DT.11}--\eqref{DT.12} imply
+\eqref{DT.13}.  Since
+\[
+ \langle G_{R,T}f,f\rangle_{X,R}
+ =q_{\Gamma,R}(f)+\sigma_T(J_{R,T}f),
+\]
+the quadratic form diverges.  Any strongly or weakly convergent bounded-operator family
+is uniformly bounded by the uniform boundedness principle; hence no such bounded limit
+exists.  Norm convergence is excluded a fortiori.
+\end{proof}
+
+\begin{remark}[Relative transport survives the absolute no-go]\label{rem:absolute-relative}
+Theorem~\ref{thm:absolute-no-go} concerns the unnormalised $G_{R,T}$.  It does not
+contradict convergence of
+\[
+ W_{R,S}^{[T]}=G_{S,T}^{1/2}J_{R,S}G_{R,T}^{-1/2},
+\]
+where source and target growth may cancel relatively.
+\end{remark}
+
+\subsection{Parity and completeness of the odd boundary jet}
+
+Let
+\[
+ (\mathsf P_Rf)(u):=f(-u).
+\]
+Because $D_s$ reverses parity and $\mathsf Q_R(u)$ depends only on $|u|$,
+\[
+ H_R\mathsf P_R=-\mathsf P_RH_R,
+ \qquad
+ R_R\mathsf P_R=-\widetilde{\mathsf P}_RR_R.
+\tag{DT.14}
+\]
+Hence $R_R^*R_R$ and $B_R=(I+R_R^*R_R)^{-1}$ commute with reflection, while the two
+sign changes in the Schur form cancel.
+
+\begin{proposition}[Orthogonal parity splitting]\label{prop:parity}
+The finite-level form is reflection invariant and
+\[
+ \boxed{
+ \KXR{R}=\KXR{R}^{+}\oplus^{\perp_X}\KXR{R}^{-}.
+ }
+\tag{DT.15}
+\]
+Zero extensions, terminal metrics, their square roots and the normalized transports
+intertwine parity.  In particular
+\[
+ W_{R,S}^{[T]}=W_{R,S,+}^{[T]}\oplus W_{R,S,-}^{[T]}.
+\tag{DT.16}
+\]
+\end{proposition}
+
+\begin{proof}
+The Gamma multiplier is even, so the Gamma form is reflection invariant.  Equation
+\eqref{DT.14} and commutation of $B_R$ with reflection give the same invariance for the
+Schur form.  Thus reflection is unitary in the $X$-graph scalar product, proving
+\eqref{DT.15}.  Zero extension intertwines reflection; taking adjoints and continuous
+functional calculus then gives the remaining assertions.
+\end{proof}
+
+Every kernel in~\eqref{DT.2} is odd.  Hence $\beta_R^{(m)}$ vanishes on the even sector,
+while for odd $f$
+\[
+ \beta_R^{(m)}(f)=2\int_0^R I_m(r)f(r)\,dr.
+\tag{DT.17}
+\]
+
+\begin{theorem}[Completeness of the integral jet on the odd sector]\label{thm:jet-complete}
+If $f\in L^2(-R,R)$ is odd and
+\[
+ \beta_R^{(m)}(f)=0\qquad\forall m\ge0,
+\]
+then $f=0$.  Consequently, on the graph space,
+\[
+ \boxed{
+ \bigcap_{m\ge0}\ker\beta_R^{(m)}=\KXR{R}^{+}.
+ }
+\tag{DT.18}
+\]
+\end{theorem}
+
+\begin{proof}
+For $g=f|_{(0,R)}$, Fubini and~\eqref{DT.17} give for every $m$
+\[
+ 0=\int_0^R s^m e^{-s/2}F(s)\,ds,
+ \qquad
+ F(s):=\int_s^R g(r)\,dr.
+\]
+The function $F$ is absolutely continuous.  Polynomials are dense in
+$L^2((0,R),e^{-s/2}ds)$, so $F=0$ a.e.; hence $g=-F'=0$ a.e.  This proves odd
+completeness.  Since all jets annihilate the even part and are continuous in the graph
+norm, the decomposition~\eqref{DT.15} gives~\eqref{DT.18}.
+\end{proof}
+
+\begin{corollary}[Finite first jet for every nonzero smooth odd vector]\label{cor:first-jet}
+For every nonzero
+\[
+ f\in C_c^\infty((-R,R))_{\rm odd}
+\]
+there is a finite
+\[
+ m(f):=\min\{m\ge0:\beta_R^{(m)}(f)\ne0\}.
+\tag{DT.19}
+\]
+The coarse C4 variational estimate then gives
+\[
+ \sigma_T(J_{R,T}f)\gtrsim_f\frac{e^T}{T^{2m(f)+3}}\to\infty.
+\tag{DT.20}
+\]
+\end{corollary}
+
+\subsection{Exact cross-terminal Cauchy kernel}
+
+For fixed $R<S$ and terminal horizons $T,U>S$, define
+\[
+ \boxed{
+ K_{R,S}^{T,U}:=(W_{R,S}^{[T]})^*W_{R,S}^{[U]}.
+ }
+\tag{DT.21}
+\]
+Then
+\[
+ \|K_{R,S}^{T,U}\|\le1
+\]
+and, by substitution of the terminal gauges,
+\[
+ \boxed{
+ K_{R,S}^{T,U}
+ =G_{R,T}^{-1/2}J_{R,S}^*
+ G_{S,T}^{1/2}G_{S,U}^{1/2}J_{R,S}G_{R,U}^{-1/2}.
+ }
+\tag{DT.22}
+\]
+No selfadjointness of $K_{R,S}^{T,U}$ is asserted.
+
+\begin{theorem}[Exact cross-terminal Cauchy identity]\label{thm:cross-terminal}
+For every $f\in\KXR{R}$,
+\[
+ \boxed{
+ \|(W_{R,S}^{[U]}-W_{R,S}^{[T]})f\|_{X,S}^2
+ =2\|f\|_{X,R}^2
+ -2\operatorname{Re}\langle f,K_{R,S}^{T,U}f\rangle_{X,R}.
+ }
+\tag{DT.23}
+\]
+Thus strong Cauchy convergence is exactly a cross-terminal statement about the
+Hermitian real part of~\eqref{DT.21}, not about convergence of the absolute metrics.
+\end{theorem}
+
+\begin{proof}
+Expand the square and use that both $W_{R,S}^{[T]}$ and $W_{R,S}^{[U]}$ are isometries.
+\end{proof}
+
+\subsection{Smooth odd graph core and dense-core reduction}
+
+\begin{theorem}[Smooth odd graph core]\label{thm:smooth-odd-core}
+For every $R>0$,
+\[
+ \boxed{
+ \overline{C_c^\infty(-R,R)_{\rm odd}}^{\,\|\cdot\|_{X,R}}
+ =\KXR{R}^{-}.
+ }
+\tag{DT.24}
+\]
+For fixed $0<R<S$, if $(W_{R,S,-}^{[T]}f)_T$ is Cauchy for every smooth compactly
+supported odd $f$, then it is Cauchy for every $f\in\KXR{R}^{-}$.
+\end{theorem}
+
+\begin{proof}
+Write $w(\xi)=1+g_\infty(\xi)$.  From the explicit positive series for $g_\infty$,
+\[
+ w(\lambda\xi)\le\lambda^2w(\xi)\qquad(\lambda\ge1).
+\tag{DT.25}
+\]
+If $F=E_Rf$ belongs to the Gamma form domain, the inward dilations
+$F_a(x)=a^{-1/2}F(x/a)$, $a\uparrow1$, converge to $F$ in the weighted Fourier
+$L^2(wd\xi)$ norm and have support compactly inside $(-R,R)$.  Mollification of each
+$F_a$ then converges in the same norm and stays compactly supported in $(-R,R)$.
+Therefore $C_c^\infty(-R,R)$ is a Gamma-form core.  The graph-norm equivalence
+\eqref{3.3} makes it an $X$-graph core.
+
+The odd projection $(I-\mathsf P_R)/2$ is bounded on the graph space by
+Proposition~\ref{prop:parity}; applying it to a smooth core sequence proves~\eqref{DT.24}.
+Finally $\|W_{R,S,-}^{[T]}\|=1$.  For $x\in\KXR{R}^-$ and smooth odd $f$,
+\[
+ \|W_Ux-W_Tx\|
+ \le2\|x-f\|_{X,R}+\|W_Uf-W_Tf\|,
+\]
+which proves the dense-core reduction.
+\end{proof}
+
+\begin{remark}[Core firewall]\label{rem:core-firewall}
+Theorem~\ref{thm:smooth-odd-core} is a form-/graph-core theorem.  It does not assert
+that $C_c^\infty(-R,R)$ is an operator core for $C_{\Gamma,R}$ in the operator graph
+norm.
+\end{remark}
+
+At this point the direct strong odd transport problem has been reduced to the smooth odd
+core and to the exact kernel~\eqref{DT.22}.  The remaining difficulty is the asymptotic
+interaction of the square roots $G_{R,T}^{\pm1/2}$ across different terminal horizons.
