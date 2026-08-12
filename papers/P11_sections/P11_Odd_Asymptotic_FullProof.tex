@@ -2,7 +2,7 @@
 % Canonical inputs condensed here: C4, O3c, C5c, O3d-I1, O3d-I2.
 
 \begin{proof}[Proof of Theorem~\ref{thm:odd}]
-Put
+Set $\mathscr H_T:=L^2(-T,T)$ and put
 \[
  h_T:=H_T^*J_{R,T}f_-,
  \qquad
@@ -26,7 +26,7 @@ Completing the square yields the exact dual formula
 Indeed, the minimizer is
 $Y=(I+\widetilde R_T\widetilde R_T^*)^{-1}\widetilde R_Th_T$.
 
-\paragraph{Step 1: matching lower scale.}
+\paragraph{Step 1: matching lower scale and the sharp constant-mode denominator.}
 By Theorem~\ref{thm:jet-expansion}, if $m=m(f_-)$ is the first nonzero integral jet,
 \[
  \ell_T(f_-):=\langle h_T,\mathbf1_T\rangle
@@ -34,18 +34,49 @@ By Theorem~\ref{thm:jet-expansion}, if $m=m(f_-)$ is the first nonzero integral 
  \frac{e^{T/2}}{T^{m+1/2}}\bigl(1+O(T^{-1})\bigr).
 \tag{6.3}\label{eq:odd-ell-leading}
 \]
-The sharp constant-mode estimate is
+We next prove the sharp denominator
 \[
  \boxed{
  d_T:=\langle\mathbf1_T,A_T\mathbf1_T\rangle=2T+O(1).
  }
 \tag{6.4}\label{eq:odd-constant-sharp}
 \]
-For completeness, the primitive conditioned rest vanishes on $\mathbf1_T$, while the
-higher prime-power part is absolutely summable in $p,k$; its total $L^2$ contribution
-is $O(1)$.  Thus
-$\|R_T\mathbf1_T\|^2=O(1)$ and~\eqref{eq:odd-constant-sharp} follows from
-$\|\mathbf1_T\|_2^2=2T$.
+The point is the exact martingale suppression, not absolute summability of the raw rest
+coefficients.  For fixed $p$ let $J=J_{p,T}(u)$.  If $J=0$, then
+$\mathsf Q_T(u)\eta_{p,k}=0$ for every $k$.  If $k\le J$, both translated points remain
+inside $(-T,T)$ and hence
+$D_{k\log p}E_T\mathbf1_T(u)=0$.  Thus only $1\le J=j<k$ contributes.  From
+\eqref{eq:eta-pk}--\eqref{eq:source-cutoff}, orthonormality of the martingale basis gives
+\[
+ \|\mathsf Q_T(u)\eta_{p,k}\|^2
+ =p^{j-k}-p^{-k}\le p^{j-k}.
+\tag{6.4a}\label{eq:constant-mark-suppression}
+\]
+Let $F_{p,T}$ denote the $p$-sector of $R_T\mathbf1_T$.  On the shell
+$J_{p,T}(u)=j\ge1$,
+\[
+ \|F_{p,T}(u)\|
+ \le
+ \frac{\sqrt{\log p}}{1-p^{-3/4}}\,p^{-j/4-3/4}.
+\tag{6.4b}\label{eq:constant-p-shell-pointwise}
+\]
+Each such shell has measure at most $\log p$.  Summing the geometric series in $j$ gives
+\[
+ \|F_{p,T}\|_2^2
+ \le
+ \frac{(\log p)^2}{(1-p^{-3/4})^2(1-p^{-1/2})}\,p^{-2}.
+\tag{6.4c}\label{eq:constant-p-shell-L2}
+\]
+Different prime sectors are orthogonal.  Therefore
+\[
+ \|R_T\mathbf1_T\|_2^2
+ =\sum_p\|F_{p,T}\|_2^2
+ \le C\sum_p\frac{(\log p)^2}{p^2}<\infty
+\tag{6.4d}\label{eq:constant-rest-uniform}
+\]
+uniformly in $T$.  Since $\|\mathbf1_T\|_2^2=2T$, equation
+\eqref{eq:odd-constant-sharp} follows.
+
 The variational inequality
 \[
  \langle h,A_T^{-1}h\rangle
@@ -204,7 +235,9 @@ fixed form: for every fixed $\theta>17/30$,
  \qquad(x\to\infty).
 \tag{6.18}\label{eq:short-PNT}
 \]
-This is the Guth--Maynard short-interval consequence; we take $\theta=3/5$.
+This is a consequence of Guth--Maynard~\cite{GuthMaynard2026}; we take
+$\theta=3/5$.  Prime powers with exponent at least two contribute
+$O(x^{1/2}\log x)=o(x^{3/5})$, so the same scale supplies the required prime mass.
 At prime scale $q\asymp X=e^{2(T-r)}$, such intervals correspond to $r$-cells $I$ of
 width
 \[
