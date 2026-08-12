@@ -18,6 +18,8 @@
 \newcommand{\KXR}[1]{\mathcal K_{X,#1}}
 \newcommand{\HG}{\mathscr H_{\log}}
 \newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\Sp}{\mathcal S}
 
 \title[P11 --- Global Coupling]{P11 --- Global Coupling and the Object-X Candidate Geometry}
 \author{Objekt-X-Programm}
@@ -28,10 +30,16 @@
 \begin{abstract}
 P11 develops a finite-horizon Hilbert-space geometry for a source-first candidate of
 Object~X and isolates, without overclaim, the remaining passage to a global terminal
-geometry.  The construction combines a source-windowed archimedean Gamma form with a
-finite-horizon Feshbach--Schur contribution and equips the resulting graph spaces with
-positive terminal metric operators.  Their normalized transition maps are exact
-isometries.  Relative future metrics satisfy an exact compression identity, and a second
+geometry.  The construction couples a source-windowed archimedean Gamma form to a
+source-dependent finite-adic martingale cutoff and a finite-horizon Feshbach--Schur
+contribution.  The resulting graph spaces possess canonical bounded injective
+transition maps and positive terminal metric operators; their normalized same-terminal
+transitions are exact isometries.  The finite-window Gamma/Feshbach geometry is compact,
+but its concrete Gamma-preconditioned Schur term lies in no finite Schatten class.  The
+pure Gamma backbone has a canonical large-window Mosco/strong-resolvent limit, while the
+finite-window compactness is lost in that limit.
+
+Relative future metrics satisfy an exact compression identity, and a second
 normalization gives an isometric modulus map.  On the odd sector, the future Schur term
 has a sharp fixed-vector asymptotic of size $e^T/T^{2m+2}$; at fixed base terminal this
 forces superpolynomial growth of the associated odd condition number.  Consequently one
@@ -84,31 +92,125 @@ a final global Hilbert space $\KX$, or the Riemann hypothesis.
 \end{remark}
 
 \begin{remark}[Draft provenance]\label{rem:provenance}
-This first paper draft is distilled from the canonical P11 master ledger.  Historical
-audit nodes remain proof provenance.  Superseded formulations are not independent
-inputs: the full-rest transfer is used only in its repaired martingale form, the old
-primitive form-domination shortcut is not assumed, and the O3 branch is kept separate
-from the original strong transport target.
+This draft is distilled from the canonical P11 master ledger.  Historical audit nodes
+remain proof provenance.  Superseded formulations are not independent inputs: the
+full-rest transfer is used only in its repaired martingale form, the old primitive
+form-domination shortcut is not assumed, and the O3 branch is kept separate from the
+original strong transport target.
 \end{remark}
 
-\section{Fixed-window source geometry}\label{sec:source}
+\section{Source-first finite-window geometry}\label{sec:source}
 
-Fix $R>0$ and set
+Fix $R>0$ and put
 \[
  \mathscr H_R:=L^2(-R,R).
 \]
-For $0<R<S$, let
+Let $U_t$ denote translation on the ambient real line and write
 \[
- J_{R,S}:\mathscr H_R\longrightarrow\mathscr H_S
+ D_s:=U_{s/2}-U_{-s/2}.
 \]
-be zero extension.  At a common terminal horizon $T>S$ we also write
-$E_R=J_{R,T}$ and $E_S=J_{S,T}$.
+For $0<R<S$, $E_{R,S}$ denotes zero extension from $(-R,R)$ to $(-S,S)$; $E_R$
+denotes zero extension to $L^2(\mathbb R)$.
+
+\subsection{Finite-adic martingale coordinates and source-dependent cutoff}
+
+For each prime $p$, let $K_p^0$ be the centered $p$-adic mark sector with orthonormal
+martingale basis
+\[
+ \{\psi_{p,j}:j\ge0\}.
+\]
+For $k\ge1$ define the normalized prime-power residual mark
+\[
+ \boxed{
+ \eta_{p,k}
+ =\sqrt{p-1}\sum_{j=0}^{k-1}p^{(j-k)/2}\psi_{p,j}.
+ }
+\tag{2.1}
+\]
+Different prime sectors are orthogonal.  The source-dependent martingale depth is
+\[
+ \boxed{
+ J_{p,R}(u)
+ :=\max\left\{0,
+ \left\lfloor\frac{2(R-|u|)_+}{\log p}\right\rfloor
+ \right\}.
+ }
+\tag{2.2}
+\]
+Define fiberwise
+\[
+ \boxed{
+ \mathsf Q_R(u)\psi_{p,j}
+ :=1_{\{j<J_{p,R}(u)\}}\psi_{p,j}.
+ }
+\tag{2.3}
+\]
+
+\begin{proposition}[Source-coupled finite-adic conditioning]\label{prop:source-conditioning}
+For every fixed $R$, $u\mapsto\mathsf Q_R(u)$ is a measurable field of orthogonal
+projections.  Hence
+\[
+ (\mathsf Q_RF)(u):=\mathsf Q_R(u)F(u)
+\]
+defines a positive orthogonal projection on the corresponding finite-adic
+$L^2$-field.  Moreover
+\[
+ \mathsf Q_R(u)\eta_{p,k}
+ =\sqrt{p-1}\sum_{j=0}^{\min(k-1,J_{p,R}(u)-1)}
+ p^{(j-k)/2}\psi_{p,j}.
+\tag{2.4}
+\]
+In particular, the full $p^k$ mark is retained whenever
+\[
+ |u|+\frac{k}{2}\log p\le R,
+\]
+while deeper martingale levels are canonically removed near the source boundary.
+\end{proposition}
+
+\begin{proof}
+Equation~\eqref{2.3} is the orthogonal coordinate projection onto the first
+$J_{p,R}(u)$ martingale levels.  The depth function is integer-valued and measurable,
+so the resulting field is measurable.  Applying the projection to~\eqref{2.1} gives
+\eqref{2.4}.  If $k\le J_{p,R}(u)$, all coordinates $0,\dots,k-1$ survive, which is
+exactly the stated overlap condition.
+\end{proof}
+
+\begin{remark}[Why the conditioning is genuinely source-first]\label{rem:sourcefirst}
+The depth depends on $|u|$, so the resulting operator is not translation invariant.
+This is precisely what is absent from a pure Haar or translation-invariant regulator.
+The neutral finite-adic hub is fixed by every unital conditional expectation and must
+therefore be treated separately by the Feshbach step below; the conditioning is not a
+finished global Object-X compressor.
+\end{remark}
+
+The source-windowed neutral hub and conditioned residual operator are
+\[
+ \boxed{
+ H_R
+ =P_R\sum_{p^k\le e^{2R}}
+ \sqrt{\log p}\,p^{-3k/4}D_{k\log p}E_R,
+ }
+\tag{2.5}
+\]
+\[
+ \boxed{
+ (R_Rf)(u)
+ =\sum_{p^k\le e^{2R}}
+ \sqrt{\log p}\,p^{-k/4}
+ D_{k\log p}E_Rf(u)\otimes\mathsf Q_R(u)\eta_{p,k}.
+ }
+\tag{2.6}
+\]
+For fixed $R$ these are bounded finite-window operators.
+
+\subsection{Archimedean Gamma form}
 
 The archimedean source form is encoded by
 \[
  m_\Gamma(\xi):=1+g_\infty(\xi),
  \qquad
  m_\Gamma(\xi)\asymp\log(2+|\xi|).
+\tag{2.7}
 \]
 Define
 \[
@@ -116,25 +218,19 @@ Define
  =\frac1{2\pi}\int_{\mathbb R}
  m_\Gamma(\xi)\widehat{E_Rf}(\xi)
  \overline{\widehat{E_Rg}(\xi)}\,d\xi.
+\tag{2.8}
 \]
 Let $C_{\Gamma,R}$ be the positive selfadjoint operator represented by this closed form.
 
 \begin{proposition}[Gamma graph space]\label{prop:gamma}
-For every fixed $R>0$, $\mathfrak c_{\Gamma,R}$ is densely defined, closed and positive.
-Its graph completion defines the native source space
-\[
- \KXR{R}:=\bigl(\mathcal D(\mathfrak c_{\Gamma,R}),\|\cdot\|_{X,R}\bigr).
-\]
-Moreover
-\[
- C_{\Gamma,R}\ge I.
-\]
-The committed finite-window Gamma theorem gives compact embedding of this graph space
-into $L^2(-R,R)$ and hence compact resolvent for the finite-window Gamma realization.
+For every fixed $R>0$, $\mathfrak c_{\Gamma,R}$ is densely defined, closed and positive,
+$C_{\Gamma,R}\ge I$, and its form domain is a Hilbert space for the Gamma graph norm.
+The embedding of this finite-window graph space into $L^2(-R,R)$ is compact; equivalently
+$C_{\Gamma,R}^{-1}$ is compact.
 \end{proposition}
 
 \begin{remark}[Logarithmic, not Sobolev, regularity]\label{rem:log}
-Up to equivalent fixed-window norms, the native form threshold is
+Up to equivalent fixed-window norms,
 \[
  \mathcal D(\mathfrak c_{\Gamma,R})
  \simeq
@@ -145,96 +241,317 @@ It does not force the entire form domain into any fixed $H^s$, $s>0$.
 
 \section{Finite-horizon Feshbach geometry}\label{sec:feshbach}
 
-At terminal horizon $T>R$, the source couples to a hub/rest system.  The exact
-finite-horizon Schur contribution is
+Put
 \[
- \Sigma_T
- =H_T(I+R_T^*R_T)^{-1}H_T^*\ge0.
+ B_R:=(I+R_R^*R_R)^{-1},
 \]
-The source-restricted terminal form is
+and define the positive source-level Schur contribution
 \[
- q_T^X(E_Rf,E_Rg)
- =\mathfrak c_{\Gamma,R}[f,g]
- +\langle\Sigma_R^{[T]}f,g\rangle_{L^2(-R,R)},
+ \Sigma_R:=H_RB_RH_R^*\ge0.
+\tag{3.1}
 \]
-where
+The finite-level Object-X candidate form is
 \[
- \Sigma_R^{[T]}:=E_R^*\Sigma_T E_R
+ \boxed{
+ q_R^X(f,g)
+ :=\mathfrak c_{\Gamma,R}[f,g]+\langle\Sigma_Rf,g\rangle.
+ }
+\tag{3.2}
 \]
-is bounded, positive and selfadjoint.
+Because $H_R$ and $R_R$ are bounded at fixed $R$,
+\[
+ \mathcal D(q_R^X)=\mathcal D(\mathfrak c_{\Gamma,R}).
+\]
 
-\begin{proposition}[Bounded Schur perturbation]\label{prop:bounded-schur}
-For fixed $R<T$,
+\begin{proposition}[Bounded Schur perturbation and graph norm]\label{prop:bounded-schur}
+The operator
 \[
- F_R^{[T]}:=C_{\Gamma,R}+\Sigma_R^{[T]}
+ F_R^{\rm hub}:=C_{\Gamma,R}+\Sigma_R
 \]
-is positive selfadjoint and
+is positive selfadjoint with
 \[
- \mathcal D(F_R^{[T]})=\mathcal D(C_{\Gamma,R}).
+ \mathcal D(F_R^{\rm hub})=\mathcal D(C_{\Gamma,R}).
 \]
+Moreover
+\[
+ \mathfrak c_{\Gamma,R}[f]
+ \le q_R^X(f)
+ \le(1+\|H_R\|^2)\mathfrak c_{\Gamma,R}[f].
+\tag{3.3}
+\]
+Thus
+\[
+ \KXR{R}:=\bigl(\mathcal D(q_R^X),\|f\|_{X,R}^2:=q_R^X(f)\bigr)
+\]
+is a Hilbert space.  It is a finite-level graph space and is not identified here with a
+final global Object~X.
 \end{proposition}
 
 \begin{proof}
-$(I+R_T^*R_T)^{-1}$ is a positive contraction and $H_T$ is bounded at fixed $T$;
-hence $\Sigma_R^{[T]}$ is a bounded selfadjoint perturbation.  The standard bounded
-perturbation theorem yields the claim.
+Since $0<B_R\le I$, one has
+\[
+ 0\le\langle\Sigma_Rf,f\rangle
+ =\|B_R^{1/2}H_R^*f\|^2
+ \le\|H_R\|^2\|f\|_2^2.
+\]
+As $\mathfrak c_{\Gamma,R}[f]\ge\|f\|_2^2$, this gives~\eqref{3.3}; closedness and the
+operator-domain statement follow from the bounded perturbation theorem.
 \end{proof}
 
 \subsection{Full-rest martingale representation}
 
-The rest Gram is not an orthogonal direct sum over prime powers $k$ inside a fixed prime
-sector.  Its exact positive decomposition is indexed instead by prime/martingale-depth
-pairs $(p,a)$.  With
+The rest Gram is not an orthogonal direct sum over prime powers $k$ inside one prime
+sector.  Its exact positive decomposition is indexed by prime/martingale-depth pairs
+$(p,a)$.  With
 \[
- \Phi_{p,a,T}[f](u)
+ \Phi_{p,a,R}[f](u)
  :=\sum_{k\ge a+1}p^{-3k/4}K_{k\log p}f(u),
 \]
-one has
+one has an exact decomposition
 \[
- \mathfrak R_T(f,g)
+ \mathfrak R_R(f,g)
  =\sum_p(\log p)(p-1)\sum_{a\ge0}p^a
- \int_{\Omega_{p,a,T}}
- \Phi_{p,a,T}[f](u)\overline{\Phi_{p,a,T}[g](u)}\,du.
+ \int_{\Omega_{p,a,R}}
+ \Phi_{p,a,R}[f](u)\overline{\Phi_{p,a,R}[g](u)}\,du.
+\tag{3.4}
 \]
-Thus a canonical full analysis operator $\widetilde R_T$ satisfies
+Thus a canonical full analysis operator $\widetilde R_R$ satisfies
 \[
- \boxed{\widetilde R_T^*\widetilde R_T=R_T^*R_T.}
+ \boxed{\widetilde R_R^*\widetilde R_R=R_R^*R_R.}
+\tag{3.5}
 \]
 
 \begin{remark}[Primitive form-domination firewall]\label{rem:primitive}
 We do not assume
 \[
- R_T^*R_T\stackrel?\ge(R_T^{(1)})^*R_T^{(1)}.
+ R_R^*R_R\stackrel?\ge(R_R^{(1)})^*R_R^{(1)}.
 \]
-Different prime powers in one prime sector are nonorthogonal, so this form order is not
-automatic.  The needed future-certificate transfer is instead obtained through the full
-martingale analysis operator and the exponentially small higher-prime-power future tail.
+Different prime powers in one prime sector are nonorthogonal.  The later future-certificate
+transfer uses the full martingale analysis operator rather than this unproved shortcut.
 \end{remark}
 
-\section{Terminal metric operators and normalized transports}\label{sec:terminal}
+\subsection{Finite-window Schatten profile}
 
-For $R<T$, let
+Define the Gamma-preconditioned hub operator and normalized Schur term
 \[
- J_{R,T}:\KXR{R}\longrightarrow\KXR{T}
+ K_R:=C_{\Gamma,R}^{-1/2}H_R,
+ \qquad
+ S_R:=K_RB_RK_R^*.
+\tag{3.6}
 \]
-be the terminal embedding and define
+
+\begin{theorem}[Compact but no finite Schatten order]\label{thm:schatten}
+For every nontrivial source level
+\[
+ R>\frac12\log2,
+\]
+one has
+\[
+ \boxed{S_R\in\cK,}
+\]
+but
+\[
+ \boxed{S_R\notin\Sp_p\qquad\text{for every finite }1\le p<\infty.}
+\tag{3.7}
+\]
+In particular, the concrete source-windowed Gamma preconditioning plus C1z-B
+Feshbach geometry does not supply the finite Schatten order required by a naive
+$\Sp_4/\Sp_2$ Fredholm route.
+\end{theorem}
+
+\begin{proof}
+The symbol estimate~\eqref{2.7} implies
+\[
+ c\log(2+|\xi|)\le m_\Gamma(\xi)\le C\log(2+|\xi|).
+\tag{3.8}
+\]
+Choose a small interval $I\Subset(-R,R)$ and the localized orthonormal Fourier family
+\[
+ e_m(u)=|I|^{-1/2}1_I(u)e^{2\pi imu/|I|}.
+\]
+Then
+\[
+ \mathfrak c_{\Gamma,R}[e_m]\le C_I\log(2+m).
+\tag{3.9}
+\]
+For a positive $C\ge I$, Cauchy--Schwarz gives
+\[
+ \langle C^{-1}f,f\rangle\,\langle Cf,f\rangle\ge\|f\|^4.
+\]
+Hence
+\[
+ \|C_{\Gamma,R}^{-1/2}e_m\|^2\ge\frac{c_I}{\log(2+m)}.
+\tag{3.10}
+\]
+The interval can be chosen so that one primitive $p=2$ translation copy in $H_R$ is
+isolated from all other active translation copies.  Therefore
+\[
+ \|H_Re_m\|\ge c_2>0,
+ \qquad
+ \mathfrak c_{\Gamma,R}[H_Re_m]\le C_R\log(2+m),
+\]
+and again
+\[
+ \|K_Re_m\|^2\ge\frac{c_R}{\log(2+m)}.
+\tag{3.11}
+\]
+Thus $K_R\notin\Sp_q$ for every finite $q$, since
+$\sum_m(\log(2+m))^{-q/2}=\infty$.  Finally, fixed-window boundedness of $R_R$ gives
+\[
+ B_R\ge\beta_RI,
+ \qquad
+ \beta_R=(1+\|R_R\|^2)^{-1}>0.
+\]
+Consequently
+\[
+ S_R=K_RB_RK_R^*\ge\beta_RK_RK_R^*.
+\]
+If $S_R\in\Sp_p$ for some finite $p$, eigenvalue monotonicity for positive compact
+operators would imply $K_RK_R^*\in\Sp_p$, hence $K_R\in\Sp_{2p}$, contradicting
+\eqref{3.11}.
+\end{proof}
+
+\begin{remark}[Scope of Theorem~\ref{thm:schatten}]\label{rem:schatten-scope}
+This is a no-go for the \emph{specific} Gamma-preconditioned finite-window Schur
+architecture.  It is not a no-go against a different global Object-X geometry or against
+a future Fredholm realization by another mechanism.
+\end{remark}
+
+\subsection{Large-window Gamma limit}
+
+On $L^2(\mathbb R)$ define
+\[
+ q_\Gamma(f)
+ :=\frac1{2\pi}\int_{\mathbb R}m_\Gamma(\xi)|\widehat f(\xi)|^2\,d\xi,
+\tag{3.12}
+\]
+with positive selfadjoint operator $C_\Gamma$.
+Identify the finite-window form domain with
+\[
+ \mathcal V_R:=\mathcal D(q_\Gamma)\cap
+ \{f:\operatorname{supp}f\subset[-R,R]\}.
+\]
+Let
+\[
+ \Phi_R(f):=
+ \begin{cases}
+ q_\Gamma(f),&f\in\mathcal V_R,\\
+ +\infty,&f\notin\mathcal V_R.
+ \end{cases}
+\tag{3.13}
+\]
+
+\begin{theorem}[Mosco and strong-resolvent Gamma limit]\label{thm:mosco}
+As $R\to\infty$,
+\[
+ \boxed{\Phi_R\xrightarrow[M]{}q_\Gamma.}
+\tag{3.14}
+\]
+Equivalently at the positive resolvent point $0$,
+\[
+ \boxed{
+ E_RC_{\Gamma,R}^{-1}P_R
+ \xrightarrow[s]{R\to\infty}
+ C_\Gamma^{-1}
+ }
+\tag{3.15}
+\]
+on $L^2(\mathbb R)$.  This convergence is not norm-resolvent.
+\end{theorem}
+
+\begin{proof}
+The spaces $\mathcal V_R$ are increasing.  Their union is dense in
+$\mathcal D(q_\Gamma)$ for the form norm: first approximate by Schwartz functions in the
+weighted Fourier $L^2$ norm and then cut them off in physical space.  The logarithmic
+weight satisfies
+\[
+ \log(2+|\xi|)\le C_\varepsilon(1+|\xi|^2)^\varepsilon,
+\]
+so the cutoffs converge in the Gamma form norm.  Weak lower semicontinuity of the closed
+form gives the Mosco liminf condition, and the form-dense cutoffs give the recovery
+sequence.
+
+For $h\in L^2(\mathbb R)$, $C_\Gamma^{-1}h$ is the variational solution in the full form
+domain and $E_RC_{\Gamma,R}^{-1}P_Rh$ is its $q_\Gamma$-orthogonal projection onto
+$\mathcal V_R$; density yields~\eqref{3.15}.  Each finite-window resolvent is compact,
+whereas
+\[
+ C_\Gamma^{-1}\simeq M_{m_\Gamma^{-1}}
+\]
+is a nonzero multiplication operator on a nonatomic $L^2$ space and hence is not
+compact.  A norm limit of compact operators would be compact, so norm-resolvent
+convergence is impossible.
+\end{proof}
+
+\begin{remark}[Gamma limit is not the Object-X limit]\label{rem:gamma-limit}
+Theorem~\ref{thm:mosco} concerns the pure Gamma backbone.  It does not control the
+large-$R$ limit of the full source-coupled Prime/Rest Schur geometry.  In particular,
+the finite-window compactness is a confinement effect and cannot by itself supply the
+global Object-X/Fredholm layer.
+\end{remark}
+
+\section{Graph transitions and normalized terminal transports}\label{sec:terminal}
+
+\begin{theorem}[Bounded graph transitions]\label{thm:graph-transition}
+For every $0<R<S$, zero extension maps the graph domain continuously into the larger
+graph domain and satisfies
+\[
+ \boxed{
+ q_S^X(E_{R,S}f)
+ \le(1+\|H_S\|^2)q_R^X(f).
+ }
+\tag{4.1}
+\]
+Thus
+\[
+ \boxed{
+ J_{R,S}:\KXR{R}\longrightarrow\KXR{S},
+ \qquad J_{R,S}f=E_{R,S}f,
+ }
+\tag{4.2}
+\]
+is bounded and injective, and
+\[
+ \boxed{J_{S,T}J_{R,S}=J_{R,T}.}
+\tag{4.3}
+\]
+\end{theorem}
+
+\begin{proof}
+The Gamma part is exactly invariant under zero extension:
+\[
+ \mathfrak c_{\Gamma,S}[E_{R,S}f]
+ =\mathfrak c_{\Gamma,R}[f].
+\]
+Furthermore
+\[
+ \langle\Sigma_SE_{R,S}f,E_{R,S}f\rangle
+ \le\|H_S\|^2\|f\|_2^2
+ \le\|H_S\|^2q_R^X(f).
+\]
+This proves~\eqref{4.1}.  Injectivity and the cocycle are inherited from zero extension.
+\end{proof}
+
+For $R<T$ define the positive terminal metric operator
 \[
  \boxed{G_{R,T}:=J_{R,T}^*J_{R,T}\in\mathcal B(\KXR{R}).}
+\tag{4.4}
 \]
-The operator $G_{R,T}$ is positive and boundedly invertible.
+It is boundedly invertible because $J_{R,T}$ is bounded below on the fixed source level
+in the committed finite-horizon geometry.
 
 \begin{proposition}[Pullback identity]\label{prop:pullback}
 For $0<R<S<T$,
 \[
  \boxed{J_{R,S}^*G_{S,T}J_{R,S}=G_{R,T}.}
+\tag{4.5}
 \]
 \end{proposition}
 
 \begin{proof}
 Since $J_{S,T}J_{R,S}=J_{R,T}$,
 \[
- J_{R,S}^*G_{S,T}J_{R,S}
- =J_{R,T}^*J_{R,T}=G_{R,T}.
+ J_{R,S}^*G_{S,T}J_{R,S}=J_{R,T}^*J_{R,T}=G_{R,T}.
 \]
 \end{proof}
 
@@ -244,42 +561,25 @@ Define
  W_{R,S}^{[T]}
  :=G_{S,T}^{1/2}J_{R,S}G_{R,T}^{-1/2}.
  }
+\tag{4.6}
 \]
 
 \begin{theorem}[Finite-terminal isometry and cocycle]\label{thm:terminal-isometry}
 For every $0<R<S<T$,
 \[
  \boxed{(W_{R,S}^{[T]})^*W_{R,S}^{[T]}=I.}
+\tag{4.7}
 \]
-Thus $W_{R,S}^{[T]}$ is an isometry.  More explicitly, whenever
-\[
- 0<R<S<U<T,
-\]
-the same-terminal maps satisfy
+Whenever $0<R<S<U<T$,
 \[
  \boxed{W_{S,U}^{[T]}W_{R,S}^{[T]}=W_{R,U}^{[T]}.}
+\tag{4.8}
 \]
 \end{theorem}
 
 \begin{proof}
-The isometry follows from Proposition~\ref{prop:pullback}:
-\[
-\begin{aligned}
-(W_{R,S}^{[T]})^*W_{R,S}^{[T]}
-&=G_{R,T}^{-1/2}J_{R,S}^*G_{S,T}J_{R,S}G_{R,T}^{-1/2}\\
-&=I.
-\end{aligned}
-\]
-For the cocycle, the middle factors cancel and
-\[
-\begin{aligned}
-W_{S,U}^{[T]}W_{R,S}^{[T]}
-&=G_{U,T}^{1/2}J_{S,U}G_{S,T}^{-1/2}
-  G_{S,T}^{1/2}J_{R,S}G_{R,T}^{-1/2}\\
-&=G_{U,T}^{1/2}J_{R,U}G_{R,T}^{-1/2}
- =W_{R,U}^{[T]}.
-\end{aligned}
-\]
+Equation~\eqref{4.7} follows from~\eqref{4.5}; the cocycle follows by cancellation of
+the middle factors and~\eqref{4.3}.
 \end{proof}
 
 \begin{remark}[Finite isometry is not terminal convergence]\label{rem:notlimit}
@@ -289,27 +589,24 @@ imply that $W_{R,S}^{[T]}$ is Cauchy as $T\to\infty$.
 
 \section{Relative future metrics}\label{sec:relative}
 
-Fix
-\[
- 0<R<S<T<U
-\]
-and define
+Fix $0<R<S<T<U$ and define
 \[
  A_R^{T,U}:=G_{R,T}^{-1/2}G_{R,U}G_{R,T}^{-1/2},
-\]
-\[
+\qquad
  A_S^{T,U}:=G_{S,T}^{-1/2}G_{S,U}G_{S,T}^{-1/2}.
+\tag{5.1}
 \]
 Write $W=W_{R,S}^{[T]}$.
 
 \begin{theorem}[Exact relative compression]\label{thm:relative-compression}
 \[
  \boxed{W^*A_S^{T,U}W=A_R^{T,U}.}
+\tag{5.2}
 \]
 \end{theorem}
 
 \begin{proof}
-Insert the definitions and use the pullback identity for $V=T$ and $V=U$.
+Insert the definitions and use the pullback identity for terminal horizons $T$ and $U$.
 \end{proof}
 
 Define
@@ -324,13 +621,9 @@ Define
 \end{corollary}
 
 \begin{remark}[First-power firewall]\label{rem:firstpower}
-The exact identity
-\[
- W^*A_SW=A_R
-\]
-does not imply invariance of $\Ran W$ under $A_S$, and it does not determine the
-compression of $A_S^{1/2}$.  The missing information is genuine square-root/range
-geometry.
+The exact identity $W^*A_SW=A_R$ does not imply invariance of $\Ran W$ under $A_S$, and
+it does not determine the compression of $A_S^{1/2}$.  The missing information is
+genuine square-root/range geometry.
 \end{remark}
 
 \section{Odd future asymptotics and conditioning}\label{sec:odd}
@@ -358,6 +651,7 @@ For fixed $R$ and fixed nonzero smooth odd $f_-$,
  =c_m^2|\beta_R^{(m)}(f_-)|^2
  \frac{e^T}{T^{2m+2}}(1+o(1)).
  }
+\tag{6.1}
 \]
 The proof uses
 \[
@@ -367,10 +661,11 @@ a signed mean-zero future-edge certificate, prime-cell quadrature, and the full-
 martingale lift of Section~\ref{sec:feshbach}.
 \end{theorem}
 
-\begin{remark}[Draft 0.1 proof status]\label{rem:odd-proof}
-Theorem~\ref{thm:odd} is an audited result.  The first draft records its proof
-architecture; the next proof pass must expand the constant-mode estimate, signed
-certificate cost, prime quadrature and full-rest squeeze into self-contained lemmas.
+\begin{remark}[Current proof status]\label{rem:odd-proof}
+Theorem~\ref{thm:odd} is an audited result.  The present draft still records its proof
+architecture rather than the full certificate/quadrature/squeeze proof.  Those pieces
+are completed in the committed audit chain and will be expanded in the dedicated proof
+completion pass.
 \end{remark}
 
 Fix a base terminal $T_0>R$.  The fixed-vector Rayleigh quotient satisfies
@@ -380,14 +675,11 @@ Fix a base terminal $T_0>R$.  The fixed-vector Rayleigh quotient satisfies
          {\langle G_{R,T_0}f_-,f_-\rangle}
  \sim C_{T_0,f_-}\frac{e^U}{U^{2m+2}}.
 \]
-The audited odd comparison theorem then yields:
 
 \begin{corollary}[Superpolynomial odd conditioning]\label{cor:conditioning}
 For every $N>0$,
 \[
- \boxed{
- U^{-N}\kappa(A_{T_0,U}^{R,-})\longrightarrow\infty.
- }
+ \boxed{U^{-N}\kappa(A_{T_0,U}^{R,-})\longrightarrow\infty.}
 \]
 Thus, with
 \[
@@ -395,9 +687,7 @@ Thus, with
 \]
 one has
 \[
- \boxed{
- \forall N>0:\qquad U^{-N}\chi_{T_0,U}^{R,-}\longrightarrow\infty.
- }
+ \boxed{\forall N>0:\qquad U^{-N}\chi_{T_0,U}^{R,-}\longrightarrow\infty.}
 \]
 \end{corollary}
 
@@ -458,8 +748,8 @@ Let
  \qquad
  \mathscr K:=I-W^*Q.
 \]
-Since $W$ is an isometry, $P$ is the orthogonal projection onto the closed range
-$\Ran W$.  The exact defect balance is
+Since $W$ is an isometry, $P$ is the orthogonal projection onto $\Ran W$.  The exact
+defect balance is
 \[
  \boxed{
  \mathscr K+\mathscr K^*
@@ -486,9 +776,7 @@ If the sufficient product mechanism
 \]
 holds, then
 \[
- \boxed{
- \forall N>0:\qquad U^N\|\Theta_{T_0,U}^-\|\to0.
- }
+ \boxed{\forall N>0:\qquad U^N\|\Theta_{T_0,U}^-\|\to0.}
 \]
 \end{corollary}
 
@@ -549,7 +837,7 @@ The exact future cross-Gram representation uses the fixed-$T_0$ complement
  :=\ker(J_{R,S}^*G_{S,T_0})\cap\KXR{S}^{-}.
 \]
 For $f\in\KXR{R}^{-}$ and $g\in\mathcal C^-_{S,T_0}(R)$, the norm of $\mathscr B$ is
-controlled exactly by the future cross-Gram
+controlled exactly by
 \[
  \langle(G_{S,U}-G_{S,T_0})J_{R,S}f,g\rangle
 \]
@@ -569,8 +857,7 @@ $[-R,R]$ and define
 Then
 \[
  g_h\in\mathcal C^-_{S,T_0}(R),
- \qquad
- g_h\ne0,
+ \qquad g_h\ne0,
 \]
 and $g_h$ is compactly supported.  Its first nonzero integral jet has finite order
 $m_h$.
@@ -697,16 +984,19 @@ prime-power and archimedean normalization.
 \begin{openproblem}[Global Fredholm/Schatten layer]\label{open:fredholm}
 Determine whether the finite-horizon Feshbach operators admit a canonical global limit
 with the Schatten/Fredholm control required for a genuine determinant or resolvent
-formalism.  Finite Feshbach identities alone do not provide such a limit.
+formalism.  The finite-window Schatten obstruction of Theorem~\ref{thm:schatten} does
+not decide this global question.
 \end{openproblem}
 
 \section{Conclusion}\label{sec:conclusion}
 
-The finite-horizon Object-X candidate geometry provides a closed logarithmic Gamma graph
-space, positive Feshbach corrections, exact terminal pullback metrics, normalized
+The finite-horizon Object-X candidate geometry now has a source-explicit finite-adic
+conditioning, a closed logarithmic Gamma graph space, positive Feshbach corrections,
+canonical bounded graph transitions, exact terminal pullback metrics, normalized
 transition isometries, relative future compression, a modulus isometry, and sharp odd
-fixed-vector future asymptotics.  These results survive the preceding no-go analysis and
-form a coherent source-first finite-horizon structure.
+fixed-vector future asymptotics.  The finite-window Gamma/Feshbach geometry is compact
+but not of finite Schatten order in the concrete B2-A sense; the pure Gamma backbone has
+a strong large-window resolvent limit but loses finite-window compactness.
 
 The main asymptotic bottleneck is nevertheless still open.  Strong odd terminal
 transport has not been proved or disproved.  Superpolynomial odd conditioning shows that
