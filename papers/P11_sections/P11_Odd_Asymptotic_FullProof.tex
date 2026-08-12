@@ -1,0 +1,339 @@
+% P11 paper module: complete proof of the sharp fixed-vector odd Schur asymptotic.
+% Canonical inputs condensed here: C4, O3c, C5c, O3d-I1, O3d-I2.
+
+\begin{proof}[Proof of Theorem~\ref{thm:odd}]
+Put
+\[
+ h_T:=H_T^*J_{R,T}f_-,
+ \qquad
+ A_T:=I+R_T^*R_T.
+\]
+By parity, $h_T$ is even.  The full-rest factorization
+\eqref{eq:full-rest-gram}, now at terminal level $T$, gives a canonical analysis
+operator $\widetilde R_T:\mathscr H_T\to\mathscr Z_T$ with
+\[
+ A_T=I+\widetilde R_T^*\widetilde R_T.
+\]
+Completing the square yields the exact dual formula
+\[
+ \boxed{
+ \langle h_T,A_T^{-1}h_T\rangle
+ =\inf_{Y\in\mathscr Z_T}
+ \bigl(\|h_T-\widetilde R_T^*Y\|_2^2+\|Y\|_{\mathscr Z_T}^2\bigr).
+ }
+\tag{6.2}\label{eq:odd-dual}
+\]
+Indeed, the minimizer is
+$Y=(I+\widetilde R_T\widetilde R_T^*)^{-1}\widetilde R_Th_T$.
+
+\paragraph{Step 1: matching lower scale.}
+By Theorem~\ref{thm:jet-expansion}, if $m=m(f_-)$ is the first nonzero integral jet,
+\[
+ \ell_T(f_-):=\langle h_T,\mathbf1_T\rangle
+ =-\sqrt2\,c_m\beta_R^{(m)}(f_-)
+ \frac{e^{T/2}}{T^{m+1/2}}\bigl(1+O(T^{-1})\bigr).
+\tag{6.3}\label{eq:odd-ell-leading}
+\]
+The sharp constant-mode estimate is
+\[
+ \boxed{
+ d_T:=\langle\mathbf1_T,A_T\mathbf1_T\rangle=2T+O(1).
+ }
+\tag{6.4}\label{eq:odd-constant-sharp}
+\]
+For completeness, the primitive conditioned rest vanishes on $\mathbf1_T$, while the
+higher prime-power part is absolutely summable in $p,k$; its total $L^2$ contribution
+is $O(1)$.  Thus
+$\|R_T\mathbf1_T\|^2=O(1)$ and~\eqref{eq:odd-constant-sharp} follows from
+$\|\mathbf1_T\|_2^2=2T$.
+The variational inequality
+\[
+ \langle h,A_T^{-1}h\rangle
+ \ge\frac{|\langle h,e\rangle|^2}{\langle e,A_Te\rangle}
+\]
+with $e=\mathbf1_T$ gives
+\[
+ \sigma_T(J_{R,T}f_-)
+ \ge c_m^2|\beta_R^{(m)}(f_-)|^2
+ \frac{e^T}{T^{2m+2}}\bigl(1+O(T^{-1})\bigr).
+\tag{6.5}\label{eq:odd-lower-sharp}
+\]
+It remains to construct a dual certificate with the same leading cost.
+
+\paragraph{Step 2: growing primitive hub and bounded remainder.}
+Choose $\rho_f<R$ with
+$\operatorname{supp}f_-\subset(-\rho_f,\rho_f)$ and fix
+$a_*>\rho_f+2\varepsilon$, where
+$0<\varepsilon<\frac12\log2$.  For a primitive prime $p$ write
+\[
+ a_p:=\frac12\log p,
+ \qquad
+ d_p:=T-a_p,
+ \qquad
+ c_p:=\sqrt{\log p}\,p^{-3/4}.
+\]
+Set
+\[
+ h_T^{\rm grow}
+ :=\sum_{p:\,a_*\le a_p\le T}
+ c_pD_{\log p}^*J_{R,T}f_-,
+ \qquad
+ h_T^{\rm rem}:=h_T-h_T^{\rm grow}.
+\tag{6.6}\label{eq:odd-hub-split}
+\]
+The first omitted primitive block contains only finitely many primes.  For all higher
+prime powers, $\|D_s\|\le2$ and
+\[
+ \sum_p\sum_{k\ge2}\sqrt{\log p}\,p^{-3k/4}<\infty.
+\]
+Hence
+\[
+ \boxed{\sup_T\|h_T^{\rm rem}\|_2<\infty,}
+ \qquad
+ |\langle h_T^{\rm rem},\mathbf1_T\rangle|=O(\sqrt T).
+\tag{6.7}\label{eq:odd-rem-bounded}
+\]
+
+For an even $e\in\mathscr H_T$ put $b_T(t):=e(T-t)$, $0<t<T$.  A direct change of
+variables gives
+\[
+ \langle h_T^{\rm grow},e\rangle
+ =\int_0^Tk_T(t)b_T(t)\,dt,
+\tag{6.8}\label{eq:odd-kernel-pairing}
+\]
+where
+\[
+ k_T(t):=-2\sum_{p:\,a_*\le a_p\le T}c_p f_-(t-d_p).
+\tag{6.9}\label{eq:odd-kernel}
+\]
+For $A=T-t$, ordinary partial summation using the prime number theorem and the compact
+support of $f_-$ and $f_-'$ gives uniformly
+\[
+ |k_T(t)|+|k_T'(t)|
+ \le C_{R,f_-}\frac{e^{A/2}}{\sqrt{1+A}}.
+\tag{6.10}\label{eq:odd-kernel-bound}
+\]
+Consequently
+\[
+ e^{-T}\int_0^T e^{t/2}|k_T(t)|^2dt
+ =O(T^{-1})+O(e^{-T/4}).
+\tag{6.11}\label{eq:odd-kernel-weighted}
+\]
+
+\paragraph{Step 3: exact mean-zero splitting.}
+Let
+\[
+ K_T:=\int_0^Tk_T(t)dt
+ =\langle h_T^{\rm grow},\mathbf1_T\rangle.
+\]
+Equations~\eqref{eq:odd-ell-leading} and~\eqref{eq:odd-rem-bounded} imply
+\[
+ K_T=-\sqrt2\,c_m\beta_R^{(m)}(f_-)
+ \frac{e^{T/2}}{T^{m+1/2}}(1+o(1)).
+\tag{6.12}\label{eq:odd-KT}
+\]
+Define
+\[
+ \mu_T:=\frac{K_T}{2T},
+ \qquad
+ g_T^{\rm grow}:=h_T^{\rm grow}-\mu_T\mathbf1_T,
+ \qquad
+ k_T^0(t):=k_T(t)-\frac{K_T}{T}.
+\tag{6.13}\label{eq:odd-mean-zero}
+\]
+Then
+\[
+ \langle g_T^{\rm grow},\mathbf1_T\rangle=0,
+ \qquad
+ \int_0^Tk_T^0(t)dt=0.
+\]
+The cost of the extracted constant mode is
+\[
+ M_T:=\|\mu_T\mathbf1_T\|_2^2
+ =\frac{|K_T|^2}{2T}
+ =c_m^2|\beta_R^{(m)}(f_-)|^2
+ \frac{e^T}{T^{2m+2}}(1+o(1)).
+\tag{6.14}\label{eq:odd-MT}
+\]
+
+\paragraph{Step 4: signed continuous future-edge certificate.}
+Choose
+$\alpha\in C_c^\infty((0,\varepsilon))$ with $\int\alpha=1$.
+Since $k_T^0$ has mean zero,
+\[
+ \int_0^Tk_T^0(t)b(t)dt
+ =\int_0^T\int_0^\varepsilon
+ k_T^0(t)\alpha(s)[b(t)-b(s)]\,ds\,dt.
+\tag{6.15}\label{eq:odd-anchor-identity}
+\]
+With $r=(t+s)/2$ this becomes
+\[
+ \int k_T^0b
+ =\iint C_T^-(r,t)[b(t)-b(2r-t)]\,dt\,dr,
+ \qquad
+ C_T^-(r,t):=2k_T^0(t)\alpha(2r-t).
+\tag{6.16}\label{eq:odd-signed-continuous}
+\]
+For a primitive prime $q$, with $r_q=T-\frac12\log q$, the corresponding conditioned
+primitive edge on even terminal vectors is exactly
+\[
+ b(t)-b(2r_q-t).
+\]
+Thus~\eqref{eq:odd-signed-continuous} is the continuous model of the actual primitive
+future-rest adjoint.
+
+The continuous primitive rest mass density is
+$m_T(r)=2e^{T-r}$.  Dividing $C_T^-$ by $m_T(r)^{1/2}$ and changing variables
+$s=2r-t$ gives
+\[
+ \|Y_T^{\rm cont,-}\|^2
+ \le C_\alpha e^{-T}\int_0^Te^{t/2}|k_T^0(t)|^2dt.
+\]
+Using~\eqref{eq:odd-kernel-weighted} and
+$|k_T^0|^2\le2|k_T|^2+2|K_T|^2/T^2$ yields
+\[
+ \boxed{\|Y_T^{\rm cont,-}\|^2=o(M_T).}
+\tag{6.17}\label{eq:odd-cont-cost}
+\]
+
+\paragraph{Step 5: discrete prime quadrature.}
+We use the unconditional prime number theorem in short intervals in the following
+fixed form: for every fixed $\theta>17/30$,
+\[
+ \sum_{x<n\le x+x^\theta}\Lambda(n)\sim x^\theta
+ \qquad(x\to\infty).
+\tag{6.18}\label{eq:short-PNT}
+\]
+This is the Guth--Maynard short-interval consequence; we take $\theta=3/5$.
+At prime scale $q\asymp X=e^{2(T-r)}$, such intervals correspond to $r$-cells $I$ of
+width
+\[
+ |I|\asymp X^{-2/5}=e^{-\frac45(T-r)}.
+\]
+For
+\[
+ w_q:=\frac{\log q}{\sqrt q}\left(1-\frac1q\right),
+ \qquad
+ W_I:=\sum_{q:r_q\in I}w_q,
+\]
+short-interval PNT gives uniformly on the future cells
+\[
+ \boxed{W_I\asymp m_T(r_I)|I|.}
+\tag{6.19}\label{eq:prime-cell-mass}
+\]
+Define the mass-normalized coefficients
+\[
+ \lambda_q^{(I)}:=|I|\frac{w_q}{W_I}.
+\]
+Then exactly
+\[
+ \sum_{q:r_q\in I}\lambda_q^{(I)}=|I|,
+ \qquad
+ \sum_{q:r_q\in I}\frac{|\lambda_q^{(I)}|^2}{w_q}
+ =\frac{|I|^2}{W_I}
+ \lesssim\frac{|I|}{m_T(r_I)}.
+\tag{6.20}\label{eq:prime-cell-cost}
+\]
+For every Hilbert-valued Lipschitz function $\Phi$,
+\[
+ \left\|\sum_{q:r_q\in I}\lambda_q^{(I)}\Phi(r_q)
+ -\int_I\Phi(r)dr\right\|
+ \le2|I|^2\sup_{r\in I}\|\Phi'(r)\|.
+\tag{6.21}\label{eq:prime-cell-quadrature}
+\]
+Apply this to the signed edge field in~\eqref{eq:odd-signed-continuous}.  The cost
+identity~\eqref{eq:prime-cell-cost} and~\eqref{eq:odd-cont-cost} produce a primitive
+discrete certificate $Y_T^{\rm prim,-}$ with
+\[
+ \boxed{\|Y_T^{\rm prim,-}\|^2=o(M_T).}
+\tag{6.22}\label{eq:odd-prim-cost}
+\]
+The derivative bound~\eqref{eq:odd-kernel-bound} and
+$\max_I|I|\ll e^{-2T/5}$ give the source quadrature remainder
+\[
+ \boxed{\|Z_T^{\rm quad}\|_2=o(\sqrt{M_T}).}
+\tag{6.23}\label{eq:odd-quadrature-error}
+\]
+Indeed,~\eqref{eq:prime-cell-quadrature} summed over the $O(T)$ total $r$-length gives an
+exponential factor at most $e^{-cT}$ for the $k_T$ part; the constant part
+$-K_T/T$ has zero $t$-derivative and contributes
+$O(|K_T|e^{-2T/5})=o(\sqrt{M_T})$.
+
+\paragraph{Step 6: full-rest lift; no primitive form domination.}
+The primitive certificate of Step~5 is not inserted into the full Schur problem by an
+operator inequality.  Instead use the exact $a=0$ channel of $\widetilde R_T$.
+For each future prime $q$ it decomposes as
+\[
+ (\widetilde R_Tf)_{q,0}
+ =\underbrace{\sqrt{w_q}\,1_{\Omega_{q,0,T}}
+ K_{\log q}^{\rm tr}f}_{P_{q,T}f}
+ +\underbrace{\sqrt{(\log q)(q-1)}\,1_{\Omega_{q,0,T}}
+ \sum_{k\ge2}q^{-3k/4}K_{k\log q}^{\rm tr}f}_{E_{q,T}f}.
+\tag{6.24}\label{eq:future-primitive-tail}
+\]
+Here $K_s^{\rm tr}=P_TD_sE_T$.  Since $\|K_s^{\rm tr}\|\le2$,
+\[
+ \|E_{q,T}\|\le C\sqrt{\log q}\,q^{-1}.
+\]
+All cells used above satisfy
+$\frac12\log q\ge T/2-O(1)$, hence
+\[
+ \boxed{
+ \|E_T^{\rm fut}\|
+ \le C\sqrt{T+1}\,e^{-T/2}.
+ }
+\tag{6.25}\label{eq:future-tail-small}
+\]
+Lift $Y_T^{\rm prim,-}$ isometrically into the $a=0$ component of $\mathscr Z_T$ and
+call the lift $\widehat Y_T^-$.  Absorbing the tail
+$(E_T^{\rm fut})^*\widehat Y_T^-$ into the source remainder gives
+\[
+ g_T^{\rm grow}
+ =\widetilde R_T^*\widehat Y_T^-
+ +Z_T^{\rm quad}+Z_T^{\rm tail},
+\tag{6.26}\label{eq:full-rest-lift}
+\]
+with
+\[
+ \|\widehat Y_T^-\|^2=o(M_T),
+ \qquad
+ \|Z_T^{\rm tail}\|_2=o(\sqrt{M_T}).
+\tag{6.27}\label{eq:full-rest-lift-cost}
+\]
+This is the O3d-I1 repair in the form needed here: the unproved order
+$R_T^*R_T\ge(R_T^{(1)})^*R_T^{(1)}$ is never used.
+
+\paragraph{Step 7: full-hub squeeze.}
+From~\eqref{eq:odd-hub-split},~\eqref{eq:odd-mean-zero} and
+\eqref{eq:full-rest-lift},
+\[
+ h_T=\widetilde R_T^*\widehat Y_T^-+Z_T^{\rm full},
+\]
+where
+\[
+ Z_T^{\rm full}
+ :=\mu_T\mathbf1_T+h_T^{\rm rem}+Z_T^{\rm quad}+Z_T^{\rm tail}.
+\]
+Equations~\eqref{eq:odd-rem-bounded},~\eqref{eq:odd-quadrature-error} and
+\eqref{eq:full-rest-lift-cost}, together with $\sqrt{M_T}\to\infty$, imply
+\[
+ \|Z_T^{\rm full}\|_2^2=M_T(1+o(1)),
+ \qquad
+ \|\widehat Y_T^-\|^2=o(M_T).
+\tag{6.28}\label{eq:full-hub-cost}
+\]
+Insert this admissible pair into the dual formula~\eqref{eq:odd-dual}:
+\[
+ \sigma_T(J_{R,T}f_-)
+ \le M_T(1+o(1)).
+\tag{6.29}\label{eq:odd-upper-sharp}
+\]
+Together with~\eqref{eq:odd-lower-sharp} and~\eqref{eq:odd-MT}, this gives exactly
+\eqref{eq:odd-asymptotic}.
+\end{proof}
+
+\begin{remark}[Scope of the sharp asymptotic]\label{rem:odd-fixed-vector-firewall}
+The proof is for each fixed smooth odd source vector.  The $o(1)$ is not uniform on the
+odd unit sphere and gives no direct control of $G_{R,T}^{-1/2}$ on $T$-dependent
+vectors.  In particular, it does not prove strong terminal transport.
+\end{remark}
