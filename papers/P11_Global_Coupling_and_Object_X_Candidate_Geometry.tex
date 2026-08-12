@@ -39,12 +39,19 @@ but its concrete Gamma-preconditioned Schur term lies in no finite Schatten clas
 pure Gamma backbone has a canonical large-window Mosco/strong-resolvent limit, while the
 finite-window compactness is lost in that limit.
 
-Relative future metrics satisfy an exact compression identity, and a second
-normalization gives an isometric modulus map.  On the odd sector, the future Schur term
-has a sharp fixed-vector asymptotic of size $e^T/T^{2m+2}$; at fixed base terminal this
-forces superpolynomial growth of the associated odd condition number.  Consequently one
-natural Jensen-product route to terminal convergence would require a square-root
-compression defect that decays faster than every inverse power.
+The unnormalised terminal metrics themselves diverge on a dense smooth odd test core.
+Their boundary growth is organized by a canonical infinite family of pullback-compatible
+integral jets, while the normalized transport is governed exactly by a cross-terminal
+Cauchy kernel.  On the odd sector, the future Schur term has a sharp fixed-vector
+asymptotic of size $e^T/T^{2m+2}$; the corresponding mixed-jet sesquilinear form is also
+asymptotically explicit for every fixed smooth odd pair.  The normalized fixed-pair
+Schur geometry becomes asymptotically rank one, leaving uniform finite-jet Gram and
+square-root control as a direct unresolved gate.
+
+At fixed base terminal the odd condition number grows superpolynomially.  Consequently
+one natural Jensen-product route to terminal convergence would require a square-root
+compression defect that decays faster than every inverse power.  This diagnostic route
+is kept logically separate from the direct cross-terminal problem.
 
 The central unresolved source-level problem remains
 \[
@@ -83,6 +90,8 @@ The present draft does not assert
 W_{R,S,-}^{[T]}\to W_{R,S,-}^{[\infty]}\quad\text{strongly},
 \]
 \[
+K_{R,S}^{T,U}\to I,
+\qquad
 \Theta_-\to0,
 \qquad
 \chi_-\|\Theta_-\|\to0,
@@ -403,8 +412,14 @@ and again
  \|K_Re_m\|^2\ge\frac{c_R}{\log(2+m)}.
 \tag{3.11}
 \]
-Thus $K_R\notin\Sp_q$ for every finite $q$, since
-$\sum_m(\log(2+m))^{-q/2}=\infty$.  Finally, fixed-window boundedness of $R_R$ gives
+For $q\ge2$, membership $K_R\in\Sp_q$ would imply
+\[
+ \sum_m\|K_Re_m\|^q<\infty
+\]
+for every orthonormal family, contradicting~\eqref{3.11} because
+$\sum_m(\log(2+m))^{-q/2}=\infty$.  Thus $K_R\notin\Sp_q$ for every finite $q\ge2$.
+For $0<q<2$, the Schatten inclusion $\Sp_q\subset\Sp_2$ yields the same conclusion.
+Finally, fixed-window boundedness of $R_R$ gives
 \[
  B_R\ge\beta_RI,
  \qquad
@@ -414,9 +429,8 @@ Consequently
 \[
  S_R=K_RB_RK_R^*\ge\beta_RK_RK_R^*.
 \]
-If $S_R\in\Sp_p$ for some finite $p$, eigenvalue monotonicity for positive compact
-operators would imply $K_RK_R^*\in\Sp_p$, hence $K_R\in\Sp_{2p}$, contradicting
-\eqref{3.11}.
+If $S_R\in\Sp_p$ for some finite $p\ge1$, eigenvalue monotonicity for positive compact
+operators would imply $K_RK_R^*\in\Sp_p$, hence $K_R\in\Sp_{2p}$, a contradiction.
 \end{proof}
 
 \begin{remark}[Scope of Theorem~\ref{thm:schatten}]\label{rem:schatten-scope}
@@ -663,6 +677,8 @@ it does not determine the compression of $A_S^{1/2}$.  The missing information i
 genuine square-root/range geometry.
 \end{remark}
 
+\input{P11_sections/P11_Direct_Terminal_Bridge}
+
 \section{Odd future asymptotics and conditioning}\label{sec:odd}
 
 Let
@@ -674,8 +690,8 @@ and let
 \[
  m:=\min\{j\ge0:\beta_R^{(j)}(f_-)\ne0\}
 \]
-be the first nonvanishing \emph{integral} jet.  These $\beta_R^{(j)}$ are not local
-boundary derivatives.  Put
+be the first nonvanishing integral jet, whose existence follows from
+Corollary~\ref{cor:first-jet}.  Put
 \[
  c_m:=\binom{2m}{m}4^{-m}.
 \]
@@ -727,6 +743,8 @@ one has
  \boxed{\forall N>0:\qquad U^{-N}\chi_{T_0,U}^{R,-}\longrightarrow\infty.}
 \]
 \end{corollary}
+
+\input{P11_sections/P11_TC1_MixedJet}
 
 \section{Jensen geometry as a sufficient diagnostic route}\label{sec:jensen}
 
@@ -981,16 +999,27 @@ The original source-level target is
  }
 \]
 
+Theorem~\ref{thm:smooth-odd-core} reduces strong Cauchy convergence to smooth compactly
+supported odd vectors, and Theorem~\ref{thm:cross-terminal} identifies the exact
+cross-terminal kernel.  Theorems~\ref{thm:odd} and~\ref{thm:mixed-jet} determine the
+leading fixed-pair Schur geometry, but do not control the terminal square roots uniformly.
+
 \begin{openproblem}[Strong odd terminal transport]\label{open:transport}
-For fixed $0<R<S$, is $W_{R,S,-}^{[T]}$ strongly Cauchy as the common terminal horizon
-$T\to\infty$?  Can the exact source-level cross-terminal Cauchy kernel be controlled on
-the full odd graph space?
+For fixed $0<R<S$, can one prove the strong Cauchy criterion
+\[
+ \operatorname{Re}\langle f,K_{R,S}^{T,U}f\rangle_{X,R}
+ \longrightarrow\|f\|_{X,R}^2
+\]
+for every smooth compactly supported odd $f$ as $T,U\to\infty$?  In particular, can the
+finite-jet Gram/square-root gate of Open Problem~\ref{open:finite-jet-sqrt} be resolved
+without a fixed-vector-to-uniformity jump?
 \end{openproblem}
 
 \begin{remark}[Two research directions]\label{rem:routes}
 The current theory leaves two distinct directions:
 \begin{enumerate}
-  \item a direct transport route attacking the cross-terminal Cauchy asymptotic itself;
+  \item the direct transport route through the exact cross-terminal Cauchy kernel and
+        finite-jet square-root geometry;
   \item the O3 diagnostic route asking whether the sufficient Jensen-product mechanism
         is compatible with the superpolynomial odd conditioning.
 \end{enumerate}
@@ -1029,23 +1058,32 @@ not decide this global question.
 
 The finite-horizon Object-X candidate geometry now has a source-explicit finite-adic
 conditioning, a closed logarithmic Gamma graph space, positive Feshbach corrections,
-canonical bounded graph transitions, exact terminal pullback metrics, normalized
-transition isometries, relative future compression, a modulus isometry, and sharp odd
-fixed-vector future asymptotics.  The finite-window Gamma/Feshbach geometry is compact
-but not of finite Schatten order in the concrete B2-A sense; the pure Gamma backbone has
-a strong large-window resolvent limit but loses finite-window compactness.
+canonical bounded graph transitions, exact terminal pullback metrics and normalized
+transition isometries.  The finite-window Gamma/Feshbach geometry is compact but not of
+finite Schatten order in the concrete B2-A sense; the pure Gamma backbone has a strong
+large-window resolvent limit but loses finite-window compactness.
 
-The main asymptotic bottleneck is nevertheless still open.  Strong odd terminal
-transport has not been proved or disproved.  Superpolynomial odd conditioning shows that
-one natural Jensen-product sufficiency route would require beyond-all-orders decay of a
-square-root compression defect.  The second-moment/complement analysis reduces a
-possible obstruction to a concrete logarithmic regularity question, but resolving that
-diagnostic route would still not by itself decide the original strong transport problem.
+The absolute future metrics do not possess a bounded terminal limit.  Their odd growth
+is organized by a complete pullback-compatible integral-jet hierarchy.  Nevertheless
+the normalized relative transport has an exact cross-terminal Cauchy kernel.  Smooth odd
+vectors form a dense graph core, and both diagonal and mixed fixed-pair Schur asymptotics
+are now explicit.  The leading normalized fixed-pair geometry becomes asymptotically
+rank one, so the direct bottleneck has moved to subleading finite-jet Gram and square-root
+control rather than to the existence of a mixed bilinear coefficient.
+
+Strong odd terminal transport has still not been proved or disproved.  Separately,
+superpolynomial odd conditioning shows that one natural Jensen-product sufficiency route
+would require beyond-all-orders decay of a square-root compression defect.  The
+second-moment/complement analysis reduces a possible obstruction to a logarithmic
+regularity question, but resolving that diagnostic route would not by itself decide the
+original strong transport problem.
 
 Accordingly, the current status is
 \[
  \boxed{
  \text{finite-horizon structural core: proved;}
+ \quad
+ \text{direct finite-jet square-root gate: open;}
  \quad
  \text{strong odd terminal transport: open;}
  \quad
