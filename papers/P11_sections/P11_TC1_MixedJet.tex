@@ -18,12 +18,12 @@ For fixed smooth odd $f$ define
  \ell_T(f):=\langle h_T(f),\mathbf1_T\rangle,
  \qquad
  d_T:=\langle\mathbf1_T,A_T\mathbf1_T\rangle.
-\tag{MJ.1}
+\tag{MJ.1}\label{eq:mj-basic}
 \]
 Then
 \[
  \sigma_T(Jf,Jg)=\langle h_T(f),A_T^{-1}h_T(g)\rangle.
-\tag{MJ.2}
+\tag{MJ.2}\label{eq:mj-sigma}
 \]
 The boundary expansion of Theorem~\ref{thm:jet-expansion} and the sharp constant-mode
 estimate used in Theorem~\ref{thm:odd} give independently, for first jet $m=m(f)$,
@@ -31,16 +31,16 @@ estimate used in Theorem~\ref{thm:odd} give independently, for first jet $m=m(f)
  \ell_T(f)
  =-\sqrt2\,c_m\beta_R^{(m)}(f)
  \frac{e^{T/2}}{T^{m+1/2}}(1+O(T^{-1})),
-\tag{MJ.3}
+\tag{MJ.3}\label{eq:mj-ell}
 \]
 \[
  \boxed{d_T=2T+O(1).}
-\tag{MJ.4}
+\tag{MJ.4}\label{eq:mj-constant-norm}
 \]
 Hence the rank-one form
 \[
  \rho_T(f,g):=\frac{\ell_T(f)\overline{\ell_T(g)}}{d_T}
-\tag{MJ.5}
+\tag{MJ.5}\label{eq:mj-rho}
 \]
 is determined without using the total Schur asymptotic.
 
@@ -55,7 +55,7 @@ jets $m=m(f)$ and $n=m(g)$.  Then
  \frac{e^T}{T^{m+n+2}}
  \bigl(1+o_{R,f,g}(1)\bigr).
  }
-\tag{MJ.6}
+\tag{MJ.6}\label{eq:mj-main}
 \]
 \end{theorem}
 
@@ -84,46 +84,46 @@ has the exact Gram representation
  D_T(f,g)
  =\langle(I-P_{v_T})x_f,(I-P_{v_T})x_g\rangle.
  }
-\tag{MJ.7}
+\tag{MJ.7}\label{eq:mj-remainder-gram}
 \]
 Thus $D_T$ is positive semidefinite and
 \[
  |D_T(f,g)|^2\le D_T(f,f)D_T(g,g).
-\tag{MJ.8}
+\tag{MJ.8}\label{eq:mj-remainder-cs}
 \]
 
-For $f$ with first jet $m$, equations~\eqref{MJ.3}--\eqref{MJ.4} give independently
+For $f$ with first jet $m$, equations~\eqref{eq:mj-ell}--\eqref{eq:mj-constant-norm} give independently
 \[
  \rho_T(f,f)
  =c_m^2|\beta_R^{(m)}(f)|^2
  \frac{e^T}{T^{2m+2}}(1+O(T^{-1})).
-\tag{MJ.9}
+\tag{MJ.9}\label{eq:mj-rho-diag}
 \]
 Theorem~\ref{thm:odd} gives the same leading term for
 $\sigma_T(Jf,Jf)$.  Since $D_T(f,f)\ge0$,
 \[
  D_T(f,f)
  =o\!\left(\frac{e^T}{T^{2m+2}}\right).
-\tag{MJ.10}
+\tag{MJ.10}\label{eq:mj-Ddiag}
 \]
 The analogous statement holds for $g$ with first jet $n$.  Cauchy--Schwarz in
-\eqref{MJ.8} therefore yields
+\eqref{eq:mj-remainder-cs} therefore yields
 \[
  D_T(f,g)
  =o\!\left(\frac{e^T}{T^{m+n+2}}\right).
-\tag{MJ.11}
+\tag{MJ.11}\label{eq:mj-Dmixed}
 \]
-Finally, equations~\eqref{MJ.3}--\eqref{MJ.5} give
+Finally, equations~\eqref{eq:mj-ell}--\eqref{eq:mj-rho} give
 \[
  \rho_T(f,g)
  =c_mc_n\beta_R^{(m)}(f)\overline{\beta_R^{(n)}(g)}
  \frac{e^T}{T^{m+n+2}}(1+O(T^{-1})),
 \]
-which proves~\eqref{MJ.6}.
+which proves~\eqref{eq:mj-main}.
 \end{proof}
 
 \begin{remark}[Why the proof is not circular]\label{rem:mixed-noncircular}
-The matching asymptotic~\eqref{MJ.9} is computed from the boundary expansion and
+The matching asymptotic~\eqref{eq:mj-rho-diag} is computed from the boundary expansion and
 $d_T=2T+O(1)$ before the total diagonal asymptotic is invoked.  It is not inferred from
 $\sigma_T(Jf,Jf)\sim\rho_T(f,f)$.  This independence is essential to the positive
 remainder argument.
@@ -139,7 +139,7 @@ For every fixed nonzero smooth odd pair as above,
  \frac{\beta_R^{(m)}(f)\overline{\beta_R^{(n)}(g)}}
  {|\beta_R^{(m)}(f)|\,|\beta_R^{(n)}(g)|}.
  }
-\tag{MJ.12}
+\tag{MJ.12}\label{eq:mj-angle}
 \]
 In particular the modulus tends to one.
 \end{corollary}
@@ -156,8 +156,8 @@ control $G_{R,T}^{-1/2}$.
 On a fixed finite-dimensional jet-adapted subspace, obtain an asymptotic expansion deep
 enough to control the rescaled Gram matrix and its positive and inverse square roots.
 Can such control be made compatible between the $R$- and $S$-levels so that the
-cross-terminal kernel~\eqref{DT.22} satisfies the strong Cauchy criterion
-\eqref{DT.23}?
+cross-terminal kernel~\eqref{eq:cross-kernel-formula} satisfies the strong Cauchy criterion
+\eqref{eq:cross-cauchy}?
 \end{openproblem}
 
 No convergence
