@@ -141,7 +141,7 @@ For $k\ge1$ define the normalized prime-power residual mark
  \eta_{p,k}
  =\sqrt{p-1}\sum_{j=0}^{k-1}p^{(j-k)/2}\psi_{p,j}.
  }
-\tag{2.1}
+\tag{2.1}\label{eq:eta-pk}
 \]
 Different prime sectors are orthogonal.  The source-dependent martingale depth is
 \[
@@ -151,7 +151,7 @@ Different prime sectors are orthogonal.  The source-dependent martingale depth i
  \left\lfloor\frac{2(R-|u|)_+}{\log p}\right\rfloor
  \right\}.
  }
-\tag{2.2}
+\tag{2.2}\label{eq:martingale-depth}
 \]
 Define fiberwise
 \[
@@ -159,7 +159,7 @@ Define fiberwise
  \mathsf Q_R(u)\psi_{p,j}
  :=1_{\{j<J_{p,R}(u)\}}\psi_{p,j}.
  }
-\tag{2.3}
+\tag{2.3}\label{eq:source-cutoff}
 \]
 
 \begin{proposition}[Source-coupled finite-adic conditioning]\label{prop:source-conditioning}
@@ -175,7 +175,7 @@ $J_{p,R}(u)=0$,
  \mathsf Q_R(u)\eta_{p,k}
  =\sqrt{p-1}\sum_{j=0}^{\min(k-1,J_{p,R}(u)-1)}
  p^{(j-k)/2}\psi_{p,j}.
-\tag{2.4}
+\tag{2.4}\label{eq:projected-mark}
 \]
 In particular, the full $p^k$ mark is retained whenever
 \[
@@ -185,10 +185,10 @@ while deeper martingale levels are canonically removed near the source boundary.
 \end{proposition}
 
 \begin{proof}
-Equation~\eqref{2.3} is the orthogonal coordinate projection onto the first
+Equation~\eqref{eq:source-cutoff} is the orthogonal coordinate projection onto the first
 $J_{p,R}(u)$ martingale levels.  The depth function is integer-valued and measurable,
-so the resulting field is measurable.  Applying the projection to~\eqref{2.1} gives
-\eqref{2.4}.  If $k\le J_{p,R}(u)$, all coordinates $0,\dots,k-1$ survive, which is
+so the resulting field is measurable.  Applying the projection to~\eqref{eq:eta-pk} gives
+\eqref{eq:projected-mark}.  If $k\le J_{p,R}(u)$, all coordinates $0,\dots,k-1$ survive, which is
 exactly the stated overlap condition.
 \end{proof}
 
@@ -207,7 +207,7 @@ The source-windowed neutral hub and conditioned residual operator are
  =P_R\sum_{p^k\le e^{2R}}
  \sqrt{\log p}\,p^{-3k/4}D_{k\log p}E_R,
  }
-\tag{2.5}
+\tag{2.5}\label{eq:hub-operator}
 \]
 \[
  \boxed{
@@ -216,7 +216,7 @@ The source-windowed neutral hub and conditioned residual operator are
  \sqrt{\log p}\,p^{-k/4}
  D_{k\log p}E_Rf(u)\otimes\mathsf Q_R(u)\eta_{p,k}.
  }
-\tag{2.6}
+\tag{2.6}\label{eq:rest-operator}
 \]
 For fixed $R$ these are bounded finite-window operators.
 
@@ -227,7 +227,7 @@ The archimedean source form is encoded by
  m_\Gamma(\xi):=1+g_\infty(\xi),
  \qquad
  m_\Gamma(\xi)\asymp\log(2+|\xi|).
-\tag{2.7}
+\tag{2.7}\label{eq:gamma-symbol}
 \]
 Define
 \[
@@ -235,7 +235,7 @@ Define
  =\frac1{2\pi}\int_{\mathbb R}
  m_\Gamma(\xi)\widehat{E_Rf}(\xi)
  \overline{\widehat{E_Rg}(\xi)}\,d\xi.
-\tag{2.8}
+\tag{2.8}\label{eq:gamma-form}
 \]
 Let $C_{\Gamma,R}$ be the positive selfadjoint operator represented by this closed form.
 
@@ -265,7 +265,7 @@ Put
 and define the positive source-level Schur contribution
 \[
  \Sigma_R:=H_RB_RH_R^*\ge0.
-\tag{3.1}
+\tag{3.1}\label{eq:schur-operator}
 \]
 The finite-level Object-X candidate form is
 \[
@@ -273,7 +273,7 @@ The finite-level Object-X candidate form is
  q_R^X(f,g)
  :=\mathfrak c_{\Gamma,R}[f,g]+\langle\Sigma_Rf,g\rangle.
  }
-\tag{3.2}
+\tag{3.2}\label{eq:x-form}
 \]
 Because $H_R$ and $R_R$ are bounded at fixed $R$,
 \[
@@ -294,7 +294,7 @@ Moreover
  \mathfrak c_{\Gamma,R}[f]
  \le q_R^X(f)
  \le(1+\|H_R\|^2)\mathfrak c_{\Gamma,R}[f].
-\tag{3.3}
+\tag{3.3}\label{eq:graph-norm-equiv}
 \]
 Thus
 \[
@@ -311,7 +311,7 @@ Since $0<B_R\le I$, one has
  =\|B_R^{1/2}H_R^*f\|^2
  \le\|H_R\|^2\|f\|_2^2.
 \]
-As $\mathfrak c_{\Gamma,R}[f]\ge\|f\|_2^2$, this gives~\eqref{3.3}; closedness and the
+As $\mathfrak c_{\Gamma,R}[f]\ge\|f\|_2^2$, this gives~\eqref{eq:graph-norm-equiv}; closedness and the
 operator-domain statement follow from the bounded perturbation theorem.
 \end{proof}
 
@@ -319,32 +319,64 @@ operator-domain statement follow from the bounded perturbation theorem.
 
 The rest Gram is not an orthogonal direct sum over prime powers $k$ inside one prime
 sector.  Its exact positive decomposition is indexed by prime/martingale-depth pairs
-$(p,a)$.  With
+$(p,a)$.  To make the factorization self-contained, within this subsection write
+\[
+ K_s^{\rm tr}:=P_RD_sE_R
+\]
+for the source translation-difference operator.  This symbol is unrelated to the later
+Gamma-preconditioned operator $K_R=C_{\Gamma,R}^{-1/2}H_R$.  Define
+\[
+ \Omega_{p,a,R}
+ :=\{u\in[-R,R]:J_{p,R}(u)\ge a+1\};
+\]
+equivalently, up to endpoints,
+\[
+ \Omega_{p,a,R}
+ =\left\{u:\ |u|\le R-\frac{a+1}{2}\log p\right\},
+\]
+with the set empty when the right-hand radius is negative.  Put
 \[
  \Phi_{p,a,R}[f](u)
- :=\sum_{k\ge a+1}p^{-3k/4}K_{k\log p}f(u),
+ :=\sum_{k\ge a+1}p^{-3k/4}(K_{k\log p}^{\rm tr}f)(u).
 \]
-one has an exact decomposition
+At fixed $R$ the effectively active sums are finite.  Then
 \[
  \mathfrak R_R(f,g)
  =\sum_p(\log p)(p-1)\sum_{a\ge0}p^a
  \int_{\Omega_{p,a,R}}
  \Phi_{p,a,R}[f](u)\overline{\Phi_{p,a,R}[g](u)}\,du.
-\tag{3.4}
+\tag{3.4}\label{eq:rest-gram}
 \]
-Thus a canonical full analysis operator $\widetilde R_R$ satisfies
+Define the canonical analysis target
+\[
+ \mathscr Z_R:=\bigoplus_p\bigoplus_{a\ge0}L^2(\Omega_{p,a,R})
+\]
+and
+\[
+ (\widetilde R_Rf)_{p,a}(u)
+ :=\sqrt{(\log p)(p-1)p^a}\,
+ 1_{\Omega_{p,a,R}}(u)\Phi_{p,a,R}[f](u).
+\]
+Polarization of~\eqref{eq:rest-gram} gives
 \[
  \boxed{\widetilde R_R^*\widetilde R_R=R_R^*R_R.}
-\tag{3.5}
+\tag{3.5}\label{eq:full-rest-gram}
 \]
+Thus
+\[
+ I+R_R^*R_R=I+\widetilde R_R^*\widetilde R_R,
+\]
+which is the exact full-rest denominator used below.
 
 \begin{remark}[Primitive form-domination firewall]\label{rem:primitive}
 We do not assume
 \[
  R_R^*R_R\stackrel?\ge(R_R^{(1)})^*R_R^{(1)}.
 \]
-Different prime powers in one prime sector are nonorthogonal.  The later future-certificate
-transfer uses the full martingale analysis operator rather than this unproved shortcut.
+Different prime powers in one prime sector are nonorthogonal.  The future-certificate
+transfer therefore uses the full martingale analysis operator
+$\widetilde R_R$ and the $a=0$ primitive-plus-tail decomposition, rather than this
+unproved shortcut.
 \end{remark}
 
 \subsection{Finite-window Schatten profile}
@@ -354,7 +386,7 @@ Define the Gamma-preconditioned hub operator and normalized Schur term
  K_R:=C_{\Gamma,R}^{-1/2}H_R,
  \qquad
  S_R:=K_RB_RK_R^*.
-\tag{3.6}
+\tag{3.6}\label{eq:gamma-preconditioned-schur}
 \]
 
 \begin{theorem}[Compact but no finite Schatten order]\label{thm:schatten}
@@ -369,7 +401,7 @@ one has
 but
 \[
  \boxed{S_R\notin\Sp_p\qquad\text{for every finite }1\le p<\infty.}
-\tag{3.7}
+\tag{3.7}\label{eq:schatten-nogo}
 \]
 In particular, the concrete source-windowed Gamma preconditioning plus C1z-B
 Feshbach geometry does not supply the finite Schatten order required by a naive
@@ -377,10 +409,16 @@ $\Sp_4/\Sp_2$ Fredholm route.
 \end{theorem}
 
 \begin{proof}
-The symbol estimate~\eqref{2.7} implies
+Since $C_{\Gamma,R}^{-1}$ is compact and positive,
+$C_{\Gamma,R}^{-1/2}=(C_{\Gamma,R}^{-1})^{1/2}$ is compact by continuous functional
+calculus.  The operator $H_R$ is bounded at fixed $R$, hence
+$K_R=C_{\Gamma,R}^{-1/2}H_R$ is compact; since $B_R$ is bounded,
+$S_R=K_RB_RK_R^*$ is compact.
+
+The symbol estimate~\eqref{eq:gamma-symbol} implies
 \[
  c\log(2+|\xi|)\le m_\Gamma(\xi)\le C\log(2+|\xi|).
-\tag{3.8}
+\tag{3.8}\label{eq:gamma-log-bounds}
 \]
 Choose a small interval $I\Subset(-R,R)$ and the localized orthonormal Fourier family
 \[
@@ -389,7 +427,7 @@ Choose a small interval $I\Subset(-R,R)$ and the localized orthonormal Fourier f
 Then
 \[
  \mathfrak c_{\Gamma,R}[e_m]\le C_I\log(2+m).
-\tag{3.9}
+\tag{3.9}\label{eq:gamma-local-family}
 \]
 For a positive $C\ge I$, Cauchy--Schwarz gives
 \[
@@ -398,7 +436,7 @@ For a positive $C\ge I$, Cauchy--Schwarz gives
 Hence
 \[
  \|C_{\Gamma,R}^{-1/2}e_m\|^2\ge\frac{c_I}{\log(2+m)}.
-\tag{3.10}
+\tag{3.10}\label{eq:gamma-inverse-lower}
 \]
 The interval can be chosen so that one primitive $p=2$ translation copy in $H_R$ is
 isolated from all other active translation copies.  Therefore
@@ -410,13 +448,13 @@ isolated from all other active translation copies.  Therefore
 and again
 \[
  \|K_Re_m\|^2\ge\frac{c_R}{\log(2+m)}.
-\tag{3.11}
+\tag{3.11}\label{eq:K-lower}
 \]
 For $q\ge2$, membership $K_R\in\Sp_q$ would imply
 \[
  \sum_m\|K_Re_m\|^q<\infty
 \]
-for every orthonormal family, contradicting~\eqref{3.11} because
+for every orthonormal family, contradicting~\eqref{eq:K-lower} because
 $\sum_m(\log(2+m))^{-q/2}=\infty$.  Thus $K_R\notin\Sp_q$ for every finite $q\ge2$.
 For $0<q<2$, the Schatten inclusion $\Sp_q\subset\Sp_2$ yields the same conclusion.
 Finally, fixed-window boundedness of $R_R$ gives
@@ -445,7 +483,7 @@ On $L^2(\mathbb R)$ define
 \[
  q_\Gamma(f)
  :=\frac1{2\pi}\int_{\mathbb R}m_\Gamma(\xi)|\widehat f(\xi)|^2\,d\xi,
-\tag{3.12}
+\tag{3.12}\label{eq:global-gamma-form}
 \]
 with positive selfadjoint operator $C_\Gamma$.
 Identify the finite-window form domain with
@@ -460,14 +498,14 @@ Let
  q_\Gamma(f),&f\in\mathcal V_R,\\
  +\infty,&f\notin\mathcal V_R.
  \end{cases}
-\tag{3.13}
+\tag{3.13}\label{eq:mosco-functional}
 \]
 
 \begin{theorem}[Mosco and strong-resolvent Gamma limit]\label{thm:mosco}
 As $R\to\infty$,
 \[
  \boxed{\Phi_R\xrightarrow[M]{}q_\Gamma.}
-\tag{3.14}
+\tag{3.14}\label{eq:mosco-limit}
 \]
 Equivalently at the positive resolvent point $0$,
 \[
@@ -476,7 +514,7 @@ Equivalently at the positive resolvent point $0$,
  \xrightarrow[s]{R\to\infty}
  C_\Gamma^{-1}
  }
-\tag{3.15}
+\tag{3.15}\label{eq:strong-resolvent-gamma}
 \]
 on $L^2(\mathbb R)$.  This convergence is not norm-resolvent.
 \end{theorem}
@@ -495,7 +533,7 @@ sequence.
 
 For $h\in L^2(\mathbb R)$, $C_\Gamma^{-1}h$ is the variational solution in the full form
 domain and $E_RC_{\Gamma,R}^{-1}P_Rh$ is its $q_\Gamma$-orthogonal projection onto
-$\mathcal V_R$; density yields~\eqref{3.15}.  Each finite-window resolvent is compact,
+$\mathcal V_R$; density yields~\eqref{eq:strong-resolvent-gamma}.  Each finite-window resolvent is compact,
 whereas
 \[
  C_\Gamma^{-1}\simeq M_{m_\Gamma^{-1}}
@@ -522,7 +560,7 @@ graph domain and satisfies
  q_S^X(E_{R,S}f)
  \le(1+\|H_S\|^2)q_R^X(f).
  }
-\tag{4.1}
+\tag{4.1}\label{eq:graph-transition-upper}
 \]
 Thus
 \[
@@ -530,12 +568,12 @@ Thus
  J_{R,S}:\KXR{R}\longrightarrow\KXR{S},
  \qquad J_{R,S}f=E_{R,S}f,
  }
-\tag{4.2}
+\tag{4.2}\label{eq:graph-transition}
 \]
 is bounded and injective, and
 \[
  \boxed{J_{S,T}J_{R,S}=J_{R,T}.}
-\tag{4.3}
+\tag{4.3}\label{eq:transition-cocycle}
 \]
 \end{theorem}
 
@@ -551,7 +589,7 @@ Furthermore
  \le\|H_S\|^2\|f\|_2^2
  \le\|H_S\|^2q_R^X(f).
 \]
-This proves~\eqref{4.1}.  Injectivity and the cocycle are inherited from zero extension.
+This proves~\eqref{eq:graph-transition-upper}.  Injectivity and the cocycle are inherited from zero extension.
 \end{proof}
 
 \begin{corollary}[Fixed-source lower bound]\label{cor:transition-lower}
@@ -561,7 +599,7 @@ For $0<R<T$,
  q_T^X(E_{R,T}f)
  \ge\frac{1}{1+\|H_R\|^2}\,q_R^X(f).
  }
-\tag{4.4}
+\tag{4.4}\label{eq:transition-lower}
 \]
 Hence $J_{R,T}$ is bounded below on $\KXR{R}$.
 \end{corollary}
@@ -573,17 +611,17 @@ Positivity of the Schur term and exact Gamma compatibility give
  \ge\mathfrak c_{\Gamma,T}[E_{R,T}f]
  =\mathfrak c_{\Gamma,R}[f].
 \]
-Equation~\eqref{3.3} gives
+Equation~\eqref{eq:graph-norm-equiv} gives
 \[
  q_R^X(f)\le(1+\|H_R\|^2)\mathfrak c_{\Gamma,R}[f],
 \]
-which proves~\eqref{4.4}.
+which proves~\eqref{eq:transition-lower}.
 \end{proof}
 
 Define the positive terminal metric operator
 \[
  \boxed{G_{R,T}:=J_{R,T}^*J_{R,T}\in\mathcal B(\KXR{R}).}
-\tag{4.5}
+\tag{4.5}\label{eq:terminal-metric}
 \]
 By Corollary~\ref{cor:transition-lower},
 \[
@@ -595,7 +633,7 @@ so $G_{R,T}$ is boundedly invertible.
 For $0<R<S<T$,
 \[
  \boxed{J_{R,S}^*G_{S,T}J_{R,S}=G_{R,T}.}
-\tag{4.6}
+\tag{4.6}\label{eq:metric-pullback}
 \]
 \end{proposition}
 
@@ -612,25 +650,25 @@ Define
  W_{R,S}^{[T]}
  :=G_{S,T}^{1/2}J_{R,S}G_{R,T}^{-1/2}.
  }
-\tag{4.7}
+\tag{4.7}\label{eq:terminal-W}
 \]
 
 \begin{theorem}[Finite-terminal isometry and cocycle]\label{thm:terminal-isometry}
 For every $0<R<S<T$,
 \[
  \boxed{(W_{R,S}^{[T]})^*W_{R,S}^{[T]}=I.}
-\tag{4.8}
+\tag{4.8}\label{eq:terminal-isometry}
 \]
 Whenever $0<R<S<U<T$,
 \[
  \boxed{W_{S,U}^{[T]}W_{R,S}^{[T]}=W_{R,U}^{[T]}.}
-\tag{4.9}
+\tag{4.9}\label{eq:terminal-cocycle}
 \]
 \end{theorem}
 
 \begin{proof}
-Equation~\eqref{4.8} follows from~\eqref{4.6}; the cocycle follows by cancellation of
-the middle factors and~\eqref{4.3}.
+Equation~\eqref{eq:terminal-isometry} follows from~\eqref{eq:metric-pullback}; the cocycle follows by cancellation of
+the middle factors and~\eqref{eq:transition-cocycle}.
 \end{proof}
 
 \begin{remark}[Finite isometry is not terminal convergence]\label{rem:notlimit}
@@ -645,14 +683,14 @@ Fix $0<R<S<T<U$ and define
  A_R^{T,U}:=G_{R,T}^{-1/2}G_{R,U}G_{R,T}^{-1/2},
 \qquad
  A_S^{T,U}:=G_{S,T}^{-1/2}G_{S,U}G_{S,T}^{-1/2}.
-\tag{5.1}
+\tag{5.1}\label{eq:relative-metrics}
 \]
 Write $W=W_{R,S}^{[T]}$.
 
 \begin{theorem}[Exact relative compression]\label{thm:relative-compression}
 \[
  \boxed{W^*A_S^{T,U}W=A_R^{T,U}.}
-\tag{5.2}
+\tag{5.2}\label{eq:relative-compression}
 \]
 \end{theorem}
 
@@ -704,7 +742,7 @@ For fixed $R$ and fixed nonzero smooth odd $f_-$,
  =c_m^2|\beta_R^{(m)}(f_-)|^2
  \frac{e^T}{T^{2m+2}}(1+o(1)).
  }
-\tag{6.1}
+\tag{6.1}\label{eq:odd-asymptotic}
 \]
 The proof uses
 \[
