@@ -1,0 +1,298 @@
+% P11 paper module: self-contained O3/O3f diagnostic identities and firewalls.
+
+\section{Jensen geometry as a sufficient diagnostic route}\label{sec:jensen}
+
+Fix $0<R<S<T_0<U$ and restrict to odd sectors.  Set
+\[
+ A_R:=A_{T_0,U}^{R,-},
+ \qquad
+ A_S:=A_{T_0,U}^{S,-},
+ \qquad
+ W:=W_{R,S,-}^{[T_0]}.
+\]
+Then
+\[
+ W^*W=I,
+ \qquad
+ W^*A_SW=A_R.
+\tag{JD.1}\label{eq:jd-compression}
+\]
+Define
+\[
+ D:=W^*A_S^{1/2}W.
+\]
+Operator Jensen for the concave function $x^{1/2}$ under the isometric compression
+$x\mapsto W^*xW$ gives
+\[
+ 0\le D\le A_R^{1/2}.
+\tag{JD.2}\label{eq:jd-jensen}
+\]
+Put
+\[
+ \mathscr J:=A_R^{1/2}-D\ge0,
+\]
+\[
+ \boxed{
+ \Theta:=A_R^{-1/4}\mathscr J A_R^{-1/4},
+ \qquad 0\le\Theta\le I,
+ }
+\tag{JD.3}\label{eq:jd-theta}
+\]
+and
+\[
+ \chi:=\|A_R^{1/4}\|\,\|A_R^{-1/4}\|=\kappa(A_R)^{1/4}.
+\tag{JD.4}\label{eq:jd-chi}
+\]
+
+\begin{proposition}[Relative Jensen Rayleigh formula]\label{prop:jensen}
+\[
+ \boxed{
+ \|\Theta\|
+ =\sup_{y\ne0}
+ \left[
+ 1-
+ \frac{\langle A_S^{1/2}Wy,Wy\rangle}
+      {\langle A_R^{1/2}y,y\rangle}
+ \right].
+ }
+\tag{JD.5}\label{eq:jd-rayleigh}
+\]
+\end{proposition}
+
+\begin{proof}
+For $z=A_R^{1/4}y$ one has
+\[
+ \langle\Theta z,z\rangle
+ =\langle\mathscr Jy,y\rangle
+ =\langle A_R^{1/2}y,y\rangle
+  -\langle A_S^{1/2}Wy,Wy\rangle,
+\]
+while
+$\|z\|^2=\langle A_R^{1/2}y,y\rangle$.  Since $\Theta\ge0$, its norm is the supremum
+of these Rayleigh quotients.
+\end{proof}
+
+Define the modulus isometry
+\[
+ Q:=A_S^{1/2}WA_R^{-1/2};
+\]
+Corollary~\ref{cor:modulus} gives $Q^*Q=I$.  Let
+\[
+ P:=WW^*,
+ \qquad
+ \mathscr N:=(I-P)Q,
+ \qquad
+ \mathscr K:=I-W^*Q.
+\tag{JD.6}\label{eq:jd-defects}
+\]
+Since $W$ is an isometry, $P$ is the orthogonal projection onto $\Ran W$.
+
+\begin{proposition}[Exact modulus-defect balance]\label{prop:jensen-defect}
+The operators in~\eqref{eq:jd-defects} satisfy
+\[
+ \boxed{
+ \mathscr K+\mathscr K^*
+ =\mathscr K^*\mathscr K+\mathscr N^*\mathscr N.
+ }
+\tag{JD.7}\label{eq:jd-balance}
+\]
+Moreover
+\[
+ \boxed{
+ \mathscr K=A_R^{1/4}\Theta A_R^{-1/4},
+ }
+\tag{JD.8}\label{eq:jd-Ktheta}
+\]
+and consequently
+\[
+ \boxed{
+ \frac12\|\mathscr N\|^2
+ \le\|\mathscr K\|
+ \le\chi\|\Theta\|.
+ }
+\tag{JD.9}\label{eq:jd-defect-bound}
+\]
+In particular,
+\[
+ \chi\|\Theta\|\to0
+ \quad\Longrightarrow\quad
+ \|Q-W\|\to0.
+\tag{JD.10}\label{eq:jd-sufficient}
+\]
+\end{proposition}
+
+\begin{proof}
+Because $W^*Q=I-\mathscr K$ and $(I-P)Q=\mathscr N$, the orthogonal decomposition of
+$Q$ relative to $\Ran W\oplus\Ran W^\perp$ is
+\[
+ Q=W(I-\mathscr K)+\mathscr N.
+\]
+Using $Q^*Q=I$ gives
+\[
+ I=(I-\mathscr K)^*(I-\mathscr K)+\mathscr N^*\mathscr N,
+\]
+which is~\eqref{eq:jd-balance}.  Next
+\[
+ W^*Q=DA_R^{-1/2},
+\]
+so
+\[
+ \mathscr K
+ =I-DA_R^{-1/2}
+ =(A_R^{1/2}-D)A_R^{-1/2}
+ =A_R^{1/4}\Theta A_R^{-1/4},
+\]
+proving~\eqref{eq:jd-Ktheta}.  From~\eqref{eq:jd-balance},
+$\mathscr N^*\mathscr N\le\mathscr K+\mathscr K^*$, hence
+$\|\mathscr N\|^2\le2\|\mathscr K\|$.  The second inequality in
+\eqref{eq:jd-defect-bound} follows from~\eqref{eq:jd-Ktheta}.  Finally
+\[
+ Q-W=-W\mathscr K+\mathscr N
+\]
+is an orthogonal sum, so both terms vanish if $\chi\|\Theta\|\to0$.
+\end{proof}
+
+\begin{corollary}[Beyond-all-orders necessity for this route]\label{cor:beyond}
+If the sufficient product mechanism
+\[
+ \chi_{T_0,U}^{R,-}\|\Theta_{T_0,U}^-\|\to0
+\]
+holds, then
+\[
+ \boxed{\forall N>0:\qquad U^N\|\Theta_{T_0,U}^-\|\to0.}
+\tag{JD.11}\label{eq:jd-beyond}
+\]
+\end{corollary}
+
+\begin{proof}
+The sharp odd asymptotic implies
+$U^{-N}\chi_{T_0,U}^{R,-}\to\infty$ for every fixed $N>0$.  Thus
+\[
+ U^N\|\Theta\|
+ =(\chi\|\Theta\|)\frac{U^N}{\chi}\longrightarrow0.
+\]
+\end{proof}
+
+\begin{remark}[Critical logical firewall]\label{rem:product}
+The implication~\eqref{eq:jd-sufficient} belongs to one sufficient comparison mechanism.
+The current theory does not prove
+\[
+ \text{strong terminal transport}
+ \Longrightarrow
+ \chi\|\Theta\|\to0.
+\]
+Hence obstruction of the product mechanism would not prove nonconvergence of the strong
+terminal transport.
+\end{remark}
+
+\section{Second-moment and complement diagnostics}\label{sec:diagnostic}
+
+Define
+\[
+ \mathscr B:=(I-P)A_SW.
+\tag{JD.12}\label{eq:jd-B}
+\]
+Since $PA_SW=WW^*A_SW=WA_R$,
+\[
+ \mathscr B=A_SW-WA_R.
+\tag{JD.13}\label{eq:jd-B-intertwining}
+\]
+Thus $\mathscr B=0$ exactly when $A_S\Ran W\subseteq\Ran W$.
+
+\begin{proposition}[Second-moment compression variance]\label{prop:second}
+\[
+ \boxed{
+ \mathscr B^*\mathscr B
+ =W^*A_S^2W-A_R^2
+ =:\Delta_2\ge0.
+ }
+\tag{JD.14}\label{eq:jd-delta2}
+\]
+Furthermore
+\[
+ \boxed{
+ \|\Theta\|
+ \ge
+ \frac{\|\Delta_2\|}
+ {2\|A_R\|(\sqrt{\|A_R\|}+\sqrt{\|A_S\|})^2}
+ \ge
+ \frac{\|\Delta_2\|}{8\|A_R\|\|A_S\|}.
+ }
+\tag{JD.15}\label{eq:jd-theta-lower}
+\]
+\end{proposition}
+
+\begin{proof}
+Using $P=WW^*$ and~\eqref{eq:jd-compression},
+\[
+\begin{aligned}
+ \mathscr B^*\mathscr B
+ &=W^*A_S(I-P)A_SW\\
+ &=W^*A_S^2W-W^*A_SWW^*A_SW\\
+ &=W^*A_S^2W-A_R^2,
+\end{aligned}
+\]
+which proves~\eqref{eq:jd-delta2}.
+
+For the quantitative bound put $S:=A_S^{1/2}$ and
+\[
+ L:=(I-P)SW,
+ \qquad
+ E:=(I-P)S(I-P)|_{\Ran W^\perp}.
+\]
+Then $PSW=WD$ and
+\[
+ L^*L
+ =W^*S(I-P)SW
+ =A_R-D^2.
+\]
+With $\mathscr J=A_R^{1/2}-D$,
+\[
+ A_R-D^2=A_R^{1/2}\mathscr J+\mathscr JD.
+\]
+Since $\|D\|\le\sqrt{\|A_R\|}$ and
+$\|\mathscr J\|\le\|A_R\|^{1/2}\|\Theta\|$,
+\[
+ \|L\|^2\le2\|A_R\|\|\Theta\|.
+\tag{JD.16}\label{eq:jd-L-bound}
+\]
+Moreover
+\[
+ \mathscr B=(I-P)S^2W=LD+EL,
+\]
+so
+\[
+ \|\mathscr B\|
+ \le(\|D\|+\|E\|)\|L\|
+ \le(\sqrt{\|A_R\|}+\sqrt{\|A_S\|})\|L\|.
+\]
+Together with $\|\Delta_2\|=\|\mathscr B\|^2$ and
+\eqref{eq:jd-L-bound}, this proves the first inequality in
+\eqref{eq:jd-theta-lower}.  Finally
+\[
+ \|A_R\|=\|W^*A_SW\|\le\|A_S\|,
+\]
+which gives the denominator $8\|A_R\|\|A_S\|$.
+\end{proof}
+
+Put
+\[
+ \nu_2:=\frac{\|\Delta_2\|}{\|A_R\|\|A_S\|}.
+\tag{JD.17}\label{eq:jd-nu2}
+\]
+Then~\eqref{eq:jd-theta-lower} gives $\|\Theta\|\ge\nu_2/8$.
+A polynomial lower bound for the actual P11 family would therefore contradict the
+beyond-all-orders requirement of Corollary~\ref{cor:beyond}.  Such a lower bound is not
+proved here.
+
+The exact future cross-Gram representation uses the fixed-$T_0$ complement
+\[
+ \mathcal C^-_{S,T_0}(R)
+ :=\ker(J_{R,S}^*G_{S,T_0})\cap\KXR{S}^{-}.
+\]
+For $f\in\KXR{R}^{-}$ and $g\in\mathcal C^-_{S,T_0}(R)$, the norm of $\mathscr B$ is
+controlled exactly by
+\[
+ \langle(G_{S,U}-G_{S,T_0})J_{R,S}f,g\rangle
+\]
+after the fixed metric normalizations.
