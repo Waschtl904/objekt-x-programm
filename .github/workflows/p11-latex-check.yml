@@ -30,10 +30,10 @@ jobs:
           pdflatex -interaction=nonstopmode -halt-on-error P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex
           pdflatex -interaction=nonstopmode -halt-on-error P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex
 
-      - name: Reject unresolved references
+      - name: Reject unresolved or multiply-defined references
         working-directory: papers
         run: |
-          if grep -E "LaTeX Warning: (Reference|Citation).*undefined|There were undefined references" P11_Global_Coupling_and_Object_X_Candidate_Geometry.log; then
-            echo 'Unresolved LaTeX references/citations detected.'
+          if grep -E "LaTeX Warning: (Reference|Citation).*undefined|There were undefined references|multiply defined|Multiply defined" P11_Global_Coupling_and_Object_X_Candidate_Geometry.log; then
+            echo 'Unresolved or multiply-defined LaTeX references/citations detected.'
             exit 1
           fi
