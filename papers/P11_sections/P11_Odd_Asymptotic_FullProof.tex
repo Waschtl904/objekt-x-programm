@@ -129,7 +129,7 @@ For an even $e\in\mathscr H_T$ put $b_T(t):=e(T-t)$, $0<t<T$.  A direct change o
 variables gives
 \[
  \langle h_T^{\rm grow},e\rangle
- =\int_0^Tk_T(t)b_T(t)\,dt,
+ =\int_0^Tk_T(t)\overline{b_T(t)}\,dt,
 \tag{6.8}\label{eq:odd-kernel-pairing}
 \]
 where
@@ -192,15 +192,17 @@ Choose
 $\alpha\in C_c^\infty((0,\varepsilon))$ with $\int\alpha=1$.
 Since $k_T^0$ has mean zero,
 \[
- \int_0^Tk_T^0(t)b(t)dt
+ \int_0^Tk_T^0(t)\overline{b(t)}dt
  =\int_0^T\int_0^\varepsilon
- k_T^0(t)\alpha(s)[b(t)-b(s)]\,ds\,dt.
+ k_T^0(t)\alpha(s)
+ \bigl[\overline{b(t)}-\overline{b(s)}\bigr]\,ds\,dt.
 \tag{6.15}\label{eq:odd-anchor-identity}
 \]
 With $r=(t+s)/2$ this becomes
 \[
- \int k_T^0b
- =\iint C_T^-(r,t)[b(t)-b(2r-t)]\,dt\,dr,
+ \int k_T^0\overline b
+ =\iint C_T^-(r,t)
+ \overline{\bigl(b(t)-b(2r-t)\bigr)}\,dt\,dr,
  \qquad
  C_T^-(r,t):=2k_T^0(t)\alpha(2r-t).
 \tag{6.16}\label{eq:odd-signed-continuous}
