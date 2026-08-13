@@ -1,6 +1,6 @@
 % P11 paper module: self-contained O3/O3f diagnostic identities and firewalls.
 
-\section{Jensen geometry as a sufficient diagnostic route}\label{sec:jensen}
+\section{Jensen geometry as an auxiliary diagnostic}\label{sec:jensen}
 
 Fix $0<R<S<T_0<U$ and restrict to odd sectors.  Set
 \[
@@ -152,8 +152,46 @@ $\|\mathscr N\|^2\le2\|\mathscr K\|$.  The second inequality in
 is an orthogonal sum, so both terms vanish if $\chi\|\Theta\|\to0$.
 \end{proof}
 
-\begin{corollary}[Beyond-all-orders necessity for this route]\label{cor:beyond}
-If the sufficient product mechanism
+\begin{remark}[Polar-gauge firewall]\label{rem:polar-gauge}
+The operator $Q$ in~\eqref{eq:jd-sufficient} is an auxiliary modulus isometry; it is
+not the actual future transport $W_{R,S,-}^{[U]}$.  To state the exact relation, define
+on the odd source and target sectors
+\[
+ X_R:=(G_{R,U}^-)^{1/2}(G_{R,T_0}^-)^{-1/2},
+ \qquad
+ X_S:=(G_{S,U}^-)^{1/2}(G_{S,T_0}^-)^{-1/2}.
+\]
+Then
+\[
+ X_R^*X_R=A_R,
+ \qquad
+ X_S^*X_S=A_S.
+\]
+Since $X_R$ and $X_S$ are boundedly invertible, their polar decompositions have
+unitary polar factors,
+\[
+ X_R=U_RA_R^{1/2},
+ \qquad
+ X_S=U_SA_S^{1/2}.
+\]
+Moreover, directly from the definitions of the normalized terminal transports,
+\[
+ W_{R,S,-}^{[U]}=X_SWX_R^{-1}.
+\]
+Consequently
+\[
+ \boxed{
+ W_{R,S,-}^{[U]}=U_SQU_R^*.
+ }
+\tag{JD.10a}\label{eq:jd-polar-gauge}
+\]
+Thus even norm convergence $Q\to W$ does not by itself imply
+$W_{R,S,-}^{[U]}\to W$ without separate asymptotic control of the unitary polar gauges
+$U_S$ and $U_R$.  No such gauge control is proved here.
+\end{remark}
+
+\begin{corollary}[Beyond-all-orders consequence for the auxiliary diagnostic]\label{cor:beyond}
+If the auxiliary product condition
 \[
  \chi_{T_0,U}^{R,-}\|\Theta_{T_0,U}^-\|\to0
 \]
@@ -174,15 +212,19 @@ $U^{-N}\chi_{T_0,U}^{R,-}\to\infty$ for every fixed $N>0$.  Thus
 \end{proof}
 
 \begin{remark}[Critical logical firewall]\label{rem:product}
-The implication~\eqref{eq:jd-sufficient} belongs to one sufficient comparison mechanism.
-The current theory does not prove
+The implication~\eqref{eq:jd-sufficient} controls the auxiliary operator $Q$ only.
+By the exact polar-gauge identity~\eqref{eq:jd-polar-gauge}, promotion from
+$Q\to W_{R,S,-}^{[T_0]}$ to convergence of the actual future transport requires a
+separate theorem controlling $U_S$ and $U_R$; that problem remains open.
+
+In the opposite logical direction, the current theory also does not prove
 \[
  \text{strong terminal transport}
  \Longrightarrow
  \chi\|\Theta\|\to0.
 \]
-Hence obstruction of the product mechanism would not prove nonconvergence of the strong
-terminal transport.
+Hence obstruction of the auxiliary product condition would not prove nonconvergence of
+the strong terminal transport.
 \end{remark}
 
 \section{Second-moment and complement diagnostics}\label{sec:diagnostic}
@@ -282,8 +324,8 @@ Put
 \]
 Then~\eqref{eq:jd-theta-lower} gives $\|\Theta\|\ge\nu_2/8$.
 A polynomial lower bound for the actual P11 family would therefore contradict the
-beyond-all-orders requirement of Corollary~\ref{cor:beyond}.  Such a lower bound is not
-proved here.
+auxiliary product condition $\chi\|\Theta\|\to0$ through
+Corollary~\ref{cor:beyond}.  Such a lower bound is not proved here.
 
 The exact future cross-Gram representation uses the fixed-$T_0$ complement
 \[
