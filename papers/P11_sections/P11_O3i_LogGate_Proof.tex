@@ -1,0 +1,367 @@
+% P11 paper module: paper-internal rough/logarithmic extension of the odd prime-cell certificate.
+% This module repairs the R9 self-containment gap.  It uses only notation and identities
+% already established in the manuscript, in particular the prime-cell construction in
+% the proof of Theorem~\ref{thm:odd}.
+
+\subsection{Rough prime-cell quadrature and the finite logarithmic gate}
+\label{subsec:rough-log-gate}
+
+The smooth proof of Theorem~\ref{thm:odd} used the derivative estimate
+\eqref{eq:odd-kernel-bound} in the final prime-cell quadrature.  For the complement
+problem below one needs a version that does not assume derivatives of the source vector.
+We record that extension here.
+
+Fix $S>0$ and let
+\[
+ 0\ne f\in L^2(-S,S)
+\]
+be odd and compactly supported in $(-\rho,\rho)$ for some $\rho<S$.  Assume that its
+first nonvanishing integral jet
+\[
+ m=m(f):=\min\{j\ge0:\beta_S^{(j)}(f)\ne0\}
+\]
+is finite.  Put
+\[
+ F:=E_Sf,
+ \qquad
+ \omega_f(h):=\|\tau_hF-F\|_{L^2(\mathbb R)}.
+\tag{LG.1}\label{eq:loggate-modulus}
+\]
+For the future-prime cells of Step~5 in the proof of Theorem~\ref{thm:odd}, write
+\[
+ \delta_T:=\max_I |I|.
+\]
+There $q\asymp X=e^{2(T-r)}$ and the fixed short-interval exponent $3/5$ gives
+$|I|\asymp X^{-2/5}=e^{-\frac45(T-r)}$.  All future cells used in the certificate
+satisfy $T-r\ge T/2-O(1)$; hence
+\[
+ \boxed{\delta_T\le C e^{-2T/5}.}
+\tag{LG.2}\label{eq:loggate-cellwidth}
+\]
+
+\begin{lemma}[Rough boundary mean and constant-mode scale]
+\label{lem:rough-boundary-mean}
+For the fixed compactly supported $L^2$ vector $f$, the boundary expansion of
+Theorem~\ref{thm:jet-expansion} extends verbatim in the form
+\[
+ \langle J_{S,T}f,H_T\mathbf1_T\rangle
+ =-\sqrt2\,e^{T/2}T^{-1/2}
+ \sum_{j=0}^{M}\frac{c_j}{T^j}\beta_S^{(j)}(f)
+ +O_{S,M,\|f\|_2}(e^{T/2}T^{-M-3/2})
+\tag{LG.3}\label{eq:rough-boundary-expansion}
+\]
+for every fixed $M$.  Consequently the growing primitive mean $K_T$ from
+\eqref{eq:odd-KT} satisfies
+\[
+ K_T
+ =-\sqrt2\,c_m\beta_S^{(m)}(f)
+ \frac{e^{T/2}}{T^{m+1/2}}(1+o(1)),
+\tag{LG.4}\label{eq:rough-KT}
+\]
+and
+\[
+ M_T:=\frac{|K_T|^2}{2T}
+ =c_m^2|\beta_S^{(m)}(f)|^2
+ \frac{e^T}{T^{2m+2}}(1+o(1)).
+\tag{LG.5}\label{eq:rough-MT}
+\]
+\end{lemma}
+
+\begin{proof}
+The proof of Theorem~\ref{thm:jet-expansion} first obtains a kernel expansion uniform
+for $0\le r\le S$.  Since $f\in L^2(-S,S)\subset L^1(-S,S)$ with
+$\|f\|_1\le\sqrt{2S}\|f\|_2$, that uniform expansion can be integrated directly
+against $f$, giving~\eqref{eq:rough-boundary-expansion}.  The finite primitive block and
+all prime powers $k\ge2$ form the bounded remainder of
+\eqref{eq:odd-rem-bounded}; its pairing with $\mathbf1_T$ is $O(\sqrt T)$, negligible
+against the leading term in~\eqref{eq:rough-boundary-expansion}.  This proves
+\eqref{eq:rough-KT}, and~\eqref{eq:rough-MT} is immediate.
+\end{proof}
+
+For the growing primitive block keep the notation
+\[
+ a_p:=\tfrac12\log p,
+ \qquad d_p:=T-a_p,
+ \qquad c_p:=\sqrt{\log p}\,p^{-3/4},
+\]
+and define, exactly as in~\eqref{eq:odd-kernel},
+\[
+ k_T(t):=-2\sum_p c_p f(t-d_p),
+ \qquad
+ k_T^0(t):=k_T(t)-\frac{K_T}{T}.
+\tag{LG.6}\label{eq:rough-kernel}
+\]
+The sums are restricted to the same growing future-prime block as in the proof of
+Theorem~\ref{thm:odd}.
+
+\begin{lemma}[Derivative-free continuous signed cost]
+\label{lem:rough-continuous-cost}
+For every fixed compactly supported $f$ as above,
+\[
+ e^{-T}\int_0^T e^{t/2}|k_T(t)|^2\,dt
+ \le \frac{C_S}{T}\|f\|_2^2.
+\tag{LG.7}\label{eq:rough-weighted-kernel}
+\]
+After the mean subtraction in~\eqref{eq:rough-kernel}, the continuous signed
+certificate of~\eqref{eq:odd-signed-continuous} therefore still satisfies
+\[
+ \boxed{\|Y_T^{\rm cont,-}\|^2=o(M_T).}
+\tag{LG.8}\label{eq:rough-cont-cost}
+\]
+No derivative of $f$ is used.
+\end{lemma}
+
+\begin{proof}
+Put $A=T-t$ and $F_1(u):=e^{u/4}f(u)$.  Since $a_p=A+u$ on a translated copy of
+$f$, one has
+\[
+ e^{-A/4}k_T(T-A)
+ =-2\sum_p\sqrt{\log p}\,p^{-7/8}F_1(a_p-A).
+\tag{LG.9}\label{eq:rough-convolution}
+\]
+The positive discrete measure in~\eqref{eq:rough-convolution} has total variation
+\[
+ \sum_{p\le e^{2T}}\sqrt{\log p}\,p^{-7/8}
+ \ll \frac{e^{T/4}}{\sqrt T},
+\tag{LG.10}\label{eq:rough-seven-eight}
+\]
+by Chebyshev's bound $\pi(x)\ll x/\log x$ and partial summation (equivalently, a
+dyadic decomposition).  Young's inequality for convolution with a finite discrete
+measure gives
+\[
+ \int_0^T e^{-A/2}|k_T(T-A)|^2\,dA
+ \le C_S\frac{e^{T/2}}{T}\|f\|_2^2.
+\]
+Since $e^{-T}e^{t/2}=e^{-T/2}e^{-A/2}$, this is
+\eqref{eq:rough-weighted-kernel}.
+
+The continuous certificate estimate in Step~4 of the proof of
+Theorem~\ref{thm:odd} depends on $k_T^0$ only through this weighted $L^2$ norm.
+Replacing $k_T$ by $k_T^0=k_T-K_T/T$ adds at most
+\[
+ C\frac{|K_T|^2e^{-T/2}}{T^2}
+\]
+to the certificate cost.  By~\eqref{eq:rough-MT} this is $o(M_T)$; the contribution
+from~\eqref{eq:rough-weighted-kernel} is $O(T^{-1})=o(M_T)$ because
+$M_T\to\infty$.  Hence~\eqref{eq:rough-cont-cost} follows.
+\end{proof}
+
+\begin{lemma}[Oscillation form of the future-prime quadrature]
+\label{lem:rough-prime-quadrature}
+Let the mass-normalized coefficients $\lambda_q^{(I)}$ be those of
+\eqref{eq:prime-cell-cost}.  If $\Phi:I\to\mathscr H$ is norm-continuous with values in
+a Hilbert space, define
+\[
+ \omega_\Phi(\delta)
+ :=\sup_{|r-r'|\le\delta}\|\Phi(r)-\Phi(r')\|.
+\]
+Then
+\[
+ \boxed{
+ \left\|
+ \sum_{q:r_q\in I}\lambda_q^{(I)}\Phi(r_q)
+ -\int_I\Phi(r)\,dr
+ \right\|
+ \le2|I|\,\omega_\Phi(|I|).
+ }
+\tag{LG.11}\label{eq:rough-cell-quadrature}
+\]
+For the signed edge field
+\[
+ \Phi_T^-(r)(x)
+ :=2k_T^0(x)\alpha(2r-x)
+   -2k_T^0(2r-x)\alpha(x),
+\tag{LG.12}\label{eq:rough-edge-field}
+\]
+one has
+\[
+ \omega_{\Phi_T^-}(\delta)
+ \le C_\alpha\Bigl(
+ \delta\|k_T^0\|_2+\omega_{k_T}(2\delta)
+ \Bigr),
+\tag{LG.13}\label{eq:rough-edge-modulus}
+\]
+and
+\[
+ \|k_T\|_2
+ \le C\frac{e^{T/2}}{\sqrt T}\|f\|_2,
+ \qquad
+ \omega_{k_T}(h)
+ \le C\frac{e^{T/2}}{\sqrt T}\omega_f(h).
+\tag{LG.14}\label{eq:rough-kernel-modulus}
+\]
+Consequently the source quadrature remainder satisfies
+\[
+ \boxed{
+ \|Z_T^{\rm quad,rough}\|_2
+ \le C e^{T/2}\sqrt T
+ \Bigl[\delta_T\|f\|_2+\omega_f(2\delta_T)\Bigr]
+ +C\sqrt T\,\delta_T|K_T|.
+ }
+\tag{LG.15}\label{eq:rough-quadrature-bound}
+\]
+\end{lemma}
+
+\begin{proof}
+Because the coefficients are positive and
+$\sum_{q:r_q\in I}\lambda_q^{(I)}=|I|$, choose any $r_I\in I$ and subtract
+$\Phi(r_I)$ from both the discrete sum and the integral.  The triangle inequality gives
+\eqref{eq:rough-cell-quadrature}.
+
+For~\eqref{eq:rough-edge-modulus}, the first term in~\eqref{eq:rough-edge-field}
+changes only through the fixed smooth anchor $\alpha$, and is bounded by
+$C_\alpha\delta\|k_T^0\|_2$.  The second term changes by a translation of $k_T^0$ by
+at most $2\delta$.  The constant part $-K_T/T$ has zero translation modulus, giving
+\eqref{eq:rough-edge-modulus}.
+
+From~\eqref{eq:rough-kernel}, Minkowski's inequality gives
+\[
+ \|k_T\|_2\le2\Bigl(\sum_pc_p\Bigr)\|f\|_2,
+ \qquad
+ \omega_{k_T}(h)\le2\Bigl(\sum_pc_p\Bigr)\omega_f(h).
+\]
+Chebyshev plus partial summation yields
+\[
+ \sum_{p\le e^{2T}}\sqrt{\log p}\,p^{-3/4}
+ \ll\frac{e^{T/2}}{\sqrt T},
+\]
+which proves~\eqref{eq:rough-kernel-modulus}.
+
+Finally sum~\eqref{eq:rough-cell-quadrature} over the future cells.  Their total
+$r$-length is $O(T)$, so
+\[
+ \|Z_T^{\rm quad,rough}\|_2
+ \le CT\,\omega_{\Phi_T^-}(\delta_T).
+\]
+Use~\eqref{eq:rough-edge-modulus},~\eqref{eq:rough-kernel-modulus} and
+$\|k_T^0\|_2\le\|k_T\|_2+|K_T|/\sqrt T$ to obtain
+\eqref{eq:rough-quadrature-bound}.
+\end{proof}
+
+\begin{proposition}[Exact sufficient translation-modulus gate]
+\label{prop:rough-modulus-gate}
+If
+\[
+ \boxed{
+ \omega_f(2\delta_T)=o(T^{-m-3/2}),
+ }
+\tag{LG.16}\label{eq:rough-modulus-gate}
+\]
+then
+\[
+ \boxed{\|Z_T^{\rm quad,rough}\|_2=o(\sqrt{M_T}).}
+\tag{LG.17}\label{eq:rough-quadrature-small}
+\]
+Under~\eqref{eq:rough-modulus-gate}, the dual-certificate proof of
+Theorem~\ref{thm:odd} therefore extends to this fixed compactly supported odd $f$ and
+produces
+\[
+ \boxed{
+ \sigma_T(J_{S,T}f)
+ =c_m^2|\beta_S^{(m)}(f)|^2
+ \frac{e^T}{T^{2m+2}}(1+o(1)).
+ }
+\tag{LG.18}\label{eq:rough-sharp-asymptotic}
+\]
+\end{proposition}
+
+\begin{proof}
+Divide~\eqref{eq:rough-quadrature-bound} by
+$\sqrt{M_T}\asymp_f e^{T/2}T^{-m-1}$ from~\eqref{eq:rough-MT}.  The cell-width term is
+bounded by
+\[
+ C_f T^{m+3/2}\delta_T\longrightarrow0
+\]
+by~\eqref{eq:loggate-cellwidth}.  The last, constant-anchor term has ratio
+$O(T\delta_T)\to0$.  The remaining term has ratio
+\[
+ C_fT^{m+3/2}\omega_f(2\delta_T)=o(1)
+\]
+by~\eqref{eq:rough-modulus-gate}.  This proves
+\eqref{eq:rough-quadrature-small}.
+
+The mass-normalized certificate-cost identity~\eqref{eq:prime-cell-cost} does not use
+derivatives, so Lemma~\ref{lem:rough-continuous-cost} gives the same
+$o(M_T)$ discrete certificate cost.  The full-rest lift
+\eqref{eq:future-primitive-tail}--\eqref{eq:full-rest-lift-cost} is purely operator
+algebra and remains unchanged.  The bounded hub remainder is still
+\eqref{eq:odd-rem-bounded}.  Thus the upper squeeze
+\eqref{eq:full-hub-cost}--\eqref{eq:odd-upper-sharp} carries over, while the
+constant-mode lower bound uses only Lemma~\ref{lem:rough-boundary-mean}.  The two sides
+match at~\eqref{eq:rough-MT}, proving~\eqref{eq:rough-sharp-asymptotic}.
+\end{proof}
+
+\begin{lemma}[Finite logarithmic regularity implies the required modulus]
+\label{lem:log-translation}
+For $\alpha>0$ define
+\[
+ \HG^\alpha(\mathbb R)
+ :=\left\{F\in L^2(\mathbb R):
+ \int_{\mathbb R}[\log(2+|\xi|)]^{2\alpha}
+ |\widehat F(\xi)|^2\,d\xi<\infty\right\}.
+\tag{LG.19}\label{eq:log-space}
+\]
+Then
+\[
+ \boxed{
+ F\in\HG^\alpha
+ \Longrightarrow
+ \|\tau_hF-F\|_2
+ =o\bigl((\log(1/h))^{-\alpha}\bigr)
+ \quad(h\downarrow0).
+ }
+\tag{LG.20}\label{eq:log-translation}
+\]
+\end{lemma}
+
+\begin{proof}
+By Plancherel,
+\[
+ \|\tau_hF-F\|_2^2
+ =\frac1{2\pi}\int|e^{i\xi h}-1|^2|\widehat F(\xi)|^2\,d\xi.
+\]
+Put $M=h^{-1/2}$.  On $|\xi|\le M$,
+$|e^{i\xi h}-1|^2\le h^2\xi^2\le h$, hence the low-frequency contribution is
+$O(h\|F\|_2^2)=o((\log(1/h))^{-2\alpha})$.  On $|\xi|>M$ use
+$|e^{i\xi h}-1|^2\le4$ and obtain
+\[
+ \int_{|\xi|>M}|\widehat F(\xi)|^2\,d\xi
+ \le [\log(2+M)]^{-2\alpha}
+ \int_{|\xi|>M}[\log(2+|\xi|)]^{2\alpha}|\widehat F(\xi)|^2\,d\xi.
+\]
+The weighted tail tends to zero, while
+$\log(2+M)\asymp\log(1/h)$.  Taking square roots proves
+\eqref{eq:log-translation}.
+\end{proof}
+
+\begin{corollary}[Finite logarithmic threshold]
+\label{cor:log-threshold}
+If the fixed compactly supported odd vector $f$ has first jet $m$ and
+\[
+ \boxed{E_Sf\in\HG^{m+3/2}(\mathbb R),}
+\tag{LG.21}\label{eq:log-threshold}
+\]
+then the modulus gate~\eqref{eq:rough-modulus-gate} holds and hence the sharp rough
+asymptotic~\eqref{eq:rough-sharp-asymptotic} follows.
+\end{corollary}
+
+\begin{proof}
+By~\eqref{eq:loggate-cellwidth},
+$\log(1/\delta_T)\ge\frac25T-O(1)$.  Lemma~\ref{lem:log-translation} with
+$\alpha=m+3/2$ therefore gives
+\[
+ \omega_f(2\delta_T)=o(T^{-m-3/2}),
+\]
+which is~\eqref{eq:rough-modulus-gate}.
+\end{proof}
+
+\begin{remark}[Scope of the logarithmic gate]
+\label{rem:log-gate-firewall}
+The condition~\eqref{eq:log-threshold} is a sufficient condition for this robust
+prime-cell proof; no necessity is claimed.  The native Gamma form controls only one
+power of $\log(2+|\xi|)$ in the quadratic integral, corresponding to the baseline
+$\HG^{1/2}$ scale.  Thus a first jet of order $m$ leaves an additional logarithmic
+regularity deficit of $m+1$.  Whether the explicit complement vector constructed below
+has this additional regularity remains open.  Nothing in this subsection proves or
+disproves strong terminal transport.
+\end{remark}
