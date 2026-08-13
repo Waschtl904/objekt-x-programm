@@ -1,0 +1,29 @@
+The Hilbert-valued object to which this estimate is applied is the source
+representer, not the raw reflection operator.  Extend $C_T^-(r,\cdot)$ by zero
+outside its natural support and define on $L^2(0,T)$
+\[
+ \boxed{\Phi_T(r)(v):=C_T^-(r,v)-C_T^-(r,2r-v).}
+\tag{6.21a}\label{eq:odd-source-representer}
+\]
+With the scalar product linear in the first argument,~\eqref{eq:odd-signed-continuous}
+means exactly
+\[
+ \langle\Phi_T(r),b\rangle_{L^2(0,T)}
+ =\int C_T^-(r,t)
+ \overline{\bigl(b(t)-b(2r-t)\bigr)}\,dt.
+\tag{6.21b}\label{eq:odd-source-representer-pairing}
+\]
+Since $C_T^-(r,t)=2k_T^0(t)\alpha(2r-t)$, differentiation of this source
+representer gives
+\[
+ \boxed{
+ \partial_r\Phi_T(r)(v)
+ =4k_T^0(v)\alpha'(2r-v)
+ -4(k_T^0)'(2r-v)\alpha(v).
+ }
+\tag{6.21c}\label{eq:odd-source-representer-derivative}
+\]
+Thus the Lipschitz norm required in~\eqref{eq:prime-cell-quadrature} is controlled
+by the already established bounds~\eqref{eq:odd-kernel-bound}; no operator-norm
+continuity of the raw reflection $b(t)\mapsto b(2r-t)$ is used.
+Applying~\eqref{eq:prime-cell-quadrature} to $\Phi_T$, the cost
