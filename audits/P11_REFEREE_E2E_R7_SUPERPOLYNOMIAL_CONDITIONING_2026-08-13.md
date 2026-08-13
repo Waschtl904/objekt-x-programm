@@ -3,149 +3,134 @@
 **Date:** 2026-08-13  
 **Repository:** `Waschtl904/objekt-x-programm`  
 **Branch:** `main`  
-**Paper under review:** `papers/P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex`
+**Paper under review:** `papers/P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex`  
+**Included proof module:** `papers/P11_sections/P11_TC1_MixedJet.tex`
 
-## Referee mode
+## Correction provenance
 
-The corollary on superpolynomial odd conditioning is checked from the paper's own preceding statements. Earlier audit nodes are not imported as proof.
+The initial R7 commit `b81d7cdd2fa6795784bbc123b5ac70af1da2ac17` correctly reconstructed the mathematical argument but incorrectly classified the paper as missing that proof. The error was in the referee scan: the main file states Corollary `cor:conditioning` and immediately afterwards inputs `P11_sections/P11_TC1_MixedJet.tex`; that included file begins with an explicit `Proof of Corollary~\ref{cor:conditioning}` containing the required high-jet/Rayleigh comparison.
+
+Git history preserves the erroneous first disposition. This corrected audit is authoritative.
 
 ## Executive verdict
 
-- **[R7-A] ✓[M]** — the claimed superpolynomial growth of the odd relative condition number is mathematically correct.
-- **[R7-B] ✓[M]** — the fourth-root quantity `chi = kappa^{1/4}` is likewise superpolynomial.
-- **[R7-C] ✓[M]_part** — as an end-to-end paper claim, the current presentation is incomplete: the corollary is stated without the finite-codimension/high-jet comparison argument that is actually needed.
+- **[R7-A] ✓[M]** — the superpolynomial growth of the odd relative condition number is correct.
+- **[R7-B] ✓[M]** — the fourth-root quantity `chi = kappa^{1/4}` is also superpolynomial.
+- **[R7-C] ✓[M]** — the current paper is self-contained at this point: the required proof is present in the immediately included TC1 module.
 
-**Overall R7 status:** **PAPER REPAIR REQUIRED — statement retained; missing proof bridge must be inserted.**
+**Overall R7 status:** **PASS — ✓[M].**
 
 ---
 
-## 1. The dangerous non-implication
+## 1. The nontrivial logical point
 
-Immediately before the corollary, the paper records for a fixed nonzero smooth odd vector `f` with first nonzero jet `m=m(f)` the Rayleigh asymptotic
+A single fixed-vector asymptotic
 
 \[
 \rho_{T_0,U}(f)
+\sim C_{T_0,f}\frac{e^U}{U^{2m(f)+2}}
+\]
+
+does not by itself imply a large condition number. One needs fixed odd directions with arbitrarily separated first integral jets and then a comparison of their Rayleigh quotients.
+
+The included proof supplies exactly this argument.
+
+---
+
+## 2. Arbitrarily separated smooth odd jets
+
+On
+
+\[
+\mathcal D_R^-:=C_c^\infty((-R,R))_{\rm odd},
+\]
+
+the functionals `beta_R^(0),...,beta_R^(M)` are linearly independent. Indeed, on the positive half interval they are represented by the kernels
+
+\[
+I_j(r)=\int_0^r s^j e^{-s/2}\,ds.
+\]
+
+If
+
+\[
+\sum_{j=0}^M a_j I_j(r)=0\qquad(0<r<R),
+\]
+
+differentiation gives
+
+\[
+e^{-r/2}\sum_{j=0}^M a_j r^j=0,
+\]
+
+hence all `a_j=0`. Therefore for every `M>=1` there is a smooth odd `f_M` with
+
+\[
+\beta_R^{(0)}(f_M)=\cdots=\beta_R^{(M-1)}(f_M)=0,
+\qquad
+\beta_R^{(M)}(f_M)\ne0.
+\]
+
+Choose also `f_0` with `beta_R^(0)(f_0) != 0`.
+
+Thus the first nonzero jets are exactly `0` and `M` for this pair.
+
+---
+
+## 3. Rayleigh quotient and condition number
+
+For
+
+\[
+A_U:=A_{T_0,U}^{R,-}
+=G_{R,T_0}^{-1/2}G_{R,U}G_{R,T_0}^{-1/2}
+\]
+
+and `x=G_{R,T_0}^{1/2}f`, the paper correctly identifies
+
+\[
+\frac{\langle A_Ux,x\rangle}{\|x\|^2}
+=\rho_{T_0,U}(f)
 :=\frac{\langle G_{R,U}f,f\rangle}
-        {\langle G_{R,T_0}f,f\rangle}
-\sim C_{T_0,f}\frac{e^U}{U^{2m+2}}.
+        {\langle G_{R,T_0}f,f\rangle}.
 \]
-
-This alone does **not** imply a large condition number. A single Rayleigh quotient can grow while all Rayleigh quotients grow at the same rate.
-
-To prove
-
-\[
-U^{-N}\kappa(A_{T_0,U}^{R,-})\to\infty
-\qquad\forall N>0,
-\]
-
-one needs Rayleigh quotients on two directions whose first-jet orders can be separated arbitrarily far.
-
----
-
-## 2. Existence of arbitrarily delayed smooth odd first jets
-
-Let
-
-\[
-\mathcal D_R^-:=C_c^\infty((-R,R))_{\rm odd}.
-\]
-
-This is an infinite-dimensional complex vector space. For every integer `M>=1`, the conditions
-
-\[
-\beta_R^{(0)}(g)=\cdots=\beta_R^{(M-1)}(g)=0
-\]
-
-are only finitely many linear equations on `\mathcal D_R^-`. Therefore
-
-\[
-\mathcal N_M
-:=\mathcal D_R^-\cap\bigcap_{j=0}^{M-1}\ker\beta_R^{(j)}
-\]
-
-is nonzero (indeed infinite-dimensional). Choose `0 != g_M in \mathcal N_M`.
-
-The paper's jet-completeness theorem and its finite-first-jet corollary imply that `g_M` has some finite first nonzero jet
-
-\[
-n_M:=m(g_M)\ge M.
-\]
-
-Thus smooth odd vectors with arbitrarily delayed first nonzero jet exist.
-
-This finite-codimension step is the missing bridge in the current paper text.
-
----
-
-## 3. Rayleigh-quotient comparison
-
-Choose once and for all a smooth odd `f_0` with
-
-\[
-\beta_R^{(0)}(f_0)\ne0,
-\]
-
-so `m(f_0)=0`. Such a vector is obtained, for example, from a nonnegative smooth bump on `(0,R)` and its odd reflection.
 
 The sharp odd asymptotic gives
 
 \[
 \rho_{T_0,U}(f_0)
 \sim C_0\frac{e^U}{U^2},
+\qquad
+\rho_{T_0,U}(f_M)
+\sim C_M\frac{e^U}{U^{2M+2}}.
 \]
 
-whereas for `g_M`,
-
-\[
-\rho_{T_0,U}(g_M)
-\sim C_M\frac{e^U}{U^{2n_M+2}}.
-\]
-
-Let
-
-\[
-A_U:=A_{T_0,U}^{R,-}
-=(G_{R,T_0}^-)^{-1/2}G_{R,U}^-(G_{R,T_0}^-)^{-1/2}.
-\]
-
-For `x_f=(G_{R,T_0}^-)^{1/2}f`, the quotient `rho_{T_0,U}(f)` is exactly the Rayleigh quotient of `A_U` at `x_f`:
-
-\[
-\rho_{T_0,U}(f)
-=\frac{\langle A_Ux_f,x_f\rangle}{\|x_f\|^2}.
-\]
-
-For a positive boundedly invertible operator,
+Since `A_U` is positive and boundedly invertible,
 
 \[
 \kappa(A_U)
 =\frac{\sup\sigma(A_U)}{\inf\sigma(A_U)}
 \ge
-\frac{\rho_{T_0,U}(f_0)}{\rho_{T_0,U}(g_M)}.
+\frac{\rho_{T_0,U}(f_0)}{\rho_{T_0,U}(f_M)}.
 \]
 
-Hence
+Therefore for each fixed `M`,
 
 \[
 \boxed{
-\kappa(A_U)
-\ge c_M U^{2n_M}(1+o(1))
-\ge c_M U^{2M}(1+o(1)).
+\kappa(A_U)\ge c_M U^{2M}
 }
 \]
 
-The constant `c_M>0` may depend on the chosen pair but not on `U`.
+for all sufficiently large `U`.
 
-Given any prescribed `N>0`, choose an integer `M>N/2`. Then
+Given `N>0`, choose `M>N/2`; then
 
 \[
-U^{-N}\kappa(A_U)
-\ge c_M U^{2M-N}(1+o(1))
-\longrightarrow\infty.
+U^{-N}\kappa(A_U)\to\infty.
 \]
 
-Therefore
+Hence
 
 \[
 \boxed{
@@ -154,74 +139,61 @@ U^{-N}\kappa(A_{T_0,U}^{R,-})\to\infty.
 }
 \]
 
-So the first claim of the corollary is valid.
+This is exactly the claimed superpolynomial condition-number growth.
 
 ---
 
-## 4. Fourth-root conditioning parameter
+## 4. Fourth-root parameter
 
-The paper defines
-
-\[
-\chi_{T_0,U}^{R,-}:=\kappa(A_{T_0,U}^{R,-})^{1/4}.
-\]
-
-For any `N>0`, apply the already proved condition-number statement with exponent `4N`:
+With
 
 \[
-U^{-4N}\kappa(A_U)\to\infty.
+\chi_{T_0,U}^{R,-}:=\kappa(A_{T_0,U}^{R,-})^{1/4},
 \]
 
-Taking fourth roots gives
+choose `M>2N` in the preceding estimate. Then
+
+\[
+\chi_{T_0,U}^{R,-}\ge c_M^{1/4}U^{M/2},
+\]
+
+so
 
 \[
 \boxed{
-U^{-N}\chi_{T_0,U}^{R,-}
-=\bigl(U^{-4N}\kappa(A_U)\bigr)^{1/4}
-\to\infty.
+\forall N>0:\qquad
+U^{-N}\chi_{T_0,U}^{R,-}\to\infty.
 }
 \]
 
-Thus the second claim is also valid.
+The paper's second conclusion is therefore correct.
 
 ---
 
-## 5. Paper repair required
+## 5. Firewalls
 
-The current manuscript states the superpolynomial-conditioning corollary immediately after a single fixed-vector Rayleigh asymptotic and supplies no proof environment for the corollary.
+The argument uses a test vector `f_M` depending on the desired polynomial order `M`. It supplies no uniform finite-jet Gram or square-root control and makes no statement about `T`-dependent optimizing vectors beyond the condition-number lower bound.
 
-For self-containment the paper should insert the argument of Sections 2--4 above, or an equivalent concise proof containing all three indispensable ingredients:
-
-1. existence, for every `M`, of a nonzero smooth odd vector annihilating the first `M` jets;
-2. finite first nonzero jet of that vector by jet completeness;
-3. comparison of two Rayleigh quotients to bound the condition number from below.
-
-Without these steps, the displayed conclusion is not a formal consequence of the immediately preceding one-vector asymptotic.
-
----
-
-## 6. Firewalls
-
-This audit does **not** show any uniform finite-jet Gram or square-root control. The high-jet test vector may depend on `M`; no uniformity in `M` is claimed or needed for superpolynomial growth.
-
-It also does not imply failure of strong terminal transport. A badly conditioned family can still have normalized transports with cancellations. In particular R7 does not close any of
+In particular it does not prove or disprove
 
 \[
-?[O]_{\text{uniform finite-jet Gram/square-root control}},
-\qquad
-?[O]_{K_{R,S}^{T,U}\to I},
-\qquad
-?[O]_{W_{R,S,-}^{[T]}\ \mathrm{strong\ Cauchy}}.
+K_{R,S}^{T,U}\to I
 \]
+
+or strong Cauchy convergence of
+
+\[
+W_{R,S,-}^{[T]}.
+\]
+
+Those gates remain open.
 
 ---
 
 ## Final referee disposition
 
 \[
-\boxed{
-[R7]\quad \checkmark[M]_{\rm part}
-}
+\boxed{[R7]\quad \checkmark[M]}
 \]
 
-The **mathematical statement is retained**, but the present paper is not yet end-to-end self-contained at this corollary. A short high-jet/Rayleigh comparison proof must be inserted.
+**PASS.** The theorem is correct and the required proof is already present in the paper through the immediately following `\input{P11_sections/P11_TC1_MixedJet}` module.
