@@ -225,6 +225,58 @@ determinant divided by the larger one, is asymptotic to $\varepsilon^a$.  The
 inverse-square-root norm is the reciprocal square root of the smallest eigenvalue.
 \end{proof}
 
+The TC1 decomposition identifies the corresponding near-null direction inside the
+actual fixed two-vector jet block.
+
+\begin{proposition}[Exact TC1 near-null direction]\label{prop:o3n-nearnull}
+Fix smooth odd vectors $f_0,f_m$ at one source level, with first nonzero integral-jet
+orders $0$ and $m>0$, respectively.  For all sufficiently large $U$ one has
+$\ell_U(f_0)\ne0$.  Define the $U$-dependent vector
+\[
+ \boxed{
+ z_U:=f_m-\frac{\ell_U(f_m)}{\ell_U(f_0)}f_0.
+ }
+\tag{O3N.11}\label{eq:o3n-zU}
+\]
+Then the constant-mode rank-one form vanishes exactly on $z_U$,
+\[
+ \boxed{
+ \rho_U(z_U,z_U)=0,
+ \qquad
+ \sigma_U(Jz_U,Jz_U)=D_U(z_U,z_U).
+ }
+\tag{O3N.12}\label{eq:o3n-nearnull-exact}
+\]
+Moreover
+\[
+ \boxed{
+ D_U(z_U,z_U)
+ =o\!\left(\frac{e^U}{U^{2m+2}}\right).
+ }
+\tag{O3N.13}\label{eq:o3n-nearnull-littleo}
+\]
+The present theory supplies no matching positive lower asymptotic for this quantity.
+\end{proposition}
+
+\begin{proof}
+By~\eqref{eq:mj-ell},
+\[
+ \frac{\ell_U(f_m)}{\ell_U(f_0)}=O(U^{-m}),
+\]
+and $\ell_U(f_0)\ne0$ for all sufficiently large $U$.  The definition
+\eqref{eq:o3n-zU} gives $\ell_U(z_U)=0$, hence
+\[
+ \rho_U(z_U,z_U)=\frac{|\ell_U(z_U)|^2}{d_U}=0.
+\]
+Since $\sigma_U=\rho_U+D_U$ on the fixed span of $f_0,f_m$, this proves
+\eqref{eq:o3n-nearnull-exact}.
+
+Expand $D_U(z_U,z_U)$ sesquilinearly in the fixed pair $f_0,f_m$.  Equations
+\eqref{eq:mj-Ddiag}--\eqref{eq:mj-Dmixed}, together with
+$\ell_U(f_m)/\ell_U(f_0)=O(U^{-m})$, show that each resulting term is
+$o(e^U/U^{2m+2})$.  This proves~\eqref{eq:o3n-nearnull-littleo}.
+\end{proof}
+
 \begin{remark}[R15 information firewall]\label{rem:o3n-firewall}
 On a two-vector jet-adapted block with first jet orders $0$ and $m>0$, the mixed-jet
 asymptotic, after removal of its common scalar factor and a fixed diagonal
@@ -237,14 +289,21 @@ normalisation by the nonzero leading jet coefficients, has the rank-one scale
 \]
 up to entrywise relative $o(1)$ errors.  Proposition~\ref{prop:o3n-rankone-insufficiency}
 shows that such information does not determine the smallest eigenvalue or the inverse
-square root even to polynomial order.  Therefore the present fixed-pair asymptotics
-cannot by themselves decide $U_R,U_S$, $\Gamma_U$, or the true cross-terminal kernel.
-This is an information-theoretic obstruction to the current proof package, not a
-counterexample to the actual P11 metric family.
+square root even to polynomial order.  Proposition~\ref{prop:o3n-nearnull} identifies
+the exact P11 two-jet direction on which the leading rank-one term cancels: the missing
+scale is the positive TC1 Gram remainder $D_U(z_U,z_U)$ (together with the fixed Gamma
+floor in the full metric), not another copy of the already known leading boundary jet.
+
+Therefore the present fixed-pair asymptotics cannot by themselves decide $U_R,U_S$,
+$\Gamma_U$, or the true cross-terminal kernel.  This is an information-theoretic
+obstruction to the current proof package, not a counterexample to the actual P11 metric
+family.
 
 Accordingly the genuine next step is exactly Open Problem~\ref{open:finite-jet-sqrt}:
 one needs a quantitative finite-dimensional jet expansion deep enough to resolve the
 near-null Gram directions and then compare the resulting square roots between the
-$R$- and $S$-levels.  No conclusion about $\Gamma_U\to I$, $K_{R,S}^{T_0,U}\to I$, strong
-terminal transport, Object X, or RH is drawn here.
+$R$- and $S$-levels.  At the two-jet level, the sharpest immediate target is a
+quantitative asymptotic or two-sided scale for $D_U(z_U,z_U)$.  No conclusion about
+$\Gamma_U\to I$, $K_{R,S}^{T_0,U}\to I$, strong terminal transport, Object X, or RH is
+drawn here.
 \end{remark}
