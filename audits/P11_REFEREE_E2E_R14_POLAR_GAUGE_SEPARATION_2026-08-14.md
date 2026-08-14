@@ -32,22 +32,27 @@ K_{R,S}^{T_0,U}=W^*W_{R,S,-}^{[U]}?
 
 The polar-gauge identity is exact and the polar factors are **unique**.  The gauge gap is therefore not a decomposition ambiguity.
 
-However, the modulus/Jensen data do **not** determine the actual future transport.  In fact there is a finite-dimensional exact countermodel satisfying the same pullback and relative-metric algebra in which
+However, the modulus/Jensen data do **not** determine the actual future transport.  There is a finite-dimensional exact countermodel with the **fixed canonical coordinate inclusion**
 \[
-Q=W=I,\qquad \Theta=0
+J:\mathbb C\hookrightarrow\mathbb C^2,
+\qquad Jz=(z,0),
+\]
+(the finite-dimensional analogue of zero extension) satisfying the terminal pullback and relative-metric identities for which
+\[
+Q=W,\qquad \Theta=0
 \]
 identically, while
 \[
 W^{[U]}\ne W,\qquad K^{T_0,U}\ne I.
 \]
-There is even a fixed-baseline sequence with `Q=W=I` and `Theta=0` at every future step while the actual future transports alternate between two distinct unitaries and hence are not Cauchy.
+There is even a fixed-baseline sequence with the same inclusion `J`, with `Q=W` and `Theta=0` at every future step, while the actual future transports alternate between two distinct isometries and hence are not Cauchy.
 
 Therefore:
 
 - [R14-A] exact polar-gauge identity: **✓[M]**;
 - [R14-B] uniqueness of `U_R,U_S`: **✓[M]**;
 - [R14-C] exact gauge/modulus separation formula for the cross kernel: **✓[M]**;
-- [R14-D] implication `modulus/Jensen control => actual terminal convergence` from the current algebra alone: **✓[M]_neg**;
+- [R14-D] implication `modulus/Jensen control => actual terminal convergence` from the current pullback/relative/polar algebra, even with canonical inclusion: **✓[M]_neg**;
 - [R14-E] actual P11 asymptotics of `U_R,U_S` and `K_{R,S}^{T_0,U}`: **?[O]**.
 
 Thus R14 closes the **logical promotion question** negatively but does not decide the actual P11 transport problem.
@@ -133,99 +138,145 @@ cannot close the route.  This is a one-sided estimate and cannot be inverted int
 
 ---
 
-## 3. Finite-dimensional countermodel
+## 3. Canonical-inclusion countermodel
 
-Work on `C^2`.  Let
+Take source space `C`, target space `C^2`, and fix once and for all
 \[
-B=\begin{pmatrix}2&1\\1&2\end{pmatrix}>0,
+Jz=ze_1,
+\qquad e_1=(1,0)^T.
+\]
+Define the positive matrix
+\[
+P=\begin{pmatrix}
+\sqrt3/2&1/2\\
+1/2&1
+\end{pmatrix}>0,
+\]
+and
+\[
+w:=Pe_1=(\sqrt3/2,1/2)^T.
+\]
+Then `||w||=1`.
+
+Set the base metrics
+\[
+G_{R,T_0}=1,
 \qquad
-A=\begin{pmatrix}4&0\\0&1\end{pmatrix}>0.
+G_{S,T_0}=P^2.
 \]
-They do not commute.
+The pullback identity holds because
+\[
+J^*G_{S,T_0}J=e_1^*P^2e_1=\|Pe_1\|^2=1=G_{R,T_0}.
+\]
+The normalized base transport is therefore
+\[
+W=G_{S,T_0}^{1/2}JG_{R,T_0}^{-1/2}=Pe_1=w.
+\]
 
-Set the base-terminal metrics and transition map to
+Now put
 \[
-G_{R,T_0}=I,\qquad
-G_{S,T_0}=B,\qquad
-J=B^{-1/2}.
+A:=I+3ww^*
+=\begin{pmatrix}
+13/4&3\sqrt3/4\\
+3\sqrt3/4&7/4
+\end{pmatrix},
 \]
-At the future horizon set
+so that `Aw=4w`.  At the future horizon define
 \[
-G_{R,U}=A,\qquad
-G_{S,U}=B^{1/2}AB^{1/2}.
+G_{R,U}=4,
+\qquad
+G_{S,U}=PAP.
 \]
 Then
 \[
-J^*G_{S,T_0}J=G_{R,T_0},\qquad
-J^*G_{S,U}J=G_{R,U},
+J^*G_{S,U}J=e_1^*PAPe_1=w^*Aw=4=G_{R,U},
 \]
-so the exact pullback algebra is satisfied.
+so the future pullback identity also holds.
 
-The normalized base transport is
+The relative metrics are
 \[
-W=G_{S,T_0}^{1/2}JG_{R,T_0}^{-1/2}=I.
-\]
-The two relative metrics are both exactly
-\[
-A_R=A_S=A.
+A_R=4,
+\qquad
+A_S=P^{-1}(PAP)P^{-1}=A.
 \]
 Therefore
 \[
-Q=A_S^{1/2}WA_R^{-1/2}=I,
-\qquad
+Q=A_S^{1/2}WA_R^{-1/2}
+=\frac12A^{1/2}w
+=w
+=W.
+\]
+Also
+\[
+W^*A_S^{1/2}W=w^*A^{1/2}w=2=A_R^{1/2},
+\]
+so
+\[
 \Theta=0.
 \]
-This is the ideal modulus/Jensen situation.
+Thus the modulus/Jensen data are ideal.
 
-But the actual future transport is
+The actual future normalized transport is
 \[
-V=W^{[U]}
-=(B^{1/2}AB^{1/2})^{1/2}B^{-1/2}A^{-1/2}.
+V:=W^{[U]}=\frac12(PAP)^{1/2}e_1.
 \tag{R14.3}
 \]
-It is unitary by the pullback identity.  If `V=I`, then
+We claim `V != w`.  In polar notation `U_R=1` and
 \[
-(B^{1/2}AB^{1/2})^{1/2}=A^{1/2}B^{1/2}.
+X_S=(PAP)^{1/2}P^{-1}=U_SA^{1/2}.
 \]
-The left side is positive selfadjoint, so `A^{1/2}B^{1/2}` would be selfadjoint.  Hence `A^{1/2}` and `B^{1/2}` would commute and therefore `A` and `B` would commute, contradiction.
-
-Thus
+All matrices are real and `det U_S=+1`.  If `V=w`, then from `W^{[U]}=U_SQ` and `Q=w` we obtain `U_Sw=w`.  An orientation-preserving orthogonal operator on `R^2` fixing a nonzero vector is the identity, so `U_S=I`.  Hence
 \[
-Q=W=I,\quad \Theta=0,
+(PAP)^{1/2}=A^{1/2}P.
+\]
+The left side is selfadjoint, forcing `A^{1/2}P` to be selfadjoint and therefore `A^{1/2}` to commute with `P`.  Hence `A` would commute with `P`.
+
+But direct multiplication gives
+\[
+PA-AP=
+\begin{pmatrix}
+0&3/8-3\sqrt3/4\\
+-3/8+3\sqrt3/4&0
+\end{pmatrix}\ne0.
+\]
+Contradiction.  Thus
+\[
+Q=W,\quad\Theta=0,
 \qquad\text{but}\qquad
-W^{[U]}=V\ne I,
+W^{[U]}=V\ne W.
 \]
-and hence `K^{T_0,U}=V != I`.
+Since `W,V` are unit vectors, `K^{T_0,U}=W^*V != 1` as well.
 
-This proves that even the full modulus package `(A_R,A_S,W,Q,Theta)` does not by itself determine the actual future transport: taking instead `B=I` with the same `A` gives the same relative data `A_R=A_S=A`, `W=Q=I`, `Theta=0`, but now the future transport is exactly `I`.
+This is stronger than the earlier arbitrary-map toy model: the transition is already the canonical coordinate inclusion.
 
 ---
 
-## 4. Non-Cauchy sequence with perfect modulus data
+## 4. Non-Cauchy sequence with fixed canonical inclusion and perfect modulus data
 
-Keep the noncommuting `B` and the same fixed base data `G_{R,T_0}=I`, `G_{S,T_0}=B`, `J=B^{-1/2}`.  For a sequence of future horizons choose alternately
+Keep the same fixed baseline `P,J`.  Let the scalar source future metric alternate between
 \[
-A_n=I,
-\qquad
-A_n=A.
+a_n=1
+\qquad\text{and}\qquad
+a_n=4.
 \]
 Put
 \[
-G_{R,U_n}=A_n,
-\qquad
-G_{S,U_n}=B^{1/2}A_nB^{1/2}.
+A_n:=I+(a_n-1)ww^*,
 \]
-At every step
 \[
-A_{R,n}=A_{S,n}=A_n,
+G_{R,U_n}=a_n,
 \qquad
-Q_n=W=I,
+G_{S,U_n}=PA_nP.
+\]
+At every step `w` is an eigenvector of `A_n` with eigenvalue `a_n`, so
+\[
+Q_n=W,
 \qquad
 \Theta_n=0.
 \]
-Yet the actual normalized future transport equals `I` when `A_n=I` and equals the fixed nonidentity unitary `V` from (R14.3) when `A_n=A`.
+When `a_n=1`, the future metrics equal the baseline metrics and `W^{[U_n]}=W`.  When `a_n=4`, the future transport is the fixed distinct vector `V` from (R14.3).
 
-Therefore the future transports are not Cauchy despite perfect modulus/Jensen data at every step.
+Hence the future normalized transports alternate between two distinct isometries and are not Cauchy despite perfect modulus/Jensen data at every step.
 
 This is an algebraic model only; it is **not** asserted to arise from the actual P11 prime/Gamma metric family.
 
@@ -245,9 +296,9 @@ R14 shows exactly what this does and does not mean:
    \[
    \Gamma_U=W^*U_SWU_R^*;
    \]
-4. the current algebraic identities cannot supply that missing control, because the countermodel has `Theta=0` identically and still has nontrivial/non-Cauchy future transport.
+4. the pullback/relative/polar algebra plus canonical-inclusion structure still cannot supply that missing control, because the countermodel has `Theta=0` identically and nontrivial/non-Cauchy future transport.
 
-The next genuine mathematical target is therefore no longer a Jensen estimate.  It is an **actual-family gauge theorem**, for example a bound derived from commutators or relative metric structure that forces
+The next genuine mathematical target is therefore no longer a Jensen estimate.  It is an **actual-family gauge theorem**, for example a bound derived from the concrete P11 metric generators, commutators, or source arithmetic that forces
 \[
 W^*U_SWU_R^*\to I
 \]
