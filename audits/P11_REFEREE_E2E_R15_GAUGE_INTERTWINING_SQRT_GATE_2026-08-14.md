@@ -18,10 +18,25 @@ W=W_{R,S,-}^{[T_0]}.
 1. Is `Gamma_U -> I` exactly an intertwining condition between the unique polar factors `U_R,U_S`?
 2. Is the raw condition `X_S W approximately W X_R` the right new gate, or does it merely repackage the original transport problem?
 3. Can the present fixed-pair mixed-jet asymptotics already determine the inverse square roots and hence the gauges?
+4. Can the actual near-null direction inside the two-jet block be identified exactly?
 
 # Verdict
 
-The gauge condition admits an exact intertwining formulation, but the correctly normalized `X_S`--`X_R` condition is exactly the original norm transport defect.  More importantly, the current fixed-pair mixed-jet asymptotics are mathematically insufficient to determine the inverse-square-root geometry: their leading finite-jet Gram matrix is rank one, so unquantified subleading remainders determine the smallest eigenvalues.
+The gauge condition admits an exact intertwining formulation, but the correctly normalized `X_S`--`X_R` condition is exactly the original norm transport defect. More importantly, the current fixed-pair mixed-jet asymptotics are mathematically insufficient to determine the inverse-square-root geometry: their leading finite-jet Gram matrix is rank one, so unquantified subleading remainders determine the smallest eigenvalues.
+
+The actual two-jet near-null direction is nevertheless explicit. If `f_0,f_m` have first jet orders `0,m>0`, then
+\[
+z_U=f_m-\frac{\ell_U(f_m)}{\ell_U(f_0)}f_0
+\]
+kills the constant-mode rank-one form exactly, so
+\[
+\sigma_U(Jz_U,Jz_U)=D_U(z_U,z_U).
+\]
+The current theory gives only
+\[
+D_U(z_U,z_U)=o(e^U/U^{2m+2}),
+\]
+with no matching lower scale. This is the concrete quantity on which the two-jet inverse-square-root problem turns.
 
 Canonical statuses:
 
@@ -29,9 +44,10 @@ Canonical statuses:
 - [R15-B] exact normalized `X_S`--`X_R` coherence identity: **✓[M]**;
 - [R15-C] individual polar gauge equals noncommutativity of the base/future metric pair: **✓[M]**;
 - [R15-D] claim that the present fixed-pair `1+o(1)` mixed-jet data suffice for inverse-square-root/gauge control: **✓[M]_neg**;
-- [R15-E] actual P11 convergence `Gamma_U -> I`, `K_{R,S}^{T_0,U} -> I`, or strong terminal Cauchy: **?[O]**.
+- [R15-E] exact TC1 near-null direction and reduction to the positive Gram remainder: **✓[M]**;
+- [R15-F] actual P11 convergence `Gamma_U -> I`, `K_{R,S}^{T_0,U} -> I`, or strong terminal Cauchy: **?[O]**.
 
-Thus R15 does not decide the actual gauge.  It identifies exactly why the present asymptotic package cannot decide it and reduces the next genuine step to the finite-jet Gram/square-root gate already isolated in R8.
+Thus R15 does not decide the actual gauge. It identifies exactly why the present asymptotic package cannot decide it and reduces the next genuine step to the finite-jet Gram/square-root gate already isolated in R8, with the first two-jet target now explicit.
 
 ---
 
@@ -74,7 +90,7 @@ so in operator norm
 \|U_SW-WU_R\|\to0.
 \]
 
-Scope warning: because `U_R` itself depends on `U`, one should not silently replace the strong convergence statement by a strong statement for `U_S W-W U_R` acting on fixed vectors.  The norm equivalence is exact; the strong criterion is best stated with `V_U=U_S W U_R^*`.
+Scope warning: because `U_R` itself depends on `U`, one should not silently replace the strong convergence statement by a strong statement for `U_S W-W U_R` acting on fixed vectors. The norm equivalence is exact; the strong criterion is best stated with `V_U=U_S W U_R^*`.
 
 ---
 
@@ -113,7 +129,7 @@ Consequently
 \boxed{\|\mathcal E_U\|=\|W_U-W\|.}
 \]
 
-Therefore the normalized `X` coherence problem is literally the original norm terminal-transport problem.  The unnormalized condition `X_S W-W X_R -> 0` is stronger and is distorted by the growing factor `A_R^{1/2}`.
+Therefore the normalized `X` coherence problem is literally the original norm terminal-transport problem. The unnormalized condition `X_S W-W X_R -> 0` is stronger and is distorted by the growing factor `A_R^{1/2}`.
 
 This corrects the tempting interpretation that studying the products `X_R,X_S` automatically produces a simpler intermediary problem.
 
@@ -141,13 +157,13 @@ C^{1/2}B^{-1/2}=B^{-1/2}C^{1/2},
 \]
 which is equivalent to commutation of `B` and `C`.
 
-Thus the polar factor measures genuine noncommutativity of the base and future metric pair.  Nevertheless `Gamma_U -> I` does not require `U_R -> I` and `U_S -> I` separately; nontrivial rotations may coherently intertwine through `W`.
+Thus the polar factor measures genuine noncommutativity of the base and future metric pair. Nevertheless `Gamma_U -> I` does not require `U_R -> I` and `U_S -> I` separately; nontrivial rotations may coherently intertwine through `W`.
 
 ---
 
 ## 4. Adversarial finite-jet information test
 
-The current mixed-jet theorem gives fixed-pair leading asymptotics.  On a two-dimensional jet-adapted block with first jet orders `0` and `m>0`, after removing the common exponential scalar and fixed nonzero coefficient normalizations, the leading Gram scale is
+The current mixed-jet theorem gives fixed-pair leading asymptotics. On a two-dimensional jet-adapted block with first jet orders `0` and `m>0`, after removing the common exponential scalar and a fixed diagonal normalization by the nonzero leading jet coefficients, the leading Gram scale is
 \[
 \begin{pmatrix}
 1&\varepsilon\\
@@ -155,7 +171,7 @@ The current mixed-jet theorem gives fixed-pair leading asymptotics.  On a two-di
 \end{pmatrix},
 \qquad \varepsilon=U^{-m},
 \]
-with entrywise relative `o(1)` errors.  The leading matrix has rank one.
+with entrywise relative `o(1)` errors. The leading matrix has rank one.
 
 Consider therefore, for any fixed `a>2`,
 \[
@@ -198,17 +214,76 @@ This is exactly the failure mode warned about in the R8 fixed-pair firewall: a l
 
 ---
 
-## 5. Consequence for the actual P11 frontier
+## 5. Exact TC1 near-null direction
 
-R15 does **not** show that the actual P11 gauges fail to converge.  It shows:
+Fix smooth odd vectors `f_0,f_m` with first integral-jet orders `0` and `m>0`. The TC1 boundary coefficients satisfy
+\[
+\ell_U(f_m)/\ell_U(f_0)=O(U^{-m}),
+\]
+and `ell_U(f_0)` is nonzero for all sufficiently large `U`. Define
+\[
+\boxed{
+z_U=f_m-\frac{\ell_U(f_m)}{\ell_U(f_0)}f_0.
+}
+\]
+Then
+\[
+\ell_U(z_U)=0.
+\]
+Since
+\[
+\rho_U(f,g)=\frac{\ell_U(f)\overline{\ell_U(g)}}{d_U},
+\qquad
+\sigma_U=\rho_U+D_U,
+\]
+one has exactly
+\[
+\boxed{
+\rho_U(z_U,z_U)=0,
+\qquad
+\sigma_U(Jz_U,Jz_U)=D_U(z_U,z_U).
+}
+\]
+
+Expanding `D_U(z_U,z_U)` in the fixed pair and using the TC1 estimates
+\[
+D_U(f_0,f_0)=o(e^U/U^2),
+\]
+\[
+D_U(f_m,f_m)=o(e^U/U^{2m+2}),
+\]
+\[
+D_U(f_0,f_m)=o(e^U/U^{m+2}),
+\]
+together with `ell_U(f_m)/ell_U(f_0)=O(U^{-m})`, gives
+\[
+\boxed{
+D_U(z_U,z_U)=o(e^U/U^{2m+2}).
+}
+\]
+
+There is no matching positive asymptotic or two-sided polynomial scale in the current paper. Thus the first concrete quantity that must be resolved to control the two-jet smallest eigenvalue is the positive Gram remainder on this `U`-dependent near-null vector (with the fixed Gamma floor restored when passing from the Schur form to the full metric).
+
+This sharpens `open:finite-jet-sqrt`: the missing information is not another leading boundary jet, but the first non-rank-one scale after exact cancellation of the constant-mode piece.
+
+---
+
+## 6. Consequence for the actual P11 frontier
+
+R15 does **not** show that the actual P11 gauges fail to converge. It shows:
 
 1. `Gamma_U -> I` is precisely a transported polar-unitary coherence condition;
 2. normalized `X_S W-W X_R` coherence is just the original transport defect;
 3. the polar factors arise from noncommutation of `(G_{X,U},G_{X,T_0})`;
-4. current fixed-pair mixed-jet asymptotics do not contain enough subleading information to calculate the inverse square roots on near-null jet directions.
+4. current fixed-pair mixed-jet asymptotics do not contain enough subleading information to calculate the inverse square roots on near-null jet directions;
+5. the first two-jet near-null direction is explicit and its Schur energy is exactly the positive TC1 remainder `D_U(z_U,z_U)`.
 
-Therefore the next positive target is not another Jensen estimate and not merely a new prime-counting exponent.  One needs a **quantitative finite-jet Gram expansion with controlled remainder**, deep enough that after rank-one cancellation the smallest eigenvalues, positive square roots and inverse square roots are determined, and the resulting expansions must be compatible between the `R` and `S` levels.
+Therefore the next positive target is not another Jensen estimate and not merely a new prime-counting exponent. One needs a **quantitative finite-jet Gram expansion with controlled remainder**, deep enough that after rank-one cancellation the smallest eigenvalues, positive square roots and inverse square roots are determined, and the resulting expansions must be compatible between the `R` and `S` levels.
 
-That is precisely Open Problem `open:finite-jet-sqrt`.
+At the two-jet level the sharp immediate target is a quantitative asymptotic or two-sided scale for
+\[
+D_U(z_U,z_U).
+\]
+That is the first concrete subproblem inside Open Problem `open:finite-jet-sqrt`.
 
 No conclusion about `Gamma_U -> I`, `K_{R,S}^{T_0,U} -> I`, strong terminal transport, Object X, Seal, or RH follows from R15.
