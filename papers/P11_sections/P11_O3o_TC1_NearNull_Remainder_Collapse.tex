@@ -1,0 +1,250 @@
+% P11 paper module: R16 absolute collapse of the TC1 near-null Schur remainder.
+
+\subsection{Uniform collapse of the TC1 near-null Schur remainder}
+\label{subsec:o3o-nearnull-collapse}
+
+Keep the two fixed smooth odd source vectors $f_0,f_m\in C_c^\infty((-R,R))$
+from Proposition~\ref{prop:o3n-nearnull}, with first nonzero integral-jet orders
+$0$ and $m>0$.  Recall
+\[
+ z_U:=f_m-\frac{\ell_U(f_m)}{\ell_U(f_0)}f_0,
+ \qquad \ell_U(z_U)=0.
+\]
+By~\eqref{eq:mj-ell},
+\[
+ \frac{\ell_U(f_m)}{\ell_U(f_0)}=O(U^{-m}),
+\tag{O3O.1}\label{eq:o3o-coeff}
+\]
+so $z_U\to f_m$ in every fixed smooth seminorm.  In particular the family
+$\{z_U\}$ has common compact support strictly inside $(-R,R)$ and uniformly bounded
+$C^1$ and $L^2$ norms.
+
+\begin{lemma}[Uniform R1 certificate on the fixed two-jet block]
+\label{lem:o3o-uniform-certificate}
+Let
+\[
+ h_U:=H_U^*J_{R,U}z_U,
+ \qquad
+ A_U:=I+R_U^*R_U.
+\]
+In the growing/remainder splitting of the proof of Theorem~\ref{thm:odd},
+\[
+ h_U=h_U^{\rm grow}+h_U^{\rm rem},
+\]
+one has uniformly
+\[
+ \boxed{\|h_U^{\rm rem}\|_2=O(1).}
+\tag{O3O.2}\label{eq:o3o-rem-bounded}
+\]
+Writing
+\[
+ K_U:=\langle h_U^{\rm grow},\mathbf1_U\rangle,
+ \qquad
+ \mu_U:=\frac{K_U}{2U},
+\]
+one has
+\[
+ \boxed{|K_U|=O(\sqrt U),
+ \qquad
+ \|\mu_U\mathbf1_U\|_2^2=O(1).}
+\tag{O3O.3}\label{eq:o3o-Kmu}
+\]
+Moreover the signed future-edge construction and the exact full-rest lift admit an
+admissible certificate $\widehat Y_U^-$ and source remainder $Z_U^{\rm full}$ with
+\[
+ \boxed{
+ \|\widehat Y_U^-\|^2=O(U^{-1}),
+ \qquad
+ \|Z_U^{\rm full}\|_2=O(1),
+ }
+\tag{O3O.4}\label{eq:o3o-certificate-cost}
+\]
+and
+\[
+ h_U=\widetilde R_U^*\widehat Y_U^-+Z_U^{\rm full}.
+\tag{O3O.5}\label{eq:o3o-certificate-decomp}
+\]
+\end{lemma}
+
+\begin{proof}
+All estimates in Steps~2--6 of the proof of Theorem~\ref{thm:odd} depend on the
+source through finitely many fixed support and smooth seminorm bounds.  By
+\eqref{eq:o3o-coeff}, these are uniform on the bounded family $\{z_U\}$ inside the
+fixed two-dimensional space $\operatorname{span}\{f_0,f_m\}$.  Hence
+\eqref{eq:odd-rem-bounded} gives~\eqref{eq:o3o-rem-bounded} uniformly.
+
+Since $\ell_U(z_U)=0$ exactly,
+\[
+ K_U
+ =-\langle h_U^{\rm rem},\mathbf1_U\rangle,
+\]
+so Cauchy--Schwarz and~\eqref{eq:o3o-rem-bounded} yield
+$|K_U|=O(\sqrt U)$ and therefore
+\[
+ \|\mu_U\mathbf1_U\|_2^2
+ =\frac{|K_U|^2}{2U}=O(1).
+\]
+
+The kernel estimate~\eqref{eq:odd-kernel-bound} is uniform on $\{z_U\}$, hence
+\eqref{eq:odd-kernel-weighted} gives the absolute bound
+\[
+ e^{-U}\int_0^Ue^{t/2}|k_U(t)|^2dt
+ =O(U^{-1})+O(e^{-U/4}).
+\]
+For the mean subtraction,~\eqref{eq:o3o-Kmu} gives
+\[
+ e^{-U}\int_0^Ue^{t/2}\frac{|K_U|^2}{U^2}dt
+ =O(e^{-U/2}/U).
+\]
+Thus the continuous signed certificate has squared norm $O(U^{-1})$.
+The prime-cell mass/cost identity~\eqref{eq:prime-cell-cost} transfers the same
+absolute bound to the discrete primitive certificate.  The source-representer
+quadrature estimate~\eqref{eq:prime-cell-quadrature}, together with the exponentially
+small future-cell mesh and the uniform derivative bound
+\eqref{eq:odd-source-representer-derivative}, gives
+\[
+ \|Z_U^{\rm quad}\|_2=o(1).
+\]
+The constant part contributes only
+$O(|K_U|e^{-2U/5})=o(1)$.  Finally
+\eqref{eq:future-tail-small} and the $O(U^{-1})$ certificate cost give
+\[
+ \|Z_U^{\rm tail}\|_2=o(1).
+\]
+Using the same definitions as in~\eqref{eq:full-rest-lift}--
+\eqref{eq:full-hub-cost},
+\[
+ Z_U^{\rm full}
+ =\mu_U\mathbf1_U+h_U^{\rm rem}+Z_U^{\rm quad}+Z_U^{\rm tail},
+\]
+which proves~\eqref{eq:o3o-certificate-cost} and
+\eqref{eq:o3o-certificate-decomp}.
+\end{proof}
+
+\begin{theorem}[Bounded TC1 near-null remainder]\label{thm:o3o-nearnull-bounded}
+For the exact near-null vector $z_U$,
+\[
+ \boxed{
+ D_U(z_U,z_U)
+ =\sigma_U(J_{R,U}z_U,J_{R,U}z_U)
+ =O(1).
+ }
+\tag{O3O.6}\label{eq:o3o-D-bounded}
+\]
+Consequently, for every fixed $N>0$,
+\[
+ \boxed{
+ D_U(z_U,z_U)
+ =o\!\left(\frac{e^U}{U^N}\right).
+ }
+\tag{O3O.7}\label{eq:o3o-superpoly-relative}
+\]
+In particular no constants $c>0$, $\alpha>0$ can satisfy
+\[
+ D_U(z_U,z_U)
+ \ge c\frac{e^U}{U^{2m+2+\alpha}}
+\]
+for all sufficiently large $U$.
+\end{theorem}
+
+\begin{proof}
+The exact dual formula~\eqref{eq:odd-dual} and
+Lemma~\ref{lem:o3o-uniform-certificate} give
+\[
+ \sigma_U(J_{R,U}z_U,J_{R,U}z_U)
+ \le
+ \|Z_U^{\rm full}\|_2^2+\|\widehat Y_U^-\|^2
+ =O(1).
+\]
+By construction $\ell_U(z_U)=0$, so the rank-one TC1 form
+\[
+ \rho_U(z_U,z_U)=\frac{|\ell_U(z_U)|^2}{d_U}
+\]
+vanishes exactly.  Since $D_U=\sigma_U-\rho_U$,
+\eqref{eq:o3o-D-bounded} follows.  Equation
+\eqref{eq:o3o-superpoly-relative} is immediate from
+$U^Ne^{-U}\to0$.
+\end{proof}
+
+\begin{corollary}[Gamma floor on the exact near-null direction]
+\label{cor:o3o-gamma-floor}
+The full graph energy satisfies
+\[
+ \boxed{
+ q_U^X(J_{R,U}z_U)\asymp1.
+ }
+\tag{O3O.8}\label{eq:o3o-full-floor}
+\]
+\end{corollary}
+
+\begin{proof}
+Terminal Gamma compatibility gives
+\[
+ q_U^X(J_{R,U}z_U)
+ =\mathfrak c_{\Gamma,R}[z_U]+D_U(z_U,z_U).
+\]
+The second term is nonnegative and bounded by
+Theorem~\ref{thm:o3o-nearnull-bounded}.  By~\eqref{eq:o3o-coeff},
+$z_U\to f_m\ne0$, and the fixed Gamma form is positive, so
+$\mathfrak c_{\Gamma,R}[z_U]$ stays bounded above and away from zero.
+\end{proof}
+
+\begin{corollary}[Exponential conditioning witness]
+\label{cor:o3o-exp-conditioning}
+At fixed $R$ and $T_0>R$,
+\[
+ \boxed{
+ \kappa(A_{T_0,U}^{R,-})
+ \ge c\frac{e^U}{U^2}
+ }
+\tag{O3O.9}\label{eq:o3o-exp-conditioning}
+\]
+for all sufficiently large $U$ and some $c>0$.
+\end{corollary}
+
+\begin{proof}
+At the fixed baseline $T_0$,~\eqref{eq:o3o-coeff} gives
+$z_U\to f_m$, so
+\[
+ q_{T_0}^X(J_{R,T_0}z_U)\asymp1.
+\]
+Together with~\eqref{eq:o3o-full-floor}, the relative Rayleigh quotient satisfies
+\[
+ \rho_{T_0,U}(z_U)=O(1).
+\]
+For the fixed first-jet-zero vector $f_0$, Theorem~\ref{thm:odd} gives
+\[
+ \rho_{T_0,U}(f_0)\asymp\frac{e^U}{U^2}.
+\]
+Using the Rayleigh characterization~\eqref{eq:conditioning-kappa},
+\[
+ \kappa(A_{T_0,U}^{R,-})
+ \ge
+ \frac{\rho_{T_0,U}(f_0)}{\rho_{T_0,U}(z_U)}
+ \ge c\frac{e^U}{U^2}.
+\]
+\end{proof}
+
+\begin{remark}[R16 firewall]\label{rem:o3o-firewall}
+Theorem~\ref{thm:o3o-nearnull-bounded} determines the first absolute scale currently
+provable after exact constant-mode cancellation: the Schur remainder is bounded, hence
+smaller than $e^U/U^N$ for every fixed $N$.  It does \emph{not} determine a bounded-scale
+limit.  A positive limit, decay to zero, or bounded oscillation are all still open.
+
+The exponential conditioning bound~\eqref{eq:o3o-exp-conditioning} strengthens
+Corollary~\ref{cor:conditioning}, but it supplies no asymptotic orientation of the
+positive or inverse square roots and no control of the polar gauges.  In particular no
+conclusion about
+\[
+ \Gamma_U\to I,
+ \qquad
+ K_{R,S}^{T_0,U}\to I,
+\]
+strong terminal transport, Object X, or RH follows.
+
+The next genuine local target is the bounded core left by the certificate: determine
+whether the residual contribution represented by $h_U^{\rm rem}$ (after the vanishing
+future-edge certificate errors are removed) has a limit, a positive lower bound, or
+further cancellation, and compare that bounded core compatibly at the $R$- and
+$S$-levels.
+\end{remark}
