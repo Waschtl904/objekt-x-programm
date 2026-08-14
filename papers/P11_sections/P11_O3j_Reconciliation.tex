@@ -126,14 +126,16 @@ gain
 \tag{OJ.11}\label{eq:o3j-domain-gain}
 \]
 
-\begin{remark}[O3j firewall]\label{rem:o3j-firewall}
-The argument proves neither
+\begin{remark}[O3j local firewall]\label{rem:o3j-firewall}
+The argument through~\eqref{eq:o3j-domain-gain} by itself proves neither
 \[
  E_Ru_h\in\HG^{m_h+3/2}
 \]
-nor higher logarithmic regularity of the Schur forcing $r_{\sigma,h}$.  The
-Dirichlet/log-resolvent bootstrap required by the complement gate remains open.  Also,
-$G_{R,T_0}^{-1}$ is not replaced by the global Fourier multiplier
+nor higher logarithmic regularity of the Schur forcing $r_{\sigma,h}$.  In particular,
+one must not replace $G_{R,T_0}^{-1}$ by the global Fourier multiplier
 $m_\Gamma^{-1}$; the finite-window metric inverse remains a genuine Dirichlet/Riesz
-operator.
+operator.  The next subsection closes this local regularity gap by a separate
+fixed-window Sobolev/interpolation argument, without making that replacement.
 \end{remark}
+
+\input{P11_sections/P11_O3k_LogComplement_Regularity}
