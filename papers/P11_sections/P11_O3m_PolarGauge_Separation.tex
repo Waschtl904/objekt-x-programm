@@ -103,15 +103,20 @@ $\|\mathscr N\|\le\|Q-W\|$, proving~\eqref{eq:o3m-gauge-error}.
 \end{proof}
 
 The next finite-dimensional model shows that no conclusion about the actual transport
-can be extracted from the modulus data alone, even in the extreme case
-$Q=W$ and $\Theta=0$ exactly.
+can be extracted from the modulus data alone, even when the transition itself is the
+canonical coordinate inclusion, the finite-dimensional analogue of zero extension.
 
-\begin{proposition}[Exact algebraic countermodel to modulus-only promotion]
+\begin{proposition}[Canonical-inclusion countermodel to modulus-only promotion]
 \label{prop:o3m-countermodel}
-There exist finite-dimensional positive metric data satisfying the exact pullback,
-relative-compression and polar-gauge identities for which
+There exist finite-dimensional positive metric data with the fixed inclusion
 \[
- \boxed{Q=W=I,\qquad \Theta=0,}
+ J:\mathbb C\longrightarrow\mathbb C^2,
+ \qquad Jz=(z,0),
+\]
+satisfying the exact terminal pullback, relative-compression and polar-gauge identities
+for which
+\[
+ \boxed{Q=W,\qquad \Theta=0,}
 \tag{O3M.4}\label{eq:o3m-perfect-modulus}
 \]
 but
@@ -119,85 +124,143 @@ but
  \boxed{W^{[U]}\ne W,\qquad K^{T_0,U}\ne I.}
 \tag{O3M.5}\label{eq:o3m-nontrivial-gauge}
 \]
-Moreover, with one fixed baseline system one can choose a sequence of future positive
-metrics for which~\eqref{eq:o3m-perfect-modulus} holds at every step while the actual
-future transports are not Cauchy.
+Moreover, with one fixed baseline system and the same fixed inclusion $J$, one can
+choose a sequence of future positive metrics for which~\eqref{eq:o3m-perfect-modulus}
+holds at every step while the actual future transports are not Cauchy.
 \end{proposition}
 
 \begin{proof}
-Work on $\mathbb C^2$ and let
+Put
 \[
- B=\begin{pmatrix}2&1\\1&2\end{pmatrix}>0,
+ P:=\begin{pmatrix}
+ \sqrt3/2&1/2\\[2pt]
+ 1/2&1
+ \end{pmatrix}>0,
  \qquad
- A=\begin{pmatrix}4&0\\0&1\end{pmatrix}>0.
+ e_1:=\binom10,
+ \qquad
+ w:=Pe_1=\binom{\sqrt3/2}{1/2}.
 \]
-These matrices do not commute.  Put
+Then $\|w\|=1$.  Let
 \[
- G_{R,T_0}=I,
+ G_{R,T_0}:=1,
  \qquad
- G_{S,T_0}=B,
+ G_{S,T_0}:=P^2,
  \qquad
- J=B^{-1/2},
+ Jz:=ze_1.
 \]
-and at the future horizon put
+Since
 \[
- G_{R,U}=A,
+ J^*G_{S,T_0}J=e_1^*P^2e_1=\|Pe_1\|^2=1=G_{R,T_0},
+\]
+the base pullback identity holds, and the normalized base transport is
+\[
+ W=G_{S,T_0}^{1/2}JG_{R,T_0}^{-1/2}=Pe_1=w.
+\]
+
+Now define
+\[
+ A:=I+3ww^*
+ =\begin{pmatrix}
+ 13/4&3\sqrt3/4\\[2pt]
+ 3\sqrt3/4&7/4
+ \end{pmatrix}.
+\]
+Thus $Aw=4w$.  At the future horizon put
+\[
+ G_{R,U}:=4,
  \qquad
- G_{S,U}=B^{1/2}AB^{1/2}.
+ G_{S,U}:=PAP.
 \]
 Then
 \[
- J^*G_{S,T_0}J=G_{R,T_0},
+ J^*G_{S,U}J
+ =e_1^*PAPe_1
+ =w^*Aw
+ =4
+ =G_{R,U},
+\]
+so the future pullback identity also holds.  The relative metrics are
+\[
+ A_R=4,
  \qquad
- J^*G_{S,U}J=G_{R,U},
+ A_S=P^{-1}(PAP)P^{-1}=A.
 \]
-so the exact terminal pullback identities hold.  The normalized base transport is
+Consequently
 \[
- W=G_{S,T_0}^{1/2}JG_{R,T_0}^{-1/2}=I.
+ Q=A_S^{1/2}WA_R^{-1/2}
+ =\frac12A^{1/2}w
+ =w
+ =W.
 \]
-The relative metrics are
+Furthermore
 \[
- A_R=G_{R,T_0}^{-1/2}G_{R,U}G_{R,T_0}^{-1/2}=A,
+ W^*A_S^{1/2}W=w^*A^{1/2}w=2=A_R^{1/2},
 \]
-\[
- A_S=G_{S,T_0}^{-1/2}G_{S,U}G_{S,T_0}^{-1/2}=A.
-\]
-Therefore
-\[
- Q=A_S^{1/2}WA_R^{-1/2}=I,
-\]
-and the Jensen defect vanishes identically: $\Theta=0$.
+so the Jensen defect vanishes exactly: $\Theta=0$.
 
-On the other hand the actual future normalized transport is
+The actual future normalized transport is
 \[
  V:=W^{[U]}
- =(B^{1/2}AB^{1/2})^{1/2}B^{-1/2}A^{-1/2}.
+ =\frac12(PAP)^{1/2}e_1.
 \tag{O3M.6}\label{eq:o3m-V}
 \]
-It is unitary by the pullback identity.  If $V=I$, then
+We show $V\ne w$.  In the polar-gauge notation the source polar factor is
+$U_R=1$, while
 \[
- (B^{1/2}AB^{1/2})^{1/2}=A^{1/2}B^{1/2}.
+ X_S=(PAP)^{1/2}P^{-1}=U_SA^{1/2}.
 \]
-The left side is positive selfadjoint, so the right side would be selfadjoint.  Hence
-$A^{1/2}$ and $B^{1/2}$ would commute, equivalently $A$ and $B$ would commute, a
-contradiction.  Thus $V\ne I$, proving~\eqref{eq:o3m-nontrivial-gauge}.
+All matrices are real.  Since $\det X_S>0$ and $\det A^{1/2}>0$, the orthogonal polar
+factor $U_S$ has determinant $+1$.  If $V=w$, then from
+$W^{[U]}=U_SQ$ and $Q=w$ we would have $U_Sw=w$.  An orientation-preserving orthogonal
+operator on $\mathbb R^2$ fixing a nonzero vector is the identity, so $U_S=I$.
+Hence
+\[
+ (PAP)^{1/2}P^{-1}=A^{1/2},
+ \qquad\text{or}\qquad
+ (PAP)^{1/2}=A^{1/2}P.
+\]
+The left side is selfadjoint, so $A^{1/2}P$ would be selfadjoint, forcing
+$A^{1/2}P=PA^{1/2}$ and therefore $AP=PA$.  But direct multiplication gives
+\[
+ PA-AP
+ =\begin{pmatrix}
+ 0&\frac38-\frac{3\sqrt3}{4}\\[2pt]
+ -\frac38+\frac{3\sqrt3}{4}&0
+ \end{pmatrix}\ne0.
+\]
+This contradiction proves $V\ne W$.  Since $W$ and $V$ are unit vectors,
+$K^{T_0,U}=W^*V\ne1$ as well.
 
-For the sequential statement keep the same fixed baseline data $B,J$ and alternate the
-future source metric between $A$ and $I$.  Define the target future metric each time by
-$B^{1/2}A_nB^{1/2}$.  At every step one still has $A_R=A_S=A_n$, hence
-$Q=W=I$ and $\Theta=0$.  For $A_n=I$ the actual future transport is $I$, whereas for
-$A_n=A$ it is the fixed nonidentity unitary $V$ in~\eqref{eq:o3m-V}.  The resulting
-future transports therefore alternate between two distinct operators and are not
-Cauchy.
+For the sequential statement keep the same fixed baseline data $P,J$ and let the future
+source metric alternate between $a_n=1$ and $a_n=4$.  Put
+\[
+ A_n:=I+(a_n-1)ww^*,
+ \qquad
+ G_{R,U_n}:=a_n,
+ \qquad
+ G_{S,U_n}:=PA_nP.
+\]
+At every step $A_{R,n}=a_n$, $A_{S,n}=A_n$, the vector $w$ is an eigenvector of
+$A_n$ with eigenvalue $a_n$, and therefore
+\[
+ Q_n=W,
+ \qquad
+ \Theta_n=0.
+\]
+For $a_n=1$ one has $G_{S,U_n}=P^2$ and hence $W^{[U_n]}=W$; for $a_n=4$ one gets the
+fixed distinct vector $V$ from~\eqref{eq:o3m-V}.  The future transports therefore
+alternate between two distinct isometries and are not Cauchy.
 \end{proof}
 
 \begin{remark}[R14 firewall]\label{rem:o3m-firewall}
-Proposition~\ref{prop:o3m-countermodel} is an algebraic non-promotion theorem: the exact
-P11 identities by themselves do not imply terminal convergence from modulus/Jensen
-data, even under the idealized condition $\Theta=0$.  It is not a counterexample to the
-actual P11 metric family.  The actual asymptotic behavior of $U_R,U_S$ and
-$K_{R,S}^{T_0,U}$ remains open and may still be constrained by additional arithmetic or
-source structure not present in the abstract model.
+Proposition~\ref{prop:o3m-countermodel} is an algebraic non-promotion theorem.  It shows
+that the exact pullback/relative/polar identities, even together with a fixed canonical
+inclusion and the ideal modulus condition $Q=W$, $\Theta=0$, do not by themselves imply
+terminal convergence.  It is not a counterexample to the actual P11 prime/Gamma metric
+family.  The actual asymptotic behavior of $U_R,U_S$ and $K_{R,S}^{T_0,U}$ remains open
+and may still be constrained by additional arithmetic or source structure absent from
+the abstract model.
 
 In particular, the divergence
 $\chi\|\Theta\|\to\infty$ proved in
