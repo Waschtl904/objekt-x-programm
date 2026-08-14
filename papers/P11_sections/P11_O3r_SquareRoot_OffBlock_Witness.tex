@@ -1,0 +1,214 @@
+% P11 paper module: R19 square-root off-block witness and modulus/polar separation.
+
+\subsection{Square-root off-block witness and modulus/polar separation}
+\label{subsec:o3r-sqrt-offblock}
+
+Keep the odd-sector notation at fixed $0<R<S<T_0<U$,
+\[
+ A_R:=A_{T_0,U}^{R,-},\qquad
+ A_S:=A_{T_0,U}^{S,-},\qquad
+ W:=W_{R,S,-}^{[T_0]},\qquad P:=WW^*.
+\]
+Put
+\[
+ \mathscr B_U:=(I-P)A_SW,
+ \qquad
+ \mathscr C_U:=(I-P)A_S^{1/2}W.
+\tag{O3R.1}\label{eq:o3r-BC}
+\]
+The first operator is the second-moment off-block from
+\eqref{eq:jd-B}; the second is its square-root analogue.
+
+\begin{proposition}[Exact square-root block factorization]
+\label{prop:o3r-block-factorization}
+Let
+\[
+ D_U:=W^*A_S^{1/2}W,
+ \qquad
+ E_U:=(I-P)A_S^{1/2}(I-P)|_{\Ran W^\perp}.
+\]
+Then
+\[
+ \boxed{\mathscr B_U=\mathscr C_UD_U+E_U\mathscr C_U.}
+\tag{O3R.2}\label{eq:o3r-factorization}
+\]
+Consequently
+\[
+ \boxed{
+ \|\mathscr C_U\|
+ \ge
+ \frac{\|\mathscr B_U\|}
+ {\sqrt{\|A_R\|}+\sqrt{\|A_S\|}}.
+ }
+\tag{O3R.3}\label{eq:o3r-C-lower-general}
+\]
+\end{proposition}
+
+\begin{proof}
+This is the lower-bound direction of the block identity already used in the proof of
+Proposition~\ref{prop:second}.  Writing $S_U=A_S^{1/2}$, one has
+$PS_UW=WD_U$ and therefore
+\[
+ (I-P)S_U^2W
+ =(I-P)S_UPS_UW+(I-P)S_U(I-P)S_UW
+ =\mathscr C_UD_U+E_U\mathscr C_U.
+\]
+This proves~\eqref{eq:o3r-factorization}.  Operator Jensen gives
+$0\le D_U\le A_R^{1/2}$, so
+$\|D_U\|\le\sqrt{\|A_R\|}$, while
+$\|E_U\|\le\sqrt{\|A_S\|}$.  Hence
+\[
+ \|\mathscr B_U\|
+ \le(\|D_U\|+\|E_U\|)\|\mathscr C_U\|,
+\]
+which yields~\eqref{eq:o3r-C-lower-general}.
+\end{proof}
+
+\begin{theorem}[P11 square-root off-block witness]
+\label{thm:o3r-sqrt-witness}
+Let $m_h$ be the first nonzero integral-jet order of the fixed complement vector
+$g_h$ used in Theorem~\ref{thm:o3l-polynomial-witness}.  Then there exists $c>0$ such
+that for all sufficiently large $U$,
+\[
+ \boxed{
+ \|\mathscr C_U\|
+ \ge c\frac{e^{U/2}}{U^{m_h+3/2}}.
+ }
+\tag{O3R.4}\label{eq:o3r-C-lower}
+\]
+In particular the square-root off-block diverges in norm.
+\end{theorem}
+
+\begin{proof}
+Equation~\eqref{eq:o3l-B-lower} gives
+\[
+ \|\mathscr B_U\|\ge c_0\frac{e^U}{U^{m_h+2}}.
+\]
+By Lemma~\ref{lem:o3l-relative-upper},
+\[
+ \|A_R\|,\|A_S\|\ll\frac{e^U}{U}.
+\]
+Insert these bounds in~\eqref{eq:o3r-C-lower-general}.
+\end{proof}
+
+Recall the modulus isometry and its off-range defect
+\[
+ Q=A_S^{1/2}WA_R^{-1/2},
+ \qquad
+ \mathscr N_U:=(I-P)Q.
+\]
+
+\begin{corollary}[Polynomial modulus-leakage lower bound]
+\label{cor:o3r-modulus-leakage}
+One has the exact identity
+\[
+ \boxed{\mathscr C_U=\mathscr N_UA_R^{1/2}}
+\tag{O3R.5}\label{eq:o3r-CN}
+\]
+and therefore
+\[
+ \boxed{
+ \|\mathscr N_U\|\ge cU^{-m_h-1}.
+ }
+\tag{O3R.6}\label{eq:o3r-N-lower}
+\]
+Consequently
+\[
+ \boxed{
+ \|Q-W\|\ge cU^{-m_h-1}.
+ }
+\tag{O3R.7}\label{eq:o3r-QW-lower}
+\]
+Thus the auxiliary modulus isometry cannot approach $W$ faster than this polynomial
+scale in operator norm.
+\end{corollary}
+
+\begin{proof}
+Equation~\eqref{eq:o3r-CN} follows directly from
+$\mathscr N_U=(I-P)A_S^{1/2}WA_R^{-1/2}$.  Hence
+\[
+ \|\mathscr C_U\|
+ \le\|\mathscr N_U\|\sqrt{\|A_R\|}.
+\]
+Combine Theorem~\ref{thm:o3r-sqrt-witness} with
+$\sqrt{\|A_R\|}\ll e^{U/2}U^{-1/2}$ to obtain
+\eqref{eq:o3r-N-lower}.  Finally
+\[
+ Q-W=-W\mathscr K+\mathscr N_U
+\]
+is an orthogonal range decomposition, so
+$\|Q-W\|\ge\|\mathscr N_U\|$.
+\end{proof}
+
+The preceding result is genuinely a square-root/modulus statement.  It must not be
+promoted to the polar unitary factors.
+
+\begin{proposition}[Square-root leakage does not algebraically force polar leakage]
+\label{prop:o3r-polar-countermodel}
+There exists a canonical inclusion model satisfying the exact relative-metric
+compression identity in which $\mathscr B_U$ and $\mathscr C_U$ are nonzero (indeed can
+be made arbitrarily large), while
+\[
+ \boxed{(I-P)U_SW=0}
+\tag{O3R.8}\label{eq:o3r-polar-zero}
+\]
+identically.
+\end{proposition}
+
+\begin{proof}
+Take source space $\mathbb C$, target space $\mathbb C^2$, and
+\[
+ Wz=(z,0),\qquad P=WW^*.
+\]
+Let the base metrics be
+$G_{R,T_0}=1$ and $G_{S,T_0}=I_2$.  Put
+\[
+ A_0=\begin{pmatrix}2&1\\1&2\end{pmatrix}>0,
+ \qquad
+ G_{S,U}=t^2A_0,
+ \qquad
+ G_{R,U}=2t^2
+\]
+with $t>0$.  Then the relative metrics are
+$A_S=t^2A_0$ and $A_R=2t^2$, and
+\[
+ W^*A_SW=A_R
+\]
+exactly.  Moreover
+\[
+ X_S=G_{S,U}^{1/2}G_{S,T_0}^{-1/2}=tA_0^{1/2},
+ \qquad
+ X_R=\sqrt2\,t,
+\]
+are positive.  Their polar factors are therefore
+$U_S=I_2$ and $U_R=1$, proving~\eqref{eq:o3r-polar-zero}.
+
+On the other hand,
+\[
+ \mathscr B_U=t^2(I-P)A_0W\ne0,
+ \qquad
+ \mathscr C_U=t(I-P)A_0^{1/2}W\ne0,
+\]
+because $e_1$ is not an eigenvector of $A_0$.  Thus the two norms grow like $t^2$ and
+$t$, respectively, while the polar leakage remains exactly zero.
+\end{proof}
+
+\begin{remark}[R19 firewall]\label{rem:o3r-firewall}
+Theorem~\ref{thm:o3r-sqrt-witness} is the first direct P11 lower witness obtained after
+passing through the positive square root of the future relative metric.  Corollary
+\ref{cor:o3r-modulus-leakage} strengthens the earlier Jensen diagnostics by giving a
+direct quantitative lower bound on the actual modulus defect $Q-W$:
+\[
+ \|Q-W\|\gtrsim U^{-m_h-1}.
+\]
+This does not rule out $Q\to W$, because the lower scale itself tends to zero; it rules
+out only faster norm convergence.
+
+Proposition~\ref{prop:o3r-polar-countermodel} shows that the square-root witness belongs
+to the modulus layer, not the polar layer.  No lower bound for
+$(I-P)U_SW$, no control of $U_R$ or $U_S$, and no conclusion about
+$\Gamma_U\to I$, $K_{R,S}^{T_0,U}\to I$, strong terminal transport, Object X, Seal, or
+RH follows.  The next genuine gate is an identity or estimate that couples the modulus
+off-block $\mathscr N_U$ to the polar orientation of the concrete P11 metric pairs;
+such a coupling is absent from abstract compression algebra.
+\end{remark}
