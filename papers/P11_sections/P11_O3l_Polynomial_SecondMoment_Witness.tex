@@ -1,0 +1,218 @@
+% P11 paper module: R13 polynomial second-moment witness and obstruction of the auxiliary Jensen product condition.
+
+\subsection{Polynomial second-moment witness from the resolved complement gate}\label{subsec:o3l-polynomial-witness}
+
+Keep $0<R<S<T_0$ fixed, let $g_h\in\mathcal C^-_{S,T_0}(R)$ be the explicit nonzero
+odd complement above, and let $m_h$ be its first nonzero integral-jet order.  By
+Theorem~\ref{thm:o3k-complement},
+\[
+ E_Sg_h\in\HG^{m_h+3/2}(\mathbb R),
+\]
+so Corollary~\ref{cor:log-threshold} applies to $g_h$.
+
+Choose once and for all a smooth odd vector
+\[
+ f_0\in C_c^\infty((-R,R)),
+ \qquad \beta_R^{(0)}(f_0)\ne0,
+\]
+and write
+\[
+ F_0:=J_{R,S}f_0.
+\]
+By the exact jet pullback, $F_0$ has first jet zero at level $S$.
+
+\begin{lemma}[Mixed asymptotic with the rough complement]\label{lem:o3l-mixed-rough}
+One has
+\[
+ \boxed{
+ \sigma_U(J_{S,U}F_0,J_{S,U}g_h)
+ =c_{m_h}\,\beta_R^{(0)}(f_0)
+ \overline{\beta_S^{(m_h)}(g_h)}
+ \frac{e^U}{U^{m_h+2}}(1+o(1)).
+ }
+\tag{O3L.1}\label{eq:o3l-mixed-rough}
+\]
+\end{lemma}
+
+\begin{proof}
+The rank-one decomposition in the proof of Theorem~\ref{thm:mixed-jet} is purely
+Hilbert-space algebra and does not require smoothness.  For a fixed compactly supported
+odd vector $f$, write
+\[
+ D_U(f,g)=\sigma_U(Jf,Jg)-
+ \frac{\ell_U(f)\overline{\ell_U(g)}}{d_U}.
+\]
+Equation~\eqref{eq:mj-remainder-gram} gives the positive Gram representation and hence
+\[
+ |D_U(f,g)|^2\le D_U(f,f)D_U(g,g).
+\tag{O3L.2}\label{eq:o3l-Dcs}
+\]
+For the smooth vector $F_0$, Theorem~\ref{thm:odd} gives the sharp diagonal asymptotic.
+For $g_h$, Theorem~\ref{thm:o3k-complement} and
+Corollary~\ref{cor:log-threshold} put $g_h$ within the scope of
+\eqref{eq:rough-sharp-asymptotic}, so it has the corresponding sharp diagonal
+asymptotic with first jet $m_h$.  The rough boundary expansion
+\eqref{eq:rough-boundary-expansion} applies to both vectors, and
+$d_U=2U+O(1)$ is independent of the source vector.  Therefore the rank-one diagonal
+terms have the same leading terms as the corresponding total diagonal Schur forms.
+It follows that
+\[
+ D_U(F_0,F_0)=o(e^U/U^2),
+ \qquad
+ D_U(g_h,g_h)=o(e^U/U^{2m_h+2}).
+\]
+By~\eqref{eq:o3l-Dcs},
+\[
+ D_U(F_0,g_h)=o(e^U/U^{m_h+2}).
+\]
+The rank-one term itself is obtained from the two boundary expansions and equals the
+right-hand side of~\eqref{eq:o3l-mixed-rough} with relative error $O(U^{-1})$.  This
+proves the lemma.
+\end{proof}
+
+\begin{lemma}[Crude relative-metric norm bound]\label{lem:o3l-relative-upper}
+For $X=R,S$,
+\[
+ \boxed{
+ \|A_{T_0,U}^{X,-}\|\le 1+\|H_U\|^2
+ \ll \frac{e^U}{U}.
+ }
+\tag{O3L.3}\label{eq:o3l-relative-upper}
+\]
+\end{lemma}
+
+\begin{proof}
+For every nonzero odd $z\in\KXR{X}$, the Rayleigh quotient of the relative metric is
+\[
+ \frac{q_U^X(E_{X,U}z)}{q_{T_0}^X(E_{X,T_0}z)}.
+\]
+Exact Gamma compatibility, positivity of the Schur term, and
+\eqref{eq:graph-norm-equiv} at level $U$ give
+\[
+ q_U^X(E_{X,U}z)
+ \le (1+\|H_U\|^2)\,\mathfrak c_{\Gamma,X}[z],
+ \qquad
+ q_{T_0}^X(E_{X,T_0}z)\ge\mathfrak c_{\Gamma,X}[z].
+\]
+Hence the first inequality in~\eqref{eq:o3l-relative-upper} follows.
+
+Furthermore
+\[
+ \|H_U\|
+ \le2\sum_{p^k\le e^{2U}}\sqrt{\log p}\,p^{-3k/4}
+ \le C\sum_{p\le e^{2U}}\sqrt{\log p}\,p^{-3/4}.
+\]
+The final prime sum is $O(e^{U/2}/\sqrt U)$ by the same Chebyshev/partial-summation
+estimate used in~\eqref{eq:rough-kernel-modulus}.  Thus
+$\|H_U\|^2\ll e^U/U$.
+\end{proof}
+
+\begin{theorem}[Polynomial second-moment witness]\label{thm:o3l-polynomial-witness}
+For the actual P11 odd relative metrics at fixed $0<R<S<T_0$, there is a constant
+$c>0$ such that, for all sufficiently large $U$,
+\[
+ \boxed{
+ \nu_2(U)
+ :=\frac{\|\Delta_2(U)\|}
+ {\|A_{T_0,U}^{R,-}\|\,\|A_{T_0,U}^{S,-}\|}
+ \ge c\,U^{-2m_h-2}.
+ }
+\tag{O3L.4}\label{eq:o3l-nu-lower}
+\]
+Consequently
+\[
+ \boxed{
+ \|\Theta_{T_0,U}^-\|\ge \frac c8\,U^{-2m_h-2}.
+ }
+\tag{O3L.5}\label{eq:o3l-theta-polynomial}
+\]
+In particular, the auxiliary Jensen-product condition fails strongly:
+\[
+ \boxed{
+ \chi_{T_0,U}^{R,-}\,\|\Theta_{T_0,U}^-\|\longrightarrow\infty.
+ }
+\tag{O3L.6}\label{eq:o3l-product-diverges}
+\]
+\end{theorem}
+
+\begin{proof}
+Set
+\[
+ A_R:=A_{T_0,U}^{R,-},\qquad
+ A_S:=A_{T_0,U}^{S,-},\qquad
+ W:=W_{R,S,-}^{[T_0]},
+\]
+and
+\[
+ \mathscr B=(I-WW^*)A_SW.
+\]
+Put
+\[
+ x:=G_{R,T_0}^{1/2}f_0,
+ \qquad
+ y:=G_{S,T_0}^{1/2}g_h.
+\]
+Because $g_h\in\ker(J_{R,S}^*G_{S,T_0})$, one has
+$y\perp\Ran W$.  Therefore
+\[
+ \langle\mathscr Bx,y\rangle_{X,S}
+ =\langle A_SWx,y\rangle_{X,S}.
+\]
+Using the definitions of $A_S$ and $W$ gives the exact identity
+\[
+ \boxed{
+ \langle\mathscr Bx,y\rangle_{X,S}
+ =\langle(G_{S,U}-G_{S,T_0})F_0,g_h\rangle_{X,S}.
+ }
+\tag{O3L.7}\label{eq:o3l-cross-exact}
+\]
+The subtraction of $G_{S,T_0}$ is allowed because the corresponding pairing is zero by
+the complement condition.
+
+The Gamma form is exactly invariant under zero extension, so the Gamma contributions in
+\eqref{eq:o3l-cross-exact} cancel between $U$ and $T_0$.  Hence
+\[
+ \langle(G_{S,U}-G_{S,T_0})F_0,g_h\rangle_{X,S}
+ =\sigma_U(J_{S,U}F_0,J_{S,U}g_h)
+  -\sigma_{T_0}(J_{S,T_0}F_0,J_{S,T_0}g_h).
+\]
+The second term is fixed, while Lemma~\ref{lem:o3l-mixed-rough} has a nonzero leading
+coefficient.  Thus
+\[
+ |\langle\mathscr Bx,y\rangle_{X,S}|
+ \ge c_0\frac{e^U}{U^{m_h+2}}
+\]
+for all sufficiently large $U$.  Since $x$ and $y$ are fixed nonzero vectors,
+\[
+ \|\mathscr B\|
+ \ge c_1\frac{e^U}{U^{m_h+2}}.
+\tag{O3L.8}\label{eq:o3l-B-lower}
+\]
+By~\eqref{eq:jd-delta2},
+\[
+ \|\Delta_2\|=\|\mathscr B^*\mathscr B\|=\|\mathscr B\|^2
+ \ge c_2\frac{e^{2U}}{U^{2m_h+4}}.
+\tag{O3L.9}\label{eq:o3l-delta-lower}
+\]
+Lemma~\ref{lem:o3l-relative-upper} gives
+\[
+ \|A_R\|\,\|A_S\|\le C\frac{e^{2U}}{U^2},
+\]
+and division proves~\eqref{eq:o3l-nu-lower}.  The bound
+\eqref{eq:o3l-theta-polynomial} follows from~\eqref{eq:jd-theta-lower}.
+
+Finally Corollary~\ref{cor:conditioning} gives, for every $N>0$,
+\[
+ U^{-N}\chi_{T_0,U}^{R,-}\to\infty.
+\]
+Taking $N=2m_h+2$ and using~\eqref{eq:o3l-theta-polynomial} yields
+\eqref{eq:o3l-product-diverges}.
+\end{proof}
+
+\begin{remark}[R13 firewall]\label{rem:o3l-firewall}
+Theorem~\ref{thm:o3l-polynomial-witness} rules out the auxiliary product condition
+$\chi_-\|\Theta_-\|\to0$ for this explicit fixed complement diagnostic.  By
+Remark~\ref{rem:product} and the polar-gauge identity~\eqref{eq:jd-polar-gauge}, this does
+\emph{not} imply failure of strong terminal transport.  It gives no control of the polar
+unitaries $U_R,U_S$ and no conclusion about $K_{R,S}^{T,U}\to I$.
+\end{remark}
