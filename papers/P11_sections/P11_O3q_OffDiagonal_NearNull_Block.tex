@@ -1,0 +1,244 @@
+% P11 paper module: R18 off-diagonal near-null block and finite source-block firewall.
+
+\subsection{Off-diagonal near-null suppression and the finite source-block firewall}
+\label{subsec:o3q-offdiagonal-nearnull}
+
+Keep the fixed smooth odd pair $f_0,f_m\in C_c^\infty((-R,R))$ from
+Proposition~\ref{prop:o3n-nearnull}, with first integral-jet orders $0$ and $m>0$, and
+\[
+ z_U=f_m-\frac{\ell_U(f_m)}{\ell_U(f_0)}f_0,
+ \qquad \ell_U(z_U)=0.
+\]
+Recall from Theorem~\ref{thm:o3p-nearnull-vanish} that
+\[
+ D_U(z_U,z_U)=\sigma_U(J_{R,U}z_U,J_{R,U}z_U)\to0.
+\]
+The mixed entry on the pair $(f_0,z_U)$ is then forced below the natural square-root
+boundary scale.
+
+\begin{theorem}[Off-diagonal TC1 suppression]\label{thm:o3q-mixed-suppression}
+One has
+\[
+ \boxed{
+ \rho_U(f_0,z_U)=0,
+ \qquad
+ \sigma_U(J_{R,U}f_0,J_{R,U}z_U)
+ =o\!\left(\frac{e^{U/2}}{U}\right).
+ }
+\tag{O3Q.1}\label{eq:o3q-mixed-suppression}
+\]
+\end{theorem}
+
+\begin{proof}
+Since $\ell_U(z_U)=0$,
+\[
+ \rho_U(f_0,z_U)
+ =\frac{\ell_U(f_0)\overline{\ell_U(z_U)}}{d_U}=0,
+\]
+so
+\[
+ \sigma_U(Jf_0,Jz_U)=D_U(f_0,z_U).
+\]
+The positive Gram representation~\eqref{eq:mj-remainder-gram} gives
+\[
+ |D_U(f_0,z_U)|^2
+ \le D_U(f_0,f_0)D_U(z_U,z_U).
+\]
+For the fixed first-jet-zero vector $f_0$, equation~\eqref{eq:mj-Ddiag} gives
+\[
+ D_U(f_0,f_0)=o(e^U/U^2),
+\]
+while Theorem~\ref{thm:o3p-nearnull-vanish} gives
+$D_U(z_U,z_U)\to0$.  Hence
+\[
+ |D_U(f_0,z_U)|^2=o(e^U/U^2),
+\]
+which proves~\eqref{eq:o3q-mixed-suppression}.
+\end{proof}
+
+The full graph form has a stronger geometric consequence because R17 leaves a fixed
+positive Gamma floor on $z_U$.
+
+\begin{corollary}[Asymptotic full-Gram orthogonality]\label{cor:o3q-full-angle}
+Put
+\[
+ L_U:=\frac{e^U}{U^2}.
+\]
+There is $a_0>0$ such that
+\[
+ q_U^X(J_{R,U}f_0)=a_0L_U(1+o(1)),
+\tag{O3Q.2}\label{eq:o3q-f0-diag}
+\]
+while
+\[
+ q_U^X(J_{R,U}z_U)
+ \longrightarrow
+ \gamma_m:=\mathfrak c_{\Gamma,R}[f_m]>0.
+\tag{O3Q.3}\label{eq:o3q-z-diag}
+\]
+Moreover
+\[
+ q_U^X(J_{R,U}f_0,J_{R,U}z_U)=o(L_U^{1/2}),
+\tag{O3Q.4}\label{eq:o3q-full-mixed}
+\]
+and therefore
+\[
+ \boxed{
+ \frac{q_U^X(J_{R,U}f_0,J_{R,U}z_U)}
+ {q_U^X(J_{R,U}f_0)^{1/2}
+  q_U^X(J_{R,U}z_U)^{1/2}}
+ \longrightarrow0.
+ }
+\tag{O3Q.5}\label{eq:o3q-full-angle}
+\]
+Equivalently, for the coordinate Gram matrix
+\[
+ M_U:=
+ \begin{pmatrix}
+ q_U^X(Jf_0) & q_U^X(Jf_0,Jz_U)\\
+ q_U^X(Jz_U,Jf_0) & q_U^X(Jz_U)
+ \end{pmatrix}
+\]
+and
+\[
+ S_U:=\operatorname{diag}
+ \bigl(q_U^X(Jf_0)^{-1/2},q_U^X(Jz_U)^{-1/2}\bigr),
+\]
+one has
+\[
+ \boxed{S_UM_US_U\to I_2,}
+\tag{O3Q.6}\label{eq:o3q-correlation-matrix}
+\]
+and
+\[
+ \boxed{\det M_U\sim a_0\gamma_mL_U.}
+\tag{O3Q.7}\label{eq:o3q-det}
+\]
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{thm:odd} with first jet $0$ gives the Schur asymptotic in
+\eqref{eq:o3q-f0-diag}; the fixed Gamma term is $O(1)$ and hence negligible on the
+scale $L_U$.  Equation~\eqref{eq:o3q-z-diag} is
+Corollary~\ref{cor:o3p-gamma-limit}.
+
+For the mixed form, terminal Gamma compatibility gives
+\[
+ q_U^X(Jf_0,Jz_U)
+ =\mathfrak c_{\Gamma,R}[f_0,z_U]
+  +\sigma_U(Jf_0,Jz_U).
+\]
+Since $z_U\to f_m$ in the fixed smooth source space,
+$\mathfrak c_{\Gamma,R}[f_0,z_U]=O(1)$.  Theorem~\ref{thm:o3q-mixed-suppression}
+therefore proves~\eqref{eq:o3q-full-mixed}.  Dividing by the two diagonal asymptotics
+gives~\eqref{eq:o3q-full-angle}, and the matrix statements follow immediately.
+\end{proof}
+
+The preceding two-vector statement does not create a source-level gauge diagnostic.
+In fact the cocycle trivializes every finite block made only from canonically nested
+source vectors.
+
+\begin{proposition}[Complete finite source-block cocycle invariance]
+\label{prop:o3q-finite-block-invariance}
+Let $0<R<S<T$ and choose any finite family
+$e_1,\dots,e_n\in\KXR{R}$.  Put
+\[
+ e_i^S:=J_{R,S}e_i.
+\]
+Then for every terminal $T>S$ and every $i,j$,
+\[
+ \boxed{
+ \langle G_{S,T}e_i^S,e_j^S\rangle_{X,S}
+ =
+ \langle G_{R,T}e_i,e_j\rangle_{X,R}.
+ }
+\tag{O3Q.8}\label{eq:o3q-block-invariance}
+\]
+Consequently, for fixed $T_0$ and future terminal $U$, the complete finite Gram pair
+\[
+ \left(
+ [\langle G_{R,T_0}e_i,e_j\rangle],
+ [\langle G_{R,U}e_i,e_j\rangle]
+ \right)
+\]
+is identical, under the canonical coordinate identification, to the corresponding
+pair after transport to level $S$.
+
+The same assertion holds pointwise for $U$-dependent finite families, provided their
+$S$-level representatives are the canonical images of the $R$-level vectors.
+\end{proposition}
+
+\begin{proof}
+By the graph cocycle,
+\[
+ J_{S,T}e_i^S
+ =J_{S,T}J_{R,S}e_i
+ =J_{R,T}e_i.
+\]
+Since $G_{X,T}=J_{X,T}^*J_{X,T}$ with the graph-Hilbert adjoint,
+\[
+ \langle G_{S,T}e_i^S,e_j^S\rangle_{X,S}
+ =\langle J_{S,T}e_i^S,J_{S,T}e_j^S\rangle_{X,T}
+ =\langle J_{R,T}e_i,J_{R,T}e_j\rangle_{X,T},
+\]
+which is~\eqref{eq:o3q-block-invariance}.  Applying it at $T_0$ and at $U$ proves the
+Gram-pair statement.  The proof is pointwise in the chosen vectors and therefore also
+applies to a $U$-dependent family.
+\end{proof}
+
+\begin{corollary}[The $(f_0,z_U)$ mixed scalar is not an $R/S$ gauge diagnostic]
+\label{cor:o3q-mixed-no-gauge}
+Let $0<R<S$ and regard the pair $(f_0,z_U)$ at level $S$ by canonical zero extension.
+Then its complete terminal $(T_0,U)$ Gram pair, including every off-diagonal entry, is
+identical at the two source levels.  In particular no difference of
+\[
+ q_U^X(Jf_0,Jz_U),
+ \qquad
+ \sigma_U(Jf_0,Jz_U),
+\]
+or of any finite generalized Gram quantity built solely from the canonically nested
+pair can measure the $R$--$S$ polar-gauge defect.
+\end{corollary}
+
+\begin{proof}
+Apply Proposition~\ref{prop:o3q-finite-block-invariance} to the two-vector family.  The
+Schur statement follows as well because the Gamma form is terminal-compatible, so
+subtracting the identical Gamma matrix from the identical full terminal Gram matrix
+leaves the identical Schur matrix.
+\end{proof}
+
+\begin{remark}[R18 firewall: internal blocks versus full square roots]
+\label{rem:o3q-firewall}
+Corollary~\ref{cor:o3q-full-angle} resolves the normalized orientation of the
+\emph{internal two-vector future Gram block}: after exact boundary-mode cancellation the
+large $f_0$ direction and the Gamma-supported $z_U$ direction are asymptotically
+orthogonal.  Proposition~\ref{prop:o3q-finite-block-invariance} shows that this complete
+finite form pair is already source-compatible under $R\to S$.
+
+This does not determine the full polar gauges.  Compression and positive functional
+calculus do not commute in general:
+\[
+ P_EA^{1/2}P_E\ne(P_EAP_E)^{1/2}.
+\]
+The canonical-inclusion model of Subsection~\ref{subsec:o3m-polar-gauge} already shows
+that perfect internal modulus data need not determine the true future transport.
+Therefore the remaining gauge information must involve the coupling of the nested
+source image with its complement before the full square root/polar factor is taken.
+
+A genuine next target is consequently an off-block square-root quantity in the
+$T_0$-orthogonal splitting
+\[
+ \Ran W\oplus(\Ran W)^\perp,
+\]
+for example the relation between the already nontrivial block
+\[
+ (I-WW^*)A_SW
+\]
+and its square-root analogue
+\[
+ (I-WW^*)A_S^{1/2}W,
+\]
+or directly the polar leakage $(I-WW^*)U_SW$.
+No conclusion about $\Gamma_U\to I$, $K_{R,S}^{T_0,U}\to I$, strong terminal
+transport, Object X, Seal, or RH is drawn here.
+\end{remark}
