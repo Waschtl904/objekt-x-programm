@@ -1,0 +1,290 @@
+% P11 paper module: R17 vanishing of the bounded TC1 near-null Schur core.
+
+\subsection{Vanishing of the bounded near-null Schur core}
+\label{subsec:o3p-vanishing-core}
+
+Keep the fixed smooth odd vectors $f_0,f_m\in C_c^\infty((-R,R))$ from
+Proposition~\ref{prop:o3n-nearnull}, with first integral-jet orders $0$ and $m>0$, and
+\[
+ z_U=f_m-\frac{\ell_U(f_m)}{\ell_U(f_0)}f_0,
+ \qquad \ell_U(z_U)=0.
+\]
+Recall from Theorem~\ref{thm:o3o-nearnull-bounded} that
+\[
+ D_U(z_U,z_U)=\sigma_U(J_{R,U}z_U,J_{R,U}z_U)=O(1).
+\]
+The bounded scale is not the final one: the residual source left by the first
+future-edge certificate can itself be absorbed asymptotically.
+
+\begin{proposition}[Global limit of the bounded hub remainder]
+\label{prop:o3p-rem-limit}
+Fix the cutoff $a_*$ used in the proof of Theorem~\ref{thm:odd}.  Define on the ambient
+line
+\[
+ \mathcal H_{\rm rem,\infty}^*f
+ :=
+ \sum_{p:\,\frac12\log p<a_*}
+ \sqrt{\log p}\,p^{-3/4}D_{\log p}^*E_Rf
+ +
+ \sum_p\sum_{k\ge2}
+ \sqrt{\log p}\,p^{-3k/4}D_{k\log p}^*E_Rf.
+\tag{O3P.1}\label{eq:o3p-global-rem}
+\]
+The second series converges absolutely in operator norm on both $L^1$ and $L^2$.
+Moreover, after zero extension of the terminal remainder,
+\[
+ \boxed{
+ E_Uh_U^{\rm rem}(z_U)
+ \longrightarrow
+ h_{\rm rem,\infty}:=\mathcal H_{\rm rem,\infty}^*f_m
+ \quad\text{in }L^1(\mathbb R)\cap L^2(\mathbb R).
+ }
+\tag{O3P.2}\label{eq:o3p-rem-convergence}
+\]
+Finally,
+\[
+ \boxed{
+ \int_{\mathbb R}h_{\rm rem,\infty}(x)\,dx=0.
+ }
+\tag{O3P.3}\label{eq:o3p-rem-meanzero}
+\]
+\end{proposition}
+
+\begin{proof}
+The primitive sum in~\eqref{eq:o3p-global-rem} is finite, while
+\[
+ \sum_p\sum_{k\ge2}\sqrt{\log p}\,p^{-3k/4}<\infty.
+\]
+Translations preserve $L^1$ and $L^2$ norms, so the higher-prime-power series converges
+absolutely in operator norm on both spaces.  For every fixed $(p,k)$ the terminal cutoff
+and terminal restriction disappear for all sufficiently large $U$ on the fixed compact
+source support.  The omitted coefficient tail is uniformly small by absolute
+summability, and $z_U\to f_m$ in the fixed smooth source space by
+\eqref{eq:o3o-coeff}.  Dominated convergence over the coefficient family therefore gives
+\eqref{eq:o3p-rem-convergence}.  Each complete full-line translation difference has
+zero integral, and the series is absolutely $L^1$-convergent, proving
+\eqref{eq:o3p-rem-meanzero}.
+\end{proof}
+
+Use the R16 notation
+\[
+ K_U=\langle h_U^{\rm grow},\mathbf1_U\rangle,
+ \qquad
+ \mu_U=\frac{K_U}{2U}.
+\]
+Since $\ell_U(z_U)=0$,
+\[
+ K_U=-\langle h_U^{\rm rem}(z_U),\mathbf1_U\rangle.
+\]
+Proposition~\ref{prop:o3p-rem-limit} therefore gives
+\[
+ \boxed{K_U\to0,
+ \qquad
+ \|\mu_U\mathbf1_U\|_2^2=\frac{|K_U|^2}{2U}\to0.}
+\tag{O3P.4}\label{eq:o3p-mu-vanish}
+\]
+In particular, for
+\[
+ r_U:=\mu_U\mathbf1_U+h_U^{\rm rem}(z_U),
+\]
+one has after zero extension
+\[
+ \boxed{E_Ur_U\to h_{\rm rem,\infty}\quad\text{in }L^2(\mathbb R).}
+\tag{O3P.5}\label{eq:o3p-r-limit}
+\]
+
+\begin{lemma}[Fixed mean-zero profiles are asymptotically absorbed]
+\label{lem:o3p-fixed-absorption}
+Let $g\in C_c^\infty(\mathbb R)$ be even with $\int g=0$.  Regard $g$ as a terminal
+vector in $L^2(-U,U)$ for all sufficiently large $U$.  Then there exist
+$Y_{U,g}\in\mathscr Z_U$ and $E_{U,g}\in L^2(-U,U)$ such that
+\[
+ \boxed{
+ g=\widetilde R_U^*Y_{U,g}+E_{U,g},
+ \qquad
+ \|Y_{U,g}\|_{\mathscr Z_U}\to0,
+ \qquad
+ \|E_{U,g}\|_2\to0.
+ }
+\tag{O3P.6}\label{eq:o3p-fixed-cert}
+\]
+Consequently
+\[
+ \boxed{
+ \langle g,(I+R_U^*R_U)^{-1}g\rangle\to0.
+ }
+\tag{O3P.7}\label{eq:o3p-fixed-energy}
+\]
+\end{lemma}
+
+\begin{proof}
+Repeat the signed future-edge construction in Steps~4--6 of the proof of
+Theorem~\ref{thm:odd}.  For an even terminal test vector $e$, set
+$b_U(t)=e(U-t)$ and
+\[
+ k_g^{(U)}(t):=2g(U-t),\qquad 0<t<U.
+\]
+The zero integral of $g$ gives $\int_0^Uk_g^{(U)}(t)dt=0$, so the exact anchor identity
+\eqref{eq:odd-anchor-identity} applies.  The continuous primitive certificate cost is
+bounded by
+\[
+ e^{-U}\int_0^Ue^{t/2}|k_g^{(U)}(t)|^2dt
+ \le e^{-U/2}\|k_g^{(U)}\|_2^2
+ \ll_g e^{-U/2}.
+\tag{O3P.8}\label{eq:o3p-fixed-cont-cost}
+\]
+Because $g$ is fixed smooth and compactly supported, the source-representer derivative
+is uniformly bounded.  All required future cells satisfy
+$r\le(U+O(1))/2$, hence the $\theta=3/5$ cells of
+\eqref{eq:prime-cell-mass} have maximal width $O(e^{-2U/5})$.
+The mass-normalized quadrature~\eqref{eq:prime-cell-cost}--
+\eqref{eq:prime-cell-quadrature} therefore has vanishing source error and vanishing
+certificate cost.  The exact $a=0$ full-rest lift has vanishing higher-prime-power tail
+by~\eqref{eq:future-tail-small}.  This gives~\eqref{eq:o3p-fixed-cert}; inserting it into
+the dual formula~\eqref{eq:odd-dual} gives~\eqref{eq:o3p-fixed-energy}.
+\end{proof}
+
+\begin{theorem}[Vanishing TC1 near-null Schur core]
+\label{thm:o3p-nearnull-vanish}
+For the exact near-null vector $z_U$,
+\[
+ \boxed{
+ D_U(z_U,z_U)
+ =\sigma_U(J_{R,U}z_U,J_{R,U}z_U)
+ \longrightarrow0.
+ }
+\tag{O3P.9}\label{eq:o3p-D-vanish}
+\]
+\end{theorem}
+
+\begin{proof}
+The first R16 certificate gives
+\[
+ h_U
+ =\widetilde R_U^*\widehat Y_U^{(1)}
+ +r_U+Z_U^{\rm quad}+Z_U^{\rm tail},
+\tag{O3P.10}\label{eq:o3p-first-decomp}
+\]
+where
+\[
+ \|\widehat Y_U^{(1)}\|^2=O(U^{-1}),
+ \qquad
+ \|Z_U^{\rm quad}\|_2+\|Z_U^{\rm tail}\|_2=o(1).
+\tag{O3P.11}\label{eq:o3p-first-cost}
+\]
+Fix $\varepsilon>0$.  By the absolute $L^2$ convergence in
+Proposition~\ref{prop:o3p-rem-limit}, choose a finite partial sum
+$g_\varepsilon$ of~\eqref{eq:o3p-global-rem} such that
+\[
+ \|h_{\rm rem,\infty}-g_\varepsilon\|_2<\varepsilon.
+\]
+It is a finite sum of complete translation differences, hence is even, smooth,
+compactly supported and has zero integral.  By~\eqref{eq:o3p-r-limit}, for all
+sufficiently large $U$,
+\[
+ \|r_U-g_\varepsilon\|_2<2\varepsilon.
+\tag{O3P.12}\label{eq:o3p-r-approx}
+\]
+Apply Lemma~\ref{lem:o3p-fixed-absorption} to this fixed $g_\varepsilon$:
+\[
+ g_\varepsilon=\widetilde R_U^*Y_{U,\varepsilon}+E_{U,\varepsilon},
+ \qquad
+ \|Y_{U,\varepsilon}\|\to0,
+ \qquad
+ \|E_{U,\varepsilon}\|_2\to0.
+\]
+Insert this into~\eqref{eq:o3p-first-decomp} and use the dual formula
+\eqref{eq:odd-dual}.  Taking first $U\to\infty$ with $\varepsilon$ fixed and then
+$\varepsilon\downarrow0$ gives
+\[
+ \sigma_U(J_{R,U}z_U,J_{R,U}z_U)\to0.
+\]
+Since $\ell_U(z_U)=0$, the rank-one form $\rho_U(z_U,z_U)$ vanishes identically, so
+$D_U=\sigma_U$ on this vector and~\eqref{eq:o3p-D-vanish} follows.
+\end{proof}
+
+\begin{corollary}[Pure Gamma limit on the exact near-null direction]
+\label{cor:o3p-gamma-limit}
+One has
+\[
+ \boxed{
+ q_U^X(J_{R,U}z_U)
+ \longrightarrow
+ \mathfrak c_{\Gamma,R}[f_m]>0.
+ }
+\tag{O3P.13}\label{eq:o3p-gamma-limit}
+\]
+At fixed baseline $T_0>R$,
+\[
+ \boxed{
+ \rho_{T_0,U}(z_U)
+ \longrightarrow
+ \frac{\mathfrak c_{\Gamma,R}[f_m]}
+ {q_{T_0}^X(J_{R,T_0}f_m)}\in(0,\infty).
+ }
+\tag{O3P.14}\label{eq:o3p-rayleigh-limit}
+\]
+\end{corollary}
+
+\begin{proof}
+Terminal Gamma compatibility gives
+\[
+ q_U^X(J_{R,U}z_U)
+ =\mathfrak c_{\Gamma,R}[z_U]+D_U(z_U,z_U).
+\]
+Now $z_U\to f_m$ in the fixed finite-dimensional smooth source space and
+Theorem~\ref{thm:o3p-nearnull-vanish} gives $D_U(z_U,z_U)\to0$, proving
+\eqref{eq:o3p-gamma-limit}.  The fixed-baseline denominator converges to
+$q_{T_0}^X(J_{R,T_0}f_m)$, proving~\eqref{eq:o3p-rayleigh-limit}.
+\end{proof}
+
+\begin{proposition}[Source-compatible scalar cores carry no gauge difference]
+\label{prop:o3p-source-compatible}
+Let $0<R<S$ and choose the fixed pair $f_0,f_m$ in $C_c^\infty((-R,R))$.  Regard the
+same vectors at level $S$ by zero extension.  Then for every $U>S$ the corresponding
+exact near-null combinations satisfy
+\[
+ \boxed{z_U^S=J_{R,S}z_U^R.}
+\tag{O3P.15}\label{eq:o3p-z-compatible}
+\]
+Moreover the scalar terminal TC1 remainders agree identically:
+\[
+ \boxed{
+ D_U^{(S)}(z_U^S,z_U^S)
+ =D_U^{(R)}(z_U^R,z_U^R).
+ }
+\tag{O3P.16}\label{eq:o3p-D-compatible}
+\]
+Thus a difference of these source-compatible scalar bounded cores cannot encode the
+$R$--$S$ polar-gauge commutator.
+\end{proposition}
+
+\begin{proof}
+The cocycle gives $J_{S,U}J_{R,S}=J_{R,U}$, so the terminal functional
+$\ell_U(f)=\langle H_U^*J_{\cdot,U}f,\mathbf1_U\rangle$ has the same value for the same
+terminal vector independent of whether it is regarded as originating at level $R$ or
+$S$.  Hence the coefficient defining $z_U$ is identical, proving
+\eqref{eq:o3p-z-compatible}.  The form $D_U$ is defined entirely at terminal level $U$
+from $H_U$, $R_U$, $A_U$ and $\mathbf1_U$, so it has the same value on the same terminal
+vector, proving~\eqref{eq:o3p-D-compatible}.
+\end{proof}
+
+\begin{remark}[R17 firewall]\label{rem:o3p-firewall}
+Theorem~\ref{thm:o3p-nearnull-vanish} resolves the scalar bounded-core alternatives left
+open in R16: the TC1 Schur remainder tends to zero, while the full graph energy tends to
+the fixed positive Gamma floor.  Proposition~\ref{prop:o3p-source-compatible} also shows
+that comparing this scalar core between canonically nested source levels cannot measure
+the polar gauge.
+
+The remaining terminal problem is therefore genuinely operator-valued.  It requires
+control of off-diagonal finite-jet Gram data, the fixed Gamma matrix, and the orientation
+of positive/inverse square roots under $R\to S$.  No conclusion about
+\[
+ \Gamma_U\to I,
+ \qquad
+ K_{R,S}^{T_0,U}\to I,
+ \qquad
+ W_{R,S,-}^{[U]}\text{ strong Cauchy},
+\]
+Object X, Seal, or RH follows here.
+\end{remark}
