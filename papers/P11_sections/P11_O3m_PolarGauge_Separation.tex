@@ -1,0 +1,207 @@
+% P11 paper module: R14 exact polar-gauge separation and no-promotion countermodel.
+
+\subsection{Exact polar-gauge separation and algebraic non-promotion}\label{subsec:o3m-polar-gauge}
+
+Keep the notation of Remark~\ref{rem:polar-gauge} at fixed
+$0<R<S<T_0<U$ on the odd sectors:
+\[
+ W:=W_{R,S,-}^{[T_0]},
+ \qquad
+ Q:=A_S^{1/2}WA_R^{-1/2},
+\]
+\[
+ X_R=(G_{R,U}^-)^{1/2}(G_{R,T_0}^-)^{-1/2},
+ \qquad
+ X_S=(G_{S,U}^-)^{1/2}(G_{S,T_0}^-)^{-1/2}.
+\]
+The polar decompositions are
+\[
+ X_R=U_RA_R^{1/2},
+ \qquad
+ X_S=U_SA_S^{1/2}.
+\]
+
+\begin{proposition}[Uniqueness of the polar gauges]\label{prop:o3m-polar-unique}
+The unitary factors $U_R,U_S$ are uniquely determined by the corresponding metric
+pairs.  Explicitly,
+\[
+ \boxed{
+ U_R=X_RA_R^{-1/2},
+ \qquad
+ U_S=X_SA_S^{-1/2}.
+ }
+\tag{O3M.1}\label{eq:o3m-polar-unique}
+\]
+Thus the gauge issue is not a nonuniqueness of polar decomposition.
+\end{proposition}
+
+\begin{proof}
+For a boundedly invertible operator $X$, the positive factor in its polar decomposition
+is uniquely $|X|=(X^*X)^{1/2}$ and the unitary factor is uniquely
+$X|X|^{-1}$.  Here $|X_R|=A_R^{1/2}$ and $|X_S|=A_S^{1/2}$.
+\end{proof}
+
+Let
+\[
+ K_{R,S}^{T_0,U}:=W^*W_{R,S,-}^{[U]}
+\]
+be the cross-terminal kernel.  Recall the modulus defects
+\[
+ \mathscr K:=I-W^*Q,
+ \qquad
+ \mathscr N:=(I-WW^*)Q,
+\]
+so that
+\[
+ Q=W(I-\mathscr K)+\mathscr N.
+\]
+
+\begin{proposition}[Exact gauge/modulus separation of the cross kernel]
+\label{prop:o3m-cross-separation}
+One has
+\[
+ \boxed{
+ K_{R,S}^{T_0,U}
+ =\Bigl[W^*U_SW(I-\mathscr K)+W^*U_S\mathscr N\Bigr]U_R^*.
+ }
+\tag{O3M.2}\label{eq:o3m-cross-separation}
+\]
+In particular, with
+\[
+ \Gamma_U:=W^*U_SWU_R^*,
+\]
+\[
+ \boxed{
+ \|K_{R,S}^{T_0,U}-\Gamma_U\|
+ \le \|\mathscr K\|+\|\mathscr N\|
+ \le 2\|Q-W\|.
+ }
+\tag{O3M.3}\label{eq:o3m-gauge-error}
+\]
+Consequently, even under the hypothetical stronger assumption $Q-W\to0$, convergence
+of the actual cross kernel to the identity still requires the separate gauge condition
+\[
+ \Gamma_U\to I.
+\]
+\end{proposition}
+
+\begin{proof}
+The exact polar-gauge identity~\eqref{eq:jd-polar-gauge} gives
+\[
+ K_{R,S}^{T_0,U}=W^*U_SQU_R^*.
+\]
+Insert $Q=W(I-\mathscr K)+\mathscr N$ to obtain
+\eqref{eq:o3m-cross-separation}.  Since $W$ is an isometry and $U_S,U_R$ are unitary,
+\[
+ \|K_{R,S}^{T_0,U}-\Gamma_U\|
+ \le\|\mathscr K\|+\|\mathscr N\|.
+\]
+For every source vector $f$, the two summands in
+$Q-W=-W\mathscr K+\mathscr N$ are orthogonal.  Hence
+$\|\mathscr K\|\le\|Q-W\|$ and
+$\|\mathscr N\|\le\|Q-W\|$, proving~\eqref{eq:o3m-gauge-error}.
+\end{proof}
+
+The next finite-dimensional model shows that no conclusion about the actual transport
+can be extracted from the modulus data alone, even in the extreme case
+$Q=W$ and $\Theta=0$ exactly.
+
+\begin{proposition}[Exact algebraic countermodel to modulus-only promotion]
+\label{prop:o3m-countermodel}
+There exist finite-dimensional positive metric data satisfying the exact pullback,
+relative-compression and polar-gauge identities for which
+\[
+ \boxed{Q=W=I,\qquad \Theta=0,}
+\tag{O3M.4}\label{eq:o3m-perfect-modulus}
+\]
+but
+\[
+ \boxed{W^{[U]}\ne W,\qquad K^{T_0,U}\ne I.}
+\tag{O3M.5}\label{eq:o3m-nontrivial-gauge}
+\]
+Moreover, with one fixed baseline system one can choose a sequence of future positive
+metrics for which~\eqref{eq:o3m-perfect-modulus} holds at every step while the actual
+future transports are not Cauchy.
+\end{proposition}
+
+\begin{proof}
+Work on $\mathbb C^2$ and let
+\[
+ B=\begin{pmatrix}2&1\\1&2\end{pmatrix}>0,
+ \qquad
+ A=\begin{pmatrix}4&0\\0&1\end{pmatrix}>0.
+\]
+These matrices do not commute.  Put
+\[
+ G_{R,T_0}=I,
+ \qquad
+ G_{S,T_0}=B,
+ \qquad
+ J=B^{-1/2},
+\]
+and at the future horizon put
+\[
+ G_{R,U}=A,
+ \qquad
+ G_{S,U}=B^{1/2}AB^{1/2}.
+\]
+Then
+\[
+ J^*G_{S,T_0}J=G_{R,T_0},
+ \qquad
+ J^*G_{S,U}J=G_{R,U},
+\]
+so the exact terminal pullback identities hold.  The normalized base transport is
+\[
+ W=G_{S,T_0}^{1/2}JG_{R,T_0}^{-1/2}=I.
+\]
+The relative metrics are
+\[
+ A_R=G_{R,T_0}^{-1/2}G_{R,U}G_{R,T_0}^{-1/2}=A,
+\]
+\[
+ A_S=G_{S,T_0}^{-1/2}G_{S,U}G_{S,T_0}^{-1/2}=A.
+\]
+Therefore
+\[
+ Q=A_S^{1/2}WA_R^{-1/2}=I,
+\]
+and the Jensen defect vanishes identically: $\Theta=0$.
+
+On the other hand the actual future normalized transport is
+\[
+ V:=W^{[U]}
+ =(B^{1/2}AB^{1/2})^{1/2}B^{-1/2}A^{-1/2}.
+\tag{O3M.6}\label{eq:o3m-V}
+\]
+It is unitary by the pullback identity.  If $V=I$, then
+\[
+ (B^{1/2}AB^{1/2})^{1/2}=A^{1/2}B^{1/2}.
+\]
+The left side is positive selfadjoint, so the right side would be selfadjoint.  Hence
+$A^{1/2}$ and $B^{1/2}$ would commute, equivalently $A$ and $B$ would commute, a
+contradiction.  Thus $V\ne I$, proving~\eqref{eq:o3m-nontrivial-gauge}.
+
+For the sequential statement keep the same fixed baseline data $B,J$ and alternate the
+future source metric between $A$ and $I$.  Define the target future metric each time by
+$B^{1/2}A_nB^{1/2}$.  At every step one still has $A_R=A_S=A_n$, hence
+$Q=W=I$ and $\Theta=0$.  For $A_n=I$ the actual future transport is $I$, whereas for
+$A_n=A$ it is the fixed nonidentity unitary $V$ in~\eqref{eq:o3m-V}.  The resulting
+future transports therefore alternate between two distinct operators and are not
+Cauchy.
+\end{proof}
+
+\begin{remark}[R14 firewall]\label{rem:o3m-firewall}
+Proposition~\ref{prop:o3m-countermodel} is an algebraic non-promotion theorem: the exact
+P11 identities by themselves do not imply terminal convergence from modulus/Jensen
+data, even under the idealized condition $\Theta=0$.  It is not a counterexample to the
+actual P11 metric family.  The actual asymptotic behavior of $U_R,U_S$ and
+$K_{R,S}^{T_0,U}$ remains open and may still be constrained by additional arithmetic or
+source structure not present in the abstract model.
+
+In particular, the divergence
+$\chi\|\Theta\|\to\infty$ proved in
+Theorem~\ref{thm:o3l-polynomial-witness} only rules out the auxiliary sufficient
+Jensen-product route.  It neither proves that $Q-W$ fails to tend to zero nor that the
+actual cross-terminal kernel fails to tend to the identity.
+\end{remark}
