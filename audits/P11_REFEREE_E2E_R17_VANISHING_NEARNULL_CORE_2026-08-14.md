@@ -18,7 +18,7 @@ z_U=f_m-\frac{\ell_U(f_m)}{\ell_U(f_0)}f_0,
 
 # Verdict
 
-The R16 bounded Schur core is not a nonzero second asymptotic layer.  The exact residual left after the first future-edge certificate is itself mean zero and uniformly smooth/bounded, so the signed future-edge/full-rest construction can be applied a second time.  Consequently
+The R16 bounded Schur core is not a nonzero second asymptotic layer.  The terminal hub remainder converges in `L^1 cap L^2` to an absolutely convergent global translation-difference remainder of zero integral.  Consequently the residual constant in the R16 certificate tends to zero.  Finite smooth mean-zero partial sums of that global remainder can then be absorbed by the same signed future-edge/full-rest construction at vanishing cost, while the `L^2` tail is controlled directly.  Hence
 \[
 \boxed{D_U(z_U,z_U)\to0.}
 \]
@@ -31,8 +31,8 @@ Moreover, for canonically compatible vectors under `R -> S` zero extension, the 
 
 Canonical statuses:
 
-- [R17-A] global bounded hub-remainder operator / convergence: **✓[M]**;
-- [R17-B] second mean-zero future-edge absorption: **✓[M]**;
+- [R17-A] global bounded hub-remainder operator / `L^1 cap L^2` convergence: **✓[M]**;
+- [R17-B] second mean-zero future-edge absorption by fixed finite approximants: **✓[M]**;
 - [R17-C] bounded near-null Schur core has zero limit: **✓[M]**;
 - [R17-D] full near-null graph energy converges to the Gamma floor: **✓[M]**;
 - [R17-E] scalar `R`/`S` bounded-core difference as a gauge diagnostic: **✓[M]_neg**;
@@ -57,28 +57,32 @@ The primitive part is finite and
 \[
 \sum_p\sum_{k\ge2}\sqrt{\log p}\,p^{-3k/4}<\infty.
 \]
-Since translations preserve `L^2`, `L^1`, and the fixed smooth seminorms, the second series converges absolutely in operator norm on `L^2`, and on the fixed smooth source core also in the corresponding `L^1/C^1` bounds.
+Translations preserve `L^2` and `L^1`, so the higher-prime-power series converges absolutely in operator norm on both spaces; on the fixed smooth source core it also converges absolutely in each fixed translated `C^j` seminorm.
 
 After zero extension of the terminal remainder to the ambient line, dominated convergence over this absolutely summable coefficient family gives
 \[
+\boxed{
 E_U h_U^{\rm rem}(z_U)
 \longrightarrow
-\mathcal H_{\rm rem,\infty}^*f_m
-\qquad\text{in }L^2(\mathbb R),
+h_{\rm rem,\infty}:=\mathcal H_{\rm rem,\infty}^*f_m
+\quad\text{in }L^1(\mathbb R)\cap L^2(\mathbb R).
+}
 \tag{R17.2}
 \]
-because `z_U -> f_m` in every fixed smooth seminorm.  In fact the same argument gives `L^1` convergence.  Every full-line translation difference has zero integral, hence
+Here the terminal cutoffs disappear termwise for every fixed `(p,k)`, the omitted coefficient tail is uniformly small by absolute summability, and `z_U -> f_m` in the fixed smooth source space.
+
+Every full-line translation difference has zero integral.  Absolute `L^1` convergence therefore gives
 \[
-\int_{\mathbb R}\mathcal H_{\rm rem,\infty}^*f_m=0.
+\boxed{\int_{\mathbb R}h_{\rm rem,\infty}=0.}
 \tag{R17.3}
 \]
 Thus Stage 1 of the proposed R17 program is positive: the bounded hub remainder itself has a canonical global limit.
 
-Important: this does not yet identify the Schur energy, because the terminal denominator `A_U=I+R_U^*R_U` continues to change with `U`.
+Important: this does not identify the Schur energy, because the terminal denominator `A_U=I+R_U^*R_U` continues to change with `U`.
 
 ---
 
-## 2. Exact residual after the first R16 certificate
+## 2. The R16 residual converges to the global mean-zero remainder
 
 Use the notation of R16:
 \[
@@ -100,108 +104,135 @@ with
 \|Z_U^{\rm quad}\|_2+\|Z_U^{\rm tail}\|_2=o(1).
 \tag{R17.5}
 \]
-Define the bounded residual
+Because `ell_U(z_U)=0`,
 \[
-r_U:=\mu_U1_U+h_U^{\rm rem}(z_U).
+K_U=-\langle h_U^{\rm rem}(z_U),1_U\rangle.
 \tag{R17.6}
 \]
-Because `ell_U(z_U)=<h_U,1_U>=0` and `K_U=<h_U^grow,1_U>`, one has exactly
+The `L^1` convergence (R17.2) and (R17.3) imply
 \[
-\boxed{\langle r_U,1_U\rangle=0.}
+\boxed{K_U\to0.}
 \tag{R17.7}
 \]
-R16 gives `||mu_U1_U||_2=O(1)`, and the absolute higher-prime-power summability above gives uniform `L^2` and interior `C^1` bounds for `h_U^rem(z_U)`.  Hence `r_U` is an even, mean-zero, uniformly bounded smooth terminal profile.
+Consequently
+\[
+\boxed{
+\|\mu_U1_U\|_2^2=\frac{|K_U|^2}{2U}\to0.
+}
+\tag{R17.8}
+\]
+Define
+\[
+r_U:=\mu_U1_U+h_U^{\rm rem}(z_U).
+\]
+Then, after zero extension to the ambient line,
+\[
+\boxed{E_Ur_U\to h_{\rm rem,\infty}\quad\text{in }L^2(\mathbb R),}
+\tag{R17.9}
+\]
+and both sides have zero integral in the limit; in fact `r_U` has exact terminal mean zero because
+\[
+\langle r_U,1_U\rangle=K_U+\langle h_U^{\rm rem},1_U\rangle=0.
+\]
+
+The point of (R17.9) is that no moving-boundary `C^1` assertion is needed for the second absorption.
 
 ---
 
-## 3. A second future-edge certificate absorbs the bounded residual
+## 3. Fixed smooth mean-zero profiles have vanishing future-rest energy
 
-For an even terminal test vector `e`, put as in the proof of Theorem 6.1
+We isolate the only new lemma required.
+
+Let `g` be a fixed even `C_c^infty(R)` function with zero integral.  Regard it as a vector in `L^2(-U,U)` for all sufficiently large `U`.  Put
 \[
-b_U(t)=e(U-t),\qquad 0<t<U,
+b_U(t)=e(U-t),\qquad
+k_g^{(U)}(t)=2g(U-t),\qquad 0<t<U.
 \]
-and define for the residual
+Then `int_0^U k_g^(U)=0`, so the exact anchor identity (6.15)--(6.16) applies.  Its continuous future-edge certificate has cost
 \[
-k_U^{\rm rem}(t):=2r_U(U-t).
-\tag{R17.8}
-\]
-Equation (R17.7) gives
-\[
-\int_0^U k_U^{\rm rem}(t)\,dt=0.
-\]
-Therefore the same anchor identity used in (6.15)--(6.16) applies verbatim:
-\[
-\int_0^U k_U^{\rm rem}(t)\overline{b_U(t)}dt
-=
-\iint C_{U,\rm rem}^-(r,t)
-\overline{\bigl(b_U(t)-b_U(2r-t)\bigr)}\,dt\,dr,
-\]
-with
-\[
-C_{U,\rm rem}^-(r,t)=2k_U^{\rm rem}(t)\alpha(2r-t).
-\tag{R17.9}
-\]
-The continuous primitive certificate cost now tends to zero absolutely.  Indeed,
-\[
-e^{-U}\int_0^U e^{t/2}|k_U^{\rm rem}(t)|^2dt
-\le
- e^{-U/2}\|k_U^{\rm rem}\|_2^2
-=O(e^{-U/2}).
+e^{-U}\int_0^Ue^{t/2}|k_g^{(U)}(t)|^2dt
+\ll_g e^{-U/2}.
 \tag{R17.10}
 \]
-
-The source-representer derivative is uniformly bounded because `r_U` has a uniform interior `C^1` bound.  All cells needed in (R17.9) satisfy
+Because `g` is fixed smooth and compactly supported, the source-representer derivative is uniformly bounded.  All required cells satisfy
 \[
-r\le \frac{U+\varepsilon}{2},
+r\le \frac{U+O(1)}2,
 \]
-so at the corresponding prime scale the `theta=3/5` cells of the R1 proof have maximum width
+so the `theta=3/5` prime cells used in the R1 proof have
 \[
 \max_I|I|\ll e^{-2U/5}.
 \]
-The same mass-normalized prime quadrature therefore produces a discrete primitive certificate with norm tending to zero and source quadrature error tending to zero.  The full-rest `a=0` primitive-plus-tail lift again has tail norm tending to zero by (6.25).
-
-Consequently there exist `Y_U^(2)` and `E_U^(2)` with
+The same mass-normalized quadrature therefore has source error tending to zero.  The exact `a=0` full-rest lift has tail tending to zero by (6.25).  Hence there exist `Y_{U,g}` and `E_{U,g}` such that
 \[
 \boxed{
-r_U=\widetilde R_U^*Y_U^{(2)}+E_U^{(2)},
+g=\widetilde R_U^*Y_{U,g}+E_{U,g},
 \qquad
-\|Y_U^{(2)}\|_{\mathscr Z_U}\to0,
+\|Y_{U,g}\|_{\mathscr Z_U}\to0,
 \qquad
-\|E_U^{(2)}\|_2\to0.}
+\|E_{U,g}\|_2\to0.}
 \tag{R17.11}
 \]
-This is not a new number-theoretic input; it is a second use of the already audited signed future-edge/full-rest construction, now on a bounded mean-zero profile.
+The dual formula (6.2) therefore gives
+\[
+\boxed{\langle g,(I+R_U^*R_U)^{-1}g\rangle\to0.}
+\tag{R17.12}
+\]
+This is a direct reuse of the audited R1 future-edge/full-rest mechanism on a fixed mean-zero profile; no new prime-distribution theorem is invoked.
 
 ---
 
-## 4. The bounded TC1 core vanishes
+## 4. Approximate the global remainder by finite mean-zero translation sums
 
-Combine (R17.4) and (R17.11):
+Because the series (R17.1) converges absolutely in `L^2`, for every `epsilon>0` there is a finite partial sum `g_epsilon` made from finitely many complete translation differences such that
+\[
+\|h_{\rm rem,\infty}-g_\varepsilon\|_2<\varepsilon.
+\tag{R17.13}
+\]
+Each summand is smooth, compactly supported and has zero integral, hence so does `g_epsilon`.
+
+By (R17.9), for sufficiently large `U`,
+\[
+\|r_U-g_\varepsilon\|_2<2\varepsilon.
+\tag{R17.14}
+\]
+Write the first R16 decomposition as
 \[
 h_U
-=\widetilde R_U^*\bigl(\widehat Y_U^{(1)}+Y_U^{(2)}\bigr)
- +Z_U^{\rm quad}+Z_U^{\rm tail}+E_U^{(2)}.
+=\widetilde R_U^*\widehat Y_U^{(1)}+r_U+Z_U^{\rm quad}+Z_U^{\rm tail}.
 \]
-The exact dual formula (6.2) gives
+For the fixed `g_epsilon`, use (R17.11):
 \[
-\sigma_U(J_{R,U}z_U,J_{R,U}z_U)
-\le
-\|\widehat Y_U^{(1)}+Y_U^{(2)}\|^2
-+
-\|Z_U^{\rm quad}+Z_U^{\rm tail}+E_U^{(2)}\|_2^2
-\longrightarrow0.
+g_\varepsilon=\widetilde R_U^*Y_{U,\varepsilon}+E_{U,\varepsilon},
+\qquad
+\|Y_{U,\varepsilon}\|\to0,
+\qquad
+\|E_{U,\varepsilon}\|_2\to0.
 \]
-Since `ell_U(z_U)=0`, the rank-one TC1 form vanishes exactly and hence
+Thus
+\[
+h_U
+=\widetilde R_U^*\bigl(\widehat Y_U^{(1)}+Y_{U,\varepsilon}\bigr)
+ +(r_U-g_\varepsilon)
+ +Z_U^{\rm quad}+Z_U^{\rm tail}+E_{U,\varepsilon}.
+\]
+Insert this admissible pair into the exact dual formula.  First let `U -> infinity` with `epsilon` fixed, using (R17.5), (R17.11), and (R17.14); then let `epsilon -> 0`.  One gets
 \[
 \boxed{
-D_U(z_U,z_U)
-=\sigma_U(J_{R,U}z_U,J_{R,U}z_U)
-\longrightarrow0.}
-\tag{R17.12}
+\sigma_U(J_{R,U}z_U,J_{R,U}z_U)\longrightarrow0.
+}
+\tag{R17.15}
 \]
+Since `ell_U(z_U)=0`, the rank-one TC1 form vanishes exactly.  Therefore
+\[
+\boxed{
+D_U(z_U,z_U)\longrightarrow0.
+}
+\tag{R17.16}
+\]
+
 Thus the three R16 bounded-scale possibilities are resolved: there is no positive bounded limit and no bounded nonconvergent oscillation.  The scalar Schur core decays to zero.
 
-No quantitative rate beyond `o(1)` is claimed here; the first certificate has squared cost `O(U^{-1})`, but the already recorded quadrature/tail remainders are only needed at `o(1)` strength for this conclusion.
+No quantitative rate beyond `o(1)` is claimed here.
 
 ---
 
@@ -212,13 +243,14 @@ Terminal Gamma compatibility gives
 q_U^X(J_{R,U}z_U)
 =\mathfrak c_{\Gamma,R}[z_U]+D_U(z_U,z_U).
 \]
-Since `z_U -> f_m` in the fixed smooth source space, the Gamma form is continuous on this finite-dimensional family.  Using (R17.12),
+Since `z_U -> f_m` in the fixed smooth source space, the Gamma form is continuous on this finite-dimensional family.  Using (R17.16),
 \[
 \boxed{
 q_U^X(J_{R,U}z_U)
 \longrightarrow
-\mathfrak c_{\Gamma,R}[f_m]>0.}
-\tag{R17.13}
+\mathfrak c_{\Gamma,R}[f_m]>0.
+}
+\tag{R17.17}
 \]
 Thus after exact rank-one cancellation the second scalar layer of the **full** metric is purely archimedean: the Schur remainder disappears and the fixed Gamma floor survives.
 
@@ -228,11 +260,13 @@ q_{T_0}^X(J_{R,T_0}z_U)\to q_{T_0}^X(J_{R,T_0}f_m),
 \]
 so the near-null relative Rayleigh quotient has the positive finite limit
 \[
+\boxed{
 \rho_{T_0,U}(z_U)
 \longrightarrow
 \frac{\mathfrak c_{\Gamma,R}[f_m]}
 {q_{T_0}^X(J_{R,T_0}f_m)}.
-\tag{R17.14}
+}
+\tag{R17.18}
 \]
 The exponential conditioning witness of R16 remains valid.
 
@@ -251,7 +285,7 @@ The terminal functional
 therefore has the same value whether the vector is regarded as originating at level `R` or at level `S`.  Hence the exact near-null combination is compatible:
 \[
 \boxed{z_U^{S}=J_{R,S}z_U^{R}.}
-\tag{R17.15}
+\tag{R17.19}
 \]
 But `D_U` is a terminal form built only from `H_U`, `R_U`, and `1_U`.  Therefore on this canonically compatible vector
 \[
@@ -259,7 +293,7 @@ But `D_U` is a terminal form built only from `H_U`, `R_U`, and `1_U`.  Therefore
 D_U^{(S)}(z_U^{S},z_U^{S})
 =D_U^{(R)}(z_U^{R},z_U^{R})
 }
-\tag{R17.16}
+\tag{R17.20}
 \]
 identically, not merely asymptotically.
 
