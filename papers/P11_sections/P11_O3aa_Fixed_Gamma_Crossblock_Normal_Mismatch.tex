@@ -1,0 +1,316 @@
+% P11 paper module: R28 fixed Gamma crossblock and constraint-normal mismatch.
+
+\subsection{Fixed Gamma crossblock and constraint-normal mismatch}
+\label{subsec:o3aa-fixed-gamma-crossblock}
+
+R27 removes the terminal parameter from the inverse-functional-calculus branch.  At a
+fixed baseline $0<R<S<T_0$, the remaining limit geometry has two distinct components:
+a tangential constrained-Gamma offblock on the effective higher-jet hyperplane and a
+one-dimensional mismatch of the Riesz normals of the hard constraint
+$\beta^{(0)}=0$.
+
+For $X\in\{R,S\}$ put
+\[
+ B_X:=G_{X,T_0}^-
+\]
+and work in the corresponding baseline-whitened source Hilbert space.  Thus
+\[
+ W:=B_S^{1/2}J_{R,S}B_R^{-1/2}
+\]
+is an isometry.  Define
+\[
+ \widehat\beta_X(x):=\beta_X^{(0)}(B_X^{-1/2}x)
+\]
+and let $r_X$ be its Riesz vector:
+\[
+ \widehat\beta_X(x)=\langle x,r_X\rangle_X.
+\]
+Then the R27 effective hyperplane is
+\[
+ V_X=r_X^\perp.
+\tag{O3AA.1}\label{eq:o3aa-VX}
+\]
+Pullback compatibility of the first boundary jet gives
+\[
+ \boxed{W^*r_S=r_R.}
+\tag{O3AA.2}\label{eq:o3aa-normal-pullback}
+\]
+
+Put
+\[
+ N:=\Ran W,
+ \qquad
+ G:=N^\perp,
+ \qquad
+ s:=s_{R,S,T_0}:=(I-WW^*)r_S.
+\tag{O3AA.3}\label{eq:o3aa-s}
+\]
+Then
+\[
+ \boxed{r_S=Wr_R+s,\qquad Wr_R\perp s,}
+\tag{O3AA.4}\label{eq:o3aa-normal-split}
+\]
+and therefore
+\[
+ \|r_S\|^2=\|r_R\|^2+\|s\|^2.
+\tag{O3AA.5}\label{eq:o3aa-normal-norm}
+\]
+
+\begin{proposition}[Graph form of the constrained complement]
+\label{prop:o3aa-graph-complement}
+Let
+\[
+ M:=WV_R,
+ \qquad
+ K:=V_S\cap M^\perp.
+\]
+Then
+\[
+ \boxed{
+ K=
+ \left\{
+ Tg:=g-
+ \frac{\langle g,s\rangle}{\|r_R\|^2}Wr_R
+ :g\in G
+ \right\}.
+ }
+\tag{O3AA.6}\label{eq:o3aa-K-graph}
+\]
+The map $T:G\to K$ is a bounded isomorphism whose inverse is the orthogonal projection
+$P_G|_K$.
+\end{proposition}
+
+\begin{proof}
+Since $N=WV_R\oplus\mathbb C Wr_R$ orthogonally,
+\[
+ M^\perp=\mathbb C Wr_R\oplus G.
+\]
+Thus $k\in K$ has a unique representation $k=aWr_R+g$ with $g\in G$.  The condition
+$k\perp r_S$, together with~\eqref{eq:o3aa-normal-split}, gives
+\[
+ a\|r_R\|^2+\langle g,s\rangle=0,
+\]
+which is exactly~\eqref{eq:o3aa-K-graph}.  The inverse statement is immediate from the
+orthogonal decomposition.
+\end{proof}
+
+The graph description converts R27-F into a prescribed rank-one test on the ordinary
+baseline complement $G$.
+
+Let $\Lambda_X$ be the full baseline-whitened Gamma Riesz operator:
+\[
+ \langle\Lambda_Xx,y\rangle
+ =\widetilde{\mathfrak c}_{\Gamma,X}[x,y].
+\]
+Since $q_{T_0}^X=\mathfrak c_{\Gamma}+\sigma_{T_0}$ with $\sigma_{T_0}\ge0$,
+\[
+ 0<\Lambda_X\le I,
+ \qquad
+ W^*\Lambda_SW=\Lambda_R.
+\tag{O3AA.7}\label{eq:o3aa-Lambda}
+\]
+Define
+\[
+ \mathcal A_\Gamma
+ :=P_{V_R}W^*\Lambda_S|_G:G\to V_R,
+ \qquad
+ a_\Gamma:=P_{V_R}\Lambda_Rr_R.
+\tag{O3AA.8}\label{eq:o3aa-Aa}
+\]
+
+\begin{proposition}[Prescribed rank-one criterion]
+\label{prop:o3aa-rankone}
+With the convention that the Hilbert inner product is linear in the first argument,
+\[
+ \boxed{
+ \widetilde{\mathfrak c}_{\Gamma,S}[Wf,Tg]
+ =\langle f,\mathcal A_\Gamma g\rangle
+ -\frac{\langle s,g\rangle}{\|r_R\|^2}
+  \langle f,a_\Gamma\rangle
+ }
+\tag{O3AA.9}\label{eq:o3aa-cross-form}
+\]
+for $f\in V_R$, $g\in G$.  Hence
+\[
+ \boxed{
+ \mathscr C_\Gamma^{R,S,T_0}=0
+ \quad\Longleftrightarrow\quad
+ \mathcal A_\Gamma g
+ =\frac{\langle g,s\rangle}{\|r_R\|^2}a_\Gamma
+ \quad(g\in G).
+ }
+\tag{O3AA.10}\label{eq:o3aa-rankone-criterion}
+\]
+In particular, if $s=0$, then
+\[
+ \mathscr C_\Gamma=0\iff\mathcal A_\Gamma=0.
+\tag{O3AA.11}\label{eq:o3aa-rankone-szero}
+\]
+\end{proposition}
+
+\begin{proof}
+Insert~\eqref{eq:o3aa-K-graph} in the Gamma form.  The first term is represented by
+$\mathcal A_\Gamma$.  Gamma pullback compatibility gives
+\[
+ \widetilde{\mathfrak c}_{\Gamma,S}[Wf,Wr_R]
+ =\widetilde{\mathfrak c}_{\Gamma,R}[f,r_R]
+ =\langle f,a_\Gamma\rangle.
+\]
+Because the second slot is conjugate-linear, the coefficient
+$\langle g,s\rangle$ in~\eqref{eq:o3aa-K-graph} appears as $\langle s,g\rangle$ in
+\eqref{eq:o3aa-cross-form}.  Vanishing for all $f$ is therefore equivalent to
+\eqref{eq:o3aa-rankone-criterion}.
+\end{proof}
+
+Now let $L_X$ be the constrained Gamma operator on $V_X$ represented by the R27 limit:
+\[
+ \langle L_Xx,y\rangle
+ =\widetilde{\mathfrak c}_{\Gamma,X}[x,y].
+\]
+By Corollary~\ref{cor:o3z-whitened-mosco},
+\[
+ a_0I\le L_X\le I.
+\tag{O3AA.12}\label{eq:o3aa-L-bounds}
+\]
+With respect to $V_S=M\oplus K$,
+\[
+ \boxed{
+ L_S=
+ \begin{pmatrix}
+ WL_RW^*&\mathscr C_\Gamma^*\\
+ \mathscr C_\Gamma&D
+ \end{pmatrix}.
+ }
+\tag{O3AA.13}\label{eq:o3aa-L-block}
+\]
+R27 also identifies
+\[
+ T_{X,\infty}=L_X^{-1/2}P_{V_X}
+\tag{O3AA.14}\label{eq:o3aa-T-limit}
+\]
+and
+\[
+ D_\infty^-:=T_{S,\infty}W-WT_{R,\infty}.
+\tag{O3AA.15}\label{eq:o3aa-Dinf}
+\]
+
+\begin{theorem}[Tangential inverse-root equivalence]
+\label{thm:o3aa-tangential-equivalence}
+On the effective higher-jet domain,
+\[
+ \boxed{
+ D_\infty^-|_{V_R}=0
+ \quad\Longleftrightarrow\quad
+ \mathscr C_\Gamma^{R,S,T_0}=0.
+ }
+\tag{O3AA.16}\label{eq:o3aa-tangential-equivalence}
+\]
+\end{theorem}
+
+\begin{proof}
+If $\mathscr C_\Gamma=0$, then~\eqref{eq:o3aa-L-block} is block diagonal and
+$L_SW=WL_R$ on $V_R$.  Continuous functional calculus gives
+\[
+ L_S^{-1/2}W=WL_R^{-1/2},
+\]
+which is the forward implication.
+
+Conversely assume the inverse-root intertwining on $V_R$.  Apply it to
+$L_R^{1/2}x$ and multiply by $L_S^{1/2}$ to get
+\[
+ WL_R^{1/2}x=L_S^{1/2}Wx.
+\]
+Applying $L_S^{1/2}$ once more yields
+\[
+ L_SWx=WL_Rx.
+\]
+Thus $M=WV_R$ is invariant under the selfadjoint operator $L_S$, hence reducing, and
+the offblock in~\eqref{eq:o3aa-L-block} vanishes.
+\end{proof}
+
+Theorem~\ref{thm:o3aa-tangential-equivalence} supplies the converse that was not part of
+Proposition~\ref{prop:o3z-gamma-block}: vanishing of the limiting inverse square-root
+intertwining defect on the higher-jet domain is exactly equivalent to the fixed Gamma
+offblock being zero.
+
+\begin{theorem}[Full-space decomposition and normal-mismatch lower bound]
+\label{thm:o3aa-full-equivalence}
+Let
+\[
+ e_R:=r_R/\|r_R\|.
+\]
+Then
+\[
+ \boxed{
+ \|D_\infty^-e_R\|
+ \ge\frac{\|s\|}{\|r_S\|}.
+ }
+\tag{O3AA.17}\label{eq:o3aa-normal-lower}
+\]
+Consequently
+\[
+ \boxed{
+ D_\infty^-=0
+ \text{ on the full standardized source space}
+ \quad\Longleftrightarrow\quad
+ \mathscr C_\Gamma=0
+ \text{ and }s=0.
+ }
+\tag{O3AA.18}\label{eq:o3aa-full-equivalence}
+\]
+\end{theorem}
+
+\begin{proof}
+Because $e_R\in V_R^\perp$, one has $T_{R,\infty}e_R=0$, hence
+\[
+ D_\infty^-e_R=L_S^{-1/2}P_{V_S}We_R.
+\]
+The upper bound $L_S\le I$ implies $L_S^{-1/2}\ge I$.  Moreover
+\[
+ \left|
+ \left\langle We_R,\frac{r_S}{\|r_S\|}\right\rangle
+ \right|
+ =\frac{\|r_R\|}{\|r_S\|}
+\]
+by~\eqref{eq:o3aa-normal-pullback}.  Therefore
+\[
+ \|P_{V_S}We_R\|^2
+ =1-\frac{\|r_R\|^2}{\|r_S\|^2}
+ =\frac{\|s\|^2}{\|r_S\|^2},
+\]
+which proves~\eqref{eq:o3aa-normal-lower}.  Thus the normal direction intertwines iff
+$s=0$.  Combining this with Theorem~\ref{thm:o3aa-tangential-equivalence} and the
+orthogonal decomposition $V_R\oplus\mathbb Ce_R$ proves
+\eqref{eq:o3aa-full-equivalence}.
+\end{proof}
+
+\begin{remark}[R28 firewall]
+\label{rem:o3aa-firewall}
+R28 shows that the fixed residue of the R27 inverse-root branch has two layers:
+\begin{enumerate}
+ \item the tangential Gamma offblock $\mathscr C_\Gamma$;
+ \item the constraint-normal mismatch $s=(I-WW^*)r_S$.
+\end{enumerate}
+Either nonvanishing gives a persistent inverse-functional-calculus defect.  This is
+still modulus-layer information.  The R14 countermodel continues to forbid promotion
+to the relative polar gauge without separate control of the polar factors.
+\end{remark}
+
+\begin{openproblem}[R28-F: fixed tangential and normal tests]
+\label{open:o3aa-fixed-tests}
+Decide, for the concrete fixed P11 baseline,
+\[
+ \boxed{
+ \mathcal A_\Gamma
+ \stackrel{?}{=}
+ \frac{a_\Gamma\otimes s^*}{\|r_R\|^2}
+ }
+\]
+and
+\[
+ \boxed{s=(I-WW^*)r_S\stackrel{?}{=}0.}
+\]
+The first question is the tangential constrained-Gamma invariance problem; the second
+asks whether the hard first-boundary constraint has compatible baseline Riesz normals
+under source enlargement.  No terminal parameter remains in either question.
+\end{openproblem}
