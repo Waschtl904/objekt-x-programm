@@ -1,0 +1,357 @@
+% P11 paper module: R22 positive strong-gauge angle defect and fixed-vector criterion.
+
+\subsection{Positive strong-gauge angle defect and fixed-vector criterion}
+\label{subsec:o3u-angle-defect}
+
+Keep the odd-sector notation at fixed $0<R<S<T_0<U$ from
+Subsections~\ref{subsec:o3n-gauge-intertwining},
+\ref{subsec:o3s-relative-polar}, and~\ref{subsec:o3t-crosspolar}.  Thus
+\[
+ W:=W_{R,S,-}^{[T_0]},
+ \qquad
+ V_U:=U_SWU_R^*,
+ \qquad
+ \Gamma_U:=W^*V_U,
+\]
+\[
+ \mathfrak P_U:=U_SW-WU_R,
+ \qquad
+ Z_U:=U_S^*WU_R,
+ \qquad
+ \Omega_U:=Z_U^*W=U_R^*\Gamma_UU_R.
+\]
+R15 identifies $\Gamma_U\to I$ strongly with $V_U\to W$ strongly.  The purpose of
+this subsection is to encode that strong gate by a positive uniformly bounded
+fixed-vector observable.  The moving-gauge operator built from $Z_U-W$ is retained,
+but is not promoted to the R15 strong gate.
+
+\begin{proposition}[Positive angle defect for the R15 strong gauge]
+\label{prop:o3u-true-angle}
+Define
+\[
+ \boxed{
+ \mathscr G_U:=(V_U-W)^*(V_U-W).
+ }
+\tag{O3U.1}\label{eq:o3u-G-def}
+\]
+Then
+\[
+ \boxed{
+ \mathscr G_U=2I-\Gamma_U-\Gamma_U^*.
+ }
+\tag{O3U.2}\label{eq:o3u-G-gamma}
+\]
+Moreover
+\[
+ \boxed{0\le\mathscr G_U\le4I,}
+\tag{O3U.3}\label{eq:o3u-G-bound}
+\]
+and for every fixed source vector $f$,
+\[
+ \boxed{
+ \langle\mathscr G_Uf,f\rangle
+ =\|(V_U-W)f\|^2.
+ }
+\tag{O3U.4}\label{eq:o3u-G-rayleigh}
+\]
+\end{proposition}
+
+\begin{proof}
+Since $V_U$ and $W$ are isometries,
+\[
+\begin{aligned}
+ (V_U-W)^*(V_U-W)
+ &=V_U^*V_U-V_U^*W-W^*V_U+W^*W\\
+ &=2I-\Gamma_U^*-\Gamma_U,
+\end{aligned}
+\]
+which proves~\eqref{eq:o3u-G-gamma}.  Positivity is immediate from
+\eqref{eq:o3u-G-def}.  Also $\|V_U-W\|\le2$, hence
+$\|\mathscr G_U\|\le4$ and therefore~\eqref{eq:o3u-G-bound}.  Equation
+\eqref{eq:o3u-G-rayleigh} follows from the definition.
+\end{proof}
+
+\begin{proposition}[Dense-core criterion for strong gauge compatibility]
+\label{prop:o3u-dense-core}
+Let $\mathcal C$ be any fixed dense subspace of the $R$-source Hilbert space.  Then
+\[
+ \boxed{
+ \Gamma_U\xrightarrow[s]{}I
+ \quad\Longleftrightarrow\quad
+ \langle\mathscr G_Uf,f\rangle\longrightarrow0
+ \quad\text{for every }f\in\mathcal C.
+ }
+\tag{O3U.5}\label{eq:o3u-dense-core}
+\]
+In particular, failure of the R15 strong gauge condition is certified by one fixed
+vector and one subsequence whenever
+\[
+ \boxed{
+ \limsup_{n\to\infty}
+ \langle\mathscr G_{U_n}f,f\rangle>0
+ }
+\tag{O3U.6}\label{eq:o3u-fixed-witness}
+\]
+for some fixed $f$ and $U_n\to\infty$.
+\end{proposition}
+
+\begin{proof}
+By Proposition~\ref{prop:o3n-gauge-criterion},
+\[
+ \Gamma_U\xrightarrow[s]{}I
+ \quad\Longleftrightarrow\quad
+ V_U\xrightarrow[s]{}W.
+\]
+The forward implication in~\eqref{eq:o3u-dense-core} follows from
+\eqref{eq:o3u-G-rayleigh}.  Conversely suppose the quadratic forms tend to zero on
+$\mathcal C$.  Then
+\[
+ \|(V_U-W)f\|\to0
+ \qquad(f\in\mathcal C).
+\]
+For arbitrary $x$ and $f\in\mathcal C$,
+\[
+ \|(V_U-W)x\|
+ \le2\|x-f\|+\|(V_U-W)f\|,
+\]
+because $\|V_U-W\|\le2$ uniformly.  Taking $U\to\infty$ and then using density of
+$\mathcal C$ proves strong convergence on the whole source space.  Statement
+\eqref{eq:o3u-fixed-witness} is the contrapositive fixed-vector obstruction.
+\end{proof}
+
+\begin{remark}[Smooth odd source core]
+\label{rem:o3u-smooth-core}
+The previously established TC0 graph-core reduction supplies
+$C_c^\infty((-R,R))_{\rm odd}$ as a dense core of the odd P11 source space.  Hence the
+criterion~\eqref{eq:o3u-dense-core} may be tested on fixed smooth odd source vectors;
+no $U$-dependent maximizing vector is needed for a positive strong-convergence proof.
+Conversely, an operator-norm lower bound carried only by $U$-dependent directions does
+not by itself disprove strong convergence.
+\end{remark}
+
+The cross-polar defect of O3t produces a second positive operator.  It is norm-equivalent
+to $\mathscr G_U$ but is expressed in a moving source gauge.
+
+\begin{proposition}[Moving-gauge angle defect]
+\label{prop:o3u-moving-angle}
+Define
+\[
+ \boxed{
+ D_U:=(Z_U-W)^*(Z_U-W).
+ }
+\tag{O3U.7}\label{eq:o3u-D-def}
+\]
+Then
+\[
+ \boxed{
+ D_U=\mathfrak P_U^*\mathfrak P_U
+ =2I-\Omega_U-\Omega_U^*
+ =U_R^*\mathscr G_UU_R.
+ }
+\tag{O3U.8}\label{eq:o3u-D-identities}
+\]
+Consequently
+\[
+ \boxed{
+ \|D_U\|
+ =\|\mathscr G_U\|
+ =\|\mathfrak P_U\|^2
+ =\|V_U-W\|^2.
+ }
+\tag{O3U.9}\label{eq:o3u-D-norm}
+\]
+If
+\[
+ \Lambda_U:=(I-WW^*)U_SW,
+\]
+then the R20 orthogonal decomposition also gives the operator identity
+\[
+ \boxed{
+ D_U
+ =\Lambda_U^*\Lambda_U
+ +U_R^*(\Gamma_U-I)^*(\Gamma_U-I)U_R.
+ }
+\tag{O3U.10}\label{eq:o3u-D-positive-split}
+\]
+\end{proposition}
+
+\begin{proof}
+O3t gives $Z_U-W=-U_S^*\mathfrak P_U$, hence
+\[
+ D_U=\mathfrak P_U^*\mathfrak P_U.
+\]
+Also
+\[
+ V_U-W=\mathfrak P_UU_R^*,
+\]
+so
+\[
+ \mathscr G_U
+ =U_R\mathfrak P_U^*\mathfrak P_UU_R^*,
+\]
+which proves $D_U=U_R^*\mathscr G_UU_R$.  Substituting
+$\Omega_U=U_R^*\Gamma_UU_R$ into~\eqref{eq:o3u-G-gamma} gives
+$D_U=2I-\Omega_U-\Omega_U^*$.  Equation~\eqref{eq:o3u-D-norm} follows from unitary
+invariance and
+$\|T^*T\|=\|T\|^2$.
+
+Finally Proposition~\ref{prop:o3s-relative-decomposition} gives
+\[
+ \mathfrak P_U
+ =\Lambda_U+W(\Gamma_U-I)U_R
+\]
+with orthogonal ranges.  Taking the product with its adjoint on the source side removes
+the cross terms and yields~\eqref{eq:o3u-D-positive-split}.
+\end{proof}
+
+\begin{proposition}[Moving-unitary conjugacy does not preserve fixed-vector strong asymptotics]
+\label{prop:o3u-moving-countermodel}
+There is an abstract gauge system with fixed isometry $W$ for which
+\[
+ D_n\xrightarrow[s]{}0
+\]
+while
+\[
+ \mathscr G_n\not\xrightarrow[s]{}0.
+\]
+Thus the pointwise strong behavior of $D_U$ cannot be promoted by abstract unitary
+conjugacy to the R15 strong gauge condition.
+\end{proposition}
+
+\begin{proof}
+Let the source and target be $\ell^2(\mathbb N)$ and take $W=I$.  Put
+\[
+ V:=I-2P_{e_1},
+\]
+the reflection in the first coordinate.  Then
+\[
+ \mathscr G_n:=(V-I)^*(V-I)=4P_{e_1}
+\]
+for every $n$, so $\mathscr G_n$ does not converge strongly to zero.
+
+Choose unitaries $U_{R,n}$ with
+\[
+ U_{R,n}^*e_1=e_n
+\]
+and set
+\[
+ U_{S,n}:=VU_{R,n}.
+\]
+Then
+\[
+ V_n=U_{S,n}WU_{R,n}^*=V
+\]
+for every $n$, while
+\[
+ \mathfrak P_n
+ =U_{S,n}W-WU_{R,n}
+ =(V-I)U_{R,n}.
+\]
+Therefore
+\[
+ D_n
+ =\mathfrak P_n^*\mathfrak P_n
+ =U_{R,n}^*(4P_{e_1})U_{R,n}
+ =4P_{e_n}
+ \xrightarrow[s]{}0.
+\]
+This proves the claimed non-promotion.  The example is a topology firewall only; it is
+not a counterexample to the concrete P11 metric family.
+\end{proof}
+
+\begin{remark}[R22-D strong-topology firewall]
+\label{rem:o3u-moving-firewall}
+At each fixed $U$, $D_U$ and $\mathscr G_U$ are unitarily conjugate and therefore have
+the same norm and spectrum.  Since the conjugating unitary $U_R$ depends on $U$, this
+pointwise equivalence does not identify their fixed-vector strong limits.  Thus
+$D_U$ is a legitimate norm diagnostic and an exact positive form of the O3t cross-polar
+defect, but the primary fixed-vector observable for the R15 strong gate is
+$\mathscr G_U$.
+\end{remark}
+
+The true angle defect also admits a direct metric-product representation.
+
+\begin{proposition}[Metric representation of the strong-gauge angle defect]
+\label{prop:o3u-metric-representation}
+Using
+\[
+ U_S=X_SA_S^{-1/2},
+ \qquad
+ U_R^*=A_R^{-1/2}X_R^*,
+\]
+one has
+\[
+ \boxed{
+ V_U=X_SA_S^{-1/2}WA_R^{-1/2}X_R^*,
+ }
+\tag{O3U.11}\label{eq:o3u-V-metric}
+\]
+and
+\[
+ \boxed{
+ \Gamma_U
+ =W^*X_SA_S^{-1/2}WA_R^{-1/2}X_R^*.
+ }
+\tag{O3U.12}\label{eq:o3u-Gamma-metric}
+\]
+Consequently
+\[
+ \boxed{
+ \begin{aligned}
+ \mathscr G_U
+ ={}&2I
+ -W^*X_SA_S^{-1/2}WA_R^{-1/2}X_R^*\\
+ &-X_RA_R^{-1/2}W^*A_S^{-1/2}X_S^*W.
+ \end{aligned}
+ }
+\tag{O3U.13}\label{eq:o3u-G-metric}
+\]
+\end{proposition}
+
+\begin{proof}
+The first identity is the polar formulas inserted into
+$V_U=U_SWU_R^*$.  Left compression by $W^*$ gives~\eqref{eq:o3u-Gamma-metric}; taking
+the adjoint and substituting into~\eqref{eq:o3u-G-gamma} gives
+\eqref{eq:o3u-G-metric}.
+\end{proof}
+
+\begin{remark}[Inverse-square-root information firewall]
+\label{rem:o3u-inverse-root-firewall}
+Equation~\eqref{eq:o3u-G-metric} does not bypass the R17--R21 information barrier.
+Direct control of $\langle\mathscr G_Uf,f\rangle$ for a fixed vector $f$ requires the
+relative orientation of the factors $A_R^{-1/2}$ and $A_S^{-1/2}$ inside the cross
+product.  Equivalently, evaluating $V_Uf$ requires control of
+\[
+ A_R^{-1/2}X_R^*f
+ \quad\text{and then}\quad
+ X_SA_S^{-1/2}W A_R^{-1/2}X_R^*f.
+\]
+The existing rank-one fixed-pair Gram asymptotics do not determine this inverse-square-root
+orientation; Proposition~\ref{prop:o3n-rankone-insufficiency} and the O3t open problem
+remain in force.
+\end{remark}
+
+\begin{openproblem}[R22-F: fixed-vector P11 strong-gauge asymptotics]
+\label{open:o3u-angle-defect}
+On the fixed smooth odd source core, determine whether
+\[
+ \boxed{
+ \langle\mathscr G_Uf,f\rangle
+ =\|(V_U-W)f\|^2
+ \longrightarrow0
+ }
+\tag{O3U.14}\label{eq:o3u-open-target}
+\]
+for every fixed $f$, or construct a fixed $f$ and a subsequence $U_n\to\infty$ for
+which the limsup is positive.  By Proposition~\ref{prop:o3u-dense-core}, the first
+alternative is exactly the R15 strong polar-gauge condition
+$\Gamma_U\to I$.
+
+This open problem concerns only the polar gauge component.  Even if it is resolved
+positively, the full future transport
+\[
+ W_{R,S,-}^{[U]}=U_SQU_R^*
+\]
+also contains the modulus comparison $Q-W$.  No strong terminal-transport conclusion
+and no global Object~X construction is asserted here.
+\end{openproblem}
