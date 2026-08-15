@@ -1,0 +1,269 @@
+% P11 paper module: R20 individual noncommutativity versus relative polar incompatibility.
+
+\subsection{Individual metric noncommutativity versus relative polar incompatibility}
+\label{subsec:o3s-relative-polar}
+
+Keep the odd-sector notation of Subsections~\ref{subsec:o3n-gauge-intertwining} and
+\ref{subsec:o3r-sqrt-offblock}.  For a single source level $X\in\{R,S\}$ write
+\[
+ B_X:=G_{X,T_0}^-,\qquad C_X:=G_{X,U}^-,
+\]
+\[
+ X_X=C_X^{1/2}B_X^{-1/2}=U_XH_X,
+ \qquad
+ H_X:=\bigl(B_X^{-1/2}C_XB_X^{-1/2}\bigr)^{1/2}.
+\]
+Proposition~\ref{prop:o3n-gauge-commutator} gives the qualitative equivalence
+$U_X=I\iff[B_X,C_X]=0$.  The first point below is the scale-correct quantitative version
+for one metric pair.
+
+\begin{proposition}[Normalized square-root commutator controls individual polar activity]
+\label{prop:o3s-individual-commutator}
+For any boundedly invertible positive pair $B,C$, let
+\[
+ X=C^{1/2}B^{-1/2}=UH,
+ \qquad
+ H=(B^{-1/2}CB^{-1/2})^{1/2}.
+\]
+Then
+\[
+ X-X^*
+ =B^{-1/2}[B^{1/2},C^{1/2}]B^{-1/2}
+\tag{O3S.1}\label{eq:o3s-skew}
+\]
+and
+\[
+ \boxed{
+ \|U-I\|
+ \ge
+ \frac{
+ \|B^{-1/2}[B^{1/2},C^{1/2}]B^{-1/2}\|
+ }{2\|H\|}.
+ }
+\tag{O3S.2}\label{eq:o3s-U-lower}
+\]
+The right-hand side is invariant under the common rescaling $(B,C)\mapsto(tB,tC)$,
+$t>0$.
+\end{proposition}
+
+\begin{proof}
+The identity~\eqref{eq:o3s-skew} is immediate from
+\[
+ B^{-1/2}[B^{1/2},C^{1/2}]B^{-1/2}
+ =C^{1/2}B^{-1/2}-B^{-1/2}C^{1/2}.
+\]
+Since $X=UH$ and $X^*=HU^*$,
+\[
+ X-X^*=(U-I)H+H(I-U^*).
+\]
+Hence
+\[
+ \|X-X^*\|\le2\|H\|\,\|U-I\|,
+\]
+which proves~\eqref{eq:o3s-U-lower}.  Under common scalar rescaling both $X$ and $H$
+are unchanged, and so is the normalized expression.
+\end{proof}
+
+The actual P11 gauge is not the individual quantity $U_X-I$ but the relative defect
+\[
+ \mathfrak P_U:=U_SW-WU_R.
+\tag{O3S.3}\label{eq:o3s-relative-defect}
+\]
+Let $P=WW^*$ and retain
+\[
+ \Gamma_U=W^*U_SWU_R^*.
+\]
+
+\begin{proposition}[Exact relative polar decomposition]
+\label{prop:o3s-relative-decomposition}
+Put
+\[
+ \Lambda_U:=(I-P)U_SW.
+\]
+Then
+\[
+ \boxed{
+ \mathfrak P_U
+ =\Lambda_U+W(\Gamma_U-I)U_R,
+ }
+\tag{O3S.4}\label{eq:o3s-relative-decomp}
+\]
+and the two summands have orthogonal ranges.  Consequently, for every source vector
+$f$,
+\[
+ \boxed{
+ \|\mathfrak P_Uf\|^2
+ =\|\Lambda_Uf\|^2
+  +\|(\Gamma_U-I)U_Rf\|^2.
+ }
+\tag{O3S.5}\label{eq:o3s-relative-pythagoras}
+\]
+In particular a lower bound for the polar leakage $\Lambda_U$ would be sufficient for a
+lower bound on the true relative gauge defect, but a lower bound on either individual
+$\|U_R-I\|$ or $\|U_S-I\|$ is not.
+\end{proposition}
+
+\begin{proof}
+Using $P=WW^*$ and the definition of $\Gamma_U$,
+\[
+\begin{aligned}
+ \mathfrak P_U
+ &=(I-P)U_SW+PU_SW-WU_R\\
+ &=\Lambda_U+W(W^*U_SW-U_R)\\
+ &=\Lambda_U+W(\Gamma_U-I)U_R.
+\end{aligned}
+\]
+The first term lies in $(\Ran W)^\perp$ and the second in $\Ran W$, proving the
+orthogonality and~\eqref{eq:o3s-relative-pythagoras}.
+\end{proof}
+
+The next model shows that individual metric noncommutativity, even if arbitrarily large
+and even if it produces genuinely nontrivial polar factors, does not force relative
+polar incompatibility.
+
+\begin{proposition}[Canonical nested noncommutativity can cancel perfectly]
+\label{prop:o3s-matched-countermodel}
+There is a canonical inclusion model with exact base/future metric pullback in which
+both source and target metric pairs are noncommuting, their raw commutator norms can be
+made arbitrarily large, and $U_R,U_S$ are nontrivial, but
+\[
+ \boxed{
+ (I-P)U_SW=0,
+ \qquad
+ U_SW-WU_R=0
+ }
+\tag{O3S.6}\label{eq:o3s-matched-zero}
+\]
+identically.
+\end{proposition}
+
+\begin{proof}
+Let
+\[
+ B=\begin{pmatrix}1&0\\0&2\end{pmatrix},
+ \qquad
+ C=\begin{pmatrix}2&1\\1&2\end{pmatrix}.
+\]
+Then $B,C>0$ and
+\[
+ [B,C]=\begin{pmatrix}0&-1\\1&0\end{pmatrix}\ne0.
+\]
+Take source $\mathbb C^2$, target $\mathbb C^3$, and the canonical inclusion
+$Wz=(z,0)$.  For $t>0$ set
+\[
+ G_{R,T_0}=tB,
+ \qquad G_{R,U}=tC,
+\]
+\[
+ G_{S,T_0}=tB\oplus1,
+ \qquad G_{S,U}=tC\oplus1.
+\]
+The base and future metric pullback identities hold exactly.  Moreover the normalized
+base transition is precisely the canonical inclusion $W$.  The polar products satisfy
+\[
+ X_S=X_R\oplus1,
+\]
+so uniqueness of polar decomposition gives
+\[
+ U_S=U_R\oplus1.
+\]
+Since $[B,C]\ne0$, Proposition~\ref{prop:o3n-gauge-commutator} gives $U_R\ne I$ and
+$U_S\ne I$.  Nevertheless $U_SW=WU_R$, proving~\eqref{eq:o3s-matched-zero}.  Finally
+\[
+ \|[G_{R,T_0},G_{R,U}]\|
+ =t^2\|[B,C]\|,
+\]
+and the same holds on the target nontrivial block, so the raw commutators are
+arbitrarily large.
+\end{proof}
+
+The previous model has no modulus leakage.  The following direct-sum strengthening
+shows that adding an R19-type modulus defect does not repair the implication.
+
+\begin{proposition}[Modulus leakage plus large individual commutators still need not produce polar leakage]
+\label{prop:o3s-combined-countermodel}
+There is a canonical inclusion model satisfying exact base/future pullback such that
+\[
+ \|(I-P)Q\|>0,
+\]
+its square-root off-block can be made arbitrarily large, and both individual metric-pair
+commutators can simultaneously be made arbitrarily large, while nevertheless
+\[
+ \boxed{
+ (I-P)U_SW=0,
+ \qquad
+ U_SW-WU_R=0.
+ }
+\tag{O3S.7}\label{eq:o3s-combined-zero}
+\]
+\end{proposition}
+
+\begin{proof}
+For the first direct summand take the R19 canonical inclusion block
+\[
+ W_1:\mathbb C\hookrightarrow\mathbb C^2,
+ \qquad W_1z=(z,0),
+\]
+with base metrics $1$ and $I_2$, and future metrics
+\[
+ 2s^2,
+ \qquad
+ s^2A_0,
+ \qquad
+ A_0=\begin{pmatrix}2&1\\1&2\end{pmatrix}.
+\]
+Its polar factors are $1$ and $I_2$, while
+\[
+ Q_1=A_0^{1/2}W_1/\sqrt2
+\]
+has nonzero off-range component because $e_1$ is not an eigenvector of $A_0$; the
+corresponding square-root off-block grows linearly in $s$.
+
+For the second summand use the same noncommuting pair $B,C$ as in
+Proposition~\ref{prop:o3s-matched-countermodel}, with identity inclusion between two
+copies of $\mathbb C^2$, base metric $tB$ and future metric $tC$ on both copies.  Its
+source and target polar factors are the same nontrivial unitary $U_0$, while the raw
+commutator norm is $t^2\|[B,C]\|$.
+
+Take the orthogonal direct sums of the two systems.  The total transition is a canonical
+coordinate inclusion, the base/future pullback identities remain exact, and
+\[
+ U_R=1\oplus U_0,
+ \qquad
+ U_S=I_2\oplus U_0.
+\]
+Hence~\eqref{eq:o3s-combined-zero} holds.  At the same time the first summand supplies
+nonzero modulus leakage and arbitrarily large square-root off-block as $s\to\infty$,
+while the second supplies arbitrarily large individual commutators as $t\to\infty$.
+\end{proof}
+
+\begin{remark}[R20 firewall: the missing object is relative, not individual]
+\label{rem:o3s-firewall}
+Proposition~\ref{prop:o3s-individual-commutator} gives a legitimate quantitative route
+from a scale-normalized square-root commutator to individual polar activity
+$\|U_X-I\|$.  Propositions~\ref{prop:o3s-matched-countermodel} and
+\ref{prop:o3s-combined-countermodel} show, however, that neither large raw
+noncommutativity nor the combination of nontrivial modulus leakage with large
+individual noncommutativity can be promoted by abstract algebra to a lower bound on
+\[
+ (I-P)U_SW
+ \quad\text{or}\quad
+ U_SW-WU_R.
+\]
+Thus the proposed target ``prove the two concrete metric pairs are quantitatively
+noncommuting'' is insufficient as stated.  The remaining P11 problem is a relative
+polar-compatibility problem: one must detect a failure of the source and target polar
+rotations to intertwine under $W$.
+
+Equivalently, the genuinely decisive quantity remains
+\[
+ \mathfrak P_U=U_SW-WU_R,
+\]
+or, by Proposition~\ref{prop:o3n-gauge-criterion}, the true gauge compression
+$\Gamma_U-I$.  Any useful commutator criterion must therefore be relative across the
+nested metric pairs, not a pair of separate estimates on
+$[G_{R,T_0},G_{R,U}]$ and $[G_{S,T_0},G_{S,U}]$.
+
+No conclusion about $\Gamma_U\to I$, $K_{R,S}^{T_0,U}\to I$, strong terminal
+transport, Object X, Seal, or RH follows here.
+\end{remark}
