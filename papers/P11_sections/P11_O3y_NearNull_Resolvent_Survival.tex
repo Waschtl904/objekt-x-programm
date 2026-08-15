@@ -1,0 +1,226 @@
+% P11 paper module: R26 concrete near-null survival of relative resolvents.
+
+\subsection{Near-null survival of the concrete relative resolvents}
+\label{subsec:o3y-nearnull-resolvent}
+
+R24 and R25 reduce the nested inverse-root problem to resolvents of the concrete
+relative metrics.  The absolute odd terminal forms nevertheless diverge on every fixed
+nonzero smooth odd vector.  The next result shows that this absolute divergence does
+\emph{not} drive the relative resolvents to zero: the R17 near-null directions leave a
+nonvanishing inverse-metric trace on every fixed higher-jet direction.
+
+Fix $0<R<S<T_0<U$.  Write
+\[
+ B_R:=G_{R,T_0}^-,
+ \qquad
+ C_R(U):=G_{R,U}^-,
+ \qquad
+ A_R(U):=B_R^{-1/2}C_R(U)B_R^{-1/2},
+\tag{O3Y.1}\label{eq:o3y-relative-R}
+\]
+and analogously $B_S,C_S(U),A_S(U)$.  The normalized base transition is
+\[
+ W=B_S^{1/2}J_{R,S}B_R^{-1/2}.
+\]
+
+\begin{theorem}[Higher-jet fixed-vector resolvent survival]
+\label{thm:o3y-resolvent-survival}
+Let
+\[
+ 0\ne f\in C_c^\infty((-R,R))_{\rm odd},
+ \qquad
+ \beta_R^{(0)}(f)=0.
+\]
+Put
+\[
+ x_f:=B_R^{1/2}f,
+ \qquad
+ b_f:=\|x_f\|_{X,R}^2
+ =q_{T_0}^X(J_{R,T_0}f),
+ \qquad
+ \gamma_f:=\mathfrak c_{\Gamma,R}[f]>0.
+\]
+Then for every fixed $t\ge0$,
+\[
+ \boxed{
+ \liminf_{U\to\infty}
+ \left\langle(A_R(U)+tI)^{-1}x_f,x_f\right\rangle_{X,R}
+ \ge
+ \frac{b_f^2}{\gamma_f+t b_f}>0.
+ }
+\tag{O3Y.2}\label{eq:o3y-R-resolvent-lower}
+\]
+At the canonically nested source level,
+\[
+ \boxed{
+ \liminf_{U\to\infty}
+ \left\langle(A_S(U)+tI)^{-1}Wx_f,Wx_f\right\rangle_{X,S}
+ \ge
+ \frac{b_f^2}{\gamma_f+t b_f}>0.
+ }
+\tag{O3Y.3}\label{eq:o3y-S-resolvent-lower}
+\]
+In particular neither relative resolvent family converges strongly to zero on these
+fixed vectors.
+\end{theorem}
+
+\begin{proof}
+By Corollary~\ref{cor:first-jet}, $f$ has a finite first nonzero integral-jet order
+$m>0$.  Choose a fixed smooth odd $f_0$ with first jet order zero.  Proposition
+\ref{prop:o3n-nearnull} defines
+\[
+ z_U
+ =f-\frac{\ell_U(f)}{\ell_U(f_0)}f_0,
+ \qquad
+ \frac{\ell_U(f)}{\ell_U(f_0)}=O(U^{-m}),
+\]
+so $z_U\to f$ in the fixed smooth two-dimensional source span and hence in the fixed
+$X$-graph norm.  Corollary~\ref{cor:o3p-gamma-limit} gives
+\[
+ q_U^X(J_{R,U}z_U)\longrightarrow\gamma_f.
+\tag{O3Y.4}\label{eq:o3y-nearnull-energy}
+\]
+
+Set
+\[
+ y_U:=B_R^{1/2}z_U.
+\]
+Then $y_U\to x_f$ and, by the definition of the relative metric,
+\[
+ \langle A_R(U)y_U,y_U\rangle_{X,R}
+ =q_U^X(J_{R,U}z_U)\longrightarrow\gamma_f.
+\tag{O3Y.5}\label{eq:o3y-relative-nearnull}
+\]
+Also
+\[
+ \langle x_f,y_U\rangle_{X,R}\to b_f,
+ \qquad
+ \|y_U\|_{X,R}^2\to b_f.
+\tag{O3Y.6}\label{eq:o3y-base-limits}
+\]
+
+For every positive invertible $A$ and $t\ge0$,
+\[
+ \langle(A+tI)^{-1}x,x\rangle
+ =\sup_{y\ne0}
+ \frac{|\langle x,y\rangle|^2}
+ {\langle Ay,y\rangle+t\|y\|^2}.
+\tag{O3Y.7}\label{eq:o3y-variational}
+\]
+Apply this with $A=A_R(U)$, $x=x_f$, and the admissible test vector $y=y_U$.
+Equations~\eqref{eq:o3y-relative-nearnull}--\eqref{eq:o3y-base-limits} give
+\eqref{eq:o3y-R-resolvent-lower}.
+
+For level $S$, R17 source compatibility gives
+$z_U^S=J_{R,S}z_U$.  Hence its standardized representative is
+\[
+ B_S^{1/2}z_U^S
+ =B_S^{1/2}J_{R,S}B_R^{-1/2}y_U
+ =Wy_U,
+\]
+while the fixed representative is $Wx_f$.  Since $W$ is an isometry, the numerator and
+base norms have the same limits as at level $R$.  The terminal cocycle gives
+\[
+ \langle A_S(U)Wy_U,Wy_U\rangle_{X,S}
+ =q_U^X(J_{S,U}J_{R,S}z_U)
+ =q_U^X(J_{R,U}z_U)
+ \to\gamma_f.
+\]
+A second application of~\eqref{eq:o3y-variational} proves
+\eqref{eq:o3y-S-resolvent-lower}.
+\end{proof}
+
+\begin{corollary}[Concrete inverse-root survival]
+\label{cor:o3y-inverse-root-survival}
+Under the hypotheses of Theorem~\ref{thm:o3y-resolvent-survival},
+\[
+ \boxed{
+ \liminf_{U\to\infty}
+ \|A_R(U)^{-1/2}x_f\|_{X,R}^2
+ \ge\frac{b_f^2}{\gamma_f}>0,
+ }
+\tag{O3Y.8}\label{eq:o3y-R-inverse-lower}
+\]
+and
+\[
+ \boxed{
+ \liminf_{U\to\infty}
+ \|A_S(U)^{-1/2}Wx_f\|_{X,S}^2
+ \ge\frac{b_f^2}{\gamma_f}>0.
+ }
+\tag{O3Y.9}\label{eq:o3y-S-inverse-lower}
+\]
+Thus $A_R(U)^{-1/2}$ and $A_S(U)^{-1/2}$ do not converge strongly to zero on the
+higher-jet fixed vectors above.
+\end{corollary}
+
+\begin{proof}
+Take $t=0$ in Theorem~\ref{thm:o3y-resolvent-survival} and use
+\[
+ \langle A^{-1}x,x\rangle=\|A^{-1/2}x\|^2.
+\]
+\end{proof}
+
+\begin{remark}[Concrete nonuniformity of the odd terminal metric]
+\label{rem:o3y-nonuniformity}
+For the same fixed $f$ with first jet order $m>0$, the sharp odd asymptotic gives
+\[
+ q_U^X(J_{R,U}f)
+ \asymp_f\frac{e^U}{U^{2m+2}}
+ \longrightarrow\infty.
+\]
+Equivalently, the relative quadratic form diverges on the fixed standardized vector
+$x_f$.  Yet the resolvent and inverse-root quantities in
+\eqref{eq:o3y-R-resolvent-lower} and~\eqref{eq:o3y-R-inverse-lower} stay bounded away
+from zero.
+
+There is no contradiction.  The moving vector
+\[
+ z_U=f+O(U^{-m})f_0
+\]
+converges to $f$ in the fixed source norm while cancelling the dominant constant-mode
+boundary functional exactly.  Thus the future forms are strongly nonuniform in
+orientation.  In particular, pointwise divergence of the future quadratic form on the
+fixed smooth odd core cannot be promoted to strong extinction of its inverse functional
+calculus.
+\end{remark}
+
+\begin{corollary}[Strong-resolvent extinction is excluded for the actual odd P11 family]
+\label{cor:o3y-no-extinction}
+For every fixed $t\ge0$, the concrete families
+\[
+ (A_R(U)+tI)^{-1}
+ \quad\text{and}\quad
+ (A_S(U)+tI)^{-1}
+\]
+do not converge strongly to zero on the odd source spaces.
+\end{corollary}
+
+\begin{proof}
+Choose any nonzero smooth odd $f$ with $\beta_R^{(0)}(f)=0$ and apply
+Theorem~\ref{thm:o3y-resolvent-survival}.  A strong zero limit would force the displayed
+positive matrix element to tend to zero, contradicting
+\eqref{eq:o3y-R-resolvent-lower} or~\eqref{eq:o3y-S-resolvent-lower}.
+\end{proof}
+
+\begin{remark}[R26 firewall: survival of both terms does not decide their difference]
+\label{rem:o3y-firewall}
+R25 introduced the positive resolvent compression defect
+\[
+ \mathscr E_U(t)
+ =W^*(A_S(U)+tI)^{-1}W-(A_R(U)+tI)^{-1}\ge0.
+\]
+Theorem~\ref{thm:o3y-resolvent-survival} shows that on every fixed smooth higher-jet
+vector both resolvent terms have positive liminf.  Therefore R25-F cannot be settled by
+a crude claim that the two resolvents separately vanish on the smooth odd core.
+
+The theorem does not determine their difference: it gives neither
+\[
+ \langle\mathscr E_U(t)x_f,x_f\rangle\to0
+\]
+nor a positive limsup.  The remaining R25 question is genuinely relative: how much
+additional inverse-metric relaxation is gained by allowing the level-$S$ complement of
+$\Ran W$?  This result remains on the metric/resolvent layer and gives no conclusion
+about $\Gamma_U$, the R22 angle defect, strong terminal transport, or a global
+Object~X.
+\end{remark}
