@@ -1,0 +1,248 @@
+% P11 paper module: R30 baseline Riesz support radius and exact normal-mismatch classification.
+
+\subsection{Baseline Riesz support radius and exact normal-mismatch classification}
+\label{subsec:o3ac-riesz-support}
+
+R29 proves that the fixed constraint-normal mismatch is nonzero on a concrete
+small-source region.  The present subsection shows that, for fixed $S<T_0$, the entire
+family of normal tests for $0<R<S$ is encoded by one fixed $T_0$-baseline Riesz vector.
+
+For $X<T_0$ put
+\[
+ B_X:=G_{X,T_0}^-
+\]
+and let $r_X$ be the whitened Riesz normal from
+Subsection~\ref{subsec:o3aa-fixed-gamma-crossblock}.  Define
+\[
+ \boxed{
+ \rho_{X,T_0}:=B_X^{-1/2}r_X.
+ }
+\tag{O3AC.1}\label{eq:o3ac-rho}
+\]
+
+\begin{proposition}[Unwhitened baseline Riesz representative]
+\label{prop:o3ac-riesz}
+For every $f\in\KXR{X}^{-}$,
+\[
+ \boxed{
+ \beta_X^{(0)}(f)
+ =q_{T_0}^X
+ \bigl(J_{X,T_0}f,J_{X,T_0}\rho_{X,T_0}\bigr).
+ }
+\tag{O3AC.2}\label{eq:o3ac-riesz-id}
+\]
+\end{proposition}
+
+\begin{proof}
+In whitened coordinates,
+\[
+ \widehat\beta_X(B_X^{1/2}f)
+ =\langle B_X^{1/2}f,r_X\rangle_{X,X}.
+\]
+Substitute $r_X=B_X^{1/2}\rho_{X,T_0}$ and use the definition of the terminal metric
+$B_X$.
+\end{proof}
+
+\begin{theorem}[Normal mismatch equals failure of support compatibility]
+\label{thm:o3ac-support-equivalence}
+For every $0<R<S<T_0$,
+\[
+ \boxed{
+ s_{R,S,T_0}=0
+ \iff
+ \rho_{S,T_0}=J_{R,S}\rho_{R,T_0}
+ \iff
+ \operatorname{ess\,supp}\rho_{S,T_0}\subset[-R,R].
+ }
+\tag{O3AC.3}\label{eq:o3ac-support-equivalence}
+\]
+\end{theorem}
+
+\begin{proof}
+R28 gives
+\[
+ s_{R,S,T_0}=0\iff r_S=Wr_R,
+\]
+with
+\[
+ W=B_S^{1/2}J_{R,S}B_R^{-1/2}.
+\]
+Using $r_X=B_X^{1/2}\rho_{X,T_0}$ and invertibility of $B_S^{1/2}$ yields
+\[
+ s_{R,S,T_0}=0
+ \iff
+ \rho_{S,T_0}=J_{R,S}\rho_{R,T_0}.
+\]
+By Theorem~\ref{thm:graph-transition}, $J_{R,S}$ is exactly zero extension, so this
+implies the support condition.
+
+Conversely suppose the support condition holds and let $\widetilde\rho_R$ be the
+restriction of $\rho_{S,T_0}$ to $(-R,R)$.  Then
+$\rho_{S,T_0}=J_{R,S}\widetilde\rho_R$.  For every $f\in\KXR{R}^-$, jet pullback and
+the terminal cocycle give
+\[
+\begin{aligned}
+ \beta_R^{(0)}(f)
+ &=\beta_S^{(0)}(J_{R,S}f)\\
+ &=q_{T_0}^X
+ \bigl(J_{R,T_0}f,J_{R,T_0}\widetilde\rho_R\bigr).
+\end{aligned}
+\]
+Uniqueness of the Riesz representative in Proposition~\ref{prop:o3ac-riesz} gives
+$\widetilde\rho_R=\rho_{R,T_0}$.
+\end{proof}
+
+Fix now $S<T_0$ and define the critical support radius
+\[
+ \boxed{
+ R_*(S,T_0)
+ :=\operatorname*{ess\,sup}
+ \{|u|:\rho_{S,T_0}(u)\ne0\}.
+ }
+\tag{O3AC.4}\label{eq:o3ac-Rstar}
+\]
+Since the first boundary functional is nonzero, $\rho_{S,T_0}\ne0$, and hence
+$0<R_*(S,T_0)\le S$.
+
+\begin{corollary}[Exact one-threshold classification]
+\label{cor:o3ac-threshold}
+For every $0<R<S$,
+\[
+ \boxed{
+ s_{R,S,T_0}\ne0
+ \iff0<R<R_*(S,T_0),
+ }
+\tag{O3AC.5}\label{eq:o3ac-nonzero-threshold}
+\]
+while
+\[
+ \boxed{
+ s_{R,S,T_0}=0
+ \iff R_*(S,T_0)\le R<S.
+ }
+\tag{O3AC.6}\label{eq:o3ac-zero-threshold}
+\]
+Thus the normal mismatch can change status at most once as the old source radius grows.
+In particular,
+\[
+ \boxed{
+ s_{R,S,T_0}\ne0\ \text{for every }0<R<S
+ \iff R_*(S,T_0)=S.
+ }
+\tag{O3AC.7}\label{eq:o3ac-universal-equivalence}
+\]
+\end{corollary}
+
+R29 already gives a quantitative lower bound for $R_*$.  It can be sharpened using the
+exact kernel norm.  Put
+\[
+ F(R):=8\left[R-4(1-e^{-R/2})+(1-e^{-R})\right].
+\tag{O3AC.8}\label{eq:o3ac-F}
+\]
+Then
+\[
+ F'(R)=8(1-e^{-R/2})^2>0
+\]
+and Proposition~\ref{prop:o3ab-dual-normal} gives
+\[
+ \|r_R\|^2\le F(R).
+\]
+Hence
+\[
+ F(R)<\|r_S\|^2
+ \quad\Longrightarrow\quad
+ s_{R,S,T_0}\ne0.
+\tag{O3AC.9}\label{eq:o3ac-F-test}
+\]
+Equivalently,
+\[
+ \boxed{
+ R_*(S,T_0)\ge F^{-1}(\|r_S\|^2),
+ }
+\tag{O3AC.10}\label{eq:o3ac-Rstar-lower}
+\]
+with the inverse taken on $[0,S]$.  Any fixed test-vector lower bound
+$c_h\le\|r_S\|$ yields the fully computable criterion
+\[
+ F(R)<c_h^2\Longrightarrow s_{R,S,T_0}\ne0.
+\tag{O3AC.11}\label{eq:o3ac-test-threshold}
+\]
+
+There is also a fixed operator equation for the support carrier.  Let
+\[
+ \phi_S(u):=\operatorname{sgn}(u)I_0(|u|),
+ \qquad
+ \Sigma_S^{[T_0]}:=E_{S,T_0}^*\Sigma_{T_0}E_{S,T_0}.
+\]
+
+\begin{proposition}[Fixed Dirichlet/Riesz equation and positive regularity]
+\label{prop:o3ac-riesz-equation}
+The vector $\rho_{S,T_0}$ is the unique weak solution of
+\[
+ \boxed{
+ (C_{\Gamma,S}+\Sigma_S^{[T_0]})\rho_{S,T_0}=\phi_S.
+ }
+\tag{O3AC.12}\label{eq:o3ac-riesz-equation}
+\]
+Moreover there exists $s_*>0$ such that
+\[
+ \boxed{
+ E_S\rho_{S,T_0}\in H^{s_*}(\mathbb R),
+ }
+\tag{O3AC.13}\label{eq:o3ac-positive-sobolev}
+\]
+and consequently
+\[
+ \boxed{
+ E_S\rho_{S,T_0}
+ \in\bigcap_{\alpha<\infty}\HG^\alpha(\mathbb R).
+ }
+\tag{O3AC.14}\label{eq:o3ac-all-log}
+\]
+\end{proposition}
+
+\begin{proof}
+Equation~\eqref{eq:o3ac-riesz-id} and the representation theorem for the fixed
+$T_0$ pullback form give~\eqref{eq:o3ac-riesz-equation}.  Coercivity gives uniqueness.
+
+After zero extension, $\phi_S$ belongs to $H^s(\mathbb R)$ for every
+$0<s<1/2$: it is piecewise smooth on the fixed interval and the endpoint cutoff is the
+limiting regularity mechanism.  Apply the same interpolation-scale operator
+$\mathcal A_S:V_S^s\to Y_S^s$ and the same \v Sne\u\i berg stability argument used in
+Theorem~\ref{thm:o3k-complement}.  For some sufficiently small $s_*>0$,
+$\mathcal A_S$ is invertible and the forcing belongs to $Y_S^{s_*}$, so the unique weak
+solution lies in $V_S^{s_*}\subset H^{s_*}$.  Positive Sobolev regularity dominates
+every finite logarithmic weight, proving~\eqref{eq:o3ac-all-log}.
+\end{proof}
+
+\begin{remark}[R30 unique-continuation firewall]
+\label{rem:o3ac-ucp-firewall}
+Proposition~\ref{prop:o3ac-riesz-equation} does not supply a unique-continuation theorem.
+The finite-window Gamma operator is a genuine Dirichlet/Riesz realization of a
+logarithmic full-line multiplier, while $\Sigma_S^{[T_0]}$ is a nonlocal fixed Feshbach
+term assembled from translations, interval cutoffs and the rest inverse.  O3k proves
+small-Sobolev boundedness of this structure; it does not prove locality, analyticity
+preservation, or the hypotheses of a classical elliptic pseudodifferential UCP.
+Accordingly one must not infer full support of $\rho_{S,T_0}$ merely from full support
+of $\phi_S$.
+\end{remark}
+
+\begin{openproblem}[R30-F: full support of the baseline normal]
+\label{open:o3ac-full-support}
+For fixed $S<T_0$, decide
+\[
+ \boxed{R_*(S,T_0)=S\ ?}
+\]
+Equivalently, does the unique solution of~\eqref{eq:o3ac-riesz-equation} have essential
+mass arbitrarily close to the boundary points $\pm S$?
+
+A positive answer would upgrade R29 to
+\[
+ s_{R,S,T_0}\ne0
+ \qquad\text{for every strict }0<R<S<T_0,
+\]
+and hence exclude full asymptotic inverse-root intertwining for every strict source
+enlargement.  This remains an inverse-functional-calculus statement only; by the R14
+firewall it would still not decide the relative polar gauge or strong terminal
+transport.
+\end{openproblem}
