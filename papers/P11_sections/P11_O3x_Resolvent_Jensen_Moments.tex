@@ -1,0 +1,338 @@
+% P11 paper module: R25 positive resolvent Jensen kernel and inverse-root strong criterion.
+
+\subsection{Positive resolvent Jensen moments and the inverse-root fixed-vector criterion}
+\label{subsec:o3x-resolvent-jensen}
+
+Keep the odd-sector notation of Subsections~\ref{subsec:o3r-sqrt-offblock} and
+\ref{subsec:o3w-resolvent-bridge} at fixed $0<R<S<T_0<U$:
+\[
+ A_R:=A_{T_0,U}^{R,-},
+ \qquad
+ A_S:=A_{T_0,U}^{S,-},
+ \qquad
+ W:=W_{R,S,-}^{[T_0]},
+\]
+\[
+ \mathscr B_U:=A_SW-WA_R=(I-WW^*)A_SW.
+\]
+By Proposition~\ref{prop:o3w-coercivity},
+\[
+ A_R,A_S\ge a_0I,
+ \qquad
+ a_0=(1+\|H_{T_0}\|^2)^{-1}>0
+\tag{O3X.1}\label{eq:o3x-a0}
+\]
+uniformly in $U$.
+
+For $t\ge0$ put
+\[
+ R_R(t):=(A_R+tI)^{-1},
+ \qquad
+ R_S(t):=(A_S+tI)^{-1}.
+\]
+
+\begin{proposition}[Positive resolvent compression defect]
+\label{prop:o3x-resolvent-gram}
+Define
+\[
+ \mathscr E_U(t):=W^*R_S(t)W-R_R(t).
+\]
+Then
+\[
+ \boxed{
+ \mathscr E_U(t)
+ =R_R(t)\mathscr B_U^*R_S(t)\mathscr B_UR_R(t)
+ \ge0.
+ }
+\tag{O3X.2}\label{eq:o3x-resolvent-gram}
+\]
+Equivalently,
+\[
+ \boxed{
+ \mathscr E_U(t)
+ =\bigl(R_S(t)^{1/2}\mathscr B_UR_R(t)\bigr)^*
+  \bigl(R_S(t)^{1/2}\mathscr B_UR_R(t)\bigr).
+ }
+\tag{O3X.3}\label{eq:o3x-resolvent-square}
+\]
+\end{proposition}
+
+\begin{proof}
+The resolvent quasi-commutator is
+\[
+ R_S(t)W-WR_R(t)
+ =-R_S(t)\mathscr B_UR_R(t).
+\tag{O3X.4}\label{eq:o3x-resolvent-quasi}
+\]
+Taking adjoints and multiplying by $W$ gives
+\[
+ \mathscr E_U(t)
+ =-R_R(t)\mathscr B_U^*R_S(t)W.
+\]
+Now insert~\eqref{eq:o3x-resolvent-quasi}.  Since
+$\mathscr B_U^*W=0$, the $WR_R(t)$ term vanishes and one obtains
+\eqref{eq:o3x-resolvent-gram}.  Formula~\eqref{eq:o3x-resolvent-square}
+is immediate.
+\end{proof}
+
+The positive kernel in Proposition~\ref{prop:o3x-resolvent-gram} simultaneously
+encodes the square-root Jensen defect from Section~\ref{sec:jensen}, a new logarithmic
+defect, and the inverse-root defect of R24.
+
+\begin{proposition}[Three Jensen moments of one positive kernel]
+\label{prop:o3x-three-moments}
+Let
+\[
+ \mathscr J_U:=A_R^{1/2}-W^*A_S^{1/2}W,
+\]
+so that $\mathscr J_U\ge0$ and
+$\Theta=A_R^{-1/4}\mathscr J_UA_R^{-1/4}$ as in
+\eqref{eq:jd-theta}.  Define
+\[
+ \mathscr L_U:=\log A_R-W^*(\log A_S)W,
+\]
+and
+\[
+ \mathscr I_U:=W^*A_S^{-1/2}W-A_R^{-1/2}.
+\]
+Then the following operator-norm Bochner integrals are exact:
+\[
+ \boxed{
+ \mathscr J_U
+ =\frac1\pi\int_0^\infty t^{1/2}\mathscr E_U(t)\,dt
+ \ge0,
+ }
+\tag{O3X.5}\label{eq:o3x-sqrt-moment}
+\]
+\[
+ \boxed{
+ \mathscr L_U
+ =\int_0^\infty\mathscr E_U(t)\,dt
+ \ge0,
+ }
+\tag{O3X.6}\label{eq:o3x-log-moment}
+\]
+\[
+ \boxed{
+ \mathscr I_U
+ =\frac1\pi\int_0^\infty t^{-1/2}\mathscr E_U(t)\,dt
+ \ge0.
+ }
+\tag{O3X.7}\label{eq:o3x-inverse-moment}
+\]
+For every source vector $f$,
+\[
+ \boxed{
+ \langle\mathscr L_Uf,f\rangle^2
+ \le
+ \pi^2\langle\mathscr J_Uf,f\rangle
+       \langle\mathscr I_Uf,f\rangle.
+ }
+\tag{O3X.8}\label{eq:o3x-moment-interpolation}
+\]
+\end{proposition}
+
+\begin{proof}
+Equations~\eqref{eq:o3x-sqrt-moment} and
+\eqref{eq:o3x-inverse-moment} follow from the standard positive functional-calculus
+integrals for $A^{1/2}$ and $A^{-1/2}$ together with
+Proposition~\ref{prop:o3x-resolvent-gram}.  For the logarithm use
+\[
+ \log A
+ =\int_0^\infty
+ \left(\frac1{1+t}I-(A+tI)^{-1}\right)dt;
+\]
+the scalar terms cancel after the isometric compression, giving
+\eqref{eq:o3x-log-moment}.  Uniform coercivity handles the origin, while
+$\|\mathscr E_U(t)\|=O(t^{-3})$ handles infinity, so all three integrals converge in
+operator norm.
+
+For fixed $f$ the measure
+\[
+ d\mu_{U,f}(t)
+ :=\langle\mathscr E_U(t)f,f\rangle\,dt
+\]
+is positive.  Cauchy--Schwarz applied to
+$1=t^{1/4}t^{-1/4}$ in $L^2(d\mu_{U,f})$ gives
+\eqref{eq:o3x-moment-interpolation}.
+\end{proof}
+
+The inverse-root moment has a special advantage in the concrete P11 family: the
+uniform lower spectral edge from R24 turns it into a cancellation-free fixed-vector
+criterion.
+
+\begin{theorem}[Positive fixed-vector criterion for inverse-root compatibility]
+\label{thm:o3x-inverse-criterion}
+Put
+\[
+ D_U^-:=A_S^{-1/2}W-WA_R^{-1/2}.
+\]
+Then, for every source vector $f$,
+\[
+ \boxed{
+ \|D_U^-f\|^2
+ \le a_0^{-1/2}\langle\mathscr I_Uf,f\rangle,
+ }
+\tag{O3X.9}\label{eq:o3x-inverse-vector-bound}
+\]
+and
+\[
+ \boxed{
+ \mathscr I_U=W^*D_U^-.
+ }
+\tag{O3X.10}\label{eq:o3x-I-compression}
+\]
+Consequently, for every fixed $f$,
+\[
+ \boxed{
+ D_U^-f\longrightarrow0
+ \quad\Longleftrightarrow\quad
+ \langle\mathscr I_Uf,f\rangle\longrightarrow0.
+ }
+\tag{O3X.11}\label{eq:o3x-fixed-equivalence}
+\]
+Moreover
+\[
+ \|D_U^-\|\le2a_0^{-1/2}
+\tag{O3X.12}\label{eq:o3x-D-uniform}
+\]
+uniformly in $U$.  Hence it is enough to verify the scalar condition on any fixed
+dense source core in order to obtain
+\[
+ D_U^-\xrightarrow[s]{}0
+\]
+on the whole source Hilbert space.
+\end{theorem}
+
+\begin{proof}
+R24 gives
+\[
+ D_U^-
+ =-\frac1\pi\int_0^\infty t^{-1/2}
+ R_S(t)\mathscr B_UR_R(t)\,dt.
+\]
+By~\eqref{eq:o3x-resolvent-square} and
+$R_S(t)^2\le(a_0+t)^{-1}R_S(t)$,
+\[
+ \|R_S(t)\mathscr B_UR_R(t)f\|^2
+ \le(a_0+t)^{-1}
+ \langle\mathscr E_U(t)f,f\rangle.
+\]
+Cauchy--Schwarz in the $t$-integral and
+\[
+ \int_0^\infty\frac{t^{-1/2}}{a_0+t}\,dt
+ =\frac\pi{\sqrt{a_0}}
+\]
+prove~\eqref{eq:o3x-inverse-vector-bound}.  Equation
+\eqref{eq:o3x-I-compression} follows directly from the definition of $D_U^-$.
+The two implications in~\eqref{eq:o3x-fixed-equivalence} now follow from
+\eqref{eq:o3x-inverse-vector-bound} and
+\[
+ |\langle\mathscr I_Uf,f\rangle|
+ =|\langle D_U^-f,Wf\rangle|
+ \le\|D_U^-f\|\,\|f\|.
+\]
+Finally~\eqref{eq:o3w-invroot-bound} gives
+\eqref{eq:o3x-D-uniform}, and the standard dense-core approximation proves the strong
+extension.
+\end{proof}
+
+\begin{proposition}[Scale-invariant logarithmic modulus defect]
+\label{prop:o3x-log-defect}
+The logarithmic defect is invariant under the common rescaling
+$(A_R,A_S)\mapsto(cA_R,cA_S)$, $c>0$, and
+\[
+ \boxed{
+ \mathscr L_U=0
+ \quad\Longleftrightarrow\quad
+ \mathscr B_U=0
+ \quad\Longleftrightarrow\quad
+ Q=W.
+ }
+\tag{O3X.13}\label{eq:o3x-log-zero}
+\]
+For the concrete P11 family there is $c>0$ such that, for all sufficiently large $U$,
+\[
+ \boxed{
+ \|\mathscr L_U\|
+ \ge c\,U^{-2m_h-2}.
+ }
+\tag{O3X.14}\label{eq:o3x-log-lower}
+\]
+\end{proposition}
+
+\begin{proof}
+Scale invariance follows from
+$\log(cA)=(\log c)I+\log A$ and $W^*W=I$.  By
+\eqref{eq:o3x-log-moment}, $\mathscr L_U=0$ iff the positive Gram kernel vanishes,
+which is equivalent to $\mathscr B_U=0$.  For selfadjoint $A_S$, the latter means
+$\Ran W$ reduces $A_S$, so functional calculus gives
+$A_S^{1/2}W=WA_R^{1/2}$ and hence $Q=W$.  Conversely $Q=W$ gives that square-root
+intertwining and, after squaring, $A_SW=WA_R$, hence $\mathscr B_U=0$.
+
+For the quantitative statement put
+\[
+ M_U:=\max(\|A_R\|,\|A_S\|)=\|A_S\|.
+\]
+Choose a unit vector $f_U$ such that
+$\|\mathscr B_Uf_U\|\ge\frac12\|\mathscr B_U\|$.  For $t\ge4M_U$,
+\[
+ \|R_R(t)-t^{-1}I\|\le M_Ut^{-2},
+\]
+so
+\[
+ \|\mathscr B_UR_R(t)f_U\|
+ \ge\frac{\|\mathscr B_U\|}{4t}.
+\]
+Since $A_S\le M_UI$,
+\[
+ R_S(t)\ge(M_U+t)^{-1}I.
+\]
+Therefore
+\[
+ \langle\mathscr E_U(t)f_U,f_U\rangle
+ \ge\frac{\|\mathscr B_U\|^2}{16t^2(M_U+t)}.
+\]
+Integration over $4M_U\le t\le8M_U$ gives a universal $c_*>0$ with
+\[
+ \|\mathscr L_U\|
+ \ge c_*\frac{\|\mathscr B_U\|^2}{M_U^2}.
+\tag{O3X.15}\label{eq:o3x-log-B-lower}
+\]
+Now use~\eqref{eq:o3l-B-lower} and
+Lemma~\ref{lem:o3l-relative-upper} to obtain
+\eqref{eq:o3x-log-lower}.
+\end{proof}
+
+\begin{remark}[R25 firewall: positive resolvent moments remain modulus data]
+\label{rem:o3x-firewall}
+The new positivity removes cancellation in the spectral parameter but does not cross the
+polar-gauge firewall.  In the R14 perfect-modulus model,
+$Q=W$ and therefore
+\[
+ \mathscr B_U=\mathscr E_U(t)=\mathscr L_U=\mathscr I_U=0
+\]
+while the actual polar gauge remains nontrivial.  Conversely the R19 and R20 combined
+models can carry nonzero modulus/Jensen defects while their relative polar defect
+vanishes.  Thus no estimate in this subsection alone implies a bound on
+$U_SW-WU_R$ or on the R22 angle defect $\mathscr G_U$.
+\end{remark}
+
+\begin{openproblem}[R25-F: positive inverse-root defect measure]
+\label{open:o3x-inverse-measure}
+For each fixed smooth odd source vector $f$, determine whether
+\[
+ \boxed{
+ \langle\mathscr I_Uf,f\rangle
+ =\frac1\pi\int_0^\infty t^{-1/2}
+ \|R_S(t)^{1/2}\mathscr B_UR_R(t)f\|^2\,dt
+ \longrightarrow0
+ }
+\]
+or construct a fixed $f$ and a subsequence with positive limsup.  By
+Theorem~\ref{thm:o3x-inverse-criterion}, this is exactly the fixed-vector version of the
+R24 inverse-root compatibility problem and contains no cancellation in $t$.
+
+A resolution of this problem is still a modulus/inverse-root result.  Separate relative
+polar information remains necessary for R22-F and for strong terminal transport.
+\end{openproblem}
