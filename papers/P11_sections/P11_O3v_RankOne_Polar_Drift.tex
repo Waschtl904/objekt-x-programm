@@ -1,0 +1,354 @@
+% P11 paper module: R23 rank-one polar drift under perfect modulus coherence.
+
+\subsection{Rank-one polar drift under perfect modulus coherence}
+\label{subsec:o3v-rankone-polar-drift}
+
+R22 isolates the fixed-vector strong-gauge observable
+\(
+\mathscr G_U=(V_U-W)^*(V_U-W)
+\).
+The next model strengthens the R14 modulus-only firewall in a direction suggested by
+the actual P11 asymptotics: even a single monotonically growing rank-one future channel
+can generate a persistent polar rotation while the modulus comparison is exact.
+
+\begin{proposition}[Canonical one-source rank-one family]
+\label{prop:o3v-rankone-family}
+Let \(\mathcal H\) be finite-dimensional, let \(B>0\), and let
+\(e\in\mathcal H\) be a unit vector.  Put
+\[
+ \beta:=\langle Be,e\rangle,
+ \qquad
+ J:\mathbb C\to\mathcal H,
+ \qquad Jz:=ze,
+\]
+and use the base metrics
+\[
+ B_R:=\beta,
+ \qquad B_S:=B.
+\]
+The normalized base inclusion is
+\[
+ W=B^{1/2}J\,\beta^{-1/2},
+ \qquad
+ w:=We_\mathbb C=\frac{B^{1/2}e}{\sqrt\beta}.
+\]
+For \(t\ge1\), define
+\[
+ A_R(t):=t,
+ \qquad
+ A_S(t):=I+(t-1)ww^*,
+\tag{O3V.1}\label{eq:o3v-relative}
+\]
+and future metrics
+\[
+ C_R(t):=t\beta,
+ \qquad
+ C_S(t):=B^{1/2}A_S(t)B^{1/2}.
+\tag{O3V.2}\label{eq:o3v-future}
+\]
+Then the future pullback is exact,
+\[
+ \boxed{J^*C_S(t)J=C_R(t),}
+\tag{O3V.3}\label{eq:o3v-pullback}
+\]
+and the modulus isometry and Jensen square-root defect satisfy
+\[
+ \boxed{Q_t=W,\qquad \Theta_t=0}
+\tag{O3V.4}\label{eq:o3v-perfect-modulus}
+\]
+for every \(t\ge1\).
+Moreover, if
+\[
+ u:=\frac{Be}{\sqrt\beta},
+\]
+then
+\[
+ \boxed{C_S(t)=B+(t-1)uu^*,}
+\tag{O3V.5}\label{eq:o3v-rankone-growth}
+\]
+so the future target metric is a fixed positive floor plus monotone rank-one growth.
+\end{proposition}
+
+\begin{proof}
+Since \(\|w\|=1\),
+\[
+ A_S(t)w=tw,
+ \qquad
+ A_S(t)^{1/2}w=\sqrt t\,w.
+\]
+Also
+\[
+ B^{1/2}w=\frac{Be}{\sqrt\beta}=u,
+\]
+which gives~\eqref{eq:o3v-rankone-growth}.  Furthermore
+\[
+ \langle u,e\rangle
+ =\frac{\langle Be,e\rangle}{\sqrt\beta}
+ =\sqrt\beta,
+\]
+so
+\[
+ J^*C_S(t)J
+ =\beta+(t-1)|\langle u,e\rangle|^2
+ =t\beta=C_R(t).
+\]
+The relative compression is
+\[
+ W^*A_S(t)W=t=A_R(t),
+\]
+and therefore
+\[
+ Q_t
+ =A_S(t)^{1/2}WA_R(t)^{-1/2}
+ =W.
+\]
+Finally
+\[
+ W^*A_S(t)^{1/2}W=\sqrt t=A_R(t)^{1/2},
+\]
+which is exactly \(\Theta_t=0\).
+\end{proof}
+
+\begin{theorem}[Rank-one polar-drift limit]
+\label{thm:o3v-polar-drift}
+Let \(W_t\) be the actual future normalized inclusion associated with
+Proposition~\ref{prop:o3v-rankone-family}:
+\[
+ W_t
+ :=C_S(t)^{1/2}J\,C_R(t)^{-1/2}.
+\]
+Then
+\[
+ \boxed{
+ W_t1
+ \longrightarrow
+ \frac{Be}{\|Be\|}.
+ }
+\tag{O3V.6}\label{eq:o3v-future-limit}
+\]
+The fixed baseline direction is
+\[
+ W1=\frac{B^{1/2}e}{\sqrt{\langle Be,e\rangle}}.
+\]
+Hence
+\[
+ \boxed{
+ W_t\longrightarrow W
+ \quad\Longleftrightarrow\quad
+ e\text{ is an eigenvector of }B.
+ }
+\tag{O3V.7}\label{eq:o3v-alignment-criterion}
+\]
+\end{theorem}
+
+\begin{proof}
+By~\eqref{eq:o3v-rankone-growth},
+\[
+ \frac1tC_S(t)
+ =\frac1tB+\left(1-\frac1t\right)uu^*
+ \longrightarrow uu^*
+\]
+in operator norm.  Norm continuity of the positive square root gives
+\[
+ \frac1{\sqrt t}C_S(t)^{1/2}
+ =\left(\frac1tC_S(t)\right)^{1/2}
+ \longrightarrow(uu^*)^{1/2}
+ =\frac{uu^*}{\|u\|}.
+\]
+Therefore
+\[
+\begin{aligned}
+ W_t1
+ &=\frac1{\sqrt\beta}
+   \left(\frac1tC_S(t)\right)^{1/2}e\\
+ &\longrightarrow
+ \frac1{\sqrt\beta}\frac{uu^*e}{\|u\|}
+ =\frac{u}{\|u\|}
+ =\frac{Be}{\|Be\|},
+\end{aligned}
+\]
+proving~\eqref{eq:o3v-future-limit}.
+
+If \(e\) is an eigenvector of \(B\), the two normalized directions coincide.
+Conversely, equality of the two unit vectors implies
+\[
+ Be=cB^{1/2}e
+\]
+for some \(c>0\).  Multiplying by \(B^{-1/2}\) gives
+\[
+ B^{1/2}e=ce,
+\]
+so \(e\) is an eigenvector of \(B^{1/2}\), hence of \(B\).
+\end{proof}
+
+\begin{corollary}[Explicit limiting R22 angle defect]
+\label{cor:o3v-angle-defect}
+In the model above the source polar factor is the identity and
+\(Q_t=W\), hence the actual future transport equals the polar-gauge transport
+\(V_t\).  Consequently the R22 angle defect is scalar and
+\[
+ \boxed{
+ \lim_{t\to\infty}\mathscr G_t
+ =\delta_B(e)^2 I_{\mathbb C},
+ }
+\tag{O3V.8}\label{eq:o3v-G-limit}
+\]
+where
+\[
+ \boxed{
+ \delta_B(e)^2
+ =2-2\frac{\langle e,B^{3/2}e\rangle}
+ {\sqrt{\langle e,B^2e\rangle\langle e,Be\rangle}}.
+ }
+\tag{O3V.9}\label{eq:o3v-half-full-angle}
+\]
+Moreover
+\[
+ \delta_B(e)=0
+ \quad\Longleftrightarrow\quad
+ e\text{ is an eigenvector of }B.
+\]
+\end{corollary}
+
+\begin{proof}
+The source product is
+\[
+ C_R(t)^{1/2}B_R^{-1/2}=\sqrt t>0,
+\]
+so \(U_R(t)=1\).  Equation~\eqref{eq:o3v-perfect-modulus} and the exact polar-gauge
+factorization give
+\[
+ W_t=U_S(t)W=V_t.
+\]
+Thus
+\[
+ \mathscr G_t
+ =(W_t-W)^*(W_t-W)
+ =\|W_t1-W1\|^2I_{\mathbb C}.
+\]
+Insert Theorem~\ref{thm:o3v-polar-drift}.  Since
+\[
+ \|Be\|^2=\langle e,B^2e\rangle,
+ \qquad
+ \|B^{1/2}e\|^2=\langle e,Be\rangle,
+\]
+and
+\[
+ \langle Be,B^{1/2}e\rangle
+ =\langle e,B^{3/2}e\rangle,
+\]
+one obtains~\eqref{eq:o3v-half-full-angle}.  The zero criterion is
+Theorem~\ref{thm:o3v-polar-drift}.
+\end{proof}
+
+\begin{corollary}[Continuous strengthening of the R14 countermodel]
+\label{cor:o3v-R14-strengthening}
+Take
+\[
+ P=
+ \begin{pmatrix}
+ \sqrt3/2&1/2\\
+ 1/2&1
+ \end{pmatrix},
+ \qquad
+ B=P^2,
+ \qquad
+ e=e_1.
+\]
+Then \(\langle Be,e\rangle=1\) and
+\[
+ W1=Pe_1
+ =\binom{\sqrt3/2}{1/2}.
+\]
+For the continuous family
+\[
+ A_t=I+(t-1)(W1)(W1)^*,
+ \qquad t\to\infty,
+\]
+one has \(Q_t=W\) and \(\Theta_t=0\) identically, but
+\[
+ \boxed{
+ W_t1\longrightarrow
+ \frac{
+ \binom{1}{(2+\sqrt3)/4}
+ }{
+ \sqrt{1+((2+\sqrt3)/4)^2}
+ }
+ \ne W1.
+ }
+\tag{O3V.10}\label{eq:o3v-R14-limit}
+\]
+In particular
+\[
+ \boxed{
+ \lim_{t\to\infty}\mathscr G_t
+ =\left(
+ 2-\frac{2+5\sqrt3}{\sqrt{23+4\sqrt3}}
+ \right)I_{\mathbb C}
+ }
+\tag{O3V.11}\label{eq:o3v-R14-angle}
+\]
+with
+\[
+ 2-\frac{2+5\sqrt3}{\sqrt{23+4\sqrt3}}
+ \approx0.0513796574>0.
+\]
+Thus no alternating sequence is needed: a monotone rank-one future blow-up with perfect
+modulus coherence can converge to the wrong polar-gauge limit.
+\end{corollary}
+
+\begin{proof}
+A direct multiplication gives
+\[
+ P^2e_1
+ =\binom{1}{(2+\sqrt3)/4}.
+\]
+Theorem~\ref{thm:o3v-polar-drift} gives~\eqref{eq:o3v-R14-limit}; substituting the two
+unit directions into Corollary~\ref{cor:o3v-angle-defect} gives
+\eqref{eq:o3v-R14-angle}.
+\end{proof}
+
+\begin{remark}[R23 information firewall]
+\label{rem:o3v-firewall}
+Corollary~\ref{cor:o3v-R14-strengthening} is stronger than the earlier R14 alternating
+countermodel in one specific sense: the future metric now has a fixed positive floor and
+a single monotone rank-one channel, while the modulus comparison remains exact at every
+parameter value.  Nevertheless the R22 angle defect approaches a positive constant.
+Thus rank-one dominance is not by itself a polar-synchronization mechanism.
+
+The obstruction is the mismatch between the baseline half-power direction
+\[
+ B^{1/2}e
+\]
+and the rank-one-dominant future full-power direction
+\[
+ Be.
+\]
+This model is not a counterexample to the concrete P11 metric family.  In P11 the
+existing O3p/O3q results are fixed-pair or finite-block statements, and positive square
+root does not commute with compression.  Therefore one must not insert a finite jet
+Riesz vector into~\eqref{eq:o3v-half-full-angle} and call the result the full P11 gauge.
+\end{remark}
+
+\begin{openproblem}[R23-F: operator-level dominant-channel polar angle]
+\label{open:o3v-dominant-angle}
+Determine whether the concrete P11 future metric possesses a gauge-relevant
+operator-level or reducing-block asymptotic of the schematic form
+\[
+ G_{X,U}=B_X+\tau_U r_Ur_U^*+E_U,
+ \qquad \tau_U\to\infty,
+\]
+with remainder control strong enough to pass through the positive square root.  If so,
+identify the resulting analogue of the half-power/full-power angle
+\[
+ \frac{B_Xr_U}{\|B_Xr_U\|}
+ \quad\text{versus}\quad
+ \frac{B_X^{1/2}r_U}{\|B_X^{1/2}r_U\|}
+\]
+and determine whether the corresponding relative \(R/S\) polar orientations
+intertwine.
+
+The present fixed-pair jet asymptotics do not supply this operator-level transfer, so no
+claim about the concrete P11 limit of \(\mathscr G_U\), strong terminal transport, or a
+global Object~X is made here.
+\end{openproblem}
