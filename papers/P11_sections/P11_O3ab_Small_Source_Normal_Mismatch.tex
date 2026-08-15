@@ -1,0 +1,176 @@
+% P11 paper module: R29 small-source constraint-normal mismatch.
+
+\subsection{Small-source constraint-normal mismatch}
+\label{subsec:o3ab-small-source-normal}
+
+The fixed R28 normal obstruction can be decided on a nontrivial concrete region of source triples.  Keep $0<R<S<T_0$ and the notation of Subsection~\ref{subsec:o3aa-fixed-gamma-crossblock}.  Thus $r_X$ is the Riesz vector of the transported first boundary functional in the $T_0$-whitened source Hilbert space, and
+\[
+ s_{R,S,T_0}:=(I-WW^*)r_S.
+\]
+
+\begin{proposition}[Dual norm of the first-boundary normal]
+\label{prop:o3ab-dual-normal}
+For $X\in\{R,S\}$,
+\[
+ \boxed{
+ \|r_X\|
+ =\sup_{0\ne f\in\KXR{X}^-}
+ \frac{|\beta_X^{(0)}(f)|}
+ {q_{T_0}^X(J_{X,T_0}f)^{1/2}}.
+ }
+\tag{O3AB.1}\label{eq:o3ab-dual-normal}
+\]
+Moreover
+\[
+ \boxed{
+ \|r_R\|^2\le\frac23R^3.
+ }
+\tag{O3AB.2}\label{eq:o3ab-small-R-bound}
+\]
+\end{proposition}
+
+\begin{proof}
+If $x=B_X^{1/2}f$, then
+\[
+ \|x\|^2=\langle B_Xf,f\rangle
+ =q_{T_0}^X(J_{X,T_0}f),
+\]
+and the defining Riesz identity for $r_X$ gives
+\[
+ \langle x,r_X\rangle=\beta_X^{(0)}(f).
+\]
+Taking the dual norm proves~\eqref{eq:o3ab-dual-normal}.
+
+Now
+\[
+ \beta_R^{(0)}(f)
+ =\int_{-R}^R\phi_R(u)f(u)\,du,
+ \qquad
+ \phi_R(u):=\operatorname{sgn}(u)I_0(|u|),
+\]
+with
+\[
+ I_0(r)=2(1-e^{-r/2})\le r.
+\]
+By positivity of the Schur term, Gamma compatibility, and
+$C_{\Gamma,R}\ge I$,
+\[
+ q_{T_0}^X(J_{R,T_0}f)
+ \ge\mathfrak c_{\Gamma,R}[f]
+ \ge\|f\|_2^2.
+\]
+Hence
+\[
+ \|r_R\|\le\|\phi_R\|_2
+ \le\left(2\int_0^Rr^2dr\right)^{1/2},
+\]
+which is~\eqref{eq:o3ab-small-R-bound}.
+\end{proof}
+
+For reference, the elementary exact kernel norm is
+\[
+ \|\phi_R\|_2^2
+ =8\left[R-4(1-e^{-R/2})+(1-e^{-R})\right]
+ =\frac23R^3+O(R^4).
+\tag{O3AB.3}\label{eq:o3ab-exact-kernel-norm}
+\]
+
+\begin{theorem}[Concrete small-source normal mismatch]
+\label{thm:o3ab-small-source-mismatch}
+Fix $0<S<T_0$.  Then $\|r_S\|>0$, and for every
+\[
+ 0<R<\min\left\{S,
+ \left(\frac32\|r_S\|^2\right)^{1/3}\right\}
+\]
+one has
+\[
+ \boxed{s_{R,S,T_0}\ne0.}
+\tag{O3AB.4}\label{eq:o3ab-s-nonzero}
+\]
+More quantitatively,
+\[
+ \boxed{
+ \|s_{R,S,T_0}\|^2
+ \ge\|r_S\|^2-\frac23R^3.
+ }
+\tag{O3AB.5}\label{eq:o3ab-s-lower}
+\]
+\end{theorem}
+
+\begin{proof}
+The first boundary functional is nonzero on the odd source space: choose a smooth odd $h$ with $h\ge0$ and $h\not\equiv0$ on the positive half-interval.  Then
+\[
+ \beta_S^{(0)}(h)
+ =2\int_0^SI_0(r)h(r)dr>0,
+\]
+so its Riesz vector $r_S$ is nonzero.
+
+By~\eqref{eq:o3aa-normal-norm},
+\[
+ \|s_{R,S,T_0}\|^2
+ =\|r_S\|^2-\|r_R\|^2.
+\]
+Use~\eqref{eq:o3ab-small-R-bound} to obtain
+\eqref{eq:o3ab-s-lower}.  Positivity of the right-hand side gives
+\eqref{eq:o3ab-s-nonzero}.
+\end{proof}
+
+\begin{corollary}[Persistent full inverse-root defect]
+\label{cor:o3ab-inverse-defect}
+In the region of Theorem~\ref{thm:o3ab-small-source-mismatch},
+\[
+ \boxed{
+ \|D_\infty^-(R,S,T_0)\|
+ \ge
+ \sqrt{1-\frac{2R^3}{3\|r_S\|^2}}
+ >0.
+ }
+\tag{O3AB.6}\label{eq:o3ab-D-lower}
+\]
+For fixed $S<T_0$,
+\[
+ \boxed{
+ \liminf_{R\downarrow0}
+ \|D_\infty^-(R,S,T_0)\|\ge1.
+ }
+\tag{O3AB.7}\label{eq:o3ab-D-small-R}
+\]
+\end{corollary}
+
+\begin{proof}
+Combine Theorem~\ref{thm:o3ab-small-source-mismatch} with the R28 estimate
+\eqref{eq:o3aa-normal-lower}.  Since
+$\|r_R\|\to0$ as $R\downarrow0$, the orthogonal identity
+$\|s\|^2=\|r_S\|^2-\|r_R\|^2$ gives
+$\|s\|/\|r_S\|\to1$.
+\end{proof}
+
+\begin{remark}[Computable sufficient threshold]
+\label{rem:o3ab-computable-threshold}
+For any fixed smooth odd $h\in C_c^\infty((-S,S))$ with
+$\beta_S^{(0)}(h)\ne0$, Proposition~\ref{prop:o3ab-dual-normal} gives
+\[
+ c_h:=\frac{|\beta_S^{(0)}(h)|}
+ {q_{T_0}^X(J_{S,T_0}h)^{1/2}}
+ \le\|r_S\|.
+\]
+Hence the entirely fixed-window condition
+\[
+ R<\min\left\{S,\left(\frac32c_h^2\right)^{1/3}\right\}
+\]
+already implies $s_{R,S,T_0}\ne0$.
+\end{remark}
+
+\begin{remark}[R29 firewall]
+\label{rem:o3ab-firewall}
+This is a concrete P11 no-go for full inverse-root intertwining on a whole small-source region; it is not an abstract countermodel.  Nevertheless it remains on the modulus/inverse-functional-calculus layer.  By the R14 polar-gauge firewall, nonvanishing of $D_\infty^-$ does not by itself imply nonconvergence of the actual normalized future transport, nonvanishing of the R22 angle defect, or failure of a global Object~X construction.
+\end{remark}
+
+\begin{openproblem}[R29-F: full fixed-normal classification]
+\label{open:o3ab-normal-classification}
+Determine whether
+\[
+ s_{R,S,T_0}\ne0
+\]
+for every strict inclusion $0<R<S<T_0$, or characterize exactly those fixed triples for which the baseline Riesz normal of the first boundary functional lies entirely in the normalized old-source range.  The tangential rank-one test of R28 remains a separate question.
+\end{openproblem}
