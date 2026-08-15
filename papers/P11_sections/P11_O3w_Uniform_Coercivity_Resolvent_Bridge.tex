@@ -1,0 +1,261 @@
+% P11 paper module: R24 uniform coercivity and resolvent bridge.
+
+\subsection{Uniform coercivity and the inverse-root resolvent bridge}
+\label{subsec:o3w-resolvent-bridge}
+
+The R22 metric representation contains the nested inverse square roots
+$A_R^{-1/2}$ and $A_S^{-1/2}$.  For the concrete P11 relative metrics their norms are,
+however, uniformly controlled at fixed base terminal.  This separates the lower-spectral
+question from the remaining orientation problem and gives an exact resolvent formula for
+the latter.
+
+\begin{proposition}[Uniform coercivity of the P11 relative metrics]
+\label{prop:o3w-coercivity}
+Fix $0<R<S<T_0$ and let $X\in\{R,S\}$.  For every $U>T_0$, put
+\[
+ A_X:=A_{T_0,U}^{X,-}.
+\]
+Then
+\[
+ \boxed{
+ a_0 I\le A_X,
+ \qquad
+ a_0:=\frac1{1+\|H_{T_0}\|^2}>0.
+ }
+\tag{O3W.1}\label{eq:o3w-lower}
+\]
+Consequently
+\[
+ \boxed{
+ \|A_X^{-1/2}\|
+ \le a_0^{-1/2}
+ =\sqrt{1+\|H_{T_0}\|^2}
+ }
+\tag{O3W.2}\label{eq:o3w-invroot-bound}
+\]
+uniformly in $U$.
+Together with Lemma~\ref{lem:o3l-relative-upper},
+\[
+ a_0I\le A_X\le(1+\|H_U\|^2)I
+ \ll\frac{e^U}{U}I.
+\tag{O3W.3}\label{eq:o3w-two-sided}
+\]
+Thus the growth of the relative condition number comes from the upper spectral edge,
+not from collapse of the lower edge.
+\end{proposition}
+
+\begin{proof}
+For every nonzero source vector $z$, the Rayleigh quotient of $A_X$ is
+\[
+ \frac{q_U^X(E_{X,U}z)}{q_{T_0}^X(E_{X,T_0}z)}.
+\]
+Exact Gamma compatibility and positivity of the Schur term give
+\[
+ q_U^X(E_{X,U}z)\ge\mathfrak c_{\Gamma,X}[z].
+\]
+At the fixed terminal $T_0$, the graph-norm equivalence
+\eqref{eq:graph-norm-equiv} gives
+\[
+ q_{T_0}^X(E_{X,T_0}z)
+ \le(1+\|H_{T_0}\|^2)\mathfrak c_{\Gamma,X}[z].
+\]
+Their quotient is therefore at least $a_0$, proving~\eqref{eq:o3w-lower}.
+Equation~\eqref{eq:o3w-invroot-bound} follows by functional calculus, and the upper
+bound in~\eqref{eq:o3w-two-sided} is Lemma~\ref{lem:o3l-relative-upper}.
+\end{proof}
+
+\begin{remark}[Concrete inverse-root firewall]
+\label{rem:o3w-concrete-firewall}
+Proposition~\ref{prop:o3n-rankone-insufficiency} remains a valid abstract information
+firewall for entrywise rank-one leading data, but the concrete P11 family has the extra
+constraint~\eqref{eq:o3w-lower}.  Hence one must not interpret the remaining P11 gate as
+possible blow-up of $\|A_X^{-1/2}\|$ caused by
+$\lambda_{\min}(A_X)\downarrow0$.  The inverse-root norms are uniformly bounded.  What
+remains unresolved is their orientation across the nested $R/S$ levels.
+\end{remark}
+
+Keep
+\[
+ A_R:=A_{T_0,U}^{R,-},
+ \qquad
+ A_S:=A_{T_0,U}^{S,-},
+ \qquad
+ W:=W_{R,S,-}^{[T_0]},
+ \qquad
+ P:=WW^*.
+\]
+The exact relative compression identity gives
+\[
+ A_R=W^*A_SW.
+\]
+Therefore
+\[
+ \boxed{
+ \mathscr B_U
+ :=(I-P)A_SW
+ =A_SW-WA_R.
+ }
+\tag{O3W.4}\label{eq:o3w-B-intertwining}
+\]
+This is the same second-moment off-block used in O3l and O3r.
+
+\begin{proposition}[Inverse-square-root resolvent bridge]
+\label{prop:o3w-inverse-resolvent}
+One has the exact operator-norm Bochner integral
+\[
+ \boxed{
+ \begin{aligned}
+ A_S^{-1/2}W-WA_R^{-1/2}
+ ={}&-\frac1\pi\int_0^\infty t^{-1/2}
+ (A_S+tI)^{-1}\mathscr B_U(A_R+tI)^{-1}\,dt.
+ \end{aligned}
+ }
+\tag{O3W.5}\label{eq:o3w-inverse-resolvent}
+\]
+In particular
+\[
+ \boxed{
+ \|A_S^{-1/2}W-WA_R^{-1/2}\|
+ \le\frac1{2a_0^{3/2}}\|\mathscr B_U\|.
+ }
+\tag{O3W.6}\label{eq:o3w-inverse-bound}
+\]
+\end{proposition}
+
+\begin{proof}
+For a positive invertible operator $A$,
+\[
+ A^{-1/2}
+ =\frac1\pi\int_0^\infty t^{-1/2}(A+tI)^{-1}\,dt.
+\]
+The resolvent quasi-commutator satisfies
+\[
+\begin{aligned}
+ &(A_S+tI)^{-1}W-W(A_R+tI)^{-1}\\
+ &\qquad
+ =(A_S+tI)^{-1}
+ \bigl(W(A_R+tI)-(A_S+tI)W\bigr)
+ (A_R+tI)^{-1}\\
+ &\qquad
+ =-(A_S+tI)^{-1}\mathscr B_U(A_R+tI)^{-1},
+\end{aligned}
+\]
+which proves~\eqref{eq:o3w-inverse-resolvent}.  By
+Proposition~\ref{prop:o3w-coercivity},
+\[
+ \|(A_X+tI)^{-1}\|\le(a_0+t)^{-1}.
+\]
+Hence the integral converges in norm, and
+\[
+ \frac1\pi\int_0^\infty
+ \frac{t^{-1/2}}{(a_0+t)^2}\,dt
+ =\frac1{2a_0^{3/2}},
+\]
+which gives~\eqref{eq:o3w-inverse-bound}.
+\end{proof}
+
+\begin{proposition}[Square-root resolvent bridge]
+\label{prop:o3w-square-resolvent}
+The corresponding positive-square-root intertwining defect is
+\[
+ \boxed{
+ \begin{aligned}
+ A_S^{1/2}W-WA_R^{1/2}
+ ={}&\frac1\pi\int_0^\infty t^{1/2}
+ (A_S+tI)^{-1}\mathscr B_U(A_R+tI)^{-1}\,dt.
+ \end{aligned}
+ }
+\tag{O3W.7}\label{eq:o3w-square-resolvent}
+\]
+Consequently
+\[
+ \boxed{
+ \|A_S^{1/2}W-WA_R^{1/2}\|
+ \le\frac1{2\sqrt{a_0}}\|\mathscr B_U\|.
+ }
+\tag{O3W.8}\label{eq:o3w-square-bound}
+\]
+\end{proposition}
+
+\begin{proof}
+Use
+\[
+ A^{1/2}
+ =\frac1\pi\int_0^\infty
+ t^{-1/2}A(A+tI)^{-1}\,dt
+\]
+and
+\[
+ A(A+tI)^{-1}=I-t(A+tI)^{-1}.
+\]
+Thus
+\[
+\begin{aligned}
+ &A_S(A_S+tI)^{-1}W
+ -WA_R(A_R+tI)^{-1}\\
+ &\qquad
+ =-t\bigl((A_S+tI)^{-1}W-W(A_R+tI)^{-1}\bigr)\\
+ &\qquad
+ =t(A_S+tI)^{-1}\mathscr B_U(A_R+tI)^{-1}.
+\end{aligned}
+\]
+Integration gives~\eqref{eq:o3w-square-resolvent}.  Finally
+\[
+ \frac1\pi\int_0^\infty
+ \frac{t^{1/2}}{(a_0+t)^2}\,dt
+ =\frac1{2\sqrt{a_0}},
+\]
+proving~\eqref{eq:o3w-square-bound}.
+\end{proof}
+
+\begin{corollary}[Common resolvent source of the positive and inverse-root off-blocks]
+\label{cor:o3w-common-source}
+Applying $I-P$ to~\eqref{eq:o3w-square-resolvent} gives
+\[
+ \boxed{
+ \mathscr C_U
+ =(I-P)A_S^{1/2}W
+ =\frac1\pi\int_0^\infty t^{1/2}
+ (I-P)(A_S+tI)^{-1}\mathscr B_U(A_R+tI)^{-1}\,dt.
+ }
+\tag{O3W.9}\label{eq:o3w-C-resolvent}
+\]
+Likewise
+\[
+ \boxed{
+ (I-P)A_S^{-1/2}W
+ =-\frac1\pi\int_0^\infty t^{-1/2}
+ (I-P)(A_S+tI)^{-1}\mathscr B_U(A_R+tI)^{-1}\,dt.
+ }
+\tag{O3W.10}\label{eq:o3w-inverse-offblock}
+\]
+Hence O3r's square-root witness and the inverse-root orientation entering O3t/O3u are
+different spectral weightings of the same second-moment off-block.
+\end{corollary}
+
+\begin{remark}[R24 reduction]
+\label{rem:o3w-reduction}
+The raw norm lower bound for $\mathscr B_U$ from O3l does not decide the inverse-root
+integral: the two resolvents may strongly suppress precisely the large directions.  But
+R24 replaces the vague phrase ``inverse-square-root orientation'' by the explicit
+resolvent-smoothed quantity
+\[
+ (A_S+tI)^{-1}\mathscr B_U(A_R+tI)^{-1}.
+\]
+This is a concrete analytic object built from operators already present in P11; no new
+auxiliary gauge is introduced.
+\end{remark}
+
+\begin{openproblem}[R24-F: fixed-vector resolvent-weighted off-block asymptotics]
+\label{open:o3w-resolvent-offblock}
+For fixed smooth odd source vectors $f$, determine the asymptotics of
+\[
+ \int_0^\infty t^{-1/2}
+ (A_S+tI)^{-1}\mathscr B_U(A_R+tI)^{-1}f\,dt
+\]
+and of the corresponding $t^{1/2}$-weighted integral as $U\to\infty$.
+A vanishing result on a fixed dense core would give a genuine nested inverse-root
+compatibility statement; a fixed-vector positive limsup would give an inverse-root
+orientation obstruction.  The existing raw second-moment witness alone decides neither
+alternative.
+\end{openproblem}
