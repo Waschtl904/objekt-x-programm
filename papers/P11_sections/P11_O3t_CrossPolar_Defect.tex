@@ -1,0 +1,312 @@
+% P11 paper module: R21 exact cross-polar defect and relative gauge reparametrization.
+
+\subsection{Cross-polar defect and exact relative gauge reparametrization}
+\label{subsec:o3t-crosspolar}
+
+Keep the odd-sector notation at fixed $0<R<S<T_0<U$ from
+Subsections~\ref{subsec:o3n-gauge-intertwining},
+\ref{subsec:o3r-sqrt-offblock}, and~\ref{subsec:o3s-relative-polar}.  Thus
+\[
+ W:=W_{R,S,-}^{[T_0]},
+ \qquad
+ A_R:=A_{T_0,U}^{R,-},
+ \qquad
+ A_S:=A_{T_0,U}^{S,-},
+\]
+\[
+ X_R=U_RA_R^{1/2},
+ \qquad
+ X_S=U_SA_S^{1/2},
+\]
+and the genuine relative polar defect is
+\[
+ \mathfrak P_U:=U_SW-WU_R.
+\]
+The purpose of this subsection is to express this defect through a single cross-product
+of the two metric polar products.  No separate estimate of the individual commutators
+$[G_{R,T_0},G_{R,U}]$ and $[G_{S,T_0},G_{S,U}]$ is used.
+
+\begin{proposition}[Exact cross-polar identity]
+\label{prop:o3t-crosspolar}
+Define
+\[
+ \boxed{
+ Z_U
+ :=A_S^{-1/2}X_S^*WX_RA_R^{-1/2}.
+ }
+\]
+Then
+\[
+ \boxed{
+ Z_U=U_S^*WU_R.
+ }
+\tag{O3T.1}\label{eq:o3t-Z}
+\]
+In particular $Z_U$ is an isometry from the $R$-source space into the $S$-source
+space.
+\end{proposition}
+
+\begin{proof}
+Since $X_S^*=A_S^{1/2}U_S^*$ and $X_R=U_RA_R^{1/2}$,
+\[
+\begin{aligned}
+ Z_U
+ &=A_S^{-1/2}(A_S^{1/2}U_S^*)W(U_RA_R^{1/2})A_R^{-1/2}\\
+ &=U_S^*WU_R.
+\end{aligned}
+\]
+Both polar factors are unitary and $W$ is an isometry, hence so is $Z_U$.
+\end{proof}
+
+\begin{proposition}[Exact isometric gauge-defect reparametrization]
+\label{prop:o3t-gauge-defect}
+One has the exact operator identity
+\[
+ \boxed{
+ Z_U-W=-U_S^*\mathfrak P_U.
+ }
+\tag{O3T.2}\label{eq:o3t-gauge-defect}
+\]
+Consequently, for every source vector $f$,
+\[
+ \boxed{
+ \|(Z_U-W)f\|=\|\mathfrak P_Uf\|,
+ }
+\tag{O3T.3}\label{eq:o3t-vector-norm}
+\]
+and therefore
+\[
+ \boxed{
+ Z_U-W\xrightarrow[s]{}0
+ \quad\Longleftrightarrow\quad
+ \mathfrak P_U\xrightarrow[s]{}0.
+ }
+\tag{O3T.4}\label{eq:o3t-strong-equivalence}
+\]
+In operator norm,
+\[
+ \boxed{
+ \|Z_U-W\|=\|\mathfrak P_U\|,
+ }
+\tag{O3T.5}\label{eq:o3t-norm-equality}
+\]
+so norm convergence is equivalent as well.
+\end{proposition}
+
+\begin{proof}
+Equation~\eqref{eq:o3t-Z} gives
+\[
+ Z_U-W
+ =U_S^*WU_R-U_S^*U_SW
+ =-U_S^*(U_SW-WU_R)
+ =-U_S^*\mathfrak P_U.
+\]
+Unitary invariance of the vector and operator norms yields
+\eqref{eq:o3t-vector-norm} and~\eqref{eq:o3t-norm-equality}.  The pointwise norm
+identity gives the strong-convergence equivalence~\eqref{eq:o3t-strong-equivalence}.
+\end{proof}
+
+The preceding proposition is an exact reparametrization rather than an estimate: no
+information about the relative polar defect is lost in passing from $\mathfrak P_U$ to
+$Z_U-W$.  The same information can be written before the inverse-square-root
+normalization as follows.
+
+\begin{corollary}[Unnormalised relative cross-polar defect]
+\label{cor:o3t-Crel}
+Put
+\[
+ \boxed{
+ \mathcal C_U^{\rm rel}
+ :=X_S^*WX_R-A_S^{1/2}WA_R^{1/2}.
+ }
+\tag{O3T.6}\label{eq:o3t-Crel}
+\]
+Then
+\[
+ \boxed{
+ \mathcal C_U^{\rm rel}
+ =A_S^{1/2}(Z_U-W)A_R^{1/2}.
+ }
+\tag{O3T.7}\label{eq:o3t-Crel-factor}
+\]
+Hence
+\[
+ \boxed{
+ \|\mathfrak P_U\|
+ \ge
+ \frac{\|\mathcal C_U^{\rm rel}\|}
+ {\sqrt{\|A_S\|}\sqrt{\|A_R\|}},
+ }
+\tag{O3T.8}\label{eq:o3t-Crel-lower}
+\]
+while
+\[
+ \boxed{
+ \|\mathfrak P_U\|
+ \le
+ \|A_S^{-1/2}\|\,
+ \|\mathcal C_U^{\rm rel}\|\,
+ \|A_R^{-1/2}\|.
+ }
+\tag{O3T.9}\label{eq:o3t-Crel-upper}
+\]
+For the concrete P11 family, Lemma~\ref{lem:o3l-relative-upper} gives
+$\|A_R\|,\|A_S\|\ll e^U/U$, and therefore
+\[
+ \boxed{
+ \|\mathfrak P_U\|
+ \gtrsim
+ \frac{U}{e^U}\,\|\mathcal C_U^{\rm rel}\|.
+ }
+\tag{O3T.10}\label{eq:o3t-P11-weighted-lower}
+\]
+The constants here may depend on the fixed levels $R,S,T_0$.
+\end{corollary}
+
+\begin{proof}
+Using~\eqref{eq:o3t-Z},
+\[
+ X_S^*WX_R
+ =A_S^{1/2}Z_UA_R^{1/2},
+\]
+which proves~\eqref{eq:o3t-Crel-factor}.  The first norm inequality follows from
+\[
+ \|\mathcal C_U^{\rm rel}\|
+ \le
+ \sqrt{\|A_S\|}\,\|Z_U-W\|\,\sqrt{\|A_R\|}
+\]
+and~\eqref{eq:o3t-norm-equality}.  Conversely,
+\[
+ Z_U-W
+ =A_S^{-1/2}\mathcal C_U^{\rm rel}A_R^{-1/2},
+\]
+which gives~\eqref{eq:o3t-Crel-upper}.  Finally insert the relative-metric upper bounds
+from Lemma~\ref{lem:o3l-relative-upper} into~\eqref{eq:o3t-Crel-lower}.
+\end{proof}
+
+There is also a source-space compression which is unitarily conjugate to the R15 gauge
+compression.
+
+\begin{corollary}[Cross-polar compression of the gauge]
+\label{cor:o3t-Omega}
+Define
+\[
+ \boxed{
+ \Omega_U:=Z_U^*W
+ =A_R^{-1/2}X_R^*W^*X_SA_S^{-1/2}W.
+ }
+\]
+Then
+\[
+ \boxed{
+ \Omega_U=U_R^*\Gamma_UU_R,
+ }
+\tag{O3T.11}\label{eq:o3t-Omega}
+\]
+where $\Gamma_U=W^*U_SWU_R^*$.  Consequently
+\[
+ \boxed{
+ \|\Omega_U-I\|=\|\Gamma_U-I\|.
+ }
+\tag{O3T.12}\label{eq:o3t-Omega-norm}
+\]
+\end{corollary}
+
+\begin{proof}
+By~\eqref{eq:o3t-Z},
+\[
+ \Omega_U
+ =U_R^*W^*U_SW
+ =U_R^*(W^*U_SWU_R^*)U_R
+ =U_R^*\Gamma_UU_R.
+\]
+The operator-norm identity follows by unitary invariance.
+\end{proof}
+
+\begin{remark}[No automatic strong-convergence transfer through $\Omega_U$]
+\label{rem:o3t-Omega-strong-firewall}
+Equation~\eqref{eq:o3t-Omega} is an exact unitary conjugacy at each fixed $U$, and
+\eqref{eq:o3t-Omega-norm} is therefore exact.  Since the conjugating unitary $U_R$
+depends on $U$, one must not infer from this identity alone an equivalence between
+strong convergence of $\Omega_U$ and strong convergence of $\Gamma_U$.  The strong
+statement that is exact without an additional hypothesis is instead
+\eqref{eq:o3t-strong-equivalence} for $Z_U-W$ and $\mathfrak P_U$.
+\end{remark}
+
+\begin{remark}[R21-D scaling firewall]
+\label{rem:o3t-scale-firewall}
+The raw size of $\mathcal C_U^{\rm rel}$ is not itself a scale-invariant gauge measure.
+Indeed, at fixed base metrics, simultaneously rescale the two future metrics by the
+same scalar $t>0$.  Then
+\[
+ A_R,A_S\mapsto tA_R,tA_S,
+ \qquad
+ X_R,X_S\mapsto\sqrt t\,X_R,\sqrt t\,X_S,
+\]
+while the polar factors $U_R,U_S$, hence $Z_U-W$ and $\mathfrak P_U$, are unchanged.
+In contrast,
+\[
+ \mathcal C_U^{\rm rel}\mapsto t\mathcal C_U^{\rm rel}.
+\]
+Thus a large unnormalised cross-polar norm cannot be promoted to a large gauge defect
+without the metric normalization in~\eqref{eq:o3t-Crel-lower}--\eqref{eq:o3t-Crel-upper}.
+\end{remark}
+
+\begin{remark}[R21 countermodel firewall]
+\label{rem:o3t-countermodels}
+The cross-polar defect passes the canonical inclusion countermodels that blocked the
+previous routes:
+\begin{center}
+\begin{tabular}{@{}p{0.23\textwidth}p{0.46\textwidth}p{0.21\textwidth}@{}}
+\toprule
+Model & Existing phenomenon & Cross-polar verdict \\
+\midrule
+R14, Proposition~\ref{prop:o3m-countermodel}
+& $Q=W$ and $\Theta=0$, but the actual polar gauge is nontrivial
+& $Z_U-W\ne0$ \\
+R19, Proposition~\ref{prop:o3r-polar-countermodel}
+& nonzero/arbitrarily large modulus and square-root leakage, but $U_S=I$, $U_R=I$
+& $Z_U-W=0$ \\
+R20 matched, Proposition~\ref{prop:o3s-matched-countermodel}
+& nontrivial individual polar factors and arbitrarily large raw commutators, but $U_SW=WU_R$
+& $Z_U-W=0$ \\
+R20 combined, Proposition~\ref{prop:o3s-combined-countermodel}
+& modulus leakage plus large individual commutators, still $U_SW=WU_R$
+& $Z_U-W=0$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+These conclusions are not separate model calculations: they follow immediately from
+the exact identity~\eqref{eq:o3t-gauge-defect}.  Thus $Z_U-W$ rejects precisely the
+matched polar configurations that should vanish and detects the R14 gauge-active
+configuration.
+\end{remark}
+
+\begin{openproblem}[R21-F: concrete P11 cross-polar asymptotics]
+\label{open:o3t-crosspolar}
+Determine the asymptotic behavior of
+\[
+ Z_U-W
+ =A_S^{-1/2}X_S^*WX_RA_R^{-1/2}-W
+\]
+for the concrete P11 metric family.  For the strong terminal problem the relevant task
+is fixed-vector control of $(Z_U-W)f$; an operator-norm lower bound alone would not rule
+out strong convergence.  Conversely, a norm upper bound tending to zero would imply
+strong gauge compatibility.  Equivalently one may estimate
+$\mathcal C_U^{\rm rel}$ together with sufficiently sharp control of the positive and
+inverse square roots of $A_R,A_S$.
+
+The present fixed-pair rank-one asymptotics do not provide this control:
+Proposition~\ref{prop:o3n-rankone-insufficiency} shows that the inverse-square-root scale
+is not determined by the existing leading Gram data, and Remark~\ref{rem:o3p-firewall}
+identifies the remaining problem as operator-valued orientation of positive/inverse
+square roots under $R\to S$.  Hence no conclusion about
+\[
+ \Gamma_U\to I,
+ \qquad
+ K_{R,S}^{T_0,U}\to I,
+ \qquad
+ W_{R,S,-}^{[U]}\text{ being strong Cauchy},
+\]
+or the existence of a global Object~X is drawn here.
+\end{openproblem}
