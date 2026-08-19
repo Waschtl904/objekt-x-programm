@@ -1,6 +1,6 @@
 # P11 End-to-End Referee R36-A — Localized hub range: density versus annihilator kernel
 
-Date: 2026-08-19 (continued 2026-08-19: exposed-cell lemma, support bound, peeling scheme)
+Date: 2026-08-19 (continued 2026-08-19: exposed-cell lemma, support bound, peeling scheme; corrected 2026-08-19: known-zero exposed cells, repaired support proof, parity split)
 
 ## Target
 
@@ -39,13 +39,16 @@ no mathematical content of R36-A1 changes.
 
 `main` at start of this audit: `971cd849ca3586f58ee5a858b1fbd6b3d388ec0f` —
 "Hook P11_O3ag (R35 contraction no-go / resolvent repair) into the O3 chain after O3af".
-`main` at start of this continuation: `0d62bc711926267a65036c9230bd0923f9747d45` —
+`main` at start of the first continuation: `0d62bc711926267a65036c9230bd0923f9747d45` —
 "Add R36-A audit: localized hub range density versus annihilator kernel gate…".
+`main` at start of the exposed-cell/peeling continuation: `1db839139d48682fbb87ad49d9e0d5175fdcf881` —
+"Continue R36-A: fix Target closure typo, rename finite linear system to finite translation equation, add exposed-cell lemma (R36-A3), tau_max outer support constraint (R36-A4), and iterative peeling scheme with correctness dichotomy".
 
 Inputs: P11 §2 definitions of the source hub \(H_{T_0}\); R32 module
 `P11_O3ae_HubOffSupport_Representation.tex`, especially Proposition O3AE.1 and
 Theorem O3AE.2; R35 module/audit for the firewall that no localized annihilator is to
-be presupposed.
+be presupposed; R30 baseline module `P11_O3ac_Riesz_Support_Radius.tex` for the oddness
+of \(\phi_S\).
 
 ---
 
@@ -143,9 +146,7 @@ if and only if for a.e. \(u\in(-T_0,T_0)\),
 Equivalently, because \(E_Ay\) vanishes off \(A\), this is a **finite translation
 equation** for the annular trace \(y\): the sum has finitely many translated-copy terms,
 although the underlying unknown \(y\) ranges over the infinite-dimensional space
-\(L^2(A)\). (Terminology note: this continuation replaces the earlier phrase "finite
-linear system" by "finite translation equation/system" to avoid the misleading suggestion
-of a finite-dimensional linear-algebra system.)
+\(L^2(A)\).
 
 ### Proof
 
@@ -183,14 +184,15 @@ so that with \(f:=E_Ay\) (hence \(\operatorname{supp}f\subset A\)), equation (R3
 \]
 All \(a_\lambda\ne0\) since \(c_{p,k}=\sqrt{\log p}\,p^{-3k/4}>0\).
 
-### Lemma R36-A3 (exposed-cell lemma)
+### Lemma R36-A3 (known-zero exposed-cell lemma)
 
-Let \(I\subset A\) be a nonempty open interval and \(\lambda_*\in\Lambda_{T_0}\). Put
+Let \(Z\subset(-T_0,T_0)\) be a measurable set on which \(f\) is already known to vanish
+a.e.  Let \(I\subset A\) be a nonempty open interval and \(\lambda_*\in\Lambda_{T_0}\). Put
 \(J:=I+\lambda_*\). Suppose
 \[
 J\subset(-T_0,T_0)
 \qquad\text{and}\qquad
-(J-\lambda)\cap A=\varnothing\ \ \text{for every }\lambda\in\Lambda_{T_0}\setminus\{\lambda_*\}.
+J-\lambda\subset Z\ \ \text{for every }\lambda\in\Lambda_{T_0}\setminus\{\lambda_*\}.
 \tag{R36.7}
 \]
 Then every \(f=E_Ay\) solving (R36.3\('\)) satisfies
@@ -204,9 +206,8 @@ Fix \(u\in J\). By (R36.3\('\)),
 \[
 \sum_{\lambda\in\Lambda_{T_0}}a_\lambda f(u-\lambda)=0.
 \]
-For \(\lambda\ne\lambda_*\), \(u-\lambda\in J-\lambda\), and by hypothesis
-\((J-\lambda)\cap A=\varnothing\); since \(f\) vanishes off \(A\), every such term
-vanishes: \(f(u-\lambda)=0\). Hence the sum reduces to the single term
+For \(\lambda\ne\lambda_*\), \(u-\lambda\in J-\lambda\subset Z\), so by assumption
+\(f(u-\lambda)=0\) a.e. there. Hence the sum reduces to the single term
 \[
 a_{\lambda_*}f(u-\lambda_*)=0.
 \]
@@ -253,24 +254,55 @@ Symmetrically, \(a:=\operatorname{ess\,inf}\operatorname{supp}f\) satisfies
 
 ### Proof
 
-Suppose for contradiction \(b+\tau_{\max}<T_0\). Take \(\lambda_*=\tau_{\max}\) and a small
-open interval \(I\subset(b,b+\delta)\cap A\) with \(\delta>0\) small enough that
-\(J:=I+\tau_{\max}\subset(b+\tau_{\max}-\delta,\,b+\tau_{\max}+\delta)\subset(-T_0,T_0)\); this
-is possible since \(b+\tau_{\max}<T_0\) strictly. By definition of \(b\) as the essential
-supremum of the support, such \(I\) with \(f\) not a.e. zero on it exist for every
-\(\delta>0\) (else \(b\) would be smaller). For every other \(\lambda\in\Lambda_{T_0}\setminus\{\tau_{\max}\}\),
-\(\lambda<\tau_{\max}\) (as \(\tau_{\max}\) is the strict maximum of the \(\tau_{p,k}\), and
-\(\Lambda_{T_0}\) also contains the negatives \(-\tau_{p,k}<0<\tau_{\max}\)), so
-\(J-\lambda\subset(b+\tau_{\max}-\lambda-\delta,\,b+\tau_{\max}-\lambda+\delta)\) lies strictly
-to the right of \(b\) once \(\delta\) is small enough (since \(\tau_{\max}-\lambda>0\)), hence
-\((J-\lambda)\cap A\subset(b,S]\) can be made empty by shrinking \(\delta\) below
-\(\tau_{\max}-\lambda\) for every one of the finitely many \(\lambda\ne\tau_{\max}\)
-(finiteness of \(\mathcal P_{T_0}\) makes a single small enough \(\delta\) suffice for all of
-them simultaneously), using also that \(f\) vanishes a.e. beyond \(b\) by definition of \(b\).
-Hypothesis (R36.7) of Lemma R36-A3 then holds for this \(I,\lambda_*=\tau_{\max}\), giving
-\(y=0\) a.e. on \(I\) — contradicting that \(I\) was chosen with \(f\) not a.e. zero on it.
-Hence \(b+\tau_{\max}\ge T_0\). The symmetric statement for \(a\) follows by the same
-argument using \(\lambda_*=-\tau_{\max}\) on an interval just left of \(a\).
+Let
+\[
+g:=\min_{\lambda\in\Lambda_{T_0}\setminus\{\tau_{\max}\}}(\tau_{\max}-\lambda)>0.
+\]
+The positivity is immediate because \(\tau_{\max}\) is the strict largest element of the
+finite set \(\Lambda_{T_0}\). Suppose for contradiction that
+\[
+b+\tau_{\max}<T_0.
+\]
+Choose \(0<\varepsilon<g/4\) small enough that
+\[
+b+\tau_{\max}-\varepsilon>T_0-2\varepsilon
+\qquad\text{and in particular}
+\qquad
+(b-\varepsilon)+\tau_{\max}<T_0.
+\]
+By the definition of \(b=\operatorname{ess\,sup}\operatorname{supp}f\), there exists a nonempty open
+interval
+\[
+I\subset(b-\varepsilon,b)\cap A
+\]
+on which \(f\) is not a.e. zero. Put \(J:=I+\tau_{\max}\). Then
+\[
+J\subset(-T_0,T_0)
+\]
+by the strict inequality \((b-\varepsilon)+\tau_{\max}<T_0\). For every competing
+\(\lambda\in\Lambda_{T_0}\setminus\{\tau_{\max}\}\),
+\[
+J-\lambda=I+(\tau_{\max}-\lambda)
+\subset (b-\varepsilon+g,\,b+g)
+\subset(b,\infty),
+\]
+because \(\tau_{\max}-\lambda\ge g\) and \(\varepsilon<g/4\). Since \(b\) is the essential
+supremum of the support of \(f\), one has \(f=0\) a.e. on \((b,\infty)\). Hence every
+competing translate lands in the known zero set
+\[
+Z:=(b,\infty)\cap(-T_0,T_0).
+\]
+Lemma R36-A3 therefore applies with \(\lambda_*:=\tau_{\max}\), proving \(f=0\) a.e. on
+\(I\), a contradiction. Thus \(b+\tau_{\max}\ge T_0\).
+
+The symmetric lower support bound follows by applying the same argument to the reflected
+left edge with \(\lambda_*:=-\tau_{\max}\). Concretely, if
+\(a:=\operatorname{ess\,inf}\operatorname{supp}f>-T_0+\tau_{\max}\), choose a nonempty open interval
+\(I\subset(a,a+\varepsilon)\cap A\) on which \(f\) is not a.e. zero and set
+\(J:=I-\tau_{\max}\); then for every \(\lambda\ne-\tau_{\max}\),
+\(J-\lambda=I-(\tau_{\max}+\lambda)\subset(-\infty,a)\) for \(\varepsilon\) sufficiently
+small, so all competing translates lie in a known zero set and Lemma R36-A3 again yields a
+contradiction.
 \(\square\)
 
 Status: \(\boxed{\text{R36-A4}\quad\checkmark[M].}\)
@@ -289,11 +321,12 @@ A=K_0\supseteq K_1\supseteq K_2\supseteq\cdots
 \]
 as follows: given \(K_n\), let
 \[
-K_{n+1}:=K_n\setminus\bigcup\{I\subset K_n\text{ open}: \exists\,\lambda_*\in\Lambda_{T_0}\text{ with }J=I+\lambda_*\subset(-T_0,T_0)\text{ and }(J-\lambda)\cap K_n=\varnothing\ \forall\lambda\ne\lambda_*\}.
+K_{n+1}:=K_n\setminus\bigcup\{I\subset K_n\text{ open}: \exists\,\lambda_*\in\Lambda_{T_0}\text{ with }J=I+\lambda_*\subset(-T_0,T_0)\text{ and }J-\lambda\subset A\setminus K_n\text{ for all }\lambda\ne\lambda_*\}.
 \]
-(At stage \(n+1\) the exposed-cell test of Lemma R36-A3 is re-run using the *shrunk* set
-\(K_n\) in place of \(A\), since terms landing in \(A\setminus K_n\) are already known to
-vanish from the previous stage and so no longer count as "active.")
+(At stage \(n+1\) the known-zero exposed-cell test of Lemma R36-A3 is re-run using the
+already-cleared set \(A\setminus K_n\) as the known zero set. Thus terms landing in
+\(A\setminus K_n\) are treated as inactive, even if they still lie geometrically inside the
+annulus.)
 
 ### Proposition R36-A5 (peeling correctness)
 
@@ -304,63 +337,163 @@ For every \(n\), every \(0\ne y\in\ker(H_{T_0}E_A)\) satisfies
 
 Induction on \(n\). The case \(n=0\) is vacuous (\(A\setminus K_0=\varnothing\)). Assume
 \(y=0\) a.e. on \(A\setminus K_n\). For an interval \(I\) removed at stage \(n+1\), the
-defining condition says every competing translate \(\lambda\ne\lambda_*\) sends \(J=I+\lambda_*\)
-back into a point outside \(K_n\), i.e. into \(A\setminus K_n\) or outside \(A\) entirely; in
-both cases \(f(u-\lambda)=0\) there, either because \(f\) vanishes off \(A\) or by the
-inductive hypothesis. The exposed-cell argument of Lemma R36-A3 then applies verbatim with
-\(K_n\) replacing \(A\), giving \(y=0\) a.e. on \(I\). Since \(A\setminus K_{n+1}=(A\setminus K_n)\cup(\text{removed intervals})\), the claim propagates to \(n+1\).
+defining condition says every competing translate \(\lambda\ne\lambda_*\) sends
+\(J=I+\lambda_*\) into the already-cleared zero set \(A\setminus K_n\). Thus the inductive
+hypothesis provides the known zero set required by Lemma R36-A3, which yields
+\(y=0\) a.e. on \(I\). Since
+\(A\setminus K_{n+1}=(A\setminus K_n)\cup(\text{removed intervals})\), the claim propagates
+to \(n+1\).
 \(\square\)
 
 Status: \(\boxed{\text{R36-A5}\quad\checkmark[M]\text{ (correctness of the peeling scheme, for every finite or infinite run length)}.}\)
 
-### Corollary R36-A6 (dichotomy)
+### Corollary R36-A6 (peeling sufficiency and residual support)
 
 Let \(K_\infty:=\bigcap_nK_n\).
 
-- If \(K_\infty=\varnothing\) (in particular if the process terminates at some finite
-  \(K_N=\varnothing\)), then every \(y\in\ker(H_{T_0}E_A)\) vanishes a.e. on \(A\), i.e.
+- If \(K_\infty\) has measure zero (in particular if \(K_\infty=\varnothing\), hence in
+  particular if the process terminates at some finite \(K_N=\varnothing\)), then every
+  \(y\in\ker(H_{T_0}E_A)\) vanishes a.e. on \(A\), i.e.
   \[
   \boxed{\ker(H_{T_0}E_A)=\{0\}.}
   \]
+- Equivalently, contrapositively,
+  \[
+  \boxed{\ker(H_{T_0}E_A)\ne\{0\}\ \Longrightarrow\ |K_\infty|>0.}
+  \]
 - If \(K_\infty\ne\varnothing\), this does **not** by itself produce a nonzero kernel vector.
   It shows only that any nonzero kernel vector must be supported (up to null sets) inside
-  \(K_\infty\), and that on \(K_\infty\) every point lies in a **translation cycle**: no
-  single exposed translate isolates it, i.e. the exposed-cell test (R36.7) fails at every
-  point of \(K_\infty\) for every stage. Existence of an actual nonzero \(y\) supported on
-  \(K_\infty\) then requires a separate functional-equation analysis of these cycles, not
-  performed here.
+  \(K_\infty\), and that on \(K_\infty\) no open interval is isolated by a single active
+  translate in the sense of Lemma R36-A3. This is an **unexposed / multi-hit residual**, not
+  yet a proved closed translation cycle. Existence of an actual nonzero \(y\) supported on
+  \(K_\infty\) then requires a separate functional-equation analysis, not performed here.
 
 ### Proof
 
-The first bullet is immediate from Proposition R36-A5 applied at the terminating or limiting
-stage. The second bullet is a restatement of what removal at each stage requires: a point
-survives into \(K_\infty\) exactly when it is never exposed, i.e. it always sits on a
-translation orbit with at least two competing active translates at every stage — a
-translation cycle in the stated sense. Proposition R36-A5 gives no information about
-vanishing on \(K_\infty\) itself, since no interval inside \(K_\infty\) was ever removed.
+By Proposition R36-A5, every kernel vector vanishes a.e. on \(A\setminus K_n\) for every
+\(n\), hence also on
+\[
+A\setminus K_\infty=\bigcup_n(A\setminus K_n).
+\]
+Therefore any kernel vector is supported (up to null sets) inside \(K_\infty\). If
+\(|K_\infty|=0\), an \(L^2\)-vector supported on \(K_\infty\) must vanish a.e., giving
+\(\ker(H_{T_0}E_A)=\{0\}\). The contrapositive is immediate. The final bullet is simply the
+negation of removability under the peeling rule: points surviving in \(K_\infty\) were never
+shown to vanish by a single-exposed-translate argument, but no actual kernel vector is thereby
+constructed.
 \(\square\)
 
-Status: \(\boxed{\text{R36-A6}\quad\checkmark[M]\text{ (dichotomy is rigorous; neither branch of the dichotomy is resolved for the concrete }\mathcal P_{T_0}\text{ here)}.}\)
+Status: \(\boxed{\text{R36-A6}\quad\checkmark[M]\text{ (sufficient peeling criterion only; no equivalence between }K_\infty\neq\varnothing\text{ and kernel existence is claimed)}.}\)
 
 ### What remains open
 
 Whether the concrete peeling process (run with the actual finite set
 \(\Lambda_{T_0}=\{\pm\tau_{p,k}:(p,k)\in\mathcal P_{T_0}\}\) attached to a given \(T_0\), and a
-given annulus \(A=A_{R,S}\)) terminates with \(K_N=\varnothing\), or instead stabilizes at a
-nonempty \(K_\infty\), is not decided in this audit. This is now the precise combinatorial-
-geometric question to which R36-A reduces.
+given annulus \(A=A_{R,S}\)) yields \(|K_\infty|=0\), or instead leaves a positive-measure
+unexposed residual, is not decided in this audit. This is now the precise combinatorial-
+geometric sufficiency test delivered by peeling; it is **not** an equivalent reformulation of
+kernel existence.
+
+---
+
+## 2c. Parity split
+
+Let \(J\) denote reflection,
+\[
+(Jf)(u):=f(-u).
+\]
+Because \(D_s=U_{s/2}-U_{-s/2}\) and reflection conjugates translations by
+\(JU_aJ=U_{-a}\), one has
+\[
+D_sJ=(U_{s/2}-U_{-s/2})J=J(U_{-s/2}-U_{s/2})=-JD_s.
+\]
+Since \(H_{T_0}\) is a finite linear combination of such \(D_s\), with symmetric windowing,
+one gets the corresponding anticommutation for the finite-window hub.
+
+### Proposition R36-A7 (parity split for the localized kernel)
+
+One has
+\[
+\boxed{H_{T_0}J=-JH_{T_0}.}
+\tag{R36.9}
+\]
+Consequently, if \(y\in\ker(H_{T_0}E_A)\), then its even and odd parts
+\[
+y_{\mathrm{ev}}:=\frac{y+Jy}{2},
+\qquad
+y_{\mathrm{odd}}:=\frac{y-Jy}{2}
+\]
+also satisfy
+\[
+H_{T_0}E_Ay_{\mathrm{ev}}=0,
+\qquad
+H_{T_0}E_Ay_{\mathrm{odd}}=0.
+\]
+Thus the kernel splits as the orthogonal direct sum of its even and odd sectors.
+
+### Proof
+
+Using the concrete P11 definition
+\(H_{T_0}=P_{T_0}\sum_{(p,k)\in\mathcal P_{T_0}}c_{p,k}D_{k\log p}E_{T_0}\), the identity
+\(D_sJ=-JD_s\) together with the symmetry of the terminal window gives
+\[
+H_{T_0}J=P_{T_0}\sum c_{p,k}D_{k\log p}E_{T_0}J
+=-P_{T_0}J\sum c_{p,k}D_{k\log p}E_{T_0}
+=-JH_{T_0}.
+\]
+Because the annulus \(A=(-S,-R)\cup(R,S)\) is symmetric, \(JE_A=E_AJ\). Hence if
+\(H_{T_0}E_Ay=0\), then
+\[
+H_{T_0}E_A(Jy)=H_{T_0}JE_Ay=-JH_{T_0}E_Ay=0.
+\]
+Linear combinations yield the same for \(y_{\mathrm{ev}}\) and \(y_{\mathrm{odd}}\), and the
+orthogonal direct-sum decomposition is the standard parity decomposition in \(L^2(A)\).
+\(\square\)
+
+Status: \(\boxed{\text{R36-A7}\quad\checkmark[M].}\)
+
+### Corollary R36-A8 (only the odd kernel can matter for R36-B)
+
+The annular forcing target
+\[
+d_{R,S}:=P_A(\phi_S-C_{\Gamma,S}j_{R,S})
+\]
+is odd. Therefore every even kernel vector \(y\in\ker(H_{T_0}E_A)\) satisfies
+\[
+\langle y,d_{R,S}\rangle=0.
+\]
+In particular, only the **odd** part of the localized kernel can contribute to the
+conditional annihilator test R36-B.
+
+### Proof
+
+The baseline forcing \(\phi_S(u)=\operatorname{sgn}(u)I_0(|u|)\) is explicitly odd in the R30
+baseline module. The R30/R31/R32 chain works in the minus/odd sector, so the inherited
+Riesz vector \(j_{R,S}=E_{R,S}\rho_{R,T_0}\) is odd as well. The Gamma operator
+\(C_{\Gamma,S}\) has even symbol multiplier \(m_\Gamma\) (P11/O3af), hence preserves parity;
+therefore \(C_{\Gamma,S}j_{R,S}\) is odd, and so is their difference \(\phi_S-C_{\Gamma,S}j_{R,S}\),
+whence also its annular restriction \(d_{R,S}\). Pairing an even \(y\) with an odd
+\(d_{R,S}\) gives zero by symmetry.
+\(\square\)
+
+Status: \(\boxed{\text{R36-A8}\quad\checkmark[M].}\)
+
+This does not prove kernel triviality, but it **halves the relevant search space for R36-B**:
+for obstruction purposes one only needs to study the odd kernel, which on the symmetric
+annulus is determined by its values on \((R,S)\).
 
 ---
 
 ## 3. What the present repository does and does not prove
 
 The existing O3 chain proves antisymmetry of \(H_{T_0}\) and an exact off-support translation
-formula. This continuation adds the exposed-cell lemma (R36-A3), the resulting outer support
-constraint (R36-A4), and the correctness of an iterative peeling scheme (R36-A5/A6) that
-reduces the kernel-triviality question to a finite geometric question about the concrete
-shift set \(\Lambda_{T_0}\) and the annulus \(A\). Nowhere in R1–R36-A(continuation) is a
+formula. This continuation sharpens the exposed-cell lemma to a known-zero version
+(R36-A3), repairs the outer support proof (R36-A4), and corrects the peeling conclusion so
+that it is a **sufficient** criterion for kernel triviality (R36-A6), not an equivalence.
+It also adds a parity decomposition (R36-A7/A8), showing that only the odd localized kernel
+can matter for the conditional obstruction test. Nowhere in R1–R36-A(continuation) is a
 nonzero annular vector \(y\) constructed with \(H_{T_0}E_Ay=0\), nor is there a proof that the
-peeling process empties \(A\) for every relevant \((R,S,T_0)\). No Paley–Wiener,
+peeling process yields \(|K_\infty|=0\) for every relevant \((R,S,T_0)\). No Paley–Wiener,
 Fourier-symbol, or Volterra-triangular argument for the operator \(y\mapsto H_{T_0}E_Ay\) on
 annulus-supported data is used or needed, precisely because such an argument would not respect
 the finite-window restriction (see the Remark after Lemma R36-A3). Thus:
@@ -369,14 +502,21 @@ the finite-window restriction (see the Remark after Lemma R36-A3). Thus:
 
 \[
 \boxed{
-\ker(H_{T_0}E_A)\stackrel?{=}\{0\}
-\qquad\text{equivalently}\qquad
-\overline{\operatorname{Ran}(P_AH_{T_0})}\stackrel?{=}L^2(A)
-\qquad\text{equivalently}\qquad
-K_\infty\stackrel?{=}\varnothing.
+\ker(H_{T_0}E_A)\stackrel?{=}\{0\}.
 }
 \tag{R36.4}
 \]
+
+Equivalently, by R36-A1,
+\[
+\overline{\operatorname{Ran}(P_AH_{T_0})}\stackrel?{=}L^2(A).
+\]
+A sufficient peeling criterion is now available:
+\[
+|K_\infty|=0\ \Longrightarrow\ \ker(H_{T_0}E_A)=\{0\},
+\]
+but the converse is **not** claimed. If a nonzero kernel exists, then necessarily
+\(|K_\infty|>0\) by R36-A6.
 
 Status: \(\boxed{\text{R36-A}\quad ?[O].}\)
 
@@ -391,9 +531,10 @@ Suppose a future argument produces a nonzero
 0\ne y\in\ker(H_{T_0}E_A).
 \]
 By R36-A5/A6, any such \(y\) is necessarily supported (up to null sets) in the un-peelable
-residue \(K_\infty\) and, by R36-A4, its support extends to within \(\tau_{\max}\) of the
-window boundary. Then, and only then, one may ask whether \(y\) detects the concrete annular
-target
+residue \(K_\infty\), which must have positive measure, and by R36-A4 its support extends to
+within \(\tau_{\max}\) of the window boundary. By R36-A7/A8, only the odd component can matter
+for the obstruction pairing. Then, and only then, one may ask whether \(y\) detects the
+concrete annular target
 \[
 d_{R,S}:=P_A(\phi_S-C_{\Gamma,S}j_{R,S}).
 \]
@@ -453,10 +594,10 @@ If a future proof yields
 \[
 \ker(H_{T_0}E_A)=\{0\}
 \]
-(in particular if the peeling scheme of §2b is shown to empty \(A\), \(K_\infty=\varnothing\)),
-then by Lemma R36-A1 the localized hub range is dense in \(L^2(A)\). This kills the
-simple dual annihilator route: there is no nontrivial continuous linear functional on
-\(L^2(A)\) vanishing on the whole localized hub range. But even then, one still does
+(in particular if the peeling scheme of §2b is shown to leave only a null residual,
+\(|K_\infty|=0\)), then by Lemma R36-A1 the localized hub range is dense in \(L^2(A)\). This
+kills the simple dual annihilator route: there is no nontrivial continuous linear functional
+on \(L^2(A)\) vanishing on the whole localized hub range. But even then, one still does
 **not** get automatic representability of \(d_{R,S}\) as
 \(P_AH_{T_0}g\) for some \(g\), because dense range need not equal actual range. The next
 possible fingerprint would then be the harder question
@@ -476,40 +617,41 @@ That stricter membership problem cannot be detected by an ordinary annihilator.
 |---|---|
 | R36-A1 adjoint identity \(T_A^*=-H_{T_0}E_A\) and dense-range equivalence | ✓[M] |
 | R36-A2 explicit finite translation kernel equation for \(y\) | ✓[M] |
-| R36-A3 exposed-cell lemma | ✓[M] |
+| R36-A3 known-zero exposed-cell lemma | ✓[M] |
 | R36-A4 outer support constraint via \(\tau_{\max}\) | ✓[M] |
-| R36-A5/A6 peeling-scheme correctness and dichotomy (\(K_\infty=\varnothing\) vs. \(\ne\varnothing\)) | ✓[M] (correctness); which branch holds is ?[O] |
+| R36-A5 peeling-scheme correctness | ✓[M] |
+| R36-A6 peeling sufficiency and residual-support criterion | ✓[M] |
+| R36-A7 parity split for the localized kernel | ✓[M] |
+| R36-A8 only the odd kernel can matter for R36-B | ✓[M] |
 | R36-A kernel triviality / nontriviality for the concrete \(\Lambda_{T_0}\), \(A_{R,S}\) | ?[O] |
 | R36-B annihilator obstruction from a nontrivial kernel vector with \(\langle y,d_{R,S}\rangle\ne0\) | ✓[M] conditional |
 | Any conclusion on R30-F | not obtained |
 
 ### What this continuation adds
 
-- Fixes the Target-section rendering slip: the operative equivalence is stated with the
-  correctly closed range \(\overline{\operatorname{Ran}(P_AH_{T_0})}\); this was already
-  correct in R36-A1 and the firewall, and is now also correct in the Target statement.
-- Replaces "finite linear system" by "finite translation equation/system" to avoid
-  suggesting a finite-dimensional linear-algebra system; the solution space \(L^2(A)\)
-  remains infinite-dimensional.
-- Proves the exposed-cell lemma R36-A3: a translate that lands in the source window with no
-  competing translate landing in the annulus forces the annular vector to vanish on the
-  corresponding sub-interval.
-- Derives the first concrete support constraint R36-A4: any nonzero kernel vector's support
-  must reach within \(\tau_{\max}\) of \(\pm T_0\).
-- Sets up and proves correctness of an iterative peeling scheme (R36-A5/A6) reducing R36-A to
-  a finite geometric dichotomy: either the peeling empties \(A\) (kernel trivial), or a
-  residue \(K_\infty\ne\varnothing\) survives, consisting entirely of translation cycles, on
-  which a nonzero kernel vector would have to be constructed by a separate argument.
-- Explicitly rules out a premature global Fourier/exponential-polynomial uniqueness argument,
-  since the hub equation is only imposed on the finite window \((-T_0,T_0)\), not on all of
-  \(\mathbb R\).
+- Repairs the mathematical bug in the earlier proof of R36-A4: the contradiction interval is
+  now chosen **left** of the essential right support edge, exactly where nonzero mass is
+  guaranteed by the definition of essential supremum.
+- Strengthens R36-A3 from a purely geometric exposed-cell statement to the **known-zero
+  exposed-cell lemma**, which is the form actually used by the iterative peeling scheme.
+- Corrects R36-A6: peeling yields a **sufficient** criterion for kernel triviality
+  (\(|K_\infty|=0\Rightarrow\ker(H_{T_0}E_A)=\{0\}\)), not an equivalent reformulation of
+  the kernel question. A nonempty residual is only an unexposed / multi-hit support region,
+  not by itself a kernel vector.
+- Replaces the earlier over-strong “translation cycle” language by the weaker and correct
+  “unexposed / multi-hit residual” language.
+- Adds the parity split R36-A7 and the odd-target corollary R36-A8. For the later R36-B
+  obstruction search, only the **odd** localized kernel is relevant.
 
 ### What this audit explicitly does not deliver
 
 - No proof that the kernel is nontrivial.
-- No proof that the kernel is trivial, i.e. no proof that the peeling scheme empties \(A\) for
-  the concrete \(\Lambda_{T_0}\), \(A_{R,S}\).
-- No analysis of the translation cycles that may survive on a nonempty \(K_\infty\).
+- No proof that the kernel is trivial, i.e. no proof that the peeling scheme yields
+  \(|K_\infty|=0\) for the concrete \(\Lambda_{T_0}\), \(A_{R,S}\).
+- No proof that a positive-measure residual \(K_\infty\) actually supports a nonzero kernel
+  vector.
+- No analysis of the potentially complicated orbit structure generated by the incommensurable
+  shifts (e.g. \(\log3/\log2\notin\mathbb Q\)).
 - No proof that the concrete target \(d_{R,S}\) lies or does not lie in the actual localized
   hub range.
 - No statement upgrading \(\operatorname{Ran}\Sigma_{T_0}\subseteq\operatorname{Ran}H_{T_0}\) to an
@@ -518,10 +660,9 @@ That stricter membership problem cannot be detected by an ordinary annihilator.
 
 ### Next mathematical target
 
-Run the peeling scheme of §2b explicitly for the concrete finite set
-\(\Lambda_{T_0}=\{\pm\tau_{p,k}:(p,k)\in\mathcal P_{T_0}\}\) and a representative annulus
-\(A_{R,S}\), tracking \(K_0\supseteq K_1\supseteq\cdots\) explicitly. Either exhibit a finite
-stage \(N\) with \(K_N=\varnothing\) (proving \(\ker(H_{T_0}E_A)=\{0\}\)), or identify the
-precise translation-cycle structure of a surviving \(K_\infty\) and analyze the resulting
-cycle functional equations as a candidate route to a nonzero \(y\). Only once one of these two
-outcomes is settled should the conditional Lemma R36-B be invoked.
+The mathematically clean next step is now to combine **odd parity reduction** with the
+peeling scheme: run §2b on the odd sector only, tracking whether the known-zero exposed-cell
+criterion empties the odd residual set or leaves a positive-measure unexposed remainder. Only
+if such an odd remainder survives should one begin a separate functional-equation search for a
+nonzero odd kernel vector. Only after that would the conditional obstruction lemma R36-B come
+into play.
