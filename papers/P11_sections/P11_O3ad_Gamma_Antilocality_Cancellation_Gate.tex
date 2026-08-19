@@ -1,0 +1,320 @@
+% P11 paper module: R31 exact Gamma anti-locality and annular cancellation gate.
+
+\subsection{Gamma anti-locality and the exact annular cancellation gate}
+\label{subsec:o3ad-gamma-antilocality}
+
+R30 reduces the fixed normal-mismatch problem to the support radius of the baseline
+Riesz representative.  This subsection separates what can be proved directly from the
+exact archimedean Gamma symbol from what still requires concrete information about the
+nonlocal Feshbach term.
+
+The frozen P02 Gamma layer fixes
+\[
+ \gamma_\infty(\xi)
+ =-\frac12\log\pi
+ +\frac12\psi\!\left(\frac14+\frac{i\xi}{2}\right),
+\]
+so its exact even diagonal symbol is
+\[
+ \boxed{
+ q_\Gamma(\xi)
+ :=2\operatorname{Re}\gamma_\infty(\xi)
+ =-\log\pi+\operatorname{Re}\psi\!\left(\frac14+\frac{i\xi}{2}\right).
+ }
+\tag{O3AD.1}\label{eq:o3ad-qgamma}
+\]
+
+\begin{proposition}[Exact Gamma off-support kernel and anti-locality]
+\label{prop:o3ad-gamma-antilocal}
+Let
+\[
+ \widetilde m_\Gamma(\xi)=c_0+c_1q_\Gamma(\xi),
+ \qquad c_1\ne0,
+\]
+and let \(\widetilde M_\Gamma\) be the corresponding full-line Fourier multiplier in
+the P02 convention.  Away from the diagonal its distribution kernel is
+\[
+ \boxed{
+ \widetilde K_\Gamma(u)
+ =-c_1\sum_{n=0}^\infty e^{-(2n+1/2)|u|}
+ =-c_1\frac{e^{-|u|/2}}{1-e^{-2|u|}},
+ \qquad u\ne0.
+ }
+\tag{O3AD.2}\label{eq:o3ad-gamma-kernel}
+\]
+If \(0\ne f\in L^2(\mathbb R)\) has
+\(\operatorname{ess\,supp}f\subset[-R,R]\), then
+\(\widetilde M_\Gamma f\) cannot vanish on a nonempty open interval contained in
+\((R,\infty)\), and likewise cannot vanish on a nonempty open interval contained in
+\(( -\infty,-R)\).
+\end{proposition}
+
+\begin{proof}
+For \(a=1/4\), the digamma series on \(\operatorname{Re}z>0\) gives, modulo a
+multiplier constant,
+\[
+ q_\Gamma(\xi)
+ \equiv
+ -\sum_{n=0}^\infty
+ \frac{n+a}{(n+a)^2+\xi^2/4}.
+\]
+Put \(\lambda_n=2(n+a)=2n+1/2\).  Since
+\[
+ \frac{n+a}{(n+a)^2+\xi^2/4}
+ =\frac{2\lambda_n}{\lambda_n^2+\xi^2}
+ =\mathcal F(e^{-\lambda_n|\cdot|})(\xi),
+\]
+formula~\eqref{eq:o3ad-gamma-kernel} follows off \(u=0\); the omitted constant gives
+only a multiple of \(\delta_0\).
+
+For \(x>R\), therefore,
+\[
+ (\widetilde M_\Gamma f)(x)
+ =-c_1\sum_{n=0}^\infty e^{-\lambda_nx}M_n(f),
+ \qquad
+ M_n(f):=\int_{-R}^{R}f(y)e^{\lambda_ny}\,dy.
+\tag{O3AD.3}\label{eq:o3ad-moment-tail}
+\]
+The series converges normally on each half-plane
+\(\operatorname{Re}x\ge R+\delta\), so the tail is real analytic on \((R,\infty)\).
+If it vanishes on one open subinterval, it vanishes on all of \((R,\infty)\).
+Multiplying successively by \(e^{\lambda_nx}\) and letting \(x\to\infty\) then gives
+\[
+ M_n(f)=0\qquad(n\ge0).
+\]
+Since \(\lambda_n=2n+1/2\), this is
+\[
+ \int_{-R}^{R}e^{y/2}f(y)e^{2ny}\,dy=0
+ \qquad(n\ge0).
+\]
+After \(t=e^{2y}\), the associated finite complex measure on
+\([e^{-2R},e^{2R}]\) annihilates every polynomial.  Polynomial density in the
+continuous functions on this compact interval forces the measure, and hence \(f\), to
+vanish.  This contradicts \(f\ne0\).  The left-tail proof is identical.
+\end{proof}
+
+\begin{remark}[Exact-symbol interface firewall]
+\label{rem:o3ad-symbol-interface}
+Proposition~\ref{prop:o3ad-gamma-antilocal} uses the exact frozen P02 symbol, not merely
+logarithmic growth.  Equation~\eqref{eq:gamma-symbol} in the present P11 manuscript
+currently records only
+\[
+ m_\Gamma=1+g_\infty,
+ \qquad m_\Gamma(\xi)\asymp\log(2+|\xi|).
+\]
+Therefore the proposition may be cited for the concrete P11 operator
+\(C_{\Gamma,S}\) only after the affine exact-symbol bridge
+\[
+ \boxed{
+ m_\Gamma=c_0+c_1q_\Gamma,
+ \qquad c_1\ne0,
+ }
+\tag{O3AD.4}\label{eq:o3ad-symbol-bridge}
+\]
+is made explicit.  Additive constants are harmless for off-support statements, but
+logarithmic asymptotics alone do not determine the off-diagonal kernel.
+\end{remark}
+
+For the actual fixed-\(T_0\) P11 Riesz problem put
+\[
+ A_X^{[T_0]}:=C_{\Gamma,X}+\Sigma_X^{[T_0]},
+ \qquad
+ A_X^{[T_0]}\rho_{X,T_0}=\phi_X.
+\]
+For \(0<R<S<T_0\), define
+\[
+ j_{R,S}:=E_{R,S}\rho_{R,T_0}
+\tag{O3AD.5}\label{eq:o3ad-inherited-riesz}
+\]
+and the S-level residual
+\[
+ \boxed{
+ \Delta_{R,S}^{[T_0]}
+ :=\phi_S-A_S^{[T_0]}j_{R,S}.
+ }
+\tag{O3AD.6}\label{eq:o3ad-annular-residual}
+\]
+
+\begin{theorem}[Exact annular cancellation criterion]
+\label{thm:o3ad-annular-gate}
+The residual satisfies
+\[
+ E_{R,S}^*\Delta_{R,S}^{[T_0]}=0,
+\tag{O3AD.7}\label{eq:o3ad-residual-interior-zero}
+\]
+so it is supported in
+\[
+ \mathcal A_{R,S}:=(-S,-R)\cup(R,S).
+\]
+Moreover
+\[
+ \boxed{
+ \Delta_{R,S}^{[T_0]}=0
+ \iff
+ \rho_{S,T_0}=E_{R,S}\rho_{R,T_0}
+ \iff
+ s_{R,S,T_0}=0.
+ }
+\tag{O3AD.8}\label{eq:o3ad-cancellation-equivalence}
+\]
+Consequently, for fixed \(S<T_0\),
+\[
+ \boxed{
+ R_*(S,T_0)=S
+ \iff
+ \Delta_{R,S}^{[T_0]}\ne0
+ \quad\text{for every }0<R<S.
+ }
+\tag{O3AD.9}\label{eq:o3ad-Rstar-gate}
+\]
+\end{theorem}
+
+\begin{proof}
+The fixed-terminal pullback identity for the forms gives
+\[
+ E_{R,S}^*A_S^{[T_0]}E_{R,S}=A_R^{[T_0]}
+\]
+in the weak sense, while jet compatibility gives
+\(E_{R,S}^*\phi_S=\phi_R\).  Since
+\(A_R^{[T_0]}\rho_{R,T_0}=\phi_R\), this proves
+\eqref{eq:o3ad-residual-interior-zero}.
+
+If \(\Delta_{R,S}^{[T_0]}=0\), then \(j_{R,S}\) solves the S-level Riesz equation.
+Coercivity gives uniqueness, hence
+\(j_{R,S}=\rho_{S,T_0}\).  The converse follows immediately from the defining S-level
+equation.  The equivalence with \(s_{R,S,T_0}=0\) is
+Theorem~\ref{thm:o3ac-support-equivalence}, and
+\eqref{eq:o3ad-Rstar-gate} follows from
+Corollary~\ref{cor:o3ac-threshold}.
+\end{proof}
+
+\begin{corollary}[What compact support would force under the exact-symbol bridge]
+\label{cor:o3ad-forced-cancellation}
+Assume~\eqref{eq:o3ad-symbol-bridge}.  If
+\(R_*(S,T_0)\le R<S\), then on \(\mathcal A_{R,S}\)
+\[
+ \boxed{
+ 1_{\mathcal A_{R,S}}\Sigma_S^{[T_0]}j_{R,S}
+ =1_{\mathcal A_{R,S}}\phi_S
+ -1_{\mathcal A_{R,S}}C_{\Gamma,S}j_{R,S}.
+ }
+\tag{O3AD.10}\label{eq:o3ad-forced-cancellation}
+\]
+The Gamma term is real analytic on each connected half-annulus and has the exponential
+moment expansion~\eqref{eq:o3ad-moment-tail}; for nonzero \(j_{R,S}\), it cannot vanish
+on any nonempty open subannulus.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:o3ad-annular-gate}, the support assumption implies
+\(\Delta_{R,S}^{[T_0]}=0\).  Splitting the two operator contributions gives
+\eqref{eq:o3ad-forced-cancellation}.  The remaining assertions follow from
+Proposition~\ref{prop:o3ad-gamma-antilocal}.
+\end{proof}
+
+The analytic Gamma tail does not by itself contradict
+\eqref{eq:o3ad-forced-cancellation}.  The following abstract countermodel shows why the
+concrete Feshbach structure cannot be replaced by its presently proved coarse
+properties.
+
+\begin{theorem}[Coarse Schur data do not imply full support]
+\label{thm:o3ad-coarse-no-go}
+Fix \(0<R<S\) and work on the real odd subspace of \(L^2(-S,S)\).  Let \(C\ge I\)
+be the exact even finite-window Gamma operator and let \(\phi=\phi_S\ne0\).  There exist
+\[
+ 0\ne\rho\in C_c^\infty((-R,R))
+\]
+and a bounded positive selfadjoint rank-one operator \(\Sigma\ge0\), preserving parity
+and bounded on a symmetric sufficiently small Sobolev interval, such that
+\[
+ \boxed{(C+\Sigma)\rho=\phi.}
+\tag{O3AD.11}\label{eq:o3ad-abstract-countermodel}
+\]
+The perturbation also admits an abstract positive factorisation
+\[
+ \Sigma=H_0B_0H_0^*,
+ \qquad B_0=(I+0^*0)^{-1}=I.
+\tag{O3AD.12}\label{eq:o3ad-abstract-feshbach}
+\]
+\end{theorem}
+
+\begin{proof}
+Choose a real odd \(h\in C_c^\infty((-R,R))\) with
+\(\langle h,\phi\rangle>0\).  For small \(\varepsilon>0\), set
+\[
+ \rho=\varepsilon h,
+ \qquad d=\phi-C\rho.
+\]
+Then
+\[
+ \langle\rho,d\rangle
+ =\varepsilon\langle h,\phi\rangle
+ -\varepsilon^2\langle h,Ch\rangle>0.
+\]
+Put
+\[
+ e=\rho/\|\rho\|,
+ \qquad y=d/\|\rho\|,
+ \qquad a=\langle e,y\rangle>0,
+ \qquad z=y-ae,
+\]
+so \(z\perp e\), and define
+\[
+ v=\sqrt a\,e+a^{-1/2}z,
+ \qquad
+ \Sigma f=\langle f,v\rangle v.
+\]
+Then \(\Sigma\) is positive, selfadjoint and rank one, while
+\[
+ \Sigma e=\sqrt a\,v=ae+z=y.
+\]
+Thus \(\Sigma\rho=d\), proving~\eqref{eq:o3ad-abstract-countermodel}.
+All vectors are odd, so parity is preserved.  The smooth-interior Gamma action from
+Lemma~\ref{lem:gamma-smooth-action}, together with the same
+\(|s|<1/2\) cutoff range used in O3k, puts the rank-one vector in every sufficiently
+small positive and negative Sobolev scale needed for boundedness.  Finally choose
+\(H_0=\Sigma^{1/2}\) and \(B_0=I\).
+\end{proof}
+
+\begin{remark}[Scope of the countermodel]
+\label{rem:o3ad-countermodel-scope}
+Theorem~\ref{thm:o3ad-coarse-no-go} is not a counterexample to the concrete P11
+operator
+\[
+ \Sigma_S^{[T_0]}
+ =E_{S,T_0}^*H_{T_0}(I+R_{T_0}^*R_{T_0})^{-1}H_{T_0}^*E_{S,T_0}.
+\]
+It disproves only the route that attempts to deduce R30-F from Gamma anti-locality plus
+positivity, boundedness, parity, small-Sobolev regularity and an abstract positive
+Feshbach factorisation.  A successful proof must use additional concrete structure of
+\(H_{T_0}\), \(R_{T_0}\) and their inverse-rest coupling.
+\end{remark}
+
+\begin{remark}[Finite-propagation firewall]
+\label{rem:o3ad-finite-propagation}
+At fixed \(T_0\), the resolved operators \(H_{T_0}\) and \(R_{T_0}\) are finite sums of
+translations, interval cutoffs and finite coefficient maps.  This does not currently
+imply finite propagation for
+\[
+ B_{T_0}=(I+R_{T_0}^*R_{T_0})^{-1}
+\]
+or for \(\Sigma_{T_0}=H_{T_0}B_{T_0}H_{T_0}^*\).  O3k proves small-Sobolev
+boundedness, not support or analyticity preservation.  Therefore no vanishing of the
+Schur tail near \(\pm S\) is presently available.
+\end{remark}
+
+\begin{openproblem}[R31: concrete annular noncancellation]
+\label{open:o3ad-concrete-cancellation}
+For every fixed \(0<R<S<T_0\), prove or disprove
+\[
+ \boxed{\Delta_{R,S}^{[T_0]}\ne0.}
+\]
+By Theorem~\ref{thm:o3ad-annular-gate}, this family of statements is exactly equivalent
+to R30-F,
+\[
+ R_*(S,T_0)=S.
+\]
+Under the exact-symbol bridge, a positive proof must rule out the concrete identity
+\eqref{eq:o3ad-forced-cancellation}; Gamma anti-locality alone is insufficient.
+No conclusion here concerns the relative polar gauge or strong terminal transport.
+\end{openproblem}
