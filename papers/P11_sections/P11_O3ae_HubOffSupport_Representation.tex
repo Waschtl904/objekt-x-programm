@@ -1,0 +1,189 @@
+% P11 paper module: R32 discrete-translational off-support representation
+% of the source hub H_{T_0} and the finite-horizon Schur term Sigma_{T_0}.
+
+\subsection{Discrete-translational off-support representation of the source hub}
+\label{subsec:o3ae-hub-off-support}
+
+R31 reduces the R30-F question to the concrete annular cancellation
+\[
+ \Delta_{R,S}^{[T_0]}\ne0\qquad\text{for every }0<R<S<T_0,
+\]
+and shows that coarse Schur properties are insufficient.  The present subsection
+opens the concrete off-support layer by expressing the source hub as a genuine
+finite discrete translation sum and by recording the exact antisymmetry
+\(H_{T_0}^*=-H_{T_0}\).  No polar-gauge, terminal-transport, Object-X, or RH
+conclusion is drawn here.
+
+\subsubsection*{Notation}
+
+For \((p,k)\) with \(p\) prime and \(k\ge1\), abbreviate
+\[
+ \tau_{p,k}:=\frac{k\log p}{2},\qquad
+ c_{p,k}:=\sqrt{\log p}\,p^{-3k/4}.
+\]
+The active fixed-horizon index set is
+\[
+ \mathcal P_{T_0}:=\{(p,k):p\text{ prime},\ k\ge1,\ p^k\le e^{2T_0}\},
+\]
+which is finite.
+
+\begin{proposition}[Antisymmetry of the source hub]
+\label{prop:o3ae-antisymmetry}
+On \(L^2(-T_0,T_0)\) the source hub \(H_{T_0}\) is bounded and antisymmetric:
+\[
+ \boxed{H_{T_0}^*=-H_{T_0}.}
+\tag{O3AE.1}\label{eq:o3ae-antisymmetry}
+\]
+\end{proposition}
+
+\begin{proof}
+By \eqref{eq:hub-operator},
+\(H_{T_0}=P_{T_0}\!\!\sum_{(p,k)\in\mathcal P_{T_0}}\!\!c_{p,k}D_{k\log p}E_{T_0}\)
+with \(P_{T_0}=E_{T_0}^*\) and
+\(D_s=U_{s/2}-U_{-s/2}\).  Translations on \(L^2(\mathbb R)\) satisfy
+\(U_a^*=U_{-a}\), hence
+\(D_s^*=U_{-s/2}-U_{s/2}=-D_s\).  Linearity gives
+\(M^*=-M\) for
+\(M:=\sum_{(p,k)\in\mathcal P_{T_0}}c_{p,k}D_{k\log p}\) on \(L^2(\mathbb R)\).
+Adjunction on nested \(L^2\)-spaces gives
+\[
+ H_{T_0}^*
+ =(P_{T_0}ME_{T_0})^*
+ =E_{T_0}^*M^*P_{T_0}^*
+ =P_{T_0}(-M)E_{T_0}
+ =-H_{T_0}.
+\]
+The finiteness of \(\mathcal P_{T_0}\) and boundedness of \(H_{T_0}\) are from
+Section~\ref{sec:source}.
+\end{proof}
+
+\begin{theorem}[Exact off-support representation of the source hub]
+\label{thm:o3ae-hub-off-support}
+Fix \(0<R<T_0\).  Let \(f\in L^2(-T_0,T_0)\) with
+\(\operatorname{ess\,supp}(f)\subset[-R,R]\).  Then for a.e. \(u\in(-T_0,-R)\cup(R,T_0)\),
+\[
+ \boxed{
+ (H_{T_0}f)(u)
+ =\operatorname{sgn}(u)\!\!\sum_{\substack{(p,k)\in\mathcal P_{T_0}\\
+   |u|-R\le\tau_{p,k}\le|u|+R}}\!\!\!\!c_{p,k}\,f\bigl(u-\operatorname{sgn}(u)\tau_{p,k}\bigr).
+ }
+\tag{O3AE.2}\label{eq:o3ae-hub-off-support}
+\]
+In particular, \(H_{T_0}f\) is on each connected off-support component a finite
+signed sum of translated copies of \(f\), with translation amounts drawn from
+the finite set \(\{\tau_{p,k}:(p,k)\in\mathcal P_{T_0}\}\).
+\end{theorem}
+
+\begin{proof}
+For \(u>R\), \(u+\tau_{p,k}>R\), so \(f(u+\tau_{p,k})=0\).  Also
+\(f(u-\tau_{p,k})\ne0\) only if \(u-\tau_{p,k}\in(-R,R)\), i.e.
+\(\tau_{p,k}\in(u-R,u+R)\).  Since \(u<T_0\),
+\(u\in(-T_0,T_0)\), so \(P_{T_0}\) acts as the identity at this point.
+Summation over \(\mathcal P_{T_0}\) gives
+\[
+ (H_{T_0}f)(u)
+ =\sum_{(p,k):\,\tau_{p,k}\in(u-R,u+R)}c_{p,k}\,f(u-\tau_{p,k}).
+\]
+For \(u<-R\), \(u-\tau_{p,k}<-R\) forces
+\(f(u-\tau_{p,k})=0\); a symmetric argument gives the sgn-adjusted formula.  The
+\(\operatorname{sgn}(u)\)-collected form is~\eqref{eq:o3ae-hub-off-support}.
+\end{proof}
+
+\begin{remark}[Structural interpretation]
+\label{rem:o3ae-structural}
+Formula~\eqref{eq:o3ae-hub-off-support} is exact, not asymptotic, and holds
+without any regularity hypothesis on \(f\) beyond \(L^2\) with compact support.
+It exposes the archimedean/nonarchimedean asymmetry of the P11 construction:
+the archimedean Gamma tail (Prop~\ref{prop:o3ad-gamma-antilocal}) has a smooth,
+real-analytic off-diagonal kernel, while the prime-power hub tail is exactly
+supported on a translated union of the input support.
+\end{remark}
+
+\subsubsection*{Application to the finite-horizon Schur term}
+
+Recall
+\[
+ \Sigma_{T_0}=H_{T_0}B_{T_0}H_{T_0}^*,\qquad
+ B_{T_0}=(I+R_{T_0}^*R_{T_0})^{-1}.
+\]
+
+\begin{corollary}[Off-support structure of the Schur term]
+\label{cor:o3ae-sigma-off-support}
+Let \(f\in L^2(-T_0,T_0)\) with \(\operatorname{ess\,supp}(f)\subset[-R,R]\).
+Set
+\[
+ g:=B_{T_0}H_{T_0}^*f
+ =-B_{T_0}H_{T_0}f\in L^2(-T_0,T_0).
+\]
+For a.e. \(u\in(-T_0,-R)\cup(R,T_0)\),
+\[
+ \boxed{
+ (\Sigma_{T_0}f)(u)
+ =\sum_{(p,k)\in\mathcal P_{T_0}}c_{p,k}
+ \bigl[g(u-\tau_{p,k})-g(u+\tau_{p,k})\bigr].
+ }
+\tag{O3AE.3}\label{eq:o3ae-sigma-off-support}
+\]
+\end{corollary}
+
+\begin{proof}
+Prop~\ref{prop:o3ae-antisymmetry} and boundedness of \(B_{T_0}\) place
+\(g\in L^2(-T_0,T_0)\).  The claim is~\eqref{eq:o3ae-hub-off-support} applied
+to \(g\), noting that \(g\) itself need not have compact support in \([-R,R]\)
+so the \emph{full} \(D_{k\log p}\) difference formula applies rather than the
+one-sided restriction of the previous theorem.
+\end{proof}
+
+\begin{remark}[Precise structural gap toward R30-F]
+\label{rem:o3ae-gap}
+Combining~\eqref{eq:o3ae-sigma-off-support} with the R31 annular
+identity~\eqref{eq:o3ad-forced-cancellation}, the concrete R30-F question
+\(R_*(S,T_0)=S\) is equivalent to the following analytic question for the
+inherited vector \(j_{R,S}\) and its transported partner
+\(g_{R,S}:=-B_{T_0}H_{T_0}E_{S,T_0}j_{R,S}\):
+
+For \emph{no} \(0<R<S<T_0\) can the identity
+\[
+ \sum_{(p,k)\in\mathcal P_{T_0}}c_{p,k}
+ \bigl[g_{R,S}(u-\tau_{p,k})-g_{R,S}(u+\tau_{p,k})\bigr]
+ =\phi_S(u)-(C_{\Gamma,S}j_{R,S})(u)
+\tag{O3AE.4}\label{eq:o3ae-precise-gate}
+\]
+hold for a.e. \(u\) on each connected component of the annulus \(\mathcal A_{R,S}\).
+The right-hand side is real-analytic on each half-annulus by
+Prop~\ref{prop:o3ad-gamma-antilocal} and the analytic
+form of \(\phi_S\).  The left-hand side is a fixed finite linear combination of
+translates of a single \(L^2\) function \(g_{R,S}\).
+\end{remark}
+
+\begin{openproblem}[R32-F: analytic-vs-translation-sum compatibility]
+\label{open:o3ae-analytic-gap}
+For every fixed \(0<R<S<T_0\), decide whether the identity
+\eqref{eq:o3ae-precise-gate} can hold on any nonempty open subinterval of
+\(\mathcal A_{R,S}\).  A negative answer proves R30-F.  Two candidate strategies:
+
+(i) Show \(g_{R,S}\) is not real-analytic near the endpoint set
+\(\{\pm(R+\tau_{p,k}):(p,k)\in\mathcal P_{T_0}\}\), so that its translated
+combination inherits nonremovable singularities incompatible with the
+analytic right-hand side.
+
+(ii) Show that the discrete Fourier symbol
+\(\sum_{(p,k)}c_{p,k}(e^{i\tau_{p,k}\xi}-e^{-i\tau_{p,k}\xi})
+=2i\sum_{(p,k)}c_{p,k}\sin(\tau_{p,k}\xi)\) has an arithmetic property
+(density, algebraic independence of \(\log p\)) incompatible with matching
+the analytic right-hand-side symbol.
+
+Neither strategy is decided by material currently in the repository; both are
+strict \(?[O]\).
+\end{openproblem}
+
+\begin{remark}[Firewall]
+\label{rem:o3ae-firewall}
+Formulas~\eqref{eq:o3ae-hub-off-support}--\eqref{eq:o3ae-sigma-off-support} are
+structural.  They do not by themselves prove R30-F.  They do not decide the
+relative polar gauge, strong terminal transport, Object~X, or RH; the R14
+firewall remains unchanged.  What R32 delivers is the reduction of the R31
+open annular cancellation problem to the precise
+analytic-vs-translation-sum gate~\eqref{eq:o3ae-precise-gate} on the concrete
+finite prime-power translation set \(\{\tau_{p,k}\}\).
+\end{remark}
