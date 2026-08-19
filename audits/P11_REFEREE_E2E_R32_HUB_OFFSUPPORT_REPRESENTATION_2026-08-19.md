@@ -1,6 +1,6 @@
-# P11 End-to-End Referee R32 — discrete-translational off-support representation of the source hub and Schur term
+# P11 End-to-End Referee R32 — antisymmetry of the source hub and annular Schur rewriting
 
-Date: 2026-08-19
+Date: 2026-08-19 (post-audit repositioning applied)
 
 ## Target
 
@@ -16,9 +16,23 @@ routes, of which
 > (1) an explicit off-support representation of
 > \(H_{T_0}(I+R_{T_0}^*R_{T_0})^{-1}H_{T_0}^*\)
 
-is Route 1.  This audit executes Route 1 at the structural level.
+is Route 1.  This audit executes Route 1 \emph{only at the level of the outer
+factor} \(H_{T_0}\).  The inverse \(B_{T_0}=(I+R_{T_0}^*R_{T_0})^{-1}\) is not
+treated here, so no kernel representation of \(\Sigma_{T_0}\) is obtained.
 
 No polar-gauge, terminal-transport, Object-X, or RH conclusion is drawn.
+
+### Repositioning note
+
+The original title of this audit spoke of a "discrete-translational off-support
+representation ... of the source hub and Schur term".  On post-audit review,
+Corollary R32-C is an \emph{annular rewriting} of \(\Sigma_{T_0}\) under
+antisymmetry, not a kernel representation, because the auxiliary function
+\(g=B_{T_0}H_{T_0}^*f\) is defined implicitly through a bounded nonlocal
+inverse whose off-support structure is not controlled here.  The paper module
+\texttt{P11\_O3ae\_HubOffSupport\_Representation.tex} carries the same
+correction.  The mathematics of R32-A, R32-B, R32-C is unchanged; only the
+status rhetoric has been tightened.
 
 ## Repo sync
 
@@ -236,51 +250,56 @@ Status:
 | R30-F: \(R_*(S,T_0)=S\) | ?[O] |
 | Polar gauge / terminal transport consequence | not obtained |
 
-### What R32 changes
+### What R32 changes (post-repositioning)
 
-The R31 open annular cancellation problem is reduced from an abstract question
-about a nonlocal Feshbach operator to the precise structural gate (R32.4):
-does a fixed finite \(\{\tau_{p,k}\}\)-translation sum of a single \(L^2\)
-function match a specific real-analytic function on an open subannulus?
+- Exact antisymmetry \(H_{T_0}^*=-H_{T_0}\) is now recorded in P11.
+- The off-support action of the outer hub factor is now available as an
+  explicit finite \(\{\tau_{p,k}\}\)-shift sum on compactly supported inputs.
+- The Schur term acquires an annular rewriting \((R32.3)\) that separates the
+  outer hub factors (fully explicit) from the inverse \(B_{T_0}\) (implicit).
+- The precise remaining obstruction to R30-F is now displayed as the annular
+  identity \((R32.4)\), whose analytic-vs-shift-sum incompatibility is R32-F.
 
-### What R32 does not change
+### What R32 explicitly does not deliver
 
-- The R14 firewall remains.  A positive resolution of R32-F would prove R30-F,
-  hence \(s_{R,S,T_0}\ne0\) for every strict source inclusion, hence
-  \(\|D_\infty^-\|>0\) everywhere.  All of that stays in layer M
-  (inverse functional calculus).  No polar-gauge or terminal-transport
-  statement follows.
-- The manuscript-level P02→P11 symbol bridge (R31.8) remains ?[O]
-  independently of R32.
+- No kernel representation of \(\Sigma_{T_0}\).
+- No range statement on the annular restriction
+  \(E_{S,T_0}^*\Sigma_{T_0}E_{S,T_0}\).
+- No refutation of the abstract R31-D countermodel: the antisymmetry of the
+  outer hub factor, without control of \(B_{T_0}\), does not by itself exclude
+  the coarse abstract Schur models allowed by R31-D.
+- No proof of R30-F.
+- No polar-gauge, terminal-transport, Object-X, or RH consequence.
+- No closure of the P02→P11 symbol bridge (R31.8); that remains ?[O]
+  independently.
 
 ### Adversarial defence
 
 The R31-D countermodel used only positivity, boundedness, parity, small-Sobolev
 regularity, and abstract positive Feshbach factorisation of the Schur term.
-R32-A, B, C use in addition:
+R32-A and R32-B add the two structural facts
 
-- exact antisymmetry \(H_{T_0}^*=-H_{T_0}\) (new; R32-A);
+- exact antisymmetry \(H_{T_0}^*=-H_{T_0}\);
 - exact discrete-translational structure of \(H_{T_0}\) with translations
-  \(\tau_{p,k}=(k\log p)/2\) (new to the off-support layer; R32-B).
+  \(\tau_{p,k}=(k\log p)/2\)
 
-The R31-D countermodel does not carry either property.  Hence R31-D is not a
-counterexample to R32-F.  Whether R32-F itself is decidable with these two
-properties alone, or requires more (e.g. explicit off-support control of
-\(B_{T_0}\)), remains open.
+about the outer factor \(H_{T_0}\).  The R31-D countermodel does not carry
+either property in that outer-factor sense.  However R31-D also does not make
+any claim about the outer factor; it operates on the composite \(\Sigma\).
+So the correct honest statement is: R32-A/B do not by themselves refute the
+abstract shape of R31-D at the composite level.  Closing the gate requires
+control of \(B_{T_0}\) as well.
 
 ### Next mathematical target
 
-Route 1 of the R31 audit is now structurally exhausted at the current level of
-generality.  The natural next task is one of:
+Before attempting a further \(H_{T_0}B_{T_0}H_{T_0}^*\) expansion the natural
+next step is the small manuscript-level task:
 
-- Explicit off-support control of \(B_{T_0}=(I+R_{T_0}^*R_{T_0})^{-1}\).
-  Because \(R_{T_0}\) is itself a finite sum of prime-translation and
-  martingale-cutoff operators, \(R_{T_0}^*R_{T_0}\) has finite kernel range and
-  \(B_{T_0}\) admits a Neumann series in a suitable subalgebra.  A concrete
-  off-support representation of \(B_{T_0}\) would close the analyticity
-  question of R32-F Strategy (A).
-- Arithmetic incompatibility argument via Strategy (B): analysis of the
-  discrete Fourier symbol
-  \(\sum_{(p,k)}c_{p,k}\sin(\tau_{p,k}\xi)\) at fixed \(T_0\).
+- Close the P02→P11 symbol bridge (R31.8) explicitly: display
+  \(m_\Gamma=c_0+c_1 q_\Gamma\) with concrete \(c_0,c_1\) and matched Fourier
+  convention, so that R31-B becomes citable directly for the concrete
+  P11 operator \(C_{\Gamma,S}\).
 
-Both are legitimate follow-up modules; neither is executed here.
+Only after that should the inverse \(B_{T_0}\) be attacked, and even then not
+necessarily via a kernel representation but rather via a \emph{fingerprint
+property} of the annular range not shared by R31-D.
