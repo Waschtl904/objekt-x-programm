@@ -121,9 +121,21 @@ For the actual fixed-\(T_0\) P11 Riesz problem put
 \]
 For \(0<R<S<T_0\), define
 \[
- j_{R,S}:=E_{R,S}\rho_{R,T_0},
+ j_{R,S}:=E_{R,S}\rho_{R,T_0}.
 \tag{O3AD.6}\label{eq:o3ad-inherited-riesz}
 \]
+By Proposition~\ref{prop:o3ac-riesz-equation}, applied at source level \(R\), there is
+\(s_R>0\) with
+\[
+ E_R\rho_{R,T_0}\in H^{s_R}(\mathbb R).
+\]
+Since \(m_\Gamma\) has only logarithmic growth, this implies
+\(m_\Gamma\widehat{E_R\rho_{R,T_0}}\in L^2(\mathbb R)\).  Hence
+\[
+ j_{R,S}\in\mathcal D(C_{\Gamma,S})
+ =\mathcal D(A_S^{[T_0]}),
+\]
+so the following residual is a genuine \(L^2(-S,S)\) vector:
 \[
  \boxed{
  \Delta_{R,S}^{[T_0]}
@@ -165,7 +177,7 @@ Consequently, for fixed \(S<T_0\),
 
 \begin{proof}
 The fixed-terminal pullback identity gives
-\(E_{R,S}^*A_S^{[T_0]}E_{R,S}=A_R^{[T_0]}\) in the weak sense, while jet
+\(E_{R,S}^*A_S^{[T_0]}E_{R,S}=A_R^{[T_0]}\) on these typed vectors, while jet
 compatibility gives \(E_{R,S}^*\phi_S=\phi_R\).  Since
 \(A_R^{[T_0]}\rho_{R,T_0}=\phi_R\), this proves
 \eqref{eq:o3ad-residual-interior-zero}.
@@ -200,7 +212,7 @@ claims follow from Proposition~\ref{prop:o3ad-gamma-antilocal}.
 \begin{theorem}[Coarse Schur data do not imply full support]
 \label{thm:o3ad-coarse-no-go}
 Fix \(0<R<S\) on the real odd subspace of \(L^2(-S,S)\).  Let \(C\ge I\) be the exact
-even finite-window Gamma operator and \(\phi=\phi_S\ne0\).  There exist
+even finite-window Gamma operator and let \(\phi=\phi_S\ne0\).  There exist
 \(0\ne\rho\in C_c^\infty((-R,R))\) and a bounded positive selfadjoint rank-one
 operator \(\Sigma\ge0\), preserving parity and bounded on a symmetric sufficiently
 small Sobolev interval, such that
