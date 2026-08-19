@@ -1,0 +1,223 @@
+% P11 paper module: R33 explicit P02-to-P11 archimedean Gamma symbol bridge.
+% Constructive identification of g_infty with the P02 digamma symbol
+% and displayed affine relation m_Gamma = c_0 + c_1 q_Gamma with c_1 != 0.
+
+\subsection{Explicit P02-to-P11 Gamma symbol bridge}
+\label{subsec:o3af-symbol-bridge}
+
+R31 records (Remark~\ref{rem:o3ad-symbol-interface}) that the anti-locality
+theorem for the exact P02 Gamma symbol transfers to the concrete P11 operator
+\(C_{\Gamma,S}\) only after the affine identification
+\(m_\Gamma=c_0+c_1q_\Gamma\), \(c_1\ne0\), is made explicit.  This subsection
+performs that identification constructively.  It records neither Object~X nor
+polar-gauge nor terminal-transport nor RH consequences; it is a manuscript-
+level interface closure.
+
+\subsubsection*{The frozen P02 diagonal symbol}
+
+P02 fixes the archimedean logarithmic derivative
+\[
+ \gamma_\infty(t)
+ :=-\tfrac12\log\pi
+ +\tfrac12\psi\!\left(\tfrac14+\tfrac{it}{2}\right)
+\]
+and the even diagonal symbol
+\[
+ q_\Gamma(\xi)
+ :=2\operatorname{Re}\gamma_\infty(\xi)
+ =-\log\pi
+ +\operatorname{Re}\psi\!\left(\tfrac14+\tfrac{i\xi}{2}\right).
+\tag{O3AF.1}\label{eq:o3af-qgamma-def}
+\]
+The P02 Fourier convention
+\(\widehat f(\xi)=\int f(u)e^{i\xi u}du\),
+\(f(u)=(2\pi)^{-1}\!\int\widehat f(\xi)e^{-i\xi u}d\xi\)
+is used throughout.
+
+\begin{lemma}[Convergent Digamma difference]
+\label{lem:o3af-digamma-difference}
+For every \(\xi\in\mathbb R\),
+\[
+ \boxed{
+ q_\Gamma(\xi)-q_\Gamma(0)
+ =\sum_{n=0}^\infty
+ \left[\frac1{n+\tfrac14}-\frac{n+\tfrac14}{(n+\tfrac14)^2+\tfrac{\xi^2}{4}}\right].
+ }
+\tag{O3AF.2}\label{eq:o3af-digamma-difference}
+\]
+The summands are \(O(n^{-3})\) at fixed \(\xi\), so the series converges
+absolutely.  The right-hand side is nonnegative and vanishes iff \(\xi=0\).
+\end{lemma}
+
+\begin{proof}
+The absolutely convergent representation of \(\psi\) on
+\(\operatorname{Re}z>0\) reads
+\[
+ \psi(z)=-\gamma_{\rm E}+\sum_{n=0}^\infty
+ \left(\frac1{n+1}-\frac1{n+z}\right).
+\]
+Set \(z=\tfrac14+\tfrac{i\xi}{2}\) and take real parts:
+\[
+ \operatorname{Re}\psi(z)
+ =-\gamma_{\rm E}+\sum_{n=0}^\infty
+ \left(\frac1{n+1}-\frac{n+\tfrac14}{(n+\tfrac14)^2+\tfrac{\xi^2}{4}}\right).
+\]
+Subtracting the same formula at \(\xi=0\) removes both \(-\gamma_{\rm E}\)
+and the \(1/(n+1)\)-terms, leaving \eqref{eq:o3af-digamma-difference}.
+Nonnegativity is termwise:
+\(1/(n+\tfrac14)\ge(n+\tfrac14)/((n+\tfrac14)^2+\tfrac{\xi^2}{4})\)
+with equality iff \(\xi=0\).
+\end{proof}
+
+\subsubsection*{Explicit construction of the P11 log symbol \(g_\infty\)}
+
+The current P11 (§2, equation~\eqref{eq:gamma-symbol}) records only
+\[
+ m_\Gamma(\xi)=1+g_\infty(\xi),
+ \qquad m_\Gamma(\xi)\asymp\log(2+|\xi|),
+\]
+without an explicit formula for \(g_\infty\).  We now fix that formula.
+
+\begin{definition}[Explicit P11 log symbol]
+\label{def:o3af-ginfty}
+\[
+ \boxed{
+ g_\infty(\xi)
+ :=q_\Gamma(\xi)-q_\Gamma(0),
+ }
+\tag{O3AF.3}\label{eq:o3af-ginfty}
+\]
+with \(q_\Gamma\) from~\eqref{eq:o3af-qgamma-def}.
+\end{definition}
+
+By Lemma~\ref{lem:o3af-digamma-difference}, \(g_\infty(\xi)\ge0\) and
+\(g_\infty(0)=0\).  This is the ``explicit positive series for \(g_\infty\)''
+already referenced in Subsection~\ref{subsec:o3ac-riesz-support}
+(cf.\ \(\phi_S\) construction) and in the direct-terminal-bridge module.
+
+\begin{proposition}[Symbol properties under Definition~\ref{def:o3af-ginfty}]
+\label{prop:o3af-symbol-props}
+The multiplier \(m_\Gamma=1+g_\infty\) satisfies:
+\begin{enumerate}
+\item[(i)] \(m_\Gamma:\mathbb R\to[1,\infty)\), even, real-analytic;
+\item[(ii)] \(m_\Gamma(\xi)=\log|\xi|+\bigl(1-\log\pi+\psi(\tfrac14)-\log 2\bigr)
+   +o(1)\) as \(|\xi|\to\infty\);
+   in particular \(m_\Gamma(\xi)\asymp\log(2+|\xi|)\).
+\item[(iii)] The dilation inequality \(m_\Gamma(\lambda\xi)\le\lambda^2\,m_\Gamma(\xi)\)
+   for \(\lambda\ge1\) required in the direct-terminal-bridge (equation
+   DT.25) holds.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) By Lemma~\ref{lem:o3af-digamma-difference},
+\(g_\infty\ge0\) with \(g_\infty(0)=0\), so \(m_\Gamma\ge1\).  Evenness follows
+from \(\overline{\gamma_\infty(t)}=\gamma_\infty(-t)\).  Real-analyticity is
+inherited from \(\operatorname{Re}\psi(\tfrac14+i\xi/2)\).
+
+(ii) The Digamma asymptotic
+\(\psi(z)=\log z-\tfrac{1}{2z}+O(1/z^2)\) as \(|z|\to\infty\) in any sector
+avoiding the negative real axis gives, for \(z=\tfrac14+i\xi/2\) with real
+\(\xi\to\pm\infty\),
+\[
+ \operatorname{Re}\psi(z)=\log|z|+O(1/|\xi|^2)=\log(|\xi|/2)+O(1/|\xi|^2).
+\]
+Substituting into~\eqref{eq:o3af-qgamma-def} and using
+\(q_\Gamma(0)=\psi(\tfrac14)-\log\pi\),
+\begin{align*}
+ m_\Gamma(\xi)
+ &=1+q_\Gamma(\xi)-q_\Gamma(0)\\
+ &=1+\bigl(\log(|\xi|/2)-\log\pi+o(1)\bigr)-\bigl(\psi(\tfrac14)-\log\pi\bigr)\\
+ &=\log|\xi|+\bigl(1-\log 2-\psi(\tfrac14)\bigr)+o(1).
+\end{align*}
+Both sides are bounded between constant multiples of \(\log(2+|\xi|)\) for
+\(|\xi|\ge1\); at \(|\xi|\le1\) \(m_\Gamma\) is continuous, real-analytic
+and bounded away from \(0\) and \(\infty\).  Together this proves
+\(m_\Gamma\asymp\log(2+|\xi|)\).
+
+(iii) Set \(y_n:=n+\tfrac14\) and \(x:=|\xi|/2\).  Then
+\[
+ s_n(\xi):=\frac1{y_n}-\frac{y_n}{y_n^2+x^2}
+ =\frac{x^2}{y_n(y_n^2+x^2)},
+ \qquad
+ g_\infty(\xi)=\sum_{n\ge0}s_n(\xi).
+\]
+For \(\lambda\ge1\),
+\[
+ \frac{s_n(\lambda\xi)}{s_n(\xi)}
+ =\lambda^2\cdot\frac{y_n^2+x^2}{y_n^2+\lambda^2x^2}
+ \le\lambda^2,
+\]
+since \(y_n^2+\lambda^2x^2\ge y_n^2+x^2\).  Summing over \(n\) gives
+\(g_\infty(\lambda\xi)\le\lambda^2\,g_\infty(\xi)\).
+Because \(1\le\lambda^2\) as well,
+\[
+ m_\Gamma(\lambda\xi)
+ =1+g_\infty(\lambda\xi)
+ \le\lambda^2+\lambda^2g_\infty(\xi)
+ =\lambda^2\,m_\Gamma(\xi).
+\]
+\end{proof}
+
+\subsubsection*{The affine bridge}
+
+\begin{corollary}[P02-to-P11 affine symbol bridge]
+\label{cor:o3af-symbol-bridge}
+Under Definition~\ref{def:o3af-ginfty},
+\[
+ \boxed{
+ m_\Gamma(\xi)=c_0+c_1\,q_\Gamma(\xi)
+ \qquad\text{with}\qquad
+ c_1=1,\quad
+ c_0=1-q_\Gamma(0)=1+\log\pi-\psi(\tfrac14).
+ }
+\tag{O3AF.4}\label{eq:o3af-affine-bridge}
+\]
+Numerically \(c_0\approx6.372183\), so \(c_0>0\).
+\end{corollary}
+
+\begin{proof}
+Immediate from~\eqref{eq:o3af-ginfty} and \(m_\Gamma=1+g_\infty\).
+\end{proof}
+
+\subsubsection*{Consequences for R31}
+
+\begin{corollary}[R31-B transfers to the concrete P11 operator]
+\label{cor:o3af-r31-transfer}
+Under Definition~\ref{def:o3af-ginfty} and
+Corollary~\ref{cor:o3af-symbol-bridge},
+Proposition~\ref{prop:o3ad-gamma-antilocal} applies with \(c_1=1\ne0\).
+Hence for every nonzero \(f\in L^2(\mathbb R)\) with
+\(\operatorname{ess\,supp}f\subset[-R,R]\), the full-line multiplier action of
+\(m_\Gamma\) cannot vanish on any open subinterval of \((R,\infty)\) nor of
+\((-\infty,-R)\).
+
+Consequently the annular identity
+\eqref{eq:o3ad-forced-cancellation} in R31 holds with the exact
+off-diagonal kernel
+\[
+ K_\Gamma(u)=-\frac{e^{-|u|/2}}{1-e^{-2|u|}},\qquad u\ne0,
+\]
+and the right-hand side of that identity is real-analytic on each
+half-annulus in the concrete P11 setting.  In particular R31-B is now a
+theorem about the concrete finite-window operator \(C_{\Gamma,S}\) and no
+longer only about the abstract P02 symbol.
+\end{corollary}
+
+\begin{proof}
+The affine bridge~\eqref{eq:o3af-affine-bridge} places \(m_\Gamma\) exactly in
+the range covered by
+Proposition~\ref{prop:o3ad-gamma-antilocal}, with \(c_1=1\).  The kernel and
+analyticity conclusions are exactly the statements of that proposition and its
+proof.
+\end{proof}
+
+\begin{remark}[Scope]
+\label{rem:o3af-scope}
+This subsection closes the manuscript-level interface \(?[O]\) recorded in
+Remark~\ref{rem:o3ad-symbol-interface}.  It does not otherwise change the
+mathematical status of R30, R30-F, R31, R31-D, R32, or R32-F.  In particular
+R30-F remains \(?[O]\).  The R14 firewall is untouched: none of the material
+in this subsection makes any polar-gauge, terminal-transport, Object-X, or RH
+statement.
+\end{remark}
