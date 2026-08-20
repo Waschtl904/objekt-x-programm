@@ -193,6 +193,37 @@ def q_domain(R, S):
     return (lo, hi) if lo < hi else None
 
 
+def middle_wedge_upper(R):
+    return min(2.0 * D + R, 2.0 * TAU2 - R)
+
+
+def assert_middle_wedge_case(R, T0=0.56):
+    lower = 0.5 * (TAU2 + TAU3)
+    upper = middle_wedge_upper(R)
+    assert D / 2.0 < R < D
+    assert lower < upper
+
+    S = 0.5 * (lower + upper)
+    assert TAU3 < T0 < 2.0 * TAU2
+    assert lower < S < upper < T0
+    assert q_domain(R, S) is None
+
+    cells, killed, events = typed_closure(R, S, T0)
+    assert len(cells) == 8
+    assert len(killed) == 1
+    assert abs(killed[0][0] - R) <= EPS
+    assert abs(killed[0][1] - S) <= EPS
+
+    h = (TAU2 + TAU3 - S, S)
+    assert any(
+        event[1] == "weighted involution kill"
+        and abs(event[2][0] - h[0]) <= EPS
+        and abs(event[2][1] - h[1]) <= EPS
+        for event in events
+    )
+    return S
+
+
 def print_case(R, S, T0):
     cells, killed, events = typed_closure(R, S, T0)
     print(f"case R={R:.12g}, S={S:.12g}, T0={T0:.12g}")
@@ -232,10 +263,18 @@ if __name__ == "__main__":
         for event in events15
     )
 
+    # A14.2e sweep: points on both sides of R=a-d=2a-b.  The test chooses
+    # S strictly inside the proved wedge and requires complete annulus killing
+    # together with the terminal weighted p_2 involution.
+    wedge_cases = (0.105, 0.12, 0.14, 0.15, 0.18, 0.20)
+    wedge_s = [(R, assert_middle_wedge_case(R)) for R in wedge_cases]
+
     # Requested qualitative regression cases.
     print_case(0.10, 0.50, 0.56)
     print_case(0.05, 0.50, 0.56)
     print_case(0.15, 0.50, 0.56)
     print_case(0.02, 0.08, 0.56)
+    for R, S in wedge_s:
+        print_case(R, S, 0.56)
 
-    print("PASS: A14.2b/A14.2d typed regressions and auxiliary cases")
+    print("PASS: A14.2b/A14.2d/A14.2e typed regressions and auxiliary cases")
