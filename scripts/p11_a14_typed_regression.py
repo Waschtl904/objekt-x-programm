@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
 """Conservative typed regression helper for P11 R36-A14.2.
 
-Rules used:
+Core closure rules:
   1. one surviving term -> kill its chart image;
   2. exactly two surviving terms with the same image interval -> compute the
      induced affine transition;
   3. invariant involution with multiplier square != 1 -> kill that interval;
   4. re-evaluate complete cell constraints after every new kill.
 
-The helper deliberately never forms pairwise edges from a cell with three or
-more surviving terms.  It is a regression certificate, not a global
+The core helper deliberately never forms pairwise edges from a cell with three
+or more surviving terms.  It is a regression certificate, not a global
 pseudogroup termination proof.
+
+A14.2f adds one separate exact certificate for the right cell-order flank
+S>2*tau2-R.  There two adjacent cells carry the two halves of the same p_2
+reflection relation.  The certificate checks those cells and their domains
+explicitly; it does not weaken the conservative core rules.
 """
 
 from __future__ import annotations
@@ -70,6 +75,10 @@ def covered(interval, killed):
 
 def same_interval(a, b):
     return abs(a[0] - b[0]) <= EPS and abs(a[1] - b[1]) <= EPS
+
+
+def close_interval(interval, target):
+    return same_interval(interval, target)
 
 
 def enumerate_cells(R, S, T0):
@@ -197,6 +206,95 @@ def middle_wedge_upper(R):
     return min(2.0 * D + R, 2.0 * TAU2 - R)
 
 
+def unified_strip_lower(R):
+    return max(0.5 * (TAU2 + TAU3), 2.0 * TAU2 - D - R)
+
+
+def assert_full_core_kill(R, S, T0=0.56):
+    cells, killed, events = typed_closure(R, S, T0)
+    assert len(killed) == 1
+    assert abs(killed[0][0] - R) <= EPS
+    assert abs(killed[0][1] - S) <= EPS
+    return cells, events
+
+
+def find_cell(cells, lo, hi):
+    for cell in cells:
+        if abs(cell.lo - lo) <= EPS and abs(cell.hi - hi) <= EPS:
+            return cell
+    raise AssertionError(f"cell ({lo}, {hi}) not found")
+
+
+def find_term(cell, shift, kind):
+    matches = [term for term in cell.terms if term.shift == shift and term.kind == kind]
+    assert len(matches) == 1, (cell, shift, kind, matches)
+    return matches[0]
+
+
+def assert_right_flank_assembled_p2(R, S, T0=0.56):
+    """Exact A14.2f Case IV certificate for S>2*tau2-R.
+
+    The conservative core closure intentionally stops because the two high
+    images on the three-term cell differ.  This function checks the exact
+    adjacent-cell decomposition whose relation domains union to the invariant
+    p_2 interval H=(tau2+tau3-S,S).
+    """
+
+    assert D / 2.0 < R < D
+    assert 0.5 * (TAU2 + TAU3) < S < TAU3
+    assert S > 2.0 * TAU2 - R
+    assert TAU3 < T0 < 2.0 * TAU2
+
+    A = TAU2 + TAU3 - S
+    B = 2.0 * TAU2 - R
+    C = D + R
+    assert R < D < A < S
+    assert A < C
+    assert B < S
+    assert S - D < A
+
+    cells = enumerate_cells(R, S, T0)
+
+    # One-term block: (S-a,a) -> (d,A), (a,b-R) -> (R,d).
+    left = find_cell(cells, S - TAU2, TAU2)
+    assert len(left.terms) == 1
+    left_b = find_term(left, "3", "fold")
+    assert close_interval(left_b.image, (D, A))
+
+    mid = find_cell(cells, TAU2, TAU3 - R)
+    assert len(mid.terms) == 1
+    mid_b = find_term(mid, "3", "fold")
+    assert close_interval(mid_b.image, (R, D))
+
+    # Three-term cell: low image is already in (R,A); the two high images
+    # encode p_2 on z in (A,B).
+    three = find_cell(cells, TAU3 - S, TAU2 - R)
+    assert len(three.terms) == 3
+    low = find_term(three, "2", "fold")
+    fwd = find_term(three, "2", "forward")
+    bfold = find_term(three, "3", "fold")
+    assert close_interval(low.image, (R, S - D))
+    assert close_interval(fwd.image, (A, B))
+    assert close_interval(bfold.image, (C, S))
+    assert low.image[1] < A + EPS
+
+    # Adjacent two-term cell supplies the same p_2 relation on z in (B,S).
+    two = find_cell(cells, TAU2 - R, S - TAU2)
+    assert len(two.terms) == 2
+    fwd2 = find_term(two, "2", "forward")
+    bfold2 = find_term(two, "3", "fold")
+    assert close_interval(fwd2.image, (B, S))
+    assert close_interval(bfold2.image, (A, C))
+
+    # Domain union and partner-image union are both exactly H=(A,S), up to
+    # endpoints.  On both cells the relation is c2*h(z)+c3*h(p_2(z))=0.
+    assert close_interval((fwd.image[0], fwd2.image[1]), (A, S))
+    assert close_interval((bfold2.image[0], bfold.image[1]), (A, S))
+    assert abs((C2 / C3) ** 2 - 1.0) > EPS
+
+    return (A, S)
+
+
 def assert_middle_wedge_case(R, T0=0.56):
     lower = 0.5 * (TAU2 + TAU3)
     upper = middle_wedge_upper(R)
@@ -208,11 +306,8 @@ def assert_middle_wedge_case(R, T0=0.56):
     assert lower < S < upper < T0
     assert q_domain(R, S) is None
 
-    cells, killed, events = typed_closure(R, S, T0)
+    cells, events = assert_full_core_kill(R, S, T0)
     assert len(cells) == 8
-    assert len(killed) == 1
-    assert abs(killed[0][0] - R) <= EPS
-    assert abs(killed[0][1] - S) <= EPS
 
     h = (TAU2 + TAU3 - S, S)
     assert any(
@@ -234,11 +329,8 @@ def print_case(R, S, T0):
 
 
 if __name__ == "__main__":
-    cells, killed, _ = typed_closure(0.10, 0.50, 0.56)
+    cells, _ = assert_full_core_kill(0.10, 0.50, 0.56)
     assert len(cells) == 8
-    assert len(killed) == 1
-    assert abs(killed[0][0] - 0.10) <= EPS
-    assert abs(killed[0][1] - 0.50) <= EPS
 
     q = q_domain(0.10, 0.50)
     assert q is not None
@@ -248,12 +340,9 @@ if __name__ == "__main__":
     # R=0.15 is the A14.2d regression: q is absent, but the full annulus is
     # still killed.  The right remainder must be killed by a genuine weighted
     # involution, so this case is explicitly NOT a nilpotent-DAG certificate.
-    cells15, killed15, events15 = typed_closure(0.15, 0.50, 0.56)
+    cells15, events15 = assert_full_core_kill(0.15, 0.50, 0.56)
     assert len(cells15) == 8
     assert q_domain(0.15, 0.50) is None
-    assert len(killed15) == 1
-    assert abs(killed15[0][0] - 0.15) <= EPS
-    assert abs(killed15[0][1] - 0.50) <= EPS
 
     h15 = (TAU2 + TAU3 - 0.50, 0.50)
     assert any(
@@ -263,18 +352,36 @@ if __name__ == "__main__":
         for event in events15
     )
 
-    # A14.2e sweep: points on both sides of R=a-d=2a-b.  The test chooses
-    # S strictly inside the proved wedge and requires complete annulus killing
-    # together with the terminal weighted p_2 involution.
+    # A14.2e sweep: points on both sides of R=a-d=2a-b.
     wedge_cases = (0.105, 0.12, 0.14, 0.15, 0.18, 0.20)
     wedge_s = [(R, assert_middle_wedge_case(R)) for R in wedge_cases]
+
+    # A14.2f: small-R q anchor above the slanted lower bound.
+    assert 0.50 > unified_strip_lower(0.01)
+    assert_full_core_kill(0.01, 0.50, 0.56)
+
+    # A14.2f: strict point beyond the old left A14.2e flank.
+    assert 0.53 > 2.0 * D + 0.12
+    assert 0.53 < TAU3
+    assert_full_core_kill(0.12, 0.53, 0.56)
+
+    # A14.2f: strict points beyond the old right A14.2e flank.  The core
+    # helper is allowed to stop; the exact adjacent-cell certificate closes H.
+    for S in (0.515, 0.54):
+        assert S > 2.0 * TAU2 - 0.18
+        assert_right_flank_assembled_p2(0.18, S, 0.56)
+
+    # A second right-flank point close to R=d.
+    assert_right_flank_assembled_p2(0.20, 0.54, 0.56)
 
     # Requested qualitative regression cases.
     print_case(0.10, 0.50, 0.56)
     print_case(0.05, 0.50, 0.56)
     print_case(0.15, 0.50, 0.56)
     print_case(0.02, 0.08, 0.56)
+    print_case(0.12, 0.53, 0.56)
+    print_case(0.18, 0.515, 0.56)
     for R, S in wedge_s:
         print_case(R, S, 0.56)
 
-    print("PASS: A14.2b/A14.2d/A14.2e typed regressions and auxiliary cases")
+    print("PASS: A14.2b/A14.2d/A14.2e/A14.2f typed regressions and flank certificates")
