@@ -214,10 +214,28 @@ if __name__ == "__main__":
     assert abs(q[0] - 0.10) <= EPS
     assert abs(q[1] - (D - 0.10)) <= EPS
 
+    # R=0.15 is the A14.2d regression: q is absent, but the full annulus is
+    # still killed.  The right remainder must be killed by a genuine weighted
+    # involution, so this case is explicitly NOT a nilpotent-DAG certificate.
+    cells15, killed15, events15 = typed_closure(0.15, 0.50, 0.56)
+    assert len(cells15) == 8
+    assert q_domain(0.15, 0.50) is None
+    assert len(killed15) == 1
+    assert abs(killed15[0][0] - 0.15) <= EPS
+    assert abs(killed15[0][1] - 0.50) <= EPS
+
+    h15 = (TAU2 + TAU3 - 0.50, 0.50)
+    assert any(
+        event[1] == "weighted involution kill"
+        and abs(event[2][0] - h15[0]) <= EPS
+        and abs(event[2][1] - h15[1]) <= EPS
+        for event in events15
+    )
+
     # Requested qualitative regression cases.
     print_case(0.10, 0.50, 0.56)
     print_case(0.05, 0.50, 0.56)
     print_case(0.15, 0.50, 0.56)
     print_case(0.02, 0.08, 0.56)
 
-    print("PASS: canonical typed A14.2b regression and auxiliary cases")
+    print("PASS: A14.2b/A14.2d typed regressions and auxiliary cases")
