@@ -1,6 +1,6 @@
 # Synthese-Manuskripte — Index
 
-**Stand:** 2026-08-09  
+**Stand:** 2026-08-09; P11-Sonderupdate 2026-08-21  
 **Stufen:** SYN (konsolidiert, intern) | PUB (publikationsreif)
 
 ---
@@ -27,6 +27,16 @@
 | P06 | `P06_Jacobi_Feshbach_and_Divisor_Graph.tex` | Jacobi–Feshbach and Divisor Graph | SYN | **FROZEN ✓[K/M]** |
 | P07 | `P07_Weil_Form_Statistics.tex` | Weil-Form Statistics | SYN | **FROZEN ✓[K/M]** |
 | P08 | `P08_Renormalized_Prime_Operators_and_Finite_Part_Structures.tex` | Renormalized Prime Operators and Finite-Part Structures | SYN | **FROZEN ✓[K/M]** |
+
+### P11-Sonderstatus — 2026-08-21
+
+`P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex` ist nach vollständigem mathematischem End-to-End-Audit und beobachtet grünem GitHub-Actions-Zwei-Pass-LaTeX-/Reference-Check auf `main@3d60e19697420040ea8fede5dd5fc87703dfe92e` formal
+
+**FROZEN ✓[K/M]**
+
+am ausdrücklich gewählten finite-horizon / Candidate-Geometry-Scope.
+
+Strong odd terminal transport, finite-jet inverse-square-root control, konkrete polar-gauge Asymptotik und R30-F/R32-F bleiben `?[O]`; sie sind keine versteckten Voraussetzungen des eingefrorenen P11-Cores. Der kanonische Abschluss ist dokumentiert in `audits/P11_FREEZE_RECORD_2026-08-21.md`.
 
 ---
 
