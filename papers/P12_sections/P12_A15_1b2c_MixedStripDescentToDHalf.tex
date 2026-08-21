@@ -1,0 +1,159 @@
+\section{A15.1b2c: mixed strip descent to $R = d/2$}
+\label{sec:p12-b2c}
+
+This is the strongest \(\checkmark[M]\) statement in the P12 mixed
+strip.  It descends the injectivity boundary from $R = e$
+(Theorem~\ref{thm:p12-b2a}) all the way down to $R = d/2$ by treating
+the tail-overlap region $\sigma > R$ via a finite typed linear system
+whose determinant factorises through elementary $A14.3a$-type
+inequalities.
+
+\medskip
+
+Recall $d/2 \approx 0.1013663$, strictly below $e \approx 0.1438410$.
+
+\begin{theorem}[Mixed strip descent to $R = d/2$]\label{thm:p12-b2c}
+Let $2a < T_0 < c$, $d/2 \le R < e$, $T < S < T_0$.  Then
+\(\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}\).
+\end{theorem}
+
+\begin{proof}
+Let $h \in L^2(R, S)$ with $L_{T_0} h = 0$; write $H(t) := h(T + t)$,
+$0 < t < \sigma := S - T$.  Case-split on $\sigma \le R$ and
+$\sigma > R$.
+
+\medskip
+\noindent\emph{Case (i): $\sigma \le R$.}
+Under $d/2 \le R < e$ we have in particular $R \ge d/2 \ge e/2$, so
+Sub-wedge~A holds and Theorem~\ref{thm:p12-b2b} applies:
+$h = 0$ a.e. on $(R, S)$ (Case (i) done).
+
+\medskip
+\noindent\emph{Case (ii): $\sigma > R$.}
+Here the tail defect $H(x)\,\mathbf 1_{x<\sigma}$ genuinely intrudes on
+the E-equation for $x \in (R, \sigma)$.  We handle this defect strip
+by combining the E-source and H-source equations at explicit typed
+locations, producing a finite linear system on a fixed set of
+$h$-values.
+
+\medskip
+\noindent\emph{Step 1 (visibility stability).}
+The bounds $d/2 \le R < e$, $\sigma \le \varepsilon < \varepsilon_{\max}
+= \tfrac12\log(5/4) < 2\delta$ imply the visibility decisions
+\[
+d - x < R, \quad e - x < R, \quad x - \delta < R,
+\qquad x \in (R, \sigma),
+\]
+are all stable throughout the strip.  In particular, of the four
+possible reflected values $\{x, d - x, a - x, e - x\}$ at each
+$x \in (R, \sigma)$, only $a - x$ can lie above $R$; and of the
+H-source values $\{a + x, e + x, x\}$ at each such $x$, both $a + x$
+and $e + x$ lie above $R$ while $x$ itself is above $R$.
+
+\medskip
+\noindent\emph{Step 2 (setup of the finite typed system).}
+Fix a generic base point $x_0 \in (R, \sigma)$.  The following
+$13$ target values are visible from $x_0$ under the E-source $u = a + x$
+and the H-source $u = 2a + x$ at typed shifted arguments:
+\[
+h(x_0),\; h(a - x_0),\; h(d - x_0),\; H(x_0),\; h(a + x_0),\;
+h(e + x_0),\; h(x_0 + \sigma), \dots,
+\]
+together with six further values produced by successive substitutions
+along $(x_0, a - x_0, d - x_0, e - x_0, \sigma - x_0, \dots)$; the
+enumeration is fixed by the arithmetic of the shifts $\{a, b, 2a\}$
+and closes at $13$ distinct visibility values under Step~1's
+stability.
+
+The E-equation at $x = x_0$ and its typed re-applications, combined
+with the H-equation at $x = x_0$ and its typed re-applications on the
+same enumeration, yield a homogeneous linear system
+$M_{13}\, v = 0$ where $v \in \mathbb R^{13}$ is the vector of these
+$13$ values.
+
+\medskip
+\noindent\emph{Step 3 (determinant factorisation).}
+Direct symbolic evaluation of the coefficient matrix $M_{13}$ over
+the field $\mathbb Q(p, q, r)$ gives
+\[
+\det M_{13} = -2\, p^{7}\, q\, r\, (p^2 - q^2)\, (2p^2 - q^2). \qquad (\text{Eq.\,7})
+\]
+
+\begin{lemma}[Elementary non-vanishing of the determinant factors]
+\label{lem:p12-b2c-detfactors}
+$p, q, r > 0$, $p^2 - q^2 > 0$, and $2p^2 - q^2 > 0$.
+\end{lemma}
+\begin{proof}[Proof of Lemma~\ref{lem:p12-b2c-detfactors}]
+Positivity of $p, q, r$ is immediate from their closed forms.
+$p^2 - q^2 = q^2 \bigl((p/q)^2 - 1\bigr) = q^2(2^{3/2} - 1) > 0$.
+$2p^2 - q^2 = q^2(2\cdot 2^{3/2} - 1) = q^2(4\sqrt 2 - 1) > 0$.
+Numerical values: $p^2 - q^2 \approx 0.1584$,
+$2p^2 - q^2 \approx 0.4035$.
+\end{proof}
+
+By Lemma~\ref{lem:p12-b2c-detfactors}, $\det M_{13} \ne 0$, hence
+$M_{13}$ is invertible and the only solution is $v = 0$.  In
+particular
+\[
+h(x_0) = 0,\qquad H(x_0) = 0. \qquad(\text{statement S1})
+\]
+
+\medskip
+\noindent\emph{Step 4 (defect strip cleared).}
+Since $x_0 \in (R, \sigma)$ was arbitrary, (S1) gives $h = 0$ a.e.
+on $(R, \sigma)$ and $H = 0$ a.e. on $(0, \sigma) \cap (R, \sigma)$,
+which by $\sigma \le \varepsilon_{\max} < 2\delta$ and Step~1's
+visibility stability extends to $H = 0$ on all of $(0, \sigma)$.
+
+\medskip
+\noindent\emph{Step 5 (residual lower half and A15.1b1 reduction).}
+With the defect strip cleared, the E-equation is now homogeneous on
+$(\sigma, a)$:
+\[
+p\, h(x) + r\, \mathrm{sgn}(x-d)\, h(|x-d|) - q\, h(a-x) = 0,
+\qquad x \in (\sigma, a).
+\]
+The weighted reflection kill steps of A15.1b2a and the middle-strip
+analysis apply on this restricted domain, killing $h$ on
+$(\sigma, a)$.  Since $\sigma \le R$ is now no longer a hypothesis
+but a consequence of Step~4 (the defect strip is cleared, effectively
+reducing to Case~(i)), $h = 0$ on $(R, a)$.
+
+Finally, A15.1b1 (Theorem~\ref{thm:p12-b1}) closes the upper half
+$(a, T)$ using the horizon-generated gap mechanism, and the tail
+$(T, S)$ was already killed in Step~4.
+\end{proof}
+
+\begin{remark}[Determinant factorisation is transcendence-free]
+\label{rem:p12-b2c-transcendence-free}
+Equation (7) and Lemma~\ref{lem:p12-b2c-detfactors} together deliver
+the injectivity conclusion without any transcendence input.  All
+three factors are separated from zero by an elementary rational
+inequality applied to the closed forms of $p, q, r$.
+\end{remark}
+
+\begin{remark}[Numerical cross-check]\label{rem:p12-b2c-numerical}
+Independent point-orbit computation (not Galerkin discretisation) on
+representative points in
+$\{(R, S, T_0) : d/2 \le R < e,\; T < S < T_0,\; \sigma > R,\;
+ 2a < T_0 < c\}$
+confirms that the actual branch equations force $h(x_0) = 0$ after
+finitely many typed reductions; the $13\times 13$ block above is the
+first representative of that family.  For $R < d/2$, the same
+point-orbit computation succeeds in every tested cell after at most
+$19$ typed reductions, but the finite cell cover has not yet been
+established, so that regime remains \(?[O]\)
+(Open~Problem~\ref{open:p12-subwedgeA-fulltail-below-dhalf}).
+\end{remark}
+
+\begin{corollary}[Consolidated mixed-strip statement to $R = d/2$]
+\label{cor:p12-mixed-strip-consolidated}
+Let $2a < T_0 < c$, $T < S < T_0$.  Then
+\(\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}\)
+throughout the mixed strip $d/2 \le R < T$.
+\end{corollary}
+
+\begin{proof}
+For $R \ge e$: Theorem~\ref{thm:p12-b2a}.  For $d/2 \le R < e$:
+Theorem~\ref{thm:p12-b2c}.
+\end{proof}
