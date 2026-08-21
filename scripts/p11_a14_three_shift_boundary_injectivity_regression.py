@@ -5,9 +5,12 @@ Checks the canonical T0=2a three-shift boundary theorem at the mechanical level:
 - original branch formula against the E/U split;
 - lower reflection/translation matrices, determinants and commutation;
 - upper delta/eta transfer matrices, determinants and commutation;
-- continued-fraction return data for the two irrational circle rotations.
+- explicit firewall for the old sign-indefinite convergent wrap-count bug;
+- one-sided positive near-return mechanics with actual floor wrap counts;
+- rank-two return-exponent differences and numerical line-moving witnesses.
 
-The theorem itself is analytic; this script is a domain/sign/algebra firewall.
+The theorem itself is analytic.  This script is a domain/sign/algebra firewall
+for the repaired A14.3a-UC2 proof.
 """
 
 from __future__ import annotations
@@ -176,6 +179,8 @@ def assert_lower_matrices():
     assert abs(det(E0) - 1.0) < EPS
     assert maxerr(mm(E0, Mdelta), mm(Mdelta, E0)) < EPS
     assert abs(E0[0][1]) > 1.0e-6
+    tr = E0[0][0] + E0[1][1]
+    assert tr * tr - 4.0 < -1.0e-6
     return E0, Mdelta
 
 
@@ -197,11 +202,13 @@ def assert_upper_matrices():
     assert abs(det(Neta) - 1.0) < EPS
     assert maxerr(mm(Au, Neta), mm(Neta, Au)) < EPS
     assert abs(Au[0][1]) > 1.0e-6
+    tr = Au[0][0] + Au[1][1]
+    assert tr * tr - 4.0 < -1.0e-6
     return Au, Neta
 
 
-def convergents(x, count=18):
-    # Return (numerator, denominator) convergents of x in (0,1).
+def convergents(x, count=24):
+    # Return (numerator, denominator) continued-fraction convergents.
     aseq = []
     y = x
     for _ in range(count):
@@ -224,27 +231,69 @@ def convergents(x, count=18):
     return out
 
 
-def assert_return_mechanics(alpha, ell, A0, B0):
-    conv = convergents(alpha / ell, 22)
-    good = []
-    for j in range(3, len(conv) - 1):
-        k1, n1 = conv[j]
-        k2, n2 = conv[j + 1]
-        assert abs(n1 * k2 - n2 * k1) == 1
-        eps1 = n1 * alpha - k1 * ell
-        eps2 = n2 * alpha - k2 * ell
-        # exponent vectors (nonwraps, wraps)
-        v1 = (n1 - k1, k1)
-        v2 = (n2 - k2, k2)
-        assert abs(v1[0] * v2[1] - v2[0] * v1[1]) == 1
+def assert_old_convergent_bug(alpha, ell):
+    """Demonstrate the off-by-one defect repaired by A14.3a-UC2."""
+    for k, n in convergents(alpha / ell, 24)[2:]:
+        eps = n * alpha - k * ell
+        if eps < -1.0e-10:
+            actual_wraps = floor(n * alpha / ell)
+            assert actual_wraps == k - 1
+            assert actual_wraps != k
+            return
+    raise AssertionError("failed to find a negative-error convergent")
 
-        G1 = mm(mpow(A0, v1[0]), mpow(B0, v1[1]))
-        G2 = mm(mpow(A0, v2[0]), mpow(B0, v2[1]))
-        # At least one of a sufficiently accurate consecutive pair must move
-        # the vertical line, otherwise the two generators would both preserve it.
-        if abs(eps1) < 1.0e-4 and abs(eps2) < 1.0e-4:
-            good.append(max(abs(G1[0][1]), abs(G2[0][1])))
-    assert good and max(good) > 1.0e-7
+
+def positive_returns(alpha, ell, *, tol=1.0e-4, max_n=200000, min_count=8):
+    """One-sided returns with k=floor(n*alpha/ell), hence exact wrap count."""
+    out = []
+    for n in range(1, max_n + 1):
+        k = floor(n * alpha / ell)
+        eps = n * alpha - k * ell
+        if 0.0 < eps < tol:
+            out.append((n, k, eps, (n - k, k)))
+            if len(out) >= min_count:
+                return out
+    return out
+
+
+def assert_positive_return_mechanics(alpha, ell, A0, B0):
+    returns = positive_returns(alpha, ell)
+    assert len(returns) >= 4
+
+    # Pick a lift safely away from the circle endpoint.  Since eps<tol<<ell,
+    # the actual number of wraps from this start point is exactly k.
+    x = 0.25 * ell
+    for n, k, eps, _ in returns:
+        assert x + eps < ell
+        actual_wraps = floor((x + n * alpha) / ell) - floor(x / ell)
+        assert actual_wraps == k
+
+    # The repaired analytic proof uses that the difference subgroup generated
+    # by the actual exponent vectors has rank two.  Certify a concrete witness.
+    base = returns[0][3]
+    diffs = [
+        (v[0] - base[0], v[1] - base[1])
+        for _, _, _, v in returns[1:]
+    ]
+    rank_two = False
+    for i in range(len(diffs)):
+        for j in range(i + 1, len(diffs)):
+            d0 = diffs[i][0] * diffs[j][1] - diffs[j][0] * diffs[i][1]
+            if d0 != 0:
+                rank_two = True
+                break
+        if rank_two:
+            break
+    assert rank_two
+
+    # Numerical witness only: at least one actual one-sided return matrix moves
+    # the vertical line.  The proof itself obtains existence analytically from
+    # rank two plus the no-finite-power property of A0.
+    moves = []
+    for _, _, _, (n_no_wrap, n_wrap) in returns:
+        G = mm(mpow(A0, n_no_wrap), mpow(B0, n_wrap))
+        moves.append(abs(G[0][1]))
+    assert max(moves) > 1.0e-7
 
 
 def main():
@@ -258,12 +307,17 @@ def main():
     E0, Mdelta = assert_lower_matrices()
     Au, Neta = assert_upper_matrices()
 
-    # Lower circle: length d, rotation e.  Wrap matrix is Mdelta^{-1}.
-    assert_return_mechanics(E, D, E0, inv(Mdelta))
-    # Upper circle: length e, rotation delta.  Wrap matrix is Neta^{-1}.
-    assert_return_mechanics(DELTA, E, Au, inv(Neta))
+    # Explicitly reject the old sign-indefinite convergent convention.
+    assert_old_convergent_bug(E, D)
+    assert_old_convergent_bug(DELTA, E)
 
-    print("PASS: A14.3a canonical three-shift boundary injectivity regressions")
+    # Repaired one-sided return mechanics, with actual floor wrap counts.
+    # Lower circle: length d, rotation e; wrap matrix Mdelta^{-1}.
+    assert_positive_return_mechanics(E, D, E0, inv(Mdelta))
+    # Upper circle: length e, rotation delta; wrap matrix Neta^{-1}.
+    assert_positive_return_mechanics(DELTA, E, Au, inv(Neta))
+
+    print("PASS: repaired A14.3a canonical three-shift boundary regressions")
 
 
 if __name__ == "__main__":
