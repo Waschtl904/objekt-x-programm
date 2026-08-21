@@ -129,17 +129,21 @@ Then \(g\in L^2(-T_0,T_0)\), and for a.e.
  }
 \tag{O3AE.3}\label{eq:o3ae-sigma-off-support}
 \]
-This is an identity, not a kernel representation of \(\Sigma_{T_0}\); the
-auxiliary function \(g\) is defined implicitly through the bounded but nonlocal
-inverse \(B_{T_0}\), and no off-support structure for \(g\) is claimed here.
+Here \(g\) is understood by zero extension outside \((-T_0,T_0)\).  This is an
+identity, not a kernel representation of \(\Sigma_{T_0}\); the auxiliary function
+\(g\) is defined implicitly through the bounded but nonlocal inverse \(B_{T_0}\), and
+no off-support structure for \(g\) is claimed here.
 \end{corollary}
 
 \begin{proof}
-Prop~\ref{prop:o3ae-antisymmetry} and boundedness of \(B_{T_0}\) place
-\(g\in L^2(-T_0,T_0)\).  The claim is~\eqref{eq:o3ae-hub-off-support} applied
-to \(g\); \(g\) is not required to have compact support in \([-R,R]\), so the
-full \(D_{k\log p}\) difference formula applies rather than the one-sided
-restriction of that theorem.
+Proposition~\ref{prop:o3ae-antisymmetry} and boundedness of \(B_{T_0}\) give
+\(g\in L^2(-T_0,T_0)\) and \(\Sigma_{T_0}f=H_{T_0}g\).  Now use the defining formula
+\[
+ H_{T_0}=P_{T_0}\sum_{(p,k)\in\mathcal P_{T_0}}
+ c_{p,k}D_{k\log p}E_{T_0}
+\]
+directly.  For a.e. \(u\in(-T_0,T_0)\), \(P_{T_0}\) is the identity and
+\(D_{k\log p}E_{T_0}g(u)=g(u-\tau_{p,k})-g(u+\tau_{p,k})\), with the stated zero-extension convention.  Summing gives~\eqref{eq:o3ae-sigma-off-support}.  The support-restricted Theorem~\ref{thm:o3ae-hub-off-support} is not invoked for \(g\).
 \end{proof}
 
 \begin{remark}[What Corollary~\ref{cor:o3ae-sigma-rewriting} is and is not]
@@ -157,69 +161,75 @@ R31-D countermodel; it displays the structural gate but does not close it.
 
 \begin{remark}[The annular gate under antisymmetric rewriting]
 \label{rem:o3ae-gap}
-Combining~\eqref{eq:o3ae-sigma-off-support} with the R31 annular
-identity~\eqref{eq:o3ad-forced-cancellation} and assuming the P02-to-P11
-symbol bridge \eqref{eq:o3ad-symbol-bridge}, the concrete R30-F question
-\(R_*(S,T_0)=S\) is \emph{necessary but not obviously sufficient} to obtain via
-the following analytic gate for the inherited vector
-\(j_{R,S}=E_{R,S}\rho_{R,T_0}\) and its transported partner
-\(g_{R,S}:=-B_{T_0}H_{T_0}E_{S,T_0}j_{R,S}\):
-
-If for some \(0<R<S<T_0\) the identity
+Combine~\eqref{eq:o3ae-sigma-off-support} with the R31 annular identity
+\eqref{eq:o3ad-forced-cancellation}.  The P02-to-P11 symbol bridge required there is
+proved below in Corollary~\ref{cor:o3af-symbol-bridge}.  For the inherited vector
+\(j_{R,S}=E_{R,S}\rho_{R,T_0}\) and
+\[
+ g_{R,S}:=-B_{T_0}H_{T_0}E_{S,T_0}j_{R,S},
+\]
+the identity
 \[
  \sum_{(p,k)\in\mathcal P_{T_0}}c_{p,k}
  \bigl[g_{R,S}(u-\tau_{p,k})-g_{R,S}(u+\tau_{p,k})\bigr]
  =\phi_S(u)-(C_{\Gamma,S}j_{R,S})(u)
 \tag{O3AE.4}\label{eq:o3ae-annular-gate}
 \]
-holds for a.e.\ \(u\) on a nonempty open subinterval of an annular component,
-then the corresponding annular residual \(\Delta_{R,S}^{[T_0]}\) can vanish on
-that interval.  The right-hand side of \eqref{eq:o3ae-annular-gate} is
-real-analytic on each half-annulus (Prop~\ref{prop:o3ad-gamma-antilocal} under
-the symbol bridge; \(\phi_S\) analytic away from the origin).  The left-hand
-side is a finite \(\{\tau_{p,k}\}\)-shift sum of a single \(L^2\) function
-\(g_{R,S}\).  Whether such an identity can be realised remains open.
+holds a.e. on the \emph{entire} annulus \(\mathcal A_{R,S}\) if and only if the
+annular residual \(\Delta_{R,S}^{[T_0]}\) vanishes identically, equivalently if and only
+if \(s_{R,S,T_0}=0\).  Thus, for each fixed triple, disproving
+\eqref{eq:o3ae-annular-gate} on even one positive-measure open subinterval is sufficient
+to prove \(\Delta_{R,S}^{[T_0]}\ne0\).  Conversely, a coincidence on only one
+subinterval does \emph{not} refute R30-F; the residual may still be nonzero elsewhere.
+
+The right-hand side of~\eqref{eq:o3ae-annular-gate} is real-analytic on each half-annulus
+by R31 together with the symbol bridge, whereas the left-hand side is a finite
+\(\{\tau_{p,k}\}\)-shift sum of the single \(L^2\) vector \(g_{R,S}\).  Whether the
+full-annulus identity can occur remains open.
 \end{remark}
 
 \begin{openproblem}[R32-F: annular gate for R30-F]
 \label{open:o3ae-analytic-gap}
-Decide whether the identity~\eqref{eq:o3ae-annular-gate} can hold on any
-nonempty open subinterval of \(\mathcal A_{R,S}\) for some
-\(0<R<S<T_0\).  A negative answer implies R30-F.  A positive answer would
-identify an explicit obstruction to R30-F.  Two candidate directions:
+For each fixed \(0<R<S<T_0\), decide whether
+\eqref{eq:o3ae-annular-gate} can hold a.e. on the whole annulus
+\(\mathcal A_{R,S}\).  Proving that it cannot hold for every strict triple is exactly a
+proof of R30-F through the annular criterion.  Producing one triple for which it does
+hold on the whole annulus would refute R30-F for that triple.  Two candidate directions
+remain:
 
-(i) Regularity of \(g_{R,S}\).  If \(g_{R,S}\) fails to be real-analytic on any
-open subinterval of \(\mathcal A_{R,S}\), a finite \(\{\tau_{p,k}\}\)-shift
-sum of \(g_{R,S}\) cannot match a real-analytic function on such an interval,
-ruling out \eqref{eq:o3ae-annular-gate}.  Regularity of the nonlocal
-inverse \(B_{T_0}\) is presently not controlled in the repository.
+(i) A cancellation-stable regularity or singularity fingerprint for the finite shift
+sum of \(g_{R,S}\).  Merely proving that \(g_{R,S}\) itself is non-real-analytic is
+\emph{not} sufficient: nonanalytic contributions from distinct translates may cancel in
+a finite linear combination.  One would need a property (for example an appropriate
+singular-support, wavefront, or continuation invariant) that survives the prescribed
+finite shift combination and is incompatible with the analytic right-hand side.
+Regularity of the nonlocal inverse \(B_{T_0}\) is presently not controlled strongly
+enough in the repository to provide such a fingerprint.
 
-(ii) Fingerprint properties of the concrete annular range.
-Identify a property of the annular restriction
+(ii) Fingerprint properties of the concrete annular range.  Identify a property of the
+annular restriction
 \(E_{S,T_0}^*H_{T_0}B_{T_0}H_{T_0}^*E_{S,T_0}\) that is
-\emph{not shared} by the abstract R31-D countermodel and that is inconsistent
-with the annular value \(\phi_S-C_{\Gamma,S}j_{R,S}\) whenever
-\(\operatorname{supp}(j_{R,S})\subset[-R,R]\).  Positivity, boundedness, parity
-and abstract positive Feshbach factorisation are covered by R31-D; the
-antisymmetry of \(H_{T_0}\) alone (R32) does not by itself suffice.
+\emph{not shared} by the abstract R31-D countermodel and that is inconsistent with the
+annular value \(\phi_S-C_{\Gamma,S}j_{R,S}\) whenever
+\(\operatorname{supp}(j_{R,S})\subset[-R,R]\).  Positivity, boundedness, parity and
+abstract positive Feshbach factorisation are covered by R31-D; the antisymmetry of
+\(H_{T_0}\) alone does not by itself suffice.
 
-Neither direction is decided by material currently in the repository; both are
-strict \(?[O]\).
+Neither direction is decided by material currently in the repository; both are strict
+\(?[O]\).
 \end{openproblem}
 
 \begin{remark}[Firewall]
 \label{rem:o3ae-firewall}
-Prop~\ref{prop:o3ae-antisymmetry} and Theorem~\ref{thm:o3ae-hub-off-support}
-are exact structural facts about \(H_{T_0}\) itself.
-Corollary~\ref{cor:o3ae-sigma-rewriting} is an
-\emph{annular rewriting} of \(\Sigma_{T_0}\) under antisymmetry, not a kernel
-representation.  It does not by itself prove R30-F, and it does not rule out
-the R31-D countermodel — the antisymmetric structure of \(H_{T_0}\) alone,
-without control of \(B_{T_0}\), does not exclude the abstract Feshbach models
-allowed there.  The R14 firewall remains unchanged: even a future positive
-solution of R32-F would prove R30-F, and R30-F itself is an
-inverse-functional-calculus statement only.  It would not decide the relative
-polar gauge, strong terminal transport, Object~X, or RH.  The P02-to-P11
-symbol bridge~\eqref{eq:o3ad-symbol-bridge} continues to be a separate
-\(?[O]\) manuscript gate.
+Proposition~\ref{prop:o3ae-antisymmetry} and Theorem~\ref{thm:o3ae-hub-off-support}
+are exact structural facts about \(H_{T_0}\) itself.  Corollary~\ref{cor:o3ae-sigma-rewriting}
+is an \emph{annular rewriting} of \(\Sigma_{T_0}\) under antisymmetry, not a kernel
+representation.  It does not by itself prove R30-F, and it does not rule out the R31-D
+countermodel---the antisymmetric structure of \(H_{T_0}\) alone, without control of
+\(B_{T_0}\), does not exclude the abstract Feshbach models allowed there.  The R14
+firewall remains unchanged: even a future positive solution of R32-F would prove R30-F,
+and R30-F itself is an inverse-functional-calculus statement only.  It would not decide
+the relative polar gauge, strong terminal transport, Object~X, or RH.  The P02-to-P11
+symbol bridge required in R31 is closed below by Corollary~\ref{cor:o3af-symbol-bridge};
+R30-F and R32-F remain open.
 \end{remark}
