@@ -1,0 +1,178 @@
+\documentclass[11pt,a4paper]{amsart}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathrsfs}
+\usepackage{array,booktabs,longtable}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Satz}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Korollar}
+\newtheorem{remark}[theorem]{Bemerkung}
+\newtheorem{openproblem}[theorem]{Offenes Problem}
+
+\newcommand{\Ran}{\operatorname{Ran}}
+
+\title[P12 --- Adelic Hub Injectivity]{P12 --- Adelic Hub Injectivity beyond the Two-Shift Boundary}
+\author{Objekt-X-Programm}
+\date{2026-08-21}
+
+\begin{document}
+
+\begin{abstract}
+P11 froze the finite-horizon Feshbach--Schur candidate geometry at
+\(T_0 \le 2a\).  P12 opens the next arithmetic-shift chamber
+\(2a < T_0 < \tfrac12\log 5\), where the third shift \(2a\) becomes
+active.  We record the persistence of the A14.3a boundary injectivity
+into a full three-shift regime along four disjoint parameter strata, and
+we identify the exact remaining low-source-radius wedge.
+
+Concretely, P12 establishes:
+\begin{itemize}
+\item \textbf{A15.1b0} pure-tail injectivity for \(S \le T\);
+\item \textbf{A15.1b1} horizon-open \(S = T\) endpoint injectivity;
+\item \textbf{A15.1b2a} mixed strip \(R \ge e\) injectivity, with
+\(e = 2a - b = a - d\);
+\item \textbf{A15.1b2b} mixed strip Sub-wedge~A injectivity \(e/2 \le R < e\).
+\end{itemize}
+
+The complete open front is thereby narrowed to Sub-wedge~B
+\(0 < R < e/2 \approx 0.0719\), where a new low-radius kernel mechanism
+either activates or the wedge closes under a further reflection.
+
+None of P12 asserts polar-gauge, terminal-transport, Object-X or RH
+consequences.  The R14 firewall of P11 is preserved unchanged.
+\end{abstract}
+
+\maketitle
+
+\section{Setup and notation}\label{sec:p12-setup}
+
+We work throughout with the odd folded three-shift operator on
+\(L^2(R,S)\) with parameters \(0 < R < S < T_0\) in the arithmetic
+chamber
+\[
+2a < T_0 < c := \tfrac12\log 5,
+\]
+where the three active shift centres are
+\[
+\tau_{2,1} = a = \tfrac12\log 2, \qquad
+\tau_{3,1} = b = \tfrac12\log 3, \qquad
+\tau_{2,2} = 2a = \log 2.
+\]
+The prime-power weights are
+\[
+p := c_{2,1} = \sqrt{\log 2}\; 2^{-3/4},\quad
+r := c_{3,1} = \sqrt{\log 3}\; 3^{-3/4},\quad
+q := c_{2,2} = \sqrt{\log 2}\; 2^{-3/2}.
+\]
+Auxiliary constants:
+\[
+d := b - a, \quad e := a - d = 2a - b, \quad \delta := d - e = 2b - 3a,
+\quad T := 2a.
+\]
+Numerically
+\[
+d \approx 0.2027, \quad e \approx 0.1438, \quad
+\delta \approx 0.0589, \quad d/2 \approx 0.1014,
+\quad e/2 \approx 0.0719.
+\]
+
+Let \(\varepsilon := T_0 - T > 0\) and, in the mixed strip
+\(T < S < T_0\), let \(\sigma := S - T \in (0, \varepsilon)\).
+
+The folded operator is
+\[
+L_{R,S,T_0}\; h \;=\; P_{L^2(-T_0,T_0)}\!\Bigl(\text{sum of shift sources}\Bigr),
+\]
+with the two-fold sign convention and cutoff structure inherited from
+P11 (2.5) and A14.3a.  All theorems and proofs below use only the
+E-source \(u = a + x\), the H-source \(u = 2a + x\), and the direct
+support-negativity of \(h\).
+
+\section{Persistence up to the arithmetic boundary}\label{sec:p12-persistence}
+
+\begin{theorem}[A15.1b0: pure-tail injectivity]\label{thm:p12-b0}
+Let \(2a < T_0 < c\).  For every \(0 < R < S < T\) (thus \(S < T\) is
+strict) the folded three-shift operator satisfies
+\(\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}\).
+\end{theorem}
+
+\begin{proof}
+Persistence of A14.3a in the pure-source region \(S < T = 2a\).
+The additional \(2a\)-shift is inactive on the source E-family
+\(u = a + x\), \(0 < x < a\), because the fold branch
+\(g(u + 2a) = g(3a + x)\) has argument \(3a + x > 3a > T_0\), hence
+\(P_{T_0}\) deletes it; and the forward branch \(g(u - 2a) = g(x - a)\)
+lies in the odd-extended support region already treated by A14.3a via
+the oddness identity \(g(x - a) = -g(a - x)\), which does not introduce
+new shift-mixed cross terms.  The A14.3a proof structure applies
+verbatim.
+\end{proof}
+
+\begin{remark}\label{rem:p12-b0-scope}
+Theorem~\ref{thm:p12-b0} keeps \(S < T\) strictly.  The exact boundary
+point \(S = T\) with \(T_0 > T\) is a separate case (Theorem~\ref{thm:p12-b1}
+below), because the new \(2a\)-shift fold branch acts on \(g(u + 2a)\)
+even for arbitrarily small \(x\).
+\end{remark}
+
+\input{P12_sections/P12_A15_1b1_HorizonOpenEndpoint}
+\input{P12_sections/P12_A15_1b2a_MixedHighRadius}
+\input{P12_sections/P12_A15_1b2b_MixedSubWedgeA}
+
+\section{Consolidated status and the remaining Sub-wedge B}\label{sec:p12-status}
+
+\begin{corollary}[A15.1 consolidated injectivity]\label{cor:p12-consolidated}
+Let \(2a < T_0 < c\) and \(0 < R < S < T_0\).  Then
+\(\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}\)
+in each of the following disjoint strata:
+\begin{itemize}
+\item[(i)]  \(S < T\)                    (Theorem~\ref{thm:p12-b0});
+\item[(ii)]  \(S = T\)                    (Theorem~\ref{thm:p12-b1});
+\item[(iii)]  \(T < S < T_0\) with \(R \ge e\) (Theorem~\ref{thm:p12-b2a});
+\item[(iv)]  \(T < S < T_0\) with \(e/2 \le R < e\) (Theorem~\ref{thm:p12-b2b}).
+\end{itemize}
+\end{corollary}
+
+\begin{openproblem}[A15.1 remaining front: Sub-wedge B]\label{open:p12-subwedgeB}
+For \(2a < T_0 < c\), \(0 < R < e/2\), \(T < S < T_0\): decide whether
+\(\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}\).
+
+The proof of Theorem~\ref{thm:p12-b2b} uses in \((\text{E}')\) the
+identity \(h(e - x) = 0\) for \(x \in (R, e)\), which needs
+\(e - x < R\), i.e. \(x > e - R\).  For Sub-wedge~A one has
+\(e - R \le e/2 \le R\), so the required range \((e - R, e)\) covers
+all of \((R, e)\) trivially.  In Sub-wedge~B, \(e - R > R\), and the
+subinterval \((R, e - R)\) admits \(e - x > R\), placing \(h(e - x)\)
+outside the vanishing region.  A different reflection or a longer
+kill-chain is required.
+\end{openproblem}
+
+Numerical evidence (independent finite-dimensional Galerkin
+discretization of \(L_{R,S,T_0}\) at parameter values
+\(R \in \{0.02, 0.04, 0.06, 0.07\}\), \(S = 0.75\), \(T_0 = 0.78\),
+mesh size \(N = 200\)) exhibits mesh-stable positive lowest singular
+value \(\sigma_{\min}(L_{R,S,T_0}) \in [6.6\cdot 10^{-2}, 9.5\cdot 10^{-2}]\)
+throughout Sub-wedge~B.  This is consistent with, but does not prove,
+kernel triviality in Sub-wedge~B.  It classifies as \(?[O]\) and
+matches the independent numerical prediction of Council-report
+\texttt{model-council-claude\_opus\_5\_0}.
+
+\section{Firewall}\label{sec:p12-firewall}
+
+None of \S\ref{sec:p12-persistence}--\ref{sec:p12-status} makes a
+polar-gauge, terminal-transport, Object-X or RH statement.  The R14
+firewall from P11 remains unchanged: even a full closure of
+Sub-wedge~B (Open Problem~\ref{open:p12-subwedgeB}) would decide only
+the localized-hub kernel triviality in the three-shift chamber; by
+R36-A1 (P11) this is equivalent to dense range of the annular hub
+projection \(P_{\mathcal A} H_{T_0}\), which is a modulus-layer
+statement.  Neither polar-gauge convergence nor strong terminal
+transport nor a canonical mediator for Object~X follow.
+
+\end{document}

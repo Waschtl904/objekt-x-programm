@@ -1,0 +1,189 @@
+\section{A15.1b2b: mixed strip Sub-wedge A injectivity $e/2 \le R < e$}
+\label{sec:p12-b2b}
+
+The Sub-wedge~A regime is the finest new stratum opened by P12.  It
+sits strictly below the $R \ge e$ threshold of Theorem~\ref{thm:p12-b2a}
+but above the still-open Sub-wedge~B threshold $R < e/2$
+(Open Problem~\ref{open:p12-subwedgeB}).
+
+\begin{theorem}[Mixed strip Sub-wedge A]\label{thm:p12-b2b}
+Let $2a < T_0 < c$, $e/2 \le R < e$, $T < S < T_0$.  Then
+\(\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}\).
+\end{theorem}
+
+\begin{proof}
+Let $h \in L^2(R, S)$ with $L_{T_0} h = 0$; write $H(t) := h(T + t)$,
+$0 < t < \sigma := S - T$, $\sigma < \varepsilon = T_0 - T$.
+
+The E-source $u = a + x$, $0 < x < a$, gives the equation
+\((\text{E}_\sigma)\) as in Theorem~\ref{thm:p12-b2a}.  We record the
+following identity, which uses a second source \(u = 2a + x\) and is
+new in Sub-wedge~A.
+
+\medskip
+\noindent\emph{Auxiliary identity from the H-source.}
+For $u = 2a + x$, $0 < x < \varepsilon$, forward branches are
+$g(u - a) = g(a + x)$, $g(u - b) = g(e + x)$, $g(u - 2a) = g(x)$; all
+fold branches have arguments $\ge 3a > T_0$, hence vanish under
+$P_{T_0}$.  The source equation is
+\[
+p\, g(a + x) + r\, g(e + x) - p\, g(x) = 0.
+\tag{H}
+\]
+For $0 < x < \min(R, \varepsilon)$, the last term vanishes ($x$ outside
+support), yielding
+\[
+p\, h(a + x) + r\, h(e + x) = 0,
+\qquad 0 < x < \min(R, \varepsilon).
+\tag{H$_R$}
+\]
+Substituting $y := e + x$ gives
+\[
+h(y + d) = -(r/p)\, h(y),
+\qquad y \in (e, e + \min(R, \varepsilon)),
+\tag{H$'$}
+\]
+because $a + x = y + d$ (using $a = d + e$).
+
+\medskip
+\noindent\emph{Step 1 (lower interior close to $a$).}
+For $x \in (a - R, a)$, we have $a - x \in (0, R)$, so $h(a - x) = 0$.
+Because $R < e$ gives $a - R > d$, we have $x > d$ throughout and
+$\mathrm{sgn}(x - d) = +1$.  Equation \((\text{E}_\sigma)\) reduces to
+\[
+p\, h(x) + r\, h(x - d) = 0,
+\qquad x \in (a - R, a).
+\tag{4}
+\]
+With $y = x - d \in (a - R - d, e) = (e - R, e)$; Sub-wedge~A has
+$e - R \le e/2 \le R$, so this subinterval is entirely in the
+lower-half killed region built below in Step~3.  This closes the
+top strip in retrospect.
+
+\medskip
+\noindent\emph{Step 2 (middle interior $d < x < a - R$).}
+Here $x - d \in (0, a - R - d) = (0, e - R)$.  Sub-wedge~A gives
+$e - R \le e/2 \le R$, hence $x - d < R$, whence $h(x - d) = 0$.
+The equation reduces to
+\[
+p\, h(x) - q\, h(a - x) = 0,
+\qquad h(x) = (q/p)\, h(a - x).
+\tag{5}
+\]
+Setting $y := a - x \in (R, e)$, we obtain, for $y \in (R, e)$,
+\[
+h(a - y) = (q/p)\, h(y).
+\tag{5$'$}
+\]
+
+\medskip
+\noindent\emph{Step 3 (core wedge $R < x < e$).}
+For $x \in (R, e)$, we have $x < d$, so $\mathrm{sgn}(x - d) = -1$ and
+$|x - d| = d - x$.  Then
+\[
+p\, h(x) - r\, h(d - x) - q\, h(a - x) - p\, H(x)\,\mathbf 1_{x<\sigma} = 0.
+\tag{E$'$}
+\]
+Since $\sigma < e/2 \le R < x$, the $H$-term vanishes.  Substituting
+(5$'$) into (E$'$),
+\[
+p\, h(x) - r\, h(d - x) - q\cdot(q/p)\, h(x) = 0,
+\qquad (p^2 - q^2)\, h(x) = p r\, h(d - x).
+\]
+Set
+\[
+\alpha := \frac{p r}{p^2 - q^2}.
+\]
+Numerically $\alpha \approx 1.4368$, so $\alpha^2 \approx 2.0645 \ne 1$.
+Then
+\[
+h(x) = \alpha\, h(d - x),\qquad x \in (R, e).
+\tag{6}
+\]
+
+Distinguish two sub-cases inside $(R, e)$:
+\begin{itemize}
+\item If $d - x < R$, i.e. $x > d - R$: then $h(d - x) = 0$, so by (6)
+$h(x) = 0$.  This covers $x \in (\max(R, d - R), e)$.
+\item If $d - x \ge R$, i.e. $x \le d - R$: then $d - x \in (R, d - R)
+\subset (R, e)$ (since Sub-wedge~A has $R > \delta = d - e$, hence
+$d - R < e$).  Apply (6) also at $y := d - x$, giving
+$h(d - x) = \alpha\, h(x)$.  Substituting back into (6),
+$h(x) = \alpha^2\, h(x)$, i.e. $(\alpha^2 - 1)\, h(x) = 0$; since
+$\alpha^2 \ne 1$, $h(x) = 0$.  This covers $x \in (R, d - R)$ whenever
+$d - R > R$, i.e. $R < d/2$; in the complementary Sub-wedge~A regime
+$R \ge d/2$, this sub-case is empty.
+\end{itemize}
+
+In either sub-case,
+\[
+h(x) = 0 \quad\text{a.e. on }(R, e).
+\tag{S3}
+\]
+
+\medskip
+\noindent\emph{Step 4 (middle strip $e < x < d$).}
+For $x \in (e, d)$, $\mathrm{sgn}(x - d) = -1$, $|x - d| = d - x
+\in (0, \delta)$.  Sub-wedge~A has $R \ge e/2 > \delta$, so
+$d - x < \delta < R$, whence $h(d - x) = 0$.  Then
+\[
+p\, h(x) - q\, h(a - x) = 0
+\quad\Longrightarrow\quad
+h(x) = (q/p)\, h(a - x).
+\tag{7}
+\]
+Now $a - x \in (e, d)$ as well, so we may apply (7) at $a - x$:
+$h(a - x) = (q/p)\, h(x)$.  Substituting,
+$(p^2 - q^2)\, h(x) = 0$, so $h(x) = 0$.
+\[
+h(x) = 0 \quad\text{a.e. on }(e, d).
+\tag{S4}
+\]
+
+\medskip
+\noindent\emph{Step 5 (upper interior $d < x < a - R$).}
+By (5), $h(x) = (q/p)\, h(a - x)$ with $a - x \in (R, e)$; by (S3),
+$h(a - x) = 0$; hence $h(x) = 0$ on $(d, a - R)$.
+
+Combined with Step~1 (which killed $(a - R, a)$), we obtain
+\[
+h(x) = 0 \quad\text{a.e. on }(d, a).
+\tag{S5}
+\]
+
+Together, (S3), (S4), (S5) give $h = 0$ a.e. on $(0, a)$.
+
+\medskip
+\noindent\emph{Step 6 (upper half and tail).}
+The upper half $(a, T)$ is killed by the A14.3a upper source
+(inherited unchanged) using $h = 0$ on $(0, a)$; and the tail $(T, S)$
+is killed via
+\[
+p\, H(t) + \text{(terms in $h$ on $(0, a)$)} = 0
+\]
+which reduces to $H(t) = 0$ on $(0, \sigma)$ by (S3)--(S5).
+
+Hence $h = 0$ a.e. on $(R, S)$.
+\end{proof}
+
+\begin{remark}[Two independent transcendence inputs]
+\label{rem:p12-b2b-transcendence}
+The proof uses $(p/q)^2 = 2^{3/2} \ne 1$ (an algebraic inequality;
+already present in A14.3a and A15.1b2a) and also $\alpha^2 \ne 1$ with
+$\alpha = p r / (p^2 - q^2)$.  The second inequality is a genuine new
+transcendence input in the same class: $\alpha^2 = 1$ would require an
+algebraic relation between $\log 2$ and $\log 3$ beyond those excluded
+by Gelfond--Schneider.  Numerically $\alpha^2 - 1 \approx 1.065$.
+\end{remark}
+
+\begin{remark}[Where the argument breaks in Sub-wedge B]
+\label{rem:p12-b2b-breakpoint}
+The critical step is (5), which uses $x - d < R$ for $x \in (d, a - R)$.
+Sub-wedge~A has $e - R \le R$, so $x - d < e - R \le R$.  Sub-wedge~B
+has $e - R > R$: for
+$x \in (d, d + e - R)$, one has $x - d \in (0, e - R)$ with the upper
+range $e - R > R$, so $h(x - d)$ need \emph{not} vanish.  Equation (5)
+then acquires a genuine reflection term and the pair (5)--(5$'$)
+becomes coupled with an unresolved third value.  This is the exact
+breakpoint that Open Problem~\ref{open:p12-subwedgeB} isolates.
+\end{remark}

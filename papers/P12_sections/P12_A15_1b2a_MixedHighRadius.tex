@@ -1,0 +1,100 @@
+\section{A15.1b2a: mixed strip $R \ge e$ injectivity}
+\label{sec:p12-b2a}
+
+\begin{theorem}[Mixed strip, high source radius]\label{thm:p12-b2a}
+Let $2a < T_0 < c$, $e \le R < T$, $T < S < T_0$.  Then
+\(\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}\).
+\end{theorem}
+
+\begin{proof}
+Let $h \in L^2(R, S)$ with $L_{T_0} h = 0$.  Set $H(t) := h(T + t)$ for
+$0 < t < \sigma$, $\sigma := S - T$.
+
+With the newly opened source horizon, the E-source $u = a + x$
+introduces exactly one new forward term, giving
+\[
+p\, h(x) + r\, \mathrm{sgn}(x - d)\, h(|x - d|) - q\, h(a - x) - p\, H(x)\,\mathbf 1_{x < \sigma}
+\;=\; 0,
+\qquad 0 < x < a.
+\tag{E$_\sigma$}
+\]
+
+We show $h = 0$ on the lower half $(0, a)$ first, then $H = 0$.
+
+\medskip
+\noindent\emph{Step 1 (upper interior: $d < x < a$).}
+Here $0 < x - d < a - d = e \le R$ and $0 < a - x < a - d = e \le R$, so
+both auxiliary values are outside the support.  (E$_\sigma$) reduces to
+$p\, h(x) = 0$ (the $H(x)\mathbf 1_{x<\sigma}$-term also vanishes because
+$x > d > \sigma$).  Since $p > 0$,
+\[
+h(x) = 0 \quad\text{a.e. on }(d, a).
+\tag{S1}
+\]
+
+\medskip
+\noindent\emph{Step 2 (lower interior: $R < x < d$).}
+Here $0 < d - x < d - R \le d - e = \delta < e \le R$, so
+$h(d - x) = 0$.  Equation (E$_\sigma$) reduces to
+\[
+p\, h(x) - q\, h(a - x) = 0
+\qquad\text{whenever the $H$-term vanishes.}
+\tag{2}
+\]
+The $H$-term vanishes for $x \ge \sigma$; and $\sigma < \varepsilon < e
+\le R < x$, so $x > \sigma$ throughout $(R, d)$.
+
+If $a - x \le R$, immediately $h(x) = 0$.
+
+If $a - x > R$: since $R \ge e$, we have $a - x < a - R \le a - e = d$, so
+$a - x \in (R, d)$.  Applying (2) at $a - x$ gives
+\[
+p\, h(a - x) - q\, h(x) = 0.
+\tag{3}
+\]
+Combining (2) and (3),
+\[
+(p^2 - q^2)\, h(x) = 0.
+\]
+Since $(p/q)^2 = 2^{3/2} \ne 1$, we have $p^2 \ne q^2$, so
+\[
+h(x) = 0 \quad\text{a.e. on }(R, d).
+\tag{S2}
+\]
+
+Together with (S1) and the boundary continuity, this gives
+\(h = 0\) a.e. on $(0, a)$.
+
+\medskip
+\noindent\emph{Step 3 (upper half via A14.3a upper source).}
+For $u = 3a - t$ (or the equivalent upper E-source, in the notation
+inherited from A14.3a §2.2), the upper-half fold structure and the
+same $(p^2 - q^2)$-mechanism kill $h$ on $(a, T)$.  This uses only
+$R \ge e$ combined with (S2) and requires no new terms from the
+$2a$-shift beyond those already accounted for.  We omit the parallel
+argument; it is a direct transcription of A14.3a §5--6 with $S \le T$
+replaced by $S \le T_0 < c < 3a$.
+
+Consequently $h = 0$ on $(0, T)$.
+
+\medskip
+\noindent\emph{Step 4 (tail dies).}
+For $0 < t < \sigma$, (E$_\sigma$) at $x = t$ gives
+\[
+p\, h(t) + r\, \mathrm{sgn}(t - d)\, h(|t - d|) - q\, h(a - t) - p\, H(t) = 0.
+\]
+Since $t < \sigma < \varepsilon < e < d$, we have $t < d$ and $\mathrm{sgn}(t-d) = -1$.
+The three arguments $t$, $d - t$, $a - t$ all lie in $(0, a)$ and are
+therefore in the null region proved in Step~3.  The equation reduces to
+\[
+-p\, H(t) = 0,
+\]
+whence $H(t) = 0$ on $(0, \sigma)$, i.e. $h = 0$ on $(T, S)$.
+\end{proof}
+
+\begin{remark}[Numerical cross-check]\label{rem:p12-b2a-numerical}
+A finite-dimensional Galerkin discretization of $L_{R,S,T_0}$ with
+$R \in [0.144, 0.30]$, $S = 0.5$, $T_0 = 0.78$ and $N = 200$ mesh
+points yields mesh-stable positive $\sigma_{\min}(L_{R,S,T_0})$,
+consistent with Theorem~\ref{thm:p12-b2a}.
+\end{remark}

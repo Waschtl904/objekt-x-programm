@@ -1,0 +1,126 @@
+\section{A15.1b1: horizon-open \texorpdfstring{$S = T$}{S=T} endpoint injectivity}
+\label{sec:p12-b1}
+
+\begin{theorem}[Horizon-open endpoint injectivity]\label{thm:p12-b1}
+Let $2a < T_0 < c$, $0 < R < T$, $S = T$.  Then
+\(\ker L_{R,T,T_0}^{\{a,b,2a\}} = \{0\}\).
+\end{theorem}
+
+\begin{proof}
+Let $h \in L^2(R, T)$ with $L_{T_0} h = 0$.
+
+\medskip
+\noindent\emph{Step 1 (lower-half kill from A14.3a persistence).}
+For $u = a + x$ with $0 < x < a$, the source E-equation of A14.3a
+holds unchanged.  The new upper branch $g(u + 2a) = g(3a + x)$ is
+deleted by $P_{T_0}$ because $3a + x > T_0$ (using $T_0 < c < 3a$).
+The remaining new forward branch $g(u - 2a) = g(x - a)$ is handled by
+oddness $g(x - a) = -g(a - x)$, already inside the A14.3a $q$-reflection
+term.  Because the support of $h$ ends at $T$, the fold branch
+$g(u + a) = g(2a + x) = g(T + x)$ vanishes for $x < 0$ (trivially) and,
+more importantly, for $u > 0$ has $g(2a + x) = 0$ because we assumed
+$S = T$ and $h$ vanishes on $(T, T_0)$ by the support hypothesis.
+
+Consequently, the repaired A14.3a lower-half kill applies verbatim and
+yields
+\[
+h = 0 \quad \text{a.e. on } (R, a).
+\tag{S1}
+\]
+
+\medskip
+\noindent\emph{Step 2 (open source horizon activates the fold).}
+For $u = T + t$ with $0 < t < \varepsilon = T_0 - T$, all three forward
+branches
+\[
+g(u - a) = g(a + t),\quad
+g(u - b) = g(e + t),\quad
+g(u - 2a) = g(t)
+\]
+have arguments above the support of $h$ up to the fold contributions
+below.  Applying the E-equation shape:
+\[
+q\,g(t) + r\,g(e + t) + p\,g(a + t) = 0.
+\tag{1}
+\]
+Since $t < \varepsilon < e < a$, we have $t \in (0, e) \subset (0, a)$
+and, if $t > R$, then $t \in (R, a)$; combined with $e + t \in (e, 2e)
+\subset (e, a)$ and $t > R$ or $t < R$: both $t$ and $e + t$ live in the
+already-killed lower half or (for $t < R$) outside the support.  In
+either case,
+\[
+g(t) = 0, \qquad g(e + t) = 0
+\]
+by (S1) or by support.  Equation (1) therefore reduces to
+$p\, g(a + t) = 0$, hence
+\[
+h(a + t) = 0 \quad\text{for a.e. } 0 < t < \varepsilon.
+\tag{S2}
+\]
+This produces an open null-strip $(a, a + \varepsilon)$ in the
+upper-half support.
+
+\medskip
+\noindent\emph{Step 3 (transport by the high reflection).}
+Define $l(z) := h(T - z) = h(2a - z)$ for $z \in (0, T - R)$.  The old
+$S < T$ upper support gap gave the seed $l(z) = 0$ on $(0, T - S)$; that
+gap has vanished at $S = T$.  The new null-strip (S2) gives instead the
+\emph{right-sided} gap
+\[
+l(z) = 0 \quad \text{for } z \in (a - \varepsilon, a).
+\tag{3}
+\]
+The A14.3a high-reflection identity (valid for $d < z < a$) reads
+\[
+q\, l(z) + p\, l(a - z) = 0.
+\tag{4}
+\]
+Because $\varepsilon < e$ implies $a - \varepsilon > d$, the whole gap
+(3) lies in the region where (4) applies.  Substituting (3) into (4)
+gives $p\, l(a - z) = 0$, hence $l(a - z) = 0$, i.e., under
+$w := a - z$,
+\[
+l(w) = 0 \quad \text{for } 0 < w < \varepsilon.
+\tag{S3}
+\]
+
+\medskip
+\noindent\emph{Step 4 (upper-circle restart via UC2).}
+The upper-circle vector
+\[
+W(t) := \bigl(l(t),\; l(e - t)\bigr),\qquad 0 < t < e,
+\]
+has $l(t) = 0$ on the nonempty open subinterval
+$(0, \varepsilon) \subset (0, e)$ by (S3).  The matrices, irrational
+rotations and non-invariance conditions of the A14.3a upper-circle
+step are unchanged from the frozen A14.3a apparatus.  In particular,
+the UC2 return-count repair of 2026-08-21 applies to the same
+cocycle, delivering
+\[
+W = 0 \quad \text{a.e. on } (0, e),
+\]
+whence $h = 0$ on $(a, T)$.  Together with (S1) this yields $h = 0$
+a.e. on $(R, T)$.
+\end{proof}
+
+\begin{remark}[Structural content]\label{rem:p12-b1-structural}
+Theorem~\ref{thm:p12-b1} is not a mere boundary extension of A14.3a.
+The A14.3a upper-circle seed was $T - S > 0$; at $S = T$ that seed
+vanishes identically.  What replaces it is a source-horizon-generated
+null-strip $(a, a + \varepsilon)$ produced by the newly active
+$2a$-shift on the fold side, which the pre-existing A14.3a
+high-reflection identity transports back to the left seed
+$l(w) = 0$ on $(0, \varepsilon)$.  The mechanism
+\[
+\text{old support gap}\; \leadsto\; \text{new horizon-generated gap}
+\]
+is genuinely new.
+\end{remark}
+
+\begin{remark}[Scope: the exact corner $T_0 = T$ is not decided]
+\label{rem:p12-b1-exact-corner}
+The proof uses $\varepsilon = T_0 - T > 0$ essentially, both to open
+the H-source in (1) and to place the transported gap in the
+high-reflection region for (4).  The exact corner $T_0 = T = S$ is
+logically separate and remains \(?[O]\).
+\end{remark}
