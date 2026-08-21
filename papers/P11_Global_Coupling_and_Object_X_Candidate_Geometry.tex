@@ -24,7 +24,7 @@
 
 \title[P11 --- Global Coupling]{P11 --- Global Coupling and the Object-X Candidate Geometry}
 \author{Objekt-X-Programm}
-\date{2026-08-12}
+\date{2026-08-21}
 
 \begin{document}
 
@@ -49,20 +49,28 @@ asymptotically explicit for every fixed smooth odd pair.  The normalized fixed-p
 Schur geometry becomes asymptotically rank one, leaving uniform finite-jet Gram and
 square-root control as a direct unresolved gate.
 
-At fixed base terminal the odd condition number grows superpolynomially.  Consequently,
-if the auxiliary Jensen-product condition $\chi_-\|\Theta_-\|\to0$ holds, the
-square-root compression defect must decay faster than every inverse power.  This
-condition controls the auxiliary modulus isometry $Q$; promoting that comparison to the
-actual future transport requires separate control of the polar unitary gauges and
-remains open.
+For an explicit odd metric-complement vector, a fixed-window positive Sobolev bootstrap
+closes the earlier logarithmic regularity gate in a stronger form than originally
+required.  The resulting second-moment diagnostic gives a polynomial lower bound for
+the Jensen defect and forces
+$\chi_{T_0,U}^{R,-}\|\Theta_{T_0,U}^-\|\to\infty$; hence the auxiliary
+Jensen-product sufficient route is ruled out for this concrete diagnostic.  A direct
+square-root off-block argument also yields polynomial modulus leakage.  These are
+route-specific statements: exact polar-gauge separation and canonical countermodels
+show that modulus information alone does not determine the actual future transport,
+and fixed-pair rank-one leading data do not determine inverse square roots.
 
 The central unresolved source-level problem remains
 \[
  W_{R,S,-}^{[T]}\xrightarrow[T\to\infty]{\rm strong}?W_{R,S,-}^{[\infty]}.
 \]
-P11 proves neither this limit nor its failure, does not construct a final global
-Object~X, and contains no proof of the Riemann hypothesis.  The paper separates proved
-finite-horizon structure, route-specific diagnostics, and open global obligations.
+P11 proves neither this limit nor its failure.  Concrete fixed-vector polar-gauge
+asymptotics and the finite-jet inverse-square-root problem remain open, and even a
+positive gauge result would still have to be combined with the modulus comparison in
+the polar-decomposition route.  P11 does not construct a final global Object~X and
+contains no proof of the Riemann hypothesis.  The paper separates proved finite-horizon
+structure, proved route-specific diagnostics and no-go results, and open global
+obligations.
 \end{abstract}
 
 \maketitle
@@ -95,14 +103,18 @@ W_{R,S,-}^{[T]}\to W_{R,S,-}^{[\infty]}\quad\text{strongly},
 \[
 K_{R,S}^{T,U}\to I,
 \qquad
-\Theta_-\to0,
-\qquad
-\chi_-\|\Theta_-\|\to0.
+\Theta_-\to0.
 \]
-It proves no polynomial lower bound for the relative polar gauge quantities
-$\|\mathfrak P_U\|$ or $\|\Gamma_U-I\|$, and no strong terminal-transport conclusion
-from the O3 diagnostics.  By contrast, Corollary~\ref{cor:o3r-modulus-leakage} proves
-the concrete modulus-defect bound
+For the explicit complement diagnostic, Theorem~\ref{thm:o3l-polynomial-witness}
+actually proves the opposite of the auxiliary Jensen-product hypothesis:
+\[
+ \chi_{T_0,U}^{R,-}\|\Theta_{T_0,U}^-\|\to\infty.
+\]
+This rules out that sufficient Jensen route only; it is not promoted to failure of
+strong terminal transport.  The draft proves no polynomial lower bound for the
+relative polar gauge quantities $\|\mathfrak P_U\|$ or $\|\Gamma_U-I\|$, and no strong
+terminal-transport conclusion from the O3 diagnostics.  By contrast,
+Corollary~\ref{cor:o3r-modulus-leakage} proves the concrete modulus-defect bound
 \[
  \|\mathscr N_U\|\gtrsim U^{-m_h-1}.
 \]
@@ -849,16 +861,27 @@ $m$ once
 The native Gamma form supplies only the baseline exponent $1/2$; the additional required
 logarithmic order is $m+1$.
 
-\begin{openproblem}[Logarithmic complement regularity]\label{open:log}
-Does the explicit $g_h$ satisfy
+\begin{remark}[Former logarithmic complement gate; resolved below]\label{open:log}
+The historical gate asked whether the explicit $g_h$ satisfies
 \[
  E_Sg_h\in\HG^{m_h+3/2},
 \]
 or at least the corresponding direct translation-modulus condition on the prime-cell
-scale?  A positive answer would produce a polynomial second-moment witness and rule out
-the auxiliary Jensen-product condition $\chi_-\|\Theta_-\|\to0$ for this diagnostic.
-It would still not rule out strong terminal transport itself.
-\end{openproblem}
+scale.  Theorem~\ref{thm:o3k-complement} below proves the stronger fixed-window result
+\[
+ E_Sg_h\in H^{s_*}(\mathbb R)
+ \qquad\text{for some }s_*>0,
+\]
+and therefore
+\[
+ E_Sg_h\in\bigcap_{\alpha<\infty}\HG^\alpha(\mathbb R).
+\]
+Thus the logarithmic gate is resolved, not merely at the threshold
+$m_h+3/2$ but at every finite logarithmic order.  This resolution enables the explicit
+polynomial second-moment witness of Theorem~\ref{thm:o3l-polynomial-witness}.  Neither
+that witness nor the resolved regularity gate proves or disproves strong terminal
+transport.
+\end{remark}
 
 \input{P11_sections/P11_O3j_Reconciliation}
 
@@ -889,17 +912,20 @@ finite-jet Gram/square-root gate of Open Problem~\ref{open:finite-jet-sqrt} be r
 without a fixed-vector-to-uniformity jump?
 \end{openproblem}
 
-\begin{remark}[Two research directions]\label{rem:routes}
-The current theory leaves two distinct directions:
-\begin{enumerate}
-  \item the direct transport route through the exact cross-terminal Cauchy kernel and
-        finite-jet square-root geometry;
-  \item the O3 auxiliary diagnostic asking whether
-        $\chi_{T_0,U}^{R,-}\|\Theta_{T_0,U}^-\|\to0$ is compatible with the
-        superpolynomial odd conditioning.
-\end{enumerate}
-The second direction controls the auxiliary operator $Q$ only; without separate
-polar-gauge control it is not a route to convergence of the actual future transport.
+\begin{remark}[Route status after the Jensen-product no-go]\label{rem:routes}
+The direct transport route through the exact cross-terminal Cauchy kernel and finite-jet
+square-root geometry remains open.  By contrast, the earlier auxiliary sufficient route
+based on
+\[
+ \chi_{T_0,U}^{R,-}\|\Theta_{T_0,U}^-\|\to0
+\]
+is no longer an open candidate for the explicit complement diagnostic:
+Theorem~\ref{thm:o3l-polynomial-witness} proves that this product instead diverges.
+This negative route result is not a nonconvergence theorem for the actual future
+transport.  Exact polar-gauge separation shows why: the actual transport contains both
+modulus and polar-orientation information, and no theorem here makes the Jensen route
+necessary.  The concrete finite-jet inverse-square-root and fixed-vector polar-gauge
+asymptotics remain open route-specific problems.
 \end{remark}
 
 Residual observability, signed/clustered finite-band estimates and related quantities may
@@ -947,25 +973,36 @@ are explicit.  The leading normalized fixed-pair geometry becomes asymptotically
 one, so the direct bottleneck has moved to subleading finite-jet Gram and square-root
 control rather than to the existence of a mixed bilinear coefficient.
 
-Strong odd terminal transport has still not been proved or disproved.  Separately,
-superpolynomial odd conditioning shows that the auxiliary Jensen-product condition
-$\chi_-\|\Theta_-\|\to0$ would force beyond-all-orders decay of the square-root
-compression defect.  This controls the auxiliary modulus isometry $Q$; promotion to the
-actual future transport still requires the open polar-gauge control.  The
-second-moment/complement analysis reduces a possible obstruction to a logarithmic
-regularity question, but resolving that auxiliary diagnostic would not by itself decide
-the original strong transport problem.
+The former logarithmic complement gate is closed by a positive fixed-window Sobolev
+bootstrap.  Using that regularity, the explicit second-moment complement diagnostic
+produces a polynomial Jensen-defect lower bound and forces
+$\chi_{T_0,U}^{R,-}\|\Theta_{T_0,U}^-\|\to\infty$, ruling out the auxiliary
+Jensen-product sufficient route for this diagnostic.  The square-root off-block analysis
+also gives a polynomial lower bound on the modulus leakage.  None of these statements
+is promoted to failure of strong terminal transport: canonical countermodels separate
+modulus information from polar orientation, and the fixed-pair rank-one asymptotics do
+not determine the inverse-square-root scale.
+
+Strong odd terminal transport has still not been proved or disproved.  The direct
+finite-jet inverse-square-root problem and the concrete fixed-vector polar-gauge
+asymptotics remain open.  Within the polar-decomposition route, positive gauge control
+alone would still have to be combined with the modulus comparison; conversely, no
+result here proves that every possible proof of strong transport must pass through the
+relative polar defect.  The P11-wide global Gram/mediator, adelic and Fredholm closures
+remain separate higher-level obligations.
 
 Accordingly, the current status is
 \[
  \boxed{
- \text{finite-horizon structural core: proved;}
- \quad
- \text{direct finite-jet square-root gate: open;}
- \quad
- \text{strong odd terminal transport: open;}
- \quad
+ \begin{gathered}
+ \text{finite-horizon structural core: proved;}\\
+ \text{logarithmic complement gate: proved in stronger Sobolev form;}\\
+ \text{explicit Jensen-product sufficient route: ruled out;}\\
+ \text{direct finite-jet inverse-square-root gate: open;}\\
+ \text{concrete strong polar-gauge asymptotics: open;}\\
+ \text{strong odd terminal transport: open;}\\
  \text{P11-wide global closure: open.}
+ \end{gathered}
  }
 \]
 
