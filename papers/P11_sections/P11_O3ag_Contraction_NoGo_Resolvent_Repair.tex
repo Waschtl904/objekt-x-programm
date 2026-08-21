@@ -1,21 +1,24 @@
 % P11 paper module: R35 contraction no-go for R_{T0}, exact resolvent remainder,
-% and unconditional rescaled Neumann series repair of R34.
+% and unconditional rescaled Neumann-series repair of an earlier audit route.
 % Records the two-window/two-prime projection argument showing \|R_{T_0}\|>1 for
-% every T_0>log 3, replaces the illegitimate divergent-tail language of R34 by an
+% every T_0>log 3, replaces the earlier imprecise divergent-tail language by an
 % exact finite resolvent remainder identity valid for every bounded A>=0, and gives
 % an unconditional rescaled Neumann series for B_{T_0} that does not require any
 % spectral gap. No polar-gauge, terminal-transport, Object-X, or RH consequence is
 % drawn; R30-F and the R32-F(ii) fingerprint route remain open.
 
-\subsection{Contraction no-go for \(R_{T_0}\) and repair of the R34 Neumann tail}
+\subsection{Contraction no-go for \(R_{T_0}\) and repair of the earlier Neumann route}
 \label{subsec:o3ag-contraction-nogo}
 
-R34 (module chain above) attempted a Neumann-series route to the regularity of
+An earlier audit route proposed transferring regularity to
 \(g_{R,S}=-B_{T_0}H_{T_0}E_{S,T_0}j_{R,S}\) via
-\(B_{T_0}=(I+R_{T_0}^*R_{T_0})^{-1}\), conditional on a spectral gap
-\(\|R_{T_0}\|<1\) (Open Problem R34-C).  This subsection closes that gap question in
-its large-horizon contraction form, negatively, and repairs an imprecise
-divergent-series formulation in the R34 audit.  It records neither Object~X nor
+\(B_{T_0}=(I+R_{T_0}^*R_{T_0})^{-1}\), under the unscaled contraction hypothesis
+\[
+ \|R_{T_0}\|<1.
+\]
+This subsection closes that large-horizon contraction proposal negatively, replaces an
+imprecise infinite-tail formulation by an exact finite resolvent remainder, and records
+an unconditional rescaled Neumann representation.  It records neither Object~X nor
 polar-gauge nor terminal-transport nor RH consequences.
 
 \subsubsection*{Two-prime contraction no-go}
@@ -83,8 +86,11 @@ sectors and Pythagoras give the stated lower bound on \(\|R_{T_0}f\|^2\); since
 
 \begin{corollary}[The contraction route is dead for large horizons]
 \label{cor:o3ag-nogo}
-For every \(T_0>\log3\), hypothesis~\eqref{eq:r34-gap} of Proposition R34-B fails:
-\(\|R_{T_0}\|<1\) does not hold.  In particular the full unscaled Neumann series
+For every \(T_0>\log3\), the unscaled contraction hypothesis
+\[
+ \|R_{T_0}\|<1
+\]
+fails.  In particular the full unscaled Neumann series
 \(\sum_{n\ge0}(-1)^n(R_{T_0}^*R_{T_0})^nw\) diverges in operator norm on this range and
 cannot be used, even termwise, to transfer regularity from \(w\) to \(B_{T_0}w\).
 \end{corollary}
@@ -115,8 +121,8 @@ Induction on \(N\).  For \(N=0\): \((I+A)B=I\) gives \(B=I-AB\).  Assuming the i
 at \(N\), substitute \(B=I-AB\) into the remainder term to advance to \(N+1\).
 \end{proof}
 
-This is the legitimate replacement for the informal ``tail''
-\(\sum_{n>N}(-1)^n(R_{T_0}^*R_{T_0})^nw\) used in the R34 audit; at
+This is the legitimate replacement for the earlier informal ``tail''
+\(\sum_{n>N}(-1)^n(R_{T_0}^*R_{T_0})^nw\).  At
 \(\|A\|\ge1\) that infinite sum need not converge and must not be invoked, whereas the
 finite remainder \((-1)^{N+1}A^{N+1}B\) is exact and unconditional for every \(N\).
 
@@ -148,22 +154,24 @@ gives \(I-Q_M=(I+A)/(1+M)\), so \((I-Q_M)^{-1}=(1+M)B\), i.e.\
 \begin{remark}[Spectral gap is not a necessary gate]
 Lemma~\ref{lem:o3ag-rescaled-neumann} shows that a convergent series representation of
 \(B_{T_0}\) exists for every bounded \(A=R_{T_0}^*R_{T_0}\ge0\), independent of whether
-\(\|R_{T_0}\|<1\).  Open Problem R34-C, read as ``does a Neumann-type representation of
-\(B_{T_0}\) exist,'' is therefore answered trivially and unconditionally.  It must be
-reread as asking whether the iterates \(A^{N+1}\) (Lemma~\ref{lem:o3ag-exact-remainder})
-or \(Q_M^n\) (Lemma~\ref{lem:o3ag-rescaled-neumann}) carry regularity or support
-structure usable for R32-F(i); this is a smoothing/fingerprint question about the
-iterates, not a spectral-gap question, and is not decided here.
+\(\|R_{T_0}\|<1\).  Thus the earlier question, read as ``does a Neumann-type
+representation of \(B_{T_0}\) exist,'' is answered affirmatively and unconditionally.
+The live issue is instead whether the iterates \(A^{N+1}\)
+(Lemma~\ref{lem:o3ag-exact-remainder}) or \(Q_M^n\)
+(Lemma~\ref{lem:o3ag-rescaled-neumann}) carry regularity or support structure usable for
+R32-F(i).  This is a smoothing/fingerprint question about the iterates, not a
+spectral-gap question, and is not decided here.
 \end{remark}
 
-\begin{remark}[Split status of R34-C]
+\begin{remark}[Split status of the earlier Neumann proposal]
 \label{rem:o3ag-r34c-split}
-R34-C is accordingly split into: (a) the naive unscaled contraction route
-\(\|R_{T_0}\|<1\) --- closed negatively by Theorem~\ref{thm:o3ag-contraction-nogo} for
-every \(T_0>\log3\); (b) existence of \emph{some} convergent series for \(B_{T_0}\) ---
-answered affirmatively and unconditionally by Lemma~\ref{lem:o3ag-rescaled-neumann};
-(c) regularity/fingerprint structure of the iterated remainder --- genuinely open, and
-unaffected by (a) or (b).  Only (c) survives as live mathematical content.
+The earlier proposal is accordingly split into: (a) the naive unscaled contraction
+route \(\|R_{T_0}\|<1\) --- closed negatively by
+Theorem~\ref{thm:o3ag-contraction-nogo} for every \(T_0>\log3\); (b) existence of
+\emph{some} convergent series for \(B_{T_0}\) --- answered affirmatively and
+unconditionally by Lemma~\ref{lem:o3ag-rescaled-neumann}; (c) regularity/fingerprint
+structure of the iterated remainder --- genuinely open, and unaffected by (a) or (b).
+Only (c) survives as live mathematical content.
 \end{remark}
 
 \begin{remark}[Consequence for the route map]
