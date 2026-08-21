@@ -66,30 +66,29 @@ Together with (S1) and the boundary continuity, this gives
 \(h = 0\) a.e. on $(0, a)$.
 
 \medskip
-\noindent\emph{Step 3 (upper half via A14.3a upper source).}
-For $u = 3a - t$ (or the equivalent upper E-source, in the notation
-inherited from A14.3a §2.2), the upper-half fold structure and the
-same $(p^2 - q^2)$-mechanism kill $h$ on $(a, T)$.  This uses only
-$R \ge e$ combined with (S2) and requires no new terms from the
-$2a$-shift beyond those already accounted for.  We omit the parallel
-argument; it is a direct transcription of A14.3a §5--6 with $S \le T$
-replaced by $S \le T_0 < c < 3a$.
-
-Consequently $h = 0$ on $(0, T)$.
-
-\medskip
-\noindent\emph{Step 4 (tail dies).}
+\noindent\emph{Step 3 (tail dies).}
 For $0 < t < \sigma$, (E$_\sigma$) at $x = t$ gives
 \[
 p\, h(t) + r\, \mathrm{sgn}(t - d)\, h(|t - d|) - q\, h(a - t) - p\, H(t) = 0.
 \]
-Since $t < \sigma < \varepsilon < e < d$, we have $t < d$ and $\mathrm{sgn}(t-d) = -1$.
-The three arguments $t$, $d - t$, $a - t$ all lie in $(0, a)$ and are
-therefore in the null region proved in Step~3.  The equation reduces to
-\[
--p\, H(t) = 0,
-\]
-whence $H(t) = 0$ on $(0, \sigma)$, i.e. $h = 0$ on $(T, S)$.
+Since $t < \sigma < \varepsilon < e < d$, we have $t < d$ and
+$\mathrm{sgn}(t-d) = -1$.  Under $R \ge e$, $h(t) = 0$ (below support)
+and $h(d - t) = 0$ because $d - t > d - \sigma > d - e = \delta$ but
+also $d - t < d < a$ and by (S1)--(S2), $h$ vanishes on
+$(R, a) \supseteq \{d - t\}$ whenever $d - t \ge R$.  For $d - t < R$
+(possible if $\sigma > d - R$), directly $h(d - t) = 0$.  Similarly
+$a - t \in (a - \sigma, a) \subset (R, a)$ and by (S1)--(S2) again
+$h(a - t) = 0$.  The equation reduces to $-p\, H(t) = 0$,
+whence $H(t) = 0$ on $(0, \sigma)$.
+
+\medskip
+\noindent\emph{Step 4 (support collapses; reduce to A15.1b1).}
+Step~3 gives $h = 0$ on $(T, S)$; combined with (S1)--(S2), the
+remaining support of $h$ is contained in $(R, T)$.  This is exactly
+the hypothesis of Theorem~\ref{thm:p12-b1} (A15.1b1) with source
+radius $R$ and terminal radius $T$ and finite-horizon $T_0$.  The
+A15.1b1 horizon-gap mechanism kills the residual support in $(a, T)$
+and delivers $h = 0$ a.e. on $(R, S)$.
 \end{proof}
 
 \begin{remark}[Numerical cross-check]\label{rem:p12-b2a-numerical}

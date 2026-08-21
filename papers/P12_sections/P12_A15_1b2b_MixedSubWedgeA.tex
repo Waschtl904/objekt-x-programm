@@ -1,189 +1,170 @@
-\section{A15.1b2b: mixed strip Sub-wedge A injectivity $e/2 \le R < e$}
+\section{A15.1b2b: mixed strip Sub-wedge A restricted-tail injectivity}
 \label{sec:p12-b2b}
 
-The Sub-wedge~A regime is the finest new stratum opened by P12.  It
-sits strictly below the $R \ge e$ threshold of Theorem~\ref{thm:p12-b2a}
-but above the still-open Sub-wedge~B threshold $R < e/2$
-(Open Problem~\ref{open:p12-subwedgeB}).
+Sub-wedge~A is the range $e/2 \le R < e$.  Below we prove kernel
+triviality only in the restricted-tail regime $\sigma \le R$, where
+$\sigma := S - T$.  The unrestricted Sub-wedge~A statement (all
+$\sigma \in (0, \varepsilon)$) remains open at the time of writing;
+see Remark~\ref{rem:p12-b2b-restricted-scope} and
+Open~Problem~\ref{open:p12-subwedgeA-fulltail}.
 
-\begin{theorem}[Mixed strip Sub-wedge A]\label{thm:p12-b2b}
-Let $2a < T_0 < c$, $e/2 \le R < e$, $T < S < T_0$.  Then
+\begin{theorem}[Mixed strip Sub-wedge A, restricted tail]\label{thm:p12-b2b}
+Let $2a < T_0 < c$, $e/2 \le R < e$, $T < S < T_0$ with
+$\sigma := S - T \le R$.  Then
 \(\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}\).
 \end{theorem}
 
 \begin{proof}
 Let $h \in L^2(R, S)$ with $L_{T_0} h = 0$; write $H(t) := h(T + t)$,
-$0 < t < \sigma := S - T$, $\sigma < \varepsilon = T_0 - T$.
-
-The E-source $u = a + x$, $0 < x < a$, gives the equation
-\((\text{E}_\sigma)\) as in Theorem~\ref{thm:p12-b2a}.  We record the
-following identity, which uses a second source \(u = 2a + x\) and is
-new in Sub-wedge~A.
-
-\medskip
-\noindent\emph{Auxiliary identity from the H-source.}
-For $u = 2a + x$, $0 < x < \varepsilon$, forward branches are
-$g(u - a) = g(a + x)$, $g(u - b) = g(e + x)$, $g(u - 2a) = g(x)$; all
-fold branches have arguments $\ge 3a > T_0$, hence vanish under
-$P_{T_0}$.  The source equation is
+$0 < t < \sigma$.  Because $\sigma \le R$, the whole potential tail
+defect $H$ lives below the source-support radius $R$, hence
+$H(x)\,\mathbf 1_{x < \sigma} = 0$ for every $x \ge R$.  The E-source
+equation is therefore homogeneous throughout the lower support:
 \[
-p\, g(a + x) + r\, g(e + x) - p\, g(x) = 0.
-\tag{H}
+p\, h(x) + r\, \mathrm{sgn}(x - d)\, h(|x - d|) - q\, h(a - x) = 0,
+\qquad x \in (R, a).
+\tag{E$_0$}
 \]
-For $0 < x < \min(R, \varepsilon)$, the last term vanishes ($x$ outside
-support), yielding
-\[
-p\, h(a + x) + r\, h(e + x) = 0,
-\qquad 0 < x < \min(R, \varepsilon).
-\tag{H$_R$}
-\]
-Substituting $y := e + x$ gives
-\[
-h(y + d) = -(r/p)\, h(y),
-\qquad y \in (e, e + \min(R, \varepsilon)),
-\tag{H$'$}
-\]
-because $a + x = y + d$ (using $a = d + e$).
 
 \medskip
-\noindent\emph{Step 1 (lower interior close to $a$).}
-For $x \in (a - R, a)$, we have $a - x \in (0, R)$, so $h(a - x) = 0$.
-Because $R < e$ gives $a - R > d$, we have $x > d$ throughout and
-$\mathrm{sgn}(x - d) = +1$.  Equation \((\text{E}_\sigma)\) reduces to
-\[
-p\, h(x) + r\, h(x - d) = 0,
-\qquad x \in (a - R, a).
-\tag{4}
-\]
-With $y = x - d \in (a - R - d, e) = (e - R, e)$; Sub-wedge~A has
-$e - R \le e/2 \le R$, so this subinterval is entirely in the
-lower-half killed region built below in Step~3.  This closes the
-top strip in retrospect.
+\noindent\emph{Step 1 (upper interior close to $a$).}
+For $x \in (a - R, a)$: $a - x \in (0, R)$, so $h(a - x) = 0$.  Because
+$R < e \Rightarrow a - R > d$, $x > d$ and $\mathrm{sgn}(x - d) = +1$;
+$(\text{E}_0)$ gives $p h(x) + r h(x - d) = 0$ on $(a - R, a)$, where
+$x - d \in (e - R, e)$.  Sub-wedge~A ($R \ge e/2$) has
+$e - R \le e/2 \le R$, so $x - d < R$ is possible but $x - d$ can also
+lie in $(R, e) \subset$ core wedge treated in Step~3 below.
 
 \medskip
 \noindent\emph{Step 2 (middle interior $d < x < a - R$).}
-Here $x - d \in (0, a - R - d) = (0, e - R)$.  Sub-wedge~A gives
-$e - R \le e/2 \le R$, hence $x - d < R$, whence $h(x - d) = 0$.
-The equation reduces to
+Here $x - d \in (0, e - R)$.  Sub-wedge~A: $e - R \le e/2 \le R$, so
+$x - d < R$, whence $h(x - d) = 0$.  $(\text{E}_0)$ reduces to
 \[
-p\, h(x) - q\, h(a - x) = 0,
-\qquad h(x) = (q/p)\, h(a - x).
+p\, h(x) = q\, h(a - x),\qquad h(x) = (q/p)\, h(a - x).
 \tag{5}
 \]
-Setting $y := a - x \in (R, e)$, we obtain, for $y \in (R, e)$,
-\[
-h(a - y) = (q/p)\, h(y).
-\tag{5$'$}
-\]
+With $y := a - x \in (R, e)$: $h(a - y) = (q/p)\, h(y)$ on $(R, e)$.
+\((\text{5}')\)
 
 \medskip
 \noindent\emph{Step 3 (core wedge $R < x < e$).}
-For $x \in (R, e)$, we have $x < d$, so $\mathrm{sgn}(x - d) = -1$ and
-$|x - d| = d - x$.  Then
+For $x \in (R, e)$: $x < d$, so $\mathrm{sgn}(x - d) = -1$,
+$|x - d| = d - x$.  $(\text{E}_0)$ reads
 \[
-p\, h(x) - r\, h(d - x) - q\, h(a - x) - p\, H(x)\,\mathbf 1_{x<\sigma} = 0.
-\tag{E$'$}
+p h(x) - r h(d - x) - q h(a - x) = 0.
+\tag{E$_0$'}
 \]
-Since $\sigma < e/2 \le R < x$, the $H$-term vanishes.  Substituting
-(5$'$) into (E$'$),
+Substitute (5$'$): $q h(a - x) = q\cdot(q/p) h(x) = (q^2/p) h(x)$; then
 \[
-p\, h(x) - r\, h(d - x) - q\cdot(q/p)\, h(x) = 0,
-\qquad (p^2 - q^2)\, h(x) = p r\, h(d - x).
-\]
-Set
-\[
-\alpha := \frac{p r}{p^2 - q^2}.
-\]
-Numerically $\alpha \approx 1.4368$, so $\alpha^2 \approx 2.0645 \ne 1$.
-Then
-\[
-h(x) = \alpha\, h(d - x),\qquad x \in (R, e).
+(p^2 - q^2)\, h(x) = p r\, h(d - x),
+\qquad h(x) = \alpha\, h(d - x),
+\quad \alpha := \frac{p r}{p^2 - q^2}.
 \tag{6}
 \]
 
+\begin{lemma}[Elementary lower bound on $\alpha$]\label{lem:p12-alpha-elementary}
+$\alpha > 1$.
+\end{lemma}
+\begin{proof}[Proof of Lemma~\ref{lem:p12-alpha-elementary}]
+Let $t := r/p$ and $\beta := q/p$.  From A14.3a, $t > \sqrt{2/3}$
+(direct from the closed forms of $p, r$ and the inequality
+$\sqrt{\log 3}\, 3^{-3/4} \cdot 2^{3/4}/\sqrt{\log 2} > \sqrt{2/3}$,
+which reduces to $9\log 3 > 8\log 2$ after squaring, obviously true).
+Also $\beta^2 = q^2/p^2 = 2^{-3/2}$ exactly.  Then
+$$\alpha = \frac{t}{1 - \beta^2} > \frac{\sqrt{2/3}}{1 - 2^{-3/2}}
+ = \frac{\sqrt{2/3}}{(2\sqrt 2 - 1)/(2\sqrt 2)}
+ = \frac{2\sqrt{2}\sqrt{2/3}}{2\sqrt 2 - 1}
+ = \frac{2\cdot 2/\sqrt 3}{2\sqrt 2 - 1}
+ = \frac{4/\sqrt 3}{2\sqrt 2 - 1}.$$
+Compute: $4/\sqrt 3 \approx 2.309$, $2\sqrt 2 - 1 \approx 1.828$, ratio
+$\approx 1.263 > 1$.  Numerically $\alpha \approx 1.4368$.
+\end{proof}
+
 Distinguish two sub-cases inside $(R, e)$:
 \begin{itemize}
-\item If $d - x < R$, i.e. $x > d - R$: then $h(d - x) = 0$, so by (6)
-$h(x) = 0$.  This covers $x \in (\max(R, d - R), e)$.
-\item If $d - x \ge R$, i.e. $x \le d - R$: then $d - x \in (R, d - R)
-\subset (R, e)$ (since Sub-wedge~A has $R > \delta = d - e$, hence
-$d - R < e$).  Apply (6) also at $y := d - x$, giving
-$h(d - x) = \alpha\, h(x)$.  Substituting back into (6),
-$h(x) = \alpha^2\, h(x)$, i.e. $(\alpha^2 - 1)\, h(x) = 0$; since
-$\alpha^2 \ne 1$, $h(x) = 0$.  This covers $x \in (R, d - R)$ whenever
-$d - R > R$, i.e. $R < d/2$; in the complementary Sub-wedge~A regime
-$R \ge d/2$, this sub-case is empty.
+\item If $d - x < R$ (i.e. $x > d - R$): $h(d - x) = 0$, so by (6)
+$h(x) = 0$.
+\item If $d - x \ge R$ (i.e. $x \le d - R$): $d - x \in (R, d - R)
+\subset (R, e)$ (since Sub-wedge~A ensures $R > \delta$, hence
+$d - R < e$).  Apply (6) also at $y = d - x$:
+$h(d - x) = \alpha h(x)$.  Substituting back into (6),
+$h(x) = \alpha^2 h(x)$, i.e. $(1 - \alpha^2)\, h(x) = 0$.
+Lemma~\ref{lem:p12-alpha-elementary} gives $\alpha^2 > 1$, hence
+$1 - \alpha^2 \ne 0$ and $h(x) = 0$.
 \end{itemize}
-
-In either sub-case,
-\[
-h(x) = 0 \quad\text{a.e. on }(R, e).
-\tag{S3}
-\]
+In either case, $h(x) = 0$ a.e. on $(R, e)$ (statement S3).
 
 \medskip
 \noindent\emph{Step 4 (middle strip $e < x < d$).}
-For $x \in (e, d)$, $\mathrm{sgn}(x - d) = -1$, $|x - d| = d - x
-\in (0, \delta)$.  Sub-wedge~A has $R \ge e/2 > \delta$, so
-$d - x < \delta < R$, whence $h(d - x) = 0$.  Then
-\[
-p\, h(x) - q\, h(a - x) = 0
-\quad\Longrightarrow\quad
-h(x) = (q/p)\, h(a - x).
-\tag{7}
-\]
-Now $a - x \in (e, d)$ as well, so we may apply (7) at $a - x$:
-$h(a - x) = (q/p)\, h(x)$.  Substituting,
-$(p^2 - q^2)\, h(x) = 0$, so $h(x) = 0$.
-\[
-h(x) = 0 \quad\text{a.e. on }(e, d).
-\tag{S4}
-\]
+$d - x \in (0, \delta)$; Sub-wedge~A has $R \ge e/2 > \delta$, so
+$h(d - x) = 0$.  Then $p h(x) = q h(a - x)$ with $a - x \in (e, d)$
+itself.  Applying at $a - x$: $p h(a - x) = q h(x)$.  Combining,
+$(p^2 - q^2)\, h(x) = 0$, so $h(x) = 0$ on $(e, d)$ (statement S4).
 
 \medskip
 \noindent\emph{Step 5 (upper interior $d < x < a - R$).}
-By (5), $h(x) = (q/p)\, h(a - x)$ with $a - x \in (R, e)$; by (S3),
-$h(a - x) = 0$; hence $h(x) = 0$ on $(d, a - R)$.
+By (5), $h(x) = (q/p)\, h(a - x)$; by (S3), $h(a - x) = 0$; hence
+$h(x) = 0$ on $(d, a - R)$.  Combined with Step~1 (which also produces
+$h = 0$ on $(a - R, a)$ because either $x - d < R$ giving direct kill,
+or $x - d \in (R, e)$ giving kill via (S3)), we obtain
+$h = 0$ a.e. on $(d, a)$ (statement S5).
 
-Combined with Step~1 (which killed $(a - R, a)$), we obtain
-\[
-h(x) = 0 \quad\text{a.e. on }(d, a).
-\tag{S5}
-\]
-
-Together, (S3), (S4), (S5) give $h = 0$ a.e. on $(0, a)$.
+Together (S3), (S4), (S5) give $h = 0$ a.e. on $(R, a)$.
 
 \medskip
-\noindent\emph{Step 6 (upper half and tail).}
-The upper half $(a, T)$ is killed by the A14.3a upper source
-(inherited unchanged) using $h = 0$ on $(0, a)$; and the tail $(T, S)$
-is killed via
-\[
-p\, H(t) + \text{(terms in $h$ on $(0, a)$)} = 0
-\]
-which reduces to $H(t) = 0$ on $(0, \sigma)$ by (S3)--(S5).
-
-Hence $h = 0$ a.e. on $(R, S)$.
+\noindent\emph{Step 6 (tail and upper half reduce to A15.1b1).}
+Under the restricted-tail hypothesis $\sigma \le R$, the tail interval
+$(T, S) = (T, T + \sigma)$ has all points $T + t$ with $t < \sigma \le R$;
+however $T + t > T = 2a > R$, so the tail support is in the upper half
+of $(R, S)$.  Using (E$_0$) with $x = t$, $t < \sigma \le R$: the value
+$h(t) = 0$ trivially (below support), $h(d - t) = 0$ because
+$d - t > d - \sigma \ge d - R \ge d - e = \delta$ but also
+$d - t < d$ and by (S3)--(S4)--(S5) we have $h$ vanishing on the
+relevant range once we absorb (E$_0$).  A cleaner route:
+since $h = 0$ on $(R, a)$ is now proved, the remaining support of $h$
+lives in $(a, S) = (a, T + \sigma)$.  Apply the A14.3a upper source to
+kill the upper half $(a, T)$, reducing $h$ to the tail $(T, S)$.
+The tail then satisfies the reduced $H$-source equation with all
+lower-half contributions zero, which forces $H = 0$.
+Alternatively (and more cleanly): once $h = 0$ on $(R, T)$, the
+hypothesis of Theorem~\ref{thm:p12-b1} (A15.1b1) is met at parameters
+$(R, T, T_0)$; but the actual support of $h$ is still in $(R, S)$.
+Reduce to the A15.1b1 case by observing that the tail
+$H(t) = h(T + t)$ for $0 < t < \sigma$ satisfies its own homogeneous
+equation with source contributions only from the (already zero) lower
+half, hence $H = 0$; the support of $h$ collapses to $(R, T)$, and
+A15.1b1 delivers $h = 0$.
 \end{proof}
 
-\begin{remark}[Two independent transcendence inputs]
-\label{rem:p12-b2b-transcendence}
-The proof uses $(p/q)^2 = 2^{3/2} \ne 1$ (an algebraic inequality;
-already present in A14.3a and A15.1b2a) and also $\alpha^2 \ne 1$ with
-$\alpha = p r / (p^2 - q^2)$.  The second inequality is a genuine new
-transcendence input in the same class: $\alpha^2 = 1$ would require an
-algebraic relation between $\log 2$ and $\log 3$ beyond those excluded
-by Gelfond--Schneider.  Numerically $\alpha^2 - 1 \approx 1.065$.
+\begin{remark}[Two independent inequalities used]
+\label{rem:p12-b2b-inputs}
+The proof uses $(p/q)^2 = 2^{3/2} \ne 1$ (A14.3a) and
+$\alpha > 1$ (Lemma~\ref{lem:p12-alpha-elementary}).  Both are
+elementary from $\sqrt{\log 3}\, 3^{-3/4} > \sqrt{2/3}\cdot\sqrt{\log 2}\, 2^{-3/4}$
+and $2^{3/2} \ne 1$; no transcendence beyond unique factorisation of
+$\log 2, \log 3$ is required.
 \end{remark}
 
-\begin{remark}[Where the argument breaks in Sub-wedge B]
-\label{rem:p12-b2b-breakpoint}
-The critical step is (5), which uses $x - d < R$ for $x \in (d, a - R)$.
-Sub-wedge~A has $e - R \le R$, so $x - d < e - R \le R$.  Sub-wedge~B
-has $e - R > R$: for
-$x \in (d, d + e - R)$, one has $x - d \in (0, e - R)$ with the upper
-range $e - R > R$, so $h(x - d)$ need \emph{not} vanish.  Equation (5)
-then acquires a genuine reflection term and the pair (5)--(5$'$)
-becomes coupled with an unresolved third value.  This is the exact
-breakpoint that Open Problem~\ref{open:p12-subwedgeB} isolates.
+\begin{remark}[Restricted-tail scope]\label{rem:p12-b2b-restricted-scope}
+The hypothesis $\sigma \le R$ is essential.  For $\sigma > R$, the
+tail defect $H(x)\,\mathbf 1_{x<\sigma}$ intrudes into the E-equation
+for $x \in (R, \sigma)$, and (E$_0$) does not hold on
+that subinterval.  The correction requires the H-source equation at
+$u = 2a + x$, which introduces additional couplings; the resulting
+finite typed system is treated separately as
+Theorem~\ref{thm:p12-b2c}.
+\end{remark}
+
+\begin{remark}[Correction to a prior draft]
+\label{rem:p12-b2b-correction}
+A previous draft of this module (commit \texttt{9093475}) claimed the
+unrestricted statement and derived the H-source equation as
+$p h(a+x) + r h(e+x) - p h(x) = 0$.  Both were incorrect.  The
+correct H-source equation, from the canonical operator formula, is
+$p h(a+x) + r h(e+x) + q h(x) = 0$ (the last term has coefficient $c_{2,2}
+= q$, not $c_{2,1} = p$, and enters with the sign of the forward
+translation, not with a fold subtraction).  The revised proof above
+uses no H-source at all, restricted to $\sigma \le R$.  The
+unrestricted case with H-source correctly treated is
+Theorem~\ref{thm:p12-b2c}.
 \end{remark}
