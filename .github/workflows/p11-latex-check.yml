@@ -2,6 +2,8 @@ name: P11 LaTeX check
 
 on:
   push:
+    branches:
+      - main
     paths:
       - 'papers/P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex'
       - 'papers/P11_sections/**'
@@ -27,8 +29,8 @@ jobs:
       - name: Compile P11 twice
         working-directory: papers
         run: |
-          pdflatex -interaction=nonstopmode -halt-on-error P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex
-          pdflatex -interaction=nonstopmode -halt-on-error P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex
+          pdflatex -interaction=nonstopmode -file-line-error -halt-on-error P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex
+          pdflatex -interaction=nonstopmode -file-line-error -halt-on-error P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex
 
       - name: Reject unresolved or multiply-defined references
         working-directory: papers
@@ -37,3 +39,11 @@ jobs:
             echo 'Unresolved or multiply-defined LaTeX references/citations detected.'
             exit 1
           fi
+
+      - name: Upload P11 LaTeX log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p11-latex-log
+          path: papers/P11_Global_Coupling_and_Object_X_Candidate_Geometry.log
+          if-no-files-found: warn
