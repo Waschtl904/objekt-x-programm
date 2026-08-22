@@ -100,8 +100,9 @@ $b \pm x$, $T \pm x$; alle horizont-legal aus P1/P2-Modul):
 
 Support-Kills automatisch (elementar aus $R \ge e/2$ und $x < d - R$):
 - $h(e-x) = 0$: $e - x < e - R \le e/2 < R$.
-- $h(x - \delta) = 0$: $x - \delta < d - R - \delta = e/2 < R$
-  (using $d - \delta = 2e$, so $d - R - \delta \le d/2 - \delta = e/2$).
+- $h(x - \delta) = 0$: **korrigierte Ableitung (2026-08-22 GPT-Recheck):**
+  $\delta = d - e$, also $d - \delta = e$ (nicht $2e$ wie in der ersten
+  Version). Dann $x - \delta < d - R - \delta = e - R \le e/2 \le R$.
 
 Triangulare Elimination liefert:
 - $h(a - x) = (q/p)\, h(x)$   [aus $T^-(x)$]
