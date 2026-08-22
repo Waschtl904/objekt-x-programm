@@ -91,9 +91,16 @@ non-embeddability observation (Remark 5.12,
 would need to verify:
 1. Existence of an isolated simple eigenvalue $\lambda$ of the
    limit operator $W^{[\infty]}_{R,S,-}$;
-2. Uniform lower bound $\gamma_k \ge \gamma_0 > 0$ for the gap
-   along $T \to \infty$;
-3. Sharp estimate of $\|(A_k - A)\varphi\|$ against $\gamma_k$;
+2. A corresponding isolated simple eigenvalue branch $\lambda_k$
+   for the approximants, with spectral gap $\gamma_k > 0$ and
+   $\lambda_k \to \lambda$;
+3. The sharp relative estimate
+   $$
+   \frac{\|(A_k-A)\varphi\|+|\lambda_k-\lambda|}{\gamma_k}\to 0.
+   $$
+   In particular, a uniform bound $\gamma_k\ge\gamma_0>0$ is
+   sufficient but **not necessary**: $\gamma_k$ may tend to zero
+   provided the numerator is $o(\gamma_k)$;
 4. Identification of the correct test vector $\varphi$.
 
 None of these are currently established in P11. The theorem is a
@@ -175,8 +182,10 @@ proper Voronoi quadrature would carry cell widths $|I_j|$ as
 weights:
 $$\sum_j |I_j|\, \psi_m(p_j) \overline{\psi_n(p_j)} \;\approx\;
 \int \psi_m \overline{\psi_n}\, dx.$$
-The unweighted sum satisfies $\sum_j \psi_m(p_j) \overline{\psi_n(p_j)}
-\sim (1/\bar h) \int$, with average gap $\bar h \sim \log N$.
+No general asymptotic for the **unweighted** sum is asserted here;
+any statement such as a mean-gap rescaling would require its own
+normalization/measure argument. It is not needed for the present
+$\times[M]$ verdict.
 
 The subsequent Off-Diagonal analysis (Step 2, lines 605–637) uses
 $\sum_j |I_j|^2 \|g'\|_\infty$ as if it bounds
