@@ -182,3 +182,83 @@ $p^{2} - q^{2} = q^{2}(2^{3/2} - 1) > 0$ since $2\sqrt{2} > 1$.
 $2p^{2} - q^{2} = q^{2}(2 \cdot 2^{3/2} - 1) = q^{2}(4\sqrt{2} - 1)
 > 0$ since $4\sqrt{2} > 1$.
 \end{proof}
+
+\subsection{b2d-upper corollary: local kill for $x > d - R$ in the b2d region}
+\label{sec:p12-b2d-upper}
+
+The 13-source certificate transfers to a sub-region of the b2d
+regime.  Let $e/2 \le R < d/2$, $R < \sigma < \varepsilon <
+\varepsilon_{\max}$ with $\sigma > d - R$, so that the strip
+$\{d - R < x < \sigma\}$ is nonempty.  (Nonemptiness is equivalent
+to $\sigma > d - R$, which requires $\varepsilon_{\max} > d - R$,
+i.e.\ $R > d - \varepsilon_{\max}$; numerically $R > 0.0912$.)
+
+\begin{corollary}[b2d-upper local kill]
+\label{cor:p12-b2d-upper-local}
+Under the assumptions of this subsection, for every
+$x \in (d - R, \sigma)$:
+$$h(x) = 0, \qquad H(x) = 0, \qquad l(x) = h(T - x) = 0.$$
+Moreover $h(a - x) = h(a + x) = h(b - x) = h(2d - x) = \cdots = 0$
+via the same triangular elimination chain as in
+Theorem~\ref{thm:p12-b2c}, and $H(d - x) = 0$.
+\end{corollary}
+
+\begin{proof}
+All $13$ source positions $u_{1}, \ldots, u_{13}$ from
+Theorem~\ref{thm:p12-b2c} lie in $(0, T_{0})$ under the present
+hypotheses, by the same argument as in Step~1 of the proof of
+Theorem~\ref{thm:p12-b2c}, plus the following elementary
+verifications for the two positions that were previously bounded
+via $R \ge d/2$:
+\begin{itemize}
+\item $u_{8} = a + b - x = T + d - x < T + R < T + \sigma < T_{0}$,
+  using $d - x < R$ (which holds since $x > d - R$).
+\item $u_{12} = 3d - x < (5/2)\, d < T$, elementary via
+  $3^{5} < 2^{9}$, i.e.\ $243 < 512$.
+\item $u_{13} = 3e + x < 3e + \varepsilon_{\max} < T$, elementary
+  via $20 < 27$ (equivalently $80 < 108$).
+\end{itemize}
+
+The four lower-support kills used in the b2c triangular elimination
+transfer verbatim:
+\begin{enumerate}
+\item[(A)] $h(d - x) = 0$: direct from $x > d - R$.
+\item[(B)] $h(e - x) = 0$: $e - x < e - R \le e/2 \le R$ (since
+  $R \ge e/2$).
+\item[(C)] $h(x - \delta) = 0$: $x - \delta < \varepsilon_{\max} - \delta
+  < e/2 \le R$, where
+  $\varepsilon_{\max} - \delta = \tfrac12 \log(10/9)$ and
+  $e/2 = \tfrac14 \log(4/3)$; the inequality is elementary via
+  $(10/9)^{2} < 4/3$, i.e.\ $100 < 108$.  Positivity uses
+  $x > d - R > \delta$ (since $d - R > d/2 > \delta$).
+\item[(D)] Where the b2c chain uses $h(2\delta - x) = 0$ or
+  reflection of it: positivity $x < 2\delta$ is
+  $\varepsilon_{\max} < 2\delta$, elementary via $5/4 < (9/8)^{2}$,
+  i.e.\ $80 < 81$; upper bound $2\delta - x < 2\delta - (d - R)
+  = R - (e - \delta) < R$.
+\end{enumerate}
+
+Since (a) all $13$ source positions are horizon-legal and (b) the
+support kills (A)--(D) hold identically, the reduced source
+equations $Q_{1}, \ldots, Q_{13}$ take the same form as in the proof
+of Theorem~\ref{thm:p12-b2c}.  The row-multiplier certificate of
+Corollary~\ref{cor:p12-b2c-certificate} then yields
+$$\frac{2(p^{2} - q^{2})(2p^{2} - q^{2})}{p^{2} r}\, h(x) = 0,$$
+and Lemma~\ref{lem:p12-b2c-detfactors} forces $h(x) = 0$.
+
+The subsequent triangular back-substitution gives $H(x) = 0$ and
+$H(d - x) = 0$ (via $Q_{1}$ and $Q_{2}$ respectively), and
+Theorem~\ref{thm:p12-P1} at $x$ then gives
+$l(x) = -c_{0}\, H(d - x) - H(x) = 0$.
+\end{proof}
+
+\begin{remark}[Scope]
+\label{rem:p12-b2d-upper-scope}
+Corollary~\ref{cor:p12-b2d-upper-local} is a \emph{local}
+injectivity statement on the b2d-upper strip, not a full b2d
+result.  The remaining b2d region (b2d-core-single
+$R < x < d - \sigma$ and b2d-core-both
+$d - \sigma < x < d - R$) is not covered.  Promotion of the full
+b2d statement $\ker L = 0$ over $e/2 \le R < d/2$ remains
+Open Problem~\ref{open:p12-subwedgeA-open}.
+\end{remark}
