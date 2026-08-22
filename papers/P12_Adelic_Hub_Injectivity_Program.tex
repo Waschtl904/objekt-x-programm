@@ -28,8 +28,8 @@ P11 froze the finite-horizon Feshbach--Schur candidate geometry at
 \(T_0 \le 2a\).  P12 opens the next arithmetic-shift chamber
 \(2a < T_0 < \tfrac12\log 5\), where the third shift \(2a\) becomes
 active.  We record the persistence of the A14.3a boundary injectivity
-into a full three-shift regime along five disjoint parameter strata, and
-we identify the exact remaining low-source-radius wedges.
+into a full three-shift regime along six disjoint parameter strata, and
+we identify the exact remaining low-source-radius wedge.
 
 Concretely, P12 establishes:
 \begin{itemize}
@@ -40,15 +40,21 @@ Concretely, P12 establishes:
 \item \textbf{A15.1b2b} mixed strip Sub-wedge~A restricted-tail
   injectivity \(e/2 \le R < e, \sigma \le R\);
 \item \textbf{A15.1b2c} mixed strip descent to \(R = d/2\), including
-the full tail-overlap regime \(\sigma > R\), via a finite typed
-$13\times 13$ linear system with determinant
-\(-2 p^7 q r (p^2 - q^2)(2p^2 - q^2)\), transcendence-free nonzero.
+the full tail-overlap regime \(\sigma > R\), via a triangular
+elimination reducing to a single scalar factor
+\((2 q r / p^{3})(2p^{2} - q^{2}) > 0\);
+\item \textbf{A15.1b2d} full Sub-wedge~A injectivity
+\(e/2 \le R < d/2\), via a two-threshold cell decomposition at
+\(\kappa = e - \delta\) and \(\lambda = d - \sigma\), two $19\times 19$
+typed blocks with determinant
+\(\pm p^{8} r (p^{2} - q^{2})^{3} F\), and an elementary chain
+\((2 - 3B + B^{2})/(1 + B) < 4/5 < \theta\) that forces
+\(F < 0\) (equivalent to \(2809 < 2888\) plus \(50 > 48\)).
 \end{itemize}
 
 Combining these, kernel triviality holds on the entire mixed strip
-\(d/2 \le R < T\).  The open front narrows to
-\(0 < R < d/2 \approx 0.1014\) together with the Sub-wedge~A full-tail
-slice \(e/2 \le R < d/2, \sigma > R\).
+\(e/2 \le R < T\).  The open front narrows to
+\(0 < R < e/2 \approx 0.0719\).
 
 None of P12 asserts polar-gauge, terminal-transport, Object-X or RH
 consequences.  The R14 firewall of P11 is preserved unchanged.
@@ -131,6 +137,7 @@ even for arbitrarily small \(x\).
 \input{P12_sections/P12_A15_1b2a_MixedHighRadius}
 \input{P12_sections/P12_A15_1b2b_MixedSubWedgeA}
 \input{P12_sections/P12_A15_1b2c_MixedStripDescentToDHalf}
+\input{P12_sections/P12_A15_1b2d_MixedSubWedgeAFullTail}
 
 \section{Consolidated status and the remaining wedges}\label{sec:p12-status}
 
@@ -139,44 +146,40 @@ Let \(2a < T_0 < c\) and \(0 < R < S < T_0\).  Then
 \(\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}\)
 in each of the following disjoint strata:
 \begin{itemize}
-\item[(i)]  \(S < T\)                                          (Theorem~\ref{thm:p12-b0});
+\item[(i)]   \(S < T\)                                          (Theorem~\ref{thm:p12-b0});
 \item[(ii)]  \(S = T\)                                          (Theorem~\ref{thm:p12-b1});
-\item[(iii)]  \(T < S < T_0\) with \(R \ge e\)                    (Theorem~\ref{thm:p12-b2a});
+\item[(iii)] \(T < S < T_0\) with \(R \ge e\)                    (Theorem~\ref{thm:p12-b2a});
 \item[(iv)]  \(T < S < T_0\) with \(e/2 \le R < e, \ \sigma \le R\)  (Theorem~\ref{thm:p12-b2b});
-\item[(v)]  \(T < S < T_0\) with \(d/2 \le R < e\)                (Theorem~\ref{thm:p12-b2c}).
+\item[(v)]   \(T < S < T_0\) with \(d/2 \le R < e\)                (Theorem~\ref{thm:p12-b2c});
+\item[(vi)]  \(T < S < T_0\) with \(e/2 \le R < d/2\)              (Theorem~\ref{thm:p12-b2d}).
 \end{itemize}
 Combined: \(\ker L = \{0\}\) throughout the whole mixed strip
-\(d/2 \le R < T\) (Corollary~\ref{cor:p12-mixed-strip-consolidated}).
+\(e/2 \le R < T\)
+(Corollary~\ref{cor:p12-mixed-strip-descent-to-ehalf}).
 \end{corollary}
 
-\begin{openproblem}[Sub-wedge~A full tail]\label{open:p12-subwedgeA-fulltail}
-For \(2a < T_0 < c\), \(e/2 \le R < d/2\), \(T < S < T_0\) with
-\(\sigma > R\): the restricted-tail
-Theorem~\ref{thm:p12-b2b} does not apply and
-Theorem~\ref{thm:p12-b2c} requires \(R \ge d/2\).  Decide whether
-\(\ker L = \{0\}\) in this remaining slice.
-\end{openproblem}
-
-\begin{openproblem}[Descent below $R = d/2$]\label{open:p12-subwedgeA-fulltail-below-dhalf}
-For \(2a < T_0 < c\), \(0 < R < d/2\), \(T < S < T_0\): decide whether
-\(\ker L = \{0\}\).  Independent point-orbit computation (finite typed
-elimination, not Galerkin) closes every tested representative after at
-most 19 typed reductions; a finite visibility-cell cover with a
-uniform closure bound is not yet established.  This is the natural
-target for the finite-typed-elimination continuation of the
-$13\times 13$ block from Theorem~\ref{thm:p12-b2c}.
+\begin{openproblem}[Descent below $R = e/2$]\label{open:p12-below-ehalf}
+For \(2a < T_0 < c\), \(0 < R < e/2\), \(T < S < T_0\): decide whether
+\(\ker L = \{0\}\).  Under $R < e/2$ a new visibility interval
+$(R, e - R)$ opens where the earlier reductions produce a third,
+as-yet-uncontrolled coupled reflection value.  Independent point-orbit
+computation (finite typed elimination, not Galerkin) closes every
+tested representative at $R = 0.07$; the finite visibility-cell cover
+with a uniform closure bound is not yet established.  The natural
+next target.
 \end{openproblem}
 
 \section{Firewall}\label{sec:p12-firewall}
 
 None of \S\ref{sec:p12-persistence}--\ref{sec:p12-status} makes a
 polar-gauge, terminal-transport, Object-X or RH statement.  The R14
-firewall from P11 remains unchanged: even a full closure of the two
-remaining open problems would decide only the localized-hub kernel
-triviality in the three-shift chamber; by R36-A1 (P11) this is
-equivalent to dense range of the annular hub projection
-\(P_{\mathcal A} H_{T_0}\), a modulus-layer statement.  Neither
-polar-gauge convergence nor strong terminal transport nor a canonical
-mediator for Object~X follow.
+firewall from P11 remains unchanged: even a full closure of the
+remaining low-radius wedge \(0 < R < e/2\)
+(Open Problem~\ref{open:p12-below-ehalf}) would decide only the
+localized-hub kernel triviality in the three-shift chamber; by
+R36-A1 (P11) this is equivalent to dense range of the annular hub
+projection \(P_{\mathcal A} H_{T_0}\), a modulus-layer statement.
+Neither polar-gauge convergence nor strong terminal transport nor a
+canonical mediator for Object~X follow.
 
 \end{document}
