@@ -151,6 +151,7 @@ even for arbitrarily small \(x\).
 \input{P12_sections/P12_A15_1b2c_MixedStripDescentToDHalf}
 \input{P12_sections/P12_A15_1b2d_MixedSubWedgeAFullTail}
 \input{P12_sections/P12_A15_1b2d_ParameterWedge}
+\input{P12_sections/P12_A15_1b2d_EtaWallBootstrap}
 
 \section{Consolidated status and the remaining wedges}\label{sec:p12-status}
 
@@ -198,9 +199,24 @@ e/2 \le R < d/2,
 \quad \sigma \le R + \eta,
 \]
 $\ker L_{R, S, T_0}^{\{a, b, 2a\}} = \{0\}$
-(Theorem~\ref{thm:p12-b2d-wedge}).  This is the first genuine
-two-dimensional open subregion of b2d in which full kernel
-triviality is established.
+(Theorem~\ref{thm:p12-b2d-wedge}).
+\end{corollary}
+
+\begin{corollary}[b2d full $\sigma \le d/2$ kernel triviality]
+\label{cor:p12-b2d-sigma-half}
+By the $\eta$-wall bootstrap
+(Theorem~\ref{thm:p12-b2d-core-single-full}), the restriction
+$\sigma \le R + \eta$ can be dropped:
+\[
+e/2 \le R < d/2,
+\quad R < \sigma < \varepsilon < \varepsilon_{\max},
+\quad \sigma \le d/2
+\;\Longrightarrow\;
+\ker L_{R, S, T_0}^{\{a, b, 2a\}} = \{0\}
+\]
+(Corollary~\ref{cor:p12-b2d-wedge-plus}).  The remaining open
+frontier in b2d is $\sigma > d/2$, i.e.\ the symmetric core-both
+stratum.
 \end{corollary}
 
 \begin{openproblem}[Full Sub-wedge A ($e/2 \le R < d/2$)]\label{open:p12-subwedgeA-open}

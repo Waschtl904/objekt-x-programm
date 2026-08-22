@@ -1,0 +1,160 @@
+\section{A15.1b2d $\eta$-wall bootstrap: full core-single closure}
+\label{sec:p12-b2d-eta-wall}
+
+\S\ref{sec:p12-b2d-core-single-slice} closed the slice
+$C_{19} = (R, \min\{\sigma, d - \sigma, R + \eta\})$ of b2d-core-single.
+We show now that the visibility wall at $x = R + \eta$ is only a
+one-step feedback: a single reflection $x \mapsto x - \eta$ places
+the new source into $C_{19}$, and the enlarged system collapses back
+to the same $M_{19}$.  This yields the full core-single local kill.
+
+\begin{theorem}[Full b2d-core-single local kill]
+\label{thm:p12-b2d-core-single-full}
+Let $2a < T_0 < c$, $\varepsilon := T_0 - T$,
+$e/2 \le R < d/2$, $R < \sigma < \varepsilon < \varepsilon_{\max}$.
+Then $h(x) = 0$ for every
+$x \in (R, \min\{\sigma, d - \sigma\})$.
+\end{theorem}
+
+\begin{proof}
+The slice $C_{19}$ is already handled by
+Theorem~\ref{thm:p12-b2d-core-single-slice}.  It remains to treat the
+post-wall region
+\[
+W := \bigl(R + \eta,\ \min\{\sigma, d - \sigma\}\bigr),
+\]
+assumed nonempty (otherwise nothing to prove).
+
+\smallskip
+\noindent\emph{Step 1 (only $Q_{18}$ changes across the wall).}
+Take $x \in W$.  The $18$ source positions
+$u_{i}$, $i \ne 18$, and their raw operator slots
+$L h(u_{i})$ under the anti-reflected support-truncated operator
+depend on the horizon/support decisions listed in
+audit \texttt{P12\_ADVERSARIAL\_AUDIT\_A15\_1B2D\_CORE\_SINGLE\_SLICE\_2026-08-22.md}.
+Inspection of that list shows that none of them uses K4
+$\bigl(0 < x - \eta < R\bigr)$; only $Q_{18}$ does.  In particular
+lower kills K1, K2, K3 and all upper kills H1--H5 remain valid on
+the larger range $x \in (R, \min\{\sigma, d - \sigma\})$ (they use
+only $x < d - \sigma$, $x < \varepsilon_{\max}$, $x > R \ge e/2$;
+no reference to $R + \eta$).
+
+\smallskip
+\noindent\emph{Step 2 (post-wall $Q_{18}^{+}$).}
+For $x > R + \eta$ the value $x - \eta$ satisfies $x - \eta > R$,
+so $h(x - \eta) \ne 0$ a priori.  At $u_{18} = 4e - x$:
+\[
+u_{18} - b \;=\; 4e - x - (3e + 2\delta)
+\;=\; \eta - x \;=\; -(x - \eta) \;<\; 0.
+\]
+Anti-reflection puts this slot into $-h(x - \eta)$ with the raw sign
+$+r$, giving effective sign $-r$.  All other five slots of $L h(u_{18})$
+are unchanged from Runde~9 (verified: $u_{18} + b$, $u_{18} \pm a$,
+$u_{18} \pm T$ all lie outside $(R, S)$ under H2, H5).  So $Q_{18}^{+}$
+reads
+\[
+p\, h(a - 2\delta - x) \;-\; r\, h(x - \eta) \;-\; q\, h(2\delta + x) \;=\; 0.
+\tag{$Q_{18}^{+}$}
+\]
+
+\smallskip
+\noindent\emph{Step 3 (bootstrap: $y := x - \eta \in C_{19}$).}
+We claim $y \in C_{19}$ for every $x \in W$.  Four inclusions:
+\begin{itemize}
+\item $y > R$: from $x > R + \eta$.
+\item $y < \sigma$: from $y = x - \eta < x < \sigma$.
+\item $y < d - \sigma$: from $y < x < d - \sigma$.
+\item $y < R + \eta$: from $x < d - \sigma < d - (R + \eta)$
+  (using post-wall $\sigma > R + \eta$), so
+  $y < d - R - 2\eta$.  It suffices to show
+  $d - R - 2\eta < R + \eta$, i.e.\ $d - 3\eta < 2R$.  Since
+  $R \ge e/2$, we need only $d - 3\eta < e$, i.e.\ $7\delta < 3e$.
+  Elementary: $\delta = \tfrac12 \log(9/8)$, $e = \tfrac12 \log(4/3)$,
+  so $7\delta < 3e$ iff $(9/8)^{7} < (4/3)^{3}$ iff $3^{17} < 2^{27}$,
+  i.e.\ $129{,}140{,}163 < 134{,}217{,}728$.
+\end{itemize}
+Hence $y \in C_{19}$, and
+Theorem~\ref{thm:p12-b2d-core-single-slice} gives $h(y) = 0$, i.e.\
+$h(x - \eta) = 0$.
+
+\smallskip
+\noindent\emph{Step 4 (collapse to the same $19 \times 19$).}
+Substituting $h(x - \eta) = 0$ into $Q_{18}^{+}$ yields
+\[
+p\, h(a - 2\delta - x) \;-\; q\, h(2\delta + x) \;=\; 0,
+\]
+the exact $Q_{18}$ row of Runde~9.  The 18 unchanged rows and this
+recovered $Q_{18}$ give the same coefficient matrix $M_{19}$ on the
+same 19-dimensional visibility vector $V(x)$.  From
+$\det M_{19} \ne 0$ (Lemma~\ref{lem:p12-b2d-F-neg}) we conclude
+$V(x) = 0$, in particular $h(x) = 0$.
+
+Combining with Theorem~\ref{thm:p12-b2d-core-single-slice} on the
+slice $C_{19}$, we obtain $h = 0$ a.e.\ on
+$(R, \min\{\sigma, d - \sigma\})$.
+\end{proof}
+
+\begin{remark}[Geometric footprint of the problematic radius]
+\label{rem:p12-b2d-Rstar}
+A nonempty post-wall region requires $R + \eta < d/2$, i.e.\
+$R < R^{*} := d/2 - \eta = \tfrac14 \log(311/217)$
+$\approx 0.0753$.
+Combined with $R \ge e/2 \approx 0.0719$, the problematic
+radius interval is
+\[
+e/2 \le R < R^{*},
+\qquad R^{*} - e/2 \approx 0.0034.
+\]
+Nonemptiness of this interval, i.e.\ $R^{*} > e/2$, is elementary:
+$R^{*} > e/2$ iff $\delta > 2\eta$ iff $5\delta > 2e$ iff
+$(9/8)^{5} > (4/3)^{2}$ iff $3^{12} > 2^{19}$, i.e.\
+$531{,}441 > 524{,}288$.
+\end{remark}
+
+\begin{corollary}[Enlarged parameter wedge, full kernel triviality]
+\label{cor:p12-b2d-wedge-plus}
+Let $2a < T_0 < c$, $\varepsilon := T_0 - T$,
+$e/2 \le R < d/2$, $R < \sigma < \varepsilon < \varepsilon_{\max}$,
+$\sigma \le d/2$.  Then
+$\ker L_{R, S, T_0}^{\{a, b, 2a\}} = \{0\}$.
+\end{corollary}
+
+\begin{proof}
+Under $\sigma \le d/2$, for every $x \in (R, \sigma)$ we have
+$d - x > d - \sigma \ge \sigma > x$, so $x < d - \sigma$; hence
+$(R, \sigma) \subset (R, \min\{\sigma, d - \sigma\})$.
+Theorem~\ref{thm:p12-b2d-core-single-full} gives full core-single
+kill.  Since the coefficient matrix $M_{19}$ is invertible, the
+entire 19-visibility vector at each $x$ vanishes; in particular
+$l(x) = h(T - x) = 0$ on $(R, \sigma)$.
+
+The remainder of the proof reproduces Steps 2--5 of
+Theorem~\ref{thm:p12-b2d-wedge}, using only $\sigma \le d/2$ (and no
+$\sigma \le R + \eta$ hypothesis):
+\begin{itemize}
+\item Step 2: $H(d - x) = 0$ (from $d - x > \sigma$), and P1 gives
+  $H(x) = 0$ on $(R, \sigma)$.
+\item Step 3: $(E_0)$ homogeneous on $(R, a)$; b2b Steps 1--5 give
+  $h = 0$ on $(R, a)$.
+\item Step 4: $D(t) = 0$ for $t \in (0, R)$, and P1/P2 give
+  $H = l = 0$ on $(0, R)$.
+\item Step 5: reduce to A15.1b1 at $(R, T, T_0)$.
+\end{itemize}
+Hence $h = 0$.
+\end{proof}
+
+\begin{remark}[What remains open]
+\label{rem:p12-b2d-remaining}
+Corollary~\ref{cor:p12-b2d-wedge-plus} closes the region
+$\sigma \le d/2$ of b2d completely.  The remaining open front
+is
+\[
+\sigma > d/2,
+\]
+where core-both becomes nonempty: at $x \sim d/2$, both $H(x)$
+and $H(d - x)$ are simultaneously live tail values.
+b2d-upper is already treated by
+Corollary~\ref{cor:p12-b2d-upper-local}, and b2d-core-single by
+Theorem~\ref{thm:p12-b2d-core-single-full}.  So the residual obstruction
+is precisely the symmetric core-both stratum.
+\end{remark}
