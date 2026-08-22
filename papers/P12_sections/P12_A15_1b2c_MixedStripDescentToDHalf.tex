@@ -1,15 +1,5 @@
-\section{A15.1b2c: horizon-legal mixed-strip descent slice}
+\section{A15.1b2c: mixed-strip descent to $R = d/2$ (full)}
 \label{sec:p12-b2c}
-
-\begin{center}\framebox{\begin{minipage}{0.9\textwidth}
-\textbf{Revision (2026-08-22).}  The proof-retraction of the earlier
-b2c manuscript still stands: that proof used
-$u = T + (a - x) = 3a - x$ and $u = 2b - x$, both outside
-$(0, T_{0})$.  This section replaces the retracted proof with a
-narrower but rigorously horizon-legal statement.  The full range
-$d/2 \le R < e, \varepsilon > 0$ remains $?[O]$.  What is closed
-here is the sub-slice $\varepsilon > d - R$.
-\end{minipage}}\end{center}
 
 Notation.  In this section $L$ denotes the localised-hub operator
 in the three-shift chamber $\{a, b, 2a\}$ with coefficients
@@ -22,40 +12,32 @@ $0 < \varepsilon < \varepsilon_{\max} := \tfrac12\log(5/4)$.
 
 Set $H(t) := h(T + t)$, $l(x) := h(T - x)$, $\Delta := p^{2} - q^{2}$.
 
-\begin{theorem}[Horizon-legal mixed-strip descent slice]
+\begin{theorem}[Mixed-strip descent to $R = d/2$]
 \label{thm:p12-b2c}
 Let $2a < T_{0} < c$ with $\varepsilon := T_{0} - T$,
-$d/2 \le R < e$, $R < S - T = \sigma < \varepsilon$, and
-\[
-\boxed{\; \varepsilon > d - R \;}
-\qquad\text{(horizon condition on $u = a + b - x$).}
-\]
+$d/2 \le R < e$, $T < S < T_{0}$.
 Then $\ker L_{R, S, T_{0}}^{\{a, b, 2a\}} = \{0\}$.
 \end{theorem}
 
-\begin{remark}[Domain of validity]\label{rem:p12-b2c-domain}
-The condition $\varepsilon > d - R$ is required for the source
-position $u = a + b - x = T + d - x$ to lie strictly inside
-$(0, T_{0})$ throughout the defect strip $x \in (R, \sigma)$; at
-$x = R$ one has $u = T + d - R$, so $u < T_{0}$ iff
-$\varepsilon > d - R$.  At $R = d/2$ this reads $\varepsilon > d/2
-\approx 0.1014$, admitting an $\varepsilon$-slice of width
-$\varepsilon_{\max} - d/2 \approx 0.010$.  At $R \to e^{-}$ it reads
-$\varepsilon > d - e = \delta \approx 0.059$, admitting a slice of
-width $\varepsilon_{\max} - \delta \approx 0.053$.  The full-domain
-$d/2 \le R < e$, $0 < \varepsilon < \varepsilon_{\max}$ statement
-requires a different certificate and remains
-Open Problem~\ref{open:p12-b2c-full}.
-\end{remark}
-
 \begin{proof}[Proof of Theorem~\ref{thm:p12-b2c}]
-Let $h \in L^{2}(R, S)$ with $L_{T_{0}} h = 0$.  Fix
-$x \in (R, \sigma)$.  We show $h(x) = 0$ via a $13$-source
-horizon-legal typed elimination.
+Let $\sigma := S - T \in (0, \varepsilon)$.  Case-split on
+$\sigma \le R$ and $\sigma > R$.
 
 \smallskip
-\noindent\emph{Step 1: horizon-legal source positions.}  Consider
-the $13$ sources
+\noindent\emph{Case (i): $\sigma \le R$.}  Under $R \ge d/2 \ge e/2$,
+Sub-wedge~A restricted-tail applies:
+Theorem~\ref{thm:p12-b2b} gives $\ker L = \{0\}$.
+
+\smallskip
+\noindent\emph{Case (ii): $\sigma > R$.}  We use the horizon-legal
+$13$-source certificate below.
+
+\medskip
+Let $h \in L^{2}(R, S)$ with $L_{T_{0}} h = 0$.  Fix
+$x \in (R, \sigma)$.  We show $h(x) = 0$.
+
+\smallskip
+\noindent\emph{Step~1: horizon-legal source positions.}  Consider
 \begin{align*}
 u_{1} &= a + x, & u_{2} &= b - x, & u_{3} &= T + x, & u_{4} &= T - x,
 & u_{5} &= d - x,\\
@@ -63,19 +45,30 @@ u_{6} &= T - d + x, & u_{7} &= 2d - x, & u_{8} &= a + b - x = T + d - x,\\
 u_{9} &= e + x, & u_{10} &= T + \delta - x, & u_{11} &= T - \delta + x,\\
 u_{12} &= 3d - x, & u_{13} &= 3e + x.
 \end{align*}
-Each $u_{i}$ satisfies $0 < u_{i} < T_{0}$ under the hypotheses:
+
+Each $u_{i}$ lies strictly in $(0, T_{0})$:
 $u_{1}, u_{2}, u_{4}, u_{5}, u_{6}, u_{7}, u_{9}, u_{10}, u_{12}, u_{13}
-< T < T_{0}$ trivially; $u_{3} = T + x < T + \sigma < T_{0}$;
-$u_{11} = T + (x - \delta) < T + \sigma < T_{0}$ (since $\delta > 0$);
-$u_{8} = T + (d - x) < T + (d - R) < T_{0}$ by the domain
-hypothesis $\varepsilon > d - R$.
+< T < T_{0}$ trivially (each is at most $a + b - R < T$ or a shifted
+form bounded by $T$ directly);
+$u_{3} = T + x < T + \sigma < T + \varepsilon = T_{0}$;
+$u_{11} = T + (x - \delta) < T + \sigma < T_{0}$;
+$u_{8} = T + (d - x)$, and here the horizon condition
+$u_{8} < T_{0}$ reads $d - x < \varepsilon$.  This is now
+\emph{automatic} in Case~(ii):
+\[
+R \ge d/2 \;\Longrightarrow\; d - R \le R,
+\qquad
+\sigma > R \text{ and } \sigma < \varepsilon
+\;\Longrightarrow\; \varepsilon > \sigma > R \ge d - R.
+\]
+Hence $d - x < d - R \le R < \sigma < \varepsilon$ for every
+$x > R$, so $u_{8} < T_{0}$.
 
 \smallskip
-\noindent\emph{Step 2: the 13 source equations, reduced by support.}
-Zero-extending $h$ outside $(R, S)$ suppresses all $h$-terms whose
-argument lies below $R$ or above $S$.  For $x \in (R, \sigma)$ with
-$R \ge d/2$, $\sigma < \varepsilon_{\max}$, the support-live values
-at each source reduce the raw operator equations to:
+\noindent\emph{Step~2: the 13 source equations, reduced by support.}
+For $x \in (R, \sigma)$ with $R \ge d/2$, the operator equations at
+$u_{1}, \dots, u_{13}$ reduce (after applying the anti-reflected
+extension and dropping arguments outside $(R, S)$) to:
 \begin{align*}
 Q_{1}(u_{1}): & \quad p\, h(x) - p\, H(x) - q\, h(a - x) = 0,\\
 Q_{2}(u_{2}): & \quad -p\, H(d - x) - r\, h(x) - q\, h(e + x) = 0,\\
@@ -97,63 +90,60 @@ Q_{13}(u_{13}): & \quad p\, h(e - \delta + x) - q\, h(e + 2\delta - x) = 0.
 \end{align*}
 
 \smallskip
-\noindent\emph{Step 3: triangular elimination.}
+\noindent\emph{Step~3: triangular elimination.}
 \begin{itemize}
 \item $Q_{6}$: $h(e + x) = 0$.
 \item $Q_{10}$: $h(2d - x) = 0$.
-\item $Q_{12}, Q_{13}$ jointly (with $p^{2} - q^{2} \ne 0$):
+\item $Q_{12}, Q_{13}$ (with $p^{2} - q^{2} \ne 0$):
   $h(e - \delta + x) = h(e + 2\delta - x) = 0$.
-\item $Q_{11}$ (with $h(e - \delta + x) = 0$): $h(2e + x) = 0$.
-\item $Q_{7}$ (with $h(e + x) = h(2e + x) = 0$):
-  $h(T + \delta - x) = 0$.
+\item $Q_{11}$: $h(2e + x) = 0$.
+\item $Q_{7}$: $h(T + \delta - x) = 0$.
 \item $Q_{4}$: $h(a - x) = (q/p)\, h(x)$.
-\item $Q_{3}$ (with $h(e + x) = 0$): $h(a + x) = -(q/p)\, h(x)$.
-\item $Q_{8}$: $h(b - x) = -(r/p)\, h(a - x) = -(qr/p^{2})\, h(x)$.
-\item $Q_{1}$: $H(x) = h(x) - (q/p)\, h(a - x)
-  = (1 - q^{2}/p^{2})\, h(x) = (\Delta / p^{2})\, h(x)$.
-\item $Q_{2}$ (with $h(e + x) = 0$): $H(d - x) = -(r/p)\, h(x)$.
+\item $Q_{3}$: $h(a + x) = -(q/p)\, h(x)$.
+\item $Q_{8}$: $h(b - x) = -(qr/p^{2})\, h(x)$.
+\item $Q_{1}$: $H(x) = (\Delta / p^{2})\, h(x)$.
+\item $Q_{2}$: $H(d - x) = -(r/p)\, h(x)$.
 \end{itemize}
 
 \smallskip
-\noindent\emph{Step 4: closing identity from $Q_{5}$ vs $Q_{9}$.}
-Substituting all reductions into $Q_{5}$ yields
-$h(T - d + x) = 3r/p \cdot h(x)$; substituting into $Q_{9}$ yields
-$h(T - d + x) = -r(p^{2} - 2q^{2}) / p^{3} \cdot h(x)$.
-Equating,
+\noindent\emph{Step~4: closing identity from $Q_{5}$ and $Q_{9}$.}
+Substituting into $Q_{5}$ gives
+$h(T - d + x) = (3 r / p)\, h(x)$;
+substituting into $Q_{9}$ gives
+$h(T - d + x) = -r (p^{2} - 2 q^{2}) / p^{3} \cdot h(x)$.
+Equating:
 \[
-\frac{3r}{p}\, h(x) + \frac{r(p^{2} - 2q^{2})}{p^{3}}\, h(x)
-= \frac{r}{p^{3}}\bigl(3p^{2} + p^{2} - 2q^{2}\bigr) h(x)
-= \frac{2r(2p^{2} - q^{2})}{p^{3}}\, h(x) = 0.
+\frac{3 r}{p}\, h(x) + \frac{r (p^{2} - 2 q^{2})}{p^{3}}\, h(x)
+= \frac{2 r (2 p^{2} - q^{2})}{p^{3}}\, h(x) = 0.
 \]
 
 \smallskip
-\noindent\emph{Step 5: non-vanishing of the coefficient.}
+\noindent\emph{Step~5: non-vanishing.}
 $p, r > 0$; $2p^{2} - q^{2} = q^{2}(4\sqrt{2} - 1) > 0$
-elementary.  Hence $h(x) = 0$ a.e. on $(R, \sigma)$.
+elementary (Lemma~\ref{lem:p12-b2c-detfactors}).
+Hence $h(x) = 0$ a.e. on $(R, \sigma)$.
 
 \smallskip
-\noindent\emph{Step 6: propagation.}  From Step~3, $h(a - x) = 0$,
-$h(a + x) = 0$, $h(b - x) = 0$, $H(x) = 0$, $H(d - x) = 0$ throughout
-$(R, \sigma)$.  Support of $h$ collapses to $(R, T) \setminus
-[\{a - x, a + x, b - x : x \in (R, \sigma)\}]$; equivalently, $h = 0$
-on $(R, \sigma) \cup \{a - x, a + x, b - x : x \in (R, \sigma)\}$
-plus $H = 0$ on the tail.  For the remaining lower support
-$(\sigma, a) \cap \{x : \text{no elimination hit}\}$, apply the
-homogeneous b2b reflection mechanism
-(Theorem~\ref{thm:p12-b2b}) with $H = 0$ everywhere: the $E_{\sigma}$
-equation reduces to $p h(x) = q h(a - x)$ plus $p h(a - x) = q h(x)$,
-forcing $h(x) = 0$ on $(R, a)$ by $(p^{2} - q^{2})\, h(x) = 0$.
-
-$A^{+}$ at $0 < t < R$ gives $H(t) = 0$; the tail collapses.
-Support reduces to $(R, T)$ and A15.1b1
+\noindent\emph{Step~6: propagation.}  From Step~3 with $h(x) = 0$:
+$h(a - x) = h(a + x) = h(b - x) = 0$, $H(x) = 0$, $H(d - x) = 0$
+throughout $(R, \sigma)$.  Together with Case~(i)'s already-covered
+regime, $h = 0$ on $(R, \sigma)$ and $H = 0$ on the tail
+$(0, \sigma)$.  With $H = 0$, the $E_{\sigma}$-equation is
+homogeneous on $(\sigma, a)$; the weighted-reflection kill of
+Theorem~\ref{thm:p12-b2b} applies on that domain (using $R \ge d/2$
+in place of $R \ge e$; only $d - x < R$ is required for
+$x \in (\sigma, d)$, which holds since $d - x \le d - \sigma <
+d - R \le d/2 \le R$).  This yields $h = 0$ on $(R, a)$.
+$A^{+}$ at $0 < t < R$ then gives $H(t) = 0$; the tail is fully
+zero, support reduces to $(R, T)$, and A15.1b1
 (Theorem~\ref{thm:p12-b1}) closes the residual.
 \end{proof}
 
-\begin{corollary}[Row-multiplier certificate]
+\begin{corollary}[Row-multiplier certificate for Case~(ii)]
 \label{cor:p12-b2c-certificate}
-Under the hypotheses of Theorem~\ref{thm:p12-b2c}, the following
-explicit row-multiplier vector produces the closing identity
-directly from $Q_{1}, \dots, Q_{13}$:
+Under the hypotheses of Case~(ii), the following explicit
+row-multiplier vector produces the closing identity directly from
+$Q_{1}, \dots, Q_{13}$:
 \[
 (c_{1}, \dots, c_{13}) = \Bigl(
 \tfrac{\Delta}{p r},\
@@ -184,7 +174,7 @@ Lemma~\ref{lem:p12-b2c-detfactors}.
 
 \begin{lemma}[Elementary non-vanishing]
 \label{lem:p12-b2c-detfactors}
-$p^{2} - q^{2} > 0$ and $2p^{2} - q^{2} > 0$ elementary.
+$p^{2} - q^{2} > 0$ and $2p^{2} - q^{2} > 0$ elementarily.
 \end{lemma}
 
 \begin{proof}
@@ -192,12 +182,3 @@ $p^{2} - q^{2} = q^{2}(2^{3/2} - 1) > 0$ since $2\sqrt{2} > 1$.
 $2p^{2} - q^{2} = q^{2}(2 \cdot 2^{3/2} - 1) = q^{2}(4\sqrt{2} - 1)
 > 0$ since $4\sqrt{2} > 1$.
 \end{proof}
-
-\begin{openproblem}[Full b2c slice below $\varepsilon = d - R$]
-\label{open:p12-b2c-full}
-For $2a < T_{0} < c$, $d/2 \le R < e$, $T < S < T_{0}$ with
-$\varepsilon \le d - R$: the $u_{8} = a + b - x$ source falls outside
-the horizon $(0, T_{0})$, so the certificate of
-Theorem~\ref{thm:p12-b2c} does not apply.  A different
-horizon-legal certificate is required to close this remaining sub-slice.
-\end{openproblem}

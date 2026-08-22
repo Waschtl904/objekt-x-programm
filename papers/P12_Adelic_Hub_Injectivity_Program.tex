@@ -52,16 +52,20 @@ typed blocks with determinant
 \(F < 0\) (equivalent to \(2809 < 2888\) plus \(50 > 48\)).
 \end{itemize}
 
-\textbf{Note (2026-08-22 adversarial audit round 2).}  The earlier
-b2c and b2d proofs used source positions outside the horizon and are
-retracted.  A new horizon-legal partial b2c is proven
-(Theorem~\ref{thm:p12-b2c}) in the slice $\varepsilon > d - R$;
-b2d remains open.  Two paired-source identities P1, P2
-(Theorems~\ref{thm:p12-P1}, \ref{thm:p12-P2}) are proven
-unconditionally for every $0 < x < \varepsilon$.  Combined proven
-strata now cover: mixed strip $e \le R < T$ (b2a) plus b2b
-restricted-tail plus the b2c slice $\{d/2 \le R < e,\ \varepsilon >
-d - R\}$.
+\textbf{Note (2026-08-22 adversarial audit round 3).}  The retracted
+b2c and b2d proofs are replaced.  A horizon-legal 13-source
+certificate closes full b2c: for every
+$d/2 \le R < e$, $T < S < T_{0}$,
+$\ker L = 0$ (Theorem~\ref{thm:p12-b2c}).  The apparent
+``$\varepsilon > d - R$'' condition of round~2 was a false
+restriction: in Case~(ii) $\sigma > R$ it is automatic
+($R \ge d/2 \Rightarrow d - R \le R < \sigma < \varepsilon$),
+and the complementary regime $\sigma \le R$ is Case~(i), covered by
+b2b.  b2d ($e/2 \le R < d/2$) remains open.  Two paired-source
+identities P1, P2 (Theorems~\ref{thm:p12-P1}, \ref{thm:p12-P2}) are
+proven unconditionally for every $0 < x < \varepsilon$.  Combined
+proven strata now cover the mixed strip $d/2 \le R < T$; open front
+reverts to $0 < R < d/2$.
 
 None of P12 asserts polar-gauge, terminal-transport, Object-X or RH
 consequences.  The R14 firewall of P11 is preserved unchanged.
@@ -149,35 +153,31 @@ even for arbitrarily small \(x\).
 
 \section{Consolidated status and the remaining wedges}\label{sec:p12-status}
 
-\begin{corollary}[A15.1 consolidated injectivity, post-audit 2026-08-22]\label{cor:p12-consolidated}
+\begin{corollary}[A15.1 consolidated injectivity, post-audit round 3]\label{cor:p12-consolidated}
 Let \(2a < T_0 < c\) and \(0 < R < S < T_0\).  Then
 \(\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}\)
-in each of the following disjoint strata (proofs $\checkmark[M]$):
+in each of the following disjoint strata (all $\checkmark[M]$):
 \begin{itemize}
 \item[(i)]   \(S < T\)                                          (Theorem~\ref{thm:p12-b0});
 \item[(ii)]  \(S = T\)                                          (Theorem~\ref{thm:p12-b1});
 \item[(iii)] \(T < S < T_0\) with \(R \ge e\)                    (Theorem~\ref{thm:p12-b2a});
 \item[(iv)]  \(T < S < T_0\) with \(e/2 \le R < e, \ \sigma \le R\)  (Theorem~\ref{thm:p12-b2b});
-\item[(v-slice)] \(T < S < T_0\) with \(d/2 \le R < e\) and $\varepsilon > d - R$  (Theorem~\ref{thm:p12-b2c}).
+\item[(v)]   \(T < S < T_0\) with \(d/2 \le R < e\)                (Theorem~\ref{thm:p12-b2c}).
 \end{itemize}
-Additionally the paired-source identities P1 and P2
-(Theorems~\ref{thm:p12-P1}, \ref{thm:p12-P2}) hold
-unconditionally in the whole chamber for every $0 < x < \varepsilon$.
+Combined: \(\ker L = \{0\}\) throughout the mixed strip
+\(d/2 \le R < T\).  Additionally the paired-source identities P1
+and P2 (Theorems~\ref{thm:p12-P1}, \ref{thm:p12-P2}) hold
+unconditionally in the whole chamber for every
+$0 < x < \varepsilon$.
 \end{corollary}
-
-\begin{openproblem}[Full b2c slice]\label{open:p12-b2c-full-remaining}
-$d/2 \le R < e$, $T < S < T_0$, $\varepsilon \le d - R$: the horizon-legal
-13-source certificate of Theorem~\ref{thm:p12-b2c} does not apply
-because $u = a + b - x$ exits the horizon.  A different
-horizon-legal certificate is required.
-\end{openproblem}
 
 \begin{openproblem}[Full Sub-wedge A ($e/2 \le R < d/2$)]\label{open:p12-subwedgeA-open}
 For $2a < T_0 < c$, $e/2 \le R < d/2$, $T < S < T_0$: decide whether
 $\ker L = 0$.  P1/P2 apply and give the case-B non-degeneracy and
 the sub-case-$\sigma\le d/2$ null interval on the upper half
 (Corollaries~\ref{cor:p12-P1-caseB}, \ref{cor:p12-P1-subhalf}), but a
-full kill certificate is not yet established.
+full kill certificate is not yet established.  The natural target
+is a horizon-legal typed cocycle for the symmetric defect core.
 \end{openproblem}
 
 \begin{openproblem}[Descent below $R = e/2$]\label{open:p12-below-ehalf}
@@ -190,13 +190,12 @@ For \(2a < T_0 < c\), \(0 < R < e/2\), \(T < S < T_0\): decide whether
 None of \S\ref{sec:p12-persistence}--\ref{sec:p12-status} makes a
 polar-gauge, terminal-transport, Object-X or RH statement.  The R14
 firewall from P11 remains unchanged: even a full closure of the
-remaining low-radius open problems
-(\ref{open:p12-b2c-full-remaining}, \ref{open:p12-subwedgeA-open},
-\ref{open:p12-below-ehalf}) would decide only the localized-hub
-kernel triviality in the three-shift chamber; by R36-A1 (P11) this
-is equivalent to dense range of the annular hub projection
-\(P_{\mathcal A} H_{T_0}\), a modulus-layer statement.  Neither
-polar-gauge convergence nor strong terminal transport nor a
-canonical mediator for Object~X follow.
+remaining open problems
+(\ref{open:p12-subwedgeA-open}, \ref{open:p12-below-ehalf}) would
+decide only the localized-hub kernel triviality in the three-shift
+chamber; by R36-A1 (P11) this is equivalent to dense range of the
+annular hub projection \(P_{\mathcal A} H_{T_0}\), a modulus-layer
+statement.  Neither polar-gauge convergence nor strong terminal
+transport nor a canonical mediator for Object~X follow.
 
 \end{document}

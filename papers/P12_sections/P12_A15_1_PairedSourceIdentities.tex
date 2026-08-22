@@ -31,14 +31,30 @@ T^{+}(u = T + x): & \quad p h(a + x) + r h(e + x) + q h(x) = 0.
 \end{lemma}
 
 \begin{proof}
-Horizon: all six positions are strictly less than $c$ and hence less
-than $T_{0}$; in particular $T + x < T + \varepsilon = T_{0}$.
+Horizon-legality per source (each strictly less than $T_{0}$; the
+chain "$<$ some constant $<c$" is \emph{not} used, since $T_{0} < c$):
+\begin{itemize}
+\item $a - x < a < T < T_{0}$;
+\item $a + x < a + \varepsilon_{\max} < T < T_{0}$
+  (since $a + \varepsilon_{\max} = a + \tfrac12\log(5/4)
+  = \tfrac12\log(5) - \tfrac12\log 2 = c - a < 2a = T$,
+  equivalent to $2a > c/2$, i.e.\ $2\log 2 > \tfrac12\log 5$,
+  elementary since $16 > 5$);
+\item $b - x < b < T$ (since $2a > b$, i.e.\ $4 > 3$);
+\item $b + x < b + \varepsilon_{\max} < T$ (since
+  $b + \varepsilon_{\max} = \tfrac12(\log 3 + \log(5/4))
+  = \tfrac12\log(15/4)$, and $2a = \log 2$;
+  $\log 2 > \tfrac12\log(15/4)$ iff $4 > 15/4$, i.e.\ $16 > 15$,
+  elementary);
+\item $T - x < T < T_{0}$;
+\item $T + x < T + \varepsilon = T_{0}$.
+\end{itemize}
 Operator convention: $Lh(u) = \sum_{s} k_{s}[h(u - s) - h(u + s)]$
 with $(k_{a}, k_{b}, k_{2a}) = (p, r, q)$.  Applying at each source
 and dropping terms whose $h$-argument lies below $0$ (anti-reflected
-to their positive image) or above $c$ (outside horizon, zero) yields
-the six equations exactly.  Reflection at zero uses
-$h(-y) = -h(y)$, which is the natural convention for an
+to their positive image) or above $S = T + \sigma$ (outside support,
+zero) yields the six equations exactly.  Anti-reflection at zero
+uses $h(-y) = -h(y)$, which is the natural convention for an
 antisymmetric shift operator on the symmetric extension.
 \end{proof}
 
