@@ -153,7 +153,7 @@ even for arbitrarily small \(x\).
 
 \section{Consolidated status and the remaining wedges}\label{sec:p12-status}
 
-\begin{corollary}[A15.1 consolidated injectivity, post-audit round 3]\label{cor:p12-consolidated}
+\begin{corollary}[A15.1 consolidated injectivity]\label{cor:p12-consolidated}
 Let \(2a < T_0 < c\) and \(0 < R < S < T_0\).  Then
 \(\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}\)
 in each of the following disjoint strata (all $\checkmark[M]$):
@@ -169,6 +169,22 @@ Combined: \(\ker L = \{0\}\) throughout the mixed strip
 and P2 (Theorems~\ref{thm:p12-P1}, \ref{thm:p12-P2}) hold
 unconditionally in the whole chamber for every
 $0 < x < \varepsilon$.
+\end{corollary}
+
+\begin{corollary}[b2d partial local kills]\label{cor:p12-b2d-partial}
+Let $e/2 \le R < d/2$, $R < \sigma < \varepsilon < \varepsilon_{\max}$.
+On two sub-regions of the b2d defect strip $(R, \sigma)$, $h$
+vanishes pointwise:
+\begin{itemize}
+\item[(a)] b2d-upper $x \in (d - R, \sigma)$, when $\sigma > d - R$
+  (Corollary~\ref{cor:p12-b2d-upper-local});
+\item[(b)] b2d-core-single slice $x \in
+  \bigl(R,\ \min\{\sigma,\ d - \sigma,\ R + \eta\}\bigr)$
+  with $\eta := e - 2\delta = \tfrac12 \log(256/243)$
+  (Theorem~\ref{thm:p12-b2d-core-single-slice}).
+\end{itemize}
+The remaining sub-regions (b2d-core-single beyond
+$x = R + \eta$; b2d-core-both entirely) are open.
 \end{corollary}
 
 \begin{openproblem}[Full Sub-wedge A ($e/2 \le R < d/2$)]\label{open:p12-subwedgeA-open}
