@@ -19,7 +19,7 @@
 
 \title[P12 --- Adelic Hub Injectivity]{P12 --- Adelic Hub Injectivity beyond the Two-Shift Boundary}
 \author{Objekt-X-Programm}
-\date{2026-08-21}
+\date{2026-08-22}
 
 \begin{document}
 
@@ -27,45 +27,34 @@
 P11 froze the finite-horizon Feshbach--Schur candidate geometry at
 \(T_0 \le 2a\).  P12 opens the next arithmetic-shift chamber
 \(2a < T_0 < \tfrac12\log 5\), where the third shift \(2a\) becomes
-active.  We record the persistence of the A14.3a boundary injectivity
-into a full three-shift regime along six disjoint parameter strata, and
-we identify the exact remaining low-source-radius wedge.
+active.  The present manuscript proves localized-hub kernel
+triviality throughout the mixed strip down to the source-radius
+threshold \(R=e/2\).
 
 Concretely, P12 establishes:
 \begin{itemize}
-\item \textbf{A15.1b0} pure-tail injectivity for \(S < T\);
-\item \textbf{A15.1b1} horizon-open \(S = T\) endpoint injectivity;
-\item \textbf{A15.1b2a} mixed strip \(R \ge e\) injectivity, with
-\(e = 2a - b = a - d\);
-\item \textbf{A15.1b2b} mixed strip Sub-wedge~A restricted-tail
-  injectivity \(e/2 \le R < e, \sigma \le R\);
-\item \textbf{A15.1b2c} mixed strip descent to \(R = d/2\), including
-the full tail-overlap regime \(\sigma > R\), via a triangular
-elimination reducing to a single scalar factor
-\((2 q r / p^{3})(2p^{2} - q^{2}) > 0\);
-\item \textbf{A15.1b2d} full Sub-wedge~A injectivity
-\(e/2 \le R < d/2\), via a two-threshold cell decomposition at
-\(\kappa = e - \delta\) and \(\lambda = d - \sigma\), two $19\times 19$
-typed blocks with determinant
-\(\pm p^{8} r (p^{2} - q^{2})^{3} F\), and an elementary chain
-\((2 - 3B + B^{2})/(1 + B) < 4/5 < \theta\) that forces
-\(F < 0\) (equivalent to \(2809 < 2888\) plus \(50 > 48\)).
+\item \textbf{A15.1b0} pure-tail injectivity for \(S<T\);
+\item \textbf{A15.1b1} horizon-open \(S=T\) endpoint injectivity;
+\item \textbf{A15.1b2a} mixed strip \(e\le R<T\) injectivity;
+\item \textbf{A15.1b2b} restricted-tail injectivity for
+  \(e/2\le R<e\), \(\sigma\le R\);
+\item \textbf{A15.1b2c} full mixed-strip injectivity for
+  \(d/2\le R<e\), including tail overlap;
+\item \textbf{A15.1b2d} full Sub-wedge~A injectivity for
+  \(e/2\le R<d/2\).  The last core-both obstruction is closed by a
+  horizon-legal 13-source triangular certificate whose final scalar
+  factor is
+  \[
+  \frac{2qr(2p^2-q^2)}{p^3}>0.
+  \]
 \end{itemize}
 
-\textbf{Note (2026-08-22 adversarial audit round 3).}  The retracted
-b2c and b2d proofs are replaced.  A horizon-legal 13-source
-certificate closes full b2c: for every
-$d/2 \le R < e$, $T < S < T_{0}$,
-$\ker L = 0$ (Theorem~\ref{thm:p12-b2c}).  The apparent
-``$\varepsilon > d - R$'' condition of round~2 was a false
-restriction: in Case~(ii) $\sigma > R$ it is automatic
-($R \ge d/2 \Rightarrow d - R \le R < \sigma < \varepsilon$),
-and the complementary regime $\sigma \le R$ is Case~(i), covered by
-b2b.  b2d ($e/2 \le R < d/2$) remains open.  Two paired-source
-identities P1, P2 (Theorems~\ref{thm:p12-P1}, \ref{thm:p12-P2}) are
-proven unconditionally for every $0 < x < \varepsilon$.  Combined
-proven strata now cover the mixed strip $d/2 \le R < T$; open front
-reverts to $0 < R < d/2$.
+The b2d proof combines the already established core-single and
+upper-region kills with the new symmetric core-both certificate.  A
+separate polynomial row-multiplier identity cross-checks the
+13-source elimination.  Hence the mixed strip is closed for every
+\(e/2\le R<T\); the remaining low-source-radius problem is
+\(0<R<e/2\).
 
 None of P12 asserts polar-gauge, terminal-transport, Object-X or RH
 consequences.  The R14 firewall of P11 is preserved unchanged.
@@ -76,72 +65,71 @@ consequences.  The R14 firewall of P11 is preserved unchanged.
 \section{Setup and notation}\label{sec:p12-setup}
 
 We work throughout with the odd folded three-shift operator on
-\(L^2(R,S)\) with parameters \(0 < R < S < T_0\) in the arithmetic
-chamber
+\(L^2(R,S)\) with parameters \(0<R<S<T_0\) in the arithmetic chamber
 \[
-2a < T_0 < c := \tfrac12\log 5,
+2a<T_0<c:=\tfrac12\log 5,
 \]
 where the three active shift centres are
 \[
-\tau_{2,1} = a = \tfrac12\log 2, \qquad
-\tau_{3,1} = b = \tfrac12\log 3, \qquad
-\tau_{2,2} = 2a = \log 2.
+\tau_{2,1}=a=\tfrac12\log 2,\qquad
+\tau_{3,1}=b=\tfrac12\log 3,\qquad
+\tau_{2,2}=2a=\log 2.
 \]
 The prime-power weights are
 \[
-p := c_{2,1} = \sqrt{\log 2}\; 2^{-3/4},\quad
-r := c_{3,1} = \sqrt{\log 3}\; 3^{-3/4},\quad
-q := c_{2,2} = \sqrt{\log 2}\; 2^{-3/2}.
+p:=c_{2,1}=\sqrt{\log 2}\;2^{-3/4},\quad
+r:=c_{3,1}=\sqrt{\log 3}\;3^{-3/4},\quad
+q:=c_{2,2}=\sqrt{\log 2}\;2^{-3/2}.
 \]
 Auxiliary constants:
 \[
-d := b - a, \quad e := a - d = 2a - b, \quad \delta := d - e = 2b - 3a,
-\quad T := 2a.
+d:=b-a,\quad e:=a-d=2a-b,\quad
+\delta:=d-e=2b-3a,\quad T:=2a.
 \]
 Numerically
 \[
-d \approx 0.2027, \quad e \approx 0.1438, \quad
-\delta \approx 0.0589, \quad d/2 \approx 0.1014,
-\quad e/2 \approx 0.0719.
+d\approx0.2027,\quad e\approx0.1438,\quad
+\delta\approx0.0589,\quad d/2\approx0.1014,\quad
+e/2\approx0.0719.
 \]
 
-Let \(\varepsilon := T_0 - T > 0\) and, in the mixed strip
-\(T < S < T_0\), let \(\sigma := S - T \in (0, \varepsilon)\).
+Let \(\varepsilon:=T_0-T>0\) and, in the mixed strip
+\(T<S<T_0\), let \(\sigma:=S-T\in(0,\varepsilon)\).
 
 The folded operator is
 \[
-L_{R,S,T_0}\; h \;=\; P_{L^2(-T_0,T_0)}\!\Bigl(\text{sum of shift sources}\Bigr),
+L_{R,S,T_0}\;h
+=
+P_{L^2(-T_0,T_0)}\!\Bigl(\text{sum of shift sources}\Bigr),
 \]
 with the two-fold sign convention and cutoff structure inherited from
-P11 (2.5) and A14.3a.  All theorems and proofs below use only the
-E-source \(u = a + x\), the H-source \(u = 2a + x\), and the direct
-support-negativity of \(h\).
+P11 (2.5) and A14.3a.
 
 \section{Persistence up to the arithmetic boundary}\label{sec:p12-persistence}
 
 \begin{theorem}[A15.1b0: pure-tail injectivity]\label{thm:p12-b0}
-Let \(2a < T_0 < c\).  For every \(0 < R < S < T\) (thus \(S < T\) is
-strict) the folded three-shift operator satisfies
-\(\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}\).
+Let \(2a<T_0<c\).  For every \(0<R<S<T\) the folded three-shift
+operator satisfies
+\[
+\ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}.
+\]
 \end{theorem}
 
 \begin{proof}
-Persistence of A14.3a in the pure-source region \(S < T = 2a\).
+Persistence of A14.3a in the pure-source region \(S<T=2a\).
 The additional \(2a\)-shift is inactive on the source E-family
-\(u = a + x\), \(0 < x < a\), because the fold branch
-\(g(u + 2a) = g(3a + x)\) has argument \(3a + x > 3a > T_0\), hence
-\(P_{T_0}\) deletes it; and the forward branch \(g(u - 2a) = g(x - a)\)
-lies in the odd-extended support region already treated by A14.3a via
-the oddness identity \(g(x - a) = -g(a - x)\), which does not introduce
-new shift-mixed cross terms.  The A14.3a proof structure applies
-verbatim.
+\(u=a+x\), \(0<x<a\), because the fold branch
+\(g(u+2a)=g(3a+x)\) has argument \(3a+x>3a>T_0\), hence
+\(P_{T_0}\) deletes it; and the forward branch
+\(g(u-2a)=g(x-a)\) lies in the odd-extended support region already
+treated by A14.3a via
+\(g(x-a)=-g(a-x)\).  The A14.3a proof structure applies verbatim.
 \end{proof}
 
 \begin{remark}\label{rem:p12-b0-scope}
-Theorem~\ref{thm:p12-b0} keeps \(S < T\) strictly.  The exact boundary
-point \(S = T\) with \(T_0 > T\) is a separate case (Theorem~\ref{thm:p12-b1}
-below), because the new \(2a\)-shift fold branch acts on \(g(u + 2a)\)
-even for arbitrarily small \(x\).
+Theorem~\ref{thm:p12-b0} keeps \(S<T\) strictly.  The exact boundary
+point \(S=T\) with \(T_0>T\) is a separate case
+(Theorem~\ref{thm:p12-b1}).
 \end{remark}
 
 \input{P12_sections/P12_A15_1b1_HorizonOpenEndpoint}
@@ -152,98 +140,69 @@ even for arbitrarily small \(x\).
 \input{P12_sections/P12_A15_1b2d_MixedSubWedgeAFullTail}
 \input{P12_sections/P12_A15_1b2d_ParameterWedge}
 \input{P12_sections/P12_A15_1b2d_EtaWallBootstrap}
+\input{P12_sections/P12_A15_1b2d_CoreBothClosure}
 
-\section{Consolidated status and the remaining wedges}\label{sec:p12-status}
+\section{Consolidated status and the remaining wedge}\label{sec:p12-status}
 
-\begin{corollary}[A15.1 consolidated injectivity]\label{cor:p12-consolidated}
-Let \(2a < T_0 < c\) and \(0 < R < S < T_0\).  Then
-\(\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}\)
-in each of the following disjoint strata (all $\checkmark[M]$):
-\begin{itemize}
-\item[(i)]   \(S < T\)                                          (Theorem~\ref{thm:p12-b0});
-\item[(ii)]  \(S = T\)                                          (Theorem~\ref{thm:p12-b1});
-\item[(iii)] \(T < S < T_0\) with \(R \ge e\)                    (Theorem~\ref{thm:p12-b2a});
-\item[(iv)]  \(T < S < T_0\) with \(e/2 \le R < e, \ \sigma \le R\)  (Theorem~\ref{thm:p12-b2b});
-\item[(v)]   \(T < S < T_0\) with \(d/2 \le R < e\)                (Theorem~\ref{thm:p12-b2c}).
-\end{itemize}
-Combined: \(\ker L = \{0\}\) throughout the mixed strip
-\(d/2 \le R < T\).  Additionally the paired-source identities P1
-and P2 (Theorems~\ref{thm:p12-P1}, \ref{thm:p12-P2}) hold
-unconditionally in the whole chamber for every
-$0 < x < \varepsilon$.
-\end{corollary}
-
-\begin{corollary}[b2d partial local kills]\label{cor:p12-b2d-partial}
-Let $e/2 \le R < d/2$, $R < \sigma < \varepsilon < \varepsilon_{\max}$.
-On two sub-regions of the b2d defect strip $(R, \sigma)$, $h$
-vanishes pointwise:
-\begin{itemize}
-\item[(a)] b2d-upper $x \in (d - R, \sigma)$, when $\sigma > d - R$
-  (Corollary~\ref{cor:p12-b2d-upper-local});
-\item[(b)] b2d-core-single slice $x \in
-  \bigl(R,\ \min\{\sigma,\ d - \sigma,\ R + \eta\}\bigr)$
-  with $\eta := e - 2\delta = \tfrac12 \log(256/243)$
-  (Theorem~\ref{thm:p12-b2d-core-single-slice}).
-\end{itemize}
-The remaining sub-regions (b2d-core-single beyond
-$x = R + \eta$; b2d-core-both entirely) are open.
-\end{corollary}
-
-\begin{corollary}[b2d parameter wedge kernel triviality]
-\label{cor:p12-b2d-wedge}
-On the parameter wedge
+\begin{corollary}[A15.1 consolidated injectivity]
+\label{cor:p12-consolidated}
+Let \(2a<T_0<c\) and \(0<R<S<T_0\).  Then
 \[
-e/2 \le R < d/2,
-\quad R < \sigma < \varepsilon < \varepsilon_{\max},
-\quad \sigma \le d/2,
-\quad \sigma \le R + \eta,
+\ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}
 \]
-$\ker L_{R, S, T_0}^{\{a, b, 2a\}} = \{0\}$
-(Theorem~\ref{thm:p12-b2d-wedge}).
-\end{corollary}
-
-\begin{corollary}[b2d full $\sigma \le d/2$ kernel triviality]
-\label{cor:p12-b2d-sigma-half}
-By the $\eta$-wall bootstrap
-(Theorem~\ref{thm:p12-b2d-core-single-full}), the restriction
-$\sigma \le R + \eta$ can be dropped:
+in the following established strata:
+\begin{itemize}
+\item[(i)] \(S<T\)
+  (Theorem~\ref{thm:p12-b0});
+\item[(ii)] \(S=T\)
+  (Theorem~\ref{thm:p12-b1});
+\item[(iii)] \(T<S<T_0\), \(e\le R<T\)
+  (Theorem~\ref{thm:p12-b2a});
+\item[(iv)] \(T<S<T_0\), \(d/2\le R<e\)
+  (Theorem~\ref{thm:p12-b2c}, together with b2b where applicable);
+\item[(v)] \(T<S<T_0\), \(e/2\le R<d/2\)
+  (Theorem~\ref{thm:p12-b2d-full}).
+\end{itemize}
+Consequently,
 \[
-e/2 \le R < d/2,
-\quad R < \sigma < \varepsilon < \varepsilon_{\max},
-\quad \sigma \le d/2
-\;\Longrightarrow\;
-\ker L_{R, S, T_0}^{\{a, b, 2a\}} = \{0\}
+\boxed{
+T<S<T_0,\qquad e/2\le R<T
+\quad\Longrightarrow\quad
+\ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}.
+}
 \]
-(Corollary~\ref{cor:p12-b2d-wedge-plus}).  The remaining open
-frontier in b2d is $\sigma > d/2$, i.e.\ the symmetric core-both
-stratum.
+The paired-source identities P1 and P2
+(Theorems~\ref{thm:p12-P1}, \ref{thm:p12-P2}) remain valid
+unconditionally for every \(0<x<\varepsilon\).
 \end{corollary}
 
-\begin{openproblem}[Full Sub-wedge A ($e/2 \le R < d/2$)]\label{open:p12-subwedgeA-open}
-For $2a < T_0 < c$, $e/2 \le R < d/2$, $T < S < T_0$: decide whether
-$\ker L = 0$.  P1/P2 apply and give the case-B non-degeneracy and
-the sub-case-$\sigma\le d/2$ null interval on the upper half
-(Corollaries~\ref{cor:p12-P1-caseB}, \ref{cor:p12-P1-subhalf}), but a
-full kill certificate is not yet established.  The natural target
-is a horizon-legal typed cocycle for the symmetric defect core.
-\end{openproblem}
+\begin{remark}[b2d closure]
+Theorem~\ref{thm:p12-b2d-core-both-full} closes the symmetric
+core-both region that remained after the full core-single
+Theorem~\ref{thm:p12-b2d-core-single-full} and the b2d-upper
+Corollary~\ref{cor:p12-b2d-upper-local}.  Thus
+Theorem~\ref{thm:p12-b2d-full} supersedes the earlier partial
+b2d wedge statements as the final Sub-wedge~A result.
+\end{remark}
 
-\begin{openproblem}[Descent below $R = e/2$]\label{open:p12-below-ehalf}
-For \(2a < T_0 < c\), \(0 < R < e/2\), \(T < S < T_0\): decide whether
-\(\ker L = \{0\}\).
+\begin{openproblem}[Descent below \(R=e/2\)]
+\label{open:p12-below-ehalf}
+For \(2a<T_0<c\), \(0<R<e/2\), \(T<S<T_0\): decide whether
+\[
+\ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}.
+\]
 \end{openproblem}
 
 \section{Firewall}\label{sec:p12-firewall}
 
 None of \S\ref{sec:p12-persistence}--\ref{sec:p12-status} makes a
 polar-gauge, terminal-transport, Object-X or RH statement.  The R14
-firewall from P11 remains unchanged: even a full closure of the
-remaining open problems
-(\ref{open:p12-subwedgeA-open}, \ref{open:p12-below-ehalf}) would
-decide only the localized-hub kernel triviality in the three-shift
-chamber; by R36-A1 (P11) this is equivalent to dense range of the
-annular hub projection \(P_{\mathcal A} H_{T_0}\), a modulus-layer
-statement.  Neither polar-gauge convergence nor strong terminal
-transport nor a canonical mediator for Object~X follow.
+firewall from P11 remains unchanged: even a full closure of
+Open Problem~\ref{open:p12-below-ehalf} would decide only the
+localized-hub kernel triviality in the three-shift chamber; by R36-A1
+(P11) this is equivalent to dense range of the annular hub projection
+\(P_{\mathcal A}H_{T_0}\), a modulus-layer statement.  Neither
+polar-gauge convergence nor strong terminal transport nor a canonical
+mediator for Object~X follows.
 
 \end{document}
