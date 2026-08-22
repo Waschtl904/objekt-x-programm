@@ -1,0 +1,331 @@
+\section{A15.1b2d core-both closure and full Sub-wedge A}
+\label{sec:p12-b2d-core-both}
+
+We close the only remaining part of b2d.  Throughout this section let
+\[
+e/2 \le R < d/2,\qquad
+R < \sigma < \varepsilon < \varepsilon_{\max},
+\qquad
+\sigma>d/2,
+\]
+and let \(h\in L^2(R,S)\) satisfy \(L_{T_0}h=0\), with
+\(S=T+\sigma\), \(T_0=T+\varepsilon\).
+Set
+\[
+I_{\rm both}:=
+\bigl(\max\{R,d-\sigma\},\,\min\{\sigma,d-R\}\bigr).
+\]
+For \(x\in I_{\rm both}\) write
+\[
+y:=d-x,\qquad \kappa:=e-\delta.
+\]
+Then \(x,y\in(R,\sigma)\), and \(I_{\rm both}\) is invariant under
+\(x\mapsto d-x\).
+
+\begin{lemma}[Uniform core-both support bounds]
+\label{lem:p12-b2d-core-both-support}
+For a.e.\ \(x\in I_{\rm both}\),
+\[
+0<e-x<R,\qquad 0<e-y<R,
+\]
+\[
+0<x-\delta<R,\qquad 0<y-\delta<R,
+\]
+and
+\[
+0<2\delta-x<R.
+\]
+Moreover
+\[
+y+\delta>\sigma,\qquad x+\kappa>\sigma.
+\]
+\end{lemma}
+
+\begin{proof}
+Since \(x,y\in(R,\sigma)\), \(R\ge e/2\), and
+\(\sigma<\varepsilon_{\max}<e\),
+\[
+0<e-x<e-R\le e/2\le R,
+\]
+and the same holds with \(y\) in place of \(x\).
+
+Next \(x,y>R\ge e/2>\delta\), while
+\[
+x-\delta,\ y-\delta
+<\varepsilon_{\max}-\delta<e/2\le R.
+\]
+Also \(\varepsilon_{\max}<2\delta\), so \(2\delta-x>0\), and
+\(R>\delta\) gives
+\[
+2\delta-x<2\delta-R<R.
+\]
+
+Finally
+\[
+y+\delta>e/2+\delta>\varepsilon_{\max}>\sigma.
+\]
+Since \(e>2\delta\), \(\kappa=e-\delta>\delta\), hence also
+\[
+x+\kappa>e/2+\delta>\varepsilon_{\max}>\sigma.
+\]
+The elementary comparisons used here are
+\(e>2\delta\iff256>243\),
+\(\varepsilon_{\max}<e\iff15<16\),
+\(\varepsilon_{\max}<2\delta\iff80<81\), and
+\(\varepsilon_{\max}-\delta<e/2\iff100<108\).
+\end{proof}
+
+\begin{theorem}[Full b2d core-both local kill]
+\label{thm:p12-b2d-core-both-full}
+Under the hypotheses above,
+\[
+h(x)=H(x)=l(x)=0
+\]
+for a.e.\ \(x\in I_{\rm both}\).
+\end{theorem}
+
+\begin{proof}
+Each source map below is affine in \(x\) with derivative \(\pm1\).
+Hence the preimage of a source-null set is null, and after intersecting
+finitely many full-measure sets all source equations may be used
+simultaneously for a.e.\ \(x\in I_{\rm both}\).
+
+Consider the thirteen source positions
+\[
+\begin{aligned}
+u_1&=d-x, &
+u_2&=2d-x, &
+u_3&=b-x, &
+u_4&=3d-x,\\
+u_5&=T-x, &
+u_6&=T+\delta-x, &
+u_7&=T+d-x,\\
+u_8&=e+x, &
+u_9&=a+x, &
+u_{10}&=3e+x,\\
+u_{11}&=b-\delta+x, &
+u_{12}&=T-\delta+x, &
+u_{13}&=T+x.
+\end{aligned}
+\]
+They are all horizon-legal.  Indeed, the only sources above \(T\) are
+\[
+u_7=T+y<T+\sigma<T_0,\qquad
+u_{12}=T+(x-\delta)<T+x<T+\sigma<T_0,
+\]
+and
+\[
+u_{13}=T+x<T+\sigma<T_0.
+\]
+All remaining sources are \(<T\): for example
+\(u_2=d+y<d+e=a\),
+\(u_4=2d+y<2d+e=b\),
+\(u_6<T\) because \(x>\delta\),
+\(u_9<a+e<T\), and
+\(u_{10}<3e+\varepsilon_{\max}<4e<T\).
+
+Applying
+\[
+Lh(u)=p[h(u-a)-h(u+a)]
++r[h(u-b)-h(u+b)]
++q[h(u-T)-h(u+T)]
+\]
+with the anti-reflection \(h(-t)=-h(t)\), zero extension outside
+\((R,S)\), and Lemma~\ref{lem:p12-b2d-core-both-support}, gives:
+\begin{align*}
+Q_1:\;&-p h(e+x)-p h(b-x)-r h(a+x)-r h(T+\delta-x)\\
+&\hspace{28mm}-q h(b-\delta+x)-q H(y)=0,\\
+Q_2:\;&-p h(T+\delta-x)-r h(e+x)-q h(2e+x)=0,\\
+Q_3:\;&p h(y)-pH(y)-r h(x)-q h(e+x)=0,\\
+Q_4:\;&p h(y+\delta)-q h(x+\kappa)=0,\\
+Q_5:\;&p h(a-x)-q h(x)=0,\\
+Q_6:\;&p h(2d-x)+r h(y)=0,\\
+Q_7:\;&p h(b-x)+r h(a-x)+q h(y)=0,\\
+Q_8:\;&-p h(y)-p l(y)-r h(2d-x)-rH(x)-q h(b-x)=0,\\
+Q_9:\;&p h(x)-pH(x)-r h(y)-q h(a-x)=0,\\
+Q_{10}:\;&p h(x+\kappa)-q h(y+\delta)=0,\\
+Q_{11}:\;&p h(e+x)-q h(y)=0,\\
+Q_{12}:\;&p h(2e+x)+r h(x+\kappa)=0,\\
+Q_{13}:\;&p h(a+x)+r h(e+x)+q h(x)=0.
+\end{align*}
+Here \(h(b-\delta+x)=h(T-y)=l(y)\).
+
+Let \(\Delta:=p^2-q^2\).  From \(Q_4,Q_{10}\),
+\[
+\Delta\,h(y+\delta)=\Delta\,h(x+\kappa)=0.
+\]
+Since \(\Delta>0\),
+\[
+h(y+\delta)=h(x+\kappa)=0.
+\]
+Then \(Q_{12}\) gives \(h(2e+x)=0\).  The remaining equations yield
+successively
+\[
+h(e+x)=\frac qp\,h(y),
+\qquad
+h(T+\delta-x)=-\frac{rq}{p^2}h(y),
+\]
+\[
+h(2d-x)=-\frac rp\,h(y),
+\qquad
+h(a-x)=\frac qp\,h(x),
+\]
+\[
+h(a+x)=-\frac qp\,h(x)-\frac{rq}{p^2}h(y),
+\]
+\[
+h(b-x)=-\frac{rq}{p^2}h(x)-\frac qp\,h(y),
+\]
+\[
+H(y)=\frac{\Delta}{p^2}h(y)-\frac rp\,h(x),
+\qquad
+H(x)=\frac{\Delta}{p^2}h(x)-\frac rp\,h(y).
+\]
+Substitution in \(Q_8\) gives
+\[
+l(y)=
+-\frac{r(p^2-2q^2)}{p^3}h(x)
+-\frac{\Delta-2r^2}{p^2}h(y).
+\]
+Finally \(Q_1\) reduces exactly to
+\[
+\frac{2qr(2p^2-q^2)}{p^3}\,h(x)=0.
+\]
+Since \(p,q,r>0\) and \(2p^2-q^2>0\),
+\[
+h(x)=0
+\]
+for a.e.\ \(x\in I_{\rm both}\).
+
+The involution \(x\mapsto y=d-x\) preserves \(I_{\rm both}\) and
+Lebesgue-null sets, so the same conclusion gives \(h(y)=0\).
+Then \(Q_5,Q_9\) give \(h(a-x)=H(x)=0\), and the same argument at
+\(y\) gives \(H(y)=0\).  Identity P1
+(Theorem~\ref{thm:p12-P1}) therefore gives \(l(x)=0\).
+\end{proof}
+
+\begin{remark}[Polynomial row certificate]
+\label{rem:p12-b2d-core-both-certificate}
+The thirteen rows admit an independent exact certificate.  With
+\(\Delta=p^2-q^2\), set
+\[
+\begin{aligned}
+\widetilde C=(&
+p^3\Delta,\,
+-p^2r\Delta,\,
+-p^2q\Delta,\,
+pq^2r^2,\,
+-r\Delta(p^2-2q^2),\\
+&-pqr\Delta,\,
+p\Delta^2,\,
+-p^2q\Delta,\,
+pqr\Delta,\,
+p^2qr^2,\\
+&p\Delta(\Delta-2r^2),\,
+-pqr\Delta,\,
+p^2r\Delta).
+\end{aligned}
+\]
+Then, identically in all visibility variables,
+\[
+\sum_{j=1}^{13}\widetilde C_jQ_j
+=
+2qr\Delta(2p^2-q^2)\,h(x).
+\]
+Thus the triangular elimination and the row-multiplier calculation
+cross-check the same non-vanishing closure.
+\end{remark}
+
+\begin{theorem}[Full A15.1b2d Sub-wedge A injectivity]
+\label{thm:p12-b2d-full}
+Let
+\[
+2a<T_0<c,\qquad e/2\le R<d/2,\qquad T<S<T_0.
+\]
+Then
+\[
+\ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}.
+\]
+\end{theorem}
+
+\begin{proof}
+Write \(\sigma=S-T\).
+
+If \(\sigma\le d/2\), this is
+Corollary~\ref{cor:p12-b2d-wedge-plus}.  Assume therefore
+\(\sigma>d/2\).
+
+If \(d/2<\sigma\le d-R\), the defect strip decomposes, up to endpoints,
+as
+\[
+(R,d-\sigma)\quad\text{(core-single)}
+\]
+and
+\[
+(d-\sigma,\sigma)\quad\text{(core-both)}.
+\]
+The first interval is killed by
+Theorem~\ref{thm:p12-b2d-core-single-full}, including its visibility
+values \(H,l\); the second is killed by
+Theorem~\ref{thm:p12-b2d-core-both-full}.
+
+If \(\sigma>d-R\), the defect strip decomposes as
+\[
+(R,d-R)\quad\text{(core-both)}
+\]
+and
+\[
+(d-R,\sigma)\quad\text{(b2d-upper)}.
+\]
+The first interval is killed by
+Theorem~\ref{thm:p12-b2d-core-both-full}; the second by
+Corollary~\ref{cor:p12-b2d-upper-local}.  Hence in either case
+\[
+h=H=l=0
+\quad\text{a.e. on }(R,\sigma).
+\tag{C}
+\]
+
+Consequently the \(E_\sigma\)-equation is homogeneous on all of
+\((R,a)\).  The reflection Steps~1--5 of
+Theorem~\ref{thm:p12-b2b} apply exactly as in the proof of
+Corollary~\ref{cor:p12-b2d-wedge-plus}, and give
+\[
+h=0
+\quad\text{a.e. on }(R,a).
+\tag{E}
+\]
+
+It remains to kill the small tail.  Let \(0<t<R\).
+In P2,
+\[
+D(t)=(p^2-q^2-r^2)h(t)+qr[h(e-t)-h(e+t)].
+\]
+Here \(h(t)=0\) by support, \(e+t\in(R,a)\) and is zero by (E), while
+\(e-t\) is either below \(R\) or belongs to \((R,e)\subset(R,a)\).
+Thus \(D(t)=0\), so P2 gives
+\[
+H(t)=l(t).
+\tag{1}
+\]
+
+For P1 put \(z=d-t\).  Since
+\[
+z>d-R>R,
+\]
+either \(z\ge\sigma\), in which case \(H(z)=0\) by tail support, or
+\(R<z<\sigma\), in which case \(H(z)=0\) by (C).  Hence always
+\(H(d-t)=0\).  P1 gives
+\[
+H(t)+l(t)=0.
+\tag{2}
+\]
+From (1)--(2),
+\[
+H(t)=l(t)=0
+\quad\text{for a.e. }0<t<R.
+\]
+Together with (C), the entire tail \((T,S)\) vanishes.  The support
+therefore reduces to \((R,T)\), and
+Theorem~\ref{thm:p12-b1} at \((R,T,T_0)\) gives \(h=0\).
+\end{proof}
