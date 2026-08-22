@@ -12,8 +12,8 @@ to the same $M_{19}$.  This yields the full core-single local kill.
 \label{thm:p12-b2d-core-single-full}
 Let $2a < T_0 < c$, $\varepsilon := T_0 - T$,
 $e/2 \le R < d/2$, $R < \sigma < \varepsilon < \varepsilon_{\max}$.
-Then $h(x) = 0$ for every
-$x \in (R, \min\{\sigma, d - \sigma\})$.
+Then $h = 0$ almost everywhere on
+$(R, \min\{\sigma, d - \sigma\})$.
 \end{theorem}
 
 \begin{proof}
@@ -59,7 +59,10 @@ p\, h(a - 2\delta - x) \;-\; r\, h(x - \eta) \;-\; q\, h(2\delta + x) \;=\; 0.
 
 \smallskip
 \noindent\emph{Step 3 (bootstrap: $y := x - \eta \in C_{19}$).}
-We claim $y \in C_{19}$ for every $x \in W$.  Four inclusions:
+We claim $y \in C_{19}$ for a.e.\ $x \in W$ (in fact for every $x$;
+the boundary point $x = R + \eta$ is a single value of measure zero,
+and translation $x \mapsto x - \eta$ preserves null sets in $L^{2}$).
+Four inclusions:
 \begin{itemize}
 \item $y > R$: from $x > R + \eta$.
 \item $y < \sigma$: from $y = x - \eta < x < \sigma$.
@@ -97,9 +100,14 @@ $(R, \min\{\sigma, d - \sigma\})$.
 \begin{remark}[Geometric footprint of the problematic radius]
 \label{rem:p12-b2d-Rstar}
 A nonempty post-wall region requires $R + \eta < d/2$, i.e.\
-$R < R^{*} := d/2 - \eta = \tfrac14 \log(311/217)$
-$\approx 0.0753$.
-Combined with $R \ge e/2 \approx 0.0719$, the problematic
+\[
+R < R^{*} \;:=\; d/2 - \eta
+\;=\; \tfrac14 \log(3/2) - \tfrac12 \log(256/243)
+\;=\; \tfrac14 \log\!\Bigl(\frac{3^{11}}{2^{17}}\Bigr)
+\;=\; \tfrac14 \log\!\Bigl(\frac{177147}{131072}\Bigr)
+\;\approx\; 0.0753082765.
+\]
+Combined with $R \ge e/2 \approx 0.0719205$, the problematic
 radius interval is
 \[
 e/2 \le R < R^{*},
@@ -125,8 +133,8 @@ $d - x > d - \sigma \ge \sigma > x$, so $x < d - \sigma$; hence
 $(R, \sigma) \subset (R, \min\{\sigma, d - \sigma\})$.
 Theorem~\ref{thm:p12-b2d-core-single-full} gives full core-single
 kill.  Since the coefficient matrix $M_{19}$ is invertible, the
-entire 19-visibility vector at each $x$ vanishes; in particular
-$l(x) = h(T - x) = 0$ on $(R, \sigma)$.
+entire 19-visibility vector at a.e.\ $x$ vanishes; in particular
+$l(x) = h(T - x) = 0$ for a.e.\ $x \in (R, \sigma)$.
 
 The remainder of the proof reproduces Steps 2--5 of
 Theorem~\ref{thm:p12-b2d-wedge}, using only $\sigma \le d/2$ (and no

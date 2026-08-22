@@ -11,18 +11,33 @@ b2d parameter space, together with the residual open front.
 
 For $e/2 \le R < d/2$, $R < \sigma < \varepsilon < \varepsilon_{\max}$
 with $\varepsilon_{\max} = \tfrac12 \log(5/4)$, the defect strip
-$(R, \sigma)$ splits into three geometric sub-regions:
+$(R, \sigma)$ splits into three geometric sub-regions defined by the
+two pairs of support/tail conditions on the reflected value at $d - x$:
 \begin{itemize}
+\item \textbf{b2d-core-single}: $x \in (R, \min\{\sigma, d - \sigma,
+  d - R\})$.  Here $h(d - x)$ live (i.e.\ $d - x > R$) but
+  $H(d - x) = 0$ by tail-support ($d - x > \sigma$).
+\item \textbf{b2d-core-both}: $x \in (\max\{R, d - \sigma\},
+  \min\{\sigma, d - R\})$, nonempty iff $\sigma > d/2$.  Here
+  both $h(x)$ and $h(d - x)$ are live lower-support values \emph{and}
+  $H(x), H(d - x)$ are live tail values.
 \item \textbf{b2d-upper}: $x \in (d - R, \sigma)$, nonempty iff
-  $\sigma > d - R$ (requires $R > d - \varepsilon_{\max}$).
-  Here $h(d - x) = 0$ by support ($d - x < R$).
-\item \textbf{b2d-core-both}: $x \in (d - \sigma, d - R)$,
-  nonempty iff $\sigma > d - R$.  Here both $h(x)$ and $h(d - x)$
-  are live lower-support values \emph{and} $H(x), H(d - x)$ are
-  live tail values.
-\item \textbf{b2d-core-single}: $x \in (R, d - \sigma)$.  Here
-  $h(d - x)$ live but $H(d - x) = 0$ by support ($d - x > \sigma$).
+  $\sigma > d - R$ (which forces $R > d - \varepsilon_{\max}$).
+  Here $h(d - x) = 0$ by lower-support ($d - x < R$).
 \end{itemize}
+
+According to the position of $\sigma$ this gives three sharp cases:
+\begin{itemize}
+\item[(A)] $\sigma \le d/2$: only core-single is nonempty, and
+  $(R, \sigma)$ coincides with it.
+\item[(B)] $d/2 < \sigma \le d - R$:
+  $(R, d - \sigma)$ core-single, $(d - \sigma, \sigma)$ core-both,
+  upper empty.
+\item[(C)] $\sigma > d - R$ (needs $R > d - \varepsilon_{\max}$):
+  core-single empty, $(R, d - R)$ core-both, $(d - R, \sigma)$ upper.
+\end{itemize}
+The symmetric pivot is $x = d/2$; note $R < d/2$ always in Sub-wedge~A,
+so $d/2$ lies inside $(R, \sigma)$ whenever $\sigma > d/2$.
 
 \subsection{b2d-upper local kill}
 
@@ -48,12 +63,10 @@ Note $\eta > 0$ (elementary: $256 > 243$) and $e/2 > \eta$
 \label{thm:p12-b2d-core-single-slice}
 Let $2a < T_{0} < c$, $\varepsilon := T_{0} - T$,
 $e/2 \le R < d/2$, $R < \sigma < \varepsilon < \varepsilon_{\max}$.
-Then for every
+Then $h = 0$ almost everywhere on
 \[
-x \;\in\; \bigl(R,\ \min\{\sigma,\ d - \sigma,\ R + \eta\}\bigr)
-\qquad (\text{slice } C_{19})
+C_{19} \;:=\; \bigl(R,\ \min\{\sigma,\ d - \sigma,\ R + \eta\}\bigr).
 \]
-one has $h(x) = 0$.
 \end{theorem}
 
 \begin{proof}

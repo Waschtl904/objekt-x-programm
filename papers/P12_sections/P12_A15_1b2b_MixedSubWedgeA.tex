@@ -77,8 +77,16 @@ $$\alpha = \frac{t}{1 - \beta^2} > \frac{\sqrt{2/3}}{1 - 2^{-3/2}}
  = \frac{2\sqrt{2}\sqrt{2/3}}{2\sqrt 2 - 1}
  = \frac{2\cdot 2/\sqrt 3}{2\sqrt 2 - 1}
  = \frac{4/\sqrt 3}{2\sqrt 2 - 1}.$$
-Compute: $4/\sqrt 3 \approx 2.309$, $2\sqrt 2 - 1 \approx 1.828$, ratio
-$\approx 1.263 > 1$.  Numerically $\alpha \approx 1.4368$.
+To show this exceeds $1$ elementarily: since $2\sqrt 2 > 1$, both
+sides of
+$$
+\frac{4}{\sqrt 3} \;>\; 2\sqrt 2 - 1
+$$
+are positive; squaring gives
+$\tfrac{16}{3} > (2\sqrt 2 - 1)^{2} = 9 - 4\sqrt 2$, i.e.\
+$4\sqrt 2 > 9 - \tfrac{16}{3} = \tfrac{11}{3}$, i.e.\
+$12\sqrt 2 > 11$; squaring again gives $288 > 121$, which is
+elementary.  Hence $\alpha > 1$.
 \end{proof}
 
 Distinguish two sub-cases inside $(R, e)$:

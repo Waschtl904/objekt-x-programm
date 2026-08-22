@@ -43,7 +43,7 @@ vector to vanish; in particular
 h(x) = 0,
 \qquad l(x) = h(T - x) = 0,
 \qquad h(e + x) = 0
-\qquad\text{for every } x \in (R, \sigma).
+\qquad\text{for a.e.\ } x \in (R, \sigma).
 \]
 
 \smallskip
@@ -73,9 +73,10 @@ verbatim, using only
 $e/2 \le R < e$ (satisfied since $R < d/2 < e$; elementary
 $d < 2e$ i.e.\ $b - a < 2(a - d) = 2a - 2(b - a) = 4a - 2b$,
 which reduces to $3b < 5a$, i.e.\ $3\log 3 < 5\log 2$,
-i.e.\ $27 < 32$),
+i.e.\ $3^{3} < 2^{5}$, $27 < 32$),
 and $R > \delta$ (satisfied since $R \ge e/2 > \delta$, elementary
-$e > 2\delta$, i.e.\ $27 > 16$).
+$e > 2\delta$ iff $\log(4/3) > 2 \log(9/8)$ iff
+$4/3 > (9/8)^{2}$ iff $256 > 243$).
 The b2b-machinery gives
 \[
 h = 0
@@ -145,19 +146,27 @@ $\sigma$-strip $(R, \min\{d/2, R + \eta\}]$ remains nonempty
 throughout.
 \end{remark}
 
-\begin{remark}[Scope: what is and is not proven]
+\begin{remark}[Scope: what is and is not proven at this stage]
 \label{rem:p12-b2d-wedge-scope}
 Theorem~\ref{thm:p12-b2d-wedge} establishes kernel triviality on
 a two-dimensional open subregion of the b2d parameter space,
-strictly smaller than the full b2d chamber.  The open frontier is
-now
+strictly smaller than the full b2d chamber.  As stated here the
+open frontier is
 \[
 \{\sigma > d/2\} \quad\text{and}\quad \{\sigma > R + \eta\}.
 \]
-The first is the case-B tail regime (where both $H(x)$ and
+The first is the core-both regime (where both $H(x)$ and
 $H(d - x)$ are simultaneously live for $x$ near $d/2$).
 The second is the post-$\eta$ visibility wall: at $x = R + \eta$,
 $h(x - \eta)$ becomes live in the $Q_{18}$ source equation, so
-the $19 \times 19$ closed system no longer captures all couplings.
-Full b2d remains Open Problem~\ref{open:p12-subwedgeA-open}.
+the $19 \times 19$ closed system no longer captures all couplings
+as set up.
+
+The post-$\eta$ visibility wall is subsequently closed by the
+$\eta$-wall bootstrap (\S\ref{sec:p12-b2d-eta-wall},
+Theorem~\ref{thm:p12-b2d-core-single-full} and
+Corollary~\ref{cor:p12-b2d-wedge-plus}), so the second constraint
+$\sigma \le R + \eta$ can be removed.  Only $\{\sigma > d/2\}$
+(core-both) remains open in b2d.  Full b2d remains
+Open Problem~\ref{open:p12-subwedgeA-open}.
 \end{remark}
