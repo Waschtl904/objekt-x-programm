@@ -1,14 +1,34 @@
-\section{A15.1b2c: mixed strip descent to $R = d/2$}
+\section{A15.1b2c: mixed strip descent to $R = d/2$ [proof retracted]}
 \label{sec:p12-b2c}
 
 Recall $d/2 \approx 0.1013663$, strictly below $e \approx 0.1438410$.
 
-\begin{theorem}[Mixed strip descent to $R = d/2$]\label{thm:p12-b2c}
-Let $2a < T_0 < c$, $d/2 \le R < e$, $T < S < T_0$.  Then
-\(\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}\).
+\begin{center}\framebox{\begin{minipage}{0.9\textwidth}
+\textbf{Retraction of proof (2026-08-22, adversarial audit).}
+The proof previously published in this section used the source
+positions $u = T + (a - x) = 3a - x$ and $u = 2b - x$.  For
+$x \in (R, \sigma)$ with $\sigma < \varepsilon_{\max} = \tfrac12\log(5/4)$,
+$3a - x > 3a - \varepsilon_{\max} \approx 0.928 > c > T_{0}$ and
+$2b - x \approx 0.987 > c > T_{0}$.  Both are strictly outside the
+source horizon $(0, T_{0})$.  The 13-value triangular elimination
+is therefore not legally supported and the reduction to
+$(2qr/p^{3})(2p^{2} - q^{2})\,h(x) = 0$ is invalid as written.
+Additionally, the manuscript step ``repeat the same triangular
+elimination at $x_{1} = a - x_{0}$'' would require $u = T + x_{1}
+= 3a - x_{0}$, again outside the horizon.  The theorem statement
+is not refuted; only the proof is retracted.
+Status of \textbf{Theorem~\ref{thm:p12-b2c}}: $?[O]$ pending a
+horizon-legal certificate.  A candidate horizon-legal 13-source
+certificate has been proposed but is not yet independently
+reconstructed in this repository.
+\end{minipage}}\end{center}
+
+\begin{theorem}[Mixed strip descent to $R = d/2$; proof retracted]\label{thm:p12-b2c}
+Let $2a < T_0 < c$, $d/2 \le R < e$, $T < S < T_0$.  \emph{Claim}
+(now $?[O]$): $\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}$.
 \end{theorem}
 
-\begin{proof}
+\begin{proof}[Retracted proof, kept for archival adversarial review]
 Let $h \in L^2(R, S)$ with $L_{T_0} h = 0$; write $H(t) := h(T + t)$,
 $0 < t < \sigma := S - T$.  Case-split on $\sigma \le R$ and
 $\sigma > R$.

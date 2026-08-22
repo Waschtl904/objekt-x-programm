@@ -52,9 +52,15 @@ typed blocks with determinant
 \(F < 0\) (equivalent to \(2809 < 2888\) plus \(50 > 48\)).
 \end{itemize}
 
-Combining these, kernel triviality holds on the entire mixed strip
-\(e/2 \le R < T\).  The open front narrows to
-\(0 < R < e/2 \approx 0.0719\).
+\textbf{Note (2026-08-22 adversarial audit).}  The proofs for b2c
+and b2d as previously committed used source positions outside the
+horizon $(0, T_{0})$ (namely $3a - x, 2b - x$) and are hereby
+\emph{retracted}.  The theorem statements are not refuted; both
+reduce to $?[O]$ pending horizon-legal certificates.  Combining the
+\emph{proven} strata, kernel triviality holds on the mixed strip
+\(e \le R < T\).  The open front reverts to
+\(0 < R < e \approx 0.1438\), of which
+\(e/2 \le R < e, \sigma \le R\) is closed by b2b.
 
 None of P12 asserts polar-gauge, terminal-transport, Object-X or RH
 consequences.  The R14 firewall of P11 is preserved unchanged.
@@ -141,32 +147,35 @@ even for arbitrarily small \(x\).
 
 \section{Consolidated status and the remaining wedges}\label{sec:p12-status}
 
-\begin{corollary}[A15.1 consolidated injectivity]\label{cor:p12-consolidated}
+\begin{corollary}[A15.1 consolidated injectivity, post-audit 2026-08-22]\label{cor:p12-consolidated}
 Let \(2a < T_0 < c\) and \(0 < R < S < T_0\).  Then
 \(\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}\)
-in each of the following disjoint strata:
+in each of the following disjoint strata (proofs $\checkmark[M]$):
 \begin{itemize}
 \item[(i)]   \(S < T\)                                          (Theorem~\ref{thm:p12-b0});
 \item[(ii)]  \(S = T\)                                          (Theorem~\ref{thm:p12-b1});
 \item[(iii)] \(T < S < T_0\) with \(R \ge e\)                    (Theorem~\ref{thm:p12-b2a});
-\item[(iv)]  \(T < S < T_0\) with \(e/2 \le R < e, \ \sigma \le R\)  (Theorem~\ref{thm:p12-b2b});
-\item[(v)]   \(T < S < T_0\) with \(d/2 \le R < e\)                (Theorem~\ref{thm:p12-b2c});
-\item[(vi)]  \(T < S < T_0\) with \(e/2 \le R < d/2\)              (Theorem~\ref{thm:p12-b2d}).
+\item[(iv)]  \(T < S < T_0\) with \(e/2 \le R < e, \ \sigma \le R\)  (Theorem~\ref{thm:p12-b2b}).
 \end{itemize}
-Combined: \(\ker L = \{0\}\) throughout the whole mixed strip
-\(e/2 \le R < T\)
-(Corollary~\ref{cor:p12-mixed-strip-descent-to-ehalf}).
+Strata (v) $d/2 \le R < e$ (Theorem~\ref{thm:p12-b2c}) and
+(vi) $e/2 \le R < d/2$ (Theorem~\ref{thm:p12-b2d}) have $?[O]$ status
+as of 2026-08-22 (proofs retracted; theorem statements open).
+Combined proven: \(\ker L = \{0\}\) throughout the strata (i)--(iv).
 \end{corollary}
+
+\begin{openproblem}[Descent below $R = e$ with $\sigma > R$]\label{open:p12-subwedgeA-open}
+For \(2a < T_0 < c\), \(e/2 \le R < e\), \(T < S < T_0\) with
+$\sigma > R$: horizon-legal certificate needed.  A candidate
+horizon-legal 13-source certificate for the $d/2 \le R < e$ slice
+has been proposed (row-multiplier vector over
+$\{a+x, b-x, T+x, T-x, d-x, T-d+x, 2d-x, a+b-x, e+x, T+\delta-x,
+T-\delta+x, 3d-x, 3e+x\}$) but is not yet independently verified in
+this repository.
+\end{openproblem}
 
 \begin{openproblem}[Descent below $R = e/2$]\label{open:p12-below-ehalf}
 For \(2a < T_0 < c\), \(0 < R < e/2\), \(T < S < T_0\): decide whether
-\(\ker L = \{0\}\).  Under $R < e/2$ a new visibility interval
-$(R, e - R)$ opens where the earlier reductions produce a third,
-as-yet-uncontrolled coupled reflection value.  Independent point-orbit
-computation (finite typed elimination, not Galerkin) closes every
-tested representative at $R = 0.07$; the finite visibility-cell cover
-with a uniform closure bound is not yet established.  The natural
-next target.
+\(\ker L = \{0\}\).
 \end{openproblem}
 
 \section{Firewall}\label{sec:p12-firewall}
@@ -174,12 +183,12 @@ next target.
 None of \S\ref{sec:p12-persistence}--\ref{sec:p12-status} makes a
 polar-gauge, terminal-transport, Object-X or RH statement.  The R14
 firewall from P11 remains unchanged: even a full closure of the
-remaining low-radius wedge \(0 < R < e/2\)
-(Open Problem~\ref{open:p12-below-ehalf}) would decide only the
-localized-hub kernel triviality in the three-shift chamber; by
-R36-A1 (P11) this is equivalent to dense range of the annular hub
-projection \(P_{\mathcal A} H_{T_0}\), a modulus-layer statement.
-Neither polar-gauge convergence nor strong terminal transport nor a
-canonical mediator for Object~X follow.
+remaining low-radius wedge \(0 < R < e\) (Open
+Problems~\ref{open:p12-subwedgeA-open}, \ref{open:p12-below-ehalf})
+would decide only the localized-hub kernel triviality in the
+three-shift chamber; by R36-A1 (P11) this is equivalent to dense
+range of the annular hub projection \(P_{\mathcal A} H_{T_0}\), a
+modulus-layer statement.  Neither polar-gauge convergence nor strong
+terminal transport nor a canonical mediator for Object~X follow.
 
 \end{document}
