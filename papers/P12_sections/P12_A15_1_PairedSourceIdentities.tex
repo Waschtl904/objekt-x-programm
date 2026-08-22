@@ -1,0 +1,104 @@
+\section{A15.1-P: paired-source identities P1 and P2}
+\label{sec:p12-P1P2}
+
+We record two unconditional algebraic identities of the localised-hub
+kernel operator $L$ in the three-shift chamber, valid on every
+defect strip.  They follow from six horizon-legal raw source
+equations and eliminate the tail $H$ against the reflected value $l$
+and against the lower-half $D$-form.
+
+Notation.  For a candidate $h \in L^{2}(R, S)$ with $L h = 0$,
+write $H(t) := h(T + t)$ for the tail and $l(x) := h(T - x)$ for the
+reflection through the anchor $T$.  Set $\Delta := p^{2} - q^{2}$.
+
+\begin{lemma}[Six horizon-legal raw source equations]
+\label{lem:p12-P-six}
+Let $2a < T_{0} < c$, $\varepsilon := T_{0} - T \in (0, \varepsilon_{\max})$
+with $\varepsilon_{\max} = \tfrac12\log(5/4)$, $0 < x < \varepsilon$.
+The six source positions
+$a - x,\ a + x,\ b - x,\ b + x,\ T - x,\ T + x$
+lie in $(0, T_{0})$, and the raw operator equations at these sources
+read, using the anti-reflected extension $h(-y) = -h(y)$ and
+zero-extension outside $(R, S)$:
+\begin{align*}
+A^{-}(u = a - x): & \quad -p h(x) - p l(x) - r h(d + x) - r H(d - x) - q h(a + x) = 0,\\
+A^{+}(u = a + x): & \quad p h(x) - p H(x) - r h(d - x) - q h(a - x) = 0,\\
+B^{-}(u = b - x): & \quad p h(d - x) - p H(d - x) - r h(x) - q h(e + x) = 0,\\
+B^{+}(u = b + x): & \quad p h(d + x) + r h(x) - q h(e - x) = 0,\\
+T^{-}(u = T - x): & \quad p h(a - x) + r h(e - x) - q h(x) = 0,\\
+T^{+}(u = T + x): & \quad p h(a + x) + r h(e + x) + q h(x) = 0.
+\end{align*}
+\end{lemma}
+
+\begin{proof}
+Horizon: all six positions are strictly less than $c$ and hence less
+than $T_{0}$; in particular $T + x < T + \varepsilon = T_{0}$.
+Operator convention: $Lh(u) = \sum_{s} k_{s}[h(u - s) - h(u + s)]$
+with $(k_{a}, k_{b}, k_{2a}) = (p, r, q)$.  Applying at each source
+and dropping terms whose $h$-argument lies below $0$ (anti-reflected
+to their positive image) or above $c$ (outside horizon, zero) yields
+the six equations exactly.  Reflection at zero uses
+$h(-y) = -h(y)$, which is the natural convention for an
+antisymmetric shift operator on the symmetric extension.
+\end{proof}
+
+\begin{theorem}[Identity P1]\label{thm:p12-P1}
+Under the hypotheses of Lemma~\ref{lem:p12-P-six}, for every
+$0 < x < \varepsilon$:
+\[
+\boxed{\; H(x) + l(x) + \frac{2 r}{p}\, H(d - x) = 0.\;}
+\]
+\end{theorem}
+
+\begin{proof}
+Apply the row-multiplier vector
+$\bigl(-\tfrac{1}{p}, -\tfrac{1}{p}, -\tfrac{r}{p^{2}},
+-\tfrac{r}{p^{2}}, -\tfrac{q}{p^{2}}, -\tfrac{q}{p^{2}}\bigr)$
+to $(A^{-}, A^{+}, B^{-}, B^{+}, T^{-}, T^{+})$; all
+$h$-terms cancel identically, leaving $H(x) + l(x) + 2r/p \cdot H(d - x)$.
+\end{proof}
+
+\begin{theorem}[Identity P2]\label{thm:p12-P2}
+Under the same hypotheses, for every $0 < x < \varepsilon$:
+\[
+\boxed{\; H(x) - l(x) - \frac{2 D(x)}{p^{2}} = 0,\qquad
+D(x) := (p^{2} - q^{2} - r^{2})\, h(x) + q r\,[h(e - x) - h(e + x)].\;}
+\]
+\end{theorem}
+
+\begin{proof}
+Row-multiplier vector
+$\bigl(+\tfrac{1}{p}, -\tfrac{1}{p}, -\tfrac{r}{p^{2}},
++\tfrac{r}{p^{2}}, -\tfrac{q}{p^{2}}, +\tfrac{q}{p^{2}}\bigr)$
+against $(A^{-}, A^{+}, B^{-}, B^{+}, T^{-}, T^{+})$.  The
+$h$-argument book-keeping cancels every visible $h$-value except
+the $D$-form.
+\end{proof}
+
+\begin{corollary}[Case-B non-degeneracy]
+\label{cor:p12-P1-caseB}
+For $\sigma > d/2$ and $x \in I := (d - \sigma, \sigma)$, both
+$H(x)$ and $H(d - x)$ are live tail values.  Applying P1 at $x$ and
+at $d - x$ gives the system
+\[
+\begin{pmatrix} 1 & c_{0} \\ c_{0} & 1 \end{pmatrix}
+\begin{pmatrix} H(x) \\ H(d - x) \end{pmatrix}
+= -\begin{pmatrix} l(x) \\ l(d - x) \end{pmatrix},
+\qquad c_{0} := 2r / p.
+\]
+$c_{0} > 1$ elementarily ($4 r^{2} > p^{2} \iff \log 3 / \log 2 >
+3\sqrt{3}/(8\sqrt{2}) < 1$, which follows from $\log 3 > \log 2$);
+determinant $1 - c_{0}^{2} \ne 0$.  Hence $H(x), H(d - x)$ are
+uniquely determined by $l(x), l(d - x)$.
+\end{corollary}
+
+\begin{corollary}[Sub-case $\sigma \le d/2$]
+\label{cor:p12-P1-subhalf}
+Under $\sigma \le d/2$, for every $x \in (0, \sigma)$:
+$d - x \ge d/2 \ge \sigma$, so $H(d - x) = 0$.  P1 gives
+$H(x) = -l(x)$.  For
+$x \in (\sigma, \min(\varepsilon, d - \sigma))$: $H(x) = 0$ and
+$H(d - x) = 0$, so P1 forces $l(x) = 0$.  Consequently $h$ vanishes
+on the horizon-generated interval
+$(T - \min(\varepsilon, d - \sigma), T - \sigma) \subset (a, T)$.
+\end{corollary}

@@ -52,15 +52,16 @@ typed blocks with determinant
 \(F < 0\) (equivalent to \(2809 < 2888\) plus \(50 > 48\)).
 \end{itemize}
 
-\textbf{Note (2026-08-22 adversarial audit).}  The proofs for b2c
-and b2d as previously committed used source positions outside the
-horizon $(0, T_{0})$ (namely $3a - x, 2b - x$) and are hereby
-\emph{retracted}.  The theorem statements are not refuted; both
-reduce to $?[O]$ pending horizon-legal certificates.  Combining the
-\emph{proven} strata, kernel triviality holds on the mixed strip
-\(e \le R < T\).  The open front reverts to
-\(0 < R < e \approx 0.1438\), of which
-\(e/2 \le R < e, \sigma \le R\) is closed by b2b.
+\textbf{Note (2026-08-22 adversarial audit round 2).}  The earlier
+b2c and b2d proofs used source positions outside the horizon and are
+retracted.  A new horizon-legal partial b2c is proven
+(Theorem~\ref{thm:p12-b2c}) in the slice $\varepsilon > d - R$;
+b2d remains open.  Two paired-source identities P1, P2
+(Theorems~\ref{thm:p12-P1}, \ref{thm:p12-P2}) are proven
+unconditionally for every $0 < x < \varepsilon$.  Combined proven
+strata now cover: mixed strip $e \le R < T$ (b2a) plus b2b
+restricted-tail plus the b2c slice $\{d/2 \le R < e,\ \varepsilon >
+d - R\}$.
 
 None of P12 asserts polar-gauge, terminal-transport, Object-X or RH
 consequences.  The R14 firewall of P11 is preserved unchanged.
@@ -142,6 +143,7 @@ even for arbitrarily small \(x\).
 \input{P12_sections/P12_A15_1b1_HorizonOpenEndpoint}
 \input{P12_sections/P12_A15_1b2a_MixedHighRadius}
 \input{P12_sections/P12_A15_1b2b_MixedSubWedgeA}
+\input{P12_sections/P12_A15_1_PairedSourceIdentities}
 \input{P12_sections/P12_A15_1b2c_MixedStripDescentToDHalf}
 \input{P12_sections/P12_A15_1b2d_MixedSubWedgeAFullTail}
 
@@ -155,22 +157,27 @@ in each of the following disjoint strata (proofs $\checkmark[M]$):
 \item[(i)]   \(S < T\)                                          (Theorem~\ref{thm:p12-b0});
 \item[(ii)]  \(S = T\)                                          (Theorem~\ref{thm:p12-b1});
 \item[(iii)] \(T < S < T_0\) with \(R \ge e\)                    (Theorem~\ref{thm:p12-b2a});
-\item[(iv)]  \(T < S < T_0\) with \(e/2 \le R < e, \ \sigma \le R\)  (Theorem~\ref{thm:p12-b2b}).
+\item[(iv)]  \(T < S < T_0\) with \(e/2 \le R < e, \ \sigma \le R\)  (Theorem~\ref{thm:p12-b2b});
+\item[(v-slice)] \(T < S < T_0\) with \(d/2 \le R < e\) and $\varepsilon > d - R$  (Theorem~\ref{thm:p12-b2c}).
 \end{itemize}
-Strata (v) $d/2 \le R < e$ (Theorem~\ref{thm:p12-b2c}) and
-(vi) $e/2 \le R < d/2$ (Theorem~\ref{thm:p12-b2d}) have $?[O]$ status
-as of 2026-08-22 (proofs retracted; theorem statements open).
-Combined proven: \(\ker L = \{0\}\) throughout the strata (i)--(iv).
+Additionally the paired-source identities P1 and P2
+(Theorems~\ref{thm:p12-P1}, \ref{thm:p12-P2}) hold
+unconditionally in the whole chamber for every $0 < x < \varepsilon$.
 \end{corollary}
 
-\begin{openproblem}[Descent below $R = e$ with $\sigma > R$]\label{open:p12-subwedgeA-open}
-For \(2a < T_0 < c\), \(e/2 \le R < e\), \(T < S < T_0\) with
-$\sigma > R$: horizon-legal certificate needed.  A candidate
-horizon-legal 13-source certificate for the $d/2 \le R < e$ slice
-has been proposed (row-multiplier vector over
-$\{a+x, b-x, T+x, T-x, d-x, T-d+x, 2d-x, a+b-x, e+x, T+\delta-x,
-T-\delta+x, 3d-x, 3e+x\}$) but is not yet independently verified in
-this repository.
+\begin{openproblem}[Full b2c slice]\label{open:p12-b2c-full-remaining}
+$d/2 \le R < e$, $T < S < T_0$, $\varepsilon \le d - R$: the horizon-legal
+13-source certificate of Theorem~\ref{thm:p12-b2c} does not apply
+because $u = a + b - x$ exits the horizon.  A different
+horizon-legal certificate is required.
+\end{openproblem}
+
+\begin{openproblem}[Full Sub-wedge A ($e/2 \le R < d/2$)]\label{open:p12-subwedgeA-open}
+For $2a < T_0 < c$, $e/2 \le R < d/2$, $T < S < T_0$: decide whether
+$\ker L = 0$.  P1/P2 apply and give the case-B non-degeneracy and
+the sub-case-$\sigma\le d/2$ null interval on the upper half
+(Corollaries~\ref{cor:p12-P1-caseB}, \ref{cor:p12-P1-subhalf}), but a
+full kill certificate is not yet established.
 \end{openproblem}
 
 \begin{openproblem}[Descent below $R = e/2$]\label{open:p12-below-ehalf}
@@ -183,12 +190,13 @@ For \(2a < T_0 < c\), \(0 < R < e/2\), \(T < S < T_0\): decide whether
 None of \S\ref{sec:p12-persistence}--\ref{sec:p12-status} makes a
 polar-gauge, terminal-transport, Object-X or RH statement.  The R14
 firewall from P11 remains unchanged: even a full closure of the
-remaining low-radius wedge \(0 < R < e\) (Open
-Problems~\ref{open:p12-subwedgeA-open}, \ref{open:p12-below-ehalf})
-would decide only the localized-hub kernel triviality in the
-three-shift chamber; by R36-A1 (P11) this is equivalent to dense
-range of the annular hub projection \(P_{\mathcal A} H_{T_0}\), a
-modulus-layer statement.  Neither polar-gauge convergence nor strong
-terminal transport nor a canonical mediator for Object~X follow.
+remaining low-radius open problems
+(\ref{open:p12-b2c-full-remaining}, \ref{open:p12-subwedgeA-open},
+\ref{open:p12-below-ehalf}) would decide only the localized-hub
+kernel triviality in the three-shift chamber; by R36-A1 (P11) this
+is equivalent to dense range of the annular hub projection
+\(P_{\mathcal A} H_{T_0}\), a modulus-layer statement.  Neither
+polar-gauge convergence nor strong terminal transport nor a
+canonical mediator for Object~X follow.
 
 \end{document}

@@ -1,182 +1,203 @@
-\section{A15.1b2c: mixed strip descent to $R = d/2$ [proof retracted]}
+\section{A15.1b2c: horizon-legal mixed-strip descent slice}
 \label{sec:p12-b2c}
 
-Recall $d/2 \approx 0.1013663$, strictly below $e \approx 0.1438410$.
-
 \begin{center}\framebox{\begin{minipage}{0.9\textwidth}
-\textbf{Retraction of proof (2026-08-22, adversarial audit).}
-The proof previously published in this section used the source
-positions $u = T + (a - x) = 3a - x$ and $u = 2b - x$.  For
-$x \in (R, \sigma)$ with $\sigma < \varepsilon_{\max} = \tfrac12\log(5/4)$,
-$3a - x > 3a - \varepsilon_{\max} \approx 0.928 > c > T_{0}$ and
-$2b - x \approx 0.987 > c > T_{0}$.  Both are strictly outside the
-source horizon $(0, T_{0})$.  The 13-value triangular elimination
-is therefore not legally supported and the reduction to
-$(2qr/p^{3})(2p^{2} - q^{2})\,h(x) = 0$ is invalid as written.
-Additionally, the manuscript step ``repeat the same triangular
-elimination at $x_{1} = a - x_{0}$'' would require $u = T + x_{1}
-= 3a - x_{0}$, again outside the horizon.  The theorem statement
-is not refuted; only the proof is retracted.
-Status of \textbf{Theorem~\ref{thm:p12-b2c}}: $?[O]$ pending a
-horizon-legal certificate.  A candidate horizon-legal 13-source
-certificate has been proposed but is not yet independently
-reconstructed in this repository.
+\textbf{Revision (2026-08-22).}  The proof-retraction of the earlier
+b2c manuscript still stands: that proof used
+$u = T + (a - x) = 3a - x$ and $u = 2b - x$, both outside
+$(0, T_{0})$.  This section replaces the retracted proof with a
+narrower but rigorously horizon-legal statement.  The full range
+$d/2 \le R < e, \varepsilon > 0$ remains $?[O]$.  What is closed
+here is the sub-slice $\varepsilon > d - R$.
 \end{minipage}}\end{center}
 
-\begin{theorem}[Mixed strip descent to $R = d/2$; proof retracted]\label{thm:p12-b2c}
-Let $2a < T_0 < c$, $d/2 \le R < e$, $T < S < T_0$.  \emph{Claim}
-(now $?[O]$): $\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}$.
+Notation.  In this section $L$ denotes the localised-hub operator
+in the three-shift chamber $\{a, b, 2a\}$ with coefficients
+$(k_{a}, k_{b}, k_{2a}) = (p, r, q)$, acting as
+$Lh(u) = \sum_{s} k_{s}\bigl[h(u - s) - h(u + s)\bigr]$
+on the anti-reflected extension $h(-y) := -h(y)$ ($y > 0$),
+with $h$ zero-extended outside $(R, S)$.  The source horizon is
+$(0, T_{0})$, $T_{0} = T + \varepsilon$, $T = 2a$,
+$0 < \varepsilon < \varepsilon_{\max} := \tfrac12\log(5/4)$.
+
+Set $H(t) := h(T + t)$, $l(x) := h(T - x)$, $\Delta := p^{2} - q^{2}$.
+
+\begin{theorem}[Horizon-legal mixed-strip descent slice]
+\label{thm:p12-b2c}
+Let $2a < T_{0} < c$ with $\varepsilon := T_{0} - T$,
+$d/2 \le R < e$, $R < S - T = \sigma < \varepsilon$, and
+\[
+\boxed{\; \varepsilon > d - R \;}
+\qquad\text{(horizon condition on $u = a + b - x$).}
+\]
+Then $\ker L_{R, S, T_{0}}^{\{a, b, 2a\}} = \{0\}$.
 \end{theorem}
 
-\begin{proof}[Retracted proof, kept for archival adversarial review]
-Let $h \in L^2(R, S)$ with $L_{T_0} h = 0$; write $H(t) := h(T + t)$,
-$0 < t < \sigma := S - T$.  Case-split on $\sigma \le R$ and
-$\sigma > R$.
-
-\medskip
-\noindent\emph{Case (i): $\sigma \le R$.}
-Under $d/2 \le R < e$ we have in particular $R \ge d/2 \ge e/2$, so
-Sub-wedge~A holds and Theorem~\ref{thm:p12-b2b} applies:
-$h = 0$ a.e. on $(R, S)$.
-
-\medskip
-\noindent\emph{Case (ii): $\sigma > R$.}
-Here the tail defect $H(x)\,\mathbf 1_{x<\sigma}$ intrudes on the
-E-equation for $x \in (R, \sigma)$.  We handle it by a finite typed
-elimination on visibility-stable source pairs.
-
-\smallskip
-\noindent\emph{Visibility stability.}  From $d/2 \le R < e$ and
-$\sigma \le \varepsilon < \varepsilon_{\max} = \tfrac12\log(5/4)$ one
-verifies directly that for every $x \in (R, \sigma)$:
-$d - x < R$, $e - x < R$, and $x - \delta < R$.  In particular the
-E-equation
-\[
-p\, h(x) - r\, h(d - x) - q\, h(a - x) - p\, H(x) = 0,
-\qquad x \in (R, \sigma),
-\tag{E$_\sigma$}
-\]
-has $h(d - x) = 0$ throughout $(R, \sigma)$ by the support hypothesis,
-so it reduces to
-\[
-p\, h(x) - q\, h(a - x) - p\, H(x) = 0.
-\tag{E$_\sigma$'}
-\]
-
-\smallskip
-\noindent\emph{Twelve additional typed source equations.}  The three
-active shifts $\{a, b, 2a\}$ together with the visibility-stable
-$x \in (R, \sigma)$ generate twelve further source equations at typed
-locations
-\[
-u \in \bigl\{a + x,\; T + x,\; a - x,\; a + (a - x),\; T + (a - x),\;
-T - x,\; b + x,\; b - x,\; 3a - x,\; a + b - x,\; b + (a - x),\;
-2b - x\bigr\}.
-\]
-Each is a homogeneous relation among the $13$ visibility-values
-\[
-V = \bigl\{h(x),\, h(a - x),\, h(d - x),\, H(x),\, h(a + x),\, h(e + x),\,
-h(2a - x),\, \dots\bigr\}
-\]
-already active at $x$, all inside $(0, T_0)$ by the visibility
-stability.
-
-\smallskip
-\noindent\emph{Triangular elimination.}  Order the $13$ visibility
-values so that each successive source equation eliminates one further
-value in favour of the previously reduced ones.  A direct symbolic
-substitution (recorded in the audit
-\texttt{P12\_REFEREE\_E2E\_A15\_1\_INJECTIVITY\_CORRECTION\_2026-08-21})
-reduces the system to the single scalar identity
-\[
-\boxed{\; \frac{2 q r}{p^{3}}\,(2p^{2} - q^{2})\, h(x) = 0.\; }
-\tag{Eq.\,7'}
-\label{eq:o3ae-triangular-b2c}
-\]
-Equivalently, the coefficient matrix $M_{13}$ of the system has
-determinant
-\[
-\det M_{13} \;=\; -\,2\, p^{7}\, q\, r\, (p^{2} - q^{2})\,(2p^{2} - q^{2}),
-\tag{Eq.\,7}
-\]
-and (Eq.\,7$'$) is the reduced diagonal entry after triangularisation.
-
-\begin{lemma}[Non-vanishing of the triangular factor]
-\label{lem:p12-b2c-detfactors}
-$p, q, r > 0$ and $2p^{2} - q^{2} > 0$.  Consequently the coefficient
-in (Eq.\,7$'$) is strictly positive.
-\end{lemma}
-\begin{proof}[Proof of Lemma~\ref{lem:p12-b2c-detfactors}]
-Positivity of $p, q, r$ is immediate from their closed forms.
-$2p^{2} - q^{2} = q^{2}\bigl(2(p/q)^{2} - 1\bigr)
-= q^{2}(2\cdot 2^{3/2} - 1) = q^{2}(4\sqrt{2} - 1) > 0$.
-Numerically $2p^{2} - q^{2} \approx 0.4035$ and $2 q r / p^{3}(2p^{2}-q^{2})
-\approx 0.9003$.
-\end{proof}
-
-By Lemma~\ref{lem:p12-b2c-detfactors}, (Eq.\,7$'$) forces
-$h(x_{0}) = 0$ for a.e. $x_{0} \in (R, \sigma)$.  Substituting back into
-(E$_\sigma$$'$), $q\, h(a - x_{0}) = -p\, H(x_{0})$, i.e.
-$H(x_{0}) = -(q/p)\, h(a - x_{0})$.
-
-\smallskip
-\noindent\emph{Tail propagation and lower-half kill.}  Repeat the same
-triangular elimination at $x_{1} = a - x_{0}$, which is again in
-the visibility-stable region because $a - \sigma > a - \varepsilon >
-a - \varepsilon_{\max} = a - \tfrac12\log(5/4) > R$; the same identity
-(Eq.\,7$'$) gives $h(a - x_{0}) = 0$, hence $H(x_{0}) = 0$.  Since
-$x_{0} \in (R, \sigma)$ was arbitrary,
-\[
-h = 0 \quad\text{a.e. on }(R, \sigma), \qquad
-H = 0 \quad\text{a.e. on }(0, \sigma).
-\]
-
-\smallskip
-\noindent\emph{Reduction to A15.1b2a.}  With $H = 0$ and $h = 0$ on
-$(R, \sigma)$, equation~$(E_\sigma)$ is now homogeneous on
-$(\sigma, a)$.  The weighted-reflection kill of
-Theorem~\ref{thm:p12-b2a} applies on that domain (using $R \ge d/2$
-in place of $R \ge e$; the $(p^{2} - q^{2})$ mechanism only requires
-$d - x < R$, which for $x \in (\sigma, d)$ is
-$d - x \le d - \sigma < d - R \le d/2 \le R$).  This yields $h = 0$
-on $(\sigma, a)$.
-
-\smallskip
-\noindent\emph{Support collapses; reduce to A15.1b1.}  The remaining
-support of $h$ lies in $(a, T + \sigma)$.  A15.1b2a Step~3 kills the
-upper half $(a, T)$; the tail $(T, S)$ is already zero.  A15.1b1
-(Theorem~\ref{thm:p12-b1}) closes any residual gap.
-\end{proof}
-
-\begin{remark}[Determinant version and triangular version agree]
-\label{rem:p12-b2c-two-versions}
-The triangular version (Eq.\,7$'$) is stronger for the proof because
-it exhibits the single scalar coefficient $2qr(2p^{2} - q^{2})/p^{3}$
-that survives elimination; the determinant version (Eq.\,7) records
-the full $M_{13}$ invariant.  Both non-vanish by
-Lemma~\ref{lem:p12-b2c-detfactors} alone; in particular, the two
-extraneous factors $p^{7}$ and $(p^{2} - q^{2})$ appearing in the
-determinant version cancel during elimination and are not needed for
-the injectivity conclusion.  All coefficient computations are recorded
-in \texttt{P12\_REFEREE\_E2E\_A15\_1\_INJECTIVITY\_CORRECTION\_2026-08-21}
-\S1.
+\begin{remark}[Domain of validity]\label{rem:p12-b2c-domain}
+The condition $\varepsilon > d - R$ is required for the source
+position $u = a + b - x = T + d - x$ to lie strictly inside
+$(0, T_{0})$ throughout the defect strip $x \in (R, \sigma)$; at
+$x = R$ one has $u = T + d - R$, so $u < T_{0}$ iff
+$\varepsilon > d - R$.  At $R = d/2$ this reads $\varepsilon > d/2
+\approx 0.1014$, admitting an $\varepsilon$-slice of width
+$\varepsilon_{\max} - d/2 \approx 0.010$.  At $R \to e^{-}$ it reads
+$\varepsilon > d - e = \delta \approx 0.059$, admitting a slice of
+width $\varepsilon_{\max} - \delta \approx 0.053$.  The full-domain
+$d/2 \le R < e$, $0 < \varepsilon < \varepsilon_{\max}$ statement
+requires a different certificate and remains
+Open Problem~\ref{open:p12-b2c-full}.
 \end{remark}
 
-\begin{remark}[Transcendence-free]
-\label{rem:p12-b2c-transcendence-free}
-Lemma~\ref{lem:p12-b2c-detfactors} uses only the exact identity
-$(p/q)^{2} = 2^{3/2}$ and elementary arithmetic; no transcendence input
-beyond the closed forms of $p, q, r$ is required.
-\end{remark}
+\begin{proof}[Proof of Theorem~\ref{thm:p12-b2c}]
+Let $h \in L^{2}(R, S)$ with $L_{T_{0}} h = 0$.  Fix
+$x \in (R, \sigma)$.  We show $h(x) = 0$ via a $13$-source
+horizon-legal typed elimination.
 
-\begin{corollary}[Consolidated mixed-strip statement to $R = d/2$]
-\label{cor:p12-mixed-strip-consolidated}
-Let $2a < T_0 < c$, $T < S < T_0$.  Then
-\(\ker L_{R,S,T_0}^{\{a,b,2a\}} = \{0\}\)
-throughout the mixed strip $d/2 \le R < T$.
+\smallskip
+\noindent\emph{Step 1: horizon-legal source positions.}  Consider
+the $13$ sources
+\begin{align*}
+u_{1} &= a + x, & u_{2} &= b - x, & u_{3} &= T + x, & u_{4} &= T - x,
+& u_{5} &= d - x,\\
+u_{6} &= T - d + x, & u_{7} &= 2d - x, & u_{8} &= a + b - x = T + d - x,\\
+u_{9} &= e + x, & u_{10} &= T + \delta - x, & u_{11} &= T - \delta + x,\\
+u_{12} &= 3d - x, & u_{13} &= 3e + x.
+\end{align*}
+Each $u_{i}$ satisfies $0 < u_{i} < T_{0}$ under the hypotheses:
+$u_{1}, u_{2}, u_{4}, u_{5}, u_{6}, u_{7}, u_{9}, u_{10}, u_{12}, u_{13}
+< T < T_{0}$ trivially; $u_{3} = T + x < T + \sigma < T_{0}$;
+$u_{11} = T + (x - \delta) < T + \sigma < T_{0}$ (since $\delta > 0$);
+$u_{8} = T + (d - x) < T + (d - R) < T_{0}$ by the domain
+hypothesis $\varepsilon > d - R$.
+
+\smallskip
+\noindent\emph{Step 2: the 13 source equations, reduced by support.}
+Zero-extending $h$ outside $(R, S)$ suppresses all $h$-terms whose
+argument lies below $R$ or above $S$.  For $x \in (R, \sigma)$ with
+$R \ge d/2$, $\sigma < \varepsilon_{\max}$, the support-live values
+at each source reduce the raw operator equations to:
+\begin{align*}
+Q_{1}(u_{1}): & \quad p\, h(x) - p\, H(x) - q\, h(a - x) = 0,\\
+Q_{2}(u_{2}): & \quad -p\, H(d - x) - r\, h(x) - q\, h(e + x) = 0,\\
+Q_{3}(u_{3}): & \quad p\, h(a + x) + r\, h(e + x) + q\, h(x) = 0,\\
+Q_{4}(u_{4}): & \quad p\, h(a - x) - q\, h(x) = 0,\\
+Q_{5}(u_{5}): & \quad {-p\, h(e + x) - p\, h(b - x) - r\, h(a + x)}\\
+              & \qquad {- r\, h(T + \delta - x) - q\, h(T - d + x)
+                          - q\, H(d - x) = 0,}\\
+Q_{6}(u_{6}): & \quad p\, h(e + x) = 0,\\
+Q_{7}(u_{7}): & \quad -p\, h(T + \delta - x) - r\, h(e + x)
+                       - q\, h(2e + x) = 0,\\
+Q_{8}(u_{8}): & \quad p\, h(b - x) + r\, h(a - x) = 0,\\
+Q_{9}(u_{9}): & \quad -p\, h(T - d + x) - r\, h(2d - x) - r\, H(x)
+                       - q\, h(b - x) = 0,\\
+Q_{10}(u_{10}): & \quad p\, h(2d - x) = 0,\\
+Q_{11}(u_{11}): & \quad p\, h(2e + x) + r\, h(e - \delta + x) = 0,\\
+Q_{12}(u_{12}): & \quad p\, h(e + 2\delta - x) - q\, h(e - \delta + x) = 0,\\
+Q_{13}(u_{13}): & \quad p\, h(e - \delta + x) - q\, h(e + 2\delta - x) = 0.
+\end{align*}
+
+\smallskip
+\noindent\emph{Step 3: triangular elimination.}
+\begin{itemize}
+\item $Q_{6}$: $h(e + x) = 0$.
+\item $Q_{10}$: $h(2d - x) = 0$.
+\item $Q_{12}, Q_{13}$ jointly (with $p^{2} - q^{2} \ne 0$):
+  $h(e - \delta + x) = h(e + 2\delta - x) = 0$.
+\item $Q_{11}$ (with $h(e - \delta + x) = 0$): $h(2e + x) = 0$.
+\item $Q_{7}$ (with $h(e + x) = h(2e + x) = 0$):
+  $h(T + \delta - x) = 0$.
+\item $Q_{4}$: $h(a - x) = (q/p)\, h(x)$.
+\item $Q_{3}$ (with $h(e + x) = 0$): $h(a + x) = -(q/p)\, h(x)$.
+\item $Q_{8}$: $h(b - x) = -(r/p)\, h(a - x) = -(qr/p^{2})\, h(x)$.
+\item $Q_{1}$: $H(x) = h(x) - (q/p)\, h(a - x)
+  = (1 - q^{2}/p^{2})\, h(x) = (\Delta / p^{2})\, h(x)$.
+\item $Q_{2}$ (with $h(e + x) = 0$): $H(d - x) = -(r/p)\, h(x)$.
+\end{itemize}
+
+\smallskip
+\noindent\emph{Step 4: closing identity from $Q_{5}$ vs $Q_{9}$.}
+Substituting all reductions into $Q_{5}$ yields
+$h(T - d + x) = 3r/p \cdot h(x)$; substituting into $Q_{9}$ yields
+$h(T - d + x) = -r(p^{2} - 2q^{2}) / p^{3} \cdot h(x)$.
+Equating,
+\[
+\frac{3r}{p}\, h(x) + \frac{r(p^{2} - 2q^{2})}{p^{3}}\, h(x)
+= \frac{r}{p^{3}}\bigl(3p^{2} + p^{2} - 2q^{2}\bigr) h(x)
+= \frac{2r(2p^{2} - q^{2})}{p^{3}}\, h(x) = 0.
+\]
+
+\smallskip
+\noindent\emph{Step 5: non-vanishing of the coefficient.}
+$p, r > 0$; $2p^{2} - q^{2} = q^{2}(4\sqrt{2} - 1) > 0$
+elementary.  Hence $h(x) = 0$ a.e. on $(R, \sigma)$.
+
+\smallskip
+\noindent\emph{Step 6: propagation.}  From Step~3, $h(a - x) = 0$,
+$h(a + x) = 0$, $h(b - x) = 0$, $H(x) = 0$, $H(d - x) = 0$ throughout
+$(R, \sigma)$.  Support of $h$ collapses to $(R, T) \setminus
+[\{a - x, a + x, b - x : x \in (R, \sigma)\}]$; equivalently, $h = 0$
+on $(R, \sigma) \cup \{a - x, a + x, b - x : x \in (R, \sigma)\}$
+plus $H = 0$ on the tail.  For the remaining lower support
+$(\sigma, a) \cap \{x : \text{no elimination hit}\}$, apply the
+homogeneous b2b reflection mechanism
+(Theorem~\ref{thm:p12-b2b}) with $H = 0$ everywhere: the $E_{\sigma}$
+equation reduces to $p h(x) = q h(a - x)$ plus $p h(a - x) = q h(x)$,
+forcing $h(x) = 0$ on $(R, a)$ by $(p^{2} - q^{2})\, h(x) = 0$.
+
+$A^{+}$ at $0 < t < R$ gives $H(t) = 0$; the tail collapses.
+Support reduces to $(R, T)$ and A15.1b1
+(Theorem~\ref{thm:p12-b1}) closes the residual.
+\end{proof}
+
+\begin{corollary}[Row-multiplier certificate]
+\label{cor:p12-b2c-certificate}
+Under the hypotheses of Theorem~\ref{thm:p12-b2c}, the following
+explicit row-multiplier vector produces the closing identity
+directly from $Q_{1}, \dots, Q_{13}$:
+\[
+(c_{1}, \dots, c_{13}) = \Bigl(
+\tfrac{\Delta}{p r},\
+-\tfrac{\Delta}{r^{2}},\
+\tfrac{\Delta}{q r},\
+-\tfrac{\Delta(p^{2} - 2q^{2})}{p^{2} q r},\
+\tfrac{p \Delta}{q r^{2}},\
+\tfrac{\Delta(\Delta - 2r^{2})}{p q r^{2}},\
+\]
+\[
+-\tfrac{\Delta}{q r},\
+\tfrac{\Delta^{2}}{p q r^{2}},\
+-\tfrac{\Delta}{r^{2}},\
+-\tfrac{\Delta}{p r},\
+-\tfrac{\Delta}{p r},\
+\tfrac{q}{p},\
+1
+\Bigr),
+\]
+giving
+$\sum_{j = 1}^{13} c_{j}\, Q_{j}
+= \bigl[2 \Delta (2p^{2} - q^{2}) / (p^{2} r)\bigr]\, h(x)$
+identically.  The $13 \times 13$ coefficient matrix has determinant
+$\det M_{13} = 2 p^{7} q r (p^{2} - q^{2})(2p^{2} - q^{2})$
+(up to column-ordering sign), non-zero by
+Lemma~\ref{lem:p12-b2c-detfactors}.
 \end{corollary}
 
+\begin{lemma}[Elementary non-vanishing]
+\label{lem:p12-b2c-detfactors}
+$p^{2} - q^{2} > 0$ and $2p^{2} - q^{2} > 0$ elementary.
+\end{lemma}
+
 \begin{proof}
-For $R \ge e$: Theorem~\ref{thm:p12-b2a}.  For $d/2 \le R < e$:
-Theorem~\ref{thm:p12-b2c}.
+$p^{2} - q^{2} = q^{2}(2^{3/2} - 1) > 0$ since $2\sqrt{2} > 1$.
+$2p^{2} - q^{2} = q^{2}(2 \cdot 2^{3/2} - 1) = q^{2}(4\sqrt{2} - 1)
+> 0$ since $4\sqrt{2} > 1$.
 \end{proof}
+
+\begin{openproblem}[Full b2c slice below $\varepsilon = d - R$]
+\label{open:p12-b2c-full}
+For $2a < T_{0} < c$, $d/2 \le R < e$, $T < S < T_{0}$ with
+$\varepsilon \le d - R$: the $u_{8} = a + b - x$ source falls outside
+the horizon $(0, T_{0})$, so the certificate of
+Theorem~\ref{thm:p12-b2c} does not apply.  A different
+horizon-legal certificate is required to close this remaining sub-slice.
+\end{openproblem}
