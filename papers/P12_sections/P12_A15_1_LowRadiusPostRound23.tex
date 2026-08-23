@@ -1,0 +1,242 @@
+\section{Audited low-radius extensions after the \texorpdfstring{$e/2$}{e/2} frontier}
+\label{sec:p12-low-radius-post-r23}
+
+Put
+\[
+\varepsilon_{\max}:=c-T=\frac12\log\frac54,
+\qquad
+\rho:=\varepsilon_{\max}-\delta
+=\frac12\log\frac{10}{9}.
+\]
+In the mixed strip write as before
+\[
+\sigma:=S-T,
+\qquad
+\varepsilon:=T_0-T,
+\qquad
+0<\sigma<\varepsilon<\varepsilon_{\max}.
+\]
+
+\begin{theorem}[A15.1b2e: global \(\rho\)-descent]
+\label{thm:p12-rho-descent}
+Let \(2a<T_0<c\). For every
+\[
+\rho\le R<T<S<T_0
+\]
+one has
+\[
+\boxed{
+\ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}.
+}
+\]
+\end{theorem}
+
+\begin{proof}
+The final audited reassembly uses the exact partition
+\[
+\begin{array}{ll}
+\text{A:}&R\ge e/2,\\
+\text{B:}&R<e/2,\ \sigma\le R,\\
+\text{C:}&R<e/2,\ R<\sigma<e/2,\\
+\text{D:}&R<e/2,\ R<\sigma,\ \sigma\ge e/2.
+\end{array}
+\]
+The partition is disjoint and exhaustive, including the boundary
+assignments \(R=e/2\) to A, \(\sigma=R\) to B, and \(\sigma=e/2\) to D.
+
+Case A is Theorem~\ref{thm:p12-b2d-full} together with the already
+established higher-radius strata. Case B is the independently audited
+restricted-tail closure of Round~19. Case D is the independently audited
+Region-D closure of Round~20.
+
+In Case C, Round~18 proves
+\[
+h=0\quad\text{a.e. on }(R,\sigma).
+\]
+Together with the original support cutoff this gives
+\[
+h=0\quad\text{a.e. on }(0,\sigma).
+\]
+The independently audited Round~17 full-tail lemma then gives
+\[
+H(t)=l(t)=0\quad\text{for a.e. }0<t<\sigma.
+\]
+Hence the same kernel vector is supported in \((\sigma,T)\). Applying
+Theorem~\ref{thm:p12-b1} with the legal effective radius
+\(R_{\rm eff}=\sigma\) and \(S_{\rm eff}=T\) yields \(h=0\).
+
+The complete four-way composition was independently reviewed after
+Round~20 and returned GREEN. This proves the theorem.
+\end{proof}
+
+\begin{theorem}[A15.1b2f: all-radius restricted-tail injectivity]
+\label{thm:p12-restricted-tail-all-r}
+Let \(2a<T_0<c\), \(0<R<T\), and
+\[
+0<\sigma\le R,
+\qquad
+\sigma<\varepsilon<\varepsilon_{\max}.
+\]
+Then
+\[
+\boxed{
+\ker L_{R,T+\sigma,T_0}^{\{a,b,2a\}}=\{0\}.
+}
+\]
+\end{theorem}
+
+\begin{proof}
+For \(R\ge e/2\) this follows from the established high-radius mixed-strip
+result. Assume therefore \(0<R<e/2\).
+
+For \(x\in(R,a)\), the condition \(x>R\ge\sigma\) puts the mixed-tail
+term at \(T+x\) above \(S=T+\sigma\). Hence the lower E-equation is the
+same endpoint equation as in the repaired A14.3a argument, and the lower
+circle gives
+\[
+h=0\quad\text{a.e. on }(R,a).
+\tag{R22.1}
+\]
+For \(0<t<\varepsilon\), the horizon source \(u=T+t\) gives
+\[
+p h(a+t)+r h(e+t)+q h(t)=0.
+\]
+Because \(\varepsilon<e\) and \(e+\varepsilon<2e<a\), both \(h(t)\)
+and \(h(e+t)\) vanish by support or by (R22.1). Thus
+\[
+h(a+t)=0\quad(0<t<\varepsilon).
+\]
+Equivalently, with \(l(z)=h(T-z)\),
+\[
+l(z)=0\quad(a-\varepsilon<z<a).
+\]
+Since
+\[
+a-\varepsilon_{\max}>d,
+\qquad
+d-\varepsilon_{\max}>e/2>R\ge\sigma,
+\]
+the high-reflection identity on this seed strip is free of mixed-tail
+contamination and transports the zero strip to
+\[
+l(w)=0\quad(0<w<\varepsilon).
+\]
+Now use the unconditional paired-source identity P1,
+\[
+H(t)+l(t)+\frac{2r}{p}H(d-t)=0.
+\]
+For \(0<t<\sigma\),
+\[
+d-t>d-\sigma\ge d-R>d-e/2>e/2>\sigma,
+\]
+so \(H(d-t)=0\), while \(l(t)=0\). Hence \(H(t)=0\) on the whole tail
+\((0,\sigma)\). The same kernel vector is therefore supported in
+\((R,T)\), and Theorem~\ref{thm:p12-b1} gives \(h=0\).
+
+The proof uses no lower bound \(R\ge\rho\). Its retained structural
+verifier and the four constant comparisons were independently rerun after
+Round~22 and returned GREEN.
+\end{proof}
+
+\begin{proposition}[A15.1b2g: exact local overlap seed below \(\rho\)]
+\label{prop:p12-r23-c23}
+Define
+\[
+\omega:=\frac e2-\rho=\frac14\log\frac{27}{25},
+\qquad
+\eta:=e-2\delta,
+\qquad
+\chi:=3\delta-e,
+\qquad
+\kappa:=e-\delta.
+\]
+Suppose
+\[
+0<R<x<\sigma<\varepsilon<\varepsilon_{\max}
+\]
+and
+\[
+\boxed{
+\begin{aligned}
+&\omega<R,\\
+&\eta<x<\chi,\\
+&R+x<\delta<\sigma+x<\kappa,\\
+&\sigma-x<\eta,\\
+&\kappa<\varepsilon+x,\\
+&x+\eta<\varepsilon.
+\end{aligned}}
+\tag{C23}
+\]
+Then every kernel vector satisfies
+\[
+\boxed{h(x)=0}
+\]
+for a.e. \(x\) in this cell.
+\end{proposition}
+
+\begin{proof}
+The Round~23 certificate uses 42 horizon-legal affine sources
+\(u=sx+me+n\delta\), split into 21 sources on each of the sheets
+\(s=-1\) and \(s=+1\). Reconstructing every row directly from
+\[
+Lh(u)=p[h(u-a)-h(u+a)]
++r[h(u-b)-h(u+b)]
++q[h(u-T)-h(u+T)]
+\]
+with only odd reflection and the support cutoff gives exactly 42 live
+visibility coordinates throughout the open cell (C23). Hence one obtains a
+square matrix \(M_{42}\).
+
+Exact symbolic elimination gives
+\[
+\det M_{42}=-p^{14}r^4F_-F_+.
+\]
+With
+\[
+\beta=q/p,
+\qquad
+v=(r/p)^2,
+\]
+the two degree-12 factors have the normalized form
+\[
+F_\pm=p^{12}(A\pm C),
+\qquad
+C=2\beta^3v^2(\beta^2-1)(2\beta^2+v-2).
+\]
+For the actual P12 weights
+\[
+\beta=2^{-3/4},
+\qquad
+v=\frac{\log3}{\log2}\sqrt{\frac8{27}},
+\]
+an exact rational interval computation gives
+\[
+A-C\in(-0.20661356870806363,-0.2066135687080636),
+\]
+\[
+A+C\in(-0.0325699133677542,-0.032569913367754194).
+\]
+Thus both factors are strictly nonzero and
+\[
+\det M_{42}\ne0.
+\]
+Therefore every live coordinate vanishes, in particular \(h(x)=0\).
+The raw reconstruction, determinant factorization, normalization, and a
+separately written Fraction-based interval proof were independently rerun
+after the repaired Round~23 commit and returned GREEN.
+\end{proof}
+
+\begin{remark}[Scope of the Round-23 seed]
+Proposition~\ref{prop:p12-r23-c23} is local. It does not imply a global
+statement for \(R\ge\omega\), and it does not close the whole overlap region
+below \(\rho\).
+\end{remark}
+
+\begin{remark}[Audit provenance]
+The detailed retained audit records are Round~21
+(`8dbc594317f9ea993ea2f4b4256d61b3e71cc975`), Round~22 promotion
+(`9ffa7aaf9903f411a589eb0fbc590f65f1eb9f60`), and Round~23 promotion
+(`aa189c972961a90e364cb7b1a8ad64f02ab09bfd`). The Round~23 text payload was
+repaired transparently in commit
+`cddc6c5793f18a3dc02f65697063b395c9f7d897`; no history was rewritten.
+\end{remark}
