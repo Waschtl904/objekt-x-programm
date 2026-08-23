@@ -19,7 +19,7 @@
 
 \title[P12 --- Adelic Hub Injectivity]{P12 --- Adelic Hub Injectivity beyond the Two-Shift Boundary}
 \author{Objekt-X-Programm}
-\date{2026-08-22}
+\date{2026-08-23}
 
 \begin{document}
 
@@ -28,8 +28,14 @@ P11 froze the finite-horizon Feshbach--Schur candidate geometry at
 \(T_0 \le 2a\).  P12 opens the next arithmetic-shift chamber
 \(2a < T_0 < \tfrac12\log 5\), where the third shift \(2a\) becomes
 active.  The present manuscript proves localized-hub kernel
-triviality throughout the mixed strip down to the source-radius
-threshold \(R=e/2\).
+triviality throughout the mixed strip down to
+\[
+\rho=\frac12\log\frac{10}{9},
+\]
+and, in the restricted-tail regime \(\sigma\le R\), for every
+\(R>0\).  Below the global \(\rho\)-threshold an additional exact
+\(42\times42\) raw-operator certificate closes one explicit nonempty
+overlap cell.
 
 Concretely, P12 establishes:
 \begin{itemize}
@@ -41,20 +47,22 @@ Concretely, P12 establishes:
 \item \textbf{A15.1b2c} full mixed-strip injectivity for
   \(d/2\le R<e\), including tail overlap;
 \item \textbf{A15.1b2d} full Sub-wedge~A injectivity for
-  \(e/2\le R<d/2\).  The last core-both obstruction is closed by a
-  horizon-legal 13-source triangular certificate whose final scalar
-  factor is
-  \[
-  \frac{2qr(2p^2-q^2)}{p^3}>0.
-  \]
+  \(e/2\le R<d/2\);
+\item \textbf{A15.1b2e} full mixed-strip descent to
+  \(R=\rho=\tfrac12\log(10/9)\);
+\item \textbf{A15.1b2f} restricted-tail injectivity
+  \(\sigma\le R\) for every \(R>0\);
+\item \textbf{A15.1b2g} a local exact overlap seed below \(\rho\),
+  certified by a \(42\times42\) raw matrix with rigorously nonzero
+  determinant.
 \end{itemize}
 
-The b2d proof combines the already established core-single and
-upper-region kills with the new symmetric core-both certificate.  A
-separate polynomial row-multiplier identity cross-checks the
-13-source elimination.  Hence the mixed strip is closed for every
-\(e/2\le R<T\); the remaining low-source-radius problem is
-\(0<R<e/2\).
+The global \(\rho\)-descent is a reassembly of independently audited
+high-radius, restricted-tail, overlap-interface, full-tail and Region-D
+closures.  The all-radius restricted-tail theorem removes \(\rho\) entirely
+from the sector \(\sigma\le R\).  The remaining global low-radius front is
+therefore the genuine overlap sector \(0<R<\rho\), \(\sigma>R\), with the
+A15.1b2g cell already closed locally.
 
 None of P12 asserts polar-gauge, terminal-transport, Object-X or RH
 consequences.  The R14 firewall of P11 is preserved unchanged.
@@ -86,15 +94,26 @@ Auxiliary constants:
 d:=b-a,\quad e:=a-d=2a-b,\quad
 \delta:=d-e=2b-3a,\quad T:=2a.
 \]
+Let
+\[
+\varepsilon_{\max}:=c-T=\frac12\log\frac54,
+\qquad
+\rho:=\varepsilon_{\max}-\delta
+=\frac12\log\frac{10}{9}.
+\]
 Numerically
 \[
 d\approx0.2027,\quad e\approx0.1438,\quad
-\delta\approx0.0589,\quad d/2\approx0.1014,\quad
-e/2\approx0.0719.
+\delta\approx0.0589,\quad d/2\approx0.1014,
+\quad e/2\approx0.0719,
+\quad \rho\approx0.05268.
 \]
 
 Let \(\varepsilon:=T_0-T>0\) and, in the mixed strip
-\(T<S<T_0\), let \(\sigma:=S-T\in(0,\varepsilon)\).
+\(T<S<T_0\), let \(\sigma:=S-T\in(0,\varepsilon)\).  Then
+\[
+0<\sigma<\varepsilon<\varepsilon_{\max}.
+\]
 
 The folded operator is
 \[
@@ -141,6 +160,7 @@ point \(S=T\) with \(T_0>T\) is a separate case
 \input{P12_sections/P12_A15_1b2d_ParameterWedge}
 \input{P12_sections/P12_A15_1b2d_EtaWallBootstrap}
 \input{P12_sections/P12_A15_1b2d_CoreBothClosure}
+\input{P12_sections/P12_A15_1_LowRadiusPostRound23}
 
 \section{Consolidated status and the remaining wedge}\label{sec:p12-status}
 
@@ -150,47 +170,64 @@ Let \(2a<T_0<c\) and \(0<R<S<T_0\).  Then
 \[
 \ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}
 \]
-in the following established strata:
+in the following established global strata:
 \begin{itemize}
 \item[(i)] \(S<T\)
   (Theorem~\ref{thm:p12-b0});
 \item[(ii)] \(S=T\)
   (Theorem~\ref{thm:p12-b1});
-\item[(iii)] \(T<S<T_0\), \(e\le R<T\)
-  (Theorem~\ref{thm:p12-b2a});
-\item[(iv)] \(T<S<T_0\), \(d/2\le R<e\)
-  (Theorem~\ref{thm:p12-b2c}, together with b2b where applicable);
-\item[(v)] \(T<S<T_0\), \(e/2\le R<d/2\)
-  (Theorem~\ref{thm:p12-b2d-full}).
+\item[(iii)] \(T<S<T_0\), \(\rho\le R<T\)
+  (Theorem~\ref{thm:p12-rho-descent});
+\item[(iv)] \(T<S<T_0\), \(0<R<\rho\), \(\sigma\le R\)
+  (Theorem~\ref{thm:p12-restricted-tail-all-r}).
 \end{itemize}
 Consequently,
 \[
 \boxed{
-T<S<T_0,\qquad e/2\le R<T
+T<S<T_0,\qquad \rho\le R<T
 \quad\Longrightarrow\quad
 \ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}.
 }
 \]
+Moreover, in the restricted-tail sector
+\[
+\boxed{
+0<R<T,\qquad \sigma\le R
+\quad\Longrightarrow\quad
+\ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}.
+}
+\]
+Below \(\rho\), Proposition~\ref{prop:p12-r23-c23} gives an additional
+local exact kill in the explicit overlap cell (C23).
+
 The paired-source identities P1 and P2
 (Theorems~\ref{thm:p12-P1}, \ref{thm:p12-P2}) remain valid
 unconditionally for every \(0<x<\varepsilon\).
 \end{corollary}
 
-\begin{remark}[b2d closure]
-Theorem~\ref{thm:p12-b2d-core-both-full} closes the symmetric
-core-both region that remained after the full core-single
-Theorem~\ref{thm:p12-b2d-core-single-full} and the b2d-upper
-Corollary~\ref{cor:p12-b2d-upper-local}.  Thus
-Theorem~\ref{thm:p12-b2d-full} supersedes the earlier partial
-b2d wedge statements as the final Sub-wedge~A result.
+\begin{remark}[Audit status after Round 23]
+The full \(\rho\)-descent is `\(\checkmark[M]\)`.  The all-radius
+restricted-tail theorem is `\(\checkmark[M]\)`.  The exact Round-23 overlap
+seed is `\(\checkmark[M]_{\rm part}\)`: it is a local theorem only and does
+not imply a global descent to \(\omega\).
 \end{remark}
 
-\begin{openproblem}[Descent below \(R=e/2\)]
-\label{open:p12-below-ehalf}
-For \(2a<T_0<c\), \(0<R<e/2\), \(T<S<T_0\): decide whether
+\begin{openproblem}[Residual overlap below \(\rho\)]
+\label{open:p12-below-rho-overlap}
+For
+\[
+2a<T_0<c,\qquad
+0<R<\rho,\qquad
+T<S<T_0,\qquad
+R<\sigma=S-T,
+\]
+decide whether
 \[
 \ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}.
 \]
+The explicit C23 cell of Proposition~\ref{prop:p12-r23-c23} is already
+closed locally, but no full theorem of the form \(R\ge\omega\) is currently
+booked.
 \end{openproblem}
 
 \section{Firewall}\label{sec:p12-firewall}
@@ -198,7 +235,7 @@ For \(2a<T_0<c\), \(0<R<e/2\), \(T<S<T_0\): decide whether
 None of \S\ref{sec:p12-persistence}--\ref{sec:p12-status} makes a
 polar-gauge, terminal-transport, Object-X or RH statement.  The R14
 firewall from P11 remains unchanged: even a full closure of
-Open Problem~\ref{open:p12-below-ehalf} would decide only the
+Open Problem~\ref{open:p12-below-rho-overlap} would decide only the
 localized-hub kernel triviality in the three-shift chamber; by R36-A1
 (P11) this is equivalent to dense range of the annular hub projection
 \(P_{\mathcal A}H_{T_0}\), a modulus-layer statement.  Neither
