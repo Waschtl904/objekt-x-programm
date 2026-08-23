@@ -1,0 +1,175 @@
+\section{Round-24 local extensions below \texorpdfstring{$\rho$}{rho}}
+\label{sec:p12-round24-local}
+
+Retain
+\[
+\eta=e-2\delta,\qquad
+\chi=3\delta-e,\qquad
+\kappa=e-\delta,
+\]
+so that
+\[
+\eta+\chi=\delta.
+\]
+The statements in this section are local kernel certificates only. They do not
+constitute a global descent theorem below \(\rho\).
+
+\begin{proposition}[A15.1b2h: enlarged fixed-42 overlap chamber]
+\label{prop:p12-r24-c42}
+Assume
+\[
+0<R<\rho,
+\]
+\[
+R<x<\delta-R,
+\qquad
+\chi-R<x<\eta+R,
+\]
+\[
+\max\{x,\delta-x\}<\sigma<\min\{\kappa-x,x+\eta\},
+\]
+and
+\[
+\max\{\kappa-x,x+\eta\}<\varepsilon<\varepsilon_{\max}.
+\]
+Then every kernel vector satisfies
+\[
+\boxed{h(x)=0}
+\]
+for a.e. \(x\) in this chamber.
+\end{proposition}
+
+\begin{proof}
+Use exactly the 42 affine sources of Proposition~\ref{prop:p12-r23-c23}.
+The full raw-slot inventory shows that throughout the stated chamber they
+reconstruct exactly the same 42 live visibility coordinates and exactly the
+same symbolic matrix \(M_{42}\) as in Round~23.
+
+The two-sheet involution remains
+\[
+J(s,m,n)=(-s,m,n+s),
+\]
+and in paired order
+\[
+M_{42}=\begin{pmatrix}A_{21}&B_{21}\\B_{21}&A_{21}\end{pmatrix}.
+\]
+The determinant and its exact nondegeneracy are therefore precisely those of
+Proposition~\ref{prop:p12-r23-c23}. Hence \(M_{42}\) is invertible and every
+live coordinate vanishes.
+
+The chamber contains, for example,
+\[
+(R,x,\sigma,\varepsilon)=(0.01,\delta/2,0.04,0.07),
+\]
+with \(R<\omega\). Thus \(R=\omega\) is not a wall of this fixed 42-row
+raw block. The Round-24 reconstruction and the below-\(\omega\) matrix
+identity were independently reviewed and returned GREEN.
+\end{proof}
+
+\begin{remark}[No new radius threshold]
+The feasibility condition for this particular fixed 42-source pattern yields
+\[
+R>\frac{\chi-\eta}{2}
+\]
+when one asks for a nonempty interval
+\(\chi-R<x<\eta+R\). This is only a chamber-feasibility bound for the fixed
+certificate; it is not booked as an operator threshold or a global descent
+boundary.
+\end{remark}
+
+\begin{proposition}[A15.1b2i: exact 44-source support-shell chamber]
+\label{prop:p12-r24-c44}
+Assume
+\[
+0<R<\rho,
+\]
+\[
+R<x<\delta-R,
+\qquad
+\chi-R<x<\eta+R,
+\]
+\[
+\max\{\kappa-x,x+\eta\}<\sigma<\min\{2\delta-x,x+\delta\},
+\]
+and
+\[
+\max\{2\delta-x,x+\delta\}<\varepsilon<\varepsilon_{\max}.
+\]
+Then the 44-source raw system described below is invertible. In particular,
+all its live visibility coordinates vanish for every kernel vector.
+\end{proposition}
+
+\begin{proof}
+Crossing the paired support walls makes
+\[
+U_-=T+\kappa-x\leftrightarrow(-1,5,1),
+\qquad
+U_+=T+x+\eta\leftrightarrow(1,5,0)
+\]
+live support variables.
+
+Add the next-shell source pair
+\[
+V_-=T+2\delta-x\leftrightarrow(-1,4,4),
+\]
+\[
+V_+=T+x+\delta\leftrightarrow(1,4,3).
+\]
+Direct reconstruction from the canonical raw operator gives
+\[
+V_-:\ \{(-1,2,3):p,\ (-1,1,2):r,\ (-1,0,2):q\},
+\]
+\[
+V_+:\ \{(1,2,2):p,\ (1,1,1):r,\ (1,0,1):q\},
+\]
+with no further visibility coordinates. Thus the chamber contains exactly
+44 live variables and 44 horizon-legal source rows.
+
+The source and variable sets remain closed under
+\[
+J(s,m,n)=(-s,m,n+s).
+\]
+In paired order,
+\[
+M_{44}=\begin{pmatrix}A_{22}&B_{22}\\B_{22}&A_{22}\end{pmatrix}.
+\]
+Exact symbolic elimination gives
+\[
+\boxed{
+\det M_{44}
+=-p^{18}r^6(p-q)(p+q)G_-G_+.
+}
+\]
+With
+\[
+\beta=q/p,\qquad v=(r/p)^2,
+\]
+the normalized degree-9 factors form a parity pair under
+\(\beta\mapsto-\beta\). Exact rational interval arithmetic at the P12
+weights yields strict positive enclosures near
+\[
+0.03770850382320942
+\qquad\text{and}\qquad
+0.6120433841588828.
+\]
+Since \(p>q>0\) and \(r>0\), all factors are nonzero and hence
+\[
+\det M_{44}\ne0.
+\]
+The raw source rows, determinant factorization, parity relation and exact
+interval nondegeneracy were independently reconstructed in the Round-24
+GREEN review.
+\end{proof}
+
+\begin{remark}[Residual horizon front]
+At the paired horizon walls
+\[
+\varepsilon+x=\kappa,
+\qquad
+\varepsilon=x+\eta,
+\]
+one source row leaves the old 42-row block. The retained Round-24 verifier
+contains a finite one-step replacement search, but that exhaustive diagnostic
+was not independently rerun in the GREEN review. It is therefore retained as
+research guidance only. No horizon-wall no-go theorem is booked.
+\end{remark}
