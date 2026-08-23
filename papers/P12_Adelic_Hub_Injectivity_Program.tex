@@ -33,9 +33,10 @@ triviality throughout the mixed strip down to
 \rho=\frac12\log\frac{10}{9},
 \]
 and, in the restricted-tail regime \(\sigma\le R\), for every
-\(R>0\).  Below the global \(\rho\)-threshold an additional exact
-\(42\times42\) raw-operator certificate closes one explicit nonempty
-overlap cell.
+\(R>0\).  Below the global \(\rho\)-threshold exact local raw-operator
+certificates now include an enlarged \(42\times42\) overlap chamber that
+extends below the former auxiliary value \(\omega\), and a next-shell
+\(44\times44\) support-wall chamber.
 
 Concretely, P12 establishes:
 \begin{itemize}
@@ -54,7 +55,11 @@ Concretely, P12 establishes:
   \(\sigma\le R\) for every \(R>0\);
 \item \textbf{A15.1b2g} a local exact overlap seed below \(\rho\),
   certified by a \(42\times42\) raw matrix with rigorously nonzero
-  determinant.
+  determinant;
+\item \textbf{A15.1b2h} an enlarged fixed-42 overlap chamber, including
+  points with \(R<\omega\), with the same exact \(M_{42}\);
+\item \textbf{A15.1b2i} a paired next-shell support chamber with an exact
+  \(44\times44\) raw matrix and rigorously nonzero determinant.
 \end{itemize}
 
 The global \(\rho\)-descent is a reassembly of independently audited
@@ -62,7 +67,8 @@ high-radius, restricted-tail, overlap-interface, full-tail and Region-D
 closures.  The all-radius restricted-tail theorem removes \(\rho\) entirely
 from the sector \(\sigma\le R\).  The remaining global low-radius front is
 therefore the genuine overlap sector \(0<R<\rho\), \(\sigma>R\), with the
-A15.1b2g cell already closed locally.
+A15.1b2g, b2h and b2i chambers closed locally.  No global descent below
+\(\rho\) is inferred from these local certificates.
 
 None of P12 asserts polar-gauge, terminal-transport, Object-X or RH
 consequences.  The R14 firewall of P11 is preserved unchanged.
@@ -161,6 +167,7 @@ point \(S=T\) with \(T_0>T\) is a separate case
 \input{P12_sections/P12_A15_1b2d_EtaWallBootstrap}
 \input{P12_sections/P12_A15_1b2d_CoreBothClosure}
 \input{P12_sections/P12_A15_1_LowRadiusPostRound23}
+\input{P12_sections/P12_A15_1_Round24_LocalExtensions}
 
 \section{Consolidated status and the remaining wedge}\label{sec:p12-status}
 
@@ -197,19 +204,21 @@ Moreover, in the restricted-tail sector
 \ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}.
 }
 \]
-Below \(\rho\), Proposition~\ref{prop:p12-r23-c23} gives an additional
-local exact kill in the explicit overlap cell (C23).
+Below \(\rho\), Propositions~\ref{prop:p12-r23-c23},
+\ref{prop:p12-r24-c42} and \ref{prop:p12-r24-c44} give exact local kills in
+explicit overlap chambers.
 
 The paired-source identities P1 and P2
 (Theorems~\ref{thm:p12-P1}, \ref{thm:p12-P2}) remain valid
 unconditionally for every \(0<x<\varepsilon\).
 \end{corollary}
 
-\begin{remark}[Audit status after Round 23]
+\begin{remark}[Audit status after Round 24]
 The full \(\rho\)-descent is `\(\checkmark[M]\)`.  The all-radius
-restricted-tail theorem is `\(\checkmark[M]\)`.  The exact Round-23 overlap
-seed is `\(\checkmark[M]_{\rm part}\)`: it is a local theorem only and does
-not imply a global descent to \(\omega\).
+restricted-tail theorem is `\(\checkmark[M]\)`.  The Round-23 C23 seed,
+Round-24 enlarged C42 chamber and Round-24 C44 support-shell theorem are all
+`\(\checkmark[M]_{\rm part}\)`: they are local theorems only and do not
+imply a global descent below \(\rho\).
 \end{remark}
 
 \begin{openproblem}[Residual overlap below \(\rho\)]
@@ -225,9 +234,15 @@ decide whether
 \[
 \ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}.
 \]
-The explicit C23 cell of Proposition~\ref{prop:p12-r23-c23} is already
-closed locally, but no full theorem of the form \(R\ge\omega\) is currently
-booked.
+The C23, enlarged C42 and C44 support-shell chambers are already closed
+locally.  The paired horizon walls
+\[
+\varepsilon+x=\kappa,
+\qquad
+\varepsilon=x+\eta
+\]
+remain an explicit hard local front.  No full theorem of the form
+\(R\ge\omega\), nor any replacement global low-radius threshold, is booked.
 \end{openproblem}
 
 \section{Firewall}\label{sec:p12-firewall}
