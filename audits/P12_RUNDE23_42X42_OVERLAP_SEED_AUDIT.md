@@ -121,7 +121,8 @@ At every one of these sources reconstruct the six canonical raw slots from
 
 \[
 Lh(u)=
-p[h(u-a)-h(u+a)]r+r[h(u-b)-h(u+b)]
+p[h(u-a)-h(u+a)]
++r[h(u-b)-h(u+b)]
 +q[h(u-T)-h(u+T)].
 \tag{3.1}
 \]

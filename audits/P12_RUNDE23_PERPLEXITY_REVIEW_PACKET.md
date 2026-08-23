@@ -91,24 +91,38 @@ Normalize
 \beta=q/p,\qquad v=(r/p)^2.
 \]
 
-Check that \(F_\pm=p^{12}(A\pm C)\), wher
+Check that \(F_\pm=p^{12}(A\pm C)\), where
 
 \[
 \begin{aligned}
-Aí{}&3\beta^{12}-\beta^{10}v-18\beta^{10}
+A={}&3\beta^{12}-\beta^{10}v-18\beta^{10}
 -7\beta^8v+45\beta^8\\
 &-\beta^6v^3-3\beta^6v^2+38\beta^6v-60\beta^6\\
 &-\beta^4v^3+21\beta^4v^2-62\beta^4v+45\beta^4\\
 &+8\beta^2v^3-33\beta^2v^2+43\beta^2v-18\beta^2\\
-&+2v^4-9v3+15v^2-11v+3,
-ZYÏL—™]WŒİ—ŒŠ™]WŒ‹LJJ—™]WŒŠİ‹LŠK‚—B‚‘›ÜˆHXİX[ÙZYÚË—Â—™]OL—ËLËÍK\]XYWœ˜XŞ×ÙÌß^×ÙÌŸWÜ\ÎÌßK‚—B‚•™\šYHH[İ\ˆİÛˆ^XİÚYÚ\™XÚ\Ú[ÛˆY]Ù]›İ
-KP×
-H[™—
-JĞ×
-H\™HİšXİH™YØ]]™H[™ØY™[H]Ø^Hœ›ÛH™\›Ë‚‚ˆÈÈ™\™Xİ‚”™]\›ˆÔ‘QS˜T•PSÜˆRS›ÜˆHØØ[İ][Y[‚—ÂŠÌŒÊWÛ™ÜšYÚ\œ›İÈ
-
-OL‚—B‚‘È
-Š››İ
-Šˆ›Û[İHH[
-—ÙWÛYYØW
-H\ØÙ[œ›ÛH\ÈÛ™HÙ[‚“›ÈØš™XİVÜˆ’ÛÛœÙ\]Y[˜ÙH\È[™\ˆ™]šY]Ë‚
+&+2v^4-9v^3+15v^2-11v+3,
+\end{aligned}
+\]
+\[
+C=2\beta^3v^2(\beta^2-1)(2\beta^2+v-2).
+\]
+
+For the actual weights,
+\[
+\beta=2^{-3/4},\qquad
+v=\frac{\log3}{\log2}\sqrt{8/27}.
+\]
+
+Verify by your own exact/high-precision method that both \(A-C\) and
+\(A+C\) are strictly negative and safely away from zero.
+
+## Verdict
+
+Return `GREEN`, `PARTIAL`, or `FAIL` for the local statement
+
+\[
+(C23)\Longrightarrow h(x)=0.
+\]
+
+Do **not** promote a full \(R\ge\omega\) descent from this one cell.
+No Object-X or RH consequence is under review.
