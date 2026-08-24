@@ -1,0 +1,164 @@
+\section{Round-26 horizon corridor below \texorpdfstring{$\rho$}{rho}}
+\label{sec:p12-round26-horizon-corridor}
+
+Retain
+\[
+\eta=e-2\delta,\qquad
+\chi=3\delta-e,\qquad
+\delta=\eta+\chi,
+\]
+and
+\[
+\kappa=e-\delta=2\eta+\chi.
+\]
+The statements in this section are local kernel certificates only. They do not
+constitute a global descent theorem below \(\rho\).
+
+\begin{proposition}[A15.1b2k: exact glued horizon corridor]
+\label{prop:p12-r26-horizon-corridor}
+Define the open minus chamber \(C_{26}^{-}\) by
+\[
+\eta<x<\chi,
+\]
+\[
+\chi<R+x<2\eta,
+\qquad
+x-R<\eta,
+\]
+\[
+\chi-\eta<\sigma-x,
+\qquad
+\sigma+x<3\eta,
+\]
+and
+\[
+x+\eta<\varepsilon<\varepsilon_{\max}.
+\]
+Then the fixed 92-source Round-25 raw system reconstructs exactly the same
+matrix \(M_{92}\) throughout \(C_{26}^{-}\). Hence every kernel vector
+satisfies
+\[
+\boxed{h(x)=h(\delta-x)=0}.
+\]
+
+Under
+\[
+J(s,m,n)=(-s,m,n+s),
+\qquad x\mapsto\delta-x,
+\]
+let \(C_{26}^{+}=J(C_{26}^{-})\). Equivalently,
+\[
+\eta<x<\chi,
+\]
+\[
+R+x>\chi,
+\qquad
+\chi-\eta<x-R<\eta,
+\]
+\[
+\sigma+x>2\chi,
+\qquad
+\sigma-x<2\eta-\chi,
+\]
+and
+\[
+\varepsilon+x>\kappa,
+\qquad
+\varepsilon<\varepsilon_{\max}.
+\]
+The mirrored 92-source system again reconstructs exactly \(M_{92}\), and
+therefore
+\[
+\boxed{h(x)=h(\delta-x)=0}
+\]
+throughout \(C_{26}^{+}\).
+
+Moreover,
+\[
+C_{26}^{-}\cap C_{26}^{+}
+\]
+contains a nonempty open set. Consequently
+\[
+\boxed{C_{26}^{-}\cup C_{26}^{+}}
+\]
+is an open connected local horizon corridor.
+\end{proposition}
+
+\begin{proof}
+Use exactly the 92 selected source rows of Round~25 on the minus side: the
+41 surviving old rows together with the 51-source horizon circuit. The
+Round-26 raw-slot analysis reconstructs all source-horizon, sign and support
+conditions of these rows and reduces the connected constant-pattern chamber
+to the eight genuine raw facets
+\[
+x=\eta,\qquad x=\chi,
+\]
+\[
+R+x=\chi,\qquad R+x=2\eta,\qquad x-R=\eta,
+\]
+\[
+\sigma-x=\chi-\eta,\qquad \sigma+x=3\eta,
+\]
+and
+\[
+\varepsilon=x+\eta.
+\]
+The ambient arithmetic ceiling \(\varepsilon=\varepsilon_{\max}\) remains
+external to this local raw-facet list.
+
+For the polyhedral closure of the stated minus chamber, the retained exact
+verifier finds 20 feasible vertices. Every one of the 1628 raw linear
+source/sign/support/horizon inequalities is certified on these vertices using
+rigorous rational enclosures for the logarithmic constants. Hence there is no
+additional hidden pattern wall in the chamber, and the selected raw matrix is
+coefficient-for-coefficient the already promoted Round-25 matrix \(M_{92}\).
+Since Round~25 independently established
+\[
+\det M_{92}\ne0,
+\]
+all 92 live coordinates vanish, including \(h(x)\) and
+\(h(\delta-x)\).
+
+The involution \(J\) maps source values, support coordinates and raw
+coefficients exactly to the plus chamber. Thus the mirrored matrix is again
+\(M_{92}\) coefficient-for-coefficient.
+
+Finally, the rational box
+\[
+0.014<R<0.016,
+\]
+\[
+0.0293<x<0.0296,
+\]
+\[
+0.041<\sigma<0.043,
+\]
+\[
+0.065<\varepsilon<0.075
+\]
+strictly satisfies all defining inequalities of both chambers. Therefore the
+intersection is open and nonempty.
+
+The raw-matrix reconstruction, the 20-vertex/1628-inequality polyhedral
+certificate, the exact \(J\)-mirror and the open-overlap box were independently
+reimplemented after Round~26 and returned GREEN.
+\end{proof}
+
+\begin{remark}[The former horizon wall is not a facet of this certificate]
+The equation
+\[
+\varepsilon+x=\kappa
+\]
+is not a facet of the fixed minus 92-row certificate. The source
+\((-1,5,1)\), whose horizon legality changes there, is not among the selected
+92 rows. Thus the same invertible certificate passes locally through that
+wall. This is a local certificate statement, not a theorem covering the full
+horizon wall.
+\end{remark}
+
+\begin{remark}[Scope]
+Proposition~\ref{prop:p12-r26-horizon-corridor} is
+\(\checkmark[M]_{\rm part}\). It does not close the full residual overlap
+\(0<R<\rho\), \(\sigma>R\), and it introduces no new global radius threshold.
+The search depth 21 from Round~25 remains a search diagnostic only.
+\end{remark}
