@@ -13,7 +13,6 @@ This script is NOT a proof of the infinite-dimensional theorem and is NOT a
 proof of Schur-crossblock injectivity. P11/P12 remain unchanged.
 """
 
-from fractions import Fraction
 import sympy as sp
 
 # -----------------------------------------------------------------------------
@@ -75,8 +74,8 @@ print("SE_BLOCK_COEFFICIENTS = PASS", block_prefactors)
 # -----------------------------------------------------------------------------
 # 3. Finite-dimensional exact sanity model for SE-1
 # -----------------------------------------------------------------------------
-# Use a 4D ambient space with parity already suppressed.  H is skew-symmetric,
-# A=C^T C >=0, B=(I+A)^-1.  EI and EA are coordinate embeddings.
+# Use a 4D ambient space with parity already suppressed. H is skew-symmetric,
+# A=C^T C >=0, B=(I+A)^-1. EI and EA are coordinate embeddings.
 H = sp.Matrix([
     [0, 1, 0, 0],
     [-1,0, 1, 0],
@@ -92,19 +91,20 @@ B = (sp.eye(4)+A).inv()
 assert H.T == -H
 assert A == A.T
 
-# one-dimensional inner/annular source embeddings chosen for exact arithmetic
+# One-dimensional inner/annular embeddings selected so the Schur scalar is nonzero.
 EI = sp.Matrix([1,0,0,0])
-EA = sp.Matrix([0,0,0,1])
+EA = sp.Matrix([0,0,1,0])
 
 S = (EI.T*H*B*H.T*EA)[0]
+assert S != 0
 
-# Block system K(y,w)=0. For w=1, its unique first-row solution is y=B H^* EA.
+# For w=1, the unique first-row solution is y=B H^* EA.
 y = B*H.T*EA
 first = (sp.eye(4)+A)*y + H*EA
 second = (EI.T*H*y)[0]
 assert first == sp.zeros(4,1)
 assert sp.simplify(second-S) == 0
-print("SE_BLOCK_KERNEL_ALGEBRA_SANITY = PASS Schur scalar equals second block residual")
+print("SE_BLOCK_KERNEL_ALGEBRA_SANITY = PASS nonzero Schur scalar", S)
 
 # General logical firewall: I+A is invertible because A>=0 in the real theorem.
 assert (sp.eye(4)+A).det() != 0
