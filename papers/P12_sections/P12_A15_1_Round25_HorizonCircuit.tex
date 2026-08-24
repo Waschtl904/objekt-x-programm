@@ -1,0 +1,113 @@
+\section{Round-25 local horizon-wall circuit}
+\label{sec:p12-round25-horizon}
+
+Retain
+\[
+\eta=e-2\delta,\qquad
+\kappa=e-\delta.
+\]
+The statements in this section are local kernel certificates only. They do not
+constitute a global horizon-wall closure or a global descent theorem below
+\(\rho\).
+
+\begin{proposition}[A15.1b2j: exact local horizon-wall circuit]
+\label{prop:p12-r25-horizon}
+Assume
+\[
+0.0195<R<0.0205,
+\]
+\[
+0.0395<\sigma<0.0405,\qquad
+0.0550<\varepsilon<0.0559.
+\]
+For almost every
+\[
+x\in I_-:=(0.0275,0.0285),
+\]
+every kernel vector satisfies
+\[
+\boxed{h(x)=0,\qquad h(\delta-x)=0.}
+\]
+Equivalently, for each fixed admissible \(R,\sigma,\varepsilon\), the kernel
+vector vanishes on both open intervals
+\[
+I_-=(0.0275,0.0285),\qquad
+I_+:=\delta-I_-.
+\]
+The \(J\)-mirror of this chamber is the corresponding local chamber on the
+opposite horizon wall and has the same raw matrix coefficient-for-coefficient.
+\end{proposition}
+
+\begin{proof}
+In the minus-side chamber one has uniformly
+\[
+\kappa-x>\varepsilon,\qquad
+x+\eta<\varepsilon.
+\]
+Thus the Round-23 source \((-1,5,1)\) lies above the source horizon, while
+\((1,5,0)\) remains horizon-legal. Exactly 41 of the original 42 source rows
+survive, acting on the original 42 visibility variables.
+
+Add the 51-source circuit recorded in the Round-25 audit. Direct reconstruction
+of every row from
+\[
+Lh(u)=
+p[h(u-a)-h(u+a)]
++r[h(u-b)-h(u+b)]
++q[h(u-T)-h(u+T)]
+\]
+using only odd reflection, the support cutoff and the horizon cutoff introduces
+exactly 50 additional visibility coordinates. Hence the 41 old rows and 51
+circuit rows form a square raw matrix
+\[
+\boxed{M_{92}\in M_{92}(\mathbb R).}
+\]
+No reduced or hand-inserted equation is used.
+
+Factor \(p\) from every row and put
+\[
+\beta=q/p=2^{-3/4},
+\qquad
+\alpha=r/p
+=\sqrt{\frac{\log3}{\log2}}\left(\frac23\right)^{3/4}.
+\]
+Then
+\[
+\det M_{92}=p^{92}D_{92}(\beta,\alpha).
+\]
+Directed-rounding interval Gaussian elimination gives the rigorous enclosure
+\[
+D_{92}\in
+(
+1.9850792121557575604061864810750\times10^{-5},
+1.9850792121557575604139727620295\times10^{-5}
+).
+\]
+Therefore
+\[
+\det M_{92}\ne0.
+\]
+All 92 live coordinates vanish, including \(h(x)\) and
+\(h(\delta-x)\).
+
+The independent Round-25 GREEN review reimplemented the raw-matrix build,
+the directed interval elimination and the involution check, reproducing the
+same positive determinant enclosure and confirming
+\[
+M_{\rm mirror}=M_{92}.
+\]
+Thus the same certificate holds in the \(J\)-reflected plus-horizon chamber.
+\end{proof}
+
+\begin{remark}[Search depth is not a threshold]
+The breadth-first source search first found an effective circuit at shift depth
+21. This number is retained only as a search diagnostic. It is not an
+arithmetic constant, an operator threshold, or a new global radius boundary.
+\end{remark}
+
+\begin{remark}[Residual horizon front]
+Proposition~\ref{prop:p12-r25-horizon} crosses both horizon-wall types locally,
+via one chamber and its exact \(J\)-mirror. It does not close either entire
+horizon wall. The next task is to enlarge and glue these local chambers, not to
+re-prove the already equivalent mirror case as a separate theorem.
+\end{remark}

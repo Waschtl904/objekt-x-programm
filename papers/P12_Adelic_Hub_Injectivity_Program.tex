@@ -19,59 +19,34 @@
 
 \title[P12 --- Adelic Hub Injectivity]{P12 --- Adelic Hub Injectivity beyond the Two-Shift Boundary}
 \author{Objekt-X-Programm}
-\date{2026-08-23}
+\date{2026-08-24}
 
 \begin{document}
 
 \begin{abstract}
 P11 froze the finite-horizon Feshbach--Schur candidate geometry at
-\(T_0 \le 2a\).  P12 opens the next arithmetic-shift chamber
-\(2a < T_0 < \tfrac12\log 5\), where the third shift \(2a\) becomes
-active.  The present manuscript proves localized-hub kernel
-triviality throughout the mixed strip down to
+\(T_0\le 2a\). P12 opens the next arithmetic-shift chamber
+\[
+2a<T_0<\tfrac12\log5,
+\]
+where the third shift \(2a\) becomes active. The manuscript proves
+localized-hub kernel triviality throughout the mixed strip down to
 \[
 \rho=\frac12\log\frac{10}{9},
 \]
-and, in the restricted-tail regime \(\sigma\le R\), for every
-\(R>0\).  Below the global \(\rho\)-threshold exact local raw-operator
-certificates now include an enlarged \(42\times42\) overlap chamber that
-extends below the former auxiliary value \(\omega\), and a next-shell
-\(44\times44\) support-wall chamber.
+and, in the restricted-tail regime \(\sigma\le R\), for every \(R>0\).
 
-Concretely, P12 establishes:
-\begin{itemize}
-\item \textbf{A15.1b0} pure-tail injectivity for \(S<T\);
-\item \textbf{A15.1b1} horizon-open \(S=T\) endpoint injectivity;
-\item \textbf{A15.1b2a} mixed strip \(e\le R<T\) injectivity;
-\item \textbf{A15.1b2b} restricted-tail injectivity for
-  \(e/2\le R<e\), \(\sigma\le R\);
-\item \textbf{A15.1b2c} full mixed-strip injectivity for
-  \(d/2\le R<e\), including tail overlap;
-\item \textbf{A15.1b2d} full Sub-wedge~A injectivity for
-  \(e/2\le R<d/2\);
-\item \textbf{A15.1b2e} full mixed-strip descent to
-  \(R=\rho=\tfrac12\log(10/9)\);
-\item \textbf{A15.1b2f} restricted-tail injectivity
-  \(\sigma\le R\) for every \(R>0\);
-\item \textbf{A15.1b2g} a local exact overlap seed below \(\rho\),
-  certified by a \(42\times42\) raw matrix with rigorously nonzero
-  determinant;
-\item \textbf{A15.1b2h} an enlarged fixed-42 overlap chamber, including
-  points with \(R<\omega\), with the same exact \(M_{42}\);
-\item \textbf{A15.1b2i} a paired next-shell support chamber with an exact
-  \(44\times44\) raw matrix and rigorously nonzero determinant.
-\end{itemize}
-
-The global \(\rho\)-descent is a reassembly of independently audited
-high-radius, restricted-tail, overlap-interface, full-tail and Region-D
-closures.  The all-radius restricted-tail theorem removes \(\rho\) entirely
-from the sector \(\sigma\le R\).  The remaining global low-radius front is
-therefore the genuine overlap sector \(0<R<\rho\), \(\sigma>R\), with the
-A15.1b2g, b2h and b2i chambers closed locally.  No global descent below
-\(\rho\) is inferred from these local certificates.
+Below the global \(\rho\)-threshold P12 now contains four independently
+audited local overlap mechanisms: the exact Round-23 \(42\times42\) seed,
+the enlarged Round-24 fixed-42 chamber, the Round-24 \(44\times44\)
+support-shell chamber, and the Round-25 \(92\times92\) horizon-wall
+circuit. The Round-25 certificate crosses one horizon wall locally and,
+by the exact involution \(x\mapsto\delta-x\), its paired mirror wall as
+well. No global descent below \(\rho\) is inferred from these local
+certificates.
 
 None of P12 asserts polar-gauge, terminal-transport, Object-X or RH
-consequences.  The R14 firewall of P11 is preserved unchanged.
+consequences. The R14 firewall of P11 is preserved unchanged.
 \end{abstract}
 
 \maketitle
@@ -81,60 +56,52 @@ consequences.  The R14 firewall of P11 is preserved unchanged.
 We work throughout with the odd folded three-shift operator on
 \(L^2(R,S)\) with parameters \(0<R<S<T_0\) in the arithmetic chamber
 \[
-2a<T_0<c:=\tfrac12\log 5,
+2a<T_0<c:=\tfrac12\log5,
 \]
-where the three active shift centres are
+where
 \[
-\tau_{2,1}=a=\tfrac12\log 2,\qquad
-\tau_{3,1}=b=\tfrac12\log 3,\qquad
-\tau_{2,2}=2a=\log 2.
+a=\tfrac12\log2,\qquad
+b=\tfrac12\log3,\qquad
+T=2a=\log2.
 \]
 The prime-power weights are
 \[
-p:=c_{2,1}=\sqrt{\log 2}\;2^{-3/4},\quad
-r:=c_{3,1}=\sqrt{\log 3}\;3^{-3/4},\quad
-q:=c_{2,2}=\sqrt{\log 2}\;2^{-3/2}.
+p=\sqrt{\log2}\,2^{-3/4},\qquad
+r=\sqrt{\log3}\,3^{-3/4},\qquad
+q=\sqrt{\log2}\,2^{-3/2}.
 \]
-Auxiliary constants:
+Put
 \[
-d:=b-a,\quad e:=a-d=2a-b,\quad
-\delta:=d-e=2b-3a,\quad T:=2a.
+d=b-a,\qquad
+e=T-b,\qquad
+\delta=d-e,\qquad
+\varepsilon_{\max}=c-T=\frac12\log\frac54,
 \]
-Let
+and
 \[
-\varepsilon_{\max}:=c-T=\frac12\log\frac54,
-\qquad
-\rho:=\varepsilon_{\max}-\delta
+\rho=\varepsilon_{\max}-\delta
 =\frac12\log\frac{10}{9}.
 \]
-Numerically
+In the mixed strip \(T<S<T_0\), write
 \[
-d\approx0.2027,\quad e\approx0.1438,\quad
-\delta\approx0.0589,\quad d/2\approx0.1014,
-\quad e/2\approx0.0719,
-\quad \rho\approx0.05268.
-\]
-
-Let \(\varepsilon:=T_0-T>0\) and, in the mixed strip
-\(T<S<T_0\), let \(\sigma:=S-T\in(0,\varepsilon)\).  Then
-\[
+\sigma=S-T,\qquad
+\varepsilon=T_0-T,
+\qquad
 0<\sigma<\varepsilon<\varepsilon_{\max}.
 \]
 
-The folded operator is
+The canonical raw operator is
 \[
-L_{R,S,T_0}\;h
-=
-P_{L^2(-T_0,T_0)}\!\Bigl(\text{sum of shift sources}\Bigr),
+Lh(u)=
+p[h(u-a)-h(u+a)]r+r[h(u-b)-h(u+b)]
++q[h(u-T)-h(u+T)],
 \]
-with the two-fold sign convention and cutoff structure inherited from
-P11 (2.5) and A14.3a.
+with odd reflection and the support/horizon cutoffs inherited from P11.
 
 \section{Persistence up to the arithmetic boundary}\label{sec:p12-persistence}
 
 \begin{theorem}[A15.1b0: pure-tail injectivity]\label{thm:p12-b0}
-Let \(2a<T_0<c\).  For every \(0<R<S<T\) the folded three-shift
-operator satisfies
+Let \(2a<T_0<c\). For every \(0<R<S<T\),
 \[
 \ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}.
 \]
@@ -142,19 +109,15 @@ operator satisfies
 
 \begin{proof}
 Persistence of A14.3a in the pure-source region \(S<T=2a\).
-The additional \(2a\)-shift is inactive on the source E-family
-\(u=a+x\), \(0<x<a\), because the fold branch
-\(g(u+2a)=g(3a+x)\) has argument \(3a+x>3a>T_0\), hence
-\(P_{T_0}\) deletes it; and the forward branch
-\(g(u-2a)=g(x-a)\) lies in the odd-extended support region already
-treated by A14.3a via
-\(g(x-a)=-g(a-x)\).  The A14.3a proof structure applies verbatim.
+For the source family \(u=a+x\), \(0<x<a\), the additional \(2a\)-shift
+has one branch beyond the source horizon and the other branch is the same
+odd-reflected support term already treated in A14.3a. Hence the repaired
+A14.3a proof applies unchanged.
 \end{proof}
 
 \begin{remark}\label{rem:p12-b0-scope}
-Theorem~\ref{thm:p12-b0} keeps \(S<T\) strictly.  The exact boundary
-point \(S=T\) with \(T_0>T\) is a separate case
-(Theorem~\ref{thm:p12-b1}).
+Theorem~\ref{thm:p12-b0} keeps \(S<T\) strict. The exact boundary
+\(S=T\) is Theorem~\ref{thm:p12-b1}.
 \end{remark}
 
 \input{P12_sections/P12_A15_1b1_HorizonOpenEndpoint}
@@ -168,57 +131,42 @@ point \(S=T\) with \(T_0>T\) is a separate case
 \input{P12_sections/P12_A15_1b2d_CoreBothClosure}
 \input{P12_sections/P12_A15_1_LowRadiusPostRound23}
 \input{P12_sections/P12_A15_1_Round24_LocalExtensions}
+\input{P12_sections/P12_A15_1_Round25_HorizonCircuit}
 
-\section{Consolidated status and the remaining wedge}\label{sec:p12-status}
+\section{Consolidated status and residual overlap}\label{sec:p12-status}
 
-\begin{corollary}[A15.1 consolidated injectivity]
+\begin{corollary}[A15.1 consolidated global injectivity]
 \label{cor:p12-consolidated}
-Let \(2a<T_0<c\) and \(0<R<S<T_0\).  Then
+Let \(2a<T_0<c\) and \(0<R<S<T_0\). Then
 \[
 \ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}
 \]
-in the following established global strata:
-\begin{itemize}
-\item[(i)] \(S<T\)
-  (Theorem~\ref{thm:p12-b0});
-\item[(ii)] \(S=T\)
-  (Theorem~\ref{thm:p12-b1});
-\item[(iii)] \(T<S<T_0\), \(\rho\le R<T\)
-  (Theorem~\ref{thm:p12-rho-descent});
-\item[(iv)] \(T<S<T_0\), \(0<R<\rho\), \(\sigma\le R\)
-  (Theorem~\ref{thm:p12-restricted-tail-all-r}).
-\end{itemize}
-Consequently,
+in the established global strata
 \[
-\boxed{
-T<S<T_0,\qquad \rho\le R<T
-\quad\Longrightarrow\quad
-\ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}.
-}
+S<T,\qquad S=T,
 \]
-Moreover, in the restricted-tail sector
+and, in the mixed strip \(T<S<T_0\),
 \[
-\boxed{
-0<R<T,\qquad \sigma\le R
-\quad\Longrightarrow\quad
-\ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}.
-}
+\rho\le R<T
 \]
-Below \(\rho\), Propositions~\ref{prop:p12-r23-c23},
-\ref{prop:p12-r24-c42} and \ref{prop:p12-r24-c44} give exact local kills in
-explicit overlap chambers.
-
-The paired-source identities P1 and P2
-(Theorems~\ref{thm:p12-P1}, \ref{thm:p12-P2}) remain valid
-unconditionally for every \(0<x<\varepsilon\).
+as well as the all-radius restricted-tail sector
+\[
+0<R<T,\qquad \sigma\le R.
+\]
 \end{corollary}
 
-\begin{remark}[Audit status after Round 24]
-The full \(\rho\)-descent is `\(\checkmark[M]\)`.  The all-radius
-restricted-tail theorem is `\(\checkmark[M]\)`.  The Round-23 C23 seed,
-Round-24 enlarged C42 chamber and Round-24 C44 support-shell theorem are all
-`\(\checkmark[M]_{\rm part}\)`: they are local theorems only and do not
-imply a global descent below \(\rho\).
+\begin{remark}[Audited local low-radius certificates]
+Below \(\rho\), the following are booked as local theorems
+\(\checkmark[M]_{\rm part}\):
+\begin{itemize}
+\item A15.1b2g: Round-23 exact \(42\times42\) overlap seed;
+\item A15.1b2h: Round-24 enlarged fixed-42 chamber;
+\item A15.1b2i: Round-24 exact \(44\times44\) support-shell chamber;
+\item A15.1b2j: Round-25 exact \(92\times92\) horizon-wall circuit,
+      together with its exact \(J\)-mirror.
+\end{itemize}
+The global \(\rho\)-descent and the all-radius restricted-tail theorem
+remain \(\checkmark[M]\).
 \end{remark}
 
 \begin{openproblem}[Residual overlap below \(\rho\)]
@@ -234,26 +182,21 @@ decide whether
 \[
 \ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}.
 \]
-The C23, enlarged C42 and C44 support-shell chambers are already closed
-locally.  The paired horizon walls
-\[
-\varepsilon+x=\kappa,
-\qquad
-\varepsilon=x+\eta
-\]
-remain an explicit hard local front.  No full theorem of the form
-\(R\ge\omega\), nor any replacement global low-radius threshold, is booked.
+The C23, enlarged C42, C44 support-shell and paired local Round-25
+horizon-wall chambers are already closed. The remaining task is to enlarge
+and glue these local certificates across the residual overlap geometry,
+including the portions of the two horizon walls outside the Round-25 boxes.
+
+No theorem of the form \(R\ge\omega\), no replacement global low-radius
+threshold, and no significance of the search depth \(21\) is booked.
 \end{openproblem}
 
 \section{Firewall}\label{sec:p12-firewall}
 
 None of \S\ref{sec:p12-persistence}--\ref{sec:p12-status} makes a
-polar-gauge, terminal-transport, Object-X or RH statement.  The R14
-firewall from P11 remains unchanged: even a full closure of
-Open Problem~\ref{open:p12-below-rho-overlap} would decide only the
-localized-hub kernel triviality in the three-shift chamber; by R36-A1
-(P11) this is equivalent to dense range of the annular hub projection
-\(P_{\mathcal A}H_{T_0}\), a modulus-layer statement.  Neither
+polar-gauge, terminal-transport, Object-X or RH statement. The R14 firewall
+from P11 remains unchanged: even a complete localized-hub injectivity theorem
+in the three-shift chamber would remain a modulus-layer result. Neither
 polar-gauge convergence nor strong terminal transport nor a canonical
 mediator for Object~X follows.
 
