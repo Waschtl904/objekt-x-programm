@@ -1,0 +1,292 @@
+\section{Round-27 residual atlas and the one-sided \texorpdfstring{$43\times43$}{43x43} shell}
+\label{sec:p12-round27-residual-atlas}
+
+Retain
+\[
+\eta=e-2\delta,
+\qquad
+\chi=3\delta-e,
+\qquad
+\delta=\eta+\chi,
+\]
+\[
+\kappa=e-\delta=2\eta+\chi,
+\qquad
+E:=\varepsilon_{\max},
+\qquad
+\rho=E-\delta,
+\]
+and set
+\[
+r_*:=\frac{\chi-\eta}{2},
+\qquad
+s_*:=\frac{3\eta+\chi}{2},
+\qquad
+ t_*:=\frac{3\delta}{2}.
+\]
+
+\subsection{The exact physical shadow atlas}
+
+Let
+\[
+\mathcal A
+:=
+\{(R,\sigma,\varepsilon):
+0<R<\rho,\ R<\sigma<\varepsilon<E\}.
+\]
+For a four-parameter fibre chamber \(C\), write
+\[
+\pi(C)
+:=
+\{(R,\sigma,\varepsilon):
+\exists x\ (R,x,\sigma,\varepsilon)\in C\}.
+\]
+
+\begin{theorem}[A15.1b2l-A: exact residual-shadow atlas]
+\label{thm:p12-round27-atlas}
+The projections of the promoted C42, C44 and Round-26 chambers are given
+exactly as follows.
+
+First,
+\[
+P_{42}:=\pi(C_{42})
+\]
+is defined by
+\[
+\chi-\eta<2R<\delta,
+\]
+\[
+R<\sigma,
+\qquad
+R+\sigma>\chi,
+\qquad
+2\sigma>\delta,
+\]
+\[
+\sigma+\varepsilon>\kappa,
+\]
+\[
+2\sigma<3\eta+\chi,
+\qquad
+2\varepsilon>3\eta+\chi,
+\qquad
+\varepsilon<E.
+\]
+Second,
+\[
+P_{44}:=\pi(C_{44})
+\]
+is defined by
+\[
+\chi-\eta<2R<\delta,
+\]
+\[
+3\eta+\chi<2\sigma<3\delta,
+\]
+\[
+2\varepsilon>3\delta,
+\qquad
+\varepsilon<E.
+\]
+Finally,
+\[
+\pi(C_{26}^{-})=\pi(C_{26}^{+})=:P_{26},
+\]
+and the common projection is defined by
+\[
+\chi-\eta<2R<2\eta,
+\]
+\[
+\chi<\sigma<2\eta,
+\qquad
+\varepsilon>2\eta,
+\]
+\[
+R+\sigma>2\chi-\eta,
+\qquad
+\sigma-R<3\eta-\chi,
+\]
+\[
+R+\varepsilon>\delta,
+\qquad
+\varepsilon<E.
+\]
+
+If
+\[
+\mathcal G_{27}
+:=
+\mathcal A\setminus
+\left(
+\overline{P_{42}}^{\mathcal A}
+\cup
+\overline{P_{44}}^{\mathcal A}
+\cup
+\overline{P_{26}}^{\mathcal A}
+\right),
+\]
+then \(\mathcal G_{27}\) has exactly one open path-connected component.
+\end{theorem}
+
+\begin{proof}
+Single-variable Fourier--Motzkin elimination of \(x\) gives the displayed
+systems. The retained exact verifier checks the compact descriptions against
+all generated inequalities on the rationally certified polyhedral closures;
+in particular the C42 system includes the indispensable wall
+\(2\sigma>\delta\). It also gives identical elimination systems for
+\(C_{26}^{-}\) and \(C_{26}^{+}\).
+
+For the component statement, every relative chamber closure requires
+\(R\ge r_*\). For fixed \((R,\sigma)\), chamber membership is upward-monotone
+in \(\varepsilon\), apart from the common ceiling \(E\). Hence a point outside
+the three relative closures can first be moved downward in \(\varepsilon\)
+through a safe staircase below the relevant levels \(2\eta,s_*,t_*\), and
+then to \(R<r_*\). In the latter region all three closures are absent, while
+\[
+0<R<r_*,\qquad R<\sigma<\varepsilon<E
+\]
+is convex. This supplies a common path anchor. Points on a staircase
+hyperplane are handled by an arbitrarily small perturbation inside the open
+set. The independent review reproduced both the elimination and the path
+certificate.
+\end{proof}
+
+\begin{remark}[Projection firewall]
+Theorem~\ref{thm:p12-round27-atlas} is a theorem about the physical
+\emph{shadow} of local fibre certificates. Membership in \(P_{42}\),
+\(P_{44}\) or \(P_{26}\) asserts existence of at least one \(x\) at which the
+corresponding local certificate applies. It does not assert full fibre
+coverage and therefore does not imply kernel triviality at that physical
+parameter point.
+\end{remark}
+
+\subsection{The one-sided 43-row support shell}
+
+Define the left chamber \(W_{43}^{<}\) by
+\[
+x>\eta,
+\]
+\[
+R<x,
+\qquad
+R+x>\chi,
+\]
+\[
+x+\eta<\sigma,
+\qquad
+\sigma+x<\kappa,
+\]
+\[
+x+\delta<\varepsilon<E.
+\]
+These inequalities imply
+\[
+0<R<x<\frac\delta2<\sigma<\varepsilon<E,
+\qquad
+R<\rho.
+\]
+
+\begin{theorem}[A15.1b2l-B: exact \texorpdfstring{$43\times43$}{43x43} shell]
+\label{thm:p12-round27-m43}
+On \(W_{43}^{<}\), the 42 old C42 sources generate exactly 43 visibility
+variables, the old 42 together with
+\[
+U_+=(1,5,0).
+\]
+Adding the horizon-legal source
+\[
+V_+=(1,4,3)
+\]
+produces a square raw system
+\[
+M_{43}^{<}\in\operatorname{Mat}_{43\times43}.
+\]
+Its constant-pattern chamber is controlled by the six genuine raw events
+\[
+x=\eta,
+\qquad
+x=R,
+\qquad
+R+x=\chi,
+\]
+\[
+\sigma=x+\eta,
+\qquad
+\sigma+x=\kappa,
+\qquad
+\varepsilon=x+\delta,
+\]
+together with the ambient arithmetic ceiling \(\varepsilon=E\).
+
+Under
+\[
+J(s,m,n)=(-s,m,n+s),
+\qquad
+x\mapsto\delta-x,
+\]
+the chamber maps to its right-hand mirror \(W_{43}^{>}\), with
+\[
+V_-=(-1,4,4),
+\qquad
+U_-=(-1,5,1),
+\]
+and in natural \(J\)-ordering
+\[
+M_{43}^{>}=M_{43}^{<}.
+\]
+Both matrices are invertible.
+\end{theorem}
+
+\begin{proof}
+The canonical raw-row construction yields exactly 43 columns and 43 selected
+rows. Across the closed seven-facet chamber the retained verifier checks all
+758 source/sign/support/horizon inequalities at all 12 vertices using
+directed rational enclosures for the logarithmic constants; no hidden eighth
+raw facet occurs.
+
+For nondegeneracy put
+\[
+\beta:=\frac qp=2^{-3/4},
+\qquad
+v:=\left(\frac rp\right)^2
+=\frac{\log3}{\log2}\sqrt{\frac8{27}}.
+\]
+Direct exact determinant reduction gives
+\[
+\det M_{43}
+=p^{43}\beta v^{7/2}G_{43}(\beta,v),
+\]
+where the retained polynomial factor satisfies the certified rational
+interval
+\[
+-0.048057943920223084
+< G_{43}(\beta,v)
+< -0.04805794392022283
+<0.
+\]
+Thus \(\det M_{43}^{<}\ne0\). The exact \(J\)-matrix identity gives
+\(\det M_{43}^{>}\ne0\) as well. The independent GREEN review reproduced the
+43-by-43 construction, all 758 raw conditions on the 12 vertices, the mirror
+identity, and the determinant interval.
+\end{proof}
+
+\begin{corollary}[Round-27 local fibre consequence]
+\label{cor:p12-round27-local}
+On either \(W_{43}^{<}\) or \(W_{43}^{>}\), the corresponding 43-row raw
+system forces all selected visibility variables to vanish; in particular the
+local target value \(h(x)\) vanishes.
+\end{corollary}
+
+\begin{remark}[Round-27 status]
+Theorem~\ref{thm:p12-round27-atlas} and
+Theorem~\ref{thm:p12-round27-m43} are booked as
+\[
+\boxed{\mathrm{R27\!-\!A}:\checkmark[M]_{\rm part},
+\qquad
+\mathrm{R27\!-\!B}:\checkmark[M]_{\rm part}.}
+\]
+They do not close the global residual overlap below \(\rho\). The remaining
+open geometry is one topological shadow component but contains several
+distinct raw-operator pattern fronts. P11 remains FROZEN and the R14 firewall
+is unchanged.
+\end{remark}
