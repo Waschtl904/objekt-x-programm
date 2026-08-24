@@ -1,0 +1,167 @@
+\section{Round-28 central next-shell double-horizon box}
+\label{sec:p12-round28-double-horizon}
+
+Retain
+\[
+\eta=e-2\delta,\qquad
+\chi=3\delta-e,\qquad
+\kappa=e-\delta,
+\qquad
+E=\varepsilon_{\max}.
+\]
+
+Define the open \(J\)-symmetric box \(B_{28}\) by
+\[
+\frac{19}{2000}<R<\frac{21}{2000},
+\qquad
+\left|x-\frac{\delta}{2}\right|<\frac1{5000},
+\]
+\[
+\frac{119}{2000}<\sigma<\frac{121}{2000},
+\qquad
+\frac{139}{2000}<\varepsilon<\frac{141}{2000}.
+\]
+
+\begin{theorem}[A15.1b2m: central next-shell double-horizon certificate]
+\label{thm:p12-round28-m68}
+For every parameter point in \(B_{28}\), every kernel vector of the P12
+three-shift raw operator satisfies
+\[
+\boxed{h(x)=h(\delta-x)=0}.
+\]
+\end{theorem}
+
+\begin{proof}
+Directed rational bounds for \(\log2,\log3,\log5\) give, throughout
+\(B_{28}\),
+\[
+0<R<\rho,\qquad R<x,\qquad R<\sigma<\varepsilon<E.
+\]
+Moreover
+\[
+\sigma+x>\kappa,\qquad \sigma-x>\eta,
+\]
+so both first support-shell variables
+\[
+U_-=(-1,5,1),\qquad U_+=(1,5,0)
+\]
+are live.  At the same time
+\[
+\varepsilon+x<2\delta,\qquad
+\varepsilon-x<\delta,
+\]
+so the two natural Round-24 next-shell sources
+\[
+V_-=(-1,4,4),\qquad V_+=(1,4,3)
+\]
+are both above the source horizon.
+
+Consequently the old 42-source block has 42 legal rows and 44 visible
+variables.  Add the following 26 sources:
+\[
+\begin{aligned}
+&(-1,-1,3),(-1,0,3),(-1,0,4),(-1,1,-1),(-1,1,4),\\
+&(-1,2,-2),(-1,2,-1),(-1,2,5),(-1,3,-1),(-1,3,5),\\
+&(-1,3,6),(-1,4,-1),(-1,5,0),\\
+&(1,-1,2),(1,0,2),(1,0,3),(1,1,-2),(1,1,3),\\
+&(1,2,-3),(1,2,-2),(1,2,4),(1,3,-2),(1,3,4),\\
+&(1,3,5),(1,4,-2),(1,5,-1).
+\end{aligned}
+\]
+Together with the 42 old sources these form 68 distinct sources, closed
+under
+\[
+J(s,m,n)=(-s,m,n+s).
+\]
+Their raw rows generate exactly 68 visible variables, again \(J\)-closed
+and containing the coordinates of \(h(x)\) and \(h(\delta-x)\).  Hence the
+coefficient matrix is a square matrix \(M_{68}\).
+
+The complete source/sign/support/horizon inventory contains 1204 strict
+affine inequalities.  Directed rational interval evaluation over the whole
+box proves all 1204 inequalities strictly, with minimum certified raw margin
+greater than
+\[
+0.00157927617.
+\]
+Thus the symbolic matrix is constant on all of \(B_{28}\).
+
+In natural \(J\)-ordering,
+\[
+M_{68}
+=
+\begin{pmatrix}
+A_{34}&B_{34}\\
+B_{34}&A_{34}
+\end{pmatrix},
+\]
+and therefore
+\[
+\det M_{68}
+=
+\det(A_{34}+B_{34})\det(A_{34}-B_{34}).
+\]
+Set
+\[
+\beta=\frac qp=2^{-3/4},
+\qquad
+v=\left(\frac rp\right)^2
+=\frac{\log3}{\log2}\sqrt{\frac8{27}}.
+\]
+The two parity determinants factor exactly as
+\[
+\det(A_{34}+B_{34})
+=
+-p^{12}qr^8F_+(p,q,r),
+\]
+\[
+\det(A_{34}-B_{34})
+=
+p^{12}qr^8F_-(p,q,r),
+\]
+where \(F_\pm\) are homogeneous of degree 13 and
+\[
+F_-(p,q,r)=F_+(p,-q,r).
+\]
+Writing
+\[
+F_+(p,q,r)=p^{13}G_+(\beta,v),
+\qquad
+F_-(p,q,r)=p^{13}G_-(\beta,v),
+\]
+the independently reproduced rigorous enclosures are
+\[
+0.3822065426030501
+<
+G_+(\beta,v)
+<
+0.38220654260305015
+\]
+and
+\[
+0.20288790549604774
+<
+G_-(\beta,v)
+<
+0.20288790549604777.
+\]
+Hence
+\[
+\det M_{68}
+=
+-p^{68}\beta^2v^8G_+(\beta,v)G_-(\beta,v)
+\ne0.
+\]
+The 68 visible variables therefore vanish, in particular
+\(h(x)=h(\delta-x)=0\).
+\end{proof}
+
+\begin{remark}[Round-28 scope]
+\label{rem:p12-round28-scope}
+This theorem closes only the exact box \(B_{28}\).  It does not close the
+whole next-shell horizon gap, the two cells in which exactly one of
+\(V_-,V_+\) is horizon-legal, the deeper horizon remainder, or the
+outer-core region.  No new global radius threshold follows.  The size 68 is
+the size of this retained certificate; no minimality or canonical meaning is
+claimed.
+\end{remark}
