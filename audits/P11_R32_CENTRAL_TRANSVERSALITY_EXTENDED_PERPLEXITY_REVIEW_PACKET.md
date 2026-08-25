@@ -1,33 +1,40 @@
-# P11/R32 — unabhängiges Review-Paket: erweiterte zentrale Transversalität
+# P11/R32 — unabhängiges Review-Paket: horizon-adaptive zentrale Transversalität
 
 **Status:** Review-Anforderung; keine Promotion.  
-**Kandidaten:**
-- `4245be2393c0ffefd65d4e6e831276a1e4671207` — `audits/P11_R32_CENTRAL_TRANSVERSALITY_EXTENDED_AUDIT.md`
-- `a123c1a92b74955ff9714ac5ac1ccc0de189e7da` — `consolidation/p11_r32_central_transversality_extended_verify.py`
+**Aktuelle Kandidaten:**
+- `a2861928e172a8e85363c77af8d7fe5752b1ae28` — `audits/P11_R32_CENTRAL_TRANSVERSALITY_EXTENDED_AUDIT.md`
+- `05ee0432ab3e37db0bfd1a8e023f0e73c3702fe3` — `consolidation/p11_r32_central_transversality_extended_verify.py`
 
 **P11 FROZEN; P12 unverändert; R14 unverändert.**
 
 Bitte den Verifier nur als Cross-check verwenden. Rekonstruieren Sie die Support-/Orbitargumente direkt aus dem Audit und P11s Hub/Full-Rest-Definitionen.
 
-## A. Restschwelle E
+## A. Adaptive Restschwelle
 
+Setze
+\[
+\varepsilon=T_0-2a,\qquad d=b-a.
+\]
 Prüfen Sie, dass für
 \[
-E=c-2a=\tfrac12\log(5/4),\qquad E\le R<S<a,
+\boxed{R\ge\max\{\varepsilon,d/2\},\qquad R<S<a}
 \]
-und `y in C_R^+` weiterhin exakt
+und `y in C_R^+` exakt
 \[
 Ay=(\log2)2^{-3/2}K_{\log2}^{tr,*}M_{20}K_{\log2}^{tr}y
 \]
-gilt. Insbesondere prüfen:
+gilt.
 
-- `(2,0), k=2,3` verschwinden bereits aus `R>=E` und `T0<c`;
-- `(2,1)` verschwindet;
-- `(3,0)` verschwindet;
-- keine frühere Annahme `R>=a/2` wird heimlich benötigt.
+Insbesondere bitte direkt prüfen:
+
+- `(2,0),k=2`: auf `Omega_(2,0)` ist der minimale Abstand `a-epsilon`, und `a-R<=a-epsilon` aus `R>=epsilon`;
+- `(2,0),k=3`: noch weiter außen;
+- `(2,1)`: verschwindet vollständig;
+- `(3,0)`: minimaler Abstand `2d-epsilon`, und `2d>a` aus `9>8`;
+- keine Annahme `R>=E` oder `R>=a/2` wird für den Restkollaps benötigt.
 
 ```text
-CTX-A REST THRESHOLD E: GREEN / PARTIAL / FAIL
+CTX-A ADAPTIVE REST THRESHOLD: GREEN / PARTIAL / FAIL
 ```
 
 ## B. Primitive gap
@@ -37,7 +44,7 @@ Prüfen Sie exakt
 G=p^2-q^2(1+\lambda)^2>0,
 \qquad \lambda=(\log2)2^{-3/2}.
 \]
-Der Audit gibt eine rationale Beweiskette über
+Der Audit verwendet
 \[
 \log2<25/36,
 \quad 2^{-3/2}<9/25,
@@ -48,40 +55,67 @@ und damit
 \[
 2^{-3/2}(1+\lambda)^2<75/128<1.
 \]
+Bitte insbesondere die `atanh(z=1/3)`-Tailabschätzung für `log 2 < 25/36` rekonstruieren.
 
 ```text
 CTX-B PRIMITIVE GAP: GREEN / PARTIAL / FAIL
 ```
 
-## C. b-freie Reflexionsorbits
+## C. Geometrische Grundschwelle d/2
 
-Prüfen Sie für Annuluspunkte, bei denen `x+d>S` und `|x-d|<R`, die exakten zwei Punktgleichungen. Wenn `t=a-x` außerhalb des Annulus liegt, muss die 2-Zeilen-Elimination `y(t)=w(x)=0` liefern. Wenn `t` im Annulus liegt, prüfen Sie den 4x4-Block
+Prüfen Sie, dass `R>=d/2` tatsächlich alle benötigten reinen Annulusgeometrien liefert:
+
+- `d<2R`;
+- `e<2R` mit `e=a-d` und `d>e`;
+- `S-R<2d`, sodass die Low-/High-d-Schalen nicht überlappen;
+- im Fall `S<=R+d` gilt für jeden `x in (R,S)` sowohl `x+d>S` als auch `|x-d|<R`.
+
+```text
+CTX-C GEOMETRY THRESHOLD d/2: GREEN / PARTIAL / FAIL
+```
+
+## D. b-freie q-Reflexionsorbits
+
+Prüfen Sie für b-freie Punkte die zwei Punktgleichungen. Falls `t=a-x` außerhalb des Annulus liegt, muss `y(t)=w(x)=0` folgen. Falls `t in (R,S)`, prüfen Sie den 4x4-Block
 \[
 \begin{pmatrix}
 C&0&-p&0\\
 1&0&0&-q\\
 0&C&0&-p\\
 0&1&-q&0
-\end{pmatrix}
+\end{pmatrix},
+\qquad C=1+\lambda,
 \]
-mit Determinante `q^2 C^2-p^2=-G`.
+mit
+\[
+\det=q^2C^2-p^2=-G\ne0.
+\]
+Da Annuluspunkte strikt größer als `R>=epsilon` sind, müssen ihre epsilon-Indikatoren null sein.
 
 ```text
-CTX-C REFLECTION ORBITS: GREEN / PARTIAL / FAIL
+CTX-D REFLECTION ORBITS: GREEN / PARTIAL / FAIL
 ```
 
-## D. b-gekoppelter Restkeil
+## E. b-gekoppelter Keil S>R+d
 
-Im Fall `S>R+d` prüfen Sie die Partition
+Prüfen Sie die Partition
 \[
 L=(R,S-d),\quad H=(R+d,S),\quad M=(S-d,R+d).
 \]
-Prüfen Sie insbesondere:
+Für `x in L`, setze
+\[
+X=x+d,\quad t=a-x,\quad h=e-x.
+\]
+Bitte adversarial bestätigen:
 
-- `L` und `H` sind disjunkt;
-- `x -> x+d` ist eine Bijektion `L -> H`;
-- für `x in L`, mit `X=x+d`, `t=a-x`, `h=e-x`, gilt `t in M subset (R,S)` und `0<h<R`;
-- die sechs Punktgleichungen sind nach zulässigen Zeilenoperationen genau durch
+- `x -> X` ist eine Bijektion `L -> H`;
+- `t in M subset (R,S)`;
+- `0<h<R`;
+- `t` ist b-frei;
+- am High-Punkt `X` bleibt genau der rückwärtige b-Ast `w(x)`;
+- nur `h` darf einen epsilon-Indikator tragen.
+
+Prüfen Sie anschließend die sechs Punktgleichungen und die nach Zeilenoperationen erhaltene Matrix
 \[
 M_6=
 \begin{pmatrix}
@@ -93,50 +127,63 @@ C&0&0&-p&0&-r\\
 0&0&D_h&r&0&0
 \end{pmatrix}
 \]
-repräsentiert;
-- exakt
+mit
 \[
-\det M_6=-p\big(C_h\lambda r^2+D_h[p^2-q^2(1+\lambda)^2]\big)<0.
+\boxed{
+\det M_6=-p\Big(C_h\lambda r^2+D_h[p^2-q^2(1+\lambda)^2]\Big)<0.
+}
 \]
 
 ```text
-CTX-D SIX-VARIABLE b-ORBIT: GREEN / PARTIAL / FAIL
+CTX-E SIX-VARIABLE b-ORBIT: GREEN / PARTIAL / FAIL
 ```
 
-## E. Mittelschale vollständig erschöpft?
+## F. Mittelschalen-Orbit erschöpft?
 
-Prüfen Sie adversarial den letzten Orbitschritt:
+Prüfen Sie den letzten Fall vollständig:
 
 - für `z in M` sind beide b-Äste nicht im Annulus;
-- `a-z` kann nicht in `H` liegen;
-- falls `a-z in L`, ist `z` bereits Teil eines 6er-Orbits;
-- falls `a-z in M`, greift der invertible 4x4-Reflexionsblock;
-- falls `a-z` außerhalb des Annulus liegt, greift die 2-Zeilen-Elimination.
+- `a-z` kann nicht in `H` liegen, weil `a-H subset (0,R)`;
+- `a-z in L` bedeutet: bereits 6er-Orbit;
+- `a-z in M`: invertibler 4x4-Reflexionsblock;
+- `a-z` außerhalb des Annulus: zweizeilige Elimination.
 
-Damit darf kein offenes Restintervall im Annulus übrig bleiben.
+Es darf kein positives Restmaß im Annulus unklassifiziert bleiben.
 
 ```text
-CTX-E ORBIT EXHAUSTION: GREEN / PARTIAL / FAIL
+CTX-F ORBIT EXHAUSTION: GREEN / PARTIAL / FAIL
 ```
 
-## F. Tiefer Zentralbereich und Gesamtsatz
+## G. Tiefer Zentralbereich und Gesamtsatz
 
-Prüfen Sie `HE_A w=0` auf `0<t<a-S` und die positive primitive Koeffizientengleichung dort. Danach soll ganz `C_R^+` und ganz `w` verschwinden.
+Prüfen Sie `HE_Aw=0` für `0<t<a-S` und die positive Koeffizientengleichung dort. Danach soll ganz `C_R^+` und ganz `w` verschwinden.
 
 Gewünschte exakte Aussage:
 \[
-\ker K_{I,A}\cap(C_R^+\oplus H_A^-)=\{0\}
+\boxed{
+\ker\mathcal K_{I,A}\cap(\mathcal C_R^+\oplus\mathscr H_A^-)=\{0\}
+}
 \]
-für **alle**
+für
 \[
-E\le R<S<a.
+\boxed{R\ge\max\{\varepsilon,d/2\},\qquad R<S<a.}
+\]
+
+Prüfen Sie zusätzlich das horizont-uniforme Korollar:
+\[
+E=c-2a>d/2,
+\qquad \varepsilon<E
+\]
+und daher
+\[
+E\le R<S<a\Longrightarrow\text{CTX-1}.
 \]
 
 ```text
-CTX-F EXTENDED CENTRAL TRANSVERSALITY: GREEN / PARTIAL / FAIL
+CTX-G ADAPTIVE CENTRAL TRANSVERSALITY: GREEN / PARTIAL / FAIL
 ```
 
-## G. Firewall
+## H. Firewall
 
 Nicht erlaubt:
 
@@ -152,18 +199,19 @@ CTX SCOPE FIREWALL: GREEN / PARTIAL / FAIL
 ## Gesamtverdict
 
 ```text
-CTX-A REST THRESHOLD E:              GREEN / PARTIAL / FAIL
+CTX-A ADAPTIVE REST THRESHOLD:       GREEN / PARTIAL / FAIL
 CTX-B PRIMITIVE GAP:                 GREEN / PARTIAL / FAIL
-CTX-C REFLECTION ORBITS:             GREEN / PARTIAL / FAIL
-CTX-D SIX-VARIABLE b-ORBIT:          GREEN / PARTIAL / FAIL
-CTX-E ORBIT EXHAUSTION:              GREEN / PARTIAL / FAIL
-CTX-F EXTENDED CENTRAL TRANSVERSALITY: GREEN / PARTIAL / FAIL
+CTX-C GEOMETRY THRESHOLD d/2:        GREEN / PARTIAL / FAIL
+CTX-D REFLECTION ORBITS:             GREEN / PARTIAL / FAIL
+CTX-E SIX-VARIABLE b-ORBIT:          GREEN / PARTIAL / FAIL
+CTX-F ORBIT EXHAUSTION:              GREEN / PARTIAL / FAIL
+CTX-G ADAPTIVE CENTRAL TRANSVERSALITY: GREEN / PARTIAL / FAIL
 CTX SCOPE FIREWALL:                  GREEN / PARTIAL / FAIL
 CTX OVERALL:                         GREEN / PARTIAL / FAIL
 ```
 
 Bei vollständigem GREEN wäre zulässig:
 
-- **CTX-1:** `✓[M]_part` — zentraler Unsichtbarkeitssektor transversal für `E<=R<S<a`.
+- **CTX-1:** `✓[M]_part` — zentraler Unsichtbarkeitssektor transversal im horizon-adaptiven Bereich `R>=max{epsilon,d/2}`, `R<S<a`.
 
 Keine Promotion ohne explizite Freigabe.
