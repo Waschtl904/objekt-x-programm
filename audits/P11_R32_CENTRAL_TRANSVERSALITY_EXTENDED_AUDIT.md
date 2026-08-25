@@ -1,10 +1,10 @@
-# P11/R32 — erweiterte zentrale Schur-Transversalität für E <= R < S < a
+# P11/R32 — horizon-adaptive zentrale Schur-Transversalität
 
 **Status:** Kandidat; keine Promotion.  
 **P11:** FROZEN. **P12:** unverändert. **R14:** unverändert.  
-**Basis:** CT-1 / SE-1 / SE-2 Kandidatenkette; dieser Audit ist stärker als CT-1 und soll unabhängig geprüft werden.
+**Basis:** CT-1 / SE-1 / SE-2 Kandidatenkette. Dieser Audit ersetzt die gröbere uniforme CTX-Fassung vor deren Review.
 
-## 1. Setup
+## 1. Setup und adaptive Schwelle
 
 Im Drei-Shift-Fenster
 \[
@@ -16,11 +16,14 @@ Im Drei-Shift-Fenster
 setze
 \[
 d:=b-a,\qquad e:=a-d=2a-b,
-\qquad E:=c-2a=\tfrac12\log\frac54.
+\qquad \varepsilon:=T_0-T=T_0-2a.
 \]
 Fixiere
 \[
-\boxed{E\le R<S<a.}
+\boxed{
+R\ge \max\left\{\varepsilon,\frac d2\right\},
+\qquad R<S<a.
+}
 \tag{CTX.1}
 \]
 Sei
@@ -38,9 +41,9 @@ mit
 \[
 I=(-R,R),\qquad \mathcal A=(-S,-R)\cup(R,S).
 \]
-CI-1 gibt bereits `E_I^* H y=0` für jedes `y in C_R^+`. Es bleibt also die erste Blockgleichung.
+CI-1 gibt `E_I^*Hy=0` für jedes `y in C_R^+`. Es bleibt die erste Blockgleichung.
 
-## 2. Exakte Restschwelle ist E, nicht a/2
+## 2. Restkollaps braucht nur R >= epsilon
 
 Schreibe
 \[
@@ -48,33 +51,45 @@ K:=K_{\log2}^{\rm tr},\qquad
 \lambda:=(\log2)2^{-3/2}>0,
 \qquad M_{20}:=1_{\Omega_{2,0,T_0}}.
 \]
-Dann gilt unter (CTX.1) weiterhin exakt
+Dann gilt unter (CTX.1) exakt
 \[
 \boxed{Ay=\lambda K^*M_{20}Ky\qquad(y\in\mathcal C_R^+).}
 \tag{CTX.2}
 \]
 
-Grund: Die zentrale Halbbreite ist `a-R`. Für den `(2,0),k=2`-Term ist auf `Omega_(2,0)` der kleinste Abstand eines `2a`-Shiftarguments vom Ursprung strikt größer als
+Die zentrale Halbbreite ist
 \[
-3a-c.
+D_R:=a-R\le a-\varepsilon.
 \]
-Wegen `R>=E=c-2a` gilt
-\[
-a-R\le a-E=3a-c,
-\]
-und wegen `T0<c` ist der tatsächliche Abstand strikt größer. Daher verschwinden die `k=2,3`-Anteile des `(2,0)`-Blocks. Der `(2,1)`-Block verschwindet noch deutlicher. Für `(3,0)` genügt
-\[
-a-R<2b-c,
-\]
-was bereits aus `R>=E` folgt, denn
-\[
-E-(a-2b+c)=\frac14\log\frac{25}{24}>0.
-\]
-Somit bleibt wieder nur der primitive `(2,0),k=1`-Term.
+Für die drei Full-Rest-Blöcke aus SE-2:
 
-Insbesondere gelten die CT-1-Wirkungsformeln nun für ganz (CTX.1): Für `0<t<a-R`,
+1. Auf `Omega_(2,0)` ist die Maskenhalbbreite `T0-a=a+epsilon`. Beim `k=2`-Halbshift `2a` ist der kleinste Abstand zum Ursprung
+   \[
+   2a-(a+\varepsilon)=a-\varepsilon\ge D_R.
+   \]
+   Daher verschwindet der `k=2`-Term a.e. auf `C_R^+`; `k=3` liegt noch weiter außen.
+
+2. Auf `Omega_(2,1)` ist die Maskenhalbbreite `epsilon`. Beim einzigen `k=2`-Halbshift ist der Abstand mindestens `2a-epsilon>D_R`, also verschwindet der ganze Block.
+
+3. Auf `Omega_(3,0)` ist die Maskenhalbbreite
+   \[
+   T_0-b=e+\varepsilon.
+   \]
+   Beim `b`-Halbshift ist der kleinste Abstand
+   \[
+   b-(e+\varepsilon)=2d-\varepsilon.
+   \]
+   Wegen `d>a/2` (äquivalent `9>8`) gilt
+   \[
+   2d-\varepsilon>a-\varepsilon\ge D_R,
+   \]
+   also verschwindet auch `(3,0)`.
+
+Somit bleibt nur `(2,0),k=1`.
+
+Insbesondere gelten für `0<t<D_R`
 \[
-\boxed{(Ay)(t)=\lambda(1+1_{t<\varepsilon})y(t),\qquad \varepsilon:=T_0-T<E,}
+\boxed{(Ay)(t)=\lambda(1+1_{t<\varepsilon})y(t),}
 \tag{CTX.3}
 \]
 und für `x in (R,S)`, `t=a-x`,
@@ -82,6 +97,8 @@ und für `x in (R,S)`, `t=a-x`,
 \boxed{(Ay)(a+x)=-\lambda y(t).}
 \tag{CTX.4}
 \]
+
+Da jeder Annuluspunkt `x>R>=epsilon` erfüllt, verschwinden alle epsilon-Indikatoren an Annulus- bzw. reflektierten Annuluspunkten; nur innere Punkte unterhalb `R` können den Indikator tragen.
 
 ## 3. Primitive Koeffizientenlücke
 
@@ -100,25 +117,23 @@ Da
 \]
 genügt `beta^2 C^2<1`.
 
-Eine rein rationale Schranke ist möglich. Aus
+Aus der `atanh`-Reihe mit `z=1/3` folgt
 \[
 \log2
 =2\sum_{n\ge0}\frac{3^{-(2n+1)}}{2n+1}
-<\frac{25}{36}
-\]
-und
-\[
-2^{-3/2}<\frac9{25}
-\quad(625<648)
-\]
-folgt
-\[
-\lambda=(\log2)2^{-3/2}<\frac14.
+<2\left(\frac13+\frac1{72}\right)=\frac{25}{36}.
 \]
 Außerdem
 \[
-2^{-3/2}<\frac38
-\quad(16<18).
+2^{-3/2}<\frac9{25}\quad(625<648),
+\]
+also
+\[
+\lambda<\frac14.
+\]
+Und
+\[
+2^{-3/2}<\frac38\quad(16<18).
 \]
 Daher
 \[
@@ -128,7 +143,21 @@ Daher
 \]
 also (CTX.5).
 
-## 4. B-freie Punkte und q-Reflexion
+## 4. Geometrische Grundschranke R >= d/2
+
+Aus
+\[
+R\ge\frac d2
+\]
+folgen die drei geometrischen Fakten, die die Orbitstruktur endlich machen:
+
+- `d<2R`, also kann ein rückwärtiger `b`-Ast nahe der Annulusmitte in das innere Fenster fallen;
+- `e<d<=2R`, weil `d-e=\frac12\log(9/8)>0`;
+- `S-R<a-d/2<2d`, denn `d>a/2` impliziert `a<2d<5d/2`.
+
+Damit können die `d`-verschobenen Low-/High-Schalen niemals mehrfach hintereinander im Annulus liegen.
+
+## 5. b-freie Reflexionsorbits
 
 Für `x in (R,S)` setze `t=a-x`.
 
@@ -138,7 +167,7 @@ x+d>S,
 \qquad |x-d|<R,
 \tag{CTX.6}
 \]
-sind beide `b`-Äste aus dem Annulus entfernt. Dann lauten die zwei relevanten ersten Blockgleichungen
+sind beide `b`-Äste aus dem Annulus entfernt. Dann lauten die relevanten Punktgleichungen
 \[
 C_t y(t)-p w(x)=0,
 \tag{CTX.7}
@@ -150,17 +179,19 @@ D_t y(t)-q\,1_{(R,S)}(t)w(t)=0,
 mit
 \[
 C_t=1+\lambda(1+1_{t<\varepsilon}),
-\qquad D_t=1+\lambda 1_{t<\varepsilon}.
+\qquad D_t=1+\lambda1_{t<\varepsilon}.
 \]
 
 Ist `t` nicht im Annulus, erzwingt (CTX.8) direkt `y(t)=0`, dann (CTX.7) `w(x)=0`.
 
-Ist `t in (R,S)`, so gilt wegen `R>=E>epsilon`
+Ist `t in (R,S)`, so gilt wegen `t,x>R>=epsilon`
 \[
-C_t=C_x=C=1+\lambda,\qquad D_t=D_x=1.
+C_t=C_x=C=1+\lambda,
+\qquad D_t=D_x=1.
 \]
 Die vier Gleichungen für das Reflexionspaar `x <-> t=a-x` haben Matrix
 \[
+M_4=
 \begin{pmatrix}
 C&0&-p&0\\
 1&0&0&-q\\
@@ -168,46 +199,36 @@ C&0&-p&0\\
 0&1&-q&0
 \end{pmatrix}
 \]
-in den Variablen `(y(t),y(x),w(x),w(t))`. Ihre Determinante ist
+in den Variablen `(y(t),y(x),w(x),w(t))`. Es gilt
 \[
-q^2C^2-p^2=-G\ne0.
+\boxed{\det M_4=q^2C^2-p^2=-G\ne0.}
 \tag{CTX.9}
 \]
 Also stirbt jedes b-freie Reflexionsorbit.
 
-## 5. Der einzige b-gekoppelte Keil
+## 6. Der einzige b-gekoppelte Keil
 
-Falls `S<=R+d`, ist jeder Annuluspunkt b-frei, denn `x+d>S` und, da
-\[
-E>\frac d2
-\iff \left(\frac54\right)^2>\frac32
-\iff25>24,
-\]
-auch `|x-d|<R`. Dann ist Abschnitt 4 bereits vollständig.
+Falls `S<=R+d`, ist jeder Annuluspunkt b-frei: `x+d>S`; und wegen `R>=d/2`, `x<S<=R+d` folgt auch `|x-d|<R`. Abschnitt 5 genügt dann vollständig.
 
 Nehme nun
 \[
 S>R+d.
 \tag{CTX.10}
 \]
-Definiere die drei offenen Schalen
+Definiere
 \[
 L:=(R,S-d),\qquad
 H:=(R+d,S),\qquad
 M:=(S-d,R+d).
 \tag{CTX.11}
 \]
-Da
-\[
-S-R<a-E<2d
-\]
-(`2d-(a-E)=(2b-3a)+E>0`, und `2b-3a=\frac12\log(9/8)>0`), sind `L` und `H` disjunkt und `M` liegt dazwischen. Die Abbildung
+Wegen `S-R<2d` sind `L` und `H` disjunkt und `M` liegt dazwischen. Die Abbildung
 \[
 x\mapsto X:=x+d
 \]
 ist eine Bijektion `L -> H`.
 
-### 5.1 Geometrie eines Low-High-Paars
+### 6.1 Low-High-Orbit
 
 Fixiere `x in L` und setze
 \[
@@ -215,15 +236,20 @@ X:=x+d\in H,
 \qquad t:=a-x,
 \qquad h:=a-X=e-x.
 \]
-Aus `S>R+d`, `S<a`, `R>=E` und `2E>e` (äquivalent `75>64`) folgt
+Weil `L` nichtleer ist, gilt `x<S-d<e`, also `h>0`. Ferner `e<2R`, also `h<R`.
+
+Aus `S>R+d` und `d>a/2` folgt
 \[
-t\in M\subset(R,S),
-\qquad 0<h<R.
+R+S>2R+d\ge2d>a,
+\]
+also `t<S`. Andererseits ergibt `R+S<a+d=b` (aus `R<e` im Low-Fall und `S<a`) die Schranke `t>R`. Genauer liegt
+\[
+\boxed{t\in M\subset(R,S),\qquad 0<h<R.}
 \tag{CTX.12}
 \]
-Außerdem sind für den Mittelwert `t` beide b-Äste außerhalb des Annulus; für `X` bleibt genau der rückwärtige b-Ast `w(X-d)=w(x)`.
+Die Mittelschale ist b-frei; beim High-Punkt `X` bleibt genau der rückwärtige `b`-Ast `w(X-d)=w(x)`.
 
-Da `x,t,X` im Annulus liegen, sind ihre epsilon-Indikatoren null (`R>=E>epsilon`). Nur `h` kann `h<epsilon` oder `h>epsilon` erfüllen. Setze
+Da `x,t,X` Annuluspunkte sind, tragen sie keinen epsilon-Indikator. Nur `h` kann `h<epsilon` erfüllen. Setze
 \[
 C_h:=1+\lambda(1+\iota_h),
 \qquad D_h:=1+\lambda\iota_h,
@@ -255,31 +281,35 @@ Ihre Determinante faktorisiert exakt zu
 }
 \tag{CTX.14}
 \]
-Alle Faktoren in der Klammer sind strikt positiv und `G=p^2-q^2C^2>0`. Daher
+Alle Faktoren in der Klammer sind strikt positiv und `G>0`. Daher `det M6<0`. Somit verschwinden auf jedem Low-High-Orbit alle sechs Variablen.
+
+### 6.2 Rest der Mittelschale
+
+Für `z in M` gilt `z+d>=S`. Für den rückwärtigen b-Ast:
+
+- wenn `z>=d`, dann `0<=z-d<R`;
+- wenn `z<d`, dann
+  \[
+  d-z\le2d-S<d-R\le R.
+  \]
+
+Also ist `M` b-frei.
+
+Falls `a-z` außerhalb des Annulus liegt, greift die zweizeilige Elimination. Falls `a-z in L`, ist `z` bereits Teil eines 6er-Orbits. Falls `a-z` im Annulus liegt und nicht in `L`, kann es nicht in `H` liegen, denn
 \[
-\det M_6<0.
+a-H=(a-S,e-R)\subset(0,R)
 \]
-Somit verschwinden auf jedem Low-High-Orbit alle sechs Variablen.
-
-### 5.2 Rest der Mittelschale
-
-Für `z in M` sind beide b-Äste außerhalb/innerhalb des Annulus:
-\[
-z+d\ge S,
-\]
-und aus `R>d/2` sowie `S>R+d` folgt auch `|z-d|<R`.
-
-Falls `a-z` außerhalb des Annulus liegt, greift die zweizeilige Elimination aus Abschnitt 4. Falls `a-z` im Annulus liegt und nicht in `L`, kann es nicht in `H` liegen: Das Reflexionsbild von `H` liegt wegen `e<2R` vollständig unterhalb `R`. Also liegt `a-z` ebenfalls in `M`, und der invertible Reflexionsblock (CTX.9) greift. Die Punkte in `a-L` sind bereits Bestandteil der sechsvariabligen Low-High-Orbits aus 5.1.
+wegen `e<2R`. Also liegt `a-z` ebenfalls in `M`, und der invertible Reflexionsblock (CTX.9) greift.
 
 Damit ist der gesamte Annulus erschöpft.
 
-## 6. Tiefer Zentralbereich
+## 7. Tiefer Zentralbereich
 
 Für
 \[
 0<t<a-S
 \]
-liegt jeder Hubshift des Annulus außerhalb der Unterstützung, also
+liegt jeder Hubshift des Annulus außerhalb seiner Unterstützung, also
 \[
 (HE_Aw)(t)=0.
 \]
@@ -287,13 +317,16 @@ Mit (CTX.3) folgt
 \[
 \bigl[1+\lambda(1+1_{t<\varepsilon})\bigr]y(t)=0,
 \]
-also `y(t)=0`. Zusammen mit den Orbits aus Abschnitt 4/5 wird damit ganz `(0,a-R)` getötet, und wegen Geradheit ganz `C_R^+`.
+also `y(t)=0`. Zusammen mit den Orbitgleichungen wird ganz `(0,a-R)` getötet, also wegen Geradheit ganz `C_R^+`; zugleich verschwindet `w` auf dem gesamten Annulus.
 
-## 7. Theorem CTX-1 — erweiterte zentrale Transversalität
+## 8. Theorem CTX-1 — horizon-adaptive zentrale Transversalität
 
 Für jedes
 \[
-\boxed{E\le R<S<a}
+\boxed{
+R\ge\max\left\{\varepsilon,\frac d2\right\},
+\qquad R<S<a
+}
 \]
 gilt
 \[
@@ -314,12 +347,23 @@ gilt
 \tag{CTX.16}
 \]
 
-Dies subsumiert CT-1 (`a/2<=R<S<a`) und schiebt die zentrale Transversalitätsschwelle auf
+Da im Drei-Shift-Fenster
 \[
-E=\frac12\log\frac54\approx0.111571775657105.
+\varepsilon<E:=c-2a=\tfrac12\log\frac54
 \]
+und
+\[
+E>\frac d2
+\iff \left(\frac54\right)^2>\frac32
+\iff25>24,
+\]
+folgt als horizont-uniformes Korollar
+\[
+\boxed{E\le R<S<a.}
+\]
+CT-1 (`a/2<=R<S<a`) ist ein noch gröberes Teilfenster hiervon.
 
-## 8. Firewall
+## 9. Firewall
 
 CTX-1 ist weiterhin nur ein Satz über Blockkernvektoren mit `y in C_R^+`. Nicht bewiesen sind:
 
@@ -330,6 +374,6 @@ CTX-1 ist weiterhin nur ein Satz über Blockkernvektoren mit `y in C_R^+`. Nicht
 
 Bei unabhängigem vollständigem GREEN wäre zulässig:
 
-- **CTX-1:** `✓[M]_part` — der gesamte unendlichdimensionale zentrale Unsichtbarkeitssektor trägt für `E<=R<S<a` keinen augmentierten Schur-Kernvektor.
+- **CTX-1:** `✓[M]_part` — der gesamte unendlichdimensionale zentrale Unsichtbarkeitssektor trägt im horizon-adaptiven Bereich `R>=max{epsilon,d/2}`, `R<S<a` keinen augmentierten Schur-Kernvektor.
 
 Keine Promotion ohne explizite Freigabe.
