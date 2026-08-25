@@ -1,15 +1,15 @@
-# P11/R32 — unabhängiges Review-Paket: erste nichtzentrale Schale
+# P11/R32 — unabhängiges Review-Paket: reparierte erste nichtzentrale Schale
 
 **Status:** Review-Anforderung; keine Promotion.  
 **Aktuelle Kandidaten:**
-- `050c9b672a2eb952ed28df7c80d053640e5eac27` — `audits/P11_R32_FIRST_NONCENTRAL_SHELL_TRANSVERSALITY_AUDIT.md`
-- `596ad55755b1846bc44763f662a09a2db9c3bd2a` — `consolidation/p11_r32_first_noncentral_shell_verify.py`
+- `6da9c76f659838c55a0570d430130c78ecf50c93` — `audits/P11_R32_FIRST_NONCENTRAL_SHELL_TRANSVERSALITY_AUDIT.md`
+- `c6fe2e2e7420e15e4ecf3c3a57ac9a1783c28888` — `consolidation/p11_r32_first_noncentral_shell_verify.py`
 
 **P11 FROZEN; P12 unverändert; R14 unverändert.**
 
-Bitte den Verifier nur als Cross-check verwenden. Rekonstruieren Sie die Supportargumente direkt aus P11s Hub- und Full-Rest-Definitionen.
+Eine frühere unreviewte Zwischenfassung hatte die adjungierten `(2,0)`-Cross-Terme übersehen. Die aktuelle Fassung führt den zentralen `K1^* M K2`-Echo ausdrücklich mit und repariert die Transversalität über eine `delta=d-e`-Rekursion. Bitte gerade diesen Punkt adversarial prüfen.
 
-## A. Nichtzentrale Unsichtbarkeitsschale
+## A. Erste nichtzentrale Unsichtbarkeitsschale
 
 Setze
 \[
@@ -17,22 +17,15 @@ d=b-a,
 \qquad \frac d2\le R<d,
 \qquad h=d-R.
 \]
-Definiere \(\mathcal S_R^+\) als geraden Schalenraum mit positivem Träger
+Definiere `S_R^+` als geraden Schalenraum mit positivem Träger
 \[
 (a-h,a+h)=(e+R,b-R)
 \]
-und Profilbedingung
+und
 \[
 y(a-s)=y(a+s),\qquad |s|<h.
 \]
-
-Prüfen Sie direkt für \(0<u<R\):
-
-- die beiden \(a\)-Äste heben sich für \(u<h\) exakt auf und sind für \(u>h\) beide außerhalb;
-- der \(b\)-Ast beginnt erst bei \(b-R=a+h\);
-- der \(T=2a\)-Ast liegt noch weiter außen.
-
-Damit soll gelten
+Prüfen Sie direkt
 \[
 \boxed{\mathcal S_R^+\subset\ker(E_I^*H|_+)}.
 \]
@@ -41,120 +34,189 @@ Damit soll gelten
 NS-A FIRST SHELL INVISIBILITY: GREEN / PARTIAL / FAIL
 ```
 
-## B. Full-Rest-Supportgap
+## B. Full-Rest-Reduktion vor dem Rücktransport
 
-Prüfen Sie adversarial aus der exakten SE-2-Zerlegung mit den Blöcken `(2,0),(2,1),(3,0)`, dass für `y in S_R^+` auf der positiven Achse
+Im `(2,0)`-Block
 \[
-\operatorname{ess\,supp}(Ay)
-\subset
-(a-h,a+h)\cup(a+2d-h,a+2d+h),
+\Phi_{20}=\alpha_1K_1+\alpha_2K_2+\alpha_3K_3
 \]
-mit Horizontabschnitt der äußeren Schale.
-
-Insbesondere:
-
-1. `(2,0),k=1`: zentraler maskierter Output verschwindet durch die Schalen-Symmetrie; äußere Kopien liegen außerhalb der Maske;
-2. `(2,0),k=2`: nach Hin-/Rücktransport nur Zentren `±a`, `±3a`, wobei `3a>T0`;
-3. `(2,0),k=3`: nach Maske null;
-4. `(2,1)`: kein zusätzlicher positiver Support zwischen der ursprünglichen `a`-Schale und `a+2d`;
-5. `(3,0)`: nach Hin-/Rücktransport genau Zentren `±a`, `±(a+2d)`.
-
-Die untere Kante der ursprünglichen positiven Restschale ist
+soll auf `S_R^+` nach der `Omega20`-Maske gelten
 \[
-a-h=e+R,
-\]
-die äußere beginnt erst bei
-\[
-a+2d-h=a+d+R.
-\]
-
-```text
-NS-B REST SUPPORT GAP: GREEN / PARTIAL / FAIL
-```
-
-## C. Sauberer Auswertungspunkt u=a-x
-
-Für jedes
-\[
-R<S<a,
-\qquad x\in(R,S)
-\]
-setze `u=a-x`.
-
-Prüfen Sie:
-
-- `u<a-R`;
-- aus `R>=d/2` folgt `a-R<=e+R=a-h`, also liegen sowohl `y(u)` als auch `(Ay)(u)` im Supportloch;
-- der `a`-Hubkanal liefert genau `-p w(x)`;
-- der `b`-Hubkanal liefert genau `-r w(x+d)` falls `x+d<S`, sonst null;
-- der `T=2a`-Kanal ist vollständig außerhalb des Annulus.
-
-Damit soll exakt gelten
-\[
-\boxed{
-pw(x)+r1_{\{x+d<S\}}w(x+d)=0
-\quad\text{für fast jedes }x\in(R,S).}
-\]
-
-```text
-NS-C CLEAN LOWER OUTPUT EQUATION: GREEN / PARTIAL / FAIL
-```
-
-## D. Zwei-Schritt-d-Descent
-
-Prüfen Sie zunächst die Breitenabschätzung
-\[
-S-R<a-R\le a-d/2<3d/2<2d,
-\]
-wobei `d>a/2` aus `9>8` folgt.
-
-Teile den Annulus in
-\[
-H=(\max\{R,S-d\},S),
+M_{20}K_1y=0,
+\qquad M_{20}K_3y=0,
 \qquad
-L=(R,S-d)
+M_{20}\Phi_{20}y=\alpha_2M_{20}K_2y.
 \]
-(falls `L` nichtleer).
 
-- Für `x in H` gilt `x+d>=S`, also erzwingt die saubere Gleichung `w(x)=0`.
-- Für `x in L` liegt `X=x+d` im Annulus. Wegen `S-R<2d` gilt `X+d>S`, also liegt `X in H` und `w(X)=0`; die Gleichung bei `x` erzwingt dann `w(x)=0`.
+Prüfen Sie insbesondere:
 
-Damit soll ohne weitere Fallunterscheidung
-\[
-\boxed{w=0\text{ auf dem ganzen Annulus}}
-\]
-folgen. Anschließend liefert `(I+A)y=0`, `A>=0`, auch `y=0`.
+- zentraler `K1 y`-Output hebt sich durch die Schalen-Symmetrie auf;
+- äußere `K1`-Kopien und alle `K3`-Kopien liegen außerhalb der Maske;
+- trotzdem bleiben beim Rücktransport in `Phi20*` **alle** Adjungierten `K1*,K2*,K3*` erhalten.
+
+Der `(2,1)`-Block soll auf dieser Schale vollständig null sein; `(3,0)` trägt lokal auf der `a`-Schale, aber nicht zum zentralen Echo bei.
 
 ```text
-NS-D TWO-STEP d-DESCENT: GREEN / PARTIAL / FAIL
+NS-B FULL-REST PRE-ADJOINT REDUCTION: GREEN / PARTIAL / FAIL
 ```
 
-## E. Gesamtsatz
+## C. Zentraler Cross-Term-Echo
 
-Prüfen Sie die exakte Reichweite
+Für
 \[
-\boxed{\frac d2\le R<d,\qquad R<S<a}
+f(t)=y(a+t)=y(a-t),
+\qquad 0<t<h,
 \]
-und die Aussage
+prüfen Sie direkt aus `K1*=-K1`:
 \[
 \boxed{
-\ker\mathcal K_{I,A}\cap(\mathcal S_R^+\oplus\mathscr H_A^-)=\{0\}.
+(Ay)(t)=\gamma_t f(t),
+\quad
+\gamma_t=(\log2)2^{-9/4}(1+1_{t<\varepsilon})>0.
 }
 \]
 
-Es darf **kein** verbleibender `S`-Restkeil für diese erste Schale gebucht werden.
+Bitte sicherstellen, dass kein weiterer Full-Rest-Term am selben zentralen Output sitzt und die Formel verändert.
 
 ```text
-NS-E FULL FIRST-SHELL TRANSVERSALITY: GREEN / PARTIAL / FAIL
+NS-C CENTRAL CROSS-TERM ECHO: GREEN / PARTIAL / FAIL
 ```
 
-## F. Scope-Firewall
+## D. Lokale Schalenwirkung
+
+Am zugehörigen Punkt `a+t` soll gelten
+\[
+\boxed{
+((I+A)y)(a+t)=C_t f(t),
+\quad
+C_t=1+q^2+2r^2 1_{t\ge\delta-\varepsilon}>0.
+}
+\]
+
+Prüfen Sie:
+
+- `q^2` kommt aus dem lokalen `(2,0),k=2`-Selbstterm;
+- `(2,1)` bleibt null;
+- der `(3,0)`-Selbstterm trägt genau unter der angegebenen Maskenbedingung.
+
+```text
+NS-D LOCAL SHELL ACTION: GREEN / PARTIAL / FAIL
+```
+
+## E. Sauberer Bereich
+
+Für `x<=R+e`, `t=a-x`, soll `t>=h` gelten und damit
+\[
+y(t)=(Ay)(t)=0.
+\]
+Prüfen Sie die exakte Hubgleichung
+\[
+\boxed{
+pw(x)+r1_{x+d<S}w(x+d)=0.}
+\]
+
+```text
+NS-E CLEAN d-EQUATION: GREEN / PARTIAL / FAIL
+```
+
+## F. Echo-Bereich und Elimination
+
+Für
+\[
+x>R+e,
+\qquad t=a-x\in(0,h),
+\]
+gilt automatisch `x+d>S`. Prüfen Sie die beiden Gleichungen
+\[
+\gamma_t f(t)-p w(x)=0,
+\]
+\[
+C_t f(t)-r w(x-e)-q w(x)=0.
+\]
+
+Elimination soll geben
+\[
+A_t w(x)-r w(x-e)=0,
+\qquad
+A_t=\frac{C_t p}{\gamma_t}-q.
+\]
+Prüfen Sie die strikte Positivität über
+\[
+C_t\ge1,
+\quad \gamma_t\le2\gamma,
+\quad
+\frac{p}{2\gamma}=\sqrt{\frac2{\log2}}>\sqrt2,
+\quad q<1.
+\]
+
+```text
+NS-F ECHO ELIMINATION / A_t>0: GREEN / PARTIAL / FAIL
+```
+
+## G. Entstehung der P12-Skala delta
+
+Setze
+\[
+z=x-e.
+\]
+Prüfen Sie:
+
+- `z>R`;
+- `z<d<R+e`, wobei `d<R+e` aus `R>=d/2>delta=d-e` folgt;
+- daher liegt `z` im sauberen Bereich;
+- die saubere Gleichung bei `z` koppelt an
+  \[
+  z+d=x+(d-e)=x+\delta.
+  \]
+
+Daraus soll folgen:
+
+- falls `x+delta>=S`, dann `w(x)=0`;
+- sonst
+  \[
+  B_t w(x)+r w(x+\delta)=0,
+  \qquad B_t>0.
+  \]
+
+```text
+NS-G DELTA RECURSION: GREEN / PARTIAL / FAIL
+```
+
+## H. Endliche delta-Streifen und Rückkehr zum sauberen Bereich
+
+Prüfen Sie den endlichen Strip-Descent vom oberen Rand des Echo-Bereichs
+\[
+(R+e,S)
+\]
+in Schritten `delta>0` und bestätigen Sie, dass dadurch der gesamte Echo-Bereich stirbt.
+
+Danach im sauberen Bereich:
+
+- wenn `x+d>=S`, direkt `w(x)=0`;
+- wenn `x+d<S`, dann `x+d>R+d>R+e`, also liegt `x+d` im bereits getöteten Echo-Bereich.
+
+Damit soll
+\[
+\boxed{w=0\text{ auf dem ganzen Annulus}}
+\]
+folgen und anschließend aus `(I+A)y=0`, `A>=0`, auch `y=0`.
+
+```text
+NS-H FULL FIRST-SHELL TRANSVERSALITY: GREEN / PARTIAL / FAIL
+```
+
+## I. Scope-Firewall
+
+Gewünschte exakte Reichweite:
+\[
+\boxed{\frac d2\le R<d,\qquad R<S<a.}
+\]
 
 Nicht erlaubt:
 
 - voller augmentierter Blockkern trivial;
 - voller Schur-Crossblock injektiv;
-- Klassifikation sämtlicher weiterer Teile von `N_I`;
+- Klassifikation aller weiteren Teile von `N_I`;
 - Closed Range / bounded below / uniforme Winkel;
 - Polar Gauge, Strong Terminal Transport, Objekt X oder RH.
 
@@ -165,13 +227,16 @@ NS SCOPE FIREWALL: GREEN / PARTIAL / FAIL
 ## Gesamtverdict
 
 ```text
-NS-A FIRST SHELL INVISIBILITY:       GREEN / PARTIAL / FAIL
-NS-B REST SUPPORT GAP:               GREEN / PARTIAL / FAIL
-NS-C CLEAN LOWER OUTPUT EQUATION:    GREEN / PARTIAL / FAIL
-NS-D TWO-STEP d-DESCENT:             GREEN / PARTIAL / FAIL
-NS-E FULL FIRST-SHELL TRANSVERSALITY: GREEN / PARTIAL / FAIL
-NS SCOPE FIREWALL:                   GREEN / PARTIAL / FAIL
-FIRST NONCENTRAL SHELL OVERALL:      GREEN / PARTIAL / FAIL
+NS-A FIRST SHELL INVISIBILITY:            GREEN / PARTIAL / FAIL
+NS-B FULL-REST PRE-ADJOINT REDUCTION:     GREEN / PARTIAL / FAIL
+NS-C CENTRAL CROSS-TERM ECHO:             GREEN / PARTIAL / FAIL
+NS-D LOCAL SHELL ACTION:                  GREEN / PARTIAL / FAIL
+NS-E CLEAN d-EQUATION:                    GREEN / PARTIAL / FAIL
+NS-F ECHO ELIMINATION / A_t>0:            GREEN / PARTIAL / FAIL
+NS-G DELTA RECURSION:                     GREEN / PARTIAL / FAIL
+NS-H FULL FIRST-SHELL TRANSVERSALITY:     GREEN / PARTIAL / FAIL
+NS SCOPE FIREWALL:                        GREEN / PARTIAL / FAIL
+FIRST NONCENTRAL SHELL OVERALL:           GREEN / PARTIAL / FAIL
 ```
 
 Bei vollständigem GREEN wäre zulässig:
