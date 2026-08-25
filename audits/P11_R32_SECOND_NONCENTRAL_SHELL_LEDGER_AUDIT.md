@@ -22,7 +22,10 @@ d:=b-a,
 \]
 Es gelten exakt
 \[
-d>e>0\qquad(9>8),
+d>e\qquad(9>8),
+\]
+\[
+e>0\qquad(4>3),
 \]
 und
 \[
