@@ -1,4 +1,4 @@
-# P11/R32 — erste nichtzentrale Unsichtbarkeitsschale und Schur-Transversalität
+# P11/R32 — erste nichtzentrale Unsichtbarkeitsschale und vollständige Schalen-Transversalität
 
 **Status:** Kandidat; keine Promotion.  
 **P11:** FROZEN. **P12:** unverändert. **R14:** unverändert.  
@@ -20,7 +20,8 @@ d:=b-a,
 \]
 Fixiere
 \[
-\boxed{\frac d2\le R<d}
+\boxed{\frac d2\le R<d,
+\qquad R<S<a}
 \tag{NS.1}
 \]
 und
@@ -30,8 +31,7 @@ h:=d-R>0.
 Sei
 \[
 I=(-R,R),
-\qquad \mathcal A=(-S,-R)\cup(R,S),
-\qquad R<S<a.
+\qquad \mathcal A=(-S,-R)\cup(R,S).
 \]
 
 Der augmentierte SE-Block ist
@@ -47,7 +47,7 @@ Definiere \(\mathcal S_R^+\) als den Raum aller geraden \(y\in L^2(-T_0,T_0)^+\)
 \[
 J_R:=(a-h,a+h)=(e+R,b-R)
 \]
-liegt und deren positives Profil um \(a\) symmetrisch ist:
+liegt und deren Profil um \(a\) symmetrisch ist:
 \[
 \boxed{
 y(a-s)=y(a+s)\quad\text{für fast jedes }|s|<h.
@@ -63,77 +63,163 @@ Wegen Geradheit liegt der volle Träger in \(J_R\cup(-J_R)\).
 \tag{NS.3}
 \]
 
-#### Beweis
+### Beweis
 
 Sei \(0<u<R\). Für den \(a\)-Kanal gilt:
 
-- falls \(0<u<h\), liegen \(a-u,a+u\in J_R\) und (NS.2) gibt
-  \(y(a-u)=y(a+u)\);
-- falls \(h<u<R\), liegen beide Punkte außerhalb von \(J_R\), denn
-  \(a-u<a-h\) und \(a+u>a+h\).
+- falls \(0<u<h\), liegen \(a-u,a+u\in J_R\) und (NS.2) gibt \(y(a-u)=y(a+u)\);
+- falls \(h<u<R\), liegen beide Punkte außerhalb von \(J_R\).
 
-Also verschwindet der \(a\)-Beitrag auf \(I\).
-
-Für den \(b\)-Kanal ist
+Also verschwindet der \(a\)-Beitrag. Für den \(b\)-Kanal ist
 \[
 b-u>b-R=a+h,
 \]
-und der andere Ast liegt noch weiter außen. Für den \(T\)-Kanal ist
+und für den \(T\)-Kanal
 \[
 T-u>T-R=(b-R)+e>a+h.
 \]
-Damit verschwinden auch diese beiden Kanäle. Also \(Hy=0\) fast überall auf \((-R,R)\).
+Damit verschwinden auch diese Kanäle. Also \(Hy=0\) fast überall auf \((-R,R)\).
 
-Der Raum \(\mathcal S_R^+\) ist unendlichdimensional: ein beliebiges \(L^2(0,h)\)-Profil kann durch Spiegelung um \(a\) und anschließend durch Geradheit fortgesetzt werden.
+Der Raum \(\mathcal S_R^+\) ist unendlichdimensional: ein beliebiges \(L^2(0,h)\)-Profil kann um \(a\) gespiegelt und anschließend gerade fortgesetzt werden.
 
-## 3. Rest-Supportlemma für die Schale
+## 3. Rest-Supportlemma
 
-### Lemma NS-1b — wo \(Ay\) liegen kann
+### Lemma NS-1b
 
-Für \(y\in\mathcal S_R^+\) gilt auf der positiven Achse:
+Für \(y\in\mathcal S_R^+\) gilt auf der positiven Achse
 \[
+\boxed{
 \operatorname{ess\,supp}(Ay)
 \subset
 (a-h,a+h)
 \cup
 (a+2d-h,a+2d+h),
+}
 \tag{NS.4}
 \]
-wobei die zweite Schale zusätzlich am Horizont \(T_0\) abgeschnitten wird.
-Insbesondere beginnt die äußere positive Restschale erst bei
-\[
-a+2d-h=a+d+R=b+R=a+(d+R).
-\tag{NS.5}
-\]
+wobei die zweite Schale am Horizont \(T_0\) abgeschnitten wird.
 
-#### Beweis aus SE-2
+### Begründung aus SE-2
 
 Im Drei-Shift-Fenster besitzt \(A\) nur die Full-Rest-Blöcke
 \((2,0),(2,1),(3,0)\).
 
-1. Im \((2,0)\)-Block verschwindet der primitive \(k=1\)-Term nach der \(\Omega_{2,0}\)-Maske: sein zentraler Output hebt sich wegen (NS.2) exakt auf, während seine äußeren Outputs um \(\pm2a\) außerhalb der Maske liegen. Der \(k=2\)-Term kann nach Rücktransport nur auf die ursprünglichen Schalen um \(\pm a\) und auf Schalen um \(\pm3a\) zurückwirken; \(3a>T_0\), also bleiben nur die ursprünglichen Schalen. Der \(k=3\)-Term ist nach der Maske null.
+- Im \((2,0)\)-Block verschwindet der maskierte primitive \(k=1\)-Output zentral durch die Schalen-Symmetrie; seine äußeren Kopien liegen außerhalb der Maske. Der \(k=2\)-Term kann nach dem Rücktransport nur um \(\pm a\) und \(\pm3a\) landen, wobei \(3a>T_0\). Der \(k=3\)-Term ist nach der Maske null.
+- Der \((2,1)\)-Block erzeugt ebenfalls keine positiven Zentren zwischen \(a\) und \(a+2d\); mögliche \(3a\)-Kopien liegen außerhalb des Horizonts.
+- Der \((3,0)\)-Block transportiert die \(\pm a\)-Schalen zunächst auf \(\pm d\) und nach dem adjungierten \(b\)-Transport genau zurück auf \(\pm a\) bzw. auf \(\pm(a+2d)\).
 
-2. Der \((2,1)\)-Block enthält nur den \(k=2\)-Term. Sein maskierter Output liegt um \(\pm a\); nach Adjungiertentransport entstehen wieder nur \(\pm a\) bzw. \(\pm3a\), und die letzteren liegen außerhalb des Horizonts. (Je nach Parameter kann der gesamte Block bereits vorher verschwinden; für (NS.4) genügt die Supportaussage.)
-
-3. Der \((3,0)\)-Block transportiert die Schalen um \(\pm a\) zunächst auf Schalen um \(\pm d\). Nach dem adjungierten \(b\)-Transport entstehen genau die ursprünglichen Schalen um \(\pm a\) sowie äußere Schalen um
+Andere positive Supportzentren treten nicht auf. Insbesondere liegt die gesamte positive ursprüngliche Restschale oberhalb
 \[
-\pm(a+2d).
+a-h=e+R,
+\]
+während die äußere positive Restschale erst bei
+\[
+a+2d-h=a+d+R=b+R
+\]
+beginnt.
+
+## 4. Der saubere untere Auswertungspunkt
+
+Fixiere \(x\in(R,S)\) und setze
+\[
+u:=a-x.
+\]
+Da \(S<a\), gilt \(u>0\). Außerdem
+\[
+u<a-R.
+\]
+Aus \(R\ge d/2\) folgt
+\[
+a-R\le e+R=a-h,
+\]
+weil dies äquivalent zu \(d\le2R\) ist. Also liegt \(u\) strikt unterhalb der positiven \(y\)-Schale. Nach Lemma NS-1b liegt dort auch kein positiver Rest-Support. Daher
+\[
+\boxed{y(a-x)=0,\qquad (Ay)(a-x)=0.}
+\tag{NS.5}
 \]
 
-Andere positive Supportzentren treten nicht auf. Dies ergibt (NS.4). Die linke Kante der äußeren positiven Schale ist
+Für den Hubterm auf \(w\) gilt:
+
+1. \(a\)-Kanal:
 \[
-a+2d-h=a+2d-(d-R)=a+d+R=b+R,
+D_{2a}E_Aw(a-x)
+=w(-x)-w(2a-x)
+=-w(x),
 \]
-also (NS.5).
+weil \(2a-x>a>S\).
 
-## 4. Theorem NS-1 — erste nichtzentrale Schale transversal für S <= R+d
-
-Zusätzlich zu (NS.1) gelte
+2. \(b\)-Kanal:
 \[
-\boxed{R<S<a,\qquad S\le R+d.}
+(a-x)-b=-(x+d),
+\]
+also trägt genau \(-w(x+d)\) bei, falls \(x+d<S\); der andere Ast liegt rechts außerhalb des Annulus.
+
+3. \(T=2a\)-Kanal: beide Argumente haben Betrag größer als \(a>S\), also kein Beitrag.
+
+Damit lautet die erste Blockgleichung bei \(u=a-x\) exakt
+\[
+\boxed{
+p\,w(x)+r\,1_{\{x+d<S\}}w(x+d)=0
+\qquad\text{für fast jedes }x\in(R,S).
+}
 \tag{NS.6}
 \]
-Dann
+
+Diese Gleichung enthält weder \(y\) noch \(A\).
+
+## 5. Zwei-Schritt-d-Descent
+
+Aus \(d>a/2\) folgt
+\[
+a<2d.
+\]
+Da \(R\ge d/2\) und \(S<a\), gilt daher
+\[
+S-R<a-R\le a-\frac d2<\frac32d<2d.
+\tag{NS.7}
+\]
+Insbesondere ist die Annulusbreite strikt kleiner als \(2d\).
+
+Teile den positiven Annulus in
+\[
+H:=(\max\{R,S-d\},S)
+\]
+und, falls nichtleer,
+\[
+L:=(R,S-d).
+\]
+
+Für \(x\in H\) ist \(x+d\ge S\), also reduziert (NS.6) zu
+\[
+pw(x)=0.
+\]
+Da \(p>0\), folgt
+\[
+w=0\quad\text{a.e. auf }H.
+\tag{NS.8}
+\]
+
+Sei nun \(x\in L\). Dann \(X:=x+d\in(R,S)\). Wegen (NS.7) gilt
+\[
+X+d=x+2d>S,
+\]
+also liegt \(X\in H\). Nach (NS.8) ist \(w(X)=0\). Setzt man dies in (NS.6) bei \(x\) ein, folgt
+\[
+pw(x)=0.
+\]
+Also auch
+\[
+w=0\quad\text{a.e. auf }L.
+\]
+Somit
+\[
+\boxed{w=0\quad\text{auf dem ganzen Annulus}.}
+\tag{NS.9}
+\]
+
+## 6. Theorem NS-1 — vollständige Transversalität der ersten nichtzentralen Schale
+
+Unter (NS.1) gilt
 \[
 \boxed{
 \ker\mathcal K_{I,A}
@@ -141,7 +227,7 @@ Dann
 (\mathcal S_R^+\oplus\mathscr H_{\mathcal A}^-)
 =\{0\}.
 }
-\tag{NS.7}
+\tag{NS.10}
 \]
 Äquivalent
 \[
@@ -151,156 +237,40 @@ Dann
 (I+A)\mathcal S_R^+
 =\{0\}.
 }
-\tag{NS.8}
+\tag{NS.11}
 \]
 
 ### Beweis
 
-Sei \((y,w)\) ein Blockkernpaar mit \(y\in\mathcal S_R^+\).
-
-Fixiere fast jedes \(x\in(R,S)\) und betrachte den positiven Punkt
-\[
-u=a+x.
-\]
-Da \(x>R\ge d/2\), gilt
-\[
-h=d-R\le R<x.
-\]
-Somit liegt \(u=a+x\) oberhalb der ursprünglichen positiven \(y\)-Schale, also \(y(u)=0\).
-
-Nach Lemma NS-1b beginnt die einzige mögliche äußere positive \(Ay\)-Schale erst bei Offset \(d+R\) von \(a\). Wegen
-\[
-x<S\le R+d
-\]
-liegt \(u=a+x\) strikt darunter. Daher
-\[
-(Ay)(a+x)=0.
-\tag{NS.9}
-\]
-
-Nun berechnen wir den Hubterm auf \(w\). Der \(a\)-Ast liefert
-\[
-D_{2a}E_Aw(a+x)=w(x),
-\]
-da der zweite Ast bei \(2a+x>S\) liegt.
-
-Für den \(b\)-Ast ist der rückwärtige Punkt \(x-d\). Aus \(R\ge d/2\) und \(x<R+d\) folgt
-\[
-|x-d|<R,
-\]
-also liegt dieser Punkt im inneren Loch des Annulus; der andere \(b\)-Ast liegt rechts außerhalb. Somit trägt der \(b\)-Kanal nichts bei.
-
-Für den \(T=2a\)-Ast ist
-\[
-(a+x)-T=x-a<0.
-\]
-Wegen Ungeradheit von \(w\) ergibt dieser Ast
-\[
--q\,1_{(R,S)}(a-x)\,w(a-x).
-\]
-Der zweite \(T\)-Ast liegt rechts außerhalb.
-
-Die erste Blockgleichung bei \(u=a+x\) lautet daher exakt
-\[
-\boxed{
-pw(x)-q\,1_{(R,S)}(a-x)w(a-x)=0.}
-\tag{NS.10}
-\]
-
-Falls \(a-x\notin(R,S)\), folgt sofort \(w(x)=0\).
-
-Falls \(x':=a-x\in(R,S)\), darf dieselbe Gleichung auf \(x'\) angewendet werden. Da \(a-x'=x\), erhalten wir
-\[
-pw(x)-qw(x')=0,
-\qquad
-pw(x')-qw(x)=0.
-\tag{NS.11}
-\]
-Die Koeffizientenmatrix ist
-\[
-\begin{pmatrix}p&-q\\-q&p\end{pmatrix}
-\]
-mit
-\[
-\det=p^2-q^2
-=(\log2)\left(2^{-3/2}-2^{-3}\right)>0.
-\tag{NS.12}
-\]
-Also \(w(x)=w(x')=0\).
-
-Damit verschwindet \(w\) fast überall auf \((R,S)\), also wegen Ungeradheit auf dem ganzen Annulus. Die erste Blockgleichung reduziert sich zu
+Sei \((y,w)\) ein Blockkernpaar mit \(y\in\mathcal S_R^+\). Abschnitt 5 liefert \(w=0\). Die erste Blockgleichung wird damit
 \[
 (I+A)y=0.
 \]
-Da \(A=R_{T_0}^*R_{T_0}\ge0\), ist \(I+A\ge I\) injektiv, also \(y=0\).
-Dies beweist (NS.7).
+Da \(A=R_{T_0}^*R_{T_0}\ge0\), gilt \(I+A\ge I\), also \(y=0\). Damit folgt (NS.10).
 
-## 5. Wichtige Reichweite
+## 7. Bedeutung
 
-Da
+NS-1 behandelt **die gesamte erste nichtzentrale unendlichdimensionale Unsichtbarkeitsschale** für
 \[
-e=a-d,
+\boxed{\frac d2\le R<d,\qquad R<S<a.}
 \]
-gilt für jedes \(R\ge e\)
-\[
-R+d\ge a.
-\]
-Folglich ist (NS.6) für jedes \(S<a\) automatisch erfüllt. Daher:
-\[
-\boxed{
-e\le R<d,\quad R<S<a
-\Longrightarrow
-\text{NS-1 gilt für die gesamte erste nichtzentrale Schale}.}
-\tag{NS.13}
-\]
+Es bleibt für diese Schale kein \(S\)-Restkeil übrig.
 
-Der einzige durch NS-1 noch nicht behandelte Teil dieser ersten Schale ist damit der kleine Keil
-\[
-\boxed{
-\frac d2\le R<e,
-\qquad R+d<S<a.
-}
-\tag{NS.14}
-\]
+Der Mechanismus ist deutlich einfacher als im zentralen CTX-Sektor: dort musste der Restterm aktiv mitgeführt werden; hier existiert mit \(u=a-x\) ein kompletter Outputkorridor, auf dem sowohl \(y\) als auch \(Ay\) verschwinden. Dadurch reduziert sich die Schur-Blockgleichung auf den zweistufigen \(d\)-Descent (NS.6).
 
-## 6. Strukturelle Beobachtung für den Restkeil
-
-Im Restkeil (NS.14) wird am High-Teil des Annulus gleichzeitig
-
-- der rückwärtige \(b\)-Ast \(w(x-d)\), und
-- die äußere \((3,0)\)-Restschale von \(Ay\)
-
-aktiv. Die natürliche Shell-Symmetrie induziert auf der Annuluskoordinate die Reflexion
-\[
-J_d(x)=2d-x,
-\]
-während der \(q\)-Ast an \(u=a+x\) die Reflexion
-\[
-J_a(x)=a-x
-\]
-induziert. Ihre Komposition ist die Translation
-\[
-\boxed{
-J_d\circ J_a(x)=x+(2d-a)=x+\delta,
-\qquad \delta:=2d-a=d-e.
-}
-\tag{NS.15}
-\]
-Damit entsteht im Restkeil exakt dieselbe kleine Längenskala \(\delta\), die bereits im P12-Low-Radius-Programm die Orbit-/Kammerstruktur steuert. Dies ist eine Strukturbeobachtung, noch kein Injektivitätssatz für (NS.14).
-
-## 7. Firewall und Kandidatenstatus
+## 8. Firewall und Kandidatenstatus
 
 NS-1 betrifft ausschließlich Blockkernvektoren mit \(y\in\mathcal S_R^+\). Nicht bewiesen sind:
 
 - voller \(\ker\mathcal K_{I,A}=0\);
 - voller Schur-Crossblock injektiv;
-- Behandlung des Restkeils (NS.14);
+- Klassifikation aller weiteren nichtzentralen Komponenten von \(\mathcal N_I\);
 - Closed Range / bounded below / uniforme Winkel;
 - Polar Gauge, Strong Terminal Transport, Objekt X oder RH.
 
 Bei unabhängigem GREEN wäre erlaubt:
 
 - **NS-1a:** `✓[M]` — erste nichtzentrale symmetrische Schale ist ein unendlichdimensionaler Unterraum von \(\mathcal N_I\) für \(d/2\le R<d\);
-- **NS-1:** `✓[M]_part` — diese gesamte Schale ist für \(S\le R+d\) transversal; insbesondere für \(e\le R<d\) und jedes \(R<S<a\).
+- **NS-1:** `✓[M]_part` — diese gesamte Schale ist für jedes \(R<S<a\) transversal.
 
 Keine Promotion ohne explizite Freigabe.
