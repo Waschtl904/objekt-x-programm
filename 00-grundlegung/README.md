@@ -1,14 +1,26 @@
 # Grundlegung
 
-Axiome, Ebenenaufbau I–XVI, epistemische Fundierung und die Definition von Objekt X.
+Axiome, Ebenenaufbau I–XVI, epistemische Fundierung und historische Objekt-X-Kandidatenarchitekturen.
+
+> **Reklassifikation 2026-08-26:** Die Dateien in diesem Ordner dokumentieren den
+> Grundlegungs-/Architekturstand früherer Forschungsphasen. Insbesondere
+> `ebene-XVI-objekt-x.md` (Revision 2, 26. Juli 2026) und
+> `objekt_x_minimalaxiome.md` sind **nicht mehr die aktuelle Identitätsdefinition von
+> Objekt X**. Ebene XVI bleibt unverändert als Constraint-/No-Go-/Provenienzregister
+> erhalten; die Minimalaxiome sind als historischer Leitbild-Snapshot markiert.
+>
+> Aktuelle Single Source of Truth:
+> [Objekt X — aktuelle Arbeitsdefinition](../00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
+> Aktuelle P11/R32-Front:
+> [P11/R32-Statusaddendum](../00-uebersicht/P11_R32_STATUS_2026-08-25.md).
 
 **19 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
 
 | ID | Dokument | Status |
 |---|---|---|
-| `—` | [Ebene XVI — Objekt X: Kanonisches Kontrollblatt](ebene-XVI-objekt-x.md) | ✓M·49 ✓K·1 ⚠M·8 ✗M·4 |
+| `—` | [Ebene XVI — Objekt X: Kontrollblatt Revision 2 (historischer Constraint-/Provenienzstand)](ebene-XVI-objekt-x.md) | ✓M·49 ✓K·1 ⚠M·8 ✗M·4 |
 | `—` | [Kritischer Pfad — Gesamtuebersicht (Stand: 1. Juli 2026, NEU-114)](kritischer_pfad_aktuell.md) | ⚠M·5 ✗M·2 ?O·10 |
-| `—` | [Objekt X — Minimalaxiome und epistemischer Status](objekt_x_minimalaxiome.md) | — |
+| `—` | [Objekt X — Minimalaxiome (historischer Leitbild-Snapshot)](objekt_x_minimalaxiome.md) | — |
 | `—` | [X-P1.3a — Spektralrealisierungs-Triage](objekt_x_p1_3a_spektraltriage.md) | — |
 | `—` | [X-P1.3b.0.1 — Wachstumstest für die Beurling-Charakterspur](objekt_x_p1_3b01_wachstumstest.md) | ✓M·3 |
 | `—` | [X-P1.3b.0.2 — Semigroup/Group-Bridge der Charakterspur](objekt_x_p1_3b02_semigroup_group_bridge.md) | ✓M·5 |
