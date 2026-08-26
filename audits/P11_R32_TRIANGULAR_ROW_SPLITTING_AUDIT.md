@@ -351,7 +351,7 @@ Damit ist der gesampelte Gluing-Kernel nicht nur „durch eine endliche Branchre
 Mit dem Exhaustivitätsabschluss
 
 \[
-\mathcal N_I\cong
+\mathcal K_R\cong
 \mathcal Z_R^+\oplus(\mathfrak G_R\cap\ker\Lambda_R)
 \]
 
@@ -359,7 +359,7 @@ folgt als Kandidatenkorollar
 
 \[
 \boxed{
-\mathcal N_I
+\mathcal K_R
 \cong
 \mathcal Z_R^+\oplus L^2(\mathcal V_R),
 \qquad0<R<a.
@@ -375,7 +375,7 @@ Dies ist stärker als eine bloße Klassifikation nach endlich vielen Shell-/Orbi
 
 ## 8. Bedeutung für die nächste Forschungsfront
 
-(TR.24) zeigt zugleich, warum `N_I` groß bleibt: die lokale Hub-Unsichtbarkeitsgleichung lässt eine ganze freie `L2(V_R)`-Koordinate übrig.
+(TR.24) zeigt zugleich, warum `K_R` groß bleibt: die lokale Hub-Unsichtbarkeitsgleichung lässt eine ganze freie `L2(V_R)`-Koordinate übrig.
 
 Der nächste sinnvolle Operator ist deshalb nicht mehr `E_I^*H` isoliert. Man sollte die zusätzliche Full-Rest-/Schur-Bedingung durch `Theta_R^{-1}` ziehen und auf den freien Koordinaten
 
@@ -402,7 +402,7 @@ als Operator auf den **freien physischen Koordinaten** explizit bestimmen und au
 
 `FG-TR1` behauptet ausschließlich Struktur der lokalen inneren Row-Gleichung. Es folgt **nicht**:
 
-- `N_I={0}` — im Gegenteil, (TR.24) macht die verbleibende Freiheit explizit;
+- `K_R={0}` — im Gegenteil, (TR.24) macht die verbleibende Freiheit explizit;
 - Trivialität des augmentierten Blockkerns;
 - Injektivität des vollen Schur-Crossblocks;
 - Closed Range / bounded below / uniforme Winkel für den globalen Block;
