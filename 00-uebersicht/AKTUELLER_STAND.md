@@ -116,7 +116,13 @@ $$\varepsilon(a)=+1\text{ für hinreichend großes }a\text{ (konditional auf Gre
 
 ---
 
-## Objekt-X-Hypothese
+## Objekt-X-Hypothese (historische Kandidatenarchitektur)
+
+> **Hinweis (2026-08-26):** Die folgende Formel war eine Arbeitshypothese der
+> P04/Suzuki-Forschungsphase (Stand 2026-08-08) und gilt seit der Konsolidierung vom
+> 26. August 2026 ausdrücklich als **historische Kandidatenarchitektur**, nicht als
+> aktuelle Definition von Objekt X. Die aktuelle Arbeitsdefinition steht in
+> [OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
 
 $$\text{Objekt X}=\left\{\mathcal{H}(T_a^{\rm w}),\;J_{a,b},\;\overline{\mathscr{D}}_{a,\varepsilon(a)\cdot P}\right\}_{0<a<b}$$
 
@@ -140,3 +146,7 @@ Unter RH (Konjektur): $\mathcal{K}_X:=\varinjlim_a\mathcal{H}(T_a)\to\mathcal{H}
 
 *Zuletzt aktualisiert: 2026-08-08
 (P02 Patch 3.1 im SYN-Re-Audit; P03 kanonische Tagesreferenz)*
+
+---
+
+*Objekt-X-Referenzhinweis ergänzt: 2026-08-26 — siehe [OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).*
