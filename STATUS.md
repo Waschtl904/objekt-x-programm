@@ -6,14 +6,23 @@ Knoten [OFFENE_PROBLEME.md](OFFENE_PROBLEME.md).
 
 > Stand: 3. August 2026 · letzter Eintrag NEU-228 · Direktaudits NEU-210/211 verbucht
 
-> **Objekt-X-Definition:** Die in diesem Dokument referenzierten Objekt-X-Architekturen
-> (Kontrollblatt Ebene XVI, Abschnitt „Objekt-X-Hypothese" in `AKTUELLER_STAND.md`) sind
-> seit 26. August 2026 als **historische Kandidatenarchitekturen** einzuordnen. Die
-> aktuelle Arbeitsdefinition steht in
-> [00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
+> **Konsolidierungsnotiz 26. August 2026:** Dieses Statusregister bleibt die Bilanz des
+> NEU-Journalkerns. Die aktuelle Objekt-X-Arbeitsdefinition und die neuere P11/R32-Front
+> werden separat geführt:
+> [Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) ·
+> [P11/R32-Statusaddendum](00-uebersicht/P11_R32_STATUS_2026-08-25.md).
+>
+> Die in diesem Dokument referenzierten früheren Objekt-X-Architekturen — insbesondere
+> Ebene XVI Revision 2 und die P04/Suzuki-Hypothese — sind seit 26. August 2026 als
+> **historische Kandidaten-/Constraint-Architekturen** einzuordnen, nicht als aktuelle
+> Identitätsdefinition von X. Ihre separat bewiesenen route-spezifischen Sätze und No-Gos
+> behalten ihre jeweilige Provenienz und ihren lokalen Status.
 
-Verbindliche Karte aller Bedingungen an Objekt X, nach logischen Ebenen getrennt:
+Historisch reklassifizierte Karte der bis 26. Juli 2026 gebuchten Bedingungen, Brücken,
+Realisierungsprofile und No-Gos:
 [Ebene XVI — Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md).
+Sie ist weiterhin ein wichtiges Constraint-/Provenienzregister, aber **nicht** die aktuelle
+Single Source of Truth für die Identität von Objekt X.
 
 Kanonisches Eingangsblatt für den HH-Strang:
 [AUDITSTAND-2026-08-03.md](AUDITSTAND-2026-08-03.md).
@@ -44,7 +53,7 @@ Zusätze: `_part` teilweise geschlossen · `_neg` negativ geschlossen · `[K/M]`
 | [O-211-3] geschrieben | $D_g(e(r)) := 0$ | **widerlegt** — verletzt BC-Kreuzrelation | `✗[M]` |
 | [O-211-3corr] | (neu) | $D_g^{\mathrm{corr}}(e(r)) = \mu_m C_{m,n;r} \mu_n^*$ | `✓[M]` |
 | [O-charged-HH1-analytic] | offen | $[D_g^{\mathrm{corr}}] \neq 0$ in $HH^1(A_{\mathrm{alg}}, A_{C^*})_g$ — **erster gesicherter positiver HH-Befund im geladenen Sektor** | `✓[M]` |
-| NEU-222 §0 | „[O-209-6] vollständig geschlossen" | Nur [O-209-6a/b/d] geschlossen; [O-209-6c] `✗[M]` | Auditwarnung |
+| NEU-222 §0 | „[O-209-6] vollständig geschlossen“ | Nur [O-209-6a/b/d] geschlossen; [O-209-6c] `✗[M]` | Auditwarnung |
 | HH-Kette NEU-212–218 | als tragfähig auf Basis NEU-211 | **Beweispflicht:** Kompatibilität mit $D_g^{\mathrm{corr}}$ zu prüfen | `?[O]` re-audit |
 
 Vollständige Belege: [ARCHIV-AUDIT-NEU210.md](ARCHIV-AUDIT-NEU210.md), [ARCHIV-AUDIT-NEU211.md](ARCHIV-AUDIT-NEU211.md).
@@ -190,9 +199,13 @@ Nach Dringlichkeit geordnet.
 | 7 | `[O-188-0..3]` | $H\notin\mathrm{LC}(\hat{\mathbb Z})$ mit $\alpha_k(H)-H\in\mathrm{LC}(\hat{\mathbb Z})$? | NEU-188 |
 | 8 | — | Rückrichtung: $\operatorname{Spec}\subset\mathbb R \Rightarrow \mathrm{RH}$ | — |
 
+> **Aktuellere P11/R32-Front:** Die obige Prioritätenliste ist der NEU-Journalkern vom
+> 3. August. Der post-freeze P11/R32-Engpass vom 26. August ist separat dokumentiert und
+> lautet weiterhin \(\ker\Gamma_I=\{0\}\ ?[O]\).
+
 ---
 
-## 6. Bewusste Katalollücken
+## 6. Bewusste Kataloglücken
 
 | Nummer | Grund |
 |---|---|
@@ -201,7 +214,7 @@ Nach Dringlichkeit geordnet.
 | NEU-57 | als eigenes Blatt nie angelegt — der Knoten (Singulärwert-Wachstum von $J^-$) wird in NEU-56 geführt |
 | NEU-129, NEU-191, NEU-198, NEU-221a/b | im Journal übersprungen; der inhaltliche Anschluss läuft über den jeweils folgenden Eintrag |
 
-**Hinweis zur Ebenentrennung (ab Ebene XVI Revision 2):** HP-1–HP-7 sind **Realisierungsbedingungen** für $H_X$, keine Axiome von $X$. Das Stieltjes-Profil des NEU-221-Strangs impliziert das HP-Profil **nicht**.
+**Historischer Hinweis zur Ebenentrennung (Ebene XVI Revision 2):** HP-1–HP-7 wurden dort als **Realisierungsbedingungen** für $H_X$, nicht als Axiome von $X$, geführt. Seit 26. August 2026 ist Ebene XVI selbst als historisches Constraint-/Architekturblatt reklassifiziert; diese Ebenentrennung bleibt als lokale Buchführungsregel der damaligen Architektur gültig.
 
 ---
 
