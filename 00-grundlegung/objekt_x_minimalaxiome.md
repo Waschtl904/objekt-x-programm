@@ -1,5 +1,12 @@
 # Objekt X — Minimalaxiome und epistemischer Status
 
+> **Reklassifikation 2026-08-26:** Dieses Dokument ist ein **historischer Leitbild-/Suchrahmen-Snapshot** vom 17. Juni 2026, nicht die aktuelle Definition von Objekt X. Insbesondere die Festlegung auf einen kategorialen Träger, die Quasikristall-Deutung und die konkrete spektrale Realisierung sind Kandidatenannahmen dieser Forschungsphase und keine heutigen Axiome von X.
+>
+> Die aktuelle Arbeitsdefinition steht in
+> [`00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`](../00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
+>
+> **Wichtig:** Die Reklassifikation zieht die unten dokumentierten Hypothesen nicht rückwirkend als historische Forschungsfragen zurück und entwertet keine separat bewiesenen route-spezifischen Resultate. Sie beendet nur ihren Status als aktuelle Identitätsdefinition von Objekt X.
+
 > Angelegt: 17. Juni 2026
 > Epistemischer Status durchgehend: ✗ [H] (Hypothese/Leitidee)
 > Zweck: Suchrahmen für Objekt X; keine Behauptung der Existenz.
@@ -7,6 +14,10 @@
 ---
 
 ## Was ist Objekt X?
+
+> **Historische Leitbildformulierung (17. Juni 2026):** Der folgende Abschnitt beschreibt
+> die damalige motivische Suchidee; er ist seit 26. August 2026 nicht mehr die kanonische
+> Objekt-X-Definition.
 
 Objekt X ist kein Objekt *in* einem Raum, sondern ein Objekt *das* Räume erzeugt:
 ein noch hypothetisches mathematisches Prinzip, das
@@ -19,6 +30,10 @@ Aber sein Suchraum ist durch das OP-1/OP-2/OP-3-Programm bereits eng eingekreist
 ---
 
 ## Minimalaxiome
+
+> **Status dieses Abschnitts seit 2026-08-26:** historische Kandidatenaxiome / Leitbild,
+> nicht bindende aktuelle X-Axiome. Einzelne darunter referenzierte mathematische Resultate
+> behalten ihren jeweiligen eigenen Status und ihre Provenienz.
 
 ### A1 — Kategorialer Träger  ✗ [H]
 
@@ -120,22 +135,23 @@ verschiedene mathematische Disziplinen als verschiedene Faserungen
 | A7 | Kategoriale Natur (Motiv-artig) | ✗ [H] |
 
 A5 ist der einzige Punkt mit konkretem Literaturanschluss (OP-1).
-A1-A4, A6-A7 sind sauber formulierte Hypothesen, die das Suchprogramm
-strukturieren.
+A1-A4, A6-A7 sind sauber formulierte Hypothesen, die das damalige Suchprogramm
+strukturierten. Seit 2026-08-26 werden sie als historische Kandidatenaxiome geführt.
 
 ---
 
 ## Operativer Einstieg
 
-Die präziseste operative Frage für den nächsten Schritt:
+> **Historischer Einstiegspunkt:** Die folgende Frage war der empfohlene Einstieg des
+> damaligen Objekt-X-Astes; die aktuelle Forschungsfront ist die P11/R32-Cross-Gram-
+> Transversalität in der kanonischen Arbeitsdefinition.
+
+Die präziseste operative Frage für den damaligen nächsten Schritt:
 
 > Sind Dysons arithmetischer Quasikristall (2009) und Connes' adèlische
 > Raumkonstruktion zwei verschiedene Projektionen desselben hypothetischen X?
 > Welche minimalen Eigenschaften muss X haben, damit beide als Projektionen
 > erscheinen?
-
-Diese Frage ist der empfohlene Einstiegspunkt für den Objekt-X-Ast
-> des Forschungsprogramms.
 
 ---
 
@@ -143,19 +159,19 @@ Diese Frage ist der empfohlene Einstiegspunkt für den Objekt-X-Ast
 
 | OP | Verbindung zu X |
 |----|----------------|
-| OP-1 (SI) | A5: Spektralinvarianz der BC-Algebra — Voraussetzung für A3 |
-| OP-2 ([omega_2]) | A6: Kohomologische Stabilität — Existenzfilter für X |
-| OP-3 ([L_3]) | A6: HH^4-Klasse — weiterer Deformationsfilter |
+| OP-1 (SI) | A5: Spektralinvarianz der BC-Algebra — Voraussetzung für A3 im historischen Leitbild |
+| OP-2 ([omega_2]) | A6: Kohomologische Stabilität — historischer Existenzfilter für X |
+| OP-3 ([L_3]) | A6: HH^4-Klasse — historischer weiterer Deformationsfilter |
 
 ---
 
 ## Was X nicht ist
 
-Zur Klarheit:
+Zur Klarheit des historischen Leitbilds:
 - X ist nicht die Riemannsche Zeta-Funktion selbst.
 - X ist nicht der Hilbert-Polya-Operator (bisher hypothetisch, kein H_X bekannt).
 - X ist nicht die BC-C*-Algebra A_BC^{C*} (die ist bereits konstruiert).
 - X ist nicht ein Punkt in einem Modulraum.
 
-X wäre das Objekt, aus dem all diese als kanonische Projektionen folgen.
-Ob es existiert, ist unbekannt.
+Die aktuelle Arbeitsdefinition legt darüber hinaus **nicht** fest, dass X zwingend ein
+motiv-artiges kategoriales Objekt sein muss. Diese Frage bleibt offen.
