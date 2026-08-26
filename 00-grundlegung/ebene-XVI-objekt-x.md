@@ -1,25 +1,43 @@
-# Ebene XVI — Objekt X: Kanonisches Kontrollblatt
+# Ebene XVI — Objekt X: Kanonisches Kontrollblatt (Revision 2, historisch reklassifiziert)
 
 **Revision 2 · Stand: 26. Juli 2026 (NEU-221e) · ersetzt Revision 1 (Stand NEU-114, 1. Juli 2026)**
+
+> **Reklassifikation 2026-08-26 — keine mathematische Promotion oder Rücknahme:**
+> Revision 2 bleibt als umfangreiches Constraint-, No-Go- und Provenienzregister erhalten,
+> ist aber seit 26. August 2026 **nicht mehr die aktuelle Identitätsdefinition von Objekt X**.
+> Insbesondere das untenstehende „definitorische Fünfschicht-Profil“ ist eine historische
+> Kandidatenarchitektur des Juli-Standes. Die aktuelle Single Source of Truth ist
+> [`00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`](../00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
+>
+> Diese Reklassifikation entwertet **keine** separat bewiesenen route-spezifischen Sätze,
+> No-Gos, Brücken- oder Realisierungsbedingungen dieses Blattes. Sie ändert nur den
+> ontologischen Status der damaligen Gesamtarchitektur: Aussagen, die „X“ mit dem
+> Fünfschichtprofil identifizieren, sind seit 2026-08-26 historisch zu lesen, sofern sie
+> nicht separat in die aktuelle Arbeitsdefinition zurückgebunden werden.
 
 ---
 
 ## Zweck und Gebrauchsanweisung
 
-Dieses Blatt ist **kein Forschungsblatt**, sondern eine verbindliche Karte. Es sammelt an
-einem Ort alle Bedingungen, gegen die ein Kandidat für Objekt X geprüft werden kann, und
-hält fest, welche Bedingung auf welcher logischen Ebene und in welchem Konstruktionspfad
-gilt.
+Dieses Blatt ist **kein Forschungsblatt**, sondern die historische verbindliche Karte der
+Revision-2-Katalogarbeit bis zum 26. Juli 2026. Es sammelt an einem Ort die damals gebuchten
+Bedingungen, gegen die ein Kandidat für Objekt X geprüft wurde, und hält fest, welche
+Bedingung auf welcher logischen Ebene und in welchem Konstruktionspfad galt.
 
-**Pflegeregel.** Jedes neue NEU-Dokument, das eine Bedingung an X, an eine seiner
-Projektionen oder an einen Realisierungskandidaten begründet oder ausschließt, wird hier
+Seit der Reklassifikation vom 26. August 2026 dient es als **Constraint-/Provenienzregister**,
+nicht als aktuelle Definition der Identität von X. Für neue Objekt-X-Identitätsaussagen ist
+die aktuelle Arbeitsdefinition maßgeblich; route-spezifische Resultate dieses Blattes sind
+weiterhin mit ihrer ursprünglichen Provenienz zu zitieren.
+
+**Historische Pflegeregel der Revision 2.** Jedes neue NEU-Dokument, das eine Bedingung an X, an eine seiner
+Projektionen oder an einen Realisierungskandidaten begründet oder ausschließt, wurde hier
 eingetragen — im selben Arbeitsgang, nicht nachträglich. Ein Eintrag ohne Gültigkeitsetikett
-und ohne Pfadzuordnung ist unvollständig.
+und ohne Pfadzuordnung war unvollständig.
 
 ### Die drei logischen Ebenen
 
 Die Revision 1 vermischte Aussagen über $X$ mit Aussagen über seine Realisierungen. Das ist
-korrigiert. Es gelten strikt getrennt:
+in Revision 2 korrigiert. Innerhalb dieser historischen Architektur galten strikt getrennt:
 
 $$
 \boxed{\text{intrinsische Axiome von } X}
@@ -29,9 +47,9 @@ $$
 \boxed{\text{Realisierungsbedingungen für } H_X}
 $$
 
-- **XVI-A** enthält ausschließlich die erste Ebene.
-- **XVI-B** die zweite.
-- **XVI-C** die dritte — insbesondere gehören HP-1–HP-7 hierher und **nicht** zu den Axiomen von $X$.
+- **XVI-A** enthält die damaligen intrinsischen Identitäts-/Axiomaussagen.
+- **XVI-B** die Brückenebene.
+- **XVI-C** die Realisierungsebene — insbesondere gehören HP-1–HP-7 dort und **nicht** zu den damaligen Axiomen von $X$.
 - **XVI-D** enthält Bedingungen, die nur innerhalb eines bestimmten Konstruktionspfades zwingend sind.
 - **XVI-E** ist das Negativregister.
 - **XVI-F** führt die Rückbindungstests.
@@ -42,8 +60,8 @@ Jede Bedingung und jedes No-Go trägt genau eines:
 
 | Etikett | Bedeutung |
 |---|---|
-| `global` | betrifft Objekt $X$ selbst, unabhängig vom Konstruktionsweg |
-| `bridge` | betrifft die Vermittlungsarchitektur $\Pi_\gamma$, $W_\xi$, das Verhältnis von $X$ zu seinen Projektionen |
+| `global` | betraf innerhalb der Revision-2-Architektur Objekt $X$ selbst, unabhängig vom Konstruktionsweg |
+| `bridge` | betrifft die Vermittlungsarchitektur $\Pi_\gamma$, $W_\xi$, das Verhältnis von X-Kandidaten zu ihren Projektionen |
 | `spectral` | betrifft die spektrale Realisierung $H_X$, Spurtyp, Determinantenebene, Schattenklasse |
 | `Feshbach` | gilt nur im Primkanten-/Feshbach-/Selbstenergiepfad |
 | `HH` | gilt nur, solange die kohomologische Schicht Bestandteil der Konstruktion ist |
@@ -61,17 +79,25 @@ Jede Bedingung und jedes No-Go trägt genau eines:
 > Vergleichsoperator, eine skalare Normierung, eine Liftwahl — sagt das Feld *Umfang*
 > ausdrücklich, was **nicht** ausgeschlossen ist.
 
+Diese Sperrregel bleibt auch nach der Reklassifikation uneingeschränkt gültig.
+
 ---
 
-## XVI-A — Identität von Objekt X
+## XVI-A — Historische Identitätsarchitektur von Objekt X (Revision 2)
 
-Hier stehen ausschließlich Aussagen, die $X$ selbst betreffen.
+Dieser Abschnitt dokumentiert die damaligen Aussagen, die Revision 2 dem Objekt X selbst
+zuschrieb. Seit 2026-08-26 sind sie als **historische Kandidatenarchitektur** zu lesen,
+nicht als aktuelle X-Definition.
 
-### A.0 — Definitorisches Fünfschicht-Profil
+### A.0 — Historisches definitorisches Fünfschicht-Profil
 
 $$
 X = \bigl(A_{2D}^{r},\; [\tilde\omega_2],\; [L_3],\; \mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}},\; m \xrightarrow{\;p\;} pm \bigr)
 $$
+
+> **Status seit 2026-08-26:** Die Gesamtidentifikation dieser fünf Schichten mit Objekt X
+> ist historisch. Die Statusangaben einzelner Schichten in der folgenden Tabelle sind
+> Provenienzangaben der damaligen Route und werden dadurch nicht automatisch geändert.
 
 | Schicht | Typ | Rolle | Status |
 |---|---|---|---|
@@ -161,20 +187,20 @@ Zur Abgrenzung, unverändert aus den Minimalaxiomen:
 
 ### A.11 — Verhältnis der beiden Axiomensysteme
 
-Es existieren zwei Axiomatisierungen. Sie sind **nicht identisch** und werden ab dieser
-Revision unterschiedlich geführt:
+Es existierten zwei Axiomatisierungen. Sie waren **nicht identisch** und wurden in
+Revision 2 unterschiedlich geführt:
 
-| System | Quelle | Rolle ab Revision 2 |
+| System | Quelle | Rolle in Revision 2 / heutige Einordnung |
 |---|---|---|
-| A1–A7 | `objekt_x_minimalaxiome.md`, 17. Juni 2026, durchgehend `✗[H]` | **Leitbild.** Motivischer Fernhorizont (Dyson-Quasikristall und Connes-Adele als zwei Projektionen desselben Objekts). Nicht operativ, keine Prämisse in Beweisen. |
-| X.1–X.10 / XVI-A | Ebene XVI | **Operativ.** Verbindlich für alle Katalogarbeit. |
+| A1–A7 | `objekt_x_minimalaxiome.md`, 17. Juni 2026, durchgehend `✗[H]` | **Historisches Leitbild.** Motivischer Fernhorizont; nie Prämisse in Beweisen. Seit 2026-08-26 ausdrücklich historischer Kandidatenrahmen. |
+| X.1–X.10 / XVI-A | Ebene XVI Revision 2 | **Damals operativ verbindlich für die Katalogarbeit bis 26. Juli 2026.** Seit 2026-08-26 Constraint-/Provenienzregister, nicht aktuelle Identitätsdefinition. |
 
-Die Zuordnung: A1 → A.3, A2 → A.4, A3 → **XVI-C** (nicht XVI-A), A4 → ohne operatives
+Die damalige Zuordnung: A1 → A.3, A2 → A.4, A3 → **XVI-C** (nicht XVI-A), A4 → ohne operatives
 Gegenstück, A5 → A.3, A6 → A.5 plus XVI-D/P3, A7 → A.2.
 
-Bemerkenswert: **A3 der Minimalaxiome, die spektrale Realisierungseigenschaft, ist nach der
-Ebenentrennung kein Axiom von $X$ mehr**, sondern eine Realisierungsbedingung. Das ist die
-inhaltlich wichtigste Konsequenz dieser Revision.
+Bemerkenswert: **A3 der Minimalaxiome, die spektrale Realisierungseigenschaft, war nach der
+Ebenentrennung kein Axiom von $X$ mehr**, sondern eine Realisierungsbedingung. Diese
+Ebenentrennung bleibt als historische Buchführungsinformation erhalten.
 
 ---
 
@@ -206,7 +232,7 @@ $$
 Tests ST-3/ST-4 in NEU-116.C.15. Der Faktor entsteht als $e^{-sT_{\mathrm{rel}}}\big|_{s=1/2}$
 im Übergang $X \to X^{\mathrm{val}}$, **nicht** innerhalb der Residuenstruktur von $X$.
 
-> **Verbindliche Folgerung:** $\Theta_{1/2}$ darf nicht stillschweigend in die
+> **Verbindliche Folgerung innerhalb der Revision-2-Architektur:** $\Theta_{1/2}$ darf nicht stillschweigend in die
 > Residuenstruktur von $X$ eingebaut werden. Jede Konstruktion, die ihn dort verwendet,
 > arbeitet in Wahrheit mit $X^{\mathrm{val}}$ und muss das deklarieren.
 
@@ -232,9 +258,9 @@ und damit der **Herglotz-Träger des Nullstellenanteils**, nicht $X$.
 
 ## XVI-C — Spektrale Realisierungsprofile
 
-Hier stehen Bedingungen an **Realisierungen** von $X$, nicht an $X$. Zwei Profile werden
-strikt getrennt geführt, weil das Programm derzeit an beiden gleichzeitig arbeitet und sie
-verschiedene Stärke haben.
+Hier stehen Bedingungen an **Realisierungen** von X-Kandidaten, nicht an der aktuellen
+Identitätsdefinition von X. Zwei Profile werden strikt getrennt geführt, weil die damalige
+Revision an beiden gleichzeitig arbeitete und sie verschiedene Stärke haben.
 
 ### C.1 — HP-Profil (starke Realisierung) `spectral`
 
@@ -392,7 +418,7 @@ tatsächlich erzwingt.
 | P1.2 | Gradierte Normierung (Diagonalmatrix $D_N$) statt eines Skalars $\kappa_N$ | NEU-78, 82, 83, 123.H | Anforderung |
 | P1.3 | Dichte Trägerstruktur $\kappa_N\asymp N$, nicht rein primzahlindiziert | NEU-82, 83 | Anforderung |
 | P1.4 | **Primkantendiagonalität der quellseitig induzierten $\mathrm{Wres}$-Paarung.** In einer ausdrücklich orthogonalen Direktsumme ist $\langle\Psi_p,\Psi_q\rangle=0$ definitorisch und kein Satz; offen ist, ob die aus $\mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}}$ **induzierte** Paarung diese Diagonalität liefert. Der Pullback $\kappa^*\mathrm{Wres}$ tut es nicht (NEU-44.X3). Genau deshalb trennt NEU-43 den graph-erweiterten vom kollabierten Raum | — | `❓[O]` `[O-144-1]` |
-| P1.5 | Nichtüberzählung: $\dim\ker(1-\mathcal K_\infty(\rho)) = m_\rho$ | — | `❓[O]` NEU-49 Satz 49.3, „Kern-Engpass" |
+| P1.5 | Nichtüberzählung: $\dim\ker(1-\mathcal K_\infty(\rho)) = m_\rho$ | — | `❓[O]` NEU-49 Satz 49.3, „Kern-Engpass“ |
 | P1.6 | Spurklassenkriterium für die volle gekoppelte Matrix, formuliert über die echte Spektralbasis von $D_{\mathrm{rel}}$ | — | `❓[O]` NEU-51/52; Eigenbasis existiert nicht explizit |
 | P1.7 | Intrinsizität von $\mathrm{Wres}_{\mathrm{rel}}$ aus $\mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}}$ | — | `❓[O]` NEU-44.X3 (vgl. A.7) |
 | P1.8 | **Hebungsabstieg:** $\widetilde T_p^{\mathrm{raw}}(\Delta_p^{\mathrm{adm}}) \subseteq \mathcal N_{\mathrm{Wres,rel}}$ mit $\Delta_p^{\mathrm{adm}} = \mathcal A_p^{\mathrm{adm}} - \mathcal A_p^{\mathrm{adm}}$. Bei $0\in\mathcal A_p^{\mathrm{adm}}$ ist dies wegen der Linearität von $\widetilde T_p^{\mathrm{raw}}$ **äquivalent** zum Test auf ganz $\mathcal A_p^{\mathrm{adm}}$. Ein Test nur auf dem Tangentialraum (157.4) ist **nicht** ausreichend | — | **gesperrt** NEU-221e, `[O-221-1c1a0]` |
@@ -406,7 +432,7 @@ tatsächlich erzwingt.
 |---|---|---|
 | P2.1 | Unbeschränkte Operatoren und regulierte Spuren im Bereich $0<\Re\beta\le 1$; $R_p \gtrsim p/\log p$ ist unbeschränkt (die Quelle beweist keine untere Schranke mit Konstante exakt $1$) | `✓[M]` NEU-140/141/144 |
 | P2.2 | Regularisierungsschema für $\operatorname{Tr}_{\mathrm{reg}}(R\Sigma_{\mathrm{rel}}^{\mathrm{ren}})$ im kritischen Streifen | `❓[O]` `[O-144-3]` |
-| P2.3 | Quantitative Schranken im Primschalen-Abel-Lemma; Kancellation „gefährdet nahe $\beta_0\approx s$" | `❓[O]` NEU-133 |
+| P2.3 | Quantitative Schranken im Primschalen-Abel-Lemma; Kancellation „gefährdet nahe $\beta_0\approx s$“ | `❓[O]` NEU-133 |
 
 Die Kette trägt gesichert bis $\Re\beta>1$ und bricht exakt am kritischen Streifen.
 
@@ -436,7 +462,7 @@ Gilt nur, solange die kohomologische Schicht Bestandteil der Konstruktion bleibe
 | P4.8 | Knoten der **verlassenen** Gitterroute: `[O-206-4]`, `[O-207-5b]`, `[O-207-5c]`, `[O-208-5]` | — | `❓[O]`, für die faktoriale Trasse gegenstandslos |
 
 > **Statuskorrektur (NEU-222, 26. Juli 2026).** Revision 2 führte P4 als offenen
-> Entscheidungsknoten und „letzten bekannten Konstruktionsweg". Das war **falsch**:
+> Entscheidungsknoten und „letzten bekannten Konstruktionsweg“. Das war **falsch**:
 > `[O-209-5]` und `[O-209-6]` sind seit dem 20. Juli durch NEU-210 geschlossen, und
 > `[O-207-5b]` gehört zur verlassenen mehrdimensionalen Gitterroute, nicht zur faktorialen
 > Trasse.
@@ -525,7 +551,7 @@ P5 ist der einzige registrierte Zugang zu HP-2 (vgl. C.4), aber nicht der einzig
 
 ## XVI-E — Negativregister
 
-Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativregister (X.neg.1–7) um die im Forschungsjournal dokumentierten No-Go-Resultate aus den Katalogabschnitten 01 bis 07. Jeder Eintrag trägt genau ein **Gültigkeitsetikett**: `global` (betrifft X selbst, wegunabhängig), `bridge` (betrifft die Vermittlungsarchitektur zwischen X und seinen Projektionen/Interfaces), `spectral` (betrifft die spektrale Realisierung \(H_X\), Spurtyp, Determinantenebene oder Schattenklasse), `Feshbach` (nur im Primkanten-/Feshbach-/Selbstenergiepfad gültig), `HH` (nur solange die kohomologische Schicht Bestandteil der Konstruktion ist) oder `route-conditional` (nur unter zusätzlichen Modellannahmen eines konkreten Kandidaten). Das Feld „Betroffener Konstruktionspfad" referenziert die fünf Wege P1 (Feshbach-/Primkantenpfad), P2 (Selbstenergie-/Mangoldtpfad), P3 (HH-/zyklische Kohomologie), P4 (singuläre Potentialroute), P5 (Vergleichsoperator-/Konfinementpfad) sowie P0 für pfadunabhängige Aussagen. Die Sortierung folgt der Reichweite: zuerst wegunabhängige (`bridge`, `spectral`), dann pfadgebundene Einträge. Jeder Eintrag benennt explizit, welchen *konkreten* Kandidaten oder Mechanismus er trifft und was er ausdrücklich nicht ausschließt — pauschale Verallgemeinerungen zu Axiomen über X sind vermieden.
+Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativregister (X.neg.1–7) um die im Forschungsjournal dokumentierten No-Go-Resultate aus den Katalogabschnitten 01 bis 07. Jeder Eintrag trägt genau ein **Gültigkeitsetikett**: `global` (betraf innerhalb der Revision-2-Architektur X selbst, wegunabhängig), `bridge` (betrifft die Vermittlungsarchitektur zwischen X-Kandidaten und ihren Projektionen/Interfaces), `spectral` (betrifft die spektrale Realisierung \(H_X\), Spurtyp, Determinantenebene oder Schattenklasse), `Feshbach` (nur im Primkanten-/Feshbach-/Selbstenergiepfad gültig), `HH` (nur solange die kohomologische Schicht Bestandteil der Konstruktion ist) oder `route-conditional` (nur unter zusätzlichen Modellannahmen eines konkreten Kandidaten). Das Feld „Betroffener Konstruktionspfad“ referenziert die fünf Wege P1 (Feshbach-/Primkantenpfad), P2 (Selbstenergie-/Mangoldtpfad), P3 (HH-/zyklische Kohomologie), P4 (singuläre Potentialroute), P5 (Vergleichsoperator-/Konfinementpfad) sowie P0 für pfadunabhängige Aussagen. Die Sortierung folgt der Reichweite: zuerst wegunabhängige (`bridge`, `spectral`), dann pfadgebundene Einträge. Jeder Eintrag benennt explizit, welchen *konkreten* Kandidaten oder Mechanismus er trifft und was er ausdrücklich nicht ausschließt — pauschale Verallgemeinerungen zu Axiomen über die aktuelle Arbeitsdefinition von X sind unzulässig.
 
 ---
 
@@ -536,9 +562,9 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 | Feld | Inhalt |
 |---|---|
 | **Ausgeschlossener Kandidat** | Die direkte Gleichsetzung von Objekt X mit der aus NEU-77–113 konstruierten arithmetischen Weyl-Herglotz-Funktion \(m_{\mathrm{arith}}\) als *identisches* Objekt (nicht nur als Bild einer Abbildung von X). |
-| **Exakte Hypothesen** | Es wird lediglich die kategoriale Verschiedenheit der Konstruktionsebenen unterstellt: \(m_{\mathrm{arith}}\) ist ein eindimensionales, RH-äquivalentes Herglotz-Objekt; X ist fünfschichtig und kohomologisch-kategorial höherstufig. Keine weiteren Zusatzannahmen (kein Parameterbereich, kein Algebrentyp) nötig — die Aussage ist eine reine Typfeststellung. |
+| **Exakte Hypothesen** | Es wird lediglich die kategoriale Verschiedenheit der Konstruktionsebenen unterstellt: \(m_{\mathrm{arith}}\) ist ein eindimensionales, RH-äquivalentes Herglotz-Objekt; X ist in der damaligen Architektur fünfschichtig und kohomologisch-kategorial höherstufig. Keine weiteren Zusatzannahmen (kein Parameterbereich, kein Algebrentyp) nötig — die Aussage ist eine reine Typfeststellung innerhalb dieser Architektur. |
 | **Umfang** | Schließt nur die *Identität* \(X = m_{\mathrm{arith}}\) aus. Es bleibt ausdrücklich zulässig, dass \(m_{\mathrm{arith}} = \Pi_\gamma(X)\) gilt, also dass \(m_{\mathrm{arith}}\) eine echte Projektion von X auf eine "spektrale γ-Achse" ist — sofern die Rückbindung der oberen Schichten (\([\tilde\omega_2]\), \([L_3]\), \(\mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}}\), Primkanten) gelingt. |
-| **Positive Folgerung** | X muss über eine explizite Projektionsabbildung \(\Pi_\gamma\) vermittelt werden, die erst nachträglich (nach Rückbindungstest) mit \(m_{\mathrm{arith}}\) identifiziert werden darf. Dies erzwingt für X selbst eine echte Mehrschichtigkeit, die nicht auf die Spektralschatten-Spur reduzierbar ist. |
+| **Positive Folgerung** | X muss über eine explizite Projektionsabbildung \(\Pi_\gamma\) vermittelt werden, die erst nachträglich (nach Rückbindungstest) mit \(m_{\mathrm{arith}}\) identifiziert werden darf. Dies erzwingt für die damalige X-Architektur eine echte Mehrschichtigkeit, die nicht auf die Spektralschatten-Spur reduzierbar ist. |
 | **Betroffener Konstruktionspfad** | P0 (betrifft die Systemarchitektur der Rückbindung, unabhängig vom gewählten Konstruktionsweg). |
 
 ---
@@ -549,11 +575,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Die direkte Gleichsetzung der Spurform-Schicht von X, \(\mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}}\) (eine lineare Spur-/Distributionsform), mit der bilinearen Weil-Quadratform \(Q_{\mathrm{Weil}}\) der Explizitformel. |
+| **Ausgeschlossener Kandidat** | Die direkte Gleichsetzung der Spurform-Schicht der damaligen X-Architektur, \(\mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}}\) (eine lineare Spur-/Distributionsform), mit der bilinearen Weil-Quadratform \(Q_{\mathrm{Weil}}\) der Explizitformel. |
 | **Exakte Hypothesen** | Reine Gradbedingung: \(\mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}}\) ist linear, \(Q_{\mathrm{Weil}}\) ist quadratisch/bilinear. Der Ausschluss gilt unabhängig vom konkreten Inhalt beider Objekte — es handelt sich um eine typtheoretische, nicht um eine inhaltliche Aussage. Keine weitere Voraussetzung nötig. |
 | **Umfang** | Schließt nur die *direkte* Gleichsetzung beider Formen aus, nicht die Existenz eines Zusammenhangs zwischen ihnen. Insbesondere nicht ausgeschlossen: ein lineares Zwischenobjekt \(W_\xi\) (Weil-Distribution auf dem Paley-Wiener-Raum), das erst durch Pairing mit sich selbst (Faltung, \(Q_{\mathrm{Weil}}[f] = \langle W_\xi, f^\ast\ast f\rangle\)) zur Quadratform wird. |
-| **Positive Folgerung** | Die Spurform-Schicht von X muss über ein eigenständiges lineares Interface \(W_\xi\) vermittelt werden, bevor sie an die (quadratische) Weil-Explizitformel andocken kann; \(\mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}} \stackrel{?}{=} W_\xi\) bleibt der präzisierte, noch offene Anschlusstest. |
-| **Betroffener Konstruktionspfad** | P0 (betrifft die Vermittlungsschicht zwischen der \(\mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}}\)-Komponente von X und der Weil-Formel, unabhängig vom Konstruktionsweg der Spurform selbst). |
+| **Positive Folgerung** | Innerhalb der damaligen Architektur musste die Spurform-Schicht über ein eigenständiges lineares Interface \(W_\xi\) vermittelt werden; \(\mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}} \stackrel{?}{=} W_\xi\) blieb der präzisierte offene Anschlusstest. |
+| **Betroffener Konstruktionspfad** | P0. |
 
 ---
 
@@ -564,9 +590,9 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 | Feld | Inhalt |
 |---|---|
 | **Ausgeschlossener Kandidat** | (a) Jedes nichttriviale zentrale Element der \(C^*\)-vervollständigten Bost-Connes-Algebra \(A_{C^*}\); (b) jeder stetige globale \(A_{\mathrm{alg}}\)-Bimoduloperator \(R: A_{C^*}\to\mathcal A^\infty\) mit \(\mathcal A^\infty\subsetneq A_{C^*}\) als *echtem* Teilraum. |
-| **Exakte Hypothesen** | Voraussetzungen der Beweiskette: \(C(\widehat{\mathbb Z})\) ist MASA in \(A_{C^*}\) (topologisch freie \(\mathbb{Q}_+^\times\)-Wirkung, Amenabilität, Eckpunktübertragung); \(\sigma_k\)-Invarianz aus \([f,\mu_k]=0\); Faktorialkonvergenz \(j!\cdot y\to0\). Zusatzkorrektur gegenüber früherer Fassung: \(A_{C^*}\) ist *nicht* einfach — der frühere Schluss „injektiv ⟹ treu" war unzulässig und wurde zurückgenommen. |
+| **Exakte Hypothesen** | Voraussetzungen der Beweiskette: \(C(\widehat{\mathbb Z})\) ist MASA in \(A_{C^*}\) (topologisch freie \(\mathbb{Q}_+^\times\)-Wirkung, Amenabilität, Eckpunktübertragung); \(\sigma_k\)-Invarianz aus \([f,\mu_k]=0\); Faktorialkonvergenz \(j!\cdot y\to0\). Zusatzkorrektur gegenüber früherer Fassung: \(A_{C^*}\) ist *nicht* einfach — der frühere Schluss „injektiv ⟹ treu“ war unzulässig und wurde zurückgenommen. |
 | **Umfang** | Schließt nur nichttriviale *zentrale* Elemente und *globale, stetige, echte* Bimodul-Retraktionen aus. Schließt nicht jede Art von Unterraumkonstruktion aus — lokale, nicht-globale oder unstetige Konstruktionen sowie Konstruktionen auf der algebraischen (nicht \(C^*\)-vervollständigten) Algebra \(A_{\mathrm{alg}}\) selbst sind nicht erfasst. |
-| **Positive Folgerung** | Die Hochschild-Konstruktionen von \([\tilde\omega_2]\), \([L_3]\) und letztlich \(\mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}}\), die auf \(A_{C^*}\) aufbauen, dürfen sich nicht auf zentrale Cup-Faktoren oder globale Retraktionen stützen — jede Zerlegung dieser HH-Schichten von X muss ohne solche Mechanismen auskommen. |
+| **Positive Folgerung** | Die Hochschild-Konstruktionen, sofern sie als Kandidatenroute weiterverwendet werden, dürfen sich nicht auf zentrale Cup-Faktoren oder globale Retraktionen stützen. |
 | **Betroffener Konstruktionspfad** | P3 (HH-/zyklische Kohomologie). |
 
 ---
@@ -580,8 +606,8 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 | **Ausgeschlossener Kandidat** | Die Realisierung der archimedischen Gamma-Rohform \(\Lambda_\Gamma(h)\) als gewöhnliche Hilbertraumspur \(\mathrm{Tr}_{B(L^2)}(\gamma_\infty(H_\infty)h(H_\infty))\) eines Operator-Funktionalkalküls. |
 | **Exakte Hypothesen** | Strukturell, unabhängig vom Abklingverhalten der Testfunktion \(h\): Unter der Mellintransformation wird der Operator zum Multiplikationsoperator \(M_{\gamma_\infty h}\) auf dem nichtatomaren Maßraum \((\mathbb R, dt)\); Multiplikationsoperatoren mit \(a\not\equiv0\) sind dort nie kompakt, insbesondere nicht spurklassig. Keine Zusatzbedingung an \(h\) erforderlich. |
 | **Umfang** | Schließt nur die gewöhnliche (\(\mathcal S_1\)-)Hilbertraumspur dieser konkreten archimedischen Komponente aus. Schließt nicht die Existenz einer semifiniten Spur aus — diese wird tatsächlich erfolgreich konstruiert (\(\Lambda_\Gamma(h)=\frac1{2\pi}\tau_\infty(\gamma_\infty(H_\infty)h(H_\infty))\) mit der n.f.s.-Spur \(\tau_\infty\) auf \(L^\infty(\mathbb R,dt)\)). |
-| **Positive Folgerung** | Die archimedische Komponente der Spurform \(\mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}}\) von X muss als semifinite (statt gewöhnliche Hilbertraum-)Spur realisiert werden; der intrinsische geometrische/streutheoretische Ursprung der auftretenden Digammafunktion bleibt offen. |
-| **Betroffener Konstruktionspfad** | P2 (Selbstenergie-/Mangoldtpfad — die Gamma-Rohform entsteht als archimedischer Gegenpart zu den endlichen Primkanal-Selbstenergie-Termen der Weil-Explizitformel-Realisierung). |
+| **Positive Folgerung** | Für jede Route, die diese Gamma-Rohform verwendet, muss die archimedische Komponente als semifinite statt gewöhnliche Hilbertraumspur behandelt werden; der intrinsische geometrische/streutheoretische Ursprung der Digammafunktion bleibt offen. |
+| **Betroffener Konstruktionspfad** | P2. |
 
 ---
 
@@ -591,11 +617,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Die direkte Identifikation „T1": \(|c_p|^2=\log p\), also die Hoffnung, dass die Kanalnorm \(|c_p|^2 = \mathrm{Tr}_{\mathcal S_1}(C_p^{\mathrm{rel}}(C_p^{\mathrm{rel}})^\sharp)\) selbst unmittelbar die Mangoldt-Gewichtung trägt. |
+| **Ausgeschlossener Kandidat** | Die direkte Identifikation „T1“: \(|c_p|^2=\log p\), also die Hoffnung, dass die Kanalnorm \(|c_p|^2 = \mathrm{Tr}_{\mathcal S_1}(C_p^{\mathrm{rel}}(C_p^{\mathrm{rel}})^\sharp)\) selbst unmittelbar die Mangoldt-Gewichtung trägt. |
 | **Exakte Hypothesen** | Beruht auf der bewiesenen oberen Schranke \(|c_p|^2=O((\log p)^2/p)\) (NEU-135.D). Daraus folgt für große \(p\): \(|c_p|^2/\log p = O(\log p/p)\to 0\) — die Schranke selbst ist unbedingt bewiesen (\(\times[F]\) für T1 direkt), keine weiteren Modellannahmen nötig. |
 | **Umfang** | Schließt nur die *ungedämpfte* Identifikation \(|c_p|^2=\log p\) für große \(p\) aus. Schließt nicht aus, dass die gewöhnliche Spur \(\mathrm{Tr}(\Sigma_{\mathrm{rel}}^{\mathrm{ren}}(\beta))\) eine *gedämpfte* Mangoldt-Spur liefert, die durch einen zusätzlichen Renormierungsoperator wiederhergestellt werden kann. |
-| **Positive Folgerung** | Die Spurklassen-Komponente, die in \(\mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}}\) und die Zeta-Identifikation von X eingeht, benötigt zwingend einen zusätzlichen Renormierungsoperator \(R_p=\log p/|c_p|^2\) — die reine Spurklassennorm allein trägt die arithmetische Gewichtung nicht. |
-| **Betroffener Konstruktionspfad** | P2 (Selbstenergie-/Mangoldtpfad). |
+| **Positive Folgerung** | Die betreffende Spurklassenroute benötigt einen zusätzlichen Renormierungsoperator \(R_p=\log p/|c_p|^2\); die reine Spurklassennorm allein trägt die arithmetische Gewichtung nicht. |
+| **Betroffener Konstruktionspfad** | P2. |
 
 ---
 
@@ -607,9 +633,9 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 |---|---|
 | **Ausgeschlossener Kandidat** | Ein *beschränkter*, primkanaldiagonaler Renormierungsoperator \(R\) (mit \(R_p=\log p/|c_p|^2\)), der die Mangoldt-Spur exakt und im gewöhnlichen Spurklassensinn für den gesamten Bereich \(0<\Re\beta\le1\) korrekt gewichtet. |
 | **Exakte Hypothesen** | Bedingt auf zwei Annahmen: (1) \(R\) ist primkanaldiagonal (setzt T2-Orthogonalität voraus, selbst offen); (2) die Wachstumsschranke \(R_p\gtrsim p/\log p\) aus NEU-140/NEU-135.D. Unter diesen Annahmen gilt zusätzlich: \(R\Sigma_{\mathrm{rel}}^{\mathrm{ren}}(\beta)\in\mathcal S_1\) im Mangoldt-Sinn \(\iff \Re\beta>1\). |
-| **Umfang** | Schließt nur beschränkte, primkanaldiagonale Renormierungsoperatoren aus und nur die gewöhnliche Spurklassentheorie für \(0<\Re\beta\le1\). Schließt nicht aus, dass eine regulierte Spur (analytische Fortsetzung, resolventenartige Regularisierung, Hadamard-Renormierung) im kritischen Bereich funktioniert; schließt auch nicht die (aufwendigere, „deutlich instabilere") biorthogonale Renormierung aus, falls T2-Orthogonalität scheitert. |
-| **Positive Folgerung** | Im RH-relevanten Bereich \(0<\Re\beta\le1\) muss X mit einem notwendig unbeschränkten Renormierungsoperator und einer regulierten (nicht gewöhnlichen) Spur arbeiten — die gewöhnliche Spurklassentheorie ist dort strukturell unzureichend. |
-| **Betroffener Konstruktionspfad** | P2 (Selbstenergie-/Mangoldtpfad). |
+| **Umfang** | Schließt nur beschränkte, primkanaldiagonale Renormierungsoperatoren aus und nur die gewöhnliche Spurklassentheorie für \(0<\Re\beta\le1\). Schließt nicht aus, dass eine regulierte Spur (analytische Fortsetzung, resolventenartige Regularisierung, Hadamard-Renormierung) im kritischen Bereich funktioniert; schließt auch nicht die biorthogonale Renormierung aus, falls T2-Orthogonalität scheitert. |
+| **Positive Folgerung** | Im RH-relevanten Bereich benötigt diese Route einen unbeschränkten Renormierungsoperator und eine regulierte Spur. |
+| **Betroffener Konstruktionspfad** | P2. |
 
 ---
 
@@ -619,11 +645,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Der isolierte, rein vorwärtsgerichtete (strikt oberdreieckige) Mangoldt-gewichtete Jacobi-Operator \(J_N^\Lambda\) auf endlichem \(\ell^2(I_N)\) als Träger einer nichttrivialen Spur-/Determinantenstruktur für X. |
-| **Exakte Hypothesen** | Gilt für \(J_N^\Lambda\) in seiner isolierten (nicht mit ihrem Adjungierten symmetrisierten) Form auf endlichem \(N\); die algebraische Identität \((J_N^\Lambda)^N=0\) ist unbedingt (reine Struktureigenschaft strikt oberdreieckiger Matrizen). |
-| **Umfang** | Schließt nur die *isolierte* Vorwärts-Shift-Klasse aus. Schließt nicht den Jacobi-Abschluss \(A_N^\Lambda=H_N+J_N^\Lambda+(J_N^\Lambda)^*\) aus (selbstadjungiert, nichttriviales Spektrum), nicht die relative Determinante \(\det(I+(J_N^\Lambda+(J_N^\Lambda)^*)(H_N-z)^{-1})\), und nicht einen echten Feshbach-Schur-Komplement-Operator. |
-| **Positive Folgerung** | Für X gilt: Spur (\(=0\) für \(k\ge1\)) und Fredholm-Determinante (\(\equiv1\)) des isolierten Vorwärtsoperators tragen keine arithmetische Information — die zentrale Operator-Komponente \(A_{2D}^r\) muss auf einer symmetrisierten oder Schur-komplementierten Konstruktion beruhen, nicht auf einem reinen Shift. |
-| **Betroffener Konstruktionspfad** | P2 (Selbstenergie-/Mangoldtpfad). |
+| **Ausgeschlossener Kandidat** | Der isolierte, rein vorwärtsgerichtete (strikt oberdreieckige) Mangoldt-gewichtete Jacobi-Operator \(J_N^\Lambda\) auf endlichem \(\ell^2(I_N)\) als Träger einer nichttrivialen Spur-/Determinantenstruktur. |
+| **Exakte Hypothesen** | Gilt für \(J_N^\Lambda\) in seiner isolierten Form auf endlichem \(N\); \((J_N^\Lambda)^N=0\) ist unbedingt. |
+| **Umfang** | Schließt nur die isolierte Vorwärts-Shift-Klasse aus; nicht den Jacobi-Abschluss, relative Determinanten oder echte Feshbach-Schur-Komplemente. |
+| **Positive Folgerung** | Spur und Fredholm-Determinante des isolierten Vorwärtsoperators tragen keine arithmetische Information; eine entsprechende Realisierungsroute muss symmetrisieren oder Schur-komplementieren. |
+| **Betroffener Konstruktionspfad** | P2. |
 
 ---
 
@@ -633,11 +659,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Der kollektive Birman-Schwinger-Operator \(K_N\), konstruiert als reine Blockdiagonale \(\bigoplus_p K_p\) über Primkanäle, als Lösung des Nichtüberzählungsproblems (korrekte Multiplizität \(m_\rho\) der Nullstellen). |
-| **Exakte Hypothesen** | Reine algebraische Identität, ohne Zusatzannahmen: \(\det(1-\mathcal K_N^{\mathrm{diag}})=\prod_{p\le N}\det(1-K_p)\) und \(\ker(1-\mathcal K_N^{\mathrm{diag}}(\rho))=\bigoplus_{p\le N}\ker(1-K_p(\rho))\). |
-| **Umfang** | Schließt nur die *blockdiagonale* Konstruktion aus, die die Einzelkanalbeiträge rein additiv reproduziert. Schließt nicht jede Konstruktion eines kollektiven Operators aus \(K_p\)-Bausteinen aus — insbesondere nicht die Feshbach-Form \(\mathcal K_N(s)=V_N^*(D_{\mathrm{rel}}-s)^{-1}V_N\) mit Off-Diagonal-Kopplung \(K_{pq}(s)=V_p^*(D_{\mathrm{rel}}-s)^{-1}V_q\neq0\) für \(p\neq q\). |
-| **Positive Folgerung** | Der primkanten-basierte Birman-Schwinger-Baustein von \(A_{2D}^r\) muss echte Kreuzterme (Off-Diagonal-Kopplung) zwischen Primkanälen tragen; diese sollen über \([\tilde\omega_2]\), \([L_3]^\circ\), \(\mathrm{Wres}\) motiviert werden, die explizite Formel bleibt offen. |
-| **Betroffener Konstruktionspfad** | P1 (Feshbach-/Primkantenpfad). |
+| **Ausgeschlossener Kandidat** | Der kollektive Birman-Schwinger-Operator \(K_N\), konstruiert als reine Blockdiagonale \(\bigoplus_p K_p\) über Primkanäle, als Lösung des Nichtüberzählungsproblems. |
+| **Exakte Hypothesen** | Reine algebraische Identität: \(\det(1-\mathcal K_N^{\mathrm{diag}})=\prod_{p\le N}\det(1-K_p)\) und \(\ker(1-\mathcal K_N^{\mathrm{diag}}(\rho))=\bigoplus_{p\le N}\ker(1-K_p(\rho))\). |
+| **Umfang** | Schließt nur die blockdiagonale Konstruktion aus, nicht kollektiv gekoppelte Feshbach-Formen mit echten Off-Diagonaltermen. |
+| **Positive Folgerung** | Der primkanten-basierte Birman-Schwinger-Baustein muss in dieser Route echte Kreuzterme zwischen Primkanälen tragen. |
+| **Betroffener Konstruktionspfad** | P1. |
 
 ---
 
@@ -647,11 +673,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Eine isometrische (normerhaltende) Einbettung \(U_N:\ell^2(I_N)\to\mathcal H_N\), die den ungewichteten, exakten Kollapsoperator \(J_N^-\) über \(U_N^* S_N R_N D_{BC,N} U_N = J_N^-\) reproduziert. |
-| **Exakte Hypothesen** | Gilt für endliches \(N\) mit \(|S_N|>1\) (mehr als ein Kanal). Beweis über Widerspruch: Einbettungsbedingung \(\sum_n|a_{n,N}|^2=1\) erzwingt \(|a_{n,N}|^2<1\) für alle \(n\), unvereinbar mit der für \(J_N^-\) nötigen Bedingung \(|a_{n,N}|^2=1\) für alle \(n\) gleichzeitig. |
-| **Umfang** | Schließt nur *isometrische* Kollaps-Einbettungen aus. Schließt nicht aus: (1) \(J_N^-\) als unnormalisierte Wechselwirkungsmatrix mit extern absorbiertem Faktor \(|S_N|\); (2) kanalabhängige Renormierung \(\widetilde J_N^-=|S_N|^{-1}J_N^-\); (3) einen expliziten Kopplungsfaktor \(\Pi_N=|S_N|^{1/2}U_N\). Der Jacobi-kompatible Anschluss (Skalierung im Limes) bleibt offen. |
-| **Positive Folgerung** | Die Kollaps-Komponente des Feshbach-Bausteins von \(A_{2D}^r\) kann nicht demokratisch-isometrisch sein; sie muss eine gewichtete Mittelung oder einen expliziten Kopplungsfaktor tragen, der den \(|S_N|\)-Faktor durch den Limes verfolgt. |
-| **Betroffener Konstruktionspfad** | P1 (Feshbach-/Primkantenpfad). |
+| **Ausgeschlossener Kandidat** | Eine isometrische Einbettung \(U_N:\ell^2(I_N)\to\mathcal H_N\), die den ungewichteten exakten Kollapsoperator reproduziert. |
+| **Exakte Hypothesen** | Endliches \(N\) mit \(|S_N|>1\); Einbettungsbedingung und benötigte Kanalgewichte widersprechen einander. |
+| **Umfang** | Schließt nur isometrische Kollaps-Einbettungen aus; gewichtete oder explizit renormierte Varianten bleiben offen. |
+| **Positive Folgerung** | Die Kollaps-Komponente kann in dieser Route nicht demokratisch-isometrisch sein. |
+| **Betroffener Konstruktionspfad** | P1. |
 
 ---
 
@@ -661,11 +687,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Eine dünne Labelmenge \(\Sigma_N\) (z.B. nur Primzahlen \(\{p\le N\}\), \(\kappa_N\sim N/\log N\)) als Trägerstruktur, die gleichzeitig Feshbach-Gesamtstabilität und Jacobi-Gewichts-Beschränktheit liefert. |
-| **Exakte Hypothesen** | Simultane Forderung von Feshbach-Stabilität (\(\sum_{n\in\Sigma_N}\lambda_{n,N}\to\gamma>0\)) und Jacobi-Gewichts-Stabilität (\(N\cdot\sup_n\lambda_{n,N}=O(1)\)); daraus folgt formal \(\sum_n\lambda_{n,N}\lesssim\kappa_N/N\), also \(\kappa_N\asymp N\). Unbedingte algebraische Herleitung. |
-| **Umfang** | Schließt nur *dünne* Labelmengen als Trägerstruktur für die Jacobi-Limes-Komponente aus. Schließt nicht die volle Labelmenge \(\Sigma_N=\{2,\ldots,N\}\) aus — im Gegenteil, diese ist nach dem Ergebnis die *einzige* verbleibende Wahl. |
-| **Positive Folgerung** | Die Jacobi-Limes-Komponente von \(A_{2D}^r\) muss auf der vollen (dichten) Labelmenge aufbauen, mit nachträglicher Mangoldt-Extraktion über Möbius-/Primsektor-Projektion — nicht auf einer primzahlindizierten dünnen Trägermenge. |
-| **Betroffener Konstruktionspfad** | P1 (Feshbach-/Primkantenpfad). |
+| **Ausgeschlossener Kandidat** | Eine dünne Labelmenge \(\Sigma_N\) als Trägerstruktur, die gleichzeitig Feshbach-Gesamtstabilität und Jacobi-Gewichts-Beschränktheit liefert. |
+| **Exakte Hypothesen** | Simultane Forderung von Feshbach-Stabilität und Jacobi-Gewichts-Stabilität erzwingt \(\kappa_N\asymp N\). |
+| **Umfang** | Schließt nur dünne Labelmengen aus; die volle Labelmenge bleibt. |
+| **Positive Folgerung** | Die Jacobi-Limes-Komponente dieser Route muss auf einer dichten Labelmenge aufbauen. |
+| **Betroffener Konstruktionspfad** | P1. |
 
 ---
 
@@ -675,11 +701,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Eine Gewichtsfolge \(\lambda_{n,N}\), die auf dem *vollen* Orbitbereich \(r\le N\) gleichzeitig proportional zur von-Mangoldt-Funktion \(\Lambda(n)\) ist, Jacobi-Zeilennormen beschränkt hält und Feshbach-Gesamtmasse stabilisiert. |
-| **Exakte Hypothesen** | Ausdrücklich beschränkt auf den vollen Orbitbereich \(r\le N\). Beweis: Mangoldt-Gewichtung \(\lambda_{n,N}=c_N\Lambda(n)\) und Jacobi-Stabilität \(c_N\Lambda(n)\lesssim1/N\) erzwingen \(c_N\lesssim1/(N\log N)\), womit \(\sum_n\lambda_{n,N}\lesssim1/\log N\to0\) — Widerspruch zur Feshbach-Stabilität \(\to\gamma>0\). |
-| **Umfang** | Schließt nur die Kompatibilität aller drei Forderungen *auf dem vollen Orbitbereich* \(r\le N\) aus. Schließt nicht die Orbit-Trunkierung \(r\lesssim N/\log N\) aus, unter der alle drei Forderungen gleichzeitig erfüllbar werden; auch nicht ein logarithmisches Jacobi-Wachstum unter Carleman-Kontrolle oder eine gewichtete, große \(r\) dämpfende Hilbertraumnorm. |
-| **Positive Folgerung** | Die arithmetische (Mangoldt-)Aufladung der Jacobi-Komponente von X erfordert eine Orbit-Trunkierung \(r\lesssim N/\log N\) (favorisierter Reparaturweg) — der volle Orbitbereich ist für diese Aufladung nicht tragfähig. |
-| **Betroffener Konstruktionspfad** | P1 (Feshbach-/Primkantenpfad). |
+| **Ausgeschlossener Kandidat** | Eine Gewichtsfolge, die auf vollem Orbitbereich gleichzeitig Mangoldt-proportional, Jacobi-beschränkt und Feshbach-stabil ist. |
+| **Exakte Hypothesen** | Voller Orbitbereich \(r\le N\); die drei Forderungen erzeugen den dokumentierten Widerspruch. |
+| **Umfang** | Orbit-Trunkierung oder andere Normen bleiben offen. |
+| **Positive Folgerung** | Die konkrete Route benötigt eine zusätzliche Orbit-/Normstruktur. |
+| **Betroffener Konstruktionspfad** | P1. |
 
 ---
 
@@ -689,11 +715,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Der naive starke Operatorlimes des Mangoldt-gewichteten Jacobi-Vorwärtsoperators \(J_N^\Lambda\) auf dem Raum fest getragener (nicht mit \(N\) mitwachsender) \(\ell^2\)-Vektoren als Trägerkonstruktion für die arithmetische Information von X. |
-| **Exakte Hypothesen** | Für jeden endlich getragenen, mit \(N\) fest bleibenden Vektor \(f\) (bzw. \(\delta_r\) mit festem \(r\)) gilt \(\|J_N^\Lambda\delta_r\|_2\asymp\gamma r\sqrt{\log N/N}\to0\) — reine asymptotische Rechnung, keine weiteren Modellannahmen. |
-| **Umfang** | Schließt nur den starken Limes *auf festen Vektoren* aus, obwohl die Feshbach-Gesamtmasse \(\sum_n\lambda_{n,N}\sim\gamma\) stabil bleibt. Schließt nicht aus: wandernde Fenster \(r=r_N=\alpha\sqrt{N/\log N}\) mit endlicher, nichttrivialer Zeilennorm; Feshbach-/Kollapsfunktionale \(\Pi_N J_N^\Lambda\Pi_N^*\); Spur- und Determinantenobjekte; \(N\)-abhängige (renormierte) Testtopologie. |
-| **Positive Folgerung** | Die Existenzform des Grenzoperators \(A_{2D}^r\) kann nicht im naiven starken \(\ell^2\)-Konvergenzbegriff auf festen Basisvektoren verortet werden — X wird erst durch eine geeignete Zusatzstruktur (wandernde Skalierung, Funktional, renormierte Testtopologie) als Grenzobjekt sichtbar. |
-| **Betroffener Konstruktionspfad** | P1 (Feshbach-/Primkantenpfad). |
+| **Ausgeschlossener Kandidat** | Der naive starke Operatorlimes des Mangoldt-gewichteten Jacobi-Vorwärtsoperators auf fest getragenen Vektoren. |
+| **Exakte Hypothesen** | Für jeden fest getragenen Vektor verschwindet die entsprechende Norm asymptotisch. |
+| **Umfang** | Wandernde Fenster, Funktionale, Determinanten und renormierte Testtopologien bleiben unberührt. |
+| **Positive Folgerung** | Die Grenzstruktur dieser Route ist nicht im naiven starken \(\ell^2\)-Limes sichtbar. |
+| **Betroffener Konstruktionspfad** | P1. |
 
 ---
 
@@ -703,11 +729,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Ein einzelner skalarer Renormierungsfaktor \(\kappa_N\), der die Jacobi-Offdiagonalfolgen \(b_{1,N}\) und \(b_{2,N}\) aus der NEU-87-Jacobi-Schließung gleichzeitig zu endlichen, positiven Grenzwerten stabilisiert. |
-| **Exakte Hypothesen** | Das Lemma selbst ist unbedingt (reine Analysis: Für positive Folgen mit \(b_{2,N}/b_{1,N}\to\infty\) existiert keine Folge \(\kappa_N>0\) mit \(b_{1,N}/\kappa_N\to c_1\in(0,\infty)\) und \(b_{2,N}/\kappa_N\to c_2\in(0,\infty)\) gleichzeitig). Die Anwendung auf den konkreten Jacobi-Operator ist dagegen **bedingt** auf den numerischen Befund \(b_{2,N}/b_{1,N}\sim N\to\infty\) (NEU-123.G); ein strenger Beweis hängt an der offenen Sieve-Parity-Barriere. |
-| **Umfang** | Schließt nur *einen einzelnen skalaren* Renormierungsfaktor aus, und die Anwendung auf den Jacobi-Operator nur unter der (numerisch, nicht streng bewiesenen) Divergenzannahme. Schließt nicht die gradierte (indexabhängige) Renormierung \(\widetilde A_N=D_N^{-1}A_N^{\mathrm{Jac},-}D_N\) mit Diagonalmatrix \(D_N\) aus — sofern diese intrinsisch aus der Feshbach-Struktur folgt und nicht extern an Zeta-Zieldaten gefittet wird (Anti-Fitting-Axiom). |
-| **Positive Folgerung** | Die Grenzoperator-Konstruktion von \(A_{2D}^r\) benötigt eine gradierte statt skalare Renormierung — deren intrinsische (nicht gefittete) Existenz ist der noch offene Kernpunkt. |
-| **Betroffener Konstruktionspfad** | P2 (Selbstenergie-/Mangoldtpfad — Grenzoperator-Renormierung als Fortsetzung der Jacobi-Konstruktion). |
+| **Ausgeschlossener Kandidat** | Ein einzelner skalarer Renormierungsfaktor \(\kappa_N\), der zwei divergierende Offdiagonalfolgen gleichzeitig auf endliche positive Grenzwerte bringt. |
+| **Exakte Hypothesen** | Das abstrakte Lemma ist unbedingt; die konkrete Jacobi-Anwendung ist an die dokumentierte Divergenzannahme gebunden. |
+| **Umfang** | Gradierte Renormierungen bleiben offen. |
+| **Positive Folgerung** | Die konkrete Grenzoperatorroute benötigt eine gradierte statt skalare Renormierung, sofern ihre Hypothesen greifen. |
+| **Betroffener Konstruktionspfad** | P2. |
 
 ---
 
@@ -717,11 +743,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Ein nichttrivialer verdrehter Nullkozykel \(u\in Z^0(A_{\mathbb Q}^{\mathrm{alg}}, M_{\sigma_\beta})\), der über den Cup-Weg \(u_\beta\smile\Omega_{\mathbf p}\) einen geladenen Vier-Kozykel faktorisieren könnte. |
-| **Exakte Hypothesen** | Für \(n>1\), \(\mu_n u = n^{-\beta}u\mu_n\), \(\operatorname{Re}\beta>0\): unter der Isometriebedingung \(\mu_n^*\mu_n=1\) (Relation (R2) der Bost-Connes-Standardpräsentation) und treuer \(C^*\)-Einbettung \(A_{\mathbb Q}^{\mathrm{alg}}\hookrightarrow A_{\mathbb Q}^{C^*}\) folgt \(u=0\) über das Isometrie-Lemma \(\|u\|=\|vu\|=|c|\,\|uv\|\le|c|\,\|u\|\). Beide Zusatzhypothesen sind durch das Quellenaudit als Standardresultat (Bost–Connes 1995, Relationen (R1)–(R7)) bestätigt, wodurch das Ergebnis unbedingt wird. |
-| **Umfang** | Gilt nur für \(\operatorname{Re}\beta>0\), nicht für \(\operatorname{Re}\beta=0\). Schließt ausdrücklich nur die *verdrehte* Faktorisierungsroute aus — nicht \(HH^4(A_{\mathbb Q}^{\mathrm{alg}}, {}_{\mathrm{id}}A_{\mathbb Q,\sigma_\beta})_{\mathrm{ch}}=0\) insgesamt. Der reguläre Faktorisierungsweg (mit \(u_g\in Z(A)\cap A_g\), \(g\neq1\)) ist ein separater Fall (siehe X.neg.22). |
-| **Positive Folgerung** | Die geladene HH⁴/HH²-Klassenkonstruktion (\([\tilde\omega_2]\)/\([L_3]\)-Schicht von X bzw. deren Vorstufen) kann für \(\operatorname{Re}\beta>0\) nicht über einen verdrehten zentralen Nullkozykel-Cup-Faktor laufen. |
-| **Betroffener Konstruktionspfad** | P3 (HH-/zyklische Kohomologie). |
+| **Ausgeschlossener Kandidat** | Ein nichttrivialer verdrehter Nullkozykel \(u\in Z^0(A_{\mathbb Q}^{\mathrm{alg}}, M_{\sigma_\beta})\), der über den Cup-Weg einen geladenen Vier-Kozykel faktorisieren könnte. |
+| **Exakte Hypothesen** | Für \(n>1\), \(\operatorname{Re}\beta>0\), BC-Isometriebeziehungen und treue C*-Einbettung folgt \(u=0\). |
+| **Umfang** | Gilt nur für \(\operatorname{Re}\beta>0\) und schließt nur diese Faktorisierungsroute aus. |
+| **Positive Folgerung** | Die entsprechende HH-Route kann nicht über einen verdrehten zentralen Nullkozykel-Cup-Faktor laufen. |
+| **Betroffener Konstruktionspfad** | P3. |
 
 ---
 
@@ -731,11 +757,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Ein homogenes Element \(u_g\neq0\) vom Grad \(g\neq1\) in der Bost-Connes-Algebra \(A_{\mathbb Q}^{\mathrm{alg}}\), das mit allen Erzeugern (\(e(r)\), \(\mu_n\), \(\mu_n^*\)) kommutiert — d.h. die *reguläre* Zentrumsroute \(u_g\smile\Omega_{\mathbf p}\) für die geladene HH⁴-Klasse. |
-| **Exakte Hypothesen** | \(Z(A_{\mathbb Q}^{\mathrm{alg}})_g=0\) für alle \(g\neq1\), bestätigt über die Standardpräsentation von Bost–Connes (Normalform \(w_{m,r,n}=\mu_m e(r)\mu_n^*\) als Linearbasis von \(A_g\)). Gilt für alle \(\beta\), nicht nur \(\beta>0\) — im Unterschied zum verdrehten Fall (X.neg.21). |
-| **Umfang** | Schließt die reguläre *und* (zusammen mit X.neg.21) die verdrehte Cup-Produkt-Faktorisierungsroute über zentrale Elemente vollständig aus. Schließt nicht aus, dass das Polynommodell \(\mathbb C[x_1,\ldots,x_4]\) (NEU-178) geladene Zentralelemente besitzt — dieses Modell ist aber nachweislich nicht direkt auf die volle BC-Algebra \(A_{\mathbb Q}\) übertragbar (Isometriehindernis \(\mu_n\mu_n^*\neq1\) plus Zentrumsmangel). Direkte HH⁴-Klassen ohne Produktstruktur (Barauflösung, Deformationstheorie) bleiben unberührt. |
-| **Positive Folgerung** | Die geladene Vierkozykelklasse für \([L_3]\) muss über direkte Kozykelkonstruktionen oder über eine Projektion auf ein einfacheres Modell (Polynommodell als „Quotientenschatten") erzeugt werden — nicht über zentrale Cup-Faktoren in \(A_{\mathbb Q}^{\mathrm{alg}}\) selbst. |
-| **Betroffener Konstruktionspfad** | P3 (HH-/zyklische Kohomologie). |
+| **Ausgeschlossener Kandidat** | Ein nichttriviales homogenes Zentralelement vom Grad \(g\neq1\) als regulärer Cup-Faktor. |
+| **Exakte Hypothesen** | Standardpräsentation der BC-Algebra; dokumentierter Zentrumstest. |
+| **Umfang** | Schließt die reguläre Zentrumsroute aus, nicht direkte HH-Klassenkonstruktionen. |
+| **Positive Folgerung** | Eine HH-Route muss direkte Kozykel-/Quotientenmechanismen statt zentraler Cup-Faktoren verwenden. |
+| **Betroffener Konstruktionspfad** | P3. |
 
 ---
 
@@ -745,11 +771,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Jeder aus der punktierten Potentialroute (NEU-186–188) erzeugte Derivationskandidat \(D_g\), bezüglich der für NEU-195 nötigen Augmentationsbedingung \(\varepsilon(D_g(\mu_p))\neq0\). |
-| **Exakte Hypothesen** | \(F_k(0)=0\) für jede lokal konstante Fortsetzung \(F_k\) eines regularisierten Differenzdefekts \(\Delta_k H = H(kx)-H(x)\) eines auf \(\widehat{\mathbb Z}\setminus\{0\}\) lokal konstanten \(H\) — elementarer Kompaktheits-/Teleskopbeweis, unbedingt. Konsequenz: \(\langle\Omega_{D_g,\mathbf p}, z_{-\lambda}^{g,\mathbf p}\rangle=0\). |
-| **Umfang** | Schließt nur die *gesamte punktierte-Potentialarchitektur* aus NEU-186–188 als Quelle für die Augmentationskopplung aus — ausdrücklich nicht \(D_g=0\) und nicht \([D_g]=0\in HH^1(A,A)_g\) insgesamt. |
-| **Positive Folgerung** | Die geladene Derivation, die \([\tilde\omega_2]\) bzw. \([L_3]\) trägt, muss entweder außerhalb der punktierten-Potentialarchitektur konstruiert werden, oder der Dualzyklus muss so modifiziert werden, dass er die singuläre Randklasse bei \(\partial\widehat{\mathbb Z}\) statt der Augmentation \(\varepsilon\) bei 0 detektiert (z.B. über einen Residuenoperator oder Grenzwert entlang \(x_j\to0\)). |
-| **Betroffener Konstruktionspfad** | P4 (singuläre Potentialroute). |
+| **Ausgeschlossener Kandidat** | Die dokumentierte punktierte Potentialarchitektur als Quelle der benötigten Augmentationskopplung. |
+| **Exakte Hypothesen** | Die dokumentierte Kompaktheits-/Teleskopidentität erzwingt die entsprechende Nullpaarung. |
+| **Umfang** | Schließt nicht jede geladene Derivation oder HH-Klasse aus. |
+| **Positive Folgerung** | Eine positive Route muss außerhalb dieses Augmentationsmechanismus liegen oder einen anderen Dualzeugen verwenden. |
+| **Betroffener Konstruktionspfad** | P4. |
 
 ---
 
@@ -759,11 +785,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Jedes global reguläre (auf ganz \(\widehat{\mathbb Z}\) lokal konstante) Potential \(H\in\operatorname{LC}(\widehat{\mathbb Z})=B\) als Quelle einer nichtverschwindenden Klasse im relevanten Kommutatorquotienten. |
-| **Exakte Hypothesen** | \([G_i^H]=0\) in \(B/\sum_{j=1}^4(1-\alpha_{p_j})B\) für *jedes* global reguläre \(H\), mit explizitem Kommutatorzeugen \(Y_{g,H,\mathbf p,i}=[\mu_{p_i},a_{i,H}]\) — unbedingt für den regulären Sektor, unabhängig vom konkreten \(H\). |
-| **Umfang** | Schließt nur den *regulären* Sektor aus, nicht die punktierte (bei 0 singuläre) Potentialroute insgesamt, sondern nur deren regulären Untersektor. \([G_i^H]\) ist dabei eine Rand-Singularitätsobstruktion, keine gewöhnliche Nichtverschwindungsobstruktion. |
-| **Positive Folgerung** | Ein positiver Befund (nichtverschwindende Klasse) kann nur von einem echt singulären Potential \(H\in\operatorname{LC}(\widehat{\mathbb Z}\setminus\{0\})\setminus\operatorname{LC}(\widehat{\mathbb Z})\) mit \(F_{p_j}=\alpha_{p_j}(H)-H\in B\) für die relevanten \(p_j\) kommen — Regularität bei 0 ist der Feind der Nichttrivialität in dieser Konstruktion. |
-| **Betroffener Konstruktionspfad** | P4 (singuläre Potentialroute). |
+| **Ausgeschlossener Kandidat** | Global reguläre Potentiale als Quelle einer nichtverschwindenden Klasse im relevanten Kommutatorquotienten. |
+| **Exakte Hypothesen** | Dokumentierter expliziter Kommutatorzeuge. |
+| **Umfang** | Singuläre Potentiale bleiben offen. |
+| **Positive Folgerung** | Ein positiver Befund kann in dieser Route nur aus echtem singulärem Verhalten bei 0 kommen. |
+| **Betroffener Konstruktionspfad** | P4. |
 
 ---
 
@@ -773,11 +799,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Eine exakte, eindimensionale totale Teilbarkeitskette \((L_j)\), die Vielfache zweier verschiedener Primzahlen enthält, als unter allen Primtransporten \(T_p(L)=L/(L,p)\) geschlossene Nachbarschalen-Geometrie. |
-| **Exakte Hypothesen** | Für \(p\neq q\) mit \(pq\mid L\): \(L/p\) und \(L/q\) sind in der Teilbarkeitsordnung unvergleichbar, da \(p\)-Bewertung und \(q\)-Bewertung gegenläufig laufen. Gilt sobald mehr als eine Primrichtung im Spiel ist — keine weiteren Modellannahmen. |
-| **Umfang** | Schließt ausschließlich die *exakte totale Kettenarchitektur* aus. Ausdrücklich **nicht** ausgeschlossen: approximative Ketten, verzweigte Indexmengen, mehrdimensionale Gitter, endliche gesättigte Kastenmodelle. |
-| **Positive Folgerung** | Der eindimensionale Nachfolger der dyadischen Konstruktion (NEU-204) ist beendet; die Konstruktion muss zum mehrdimensionalen Bewertungsgitter \(\Lambda=\mathbb N_0^{(\mathcal P)}\) mit exakten Gittertranslationen übergehen — dieser Übergang wird in derselben Quelle tatsächlich erfolgreich durchgeführt, mit verbleibendem Flaschenhals bei der Randtermkontrolle wachsender Gitterpartitionen. |
-| **Betroffener Konstruktionspfad** | P4 (singuläre Potentialroute). |
+| **Ausgeschlossener Kandidat** | Eine exakte eindimensionale totale Teilbarkeitskette, die mehrere Primrichtungen transportstabil aufnimmt. |
+| **Exakte Hypothesen** | Unvergleichbarkeit von \(L/p\) und \(L/q\) für verschiedene Primrichtungen. |
+| **Umfang** | Mehrdimensionale oder verzweigte Indexmengen bleiben möglich. |
+| **Positive Folgerung** | Die konkrete Route muss in ein mehrdimensionales Bewertungsgitter wechseln. |
+| **Betroffener Konstruktionspfad** | P4. |
 
 ---
 
@@ -787,11 +813,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Der naive geladene Kopplungsansatz \(Z_{F,\mathbf N}=\mu_m(\sum_{p\in F}\widetilde X_{p,N_p})\mu_n^*\), der eine Summe unabhängiger, separierbarer Prim-Singularitäten \(X=\sum_p X_p\) mit den geladenen Erzeugern \(\mu_m,\mu_n^*\) sandwichartig koppelt. |
-| **Exakte Hypothesen** | Gilt für jeden nichtverschwindenden Charakterfehlermultiplikator \(M_{g,r}\neq0\). Mechanismus: Separierbare Primkanäle \(X_{p,N}\) tragen ihre Singularität auf ganzen Koordinatenhyperflächen \(K_p=\{x_p=0\}\) (nicht nur im Punkt 0); für \(p\nmid L\) „sieht" der Multiplikator \(K_p\) vollständig (\(\|M|_{K_p}\|=\|M\|\)), sodass \(\|M\widetilde X_{p,N}\|\to\infty\) — die \(e(r)\)-Kommutatornormen divergieren. |
-| **Umfang** | Schließt nur die *geladene Kopplung* über diesen naiven Sandwichmechanismus aus. Der neutrale Erfolg von NEU-208 (Refinementstabilität des separierbaren Kanals selbst, ohne geladene Kopplung) bleibt ausdrücklich bestehen. |
-| **Positive Folgerung** | Gesucht ist keine Summe unabhängiger Prim-Singularitäten, sondern eine gemeinsame, global bei 0 lokalisierte Singularität mit separierbaren Transportdifferenzen, die notwendig \(\operatorname{Sing}(X)\subseteq Z_g\) (gemeinsame Charakterkernmenge) erfüllt — Kandidat: \(X_N=f(N)\cdot E_{\mathrm{lcm}(1,\ldots,N)}\). |
-| **Betroffener Konstruktionspfad** | P4 (singuläre Potentialroute). |
+| **Ausgeschlossener Kandidat** | Der naive geladene Kopplungsansatz \(Z_{F,\mathbf N}=\mu_m(\sum_{p\in F}\widetilde X_{p,N_p})\mu_n^*\) mit separierbaren Prim-Singularitäten. |
+| **Exakte Hypothesen** | Für jeden nichtverschwindenden Charakterfehlermultiplikator trifft der dokumentierte Hyperflächen-Singularitätsmechanismus. |
+| **Umfang** | Der neutrale separierbare Erfolg bleibt bestehen; ausgeschlossen ist die geladene Sandwichkopplung. |
+| **Positive Folgerung** | Gesucht ist in dieser Route eine gemeinsame, punktlokalisierte Singularität. |
+| **Betroffener Konstruktionspfad** | P4. |
 
 ---
 
@@ -801,11 +827,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Der kanonische Basislift \(\widetilde L_0=\eta_0\circ j_M\circ L^{\mathrm{cup}}_{g;\mathbf p}\) (mit \(\kappa=0\), \(\varepsilon=0\)) des geladenen Vierkozykels, als Erzeuger einer Klasse in der zyklischen Kohomologie \(HC^4(A_{\mathrm{alg}})\). |
-| **Exakte Hypothesen** | Gilt für \(g\neq1\). \(\widetilde L_0\in Z^4(A_{\mathrm{alg}}, I_0)\) ist zwar ein typkorrekter Hochschildkozykel, aber \(t\Phi_0=g^{-\beta}\Phi_0\) mit \(g^{-\beta}\neq1\) macht \(\Phi_0\) nicht zyklisch. Kein Orbitgewicht \(\lambda\) kann diese Abweichung kompensieren, da \(\widetilde L_0(A_{\mathrm{alg}}^{\otimes4})\subseteq I_0\) stets den Faktor \(\lambda^0=1\) trägt. Ursache ist eine globale, eingabeunabhängige Rotation um \(g^{-\beta}\), die aus der Spektraleigenschaft von \(U_{g^{-1}}\) im KMS-Zustand stammt. |
-| **Umfang** | Schließt nur den *kanonischen* Basislift (mit \(\kappa=0,\varepsilon=0\)) aus. Schließt nicht aus: einen Orbitshift-Lift (\(\kappa\neq0\), mit \(T^k\) oder \(\tau^k\)); eine Ladungsneutralisation vor zyklischer Auswertung; eine andere Koeffizientenkategorie (parazyklisch, \(\sigma\)-zyklisch, getwistet-zyklisch); eine modulare/parazyklische Struktur statt gewöhnlicher Zyklizität. |
-| **Positive Folgerung** | Die \([L_3]\)-Schicht von X kann nicht in der naivsten (Cup-Produkt-mit-KMS-Zustand-)Form realisiert sein — sie benötigt zwingend eine der genannten Zusatzkonstruktionen (Orbitshift, Ladungsneutralisation, getwistete/parazyklische Kohomologietheorie), um überhaupt eine zyklische Klasse zu liefern. |
-| **Betroffener Konstruktionspfad** | P3 (HH-/zyklische Kohomologie). |
+| **Ausgeschlossener Kandidat** | Der kanonische Basislift \(\widetilde L_0\) mit \(\kappa=0,\varepsilon=0\) als Erzeuger einer Klasse in \(HC^4\). |
+| **Exakte Hypothesen** | Für \(g\neq1\): \(t\Phi_0=g^{-\beta}\Phi_0\neq\Phi_0\). |
+| **Umfang** | Orbitshift, Neutralisation und andere Koeffizientenkategorien bleiben offen. |
+| **Positive Folgerung** | Die kanonische Basislift-Route ist geschlossen; alternative zyklische Strukturen wären nötig. |
+| **Betroffener Konstruktionspfad** | P3. |
 
 ---
 
@@ -815,11 +841,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Der naive Konstruktionsweg „Kreinraum-Metrik \(\mathscr J_\kappa\) → nichtlokale Korrektur → positive, invertierbare Metrik \(\eta>0\)" für den konkreten Kreinraum-Modell-Kandidaten von \(A_{2D}^r\), solange an der Metrikgleichung \(Z^*\eta=\eta Z\) festgehalten wird. |
-| **Exakte Hypothesen** | Modellspezifisch für das Kreinraum-Modell mit hypothetischem off-axis-Nullstellenpaar \(\{\rho,\kappa\rho\}\) (\(\rho\neq\kappa\rho\)). Für jede invertierbare hermitesche Metriklösung \(\eta\) erzwingt jedes solche Paar eine indefinite Signatur (Blockform \(\begin{pmatrix}0&\alpha\\\bar\alpha&0\end{pmatrix}\)) — unabhängig von der Wahl von \(\mathscr J_\kappa\). Äquivalenzaussage: \(\mathrm{RH}\iff\exists\,\eta\ge cI>0: Z_{\mathcal Z}^*\eta=\eta Z_{\mathcal Z}\), ebenso \(\mathrm{RH}\iff Z_{\mathcal Z}\) ist durch beschränkte Ähnlichkeit zu einem selbstadjungierten Operator transformierbar. |
-| **Umfang** | Gilt nur innerhalb dieses konkreten, expliziten Kreinraum-Modells, das die Nullstellenlage bereits als Eingabedatum verwendet (also selbst „tautologisch" RH-abhängig aufgebaut ist). Schließt nicht jeden denkbaren selbstadjungierten Kandidaten für \(A_{2D}^r\) aus — nur diesen einen Konstruktionsmechanismus über die Metrikgleichung. |
-| **Positive Folgerung** | Für einen nicht-tautologischen Weg zu \(A_{2D}^r\) muss zunächst aus der adelischen Architektur ein positiver Spektralraum \((\mathcal H_X, A_X=A_X^*)\) *ohne* Verwendung der Nullstellenlage konstruiert werden, und erst danach über eine Spur-, Determinanten- oder Streuidentität gezeigt werden, dass seine spektrale Determinante \(\xi\) ist. |
-| **Betroffener Konstruktionspfad** | P5 (Vergleichsoperator-/Konfinementpfad). |
+| **Ausgeschlossener Kandidat** | Der naive Kreinraum-Metrik-Reparaturweg im konkreten Nullstellenpaar-Modell. |
+| **Exakte Hypothesen** | Modellspezifische Metrikgleichung; off-axis-Paare erzwingen indefinite Signatur. |
+| **Umfang** | Schließt nicht jeden denkbaren selbstadjungierten Kandidaten aus. |
+| **Positive Folgerung** | Eine nichttautologische positive Realisierung müsste ohne Nullstellenlagen als Eingabedaten konstruiert werden. |
+| **Betroffener Konstruktionspfad** | P5. |
 
 ---
 
@@ -829,11 +855,11 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 | Feld | Inhalt |
 |---|---|
-| **Ausgeschlossener Kandidat** | Der Kandidat \(\Xi(z)/\Xi(0)=\det(I-zH^{-1})\) mit **gewöhnlichem** Fredholm-Determinanten eines hypothetischen Hilbert-Pólya-Operators \(H\) mit Eigenwerten \(\gamma\) (den Nichttrivialnullstellen-Ordinaten). |
-| **Exakte Hypothesen** | Unter RH als Zählhypothese, aber die Herleitung des Schattenklassenzwangs selbst benutzt nur die unbedingt gültige Riemann-von-Mangoldt-Zählformel: \(\sum_{\gamma>0}\gamma^{-p}<\infty\iff p>1\), also \(A_+^{-1}\in\mathcal S_2\setminus\mathcal S_1\) für einen hypothetischen positiven Operator \(A_+\) mit diesen Eigenwerten — \(H^{-1}\) liegt somit nicht in der Spurklasse \(\mathcal S_1\), in der die gewöhnliche Fredholm-Determinante definiert wäre. |
-| **Umfang** | Schließt nur die Realisierung über die **gewöhnliche** (\(\mathcal S_1\)-)Fredholm-Determinante aus. Schließt nicht aus: den quadrierten Determinanten \(\det(I-z^2A_+^{-2})\) (da \(A_+^{-2}\in\mathcal S_1\)), konditional erfolgreich hergeleitet; ebenso nicht die äquivalente Carleman-Fredholm-Determinante zweiter Ordnung \(\det_2(I-zH_Z^{-1})\). |
-| **Positive Folgerung** | Die zulässige Operatorklasse für den Hilbert-Pólya-Kandidaten \(A_{2D}^r\) muss zwingend in der Schattenklasse \(\mathcal S_2\setminus\mathcal S_1\) liegen und über eine quadrierte bzw. Carleman-regularisierte Determinante zweiter Ordnung realisiert werden — die Endkriterien HP-1 bis HP-7 (insbesondere HP-7: Nullstellenlagen dürfen nirgendwo als Eingabedaten dienen) benennen exakt, was ein nichttautologischer Kandidat \(H_X\) zusätzlich leisten müsste. |
-| **Betroffener Konstruktionspfad** | P5 (Vergleichsoperator-/Konfinementpfad). |
+| **Ausgeschlossener Kandidat** | \(\Xi(z)/\Xi(0)=\det(I-zH^{-1})\) mit gewöhnlicher Fredholm-Determinante eines hypothetischen HP-Operators mit den Nullstellenordinaten als Eigenwerten. |
+| **Exakte Hypothesen** | Riemann-von-Mangoldt-Zählung erzwingt \(H^{-1}\in\mathcal S_2\setminus\mathcal S_1\) in diesem Modell. |
+| **Umfang** | Schließt die gewöhnliche \(\mathcal S_1\)-Fredholm-Determinante aus, nicht \(\det_2\) oder quadrierte Determinanten. |
+| **Positive Folgerung** | Eine entsprechende HP-Realisierung müsste Carleman-/Quadratdeterminanten verwenden und HP-7 respektieren. |
+| **Betroffener Konstruktionspfad** | P5. |
 
 ---
 
@@ -841,10 +867,10 @@ Die folgenden 22 Einträge (X.neg.8–X.neg.29) ergänzen das bestehende Negativ
 
 NEU-114 (1. Juli 2026) erkannte, dass der Pfad NEU-77–113 nicht $X$ bearbeitet, sondern die
 Projektion $\Pi_\gamma(X)$, und richtete vier Tests ein, um den Spektralschatten wieder an
-$X$ zu binden. Die Tests wurden geöffnet und danach in keinem der 105 Dokumente ab NEU-117
+die damalige X-Architektur zu binden. Die Tests wurden geöffnet und danach in keinem der 105 Dokumente ab NEU-117
 mehr erwähnt.
 
-Dieses Register schließt die Lücke: Es verbucht, was inzwischen implizit beantwortet ist,
+Dieses Register schließt die damalige Lücke: Es verbucht, was inzwischen implizit beantwortet ist,
 und führt für jeden Test einen Nachfolgeknoten.
 
 $$
@@ -856,10 +882,10 @@ $$
 
 | | |
 |---|---|
-| **Status** | `❓[O]` — unverändert offen |
+| **Status** | `❓[O]` — unverändert offen innerhalb dieser Route |
 | **Frage** | Erzeugt die primäre Hochschild-2-Klasse einen Beitrag zum Herglotz-Kanal von $m_{\mathrm{arith}}$? |
 | **Was seit NEU-114 dazukam** | Nichts Direktes. Der 06-Strang arbeitete an $HH^4$, nicht an $HH^2$. |
-| **Blockade** | Die Nichttrivialität von $[\tilde\omega_2]$ ist selbst nur Hypothese (vgl. XVI-A, A.0). |
+| **Blockade** | Die Nichttrivialität von $[\tilde\omega_2]$ ist selbst nur Hypothese. |
 | **Nachfolgeknoten** | `[O-114-1]` — offen, kein Bearbeiter |
 
 ### F.2 — Test 114.2: $HH^4$ $[L_3] \to$ Obstruktionsterm
@@ -867,38 +893,36 @@ $$
 | | |
 |---|---|
 | **Status** | $\checkmark[M]_{\mathrm{neg}}$ — **für den kanonischen O-219-Weg** |
-| **Was seit NEU-114 dazukam** | Der gesamte Strang NEU-174 – NEU-219z. Der Cup-Aufstieg $L^{\mathrm{cup}}_{g;\mathbf p}\in Z^4(A_{\mathrm{alg}},M)_g$ gelang (NEU-218), der kanonische Basislift ist typkorrekt — aber nicht zyklisch: $t\Phi_0 = g^{-\beta}\Phi_0$ mit $g^{-\beta}\neq 1$ (NEU-219u). |
+| **Was seit NEU-114 dazukam** | Der gesamte Strang NEU-174 – NEU-219z. Der Cup-Aufstieg gelang, der kanonische Basislift ist typkorrekt, aber nicht zyklisch: $t\Phi_0 = g^{-\beta}\Phi_0$. |
 
-> **Reichweite — verbindlich.** Der negative Befund gilt für den **kanonischen Basislift**
-> $\tilde L_0 = \eta_0\circ j_M\circ L^{\mathrm{cup}}_{g;\mathbf p}$, **nicht** für jede
-> denkbare $HH^4$-Realisierung. Ausdrücklich **nicht** ausgeschlossen sind: Lifts mit
-> Orbitshift $\kappa\neq 0$, algebraische Ladungsneutralisation vor der zyklischen
-> Auswertung, sowie parazyklische, $\sigma$-zyklische oder getwistet-zyklische
-> Koeffizientenkategorien.
+> **Reichweite — verbindlich.** Der negative Befund gilt für den **kanonischen Basislift**,
+> nicht für jede denkbare $HH^4$-Realisierung. Ausdrücklich nicht ausgeschlossen sind
+> Orbitshift-Lifts, Ladungsneutralisation sowie parazyklische, $\sigma$-zyklische oder
+> getwistet-zyklische Koeffizientenkategorien.
 
 | | |
 |---|---|
-| **Nachfolgeknoten** | `[O-219-6]` — Weil-/Gammafaktorpaarung, **aktiv beschritten** ab NEU-220; ferner XVI-D/P3.3 und P4 |
+| **Nachfolgeknoten** | `[O-219-6]` — Weil-/Gammafaktorpaarung; ferner XVI-D/P3.3 und P4 |
 
 ### F.3 — Test 114.3: $\mathrm{Wres}^{\mathrm{top}} \to Q_{\mathrm{Weil}}$
 
 | | |
 |---|---|
 | **Status** | $\checkmark[M]_{\mathrm{part}}$ |
-| **Was seit NEU-114 dazukam** | NEU-116 führte den Test teilweise aus und lieferte den **Vierschichtensatz** (116.0.V): $X_{\mathrm{skel}} \neq X \neq X^{\mathrm{val}} \neq W_\xi^{\mathrm{norm}}$. Tests ST-3/ST-4 (116.C.15) zeigen: $\Theta_{1/2}$ ist **extern** zu $X$, `✓[M]`. Intrinsizitätstest IT-1/3/4 `✓[M]` gegen $B_{\mathrm{ref}}$. Ferner: NEU-115 trennt linear von quadratisch kategorial. |
-| **Gesichertes Teilergebnis** | Eine direkte Identifikation ist ausgeschlossen; die Vermittlung läuft über drei funktorielle Schritte $\iota_{\mathrm{skel}}, \iota_{\mathrm{val}}, \rho^{\mathrm{val}}$ und über das lineare Interface $W_\xi$. Siehe XVI-B, B.1 und B.2. |
-| **Restlücke** | Intrinsizitätstest IT-2 `❓[O]`; die Teiltests 116.A ($E_{0,1}$), 116.B ($G$) und 116.C ($-P$) sind einzeln nicht abgeschlossen. |
-| **Nachfolgeknoten** | `[O-116-IT2]`; inhaltlich fortgesetzt im gesamten Strang NEU-220 (Gammafaktor, Konturtransport, Weil-Quadratik) |
+| **Was seit NEU-114 dazukam** | NEU-116 lieferte den Vierschichtensatz und die Externalität von $\Theta_{1/2}$. NEU-115 trennt linear von quadratisch. |
+| **Gesichertes Teilergebnis** | Eine direkte Identifikation ist ausgeschlossen; die damalige Vermittlungsroute lief über mehrere funktorielle Schritte und das lineare Interface $W_\xi$. |
+| **Restlücke** | Intrinsizitätstest IT-2 `❓[O]`; weitere Teiltests nicht abgeschlossen. |
+| **Nachfolgeknoten** | `[O-116-IT2]`; inhaltlich im NEU-220-Strang fortgesetzt |
 
 ### F.4 — Test 114.4: $m \to p^k m \;\Rightarrow\; \Lambda(p^k)$
 
 | | |
 |---|---|
 | **Status** | **gesperrt durch** `[O-144-1]` |
-| **Was seit NEU-114 dazukam** | NEU-141 etabliert $\operatorname{Tr}(R\Sigma_{\mathrm{rel}}^{\mathrm{ren}}(\beta)) = -\zeta'/\zeta(\beta)$ für $\Re\beta>1$, `✓[M]`. Die Kette Primkanten → Mangoldt-Gewicht trägt damit im Konvergenzbereich. |
-| **Blockade** | Die T2-Orthogonalität $\langle\Psi_p,\Psi_q\rangle = 0$ für $p\neq q$ wird in NEU-141 **zur Voraussetzung erklärt, nicht bewiesen**. NEU-144 vermerkt wörtlich: „strukturell plausibel und durch Aufbau motiviert, aber noch kein formaler Beweis". Sie trägt die gesamte primdiagonale Struktur von $R$. |
+| **Was seit NEU-114 dazukam** | NEU-141 etabliert $\operatorname{Tr}(R\Sigma_{\mathrm{rel}}^{\mathrm{ren}}(\beta)) = -\zeta'/\zeta(\beta)$ für $\Re\beta>1$, `✓[M]`. |
+| **Blockade** | Die T2-Orthogonalität wird zur Voraussetzung erklärt, nicht bewiesen. |
 | **Zweite Blockade** | Der kritische Streifen $0<\Re\beta\le 1$ ist unbehandelt, `[O-144-3]`. |
-| **Nachfolgeknoten** | `[O-144-1]` (Edge-Label-Beweis der T2-Orthogonalität) und `[O-144-3]` (Regularisierung im kritischen Streifen); vgl. XVI-D/P1.4 und P2.2 |
+| **Nachfolgeknoten** | `[O-144-1]` und `[O-144-3]`; vgl. XVI-D/P1.4 und P2.2 |
 
 ### F.5 — Bilanz des Registers
 
@@ -909,42 +933,48 @@ $$
 | 114.3 | `❓[O]` | $\checkmark[M]_{\mathrm{part}}$ | **Teilergebnis: Vierschichtensatz, $\Theta_{1/2}$ extern** |
 | 114.4 | `⚠[M]` | gesperrt | **Blockade lokalisiert: `[O-144-1]`** |
 
-Drei der vier Tests haben sich bewegt, ohne dass es verbucht wurde. Test 114.1 ist der
-einzige, der seit dem 1. Juli tatsächlich unberührt geblieben ist.
+Drei der vier Tests bewegten sich innerhalb der damaligen Architektur. Test 114.1 blieb
+unberührt. Seit 2026-08-26 sind diese Tests als Provenienz der historischen
+Fünfschicht-/Brückenarchitektur zu lesen, nicht als aktuelle Definitionstests von X.
 
 ---
 
 ## XVI-G — Pflege dieses Blattes
 
-### Verbindliche Regel
+### Historische Regel der Revision 2
 
 > Jedes neue NEU-Dokument, das eine Bedingung an $X$, an eine seiner Projektionen oder an
-> einen Realisierungskandidaten begründet oder ausschließt, wird **im selben Arbeitsgang**
-> hier eingetragen. Ein Eintrag ohne Gültigkeitsetikett und ohne Pfadzuordnung ist
-> unvollständig.
+> einen Realisierungskandidaten begründete oder ausschloss, wurde **im selben Arbeitsgang**
+> hier eingetragen.
 
-### Prüffragen vor jedem Eintrag
+Seit 2026-08-26 werden **neue Identitätsaussagen zu Objekt X** nicht mehr hier als bindende
+Definition gebucht, sondern zuerst gegen die aktuelle Arbeitsdefinition geprüft. Dieses
+Blatt bleibt für seine route-spezifischen Constraints und No-Gos zitierfähig.
 
-1. **Welche Ebene?** Betrifft die Aussage $X$ selbst (XVI-A), die Brücke (XVI-B), eine
-   Realisierung (XVI-C) oder nur einen Pfad (XVI-D)?
-2. **Welches Etikett?** `global`, `bridge`, `spectral`, `Feshbach`, `HH`, `route-conditional`.
-3. **Welcher Umfang?** Was schließt das Resultat **nicht** aus? Dieses Feld ist Pflicht.
-4. **Wird ein Kandidat mit einer Klasse verwechselt?** Ein No-Go gegen einen konkreten
-   Mechanismus wird nicht zu einem Axiom über $X$ hochgestuft (Sperrregel).
-5. **Berührt es einen Rückbindungstest?** Dann XVI-F mitführen.
+### Prüffragen vor jeder Weiterverwendung
+
+1. **Historisch oder aktuell?** Ist die Aussage Teil der Revision-2-Architektur oder in die
+   aktuelle Objekt-X-Arbeitsdefinition zurückgebunden?
+2. **Welche Ebene?** Betrifft sie eine Kandidatenidentität, Brücke, Realisierung oder nur
+   einen Pfad?
+3. **Welches Etikett?** `global`, `bridge`, `spectral`, `Feshbach`, `HH`, `route-conditional`.
+4. **Welcher Umfang?** Was schließt das Resultat **nicht** aus?
+5. **Wird ein Kandidat mit einer Klasse verwechselt?** Ein No-Go gegen einen konkreten
+   Mechanismus wird nicht zu einem Axiom über X hochgestuft.
 
 ### Änderungsprotokoll
 
 | Revision | Stand | Wesentliche Änderung |
 |---|---|---|
 | 1 | NEU-114, 1. Juli 2026 | X.1–X.10, X.neg.1–7, Fünfschicht-Profil, vier Rückbindungstests |
-| **2** | **NEU-221e, 26. Juli 2026** | Trennung in drei logische Ebenen; HP-1–HP-7 als Realisierungsbedingungen statt Axiome; Gültigkeitsetiketten und Pfadcodes eingeführt; Sperrregel; XVI-E mit X.neg.8–X.neg.29; XVI-F verbucht die Rückbindungstests; Statuskorrektur zu HP-2 und NEU-56 (VI); Stieltjes-Profil um Spektralmaßinvarianz erweitert (NEU-221e) |
+| **2** | **NEU-221e, 26. Juli 2026** | Trennung in drei logische Ebenen; HP-1–HP-7 als Realisierungsbedingungen statt Axiome; Gültigkeitsetiketten und Pfadcodes; Sperrregel; erweitertes Negativregister und Rückbindungstests |
+| **2R** | **26. August 2026** | **Reklassifikation ohne mathematische Promotion/Rücknahme:** Fünfschicht-Identität und Revision-2-Axiomensystem historisiert; Blatt bleibt Constraint-/No-Go-/Provenienzregister. Aktuelle X-Definition nach `00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`. |
 
-### Offene Baustellen dieses Blattes
+### Offene historische Baustellen dieses Blattes
 
-- **Test 114.1** ist der einzige nie bearbeitete Rückbindungstest.
-- **A.9 (Resonanzkonvergenz)** ist seit Revision 1 unausgeführt.
-- **A.11**: Die Zuordnung der Minimalaxiome A1–A7 zur operativen Ebene ist vorgenommen, aber
-  A4 (Quasikristall-/Aperiodizitätsprinzip) hat bis heute **kein operatives Gegenstück**.
-- Die Entscheidung zwischen den beiden Axiomensystemen ist getroffen (X.1–X.10 führt), aber
-  A1–A7 sind nicht formell zurückgezogen.
+- **Test 114.1** wurde innerhalb der Revision-2-Route nie bearbeitet.
+- **A.9 (Resonanzkonvergenz)** blieb unausgeführt.
+- **A.11**: A4 des alten Leitbilds hatte kein operatives Gegenstück.
+- Diese Punkte sind seit der Reklassifikation **keine automatisch aktuellen Objekt-X-
+  Identitätsknoten**; sie werden nur dann wieder aktiv, wenn eine heutige Konstruktion die
+  entsprechende historische Route ausdrücklich reaktiviert.
