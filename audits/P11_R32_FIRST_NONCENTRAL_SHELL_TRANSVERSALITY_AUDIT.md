@@ -82,7 +82,7 @@ f(s):=y(a+s)=y(a-s),\qquad |s|<h.
 ### Lemma NS-1a — Unsichtbarkeit
 
 \[
-\boxed{\mathcal S_R^+\subset\mathcal N_I:=\ker(E_I^*H|_+).}
+\boxed{\mathcal S_R^+\subset\mathcal K_R:=\ker(E_I^*H|_+).}
 \tag{NS.6}
 \]
 
@@ -399,13 +399,13 @@ Nicht bewiesen sind:
 
 - voller `ker K_{I,A}=0`;
 - voller Schur-Crossblock injektiv;
-- Klassifikation sämtlicher weiterer Teile von `N_I`;
+- Klassifikation sämtlicher weiterer Teile von `K_R`;
 - Closed Range / bounded below / uniforme Winkel;
 - Polar Gauge, Strong Terminal Transport, Objekt X oder RH.
 
 Bei unabhängigem GREEN wäre erlaubt:
 
-- **NS-1a:** `✓[M]` — erste nichtzentrale symmetrische Schale ist ein unendlichdimensionaler Unterraum von `N_I` für `d/2<=R<d`;
+- **NS-1a:** `✓[M]` — erste nichtzentrale symmetrische Schale ist ein unendlichdimensionaler Unterraum von `K_R` für `d/2<=R<d`;
 - **NS-1:** `✓[M]_part` — diese gesamte Schale ist für jedes `R<S<a` transversal.
 
 Keine Promotion ohne explizite Freigabe.
