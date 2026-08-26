@@ -3,7 +3,7 @@
 **Status:** Kandidat; keine Promotion.  
 **P11:** FROZEN. **P12:** unverändert. **R14:** unverändert.  
 **Basis:** SE-1/SE-2/CTX-1/NS-1 Kandidatenkette.  
-**Ziel:** die nächste explizite Komponente des inneren Unsichtbarkeitsraums \(\mathcal N_I\) klassifizieren und von Anfang an alle elf Full-Rest-Wörter bilanzieren. Es wird hier **keine** Schur-Transversalität behauptet.
+**Ziel:** die nächste explizite Komponente des inneren Unsichtbarkeitsraums \(\mathcal K_R\) klassifizieren und von Anfang an alle elf Full-Rest-Wörter bilanzieren. Es wird hier **keine** Schur-Transversalität behauptet.
 
 ## 1. Setup
 
@@ -52,7 +52,7 @@ Setze
 \[
 I=(-R,R),
 \qquad
-\mathcal N_I:=\ker(E_I^*H|_{\mathscr H^+}),
+\mathcal K_R:=\ker(E_I^*H|_{\mathscr H^+}),
 \]
 mit
 \[
@@ -101,7 +101,7 @@ würde nach \(v\mapsto-v\) zusammen mit der ursprünglichen Gleichung wegen \(r\
 
 \[
 \boxed{
-\mathcal S_{R,2}^+\subset\mathcal N_I.
+\mathcal S_{R,2}^+\subset\mathcal K_R.
 }
 \tag{SS.5}
 \]
@@ -303,7 +303,7 @@ Daher ist eine direkte Wiederholung des NS-1-Supportbeweises hier **nicht** gere
 
 Bewiesen wird in diesem Audit nur als Kandidat:
 
-- **SS-1a:** zweite nichtzentrale Rand-Schale ist ein unendlichdimensionaler Unterraum von \(\mathcal N_I\) für \(d/2\le R<e\);
+- **SS-1a:** zweite nichtzentrale Rand-Schale ist ein unendlichdimensionaler Unterraum von \(\mathcal K_R\) für \(d/2\le R<e\);
 - **SS-L:** auf dieser Schale sind exakt 10 von 11 Full-Rest-Wörtern als Operatoren nicht identisch null; nur \(W_{32}\) stirbt durch den Horizont.
 
 Nicht bewiesen:
