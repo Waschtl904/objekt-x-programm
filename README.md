@@ -9,14 +9,17 @@ lückenlos nachvollziehbare Kette aus Konstruktionen, Tests, Audits und No-Go-Re
 > **Objekt-X-Arbeitsdefinition aktualisiert:** 26. August 2026 — siehe
 > [Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
 
-[Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) · [Kontrollblatt Objekt X](00-grundlegung/ebene-XVI-objekt-x.md) · [Gesamtindex](INDEX.md) · [Statusregister](STATUS.md) · [Offene Probleme](OFFENE_PROBLEME.md) · [Glossar](GLOSSAR.md) · [Konventionen](KONVENTIONEN.md) · [Literatur](REFERENCES.md) · [Einstiegsprompt](EINSTIEGSPROMPT.md)
+[Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) · [Ebene XVI — historisch reklassifiziertes Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md) · [Gesamtindex](INDEX.md) · [Statusregister](STATUS.md) · [Offene Probleme](OFFENE_PROBLEME.md) · [Glossar](GLOSSAR.md) · [Konventionen](KONVENTIONEN.md) · [Literatur](REFERENCES.md) · [Einstiegsprompt](EINSTIEGSPROMPT.md)
 
 ---
 
 ## Worum es geht
 
-Das Programm untersucht, ob sich die Riemannsche Hypothese als **Spektraleigenschaft eines
-konkret konstruierten Operatorobjekts** formulieren lässt — genannt **Objekt X**.
+Das Programm untersucht, ob sich die Riemannsche Hypothese aus einer **konkret
+konstruierten gemeinsamen Hilbert-/Gram-/Mediator-Geometrie** ableiten oder als
+spektrale bzw. positive Eigenschaft einer daraus hervorgehenden Realisierung formulieren
+lässt — Arbeitsname **Objekt X**. Objekt X wird derzeit ausdrücklich **nicht** mit einem
+bereits konstruierten Einzeloperator identifiziert.
 
 > **Aktuelle Arbeitsdefinition (Stand 26. August 2026):** Objekt X ist der Arbeitsname für
 > eine bislang nicht konstruierte gemeinsame nichtorthogonale Hilbert-/Gram-Geometrie, in
@@ -25,6 +28,11 @@ konkret konstruierten Operatorobjekts** formulieren lässt — genannt **Objekt 
 > einzelner Operator noch als Spektraltripel oder festes algebraisches Tupel identifiziert.
 > Existenz, Eindeutigkeit und ein möglicher Weg zur Riemannschen Vermutung sind offen.
 > Details, Herleitung und Firewall: [Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
+
+> **Aktuelle P11/R32-Front:** FG-1 und FG-TR1 sind unabhängig GREEN geprüfte Kandidaten
+> ohne formale Promotion; CG-FG1 ist eine CANDIDATE-GREEN-Kompositionsreduktion. Der
+> eigentliche Schur-Test \(\ker\Gamma_I=\{0\}\) bleibt `?[O]`. Siehe
+> [P11/R32-Statusaddendum](00-uebersicht/P11_R32_STATUS_2026-08-25.md).
 
 Das folgende Fünfer-Tupel war die Arbeitsdefinition der früheren Forschungsphase
 (Stand 26. Juli 2026) und gilt seit der Konsolidierung vom 26. August 2026 ausdrücklich
@@ -190,7 +198,7 @@ und [00-uebersicht/P11_R32_STATUS_2026-08-25.md](00-uebersicht/P11_R32_STATUS_20
 ## Lesepfade
 
 **Erster Überblick (ca. 30 Minuten)**
-[Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) → [Minimalaxiome](00-grundlegung/objekt_x_minimalaxiome.md) → [Ebene XVI: Objekt X](00-grundlegung/ebene-XVI-objekt-x.md) → [Statusregister](STATUS.md) → [Offene Probleme](OFFENE_PROBLEME.md)
+[Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) → [P11/R32-Statusaddendum](00-uebersicht/P11_R32_STATUS_2026-08-25.md) → [Minimalaxiome (historischer Leitbild-Snapshot)](00-grundlegung/objekt_x_minimalaxiome.md) → [Ebene XVI (historisch reklassifiziertes Kontrollblatt)](00-grundlegung/ebene-XVI-objekt-x.md) → [Statusregister](STATUS.md) → [Offene Probleme](OFFENE_PROBLEME.md)
 
 **Der analytische Hauptpfad**
 NEU-44 (Primkanten) → NEU-42 (Fourier-Hebung) → NEU-63 (Weyl-Funktion) → NEU-136 (Selbstenergie) → NEU-141 (Mangoldt-Spur) → NEU-220k (Xi-Masterkontur) → NEU-220w (Hankel-Kriterium)
