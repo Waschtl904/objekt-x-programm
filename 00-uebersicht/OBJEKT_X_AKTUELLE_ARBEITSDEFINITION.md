@@ -113,7 +113,7 @@ werden.
 Die bereits vorhandene Bezeichnung
 
 \[
-\Phi_R:\mathcal Z_R^+\oplus(\mathfrak G_R\cap\ker\Lambda_R)\to\mathcal N_I
+\Phi_R:\mathcal Z_R^+\oplus(\mathfrak G_R\cap\ker\Lambda_R)\to\mathcal K_R
 \]
 
 aus EC.8 bleibt der **Kernelparametrisierung** vorbehalten.
