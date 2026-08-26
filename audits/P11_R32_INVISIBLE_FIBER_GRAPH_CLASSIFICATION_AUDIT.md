@@ -5,7 +5,7 @@
 **Basis:** CTX-1, NS-1, SS-1a/SS-L, SP-1, ST-1.  
 **Ziel:** nicht eine weitere Schale zu erraten, sondern eine exakte, exhaustive Normalform fuer
 \[
-\mathcal N_I:=\ker(E_I^*H|_{\mathscr H^+})
+\mathcal K_R:=\ker(E_I^*H|_{\mathscr H^+})
 \]
 zu formulieren. Die Normalform trennt (i) automatisch unsichtbare physische Supportbereiche von (ii) den innerhalb des gesampelten Bereichs durch Branch-Gluing und eine einzige gewichtete Hubrelation bestimmten Loesungen.
 
@@ -73,7 +73,7 @@ Sei
 \]
 Dann gilt unmittelbar
 \[
-\boxed{\mathcal Z_R^+\subset\mathcal N_I.}
+\boxed{\mathcal Z_R^+\subset\mathcal K_R.}
 \tag{FG.4}
 \]
 Denn kein in (FG.1) ausgewerteter Punkt trifft den Support von `y`.
@@ -114,7 +114,7 @@ entsteht ausserdem der nichtleere Horizontschwanz
 }
 \tag{FG.7}
 \]
-Jede gerade `L2`-Funktion mit positivem Support in `T_R` liegt automatisch in `N_I`. Insbesondere ist dieser Teil unendlichdimensional.
+Jede gerade `L2`-Funktion mit positivem Support in `T_R` liegt automatisch in `K_R`. Insbesondere ist dieser Teil unendlichdimensional.
 
 Falls `R>=epsilon`, ist der Horizontschwanz leer.
 
@@ -186,7 +186,7 @@ Und definiere den gewichteten Row-Operator
 
 ## 5. Theorem FG-1 — exhaustive Branch-/Gluing-Normalform
 
-Jedes `y in N_I` zerfaellt eindeutig orthogonal nach physischem Support als
+Jedes `y in K_R` zerfaellt eindeutig orthogonal nach physischem Support als
 \[
 \boxed{y=y_{\rm blind}+y_{\rm samp},}
 \tag{FG.12}
@@ -206,12 +206,12 @@ mit
 \boxed{\Lambda_R F=0.}
 \tag{FG.13}
 \]
-Umgekehrt erzeugt jede solche gegluete Familie zusammen mit einem beliebigen `y_blind in Z_R^+` ein Element von `N_I`.
+Umgekehrt erzeugt jede solche gegluete Familie zusammen mit einem beliebigen `y_blind in Z_R^+` ein Element von `K_R`.
 
-Damit ist `N_I` exhaustiv beschrieben als
+Damit ist `K_R` exhaustiv beschrieben als
 \[
 \boxed{
-\mathcal N_I
+\mathcal K_R
 \cong
 \mathcal Z_R^+
 \oplus
@@ -290,7 +290,7 @@ Dies widerlegt die Schlussregel
 
 > `nur drei Hub-Shifts`  =>  `automatisch endlich viele periodische Orbittypen`.
 
-Es beweist **nicht**, dass fuer jedes feste `R` jeder tatsaechliche, domain-beschraenkte Orbit unendlich ist. Die Branch-Domains koennen Iterationen an den Raendern abbrechen. Ebenso beweist (FG.21) noch nicht, dass es zwingend unendlich viele irreduzible Schalentypen in `N_I` gibt.
+Es beweist **nicht**, dass fuer jedes feste `R` jeder tatsaechliche, domain-beschraenkte Orbit unendlich ist. Die Branch-Domains koennen Iterationen an den Raendern abbrechen. Ebenso beweist (FG.21) noch nicht, dass es zwingend unendlich viele irreduzible Schalentypen in `K_R` gibt.
 
 Der richtige naechste Gegenstand ist daher die **domain-beschraenkte Overlap-Pseudogruppe** auf `(0,R)`, nicht eine ungepruefte endliche Schalenliste.
 
@@ -303,11 +303,11 @@ Der richtige naechste Gegenstand ist daher die **domain-beschraenkte Overlap-Pse
 
 ## 9. Firewall und Kandidatenstatus
 
-Dieser Audit beweist als Kandidat nur die Struktur von `N_I`; keinerlei neuer Schur-Transversalitaetssatz wird behauptet.
+Dieser Audit beweist als Kandidat nur die Struktur von `K_R`; keinerlei neuer Schur-Transversalitaetssatz wird behauptet.
 
 Nicht bewiesen:
 
-- dass `C_R^+`, erste Schale, zweite Schale und Horizontschwanz ganz `N_I` erzeugen;
+- dass `C_R^+`, erste Schale, zweite Schale und Horizontschwanz ganz `K_R` erzeugen;
 - dass der domain-beschraenkte Overlap-Graph nur endlich viele Orbittypen besitzt;
 - Transversalitaet des Horizontschwanzes;
 - voller augmentierter Blockkern trivial;
@@ -318,7 +318,7 @@ Nicht bewiesen:
 Kandidatenstatus bis unabhhaengigem Review:
 
 - **FG-0:** `?[O]` — exakter automatisch blinder Supportraum `Z_R^+`; fuer `R>=d/2` Formel (FG.6).
-- **HT-1:** `?[O]` — falls `R<epsilon`, ist der Horizontschwanz `(T+R,T0)` ein unendlichdimensionaler Unterraum von `N_I`.
+- **HT-1:** `?[O]` — falls `R<epsilon`, ist der Horizontschwanz `(T+R,T0)` ein unendlichdimensionaler Unterraum von `K_R`.
 - **FG-1:** `?[O]` — exhaustive Branch-/Gluing-Normalform (FG.14).
 - **FG-NG1:** `?[O]` — No-Go gegen die Schlussregel `endlich viele Hub-Shifts => endliche periodische Overlap-Gruppe`; arithmetischer Kern `d/e irrational`.
 
