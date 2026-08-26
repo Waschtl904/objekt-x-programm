@@ -174,7 +174,7 @@ folgt \(y=0\). Daher ist die Projektion des Blockkerns auf die \(w\)-Komponente 
 Setze den inneren Unsichtbarkeitsraum
 \[
 \boxed{
-\mathcal N_I:=\ker(E_I^*H|_{\mathscr H^+}).
+\mathcal K_R:=\ker(E_I^*H|_{\mathscr H^+}).
 }
 \tag{SE.7}
 \]
@@ -188,12 +188,12 @@ E_I^*HBz=0,
 \]
 also
 \[
-Bz\in\mathcal N_I.
+Bz\in\mathcal K_R.
 \]
 Da \(B^{-1}=I+A\), gilt exakt
 \[
 \boxed{
- z\in (I+A)\mathcal N_I.
+ z\in (I+A)\mathcal K_R.
 }
 \tag{SE.8}
 \]
@@ -204,7 +204,7 @@ Daraus folgt die zweite exakte Form:
 \iff
 \operatorname{Ran}(HE_{\mathcal A}|_-)
 \cap
-(I+A)\mathcal N_I
+(I+A)\mathcal K_R
 =\{0\},
 }
 \tag{SE.9}
@@ -356,20 +356,20 @@ Somit besteht die erste Zeile von \(\mathcal K_{I,A}\) aus dem Identitätsterm, 
 
 DN-1 zeigt für \(0<R<a\), dass
 \[
-\mathcal N_I=\ker(E_I^*H|_+)\ne\{0\}.
+\mathcal K_R=\ker(E_I^*H|_+)\ne\{0\}.
 \]
 SE.9 präzisiert deshalb die echte verbleibende Frage:
 
 Nicht
 \[
-\mathcal N_I=\{0\},
+\mathcal K_R=\{0\},
 \]
 sondern
 \[
 \boxed{
 \operatorname{Ran}(HE_{\mathcal A}|_-)
 \cap
-(I+R^*R)\mathcal N_I
+(I+R^*R)\mathcal K_R
 \stackrel?=\{0\}.
 }
 \tag{SE.17}
