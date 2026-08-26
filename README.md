@@ -5,22 +5,44 @@
 Spektrale, nichtkommutative und arithmetische Zugänge zur RH — dokumentiert als
 lückenlos nachvollziehbare Kette aus Konstruktionen, Tests, Audits und No-Go-Resultaten.
 
-> **Stand:** 26. Juli 2026 · **letzter Eintrag:** NEU-228 · **332 Forschungsdokumente**
+> **Stand:** 26. Juli 2026 (Journalkern) · **letzter Eintrag:** NEU-228 · **332 Forschungsdokumente**
+> **Objekt-X-Arbeitsdefinition aktualisiert:** 26. August 2026 — siehe
+> [Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
 
-[Kontrollblatt Objekt X](00-grundlegung/ebene-XVI-objekt-x.md) · [Gesamtindex](INDEX.md) · [Statusregister](STATUS.md) · [Offene Probleme](OFFENE_PROBLEME.md) · [Glossar](GLOSSAR.md) · [Konventionen](KONVENTIONEN.md) · [Literatur](REFERENCES.md) · [Einstiegsprompt](EINSTIEGSPROMPT.md)
+[Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) · [Ebene XVI — historisch reklassifiziertes Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md) · [Gesamtindex](INDEX.md) · [Statusregister](STATUS.md) · [Offene Probleme](OFFENE_PROBLEME.md) · [Glossar](GLOSSAR.md) · [Konventionen](KONVENTIONEN.md) · [Literatur](REFERENCES.md) · [Einstiegsprompt](EINSTIEGSPROMPT.md)
 
 ---
 
 ## Worum es geht
 
-Das Programm untersucht, ob sich die Riemannsche Hypothese als **Spektraleigenschaft eines
-konkret konstruierten Operatorobjekts** formulieren lässt — genannt **Objekt X**.
+Das Programm untersucht, ob sich die Riemannsche Hypothese aus einer **konkret
+konstruierten gemeinsamen Hilbert-/Gram-/Mediator-Geometrie** ableiten oder als
+spektrale bzw. positive Eigenschaft einer daraus hervorgehenden Realisierung formulieren
+lässt — Arbeitsname **Objekt X**. Objekt X wird derzeit ausdrücklich **nicht** mit einem
+bereits konstruierten Einzeloperator identifiziert.
+
+> **Aktuelle Arbeitsdefinition (Stand 26. August 2026):** Objekt X ist der Arbeitsname für
+> eine bislang nicht konstruierte gemeinsame nichtorthogonale Hilbert-/Gram-Geometrie, in
+> der Primzahlpotenz- und archimedische Beiträge der Weil-Form aus demselben
+> geometrischen bzw. mediatorischen Mechanismus entstehen. Objekt X ist derzeit weder als
+> einzelner Operator noch als Spektraltripel oder festes algebraisches Tupel identifiziert.
+> Existenz, Eindeutigkeit und ein möglicher Weg zur Riemannschen Vermutung sind offen.
+> Details, Herleitung und Firewall: [Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
+
+> **Aktuelle P11/R32-Front:** FG-1 und FG-TR1 sind unabhängig GREEN geprüfte Kandidaten
+> ohne formale Promotion; CG-FG1 ist eine CANDIDATE-GREEN-Kompositionsreduktion. Der
+> eigentliche Schur-Test \(\ker\Gamma_I=\{0\}\) bleibt `?[O]`. Siehe
+> [P11/R32-Statusaddendum](00-uebersicht/P11_R32_STATUS_2026-08-25.md).
+
+Das folgende Fünfer-Tupel war die Arbeitsdefinition der früheren Forschungsphase
+(Stand 26. Juli 2026) und gilt seit der Konsolidierung vom 26. August 2026 ausdrücklich
+nur noch als **historische Kandidatenarchitektur**, nicht mehr als aktuelle Definition:
 
 $$
-\text{Objekt X} \;=\; \bigl(A_{2D}^{r},\; [\tilde\omega_2],\; [L_3],\; \mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}},\; m \xrightarrow{\;p\;} pm \bigr)
+\text{Objekt X (historisch, Stand 26. Juli 2026)} \;=\; \bigl(A_{2D}^{r},\; [\tilde\omega_2],\; [L_3],\; \mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}},\; m \xrightarrow{\;p\;} pm \bigr)
 $$
 
-Die fünf Komponenten sind: eine 2-dimensionale Spektraltripel-Algebra, eine
+Die fünf Komponenten waren: eine 2-dimensionale Spektraltripel-Algebra, eine
 Hochschild-2-Klasse, eine Hochschild-4-Klasse, die Wodzicki-Residuum-Spurform auf der
 Bost–Connes-Algebra sowie die fünfte Schicht der **relativen Primkanten** $m \to pm$.
 
@@ -92,7 +114,14 @@ Jeder Strangordner enthält eine eigene `README.md` mit vollständiger Dokumentt
 
 ---
 
-## Aktueller Stand (26. Juli 2026)
+## Aktueller Stand (26. Juli 2026, Journalkern)
+
+> **Hinweis:** Dieser Abschnitt beschreibt den Stand des historischen NEU-Journals
+> (Stränge 00–07). Die neuere, separat geführte P11/R32-Forschungsfront mit dem
+> aktuellen Objekt-X-Bezug ist in
+> [00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)
+> und [00-uebersicht/P11_R32_STATUS_2026-08-25.md](00-uebersicht/P11_R32_STATUS_2026-08-25.md)
+> dokumentiert.
 
 ### Gesicherter Kern
 
@@ -145,7 +174,7 @@ Spektraleigenschaft von $U_{g^{-1}}$ im KMS-Zustand folgt. Eine positive Reparat
 erfordert zwingend eine andere Koeffizientenkategorie (parazyklisch, $\sigma$-zyklisch
 oder getwistet-zyklisch) oder einen echten Orbitshift $\kappa \neq 0$.
 
-### Aktive Front
+### Aktive Front (Journalkern)
 
 | Strang | Engpass | Status |
 |---|---|---|
@@ -160,12 +189,16 @@ oder getwistet-zyklisch) oder einen echten Orbitshift $\kappa \neq 0$.
 
 Vollständige Liste mit Verzweigungsbedingungen: [OFFENE_PROBLEME.md](OFFENE_PROBLEME.md).
 
+Für die aktuelle P11/R32-Forschungsfront (Cross-Gram-Transversalität, FG-TR1, CG-FG1)
+siehe [00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)
+und [00-uebersicht/P11_R32_STATUS_2026-08-25.md](00-uebersicht/P11_R32_STATUS_2026-08-25.md).
+
 ---
 
 ## Lesepfade
 
 **Erster Überblick (ca. 30 Minuten)**
-[Minimalaxiome](00-grundlegung/objekt_x_minimalaxiome.md) → [Ebene XVI: Objekt X](00-grundlegung/ebene-XVI-objekt-x.md) → [Statusregister](STATUS.md) → [Offene Probleme](OFFENE_PROBLEME.md)
+[Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) → [P11/R32-Statusaddendum](00-uebersicht/P11_R32_STATUS_2026-08-25.md) → [Minimalaxiome (historischer Leitbild-Snapshot)](00-grundlegung/objekt_x_minimalaxiome.md) → [Ebene XVI (historisch reklassifiziertes Kontrollblatt)](00-grundlegung/ebene-XVI-objekt-x.md) → [Statusregister](STATUS.md) → [Offene Probleme](OFFENE_PROBLEME.md)
 
 **Der analytische Hauptpfad**
 NEU-44 (Primkanten) → NEU-42 (Fourier-Hebung) → NEU-63 (Weyl-Funktion) → NEU-136 (Selbstenergie) → NEU-141 (Mangoldt-Spur) → NEU-220k (Xi-Masterkontur) → NEU-220w (Hankel-Kriterium)
