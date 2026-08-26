@@ -251,14 +251,14 @@ E_I^*Hy_{\rm blind}=0.
 \]
 Somit
 \[
-y\in\mathcal N_I
+y\in\mathcal K_R
 \iff
 \Lambda_RJ_R(y_{\rm samp}|_{(0,T_0)})=0.
 \]
 Mit (RA.5) folgt die exhaustive Normalform
 \[
 \boxed{
-\mathcal N_I
+\mathcal K_R
 \cong
 \mathcal Z_R^+
 \oplus
