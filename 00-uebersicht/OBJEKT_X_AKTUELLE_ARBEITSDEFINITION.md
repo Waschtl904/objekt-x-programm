@@ -30,33 +30,98 @@ Identifikation dieser Mechanismen mit Objekt X selbst.
 
 ## 1. Aktuelle Arbeitsdefinition
 
-> **Objekt X** ist der Arbeitsname für eine bislang nicht konstruierte gemeinsame
-> nichtorthogonale Hilbert-/Gram-/Mediator-Geometrie, in der Primzahlpotenz- und
-> archimedische Beiträge der Weil-Form aus demselben zugrunde liegenden Mechanismus
-> hervorgehen. Objekt X ist derzeit weder als einzelner Operator noch als Spektraltripel,
-> festes algebraisches Tupel oder P04/Suzuki-Direktlimes identifiziert. Existenz,
-> Eindeutigkeit und ein möglicher Weg zur Riemannschen Vermutung sind offen.
+> **Objekt X** ist der Arbeitsname für eine bislang nicht konstruierte, **intrinsisch aus
+> arithmetisch-analytischen Daten hervorgehende gemeinsame nichtorthogonale
+> Hilbert-/Gram-/Mediator-Geometrie**, deren innere Struktur die vollständig und korrekt
+> normalisierte Weil-Form auf einer geeigneten Weil-Testklasse kanonisch als Gram-Form
+> erzeugt. Primzahlpotenz- und archimedischer Beitrag sollen dabei nicht unabhängig
+> angesetzt und nachträglich verklebt werden, sondern als verschiedene Projektionen,
+> Paarungen, Beobachtungen oder Komponenten **derselben zugrunde liegenden Geometrie**
+> hervorgehen.
 
-Als Leitform wird ein Hilbertraum \(\mathcal K_X\) und eine Zuordnung \(f\mapsto T_Xf\)
-gesucht, so dass die Weil-Form — oder ein präzise ausgewiesener positiver Quadratanteil —
-in einer gemeinsamen Gramform erscheint:
+Eine erfolgreiche Realisierung von Objekt X soll insbesondere einen Hilbertraum
+\(\mathcal K_X\) und eine kanonische Zuordnung \(f\mapsto T_Xf\) liefern, so dass auf der
+zugehörigen Testklasse die vollständige Weil-Form exakt als
 
 \[
-Q_W(f,g)=\langle T_Xf,T_Xg\rangle_{\mathcal K_X}.
+\boxed{
+Q_W(f,g)=\langle T_Xf,T_Xg\rangle_{\mathcal K_X}
+}
 \]
 
-Dabei sollen Prime-Power- und archimedischer Kanal nicht durch einen der bereits
-widerlegten **naiven** blockweisen/additiven Klebemechanismen zusammengesetzt werden,
-sondern als Projektionen, Cross-Gram-Paarungen oder andere Komponenten derselben
-zugrunde liegenden Geometrie entstehen. Dies ist **kein** allgemeiner Satz der Form
-„jede algebraische Summe ist unmöglich"; ausgeschlossen sind nur die jeweils bewiesenen
-No-Go-Routen.
+erscheint. Damit wäre insbesondere
+
+\[
+Q_W(f,f)=\|T_Xf\|_{\mathcal K_X}^2\ge0.
+\]
+
+### 1.1 Intrinsizität und Nicht-Zirkularität
+
+Die bloße abstrakte Hilbertraumfaktorisierung einer **bereits als positiv bekannten** Form
+zählt nicht als Konstruktion von Objekt X. Insbesondere darf \(\mathcal K_X\) nicht erst
+nachträglich durch Quotientierung nach dem Nullraum und Vervollständigung aus einer schon
+bewiesenen Positivität von \(Q_W\) gewonnen werden, wenn dadurch keine unabhängige
+arithmetisch-analytische Struktur erklärt wird.
+
+Die Konstruktion von \(\mathcal K_X\), \(T_X\) und ihrer gemeinsamen Geometrie muss daher
+aus unabhängig spezifizierten Daten und Mechanismen erfolgen und darf **weder die
+Positivität der vollständigen Weil-Form noch die Riemannsche Vermutung voraussetzen**.
+Andernfalls wäre die Gram-Darstellung nur eine zirkuläre Umformulierung des zu beweisenden
+Sachverhalts.
+
+### 1.2 Vollständigkeit, Testklasse und Normalisierung
+
+Für **Objekt X selbst** ist die vollständige, korrekt normalisierte Weil-Form das Ziel;
+eine Gram-Realisierung nur eines präzise ausgewiesenen positiven Quadratanteils ist ein
+wichtiger Zwischenbaustein, aber noch nicht Objekt X.
+
+Dabei wird nicht vorausgesetzt, dass die endgültig richtige Testfunktionsklasse und
+Normalisierung bereits bekannt oder ihre Eignung bereits bewiesen sind. Die Existenz und
+kanonische Identifikation einer geeigneten Weil-Testklasse, auf der die verlangte exakte
+Gram-Realisierung gilt und anschließend mit dem präzisen Weil-Kriterium rückgebunden
+werden kann, ist **selbst Teil der offenen Objekt-X-Frage**.
+
+### 1.3 X-Kandidat, X-Kandidatenbaustein und Objekt X
+
+Zur Vermeidung vorzeitiger Identifikationen werden drei Ebenen unterschieden:
+
+- **X-Kandidatenbaustein:** ein rigoroser lokaler oder partieller Mechanismus, der eine für
+  X erwartete Struktur sichtbar macht — etwa gemeinsame Mediatorbilder, Cross-Gram-
+  Paarungen, Transversalität oder kanonische freie Koordinaten — ohne bereits eine
+  vollständige Prime-/Archimedes-Geometrie zu liefern.
+- **X-Kandidat:** ein konkreter intrinsischer und nicht-zirkulärer Konstruktionsvorschlag
+  für eine gemeinsame Prime-/Archimedes-Geometrie, der spezifiziert, wie die vollständige
+  Weil-Form daraus hervorgehen soll. Die endgültige Gram-Identität darf dabei noch offen
+  sein; der Kandidat darf sie aber nicht voraussetzen.
+- **Objekt X:** erst eine erfolgreiche Realisierung, welche die geforderte gemeinsame
+  Geometrie und die vollständige exakte Gram-Identität auf der geeigneten Testklasse
+  tatsächlich trägt.
+
+Nach dieser Terminologie sind die heutigen Strukturen FG-1, FG-TR1,
+\(\widehat\Phi_R\), Schur-Cross-Gram und CG-FG1 **X-Kandidatenbausteine**. Diese
+Bezeichnung ist keine mathematische Promotion ihrer jeweiligen Auditstatus und behauptet
+insbesondere nicht, dass bereits ein X-Kandidat oder Objekt X konstruiert wäre.
+
+### 1.4 Realisierungsneutralität
+
+Objekt X wird nicht a priori mit einem einzelnen Operator, einem Spektraltripel, einer
+Algebra, einem festen algebraischen Tupel, einem P04/Suzuki-Direktlimes oder einer
+gegenwärtigen P11/P12/R32-Realisierung identifiziert. Solche Strukturen können
+Realisierungen, Koordinatenbilder, lokale Modelle, Kandidatenarchitekturen oder
+Konsequenzen von X sein.
+
+Existenz von Objekt X, Eindeutigkeit bis auf eine noch zu bestimmende natürliche
+Äquivalenz, die geeignete Testklasse und Normalisierung sowie die endgültige Rückbindung
+an das Weil-Kriterium und die Riemannsche Vermutung bleiben offen.
+
+Die bisherigen Block-Positivitäts- und Additiv-Cross-Term-No-Gos bleiben dabei
+route-spezifische Constraints. Die Definition behauptet **kein** universelles No-Go gegen
+jede algebraische Summen- oder Blockdarstellung.
 
 Die historische Ebene-XVI-Revision 2 und die Datei `objekt_x_minimalaxiome.md` bleiben als
 Constraint-/Architekturarchive relevant. Identifikationsaussagen wie das definitorische
-Fünfschicht-Profil oder ein fester kategorialer Träger gelten seit dieser Konsolidierung
-jedoch nicht mehr als aktuelle Definition von X, sofern sie nicht separat in die heutige
-Arbeitsdefinition zurückgebunden werden.
+Fünfschicht-Profil oder ein fester kategorialer Träger gelten nicht als aktuelle Definition
+von X, sofern sie nicht separat in die heutige Arbeitsdefinition zurückgebunden werden.
 
 ---
 
@@ -273,6 +338,7 @@ Keine der obigen Aussagen impliziert:
 - dass \(\ker\Gamma_I=\{0\}\) bewiesen ist — dieser Test bleibt `?[O]`;
 - dass die Range-Intersection-Form ohne P12-Injektivität verwendet werden darf;
 - dass Objekt X existiert;
+- dass ein X-Kandidat bereits konstruiert ist;
 - dass ein Weg zu RH etabliert ist;
 - dass Ebene XVI Revision 2 oder die Minimalaxiome als ganze mathematisch widerlegt wären;
 - irgendeine formale Promotion von FG-1, FG-TR1 oder CG-FG1.
@@ -290,11 +356,15 @@ Keine der obigen Aussagen impliziert:
 | \(\ker\Gamma_I=\{0\}\) | `?[O]` — offene Schur-Transversalität | RB.17 / RB-4 |
 | Closed Range / bounded below / uniforme Winkel | `?[O]` | stärkere quantitative Front |
 
+Die Bezeichnung `candidate` in dieser Tabelle ist der jeweilige **Audit-/Satzstatus** und
+nicht automatisch die neue Kategorie **X-Kandidat** aus Abschnitt 1.3. Die hier gelisteten
+Strukturen sind im aktuellen Stand X-Kandidatenbausteine.
+
 ---
 
 ## 6. Notations- und Scope-Regeln
 
-Für den unsichtbaren Fiber-Graph-Raum wird künftig reserviert
+Für den unsichtbaren Fiber-Graph-Raum wird reserviert
 
 \[
 \boxed{\mathcal K_R:=\ker(E_I^*H|_+).}
@@ -306,9 +376,10 @@ Im Schur-Cross-Gram-Audit bezeichnet dagegen
 \boxed{\mathcal N_I:=\overline{\operatorname{Ran}\mathscr M_I}}
 \]
 
-einen anderen Raum. Diese Objekte dürfen nicht verwechselt werden. Die historische
-`N_I`-Notation in älteren Fiber-Graph-Audits wird in einem separaten, dateiweise geprüften
-Bereinigungs-PR ersetzt; eine blinde globale Ersetzung ist unzulässig.
+einen anderen Raum. Diese Objekte dürfen nicht verwechselt werden. Die frühere
+`N_I`-Notation in den betroffenen Fiber-Graph-Audits wurde mit PR #2 dateiweise geprüft
+auf `K_R` bereinigt; historische Snapshots können ihre historische Notation weiterhin als
+solche dokumentieren.
 
 Ebenso bleiben die Symbole getrennt:
 
@@ -320,7 +391,7 @@ Ebenso bleiben die Symbole getrennt:
 ---
 
 **Aktuelle Forschungsfront:** Zuerst ist \(\ker\Gamma_I=\{0\}\) bzw. die äquivalente
-Preimage-Transversalität zu entscheiden. Parallel können Objekt-X-Prototypen rückwärts aus
-den bereits feststehenden Gram-/Mediator- und No-Go-Daten konstruiert werden. Ein
-quantitativer Winkel-/Closed-Range-Satz ist eine spätere, stärkere Stufe und darf nicht in
-den aktuellen Injektivitätstest hineingelesen werden.
+Preimage-Transversalität zu entscheiden. Parallel können X-Kandidatenarchitekturen aus den
+bereits feststehenden Gram-/Mediator- und No-Go-Daten konstruiert werden. Ein quantitativer
+Winkel-/Closed-Range-Satz ist eine spätere, stärkere Stufe und darf nicht in den aktuellen
+Injektivitätstest hineingelesen werden.
