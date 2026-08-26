@@ -6,6 +6,12 @@ Knoten [OFFENE_PROBLEME.md](OFFENE_PROBLEME.md).
 
 > Stand: 3. August 2026 · letzter Eintrag NEU-228 · Direktaudits NEU-210/211 verbucht
 
+> **Objekt-X-Definition:** Die in diesem Dokument referenzierten Objekt-X-Architekturen
+> (Kontrollblatt Ebene XVI, Abschnitt „Objekt-X-Hypothese" in `AKTUELLER_STAND.md`) sind
+> seit 26. August 2026 als **historische Kandidatenarchitekturen** einzuordnen. Die
+> aktuelle Arbeitsdefinition steht in
+> [00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
+
 Verbindliche Karte aller Bedingungen an Objekt X, nach logischen Ebenen getrennt:
 [Ebene XVI — Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md).
 
@@ -186,7 +192,7 @@ Nach Dringlichkeit geordnet.
 
 ---
 
-## 6. Bewusste Kataloglücken
+## 6. Bewusste Katalollücken
 
 | Nummer | Grund |
 |---|---|
