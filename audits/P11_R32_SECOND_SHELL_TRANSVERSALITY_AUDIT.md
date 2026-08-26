@@ -45,7 +45,7 @@ y(T-u)=\rho f(u),
 \]
 mit gerader Fortsetzung. Nach SS-1a liegt diese Schale in
 \[
-\mathcal N_I=\ker(E_I^*H|_+).
+\mathcal K_R=\ker(E_I^*H|_+).
 \]
 
 Der augmentierte SE-Block lautet
@@ -331,7 +331,7 @@ ST-1 beweist nur die Transversalität der zweiten expliziten nichtzentralen Scha
 
 Nicht bewiesen:
 
-- Klassifikation des gesamten `N_I`;
+- Klassifikation des gesamten `K_R`;
 - voller augmentierter Blockkern trivial;
 - voller Schur-Crossblock injektiv;
 - Closed Range / bounded below / uniforme Winkel;
