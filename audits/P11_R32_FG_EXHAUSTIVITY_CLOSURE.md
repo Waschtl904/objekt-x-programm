@@ -3,7 +3,7 @@
 **Status:** Kandidat; keine Promotion.  
 **P11:** FROZEN. **P12:** unverändert. **R14:** unverändert.  
 **Basis:** `audits/P11_R32_INVISIBLE_FIBER_GRAPH_RECONSTRUCTION_ADDENDUM.md`.  
-**Ziel:** die im unabhängigen Review einzig verbliebene FGR-F-Lücke explizit schließen: die Rückrichtung von einer geglueten Kernel-Familie zu genau einem gesampelten geraden Element von `N_I`.
+**Ziel:** die im unabhängigen Review einzig verbliebene FGR-F-Lücke explizit schließen: die Rückrichtung von einer geglueten Kernel-Familie zu genau einem gesampelten geraden Element von `K_R`.
 
 ---
 
@@ -115,7 +115,7 @@ E_I^*Hy_F
 Also
 
 \[
-\boxed{y_F\in\mathcal N_I.}
+\boxed{y_F\in\mathcal K_R.}
 \tag{EC.7}
 \]
 
@@ -141,7 +141,7 @@ Definiere
 \Phi_R:
 \mathcal Z_R^+\oplus
 (\mathfrak G_R\cap\ker\Lambda_R)
-\longrightarrow\mathcal N_I
+\longrightarrow\mathcal K_R
 \]
 
 durch
@@ -159,7 +159,7 @@ Die beiden Summanden besitzen disjunkten positiven physischen Support a.e. Daher
 
 ### Surjektivität
 
-Sei `y in N_I`. Zerlege orthogonal nach positivem Support
+Sei `y in K_R`. Zerlege orthogonal nach positivem Support
 
 \[
 y=y_{\rm blind}+y_{\rm samp},
@@ -194,7 +194,7 @@ Folglich
 
 \[
 \boxed{
-\mathcal N_I
+\mathcal K_R
 \xrightarrow[\Phi_R^{-1}]{\ \sim\ }
 \mathcal Z_R^+\oplus(\mathfrak G_R\cap\ker\Lambda_R)
 }
@@ -207,7 +207,7 @@ als Hilberträume über einen kanonischen beschränkten Isomorphismus. Es wird w
 
 ## 5. Adversarialer Exhaustivitätscheck
 
-Ein hypothetisches `y in N_I`, das von (EC.9) nicht erfasst würde, müsste einen positiven physischen Supportpunkt entweder
+Ein hypothetisches `y in K_R`, das von (EC.9) nicht erfasst würde, müsste einen positiven physischen Supportpunkt entweder
 
 1. außerhalb `U_R` besitzen — dieser Anteil liegt definitionsgemäß in `Z_R^+`; oder
 2. innerhalb `U_R` besitzen — dieser Anteil besitzt über `J_R` zwingend eine eindeutige Branchfamilie in `G_R`, und die Kernelgleichung ist exakt `Lambda_R F=0`.
@@ -235,7 +235,7 @@ Dies ist **keine Promotion**. Eine formale Statusänderung erfolgt nur nach unab
 
 Aus (EC.9) folgt nicht:
 
-- Trivialität von `N_I`;
+- Trivialität von `K_R`;
 - Trivialität des augmentierten Blockkerns;
 - Injektivität des vollen Schur-Crossblocks;
 - Closed Range / bounded below / uniforme Winkel;
