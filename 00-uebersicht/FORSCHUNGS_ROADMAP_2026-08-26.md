@@ -32,8 +32,9 @@ Insbesondere gelten folgende Firewalls:
 - **B beweist A nicht, setzt A nicht voraus und wird von A nicht vorausgesetzt.**
   Beide Fronten können unabhängig und parallel bearbeitet werden.
 - **C kann prinzipiell auch ohne vorherigen Abschluss von A oder B formuliert werden.**
-  A und B sind derzeit die aussichtsreichsten bekannten X-Kandidatenbausteine, aber keine
-  definitorisch notwendigen Eingangstore zu jedem denkbaren X-Kandidaten.
+  A und B sind derzeit die aussichtsreichsten bekannten **Arbeitsfronten zur Gewinnung bzw.
+  Prüfung X-relevanter Kandidatenbausteine**, aber keine definitorisch notwendigen
+  Eingangstore zu jedem denkbaren X-Kandidaten.
 - **C -> D ist eine methodische Projektabhängigkeit, keine mathematische Implikation.**
   Ohne einen konkret spezifizierten X-Kandidaten mit Hilbertraum, Testklasse und
   Zuordnung kann die verlangte Gram-Identität nicht sinnvoll an diesem Kandidaten geprüft
