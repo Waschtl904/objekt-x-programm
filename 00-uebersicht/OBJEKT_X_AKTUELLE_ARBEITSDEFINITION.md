@@ -390,8 +390,10 @@ Ebenso bleiben die Symbole getrennt:
 
 ---
 
-**Aktuelle Forschungsfront:** Zuerst ist \(\ker\Gamma_I=\{0\}\) bzw. die äquivalente
-Preimage-Transversalität zu entscheiden. Parallel können X-Kandidatenarchitekturen aus den
-bereits feststehenden Gram-/Mediator- und No-Go-Daten konstruiert werden. Ein quantitativer
-Winkel-/Closed-Range-Satz ist eine spätere, stärkere Stufe und darf nicht in den aktuellen
+**Aktuelle Forschungspriorisierung:** Diese Arbeitsdefinition legt bewusst keine notwendige
+Angriffsreihenfolge fest. Die aktuelle strategische A–E-Roadmap einschließlich der
+Nicht-Implikations-Firewalls wird separat geführt in
+[`FORSCHUNGS_ROADMAP_2026-08-26.md`](FORSCHUNGS_ROADMAP_2026-08-26.md).
+Der lokale Schur-Test \(\ker\Gamma_I=\{0\}\) bleibt `?[O]`; quantitative
+Winkel-/Closed-Range-Sätze sind stärkere Stufen und dürfen nicht in diesen offenen
 Injektivitätstest hineingelesen werden.
