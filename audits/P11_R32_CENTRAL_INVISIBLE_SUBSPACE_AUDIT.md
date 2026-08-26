@@ -27,7 +27,7 @@ Fixiere
 \]
 Auf dem geraden Sektor setze
 \[
-\mathcal N_I:=\ker(E_I^*H|_{\mathscr H^+}).
+\mathcal K_R:=\ker(E_I^*H|_{\mathscr H^+}).
 \]
 
 Definiere den zentralen geraden Unterraum
@@ -46,7 +46,7 @@ Da `a-R>0`, ist `C_R^+` ein nichttrivialer geschlossener unendlichdimensionaler 
 
 \[
 \boxed{
-\mathcal C_R^+\subset\mathcal N_I.
+\mathcal C_R^+\subset\mathcal K_R.
 }
 \tag{CI.2}
 \]
@@ -54,7 +54,7 @@ Da `a-R>0`, ist `C_R^+` ein nichttrivialer geschlossener unendlichdimensionaler 
 Insbesondere
 \[
 \boxed{
-\dim\mathcal N_I=\infty.
+\dim\mathcal K_R=\infty.
 }
 \tag{CI.3}
 \]
@@ -94,7 +94,7 @@ Die post-P12 inversefreie Transversalitätsfrage lautet auf globalen P12-Injekti
 \[
 \operatorname{Ran}(HE_{\mathcal A}|_-)
 \cap
-(I+R_{T_0}^*R_{T_0})\mathcal N_I
+(I+R_{T_0}^*R_{T_0})\mathcal K_R
 \stackrel?=\{0\}.
 \]
 
@@ -110,7 +110,7 @@ Die korrekte Zielaussage bleibt qualitative Transversalität: selbst ein unendli
 
 CI-1 liefert ausdrücklich **keinen** Schur-Annihilator. Aus
 \[
-0\ne y\in\mathcal N_I
+0\ne y\in\mathcal K_R
 \]
 folgt nicht
 \[
@@ -129,6 +129,6 @@ Ebenso folgt aus CI-1 keine Aussage über
 
 Bei unabhängiger GREEN-Prüfung wäre erlaubt:
 
-- **CI-1:** `✓[M]` — unendlichdimensionaler zentraler Unterraum `C_R^+` liegt für jedes `0<R<a` im inneren Unsichtbarkeitsraum `N_I`.
+- **CI-1:** `✓[M]` — unendlichdimensionaler zentraler Unterraum `C_R^+` liegt für jedes `0<R<a` im inneren Unsichtbarkeitsraum `K_R`.
 
 Die eigentliche Transversalitätsfrage bleibt `?[O]`.
