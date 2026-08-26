@@ -1,5 +1,17 @@
 # Aktueller Stand — P11-Sonderupdate 2026-08-21
 
+> **Konsolidierungsupdate 2026-08-26:** Der aktuelle Objekt-X- und P11/R32-Forschungsstand
+> liegt inzwischen **nach** diesem P11-Freeze-Snapshot. P11 selbst bleibt FROZEN; die
+> Post-Freeze-Front arbeitet an FG-1/FG-TR1/CG-FG1 und am offenen Schur-Test
+> \(\ker\Gamma_I=\{0\}\ ?[O]\). Kanonische Referenzen:
+>
+> - [`OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)
+> - [`P11_R32_STATUS_2026-08-25.md`](P11_R32_STATUS_2026-08-25.md), Abschnitt „Update 2026-08-26“
+>
+> Die darunterstehenden Stände vom 21. August bzw. 8. August bleiben als historische
+> Programmsnapshots erhalten. Ihre damaligen „aktiven Fronten“ und „nächsten Forschungszüge“
+> sind **nicht** als heutige Prioritätsangaben zu lesen.
+
 > **P11 hat seit 2026-08-21 einen eigenen, neueren Auditstand.**  Der darunterstehende
 > Gesamtstand vom 2026-08-08 bleibt als historischer Programmsnapshot unverändert erhalten.
 >
@@ -33,7 +45,11 @@
 
 ---
 
-# Aktueller Stand — 2026-08-08 (Audit-Update 3, Patch 3.1)
+# Historischer Gesamtstand — 2026-08-08 (Audit-Update 3, Patch 3.1)
+
+> **Historischer Snapshot:** Alle nachfolgenden Prioritäts- und Objekt-X-Angaben dieses
+> Abschnitts sind auf den Stand 2026-08-08 datiert. Insbesondere die P04/Suzuki-
+> Objekt-X-Hypothese ist seit 2026-08-26 eine historische Kandidatenarchitektur.
 
 ---
 
@@ -50,7 +66,7 @@ $$\text{NEU-Serie}\to\text{SYN-Entwurf}\to\text{SYN-Direktaudit}\to\text{kanonis
 
 ---
 
-## Synthese-Manuskripte (papers/)
+## Synthese-Manuskripte (papers/) — historischer Stand 2026-08-08
 
 | ID | Titel | Status | Quellknoten |
 |---|---|---|---|
@@ -61,27 +77,27 @@ $$\text{NEU-Serie}\to\text{SYN-Entwurf}\to\text{SYN-Direktaudit}\to\text{kanonis
 
 ---
 
-## Aktive Forschungsfront
+## Historische Forschungsfront (Stand 2026-08-08)
 
 | Knoten | Titel | Status |
 |---|---|---|
 | NEU-260a | $\lambda$-Gauge-Audit | $\checkmark[K/M]$ |
 | NEU-260b | $\theta$-Selektionsaudit | $\checkmark[K/M]$ |
 | NEU-260b.1 | $\mathbb{Z}_2$-Selektion | $\checkmark[K/M]$ (Patch 2) |
-| **NEU-260b.2** | Paritätsselektion durch Suzuki-Grenzfunktion | $\checkmark[K/M]$ **höchste Priorität** |
+| **NEU-260b.2** | Paritätsselektion durch Suzuki-Grenzfunktion | $\checkmark[K/M]$ **damalige höchste Priorität** |
 | NEU-260c | Grenznormalisierung $\phi(a,z)$ | $?[O]$ |
 | NEU-260d | $J_{a,b}$-Geometrie | $?[O]$ |
 
 ---
 
-## Zentrale offene Leitfrage
+## Historische offene Leitfrage (Stand 2026-08-08)
 
 $$\boxed{\text{Kann die analytische Suzuki-Grenzstruktur }+P\text{ bereits eindeutig erzwingen?}}$$
 
 Konkret (NEU-260b.2, konditional):
 $$\text{Suzuki-Grenzrelation}\Longrightarrow\varepsilon(a)=+1\text{ asymptotisch.}$$
 
-Offene Teilfragen:
+Damals offene Teilfragen:
 1. Suzukis Grenzrelation beweisen (impliziert RH).
 2. Asymptotisches $\varepsilon=+1$ auf alle $a>0$ propagieren (benötigt kanonische $J_{a,b}$-Typisierung; noch keine Quelle).
 3. BC/KMS, Frobenius: nachrangig; ihre Aufgabe ist arithmetische Strukturkontrolle des $a\to\infty$-Grenzübergangs, nicht binäre Vorzeichenwahl.
@@ -90,7 +106,7 @@ Offene Teilfragen:
 
 ---
 
-## Hart gebuchte Resultate
+## Hart gebuchte Resultate des historischen Snapshots
 
 $$W_{\rm NEU\text{-}252}=W_{\rm Lit}\quad\checkmark[K/M]$$
 $$\mathcal{S}_{\rm adel}^{\rm amp}=\{F\in\mathcal{S}(\mathbb{A}_\mathbb{Q}):(P_{\rm Haar}F)|_{(0,\infty)}\in C_c^\infty\}\quad\checkmark[K/M]$$
@@ -118,20 +134,21 @@ $$\varepsilon(a)=+1\text{ für hinreichend großes }a\text{ (konditional auf Gre
 
 ## Objekt-X-Hypothese (historische Kandidatenarchitektur)
 
-> **Hinweis (2026-08-26):** Die folgende Formel war eine Arbeitshypothese der
-> P04/Suzuki-Forschungsphase (Stand 2026-08-08) und gilt seit der Konsolidierung vom
-> 26. August 2026 ausdrücklich als **historische Kandidatenarchitektur**, nicht als
-> aktuelle Definition von Objekt X. Die aktuelle Arbeitsdefinition steht in
+> **Reklassifikation (2026-08-26):** Die folgende Formel war eine Arbeitshypothese der
+> P04/Suzuki-Forschungsphase (Stand 2026-08-08) und ist ausdrücklich **keine aktuelle
+> Definition von Objekt X**. Die aktuelle Arbeitsdefinition steht in
 > [OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
+> Die in diesem Snapshot separat bewiesenen analytischen Teilresultate werden dadurch
+> nicht rückwirkend entwertet.
 
-$$\text{Objekt X}=\left\{\mathcal{H}(T_a^{\rm w}),\;J_{a,b},\;\overline{\mathscr{D}}_{a,\varepsilon(a)\cdot P}\right\}_{0<a<b}$$
+$$\text{Objekt X (historisch)}=\left\{\mathcal{H}(T_a^{\rm w}),\;J_{a,b},\;\overline{\mathscr{D}}_{a,\varepsilon(a)\cdot P}\right\}_{0<a<b}$$
 
 mit $\varepsilon(a)=+1$ asymptotisch (konditional), $J_{a,b}$ und $\phi(a,z)$ offen.\\
 Unter RH (Konjektur): $\mathcal{K}_X:=\varinjlim_a\mathcal{H}(T_a)\to\mathcal{H}_W\cong\ell^2(\Gamma,m_\gamma)$.
 
 ---
 
-## Strategische Arbeitsteilung (Stand NEU-260b.2)
+## Historische strategische Arbeitsteilung (Stand NEU-260b.2)
 
 | Schicht | Aufgabe | Status |
 |---|---|---|
@@ -140,13 +157,16 @@ Unter RH (Konjektur): $\mathcal{K}_X:=\varinjlim_a\mathcal{H}(T_a)\to\mathcal{H}
 | Adelen | Globaler Amplitudenport, arithmetische Gluung | P02 im Re-Audit; P03 kanonisch |
 | Noch offen | $J_{a,b}$, $\phi(a,z)$, $\lambda$-Kontrolle, $a\to\infty$-Grenzübergang | Typisierungslücken explizit |
 
-**Nächster Forschungszug nach P02-Re-Audit:** NEU-260d — kanonische Vergleichsstruktur $J_{a,b}$ zwischen den wechselnden $\mathcal{H}(T_a)$. Ohne $J_{a,b}$ ist „$\varepsilon(a)$ bleibt konstant" keine vollständig typisierte mathematische Aussage.
+**Historischer nächster Forschungszug (Stand 2026-08-08):** NEU-260d — kanonische Vergleichsstruktur $J_{a,b}$ zwischen den wechselnden $\mathcal{H}(T_a)$. Ohne $J_{a,b}$ ist „$\varepsilon(a)$ bleibt konstant“ keine vollständig typisierte mathematische Aussage.
+
+**Heutige Forschungsfront (2026-08-26):** siehe die beiden kanonischen Referenzen am
+Anfang dieser Datei; insbesondere bleibt \(\ker\Gamma_I=\{0\}\) `?[O]`.
 
 ---
 
-*Zuletzt aktualisiert: 2026-08-08
+*Historischer Snapshot zuletzt aktualisiert: 2026-08-08
 (P02 Patch 3.1 im SYN-Re-Audit; P03 kanonische Tagesreferenz)*
 
 ---
 
-*Objekt-X-Referenzhinweis ergänzt: 2026-08-26 — siehe [OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).*
+*Objekt-X-/P11-R32-Konsolidierung ergänzt: 2026-08-26 — siehe [OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) und [P11_R32_STATUS_2026-08-25.md](P11_R32_STATUS_2026-08-25.md).*
