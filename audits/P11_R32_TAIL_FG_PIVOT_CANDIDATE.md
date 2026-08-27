@@ -361,7 +361,7 @@ P_{\mathcal T_R}AP_{\mathcal T_R}
 Somit
 
 \[
-z\ne0,quad
+z\ne0,\quad
 \operatorname{ess\,supp}z\subset\pm\mathcal T_R
 \quad\Longrightarrow\quad
 Az\ne0.
@@ -786,20 +786,20 @@ Damit besteht die exhaustive Tail-FG-Parameter-Firewall aus genau den zehn Hyper
 
 \[
 \boxed{
-\varepsilon=\Delta-R,quad
-R=\frac\Delta2,quad
-\varepsilon=\Delta,quad
-R=\Delta,quad
+\varepsilon=\Delta-R,\quad
+R=\frac\Delta2,\quad
+\varepsilon=\Delta,\quad
+R=\Delta,\quad
 \varepsilon=\Delta+R,
 }
 \]
 
 \[
 \boxed{
-\varepsilon=e-R,quad
-R=\frac e2,quad
-\varepsilon=d-R,quad
-R=\frac d2,quad
+\varepsilon=e-R,\quad
+R=\frac e2,\quad
+\varepsilon=d-R,\quad
+R=\frac d2,\quad
 R=C.
 }
 \tag{HT.31}
