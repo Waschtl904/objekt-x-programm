@@ -524,7 +524,31 @@ R_++\varepsilon_+
 
 Also liegt auch dieser Punkt im restricted-tail-SW1 und bezeugt die obere offene A-Wall-Unterkammer.
 
-Damit sind beide offenen Unterkammern sowie die dazwischenliegende Parameterwand explizit nichtleer bezeugt.
+### 7.4 Randfläche \(\sigma=R\)
+
+Setze
+\[
+R_{\partial}=\sigma_{\partial}=\frac{\Delta}{6},
+\qquad
+\varepsilon_{\partial}=\frac{\Delta}{3}.
+\]
+
+Dann
+\[
+0<\sigma_{\partial}=R_{\partial}<\varepsilon_{\partial},
+\]
+und
+\[
+R_{\partial}+\varepsilon_{\partial}
+=
+\frac{\Delta}{2}
+<
+\Delta.
+\]
+
+Damit ist auch die ausdrücklich zugelassene restricted-tail-Randfläche \(\sigma=R\) innerhalb von SW1 nichtleer bezeugt.
+
+Damit sind beide offenen A-Wall-Unterkammern, die dazwischenliegende Parameterwand und die zulässige \(\sigma=R\)-Randfläche explizit nichtleer bezeugt.
 
 
 ---
@@ -569,6 +593,8 @@ mit einem \(R\to0\)-Descent im restricted-tail-Stratum kompatibel.
 Dies ist nur eine Parameterverträglichkeitsaussage. Es folgt daraus keine C6-, Strong-Terminal- oder Konvergenzaussage.
 
 Die Einschränkung \(R+\varepsilon<\Delta\) beschränkt dabei **Konstruktionsparameter**, nicht den freien \((z,h)\)-Koordinatenraum. Sie ist daher kategorial kein A0-Abschluss und auch kein Wegdefinieren freier Koordinaten. Ob ein auf diesem Parameterwedge gewonnener Nichtentartungssatz für die spätere globale Konstruktion ausreicht, bleibt eine separate Downstream-Frage.
+
+Zugleich hat \(\varepsilon\) eine Doppelrolle: es ist ein Konstruktionsparameter und legt mit \(T_0=T+\varepsilon\) die obere Horizont-/Tailgrenze fest. SW1 kontrolliert daher das Tailfenster \((R,\varepsilon)\) unter \(R+\varepsilon<\Delta\), **nicht** automatisch einen größeren Horizontbereich. Ein komplementärer Bereich, der bei einer anderen oder größeren Horizontwahl jenseits dieser \(\varepsilon\)-Skala entsteht, muss durch eigene Strata bzw. separate Argumente abgedeckt werden. SW1 allein liefert deshalb ausdrücklich keinen A0-Abschluss; es ist nur ein lokaler Parameterbaustein.
 
 ---
 
@@ -627,6 +653,8 @@ Genauer:
 - für \(\varepsilon<\Delta/2\): kein \(I_b\)-/\(I_+\)-Overlap;
 - für \(\varepsilon=\Delta/2\): die offenen Shells berühren sich nur an einem \(L^2\)-nulligen Endpunkt;
 - für \(\varepsilon>\Delta/2\): positiver \(I_b\)-/\(I_+\)-Overlap.
+
+Hier gilt dieselbe Intervallkonvention wie in HT.13: \(I_b=(2d-\varepsilon,2d-R)\) und \(I_+=(a+R,a+\varepsilon)\) sind **offene** Intervalle. Bei \(\varepsilon=\Delta/2\) ist ihr Schnitt daher als Mengen-Schnitt leer; ihre Abschlüsse besitzen genau einen gemeinsamen Endpunkt. Dieser Berührpunkt ist in der \(s\)-/Output-Variablen eine \(L^2\)-Nullmenge. Die Parameterkonfiguration \(\varepsilon=\Delta/2\) selbst bleibt davon unberührt eine echte, separat zu behandelnde Parameterwand.
 
 Daher
 \[
@@ -719,10 +747,10 @@ Vor einer Statusbuchung sind unabhängig zu prüfen:
 6. dass der \(x_0\)-Ast nicht auftritt, HT.27 auf SW1 vakuum erfüllt ist und damit die TR.13-Abhängigkeit dort nicht benötigt wird;
 7. die Herkunft jeder der zehn HT.31-Flächen und ihr Ausschluss aus dem offenen \((R,\varepsilon)\)-Inneren;
 8. die Identifikation mit Chamber I.1;
-9. die drei Zeugen für \(\varepsilon<\Delta/2\), \(\varepsilon=\Delta/2\) und \(\varepsilon>\Delta/2\);
-10. die \(R\to0\)-Verträglichkeit und die Unterscheidung Parameterrestriktion vs. freie Koordinaten;
+9. die drei Zeugen für \(\varepsilon<\Delta/2\), \(\varepsilon=\Delta/2\) und \(\varepsilon>\Delta/2\) sowie den zusätzlichen Zeugen auf \(\sigma=R\);
+10. die \(R\to0\)-Verträglichkeit, die Unterscheidung Parameterrestriktion vs. freie Koordinaten und die explizite A0-Komplement-Firewall für größere Horizontbereiche;
 11. die HT-A3-Nuance anhand HT.17/HT.18: \(I_b\cap I_-\) ist ausgeschlossen, \(I_b\cap I_+\) bleibt genau für \(\varepsilon>\Delta/2\) möglich;
-12. dass die allowed boundary \(\sigma=R\) keine zusätzliche HT.31-FG-Wand erzeugt;
+12. die offene Intervallkonvention für \(I_b,I_+\) auf \(\varepsilon=\Delta/2\) sowie dass die allowed boundary \(\sigma=R\) keine zusätzliche HT.31-FG-Wand erzeugt;
 13. die Scope-Firewall.
 
 Keine Promotion und kein Merge ohne unabhängiges GREEN gegen den exakten PR-Diff.
