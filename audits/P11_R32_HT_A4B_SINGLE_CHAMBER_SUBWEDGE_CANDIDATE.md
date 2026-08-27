@@ -1,505 +1,513 @@
-# P11/R32 — HT-A4b-SW1: Single-FG-Chamber-Subwedge unter (R+arepsilon<Delta)
+# P11/R32 — HT-A4b-SW1: Single-FG-Chamber-Subwedge unter \(R+\varepsilon<\Delta\)
 
 **Status:** Rechenkandidat; keine Promotion.  
-**Arbeitsname:** `HT-A4b-SW1`.  
-**Repo-Basis:** `main@9d85df51f926d976d7d685dc0000fd7ff41609fb`.  
+**Arbeitsname:** HT-A4b-SW1.  
+**Repo-Basis:** main@9d85df51f926d976d7d685dc0000fd7ff41609fb.  
 **Scope:** ausschließlich die restricted-tail-Klasse
-[
-0<sigmale R<arepsilon,qquad R+arepsilon<Delta,
-]
+\[
+0<\sigma\le R<\varepsilon,
+\qquad
+R+\varepsilon<\Delta,
+\]
 mit
-[
-T<S=T+sigma<T_0=T+arepsilon<c.
-]
-**Abhängigkeit:** `HT-A4a FG CLASSIFICATION OF SIX ARGUMENTS: independently GREEN candidate`.  
+\[
+T<S=T+\sigma<T_0=T+\varepsilon<c.
+\]
+**Abhängigkeit:** HT-A4a FG CLASSIFICATION OF SIX ARGUMENTS: independently GREEN candidate.  
 **Firewall:** keine globale Promotion von HT-A4b, HT-RED, A0 oder Schur-Cross-Gram-Injektivität.
 
 ---
 
 ## 0. Ziel
 
-Das vollständige HT-A4b-Problem auf dem ganzen offenen Dreieck
-[
-0<R<arepsilon<c-T
-]
-enthält zehn Parameterflächen und 15 offene Tail-FG-Chambers.
+Das vollständige HT-A4b-Problem auf dem offenen Dreieck
+\[
+0<R<\varepsilon<c-T
+\]
+enthält im aktuellen Tail-FG-Audit zehn Parameterflächen und 15 offene Tail-FG-Chambers.
 
 Dieses Audit prüft bewusst nur den kleineren offenen Subwedge
-[
-oxed{
-mathfrak W_{m SW1}
+\[
+\boxed{
+\mathfrak W_{\rm SW1}
 =
-{(R,arepsilon):
-0<R<arepsilon, R+arepsilon<Delta}.
+\{(R,\varepsilon):
+0<R<\varepsilon,\ R+\varepsilon<\Delta\}.
 }
-	ag{SW1.1}
-]
+\tag{SW1.1}
+\]
 
 Zu zeigen ist:
 
-1. alle fünf inneren Tail-FG-(s)-Wände liegen auf (mathfrak W_{m SW1}) strikt rechts des Integrationsintervalls ((R,arepsilon));
-2. damit ist die Fiber-Graph-Klassifikation der sechs Tail-Argumente auf dem gesamten (s)-Intervall konstant;
-3. keine der zehn HT.31-Parameterflächen schneidet das Innere von (mathfrak W_{m SW1});
-4. (mathfrak W_{m SW1}) ist nichtleer und mit einem (R	o0)-Descent vereinbar;
-5. die separat bereits bekannte A-Wall-/HT-A3-Kollision bei (arepsilon=Delta/2) bleibt sichtbar und darf nicht mit der FG-Chamber-Struktur verwechselt werden.
+1. Alle fünf inneren Tail-FG-\(s\)-Wände liegen auf \(\mathfrak W_{\rm SW1}\) strikt rechts des Integrationsintervalls \((R,\varepsilon)\).
+2. Damit ist die Fiber-Graph-Klassifikation der sechs Tail-Argumente auf dem gesamten \(s\)-Intervall konstant.
+3. Keine der zehn HT.31-Parameterflächen schneidet das Innere von \(\mathfrak W_{\rm SW1}\).
+4. \(\mathfrak W_{\rm SW1}\) ist nichtleer und mit einem \(R\to0\)-Descent vereinbar.
+5. Die separat bekannte A-Wall-/HT-A3-Kollision bei \(\varepsilon=\Delta/2\) bleibt sichtbar und darf nicht mit der FG-Chamber-Struktur verwechselt werden.
 
 ---
 
 ## 1. Konstanten und Ordnung
 
 Es gelten
-[
-d=b-a=rac12lograc32,
-qquad
-e=T-b=rac12lograc43,
-]
-[
-Delta=d-e=rac12lograc98,
-qquad
-arepsilon_{max}=c-T=rac12lograc54.
-]
+\[
+d=b-a=\frac12\log\frac32,
+\qquad
+e=T-b=\frac12\log\frac43,
+\]
+\[
+\Delta=d-e=\frac12\log\frac98,
+\qquad
+\varepsilon_{\max}=c-T=\frac12\log\frac54.
+\]
 
 Numerisch:
-[
-Deltaapprox0.05889151783,
-quad
-arepsilon_{max}approx0.11157177566,
-]
-[
-eapprox0.14384103623,
-quad
-dapprox0.20273255405.
-]
+\[
+\Delta\approx0.05889151783,
+\qquad
+\varepsilon_{\max}\approx0.11157177566,
+\]
+\[
+e\approx0.14384103623,
+\qquad
+d\approx0.20273255405.
+\]
 
 Insbesondere
-[
-oxed{
-0<Delta<arepsilon_{max}<e<d.
+\[
+\boxed{
+0<\Delta<\varepsilon_{\max}<e<d.
 }
-	ag{SW1.2}
-]
+\tag{SW1.2}
+\]
 
 Außerdem
-[
-e>2Delta,
-]
+\[
+e>2\Delta,
+\]
 denn
-[
-e-2Delta
+\[
+e-2\Delta
 =
-rac12lograc{256}{243}>0.
-	ag{SW1.3}
-]
+\frac12\log\frac{256}{243}>0.
+\tag{SW1.3}
+\]
 
 Damit
-[
-C:=rac{e-Delta}{2}>rac{Delta}{2}.
-	ag{SW1.4}
-]
+\[
+C:=\frac{e-\Delta}{2}>\frac{\Delta}{2}.
+\tag{SW1.4}
+\]
 
 ---
 
 ## 2. Sofortige Folgen der Standing-Hypothese
 
 Aus
-[
-0<R<arepsilon,
-qquad
-R+arepsilon<Delta
-]
+\[
+0<R<\varepsilon,
+\qquad
+R+\varepsilon<\Delta
+\]
 folgt
-[
-2R<R+arepsilon<Delta,
-]
+\[
+2R<R+\varepsilon<\Delta,
+\]
 also
-[
-oxed{
-R<rac{Delta}{2}.
+\[
+\boxed{
+R<\frac{\Delta}{2}.
 }
-	ag{SW1.5}
-]
+\tag{SW1.5}
+\]
 
 Ferner
-[
-oxed{
-arepsilon<Delta-R<Delta.
+\[
+\boxed{
+\varepsilon<\Delta-R<\Delta.
 }
-	ag{SW1.6}
-]
+\tag{SW1.6}
+\]
 
-Damit liegt (mathfrak W_{m SW1}) vollständig in Zone I des Tail-FG-Audits.
+Damit liegt \(\mathfrak W_{\rm SW1}\) vollständig in Zone I des Tail-FG-Audits.
 
 ---
 
-## 3. Alle fünf Tail-FG-(s)-Wände sind inaktiv
+## 3. Alle fünf Tail-FG-\(s\)-Wände sind inaktiv
 
 Nach HT.28 sind die fünf inneren Wände
-[
-D_-=Delta-R,
-qquad
-D_0=Delta,
-qquad
-D_+=Delta+R,
-]
-[
+\[
+D_-=\Delta-R,
+\qquad
+D_0=\Delta,
+\qquad
+D_+=\Delta+R,
+\]
+\[
 E=e-R,
-qquad
+\qquad
 A_*=d-R.
-]
+\]
 
-Für ((R,arepsilon)inmathfrak W_{m SW1}) gilt wegen (SW1.6)
-[
-D_-=Delta-R>arepsilon.
-	ag{SW1.7}
-]
+Für \((R,\varepsilon)\in\mathfrak W_{\rm SW1}\) gilt wegen (SW1.6)
+\[
+D_-=\Delta-R>\varepsilon.
+\tag{SW1.7}
+\]
 
-Dann unmittelbar
-[
-D_0=Delta>D_->arepsilon,
-	ag{SW1.8}
-]
-[
-D_+=Delta+R>Delta>arepsilon.
-	ag{SW1.9}
-]
+Dann
+\[
+D_0=\Delta>D_->\varepsilon,
+\tag{SW1.8}
+\]
+und
+\[
+D_+=\Delta+R>\Delta>\varepsilon.
+\tag{SW1.9}
+\]
 
-Wegen (e>Delta)
-[
-E=e-R>Delta-R=D_->arepsilon.
-	ag{SW1.10}
-]
+Wegen \(e>\Delta\)
+\[
+E=e-R>\Delta-R=D_->\varepsilon.
+\tag{SW1.10}
+\]
 
-Wegen (d>e)
-[
-A_*=d-R>e-R=E>arepsilon.
-	ag{SW1.11}
-]
+Wegen \(d>e\)
+\[
+A_*=d-R>e-R=E>\varepsilon.
+\tag{SW1.11}
+\]
 
 Somit
-[
-oxed{
-D_-,D_0,D_+,E,A_*
-otin(R,arepsilon)
+\[
+\boxed{
+D_-,D_0,D_+,E,A_*\notin(R,\varepsilon),
 }
-	ag{SW1.12}
-]
-und sogar alle fünf liegen strikt rechts von (arepsilon).
+\tag{SW1.12}
+\]
+und sogar alle fünf liegen strikt rechts von \(\varepsilon\).
 
-Es gibt daher auf dem gesamten offenen (s)-Intervall keinen Tail-FG-Umschaltpunkt.
+Es gibt daher auf dem gesamten offenen \(s\)-Intervall keinen Tail-FG-Umschaltpunkt.
 
 ---
 
 ## 4. Vollständige Membership-Tabelle der sechs Tail-Argumente
 
 Sei
-[
-R<s<arepsilon
-]
+\[
+R<s<\varepsilon
+\]
 und
-[
-y=widehatPhi_R(z,0,h)inmathcal K_R.
-]
+\[
+y=\widehat\Phi_R(z,0,h)\in\mathcal K_R.
+\]
 
-Die drei bereits in HT.23 permanent blinden Werte bleiben
-[
+Die drei nach HT.23 permanent blinden Werte sind
+\[
 y(s)=z(s),
-qquad
+\qquad
 y(a-s)=z(a-s),
-qquad
+\qquad
 y(T+s)=z(T+s).
-	ag{SW1.13}
-]
+\tag{SW1.13}
+\]
 
-Für (a+s) gilt nach HT.24 der Wechsel erst bei
-[
+Für \(a+s\) liegt der HT.24-Wechsel bei
+\[
 s=d-R=A_*.
-]
-Nach (SW1.11) ist (A_*>arepsilon), also
-[
-oxed{y(a+s)=z(a+s).}
-	ag{SW1.14}
-]
+\]
+Nach (SW1.11) ist \(A_*>\varepsilon\), also
+\[
+\boxed{
+y(a+s)=z(a+s).
+}
+\tag{SW1.14}
+\]
 
-Für (T-s) gilt nach HT.25 der Wechsel erst bei
-[
+Für \(T-s\) liegt der HT.25-Wechsel bei
+\[
 s=e-R=E.
-]
-Nach (SW1.10) ist (E>arepsilon), also
-[
-oxed{y(T-s)=z(T-s).}
-	ag{SW1.15}
-]
+\]
+Nach (SW1.10) ist \(E>\varepsilon\), also
+\[
+\boxed{
+y(T-s)=z(T-s).
+}
+\tag{SW1.15}
+\]
 
-Für (2d-s) gilt wegen
-[
-s<arepsilon<Delta-R
-]
+Für \(2d-s\) gilt wegen
+\[
+s<\varepsilon<\Delta-R
+\]
 die strikte Ungleichung
-[
-Delta-s>R.
-]
+\[
+\Delta-s>R.
+\]
 Daher
-[
-|s-Delta|>R
-]
+\[
+|s-\Delta|>R
+\]
 und nach HT.26
-[
-oxed{y(2d-s)=z(2d-s).}
-	ag{SW1.16}
-]
+\[
+\boxed{
+y(2d-s)=z(2d-s).
+}
+\tag{SW1.16}
+\]
 
 Damit lautet die vollständige Membership-Tabelle:
 
-| Argument | Typ auf ganz ((R,arepsilon)) |
+| Argument | Typ auf ganz \((R,\varepsilon)\) |
 |---|---|
-| (s) | (Z) |
-| (a-s) | (Z) |
-| (a+s) | (Z) |
-| (T-s) | (Z) |
-| (2d-s) | (Z) |
-| (T+s) | (Z) |
+| \(s\) | \(Z\) |
+| \(a-s\) | \(Z\) |
+| \(a+s\) | \(Z\) |
+| \(T-s\) | \(Z\) |
+| \(2d-s\) | \(Z\) |
+| \(T+s\) | \(Z\) |
 
 Insbesondere ist das HT-A4a-Tripel
-[
-oxed{ZZZ}
-	ag{SW1.17}
-]
+\[
+\boxed{ZZZ}
+\tag{SW1.17}
+\]
 auf dem gesamten Tail-Intervall konstant.
 
-Der private (x_0)-Ast ist hier vakuum:
-[
-s<arepsilon<Delta,
-]
+Der private \(x_0\)-Ast ist hier vakuum:
+\[
+s<\varepsilon<\Delta,
+\]
 also kann der Bereich
-[
-Delta<s<Delta+R
-]
+\[
+\Delta<s<\Delta+R
+\]
 nicht erreicht werden.
 
 ---
 
 ## 5. Herkunft und Ausschluss aller zehn HT.31-Flächen
 
-Die zehn Flächen aus HT.31 entstehen vollständig aus Randtreffern der fünf (s)-Wände sowie der einzigen aktiven Wall-Wall-Kollision.
+Die zehn Flächen aus HT.31 entstehen vollständig aus Randtreffern der fünf \(s\)-Wände sowie der einzigen aktiven Wall-Wall-Kollision.
 
-### 5.1 (D_-)-Randtreffer
+### 5.1 \(D_-\)-Randtreffer
 
-[
-D_-=arepsilon
-iff
-arepsilon=Delta-R.
-]
+\[
+D_-=\varepsilon
+\iff
+\varepsilon=\Delta-R.
+\]
 
 Dies ist exakt die Randfläche
-[
-R+arepsilon=Delta
-]
-von (mathfrak W_{m SW1}), nicht dessen Inneres.
+\[
+R+\varepsilon=\Delta
+\]
+von \(\mathfrak W_{\rm SW1}\), nicht dessen Inneres.
 
-[
+\[
 D_-=R
-iff
-R=rac{Delta}{2},
-]
+\iff
+R=\frac{\Delta}{2},
+\]
 unmöglich im Inneren wegen (SW1.5).
 
-### 5.2 (D_0)-Randtreffer
+### 5.2 \(D_0\)-Randtreffer
 
-[
-D_0=arepsilon
-iff
-arepsilon=Delta,
-]
-unmöglich wegen (arepsilon<Delta-R<Delta).
+\[
+D_0=\varepsilon
+\iff
+\varepsilon=\Delta,
+\]
+unmöglich wegen \(\varepsilon<\Delta-R<\Delta\).
 
-[
+\[
 D_0=R
-iff
-R=Delta,
-]
-unmöglich wegen (R<Delta/2).
+\iff
+R=\Delta,
+\]
+unmöglich wegen \(R<\Delta/2\).
 
-### 5.3 (D_+)-Randtreffer
+### 5.3 \(D_+\)-Randtreffer
 
-[
-D_+=arepsilon
-iff
-arepsilon=Delta+R,
-]
-unmöglich, da bereits (arepsilon<Delta-R).
+\[
+D_+=\varepsilon
+\iff
+\varepsilon=\Delta+R,
+\]
+unmöglich, da bereits \(\varepsilon<\Delta-R\).
 
-### 5.4 (E)-Randtreffer
+### 5.4 \(E\)-Randtreffer
 
-[
-E=arepsilon
-iff
-R+arepsilon=e.
-]
+\[
+E=\varepsilon
+\iff
+R+\varepsilon=e.
+\]
 
-Da (e>Delta), widerspricht dies (R+arepsilon<Delta).
+Da \(e>\Delta\), widerspricht dies \(R+\varepsilon<\Delta\).
 
-[
+\[
 E=R
-iff
-R=rac e2.
-]
+\iff
+R=\frac e2.
+\]
 
-Da (e>Delta), gilt (e/2>Delta/2), im Widerspruch zu (SW1.5).
+Da \(e>\Delta\), gilt \(e/2>\Delta/2\), im Widerspruch zu (SW1.5).
 
-### 5.5 (A_*)-Randtreffer
+### 5.5 \(A_*\)-Randtreffer
 
-[
-A_*=arepsilon
-iff
-R+arepsilon=d,
-]
-unmöglich wegen (d>Delta).
+\[
+A_*=\varepsilon
+\iff
+R+\varepsilon=d,
+\]
+unmöglich wegen \(d>\Delta\).
 
-[
+\[
 A_*=R
-iff
-R=rac d2,
-]
-unmöglich wegen (d/2>Delta/2>R).
+\iff
+R=\frac d2,
+\]
+unmöglich wegen \(d/2>\Delta/2>R\).
 
 ### 5.6 Einzige aktive Wall-Wall-Kollision
 
 Die einzige HT.31-Wall-Wall-Fläche ist
-[
-R=C=rac{e-Delta}{2}.
-]
+\[
+R=C=\frac{e-\Delta}{2}.
+\]
 
 Nach (SW1.4)
-[
-C>rac{Delta}{2}>R,
-]
+\[
+C>\frac{\Delta}{2}>R,
+\]
 also liegt auch diese Fläche außerhalb des Subwedges.
 
-Damit gilt:
-
-[
-oxed{
-	ext{Keine der zehn HT.31-Flächen schneidet das Innere von }mathfrak W_{m SW1}.
+Damit gilt
+\[
+\boxed{
+\text{Keine der zehn HT.31-Flächen schneidet das Innere von }\mathfrak W_{\rm SW1}.
 }
-	ag{SW1.18}
-]
+\tag{SW1.18}
+\]
 
 ---
 
 ## 6. Identifikation mit Chamber I.1
 
 In §12 des Tail-FG-Audits lautet Chamber I.1:
-[
-0<R<rac{Delta}{2},
-qquad
-arepsilon<Delta-R.
-]
+\[
+0<R<\frac{\Delta}{2},
+\qquad
+\varepsilon<\Delta-R.
+\]
 
-Nach (SW1.5)–(SW1.6) ist dies exakt auf (mathfrak W_{m SW1}) erfüllt.
+Nach (SW1.5)–(SW1.6) ist dies auf \(\mathfrak W_{\rm SW1}\) erfüllt.
 
 Daher
-[
-oxed{
-mathfrak W_{m SW1}subset mathrm{I.1}
+\[
+\boxed{
+\mathfrak W_{\rm SW1}\subset \mathrm{I.1}.
 }
-	ag{SW1.19}
-]
-und wegen
-[
-arepsilon<Delta-R
-iff
-R+arepsilon<Delta
-]
-ist (mathfrak W_{m SW1}) gerade die (R<arepsilon)-Teilmenge der I.1-Bedingung.
+\tag{SW1.19}
+\]
+
+Da
+\[
+\varepsilon<\Delta-R
+\iff
+R+\varepsilon<\Delta,
+\]
+ist \(\mathfrak W_{\rm SW1}\) gerade der \(R<\varepsilon\)-Teil der I.1-Bedingung.
 
 Im hier relevanten Tail-Sektor kollabiert die **Fiber-Graph-Membership-Geometrie** somit auf genau einen offenen Typ:
-[
-oxed{ZZZ.}
-	ag{SW1.20}
-]
+\[
+\boxed{ZZZ.}
+\tag{SW1.20}
+\]
 
 ---
 
 ## 7. Nichtleere und expliziter Zeugenpunkt
 
 Setze
-[
-R_0=rac{Delta}{6},
-qquad
-arepsilon_0=rac{Delta}{3}.
-]
+\[
+R_0=\frac{\Delta}{6},
+\qquad
+\varepsilon_0=\frac{\Delta}{3}.
+\]
 
 Dann
-[
-0<R_0<arepsilon_0
-]
+\[
+0<R_0<\varepsilon_0
+\]
 und
-[
-R_0+arepsilon_0
+\[
+R_0+\varepsilon_0
 =
-rac{Delta}{2}
+\frac{\Delta}{2}
 <
-Delta.
-]
+\Delta.
+\]
 
 Also
-[
-oxed{
-(R_0,arepsilon_0)inmathfrak W_{m SW1}.
+\[
+\boxed{
+(R_0,\varepsilon_0)\in\mathfrak W_{\rm SW1}.
 }
-	ag{SW1.21}
-]
+\tag{SW1.21}
+\]
 
 Für das restricted-tail-Stratum kann zusätzlich
-[
-sigma_0=rac{Delta}{12}
-]
+\[
+\sigma_0=\frac{\Delta}{12}
+\]
 gewählt werden. Dann
-[
-0<sigma_0le R_0<arepsilon_0.
-	ag{SW1.22}
-]
+\[
+0<\sigma_0\le R_0<\varepsilon_0.
+\tag{SW1.22}
+\]
 
 Der Subwedge ist daher offen und nichtleer.
 
 ---
 
-## 8. Verträglichkeit mit einem (R	o0)-Descent
+## 8. Verträglichkeit mit einem \(R\to0\)-Descent
 
 Fixiere irgendein
-[
-0<arepsilon_*<Delta.
-]
+\[
+0<\varepsilon_*<\Delta.
+\]
 
 Für jede Folge
-[
-R_ndownarrow0
-]
+\[
+R_n\downarrow0
+\]
 mit schließlich
-[
-R_n<min{arepsilon_*,Delta-arepsilon_*}
-]
+\[
+R_n<\min\{\varepsilon_*,\Delta-\varepsilon_*\}
+\]
 gilt
-[
-0<R_n<arepsilon_*,
-qquad
-R_n+arepsilon_*<Delta.
-]
+\[
+0<R_n<\varepsilon_*,
+\qquad
+R_n+\varepsilon_*<\Delta.
+\]
 
 Mit beispielsweise
-[
-sigma_n=rac{R_n}{2}
-]
+\[
+\sigma_n=\frac{R_n}{2}
+\]
 gilt zusätzlich
-[
-0<sigma_nle R_n.
-]
+\[
+0<\sigma_n\le R_n.
+\]
 
 Somit ist die Standing-Hypothese
-[
-R+arepsilon<Delta
-]
-mit einem (R	o0)-Descent im restricted-tail-Stratum kompatibel.
+\[
+R+\varepsilon<\Delta
+\]
+mit einem \(R\to0\)-Descent im restricted-tail-Stratum kompatibel.
 
 Dies ist nur eine Parameterverträglichkeitsaussage. Es folgt daraus keine C6-, Strong-Terminal- oder Konvergenzaussage.
 
@@ -508,106 +516,93 @@ Dies ist nur eine Parameterverträglichkeitsaussage. Es folgt daraus keine C6-, 
 ## 9. Wichtige Nuance: HT-A3/A-Wall kollabiert nicht vollständig
 
 Die erste HT-A3-Kollision lautet
-[
-I_bcap I_-
-earnothing
-iff
-arepsilon-R>Delta.
-]
+\[
+I_b\cap I_-\ne\varnothing
+\iff
+\varepsilon-R>\Delta.
+\]
 
 Unter
-[
-R+arepsilon<Delta
-]
+\[
+R+\varepsilon<\Delta
+\]
 gilt
-[
-arepsilon-R<arepsilon+R<Delta,
-]
+\[
+\varepsilon-R<\varepsilon+R<\Delta,
+\]
 also
-[
-oxed{
-I_bcap I_-=arnothing.
+\[
+\boxed{
+I_b\cap I_-=\varnothing.
 }
-	ag{SW1.23}
-]
+\tag{SW1.23}
+\]
 
-Die zweite HT-A3-Kollision lautet jedoch
-[
-I_bcap I_+
-earnothing
-iff
-R<rac{Delta}{2}<arepsilon.
-]
+Die zweite HT-A3-Kollision lautet
+\[
+I_b\cap I_+\ne\varnothing
+\iff
+R<\frac{\Delta}{2}<\varepsilon.
+\]
 
-Auf (mathfrak W_{m SW1}) ist (R<Delta/2) automatisch. Daher reduziert sich diese Bedingung zu
-[
-oxed{
-I_bcap I_+
-earnothing
-iff
-arepsilon>rac{Delta}{2}.
+Auf \(\mathfrak W_{\rm SW1}\) ist \(R<\Delta/2\) automatisch. Daher reduziert sich diese Bedingung zu
+\[
+\boxed{
+I_b\cap I_+\ne\varnothing
+\iff
+\varepsilon>\frac{\Delta}{2}.
 }
-	ag{SW1.24}
-]
+\tag{SW1.24}
+\]
 
 Folglich besitzt der Single-FG-Chamber-Subwedge weiterhin die bereits aus NEU-A-WALL-1 bekannte Parameterwand
-[
-oxed{
-arepsilon=rac{Delta}{2}.
+\[
+\boxed{
+\varepsilon=\frac{\Delta}{2}.
 }
-	ag{SW1.25}
-]
+\tag{SW1.25}
+\]
 
 Genauer:
 
-- für (arepsilon<Delta/2): kein (I_b)-/(I_+)-Overlap;
-- für (arepsilon=Delta/2): die offenen Shells berühren sich nur an einem L2-nulligen Endpunkt;
-- für (arepsilon>Delta/2): positiver (I_b)-/(I_+)-Overlap.
+- für \(\varepsilon<\Delta/2\): kein \(I_b\)-/\(I_+\)-Overlap;
+- für \(\varepsilon=\Delta/2\): die offenen Shells berühren sich nur an einem \(L^2\)-nulligen Endpunkt;
+- für \(\varepsilon>\Delta/2\): positiver \(I_b\)-/\(I_+\)-Overlap.
 
-Daher:
-
-[
-oxed{
-	ext{ein FG-Chamber bedeutet nicht ein vollständiges A0-Wall-Chamber.}
+Daher
+\[
+\boxed{
+\text{ein FG-Chamber bedeutet nicht ein vollständiges A0-Wall-Chamber.}
 }
-	ag{SW1.26}
-]
+\tag{SW1.26}
+\]
 
-Die volle A-Wall/Fiber-Graph-Geometrie des Subwedges zerfällt weiterhin in zwei offene A-Wall-Unterkammern plus die Parameterdegenerationsfläche (arepsilon=Delta/2).
+Die volle A-Wall/Fiber-Graph-Geometrie des Subwedges zerfällt weiterhin in zwei offene A-Wall-Unterkammern plus die Parameterdegenerationsfläche \(\varepsilon=\Delta/2\).
 
-Diese Fläche ist eine echte Parameterkonfiguration und darf nicht als L2-Nullmenge wegdefiniert werden.
+Diese Fläche ist eine echte Parameterkonfiguration und darf nicht als \(L^2\)-Nullmenge wegdefiniert werden.
 
 ---
 
 ## 10. Kandidatenurteil
 
-Der hier nachgewiesene eingeschränkte Satz lautet:
+Der eingeschränkte Kandidatensatz lautet:
 
-[
-oxed{
-egin{minipage}{0.88linewidth}
 Unter
-[
-0<sigmale R<arepsilon,
-qquad
-R+arepsilon<Delta,
-]
-liegen alle fünf Tail-FG-(s)-Wände strikt außerhalb von ((R,arepsilon)). Die sechs Tail-Argumente sind auf dem gesamten (s)-Intervall direkte Blind-(z)-Koordinaten; der (x_0)-Ast tritt nicht auf. Keine der zehn HT.31-Flächen schneidet das Innere dieses Subwedges.
-end{minipage}
-}
-	ag{SW1.27}
-]
+\[
+0<\sigma\le R<\varepsilon,
+\qquad
+R+\varepsilon<\Delta,
+\]
+liegen alle fünf Tail-FG-\(s\)-Wände strikt außerhalb von \((R,\varepsilon)\). Die sechs Tail-Argumente sind auf dem gesamten \(s\)-Intervall direkte Blind-\(z\)-Koordinaten; der \(x_0\)-Ast tritt nicht auf. Keine der zehn HT.31-Flächen schneidet das Innere dieses Subwedges.
 
 Arbeitsstatus vor unabhängigem Review:
 
-```text
-HT-A4b-SW1 SINGLE-FG-CHAMBER SUBWEDGE: ?[O]
+    HT-A4b-SW1 SINGLE-FG-CHAMBER SUBWEDGE: ?[O]
 
-HT-A4b TAIL-FG COMMON REFINEMENT EXHAUSTIVITY: ?[O]
-HT-RED TAIL GAUSSIAN ELIMINATION:              ?[O]
-A0 FULL FREE-COORDINATE COVERAGE:              ?[O]
-SCHUR CROSS-GRAM INJECTIVITY:                  ?[O]
-```
+    HT-A4b TAIL-FG COMMON REFINEMENT EXHAUSTIVITY: ?[O]
+    HT-RED TAIL GAUSSIAN ELIMINATION:              ?[O]
+    A0 FULL FREE-COORDINATE COVERAGE:              ?[O]
+    SCHUR CROSS-GRAM INJECTIVITY:                  ?[O]
 
 Insbesondere wird **nicht** behauptet, dass die globale 15-Chamber-Exhaustivität bereits geprüft oder geschlossen ist.
 
@@ -615,20 +610,20 @@ Insbesondere wird **nicht** behauptet, dass die globale 15-Chamber-Exhaustivitä
 
 ## 11. Konsequenz für die nächste Rechnung
 
-Falls `HT-A4b-SW1` unabhängiges GREEN erhält, kann der erste exakte Downstream-Angriff auf dem Subwedge mit der uniformen Tail-Membership
-[
+Falls HT-A4b-SW1 unabhängiges GREEN erhält, kann der erste exakte Downstream-Angriff auf dem Subwedge mit der uniformen Tail-Membership
+\[
 (Z,Z,Z,Z,Z,Z)
-]
+\]
 arbeiten.
 
 Dabei muss die A-Wall-Aufspaltung
-[
-arepsilon<Delta/2,
-qquad
-arepsilon=Delta/2,
-qquad
-arepsilon>Delta/2
-]
+\[
+\varepsilon<\Delta/2,
+\qquad
+\varepsilon=\Delta/2,
+\qquad
+\varepsilon>\Delta/2
+\]
 weiterhin getrennt bleiben.
 
 Dieses Audit selbst führt **keine** Downstream-Elimination durch.
@@ -637,14 +632,14 @@ Dieses Audit selbst führt **keine** Downstream-Elimination durch.
 
 ## 12. Firewall
 
-Aus `HT-A4b-SW1` folgt nicht:
+Aus HT-A4b-SW1 folgt nicht:
 
 - globale Exhaustivität der zehn HT.31-Flächen / 15 Chambers;
 - HT-A4b global;
 - HT-RED;
 - Trivialität des reduzierten Kernes;
 - A0-Abschluss;
-- (kerGamma_I={0});
+- \(\ker\Gamma_I=\{0\}\);
 - Schur-Cross-Gram-Injektivität;
 - Closed Range / bounded below;
 - Strong Terminal Transport;
@@ -657,18 +652,18 @@ Aus `HT-A4b-SW1` folgt nicht:
 
 Vor einer Statusbuchung sind unabhängig zu prüfen:
 
-1. die Ordnung (0<Delta<arepsilon_{max}<e<d);
-2. (e>2Delta) und damit (C>Delta/2);
-3. die Folgerungen (R<Delta/2) und (arepsilon<Delta-R);
-4. dass alle fünf (s)-Wände (D_-,D_0,D_+,E,A_*) strikt rechts von (arepsilon) liegen;
+1. die Ordnung \(0<\Delta<\varepsilon_{\max}<e<d\);
+2. \(e>2\Delta\) und damit \(C>\Delta/2\);
+3. die Folgerungen \(R<\Delta/2\) und \(\varepsilon<\Delta-R\);
+4. dass alle fünf \(s\)-Wände \(D_-,D_0,D_+,E,A_*\) strikt rechts von \(\varepsilon\) liegen;
 5. die sechs Membership-Zeilen (SW1.13)–(SW1.16);
-6. dass der (x_0)-Ast vakuum ist;
+6. dass der \(x_0\)-Ast vakuum ist;
 7. die Herkunft jeder der zehn HT.31-Flächen und ihr Ausschluss aus dem Inneren;
 8. die Identifikation mit Chamber I.1;
-9. den expliziten Zeugenpunkt ((Delta/6,Delta/3)) und optional (sigma=Delta/12);
-10. die (R	o0)-Verträglichkeit;
-11. die HT-A3-Nuance: (I_bcap I_-) ist ausgeschlossen, (I_bcap I_+) bleibt genau für (arepsilon>Delta/2) möglich;
-12. dass (arepsilon=Delta/2) als Parameterwand A0-relevant bleibt;
+9. den expliziten Zeugenpunkt \((\Delta/6,\Delta/3)\) und optional \(\sigma=\Delta/12\);
+10. die \(R\to0\)-Verträglichkeit;
+11. die HT-A3-Nuance: \(I_b\cap I_-\) ist ausgeschlossen, \(I_b\cap I_+\) bleibt genau für \(\varepsilon>\Delta/2\) möglich;
+12. dass \(\varepsilon=\Delta/2\) als Parameterwand A0-relevant bleibt;
 13. die Scope-Firewall.
 
 Keine Promotion und kein Merge ohne unabhängiges GREEN gegen den exakten PR-Diff.
