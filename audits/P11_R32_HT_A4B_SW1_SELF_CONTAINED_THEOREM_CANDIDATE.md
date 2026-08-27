@@ -84,7 +84,7 @@ y(t),& |t|\in\mathcal Z_R^{\rm phys},\\
 
 ### Satz HT-A4b-SW1-M
 
-Unter (M.1) gilt für fast jedes
+Unter den SW1-Annahmen gilt für fast jedes
 \[
 s\in(R,\varepsilon):
 \]
@@ -202,13 +202,13 @@ Damit
 \Delta=d-e
 =d-(a-d)
 =2d-a.
-\tag{M.22}
+\tag{M.16}
 \]
 
 Aus \(a=d+e\) mit \(d,e>0\) folgt insbesondere
 \[
 a>\Delta.
-\tag{M.20}
+\tag{M.17}
 \]
 
 Schließlich
@@ -221,7 +221,7 @@ e-2\Delta
 also
 \[
 \boxed{e>2\Delta.}
-\tag{M.21}
+\tag{M.18}
 \]
 
 ---
@@ -277,7 +277,7 @@ T<T_0=T+\varepsilon<c.
 Sei
 \[
 R<s<\varepsilon.
-\tag{M.20}
+\tag{M.23}
 \]
 
 Für \(s\) ist \(0<s<T_0\) klar.
@@ -309,7 +309,7 @@ gilt
 \[
 2d-s>d>0,
 \]
-und nach (M.13)
+und wegen \(2d<T\)
 \[
 2d-s<2d<T<T_0.
 \]
@@ -324,7 +324,7 @@ Also
 \boxed{
 s,\ a-s,\ a+s,\ T-s,\ 2d-s,\ T+s\in(0,T_0).
 }
-\tag{M.21}
+\tag{M.24}
 \]
 
 ---
@@ -342,7 +342,7 @@ R+s<R+\varepsilon<\Delta<a
 folgt
 \[
 a-s>R.
-\tag{M.22}
+\tag{M.25}
 \]
 
 Da \(b>a\) und \(T>a\),
@@ -350,41 +350,41 @@ Da \(b>a\) und \(T>a\),
 b-s>a-s>R,
 \qquad
 T-s>a-s>R.
-\tag{M.23}
+\tag{M.26}
 \]
 
 Also
 \[
 s\notin\mathcal U_R.
-\tag{M.24}
+\tag{M.27}
 \]
 
 ### 4.2 \(t=a-s\)
 
 \[
 |a-s-a|=s>R,
-\tag{M.25}
+\tag{M.28}
 \]
 \[
 b-(a-s)=d+s>R,
-\tag{M.26}
+\tag{M.29}
 \]
 \[
 T-(a-s)=a+s>R.
-\tag{M.27}
+\tag{M.30}
 \]
 
 Also
 \[
 a-s\notin\mathcal U_R.
-\tag{M.28}
+\tag{M.31}
 \]
 
 ### 4.3 \(t=a+s\)
 
 \[
 |a+s-a|=s>R.
-\tag{M.29}
+\tag{M.32}
 \]
 
 Weiter
@@ -398,27 +398,27 @@ R+s<R+\varepsilon<\Delta<d
 folgt
 \[
 d-s>R.
-\tag{M.30}
+\tag{M.33}
 \]
 
 Außerdem
 \[
 T-(a+s)=a-s>R
-\tag{M.31}
+\tag{M.34}
 \]
 wegen \(R+s<\Delta<a\).
 
 Also
 \[
 a+s\notin\mathcal U_R.
-\tag{M.32}
+\tag{M.35}
 \]
 
 ### 4.4 \(t=T-s\)
 
 \[
 |T-s-T|=s>R.
-\tag{M.33}
+\tag{M.36}
 \]
 
 Da \(b=T-e\),
@@ -432,19 +432,19 @@ R+s<\Delta<e
 folgt
 \[
 e-s>R.
-\tag{M.34}
+\tag{M.37}
 \]
 
 Zum Zentrum \(a\):
 \[
 (T-s)-a=a-s>R.
-\tag{M.35}
+\tag{M.38}
 \]
 
 Also
 \[
 T-s\notin\mathcal U_R.
-\tag{M.36}
+\tag{M.39}
 \]
 
 ### 4.5 \(t=2d-s\)
@@ -456,7 +456,7 @@ Da
 gilt
 \[
 (2d-s)-a=\Delta-s>R
-\tag{M.37}
+\tag{M.40}
 \]
 wegen \(R+s<\Delta\).
 
@@ -470,7 +470,7 @@ a-d+s
 =
 e+s
 >R.
-\tag{M.38}
+\tag{M.41}
 \]
 
 Und
@@ -481,49 +481,49 @@ T-(2d-s)
 =
 2e+s
 >R.
-\tag{M.39}
+\tag{M.42}
 \]
 
 Also
 \[
 2d-s\notin\mathcal U_R.
-\tag{M.40}
+\tag{M.43}
 \]
 
 ### 4.6 \(t=T+s\)
 
 \[
 |T+s-T|=s>R,
-\tag{M.41}
+\tag{M.44}
 \]
 \[
 T+s-b=e+s>R,
-\tag{M.42}
+\tag{M.45}
 \]
 \[
 T+s-a=a+s>R.
-\tag{M.43}
+\tag{M.46}
 \]
 
 Also
 \[
 T+s\notin\mathcal U_R.
-\tag{M.44}
+\tag{M.47}
 \]
 
 ### 4.7 Schluss
 
-Aus (M.21), (M.24), (M.28), (M.32), (M.36), (M.40), (M.44):
+Aus §3 und den sechs soeben bewiesenen Sampling-Ausschlüssen folgt:
 \[
 \boxed{
 s,\ a-s,\ a+s,\ T-s,\ 2d-s,\ T+s
 \in
 \mathcal Z_R^{\rm phys}.
 }
-\tag{M.45}
+\tag{M.48}
 \]
 
-Nach (M.4) gilt \(y=z\) a.e. auf \(\mathcal Z_R^{\rm phys}\). Jede der sechs Abbildungen
+Nach der Definition des Blindanteils gilt \(y=z\) a.e. auf \(\mathcal Z_R^{\rm phys}\). Jede der sechs Abbildungen
 \[
 s\mapsto s,quad
 s\mapsto a-s,quad
@@ -532,11 +532,11 @@ s\mapsto T-s,quad
 s\mapsto 2d-s,quad
 s\mapsto T+s
 \]
-ist affin mit Steigung \(\pm1\). Das Urbild einer Nullmenge ist daher wieder eine Nullmenge. Folglich gelten alle sechs Gleichungen in (M.6) gleichzeitig für fast jedes \(s\in(R,\varepsilon)\).
+ist affin mit Steigung \(\pm1\). Das Urbild einer Nullmenge ist daher wieder eine Nullmenge. Folglich gelten alle sechs Gleichungen der Satzaussage gleichzeitig für fast jedes \(s\in(R,\varepsilon)\).
 
 Damit ist der Membership-Teil vollständig bewiesen, ohne allgemeine FG-Rekonstruktion.
 
-**Korollar für die spätere Schur-Rechnung.** Ist zusätzlich \(y\in\mathcal K_R\), so ist das hier definierte \(z\) einfach die eindeutige orthogonale Supportprojektion von \(y\) auf den physischen Blindbereich. Die sechs Gleichungen (M.6) gelten daher insbesondere für jedes augmentierte Kernel-Element, ohne dass dafür eine exhaustive Parametrisierung von \(\mathcal K_R\) vorausgesetzt werden muss.
+**Korollar für die spätere Schur-Rechnung.** Ist zusätzlich \(y\in\mathcal K_R\), so ist das hier definierte \(z\) einfach die eindeutige orthogonale Supportprojektion von \(y\) auf den physischen Blindbereich. Die sechs Gleichungen der Satzaussage gelten daher insbesondere für jedes augmentierte Kernel-Element, ohne dass dafür eine exhaustive Parametrisierung von \(\mathcal K_R\) vorausgesetzt werden muss.
 
 ---
 
@@ -547,7 +547,7 @@ Für \(a+s\) gegen das \(b\)-Fenster:
 d-s=R
 \iff
 s=d-R=:A_*.
-\tag{M.46}
+\tag{M.49}
 \]
 
 Für \(T-s\) gegen das \(b\)-Fenster:
@@ -555,7 +555,7 @@ Für \(T-s\) gegen das \(b\)-Fenster:
 e-s=R
 \iff
 s=e-R=:E.
-\tag{M.47}
+\tag{M.50}
 \]
 
 Für \(2d-s\) gegen das \(a\)-Fenster:
@@ -567,13 +567,13 @@ also
 s=\Delta-R=:D_-,
 \qquad
 s=\Delta+R=:D_+.
-\tag{M.48}
+\tag{M.51}
 \]
 
 Der Wert
 \[
 D_0:=\Delta
-\tag{M.49}
+\tag{M.52}
 \]
 trennt die beiden Vorzeichen von \(\Delta-s\).
 
@@ -588,27 +588,27 @@ D_+=\Delta+R,
 E=e-R,
 \quad
 A_*=d-R.
-\tag{M.50}
+\tag{M.53}
 \]
 
 Auf SW1 gilt
 \[
 D_-=\Delta-R>\varepsilon,
-\tag{M.51}
+\tag{M.54}
 \]
 \[
 D_0=\Delta>D_->\varepsilon,
 \qquad
 D_+>\Delta>\varepsilon,
-\tag{M.52}
+\tag{M.55}
 \]
 \[
 E=e-R>\Delta-R>\varepsilon,
-\tag{M.53}
+\tag{M.56}
 \]
 \[
 A_*=d-R>e-R>\varepsilon.
-\tag{M.54}
+\tag{M.57}
 \]
 
 Daher
@@ -616,7 +616,7 @@ Daher
 \boxed{
 D_-,D_0,D_+,E,A_*>\varepsilon.
 }
-\tag{M.55}
+\tag{M.58}
 \]
 
 ---
@@ -646,10 +646,10 @@ Definiere die zehn Referenzflächen
 \\
 \Sigma_{10}:\ R=C:=(e-\Delta)/2.
 \end{array}
-\tag{M.56}
+\tag{M.59}
 \]
 
-Dieser Abschnitt behauptet nicht, dass (M.56) global die vollständige Chamberzerlegung erzeugt. Er beweist nur selbständig, dass keine dieser zehn bekannten Referenzflächen das offene SW1-Gebiet schneidet.
+Dieser Abschnitt behauptet nicht, dass die in §6 aufgelisteten zehn Referenzflächen global die vollständige Chamberzerlegung erzeugen. Er beweist nur selbständig, dass keine dieser zehn bekannten Referenzflächen das offene SW1-Gebiet schneidet.
 
 \(\Sigma_1\): ausgeschlossen durch \(\varepsilon<\Delta-R\).
 
@@ -706,7 +706,7 @@ Somit
 =
 \varnothing.
 }
-\tag{M.57}
+\tag{M.60}
 \]
 
 ---
@@ -720,7 +720,7 @@ Aus
 folgt
 \[
 2d=a+\Delta.
-\tag{M.58}
+\tag{M.61}
 \]
 
 Daher
@@ -728,15 +728,15 @@ Daher
 I_b
 =
 (a+\Delta-\varepsilon,\ a+\Delta-R).
-\tag{M.59}
+\tag{M.62}
 \]
 
 ### 7.1 \(I_b\cap I_-\)
 
-Aus (M.7) und (M.59):
+Aus den Definitionen von \(I_-\) und \(I_b\):
 \[
 I_b=I_-+\Delta.
-\tag{M.60}
+\tag{M.63}
 \]
 
 Beide Intervalle haben Länge \(\varepsilon-R\). Da \(I_b\) um \(\Delta>0\) nach rechts verschoben ist,
@@ -744,13 +744,13 @@ Beide Intervalle haben Länge \(\varepsilon-R\). Da \(I_b\) um \(\Delta>0\) nach
 I_b\cap I_-\ne\varnothing
 \iff
 \Delta<\varepsilon-R.
-\tag{M.61}
+\tag{M.64}
 \]
 
 Auf SW1
 \[
 \varepsilon-R<\varepsilon+R<\Delta.
-\tag{M.62}
+\tag{M.65}
 \]
 
 Also
@@ -758,7 +758,7 @@ Also
 \boxed{
 I_b\cap I_-=\varnothing.
 }
-\tag{M.63}
+\tag{M.66}
 \]
 
 ### 7.2 \(I_b\cap I_+\)
@@ -774,33 +774,33 @@ I_b=(a+\Delta-\varepsilon,a+\Delta-R)
 schneiden sich genau dann, wenn
 \[
 a+R<a+\Delta-R
-\tag{M.64}
+\tag{M.67}
 \]
 und
 \[
 a+\Delta-\varepsilon<a+\varepsilon.
-\tag{M.65}
+\tag{M.68}
 \]
 
 Das ist äquivalent zu
 \[
 2R<\Delta
-\tag{M.66}
+\tag{M.69}
 \]
 und
 \[
 \Delta<2\varepsilon.
-\tag{M.67}
+\tag{M.70}
 \]
 
-Nach (M.22) gilt (M.66) auf SW1 automatisch. Also
+Wegen \(2R<\Delta\) gilt die erste Schnittbedingung auf SW1 automatisch. Also
 \[
 \boxed{
 I_b\cap I_+\ne\varnothing
 \iff
 \varepsilon>\frac{\Delta}{2}.
 }
-\tag{M.68}
+\tag{M.71}
 \]
 
 ### 7.3 Degenerationsfläche
@@ -816,7 +816,7 @@ a+\Delta-\varepsilon
 a+\frac{\Delta}{2}
 =
 a+\varepsilon.
-\tag{M.69}
+\tag{M.72}
 \]
 
 Die linke Grenze von \(I_b\) ist damit gleich der rechten Grenze von \(I_+\). Da beide Intervalle offen sind,
@@ -824,7 +824,7 @@ Die linke Grenze von \(I_b\) ist damit gleich der rechten Grenze von \(I_+\). Da
 \boxed{
 I_b\cap I_+=\varnothing.
 }
-\tag{M.70}
+\tag{M.73}
 \]
 
 Für die Abschlüsse gilt
@@ -834,7 +834,7 @@ Für die Abschlüsse gilt
 =
 \left\{a+\frac{\Delta}{2}\right\}.
 }
-\tag{M.71}
+\tag{M.74}
 \]
 
 Der einzelne Berührpunkt ist als Output-/Integrationspunkt eine \(L^2\)-Nullmenge. Die Parameterkonfiguration \(\varepsilon=\Delta/2\) selbst bleibt eine echte Parameterwand.
@@ -982,7 +982,7 @@ Daher
 \boxed{
 \text{HT-A4b-SW1-M ist kein A0-Abschluss.}
 }
-\tag{M.76}
+\tag{M.75}
 \]
 
 ---
@@ -991,12 +991,12 @@ Daher
 
 Erst nach Abschluss des selbständigen Beweises gilt als Vergleich:
 
-- (M.6) ist der SW1-Spezialfall der früheren HT.23–HT.26-Membership-Klassifikation.
+- Die sechs Blindheitsgleichungen aus §0/§4 sind der SW1-Spezialfall der früheren HT.23–HT.26-Membership-Klassifikation.
 - Der \(X\)-Ast tritt nicht auf; HT.27/TR.13 wird hier nicht benötigt.
-- (M.63) ist der SW1-Spezialfall der früheren HT.17-Kollision.
-- (M.68)–(M.71) sind der SW1-Spezialfall der früheren HT.18-Kollision.
-- (M.55) erklärt die Single-FG-Chamber-Struktur direkt.
-- (M.57) ist nur ein Konsistenzcheck gegen zehn bekannte Referenzflächen; globale 15-Chamber-Exhaustivität wird nicht behauptet.
+- Die direkte Rechnung in §7.1 ist der SW1-Spezialfall der früheren HT.17-Kollision.
+- Die direkte Rechnung in §7.2–§7.3 ist der SW1-Spezialfall der früheren HT.18-Kollision.
+- §5 erklärt die Single-FG-Chamber-Struktur direkt.
+- §6 ist nur ein Konsistenzcheck gegen zehn bekannte Referenzflächen; globale 15-Chamber-Exhaustivität wird nicht behauptet.
 
 Keiner dieser älteren Kandidaten wird als Lemma verwendet.
 
