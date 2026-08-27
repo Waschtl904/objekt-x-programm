@@ -1042,30 +1042,25 @@ Insbesondere kann kein nichttriviales Kernelpaar ausschließlich auf der freien 
 
 ## 15. Kandidatenstatus
 
-Vor unabhängigem Review:
+Nach unabhängigem adversarialem Review wird der Stand granular gebucht:
 
 ```text
-HT-A1 WORDWISE TAIL ACTION:              ?[O]
-HT-A2 TAIL COMPRESSION / SCALAR PIVOT:   ?[O]
-HT-A3 OFF-TAIL SHELL CLASSIFICATION:     ?[O]
-HT-A4 TAIL-FG COMMON REFINEMENT:         ?[O]
-HT-RED TAIL GAUSSIAN ELIMINATION:        ?[O]
+HT-A1 WORDWISE TAIL ACTION:                    independently GREEN candidate
+HT-A2 TAIL COMPRESSION / SCALAR PIVOT:         independently GREEN candidate
+HT-A3 OFF-TAIL SHELL CLASSIFICATION:           independently GREEN candidate
+HT-A4a FG CLASSIFICATION OF SIX ARGUMENTS:     independently GREEN candidate
+HT-A4b TAIL-FG COMMON REFINEMENT EXHAUSTIVITY: ?[O]
+HT-RED TAIL GAUSSIAN ELIMINATION:              ?[O]
 
-A0 FULL FREE-COORDINATE COVERAGE:        ?[O]
-SCHUR CROSS-GRAM INJECTIVITY:            ?[O]
+A0 FULL FREE-COORDINATE COVERAGE:              ?[O]
+SCHUR CROSS-GRAM INJECTIVITY:                  ?[O]
 ```
 
-Interner Rechenstand vor dem unabhängigen Review:
+Die vier als `independently GREEN candidate` gebuchten Komponenten sind auf Kandidatenebene unabhängig geprüft worden. Für HT-A1 wurde die zweistufige Selektion unabhängig nachgerechnet: von 44 Vier-Echo-Fällen treffen 24 algebraisch eine Tail-Quelle `±(T+s)`; genau 16 davon sind auf der zulässigen Gate-Seite, während die übrigen acht uniform am Gate scheitern. HT-A2 und HT-A3 wurden einschließlich der Koeffizienten- bzw. Intervallarithmetik unabhängig reproduziert.
 
-```text
-HT-A1: candidate GREEN internally
-HT-A2: candidate GREEN internally
-HT-A3: candidate GREEN internally
-HT-A4: candidate GREEN internally
-HT-RED: new candidate
-```
+HT-A4a umfasst ausschließlich die Fiber-Graph-Klassifikationen (HT.24)–(HT.27). Dabei sind HT.24–HT.26 unabhängig gegen die Samplingfenster geprüft; HT.27 ist unter der in `P11_R32_TRIANGULAR_ROW_SPLITTING_AUDIT.md`, Gleichung (TR.13), dokumentierten Ausgangsformel GREEN. Diese Buchung promoviert ausdrücklich **nicht** die Exhaustivität der zehn Parameterflächen und 15 Chambers; dieser Teil bleibt separat als HT-A4b `?[O]`.
 
-Keine dieser Zeilen ist eine mathematische Promotion.
+`independently GREEN candidate` ist ausdrücklich **keine** formale mathematische Promotion (`✓[M]`). HT-RED bleibt bis zu einem eigenen adversarialen Review der Blockstruktur (HT.37)–(HT.39) `?[O]`. A0 und die Schur-Cross-Gram-Injektivität bleiben unverändert `?[O]`.
 
 ---
 
