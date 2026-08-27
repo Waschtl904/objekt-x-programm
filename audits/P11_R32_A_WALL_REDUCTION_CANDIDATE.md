@@ -773,13 +773,17 @@ und
 ## 11. Kandidatenstatus und Review-Auftrag
 
 ```text
-NEU-A-WALL-1 FOUR-ECHO FORMULA: ?[O]
-NEU-A-WALL-1 ELEVEN-WORD EXPANSION: ?[O]
-NEU-A-WALL-1 FIVE-WALL COLLAPSE: ?[O]
-NEU-A-WALL-1 WALL-ORDER CHAMBERS: ?[O]
+NEU-A-WALL-1 FOUR-ECHO FORMULA: independently GREEN candidate
+NEU-A-WALL-1 ELEVEN-WORD EXPANSION: independently GREEN candidate
+NEU-A-WALL-1 FIVE-WALL COLLAPSE: independently GREEN candidate
+NEU-A-WALL-1 WALL-ORDER CHAMBERS: independently GREEN candidate
 A0 FULL FREE-COORDINATE COVERAGE: ?[O]
 SCHUR CROSS-GRAM INJECTIVITY: ?[O]
 ```
+
+Die vier oben promovierten Komponenten haben einen unabhängigen adversarialen Review gegen den exakten PR-Diff (PR #5, Merge-Commit `264e8ff27213b40190853e20f4639bb5c185bf9f`) bestanden: Adjungiertenschritt, alle vier Vorzeichen/Argumente in (A.1), alle elf Koeffizienten in (A.2), sämtliche Gate-/Source-Horizon-Wände in §4, Ausschluss weiterer \(5a\)-/\(6a\)-Echos, die Zwei-Chamber-Wallordnung, die Nullmengenargumentation in §7.1 und die uniformen Gaps (A.13)–(A.14).
+
+`independently GREEN candidate` ist ausdrücklich **keine** formale mathematische Promotion (`✓[M]`), sondern die repo-formale Buchung eines bestandenen unabhängigen Reviews auf Kandidatenebene. A0 und die Schur-Cross-Gram-Injektivität bleiben unverändert `?[O]`.
 
 Vor einer Promotion sind mindestens adversarial zu prüfen:
 
