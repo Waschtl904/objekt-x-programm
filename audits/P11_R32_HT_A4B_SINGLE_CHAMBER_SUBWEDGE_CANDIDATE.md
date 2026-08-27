@@ -37,6 +37,12 @@ Dieses Audit prüft bewusst nur den kleineren offenen Subwedge
 \tag{SW1.1}
 \]
 
+Hier bezeichnet „Inneres von \(\mathfrak W_{\rm SW1}\)“ ausschließlich das offene \((R,\varepsilon)\)-Parametergebiet (SW1.1). Der restricted-tail-Parameter \(\sigma\) wird zusätzlich durch
+\[
+0<\sigma\le R
+\]
+zugelassen. Insbesondere ist die Randfläche \(\sigma=R\) **mit enthalten**; sie ist keine weitere HT.31-FG-Wand, da die Tail-FG-Membership in HT.24–HT.27 und die zehn HT.31-Flächen nur von \((R,\varepsilon)\) abhängen.
+
 Zu zeigen ist:
 
 1. Alle fünf inneren Tail-FG-\(s\)-Wände liegen auf \(\mathfrak W_{\rm SW1}\) strikt rechts des Integrationsintervalls \((R,\varepsilon)\).
@@ -284,6 +290,8 @@ also kann der Bereich
 \]
 nicht erreicht werden.
 
+Damit tritt der \(X\)-Ast auf \(\mathfrak W_{\rm SW1}\) überhaupt nicht auf. HT.27 ist in diesem Subwedge daher **vakuum erfüllt**; die in PR #8 ausdrücklich dokumentierte TR.13-Provenienzabhängigkeit wird für diese Parameterklasse nicht benötigt.
+
 ---
 
 ## 5. Herkunft und Ausschluss aller zehn HT.31-Flächen
@@ -428,47 +436,96 @@ Im hier relevanten Tail-Sektor kollabiert die **Fiber-Graph-Membership-Geometrie
 
 ---
 
-## 7. Nichtleere und expliziter Zeugenpunkt
+## 7. Nichtleere und explizite Zeugen für beide Unterkammern und die Wand
+
+Da §9 zeigt, dass die volle A-Wall-Geometrie innerhalb des Single-FG-Chambers an
+\[
+\varepsilon=\frac{\Delta}{2}
+\]
+zerfällt, werden die beiden offenen Unterkammern und die Degenerationsfläche getrennt bezeugt.
+
+### 7.1 Unterkammer \(\varepsilon<\Delta/2\)
 
 Setze
 \[
-R_0=\frac{\Delta}{6},
+R_-=\frac{\Delta}{6},
 \qquad
-\varepsilon_0=\frac{\Delta}{3}.
+\varepsilon_-=\frac{\Delta}{3},
+\qquad
+\sigma_-=\frac{\Delta}{12}.
 \]
 
 Dann
 \[
-0<R_0<\varepsilon_0
+0<\sigma_-<R_-<\varepsilon_-<\frac{\Delta}{2},
 \]
 und
 \[
-R_0+\varepsilon_0
-=
-\frac{\Delta}{2}
-<
-\Delta.
+R_-+\varepsilon_-=\frac{\Delta}{2}<\Delta.
 \]
 
-Also
+Also liegt dieser Punkt im restricted-tail-SW1 und bezeugt die untere offene A-Wall-Unterkammer.
+
+### 7.2 Degenerationsfläche \(\varepsilon=\Delta/2\)
+
+Setze
+\[
+R_0=\frac{\Delta}{4},
+\qquad
+\varepsilon_0=\frac{\Delta}{2},
+\qquad
+\sigma_0=\frac{\Delta}{8}.
+\]
+
+Dann
+\[
+0<\sigma_0<R_0<\varepsilon_0,
+\]
+und
+\[
+R_0+\varepsilon_0=\frac{3\Delta}{4}<\Delta.
+\]
+
+Somit ist
 \[
 \boxed{
-(R_0,\varepsilon_0)\in\mathfrak W_{\rm SW1}.
+(R_0,\varepsilon_0)\in\mathfrak W_{\rm SW1},
+\qquad
+\varepsilon_0=\frac{\Delta}{2}.
 }
 \tag{SW1.21}
 \]
 
-Für das restricted-tail-Stratum kann zusätzlich
+Die Parameterwand schneidet den Subwedge also tatsächlich und ist keine formale oder leere Grenzmenge.
+
+### 7.3 Unterkammer \(\varepsilon>\Delta/2\)
+
+Setze
 \[
-\sigma_0=\frac{\Delta}{12}
-\]
-gewählt werden. Dann
-\[
-0<\sigma_0\le R_0<\varepsilon_0.
-\tag{SW1.22}
+R_+=\frac{\Delta}{10},
+\qquad
+\varepsilon_+=\frac{3\Delta}{5},
+\qquad
+\sigma_+=\frac{\Delta}{20}.
 \]
 
-Der Subwedge ist daher offen und nichtleer.
+Dann
+\[
+0<\sigma_+<R_+<\frac{\Delta}{2}<\varepsilon_+,
+\]
+und
+\[
+R_++\varepsilon_+
+=
+\frac{7\Delta}{10}
+<
+\Delta.
+\]
+
+Also liegt auch dieser Punkt im restricted-tail-SW1 und bezeugt die obere offene A-Wall-Unterkammer.
+
+Damit sind beide offenen Unterkammern sowie die dazwischenliegende Parameterwand explizit nichtleer bezeugt.
+
 
 ---
 
@@ -511,11 +568,13 @@ mit einem \(R\to0\)-Descent im restricted-tail-Stratum kompatibel.
 
 Dies ist nur eine Parameterverträglichkeitsaussage. Es folgt daraus keine C6-, Strong-Terminal- oder Konvergenzaussage.
 
+Die Einschränkung \(R+\varepsilon<\Delta\) beschränkt dabei **Konstruktionsparameter**, nicht den freien \((z,h)\)-Koordinatenraum. Sie ist daher kategorial kein A0-Abschluss und auch kein Wegdefinieren freier Koordinaten. Ob ein auf diesem Parameterwedge gewonnener Nichtentartungssatz für die spätere globale Konstruktion ausreicht, bleibt eine separate Downstream-Frage.
+
 ---
 
 ## 9. Wichtige Nuance: HT-A3/A-Wall kollabiert nicht vollständig
 
-Die erste HT-A3-Kollision lautet
+Die erste HT-A3-Kollision ist HT.17:
 \[
 I_b\cap I_-\ne\varnothing
 \iff
@@ -538,7 +597,7 @@ I_b\cap I_-=\varnothing.
 \tag{SW1.23}
 \]
 
-Die zweite HT-A3-Kollision lautet
+Die zweite HT-A3-Kollision ist HT.18:
 \[
 I_b\cap I_+\ne\varnothing
 \iff
@@ -657,13 +716,13 @@ Vor einer Statusbuchung sind unabhängig zu prüfen:
 3. die Folgerungen \(R<\Delta/2\) und \(\varepsilon<\Delta-R\);
 4. dass alle fünf \(s\)-Wände \(D_-,D_0,D_+,E,A_*\) strikt rechts von \(\varepsilon\) liegen;
 5. die sechs Membership-Zeilen (SW1.13)–(SW1.16);
-6. dass der \(x_0\)-Ast vakuum ist;
-7. die Herkunft jeder der zehn HT.31-Flächen und ihr Ausschluss aus dem Inneren;
+6. dass der \(x_0\)-Ast nicht auftritt, HT.27 auf SW1 vakuum erfüllt ist und damit die TR.13-Abhängigkeit dort nicht benötigt wird;
+7. die Herkunft jeder der zehn HT.31-Flächen und ihr Ausschluss aus dem offenen \((R,\varepsilon)\)-Inneren;
 8. die Identifikation mit Chamber I.1;
-9. den expliziten Zeugenpunkt \((\Delta/6,\Delta/3)\) und optional \(\sigma=\Delta/12\);
-10. die \(R\to0\)-Verträglichkeit;
-11. die HT-A3-Nuance: \(I_b\cap I_-\) ist ausgeschlossen, \(I_b\cap I_+\) bleibt genau für \(\varepsilon>\Delta/2\) möglich;
-12. dass \(\varepsilon=\Delta/2\) als Parameterwand A0-relevant bleibt;
+9. die drei Zeugen für \(\varepsilon<\Delta/2\), \(\varepsilon=\Delta/2\) und \(\varepsilon>\Delta/2\);
+10. die \(R\to0\)-Verträglichkeit und die Unterscheidung Parameterrestriktion vs. freie Koordinaten;
+11. die HT-A3-Nuance anhand HT.17/HT.18: \(I_b\cap I_-\) ist ausgeschlossen, \(I_b\cap I_+\) bleibt genau für \(\varepsilon>\Delta/2\) möglich;
+12. dass die allowed boundary \(\sigma=R\) keine zusätzliche HT.31-FG-Wand erzeugt;
 13. die Scope-Firewall.
 
 Keine Promotion und kein Merge ohne unabhängiges GREEN gegen den exakten PR-Diff.
