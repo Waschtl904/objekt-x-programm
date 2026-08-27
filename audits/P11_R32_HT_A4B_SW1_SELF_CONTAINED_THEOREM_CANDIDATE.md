@@ -37,7 +37,7 @@ d:=b-a,
 \qquad
 e:=T-b,
 \qquad
-\Delta:=d-e=2d-a.
+\Delta:=d-e.
 \]
 
 Seien
@@ -180,14 +180,35 @@ wegen \(3/2<2\), also
 \tag{M.13}
 \]
 
-Aus
+Direkt aus den Definitionen:
 \[
-a=d+e
+d+e
+=
+(b-a)+(T-b)
+=
+T-a
+=
+a,
+\tag{M.14}
 \]
-folgt
+weil \(T=2a\). Also
+\[
+e=a-d.
+\tag{M.15}
+\]
+
+Damit
+\[
+\Delta=d-e
+=d-(a-d)
+=2d-a.
+\tag{M.22}
+\]
+
+Aus \(a=d+e\) mit \(d,e>0\) folgt insbesondere
 \[
 a>\Delta.
-\tag{M.14}
+\tag{M.20}
 \]
 
 Schließlich
@@ -200,7 +221,7 @@ e-2\Delta
 also
 \[
 \boxed{e>2\Delta.}
-\tag{M.15}
+\tag{M.21}
 \]
 
 ---
@@ -216,7 +237,7 @@ also
 \boxed{
 R<\frac{\Delta}{2}.
 }
-\tag{M.16}
+\tag{M.19}
 \]
 
 Ebenso
@@ -230,13 +251,13 @@ also
 \boxed{
 \varepsilon<\Delta-R<\Delta.
 }
-\tag{M.17}
+\tag{M.20}
 \]
 
 Damit
 \[
 0<R<\varepsilon<\Delta<e<d<a<T.
-\tag{M.18}
+\tag{M.21}
 \]
 
 Weil
@@ -246,7 +267,7 @@ Weil
 gilt
 \[
 T<T_0=T+\varepsilon<c.
-\tag{M.19}
+\tag{M.22}
 \]
 
 ---
@@ -502,9 +523,20 @@ s,\ a-s,\ a+s,\ T-s,\ 2d-s,\ T+s
 \tag{M.45}
 \]
 
-Nach (M.4) folgt unmittelbar (M.6).
+Nach (M.4) gilt \(y=z\) a.e. auf \(\mathcal Z_R^{\rm phys}\). Jede der sechs Abbildungen
+\[
+s\mapsto s,quad
+s\mapsto a-s,quad
+s\mapsto a+s,quad
+s\mapsto T-s,quad
+s\mapsto 2d-s,quad
+s\mapsto T+s
+\]
+ist affin mit Steigung \(\pm1\). Das Urbild einer Nullmenge ist daher wieder eine Nullmenge. Folglich gelten alle sechs Gleichungen in (M.6) gleichzeitig für fast jedes \(s\in(R,\varepsilon)\).
 
 Damit ist der Membership-Teil vollständig bewiesen, ohne allgemeine FG-Rekonstruktion.
+
+**Korollar für die spätere Schur-Rechnung.** Ist zusätzlich \(y\in\mathcal K_R\), so ist das hier definierte \(z\) einfach die eindeutige orthogonale Supportprojektion von \(y\) auf den physischen Blindbereich. Die sechs Gleichungen (M.6) gelten daher insbesondere für jedes augmentierte Kernel-Element, ohne dass dafür eine exhaustive Parametrisierung von \(\mathcal K_R\) vorausgesetzt werden muss.
 
 ---
 
@@ -761,7 +793,7 @@ und
 \tag{M.67}
 \]
 
-Nach (M.16) gilt (M.66) auf SW1 automatisch. Also
+Nach (M.22) gilt (M.66) auf SW1 automatisch. Also
 \[
 \boxed{
 I_b\cap I_+\ne\varnothing
@@ -811,51 +843,88 @@ Der einzelne Berührpunkt ist als Output-/Integrationspunkt eine \(L^2\)-Nullmen
 
 ## 8. Nichtleere der unterschiedenen Parameterklassen
 
-Untere Unterkammer:
+### 8.1 Untere Unterkammer
+
+Setze
 \[
 R_-=\frac{\Delta}{6},
 \qquad
 \varepsilon_-=\frac{\Delta}{3},
 \qquad
 \sigma_-=\frac{\Delta}{12}.
-\tag{M.72}
 \]
 
-Degenerationsfläche:
+Dann
+\[
+0<\frac{\Delta}{12}<\frac{\Delta}{6}<\frac{\Delta}{3}<\frac{\Delta}{2}
+\]
+und
+\[
+R_-+\varepsilon_-=\frac{\Delta}{2}<\Delta.
+\]
+Also liegt der Zeuge in SW1 und in der Klasse \(\varepsilon<\Delta/2\).
+
+### 8.2 Degenerationsfläche
+
+Setze
 \[
 R_0=\frac{\Delta}{4},
 \qquad
 \varepsilon_0=\frac{\Delta}{2},
 \qquad
 \sigma_0=\frac{\Delta}{8}.
-\tag{M.73}
 \]
 
-Obere Unterkammer:
+Dann
+\[
+0<\frac{\Delta}{8}<\frac{\Delta}{4}<\frac{\Delta}{2}
+\]
+und
+\[
+R_0+\varepsilon_0=\frac{3\Delta}{4}<\Delta.
+\]
+Also liegt der Zeuge in SW1 und exakt auf \(\varepsilon=\Delta/2\).
+
+### 8.3 Obere Unterkammer
+
+Setze
 \[
 R_+=\frac{\Delta}{10},
 \qquad
 \varepsilon_+=\frac{3\Delta}{5},
 \qquad
 \sigma_+=\frac{\Delta}{20}.
-\tag{M.74}
 \]
 
-Restricted-tail-Rand:
+Dann
+\[
+0<\frac{\Delta}{20}<\frac{\Delta}{10}<\frac{\Delta}{2}<\frac{3\Delta}{5}
+\]
+und
+\[
+R_++\varepsilon_+=\frac{7\Delta}{10}<\Delta.
+\]
+Also liegt der Zeuge in SW1 und in der Klasse \(\varepsilon>\Delta/2\).
+
+### 8.4 Restricted-tail-Rand \(\sigma=R\)
+
+Setze
 \[
 R_\partial=\sigma_\partial=\frac{\Delta}{6},
 \qquad
 \varepsilon_\partial=\frac{\Delta}{3}.
-\tag{M.75}
 \]
 
-Direktes Einsetzen zeigt jeweils
+Dann
 \[
-0<\sigma\le R<\varepsilon,
-\qquad
-R+\varepsilon<\Delta,
+0<\sigma_\partial=R_\partial<\varepsilon_\partial
 \]
-und die behauptete Lage relativ zu \(\varepsilon=\Delta/2\).
+und
+\[
+R_\partial+\varepsilon_\partial=\frac{\Delta}{2}<\Delta.
+\]
+
+Damit sind beide offenen A-Wall-Unterkammern, die Degenerationsfläche und die erlaubte Randfläche \(\sigma=R\) explizit nichtleer bezeugt.
 
 ---
 
