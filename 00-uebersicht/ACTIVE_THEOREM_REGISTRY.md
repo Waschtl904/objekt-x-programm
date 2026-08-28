@@ -1,7 +1,7 @@
 # Active Theorem Registry
 
 > **Stand:** 28. August 2026  
-> **Repo-Basis:** \`main@5740a38ad4c24e27b7352512e57fb095b245e4d5\`  
+> **Repo-Basis:** \`main@fd3fcfd0cdf78d5a1672dad1703a61ec9f661c00\`  
 > **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11/R32-SW1-/Schur-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
 > **Nicht-Zweck:** Ersatz für \`STATUS.md\`, \`OFFENE_PROBLEME.md\`, die Papers oder Promotionsrecords.
 
@@ -9,15 +9,31 @@ Diese Datei ist eine **Navigations- und Abhängigkeitsregistry**. Eine Statuszei
 
 ---
 
-## 0. Statusnomenklatur (verbindlich ab 28. August 2026)
+## 0. Statusnomenklatur (verbindlich ab 28. August 2026, Subtypen ergänzt)
 
 | Bezeichnung | Bedeutung |
 |---|---|
-| **AI-GREEN candidate** | Intern durch KI kritisch bzw. redundant geprüfter Beweiskandidat. **Keine** externe Begutachtung. Dies ist der Default-Status für jeden Kandidaten ohne dokumentierte externe Prüfprovenienz. |
-| **independent GREEN** | Unabhängige Prüfung des **exakten** Heads/Satzes durch einen externen Menschen, einen unabhängigen Reviewlauf (separates Modell/System), oder ein maschinenprüfbares algebraisches Zertifikat. Methode, Reviewer/System und geprüfter Head **müssen** dokumentiert sein. |
-| **\`✓[M]\`** | Formaler Objekt-X-interner Promotionsstatus. Unabhängig davon, ob zusätzlich externe Begutachtung existiert. |
+| **AI-GREEN candidate** | Interne KI-Konstruktion plus kritische Zweitprüfung. **Keine** externe Begutachtung. Dies ist der Default-Status für jeden Kandidaten ohne dokumentierte externe Prüfprovenienz. |
+| **independent GREEN** | Unabhängige Prüfung des **exakten** Heads/Satzes; siehe Subtypen unten. Methode, Prüfer/System, exakter Head und Scope **müssen** dokumentiert sein. |
+| **\`✓[M]\`** | Formaler Objekt-X-interner Promotionsstatus. Orthogonal zu \`independent GREEN\` — unabhängig davon, ob zusätzlich externe Begutachtung existiert. |
 
-**Rechtsverbindliche Klarstellung:** Alte Bezeichnungen wie \`independently GREEN candidate\`, \`OVERALL GREEN candidate\` oder \`CANDIDATE GREEN\` in früheren Versionen dieser Datei galten **nicht automatisch** als \`independent GREEN\` im obigen Sinn. Ohne dokumentierte externe Prüfprovenienz (Methode, Reviewer/System, exakter Head) werden sie ab jetzt als \`AI-GREEN candidate\` verstanden. Diese Registry wurde entsprechend normalisiert (siehe Abschnitt 2).
+### 0.1 Subtypen von \`independent GREEN\` (kumulativ buchbar)
+
+| Subtyp | Bedeutung | Pflichtangaben |
+|---|---|---|
+| **independent GREEN (cross-model)** | Separates Modell/System prüft den exakten Satz **ohne Kenntnis** der Zielrechnung (frische Session, kein Zugriff auf den Konstruktions-Thread). Kennt die prüfende Session bereits die Zielformel/den Thread, gilt das Ergebnis nur als „cross-model nonblind“ und zählt **nicht** als \`independent GREEN\`. | Typ, Methode, Prüfer/System (inkl. Blind-/Nonblind-Vermerk), exakter geprüfter Head, exakter Satz/Scope, Verdict |
+| **independent GREEN (certificate)** | Reproduzierbares maschinelles/algebraisches Zertifikat (z. B. Python/SymPy/CAS-Skript) für den endlichen algebraischen Teil. | zusätzlich: Tool/Version, Zertifikatsdatei/Skriptpfad, exakter geprüfter Git-Head, reproduzierbares Ergebnis |
+| **independent GREEN (human)** | Unabhängige Prüfung durch einen externen Menschen. | zusätzlich: Reviewer/Review-Provenienz |
+
+**Verbindliches Buchungsschema für jede \`independent GREEN\`-Zeile:**
+\[
+\boxed{
+\text{Typ}+\text{Methode}+\text{Prüfer/System}+\text{exakter Head}+\text{exakter Satz/Scope}+\text{Verdict}
+}
+\]
+Fehlt eine Angabe, gilt die Buchung als unvollständig und darf nicht als \`independent GREEN\` gezählt werden. Subtypen sind **kumulativ**: z. B. \`AI-GREEN + independent GREEN (cross-model) + independent GREEN (certificate)\` ist zulässig und suggeriert **keine** \`independent GREEN (human)\`-Prüfung.
+
+**Rechtsverbindliche Klarstellung:** Alte Bezeichnungen wie \`independently GREEN candidate\`, \`OVERALL GREEN candidate\` oder \`CANDIDATE GREEN\` in früheren Versionen dieser Datei galten **nicht automatisch** als \`independent GREEN\` im obigen Sinn. Ohne dokumentierte externe Prüfprovenienz (Methode, Reviewer/System, exakter Head) werden sie ab jetzt als \`AI-GREEN candidate\` verstanden. Diese Registry wurde entsprechend normalisiert (siehe Abschnitt 2). Diese Regel gilt ex ante und darf nicht nachträglich an ein gewünschtes Ergebnis angepasst werden.
 
 ---
 
@@ -57,7 +73,7 @@ T<S=T+\sigma<T_0=T+\varepsilon<c,
 | **SW1-KNF** | AI-GREEN candidate — keine formale Promotion | sektorale, vollständige Kernel-Normalform auf SW1: \(\mathcal K_R\cong\mathcal Z_R^+\oplus L^2(\mathcal V_R^{SW1})\) via paarweise disjunkter Samplingfenster \(I_a,I_b,I_T\); ersetzt FG-TR1/FG-1 als Blackbox ausschließlich auf SW1 | \`audits/P11_R32_SW1_KNF_CANDIDATE.md\` (PR #15, Squash-Merge \`0c98c03a332dc7c8e479edc77d8cada678eec376\`) | liefert die vollständige Koordinatenparametrisierung des inneren Kernels als Ausgangspunkt für SW1-BL7/SW1-2TP; keine Aussage über A0, HT-RED oder \(\ker\Gamma_I\) |
 | **SW1-BL7** | AI-GREEN candidate — keine formale Promotion | siebter direkter Blindwert: \(s\in(R,\varepsilon)\Rightarrow 2d+s\in(a+R,b-R)\subset\mathcal Z_{R,\mathrm{SW1}}^{\rm phys}\), für jedes \(s\), Neuheit gegen die sechs promoteten Blindwerte elementar gezeigt | \`audits/P11_R32_SW1_BL7_CANDIDATE.md\` (PR #16, Squash-Merge \`5740a38ad4c24e27b7352512e57fb095b245e4d5\`) | Hilfslemma für die \(2d\pm s\)-Row im Rahmen des späteren \(\Delta\)-Descent; keine Aussage über SW1-2TP, SW1-AWI, HT-RED, A0 oder \(\ker\Gamma_I\) |
 
-**Firewall:** \`AI-GREEN candidate\` ist ausdrücklich **kein** \`independent GREEN\` und **kein** \`✓[M]\`. Keine der obigen Zeilen trägt derzeit eine dokumentierte externe Prüfprovenienz.
+**Firewall:** \`AI-GREEN candidate\` ist ausdrücklich **kein** \`independent GREEN\` (in keinem Subtyp) und **kein** \`✓[M]\`. Keine der obigen Zeilen trägt derzeit eine dokumentierte externe Prüfprovenienz.
 
 ---
 
@@ -76,7 +92,7 @@ Mit HT-A4b-SW1-M nun \(\checkmark[M]\) ist der SW1-Membership-Baustein der Kette
 
 | Knoten | Status | Exakte Rolle |
 |---|---|---|
-| **SW1-2TP** (simultaner \(T\pm s\)-2×2-Pivot) | \`?[O]\` — nächster aktiver Kandidat | Nachweis, dass \(M_T=\begin{pmatrix}1+\kappa&\beta_T\\\beta_T&1+\kappa\end{pmatrix}\) mit \(\lambda_\pm=1+\kappa\pm\beta_T>0\) direkt aus den elf Wörtern von \(A\) folgt; **Promotionsschwelle:** keine Promotion des 2TP-Satzes, auch nicht bei AI-GREEN, vor mindestens einem \`independent GREEN\` oder reproduzierbaren algebraischen Zertifikat für das 11-Wort-Ledger |
+| **SW1-2TP** (simultaner \(T\pm s\)-2×2-Pivot) | \`?[O]\` — nächster aktiver Kandidat | Nachweis, dass \(M_T=\begin{pmatrix}1+\kappa&\beta_T\\\beta_T&1+\kappa\end{pmatrix}\) mit \(\lambda_\pm=1+\kappa\pm\beta_T>0\) direkt aus den elf Wörtern von \(A\) folgt; **Gerüst-PR:** #17 (\`research/sw1-2tp\`, Ziel/Hypothese ohne Beweis). **Erforderliche Prüfkette:** Herleitung (GPT) → AI-GREEN → blinder Cross-Model-Check (frische Session) → algebraisches Zertifikat. **Promotionsschwelle:** keine Promotion, auch nicht bei AI-GREEN, vor mindestens einem \`independent GREEN\`-Subtyp (§0.1) für das 11-Wort-Ledger |
 | **HT-A4b global chamber exhaustivity** | \`?[O]\` | globale zehn-Flächen-/15-Chamber-Exhaustivität bleibt offen; für den ersten SW1-Angriff derzeit nicht benötigt |
 | **HT-RED** | \`?[O]\` | vollständige Tail-Gaussian-/Schur-Elimination des Restblocks offen |
 | **A0 FULL FREE-COORDINATE COVERAGE** | \`?[O]\` | volle Abdeckung aller freien Koordinaten / relevanten Strata offen |
@@ -118,7 +134,7 @@ Der derzeit gewünschte Pfad ist:
 
 Der einzige wirklich neue mathematische Engpass in dieser Kette ist derzeit die **Full-Rest-/Schur-Elimination auf SW1**. SW1-KNF liefert dazu die vollständige Koordinatenbasis, SW1-BL7 den siebten Blindwert; der nächste konkrete Baustein ist SW1-2TP.
 
-**Methodische Regel ab SW1-2TP:** Die \(T\pm s\)-Rows müssen aus den elf Wörtern von \(A\) neu abgeleitet werden (nicht aus einer übernommenen Scratch-Formel). Erst danach Koeffizientenvergleich, exakte Determinantenprüfung \(\det M_T=(1+\kappa)^2-\beta_T^2>0\), und Summen-/Differenzkanal-Analyse.
+**Methodische Regel ab SW1-2TP:** Die \(T\pm s\)-Rows müssen aus den elf Wörtern von \(A\) neu abgeleitet werden (nicht aus einer übernommenen Scratch-Formel). Erst danach Koeffizientenvergleich, exakte Determinantenprüfung \(\det M_T=(1+\kappa)^2-\beta_T^2>0\), und Summen-/Differenzkanal-Analyse. Danach die in §0.1/§4 festgelegte Prüfkette (AI-GREEN → cross-model → certificate) vor jeder Promotionserwägung.
 
 ---
 
