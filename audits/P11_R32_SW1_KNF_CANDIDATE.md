@@ -316,10 +316,47 @@ genau dann, wenn die rechte Seite von (KNF.10) für fast jedes \(u\in(0,R)\) ver
 
 ### Beweis
 
-Im Drei-Shift-Fenster sind exakt die Prime-Powers \(2,3,4\) aktiv; ihre Halbverschiebungen sind \(a,b,T\) und ihre Koeffizienten sind \(p,r,q\). Die kanonische positive-Halbachsenform der inneren Row ist genau die in (KNF.10) geschriebene Differenzsumme; vgl. die identische physische Row in
-\`audits/P11_R32_TRIANGULAR_ROW_SPLITTING_AUDIT.md\`, Gleichung (TR.4).
+Aus der kanonischen Definition des Drei-Shift-Hubs
+\[
+H_{T_0}
+=
+P_{T_0}
+\bigl(
+pD_{2a}+rD_{2b}+qD_{2T}
+\bigr)
+E_{T_0},
+\qquad
+D_s=U_{s/2}-U_{-s/2},
+\tag{KNF.10a}
+\]
+folgt für \(u>0\), solange alle ausgewerteten Punkte im Horizont liegen,
+\[
+(H_{T_0}y)(u)
+=
+p\,[y(u-a)-y(u+a)]
++
+r\,[y(u-b)-y(u+b)]
++
+q\,[y(u-T)-y(u+T)].
+\]
+Für gerades \(y\) gilt
+\[
+y(u-a)=y(a-u),\qquad
+y(u-b)=y(b-u),\qquad
+y(u-T)=y(T-u),
+\]
+und damit genau (KNF.10).
+
+Die Definition (KNF.10a), die drei aktiven Prime-Powers und die Koeffizienten (KNF.2) sind dieselben wie in
+\`audits/P11_P12_R32_RUECKBINDUNG_AUDIT.md\`, insbesondere (RB.3)–(RB.4). Die Rowformel wird hier direkt aus der Hubdefinition hergeleitet; FG-1 oder FG-TR1 werden nicht als Beweisblackbox benutzt.
 
 Lemma SW1-KNF-3 stellt sicher, dass auf SW1 keiner der sechs Werte durch den Horizon-Cut verschwindet.
+
+Jeder Differenztranslationsoperator \(D_s\) wechselt die Parität. Daher bildet \(H_{T_0}\) den geraden Sektor in den ungeraden Sektor ab. Somit ist
+\[
+E_I^*H_{T_0}y=0\quad\text{auf }(-R,R)
+\]
+äquivalent zum Verschwinden der positiven Row (KNF.10) für fast jedes \(u\in(0,R)\).
 
 Die zweite augmentierte Gleichung \(E_I^*H_{T_0}y=0\) enthält nur \(y\); Annulus- bzw. \(w\)-Terme gehören ausschließlich zur ersten augmentierten Gleichung
 \[
