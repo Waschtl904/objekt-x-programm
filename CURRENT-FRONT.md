@@ -148,7 +148,15 @@ M_T=\begin{pmatrix}1+\kappa&\beta_T\\\beta_T&1+\kappa\end{pmatrix},\qquad
 \]
 Erst am Ende wird geprüft, ob \(q\,w(s)\) im Summenkanal verschwindet und im Differenzkanal mit Faktor \(2q\) erscheint — dies darf nicht als vorausgesetzte Formel eingehen.
 
-**Promotionsschwelle für SW1-2TP:** Selbst bei AI-GREEN keine Promotion, bevor mindestens ein \`independent GREEN\` oder ein reproduzierbares algebraisches Zertifikat für das 11-Wort-Ledger vorliegt.
+**Promotionsschwelle für SW1-2TP:** Selbst bei AI-GREEN keine Promotion, bevor mindestens ein \`independent GREEN\` (irgendein Subtyp gemäß §8) oder ein reproduzierbares algebraisches Zertifikat für das 11-Wort-Ledger vorliegt.
+
+**Erforderliche Prüfkette für SW1-2TP (verbindlich, ex ante festgelegt):**
+\[
+\boxed{
+\text{Herleitung (GPT)} \to \text{AI-GREEN (Zweitprüfung)} \to \text{blinder Cross-Model-Check (Perplexity, frische Session)} \to \text{algebraisches Zertifikat}
+}
+\]
+Der Cross-Model-Check erhält ausschließlich Definitionen, SW1-Bedingungen, die elf Wortdaten und die Aufgabenstellung — **keine** Zielmatrix \(M_T\) und keinen Verweis auf diesen Thread. Erfolgt der Check stattdessen in einer Session, die diesen Verlauf bereits kennt, wird das Ergebnis höchstens als „cross-model nonblind“ protokolliert und erzeugt **kein** \`independent GREEN\`.
 
 Noch nicht Teil dieses Schritts: SW1-AWI (A-Wall-Involution \(s\leftrightarrow\Delta-s\)) und der \(\Delta\)-Descent.
 
@@ -244,22 +252,49 @@ Für mathematische Aussagen gilt:
 }
 \]
 
-**Statusnomenklatur (verbindlich):**
+### 8.1 Statusnomenklatur (verbindlich)
 
 \[
 \boxed{\text{AI-GREEN}}
 \]
-= intern durch KI kritisch bzw. redundant geprüfter Beweiskandidat; **keine** externe Begutachtung.
+= interne KI-Konstruktion plus kritische Zweitprüfung (durch dasselbe oder ein zweites KI-System im selben Kontext); **keine** unabhängige Verifikation.
 
+**Subtypen von \`independent GREEN\`** (kumulativ buchbar; ein Kandidat kann mehrere Subtypen gleichzeitig tragen, ohne dass dies eine menschliche Prüfung suggeriert):
+
+| Subtyp | Bedeutung | Pflichtangaben |
+|---|---|---|
+| **independent GREEN (cross-model)** | Ein separates Modell/System prüft den exakten Satz **ohne Kenntnis** unserer Zielrechnung. Für 2TP zwingend: frische Perplexity-Session ohne diesen Thread-Verlauf. Kennt die prüfende Session bereits unsere Zielmatrix/diesen Verlauf, wird das Ergebnis höchstens als „cross-model nonblind“ protokolliert — das erzeugt **kein** \`independent GREEN\`. | Typ, Methode, Prüfer/System (inkl. Blind-/Nonblind-Vermerk), exakter geprüfter Head, exakter Satz/Scope, Verdict |
+| **independent GREEN (certificate)** | Reproduzierbares maschinelles/algebraisches Zertifikat (z. B. Python/SymPy/CAS-Skript), das den endlichen algebraischen Teil bestätigt. | zusätzlich: Tool/Version, Zertifikatsdatei bzw. Skriptpfad, exakter geprüfter Git-Head, reproduzierbares Ergebnis (Output dokumentiert) |
+| **independent GREEN (human)** | Unabhängige Prüfung durch einen externen Menschen. | zusätzlich: Reviewer bzw. nachvollziehbare Review-Provenienz |
+
+**Verbindliches Buchungsschema für jede \`independent GREEN\`-Zeile:**
 \[
-\boxed{\text{independent GREEN}}
+\boxed{
+\text{Typ}+\text{Methode}+\text{Prüfer/System}+\text{exakter Head}+\text{exakter Satz/Scope}+\text{Verdict}
+}
 \]
-= unabhängige Prüfung des exakten Heads/Satzes durch einen externen Menschen, einen unabhängigen Reviewlauf (separates Modell/System), oder ein maschinenprüfbares algebraisches Zertifikat — Methode, Reviewer/System und geprüfter Head müssen dokumentiert sein.
+Fehlt eine dieser Angaben, gilt die Buchung als unvollständig und darf nicht als \`independent GREEN\` gezählt werden.
 
 \[
 \boxed{\checkmark[M]}
 \]
-= formaler Objekt-X-interner Promotionsstatus, unabhängig davon, ob zusätzlich externe Begutachtung existiert. **Kein** Ersatz für Fachjournal- oder Peer-Review-Verifikation.
+= formaler Objekt-X-interner Promotionsstatus, unabhängig davon, ob zusätzlich externe Begutachtung existiert. **Kein** Ersatz für Fachjournal- oder Peer-Review-Verifikation. Orthogonal zu allen obigen Subtypen — eine \`✓[M]\`-Promotion setzt keinen bestimmten \`independent GREEN\`-Subtyp voraus und umgekehrt.
+
+**Beispiel für eine kumulative Buchung (Zielbild für SW1-2TP, noch nicht erreicht):**
+\[
+\boxed{
+\text{AI-GREEN}+\text{independent GREEN (cross-model)}+\text{independent GREEN (certificate)}
+}
+\]
+ohne dass dabei suggeriert wird, es liege bereits eine \`independent GREEN (human)\`-Prüfung vor.
+
+### 8.2 Wo ein Mensch tatsächlich gebraucht wird
+
+Für elementare, endliche Bausteine wie SW1-BL7 (\(a+R<2d+s<b-R\)) ist die Beweislast überschaubar; AI-GREEN plus ggf. cross-model/certificate ist ausreichend. Mit steigender Tragweite steigt die Schwelle:
+
+- SW1-2TP: AI-GREEN + mindestens ein \`independent GREEN\`-Subtyp vor Promotion.
+- \(\Delta\)-Descent: höhere Schwelle, mehrere Subtypen empfohlen.
+- ein möglicher SW1-Gesamtsatz (\(\ker\mathcal K_{I,A}=\{0\}\) auf ganz SW1) oder eine öffentliche Behauptung eines großen Resultats: **independent GREEN (human)** durch einen externen Fachmathematiker wird empfohlen, bevor eine öffentliche Behauptung erfolgt — funktionalanalytische Domain-, Closure-, a.e.- und Operatoridentifikationsfragen können dort subtil werden.
 
 \`CURRENT-FRONT.md\` und die Registry sind **Navigationsdateien**. Bei einem Konflikt entscheiden die kanonischen mathematischen Quellen.
 
@@ -327,4 +362,4 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 }
 \]
 
-**Nächster Default:** SW1-2TP (simultaner \(T\pm s\)-2×2-Pivot), abgeleitet aus den elf Wörtern von \(A\); danach SW1-AWI, \(\Delta\)-Descent.
+**Nächster Default:** SW1-2TP (simultaner \(T\pm s\)-2×2-Pivot), abgeleitet aus den elf Wörtern von \(A\); Prüfkette gemäß §4/§8 (AI-GREEN → cross-model → certificate) vor Promotion; danach SW1-AWI, \(\Delta\)-Descent.
