@@ -522,7 +522,18 @@ Der nächste mathematische Schritt nach einem erfolgreichen Review wäre daher w
 9. Sind beide Eigenkanäle strikt von Null getrennt?
 10. Ist die Firewall gegen \(\Delta\)-Descent / HT-RED / A0 / \(\ker\Gamma_I\) eingehalten?
 
-Bis zum separaten Re-Review bleibt der Status
+Der interne adversariale Re-Review des exakten Beweiskandidaten ist bestanden.
+
+Aktueller Status:
 \[
-\boxed{\mathrm{SW1\!-\!AWI}:?[O].}
+\boxed{
+\mathrm{SW1\!-\!AWI}:
+\text{AI-GREEN candidate}
+}
 \]
+
+Für den algebraischen Teil (AWI.18)–(AWI.28) liegt zusätzlich das reproduzierbare Zertifikat
+\`scripts/certify_sw1_awi.py\`
+vor (Python/SymPy 1.14.0, PASS). Dieses Zertifikat deckt die Koeffizientenordnung, die \(2\times2\)-Reflexionsdiagonalisierung und die Invertierbarkeit ab; es ersetzt **nicht** den noch ausstehenden unabhängigen Cross-Model-Check der Intervall-/Pullback-Geometrie.
+
+Keine Promotion.
