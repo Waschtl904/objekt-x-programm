@@ -2,7 +2,9 @@
 
 > **Stand:** 28. August 2026  
 > **Repo-Basis dieses Records:** `main@83e03c6d69ce6dfae2b433977548dd1cd308ebc7`  
-> **Gemergter Beweiskandidat:** `audits/P11_R32_HT_A4B_SW1_SELF_CONTAINED_THEOREM_CANDIDATE.md`, Merge-Commit `b06f50f12973e781b87db8b06e54fd590a053b10` (PR #10)  
+> **Gemergter Beweiskandidat:** `audits/P11_R32_HT_A4B_SW1_SELF_CONTAINED_THEOREM_CANDIDATE.md`  
+> **Exakter adversarial geprüfter Review-Head (PR #10):** `f8f9f107b9c6879611ecb492979737a5541141e9`  
+> **Squash-Merge-Commit (PR #10 in main):** `b06f50f12973e781b87db8b06e54fd590a053b10`  
 > **Zweck dieses Records:** kanonische, eigenständige Promotionsbuchung für ausschließlich den in §12 des Kandidatenaudits abgegrenzten Satz.
 
 ---
@@ -18,14 +20,18 @@ unter
 0<\sigma\le R<\varepsilon,\qquad R+\varepsilon<\Delta,
 \]
 
-exakt der in §12 von `audits/P11_R32_HT_A4B_SW1_SELF_CONTAINED_THEOREM_CANDIDATE.md` formulierte Satz:
+exakt der in §12 von `audits/P11_R32_HT_A4B_SW1_SELF_CONTAINED_THEOREM_CANDIDATE.md` formulierte Satz, vollständig und ohne Erweiterung oder Kürzung:
 
 1. Für fast jedes \(s\in(R,\varepsilon)\) liegen die sechs Punkte
    \[
    s,\ a-s,\ a+s,\ T-s,\ 2d-s,\ T+s
    \]
    außerhalb aller drei Samplingfenster \((a,b,T)\) — direkte Blindwerte, uniforme Membership \((Z,Z,Z,Z,Z,Z)\).
-2. A-Wall-Intervallresultat:
+2. Die fünf SW1-Membership-Wände \(D_-,D_0,D_+,E,A_*\) liegen strikt rechts von \(\varepsilon\):
+   \[
+   D_-,\ D_0,\ D_+,\ E,\ A_*>\varepsilon.
+   \]
+3. A-Wall-Intervallresultat:
    \[
    I_b\cap I_-=\emptyset,
    \qquad
@@ -39,8 +45,10 @@ Der Beweis ist selbständig: er verwendet HT.17, HT.18, HT.23–HT.27, FG-TR1 un
 
 ## 2. Auditquelle und GREEN-Basis
 
-- **Auditquelle:** `audits/P11_R32_HT_A4B_SW1_SELF_CONTAINED_THEOREM_CANDIDATE.md`, 1078 Zeilen, gemergt als PR #10, Merge-Commit `b06f50f12973e781b87db8b06e54fd590a053b10`.
-- **GREEN-Basis (adversarial vollständig geprüft, alle Kategorien GREEN):**
+- **Auditquelle:** `audits/P11_R32_HT_A4B_SW1_SELF_CONTAINED_THEOREM_CANDIDATE.md`, 1078 Zeilen.
+- **Exakter adversarial geprüfter Head:** `f8f9f107b9c6879611ecb492979737a5541141e9` (PR #10, vor dem Squash-Merge).
+- **Squash-Merge-Commit in main:** `b06f50f12973e781b87db8b06e54fd590a053b10`.
+- **GREEN-Basis (adversarial vollständig geprüft gegen den exakten Head, alle Kategorien GREEN):**
   - MECHANICAL
   - CONSTANTS/ORDERING
   - SIX-POINT BLINDNESS
