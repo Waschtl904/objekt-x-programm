@@ -1,7 +1,7 @@
 # Active Theorem Registry
 
 > **Stand:** 28. August 2026  
-> **Repo-Basis:** `main@b06f50f12973e781b87db8b06e54fd590a053b10`  
+> **Repo-Basis:** `main@83e03c6d69ce6dfae2b433977548dd1cd308ebc7`  
 > **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11/R32-SW1-/Schur-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
 > **Nicht-Zweck:** Ersatz für `STATUS.md`, `OFFENE_PROBLEME.md`, die Papers oder Promotionsrecords.
 
@@ -52,7 +52,7 @@ T<S=T+\sigma<T_0=T+\varepsilon<c,
 | ID | Status | Scope | Quelle | Bemerkung |
 |---|---|---|---|---|
 | **HT-A4b-SW1** | `?[O]` | \(0<\sigma\le R<\varepsilon,\ R+\varepsilon<\Delta\) | `audits/P11_R32_HT_A4B_SINGLE_CHAMBER_SUBWEDGE_CANDIDATE.md` auf `main` | gemergter Rechenkandidat; keine Promotion |
-| **HT-A4b-SW1-M** | `✓[M]` | derselbe SW1-Scope; sechs direkte Blindwerte plus direkter A-Wall-Spezialfall (genau der Satz aus §12 des Kandidatenaudits) | Kandidat: `audits/P11_R32_HT_A4B_SW1_SELF_CONTAINED_THEOREM_CANDIDATE.md` (PR #10, Merge `b06f50f12973e781b87db8b06e54fd590a053b10`); Promotionsrecord: `audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md` | promotet ausschließlich der §12-Satz; keine Mitpromotion von HT-A4b global, HT-RED, A0 oder Schur-Cross-Gram |
+| **HT-A4b-SW1-M** | `✓[M]` | derselbe SW1-Scope; sechs direkte Blindwerte, die fünf SW1-Membership-Wände \(D_-,D_0,D_+,E,A_*>\varepsilon\), plus direkter A-Wall-Spezialfall (genau der vollständige Satz aus §12 des Kandidatenaudits) | Kandidat: `audits/P11_R32_HT_A4B_SW1_SELF_CONTAINED_THEOREM_CANDIDATE.md` (PR #10, exakter Review-Head `f8f9f107b9c6879611ecb492979737a5541141e9`, Squash-Merge `b06f50f12973e781b87db8b06e54fd590a053b10`); Promotionsrecord: `audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md` | promotet ausschließlich der vollständige §12-Satz; keine Mitpromotion von HT-A4b global, HT-RED, A0 oder Schur-Cross-Gram |
 
 ---
 
