@@ -1,11 +1,23 @@
 # Active Theorem Registry
 
 > **Stand:** 28. August 2026  
-> **Repo-Basis:** \`main@0c98c03a332dc7c8e479edc77d8cada678eec376\`  
+> **Repo-Basis:** \`main@5740a38ad4c24e27b7352512e57fb095b245e4d5\`  
 > **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11/R32-SW1-/Schur-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
 > **Nicht-Zweck:** Ersatz für \`STATUS.md\`, \`OFFENE_PROBLEME.md\`, die Papers oder Promotionsrecords.
 
 Diese Datei ist eine **Navigations- und Abhängigkeitsregistry**. Eine Statuszeile hier erzeugt keine Promotion. Bei Konflikten gilt die kanonische mathematische Quelle des jeweiligen Resultats.
+
+---
+
+## 0. Statusnomenklatur (verbindlich ab 28. August 2026)
+
+| Bezeichnung | Bedeutung |
+|---|---|
+| **AI-GREEN candidate** | Intern durch KI kritisch bzw. redundant geprüfter Beweiskandidat. **Keine** externe Begutachtung. Dies ist der Default-Status für jeden Kandidaten ohne dokumentierte externe Prüfprovenienz. |
+| **independent GREEN** | Unabhängige Prüfung des **exakten** Heads/Satzes durch einen externen Menschen, einen unabhängigen Reviewlauf (separates Modell/System), oder ein maschinenprüfbares algebraisches Zertifikat. Methode, Reviewer/System und geprüfter Head **müssen** dokumentiert sein. |
+| **\`✓[M]\`** | Formaler Objekt-X-interner Promotionsstatus. Unabhängig davon, ob zusätzlich externe Begutachtung existiert. |
+
+**Rechtsverbindliche Klarstellung:** Alte Bezeichnungen wie \`independently GREEN candidate\`, \`OVERALL GREEN candidate\` oder \`CANDIDATE GREEN\` in früheren Versionen dieser Datei galten **nicht automatisch** als \`independent GREEN\` im obigen Sinn. Ohne dokumentierte externe Prüfprovenienz (Methode, Reviewer/System, exakter Head) werden sie ab jetzt als \`AI-GREEN candidate\` verstanden. Diese Registry wurde entsprechend normalisiert (siehe Abschnitt 2).
 
 ---
 
@@ -30,21 +42,22 @@ T<S=T+\sigma<T_0=T+\varepsilon<c,
 
 ---
 
-## 2. Unabhängig GREEN geprüfte Kandidaten — keine formale Promotion
+## 2. AI-GREEN geprüfte Kandidaten — keine formale Promotion
 
 | ID | Status | Inhalt | Kanonische Quelle | Verwendung |
 |---|---|---|---|---|
-| **HT-A1** | independently GREEN candidate | wordwise Tail-Aktion; \(44\to24\to16\)-Selektion | \`audits/P11_R32_TAIL_FG_PIVOT_CANDIDATE.md\` | Rohmaterial für die Tail-/Full-Rest-Zeilen |
-| **HT-A2** | independently GREEN candidate | Tail-Kompression / skalarer Pivot, insbesondere \(P_{\mathcal T_R}(I+A)P_{\mathcal T_R}=(1+\kappa)I\) | dieselbe Datei | liefert den invertierbaren Tail-Pivot |
-| **HT-A3** | independently GREEN candidate | Off-tail-Shell-Klassifikation | dieselbe Datei | kontrolliert Shell-Überlappungen / A-Walls |
-| **HT-A4a** | independently GREEN candidate | FG-Klassifikation der sechs Tail-Argumente | dieselbe Datei | allgemeiner Kandidatenhintergrund; für SW1-M soll diese Blackbox nicht benötigt werden |
-| **FG-1** | independently GREEN candidate — keine formale Promotion | Branch-/Gluing-Klassifikation des unsichtbaren Kerns | **Statusbuchung:** \`00-uebersicht/P11_R32_STATUS_2026-08-25.md\`, Update 2026-08-26; **Beweis-/Auditprovenienz:** \`audits/P11_R32_INVISIBLE_FIBER_GRAPH_CLASSIFICATION_AUDIT.md\` plus Exhaustivitätsabschluss | allgemeine Kernelgeometrie |
-| **FG-TR1** | OVERALL GREEN candidate — keine formale Promotion | \(\Theta_R\) als beschränkter Koordinatenisomorphismus; \(L_R=\operatorname{pr}_1\Theta_R\) | **Statusbuchung:** \`00-uebersicht/P11_R32_STATUS_2026-08-25.md\`, Update 2026-08-26; **Beweis-/Auditprovenienz:** \`audits/P11_R32_TRIANGULAR_ROW_SPLITTING_AUDIT.md\` | freie Koordinaten / Rekonstruktionshintergrund |
-| **\(\widehat\Phi_R\)-Normalform** | CANDIDATE GREEN als mechanische Komposition | \(E_I^*H\,\widehat\Phi_R(z,f,h)=f\) | \`00-uebersicht/P11_R32_STATUS_2026-08-25.md\`, Update 2026-08-26; Provenienz dort angegeben | Parametrisierung der augmentierten Rechnung |
-| **CG-FG1** | CANDIDATE GREEN als Kompositionsreduktion | \(\Gamma_I=\operatorname{pr}_2\Gamma_R=E_I^*HBH^*E_{\mathcal A}=M_I^*M_A\) | \`00-uebersicht/P11_R32_STATUS_2026-08-25.md\`, Update 2026-08-26 | verbindet freie Koordinaten mit dem offenen Schur-Cross-Gram-Test |
-| **SW1-KNF** | OVERALL GREEN candidate — keine formale Promotion | sektorale, vollständige Kernel-Normalform auf SW1: \(\mathcal K_R\cong\mathcal Z_R^+\oplus L^2(\mathcal V_R^{SW1})\) via paarweise disjunkter Samplingfenster \(I_a,I_b,I_T\); ersetzt FG-TR1/FG-1 als Blackbox ausschließlich auf SW1 | \`audits/P11_R32_SW1_KNF_CANDIDATE.md\` (PR #15, Squash-Merge \`0c98c03a332dc7c8e479edc77d8cada678eec376\`) | liefert die vollständige Koordinatenparametrisierung des inneren Kernels als Ausgangspunkt für SW1-BL7/SW1-2TP; keine Aussage über A0, HT-RED oder \(\ker\Gamma_I\) |
+| **HT-A1** | AI-GREEN candidate | wordwise Tail-Aktion; \(44\to24\to16\)-Selektion | \`audits/P11_R32_TAIL_FG_PIVOT_CANDIDATE.md\` | Rohmaterial für die Tail-/Full-Rest-Zeilen |
+| **HT-A2** | AI-GREEN candidate | Tail-Kompression / skalarer Pivot, insbesondere \(P_{\mathcal T_R}(I+A)P_{\mathcal T_R}=(1+\kappa)I\) | dieselbe Datei | liefert den invertierbaren Tail-Pivot |
+| **HT-A3** | AI-GREEN candidate | Off-tail-Shell-Klassifikation | dieselbe Datei | kontrolliert Shell-Überlappungen / A-Walls |
+| **HT-A4a** | AI-GREEN candidate | FG-Klassifikation der sechs Tail-Argumente | dieselbe Datei | allgemeiner Kandidatenhintergrund; für SW1-M soll diese Blackbox nicht benötigt werden |
+| **FG-1** | AI-GREEN candidate — keine formale Promotion | Branch-/Gluing-Klassifikation des unsichtbaren Kerns | **Statusbuchung:** \`00-uebersicht/P11_R32_STATUS_2026-08-25.md\`, Update 2026-08-26; **Beweis-/Auditprovenienz:** \`audits/P11_R32_INVISIBLE_FIBER_GRAPH_CLASSIFICATION_AUDIT.md\` plus Exhaustivitätsabschluss | allgemeine Kernelgeometrie |
+| **FG-TR1** | AI-GREEN candidate — keine formale Promotion | \(\Theta_R\) als beschränkter Koordinatenisomorphismus; \(L_R=\operatorname{pr}_1\Theta_R\) | **Statusbuchung:** \`00-uebersicht/P11_R32_STATUS_2026-08-25.md\`, Update 2026-08-26; **Beweis-/Auditprovenienz:** \`audits/P11_R32_TRIANGULAR_ROW_SPLITTING_AUDIT.md\` | freie Koordinaten / Rekonstruktionshintergrund |
+| **\(\widehat\Phi_R\)-Normalform** | AI-GREEN candidate als mechanische Komposition | \(E_I^*H\,\widehat\Phi_R(z,f,h)=f\) | \`00-uebersicht/P11_R32_STATUS_2026-08-25.md\`, Update 2026-08-26; Provenienz dort angegeben | Parametrisierung der augmentierten Rechnung |
+| **CG-FG1** | AI-GREEN candidate als Kompositionsreduktion | \(\Gamma_I=\operatorname{pr}_2\Gamma_R=E_I^*HBH^*E_{\mathcal A}=M_I^*M_A\) | \`00-uebersicht/P11_R32_STATUS_2026-08-25.md\`, Update 2026-08-26 | verbindet freie Koordinaten mit dem offenen Schur-Cross-Gram-Test |
+| **SW1-KNF** | AI-GREEN candidate — keine formale Promotion | sektorale, vollständige Kernel-Normalform auf SW1: \(\mathcal K_R\cong\mathcal Z_R^+\oplus L^2(\mathcal V_R^{SW1})\) via paarweise disjunkter Samplingfenster \(I_a,I_b,I_T\); ersetzt FG-TR1/FG-1 als Blackbox ausschließlich auf SW1 | \`audits/P11_R32_SW1_KNF_CANDIDATE.md\` (PR #15, Squash-Merge \`0c98c03a332dc7c8e479edc77d8cada678eec376\`) | liefert die vollständige Koordinatenparametrisierung des inneren Kernels als Ausgangspunkt für SW1-BL7/SW1-2TP; keine Aussage über A0, HT-RED oder \(\ker\Gamma_I\) |
+| **SW1-BL7** | AI-GREEN candidate — keine formale Promotion | siebter direkter Blindwert: \(s\in(R,\varepsilon)\Rightarrow 2d+s\in(a+R,b-R)\subset\mathcal Z_{R,\mathrm{SW1}}^{\rm phys}\), für jedes \(s\), Neuheit gegen die sechs promoteten Blindwerte elementar gezeigt | \`audits/P11_R32_SW1_BL7_CANDIDATE.md\` (PR #16, Squash-Merge \`5740a38ad4c24e27b7352512e57fb095b245e4d5\`) | Hilfslemma für die \(2d\pm s\)-Row im Rahmen des späteren \(\Delta\)-Descent; keine Aussage über SW1-2TP, SW1-AWI, HT-RED, A0 oder \(\ker\Gamma_I\) |
 
-**Firewall:** \`independently GREEN candidate\`, \`OVERALL GREEN candidate\` und \`CANDIDATE GREEN\` sind ausdrücklich **kein** \`✓[M]\`.
+**Firewall:** \`AI-GREEN candidate\` ist ausdrücklich **kein** \`independent GREEN\` und **kein** \`✓[M]\`. Keine der obigen Zeilen trägt derzeit eine dokumentierte externe Prüfprovenienz.
 
 ---
 
@@ -53,9 +66,9 @@ T<S=T+\sigma<T_0=T+\varepsilon<c,
 | ID | Status | Scope | Quelle | Bemerkung |
 |---|---|---|---|---|
 | **HT-A4b-SW1** | \`?[O]\` | \(0<\sigma\le R<\varepsilon,\ R+\varepsilon<\Delta\) | \`audits/P11_R32_HT_A4B_SINGLE_CHAMBER_SUBWEDGE_CANDIDATE.md\` auf \`main\` | gemergter Rechenkandidat; keine Promotion |
-| **HT-A4b-SW1-M** | \`✓[M]\` | derselbe SW1-Scope; sechs direkte Blindwerte, die fünf SW1-Membership-Wände \(D_-,D_0,D_+,E,A_*>\varepsilon\), plus direkter A-Wall-Spezialfall (genau der vollständige Satz aus §12 des Kandidatenaudits) | Kandidat: \`audits/P11_R32_HT_A4B_SW1_SELF_CONTAINED_THEOREM_CANDIDATE.md\` (PR #10, exakter Review-Head \`f8f9f107b9c6879611ecb492979737a5541141e9\`, Squash-Merge \`b06f50f12973e781b87db8b06e54fd590a053b10\`); Promotionsrecord: \`audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md\` | promotet ausschließlich der vollständige §12-Satz; keine Mitpromotion von HT-A4b global, HT-RED, A0 oder Schur-Cross-Gram |
+| **HT-A4b-SW1-M** | \`✓[M]\` | derselbe SW1-Scope; sechs direkte Blindwerte, die fünf SW1-Membership-Wände \(D_-,D_0,D_+,E,A_*>\varepsilon\), plus direkter A-Wall-Spezialfall (genau der vollständige Satz aus §12 des Kandidatenaudits) | Kandidat: \`audits/P11_R32_HT_A4B_SW1_SELF_CONTAINED_THEOREM_CANDIDATE.md\` (PR #10, exakter Review-Head \`f8f9f107b9c6879611ecb492979737a5541141e9\`, Squash-Merge \`b06f50f12973e781b87db8b06e54fd590a053b10\`); Promotionsrecord: \`audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md\` | promotet ausschließlich der vollständige §12-Satz (\`✓[M]\` = Objekt-X-interner Status, keine externe Begutachtung); keine Mitpromotion von HT-A4b global, HT-RED, A0 oder Schur-Cross-Gram |
 
-Mit HT-A4b-SW1-M nun \(\checkmark[M]\) ist der SW1-Membership-Baustein der Kette formal gesichert. SW1-KNF (siehe Abschnitt 2) ist ein neuer, unpromotierter GREEN-Baustein derselben Front.
+Mit HT-A4b-SW1-M nun \(\checkmark[M]\) ist der SW1-Membership-Baustein der Kette formal gesichert. SW1-KNF und SW1-BL7 (siehe Abschnitt 2) sind neue, unpromotierte AI-GREEN-Bausteine derselben Front.
 
 ---
 
@@ -63,6 +76,7 @@ Mit HT-A4b-SW1-M nun \(\checkmark[M]\) ist der SW1-Membership-Baustein der Kette
 
 | Knoten | Status | Exakte Rolle |
 |---|---|---|
+| **SW1-2TP** (simultaner \(T\pm s\)-2×2-Pivot) | \`?[O]\` — nächster aktiver Kandidat | Nachweis, dass \(M_T=\begin{pmatrix}1+\kappa&\beta_T\\\beta_T&1+\kappa\end{pmatrix}\) mit \(\lambda_\pm=1+\kappa\pm\beta_T>0\) direkt aus den elf Wörtern von \(A\) folgt; **Promotionsschwelle:** keine Promotion des 2TP-Satzes, auch nicht bei AI-GREEN, vor mindestens einem \`independent GREEN\` oder reproduzierbaren algebraischen Zertifikat für das 11-Wort-Ledger |
 | **HT-A4b global chamber exhaustivity** | \`?[O]\` | globale zehn-Flächen-/15-Chamber-Exhaustivität bleibt offen; für den ersten SW1-Angriff derzeit nicht benötigt |
 | **HT-RED** | \`?[O]\` | vollständige Tail-Gaussian-/Schur-Elimination des Restblocks offen |
 | **A0 FULL FREE-COORDINATE COVERAGE** | \`?[O]\` | volle Abdeckung aller freien Koordinaten / relevanten Strata offen |
@@ -96,17 +110,15 @@ Der derzeit gewünschte Pfad ist:
 
 \[
 \boxed{
-\text{SW1-Membership}
-\;+\;
-\text{Full-Rest-/Schur-Elimination}
-\;+\;
-\text{P12-RT }\checkmark[M]
+\text{SW1-KNF}\to\text{SW1-BL7}\to\text{SW1-2TP}\to\text{SW1-AWI}\to\Delta\text{-Descent}
 \;\Longrightarrow\;
-\ker\mathcal K_{I,A}=\{0\}\ \text{auf SW1?}
+\ker\mathcal K_{I,A}\stackrel{?}{=}\{0\}\ \text{auf SW1}
 }
 \]
 
-Der einzige wirklich neue mathematische Engpass in dieser Kette ist derzeit die **Full-Rest-/Schur-Elimination auf SW1**. SW1-KNF liefert dazu die vollständige Koordinatenbasis; der nächste konkrete Baustein ist SW1-BL7 (siebter Blindwert \(2d+s\)).
+Der einzige wirklich neue mathematische Engpass in dieser Kette ist derzeit die **Full-Rest-/Schur-Elimination auf SW1**. SW1-KNF liefert dazu die vollständige Koordinatenbasis, SW1-BL7 den siebten Blindwert; der nächste konkrete Baustein ist SW1-2TP.
+
+**Methodische Regel ab SW1-2TP:** Die \(T\pm s\)-Rows müssen aus den elf Wörtern von \(A\) neu abgeleitet werden (nicht aus einer übernommenen Scratch-Formel). Erst danach Koeffizientenvergleich, exakte Determinantenprüfung \(\det M_T=(1+\kappa)^2-\beta_T^2>0\), und Summen-/Differenzkanal-Analyse.
 
 ---
 
@@ -118,6 +130,7 @@ Diese Registry wird nur geändert, wenn sich mindestens eines der folgenden Ding
 2. der kanonische Quellort eines verwendeten Resultats;
 3. der Scope eines verwendeten Resultats;
 4. der aktive offene Zielknoten;
-5. eine Abhängigkeit der aktiven Beweiskette.
+5. eine Abhängigkeit der aktiven Beweiskette;
+6. eine Änderung der Statusnomenklatur selbst (Abschnitt 0).
 
 Historische oder thematisch entfernte Resultate werden hier nicht vollständig katalogisiert.
