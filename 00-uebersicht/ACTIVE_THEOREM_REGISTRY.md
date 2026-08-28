@@ -72,8 +72,9 @@ T<S=T+\sigma<T_0=T+\varepsilon<c,
 | **CG-FG1** | AI-GREEN candidate als Kompositionsreduktion | \(\Gamma_I=\operatorname{pr}_2\Gamma_R=E_I^*HBH^*E_{\mathcal A}=M_I^*M_A\) | \`00-uebersicht/P11_R32_STATUS_2026-08-25.md\`, Update 2026-08-26 | verbindet freie Koordinaten mit dem offenen Schur-Cross-Gram-Test |
 | **SW1-KNF** | AI-GREEN candidate — keine formale Promotion | sektorale, vollständige Kernel-Normalform auf SW1: \(\mathcal K_R\cong\mathcal Z_R^+\oplus L^2(\mathcal V_R^{SW1})\) via paarweise disjunkter Samplingfenster \(I_a,I_b,I_T\); ersetzt FG-TR1/FG-1 als Blackbox ausschließlich auf SW1 | \`audits/P11_R32_SW1_KNF_CANDIDATE.md\` (PR #15, Squash-Merge \`0c98c03a332dc7c8e479edc77d8cada678eec376\`) | liefert die vollständige Koordinatenparametrisierung des inneren Kernels als Ausgangspunkt für SW1-BL7/SW1-2TP; keine Aussage über A0, HT-RED oder \(\ker\Gamma_I\) |
 | **SW1-BL7** | AI-GREEN candidate — keine formale Promotion | siebter direkter Blindwert: \(s\in(R,\varepsilon)\Rightarrow 2d+s\in(a+R,b-R)\subset\mathcal Z_{R,\mathrm{SW1}}^{\rm phys}\), für jedes \(s\), Neuheit gegen die sechs promoteten Blindwerte elementar gezeigt | \`audits/P11_R32_SW1_BL7_CANDIDATE.md\` (PR #16, Squash-Merge \`5740a38ad4c24e27b7352512e57fb095b245e4d5\`) | Hilfslemma für die \(2d\pm s\)-Row im Rahmen des späteren \(\Delta\)-Descent; keine Aussage über SW1-2TP, SW1-AWI, HT-RED, A0 oder \(\ker\Gamma_I\) |
+| **SW1-2TP** | AI-GREEN candidate + **independent GREEN (certificate)** — keine formale Promotion | simultaner \(T\pm s\)-2×2-Pivot: aus den elf Wörtern von \(A\) folgen die gepaarten Rows mit \(M_T=\begin{pmatrix}1+\kappa&\beta_T\\\beta_T&1+\kappa\end{pmatrix}\), \(\beta_T=-\tfrac58\log2\), beide Eigenwerte strikt positiv; im Summenkanal cancelt \(q\,w(s)\), im Differenzkanal erscheint \(2q\,w(s)\) | `audits/P11_R32_SW1_2TP_CANDIDATE.md`; Zertifikat `scripts/certify_sw1_2tp_ledger.py`; PR #17, Squash-Merge `dcbe0b005c03f6480693f79ff0d6db5f7ef34ae1`; Zertifikat: Python/SymPy 1.14.0, finaler geprüfter Head `d39b8603adb373ae31471e863c72b555b804020a`, PASS | liefert die uniforme simultane Elimination von \(y(T+s),y(T-s)\); Perplexity-Blindcheck dokumentiert FAIL, daher **kein** independent GREEN (cross-model); keine Aussage über SW1-AWI, \(\Delta\)-Descent, HT-RED, A0 oder \(\ker\Gamma_I\) |
 
-**Firewall:** \`AI-GREEN candidate\` ist ausdrücklich **kein** \`independent GREEN\` (in keinem Subtyp) und **kein** \`✓[M]\`. Keine der obigen Zeilen trägt derzeit eine dokumentierte externe Prüfprovenienz.
+**Firewall:** `AI-GREEN candidate` allein ist ausdrücklich **kein** `independent GREEN` und **kein** `✓[M]`. SW1-2TP trägt zusätzlich ausschließlich `independent GREEN (certificate)` mit dokumentierter Zertifikatsprovenienz; der Perplexity-Blindcheck ist FAIL und erzeugt kein `independent GREEN (cross-model)`. Keine der Kandidatenzeilen ist formal promotet.
 
 ---
 
@@ -84,7 +85,7 @@ T<S=T+\sigma<T_0=T+\varepsilon<c,
 | **HT-A4b-SW1** | \`?[O]\` | \(0<\sigma\le R<\varepsilon,\ R+\varepsilon<\Delta\) | \`audits/P11_R32_HT_A4B_SINGLE_CHAMBER_SUBWEDGE_CANDIDATE.md\` auf \`main\` | gemergter Rechenkandidat; keine Promotion |
 | **HT-A4b-SW1-M** | \`✓[M]\` | derselbe SW1-Scope; sechs direkte Blindwerte, die fünf SW1-Membership-Wände \(D_-,D_0,D_+,E,A_*>\varepsilon\), plus direkter A-Wall-Spezialfall (genau der vollständige Satz aus §12 des Kandidatenaudits) | Kandidat: \`audits/P11_R32_HT_A4B_SW1_SELF_CONTAINED_THEOREM_CANDIDATE.md\` (PR #10, exakter Review-Head \`f8f9f107b9c6879611ecb492979737a5541141e9\`, Squash-Merge \`b06f50f12973e781b87db8b06e54fd590a053b10\`); Promotionsrecord: \`audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md\` | promotet ausschließlich der vollständige §12-Satz (\`✓[M]\` = Objekt-X-interner Status, keine externe Begutachtung); keine Mitpromotion von HT-A4b global, HT-RED, A0 oder Schur-Cross-Gram |
 
-Mit HT-A4b-SW1-M nun \(\checkmark[M]\) ist der SW1-Membership-Baustein der Kette formal gesichert. SW1-KNF und SW1-BL7 (siehe Abschnitt 2) sind neue, unpromotierte AI-GREEN-Bausteine derselben Front.
+Mit HT-A4b-SW1-M nun \(\checkmark[M]\) ist der SW1-Membership-Baustein der Kette formal gesichert. SW1-KNF und SW1-BL7 sind unpromotierte AI-GREEN-Bausteine; SW1-2TP ist zusätzlich als `independent GREEN (certificate)` reproduzierbar zertifiziert. Keiner dieser drei Kandidaten ist formal promotet.
 
 ---
 
@@ -92,7 +93,7 @@ Mit HT-A4b-SW1-M nun \(\checkmark[M]\) ist der SW1-Membership-Baustein der Kette
 
 | Knoten | Status | Exakte Rolle |
 |---|---|---|
-| **SW1-2TP** (simultaner \(T\pm s\)-2×2-Pivot) | \`?[O]\` — nächster aktiver Kandidat | Nachweis, dass \(M_T=\begin{pmatrix}1+\kappa&\beta_T\\\beta_T&1+\kappa\end{pmatrix}\) mit \(\lambda_\pm=1+\kappa\pm\beta_T>0\) direkt aus den elf Wörtern von \(A\) folgt; **Gerüst-PR:** #17 (\`research/sw1-2tp\`, Ziel/Hypothese ohne Beweis). **Erforderliche Prüfkette:** Herleitung (GPT) → AI-GREEN → blinder Cross-Model-Check (frische Session) → algebraisches Zertifikat. **Promotionsschwelle:** keine Promotion, auch nicht bei AI-GREEN, vor mindestens einem \`independent GREEN\`-Subtyp (§0.1) für das 11-Wort-Ledger |
+| **SW1-AWI** (A-Wall-Involution) | `?[O]` — nächster aktiver Kandidat | Analyse des verbleibenden A-Wall-Überlapps auf SW1 über die Involution \(s\mapsto\Delta-s\), insbesondere im Fall \(\varepsilon>\Delta/2\); Input: SW1-KNF, SW1-BL7 und der nun verfügbare zertifizierte SW1-2TP-Pivot. Noch kein \(\Delta\)-Descent, HT-RED, A0 oder \(\ker\Gamma_I\)-Schluss. |
 | **HT-A4b global chamber exhaustivity** | \`?[O]\` | globale zehn-Flächen-/15-Chamber-Exhaustivität bleibt offen; für den ersten SW1-Angriff derzeit nicht benötigt |
 | **HT-RED** | \`?[O]\` | vollständige Tail-Gaussian-/Schur-Elimination des Restblocks offen |
 | **A0 FULL FREE-COORDINATE COVERAGE** | \`?[O]\` | volle Abdeckung aller freien Koordinaten / relevanten Strata offen |
@@ -132,9 +133,9 @@ Der derzeit gewünschte Pfad ist:
 }
 \]
 
-Der einzige wirklich neue mathematische Engpass in dieser Kette ist derzeit die **Full-Rest-/Schur-Elimination auf SW1**. SW1-KNF liefert dazu die vollständige Koordinatenbasis, SW1-BL7 den siebten Blindwert; der nächste konkrete Baustein ist SW1-2TP.
+Der einzige wirklich neue mathematische Engpass in dieser Kette ist weiterhin die **Full-Rest-/Schur-Elimination auf SW1**. SW1-KNF liefert die Koordinatenbasis, SW1-BL7 den siebten Blindwert und SW1-2TP den zertifizierten simultanen Tail-Pivot; der nächste konkrete Baustein ist SW1-AWI.
 
-**Methodische Regel ab SW1-2TP:** Die \(T\pm s\)-Rows müssen aus den elf Wörtern von \(A\) neu abgeleitet werden (nicht aus einer übernommenen Scratch-Formel). Erst danach Koeffizientenvergleich, exakte Determinantenprüfung \(\det M_T=(1+\kappa)^2-\beta_T^2>0\), und Summen-/Differenzkanal-Analyse. Danach die in §0.1/§4 festgelegte Prüfkette (AI-GREEN → cross-model → certificate) vor jeder Promotionserwägung.
+**Abgeschlossener methodischer Schritt SW1-2TP:** Die \(T\pm s\)-Rows wurden aus den elf Wörtern von \(A\) neu abgeleitet; der Cross-Model-Blindcheck (Perplexity) ging FAIL, das algebraische Zertifikat PASS. Der nächste methodische Angriff ist SW1-AWI; die Zertifikats-/Provenienzdisziplin bleibt verbindlich.
 
 ---
 
