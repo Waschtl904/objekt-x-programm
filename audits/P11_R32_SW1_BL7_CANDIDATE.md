@@ -2,14 +2,14 @@
 
 > **Stand:** 28. August 2026  
 > **Repo-Basis dieses Audits:** `main@242f1c2684a982067d45633c2b559cd149557396`  
-> **Status:** `?[O]` — neuer Kandidat, noch kein adversariales GREEN, keine Promotion.  
+> **Status:** `?[O]` — self-contained Beweis vorliegend, adversariales GREEN noch ausstehend, keine Promotion.  
 > **Scope:** ausschließlich SW1, \(0<\sigma\le R<\varepsilon,\ R+\varepsilon<\Delta\); ausschließlich der siebte Blindwert \(2d+s\).
 
 ---
 
 ## 0. Firewall (zuerst lesen)
 
-Dieses Audit beweist — wenn es GREEN wird — **ausschließlich**, dass \(2d+s\) für \(s\in(R,\varepsilon)\) auf SW1 ein direkter Blindwert ist (a.e.). Es beweist **nicht**:
+Dieses Audit beweist — wenn es GREEN wird — **ausschließlich**, dass \(2d+s\) für \(s\in(R,\varepsilon)\) auf SW1 direkt blind ist. Es beweist **nicht**:
 
 - kein SW1-2TP (simultaner \(T\pm s\)-2×2-Pivot);
 - keine SW1-AWI (A-Wall-Involution \(s\leftrightarrow\Delta-s\));
@@ -25,11 +25,11 @@ Dieses Audit beweist — wenn es GREEN wird — **ausschließlich**, dass \(2d+s
 
 ---
 
-## 1. Kandidatenbehauptung
+## 1. Kandidatensatz
 
 \[
 \boxed{
-s\in(R,\varepsilon)\quad\Longrightarrow\quad 2d+s\in\mathcal Z_{R,\mathrm{SW1}}^{\rm phys}\quad\text{a.e.}
+s\in(R,\varepsilon)\quad\Longrightarrow\quad 2d+s\in(a+R,\,b-R)\subset\mathcal Z_{R,\mathrm{SW1}}^{\rm phys}
 }
 \]
 
@@ -38,69 +38,91 @@ wobei \(\mathcal Z_{R,\mathrm{SW1}}^{\rm phys}\) der in SW1-KNF exakt bestimmte 
 \mathcal Z_{R,\mathrm{SW1}}^{\rm phys} = (0,a-R)\cup(a+R,b-R)\cup(b+R,T-R)\cup(T+R,T+\varepsilon).
 \]
 
----
-
-## 2. Beweisskizze (zu verifizieren)
-
-Ziel: \(2d+s\) liegt außerhalb aller drei Samplingfenster \(I_a,I_b,I_T\) und innerhalb \((0,T_0)\).
-
-**Schritt 1 — Abstand zu \(a\).**
-\[
-(2d+s)-a = \Delta+s > R.
-\]
-*Zu prüfen:* exakte Identität \(2d-a=\Delta\) bzw. \(2d+s-a=\Delta+s\) gegen die kanonischen Definitionen von \(a,b,d,\Delta\) im Rahmen; Vorzeichen und Größenordnung von \(\Delta+s\) versus \(R\).
-
-**Schritt 2 — Abstand zu \(b\).**
-\[
-b-(2d+s) = e-s > e-\varepsilon > R.
-\]
-*Zu prüfen:* exakte Identität \(b-2d=e\); dass \(e-\varepsilon>R\) tatsächlich aus den globalen Parameterordnungsannahmen folgt (nicht nur aus SW1 selbst) — ggf. Referenz auf zusätzliche Rahmenbedingung nachtragen.
-
-**Schritt 3 — Abstand zu \(T\).**
-\[
-T-(2d+s) = 2e-s > R.
-\]
-*Zu prüfen:* exakte Identität \(T-2d=2e\); Konsistenz mit Schritt 2 (beide verwenden \(e\)); dass \(2e-s>R\) für alle \(s\in(R,\varepsilon)\) gilt, insbesondere am oberen Rand \(s\to\varepsilon\).
-
-**Schritt 4 — Enthaltenheit in \((0,T_0)\).**
-\[
-2d+s < T_0 = T+\varepsilon.
-\]
-*Zu prüfen:* explizit, ob dies aus Schritt 3 (\(T-(2d+s)>R>0\)) bereits folgt oder eine separate Abschätzung braucht.
-
-**Schritt 5 — a.e.-Präzisierung.**
-*Zu prüfen:* ob "a.e." hier nur die übliche Nullmenge der Randfälle (\(s=R\) oder \(s=\varepsilon\)) betrifft oder ob zusätzliche degenerierte Parameterkonstellationen (z. B. \(\Delta+s=R\) exakt) ausgeschlossen werden müssen.
+Die Aussage gilt **für jedes** \(s\in(R,\varepsilon)\), nicht nur a.e. Das "a.e." wird erst relevant, sobald man daraus eine Aussage über \(L^2\)-Funktionswerte wie \(y(2d+s)=z(2d+s)\) macht.
 
 ---
 
-## 3. Konsistenzprüfung gegen bereits promotete Blindwerte
+## 2. Beweis
 
-Der promotete Satz (`audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md`, \(\checkmark[M]\)) listet die sechs Blindwerte
+**Konstantenidentitäten** (kanonischer Rahmen):
+\[
+2d-a=\Delta,\qquad b-2d=e,\qquad T-2d=2e.
+\]
+
+**Untere Schranke.** Für \(s\in(R,\varepsilon)\), also insbesondere \(s>R\):
+\[
+(2d+s)-(a+R) = (2d-a)+s-R = \Delta+s-R > 0,
+\]
+da \(\Delta>0\) und \(s>R\). Also \(2d+s>a+R\).
+
+**Obere Schranke.** Für \(s\in(R,\varepsilon)\) gilt zunächst \(R+s<R+\varepsilon\), und auf SW1 gilt \(R+\varepsilon<\Delta<e\) (letzteres aus der Skalenkette in SW1-KNF, Behauptung 1). Also
+\[
+R+s<\Delta<e.
+\]
+Daraus
+\[
+(b-R)-(2d+s) = (b-2d)-(R+s) = e-(R+s) > 0,
+\]
+also \(2d+s<b-R\).
+
+**Zusammen:**
+\[
+\boxed{a+R<2d+s<b-R.}
+\]
+
+Damit liegt \(2d+s\) im offenen Intervall \((a+R,b-R)\subset\mathcal Z_{R,\mathrm{SW1}}^{\rm phys}\); insbesondere ist der Abstand zu \(a\) und zu \(b\) strikt größer als \(R\), ohne zusätzliche Rahmenannahme außer der SW1-Bedingung selbst.
+
+**Folgeabschätzungen (automatisch aus der Doppelungleichung).**
+\[
+b-(2d+s)=e-s>e-\varepsilon>R\quad\text{(da }R+s<\Delta<e\text{ mit }s<\varepsilon\text{ liefert }e-s>e-\varepsilon\text{, und }e-\varepsilon>R\text{ folgt aus derselben Kette)},
+\]
+\[
+T-(2d+s)=(T-2d)-s=2e-s>e-s>R.
+\]
+
+**Horizon-Legalität.** Aus \(2d+s<b-R<b<T<T_0\) folgt sofort \(2d+s\in(0,T_0)\); eine separate Abschätzung ist nicht nötig.
+
+---
+
+## 3. Neuheit gegenüber den sechs promoteten Blindwerten
+
+Der promotete Satz (`audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md`, \(\checkmark[M]\)) listet
 \[
 s,\ a-s,\ a+s,\ T-s,\ 2d-s,\ T+s.
 \]
 
-**Zu prüfen:** dass \(2d+s\) tatsächlich ein *siebter*, bisher nicht erfasster Wert ist — keine versteckte Identität mit einem der sechs bereits promoteten Werte modulo der SW1-Parameterrelationen (insbesondere gegen \(2d-s\) und \(T+s\) abzugleichen, da beide strukturell ähnlich sind).
+Elementarer Ausschluss jeder Identität mit \(2d+s\) (für \(s\in(R,\varepsilon)\), also \(s\neq0\)):
+
+\[
+\begin{aligned}
+2d+s=s &\Rightarrow d=0,\\
+2d+s=a-s &\Rightarrow 2s=a-2d=-\Delta<0 \quad(\text{Widerspruch, da }s>0),\\
+2d+s=a+s &\Rightarrow 2d=a \Rightarrow \Delta=0,\\
+2d+s=T-s &\Rightarrow s=\tfrac{T-2d}{2}=e,\quad\text{aber }s<\varepsilon<\Delta<e,\\
+2d+s=2d-s &\Rightarrow s=0,\\
+2d+s=T+s &\Rightarrow 2d=T \Rightarrow e=0.
+\end{aligned}
+\]
+
+Alle sechs Fälle widersprechen entweder \(d,\Delta,e>0\) oder \(s\in(R,\varepsilon)\) mit \(R>0\). Also ist \(2d+s\) für jedes \(s\in(R,\varepsilon)\) verschieden von allen sechs promoteten Werten.
 
 ---
 
-## 4. Adversarialer Review-Auftrag (vor GREEN einzeln zu prüfen)
+## 4. Adversarialer Review-Checkpunkte
 
-1. Identität \(2d-a=\Delta\) exakt gegen kanonische Quelle.
-2. Identität \(b-2d=e\) exakt gegen kanonische Quelle.
-3. Identität \(T-2d=2e\) exakt gegen kanonische Quelle (und Konsistenz mit Punkt 2).
-4. \((2d+s)-a=\Delta+s>R\) für alle \(s\in(R,\varepsilon)\).
-5. \(b-(2d+s)=e-s>R\) für alle \(s\in(R,\varepsilon)\), insbesondere Herkunft der Zusatzbedingung \(e-\varepsilon>R\).
-6. \(T-(2d+s)=2e-s>R\) für alle \(s\in(R,\varepsilon)\).
-7. \(2d+s<T_0\) für alle \(s\in(R,\varepsilon)\).
-8. Keine versteckte Identität mit einem der sechs bereits promoteten Blindwerte.
-9. Präzise a.e.-Formulierung (Randfälle explizit benannt).
-10. Scope-Firewall vollständig eingehalten (Abschnitt 0).
+1. \(2d-a=\Delta\), \(b-2d=e\), \(T-2d=2e\) exakt gegen kanonische Quelle.
+2. Untere Schranke \(2d+s>a+R\) (folgt direkt aus \(s>R\)).
+3. Obere Schranke \(2d+s<b-R\) (folgt aus \(R+\varepsilon<\Delta<e\), SW1-KNF Skalenkette).
+4. Folgeabschätzungen \(b-(2d+s)>R\) und \(T-(2d+s)>R\) korrekt aus der Doppelungleichung abgeleitet.
+5. Horizon-Legalität \(2d+s<T_0\) korrekt als Folge, keine separate Annahme nötig.
+6. Alle sechs Neuheits-Ausschlüsse in Abschnitt 3 einzeln korrekt.
+7. Aussage gilt für jedes \(s\in(R,\varepsilon)\) (nicht nur a.e.); a.e.-Vorbehalt korrekt auf die spätere \(L^2\)-Anwendung verschoben.
+8. Scope-Firewall vollständig eingehalten (Abschnitt 0).
 
-Kein GREEN ohne alle zehn Punkte einzeln bestanden. Keine Promotion, keine Registry-/Front-Änderung, solange dieser Status `?[O]` ist.
+Kein GREEN ohne alle acht Punkte einzeln bestanden. Keine Promotion, keine Registry-/Front-Änderung, solange dieser Status `?[O]` ist.
 
 ---
 
 ## 5. Erwarteter Nutzen bei GREEN
 
-Mit SW1-BL7 stünde ein siebter direkter Blindwert zur Verfügung, der für die Auswertung der Row bei \(2d\pm s\) im Rahmen des \(\Delta\)-Descent-Ansatzes relevant wird (ähnliche Struktur wie die bekannte \(\Delta\)-Ketten-Argumentation). Dies allein ändert nichts an HT-RED, A0 oder \(\ker\Gamma_I\) und ist kein Ersatz für SW1-2TP oder SW1-AWI.
+Mit SW1-BL7 stünde ein siebter direkter Blindwert zur Verfügung, relevant für die Auswertung der Row bei \(2d\pm s\) im Rahmen des \(\Delta\)-Descent-Ansatzes. Dies allein ändert nichts an HT-RED, A0 oder \(\ker\Gamma_I\) und ist kein Ersatz für SW1-2TP oder SW1-AWI.
