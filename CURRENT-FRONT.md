@@ -2,8 +2,8 @@
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 28. August 2026  
-> **Verifizierte Main-Basis:** \`5740a38ad4c24e27b7352512e57fb095b245e4d5\` (Squash-Merge PR #16, SW1-BL7-Kandidat AI-GREEN, keine Promotion)  
-> **Aktiver mathematischer Stand:** `HT-A4b-SW1-M` ist promotet (\`✓[M]\`, Objekt-X-interner Status); zusätzlich `SW1-KNF` und `SW1-BL7` als AI-GREEN Kandidaten ohne Promotion verfügbar  
+> **Verifizierte Main-Basis:** \`dcbe0b005c03f6480693f79ff0d6db5f7ef34ae1\` (Squash-Merge PR #17, SW1-2TP AI-GREEN + independent GREEN (certificate), keine Promotion)  
+> **Aktiver mathematischer Stand:** `HT-A4b-SW1-M` ist promotet (\`✓[M]\`, Objekt-X-interner Status); `SW1-KNF` und `SW1-BL7` sind AI-GREEN Kandidaten; `SW1-2TP` ist AI-GREEN + independent GREEN (certificate); alle drei ohne Promotion  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -82,7 +82,9 @@ SW1-KNF (\`audits/P11_R32_SW1_KNF_CANDIDATE.md\`, PR #15) ist ein AI-GREEN Kandi
 
 SW1-BL7 (\`audits/P11_R32_SW1_BL7_CANDIDATE.md\`, PR #16) ist ein AI-GREEN Kandidat: für \(s\in(R,\varepsilon)\) gilt \(2d+s\in(a+R,b-R)\subset\mathcal Z_{R,\mathrm{SW1}}^{\rm phys}\), für jedes \(s\), als siebter direkter Blindwert neben den sechs promoteten.
 
-Keine der beiden Zeilen trägt eine Promotion; keine Aussage über A0, HT-RED oder \(\ker\Gamma_I\).
+SW1-2TP (\`audits/P11_R32_SW1_2TP_CANDIDATE.md\`, PR #17) ist AI-GREEN + \`independent GREEN (certificate)\`: die beiden \(T\pm s\)-Rows wurden direkt aus den elf Wörtern von \(A\) hergeleitet; \(M_T\) ist uniform positiv invertierbar; das reproduzierbare Zertifikat \`scripts/certify_sw1_2tp_ledger.py\` (Python/SymPy 1.14.0) prüft 88 Echo-Fälle, Hub-Support, Pivot und Eigenkanäle mit PASS. Der Perplexity-Blindcheck ist dokumentiert FAIL und erzeugt kein cross-model GREEN.
+
+Keine dieser Kandidatenzeilen trägt eine Promotion; keine Aussage über A0, HT-RED oder \(\ker\Gamma_I\).
 
 Exakte Status- und Quellenliste:
 [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md).
@@ -129,36 +131,30 @@ Der aktuelle Pfad:
 }
 \]
 
-**Unmittelbarer nächster Kandidat: SW1-2TP.** Zeige, dass aus dem tatsächlichen elf-Wörter-Operator \(A\) die beiden gekoppelten Gleichungen bei \(T+s\) und \(T-s\) entstehen:
-\[
-0=(1+\kappa)y(T+s)+\beta_Ty(T-s)+\cdots,\qquad
-0=\beta_Ty(T+s)+(1+\kappa)y(T-s)+\cdots,
-\]
-mit Tail-Block
-\[
-M_T=\begin{pmatrix}1+\kappa&\beta_T\\\beta_T&1+\kappa\end{pmatrix},\qquad
-\lambda_\pm=1+\kappa\pm\beta_T.
-\]
+Die ersten drei Bausteine sind jetzt auf \`main\` verfügbar; SW1-2TP ist zusätzlich reproduzierbar algebraisch zertifiziert.
 
-**Methodische Regel:** Die beiden Rows müssen aus den elf Wörtern von \(A\) neu abgeleitet werden — nicht aus einer übernommenen Scratch-Formel. Prüfreihenfolge:
+**Unmittelbarer nächster Kandidat: SW1-AWI.**
+
+Zu analysieren ist der verbleibende A-Wall-Überlapp im Fall
 \[
-\boxed{
-11\text{-Wort-Ledger} \to T+s/T-s\text{-Rows} \to \det M_T>0 \to \text{Summe/Differenz-Kanäle}
-}
+\varepsilon>\frac{\Delta}{2},
 \]
-Erst am Ende wird geprüft, ob \(q\,w(s)\) im Summenkanal verschwindet und im Differenzkanal mit Faktor \(2q\) erscheint — dies darf nicht als vorausgesetzte Formel eingehen.
-
-**Promotionsschwelle für SW1-2TP:** Selbst bei AI-GREEN keine Promotion, bevor mindestens ein \`independent GREEN\` (irgendein Subtyp gemäß §8) oder ein reproduzierbares algebraisches Zertifikat für das 11-Wort-Ledger vorliegt.
-
-**Erforderliche Prüfkette für SW1-2TP (verbindlich, ex ante festgelegt):**
+mit Überlappintervall
+\[
+J=(\Delta-\varepsilon,\varepsilon)
+\]
+und Involution
 \[
 \boxed{
-\text{Herleitung (GPT)} \to \text{AI-GREEN (Zweitprüfung)} \to \text{blinder Cross-Model-Check (Perplexity, frische Session)} \to \text{algebraisches Zertifikat}
+\mathcal J_\Delta:s\mapsto\Delta-s.
 }
 \]
-Der Cross-Model-Check erhält ausschließlich Definitionen, SW1-Bedingungen, die elf Wortdaten und die Aufgabenstellung — **keine** Zielmatrix \(M_T\) und keinen Verweis auf diesen Thread. Erfolgt der Check stattdessen in einer Session, die diesen Verlauf bereits kennt, wird das Ergebnis höchstens als „cross-model nonblind“ protokolliert und erzeugt **kein** \`independent GREEN\`.
 
-Noch nicht Teil dieses Schritts: SW1-AWI (A-Wall-Involution \(s\leftrightarrow\Delta-s\)) und der \(\Delta\)-Descent.
+Ziel ist eine endliche Zwei-Kanal-/Reflexionsnormalform des A-Wall-Anteils, bevorzugt durch Zerlegung in symmetrische und antisymmetrische Profile unter \(\mathcal J_\Delta\). Die bereits zertifizierten \(T\pm s\)-Rows aus SW1-2TP dürfen als Input verwendet werden.
+
+**Firewall:** Noch kein \(\Delta\)-Descent, kein HT-RED, kein A0 und keine Aussage über \(\ker\Gamma_I\). SW1-AWI soll ausschließlich die A-Wall-Kopplung normalisieren.
+
+**Prüfdisziplin:** AI-GREEN ist intern; für algebraisch endliche Blöcke soll nach Möglichkeit wieder ein reproduzierbares Zertifikat erzeugt werden. Ein fehlgeschlagener Cross-Model-Check wird als FAIL dokumentiert und nicht in GREEN umgedeutet.
 
 ### Erfolgsausgang der Gesamtkette
 
@@ -355,6 +351,8 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 \text{HT-A4b-SW1-M} & \checkmark[M] \\
 \text{SW1-KNF} & \text{AI-GREEN candidate, keine Promotion} \\
 \text{SW1-BL7} & \text{AI-GREEN candidate, keine Promotion} \\
+\text{SW1-2TP} & \text{AI-GREEN + independent GREEN (certificate), keine Promotion} \\
+\text{SW1-AWI} & ?[O] \\
 \text{HT-RED} & ?[O] \\
 \text{A0} & ?[O] \\
 \text{Schur Cross-Gram} & ?[O]
@@ -362,4 +360,4 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 }
 \]
 
-**Nächster Default:** SW1-2TP (simultaner \(T\pm s\)-2×2-Pivot), abgeleitet aus den elf Wörtern von \(A\); Prüfkette gemäß §4/§8 (AI-GREEN → cross-model → certificate) vor Promotion; danach SW1-AWI, \(\Delta\)-Descent.
+**Nächster Default:** SW1-AWI (A-Wall-Involution \(s\mapsto\Delta-s\)) auf dem Überlappintervall \(J=(\Delta-\varepsilon,\varepsilon)\); danach \(\Delta\)-Descent.
