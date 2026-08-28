@@ -139,13 +139,147 @@ assert sp.simplify(a-2*Delta).is_positive is True
 assert sp.simplify(e-Delta).is_positive is True
 assert sp.simplify(d-e-Delta) == 0
 
-print("SW1-2TP STAGE-1 CERTIFICATE: PASS")
+# ---- Stages 2-4: exact weights, Hub support, pivot and eigenchannels ----
+
+WEIGHTS = [
+    sp.log(2)*2**sp.Rational(-3,2),
+    sp.log(2)*2**sp.Rational(-9,4),
+    sp.log(2)*2**sp.Rational(-3,1),
+    sp.log(2)*2**sp.Rational(-9,4),
+    sp.log(2)*2**sp.Rational(-3,1),
+    sp.log(2)*2**sp.Rational(-15,4),
+    sp.log(2)*2**sp.Rational(-3,1),
+    sp.log(2)*2**sp.Rational(-15,4),
+    sp.log(2)*2**sp.Rational(-9,2),
+    sp.log(2)/4,
+    2*sp.log(3)/(3*sp.sqrt(3)),
+]
+
+kappa = sp.simplify(WEIGHTS[0]+WEIGHTS[4]+WEIGHTS[8]+WEIGHTS[9]+WEIGHTS[10])
+beta0 = sp.simplify(-WEIGHTS[0]+WEIGHTS[6])
+betam = sp.simplify(-WEIGHTS[1]-WEIGHTS[3])
+betap = sp.simplify(WEIGHTS[3]+WEIGHTS[7])
+betaT = sp.simplify(-WEIGHTS[2]-WEIGHTS[4]-WEIGHTS[6]-WEIGHTS[9])
+betab = sp.simplify(-WEIGHTS[10])
+
+assert sp.simplify(betaT + sp.Rational(5,8)*sp.log(2)) == 0
+assert kappa.is_positive is True
+assert sp.simplify(1-sp.log(2)).is_positive is True
+
+lambda_sum = sp.simplify(1+kappa+betaT)
+lambda_diff = sp.simplify(1+kappa-betaT)
+det_MT = sp.simplify((1+kappa)**2-betaT**2)
+
+assert lambda_sum.is_positive is True
+assert lambda_diff.is_positive is True
+assert det_MT.is_positive is True
+assert sp.simplify(lambda_sum*lambda_diff-det_MT) == 0
+
+# Full SW1 closure for Hub support:
+# 0 <= sigma <= R <= s <= eps <= Delta.
+R, sigma = sp.symbols("R sigma", real=True)
+HUB_VERTICES = [
+    {sigma:0,R:0,s:0,eps:0},
+    {sigma:0,R:0,s:0,eps:Delta},
+    {sigma:0,R:0,s:Delta,eps:Delta},
+    {sigma:0,R:Delta,s:Delta,eps:Delta},
+    {sigma:Delta,R:Delta,s:Delta,eps:Delta},
+]
+
+def hub_vertex_values(expr):
+    return [sp.simplify(expr.subs(v)) for v in HUB_VERTICES]
+
+def hub_nonnegative(expr):
+    vals = hub_vertex_values(sp.expand(expr))
+    return all(v.is_nonnegative is True for v in vals)
+
+def hub_positive(expr):
+    expr = sp.simplify(expr)
+    return expr != 0 and hub_nonnegative(expr)
+
+def hub_sign(expr):
+    if hub_positive(expr):
+        return +1
+    if hub_positive(-expr):
+        return -1
+    raise AssertionError(f"Hub argument changes sign: {expr}")
+
+def annulus_class(expr):
+    sg = hub_sign(expr)
+    mag = sp.simplify(sg*expr)
+    if hub_positive(mag-R) and hub_positive(T+sigma-mag):
+        return "ACTIVE", sg, mag
+    if hub_positive(mag-(T+sigma)) or hub_positive(R-mag):
+        return "DEAD", sg, mag
+    raise AssertionError(f"Undecidable annulus support: {expr}")
+
+p, r, q = sp.symbols("p r q", positive=True)
+
+def hub_aggregate(row_sign):
+    u = sp.simplify(T+row_sign*s)
+    out = {}
+    for tau, coeff in [(a,p),(b,r),(T,q)]:
+        for branch_sign, op_sign in [(-1,+1),(+1,-1)]:
+            arg = sp.simplify(u+branch_sign*tau)
+            status, odd_sign, mag = annulus_class(arg)
+            if status == "ACTIVE":
+                key = sp.simplify(mag)
+                out[key] = sp.simplify(out.get(key,0)+op_sign*odd_sign*coeff)
+    return out
+
+def assert_profile_map(got, expected):
+    unmatched = list(got.items())
+    for ekey, ecoeff in expected.items():
+        hit = None
+        for idx,(gkey,gcoeff) in enumerate(unmatched):
+            if sp.simplify(gkey-ekey) == 0:
+                assert sp.simplify(gcoeff-ecoeff) == 0
+                hit = idx
+                break
+        assert hit is not None, ("missing hub profile",ekey,got)
+        unmatched.pop(hit)
+    assert not unmatched, ("unexpected hub profiles",unmatched)
+
+hub_plus = hub_aggregate(+1)
+hub_minus = hub_aggregate(-1)
+assert_profile_map(hub_plus,{sp.simplify(a+s):p,sp.simplify(e+s):r,sp.simplify(s):q})
+assert_profile_map(hub_minus,{sp.simplify(a-s):p,sp.simplify(e-s):r,sp.simplify(s):-q})
+
+# Algebraic sum/difference certificate for the two augmented rows.
+yp, ym, ys, yam, yap, ydm, ydp = sp.symbols("yp ym ys yam yap ydm ydp")
+wap, wam, wep, wem, ws = sp.symbols("wap wam wep wem ws")
+
+row_plus = (
+    (1+kappa)*yp + betaT*ym + beta0*ys
+    + betam*yam + betap*yap + betab*ydm
+    + p*wap + r*wep + q*ws
+)
+row_minus = (
+    betaT*yp + (1+kappa)*ym + beta0*ys
+    + betam*yap + betap*yam + betab*ydp
+    + p*wam + r*wem - q*ws
+)
+
+expected_sum = (
+    lambda_sum*(yp+ym) + 2*beta0*ys
+    + (betam+betap)*(yam+yap) + betab*(ydm+ydp)
+    + p*(wap+wam) + r*(wep+wem)
+)
+expected_diff = (
+    lambda_diff*(yp-ym)
+    + (betap-betam)*(yap-yam) + betab*(ydm-ydp)
+    + p*(wap-wam) + r*(wep-wem) + 2*q*ws
+)
+
+assert sp.simplify(row_plus+row_minus-expected_sum) == 0
+assert sp.simplify(row_plus-row_minus-expected_diff) == 0
+
+print("SW1-2TP CERTIFICATE: PASS")
 print(f"sympy={sp.__version__}")
-print("domain: 0 < s < eps < Delta (implied by SW1)")
-print("all 88 echo cases classified exactly")
+print("stage1: all 88 echo cases classified exactly")
 print(f"x=T+s: survivors={np}")
 print(f"x=T-s: survivors={nm}")
-print("right gates E3/E4: uniformly closed for all 11 words in both rows")
-print("word 6: both left-gate sources horizon-dead in both rows")
-print("word 11 at x=T-s: surviving off-diagonal blind profile = 2*d+s")
-print("aggregated profile maps match the audit ledger")
+print("stage2: paired A-rows and both Hub support patterns certified")
+print("stage3: beta_T=-5/8 log(2), both eigenvalues positive, det(M_T)>0")
+print("stage4: q*w(s) cancels in sum and appears as 2*q*w(s) in difference")
+print("word 11 at x=T-s: surviving profile 2*d+s")
