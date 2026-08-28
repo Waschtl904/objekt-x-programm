@@ -2,8 +2,8 @@
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 28. August 2026  
-> **Verifizierte Main-Basis:** \`dcbe0b005c03f6480693f79ff0d6db5f7ef34ae1\` (Squash-Merge PR #17, SW1-2TP AI-GREEN + independent GREEN (certificate), keine Promotion)  
-> **Aktiver mathematischer Stand:** `HT-A4b-SW1-M` ist promotet (\`✓[M]\`, Objekt-X-interner Status); `SW1-KNF` und `SW1-BL7` sind AI-GREEN Kandidaten; `SW1-2TP` ist AI-GREEN + independent GREEN (certificate); alle drei ohne Promotion  
+> **Verifizierte Main-Basis:** \`9c1d2e8cfb0ea2b1b271c0d5ece95ec022cfbac9\` (Squash-Merge PR #18, SW1-AWI AI-GREEN + independent GREEN (certificate), keine Promotion)  
+> **Aktiver mathematischer Stand:** `HT-A4b-SW1-M` ist promotet (\`✓[M]\`, Objekt-X-interner Status); `SW1-KNF` und `SW1-BL7` sind AI-GREEN Kandidaten; `SW1-2TP` und `SW1-AWI` sind AI-GREEN + independent GREEN (certificate); alle vier ohne Promotion  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -84,6 +84,8 @@ SW1-BL7 (\`audits/P11_R32_SW1_BL7_CANDIDATE.md\`, PR #16) ist ein AI-GREEN Kandi
 
 SW1-2TP (\`audits/P11_R32_SW1_2TP_CANDIDATE.md\`, PR #17) ist AI-GREEN + \`independent GREEN (certificate)\`: die beiden \(T\pm s\)-Rows wurden direkt aus den elf Wörtern von \(A\) hergeleitet; \(M_T\) ist uniform positiv invertierbar; das reproduzierbare Zertifikat \`scripts/certify_sw1_2tp_ledger.py\` (Python/SymPy 1.14.0) prüft 88 Echo-Fälle, Hub-Support, Pivot und Eigenkanäle mit PASS. Der Perplexity-Blindcheck ist dokumentiert FAIL und erzeugt kein cross-model GREEN.
 
+SW1-AWI (\`audits/P11_R32_SW1_AWI_CANDIDATE.md\`, PR #18) ist AI-GREEN + \`independent GREEN (certificate)\`: die A-Wall-Dichotomie ist vollständig fallweise normalisiert; in der oberen Kammer wirkt die Kollision über die maßtreue Reflexion \(s\mapsto\Delta-s\), und der zugehörige Zwei-Kanal-Block ist strikt invertierbar. Das Vollzertifikat \`scripts/certify_sw1_awi.py\` (Python/SymPy 1.14.0) prüft Geometrie, Fixpunkt, Koeffizientenordnung, Eigenkanäle und Invertierbarkeit mit PASS. Perplexity ist PARTIAL/FAIL und erzeugt kein cross-model GREEN.
+
 Keine dieser Kandidatenzeilen trägt eine Promotion; keine Aussage über A0, HT-RED oder \(\ker\Gamma_I\).
 
 Exakte Status- und Quellenliste:
@@ -131,30 +133,33 @@ Der aktuelle Pfad:
 }
 \]
 
-Die ersten drei Bausteine sind jetzt auf \`main\` verfügbar; SW1-2TP ist zusätzlich reproduzierbar algebraisch zertifiziert.
+Die ersten vier Bausteine sind jetzt auf \`main\` verfügbar; SW1-2TP und SW1-AWI sind zusätzlich reproduzierbar algebraisch zertifiziert.
 
-**Unmittelbarer nächster Kandidat: SW1-AWI.**
+**Unmittelbarer nächster Kandidat: SW1-Δ-DESCENT.**
 
-Zu analysieren ist der verbleibende A-Wall-Überlapp im Fall
-\[
-\varepsilon>\frac{\Delta}{2},
-\]
-mit Überlappintervall
-\[
-J=(\Delta-\varepsilon,\varepsilon)
-\]
-und Involution
+Ziel ist, aus den verbleibenden Rows — primär bei \(2d\pm s\) — eine echte endliche Rekurrenz mit Schrittweite \(\Delta\) zu gewinnen, die auf dem kurzen SW1-Strip nach endlich vielen Schritten terminiert.
+
+Verbindliche Reihenfolge:
+
 \[
 \boxed{
-\mathcal J_\Delta:s\mapsto\Delta-s.
+11\text{-Wort-Ableitung bei }2d\pm s
+\to
+\text{Support/Horizon-Klassifikation}
+\to
+\text{Restblock/Pivot}
+\to
+\Delta\text{-Rekurrenz}
+\to
+\text{finite Terminierung}
 }
 \]
 
-Ziel ist eine endliche Zwei-Kanal-/Reflexionsnormalform des A-Wall-Anteils, bevorzugt durch Zerlegung in symmetrische und antisymmetrische Profile unter \(\mathcal J_\Delta\). Die bereits zertifizierten \(T\pm s\)-Rows aus SW1-2TP dürfen als Input verwendet werden.
+Die bereits vorhandenen Scratch-Formeln für \((Ay)(2d\pm s)\) dürfen **nicht als Beweisinput** verwendet werden; sie dienen höchstens post hoc zum Vergleich.
 
-**Firewall:** Noch kein \(\Delta\)-Descent, kein HT-RED, kein A0 und keine Aussage über \(\ker\Gamma_I\). SW1-AWI soll ausschließlich die A-Wall-Kopplung normalisieren.
+**Firewall:** Noch kein HT-RED, kein A0 und keine Aussage über \(\ker\Gamma_I\). Ein erfolgreicher \(\Delta\)-Descent wäre zunächst nur ein weiterer sektoraler Eliminationsbaustein.
 
-**Prüfdisziplin:** AI-GREEN ist intern; für algebraisch endliche Blöcke soll nach Möglichkeit wieder ein reproduzierbares Zertifikat erzeugt werden. Ein fehlgeschlagener Cross-Model-Check wird als FAIL dokumentiert und nicht in GREEN umgedeutet.
+**Prüfdisziplin:** wie bei 2TP/AWI: AI-GREEN intern; endliche algebraische Teile nach Möglichkeit reproduzierbar zertifizieren; Cross-Model-Fails transparent als FAIL/PARTIAL dokumentieren.
 
 ### Erfolgsausgang der Gesamtkette
 
@@ -352,7 +357,8 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 \text{SW1-KNF} & \text{AI-GREEN candidate, keine Promotion} \\
 \text{SW1-BL7} & \text{AI-GREEN candidate, keine Promotion} \\
 \text{SW1-2TP} & \text{AI-GREEN + independent GREEN (certificate), keine Promotion} \\
-\text{SW1-AWI} & ?[O] \\
+\text{SW1-AWI} & \text{AI-GREEN + independent GREEN (certificate), keine Promotion} \\
+\text{SW1-Δ-DESCENT} & ?[O] \\
 \text{HT-RED} & ?[O] \\
 \text{A0} & ?[O] \\
 \text{Schur Cross-Gram} & ?[O]
@@ -360,4 +366,4 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 }
 \]
 
-**Nächster Default:** SW1-AWI (A-Wall-Involution \(s\mapsto\Delta-s\)) auf dem Überlappintervall \(J=(\Delta-\varepsilon,\varepsilon)\); danach \(\Delta\)-Descent.
+**Nächster Default:** SW1-Δ-DESCENT — direkte Ableitung der \(2d\pm s\)-Rows und Suche nach einer endlichen \(\Delta\)-Rekurrenz; danach erst Bewertung, ob HT-RED auf SW1 geschlossen werden kann.
