@@ -1,7 +1,7 @@
 # Active Theorem Registry
 
-> **Stand:** 27. August 2026  
-> **Repo-Basis:** \`main@de1bc09ae2e1b57083f3f44fc168e7cf2f8c8424\`  
+> **Stand:** 28. August 2026  
+> **Repo-Basis:** \`main@b06f50f12973e781b87db8b06e54fd590a053b10\`  
 > **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11/R32-SW1-/Schur-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
 > **Nicht-Zweck:** Ersatz für \`STATUS.md\`, \`OFFENE_PROBLEME.md\`, die Papers oder Promotionsrecords.
 
@@ -52,9 +52,9 @@ T<S=T+\sigma<T_0=T+\varepsilon<c,
 | ID | Status | Scope | Quelle | Bemerkung |
 |---|---|---|---|---|
 | **HT-A4b-SW1** | \`?[O]\` | \(0<\sigma\le R<\varepsilon,\ R+\varepsilon<\Delta\) | \`audits/P11_R32_HT_A4B_SINGLE_CHAMBER_SUBWEDGE_CANDIDATE.md\` auf \`main\` | gemergter Rechenkandidat; keine Promotion |
-| **HT-A4b-SW1-M** | \`?[O]\`, aktiver self-contained theorem candidate | derselbe SW1-Scope; sechs direkte Blindwerte plus direkter A-Wall-Spezialfall | **PR #10**, Head \`74b0611b634310b78d58d500d2ebfa2e7a958643\`; noch nicht in \`main\` | soll die SW1-Aussage ohne HT.17/18, HT.23–27, FG-TR1 oder HT-A4a als Beweisblackbox theorematisieren |
+| **HT-A4b-SW1-M** | \`?[O]\`, gemergter adversarial GREEN geprüfter self-contained theorem candidate — keine formale Promotion | derselbe SW1-Scope; sechs direkte Blindwerte plus direkter A-Wall-Spezialfall | \`audits/P11_R32_HT_A4B_SW1_SELF_CONTAINED_THEOREM_CANDIDATE.md\` auf \`main@b06f50f12973e781b87db8b06e54fd590a053b10\` (PR #10) | selbständiger SW1-Satz; mathematisch GREEN geprüft, aber bis zu separater Promotionsbuchung weiterhin \`?[O]\` |
 
-**Promotionsziel von PR #10:** nur der dort exakt abgegrenzte selbständige SW1-Satz kann nach vollständigem adversarialem und mechanischem GREEN gegebenenfalls in einem separaten Promotions-PR zu
+**Formaler nächster Schritt nach dem gemergten PR #10:** Der dort exakt abgegrenzte selbständige SW1-Satz ist adversarial und mechanisch GREEN geprüft, bleibt aber bis zu einer separaten Promotionsbuchung \`?[O]\`. Nur dieser enge Satz kann in einem eigenen Promotions-PR zu
 \[
 \mathrm{HT\!-\!A4b\!-\!SW1\!-\!M}:\checkmark[M]
 \]

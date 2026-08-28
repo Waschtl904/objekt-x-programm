@@ -1,9 +1,9 @@
 # CURRENT FRONT — Objekt X / P11-R32
 
 > **Operative Kopfschicht — zuerst lesen.**  
-> **Stand:** 27. August 2026  
-> **Verifizierte Main-Basis:** \`de1bc09ae2e1b57083f3f44fc168e7cf2f8c8424\`  
-> **Aktiver mathematischer PR:** #10 — \`HT-A4b-SW1-M\`, Head \`74b0611b634310b78d58d500d2ebfa2e7a958643\`  
+> **Stand:** 28. August 2026  
+> **Verifizierte Main-Basis:** \`b06f50f12973e781b87db8b06e54fd590a053b10\`  
+> **Aktiver mathematischer Stand:** PR #10 gemergt — \`HT-A4b-SW1-M\` ist adversarial GREEN geprüft, aber bis zu separater Promotionsbuchung weiterhin \`?[O]\`; Merge \`b06f50f12973e781b87db8b06e54fd590a053b10\`  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -83,9 +83,9 @@ Exakte Status- und Quellenliste:
 
 ---
 
-## 3. Aktiver Zwischenmeilenstein: PR #10
+## 3. Gemergter Zwischenmeilenstein: PR #10
 
-PR #10 theorematisiert nur den einfachen SW1-Membership-Satz.
+PR #10 theorematisiert nur den einfachen SW1-Membership-Satz und ist inzwischen in \`main\` gemergt.
 
 Ziel:
 
@@ -111,13 +111,15 @@ Aktueller Status:
 }
 \]
 
-Kein \(\checkmark[M]\) vor vollständigem adversarialem und mechanischem Review.
+Der exakte PR-#10-Head wurde adversarial und mechanisch **OVERALL GREEN** geprüft. Der Satz bleibt trotzdem bis zu einer **separaten formalen Promotionsbuchung** bei \`?[O]\`; der Merge allein erzeugt kein \(\checkmark[M]\).
 
 ---
 
-## 4. Nächster mathematischer Schritt nach PR #10
+## 4. Nächster formaler und mathematischer Schritt
 
-**Keine weitere Chamber-Katalogisierung als Default.**
+**Unmittelbarer formaler Schritt:** separater Promotions-PR ausschließlich für \(\mathrm{HT\!-\!A4b\!-\!SW1\!-\!M}\), ohne HT-A4b global, HT-RED, A0 oder Schur mitzupromoten.
+
+**Nächster mathematischer Schritt danach:** keine weitere Chamber-Katalogisierung als Default.
 
 Stattdessen wird auf SW1 das vollständige augmentierte Rohsystem aufgestellt:
 
@@ -298,7 +300,7 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 \boxed{
 \begin{array}{ll}
 \text{P12 restricted-tail outer Hub} & \checkmark[M] \\
-\text{HT-A4b-SW1-M} & ?[O]\ \text{in PR \#10} \\
+\text{HT-A4b-SW1-M} & ?[O]\ \text{gemergter GREEN-Kandidat; Promotion separat} \\
 \text{HT-RED} & ?[O] \\
 \text{A0} & ?[O] \\
 \text{Schur Cross-Gram} & ?[O]
@@ -306,4 +308,4 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 }
 \]
 
-**Nächster Default:** PR #10 prüfen; danach SW1-augmented-raw-system statt globaler Chamber-Ausweitung.
+**Nächster Default:** separaten Promotions-PR für den eng abgegrenzten SW1-Satz anlegen; danach SW1-augmented-raw-system statt globaler Chamber-Ausweitung.
