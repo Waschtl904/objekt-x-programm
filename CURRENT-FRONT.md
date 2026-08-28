@@ -2,8 +2,8 @@
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 28. August 2026  
-> **Verifizierte Main-Basis:** \`0c98c03a332dc7c8e479edc77d8cada678eec376\` (Squash-Merge PR #15, SW1-KNF-Kandidat GREEN, keine Promotion)  
-> **Aktiver mathematischer Stand:** `HT-A4b-SW1-M` ist promotet (\`✓[M]\`); zusätzlich `SW1-KNF` als neuer OVERALL GREEN Kandidat ohne Promotion verfügbar (\`audits/P11_R32_SW1_KNF_CANDIDATE.md\`, PR #15)  
+> **Verifizierte Main-Basis:** \`5740a38ad4c24e27b7352512e57fb095b245e4d5\` (Squash-Merge PR #16, SW1-BL7-Kandidat AI-GREEN, keine Promotion)  
+> **Aktiver mathematischer Stand:** `HT-A4b-SW1-M` ist promotet (\`✓[M]\`, Objekt-X-interner Status); zusätzlich `SW1-KNF` und `SW1-BL7` als AI-GREEN Kandidaten ohne Promotion verfügbar  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -74,11 +74,15 @@ SW1 liegt vollständig in diesem Bereich. Daher muss die äußere Hub-Injektivit
 
 ### 2.2 Aktuelle Tail-/FG-/Kernel-Kandidaten
 
-HT-A1, HT-A2, HT-A3 und HT-A4a sind unabhängig GREEN geprüfte Kandidaten, aber nicht formal promotet.
+HT-A1, HT-A2, HT-A3 und HT-A4a sind AI-GREEN geprüfte Kandidaten, aber nicht formal promotet.
 
-FG-1, FG-TR1, die \(\widehat\Phi_R\)-Normalform und CG-FG1 sind ebenfalls Kandidaten-/Kompositionsresultate ohne formale Promotion.
+FG-1, FG-TR1, die \(\widehat\Phi_R\)-Normalform und CG-FG1 sind ebenfalls AI-GREEN Kandidaten-/Kompositionsresultate ohne formale Promotion.
 
-**Neu:** SW1-KNF (\`audits/P11_R32_SW1_KNF_CANDIDATE.md\`, PR #15) ist ein OVERALL GREEN Kandidat, der auf SW1 eine vollständige sektorale Kernel-Normalform liefert — disjunkte Samplingfenster \(I_a,I_b,I_T\), explizite Rekonstruktion, \(\mathcal K_R\cong\mathcal Z_R^+\oplus L^2(\mathcal V_R^{SW1})\) — und ersetzt auf SW1 die globale FG-TR1-Blackbox. Keine Promotion, keine Aussage über A0, HT-RED oder \(\ker\Gamma_I\).
+SW1-KNF (\`audits/P11_R32_SW1_KNF_CANDIDATE.md\`, PR #15) ist ein AI-GREEN Kandidat, der auf SW1 eine vollständige sektorale Kernel-Normalform liefert und dort die globale FG-TR1-Blackbox ersetzt.
+
+SW1-BL7 (\`audits/P11_R32_SW1_BL7_CANDIDATE.md\`, PR #16) ist ein AI-GREEN Kandidat: für \(s\in(R,\varepsilon)\) gilt \(2d+s\in(a+R,b-R)\subset\mathcal Z_{R,\mathrm{SW1}}^{\rm phys}\), für jedes \(s\), als siebter direkter Blindwert neben den sechs promoteten.
+
+Keine der beiden Zeilen trägt eine Promotion; keine Aussage über A0, HT-RED oder \(\ker\Gamma_I\).
 
 Exakte Status- und Quellenliste:
 [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md).
@@ -117,9 +121,7 @@ Promotet mit kanonischem Promotionsrecord \`audits/P11_R32_HT_A4B_SW1_M_PROMOTIO
 
 ## 4. Nächster mathematischer Schritt
 
-**Kein weiterer allgemeiner Tail-Pivot-Ansatz mehr als Default.** Mit SW1-KNF steht die vollständige Koordinatenbasis des inneren Kernels bereits zur Verfügung.
-
-Der nächste konkrete Schritt ist eng:
+Der aktuelle Pfad:
 
 \[
 \boxed{
@@ -127,11 +129,28 @@ Der nächste konkrete Schritt ist eng:
 }
 \]
 
-**Unmittelbarer nächster Kandidat: SW1-BL7.** Zeige, dass auch \(2d+s\) für \(s\in(R,\varepsilon)\) ein direkter Blindwert ist:
+**Unmittelbarer nächster Kandidat: SW1-2TP.** Zeige, dass aus dem tatsächlichen elf-Wörter-Operator \(A\) die beiden gekoppelten Gleichungen bei \(T+s\) und \(T-s\) entstehen:
 \[
-s\in(R,\varepsilon)\quad\Longrightarrow\quad 2d+s\in\mathcal Z_{R,\mathrm{SW1}}^{\rm phys}\quad\text{a.e.}
+0=(1+\kappa)y(T+s)+\beta_Ty(T-s)+\cdots,\qquad
+0=\beta_Ty(T+s)+(1+\kappa)y(T-s)+\cdots,
 \]
-Noch nicht Teil dieses Schritts: der simultane \(T\pm s\)-2×2-Pivot (SW1-2TP), die A-Wall-Involution (SW1-AWI) und der \(\Delta\)-Descent.
+mit Tail-Block
+\[
+M_T=\begin{pmatrix}1+\kappa&\beta_T\\\beta_T&1+\kappa\end{pmatrix},\qquad
+\lambda_\pm=1+\kappa\pm\beta_T.
+\]
+
+**Methodische Regel:** Die beiden Rows müssen aus den elf Wörtern von \(A\) neu abgeleitet werden — nicht aus einer übernommenen Scratch-Formel. Prüfreihenfolge:
+\[
+\boxed{
+11\text{-Wort-Ledger} \to T+s/T-s\text{-Rows} \to \det M_T>0 \to \text{Summe/Differenz-Kanäle}
+}
+\]
+Erst am Ende wird geprüft, ob \(q\,w(s)\) im Summenkanal verschwindet und im Differenzkanal mit Faktor \(2q\) erscheint — dies darf nicht als vorausgesetzte Formel eingehen.
+
+**Promotionsschwelle für SW1-2TP:** Selbst bei AI-GREEN keine Promotion, bevor mindestens ein \`independent GREEN\` oder ein reproduzierbares algebraisches Zertifikat für das 11-Wort-Ledger vorliegt.
+
+Noch nicht Teil dieses Schritts: SW1-AWI (A-Wall-Involution \(s\leftrightarrow\Delta-s\)) und der \(\Delta\)-Descent.
 
 ### Erfolgsausgang der Gesamtkette
 
@@ -215,13 +234,32 @@ Für mathematische Aussagen gilt:
 \boxed{
 \text{formaler Promotionsrecord / konsolidierter Paper-Satz}
 >
-\text{GREEN-Kandidat}
+\text{independent GREEN}
+>
+\text{AI-GREEN Kandidat}
 >
 \text{ungeprüfter Kandidat}
 >
 \text{historischer Entwurf}
 }
 \]
+
+**Statusnomenklatur (verbindlich):**
+
+\[
+\boxed{\text{AI-GREEN}}
+\]
+= intern durch KI kritisch bzw. redundant geprüfter Beweiskandidat; **keine** externe Begutachtung.
+
+\[
+\boxed{\text{independent GREEN}}
+\]
+= unabhängige Prüfung des exakten Heads/Satzes durch einen externen Menschen, einen unabhängigen Reviewlauf (separates Modell/System), oder ein maschinenprüfbares algebraisches Zertifikat — Methode, Reviewer/System und geprüfter Head müssen dokumentiert sein.
+
+\[
+\boxed{\checkmark[M]}
+\]
+= formaler Objekt-X-interner Promotionsstatus, unabhängig davon, ob zusätzlich externe Begutachtung existiert. **Kein** Ersatz für Fachjournal- oder Peer-Review-Verifikation.
 
 \`CURRENT-FRONT.md\` und die Registry sind **Navigationsdateien**. Bei einem Konflikt entscheiden die kanonischen mathematischen Quellen.
 
@@ -266,7 +304,8 @@ Sie wird geändert, wenn sich mindestens eines ändert:
 - aktiver PR / Promotionskandidat;
 - verwendbarer Inputstatus;
 - nächster konkreter Rechenschritt;
-- eine bewusst geparkte Front wird wieder aktiv.
+- eine bewusst geparkte Front wird wieder aktiv;
+- eine Änderung der Statusnomenklatur selbst (§8).
 
 Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben Journal, Papers, Audits und Promotionsrecords erhalten.
 
@@ -279,7 +318,8 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 \begin{array}{ll}
 \text{P12 restricted-tail outer Hub} & \checkmark[M] \\
 \text{HT-A4b-SW1-M} & \checkmark[M] \\
-\text{SW1-KNF} & \text{OVERALL GREEN candidate, keine Promotion} \\
+\text{SW1-KNF} & \text{AI-GREEN candidate, keine Promotion} \\
+\text{SW1-BL7} & \text{AI-GREEN candidate, keine Promotion} \\
 \text{HT-RED} & ?[O] \\
 \text{A0} & ?[O] \\
 \text{Schur Cross-Gram} & ?[O]
@@ -287,4 +327,4 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 }
 \]
 
-**Nächster Default:** SW1-BL7 (siebter Blindwert \(2d+s\)) als eigenes Teilaudit, dann SW1-2TP, SW1-AWI, \(\Delta\)-Descent.
+**Nächster Default:** SW1-2TP (simultaner \(T\pm s\)-2×2-Pivot), abgeleitet aus den elf Wörtern von \(A\); danach SW1-AWI, \(\Delta\)-Descent.
