@@ -352,15 +352,30 @@ Setze
 \[
 c_{11}:=\frac{2\log3}{3\sqrt3}=-\beta_b.
 \]
-Da
+
+Die benötigte untere Schranke für \(\log3\) ist elementar: Für
 \[
-\log3>1
+F(x):=\log x-\frac{2(x-1)}{x+1}
 \]
-und
+gilt
+\[
+F(1)=0,
+\qquad
+F'(x)
+=
+\frac{(x-1)^2}{x(x+1)^2}>0
+\quad (x>1).
+\]
+Daher
+\[
+\log3>\frac{2(3-1)}{3+1}=1.
+\]
+
+Außerdem
 \[
 \sqrt3<\frac74
 \]
-(denn \(3<49/16\)), folgt
+(denn \(3<49/16\)). Somit
 \[
 c_{11}
 >
