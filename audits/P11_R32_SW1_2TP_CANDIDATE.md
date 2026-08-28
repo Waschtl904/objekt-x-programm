@@ -78,13 +78,61 @@ Vermutete Konsequenz für die Summen-/Differenzkanäle: \(q\,w(s)\) verschwindet
 
 ### Stufe 1 — 11-Wort-Ledger
 
-Jedes der elf Wörter des Operators \(A\) ist einzeln durch den Support-/Shift-Filter zu schicken und sein Beitrag zur Zeile bei Argument \(T+s\) bzw. \(T-s\) explizit zu notieren. **Zu tun:**
+**Status dieses Branch-Heads:** ausgeführt; noch kein AI-GREEN, solange der neue Head nicht separat adversarial gegengeprüft ist.
 
-- Vollständige Liste der elf Wörter aus der kanonischen \(A\)-Definition beschaffen (Quelle: zu benennen, vermutlich \`audits/P11_R32_TAIL_FG_PIVOT_CANDIDATE.md\` oder das zugrundeliegende Paper).
-- Für jedes Wort: Trägt es zu Argument \(T+s\) bei? Zu \(T-s\)? Mit welchem Koeffizienten und welcher Verschiebung?
-- Tabellarische Ledger-Form: Wort-ID, Beitrag bei \(T+s\), Beitrag bei \(T-s\), Beitrag bei anderen Argumenten (für den Rest-Term).
+Kanonische Inputquelle für Stufe 1 ist ausschließlich die Vier-Echo-Formel (HT.3) und die Elf-Wort-Liste (HT.4) aus audits/P11_R32_TAIL_FG_PIVOT_CANDIDATE.md:
+\[
+\begin{aligned}
+(W_{\delta,\eta}^{(\lambda)}y)(x)
+={}&-\chi_\lambda(x-\delta)\widetilde y(x-\delta-\eta)
++\chi_\lambda(x-\delta)\widetilde y(x-\delta+\eta)\\
+&+\chi_\lambda(x+\delta)\widetilde y(x+\delta-\eta)
+-\chi_\lambda(x+\delta)\widetilde y(x+\delta+\eta).
+\end{aligned}
+\tag{2TP.1}
+\]
+Die späteren fertigen Tail-Rows (HT.19)–(HT.21) werden nicht als Input verwendet.
 
-**Noch nicht ausgeführt in diesem Audit-Stand.**
+Für
+\[
+x_\pm:=T\pm s,\qquad R<s<\varepsilon,
+\tag{2TP.2}
+\]
+gilt auf SW1 uniform:
+
+1. Für jedes der elf Wörter ist das \(x+\delta\)-Gate geschlossen; sämtliche \(E_3,E_4\)-Terme verschwinden.
+2. Für jedes Wort ist das \(x-\delta\)-Gate offen. Bei \(E_1,E_2\) entscheidet nur noch der Source-Horizon.
+3. Bei Wort 6, \(W_{T,3a}^{(a)}\), liegen beide Source-Argumente außerhalb \((-T_0,T_0)\); Wort 6 trägt zu beiden Rows Null bei.
+4. Alle unten aufgeführten übrigen Quellen liegen strikt innerhalb des Horizons. Geradheit wird nur benutzt, um negative Source-Argumente als positive \(y(|\cdot|)\)-Profile zu schreiben.
+
+Die Gate-Aussagen folgen aus \(T=2a\), \(T_0=T+\varepsilon\) und
+\[
+0<R<s<\varepsilon<\Delta<e<d<a.
+\tag{2TP.3}
+\]
+Insbesondere gilt \(s+\varepsilon<2\varepsilon<2\Delta<a\), weil \(2\Delta<a\).
+
+#### Vollständiges Ledger
+
+| Nr. | Wort | Beitrag bei \(x=T+s\) | Beitrag bei \(x=T-s\) |
+|---:|---|---|---|
+| 1 | \(W_{a,a}^{(a)}\) | \(-c_1y(s)+c_1y(T+s)\) | \(-c_1y(s)+c_1y(T-s)\) |
+| 2 | \(W_{a,T}^{(a)}\) | \(-c_2y(a-s)\) | \(-c_2y(a+s)\) |
+| 3 | \(W_{a,3a}^{(a)}\) | \(-c_3y(T-s)\) | \(-c_3y(T+s)\) |
+| 4 | \(W_{T,a}^{(a)}\) | \(-c_4y(a-s)+c_4y(a+s)\) | \(-c_4y(a+s)+c_4y(a-s)\) |
+| 5 | \(W_{T,T}^{(a)}\) | \(-c_5y(T-s)+c_5y(T+s)\) | \(-c_5y(T+s)+c_5y(T-s)\) |
+| 6 | \(W_{T,3a}^{(a)}\) | \(0\) | \(0\) |
+| 7 | \(W_{3a,a}^{(a)}\) | \(-c_7y(T-s)+c_7y(s)\) | \(-c_7y(T+s)+c_7y(s)\) |
+| 8 | \(W_{3a,T}^{(a)}\) | \(+c_8y(a+s)\) | \(+c_8y(a-s)\) |
+| 9 | \(W_{3a,3a}^{(a)}\) | \(+c_9y(T+s)\) | \(+c_9y(T-s)\) |
+| 10 | \(W_{T,T}^{(T)}\) | \(-c_{10}y(T-s)+c_{10}y(T+s)\) | \(-c_{10}y(T+s)+c_{10}y(T-s)\) |
+| 11 | \(W_{b,b}^{(b)}\) | \(-c_{11}y(2d-s)+c_{11}y(T+s)\) | \(-c_{11}y(2d+s)+c_{11}y(T-s)\) |
+
+Damit sind alle \(11\times4\) Echo-Möglichkeiten berücksichtigt: pro Wort sind \(E_3,E_4\) gate-tot; unter \(E_1,E_2\) überleben insgesamt exakt 16 Beiträge je Row.
+
+**Wichtiger neuer Punkt:** Der Wert \(2d+s\) erscheint in der \(T-s\)-Row exakt im 3-adischen Wort 11. Seine direkte Blindheit ist durch SW1-BL7 separat AI-GREEN geprüft; diese Blindheit wird für das Ledger selbst nicht benötigt, wohl aber später für die freie-Koordinateninterpretation.
+
+Stufe 1 ist damit algebraisch hergeleitet, aber noch nicht unabhängig zertifiziert.
 
 ### Stufe 2 — \(T+s\)/\(T-s\)-Rows
 
@@ -115,9 +163,63 @@ Erst nachdem Stufen 1–3 unabhängig stehen, Summe und Differenz der beiden Row
 
 ---
 
-## 4. Beweis
+## 4. Beweisstand
 
-*(Bewusst leer. Der Beweis entsteht in einem späteren Commit auf diesem Branch, ausgehend von Stufe 1. Diese Datei wird dann in-place erweitert oder durch eine überarbeitete Fassung ersetzt.)*
+### 4.1 Stufe 1: Wort-für-Wort-Ableitung
+
+Zur Nachprüfbarkeit werden die Source-Argumente vor Geradheitsreduktion explizit festgehalten.
+
+Für \(x=T+s\) lauten die überlebenden \(E_1/E_2\)-Quellen:
+\[
+\begin{array}{c|c}
+j & \text{überlebende Quellen}\\ \hline
+1 & s,\ T+s\\
+2 & s-a\\
+3 & s-T\\
+4 & s-a,\ a+s\\
+5 & s-T,\ T+s\\
+6 & \varnothing\\
+7 & s-T,\ s\\
+8 & a+s\\
+9 & T+s\\
+10 & s-T,\ T+s\\
+11 & s-2d,\ T+s.
+\end{array}
+\tag{2TP.4}
+\]
+
+Für \(x=T-s\):
+\[
+\begin{array}{c|c}
+j & \text{überlebende Quellen}\\ \hline
+1 & -s,\ T-s\\
+2 & -a-s\\
+3 & -T-s\\
+4 & -a-s,\ a-s\\
+5 & -T-s,\ T-s\\
+6 & \varnothing\\
+7 & -T-s,\ -s\\
+8 & a-s\\
+9 & T-s\\
+10 & -T-s,\ T-s\\
+11 & -2d-s,\ T-s.
+\end{array}
+\tag{2TP.5}
+\]
+
+Da \(s<\varepsilon<\Delta<d<a<T\), sind \(s-T,s-a,s-2d<0\), und Geradheit ergibt genau die Profile der Ledger-Tabelle.
+
+Für Wort 6 liegen die Beträge \(3a\pm s\) außerhalb des Source-Horizons:
+\[
+3a-s-(2a+\varepsilon)=a-(s+\varepsilon)>a-2\varepsilon>a-2\Delta>0,
+\]
+während \(3a+s>T_0\) unmittelbar ist. Die weiteren nicht aufgeführten \(E_1/E_2\)-Quellen der Wörter 2, 3, 8 und 9 liegen noch weiter außerhalb des Source-Horizons.
+
+Damit ist Stufe 1 vollständig auf die elf kanonischen Wörter zurückgeführt.
+
+### 4.2 Noch offen
+
+Stufe 2 (Zusammensetzen der beiden Rows), Stufe 3 (exakte Pivot-Invertierbarkeit) und Stufe 4 (Hub-Summe/Differenz) bleiben absichtlich offen, bis dieser Ledger-Commit separat adversarial geprüft wurde.
 
 ---
 
