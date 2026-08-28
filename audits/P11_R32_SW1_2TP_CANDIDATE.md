@@ -2,7 +2,7 @@
 
 > **Stand:** 28. August 2026  
 > **Repo-Basis dieses Audits:** `main@152150284c31af50dedb9e2ee4ac820d4692776c`  
-> **Status:** `?[O]` — Stufe 1 AI-GREEN + `independent GREEN (certificate)`; Stufe 2 hergeleitet, noch nicht separat AI-GREEN; Stufen 3–4 offen; keine Promotion.  
+> **Status:** `?[O]` — Stufe 1 AI-GREEN + `independent GREEN (certificate)`; Stufe 2 AI-GREEN; Stufen 3–4 vollständig hergeleitet, finaler Gesamt-Recheck noch ausstehend; keine Promotion.  
 > **Scope:** ausschließlich SW1, \(0<\sigma\le R<\varepsilon,\ R+\varepsilon<\Delta\); ausschließlich die simultane Elimination von \(y(T+s)\) und \(y(T-s)\).
 
 ---
@@ -310,19 +310,150 @@ Damit ist Stufe 2 hergeleitet. Die Invertierbarkeit von \(M_T\) wird erst in Stu
 
 ### Stufe 3 — \(\det M_T>0\)
 
-Sobald \(M_T\) exakt (nicht numerisch) bestimmt ist:
+Aus der Elf-Wort-Liste gilt exakt
 \[
-\det M_T=(1+\kappa)^2-\beta_T^2>0 \iff |\beta_T|<1+\kappa.
+c_3=c_5=c_7=\frac{\log2}{8},
+\qquad
+c_{10}=\frac{\log2}{4}.
 \]
-**Zu prüfen:** exakte Werte/Schranken für \(\kappa\) und \(\beta_T\) aus der kanonischen Quelle (z. B. HT-A2 für \(\kappa\)); ob \(|\beta_T|<1+\kappa\) auf ganz SW1 gilt oder zusätzliche Bedingungen braucht.
+Daher
+\[
+\boxed{
+\beta_T
+=
+-c_3-c_5-c_7-c_{10}
+=
+-\frac58\log2.
+}
+\tag{2TP.19}
+\]
 
-**Noch nicht ausgeführt in diesem Audit-Stand.**
+Ferner
+\[
+\kappa=c_1+c_5+c_9+c_{10}+c_{11}>0
+\tag{2TP.20}
+\]
+als Summe strikt positiver Gewichte.
+
+Die Eigenwerte des symmetrischen Blocks (2TP.18) sind
+\[
+\lambda_\Sigma:=1+\kappa+\beta_T,
+\qquad
+\lambda_\Delta:=1+\kappa-\beta_T.
+\tag{2TP.21}
+\]
+
+Da \(0<\log2<1\),
+\[
+\lambda_\Sigma
+=
+1+\kappa-\frac58\log2
+>
+1-\frac58
+=
+\frac38>0,
+\tag{2TP.22}
+\]
+und
+\[
+\lambda_\Delta
+=
+1+\kappa+\frac58\log2
+>
+1>0.
+\tag{2TP.23}
+\]
+
+Somit
+\[
+\boxed{
+\det M_T
+=
+\lambda_\Sigma\lambda_\Delta
+=
+(1+\kappa)^2-\beta_T^2
+>0.
+}
+\tag{2TP.24}
+\]
+
+Die Positivität ist uniform; sie benötigt außer der festen Elf-Wort-Struktur keine zusätzliche SW1-Unterkammer.
+
+Insbesondere
+\[
+\boxed{
+M_T^{-1}
+=
+\frac1{(1+\kappa)^2-\beta_T^2}
+\begin{pmatrix}
+1+\kappa&-\beta_T\\
+-\beta_T&1+\kappa
+\end{pmatrix}.
+}
+\tag{2TP.25}
+\]
+
+Damit können \(y(T+s)\) und \(y(T-s)\) für fast jedes \(s\in(R,\varepsilon)\) gleichzeitig und eindeutig aus den übrigen Row-Kanälen rekonstruiert/elimininiert werden.
 
 ### Stufe 4 — Summe/Differenz-Kanäle
 
-Erst nachdem Stufen 1–3 unabhängig stehen, Summe und Differenz der beiden Rows bilden und prüfen, ob und wie \(q\,w(s)\) sich auf die beiden Kanäle verteilt. **Diese Stufe darf nicht vorab als Ergebnis angenommen werden** (siehe Abschnitt 2).
+Definiere
+\[
+Y_\Sigma(s):=y(T+s)+y(T-s),
+\qquad
+Y_\Delta(s):=y(T+s)-y(T-s).
+\tag{2TP.26}
+\]
 
-**Noch nicht ausgeführt in diesem Audit-Stand.**
+Addition von (2TP.16) und (2TP.17) ergibt
+\[
+\boxed{
+\begin{aligned}
+0={}&
+\lambda_\Sigma Y_\Sigma(s)
++2\beta_0y(s)\\
+&+(\beta_-+\beta_+)\,[y(a-s)+y(a+s)]\\
+&+\beta_b\,[y(2d-s)+y(2d+s)]\\
+&+p\,[w(a+s)+w(a-s)]\\
+&+r\,[w(e+s)+w(e-s)].
+\end{aligned}}
+\tag{2TP.27}
+\]
+Der \(q\,w(s)\)-Kanal hebt sich **exakt** weg.
+
+Subtraktion der \(T-s\)-Row von der \(T+s\)-Row liefert
+\[
+\boxed{
+\begin{aligned}
+0={}&
+\lambda_\Delta Y_\Delta(s)\\
+&+(\beta_+-\beta_-)\,[y(a+s)-y(a-s)]\\
+&+\beta_b\,[y(2d-s)-y(2d+s)]\\
+&+p\,[w(a+s)-w(a-s)]\\
+&+r\,[w(e+s)-w(e-s)]\\
+&+2q\,w(s).
+\end{aligned}}
+\tag{2TP.28}
+\]
+
+Damit ist die frühere Scratch-Vermutung nun abgeleitet:
+\[
+\boxed{
+q\,w(s)\text{ verschwindet im symmetrischen Kanal und erscheint als }2q\,w(s)
+\text{ im antisymmetrischen Kanal.}
+}
+\tag{2TP.29}
+\]
+
+Da \(\lambda_\Sigma,\lambda_\Delta>0\), sind beide Kanäle separat invertierbar:
+\[
+Y_\Sigma=-\lambda_\Sigma^{-1}\,\mathrm{Rest}_\Sigma,
+\qquad
+Y_\Delta=-\lambda_\Delta^{-1}\,\mathrm{Rest}_\Delta.
+\tag{2TP.30}
+\]
+
+Dies ist exakt der simultane \(T\pm s\)-2×2-Pivot. Es ist **noch keine** Aussage, dass die verbleibenden Restkanäle verschwinden. Insbesondere werden hier weder SW1-AWI noch \(\Delta\)-Descent, HT-RED, A0 oder \(\ker\Gamma_I=\{0\}\) bewiesen.
 
 ---
 
@@ -384,9 +515,17 @@ Damit ist Stufe 1 vollständig auf die elf kanonischen Wörter zurückgeführt.
 
 Die Aggregation des zertifizierten Ledgers ergibt (2TP.10)–(2TP.11). Die Annulus-Hub-Beiträge werden unabhängig aus der kanonischen Hubformel (2TP.12) hergeleitet und liefern (2TP.14)–(2TP.15). Zusammen mit dem Identitätsterm in \(I+A\) entstehen die beiden augmentierten Rows (2TP.16)–(2TP.17) und damit der symmetrische interne Block (2TP.18).
 
-### 4.3 Noch offen
+### 4.3 Stufe 3: uniforme Pivotpositivität
 
-Stufe 3 (exakte Pivot-Invertierbarkeit) und Stufe 4 (Summe/Differenz-Kanäle) bleiben offen, bis der neue Stufe-2-Head separat adversarial geprüft wurde.
+Aus den exakten Wortgewichten folgt (2TP.19). Zusammen mit \(\kappa>0\) und \(\log2<1\) erhält man die parameterunabhängigen unteren Schranken (2TP.22)–(2TP.23), also die positive Determinante (2TP.24) und die explizite Inverse (2TP.25).
+
+### 4.4 Stufe 4: Eigenkanäle
+
+Addition und Subtraktion der beiden augmentierten Rows diagonalisiert \(M_T\). Dies liefert (2TP.27)–(2TP.28): \(q\,w(s)\) cancelt im symmetrischen Kanal und erscheint mit Koeffizient \(2q\) im antisymmetrischen Kanal.
+
+### 4.5 Beweisstatus
+
+Alle vier Stufen sind nun hergeleitet. Vor einem AI-GREEN-Gesamturteil ist der exakte neue Head adversarial vollständig neu zu prüfen und das algebraische Zertifikat auf diesen Head erneut auszuführen/zu erweitern.
 
 ---
 
