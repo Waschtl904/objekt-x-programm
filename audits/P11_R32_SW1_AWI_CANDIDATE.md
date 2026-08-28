@@ -2,7 +2,7 @@
 
 > **Stand:** 28. August 2026  
 > **Repo-Basis dieses Audits:** \`main@6da2ed81ed0d513bc6b700b782afc6e4b4284657\`  
-> **Status:** \`?[O]\` — vollständiger Beweiskandidat, noch kein AI-GREEN / keine Promotion.  
+> **Status:** \`AI-GREEN candidate + independent GREEN (certificate)\` — vollständige AWI-Geometrie und algebraischer Reflexionsblock reproduzierbar zertifiziert; Perplexity-Cross-Model-Review PARTIAL/FAIL; **keine Promotion**.  
 > **Scope:** ausschließlich SW1-A-Wall-Kopplung zwischen den physischen Branches \(a+s\) und \(2d-s\).
 
 ---
