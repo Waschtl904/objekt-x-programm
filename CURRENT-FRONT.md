@@ -80,7 +80,7 @@ SW1 liegt vollständig in diesem Bereich. Daher muss die äußere Hub-Injektivit
 }
 \]
 
-Die uniforme Membership \((Z,Z,Z,Z,Z,Z)\) für \(s,a-s,a+s,T-s,2d-s,T+s\) sowie \(I_b\cap I_-=\emptyset\) und \(I_b\cap I_+\neq\emptyset\iff\varepsilon>\Delta/2\) sind promotet. Kanonischer Promotionsrecord: `audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md`. Kandidatenaudit: `audits/P11_R32_HT_A4B_SW1_SELF_CONTAINED_THEOREM_CANDIDATE.md`, gemergt in `main@b06f50f12973e781b87db8b06e54fd590a053b10` (PR #10). Keine Mitpromotion von HT-A4b global, HT-RED, A0 oder Schur-Cross-Gram.
+Die uniforme Membership \((Z,Z,Z,Z,Z,Z)\) für \(s,a-s,a+s,T-s,2d-s,T+s\), die fünf SW1-Membership-Wände \(D_-,D_0,D_+,E,A_*>\varepsilon\) sowie \(I_b\cap I_-=\emptyset\) und \(I_b\cap I_+\neq\emptyset\iff\varepsilon>\Delta/2\) sind promotet. Kanonischer Promotionsrecord: `audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md`. Kandidatenaudit: `audits/P11_R32_HT_A4B_SW1_SELF_CONTAINED_THEOREM_CANDIDATE.md`, exakter Review-Head `f8f9f107b9c6879611ecb492979737a5541141e9`, gemergt in `main@b06f50f12973e781b87db8b06e54fd590a053b10` (PR #10). Keine Mitpromotion von HT-A4b global, HT-RED, A0 oder Schur-Cross-Gram.
 
 ### 2.3 Weitere Tail-/FG-Kandidaten
 
