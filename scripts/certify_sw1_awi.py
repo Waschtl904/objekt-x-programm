@@ -60,11 +60,69 @@ assert C.det().is_nonzero is True
 Cinv = sp.simplify((beta_plus*I2-beta_b*Rmat)/(beta_plus**2-beta_b**2))
 assert sp.simplify(C*Cinv-I2) == sp.zeros(2)
 
+# ---- Exact chamber geometry certificate via positive slack parametrizations ----
+
+r0, u0, g0, h0, theta = sp.symbols("r0 u0 g0 h0 theta", positive=True)
+
+# Upper chamber: eps > Delta/2.
+# Parametrization:
+#   R=r0,
+#   eps=r0+g0+h0,
+#   Delta=2*r0+2*g0+h0.
+# Then Delta-(R+eps)=g0>0 and 2*eps-Delta=h0>0.
+R_u = r0
+eps_u = r0 + g0 + h0
+Delta_u = 2*r0 + 2*g0 + h0
+assert sp.simplify(Delta_u - (R_u + eps_u) - g0) == 0
+assert sp.simplify(2*eps_u - Delta_u - h0) == 0
+
+# In s-coordinates the overlap is J=(Delta-eps, eps)
+Jlo_u = sp.simplify(Delta_u - eps_u)
+Jhi_u = sp.simplify(eps_u)
+assert sp.simplify(Jlo_u - (r0+g0)) == 0
+assert sp.simplify(Jhi_u - (r0+g0+h0)) == 0
+assert sp.simplify(Jlo_u - R_u - g0) == 0
+assert sp.simplify((Delta_u-R_u) - Jhi_u - g0) == 0
+assert sp.simplify(Jhi_u - Jlo_u - h0) == 0
+
+# Reflection invariance on the open interval:
+# write s=Jlo+theta with 0<theta<h0 formally; then t=Delta-s=Jlo+(h0-theta).
+s_u = sp.simplify(Jlo_u + theta)
+t_u = sp.simplify(Delta_u - s_u)
+assert sp.simplify(t_u - (Jlo_u + h0 - theta)) == 0
+assert sp.simplify(Delta_u - t_u - s_u) == 0
+
+# Unique fixed point is the midpoint and lies in upper-chamber J.
+fix_u = sp.simplify(Delta_u/2)
+assert sp.simplify(fix_u - (Jlo_u + h0/2)) == 0
+assert sp.simplify((Jlo_u+Jhi_u)/2 - fix_u) == 0
+
+# Lower chamber: eps < Delta/2.
+# Parametrize R=r0, eps=r0+u0, Delta=2*r0+2*u0+h0.
+# Then Delta-(R+eps)=u0+h0>0 and Delta-2eps=h0>0.
+R_l = r0
+eps_l = r0 + u0
+Delta_l = 2*r0 + 2*u0 + h0
+assert sp.simplify(Delta_l - (R_l+eps_l) - (u0+h0)) == 0
+assert sp.simplify(Delta_l - 2*eps_l - h0) == 0
+assert sp.simplify((Delta_l-eps_l) - eps_l - h0) == 0
+# Hence left endpoint of I_b is strictly to the right of right endpoint of I_+.
+
+# Degenerate chamber: eps = Delta/2.
+R_e = r0
+eps_e = r0 + u0
+Delta_e = 2*r0 + 2*u0
+assert sp.simplify(Delta_e - (R_e+eps_e) - u0) == 0
+assert sp.simplify(Delta_e - 2*eps_e) == 0
+assert sp.simplify((Delta_e-eps_e) - eps_e) == 0
+# Thus open intervals have empty intersection and closures touch in exactly one endpoint.
+
 print("SW1-AWI CERTIFICATE: PASS")
 print(f"sympy={sp.__version__}")
-print("2d=a+Delta: certified")
-print("collision law a+s = 2d-(Delta-s): certified")
-print("reflection involution: certified")
+print("geometry: lower/equal/upper chamber split certified exactly")
+print("upper overlap J=(Delta-eps, eps): certified")
+print("reflection invariance and unique midpoint fixed point: certified")
+print("2d=a+Delta and collision law: certified")
 print("beta_plus < 3/8 < c11=-beta_b: certified")
 print("symmetric eigenvalue beta_plus+beta_b < 0")
 print("antisymmetric eigenvalue beta_plus-beta_b > 0")
