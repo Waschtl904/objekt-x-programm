@@ -1,7 +1,7 @@
 # Active Theorem Registry
 
 > **Stand:** 28. August 2026  
-> **Repo-Basis:** \`main@83e03c6d69ce6dfae2b433977548dd1cd308ebc7\`  
+> **Repo-Basis:** \`main@0ae34f2e8e10797ec928197ba4892fdc0a749380\`  
 > **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11/R32-SW1-/Schur-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
 > **Nicht-Zweck:** Ersatz für \`STATUS.md\`, \`OFFENE_PROBLEME.md\`, die Papers oder Promotionsrecords.
 
