@@ -532,8 +532,29 @@ Aktueller Status:
 }
 \]
 
-Für den algebraischen Teil (AWI.18)–(AWI.28) liegt zusätzlich das reproduzierbare Zertifikat
+Zusätzlich liegt das reproduzierbare Vollzertifikat
 \`scripts/certify_sw1_awi.py\`
-vor (Python/SymPy 1.14.0, PASS). Dieses Zertifikat deckt die Koeffizientenordnung, die \(2\times2\)-Reflexionsdiagonalisierung und die Invertierbarkeit ab; es ersetzt **nicht** den noch ausstehenden unabhängigen Cross-Model-Check der Intervall-/Pullback-Geometrie.
+vor (Python/SymPy 1.14.0, PASS).
+
+Es zertifiziert:
+- die untere, degenerierte und obere A-Wall-Unterkammer mittels positiver Slack-Parametrisierungen;
+- den exakten Überlapp \(J=(\Delta-\varepsilon,\varepsilon)\) in der oberen Kammer;
+- die Reflexionsinvarianz und den eindeutigen Fixpunkt \(\Delta/2\);
+- \(2d=a+\Delta\) und das Kollisionsgesetz;
+- die Koeffizientenordnung;
+- die symmetrische/antisymmetrische Diagonalisierung;
+- die Invertierbarkeit des A-Wall-Blocks.
+
+Damit gilt für den vollständigen hier formulierten AWI-Satz:
+\[
+\boxed{
+\mathrm{SW1\!-\!AWI}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+Der separate Perplexity-Blindcheck wird als **PARTIAL/FAIL** protokolliert: Er leitete die wesentliche Geometrie und Operatorstruktur korrekt her, bewertete aber die bewusst fallweise Bedingung \(\varepsilon>\Delta/2\) fälschlich als globale SW1-Lücke. Daher kein `independent GREEN (cross-model)`.
 
 Keine Promotion.
