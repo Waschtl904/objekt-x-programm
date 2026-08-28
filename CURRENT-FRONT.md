@@ -2,7 +2,7 @@
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 28. August 2026  
-> **Verifizierte Main-Basis:** \`83e03c6d69ce6dfae2b433977548dd1cd308ebc7\`  
+> **Verifizierte Main-Basis:** \`0ae34f2e8e10797ec928197ba4892fdc0a749380\` (Squash-Merge PR #14, Promotion HT-A4b-SW1-M → ✓[M])  
 > **Aktiver mathematischer Stand:** `HT-A4b-SW1-M` ist promotet — Promotionsrecord \`audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md\`, Kandidat gemergt in \`b06f50f12973e781b87db8b06e54fd590a053b10\` (PR #10)  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
