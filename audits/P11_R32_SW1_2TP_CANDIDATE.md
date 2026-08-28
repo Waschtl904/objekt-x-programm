@@ -2,7 +2,7 @@
 
 > **Stand:** 28. August 2026  
 > **Repo-Basis dieses Audits:** `main@152150284c31af50dedb9e2ee4ac820d4692776c`  
-> **Status:** `?[O]` — Stufe 1 AI-GREEN + `independent GREEN (certificate)`; Stufe 2 AI-GREEN; Stufen 3–4 vollständig hergeleitet, finaler Gesamt-Recheck noch ausstehend; keine Promotion.  
+> **Status:** `AI-GREEN candidate + independent GREEN (certificate)` — vollständiger 2TP-Beweis intern kritisch geprüft und algebraisch zertifiziert; **keine Promotion**.  
 > **Scope:** ausschließlich SW1, \(0<\sigma\le R<\varepsilon,\ R+\varepsilon<\Delta\); ausschließlich die simultane Elimination von \(y(T+s)\) und \(y(T-s)\).
 
 ---
@@ -136,7 +136,7 @@ Stufe 1 ist damit algebraisch hergeleitet, aber noch nicht unabhängig zertifizi
 
 ### Stufe 2 — \(T+s\)/\(T-s\)-Rows
 
-**Status dieses Branch-Heads:** vollständig aus dem zertifizierten Ledger hergeleitet; separater AI-GREEN-Recheck noch ausstehend.
+**Status:** AI-GREEN; Row-Zusammensetzung und Annulus-Hub-Zeichen separat am exakten Zwischenhead `be6096f2625125bb7399d2e45fb4bd2fec918d1e` gegengeprüft.
 
 Aus dem Ledger werden die Wortgewichte gruppiert. Mit
 \[
@@ -525,11 +525,27 @@ Addition und Subtraktion der beiden augmentierten Rows diagonalisiert \(M_T\). D
 
 ### 4.5 Beweisstatus
 
-Alle vier Stufen sind nun hergeleitet. Vor einem AI-GREEN-Gesamturteil ist der exakte neue Head adversarial vollständig neu zu prüfen und das algebraische Zertifikat auf diesen Head erneut auszuführen/zu erweitern.
+Alle vier Stufen sind hergeleitet und im finalen Gesamt-Recheck bestanden.
+
+Status:
+\[
+\boxed{
+\mathrm{SW1\!-\!2TP}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+Das reproduzierbare Zertifikat liegt unter scripts/certify_sw1_2tp_ledger.py und prüft die 88 Echo-Fälle, beide Hub-Supportmuster, die exakten Gewichte, die Pivotpositivität sowie die Summe/Differenz-Algebra. Tool/Version und exakter geprüfter Head werden im PR-#17-Reviewrecord dokumentiert.
+
+Der separate Perplexity-Blindcheck ist dokumentiert **FAIL** und erzeugt ausdrücklich kein independent GREEN (cross-model).
+
+Dieser Status ist **keine formale Promotion** und keine externe menschliche Fachbegutachtung.
 
 ---
 
-## 5. Adversarialer Review-Auftrag (später, nach vollständigem Beweis)
+## 5. Finaler adversarialer Review
 
 1. Ledger vollständig (alle elf Wörter erfasst, keines übersehen).
 2. Jeder Ledger-Eintrag korrekt gegen die kanonische \(A\)-Definition.
@@ -540,6 +556,8 @@ Alle vier Stufen sind nun hergeleitet. Vor einem AI-GREEN-Gesamturteil ist der e
 7. \(q\,w(s)\)-Verteilung auf die Kanäle tatsächlich abgeleitet, nicht aus Abschnitt 2 übernommen.
 8. Scope-Firewall vollständig eingehalten (Abschnitt 0).
 9. Promotionsschwelle (independent GREEN / algebraisches Zertifikat) beachtet — keine Promotion allein auf AI-GREEN-Basis.
+
+**Finales Verdict:** Alle neun Punkte bestanden. Gesamtstatus `AI-GREEN candidate + independent GREEN (certificate)`, keine Promotion.
 
 ---
 
