@@ -525,11 +525,11 @@ s,\ a-s,\ a+s,\ T-s,\ 2d-s,\ T+s
 
 Nach der Definition des Blindanteils gilt \(y=z\) a.e. auf \(\mathcal Z_R^{\rm phys}\). Jede der sechs Abbildungen
 \[
-s\mapsto s,quad
-s\mapsto a-s,quad
-s\mapsto a+s,quad
-s\mapsto T-s,quad
-s\mapsto 2d-s,quad
+s\mapsto s,\quad
+s\mapsto a-s,\quad
+s\mapsto a+s,\quad
+s\mapsto T-s,\quad
+s\mapsto 2d-s,\quad
 s\mapsto T+s
 \]
 ist affin mit Steigung \(\pm1\). Das Urbild einer Nullmenge ist daher wieder eine Nullmenge. Folglich gelten alle sechs Gleichungen der Satzaussage gleichzeitig für fast jedes \(s\in(R,\varepsilon)\).
