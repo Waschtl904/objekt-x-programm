@@ -2,8 +2,8 @@
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 28. August 2026  
-> **Verifizierte Main-Basis:** \`0ae34f2e8e10797ec928197ba4892fdc0a749380\` (Squash-Merge PR #14, Promotion HT-A4b-SW1-M → ✓[M])  
-> **Aktiver mathematischer Stand:** `HT-A4b-SW1-M` ist promotet — Promotionsrecord \`audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md\`, Kandidat gemergt in \`b06f50f12973e781b87db8b06e54fd590a053b10\` (PR #10)  
+> **Verifizierte Main-Basis:** \`0c98c03a332dc7c8e479edc77d8cada678eec376\` (Squash-Merge PR #15, SW1-KNF-Kandidat GREEN, keine Promotion)  
+> **Aktiver mathematischer Stand:** `HT-A4b-SW1-M` ist promotet (\`✓[M]\`); zusätzlich `SW1-KNF` als neuer OVERALL GREEN Kandidat ohne Promotion verfügbar (\`audits/P11_R32_SW1_KNF_CANDIDATE.md\`, PR #15)  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -72,11 +72,13 @@ Quelle:
 
 SW1 liegt vollständig in diesem Bereich. Daher muss die äußere Hub-Injektivität für den SW1-Angriff **nicht neu bewiesen** werden.
 
-### 2.2 Aktuelle Tail-/FG-Kandidaten
+### 2.2 Aktuelle Tail-/FG-/Kernel-Kandidaten
 
 HT-A1, HT-A2, HT-A3 und HT-A4a sind unabhängig GREEN geprüfte Kandidaten, aber nicht formal promotet.
 
 FG-1, FG-TR1, die \(\widehat\Phi_R\)-Normalform und CG-FG1 sind ebenfalls Kandidaten-/Kompositionsresultate ohne formale Promotion.
+
+**Neu:** SW1-KNF (\`audits/P11_R32_SW1_KNF_CANDIDATE.md\`, PR #15) ist ein OVERALL GREEN Kandidat, der auf SW1 eine vollständige sektorale Kernel-Normalform liefert — disjunkte Samplingfenster \(I_a,I_b,I_T\), explizite Rekonstruktion, \(\mathcal K_R\cong\mathcal Z_R^+\oplus L^2(\mathcal V_R^{SW1})\) — und ersetzt auf SW1 die globale FG-TR1-Blackbox. Keine Promotion, keine Aussage über A0, HT-RED oder \(\ker\Gamma_I\).
 
 Exakte Status- und Quellenliste:
 [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md).
@@ -115,43 +117,23 @@ Promotet mit kanonischem Promotionsrecord \`audits/P11_R32_HT_A4B_SW1_M_PROMOTIO
 
 ## 4. Nächster mathematischer Schritt
 
-**Keine weitere Chamber-Katalogisierung als Default.**
+**Kein weiterer allgemeiner Tail-Pivot-Ansatz mehr als Default.** Mit SW1-KNF steht die vollständige Koordinatenbasis des inneren Kernels bereits zur Verfügung.
 
-Stattdessen wird auf SW1 das vollständige augmentierte Rohsystem aufgestellt:
-
-\[
-(I+A)y+HE_{\mathcal A}w=0,
-\qquad
-E_I^*Hy=0.
-\]
-
-Mit der SW1-Membership soll die Tail-Zeile in direkten Blindkoordinaten geschrieben werden. Der bekannte Pivot besitzt die Form
+Der nächste konkrete Schritt ist eng:
 
 \[
-(1+\kappa)z(T+s)
-+\beta_0z(s)
-+\beta_-z(a-s)
-+\beta_+z(a+s)
-+\beta_Tz(T-s)
-+\beta_bz(2d-s)
-+\text{Annulus-/}w\text{-Terme}
-=0,
+\boxed{
+\mathrm{SW1\text{-}KNF} \to \mathrm{SW1\text{-}BL7} \to \mathrm{SW1\text{-}2TP} \to \mathrm{SW1\text{-}AWI} \to \Delta\text{-Descent}
+}
 \]
 
-wobei
+**Unmittelbarer nächster Kandidat: SW1-BL7.** Zeige, dass auch \(2d+s\) für \(s\in(R,\varepsilon)\) ein direkter Blindwert ist:
 \[
-1+\kappa>0.
+s\in(R,\varepsilon)\quad\Longrightarrow\quad 2d+s\in\mathcal Z_{R,\mathrm{SW1}}^{\rm phys}\quad\text{a.e.}
 \]
+Noch nicht Teil dieses Schritts: der simultane \(T\pm s\)-2×2-Pivot (SW1-2TP), die A-Wall-Involution (SW1-AWI) und der \(\Delta\)-Descent.
 
-Erster Eliminationsschritt:
-\[
-z(T+s)
-\]
-eindeutig eliminieren.
-
-Danach ist zu prüfen, ob zusätzliche Beobachtungszeilen die verbleibenden fünf \(z\)-Kanäle und die Annulusvariablen sukzessive töten.
-
-### Erfolgsausgang
+### Erfolgsausgang der Gesamtkette
 
 Falls die innere Rechnung
 \[
@@ -297,6 +279,7 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 \begin{array}{ll}
 \text{P12 restricted-tail outer Hub} & \checkmark[M] \\
 \text{HT-A4b-SW1-M} & \checkmark[M] \\
+\text{SW1-KNF} & \text{OVERALL GREEN candidate, keine Promotion} \\
 \text{HT-RED} & ?[O] \\
 \text{A0} & ?[O] \\
 \text{Schur Cross-Gram} & ?[O]
@@ -304,4 +287,4 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 }
 \]
 
-**Nächster Default:** vollständiges augmentiertes SW1-System aufstellen und Tail-Pivot \(z(T+s)\) eliminieren (Full-Rest-/Schur-Elimination), statt weiterer globaler Chamber-Ausweitung.
+**Nächster Default:** SW1-BL7 (siebter Blindwert \(2d+s\)) als eigenes Teilaudit, dann SW1-2TP, SW1-AWI, \(\Delta\)-Descent.
