@@ -1,9 +1,9 @@
 # CURRENT FRONT — Objekt X / P11-R32
 
 > **Operative Kopfschicht — zuerst lesen.**  
-> **Stand:** 27. August 2026  
-> **Verifizierte Main-Basis:** \`de1bc09ae2e1b57083f3f44fc168e7cf2f8c8424\`  
-> **Aktiver mathematischer PR:** #10 — \`HT-A4b-SW1-M\`, Head \`74b0611b634310b78d58d500d2ebfa2e7a958643\`  
+> **Stand:** 28. August 2026  
+> **Verifizierte Main-Basis:** `b06f50f12973e781b87db8b06e54fd590a053b10`  
+> **Aktiver mathematischer PR:** #10 — gemergt; Promotion von `HT-A4b-SW1-M` in diesem Promotions-PR gebucht  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -68,11 +68,19 @@ Status:
 \]
 
 Quelle:
-\`papers/P12_Adelic_Hub_Injectivity_Program.tex\`, Corollary \`cor:p12-consolidated\`.
+`papers/P12_Adelic_Hub_Injectivity_Program.tex`, Corollary `cor:p12-consolidated`.
 
-SW1 liegt vollständig in diesem Bereich. Daher muss die äußere Hub-Injektivität für den SW1-Angriff **nicht neu bewiesen** werden.
+### 2.2 SW1-Membership — jetzt formal bewiesen
 
-### 2.2 Aktuelle Tail-/FG-Kandidaten
+\[
+\boxed{
+\mathrm{HT\!-\!A4b\!-\!SW1\!-\!M}:\checkmark[M]
+}
+\]
+
+Die uniforme Membership \((Z,Z,Z,Z,Z,Z)\) für \(s,a-s,a+s,T-s,2d-s,T+s\) sowie \(I_b\cap I_-=\emptyset\) und \(I_b\cap I_+\neq\emptyset\iff\varepsilon>\Delta/2\) sind promotet. Quelle: `audits/P11_R32_HT_A4B_SW1_SELF_CONTAINED_THEOREM_CANDIDATE.md`, gemergt in `main@b06f50f12973e781b87db8b06e54fd590a053b10` (PR #10); Promotion in diesem Promotions-PR gebucht. Kein globaler HT-A4b-Exhaustivitäts-, HT-RED-, A0- oder Schur-Cross-Gram-Overclaim.
+
+### 2.3 Weitere Tail-/FG-Kandidaten
 
 HT-A1, HT-A2, HT-A3 und HT-A4a sind unabhängig GREEN geprüfte Kandidaten, aber nicht formal promotet.
 
@@ -83,43 +91,11 @@ Exakte Status- und Quellenliste:
 
 ---
 
-## 3. Aktiver Zwischenmeilenstein: PR #10
-
-PR #10 theorematisiert nur den einfachen SW1-Membership-Satz.
-
-Ziel:
-
-\[
-\boxed{
-s,\ a-s,\ a+s,\ T-s,\ 2d-s,\ T+s
-\text{ sind auf SW1 direkte Blindwerte}
-}
-\]
-
-also die uniforme Membership
-\[
-\boxed{(Z,Z,Z,Z,Z,Z)}.
-\]
-
-Der Beweis in PR #10 ist absichtlich selbständig und verwendet HT.17/18, HT.23–27, FG-TR1 und HT-A4a **nicht als Beweisblackboxen**.
-
-Aktueller Status:
-
-\[
-\boxed{
-\mathrm{HT\!-\!A4b\!-\!SW1\!-\!M}:?[O]
-}
-\]
-
-Kein \(\checkmark[M]\) vor vollständigem adversarialem und mechanischem Review.
-
----
-
-## 4. Nächster mathematischer Schritt nach PR #10
+## 3. Nächster mathematischer Schritt
 
 **Keine weitere Chamber-Katalogisierung als Default.**
 
-Stattdessen wird auf SW1 das vollständige augmentierte Rohsystem aufgestellt:
+Auf SW1 wird jetzt das vollständige augmentierte Rohsystem aufgestellt:
 
 \[
 (I+A)y+HE_{\mathcal A}w=0,
@@ -127,7 +103,7 @@ Stattdessen wird auf SW1 das vollständige augmentierte Rohsystem aufgestellt:
 E_I^*Hy=0.
 \]
 
-Mit der SW1-Membership soll die Tail-Zeile in direkten Blindkoordinaten geschrieben werden. Der bekannte Pivot besitzt die Form
+Mit der jetzt promoteten SW1-Membership wird die Tail-Zeile in direkten Blindkoordinaten geschrieben. Der bekannte Pivot besitzt die Form
 
 \[
 (1+\kappa)z(T+s)
@@ -169,7 +145,7 @@ Beide Ausgänge sind verwertbare Forschungsergebnisse.
 
 ---
 
-## 5. Was derzeit ausdrücklich **nicht** bearbeitet wird
+## 4. Was derzeit ausdrücklich **nicht** bearbeitet wird
 
 Solange der SW1-Angriff nicht scheitert, sind folgende Fronten **nicht Priorität**:
 
@@ -187,7 +163,7 @@ Solange der SW1-Angriff nicht scheitert, sind folgende Fronten **nicht Prioritä
 
 ---
 
-## 6. Warum Round 29 / \(M_{68}\) aktuell nicht gebraucht wird
+## 5. Warum Round 29 / \(M_{68}\) aktuell nicht gebraucht wird
 
 Round 29 gehört zur schwierigen P12-Restfront mit
 \[
@@ -211,12 +187,12 @@ Daher lautet die operative Regel:
 
 ---
 
-## 7. Lesereihenfolge für jede neue Arbeitssitzung
+## 6. Lesereihenfolge für jede neue Arbeitssitzung
 
 Vor einer neuen Rechnung ist in dieser Reihenfolge zu lesen:
 
-1. **\`CURRENT-FRONT.md\`** — Was ist heute die aktive Frage?
-2. **\`00-uebersicht/ACTIVE_THEOREM_REGISTRY.md\`** — Welche Resultate dürfen mit welchem Status benutzt werden?
+1. **`CURRENT-FRONT.md`** — Was ist heute die aktive Frage?
+2. **`00-uebersicht/ACTIVE_THEOREM_REGISTRY.md`** — Welche Resultate dürfen mit welchem Status benutzt werden?
 3. **Kanonische Quelle des benötigten Inputs** — Paper oder Promotionsrecord.
 4. **Aktueller Kandidatenaudit / aktiver PR** — nur die konkrete Front.
 5. **Historische Audits / Journal** — nur bei einer klar benannten Provenienz-, Fehler- oder Gegenbeispielfrage.
@@ -225,7 +201,7 @@ Nicht mit einer Volltextsuche durch das ganze Repo beginnen, solange Stufen 1–
 
 ---
 
-## 8. Epistemische Autorität
+## 7. Epistemische Autorität
 
 Die Lesereihenfolge ist nicht identisch mit der mathematischen Autorität.
 
@@ -243,18 +219,18 @@ Für mathematische Aussagen gilt:
 }
 \]
 
-\`CURRENT-FRONT.md\` und die Registry sind **Navigationsdateien**. Bei einem Konflikt entscheiden die kanonischen mathematischen Quellen.
+`CURRENT-FRONT.md` und die Registry sind **Navigationsdateien**. Bei einem Konflikt entscheiden die kanonischen mathematischen Quellen.
 
 ---
 
-## 9. Fünf-Punkte-Regel für mathematisch relevante Merges
+## 8. Fünf-Punkte-Regel für mathematisch relevante Merges
 
 Ein mathematisch relevanter Merge gilt operativ erst dann als vollständig abgeschlossen, wenn alle fünf Punkte erfüllt sind:
 
 1. **PR gemergt** — exakter Merge-Commit bekannt.
 2. **Main mechanisch verifiziert** — tatsächlicher Main-SHA und Diff geprüft.
-3. **Registry geprüft** — falls Status, Scope, Quelle oder aktive Abhängigkeit betroffen sind, \`ACTIVE_THEOREM_REGISTRY.md\` aktualisieren.
-4. **Front aktualisiert** — \`CURRENT-FRONT.md\` auf neuen Main-SHA, aktuellen offenen Knoten und nächsten Schritt bringen.
+3. **Registry geprüft** — falls Status, Scope, Quelle oder aktive Abhängigkeit betroffen sind, `ACTIVE_THEOREM_REGISTRY.md` aktualisieren.
+4. **Front aktualisiert** — `CURRENT-FRONT.md` auf neuen Main-SHA, aktuellen offenen Knoten und nächsten Schritt bringen.
 5. **Erst dann Abschluss buchen** — kein neuer mathematischer Angriff auf Basis eines veralteten operativen Frontstands.
 
 Kurz:
@@ -275,7 +251,7 @@ Kurz:
 
 ---
 
-## 10. Änderungen an dieser Datei
+## 9. Änderungen an dieser Datei
 
 Diese Datei soll **klein und operativ** bleiben.
 
@@ -292,13 +268,13 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 
 ---
 
-## 11. Aktueller Kurzstatus
+## 10. Aktueller Kurzstatus
 
 \[
 \boxed{
 \begin{array}{ll}
 \text{P12 restricted-tail outer Hub} & \checkmark[M] \\
-\text{HT-A4b-SW1-M} & ?[O]\ \text{in PR \#10} \\
+\text{HT-A4b-SW1-M} & \checkmark[M] \\
 \text{HT-RED} & ?[O] \\
 \text{A0} & ?[O] \\
 \text{Schur Cross-Gram} & ?[O]
@@ -306,4 +282,4 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 }
 \]
 
-**Nächster Default:** PR #10 prüfen; danach SW1-augmented-raw-system statt globaler Chamber-Ausweitung.
+**Nächster Default:** vollständiges augmentiertes SW1-System aufstellen und Tail-Pivot \(z(T+s)\) eliminieren (Full-Rest-/Schur-Elimination), statt weiterer globaler Chamber-Ausweitung.
