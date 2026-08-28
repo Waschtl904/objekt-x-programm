@@ -1,7 +1,7 @@
 # Active Theorem Registry
 
 > **Stand:** 28. August 2026  
-> **Repo-Basis:** \`main@0ae34f2e8e10797ec928197ba4892fdc0a749380\`  
+> **Repo-Basis:** \`main@0c98c03a332dc7c8e479edc77d8cada678eec376\`  
 > **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11/R32-SW1-/Schur-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
 > **Nicht-Zweck:** Ersatz für \`STATUS.md\`, \`OFFENE_PROBLEME.md\`, die Papers oder Promotionsrecords.
 
@@ -42,6 +42,7 @@ T<S=T+\sigma<T_0=T+\varepsilon<c,
 | **FG-TR1** | OVERALL GREEN candidate — keine formale Promotion | \(\Theta_R\) als beschränkter Koordinatenisomorphismus; \(L_R=\operatorname{pr}_1\Theta_R\) | **Statusbuchung:** \`00-uebersicht/P11_R32_STATUS_2026-08-25.md\`, Update 2026-08-26; **Beweis-/Auditprovenienz:** \`audits/P11_R32_TRIANGULAR_ROW_SPLITTING_AUDIT.md\` | freie Koordinaten / Rekonstruktionshintergrund |
 | **\(\widehat\Phi_R\)-Normalform** | CANDIDATE GREEN als mechanische Komposition | \(E_I^*H\,\widehat\Phi_R(z,f,h)=f\) | \`00-uebersicht/P11_R32_STATUS_2026-08-25.md\`, Update 2026-08-26; Provenienz dort angegeben | Parametrisierung der augmentierten Rechnung |
 | **CG-FG1** | CANDIDATE GREEN als Kompositionsreduktion | \(\Gamma_I=\operatorname{pr}_2\Gamma_R=E_I^*HBH^*E_{\mathcal A}=M_I^*M_A\) | \`00-uebersicht/P11_R32_STATUS_2026-08-25.md\`, Update 2026-08-26 | verbindet freie Koordinaten mit dem offenen Schur-Cross-Gram-Test |
+| **SW1-KNF** | OVERALL GREEN candidate — keine formale Promotion | sektorale, vollständige Kernel-Normalform auf SW1: \(\mathcal K_R\cong\mathcal Z_R^+\oplus L^2(\mathcal V_R^{SW1})\) via paarweise disjunkter Samplingfenster \(I_a,I_b,I_T\); ersetzt FG-TR1/FG-1 als Blackbox ausschließlich auf SW1 | \`audits/P11_R32_SW1_KNF_CANDIDATE.md\` (PR #15, Squash-Merge \`0c98c03a332dc7c8e479edc77d8cada678eec376\`) | liefert die vollständige Koordinatenparametrisierung des inneren Kernels als Ausgangspunkt für SW1-BL7/SW1-2TP; keine Aussage über A0, HT-RED oder \(\ker\Gamma_I\) |
 
 **Firewall:** \`independently GREEN candidate\`, \`OVERALL GREEN candidate\` und \`CANDIDATE GREEN\` sind ausdrücklich **kein** \`✓[M]\`.
 
@@ -54,7 +55,7 @@ T<S=T+\sigma<T_0=T+\varepsilon<c,
 | **HT-A4b-SW1** | \`?[O]\` | \(0<\sigma\le R<\varepsilon,\ R+\varepsilon<\Delta\) | \`audits/P11_R32_HT_A4B_SINGLE_CHAMBER_SUBWEDGE_CANDIDATE.md\` auf \`main\` | gemergter Rechenkandidat; keine Promotion |
 | **HT-A4b-SW1-M** | \`✓[M]\` | derselbe SW1-Scope; sechs direkte Blindwerte, die fünf SW1-Membership-Wände \(D_-,D_0,D_+,E,A_*>\varepsilon\), plus direkter A-Wall-Spezialfall (genau der vollständige Satz aus §12 des Kandidatenaudits) | Kandidat: \`audits/P11_R32_HT_A4B_SW1_SELF_CONTAINED_THEOREM_CANDIDATE.md\` (PR #10, exakter Review-Head \`f8f9f107b9c6879611ecb492979737a5541141e9\`, Squash-Merge \`b06f50f12973e781b87db8b06e54fd590a053b10\`); Promotionsrecord: \`audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md\` | promotet ausschließlich der vollständige §12-Satz; keine Mitpromotion von HT-A4b global, HT-RED, A0 oder Schur-Cross-Gram |
 
-Mit HT-A4b-SW1-M nun \(\checkmark[M]\) ist der SW1-Membership-Baustein der Kette formal gesichert.
+Mit HT-A4b-SW1-M nun \(\checkmark[M]\) ist der SW1-Membership-Baustein der Kette formal gesichert. SW1-KNF (siehe Abschnitt 2) ist ein neuer, unpromotierter GREEN-Baustein derselben Front.
 
 ---
 
@@ -105,7 +106,7 @@ Der derzeit gewünschte Pfad ist:
 }
 \]
 
-Der einzige wirklich neue mathematische Engpass in dieser Kette ist derzeit die **Full-Rest-/Schur-Elimination auf SW1**.
+Der einzige wirklich neue mathematische Engpass in dieser Kette ist derzeit die **Full-Rest-/Schur-Elimination auf SW1**. SW1-KNF liefert dazu die vollständige Koordinatenbasis; der nächste konkrete Baustein ist SW1-BL7 (siebter Blindwert \(2d+s\)).
 
 ---
 
