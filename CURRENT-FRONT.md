@@ -2,8 +2,8 @@
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 28. August 2026  
-> **Verifizierte Main-Basis:** \`b06f50f12973e781b87db8b06e54fd590a053b10\`  
-> **Aktiver mathematischer Stand:** PR #10 gemergt — \`HT-A4b-SW1-M\` ist adversarial GREEN geprüft, aber bis zu separater Promotionsbuchung weiterhin \`?[O]\`; Merge \`b06f50f12973e781b87db8b06e54fd590a053b10\`  
+> **Verifizierte Main-Basis:** \`83e03c6d69ce6dfae2b433977548dd1cd308ebc7\`  
+> **Aktiver mathematischer Stand:** `HT-A4b-SW1-M` ist promotet — Promotionsrecord \`audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md\`, Kandidat gemergt in \`b06f50f12973e781b87db8b06e54fd590a053b10\` (PR #10)  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -87,18 +87,16 @@ Exakte Status- und Quellenliste:
 
 PR #10 theorematisiert nur den einfachen SW1-Membership-Satz und ist inzwischen in \`main\` gemergt.
 
-Ziel:
-
+Ziel/Kern (§12, vollständig):
 \[
 \boxed{
-s,\ a-s,\ a+s,\ T-s,\ 2d-s,\ T+s
-\text{ sind auf SW1 direkte Blindwerte}
+\begin{array}{l}
+s,\ a-s,\ a+s,\ T-s,\ 2d-s,\ T+s\ \text{sind auf SW1 direkte Blindwerte, }(Z,Z,Z,Z,Z,Z),\\
+D_-,\ D_0,\ D_+,\ E,\ A_*>\varepsilon,\\
+I_b\cap I_-=\emptyset,\qquad I_b\cap I_+\neq\emptyset\iff\varepsilon>\Delta/2,\\
+\text{inkl. korrektem Berührungsfall bei }\varepsilon=\Delta/2.
+\end{array}
 }
-\]
-
-also die uniforme Membership
-\[
-\boxed{(Z,Z,Z,Z,Z,Z)}.
 \]
 
 Der Beweis in PR #10 ist absichtlich selbständig und verwendet HT.17/18, HT.23–27, FG-TR1 und HT-A4a **nicht als Beweisblackboxen**.
@@ -107,19 +105,17 @@ Aktueller Status:
 
 \[
 \boxed{
-\mathrm{HT\!-\!A4b\!-\!SW1\!-\!M}:?[O]
+\mathrm{HT\!-\!A4b\!-\!SW1\!-\!M}:\checkmark[M]
 }
 \]
 
-Der exakte PR-#10-Head wurde adversarial und mechanisch **OVERALL GREEN** geprüft. Der Satz bleibt trotzdem bis zu einer **separaten formalen Promotionsbuchung** bei \`?[O]\`; der Merge allein erzeugt kein \(\checkmark[M]\).
+Promotet mit kanonischem Promotionsrecord \`audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md\`. Exakter adversarial und mechanisch geprüfter Review-Head: \`f8f9f107b9c6879611ecb492979737a5541141e9\`; Squash-Merge in main: \`b06f50f12973e781b87db8b06e54fd590a053b10\`. Keine Mitpromotion von HT-A4b global, HT-RED, A0 oder Schur-Cross-Gram.
 
 ---
 
-## 4. Nächster formaler und mathematischer Schritt
+## 4. Nächster mathematischer Schritt
 
-**Unmittelbarer formaler Schritt:** separater Promotions-PR ausschließlich für \(\mathrm{HT\!-\!A4b\!-\!SW1\!-\!M}\), ohne HT-A4b global, HT-RED, A0 oder Schur mitzupromoten.
-
-**Nächster mathematischer Schritt danach:** keine weitere Chamber-Katalogisierung als Default.
+**Keine weitere Chamber-Katalogisierung als Default.**
 
 Stattdessen wird auf SW1 das vollständige augmentierte Rohsystem aufgestellt:
 
@@ -300,7 +296,7 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 \boxed{
 \begin{array}{ll}
 \text{P12 restricted-tail outer Hub} & \checkmark[M] \\
-\text{HT-A4b-SW1-M} & ?[O]\ \text{gemergter GREEN-Kandidat; Promotion separat} \\
+\text{HT-A4b-SW1-M} & \checkmark[M] \\
 \text{HT-RED} & ?[O] \\
 \text{A0} & ?[O] \\
 \text{Schur Cross-Gram} & ?[O]
@@ -308,4 +304,4 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 }
 \]
 
-**Nächster Default:** separaten Promotions-PR für den eng abgegrenzten SW1-Satz anlegen; danach SW1-augmented-raw-system statt globaler Chamber-Ausweitung.
+**Nächster Default:** vollständiges augmentiertes SW1-System aufstellen und Tail-Pivot \(z(T+s)\) eliminieren (Full-Rest-/Schur-Elimination), statt weiterer globaler Chamber-Ausweitung.
