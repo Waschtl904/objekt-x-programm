@@ -2,7 +2,7 @@
 
 > **Stand:** 28. August 2026  
 > **Repo-Basis dieses Audits:** `main@152150284c31af50dedb9e2ee4ac820d4692776c`  
-> **Status:** `?[O]` — nur Zielformulierung und zu reproduzierende Hypothese, **kein Beweis enthalten**.  
+> **Status:** `?[O]` — Stufe 1 AI-GREEN + `independent GREEN (certificate)`; Stufe 2 hergeleitet, noch nicht separat AI-GREEN; Stufen 3–4 offen; keine Promotion.  
 > **Scope:** ausschließlich SW1, \(0<\sigma\le R<\varepsilon,\ R+\varepsilon<\Delta\); ausschließlich die simultane Elimination von \(y(T+s)\) und \(y(T-s)\).
 
 ---
@@ -78,7 +78,7 @@ Vermutete Konsequenz für die Summen-/Differenzkanäle: \(q\,w(s)\) verschwindet
 
 ### Stufe 1 — 11-Wort-Ledger
 
-**Status dieses Branch-Heads:** ausgeführt; noch kein AI-GREEN, solange der neue Head nicht separat adversarial gegengeprüft ist.
+**Status:** AI-GREEN am Head `b71ca37ebfede86a36a28e1e3260c0cc26fedcde`; zusätzlich `independent GREEN (certificate)` am Head `0ff3bfa532c34a0ee07e227358e0cfd2262ffde2` durch scripts/certify_sw1_2tp_ledger.py (SymPy 1.14.0, 88 Echo-Fälle, PASS). Der separate Perplexity-Blindcheck ist dokumentiert FAIL und zählt nicht als independent GREEN.
 
 Kanonische Inputquelle für Stufe 1 ist ausschließlich die Vier-Echo-Formel (HT.3) und die Elf-Wort-Liste (HT.4) aus audits/P11_R32_TAIL_FG_PIVOT_CANDIDATE.md:
 \[
@@ -136,14 +136,177 @@ Stufe 1 ist damit algebraisch hergeleitet, aber noch nicht unabhängig zertifizi
 
 ### Stufe 2 — \(T+s\)/\(T-s\)-Rows
 
-Aus dem Ledger die beiden vollständigen Zeilen zusammensetzen:
-\[
-0=c_{++}\,y(T+s)+c_{+-}\,y(T-s)+\mathrm{Rest}_+(s),\qquad
-0=c_{-+}\,y(T+s)+c_{--}\,y(T-s)+\mathrm{Rest}_-(s).
-\]
-**Zu prüfen:** Gilt tatsächlich \(c_{++}=c_{--}=1+\kappa\) und \(c_{+-}=c_{-+}=\beta_T\) (d.h. ist \(M_T\) wirklich symmetrisch mit gleichen Diagonaleinträgen)? Das ist selbst Teil des zu beweisenden Satzes, nicht vorauszusetzen.
+**Status dieses Branch-Heads:** vollständig aus dem zertifizierten Ledger hergeleitet; separater AI-GREEN-Recheck noch ausstehend.
 
-**Noch nicht ausgeführt in diesem Audit-Stand.**
+Aus dem Ledger werden die Wortgewichte gruppiert. Mit
+\[
+\kappa:=c_1+c_5+c_9+c_{10}+c_{11},
+\tag{2TP.6}
+\]
+\[
+\beta_0:=-c_1+c_7=-c_1+c_3,
+\tag{2TP.7}
+\]
+\[
+\beta_-:=-c_2-c_4,
+\qquad
+\beta_+:=c_4+c_8=c_2+c_6,
+\tag{2TP.8}
+\]
+\[
+\beta_T:=-c_3-c_5-c_7-c_{10},
+\qquad
+\beta_b:=-c_{11},
+\tag{2TP.9}
+\]
+wobei \(c_7=c_3,\ c_4=c_2,\ c_8=c_6\) direkt aus der Elf-Wort-Liste folgen, ergibt sich für jedes \(s\in(R,\varepsilon)\):
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(T+s)
+={}&
+\kappa y(T+s)
++\beta_0y(s)
++\beta_-y(a-s)
++\beta_+y(a+s)\\
+&+\beta_Ty(T-s)
++\beta_by(2d-s).
+\end{aligned}}
+\tag{2TP.10}
+\]
+
+Die gespiegelte Row ist
+\[
+\boxed{
+\begin{aligned}
+(Ay)(T-s)
+={}&
+\kappa y(T-s)
++\beta_0y(s)
++\beta_-y(a+s)
++\beta_+y(a-s)\\
+&+\beta_Ty(T+s)
++\beta_by(2d+s).
+\end{aligned}}
+\tag{2TP.11}
+\]
+
+Damit wird die Symmetrie des \(T\pm s\)-Blocks aus dem Ledger abgeleitet, nicht vorausgesetzt.
+
+#### Annulus-Hub direkt aus der kanonischen Hubdefinition
+
+Aus RB.3–RB.7 in audits/P11_P12_R32_RUECKBINDUNG_AUDIT.md gilt für den ungeraden Annulussektor
+\[
+(HE_{\mathcal A}w)(u)
+=
+p[w(u-a)-w(u+a)]
++r[w(u-b)-w(u+b)]
++q[w(u-T)-w(u+T)]
+\tag{2TP.12}
+\]
+mit
+\[
+p=\sqrt{\log2}\,2^{-3/4},
+\qquad
+r=\sqrt{\log3}\,3^{-3/4},
+\qquad
+q=\sqrt{\log2}\,2^{-3/2}.
+\tag{2TP.13}
+\]
+
+Für \(u=T+s\) sind die drei rechten Äste \(u+a,u+b,u+T\) außerhalb des Annulus; die linken Äste sind \(a+s,e+s,s\). Daher
+\[
+\boxed{
+(HE_{\mathcal A}w)(T+s)
+=
+p\,w(a+s)+r\,w(e+s)+q\,w(s).
+}
+\tag{2TP.14}
+\]
+
+Für \(u=T-s\) sind wiederum die drei rechten Äste außerhalb des Annulus. Die linken Äste sind
+\[
+a-s,\qquad e-s,\qquad -s.
+\]
+Auf SW1 gilt \(a-s>R,\ e-s>R,\ s>R\); alle drei Beträge liegen unter \(S=T+\sigma\). Wegen der Oddheit von \(w\),
+\[
+w(-s)=-w(s),
+\]
+folgt
+\[
+\boxed{
+(HE_{\mathcal A}w)(T-s)
+=
+p\,w(a-s)+r\,w(e-s)-q\,w(s).
+}
+\tag{2TP.15}
+\]
+
+Die rechten Äste sind uniform annulus-tot. Für den kleinsten Fall bei \(u=T-s\),
+\[
+(T-s)+a-S
+=
+a-s-\sigma
+>
+a-2\varepsilon
+>
+a-2\Delta
+>
+0,
+\]
+weil \(\sigma\le R<\varepsilon\), \(s<\varepsilon\) und \(2\Delta<a\). Die \(b\)- und \(T\)-Äste liegen noch weiter rechts.
+
+#### Beide augmentierten Rows
+
+Aus
+\[
+(I+A)y+HE_{\mathcal A}w=0
+\]
+folgen somit
+\[
+\boxed{
+\begin{aligned}
+0={}&
+(1+\kappa)y(T+s)
++\beta_Ty(T-s)
++\beta_0y(s)
++\beta_-y(a-s)
++\beta_+y(a+s)\\
+&+\beta_by(2d-s)
++p\,w(a+s)+r\,w(e+s)+q\,w(s),
+\end{aligned}}
+\tag{2TP.16}
+\]
+und
+\[
+\boxed{
+\begin{aligned}
+0={}&
+\beta_Ty(T+s)
++(1+\kappa)y(T-s)
++\beta_0y(s)
++\beta_-y(a+s)
++\beta_+y(a-s)\\
+&+\beta_by(2d+s)
++p\,w(a-s)+r\,w(e-s)-q\,w(s).
+\end{aligned}}
+\tag{2TP.17}
+\]
+
+Folglich ist der interne Tailblock exakt
+\[
+\boxed{
+M_T=
+\begin{pmatrix}
+1+\kappa & \beta_T\\
+\beta_T & 1+\kappa
+\end{pmatrix}.
+}
+\tag{2TP.18}
+\]
+
+Damit ist Stufe 2 hergeleitet. Die Invertierbarkeit von \(M_T\) wird erst in Stufe 3 bewertet.
 
 ### Stufe 3 — \(\det M_T>0\)
 
@@ -217,9 +380,13 @@ während \(3a+s>T_0\) unmittelbar ist. Die weiteren nicht aufgeführten \(E_1/E_
 
 Damit ist Stufe 1 vollständig auf die elf kanonischen Wörter zurückgeführt.
 
-### 4.2 Noch offen
+### 4.2 Stufe 2: Row-Zusammensetzung
 
-Stufe 2 (Zusammensetzen der beiden Rows), Stufe 3 (exakte Pivot-Invertierbarkeit) und Stufe 4 (Hub-Summe/Differenz) bleiben absichtlich offen, bis dieser Ledger-Commit separat adversarial geprüft wurde.
+Die Aggregation des zertifizierten Ledgers ergibt (2TP.10)–(2TP.11). Die Annulus-Hub-Beiträge werden unabhängig aus der kanonischen Hubformel (2TP.12) hergeleitet und liefern (2TP.14)–(2TP.15). Zusammen mit dem Identitätsterm in \(I+A\) entstehen die beiden augmentierten Rows (2TP.16)–(2TP.17) und damit der symmetrische interne Block (2TP.18).
+
+### 4.3 Noch offen
+
+Stufe 3 (exakte Pivot-Invertierbarkeit) und Stufe 4 (Summe/Differenz-Kanäle) bleiben offen, bis der neue Stufe-2-Head separat adversarial geprüft wurde.
 
 ---
 
