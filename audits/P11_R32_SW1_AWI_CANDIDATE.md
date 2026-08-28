@@ -254,6 +254,22 @@ Dann
 \tag{AWI.16}
 \]
 
+Denn mit \(t=\Delta-s\) und \(dt=-ds\) bleibt \(J\) invariant und
+\[
+\int_J |h(\Delta-s)|^2\,ds
+=
+\int_J |h(t)|^2\,dt.
+\]
+Ebenso
+\[
+\langle \mathsf R_\Delta f,g\rangle
+=
+\int_J f(\Delta-s)\overline{g(s)}\,ds
+=
+\int_J f(t)\overline{g(\Delta-t)}\,dt
+=
+\langle f,\mathsf R_\Delta g\rangle.
+\]
 Also ist \(\mathsf R_\Delta\) eine selbstadjungierte unitäre Involution.
 
 Die orthogonalen Projektoren auf die symmetrischen bzw. antisymmetrischen Profile sind
@@ -338,9 +354,11 @@ Zunächst
 \[
 2^{-9/4}<\frac14,
 \qquad
-2^{-15/4}<\frac18,
-\qquad
-\log2<1.
+2^{-15/4}<\frac18.
+\]
+Außerdem
+\[
+\log2=\int_1^2\frac{dt}{t}<\int_1^2 1\,dt=1.
 \]
 Daher
 \[
