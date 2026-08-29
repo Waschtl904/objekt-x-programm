@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stage 1/2, Stage 3 und Stage 4 zertifiziert; **Stage 5 erste äußere Δ-Schale hergeleitet, Re-Review/Zertifikat noch offen**; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stages 1–4 zertifiziert; Stage 5 zertifizierbar; **Stage 6 dritter-Schalen-2TP-Fold hergeleitet, Re-Review/Zertifikat offen**; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -1338,6 +1338,169 @@ Für ihn müssen die Companion-Rows
 v,\qquad a-v,\qquad T-v
 \]
 direkt klassifiziert werden. Erst danach kann entschieden werden, ob DD.100 zu einer zweiten echten Δ-Propagation führt oder an einer neuen Wall zerfällt.
+
+
+## 9. Stage 6 — dritte äußere Schale und 2TP-Fold
+
+Die direkte Iteration bleibt nicht beliebig uniform. Der erste neue Gate-Wall tritt bei der dritten äußeren Schale auf.
+
+Setze
+\[
+h_3:=a-4\Delta.
+\tag{DD.103}
+\]
+
+Für die festen Konstanten gilt
+\[
+\Delta<h_3<2\Delta.
+\tag{DD.104}
+\]
+Äquivalent sind
+\[
+a-5\Delta>0,
+\qquad
+6\Delta-a>0.
+\]
+
+Betrachte
+\[
+x_3:=2d+3\Delta+s.
+\tag{DD.105}
+\]
+
+### 9.1 Unterhalb der neuen Wall
+
+Falls
+\[
+s+\varepsilon<h_3,
+\tag{DD.106}
+\]
+bleibt die bisherige äußere Schalenstruktur erhalten. Es überleben exakt acht Echos und
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(2d+3\Delta+s)
+={}&
+-c_1y(2e-3\Delta-s)
++\alpha_b y(2d+3\Delta+s)\\
+&+\beta_-y(T-4\Delta-s)
++c_2y(4\Delta+s)
++\beta_b y(T-3\Delta-s).
+\end{aligned}}
+\tag{DD.107}
+\]
+
+### 9.2 Oberhalb der Wall: exakter Rückfall in 2TP
+
+Falls
+\[
+s+\varepsilon>h_3,
+\tag{DD.108}
+\]
+setze
+\[
+t:=h_3-s=a-4\Delta-s.
+\tag{DD.109}
+\]
+
+Dann gilt zunächst
+\[
+t<\varepsilon.
+\]
+Andererseits folgt aus \(R+\varepsilon<\Delta\)
+\[
+t
+>
+h_3-\varepsilon
+>
+h_3-(\Delta-R)
+=
+R+(a-5\Delta)
+>
+R.
+\tag{DD.110}
+\]
+
+Also
+\[
+\boxed{t\in(R,\varepsilon).}
+\tag{DD.111}
+\]
+
+Ferner
+\[
+2d+3\Delta+s
+=
+T-t.
+\tag{DD.112}
+\]
+
+Die direkte 11-Wort-Klassifikation liefert nun exakt 16 Echos und
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(x_3)
+={}&
+\kappa y(T-t)
++\beta_0y(t)
++\beta_-y(a+t)
++\beta_+y(a-t)\\
+&+\beta_Ty(T+t)
++\beta_by(2d+t).
+\end{aligned}}
+\tag{DD.113}
+\]
+
+Dies ist wortgleich die bereits zertifizierte gespiegelte 2TP-A-Row bei Parameter \(t\).
+
+Die Profilidentitäten sind
+\[
+t=2e-3\Delta-s,
+\tag{DD.114}
+\]
+\[
+a+t=T-4\Delta-s,
+\qquad
+a-t=4\Delta+s,
+\tag{DD.115}
+\]
+\[
+T+t=3a-4\Delta-s,
+\qquad
+2d+t=T-3\Delta-s.
+\tag{DD.116}
+\]
+
+Auch der Hub stimmt mit 2TP überein:
+\[
+\boxed{
+(HE_{\mathcal A}w)(x_3)
+=
+p\,w(a-t)+r\,w(e-t)-q\,w(t).
+}
+\tag{DD.117}
+\]
+
+Damit ist auf der oberen Seite der neuen Wall **kein neuer Pivot nötig**:
+\[
+\boxed{
+s+\varepsilon>h_3
+\Longrightarrow
+\text{dritte äußere Δ-Schale fällt exakt in SW1-2TP zurück.}
+}
+\tag{DD.118}
+\]
+
+### 9.3 Bedeutung für die finite Kette
+
+Stage 6 erzeugt erstmals einen echten Fold-Mechanismus:
+
+- unterhalb \(s+\varepsilon=h_3\) propagiert die äußere Δ-Schale weiter;
+- oberhalb der Wall endet die neue Schalenhierarchie bereits nach drei Δ-Schritten im zertifizierten 2TP-System.
+
+Damit ist eine unendliche uniforme Kaskade ausgeschlossen **für die obere Stage-6-Unterkammer**. Die untere Unterkammer DD.106 muss noch separat bis zur nächsten Wall verfolgt werden.
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
