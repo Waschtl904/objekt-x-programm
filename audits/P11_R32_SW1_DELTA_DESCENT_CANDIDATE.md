@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stages 1–4 zertifiziert; Stage 5 zertifizierbar; **Stage 6 dritter-Schalen-2TP-Fold hergeleitet, Re-Review/Zertifikat offen**; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stages 1–4 zertifiziert; Stage 5 PASS; **Stage 5B Companion-Brücke hergeleitet; Stage 6 isolierter Fold-Zertifikat PASS, Kettenstatus erst nach 5B-Zertifizierung**; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -1338,6 +1338,205 @@ Für ihn müssen die Companion-Rows
 v,\qquad a-v,\qquad T-v
 \]
 direkt klassifiziert werden. Erst danach kann entschieden werden, ob DD.100 zu einer zweiten echten Δ-Propagation führt oder an einer neuen Wall zerfällt.
+
+
+## 8A. Stage 5B — fehlende Companion-Brücke und zweite äußere Δ-Schale
+
+Vor Verwendung von Stage 6 muss die in DD.102 ausdrücklich offene Zwischenstufe geschlossen werden.
+
+### 8A.1 Erweiterter äußerer Companionblock für \(m=2,3,4\)
+
+Setze
+\[
+u_m:=m\Delta+s,
+\qquad
+m\in\{2,3,4\}.
+\tag{DD.102a}
+\]
+
+Da
+\[
+\varepsilon<\Delta<u_m<(m+1)\Delta\le5\Delta<a,
+\tag{DD.102b}
+\]
+liegen alle drei Parameter strikt außerhalb des inneren Strips und noch links von \(a\).
+
+Die direkte 11-Wort-Klassifikation liefert für **jedes**
+\[
+m\in\{2,3,4\}
+\]
+dieselben drei A-Rows:
+
+\[
+\boxed{
+(Ay)(u_m)
+=
+-c_1y(T-u_m)+c_1y(u_m)+c_2y(a+u_m).
+}
+\tag{DD.102c}
+\]
+
+\[
+\boxed{
+(Ay)(a-u_m)
+=
+-c_1y(a+u_m)+c_1y(a-u_m)+c_2y(T-u_m).
+}
+\tag{DD.102d}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(T-u_m)
+={}&
+-c_1y(u_m)
++\alpha_b y(T-u_m)
++c_2y(a-u_m)\\
+&+\beta_-y(a+u_m)
++\beta_b y(2d+u_m).
+\end{aligned}}
+\tag{DD.102e}
+\]
+
+Damit ist die y-Matrix **exakt dieselbe** wie in DD.65:
+\[
+\boxed{
+M_O=
+\begin{pmatrix}
+1+c_1&0&-c_1\\
+0&1+c_1&c_2\\
+-c_1&c_2&1+\alpha_b
+\end{pmatrix}>0.
+}
+\tag{DD.102f}
+\]
+
+Die Hubanteile werden ohne unnötige Vorzeichen-Fallzerlegung in ihrer kanonischen Form belassen:
+\[
+h_O(u_m)
+:=
+\begin{pmatrix}
+(HE_{\mathcal A}w)(u_m)\\
+(HE_{\mathcal A}w)(a-u_m)\\
+(HE_{\mathcal A}w)(T-u_m)
+\end{pmatrix}.
+\tag{DD.102g}
+\]
+Alle eventuell wechselnden Vorzeichen einzelner \(w\)-Argumente betreffen nur die rechte Seite, nicht den invertierbaren y-Block.
+
+Folglich gilt für \(m=2,3,4\) erneut
+\[
+X_O(u_m)
+=
+-M_O^{-1}
+\bigl(r_Oy(a+u_m)+\beta_b e_3D_+(u_m)+h_O(u_m)\bigr),
+\tag{DD.102h}
+\]
+mit demselben nichtverschwindenden Kopplungskoeffizienten
+\[
+\gamma_Q<0
+\]
+aus DD.73–DD.74.
+
+### 8A.2 Fehlende zweite äußere Schalenrow
+
+Setze
+\[
+x_2:=2d+2\Delta+s.
+\tag{DD.102i}
+\]
+
+Die direkte 11-Wort-Klassifikation ist auf ganz SW1 uniform. Es überleben exakt acht Echos und
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(2d+2\Delta+s)
+={}&
+-c_1y(2e-2\Delta-s)
++\alpha_b y(2d+2\Delta+s)\\
+&+\beta_-y(T-3\Delta-s)
++c_2y(3\Delta+s)
++\beta_b y(T-2\Delta-s).
+\end{aligned}}
+\tag{DD.102j}
+\]
+
+Für den Hub gilt exakt
+\[
+\boxed{
+\begin{aligned}
+(HE_{\mathcal A}w)(2d+2\Delta+s)
+={}&
+p\,w(3\Delta+s)\\
+&+r\,w(2\Delta+s-e)
++q\,w(2\Delta+s-2e),
+\end{aligned}}
+\tag{DD.102k}
+\]
+wobei \(w\) als ungerade, annulus-getragene Funktion verstanden wird; die Formel benötigt daher keine zusätzliche Vorzeichenkammer.
+
+Somit
+\[
+\boxed{
+\begin{aligned}
+0={}&
+(1+\alpha_b)y(2d+2\Delta+s)
++\beta_-y(T-3\Delta-s)
++c_2y(3\Delta+s)\\
+&+\beta_b y(T-2\Delta-s)
+-c_1y(2e-2\Delta-s)\\
+&+p\,w(3\Delta+s)
++r\,w(2\Delta+s-e)
++q\,w(2\Delta+s-2e).
+\end{aligned}}
+\tag{DD.102l}
+\]
+
+### 8A.3 Lückenlose Propagationskette bis Stage 6
+
+Stage 5 erzeugt als Companionparameter
+\[
+u_2=2\Delta+s.
+\]
+DD.102h eliminiert dessen Companionprofile und erzeugt wegen
+\[
+\gamma_Q\ne0
+\]
+den nächsten Kanal
+\[
+D_+(u_2)=y(2d+2\Delta+s),
+\]
+dessen Row DD.102l nun direkt vorliegt.
+
+Diese zweite Schalenrow enthält den Companionparameter
+\[
+u_3=3\Delta+s.
+\]
+Erneut liefert DD.102h den nächsten Kanal
+\[
+D_+(u_3)=y(2d+3\Delta+s).
+\]
+
+Damit ist der Übergang
+\[
+\boxed{
+D_+(\Delta+s)
+\longrightarrow
+D_+(2\Delta+s)
+\longrightarrow
+D_+(3\Delta+s)
+}
+\tag{DD.102m}
+\]
+jetzt vollständig durch direkte Rows und invertierbare Companionblöcke belegt.
+
+Für die untere Stage-6-Unterkammer tritt anschließend
+\[
+u_4=4\Delta+s
+\]
+auf; DD.102h gilt auch hierfür und ermöglicht die Fortsetzung zur vierten äußeren Schale.
 
 
 ## 9. Stage 6 — dritte äußere Schale und 2TP-Fold
