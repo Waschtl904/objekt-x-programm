@@ -185,15 +185,23 @@ Mref_minus=Mloc-CJ
 assert Mref_plus.is_positive_definite is True
 assert Mref_minus.is_positive_definite is True
 
-# Nonzero next-shell coefficient gamma_Q
+# Nonzero next-shell coefficient gamma_Q.
+# Avoid a full symbolic M3 inverse: solve M3*x=e3 explicitly.
 rO=sp.Matrix([c2,-c1,betam])
 e3=sp.Matrix([0,0,1])
-rho3=sp.simplify((rO.T*M3.inv()*e3)[0])
 SO=sp.simplify(1+alphab-(c1**2+c2**2)/(1+c1))
 assert SO.is_positive is True
-assert sp.simplify(rho3 + 2*c2/((1+c1)*SO))==0
-assert rho3.is_negative is True
-gammaQ=sp.simplify(-betab*rho3)
+x3=1/SO
+x1=c1*x3/(1+c1)
+x2=-c2*x3/(1+c1)
+xvec=sp.Matrix([x1,x2,x3])
+for entry in (M3*xvec-e3):
+    assert sp.cancel(sp.together(entry)) == 0
+rho3_expected=-2*c2/((1+c1)*SO)
+rho3=sp.expand((rO.T*xvec)[0])
+assert sp.cancel(sp.together(rho3-rho3_expected)) == 0
+assert rho3_expected.is_negative is True
+gammaQ=sp.simplify(-betab*rho3_expected)
 assert gammaQ.is_negative is True
 assert gammaQ.is_zero is False
 
