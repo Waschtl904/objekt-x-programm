@@ -571,6 +571,183 @@ Die Schur-Frage lautet nun präzise:
 
 ---
 
+## 7A. Exakte Cross-Gram-Reconciliation
+
+Setze
+\[
+\boxed{
+J:=\mathscr T^{1/2}K.
+}
+\tag{A2.29a}
+\]
+
+Da \(\mathscr T^{1/2}\) beschränkt invertierbar ist, ist \(J\) abgeschlossen.
+
+Für \(v\in\mathscr H_+\) gilt
+\[
+\begin{aligned}
+v\in J^\perp
+&\iff
+\langle v,\mathscr T^{1/2}k\rangle=0
+\quad\forall k\in K\\
+&\iff
+\mathscr T^{1/2}v\in K^\perp.
+\end{aligned}
+\]
+Also
+\[
+\boxed{
+J^\perp
+=
+\mathscr T^{-1/2}K^\perp.
+}
+\tag{A2.29b}
+\]
+
+Da
+\[
+K=\ker(E_I^*H|_+),
+\]
+liefert Hilbertraumdualität
+\[
+K^\perp
+=
+\overline{\operatorname{Ran}(H^*E_I)}.
+\tag{A2.29c}
+\]
+
+Definiere wie im Cross-Gram-Audit
+\[
+\mathscr M_I
+:=
+\mathscr T^{-1/2}H^*E_I,
+\qquad
+\mathscr M_A
+:=
+\mathscr T^{-1/2}H^*E_{\mathcal A}.
+\tag{A2.29d}
+\]
+
+Dann
+\[
+\boxed{
+J^\perp
+=
+\overline{\operatorname{Ran}\mathscr M_I}.
+}
+\tag{A2.29e}
+\]
+
+Nun setze
+\[
+\widehat Q
+:=
+\mathscr T^{1/2}
+P_{J^\perp}
+\mathscr T^{-1/2}.
+\tag{A2.29f}
+\]
+
+Es gilt
+\[
+\ker\widehat Q
+=
+\mathscr T^{1/2}J
+=
+\mathscr T K,
+\]
+und
+\[
+\operatorname{Ran}\widehat Q
+=
+\mathscr T^{1/2}J^\perp
+=
+K^\perp.
+\]
+Außerdem fixiert \(\widehat Q\) den Raum \(K^\perp\).
+
+Die Projektion mit Bild \(K^\perp\) und Kern \(\mathscr T K\) ist eindeutig. Nach A2.11 und A2.15 folgt daher
+\[
+\boxed{
+Q_{\mathscr T,K}
+=
+\mathscr T^{1/2}
+P_{J^\perp}
+\mathscr T^{-1/2}.
+}
+\tag{A2.29g}
+\]
+
+Wegen
+\[
+H^*=-H
+\]
+ist
+\[
+\mathscr M_A
+=
+-\mathscr T^{-1/2}HE_{\mathcal A}.
+\]
+Somit
+\[
+\boxed{
+\mathcal L_{\rm ann}^{\rm SW1}
+=
+-\mathscr T^{1/2}
+P_{\overline{\operatorname{Ran}\mathscr M_I}}
+\mathscr M_A.
+}
+\tag{A2.29h}
+\]
+
+Da \(\mathscr T^{1/2}\) injektiv ist,
+\[
+\boxed{
+\ker\mathcal L_{\rm ann}^{\rm SW1}
+=
+\ker\!\left(
+P_{\overline{\operatorname{Ran}\mathscr M_I}}
+\mathscr M_A
+\right).
+}
+\tag{A2.29i}
+\]
+
+Und nach der Standardidentität
+\[
+\ker\mathscr M_I^*
+=
+\left(\overline{\operatorname{Ran}\mathscr M_I}\right)^\perp
+\]
+folgt exakt
+\[
+\boxed{
+\ker\mathcal L_{\rm ann}^{\rm SW1}
+=
+\ker(\mathscr M_I^*\mathscr M_A).
+}
+\tag{A2.29j}
+\]
+
+Damit sind die drei bisher getrennt verwendeten Formen exakt identisch:
+
+\[
+\boxed{
+\begin{array}{c}
+\text{augmentierter Blockkern}\\
+\Updownarrow\\
+\ker\mathcal L_{\rm ann}^{\rm SW1}\\
+\Updownarrow\\
+\text{Cross-Gram-Kern }\ker(\mathscr M_I^*\mathscr M_A).
+\end{array}
+}
+\tag{A2.29k}
+\]
+
+Die Quadratwurzel wird hier nur zur geometrischen Reconciliation benutzt; die Definition A2.18 des Annulusoperators selbst bleibt in der inversefreien \(\mathscr T\)-Kompressionsform.
+
+---
+
 ## 8. Rolle von P12 auf SW1
 
 Für die Kernelgleichheit A2.27 ist keine äußere Hub-Injektivität nötig.
