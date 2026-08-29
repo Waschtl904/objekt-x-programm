@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Stacked base:** research/sw1-delta-descent@d73d3fdf4b1f919fc9526fc09ce206866b472704  
-> **Status:** ?[O] — Coverage-Satz hergeleitet, adversarialer Re-Review/Zertifikat noch offen; keine Promotion.  
+> **Status:** `AI-GREEN candidate + independent GREEN (certificate)` — A0 Full Free-Coordinate Coverage auf SW1 exhaustiv geprüft; **keine Promotion**.  
 > **Scope:** ausschließlich A0/Randfall-/Uniformitäts-Firewall auf SW1. Keine Schur-Injektivität.
 
 ---
@@ -457,4 +457,39 @@ Der nächste mathematische Knoten ist nach erfolgreichem Review daher
 \]
 
 Dort ist entweder ein endlicher invertierbarer Zell-/Orbitoperator oder ein exakter Gegenvektor zu suchen.
+
+---
+
+## 10. Review-/Zertifikatsstatus
+
+Der A0-Coverage-Satz wurde adversarial gegen die SW1-KNF-, A-Wall- und Stage-12-Eingaben gegengeprüft.
+
+Das reproduzierbare Zertifikat
+`scripts/certify_sw1_a0_coverage.py`
+prüft mit Python/SymPy 1.14.0:
+
+- den SW1-Kollaps (R<\Delta/2) und damit den Ausschluss der historischen R-Wände;
+- die vollständige positive Hub-Wall-Liste im Horizont;
+- sämtliche Zelllängen in beiden offenen \(\varepsilon\)-Chambers;
+- die Degenerationsfläche \(\varepsilon=\Delta/2\);
+- die explizite Horizontschwanzzelle;
+- die exakte Gleichheit der Zelllängensumme mit dem gesamten blinden Supportmaß.
+
+Committed Script-Blob:
+`dcc30ffd51cda487efd34b90b58f8c7913e988d1`.
+
+Exakte committed Ausführung: **PASS**.
+
+Damit gilt:
+\[
+\boxed{
+\mathrm{SW1\!-\!A0\ Coverage}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+Keine Promotion. Insbesondere bleibt A1 / die Injektivität des gekoppelten finite-cell Rohsystems offen.
+
 
