@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; **Stages 1/2–9 jeweils AI-GREEN + independent GREEN (certificate)** im jeweiligen Scope; globaler reflektierter B-Block geschlossen; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stages 1/2–9 zertifiziert; **Stage 10A Wall/Fold + äußerer Durchgangsblock hergeleitet, globaler Restblock auf (J_B) offen**; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -2664,6 +2664,376 @@ Damit gilt für Stage 9:
 }
 \]
 
+
+
+## 13. Stage 10A — B-Zentrum-Wall \(h_B\), äußerer Durchgangsblock und innerer Fold
+
+Setze
+\[
+B_1:=b+\Delta,
+\qquad
+B_2:=b+2\Delta,
+\tag{DD.195}
+\]
+und
+\[
+E_0:=e-\Delta,
+\qquad
+D_1:=d+\Delta,
+\qquad
+F_0:=a+e-\Delta.
+\tag{DD.196}
+\]
+
+Dann gilt die feste Identität
+\[
+\boxed{
+h_B:=E_0=e-\Delta=a-e-2\Delta=T-B_1.
+}
+\tag{DD.197}
+\]
+
+Ferner
+\[
+\Delta<h_B<2\Delta.
+\tag{DD.198}
+\]
+
+Die neue Wall ist
+\[
+s+\varepsilon=h_B.
+\tag{DD.199}
+\]
+
+Definiere
+\[
+J_B:=(h_B-\varepsilon,\varepsilon).
+\tag{DD.200}
+\]
+Sie ist genau dann nichtleer, wenn
+\[
+\varepsilon>\frac{h_B}{2}.
+\]
+
+### 13.1 Unterhalb der Wall: uniformer äußerer Differenzblock
+
+Falls
+\[
+s+\varepsilon<h_B,
+\tag{DD.201}
+\]
+liefern die direkten elf-Wort-Rows:
+
+\[
+\boxed{
+(Ay)(E_0+s)
+=
+-c_1y(B_1-s)
++c_1y(E_0+s)
++c_2y(F_0+s),
+}
+\tag{DD.202}
+\]
+
+\[
+\boxed{
+(Ay)(E_0-s)
+=
+-c_1y(B_1+s)
++c_1y(E_0-s)
++c_2y(F_0-s),
+}
+\tag{DD.203}
+\]
+
+\[
+\boxed{
+(Ay)(D_1+s)
+=
+-c_1y(F_0-s)
++c_1y(D_1+s)
++c_2y(B_1+s),
+}
+\tag{DD.204}
+\]
+
+\[
+\boxed{
+(Ay)(D_1-s)
+=
+-c_1y(F_0+s)
++c_1y(D_1-s)
++c_2y(B_1-s),
+}
+\tag{DD.205}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(B_1+s)
+={}&
+-c_1y(E_0-s)
++\alpha_b y(B_1+s)
++\beta_-y(F_0-s)\\
+&+c_2y(D_1+s)
++\beta_b y(C-s),
+\end{aligned}}
+\tag{DD.206}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(B_1-s)
+={}&
+-c_1y(E_0+s)
++\alpha_b y(B_1-s)
++\beta_-y(F_0+s)\\
+&+c_2y(D_1-s)
++\beta_b y(C+s),
+\end{aligned}}
+\tag{DD.207}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(F_0+s)
+={}&
+-c_1y(D_1-s)
++\alpha_b y(F_0+s)
++\beta_-y(B_1-s)\\
+&+c_2y(E_0+s)
++\beta_b y(B_2-s),
+\end{aligned}}
+\tag{DD.208}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(F_0-s)
+={}&
+-c_1y(D_1+s)
++\alpha_b y(F_0-s)
++\beta_-y(B_1+s)\\
+&+c_2y(E_0-s)
++\beta_b y(B_2+s).
+\end{aligned}}
+\tag{DD.209}
+\]
+
+Setze
+\[
+X_{B,1}(s)
+:=
+\begin{pmatrix}
+D_{E_0}(s)\\
+D_{D_1}(s)\\
+D_{B_1}(s)\\
+D_{F_0}(s)
+\end{pmatrix}.
+\tag{DD.210}
+\]
+
+Nach Subtraktion der Minus- von der Plus-Row und Hinzunahme des Identitätsterms ergibt sich
+
+\[
+\boxed{
+M_{B,1}X_{B,1}
++
+c_{11}e_3D_C
++
+c_{11}e_4D_{B_2}
++
+W_{B,1}
+=0,
+}
+\tag{DD.211}
+\]
+mit
+
+\[
+\boxed{
+M_{B,1}
+=
+\begin{pmatrix}
+1+c_1&0&c_1&c_2\\
+0&1+c_1&c_2&c_1\\
+c_1&c_2&1+\alpha_b&2c_2\\
+c_2&c_1&2c_2&1+\alpha_b
+\end{pmatrix}.
+}
+\tag{DD.212}
+\]
+
+Der Block zerfällt unter der Paarreflexion
+\[
+(E_0,D_1)\leftrightarrow(E_0,D_1),
+\qquad
+(B_1,F_0)\leftrightarrow(B_1,F_0)
+\]
+in die beiden \(2\times2\)-Blöcke
+
+\[
+K_\sigma
+=
+\begin{pmatrix}
+1+c_1&c_1+\sigma c_2\\
+c_1+\sigma c_2&1+\alpha_b+2\sigma c_2
+\end{pmatrix},
+\qquad
+\sigma=\pm1.
+\tag{DD.213}
+\]
+
+Beide sind strikt positiv definit; damit
+\[
+\boxed{M_{B,1}>0.}
+\tag{DD.214}
+\]
+
+Außerdem
+\[
+\det K_+-\det K_-
+=
+4c_2>0.
+\tag{DD.215}
+\]
+
+Daher ist
+\[
+(M_{B,1}^{-1})_{3,4}<0.
+\tag{DD.216}
+\]
+
+Somit ist der durch Schur-Elimination induzierte Durchgangskoeffizient vom alten Zentrum \(C\) zum nächsten Zentrum \(B_2\)
+
+\[
+\boxed{
+\gamma_{B,1}
+:=
+-c_{11}^2(M_{B,1}^{-1})_{3,4}
+>0.
+}
+\tag{DD.217}
+\]
+
+Insbesondere verschwindet die \(B\)-Zentrum-Propagation unterhalb der Wall nicht.
+
+### 13.2 Oberhalb der Wall: neue Reflexion \(s\mapsto h_B-s\)
+
+Sei
+\[
+s+\varepsilon>h_B.
+\tag{DD.218}
+\]
+Dann
+\[
+u:=h_B-s
+\tag{DD.219}
+\]
+erfüllt
+\[
+R<u<\varepsilon.
+\tag{DD.220}
+\]
+
+Wegen \(h_B>\Delta\) gilt sogar
+\[
+u+\varepsilon>\Delta,
+\]
+also
+\[
+u\in J.
+\tag{DD.221}
+\]
+
+Die vier exakten Profilidentitäten lauten
+
+\[
+\boxed{
+E_0-s=u,
+}
+\tag{DD.222}
+\]
+\[
+\boxed{
+D_1+s=a-u,
+}
+\tag{DD.223}
+\]
+\[
+\boxed{
+F_0-s=a+u,
+}
+\tag{DD.224}
+\]
+\[
+\boxed{
+B_1+s=T-u.
+}
+\tag{DD.225}
+\]
+
+Damit sind die direkten Rows bei
+\[
+E_0-s,\quad D_1+s,\quad F_0-s,\quad B_1+s
+\]
+**exakt** die bereits zertifizierten inneren Rows bei
+\[
+u,\quad a-u,\quad a+u,\quad T-u.
+\]
+
+Da \(u\in J\), gehört dieser Fold zum bereits zertifizierten Stage-4/AWI-\(10\times10\)-Block.
+
+Insbesondere ist die gesamte „Plus-Hälfte“ der neuen \(B_1\)-Wall kein neuer unbekannter Rowtyp.
+
+### 13.3 Was oberhalb der Wall noch offen bleibt
+
+Die komplementären vier Profile
+\[
+E_0+s,\qquad
+D_1-s,\qquad
+B_1-s,\qquad
+F_0+s
+\tag{DD.226}
+\]
+bleiben außerhalb dieses unmittelbaren Folds.
+
+Ihre vier direkten Rows besitzen wiederum einen symmetrischen positiven Rohblock, koppeln jedoch zugleich an
+\[
+C+s
+\quad\text{und}\quad
+B_2-s.
+\]
+
+Bevor daraus eine globale Weitergabe \(B_1\to B_2\) abgeleitet werden darf, muss geprüft werden, ob diese Restprofile über die neue Involution
+\[
+\boxed{
+\mathcal J_B:s\mapsto h_B-s
+}
+\tag{DD.227}
+\]
+mit den bereits gefalteten inneren Profilen auf \(J_B\) physisch überlappen.
+
+Daher lautet der Stage-10A-Status:
+
+\[
+\boxed{
+\begin{array}{l}
+\text{unterhalb }s+\varepsilon=h_B:
+\text{ positiver Durchgangsblock mit }\gamma_{B,1}>0;\\[1mm]
+\text{oberhalb }s+\varepsilon=h_B:
+\text{ Plus-Hälfte faltet exakt in den bekannten inneren AWI/2TP-Block;}\\[1mm]
+\text{globaler Restblock auf }J_B:
+?[O].
+\end{array}}
+\tag{DD.228}
+\]
+
+Dies ist noch keine globale \(B_1\to B_2\)-Rekurrenz.
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
