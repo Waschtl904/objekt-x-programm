@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stage 1/2 und Stage 3 zertifiziert; **Stage 4 Companion-Blöcke hergeleitet, Re-Review/Zertifikat noch ausstehend**; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; **Stage 1/2, Stage 3 und Stage 4 jeweils AI-GREEN + independent GREEN (certificate)**; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -1186,6 +1186,25 @@ Sie ist noch keine finite Rekurrenz, weil für
 u>\varepsilon
 \]
 die Row bei \(2d+u\) noch nicht hergeleitet wurde. Genau diese nächste Schale ist nun der einzige neue y-Rowtyp, der für die Fortsetzung benötigt wird.
+
+**Stage-4-Reviewstatus.** Die Companion-Ledger in den drei Regimen, die positiven Blöcke \(M_O\), \(M_5\), die beiden reflektierten \(J\)-Blöcke sowie der nichtverschwindende nächste-Schalen-Koeffizient \(\gamma_Q<0\) wurden separat adversarial geprüft und durch
+scripts/certify_sw1_delta_descent_stage4.py
+mit Python/SymPy 1.14.0 reproduzierbar zertifiziert (PASS).
+
+Zertifizierter Script-Blob:
+`a96ea8521290b4cf9f369586047ba47193ca0342`.
+
+Damit gilt ausschließlich für Stage 4:
+\[
+\boxed{
+\mathrm{SW1\!-\!\Delta DESCENT\ (Stage\ 4)}:
+\text{AI-GREEN}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+Das Gesamtziel bleibt `?[O]`.
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
