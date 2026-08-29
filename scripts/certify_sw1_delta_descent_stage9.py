@@ -163,8 +163,8 @@ def expected_block(sig):
       [-c1,0,c2,-c11,1+alphab,-2*c2],
       [c2,0,-c1,0,-2*c2,1+alphab],
     ])
-assert Bp==expected_block(1)
-assert Bm==expected_block(-1)
+assert all(sp.simplify(Bp[i,j]-expected_block(1)[i,j])==0 for i in range(6) for j in range(6))
+assert all(sp.simplify(Bm[i,j]-expected_block(-1)[i,j])==0 for i in range(6) for j in range(6))
 assert Bp.is_positive_definite is True
 assert Bm.is_positive_definite is True
 assert sp.simplify(sp.Rational(1,2)-c11).is_positive is True
