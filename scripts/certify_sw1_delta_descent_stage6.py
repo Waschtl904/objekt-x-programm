@@ -144,7 +144,7 @@ DD=2*r+u+v+g
 hDD=sp.simplify(a-4*DD)
 tt=sp.simplify(hDD-ss)
 # t > h3-eps > R+(a-5Delta)
-assert sp.simplify((hDD-eeps)-R-(a-5*DD))==0
+assert sp.simplify((hDD-eeps)-R-(a-5*DD)-g)==0
 assert sp.simplify(a-5*Delta).is_positive is True
 
 # Hub identity in folded chamber: x3=T-t.
