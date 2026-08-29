@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Stacked base:** research/sw1-a0-coverage@846b856b0e07a40ac24236b1a05b7b430e86e3e0  
-> **Status:** ?[O] — vollständiges Rohsystem hergeleitet; Zertifikat/Re-Review offen; keine Promotion.  
+> **Status:** `AI-GREEN candidate + independent GREEN (certificate)` — vollständiges operatorwertiges finite-cell Rohsystem auf SW1 zertifiziert; **keine Promotion**.  
 > **Scope:** erste augmentierte Gleichung auf SW1 nach A0-Coverage. Keine Injektivität.
 
 ---
@@ -655,3 +655,38 @@ wieder direkt erreichbar.
 
 **Keine Aussage in A1 beweist A2-Injektivität, HT-RED, Closed Range,
 Objekt X oder RH.**
+
+---
+
+## 10. Review-/Zertifikatsstatus
+
+Das reproduzierbare Zertifikat
+`scripts/certify_sw1_a1_raw_archetypes.py`
+wurde auf der exakt committed Fassung mit Python/SymPy 1.14.0 ausgeführt.
+
+Committed Script-Blob:
+`eb9d99593f6a34f429f5a723b9362d18db46f171`.
+
+Ergebnis: **PASS**.
+
+Das Zertifikat prüft insbesondere:
+
+- alle elf Vier-Echo-Wörter direkt;
+- die exhaustive Rekonstruktion der fünf inneren A-Wände in beiden \(\varepsilon\)-Chambers;
+- die neun Row-Archetypen A1-R0 bis A1-R7 einschließlich R4I/R4II;
+- die Degeneration \(\varepsilon=\Delta/2\);
+- die vollständige positive Hub-Support-Wall-Liste;
+- die zusätzliche Umschaltung des rechten T-Hubasts bei \(x=\sigma\).
+
+Damit gilt ausschließlich für das Rohsystem:
+\[
+\boxed{
+\mathrm{SW1\!-\!A1}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+Keine Promotion. Die Injektivität des resultierenden Operators bleibt offen.
+
