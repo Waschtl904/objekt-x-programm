@@ -3056,6 +3056,144 @@ Der globale Restquotient auf \(J_B\) bleibt ausdrücklich \(?[O]\).
 
 
 
+## 14. Stage 10B — kombinierte Reflexionsgruppe und endliche Parameterorbits
+
+Stage 10A zeigt, dass auf \(J_B\) die neue Reflexion
+\[
+r_B(s):=h_B-s
+\tag{DD.229}
+\]
+mit der bereits vorhandenen AWI-Reflexion
+\[
+r_\Delta(s):=\Delta-s
+\tag{DD.230}
+\]
+zusammentrifft.
+
+### 14.1 Die Komposition ist eine feste Translation
+
+Setze
+\[
+\boxed{
+k_B:=h_B-\Delta=e-2\Delta>0.
+}
+\tag{DD.231}
+\]
+
+Dann
+\[
+\boxed{
+r_\Delta\circ r_B(s)=s-k_B,
+}
+\tag{DD.232}
+\]
+und
+\[
+\boxed{
+r_B\circ r_\Delta(s)=s+k_B.
+}
+\tag{DD.233}
+\]
+
+Die von \(r_\Delta,r_B\) erzeugte Parametergruppe ist damit die eindimensionale Diederstruktur
+\[
+s\longmapsto s+n k_B,
+\qquad
+s\longmapsto \Delta-s+n k_B,
+\qquad
+n\in\mathbb Z.
+\tag{DD.234}
+\]
+
+### 14.2 Exakte Größenordnung des Translationsschritts
+
+Für die festen Konstanten gilt
+\[
+\boxed{
+0<k_B<\frac{\Delta}{2},
+}
+\tag{DD.235}
+\]
+und sogar
+\[
+\boxed{
+2k_B<\Delta<3k_B.
+}
+\tag{DD.236}
+\]
+
+Die linke Ungleichung ist äquivalent zu
+\[
+\Delta-2k_B
+=
+6\Delta-a
+=
+g_6>0,
+\tag{DD.237}
+\]
+also exakt dem bereits in Stage 7 zertifizierten positiven Terminalslack.
+
+Die rechte Ungleichung
+\[
+3k_B-\Delta>0
+\tag{DD.238}
+\]
+ist eine weitere feste Konstantenungleichung; sie wird im Stage-10B-Zertifikat exakt geprüft.
+
+### 14.3 Uniforme Endlichkeit jedes kombinierten Orbits
+
+Der gesamte SW1-Parameterstrip besitzt Länge
+\[
+\varepsilon-R<\varepsilon<\Delta<3k_B.
+\tag{DD.239}
+\]
+
+Betrachte zunächst eine Translationsklasse
+\[
+\{s+n k_B:n\in\mathbb Z\}.
+\]
+Vier verschiedene Punkte dieser Klasse hätten Spannweite mindestens
+\[
+3k_B>\varepsilon-R,
+\]
+und können daher nicht sämtlich in \((R,\varepsilon)\) liegen.
+
+Somit enthält jede Translationsklasse höchstens drei aktive Parameterpunkte.
+
+Ein voller diederischer Orbit ist die Vereinigung von höchstens zwei solchen Klassen:
+\[
+\{s+n k_B\}
+\cup
+\{\Delta-s+n k_B\}.
+\]
+
+Daher gilt die uniforme Schranke
+\[
+\boxed{
+\#\bigl(\mathcal O(s)\cap(R,\varepsilon)\bigr)\le6.
+}
+\tag{DD.240}
+\]
+
+### 14.4 Konsequenz für den globalen Stage-10-Rest
+
+Die Überlagerung der beiden Reflexionsmechanismen kann somit **keine unendliche neue Parameterkaskade** erzeugen.
+
+Nach Wahl einer messbaren Orbitfundamentalmenge zerfällt der globale Rest auf \(J_B\) in endliche physische Profilorbits mit höchstens sechs Parameterpunkten.
+
+Auf jedem solchen Orbit müssen die nominalen Stage-10-Profile noch physisch quotientiert und die zugehörige endliche Kompressionsmatrix von \(I+A\) explizit aufgebaut werden.
+
+Der nächste Schritt ist daher endlich-dimensional:
+\[
+\boxed{
+\text{Stage 10C: Orbit-Quotient und endlicher Restblock für }|\mathcal O|\le6.
+}
+\tag{DD.241}
+\]
+
+**Firewall:** DD.240 beweist Endlichkeit der Parametergeometrie, aber noch nicht die Invertierbarkeit jedes vollständigen Stage-10C-Blocks und noch keine globale \(B_1\to B_2\)-Rekurrenz.
+
+
 ## 6. Zertifikatsstatus und nächste Stufe
 
 Das reproduzierbare Skript scripts/certify_sw1_delta_descent_stage12.py prüft:
