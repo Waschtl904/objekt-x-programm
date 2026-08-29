@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; **Stage 1/2 und Stage 3 jeweils AI-GREEN + independent GREEN (certificate)**; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stage 1/2 und Stage 3 zertifiziert; **Stage 4 Companion-Blöcke hergeleitet, Re-Review/Zertifikat noch ausstehend**; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -717,6 +717,475 @@ Das Gesamtziel bleibt:
 \[
 \boxed{\mathrm{SW1\!-\!\Delta DESCENT}:?[O].}
 \]
+
+
+## 7. Stage 4 — Companion-Row-Blöcke
+
+Stage 3 lokalisiert die fehlenden Profile bei
+\[
+u=\Delta\pm s.
+\]
+Wir leiten nun die benötigten Rows direkt aus den elf Wörtern von \(A\) ab.
+
+### 7.1 Äußerer Companion-Bereich \(u>\varepsilon\)
+
+Für die tatsächlich benötigten verschobenen Parameter gilt zusätzlich
+\[
+R<u<2\Delta<e.
+\tag{DD.56}
+\]
+
+Die direkten 11-Wort-Ledger ergeben:
+
+\[
+\boxed{
+(Ay)(u)
+=
+-c_1y(T-u)+c_1y(u)+c_2y(a+u).
+}
+\tag{DD.57}
+\]
+
+\[
+\boxed{
+(Ay)(a-u)
+=
+-c_1y(a+u)+c_1y(a-u)+c_2y(T-u).
+}
+\tag{DD.58}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(T-u)
+={}&
+-c_1y(u)
++\alpha_b y(T-u)
++c_2y(a-u)\\
+&+\beta_-y(a+u)
++\beta_b y(2d+u).
+\end{aligned}}
+\tag{DD.59}
+\]
+
+Dabei
+\[
+\alpha_b=c_1+c_5+c_{11}.
+\]
+
+Die zugehörigen Hub-Rows sind
+\[
+\boxed{
+\begin{aligned}
+H_{\mathcal A}(u)
+={}&
+-p[w(a-u)+w(a+u)]\\
+&-r[w(b-u)+w(b+u)]
+-qw(T-u),
+\end{aligned}}
+\tag{DD.60}
+\]
+
+\[
+\boxed{
+H_{\mathcal A}(a-u)
+=
+-pw(u)-pw(T-u)-rw(d+u)-qw(a+u),
+}
+\tag{DD.61}
+\]
+
+\[
+\boxed{
+H_{\mathcal A}(T-u)
+=
+pw(a-u)+rw(e-u)-qw(u).
+}
+\tag{DD.62}
+\]
+
+Setze
+\[
+X_O(u)
+:=
+\begin{pmatrix}
+y(u)\\y(a-u)\\y(T-u)
+\end{pmatrix},
+\quad
+A_+(u):=y(a+u),
+\quad
+Q(u):=y(2d+u).
+\tag{DD.63}
+\]
+
+Dann haben die drei augmentierten Rows die Form
+\[
+\boxed{
+M_OX_O(u)
++r_OA_+(u)
++\beta_b e_3Q(u)
++h_O(u)
+=0,
+}
+\tag{DD.64}
+\]
+mit
+\[
+M_O=
+\begin{pmatrix}
+1+c_1&0&-c_1\\
+0&1+c_1&c_2\\
+-c_1&c_2&1+\alpha_b
+\end{pmatrix},
+\tag{DD.65}
+\]
+\[
+r_O=
+\begin{pmatrix}
+c_2\\-c_1\\\beta_-
+\end{pmatrix}.
+\tag{DD.66}
+\]
+
+Der Block ist strikt positiv definit. Tatsächlich sind die ersten beiden führenden Hauptminoren positiv, und
+\[
+\det M_O
+=
+(1+c_1)
+\left[
+(1+c_1)(1+\alpha_b)-c_1^2-c_2^2
+\right].
+\tag{DD.67}
+\]
+Wegen
+\[
+0<c_1<\frac12,\qquad 0<c_2<\frac14,\qquad \alpha_b>0
+\]
+ist
+\[
+(1+c_1)(1+\alpha_b)-c_1^2-c_2^2
+>
+1-\frac14-\frac1{16}
+=
+\frac{11}{16}>0.
+\]
+Also
+\[
+\boxed{M_O>0.}
+\tag{DD.68}
+\]
+
+### 7.2 Äußerer Δ-Kopplungskoeffizient ist nicht Null
+
+Aus DD.64:
+\[
+X_O
+=
+-M_O^{-1}
+\bigl(r_OA_++\beta_b e_3Q+h_O\bigr).
+\tag{DD.69}
+\]
+
+Der \(y\)-Teil von \(G_\pm\) ist genau
+\[
+r_O^TX_O.
+\tag{DD.70}
+\]
+
+Setze
+\[
+S_O
+:=
+1+\alpha_b
+-\frac{c_1^2+c_2^2}{1+c_1}>0.
+\tag{DD.71}
+\]
+Direktes Lösen von \(M_Ox=e_3\) liefert
+\[
+r_O^TM_O^{-1}e_3
+=
+-\frac{2c_2}{(1+c_1)S_O}<0.
+\tag{DD.72}
+\]
+
+Daher besitzt \(G_\pm\) nach Companion-Elimination den neuen Kanal \(Q(u)=y(2d+u)\) mit Koeffizient
+\[
+\boxed{
+\gamma_Q
+:=
+-\beta_b\,r_O^TM_O^{-1}e_3
+\ne0.
+}
+\tag{DD.73}
+\]
+
+Da \(\beta_b<0\) und DD.72 negativ ist, gilt sogar
+\[
+\gamma_Q<0.
+\tag{DD.74}
+\]
+
+Damit ist die Verschiebung \(u=\Delta\pm s\) nicht nur formal sichtbar: sie trägt einen **nichtverschwindenden nächsten \(2d+\)-Kanal**.
+
+### 7.3 Innerer Companion-Bereich \(R<u<\varepsilon\), außerhalb \(J\)
+
+Definiere
+\[
+X_I(u)
+:=
+\begin{pmatrix}
+y(u)\\
+y(a-u)\\
+y(a+u)\\
+y(T-u)\\
+y(T+u)
+\end{pmatrix}.
+\tag{DD.75}
+\]
+
+Für
+\[
+u+\varepsilon<\Delta
+\tag{DD.76}
+\]
+liefern die direkten Rows bei
+\[
+u,\quad a-u,\quad a+u,
+\]
+zusammen mit dem zertifizierten 2TP-Paar \(T\pm u\) exakt
+\[
+\boxed{
+M_5X_I(u)
++
+\beta_b
+\begin{pmatrix}
+0\\0\\0\\D_+(u)\\D_-(u)
+\end{pmatrix}
++h_5(u)
+=0,
+}
+\tag{DD.77}
+\]
+wobei
+\[
+\boxed{
+M_5=
+\begin{pmatrix}
+\alpha_0&c_2&c_2&\beta_0&\beta_0\\
+c_2&\alpha_A&-c_1&\beta_+&\beta_-\\
+c_2&-c_1&\alpha_A&\beta_-&\beta_+\\
+\beta_0&\beta_+&\beta_-&\alpha_T&\beta_T\\
+\beta_0&\beta_-&\beta_+&\beta_T&\alpha_T
+\end{pmatrix},
+}
+\tag{DD.78}
+\]
+mit
+\[
+\alpha_0=1+2c_1,
+\qquad
+\alpha_A=1+c_1+c_5,
+\qquad
+\alpha_T=1+\kappa.
+\tag{DD.79}
+\]
+
+Die drei neuen direkten A-Rows sind:
+\[
+\boxed{
+(Ay)(u)
+=
+2c_1y(u)
++c_2[y(a-u)+y(a+u)]
++\beta_0[y(T-u)+y(T+u)].
+}
+\tag{DD.80}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(a-u)
+={}&
+c_2y(u)
++(c_1+c_5)y(a-u)
+-c_1y(a+u)\\
+&+\beta_+y(T-u)
++\beta_-y(T+u).
+\end{aligned}}
+\tag{DD.81}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(a+u)
+={}&
+c_2y(u)
+-c_1y(a-u)
++(c_1+c_5)y(a+u)\\
+&+\beta_-y(T-u)
++\beta_+y(T+u).
+\end{aligned}}
+\tag{DD.82}
+\]
+
+Die Hub-Komponenten sind
+\[
+\begin{aligned}
+h_u={}&-p[w(a-u)+w(a+u)]
+-r[w(b-u)+w(b+u)]-qw(T-u),\\
+h_{a-}={}&-pw(u)-pw(T-u)-rw(d+u)-qw(a+u),\\
+h_{a+}={}&pw(u)-rw(d-u)-qw(a-u),
+\end{aligned}
+\tag{DD.83}
+\]
+ergänzt um die bereits zertifizierten 2TP-Hubwerte bei \(T\pm u\).
+
+Der Block DD.78 ist die exakte Profilmatrix der Kompression von \(I+A\) auf diese fünf disjunkten Kanäle. Da
+\[
+A=R_{T_0}^*R_{T_0}\ge0,
+\]
+folgt unmittelbar
+\[
+\boxed{M_5\ge I>0.}
+\tag{DD.84}
+\]
+
+Das unabhängige Zertifikat prüft zusätzlich die Matrixeinträge direkt aus den elf Wörtern und bestätigt positive Definitheit symbolisch.
+
+### 7.4 Innerer AWI-Bereich \(J\): endlicher reflektierter \(10\times10\)-Block
+
+Sei
+\[
+u\in J,
+\qquad
+t:=\Delta-u\in J.
+\tag{DD.85}
+\]
+
+Die Rows DD.80 und DD.81 bleiben unverändert. In DD.82 schaltet exakt Wort 11 zu:
+\[
++c_{11}y(a+u)
++\beta_b y(T+t).
+\tag{DD.86}
+\]
+
+Gleichzeitig ist in der 2TP-\(T+u\)-Row
+\[
+D_-(u)
+=
+y(2d-u)
+=
+y(a+t).
+\tag{DD.87}
+\]
+
+Damit schließen die beiden reflektierten Fünferprofile
+\[
+X_I(u),\qquad X_I(t)
+\]
+zu einem endlichen Zehnerblock.
+
+Sei \(E_{33}\) der \(5\times5\)-Matrixeintrag auf dem \(a+\)-Kanal und
+\[
+C_J
+=
+\beta_b(E_{35}+E_{53}),
+\tag{DD.88}
+\]
+wobei die Indizes \(3=a+\), \(5=T+\) in der Reihenfolge DD.75 bezeichnen.
+
+Dann ist der gekoppelte Block
+\[
+\boxed{
+\mathbb M_J
+=
+\begin{pmatrix}
+M_5+c_{11}E_{33}&C_J\\
+C_J&M_5+c_{11}E_{33}
+\end{pmatrix}.
+}
+\tag{DD.89}
+\]
+
+Unter symmetrischer/antisymmetrischer Reflexionszerlegung reduziert er sich auf
+\[
+M_5+c_{11}E_{33}\pm C_J.
+\tag{DD.90}
+\]
+
+Auch dieser Block ist die exakte Kompression von \(I+A\) auf den durch die maßtreue AWI-Identifikation gebildeten Profilraum. Daher
+\[
+\boxed{
+\mathbb M_J\ge I>0.
+}
+\tag{DD.91}
+\]
+
+Das Zertifikat bestätigt zusätzlich
+\[
+M_5+c_{11}E_{33}+C_J>0,
+\qquad
+M_5+c_{11}E_{33}-C_J>0.
+\tag{DD.92}
+\]
+
+### 7.5 Konsequenz: echte Δ-Propagationsstruktur
+
+Nach Stage 4 sind sämtliche in Stage 3 auftretenden Companionprofile
+\[
+y(u),\quad y(a-u),\quad y(T-u)
+\]
+eliminierbar.
+
+Für
+\[
+u=\Delta+s
+\]
+gilt
+\[
+A_+(u)=y(a+\Delta+s)=D_+(s),
+\tag{DD.93}
+\]
+während
+\[
+Q(u)=D_+(u)=D_+(\Delta+s).
+\tag{DD.94}
+\]
+
+Für
+\[
+u=\Delta-s
+\]
+gilt entsprechend
+\[
+A_+(u)=D_-(s),
+\qquad
+Q(u)=D_+(\Delta-s).
+\tag{DD.95}
+\]
+
+Damit reduziert sich die nächste Stufe tatsächlich auf eine Kopplung der Form
+\[
+\boxed{
+D_\pm(s)
+\longleftrightarrow
+D_+(\Delta+s),\ D_+(\Delta-s)
+\quad+\quad w\text{-Kanäle},
+}
+\tag{DD.96}
+\]
+mit nichtverschwindendem äußerem Kopplungskoeffizienten \(\gamma_Q\).
+
+Dies ist die erste **echte Δ-Propagationsstruktur** des SW1-Angriffs.
+
+Sie ist noch keine finite Rekurrenz, weil für
+\[
+u>\varepsilon
+\]
+die Row bei \(2d+u\) noch nicht hergeleitet wurde. Genau diese nächste Schale ist nun der einzige neue y-Rowtyp, der für die Fortsetzung benötigt wird.
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
