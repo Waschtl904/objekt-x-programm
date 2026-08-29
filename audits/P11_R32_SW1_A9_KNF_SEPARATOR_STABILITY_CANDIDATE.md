@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Stacked base:** research/sw1-a8-lower-finite-components@d99d4ef780dc47876ff0445e2bcd403f45679610  
-> **Status:** ?[O] gesamt — A9-J0/J1 zertifiziert; universeller A8→KNF-Separatortransfer auf offenem Subchamber durch zertifizierten Bypass widerlegt; vollständige A9-SEP-/Komponentenklassifikation weiter offen; keine Promotion.  
+> **Status:** ?[O] gesamt — A9-J0/J1/FS/DOM zertifiziert; für den kleinen unteren Subchamber `0<ε<(6Δ-L)/4` sind staggered KNF-Separator und endliche physische Punktkomponenten zertifiziert; im komplementären unteren Subchamber existiert bereits ein partieller Bypass, vollständige Klassifikation dort weiter offen; keine Promotion.  
 > **Scope:** zusätzlicher freier Koordinatengraph von \(\mathfrak G_R=J_R^*(I+A)J_R\) im unteren Chamber. A8 bleibt nur Input für den rohen A1-Graphen.
 
 ---
@@ -1511,3 +1511,431 @@ Der nächste Knoten ist die quotient-bewusste Frontierklassifikation:
 \mathrm{A9\!-\!FRONTIER}:?[O].
 }
 \]
+
+
+---
+
+## 15. A9-SEP-SMALL — staggered KNF-Separator und endliche Punktkomponenten
+
+Die explorative Zahl „84 Cross-Kandidaten“ war **nicht exhaustiv** und wird verworfen.
+
+Die vollständige kombinatorische Analyse ergibt stattdessen:
+
+- zwei A8-Mittelblöcke mit jeweils 20 formalen Labels;
+- insgesamt 40 relevante Mittelblocklabels;
+- neun gerichtete neue KNF-Maptypen;
+- daraus exakt
+  \[
+  \boxed{128}
+  \]
+  gerichtete formale Cross-Kandidaten.
+
+Diese 128 gerichteten Fälle entsprechen generisch
+
+\[
+\boxed{95}
+\]
+
+ungerichteten physischen Edge-Klassen:
+
+- 62 nur einmal im Mittelblockledger erfasste Klassen;
+- 33 reziprok doppelt erfasste Klassen.
+
+Damit wird die Redundanz explizit dokumentiert; „128 geprüft“ wird **nicht** als 128 unabhängige mathematische Phänomene interpretiert.
+
+### 15.1 Exakte Schwelle
+
+Setze
+
+\[
+s_*:=\frac L2-2\Delta.
+\]
+
+Definiere
+
+\[
+\boxed{
+\varepsilon_*
+:=
+\frac{\Delta-s_*}{2}
+=
+\frac{6\Delta-L}{4}.
+}
+\]
+
+Aus
+
+\[
+4\Delta<L<5\Delta
+\]
+
+folgt
+
+\[
+\boxed{
+0<\varepsilon_*<\Delta/2.
+}
+\]
+
+Wir betrachten
+
+\[
+\boxed{
+0<\varepsilon<\varepsilon_*.
+}
+\tag{A9.15}
+\]
+
+### 15.2 Gemeinsames staggered Phasenfenster
+
+Für einen Index \(n\) setze
+
+\[
+t_n=s.
+\]
+
+Parität \(0\) verwendet den A8-Separator bei \(n\).
+
+Parität \(1\) wird um zwei Indizes nach links versetzt. Wegen
+
+\[
+t_{n-2}+\frac L2
+=
+s-2\Delta+\frac L2
+=
+s+s_*
+\]
+
+ist ihre A8-Phase am Index \(n-2\)
+
+\[
+s+s_*.
+\]
+
+Beide Phasen liegen gleichzeitig im A8-Fenster
+
+\[
+(\varepsilon,\Delta-\varepsilon)
+\]
+
+genau für
+
+\[
+\boxed{
+s\in
+W_\varepsilon
+:=
+(\varepsilon,\Delta-\varepsilon-s_*).
+}
+\]
+
+Die Länge ist
+
+\[
+|W_\varepsilon|
+=
+\Delta-2\varepsilon-s_*
+=
+2(\varepsilon_*-\varepsilon)>0.
+\]
+
+Somit ist \(W_\varepsilon\) ein nichtleeres offenes Intervall.
+
+### 15.3 Kombinierter Seitenindex
+
+Für Parität \(0\) verwenden wir die A8-Stufung mit Mittelindizes
+
+\[
+n,n+1,n+2,n+3.
+\]
+
+Für Parität \(1\) verwenden wir dieselbe A8-Stufung, aber mit Mittelindizes
+
+\[
+n-2,n-1,n,n+1.
+\]
+
+Die alten A7-Kanten erhalten die Parität. Daher werden sie auf jeder Paritätsfaser separat durch den bereits zertifizierten **formalen** A8-Separator blockiert.
+
+Alle neuen KNF-Kanten wechseln die Parität und besitzen Indexreichweite höchstens \(2\).
+
+Eine neue KNF-Kante, die den kombinierten Links/Rechts-Schnitt kreuzt, muss daher mindestens einen Endpunkt in einem der beiden vierlagigen Mittelblöcke besitzen. Eine direkte Kante von einem asymptotisch linken Außenbereich in einen asymptotisch rechten Außenbereich würde mindestens Indexsprung \(3\) benötigen und ist für die neuen KNF-Typen unmöglich.
+
+Damit ist die Enumeration der
+
+\[
+40\times9
+\]
+
+Source-Map-Möglichkeiten vor der Cross-Filterung kombinatorisch vollständig.
+
+### 15.4 Exakte 128er-Cross-Prüfung
+
+Das Zertifikat erzeugt aus diesem vollständigen Ledger exakt 128 gerichtete Cross-Kandidaten.
+
+Für ihre neuen KNF-Aktivitätsdomänen werden insgesamt
+
+\[
+\boxed{218}
+\]
+
+Intervall-Ausschlussungleichungen geprüft, die sich auf
+
+\[
+\boxed{42}
+\]
+
+verschiedene symbolische Margen reduzieren.
+
+Jede dieser 42 Margen wird **exakt** als nichtnegative Linearkombination der strikt positiven Grundslacks
+
+\[
+g>0,
+\qquad
+\frac12-g>0,
+\qquad
+R>0,
+\qquad
+\varepsilon-R>0,
+\]
+
+\[
+s-\varepsilon>0,
+\qquad
+\Delta-\varepsilon-s-s_*>0
+\]
+
+dargestellt, nach Normierung \(\Delta=1\).
+
+Es gibt keinen numerischen Gate-Test.
+
+Ergebnis:
+
+\[
+\boxed{
+\text{0 aktive neue KNF-Cross-Kanten unter den 128 vollständigen Kandidaten.}
+}
+\]
+
+### 15.5 Formales Separatorlemma
+
+Folglich gibt es im vollständigen **formalen** A9-Cover keine Kante zwischen den beiden kombinierten Seiten.
+
+Asymptotisch gilt für einen Separatorindex \(n\):
+
+- alle Zustände mit Index
+  \[
+  m\le n-3
+  \]
+  liegen links;
+- alle Zustände mit Index
+  \[
+  m\ge n+4
+  \]
+  liegen rechts.
+
+Daher:
+
+\[
+\boxed{
+t_n\in W_\varepsilon
+\Longrightarrow
+\text{kein formaler KNF-Pfad verbindet }
+m\le n-3
+\text{ mit }
+m\ge n+4.
+}
+\tag{A9.16}
+\]
+
+### 15.6 Irrationale Wiederkehr und formale Komponentenendlichkeit
+
+Wegen
+
+\[
+\Delta/L\notin\mathbb Q
+\]
+
+trifft die Basisrotation jedes nichtleere offene Intervall, insbesondere \(W_\varepsilon\), in beiden Indexrichtungen unendlich oft.
+
+Fixiere einen formalen Knoten mit Index \(m_0\).
+
+Wähle einen Separatorindex \(n_-\) weit links mit
+
+\[
+n_-\le m_0-4
+\]
+
+und einen Separatorindex \(n_+\) weit rechts mit
+
+\[
+n_+\ge m_0+3.
+\]
+
+Dann liegt \(m_0\) bezüglich des linken Separators sicher auf der rechten und bezüglich des rechten Separators sicher auf der linken Seite.
+
+Damit kann seine formale Komponente keine Indizes
+
+\[
+m\le n_--3
+\]
+
+und keine Indizes
+
+\[
+m\ge n_++4
+\]
+
+enthalten.
+
+Der Indexsupport liegt also in einem endlichen ganzzahligen Intervall. Nach A9-FS existieren pro Index höchstens zwölf formale Labels.
+
+Somit:
+
+\[
+\boxed{
+0<\varepsilon<\varepsilon_*
+\Longrightarrow
+\text{jede formale Zusammenhangskomponente des vollständigen KNF-Gramgraphen ist endlich.}
+}
+\tag{A9.17}
+\]
+
+### 15.7 Globale physische Sheet-Kollisionen
+
+Eine bloße lokale Label-Kollisionsprüfung wäre für A9.17 nicht ausreichend.
+
+Falls sich zwei der formalen Rotationsorbits physisch schneiden, liefert die Irrationalität von \(\Delta/L\) einen eindeutigen ganzzahligen Indexparameter \(K\) und einen Paritätsoffset
+
+\[
+\delta\in\mathbb Z/2
+\]
+
+mit der Identifikation
+
+\[
+\boxed{
+J_{K,\delta}(P_{n,\eta})
+=
+\overline Q_{K-n,\eta+\delta}.
+}
+\]
+
+Die beiden Paritätscosets \(P_{\eta=0}\) und \(P_{\eta=1}\) können wegen der Irrationalität nicht miteinander zusammenfallen; ebenso können nicht zwei verschiedene \(\delta\)-Offsets gleichzeitig auftreten.
+
+Das Zertifikat
+
+scripts/certify_sw1_sheet_collision_quotient.py
+
+beweist für **alle 18 gerichteten Übergangstypen** — neun A7-Typen plus neun neue A9-Typen — exakt
+
+\[
+J_{K,\delta}\circ E
+=
+E\circ J_{K,\delta}
+\]
+
+für beide \(\delta=0,1\).
+
+Da die Gate-/Supportentscheidung nur vom physischen Punkt \(x\) abhängt, ist \(J_{K,\delta}\) ein Graphautomorphismus des formalen aktiven Covers.
+
+Eine physische Quotientenkomponente ist daher die Projektion der Sättigung
+
+\[
+C\cup J_{K,\delta}(C)
+\]
+
+einer formalen Komponente \(C\).
+
+Es werden höchstens zwei formale Komponenten verklebt.
+
+Aus A9.17 folgt somit physisch:
+
+\[
+\boxed{
+0<\varepsilon<\frac{6\Delta-L}{4}
+\Longrightarrow
+\text{jede physische Punktkomponente des vollständigen freien KNF-Gramgraphen ist endlich.}
+}
+\tag{A9.18}
+\]
+
+### 15.8 Zertifikate
+
+**Staggered separator**
+
+scripts/certify_sw1_a9_staggered_separator.py
+
+Commit:
+
+0c95b4d0127178ec5153384ab204100c9ee1bb2e
+
+Committed Script-Blob:
+
+c24b9c2d35f032f42924a2378f3faae73a9b1f4b
+
+Der tatsächlich ausgeführte Dateiinhalt wurde erneut nach dem Git-Blob-Verfahren gehasht und ergab exakt denselben SHA.
+
+Ergebnis:
+
+SW1-A9 STAGGERED KNF SEPARATOR CERTIFICATE: PASS
+
+**Globaler Sheet-Kollisionsquotient**
+
+scripts/certify_sw1_sheet_collision_quotient.py
+
+A9-Commit:
+
+312d136241410f53146f83845d58602c9fa1d9cf
+
+Committed Script-Blob:
+
+a1e62d885788c9b3eb696fd7709b81193e345410
+
+Exakte committed Ausführung:
+
+SW1 GLOBAL SHEET-COLLISION QUOTIENT CERTIFICATE: PASS
+
+### 15.9 Zulässige Buchung
+
+Damit gilt:
+
+\[
+\boxed{
+\mathrm{A9\!-\!SEP\!-\!SMALL}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+und als Konsequenz im exakt angegebenen Subchamber:
+
+\[
+\boxed{
+\mathrm{A9\!-\!FINITE\!-\!SMALL}:
+\text{endliche physische KNF-Punktkomponenten}.
+}
+\]
+
+### 15.10 Strikte Firewall
+
+Nicht bewiesen ist:
+
+1. endliche KNF-Komponenten für
+   \[
+   \varepsilon_*\le\varepsilon<\Delta/2;
+   \]
+2. irgendeine Aussage für den oberen \(\varepsilon\)-Chamber;
+3. Invertierbarkeit oder Nichtentartung der endlichen Gramblöcke;
+4. \(\ker\mathcal L_{\rm ann}^{SW1}=\{0\}\);
+5. \(\ker\Gamma_I=\{0\}\);
+6. HT-RED, Objekt X oder RH.
+
+Der **gesamte A9-Knoten** bleibt deshalb
+
+\[
+\boxed{?[O],}
+\]
+
+aber sein kleine-\(\varepsilon\)-Separator-/Endlichkeits-Subknoten ist zertifiziert.
