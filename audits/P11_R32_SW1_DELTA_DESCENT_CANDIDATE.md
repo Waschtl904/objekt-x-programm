@@ -3806,35 +3806,35 @@ Auch Fall III erzeugt keinen neuen y-Randtyp.
 
 ### 16.4 Simultaner physischer Masterblock
 
-In Fall I koppelt DD.275 zurück an die bereits vorhandene (F_1)-Koordinate aus Stage 10A. Deshalb wird **nicht** aus der getrennten Positivität von (M_{B,1}) und (M_{B,2}) auf eine sequenzielle Invertierbarkeit geschlossen.
+In Fall I koppelt DD.275 zurück an die bereits vorhandene \(F_1\)-Koordinate aus Stage 10A. Deshalb wird **nicht** aus der getrennten Positivität von \(M_{B,1}\) und \(M_{B,2}\) auf eine sequenzielle Invertierbarkeit geschlossen.
 
-Stattdessen sei (mathcal V_{11}) der tatsächliche physische (L^2)-Raum, der von den Stage-10A- und Stage-11-Profilen des jeweiligen endlichen Parametersatzes erzeugt wird, nach Identifikation physisch gleicher Profile und unter Hinzunahme der in Fall II/III bereits zertifizierten Stage-4-/2TP-Profilräume.
+Stattdessen sei \(\mathcal V_{11}\) der tatsächliche physische \(L^2\)-Raum, der von den Stage-10A- und Stage-11-Profilen des jeweiligen endlichen Parametersatzes erzeugt wird, nach Identifikation physisch gleicher Profile und unter Hinzunahme der in Fall II/III bereits zertifizierten Stage-4-/2TP-Profilräume.
 
 Nach DD.264–DD.288 gibt es in keinem der drei Fälle einen y-Kanal außerhalb dieses endlichen Raums:
-- Fall I: (B_3) ist horizon-tot;
-- Fall II: (B_2+s) ist 2TP-intern und (B_2-s) liegt im Stage-4-Companionblock;
-- Fall III: beide (B_2)-Äste sind 2TP-intern.
+- Fall I: \(B_3\) ist horizon-tot;
+- Fall II: \(B_2+s\) ist 2TP-intern und \(B_2-s\) liegt im Stage-4-Companionblock;
+- Fall III: beide \(B_2\)-Äste sind 2TP-intern.
 
 Daher ist der gekoppelte y-Operator exakt die Kompression
-[
-oxed{
+\[
+\boxed{
 K_{11}
 =
-P_{mathcal V_{11}}(I+A)|_{mathcal V_{11}}
-ge I.
+P_{\mathcal V_{11}}(I+A)|_{\mathcal V_{11}}
+\ge I.
 }
-	ag{DD.288a}
-]
+\tag{DD.288a}
+\]
 
 Somit
-[
-oxed{
-|K_{11}^{-1}|le1.
+\[
+\boxed{
+\|K_{11}^{-1}\|\le1.
 }
-	ag{DD.288b}
-]
+\tag{DD.288b}
+\]
 
-Die gesamte gekoppelte Stage-10A/11-y-Familie kann daher simultan und eindeutig in Abhängigkeit von (w) eliminiert werden.
+Die gesamte gekoppelte Stage-10A/11-y-Familie kann daher simultan und eindeutig in Abhängigkeit von \(w\) eliminiert werden.
 
 ### 16.5 Exhaustivität und terminaler B-Abschluss
 
@@ -3854,7 +3854,7 @@ In jedem Fall ist die \(B_2\)-Propagation y-seitig terminal:
 \tag{DD.289}
 \]
 
-Zusammen mit Stage 10C folgt daher für die bisher untersuchte äußere Parameterzone (s\in(R,\varepsilon)):
+Zusammen mit Stage 10C folgt daher für die bisher untersuchte äußere Parameterzone \(s\in(R,\varepsilon)\):
 
 \[
 \boxed{
@@ -3863,7 +3863,7 @@ Zusammen mit Stage 10C folgt daher für die bisher untersuchte äußere Paramete
 \tag{DD.290}
 \]
 
-Kombiniert mit der Stage-7-y-shell-Closure ist damit die **äußere y-Geometrie für (s\in(R,\varepsilon))** endlich eliminierbar.
+Kombiniert mit der Stage-7-y-shell-Closure ist damit die **äußere y-Geometrie für \(s\in(R,\varepsilon)\)** endlich eliminierbar.
 
 ### 16.6 Verbleibender innerer KNF-Sample-Scope
 
@@ -3874,7 +3874,7 @@ y(a+u),\quad y(b-u),\quad y(b+u),\quad y(T-u),\quad y(T+u),
 \]
 aus KNF.17–KNF.21.
 
-Die zweite augmentierte Gleichung ist durch die Wahl (y\in\mathcal K_R) bereits in KNF eingebaut; der linke (a-u)-Branch wird durch KNF.11 rekonstruiert. Bevor ein reiner Annulusoperator behauptet werden darf, muss aber noch gezeigt werden, dass die **erste** augmentierte Gleichung auch diese fünf freien inneren Samplekoordinaten durch dieselbe endliche Row-Geometrie kontrolliert.
+Die zweite augmentierte Gleichung ist durch die Wahl \(y\in\mathcal K_R\) bereits in KNF eingebaut; der linke \(a-u\)-Branch wird durch KNF.11 rekonstruiert. Bevor ein reiner Annulusoperator behauptet werden darf, muss aber noch gezeigt werden, dass die **erste** augmentierte Gleichung auch diese fünf freien inneren Samplekoordinaten durch dieselbe endliche Row-Geometrie kontrolliert.
 
 Wegen
 \[
@@ -3907,7 +3907,7 @@ Zu beweisen bleibt:
 \tag{DD.292}
 \]
 
-**Firewall:** DD.290 ist eine endliche **äußere** y-Geometrie-/Eliminationsaussage auf (s\in(R,\varepsilon)). Der innere KNF-Samplebereich (0<u<R) bleibt bis Stage 12 offen. Insbesondere beweist Stage 11 noch nicht DD.292, kein HT-RED, kein A0 und keine Aussage über \(\ker\Gamma_I\).
+**Firewall:** DD.290 ist eine endliche **äußere** y-Geometrie-/Eliminationsaussage auf \(s\in(R,\varepsilon)\). Der innere KNF-Samplebereich \(0<u<R\) bleibt bis Stage 12 offen. Insbesondere beweist Stage 11 noch nicht DD.292, kein HT-RED, kein A0 und keine Aussage über \(\ker\Gamma_I\).
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
