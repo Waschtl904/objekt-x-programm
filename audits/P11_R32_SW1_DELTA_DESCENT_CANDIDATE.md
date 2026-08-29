@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stages 1/2–11 zertifiziert; **Stage 12 innerer KNF-Sample-Abschluss hergeleitet, Zertifikat/Re-Review offen**; nächster struktureller Knoten danach A0-Coverage; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; **Stages 1/2–12 jeweils AI-GREEN + independent GREEN (certificate)** im jeweiligen expliziten Scope; gesampelter KNF-Summand geschlossen; nächster struktureller Knoten **A0-Coverage des blinden Summanden**; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -4222,6 +4222,31 @@ Der nächste korrekte Knoten ist daher nicht sofort der Annulus-Kern, sondern di
 Erst nach einem A0-Abschluss darf die vollständige y-Elimination in einen einzigen induzierten Annulusoperator überführt werden.
 
 **Firewall:** Stage 12 ist ein Sample-Scope-Abschluss. Kein A0, kein HT-RED, kein \(\ker\Gamma_I=\{0\}\), kein Objekt X und keine RH-Folgerung.
+
+**Stage-12-Reviewstatus.** Die innere Kammergeometrie \(0<u<R\), die direkten fünf (a/T)-Rows, der pointwise (B)-Block, die direkten (2d\pm u)-Rows, die Lage der Nachfolger \(\Delta\pm u\) im äußeren Companionbereich und die KNF-Rekonstruktion des linken (a)-Branches wurden separat adversarial geprüft und durch
+`scripts/certify_sw1_delta_descent_stage12_inner.py`
+mit Python/SymPy 1.14.0 reproduzierbar zertifiziert (PASS).
+
+Zertifizierter Script-Blob:
+`5a665dc9f78996768ee97fe9dffd5952e7be7977`.
+
+Die simultane Sample-Invertierbarkeit folgt operatorisch aus
+\[
+P_{\mathcal V_{\rm samp}}(I+A)|_{\mathcal V_{\rm samp}}\ge I.
+\]
+
+Damit gilt für Stage 12:
+\[
+\boxed{
+\mathrm{Stage\ 12}:
+\text{AI-GREEN}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+Der blinde Summand \(\mathcal Z_R^+\) ist ausdrücklich **nicht** durch dieses Zertifikat abgedeckt.
+
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
