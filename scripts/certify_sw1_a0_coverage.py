@@ -56,6 +56,19 @@ assert sp.simplify(S-a-(a+sig))==0
 # a+sig is inside the free a-sample window up to its right endpoint.
 assert sp.simplify((a+R)-(a+sig)-rho)==0
 
+# Exhaustivity of positive Hub support walls for tau in {a,b,T}.
+# Lower-contact walls |x-tau|=R are exactly tau±R (sample bounds).
+# The upper-contact left solutions tau-S are all negative:
+assert sp.simplify(a-S-(-a-sig))==0
+assert sp.simplify(b-S-(-e-sig))==0
+assert sp.simplify(T-S-(-sig))==0
+# The upper-contact right solutions tau+S all lie beyond T0=T+eps.
+assert sp.simplify((a+S-(T+eps))-((a-Delta)+g+R+sig))==0
+assert sp.simplify((b+S-(T+eps))-((b-Delta)+g+R+sig))==0
+assert sp.simplify((T+S-(T+eps))-((T-Delta)+g+R+sig))==0
+# R-tau is negative for all three shifts because R<Delta/2<a<=tau.
+assert sp.simplify(a-Delta/2).is_positive is True
+
 # Chamber I z-cell lengths.
 len_I=[
  sig,
