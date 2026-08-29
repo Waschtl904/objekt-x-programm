@@ -3450,6 +3450,36 @@ Daher ist der nächste globale Knoten nun eindeutig:
 
 **Firewall:** Stage 10C schließt nur die y-Geometrie der oberen B-Wall-Kammer. Der induzierte Annulusoperator auf \(w\) und die untere \(B_2\)-Propagation bleiben offen.
 
+**Stage-10C-Reviewstatus.** Die drei entscheidenden Abschlussidentitäten
+\[
+C+s=b-(\Delta-s),\qquad
+B_2-s=B_1+(\Delta-s),\qquad
+B_2+s=T+(s-k_B)=T+r_\Delta(r_B(s))
+\]
+sowie die Verschachtelung \(J_B\subset J\) und die orbitinterne Parameterlage wurden separat adversarial geprüft und durch
+`scripts/certify_sw1_delta_descent_stage10c.py`
+mit Python/SymPy 1.14.0 reproduzierbar zertifiziert (PASS).
+
+Zertifizierter Script-Blob:
+`e38adc4130f56666a4b216ab93183de9a26ae88c`.
+
+Die Invertierbarkeit des Orbit-Masterblocks folgt operatorisch aus
+\[
+P_{\mathcal V_\mathcal O}(I+A)|_{\mathcal V_\mathcal O}\ge I,
+\]
+nicht aus einer numerischen Matrixabschätzung.
+
+Damit gilt für Stage 10C:
+\[
+\boxed{
+\mathrm{Stage\ 10C}:
+\text{AI-GREEN}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+
 
 ## 6. Zertifikatsstatus und nächste Stufe
 
