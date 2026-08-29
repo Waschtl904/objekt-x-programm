@@ -3035,6 +3035,26 @@ Daher lautet der Stage-10A-Status:
 
 Dies ist noch keine globale \(B_1\to B_2\)-Rekurrenz.
 
+**Stage-10A-Reviewstatus.** Die Wallidentität, alle acht unteren elf-Wort-Rows, der positive Durchgangsblock \(M_{B,1}\), die exakte Vorzeichenformel \(\gamma_{B,1}>0\) sowie die vier oberen Fold-Identitäten wurden separat adversarial geprüft und durch
+`scripts/certify_sw1_delta_descent_stage10a.py`
+mit Python/SymPy 1.14.0 reproduzierbar zertifiziert (PASS).
+
+Zertifizierter Script-Blob:
+`2b199ccbb193b83b89edc709c2563120caa426b5`.
+
+Damit gilt ausschließlich für Stage 10A:
+\[
+\boxed{
+\mathrm{Stage\ 10A}:
+\text{AI-GREEN}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+Der globale Restquotient auf \(J_B\) bleibt ausdrücklich \(?[O]\).
+
+
 
 ## 6. Zertifikatsstatus und nächste Stufe
 
