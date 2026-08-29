@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Stacked base:** research/sw1-a7-finite-state-cocycle@901134463449f16ab2a228135026f1ef8449dfbf  
-> **Status:** ?[O] — universeller Separator hergeleitet; Zertifikat/Re-Review offen; keine Promotion.  
+> **Status:** `AI-GREEN candidate + independent GREEN (certificate)` — universeller Separator und Endlichkeit der rohen A1-Komponenten geprüft; **keine Promotion**.  
 > **Scope:** vollständiger **roher A1-Punktgraph** im unteren Chamber. Noch keine KNF-\(J_R\)-Zusatzkopplungen und keine Schur-Injektivität.
 
 ---
@@ -477,9 +477,19 @@ S_\varepsilon=(\varepsilon,\Delta-\varepsilon)
 \]
 offen und nichtleer ist, existieren in beiden Indexrichtungen unendlich viele Separatorindizes.
 
-Zwischen zwei aufeinanderfolgenden Separatoren liegen nur endlich viele Rotationsschichten.
+Die Komponent-Endlichkeit folgt direkt und ohne versteckte Uniformitätsannahme. Fixiere einen Knoten mit Rotationsindex \(m_0\). Wegen der beidseitig unendlichen Separatorwiederkehr wähle Separatorindizes \(n_-\) und \(n_+\) mit
+\[
+n_-\le m_0-4,
+\qquad
+n_+\ge m_0+1.
+\]
+Dann liegt \(m_0\ge n_-+4\), also kann seine Zusammenhangskomponente wegen A8.13 keinen Index \(m\le n_--1\) enthalten. Ebenso liegt \(m_0\le n_+-1\), also kann dieselbe Komponente keinen Index \(m\ge n_++4\) enthalten.
 
-Da pro Schicht höchstens sechs physische Liftzustände existieren, ist jede rohe A1-Zusammenhangskomponente endlich.
+Damit ist ihr Indexsupport in dem endlichen Intervall
+\[
+[n_-,\,n_++3]\cap\mathbb Z
+\]
+enthalten. Da pro Schicht höchstens sechs physische Liftzustände existieren, ist jede rohe A1-Zusammenhangskomponente endlich.
 
 Also:
 
@@ -550,3 +560,52 @@ A8 beweist keine Injektivität von
 keinen trivialen Schur-Kern, kein HT-RED, keine Closed-Range-/bounded-below-Aussage, kein Objekt X und keine RH-Folgerung.
 
 Es beweist ausschließlich die Endlichkeit der **rohen** A1-Punktkomponenten im unteren \(\varepsilon\)-Chamber.
+
+
+---
+
+## 10. Review-/Zertifikatsstatus
+
+Der A8-Kandidat wurde adversarial gegen die vollständige A7-Indexsprungtabelle geprüft.
+
+Das committed Zertifikat
+
+`scripts/certify_sw1_a8_lower_finite_components.py`
+
+wurde auf dem exakten Git-Head
+
+`197770e5b28e7b829fc5be695ea44cbe968483d5`
+
+in der committed Fassung mit Script-Blob
+
+`f0369406e44081c3df04164950d9a463850bd208`
+
+unter Python/SymPy 1.14.0 ausgeführt.
+
+Ergebnis: **PASS**.
+
+Das Zertifikat prüft im endlichen/algebraischen Scope:
+
+- die exakten SW1-Konstantenrelationen einschließlich \(4\Delta<L\);
+- die vollständige Existenz/Nichtexistenz der dritten Lifts in den vier mittleren Schichten;
+- die exhaustive Aufteilung aller 20 mittleren physischen Zustände in die Links-/Rechts-Stufung A8.10;
+- alle \(20\cdot9=180\) Source-Map-Fälle der A7-Kantentabelle;
+- dass exakt die zehn Cross-Kandidaten A8.11–A8.12 verbleiben;
+- dass alle zehn auf dem gesamten offenen Separatorparameterbereich strikt gate-inaktiv sind;
+- die maximale A7-Indexreichweite \(|j|\le3\) sowie die Invers-/Reflexionssymmetrie der rohen Kanten;
+- die exakte Reduktion der Irrationalitätsfrage \(\Delta/L\notin\mathbb Q\) auf ein nichtsinguläres ganzzahliges \(2\times2\)-System; der letzte Schritt benutzt eindeutige Primfaktorzerlegung.
+
+Die Wiederkehr jedes offenen Separatorintervalls und die daraus folgende beidseitige Existenz von Separatorindizes benutzen separat den klassischen Minimalitätssatz für irrationale Kreisrotationen. Abschnitt 7 macht daraus explizit einen endlichen Indexsupport jeder Komponente; hierfür wird keine Uniformität in \(\varepsilon\uparrow\Delta/2\) benötigt.
+
+Damit gilt ausschließlich im expliziten Scope des vollständigen **rohen A1-Punktgraphen** im unteren Chamber:
+
+\[
+\boxed{
+\mathrm{SW1\!-\!A8}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+Keine Promotion. Keine Aussage über KNF-\(J_R\)-Zusatzkanten, \(\mathfrak G_R\)-Punktkomponenten, Schur-Injektivität, HT-RED, Objekt X oder RH.
