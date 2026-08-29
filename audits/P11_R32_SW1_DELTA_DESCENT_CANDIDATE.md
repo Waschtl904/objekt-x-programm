@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stages 1–4 zertifiziert; Stage 5 PASS; **Stage 5B Companion-Brücke hergeleitet; Stage 6 isolierter Fold-Zertifikat PASS, Kettenstatus erst nach 5B-Zertifizierung**; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; **Stages 1/2, 3, 4, 5, 5B und 6 jeweils AI-GREEN + independent GREEN (certificate)** im jeweils explizit begrenzten Scope; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -1707,6 +1707,20 @@ Stage 6 erzeugt erstmals einen echten Fold-Mechanismus:
 - oberhalb der Wall endet die neue Schalenhierarchie bereits nach drei Δ-Schritten im zertifizierten 2TP-System.
 
 Damit ist eine unendliche uniforme Kaskade ausgeschlossen **für die obere Stage-6-Unterkammer**. Die untere Unterkammer DD.106 muss noch separat bis zur nächsten Wall verfolgt werden.
+
+**Review-/Zertifikatsstatus Stages 5, 5B, 6.**
+
+- Stage 5: `scripts/certify_sw1_delta_descent_stage5.py`, Python/SymPy 1.14.0, Blob `b6e196fce9343fa082aeacee26a76dbdec5f4013`, PASS.
+- Stage 5B: `scripts/certify_sw1_delta_descent_stage5b.py`, Python/SymPy 1.14.0, Blob `e0fdc02c95764178a5c62caa7971f6bc10c400f6`, PASS.
+- Stage 6: `scripts/certify_sw1_delta_descent_stage6.py`, Python/SymPy 1.14.0, Blob `158bf530c065266ad670d42a8aeb43b2ebddd03b`, PASS.
+
+Für diese drei lokal formulierten Stufen gilt jeweils
+\[
+\boxed{\text{AI-GREEN + independent GREEN (certificate)}}.
+\]
+
+Dies ist **keine** Promotion und noch **kein** vollständiger SW1-Δ-DESCENT.
+
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
