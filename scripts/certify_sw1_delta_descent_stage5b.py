@@ -25,44 +25,53 @@ WORDS=[(1,a,a,a),(2,a,T,a),(3,a,3*a,a),(4,T,a,a),(5,T,T,a),(6,T,3*a,a),
        (7,3*a,a,a),(8,3*a,T,a),(9,3*a,3*a,a),(10,T,T,T),(11,b,b,b)]
 SIGNS=(-1,1,1,-1)
 
-V=[{s:0,eps:0},{s:0,eps:Delta},{s:Delta,eps:Delta}]
+VFULL=[{s:0,eps:0},{s:0,eps:Delta},{s:Delta,eps:Delta}]
+h3=sp.simplify(a-4*Delta)
+k3=sp.simplify(h3-Delta)
+assert k3.is_positive is True
+VLOW=[
+ {s:0,eps:0},
+ {s:0,eps:Delta},
+ {s:k3,eps:Delta},
+ {s:h3/2,eps:h3/2},
+]
 
-def vals(expr):
-    return [sp.simplify(sp.expand(expr).subs(v)) for v in V]
+def vals(expr,vs):
+    return [sp.simplify(sp.expand(expr).subs(v)) for v in vs]
 
-def nn(expr):
-    return all(v.is_nonnegative is True for v in vals(expr))
+def nn(expr,vs):
+    return all(v.is_nonnegative is True for v in vals(expr,vs))
 
-def pos(expr):
+def pos(expr,vs):
     expr=sp.expand(expr)
-    return expr!=0 and nn(expr)
+    return expr!=0 and nn(expr,vs)
 
-def absclass(expr,bound):
-    if nn(bound-expr) and nn(bound+expr): return "IN"
-    if pos(expr-bound) or pos(-expr-bound): return "OUT"
+def absclass(expr,bound,vs):
+    if nn(bound-expr,vs) and nn(bound+expr,vs): return "IN"
+    if pos(expr-bound,vs) or pos(-expr-bound,vs): return "OUT"
     return "MIX"
 
-def profile(expr):
-    if pos(expr): return sp.simplify(expr)
-    if pos(-expr): return sp.simplify(-expr)
+def profile(expr,vs):
+    if pos(expr,vs): return sp.simplify(expr)
+    if pos(-expr,vs): return sp.simplify(-expr)
     if sp.simplify(expr)==0:return sp.Integer(0)
     raise AssertionError(("profile sign switch",expr))
 
-def aggregate(x):
+def aggregate(x,vs):
     out={}
     count=0
     for j,delta,eta,lam in WORDS:
-        gm=absclass(x-delta,T0-lam)
-        gp=absclass(x+delta,T0-lam)
+        gm=absclass(x-delta,T0-lam,vs)
+        gp=absclass(x+delta,T0-lam,vs)
         assert gm!="MIX" and gp!="MIX",(x,j,gm,gp)
         gates=[gm,gm,gp,gp]
         src=[x-delta-eta,x-delta+eta,x+delta-eta,x+delta+eta]
         for kk,(gate,q) in enumerate(zip(gates,src)):
             if gate=="OUT": continue
-            hc=absclass(q,T0)
+            hc=absclass(q,T0,vs)
             assert hc!="MIX",(x,j,kk+1,hc,q)
             if hc=="IN":
-                p=profile(q)
+                p=profile(q,vs)
                 out[p]=sp.simplify(out.get(p,0)+SIGNS[kk]*weights[j-1])
                 count+=1
     return out,count
@@ -79,11 +88,9 @@ def assert_map(got,expected):
         rem.pop(hit)
     assert not rem,("extra",rem)
 
-# Fixed inequality ensuring m=2,3,4 companion parameters remain below a.
 assert sp.simplify(a-5*Delta).is_positive is True
 
-# Extended outer companion rows for u_m=m Delta+s, m=2,3,4.
-for m in (2,3,4):
+def certify_companion(m,vs):
     U=sp.simplify(m*Delta+s)
     expU={T-U:-c1,U:c1,a+U:c2}
     expAm={a+U:-c1,a-U:c1,T-U:c2}
@@ -94,11 +101,17 @@ for m in (2,3,4):
         a+U:betam,
         2*d+U:betab,
     }
-    got,n=aggregate(U); assert n==3; assert_map(got,expU)
-    got,n=aggregate(a-U); assert n==3; assert_map(got,expAm)
-    got,n=aggregate(T-U); assert n==8; assert_map(got,expTm)
+    got,n=aggregate(U,vs); assert n==3; assert_map(got,expU)
+    got,n=aggregate(a-U,vs); assert n==3; assert_map(got,expAm)
+    got,n=aggregate(T-U,vs); assert n==8; assert_map(got,expTm)
 
-# The same M_O and nonzero gamma_Q apply.
+# m=2,3 are uniform on the full SW1 (s,eps)-triangle.
+for m in (2,3):
+    certify_companion(m,VFULL)
+
+# m=4 has the Stage-6 wall; the old M_O block is valid exactly below it.
+certify_companion(4,VLOW)
+
 M3=sp.Matrix([
  [1+c1,0,-c1],
  [0,1+c1,c2],
@@ -113,7 +126,7 @@ gammaQ=sp.simplify(-betab*rho)
 assert gammaQ.is_negative is True
 assert gammaQ.is_zero is False
 
-# Missing second outer shell x2=2d+2Delta+s.
+# Missing second outer shell x2=2d+2Delta+s is uniform.
 x2=sp.simplify(2*d+2*Delta+s)
 expected_x2={
  2*e-2*Delta-s:-c1,
@@ -122,16 +135,14 @@ expected_x2={
  3*Delta+s:c2,
  T-2*Delta-s:betab,
 }
-got,n=aggregate(x2)
+got,n=aggregate(x2,VFULL)
 assert n==8
 assert_map(got,expected_x2)
 
-# Exact Hub affine identities for DD.102k.
 assert sp.simplify(x2-a-(3*Delta+s))==0
 assert sp.simplify(x2-b-(2*Delta+s-e))==0
 assert sp.simplify(x2-T-(2*Delta+s-2*e))==0
 
-# The chain labels are exact.
 u2=sp.simplify(2*Delta+s)
 u3=sp.simplify(3*Delta+s)
 u4=sp.simplify(4*Delta+s)
@@ -141,8 +152,8 @@ assert sp.simplify((2*d+u4)-(2*d+4*Delta+s))==0
 
 print("SW1-DELTA-DESCENT STAGE-5B CERTIFICATE: PASS")
 print(f"sympy={sp.__version__}")
-print("outer companion M_O rows certified for m=2,3,4")
-print("same gamma_Q<0 is nonzero on all three bridge levels")
+print("outer companion M_O rows: m=2,3 globally; m=4 below h3 wall")
+print("same gamma_Q<0 is nonzero on all certified bridge levels")
 print("missing shell x2=2d+2Delta+s has exactly 8 echoes")
 print("aggregated second-shell A-row and Hub affine identities certified")
-print("chain to Stage 6 is now ledger-complete")
+print("chain to Stage 6 is ledger-complete; low Stage-6 can continue through u4")
