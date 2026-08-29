@@ -3,8 +3,8 @@
 
 Scope:
 - exact collision analysis of the 20 middle P/Qbar lift states used by A8;
-- prove that the only cross-sheet physical collision phase in 0<s<Delta
-  is s=Delta/2;
+- prove that among the exact 20 A8 middle-block labels the only cross-sheet
+  physical collision phase in 0<s<Delta is s=Delta/2;
 - prove 4 Delta < L < 5 Delta exactly;
 - certify that removing s=Delta/2 leaves two nonempty open separator intervals.
 
@@ -15,6 +15,10 @@ the A8 finite-component conclusion; it corrects the pointwise separator scope.
 from fractions import Fraction as F
 
 # Work in exact coordinates relative to Delta: r=L/Delta with 4<r<5.
+# Completeness scope: A8 has exactly four middle layers because the A7 edge
+# range is <=3, and A8.8-A8.9 give exactly 20 labels on those layers.
+# Same-sheet equality within these layers is impossible for distinct labels:
+# |j-m|<=3 while 4Delta<L, so a nonzero lift difference cannot be cancelled.
 # Cross-sheet equality P_j^k = Q_m^ell implies
 # 2 s/Delta = (4-m-j) + (ell-k) r.
 
@@ -24,6 +28,20 @@ states = {
     2:[("P",0),("P",1),("Q",0),("Q",1),("Q",2)],
     3:[("P",0),("P",1),("Q",0),("Q",1),("Q",2)],
 }
+
+# Exhaust same-sheet pairs in the finite middle ledger.
+flat=[]
+for j in range(4):
+    for sh,k in states[j]:
+        flat.append((j,sh,k))
+assert len(flat)==20
+for idx,(j,sh,k) in enumerate(flat):
+    for m,th,ell in flat[idx+1:]:
+        if sh!=th:
+            continue
+        assert abs(j-m)<=3
+        if k==ell:
+            assert (j,k)!=(m,ell)
 
 candidates=[]
 for j in range(4):
@@ -70,9 +88,10 @@ assert 3**12 > 2**19
 print("SW1-A8 MIDPOINT DEGENERACY FIX CERTIFICATE: PASS")
 print("exact arithmetic: Python fractions.Fraction")
 print("4 Delta < L < 5 Delta certified by integer inequalities")
-print("all middle P/Qbar collision candidates exhaustively enumerated")
+print("all 20 A8 middle-block labels exhaustively covered; same-sheet collisions excluded")
 print("the unique collision phase in 0<s<Delta is s=Delta/2")
 print("exactly 10 cross-sheet state-pair coincidences occur there")
 print("corrected separator set: (epsilon,Delta/2) U (Delta/2,Delta-epsilon)")
 print("both components are open and nonempty for 0<epsilon<Delta/2")
+print("GLOBAL FIREWALL: collisions outside the middle block require the separate sheet-quotient lemma")
 print("FIREWALL: supplements A8; no KNF/A9 or Schur claim")
