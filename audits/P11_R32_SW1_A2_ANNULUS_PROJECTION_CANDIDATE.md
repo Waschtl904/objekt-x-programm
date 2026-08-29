@@ -236,6 +236,79 @@ auf \(K^\perp\) entlang \(\mathscr T K\).
 
 ---
 
+## 2A. Orthogonale \(2\times2\)-Blockform
+
+Relativ zur orthogonalen Zerlegung
+\[
+\mathscr H_+
+=
+K\oplus K^\perp
+\]
+schreibe
+\[
+\boxed{
+\mathscr T
+=
+\begin{pmatrix}
+G&C^*\\
+C&D
+\end{pmatrix},
+}
+\tag{A2.16a}
+\]
+wobei
+\[
+\boxed{
+C
+=
+P_{K^\perp}\mathscr T|_K
+=
+P_{K^\perp}A|_K.
+}
+\tag{A2.16b}
+\]
+
+Dann besitzt A2.8 exakt die Blockform
+\[
+\boxed{
+Q_{\mathscr T,K}
+=
+\begin{pmatrix}
+0&0\\
+-CG^{-1}&I_{K^\perp}
+\end{pmatrix}.
+}
+\tag{A2.16c}
+\]
+
+Denn für \(z=z_K+z_\perp\) ist
+\[
+Pz=z_K
+\]
+und
+\[
+\mathscr T G^{-1}z_K
+=
+z_K
++
+CG^{-1}z_K
+\]
+in der Zerlegung \(K\oplus K^\perp\).
+
+Somit
+\[
+\boxed{
+Q_{\mathscr T,K}z
+=
+z_\perp-CG^{-1}z_K.
+}
+\tag{A2.16d}
+\]
+
+Diese Form macht die verbleibende Nichtlokalität vollständig explizit: sie sitzt ausschließlich im positiven Kompressionsinversen \(G^{-1}\).
+
+---
+
 ## 3. Der induzierte Annulusoperator
 
 Setze
@@ -271,6 +344,18 @@ HE_{\mathcal A}.
 Der Zielraum ist kanonisch
 \[
 K^\perp.
+\]
+
+Mit A2.16d folgt zusätzlich die exakte Schurform
+\[
+\boxed{
+\mathcal L_{\rm ann}^{\rm SW1}
+=
+P_{K^\perp}HE_{\mathcal A}
+-
+C\,G^{-1}P_KHE_{\mathcal A}.
+}
+\tag{A2.19a}
 \]
 
 Wegen A2.15 gilt unmittelbar
