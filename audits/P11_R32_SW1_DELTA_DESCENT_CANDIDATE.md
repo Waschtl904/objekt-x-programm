@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stages 1/2–9 zertifiziert; **Stage 10A Wall/Fold + äußerer Durchgangsblock hergeleitet, globaler Restblock auf (J_B) offen**; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; **Stages 1/2–11 jeweils AI-GREEN + independent GREEN (certificate)** im jeweiligen expliziten Scope; Stage 11 schließt die äußere y-Geometrie \(s\in(R,\varepsilon)\); **Stage 12 innerer KNF-Sample-Abschluss \(0<u<R\) offen**; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -3908,6 +3908,28 @@ Zu beweisen bleibt:
 \]
 
 **Firewall:** DD.290 ist eine endliche **äußere** y-Geometrie-/Eliminationsaussage auf \(s\in(R,\varepsilon)\). Der innere KNF-Samplebereich \(0<u<R\) bleibt bis Stage 12 offen. Insbesondere beweist Stage 11 noch nicht DD.292, kein HT-RED, kein A0 und keine Aussage über \(\ker\Gamma_I\).
+
+**Stage-11-Reviewstatus.** Die drei terminalen \(B_2\)-Unterkammern, alle acht direkten Fall-I-Rows, der terminale positive \(4\times4\)-Block, der Horizon-Tod von \(B_3\), die Fall-II-Companionidentitäten sowie der Fall-III-2TP-Fold wurden separat adversarial geprüft und durch
+`scripts/certify_sw1_delta_descent_stage11.py`
+mit Python/SymPy 1.14.0 reproduzierbar zertifiziert (PASS).
+
+Zertifizierter Script-Blob:
+`664b7ab3201552281af9a081a3fff337e6bffa3a`.
+
+Die simultane Invertierbarkeit der rückgekoppelten Stage-10A/11-y-Familie folgt operatorisch aus der gemeinsamen Kompression
+\[
+P_{\mathcal V_{11}}(I+A)|_{\mathcal V_{11}}\ge I.
+\]
+
+Damit gilt ausschließlich für den äußeren Stage-11-Scope:
+\[
+\boxed{
+\mathrm{Stage\ 11}:
+\text{AI-GREEN}
++
+\text{independent GREEN (certificate)}
+}
+\]
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
