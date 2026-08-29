@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; **Stage 1/2 = AI-GREEN + independent GREEN (certificate)**; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stage 1/2 zertifiziert; Stage 3 hergeleitet (2TP-Schur-Pivot + Nichtabschluss), separater Zertifikats-/Re-Review noch ausstehend; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -326,6 +326,375 @@ Der direkte Diagonalpivot
 ist strikt positiv. Das allein beweist noch keine \(\Delta\)-Rekurrenz.
 
 ---
+
+## 6. Stage 3 — 2TP-Schur-Elimination und exakter Nichtabschluss
+
+### 6.1 Notation für den zertifizierten 2TP-Pivot
+
+Setze
+\[
+\tau:=1+\kappa,\qquad
+\theta:=\beta_T,\qquad
+D_T:=\tau^2-\theta^2>0,
+\tag{DD.21}
+\]
+und
+\[
+D_+(s):=y(2d+s),\qquad
+D_-(s):=y(2d-s).
+\tag{DD.22}
+\]
+
+Definiere die 2TP-Restterme ohne die \(2d\)-Profile:
+\[
+\begin{aligned}
+F_+(s):={}&
+\beta_0y(s)+\beta_-y(a-s)+\beta_+y(a+s)\\
+&+p\,w(a+s)+r\,w(e+s)+q\,w(s),
+\end{aligned}
+\tag{DD.23}
+\]
+\[
+\begin{aligned}
+F_-(s):={}&
+\beta_0y(s)+\beta_-y(a+s)+\beta_+y(a-s)\\
+&+p\,w(a-s)+r\,w(e-s)-q\,w(s).
+\end{aligned}
+\tag{DD.24}
+\]
+
+Dann sind die zertifizierten 2TP-Rows äquivalent zu
+\[
+\begin{pmatrix}
+\tau&\theta\\
+\theta&\tau
+\end{pmatrix}
+\binom{y(T+s)}{y(T-s)}
+=
+-\binom{F_+(s)+\beta_bD_-(s)}
+{F_-(s)+\beta_bD_+(s)}.
+\tag{DD.25}
+\]
+
+Somit
+\[
+y(T+s)
+=
+-\frac{
+\tau[F_++\beta_bD_-]
+-\theta[F_-+\beta_bD_+]}
+{D_T},
+\tag{DD.26}
+\]
+\[
+y(T-s)
+=
+\frac{
+\theta[F_++\beta_bD_-]
+-\tau[F_-+\beta_bD_+]}
+{D_T}.
+\tag{DD.27}
+\]
+
+### 6.2 Die verschobenen Restprofile
+
+Schreibe
+\[
+\begin{aligned}
+G_+(s):={}&
+\beta_-y(T-\Delta-s)
++c_2y(\Delta+s)
+-c_1y(2e-s)\\
+&+p\,w(\Delta+s)-r\,w(e-s)-q\,w(2e-s),
+\end{aligned}
+\tag{DD.28}
+\]
+\[
+\begin{aligned}
+G_-(s):={}&
+\beta_-y(T-\Delta+s)
++c_2y(\Delta-s)
+-c_1y(2e+s)\\
+&+p\,w(\Delta-s)-r\,w(e+s)-q\,w(2e+s).
+\end{aligned}
+\tag{DD.29}
+\]
+
+Dann lauten DD.18–DD.19
+\[
+(1+\alpha_b)D_+ +\beta_b y(T-s)+G_+=0,
+\tag{DD.30}
+\]
+\[
+(1+\alpha_b)D_- +\beta_b y(T+s)+G_-
++1_J(s)\beta_+y(T+\Delta-s)=0.
+\tag{DD.31}
+\]
+
+### 6.3 Effektiver \(2\times2\)-Schur-Pivot für \(D_\pm\)
+
+Einsetzen von DD.26–DD.27 ergibt
+\[
+\boxed{
+K_DD_+(s)+L_DD_-(s)+\widehat G_+(s)=0,
+}
+\tag{DD.32}
+\]
+\[
+\boxed{
+L_DD_+(s)+K_DD_-(s)+\widehat G_-(s)
++1_J(s)\beta_+y(T+\Delta-s)=0,
+}
+\tag{DD.33}
+\]
+mit
+\[
+K_D
+=
+1+\alpha_b-\frac{\tau\beta_b^2}{D_T},
+\qquad
+L_D
+=
+\frac{\theta\beta_b^2}{D_T},
+\tag{DD.34}
+\]
+und
+\[
+\widehat G_+
+=
+G_+
++\frac{\beta_b}{D_T}\,[\theta F_+-\tau F_-],
+\tag{DD.35}
+\]
+\[
+\widehat G_-
+=
+G_-
++\frac{\beta_b}{D_T}\,[-\tau F_++\theta F_-].
+\tag{DD.36}
+\]
+
+Die Eigenwerte dieses neuen symmetrischen Blocks sind
+\[
+\mu_\Sigma
+=
+K_D+L_D
+=
+1+\alpha_b-\frac{\beta_b^2}{\tau+\theta},
+\tag{DD.37}
+\]
+\[
+\mu_\Delta
+=
+K_D-L_D
+=
+1+\alpha_b-\frac{\beta_b^2}{\tau-\theta}.
+\tag{DD.38}
+\]
+
+### 6.4 Exakte uniforme Positivität
+
+Aus SW1-2TP:
+\[
+\tau+\theta>\frac38,
+\qquad
+\tau-\theta>1.
+\tag{DD.39}
+\]
+
+Ferner
+\[
+|\beta_b|
+=
+c_{11}
+=
+\frac{2\log3}{3\sqrt3}
+<\frac12.
+\tag{DD.40}
+\]
+
+Für die letzte Schranke genügt:
+\[
+e^{9/8}
+>
+1+\frac98+\frac{(9/8)^2}{2}
++\frac{(9/8)^3}{6}
++\frac{(9/8)^4}{24}
+=
+\frac{100331}{32768}
+>3,
+\]
+also
+\[
+\log3<\frac98.
+\]
+Außerdem \(\sqrt3>3/2\). Daher
+\[
+c_{11}
+<
+\frac{2(9/8)}{3(3/2)}
+=
+\frac12.
+\]
+
+Da \(\alpha_b>0\),
+\[
+\boxed{
+\mu_\Sigma
+>
+1-\frac{(1/2)^2}{3/8}
+=
+\frac13>0,
+}
+\tag{DD.41}
+\]
+und
+\[
+\boxed{
+\mu_\Delta
+>
+1-\frac{(1/2)^2}{1}
+=
+\frac34>0.
+}
+\tag{DD.42}
+\]
+
+Folglich ist der effektive \(D_\pm\)-Block uniform invertierbar.
+
+### 6.5 Was auf dem AWI-Bereich \(J\) passiert
+
+Für \(s\in J\) setze
+\[
+t:=\Delta-s\in J\subset(R,\varepsilon).
+\tag{DD.43}
+\]
+Dann
+\[
+T+\Delta-s=T+t,
+\]
+also darf exakt der zertifizierte 2TP-Pivot bei Parameter \(t\) eingesetzt werden.
+
+Dabei gilt physisch
+\[
+D_-(t)=y(2d-t)=y(a+s),
+\tag{DD.44}
+\]
+während
+\[
+D_+(t)=y(2d+t)
+\tag{DD.45}
+\]
+ein weiterer blinder \(2d+\)-Kanal bleibt.
+
+Explizit enthält
+\[
+\beta_+y(T+t)
+\]
+nach 2TP einen nichtverschwindenden Term
+\[
+\boxed{
+\frac{\beta_+\theta\beta_b}{D_T}\,D_+(t),
+}
+\tag{DD.46}
+\]
+dessen Koeffizient ungleich Null ist. AWI identifiziert den \(D_-(t)\)-Branch mit \(y(a+s)\), beseitigt aber \(D_+(t)\) nicht.
+
+### 6.6 Exakte Blindlage der verschobenen Companion-Profile
+
+Setze
+\[
+u_\pm:=\Delta\pm s.
+\tag{DD.47}
+\]
+Aus SW1 folgt
+\[
+u_\pm>R.
+\tag{DD.48}
+\]
+
+Ferner liegen für beide Vorzeichen die drei physischen Punkte
+\[
+u_\pm,\qquad a-u_\pm,\qquad T-u_\pm
+\tag{DD.49}
+\]
+im exakten KNF-Blindbereich.
+
+Genauer:
+\[
+0<u_\pm<a-R,
+\qquad
+0<a-u_\pm<a-R,
+\tag{DD.50}
+\]
+und
+\[
+b+R<T-u_\pm<T-R.
+\tag{DD.51}
+\]
+
+Für den knappsten Fall \(u_+=\Delta+s\) benutzt man
+\[
+s+R<\Delta,
+\qquad
+2\Delta<e,
+\]
+woraus
+\[
+T-u_+-(b+R)
+=
+e-\Delta-s-R
+>
+e-2\Delta
+>0
+\]
+folgt.
+
+Damit sind insbesondere
+\[
+y(\Delta\pm s),\qquad
+y(2e\mp s)=y(a-u_\pm),\qquad
+y(T-\Delta\mp s)=y(T-u_\pm)
+\tag{DD.52}
+\]
+echte freie \(Z_R^+\)-Koordinaten der SW1-KNF-Normalform.
+
+### 6.7 Stage-3-Negativresultat: 2TP + AWI schließen den Δ-Descent noch nicht
+
+Die Koeffizienten der drei verschobenen \(y\)-Profile in \(G_\pm\) sind
+\[
+\beta_-\ne0,\qquad c_2\ne0,\qquad -c_1\ne0.
+\tag{DD.53}
+\]
+
+Nach SW1-KNF sind diese Profile im blinden Bereich freie Koordinaten; sie werden von der inneren Kernelgleichung nicht rekonstruiert.
+
+Daher liefern DD.32–DD.33 zwar einen **neuen uniform invertierbaren Schur-Pivot für \(D_\pm\)**, aber noch **keine geschlossene Rekurrenz in \(w\)** und auch keine geschlossene Rekurrenz ausschließlich in den bisherigen \(s\)-Profilen.
+
+Auf \(J\) kommt nach 2TP zusätzlich der freie Kanal \(D_+(t)\) aus DD.46 hinzu.
+
+Somit:
+\[
+\boxed{
+\text{SW1-2TP + SW1-AWI + die Rows bei }2d\pm s
+\text{ allein schließen den }\Delta\text{-Descent nicht.}
+}
+\tag{DD.54}
+\]
+
+Dies ist **kein No-Go gegen einen Δ-Descent mit weiteren Rows**. Es lokalisiert exakt die fehlende Stufe:
+
+\[
+\boxed{
+\text{Companion-Rows für }
+u,\ a-u,\ T-u
+\quad\text{mit }u=\Delta\pm s.
+}
+\tag{DD.55}
+\]
+
+Der nächste Angriff ist daher nicht „Rekurrenz behaupten“, sondern die direkte 11-Wort-Ableitung dieser Companion-Rows.
+
 
 ## 6. Zertifikatsstatus und nächste Stufe
 
