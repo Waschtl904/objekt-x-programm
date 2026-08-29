@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Stacked base:** research/sw1-a1-finite-cell@bb4df3a29c787d4e6981a99781e5de1c86737a51  
-> **Status:** AI-GREEN candidate nach internem adversarialen Re-Review; kein independent GREEN; keine Promotion.  
+> **Status:** AI-GREEN candidate + independent GREEN (certificate, algebraischer/mechanischer Scope); keine Promotion.  
 > **Scope:** exakte funktionalanalytische Elimination des gesamten \(y\)-Anteils. Keine Injektivität des induzierten Annulusoperators.
 
 ---
@@ -882,3 +882,106 @@ Dabei sind zwei Ergebnisse möglich:
 **Firewall:** A2 beweist nur die exakte Kernelreduktion auf einen kanonischen Annulusoperator.
 Es beweist noch keine Injektivität, kein HT-RED, keine Closed-Range-/bounded-below-Aussage,
 kein Objekt X und keine RH-Folgerung.
+
+
+---
+
+## 11. Adversarialer Funktionsanalyse-Review und Zertifikat
+
+### 11.1 Separat geprüfte unendlichdimensionale Schritte
+
+Der funktionalanalytische Teil wurde erneut gegen die tatsächlichen Hilbertraumannahmen geprüft. Dabei werden insbesondere **nicht** aus einem endlichdimensionalen Testmodell verallgemeinert.
+
+Die folgenden Schritte sind als interne mathematische Prüfung bestätigt:
+
+1. \(K=\ker(E_I^*H|_{\mathscr H_+})\) ist abgeschlossen, weil \(E_I^*H\) beschränkt ist.
+2. \(\mathscr T=I+A\) ist beschränkt, selbstadjungiert und erfüllt \(\mathscr T\ge I\); damit ist \(\mathscr T\) beschränkt invertierbar.
+3. Die Kompression
+   \[
+   G=P\mathscr T|_K
+   \]
+   ist beschränkt, selbstadjungiert und erfüllt \(G\ge I_K\). Daher ist \(G^{-1}\in\mathcal B(K)\) und \(\|G^{-1}\|\le1\).
+4. Für
+   \[
+   Q_{\mathscr T,K}=I-\mathscr T G^{-1}P
+   \]
+   gelten exakt
+   \[
+   \operatorname{Ran}Q_{\mathscr T,K}=K^\perp,\qquad
+   \ker Q_{\mathscr T,K}=\mathscr T K.
+   \]
+   Weil \(\mathscr T\) ein Homöomorphismus von \(\mathscr H_+\) ist und \(K\) abgeschlossen ist, ist \(\mathscr T K\) abgeschlossen.
+5. Die Kernelbijektion A2.26 und die Gleichheit mit dem Schur-Kern A2.27 benutzen keine zusätzliche P12-Injektivität.
+6. Für \(J=\mathscr T^{1/2}K\) ist \(J\) abgeschlossen und
+   \[
+   J^\perp=\mathscr T^{-1/2}K^\perp.
+   \]
+   Weiter gilt durch Hilbertraumdualität
+   \[
+   K^\perp=\overline{\operatorname{Ran}(H^*E_I)}.
+   \]
+7. Daraus folgt die Cross-Gram-Reconciliation
+   \[
+   Q_{\mathscr T,K}
+   =
+   \mathscr T^{1/2}P_{J^\perp}\mathscr T^{-1/2}
+   \]
+   und damit
+   \[
+   \ker\mathcal L_{\rm ann}^{\rm SW1}
+   =
+   \ker(\mathscr M_I^*\mathscr M_A).
+   \]
+8. Die Bildraum-Transversalitätsform A2.32 verwendet zusätzlich die auf SW1 verfügbare P12-Injektivität von \(HE_{\mathcal A}|_-\); die reine Kernel-/Preimage-Form benötigt sie nicht.
+
+In diesem Re-Review wurde kein Vorzeichen-, Typ-, Closure-, Range- oder Adjungiertenfehler gefunden.
+
+### 11.2 Reproduzierbares Zertifikat
+
+Zertifikatspfad:
+
+scripts/certify_sw1_a2_annulus_projection.py
+
+Geprüfter Head mit unverändertem mathematischem A2-Payload:
+
+d3d55bdb144adff20722c9a96101d73e5f6de839
+
+Committed Script-Blob:
+
+c0090f8564f72a533f1732eaabace00f96aaed40
+
+Tool:
+
+Python / SymPy 1.14.0
+
+Die exakte committed Datei wurde bytegenau gegen den Git-Blob geprüft und anschließend ausgeführt.
+
+Ergebnis:
+
+SW1-A2 ANNULUS PROJECTION ALGEBRAIC CERTIFICATE: PASS
+
+Das Zertifikat prüft mit exakter rationaler Arithmetik in mehreren nichttrivialen Matrixrealisierungen:
+
+- die schiefe Projektionsalgebra;
+- Bild-, Kern- und direkte-Summen-Struktur;
+- die \(2\times2\)-Blockform;
+- die Rekonstruktion des augmentierten Kernelpaares;
+- die \(\mathscr T^{1/2}\)-Darstellung der Projektion;
+- die Cross-Gram-Kernelreconciliation.
+
+### 11.3 Scope-Firewall
+
+independent GREEN (certificate) gilt hier **nur für den algebraischen/mechanischen Identitätsskelett-Scope**. Das Zertifikat ist kein maschineller Beweis des unendlichdimensionalen Hilbertraumsatzes. Die dort benötigten Closure-, Spektral-, Funktionalkalkül- und Range/Adjoint-Schritte sind durch den separaten adversarialen mathematischen Review gedeckt, nicht durch das Skript.
+
+Damit lautet die zulässige Buchung:
+
+\[
+\boxed{
+\mathrm{SW1\!-\!A2}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, algebraic/mechanical scope)}
+}
+\]
+
+Keine Promotion. Keine Injektivität von \(\mathcal L_{\rm ann}^{\rm SW1}\), kein HT-RED, keine Closed-Range-Aussage, kein Objekt X und keine RH-Folgerung.

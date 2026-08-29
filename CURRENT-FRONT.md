@@ -1,9 +1,9 @@
 # CURRENT FRONT — Objekt X / P11-R32
 
 > **Operative Kopfschicht — zuerst lesen.**  
-> **Stand:** 28. August 2026  
-> **Verifizierte Main-Basis:** \`9c1d2e8cfb0ea2b1b271c0d5ece95ec022cfbac9\` (Squash-Merge PR #18, SW1-AWI AI-GREEN + independent GREEN (certificate), keine Promotion)  
-> **Aktiver mathematischer Stand:** `HT-A4b-SW1-M` ist promotet (\`✓[M]\`, Objekt-X-interner Status); `SW1-KNF` und `SW1-BL7` sind AI-GREEN Kandidaten; `SW1-2TP` und `SW1-AWI` sind AI-GREEN + independent GREEN (certificate); alle vier ohne Promotion  
+> **Stand:** 29. August 2026  
+> **Verifizierte Main-Basis:** \`6ff2598d6071fc1fd9444d3f9734384c23264834\` (Squash-Merge PR #28; gestapelte Kette PR #19–#28 vollständig auf \`main\`; keine neue Promotion)  
+> **Aktiver mathematischer Stand:** `HT-A4b-SW1-M` bleibt \`✓[M]\`. Die Kette `SW1-Δ-DESCENT → A0 → … → A8` liegt jetzt auf \`main\`; A0, A1 und A4–A8 tragen `AI-GREEN candidate + independent GREEN (certificate)`, A2/A3 bleiben `AI-GREEN candidate`, der Gesamt-Δ-DESCENT bleibt `?[O]`. Aktiver nächster Knoten: **A9-KNF Separatorstabilität unter `J_R`**.  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -125,55 +125,63 @@ Promotet mit kanonischem Promotionsrecord \`audits/P11_R32_HT_A4B_SW1_M_PROMOTIO
 
 ## 4. Nächster mathematischer Schritt
 
-Der aktuelle Pfad:
+Die gestapelte Kandidatenkette PR #19–#28 ist nun vollständig auf \`main\` gemergt.
+
+Der derzeit relevante Pfad lautet:
 
 \[
 \boxed{
-\mathrm{SW1\text{-}KNF} \to \mathrm{SW1\text{-}BL7} \to \mathrm{SW1\text{-}2TP} \to \mathrm{SW1\text{-}AWI} \to \Delta\text{-Descent}
+\mathrm{SW1\text{-}KNF}
+\to
+\mathrm{SW1\text{-}A0}
+\to
+\mathrm{SW1\text{-}A1}
+\to
+\mathrm{SW1\text{-}A2}
+\to
+\mathrm{SW1\text{-}A3}
+\to
+\mathrm{SW1\text{-}A4}
+\to
+\mathrm{SW1\text{-}A5}
+\to
+\mathrm{SW1\text{-}A6}
+\to
+\mathrm{SW1\text{-}A7}
+\to
+\mathrm{SW1\text{-}A8}
+\to
+\mathrm{A9\text{-}KNF}
 }
 \]
 
-Die ersten vier Bausteine sind jetzt auf \`main\` verfügbar; SW1-2TP und SW1-AWI sind zusätzlich reproduzierbar algebraisch zertifiziert.
+Wichtige Statusgrenze:
 
-**Unmittelbarer nächster Kandidat: SW1-Δ-DESCENT.**
+- \(\Delta\)-DESCENT besitzt zahlreiche zertifizierte endliche Teilstufen, bleibt aber als **Gesamtknoten** \`?[O]\`.
+- A0 und A1 sind \`AI-GREEN candidate + independent GREEN (certificate)\`.
+- A2 und A3 sind \`AI-GREEN candidate\` ohne \`independent GREEN\`.
+- A4–A8 sind \`AI-GREEN candidate + independent GREEN (certificate)\`.
+- **Keine** dieser Merge-Aktionen erzeugt eine \`✓[M]\`-Promotion.
 
-Ziel ist, aus den verbleibenden Rows — primär bei \(2d\pm s\) — eine echte endliche Rekurrenz mit Schrittweite \(\Delta\) zu gewinnen, die auf dem kurzen SW1-Strip nach endlich vielen Schritten terminiert.
-
-Verbindliche Reihenfolge:
+Der unmittelbar aktive Knoten ist
 
 \[
 \boxed{
-11\text{-Wort-Ableitung bei }2d\pm s
-\to
-\text{Support/Horizon-Klassifikation}
-\to
-\text{Restblock/Pivot}
-\to
-\Delta\text{-Rekurrenz}
-\to
-\text{finite Terminierung}
+\text{A9-KNF: Separatorstabilität unter der KNF-Rekonstruktion }J_R.
 }
 \]
 
-Die bereits vorhandenen Scratch-Formeln für \((Ay)(2d\pm s)\) dürfen **nicht als Beweisinput** verwendet werden; sie dienen höchstens post hoc zum Vergleich.
+A8 beweist nur endliche Zusammenhangskomponenten des vollständigen **rohen A1-Punktgraphen** im unteren Chamber. Für den freien Gramoperator
 
-**Firewall:** Noch kein HT-RED, kein A0 und keine Aussage über \(\ker\Gamma_I\). Ein erfolgreicher \(\Delta\)-Descent wäre zunächst nur ein weiterer sektoraler Eliminationsbaustein.
-
-**Prüfdisziplin:** wie bei 2TP/AWI: AI-GREEN intern; endliche algebraische Teile nach Möglichkeit reproduzierbar zertifizieren; Cross-Model-Fails transparent als FAIL/PARTIAL dokumentieren.
-
-### Erfolgsausgang der Gesamtkette
-
-Falls die innere Rechnung
 \[
-y=0
+\mathfrak G_R=J_R^*(I+A)J_R
 \]
-erzwingt, kann anschließend P12-RT \(\checkmark[M]\) für den äußeren Hub verwendet werden, um \(w=0\) zu folgern.
 
-### Negativausgang
+muss geprüft werden, ob die durch \(J_R\) erzeugten Zusatzkanten die A8-Separatoren erhalten oder einen expliziten Bypass erzeugen.
 
-Falls ein nichttrivialer Restfreiheitsgrad oder Gegenvektor überlebt, ist dieser explizit zu isolieren. Dann ist SW1 allein für den vollständigen Schur-Abschluss nicht ausreichend.
+Der aktuelle A9-Strukturkandidat zeigt bereits: Die neuen KNF-Kanten fügen eine endliche Halbperioden-Parität hinzu, aber keine neue unabhängige irrationale Basisrotation. Die eigentliche Separatorentscheidung bleibt offen.
 
-Beide Ausgänge sind verwertbare Forschungsergebnisse.
+**Firewall:** Noch kein HT-RED, keine Schur-/Cross-Gram-Injektivität, keine Aussage über \(\ker\Gamma_I=\{0\}\), kein Objekt-X-Abschluss und keine RH-Folgerung.
 
 ---
 
@@ -355,15 +363,25 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 \text{P12 restricted-tail outer Hub} & \checkmark[M] \\
 \text{HT-A4b-SW1-M} & \checkmark[M] \\
 \text{SW1-KNF} & \text{AI-GREEN candidate, keine Promotion} \\
-\text{SW1-BL7} & \text{AI-GREEN candidate, keine Promotion} \\
-\text{SW1-2TP} & \text{AI-GREEN + independent GREEN (certificate), keine Promotion} \\
-\text{SW1-AWI} & \text{AI-GREEN + independent GREEN (certificate), keine Promotion} \\
-\text{SW1-Δ-DESCENT} & ?[O] \\
+\text{SW1-2TP} & \text{AI-GREEN + independent GREEN (certificate)} \\
+\text{SW1-AWI} & \text{AI-GREEN + independent GREEN (certificate)} \\
+\text{SW1-}\Delta\text{-DESCENT (gesamt)} & ?[O] \\
+\text{SW1-A0} & \text{AI-GREEN + independent GREEN (certificate)} \\
+\text{SW1-A1} & \text{AI-GREEN + independent GREEN (certificate)} \\
+\text{SW1-A2} & \text{AI-GREEN candidate} \\
+\text{SW1-A3} & \text{AI-GREEN candidate} \\
+\text{SW1-A4} & \text{AI-GREEN + independent GREEN (certificate)} \\
+\text{SW1-A5} & \text{AI-GREEN + independent GREEN (certificate)} \\
+\text{SW1-A6} & \text{AI-GREEN + independent GREEN (certificate)} \\
+\text{SW1-A7} & \text{AI-GREEN + independent GREEN (certificate)} \\
+\text{SW1-A8} & \text{AI-GREEN + independent GREEN (certificate)} \\
+\text{A9-KNF Separatorstabilität} & ?[O] \\
 \text{HT-RED} & ?[O] \\
-\text{A0} & ?[O] \\
 \text{Schur Cross-Gram} & ?[O]
 \end{array}
 }
 \]
 
-**Nächster Default:** SW1-Δ-DESCENT — direkte Ableitung der \(2d\pm s\)-Rows und Suche nach einer endlichen \(\Delta\)-Rekurrenz; danach erst Bewertung, ob HT-RED auf SW1 geschlossen werden kann.
+**Nächster Default:** A9-KNF — vollständige Zusatzkanten von \(J_R^*J_R\) und \(J_R^*AJ_R\) bestimmen, identische affine Kanäle vor dem Graphurteil koeffizientenweise zusammenfassen und danach die Separator-/Bypassfrage entscheiden.
+
+**Merge-Firewall:** PR #19–#28 sind auf \`main\` gemergt; daraus folgt **keine** mathematische Promotion.

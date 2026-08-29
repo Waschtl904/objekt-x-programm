@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Stacked base:** research/sw1-a2-annulus-projection@8bf6a8acf1a25e66bba6edc460c08b3dac9918e7  
-> **Status:** AI-GREEN candidate nach internem Re-Review; kein independent GREEN; keine Promotion.  
+> **Status:** AI-GREEN candidate + independent GREEN (certificate, algebraischer/mechanischer Scope); keine Promotion.  
 > **Scope:** exakte KNF-Koordinatisierung des positiven Kompressionsinversen aus A2. Keine Injektivität.
 
 ---
@@ -464,3 +464,100 @@ explizit lokal/finit berechenbar wird oder ob eine andere funktionalanalytische 
 **Firewall:** A3 beweist keine Injektivität von
 \(\mathcal L_{\rm ann}^{\rm SW1}\), keinen trivialen Schur-Kern, kein HT-RED,
 keine Closed-Range-/bounded-below-Aussage, kein Objekt X und keine RH-Folgerung.
+
+
+---
+
+## 9. Adversarialer Funktionsanalyse-Review und Zertifikat
+
+### 9.1 Separat geprüfte unendlichdimensionale Schritte
+
+Der A3-Operator wurde erneut unabhängig von den endlichen Testmodellen als Hilbertraumargument geprüft.
+
+Bestätigt wurden:
+
+1. \(J_R=\Psi_R^{-1}:\mathcal F_R\to K\) ist ein beschränkter Isomorphismus auf den abgeschlossenen Unterraum \(K\).
+2. Die Kongruenz
+   \[
+   \mathfrak G_R=J_R^*(I+A)J_R
+   \]
+   ist bezüglich der Standard-Hilbertraumstruktur auf \(\mathcal F_R\) beschränkt, selbstadjungiert und positiv.
+3. Aus
+   \[
+   \|\xi\|\le \|\Psi_R\|\,\|J_R\xi\|
+   \]
+   folgt exakt
+   \[
+   \mathfrak G_R\ge \|\Psi_R\|^{-2}I,
+   \qquad
+   \|\mathfrak G_R^{-1}\|\le \|\Psi_R\|^2.
+   \]
+   Es wird dabei keine unzulässige Positivität einer bloßen Ähnlichkeitstransformation benutzt.
+4. Die Gramfaktorisierung
+   \[
+   \mathfrak G_R
+   =
+   J_R^*J_R+(R_{T_0}J_R)^*(R_{T_0}J_R)
+   \]
+   ist exakt.
+5. Die KNF-Quelle zeigt, dass der Blindanteil \(z\) und der durch \(h\) bestimmte Sample-/Rekonstruktionsanteil a.e. disjunkte physische Supporte besitzen. Daher hat \(J_R^*J_R\) keine \(z/h\)-Kreuzterme.
+6. Für
+   \[
+   \mathcal R_K=J_R\mathfrak G_R^{-1}J_R^*
+   \]
+   gilt exakt
+   \[
+   \mathcal R_K=G^{-1}P.
+   \]
+   Der Beweis benutzt nur die eindeutige coercive Gleichung auf \(K\), nicht Unitariät von \(J_R\).
+7. Die Variationsform A3.18 und die Minimiererform A3.19 sind wegen der strikten Coercivität wohldefiniert und eindeutig.
+8. Die finite-cell Aussage A3.20 ist operatorwertig zu lesen: die Einträge bleiben Operatoren zwischen \(L^2\)-Intervallen. Es wird keine endliche skalare Matrix behauptet.
+
+In diesem Re-Review wurde kein Positivitäts-, Adjungierten-, Norm-, Support- oder Nichtunitaritätsfehler gefunden.
+
+### 9.2 Reproduzierbares Zertifikat
+
+Zertifikatspfad:
+
+scripts/certify_sw1_a3_free_gram.py
+
+Geprüfter Head mit unverändertem mathematischem A3-Payload:
+
+58a460e50250a3111e304f436cd88805fd20667f
+
+Committed Script-Blob:
+
+1136484b20e85dde0baa32361b52836ce359071f
+
+Tool:
+
+Python / SymPy 1.14.0
+
+Ergebnis der Ausführung des aus dem committed Blob gelesenen Skripts:
+
+SW1-A3 FREE GRAM ALGEBRAIC CERTIFICATE: PASS
+
+Das Zertifikat prüft in mehreren exakten rationalen Matrixrealisierungen:
+
+- die Gramfaktorisierung;
+- das positive Gram-Skelett;
+- die Identität des Kompressionsinversen;
+- die exakte Variationsgleichung;
+- die Support-disjunkte \(z/h\)-Blockstruktur des Identitätsteils.
+
+### 9.3 Scope-Firewall
+
+independent GREEN (certificate) gilt hier **nur für den algebraischen/mechanischen Identitätsskelett-Scope**. Das Skript ist kein maschineller Beweis des vollständigen unendlichdimensionalen Hilbertraumsatzes. Coercivität, bounded-inverse-Schluss, Variationsargument und die tatsächliche \(L^2\)-finite-cell-Typisierung sind durch den separaten mathematischen Review gedeckt.
+
+Zulässige Buchung:
+
+\[
+\boxed{
+\mathrm{SW1\!-\!A3}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, algebraic/mechanical scope)}
+}
+\]
+
+Keine Promotion. Keine Injektivität von \(\mathcal L_{\rm ann}^{\rm SW1}\), kein trivialer Schur-Kern, kein HT-RED, keine Closed-Range-Aussage, kein Objekt X und keine RH-Folgerung.
