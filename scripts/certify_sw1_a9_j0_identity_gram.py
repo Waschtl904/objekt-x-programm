@@ -113,7 +113,7 @@ def certify_pairs():
         slope, intercept = relation(src, dst)
         eslope, eintercept, _, _ = expected_pairs[pair]
         assert sp.simplify(slope - eslope) == 0
-        assert log_pair(sp.expand(intercept - eintercept)) == (0, 0)
+        assert sp.simplify(intercept - eintercept) == 0
 
         # Rank-one off-diagonal coefficient c_i c_j is nonzero.
         cij = sp.simplify(coeff[src] * coeff[dst])
