@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; **Stages 1/2–11 jeweils AI-GREEN + independent GREEN (certificate)** im jeweiligen expliziten Scope; Stage 11 schließt die äußere y-Geometrie \(s\in(R,\varepsilon)\); **Stage 12 innerer KNF-Sample-Abschluss \(0<u<R\) offen**; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stages 1/2–11 zertifiziert; **Stage 12 innerer KNF-Sample-Abschluss hergeleitet, Zertifikat/Re-Review offen**; nächster struktureller Knoten danach A0-Coverage; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -3930,6 +3930,298 @@ Damit gilt ausschließlich für den äußeren Stage-11-Scope:
 \text{independent GREEN (certificate)}
 }
 \]
+
+
+## 17. Stage 12 — innerer KNF-Sample-Abschluss für \(0<u<R\)
+
+Stage 11 schließt die äußere Parameterzone \(s\in(R,\varepsilon)\). Es verbleiben die fünf freien KNF-Samplekoordinaten
+\[
+y(a+u),\quad y(b-u),\quad y(b+u),\quad y(T-u),\quad y(T+u),
+\qquad 0<u<R,
+\tag{DD.293}
+\]
+wobei \(y(a-u)\) durch KNF.11 rekonstruiert wird.
+
+### 17.1 Innere Parameter liegen strikt in der einfachsten Kammer
+
+Aus
+\[
+0<u<R<\varepsilon,
+\qquad
+R+\varepsilon<\Delta
+\]
+folgt
+\[
+\boxed{
+u+\varepsilon<\Delta.
+}
+\tag{DD.294}
+\]
+
+Ferner
+\[
+2u<2R<R+\varepsilon<\Delta,
+\tag{DD.295}
+\]
+also
+\[
+\boxed{
+u<\frac{\Delta}{2}.
+}
+\tag{DD.296}
+\]
+
+Damit
+\[
+\boxed{
+\Delta-u>\varepsilon,
+}
+\tag{DD.297}
+\]
+und
+\[
+\boxed{
+\Delta+u<\frac32\Delta<2\Delta.
+}
+\tag{DD.298}
+\]
+
+Da
+\[
+h_B>\Delta,
+\]
+gilt zusätzlich
+\[
+\boxed{
+u+\varepsilon<\Delta<h_B.
+}
+\tag{DD.299}
+\]
+
+Somit liegt der gesamte innere Samplebereich:
+- außerhalb des AWI-Überlapps \(J\);
+- unterhalb der Stage-10A-B-Wall;
+- mit beiden ersten \(\Delta\)-Nachfolgern \(\Delta\pm u\) bereits im äußeren Companionbereich.
+
+### 17.2 \(a/T\)-Sampleblock
+
+Die direkte elf-Wort-Ableitung auf der Kammer DD.294 liefert dieselben Rows wie Stage 4 außerhalb \(J\):
+
+\[
+\boxed{
+M_5X_I(u)
++
+\beta_b
+\begin{pmatrix}
+0\\0\\0\\D_+(u)\\D_-(u)
+\end{pmatrix}
++h_5(u)
+=0,
+}
+\tag{DD.300}
+\]
+mit
+\[
+X_I(u)
+=
+\begin{pmatrix}
+y(u)\\
+y(a-u)\\
+y(a+u)\\
+y(T-u)\\
+y(T+u)
+\end{pmatrix},
+\tag{DD.301}
+\]
+und demselben strikt positiven Block \(M_5\) aus DD.78:
+
+\[
+\boxed{M_5\ge I.}
+\tag{DD.302}
+\]
+
+Die T-Rows sind dabei exakt der Stage-7-erweiterte 2TP-Pivot, der für
+\[
+0<u<\varepsilon
+\]
+bereits direkt aus den elf Wörtern bewiesen wurde.
+
+Falls einzelne Hubargumente in \((-R,R)\) fallen, verschwinden sie durch die kanonische Nullfortsetzung des Annulusprofils \(E_{\mathcal A}w\); die y-Row-Algebra bleibt unverändert.
+
+### 17.3 Die beiden \(2d\)-Nachfolger starten sofort im äußeren Companionregime
+
+Setze
+\[
+v_-:=\Delta-u,
+\qquad
+v_+:=\Delta+u.
+\tag{DD.303}
+\]
+
+Aus DD.297–DD.298:
+\[
+\boxed{
+\varepsilon<v_-<v_+<2\Delta.
+}
+\tag{DD.304}
+\]
+
+Daher liegen beide von DD.300 erzeugten Kanäle
+\[
+D_-(u)=y(2d-u),
+\qquad
+D_+(u)=y(2d+u)
+\]
+nach den direkten \(2d\pm u\)-Rows in exakt derselben äußeren Companionarchitektur wie Stage 4.
+
+Die Stages 5–7 können anschließend mit Basisparameter \(u\) erneut angewandt werden: Ihre direkten A-Ledger hängen nur von den Gate-/Horizon-Ungleichungen in \((u,\varepsilon)\) ab, und DD.294 legt \(u\) in die bereits zertifizierte untere Kammer. Hubwerte werden weiterhin mit der Annulus-Nullfortsetzung interpretiert.
+
+Damit ist die gesamte von \(D_\pm(u)\) erzeugte y-Schalenfamilie nach endlich vielen \(\Delta\)-Schritten geschlossen.
+
+### 17.4 \(b\)-Sampleblock
+
+Die freien KNF-Koordinaten \(y(b\pm u)\) liegen im Stage-8-Differenzsystem.
+
+Wegen DD.294 ist
+\[
+u\notin J,
+\]
+also gilt ohne Reflexionsquotient der pointwise Block
+\[
+\boxed{
+M_BX_B(u)
++
+c_{11}e_4D_{b+\Delta}(u)
++
+W_B(u)
+=0,
+}
+\tag{DD.305}
+\]
+mit
+\[
+M_B>0
+\]
+aus DD.157–DD.158.
+
+Da
+\[
+u+\varepsilon<\Delta<h_B,
+\]
+liegt der nächste Zentrumsschritt \(b+\Delta\) automatisch in der **unteren** Stage-10A-Kammer. Somit gilt dort der positive Durchgangsblock \(M_{B,1}\).
+
+Der folgende \(B_2\)-Schritt wird durch die drei exhaustiven Stage-11-Fälle geschlossen. Es entsteht kein weiterer y-Zentrumstyp.
+
+### 17.5 Einbau der KNF-Rekonstruktion
+
+Für \(y\in\mathcal K_R\) gilt bereits
+\[
+E_I^*H_{T_0}y=0,
+\]
+und KNF.11 rekonstruiert
+\[
+y(a-u)
+=
+y(a+u)
+-\frac rp\,[y(b-u)-y(b+u)]
+-\frac qp\,[y(T-u)-y(T+u)].
+\tag{DD.306}
+\]
+
+Damit ist \(y(a-u)\) in DD.300 **keine zusätzliche freie Koordinate**.
+
+Sei \(\mathcal V_{\mathrm{samp}}\subset\mathcal K_R\) der tatsächliche physische Profilraum, der durch
+
+- die fünf freien KNF-Samplebranches DD.293,
+- den rekonstruierten linken \(a\)-Branch DD.306,
+- den zentralen Companion \(y(u)\),
+- die endlichen \(2d\)-Schalen aus DD.303–DD.304,
+- die endliche \(b\to b+\Delta\to b+2\Delta\)-Familie
+
+erzeugt wird, jeweils nach physischer Identifikation gleicher Profile und zusammen mit den bereits zertifizierten äußeren Masterräumen, falls ein Nachfolger in deren Bereich fällt.
+
+Die direkten Rows der Stages 4–11 zeigen: Innerhalb dieses erzeugten Systems tritt kein weiterer y-Randtyp auf.
+
+### 17.6 Simultaner Sample-Masterblock
+
+Die erste augmentierte Gleichung auf diesem tatsächlichen KNF-Profilraum besitzt daher die Form
+\[
+\boxed{
+K_{\mathrm{samp}}Y_{\mathrm{samp}}
++
+H_{\mathrm{samp}}w
+=0,
+}
+\tag{DD.307}
+\]
+mit
+\[
+K_{\mathrm{samp}}
+=
+P_{\mathcal V_{\mathrm{samp}}}
+(I+A)
+|_{\mathcal V_{\mathrm{samp}}}.
+\tag{DD.308}
+\]
+
+Da
+\[
+A\ge0,
+\]
+folgt
+\[
+\boxed{
+K_{\mathrm{samp}}\ge I,
+\qquad
+\|K_{\mathrm{samp}}^{-1}\|\le1.
+}
+\tag{DD.309}
+\]
+
+Damit sind die fünf freien KNF-Samplekoordinaten DD.293 zusammen mit allen von ihnen erzeugten endlichen y-Companions simultan eindeutig in Abhängigkeit von \(w\) eliminierbar.
+
+### 17.7 Was Stage 12 schließt — und was nicht
+
+Stage 12 schließt den gesamten **gesampelten KNF-Summanden**
+\[
+L^2(\mathcal V_R^{\rm SW1})
+\]
+der Normalform
+\[
+\mathcal K_R
+\cong
+\mathcal Z_R^+
+\oplus
+L^2(\mathcal V_R^{\rm SW1})
+\tag{DD.310}
+\]
+hinsichtlich der bisher untersuchten ersten augmentierten Gleichung.
+
+Zusammen mit Stage 11 sind damit
+
+- die äußere \(\Delta\)-Schalen-/B-Zentrum-Geometrie;
+- die fünf freien inneren Samplebranches
+
+endlich y-seitig kontrolliert.
+
+**Nicht** bewiesen ist jedoch, dass die bisher erzeugten Profile den gesamten blinden Summanden
+\[
+\mathcal Z_R^+
+\]
+exhaustieren.
+
+Der nächste korrekte Knoten ist daher nicht sofort der Annulus-Kern, sondern die bereits bekannte Coverage-Frage:
+
+\[
+\boxed{
+\text{A0 / vollständige Abdeckung der verbleibenden blinden KNF-Koordinaten.}
+}
+\tag{DD.311}
+\]
+
+Erst nach einem A0-Abschluss darf die vollständige y-Elimination in einen einzigen induzierten Annulusoperator überführt werden.
+
+**Firewall:** Stage 12 ist ein Sample-Scope-Abschluss. Kein A0, kein HT-RED, kein \(\ker\Gamma_I=\{0\}\), kein Objekt X und keine RH-Folgerung.
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
