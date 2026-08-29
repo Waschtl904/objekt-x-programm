@@ -46,8 +46,8 @@ assert sp.simplify(muS - (P-betab**2/(tau+theta))) == 0
 assert sp.simplify(muD - (P-betab**2/(tau-theta))) == 0
 assert muS.is_positive is True
 assert muD.is_positive is True
-assert sp.N(muS) > sp.Rational(1,3)
-assert sp.N(muD) > sp.Rational(3,4)
+assert sp.simplify(muS-sp.Rational(1,3)).is_positive is True
+assert sp.simplify(muD-sp.Rational(3,4)).is_positive is True
 
 # Symbolic verification of the Schur substitution.
 Dp,Dm,Yp,Ym,Fp,Fm,Gp,Gm = sp.symbols("Dp Dm Yp Ym Fp Fm Gp Gm")
@@ -70,6 +70,7 @@ assert extra_coeff.is_positive is True
 
 # Fixed inequalities needed for the KNF blind placement.
 assert sp.simplify(e-2*Delta).is_positive is True
+assert sp.simplify(e-Delta).is_positive is True
 assert sp.simplify(a-2*Delta).is_positive is True
 
 # SW1 slack parametrization:
@@ -88,6 +89,8 @@ assert sp.simplify((DD-(R+eps))-g) == 0
 # u_plus + R < 2 Delta and u_minus > R.
 assert sp.simplify(2*DD-(uplus+R)-(v+g)) == 0
 assert sp.simplify(umin-R-(v+g)) == 0
+assert sp.simplify((a-R-uplus)-((a-2*DD)+(v+g))) == 0
+assert sp.simplify((a-umin)-((a-DD)+ss)) == 0
 
 # T-u_plus > b+R follows from e-2Delta>0 plus strict slack:
 # (T-uplus)-(b+R) = e-Delta-s-R
