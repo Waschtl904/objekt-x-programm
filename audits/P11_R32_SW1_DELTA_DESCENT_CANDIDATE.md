@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; **Stage 1/2, Stage 3 und Stage 4 jeweils AI-GREEN + independent GREEN (certificate)**; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stage 1/2, Stage 3 und Stage 4 zertifiziert; **Stage 5 erste äußere Δ-Schale hergeleitet, Re-Review/Zertifikat noch offen**; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -1205,6 +1205,139 @@ Damit gilt ausschließlich für Stage 4:
 \]
 
 Das Gesamtziel bleibt `?[O]`.
+
+
+## 8. Stage 5 — erste äußere Δ-Schale \(D_+(\Delta+s)\)
+
+Stage 4 zeigt, dass der nächste nichtverschwindende y-Kanal
+\[
+D_+(\Delta+s)
+=
+y(2d+\Delta+s)
+\]
+tatsächlich auftritt. Wir leiten seine Row nun direkt aus HT.3/HT.4 ab.
+
+### 8.1 Direkte 11-Wort-Row
+
+Für
+\[
+R<s<\varepsilon
+\]
+setze
+\[
+x_1:=2d+\Delta+s.
+\tag{DD.97}
+\]
+
+Die Gate-/Horizon-Klassifikation ist auf ganz SW1 uniform, unabhängig davon, ob \(s\in J\) liegt. Es überleben exakt acht Echo-Beiträge und sie gruppieren sich zu
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(2d+\Delta+s)
+={}&
+-c_1y(2e-\Delta-s)
++\alpha_b y(2d+\Delta+s)\\
+&+\beta_-y(T-2\Delta-s)
++c_2y(2\Delta+s)
++\beta_b y(T-\Delta-s).
+\end{aligned}}
+\tag{DD.98}
+\]
+
+Dies wurde nicht durch formales Verschieben von DD.13 gewonnen, sondern erneut aus allen elf Wörtern abgeleitet.
+
+### 8.2 Hub-Row
+
+Bei \(u=2d+\Delta+s\) sind sämtliche rechten Hubäste außerhalb des Annulus. Für die linken Äste gilt
+
+\[
+u-a=2\Delta+s,
+\]
+\[
+u-b=-(e-\Delta-s),
+\]
+\[
+u-T=-(2e-\Delta-s).
+\]
+
+Da auf SW1
+\[
+e-\Delta-s>e-2\Delta>0,
+\]
+folgt mit der Oddheit von \(w\)
+
+\[
+\boxed{
+(HE_{\mathcal A}w)(2d+\Delta+s)
+=
+p\,w(2\Delta+s)
+-r\,w(e-\Delta-s)
+-q\,w(2e-\Delta-s).
+}
+\tag{DD.99}
+\]
+
+Damit lautet die augmentierte erste äußere Schalenrow
+
+\[
+\boxed{
+\begin{aligned}
+0={}&
+(1+\alpha_b)y(2d+\Delta+s)
++\beta_-y(T-2\Delta-s)
++c_2y(2\Delta+s)\\
+&+\beta_b y(T-\Delta-s)
+-c_1y(2e-\Delta-s)\\
+&+p\,w(2\Delta+s)
+-r\,w(e-\Delta-s)
+-q\,w(2e-\Delta-s).
+\end{aligned}}
+\tag{DD.100}
+\]
+
+### 8.3 Exakte Verschiebungsstruktur
+
+Vergleicht man DD.100 mit DD.18, so ist nun **post hoc** sichtbar:
+
+\[
+\begin{array}{c|c}
+\text{Stage-1-Profil} & \text{Stage-5-Profil}\\ \hline
+2d+s & 2d+(\Delta+s)\\
+T-\Delta-s & T-2\Delta-s\\
+\Delta+s & 2\Delta+s\\
+T-s & T-\Delta-s\\
+2e-s & 2e-\Delta-s
+\end{array}
+\tag{DD.101}
+\]
+
+Die Koeffizienten bleiben exakt
+\[
+1+\alpha_b,\quad \beta_-,\quad c_2,\quad \beta_b,\quad -c_1.
+\]
+
+Damit ist die erste äußere Δ-Propagation direkt reproduziert.
+
+### 8.4 Noch kein allgemeines n-Lemma
+
+DD.100 rechtfertigt **nicht** ohne weitere Gateprüfung die Formel für beliebiges
+\[
+2d+n\Delta+s.
+\]
+
+Tatsächlich nähert sich bei höheren Schalen das linke \(3a\)-Gate dem aktiven Bereich. Daher wird jede weitere Schale separat oder durch ein eigenes uniformes \(n\)-Lemma zu prüfen sein.
+
+Der unmittelbar nächste Companionparameter ist
+\[
+v:=2\Delta+s.
+\tag{DD.102}
+\]
+Für ihn müssen die Companion-Rows
+\[
+v,\qquad a-v,\qquad T-v
+\]
+direkt klassifiziert werden. Erst danach kann entschieden werden, ob DD.100 zu einer zweiten echten Δ-Propagation führt oder an einer neuen Wall zerfällt.
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
