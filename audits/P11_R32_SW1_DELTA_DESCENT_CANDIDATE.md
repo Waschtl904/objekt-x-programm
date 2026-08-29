@@ -3804,7 +3804,39 @@ Damit liegen **beide** \(B_2\)-Äste im erweiterten lokalen 2TP-Pivot aus Stage 
 
 Auch Fall III erzeugt keinen neuen y-Randtyp.
 
-### 16.4 Exhaustivität und terminaler B-Abschluss
+### 16.4 Simultaner physischer Masterblock
+
+In Fall I koppelt DD.275 zurück an die bereits vorhandene (F_1)-Koordinate aus Stage 10A. Deshalb wird **nicht** aus der getrennten Positivität von (M_{B,1}) und (M_{B,2}) auf eine sequenzielle Invertierbarkeit geschlossen.
+
+Stattdessen sei (mathcal V_{11}) der tatsächliche physische (L^2)-Raum, der von den Stage-10A- und Stage-11-Profilen des jeweiligen endlichen Parametersatzes erzeugt wird, nach Identifikation physisch gleicher Profile und unter Hinzunahme der in Fall II/III bereits zertifizierten Stage-4-/2TP-Profilräume.
+
+Nach DD.264–DD.288 gibt es in keinem der drei Fälle einen y-Kanal außerhalb dieses endlichen Raums:
+- Fall I: (B_3) ist horizon-tot;
+- Fall II: (B_2+s) ist 2TP-intern und (B_2-s) liegt im Stage-4-Companionblock;
+- Fall III: beide (B_2)-Äste sind 2TP-intern.
+
+Daher ist der gekoppelte y-Operator exakt die Kompression
+[
+oxed{
+K_{11}
+=
+P_{mathcal V_{11}}(I+A)|_{mathcal V_{11}}
+ge I.
+}
+	ag{DD.288a}
+]
+
+Somit
+[
+oxed{
+|K_{11}^{-1}|le1.
+}
+	ag{DD.288b}
+]
+
+Die gesamte gekoppelte Stage-10A/11-y-Familie kann daher simultan und eindeutig in Abhängigkeit von (w) eliminiert werden.
+
+### 16.5 Exhaustivität und terminaler B-Abschluss
 
 Außerhalb der Nullmengen-Walls DD.260 sind die drei Fälle exhaustiv:
 
@@ -3833,7 +3865,7 @@ Zusammen mit Stage 10C folgt daher auf **ganz SW1**:
 
 Kombiniert mit der Stage-7-y-shell-Closure ist damit die **gesamte y-Geometrie** des bisherigen SW1-Δ-Descent-Systems endlich eliminierbar.
 
-### 16.5 Neuer einziger Engpass
+### 16.6 Neuer einziger Engpass
 
 Nach DD.290 bleibt kein neuer y-Rowtyp mehr offen.
 
