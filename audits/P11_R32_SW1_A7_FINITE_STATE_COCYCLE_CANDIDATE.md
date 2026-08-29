@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Stacked base:** research/sw1-a6-rotation-hole@0b090ebb0c59c79529fb6d4e626f33876abbfcab  
-> **Status:** ?[O] — vollständige finite-state Transferform hergeleitet; Zertifikat/Re-Review offen; keine Promotion.  
+> **Status:** `AI-GREEN candidate + independent GREEN (certificate)` — finite-state Cocycle vollständig zertifiziert; **keine Promotion**.  
 > **Scope:** voller roher A1-Punktgraph im unteren \(\varepsilon\)-Chamber. Keine Komponent-Endlichkeit und keine Schur-Injektivität.
 
 ---
@@ -456,3 +456,38 @@ Vorgehen:
 5. nach einem wiederkehrenden Separatorwort oder einem echten unendlichen Bypass suchen.
 
 **Firewall:** A7 ist eine endliche Transferreduktion. Sie beweist noch nicht die Endlichkeit der vollen Komponenten, keine Injektivität von \(\mathcal L_{\rm ann}^{\rm SW1}\), kein HT-RED, kein Objekt X und keine RH-Folgerung.
+
+---
+
+## 10. Review-/Zertifikatsstatus
+
+Das committed Zertifikat
+`scripts/certify_sw1_a7_finite_state_cocycle.py`
+wurde mit Python/SymPy 1.14.0 auf der exakt committed Fassung ausgeführt.
+
+Script-Blob:
+`9b347e90df55060de6367b92baa13873ce965f17`.
+
+Ergebnis: **PASS**.
+
+Zertifiziert werden:
+
+- die neun unteren-Chamber-Aktivitätsdomänen;
+- die vollständige lokale P/Qbar-Indexsprungtabelle;
+- maximale Kantenreichweite \(3\);
+- Steuerung beider Blätter durch eine einzige Kreisphase;
+- \(T_0<3L\) und damit höchstens sechs Liftzustände pro Index;
+- der formale Frontierzustandsraum \(64^3\).
+
+Damit gilt:
+\[
+\boxed{
+\mathrm{SW1\!-\!A7}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+Keine Promotion. A8-LC muss erst die tatsächlich erreichbaren Frontierzustände klassifizieren.
+
