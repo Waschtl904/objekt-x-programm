@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Stacked base:** research/sw1-a7-finite-state-cocycle@901134463449f16ab2a228135026f1ef8449dfbf  
-> **Status:** `AI-GREEN candidate + independent GREEN (certificate)` — universeller Separator und Endlichkeit der rohen A1-Komponenten geprüft; **keine Promotion**.  
+> **Status:** `AI-GREEN candidate + independent GREEN (certificate)` — midpoint-korrigierter wiederkehrender Separator und Endlichkeit der rohen A1-Komponenten geprüft; **keine Promotion**.  
 > **Scope:** vollständiger **roher A1-Punktgraph** im unteren Chamber. Noch keine KNF-\(J_R\)-Zusatzkopplungen und keine Schur-Injektivität.
 
 ---
@@ -202,7 +202,7 @@ j&\mathscr L_j&\mathscr R_j\\ \hline
 \tag{A8.10}
 \]
 
-A8.8–A8.9 zeigen, dass dies sämtliche physisch möglichen mittleren Zustände exhaustiert.
+A8.8–A8.9 zeigen, dass dies sämtliche möglichen mittleren State-Labels exhaustiert. Auf dem regulären Separatorbereich (S_\varepsilon^{\rm reg}) sind diese Labels nach Abschnitt 10A zusätzlich physisch paarweise kompatibel mit der Links/Rechts-Stufung; die einzige Cross-Sheet-Degeneration liegt bei dem ausdrücklich entfernten Punkt (s=\Delta/2).
 
 ---
 
@@ -442,7 +442,7 @@ Damit:
 
 \[
 \boxed{
-t_n\in(\varepsilon,\Delta-\varepsilon)
+t_n\in S_\varepsilon^{\rm reg}
 \Longrightarrow
 \text{kein roher A1-Pfad verbindet }
 m\le n-1
@@ -471,11 +471,15 @@ t_m=t_0+m\Delta\pmod L
 \]
 für jeden Startpunkt dicht in \(\mathbb T_L\).
 
-Da
+Da beide Komponenten von
 \[
-S_\varepsilon=(\varepsilon,\Delta-\varepsilon)
+S_\varepsilon^{\rm reg}
+=
+(\varepsilon,\Delta/2)
+\cup
+(\Delta/2,\Delta-\varepsilon)
 \]
-offen und nichtleer ist, existieren in beiden Indexrichtungen unendlich viele Separatorindizes.
+offen und nichtleer sind, existieren nach Minimalität in beiden Indexrichtungen unendlich viele reguläre Separatorindizes.
 
 Die Komponent-Endlichkeit folgt direkt und ohne versteckte Uniformitätsannahme. Fixiere einen Knoten mit Rotationsindex \(m_0\). Wegen der beidseitig unendlichen Separatorwiederkehr wähle Separatorindizes \(n_-\) und \(n_+\) mit
 \[
@@ -588,7 +592,7 @@ Das Zertifikat prüft im endlichen/algebraischen Scope:
 
 - die exakten SW1-Konstantenrelationen einschließlich \(4\Delta<L\);
 - die vollständige Existenz/Nichtexistenz der dritten Lifts in den vier mittleren Schichten;
-- die exhaustive Aufteilung aller 20 mittleren physischen Zustände in die Links-/Rechts-Stufung A8.10;
+- die exhaustive Aufteilung aller 20 mittleren State-Labels in die Links-/Rechts-Stufung A8.10; die physische Eindeutigkeit dieser Stufung wird durch den Supplemental Midpoint-Certificate auf (S_\varepsilon^{\rm reg}) abgesichert;
 - alle \(20\cdot9=180\) Source-Map-Fälle der A7-Kantentabelle;
 - dass exakt die zehn Cross-Kandidaten A8.11–A8.12 verbleiben;
 - dass alle zehn auf dem gesamten offenen Separatorparameterbereich strikt gate-inaktiv sind;
@@ -609,3 +613,87 @@ Damit gilt ausschließlich im expliziten Scope des vollständigen **rohen A1-Pun
 \]
 
 Keine Promotion. Keine Aussage über KNF-\(J_R\)-Zusatzkanten, \(\mathfrak G_R\)-Punktkomponenten, Schur-Injektivität, HT-RED, Objekt X oder RH.
+
+
+---
+
+## 10A. Supplemental audit — Midpoint-Degeneration und Scope-Korrektur
+
+Ein nachträglicher adversarialer Check der **physischen** Identifikation der P-/\(\overline Q\)-Labels fand genau eine zuvor nicht explizit behandelte Degeneration.
+
+Für
+
+\[
+P_j^{(k)}=s+j\Delta+kL,
+\qquad
+Q_m^{(\ell)}=(4-m)\Delta-s+\ell L
+\]
+
+würde eine Cross-Sheet-Kollision die Gleichung
+
+\[
+2s=(4-m-j)\Delta+(\ell-k)L
+\]
+
+erzwingen.
+
+Das Supplemental Certificate enumeriert exhaustiv alle in A8.8–A8.10 tatsächlich vorkommenden P-/Q-Liftpaare. Mit den exakten Schranken
+
+\[
+\boxed{4\Delta<L<5\Delta}
+\]
+
+bleibt im Bereich \(0<s<\Delta\) genau eine mögliche Kollisionsphase:
+
+\[
+\boxed{s=\Delta/2.}
+\]
+
+Dort treten genau zehn Cross-Sheet-State-Pair-Koinzidenzen auf. Außerhalb dieses Einzelpunkts existiert keine solche physische Doppelbelegung.
+
+Deshalb ist die punktweise Separatoraussage A8.13 ausschließlich auf
+
+\[
+S_\varepsilon^{\rm reg}
+=
+(\varepsilon,\Delta/2)
+\cup
+(\Delta/2,\Delta-\varepsilon)
+\]
+
+zu lesen.
+
+Die Endlichkeitsaussage A8.14 ändert sich **nicht**: Beide Komponenten von \(S_\varepsilon^{\rm reg}\) sind für \(0<\varepsilon<\Delta/2\) offen und nichtleer, und die irrationale Rotation trifft offene Mengen in beiden Zeitrichtungen unendlich oft.
+
+Supplemental certificate:
+
+scripts/certify_sw1_a8_midpoint_degeneracy_fix.py
+
+Commit:
+
+2b65a54346f6c29c8617b666ffe0887b2a630d81
+
+Committed Script-Blob:
+
+b2efc57b005b950ab02b08ba49dfb3018baccd8e
+
+Der tatsächlich ausgeführte Dateiinhalt ergab exakt denselben Git-Blob-SHA.
+
+Ergebnis:
+
+SW1-A8 MIDPOINT DEGENERACY FIX CERTIFICATE: PASS
+
+Damit bleibt die zulässige A8-Buchung
+
+\[
+\boxed{
+\mathrm{SW1\!-\!A8}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+mit der korrigierten punktweisen Separator-Domäne \(S_\varepsilon^{\rm reg}\).
+
+**Firewall:** Dies ist eine Scope-Korrektur des rohen A8-Separatorlemmas, keine KNF-/A9-Aussage. Keine Promotion und keine Änderung der globalen Schur-/HT-/Objekt-X-/RH-Firewall.
