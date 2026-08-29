@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stages 1/2–8 pointwise zertifiziert; **Stage 9 globaler reflektierter B-Block hergeleitet, Zertifikats-/Re-Review offen**; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; **Stages 1/2–9 jeweils AI-GREEN + independent GREEN (certificate)** im jeweiligen Scope; globaler reflektierter B-Block geschlossen; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -2646,6 +2646,24 @@ Der nächste offene Knoten ist daher:
 }
 \tag{DD.194}
 \]
+
+**Stage-9-Reviewstatus.** Der 16→12-Quotient, die disjunkten halben Orbitintervalle, der exakte 12-Kanal-Kompressionsblock, die Reflexionspermutation, beide (6\times6)-Sektoren und die Schranke \(\nu_\pm>1/2\) wurden separat adversarial geprüft und durch
+`scripts/certify_sw1_delta_descent_stage9.py`
+mit Python/SymPy 1.14.0 reproduzierbar zertifiziert (PASS).
+
+Zertifizierter Script-Blob:
+`990a6bbd26b8f853fb22a54b8b310a5b4a376896`.
+
+Damit gilt für Stage 9:
+\[
+\boxed{
+\mathrm{Stage\ 9}:
+\text{AI-GREEN}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
