@@ -3214,6 +3214,243 @@ Der nächste offene Knoten bleibt Stage 10C: expliziter physischer Quotient je e
 
 
 
+## 15. Stage 10C — oberer \(h_B\)-Orbitquotient schließt ohne neuen \(B_2\)-Randkanal
+
+Stage 10C behandelt ausschließlich die obere B-Wall-Kammer
+\[
+s\in J_B=(h_B-\varepsilon,\varepsilon).
+\tag{DD.242}
+\]
+
+Setze wie zuvor
+\[
+u:=r_B(s)=h_B-s,
+\qquad
+t:=r_\Delta(s)=\Delta-s.
+\tag{DD.243}
+\]
+
+Aus Stage 10A/10B gilt
+\[
+u\in J,
+\qquad
+t\in J,
+\tag{DD.244}
+\]
+und der kombinierte Orbit von \(s\) unter \(r_B,r_\Delta\) besitzt höchstens sechs aktive Parameterpunkte.
+
+### 15.1 Die beiden scheinbar externen Restkanäle sind orbitintern
+
+Die obere Stage-10A-Resthälfte koppelt nur noch an
+\[
+C+s
+\quad\text{und}\quad
+B_2-s.
+\]
+Beide sind exakt keine neuen Profile:
+
+\[
+\boxed{
+C+s=b-t.
+}
+\tag{DD.245}
+\]
+
+\[
+\boxed{
+B_2-s=B_1+t.
+}
+\tag{DD.246}
+\]
+
+Damit liegen beide Kanäle bereits in den Stage-9-/Stage-10-Profilfamilien am reflektierten Parameter
+\[
+t=r_\Delta(s),
+\]
+also im selben endlichen kombinierten Orbit.
+
+### 15.2 Auch \(B_2+s\) ist bereits im inneren AWI-Fold enthalten
+
+Der in der gefalteten \(F_0-s=a+u\)-Row auftretende Wort-11-Kanal ist
+\[
+B_2+s.
+\]
+Es gilt
+\[
+\boxed{
+B_2+s
+=
+T+(s-k_B).
+}
+\tag{DD.247}
+\]
+
+Andererseits
+\[
+s-k_B
+=
+\Delta-u
+=
+r_\Delta(u).
+\tag{DD.248}
+\]
+
+Da \(u\in J\), ist auch
+\[
+r_\Delta(u)\in J\subset(R,\varepsilon).
+\tag{DD.249}
+\]
+
+Somit
+\[
+\boxed{
+B_2+s=T+r_\Delta(u)
+}
+\tag{DD.250}
+\]
+und dieser Kanal ist exakt der \(T+\)-Partner im bereits zertifizierten Stage-4/AWI-\(10\times10\)-Block zum Parameterpaar
+\[
+\{u,\Delta-u\}.
+\]
+
+Insbesondere ist auch \(B_2+s\) **kein neuer externer y-Kanal**.
+
+### 15.3 Endlicher physischer Masterraum
+
+Sei \(\mathcal O\subset(R,\varepsilon)\) ein aktiver kombinierter Orbit aus Stage 10B.
+
+Wir bilden den tatsächlichen physischen \(L^2\)-Raum \(\mathcal V_{\mathcal O}\) als den von folgenden bereits zertifizierten Profilräumen erzeugten Raum:
+
+1. den Stage-9-B-Profilen aller \(q\in\mathcal O\);
+2. den unteren Stage-10A-Durchgangsprofilen für diejenigen \(q\in\mathcal O\) mit
+   \[
+   q+\varepsilon<h_B;
+   \]
+3. den oberen Stage-10A-Restprofilen für
+   \[
+   q\in\mathcal O\cap J_B;
+   \]
+4. den zu \(r_B(q)\in J\) gehörigen Stage-4/AWI-Profilräumen;
+5. den dadurch bereits enthaltenen erweiterten \(T\pm\)-Profilen aus Stage 7.
+
+Physisch identische Profile werden **nicht** als getrennte Koordinaten gezählt; \(\mathcal V_{\mathcal O}\) ist der tatsächliche Unterraum im Hub-Hilbertraum, nicht eine formale direkte Summe nomineller Labels.
+
+Wegen
+\[
+\#\mathcal O\le6
+\]
+und der endlichen Profilzahl jeder der fünf Bausteinfamilien ist \(\mathcal V_{\mathcal O}\) ein endlich erzeugter Profilraum.
+
+### 15.4 Exhaustive y-Closure auf dem Orbit
+
+Für jeden direkten Rowtyp, der in \(\mathcal V_{\mathcal O}\) verwendet wird, sind alle y-Echos bereits durch die Stages 4, 7, 9 und 10A exhaustiv klassifiziert.
+
+Die einzigen Stage-10A-Kanäle, die vor dem Quotienten nominell außerhalb lagen, sind:
+
+- \(C+s\), geschlossen durch DD.245;
+- \(B_2-s\), geschlossen durch DD.246;
+- \(B_2+s\), geschlossen durch DD.247–DD.250.
+
+Daher erzeugt die Projektion des augmentierten Systems auf \(\mathcal V_{\mathcal O}\) **keinen weiteren y-Randkanal**.
+
+Es bleibt exakt
+\[
+\boxed{
+K_{\mathcal O}Y_{\mathcal O}
++
+H_{\mathcal O}w
+=
+0,
+}
+\tag{DD.251}
+\]
+wobei
+\[
+K_{\mathcal O}
+=
+P_{\mathcal V_{\mathcal O}}
+(I+A)
+\big|_{\mathcal V_{\mathcal O}}.
+\tag{DD.252}
+\]
+
+### 15.5 Uniforme Invertierbarkeit des Masterblocks
+
+Da
+\[
+A=R_{T_0}^*R_{T_0}\ge0,
+\]
+gilt auf jedem \(\mathcal V_{\mathcal O}\)
+\[
+\boxed{
+K_{\mathcal O}\ge I.
+}
+\tag{DD.253}
+\]
+
+Somit
+\[
+\boxed{
+\|K_{\mathcal O}^{-1}\|\le1
+}
+\tag{DD.254}
+\]
+uniform in Orbittyp, Orbitgröße und SW1-Parametern.
+
+Daher können sämtliche y-Profile des oberen Stage-10-Orbits eindeutig eliminiert werden:
+\[
+\boxed{
+Y_{\mathcal O}
+=
+-K_{\mathcal O}^{-1}H_{\mathcal O}w.
+}
+\tag{DD.255}
+\]
+
+### 15.6 Oberer Stage-10-Zweig ist y-seitig terminal
+
+Aus DD.245–DD.255 folgt
+
+\[
+\boxed{
+s+\varepsilon>h_B
+\Longrightarrow
+\text{kein neuer }B_2\text{- oder sonstiger y-Randtyp.}
+}
+\tag{DD.256}
+\]
+
+Die gesamte obere B-Wall-Kammer fällt nach physischem Orbitquotienten in einen endlichen, uniform invertierbaren y-Schurblock zurück.
+
+Damit ist die B-Zentrum-Propagation auf der oberen Stage-10-Kammer **y-seitig beendet**.
+
+### 15.7 Was global noch offen bleibt
+
+Unterhalb der Wall
+\[
+s+\varepsilon<h_B
+\]
+bleibt dagegen der in Stage 10A zertifizierte nichtverschwindende Durchgang
+\[
+\gamma_{B,1}>0
+\]
+zum echten nächsten Zentrum
+\[
+B_2=b+2\Delta.
+\]
+
+Daher ist der nächste globale Knoten nun eindeutig:
+
+\[
+\boxed{
+\text{Stage 11: untere B-Wall-Kammer — direkte Analyse des Zentrums }B_2.
+}
+\tag{DD.257}
+\]
+
+**Firewall:** Stage 10C schließt nur die y-Geometrie der oberen B-Wall-Kammer. Der induzierte Annulusoperator auf \(w\) und die untere \(B_2\)-Propagation bleiben offen.
+
+
 ## 6. Zertifikatsstatus und nächste Stufe
 
 Das reproduzierbare Skript scripts/certify_sw1_delta_descent_stage12.py prüft:
