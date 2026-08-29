@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stages 1/2–7 zertifiziert; **Stage 8 pointwise algebra = AI-GREEN + independent GREEN (certificate)**, globaler reflektierter B-Block auf \(J\) bleibt `?[O]`; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stages 1/2–8 pointwise zertifiziert; **Stage 9 globaler reflektierter B-Block hergeleitet, Zertifikats-/Re-Review offen**; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -2328,6 +2328,324 @@ Der globale reflektierte \(L^2(J)\)-Block bleibt ausdrücklich
 \boxed{?[O]}.
 \]
 
+
+
+## 12. Stage 9 — globaler reflektierter B-Block auf \(J\)
+
+Stage 8 pointwise darf auf \(J\) nicht direkt integriert werden. Wir quotientieren daher zuerst die physische Doppelzählung.
+
+### 12.1 Halbe Orbitdomäne und zwölf eindeutige Profile
+
+Nur im oberen AWI-Fall
+\[
+\varepsilon>\frac{\Delta}{2}
+\]
+ist \(J\) nichtleer. Setze
+\[
+K:=(\Delta-\varepsilon,\Delta/2),
+\qquad
+t:=\Delta-s
+\quad (s\in K).
+\tag{DD.166}
+\]
+Dann parametrisiert \(K\) jeden nichttrivialen Reflexionsorbit \(\{s,t\}\subset J\) genau einmal; der Fixpunkt \(s=t=\Delta/2\) ist \(L^2\)-null.
+
+Mit
+\[
+C:=a+e=b-\Delta
+\]
+gelten die vier exakten Identifikationen
+\[
+e+s=d-t,\qquad
+d-s=e+t,
+\tag{DD.167}
+\]
+\[
+b-s=C+t,\qquad
+C+s=b-t.
+\tag{DD.168}
+\]
+
+Damit bleiben von den nominell sechzehn Profilen bei
+\[
+e\pm s,\ d\pm s,\ b\pm s,\ C\pm s
+\]
+und denselben acht Profilen bei \(t\) exakt zwölf eindeutige physische Kanäle.
+
+Wir ordnen sie als
+\[
+\boxed{
+\begin{aligned}
+X_J(s):=(
+&y(e-s),\,y(e+s),\,y(d-s),\,y(d+s),\\
+&y(b-s),\,y(b+s),\,y(C-s),\,y(C+s),\\
+&y(e-t),\,y(d+t),\,y(b+t),\,y(C-t)
+)^T .
+\end{aligned}}
+\tag{DD.169}
+\]
+
+Die zwölf zugehörigen Bildintervalle über \(K\) sind bis auf Randpunkte paarweise disjunkt. Der Pullback
+\[
+\mathcal E_J:L^2(K)^{12}\to H_{T_0}^+
+\tag{DD.170}
+\]
+ist daher nach der kanonischen Maßidentifikation isometrisch auf seinen physischen Bildraum.
+
+### 12.2 Exakter 12-Kanal-Block
+
+Setze
+\[
+Q_s:=y(b+\Delta+s),
+\qquad
+Q_t:=y(b+\Delta+t).
+\tag{DD.171}
+\]
+
+Die direkten elf-Wort-Rows an den zwölf eindeutigen Punkten ergeben
+\[
+\boxed{
+\mathbb B_JX_J
++
+\beta_b(e_7Q_s+e_{12}Q_t)
++
+W_J
+=0,
+}
+\tag{DD.172}
+\]
+wobei \(W_J\) die zwölf entsprechenden Hubwerte bezeichnet.
+
+Die Matrix \(\mathbb B_J\) ist reell-symmetrisch. Noch wichtiger:
+\[
+\boxed{
+\mathbb B_J
+=
+\mathcal E_J^*(I+A)\mathcal E_J
+\ge I.
+}
+\tag{DD.173}
+\]
+Denn \(A=R_{T_0}^*R_{T_0}\ge0\).
+
+Damit ist der globale reflektierte B-Block bereits als Operator auf dem korrekt quotientierten Profilraum strikt positiv.
+
+### 12.3 Reflexionspermutation
+
+Die Involution \(s\leftrightarrow t\) permutiert die zwölf Koordinaten in den Paaren
+\[
+(1,9),\ (2,3),\ (4,10),\ (5,8),\ (6,11),\ (7,12).
+\tag{DD.174}
+\]
+
+Sei \(\mathsf P\) die zugehörige unitäre Permutationsinvolution. Dann
+\[
+\mathsf P^2=I,
+\qquad
+\mathsf P^*=\mathsf P,
+\qquad
+[\mathbb B_J,\mathsf P]=0.
+\tag{DD.175}
+\]
+
+Folglich zerfällt
+\[
+L^2(K)^{12}
+=
+\mathcal H_+\oplus\mathcal H_-
+\tag{DD.176}
+\]
+in symmetrische/antisymmetrische Reflexionssektoren.
+
+### 12.4 Die beiden exakten \(6\times6\)-Blöcke
+
+Für
+\[
+\sigma\in\{+1,-1\}
+\]
+schreibe
+\[
+Z_\sigma
+=
+(z_1,\ldots,z_6)^T
+\]
+für die Paar-Summen (\(\sigma=+1\)) bzw. Paar-Differenzen (\(\sigma=-1\)) der sechs Paare aus DD.174.
+
+Dann reduziert sich DD.172 auf
+\[
+\boxed{
+B_\sigma Z_\sigma
++
+\beta_b e_6 Q_\sigma
++
+W_\sigma
+=0,
+}
+\tag{DD.177}
+\]
+mit
+\[
+Q_\sigma:=Q_s+\sigma Q_t.
+\tag{DD.178}
+\]
+
+Der konstante Reflexionsblock ist
+\[
+\boxed{
+B_\sigma=
+\begin{pmatrix}
+1+c_1&0&0&0&-c_1&c_2\\
+0&1+c_1&0&-c_1+\sigma c_2&0&0\\
+0&0&1+c_1&0&c_2&-c_1\\
+0&-c_1+\sigma c_2&0&1+\alpha_b-2\sigma c_2&-c_{11}&0\\
+-c_1&0&c_2&-c_{11}&1+\alpha_b&-2c_2\\
+c_2&0&-c_1&0&-2c_2&1+\alpha_b
+\end{pmatrix}.
+}
+\tag{DD.179}
+\]
+
+Da DD.179 nur die unitäre Reflexionsreduktion von DD.173 ist,
+\[
+\boxed{
+B_+\ge I,
+\qquad
+B_-\ge I.
+}
+\tag{DD.180}
+\]
+Insbesondere sind beide Blöcke invertierbar.
+
+### 12.5 Globale nächste-Zentrum-Koordinate
+
+Die aktuellen \(b\)-Differenzen erfüllen
+\[
+D_b(s)+\sigma D_b(t)
+=
+z_5-z_4.
+\tag{DD.181}
+\]
+
+Für das nächste Zentrum \(b+\Delta\) setze
+\[
+N_\sigma
+:=
+D_{b+\Delta}(s)+\sigma D_{b+\Delta}(t).
+\tag{DD.182}
+\]
+
+Wegen
+\[
+b+\Delta-s=b+t,
+\qquad
+b+\Delta-t=b+s
+\tag{DD.183}
+\]
+gilt exakt
+\[
+\boxed{
+N_\sigma
+=
+Q_\sigma-\sigma z_5.
+}
+\tag{DD.184}
+\]
+
+Aus DD.177 folgt
+\[
+Z_\sigma
+=
+-B_\sigma^{-1}
+\bigl(\beta_b e_6Q_\sigma+W_\sigma\bigr).
+\tag{DD.185}
+\]
+
+Setze
+\[
+a_\sigma:=
+\langle e_5,B_\sigma^{-1}e_6\rangle .
+\tag{DD.186}
+\]
+Dann
+\[
+N_\sigma
+=
+\nu_\sigma Q_\sigma
++
+\sigma\langle e_5,B_\sigma^{-1}W_\sigma\rangle,
+\tag{DD.187}
+\]
+mit
+\[
+\boxed{
+\nu_\sigma
+=
+1+\sigma\beta_b a_\sigma.
+}
+\tag{DD.188}
+\]
+
+Aus \(B_\sigma\ge I\) folgt
+\[
+\|B_\sigma^{-1}\|\le1,
+\qquad
+|a_\sigma|\le1.
+\tag{DD.189}
+\]
+Ferner ist aus den bereits bewiesenen Koeffizientenschranken
+\[
+|\beta_b|=c_{11}<\frac12.
+\tag{DD.190}
+\]
+Daher
+\[
+\boxed{
+\nu_\sigma
+\ge
+1-|\beta_b||a_\sigma|
+>
+\frac12.
+}
+\tag{DD.191}
+\]
+
+Somit kann \(Q_\sigma\) in beiden Reflexionssektoren eindeutig durch
+\[
+N_\sigma
+\quad\text{und}\quad
+W_\sigma
+\]
+rekonstruiert werden.
+
+### 12.6 Konsequenz
+
+Der Stage-8-Firewall ist damit geschlossen:
+
+\[
+\boxed{
+\text{Der globale reflektierte B-Block auf }J
+\text{ ist strikt invertierbar.}
+}
+\tag{DD.192}
+\]
+
+Außerhalb \(J\) gilt bereits der punktweise positive Block \(M_B\). Auf \(J\) gilt DD.192. Daher kann die B-Differenzelimination auf ganz SW1 global durchgeführt werden, ohne physische Profile doppelt zu zählen.
+
+Zusätzlich ist die Weitergabe an das nächste Zentrum \(b+\Delta\) in beiden Reflexionssektoren nichtsingulär, da
+\[
+\nu_\pm>\frac12.
+\tag{DD.193}
+\]
+
+**Firewall:** Dies beweist noch nicht, dass die gesamte B-Zentrumskette endlich terminiert und noch nicht, dass der induzierte Annulusoperator auf \(w\) trivialen Kern besitzt.
+
+Der nächste offene Knoten ist daher:
+\[
+\boxed{
+\text{B-Zentrum-Propagation ab }b+\Delta.
+}
+\tag{DD.194}
+\]
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
