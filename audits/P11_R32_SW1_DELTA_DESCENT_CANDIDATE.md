@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** ?[O] — Stage 1/2 hergeleitet; separater adversarialer Re-Review nach technischem Rewrite noch ausstehend; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; **Stage 1/2 = AI-GREEN + independent GREEN (certificate)**; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -344,16 +344,34 @@ Die lokal ausgeführte identische Skriptfassung liefert mit SymPy 1.14.0:
 \boxed{\text{PASS}.}
 \]
 
-Vor einer Statusbuchung ist der technisch korrigierte exakte Git-Head noch separat adversarial zu prüfen.
+Der adversariale Re-Review des technisch korrigierten Heads ist für den Scope von Stage 1/2 bestanden.
 
-Erst danach:
+Damit gilt ausschließlich für die direkte Row-/Hub-Stufe:
+\[
+\boxed{
+\mathrm{SW1\!-\!\Delta DESCENT\ (Stage\ 1/2)}:
+\text{AI-GREEN}
++
+\text{independent GREEN (certificate)}
+}
+\]
 
-1. ersetze die \(T\pm s\)-Kanäle mit dem zertifizierten SW1-2TP;
-2. behandle auf \(J\) den zusätzlichen Tailwert \(T+\Delta-s\) mit \(t=\Delta-s\) und SW1-2TP/AWI;
-3. identifiziere danach, ob die verbleibenden \(\Delta\pm s\)-Kanäle tatsächlich eine geschlossene Rekurrenz erzeugen;
-4. beweise erst dann finite Terminierung.
+Zertifikatsprovenienz:
+- Tool: Python + SymPy 1.14.0;
+- Skript: scripts/certify_sw1_delta_descent_stage12.py;
+- zertifizierter Scope: Gate-/Horizon-Ledger, Echo-Zählung, eindeutige (J)-Umschaltung, aggregierte A-Rows, Hub-Source-Identitäten, positiver direkter Diagonalpivot;
+- Ergebnis: PASS.
 
-Bis dahin:
+Das **Gesamtziel** SW1-Δ-DESCENT bleibt ausdrücklich offen:
 \[
 \boxed{\mathrm{SW1\!-\!\Delta DESCENT}:?[O].}
 \]
+
+Nächste Stufe:
+
+1. ersetze die \(T\pm s\)-Kanäle mit dem zertifizierten SW1-2TP;
+2. behandle auf \(J\) den zusätzlichen Tailwert \(T+\Delta-s\) mit \(t=\Delta-s\) und SW1-2TP/AWI;
+3. identifiziere danach, ob die verbleibenden \(\Delta\pm s\)-Kanäle tatsächlich eine **geschlossene** Rekurrenz erzeugen;
+4. beweise erst dann finite Terminierung.
+
+Keine Promotion.
