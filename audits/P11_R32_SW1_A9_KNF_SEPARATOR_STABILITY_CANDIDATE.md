@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Stacked base:** research/sw1-a8-lower-finite-components@d99d4ef780dc47876ff0445e2bcd403f45679610  
-> **Status:** ?[O] — KNF-Zusatzkanten strukturell begonnen; Separatorstabilität noch nicht entschieden; keine Promotion.  
+> **Status:** ?[O] gesamt — A9-J0 und A9-J1 zertifiziert; Separatorstabilität A9-SEP noch nicht entschieden; keine Promotion.  
 > **Scope:** zusätzlicher freier Koordinatengraph von \(\mathfrak G_R=J_R^*(I+A)J_R\) im unteren Chamber. A8 bleibt nur Input für den rohen A1-Graphen.
 
 ---
@@ -626,3 +626,154 @@ Daher bleibt **A9-J1 als Ganzes** noch offen. Insbesondere ist noch nicht entsch
 Für einen Separatorbeweis kann jedoch bereits der sichere Supergraph verwendet werden, der alle A7-Rohkanten plus die oben zertifizierten neuen KNF-Kanten enthält: Falls schon dieser Supergraph einen wiederkehrenden Separator besitzt, besitzt ihn erst recht der tatsächliche Gramgraph.
 
 Keine Promotion. Noch keine A9-Separatorentscheidung, keine Schur-Injektivität, kein HT-RED, kein Objekt X und keine RH-Folgerung.
+
+
+---
+
+## 11. A9-J1(full) — vollständiger lokaler 6×6-KNF-Gramblock
+
+Der vollständige lokale Effekt der KNF-Rekonstruktion kann exakt auf einen einzigen physischen Stern reduziert werden.
+
+Für \(0<u<R<\varepsilon\) ist
+
+\[
+A_-(u)=a-u
+\]
+
+der einzige rekonstruierte physische Branch. Wegen \(a-\varepsilon<A_-(u)<a\) liegt er uniform in A1-R2. Die A1-R2-Zeile koppelt \(A_-\) ausschließlich an
+
+\[
+u,\qquad A_+,\qquad T_-,\qquad T_+
+\]
+
+sowie an sich selbst. Durch Selbstadjungiertheit existieren keine weiteren physischen Kanten, die \(A_-\) von außen treffen.
+
+Außerhalb dieses Sterns wirkt \(J_R\) auf den freien physischen Koordinaten identisch. Daher ist die gesamte Änderung von \(I+A\) zu
+
+\[
+\mathfrak G_R=J_R^*(I+A)J_R
+\]
+
+durch den Pullback des lokalen physischen Blocks auf
+
+\[
+\{u,A_-,A_+,B_-,B_+,T_-,T_+\}
+\]
+
+bestimmt.
+
+Nach Elimination von \(A_-\) bleibt der freie 6-Knoten-Block
+
+\[
+\boxed{
+\{u,A_+,B_-,B_+,T_-,T_+\}.
+}
+\]
+
+### 11.1 Exakte 15 Off-Diagonal-Kanäle
+
+Alle \(\binom62=15\) Off-Diagonal-Einträge sind exakt ungleich Null:
+
+\[
+\boxed{
+\begin{array}{c|c|c}
+\text{Paar}&\text{affiner Typ}&\text{Vorzeichen}\\ \hline
+u\leftrightarrow A_+&\tau_a&+\\
+u\leftrightarrow B_-&r_b&-\\
+u\leftrightarrow B_+&\tau_b&+\\
+u\leftrightarrow T_-&r_T&-\\
+u\leftrightarrow T_+&\tau_T&-\\
+A_+\leftrightarrow B_-&r_{a+b}&-\\
+A_+\leftrightarrow B_+&\tau_d&+\\
+A_+\leftrightarrow T_-&r_{3a}&-\\
+A_+\leftrightarrow T_+&\tau_a&+\\
+B_-\leftrightarrow B_+&r_{2b}&-\\
+B_-\leftrightarrow T_-&\tau_e&+\\
+B_-\leftrightarrow T_+&r_{T+b}&-\\
+B_+\leftrightarrow T_-&r_{T+b}&-\\
+B_+\leftrightarrow T_+&\tau_e&+\\
+T_-\leftrightarrow T_+&r_{4a}&-
+\end{array}
+}
+\]
+
+Insbesondere sind die beiden vom Blindkoordinatenpunkt \(u\) ausgehenden neuen Kanäle separat:
+
+\[
+\boxed{
+C_{r_b}=-s\,c_2\ne0,
+\qquad
+C_{\tau_b}=+s\,c_2\ne0.
+}
+\]
+
+### 11.2 Exakte Vorzeichenfirewall
+
+Keines der 15 Vorzeichen wird numerisch entschieden.
+
+Für die zwei zuvor empfindlichsten Faktoren verwendet das Zertifikat die exakten positiven Größen
+
+\[
+H:=4+\log2-\sqrt2\,\log2,
+\]
+
+\[
+K:=8+\log2-2\sqrt2\,\log2
+\]
+
+und beweist sogar die strikten Margen
+
+\[
+\boxed{H>3,\qquad K>6.}
+\]
+
+Damit ist insbesondere die frühere \(M\)-Positivität nicht mehr auf einen Dezimalcheck gestützt.
+
+### 11.3 Reproduzierbares Zertifikat
+
+Zertifikat:
+
+scripts/certify_sw1_a9_j1_full_local_6x6.py
+
+Commit:
+
+c3d03291e97f11664121e182d62335cd1c249ab4
+
+Committed Script-Blob:
+
+88519300148ae3badc9860473784bce3d068e033
+
+Der tatsächlich ausgeführte Dateiinhalt wurde als Git-Blob gehasht und ergab exakt
+
+88519300148ae3badc9860473784bce3d068e033.
+
+Ergebnis:
+
+SW1-A9-J1 FULL LOCAL 6x6 CERTIFICATE: PASS
+
+SymPy 1.14.0.
+
+Damit gilt für den vollständigen lokalen KNF-Änderungsblock:
+
+\[
+\boxed{
+\mathrm{A9\!-\!J1}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+### 11.4 Globaler Graphledger nach J1
+
+Der freie Gramgraph kann nun exakt so gelesen werden:
+
+1. alle rohen A7-Kanten zwischen freien physischen Punkten, die den rekonstruierten Branch \(A_-\) nicht benutzen, bleiben unverändert;
+2. der physische Branch \(A_-\in(a-R,a)\) ist keine freie Koordinate;
+3. für jedes \(0<u<R\) ersetzt ihn der vollständig zertifizierte 6×6-Block aus Abschnitt 11.1.
+
+Damit ist die Kanten-/Cancellation-Frage von A9-J1 geschlossen.
+
+**Offen bleibt ausschließlich A9-SEP:** Ob dieser nun exakt bekannte erweiterte Graph einen wiederkehrenden gemeinsamen Separator besitzt oder einen echten KNF-Bypass zulässt.
+
+Keine Promotion. Keine Schur-Injektivität, kein HT-RED, kein Objekt X und keine RH-Folgerung.
