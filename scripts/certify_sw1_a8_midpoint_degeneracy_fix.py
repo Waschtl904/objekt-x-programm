@@ -40,8 +40,10 @@ for idx,(j,sh,k) in enumerate(flat):
         if sh!=th:
             continue
         assert abs(j-m)<=3
-        if k==ell:
-            assert (j,k)!=(m,ell)
+        if k!=ell:
+            assert 4*abs(k-ell) > abs(j-m)
+        else:
+            assert j!=m
 
 candidates=[]
 for j in range(4):
