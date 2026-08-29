@@ -3481,6 +3481,384 @@ Damit gilt für Stage 10C:
 
 
 
+## 16. Stage 11 — terminaler Abschluss der unteren \(B_2\)-Kammer
+
+Nach Stage 10C bleibt nur noch die untere B-Wall-Kammer
+\[
+s+\varepsilon<h_B,
+\]
+in der Stage 10A den echten Durchgang
+\[
+B_1\longrightarrow B_2=b+2\Delta
+\]
+mit \(\gamma_{B,1}>0\) erzeugt.
+
+Setze
+\[
+\boxed{
+k_B:=e-2\Delta=T-B_2>0.
+}
+\tag{DD.258}
+\]
+
+Dann
+\[
+B_2=T-k_B.
+\tag{DD.259}
+\]
+
+Die Lage der beiden Punkte \(B_2\pm s\) relativ zum erweiterten \(T\)-Strip wird vollständig durch
+\[
+s+\varepsilon
+\quad\text{und}\quad
+s+k_B
+\]
+bestimmt.
+
+Bis auf die beiden Nullmengen-Walls
+\[
+s+\varepsilon=k_B,
+\qquad
+s+k_B=\varepsilon,
+\tag{DD.260}
+\]
+zerfällt die untere Stage-10-Kammer in genau drei Fälle.
+
+### 16.1 Fall I — beide \(B_2\)-Äste außerhalb des erweiterten T-Strips
+
+Sei
+\[
+s+\varepsilon<k_B.
+\tag{DD.261}
+\]
+
+Definiere
+\[
+E_2:=e-2\Delta=k_B,
+\qquad
+D_2:=d+2\Delta,
+\qquad
+F_2:=C-2\Delta,
+\tag{DD.262}
+\]
+sowie
+\[
+F_1:=C-\Delta.
+\tag{DD.263}
+\]
+
+Die direkten elf-Wort-Rows liefern exakt
+
+\[
+\boxed{
+(Ay)(E_2+s)
+=
+-c_1y(B_2-s)+c_1y(E_2+s)+c_2y(F_2+s),
+}
+\tag{DD.264}
+\]
+
+\[
+\boxed{
+(Ay)(E_2-s)
+=
+-c_1y(B_2+s)+c_1y(E_2-s)+c_2y(F_2-s),
+}
+\tag{DD.265}
+\]
+
+\[
+\boxed{
+(Ay)(D_2+s)
+=
+-c_1y(F_2-s)+c_1y(D_2+s)+c_2y(B_2+s),
+}
+\tag{DD.266}
+\]
+
+\[
+\boxed{
+(Ay)(D_2-s)
+=
+-c_1y(F_2+s)+c_1y(D_2-s)+c_2y(B_2-s),
+}
+\tag{DD.267}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(B_2+s)
+={}&
+-c_1y(E_2-s)
++\alpha_b y(B_2+s)
++\beta_-y(F_2-s)\\
+&+c_2y(D_2+s)
++\beta_b y(F_1-s),
+\end{aligned}}
+\tag{DD.268}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(B_2-s)
+={}&
+-c_1y(E_2+s)
++\alpha_b y(B_2-s)
++\beta_-y(F_2+s)\\
+&+c_2y(D_2-s)
++\beta_b y(F_1+s),
+\end{aligned}}
+\tag{DD.269}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(F_2+s)
+={}&
+-c_1y(D_2-s)
++(c_1+c_5)y(F_2+s)\\
+&+\beta_-y(B_2-s)
++c_2y(E_2+s),
+\end{aligned}}
+\tag{DD.270}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(F_2-s)
+={}&
+-c_1y(D_2+s)
++(c_1+c_5)y(F_2-s)\\
+&+\beta_-y(B_2+s)
++c_2y(E_2-s).
+\end{aligned}}
+\tag{DD.271}
+\]
+
+Der Wort-11-Nachfolger
+\[
+B_3:=b+3\Delta
+\tag{DD.272}
+\]
+ist hier vollständig horizon-tot. Denn
+\[
+B_3=T+g_3,
+\qquad
+g_3:=3\Delta-e,
+\tag{DD.273}
+\]
+und
+\[
+g_3-k_B>0.
+\tag{DD.274}
+\]
+Aus DD.261 folgt daher
+\[
+g_3-s>\varepsilon,
+\]
+also
+\[
+B_3-s>T_0
+\]
+und erst recht \(B_3+s>T_0\).
+
+Für
+\[
+X_{B,2}
+:=
+(D_{E_2},D_{D_2},D_{B_2},D_{F_2})^T
+\]
+ergibt sich
+
+\[
+\boxed{
+M_{B,2}X_{B,2}
++
+c_{11}e_3D_{F_1}
++
+W_{B,2}
+=0,
+}
+\tag{DD.275}
+\]
+mit
+
+\[
+\boxed{
+M_{B,2}
+=
+\begin{pmatrix}
+1+c_1&0&c_1&c_2\\
+0&1+c_1&c_2&c_1\\
+c_1&c_2&1+\alpha_b&2c_2\\
+c_2&c_1&2c_2&1+c_1+c_5
+\end{pmatrix}>0.
+}
+\tag{DD.276}
+\]
+
+Es gibt in Fall I **keinen neuen \(B_3\)-Randkanal**.
+
+### 16.2 Fall II — ein T-Fold und ein äußerer Companion
+
+Sei
+\[
+s+\varepsilon>k_B,
+\qquad
+s+k_B>\varepsilon.
+\tag{DD.277}
+\]
+
+Dann liegt
+\[
+B_2+s
+=
+T-(k_B-s)
+\quad\text{oder}\quad
+T+(s-k_B)
+\tag{DD.278}
+\]
+mit
+\[
+|s-k_B|<\varepsilon.
+\tag{DD.279}
+\]
+Also ist \(B_2+s\) ein erweiterter 2TP-Tail.
+
+Für den anderen Ast setze
+\[
+q:=k_B+s.
+\tag{DD.280}
+\]
+Dann
+\[
+q>\varepsilon,
+\qquad
+R<q<2\Delta,
+\tag{DD.281}
+\]
+und
+\[
+\boxed{
+B_2-s=T-q.
+}
+\tag{DD.282}
+\]
+
+Damit fällt \(B_2-s\) exakt in den bereits zertifizierten äußeren Stage-4-Companionblock zum Parameter \(q\).
+
+Die beiden übrigen y-Kanäle dieses Companionblocks sind ebenfalls nicht neu:
+
+\[
+\boxed{
+a+q=F_2+s,
+}
+\tag{DD.283}
+\]
+
+\[
+\boxed{
+2d+q=F_1+s.
+}
+\tag{DD.284}
+\]
+
+Somit erzeugt auch Fall II keinen neuen y-Randtyp.
+
+### 16.3 Fall III — beide \(B_2\)-Äste sind erweiterte 2TP-Tails
+
+Sei
+\[
+s+k_B<\varepsilon.
+\tag{DD.285}
+\]
+
+Dann
+\[
+B_2-s=T-(k_B+s)
+\tag{DD.286}
+\]
+mit
+\[
+0<k_B+s<\varepsilon.
+\]
+
+Außerdem
+\[
+B_2+s
+=
+T\pm|s-k_B|,
+\tag{DD.287}
+\]
+und
+\[
+|s-k_B|<k_B+s<\varepsilon.
+\tag{DD.288}
+\]
+
+Damit liegen **beide** \(B_2\)-Äste im erweiterten lokalen 2TP-Pivot aus Stage 7.
+
+Auch Fall III erzeugt keinen neuen y-Randtyp.
+
+### 16.4 Exhaustivität und terminaler B-Abschluss
+
+Außerhalb der Nullmengen-Walls DD.260 sind die drei Fälle exhaustiv:
+
+- entweder \(s+\varepsilon<k_B\) — Fall I;
+- oder \(s+\varepsilon>k_B\), und dann entweder
+  \(s+k_B>\varepsilon\) — Fall II,
+  oder \(s+k_B<\varepsilon\) — Fall III.
+
+In jedem Fall ist die \(B_2\)-Propagation y-seitig terminal:
+
+\[
+\boxed{
+\text{kein neuer }B_3\text{- oder sonstiger y-Zentrumstyp entsteht.}
+}
+\tag{DD.289}
+\]
+
+Zusammen mit Stage 10C folgt daher auf **ganz SW1**:
+
+\[
+\boxed{
+\text{Die gesamte B-Zentrum-Hierarchie ist endlich geschlossen.}
+}
+\tag{DD.290}
+\]
+
+Kombiniert mit der Stage-7-y-shell-Closure ist damit die **gesamte y-Geometrie** des bisherigen SW1-Δ-Descent-Systems endlich eliminierbar.
+
+### 16.5 Neuer einziger Engpass
+
+Nach DD.290 bleibt kein neuer y-Rowtyp mehr offen.
+
+Der nächste mathematische Knoten ist damit erstmals wirklich der induzierte Annulusoperator:
+
+\[
+\boxed{
+\mathcal L_{\mathrm{ann}}w=0,
+}
+\tag{DD.291}
+\]
+der durch Schur-Elimination sämtlicher nun endlich geschlossener y-Blöcke entsteht.
+
+Zu beweisen bleibt:
+
+\[
+\boxed{
+\ker\mathcal L_{\mathrm{ann}}=\{0\}\ ?
+}
+\tag{DD.292}
+\]
+
+**Firewall:** DD.290 ist eine endliche y-Geometrie-/Eliminationsaussage. Sie beweist noch nicht DD.292, kein HT-RED, kein A0 und keine Aussage über \(\ker\Gamma_I\).
+
+
 ## 6. Zertifikatsstatus und nächste Stufe
 
 Das reproduzierbare Skript scripts/certify_sw1_delta_descent_stage12.py prüft:
