@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Stacked base:** research/sw1-a8-lower-finite-components@d99d4ef780dc47876ff0445e2bcd403f45679610  
-> **Status:** ?[O] gesamt — A9-J0 und A9-J1 zertifiziert; Separatorstabilität A9-SEP noch nicht entschieden; keine Promotion.  
+> **Status:** ?[O] gesamt — A9-J0/J1 zertifiziert; universeller A8→KNF-Separatortransfer auf offenem Subchamber durch zertifizierten Bypass widerlegt; vollständige A9-SEP-/Komponentenklassifikation weiter offen; keine Promotion.  
 > **Scope:** zusätzlicher freier Koordinatengraph von \(\mathfrak G_R=J_R^*(I+A)J_R\) im unteren Chamber. A8 bleibt nur Input für den rohen A1-Graphen.
 
 ---
@@ -777,3 +777,343 @@ Damit ist die Kanten-/Cancellation-Frage von A9-J1 geschlossen.
 **Offen bleibt ausschließlich A9-SEP:** Ob dieser nun exakt bekannte erweiterte Graph einen wiederkehrenden gemeinsamen Separator besitzt oder einen echten KNF-Bypass zulässt.
 
 Keine Promotion. Keine Schur-Injektivität, kein HT-RED, kein Objekt X und keine RH-Folgerung.
+
+
+---
+
+## 12. A9-SEP-BYPASS(part) — regulärer KNF-Bypass auf offenem Subchamber
+
+Der explorativ gefundene Midpoint-Pfad darf wegen der A8-Midpoint-Degeneration **nicht** als Beweis verwendet werden. Abschnitt 12 ersetzt ihn vollständig durch einen regulären Phasenbeweis mit
+
+\[
+s\neq\Delta/2.
+\]
+
+### 12.1 Exakte Bypass-Schwelle
+
+Setze
+
+\[
+\boxed{
+s_*:=\frac L2-2\Delta.
+}
+\]
+
+Aus
+
+\[
+L-4\Delta=\log(256/243)>0
+\]
+
+folgt
+
+\[
+s_*>0.
+\]
+
+Ferner
+
+\[
+5\Delta-L
+=
+\frac12\log\!\left(\frac{3^{12}}{2^{19}}\right)>0
+\]
+
+und daher
+
+\[
+\boxed{
+0<s_*<\Delta/2.
+}
+\]
+
+### 12.2 Offenes Parametergebiet
+
+Betrachte den unteren SW1-Subchamber
+
+\[
+\boxed{
+0<\sigma\le R<\varepsilon<\Delta/2,
+\qquad
+\varepsilon<s_*+R.
+}
+\tag{A9.12}
+\]
+
+Wegen \(R<\varepsilon<\Delta/2\) gilt automatisch
+
+\[
+R+\varepsilon<2\varepsilon<\Delta,
+\]
+
+also liegt A9.12 vollständig im SW1-Scope.
+
+Definiere
+
+\[
+I_{\rm by}
+:=
+\left(
+\max\{\varepsilon,s_*\},
+\min\{\Delta-\varepsilon,s_*+R\}
+\right).
+\]
+
+Die vier nötigen Paarungleichungen sind:
+
+\[
+\varepsilon<\Delta-\varepsilon,
+\]
+
+\[
+\varepsilon<s_*+R,
+\]
+
+\[
+s_*<\Delta-\varepsilon,
+\]
+
+\[
+s_*<s_*+R.
+\]
+
+Damit ist
+
+\[
+\boxed{I_{\rm by}\neq\varnothing.}
+\]
+
+Da \(I_{\rm by}\) offen ist, kann zusätzlich
+
+\[
+s\in I_{\rm by},
+\qquad
+s\neq\Delta/2
+\]
+
+gewählt werden.
+
+Setze
+
+\[
+\boxed{
+u:=s-s_*.
+}
+\]
+
+Dann gilt exakt
+
+\[
+\boxed{
+0<u<R.
+}
+\]
+
+Außerdem ist
+
+\[
+s\in
+(\varepsilon,\Delta/2)
+\cup
+(\Delta/2,\Delta-\varepsilon)
+=
+S_\varepsilon^{\rm reg},
+\]
+
+also eine reguläre A8-Separatorphase nach der Midpoint-Korrektur.
+
+### 12.3 Expliziter Indexpfad
+
+Im paritätserweiterten Cocycle existiert der Pfad
+
+\[
+\boxed{
+\begin{aligned}
+P_{-1,1}
+&\xrightarrow{r_T}
+\overline Q_{1,1}
+\xrightarrow{r_{2b}}
+P_{1,1}
+\xrightarrow{r_{3a}}
+\overline Q_{2,1}
+\xrightarrow{r_{2b}}
+P_{2,1}\\
+&\xrightarrow{r_{3a}}
+\overline Q_{3,1}
+\xrightarrow{r_{2b}}
+P_{3,1}
+\xrightarrow{r_{3a}}
+\overline Q_{4,1}
+\xrightarrow{r_{2b}}
+P_{4,1}\\
+&\xrightarrow{\tau_{-e}\ {\rm(KNF)}}
+P_{4,0}
+\xrightarrow{r_T}
+\overline Q_{6,0}.
+\end{aligned}
+}
+\tag{A9.13}
+\]
+
+Er verbindet damit lokale Indizes
+
+\[
+\boxed{-1\longrightarrow 6.}
+\]
+
+Die verwendeten physischen Repräsentanten können exakt als
+
+\[
+\begin{aligned}
+y_{-1}&=s+\frac L2-\Delta,\\
+x_1&=\frac32L+3\Delta-s,\\
+x_2&=\frac32L+\Delta+s,\\
+x_3&=\frac32L+2\Delta-s,\\
+x_4&=\frac32L+2\Delta+s,\\
+x_5&=\frac32L+\Delta-s,\\
+x_6&=\frac32L+3\Delta+s,\\
+x_7&=\frac32L-s,\\
+x_8&=\frac32L+4\Delta+s,\\
+x_9&=L+4\Delta+s,\\
+y_6&=L-2\Delta-s
+\end{aligned}
+\]
+
+gewählt werden.
+
+Das Zertifikat prüft sowohl sämtliche affine Gleichungen in A9.13 als auch ihre P-/\(\overline Q\)-Indexkongruenzen modulo \(L\).
+
+### 12.4 Gate- und Free-Coordinate-Prüfung
+
+Alle verwendeten rohen Kanten liegen exakt in ihren A7-Domänen:
+
+- \(r_T\) an den beiden Enden;
+- \(r_{2b}\) an \(x_1,x_3,x_5,x_7\);
+- \(r_{3a}\) an \(x_2,x_4,x_6\).
+
+Sämtliche benötigten Randabstände werden im Zertifikat als **strictly positive symbolic margins** ausgewertet; es gibt keinen numerischen Gate-Test.
+
+Ebenso wird geprüft:
+
+- \(y_{-1}\) und \(y_6\) liegen strikt unter \(a-R\);
+- alle inneren \(x_1,\ldots,x_9\) liegen strikt oberhalb \(a\).
+
+Der rekonstruierte freie Nicht-Koordinaten-Branch
+
+\[
+(a-R,a)
+\]
+
+wird daher nirgends als Graphknoten benutzt.
+
+### 12.5 Die einzige KNF-Kante
+
+Aus
+
+\[
+u=s-s_*
+\]
+
+folgt exakt
+
+\[
+x_8=T+u,
+\qquad
+x_9=b+u.
+\]
+
+Da
+
+\[
+e=T-b=L/2,
+\]
+
+ist
+
+\[
+x_8\xrightarrow{\tau_{-e}}x_9
+\]
+
+genau die J1-Kante
+
+\[
+T_+\leftrightarrow B_+.
+\]
+
+A9-J1(full) beweist für ihren Koeffizienten exakt Nichtverschwindung; der dortige heikle Faktor besitzt sogar die Marge
+
+\[
+K>6.
+\]
+
+Somit ist A9.13 ein tatsächlicher Pfad des freien Gramgraphen und kein bloßer formaler Affinpfad.
+
+### 12.6 Zertifikat
+
+Zertifikat:
+
+scripts/certify_sw1_a9_regular_phase_bypass.py
+
+Commit:
+
+48b6ea8380e19487a909822ff114b0770a086a4b
+
+Committed Script-Blob:
+
+f70c277a5d91507784634be2bd720da3467c1303
+
+Der tatsächlich ausgeführte Dateiinhalt ergab exakt denselben Git-Blob-SHA.
+
+Ergebnis:
+
+SW1-A9 REGULAR-PHASE KNF BYPASS CERTIFICATE: PASS
+
+SymPy 1.14.0.
+
+Damit ist zulässig:
+
+\[
+\boxed{
+\mathrm{A9\!-\!SEP\!-\!BYPASS(part)}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+### 12.7 Exakte Negativaussage
+
+Auf dem offenen Subchamber A9.12 gilt:
+
+\[
+\boxed{
+\text{Die A8-Separatoren übertragen sich nicht universell auf }
+\mathfrak G_R.
+}
+\]
+
+Genauer: Für jedes Parameterpaar in A9.12 existiert eine **reguläre** A8-Phase \(s\in S_\varepsilon^{\rm reg}\), die im rohen A1-Graphen Separatorphase ist, im KNF-erweiterten freien Gramgraphen aber durch A9.13 umgangen wird.
+
+### 12.8 Strikte Firewall
+
+Nicht bewiesen ist:
+
+1. dass **jede** Phase in \(S_\varepsilon^{\rm reg}\) einen KNF-Bypass besitzt;
+2. dass im Subchamber A9.12 überhaupt **kein anderer** wiederkehrender Separator existiert;
+3. dass die freien Gramkomponenten unendlich sind;
+4. dass im komplementären unteren Bereich
+   \[
+   \varepsilon\ge s_*+R
+   \]
+   dasselbe geschieht;
+5. irgendeine Schur-/Cross-Gram-Nichtinjektivität.
+
+Der Gesamtstatus
+
+\[
+\boxed{\mathrm{A9\!-\!SEP}:?[O]}
+\]
+
+bleibt deshalb bestehen.
+
+**Scan-Firewall:** Frühere endliche Fensterscans werden ausschließlich als Exploration behandelt. „Kein Separator im gescannten Fenster gefunden“ ist **keine** Nichtexistenzaussage und wird nicht als mathematischer Status gebucht.
