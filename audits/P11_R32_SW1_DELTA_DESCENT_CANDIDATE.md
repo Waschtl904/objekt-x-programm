@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; **Stages 1/2–7 jeweils AI-GREEN + independent GREEN (certificate)** im jeweils explizit begrenzten Scope; finite y-shell closure zertifiziert; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stages 1/2–7 zertifiziert; **Stage 8 pointwise B-Differenzblock hergeleitet, globaler Reflexionsaudit offen**; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -2028,6 +2028,283 @@ Das Gesamtziel bleibt weiterhin
 \boxed{\mathrm{SW1\!-\!\Delta DESCENT}:?[O].}
 \]
 
+
+
+## 11. Stage 8 — pointwise KNF-Sampled-/B-Differenzblock
+
+Stage 7 schließt den neuen y-Schalengraphen. Für den Übergang zu einem reinen Annulusoperator muss nun die KNF-Innenrelation tatsächlich eingesetzt werden.
+
+Definiere für jedes Zentrum \(c\)
+\[
+D_c(s):=y(c+s)-y(c-s).
+\tag{DD.143}
+\]
+
+### 11.1 Direkte Rows bei \(e\pm s\) und \(d\pm s\)
+
+Die elf Wörter liefern uniform auf SW1:
+
+\[
+\boxed{
+(Ay)(e+s)
+=
+-c_1y(b-s)+c_1y(e+s)+c_2y(a+e+s),
+}
+\tag{DD.144}
+\]
+\[
+\boxed{
+(Ay)(e-s)
+=
+-c_1y(b+s)+c_1y(e-s)+c_2y(a+e-s).
+}
+\tag{DD.145}
+\]
+
+Ferner
+\[
+\boxed{
+(Ay)(d+s)
+=
+-c_1y(a+e-s)+c_1y(d+s)+c_2y(b+s),
+}
+\tag{DD.146}
+\]
+\[
+\boxed{
+(Ay)(d-s)
+=
+-c_1y(a+e+s)+c_1y(d-s)+c_2y(b-s).
+}
+\tag{DD.147}
+\]
+
+### 11.2 Direkte Rows bei \(b\pm s\)
+
+Uniform gilt
+\[
+\boxed{
+\begin{aligned}
+(Ay)(b+s)
+={}&
+-c_1y(e-s)
++\alpha_b y(b+s)
++\beta_-y(a+e-s)\\
+&+c_2y(d+s)
++\beta_b y(b-s),
+\end{aligned}}
+\tag{DD.148}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(b-s)
+={}&
+-c_1y(e+s)
++\alpha_b y(b-s)
++\beta_-y(a+e+s)\\
+&+c_2y(d-s)
++\beta_b y(b+s).
+\end{aligned}}
+\tag{DD.149}
+\]
+
+Damit besitzt der reine \(b\)-Antisymmetriekanal bereits den strikten Pivot
+\[
+1+\alpha_b-\beta_b
+=
+1+c_1+c_5+2c_{11}>1.
+\tag{DD.150}
+\]
+
+### 11.3 Direkte Rows bei \((a+e)\pm s\)
+
+Es gilt
+\[
+\boxed{
+\begin{aligned}
+(Ay)(a+e+s)
+={}&
+-c_1y(d-s)
++\alpha_b y(a+e+s)
++\beta_-y(b-s)\\
+&+c_2y(e+s)
++\beta_b y(b+\Delta-s),
+\end{aligned}}
+\tag{DD.151}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(a+e-s)
+={}&
+-c_1y(d+s)
++\alpha_b y(a+e-s)
++\beta_-y(b+s)\\
+&+c_2y(e-s)
++\beta_b y(b+\Delta+s).
+\end{aligned}}
+\tag{DD.152}
+\]
+
+Der einzige neue y-Differenzkanal ist somit
+\[
+D_{b+\Delta}(s).
+\tag{DD.153}
+\]
+
+### 11.4 Punktweiser \(4\times4\)-Differenzblock
+
+Subtrahiere jeweils die Minus-Row von der Plus-Row und addiere den Identitätsterm aus \(I+A\). Setze
+\[
+X_B(s)
+:=
+\begin{pmatrix}
+D_e(s)\\
+D_d(s)\\
+D_b(s)\\
+D_{a+e}(s)
+\end{pmatrix}.
+\tag{DD.154}
+\]
+
+Schreibe die entsprechenden Hub-Differenzen kompakt als
+\[
+W_c(s)
+:=
+(HE_{\mathcal A}w)(c+s)
+-
+(HE_{\mathcal A}w)(c-s),
+\tag{DD.155}
+\]
+und
+\[
+W_B(s)
+:=
+\begin{pmatrix}
+W_e(s)\\W_d(s)\\W_b(s)\\W_{a+e}(s)
+\end{pmatrix}.
+\]
+
+Dann gilt punktweise a.e.
+\[
+\boxed{
+M_BX_B(s)
++
+c_{11}e_4D_{b+\Delta}(s)
++
+W_B(s)
+=0,
+}
+\tag{DD.156}
+\]
+wobei
+\[
+\boxed{
+M_B=
+\begin{pmatrix}
+1+c_1&0&c_1&c_2\\
+0&1+c_1&c_2&c_1\\
+c_1&c_2&1+c_1+c_5+2c_{11}&2c_2\\
+c_2&c_1&2c_2&1+c_1+c_5+c_{11}
+\end{pmatrix}.
+}
+\tag{DD.157}
+\]
+
+Das Zertifikat bestätigt
+\[
+\boxed{M_B>0.}
+\tag{DD.158}
+\]
+
+### 11.5 Die Kopplung zum nächsten B-Zentrum verschwindet nicht
+
+Setze
+\[
+A_0:=1+c_1,
+\]
+und eliminiere zunächst die ersten beiden Koordinaten. Der Schurblock auf den Koordinaten \(D_b,D_{a+e}\) besitzt den positiven Offdiagonalterm
+\[
+\eta_B
+=
+2c_2-\frac{2c_1c_2}{1+c_1}
+=
+\frac{2c_2}{1+c_1}>0.
+\tag{DD.159}
+\]
+
+Da der Schurblock positiv definit ist, ist sein Inversen-Offdiagonale strikt negativ:
+\[
+(M_B^{-1})_{3,4}<0.
+\tag{DD.160}
+\]
+
+Folglich enthält die rekonstruierte \(D_b\)-Koordinate den externen Kanal \(D_{b+\Delta}\) mit Koeffizient
+\[
+\boxed{
+\gamma_B
+:=
+-c_{11}(M_B^{-1})_{3,4}>0.
+}
+\tag{DD.161}
+\]
+
+Insbesondere
+\[
+\boxed{\gamma_B\ne0.}
+\tag{DD.162}
+\]
+
+Damit existiert neben der bereits geschlossenen \(2d+\)-Schalenpropagation eine zweite, echte Differenzpropagation zum Zentrum \(b+\Delta\).
+
+### 11.6 Globale Reflexions-Firewall
+
+Der punktweise Block DD.156 darf **noch nicht** als globaler direkter Summenblock auf \(L^2(R,\varepsilon)\) behandelt werden.
+
+Denn auf dem AWI-Bereich
+\[
+J=(\Delta-\varepsilon,\varepsilon)
+\]
+und mit
+\[
+t=\Delta-s
+\]
+gelten die physischen Identitäten
+\[
+\boxed{
+e+s=d-t,
+}
+\tag{DD.163}
+\]
+und
+\[
+\boxed{
+a+e+s=b-t.
+}
+\tag{DD.164}
+\]
+
+Damit identifizieren sich die \(e/d\)- bzw. \((a+e)/b\)-Profile unter **derselben maßtreuen Involution**
+\[
+s\longmapsto\Delta-s
+\]
+wie in SW1-AWI.
+
+Folglich lautet der aktuelle Status ausdrücklich:
+
+\[
+\boxed{
+\text{Stage 8 pointwise algebra: candidate/certifiable;}
+\quad
+\text{globaler }L^2\text{-B-Block: }?[O].
+}
+\tag{DD.165}
+\]
+
+Der nächste zwingende Schritt ist ein eigener reflektierter B-Block-Audit auf \(J\), bevor \(\gamma_B\) zu einer globalen Rekurrenz oder zu einem induzierten \(w\)-Operator verwendet werden darf.
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
