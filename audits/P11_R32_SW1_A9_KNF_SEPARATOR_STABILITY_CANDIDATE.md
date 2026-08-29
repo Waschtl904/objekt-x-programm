@@ -1296,3 +1296,194 @@ Der Gesamtstatus bleibt
 \]
 
 Der nächste notwendige Schritt ist die exakte Aktivitäts-/Gate-Tabelle der neuen KNF-Kanten und anschließend die quotient-bewusste Frontierklassifikation des 12-Label-Cocycles.
+
+
+---
+
+## 14. A9-DOM — exakte Aktivitätsdomänen der neuen KNF-Kanten
+
+A9-J1 beweist die Nichtverschwindung aller 15 lokalen freien K6-Kanten. Für die Frontierfrage muss zusätzlich bekannt sein, **wo** die genuin neuen affinen Typen aktiv sind.
+
+Für jedes
+
+\[
+0<u<R
+\]
+
+sind die sechs freien lokalen Punkte
+
+\[
+u,\quad
+A_+=a+u,\quad
+B_-=b-u,\quad
+B_+=b+u,\quad
+T_-=T-u,\quad
+T_+=T+u.
+\]
+
+Daraus folgen, modulo Endpunkte/Nullmengen, exakt die folgenden neuen Domänen.
+
+### 14.1 \(r_b\)
+
+\[
+u\leftrightarrow b-u
+\]
+
+liefert
+
+\[
+\boxed{
+D_{r_b}
+=
+(0,R)\cup(b-R,b).
+}
+\]
+
+### 14.2 \(\tau_{\pm b}\)
+
+\[
+u\xrightarrow{+b}b+u
+\]
+
+liefert
+
+\[
+\boxed{
+D_{+b}=(0,R),
+\qquad
+D_{-b}=(b,b+R).
+}
+\]
+
+### 14.3 \(r_{a+b}\)
+
+\[
+a+u\leftrightarrow b-u
+\]
+
+liefert
+
+\[
+\boxed{
+D_{r_{a+b}}
+=
+(a,a+R)\cup(b-R,b).
+}
+\]
+
+### 14.4 \(\tau_{\pm d}\)
+
+\[
+a+u\xrightarrow{+d}b+u
+\]
+
+liefert
+
+\[
+\boxed{
+D_{+d}=(a,a+R),
+\qquad
+D_{-d}=(b,b+R).
+}
+\]
+
+### 14.5 \(\tau_{\pm e}\)
+
+Die beiden Kanten
+
+\[
+b-u\xrightarrow{+e}T-u,
+\qquad
+b+u\xrightarrow{+e}T+u
+\]
+
+geben
+
+\[
+\boxed{
+D_{+e}
+=
+(b-R,b)\cup(b,b+R),
+}
+\]
+
+und invers
+
+\[
+\boxed{
+D_{-e}
+=
+(T-R,T)\cup(T,T+R).
+}
+\]
+
+### 14.6 \(r_{T+b}\)
+
+Aus
+
+\[
+b-u\leftrightarrow T+u,
+\qquad
+b+u\leftrightarrow T-u
+\]
+
+folgt
+
+\[
+\boxed{
+D_{r_{T+b}}
+=
+(b-R,b)\cup(b,b+R)
+\cup
+(T-R,T)\cup(T,T+R).
+}
+\]
+
+Alle neuen KNF-Domänen sind damit auf die direkten sechs KNF-Fenster beschränkt. Außerhalb dieser Fenster entsteht durch \(J_R\) kein genuin neuer affiner Kantentyp.
+
+### 14.7 Zertifikat
+
+Zertifikat:
+
+scripts/certify_sw1_a9_new_knf_domains.py
+
+Commit:
+
+f565d359f754d0e8c1cd01464977497bf00485b8
+
+Committed Script-Blob:
+
+5b7fa5747514f0b8c7363bfaa36e7eff2e89f1f4
+
+Der aus GitHub gelesene Inhalt wurde erneut nach dem Git-Blob-Verfahren gehasht; der Hash stimmt exakt mit dem committed Blob überein.
+
+Ergebnis:
+
+SW1-A9 NEW KNF ACTIVITY-DOMAIN CERTIFICATE: PASS
+
+SymPy, ausschließlich exakte symbolische Identitäten.
+
+Damit gilt
+
+\[
+\boxed{
+\mathrm{A9\!-\!DOM}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+### 14.8 Frontier-Firewall
+
+Mit A9-FS und A9-DOM ist die Übergangsrelation nun endlich und vollständig spezifiziert. Noch offen ist die dynamische Erreichbarkeitsklassifikation.
+
+Insbesondere folgt aus der Existenz des zertifizierten Teil-Bypasses in Abschnitt 12 weiterhin **nicht**, dass eine Komponente unendlich ist.
+
+Der nächste Knoten ist die quotient-bewusste Frontierklassifikation:
+
+\[
+\boxed{
+\mathrm{A9\!-\!FRONTIER}:?[O].
+}
+\]
