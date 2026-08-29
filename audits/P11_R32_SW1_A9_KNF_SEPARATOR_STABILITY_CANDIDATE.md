@@ -848,50 +848,74 @@ R+\varepsilon<2\varepsilon<\Delta,
 
 also liegt A9.12 vollständig im SW1-Scope.
 
-Definiere
+Definiere stärker das **linke reguläre Bypassintervall**
 
 \[
-I_{\rm by}
+I_{\rm by}^{<}
 :=
 \left(
 \max\{\varepsilon,s_*\},
-\min\{\Delta-\varepsilon,s_*+R\}
+\min\{\Delta-\varepsilon,s_*+R,\Delta/2\}
 \right).
 \]
 
-Die vier nötigen Paarungleichungen sind:
+Es ist wichtig, dass **nicht** angenommen wird
+
+\[
+s_*+R<\Delta/2.
+\]
+
+Diese Ungleichung folgt aus A9.12 im Allgemeinen nicht und wird auch nicht benötigt.
+
+Für die Nichtleerheit von \(I_{\rm by}^{<}\) genügen die sechs Paarungleichungen
 
 \[
 \varepsilon<\Delta-\varepsilon,
-\]
-
-\[
+\qquad
 \varepsilon<s_*+R,
+\qquad
+\varepsilon<\Delta/2,
 \]
 
 \[
 s_*<\Delta-\varepsilon,
-\]
-
-\[
-s_*<s_*+R.
-\]
-
-Damit ist
-
-\[
-\boxed{I_{\rm by}\neq\varnothing.}
-\]
-
-Da \(I_{\rm by}\) offen ist, kann zusätzlich
-
-\[
-s\in I_{\rm by},
 \qquad
-s\neq\Delta/2
+s_*<s_*+R,
+\qquad
+s_*<\Delta/2.
 \]
 
-gewählt werden.
+Die erste und dritte folgen aus \(\varepsilon<\Delta/2\), die zweite ist gerade A9.12, die letzten beiden sind trivial aus \(R>0\) beziehungsweise \(s_*<\Delta/2\), und
+
+\[
+s_*<\Delta-\varepsilon
+\]
+
+folgt aus \(s_*<\Delta/2\) und \(\varepsilon<\Delta/2\).
+
+Damit
+
+\[
+\boxed{
+I_{\rm by}^{<}\neq\varnothing.
+}
+\]
+
+Wir wählen von nun an
+
+\[
+\boxed{
+s\in I_{\rm by}^{<}.
+}
+\]
+
+Dann gilt automatisch
+
+\[
+\varepsilon<s<\Delta/2,
+\]
+
+also liegt der Bypass ausdrücklich im **linken** regulären A8-Separatorintervall. Ein mögliches Überschreiten des Midpoints durch den oberen KNF-Fensterrand \(s_*+R\) ist irrelevant.
 
 Setze
 
