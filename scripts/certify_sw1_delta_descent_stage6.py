@@ -150,7 +150,7 @@ assert sp.simplify(a-5*Delta).is_positive is True
 # Hub identity in folded chamber: x3=T-t.
 x3=sp.simplify(2*d+3*Delta+s)
 assert sp.simplify(x3-a-(a-t))==0
-assert sp.simplify(x3-b-(-e+t))==0
+assert sp.simplify(x3-b-(e-t))==0
 assert sp.simplify(x3-T-(-t))==0
 
 print("SW1-DELTA-DESCENT STAGE-6 CERTIFICATE: PASS")
