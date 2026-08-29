@@ -1344,7 +1344,7 @@ direkt klassifiziert werden. Erst danach kann entschieden werden, ob DD.100 zu e
 
 Vor Verwendung von Stage 6 muss die in DD.102 ausdrücklich offene Zwischenstufe geschlossen werden.
 
-### 8A.1 Erweiterter äußerer Companionblock für \(m=2,3,4\)
+### 8A.1 Erweiterter äußerer Companionblock für \(m=2,3\) und für \(m=4\) unterhalb der Stage-6-Wall
 
 Setze
 \[
@@ -1361,11 +1361,18 @@ Da
 \]
 liegen alle drei Parameter strikt außerhalb des inneren Strips und noch links von \(a\).
 
-Die direkte 11-Wort-Klassifikation liefert für **jedes**
+Die direkte 11-Wort-Klassifikation liefert für
 \[
-m\in\{2,3,4\}
+m\in\{2,3\}
 \]
-dieselben drei A-Rows:
+auf ganz SW1 dieselben drei A-Rows. Für \(m=4\) gelten dieselben Rows genau in der unteren Stage-6-Unterkammer
+\[
+s+\varepsilon<h_3=a-4\Delta.
+\tag{DD.102b'}
+\]
+Oberhalb dieser Wall schaltet im \(u_4\)-Companion-Ledger zusätzliche Struktur zu; diese Region wird jedoch bereits durch den direkten Stage-6-Fold in 2TP geschlossen und benötigt den äußeren \(u_4\)-Block nicht.
+
+In den genannten Bereichen gelten:
 
 \[
 \boxed{
@@ -1425,7 +1432,7 @@ h_O(u_m)
 \]
 Alle eventuell wechselnden Vorzeichen einzelner \(w\)-Argumente betreffen nur die rechte Seite, nicht den invertierbaren y-Block.
 
-Folglich gilt für \(m=2,3,4\) erneut
+Folglich gilt für \(m=2,3\) auf ganz SW1 und für \(m=4\) unter DD.102b' erneut
 \[
 X_O(u_m)
 =
@@ -1536,7 +1543,7 @@ Für die untere Stage-6-Unterkammer tritt anschließend
 \[
 u_4=4\Delta+s
 \]
-auf; DD.102h gilt auch hierfür und ermöglicht die Fortsetzung zur vierten äußeren Schale.
+auf; dort gilt wegen \(s+\varepsilon<h_3\) weiterhin DD.102h und ermöglicht die Fortsetzung zur vierten äußeren Schale. In der oberen Stage-6-Unterkammer ist diese Fortsetzung nicht nötig, weil DD.118 bereits direkt in den zertifizierten 2TP-Pivot faltet.
 
 
 ## 9. Stage 6 — dritte äußere Schale und 2TP-Fold
