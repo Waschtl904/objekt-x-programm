@@ -34,7 +34,8 @@ u = sp.symbols("u", real=True)
 
 def log_pair(expr):
     """Return rational coefficients of log2, log3 for a linear log expression."""
-    z = sp.expand(expr.xreplace({sp.log(2): L2, sp.log(3): L3}))
+    expanded = sp.expand_log(expr, force=True)
+    z = sp.expand(expanded.xreplace({sp.log(2): L2, sp.log(3): L3}))
     poly = sp.Poly(z, L2, L3)
     assert poly.total_degree() <= 1
     c2 = poly.coeff_monomial(L2)
