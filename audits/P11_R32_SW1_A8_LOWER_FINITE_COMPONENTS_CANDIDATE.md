@@ -649,7 +649,7 @@ bleibt im Bereich \(0<s<\Delta\) genau eine mögliche Kollisionsphase:
 \boxed{s=\Delta/2.}
 \]
 
-Dort treten genau zehn Cross-Sheet-State-Pair-Koinzidenzen auf. Außerhalb dieses Einzelpunkts existiert keine solche physische Doppelbelegung.
+Dort treten genau zehn Cross-Sheet-State-Pair-Koinzidenzen **innerhalb der 20 A8-Mittelblocklabels** auf. Außerhalb dieses Einzelpunkts existiert innerhalb dieses endlichen Mittelblockledgers keine solche Doppelbelegung. Diese Aussage ist ausdrücklich **keine** Behauptung, dass sich die beiden bi-unendlichen Rotationsblätter global nur am Midpoint schneiden könnten. Der globale Kollisionsfall wird separat in Abschnitt 10B behandelt.
 
 Deshalb ist die punktweise Separatoraussage A8.13 ausschließlich auf
 
@@ -663,7 +663,7 @@ S_\varepsilon^{\rm reg}
 
 zu lesen.
 
-Die Endlichkeitsaussage A8.14 ändert sich **nicht**: Beide Komponenten von \(S_\varepsilon^{\rm reg}\) sind für \(0<\varepsilon<\Delta/2\) offen und nichtleer, und die irrationale Rotation trifft offene Mengen in beiden Zeitrichtungen unendlich oft.
+Die lokale Midpoint-Korrektur allein genügt noch nicht zur Behandlung möglicher **globaler** P-/\(\overline Q\)-Sheet-Kollisionen. Die Endlichkeitsaussage A8.14 bleibt dennoch gültig, aber ihre vollständige physische Rechtfertigung verwendet zusätzlich das Quotientenlemma aus Abschnitt 10B.
 
 Supplemental certificate:
 
@@ -697,3 +697,148 @@ Damit bleibt die zulässige A8-Buchung
 mit der korrigierten punktweisen Separator-Domäne \(S_\varepsilon^{\rm reg}\).
 
 **Firewall:** Dies ist eine Scope-Korrektur des rohen A8-Separatorlemmas, keine KNF-/A9-Aussage. Keine Promotion und keine Änderung der globalen Schur-/HT-/Objekt-X-/RH-Firewall.
+
+
+---
+
+## 10B. Globaler Sheet-Kollisionsquotient — vollständige physische Reparatur
+
+A5.7 weist ausdrücklich darauf hin, dass für spezielle Ausgangspunkte die beiden bi-unendlichen Rotationsblätter zusammenfallen können. Daher ist eine bloße Prüfung der vier A8-Mittelschichten **nicht** hinreichend, um globale physische Injektivität der formalen P-/\(\overline Q\)-Labels zu behaupten.
+
+Die korrekte Behandlung ist ein Quotientenargument.
+
+### 10B.1 Formale Cover-Aussage
+
+Die A7/A8-Indexrechnung wird zunächst auf dem formalen Zwei-Blatt-Cover
+
+\[
+\mathbb Z\times\{P,\overline Q\}\times\{0,1,2\}
+\]
+
+gelesen.
+
+Auf diesem Cover sind die Labels definitionsgemäß verschieden. Der ursprüngliche A8-Cross-Edge-Check und die maximale Reichweite \(3\) liefern deshalb den formalen Separator ohne irgendeine physische Quotientenannahme.
+
+Insbesondere bleibt die formale Endlichkeit der Cover-Komponenten für
+
+\[
+0<\varepsilon<\Delta/2
+\]
+
+durch die irrationale Wiederkehr des offenen Separatorfensters bestehen.
+
+### 10B.2 Struktur einer globalen Sheet-Kollision
+
+Falls sich die beiden physischen Rotationsblätter schneiden, gilt für geeignete ganze Indizes
+
+\[
+P_n=\overline Q_m.
+\]
+
+Wegen
+
+\[
+\Delta/L\notin\mathbb Q
+\]
+
+ist die Summe \(K=n+m\) eindeutig: zwei verschiedene Werte \(K_1,K_2\) würden
+
+\[
+(K_1-K_2)\Delta\equiv0\pmod L
+\]
+
+und damit Rationalität von \(\Delta/L\) erzwingen.
+
+Somit besitzt jede globale Kollision die Form
+
+\[
+\boxed{
+P_n=\overline Q_{K-n}
+}
+\]
+
+für alle entsprechenden Orbitlabels.
+
+Definiere die Involution
+
+\[
+\boxed{
+J_K(P_n)=\overline Q_{K-n},
+\qquad
+J_K(\overline Q_n)=P_{K-n}.
+}
+\]
+
+Für die spätere A9-Parität gilt allgemeiner
+
+\[
+J_{K,\delta}(P_{n,\eta})
+=
+\overline Q_{K-n,\eta+\delta},
+\qquad
+\delta\in\mathbb Z/2.
+\]
+
+### 10B.3 Graphautomorphismus
+
+Die A7-Indexsprungtabelle besitzt für jeden affinen Maptyp die Symmetrie
+
+\[
+j_{\overline Q}=-j_P.
+\]
+
+Daher kommutiert \(J_K\) exakt mit allen neun A7-Übergängen.
+
+Die Gate-/Horizon-Entscheidung hängt ausschließlich vom **physischen Punkt \(x\)** ab. Zwei durch \(J_K\) identifizierte Labels besitzen deshalb dieselbe Aktivität.
+
+Somit ist \(J_K\) ein Automorphismus des formalen aktiven Covergraphen.
+
+### 10B.4 Endlichkeit überlebt den Quotienten
+
+Sei \(C\) eine formale Zusammenhangskomponente. Ihre Sättigung unter der physischen Identifikation ist
+
+\[
+\boxed{
+C\cup J_K(C).
+}
+\]
+
+Da \(J_K^2=I\), werden also höchstens **zwei** formale Komponenten miteinander verklebt.
+
+A8 beweist die Endlichkeit jeder formalen Cover-Komponente. Folglich ist auch jede physische Quotientenkomponente endlich.
+
+Damit ist A8.14 vollständig physisch gerechtfertigt, auch auf den abzählbaren globalen Sheet-Kollisionsstrata.
+
+### 10B.5 Zertifikat
+
+Zertifikat:
+
+scripts/certify_sw1_sheet_collision_quotient.py
+
+Commit der ersten A8-Fassung:
+
+9d537c2a820473161cc79496bb171c3ed8be7b00
+
+Committed Script-Blob:
+
+a1e62d885788c9b3eb696fd7709b81193e345410
+
+Exakte committed Ausführung:
+
+SW1 GLOBAL SHEET-COLLISION QUOTIENT CERTIFICATE: PASS
+
+Das Zertifikat prüft die Involutions- und Kommutationsidentitäten für sämtliche neun A7-Typen sowie bereits für die neun späteren A9-KNF-Typen und beide Paritätsoffsets \(\delta=0,1\).
+
+Der analytische Input \(\Delta/L\notin\mathbb Q\) bleibt separat der bereits auditierten A4/A5-Irrationalitätsstufe entnommen.
+
+### 10B.6 Korrigierte Aussagehierarchie
+
+Damit ist zu unterscheiden:
+
+1. **formaler A8-Coverseparator:** universell im A8-Scope;
+2. **direkte physische Links/Rechts-Partition:** kann bei Sheet-Kollisionen als Labelpartition versagen;
+3. **physische Komponentenendlichkeit A8.14:** bleibt durch das Quotientenlemma vollständig gültig.
+
+Die Midpoint-Korrektur 10A ist weiterhin eine echte lokale Label-Degeneration und bleibt dokumentiert; sie ist jedoch nicht mehr die alleinige Rechtfertigung der physischen Endlichkeit.
+
+Keine Promotion. Keine KNF-Gram-, Schur-, HT-RED-, Objekt-X- oder RH-Folgerung.
