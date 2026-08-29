@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Stacked base:** research/sw1-a4-irrational-rotation-nogo@8ccb35421ecb9a0c0976d85e5975ac8a97e21dd7  
-> **Status:** ?[O] — Zwei-Blatt-Normalform hergeleitet; Zertifikat/Re-Review offen; keine Promotion.  
+> **Status:** `AI-GREEN candidate + independent GREEN (certificate)` — Zwei-Blatt-Normalform und finite Horizon-Lift-Struktur zertifiziert; **keine Promotion**.  
 > **Scope:** vollständige affine Normalform aller nichttrivialen A1-Echoabbildungen. Keine Endlichkeits- oder Injektivitätsaussage.
 
 ---
@@ -435,3 +435,37 @@ Zu beweisen ist eine der beiden Alternativen:
 
 **Firewall:** A5 ist nur eine exakte affine Normalform. Keine Aussage über
 \(\ker\mathcal L_{\rm ann}^{\rm SW1}\), \(\ker\Gamma_I\), HT-RED, Objekt X oder RH.
+
+---
+
+## 10. Review-/Zertifikatsstatus
+
+Das committed Zertifikat
+`scripts/certify_sw1_a5_two_sheet_transfer.py`
+wurde mit Python/SymPy 1.14.0 auf der exakt committed Fassung ausgeführt.
+
+Script-Blob:
+`354a1751b8e4208076c66e214f5d6bd93331aa6a`.
+
+Ergebnis: **PASS**.
+
+Zertifiziert werden:
+
+- \(L=a-\Delta=4a-2b=2e\);
+- die Indexverschiebungen der vier Translationen;
+- die vollständige Fünfer-Tabelle der Reflexionen zwischen den beiden Blättern;
+- die uniforme Horizon-Schranke \(T_0<3L\);
+- die untere-Chamber-Hole-Länge \(\Delta-2\varepsilon\).
+
+Damit gilt:
+\[
+\boxed{
+\mathrm{SW1\!-\!A5}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+Keine Promotion. Insbesondere ist die Endlichkeit der vollständigen unteren-Chamber-Komponenten noch nicht bewiesen.
+
