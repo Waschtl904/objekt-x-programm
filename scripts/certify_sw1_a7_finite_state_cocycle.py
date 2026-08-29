@@ -58,9 +58,9 @@ assert sp.simplify(T-(2*L+2*Delta))==0
 
 # Exact reflection congruences relative to Qbar_n=2b-x0-nDelta.
 # For P_n -> Qbar_{n+k}, the condition is c-2b = k*Delta mod L.
-assert sp.simplify((a-2*b)-(3*Delta-3*L))==0
-assert sp.simplify((T-2*b)-(2*Delta-2*L))==0
-assert sp.simplify((3*a-2*b)-(Delta-L))==0
+assert sp.simplify((a-2*b)-(-2*L-3*Delta))==0
+assert sp.simplify((T-2*b)-(-L-2*Delta))==0
+assert sp.simplify((3*a-2*b)-(-Delta))==0
 assert sp.simplify((4*a-2*b)-L)==0
 assert sp.simplify((2*b-2*b))==0
 
