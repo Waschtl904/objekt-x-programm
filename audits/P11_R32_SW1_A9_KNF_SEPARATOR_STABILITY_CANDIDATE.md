@@ -424,3 +424,205 @@ Der Gesamtstatus von A9 bleibt daher
 \]
 
 Keine Promotion. Keine Separatorentscheidung für \(\mathfrak G_R\), keine Schur-Injektivität, kein HT-RED, kein Objekt X und keine RH-Folgerung.
+
+
+---
+
+## 10. A9-J1a — Überleben der genuin neuen KNF-Kanäle
+
+A9-J1a isoliert denjenigen Teil von \(J_R^*(I+A)J_R\), der durch den rekonstruierten linken \(a\)-Branch entsteht und **genuin neue** affine Typen erzeugt.
+
+Für \(0<u<R<\varepsilon\) liegt
+
+\[
+A_-(u)=a-u
+\]
+
+uniform in A1-R2. Dort besitzt \(I+A\) lokal die relevanten Kopplungen
+
+\[
+\lambda:=1+\alpha_A=1+c_1+c_5
+\]
+
+auf der Diagonale von \(A_-\), sowie
+
+\[
+A_-\leftrightarrow A_+:\ -c_1,
+\qquad
+A_-\leftrightarrow T_-:\ \beta_+,
+\qquad
+A_-\leftrightarrow T_+:\ \beta_-,
+\qquad
+A_-\leftrightarrow u:\ c_2.
+\]
+
+Mit
+
+\[
+s:=r/p>0,
+\qquad
+t:=q/p=2^{-3/4}>0
+\]
+
+und dem KNF-Koeffizientenvektor
+
+\[
+c=(1,-s,s,-t,t)
+\]
+
+ergibt die vollständige lokale Aggregation für die **genuin neuen** \(h/h\)-Kanäle:
+
+\[
+\boxed{
+\begin{aligned}
+C_{r_{a+b}}&=-s(1+c_5),\\
+C_{\tau_d}&=+s(1+c_5),\\
+C_{\tau_e}^{B_-T_-}&=s\,t,\\
+C_{\tau_e}^{B_+T_+}&=s\,M,\\
+C_{r_{T+b}}^{B_-T_+}&=-s\,M,\\
+C_{r_{T+b}}^{B_+T_-}&=-s\,t,
+\end{aligned}}
+\]
+
+wobei
+
+\[
+M
+=
+\lambda t+\beta_-
+=
+t\left(
+1-\frac{(2\sqrt2-1)\log2}{8}
+\right)>0.
+\]
+
+Die zweite \(\tau_e\)-Kombination vereinfacht sogar exakt über
+
+\[
+\lambda t-\beta_+=t.
+\]
+
+Damit ist **keiner** dieser sechs branchweisen neuen Beiträge durch \(J_R^*AJ_R\) ausgelöscht.
+
+### 10.1 Zwei weitere neue z/h-Kanäle
+
+Die rohe A1-Kante
+
+\[
+A_-(u)\leftrightarrow u
+\]
+
+mit Koeffizient \(c_2\) erzeugt nach KNF-Rekonstruktion insbesondere
+
+\[
+B_-(u)\leftrightarrow u:
+\qquad
+r_b(x)=b-x
+\]
+
+mit Gesamtkoeffizient
+
+\[
+\boxed{-s\,c_2\ne0},
+\]
+
+sowie
+
+\[
+B_+(u)\leftrightarrow u:
+\qquad
+\tau_{+b}(x)=x+b
+\]
+
+mit
+
+\[
+\boxed{+s\,c_2\ne0}.
+\]
+
+Da weder \(r_b\) noch \(\tau_{\pm b}\) in der vollständigen A7-Rohmapliste vorkommen, existiert kein zusätzlicher roher A1-Kanal desselben affinen Typs, der diese Beiträge noch canceln könnte.
+
+Somit erweitert sich die genuin neue KNF-Typenliste auf
+
+\[
+\boxed{
+\tau_{\pm d},
+\quad
+\tau_{\pm e},
+\quad
+\tau_{\pm b},
+\quad
+r_{a+b},
+\quad
+r_{T+b},
+\quad
+r_b.
+}
+\]
+
+### 10.2 Auch b erzeugt keine neue irrationale Basisphase
+
+Exakt gilt
+
+\[
+\boxed{
+b=\frac32L+2\Delta
+}
+\]
+
+und damit modulo \(L\)
+
+\[
+b\equiv \frac L2+2\Delta.
+\]
+
+Also ist auch der neue \(\tau_b/r_b\)-Mechanismus lediglich ein weiterer endlicher Paritäts-/Indexsprung über derselben \(\Delta\)-Rotation.
+
+### 10.3 Zertifikat
+
+Zertifikat:
+
+scripts/certify_sw1_a9_j1a_new_channel_survival.py
+
+Exakt geprüfter Commit:
+
+6089f9f30c3365e5ea119fd60aa0db6a699961e8
+
+Committed Script-Blob:
+
+a3d89cbbea279fd74b7b5c689d9f2b59a0b9dc11
+
+Tool:
+
+Python / SymPy 1.14.0
+
+Der tatsächlich ausgeführte Dateiinhalt wurde vor Ausführung erneut als Git-Blob gehasht und stimmt exakt mit
+
+a3d89cbbea279fd74b7b5c689d9f2b59a0b9dc11
+
+überein.
+
+Ergebnis:
+
+SW1-A9-J1a NEW-CHANNEL SURVIVAL CERTIFICATE: PASS
+
+Damit gilt
+
+\[
+\boxed{
+\mathrm{A9\!-\!J1a}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+### 10.4 J1a-Firewall
+
+A9-J1a aggregiert vollständig die **genuin neuen** KNF-Kanäle, aber noch nicht sämtliche bereits aus A7 bekannten affinen Typen nach KNF-Transport.
+
+Daher bleibt **A9-J1 als Ganzes** noch offen. Insbesondere ist noch nicht entschieden, welche bestehenden A7-Kanten im vollen Gramoperator durch Koeffizientencancellation verschwinden oder ihre Aktivitätsdomänen verändern.
+
+Für einen Separatorbeweis kann jedoch bereits der sichere Supergraph verwendet werden, der alle A7-Rohkanten plus die oben zertifizierten neuen KNF-Kanten enthält: Falls schon dieser Supergraph einen wiederkehrenden Separator besitzt, besitzt ihn erst recht der tatsächliche Gramgraph.
+
+Keine Promotion. Noch keine A9-Separatorentscheidung, keine Schur-Injektivität, kein HT-RED, kein Objekt X und keine RH-Folgerung.
