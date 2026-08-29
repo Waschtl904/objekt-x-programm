@@ -3854,22 +3854,41 @@ In jedem Fall ist die \(B_2\)-Propagation y-seitig terminal:
 \tag{DD.289}
 \]
 
-Zusammen mit Stage 10C folgt daher auf **ganz SW1**:
+Zusammen mit Stage 10C folgt daher für die bisher untersuchte äußere Parameterzone (s\in(R,\varepsilon)):
 
 \[
 \boxed{
-\text{Die gesamte B-Zentrum-Hierarchie ist endlich geschlossen.}
+\text{Die gesamte äußere B-Zentrum-Hierarchie ist endlich geschlossen.}
 }
 \tag{DD.290}
 \]
 
-Kombiniert mit der Stage-7-y-shell-Closure ist damit die **gesamte y-Geometrie** des bisherigen SW1-Δ-Descent-Systems endlich eliminierbar.
+Kombiniert mit der Stage-7-y-shell-Closure ist damit die **äußere y-Geometrie für (s\in(R,\varepsilon))** endlich eliminierbar.
 
-### 16.6 Neuer einziger Engpass
+### 16.6 Verbleibender innerer KNF-Sample-Scope
 
-Nach DD.290 bleibt kein neuer y-Rowtyp mehr offen.
+DD.290 schließt noch **nicht automatisch** die fünf freien KNF-Samplekoordinaten
+\[
+y(a+u),\quad y(b-u),\quad y(b+u),\quad y(T-u),\quad y(T+u),
+\qquad 0<u<R,
+\]
+aus KNF.17–KNF.21.
 
-Der nächste mathematische Knoten ist damit erstmals wirklich der induzierte Annulusoperator:
+Die zweite augmentierte Gleichung ist durch die Wahl (y\in\mathcal K_R) bereits in KNF eingebaut; der linke (a-u)-Branch wird durch KNF.11 rekonstruiert. Bevor ein reiner Annulusoperator behauptet werden darf, muss aber noch gezeigt werden, dass die **erste** augmentierte Gleichung auch diese fünf freien inneren Samplekoordinaten durch dieselbe endliche Row-Geometrie kontrolliert.
+
+Wegen
+\[
+u+\varepsilon<R+\varepsilon<\Delta
+\]
+liegt der gesamte innere Samplebereich strikt außerhalb aller bisherigen AWI-Überlappkammern. Der nächste Schritt ist daher:
+\[
+\boxed{
+\text{Stage 12: innerer KNF-Sample-Abschluss für }0<u<R.
+}
+\tag{DD.290a}
+\]
+
+Erst **nach** Stage 12 darf der nächste Knoten als induzierter Annulusoperator formuliert werden:
 
 \[
 \boxed{
@@ -3888,7 +3907,7 @@ Zu beweisen bleibt:
 \tag{DD.292}
 \]
 
-**Firewall:** DD.290 ist eine endliche y-Geometrie-/Eliminationsaussage. Sie beweist noch nicht DD.292, kein HT-RED, kein A0 und keine Aussage über \(\ker\Gamma_I\).
+**Firewall:** DD.290 ist eine endliche **äußere** y-Geometrie-/Eliminationsaussage auf (s\in(R,\varepsilon)). Der innere KNF-Samplebereich (0<u<R) bleibt bis Stage 12 offen. Insbesondere beweist Stage 11 noch nicht DD.292, kein HT-RED, kein A0 und keine Aussage über \(\ker\Gamma_I\).
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
