@@ -3193,6 +3193,26 @@ Der nächste Schritt ist daher endlich-dimensional:
 
 **Firewall:** DD.240 beweist Endlichkeit der Parametergeometrie, aber noch nicht die Invertierbarkeit jedes vollständigen Stage-10C-Blocks und noch keine globale \(B_1\to B_2\)-Rekurrenz.
 
+**Stage-10B-Reviewstatus.** Die beiden Reflexionskompositionen, der Translationsschritt \(k_B\), die exakten Ungleichungen \(2k_B<\Delta<3k_B\) und die uniforme Orbitabschätzung \(\#\mathcal O\le6\) wurden separat adversarial geprüft und durch
+`scripts/certify_sw1_delta_descent_stage10b.py`
+mit Python/SymPy 1.14.0 reproduzierbar zertifiziert (PASS).
+
+Zertifizierter Script-Blob:
+`f774ef96d0e7b02dcca06f1c5d8462207d6f3604`.
+
+Damit gilt für Stage 10B:
+\[
+\boxed{
+\mathrm{Stage\ 10B}:
+\text{AI-GREEN}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+Der nächste offene Knoten bleibt Stage 10C: expliziter physischer Quotient je endlichem Orbittyp und Klassifikation der verbleibenden \(B_2\)-Kanäle.
+
+
 
 ## 6. Zertifikatsstatus und nächste Stufe
 
