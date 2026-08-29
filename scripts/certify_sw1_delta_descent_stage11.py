@@ -117,8 +117,8 @@ q=sp.simplify(kB+s)
 assert sp.simplify(B2-s-(T-q))==0
 assert sp.simplify(a+q-(F2+s))==0
 assert sp.simplify(2*d+q-(F1+s))==0
-assert sp.simplify(2*Delta-q).is_positive is None or True  # parameter-dependent; handled analytically below
-# q < kB+eps < kB+Delta < 2Delta because kB<Delta.
+assert sp.simplify((2*Delta-q)-((Delta-kB)+(Delta-s)))==0
+# q<2Delta follows on 0<s<Delta from the two positive summands.
 assert sp.simplify(Delta-kB).is_positive is True
 
 # B2+s is always T±|s-kB|; both affine identities.
