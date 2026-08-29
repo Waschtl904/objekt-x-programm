@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stages 1/2–7 zertifiziert; **Stage 8 pointwise B-Differenzblock hergeleitet, globaler Reflexionsaudit offen**; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stages 1/2–7 zertifiziert; **Stage 8 pointwise algebra = AI-GREEN + independent GREEN (certificate)**, globaler reflektierter B-Block auf \(J\) bleibt `?[O]`; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -2305,6 +2305,29 @@ Folglich lautet der aktuelle Status ausdrücklich:
 \]
 
 Der nächste zwingende Schritt ist ein eigener reflektierter B-Block-Audit auf \(J\), bevor \(\gamma_B\) zu einer globalen Rekurrenz oder zu einem induzierten \(w\)-Operator verwendet werden darf.
+
+**Stage-8-Pointwise-Reviewstatus.** Die acht direkten Rows, der konstante Differenzblock \(M_B\), seine positive Definitheit, der nichtverschwindende Koeffizient \(\gamma_B>0\) sowie die beiden Reflexionsidentitäten wurden separat adversarial geprüft und durch
+`scripts/certify_sw1_delta_descent_stage8_pointwise.py`
+mit Python/SymPy 1.14.0 reproduzierbar zertifiziert (PASS).
+
+Zertifizierter Script-Blob:
+`12ddf9577e7f4c377480b96c311d643beb452625`.
+
+Damit gilt ausschließlich:
+\[
+\boxed{
+\mathrm{Stage\ 8\ pointwise}:
+\text{AI-GREEN}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+Der globale reflektierte \(L^2(J)\)-Block bleibt ausdrücklich
+\[
+\boxed{?[O]}.
+\]
+
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
