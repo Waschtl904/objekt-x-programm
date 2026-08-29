@@ -1117,3 +1117,182 @@ Der Gesamtstatus
 bleibt deshalb bestehen.
 
 **Scan-Firewall:** Frühere endliche Fensterscans werden ausschließlich als Exploration behandelt. „Kein Separator im gescannten Fenster gefunden“ ist **keine** Nichtexistenzaussage und wird nicht als mathematischer Status gebucht.
+
+
+---
+
+## 13. A9-FS — vollständiger paritätserweiterter finite-state Cocycle
+
+Nach A9-J1 ist die affine Typenliste des freien Gramgraphen vollständig bekannt. Sie besteht aus
+
+\[
+\{\tau_{\pm a},\tau_{\pm T},r_a,r_T,r_{3a},r_{4a},r_{2b}\}
+\]
+
+aus A7 sowie den genuin neuen KNF-Typen
+
+\[
+\boxed{
+\tau_{\pm e},
+\quad
+\tau_{\pm d},
+\quad
+\tau_{\pm b},
+\quad
+r_{a+b},
+\quad
+r_{T+b},
+\quad
+r_b.
+}
+\]
+
+Mit der Parität \(\eta\in\mathbb Z/2\) gilt:
+
+### 13.1 Alte A7-Typen
+
+Alle A7-Typen erhalten die Parität. Ihre lokalen Indexsprünge bleiben exakt die A7-Sprünge und erfüllen
+
+\[
+|j|\le3.
+\]
+
+### 13.2 Neue Translationen
+
+Aus
+
+\[
+e=L/2,\qquad
+d=L/2+\Delta,\qquad
+b=3L/2+2\Delta
+\]
+
+folgt modulo \(L\):
+
+\[
+\begin{array}{c|cc}
+&P_{n,\eta}&\overline Q_{n,\eta}\\ \hline
+\tau_{+e}&P_{n,\eta+1}&\overline Q_{n,\eta+1}\\
+\tau_{+d}&P_{n+1,\eta+1}&\overline Q_{n-1,\eta+1}\\
+\tau_{+b}&P_{n+2,\eta+1}&\overline Q_{n-2,\eta+1}.
+\end{array}
+\]
+
+Die inversen Translationen kehren die Indexsprünge um.
+
+### 13.3 Neue Reflexionen
+
+Modulo \(L\) gilt
+
+\[
+(a+b)-2b\equiv L/2-\Delta,
+\]
+
+\[
+(T+b)-2b\equiv L/2,
+\]
+
+\[
+b-2b\equiv L/2-2\Delta.
+\]
+
+Daher:
+
+\[
+r_{a+b}:
+\quad
+P_{n,\eta}\leftrightarrow\overline Q_{n+1,\eta+1},
+\]
+
+\[
+r_{T+b}:
+\quad
+P_{n,\eta}\leftrightarrow\overline Q_{n,\eta+1},
+\]
+
+\[
+r_b:
+\quad
+P_{n,\eta}\leftrightarrow\overline Q_{n+2,\eta+1},
+\]
+
+mit den entsprechend negativen Rücksprüngen von \(\overline Q\) nach \(P\).
+
+Die neuen KNF-Typen haben daher maximale Indexreichweite \(2\). Zusammen mit A7 bleibt die Gesamt-Reichweite
+
+\[
+\boxed{|j|\le3.}
+\]
+
+### 13.4 Formale Zustandszahl
+
+A7 liefert weiterhin
+
+\[
+T_0<3L.
+\]
+
+Pro Blatt und Paritätsfaser existieren deshalb höchstens drei positive Lifts. Der formale Zustandsraum pro Rotationsindex besitzt somit höchstens
+
+\[
+\boxed{
+2\ \text{Blätter}
+\times
+2\ \text{Paritäten}
+\times
+3\ \text{Lifts}
+=
+12
+}
+\]
+
+Labels.
+
+**Physische Quotienten-Firewall:** Formal verschiedene Labels, die denselben physischen Punkt repräsentieren, müssen identifiziert werden. Solche Koinzidenzen können die Zahl physischer Zustände nur reduzieren; sie dürfen niemals als zwei getrennte Graphknoten verwendet werden. Die A8-Midpoint-Korrektur ist hierfür das erste konkrete Beispiel.
+
+### 13.5 Zertifikat
+
+Zertifikat:
+
+scripts/certify_sw1_a9_full_finite_state_cocycle.py
+
+Commit:
+
+30e7b630fa0208d6d4941bca06249efc0f1f0246
+
+Committed Script-Blob:
+
+715ba55a40e2b86119758913b25e132351571727
+
+Der aus GitHub gelesene Dateiinhalt wurde lokal erneut nach dem Git-Blob-Verfahren gehasht und ergab exakt denselben SHA
+
+715ba55a40e2b86119758913b25e132351571727.
+
+Ergebnis der exakten committed Ausführung:
+
+SW1-A9 FULL KNF FINITE-STATE COCYCLE CERTIFICATE: PASS
+
+Verwendet wird ausschließlich exakte fractions.Fraction-Arithmetik.
+
+Damit gilt:
+
+\[
+\boxed{
+\mathrm{A9\!-\!FS}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+### 13.6 Firewall
+
+A9-FS ist eine endliche Transferreduktion. Sie beweist weder endliche noch unendliche Zusammenhangskomponenten.
+
+Der Gesamtstatus bleibt
+
+\[
+\boxed{\mathrm{A9\!-\!SEP}:?[O].}
+\]
+
+Der nächste notwendige Schritt ist die exakte Aktivitäts-/Gate-Tabelle der neuen KNF-Kanten und anschließend die quotient-bewusste Frontierklassifikation des 12-Label-Cocycles.
