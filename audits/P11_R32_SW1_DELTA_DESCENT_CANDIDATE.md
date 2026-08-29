@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stage 1/2 zertifiziert; Stage 3 hergeleitet (2TP-Schur-Pivot + Nichtabschluss), separater Zertifikats-/Re-Review noch ausstehend; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; **Stage 1/2 und Stage 3 jeweils AI-GREEN + independent GREEN (certificate)**; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -694,6 +694,29 @@ u,\ a-u,\ T-u
 \]
 
 Der nächste Angriff ist daher nicht „Rekurrenz behaupten“, sondern die direkte 11-Wort-Ableitung dieser Companion-Rows.
+
+**Stage-3-Reviewstatus.** Der exakte Schur-Pivot, die Schranken
+\[
+\mu_\Sigma>\frac13,\qquad \mu_\Delta>\frac34,
+\]
+die nichtverschwindende \(J\)-Zusatzkopplung und die KNF-Blindlage der Companionprofile wurden separat adversarial gegengeprüft und durch
+scripts/certify_sw1_delta_descent_stage3.py
+mit Python/SymPy 1.14.0 reproduzierbar zertifiziert (PASS).
+
+Damit gilt ausschließlich für Stage 3:
+\[
+\boxed{
+\mathrm{SW1\!-\!\Delta DESCENT\ (Stage\ 3)}:
+\text{AI-GREEN}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+Das Gesamtziel bleibt:
+\[
+\boxed{\mathrm{SW1\!-\!\Delta DESCENT}:?[O].}
+\]
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
