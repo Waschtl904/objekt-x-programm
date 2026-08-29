@@ -335,3 +335,92 @@ Die eigentliche A9-Separatorfrage bleibt
 \]
 
 Keine Promotion. Keine Aussage über endliche Komponenten von \(\mathfrak G_R\), keine Schur-Injektivität, kein HT-RED, kein Objekt X und keine RH-Folgerung.
+
+
+---
+
+## 9. A9-J0 Zertifikatsstatus — Identitäts-Gram
+
+Der Teilknoten A9-J0 wurde adversarial und reproduzierbar geprüft.
+
+Zertifikat:
+
+scripts/certify_sw1_a9_j0_identity_gram.py
+
+Exakt geprüfter Commit:
+
+901ea199c9c0e71bec2b23e89211b19daaf6e85a
+
+Committed Script-Blob:
+
+4bb6fdcb345f106e6d5b7f417ed5d5defb6db630
+
+Ausführungsart:
+
+Python-Standardbibliothek mit exakter fractions.Fraction-Arithmetik; die Konstanten werden als rationale Koeffizientenpaare von \((\log2,\log3)\) dargestellt.
+
+Vor der Ausführung wurde für den tatsächlich ausgeführten Dateiinhalt der Git-Blob-SHA erneut berechnet und exakt mit dem committed Blob
+
+4bb6fdcb345f106e6d5b7f417ed5d5defb6db630
+
+abgeglichen.
+
+Ergebnis:
+
+SW1-A9-J0 IDENTITY-GRAM/PARITY CERTIFICATE: PASS
+
+Zertifiziert wurden im Scope von \(J_R^*J_R\):
+
+- exakt fünf KNF-Rekonstruktionsbranches und damit zehn ungeordnete Off-Diagonal-Paare;
+- Nichtverschwindung aller zehn Rang-eins-Paarkoeffizienten unter \(p,q,r>0\);
+- alle zehn affinen Paarrelationen aus A9.3;
+- die Klassifikation bestehend vs. neu relativ zur A7-Rohmapliste;
+- die exakten Identitäten
+  \[
+  e=L/2,\qquad d=L/2+\Delta;
+  \]
+- die Paritätsübergänge A9.8–A9.10;
+- die exakte Ungleichung
+  \[
+  \Delta<L/2,
+  \]
+  hier über
+  \[
+  L/2-\Delta=\tfrac12\log(32/27)>0;
+  \]
+- die daraus folgende Disjunktheit des A8-Separatorfensters von seinem \(L/2\)-Shift.
+
+Damit gilt für den **Teilknoten A9-J0**:
+
+\[
+\boxed{
+\mathrm{A9\!-\!J0}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+### J0-Firewall
+
+Dieser Status gilt ausschließlich für den Identitäts-Gram-Anteil
+
+\[
+J_R^*J_R.
+\]
+
+Insbesondere ist **nicht** gebucht, dass die zehn Kanten im vollständigen freien Gramoperator
+
+\[
+\mathfrak G_R=J_R^*J_R+J_R^*AJ_R
+\]
+
+überleben. Identische affine Kanäle aus \(J_R^*AJ_R\) müssen zuerst koeffizientenweise aggregiert werden; vollständige Cancellation bleibt bis A9-J1 ausdrücklich möglich.
+
+Der Gesamtstatus von A9 bleibt daher
+
+\[
+\boxed{?[O].}
+\]
+
+Keine Promotion. Keine Separatorentscheidung für \(\mathfrak G_R\), keine Schur-Injektivität, kein HT-RED, kein Objekt X und keine RH-Folgerung.
