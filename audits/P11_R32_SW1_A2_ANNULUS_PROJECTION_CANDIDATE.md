@@ -797,17 +797,56 @@ auf SW1 benötigt werden:
 Zieht man \(G\) durch den KNF-Isomorphismus
 \[
 \Psi_R:K\to
+\mathcal F_R
+:=
 \mathcal Z_R^+\oplus L^2(\mathcal V_R^{\rm SW1}),
 \]
-entsteht der koordinatisierte positive Operator
+so erhält man
 \[
 \boxed{
 \widetilde G
 :=
-\Psi_R G\Psi_R^{-1}
-\ge I.
+\Psi_R G\Psi_R^{-1}.
 }
 \tag{A2.33}
+\]
+
+Da \(\Psi_R\) nur ein beschränkter Isomorphismus und im Allgemeinen **nicht unitär** ist, darf in der gewöhnlichen Direktproduktnorm nicht schlicht
+\(\widetilde G\ge I\) behauptet werden.
+
+Definiere stattdessen auf \(\mathcal F_R\) das transportierte Skalarprodukt
+\[
+\boxed{
+\langle \xi,\eta\rangle_{\Psi}
+:=
+\langle\Psi_R^{-1}\xi,\Psi_R^{-1}\eta\rangle_{\mathscr H_+}.
+}
+\tag{A2.33a}
+\]
+
+Bezüglich dieses Skalarprodukts ist \(\Psi_R\) unitär und daher
+\[
+\boxed{
+\widetilde G
+\text{ ist selbstadjungiert und }
+\widetilde G\ge I
+\quad\text{in }(\mathcal F_R,\langle\cdot,\cdot\rangle_\Psi).
+}
+\tag{A2.33b}
+\]
+
+In der gewöhnlichen Direktproduktnorm bleibt jedenfalls
+\[
+\boxed{
+\widetilde G^{-1}
+=
+\Psi_R G^{-1}\Psi_R^{-1},
+\qquad
+\|\widetilde G^{-1}\|
+\le
+\|\Psi_R\|\,\|\Psi_R^{-1}\|.
+}
+\tag{A2.33c}
 \]
 
 Die nächste Rechnung muss daher nicht mehr nach dem richtigen Annulusoperator suchen.
