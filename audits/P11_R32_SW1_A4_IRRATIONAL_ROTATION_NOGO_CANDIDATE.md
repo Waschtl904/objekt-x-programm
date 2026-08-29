@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Stacked base:** research/sw1-a3-free-coordinate-gram@82559ac41961c7c306ae564fa17d6b842838bc39  
-> **Status:** ?[O] — exakter Negativkandidat hergeleitet; Zertifikat/Re-Review offen; keine Promotion.  
+> **Status:** `AI-GREEN candidate`; zusätzlich `independent GREEN (certificate)` für den affinen/supportseitigen Rotationsmechanismus; **keine Promotion**.  
 > **Scope:** ausschließlich No-Go gegen eine exhaustive Zerlegung des oberen SW1-Chambers in endlich große physische Punktorbits. Keine Aussage gegen Operatorinjektivität.
 
 ---
@@ -708,3 +708,51 @@ Der nächste sinnvolle Angriff ist nicht mehr ein Punktorbit-Determinantentest, 
 4. Suche nach einer gerichteten Elimination, die die Rotation nicht punktweise auflöst.
 
 **Firewall:** A4 ist ein Strategieno-go, kein No-Go gegen die Schur-Cross-Gram-Injektivität.
+
+---
+
+## 11. Review-/Zertifikatsstatus
+
+Das committed Zertifikat
+`scripts/certify_sw1_a4_irrational_rotation.py`
+wurde mit Python/SymPy 1.14.0 exakt ausgeführt.
+
+Script-Blob:
+`8ab1a054511037daf72eab68f115a4d9341356da`.
+
+Ergebnis: **PASS**.
+
+Zertifiziert werden:
+
+- konstante Länge \(I_\varepsilon=a-\Delta=2e\);
+- sämtliche Chamber-II-Supportgaps;
+- der echte Zwei-Echo-Pfad \(r_{2b}\circ r_{3a}:x\mapsto x+\Delta\);
+- der echte Vier-Echo-Wrap-Pfad \(r_{2b}\circ r_{4a}\circ r_{2b}\circ r_{3a}:x\mapsto x+\Delta-(a-\Delta)\);
+- die Nichtverschwindung von \(\beta_-,\beta_b,\beta_T\);
+- die exakte Kreisrotationsform.
+
+Die Irrationalität
+\[
+\Delta/(a-\Delta)\notin\mathbb Q
+\]
+wird **nicht** als CAS-Fakt behauptet, sondern separat durch den UFD-Widerspruch
+\[
+2^{n+3m}=3^{2m}
+\]
+bewiesen.
+
+Daher lautet die präzise Buchung:
+
+\[
+\boxed{
+\mathrm{A4\!-\!ROT\!-\!NG}:
+\text{AI-GREEN candidate}
+}
+\]
+
+mit zusätzlichem
+`independent GREEN (certificate)`
+für den endlichen affinen/supportseitigen Ledger.
+
+Kein independent GREEN (cross-model), keine formale Promotion.
+
