@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Repo-Basis:** main@83f07adf9136d416181d6f38779cd452eb6a4472  
-> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; **Stages 1/2, 3, 4, 5, 5B und 6 jeweils AI-GREEN + independent GREEN (certificate)** im jeweils explizit begrenzten Scope; keine Promotion.  
+> **Status:** Gesamtziel SW1-Δ-DESCENT weiterhin `?[O]`; Stages 1/2–6 zertifiziert; **Stage 7 finite y-shell closure hergeleitet, committed Zertifikatsprüfung noch ausstehend**; keine Promotion.  
 > **Scope:** ausschließlich die direkte 11-Wort-Ableitung und Hub-Auswertung bei \(x=2d\pm s\) auf SW1.
 
 ---
@@ -1721,6 +1721,290 @@ Für diese drei lokal formulierten Stufen gilt jeweils
 
 Dies ist **keine** Promotion und noch **kein** vollständiger SW1-Δ-DESCENT.
 
+
+
+## 10. Stage 7 — endlicher Abschluss des neuen y-Schalengraphen
+
+Stage 7 schließt **nur die Hierarchie neu entstehender y-Rowtypen**. Sie beweist noch nicht, dass die verbleibende w-Gleichung trivialen Kern besitzt.
+
+### 10.1 Erweiterter lokaler 2TP-Pivot für \(0<u<\varepsilon\)
+
+Die direkte 11-Wort-Klassifikation der beiden Rows \(T\pm u\) benötigt für die reine Row-Algebra nicht \(u>R\). Für
+\[
+0<u<\varepsilon<\Delta
+\tag{DD.119}
+\]
+überleben in beiden Rows exakt 16 Echos, und es gelten dieselben A-Formeln wie in SW1-2TP:
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(T+u)
+={}&
+\kappa y(T+u)
++\beta_0y(u)
++\beta_-y(a-u)
++\beta_+y(a+u)\\
+&+\beta_Ty(T-u)
++\beta_by(2d-u),
+\end{aligned}}
+\tag{DD.120}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(T-u)
+={}&
+\kappa y(T-u)
++\beta_0y(u)
++\beta_-y(a+u)
++\beta_+y(a-u)\\
+&+\beta_Ty(T+u)
++\beta_by(2d+u).
+\end{aligned}}
+\tag{DD.121}
+\]
+
+Mit der Nullfortsetzung des Annulusprofils \(w\) gelten zugleich
+\[
+\boxed{
+(HE_{\mathcal A}w)(T+u)
+=
+p\,w(a+u)+r\,w(e+u)+q\,w(u),
+}
+\tag{DD.122}
+\]
+\[
+\boxed{
+(HE_{\mathcal A}w)(T-u)
+=
+p\,w(a-u)+r\,w(e-u)-q\,w(u).
+}
+\tag{DD.123}
+\]
+
+Falls \(u<R\), ist insbesondere \(w(u)=0\); die Formel selbst bleibt unverändert.
+
+Der Tailblock bleibt
+\[
+M_T=
+\begin{pmatrix}
+1+\kappa&\beta_T\\
+\beta_T&1+\kappa
+\end{pmatrix}>0,
+\tag{DD.124}
+\]
+also ist der lokale \(T\pm u\)-Pivot für jedes \(0<u<\varepsilon\) algebraisch invertierbar.
+
+**Firewall:** Diese Erweiterung ist kein neuer Blindheits- oder Membershipsatz. Für \(u<R\) werden die übrigen Profile nicht als blind bezeichnet; lediglich die beiden \(T\)-Rows sind invertierbar gekoppelt.
+
+### 10.2 Zweite Wall
+Setze
+\[
+h_4:=a-5\Delta,
+\qquad
+g_6:=6\Delta-a.
+\tag{DD.125}
+\]
+Dann
+\[
+0<g_6<h_4<h_3,
+\qquad
+h_4+g_6=\Delta.
+\tag{DD.126}
+\]
+
+In der unteren Stage-6-Unterkammer
+\[
+s+\varepsilon<h_3
+\]
+tritt nun die zweite Wall
+\[
+s+\varepsilon=h_4
+\tag{DD.127}
+\]
+auf.
+
+Falls
+\[
+h_4<s+\varepsilon<h_3,
+\tag{DD.128}
+\]
+ist
+\[
+x_4:=2d+4\Delta+s
+=
+T-(h_4-s).
+\tag{DD.129}
+\]
+Aus \(s+\varepsilon>h_4\) folgt
+\[
+|h_4-s|<\varepsilon
+\tag{DD.130}
+\]
+bis auf den Nullmengenfall \(s=h_4\). Daher liegt \(x_4\) exakt in einem der beiden erweiterten \(T\pm u\)-Rows aus DD.120–DD.124.
+
+Somit endet die neue y-Schalenhierarchie in dieser mittleren Unterkammer bereits an Schale 4.
+
+### 10.3 Unterste Unterkammer: vierte äußere Schalenrow
+
+Bleibt
+\[
+s+\varepsilon<h_4.
+\tag{DD.131}
+\]
+Dann liegt \(x_4\) noch außerhalb des erweiterten \(T\)-Strips. Die direkte 11-Wort-Klassifikation liefert exakt acht Echos:
+
+\[
+\boxed{
+\begin{aligned}
+(Ay)(2d+4\Delta+s)
+={}&
+-c_1y(2e-4\Delta-s)
++\alpha_b y(2d+4\Delta+s)\\
+&+\beta_-y(T-5\Delta-s)
++c_2y(5\Delta+s)
++\beta_b y(T-4\Delta-s).
+\end{aligned}}
+\tag{DD.132}
+\]
+
+Der Hub lautet ohne zusätzliche Vorzeichenkammer
+\[
+\boxed{
+\begin{aligned}
+(HE_{\mathcal A}w)(2d+4\Delta+s)
+={}&
+p\,w(5\Delta+s)\\
+&+r\,w(4\Delta+s-e)
++q\,w(4\Delta+s-2e).
+\end{aligned}}
+\tag{DD.133}
+\]
+
+Der nächste Companionparameter ist
+\[
+u_5:=5\Delta+s.
+\tag{DD.134}
+\]
+
+### 10.4 Terminaler \(u_5\)-Companionblock
+
+Unter DD.131 gilt
+\[
+u_5<a.
+\]
+Die beiden Rows bei \(u_5\) und \(a-u_5\) behalten exakt die äußere Form DD.102c–DD.102d.
+
+Für die Row bei \(T-u_5\) entscheidet nur noch die terminale Wall
+\[
+q:=g_6+s
+\quad\text{gegen}\quad
+\varepsilon.
+\tag{DD.135}
+\]
+
+#### Fall A: \(q<\varepsilon\)
+
+Dann ist das Wort-11-Gate aktiv, und der vollständige Companionblock ist wieder
+\[
+M_O>0
+\]
+mit der nichtverschwindenden Kopplung \(\beta_b y(2d+u_5)\).
+
+Der nächste Schalenwert ist aber
+\[
+2d+u_5
+=
+2d+5\Delta+s
+=
+T+q.
+\tag{DD.136}
+\]
+Wegen \(0<q<\varepsilon\) fällt er unmittelbar in den erweiterten 2TP-Pivot DD.119–DD.124.
+
+#### Fall B: \(q>\varepsilon\)
+
+Dann liegt
+\[
+2d+u_5=T+q>T+\varepsilon=T_0,
+\tag{DD.137}
+\]
+also ist dieser nächste y-Wert horizon-tot.
+
+Gleichzeitig schließt im \(T-u_5\)-Row exakt das Wort-11-Gate. Der terminale Companionblock lautet
+\[
+\boxed{
+M_{O,0}
+=
+\begin{pmatrix}
+1+c_1&0&-c_1\\
+0&1+c_1&c_2\\
+-c_1&c_2&1+c_1+c_5
+\end{pmatrix}.
+}
+\tag{DD.138}
+\]
+
+Auch
+\[
+\boxed{M_{O,0}>0.}
+\tag{DD.139}
+\]
+Es existiert in diesem Fall überhaupt kein neuer \(D_+\)-Kanal mehr.
+
+Der Gleichheitsfall \(q=\varepsilon\) liegt auf einer einzelnen Wall und ist als \(L^2\)-Grenz-/Nullmengenfall unschädlich.
+
+### 10.5 Exhaustive finite y-shell closure
+
+Damit ist die neue y-Schalenhierarchie auf ganz SW1 in drei Hauptfälle zerlegt:
+
+\[
+\boxed{
+\begin{array}{ll}
+s+\varepsilon>h_3
+&
+\Rightarrow
+\text{Fold bei }D_+(3\Delta+s)\text{ in SW1-2TP},\\[1mm]
+h_4<s+\varepsilon<h_3
+&
+\Rightarrow
+\text{Fold bei }D_+(4\Delta+s)\text{ in extended 2TP},\\[1mm]
+s+\varepsilon<h_4
+&
+\Rightarrow
+\text{höchstens noch }D_+(5\Delta+s),\\
+&
+\quad\text{danach extended 2TP oder Horizon-Tod.}
+\end{array}}
+\tag{DD.140}
+\]
+
+Somit:
+\[
+\boxed{
+\text{Nach spätestens fünf Δ-Schritten entsteht kein neuer y-Schalentyp mehr.}
+}
+\tag{DD.141}
+\]
+
+Dies ist ein **endlicher Abschluss des y-Schalengraphen**, noch nicht die Trivialität des gesamten augmentierten Kerns.
+
+### 10.6 Verbleibender Engpass
+
+Nach DD.141 ist der nächste mathematische Knoten nicht mehr geometrische Schalenexhaustivität, sondern die tatsächliche **w-Elimination** in dem nun endlichen y-Schur-System:
+
+\[
+\boxed{
+\text{finite y-shell closure}
+\;\Longrightarrow\;
+\text{derive exact induced annulus operator on }w.
+}
+\tag{DD.142}
+\]
+
+Erst wenn dieser induzierte w-Operator trivialen Kern besitzt, wäre der SW1-Δ-DESCENT als Eliminationsmechanismus geschlossen.
 
 
 ## 6. Zertifikatsstatus und nächste Stufe
