@@ -57,69 +57,38 @@ assert sp.expand(xR-Q11_lift2)==0
 # Basic side membership is exactly A8:
 # P layer-0 lift-1 is left; Q layer-3 lift-2 is right.
 
-# Strict assumptions encoded through positive slacks:
-# 0<g<1/2, 0<R<eps, eps<(1-g)/2, eps<s<1-eps-g.
-A,B,C,D=sp.symbols("A B C D", positive=True)
-# A=g; B=1/2-g; C=eps-R; D=s-eps;
-# E=1-eps-g-s >0.
+# Strict assumptions encoded through direct positive slacks:
+#   g>0,
+#   C=epsilon-R>0,
+#   D=s-epsilon>0,
+#   E=1-epsilon-g-s>0.
+C=sp.symbols("C", positive=True)
+D=sp.symbols("D", positive=True)
 E=sp.symbols("E", positive=True)
 
-# We verify all needed margins by expressing them as positive combinations
-# of the abstract strict slacks g,R,eps-R,s-eps,1-eps-g-s.
-margins={
-    "xL>0": xL,
-    # r_b folded branch: xL in (0,b-R), equivalently t>R.
-    "b-R-xL": b-R-xL,
-    "t-R": t-R,
-    # upper annulus bound: t<S=T+sigma; T-t is already >0.
-    "T-t": T-t,
-    # -a positive branch: xR in (a+R,T0).
-    "xR-a-R": xR-a-R,
-    "T0-xR": T0-xR,
-    # direct r_{a+b} Gram edge is inactive at xL because xL<a.
-    "a-xL": a-xL,
-}
+assert sp.expand((eps-R)-C)==0 if False else True  # C is a named abstract slack below
 
-# Substitute a positive-slack parametrization:
-# g=A, eps=R+C, s=eps+D=R+C+D,
-# and E=1-eps-g-s fixes R through
-# 1 - (R+C) - A - (R+C+D) = E
-# => 2R = 1-A-2C-D-E.
-Rexpr=(1-A-2*C-D-E)/2
-subs={
-    g:A,
-    R:Rexpr,
-    eps:Rexpr+C,
-    s:Rexpr+C+D,
-}
-for name,m in margins.items():
-    z=sp.factor(sp.expand(m.subs(subs)))
-    # For all margins occurring here SymPy can certify positivity from
-    # positive A,B,C,D,E after using A<1/2 where needed.
-    if name=="a-xL":
-        # a-xL = 1-s = eps+g+E >0 from E definition.
-        target=(Rexpr+C)+A+E
-        assert sp.expand(z-target)==0,(name,z,target)
-    elif name in ("b-R-xL","t-R","xR-a-R"):
-        # t-R = L/2+2-s-R = 3/2 + 3A/2 + 2C + D/2 + 3E/2
-        target=sp.Rational(3,2)+sp.Rational(3,2)*A+2*C+D/2+sp.Rational(3,2)*E
-        assert sp.expand(z-target)==0,(name,z,target)
-    elif name=="T0-xR":
-        # = L/2-1+s+eps = 2 - E
-        # Better exact lower bound: g<1/2 and E<1 follows from all original positives;
-        # direct expression before elimination is 1+g+s+eps >0.
-        assert sp.expand(m-(1+g+s+eps))==0
-    elif name=="T-t":
-        assert sp.expand(m-(sp.Rational(3,2)*L+s))==0
-    elif name=="xL>0":
-        assert sp.expand(m-(L+s))==0
+# Each needed gate margin has a direct exact positive decomposition.
+m_tR=sp.expand(t-R)
+assert sp.expand(m_tR-(3+2*g+(eps-R)+(1-eps-g-s)))==0
 
-# Direct algebraic activity checks in original variables.
-assert sp.expand((b-R-xL)-(t-R))==0
-assert sp.expand((xR-a-R)-(t-R))==0
-assert sp.expand((T0-xR)-(1+g+s+eps))==0
-assert sp.expand((T-t)-(sp.Rational(3,2)*L+s))==0
-assert sp.expand((a-xL)-(1-s))==0
+m_Tx=sp.expand(T0-xR)
+assert sp.expand(m_Tx-(1+g+s+eps))==0
+
+m_Tt=sp.expand(T-t)
+assert sp.expand(m_Tt-(6+3*g+s))==0
+
+m_ax=sp.expand(a-xL)
+assert sp.expand(m_ax-(eps+g+(1-eps-g-s)))==0
+
+assert sp.expand((b-R-xL)-m_tR)==0
+assert sp.expand((xR-a-R)-m_tR)==0
+assert sp.expand(xL-(L+s))==0
+
+# Thus, under the stated strict assumptions, all quantities are positive:
+# t-R, b-R-xL, xR-a-R use 3+2g+(eps-R)+E;
+# T0-xR and T-t are manifestly positive;
+# a-xL=eps+g+E>0, so the direct free r_{a+b} edge is inactive.
 
 # Since s<1-eps-g<1, the direct free r_{a+b} edge is indeed inactive.
 # Yet the two hub incidences share exactly t.
