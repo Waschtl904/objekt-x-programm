@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Stacked base:** research/sw1-a5-two-sheet-transfer@86e9e2119cf4896d5bceb17881bd2dd7ea1caede  
-> **Status:** ?[O] — unterer-Chamber-Rotationssubgraph hergeleitet; Zertifikat/Re-Review offen; keine Promotion.  
+> **Status:** `AI-GREEN candidate + independent GREEN (certificate)` — affiner Hole-Mechanismus zertifiziert; finite Rotationssegmente analytisch hergeleitet; **keine Promotion**.  
 > **Scope:** nur der aus A4 stammende kontrahierte Rotationssubgraph. Keine Aussage über die vollständigen A1/A3-Komponenten.
 
 ---
@@ -373,3 +373,39 @@ Auf
 kollabiert das Hole auf Nullmaß und gehört als eigener Grenzfall behandelt.
 
 **Keine Aussage über Schur-Injektivität, \(\ker\Gamma_I\), HT-RED, Objekt X oder RH.**
+
+---
+
+## 8. Review-/Zertifikatsstatus
+
+Das committed Zertifikat
+`scripts/certify_sw1_a6_rotation_hole.py`
+wurde mit Python/SymPy 1.14.0 auf der exakt committed Fassung ausgeführt.
+
+Script-Blob:
+`f0e2f246851259e932f50fd08f8654d794cd82fd`.
+
+Ergebnis: **PASS**.
+
+Zertifiziert werden:
+
+- die konstante Kreislaenge \(L=a-\Delta\);
+- der Zwei-Echo-Zweig \(x\mapsto x+\Delta\);
+- der Vier-Echo-Wrap \(x\mapsto x+\Delta-L\);
+- das exakte Bild des Hole unter \(r_{3a}\) in A1-R4I;
+- die Hole-Laenge \(\Delta-2\varepsilon\) und ihr Kollaps bei \(\varepsilon=\Delta/2\).
+
+Die Endlichkeit der kontrahierten Komponenten benutzt separat den klassischen Minimalitaetssatz fuer irrationale Kreisrotationen.
+
+Damit gilt:
+\[
+\boxed{
+\mathrm{SW1\!-\!A6\!-\!ROT\!-\!HOLE}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+Keine Promotion. Die vollstaendige Zwei-Blatt-Bypassfrage bleibt A7-LC.
+
