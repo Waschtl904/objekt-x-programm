@@ -3,7 +3,7 @@
 > **Stand:** 30. August 2026  
 > **Branch:** research/sw1-a10-crossgram-cocycle  
 > **Basis:** main@19da654f537868cd72757d2785071f8cf3f36c1b  
-> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1 sowie die Referenz-Arrangementstufen C1B2A/B/C im jeweils dokumentierten Scope zertifiziert. C1B2C bestätigt rückwirkend die Vollständigkeit der höheren Degenerationswerte und klassifiziert alle Boundary-Kollisionsstrata am rationalen Referenzarrangement. Für das tatsächliche Projektverhältnis ist der No-Degeneracy-Isotopie-Transfer weiterhin separat zu auditieren; finales Fiber-N und Matrixkoeffizienten bleiben offen. Keine Promotion.  
+> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1, C1B2A/B/C sowie C1C0-FORMAL im jeweils dokumentierten Scope zertifiziert. C1C1 besitzt ein zertifiziertes algebraisches Mehrblatt-Skelett und einen expliziten analytischen Isometriekandidaten; dessen unabhängiger Hilbertraum-Review steht noch aus. Die frühere Deutung von Boundary-Kollisionen als Fiberquotienten wurde korrigiert. Keine Promotion.  
 > **Ziel:** den zu \(\ker\Gamma_I\) äquivalenten SW1-Operator auf der irrationalen H3-Rotationskomponente als endlichen operatorwertigen/finite-range Cocycle formulieren.
 
 ---
@@ -2599,5 +2599,485 @@ Erst nach dieser Entscheidung ist eine Aussage
 \]
 
 auf einem **wirklich definierten Hilbert-Fiberraum** zulässig.
+
+Keine Injektivitätsaussage.
+
+
+---
+
+# C1C1 — analytische Fiberisierung des formalen Mehrblatt-Covers
+
+## 53. Reparametrisierung durch \(y\in K\)
+
+Da
+
+\[
+J_R:\mathcal F_R\xrightarrow{\sim}K
+\]
+
+ein beschränkter Isomorphismus ist, ist die C0-Gleichung äquivalent zur Reparametrisierung
+
+\[
+\boxed{
+\widetilde{\mathscr C}_R(y,w)
+=
+(I+A)y+HE_{\mathcal A}w,
+\qquad
+y\in K.
+}
+\tag{C1C1.1}
+\]
+
+Die Abbildung
+
+\[
+(\xi,w)\mapsto(J_R\xi,w)
+\]
+
+induziert bereits nach C0 eine Kernelbijektion. Daher darf die Fiberisierung auf der **physischen Horizontfunktion \(y\)** statt direkt auf den freien KNF-Koordinaten \(\xi\) aufgebaut werden.
+
+Dies vermeidet eine künstliche Behauptung, dass die zwölf A9-Orbitlabels unabhängige freie Hilbertkoordinaten seien.
+
+---
+
+## 54. Die vier kreismaßerhaltenden Sheet/Parity-Transformationen
+
+Auf
+
+\[
+\mathbb T_L=\mathbb R/L\mathbb Z
+\]
+
+definiere
+
+\[
+\phi_{P,0}(\theta)=\theta,
+\]
+
+\[
+\phi_{P,1}(\theta)=\theta+\frac L2,
+\]
+
+\[
+\phi_{\overline Q,0}(\theta)=4\Delta-\theta,
+\]
+
+\[
+\phi_{\overline Q,1}(\theta)
+=
+4\Delta-\theta+\frac L2
+\qquad
+(\bmod L).
+\]
+
+Setze
+
+\[
+h(\theta)=\theta+\frac L2,
+\qquad
+q(\theta)=4\Delta-\theta.
+\]
+
+Dann gilt exakt modulo \(L\):
+
+\[
+h^2=q^2=\mathrm{id},
+\qquad
+hq=qh,
+\]
+
+und
+
+\[
+\boxed{
+\{\mathrm{id},h,q,hq\}
+}
+\]
+
+ist eine Klein-Vierergruppe.
+
+Alle vier Transformationen besitzen Ableitungsbetrag \(1\) und erhalten daher das Lebesgue-/Haarmaß auf \(\mathbb T_L\).
+
+---
+
+## 55. Horizont-Embedding \(U_H\)
+
+Schreibe
+
+\[
+[\alpha]_L\in[0,L)
+\]
+
+für den kanonischen Kreisrepräsentanten.
+
+Für
+
+\[
+g\in
+\{
+(P,0),(P,1),(\overline Q,0),(\overline Q,1)
+\},
+\qquad
+k\in\{0,1,2\},
+\]
+
+setze
+
+\[
+\rho_g(\theta)
+:=
+[\phi_g(\theta)]_L
+\]
+
+und
+
+\[
+m_{g,k}(\theta)
+:=
+\mathbf 1_{\{0<\rho_g(\theta)+kL<T_0\}}.
+\]
+
+Definiere
+
+\[
+\boxed{
+(U_Hf)_{g,k}(\theta)
+=
+\frac12\,
+m_{g,k}(\theta)\,
+f(\rho_g(\theta)+kL).
+}
+\tag{C1C1.2}
+\]
+
+Da
+
+\[
+T_0<3L,
+\]
+
+reichen die drei Lifts
+
+\[
+k=0,1,2
+\]
+
+vollständig aus.
+
+### 55.1 Isometrie
+
+Für jedes feste \(g\) ist \(\rho_g\) eine maßerhaltende Bijektion des Kreises.
+
+Daher
+
+\[
+\sum_{k=0}^2
+\int_{\mathbb T_L}
+m_{g,k}(\theta)
+|f(\rho_g(\theta)+kL)|^2\,d\theta
+=
+\int_0^{T_0}|f(x)|^2\,dx.
+\]
+
+Es gibt vier Spezies \(g\), und der Vorfaktor ist \(1/2\). Also
+
+\[
+\|U_Hf\|^2
+=
+4\cdot\frac14\,\|f\|^2
+=
+\|f\|^2.
+\]
+
+Damit
+
+\[
+\boxed{
+U_H:
+L^2(0,T_0)
+\longrightarrow
+L^2(\mathbb T_L;\mathbb C^{12})
+}
+\]
+
+eine Isometrie.
+
+Insbesondere ist
+
+\[
+\boxed{
+\mathcal R_H:=\operatorname{Ran}U_H
+}
+\]
+
+ein geschlossener Unterraum.
+
+Wichtig:
+
+\[
+\mathcal R_H
+\ne
+L^2(\mathbb T_L;\mathbb C^{12})
+\]
+
+im Allgemeinen.
+
+Die zwölf Coverkomponenten sind redundante, durch die vier Pullbacks miteinander verknüpfte Darstellungen derselben physischen Horizontfunktion.
+
+---
+
+## 56. Annulus-Embedding \(U_W\)
+
+Nach positiver Odd-Faltung arbeitet H2 mit
+
+\[
+w\in L^2(R,S).
+\]
+
+Setze für
+
+\[
+k=0,1,2
+\]
+
+\[
+n_k(\theta)
+=
+\mathbf1_{\{R<\theta+kL<S\}}
+\]
+
+und
+
+\[
+\boxed{
+(U_Ww)_k(\theta)
+=
+n_k(\theta)\,w(\theta+kL).
+}
+\tag{C1C1.3}
+\]
+
+Wegen
+
+\[
+S<T_0<3L
+\]
+
+ist dies vollständig.
+
+Die drei Liftintervalle partitionieren den positiven Annulus nach Restklasse modulo \(L\). Deshalb
+
+\[
+\boxed{
+\|U_Ww\|=\|w\|,
+}
+\]
+
+also
+
+\[
+\boxed{
+U_W:
+L^2(R,S)
+\longrightarrow
+L^2(\mathbb T_L;\mathbb C^3)
+}
+\]
+
+eine Isometrie mit geschlossenem Bild
+
+\[
+\mathcal R_W:=\operatorname{Ran}U_W.
+\]
+
+---
+
+## 57. Der echte konstante Ambient-Raum
+
+Definiere
+
+\[
+\mathcal R_K:=U_HK
+\subset\mathcal R_H.
+\]
+
+Dann ist der tatsächliche fiberisierte Eingangsraum
+
+\[
+\boxed{
+\mathcal R_K\oplus\mathcal R_W
+\subset
+L^2(\mathbb T_L;\mathbb C^{15}).
+}
+\tag{C1C1.4}
+\]
+
+Der Ausgang liegt in
+
+\[
+\boxed{
+\mathcal R_H
+\subset
+L^2(\mathbb T_L;\mathbb C^{12}).
+}
+\tag{C1C1.5}
+\]
+
+Damit ist der konstante Ambient-Ansatz formal präzisiert:
+
+\[
+\boxed{
+\mathbb C^{15}_{\rm ambient}
+\longrightarrow
+\mathbb C^{12}_{\rm ambient},
+}
+\]
+
+aber der Operator lebt auf **geschlossenen Bildunterräumen**, nicht auf allen beliebigen Vektorfeldern dieser Dimensionen.
+
+Das ist die korrekte Bedeutung der Zahlen \(15\) und \(12\).
+
+---
+
+## 58. Fiberisierter inversefreier Operator
+
+Auf
+
+\[
+\mathcal R_K\oplus\mathcal R_W
+\]
+
+definiere
+
+\[
+\boxed{
+\widehat{\mathscr C}_R
+:=
+U_H\,
+\widetilde{\mathscr C}_R\,
+\bigl(
+(U_H|_K)^{-1}
+\oplus
+U_W^{-1}
+\bigr).
+}
+\tag{C1C1.6}
+\]
+
+Da \(U_H|_K\) und \(U_W\) Isometrien auf ihre Bilder sind, ist diese Definition wohldefiniert.
+
+Ferner gilt exakt
+
+\[
+\boxed{
+\ker\widehat{\mathscr C}_R
+\cong
+\ker\widetilde{\mathscr C}_R
+\cong
+\ker\mathscr C_R
+\cong
+\ker\Gamma_I.
+}
+\tag{C1C1.7}
+\]
+
+Damit ist die Cross-Gram-Kernfrage auf einen Operator zwischen **festen endlichen Ambient-Covern über \(\mathbb T_L\)** übertragen.
+
+Noch nicht hergeleitet sind die tatsächlichen Matrixkoeffizienten dieses Operators.
+
+---
+
+## 59. Zertifikat C1C1-ALG
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c1c1_multisheet_cover.py
+
+Commit:
+
+fdab6b94b81e6e8cdd39c11b3b5134406e7ba8ed
+
+Committed Script-Blob:
+
+c1c5c97a0e5b3c5d40e06b4d6ae310aa5e06f9da
+
+Die vor dem Commit ausgeführte Datei besitzt exakt denselben GitHub-Blob.
+
+Ergebnis:
+
+SW1-A10-C1C1 MULTI-SHEET COVER SKELETON CERTIFICATE: PASS
+
+Damit ist zulässig:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1C1\!-\!ALG}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, algebraic skeleton scope)}.
+}
+\]
+
+Der **analytische** Isometrie-/Intertwining-Schluss C1C1.2–C1C1.7 wird bis zu einem separaten unabhängigen Hilbertraum-Review nur als
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1C1\!-\!AN}:
+\text{AI-GREEN candidate}
+}
+\]
+
+geführt.
+
+---
+
+## 60. Was dadurch jetzt wirklich gewonnen ist
+
+C1C1 behebt zwei frühere Risiken gleichzeitig:
+
+1. Die 92 Boundary-Signaturen werden nicht mehr mit Hilbertkoordinaten verwechselt.
+2. Die 12 A9-Orbitlabels werden nicht als zwölf unabhängige Freiheitsgrade ausgegeben.
+
+Stattdessen gibt es einen festen redundanten Mehrblatt-Cover mit explizitem geschlossenen Bild.
+
+Damit ist die nächste Matrixfrage jetzt korrekt formulierbar.
+
+---
+
+## 61. Nächster Knoten C2
+
+Der nächste Schritt lautet:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2}:
+\text{direkter Matrixledger von }
+\widehat{\mathscr C}_R.
+}
+\]
+
+Dafür müssen getrennt aufgebaut werden:
+
+1. der freie physische Block
+   \[
+   U_H(I+A)U_H^{-1}
+   \quad\text{auf }\mathcal R_K;
+   \]
+2. der Hubblock
+   \[
+   U_HHE_{\mathcal A}U_W^{-1};
+   \]
+3. die gemeinsame C1B-Partition, auf der alle Lift-/Gate-Matrizen simultan konstant sind.
+
+Erst danach darf eine exakte finite-range Form
+
+\[
+(\widehat{\mathscr C}_RF)(\theta)
+=
+\sum_j M_j(\theta)
+F(\theta+j\Delta)
+\]
+
+gebucht werden.
 
 Keine Injektivitätsaussage.
