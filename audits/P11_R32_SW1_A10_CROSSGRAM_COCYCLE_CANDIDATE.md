@@ -6766,3 +6766,201 @@ geführt und benötigt einen unabhängigen mathematischen Review.
 Erst danach darf M1-FULL vom Referenzwert \(r_0=7/2\) auf den tatsächlichen Projektwert übertragen werden.
 
 Keine Injektivitätsaussage.
+
+
+---
+
+# C1B2A-TRANSFER — literature-backed Kandidatenbeweis
+
+## 140. Standardlemma: Chirotop-Cryptomorphie
+
+Verwendet wird die Standard-Cryptomorphie orientierter Matroide:
+
+> Für festen gelabelten Grundsatz und festen Rang spezifiziert ein Chirotop
+> \(\chi\) den orientierten Matroid; Chirotop, Covektoren, Cocircuits,
+> Vektoren und Circuits sind äquivalente Datensätze und rekonstruieren
+> einander eindeutig, bis auf die globale Identifikation
+> \(\chi\sim-\chi\).
+
+Referenzen:
+
+- A. Björner, M. Las Vergnas, B. Sturmfels, N. White, G. M. Ziegler,
+  *Oriented Matroids*, 2nd ed., Cambridge University Press, 1999,
+  Chapter 3, insbesondere Section 3.5.
+- G. M. Ziegler,
+  *Oriented Matroids Today*,
+  Electronic Journal of Combinatorics 3 (1996), Dynamic Survey 4,
+  Section 2.
+
+Für unsere Familie ist durch AFF-CHIRO sogar der konkrete gelabelte
+Rank-4-Signvektor einschließlich \(g_\infty\) auf \(3<r<4\) konstant.
+
+Daher gilt als Standardfolgerung:
+
+\[
+\boxed{
+\chi_r=\chi_{r'}
+\Longrightarrow
+\mathcal M_r=\mathcal M_{r'}
+\Longrightarrow
+\mathcal V^*(\mathcal M_r)=\mathcal V^*(\mathcal M_{r'})
+}
+\tag{C2.54}
+\]
+
+und insbesondere ist die Topemenge konstant.
+
+---
+
+## 141. Topes sind hier genau offene Parameterkammern
+
+Für einen festen vollständigen Vorzeichenvektor \(T\) ist
+
+\[
+C_T(r)
+=
+\left\{
+x:
+T_i(a_i\cdot x-b_i(r))>0
+\text{ für alle }i
+\right\}
+\]
+
+ein Schnitt offener Halbräume und daher konvex.
+
+Somit besitzt ein realisierter Tope-Signvektor genau eine offene
+Kammerkomponente.
+
+Weil die vier Simplexfacetten Teil derselben orientierten Konfiguration
+sind, bleibt auch die Auswahl der Topes auf der gewünschten Seite
+
+\[
+0<\sigma<R<\varepsilon<\frac{r+1}{2}
+\]
+
+konstant.
+
+Am Referenzwert sind exakt 64 solche Topes/Kammern zertifiziert.
+
+Kandidatenfolgerung:
+
+\[
+\boxed{
+N_{\rm chamber}(r)=64
+\qquad
+(3<r<4).
+}
+\tag{C2.55}
+\]
+
+---
+
+## 142. Konvexer Transferpfad im erweiterten Raum
+
+Für einen festen Tope \(T\) betrachte
+
+\[
+\widetilde C_T
+=
+\left\{
+(r,x):
+3<r<4,\;
+T_i(a_i\cdot x-b_i(r))>0
+\ \forall i
+\right\}.
+\]
+
+Da jedes \(b_i(r)\) affin-linear in \(r\) ist, ist
+\(\widetilde C_T\) ein Schnitt strikter linearer Ungleichungen in
+
+\[
+(r,\sigma,R,\varepsilon).
+\]
+
+Daher ist \(\widetilde C_T\) konvex.
+
+Ein Referenzpunkt bei \(r_0=7/2\) und ein tatsächlicher Punkt mit demselben
+Tope können somit durch die direkte Verbindungsstrecke innerhalb desselben
+Topes verbunden werden.
+
+Hierfür wird keine ambient isotopy benötigt.
+
+---
+
+## 143. Zyklische \(B_{96}\)-Ordnung
+
+Die 96 gelabelten Kreiswände hängen stetig von den Parametern ab.
+
+Die zyklische Ordnung endlich vieler paarweise verschiedener gelabelter
+Punkte auf einem orientierten Kreis ist lokal konstant und kann sich entlang
+eines stetigen Pfades nur ändern, wenn zwei Punkte kollidieren.
+
+GATE1R hat die vollständigen Paar-Kollisionshyperflächen des korrekten
+\(B_{96}\)-Alphabets exhaustiv klassifiziert und
+
+\[
+S_{96}=S_{92},
+\qquad
+C_{96}=C_{92}
+\]
+
+als Mengengleichheiten zertifiziert.
+
+Ein Pfad innerhalb eines offenen Topes kreuzt keine dieser
+Kollisionshyperflächen.
+
+Daher ist entlang des Pfades aus Abschnitt 142 auch die zyklische
+\(B_{96}\)-Reihenfolge konstant.
+
+---
+
+## 144. Genau der für M1 notwendige Schluss
+
+Für den Transfer von M1-FULL werden nur benötigt:
+
+1. dieselben 64 offenen Parameterkammer-Signvektoren;
+2. dieselbe zyklische \(B_{96}\)-Reihenfolge in jeder Kammer;
+3. damit dieselbe Zuordnung der 96 offenen Kreisatome.
+
+Die Abschnitte 140–143 liefern einen direkten Kandidatenbeweis hierfür,
+ohne Folkman–Lawrence und ohne globale ambient isotopy.
+
+Damit wäre, nach unabhängigem Review, zulässig:
+
+\[
+\boxed{
+\mathrm{M1\!-\!FULL}(r_0=7/2)
+\Longrightarrow
+\mathrm{M1\!-\!FULL}(r)
+\quad
+\text{für alle }3<r<4.
+}
+\tag{C2.56}
+\]
+
+---
+
+## 145. Aktueller Status von C1B2A-TRANSFER
+
+Der Beweis ist jetzt:
+
+- mechanisch unterlegt durch C1B2A-CHIRO und AFF-CHIRO;
+- bibliographisch unterlegt durch die Standard-Cryptomorphie;
+- für Kammer- und Kreisordnung anschließend elementar-konvex/stetig.
+
+Dennoch wird wegen der Auditdisziplin noch **kein independent GREEN**
+gebucht, bevor der konkrete Kettenschluss 140–144 extern/adversariell
+geprüft wurde.
+
+Daher aktuell:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1B2A\!-\!TRANSFER}:
+\text{AI-GREEN candidate (literature-backed);}
+\ \text{independent review pending}.
+}
+\]
+
+Insbesondere noch keine tatsächliche-\(r\) a.e.-Operatorgleichung und
+keine Injektivitätsaussage.
