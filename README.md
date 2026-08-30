@@ -207,9 +207,7 @@ NEU-174 (Hochschild-Komplex) → NEU-176 (geladene $HH^4$-Klasse) → NEU-195 (B
 [STATUS.md](STATUS.md) listet gesicherte Sätze, No-Gos und konditionale Resultate ohne Zwischenschritte.
 
 **Wer am Programm mitarbeiten will**
-[EINSTIEGSPROMPT.md](EINSTIEGSPROMPT.md) fasst den vollständigen Arbeitskontext auf Stand NEU-221e
-zusammen — Architektur, geschlossene Routen, aktuelle Sperren, Arbeitsregeln und den nächsten
-konkreten Knoten. Gedacht als Einstiegstext für eine neue Arbeits- oder KI-Sitzung.
+[EINSTIEGSPROMPT.md](EINSTIEGSPROMPT.md) beginnt jetzt mit dem aktuellen Arbeitskontext vom 30. August 2026 — C1B2A/M1-Abschluss, exakte Certificate-Provenienz und Roadmap-A-Front. Der frühere NEU-250a/Wres-Prompt bleibt dort ausdrücklich nur als historische Provenienz erhalten.
 
 ---
 
