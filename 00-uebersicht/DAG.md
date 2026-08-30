@@ -1,5 +1,18 @@
 # Abhängigkeitsgraph (DAG)
 
+> **Historischer SYN-DAG, Stand 8. August 2026.** Der untenstehende P01→P04→NEU-260-Pfad
+> ist nicht mehr die operative Forschungspriorität. Aktuelle operative Kette:
+>
+> \[
+> \text{P12-RT / SW1-KNF--A10}
+> \to \text{M1-RAW/M1-FULL}
+> \to \text{C1B2A-TRANSFER}
+> \to \boxed{\ker\Gamma_I=\{0\}\ ?[O]}.
+> \]
+>
+> Maßgeblich sind [`../CURRENT-FRONT.md`](../CURRENT-FRONT.md) und
+> [`ACTIVE_THEOREM_REGISTRY.md`](ACTIVE_THEOREM_REGISTRY.md). Der historische DAG
+> bleibt für Provenienz der damaligen SYN-Architektur erhalten.
 **Stand:** 2026-08-08 (Audit-Update)
 
 ```

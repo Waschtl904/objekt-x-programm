@@ -1,7 +1,8 @@
 # Aktueller Stand — P11-Sonderupdate 2026-08-21
 
-> **Konsolidierungsupdate 2026-08-30:** Der Post-Freeze-Frontstand liegt nun auf
-> \`main@6ac0141b2de3a0b2af98fff6d11c403fe3b379b6\` nach Squash-Merge PR #34.
+> **Konsolidierungsupdate 2026-08-30:** Die kanonische mathematische PR-#34-Basis ist
+> \`main@6ac0141b2de3a0b2af98fff6d11c403fe3b379b6\`; der anschließende reine
+> Status-/Navigationssync PR #35 ist \`main@25235a9e10ddb6d7244dd27bbc29bf03ada8cd1d\`.
 > C1B2A-CHIRO und C1B2A-TRANSFER sind im dokumentierten Scope \`✓[M]\`;
 > M1-RAW und M1-FULL(7/2) sind kanonische reproduzierbare Certificate-Ergebnisse,
 > und daraus folgt kanonisch M1-FULL(\(r\)) für \(3<r<4\) auf offenen

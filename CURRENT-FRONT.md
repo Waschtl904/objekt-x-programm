@@ -2,8 +2,8 @@
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 30. August 2026  
-> **Verifizierte Main-Basis:** \`eb1f56a6b7c00cbdfed6368d0ec282162e542654\` (mathematische Merge-Basis nach PR #29–#33; keine neue Promotion)  
-> **Aktiver mathematischer Stand:** `HT-A4b-SW1-M` bleibt \`✓[M]\`. A2/A3 sind jetzt zusätzlich im algebraisch/mechanischen Scope zertifiziert. A8 ist midpoint-/Sheet-Quotient-korrigiert; A9-J0/J1/FS/DOM sowie der kleine-ε-Separator sind zertifiziert, A9 gesamt bleibt `?[O]`. A10-H0/H1/H2/H3-COVER sind zertifiziert; H3-INF trägt nach unabhängigem Blindreview `independent GREEN` für die Existenz mindestens einer unendlichen augmentierten Hub-Inzidenzkomponente. **Keine** Folgerung zu `ker Γ_I`. Aktiver nächster Knoten: **operatorwertiger Residual-/Cross-Gram-Cocycle über der irrationalen Δ-Rotation**.  
+> **Kanonische mathematische Basis:** PR #34, Squash-Merge \`6ac0141b2de3a0b2af98fff6d11c403fe3b379b6\`; **Status-/Navigationssync:** PR #35, Squash-Merge \`25235a9e10ddb6d7244dd27bbc29bf03ada8cd1d\`. Die reproduzierbaren Certificate-Aussagen zitieren weiterhin die tatsächlich im CI geprüften Script-Blobs.  
+> **Aktiver mathematischer Stand:** Der C-Strang von SW1-A10 ist bis zur tatsächlichen-\(r\)-M1-Matrixdarstellung geschlossen: M1-RAW und M1-FULL(7/2) sind kanonische reproduzierbare Certificate-Ergebnisse; C1B2A-CHIRO und C1B2A-TRANSFER sind im dokumentierten Scope \`✓[M]\`; damit gilt M1-FULL(\(r\)) für jedes \(3<r<4\) auf offenen Parameterkammern und offenen Kreisatomen. **Keine** Folgerung zu \(\ker\Gamma_I\). Aktiver nächster Knoten ist Roadmap A: **finite-level Cross-Gram-Nichtentartung \(\ker\Gamma_I=\{0\}?\)**, beginnend mit der Odd/even-Faltung.  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -377,13 +377,18 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 \text{SW1-A8} & \text{AI-GREEN + independent GREEN (certificate)} \\
 \text{SW1-A9 gesamt} & ?[O] \text{; J0/J1/FS/DOM + SEP-SMALL zertifiziert} \\
 \text{A10-H3-INF} & \text{AI-GREEN + independent GREEN (cross-model blind review)} \\
-\text{SW1-A10 gesamt} & ?[O] \text{; Cross-Gram-Cocycle offen} \\
+\text{A10-C2-M1-RAW} & \text{independent GREEN (certificate)} \\
+\text{A10-C2-M1-FULL}(7/2) & \text{independent GREEN (certificate)} \\
+\text{C1B2A-CHIRO} & \checkmark[M] \text{ + independent GREEN (certificate)} \\
+\text{C1B2A-TRANSFER} & \checkmark[M] \\
+\text{M1-FULL}(r),\ 3<r<4 & \text{kanonische Konsequenz aus Referenz-Certificate + Transfer} \\
+\text{SW1-A10 gesamt} & ?[O] \text{ nur noch bzgl. Nichtentartung/Injektivität} \\
 \text{HT-RED} & ?[O] \\
 \text{Schur Cross-Gram} & ?[O]
 \end{array}
 }
 \]
 
-**Nächster Default:** A10-Cocycle — den auf der zertifizierten irrationalen H3-Rotationskomponente induzierten operatorwertigen Residual-/Cross-Gram-Cocycle explizit formulieren und auf Injektivität bzw. kohomologische Obstruktionen prüfen. Die endliche Graphkomponenten-Strategie ist für den augmentierten Hubgraphen im kleinen unteren Subchamber kein zulässiger Default mehr.
+**Nächster Default:** Roadmap A, Punkt 1 — die Odd/even-Faltung für das bereits konstruierte tatsächliche-\(r\)-M1-System exakt festlegen; danach Hub-Shifts, Rest-Martingaleblöcke, Cutoff-Wand-Zerlegung und A0-Vollständigkeit abarbeiten. Ziel bleibt \(\ker\Gamma_I=\{0\}\) oder ein exakter Gegenvektor.
 
-**Merge-Firewall:** PR #19–#33 sind auf \`main\` gemergt; daraus folgt **keine** mathematische Promotion. Insbesondere folgen weder \(\ker\Gamma_I=\{0\}\) noch \(\ker\Gamma_I\neq\{0\}\).
+**Merge-Firewall:** PR #34 promotet ausschließlich C1B2A-CHIRO und C1B2A-TRANSFER im dokumentierten Scope; PR #35 ist reine Status-/Navigationssynchronisation. M1-RAW und M1-FULL(7/2) sind Certificate-Ergebnisse ohne eigene \`✓[M]\`-Promotion. Insbesondere folgen weder \(\ker\Gamma_I=\{0\}\) noch \(\ker\Gamma_I\neq\{0\}\), kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.

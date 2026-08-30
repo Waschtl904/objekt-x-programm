@@ -1,7 +1,7 @@
-# Kritischer Pfad — Gesamtübersicht (Stand: 28. Juli 2026, NEU-249/NEU-250)
+# Kritischer Pfad — historischer Gesamtstand (28. Juli 2026, NEU-249/NEU-250)
 
-Dieses Dokument ist die zentrale, stets aktuelle Übersicht über den
-kritischen Pfad des RH-Fragenkatalogs.
+> **Superseded als operative Navigation seit 30. August 2026.** Dieses Dokument bleibt als historische Provenienz des damaligen RH-Fragenkatalog-Pfads erhalten. Die heutige kritische Front steht in [`../CURRENT-FRONT.md`](../CURRENT-FRONT.md) und der [`../00-uebersicht/FORSCHUNGS_ROADMAP_2026-08-26.md`](../00-uebersicht/FORSCHUNGS_ROADMAP_2026-08-26.md): finite-level Cross-Gram-Nichtentartung \(\ker\Gamma_I=\{0\}\ ?[O]\).
+
 
 ---
 

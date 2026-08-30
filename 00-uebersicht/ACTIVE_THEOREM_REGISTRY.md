@@ -1,7 +1,7 @@
 # Active Theorem Registry
 
 > **Stand:** 30. August 2026  
-> **Repo-Basis:** \`main@6ac0141b2de3a0b2af98fff6d11c403fe3b379b6\` (Squash-Merge PR #34; C1B2A-CHIRO/TRANSFER kanonisch gebucht)  
+> **Mathematische Merge-Basis:** \`main@6ac0141b2de3a0b2af98fff6d11c403fe3b379b6\` (PR #34; C1B2A-CHIRO/TRANSFER kanonisch gebucht) · **Navigationssync:** \`main@25235a9e10ddb6d7244dd27bbc29bf03ada8cd1d\` (PR #35).  
 > **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11/R32-SW1-/Schur-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
 > **Nicht-Zweck:** Ersatz für \`STATUS.md\`, \`OFFENE_PROBLEME.md\`, die Papers oder Promotionsrecords.
 

@@ -9,7 +9,7 @@ lückenlos nachvollziehbare Kette aus Konstruktionen, Tests, Audits und No-Go-Re
 > **Objekt-X-Arbeitsdefinition aktualisiert:** 26. August 2026 — siehe
 > [Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
 
-[Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) · [Ebene XVI — historisch reklassifiziertes Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md) · [Gesamtindex](INDEX.md) · [Statusregister](STATUS.md) · [Offene Probleme](OFFENE_PROBLEME.md) · [Glossar](GLOSSAR.md) · [Konventionen](KONVENTIONEN.md) · [Literatur](REFERENCES.md) · [Einstiegsprompt](EINSTIEGSPROMPT.md)
+[CURRENT FRONT — operative Forschungsfront](CURRENT-FRONT.md) · [Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) · [Ebene XVI — historisch reklassifiziertes Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md) · [Gesamtindex](INDEX.md) · [Statusregister](STATUS.md) · [Offene Probleme](OFFENE_PROBLEME.md) · [Glossar](GLOSSAR.md) · [Konventionen](KONVENTIONEN.md) · [Literatur](REFERENCES.md) · [Einstiegsprompt](EINSTIEGSPROMPT.md)
 
 ---
 
@@ -29,10 +29,7 @@ bereits konstruierten Einzeloperator identifiziert.
 > Existenz, Eindeutigkeit und ein möglicher Weg zur Riemannschen Vermutung sind offen.
 > Details, Herleitung und Firewall: [Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
 
-> **Aktuelle P11/R32-Front:** FG-1 und FG-TR1 sind unabhängig GREEN geprüfte Kandidaten
-> ohne formale Promotion; CG-FG1 ist eine CANDIDATE-GREEN-Kompositionsreduktion. Der
-> eigentliche Schur-Test \(\ker\Gamma_I=\{0\}\) bleibt `?[O]`. Siehe
-> [P11/R32-Statusaddendum](00-uebersicht/P11_R32_STATUS_2026-08-25.md).
+> **Aktuelle P11/R32-Front (30. August 2026):** Der SW1-A10-C-Strang ist bis zur tatsächlichen-\(r\)-M1-Matrixdarstellung geschlossen. M1-RAW und M1-FULL(7/2) sind kanonische reproduzierbare Certificate-Ergebnisse; C1B2A-CHIRO und C1B2A-TRANSFER sind im dokumentierten Scope `✓[M]`; daraus folgt M1-FULL(\(r\)) für \(3<r<4\) auf offenen Parameterkammern/Kreisatomen. Offen bleibt die zentrale Roadmap-A-Frage \(\ker\Gamma_I=\{0\}\ ?[O]\). Operative Quelle: [CURRENT-FRONT.md](CURRENT-FRONT.md); Detailstatus: [P11/R32-Statusaddendum](00-uebersicht/P11_R32_STATUS_2026-08-25.md).
 
 Das folgende Fünfer-Tupel war die Arbeitsdefinition der früheren Forschungsphase
 (Stand 26. Juli 2026) und gilt seit der Konsolidierung vom 26. August 2026 ausdrücklich
@@ -210,9 +207,7 @@ NEU-174 (Hochschild-Komplex) → NEU-176 (geladene $HH^4$-Klasse) → NEU-195 (B
 [STATUS.md](STATUS.md) listet gesicherte Sätze, No-Gos und konditionale Resultate ohne Zwischenschritte.
 
 **Wer am Programm mitarbeiten will**
-[EINSTIEGSPROMPT.md](EINSTIEGSPROMPT.md) fasst den vollständigen Arbeitskontext auf Stand NEU-221e
-zusammen — Architektur, geschlossene Routen, aktuelle Sperren, Arbeitsregeln und den nächsten
-konkreten Knoten. Gedacht als Einstiegstext für eine neue Arbeits- oder KI-Sitzung.
+[EINSTIEGSPROMPT.md](EINSTIEGSPROMPT.md) beginnt jetzt mit dem aktuellen Arbeitskontext vom 30. August 2026 — C1B2A/M1-Abschluss, exakte Certificate-Provenienz und Roadmap-A-Front. Der frühere NEU-250a/Wres-Prompt bleibt dort ausdrücklich nur als historische Provenienz erhalten.
 
 ---
 

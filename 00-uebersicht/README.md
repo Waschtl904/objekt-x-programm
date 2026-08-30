@@ -1,5 +1,13 @@
 # Objekt-X-Programm — Repository-Karte
 
+> **Operativer Hinweis (30. August 2026):** Diese Datei enthält im unteren Teil noch
+> die Repository-/Syntheseorganisation des Stands 8. August 2026. Für die heutige
+> Forschungsfront zuerst [`../CURRENT-FRONT.md`](../CURRENT-FRONT.md),
+> [`ACTIVE_THEOREM_REGISTRY.md`](ACTIVE_THEOREM_REGISTRY.md),
+> [`AKTUELLER_STAND.md`](AKTUELLER_STAND.md) und
+> [`FORSCHUNGS_ROADMAP_2026-08-26.md`](FORSCHUNGS_ROADMAP_2026-08-26.md) lesen.
+> Aktiver mathematischer Kern: finite-level Cross-Gram-Nichtentartung
+> \(\ker\Gamma_I=\{0\}\ ?[O]\).
 **Stand:** 2026-08-08  
 **Architektur:** Zwei-Ebenen (Forschungsknoten + Synthese-Manuskripte)
 
