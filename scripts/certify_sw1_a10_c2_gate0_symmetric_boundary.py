@@ -41,6 +41,9 @@ twod=V(1,2)
 T0=add(T,V(E=1))
 Sann=add(T,V(S=1))
 
+# ------------------------------------------------------------------
+# Rebuild the exact C1B0 92-boundary alphabet.
+# ------------------------------------------------------------------
 Bf={
  zero,
  V(E=1),
@@ -111,6 +114,10 @@ assert len(Braw)==195
 B92={modL(x) for x in Braw}
 assert len(B92)==92
 
+# ------------------------------------------------------------------
+# Four Sheet/Parity species and preimage helper.
+# phi_g(theta)=s theta + c_g mod L.
+# ------------------------------------------------------------------
 G=[
     ("P0",+1,V()),
     ("P1",+1,V(L=F(1,2))),
@@ -129,10 +136,12 @@ def preim(w,g):
 def shift_minus_jD(w,j):
     return modL(sub(w,V(D=j)))
 
+# Every physical output row/support wall under every species is old.
 out_physical={preim(w,g) for w in Bf for g in G}
 assert len(out_physical)==46
 assert out_physical <= B92
 
+# The nine direct physical hub support walls are a subset of Bf.
 hub_support={
  V(S=1),add(e,V(S=1)),add(a,V(S=1)),
  sub(a,V(R=1)),add(a,V(R=1)),
@@ -142,6 +151,10 @@ hub_support={
 assert hub_support <= Bf
 assert {preim(w,g) for w in hub_support for g in G} <= B92
 
+# ------------------------------------------------------------------
+# Rebuild C2-HUB0 and C2-FREE0 species/rotation transitions.
+# Only canonical-residue input-wrap switches can create new selector walls.
+# ------------------------------------------------------------------
 Gsimple=[
     ("P0",+1,0,0),
     ("P1",+1,1,0),
@@ -210,6 +223,7 @@ for br in FREE:
         freetrans.append((br[0],gout[0],gin,j))
 assert len(freetrans)==40
 
+# Canonical-residue wrap of an input species occurs at phi_g(theta+jD)=0 mod L.
 Hwrap={
     shift_minus_jD(preim(zero,Gdict[gin]),j)
     for _,gout,gin,j in freetrans
@@ -239,6 +253,7 @@ B100=B92|Hwrap|Wwrap
 assert len(B100)==100
 assert B100-B92==NEW
 
+# The old pure-phase portion was exactly eta=0,1 and k=-2..4.
 pure_old={x for x in B92 if x[2:]==(F(0),F(0),F(0))}
 assert pure_old=={
     V(L=eta,D=k)

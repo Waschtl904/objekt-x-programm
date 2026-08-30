@@ -106,6 +106,11 @@ assert len(raw92)==463
 assert len(raw100)==527
 assert 100*99//2==4950
 
+# Uniform wrap cutoff on 3<r<4 after scaling chi=1:
+# L=4+10r>34, Delta=1+2r<9, epsilon_*=(r+1)/2<5/2.
+# For B100 differences: |k|<=10 and |rho|,|mu|,|nu|<=2.
+# Thus |k Delta + parameter term| < 10*9+6*(5/2)=105.
+# If |q|>=4, |q|L>136, impossible.
 assert 4*34 > 10*9 + 6*F(5,2)
 
 def equations(raw):
@@ -150,6 +155,8 @@ assert counts==Counter({"outside":2623,"strict":18,"closure":18})
 assert S100==S92
 assert C100==C92
 
+# A change of closed-simplex status requires target to equal one of the four
+# simplex-vertex values. Every non-identical such equality has a rational root.
 critical=set()
 identical=0
 for eq in E100:
@@ -157,6 +164,7 @@ for eq in E100:
     A=4*q+k
     B=10*q+2*k
     for c in {F(0),mu,rho+mu,rho+mu+nu}:
+        # -(A+B r)=c(r+1)/2
         aa=-A-c/F(2)
         bb=-B-c/F(2)
         if aa==0 and bb==0:
