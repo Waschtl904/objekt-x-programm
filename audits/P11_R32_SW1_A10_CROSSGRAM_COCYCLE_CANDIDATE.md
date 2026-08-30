@@ -2605,42 +2605,146 @@ Keine Injektivitätsaussage.
 
 ---
 
-# C1C1 — analytische Fiberisierung des formalen Mehrblatt-Covers
+# C1C1 — korrigierte analytische Fiberisierung des formalen Mehrblatt-Covers
 
-## 53. Reparametrisierung durch \(y\in K\)
+## 53. Review-Fund: positive Restriktion war nicht unitär normiert
 
-Da
+Der erste C1C1-Entwurf wechselte still von den ursprünglichen Paritätsräumen
 
 \[
-J_R:\mathcal F_R\xrightarrow{\sim}K
+\mathscr H_+
+=
+L^2(-T_0,T_0)^+
 \]
 
-ein beschränkter Isomorphismus ist, ist die C0-Gleichung äquivalent zur Reparametrisierung
+und
+
+\[
+\mathscr W
+=
+\mathscr H_{\mathcal A}^-,
+\qquad
+\mathcal A=(-S,-R)\cup(R,S),
+\]
+
+auf die positiven Halbräume
+
+\[
+L^2(0,T_0),
+\qquad
+L^2(R,S).
+\]
+
+Die bloße Restriktion ist dort **nicht unitär**:
+
+für gerades \(y\)
+
+\[
+\|y\|_{\mathscr H_+}^2
+=
+2\int_0^{T_0}|y(x)|^2\,dx,
+\]
+
+und für ungerades \(w\)
+
+\[
+\|w\|_{\mathscr W}^2
+=
+2\int_R^S|w(t)|^2\,dt.
+\]
+
+Daher war die frühere Formulierung der C1C1-Isometrie auf den **ursprünglichen** Hilberträumen falsch normiert.
+
+Diese Fassung wird hiermit ersetzt.
+
+---
+
+## 54. Unitäre Paritätsfaltungen
+
+Definiere
 
 \[
 \boxed{
+F_+:
+\mathscr H_+
+\longrightarrow
+L^2(0,T_0),
+\qquad
+(F_+y)(x)
+=
+\sqrt2\,y(x).
+}
+\tag{C1C1.1}
+\]
+
+Wegen der Geradheit ist \(F_+\) unitär.
+
+Die Inverse lautet
+
+\[
+(F_+^{-1}f)(x)
+=
+\frac1{\sqrt2}\,f(|x|).
+\]
+
+Analog definiere auf dem ungeraden Annulus
+
+\[
+\boxed{
+F_-:
+\mathscr W
+\longrightarrow
+L^2(R,S),
+\qquad
+(F_-w)(t)
+=
+\sqrt2\,w(t),
+\quad t>0.
+}
+\tag{C1C1.2}
+\]
+
+Wegen der Ungeradheit ist auch \(F_-\) unitär, mit
+
+\[
+(F_-^{-1}u)(t)
+=
+\frac{\operatorname{sgn}(t)}{\sqrt2}\,
+u(|t|).
+\]
+
+Damit ist die positive H2-Darstellung nun explizit und normtreu an die ursprünglichen signierten Operatorräume zurückgebunden.
+
+---
+
+## 55. Physische Reparametrisierung des inversefreien Operators
+
+Wie bereits in C0:
+
+\[
 \widetilde{\mathscr C}_R(y,w)
 =
 (I+A)y+HE_{\mathcal A}w,
 \qquad
 y\in K.
-}
-\tag{C1C1.1}
+\tag{C1C1.3}
 \]
 
-Die Abbildung
+Hier bleiben
 
 \[
-(\xi,w)\mapsto(J_R\xi,w)
+y\in K\subset\mathscr H_+,
+\qquad
+w\in\mathscr W
 \]
 
-induziert bereits nach C0 eine Kernelbijektion. Daher darf die Fiberisierung auf der **physischen Horizontfunktion \(y\)** statt direkt auf den freien KNF-Koordinaten \(\xi\) aufgebaut werden.
+in den **ursprünglichen** Hilberträumen.
 
-Dies vermeidet eine künstliche Behauptung, dass die zwölf A9-Orbitlabels unabhängige freie Hilbertkoordinaten seien.
+Erst für die Fiberisierung werden \(F_+\) und \(F_-\) angewandt.
 
 ---
 
-## 54. Die vier kreismaßerhaltenden Sheet/Parity-Transformationen
+## 56. Vier kreismaßerhaltende Sheet/Parity-Transformationen
 
 Auf
 
@@ -2666,41 +2770,83 @@ definiere
 \phi_{\overline Q,1}(\theta)
 =
 4\Delta-\theta+\frac L2
-\qquad
-(\bmod L).
+\pmod L.
 \]
 
-Setze
+Mit
 
 \[
 h(\theta)=\theta+\frac L2,
 \qquad
-q(\theta)=4\Delta-\theta.
+q(\theta)=4\Delta-\theta
 \]
 
-Dann gilt exakt modulo \(L\):
+gilt
 
 \[
 h^2=q^2=\mathrm{id},
 \qquad
-hq=qh,
+hq=qh.
 \]
 
-und
+Damit ist
 
 \[
-\boxed{
 \{\mathrm{id},h,q,hq\}
-}
 \]
 
-ist eine Klein-Vierergruppe.
-
-Alle vier Transformationen besitzen Ableitungsbetrag \(1\) und erhalten daher das Lebesgue-/Haarmaß auf \(\mathbb T_L\).
+eine Klein-Vierergruppe von maßerhaltenden Kreistransformationen.
 
 ---
 
-## 55. Horizont-Embedding \(U_H\)
+## 57. Fixpunkt-Firewall
+
+Für die Isometrie ist **nicht** erforderlich, dass
+
+\[
+\phi_g(\theta)
+\]
+
+für ein festes \(\theta\) vier verschiedene Kreispunkte sind.
+
+Die vier \(g\)-Werte indexieren vier verschiedene Komponenten eines direkten Summenraums.
+
+Die Norm ist
+
+\[
+\sum_g\sum_k
+\|(V_Hf)_{g,k}\|_2^2,
+\]
+
+nicht die Norm einer punktweisen Vereinigung der vier Orbitpunkte.
+
+Insbesondere dürfen zwei Komponenten denselben physischen Wert auswerten.
+
+Tatsächlich können nur die Paare mit entgegengesetztem Slope kollidieren. Ihre Gleichungen reduzieren sich auf
+
+\[
+2\theta
+\equiv
+4\Delta
+\pmod L
+\]
+
+oder
+
+\[
+2\theta
+\equiv
+4\Delta+\frac L2
+\pmod L.
+\]
+
+Dies ergibt insgesamt höchstens vier Kreispunkte.
+
+Diese endliche Nullmenge beeinflusst die \(L^2\)-Isometrie ohnehin nicht; stärker noch: selbst dort bleibt die direkte-Summen-Normformel korrekt.
+
+---
+
+## 58. Positiver Vierblatt-Cover \(V_H\)
 
 Schreibe
 
@@ -2708,67 +2854,54 @@ Schreibe
 [\alpha]_L\in[0,L)
 \]
 
-für den kanonischen Kreisrepräsentanten.
-
-Für
-
-\[
-g\in
-\{
-(P,0),(P,1),(\overline Q,0),(\overline Q,1)
-\},
-\qquad
-k\in\{0,1,2\},
-\]
-
-setze
+für den kanonischen Kreisrepräsentanten und
 
 \[
 \rho_g(\theta)
-:=
-[\phi_g(\theta)]_L
-\]
-
-und
-
-\[
-m_{g,k}(\theta)
-:=
-\mathbf 1_{\{0<\rho_g(\theta)+kL<T_0\}}.
-\]
-
-Definiere
-
-\[
-\boxed{
-(U_Hf)_{g,k}(\theta)
 =
-\frac12\,
-m_{g,k}(\theta)\,
-f(\rho_g(\theta)+kL).
-}
-\tag{C1C1.2}
+[\phi_g(\theta)]_L.
 \]
 
-Da
-
-\[
-T_0<3L,
-\]
-
-reichen die drei Lifts
+Für
 
 \[
 k=0,1,2
 \]
 
-vollständig aus.
+setze
 
-### 55.1 Isometrie
+\[
+m_{g,k}(\theta)
+=
+\mathbf1_{\{0<\rho_g(\theta)+kL<T_0\}}.
+\]
 
-Für jedes feste \(g\) ist \(\rho_g\) eine maßerhaltende Bijektion des Kreises.
+Für
 
-Daher
+\[
+f\in L^2(0,T_0)
+\]
+
+definiere
+
+\[
+\boxed{
+(V_Hf)_{g,k}(\theta)
+=
+\frac12\,
+m_{g,k}(\theta)\,
+f(\rho_g(\theta)+kL).
+}
+\tag{C1C1.4}
+\]
+
+Für jedes feste \(g\) ist \(\rho_g\) maßerhaltend, und wegen
+
+\[
+T_0<3L
+\]
+
+gilt exakt
 
 \[
 \sum_{k=0}^2
@@ -2776,85 +2909,110 @@ Daher
 m_{g,k}(\theta)
 |f(\rho_g(\theta)+kL)|^2\,d\theta
 =
-\int_0^{T_0}|f(x)|^2\,dx.
+\|f\|_{L^2(0,T_0)}^2.
 \]
 
-Es gibt vier Spezies \(g\), und der Vorfaktor ist \(1/2\). Also
+Somit
 
 \[
-\|U_Hf\|^2
+\|V_Hf\|^2
 =
-4\cdot\frac14\,\|f\|^2
+4\cdot\frac14\|f\|^2
 =
 \|f\|^2.
 \]
 
-Damit
+Also ist
 
 \[
 \boxed{
-U_H:
+V_H:
 L^2(0,T_0)
-\longrightarrow
+\hookrightarrow
 L^2(\mathbb T_L;\mathbb C^{12})
 }
 \]
 
 eine Isometrie.
 
-Insbesondere ist
+---
+
+## 59. Korrigiertes Horizont-Embedding vom ursprünglichen geraden Raum
+
+Definiere nun
 
 \[
 \boxed{
-\mathcal R_H:=\operatorname{Ran}U_H
+U_H:=V_HF_+.
 }
+\tag{C1C1.5}
 \]
 
-ein geschlossener Unterraum.
-
-Wichtig:
+Dann
 
 \[
-\mathcal R_H
-\ne
+U_H:
+\mathscr H_+
+\hookrightarrow
 L^2(\mathbb T_L;\mathbb C^{12})
 \]
 
-im Allgemeinen.
+eine Isometrie.
 
-Die zwölf Coverkomponenten sind redundante, durch die vier Pullbacks miteinander verknüpfte Darstellungen derselben physischen Horizontfunktion.
+Direkt in den ursprünglichen \(y\)-Werten lautet die Komponentenformel
+
+\[
+\boxed{
+(U_Hy)_{g,k}(\theta)
+=
+\frac1{\sqrt2}\,
+m_{g,k}(\theta)\,
+y(\rho_g(\theta)+kL).
+}
+\tag{C1C1.6}
+\]
+
+Denn
+
+\[
+\frac12\sqrt2=\frac1{\sqrt2}.
+\]
+
+Die Normrechnung ist jetzt exakt zum ursprünglichen geraden Raum passend:
+
+\[
+4\cdot\frac12
+\int_0^{T_0}|y(x)|^2\,dx
+=
+2\int_0^{T_0}|y(x)|^2\,dx
+=
+\|y\|_{\mathscr H_+}^2.
+\]
 
 ---
 
-## 56. Annulus-Embedding \(U_W\)
+## 60. Korrigiertes Annulus-Embedding
 
-Nach positiver Odd-Faltung arbeitet H2 mit
-
-\[
-w\in L^2(R,S).
-\]
-
-Setze für
+Definiere zunächst für
 
 \[
-k=0,1,2
+u\in L^2(R,S)
 \]
+
+\[
+(V_Wu)_k(\theta)
+=
+n_k(\theta)\,u(\theta+kL),
+\]
+
+mit
 
 \[
 n_k(\theta)
 =
-\mathbf1_{\{R<\theta+kL<S\}}
-\]
-
-und
-
-\[
-\boxed{
-(U_Ww)_k(\theta)
-=
-n_k(\theta)\,w(\theta+kL).
-}
-\tag{C1C1.3}
+\mathbf1_{\{R<\theta+kL<S\}},
+\qquad
+k=0,1,2.
 \]
 
 Wegen
@@ -2863,96 +3021,125 @@ Wegen
 S<T_0<3L
 \]
 
-ist dies vollständig.
-
-Die drei Liftintervalle partitionieren den positiven Annulus nach Restklasse modulo \(L\). Deshalb
+partitionieren diese drei Liftkomponenten den positiven Annulus nach Restklasse modulo \(L\), und
 
 \[
-\boxed{
-\|U_Ww\|=\|w\|,
-}
-\]
-
-also
-
-\[
-\boxed{
-U_W:
+V_W:
 L^2(R,S)
-\longrightarrow
+\hookrightarrow
 L^2(\mathbb T_L;\mathbb C^3)
-}
 \]
 
-eine Isometrie mit geschlossenem Bild
+ist eine Isometrie.
+
+Setze
 
 \[
-\mathcal R_W:=\operatorname{Ran}U_W.
+\boxed{
+U_W:=V_WF_-.
+}
+\tag{C1C1.7}
+\]
+
+Dann ist
+
+\[
+U_W:
+\mathscr W
+\hookrightarrow
+L^2(\mathbb T_L;\mathbb C^3)
+\]
+
+eine Isometrie.
+
+In ursprünglichen Annuluswerten:
+
+\[
+\boxed{
+(U_Ww)_k(\theta)
+=
+\sqrt2\,
+n_k(\theta)\,
+w(\theta+kL).
+}
+\tag{C1C1.8}
 \]
 
 ---
 
-## 57. Der echte konstante Ambient-Raum
+## 61. Abgeschlossenheit von \(U_H(K)\)
 
-Definiere
+A2 beweist:
 
 \[
+K
+=
+\ker(E_I^*H|_{\mathscr H_+})
+\]
+
+ist abgeschlossen in \(\mathscr H_+\), weil \(E_I^*H\) beschränkt ist.
+
+Da \(U_H\) eine Isometrie ist, ist
+
+\[
+\boxed{
 \mathcal R_K:=U_HK
-\subset\mathcal R_H.
-\]
-
-Dann ist der tatsächliche fiberisierte Eingangsraum
-
-\[
-\boxed{
-\mathcal R_K\oplus\mathcal R_W
-\subset
-L^2(\mathbb T_L;\mathbb C^{15}).
 }
-\tag{C1C1.4}
 \]
 
-Der Ausgang liegt in
+abgeschlossen in
 
 \[
-\boxed{
-\mathcal R_H
-\subset
 L^2(\mathbb T_L;\mathbb C^{12}).
-}
-\tag{C1C1.5}
 \]
 
-Damit ist der konstante Ambient-Ansatz formal präzisiert:
+Ebenso sind
 
 \[
-\boxed{
-\mathbb C^{15}_{\rm ambient}
-\longrightarrow
-\mathbb C^{12}_{\rm ambient},
-}
+\mathcal R_H:=U_H\mathscr H_+
 \]
 
-aber der Operator lebt auf **geschlossenen Bildunterräumen**, nicht auf allen beliebigen Vektorfeldern dieser Dimensionen.
+und
 
-Das ist die korrekte Bedeutung der Zahlen \(15\) und \(12\).
+\[
+\mathcal R_W:=U_W\mathscr W
+\]
+
+geschlossen.
+
+Damit ist
+
+\[
+(U_H|_K)^{-1}:
+\mathcal R_K\to K
+\]
+
+beschränkt und wohldefiniert.
 
 ---
 
-## 58. Fiberisierter inversefreier Operator
+## 62. Kompatibilität von Horizont- und Annuluscover
 
-Auf
+Beide Cover benutzen denselben Basiskreis
+
+\[
+\mathbb T_L
+\]
+
+und dieselbe Liftperiode \(L\).
+
+Für die **abstrakte Intertwining-Wohldefiniertheit** ist keine zusätzliche Rand-Matching-Bedingung nötig.
+
+Definiere auf
 
 \[
 \mathcal R_K\oplus\mathcal R_W
 \]
-
-definiere
 
 \[
 \boxed{
 \widehat{\mathscr C}_R
-:=
+=
 U_H\,
 \widetilde{\mathscr C}_R\,
 \bigl(
@@ -2961,12 +3148,50 @@ U_H\,
 U_W^{-1}
 \bigr).
 }
-\tag{C1C1.6}
+\tag{C1C1.9}
 \]
 
-Da \(U_H|_K\) und \(U_W\) Isometrien auf ihre Bilder sind, ist diese Definition wohldefiniert.
+Alle Faktoren sind beschränkt und wohldefiniert.
 
-Ferner gilt exakt
+Die Gate-/Liftgrenzen sind Nullmengen und beeinflussen \(L^2\)-Operatoren nicht.
+
+Die **explizite** Frage, welche drei Annuluskomponenten auf welchen Kreisatomen in welche zwölf Horizontkomponenten koppeln, ist genau der C2-Matrixledger.
+
+Sie ist für die Existenz des transportierten Operators nicht zusätzlich vorauszusetzen.
+
+---
+
+## 63. Kernel-Intertwining
+
+Weil
+
+\[
+U_H|_K:K\to\mathcal R_K
+\]
+
+und
+
+\[
+U_W:\mathscr W\to\mathcal R_W
+\]
+
+Isometrien auf ihre Bilder sind,
+
+\[
+\widehat{\mathscr C}_R(F,G)=0
+\]
+
+genau dann, wenn
+
+\[
+\widetilde{\mathscr C}_R
+\left(
+(U_H|_K)^{-1}F,\,
+U_W^{-1}G
+\right)=0.
+\]
+
+Daher
 
 \[
 \boxed{
@@ -2978,18 +3203,14 @@ Ferner gilt exakt
 \cong
 \ker\Gamma_I.
 }
-\tag{C1C1.7}
+\tag{C1C1.10}
 \]
-
-Damit ist die Cross-Gram-Kernfrage auf einen Operator zwischen **festen endlichen Ambient-Covern über \(\mathbb T_L\)** übertragen.
-
-Noch nicht hergeleitet sind die tatsächlichen Matrixkoeffizienten dieses Operators.
 
 ---
 
-## 59. Zertifikat C1C1-ALG
+## 64. Zertifikate
 
-Zertifikat:
+### 64.1 Mehrblatt-Algebra
 
 scripts/certify_sw1_a10_c1c1_multisheet_cover.py
 
@@ -3001,83 +3222,91 @@ Committed Script-Blob:
 
 c1c5c97a0e5b3c5d40e06b4d6ae310aa5e06f9da
 
-Die vor dem Commit ausgeführte Datei besitzt exakt denselben GitHub-Blob.
-
 Ergebnis:
 
 SW1-A10-C1C1 MULTI-SHEET COVER SKELETON CERTIFICATE: PASS
 
-Damit ist zulässig:
+### 64.2 Paritätsfaltungs-Normierung
+
+scripts/certify_sw1_a10_c1c1_parity_fold_normalization.py
+
+Commit:
+
+1c5de41024d954e6afb6a9d64a97223f0d6678b5
+
+Committed Script-Blob:
+
+015fcb7505ca4a8ede6513d4ab01d815cef44606
+
+Der committed Blob stimmt bytegenau mit der vorab ausgeführten Datei überein.
+
+Ergebnis:
+
+SW1-A10-C1C1 PARITY-FOLD NORMALIZATION CERTIFICATE: PASS
+
+---
+
+## 65. C1C1-Status nach adversarialem Review
+
+Der Review hat einen echten Normierungsfehler im ersten analytischen Entwurf gefunden und repariert.
+
+Zulässig ist:
 
 \[
 \boxed{
-\mathrm{A10\!-\!C1C1\!-\!ALG}:
+\mathrm{A10\!-\!C1C1\!-\!ALG/FOLD}:
 \text{AI-GREEN candidate}
 +
-\text{independent GREEN (certificate, algebraic skeleton scope)}.
+\text{independent GREEN (certificate, finite algebraic/mechanical scope)}.
 }
 \]
 
-Der **analytische** Isometrie-/Intertwining-Schluss C1C1.2–C1C1.7 wird bis zu einem separaten unabhängigen Hilbertraum-Review nur als
+Für die korrigierte unendlichdimensionale Aussage
+
+- \(U_H,U_W\) sind Isometrien;
+- \(U_H(K)\) ist abgeschlossen;
+- C1C1.9 ist ein wohldefinierter transportierter Operator;
+- C1C1.10 erhält den Kernel,
+
+steht nun ein vollständiger interner adversarialer Beweis.
+
+Bis zu einem **externen unabhängigen Hilbertraum-Blindcheck** bleibt jedoch
 
 \[
 \boxed{
 \mathrm{A10\!-\!C1C1\!-\!AN}:
-\text{AI-GREEN candidate}
+\text{AI-GREEN candidate}.
 }
 \]
 
-geführt.
+Keine Promotion.
 
 ---
 
-## 60. Was dadurch jetzt wirklich gewonnen ist
+## 66. Nächster Knoten C2
 
-C1C1 behebt zwei frühere Risiken gleichzeitig:
+Erst nach externer Bestätigung der korrigierten C1C1-AN-Fassung wird C2 gebucht.
 
-1. Die 92 Boundary-Signaturen werden nicht mehr mit Hilbertkoordinaten verwechselt.
-2. Die 12 A9-Orbitlabels werden nicht als zwölf unabhängige Freiheitsgrade ausgegeben.
+C2 soll dann getrennt herleiten:
 
-Stattdessen gibt es einen festen redundanten Mehrblatt-Cover mit explizitem geschlossenen Bild.
-
-Damit ist die nächste Matrixfrage jetzt korrekt formulierbar.
-
----
-
-## 61. Nächster Knoten C2
-
-Der nächste Schritt lautet:
-
-\[
-\boxed{
-\mathrm{A10\!-\!C2}:
-\text{direkter Matrixledger von }
-\widehat{\mathscr C}_R.
-}
-\]
-
-Dafür müssen getrennt aufgebaut werden:
-
-1. der freie physische Block
+1. den freien physischen Block
    \[
-   U_H(I+A)U_H^{-1}
-   \quad\text{auf }\mathcal R_K;
+   U_H(I+A)(U_H|_K)^{-1};
    \]
-2. der Hubblock
+2. den Hubblock
    \[
    U_HHE_{\mathcal A}U_W^{-1};
    \]
-3. die gemeinsame C1B-Partition, auf der alle Lift-/Gate-Matrizen simultan konstant sind.
+3. die gemeinsame C1B-Partition, auf der sämtliche Matrixeinträge simultan stückweise konstant/algebraisch sind.
 
-Erst danach darf eine exakte finite-range Form
+Erst dann ist eine finite-range Matrixform
 
 \[
 (\widehat{\mathscr C}_RF)(\theta)
 =
-\sum_j M_j(\theta)
-F(\theta+j\Delta)
+\sum_j M_j(\theta)F(\theta+j\Delta)
 \]
 
-gebucht werden.
+zulässig.
 
 Keine Injektivitätsaussage.
