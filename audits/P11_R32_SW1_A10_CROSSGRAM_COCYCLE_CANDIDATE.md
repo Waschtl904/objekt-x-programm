@@ -3,7 +3,7 @@
 > **Stand:** 30. August 2026  
 > **Branch:** research/sw1-a10-crossgram-cocycle  
 > **Basis:** main@19da654f537868cd72757d2785071f8cf3f36c1b  
-> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0 und C1B1 im jeweils dokumentierten endlichen/algebraischen Scope zertifiziert; finales Fiber-N, Atomordnung und Matrixkoeffizienten noch offen. Keine Promotion.  
+> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1 sowie die Referenz-Arrangementstufen C1B2A/B im jeweils dokumentierten Scope zertifiziert. Für das tatsächliche Projektverhältnis ist der No-Degeneracy-Isotopie-Transfer noch separat zu auditieren; finales Fiber-N und Matrixkoeffizienten bleiben offen. Keine Promotion.  
 > **Ziel:** den zu \(\ker\Gamma_I\) äquivalenten SW1-Operator auf der irrationalen H3-Rotationskomponente als endlichen operatorwertigen/finite-range Cocycle formulieren.
 
 ---
@@ -1378,3 +1378,420 @@ bestimmt beziehungsweise ein konstanter Ambient-Fiber gewählt werden.
 ### Firewall
 
 C1B1 beweist keine Atomzahl, keine Fiberdimension, keine Matrixdarstellung und keine Injektivität.
+
+
+---
+
+# C1B2A — exakte Arrangementkammerzahl am rationalen Referenzwert
+
+## 29. Normierung durch \(\chi\)
+
+Setze
+
+\[
+s_*:=\frac L2-2\Delta,
+\qquad
+\chi:=5\Delta-L.
+\]
+
+Aus diesen beiden Konstanten folgen exakt
+
+\[
+\boxed{
+\Delta=\chi+2s_*,
+\qquad
+L=4\chi+10s_*,
+}
+\tag{C1B2.1}
+\]
+
+und
+
+\[
+\boxed{
+\varepsilon_*=\frac{s_*+\chi}{2}.
+}
+\tag{C1B2.2}
+\]
+
+Definiere das dimensionslose Verhältnis
+
+\[
+\boxed{
+r:=\frac{s_*}{\chi}.
+}
+\]
+
+Die bereits in C1B1 verwendete Ungleichung
+
+\[
+7L-34\Delta>0
+\]
+
+ist äquivalent zu
+
+\[
+s_*>3\chi.
+\]
+
+Ferner gilt exakt
+
+\[
+4\chi-s_*
+=
+\frac{44\Delta-9L}{2}>0.
+\]
+
+In Primzahlform reduziert sich die letzte Positivität auf
+
+\[
+3^{53}>2^{84}.
+\]
+
+Damit
+
+\[
+\boxed{
+3<r<4.
+}
+\tag{C1B2.3}
+\]
+
+---
+
+## 30. Normiertes 18-Ebenen-Arrangement
+
+Nach Division der Parameter durch \(\chi\) lautet der offene Parameterkeil
+
+\[
+0<\sigma<R<\varepsilon<\frac{r+1}{2}.
+\]
+
+Die sechs \(s_*\)-Ebenen werden zu Ebenen mit rechter Seite \(r\):
+
+\[
+2R=r,\quad
+R+\varepsilon=r,\quad
+R+\sigma=r,\quad
+2\varepsilon=r,\quad
+\varepsilon+\sigma=r,\quad
+2\sigma=r.
+\]
+
+Die zwölf \(\chi\)-Ebenen besitzen rechte Seite \(1\):
+
+\[
+\varepsilon-R=1,\quad
+\sigma=1,\quad
+2\sigma=1,\quad
+\varepsilon-\sigma=1,
+\]
+
+\[
+\varepsilon=1,\quad
+\varepsilon+\sigma=1,\quad
+2\varepsilon=1,\quad
+R-\sigma=1,
+\]
+
+\[
+R=1,\quad
+R+\sigma=1,\quad
+R+\varepsilon=1,\quad
+2R=1.
+\]
+
+---
+
+## 31. Alle möglichen kombinatorischen Degenerationswerte
+
+Um die Kammerzahl nicht numerisch zu extrapolieren, werden zusätzlich die vier Simplexfacetten
+
+\[
+\sigma=0,\qquad
+R=\sigma,\qquad
+\varepsilon=R,\qquad
+\varepsilon=\frac{r+1}{2}
+\]
+
+in die Inzidenzanalyse aufgenommen.
+
+Da sämtliche Ebenennormalen unabhängig von \(r\) sind, kann sich die kombinatorische Struktur nur ändern, wenn ein zuvor inkonsistentes abhängiges Teilssystem von bis zu vier Ebenen konsistent wird: Parallel-/Koinzidenz-, Linien-, Punkt-, Rand- oder Tangentialdegeneration.
+
+Die vollständige exakte Enumeration ergibt die kritische Menge
+
+\[
+\boxed{
+\left\{
+-3,-2,-1,-\frac12,0,\frac13,\frac12,\frac23,1,
+\frac43,\frac32,2,\frac52,3,4,5,6
+\right\}.
+}
+\tag{C1B2.4}
+\]
+
+Insbesondere:
+
+\[
+\boxed{
+(3,4)\cap\mathcal R_{\rm crit}=\varnothing.
+}
+\tag{C1B2.5}
+\]
+
+---
+
+## 32. Exakte Kammerzahl bei \(r_0=7/2\)
+
+Wähle den rationalen Referenzwert
+
+\[
+\boxed{
+r_0=\frac72.
+}
+\]
+
+Nach Normierung \(\chi=1\) gilt dann
+
+\[
+\Delta=1+2r_0=8,
+\qquad
+L=4+10r_0=39,
+\]
+
+und
+
+\[
+\varepsilon_*=\frac{r_0+1}{2}=\frac94.
+\]
+
+Für dieses vollständig rationale Arrangement wird die Kammerzahl exakt durch sukzessive Ebenenschnitte gezählt.
+
+Wenn die 18 Ebenen in der C1B1-Reihenfolge eingefügt werden, lauten die exakten 2D-Schnittregionenzahlen
+
+\[
+\boxed{
+1,1,1,1,2,1,2,5,6,8,2,1,1,9,9,6,1,6.
+}
+\]
+
+Mit der anfänglichen ungeschnittenen Simplexkammer ergibt sich
+
+\[
+\boxed{
+N_{\rm chamber}(r_0)=64.
+}
+\tag{C1B2.6}
+\]
+
+Die Rechnung verwendet ausschließlich rationale lineare Algebra: aktive Schnittlinien werden als exakte RREF-Systeme dedupliziert, ihre Simplex-Innenaktivität exakt geprüft und konkurrente Schnittpunkte nur einmal gezählt.
+
+---
+
+## 33. Zertifikat C1B2A
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c1b2a_arrangement.py
+
+Commit:
+
+812b9cfbe32e71352ddc33256d021bf008c93ed1
+
+Committed Script-Blob:
+
+6c412820b564caeb13913111d7ef11277e58967a
+
+Der Dateiinhalt wurde **vor** dem Commit exakt ausgeführt; GitHub meldete danach denselben Git-Blob-SHA.
+
+Ergebnis:
+
+SW1-A10-C1B2A HYPERPLANE-ARRANGEMENT CERTIFICATE: PASS
+
+Damit ist im engen Zertifikatsscope zulässig:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1B2A\!-\!ALG}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+für
+
+1. \(3<r<4\);
+2. die vollständige kritische \(r\)-Menge;
+3. das Fehlen kritischer Werte in \((3,4)\);
+4. die exakte Referenzkammerzahl \(64\) bei \(r_0=7/2\).
+
+### 33.1 Noch separat sichtbarer Transfer-Schritt
+
+Der Schluss
+
+\[
+N_{\rm chamber}(r)=64
+\qquad
+\text{für unser tatsächliches }r\in(3,4)
+\]
+
+verwendet zusätzlich das Standardlemma für stetige affine Hyperflächenarrangements:
+
+> Solange bei einer stetigen Variation der Offsets keine Parallel-/Koinzidenz-, Inzidenz-, Tangential- oder Randdegeneration auftritt, bleibt der kombinatorische Typ des durch einen konvexen Polytope geschnittenen Arrangements konstant.
+
+C1B2A hat **alle** hierfür relevanten kritischen Werte enumeriert und zeigt, dass zwischen \(r_0\) und dem tatsächlichen \(r\) keiner liegt.
+
+Dieser Isotopieschluss wird vor einer unabhängigen Gegenprüfung bewusst als
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1B2A\!-\!TRANSFER}:
+\text{AI-GREEN candidate}
+}
+\]
+
+geführt.
+
+---
+
+# C1B2B — vollständiger Boundary-Order-Ledger am Referenzarrangement
+
+## 34. 64 exakte Kammerrepräsentanten
+
+Für \(r_0=7/2\) wurden
+
+\[
+\boxed{64}
+\]
+
+rationale Punkte
+
+\[
+(\sigma,R,\varepsilon)
+\]
+
+im offenen Simplex konstruiert.
+
+Für jeden Repräsentanten werden die Vorzeichen aller 18 Kollisionshyperflächen exakt geprüft.
+
+Die 64 Punkte erzeugen
+
+\[
+\boxed{64}
+\]
+
+verschiedene 18-Bit-Signmuster.
+
+Da C1B2A bereits exakt beweist, dass das Referenzarrangement insgesamt nur 64 offene Kammern besitzt, ist die Repräsentantenliste exhaustiv:
+
+\[
+\boxed{
+\text{genau ein verifizierter Repräsentant pro Referenzkammer}.
+}
+\]
+
+---
+
+## 35. Exakte Kreisordnung aller 92 Boundary-Signaturen
+
+Bei
+
+\[
+r_0=\frac72,\qquad
+\chi=1
+\]
+
+gilt
+
+\[
+L=39,\qquad
+\Delta=8.
+\]
+
+Damit besitzt jede der 92 C1B0-Signaturen an jedem rationalen Kammerrepräsentanten einen **rationalen** Kreiswert modulo \(39\).
+
+Das Zertifikat:
+
+1. rekonstruiert die 92 Signaturen direkt aus dem vollständigen C1B0-Generationsschema;
+2. wertet sie an jedem der 64 Repräsentanten exakt aus;
+3. beweist, dass innerhalb jeder offenen Kammer alle 92 Werte paarweise verschieden sind;
+4. sortiert sie exakt auf
+   \[
+   [0,39);
+   \]
+5. erhält
+   \[
+   \boxed{64}
+   \]
+   verschiedene vollständige Kreisordnungen.
+
+Der deterministische Gesamtledger besitzt SHA-256
+
+\[
+\boxed{
+\texttt{d1a9767f147b405980d8f9989752a5b90f1fa0bc78ef0a73de2878248d928ba2}.
+}
+\]
+
+---
+
+## 36. Zertifikat C1B2B
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c1b2b_chamber_orders.py
+
+Commit:
+
+f6c04fd4c8b9fb94160e5c5d8b2030dbf54a055a
+
+Committed Script-Blob:
+
+76dae2ee56bde14cbf64eb2bd7cb0d447c8e6f5c
+
+Der Dateiinhalt wurde **vor** dem Commit exakt ausgeführt; GitHub meldete danach denselben Git-Blob-SHA.
+
+Ergebnis:
+
+SW1-A10-C1B2B CHAMBER-ORDER LEDGER CERTIFICATE: PASS
+
+Damit:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1B2B}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, reference-order scope)}.
+}
+\]
+
+---
+
+## 37. Aktuelle C1B2-Firewall
+
+Jetzt ist exakt bekannt:
+
+- die gesamte kritische \(r\)-Menge;
+- die Referenzkammerzahl \(64\);
+- ein exhaustiver rationaler Repräsentantensatz;
+- die vollständige Kreisordnung aller 92 Boundary-Labels in jeder Referenzkammer.
+
+Noch offen:
+
+1. unabhängiger Review des No-Degeneracy-Isotopie-Transfers auf das tatsächliche \(r\);
+2. Kollisionsklassen der 92 Labels **auf** jeder der 18 Hyperflächen;
+3. mögliche Mehrfachkollisionen an Hyperflächenschnitten;
+4. finales physisches Fiber-\(N\).
+
+Der nächste finite Knoten ist deshalb
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1B2C}:
+\text{Boundary-Kollisionsklassen auf den 18 Ebenen und ihren Schnittstrata}.
+}
+\]
+
+Keine Matrix- oder Injektivitätsaussage.
