@@ -101,7 +101,8 @@ assert sp.simplify(1 / sqrt2) != 0
 # The exact boundary identity is T+R-S = R-sig.
 assert sp.expand((T + R) - S) == R - sig
 
-print("unitary normalization: PASS")\nprint("odd-extension bijectivity O_RS and O_0R: PASS")
+print("unitary normalization: PASS")
+print("odd-extension bijectivity O_RS and O_0R: PASS")
 print("inner Hub signs: PASS")
 print("annulus T-tail sign and sigma threshold: PASS")
 print("11-word count and coefficient preservation: PASS")
