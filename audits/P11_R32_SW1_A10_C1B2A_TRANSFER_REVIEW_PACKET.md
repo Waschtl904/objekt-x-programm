@@ -439,3 +439,131 @@ auf jedes \(r\in(3,4)\) übertragen werden darf.
 3. A. Björner et al., loc. cit., Chapter 5 nur als Hintergrund zum
    Topological Representation Theorem; dieser Satz wird für den hier
    formulierten TRANSFER-D **nicht** benötigt.
+
+
+---
+
+## Finales Hardening / Verdict (2026-08-30)
+
+Die zuvor noch ausdrücklich verlangte mechanische Härtung ist nun im
+committeten Branch-Stand ausgeführt und durch einen read-only GitHub-Actions-
+Runner erfolgreich reproduziert worden.
+
+### Mechanisch gehärtete Invarianten
+
+1. **Rang 4.** In
+   `scripts/certify_sw1_a10_c1b2a_affine_chirotope.py`
+   (Blob `b92f7778bffe29fa11a76e2c260d1e12ae7b27c5`) wird der explizite Minor
+   
+   \[
+   (B_e,B_R,D_{s0},INF)
+   \]
+   
+   ausgewertet und durch
+   
+   \[
+   \det=-1\neq 0
+   \]
+   
+   als Rang-4-Zeuge asserted.
+
+2. **Loopfreiheit.** Derselbe Prüfer asserted, dass alle 22 räumlichen
+   Hyperflächennormalen ungleich Null sind und dass auch das ausgezeichnete
+   Element
+   
+   \[
+   g_\infty=(0,0,0,1)
+   \]
+   
+   ungleich Null ist.
+
+3. **Affine Chartwahl.** Derselbe Prüfer bildet symbolisch
+   
+   \[
+   y=(\sigma,R,\varepsilon,1)
+   \]
+   
+   und asserted exakt
+   
+   \[
+   g_\infty\cdot y=1>0.
+   \]
+   
+   Damit ist die verwendete affine Covektor-Chartbedingung
+   \(X_\infty=+\) mechanisch verankert.
+
+4. **Fester Kreis.** In
+   `scripts/certify_sw1_a10_c2_gate1r_96_collision_hyperplanes.py`
+   (Blob `18f992d117580260eb3865a493773d1b73833726`) wird die Normierung
+   
+   \[
+   \widehat\theta=\theta/L(r)\pmod 1\in\mathbb R/\mathbb Z
+   \]
+   
+   explizit implementiert. Der Prüfer asserted \(L(r)=4+10r>0\) auf dem
+   Projektintervall und kontrolliert an einem zertifizierten generischen
+   Referenzpunkt exakt, dass alle 96 Labels erhalten bleiben und die
+   steigende bzw. zyklische Ordnung durch die positive Skalierung unverändert
+   bleibt. Die bereits vorhandene GATE1R-Schleife läuft weiterhin über alle
+   \(\binom{96}{2}=4560\) ungeordneten Paare modulo \(L\).
+
+### Reproduzierbare CI-Provenienz
+
+Workflow-Blob:
+
+`7a6dc40a2c7881dbefd7f1641f91ddbf256f93c4`
+
+Head-Commit:
+
+`2fdb8f33e9e813dd0e5061dbfe00ec1d48c0158a`
+
+GitHub-Actions-Run:
+
+- Run: `33328052407`
+- Job: `99301594041`
+- Ergebnis: **SUCCESS**
+
+Der Runner checkte den exakten Commit aus, protokollierte die Blob-Hashes,
+installierte die gepinnte exakte Abhängigkeit `sympy==1.14.0` und führte in
+diesem Commit nacheinander erfolgreich aus:
+
+- C1B2A AFF-CHIRO hardening;
+- C1B2A GATE1R circle hardening;
+- die unveränderte vollständige M1-FULL-Regression über alle
+  \(64\times96=6144\) offenen Referenzatome.
+
+### Finales Review-Verdict
+
+Die mathematische Transferkette benötigt keine ambient isotopy und keinen
+Folkman--Lawrence-Schritt. Die Standard-Cryptomorphie liefert aus dem
+konstanten gelabelten affinen Chirotop denselben orientierten Matroiden und
+damit dieselben affinen Covektor-/Topemengen. Die festen Toperegionen sind
+konvexe Schnitte offener Halbräume; im erweiterten \((r,\sigma,R,\varepsilon)\)-
+Raum bleiben sie wegen der linearen Ungleichungen konvex. GATE1R erfasst
+sämtliche B96-Paar-Kollisionen modulo \(L\); innerhalb eines festen offenen
+Topes wird daher keine Kollisionswand gekreuzt, und die normierte zyklische
+96er-Kreisordnung bleibt konstant.
+
+Daher wird im exakt dokumentierten Scope gebucht:
+
+\[
+\boxed{\mathrm{C1B2A\text{-}CHIRO}\;\checkmark[M]}
+\]
+
+\[
+\boxed{\mathrm{C1B2A\text{-}TRANSFER}\;\checkmark[M]}
+\]
+
+und damit
+
+\[
+\boxed{
+\mathrm{M1\text{-}FULL}(7/2)\Longrightarrow
+\mathrm{M1\text{-}FULL}(r),\qquad 3<r<4.
+}
+\]
+
+**Scope-Firewall:** Diese Buchung betrifft ausschließlich offene
+Parameterkammern und offene Kreisatome sowie deren Transfer. Sie liefert
+keine Cross-Gram-Injektivität, keine Aussage über \(\ker\Gamma_I\), keinen
+HT-RED-Schluss, kein Objekt-X-Zertifikat und keinen RH-Schluss.
