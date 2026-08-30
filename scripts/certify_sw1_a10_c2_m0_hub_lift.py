@@ -118,8 +118,8 @@ for name,gout,gin,j,m,coeff,gate in species_rules:
 
 assert len(wrap)==14
 
-# GATE0 old pure phases contain eta=0,1/2 and k=-2..4;
-# the only new ones are eta=0,1/2 and k=-3,5,6,7.
+# GATE0R old pure phases contain eta=0,1/2 and k=-2..4;
+# the only new ones in the operator convention are eta=0,1/2 and k=5,6.
 oldpure={(eta,F(k)) for eta in (F(0),F(1,2)) for k in range(-2,5)}
 newpure={(eta,F(k)) for eta in (F(0),F(1,2)) for k in (5,6)}
 assert wrap <= oldpure|newpure
