@@ -20,6 +20,42 @@ Keine Aussage über Cross-Gram-Injektivität.
 
 ## Zertifizierter finite/algebraischer Input
 
+### 0. Affine Verstärkung mit ausgezeichnetem Unendlichkeitselement
+
+Zusätzlich zum 22er-Chirotop liegt nun der stärkere affine Prüfer
+
+`scripts/certify_sw1_a10_c1b2a_affine_chirotope.py`
+
+vor.
+
+Committed Blob:
+
+`1c2f7a3e6123697846e4f6d5e931d3c962b1fb20`
+
+Er fügt das feste ausgezeichnete Unendlichkeitselement
+
+[
+g_\infty=(0,0,0,1)
+]
+
+hinzu und prüft alle
+
+[
+\binom{23}{4}=8855
+]
+
+Rank-4-Minoren.
+
+Die 1540 neuen INF-Minoren sind
+
+[
+622\text{ identisch Null}+918\text{ konstant nonzero}+0\text{ r-abhängig}.
+]
+
+Damit ist die affine, nicht nur projektive, Chirotop-Konstanz auf (3<r<4) mechanisch zertifiziert.
+
+### 1. Ursprünglicher 22er-Minorenledger
+
 Die Datei
 
 `scripts/certify_sw1_a10_c1b2a_chirotope.py`
@@ -106,7 +142,7 @@ Wenn A–C gelten, darf die exhaustive M1-FULL-Prüfung der 64 Kammern × 96 off
 
 ## Adversarielle Fragen
 
-1. Reicht die Konstanz aller Rank-4-Minorvorzeichen der augmentierten Hyperflächenvektoren tatsächlich aus, um den vollständigen realisierbaren orientierten Matroid/Covektor-Datensatz konstant zu halten?
+1. Reicht die Konstanz des **affinen 23er-Chirotops einschließlich des ausgezeichneten Unendlichkeitselements** tatsächlich aus, um den vollständigen realisierbaren affinen orientierten Matroid/Covektor-Datensatz konstant zu halten?
 
 2. Können identisch verschwindende Minoren eine versteckte Änderung des Covektor-Datensatzes erlauben, obwohl sämtliche nichtidentischen Minoren auf ((3,4)) ihr Vorzeichen behalten?
 
