@@ -39,6 +39,25 @@ rows=[sp.Matrix([[a[0],a[1],a[2],-b]]) for _,a,b in H]
 rows.append(sp.Matrix([[0,0,0,1]]))
 names=[x[0] for x in H]+['INF']
 r0=sp.Rational(7,2)
+
+# Transfer-hardening invariants: rank, loop-freedom, and affine chart.
+name_to_idx={name:i for i,name in enumerate(names)}
+rank_witness_names=('B_e','B_R','D_s0','INF')
+rank_witness_inds=tuple(name_to_idx[name] for name in rank_witness_names)
+rank_witness_det=sp.factor(sp.Matrix.vstack(*[rows[i] for i in rank_witness_inds]).det())
+assert rank_witness_det == -1
+
+# Every affine hyperplane has a nonzero spatial normal; INF is itself nonzero.
+assert all(any(a[j] != 0 for j in range(3)) for _,a,_ in H)
+assert rows[name_to_idx['INF']] != sp.zeros(1,4)
+
+# The distinguished infinity element fixes the affine chart X_INF=+ because
+# g_INF . (sigma,R,epsilon,1) = 1 > 0 identically.
+sigma_aff,R_aff,eps_aff=sp.symbols('sigma_aff R_aff eps_aff', real=True)
+y_aff=sp.Matrix([sigma_aff,R_aff,eps_aff,1])
+inf_eval=sp.expand((rows[name_to_idx['INF']]*y_aff)[0])
+assert inf_eval == 1
+assert inf_eval > 0
 records=[]; roots=[]
 zero_count=constant_count=linear_count=0
 neg_count=pos_count=0
@@ -91,6 +110,9 @@ assert sign_digest=='8b9e06f0e2bd3c77549d6d801098d7076391f545bc07f3cc06444bab58b
 
 print('SW1-A10-C1B2A AFFINE CHIROTOPE CERTIFICATE: PASS')
 print('23 elements including INF; 4x4 minors:',len(records))
+print('rank witness (B_e,B_R,D_s0,INF) determinant:',rank_witness_det)
+print('loop-free: all 22 spatial normals nonzero and INF nonzero')
+print('affine chart: g_INF dot (sigma,R,epsilon,1) =',inf_eval,'> 0, hence X_INF=+')
 print('minor classes: 2274 identically zero, 2930 constant nonzero, 3651 affine-linear')
 print('INF-containing minors: 622 zero, 918 constant nonzero, 0 r-dependent')
 print('exact critical-root set:',','.join(str(x) for x in critical))
