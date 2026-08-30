@@ -1717,6 +1717,93 @@ Ergebnis:
 }
 \]
 
+
+#### 15.4A Vollständiger Filterledger \(360\to128\)
+
+Die \(128\) werden nicht durch einen vorgegebenen Scanbereich angenommen, sondern aus allen
+
+\[
+40\times9=360
+\]
+
+gerichteten Source-Map-Fällen erzeugt und danach ausschließlich durch die definierte kombinierte Seitenstufung gefiltert.
+
+Exakt:
+
+\[
+360=180_{\rm outside}+180_{\rm middle}.
+\]
+
+Von den 180 Fällen mit Zielindex außerhalb der beiden Mittelblöcke sind
+
+\[
+62
+\]
+
+Cross-Fälle und
+
+\[
+118
+\]
+
+Same-Side-Fälle.
+
+Von den 180 Fällen mit Zielindex innerhalb eines Mittelblocks besitzen
+
+\[
+102
+\]
+
+einen tatsächlich vorhandenen passenden Ziellift. Davon sind
+
+\[
+66
+\]
+
+Cross-Fälle und
+
+\[
+36
+\]
+
+Same-Side-Fälle.
+
+Die übrigen
+
+\[
+78
+\]
+
+Fälle treffen am formal erwarteten Zielindex keinen vorhandenen physischen Mittelblocklift und sind deshalb keine Mittelblockkante.
+
+Somit exhaustiv
+
+\[
+\boxed{
+128=62+66.
+}
+\]
+
+Kompaktes Filterzertifikat:
+
+scripts/certify_sw1_a9_360_to_128_filter.py
+
+Commit:
+
+fcf47b1bee05f778e6389e464d4bb8d533680acd
+
+Committed Script-Blob:
+
+cf082f337bc2ba5327b4ee51d642ec9b500b499f
+
+Dieser Blob stimmt exakt mit dem vor dem Commit lokal ausgeführten Zertifikat überein.
+
+Ergebnis:
+
+SW1-A9 360-TO-128 FILTER CERTIFICATE: PASS
+
+Damit ist der Filterschritt selbst separat reproduzierbar und nicht nur als Nebenwirkung des großen Separatorzertifikats dokumentiert.
+
 ### 15.5 Formales Separatorlemma
 
 Folglich gibt es im vollständigen **formalen** A9-Cover keine Kante zwischen den beiden kombinierten Seiten.
