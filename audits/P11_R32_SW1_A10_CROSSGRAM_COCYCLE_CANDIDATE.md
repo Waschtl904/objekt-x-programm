@@ -3995,13 +3995,54 @@ Deshalb werden getrennt geprüft:
 
 ## 80. Physische Gates erzeugen nichts Neues
 
-Die 19 physischen A1-Wände besitzen unter den vier Sheet/Parity-Pullbacks exakt
+Die 19 physischen A1-Wände erzeugen vor Deduplikation
+
+\[
+19\cdot4
+=
+\boxed{76}
+\]
+
+gelabelte Sheet/Parity-Vorkommen.
+
+Nach exakter symbolischer Reduktion modulo \(L\) bleiben
 
 \[
 \boxed{46}
 \]
 
 verschiedene Kreisbilder.
+
+Die Multiplizitätsverteilung dieser 46 Bilder lautet exakt
+
+\[
+\boxed{
+32_{\times1},
+\quad
+4_{\times2},
+\quad
+4_{\times3},
+\quad
+6_{\times4}.
+}
+\tag{C2.7a}
+\]
+
+Kontrolle:
+
+\[
+32\cdot1+4\cdot2+4\cdot3+6\cdot4=76.
+\]
+
+Der Duplikatüberschuss ist daher exakt
+
+\[
+76-46
+=
+\boxed{30}.
+\]
+
+Damit ist die Zahl 46 keine implizite Set-Deduplikation mehr, sondern besitzt einen vollständigen internen Multiplizitätsledger.
 
 Alle 46 liegen bereits im C1B0-Alphabet der 92 Wände:
 
@@ -4019,6 +4060,36 @@ Insbesondere gilt dies für alle neun direkten Hub-Supportwände aus C2.6.
 Damit erzeugt die symmetrische Darstellung **keine neue physische Gatewand**.
 
 ---
+
+
+## 80.1 Zertifikat C2-GATE0A — interne Sheet-Bild-Multiplizitäten
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c2_gate0a_sheet_multiplicity.py
+
+Vor Commit exakt ausgeführter Git-Blob:
+
+3a5dedf59e74e1fc29c43d7c5049ed7973c79371
+
+Commit:
+
+6fb7e8991e39d107500989582a0490b5cc919e79
+
+Ergebnis:
+
+SW1-A10-C2-GATE0A PHYSICAL-SHEET IMAGE MULTIPLICITY CERTIFICATE: PASS
+
+Damit ist zulässig:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!GATE0A}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, physical-sheet multiplicity scope)}.
+}
+\]
 
 ## 81. Acht neue reine Lift-Wrapwände
 
@@ -4229,7 +4300,37 @@ kanonische Kollisionsgleichungen:
 
 Die 18 strict-interior Gleichungen des 100-Wand-Alphabets sind **exakt dieselben** wie beim alten 92-Wand-Alphabet.
 
-Ebenso sind die 18 closure-only Gleichungen exakt dieselben.
+Dies ist im committed Zertifikat nicht nur als Kardinalitätsvergleich codiert, sondern als echte Mengengleichheit kanonischer 5-Tupel:
+
+\[
+\boxed{
+S_{100}=S_{92}.
+}
+\tag{C2.10a}
+\]
+
+Im Skript steht explizit
+
+\[
+\texttt{assert S100==S92}.
+\]
+
+Ebenso gilt für die closure-only Menge
+
+\[
+\boxed{
+C_{100}=C_{92},
+}
+\tag{C2.10b}
+\]
+
+mit dem expliziten Zertifikatsassert
+
+\[
+\texttt{assert C100==C92}.
+\]
+
+Damit ist insbesondere ausgeschlossen, dass bei unveränderter Kardinalität eine alte Hyperfläche verschwindet und durch eine neue ersetzt wird.
 
 Ferner wird für **jede** der 2659 Gleichungen geprüft, ob ihr Zielwert an einem der vier Simplexvertexwerte
 
