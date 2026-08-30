@@ -119,32 +119,55 @@ def amap(name,x):
 
 cross=[]
 unmatched=[]
+filter_counts=Counter()
 for eta,m,j,sheet,k,x,src_side in middle:
     for name in trans:
+        filter_counts["raw"]+=1
         target_sheet,jump=trans[name][sheet]
         mm=m+jump
         eta2=1-eta
         y=amap(name,x)
         jj=mm-n0(eta2)
         if jj<=-1 or jj>=4:
+            filter_counts["target_outside_middle"]+=1
             tgt_side="L" if jj<=-1 else "R"
             if tgt_side!=src_side:
+                filter_counts["outside_cross"]+=1
                 cross.append((eta,m,j,sheet,k,name,eta2,mm,target_sheet,None,x,y,src_side,tgt_side))
+            else:
+                filter_counts["outside_same_side"]+=1
         else:
+            filter_counts["target_middle_index"]+=1
             matches=[]
             for sh2,k2 in states[jj]:
                 if sh2==target_sheet and physical(mm,eta2,sh2,k2)==y:
                     matches.append((sh2,k2))
             if len(matches)==1:
+                filter_counts["matched_middle"]+=1
                 tgt_side=side(mm,eta2,*matches[0])
                 if tgt_side!=src_side:
+                    filter_counts["middle_cross"]+=1
                     cross.append((eta,m,j,sheet,k,name,eta2,mm,target_sheet,matches[0][1],x,y,src_side,tgt_side))
+                else:
+                    filter_counts["middle_same_side"]+=1
             elif len(matches)==0:
+                filter_counts["unmatched_middle"]+=1
                 unmatched.append((eta,m,j,sheet,k,name,eta2,mm,target_sheet,x,y))
             else:
                 raise AssertionError(("multiple target labels",matches))
 
-assert len(cross)==128
+assert filter_counts==Counter({
+    "raw":360,
+    "target_outside_middle":180,
+    "target_middle_index":180,
+    "outside_same_side":118,
+    "outside_cross":62,
+    "matched_middle":102,
+    "unmatched_middle":78,
+    "middle_same_side":36,
+    "middle_cross":66,
+})
+assert len(cross)==filter_counts["outside_cross"]+filter_counts["middle_cross"]==128
 assert Counter(c[0] for c in cross)==Counter({0:64,1:64})
 
 def affine_key(x):
@@ -234,7 +257,7 @@ print("SW1-A9 STAGGERED KNF SEPARATOR CERTIFICATE: PASS")
 print("exact arithmetic: Python fractions.Fraction")
 print("two A8 middle blocks: 20+20 = 40 formal labels")
 print("new KNF directed map list: 9; new-map range <=2")
-print("complete side-cross ledger: 128 directed candidates (NOT 84)")
+print("filter ledger: 360 raw = 180 outside-target + 180 middle-target")\nprint("outside-target: 62 cross + 118 same-side")\nprint("middle-target: 102 matched = 66 cross + 36 same-side; 78 unmatched")\nprint("complete side-cross ledger: 62+66 = 128 directed candidates (NOT 84)")
 print("generic undirected classes: 95 = 62 single + 33 reciprocal-double")
 print("218 exact interval-exclusion inequalities; 42 distinct margins")
 print("all margins have exact nonnegative positive-slack decompositions")
