@@ -6292,3 +6292,278 @@ geführt.
 Bis dieser Schritt unabhängig bestätigt ist, wird **keine** tatsächliche-\(r\)-Operatorgleichung aus dem Referenzwert \(r_0=7/2\) gebucht.
 
 Keine Injektivitätsaussage.
+
+
+---
+
+# C2-M1-FULL — exhaustive \(B_{96}\)-Atomauswertung am Referenzarrangement
+
+## 129. Exakter Referenzscope
+
+M1-FULL arbeitet zunächst ausschließlich am rationalen Referenzwert
+
+\[
+\boxed{
+r_0=\frac72.
+}
+\]
+
+Dort gelten exakt
+
+\[
+\Delta_{\rm norm}=1+2r_0=8,
+\qquad
+L_{\rm norm}=4+10r_0=39,
+\qquad
+\varepsilon_{\max}=\frac{r_0+1}{2}=\frac94.
+\]
+
+Die bereits zertifizierten
+
+\[
+64
+\]
+
+offenen Parameterkammern werden jeweils durch einen exakten rationalen Repräsentanten dargestellt.
+
+Für jede Kammer werden die
+
+\[
+96
+\]
+
+verschiedenen \(B_{96}\)-Kreiswände exakt sortiert und je ein Repräsentant jedes offenen Kreisatoms gewählt.
+
+Damit werden exhaustiv
+
+\[
+\boxed{
+64\cdot96=6144
+}
+\]
+
+offene Parameter-/Kreisatome geprüft.
+
+---
+
+## 130. Direkter Vergleich: physischer Operator gegen M1-Ledger
+
+Für jedes der 6144 Atome und jede physisch existierende Output-Coverkoordinate wird unabhängig berechnet:
+
+### Physische Seite
+
+- der eindeutige aktive A1-Rowarchetyp;
+- sämtliche physisch aktiven FREE-Terme;
+- sämtliche physisch aktiven Hubzweige;
+- der tatsächliche physische Inputpunkt;
+- dessen eindeutiger Inputlift \(\ell_i\in\{0,1,2\}\).
+
+### M1-Seite
+
+- derselbe operatororientierte Shift \(j\);
+- derselbe Outputslot;
+- der durch die M0-Liftformel ausgewählte Inputlift;
+- derselbe Skalar;
+- derselbe physische Source-/Rowtag.
+
+Verglichen wird **nicht nur der Summenwert**, sondern die vollständige symbolische Multimenge der Einzelbeiträge.
+
+Auf jedem der 6144 Atome gilt exakt:
+
+\[
+\boxed{
+\mathcal M_{\rm phys}
+=
+\mathcal M_{\rm M1}
+}
+\tag{C2.46}
+\]
+
+als Multimengen von
+
+\[
+(j,\text{out},\text{in},\text{block},\text{coeff},\text{source}).
+\]
+
+---
+
+## 131. Eindeutigkeit der aktiven Matrixzelle
+
+M1-RAW musste formal mehrere Gate-/Selector-Summanden pro struktureller Zelle speichern.
+
+Nach tatsächlicher \(B_{96}\)-Auswertung gilt jedoch atomweise:
+
+\[
+\boxed{
+\max_{j,o,i}
+\#\{\text{gleichzeitig aktive Summanden in }(j,o,i)\}
+=
+1.
+}
+\tag{C2.47}
+\]
+
+Damit ist die additive Rohkonstruktion notwendig, um alle Fälle zu bewahren, während die konkreten offenen Atome jeweils höchstens einen aktiven Summanden pro Matrixzelle auswählen.
+
+---
+
+## 132. Exhaustive Kontrollzahlen
+
+Über alle 6144 Atome treten insgesamt
+
+\[
+\boxed{468081}
+\]
+
+aktive Matrixbeiträge auf.
+
+Die Zahl nichtverschwindender Matrixzellen pro Atom besitzt exakt die Verteilung
+
+\[
+\boxed{
+\begin{array}{c|rrrrrr}
+\#\text{NZ-Zellen}&69&76&77&78&79&80\\
+\hline
+\#\text{Atome}&878&1712&1529&1133&80&812
+\end{array}
+}
+\tag{C2.48}
+\]
+
+mit
+
+\[
+878+1712+1529+1133+80+812
+=
+6144.
+\]
+
+Es treten exakt
+
+\[
+\boxed{82}
+\]
+
+verschiedene ausgewertete symbolische Matrixzustände auf.
+
+Der vollständige Zustandsledger besitzt den Fingerprint
+
+\[
+\boxed{
+\texttt{de2ab5b32478509feb380804a20705fa5a63e16897e46b05f8d696343cea8a4b}.
+}
+\tag{C2.49}
+\]
+
+Dieser Fingerprint wird im Zertifikat durch einen unbedingten Assert geprüft.
+
+---
+
+## 133. Committed-Blob-Ausführung auf GitHub Actions
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c2_m1_full_b96.py
+
+Zertifikat-Commit:
+
+133443ccec8e4e3fdd021c8d759eccaf0dfa67f7
+
+Committed Script-Blob:
+
+d73993a393b9d076c72bc77cbdf3610f4695c29c
+
+Der zunächst lokale exhaustive PASS war wegen Laufzeitlimits nicht als Certificate gebucht worden.
+
+Zur unabhängigen committed-Blob-Ausführung wurde anschließend ein branchbegrenzter, read-only GitHub-Actions-Workflow hinzugefügt:
+
+.github/workflows/sw1-a10-m1-full-cert.yml
+
+Workflow-Commit / geprüfter Head:
+
+4fa6727f2b63e133db2dc6a44c3f634bff912640
+
+GitHub-Actions-Run:
+
+33319309842
+
+Job:
+
+99278361983
+
+Runner:
+
+Ubuntu 24.04, CPython 3.12.14
+
+Der Runner protokollierte vor Ausführung exakt:
+
+\[
+\texttt{git rev-parse HEAD}
+=
+\texttt{4fa6727f2b63e133db2dc6a44c3f634bff912640},
+\]
+
+\[
+\texttt{git hash-object scripts/certify\_sw1\_a10\_c2\_m1\_full\_b96.py}
+=
+\texttt{d73993a393b9d076c72bc77cbdf3610f4695c29c}.
+\]
+
+Danach wurde **genau dieser committed Blob** ausgeführt.
+
+Ergebnis:
+
+SW1-A10-C2-M1-FULL EXHAUSTIVE B96-ATOM MATRIX CERTIFICATE: PASS
+
+mit denselben Kontrollwerten
+
+\[
+6144,\qquad
+468081,\qquad
+82
+\]
+
+und demselben Zustandsfingerprint C2.49.
+
+Der Workflow-Run endete mit
+
+\[
+\boxed{\text{conclusion = success}.}
+\]
+
+Damit:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!M1\!-\!FULL}(r_0=7/2):
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, exhaustive reference-}r\text{ B}_{96}\text{-atom scope)}.
+}
+\]
+
+---
+
+## 134. M1-FULL-Firewall nach Gate 1
+
+Der frühere Provenienz-/Timeoutvorbehalt ist damit geschlossen.
+
+Noch **nicht** gebucht ist die Aussage für den tatsächlichen Projektwert
+
+\[
+r=\frac{s_*}{\chi}\in(3,4).
+\]
+
+Dafür fehlt ausschließlich der getrennte Transferknoten
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1B2A\!-\!TRANSFER}.
+}
+\]
+
+C1B2A-CHIRO liefert bereits den mechanisch zertifizierten finite/algebraischen Input, dass der vollständige Rank-4-Chirotop der 22 Objekte auf \(3<r<4\) konstant ist.
+
+Bis der mathematische Covektor-/Kammer-/Kreisordnungs-Transfer unabhängig bestätigt ist, folgt aus M1-FULL **noch nicht** die tatsächliche-\(r\) a.e.-Operatorgleichung.
+
+Keine Injektivitätsaussage.
