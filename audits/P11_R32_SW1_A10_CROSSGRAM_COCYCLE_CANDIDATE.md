@@ -6034,3 +6034,261 @@ Der nächste Knoten ist daher
 \]
 
 Keine Injektivitätsaussage.
+
+
+---
+
+# C1B2A-CHIRO — exakte Chirotop-Konstanz auf \(3<r<4\)
+
+## 122. Augmentierte Hyperflächenkonfiguration
+
+Die 18 Kollisionsflächen und die vier Simplexfacetten werden als orientierte affine Gleichungen
+
+\[
+a_i\cdot x=b_i(r)
+\]
+
+mit augmentierten Zeilen
+
+\[
+\widehat a_i(r)
+=
+(a_{i,1},a_{i,2},a_{i,3},-b_i(r))
+\in\mathbb Q(r)^4
+\]
+
+kodiert.
+
+Es gibt insgesamt
+
+\[
+18+4
+=
+\boxed{22}
+\]
+
+orientierte Objekte.
+
+Da \(r\) ausschließlich in der rechten Seite \(b_i(r)\) auftritt, liegt die gesamte \(r\)-Abhängigkeit nur in der letzten Spalte jeder \(4\times4\)-Minorenmatrix.
+
+Daher ist jeder Rang-4-Minor
+
+\[
+\det_I(r)
+\]
+
+entweder identisch Null oder ein Polynom von Grad höchstens eins.
+
+Dies ist stärker als die vorab konservativ angenommene Grad-\(\le4\)-Schranke.
+
+---
+
+## 123. Vollständige Enumeration aller Rank-4-Minoren
+
+Alle
+
+\[
+\binom{22}{4}
+=
+\boxed{7315}
+\]
+
+Vierermengen werden exakt symbolisch ausgewertet.
+
+Die Klassifikation lautet:
+
+\[
+\boxed{
+1652_{\rm identisch\ Null}
++
+2012_{\rm konstant\ nonzero}
++
+3651_{\rm affin\!-\!linear}
+=
+7315.
+}
+\tag{C2.41}
+\]
+
+Am Referenzwert
+
+\[
+r_0=\frac72
+\]
+
+besitzen die 5663 nichtverschwindenden Minoren die Vorzeichenverteilung
+
+\[
+\boxed{
+2907_{-}
++
+2756_{+}
+=
+5663.
+}
+\tag{C2.42}
+\]
+
+---
+
+## 124. Exakte kritische Nullstellenmenge
+
+Die 3651 echt linearen Minoren besitzen insgesamt exakt die folgende Menge verschiedener rationaler Nullstellen:
+
+\[
+\boxed{
+\mathcal R_{\rm chiro}
+=
+\left\{
+-3,-2,-1,-\frac12,0,\frac13,\frac12,\frac23,
+1,\frac43,\frac32,2,\frac52,3,4,5,6
+\right\}.
+}
+\tag{C2.43}
+\]
+
+Insbesondere:
+
+\[
+\boxed{
+\mathcal R_{\rm chiro}\cap(3,4)=\varnothing.
+}
+\tag{C2.44}
+\]
+
+Diese Menge stimmt exakt mit der zuvor in C1B2A gefundenen vollständigen kritischen 17er-Menge überein.
+
+Damit erfasst die alte kritische Menge tatsächlich auch sämtliche höheren Rang-4-Inzidenzen einschließlich aller Mischfälle mit Simplexfacetten.
+
+---
+
+## 125. Chirotop-Folgerung
+
+Jeder nichtidentisch verschwindende Minor behält auf dem gesamten offenen Intervall
+
+\[
+3<r<4
+\]
+
+sein Vorzeichen.
+
+Jeder identisch verschwindende Minor bleibt dort identisch Null.
+
+Somit bleibt der vollständige Rank-4-Chirotop der 22 orientierten augmentierten Hyperflächenvektoren konstant:
+
+\[
+\boxed{
+\chi_r(I)
+=
+\operatorname{sgn}\det_I(r)
+\quad
+\text{ist unabhängig von }r\in(3,4)
+}
+\tag{C2.45}
+\]
+
+für jede Vierermenge \(I\subset\{1,\dots,22\}\).
+
+Ein fester Punkt
+
+\[
+\left(\frac14,\frac12,\frac34\right)
+\]
+
+liegt für jedes \(3<r<4\) strikt im Simplex
+
+\[
+0<\sigma<R<\varepsilon<\frac{r+1}{2},
+\]
+
+so dass auch die gewählte orientierte Simplexseite entlang des gesamten Intervalls nicht degeneriert.
+
+---
+
+## 126. Deterministische Fingerprints
+
+Vollständiger 7315-Minorenledger:
+
+\[
+\boxed{
+\texttt{55a082bc5079dcca74fadf8cd8d4be875bd99f5ff3d2e9dac568e7ab82a5bded}.
+}
+\]
+
+Chirotop-Signvektor:
+
+\[
+\boxed{
+\texttt{a442d13d7a368d931ac890098131bdbdbd7b5a4e02a2c7372c6c3b1cc1ddc1ac}.
+}
+\]
+
+Kritische Nullstellenmenge:
+
+\[
+\boxed{
+\texttt{27267468d5d217db17e6123b6a95254ffa885057e5f6bee9a79fca2b4f1c398b}.
+}
+\]
+
+Alle drei Fingerprints werden durch unbedingte Assertions geprüft.
+
+---
+
+## 127. Zertifikat C1B2A-CHIRO
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c1b2a_chirotope.py
+
+Commit:
+
+07f729d45dc4f3ff0e4bc1a072128157d4edca75
+
+Committed Script-Blob:
+
+c4acf11c1564a67bd10b92c76bcf74adc6d26ebb
+
+Dieser Blob ist exakt die vor Commit lokal auf PASS ausgeführte Fassung.
+
+Ergebnis:
+
+SW1-A10-C1B2A CHIROTOPE CONSTANCY CERTIFICATE: PASS
+
+Damit im strikt endlichen/algebraischen Scope:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1B2A\!-\!CHIRO}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, exact rank-4 chirotope scope)}.
+}
+\]
+
+---
+
+## 128. Wichtiger Firewall: CHIRO ist noch nicht TRANSFER
+
+C1B2A-CHIRO beweist mechanisch die Konstanz des vollständigen orientierten Rank-4-Datensatzes.
+
+Noch getrennt zu begründen ist der mathematische Schluss, dass hieraus für diese konkrete stetige Einparameterfamilie die benötigten Transferdaten folgen:
+
+1. dieselben 64 offenen Parameterkammer-Signvektoren;
+2. dieselbe Nachbarschafts-/Inzidenzstruktur der Kammern;
+3. dieselben \(B_{96}\)-Kreisordnungen innerhalb korrespondierender Kammern;
+4. damit dieselbe endliche Fallstruktur für M1-FULL.
+
+Dafür wird ein eigener Review-Knoten
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1B2A\!-\!TRANSFER}
+}
+\]
+
+geführt.
+
+Bis dieser Schritt unabhängig bestätigt ist, wird **keine** tatsächliche-\(r\)-Operatorgleichung aus dem Referenzwert \(r_0=7/2\) gebucht.
+
+Keine Injektivitätsaussage.
