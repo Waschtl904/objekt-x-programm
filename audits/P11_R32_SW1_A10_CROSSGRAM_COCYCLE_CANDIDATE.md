@@ -3,7 +3,7 @@
 > **Stand:** 30. August 2026  
 > **Branch:** research/sw1-a10-crossgram-cocycle  
 > **Basis:** main@19da654f537868cd72757d2785071f8cf3f36c1b  
-> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1, C1B2A/B/C sowie C1C0-FORMAL im jeweils dokumentierten Scope zertifiziert. C1C1 besitzt ein zertifiziertes algebraisches/Faltungs-Skelett; die korrigierte analytische Hilbertraum-Fassung ist nach externem Cross-Model-Blindreview unabhängig GREEN im dokumentierten Scope. C2-HUB0/FREE0 sowie HUB0-COMP sind im jeweils explizit begrenzten Scope zertifiziert. Die frühere GATE0/GATE1-Zählung 92→100 wurde nach Klärung der HUB-Indexorientierung superseded; korrekt sind nun GATE0R/GATE1R mit dem operatororientierten 96-Wand-Alphabet. M0-HUB-SPEC, M0-HUB-DIST, der korrigierte 108-Regel-M0-HUB-LIFT-Ledger sowie M0-FREE-LIFT/A1-ROW sind im jeweils dokumentierten Scope zertifiziert; die sieben kombinierten 12×24-Matrixfunktionen bleiben offen. Die frühere Deutung von Boundary-Kollisionen als Fiberquotienten wurde korrigiert. Keine Promotion.  
+> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1, C1B2A/B/C sowie C1C0-FORMAL im jeweils dokumentierten Scope zertifiziert. C1C1 besitzt ein zertifiziertes algebraisches/Faltungs-Skelett; die korrigierte analytische Hilbertraum-Fassung ist nach externem Cross-Model-Blindreview unabhängig GREEN im dokumentierten Scope. C2-HUB0/FREE0 sowie HUB0-COMP sind im jeweils explizit begrenzten Scope zertifiziert. Die frühere GATE0/GATE1-Zählung 92→100 wurde nach Klärung der HUB-Indexorientierung superseded; korrekt sind nun GATE0R/GATE1R mit dem operatororientierten 96-Wand-Alphabet. M0-HUB-SPEC, M0-HUB-DIST, der korrigierte 108-Regel-M0-HUB-LIFT-Ledger sowie M0-FREE-LIFT/A1-ROW sind im jeweils dokumentierten Scope zertifiziert. M1-RAW assembliert 648 Rohbeiträge additiv zu einem formalen siebenlagigen 12×24-Matrixledger ohne Overwrite; die abschließende B96-Indikatorauswertung und damit die vollständige Operatorgleichung bleiben offen. Die frühere Deutung von Boundary-Kollisionen als Fiberquotienten wurde korrigiert. Keine Promotion.  
 > **Ziel:** den zu \(\ker\Gamma_I\) äquivalenten SW1-Operator auf der irrationalen H3-Rotationskomponente als endlichen operatorwertigen/finite-range Cocycle formulieren.
 
 ---
@@ -5684,5 +5684,353 @@ M_j(\theta)U_\Delta^j
 \]
 
 gebucht werden.
+
+Keine Injektivitätsaussage.
+
+
+---
+
+# C2-M1-RAW — additive Rohassemblierung der sieben Matrixlagen
+
+## 114. Rohbeiträge
+
+Die freie Seite besitzt
+
+\[
+45
+\]
+
+A1-Row-Term-Vorkommen.
+
+Nach vier Output-Species und drei Output-Lifts entstehen
+
+\[
+45\cdot4\cdot3
+=
+\boxed{540}
+\]
+
+freie Rohbeiträge.
+
+Die Hubseite besitzt
+
+\[
+9
+\]
+
+physische Zweige, also
+
+\[
+9\cdot4\cdot3
+=
+\boxed{108}
+\]
+
+Hub-Rohbeiträge.
+
+Damit insgesamt
+
+\[
+\boxed{
+540+108=648.
+}
+\tag{C2.35}
+\]
+
+Die Verteilung über die Operatorlagen ist exakt
+
+\[
+\boxed{
+\begin{array}{c|rrrrrrr}
+j&-3&-2&-1&0&1&2&3\\
+\hline
+\#\text{ Rohbeiträge}&18&96&120&180&120&96&18.
+\end{array}
+}
+\tag{C2.36}
+\]
+
+---
+
+## 115. Expansion auf tatsächliche Matrixspalten
+
+Jeder Rohbeitrag trägt bereits
+
+- \(j\),
+- eine Outputkoordinate
+  \[
+  (g_o,\ell_o),
+  \]
+- eine Input-Species \(g_i\),
+- den Skalar,
+- den physikalischen Gate-/Chamber-Tag,
+- die Liftformel.
+
+Für die drei möglichen Input-Lifts
+
+\[
+\ell_i=0,1,2
+\]
+
+wird der Rohbeitrag explizit in drei Matrixatome
+
+\[
+c\,
+\mathbf 1_{\rm gate}\,
+\mathbf 1_{\ell_i(\theta)=\ell}
+\]
+
+expandiert.
+
+Damit entstehen
+
+\[
+648\cdot3
+=
+\boxed{1944}
+\]
+
+Matrixatome.
+
+Free-Inputspalten sind die ersten 12 Spalten,
+
+\[
+0,\ldots,11,
+\]
+
+Hub-/Annulusspalten die letzten 12,
+
+\[
+12,\ldots,23.
+\]
+
+Es findet keine Vermischung der beiden Inputblöcke statt.
+
+---
+
+## 116. Additivitäts-Firewall: kein Overwrite
+
+Die Matrix wird **nicht** durch eine Zuweisung
+
+\[
+M[key]=term
+\]
+
+gebaut.
+
+Stattdessen besitzt jeder Schlüssel
+
+\[
+(j,\text{output},\text{input})
+\]
+
+eine Liste aller Summanden, und jeder Rohterm wird ausschließlich durch additive Listenaggregation eingetragen.
+
+Mechanisch wird danach geprüft:
+
+\[
+\boxed{
+\sum_{\text{Matrixzellen}}
+\#(\text{gespeicherte Summanden})
+=
+1944.
+}
+\tag{C2.37}
+\]
+
+Da links exakt die Gesamtzahl der erzeugten Matrixatome wiederhergestellt wird, kann kein Atom durch eine spätere Kollision überschrieben oder still verworfen worden sein.
+
+Damit ist die vom M1-Review geforderte **Summenbildung statt Auswahl/Overwrite** explizit zertifiziert.
+
+---
+
+## 117. Strukturell nichtleere Matrixzellen
+
+Vor Auswertung der Gate-/Selector-Indikatoren gibt es exakt
+
+\[
+\boxed{648}
+\]
+
+strukturell nichtleere Tripel
+
+\[
+(j,\text{output},\text{input}).
+\]
+
+Ihre Verteilung lautet
+
+\[
+\boxed{
+\begin{array}{c|rrrrrrr}
+j&-3&-2&-1&0&1&2&3\\
+\hline
+\#\text{ Zellen}&36&162&90&72&90&162&36.
+\end{array}
+}
+\tag{C2.38}
+\]
+
+Die Summandenmultiplizitäten innerhalb dieser 648 Zellen sind exakt
+
+\[
+\boxed{
+396_{\times1},
+\quad
+36_{\times2},
+\quad
+36_{\times5},
+\quad
+72_{\times6},
+\quad
+36_{\times7},
+\quad
+36_{\times8},
+\quad
+36_{\times9}.
+}
+\tag{C2.39}
+\]
+
+Kontrollen:
+
+\[
+396+36+36+72+36+36+36=648,
+\]
+
+und
+
+\[
+396
++2\cdot36
++5\cdot36
++6\cdot72
++7\cdot36
++8\cdot36
++9\cdot36
+=
+1944.
+\]
+
+Die Mehrfachbeiträge sind daher real und müssen tatsächlich additiv behandelt werden.
+
+---
+
+## 118. Keine identischen Vollatome
+
+Ein Vollatom umfasst
+
+- Matrixtripel,
+- Gate,
+- Chamber,
+- Liftselector.
+
+Unter diesem vollständigen Schlüssel besitzt jedes der 1944 Atome Multiplizität exakt eins.
+
+Daher entstehen die Mehrfachsummen in einer Matrixzelle aus **verschiedenen** Gate-/Selector-Summanden, nicht aus versehentlich doppelt erzeugten identischen Atomen.
+
+Die Matrixzelle ist somit formal
+
+\[
+\boxed{
+(M_j(\theta))_{o,i}
+=
+\sum_{\alpha\in\mathcal A_{j,o,i}}
+c_\alpha\,
+\mathbf 1_{G_\alpha}(\theta)\,
+\mathbf 1_{S_\alpha}(\theta).
+}
+\tag{C2.40}
+\]
+
+Diese endliche Summe ist bereits eine wohldefinierte additive Matrixfunktion.
+
+Noch nicht vollständig auditiert ist ihre simultane Vereinfachung auf allen offenen \(B_{96}\)-Atomen.
+
+---
+
+## 119. Deterministische M1-RAW-Fingerprints
+
+Rohledger:
+
+\[
+\boxed{
+\texttt{fc9e2aed972c2f9ffa441d1dc0528aa9c75400d645bbf828b18ff78f4ce5de76}.
+}
+\]
+
+1944-Matrixatomledger:
+
+\[
+\boxed{
+\texttt{03d0a75b43dcfa6fc46a940fbc9aa0affe830c5281c35ea1eb13f72db40061ea}.
+}
+\]
+
+Additiv aggregierter Matrixledger:
+
+\[
+\boxed{
+\texttt{513fc6b78c7b2bc770ef7ebca5612f817d2a47b3b60bda69bcac46ca76e22616}.
+}
+\]
+
+Alle drei Fingerprints werden durch unbedingte Assertions geprüft.
+
+---
+
+## 120. Zertifikat C2-M1-RAW
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c2_m1_raw_additive.py
+
+Commit:
+
+e08baea573a1eedeb4760c8914d423c9093322de
+
+Committed Script-Blob:
+
+32ed47af319c41c83c37aa2bb1ae8f37a38051e7
+
+Der committed Blob ist exakt der vor Commit lokal ausgeführte Inhalt.
+
+Ergebnis:
+
+SW1-A10-C2-M1-RAW ADDITIVE MATRIX ASSEMBLY CERTIFICATE: PASS
+
+Damit:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!M1\!-\!RAW}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, additive raw-matrix scope)}.
+}
+\]
+
+---
+
+## 121. M1-RAW-Firewall
+
+M1-RAW beweist noch **nicht** die abschließende a.e.-Operatorgleichung.
+
+Noch offen ist:
+
+1. simultane Auswertung der 96 Boundary-Indikatoren;
+2. Bestätigung, dass auf jedem offenen Kreisatom genau die erwarteten Liftselector aktiv sind;
+3. Auswertung der A1-Chamber-Gates;
+4. tatsächliche stückweise konstante/algebraische Matrixwerte je Atom;
+5. Vergleich der so ausgewerteten Matrixwirkung mit dem physischen Operator.
+
+Der nächste Knoten ist daher
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!M1\!-\!FULL}:
+\text{B}_{96}\text{-Atom-Auswertung und a.e.-Operatorgleichheit}.
+}
+\]
 
 Keine Injektivitätsaussage.
