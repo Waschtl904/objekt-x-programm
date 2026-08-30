@@ -359,3 +359,169 @@ Der aktuelle logische Stand ist:
 Jeder Pfeil bezeichnet hier einen **Arbeitsweg**, keine bereits bewiesene mathematische Implikation über die noch offenen Stufen.
 
 Keine Promotion.
+
+
+---
+
+## 8. A10-H1 — explizite Hub-Bridge über den A9-Separator
+
+A9-FINITE-SMALL beweist endliche freie KNF-Punktkomponenten. Diese Endlichkeit überträgt sich jedoch **nicht formal automatisch** auf den augmentierten freien+\(w\)-Graphen.
+
+Im A9-staggered Separatorfenster normiere \(\Delta=1\) und setze
+
+\[
+g:=s_*/\Delta\in(0,1/2),
+\qquad
+L=4+2g.
+\]
+
+Für
+
+\[
+0<R<\varepsilon<(1-g)/2,
+\qquad
+\varepsilon<s<1-\varepsilon-g
+\]
+
+ist der freie Zustand
+
+\[
+\boxed{x_L=L+s}
+\]
+
+das A8/A9-Label \(P_{0,0}^{(1)}\) auf der linken Seite.
+
+Setze
+
+\[
+\boxed{t:=b-x_L.}
+\]
+
+Dann gilt exakt
+
+\[
+t=\frac L2+2-s.
+\]
+
+Der gleiche positive Annuluswert koppelt an
+
+\[
+\boxed{x_R:=a+t=\frac32L+3-s,}
+\]
+
+und \(x_R\) ist exakt das rechte staggered Label
+
+\[
+\overline Q_{1,1}^{(2)}.
+\]
+
+Die beiden Hubinzidenzen sind:
+
+\[
+x_L
+\;\xleftrightarrow{\ r_b\text{-Hubast}\ }\;
+t,
+\]
+
+\[
+t
+\;\xleftrightarrow{\ -a\text{-Hubast}\ }\;
+x_R.
+\]
+
+Außerdem
+
+\[
+x_R=a+b-x_L.
+\]
+
+Die direkte freie KNF-Kante \(r_{a+b}\) ist an \(x_L\) jedoch inaktiv, denn
+
+\[
+x_L<a.
+\]
+
+Somit besitzt der augmentierte Graph eine \(w(t)\)-vermittelte Verbindung zwischen zwei freien A9-Seiten, obwohl der freie Gramgraph an genau dieser Stelle getrennt ist.
+
+### 8.1 Exakte Gate-Margen
+
+Das Zertifikat reduziert die benötigten Positivitäten unter den strikten A9-Slacks auf
+
+\[
+t-R
+=
+3+2g+(\varepsilon-R)+(1-\varepsilon-g-s)>0,
+\]
+
+\[
+T_0-x_R
+=
+1+g+s+\varepsilon>0,
+\]
+
+\[
+T-t
+=
+6+3g+s>0,
+\]
+
+und
+
+\[
+a-x_L
+=
+\varepsilon+g+(1-\varepsilon-g-s)>0.
+\]
+
+Es wird kein numerisches Vorzeichen verwendet.
+
+### 8.2 Zertifikat
+
+Zertifikat:
+
+scripts/certify_sw1_a10_hub_bridge.py
+
+Commit der reparierten Fassung:
+
+0c945bec56feebc4388de4179ec6c80d4b443c57
+
+Committed Script-Blob:
+
+9854a2b13151752bd5d729bc06482926da8aa9ef
+
+Der tatsächlich ausgeführte Dateiinhalt wurde erneut nach dem Git-Blob-Verfahren gehasht und ergab exakt denselben SHA.
+
+Ergebnis:
+
+SW1-A10-H1 HUB-BRIDGE CERTIFICATE: PASS
+
+SymPy 1.14.0.
+
+Damit ist zulässig:
+
+\[
+\boxed{
+\mathrm{A10\!-\!H1\!-\!BRIDGE(part)}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}
+}
+\]
+
+### 8.3 Exakte Negativaussage
+
+Bewiesen ist ausschließlich:
+
+\[
+\boxed{
+\text{Die Endlichkeit der freien A9-Komponenten überträgt sich nicht allein über denselben Separatorbeweis auf den augmentierten Hubgraphen.}
+}
+\]
+
+Nicht bewiesen ist:
+
+- eine unendliche augmentierte Komponente;
+- Nichtinjektivität von \(\mathcal L_{\rm ann}^{\rm SW1}\);
+- ein Cross-Gram-Kernvektor.
+
+Der nächste Schritt ist die **vollständige Hub-Bridge-Familie**, nicht die Hochstufung dieses Einzelpfads zu einer globalen Graphbehauptung.
