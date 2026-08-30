@@ -6,11 +6,7 @@ Knoten [OFFENE_PROBLEME.md](OFFENE_PROBLEME.md).
 
 > Stand: 3. August 2026 · letzter Eintrag NEU-228 · Direktaudits NEU-210/211 verbucht
 
-> **Konsolidierungsnotiz 26. August 2026:** Dieses Statusregister bleibt die Bilanz des
-> NEU-Journalkerns. Die aktuelle Objekt-X-Arbeitsdefinition und die neuere P11/R32-Front
-> werden separat geführt:
-> [Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) ·
-> [P11/R32-Statusaddendum](00-uebersicht/P11_R32_STATUS_2026-08-25.md).
+> **Konsolidierungsnotiz, aktualisiert 30. August 2026:** Dieses Statusregister bleibt die Bilanz des NEU-Journalkerns und ist **nicht** die operative Frontdatei. Aktuell maßgeblich sind [CURRENT-FRONT.md](CURRENT-FRONT.md), [ACTIVE_THEOREM_REGISTRY.md](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md), [Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) und das [P11/R32-Statusaddendum](00-uebersicht/P11_R32_STATUS_2026-08-25.md).
 >
 > Die in diesem Dokument referenzierten früheren Objekt-X-Architekturen — insbesondere
 > Ebene XVI Revision 2 und die P04/Suzuki-Hypothese — sind seit 26. August 2026 als
