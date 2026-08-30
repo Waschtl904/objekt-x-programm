@@ -179,3 +179,263 @@ Bitte getrennt urteilen:
 - **C1B2A-TRANSFER**: GREEN / PARTIAL / FAIL mit genauer Begründung.
 
 Keine Promotion und keine Cross-Gram-Injektivitätsaussage.
+
+
+---
+
+## Präzisierter Transferbeweis ohne ambient isotopy
+
+### Literaturlemma OM-CRYPT
+
+Verwendet wird die Standard-Cryptomorphie orientierter Matroide.
+
+**Referenz:**  
+A. Björner, M. Las Vergnas, B. Sturmfels, N. White, G. M. Ziegler,  
+*Oriented Matroids*, 2nd ed., Cambridge University Press, 1999, Chapter 3,
+insbesondere Section 3.5 (Chirotopes).
+
+Als frei zugängliche Kontrollreferenz formuliert G. M. Ziegler,
+*Oriented Matroids Today*, Electronic Journal of Combinatorics 3 (1996),
+Dynamic Survey 4, Section 2, ausdrücklich:
+
+- Chirotop,
+- Covektoren,
+- Cocircuits,
+- Vektoren,
+- Circuits
+
+sind äquivalente Datensätze eines orientierten Matroids und rekonstruieren
+einander eindeutig, bis auf die globale Identifikation \(\chi\sim-\chi\).
+
+Für unsere gelabelte Familie ist sogar der konkrete Signvektor aller
+Rank-4-Minoren auf \(3<r<4\) konstant, also nicht nur seine globale
+Vorzeichenklasse.
+
+Daher gilt für alle \(r,r'\in(3,4)\):
+
+\[
+\boxed{
+\chi_r=\chi_{r'}
+\Longrightarrow
+\mathcal M_r=\mathcal M_{r'}
+\Longrightarrow
+\mathcal V^*(\mathcal M_r)=\mathcal V^*(\mathcal M_{r'})
+}
+\]
+
+und insbesondere ist die Topemenge identisch.
+
+Der stärkere AFF-CHIRO-Prüfer führt das ausgezeichnete
+Unendlichkeitselement \(g_\infty\) mit, so dass hier die **affine** und
+nicht nur projektive orientierte Matroidstruktur gemeint ist.
+
+---
+
+### TRANSFER-A — 64 Kammer-Signvektoren
+
+Für unser realisierbares affines Hyperflächenarrangement ist zu einem
+festen vollständigen Vorzeichenvektor \(T\in\{+,-\}^{22}\) die
+Realisierungsmenge
+
+\[
+C_T(r)
+=
+\left\{
+x=(\sigma,R,\varepsilon):
+T_i\bigl(a_i\cdot x-b_i(r)\bigr)>0
+\text{ für alle }i
+\right\}.
+\]
+
+Sie ist als Schnitt offener Halbräume konvex.
+
+Daher besitzt jeder realisierte Tope-Signvektor höchstens eine offene
+Kammerkomponente. Umgekehrt liefert jede offene Kammer genau ihren
+Vorzeichenvektor.
+
+Da OM-CRYPT die Topemenge für alle \(3<r<4\) identisch hält und die vier
+Simplexfacetten explizit Teil der Konfiguration sind, bleiben insbesondere
+diejenigen Topes identisch, welche die gewünschte Simplexseite
+
+\[
+0<\sigma<R<\varepsilon<(r+1)/2
+\]
+
+realisieren.
+
+Somit bleibt die Menge der offenen Parameterkammer-Signvektoren gleich.
+Am Referenzwert sind es zertifiziert 64; daher gilt für jedes
+\(r\in(3,4)\):
+
+\[
+\boxed{
+N_{\rm chamber}(r)=64
+}
+\]
+
+mit kanonischer Identifikation über den Tope-Signvektor.
+
+---
+
+### TRANSFER-B — gemeinsame Verbindung im erweiterten \((r,x)\)-Raum
+
+Für einen festen Tope \(T\) betrachte
+
+\[
+\widetilde C_T
+=
+\left\{
+(r,x):
+3<r<4,
+\quad
+T_i\bigl(a_i\cdot x-b_i(r)\bigr)>0
+\text{ für alle }i
+\right\}.
+\]
+
+Da jedes \(b_i(r)\) affin-linear in \(r\) ist, sind dies strikte lineare
+Ungleichungen in den vier Variablen
+
+\[
+(r,\sigma,R,\varepsilon).
+\]
+
+Folglich ist \(\widetilde C_T\) selbst konvex.
+
+Für jeden tatsächlichen Punkt \((r,x)\) im Tope und jeden
+Referenzpunkt \((7/2,x_0)\) mit demselben Tope-Signvektor liegt deshalb
+die gesamte Verbindungsstrecke in \(\widetilde C_T\).
+
+Damit existiert ein konkreter kollisionsfreier stetiger Pfad vom
+Referenzarrangement zum tatsächlichen Parameter, ohne dass eine globale
+ambient isotopy behauptet werden muss.
+
+---
+
+### TRANSFER-C — zyklische \(B_{96}\)-Kreisordnung
+
+Die 96 gelabelten Kreiswände sind stetige kreiswertige Funktionen der
+Parameter.
+
+Die zyklische Reihenfolge einer endlichen Menge gelabelter, paarweise
+verschiedener Punkte auf einem orientierten Kreis ist lokal konstant und
+kann sich entlang eines stetigen Pfades nur ändern, wenn zwei gelabelte
+Punkte kollidieren.
+
+GATE1R hat exhaustiv zertifiziert, dass die nichttrivialen
+Paar-Kollisionsbedingungen des korrekten \(B_{96}\)-Alphabets exakt
+dieselben 18 inneren Kollisionshyperflächen liefern:
+
+\[
+S_{96}=S_{92},
+\qquad
+C_{96}=C_{92}.
+\]
+
+Innerhalb eines festen offenen Topes/Kammerpfades wird keine dieser
+Hyperflächen gekreuzt.
+
+Daher bleibt entlang des Pfades aus TRANSFER-B die **zyklische**
+Reihenfolge aller 96 Wände konstant.
+
+Ein einzelner Wandpunkt darf dabei den gewählten Kreisursprung
+\(0\equiv L\) überqueren; dies verändert nur eine lineare Listendarstellung,
+nicht die zyklische Reihenfolge.
+
+Somit:
+
+\[
+\boxed{
+\text{gleicher Tope}
+\Longrightarrow
+\text{gleiche zyklische }B_{96}\text{-Ordnung}.
+}
+\]
+
+---
+
+### TRANSFER-D — genau der für M1 benötigte Schluss
+
+M1-FULL benötigt keine globale topologische Isotopie der gesamten
+Anordnung.
+
+Benötigt werden nur:
+
+1. dieselben offenen Parameterkammer-Signvektoren;
+2. dieselbe zyklische Reihenfolge der 96 Kreiswände in jeder Kammer;
+3. damit dieselbe Zuordnung der 96 offenen Kreisatome.
+
+TRANSFER-A bis C liefern genau diese Daten.
+
+Daher folgt, **sofern der obige Cryptomorphie-Schritt korrekt angewendet
+ist**, dass die exhaustive Referenzprüfung
+
+\[
+64\times96=6144
+\]
+
+auf jedes \(r\in(3,4)\) übertragen werden darf.
+
+---
+
+## Aktualisierte Kernfragen für den unabhängigen Review
+
+1. Ist die Verwendung der Chirotop-Cryptomorphie aus BLSWZ Chapter 3,
+   insbesondere Section 3.5, in der Form
+   \[
+   \chi_r=\chi_{r'}\Rightarrow
+   \text{identische Covektor-/Topemengen}
+   \]
+   korrekt?
+
+2. Schließt die explizite Mitführung von \(g_\infty\) im AFF-CHIRO-Prüfer
+   die relevante projektiv/affin-Ambiguität vollständig?
+
+3. Ist für ein realisierbares affines Hyperflächenarrangement die Menge zu
+   einem festen Tope-Signvektor tatsächlich ein konvexer Schnitt offener
+   Halbräume und daher genau eine Kammer?
+
+4. Ist \(\widetilde C_T\subset\mathbb R^4\) wegen der Affin-Linearität
+   der rechten Seiten \(b_i(r)\) tatsächlich konvex, so dass ein
+   kollisionsfreier Pfad zwischen Referenz- und tatsächlichem \(r\)
+   innerhalb desselben Topes existiert?
+
+5. Ist die elementare Aussage korrekt, dass sich die zyklische Reihenfolge
+   endlich vieler gelabelter Kreispunkte entlang eines stetigen Pfades nur
+   bei einer Paar-Kollision ändern kann?
+
+6. Erfasst GATE1R wirklich sämtliche solchen Paar-Kollisionen der 96
+   Matrixwände durch die 18 zertifizierten Hyperflächen?
+
+7. Reichen A–C für M1-FULL aus, so dass **keine** volle ambient isotopy und
+   insbesondere kein Einsatz des Folkman–Lawrence-Repräsentationssatzes
+   benötigt wird?
+
+8. Bleibt der Schluss strikt auf offene Parameterkammern und offene
+   Kreisatome beschränkt, so dass Boundary-Sets erst im anschließenden
+   a.e.-Schritt ignoriert werden?
+
+9. Folgt aus TRANSFER weiterhin keinerlei Aussage über
+   \[
+   \ker\Gamma_I?
+   \]
+   Erwartete Antwort: ausdrücklich nein.
+
+---
+
+## Literatur
+
+1. A. Björner, M. Las Vergnas, B. Sturmfels, N. White, G. M. Ziegler,
+   *Oriented Matroids*, 2nd ed., Cambridge University Press, 1999,
+   Chapter 3, insbesondere Section 3.5.
+
+2. G. M. Ziegler,
+   *Oriented Matroids Today*,
+   Electronic Journal of Combinatorics 3 (1996), Dynamic Survey 4,
+   Section 2. Dort wird ausdrücklich festgehalten, dass Chirotop,
+   Covektoren, Cocircuits, Vektoren und Circuits äquivalente Datensätze
+   sind und einander eindeutig rekonstruieren.
+
+3. A. Björner et al., loc. cit., Chapter 5 nur als Hintergrund zum
+   Topological Representation Theorem; dieser Satz wird für den hier
+   formulierten TRANSFER-D **nicht** benötigt.
