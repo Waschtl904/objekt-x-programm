@@ -1,7 +1,7 @@
 # Active Theorem Registry
 
 > **Stand:** 30. August 2026  
-> **Repo-Basis:** \`main@eb1f56a6b7c00cbdfed6368d0ec282162e542654\` (mathematische Merge-Basis nach PR #29–#33; keine neue Promotion)  
+> **Repo-Basis:** \`main@6ac0141b2de3a0b2af98fff6d11c403fe3b379b6\` (Squash-Merge PR #34; C1B2A-CHIRO/TRANSFER kanonisch gebucht)  
 > **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11/R32-SW1-/Schur-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
 > **Nicht-Zweck:** Ersatz für \`STATUS.md\`, \`OFFENE_PROBLEME.md\`, die Papers oder Promotionsrecords.
 
@@ -88,9 +88,14 @@ T<S=T+\sigma<T_0=T+\varepsilon<c,
 | **SW1-A9** | \`?[O]\` gesamt; J0/J1/FS/DOM und **SEP-SMALL** AI-GREEN + **independent GREEN (certificate)**; BYPASS(part) zertifiziert | vollständige KNF-Gram-Kanten-/Gate-Algebra; im kleinen unteren Subchamber \(0<\varepsilon<(6\Delta-L)/4\) endliche physische KNF-Punktkomponenten; auf anderem offenem Teilgebiet existiert ein regulärer KNF-Bypass, Gesamtklassifikation bleibt offen | audits/P11_R32_SW1_A9_KNF_SEPARATOR_STABILITY_CANDIDATE.md; PR #32, Squash-Merge 70be6437332f094746962769f5ae00a3f5ac40ef | freie Gramgraph-Geometrie weitgehend reduziert; **keine** Schur-/Cross-Gram-Injektivität |
 | **SW1-A10-H0/H1/H2/H3-COVER** | AI-GREEN candidate + **independent GREEN (certificate)** im jeweils dokumentierten endlichen/algebraischen Scope | Hub-Phasenalgebra; explizite Separator-Bridge; vollständiger aggregierter Hubledger \(11\) Zellen, \(53\) Kanäle, \(22\) affine Bridge-Typen; kanonisches H2-only-Rotationscover auf \(J=(0,L)\) | audits/P11_R32_SW1_A10_FINITE_CROSSGRAM_FIBER_CANDIDATE.md und zugehörige Zertifikate; PR #33, Squash-Merge eb1f56a6b7c00cbdfed6368d0ec282162e542654 | zeigt, warum freie A9-Endlichkeit nicht auf den augmentierten Hubgraphen übergeht |
 | **SW1-A10-H3-INF** | AI-GREEN + **independent GREEN (cross-model blind review)** — keine Promotion | im kleinen unteren Subchamber existiert mindestens **eine unendliche physische augmentierte free-\(w\)-Hub-Inzidenzkomponente**; nichtkonstruktive Wahl von \(x_0\); basiert auf kanonischem H3-Cover und \(\Delta/L\notin\mathbb Q\) | audits/P11_R32_SW1_A10_FINITE_CROSSGRAM_FIBER_CANDIDATE.md; Reviewpaket audits/P11_R32_SW1_A10_H3_INF_REVIEW_PACKET.md; Irrationalitätslemma audits/P11_R32_SW1_DELTA_OVER_L_IRRATIONALITY_LEMMA.md; PR #33, Squash-Merge eb1f56a6b7c00cbdfed6368d0ec282162e542654 | No-Go gegen Zerlegung **nach endlichen Graphkomponenten**; weder \(\ker\Gamma_I=0\) noch \(\ker\Gamma_I\neq0\) |
-| **SW1-A10 gesamt** | \`?[O]\` | operatorwertiger Residual-/Cross-Gram-Cocycle auf der irrationalen Rotationskomponente noch nicht formuliert/entschieden | aktive nächste Front | direkter Weg zurück zur Roadmap-A-Frage \(\ker\Gamma_I=\{0\}?\) |
+| **SW1-A10-C2-M1-RAW** | **independent GREEN (certificate)** — kanonisches Certificate-Ergebnis, keine separate \`✓[M]\`-Promotion | additive Assembly der 648 Rohbeiträge zum siebenlagigen \(12\times24\)-Matrixledger ohne Overwrite; vollständige deterministische Fingerprints | \`scripts/certify_sw1_a10_c2_m1_raw_additive.py\`, geprüfter Blob \`32ed47af319c41c83c37aa2bb1ae8f37a38051e7\`; PR #34, Squash-Merge \`6ac0141b2de3a0b2af98fff6d11c403fe3b379b6\` | kanonischer Rohmatrix-Input für M1-FULL; keine Injektivität |
+| **SW1-A10-C2-M1-FULL(7/2)** | **independent GREEN (certificate)** — kanonisches exhaustive Referenz-Certificate, keine separate \`✓[M]\`-Promotion | exakte physische Matrix = ausgewertetes M1-Ledger auf allen \(64\times96=6144\) offenen Referenzatomen; Zustandsfingerprint \`de2ab5b32478509feb380804a20705fa5a63e16897e46b05f8d696343cea8a4b\` | \`scripts/certify_sw1_a10_c2_m1_full_b96.py\`, geprüfter Blob \`d73993a393b9d076c72bc77cbdf3610f4695c29c\`; GitHub Actions Run \`33328052407\`, Job \`99301594041\`; PR #34 | Referenzwert \(r_0=7/2\) vollständig geschlossen |
+| **SW1-A10-C1B2A-CHIRO** | \`✓[M]\` + **independent GREEN (certificate)** | gelabelter affiner Rank-4-Chirotop der 22 Hyperflächen plus \(g_\infty\) konstant auf \(3<r<4\); expliziter Rangzeuge \(\det(B_e,B_R,D_{s0},INF)=-1\), Loopfreiheit und affine Chart \(X_\infty=+\) mechanisch gehärtet | \`scripts/certify_sw1_a10_c1b2a_affine_chirotope.py\`, geprüfter Blob \`b92f7778bffe29fa11a76e2c260d1e12ae7b27c5\`; Review \`audits/P11_R32_SW1_A10_C1B2A_TRANSFER_REVIEW_PACKET.md\`; CI Run \`33328052407\` | finite/algebraische Basis des tatsächlichen-\(r\)-Transfers |
+| **SW1-A10-C1B2A-TRANSFER** | \`✓[M]\` | Standard-Cryptomorphie liefert identische affine Covektor-/Topemengen; alle \(\binom{96}{2}=4560\) B96-Paare werden modulo \(L\) erfasst; nach Normierung \(\theta/L(r)\bmod1\) bleibt die zyklische 96er-Ordnung innerhalb eines festen Topes konstant | \`audits/P11_R32_SW1_A10_C1B2A_TRANSFER_REVIEW_PACKET.md\`; GATE1R-Blob \`18f992d117580260eb3865a493773d1b73833726\`; CI Run \`33328052407\`; PR #34, Squash-Merge \`6ac0141b2de3a0b2af98fff6d11c403fe3b379b6\` | schließt den Transfer ohne ambient isotopy/Folkman--Lawrence |
+| **SW1-A10-C2-M1-FULL(\(r\))** | kanonische Konsequenz aus **M1-FULL(7/2) Certificate + C1B2A-TRANSFER \`✓[M]\`** | für jedes \(3<r<4\) gilt auf offenen Parameterkammern und offenen Kreisatomen dieselbe M1-FULL-Matrixidentität wie bei \(r_0=7/2\) | dieselbe PR-#34-Provenienzkette; keine neueren Script-Blobs anstelle der im CI geprüften Fassungen zitieren | C-Strang der Matrixkonstruktion/Geometriestabilität geschlossen; keine Aussage über \(\ker\Gamma_I\) |
+| **SW1-A10 gesamt** | \`?[O]\` nur noch hinsichtlich Nichtentartung/Injektivität | der inversefreie/operatorwertige Cross-Gram-Cocycle und seine vollständige M1-Matrixdarstellung sind konstruiert und über \(3<r<4\) transferiert; offen bleibt die mathematische Kernfrage, ob dieses System einen nichttrivialen Kernel besitzt | PR #34 + Roadmap A | **aktive nächste Front:** finite-level Cross-Gram-Nichtentartung \(\ker\Gamma_I=\{0\}?\) bzw. Preimage-Form |
 
-**Firewall:** `AI-GREEN candidate` allein ist ausdrücklich **kein** `independent GREEN` und **kein** `✓[M]`. A2/A3 tragen jetzt `independent GREEN (certificate, algebraic/mechanical scope)` zusätzlich zum separaten Hilbertraumreview. A9 bleibt als Gesamtknoten `?[O]`; A10-H3-INF ist unabhängig blindgeprüft ausschließlich im Existenzscope einer unendlichen augmentierten Inzidenzkomponente. Der Gesamt-Δ-DESCENT bleibt `?[O]`. **Keiner der Merges #19–#33 erzeugt eine formale Promotion oder eine Aussage über den Wert von \(\ker\Gamma_I\).**
+**Firewall:** \`AI-GREEN candidate\` allein ist ausdrücklich **kein** \`independent GREEN\` und **kein** \`✓[M]\`. A2/A3 tragen jetzt \`independent GREEN (certificate, algebraic/mechanical scope)\` zusätzlich zum separaten Hilbertraumreview. A9 bleibt als Gesamtknoten \`?[O]\`; A10-H3-INF ist unabhängig blindgeprüft ausschließlich im Existenzscope einer unendlichen augmentierten Inzidenzkomponente. Der Gesamt-Δ-DESCENT bleibt \`?[O]\`. **PR #34 promotet ausschließlich C1B2A-CHIRO und C1B2A-TRANSFER im dokumentierten Scope zu \`✓[M]\`; M1-RAW und M1-FULL(7/2) sind kanonische Certificate-Ergebnisse ohne separate Promotion. Auch PR #34 erzeugt keine Aussage über den Wert von \(\ker\Gamma_I\).**
 
 ---
 
@@ -109,7 +114,7 @@ Mit HT-A4b-SW1-M nun \(\checkmark[M]\) ist der SW1-Membership-Baustein der Kette
 
 | Knoten | Status | Exakte Rolle |
 |---|---|---|
-| **A10 operatorwertiger Residual-/Cross-Gram-Cocycle** | \`?[O]\` — **aktiver nächster Knoten** | Den von \(\mathcal L_{\rm ann}^{SW1}\) auf der H3-Irrationalitätskomponente induzierten finite-state/operatorwertigen Cocycle explizit formulieren und auf Injektivität, kohomologische Gleichungen oder Obstruktionen untersuchen. |
+| **FINITE-LEVEL CROSS-GRAM INJECTIVITY / Roadmap A** | \`?[O]\` — **aktiver nächster Knoten** | Mit der nun kanonischen tatsächlichen-\(r\)-M1-Darstellung das augmentierte System bzw. die Preimage-Form analysieren und \(\ker\Gamma_I=\{0\}\) beweisen oder einen exakten Gegenvektor konstruieren. |
 | **A9-KNF Gesamtklassifikation** | \`?[O]\` | SEP-SMALL ist zertifiziert und ein partieller Bypass existiert; der komplementäre untere Bereich und der obere Chamber sind nicht vollständig klassifiziert. Für Roadmap A ist A9 derzeit nicht der primäre Engpass. |
 | **SW1-Δ-DESCENT gesamt** | \`?[O]\` | Die zertifizierten Stages 1/2–12 schließen große endliche Teilgeometrien, aber nicht automatisch den gesamten blinden Summanden \(\mathcal Z_R^+\). |
 | **HT-A4b global chamber exhaustivity** | \`?[O]\` | globale zehn-Flächen-/15-Chamber-Exhaustivität bleibt offen; für den SW1-Angriff derzeit nicht Priorität |
@@ -168,7 +173,11 @@ Der aktuelle operative Pfad ist:
 \to
 \text{A10-H0/H1/H2/H3}
 \to
-\text{A10-Cocycle}
+\text{A10-C1/C2-M1}
+\to
+\text{C1B2A-TRANSFER}
+\to
+\text{Roadmap A: Cross-Gram-Nichtentartung}
 }
 \]
 
@@ -194,7 +203,7 @@ Zusammen mit dem eigenständigen Lemma
 
 und dem unabhängigen Blindreview von H3-INF steht im dokumentierten kleinen unteren Subchamber die Existenz mindestens einer **unendlichen physischen augmentierten Hub-Inzidenzkomponente**.
 
-Damit ist eine Zerlegung des Cross-Gram-Problems allein nach **endlichen Graphkomponenten** dort kein zulässiger Default mehr. Der nächste mathematische Gegenstand ist der operatorwertige Residual-/Cross-Gram-Cocycle auf dieser irrationalen Rotationskomponente.
+PR #34 hat den operatorwertigen/inversefreien Cross-Gram-Cocycle anschließend bis zur vollständigen M1-RAW/M1-FULL-Matrixdarstellung ausgebaut und den Referenzwert \(r_0=7/2\) über C1B2A-CHIRO/TRANSFER auf jedes \(3<r<4\) übertragen. Damit ist die C-seitige Matrixkonstruktion und Geometriestabilität kein offener Gate mehr. Der nächste mathematische Gegenstand ist nun die **Nichtentartung dieses bereits konstruierten Systems**, also Roadmap A.
 
 **Firewall:** Dies ist kein Beweis für oder gegen
 \[
