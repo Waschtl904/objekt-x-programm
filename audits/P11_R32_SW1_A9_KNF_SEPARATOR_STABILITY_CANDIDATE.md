@@ -1717,6 +1717,158 @@ Ergebnis:
 }
 \]
 
+
+#### 15.4A Vollständiger Filterledger \(360\to128\)
+
+Die \(128\) werden nicht durch einen vorgegebenen Scanbereich angenommen, sondern aus allen
+
+\[
+40\times9=360
+\]
+
+gerichteten Source-Map-Fällen erzeugt und danach ausschließlich durch die definierte kombinierte Seitenstufung gefiltert.
+
+Exakt:
+
+\[
+360=180_{\rm outside}+180_{\rm middle}.
+\]
+
+Von den 180 Fällen mit Zielindex außerhalb der beiden Mittelblöcke sind
+
+\[
+62
+\]
+
+Cross-Fälle und
+
+\[
+118
+\]
+
+Same-Side-Fälle.
+
+Von den 180 Fällen mit Zielindex innerhalb eines Mittelblocks besitzen
+
+\[
+102
+\]
+
+einen tatsächlich vorhandenen passenden Ziellift. Davon sind
+
+\[
+66
+\]
+
+Cross-Fälle und
+
+\[
+36
+\]
+
+Same-Side-Fälle.
+
+Die übrigen
+
+\[
+78
+\]
+
+Fälle treffen am formal erwarteten Zielindex keinen vorhandenen physischen Mittelblocklift und sind deshalb keine Mittelblockkante.
+
+Somit exhaustiv
+
+\[
+\boxed{
+128=62+66.
+}
+\]
+
+Kompaktes Filterzertifikat:
+
+scripts/certify_sw1_a9_360_to_128_filter.py
+
+Commit:
+
+fcf47b1bee05f778e6389e464d4bb8d533680acd
+
+Committed Script-Blob:
+
+cf082f337bc2ba5327b4ee51d642ec9b500b499f
+
+Dieser Blob stimmt exakt mit dem vor dem Commit lokal ausgeführten Zertifikat überein.
+
+Ergebnis:
+
+SW1-A9 360-TO-128 FILTER CERTIFICATE: PASS
+
+Damit ist der Filterschritt selbst separat reproduzierbar und nicht nur als Nebenwirkung des großen Separatorzertifikats dokumentiert.
+
+#### 15.4B Warum die 78 unmatched-Ziele wirklich nicht existieren
+
+Die 78 Fälle mit Zielindex innerhalb eines Mittelblocks, aber ohne passenden Ziellift, werden zusätzlich separat klassifiziert.
+
+Für jeden dieser 78 Fälle wird die affine Zielgleichung exakt nach dem algebraisch erforderlichen Lift
+
+\[
+k_*
+\]
+
+aufgelöst. Dieser Lift ist eindeutig und besitzt die Verteilung
+
+\[
+\boxed{
+k_*=-2:8,\quad
+k_*=-1:22,\quad
+k_*=2:20,\quad
+k_*=3:20,\quad
+k_*=4:8.
+}
+\]
+
+Damit verlangen 58 Fälle einen Lift außerhalb der global möglichen Kandidaten
+
+\[
+\{0,1,2\}.
+\]
+
+Die verbleibenden 20 Fälle verlangen zwar formal \(k_*=2\), aber exakt auf denjenigen Blatt-/Layerkombinationen, auf denen die bereits zertifizierte A8-Lifttabelle **keinen dritten Lift** besitzt:
+
+\[
+j\in\{0,1\},\ \overline Q,
+\qquad\text{oder}\qquad
+j\in\{2,3\},\ P.
+\]
+
+Somit bedeutet unmatched in allen 78 Fällen:
+
+\[
+\boxed{
+\text{Der formal erwartete physische Mittelblock-Zielzustand existiert nicht.}
+}
+\]
+
+Es handelt sich also nicht um eine Scan-Lücke oder um einen nicht enumerierten Ziellift.
+
+Zertifikat:
+
+scripts/certify_sw1_a9_unmatched_middle_targets.py
+
+Commit:
+
+22f01af28f1120885adc8e12f919e70ddef5506b
+
+Committed Script-Blob:
+
+90c34f5dfe8e5b47969120c67a519804f8ead612
+
+Der exakt committed GitHub-Inhalt wurde ausgeführt und ergab:
+
+SW1-A9 UNMATCHED MIDDLE-TARGET CERTIFICATE: PASS
+
+Damit ist auch die letzte Restklasse des \(360\to128\)-Filters separat geschlossen.
+
+
 ### 15.5 Formales Separatorlemma
 
 Folglich gibt es im vollständigen **formalen** A9-Cover keine Kante zwischen den beiden kombinierten Seiten.
