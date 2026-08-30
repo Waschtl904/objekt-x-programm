@@ -1,9 +1,9 @@
 # CURRENT FRONT — Objekt X / P11-R32
 
 > **Operative Kopfschicht — zuerst lesen.**  
-> **Stand:** 29. August 2026  
-> **Verifizierte Main-Basis:** \`6ff2598d6071fc1fd9444d3f9734384c23264834\` (Squash-Merge PR #28; gestapelte Kette PR #19–#28 vollständig auf \`main\`; keine neue Promotion)  
-> **Aktiver mathematischer Stand:** `HT-A4b-SW1-M` bleibt \`✓[M]\`. Die Kette `SW1-Δ-DESCENT → A0 → … → A8` liegt jetzt auf \`main\`; A0, A1 und A4–A8 tragen `AI-GREEN candidate + independent GREEN (certificate)`, A2/A3 bleiben `AI-GREEN candidate`, der Gesamt-Δ-DESCENT bleibt `?[O]`. Aktiver nächster Knoten: **A9-KNF Separatorstabilität unter `J_R`**.  
+> **Stand:** 30. August 2026  
+> **Verifizierte Main-Basis:** \`eb1f56a6b7c00cbdfed6368d0ec282162e542654\` (mathematische Merge-Basis nach PR #29–#33; keine neue Promotion)  
+> **Aktiver mathematischer Stand:** `HT-A4b-SW1-M` bleibt \`✓[M]\`. A2/A3 sind jetzt zusätzlich im algebraisch/mechanischen Scope zertifiziert. A8 ist midpoint-/Sheet-Quotient-korrigiert; A9-J0/J1/FS/DOM sowie der kleine-ε-Separator sind zertifiziert, A9 gesamt bleibt `?[O]`. A10-H0/H1/H2/H3-COVER sind zertifiziert; H3-INF trägt nach unabhängigem Blindreview `independent GREEN` für die Existenz mindestens einer unendlichen augmentierten Hub-Inzidenzkomponente. **Keine** Folgerung zu `ker Γ_I`. Aktiver nächster Knoten: **operatorwertiger Residual-/Cross-Gram-Cocycle über der irrationalen Δ-Rotation**.  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -368,20 +368,22 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 \text{SW1-}\Delta\text{-DESCENT (gesamt)} & ?[O] \\
 \text{SW1-A0} & \text{AI-GREEN + independent GREEN (certificate)} \\
 \text{SW1-A1} & \text{AI-GREEN + independent GREEN (certificate)} \\
-\text{SW1-A2} & \text{AI-GREEN candidate} \\
-\text{SW1-A3} & \text{AI-GREEN candidate} \\
+\text{SW1-A2} & \text{AI-GREEN + independent GREEN (certificate, alg./mech. scope)} \\
+\text{SW1-A3} & \text{AI-GREEN + independent GREEN (certificate, alg./mech. scope)} \\
 \text{SW1-A4} & \text{AI-GREEN + independent GREEN (certificate)} \\
 \text{SW1-A5} & \text{AI-GREEN + independent GREEN (certificate)} \\
 \text{SW1-A6} & \text{AI-GREEN + independent GREEN (certificate)} \\
 \text{SW1-A7} & \text{AI-GREEN + independent GREEN (certificate)} \\
 \text{SW1-A8} & \text{AI-GREEN + independent GREEN (certificate)} \\
-\text{A9-KNF Separatorstabilität} & ?[O] \\
+\text{SW1-A9 gesamt} & ?[O] \text{; J0/J1/FS/DOM + SEP-SMALL zertifiziert} \\
+\text{A10-H3-INF} & \text{AI-GREEN + independent GREEN (cross-model blind review)} \\
+\text{SW1-A10 gesamt} & ?[O] \text{; Cross-Gram-Cocycle offen} \\
 \text{HT-RED} & ?[O] \\
 \text{Schur Cross-Gram} & ?[O]
 \end{array}
 }
 \]
 
-**Nächster Default:** A9-KNF — vollständige Zusatzkanten von \(J_R^*J_R\) und \(J_R^*AJ_R\) bestimmen, identische affine Kanäle vor dem Graphurteil koeffizientenweise zusammenfassen und danach die Separator-/Bypassfrage entscheiden.
+**Nächster Default:** A10-Cocycle — den auf der zertifizierten irrationalen H3-Rotationskomponente induzierten operatorwertigen Residual-/Cross-Gram-Cocycle explizit formulieren und auf Injektivität bzw. kohomologische Obstruktionen prüfen. Die endliche Graphkomponenten-Strategie ist für den augmentierten Hubgraphen im kleinen unteren Subchamber kein zulässiger Default mehr.
 
-**Merge-Firewall:** PR #19–#28 sind auf \`main\` gemergt; daraus folgt **keine** mathematische Promotion.
+**Merge-Firewall:** PR #19–#33 sind auf \`main\` gemergt; daraus folgt **keine** mathematische Promotion. Insbesondere folgen weder \(\ker\Gamma_I=\{0\}\) noch \(\ker\Gamma_I\neq\{0\}\).
