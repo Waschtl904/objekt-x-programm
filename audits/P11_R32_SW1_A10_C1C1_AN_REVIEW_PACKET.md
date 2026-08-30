@@ -289,3 +289,36 @@ Bitte getrennt urteilen:
 - Gesamt C1C1-AN: PASS / FAIL
 
 Keine Aussage zu C2 oder \(\ker\Gamma_I=\{0\}\) ist Teil dieses Reviews.
+
+
+---
+
+## I. Externes Blindreview-Ergebnis — 30. August 2026
+
+Der unabhängige Cross-Model-Blindcheck bestätigt:
+
+- Fixpunkt-/Direktsummenfrage: **PASS**
+- \(U_H(K)\)-Closure: **PASS**
+- abstraktes Intertwining: **PASS**
+- Gesamt C1C1-AN, ausschließlich in der korrigierten \(\sqrt2\)-Faltungsfassung: **PASS**
+
+Der Review bestätigt ausdrücklich auch die Korrektur des ursprünglichen Normierungsfehlers:
+
+\[
+F_+y=\sqrt2\,y|_{(0,T_0)},
+\qquad
+F_-w=\sqrt2\,w|_{(R,S)}.
+\]
+
+Damit ist zulässig:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1C1\!-\!AN}:
+\text{AI-GREEN}
++
+\text{independent GREEN (cross-model blind review, Hilbert-space scope)}
+}
+\]
+
+Keine Promotion. Keine Aussage über C2 oder \(\ker\Gamma_I=\{0\}\).

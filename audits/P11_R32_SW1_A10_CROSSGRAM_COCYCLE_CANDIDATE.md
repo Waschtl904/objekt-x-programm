@@ -3,7 +3,7 @@
 > **Stand:** 30. August 2026  
 > **Branch:** research/sw1-a10-crossgram-cocycle  
 > **Basis:** main@19da654f537868cd72757d2785071f8cf3f36c1b  
-> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1, C1B2A/B/C sowie C1C0-FORMAL im jeweils dokumentierten Scope zertifiziert. C1C1 besitzt ein zertifiziertes algebraisches Mehrblatt-Skelett und einen expliziten analytischen Isometriekandidaten; dessen unabhängiger Hilbertraum-Review steht noch aus. Die frühere Deutung von Boundary-Kollisionen als Fiberquotienten wurde korrigiert. Keine Promotion.  
+> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1, C1B2A/B/C sowie C1C0-FORMAL im jeweils dokumentierten Scope zertifiziert. C1C1 besitzt ein zertifiziertes algebraisches/Faltungs-Skelett; die korrigierte analytische Hilbertraum-Fassung ist nach externem Cross-Model-Blindreview unabhängig GREEN im dokumentierten Scope. Die frühere Deutung von Boundary-Kollisionen als Fiberquotienten wurde korrigiert. Keine Promotion.  
 > **Ziel:** den zu \(\ker\Gamma_I\) äquivalenten SW1-Operator auf der irrationalen H3-Rotationskomponente als endlichen operatorwertigen/finite-range Cocycle formulieren.
 
 ---
@@ -3270,12 +3270,14 @@ Für die korrigierte unendlichdimensionale Aussage
 
 steht nun ein vollständiger interner adversarialer Beweis.
 
-Bis zu einem **externen unabhängigen Hilbertraum-Blindcheck** bleibt jedoch
+Der externe Cross-Model-Blindcheck vom 30. August 2026 bestätigt die korrigierte Fassung. Daher gilt
 
 \[
 \boxed{
 \mathrm{A10\!-\!C1C1\!-\!AN}:
-\text{AI-GREEN candidate}.
+\text{AI-GREEN}
++
+\text{independent GREEN (cross-model blind review, Hilbert-space scope)}.
 }
 \]
 
@@ -3310,3 +3312,140 @@ Erst dann ist eine finite-range Matrixform
 zulässig.
 
 Keine Injektivitätsaussage.
+
+
+---
+
+# C1C1-AN — externer Blindreview abgeschlossen
+
+Das fokussierte Reviewpaket
+
+audits/P11_R32_SW1_A10_C1C1_AN_REVIEW_PACKET.md
+
+wurde am 30. August 2026 unabhängig cross-model geprüft.
+
+Bestätigt wurden getrennt:
+
+1. **Fixpunkt-/Direktsummenfrage:** PASS. Die vier Sheet/Parity-Komponenten sind direkte-Summen-Komponenten; punktweise Orbitkollisionen ändern die \(L^2\)-Norm nicht.
+2. **Closure:** PASS. \(K\) ist abgeschlossen und die korrigierte \(U_H\)-Abbildung isometrisch, daher ist \(U_H(K)\) abgeschlossen.
+3. **Abstraktes Intertwining:** PASS. Die Konjugationsdefinition auf den geschlossenen Bildunterräumen ist wohldefiniert; eine punktweise Gate-Rand-Matching-Bedingung wird erst für die explizite C2-Matrixdarstellung relevant.
+4. **Gesamt C1C1-AN:** PASS für die korrigierte \(\sqrt2\)-Faltungsfassung.
+
+Die frühere, unnormierte positive Restriktionsfassung bleibt ausdrücklich verworfen.
+
+Zulässiger Status:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1C1\!-\!AN}:
+\text{AI-GREEN}
++
+\text{independent GREEN (cross-model blind review, Hilbert-space scope)}
+}
+\]
+
+**Keine Promotion. Keine Injektivitätsaussage.**
+
+---
+
+# C2-Vorprüfung — physischer Hubblock versus KNF-H2-Ledger
+
+Für die C2-Matrixdarstellung ist eine Scope-Korrektur wesentlich.
+
+Der H2-53-Kanalledger beschreibt
+
+\[
+J_R^*HE_{\mathcal A},
+\]
+
+also den bereits in freie KNF-Koordinaten zurückgezogenen Huboperator.
+
+C1C1 verwendet dagegen die physische Reparametrisierung
+
+\[
+\widetilde{\mathscr C}_R(y,w)
+=
+(I+A)y+HE_{\mathcal A}w.
+\]
+
+Daher muss der direkte C2-Hubblock aus
+
+\[
+HE_{\mathcal A}
+\]
+
+selbst aufgebaut werden.
+
+Nach positiver Odd-Faltung besitzt dieser physische Hub genau neun geometrische Zweige:
+
+\[
+x=a-t,\quad x=t+a,\quad x=t-a,
+\]
+
+\[
+x=b-t,\quad x=t+b,\quad x=t-b,
+\]
+
+\[
+x=T-t,\quad x=t+T,\quad x=t-T,
+\]
+
+jeweils mit den bekannten Gewichten
+
+\[
+(-p,+p,-p),\quad
+(-r,+r,-r),\quad
+(-q,+q,-q),
+\]
+
+und den entsprechenden Support-/Horizon-Gates.
+
+Die 53 H2-Kanäle bleiben für spätere Konsistenzchecks wertvoll, sind aber **nicht** der direkte C2-Hubmatrixledger.
+
+---
+
+# C2-Cover-Firewall — 15→12 abstrakt, 24→12 für reinen \(\Delta\)-Cocycle
+
+Der C1C1-Cover
+
+\[
+12_H+3_W\to12_H
+\]
+
+ist als abstrakte Hilbertraum-Konjugation korrekt.
+
+Für eine Darstellung ausschließlich durch Basisrotationen
+
+\[
+\theta\mapsto\theta+j\Delta
+\]
+
+ist der dreifache Annuluscover jedoch nicht unter allen Sheet/Parity-Pullbacks geschlossen.
+
+Eine physische Hubrelation
+
+\[
+x=s\,t+\lambda L+k\Delta
+\]
+
+transformiert bei Verwendung der vier Horizont-Sheets im Allgemeinen auch die Annulusbasis durch Halbshift/Reflexion.
+
+Um diese endliche Klein-Vierer-Wirkung vollständig in Fiberindizes statt in zusätzliche Basispullbacks zu absorbieren, ist der natürliche symmetrische Annuluscover
+
+\[
+4\text{ Sheet/Parity-Spezies}\times3\text{ Lifts}
+=
+12_W.
+\]
+
+Damit entsteht als C2-Arbeitscover
+
+\[
+\boxed{
+(12_H+12_W)\longrightarrow12_H.
+}
+\]
+
+Dies ist **keine neue physische Fiberdimension** und keine Änderung des Operators, sondern eine redundante symmetrische Darstellung für einen reinen endlichen \(\Delta\)-Rotationsledger.
+
+Die Minimalität dieses 12er Annuluscovers ist noch nicht gebucht; zunächst wird nur seine Closure geprüft.
