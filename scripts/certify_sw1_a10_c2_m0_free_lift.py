@@ -186,10 +186,8 @@ row_digest=hashlib.sha256(row_payload).hexdigest()
 
 EXPECTED_LIFT_DIGEST="cc7fb58c60aa2002b2fd4b56a18eb998ae8d9f679c730f0617fbb8362344b3c4"
 EXPECTED_ROW_DIGEST="8e561b778f4eba9d4434db66ec2be325edcb65e7f7a0074e837cdeb81f169fac"
-if EXPECTED_LIFT_DIGEST!="cc7fb58c60aa2002b2fd4b56a18eb998ae8d9f679c730f0617fbb8362344b3c4":
-    assert lift_digest==EXPECTED_LIFT_DIGEST
-if EXPECTED_ROW_DIGEST!="8e561b778f4eba9d4434db66ec2be325edcb65e7f7a0074e837cdeb81f169fac":
-    assert row_digest==EXPECTED_ROW_DIGEST
+assert lift_digest==EXPECTED_LIFT_DIGEST
+assert row_digest==EXPECTED_ROW_DIGEST
 
 print("SW1-A10-C2-M0-FREE-LIFT / A1-ROW LEDGER CERTIFICATE: PASS")
 print("10 affine types x 4 output species = 40 species rules")
