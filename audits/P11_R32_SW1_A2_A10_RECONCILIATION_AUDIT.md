@@ -382,6 +382,57 @@ HE_{\mathcal A}w.
 \tag{REC.17}
 \]
 
+Definiere
+\[
+\Theta:=J_R\oplus I_{\mathscr W}:
+\mathcal F_R\oplus\mathscr W
+\longrightarrow
+K\oplus\mathscr W.
+\tag{REC.17a}
+\]
+Da \(J_R=\Psi_R^{-1}\) ein beschränkter Isomorphismus ist, ist die Umkehrabbildung **explizit**
+\[
+\boxed{
+\Theta^{-1}(y,w)
+=
+(\Psi_Ry,w),
+\qquad
+(y,w)\in K\oplus\mathscr W.
+}
+\tag{REC.17b}
+\]
+Somit gelten beidseitig
+\[
+\boxed{
+\Theta^{-1}\Theta=I_{\mathcal F_R\oplus\mathscr W},
+\qquad
+\Theta\Theta^{-1}=I_{K\oplus\mathscr W}.
+}
+\tag{REC.17c}
+\]
+
+Außerdem
+\[
+\mathcal K_{I,A}\Theta(\xi,w)
+=
+(\mathscr C_R(\xi,w),0).
+\tag{REC.17d}
+\]
+Daher ist die Einschränkung
+\[
+\Theta:
+\ker\mathscr C_R
+\longrightarrow
+\ker\mathcal K_{I,A}
+\]
+nicht nur injektiv, sondern bijektiv mit der expliziten Rückabbildung
+\[
+\boxed{
+(y,w)\longmapsto(\Psi_Ry,w).
+}
+\tag{REC.17e}
+\]
+
 Wichtig: Hier wird \(\mathfrak G_R^{-1}\) **nicht** mehr benötigt.
 
 Da
@@ -424,14 +475,85 @@ Damit ist A3.13 historisch der erste offene Punkt, aber nicht mehr der beste heu
 
 ## 8. A10-C1C1 — echte Hilbert-Fiberisierung
 
-C1C1 konstruiert isometrische Mehrblattabbildungen auf ihre geschlossenen Bildräume und transportiert \(\mathscr C_R\) zu
-
+C1C1 konstruiert isometrische Mehrblattabbildungen auf ihre geschlossenen Bildräume. Setze
 \[
-\widehat{\mathscr C}_R.
+\mathcal R_K:=U_HK,
+\qquad
+\mathcal R_W:=U_W\mathscr W
+\]
+und den Domain-Transport
+\[
+\boxed{
+W:=(U_H|_K)\oplus U_W:
+K\oplus\mathscr W
+\longrightarrow
+\mathcal R_K\oplus\mathcal R_W.
+}
+\tag{REC.20a}
+\]
+Per Definition der Bildräume ist \(W\) surjektiv auf
+\(\mathcal R_K\oplus\mathcal R_W\), und wegen der Isometrie beider Summanden injektiv. Die Umkehrabbildung ist explizit
+\[
+\boxed{
+W^{-1}(F,G)
+=
+\bigl((U_H|_K)^{-1}F,\ U_W^{-1}G\bigr).
+}
+\tag{REC.20b}
+\]
+Damit
+\[
+\boxed{
+W^{-1}W=I_{K\oplus\mathscr W},
+\qquad
+WW^{-1}=I_{\mathcal R_K\oplus\mathcal R_W}.
+}
+\tag{REC.20c}
 \]
 
-Der Kernel bleibt erhalten:
+Der transportierte Operator ist
+\[
+\widehat{\mathscr C}_R
+=
+U_H\,\widetilde{\mathscr C}_R\,W^{-1}
+\quad
+\text{auf }\mathcal R_K\oplus\mathcal R_W.
+\tag{REC.20d}
+\]
+Daher gilt für \(X\in K\oplus\mathscr W\)
+\[
+\widehat{\mathscr C}_R(WX)
+=
+U_H\widetilde{\mathscr C}_R X.
+\tag{REC.20e}
+\]
+Da \(U_H\) injektiv ist,
+\[
+\widetilde{\mathscr C}_R X=0
+\iff
+\widehat{\mathscr C}_R(WX)=0.
+\]
+Umgekehrt besitzt **jedes**
+\[
+(F,G)\in\mathcal R_K\oplus\mathcal R_W
+\]
+eindeutig den Rücktransport
+\[
+X=W^{-1}(F,G),
+\]
+so dass es auf dem Definitionsraum keine künstlichen Fibervektoren gibt. Folglich
+\[
+\boxed{
+W:
+\ker\widetilde{\mathscr C}_R
+\xrightarrow{\sim}
+\ker\widehat{\mathscr C}_R
+}
+\tag{REC.20f}
+\]
+mit explizitem inversen Kerneltransport \(W^{-1}\).
 
+Zusammen mit C0:
 \[
 \boxed{
 \ker\widehat{\mathscr C}_R
@@ -443,7 +565,16 @@ Der Kernel bleibt erhalten:
 \tag{REC.20}
 \]
 
-**Wichtige Firewall:** Der Definitionsraum ist der tatsächliche geschlossene C1C1-Bildraum. Ein formales 12/24-Slot-Cover darf nicht still als freies \(L^2(\mathbb T_L;\mathbb C^N)\) ohne Konsistenzbedingungen behandelt werden.
+**Wichtige Ambient-Firewall:** \(WW^{-1}=I\) gilt ausschließlich auf
+\[
+\mathcal R_K\oplus\mathcal R_W.
+\]
+Auf dem größeren formalen Slot-Ambientraum ist \(WW^{-1}\) nur die Rückprojektion auf den gültigen Bild-/Konsistenzraum und im Allgemeinen **nicht** die Identität. Ein M1-ND-Test darf daher nur auf
+\[
+\boxed{\mathcal R_K\oplus\mathcal R_W}
+\tag{REC.20g}
+\]
+oder einer exakt äquivalent parametrisierten Darstellung dieses Raums geführt werden.
 
 ---
 
@@ -714,7 +845,49 @@ und ist der erste Punkt, an dem jetzt wirklich neue Nichtentartungsmathematik be
 
 ---
 
-## 16. Firewall
+
+## 16. Reproduzierbares Bijektivitäts-Hardening
+
+Zusätzlich zu den bereits existierenden Einzelzertifikaten wird für diesen Reconciliation-Audit ein separates algebraisch/mechanisches Zertifikat geführt:
+
+\[
+\boxed{
+\texttt{scripts/certify\_sw1\_a2\_a10\_kernel\_bijections.py}.
+}
+\tag{REC.28}
+\]
+
+Es prüft in exakten rationalen nichttrivialen Modellen:
+
+1. \(J_R\Psi_R=I_K\) und \(\Psi_RJ_R=I_{\mathcal F_R}\);
+2. \(\Theta^{-1}\Theta=I\) und \(\Theta\Theta^{-1}=I\);
+3. die Vorwärts- und Rückrichtung der C0-Kernelparametrisierung;
+4. für tall isometrische Embeddings \(U_H,U_W\):
+   \[
+   W^{-1}W=I;
+   \]
+5. für jeden Vektor \(Y\in\operatorname{Ran}W\):
+   \[
+   WW^{-1}Y=Y;
+   \]
+6. ausdrücklich:
+   \[
+   WW^{-1}\ne I
+   \]
+   auf dem größeren Ambientraum im Testmodell;
+7. die Kernelidentität
+   \[
+   \ker \widehat C
+   =
+   W(\ker C)
+   \]
+   in einem Modell mit **nichttrivialem Kernel**, damit nicht nur der triviale Nullfall getestet wird.
+
+**Scope-Firewall:** Das Skript zertifiziert das endliche lineare-Algebra-/Intertwining-Skelett. Die unendlichdimensionale Tatsache, dass Isometrien geschlossene Bildräume besitzen und auf ihre Bilder unitär/bijektiv sind, bleibt der bereits separat geprüfte Hilbertraumsatz. Das Skript ersetzt diesen analytischen Beweis nicht.
+
+---
+
+## 17. Firewall
 
 Dieser Audit:
 
