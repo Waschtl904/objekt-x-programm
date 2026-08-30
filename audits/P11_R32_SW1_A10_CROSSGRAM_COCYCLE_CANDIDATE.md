@@ -3,7 +3,7 @@
 > **Stand:** 30. August 2026  
 > **Branch:** research/sw1-a10-crossgram-cocycle  
 > **Basis:** main@19da654f537868cd72757d2785071f8cf3f36c1b  
-> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1, C1B2A/B/C sowie C1C0-FORMAL im jeweils dokumentierten Scope zertifiziert. C1C1 besitzt ein zertifiziertes algebraisches/Faltungs-Skelett; die korrigierte analytische Hilbertraum-Fassung ist nach externem Cross-Model-Blindreview unabhängig GREEN im dokumentierten Scope. Die frühere Deutung von Boundary-Kollisionen als Fiberquotienten wurde korrigiert. Keine Promotion.  
+> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1, C1B2A/B/C sowie C1C0-FORMAL im jeweils dokumentierten Scope zertifiziert. C1C1 besitzt ein zertifiziertes algebraisches/Faltungs-Skelett; die korrigierte analytische Hilbertraum-Fassung ist nach externem Cross-Model-Blindreview unabhängig GREEN im dokumentierten Scope. C2-HUB0/FREE0 sowie HUB0-COMP, GATE0 und GATE1 sind im jeweils explizit begrenzten endlichen/algebraischen Scope zertifiziert; die vollständigen Matrixfunktionen sind noch offen. Die frühere Deutung von Boundary-Kollisionen als Fiberquotienten wurde korrigiert. Keine Promotion.  
 > **Ziel:** den zu \(\ker\Gamma_I\) äquivalenten SW1-Operator auf der irrationalen H3-Rotationskomponente als endlichen operatorwertigen/finite-range Cocycle formulieren.
 
 ---
@@ -3830,3 +3830,549 @@ Erst danach darf
 \]
 
 als exakte Operatorgleichung gebucht werden.
+
+
+---
+
+# C2-HUB0-COMP — direkte Vollständigkeit von \(HE_{\mathcal A}\)
+
+## 76. Ableitung direkt aus der globalen Hubformel
+
+A1 liefert global auf dem ungeraden Annulus:
+
+\[
+\boxed{
+(HE_{\mathcal A}w)(x)
+=
+p[w(x-a)-w(x+a)]
++
+r[w(x-b)-w(x+b)]
++
+q[w(x-T)-w(x+T)].
+}
+\tag{C2.4}
+\]
+
+Für
+
+\[
+\tau\in\{a,b,T\}
+\]
+
+und den zugehörigen Koeffizienten
+
+\[
+c_\tau\in\{p,r,q\}
+\]
+
+erzeugt der Term
+
+\[
+c_\tau[w(x-\tau)-w(x+\tau)]
+\]
+
+nach positiver Odd-Faltung **exakt drei** physische Zweige:
+
+\[
+\boxed{
+\begin{array}{lll}
+\tau-x,& -c_\tau,&0<x<\tau-R,\\[1mm]
+x-\tau,& +c_\tau,&\tau+R<x<T_0,\\[1mm]
+x+\tau,& -c_\tau,&0<x<S-\tau.
+\end{array}
+}
+\tag{C2.5}
+\]
+
+Damit insgesamt exakt
+
+\[
+\boxed{3\times3=9}
+\]
+
+positive physische Hubzweige.
+
+Dieser Satz wird **direkt aus \(HE_{\mathcal A}\)** hergeleitet und verwendet weder die Zahl 53 noch irgendeine KNF-Rückprojektionszählung.
+
+---
+
+## 77. Vollständige physische Support-Wandmenge
+
+Über
+
+\[
+\tau=a,b,T
+\]
+
+sind die Supportendpunkte exakt
+
+\[
+\boxed{
+\sigma,\ e+\sigma,\ a+\sigma,\ 
+a\pm R,\ b\pm R,\ T\pm R.
+}
+\tag{C2.6}
+\]
+
+Dies ist genau die bereits in A1 zertifizierte vollständige positive Hub-Support-Wall-Liste.
+
+Die potenziellen oberen Wände
+
+\[
+\tau+S
+\]
+
+liegen sämtlich jenseits des Horizonts \(T_0\), denn
+
+\[
+\tau+S-T_0
+=
+\tau+\sigma-\varepsilon>0
+\]
+
+im kleinen SW1-Chamber.
+
+Damit ist die neun-Zweige-Liste nicht analogisch, sondern exhaustiv aus dem physischen Operator abgeleitet.
+
+---
+
+## 78. Zertifikat C2-HUB0-COMP
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c2_hub0_physical_completeness.py
+
+Commit:
+
+13863ff48f14eea893481cfbdbae8384f7c4e13e
+
+Committed Script-Blob:
+
+94d1a8452eb18cde4a7352238c9dcfaaeeecdc85
+
+Der exakt committed Dateiinhalt wurde ausgeführt; der lokal nach Git-Blob-Verfahren berechnete SHA ist exakt derselbe.
+
+Ergebnis:
+
+SW1-A10-C2-HUB0-COMP PHYSICAL HUB COMPLETENESS CERTIFICATE: PASS
+
+Damit:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!HUB0\!-\!COMP}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, physical-branch/support scope)}.
+}
+\]
+
+Keine Matrix- oder Injektivitätsaussage.
+
+---
+
+# C2-GATE0 — symmetrische Cover-Wandclosure
+
+## 79. Was durch die Annulus-Vervierfachung neu geprüft werden muss
+
+Die physische A1-Wandmenge bleibt unverändert.
+
+Neu ist ausschließlich die redundante Darstellung des Annulus durch vier Sheet/Parity-Spezies. Dadurch kann die **kanonische Restklassenwahl** eines Input-Lifts bei
+
+\[
+\theta\mapsto\theta+j\Delta
+\]
+
+an zusätzlichen Kreispunkten wrappen.
+
+Deshalb werden getrennt geprüft:
+
+1. alle physischen A1-/Hub-Gates unter allen vier Output-Spezies;
+2. alle kanonischen Input-Wrapselectoren aus FREE0;
+3. alle kanonischen Input-Wrapselectoren aus HUB0.
+
+---
+
+## 80. Physische Gates erzeugen nichts Neues
+
+Die 19 physischen A1-Wände besitzen unter den vier Sheet/Parity-Pullbacks exakt
+
+\[
+\boxed{46}
+\]
+
+verschiedene Kreisbilder.
+
+Alle 46 liegen bereits im C1B0-Alphabet der 92 Wände:
+
+\[
+\boxed{
+\mathcal B_{\rm phys}^{(4)}
+\subset
+\mathcal B_{92}.
+}
+\tag{C2.7}
+\]
+
+Insbesondere gilt dies für alle neun direkten Hub-Supportwände aus C2.6.
+
+Damit erzeugt die symmetrische Darstellung **keine neue physische Gatewand**.
+
+---
+
+## 81. Acht neue reine Lift-Wrapwände
+
+Die FREE0-Inputselectoren erzeugen vier neue Wände.
+
+Die HUB0-Inputselectoren erzeugen acht neue Wände; die vier FREE0-Wände sind darin enthalten.
+
+Exakt ist die neue Menge
+
+\[
+\boxed{
+\mathcal N_{\rm wrap}
+=
+\left\{
+\frac{\eta}{2}L+k\Delta:
+\eta\in\{0,1\},
+\ k\in\{-3,5,6,7\}
+\right\}
+\pmod L.
+}
+\tag{C2.8}
+\]
+
+Also
+
+\[
+|\mathcal N_{\rm wrap}|=8.
+\]
+
+Damit wächst das gemeinsame C2-Boundary-Alphabet exakt von
+
+\[
+\boxed{92}
+\]
+
+auf
+
+\[
+\boxed{100}.
+\tag{C2.9}
+\]
+
+Die acht neuen Wände sind **rein phasenartig**:
+
+\[
+\rho=\mu=\nu=0.
+\]
+
+Es entsteht keine neue irrationale Basisphase; weiterhin treten nur \(L/2\)-Parität und ganzzahlige \(\Delta\)-Indizes auf.
+
+---
+
+## 82. Zertifikat C2-GATE0
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c2_gate0_symmetric_boundary.py
+
+Vor Commit ausgeführter und anschließend direkt in den Git-Tree gepinnter Blob:
+
+8ac8c5b74e89c2c12d1f6be33c8558fe0d6d53bf
+
+Pin-Commit:
+
+ea256fb188d625e381e019bed6ade2c08c7b9ab7
+
+Ergebnis:
+
+SW1-A10-C2-GATE0 SYMMETRIC-COVER BOUNDARY CERTIFICATE: PASS
+
+Damit:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!GATE0}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, boundary-closure scope)}.
+}
+\]
+
+---
+
+# C2-GATE1 — Kollisionsgeometrie des 100-Wand-Alphabets
+
+## 83. Exakte Normierung
+
+Setze weiterhin
+
+\[
+\chi=5\Delta-L,
+\qquad
+s_*=\frac L2-2\Delta,
+\qquad
+r=\frac{s_*}{\chi}.
+\]
+
+Dann
+
+\[
+\Delta/\chi=1+2r,
+\qquad
+L/\chi=4+10r,
+\qquad
+\varepsilon_*/\chi=\frac{r+1}{2},
+\]
+
+mit
+
+\[
+\boxed{3<r<4.}
+\]
+
+Damit reduziert jede Kollisionsgleichung des 100-Wand-Alphabets auf rationale lineare Ungleichungen in \(r\).
+
+---
+
+## 84. Exhaustive Paar-/Differenzzählung
+
+Aus 100 Labels entstehen
+
+\[
+\binom{100}{2}
+=
+\boxed{4950}
+\]
+
+ungeordnete Paare.
+
+Nach exakter Deduplikation bleiben
+
+\[
+\boxed{527}
+\]
+
+rohe Differenzsignaturen.
+
+Für das 100er Alphabet gilt
+
+\[
+|k|\le10
+\]
+
+für die \(\Delta\)-Differenzkoeffizienten.
+
+Auf
+
+\[
+3<r<4
+\]
+
+haben wir
+
+\[
+L/\chi>34,
+\qquad
+\Delta/\chi<9,
+\qquad
+\varepsilon_*/\chi<\frac52.
+\]
+
+Damit
+
+\[
+4\cdot34
+>
+10\cdot9
++
+6\cdot\frac52.
+\]
+
+Also können sämtliche Kreis-Wrapgleichungen mit
+
+\[
+\boxed{|q|\ge4}
+\]
+
+uniform ausgeschlossen werden.
+
+Nach diesem exakten Cutoff bleiben bei
+
+\[
+r_0=\frac72
+\]
+
+exakt
+
+\[
+\boxed{2659}
+\]
+
+kanonische Kollisionsgleichungen:
+
+\[
+\boxed{
+18_{\rm strict}
++
+18_{\rm closure}
++
+2623_{\rm outside}.
+}
+\tag{C2.10}
+\]
+
+---
+
+## 85. Entscheidender Befund: keine neuen Parameterhyperflächen
+
+Die 18 strict-interior Gleichungen des 100-Wand-Alphabets sind **exakt dieselben** wie beim alten 92-Wand-Alphabet.
+
+Ebenso sind die 18 closure-only Gleichungen exakt dieselben.
+
+Ferner wird für **jede** der 2659 Gleichungen geprüft, ob ihr Zielwert an einem der vier Simplexvertexwerte
+
+\[
+0,\quad
+\mu\varepsilon_*,
+\quad
+(\rho+\mu)\varepsilon_*,
+\quad
+(\rho+\mu+\nu)\varepsilon_*
+\]
+
+bei einem nichtidentischen rationalen Wert
+
+\[
+3<r<4
+\]
+
+anstoßen kann.
+
+Ergebnis:
+
+\[
+\boxed{
+\text{kein neuer kritischer }r\text{-Wert in }(3,4).
+}
+\tag{C2.11}
+\]
+
+Damit bleibt die Parameter-Kollisionsgeometrie vollständig unverändert:
+
+\[
+\boxed{
+18\text{ innere Hyperflächen}
+}
+\]
+
+und daher weiterhin
+
+\[
+\boxed{
+64\text{ offene Parameterkammern}.
+}
+\tag{C2.12}
+\]
+
+Die acht neuen Wrapwände verfeinern also die **Kreispartition**, nicht die Parameterkammerstruktur.
+
+Insbesondere sind in jeder offenen Parameterkammer alle 100 Boundarywerte paarweise verschieden und ihre Kreisordnung konstant.
+
+---
+
+## 86. Zertifikat C2-GATE1
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c2_gate1_collision_hyperplanes.py
+
+Vor Commit ausgeführter und anschließend direkt in den Git-Tree gepinnter Blob:
+
+69485b8e0d9f222521f6d8bd87ff6cf519e1e4bb
+
+Pin-Commit:
+
+ea256fb188d625e381e019bed6ade2c08c7b9ab7
+
+Ergebnis:
+
+SW1-A10-C2-GATE1 100-WALL COLLISION-HYPERPLANE CERTIFICATE: PASS
+
+Damit:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!GATE1}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, collision-hyperplane scope)}.
+}
+\]
+
+---
+
+## 87. GATE1-Firewall
+
+Noch nicht neu berechnet sind die **Labelpaar-Multiplizitäten** der 100 Labels auf
+
+- den 18 Hyperflächen,
+- deren Schnittstrata,
+- der erlaubten Randfläche \(\sigma=R\).
+
+Das ist keine neue Parameterhyperflächenfrage, sondern eine Boundary-Label-Ledgerfrage.
+
+Für eine a.e. Matrixform kann alternativ direkt mit den 100 symbolischen Gateindikatoren gearbeitet werden, ohne diese Nullmengen separat zu quotientieren.
+
+Noch nicht gebucht sind:
+
+\[
+M_{-3},\ldots,M_3.
+\]
+
+---
+
+## 88. Nächster Knoten
+
+Nach HUB0-COMP, GATE0 und GATE1 ist der nächste echte C2-Schritt:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!M0}:
+\text{direkter Lift-zu-Lift-Matrixledger für }j=-3,\ldots,3.
+}
+\]
+
+Dabei werden zunächst die Hubmatrizen
+
+\[
+M_j^{\rm hub}(\theta)
+\]
+
+aus den 36 HUB0-Sheetübergängen plus Liftselectoren aufgebaut und anschließend die freien A1-Matrizen
+
+\[
+M_j^{\rm free}(\theta)
+\]
+
+aus FREE0 und den A1-Rowkoeffizienten ergänzt.
+
+Erst wenn
+
+\[
+M_j=M_j^{\rm free}+M_j^{\rm hub}
+\]
+
+vollständig und exhaustiv vorliegt, wird die Operatorgleichung
+
+\[
+\widehat{\mathscr C}_R
+=
+\sum_{j=-3}^{3}
+M_j(\theta)U_\Delta^j
+\]
+
+gebucht.
+
+Keine Injektivitätsaussage.
