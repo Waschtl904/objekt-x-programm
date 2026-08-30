@@ -658,3 +658,231 @@ Der aktive Zielknoten bleibt
 C0 und C1-PROTO sind ausschließlich Reduktions-/Closure-Schritte.
 
 Keine Aussage über HT-RED, Objekt X oder RH.
+
+
+---
+
+# C1B0 — endliches gemeinsames Boundary-Alphabet
+
+## 14. Direkte Boundary-Quellen
+
+Für die gemeinsame Kreispartition werden zunächst die bereits zertifizierten direkten Gate-/Zellwände zusammengeführt.
+
+### 14.1 Freie/source-seitige Wände
+
+Aus A0/A1/A7/A9 ergibt sich ein endlicher Satz von
+
+\[
+\boxed{19}
+\]
+
+freien/source-seitigen Wandformen, darunter insbesondere:
+
+\[
+0,\ \varepsilon,\ a-\varepsilon,\ a+\varepsilon,\ 2d-\varepsilon,\ T-\varepsilon,
+\]
+
+\[
+\sigma,\ e+\sigma,\ a+\sigma,
+\]
+
+\[
+a\pm R,\ b\pm R,\ T\pm R,
+\]
+
+sowie die Zentren/Horizontwände
+
+\[
+a,\ b,\ T,\ T+\varepsilon.
+\]
+
+### 14.2 Annulus-\(t\)-Wände
+
+Der H2-Ledger besitzt exakt
+
+\[
+\boxed{12}
+\]
+
+direkte \(t\)-Wände:
+
+\[
+R,\ \varepsilon,\ e+\varepsilon,\ d,\ d+R,\ a,\ a+R,\ a+\varepsilon,
+\]
+
+\[
+b,\ T-R,\ T,\ T+\sigma.
+\]
+
+Die direkte Vereinigung beider Quellen besitzt
+
+\[
+\boxed{24}
+\]
+
+verschiedene symbolische Wandformen.
+
+---
+
+## 15. Vollständiger Pullback unter dem bekannten Operatoralphabet
+
+Für simultane Stückweise-Konstanz genügt es nicht, nur die direkten Wände zu schneiden.
+
+Wenn ein freier Operatorzweig
+
+\[
+x\mapsto \phi(x)
+\]
+
+aktiv ist, muss zusätzlich bekannt sein, wann sein Ziel eine andere physische/Gate-Zelle betritt. Deshalb werden die freien Wände unter allen gerichteten Master-Affintypen zurückgezogen.
+
+Ebenso wird für jeden H2-Kanal
+
+\[
+x(t)=s\,t+\lambda L+k\Delta
+\]
+
+jede freie Wand nach \(t\) zurückgezogen.
+
+Verwendet werden exakt:
+
+- die \(22\) Master-Affintypen aus C1-PROTO;
+- die \(19\) verschiedenen H2-Kanalsignaturen.
+
+Die vollständige one-step Pullback-Vereinigung besitzt vor Kreisreduktion
+
+\[
+\boxed{195}
+\]
+
+verschiedene symbolische Formen.
+
+Modulo \(L\) reduzieren sich diese auf
+
+\[
+\boxed{92}
+\]
+
+symbolische Kreisgrenzen.
+
+---
+
+## 16. Struktur aller 92 Kreisgrenzen
+
+Jede der 92 Formen besitzt die Gestalt
+
+\[
+\boxed{
+\theta
+=
+\frac{\eta}{2}L
++
+k\Delta
++
+\rho R
++
+\mu\varepsilon
++
+\nu\sigma
+\pmod L,
+}
+\tag{C1B.1}
+\]
+
+mit
+
+\[
+\eta\in\{0,1\},
+\qquad
+|k|\le4,
+\]
+
+und
+
+\[
+\rho,\mu,\nu\in\{-1,0,1\}.
+\]
+
+Damit ist bereits bewiesen:
+
+> Für die bisher vollständig auditierten A0/A1/A7/A9/H2-Operatorzweige existiert ein **endliches symbolisches Boundary-Alphabet auf \(\mathbb T_L\)**, das alle direkten Wände und alle one-step relevanten Pullbacks enthält.
+
+Es tritt keine zusätzliche irrationale Phase auf.
+
+---
+
+## 17. Zertifikat C1B0
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c1b_boundary_alphabet.py
+
+Commit:
+
+622432d0b7a579d73f076aee33ea9f7ac8f5916f
+
+Committed Script-Blob:
+
+15146ac9b887ec34ce328a56d07dbdfb59a2456c
+
+Der exakt committed GitHub-Inhalt wurde ausgeführt.
+
+Ergebnis:
+
+SW1-A10-C1B COMMON BOUNDARY-ALPHABET CERTIFICATE: PASS
+
+Damit ist zulässig:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1B0}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, boundary-alphabet scope)}.
+}
+\]
+
+---
+
+## 18. Warum dies noch nicht die fertige Partition ist
+
+Die \(92\) Formen sind ein **symbolisches Alphabet**, noch keine universell sortierte Folge von 92 verschiedenen Punkten.
+
+Je nach zulässigen Parametern können:
+
+1. zwei Formen zusammenfallen;
+2. ihre Ordnung wechseln;
+3. einzelne Formen an \(0\pmod L\) wrappen.
+
+Daher muss vor Bestimmung der tatsächlichen Atome die Parameterregion selbst nach sämtlichen möglichen Gleichheitswänden
+
+\[
+\theta_i=\theta_j\pmod L
+\]
+
+stratifiziert werden.
+
+Der nächste Knoten lautet deshalb präziser:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1B1}:
+\text{Kollisions-/Ordnungsstratifizierung der 92 Boundary-Signaturen}.
+}
+\]
+
+Erst danach kann auf jedem Parameterstratum der physische Fiberzustandsraum geschlossen und sein Rang bestimmt werden.
+
+---
+
+## 19. C1B0-Firewall
+
+C1B0 beweist **nicht**:
+
+- dass alle 92 Formen für jeden Parameterwert verschieden sind;
+- dass es stets 92 Kreisatome gibt;
+- dass die effektive Fiberdimension global konstant ist;
+- die Matrixdarstellung C2;
+- Injektivität.
+
+Es beweist nur die **endliche Exhaustivität des benötigten Boundary-Alphabets**.
