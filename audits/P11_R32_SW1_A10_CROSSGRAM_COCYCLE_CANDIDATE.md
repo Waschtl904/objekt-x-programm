@@ -3,7 +3,7 @@
 > **Stand:** 30. August 2026  
 > **Branch:** research/sw1-a10-crossgram-cocycle  
 > **Basis:** main@19da654f537868cd72757d2785071f8cf3f36c1b  
-> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1, C1B2A/B/C sowie C1C0-FORMAL im jeweils dokumentierten Scope zertifiziert. C1C1 besitzt ein zertifiziertes algebraisches/Faltungs-Skelett; die korrigierte analytische Hilbertraum-Fassung ist nach externem Cross-Model-Blindreview unabhängig GREEN im dokumentierten Scope. C2-HUB0/FREE0 sowie HUB0-COMP, GATE0 und GATE1 sind im jeweils explizit begrenzten endlichen/algebraischen Scope zertifiziert; die vollständigen Matrixfunktionen sind noch offen. Die frühere Deutung von Boundary-Kollisionen als Fiberquotienten wurde korrigiert. Keine Promotion.  
+> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1, C1B2A/B/C sowie C1C0-FORMAL im jeweils dokumentierten Scope zertifiziert. C1C1 besitzt ein zertifiziertes algebraisches/Faltungs-Skelett; die korrigierte analytische Hilbertraum-Fassung ist nach externem Cross-Model-Blindreview unabhängig GREEN im dokumentierten Scope. C2-HUB0/FREE0 sowie HUB0-COMP sind im jeweils explizit begrenzten Scope zertifiziert. Die frühere GATE0/GATE1-Zählung 92→100 wurde nach Klärung der HUB-Indexorientierung superseded; korrekt sind nun GATE0R/GATE1R mit dem operatororientierten 96-Wand-Alphabet. M0-HUB-SPEC ist zertifiziert; vollständige Liftmatrizen bleiben offen. Die frühere Deutung von Boundary-Kollisionen als Fiberquotienten wurde korrigiert. Keine Promotion.  
 > **Ziel:** den zu \(\ker\Gamma_I\) äquivalenten SW1-Operator auf der irrationalen H3-Rotationskomponente als endlichen operatorwertigen/finite-range Cocycle formulieren.
 
 ---
@@ -3971,6 +3971,10 @@ Keine Matrix- oder Injektivitätsaussage.
 
 ---
 
+# C2-GATE0 — HISTORISCH / SUPERSEDED
+
+> **Nicht mehr kanonisch für M0.** Dieser Abschnitt verwendete bei den HUB-Input-Wrapselectoren noch die HUB0-Input→Output-Displacementrichtung. Die physische 76→46-Deduplikation bleibt gültig; die Schlussfolgerung 92→100 wird durch C2-GATE0R ersetzt.
+
 # C2-GATE0 — symmetrische Cover-Wandclosure
 
 ## 79. Was durch die Annulus-Vervierfachung neu geprüft werden muss
@@ -4172,6 +4176,10 @@ Damit:
 \]
 
 ---
+
+# C2-GATE1 — HISTORISCH / SUPERSEDED
+
+> **Nicht mehr kanonisch für M0.** Dieser Abschnitt klassifiziert das aus der alten HUB-Orientierung entstandene 100-Wand-Alphabet. Er wird durch C2-GATE1R auf dem korrekten 96-Wand-Alphabet ersetzt.
 
 # C2-GATE1 — Kollisionsgeometrie des 100-Wand-Alphabets
 
@@ -4475,5 +4483,499 @@ M_j(\theta)U_\Delta^j
 \]
 
 gebucht.
+
+Keine Injektivitätsaussage.
+
+
+---
+
+# C2-M0-HUB-SPEC — Operatororientierung der Hubverschiebungen
+
+## 89. Zwei verschiedene \(j\)-Konventionen
+
+HUB0 wurde als Input→Output-Relation konstruiert:
+
+\[
+\text{output base}
+=
+\text{input base}
++
+j_{\rm disp}\Delta.
+\]
+
+Für die endgültige Matrixkonvention
+
+\[
+(\widehat{\mathscr C}F)(\theta)
+=
+\sum_j M_j(\theta)F(\theta+j\Delta)
+\]
+
+wird dagegen der Input bei festem Output benötigt:
+
+\[
+\text{input base}
+=
+\text{output base}
++
+j_{\rm op}\Delta.
+\]
+
+Daher muss bei Inversion derselben Relation gelten
+
+\[
+\boxed{
+j_{\rm op}=-j_{\rm disp},
+}
+\]
+
+wobei gleichzeitig Input- und Output-Spezies vertauscht werden.
+
+Die Reichweite
+
+\[
+|j|\le3
+\]
+
+bleibt davon unberührt, aber die Zuordnung zu den einzelnen Matrizen \(M_j\) hängt an dieser Orientierung.
+
+---
+
+## 90. Exakte operatororientierte Hubtabelle
+
+Die 36 physischen Sheet/Parity-Übergänge werden direkt erneut aus
+
+\[
+x=s\,t+\lambda L+k\Delta
+\]
+
+durch Auflösen nach
+
+\[
+t
+=
+s\,x-s\lambda L-sk\Delta
+\]
+
+hergeleitet.
+
+Ergebnis:
+
+\[
+\boxed{
+36
+}
+\]
+
+operatororientierte Hub-Species-Regeln.
+
+Die Shiftverteilung lautet exakt:
+
+\[
+\boxed{
+\begin{array}{c|rrrrrr}
+j&-3&-2&-1&1&2&3\\
+\hline
+\#&2&12&4&4&12&2
+\end{array}
+}
+\tag{C2.13}
+\]
+
+und die gesamte neue Tabelle ist exakt die inverse Relation zur alten HUB0-Tabelle.
+
+Damit ist ab jetzt für M0 ausschließlich \(j_{\rm op}\) maßgeblich.
+
+---
+
+## 91. Zertifikat C2-M0-HUB-SPEC
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c2_m0_hub_species.py
+
+Commit:
+
+89ee88066baaa11efc764d45076665c6252a6039
+
+Vor Commit exakt ausgeführter Blob:
+
+e2c7598f6246fd6636751e31caa21f22b525af64
+
+Ergebnis:
+
+SW1-A10-C2-M0-HUB-SPEC OPERATOR-ORIENTATION CERTIFICATE: PASS
+
+Damit:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!M0\!-\!HUB\!-\!SPEC}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, species/orientation scope)}.
+}
+\]
+
+---
+
+# C2-GATE0R — korrigierte operatororientierte Boundary-Closure
+
+## 92. Warum 92→100 zurückgenommen wird
+
+Der erste GATE0-Ledger verwendete für FREE korrekt die Operatorrichtung, für HUB jedoch noch die Input→Output-Displacementrichtung aus HUB0.
+
+Bei einer Input-Lift-Selectorwand der Form
+
+\[
+\phi_{g_{\rm in}}(\theta+j\Delta)=0\pmod L
+\]
+
+muss \(j\) bereits der operatororientierte Inputshift sein.
+
+Nach Korrektur ergeben sich:
+
+### FREE
+
+\[
+\boxed{18}
+\]
+
+Input-Wrapselectorwände.
+
+### HUB
+
+\[
+\boxed{14}
+\]
+
+operatororientierte Input-Wrapselectorwände, und sogar
+
+\[
+\boxed{
+\mathcal W_{\rm HUB}^{\rm op}
+\subset
+\mathcal W_{\rm FREE}^{\rm op}.
+}
+\tag{C2.14}
+\]
+
+Die einzigen neuen Wände gegenüber \(B_{92}\) sind nun
+
+\[
+\boxed{
+\frac{\eta}{2}L+k\Delta,
+\qquad
+\eta\in\{0,1\},
+\quad
+k\in\{5,6\}.
+}
+\tag{C2.15}
+\]
+
+Also exakt vier neue Wände und damit
+
+\[
+\boxed{
+92\longrightarrow96.
+}
+\tag{C2.16}
+\]
+
+Die früher zusätzlich erschienenen Werte
+
+\[
+k=-3,\qquad k=7
+\]
+
+waren Artefakte der falschen HUB-Orientierung im Selector-Ledger.
+
+---
+
+## 93. Physische 76→46-Deduplikation bleibt gültig
+
+Unabhängig von dieser Orientierung erzeugen die 19 physischen A1-Wände unter vier Sheet/Parity-Pullbacks
+
+\[
+19\cdot4=76
+\]
+
+gelabelte Vorkommen.
+
+Nach exakter symbolischer Deduplikation:
+
+\[
+\boxed{46}
+\]
+
+verschiedene Kreisbilder.
+
+Die vollständige Multiplizitätsverteilung ist
+
+\[
+\boxed{
+32_{\times1},
+\quad
+4_{\times2},
+\quad
+4_{\times3},
+\quad
+6_{\times4}.
+}
+\]
+
+Daher
+
+\[
+32+8+12+24=76
+\]
+
+und der Duplikatüberschuss ist exakt
+
+\[
+76-46=30.
+\]
+
+Alle 46 liegen in \(B_{92}\).
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c2_gate0a_sheet_multiplicity.py
+
+Commit:
+
+6fb7e8991e39d107500989582a0490b5cc919e79
+
+Blob:
+
+3a5dedf59e74e1fc29c43d7c5049ed7973c79371
+
+Ergebnis:
+
+SW1-A10-C2-GATE0A PHYSICAL-SHEET IMAGE MULTIPLICITY CERTIFICATE: PASS
+
+---
+
+## 94. Zertifikat C2-GATE0R
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c2_gate0r_operator_boundary.py
+
+Commit:
+
+d99e9b7490f053454cd0dfcd409e8fd6a69f5538
+
+Vor Commit exakt ausgeführter und danach byteidentisch gepinnter Blob:
+
+4c1a1a8e74451270ff5afda81dba2c932510b8a9
+
+Ergebnis:
+
+SW1-A10-C2-GATE0R OPERATOR-ORIENTED BOUNDARY CERTIFICATE: PASS
+
+Damit ist die alte GATE0-Statusbuchung **zurückgezogen/superseded**.
+
+Kanonisch gilt:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!GATE0R}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, operator-boundary scope)}.
+}
+\]
+
+---
+
+# C2-GATE1R — Kollisionsgeometrie des korrekten 96-Wand-Alphabets
+
+## 95. Vollständige Neuberechnung
+
+Aus
+
+\[
+96
+\]
+
+Boundary-Labels entstehen
+
+\[
+\binom{96}{2}
+=
+\boxed{4560}
+\]
+
+Paare.
+
+Nach Deduplikation:
+
+\[
+\boxed{503}
+\]
+
+rohe Differenzsignaturen.
+
+Der gleiche exakte Cutoff
+
+\[
+|q|<4
+\]
+
+gilt weiterhin.
+
+Danach bleiben bei
+
+\[
+r_0=\frac72
+\]
+
+exakt
+
+\[
+\boxed{2539}
+\]
+
+kanonische Gleichungen:
+
+\[
+\boxed{
+18_{\rm strict}
++
+18_{\rm closure}
++
+2503_{\rm outside}.
+}
+\tag{C2.17}
+\]
+
+---
+
+## 96. Starke Mengengleichheit, nicht nur Kardinalität
+
+Das Zertifikat prüft explizit:
+
+\[
+\boxed{
+S_{96}=S_{92},
+\qquad
+C_{96}=C_{92}.
+}
+\tag{C2.18}
+\]
+
+Nicht nur
+
+\[
+|S_{96}|=|S_{92}|=18.
+\]
+
+Im committed Code stehen zusätzlich die symmetrischen Differenztests
+
+\[
+S_{96}\setminus S_{92}
+=
+S_{92}\setminus S_{96}
+=
+\varnothing,
+\]
+
+\[
+C_{96}\setminus C_{92}
+=
+C_{92}\setminus C_{96}
+=
+\varnothing.
+\]
+
+Damit ist ausgeschlossen, dass eine alte Hyperfläche verschwindet und durch eine neue ersetzt wird.
+
+Ferner gibt es weiterhin keinen nichtidentischen Simplexvertex-kritischen Wert
+
+\[
+3<r<4.
+\]
+
+Also bleibt die Parameteranordnung exakt:
+
+\[
+\boxed{
+18\text{ innere Hyperflächen},
+\qquad
+64\text{ offene Kammern}.
+}
+\tag{C2.19}
+\]
+
+---
+
+## 97. Zertifikat C2-GATE1R
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c2_gate1r_96_collision_hyperplanes.py
+
+Commit:
+
+d99e9b7490f053454cd0dfcd409e8fd6a69f5538
+
+Vor Commit exakt ausgeführter und danach byteidentisch gepinnter Blob:
+
+0e03c04f239d87f900529837f26335868fc8723b
+
+Ergebnis:
+
+SW1-A10-C2-GATE1R 96-WALL COLLISION-HYPERPLANE CERTIFICATE: PASS
+
+Damit ist die alte 100-Wand-GATE1-Buchung **zurückgezogen/superseded**.
+
+Kanonisch gilt:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!GATE1R}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, 96-wall parameter-geometry scope)}.
+}
+\]
+
+---
+
+## 98. M0-Firewall nach der Orientierungskorrektur
+
+Aktueller kanonischer Stand:
+
+\[
+\boxed{
+B_{\rm matrix}=B_{96}.
+}
+\]
+
+Die sieben möglichen Operatorlagen bleiben
+
+\[
+j=-3,-2,-1,0,1,2,3.
+\]
+
+Die Hubmatrix benutzt die operatororientierte Tabelle aus M0-HUB-SPEC.
+
+Noch offen:
+
+1. der vollständige 108-Regel-Hub-Liftselector;
+2. der freie Lift-/A1-Koeffizientenledger;
+3. die zusammengesetzten \(12\times24\)-Matrizen \(M_j(\theta)\).
+
+Ein erster Versuch des 108-Regel-Hub-Liftzertifikats ist **FAIL** gelaufen, weil dort zunächst noch die alte 18-Wrap-Annahme für HUB übernommen war. Dieses FAIL wurde nicht committed und nicht gebucht.
+
+Der nächste korrekte Schritt ist daher:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!M0\!-\!HUB\!-\!LIFT}:
+\text{108 operatororientierte Hub-Liftregeln auf }B_{96}.
+}
+\]
 
 Keine Injektivitätsaussage.
