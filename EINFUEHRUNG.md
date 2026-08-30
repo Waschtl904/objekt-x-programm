@@ -1,10 +1,7 @@
 # Das Objekt-X-Programm — Eine verständliche Einführung
 
-> **Stand: 7. August 2026 — nach NEU-250k/l.**  
-> Diese Datei ersetzt keine formalen Definitionen. Sie beschreibt das Programm so,
-> wie es sich nach dem aktuellen Forschungsstand darstellt — nicht historisch.  
-> Formale Grundlage: [`EINSTIEGSPROMPT.md`](EINSTIEGSPROMPT.md), [`KARTE.md`](KARTE.md),
-> [`STATUS.md`](STATUS.md).
+> **Textbasis:** 7. August 2026 — nach NEU-250k/l.  
+> **Konsolidierung 30. August 2026:** Die allgemeine Motivation bleibt als Einführung nützlich, aber route-spezifische Aussagen des August-7-Texts sind historisch. Die operative Front steht in [`CURRENT-FRONT.md`](CURRENT-FRONT.md); die aktuelle Objekt-X-Definition in [`00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md). Aktiver Kern ist Roadmap A, \(\ker\Gamma_I=\{0\}\ ?[O]\).
 
 ---
 
