@@ -5,6 +5,8 @@ on:
     branches:
       - research/sw1-a10-crossgram-cocycle
     paths:
+      - scripts/certify_sw1_a10_c1b2a_affine_chirotope.py
+      - scripts/certify_sw1_a10_c2_gate1r_96_collision_hyperplanes.py
       - scripts/certify_sw1_a10_c2_m1_full_b96.py
       - .github/workflows/sw1-a10-m1-full-cert.yml
 
@@ -24,10 +26,27 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install exact certificate dependency
+        run: |
+          python -m pip install --disable-pip-version-check sympy==1.14.0
+          python - <<'PY'
+          import platform, sympy
+          print(platform.python_version())
+          print(sympy.__version__)
+          PY
+
       - name: Show provenance
         run: |
           git rev-parse HEAD
+          git hash-object scripts/certify_sw1_a10_c1b2a_affine_chirotope.py
+          git hash-object scripts/certify_sw1_a10_c2_gate1r_96_collision_hyperplanes.py
           git hash-object scripts/certify_sw1_a10_c2_m1_full_b96.py
+
+      - name: Run exact committed C1B2A AFF-CHIRO hardening
+        run: python scripts/certify_sw1_a10_c1b2a_affine_chirotope.py
+
+      - name: Run exact committed C1B2A GATE1R circle hardening
+        run: python scripts/certify_sw1_a10_c2_gate1r_96_collision_hyperplanes.py
 
       - name: Run exact committed M1-FULL certificate
         run: python scripts/certify_sw1_a10_c2_m1_full_b96.py
