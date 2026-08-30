@@ -1,5 +1,19 @@
 # Aktueller Stand — P11-Sonderupdate 2026-08-21
 
+> **Konsolidierungsupdate 2026-08-30:** Der Post-Freeze-Frontstand liegt nun auf
+> \`main@6ac0141b2de3a0b2af98fff6d11c403fe3b379b6\` nach Squash-Merge PR #34.
+> C1B2A-CHIRO und C1B2A-TRANSFER sind im dokumentierten Scope \`✓[M]\`;
+> M1-RAW und M1-FULL(7/2) sind kanonische reproduzierbare Certificate-Ergebnisse,
+> und daraus folgt kanonisch M1-FULL(\(r\)) für \(3<r<4\) auf offenen
+> Parameterkammern/Kreisatomen. Der nächste aktive mathematische Kern ist nicht mehr
+> die C-seitige Matrixkonstruktion, sondern Roadmap A:
+> \(\ker\Gamma_I=\{0\}\ ?[O]\) bzw. die äquivalente Preimage-Form.
+> Kanonische Statusreferenzen:
+>
+> - [`ACTIVE_THEOREM_REGISTRY.md`](ACTIVE_THEOREM_REGISTRY.md)
+> - [`P11_R32_STATUS_2026-08-25.md`](P11_R32_STATUS_2026-08-25.md), Update 2026-08-30
+> - [`FORSCHUNGS_ROADMAP_2026-08-26.md`](FORSCHUNGS_ROADMAP_2026-08-26.md), Teil A
+>
 > **Konsolidierungsupdate 2026-08-26:** Der aktuelle Objekt-X- und P11/R32-Forschungsstand
 > liegt inzwischen **nach** diesem P11-Freeze-Snapshot. P11 selbst bleibt FROZEN; die
 > Post-Freeze-Front arbeitet an FG-1/FG-TR1/CG-FG1 und am offenen Schur-Test
