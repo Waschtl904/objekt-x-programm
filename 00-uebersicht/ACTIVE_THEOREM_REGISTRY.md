@@ -1,7 +1,7 @@
 # Active Theorem Registry
 
-> **Stand:** 29. August 2026  
-> **Repo-Basis:** \`main@6ff2598d6071fc1fd9444d3f9734384c23264834\` (mathematische Merge-Basis nach PR #19–#28)  
+> **Stand:** 30. August 2026  
+> **Repo-Basis:** \`main@eb1f56a6b7c00cbdfed6368d0ec282162e542654\` (mathematische Merge-Basis nach PR #29–#33; keine neue Promotion)  
 > **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11/R32-SW1-/Schur-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
 > **Nicht-Zweck:** Ersatz für \`STATUS.md\`, \`OFFENE_PROBLEME.md\`, die Papers oder Promotionsrecords.
 
@@ -77,15 +77,20 @@ T<S=T+\sigma<T_0=T+\varepsilon<c,
 | **SW1-Δ-DESCENT** | ?[O] als Gesamtknoten; Stages 1/2–12 im expliziten endlichen Scope AI-GREEN + **independent GREEN (certificate)** | äußere Δ-Schalen, reflektierte B-Zentrum-Geometrie und innerer KNF-Sample-Summand wurden stufenweise geschlossen; der blinde Summand \(\mathcal Z_R^+\) und damit der Gesamt-Descent bleiben offen | audits/P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md und zugehörige Zertifikate; PR #19, Squash-Merge 3033a5062cfe799772b0faa564d078d5d6792337 | gemergter Kandidatenstrang; **keine Promotion**, kein HT-RED |
 | **SW1-A0** | AI-GREEN candidate + **independent GREEN (certificate)** — keine Promotion | exhaustive Full Free-Coordinate Coverage von \(\mathcal Z_R^+\oplus L^2(\mathcal V_R^{SW1})\), einschließlich Horizontschwanz | audits/P11_R32_SW1_A0_COVERAGE_CANDIDATE.md; Zertifikat scripts/certify_sw1_a0_coverage.py; PR #20, Squash-Merge db6251a2e9dd3dfa0d665c725b26c4aabe2de73c | Coverage, **nicht** Injektivität |
 | **SW1-A1** | AI-GREEN candidate + **independent GREEN (certificate)** — keine Promotion | vollständiges operatorwertiges finite-cell Rohsystem der ersten augmentierten Gleichung; finite cells \(\neq\) finite Dimension | audits/P11_R32_SW1_A1_FINITE_CELL_RAW_OPERATOR_CANDIDATE.md; Zertifikat scripts/certify_sw1_a1_raw_archetypes.py; PR #21, Squash-Merge 1aa6942f0b5acbcd9cc9f898cf3f8102db00f956 | Rohoperator, keine Injektivität |
-| **SW1-A2** | AI-GREEN candidate — **kein independent GREEN**, keine Promotion | kanonische schiefe Annulusprojektion \(Q_{\mathscr T,K}\) und exakte Schur-Kernelreduktion | audits/P11_R32_SW1_A2_ANNULUS_PROJECTION_CANDIDATE.md; PR #22, Squash-Merge 8e2d4eb7c5d78320e8ebc218c26c4fb1ae0e004d | korrekte Operatorreduktion; keine Injektivität |
-| **SW1-A3** | AI-GREEN candidate — **kein independent GREEN**, keine Promotion | positiver freier Gramoperator \(\mathfrak G_R=J_R^*(I+A)J_R\), Coercivität und Identität \(G^{-1}P_K=J_R\mathfrak G_R^{-1}J_R^*\) | audits/P11_R32_SW1_A3_FREE_COORDINATE_GRAM_CANDIDATE.md; PR #23, Squash-Merge 934c48a96ce52a4b9fd300a2d1ad7261112565dd | Ausgangspunkt der freien Gramgraph-Analyse |
+| **SW1-A2** | AI-GREEN candidate + **independent GREEN (certificate, algebraic/mechanical scope)** — keine Promotion | kanonische schiefe Annulusprojektion \(Q_{\mathscr T,K}\), exakte Schur-Kernelreduktion und Cross-Gram-Reconciliation; unendlichdimensionale Hilbertraumschritte separat adversarial auditiert | audits/P11_R32_SW1_A2_ANNULUS_PROJECTION_CANDIDATE.md; Zertifikat scripts/certify_sw1_a2_annulus_projection.py; PR #29, Squash-Merge 1b2fc769b00d5b0dfe3c4bd9b4e4ec53617158c9 | korrekte Operatorreduktion; **keine Injektivität** |
+| **SW1-A3** | AI-GREEN candidate + **independent GREEN (certificate, algebraic/mechanical scope)** — keine Promotion | positiver freier Gramoperator \(\mathfrak G_R=J_R^*(I+A)J_R\), Coercivität, Variationsform und Identität \(G^{-1}P_K=J_R\mathfrak G_R^{-1}J_R^*\); Hilbertraumteil separat auditiert | audits/P11_R32_SW1_A3_FREE_COORDINATE_GRAM_CANDIDATE.md; Zertifikat scripts/certify_sw1_a3_free_gram.py; PR #30, Squash-Merge e877834babf2fe551e4f13b2b6ce89bb917d743f | Ausgangspunkt der freien Gram-/Residualanalyse |
 | **SW1-A4** | AI-GREEN candidate + **independent GREEN (certificate)** — keine Promotion | oberer Chamber: irrationale Rotation als Strategieno-go gegen exhaustive finite physische Punktorbits; kein No-Go gegen Schur-Injektivität | audits/P11_R32_SW1_A4_IRRATIONAL_ROTATION_NOGO_CANDIDATE.md; PR #24, Squash-Merge 637e63d23540bc4d7498fd5a7df30056be035eed | obere-Chamber Struktur |
 | **SW1-A5** | AI-GREEN candidate + **independent GREEN (certificate)** — keine Promotion | Zwei-Blatt-Transfer modulo \(L=a-\Delta\); keine dritte irrationale Phase | audits/P11_R32_SW1_A5_TWO_SHEET_TRANSFER_CANDIDATE.md; PR #25, Squash-Merge 99d853c211ec17e657ede78af791c6a600a875e5 | finite Blätter über irrationaler Basis |
 | **SW1-A6** | AI-GREEN candidate + **independent GREEN (certificate)** — keine Promotion | unterer Chamber: A4-Rotationsmechanismus mit offenem Hole, endliche kontrahierte Segmente | audits/P11_R32_SW1_A6_ROTATION_HOLE_CANDIDATE.md; PR #26, Squash-Merge f7bad5ad9945d9815251d027d694c5f4e4d0b564 | nur Rotationssubgraph |
 | **SW1-A7** | AI-GREEN candidate + **independent GREEN (certificate)** — keine Promotion | vollständiger roher A1-Punktgraph als 6-State-, Range-3-Cocycle über einer irrationalen Kreisrotation | audits/P11_R32_SW1_A7_FINITE_STATE_COCYCLE_CANDIDATE.md; PR #27, Squash-Merge b978ac426eb0c4e268237f90ada863086d030500 | finite-state Reduktion |
-| **SW1-A8** | AI-GREEN candidate + **independent GREEN (certificate)** — keine Promotion | für \(0<\varepsilon<\Delta/2\) sind alle Zusammenhangskomponenten des vollständigen **rohen A1-Punktgraphen** endlich; 20 mittlere Zustände, 180 Source-Map-Fälle, exakt 10 Cross-Kandidaten, alle inaktiv | audits/P11_R32_SW1_A8_LOWER_FINITE_COMPONENTS_CANDIDATE.md; Zertifikat scripts/certify_sw1_a8_lower_finite_components.py; PR #28, Squash-Merge 6ff2598d6071fc1fd9444d3f9734384c23264834 | A8-Separator gilt **nicht automatisch** nach KNF-\(J_R\)-Rekonstruktion |
+| **SW1-A8** | AI-GREEN candidate + **independent GREEN (certificate)** — keine Promotion | rohe A1-Komponenten für \(0<\varepsilon<\Delta/2\) endlich; punktweiser Separator midpoint-korrigiert auf \(S_\varepsilon^{\rm reg}\); globale Sheet-Kollisionen durch den Involutionsquotienten \(J_{K,\delta}\) behandelt | audits/P11_R32_SW1_A8_LOWER_FINITE_COMPONENTS_CANDIDATE.md; supplemental certificates scripts/certify_sw1_a8_midpoint_degeneracy_fix.py und scripts/certify_sw1_sheet_collision_quotient.py; PR #31, Squash-Merge cb2d8a4c766e53f49bf2ed590be2222672c606aa | physische Endlichkeit bleibt gültig; direkter A8-Separator gilt nicht automatisch nach KNF-\(J_R\) |
 
-**Firewall:** `AI-GREEN candidate` allein ist ausdrücklich **kein** `independent GREEN` und **kein** `✓[M]`. SW1-2TP, SW1-AWI, A0, A1 und A4–A8 tragen `independent GREEN (certificate)` im jeweils explizit dokumentierten Scope; A2/A3 nicht. Der Gesamt-Δ-DESCENT bleibt `?[O]`, obwohl seine endlichen Teilstufen zertifiziert sind. Die Perplexity-Blindchecks erzeugen weiterhin kein `independent GREEN (cross-model)` für 2TP/AWI. **Keiner der Merges #19–#28 erzeugt eine formale Promotion.**
+| **SW1-A9** | \`?[O]\` gesamt; J0/J1/FS/DOM und **SEP-SMALL** AI-GREEN + **independent GREEN (certificate)**; BYPASS(part) zertifiziert | vollständige KNF-Gram-Kanten-/Gate-Algebra; im kleinen unteren Subchamber \(0<\varepsilon<(6\Delta-L)/4\) endliche physische KNF-Punktkomponenten; auf anderem offenem Teilgebiet existiert ein regulärer KNF-Bypass, Gesamtklassifikation bleibt offen | audits/P11_R32_SW1_A9_KNF_SEPARATOR_STABILITY_CANDIDATE.md; PR #32, Squash-Merge 70be6437332f094746962769f5ae00a3f5ac40ef | freie Gramgraph-Geometrie weitgehend reduziert; **keine** Schur-/Cross-Gram-Injektivität |
+| **SW1-A10-H0/H1/H2/H3-COVER** | AI-GREEN candidate + **independent GREEN (certificate)** im jeweils dokumentierten endlichen/algebraischen Scope | Hub-Phasenalgebra; explizite Separator-Bridge; vollständiger aggregierter Hubledger \(11\) Zellen, \(53\) Kanäle, \(22\) affine Bridge-Typen; kanonisches H2-only-Rotationscover auf \(J=(0,L)\) | audits/P11_R32_SW1_A10_FINITE_CROSSGRAM_FIBER_CANDIDATE.md und zugehörige Zertifikate; PR #33, Squash-Merge eb1f56a6b7c00cbdfed6368d0ec282162e542654 | zeigt, warum freie A9-Endlichkeit nicht auf den augmentierten Hubgraphen übergeht |
+| **SW1-A10-H3-INF** | AI-GREEN + **independent GREEN (cross-model blind review)** — keine Promotion | im kleinen unteren Subchamber existiert mindestens **eine unendliche physische augmentierte free-\(w\)-Hub-Inzidenzkomponente**; nichtkonstruktive Wahl von \(x_0\); basiert auf kanonischem H3-Cover und \(\Delta/L\notin\mathbb Q\) | audits/P11_R32_SW1_A10_FINITE_CROSSGRAM_FIBER_CANDIDATE.md; Reviewpaket audits/P11_R32_SW1_A10_H3_INF_REVIEW_PACKET.md; Irrationalitätslemma audits/P11_R32_SW1_DELTA_OVER_L_IRRATIONALITY_LEMMA.md; PR #33, Squash-Merge eb1f56a6b7c00cbdfed6368d0ec282162e542654 | No-Go gegen Zerlegung **nach endlichen Graphkomponenten**; weder \(\ker\Gamma_I=0\) noch \(\ker\Gamma_I\neq0\) |
+| **SW1-A10 gesamt** | \`?[O]\` | operatorwertiger Residual-/Cross-Gram-Cocycle auf der irrationalen Rotationskomponente noch nicht formuliert/entschieden | aktive nächste Front | direkter Weg zurück zur Roadmap-A-Frage \(\ker\Gamma_I=\{0\}?\) |
+
+**Firewall:** `AI-GREEN candidate` allein ist ausdrücklich **kein** `independent GREEN` und **kein** `✓[M]`. A2/A3 tragen jetzt `independent GREEN (certificate, algebraic/mechanical scope)` zusätzlich zum separaten Hilbertraumreview. A9 bleibt als Gesamtknoten `?[O]`; A10-H3-INF ist unabhängig blindgeprüft ausschließlich im Existenzscope einer unendlichen augmentierten Inzidenzkomponente. Der Gesamt-Δ-DESCENT bleibt `?[O]`. **Keiner der Merges #19–#33 erzeugt eine formale Promotion oder eine Aussage über den Wert von \(\ker\Gamma_I\).**
 
 ---
 
@@ -104,11 +109,12 @@ Mit HT-A4b-SW1-M nun \(\checkmark[M]\) ist der SW1-Membership-Baustein der Kette
 
 | Knoten | Status | Exakte Rolle |
 |---|---|---|
-| **A9-KNF Separatorstabilität** | ?[O] — **aktiver nächster Knoten** | Bestimmen, welche zusätzlichen freien Koordinatenkanten durch \(J_R^*J_R\) und \(J_R^*AJ_R\) entstehen, identische affine Kanäle vor dem Graphurteil algebraisch zusammenfassen und entscheiden, ob die A8-Separatoren erhalten bleiben oder ein expliziter KNF-Bypass entsteht. |
-| **SW1-Δ-DESCENT gesamt** | ?[O] | Die zertifizierten Stages 1/2–12 schließen große endliche Teilgeometrien, aber nicht automatisch den gesamten blinden Summanden \(\mathcal Z_R^+\). |
-| **HT-A4b global chamber exhaustivity** | ?[O] | globale zehn-Flächen-/15-Chamber-Exhaustivität bleibt offen; für den SW1-Angriff derzeit nicht Priorität |
-| **HT-RED** | ?[O] | vollständige Tail-Gaussian-/Schur-Elimination des Restblocks offen |
-| **SCHUR CROSS-GRAM INJECTIVITY** | ?[O] | \(\ker\Gamma_I=\{0\}\) bzw. äquivalente Transversalitätsform auf geeigneten P12-Injektivitätsstrata |
+| **A10 operatorwertiger Residual-/Cross-Gram-Cocycle** | \`?[O]\` — **aktiver nächster Knoten** | Den von \(\mathcal L_{\rm ann}^{SW1}\) auf der H3-Irrationalitätskomponente induzierten finite-state/operatorwertigen Cocycle explizit formulieren und auf Injektivität, kohomologische Gleichungen oder Obstruktionen untersuchen. |
+| **A9-KNF Gesamtklassifikation** | \`?[O]\` | SEP-SMALL ist zertifiziert und ein partieller Bypass existiert; der komplementäre untere Bereich und der obere Chamber sind nicht vollständig klassifiziert. Für Roadmap A ist A9 derzeit nicht der primäre Engpass. |
+| **SW1-Δ-DESCENT gesamt** | \`?[O]\` | Die zertifizierten Stages 1/2–12 schließen große endliche Teilgeometrien, aber nicht automatisch den gesamten blinden Summanden \(\mathcal Z_R^+\). |
+| **HT-A4b global chamber exhaustivity** | \`?[O]\` | globale zehn-Flächen-/15-Chamber-Exhaustivität bleibt offen; für den SW1-Angriff derzeit nicht Priorität |
+| **HT-RED** | \`?[O]\` | vollständige Tail-Gaussian-/Schur-Elimination des Restblocks offen |
+| **SCHUR CROSS-GRAM INJECTIVITY** | \`?[O]\` | \(\ker\Gamma_I=\{0\}\) bzw. äquivalente Transversalitätsform auf geeigneten P12-Injektivitätsstrata |
 | **Objekt X** | offen | noch keine konstruierte globale gemeinsame Weil-Gram-Geometrie |
 | **RH** | offen | keine Folgerung aus den obigen Kandidaten |
 
@@ -158,25 +164,43 @@ Der aktuelle operative Pfad ist:
 \to
 \text{A8}
 \to
-\text{A9-KNF}
+\text{A9}
+\to
+\text{A10-H0/H1/H2/H3}
+\to
+\text{A10-Cocycle}
 }
 \]
 
-A8 schließt im unteren Chamber den **rohen A1-Punktgraphen** zu endlichen Komponenten. Der nächste Engpass ist nicht mehr A8, sondern die Frage, ob die KNF-Rekonstruktion \(J_R\) diese Separatoren im freien Gramoperator
+A9 zeigt im kleinen unteren Subchamber endliche **freie KNF-Punktkomponenten**, aber A10-H1/H2 beweisen, dass gemeinsame Annulusvariablen diese freien Komponenten wieder verbinden können.
+
+A10-H3-COVER realisiert auf dem freien physischen Band
 
 \[
-\mathfrak G_R=J_R^*(I+A)J_R
+J=(0,L)
 \]
 
-überbrückt.
+eine kanonisch ausgewählte irrationale Rotation
 
-Der bisherige A9-Strukturkandidat zeigt:
 \[
-e=L/2,\qquad d=L/2+\Delta,
+x\mapsto x+\Delta\pmod L.
 \]
-also eine endliche Halbperioden-Parität über derselben irrationalen \(\Delta\)-Rotation und keine neue unabhängige irrationale Phase. Das entscheidet die Separatorfrage noch nicht.
 
-**Firewall:** A0–A8 auf main bedeutet weder HT-RED noch Schur-Injektivität noch eine Promotion. A2/A3 bleiben ausdrücklich ohne independent GREEN.
+Zusammen mit dem eigenständigen Lemma
+
+\[
+\Delta/L\notin\mathbb Q
+\]
+
+und dem unabhängigen Blindreview von H3-INF steht im dokumentierten kleinen unteren Subchamber die Existenz mindestens einer **unendlichen physischen augmentierten Hub-Inzidenzkomponente**.
+
+Damit ist eine Zerlegung des Cross-Gram-Problems allein nach **endlichen Graphkomponenten** dort kein zulässiger Default mehr. Der nächste mathematische Gegenstand ist der operatorwertige Residual-/Cross-Gram-Cocycle auf dieser irrationalen Rotationskomponente.
+
+**Firewall:** Dies ist kein Beweis für oder gegen
+\[
+\ker\Gamma_I=\{0\}.
+\]
+Eine unendliche Komponente kann einen injektiven Operator tragen. Keine Promotion, kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
 
 ---
 
