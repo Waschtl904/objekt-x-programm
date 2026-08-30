@@ -3449,3 +3449,384 @@ Damit entsteht als C2-Arbeitscover
 Dies ist **keine neue physische Fiberdimension** und keine Änderung des Operators, sondern eine redundante symmetrische Darstellung für einen reinen endlichen \(\Delta\)-Rotationsledger.
 
 Die Minimalität dieses 12er Annuluscovers ist noch nicht gebucht; zunächst wird nur seine Closure geprüft.
+
+
+---
+
+# C2-0 — physischer affine Cocycle-Skeleton
+
+## 67. Scope-Korrektur: C2 beginnt vor der KNF-Rückprojektion
+
+Für die physische Reparametrisierung
+
+\[
+\widetilde{\mathscr C}_R(y,w)
+=
+(I+A)y+HE_{\mathcal A}w
+\]
+
+ist der direkte Hubblock
+
+\[
+HE_{\mathcal A},
+\]
+
+nicht
+
+\[
+J_R^*HE_{\mathcal A}.
+\]
+
+Der H2-53-Kanalledger gehört bereits zur freien KNF-Rückprojektion und darf deshalb nicht als direkte C2-Hubmatrix übernommen werden.
+
+C2 verwendet für den Hub zunächst die neun positiven odd-folded physischen Zweige
+
+\[
+a-t,\ t+a,\ t-a,
+\]
+
+\[
+b-t,\ t+b,\ t-b,
+\]
+
+\[
+T-t,\ t+T,\ t-T.
+\]
+
+---
+
+## 68. Symmetrischer Annuluscover für einen reinen \(\Delta\)-Cocycle
+
+Der C1C1-Operator mit
+
+\[
+12_H+3_W\to12_H
+\]
+
+ist als abstrakte Hilbertraum-Konjugation korrekt.
+
+Will man jedoch sämtliche endlichen Halbshift-/Reflexionsoperationen in **Fiberindizes** absorbieren und auf der Basis nur noch
+
+\[
+\theta\mapsto\theta+j\Delta
+\]
+
+zulassen, muss auch der Annulus mit denselben vier Sheet/Parity-Spezies
+
+\[
+P_0,\ P_1,\ \overline Q_0,\ \overline Q_1
+\]
+
+redundant dargestellt werden.
+
+Mit drei \(L\)-Lifts entsteht
+
+\[
+\boxed{
+12_W=4\times3.
+}
+\]
+
+Der C2-Arbeitscover ist somit
+
+\[
+\boxed{
+(12_H+12_W)\longrightarrow12_H,
+}
+\tag{C2.1}
+\]
+
+also formal
+
+\[
+\boxed{
+\mathbb C^{24}_{\rm ambient}
+\longrightarrow
+\mathbb C^{12}_{\rm ambient}.
+}
+\]
+
+Dies ist weiterhin **keine physische Fiberdimension**; beide Blöcke sind redundante isometrische Cover geschlossener Bildunterräume.
+
+---
+
+# C2-HUB0 — symmetrische Hub-Closure
+
+## 69. Vier-Spezies-Transport der neun physischen Hubzweige
+
+Schreibe die vier Kreismaps als
+
+\[
+\psi_g(\theta)
+=
+s_g\theta+\frac{\eta_g}{2}L+\kappa_g\Delta
+\pmod L.
+\]
+
+Für einen physischen Hubzweig
+
+\[
+x
+=
+s\,t+\lambda L+k\Delta
+\]
+
+und eine Annulus-Spezies \(g_{\rm in}\) wird exakt eine Output-Spezies \(g_{\rm out}\) und ein Integer \(j\) durch
+
+\[
+\psi_{g_{\rm out}}(\theta+j\Delta)
+\equiv
+s\,\psi_{g_{\rm in}}(\theta)
++\lambda L+k\Delta
+\pmod L
+\]
+
+bestimmt.
+
+Über
+
+\[
+9\times4
+=
+\boxed{36}
+\]
+
+Übergänge schließen alle Zweige auf denselben vier Sheet/Parity-Spezies.
+
+Die auftretenden Basisindizes sind exakt
+
+\[
+\boxed{
+j\in\{-3,-2,-1,1,2,3\}.
+}
+\tag{C2.2}
+\]
+
+Damit
+
+\[
+\boxed{|j|\le3.}
+\]
+
+Für jedes Paar
+
+\[
+(\text{Hubzweig},g_{\rm out})
+\]
+
+ist innerhalb dieser Architektur genau eine Annulus-Spezies \(g_{\rm in}\) erforderlich. Über alle 36 Beziehungen werden alle vier Annulus-Spezies benötigt.
+
+Dies beweist **keine universelle Minimalität** des 12er Annuluscovers; es beweist nur seine Notwendigkeit innerhalb der gewählten vier-Spezies-\(G\)-kovarianten reinen-\(\Delta\)-Darstellung.
+
+---
+
+## 70. Hubgewicht-Normierung
+
+Im symmetrischen Annuluscover wird wie beim Horizont zunächst die positive Paritätsfaltung mit \(\sqrt2\) und anschließend der Vierblatt-Cover mit Faktor \(1/2\) verwendet.
+
+Daher besitzen sowohl originale Horizont- als auch originale Annuluswerte in ihren Coverkomponenten denselben Faktor
+
+\[
+\frac1{\sqrt2}.
+\]
+
+Somit bleibt ein physischer Hubkoeffizient \(c\) unter dem Transport unverändert:
+
+\[
+\frac1{\sqrt2}\,c\,(\sqrt2\,G)=cG.
+\]
+
+Die C2-Hubgewichte bleiben also exakt
+
+\[
+\boxed{
+(-p,+p,-p),\quad
+(-r,+r,-r),\quad
+(-q,+q,-q).
+}
+\]
+
+---
+
+## 71. Zertifikat C2-HUB0
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c2_hub0_symmetric_cover.py
+
+Commit:
+
+4f0b60927aea5b556f621f341774cb32eb419f7b
+
+Committed Script-Blob:
+
+968aeb700f66dfe89a6bd5b9d714de861342da11
+
+Der exakt committed Inhalt wurde rekonstruiert, nach dem Git-Blob-Verfahren gehasht und ausgeführt.
+
+Ergebnis:
+
+SW1-A10-C2-HUB0 SYMMETRIC-COVER CLOSURE CERTIFICATE: PASS
+
+Damit:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!HUB0}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, affine-cover scope)}.
+}
+\]
+
+---
+
+# C2-FREE0 — physische Closure des freien Blocks
+
+## 72. Zehn physische Source-Affintypen aus A1
+
+Die A1-Row-Archetypen für \((I+A)y\) verwenden insgesamt nur die zehn verschiedenen physischen Source-Maps
+
+\[
+x,
+\quad
+a-x,
+\quad
+a+x,
+\quad
+T-x,
+\quad
+T+x,
+\]
+
+\[
+3a-x,
+\quad
+x-a,
+\quad
+2b-x,
+\quad
+2T-x,
+\quad
+x-T.
+\]
+
+In \((L,\Delta)\)-Koordinaten sind dies ausschließlich ganzzahlige \(L\)-Offsets plus ganzzahlige \(\Delta\)-Offsets.
+
+---
+
+## 73. Vier-Spezies-Transport
+
+Für jede der zehn Source-Maps und jede der vier Output-Spezies wird die zugehörige Input-Spezies und der Basisindex \(j\) exakt bestimmt.
+
+Es entstehen
+
+\[
+10\times4
+=
+\boxed{40}
+\]
+
+Sheet/Parity-Übergänge.
+
+Alle schließen auf
+
+\[
+P_0,\ P_1,\ \overline Q_0,\ \overline Q_1,
+\]
+
+und die auftretenden Basisindizes sind exakt
+
+\[
+\boxed{
+j\in\{-3,-2,-1,0,1,2,3\}.
+}
+\tag{C2.3}
+\]
+
+Insbesondere
+
+\[
+\boxed{|j|\le3.}
+\]
+
+Da Source- und Target-Horizontcover dieselbe Komponenten-Normierung \(1/\sqrt2\) besitzen, bleiben auch die A1-Skalarrowgewichte unter diesem Transport unverändert.
+
+Noch nicht eingetragen sind die zellabhängigen Aktivitätsgates und Koeffizienten.
+
+---
+
+## 74. Zertifikat C2-FREE0
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c2_free0_physical_closure.py
+
+Commit:
+
+e3526087d06306de0288423e0133d069c27f255e
+
+Committed Script-Blob:
+
+db8cfd10b0bece6cf48361b06c497fb30bd1c145
+
+Der exakt committed Inhalt wurde rekonstruiert, nach dem Git-Blob-Verfahren gehasht und ausgeführt.
+
+Ergebnis:
+
+SW1-A10-C2-FREE0 PHYSICAL FREE-BLOCK CLOSURE CERTIFICATE: PASS
+
+Damit:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!FREE0}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, affine-cover scope)}.
+}
+\]
+
+---
+
+## 75. Kombinierter C2-0-Skeleton
+
+C2-HUB0 und C2-FREE0 ergeben gemeinsam:
+
+> Auf dem symmetrischen redundanten Cover (C2.1) erzeugen sämtliche bisher vollständig auditierten **physischen** Affinzweige von
+> \[
+> (I+A)y+HE_{\mathcal A}w
+> \]
+> ausschließlich die sieben Rotationslagen
+> \[
+> \boxed{-3,-2,-1,0,1,2,3}.
+> \]
+
+Dies ist ein **affiner Closure-Satz**, noch keine vollständige Matrixdarstellung.
+
+Insbesondere fehlen weiterhin:
+
+1. die Lift-zu-Lift-Gates;
+2. die A1-zellabhängigen Koeffizienten;
+3. die vollständigen Matrixfunktionen \(M_j(\theta)\);
+4. der Nachweis, dass die bisherige C1B-Partition ohne zusätzliche C2-Cover-Pullback-Wände ausreicht;
+5. jede Injektivitätsaussage.
+
+Der nächste Knoten ist daher
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!GATE0}:
+\text{vollständige Lift-/Gate-Closure des symmetrischen 24→12-Covers}.
+}
+\]
+
+Erst danach darf
+
+\[
+\widehat{\mathscr C}_R
+=
+\sum_{j=-3}^{3}M_j(\theta)U_\Delta^j
+\]
+
+als exakte Operatorgleichung gebucht werden.
