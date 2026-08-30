@@ -1,7 +1,7 @@
 # Offene Probleme — Konsolidierte Liste
 
-> **Aktuelle Front: 6. August 2026 — NEU-250a**  
-> Vorgängerstand: NEU-221e (26. Juli 2026). Der untere Teil dieser Datei ist der konsolidierte Stand vom 15. Juli 2026 (NEU-161 rev.5). Er bleibt gültig, soweit er nicht durch die aktuelle Front überholt ist.
+> **Operative Front seit 30. August 2026:** Roadmap A / finite-level Cross-Gram-Nichtentartung \(\ker\Gamma_I=\{0\}\ ?[O]\). Siehe [CURRENT-FRONT.md](CURRENT-FRONT.md), [ACTIVE_THEOREM_REGISTRY.md](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md) und die [Forschungsroadmap](00-uebersicht/FORSCHUNGS_ROADMAP_2026-08-26.md).  
+> **Historischer Hinweis:** Der nachfolgende Abschnitt „Aktuelle Front (Stand NEU-250a)“ dokumentiert die Wres-/BC-Front vom 6. August 2026 und ist **nicht mehr die heutige Prioritätsangabe**. Seine lokalen offenen Knoten bleiben als historische Problemprovenienz erhalten, soweit sie nicht separat geschlossen oder reklassifiziert wurden.
 
 Kompakte Gesamtbilanz: [STATUS.md](STATUS.md) · Alle Dokumente: [INDEX.md](INDEX.md) ·
 Verbindliche Karte aller Bedingungen an Objekt X: [Ebene XVI — Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md)
@@ -12,7 +12,7 @@ Verbindliche Karte aller Bedingungen an Objekt X: [Ebene XVI — Kontrollblatt](
 
 ---
 
-# Teil I — Aktuelle Front (Stand NEU-250a)
+# Teil I — Historische Front (Stand NEU-250a, 6. August 2026)
 
 ## Priorität 0 — Neuer aktiver Tiefenknoten
 
