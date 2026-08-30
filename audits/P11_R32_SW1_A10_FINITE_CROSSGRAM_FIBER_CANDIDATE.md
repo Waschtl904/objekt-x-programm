@@ -888,13 +888,13 @@ Also
 
 #### Wort P3
 
-Auf
+Das Wort ist algebraisch sogar bis \(L-R\) legal. Für die **kanonische disjunkte Selector-Zerlegung** verwenden wir jedoch nur
 
 \[
-e<x<L-R
+e<x<L-\Delta.
 \]
 
-gilt
+Dort gilt
 
 \[
 x\xrightarrow{\tau_{-e}}x-e
@@ -947,69 +947,61 @@ W(x)=x+\Delta-L.
 
 Alle vier Wörter bestehen **ausschließlich aus H2-Hub-Bridges**. Es wird für H3 daher keine ungeklärte Survival-Aussage eines alten A7-Rohkanals im aggregierten A9-Gramgraphen benötigt.
 
-### 10.2 Cover der Kreisrotation
+### 10.2 Kanonische disjunkte Überdeckung
 
-Da
-
-\[
-R<\Delta
-\]
-
-gilt
-
-\[
-L-\Delta<L-R.
-\]
-
-Daher überdecken die drei Low-Wörter
-
-\[
-(0,e-R),\qquad
-(e-R,e),\qquad
-(e,L-R)
-\]
-
-den gesamten Bereich
-
-\[
-(0,L-\Delta)
-\]
-
-bis auf die beiden offenen Zellgrenzen
-
-\[
-e-R,\qquad e.
-\]
-
-Auf dem Wrapbereich
-
-\[
-(L-\Delta,L)
-\]
-
-steht das Wort \(W\) zur Verfügung.
-
-Somit realisiert der augmentierte H2-Inzidenzgraph auf \(J\), außerhalb der endlichen Grenzmenge
-
-\[
-E
-=
-\{0,\ e-R,\ e,\ L-\Delta\}
-\pmod L,
-\]
-
-genau die Kreisrotation
+Für den H3-INF-Schluss wählen wir die vier **disjunkten** offenen Selector-Zonen
 
 \[
 \boxed{
-F(x)=x+\Delta\pmod L.
+Z_1=(0,e-R),\quad
+Z_2=(e-R,e),\quad
+Z_3=(e,L-\Delta),\quad
+Z_4=(L-\Delta,L).
+}
+\]
+
+Wegen
+
+\[
+e<L-\Delta<L-R
+\]
+
+liegen alle vier Zonen in den jeweils zertifizierten Legalitätsbereichen.
+
+Die kanonische Randmenge auf dem Kreis ist daher
+
+\[
+\boxed{
+E=\{0,e-R,e,L-\Delta\}\pmod L.
+}
+\]
+
+Dabei ist \(0\equiv L\) nur die Kreisgrenze; im offenen physischen Band \(J=(0,L)\) liegt dieser Punkt nicht.
+
+**Mehrwertigkeits-Firewall.** Das P3-Wort ist auf einem Teil des Wrapbereichs ebenfalls legal. Dort können P3 und \(W\) verschiedene physische Endpunkte liefern, die sich um \(L\) unterscheiden. Daher wird **nicht** behauptet, dass der zugrunde liegende Graph selbst eine eindeutige Abbildung definiert. Für den Existenzbeweis wird lediglich die oben festgelegte kanonische Wortauswahl verwendet.
+
+Definiere damit
+
+\[
+F(x)=
+\begin{cases}
+x+\Delta,&x\in Z_1\cup Z_2\cup Z_3,\\
+x+\Delta-L,&x\in Z_4.
+\end{cases}
+\]
+
+Dann realisiert die ausgewählte Folge tatsächlicher H2-Pfade
+
+\[
+\boxed{
+F(x)=x+\Delta\pmod L
 }
 \tag{A10.8}
 \]
 
-Hier wird \(F(x)\) immer durch einen **endlichen tatsächlichen Pfad im augmentierten free-\(w\)-Graphen** realisiert.
+auf \(J\setminus E\).
 
-### 10.3 Exaktes Zertifikat
+### 10.3 Primärzertifikat
 
 Zertifikat:
 
@@ -1029,16 +1021,41 @@ Ergebnis:
 
 SW1-A10-H3 H2-ONLY ROTATION-COVER CERTIFICATE: PASS
 
-Das Zertifikat beweist insbesondere:
+### 10.4 Separater endlicher Randreview
 
-- \(J=(0,L)\subset(0,a-R)\);
-- die exakten vier H2-Wörter;
-- ihre vollständigen Aktivitätsintervalle;
-- \(P_1=P_2=P_3:x\mapsto x+\Delta\);
-- \(W:x\mapsto x+\Delta-L\);
-- das Cover von \(J\) bis auf endlich viele offene Zellgrenzen.
+Ein zweites, separat geschriebenes Zertifikat prüft die H3-Cover-Aussage adversarial direkt gegen den H2-Endledger:
 
-Damit ist im **endlichen/algebraischen Scope** zulässig:
+scripts/certify_sw1_a10_h3_independent_review.py
+
+Commit:
+
+443c4c043e738bc0c25084e9d214bc21e65309fa
+
+Committed Script-Blob:
+
+f96f3f167dffdd842ef08d17ec7745e5ac292251
+
+Der exakt gleiche Inhalt wurde bereits vor dem Commit lokal ausgeführt; GitHub meldete danach denselben Blob-SHA.
+
+Ergebnis:
+
+SW1-A10-H3 INDEPENDENT FINITE REVIEW CERTIFICATE: PASS
+
+Dieser Zweitprüfer bestätigt insbesondere:
+
+1. die kanonische disjunkte Zoneneinteilung
+   \[
+   (0,e-R),(e-R,e),(e,L-\Delta),(L-\Delta,L);
+   \]
+2. alle neun verwendeten Bridge-Segmente als tatsächliche gemeinsame H2-Zellkanäle;
+3. die exakten Wortkompositionen;
+4. die Vollständigkeit der kanonischen Randmenge
+   \[
+   \{0,e-R,e,L-\Delta\};
+   \]
+5. die bewusste Mehrwertigkeit der zugrunde liegenden Graphrelation außerhalb der kanonischen Auswahl.
+
+Damit gilt im **endlichen/algebraischen Scope**:
 
 \[
 \boxed{
@@ -1049,11 +1066,13 @@ Damit ist im **endlichen/algebraischen Scope** zulässig:
 }
 \]
 
+Die analytische Unendlichkeitsfolgerung bleibt davon getrennt.
+
 ---
 
 ## 11. A10-H3-INF — analytischer Infinite-Transfer-Kandidat
 
-Für die Unendlichkeitsfolgerung verwenden wir zusätzlich den bereits separat auditierten Input
+Für die Unendlichkeitsfolgerung verwenden wir zusätzlich das nun eigenständig dokumentierte Lemma
 
 \[
 \boxed{
@@ -1061,7 +1080,39 @@ Für die Unendlichkeitsfolgerung verwenden wir zusätzlich den bereits separat a
 }
 \]
 
-Die endliche Ausnahme-Menge \(E\subset\mathbb T_L\) besitzt unter der irrationalen Rotation nur eine abzählbare Menge von Rückwärtsbildern:
+Kanonische Quelle:
+
+audits/P11_R32_SW1_DELTA_OVER_L_IRRATIONALITY_LEMMA.md
+
+Zertifikat:
+
+scripts/certify_sw1_delta_over_L_irrationality.py
+
+Commit:
+
+02044e3d236289869a0de5e6b276a00f23ab0a9c
+
+Committed Script-Blob:
+
+201c87e795011681778dfac03e7aa2e5cff54a59
+
+Das Lemma reduziert eine hypothetische Rationalität exakt auf
+
+\[
+2(n+m)\log3=(3n+4m)\log2
+\]
+
+und schließt diese Gleichung über die Primzahlbewertungen \(v_2,v_3\) sowie die nichtsinguläre Integer-Matrix mit Determinante \(2\) aus.
+
+### 11.1 Abzählbare Ausnahmebahn
+
+Die endliche Ausnahme-Menge
+
+\[
+E\subset\mathbb T_L
+\]
+
+besitzt unter der irrationalen Rotation nur die abzählbare Menge von Rückwärtsbildern
 
 \[
 \mathcal E_\infty
@@ -1076,18 +1127,24 @@ Da \(\mathbb T_L\) überabzählbar ist, existiert
 x_0\in J\setminus\mathcal E_\infty.
 \]
 
-Für dieses \(x_0\) trifft die gesamte Vorwärtsbahn
+Der Existenzbeweis ist bewusst **nichtkonstruktiv**. Für die Existenz einer unendlichen Komponente genügt dies vollständig; ein expliziter \(x_0\) für spätere Operatorrechnungen ist ein separater offener Knoten.
+
+Für
 
 \[
 x_n
-:=
+=
 x_0+n\Delta
 \pmod L
 \]
 
-keine Zellgrenze aus \(E\).
+gilt für alle \(n\):
 
-Nach A10-H3-COVER existiert daher für jedes \(n\) ein endlicher augmentierter Hubpfad
+\[
+x_n\notin E.
+\]
+
+Nach A10-H3-COVER existiert daher bei jedem Schritt ein fest gewählter endlicher tatsächlicher Hubpfad
 
 \[
 x_n\leadsto x_{n+1}.
@@ -1113,7 +1170,7 @@ im Widerspruch zu
 \Delta/L\notin\mathbb Q.
 \]
 
-Also sind die \(x_n\) paarweise verschieden.
+Also sind die \(x_n\) paarweise verschiedene **physische Punkte** in \(J\), nicht bloß verschiedene Liftlabels.
 
 Damit ergibt sich der Beweiskandidat
 
@@ -1124,14 +1181,14 @@ Damit ergibt sich der Beweiskandidat
 \tag{A10.9}
 \]
 
-### Status-Firewall
+### 11.2 Status-Firewall
 
 A10.9 ist eine **analytische Folgerung** aus
 
-1. dem zertifizierten endlichen H3-Cover und
-2. der separat bewiesenen Irrationalität \(\Delta/L\notin\mathbb Q\).
+1. dem doppelt zertifizierten endlichen H3-Cover und
+2. dem separat bewiesenen Irrationalitätslemma.
 
-Sie wird vor einem unabhängigen Review **nicht** als independent-GREEN-Certificate-Aussage gebucht.
+Sie wird vor einem tatsächlich unabhängigen mathematischen Review **nicht** als independent-GREEN-Aussage gebucht.
 
 Zulässiger aktueller Status:
 
@@ -1144,7 +1201,22 @@ Zulässiger aktueller Status:
 
 ohne Promotion.
 
-### Bedeutung für Roadmap A
+### 11.3 Unabhängiges Reviewpaket
+
+Für diesen letzten analytischen Schluss wurde ein eigenes Gegenprüfpaket erstellt:
+
+audits/P11_R32_SW1_A10_H3_INF_REVIEW_PACKET.md
+
+Es fordert insbesondere Prüfung von:
+
+- Vollständigkeit der kanonischen Randmenge;
+- Zulässigkeit der fest gewählten Wortauswahl trotz mehrwertiger Graphrelation;
+- Abzählbarkeitsargument;
+- physischer Verschiedenheit der Orbitpunkte;
+- Pfadkonkatenation;
+- strikter Scope-Grenze zum Cross-Gram-Kern.
+
+### 11.4 Bedeutung für Roadmap A
 
 Falls A10-H3-INF unabhängig bestätigt wird, ist damit die Strategie
 
