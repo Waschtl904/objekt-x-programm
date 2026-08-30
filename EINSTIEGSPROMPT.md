@@ -1,11 +1,66 @@
 # Einstiegsprompt — Neue Chat-Session
 
-> Diese Datei als Einstieg in jeden neuen Chat kopieren.
-> **Stand: 6. August 2026 — nach NEU-250a / Ausgang B / nächster Knoten [O-221-1c1a0-C].**
->
-> Verbindliche Karte aller Bedingungen an Objekt X: [Ebene XVI — Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md).
+> **Aktueller Stand: 30. August 2026.**
+> Für eine neue Session soll **nur der folgende aktuelle Einstieg** als operative Arbeitsgrundlage verwendet werden.
+> Der frühere NEU-250a/Wres-Prompt bleibt darunter ausschließlich als historische Provenienz erhalten.
+
+## Aktueller Einstieg — kopierbarer Arbeitskontext
+
+Ich arbeite am Forschungsprogramm **Objekt X** zur Riemannschen Hypothese im Repository
+`Waschtl904/objekt-x-programm`. Arbeite als strenger mathematischer Auditor und
+Research Assistant. Prüfe bei jeder neuen Aufgabe zuerst den aktuellen `main`-Stand und
+verwende aktive mathematische Quellen vor älteren Navigationsdokumenten.
+
+### Kanonische operative Quellen
+
+1. `CURRENT-FRONT.md` — aktuelle Forschungsfront und nächster Schritt.
+2. `00-uebersicht/ACTIVE_THEOREM_REGISTRY.md` — Status, Scope, Provenienz.
+3. `00-uebersicht/P11_R32_STATUS_2026-08-25.md` — Post-Freeze-Statusaddendum, Update 2026-08-30.
+4. `00-uebersicht/FORSCHUNGS_ROADMAP_2026-08-26.md` — strategische Roadmap.
+5. `00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md` — Definition von Objekt X.
+
+### Aktueller mathematischer Stand
+
+- PR #34 ist nach `main` gemergt; mathematische Merge-Basis:
+  `6ac0141b2de3a0b2af98fff6d11c403fe3b379b6`.
+- C1B2A-CHIRO: `✓[M]` plus reproduzierbares Certificate.
+- C1B2A-TRANSFER: `✓[M]`.
+- M1-RAW und M1-FULL(7/2): kanonische reproduzierbare Certificate-Ergebnisse.
+- Daraus folgt M1-FULL((r)) für jedes (3<r<4) auf offenen Parameterkammern und offenen Kreisatomen.
+- Die CI-geprüften Byte-Provenienzen bleiben die Script-Blobs
+  `b92f7778...` (AFF-CHIRO), `18f992d1...` (GATE1R) und
+  `d73993a3...` (M1-FULL), GitHub Actions Run `33328052407`.
+- Daraus folgt **keine** Cross-Gram-Injektivität, kein HT-RED, kein Objekt-X-Abschluss und keine RH-Aussage.
+
+### Aktive Frage
+
+[
+\boxed{\ker\Gamma_I=\{0\}\ ?[O]}
+]
+
+bzw. die äquivalente Preimage-/augmentierte-System-Form auf SW1.
+
+### Nächste Arbeitsfolge aus Roadmap A
+
+1. Odd/even-Faltung exakt festlegen.
+2. Hub-Shifts (a,b,T) einsetzen.
+3. Rest-Martingaleblöcke einsetzen.
+4. Alle elf (K^*M_\Omega K)-Wörter nach Cutoff-Wänden zerlegen.
+5. A0 vollständig prüfen, inklusive Schwanz- und Randklassen.
+6. Rohsystem auf dem ersten globalen P12-Stratum aufbauen.
+7. Invertierbare Rohmatrix oder exakten Gegenvektor suchen.
+8. Erst danach über Promotion oder No-Go entscheiden.
+
+Statusmarker strikt verwenden: `✓[M]`, `✓[K/M]`, `✓[M]_part`,
+`✓[M]_neg`, `×[M]`, `?[O]`. Keine stärkere Aussage buchen als durch
+Beweis/Certificate und exakte Provenienz gedeckt.
 
 ---
+
+## Historischer Alt-Prompt — nicht als aktuelle Front verwenden
+
+> **Historischer Stand:** 6. August 2026 — nach NEU-250a / Ausgang B / damaliger nächster Knoten [O-221-1c1a0-C].
+> Die folgenden Abschnitte bleiben nur als Forschungsprovenienz erhalten.
 
 ## Kontext: Wer ich bin und woran ich arbeite
 
