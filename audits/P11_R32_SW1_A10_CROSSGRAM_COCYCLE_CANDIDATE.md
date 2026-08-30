@@ -3,7 +3,7 @@
 > **Stand:** 30. August 2026  
 > **Branch:** research/sw1-a10-crossgram-cocycle  
 > **Basis:** main@19da654f537868cd72757d2785071f8cf3f36c1b  
-> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1, C1B2A/B/C sowie C1C0-FORMAL im jeweils dokumentierten Scope zertifiziert. C1C1 besitzt ein zertifiziertes algebraisches/Faltungs-Skelett; die korrigierte analytische Hilbertraum-Fassung ist nach externem Cross-Model-Blindreview unabhängig GREEN im dokumentierten Scope. C2-HUB0/FREE0 sowie HUB0-COMP sind im jeweils explizit begrenzten Scope zertifiziert. Die frühere GATE0/GATE1-Zählung 92→100 wurde nach Klärung der HUB-Indexorientierung superseded; korrekt sind nun GATE0R/GATE1R mit dem operatororientierten 96-Wand-Alphabet. M0-HUB-SPEC und der korrigierte 108-Regel-M0-HUB-LIFT-Ledger sind zertifiziert; der freie A1-Lift-/Koeffizientenblock und die kombinierten Matrixfunktionen bleiben offen. Die frühere Deutung von Boundary-Kollisionen als Fiberquotienten wurde korrigiert. Keine Promotion.  
+> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1, C1B2A/B/C sowie C1C0-FORMAL im jeweils dokumentierten Scope zertifiziert. C1C1 besitzt ein zertifiziertes algebraisches/Faltungs-Skelett; die korrigierte analytische Hilbertraum-Fassung ist nach externem Cross-Model-Blindreview unabhängig GREEN im dokumentierten Scope. C2-HUB0/FREE0 sowie HUB0-COMP sind im jeweils explizit begrenzten Scope zertifiziert. Die frühere GATE0/GATE1-Zählung 92→100 wurde nach Klärung der HUB-Indexorientierung superseded; korrekt sind nun GATE0R/GATE1R mit dem operatororientierten 96-Wand-Alphabet. M0-HUB-SPEC, M0-HUB-DIST, der korrigierte 108-Regel-M0-HUB-LIFT-Ledger sowie M0-FREE-LIFT/A1-ROW sind im jeweils dokumentierten Scope zertifiziert; die sieben kombinierten 12×24-Matrixfunktionen bleiben offen. Die frühere Deutung von Boundary-Kollisionen als Fiberquotienten wurde korrigiert. Keine Promotion.  
 > **Ziel:** den zu \(\ker\Gamma_I\) äquivalenten SW1-Operator auf der irrationalen H3-Rotationskomponente als endlichen operatorwertigen/finite-range Cocycle formulieren.
 
 ---
@@ -3679,6 +3679,8 @@ Damit:
 }
 \]
 
+**Orientierungspräzisierung für M0:** HUB0 bleibt als Input→Output-Closure-Zertifikat mathematisch gültig. Nicht kanonisch für die späteren Matrixindizes ist lediglich die direkte Lesart seines Shiftlabels als \(M_j\)-Index. Für \(M_j\) gilt ausschließlich die output←input-Konvention aus M0-HUB-SPEC.
+
 ---
 
 # C2-FREE0 — physische Closure des freien Blocks
@@ -5227,5 +5229,460 @@ Der nächste Knoten ist daher
 \text{operatororientierter A1-Lift-/Koeffizientenledger}.
 }
 \]
+
+Keine Injektivitätsaussage.
+
+
+---
+
+# C2-M0-HUB-DIST — direkte physische Erklärung der Shiftmultiplizitäten
+
+## 105. Keine Restasymmetrie aus der Umorientierung
+
+Die operatororientierte Gesamtverteilung
+
+\[
+(-3,-2,-1,+1,+2,+3)
+\mapsto
+(2,12,4,4,12,2)
+\]
+
+ist exakt vorzeichen-symmetrisch:
+
+\[
+\boxed{
+N_j=N_{-j}
+\qquad
+(j=1,2,3).
+}
+\tag{C2.24}
+\]
+
+Die Nichtuniformität betrifft nur die Beträge \(|j|=1,2,3\) und folgt direkt aus den physischen Hubzweigen.
+
+### \(|j|=3\)
+
+Nur der linke \(a\)-Zweig
+
+\[
+A_L:\quad x=a-t
+\]
+
+erzeugt diese Lage:
+
+\[
+\boxed{
+A_L:
+\quad
+j=+3\text{ zweimal},
+\qquad
+j=-3\text{ zweimal}.
+}
+\tag{C2.25}
+\]
+
+### \(|j|=1\)
+
+Die beiden rechten/äußeren \(a\)-Zweige
+
+\[
+A_R,\ A_O
+\]
+
+erzeugen zusammen:
+
+\[
+\boxed{
+j=+1\text{ viermal},
+\qquad
+j=-1\text{ viermal}.
+}
+\tag{C2.26}
+\]
+
+### \(|j|=2\)
+
+Alle sechs \(b\)- und \(T\)-Zweige
+
+\[
+B_L,B_R,B_O,T_L,T_R,T_O
+\]
+
+erzeugen zusammen:
+
+\[
+\boxed{
+j=+2\text{ zwölfmal},
+\qquad
+j=-2\text{ zwölfmal}.
+}
+\tag{C2.27}
+\]
+
+Damit ist die Verteilung keine Umbenennungsartefaktfolge, sondern direkt aus
+
+\[
+t=sx-s\lambda L-sk\Delta
+\]
+
+für die neun physischen Zweige hergeleitet.
+
+---
+
+## 106. Zertifikat C2-M0-HUB-DIST
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c2_m0_hub_distribution.py
+
+Commit:
+
+d125c44fa421527eb134788172cedf661c615d4a
+
+Committed / exakt vorab ausgeführter Blob:
+
+45c7e1c23ccb6635d4b8c6dc07f06781150978fb
+
+Ergebnis:
+
+SW1-A10-C2-M0-HUB-DIST DIRECT PHYSICAL DISTRIBUTION CERTIFICATE: PASS
+
+Damit:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!M0\!-\!HUB\!-\!DIST}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, physical shift-multiplicity scope)}.
+}
+\]
+
+Keine Lift-, Matrix- oder Injektivitätsaussage.
+
+---
+
+# C2-M0-FREE-LIFT — operatororientierter freier Liftledger
+
+## 107. Zehn Affintypen, 40 Species-Regeln, 120 Liftregeln
+
+Der freie physische Block \((I+A)y\) verwendet exakt die zehn bereits in FREE0 zertifizierten Source-Typen
+
+\[
+I,\ r_a,\ \tau_{+a},\ r_T,\ \tau_{+T},
+\]
+
+\[
+r_{3a},\ \tau_{-a},\ r_{2b},\ r_{2T},\ \tau_{-T}.
+\]
+
+Für jeden Typ und jede der vier Output-Species wird eindeutig
+
+- eine Input-Species \(g_i\),
+- ein operatororientierter Shift \(j\),
+- ein Integer \(m\)
+
+bestimmt durch
+
+\[
+\boxed{
+\phi_{g_i}(\theta+j\Delta)
+=
+s\,\phi_{g_o}(\theta)
++\lambda L+k\Delta
++mL.
+}
+\tag{C2.28}
+\]
+
+Damit entstehen exakt
+
+\[
+10\cdot4
+=
+\boxed{40}
+\]
+
+Species-Regeln.
+
+Über die drei Output-Lifts folgt:
+
+\[
+\boxed{
+40\cdot3
+=
+120
+}
+\]
+
+symbolische freie Liftregeln.
+
+Die Inputliftformel ist dieselbe wie beim Hub:
+
+\[
+\boxed{
+\ell_i(\theta)
+=
+s\bigl(\ell_o-N_{g_o}(\theta)\bigr)
++
+N_{g_i}(\theta+j\Delta)
+-m.
+}
+\tag{C2.29}
+\]
+
+---
+
+## 108. Shiftverteilung des freien Liftledgers
+
+Die 40 Species-Regeln besitzen exakt:
+
+\[
+\boxed{
+\begin{array}{c|rrrrrrr}
+j&-3&-2&-1&0&1&2&3\\
+\hline
+\#&2&6&6&12&6&6&2
+\end{array}
+}
+\tag{C2.30}
+\]
+
+und nach Expansion auf drei Output-Lifts:
+
+\[
+\boxed{
+\begin{array}{c|rrrrrrr}
+j&-3&-2&-1&0&1&2&3\\
+\hline
+\#\text{ Liftregeln}&6&18&18&36&18&18&6
+\end{array}
+}
+\tag{C2.31}
+\]
+
+Damit ist insbesondere der \(j=0\)-Block rein aus dem freien Anteil vorhanden; der Hub besitzt weiterhin keinen \(j=0\)-Beitrag.
+
+---
+
+# C2-M0-A1-ROW — separater Koeffizienten-/Gateledger
+
+## 109. Warum Geometrie und Koeffizienten getrennt werden
+
+Die 120 geometrischen Liftregeln sagen noch nicht, **auf welchem A1-Rowintervall** ein Affintyp mit welchem Skalar aktiv ist.
+
+Deshalb wird die bereits zertifizierte A1-Struktur separat transportiert.
+
+Verwendet werden die neun Archetypen
+
+\[
+R0,R1,R2,R3,R4I,R4II,R5,R6,R7.
+\]
+
+Ihre Termzahlen sind exakt
+
+\[
+5,3,5,5,4,6,5,6,6,
+\]
+
+also insgesamt
+
+\[
+\boxed{45}
+\]
+
+A1-Row-Term-Vorkommen.
+
+Alle zehn FREE-Affintypen treten in diesen 45 Vorkommen tatsächlich auf.
+
+Ihre Affintyp-Multiplizitäten sind:
+
+\[
+\boxed{
+\begin{aligned}
+&I:9,\quad r_T:8,\quad r_{3a}:7,\quad \tau_{-a}:6,\quad \tau_{+a}:5,\\
+&r_{2b}:4,\quad r_a:2,\quad r_{2T}:2,\quad \tau_{+T}:1,\quad \tau_{-T}:1.
+\end{aligned}
+}
+\tag{C2.32}
+\]
+
+Die Skalarrowgewichte sind exakt die A1-Koeffizienten
+
+\[
+1+2c_1,\quad
+1+c_1,\quad
+1+\alpha_A,\quad
+1+\alpha_b,\quad
+1+\kappa,
+\]
+
+sowie
+
+\[
+c_2,\ -c_1,\ \beta_0,\ \beta_-,\ \beta_+,\ \beta_T,\ \beta_b
+\]
+
+mit exakt den bereits in A1.3–A1.13 festgelegten Row-Gates.
+
+Damit wird **kein neuer A1-Koeffizient** eingeführt.
+
+---
+
+## 110. FREE-Selector-Closure auf \(B_{96}\)
+
+Der vollständige freie Input-Wrapsatz besitzt
+
+\[
+\boxed{18}
+\]
+
+reine Selectorwände.
+
+Sie liegen sämtlich im korrigierten Matrixalphabet \(B_{96}\).
+
+Gegenüber dem alten C1B0-Phasensatz werden ausschließlich
+
+\[
+\boxed{k=5,\ 6}
+\]
+
+für beide Halbperiodenparitäten zusätzlich benötigt.
+
+Damit erzeugt auch die vollständige 120-Regel-FREE-Liftexpansion **keine neue Wand über GATE0R hinaus**.
+
+---
+
+## 111. Deterministische Fingerprints
+
+Der 120-Regel-Liftledger besitzt den SHA256-Fingerprint
+
+\[
+\boxed{
+\texttt{cc7fb58c60aa2002b2fd4b56a18eb998ae8d9f679c730f0617fbb8362344b3c4}.
+}
+\tag{C2.33}
+\]
+
+Der 45-Term-A1-Rowledger besitzt
+
+\[
+\boxed{
+\texttt{8e561b778f4eba9d4434db66ec2be325edcb65e7f7a0074e837cdeb81f169fac}.
+}
+\tag{C2.34}
+\]
+
+In der kanonischen Prüferfassung werden beide Fingerprints durch bedingungslose Assertions geprüft.
+
+Ein vorheriger Entwurf enthielt an dieser Stelle versehentlich No-op-\(\texttt{if}\)-Guards um die Fingerprintasserts. Die strukturellen Assertions dieses Entwurfs waren aktiv, aber **dieser Entwurf wird nicht gebucht**. Erst die korrigierte Fassung mit den bedingungslosen Hashasserts ist kanonisch.
+
+---
+
+## 112. Zertifikat C2-M0-FREE-LIFT / A1-ROW
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c2_m0_free_lift.py
+
+Korrigierender Pin-Commit:
+
+cce1fa1d5b1eb4a3229349afa8fa9a22031f92ea
+
+Committed Script-Blob:
+
+d626df0c230be8aa963725951a8520b34deacd69
+
+Exakt dieser Inhalt wurde vor dem Pinning ausgeführt.
+
+Ergebnis:
+
+SW1-A10-C2-M0-FREE-LIFT / A1-ROW LEDGER CERTIFICATE: PASS
+
+Damit im dokumentierten mechanischen Scope:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!M0\!-\!FREE\!-\!LIFT}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, free lift/A1 row-ledger scope)}.
+}
+\]
+
+---
+
+## 113. M0-Stand nach Hub- und Free-Ledgern
+
+Nun liegen getrennt vollständig vor:
+
+### Hub
+
+\[
+108
+\]
+
+symbolische Liftregeln, ohne \(j=0\).
+
+### Free
+
+\[
+120
+\]
+
+symbolische Liftregeln, einschließlich \(j=0\).
+
+### Gemeinsame Basislagen
+
+\[
+\boxed{
+j=-3,-2,-1,0,1,2,3.
+}
+\]
+
+### Gemeinsames Gatealphabet
+
+\[
+\boxed{B_{96}}.
+\]
+
+Damit ist der nächste Knoten nicht mehr die Liftgeometrie, sondern die **explizite Matrixassemblierung**:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!M1}:
+\text{Assemblierung der sieben }12\times24\text{-Matrixfunktionen }M_j(\theta).
+}
+\]
+
+Dabei muss für jede Output-Koordinate
+
+\[
+(g_o,\ell_o)
+\]
+
+und jeden Inputblock
+
+\[
+H\oplus W
+\]
+
+exakt geprüft werden:
+
+1. welcher Liftselector aktiv ist;
+2. welcher A1-Rowgate-Indikator gilt;
+3. ob mehrere Beiträge auf denselben Matrixeintrag aggregieren;
+4. welche Koeffizientensumme dort entsteht.
+
+Erst nach dieser Aggregation darf die a.e. Operatorgleichung
+
+\[
+\widehat{\mathscr C}_R
+=
+\sum_{j=-3}^{3}
+M_j(\theta)U_\Delta^j
+\]
+
+gebucht werden.
 
 Keine Injektivitätsaussage.
