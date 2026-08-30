@@ -525,3 +525,276 @@ Nicht bewiesen ist:
 - ein Cross-Gram-Kernvektor.
 
 Der nächste Schritt ist die **vollständige Hub-Bridge-Familie**, nicht die Hochstufung dieses Einzelpfads zu einer globalen Graphbehauptung.
+
+
+---
+
+## 9. A10-H2 — vollständige Hub-Inzidenz-/Bridge-Algebra
+
+Für den eigentlichen freien Sourceoperator
+
+\[
+\boxed{
+B_R:=J_R^*HE_{\mathcal A}
+}
+\]
+
+muss die KNF-Rekonstruktion bereits **vor** einem Graphurteil in den Hubterm gezogen werden.
+
+Auf der positiven Annuluskoordinate
+
+\[
+t\in(R,S),
+\qquad S=T+\sigma,
+\]
+
+besitzt der kleine untere Chamber exakt elf offene \(t\)-Zellen:
+
+\[
+\begin{aligned}
+&(R,\varepsilon),\quad
+(\varepsilon,e+\varepsilon),\quad
+(e+\varepsilon,d),\quad
+(d,d+R),\\
+&(d+R,a),\quad
+(a,a+R),\quad
+(a+R,a+\varepsilon),\quad
+(a+\varepsilon,b),\\
+&(b,T-R),\quad
+(T-R,T),\quad
+(T,S).
+\end{aligned}
+\]
+
+### 9.1 Rekonstruktionsfenster
+
+Genau auf drei dieser Zellen trifft ein direkter Hubast den nichtfreien Branch
+
+\[
+A_-=a-u:
+\]
+
+\[
+t\in(d,d+R),
+\qquad
+t\in(a,a+R),
+\qquad
+t\in(T-R,T).
+\]
+
+Dort verteilt \(J_R^*\) die betreffende physische Hubrow gemäß
+
+\[
+A_-
+=
+A_+
+-\frac rp B_-
++\frac rp B_+
+-\frac qp T_-
++\frac qp T_+.
+\]
+
+Deshalb darf die Hub-Inzidenz nicht als bloße Liste der sechs ursprünglichen Shifts gelesen werden.
+
+### 9.2 Vollständige Kanalzählung
+
+Nach Split an sämtlichen \(t\)-Wänden entstehen
+
+\[
+\boxed{27}
+\]
+
+rohe Kanalgeneratoren:
+
+- 12 direkte gesplittete Hubkanäle;
+- 15 Rekonstruktions-Pullbacks aus den drei \(A_-\)-Trefffenstern.
+
+Nach Aggregation identischer Paare
+
+\[
+(\text{freier Punkt }x,\text{ Annuluspunkt }t)
+\]
+
+bleiben pro \(t\)-Zelle
+
+\[
+\boxed{
+6,5,4,7,4,7,4,3,3,7,3
+}
+\]
+
+nichtverschwindende Kanäle, insgesamt
+
+\[
+\boxed{53}.
+\]
+
+### 9.3 Cancellation-Firewall
+
+Nur in zwei Fällen treffen überhaupt zwei rohe Beiträge auf denselben \((x,t)\)-Kanal. Ihre aggregierten Koeffizienten sind
+
+\[
+\boxed{
+\frac{p^2-r^2}{p}
+}
+\]
+
+und
+
+\[
+\boxed{
+\frac{p^2-q^2}{p}.
+}
+\]
+
+Beide sind strikt positiv.
+
+Für den \(q\)-Term ist dies unmittelbar aus
+
+\[
+p^2=\frac{\log2}{2\sqrt2},
+\qquad
+q^2=\frac{\log2}{8}
+\]
+
+und \(16>2\) ersichtlich.
+
+Für \(p^2-r^2\) verwendet das Zertifikat die exakten elementaren Schranken
+
+\[
+\log2>\frac23,
+\qquad
+\log3<\frac{10}{9},
+\]
+
+woraus
+
+\[
+p^2>\frac1{3\sqrt2},
+\qquad
+r^2<\frac{10}{27\sqrt3}
+\]
+
+folgt. Die letzte strikte Ordnung reduziert sich nach Quadrieren auf
+
+\[
+243>200.
+\]
+
+Somit verschwindet keiner der 53 aggregierten Hubkanäle.
+
+### 9.4 Vollständige zweistufige Bridge-Familie
+
+Jeder feste Annuluswert \(w(t)\) verbindet sämtliche auf seiner \(t\)-Zelle aktiven freien Kanäle.
+
+Über alle elf Zellen entstehen
+
+\[
+\boxed{115}
+\]
+
+ungeordnete free-\(t\)-free-Paarvorkommen.
+
+Nach Identifikation gleicher affiner Relationen bleiben exakt
+
+\[
+\boxed{22}
+\]
+
+Bridge-Typen:
+
+- 8 Translationsbeträge;
+- 14 Reflexionen.
+
+Die Translationskonstanten sind, bis auf Inversion,
+
+\[
+\boxed{
+\Delta,\ e,\ d,\ a,\ L+2\Delta,\ b-\Delta,\ b,\ T.
+}
+\]
+
+Die Reflexionskonstanten sind
+
+\[
+\boxed{
+e,\ d,\ a,\ b-\Delta,\ b,\ T,\ T+\Delta,
+}
+\]
+
+\[
+\boxed{
+a+b-\Delta,\ a+b,\ 3a,\ 2b,\ T+b-\Delta,\ T+b,\ 4a.
+}
+\]
+
+Alle Konstanten besitzen bezüglich \(L\) nur ganz- oder halbzahlige \(L\)-Koeffizienten. Somit entsteht weiterhin **keine zweite irrationale Basisphase**.
+
+Die maximale lokale Indexreichweite der Hub-Bridge-Algebra beträgt
+
+\[
+\boxed{4}.
+\]
+
+### 9.5 Zertifikatsarchitektur
+
+Die ausführliche Herleitung steht in
+
+scripts/certify_sw1_a10_complete_hub_incidence.py
+
+mit dem vollständigen 27-Kanal-/11-Zellen-Pullbackledger.
+
+Für den unabhängigen reproduzierbaren Status wird bewusst das kompakte Endledger separat zertifiziert:
+
+scripts/certify_sw1_a10_h2_compact_ledger.py
+
+Commit:
+
+099edeb81f20c0022f5e8f1b680d4203252729c0
+
+Committed Script-Blob:
+
+bf858bda1c1d7398110a250c40102c8f74a65525
+
+Der exakt gleiche Dateiinhalt wurde **vor** dem Commit lokal ausgeführt und ergab bereits denselben Git-Blob-SHA
+
+bf858bda1c1d7398110a250c40102c8f74a65525.
+
+Ergebnis:
+
+SW1-A10-H2 COMPACT LEDGER CERTIFICATE: PASS
+
+Damit ist zulässig:
+
+\[
+\boxed{
+\mathrm{A10\!-\!H2\!-\!LEDGER}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, aggregated-ledger scope)}
+}
+\]
+
+### 9.6 H2-Firewall
+
+Der zertifizierte Scope umfasst die **aggregierte Hub-Bridge-Algebra**:
+
+- 11 \(t\)-Zellen;
+- 53 aggregierte nichtverschwindende Kanäle;
+- 115 Paarvorkommen;
+- 22 affine Bridge-Typen;
+- maximale Reichweite \(4\);
+- keine neue irrationale Grundphase.
+
+Die vollständige 27-Rohkanal-Herleitung bleibt zusätzlich intern auditiert, wird aber durch das kompakte Zertifikat nicht als eigenständiger maschineller Rohderivationsbeweis überbeansprucht.
+
+Insbesondere folgt aus H2 weder Endlichkeit noch Unendlichkeit der augmentierten Komponenten und keine Cross-Gram-Injektivität.
+
+Der nächste Knoten ist
+
+\[
+\boxed{
+\mathrm{A10\!-\!H3}:
+\text{Frontier-/Komponentenklassifikation des augmentierten Range-4-Graphen}.
+}
+\]
