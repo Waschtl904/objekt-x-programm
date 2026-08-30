@@ -137,7 +137,7 @@ also (u<a,b,T), und KNF.9 garantiert, dass alle sechs Branchwerte im Horizont li
 [
 \boxed{
 \begin{aligned}
-(F_-^{-1}E_I^*HF_+f)(u)
+(\mathcal O_{0,R}^{-1}E_I^*HF_+f)(u)
 ={}&p[f(a-u)-f(a+u)]\\
 &+r[f(b-u)-f(b+u)]\\
 &+q[f(T-u)-f(T+u)]
