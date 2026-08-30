@@ -565,14 +565,37 @@ Zusammen mit C0:
 \tag{REC.20}
 \]
 
-**Wichtige Ambient-Firewall:** \(WW^{-1}=I\) gilt ausschließlich auf
+**Wichtige Ambient-Firewall:** \(W^{-1}\) ist ausschließlich auf
 \[
-\mathcal R_K\oplus\mathcal R_W.
+\mathcal R_K\oplus\mathcal R_W=\operatorname{Ran}W
 \]
-Auf dem größeren formalen Slot-Ambientraum ist \(WW^{-1}\) nur die Rückprojektion auf den gültigen Bild-/Konsistenzraum und im Allgemeinen **nicht** die Identität. Ein M1-ND-Test darf daher nur auf
+definiert. Daher ist die Gleichung
+\[
+WW^{-1}=I
+\]
+auch ausschließlich eine Identität **auf diesem Bildraum**.
+
+Auf dem größeren formalen Slot-Ambientraum darf \(W^{-1}\) nicht typwidrig angewandt werden. Weil \(W\) isometrisch ist, besitzt man dort stattdessen den Adjungierten
+\[
+W^*
+\]
+als kanonische Linksinverse auf dem Bild, und
+\[
+\boxed{
+WW^*=P_{\operatorname{Ran}W}\ne I_{\rm ambient}
+}
+\tag{REC.20g}
+\]
+im Allgemeinen. Genau der orthogonale Komplementraum
+\[
+(\operatorname{Ran}W)^\perp
+\]
+würde bei einer unzulässigen Ambient-Erweiterung künstliche Nullrichtungen erzeugen.
+
+Ein M1-ND-Test darf daher nur auf
 \[
 \boxed{\mathcal R_K\oplus\mathcal R_W}
-\tag{REC.20g}
+\tag{REC.20h}
 \]
 oder einer exakt äquivalent parametrisierten Darstellung dieses Raums geführt werden.
 
