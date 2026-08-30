@@ -3,7 +3,7 @@
 > **Stand:** 30. August 2026  
 > **Branch:** research/sw1-a10-crossgram-cocycle  
 > **Basis:** main@19da654f537868cd72757d2785071f8cf3f36c1b  
-> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO im endlichen algebraischen Scope zertifiziert; finales Fiber-N und die tatsächlichen Matrixkoeffizienten noch offen. Keine Promotion.  
+> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0 und C1B1 im jeweils dokumentierten endlichen/algebraischen Scope zertifiziert; finales Fiber-N, Atomordnung und Matrixkoeffizienten noch offen. Keine Promotion.  
 > **Ziel:** den zu \(\ker\Gamma_I\) äquivalenten SW1-Operator auf der irrationalen H3-Rotationskomponente als endlichen operatorwertigen/finite-range Cocycle formulieren.
 
 ---
@@ -184,6 +184,70 @@ Daher
 }
 \tag{C0.3}
 \]
+
+### 3.1 Explizite Surjektivität auf den augmentierten Kernel
+
+Sei umgekehrt
+
+\[
+(y,w)\in\ker\mathcal K_{I,A}.
+\]
+
+Aus der zweiten augmentierten Gleichung folgt
+
+\[
+E_I^*Hy=0,
+\]
+
+also
+
+\[
+y\in K.
+\]
+
+Da
+
+\[
+J_R:\mathcal F_R\xrightarrow{\sim}K
+\]
+
+**surjektiv** ist, existiert eindeutig
+
+\[
+\xi=\Psi_Ry\in\mathcal F_R
+\]
+
+mit
+
+\[
+y=J_R\xi.
+\]
+
+Die erste augmentierte Gleichung liefert dann
+
+\[
+0
+=
+(I+A)y+HE_{\mathcal A}w
+=
+(I+A)J_R\xi+HE_{\mathcal A}w
+=
+\mathscr C_R(\xi,w).
+\]
+
+Also
+
+\[
+(\xi,w)\in\ker\mathscr C_R
+\]
+
+und
+
+\[
+\Theta(\xi,w)=(y,w).
+\]
+
+Damit ist ausdrücklich sowohl die Injektivität als auch die **Surjektivität von \(\Theta\) auf den Kernel** nachgewiesen; es wird keine alte \(\widehat\Phi_R\)-Parametrisierung als versteckte Zusatzannahme benutzt.
 
 Somit induziert \(\Theta\) exakt
 
@@ -749,13 +813,46 @@ Verwendet werden exakt:
 - die \(22\) Master-Affintypen aus C1-PROTO;
 - die \(19\) verschiedenen H2-Kanalsignaturen.
 
-Die vollständige one-step Pullback-Vereinigung besitzt vor Kreisreduktion
+Die vollständige Enumeration ist **kein Scan durch alle grob möglichen Koeffiziententupel**.
+
+Sie erzeugt mit Multiplizität exakt
+
+\[
+\boxed{
+955
+=
+24
++
+8\cdot2\cdot19
++
+14\cdot19
++
+19\cdot19
+}
+\]
+
+Vorkommen:
+
+- \(24\) direkte Wandformen;
+- \(8\) Translationstypen, beide Richtungen, auf \(19\) freien Wänden;
+- \(14\) Reflexionstypen auf \(19\) freien Wänden;
+- \(19\) H2-Kanalsignaturen auf \(19\) freien Wänden.
+
+Erst nach exakter Deduplikation dieser **vollständig generierten** Vorkommen bleiben
 
 \[
 \boxed{195}
 \]
 
 verschiedene symbolische Formen.
+
+Die Zahl
+
+\[
+2\cdot9\cdot3^3=486
+\]
+
+ist lediglich die Größe einer groben Koeffizientenbox, die aus den späteren Maximalabschätzungen konstruiert werden könnte. Sie ist **nicht** der Enumerationsraum und erzeugt daher keine „291 ungeklärten Ausschlüsse“.
 
 Modulo \(L\) reduzieren sich diese auf
 
@@ -886,3 +983,398 @@ C1B0 beweist **nicht**:
 - Injektivität.
 
 Es beweist nur die **endliche Exhaustivität des benötigten Boundary-Alphabets**.
+
+
+---
+
+# C1B1 — exakte Kollisionshyperflächen im kleinen unteren Subchamber
+
+## 20. Warum \(\Delta/L\notin\mathbb Q\) hier **nicht** \(k'=0\) erzwingt
+
+Für zwei Boundary-Signaturen besitzt eine Kollisionsgleichung modulo \(L\) die Form
+
+\[
+qL
++
+k\Delta
++
+\rho R
++
+\mu\varepsilon
++
+\nu\sigma
+=
+0.
+\tag{C1B1.1}
+\]
+
+Obwohl
+
+\[
+\Delta/L\notin\mathbb Q,
+\]
+
+sind
+
+\[
+R,\varepsilon,\sigma
+\]
+
+freie reelle Parameter im SW1-Keil. Daher können ihre linearen Kombinationen einen nichtverschwindenden \(\Delta\)-Term kompensieren.
+
+Eine Reduktion
+
+\[
+k\ne0\Longrightarrow\text{unmöglich}
+\]
+
+wäre nur unter einer zusätzlichen algebraischen Unabhängigkeitsannahme über die Parameter zulässig. Eine solche Annahme existiert hier **nicht**.
+
+Die vollständige exakte Enumeration bestätigt sogar, dass genuine Kollisionsflächen mit nichtverschwindendem \(\Delta\)-Koeffizienten tatsächlich im zulässigen Chamber auftreten.
+
+---
+
+## 21. Parameterregion
+
+Für H3/C1 betrachten wir den kleinen unteren Subchamber
+
+\[
+\boxed{
+0<\sigma\le R<\varepsilon<\varepsilon_*,
+\qquad
+\varepsilon_*:=\frac{6\Delta-L}{4}.
+}
+\tag{C1B1.2}
+\]
+
+Wegen
+
+\[
+\varepsilon_*<\Delta/2
+\]
+
+liegt dieser vollständig im bisherigen unteren SW1-Chamber.
+
+---
+
+## 22. Von 92 Boundary-Signaturen zu allen Kollisionsgleichungen
+
+Aus den
+
+\[
+92
+\]
+
+symbolischen Kreisgrenzen entstehen
+
+\[
+\binom{92}{2}
+=
+\boxed{4186}
+\]
+
+ungeordnete Boundary-Paare.
+
+Nach Deduplikation bleiben
+
+\[
+\boxed{463}
+\]
+
+verschiedene rohe Differenzsignaturen.
+
+Für die nicht-\(L\)-Terme gilt uniform:
+
+\[
+|k|\le8
+\]
+
+und wegen
+
+\[
+|\rho|,|\mu|,|\nu|\le2,
+\qquad
+0<\sigma\le R<\varepsilon<\varepsilon_*,
+\]
+
+\[
+|\rho R+\mu\varepsilon+\nu\sigma|
+<
+6\varepsilon_*.
+\]
+
+Ferner gilt exakt
+
+\[
+2L
+>
+8\Delta+6\varepsilon_*,
+\]
+
+denn
+
+\[
+2L-(8\Delta+6\varepsilon_*)
+=
+\frac{7L-34\Delta}{2}
+>0.
+\]
+
+Damit können Kollisionsgleichungen mit
+
+\[
+|q|\ge2
+\]
+
+exakt ausgeschlossen werden.
+
+Nach Kreis-Wrap und Vorzeichenkanonisierung bleiben
+
+\[
+\boxed{1087}
+\]
+
+verschiedene kanonische Kollisionsgleichungen.
+
+---
+
+## 23. Exakte Keilprüfung
+
+Der Abschluss der Parameterregion ist der Ordnungssimplex
+
+\[
+0\le\sigma\le R\le\varepsilon\le\varepsilon_*.
+\]
+
+Für die lineare Parameterform
+
+\[
+\ell(R,\varepsilon,\sigma)
+=
+\rho R+\mu\varepsilon+\nu\sigma
+\]
+
+liegen alle Extremwerte auf den vier Simplex-Ecken. Daher genügt exakt die endliche Liste
+
+\[
+0,\quad
+\mu\varepsilon_*,
+\quad
+(\rho+\mu)\varepsilon_*,
+\quad
+(\rho+\mu+\nu)\varepsilon_*.
+\]
+
+Damit werden alle 1087 Gleichungen ohne numerischen Scan klassifiziert.
+
+Ergebnis:
+
+\[
+\boxed{1051}
+\]
+
+schneiden nicht einmal den abgeschlossenen Parameterkeil.
+
+Weitere
+
+\[
+\boxed{18}
+\]
+
+treffen nur dessen Rand.
+
+Genau eine dieser Randgleichungen ist im SW1-Scope erlaubt:
+
+\[
+\boxed{\sigma=R.}
+\]
+
+Die übrigen 17 erzwingen entweder
+
+- einen Nullparameter;
+- eine durch \(R<\varepsilon\) ausgeschlossene Ordnungsdegeneration;
+- oder die ausgeschlossene obere Wand
+  \[
+  \varepsilon=\varepsilon_*.
+  \]
+
+Schließlich schneiden exakt
+
+\[
+\boxed{18}
+\]
+
+Kollisionshyperflächen das **strikte Chamberinnere**.
+
+---
+
+## 24. Familie A — sechs \(s_*\)-Flächen
+
+Setze
+
+\[
+\boxed{
+s_*:=\frac L2-2\Delta>0.
+}
+\]
+
+Die erste genuine Familie lautet
+
+\[
+\boxed{
+s_*
+\in
+\{
+2R,\,
+R+\varepsilon,\,
+R+\sigma,\,
+2\varepsilon,\,
+\varepsilon+\sigma,\,
+2\sigma
+\}.
+}
+\tag{C1B1.3}
+\]
+
+Dies sind sechs verschiedene im Chamber realisierbare Kollisionshyperflächen.
+
+Ihre kanonischen Gleichungen besitzen
+
+\[
+q=\frac12,
+\qquad
+k=-2,
+\]
+
+also ausdrücklich einen nichtverschwindenden \(\Delta\)-Anteil.
+
+---
+
+## 25. Familie B — zwölf \(\chi\)-Flächen
+
+Setze
+
+\[
+\boxed{
+\chi:=5\Delta-L>0.
+}
+\]
+
+Die zweite genuine Familie lautet
+
+\[
+\boxed{
+\chi
+\in
+\{
+\varepsilon-R,\,
+\sigma,\,
+2\sigma,\,
+\varepsilon-\sigma,\,
+\varepsilon,\,
+\varepsilon+\sigma,\,
+2\varepsilon,
+}
+\]
+
+\[
+\boxed{
+R-\sigma,\,
+R,\,
+R+\sigma,\,
+R+\varepsilon,\,
+2R
+\}.
+}
+\tag{C1B1.4}
+\]
+
+Dies sind zwölf weitere im Chamber realisierbare Kollisionshyperflächen.
+
+Ihre kanonische Konstantenseite stammt aus
+
+\[
+q=1,
+\qquad
+k=-5,
+\]
+
+also wiederum aus einer genuine \(L/\Delta\)-Mischung.
+
+---
+
+## 26. Vollständiger aktueller Kollisionsledger
+
+Im für H3 relevanten kleinen unteren Parameterbereich ist die gesamte Boundary-Kollisionsgeometrie damit auf
+
+\[
+\boxed{
+18\text{ innere Hyperflächen}
++
+1\text{ erlaubte Randfläche }(\sigma=R)
+}
+\]
+
+reduziert.
+
+Dies ist eine sehr viel kleinere Stratifizierungsaufgabe als ein naiver \(92\times92\)-Vergleich.
+
+---
+
+## 27. Zertifikat C1B1
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c1b1_collision_strata.py
+
+Commit:
+
+9efac30808cea8072878af43dcc94c72be145949
+
+Committed Script-Blob:
+
+76c4d07e0e0228fadf7cd460c72bd4609dd0258e
+
+Der exakt committed GitHub-Inhalt wurde rekonstruiert, nach dem Git-Blob-Verfahren gehasht und ausgeführt.
+
+Ergebnis:
+
+SW1-A10-C1B1 COLLISION-STRATIFICATION CERTIFICATE: PASS
+
+Damit ist zulässig:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1B1}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, collision-strata scope)}.
+}
+\]
+
+---
+
+## 28. Nächster Knoten C1B2
+
+C1B1 klassifiziert **wo Grenzen kollidieren**, aber noch nicht die vollständige Reihenfolge der 92 Grenzen in jedem offenen Parameterstratum.
+
+Der nächste exakte Schritt ist daher:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1B2}:
+\text{Hyperflächen-Arrangement und Boundary-Order pro Parameterstratum}.
+}
+\]
+
+Erst danach darf
+
+\[
+N
+\]
+
+bestimmt beziehungsweise ein konstanter Ambient-Fiber gewählt werden.
+
+### Firewall
+
+C1B1 beweist keine Atomzahl, keine Fiberdimension, keine Matrixdarstellung und keine Injektivität.
