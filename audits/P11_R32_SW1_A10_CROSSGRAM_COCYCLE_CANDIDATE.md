@@ -3,7 +3,7 @@
 > **Stand:** 30. August 2026  
 > **Branch:** research/sw1-a10-crossgram-cocycle  
 > **Basis:** main@19da654f537868cd72757d2785071f8cf3f36c1b  
-> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1, C1B2A/B/C sowie C1C0-FORMAL im jeweils dokumentierten Scope zertifiziert. C1C1 besitzt ein zertifiziertes algebraisches/Faltungs-Skelett; die korrigierte analytische Hilbertraum-Fassung ist nach externem Cross-Model-Blindreview unabhängig GREEN im dokumentierten Scope. C2-HUB0/FREE0 sowie HUB0-COMP sind im jeweils explizit begrenzten Scope zertifiziert. Die frühere GATE0/GATE1-Zählung 92→100 wurde nach Klärung der HUB-Indexorientierung superseded; korrekt sind nun GATE0R/GATE1R mit dem operatororientierten 96-Wand-Alphabet. M0-HUB-SPEC ist zertifiziert; vollständige Liftmatrizen bleiben offen. Die frühere Deutung von Boundary-Kollisionen als Fiberquotienten wurde korrigiert. Keine Promotion.  
+> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1, C1B2A/B/C sowie C1C0-FORMAL im jeweils dokumentierten Scope zertifiziert. C1C1 besitzt ein zertifiziertes algebraisches/Faltungs-Skelett; die korrigierte analytische Hilbertraum-Fassung ist nach externem Cross-Model-Blindreview unabhängig GREEN im dokumentierten Scope. C2-HUB0/FREE0 sowie HUB0-COMP sind im jeweils explizit begrenzten Scope zertifiziert. Die frühere GATE0/GATE1-Zählung 92→100 wurde nach Klärung der HUB-Indexorientierung superseded; korrekt sind nun GATE0R/GATE1R mit dem operatororientierten 96-Wand-Alphabet. M0-HUB-SPEC und der korrigierte 108-Regel-M0-HUB-LIFT-Ledger sind zertifiziert; der freie A1-Lift-/Koeffizientenblock und die kombinierten Matrixfunktionen bleiben offen. Die frühere Deutung von Boundary-Kollisionen als Fiberquotienten wurde korrigiert. Keine Promotion.  
 > **Ziel:** den zu \(\ker\Gamma_I\) äquivalenten SW1-Operator auf der irrationalen H3-Rotationskomponente als endlichen operatorwertigen/finite-range Cocycle formulieren.
 
 ---
@@ -4961,20 +4961,270 @@ j=-3,-2,-1,0,1,2,3.
 
 Die Hubmatrix benutzt die operatororientierte Tabelle aus M0-HUB-SPEC.
 
+Der erste Versuch des 108-Regel-Hub-Liftzertifikats lief **FAIL**, weil dort noch die alte 18-Wrap-Annahme der nichtoperatororientierten HUB-Konvention übernommen war. Dieses FAIL wurde nicht gebucht.
+
+Nach GATE0R wurde der Liftledger vollständig operatororientiert neu aufgebaut und besteht nun exakt; siehe C2-M0-HUB-LIFT unten.
+
 Noch offen:
 
-1. der vollständige 108-Regel-Hub-Liftselector;
-2. der freie Lift-/A1-Koeffizientenledger;
-3. die zusammengesetzten \(12\times24\)-Matrizen \(M_j(\theta)\).
+1. der freie Lift-/A1-Koeffizientenledger;
+2. die zusammengesetzten \(12\times24\)-Matrizen \(M_j(\theta)\).
 
-Ein erster Versuch des 108-Regel-Hub-Liftzertifikats ist **FAIL** gelaufen, weil dort zunächst noch die alte 18-Wrap-Annahme für HUB übernommen war. Dieses FAIL wurde nicht committed und nicht gebucht.
+Keine Injektivitätsaussage.
 
-Der nächste korrekte Schritt ist daher:
+
+---
+
+# C2-M0-HUB-LIFT — vollständiger operatororientierter Hub-Liftledger
+
+## 99. Liftformel
+
+Für einen physischen Hubzweig
+
+\[
+x=s\,t+\lambda L+k\Delta
+\]
+
+wird nach der Inputvariable aufgelöst:
+
+\[
+t=sx-s\lambda L-sk\Delta.
+\]
+
+Für jede Sheet/Parity-Spezies schreibe
+
+\[
+\phi_g(\theta)
+=
+s_g\theta+\frac{\eta_g}{2}L+\kappa_g\Delta
+\]
+
+und
+
+\[
+\rho_g(\theta)=[\phi_g(\theta)]_L,
+\qquad
+N_g(\theta)
+=
+\frac{\phi_g(\theta)-\rho_g(\theta)}{L}
+\in\mathbb Z.
+\]
+
+Für ein festes Output-Sheet \(g_o\) liefert M0-HUB-SPEC eindeutig
+
+- das Input-Sheet \(g_i\),
+- den operatororientierten Shift \(j\),
+- einen konstanten Integer \(m\),
+
+so dass
+
+\[
+\boxed{
+\phi_{g_i}(\theta+j\Delta)
+=
+s\,\phi_{g_o}(\theta)
+-s\lambda L
+-sk\Delta
++mL.
+}
+\tag{C2.20}
+\]
+
+Ist \(\ell_o\in\{0,1,2\}\) der physische Output-Lift, so folgt für den benötigten Input-Lift exakt
+
+\[
+\boxed{
+\ell_i(\theta)
+=
+s\bigl(\ell_o-N_{g_o}(\theta)\bigr)
++
+N_{g_i}(\theta+j\Delta)
+-
+m.
+}
+\tag{C2.21}
+\]
+
+Damit ist die Liftwahl vollständig durch ganzzahlige Wrapfunktionen bestimmt.
+
+---
+
+## 100. Exakt 108 symbolische Hub-Liftregeln
+
+Es gibt
+
+\[
+36
+\]
+
+operatororientierte Sheet/Parity-Regeln und pro Regel
+
+\[
+3
+\]
+
+Output-Lifts.
+
+Damit entstehen exakt
+
+\[
+\boxed{
+36\cdot3=108
+}
+\]
+
+symbolische Hub-Liftregeln.
+
+Ihre Verteilung über die endgültigen Matrixlagen lautet:
+
+\[
+\boxed{
+\begin{array}{c|rrrrrr}
+j&-3&-2&-1&1&2&3\\
+\hline
+\#\text{ Liftregeln}&6&36&12&12&36&6
+\end{array}
+}
+\tag{C2.22}
+\]
+
+und weiterhin kein Hubbeitrag bei \(j=0\).
+
+---
+
+## 101. Selector-Closure auf \(B_{96}\)
+
+Die einzige \(\theta\)-abhängige diskrete Größe in C2.21 ist
+
+\[
+N_{g_i}(\theta+j\Delta)
+\]
+
+zusammen mit dem Output-Wrap
+
+\[
+N_{g_o}(\theta).
+\]
+
+Die Input-Selector-Sprünge liegen genau auf den operatororientierten HUB-Wrapwänden aus GATE0R.
+
+Der vollständige Hub-Wrapsatz besitzt
+
+\[
+\boxed{14}
+\]
+
+Wände.
+
+Alle liegen im kanonischen Matrixalphabet
+
+\[
+\boxed{B_{96}}.
+\]
+
+Gegenüber den alten reinen C1B0-Phasen
+
+\[
+\eta\frac L2+k\Delta,
+\qquad
+\eta\in\{0,1\},
+\quad
+-2\le k\le4,
+\]
+
+werden nur
+
+\[
+\boxed{
+k=5,\ 6
+}
+\]
+
+für beide Halbperiodenparitäten zusätzlich benötigt.
+
+Damit erzeugt der vollständige 108-Regel-Hub-Liftledger **keine** weitere Wand über GATE0R hinaus.
+
+---
+
+## 102. Deterministischer Ledger-Fingerprint
+
+Die 108 Regeln werden in kanonischer Sortierung als Tupel
+
+\[
+(\text{branch},g_o,\ell_o,g_i,j,s,m,\text{coeff},\text{gate})
+\]
+
+serialisiert.
+
+Der SHA256-Fingerprint lautet
+
+\[
+\boxed{
+\texttt{a6000b315c22a4464dd9ed5105be2bcd7ea0fd1ff44e32c5a1646ab1c6fc1508}.
+}
+\tag{C2.23}
+\]
+
+Damit ist der symbolische Hub-Liftledger reproduzierbar fixiert.
+
+---
+
+## 103. Zertifikat C2-M0-HUB-LIFT
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c2_m0_hub_lift.py
+
+Commit der bereinigten exakt ausgeführten Fassung:
+
+6518edb0e170fe423af8be2fe43070ce6235b6ec
+
+Committed Script-Blob:
+
+6bb1bff712aca5a17f2f249e50c373686f1931eb
+
+Exakt dieser bereinigte Blob wurde vor dem Pinning ausgeführt.
+
+Ergebnis:
+
+SW1-A10-C2-M0-HUB-LIFT SYMBOLIC LIFT LEDGER CERTIFICATE: PASS
+
+Damit ist im ausdrücklich begrenzten Scope zulässig:
 
 \[
 \boxed{
 \mathrm{A10\!-\!C2\!-\!M0\!-\!HUB\!-\!LIFT}:
-\text{108 operatororientierte Hub-Liftregeln auf }B_{96}.
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, symbolic hub lift-selector scope)}.
+}
+\]
+
+---
+
+## 104. Was M0-HUB-LIFT noch nicht beweist
+
+Der Hubblock ist nun auf Species-/Lift-/Gate-Ebene vollständig symbolisch beschrieben.
+
+Noch nicht vollständig konstruiert sind:
+
+1. der entsprechende freie \((I+A)\)-Liftledger;
+2. die A1-zellabhängigen Skalarrowkoeffizienten im Cover;
+3. die sieben kombinierten
+   \[
+   12\times24
+   \]
+   Matrixfunktionen
+   \[
+   M_{-3}(\theta),\ldots,M_3(\theta).
+   \]
+
+Der nächste Knoten ist daher
+
+\[
+\boxed{
+\mathrm{A10\!-\!C2\!-\!M0\!-\!FREE\!-\!LIFT}:
+\text{operatororientierter A1-Lift-/Koeffizientenledger}.
 }
 \]
 
