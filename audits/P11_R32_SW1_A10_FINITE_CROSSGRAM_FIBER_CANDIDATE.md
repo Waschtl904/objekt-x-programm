@@ -2,7 +2,7 @@
 
 > **Stand:** 29. August 2026  
 > **Stacked base:** research/sw1-a9-knf-separator@e727e067af228765219cbaaa1a717b80918b68c0  
-> **Status:** ?[O] — A10-H0 Hub-Phasenalgebra zertifiziert; endliche Cross-Gram-Faser und Injektivität noch offen; keine Promotion.  
+> **Status:** ?[O] gesamt — H0/H1/H2 und H3-Rotationscover zertifiziert; daraus folgt ein analytischer Kandidat für eine unendliche augmentierte Hub-Inzidenzkomponente im kleinen unteren Subchamber. Cross-Gram-Injektivität bleibt offen; keine Promotion.  
 > **Scope:** Übergang von den in A9 endlichen freien KNF-Punktkomponenten zum eigentlichen Annulus-/Cross-Gram-Test. Kein HT-RED, kein Objekt X, keine RH-Folgerung.
 
 ---
@@ -798,3 +798,372 @@ Der nächste Knoten ist
 \text{Frontier-/Komponentenklassifikation des augmentierten Range-4-Graphen}.
 }
 \]
+
+
+---
+
+## 10. A10-H3 — H2-only Rotationscover auf einem freien Band
+
+Die Explorationsbefunde mit großen Cutoffs werden für den mathematischen Status **nicht** benötigt. H3 kann direkt durch ein exaktes Transfercover angegriffen werden.
+
+Wir arbeiten im kleinen unteren Subchamber von A9 und setzen
+
+\[
+J:=(0,L).
+\]
+
+Wegen
+
+\[
+a=L+\Delta
+\]
+
+und
+
+\[
+R<\Delta
+\]
+
+gilt
+
+\[
+a-R-L=\Delta-R>0.
+\]
+
+Also
+
+\[
+\boxed{
+J\subset(0,a-R),
+}
+\]
+
+d. h. **jeder Punkt von \(J\) ist ein echter freier Blindkoordinatenpunkt** und kein rekonstruierter \(A_-\)-Punkt.
+
+### 10.1 Vier H2-only Wörter
+
+Aus dem in H2 zertifizierten 11-Zellen-Ledger genügen vier kurze Wörter.
+
+#### Wort P1
+
+Auf
+
+\[
+0<x<e-R
+\]
+
+existieren die beiden H2-Bridges
+
+\[
+x\xrightarrow{r_e}e-x
+\xrightarrow{r_d}x+\Delta.
+\]
+
+Also
+
+\[
+\boxed{P_1(x)=x+\Delta.}
+\]
+
+#### Wort P2
+
+Auf
+
+\[
+e-R<x<e
+\]
+
+gilt
+
+\[
+x\xrightarrow{r_T}T-x
+\xrightarrow{r_{T+\Delta}}x+\Delta.
+\]
+
+Also
+
+\[
+\boxed{P_2(x)=x+\Delta.}
+\]
+
+#### Wort P3
+
+Auf
+
+\[
+e<x<L-R
+\]
+
+gilt
+
+\[
+x\xrightarrow{\tau_{-e}}x-e
+\xrightarrow{\tau_{+d}}x+\Delta,
+\]
+
+weil
+
+\[
+d-e=\Delta.
+\]
+
+Also
+
+\[
+\boxed{P_3(x)=x+\Delta.}
+\]
+
+#### Wrap-Wort W
+
+Für jeden
+
+\[
+L-\Delta<x<L
+\]
+
+ist die Kette
+
+\[
+x
+\xrightarrow{\tau_{-e}}
+x-e
+\xrightarrow{r_e}
+L-x
+\xrightarrow{\tau_{+e}}
+L+e-x
+\xrightarrow{r_d}
+x+\Delta-L
+\]
+
+legal.
+
+Damit
+
+\[
+\boxed{
+W(x)=x+\Delta-L.
+}
+\]
+
+Alle vier Wörter bestehen **ausschließlich aus H2-Hub-Bridges**. Es wird für H3 daher keine ungeklärte Survival-Aussage eines alten A7-Rohkanals im aggregierten A9-Gramgraphen benötigt.
+
+### 10.2 Cover der Kreisrotation
+
+Da
+
+\[
+R<\Delta
+\]
+
+gilt
+
+\[
+L-\Delta<L-R.
+\]
+
+Daher überdecken die drei Low-Wörter
+
+\[
+(0,e-R),\qquad
+(e-R,e),\qquad
+(e,L-R)
+\]
+
+den gesamten Bereich
+
+\[
+(0,L-\Delta)
+\]
+
+bis auf die beiden offenen Zellgrenzen
+
+\[
+e-R,\qquad e.
+\]
+
+Auf dem Wrapbereich
+
+\[
+(L-\Delta,L)
+\]
+
+steht das Wort \(W\) zur Verfügung.
+
+Somit realisiert der augmentierte H2-Inzidenzgraph auf \(J\), außerhalb der endlichen Grenzmenge
+
+\[
+E
+=
+\{0,\ e-R,\ e,\ L-\Delta\}
+\pmod L,
+\]
+
+genau die Kreisrotation
+
+\[
+\boxed{
+F(x)=x+\Delta\pmod L.
+}
+\tag{A10.8}
+\]
+
+Hier wird \(F(x)\) immer durch einen **endlichen tatsächlichen Pfad im augmentierten free-\(w\)-Graphen** realisiert.
+
+### 10.3 Exaktes Zertifikat
+
+Zertifikat:
+
+scripts/certify_sw1_a10_h3_rotation_cover.py
+
+Commit:
+
+280ae258402465fe14f537b2823f3379a663bbd9
+
+Committed Script-Blob:
+
+2b65c578f42f120b0c612cd7e84482d52e22cef6
+
+Der exakt aus GitHub gelesene committed Blob wurde ausgeführt und ergab denselben Git-Blob-SHA.
+
+Ergebnis:
+
+SW1-A10-H3 H2-ONLY ROTATION-COVER CERTIFICATE: PASS
+
+Das Zertifikat beweist insbesondere:
+
+- \(J=(0,L)\subset(0,a-R)\);
+- die exakten vier H2-Wörter;
+- ihre vollständigen Aktivitätsintervalle;
+- \(P_1=P_2=P_3:x\mapsto x+\Delta\);
+- \(W:x\mapsto x+\Delta-L\);
+- das Cover von \(J\) bis auf endlich viele offene Zellgrenzen.
+
+Damit ist im **endlichen/algebraischen Scope** zulässig:
+
+\[
+\boxed{
+\mathrm{A10\!-\!H3\!-\!COVER}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}.
+}
+\]
+
+---
+
+## 11. A10-H3-INF — analytischer Infinite-Transfer-Kandidat
+
+Für die Unendlichkeitsfolgerung verwenden wir zusätzlich den bereits separat auditierten Input
+
+\[
+\boxed{
+\Delta/L\notin\mathbb Q.
+}
+\]
+
+Die endliche Ausnahme-Menge \(E\subset\mathbb T_L\) besitzt unter der irrationalen Rotation nur eine abzählbare Menge von Rückwärtsbildern:
+
+\[
+\mathcal E_\infty
+:=
+\bigcup_{n\ge0}(E-n\Delta)
+\pmod L.
+\]
+
+Da \(\mathbb T_L\) überabzählbar ist, existiert
+
+\[
+x_0\in J\setminus\mathcal E_\infty.
+\]
+
+Für dieses \(x_0\) trifft die gesamte Vorwärtsbahn
+
+\[
+x_n
+:=
+x_0+n\Delta
+\pmod L
+\]
+
+keine Zellgrenze aus \(E\).
+
+Nach A10-H3-COVER existiert daher für jedes \(n\) ein endlicher augmentierter Hubpfad
+
+\[
+x_n\leadsto x_{n+1}.
+\]
+
+Durch Konkatenation liegen alle \(x_n\) in **derselben** physischen Zusammenhangskomponente des augmentierten free-\(w\)-Inzidenzgraphen.
+
+Wären zwei verschiedene Orbitpunkte gleich,
+
+\[
+x_m=x_n,\qquad m>n,
+\]
+
+so wäre
+
+\[
+(m-n)\Delta\in L\mathbb Z,
+\]
+
+im Widerspruch zu
+
+\[
+\Delta/L\notin\mathbb Q.
+\]
+
+Also sind die \(x_n\) paarweise verschieden.
+
+Damit ergibt sich der Beweiskandidat
+
+\[
+\boxed{
+\text{Der augmentierte free-\(w\)-Hub-Inzidenzgraph besitzt im kleinen unteren Subchamber mindestens eine unendliche physische Komponente.}
+}
+\tag{A10.9}
+\]
+
+### Status-Firewall
+
+A10.9 ist eine **analytische Folgerung** aus
+
+1. dem zertifizierten endlichen H3-Cover und
+2. der separat bewiesenen Irrationalität \(\Delta/L\notin\mathbb Q\).
+
+Sie wird vor einem unabhängigen Review **nicht** als independent-GREEN-Certificate-Aussage gebucht.
+
+Zulässiger aktueller Status:
+
+\[
+\boxed{
+\mathrm{A10\!-\!H3\!-\!INF}:
+\text{AI-GREEN candidate}
+}
+\]
+
+ohne Promotion.
+
+### Bedeutung für Roadmap A
+
+Falls A10-H3-INF unabhängig bestätigt wird, ist damit die Strategie
+
+\[
+\text{„Cross-Gram über Zusammenhangskomponenten des augmentierten Hubgraphen in endlich viele Punktblöcke zerlegen“}
+\]
+
+im kleinen unteren Subchamber widerlegt.
+
+Dies bedeutet **nicht**, dass jede denkbare finite algebraische Kompression unmöglich ist.
+
+Insbesondere folgt weiterhin **nicht**
+
+\[
+\ker\Gamma_I\ne\{0\}.
+\]
+
+Eine unendliche Inzidenzkomponente kann einen injektiven Operator tragen.
+
+Der nächste korrekte Roadmap-A-Knoten wäre dann nicht mehr ein gewöhnlicher endlicher Determinantentest, sondern die Analyse des auf dieser irrationalen Rotationskomponente induzierten operatorwertigen Cross-Gram-/Residualcocycles.
+
+Keine HT-RED-, Objekt-X- oder RH-Folgerung.
