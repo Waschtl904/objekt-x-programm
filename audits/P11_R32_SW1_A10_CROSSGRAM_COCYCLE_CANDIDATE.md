@@ -3,7 +3,7 @@
 > **Stand:** 30. August 2026  
 > **Branch:** research/sw1-a10-crossgram-cocycle  
 > **Basis:** main@19da654f537868cd72757d2785071f8cf3f36c1b  
-> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1 sowie die Referenz-Arrangementstufen C1B2A/B im jeweils dokumentierten Scope zertifiziert. Für das tatsächliche Projektverhältnis ist der No-Degeneracy-Isotopie-Transfer noch separat zu auditieren; finales Fiber-N und Matrixkoeffizienten bleiben offen. Keine Promotion.  
+> **Status:** ?[O] gesamt — C0 als exakte inversefreie Kernelreduktion formuliert; C1-PROTO, C1B0, C1B1 sowie die Referenz-Arrangementstufen C1B2A/B/C im jeweils dokumentierten Scope zertifiziert. C1B2C bestätigt rückwirkend die Vollständigkeit der höheren Degenerationswerte und klassifiziert alle Boundary-Kollisionsstrata am rationalen Referenzarrangement. Für das tatsächliche Projektverhältnis ist der No-Degeneracy-Isotopie-Transfer weiterhin separat zu auditieren; finales Fiber-N und Matrixkoeffizienten bleiben offen. Keine Promotion.  
 > **Ziel:** den zu \(\ker\Gamma_I\) äquivalenten SW1-Operator auf der irrationalen H3-Rotationskomponente als endlichen operatorwertigen/finite-range Cocycle formulieren.
 
 ---
@@ -1793,5 +1793,450 @@ Der nächste finite Knoten ist deshalb
 \text{Boundary-Kollisionsklassen auf den 18 Ebenen und ihren Schnittstrata}.
 }
 \]
+
+Keine Matrix- oder Injektivitätsaussage.
+
+
+---
+
+# C1B2C — höhere Degenerationen und Boundary-Kollisionsklassen
+
+## 38. Retrospektiver Vollständigkeitscheck für \(\mathcal R_{\rm crit}\)
+
+Der Einwand, dass eine Kammeränderung nicht nur durch paarweise Parallelität/Kollision, sondern auch durch höhere Mehrfachinzidenzen ausgelöst werden kann, ist korrekt.
+
+Deshalb wird die kritische \(r\)-Menge nochmals unabhängig auf Arrangementebene geprüft.
+
+Verwendet werden sämtliche
+
+\[
+18
+\]
+
+inneren Kollisionshyperflächen sowie die vier Simplexfacetten
+
+\[
+\sigma=0,\qquad
+R=\sigma,\qquad
+\varepsilon=R,\qquad
+\varepsilon=\frac{r+1}{2}.
+\]
+
+In Dimension \(3\) besitzt jeder minimale affine Konsistenz-/Inzidenzzeuge höchstens
+
+\[
+3+1=4
+\]
+
+Gleichungen. Daher genügt es exhaustiv, alle abhängigen Teilmengen der Größen
+
+\[
+2,\quad3,\quad4
+\]
+
+zu untersuchen.
+
+Die exakte Enumeration ergibt:
+
+\[
+\boxed{
+12
+}
+\]
+
+parameterabhängige Zeugen bei Größe \(2\),
+
+\[
+\boxed{
+359
+}
+\]
+
+bei Größe \(3\),
+
+und
+
+\[
+\boxed{
+3841
+}
+\]
+
+bei Größe \(4\).
+
+Die zugehörigen kritischen Mengen besitzen Größen
+
+\[
+|\mathcal R_2|=3,\qquad
+|\mathcal R_3|=8,\qquad
+|\mathcal R_4|=17.
+\]
+
+Ihre Vereinigung ist **exakt** die bereits in C1B2A gefundene 17-Werte-Menge
+
+\[
+\boxed{
+\mathcal R_{\rm crit}
+=
+\left\{
+-3,-2,-1,-\frac12,0,\frac13,\frac12,\frac23,1,
+\frac43,\frac32,2,\frac52,3,4,5,6
+\right\}.
+}
+\]
+
+Wichtig:
+
+\[
+\boxed{
+|\mathcal R_4\setminus(\mathcal R_2\cup\mathcal R_3)|=9.
+}
+\]
+
+Diese neun Werte sind
+
+\[
+\boxed{
+-3,-2,-\frac12,\frac13,\frac23,\frac43,\frac52,5,6.
+}
+\]
+
+Damit ist explizit bestätigt:
+
+> Eine bloße Paar-/Tripelprüfung wäre **nicht** vollständig gewesen. Die 4-Ebenen-Prüfung ist mathematisch notwendig und wurde tatsächlich durchgeführt.
+
+Insbesondere bleibt
+
+\[
+\boxed{
+(3,4)\cap\mathcal R_{\rm crit}=\varnothing.
+}
+\]
+
+---
+
+## 39. Welche Boundary-Labels kollidieren auf den 18 Ebenen?
+
+Die 92 C1B0-Boundary-Signaturen werden vollständig rekonstruiert.
+
+Für jede der 18 genuine Kollisionsgleichungen werden sämtliche ungeordneten Labelpaare
+
+\[
+(i,j),\qquad 0\le i<j<92,
+\]
+
+bestimmt, deren Kreiswerte auf genau dieser Parameterhyperfläche zusammenfallen.
+
+Die exakten Paarzahlen pro Ebene in der C1B1-Reihenfolge lauten:
+
+\[
+\boxed{
+10,19,15,9,14,5,\;
+8,8,4,3,8,8,4,3,8,8,8,4.
+}
+\tag{C1B2C.1}
+\]
+
+Auf **jeder einzelnen inneren Ebene** bestehen die transitiven Boundary-Kollisionsklassen ausschließlich aus Zweierklassen.
+
+Es gibt also generisch auf einer einzelnen inneren Hyperfläche keine Dreier- oder größere Boundary-Identifikation.
+
+---
+
+## 40. Schnittstrata im offenen 3D-Simplex
+
+Beim rationalen Referenzwert
+
+\[
+r_0=\frac72
+\]
+
+besitzt das 18-Ebenen-Arrangement im offenen Simplex exakt
+
+\[
+\boxed{35}
+\]
+
+verschiedene Codimension-2-Schnittlinien.
+
+Jede dieser Linien liegt auf **genau zwei** der 18 Hyperflächen:
+
+\[
+\boxed{
+\text{Linien-Multiplizität}=2\quad\text{für alle 35 Linien}.
+}
+\]
+
+Ferner existieren exakt
+
+\[
+\boxed{10}
+\]
+
+innere Codimension-3-Schnittpunkte.
+
+Jeder dieser Punkte liegt auf **genau drei** der 18 Hyperflächen:
+
+\[
+\boxed{
+\text{Punkt-Multiplizität}=3\quad\text{für alle 10 Punkte}.
+}
+\]
+
+Insbesondere gibt es im offenen Referenzsimplex:
+
+- keine Vierfachlinie;
+- keinen Vierfach- oder höheren inneren Punkt.
+
+### 40.1 Boundary-Klassen auf den Schnittstrata
+
+Für jede der 35 Linien werden die Paarrelationen beider aktiver Hyperflächen vereinigt und transitiv abgeschlossen.
+
+Für jeden der 10 Punkte werden entsprechend die Paarrelationen aller drei aktiven Hyperflächen vereinigt.
+
+Ergebnis:
+
+\[
+\boxed{
+\text{Auf allen 35 inneren Linien und allen 10 inneren Punkten bleiben sämtliche Boundary-Kollisionsklassen Größe }2.
+}
+\tag{C1B2C.2}
+\]
+
+Das ist ein starker Vereinfachungsbefund:
+
+> Im **offenen** 3D-Parameterchamber entstehen trotz Mehrfachschnitten keine transitiven Dreier- oder größeren Boundary-Quotienten.
+
+---
+
+## 41. Die erlaubte Randfläche \(\sigma=R\) ist qualitativ anders
+
+C1B1 hatte bereits gezeigt, dass von den closure-only Kollisionsgleichungen genau
+
+\[
+\boxed{\sigma=R}
+\]
+
+im SW1-Scope erlaubt ist.
+
+Die Gleichung \(R-\sigma=0\) erzeugt selbst
+
+\[
+\boxed{23}
+\]
+
+generische Boundary-Paarkollisionen.
+
+Auf einem generischen Punkt dieser Randfläche sind auch diese Klassen zunächst nur Zweierklassen.
+
+### 41.1 Schnittlinien auf \(\sigma=R\)
+
+Von den 18 inneren Hyperflächen schneiden exakt
+
+\[
+\boxed{17}
+\]
+
+die relative innere Fläche
+
+\[
+0<\sigma=R<\varepsilon<\varepsilon_*.
+\]
+
+Die einzige fehlende Ebene ist die genuine Gleichung
+
+\[
+\chi=R-\sigma,
+\]
+
+die auf \(\sigma=R\) wegen \(\chi>0\) unmöglich ist.
+
+Nach Vereinigung der Randflächen-Kollisionen mit der jeweils aktiven inneren Hyperfläche besitzen die 17 Face-Lines maximale Boundary-Klassengrößen
+
+\[
+\boxed{
+4,3,4,2,3,4,3,3,4,3,2,3,2,3,4,3,4.
+}
+\tag{C1B2C.3}
+\]
+
+Damit:
+
+- 3 Face-Lines haben maximale Klasse \(2\);
+- 8 Face-Lines maximale Klasse \(3\);
+- 6 Face-Lines maximale Klasse \(4\).
+
+### 41.2 Innere Schnittpunkte auf \(\sigma=R\)
+
+Auf der relativen inneren Randfläche existieren exakt
+
+\[
+\boxed{6}
+\]
+
+Mehrfachschnittpunkte.
+
+Die Zahl zusätzlich aktiver innerer Hyperflächen besitzt die Verteilung
+
+\[
+\boxed{
+3:2,\qquad
+4:3,\qquad
+5:1.
+}
+\]
+
+Die sechs Punkte sind im normierten Referenzsimplex exakt:
+
+\[
+\left(\frac12,\frac12,1\right),
+\quad
+\left(\frac12,\frac12,\frac32\right),
+\quad
+\left(\frac12,\frac12,\frac74\right),
+\]
+
+\[
+\left(\frac34,\frac34,\frac74\right),
+\quad
+\left(1,1,\frac74\right),
+\quad
+(1,1,2).
+\]
+
+Die maximalen Boundary-Klassengrößen an diesen sechs Punkten lauten:
+
+\[
+\boxed{
+4,4,4,3,3,3.
+}
+\tag{C1B2C.4}
+\]
+
+Damit ist erstmals exakt sichtbar:
+
+> Größere Boundary-Quotientklassen entstehen in dieser Referenzstratifizierung **nicht im offenen 3D-Chamber**, sondern auf der zugelassenen Randfläche \(\sigma=R\).
+
+---
+
+## 42. Zertifikat C1B2C
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c1b2c_collision_classes.py
+
+Commit:
+
+d1c4cd040958810958e2e77b885b57d55fe3532e
+
+Committed Script-Blob:
+
+af09075bdf8f81e5d02ebd99e80d3f2ede564064
+
+Der committed GitHub-Blob wurde bytegenau lokal rekonstruiert:
+
+\[
+\texttt{git hash-object}
+=
+\texttt{af09075bdf8f81e5d02ebd99e80d3f2ede564064}.
+\]
+
+Exakt dieser Inhalt wurde ausgeführt.
+
+Ergebnis:
+
+SW1-A10-C1B2C HIGHER-DEGENERACY / COLLISION-STRATA CERTIFICATE: PASS
+
+Damit ist zulässig:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1B2C}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, reference-strata scope)}.
+}
+\]
+
+---
+
+## 43. Bedeutung für den Isotopie-Transfer
+
+C1B2C liefert zwei retrospektive Stützen für C1B2A-TRANSFER:
+
+1. die kritische \(r\)-Menge wurde tatsächlich mit allen minimal nötigen höheren Degenerationen bis Größe \(4\) erzeugt;
+2. das vollständige Referenz-Schnittlattice wurde explizit berechnet.
+
+Da
+
+\[
+(3,4)\cap\mathcal R_{\rm crit}=\varnothing,
+\]
+
+gibt es zwischen
+
+\[
+r_0=\frac72
+\]
+
+und dem tatsächlichen Projektwert keine neu auftretende oder verschwindende minimal affine Degeneration.
+
+Trotzdem bleibt der formale Schluss
+
+\[
+\text{Referenz-Lattice}
+\longrightarrow
+\text{tatsächliches Projekt-Lattice}
+\]
+
+bis zu einem unabhängigen Review weiterhin separat als
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1B2\!-\!TRANSFER}:
+\text{AI-GREEN candidate}.
+}
+\]
+
+---
+
+## 44. Konsequenz für die Fiber-Strategie
+
+C1B2C zeigt, dass zwei verschiedene Formulierungen für C1C sinnvoll auseinandergehalten werden müssen:
+
+### Offenes 3D-Chamber
+
+Dort treten nur paarweise Boundary-Kollisionen auf. Eine stratumweise physische Quotientierung ist daher vergleichsweise einfach.
+
+### Erlaubter Rand \(\sigma=R\)
+
+Dort treten echte Klassen der Größen
+
+\[
+3
+\quad\text{und}\quad
+4
+\]
+
+auf.
+
+Daher darf eine global über
+
+\[
+0<\sigma\le R<\varepsilon<\varepsilon_*
+\]
+
+konstante effektive Fiberdimension nicht ohne zusätzlichen Nachweis angenommen werden.
+
+Der natürliche nächste Knoten ist jetzt:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1C0}:
+\text{Vergleich effective-fiber vs. constant ambient-fiber}.
+}
+\]
+
+Erst danach wird ein \(N\) gebucht.
 
 Keine Matrix- oder Injektivitätsaussage.
