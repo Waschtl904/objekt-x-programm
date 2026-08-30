@@ -2200,43 +2200,404 @@ bis zu einem unabhängigen Review weiterhin separat als
 
 ---
 
-## 44. Konsequenz für die Fiber-Strategie
+## 44. Korrektur der Interpretation von C1B2C
 
-C1B2C zeigt, dass zwei verschiedene Formulierungen für C1C sinnvoll auseinandergehalten werden müssen:
+C1B2C klassifiziert **Boundary-Signaturen der gemeinsamen Gate-/Zellpartition**.
 
-### Offenes 3D-Chamber
+Die 92 C1B0-Labels sind daher keine Hilbert-Fiberkoordinaten.
 
-Dort treten nur paarweise Boundary-Kollisionen auf. Eine stratumweise physische Quotientierung ist daher vergleichsweise einfach.
-
-### Erlaubter Rand \(\sigma=R\)
-
-Dort treten echte Klassen der Größen
+Insbesondere bedeutet eine transitive Boundary-Klasse der Größe
 
 \[
 3
-\quad\text{und}\quad
+\quad\text{oder}\quad
 4
 \]
 
-auf.
-
-Daher darf eine global über
+auf
 
 \[
-0<\sigma\le R<\varepsilon<\varepsilon_*
+\sigma=R
 \]
 
-konstante effektive Fiberdimension nicht ohne zusätzlichen Nachweis angenommen werden.
+nur:
 
-Der natürliche nächste Knoten ist jetzt:
+> Mehrere symbolische Partitionierungswände liegen am selben Kreispunkt.
+
+Daraus folgt **nicht**, dass drei oder vier Funktionszustände zu einer Fiberkoordinate quotientiert werden.
+
+Die frühere Interpretation
+
+\[
+\text{Boundary-Kollision}
+\Longrightarrow
+\text{Änderung der effektiven Fiberdimension}
+\]
+
+war zu stark und wird hiermit ausdrücklich verworfen.
+
+C1B2C bleibt als Arrangement-/Partitionsergebnis vollständig gültig; korrigiert wird nur seine Interpretation für die Hilbert-Fiberisierung.
+
+---
+
+# C1C0 — formaler konstanter Ambient-Cover
+
+## 45. Drei verschiedene Objektarten
+
+Vor jeder Buchung eines Fiber-\(N\) müssen drei Ebenen getrennt werden.
+
+### 45.1 Boundary-Signaturen
+
+Die 92 C1B0-Labels sind **Wände der gemeinsamen stückweisen Partition**.
+
+Sie bestimmen, wo Gate-/Lift-/Wrap-Formeln wechseln.
+
+Sie sind keine unabhängigen Funktionskoordinaten.
+
+### 45.2 Operatorzweige
+
+Die 19 H2-Kanalsignaturen und die 22 affine Mastertypen beschreiben **Abbildungen zwischen Zuständen**.
+
+Auch sie sind keine zusätzlichen Fiberkoordinaten.
+
+### 45.3 Formale Orbit-Cover-Zustände
+
+A9 verwendet dagegen die diskrete Zustandsmenge
 
 \[
 \boxed{
-\mathrm{A10\!-\!C1C0}:
-\text{Vergleich effective-fiber vs. constant ambient-fiber}.
+\mathscr S_{\rm free}^{\rm form}
+=
+\{P,\overline Q\}
+\times
+\{0,1\}_{\rm parity}
+\times
+\{0,1,2\}_{\rm lift}.
+}
+\tag{C1C0.1}
+\]
+
+Damit
+
+\[
+\boxed{
+|\mathscr S_{\rm free}^{\rm form}|=2\cdot2\cdot3=12.
+}
+\tag{C1C0.2}
+\]
+
+Diese 12 Objekte sind zunächst **formale Mehrblatt-Cover-Slots**.
+
+Sie dürfen noch nicht ohne analytisches Fiberisierungslemma als 12 unabhängige Hilbert-Fiberkoordinaten bezeichnet werden.
+
+---
+
+## 46. Drei positive Annulus-Lifts
+
+Im kleinen unteren Chamber gilt
+
+\[
+S=T+\sigma<T+\varepsilon=T_0.
+\]
+
+Aus C1B2 folgt nach Normierung
+
+\[
+L=4+10r,
+\qquad
+\Delta=1+2r,
+\qquad
+\varepsilon_*=\frac{r+1}{2},
+\qquad
+3<r<4.
+\]
+
+Ferner
+
+\[
+T=2L+2\Delta.
+\]
+
+Daher
+
+\[
+3L-(T+\varepsilon_*)
+=
+\frac{3+11r}{2}
+>0.
+\]
+
+Also
+
+\[
+\boxed{
+S<T_0<3L.
+}
+\tag{C1C0.3}
+\]
+
+Nach positiver Odd-Faltung besitzt eine Annulusrestklasse modulo \(L\) somit höchstens drei physische Lifts.
+
+Definiere formal
+
+\[
+\boxed{
+\mathscr S_w^{\rm form}
+=
+\{W_0,W_1,W_2\},
 }
 \]
 
-Erst danach wird ein \(N\) gebucht.
+also
 
-Keine Matrix- oder Injektivitätsaussage.
+\[
+\boxed{
+|\mathscr S_w^{\rm form}|=3.
+}
+\tag{C1C0.4}
+\]
+
+---
+
+## 47. H2 schließt auf denselben vier Sheet/Parity-Spezies
+
+Jede der 19 H2-Kanalsignaturen besitzt die Form
+
+\[
+x(t)
+=
+s\,t+\frac{\ell}{2}L+k\Delta,
+\qquad
+s\in\{\pm1\}.
+\tag{C1C0.5}
+\]
+
+Schreibe eindeutig
+
+\[
+\ell=2m+\eta,
+\qquad
+\eta\in\{0,1\}.
+\]
+
+### 47.1 Positiver Slope
+
+Für
+
+\[
+s=+1
+\]
+
+ist der Kanal modulo \(L\) ein \(P\)-Zustand mit Parität \(\eta\) und lokalem Basisindex
+
+\[
+j=k.
+\]
+
+### 47.2 Negativer Slope
+
+Für
+
+\[
+s=-1
+\]
+
+verwenden wir
+
+\[
+\overline Q_{j,\eta}
+\equiv
+-t+(4-j)\Delta+\frac{\eta}{2}L
+\pmod L.
+\]
+
+Daher gilt
+
+\[
+j=4-k.
+\]
+
+Die vollständige 19-Signaturen-Liste trifft exakt die vier Spezies
+
+\[
+\boxed{
+(P,0),\ (P,1),\ (\overline Q,0),\ (\overline Q,1).
+}
+\tag{C1C0.6}
+\]
+
+Es ist kein fünftes Sheet und keine weitere Parität erforderlich.
+
+---
+
+## 48. Direkte H2-Reichweite im inversefreien Operator
+
+Für alle 19 direkten \(w\to\)physisch-Kanalsignaturen liegen die lokalen Basisindexsprünge in
+
+\[
+\boxed{
+j\in\{-2,-1,0,1,2,3\}.
+}
+\]
+
+Insbesondere
+
+\[
+\boxed{
+|j|\le3.
+}
+\tag{C1C0.7}
+\]
+
+Dies ist kleiner als die H2-Bridge-Reichweite \(4\).
+
+Kein Widerspruch:
+
+Die Reichweite \(4\) entsteht erst nach der **zweistufigen Eliminations-/Bridge-Komposition**
+
+\[
+\text{free}\to t\to\text{free}.
+\]
+
+Der inversefreie C0-Operator behält \(w\) als eigene Variable und benötigt für den direkten Hubteil nur Reichweite \(3\).
+
+---
+
+## 49. Formale feste Coverform
+
+Damit besitzt der inversefreie Operator formal die feste Slotstruktur
+
+\[
+\boxed{
+12_{\rm free}
++
+3_w
+=
+15
+}
+\]
+
+auf der Eingangsseite und
+
+\[
+\boxed{
+12_{\rm phys}
+}
+\]
+
+auf der Ausgangsseite.
+
+Symbolisch:
+
+\[
+\boxed{
+\mathbb C^{15}_{\rm form}
+\longrightarrow
+\mathbb C^{12}_{\rm form}.
+}
+\tag{C1C0.8}
+\]
+
+Dies ist bewusst **rechteckig**.
+
+Die Kernelaufgabe verlangt nicht, dass die fiberisierte Darstellung quadratisch ist.
+
+---
+
+## 50. Zertifikat C1C0
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c1c0_formal_ambient_cover.py
+
+Commit:
+
+cfeeeb4f9bc1f5c5a511508c327e6f9359071745
+
+Committed Script-Blob:
+
+71bdcb2fd4ae5d8187ef15936508cdb6c6930f81
+
+Der Dateiinhalt wurde vor dem Commit exakt ausgeführt.
+
+GitHub meldete danach exakt denselben Blob-SHA.
+
+Ergebnis:
+
+SW1-A10-C1C0 FORMAL AMBIENT-COVER CERTIFICATE: PASS
+
+Damit ist im ausdrücklich begrenzten Scope zulässig:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1C0\!-\!FORMAL}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate)}.
+}
+\]
+
+---
+
+## 51. C1C0-Firewall
+
+Noch **nicht** bewiesen ist:
+
+1. dass die 12 formalen \(P/\overline Q\)-Parity-Lift-Slots 12 unabhängige Hilbert-Fiberkoordinaten sind;
+2. eine unitäre oder isometrische Fiberisierung
+   \[
+   \mathcal F_R\oplus L^2(\mathcal A)
+   \longrightarrow
+   L^2(\mathbb T_L;\mathbb C^{15});
+   \]
+3. die genaue Bild-/Konsistenzbedingung des formalen Mehrblatt-Covers;
+4. der direkte vollständige Ledger von
+   \[
+   (I+A)J_R
+   \]
+   vom freien Cover in den physischen Cover;
+5. eine endgültige Matrixform;
+6. Injektivität.
+
+Insbesondere wird **kein**
+
+\[
+N_{\rm ambient}=15
+\]
+
+als Hilbert-Fiberdimension gebucht.
+
+Die Zahl \(15\) ist derzeit nur die Größe eines **formal geschlossenen Eingangscovers**.
+
+---
+
+## 52. Nächster Knoten
+
+Der nächste notwendige Schritt lautet jetzt präzise:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1C1}:
+\text{analytische Fiberisierung des formalen Covers}.
+}
+\]
+
+Dazu müssen wir entweder
+
+1. einen expliziten isometrischen Mehrblatt-Embeddingoperator mit exakt beschriebenem Bild konstruieren,
+
+oder
+
+2. einen kleineren echten physischen Fiber wählen und die Reflexions-/Parity-Operationen als nichtlokale endliche Pullbacks behalten.
+
+Erst nach dieser Entscheidung ist eine Aussage
+
+\[
+(\mathscr C f)(x)
+=
+\sum_j M_j(x)f(x+j\Delta)
+\]
+
+auf einem **wirklich definierten Hilbert-Fiberraum** zulässig.
+
+Keine Injektivitätsaussage.
