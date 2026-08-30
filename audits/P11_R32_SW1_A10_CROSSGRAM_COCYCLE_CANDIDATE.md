@@ -6567,3 +6567,202 @@ C1B2A-CHIRO liefert bereits den mechanisch zertifizierten finite/algebraischen I
 Bis der mathematische Covektor-/Kammer-/Kreisordnungs-Transfer unabhängig bestätigt ist, folgt aus M1-FULL **noch nicht** die tatsächliche-\(r\) a.e.-Operatorgleichung.
 
 Keine Injektivitätsaussage.
+
+
+---
+
+# C1B2A-AFF-CHIRO — affine Verstärkung mit Unendlichkeitselement
+
+## 135. Warum das Unendlichkeitselement explizit ergänzt wird
+
+Die 22 augmentierten Hyperflächenzeilen beschreiben zunächst die homogenisierte projektive Konfiguration.
+
+Für die **affine** Kammerstruktur wird zusätzlich das ausgezeichnete Unendlichkeitselement
+
+\[
+\boxed{
+g_\infty=(0,0,0,1)
+}
+\]
+
+mitgeführt.
+
+Damit besitzt die affine orientierte Konfiguration
+
+\[
+\boxed{23}
+\]
+
+Elemente.
+
+---
+
+## 136. Vollständige 23er-Minorenprüfung
+
+Es werden alle
+
+\[
+\binom{23}{4}
+=
+\boxed{8855}
+\]
+
+Rank-4-Minoren exakt ausgewertet.
+
+Die Gesamtklassifikation lautet:
+
+\[
+\boxed{
+2274_{\rm identisch\ Null}
++
+2930_{\rm konstant\ nonzero}
++
+3651_{\rm affin\!-\!linear}
+=
+8855.
+}
+\tag{C2.50}
+\]
+
+Die
+
+\[
+\binom{22}{3}
+=
+\boxed{1540}
+\]
+
+neuen Minoren, die \(g_\infty\) enthalten, zerfallen exakt als
+
+\[
+\boxed{
+622_{\rm identisch\ Null}
++
+918_{\rm konstant\ nonzero}
++
+0_{\rm r\!-\!abhängig}.
+}
+\tag{C2.51}
+\]
+
+Das folgt strukturell daraus, dass diese Minoren nur Determinanten der \(r\)-unabhängigen räumlichen Normalen enthalten.
+
+---
+
+## 137. Kritische Menge bleibt unverändert
+
+Auch für den vollständigen affinen 23er-Chirotop lautet die Nullstellenmenge sämtlicher nichtkonstanter Minoren exakt
+
+\[
+\boxed{
+\left\{
+-3,-2,-1,-\frac12,0,\frac13,\frac12,\frac23,
+1,\frac43,\frac32,2,\frac52,3,4,5,6
+\right\}.
+}
+\tag{C2.52}
+\]
+
+Somit:
+
+\[
+\boxed{
+\text{keine affine Chirotop-Degeneration für }3<r<4.
+}
+\tag{C2.53}
+\]
+
+Damit ist die mögliche Lücke
+
+\[
+\text{projektive Konstanz}
+\not\Rightarrow
+\text{affine Konstanz ohne ausgezeichnetes Unendlichkeitsdatum}
+\]
+
+für die konkrete Familie explizit geschlossen.
+
+---
+
+## 138. Zertifikat C1B2A-AFF-CHIRO
+
+Zertifikat:
+
+scripts/certify_sw1_a10_c1b2a_affine_chirotope.py
+
+Commit:
+
+b7913adbf854e08a09e4c82ac9e89388cff331e8
+
+Committed / exakt vorab ausgeführter Blob:
+
+1c2f7a3e6123697846e4f6d5e931d3c962b1fb20
+
+Ergebnis:
+
+SW1-A10-C1B2A AFFINE CHIROTOPE CERTIFICATE: PASS
+
+Deterministischer 8855-Minorenledger:
+
+\[
+\boxed{
+\texttt{90e6fa2f00c35435f5821ff94020725c13b1252c7c91194eb198dc95903d1583}.
+}
+\]
+
+Affiner Chirotop-Signvektor:
+
+\[
+\boxed{
+\texttt{8b9e06f0e2bd3c77549d6d801098d7076391f545bc07f3cc06444bab58b6f987}.
+}
+\]
+
+Damit:
+
+\[
+\boxed{
+\mathrm{A10\!-\!C1B2A\!-\!AFF\!-\!CHIRO}:
+\text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, affine chirotope + infinity-element scope)}.
+}
+\]
+
+---
+
+## 139. Verbleibender TRANSFER-Gate
+
+Nach C1B2A-AFF-CHIRO ist der verbleibende Punkt nicht mehr eine versteckte Projektiv/Affin-Frage.
+
+Zu prüfen bleibt ausschließlich der mathematische Schluss:
+
+\[
+\boxed{
+\text{konstanter affiner Chirotop}
+\Longrightarrow
+\text{konstanter Covektor-/Tope-Datensatz}
+}
+\]
+
+für die realisierbare orientierte Hyperflächenfamilie und anschließend die konkrete Folgerung:
+
+\[
+\boxed{
+\text{dieselben 64 Parameterkammern}
++
+\text{dieselben }B_{96}\text{-Kreisordnungen}.
+}
+\]
+
+Dieser Schluss wird weiterhin separat als
+
+\[
+\mathrm{A10\!-\!C1B2A\!-\!TRANSFER}
+\]
+
+geführt und benötigt einen unabhängigen mathematischen Review.
+
+Erst danach darf M1-FULL vom Referenzwert \(r_0=7/2\) auf den tatsächlichen Projektwert übertragen werden.
+
+Keine Injektivitätsaussage.
