@@ -102,6 +102,42 @@ NEW={
 B96=B92|NEW
 assert len(B96)==96
 
+# Fixed-circle normalization for transfer across varying circumference L(r).
+# Since L(r)=4+10r is positive on 3<r<4, division by L(r) identifies
+# R/L(r)Z orientation-preservingly with the fixed circle R/Z.
+def wall_lift(sig,r,s,R,e):
+    l,k,rho,mu,nu=sig
+    Lr=4+10*r
+    Dr=1+2*r
+    return l*Lr+k*Dr+rho*R+mu*e+nu*s
+
+def wall_mod(sig,r,s,R,e):
+    Lr=4+10*r
+    z=wall_lift(sig,r,s,R,e)
+    n=F(floorf(z/Lr))
+    return z-n*Lr
+
+def wall_norm(sig,r,s,R,e):
+    Lr=4+10*r
+    assert Lr > 0
+    return wall_mod(sig,r,s,R,e)/Lr
+
+# Exact endpoint/monotonicity certificate for L(r)>0 throughout (3,4).
+assert 10 > 0 and 4+10*F(3) > 0 and 4+10*F(4) > 0
+
+# Mechanical normalization check on a certified generic reference chamber point:
+# theta/L in [0,1), injectivity is preserved, and the increasing order is identical.
+probe_r=F(7,2)
+probe_s,probe_R,probe_e=F(1,7),F(2,7),F(3,7)
+probe_sigs=sorted(B96)
+probe_mod_vals=[wall_mod(sig,probe_r,probe_s,probe_R,probe_e) for sig in probe_sigs]
+probe_norm_vals=[wall_norm(sig,probe_r,probe_s,probe_R,probe_e) for sig in probe_sigs]
+probe_L=4+10*probe_r
+assert all(F(0) <= u < F(1) for u in probe_norm_vals)
+assert all(probe_norm_vals[i]*probe_L == probe_mod_vals[i] for i in range(96))
+assert len(set(probe_mod_vals)) == len(set(probe_norm_vals)) == 96
+assert tuple(sorted(range(96),key=lambda i:probe_mod_vals[i])) == tuple(sorted(range(96),key=lambda i:probe_norm_vals[i]))
+
 raw92={sub(x,y) for x,y in combinations(sorted(B92),2)}
 raw96={sub(x,y) for x,y in combinations(sorted(B96),2)}
 assert len(raw92)==463
@@ -180,6 +216,8 @@ assert identical==18
 
 print("SW1-A10-C2-GATE1R 96-WALL COLLISION-HYPERPLANE CERTIFICATE: PASS")
 print("96 boundary labels -> 4560 pairs -> 503 raw differences")
+print("fixed-circle normalization theta/L(r) -> R/Z: PASS; L(r)>0 on 3<r<4")
+print("reference normalization preserves all 96 labels and their increasing/cyclic order")
 print("after exact |q|<4 cutoff: 2539 canonical equations = 18 strict + 18 closure + 2503 outside")
 print("STRONG IDENTITY: S96 == S92 as sets of canonical equations")
 print("STRONG IDENTITY: C96 == C92 as sets of canonical equations")
