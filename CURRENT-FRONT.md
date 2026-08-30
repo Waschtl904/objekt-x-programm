@@ -363,6 +363,7 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 \text{P12 restricted-tail outer Hub} & \checkmark[M] \\
 \text{HT-A4b-SW1-M} & \checkmark[M] \\
 \text{SW1-KNF} & \text{AI-GREEN candidate, keine Promotion} \\
+\text{SW1-A-FOLD} & \text{AI-GREEN + independent GREEN (certificate, alg./mech. scope)} \\
 \text{SW1-2TP} & \text{AI-GREEN + independent GREEN (certificate)} \\
 \text{SW1-AWI} & \text{AI-GREEN + independent GREEN (certificate)} \\
 \text{SW1-}\Delta\text{-DESCENT (gesamt)} & ?[O] \\
@@ -389,6 +390,6 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 }
 \]
 
-**Nächster Default:** Roadmap A, Punkt 1 — die Odd/even-Faltung für das bereits konstruierte tatsächliche-\(r\)-M1-System exakt festlegen; danach Hub-Shifts, Rest-Martingaleblöcke, Cutoff-Wand-Zerlegung und A0-Vollständigkeit abarbeiten. Ziel bleibt \(\ker\Gamma_I=\{0\}\) oder ein exakter Gegenvektor.
+**Nächster Default:** Roadmap A — A-FOLD ist als Certificate-Brücke geschlossen. Jetzt den bestehenden A2–A10-Kandidatenstack rückwärts gegen die exakte Vollraum↔Halbachse↔A0/A1-Äquivalenz prüfen und den ersten tatsächlich noch offenen Nichtentartungsschritt isolieren. Ziel bleibt \(\ker\Gamma_I=\{0\}\) oder ein exakter Gegenvektor.
 
 **Merge-Firewall:** PR #34 promotet ausschließlich C1B2A-CHIRO und C1B2A-TRANSFER im dokumentierten Scope; PR #35 ist reine Status-/Navigationssynchronisation. M1-RAW und M1-FULL(7/2) sind Certificate-Ergebnisse ohne eigene \`✓[M]\`-Promotion. Insbesondere folgen weder \(\ker\Gamma_I=\{0\}\) noch \(\ker\Gamma_I\neq\{0\}\), kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
