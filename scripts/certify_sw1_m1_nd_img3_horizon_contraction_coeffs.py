@@ -12,9 +12,9 @@ This script certifies only:
 - exact signs of all A1 coefficients;
 - exact absolute off-diagonal row sums for the eight active M1 row types;
 - the exact maximal diagonal-dominance ratio q_* (attained at R6/R7);
-- q_* < 77/100 using elementary rational bounds for logs/radicals;
-- d_min = 1+c1, d_max = 1+kappa and sqrt(d_max/d_min) < 9/7;
-- therefore (77/100)*(9/7)=693/700<1.
+- q_* < 96/125 using elementary rational bounds for logs/radicals;
+- d_min = 1+c1, d_max = 1+kappa and sqrt(d_max/d_min) < 251/200;
+- therefore (96/125)*(251/200)=3012/3125<1.
 
 The infinite-dimensional step using selfadjointness, symmetric atomic-kernel
 quadratic forms, and the unitary positive-half/lift model is NOT machine-proved
@@ -138,16 +138,17 @@ def log_rational_bounds(x, N):
 log2_lo,log2_hi=log_rational_bounds(2,1)
 log3_lo,log3_hi=log_rational_bounds(3,2)
 
-assert log2_lo > F(69,100)
-assert log2_hi < F(347,500)
-assert log3_hi < F(1099,1000)
+assert log2_lo == F(56,81)
+assert log2_hi == F(1123,1620)
+assert log3_lo == F(263,240)
+assert log3_hi == F(923,840)
 
-# Radical rational bounds, certified by integer powers.
+# Tighter radical rational bounds, certified by integer powers.
 sqrt2_lo=F(7,5)
-sqrt2_hi=F(99,70)
-root4_2_hi=F(119,100)
-sqrt3_hi=F(97,56)
-root34_2_hi=F(101,60)
+sqrt2_hi=F(577,408)
+root4_2_hi=F(11893,10000)
+sqrt3_hi=F(1351,780)
+root34_2_hi=F(8409,5000)
 
 assert sqrt2_lo**2 < 2
 assert sqrt2_hi**2 > 2
@@ -156,86 +157,86 @@ assert sqrt3_hi**2 > 3
 assert root34_2_hi**4 > 8
 
 # ---------------------------------------------------------------------------
-# 4. Human-checkable rational proof q_* < 77/100.
+# 4. Human-checkable rational proof q_* < 96/125.
 #
 # SymPy simplifies
-#   77*dmax - 100*off_R6
-# to (22176 - QNUM)/288 where
+#   96*dmax - 125*off_R6
+# to (13824 - QNUM)/144 where
 #   QNUM =
-#     963 sqrt(2) log2
-#   + 1800 2^(1/4) log2
-#   + 1472 sqrt(3) log3
-#   + 6084 log2
-#   + 10800 2^(3/4) log2.
+#     612 sqrt(2) log2
+#   + 1125 2^(1/4) log2
+#   + 928 sqrt(3) log3
+#   + 3816 log2
+#   + 6750 2^(3/4) log2.
 #
-# We upper-bound QNUM entirely by rationals.
+# We upper-bound QNUM entirely by the rational log/radical bounds above.
 # ---------------------------------------------------------------------------
 
 offmax=rows["R6"][1]
-q_margin=sp.factor(sp.simplify(77*dmax-100*offmax))
+q_margin=sp.factor(sp.simplify(96*dmax-125*offmax))
 QNUM=(
-    963*sp.sqrt(2)*L2
-    +1800*2**sp.Rational(1,4)*L2
-    +1472*sp.sqrt(3)*L3
-    +6084*L2
-    +10800*2**sp.Rational(3,4)*L2
+    612*sp.sqrt(2)*L2
+    +1125*2**sp.Rational(1,4)*L2
+    +928*sp.sqrt(3)*L3
+    +3816*L2
+    +6750*2**sp.Rational(3,4)*L2
 )
-assert sp.simplify(q_margin-(sp.Integer(22176)-QNUM)/288)==0
+assert sp.simplify(q_margin-(sp.Integer(13824)-QNUM)/144)==0
 
 QNUM_upper=(
-    963*sqrt2_hi*F(347,500)
-    +1800*root4_2_hi*F(347,500)
-    +1472*sqrt3_hi*F(1099,1000)
-    +6084*F(347,500)
-    +10800*root34_2_hi*F(347,500)
+    612*sqrt2_hi*log2_hi
+    +1125*root4_2_hi*log2_hi
+    +928*sqrt3_hi*log3_hi
+    +3816*log2_hi
+    +6750*root34_2_hi*log2_hi
 )
-assert QNUM_upper < 22176
-assert sp.simplify(sp.Rational(77,100)-qstar).is_positive is True
+assert QNUM_upper < 13824
+assert sp.simplify(sp.Rational(96,125)-qstar).is_positive is True
 
 # ---------------------------------------------------------------------------
-# 5. Human-checkable rational proof sqrt(dmax/dmin) < 9/7.
+# 5. Human-checkable rational proof sqrt(dmax/dmin) < 251/200.
 #
-# Equivalent to 49*dmax < 81*dmin.
+# Equivalent to 40000*dmax < 63001*dmin.
 # SymPy simplifies the positive margin to
-#   (9216 - 3136 sqrt(3)log3 - 5292 log2
-#           + 1863 sqrt(2)log2)/288.
+#   (828036 - 320000 sqrt(3)log3 - 540000 log2
+#            + 162009 sqrt(2)log2)/36.
 #
 # Negative terms use upper bounds; the positive term uses lower bounds.
 # ---------------------------------------------------------------------------
 
-cond_margin=sp.factor(sp.simplify(81*dmin-49*dmax))
+cond_margin=sp.factor(sp.simplify(251**2*dmin-200**2*dmax))
 CNUM=(
-    9216
-    -3136*sp.sqrt(3)*L3
-    -5292*L2
-    +1863*sp.sqrt(2)*L2
+    828036
+    -320000*sp.sqrt(3)*L3
+    -540000*L2
+    +162009*sp.sqrt(2)*L2
 )
-assert sp.simplify(cond_margin-CNUM/288)==0
+assert sp.simplify(cond_margin-CNUM/36)==0
 
 CNUM_lower=(
-    F(9216)
-    -3136*sqrt3_hi*F(1099,1000)
-    -5292*F(347,500)
-    +1863*sqrt2_lo*F(69,100)
+    F(828036)
+    -320000*sqrt3_hi*log3_hi
+    -540000*log2_hi
+    +162009*sqrt2_lo*log2_lo
 )
 assert CNUM_lower > 0
-assert sp.simplify(81*dmin-49*dmax).is_positive is True
+assert sp.simplify(251**2*dmin-200**2*dmax).is_positive is True
 
 # Final rational envelope.
-q_envelope=F(77,100)
-condition_envelope=F(9,7)
+q_envelope=F(96,125)
+condition_envelope=F(251,200)
 standard_envelope=q_envelope*condition_envelope
-assert standard_envelope==F(693,700)
+assert standard_envelope==F(3012,3125)
 assert standard_envelope<1
 
 print("active row types:", ",".join(rows))
 for name in rows:
     print(name, "ratio=", sp.N(ratios[name], 16))
 print("q_* attained at R6/R7 =",sp.N(qstar,18))
-print("exact rational envelope q_* < 77/100: PASS")
+print("exact rational envelope q_* < 96/125: PASS")
 print("d_min =",sp.N(dmin,18))
 print("d_max =",sp.N(dmax,18))
-print("exact rational envelope sqrt(d_max/d_min) < 9/7: PASS")
-print("finite coefficient envelope: (77/100)*(9/7) = 693/700 < 1")
+print("exact rational envelope sqrt(d_max/d_min) < 251/200: PASS")
+print("finite coefficient envelope: (96/125)*(251/200) = 3012/3125 < 1")
 print("FIREWALL: analytic selfadjoint L2 contraction step is separate")
 print("SW1 M1-ND IMG3 HORIZON CONTRACTION COEFFICIENT CERTIFICATE: PASS")
