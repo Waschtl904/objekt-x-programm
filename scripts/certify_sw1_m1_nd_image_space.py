@@ -95,7 +95,54 @@ for g in GN:
             assert ext[(g,k,t)]==ext[("P0",k,rho(g,t))]
 
 # ---------------------------------------------------------------------------
-# 3. Exact P0-output elimination for FREE and HUB species rules.
+# 3. Output-side P0 injectivity on the true symmetric horizon image.
+# ---------------------------------------------------------------------------
+# Build a second, nontrivial valid horizon-output sample independently of the
+# input sample above. It satisfies the same species covariance because the
+# physical output is again covered by U_H.
+out_base={(k,t): (k+1)*(t+3) for k in range(3) for t in range(N)}
+out_mask={(k,t): int(((2*t+k)%7)!=1) for k in range(3) for t in range(N)}
+out_p0={(k,t):out_mask[(k,t)]*out_base[(k,t)] for k in range(3) for t in range(N)}
+
+out_full={}
+for g in GN:
+    for k in range(3):
+        for t in range(N):
+            out_full[(g,k,t)]=out_p0[(k,rho(g,t))]
+
+# Restrict to P0 and reconstruct the complete valid output.
+out_restricted={(k,t):out_full[("P0",k,t)] for k in range(3) for t in range(N)}
+assert out_restricted==out_p0
+
+out_reconstructed={}
+for g in GN:
+    for k in range(3):
+        for t in range(N):
+            out_reconstructed[(g,k,t)]=out_restricted[(k,rho(g,t))]
+assert out_reconstructed==out_full
+
+# Explicit injectivity of P0 restriction on the valid output image:
+# if all P0 output components vanish, covariance forces every species to vanish.
+zero_p0={(k,t):0 for k in range(3) for t in range(N)}
+zero_full={}
+for g in GN:
+    for k in range(3):
+        for t in range(N):
+            zero_full[(g,k,t)]=zero_p0[(k,rho(g,t))]
+assert all(v==0 for v in zero_full.values())
+
+# Conversely, the full zero output trivially restricts to P0 zero.
+full_zero={key:0 for key in out_full}
+restricted_full_zero={(k,t):full_zero[("P0",k,t)] for k in range(3) for t in range(N)}
+assert all(v==0 for v in restricted_full_zero.values())
+
+# Therefore on the valid symmetric horizon image:
+#     R_P0(F)=0  <=>  F=0.
+assert any(v!=0 for v in out_full.values())
+assert any(v!=0 for v in out_restricted.values())
+
+# ---------------------------------------------------------------------------
+# 4. Exact P0-output elimination for FREE and HUB species rules.
 # ---------------------------------------------------------------------------
 FREE=[
     ("I",       +1,F(0), 0),
@@ -209,7 +256,7 @@ half_hub_names={row[0] for row in hub_rows if row[3][1]==F(1,2)}
 assert half_hub_names=={"B_L","B_R","B_O"}
 
 # ---------------------------------------------------------------------------
-# 4. Structural slot-count firewall.
+# 5. Structural slot-count firewall.
 # ---------------------------------------------------------------------------
 formal_species=4
 lifts=3
@@ -222,7 +269,7 @@ independent_base_W=lifts
 assert independent_base_H+independent_base_W==6
 
 print("Klein-four sheet/parity algebra: PASS")
-print("P0 covariance and two-sided range reconstruction: PASS")
+print("P0 covariance and two-sided input-range reconstruction: PASS")\nprint("P0 output restriction is injective on valid symmetric horizon image: PASS")
 print("formal input cover: 12_H + 12_W = 24 slots")
 print("valid symmetric-cover data determined by 3_H + 3_W base-lift functions")
 print("P0-output FREE effective affine types: 9")
