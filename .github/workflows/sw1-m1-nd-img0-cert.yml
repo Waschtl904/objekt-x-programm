@@ -1,0 +1,34 @@
+name: SW1 M1-ND IMG0 certificate
+
+on:
+  push:
+    branches:
+      - main
+      - research/sw1-m1-nd-image-space
+    paths:
+      - 'audits/P11_R32_SW1_M1_ND_IMAGE_SPACE_CANDIDATE.md'
+      - 'scripts/certify_sw1_m1_nd_image_space.py'
+      - '.github/workflows/sw1-m1-nd-img0-cert.yml'
+  workflow_dispatch:
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Record provenance
+        run: |
+          python --version
+          git rev-parse HEAD
+          git hash-object audits/P11_R32_SW1_M1_ND_IMAGE_SPACE_CANDIDATE.md
+          git hash-object scripts/certify_sw1_m1_nd_image_space.py
+
+      - name: Run IMG0 certificate
+        run: python scripts/certify_sw1_m1_nd_image_space.py
