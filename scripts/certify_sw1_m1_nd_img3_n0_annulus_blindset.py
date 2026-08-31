@@ -85,7 +85,7 @@ for z in [Cd,Ca,Ce,CT]:
 # Structural constant ordering used by the SW1 support proof.
 assert sp.simplify(d-e-Delta)==0
 assert sp.simplify(a-d-e)==0
-assert sp.simpl(T-2*a)==0
+assert sp.simplify(T-2*a)==0
 assert sp.simplify(e-2*Delta).is_positive is True
 
 # Under SW1: 0<sigma<R<eps and R+eps<Delta.
