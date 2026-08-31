@@ -8,6 +8,7 @@ on:
       - 'audits/P11_R32_SW1_M1_ND_IMG3_LOCAL_ELIMINATOR_CANDIDATE.md'
       - 'scripts/certify_sw1_m1_nd_img3_local_eliminator.py'
       - 'scripts/certify_sw1_m1_nd_img3_horizon_contraction_coeffs.py'
+      - 'scripts/certify_sw1_m1_nd_img3_b96_mapstability_nogo.py'
       - '.github/workflows/sw1-m1-nd-img3-eliminator-cert.yml'
   workflow_dispatch:
 
@@ -33,6 +34,7 @@ jobs:
           git rev-parse HEAD
           git hash-object scripts/certify_sw1_m1_nd_img3_local_eliminator.py
           git hash-object scripts/certify_sw1_m1_nd_img3_horizon_contraction_coeffs.py
+          git hash-object scripts/certify_sw1_m1_nd_img3_b96_mapstability_nogo.py
           if [ -f audits/P11_R32_SW1_M1_ND_IMG3_LOCAL_ELIMINATOR_CANDIDATE.md ]; then
             git hash-object audits/P11_R32_SW1_M1_ND_IMG3_LOCAL_ELIMINATOR_CANDIDATE.md
           fi
@@ -42,3 +44,6 @@ jobs:
 
       - name: Run IMG3 horizon contraction coefficient certificate
         run: python scripts/certify_sw1_m1_nd_img3_horizon_contraction_coeffs.py
+
+      - name: Run IMG3 B96 map-stability no-go certificate
+        run: python scripts/certify_sw1_m1_nd_img3_b96_mapstability_nogo.py
