@@ -351,6 +351,52 @@ identical on one fixed circle. Their pullbacks use the actual \(L(r)\) and
 \(\Delta(r)\). The claim is only that the labeled reduced formula transfers
 under the already proved chamber/atom identification.
 
+### Post-review CI provenance
+
+The post-review hardening was reproduced on GitHub Actions with all three code paths:
+
+- Run: \`33402483429\`
+- Job: \`99521925339\`
+- Head: \`3734d3a89f2c406607a21a81029f6c2720ec4365\`
+- Python: \`3.12.14\`
+- Audit blob: \`488e39740d046d7cdeeffb79331d0d380c0dd928\`
+- primary IMG1 blob: \`d824bea626e5b97fbad5a75ed51097408f5b6144\`
+- species/lift cross-check blob: \`31ff38af11fd9aa374ec8093531de28f5985ab28\`
+- direct physical second-implementation blob: \`dd4aea5b694409adcdad28850eba622ed00e51cc\`
+- M1-FULL blob: \`d73993a393b9d076c72bc77cbdf3610f4695c29c\`
+- IMG0 blob: \`7f5b11bd80e5387b1c5e8d73be4c0e4140eed8d5\`
+
+PASS results include:
+
+\[
+40\ \text{FREE species relations}
+\quad+\quad
+36\ \text{HUB species relations},
+\]
+with
+\[
+\text{direct physical derivation}
+=
+\text{M1 tables}
+=
+\text{IMG0 species rules}.
+\]
+
+The second physical implementation independently reproduced
+\[
+117546\ \text{reduced terms},
+\qquad
+22\ \text{reduced states},
+\]
+and
+\[
+\mathrm{SHA256}
+=
+\texttt{1cffd33529534a15c941b67086217f8f8c47b0cc302cb2cf740b0e08c2ff4474}.
+\]
+
+It does not use the primary IMG1 helper, \`free_sr\`, \`hub_sr\`, or \`Nwrap\`.
+
 ### Transfer firewall
 
 - the 6144-fold exhaustive run remains a reference-\(r_0\) certificate;
