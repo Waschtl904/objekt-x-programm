@@ -44,29 +44,33 @@ Delta=sp.simplify(d-e)
 assert T.is_positive is True
 assert Delta.is_positive is True
 
-# Universal explicit witness in terms of a positive path-count M.
+# Universal explicit witness in terms of abstract positive T,Delta and
+# a positive path-count M.  This isolates the inequality proof from CAS
+# recognition of the logarithmic constants; the physical T,Delta above were
+# already proved positive separately.
 m=sp.symbols("m", positive=True)
-Rw=sp.simplify(Delta*T/(10*(m+1)*(T+Delta)))
+Tw,Dw=sp.symbols("Tw Dw", positive=True)
+Rw=sp.simplify(Dw*Tw/(10*(m+1)*(Tw+Dw)))
 epsw=2*Rw
 sigmaw=Rw/2
-Sw=T+sigmaw
+Sw=Tw+sigmaw
 
 # Exact admissibility margins.
 assert Rw.is_positive is True
 assert sp.simplify(Rw-sigmaw).is_positive is True
 assert sp.simplify(epsw-Rw).is_positive is True
-assert sp.simplify(Delta-(Rw+epsw)).is_positive is True
+assert sp.factor(Dw-(Rw+epsw)).is_positive is True
 
 # Visible-measure versus annulus-length margin.
 # It suffices that m*R < T-R, since S-R = T-R/2 > T-R.
-margin=sp.factor((T-Rw)-m*Rw)
+margin=sp.factor((Tw-Rw)-m*Rw)
 assert margin.is_positive is True
-assert sp.simplify((Sw-Rw)-(T-Rw)).is_positive is True
+assert sp.factor((Sw-Rw)-(Tw-Rw)).is_positive is True
 
 # Concrete sanity instances; these are not the universal proof.
 for n in range(8):
     mn=9*(5**(n+1)-1)
-    rv=sp.simplify(Rw.subs(m,mn))
+    rv=sp.simplify(Rw.subs({m:mn,Tw:T,Dw:Delta}))
     assert sp.N(mn*rv) < sp.N((T+rv/2)-rv)
 
 print("raw branch bounds: C_K<=6, R_R<=5 per step, H_R<=6")
