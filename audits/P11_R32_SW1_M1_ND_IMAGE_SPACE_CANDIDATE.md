@@ -634,7 +634,7 @@ Daher liegt
 
 Ein Element von \(\mathscr R_H^{(4)}\) ist wegen IMG.11 genau dann null, wenn seine drei \(P_0\)-Komponenten null sind.
 
-Definiere daher die \(P_0\)-Outputrestriktion
+Definiere die \(P_0\)-Outputrestriktion
 
 \[
 R_0^{\rm out}:
@@ -643,6 +643,51 @@ R_0^{\rm out}:
 \bigoplus_{k=0}^{2}L^2(\mathbb T_L).
 \tag{IMG.35}
 \]
+
+Für den Horizon-Species-Extensionoperator \(E_H\) gilt auf dem zulässigen Outputbild explizit
+
+\[
+\boxed{
+R_0^{\rm out}E_H
+=
+I
+}
+\tag{IMG.35a}
+\]
+
+auf dem dreifachen Basislift-Raum, und
+
+\[
+\boxed{
+E_HR_0^{\rm out}
+=
+I_{\mathscr R_H^{(4)}}.
+}
+\tag{IMG.35b}
+\]
+
+Insbesondere ist
+
+\[
+\boxed{
+R_0^{\rm out}\big|_{\mathscr R_H^{(4)}}
+\text{ injektiv}.
+}
+\tag{IMG.35c}
+\]
+
+Damit gilt für jeden zulässigen Output \(Y\in\mathscr R_H^{(4)}\)
+
+\[
+\boxed{
+R_0^{\rm out}Y=0
+\iff
+Y=0.
+}
+\tag{IMG.35d}
+\]
+
+Dies ist die explizite Output-Seite der Kernelreduktion und wird im IMG0-Zertifikat unabhängig vom Input-Rekonstruktionstest als eigene Assertion geprüft.
 
 ---
 
