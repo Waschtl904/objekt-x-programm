@@ -274,7 +274,53 @@ for ci, rep in enumerate(m1.reps):
 assert atom_count == 64 * 96 == 6144
 assert all_active_types == EXPECTED_TYPES
 
+EXPECTED_TOTAL_REDUCED_TERMS = 117546
+EXPECTED_PULLBACK_HIST = Counter({
+    14: 314,
+    15: 2615,
+    16: 276,
+    23: 1690,
+    24: 669,
+    25: 497,
+    26: 83,
+})
+EXPECTED_CHANNEL_HIST = Counter({
+    8: 1754,
+    9: 1213,
+    10: 238,
+    14: 1344,
+    15: 251,
+    16: 1260,
+    17: 84,
+})
+EXPECTED_AGGREGATION_HIST = Counter({1: 117546})
+EXPECTED_MAP_TERM_HIST = Counter({
+    (-1, F(0), 1): 7884,
+    (-1, F(0), 2): 29796,
+    (-1, F(0), 3): 7990,
+    (-1, F(0), 4): 7140,
+    (-1, F(1, 2), 2): 11684,
+    (+1, F(0), -2): 344,
+    (+1, F(0), -1): 15284,
+    (+1, F(0), 0): 15227,
+    (+1, F(0), 1): 15367,
+    (+1, F(0), 2): 386,
+    (+1, F(1, 2), -2): 3229,
+    (+1, F(1, 2), 2): 3215,
+})
+EXPECTED_DISTINCT_STATES = 22
+EXPECTED_STATE_DIGEST = "1cffd33529534a15c941b67086217f8f8c47b0cc302cb2cf740b0e08c2ff4474"
+
+assert total_reduced_terms == EXPECTED_TOTAL_REDUCED_TERMS
+assert nonzero_pullback_hist == EXPECTED_PULLBACK_HIST
+assert nonzero_channel_hist == EXPECTED_CHANNEL_HIST
+assert aggregation_mult_hist == EXPECTED_AGGREGATION_HIST
+assert max_aggregation == 1
+assert map_term_hist == EXPECTED_MAP_TERM_HIST
+assert len(unique_state_digests) == EXPECTED_DISTINCT_STATES
+
 state_digest = state_hasher.hexdigest()
+assert state_digest == EXPECTED_STATE_DIGEST
 
 print("reference ratio r0=7/2; exact open atoms checked: 64*96=6144")
 print("P0 reduced physical assembly == reduced M1 ledger on every atom: PASS")
