@@ -12,6 +12,10 @@ on:
       - 'scripts/certify_sw1_m1_nd_img3_n0_annulus_blindset.py'
       - 'scripts/certify_sw1_m1_nd_img3_fixedN_uniform_nogo.py'
       - 'scripts/certify_sw1_m1_nd_img3_linear_visibility_bound.py'
+      - 'scripts/certify_sw1_a1_raw_archetypes.py'
+      - 'scripts/certify_sw1_a7_finite_state_cocycle.py'
+      - 'scripts/certify_sw1_a8_lower_finite_components.py'
+      - 'scripts/certify_sw1_sheet_collision_quotient.py'
       - 'scripts/certify_sw1_m1_nd_img4_smallR_separator_visibility.py'
       - 'scripts/certify_sw1_m1_nd_img4_gate1_gate9_graph_p12.py'
       - 'audits/P11_R32_SW1_M1_ND_IMG4_ANALYTIC_GATES_CANDIDATE.md'
@@ -46,6 +50,10 @@ jobs:
           git hash-object scripts/certify_sw1_m1_nd_img3_n0_annulus_blindset.py
           git hash-object scripts/certify_sw1_m1_nd_img3_fixedN_uniform_nogo.py
           git hash-object scripts/certify_sw1_m1_nd_img3_linear_visibility_bound.py
+          git hash-object scripts/certify_sw1_a1_raw_archetypes.py
+          git hash-object scripts/certify_sw1_a7_finite_state_cocycle.py
+          git hash-object scripts/certify_sw1_a8_lower_finite_components.py
+          git hash-object scripts/certify_sw1_sheet_collision_quotient.py
           git hash-object scripts/certify_sw1_m1_nd_img4_smallR_separator_visibility.py
           git hash-object scripts/certify_sw1_m1_nd_img4_gate1_gate9_graph_p12.py
           if [ -f audits/P11_R32_SW1_M1_ND_IMG4_ANALYTIC_GATES_CANDIDATE.md ]; then
@@ -78,6 +86,13 @@ jobs:
 
       - name: Run IMG3 linear visibility certificate
         run: python scripts/certify_sw1_m1_nd_img3_linear_visibility_bound.py
+
+      - name: Run upstream A1/A7/A8 dependency stack
+        run: |
+          python scripts/certify_sw1_a1_raw_archetypes.py
+          python scripts/certify_sw1_a7_finite_state_cocycle.py
+          python scripts/certify_sw1_a8_lower_finite_components.py
+          python scripts/certify_sw1_sheet_collision_quotient.py
 
       - name: Run IMG4 small-R separator visibility certificate
         run: python scripts/certify_sw1_m1_nd_img4_smallR_separator_visibility.py
