@@ -1,0 +1,41 @@
+name: SW1 M1-ND IMG2 descriptor certificate
+
+on:
+  push:
+    branches:
+      - research/sw1-m1-nd-img2-descriptor
+    paths:
+      - 'audits/P11_R32_SW1_M1_ND_IMG2_DESCRIPTOR_CANDIDATE.md'
+      - 'scripts/certify_sw1_m1_nd_img2_descriptor.py'
+      - 'scripts/certify_sw1_a10_c2_m1_full_b96.py'
+      - '.github/workflows/sw1-m1-nd-img2-descriptor-cert.yml'
+  workflow_dispatch:
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install SymPy
+        run: python -m pip install sympy==1.14.0
+
+      - name: Record provenance
+        run: |
+          python --version
+          python -c "import sympy; print('sympy='+sympy.__version__)"
+          git rev-parse HEAD
+          git hash-object scripts/certify_sw1_m1_nd_img2_descriptor.py
+          git hash-object scripts/certify_sw1_a10_c2_m1_full_b96.py
+          if [ -f audits/P11_R32_SW1_M1_ND_IMG2_DESCRIPTOR_CANDIDATE.md ]; then
+            git hash-object audits/P11_R32_SW1_M1_ND_IMG2_DESCRIPTOR_CANDIDATE.md
+          fi
+
+      - name: Run IMG2 descriptor certificate
+        run: python scripts/certify_sw1_m1_nd_img2_descriptor.py
