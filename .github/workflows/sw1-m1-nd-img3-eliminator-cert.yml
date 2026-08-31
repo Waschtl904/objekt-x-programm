@@ -19,6 +19,7 @@ on:
       - 'scripts/certify_sw1_m1_nd_img4_smallR_separator_visibility.py'
       - 'scripts/certify_sw1_m1_nd_img4_gate1_gate9_graph_p12.py'
       - 'audits/P11_R32_SW1_M1_ND_IMG4_ANALYTIC_GATES_CANDIDATE.md'
+      - 'audits/P11_R32_SW1_M1_ND_IMG4_EXTERNAL_REVIEW_PACKET.md'
       - 'audits/P11_R32_SW1_M1_ND_IMG4_SMALLR_KERNEL_NOGO_CANDIDATE.md'
       - 'audits/P11_R32_SW1_M1_ND_IMG3_ANALYTIC_HARDENING_CANDIDATE.md'
       - '.github/workflows/sw1-m1-nd-img3-eliminator-cert.yml'
@@ -56,6 +57,7 @@ jobs:
           git hash-object scripts/certify_sw1_sheet_collision_quotient.py
           git hash-object scripts/certify_sw1_m1_nd_img4_smallR_separator_visibility.py
           git hash-object scripts/certify_sw1_m1_nd_img4_gate1_gate9_graph_p12.py
+          git hash-object audits/P11_R32_SW1_M1_ND_IMG4_EXTERNAL_REVIEW_PACKET.md
           if [ -f audits/P11_R32_SW1_M1_ND_IMG4_ANALYTIC_GATES_CANDIDATE.md ]; then
             git hash-object audits/P11_R32_SW1_M1_ND_IMG4_ANALYTIC_GATES_CANDIDATE.md
           fi
