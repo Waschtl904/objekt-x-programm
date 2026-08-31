@@ -111,7 +111,7 @@ Liftkoordinaten.
 
 ---
 
-# 2. Gate 2 — 65 Layer / 390 Zustände a.e.
+# 2. Gate 2 — 65 Layer / 390 formale Zustände / 780 physische Zustände
 
 Das arithmetische IMG4-Certificate beweist exakt, dass bei
 
