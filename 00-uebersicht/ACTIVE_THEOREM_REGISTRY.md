@@ -1,6 +1,6 @@
 # Active Theorem Registry
 
-> **Stand:** 30. August 2026  
+> **Stand:** 31. August 2026  
 > **Mathematische Merge-Basis:** \`main@6ac0141b2de3a0b2af98fff6d11c403fe3b379b6\` (PR #34; C1B2A-CHIRO/TRANSFER kanonisch gebucht) · **Navigationssync:** \`main@25235a9e10ddb6d7244dd27bbc29bf03ada8cd1d\` (PR #35).  
 > **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11/R32-SW1-/Schur-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
 > **Nicht-Zweck:** Ersatz für \`STATUS.md\`, \`OFFENE_PROBLEME.md\`, die Papers oder Promotionsrecords.
@@ -94,9 +94,10 @@ T<S=T+\sigma<T_0=T+\varepsilon<c,
 | **SW1-A10-C1B2A-CHIRO** | \`✓[M]\` + **independent GREEN (certificate)** | gelabelter affiner Rank-4-Chirotop der 22 Hyperflächen plus \(g_\infty\) konstant auf \(3<r<4\); expliziter Rangzeuge \(\det(B_e,B_R,D_{s0},INF)=-1\), Loopfreiheit und affine Chart \(X_\infty=+\) mechanisch gehärtet | \`scripts/certify_sw1_a10_c1b2a_affine_chirotope.py\`, geprüfter Blob \`b92f7778bffe29fa11a76e2c260d1e12ae7b27c5\`; Review \`audits/P11_R32_SW1_A10_C1B2A_TRANSFER_REVIEW_PACKET.md\`; CI Run \`33328052407\` | finite/algebraische Basis des tatsächlichen-\(r\)-Transfers |
 | **SW1-A10-C1B2A-TRANSFER** | \`✓[M]\` | Standard-Cryptomorphie liefert identische affine Covektor-/Topemengen; alle \(\binom{96}{2}=4560\) B96-Paare werden modulo \(L\) erfasst; nach Normierung \(\theta/L(r)\bmod1\) bleibt die zyklische 96er-Ordnung innerhalb eines festen Topes konstant | \`audits/P11_R32_SW1_A10_C1B2A_TRANSFER_REVIEW_PACKET.md\`; GATE1R-Blob \`18f992d117580260eb3865a493773d1b73833726\`; CI Run \`33328052407\`; PR #34, Squash-Merge \`6ac0141b2de3a0b2af98fff6d11c403fe3b379b6\` | schließt den Transfer ohne ambient isotopy/Folkman--Lawrence |
 | **SW1-A10-C2-M1-FULL(\(r\))** | kanonische Konsequenz aus **M1-FULL(7/2) Certificate + C1B2A-TRANSFER \`✓[M]\`** | für jedes \(3<r<4\) gilt auf offenen Parameterkammern und offenen Kreisatomen dieselbe M1-FULL-Matrixidentität wie bei \(r_0=7/2\) | dieselbe PR-#34-Provenienzkette; keine neueren Script-Blobs anstelle der im CI geprüften Fassungen zitieren | C-Strang der Matrixkonstruktion/Geometriestabilität geschlossen; keine Aussage über \(\ker\Gamma_I\) |
-| **SW1-A10 gesamt** | \`?[O]\` nur noch hinsichtlich Nichtentartung/Injektivität | der inversefreie/operatorwertige Cross-Gram-Cocycle und seine vollständige M1-Matrixdarstellung sind konstruiert und über \(3<r<4\) transferiert; offen bleibt die mathematische Kernfrage, ob dieses System einen nichttrivialen Kernel besitzt | PR #34 + Roadmap A | **aktive nächste Front:** finite-level Cross-Gram-Nichtentartung \(\ker\Gamma_I=\{0\}?\) bzw. Preimage-Form |
+| **SW1-A2–A10-REC** | AI-GREEN candidate + **independent GREEN (certificate, algebraic/mechanical scope)** — keine Promotion | rückwärts gerichtete Reconciliation: historischer Strategibruch `A3→A4`; C0 umgeht die explizite \(\mathfrak G_R^{-1}\)-Berechnung; explizite beidseitige Kerneltransporte \(\ker\Gamma_I\cong\ker\mathscr C_R\cong\ker\widehat{\mathscr C}_R\); C1C1-Ambient-Firewall \(WW^*=P_{\operatorname{Ran}W}\neq I_{\rm ambient}\) | `audits/P11_R32_SW1_A2_A10_RECONCILIATION_AUDIT.md`, geprüfter Audit-Blob `894362eaeed630c44d74981c279905384581f460`; `scripts/certify_sw1_a2_a10_kernel_bijections.py`, geprüfter Blob `8a7711d25ff8f9c9b790b8f4517d08f6ee9e9918`; Run `33332811231`, Job `99314333231`, Head `8e404a75a8a4f9e68bf87d3cc5556bd1da51a1d7`; PR #40, Squash-Merge `0ba1722f362ee8be0da502755933342803677330` | isoliert **M1-ND** als kleinsten aktuellen offenen Satz; keine Injektivität |
+| **SW1-A10 gesamt** | `?[O]` nur noch hinsichtlich **M1-ND / Nichtentartung** | inversefreier Cross-Gram-Cocycle, echte C1C1-Hilbert-Fiberisierung und tatsächliche-\(r\)-M1-Matrixdarstellung sind vorhanden; PR #40 härtet die Kerneläquivalenzen und die Bildraum-Firewall | PR #34 + PR #40 | **aktive Front:** \(\mathrm{M1\text{-}ND}:\ker\widehat{\mathscr C}_R=\{0\}\ ?\) auf \(\mathcal R_K\oplus\mathcal R_W\) |
 
-**Firewall:** \`AI-GREEN candidate\` allein ist ausdrücklich **kein** \`independent GREEN\` und **kein** \`✓[M]\`. A2/A3 tragen jetzt \`independent GREEN (certificate, algebraic/mechanical scope)\` zusätzlich zum separaten Hilbertraumreview. A9 bleibt als Gesamtknoten \`?[O]\`; A10-H3-INF ist unabhängig blindgeprüft ausschließlich im Existenzscope einer unendlichen augmentierten Inzidenzkomponente. Der Gesamt-Δ-DESCENT bleibt \`?[O]\`. **PR #34 promotet ausschließlich C1B2A-CHIRO und C1B2A-TRANSFER im dokumentierten Scope zu \`✓[M]\`; M1-RAW und M1-FULL(7/2) sind kanonische Certificate-Ergebnisse ohne separate Promotion. Auch PR #34 erzeugt keine Aussage über den Wert von \(\ker\Gamma_I\).**
+**Firewall:** \`AI-GREEN candidate\` allein ist ausdrücklich **kein** \`independent GREEN\` und **kein** \`✓[M]\`. PR #40 fügt keine Promotion hinzu; sein Certificate prüft ausschließlich das endliche algebraisch/mechanische Bijektivitäts-/Intertwining-Skelett. Die unendlichdimensionale Closed-Image-/Isometrieaussage bleibt separat analytisch/cross-model geprüft. Für M1-ND ist ausschließlich der echte C1C1-Bildraum \(\mathcal R_K\oplus\mathcal R_W\) zulässig; ein Kerneltest auf dem größeren formalen Slot-Ambientraum wäre wegen künstlicher Nullrichtungen typwidrig. A9 und Gesamt-Δ-DESCENT bleiben \`?[O]\`, sind aber nicht der aktuelle Primärengpass. **Keine Aussage über den Wert von \(\ker\Gamma_I\).**
 
 ---
 
@@ -115,12 +116,12 @@ Mit HT-A4b-SW1-M nun \(\checkmark[M]\) ist der SW1-Membership-Baustein der Kette
 
 | Knoten | Status | Exakte Rolle |
 |---|---|---|
-| **FINITE-LEVEL CROSS-GRAM INJECTIVITY / Roadmap A** | \`?[O]\` — **aktiver nächster Knoten** | Mit der nun kanonischen tatsächlichen-\(r\)-M1-Darstellung das augmentierte System bzw. die Preimage-Form analysieren und \(\ker\Gamma_I=\{0\}\) beweisen oder einen exakten Gegenvektor konstruieren. |
+| **M1-ND / FINITE-LEVEL CROSS-GRAM INJECTIVITY** | `?[O]` — **einziger aktiver mathematischer Knoten** | Auf dem echten C1C1-Bild-/Konsistenzraum \(\mathcal R_K\oplus\mathcal R_W\) entscheiden, ob der siebenlagige tatsächliche-\(r\)-Operator \((\widehat{\mathscr C}_RF)(\theta)=\sum_{j=-3}^{3}M_j(\theta)F(\theta+j\Delta)\) injektiv ist; äquivalent \(\ker\Gamma_I=\{0\}\), oder exakten zulässigen Gegenvektor konstruieren. |
 | **A9-KNF Gesamtklassifikation** | \`?[O]\` | SEP-SMALL ist zertifiziert und ein partieller Bypass existiert; der komplementäre untere Bereich und der obere Chamber sind nicht vollständig klassifiziert. Für Roadmap A ist A9 derzeit nicht der primäre Engpass. |
 | **SW1-Δ-DESCENT gesamt** | \`?[O]\` | Die zertifizierten Stages 1/2–12 schließen große endliche Teilgeometrien, aber nicht automatisch den gesamten blinden Summanden \(\mathcal Z_R^+\). |
 | **HT-A4b global chamber exhaustivity** | \`?[O]\` | globale zehn-Flächen-/15-Chamber-Exhaustivität bleibt offen; für den SW1-Angriff derzeit nicht Priorität |
 | **HT-RED** | \`?[O]\` | vollständige Tail-Gaussian-/Schur-Elimination des Restblocks offen |
-| **SCHUR CROSS-GRAM INJECTIVITY** | \`?[O]\` | \(\ker\Gamma_I=\{0\}\) bzw. äquivalente Transversalitätsform auf geeigneten P12-Injektivitätsstrata |
+| **SCHUR CROSS-GRAM INJECTIVITY** | `?[O]` — äquivalent zu M1-ND | \(\ker\Gamma_I=\{0\}\) ist durch PR #40 bijektiv äquivalent zu M1-ND; kein separater Vorab-Gate. |
 | **Objekt X** | offen | noch keine konstruierte globale gemeinsame Weil-Gram-Geometrie |
 | **RH** | offen | keine Folgerung aus den obigen Kandidaten |
 
@@ -146,73 +147,80 @@ Das ist eine **Priorisierungsentscheidung**, kein No-Go gegen spätere Verwendun
 
 ## 6. Aktive Beweiskette
 
-Der aktuelle operative Pfad ist:
+Die operative Kette wird nach PR #40 **nicht mehr als lineare A4–A9-Fortsetzung gelesen**.
+
+Historisch liefern
+
+\[
+\boxed{A2\to A3}
+\]
+
+echte Reduktions-/Koordinatisierungsschritte. Bei
+
+\[
+\boxed{A3\to A4}
+\]
+
+beginnt eine Strategie-/No-Go-Seitenfront, die keine Kerneltrivialität impliziert.
+
+Der heutige kanonische Pfad ist:
 
 \[
 \boxed{
+\text{P12-RT}
+\to
 \text{SW1-KNF}
 \to
 \text{A-FOLD}
 \to
-\text{A0}
-\to
-\text{A1}
+\text{A0/A1}
 \to
 \text{A2}
 \to
-\text{A3}
+\text{A10-C0}
 \to
-\text{A4}
+\text{C1C1}
 \to
-\text{A5}
+\text{C2/M1-FULL}(r)
 \to
-\text{A6}
+\text{PR40-Reconciliation}
 \to
-\text{A7}
-\to
-\text{A8}
-\to
-\text{A9}
-\to
-\text{A10-H0/H1/H2/H3}
-\to
-\text{A10-C1/C2-M1}
-\to
-\text{C1B2A-TRANSFER}
-\to
-\text{Roadmap A: Cross-Gram-Nichtentartung}
+\text{M1-ND}.
 }
 \]
 
-A9 zeigt im kleinen unteren Subchamber endliche **freie KNF-Punktkomponenten**, aber A10-H1/H2 beweisen, dass gemeinsame Annulusvariablen diese freien Komponenten wieder verbinden können.
-
-A10-H3-COVER realisiert auf dem freien physischen Band
+Dabei gelten die explizit gehärteten Bijektionen
 
 \[
-J=(0,L)
+\boxed{
+\ker\Gamma_I
+\cong
+\ker\mathscr C_R
+\cong
+\ker\widehat{\mathscr C}_R.
+}
 \]
 
-eine kanonisch ausgewählte irrationale Rotation
+Der M1-ND-Definitionsraum ist
 
 \[
-x\mapsto x+\Delta\pmod L.
+\boxed{
+\mathcal R_K\oplus\mathcal R_W
+=
+\operatorname{Ran}\bigl((U_H|_K)\oplus U_W\bigr),
+}
 \]
 
-Zusammen mit dem eigenständigen Lemma
+nicht der gesamte formale Slot-Ambientraum.
 
-\[
-\Delta/L\notin\mathbb Q
-\]
+Der nächste konkrete Schritt ist daher:
 
-und dem unabhängigen Blindreview von H3-INF steht im dokumentierten kleinen unteren Subchamber die Existenz mindestens einer **unendlichen physischen augmentierten Hub-Inzidenzkomponente**.
+1. Bild-/Konsistenzbedingungen dieses Raums in M1-Slots explizit formulieren;
+2. Invarianz/Kopplung unter den sieben Shiftlagen prüfen;
+3. daraus eine äquivalente Transfer-/Rekurrenzform ableiten, ohne singuläre Außenblöcke unzulässig zu invertieren;
+4. erst dann Injektivität oder einen exakten zulässigen Gegenvektor entscheiden.
 
-PR #34 hat den operatorwertigen/inversefreien Cross-Gram-Cocycle anschließend bis zur vollständigen M1-RAW/M1-FULL-Matrixdarstellung ausgebaut und den Referenzwert \(r_0=7/2\) über C1B2A-CHIRO/TRANSFER auf jedes \(3<r<4\) übertragen. Damit ist die C-seitige Matrixkonstruktion und Geometriestabilität kein offener Gate mehr. Der nächste mathematische Gegenstand ist nun die **Nichtentartung dieses bereits konstruierten Systems**, also Roadmap A.
-
-**Firewall:** Dies ist kein Beweis für oder gegen
-\[
-\ker\Gamma_I=\{0\}.
-\]
-Eine unendliche Komponente kann einen injektiven Operator tragen. Keine Promotion, kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
+**Firewall:** Punktweiser Rang von \(M_0(\theta)\) oder irgendeiner einzelnen Matrixlage reicht nicht. A4–A9 bleiben wertvolle Strukturresultate, sind aber für diesen direkten M1-ND-Angriff nicht mehr vorgelagert. Keine Promotion, kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
 
 ---
 
