@@ -1,7 +1,7 @@
 # CURRENT FRONT — Objekt X / P11-R32
 
 > **Operative Kopfschicht — zuerst lesen.**  
-> **Stand:** 30. August 2026  
+> **Stand:** 31. August 2026  
 > **Kanonische mathematische Basis:** PR #34, Squash-Merge \`6ac0141b2de3a0b2af98fff6d11c403fe3b379b6\`; **Status-/Navigationssync:** PR #35, Squash-Merge \`25235a9e10ddb6d7244dd27bbc29bf03ada8cd1d\`. Die reproduzierbaren Certificate-Aussagen zitieren weiterhin die tatsächlich im CI geprüften Script-Blobs.  
 > **Aktiver mathematischer Stand:** Der C-Strang von SW1-A10 ist bis zur tatsächlichen-\(r\)-M1-Matrixdarstellung geschlossen: M1-RAW und M1-FULL(7/2) sind kanonische reproduzierbare Certificate-Ergebnisse; C1B2A-CHIRO und C1B2A-TRANSFER sind im dokumentierten Scope \`✓[M]\`; damit gilt M1-FULL(\(r\)) für jedes \(3<r<4\) auf offenen Parameterkammern und offenen Kreisatomen. **Keine** Folgerung zu \(\ker\Gamma_I\). Aktiver nächster Knoten ist Roadmap A: **finite-level Cross-Gram-Nichtentartung \(\ker\Gamma_I=\{0\}?\)**, beginnend mit der Odd/even-Faltung.  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
@@ -33,18 +33,43 @@ S=T+\sigma,
 T_0=T+\varepsilon.
 \]
 
-Die operative Ja/Nein-Frage ist:
+Die operative Ja/Nein-Frage ist nach PR #40 nun in ihrer kleinsten aktuellen Form:
 
 \[
 \boxed{
-\mathcal K_{I,A}(y,w)=0
-\quad\Longrightarrow\quad
-y=w=0
-\quad\text{auf SW1?}
+\mathrm{M1\text{-}ND}:
+\qquad
+\widehat{\mathscr C}_R F=0
+\Longrightarrow
+F=0
+\quad
+\text{für }F\in\mathcal R_K\oplus\mathcal R_W\ ?
 }
 \]
 
-äquivalent zur entsprechenden Schur-/Cross-Gram-Injektivitätsfrage im zulässigen P12-Stratum.
+Durch die explizit gehärteten Kernelbijektionen ist dies äquivalent zu
+
+\[
+\boxed{
+\mathscr C_R(\xi,w)=0
+\Longrightarrow
+\xi=w=0
+}
+\]
+
+und damit zu
+
+\[
+\boxed{
+\ker\Gamma_I=\{0\}.
+}
+\]
+
+**Ambient-Firewall:** \(\widehat{\mathscr C}_R\) darf für M1-ND nicht auf dem gesamten formalen Slotraum getestet werden. Zulässig ist nur der echte C1C1-Bild-/Konsistenzraum
+\[
+\mathcal R_K\oplus\mathcal R_W,
+\]
+oder eine exakt äquivalent parametrisierte Darstellung dieses Raums.
 
 ---
 
@@ -125,63 +150,125 @@ Promotet mit kanonischem Promotionsrecord \`audits/P11_R32_HT_A4B_SW1_M_PROMOTIO
 
 ## 4. Nächster mathematischer Schritt
 
-Die gestapelte Kandidatenkette PR #19–#28 ist nun vollständig auf \`main\` gemergt.
+PR #40 hat den bestehenden A2–A10-Stack rückwärts reconciliert.
 
-Der derzeit relevante Pfad lautet:
-
-\[
-\boxed{
-\mathrm{SW1\text{-}KNF}
-\to
-\mathrm{SW1\text{-}A0}
-\to
-\mathrm{SW1\text{-}A1}
-\to
-\mathrm{SW1\text{-}A2}
-\to
-\mathrm{SW1\text{-}A3}
-\to
-\mathrm{SW1\text{-}A4}
-\to
-\mathrm{SW1\text{-}A5}
-\to
-\mathrm{SW1\text{-}A6}
-\to
-\mathrm{SW1\text{-}A7}
-\to
-\mathrm{SW1\text{-}A8}
-\to
-\mathrm{A9\text{-}KNF}
-}
-\]
-
-Wichtige Statusgrenze:
-
-- \(\Delta\)-DESCENT besitzt zahlreiche zertifizierte endliche Teilstufen, bleibt aber als **Gesamtknoten** \`?[O]\`.
-- A0 und A1 sind \`AI-GREEN candidate + independent GREEN (certificate)\`.
-- A2 und A3 sind \`AI-GREEN candidate\` ohne \`independent GREEN\`.
-- A4–A8 sind \`AI-GREEN candidate + independent GREEN (certificate)\`.
-- **Keine** dieser Merge-Aktionen erzeugt eine \`✓[M]\`-Promotion.
-
-Der unmittelbar aktive Knoten ist
+Der historische erste Bruch der alten linearen Strategie liegt bei
 
 \[
 \boxed{
-\text{A9-KNF: Separatorstabilität unter der KNF-Rekonstruktion }J_R.
+\mathrm{A3}\to\mathrm{A4},
 }
 \]
 
-A8 beweist nur endliche Zusammenhangskomponenten des vollständigen **rohen A1-Punktgraphen** im unteren Chamber. Für den freien Gramoperator
-
+weil A4–A9 Struktur-/No-Go-/Separatoraussagen liefern, aber keine weitere Implikation
 \[
-\mathfrak G_R=J_R^*(I+A)J_R
+\ker\Gamma_I=\{0\}.
 \]
 
-muss geprüft werden, ob die durch \(J_R\) erzeugten Zusatzkanten die A8-Separatoren erhalten oder einen expliziten Bypass erzeugen.
+Operativ ist dieser alte Bruch jedoch durch A10-C0 umgangen: Statt \(\mathfrak G_R^{-1}\) explizit auszurechnen, wird der inversefreie Operator
 
-Der aktuelle A9-Strukturkandidat zeigt bereits: Die neuen KNF-Kanten fügen eine endliche Halbperioden-Parität hinzu, aber keine neue unabhängige irrationale Basisrotation. Die eigentliche Separatorentscheidung bleibt offen.
+\[
+\boxed{
+\mathscr C_R(\xi,w)
+=
+(I+A)J_R\xi+HE_{\mathcal A}w
+}
+\]
 
-**Firewall:** Noch kein HT-RED, keine Schur-/Cross-Gram-Injektivität, keine Aussage über \(\ker\Gamma_I=\{0\}\), kein Objekt-X-Abschluss und keine RH-Folgerung.
+verwendet. PR #40 härtet die beidseitige Korrespondenz mit
+
+\[
+\Theta=J_R\oplus I_{\mathscr W},
+\qquad
+\Theta^{-1}(y,w)=(\Psi_Ry,w),
+\]
+
+und damit
+
+\[
+\boxed{
+\ker\mathscr C_R
+\xrightarrow{\sim}
+\ker\mathcal K_{I,A}
+\xrightarrow{\sim}
+\ker\Gamma_I.
+}
+\]
+
+C1C1 transportiert weiter mittels
+
+\[
+W=(U_H|_K)\oplus U_W
+\]
+
+auf den echten Bildraum
+
+\[
+\mathcal R_K\oplus\mathcal R_W,
+\]
+
+mit explizitem
+
+\[
+W^{-1}(F,G)
+=
+\bigl((U_H|_K)^{-1}F,U_W^{-1}G\bigr).
+\]
+
+Somit
+
+\[
+\boxed{
+\ker\widehat{\mathscr C}_R
+\cong
+\ker\mathscr C_R
+\cong
+\ker\Gamma_I.
+}
+\]
+
+Der Ambientraum ist ausdrücklich größer:
+\[
+WW^*=P_{\operatorname{Ran}W}\ne I_{\rm ambient}
+\]
+im Allgemeinen. Das PR-#40-Zertifikat konstruiert sogar einen nichttrivialen künstlichen Ambient-Kernelvektor; daher ist diese Scope-Grenze zwingend.
+
+M1-FULL liefert im tatsächlichen \(r\)-Scope die exakte finite-range Darstellung
+
+\[
+\boxed{
+(\widehat{\mathscr C}_R F)(\theta)
+=
+\sum_{j=-3}^{3}
+M_j(\theta)F(\theta+j\Delta).
+}
+\]
+
+Damit ist der **einzige aktive mathematische Knoten**
+
+\[
+\boxed{
+\mathrm{M1\text{-}ND}:
+\ker\widehat{\mathscr C}_R=\{0\}
+\quad
+\text{auf }\mathcal R_K\oplus\mathcal R_W\ ?
+}
+\]
+
+### 4.1 Zwingende Reihenfolge für M1-ND
+
+1. Den Bild-/Konsistenzraum \(\mathcal R_K\oplus\mathcal R_W\) in M1-Koordinaten explizit charakterisieren.
+2. Prüfen, wie die sieben Verschiebungslagen diesen zulässigen Zustandsraum koppeln.
+3. Eine äquivalente finite-state Transfer-/Rekurrenzform ableiten, **ohne** einen möglicherweise singulären Außenblock unzulässig zu invertieren.
+4. Erst dann Nichtentartung entscheiden:
+   \[
+   F=0
+   \]
+   für jede zulässige \(L^2\)-Lösung oder einen exakten zulässigen Gegenvektor konstruieren.
+
+Ein punktweiser Rang- oder Determinantentest nur von \(M_0(\theta)\) genügt nicht.
+
+**Firewall:** Kein Resultat aus PR #40 beweist M1-ND. Keine Promotion, kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
 
 ---
 
@@ -390,6 +477,6 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 }
 \]
 
-**Nächster Default:** Roadmap A — A-FOLD ist als Certificate-Brücke geschlossen. Jetzt den bestehenden A2–A10-Kandidatenstack rückwärts gegen die exakte Vollraum↔Halbachse↔A0/A1-Äquivalenz prüfen und den ersten tatsächlich noch offenen Nichtentartungsschritt isolieren. Ziel bleibt \(\ker\Gamma_I=\{0\}\) oder ein exakter Gegenvektor.
+**Nächster Default:** M1-ND — zuerst den echten C1C1-Bild-/Konsistenzraum \(\mathcal R_K\oplus\mathcal R_W\) in den siebenlagigen M1-Koordinaten explizit charakterisieren; danach eine zulässige Transfer-/Rekurrenzform ableiten und Injektivität oder einen exakten zulässigen Gegenvektor entscheiden.
 
 **Merge-Firewall:** PR #34 promotet ausschließlich C1B2A-CHIRO und C1B2A-TRANSFER im dokumentierten Scope; PR #35 ist reine Status-/Navigationssynchronisation. M1-RAW und M1-FULL(7/2) sind Certificate-Ergebnisse ohne eigene \`✓[M]\`-Promotion. Insbesondere folgen weder \(\ker\Gamma_I=\{0\}\) noch \(\ker\Gamma_I\neq\{0\}\), kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
