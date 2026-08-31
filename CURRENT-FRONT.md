@@ -2,8 +2,8 @@
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 31. August 2026  
-> **Kanonische mathematische Basis:** PR #34, Squash-Merge \`6ac0141b2de3a0b2af98fff6d11c403fe3b379b6\`; **Status-/Navigationssync:** PR #35, Squash-Merge \`25235a9e10ddb6d7244dd27bbc29bf03ada8cd1d\`. Die reproduzierbaren Certificate-Aussagen zitieren weiterhin die tatsächlich im CI geprüften Script-Blobs.  
-> **Aktiver mathematischer Stand:** Der C-Strang von SW1-A10 ist bis zur tatsächlichen-\(r\)-M1-Matrixdarstellung geschlossen: M1-RAW und M1-FULL(7/2) sind kanonische reproduzierbare Certificate-Ergebnisse; C1B2A-CHIRO und C1B2A-TRANSFER sind im dokumentierten Scope \`✓[M]\`; damit gilt M1-FULL(\(r\)) für jedes \(3<r<4\) auf offenen Parameterkammern und offenen Kreisatomen. **Keine** Folgerung zu \(\ker\Gamma_I\). Aktiver nächster Knoten ist Roadmap A: **finite-level Cross-Gram-Nichtentartung \(\ker\Gamma_I=\{0\}?\)**, beginnend mit der Odd/even-Faltung.  
+> **Aktuelle mathematische Basis:** PR #42, Squash-Merge `d117e4cb6e59a04ac0ae79b8176e4beaf114979e` (M1-ND-IMG0 integriert). Frühere Promotions-/Certificate-Aussagen behalten ihre jeweils kanonischen bzw. CI-geprüften Provenienzen.  
+> **Aktiver mathematischer Stand:** M1-ND-IMG0 ist als `AI-GREEN candidate + independent GREEN (certificate)` im algebraisch/mechanischen Scope integriert. Der zulässige formale 24-Slot-Input ist durch `3_H+3_W` \(L^2\)-Basisliftkanäle bestimmt; die Output-\(P_0\)-Restriktion ist auf dem echten symmetrischen Horizon-Bildraum injektiv. Damit ist der nächste aktive Gate **M1-ND-IMG1:** exakte Assembly des effektiven \(3\times6\)-Funktionskanaloperators aus M1-FULL auf den B96-Atomen. **Noch keine Injektivität.**  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -477,6 +477,6 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 }
 \]
 
-**Nächster Default:** M1-ND — zuerst den echten C1C1-Bild-/Konsistenzraum \(\mathcal R_K\oplus\mathcal R_W\) in den siebenlagigen M1-Koordinaten explizit charakterisieren; danach eine zulässige Transfer-/Rekurrenzform ableiten und Injektivität oder einen exakten zulässigen Gegenvektor entscheiden.
+**Nächster Default:** **M1-ND-IMG1** — aus M1-FULL auf allen B96-Atomen den exakten \(3\times6\)-Funktionskanal-Ledger von \(\mathscr N_R\) assemblieren; erst danach Transfer-/Rekurrenzanalyse und Nichtentartung.
 
-**Merge-Firewall:** PR #34 promotet ausschließlich C1B2A-CHIRO und C1B2A-TRANSFER im dokumentierten Scope; PR #35 ist reine Status-/Navigationssynchronisation. M1-RAW und M1-FULL(7/2) sind Certificate-Ergebnisse ohne eigene \`✓[M]\`-Promotion. Insbesondere folgen weder \(\ker\Gamma_I=\{0\}\) noch \(\ker\Gamma_I\neq\{0\}\), kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
+**Merge-Firewall:** PR #42 integriert IMG0 ausschließlich als Kandidat + Certificate im algebraisch/mechanischen Scope; keine `✓[M]`-Promotion. Insbesondere folgt noch weder \(\ker\Gamma_I=\{0\}\) noch \(\ker\Gamma_I\neq\{0\}\). IMG1 und M1-ND bleiben offen; kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
