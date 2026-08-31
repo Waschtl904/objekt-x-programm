@@ -190,20 +190,26 @@ Diese Kollisionsstrata sind jedoch abzählbar: eine Kollision verlangt
 für ein \(k\in\mathbb Z\). Für jedes \(k\) entstehen nur endlich viele
 Restklassen; über \(k\in\mathbb Z\) ist die Ausnahmemenge abzählbar.
 
-Somit gilt für Lebesguemaß:
-
+Unabhängig davon liefert A8.10B die stärkere, für IMG4 bequemere
+**universelle** Quotientenschranke: eine physische Komponente ist die
+Sättigung einer formalen Komponente durch höchstens
+\[
+C\cup J_K(C).
+\]
+Daher
 \[
 \boxed{
-\#C_{\rm phys}(x)\le390
-\quad\text{für fast jedes }x.
+\#C_{\rm phys}(x)\le 2\cdot390=780
 }
 \tag{G2.2}
 \]
+für jeden regulär definierten physischen Punkt; auf Randpunkten wird wie üblich
+a.e. gelesen.
 
-Die mögliche 780-Vergrößerung liegt auf einer Nullmenge und beeinflusst die
-Mass-Transport-Schätzung nicht.
+Der generische 390-Bound bleibt richtig außerhalb der abzählbaren
+Sheet-Kollisionsstrata, wird im weiteren Beweis aber **nicht mehr benötigt**.
 
-**Gate 2: intern GREEN mit a.e.-Präzisierung.**
+**Gate 2: intern GREEN mit universellem 780-Quotientenbound.**
 
 ---
 
@@ -292,15 +298,13 @@ die rechte Seite
 
 ist.
 
-Mit G2.2:
+Mit dem universellen Bound G2.2:
 
 \[
 \int_{U_R}\#[y]_{\mathcal E}\,d\mu(y)
 \le
-390\,\mu(U_R),
+780\,\mu(U_R).
 \]
-
-da die Kollisionsausnahmemenge Nullmaß besitzt.
 
 Also
 
@@ -308,7 +312,7 @@ Also
 \boxed{
 \mu(V_R)
 \le
-390\,\mu(U_R).
+780\,\mu(U_R).
 }
 \tag{G3.3}
 \]
@@ -323,7 +327,7 @@ und daher
 
 \[
 \boxed{
-\mu(V_R)\le2340R.
+\mu(V_R)\le4680R.
 }
 \tag{G3.4}
 \]
@@ -479,7 +483,7 @@ Dann
 \le
 6\mu(V_R)
 \le
-14040R.
+28080R.
 }
 \tag{G5.2}
 \]
