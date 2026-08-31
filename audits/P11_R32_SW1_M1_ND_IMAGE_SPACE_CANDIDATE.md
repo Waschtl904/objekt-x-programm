@@ -1,8 +1,8 @@
 # P11/R32 — SW1 M1-ND Image-Space Reduction Candidate
 
 > **Stand:** 31. August 2026  
-> **Basis:** \`main@383e42f0643ad7ba3f8bec42faa988807a66ac9d\`  
-> **Status:** Kandidat; keine Promotion.  
+> **Basis:** konstruiert auf `main@383e42f0643ad7ba3f8bec42faa988807a66ac9d`; gemergt mit PR #42 als `d117e4cb6e59a04ac0ae79b8176e4beaf114979e`; analytisch nachgehärtet nach Owner-Review am 31. August 2026.  
+> **Status:** AI-GREEN candidate + independent GREEN (certificate, algebraic/mechanical scope) + owner analytic review **ACCEPTED**; keine `✓[M]`-Promotion.  
 > **Ziel:** den echten C2/M1-Zustandsraum innerhalb des formalen \(12_H+12_W\)-Inputcovers explizit charakterisieren und M1-ND von 24 redundanten Slots auf sechs Basislift-Funktionen plus die exakte \(K\)-Nebenbedingung reduzieren.  
 > **Firewall:** keine Injektivitätsaussage, kein Gegenvektor, kein HT-RED, kein Objekt-X- oder RH-Schluss.
 
@@ -830,9 +830,553 @@ Die offene Nichtentartungsfrage wird dadurch nicht gelöst, aber der echte Zusta
 
 ---
 
-# Teil VI — Nächster zwingender Gate
 
-## 16. M1-ND-IMG1
+# Teil VI — Analytisches Post-Merge-Hardening
+
+## 16. Warum die Bildraumcharakterisierung wirklich bijektiv ist
+
+Die mechanische Kovarianzprüfung allein reicht nicht. Die benötigte analytische Aussage ist eine explizite Isomorphie zwischen drei Basislift-Funktionskanälen und dem zulässigen zwölf-Slot-Speciesbild.
+
+Definiere zunächst
+
+\[
+\mathscr B_H^0
+=
+\bigoplus_{k=0}^{2}
+m_kL^2(\mathbb T_L),
+\qquad
+f_k=m_kf_k.
+\tag{IMG.41a}
+\]
+
+Der Species-Extensionoperator ist
+
+\[
+\boxed{
+(E_Hf)_{g,k}(\theta)
+=
+f_k(\rho_g(\theta)).
+}
+\tag{IMG.41b}
+\]
+
+Da jede \(\rho_g\) maßtreu ist, ist \(f_k\circ\rho_g\in L^2\). Ferner folgt aus \(f_k=m_kf_k\)
+
+\[
+(E_Hf)_{g,k}(\theta)
+=
+m_k(\rho_g(\theta))
+f_k(\rho_g(\theta)),
+\]
+
+also besitzt jede Species automatisch den korrekten Lift-Support.
+
+Die \(P_0\)-Restriktion lautet
+
+\[
+\boxed{
+R_HF
+=
+(F_{P_0,0},F_{P_0,1},F_{P_0,2}).
+}
+\tag{IMG.41c}
+\]
+
+Wegen \(\rho_{P_0}=\mathrm{id}\) gilt für jedes \(f\in\mathscr B_H^0\)
+
+\[
+\boxed{
+R_HE_Hf=f.
+}
+\tag{IMG.41d}
+\]
+
+Umgekehrt sei \(F\in\mathscr R_H^{(4)}\). Dann ist definitionsgemäß
+
+\[
+F_{g,k}
+=
+F_{P_0,k}\circ\rho_g.
+\]
+
+Daher
+
+\[
+(E_HR_HF)_{g,k}
+=
+F_{P_0,k}\circ\rho_g
+=
+F_{g,k},
+\]
+
+also
+
+\[
+\boxed{
+E_HR_H
+=
+I_{\mathscr R_H^{(4)}}.
+}
+\tag{IMG.41e}
+\]
+
+Damit
+
+\[
+\boxed{
+E_H:
+\mathscr B_H^0
+\xrightarrow{\sim}
+\mathscr R_H^{(4)},
+\qquad
+E_H^{-1}=R_H.
+}
+\tag{IMG.41f}
+\]
+
+Die Species sind Direktsummenkomponenten, keine Atlas-Charts. Treffen zwei Species dieselbe physische Basisstelle,
+
+\[
+\rho_g(\theta)=\rho_h(\eta),
+\]
+
+dann stimmen ihre Werte automatisch überein, weil beide aus derselben Basisfunktion \(f_k\) ausgewertet werden. Es entsteht keine zusätzliche Overlap-Konsistenzbedingung.
+
+### 16.1 Rücktransport zu einem echten Horizonwert
+
+Für \(x\in(0,T_0)\) existiert a.e. eindeutig
+
+\[
+x=\theta+kL,
+\qquad
+\theta=[x]_L\in[0,L),
+\quad
+k\in\{0,1,2\}.
+\]
+
+Setze
+
+\[
+\boxed{
+y_f(x)
+=
+\sqrt2\,f_k(\theta)
+}
+\tag{IMG.41g}
+\]
+
+und erweitere gerade. Dann
+
+\[
+\begin{aligned}
+(U_Hy_f)_{g,k}(\theta)
+&=
+\frac1{\sqrt2}
+m_k(\rho_g(\theta))
+y_f(\rho_g(\theta)+kL)\\
+&=
+m_k(\rho_g(\theta))
+f_k(\rho_g(\theta))\\
+&=
+f_k(\rho_g(\theta)).
+\end{aligned}
+\]
+
+Somit
+
+\[
+\boxed{
+U_Hy_f=E_Hf.
+}
+\tag{IMG.41h}
+\]
+
+Die umgekehrte Basisliftformel ist
+
+\[
+f_k(\theta)
+=
+\frac1{\sqrt2}
+m_k(\theta)y(\theta+kL).
+\tag{IMG.41i}
+\]
+
+Damit ist nicht nur die Kovarianz notwendig, sondern
+
+\[
+\boxed{
+\operatorname{Ran}U_H
+=
+\mathscr R_H^{(4)}
+}
+\]
+
+auch surjektiv auf den definierten Kovarianzraum.
+
+Für den \(K\)-Unterraum wird lediglich zusätzlich IMG.22 gefordert; daher bleibt
+
+\[
+\mathscr R_K^{(4)}
+=
+E_H(\mathscr B_K).
+\]
+
+### 16.2 Annulus
+
+Mit
+
+\[
+\mathscr B_W
+=
+\bigoplus_{k=0}^{2}n_kL^2(\mathbb T_L),
+\]
+
+\[
+(E_Wg)_{s,k}
+=
+g_k\circ\rho_s,
+\qquad
+R_WG=(G_{P_0,0},G_{P_0,1},G_{P_0,2}),
+\]
+
+gilt identisch
+
+\[
+\boxed{
+R_WE_W=I_{\mathscr B_W},
+\qquad
+E_WR_W=I_{\mathscr R_W^{(4)}}.
+}
+\tag{IMG.41j}
+\]
+
+Die physische Annulusrekonstruktion ist
+
+\[
+w_g(x)
+=
+\sqrt2\,g_k([x]_L),
+\qquad
+x=[x]_L+kL\in(R,S),
+\]
+
+mit ungerader Fortsetzung.
+
+---
+
+## 17. Warum der Output im selben Horizon-Bildraum liegt
+
+Die benötigte Aussage ist **nicht** eine bisher ungeprüfte Ambient-\(G\)-Äquivarianz des formalen \(12\times24\)-M1-Operators.
+
+Auf dem zulässigen Definitionsraum gilt vielmehr die bereits in C1C1 definierte Faktorisierung
+
+\[
+\boxed{
+\widehat{\mathscr C}_R
+=
+U_H\,
+\widetilde{\mathscr C}_R\,
+D,
+}
+\tag{IMG.42a}
+\]
+
+wobei
+
+\[
+D
+=
+(U_H|_K)^{-1}
+\oplus
+(U_W^{(4)})^{-1}
+\]
+
+auf dem echten Bildraum verstanden wird.
+
+Sei
+
+\[
+X\in
+\mathscr R_K^{(4)}
+\oplus
+\mathscr R_W^{(4)}.
+\]
+
+Setze
+
+\[
+(y,w)=DX.
+\]
+
+Der physische Output ist
+
+\[
+h
+=
+\widetilde{\mathscr C}_R(y,w)
+=
+(I+A)y+HE_{\mathcal A}w
+\in\mathscr H_+.
+\tag{IMG.42b}
+\]
+
+Somit
+
+\[
+\widehat{\mathscr C}_RX
+=
+U_Hh
+\in
+\operatorname{Ran}U_H
+=
+\mathscr R_H^{(4)}.
+\]
+
+Also
+
+\[
+\boxed{
+\widehat{\mathscr C}_R
+\bigl(
+\mathscr R_K^{(4)}
+\oplus
+\mathscr R_W^{(4)}
+\bigr)
+\subset
+\mathscr R_H^{(4)}.
+}
+\tag{IMG.42c}
+\]
+
+Die Output-Kovarianz folgt dann direkt aus der Komponentenformel von \(U_H\):
+
+\[
+Y_{g,k}(\theta)
+=
+\frac1{\sqrt2}
+m_k(\rho_g(\theta))
+h(\rho_g(\theta)+kL),
+\]
+
+während
+
+\[
+Y_{P_0,k}(\eta)
+=
+\frac1{\sqrt2}
+m_k(\eta)h(\eta+kL).
+\]
+
+Mit \(\eta=\rho_g(\theta)\):
+
+\[
+\boxed{
+Y_{g,k}(\theta)
+=
+Y_{P_0,k}(\rho_g(\theta)).
+}
+\tag{IMG.42d}
+\]
+
+**Wichtige Selbstbegrenzung:** IMG.42d wird nur für Outputs aus dem zulässigen physischen Bild behauptet. Es wird ausdrücklich **nicht** gebucht, dass der ambient definierte M1-Matrixoperator auf beliebigen 24-Slot-Funktionen mit der gesamten \(G\)-Aktion vertauscht.
+
+M1-FULL wird hier ausschließlich als Identität der Matrixdarstellung mit demselben transportierten physischen Operator benutzt.
+
+---
+
+## 18. Vollständige Kernelbijektion der \(24\to6\)-Reduktion
+
+Setze
+
+\[
+E:=E_H\oplus E_W,
+\qquad
+R:=R_H\oplus R_W.
+\]
+
+Auf den zulässigen Räumen gilt
+
+\[
+\boxed{
+RE=I,
+\qquad
+ER=I.
+}
+\tag{IMG.43a}
+\]
+
+Ferner ist
+
+\[
+R_0^{\rm out}
+\big|_{\mathscr R_H^{(4)}}
+\]
+
+injektiv, denn aus IMG.42d folgt
+
+\[
+R_0^{\rm out}Y=0
+\Longrightarrow
+Y_{g,k}=Y_{P_0,k}\circ\rho_g=0.
+\tag{IMG.43b}
+\]
+
+Definiere wie zuvor
+
+\[
+\mathscr N_R
+=
+R_0^{\rm out}
+\widehat{\mathscr C}_R
+E.
+\]
+
+### Vorwärtsrichtung
+
+Sei
+
+\[
+b\in\ker\mathscr N_R.
+\]
+
+Dann für
+
+\[
+Y:=\widehat{\mathscr C}_REb
+\]
+
+gilt
+
+\[
+R_0^{\rm out}Y=0.
+\]
+
+Nach IMG.42c liegt \(Y\in\mathscr R_H^{(4)}\), und wegen der Injektivität von \(R_0^{\rm out}\) auf diesem Raum folgt
+
+\[
+Y=0.
+\]
+
+Also
+
+\[
+Eb\in\ker\widehat{\mathscr C}_R.
+\]
+
+### Rückrichtung
+
+Sei umgekehrt
+
+\[
+X\in
+\ker\widehat{\mathscr C}_R
+\cap
+\bigl(
+\mathscr R_K^{(4)}
+\oplus
+\mathscr R_W^{(4)}
+\bigr).
+\]
+
+Setze
+
+\[
+b=RX.
+\]
+
+Dann
+
+\[
+Eb=ERX=X,
+\]
+
+und daher
+
+\[
+\mathscr N_Rb
+=
+R_0^{\rm out}
+\widehat{\mathscr C}_RX
+=
+0.
+\]
+
+Somit sind die beiden Kernelabbildungen
+
+\[
+E:
+\ker\mathscr N_R
+\to
+\ker\widehat{\mathscr C}_R
+\]
+
+und
+
+\[
+R:
+\ker\widehat{\mathscr C}_R
+\to
+\ker\mathscr N_R
+\]
+
+beidseitig invers:
+
+\[
+\boxed{
+\ker\mathscr N_R
+\xrightarrow[\ E\ ]{\sim}
+\ker\widehat{\mathscr C}_R
+\Big|_{\mathscr R_K^{(4)}\oplus\mathscr R_W^{(4)}}.
+}
+\tag{IMG.43c}
+\]
+
+Zusammen mit PR #40:
+
+\[
+\boxed{
+\ker\mathscr N_R
+\cong
+\ker\widehat{\mathscr C}_R
+\cong
+\ker\Gamma_I.
+}
+\tag{IMG.43d}
+\]
+
+---
+
+## 19. Owner-Review vom 31. August 2026
+
+Die vorstehenden beiden analytischen Hardening-Punkte wurden nach dem Merge von PR #42 zeilenweise durch den Projektinhaber geprüft.
+
+Bestätigt wurden insbesondere:
+
+1. \(R_HE_H=I\) und \(E_HR_H=I\) mit expliziter Extension/Restriction;
+2. keine zusätzliche Atlas-Overlap-Bedingung, da die Species Direktsummenkomponenten sind;
+3. der explizite Rücktransport \(f\leftrightarrow y_f\);
+4. die Range-Aussage IMG.42c über die Faktorisierung durch \(U_H\);
+5. die Kovarianz IMG.42d; zusätzlich im diskreten Kontrollmodell mit Fehler \(0\) überprüft;
+6. die beidseitige Kernelreduktion IMG.43c;
+7. die Selbstbegrenzung: keine Ambient-\(G\)-Äquivarianzbehauptung.
+
+Verdict:
+
+\[
+\boxed{
+\mathrm{IMG0\ analytic\ review}:\ \mathrm{ACCEPTED}.
+}
+\tag{IMG.44}
+\]
+
+Diese Abnahme ist **kein** independent GREEN (human) im Registry-Sinn, da dieser Status für externe menschliche Reviewer reserviert ist. Sie erzeugt ebenfalls keine \(\checkmark[M]\)-Promotion.
+
+---
+
+# Teil VII — Nächster zwingender Gate
+
+
+## 20. M1-ND-IMG1
 
 Der nächste Schritt ist nicht ein Determinantentest.
 
@@ -858,7 +1402,7 @@ Erst danach ist eine Transfer-/Rekurrenzanalyse sinnvoll.
 
 ---
 
-## 17. Status-Firewall
+## 21. Status-Firewall
 
 Dieser Kandidat beweist ausschließlich:
 
@@ -882,7 +1426,11 @@ Aktueller Status:
 \boxed{
 \mathrm{M1\!-\!ND\!-\!IMG0}:
 \text{AI-GREEN candidate}
++
+\text{independent GREEN (certificate, algebraic/mechanical scope)}
++
+\text{owner analytic review ACCEPTED}
 }
 \]
 
-bis zu mechanischem Zertifikat und unabhängigem Review.
+Keine \(\checkmark[M]\)-Promotion. Der nächste freigegebene Arbeitsknoten ist M1-ND-IMG1.
