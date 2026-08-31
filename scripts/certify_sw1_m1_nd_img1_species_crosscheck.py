@@ -74,17 +74,122 @@ def derive_source(s, lam_src, k_src, gout):
     return gin[0], j, m
 
 
-def check_lift_identity(s, m, lout, Nout, Nin):
-    """Algebraic L-coefficient identity:
-       physical source = rho_gin(theta+jD) + lin*L.
+def affine_phi_coeffs(g, j=0):
+    """Formal coefficients of phi_g(theta + j*Delta)
+       in the basis (theta, L, Delta).
     """
-    lin = s * (lout - Nout) + Nin - m
+    _, sg, eta, kappa = g
+    return (F(sg), F(eta, 2), F(sg * j + kappa))
 
-    # Physical L coefficient relative to phi_gin is
-    # s*(lout-Nout)-m; converting phi_gin to rho_gin adds +Nin.
-    rhs_lin = s * (lout - Nout) - m + Nin
-    assert lin == rhs_lin
-    return lin
+
+def add_coeffs(a, b):
+    return tuple(x + y for x, y in zip(a, b))
+
+
+def scale_coeffs(q, a):
+    return tuple(F(q) * x for x in a)
+
+
+def check_lift_identity_formal(s, lam_src, k_src, gout, gin_name, j, m, lout, Nout, Nin):
+    """Non-tautological formal coefficient check.
+
+    Build the physical source and the reconstructed species/lift coordinate
+    by two different algebraic routes in the formal basis (theta, L, Delta).
+
+    physical:
+      x_out = rho_gout(theta) + lout*L
+      t     = s*x_out + lam_src*L + k_src*Delta
+
+    reconstructed:
+      rho_gin(theta+j*Delta) + lin*L
+
+    The check first derives lin from the independently built L-coefficients,
+    then compares it with the IMG1 formula.
+    """
+    gout_phi = affine_phi_coeffs(gout, 0)
+    gout_rho = add_coeffs(gout_phi, (F(0), -F(Nout), F(0)))
+    xout = add_coeffs(gout_rho, (F(0), F(lout), F(0)))
+
+    physical = add_coeffs(
+        scale_coeffs(s, xout),
+        (F(0), F(lam_src), F(k_src)),
+    )
+
+    gin = GDICT[gin_name]
+    gin_phi = affine_phi_coeffs(gin, j)
+    gin_rho = add_coeffs(gin_phi, (F(0), -F(Nin), F(0)))
+
+    # Derive the required lift from the independently constructed formal
+    # source coefficients, rather than defining both sides by the same formula.
+    assert physical[0] == gin_rho[0]
+    assert physical[2] == gin_rho[2]
+    lin_from_physical = physical[1] - gin_rho[1]
+    assert lin_from_physical.denominator == 1
+    lin_from_physical = int(lin_from_physical)
+
+    lin_formula = s * (lout - Nout) + Nin - m
+    assert lin_formula == lin_from_physical
+
+    reconstructed = add_coeffs(gin_rho, (F(0), F(lin_formula), F(0)))
+    assert reconstructed == physical
+    return lin_formula
+
+
+def phi_direct(gname, theta):
+    _, sg, eta, kappa = GDICT[gname]
+    return sg * theta + F(eta, 2) * m1.L + kappa * m1.D
+
+
+def rho_direct(gname, theta):
+    z = phi_direct(gname, theta)
+    return z - (z // m1.L) * m1.L
+
+
+THETA_SAMPLES = tuple(
+    sorted({
+        F(0),
+        m1.L * F(1, 19),
+        m1.L * F(2, 17),
+        m1.L * F(3, 13),
+        m1.L * F(5, 11),
+        m1.L * F(7, 16),
+        m1.L * F(9, 17),
+        m1.L * F(11, 19),
+        m1.L * F(13, 17),
+        m1.L * F(15, 16),
+        m1.L * F(18, 19),
+    })
+)
+
+
+def check_lift_identity_theta(s, lam_src, k_src, gout, gin_name, j, m, lout, theta):
+    """Exact coordinate check at a rational theta.
+
+    This does not use m1.Nwrap. Nout/Nin are computed independently from the
+    direct affine representatives, and the physical source coordinate is
+    compared against rho_gin(theta+j*Delta)+lin*L.
+    """
+    gout_name = gout[0]
+    phi_out = phi_direct(gout_name, theta)
+    Nout = phi_out // m1.L
+    xout = rho_direct(gout_name, theta) + lout * m1.L
+
+    physical = s * xout + lam_src * m1.L + k_src * m1.D
+
+    shifted = theta + j * m1.D
+    phi_in = phi_direct(gin_name, shifted)
+    Nin = phi_in // m1.L
+    rho_in = rho_direct(gin_name, shifted)
+
+    lin_formula = s * (lout - Nout) + Nin - m
+
+    q = (physical - rho_in) / m1.L
+    assert q.denominator == 1
+    lin_from_coordinate = int(q)
+
+    assert lin_formula == lin_from_coordinate
+    assert physical == rho_in + lin_formula * m1.L
+    return lin_formula
 
 
 # FREE: x_src = s*x_out + lam*L + k*Delta.
@@ -102,12 +207,18 @@ for br in m1.FREE:
         assert img0_gin[0] == gin
         assert img0_j == j
 
-        # Test the exact wrap/lift identity over a deliberately larger integer
-        # range than the physical lifts require.
+        # Universal formal coefficient check over a deliberately larger wrap
+        # range, plus exact rational-theta coordinate checks.
         for lout in range(3):
             for Nout in range(-3, 4):
                 for Nin in range(-3, 4):
-                    check_lift_identity(s, m, lout, Nout, Nin)
+                    check_lift_identity_formal(
+                        s, lam, k, gout, gin, j, m, lout, Nout, Nin
+                    )
+            for theta in THETA_SAMPLES:
+                check_lift_identity_theta(
+                    s, lam, k, gout, gin, j, m, lout, theta
+                )
 
         free_checked += 1
 
@@ -133,7 +244,13 @@ for ch in m1.HUB:
         for lout in range(3):
             for Nout in range(-3, 4):
                 for Nin in range(-3, 4):
-                    check_lift_identity(s, m, lout, Nout, Nin)
+                    check_lift_identity_formal(
+                        s, lam_src, k_src, gout, gin, j, m, lout, Nout, Nin
+                    )
+            for theta in THETA_SAMPLES:
+                check_lift_identity_theta(
+                    s, lam_src, k_src, gout, gin, j, m, lout, theta
+                )
 
         hub_checked += 1
 
@@ -164,7 +281,9 @@ print("FREE source relations checked:", free_checked)
 print("HUB source relations checked:", hub_checked)
 print("M1 gin/j tables == direct physical derivation == IMG0 gin/j: PASS")
 print("M1 m is exactly the integer L-wrap from the same affine relation: PASS")
-print("lin = s*(lout-Nout)+Nin-m is the exact lift reconstruction identity: PASS")
+print("lin formula == lift derived from independent formal source coefficients: PASS")
+print("physical source == rho_gin(theta+j Delta)+lin*L on exact theta samples: PASS")
+print("exact theta-coordinate lift checks:", (free_checked + hub_checked) * 3 * len(THETA_SAMPLES))
 print("P0 effective maps == IMG0 rho_g(theta+j Delta) labels: PASS")
 print("effective affine types:", len(effective_types))
 print("FIREWALL: species/lift bookkeeping only; no injectivity claim")
