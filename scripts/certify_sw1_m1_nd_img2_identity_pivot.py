@@ -11,15 +11,22 @@ identity term I in the unique active free row.  On every active horizon lift
 this is the only contribution with the identity pullback theta -> theta, and
 its coefficient is strictly > 1.
 
-Consequently D_R is pointwise invertible on B_H^0 with ||D_R^{-1}|| <= 1,
-and the kernel equation is equivalently
+Consequently, after the separate analytic multiplication-operator argument
+recorded in the IMG2 audit, D_R is boundedly invertible on B_H^0 with
+||D_R^{-1}|| < 1.  The script itself certifies the exact finite row-type
+premises for that argument.  The kernel equation is equivalently
 
     f = -D_R^{-1}(R_R f + H_R g).
 
 This is NOT inversion of an outer shift block and does not prove injectivity.
+No claim is made here that D_R^{-1} preserves the KNF subspace B_K; any
+recurrence on B_K must carry the KNF descriptor row simultaneously.
 
 Scope: exact finite/reference-r atom bookkeeping + exact symbolic positivity
-of the row multipliers.  No recurrence solvability or kernel-triviality claim.
+and reciprocal bounds for the finite row-type constants.  The standard
+infinite-dimensional multiplication-operator norm argument is analytic and
+is recorded separately in the audit.  No recurrence solvability or
+kernel-triviality claim.
 """
 
 from fractions import Fraction as F
@@ -86,7 +93,10 @@ diag = {
 }
 
 for row, d in diag.items():
+    # Exact symbolic facts: d_row > 1 and therefore 0 < 1/d_row < 1.
     assert sp.simplify(d - 1).is_positive is True, (row, d)
+    assert d.is_positive is True, (row, d)
+    assert sp.simplify(1 - 1/d).is_positive is True, (row, d)
 
 # In the C1B2A/M1 simplex one has eps < Emax=(r+1)/2 and
 # Delta=1+2r, hence Emax < Delta/2 for r>0.  Therefore the historical
@@ -188,10 +198,12 @@ assert lift_hist[0] == 64*96
 assert lift_hist[1] > 0
 assert lift_hist[2] > 0
 
-# D_R^{-1} is a multiplication inverse on active support only.
-# Since every active multiplier d_row > 1, sup |1/d_row| < 1 <= 1.
-max_inverse_numeric = max(float(sp.N(1/diag[row], 30)) for row in ACTIVE_ROWS)
-assert max_inverse_numeric < 1.0
+# Exact finite row-type premise for the multiplication-operator bound.
+# Since ACTIVE_ROWS is finite and every active d_row > 1 exactly,
+# max_{row in ACTIVE_ROWS} 1/d_row is strictly below 1.
+# We deliberately do NOT use floating point as evidence for this statement.
+for row in ACTIVE_ROWS:
+    assert sp.simplify(1 - 1/diag[row]).is_positive is True
 
 print("source-level identity map unique to FREE source I: PASS")
 print("HUB identity-pullback terms: 0")
@@ -202,9 +214,11 @@ print("active lift histogram:", sorted(lift_hist.items()))
 print("active row histogram:", sorted(row_hist.items()))
 print("R4II structurally inactive in M1 simplex eps<Emax<Delta/2: PASS")
 print("all eight active row multipliers strictly > 1: PASS")
-print("max numerical reciprocal of row multiplier:", format(max_inverse_numeric, ".16f"))
+print("all eight active reciprocal bounds 0 < 1/d_row < 1 are exact: PASS")
 print("canonical decomposition: N_R = D_R f + R_R f + H_R g")
-print("kernel relation: f = -D_R^{-1}(R_R f + H_R g)")
+print("kernel relation in B_H^0: f = -D_R^{-1}(R_R f + H_R g)")
+print("FIREWALL: analytic L2 multiplication-operator norm step is in the audit")
+print("FIREWALL: D_R^{-1} is not claimed to preserve B_K by itself")
 print("FIREWALL: only diagonal multiplication D_R is inverted; no shift/outer block")
 print("FIREWALL: no contraction, recurrence solvability, or injectivity claim")
 print("SW1 M1-ND IMG2 IDENTITY-PIVOT CERTIFICATE: PASS")
