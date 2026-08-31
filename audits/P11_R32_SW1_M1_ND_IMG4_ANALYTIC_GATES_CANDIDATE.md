@@ -266,22 +266,93 @@ Daher
 \tag{G3.1}
 \]
 
-Für eine von partiellen maßtreuen Borel-Isomorphismen erzeugte Relation gilt
-das elementare Mass-Transport-Prinzip
+### 3.1 Self-contained proof of Mass Transport
 
+Enumerate all finite words in the nine A7 generators and their inverses:
 \[
+w_1,w_2,\ldots.
+\]
+Every \(w_n\) is a partial affine isometry and therefore a
+measure-preserving Borel bijection between its domain and range.
+
+The relation is
+\[
+\mathcal E
+=
+\bigcup_{n\ge1}\operatorname{Graph}(w_n).
+\]
+In particular the saturation
+\[
+V_R
+=
+\bigcup_{n\ge1}
+w_n\bigl(U_R\cap\operatorname{dom}w_n\bigr)
+\]
+is measurable.
+
+For a measurable set \(A\subset\mathcal E\), define its left counting
+measure
+\[
+M_L(A)
+=
+\int_X
+\#\{y:(x,y)\in A\}\,d\mu(x).
+\]
+Disjointify \(A\) along the word graphs:
+\[
+A_1=A\cap\operatorname{Graph}(w_1),
+\]
+and recursively
+\[
+A_n
+=
+\bigl(A\cap\operatorname{Graph}(w_n)\bigr)
+\setminus
+\bigcup_{j<n}A_j.
+\]
+Each \(A_n\) is the graph of a restriction of \(w_n\) to some measurable
+domain \(D_n\). Hence
+\[
+M_L(A_n)=\mu(D_n).
+\]
+After flipping coordinates,
+\[
+A_n^\top
+\]
+is the graph of the corresponding restriction of \(w_n^{-1}\) to
+\(w_n(D_n)\). Since \(w_n\) preserves Lebesgue measure,
+\[
+M_L(A_n^\top)
+=
+\mu(w_n(D_n))
+=
+\mu(D_n)
+=
+M_L(A_n).
+\]
+The pieces \(A_n\) are disjoint, and therefore so are their flips. By
+countable additivity,
+\[
+\boxed{
+M_L(A)=M_L(A^\top).
+}
+\]
+Applying this flip invariance to the measure with density
+\[
+F(x,y)\ge0
+\]
+gives the Mass-Transport identity
+\[
+\boxed{
 \int_X
 \sum_{y\mathrel{\mathcal E}x}F(x,y)\,d\mu(x)
 =
 \int_X
-\sum_{x\mathrel{\mathcal E}y}F(x,y)\,d\mu(y)
+\sum_{x\mathrel{\mathcal E}y}F(x,y)\,d\mu(y).
+}
 \tag{G3.2}
 \]
-
-für nichtnegative messbare \(F\). Hier kann es direkt durch Zerlegung der
-Relation in die Graphen der abzählbar vielen Generatorwörter und anschließende
-Disjunktifikation bewiesen werden; jedes Wort ist wieder eine partielle
-maßtreue Isometrie.
+Thus no external group-action or quotient-measure theorem is required.
 
 Setze
 
