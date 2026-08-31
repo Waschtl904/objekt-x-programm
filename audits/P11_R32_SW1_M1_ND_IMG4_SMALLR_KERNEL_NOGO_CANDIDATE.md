@@ -563,7 +563,7 @@ Mit IMG4.14:
 \boxed{
 |W_R^{\rm vis}|
 \le
-14040R.
+28080R.
 }
 \tag{IMG4.17}
 \]
@@ -871,10 +871,10 @@ Der Befund würde ausschließlich zeigen:
 Vor jeder Promotion müssen unabhängig geprüft werden:
 
 1. **A8-Übertrag:** Ist der rohe A1-Graf exakt der Graph des Horizon-Horizon-Blocks \(\mathscr T_B\) nach IMG0/IMG1-Reduktion?
-2. **Separatorbound:** Folgt aus der exakten \(\pm14\)-Trefferdeckung wirklich der a.e. 65-Layer-/390-State-Bound?
+2. **Separatorbound:** Folgt aus der exakten \(\pm14\)-Trefferdeckung wirklich der a.e. 65-Layer-/390-formal-State- und 780-physical-State-Bound?
 3. **Mass Transport:** Ist
    \[
-   |V_R|\le390|U_R|
+   |V_R|\le780|U_R|
    \]
    für die konkrete partielle maßtreue Äquivalenzrelation korrekt?
 4. **Reducing Subspace:** Ist \(V_R\) für den vollständig aggregierten Horizonoperator einschließlich aller Gates tatsächlich reduzierend?
