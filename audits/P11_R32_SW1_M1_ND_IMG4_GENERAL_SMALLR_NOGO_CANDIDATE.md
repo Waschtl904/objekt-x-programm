@@ -402,7 +402,44 @@ fixed lower-chamber \(\varepsilon\)-slice.
 
 ---
 
-## 7. Scope
+## 7. P12 compatibility on the whole lower chamber
+
+For every
+\[
+0<\varepsilon<\Delta/2
+\]
+one has
+\[
+T_0=T+\varepsilon<T+\Delta/2.
+\]
+Moreover
+\[
+T+\Delta/2<\frac12\log5
+\]
+is exactly equivalent to
+\[
+3\sqrt2<5,
+\]
+and after squaring to
+\[
+18<25.
+\]
+Hence every parameter in GEN.11 also lies in the P12 three-shift window.
+
+Because GEN.11 assumes
+\[
+0<\sigma<R,
+\]
+P12 all-radius restricted-tail injectivity applies:
+\[
+\ker(HE_{\mathcal A}|_-)=\{0\}.
+\]
+Thus every nonzero IMG4 kernel vector supplied by GEN.11 is an **indirect**
+Schur/Cross-Gram annihilator, not a trivial outer Hub kernel.
+
+---
+
+## 8. Scope
 
 GEN.11 does not assert:
 
@@ -416,7 +453,7 @@ The threshold \(R_\varepsilon^*\) is existential unless an explicit separator
 cover is supplied. For \(\varepsilon=\Delta/4\), the separate IMG4 certificate
 provides an explicit cover and explicit numerical witness.
 
-## Promotion firewall
+## 9. Promotion firewall
 
 This general theorem must not be promoted independently of the underlying
 IMG4 analytic gates. A valid external GREEN for the focused IMG4 review packet
