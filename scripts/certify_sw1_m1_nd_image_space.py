@@ -269,7 +269,8 @@ independent_base_W=lifts
 assert independent_base_H+independent_base_W==6
 
 print("Klein-four sheet/parity algebra: PASS")
-print("P0 covariance and two-sided input-range reconstruction: PASS")\nprint("P0 output restriction is injective on valid symmetric horizon image: PASS")
+print("P0 covariance and two-sided input-range reconstruction: PASS")
+print("P0 output restriction is injective on valid symmetric horizon image: PASS")
 print("formal input cover: 12_H + 12_W = 24 slots")
 print("valid symmetric-cover data determined by 3_H + 3_W base-lift functions")
 print("P0-output FREE effective affine types: 9")
