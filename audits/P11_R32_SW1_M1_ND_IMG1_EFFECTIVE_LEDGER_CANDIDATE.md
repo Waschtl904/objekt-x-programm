@@ -249,11 +249,45 @@ source-species relations from the physical affine equations, then checks:
 - direct derivation \(=\) M1-FULL \`free_sr\`/\`hub_sr\`;
 - direct derivation \(=\) IMG0 \`free_op_relation\`/\`hub_op_relation\`;
 - \(m\) equals the integer \(L\)-wrap above;
-- the \`lin\` formula is the exact lift-reconstruction identity;
+- the \`lin\` formula agrees with the lift obtained from an independently
+  assembled formal physical-source coefficient vector;
+- at exact rational \(\theta\)-samples, the direct coordinate identity
+  \[
+  t_{\rm phys}
+  =
+  \rho_{g_{\rm in}}(\theta+j\Delta)+\ell_{\rm in}L
+  \]
+  holds with \(\ell_{\rm in}\) equal to the IMG1 formula;
 - the \(P_0\) effective maps equal IMG0's
   \(\rho_g(\theta+j\Delta)\)-labels.
 
-No IMG1 helper is used in this cross-check.
+No IMG1 helper and no \`m1.Nwrap\` are used in these lift cross-checks.
+
+### Review correction: removed tautological lift assertion
+
+An earlier version of the species cross-check contained
+
+\`\`\`python
+lin = s * (lout - Nout) + Nin - m
+rhs_lin = s * (lout - Nout) - m + Nin
+assert lin == rhs_lin
+\`\`\`
+
+which is algebraically only \`a == a\` and therefore did **not** independently
+verify the lift formula. That assertion has been removed.
+
+The corrected script now separates three levels deliberately:
+
+1. the analytic derivation above establishes the general formula by
+   substituting \(\phi_g=\rho_g+N_gL\);
+2. a formal coefficient implementation constructs the physical source and
+   reconstructed species coordinate by different code paths and derives the
+   required \(L\)-lift from their coefficient difference;
+3. exact rational-\(\theta\) tests compare the actual physical coordinate
+   against \(\rho_{g_{\rm in}}(\theta+j\Delta)+\ell_{\rm in}L\) directly.
+
+Thus the certificate no longer attributes evidentiary force to the former
+tautological assertion.
 
 ---
 
