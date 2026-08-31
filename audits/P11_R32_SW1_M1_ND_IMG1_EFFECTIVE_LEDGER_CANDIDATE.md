@@ -3,7 +3,7 @@
 ## Status
 
 \[
-\boxed{\mathrm{M1\!-\!ND\!-\!IMG1}:\ \text{AI-GREEN candidate; first CI GREEN observed}}
+\boxed{\mathrm{M1\!-\!ND\!-\!IMG1}:\ \text{AI-GREEN candidate + independent GREEN (certificate)}}
 \]
 
 No \(\checkmark[M]\) promotion. No injectivity claim.
