@@ -88,6 +88,13 @@ diag = {
 for row, d in diag.items():
     assert sp.simplify(d - 1).is_positive is True, (row, d)
 
+# In the C1B2A/M1 simplex one has eps < Emax=(r+1)/2 and
+# Delta=1+2r, hence Emax < Delta/2 for r>0.  Therefore the historical
+# upper-epsilon row R4II is structurally unreachable in the current M1 scope.
+rr = sp.symbols("rr", positive=True)
+assert sp.simplify((1 + 2*rr)/2 - (rr + 1)/2) == rr/2
+ACTIVE_ROWS = set(diag) - {"R4II"}
+
 # Cross-check symbolic names in the canonical M1 ledger.
 row_I_coeff = {}
 for row, (_, _, terms) in m1.ROWS.items():
@@ -175,14 +182,15 @@ for rep in m1.reps:
 
 assert atoms == 64*96 == 6144
 assert identity_terms == active_output_slots
-assert set(row_hist) == set(diag)
+assert set(row_hist) == ACTIVE_ROWS
+assert row_hist["R4II"] == 0
 assert lift_hist[0] == 64*96
 assert lift_hist[1] > 0
 assert lift_hist[2] > 0
 
 # D_R^{-1} is a multiplication inverse on active support only.
-# Since every multiplier d_row > 1, sup |1/d_row| < 1 <= 1.
-max_inverse_numeric = max(float(sp.N(1/d, 30)) for d in diag.values())
+# Since every active multiplier d_row > 1, sup |1/d_row| < 1 <= 1.
+max_inverse_numeric = max(float(sp.N(1/diag[row], 30)) for row in ACTIVE_ROWS)
 assert max_inverse_numeric < 1.0
 
 print("source-level identity map unique to FREE source I: PASS")
@@ -192,7 +200,8 @@ print("active P0 horizon output slots:", active_output_slots)
 print("identity pivot terms:", identity_terms)
 print("active lift histogram:", sorted(lift_hist.items()))
 print("active row histogram:", sorted(row_hist.items()))
-print("all nine row multipliers strictly > 1: PASS")
+print("R4II structurally inactive in M1 simplex eps<Emax<Delta/2: PASS")
+print("all eight active row multipliers strictly > 1: PASS")
 print("max numerical reciprocal of row multiplier:", format(max_inverse_numeric, ".16f"))
 print("canonical decomposition: N_R = D_R f + R_R f + H_R g")
 print("kernel relation: f = -D_R^{-1}(R_R f + H_R g)")
