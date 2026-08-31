@@ -389,13 +389,13 @@ under the already proved chamber/atom identification.
 
 The post-review hardening was reproduced on GitHub Actions with all three code paths:
 
-- Run: \`33402483429\`
-- Job: \`99521925339\`
-- Head: \`3734d3a89f2c406607a21a81029f6c2720ec4365\`
+- Run: \`33404371913\`
+- Job: \`99528171354\`
+- Head: \`606882c79062b4fee29271ce8e7897ee08568434\`
 - Python: \`3.12.14\`
-- Audit blob: \`488e39740d046d7cdeeffb79331d0d380c0dd928\`
+- Audit blob: \`958da558008319f3ec1053b51b47f53f552ad172\`
 - primary IMG1 blob: \`d824bea626e5b97fbad5a75ed51097408f5b6144\`
-- species/lift cross-check blob: \`31ff38af11fd9aa374ec8093531de28f5985ab28\`
+- species/lift cross-check blob: \`73fdd446e7fd02e05495ff83c5344ddb2e40e3ab\`
 - direct physical second-implementation blob: \`dd4aea5b694409adcdad28850eba622ed00e51cc\`
 - M1-FULL blob: \`d73993a393b9d076c72bc77cbdf3610f4695c29c\`
 - IMG0 blob: \`7f5b11bd80e5387b1c5e8d73be4c0e4140eed8d5\`
@@ -414,6 +414,18 @@ with
 \text{M1 tables}
 =
 \text{IMG0 species rules}.
+\]
+
+
+The corrected lift cross-check additionally reports
+\[
+2508\ \text{exact rational-}\theta\text{ coordinate checks},
+\]
+together with
+\[
+\text{lift from independent formal source coefficients}
+=
+\text{IMG1 lin formula}.
 \]
 
 The second physical implementation independently reproduced
