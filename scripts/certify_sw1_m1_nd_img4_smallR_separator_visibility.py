@@ -22,10 +22,13 @@ It proves exactly:
    The graph-theoretic implication itself is recorded in the audit, not
    machine-proved here.
 
-3. The crude measure envelope for the annulus visibility set is
-       6 KNF branches * 390 FREE states * 6 HUB branches * R0
-       = 14040 R0
-       = (351/2500) T,
+3. A8.10B shows that the physical sheet-collision quotient glues at most two
+   formal components.  Hence the universal physical component envelope is
+       2 * 390 = 780 states.
+   The crude measure envelope for the annulus visibility set is therefore
+       6 KNF branches * 780 FREE states * 6 HUB branches * R0
+       = 28080 R0
+       = (351/1250) T,
    which is strictly smaller than the positive annulus length
        S0-R0 = T-R0/2.
 
@@ -163,8 +166,12 @@ assert RIGHT_OFFSET==29
 # (m0+29+3) - (m0-32) + 1 = 65 layers.
 MAX_LAYERS=RIGHT_OFFSET+3+LEFT_OFFSET+1
 assert MAX_LAYERS==65
-MAX_STATES=6*MAX_LAYERS
-assert MAX_STATES==390
+MAX_FORMAL_STATES=6*MAX_LAYERS
+assert MAX_FORMAL_STATES==390
+# A8.10B: the physical quotient saturates a formal component by C U J_K(C),
+# hence at most two formal components are glued.
+MAX_PHYSICAL_STATES=2*MAX_FORMAL_STATES
+assert MAX_PHYSICAL_STATES==780
 
 # Explicit physical parameter point.
 # epsilon0=Delta/4, R0=T/100000, sigma0=R0/2.
@@ -182,26 +189,27 @@ assert sign_form(sub(DELTA,add(R0,eps0)))>0
 # Crude positive-half measure envelope.
 KNF_BRANCHES=6
 HUB_BRANCHES=6
-VISIBLE_FACTOR=KNF_BRANCHES*MAX_STATES*HUB_BRANCHES
-assert VISIBLE_FACTOR==14040
+VISIBLE_FACTOR=KNF_BRANCHES*MAX_PHYSICAL_STATES*HUB_BRANCHES
+assert VISIBLE_FACTOR==28080
 
-# visible <= 14040 R0 = 14040/100000 T = 351/2500 T.
+# visible <= 28080 R0 = 28080/100000 T = 351/1250 T.
 visible_T_factor=F(VISIBLE_FACTOR,100000)
-assert visible_T_factor==F(351,2500)
+assert visible_T_factor==F(351,1250)
 
 # S=T+sigma, so positive annulus length S-R=T-R/2
 # = (1-1/200000)T.
 annulus_T_factor=F(1)-F(1,200000)
 assert visible_T_factor<annulus_T_factor
 blind_T_factor=annulus_T_factor-visible_T_factor
-assert blind_T_factor>F(4,5)  # huge safety margin
+assert blind_T_factor>F(7,10)  # still a huge safety margin
 
 print("epsilon0 = Delta/4")
 print("rotation indices used for separator cover: -14..14")
 print("a.e. separator cover of the full L-circle: PASS")
 print("max consecutive nonseparator run:",MAX_NONSEP_RUN)
 print("A8-derived layer envelope (analytic handoff):",MAX_LAYERS)
-print("A8-derived FREE-state envelope (analytic handoff):",MAX_STATES)
+print("A8-derived formal FREE-state envelope (analytic handoff):",MAX_FORMAL_STATES)
+print("A8.10B universal physical quotient envelope:",MAX_PHYSICAL_STATES)
 print("explicit R0 = T/100000, sigma0 = R0/2")
 print("SW1 inequalities at explicit point: PASS")
 print("visibility factor:",VISIBLE_FACTOR)
