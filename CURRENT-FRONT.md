@@ -2,8 +2,8 @@
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 31. August 2026  
-> **Aktuelle mathematische Basis:** PR #42, Squash-Merge `d117e4cb6e59a04ac0ae79b8176e4beaf114979e` (M1-ND-IMG0 integriert). Frühere Promotions-/Certificate-Aussagen behalten ihre jeweils kanonischen bzw. CI-geprüften Provenienzen.  
-> **Aktiver mathematischer Stand:** M1-ND-IMG0 ist mechanisch zertifiziert und analytisch nachgehärtet/abgenommen: die `24→6`-Funktionskanalreduktion besitzt explizite beidseitige Extension/Restriction, und die Output-(P_0)-Injektivität folgt auf zulässigen Inputs aus der Range-Faktorisierung \(\widehat{\mathscr C}_R=U_H\widetilde{\mathscr C}_RD\), nicht aus einer stärkeren Ambient-Äquivarianzbehauptung. **M1-ND-IMG1 ist damit freigegeben:** exakte Assembly des \(3\times6\)-Funktionskanaloperators auf B96-Atomen. Noch keine Injektivität.  
+> **Aktuelle mathematische Basis:** `main` auf `a594c3c655f71932c033be06ebfdeee7a96f923a` (IMG0 analytisch gehärtet) plus Arbeitsbranch `research/sw1-m1-nd-img1`. Frühere Promotions-/Certificate-Aussagen behalten ihre jeweils kanonischen bzw. CI-geprüften Provenienzen.  
+> **Aktiver mathematischer Stand:** M1-ND-IMG1 ist als **AI-GREEN candidate + independent GREEN (certificate)** im exakten endlichen/algebraischen Referenz-Scope gehärtet: auf allen `64×96=6144` offenen B96-Atomen stimmt die direkte physische \(P_0\)-Reduktion termweise mit dem aus M1-FULL reduzierten \(3\times6\)-Ledger überein; `117546` aktive reduzierte Terme, exakt `22` reduzierte Operatorzustände, keine Kollisionen auf Zellen \((a,c,\alpha)\), SHA256 `1cffd33529534a15c941b67086217f8f8c47b0cc302cb2cf740b0e08c2ff4474`. **Nächster mathematischer Schritt:** äquivalente Transfer-/Rekurrenzform auf \(\mathscr B_K\oplus\mathscr B_W\) ableiten. Noch keine Injektivität und keine `✓[M]`-Promotion.  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -477,6 +477,6 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 }
 \]
 
-**Nächster Default:** **M1-ND-IMG1** — aus M1-FULL auf allen B96-Atomen den exakten \(3\times6\)-Funktionskanal-Ledger von \(\mathscr N_R\) assemblieren; erst danach Transfer-/Rekurrenzanalyse und Nichtentartung.
+**Nächster Default:** **M1-ND Transfer-/Rekurrenzanalyse** — die 22 zertifizierten reduzierten Operatorzustände in eine äquivalente Rekurrenz-/Transferform auf dem echten zulässigen Raum \(\mathscr B_K\oplus\mathscr B_W\) überführen; keine möglicherweise singulären Außenblöcke unzulässig invertieren und Irrational-Shift-/Cocycle-Effekte explizit mitführen.
 
-**Merge-Firewall:** PR #42 integriert IMG0 ausschließlich als Kandidat + Certificate im algebraisch/mechanischen Scope; keine `✓[M]`-Promotion. Insbesondere folgt noch weder \(\ker\Gamma_I=\{0\}\) noch \(\ker\Gamma_I\neq\{0\}\). IMG1 und M1-ND bleiben offen; kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
+**Firewall:** IMG1 trägt ausschließlich `AI-GREEN candidate + independent GREEN (certificate)` im dokumentierten Referenz-Scope und keine `✓[M]`-Promotion. Insbesondere folgt noch weder \(\ker\Gamma_I=\{0\}\) noch \(\ker\Gamma_I\neq\{0\}\). Offen bleibt M1-ND selbst, jetzt in Form der Transfer-/Rekurrenz- und anschließenden Injektivitätsfrage; kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
