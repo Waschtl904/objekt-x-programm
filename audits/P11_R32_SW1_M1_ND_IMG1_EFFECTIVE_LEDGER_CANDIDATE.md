@@ -146,3 +146,216 @@ IMG1 does not prove
 It does not yet derive a recurrence, invert any outer block, solve the \(\mathscr B_K\) constraint, construct/exclude an admissible kernel function, add an actual-\(r\) promotion, or imply anything about Objekt X globally or RH.
 
 The next legitimate step after hardened IMG1 is transfer/recurrence analysis on the true admissible function space.
+
+
+---
+
+## 6. Post-review hardening: IMG0/M1 species algebra
+
+A review correctly identified that IMG1 uses the M1-FULL objects
+\`free_sr\`, \`hub_sr\`, \`Nwrap\` and the integer \(m\). These are now
+cross-checked explicitly against the already accepted IMG0 species extension.
+
+Write a species as
+\[
+g=(s_g,\eta_g,\kappa_g),
+\qquad
+\phi_g(\theta)
+=
+s_g\theta+\frac{\eta_g}{2}L+\kappa_g\Delta,
+\]
+and
+\[
+\rho_g(\theta)=\phi_g(\theta)-N_g(\theta)L,
+\qquad
+N_g(\theta)=\left\lfloor\frac{\phi_g(\theta)}L\right\rfloor.
+\]
+
+For a physical source relation
+\[
+t=sx+\lambda_{\rm src}L+k_{\rm src}\Delta
+\]
+and an output species \(g_{\rm out}=(s_o,\eta_o,\kappa_o)\), the source
+species is determined by
+\[
+s_i=ss_o,
+\]
+\[
+\eta_i
+\equiv
+s\eta_o+2\lambda_{\rm src}
+\pmod 2,
+\]
+and the M1 shift \(j\) by
+\[
+s_i j+\kappa_i
+=
+s\kappa_o+k_{\rm src}.
+\]
+
+The integer stored by M1-FULL as \(m\) is not a new species rule. It is
+exactly
+\[
+\boxed{
+m
+=
+\frac{\eta_i}{2}
+-
+\left(
+s\frac{\eta_o}{2}+\lambda_{\rm src}
+\right)
+\in\mathbb Z.
+}
+\]
+
+If
+\[
+x_{\rm out}
+=
+\rho_{g_{\rm out}}(\theta)+\ell_{\rm out}L,
+\]
+then direct substitution gives
+\[
+t
+=
+\rho_{g_{\rm in}}(\theta+j\Delta)
++
+\ell_{\rm in}L
+\]
+with
+\[
+\boxed{
+\ell_{\rm in}
+=
+s\bigl(\ell_{\rm out}-N_{g_{\rm out}}(\theta)\bigr)
++
+N_{g_{\rm in}}(\theta+j\Delta)
+-
+m.
+}
+\]
+
+This is exactly the IMG1 \`lin\` formula. Thus \`Nwrap\` merely converts
+between \(\phi_g\) and its circle representative \(\rho_g\); it does not add
+a new covariance or equivariance assumption.
+
+New cross-check:
+
+\`scripts/certify_sw1_m1_nd_img1_species_crosscheck.py\`
+
+It re-derives all \(10\times4=40\) FREE and \(9\times4=36\) HUB
+source-species relations from the physical affine equations, then checks:
+
+- direct derivation \(=\) M1-FULL \`free_sr\`/\`hub_sr\`;
+- direct derivation \(=\) IMG0 \`free_op_relation\`/\`hub_op_relation\`;
+- \(m\) equals the integer \(L\)-wrap above;
+- the \`lin\` formula is the exact lift-reconstruction identity;
+- the \(P_0\) effective maps equal IMG0's
+  \(\rho_g(\theta+j\Delta)\)-labels.
+
+No IMG1 helper is used in this cross-check.
+
+---
+
+## 7. Post-review hardening: second physical implementation
+
+The frozen \`EXPECTED_*\` values in the primary IMG1 script are a
+reproducibility lock, not by themselves a second implementation.
+
+Therefore a second code path was added:
+
+\`scripts/certify_sw1_m1_nd_img1_direct_crosscheck.py\`
+
+This script does **not** import the IMG1 effective-ledger script and does
+**not** use M1-FULL's \`free_sr\`, \`hub_sr\` or \`Nwrap\` tables.
+
+Instead it:
+
+1. starts from the physical FREE/HUB source equations;
+2. re-derives source species and \(j\);
+3. determines the source lift directly from the physical source coordinate;
+4. builds the reduced \(P_0\) operator state from that physical route alone;
+5. compares its global statistics and deterministic state fingerprint with
+   the primary IMG1 result.
+
+It intentionally shares the already certified M1-FULL geometry fixture
+(64 chamber representatives, B96 wall alphabet and physical row data). Hence
+this is a **second implementation cross-check**, not an independent human or
+blind cross-model review.
+
+---
+
+## 8. IMG1 transfer from \(r_0=7/2\) to \(3<r<4\)
+
+The original IMG1 certificate is correctly scoped to the reference value
+\[
+r_0=\frac72.
+\]
+
+No silent all-\(r\) exhaustion is claimed.
+
+However, the already promoted C1B2A-TRANSFER supplies the exact data needed
+to transport the reduced ledger:
+
+1. corresponding open parameter chambers have the same labeled Tope;
+2. corresponding open circle atoms have the same cyclic B96 wall order;
+3. therefore the fixed M1 raw ledger activates the same labeled
+   FREE/HUB contributions and the same species/lift slots on corresponding
+   atoms.
+
+Define the termwise IMG1 reduction map \(\Pi\) on a \(P_0\)-output M1 term by
+\[
+\Pi:
+(g_{\rm in},j,\ell_{\rm in},H/W,\text{coefficient},\text{provenance})
+\longmapsto
+(\ell_{\rm out},c,\alpha,H/W,\text{coefficient},\text{provenance}),
+\]
+where
+\[
+c=
+\begin{cases}
+\ell_{\rm in},&H,\\
+3+\ell_{\rm in},&W,
+\end{cases}
+\]
+and
+\[
+\boxed{
+\alpha^{(r)}_{g_{\rm in},j}(\theta)
+=
+s\theta+\frac{\eta}{2}L(r)+(sj+\kappa)\Delta(r)
+\pmod{L(r)}.
+}
+\]
+
+The **label**
+\[
+(s,\eta/2,sj+\kappa)
+\]
+depends only on the species and M1 shift and is therefore independent of
+\(r\). Only its geometric realization uses \(L(r)\) and \(\Delta(r)\).
+
+Consequently \(\Pi\) is an \(r\)-independent combinatorial post-processing of
+the transferred M1 term ledger. Hence the existing theorem
+\[
+\mathrm{M1\text{-}FULL}(7/2)
+\Longrightarrow
+\mathrm{M1\text{-}FULL}(r),
+\qquad 3<r<4,
+\]
+implies the corresponding **symbolic IMG1 \(3\times6\) ledger formula** on
+every corresponding open chamber/atom.
+
+This is not a claim that the numerical operators for different \(r\) are
+identical on one fixed circle. Their pullbacks use the actual \(L(r)\) and
+\(\Delta(r)\). The claim is only that the labeled reduced formula transfers
+under the already proved chamber/atom identification.
+
+### Transfer firewall
+
+- the 6144-fold exhaustive run remains a reference-\(r_0\) certificate;
+- the all-\(r\) statement is an analytic/combinatorial corollary of
+  C1B2A-TRANSFER plus the termwise reduction \(\Pi\);
+- no new \(\checkmark[M]\) promotion is created here;
+- no injectivity follows.
+
