@@ -3,7 +3,7 @@
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 31. August 2026  
 > **Aktuelle mathematische Basis:** PR #42, Squash-Merge `d117e4cb6e59a04ac0ae79b8176e4beaf114979e` (M1-ND-IMG0 integriert). Frühere Promotions-/Certificate-Aussagen behalten ihre jeweils kanonischen bzw. CI-geprüften Provenienzen.  
-> **Aktiver mathematischer Stand:** M1-ND-IMG0 ist als `AI-GREEN candidate + independent GREEN (certificate)` im algebraisch/mechanischen Scope integriert. Der zulässige formale 24-Slot-Input ist durch `3_H+3_W` \(L^2\)-Basisliftkanäle bestimmt; die Output-\(P_0\)-Restriktion ist auf dem echten symmetrischen Horizon-Bildraum injektiv. Damit ist der nächste aktive Gate **M1-ND-IMG1:** exakte Assembly des effektiven \(3\times6\)-Funktionskanaloperators aus M1-FULL auf den B96-Atomen. **Noch keine Injektivität.**  
+> **Aktiver mathematischer Stand:** M1-ND-IMG0 ist mechanisch zertifiziert und analytisch nachgehärtet/abgenommen: die `24→6`-Funktionskanalreduktion besitzt explizite beidseitige Extension/Restriction, und die Output-(P_0)-Injektivität folgt auf zulässigen Inputs aus der Range-Faktorisierung \(\widehat{\mathscr C}_R=U_H\widetilde{\mathscr C}_RD\), nicht aus einer stärkeren Ambient-Äquivarianzbehauptung. **M1-ND-IMG1 ist damit freigegeben:** exakte Assembly des \(3\times6\)-Funktionskanaloperators auf B96-Atomen. Noch keine Injektivität.  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
