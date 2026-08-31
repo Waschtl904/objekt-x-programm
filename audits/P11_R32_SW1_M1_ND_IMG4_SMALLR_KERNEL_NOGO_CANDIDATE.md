@@ -334,11 +334,20 @@ Somit:
 
 \[
 \boxed{
-\#\mathcal C(x)\le
+\#\mathcal C_{\rm formal}(x)\le
 6\cdot65
 =
-390
-\quad\text{für fast jedes }x.
+390.
+\]
+
+A8.10B zeigt zusätzlich, dass der physische Sheet-Kollisionsquotient höchstens
+zwei formale Komponenten verklebt. Daher verwenden wir im Maßargument den
+universellen physischen Bound
+
+\[
+\boxed{
+\#\mathcal C_{\rm phys}(x)\le780.
+}
 }
 \tag{IMG4.9}
 \]
@@ -413,7 +422,7 @@ V_R
 
 Also ist \(V_R\) die Vereinigung aller FREE-Komponenten, welche ein KNF-Samplingfenster treffen.
 
-Wegen IMG4.9 besitzen die Äquivalenzklassen a.e. höchstens 390 Elemente.
+Wegen IMG4.9 und A8.10B besitzen die physischen Äquivalenzklassen höchstens 780 Elemente; außerhalb der abzählbaren Sheet-Kollisionsstrata gilt sogar 390.
 
 Alle erzeugenden FREE-Kanten sind partielle Translationen oder Reflexionen mit Jacobi-Betrag \(1\). Die Lebesguemaßklasse ist daher unter der Äquivalenzrelation invariant.
 
@@ -447,7 +456,7 @@ Daher
 &\le
 \int N_U(x)\,dx\\
 &\le
-390|U_R|.
+780|U_R|.
 \end{aligned}
 \]
 
@@ -457,7 +466,7 @@ Mit IMG4.11:
 \boxed{
 |V_R|
 \le
-2340R.
+4680R.
 }
 \tag{IMG4.14}
 \]
@@ -606,18 +615,18 @@ T-\frac{R_0}{2}\\
 Andererseits
 
 \[
-14040R_0
+28080R_0
 =
-\frac{14040}{100000}T
+\frac{28080}{100000}T
 =
-\frac{351}{2500}T.
+\frac{351}{1250}T.
 \tag{IMG4.20}
 \]
 
 Das Certificate prüft exakt
 
 \[
-\frac{351}{2500}
+\frac{351}{1250}
 <
 1-\frac1{200000}.
 \]
@@ -626,10 +635,10 @@ Tatsächlich bleibt eine sehr große Marge:
 
 \[
 \left(
-1-\frac1{200000}-\frac{351}{2500}
+1-\frac1{200000}-\frac{351}{1250}
 \right)T
 >
-\frac45T.
+\frac7{10}T.
 \tag{IMG4.21}
 \]
 
