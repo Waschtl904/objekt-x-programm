@@ -187,10 +187,8 @@ assert sp.simplify(eps-sigma0).is_positive is True
 # 4*(2*T0 < log5) is 5 log2 + 2 log3 < 4 log5
 # i.e. 2^5 * 3^2 < 5^4.
 assert 2**5 * 3**2 < 5**4
-assert sp.N(c-T0,50)>0  # diagnostic only; proof is preceding integer inequality
-
-# epsilon<epsilon_max is the same T+epsilon<c comparison.
-assert sp.N(epsmax-eps,50)>0
+# epsilon<epsilon_max is exactly the same T+epsilon<c comparison.
+assert sp.simplify((epsmax-eps)-(c-T0))==0
 
 print("A1 off-diagonal map alphabet:",sorted(got))
 print("A1 domain unions == A7/A8 nine graphing domains: PASS")
