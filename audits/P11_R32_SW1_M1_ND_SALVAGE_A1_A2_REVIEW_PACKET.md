@@ -83,7 +83,9 @@ Check:
 5. the reported count 70 is only a checksum, not the reason for exhaustivity;
 6. the verified inverse graphing relations imply
    \(K_\varepsilon=F_\varepsilon^c\) is invariant a.e.;
-7. boundary points form only a finite null set.
+7. boundary points form only a finite null set;
+8. the saturation is measurable as a countable union of partial-Borel word
+   images, and the word-saturation of the boundary null set remains null.
 
 Relevant upstream:
 - \`audits/P11_R32_SW1_A7_FINITE_STATE_COCYCLE_CANDIDATE.md\`
