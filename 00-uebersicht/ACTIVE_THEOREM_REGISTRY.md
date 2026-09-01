@@ -1,7 +1,7 @@
 # Active Theorem Registry
 
 > **Stand:** 1. September 2026  
-> **Aktuelle mathematische Merge-Basis:** `main@cf3d39a2e7787bc1c5b938390b6cdeec7943b0c2`. Der explizite Small-`R`-M1-ND-Gegenvektor ist `✓[M]_neg`. PR #49 (`research/sw1-m1-nd-salvage-phase-diagram`, Head `2ed1583f074574c2fdb5a48203d63d520a86b5f6`, Run `33532345053` SUCCESS) ist ein **offener, eingefrorener AI-GREEN candidate** für einen uniformen negativen Wedge und ist nicht promotet. Aktive Forschungsachse ist derzeit B / Strong Terminal, zunächst R27-F. Frühere Promotions-/Certificate-Aussagen behalten ihre eigenen Provenienzen.  
+> **Aktuelle mathematische Merge-Basis:** `main` mit mathematischer Basis durch PR #48 (Pre-Doku-Sync SHA `cf3d39a2e7787bc1c5b938390b6cdeec7943b0c2`). Der explizite Small-`R`-M1-ND-Gegenvektor ist `✓[M]_neg`. PR #49 (`research/sw1-m1-nd-salvage-phase-diagram`, Head `2ed1583f074574c2fdb5a48203d63d520a86b5f6`, Run `33532345053` SUCCESS) ist ein **offener, eingefrorener AI-GREEN candidate** für einen uniformen negativen Wedge und ist nicht promotet. Aktive Forschungsachse ist derzeit B / Strong Terminal, zunächst R27-F. Frühere Promotions-/Certificate-Aussagen behalten ihre eigenen Provenienzen.  
 > **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11/R32-SW1-/Schur-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
 > **Nicht-Zweck:** Ersatz für \`STATUS.md\`, \`OFFENE_PROBLEME.md\`, die Papers oder Promotionsrecords.
 
@@ -125,7 +125,7 @@ Mit HT-A4b-SW1-M nun \(\checkmark[M]\) ist der SW1-Membership-Baustein der Kette
 | **SW1-Δ-DESCENT gesamt** | \`?[O]\` | Die zertifizierten Stages 1/2–12 schließen große endliche Teilgeometrien, aber nicht automatisch den gesamten blinden Summanden \(\mathcal Z_R^+\). |
 | **HT-A4b global chamber exhaustivity** | \`?[O]\` | globale zehn-Flächen-/15-Chamber-Exhaustivität bleibt offen; für den SW1-Angriff derzeit nicht Priorität |
 | **HT-RED** | \`?[O]\` | vollständige Tail-Gaussian-/Schur-Elimination des Restblocks offen |
-| **M1-ND-SALVAGE / RESTPARAMETER-KLASSIFIKATION** | `?[O]` — **neuer aktiver mathematischer Knoten** | maximalen Parameterrest mit möglicher Nichtentartung bestimmen oder finite-level Kopplung so reparieren, dass der promotierte Small-`R`-Blindraum beseitigt wird |
+| **M1-ND-SALVAGE / RESTPARAMETER-KLASSIFIKATION** | `?[O]` — derzeit **geparkt** | maximalen Parameterrest mit möglicher Nichtentartung bestimmen oder finite-level Kopplung so reparieren, dass der promotierte Small-`R`-Blindraum beseitigt wird; PR #49 bleibt eingefrorener Kandidat |
 | **STRONG-TERMINAL / B** | `?[O]` — **aktive Forschungsachse** | Historische C6-Lokalfrage geschlossen; absolute Terminalmetrik ohne beschränkten Grenzoperator `✓[M]_neg`; relative Mosco-/Resolvent- und inverse-root-Grenzen vorhanden. Nächster Gate: **R27-F**, also \(D_\infty^-=T_{S,\infty}W-WT_{R,\infty}\stackrel{?}=0\) bzw. fixed Gamma-Crossblock; danach separat **R22-F** Polar-Gauge-/Angle-Defect |
 | **Objekt X** | offen | noch keine konstruierte globale gemeinsame Weil-Gram-Geometrie |
 | **RH** | offen | keine Folgerung aus den obigen Kandidaten |
