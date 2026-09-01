@@ -581,7 +581,23 @@ Setze auf dem symmetrischen Annulus
 \tag{G5.1}
 \]
 
-Wegen der disjunkten Liftmasken ist
+Wegen der disjunkten Liftmasken gilt
+
+\[
+\begin{aligned}
+\|Wg\|_{\mathscr H_-^{\rm ann}}^2
+&=
+2\int_R^S\frac12|\widetilde g(x)|^2\,dx\\
+&=
+\sum_{k=0}^2
+\int_{\mathbb T_L}
+n_k(\theta)|g_k(\theta)|^2\,d\theta\\
+&=
+\|g\|_{\mathscr B_W}^2.
+\end{aligned}
+\]
+
+Die surjektive Rückrichtung ist genau die IMG0-Annulusrekonstruktion. Somit
 
 \[
 \boxed{
