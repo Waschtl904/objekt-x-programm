@@ -297,6 +297,15 @@ positive-Annulus \(L^2\) data, and IMG.22--IMG.23: \(\mathscr B_K\) is
 exactly the KNF row. Thus a nonzero blind-set \(L^2\) function is admissible
 and vanishing of \(f\) on the six KNF sampling windows is sufficient for
 \(f\in\mathscr B_K\).
+
+Mechanical premise certificate:
+- \`scripts/certify_sw1_m1_nd_img4_gateD_domain_support.py\`
+
+It checks the explicit witness inequalities, all six KNF half-windows inside
+the Horizon, three-lift Annulus coverage \(S_0<3L\), the six Hub source-map
+slopes \(\pm1\), and the strict blind-measure inequality
+\(28080R_0<S_0-R_0\). It deliberately does not prove the reducing/inverse
+step or the final kernel identity.
 \[
 \boxed{\text{GATE D: GREEN / PARTIAL / FAIL}}
 \]
