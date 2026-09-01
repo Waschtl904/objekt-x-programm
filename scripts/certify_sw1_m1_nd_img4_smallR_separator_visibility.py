@@ -18,14 +18,16 @@ It proves exactly:
 2. Hence every block of 29 consecutive rotation indices contains a regular
    separator a.e.  Combining this arithmetic premise with the already audited
    A8 separator theorem gives the analytic component bound:
-       <=65 rotation layers, <=390 physical FREE states per component.
+       <=65 rotation layers, <=390 formal FREE states per component a.e.
    The graph-theoretic implication itself is recorded in the audit, not
    machine-proved here.
 
 3. A8.10B shows that the physical sheet-collision quotient glues at most two
-   formal components.  Hence the universal physical component envelope is
-       2 * 390 = 780 states.
-   Away from the null separator-boundary/midpoint orbit set, the physical\n   component envelope is 780 states.  This a.e. bound is sufficient for the\n   measure estimate.  The crude annulus visibility envelope is therefore
+   formal components.  Away from the null separator-boundary/midpoint orbit
+   set, the physical component envelope is therefore
+       2 * 390 = 780 states a.e.
+   This a.e. bound is sufficient for the measure estimate.  The crude annulus
+   visibility envelope is therefore
        6 KNF branches * 780 FREE states * 6 HUB branches * R0
        = 28080 R0
        = (351/1250) T,
@@ -168,7 +170,11 @@ MAX_LAYERS=RIGHT_OFFSET+3+LEFT_OFFSET+1
 assert MAX_LAYERS==65
 MAX_FORMAL_STATES=6*MAX_LAYERS
 assert MAX_FORMAL_STATES==390
-# A8.10B: on the regular a.e. set, the physical quotient saturates a formal\n# component by C U J_K(C), hence at most two 390-state formal components are\n# glued.  Exceptional separator boundary/midpoint orbits are null and are not\n# assigned this explicit numeric bound.\nMAX_PHYSICAL_STATES=2*MAX_FORMAL_STATES
+# A8.10B: on the regular a.e. set, the physical quotient saturates a formal
+# component by C U J_K(C), hence at most two 390-state formal components are
+# glued. Exceptional separator boundary/midpoint orbits are null and are not
+# assigned this explicit numeric bound.
+MAX_PHYSICAL_STATES=2*MAX_FORMAL_STATES
 assert MAX_PHYSICAL_STATES==780
 
 # Explicit physical parameter point.
