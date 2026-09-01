@@ -147,25 +147,41 @@ saturation of \(V_R\) gives
 \]
 on the active graph.
 
-Please verify
+Please work first on the physical positive Horizon.  Let
 \[
-P_{V_R}T_\phi=T_\phi P_{V_R}
+M_{V_R}h=1_{V_R}h.
 \]
-for every offdiagonal term and trivial commutation for diagonal multipliers. Therefore
+Verify
 \[
-P_{V_R}\mathscr T_B=\mathscr T_BP_{V_R}.
+M_{V_R}T_\phi=T_\phi M_{V_R}
+\]
+for every offdiagonal physical pullback term and trivial commutation for
+diagonal multipliers. Therefore
+\[
+M_{V_R}(I+A)=(I+A)M_{V_R}.
 \]
 
-Since
+Now transport with the unitary
 \[
-\mathscr T_B=V^*(I+A)V\ge I,
+V:\mathscr B_H^0\to\mathscr H_+,
+\qquad
+\mathscr T_B=V^*(I+A)V,
 \]
-it is invertible and
+and define
+\[
+\Pi_{V_R}=V^*M_{V_R}V.
+\]
+Then
+\[
+\Pi_{V_R}\mathscr T_B=\mathscr T_B\Pi_{V_R}.
+\]
+
+Since \(\mathscr T_B\ge I\), it is invertible and
 \[
 \boxed{
-P_{V_R}\mathscr T_B^{-1}
+\Pi_{V_R}\mathscr T_B^{-1}
 =
-\mathscr T_B^{-1}P_{V_R}.
+\mathscr T_B^{-1}\Pi_{V_R}.
 }
 \]
 
@@ -210,9 +226,20 @@ Choose
 \[
 0\neq w\in L^2(B_0)
 \]
-and odd-fold it. Then
+and odd-fold it. Let \(W:\mathscr B_W\to\mathscr H_-^{\rm ann}\) be the unitary Annulus
+transport defined in the analytic-gates audit.  IMG0 gives the effective Hub
+block
 \[
-P_{V_{R_0}}\mathcal H_{R_0}w=0.
+\mathcal H_R=V^*H W,
+\qquad H=HE_{\mathcal A}.
+\]
+Blind support gives
+\[
+M_{V_{R_0}}H(Ww)=0,
+\]
+hence
+\[
+\Pi_{V_{R_0}}\mathcal H_{R_0}w=0.
 \]
 
 Define
@@ -221,8 +248,10 @@ f=-\mathscr T_B^{-1}\mathcal H_{R_0}w.
 \]
 Gate C gives
 \[
-P_{V_{R_0}}f=0.
+\Pi_{V_{R_0}}f=0.
 \]
+Equivalently, the positive physical Horizon reconstruction of \(f\) vanishes
+on \(V_{R_0}\).
 
 Since the six KNF sampling half-windows \(U_{R_0}\subset V_{R_0}\),
 \[
