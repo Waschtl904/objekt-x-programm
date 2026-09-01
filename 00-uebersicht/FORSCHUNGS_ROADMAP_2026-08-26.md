@@ -12,23 +12,23 @@
 >
 > **Aktualitätshinweis — 1. September 2026:** Diese Datei bleibt als
 > strategischer Snapshot vom 26. August erhalten. Für den operativen Status
-> gelten `CURRENT-FRONT.md` und `ACTIVE_THEOREM_REGISTRY.md`.
+> gelten \`CURRENT-FRONT.md\` und \`ACTIVE_THEOREM_REGISTRY.md\`.
 >
 > - **A / finite-level Cross-Gram:** der universelle SW1-Nichtentartungsanspruch
 >   ist inzwischen durch M1-ND-IMG4-SMALLR am expliziten Witness
->   `✓[M]_neg`. PR #49 ist zusätzlich ein **offener, eingefrorener
+>   \`✓[M]_neg\`. PR #49 ist zusätzlich ein **offener, eingefrorener
 >   AI-GREEN candidate** für einen ganzen negativen Wedge
->   [
+>   \[
 >   0<\varepsilon<\frac{T-10\Delta}{8},\quad
 >   0<R<\varepsilon,\quad
 >   0<\sigma<R,
->   ]
+>   \]
 >   aber nicht promotet und nicht gemergt.
-> - **B / Strong Terminal:** weiterhin `?[O]`, aber nicht mehr als
+> - **B / Strong Terminal:** weiterhin \`?[O]\`, aber nicht mehr als
 >   unstrukturierte C6-Frage. Die absolute Terminalmetrik besitzt keinen
 >   beschränkten Grenzoperator; relative Mosco-/Resolvent- und inverse-root-
 >   Grenzbausteine sind vorhanden. Der nächste aktive Gate ist **R27-F**
->   (fixed Gamma-Crossblock / (D_\infty^-=0?)); danach separat **R22-F**
+>   (fixed Gamma-Crossblock / \(D_\infty^-=0?\)); danach separat **R22-F**
 >   (Polar-Gauge-/Angle-Defect).
 > - **Aktive Forschung:** B / R27-F. A / PR #49 bleibt eingefroren, bis es
 >   bewusst wieder geöffnet wird.
