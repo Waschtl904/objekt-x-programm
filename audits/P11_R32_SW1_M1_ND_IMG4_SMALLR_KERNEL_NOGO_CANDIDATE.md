@@ -2,8 +2,7 @@
 
 > **Stand:** 31. August 2026  
 > **Branch:** research/sw1-m1-nd-img3-eliminator  
-> **Status:** \`AI-GREEN candidate\` für einen **negativen** M1-ND-Satz an einem expliziten SW1-Parameterpunkt.  
-> **Keine Promotion.** Vor einer Buchung als \(\checkmark[M]_{\rm neg}\) ist unabhängiges adversariales Review erforderlich.
+> **Status:** historische Kandidaten-/Beweisquelle. Der explizite Small-`R`-Satz ist inzwischen separat als `✓[M]_neg` promotet; kanonischer Promotionsrecord: `audits/P11_R32_SW1_M1_ND_IMG4_SMALLR_NEG_PROMOTION.md`. Kein `independent GREEN (external)` wird behauptet; die externe-Unabhängigkeitsanforderung wurde im Promotionsrecord transparent gewavet.
 >
 > **Behaupteter Kandidatensatz:**
 > \[
