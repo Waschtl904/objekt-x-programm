@@ -27,8 +27,8 @@ print("SW1 M1-ND IMG4 GATE-A DIRECT-WORD GRAPH CROSS-CHECK")
 
 X=a1.X
 a,b,T,d,Delta=a1.a,a1.b,a1.T,a1.d,a1.Delta
-eps=sp.simplify(Delta/4)
-T0=sp.simplify(T+eps)
+eps=sp.expand(Delta/4)
+T0=sp.expand(T+eps)
 
 # Independent exact sign evaluator for linear forms A*log(2)+B*log(3).
 # Every gate/source factor at the fixed rational-log parameter point is of
@@ -44,7 +44,7 @@ def lin_coeffs(expr):
     return F(int(A.p),int(A.q)),F(int(B.p),int(B.q))
 
 def exact_sign(expr):
-    A,B=lin_coeffs(sp.simplify(expr))
+    A,B=lin_coeffs(expr)
     if A==0 and B==0: return 0
     if A>=0 and B>=0: return 1
     if A<=0 and B<=0: return -1
@@ -60,14 +60,14 @@ def exact_sign(expr):
 
 def inside_abs_exact(q,bound):
     # bound^2-q^2=(bound-q)(bound+q); each factor is a linear log form.
-    s1=exact_sign(sp.simplify(bound-q))
-    s2=exact_sign(sp.simplify(bound+q))
+    s1=exact_sign(sp.expand(bound-q))
+    s2=exact_sign(sp.expand(bound+q))
     return s1*s2>=0
 
 def folded_exact(src_sym,src_at_mid):
     s=exact_sign(src_at_mid)
     assert s!=0
-    return sp.simplify(src_sym if s>0 else -src_sym)
+    return sp.expand(src_sym if s>0 else -src_sym)
 
 def aggregate_direct(mid,eps):
     out={}
@@ -76,16 +76,16 @@ def aggregate_direct(mid,eps):
         shifts=[-delta-eta,-delta+eta,delta-eta,delta+eta]
         gates=[X-delta,X-delta,X+delta,X+delta]
         for k,(gexpr,sh) in enumerate(zip(gates,shifts)):
-            gmid=sp.simplify(gexpr.subs(X,mid))
+            gmid=sp.expand(gexpr.subs(X,mid))
             if not inside_abs_exact(gmid,bound0-lam):
                 continue
             src=X+sh
-            smid=sp.simplify(src.subs(X,mid))
+            smid=sp.expand(src.subs(X,mid))
             if not inside_abs_exact(smid,bound0):
                 continue
             prof=folded_exact(src,smid)
             out[prof]=sp.simplify(out.get(prof,0)+a1.SIGNS[k]*a1.weights[j])
-    return {sp.simplify(k):sp.simplify(v) for k,v in out.items()
+    return {sp.expand(k):sp.simplify(v) for k,v in out.items()
             if sp.simplify(v)!=0}
 
 # Exact lower-chamber row intervals at epsilon0.
@@ -100,7 +100,7 @@ regions=[
     ("R7", T, T+eps),
 ]
 for _,lo,hi in regions:
-    assert exact_sign(sp.simplify(hi-lo))>0
+    assert exact_sign(sp.expand(hi-lo))>0
 
 # Canonical source expressions -> A7 names.
 map_exprs={
@@ -126,7 +126,7 @@ row_maps={}
 row_coeffs={}
 by_map={}
 for row,lo,hi in regions:
-    mid=sp.simplify((lo+hi)/2)
+    mid=sp.expand((lo+hi)/2)
     got=aggregate_direct(mid,eps)  # independent direct eleven-word evaluation
     names=[]
     coeffs={}
@@ -137,7 +137,7 @@ for row,lo,hi in regions:
             continue
         names.append(name)
         coeffs[name]=sp.simplify(coeff)
-        by_map.setdefault(name,[]).append((sp.simplify(lo),sp.simplify(hi)))
+        by_map.setdefault(name,[]).append((sp.expand(lo),sp.expand(hi)))
     row_maps[row]=names
     row_coeffs[row]=coeffs
 
@@ -157,13 +157,13 @@ def merge(intervals):
     for lo,hi in ints:
         if not out:
             out.append([lo,hi]); continue
-        gap=sp.simplify(lo-out[-1][1])
+        gap=sp.expand(lo-out[-1][1])
         assert exact_sign(gap)>=0
         if gap==0:
             out[-1][1]=hi
         else:
             out.append([lo,hi])
-    return [(sp.simplify(lo),sp.simplify(hi)) for lo,hi in out]
+    return [(sp.expand(lo),sp.expand(hi)) for lo,hi in out]
 
 got_domains={name:merge(iv) for name,iv in by_map.items()}
 expected={
