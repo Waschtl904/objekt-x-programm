@@ -9,6 +9,7 @@ on:
       - 'scripts/certify_sw1_m1_nd_salvage_a0_counting_firewall.py'
       - 'scripts/probe_sw1_m1_nd_salvage_phase_diagram.py'
       - 'scripts/certify_sw1_m1_nd_salvage_a1_a2_uniform_blind_wedge.py'
+      - 'scripts/certify_sw1_m1_nd_salvage_direct_complement_crosscheck.py'
       - 'audits/P11_R32_SW1_M1_ND_SALVAGE_A1_A2_UNIFORM_BLIND_WEDGE_CANDIDATE.md'
       - 'audits/P11_R32_SW1_M1_ND_SALVAGE_A1_A2_REVIEW_PACKET.md'
       - 'audits/P11_R32_SW1_M1_ND_SALVAGE_A1_A2_ANALYTIC_HANDOFF_CANDIDATE.md'
@@ -41,6 +42,7 @@ jobs:
           git hash-object audits/P11_R32_SW1_M1_ND_SALVAGE_A1_A2_ANALYTIC_HANDOFF_CANDIDATE.md
           git hash-object audits/P11_R32_SW1_M1_ND_SALVAGE_A1_A2_REVIEW_PACKET.md
           git hash-object scripts/certify_sw1_m1_nd_salvage_a1_a2_uniform_blind_wedge.py
+          git hash-object scripts/certify_sw1_m1_nd_salvage_direct_complement_crosscheck.py
           git hash-object audits/P11_R32_SW1_M1_ND_SALVAGE_A1_A2_UNIFORM_BLIND_WEDGE_CANDIDATE.md
 
       - name: Run counting firewall certificate
@@ -51,3 +53,6 @@ jobs:
 
       - name: Run exact uniform blind wedge certificate
         run: python scripts/certify_sw1_m1_nd_salvage_a1_a2_uniform_blind_wedge.py
+
+      - name: Run direct complement invariance cross-check
+        run: python scripts/certify_sw1_m1_nd_salvage_direct_complement_crosscheck.py
