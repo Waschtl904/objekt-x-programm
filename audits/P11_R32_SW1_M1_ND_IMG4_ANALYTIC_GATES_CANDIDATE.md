@@ -409,16 +409,33 @@ und daher
 
 ---
 
-# 4. Gate 4 — \(V_R\) ist reduzierend für die vollständige Operatorsumme
+# 4. Gate 4 — \(V_R\) reduziert den vollständigen Horizonoperator
 
-Nach Gate 1 ist jeder nichtdiagonale Term der positiven Horizonrepräsentation
-von \(\mathscr T_B\) von der Form
+Für diesen Gate ist es sauberer, physische und Basislift-Projektion strikt zu
+trennen.
+
+Sei auf der positiven physischen Horizonhälfte
 
 \[
-(T_\phi f)(x)
-=
-c_\phi(x)\,1_{D_\phi}(x)\,f(\phi(x)),
+M_{V_R}h
+:=
+1_{V_R}h.
 \tag{G4.1}
+\]
+
+Nach Gate 1 ist jeder nichtdiagonale Term von
+
+\[
+\mathscr T=I+A
+\]
+
+von der Form
+
+\[
+(T_\phi h)(x)
+=
+c_\phi(x)\,1_{D_\phi}(x)\,h(\phi(x)),
+\tag{G4.2}
 \]
 
 wobei \(\phi\) eine A7-Graphing-Map ist.
@@ -428,52 +445,79 @@ für fast jedes aktive \(x\in D_\phi\)
 
 \[
 \boxed{
-1_{V_R}(x)
-=
-1_{V_R}(\phi(x)).
+1_{V_R}(x)=1_{V_R}(\phi(x)).
 }
-\tag{G4.2}
+\tag{G4.3}
 \]
 
 Daher
 
 \[
 \begin{aligned}
-(P_{V_R}T_\phi f)(x)
+(M_{V_R}T_\phi h)(x)
 &=
-1_{V_R}(x)c_\phi(x)1_{D_\phi}(x)f(\phi(x))\\
+1_{V_R}(x)c_\phi(x)1_{D_\phi}(x)h(\phi(x))\\
 &=
-c_\phi(x)1_{D_\phi}(x)1_{V_R}(\phi(x))f(\phi(x))\\
+c_\phi(x)1_{D_\phi}(x)1_{V_R}(\phi(x))h(\phi(x))\\
 &=
-(T_\phi P_{V_R}f)(x).
+(T_\phi M_{V_R}h)(x).
 \end{aligned}
 \]
 
 Also
 
 \[
-P_{V_R}T_\phi=T_\phi P_{V_R}
-\tag{G4.3}
-\]
-
-für jeden nichtdiagonalen Pullbackterm.
-
-Alle Diagonalterme sind Multiplikationsoperatoren und kommutieren trivial mit
-\(P_{V_R}\).
-
-Durch endliche Summation folgt für den vollständig aggregierten Operator
-
-\[
-\boxed{
-P_{V_R}\mathscr T_B
-=
-\mathscr T_BP_{V_R}.
-}
+M_{V_R}T_\phi=T_\phi M_{V_R}
 \tag{G4.4}
 \]
 
-Koeffizientencancellation ist harmlos: sie entfernt lediglich Summanden aus
-einer Summe, deren einzelne Terme bereits kommutieren.
+für jeden nichtdiagonalen Pullbackterm. Alle Diagonalterme sind
+Multiplikationsoperatoren und kommutieren ebenfalls mit \(M_{V_R}\). Durch
+endliche Summation:
+
+\[
+\boxed{
+M_{V_R}\mathscr T
+=
+\mathscr T M_{V_R}.
+}
+\tag{G4.5}
+\]
+
+Koeffizientencancellation ist harmlos: sie entfernt lediglich bereits
+kommutierende Summanden.
+
+Nun benutze die in IMG3 gehärtete unitäre Identifikation
+
+\[
+V:\mathscr B_H^0\to\mathscr H_+,
+\qquad
+\mathscr T_B=V^*\mathscr T V.
+\]
+
+Definiere die **Basislift-Projektion**
+
+\[
+\boxed{
+\Pi_{V_R}:=V^*M_{V_R}V.
+}
+\tag{G4.6}
+\]
+
+Dann folgt aus G4.5 exakt
+
+\[
+\boxed{
+\Pi_{V_R}\mathscr T_B
+=
+\mathscr T_B\Pi_{V_R}.
+}
+\tag{G4.7}
+\]
+
+Damit wird keine physische Punktprojektion stillschweigend mit einer
+Basisliftprojektion identifiziert; die beiden sind explizit unitär
+transportiert.
 
 Ferner
 
@@ -484,20 +528,30 @@ V^*(I+A)V
 \ge I.
 \]
 
-Damit ist \(\mathscr T_B\) beschränkt invertierbar. Aus G4.4 folgt durch
-Multiplikation mit \(\mathscr T_B^{-1}\):
+Also ist \(\mathscr T_B\) beschränkt invertierbar. Aus G4.7 folgt
 
 \[
 \boxed{
-P_{V_R}\mathscr T_B^{-1}
+\Pi_{V_R}\mathscr T_B^{-1}
 =
-\mathscr T_B^{-1}P_{V_R}.
+\mathscr T_B^{-1}\Pi_{V_R}.
 }
-\tag{G4.5}
+\tag{G4.8}
 \]
 
-Damit ist \(L^2(V_R)\) ein echter reduzierender Unterraum für
+Äquivalent reduziert der zu \(V_R\) gehörige Basislift-Unterraum
 \(\mathscr T_B\) und sein Inverses.
+
+Crucial firewall:
+
+- kein \(J_R\) wird benutzt;
+- es wird nicht der freie KNF-Gramoperator \(J_R^*(I+A)J_R\) reduziert;
+- zuerst wird auf dem ambienten Horizonraum \(\mathscr B_H^0\) invertiert;
+- erst anschließend wird für den konstruierten Vektor die KNF-Mitgliedschaft
+  \(f\in\mathscr B_K\) bewiesen.
+
+Damit trifft die A9-Warnung über zusätzliche \(J_R\)-Koordinatenkanten diesen
+Schritt nicht.
 
 **Gate 4: intern GREEN.**
 
