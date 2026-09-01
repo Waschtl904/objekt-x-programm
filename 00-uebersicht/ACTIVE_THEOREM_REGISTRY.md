@@ -1,7 +1,7 @@
 # Active Theorem Registry
 
-> **Stand:** 31. August 2026  
-> **Aktuelle mathematische Merge-Basis:** `main@d117e4cb6e59a04ac0ae79b8176e4beaf114979e` (PR #42; M1-ND-IMG0 integriert). Frühere Promotions-/Certificate-Aussagen behalten ihre eigenen kanonischen bzw. CI-geprüften Provenienzen.  
+> **Stand:** 1. September 2026  
+> **Aktuelle mathematische Promotionsbasis:** `research/sw1-m1-nd-img3-eliminator`; kanonischer Pre-Promotion-Head `ad0a59a4c086f207ff3bdd9e31cebdafdfe646ec`, vollständiger Run `33467557472` SUCCESS. Der explizite Small-`R`-M1-ND-Gegenvektor ist als `✓[M]_neg` promotet; Merge nach `main` folgt über den aktuellen PR-Workflow. Frühere Promotions-/Certificate-Aussagen behalten ihre eigenen Provenienzen.  
 > **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11/R32-SW1-/Schur-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
 > **Nicht-Zweck:** Ersatz für \`STATUS.md\`, \`OFFENE_PROBLEME.md\`, die Papers oder Promotionsrecords.
 
@@ -97,9 +97,12 @@ T<S=T+\sigma<T_0=T+\varepsilon<c,
 | **SW1-A2–A10-REC** | AI-GREEN candidate + **independent GREEN (certificate, algebraic/mechanical scope)** — keine Promotion | rückwärts gerichtete Reconciliation: historischer Strategibruch `A3→A4`; C0 umgeht die explizite \(\mathfrak G_R^{-1}\)-Berechnung; explizite beidseitige Kerneltransporte \(\ker\Gamma_I\cong\ker\mathscr C_R\cong\ker\widehat{\mathscr C}_R\); C1C1-Ambient-Firewall \(WW^*=P_{\operatorname{Ran}W}\neq I_{\rm ambient}\) | `audits/P11_R32_SW1_A2_A10_RECONCILIATION_AUDIT.md`, geprüfter Audit-Blob `894362eaeed630c44d74981c279905384581f460`; `scripts/certify_sw1_a2_a10_kernel_bijections.py`, geprüfter Blob `8a7711d25ff8f9c9b790b8f4517d08f6ee9e9918`; Run `33332811231`, Job `99314333231`, Head `8e404a75a8a4f9e68bf87d3cc5556bd1da51a1d7`; PR #40, Squash-Merge `0ba1722f362ee8be0da502755933342803677330` | isoliert **M1-ND** als kleinsten aktuellen offenen Satz; keine Injektivität |
 | **M1-ND-IMG0** | AI-GREEN candidate + **independent GREEN (certificate, algebraic/mechanical scope)** + **owner analytic review ACCEPTED** — keine Promotion | explizite Sheet/Parity-Bildraumcharakterisierung; Extension/Restriction (E_H,R_H,E_W,R_W) beidseitig invers; physischer Rücktransport (f\leftrightarrow y_f); Output-Range folgt aus der Faktorisierung \(\widehat{\mathscr C}_R=U_H\widetilde{\mathscr C}_RD\), **nicht** aus einer ungeprüften Ambient-\(G\)-Äquivarianz; vollständige Kernelbijektion \(\ker\mathscr N_R\cong\ker\widehat{\mathscr C}_R\) | `audits/P11_R32_SW1_M1_ND_IMAGE_SPACE_CANDIDATE.md`; PR #42 Merge `d117e4cb6e59a04ac0ae79b8176e4beaf114979e`; Certificate-Provenienz: Audit-Blob `4562cdecd76ae12198582ed8c024c6fad66f0814`, Script-Blob `7f5b11bd80e5387b1c5e8d73be4c0e4140eed8d5`, Run `33354246817`, Job `99373257498`, Head `52ae23096d1965ba3eb9c7880471b20ff0c6a5b6`; analytisches Post-Merge-Hardening im nachfolgenden Audit-Commit | legitimiert IMG1; **keine Injektivität**; owner review ist kein `independent GREEN (human)` |
 | **M1-ND-IMG1** | AI-GREEN candidate + **independent GREEN (certificate, finite/algebraic reference-\(r_0\) scope)** — keine Promotion | exakte \(P_0\)-Reduktion von M1-FULL zu einem \(3\times6\)-Funktionskanal-Ledger auf allen \(64\times96=6144\) offenen B96-Atomen; direkte physische Assembly = reduzierter M1-Ledger termweise inkl. Provenienz; 117546 aktive reduzierte Terme; 12 affine Pullbacktypen; 22 reduzierte Operatorzustände; keine Kollisionen auf \((a,c,\alpha)\)-Zellen; SHA256 `1cffd33529534a15c941b67086217f8f8c47b0cc302cb2cf740b0e08c2ff4474`; Post-Review: 40 FREE + 36 HUB Speciesrelationen direkt gegen IMG0/M1 abgeglichen; ein zunächst tautologischer `lin`-Hilfstest wurde nach Review entfernt und durch Ableitung des Lifts aus unabhängig aufgebauten formalen Source-Koeffizienten plus 2508 exakte rationale Theta-Koordinatenchecks ersetzt; zweite direkte physische Implementierung reproduziert dieselben 117546/22/SHA-Werte ohne IMG1-Helper/`free_sr`/`hub_sr`/`Nwrap`; symbolic IMG1(\(r\)) für \(3<r<4\) folgt separat als analytisch/kombinatorischer Korollar aus C1B2A-TRANSFER `✓[M]` und der termweisen \(r\)-unabhängigen Reduktionsabbildung | `audits/P11_R32_SW1_M1_ND_IMG1_EFFECTIVE_LEDGER_CANDIDATE.md`; Primärscript `scripts/certify_sw1_m1_nd_img1_effective_ledger.py`; Crosschecks `scripts/certify_sw1_m1_nd_img1_species_crosscheck.py`, `scripts/certify_sw1_m1_nd_img1_direct_crosscheck.py`; Post-Review Run `33404708299`, Job `99529291967`, Head `cfda20d9d1d5e01e3d434854e589524c30753aa3`, Audit-Blob `6d123a2c3cb9fa4adf20ed37d879093c19a24e56`, Primärscript-Blob `d824bea626e5b97fbad5a75ed51097408f5b6144`, Species-Crosscheck-Blob `73fdd446e7fd02e05495ff83c5344ddb2e40e3ab`, Direct-Crosscheck-Blob `dd4aea5b694409adcdad28850eba622ed00e51cc`, M1-FULL-Blob `d73993a393b9d076c72bc77cbdf3610f4695c29c`, IMG0-Blob `7f5b11bd80e5387b1c5e8d73be4c0e4140eed8d5`, Python 3.12.14 | legitimiert die nächste Transfer-/Rekurrenzanalyse auf \(\mathscr B_K\oplus\mathscr B_W\); Certificate bleibt Referenz-\(r_0\)-Scope, all-\(r\) nur analytischer Korollar; **keine Injektivität**, keine separate actual-\(r\)-Promotion, kein `independent GREEN (human/cross-model)` |
-| **SW1-A10 gesamt** | `?[O]` nur noch hinsichtlich **M1-ND / Nichtentartung** | inversefreier Cross-Gram-Cocycle, echte C1C1-Hilbert-Fiberisierung und tatsächliche-\(r\)-M1-Matrixdarstellung sind vorhanden; PR #40 härtet die Kerneläquivalenzen und die Bildraum-Firewall | PR #34 + PR #40 | **aktive Front:** \(\mathrm{M1\text{-}ND}:\ker\widehat{\mathscr C}_R=\{0\}\ ?\) auf \(\mathcal R_K\oplus\mathcal R_W\) |
+| **M1-ND-IMG4-SMALLR** | `✓[M]_neg` — **kein** `independent GREEN (external)`; externe Unabhängigkeitsanforderung per dokumentiertem Governance-Waiver aufgehoben | expliziter zulässiger Small-(R)-Kernel auf (mathscr B_Koplusmathscr B_W): bei (arepsilon_0=Delta/4, R_0=T/100000, sigma_0=R_0/2) gilt (kermathscr N_{R_0}
+eq{0}); Beweis via A8-FREE-Sättigung, Mass Transport, reduzierender Horizonunterraum und Hub-Blindset | Promotionsrecord `audits/P11_R32_SW1_M1_ND_IMG4_SMALLR_NEG_PROMOTION.md`; Beweisquellen `audits/P11_R32_SW1_M1_ND_IMG4_SMALLR_KERNEL_NOGO_CANDIDATE.md`, `audits/P11_R32_SW1_M1_ND_IMG4_ANALYTIC_GATES_CANDIDATE.md`; mechanische Checks Gate A/B/D; Pre-Promotion-Head `ad0a59a4c086f207ff3bdd9e31cebdafdfe646ec`, Run `33467557472` SUCCESS | widerlegt universelle M1-ND-Nichtentartung auf dem gesamten SW1-Wedge; allgemeine Lower-Chamber-Small-(R)-Familienaussage bleibt Kandidat; keine separate Promotion von (kerGamma_I
+eq0) |
+| **SW1-A10 gesamt / M1-ND universal** | `✓[M]_neg` für den universellen SW1-Nichtentartungsanspruch; Restparameterklassifikation `?[O]` | C1C1/M1-FULL/IMG0–IMG4 liefern einen expliziten zulässigen Small-(R)-Kernel; daher kann die aktuelle finite-level Cross-Gram-Geometrie nicht auf dem gesamten SW1-Wedge injektiv sein | M1-ND-IMG4-SMALLR Promotionsrecord + PR40/IMG0/IMG1 Provenienz | **neue aktive Front:** M1-ND-SALVAGE — nichtdegeneraten Restbereich klassifizieren oder Kopplung so ändern, dass der Small-(R)-Blindraum verschwindet |
 
-**Firewall:** \`AI-GREEN candidate\` allein ist ausdrücklich **kein** \`independent GREEN\` und **kein** \`✓[M]\`. PR #40 fügt keine Promotion hinzu; sein Certificate prüft ausschließlich das endliche algebraisch/mechanische Bijektivitäts-/Intertwining-Skelett. Die unendlichdimensionale Closed-Image-/Isometrieaussage bleibt separat analytisch/cross-model geprüft. Für M1-ND ist ausschließlich der echte C1C1-Bildraum \(\mathcal R_K\oplus\mathcal R_W\) zulässig; ein Kerneltest auf dem größeren formalen Slot-Ambientraum wäre wegen künstlicher Nullrichtungen typwidrig. A9 und Gesamt-Δ-DESCENT bleiben \`?[O]\`, sind aber nicht der aktuelle Primärengpass. **Keine Aussage über den Wert von \(\ker\Gamma_I\).**
+**Firewall:** `AI-GREEN candidate` bleibt grundsätzlich **kein** `independent GREEN` und **kein** `✓[M]`. Die neue Buchung `M1-ND-IMG4-SMALLR: ✓[M]_neg` ist eine explizite Objekt-X-interne Promotion mit dokumentiertem Independence-Waiver; sie behauptet **kein** `independent GREEN (external)`. Promotiert ist ausschließlich `ker N_{R0} != {0}` am expliziten zulässigen Witness. Keine separate formale Promotion von `ker Gamma_I != {0}`, keine Aussage über alle Parameter, kein Objekt-X- oder RH-Schluss.
 
 ---
 
@@ -118,12 +121,13 @@ Mit HT-A4b-SW1-M nun \(\checkmark[M]\) ist der SW1-Membership-Baustein der Kette
 
 | Knoten | Status | Exakte Rolle |
 |---|---|---|
-| **M1-ND / FINITE-LEVEL CROSS-GRAM INJECTIVITY** | `?[O]` — **einziger aktiver mathematischer Knoten** | IMG1-Assembly ist zertifiziert. Jetzt aus den 22 reduzierten Operatorzuständen eine äquivalente Transfer-/Rekurrenzform auf dem echten zulässigen Raum \(\mathscr B_K\oplus\mathscr B_W\) ableiten; singuläre Außenblöcke nicht unzulässig invertieren, Irrational-Shift-/Cocycle-Effekte berücksichtigen; danach \(\ker\mathscr N_R\) entscheiden. |
+| **M1-ND universal auf SW1** | `✓[M]_neg` | durch M1-ND-IMG4-SMALLR am expliziten Witness widerlegt: (kermathscr N_{R_0}
+eq{0}) auf dem tatsächlichen zulässigen Raum |
 | **A9-KNF Gesamtklassifikation** | \`?[O]\` | SEP-SMALL ist zertifiziert und ein partieller Bypass existiert; der komplementäre untere Bereich und der obere Chamber sind nicht vollständig klassifiziert. Für Roadmap A ist A9 derzeit nicht der primäre Engpass. |
 | **SW1-Δ-DESCENT gesamt** | \`?[O]\` | Die zertifizierten Stages 1/2–12 schließen große endliche Teilgeometrien, aber nicht automatisch den gesamten blinden Summanden \(\mathcal Z_R^+\). |
 | **HT-A4b global chamber exhaustivity** | \`?[O]\` | globale zehn-Flächen-/15-Chamber-Exhaustivität bleibt offen; für den SW1-Angriff derzeit nicht Priorität |
 | **HT-RED** | \`?[O]\` | vollständige Tail-Gaussian-/Schur-Elimination des Restblocks offen |
-| **SCHUR CROSS-GRAM INJECTIVITY** | `?[O]` — äquivalent zu M1-ND | \(\ker\Gamma_I=\{0\}\) ist durch PR #40 bijektiv äquivalent zu M1-ND; kein separater Vorab-Gate. |
+| **M1-ND-SALVAGE / RESTPARAMETER-KLASSIFIKATION** | `?[O]` — **neuer aktiver mathematischer Knoten** | maximalen Parameterrest mit möglicher Nichtentartung bestimmen oder finite-level Kopplung so reparieren, dass der promotierte Small-`R`-Blindraum beseitigt wird |
 | **Objekt X** | offen | noch keine konstruierte globale gemeinsame Weil-Gram-Geometrie |
 | **RH** | offen | keine Folgerung aus den obigen Kandidaten |
 
@@ -187,7 +191,7 @@ Der heutige kanonische Pfad ist:
 \to
 \text{PR40-Reconciliation}
 \to
-\text{M1-ND}.
+\text{M1-ND-IMG4-SMALLR }\checkmark[M]_{\rm neg}.
 }
 \]
 
@@ -215,14 +219,17 @@ Der M1-ND-Definitionsraum ist
 
 nicht der gesamte formale Slot-Ambientraum.
 
+Der universelle M1-ND-Schritt ist nun durch den expliziten zulässigen
+Gegenvektor negativ entschieden.
+
 Der nächste konkrete Schritt ist daher:
 
-1. Bild-/Konsistenzbedingungen dieses Raums in M1-Slots explizit formulieren;
-2. Invarianz/Kopplung unter den sieben Shiftlagen prüfen;
-3. daraus eine äquivalente Transfer-/Rekurrenzform ableiten, ohne singuläre Außenblöcke unzulässig zu invertieren;
-4. erst dann Injektivität oder einen exakten zulässigen Gegenvektor entscheiden.
+1. den promotierten Small-\(R\)-Blindraum als feste No-Go-Firewall behandeln;
+2. den verbleibenden Parameterbereich auf mögliche Nichtentartung klassifizieren;
+3. eine quantitative Grenze zwischen degeneratem und möglichem nichtdegeneratem Bereich suchen;
+4. alternativ die finite-level Kopplung so verändern, dass die FREE-Sättigung der KNF-Fenster den Annulus vollständig beobachtet.
 
-**Firewall:** Punktweiser Rang von \(M_0(\theta)\) oder irgendeiner einzelnen Matrixlage reicht nicht. A4–A9 bleiben wertvolle Strukturresultate, sind aber für diesen direkten M1-ND-Angriff nicht mehr vorgelagert. Keine Promotion, kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
+**Firewall:** Keine Rückkehr zur universellen SW1-Injektivitätsbehauptung ohne Architekturänderung. Die Promotion betrifft nur den expliziten Witness auf dem zulässigen Raum; kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
 
 ---
 
