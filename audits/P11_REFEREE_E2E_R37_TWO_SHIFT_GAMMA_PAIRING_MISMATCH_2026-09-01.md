@@ -702,6 +702,120 @@ s_{R,S,T_0}\stackrel{?}{\ne}0.
 
 The odd-annihilator route cannot decide that remaining strip merely from A14.2i, because A14.2i proves the odd folded Hub kernel is trivial for \(R\ge a\).
 
+### 7.1 Fixed-vector strong modulus no-go
+
+Let
+
+\[
+Q_U
+=
+A_S(U)^{1/2}WA_R(U)^{-1/2}.
+\]
+
+By definition,
+
+\[
+D_U^-
+=
+A_S(U)^{-1/2}W
+-
+WA_R(U)^{-1/2}.
+\]
+
+Hence the exact identity
+
+\[
+\boxed{
+Q_U-W
+=
+-A_S(U)^{1/2}D_U^-.
+}
+\tag{R37.34}
+\]
+
+R24 gives the uniform coercivity
+
+\[
+A_S(U)\ge a_0I,
+\qquad
+a_0=(1+\|H_{T_0}\|^2)^{-1}>0.
+\]
+
+Therefore, for every fixed source vector \(x\),
+
+\[
+\boxed{
+\|(Q_U-W)x\|
+\ge
+\sqrt{a_0}\,\|D_U^-x\|.
+}
+\tag{R37.35}
+\]
+
+R27 gives
+
+\[
+D_U^-x\to D_\infty^-x
+\]
+
+strongly for every fixed \(x\).
+
+Now use the fixed R28 normal witness
+
+\[
+e_R=\frac{r_R}{\|r_R\|}.
+\]
+
+R28 gives
+
+\[
+\|D_\infty^-e_R\|
+\ge
+\frac{\|s_{R,S,T_0}\|}{\|r_S\|}.
+\]
+
+Combining with R37-B,
+
+\[
+\boxed{
+\liminf_{U\to\infty}
+\|(Q_U-W)e_R\|
+\ge
+\sqrt{a_0}\,
+\frac{\|s_{R,S,T_0}\|}{\|r_S\|}
+>0
+}
+\tag{R37.36}
+\]
+
+throughout (R37.29).
+
+Thus:
+
+### Theorem R37-C — strong modulus-isometry mismatch
+
+If
+
+\[
+0<R<a<b<S<T_0<2a,
+\]
+
+then
+
+\[
+\boxed{
+Q_U\not\xrightarrow[s]{U\to\infty}W.
+}
+\tag{R37.37}
+\]
+
+This is strictly stronger than the old R19 lower bound
+\(\|Q_U-W\|\gtrsim U^{-m-1}\), whose right-hand side tends to zero and therefore did not exclude convergence.
+
+Status: **AI-GREEN candidate**.
+
+This remains a modulus-layer theorem.  The moving polar factors can in principle reorganize modulus information; R14/R20 remain binding against any automatic promotion of (R37.37) to a Strong-Terminal no-go.
+
 ---
 
 ## 8. Strong-Terminal firewall
