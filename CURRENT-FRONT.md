@@ -1,9 +1,9 @@
 # CURRENT FRONT — Objekt X / P11-R32
 
 > **Operative Kopfschicht — zuerst lesen.**  
-> **Stand:** 31. August 2026  
-> **Aktuelle mathematische Basis:** `main` auf `a594c3c655f71932c033be06ebfdeee7a96f923a` (IMG0 analytisch gehärtet) plus Arbeitsbranch `research/sw1-m1-nd-img1`. Frühere Promotions-/Certificate-Aussagen behalten ihre jeweils kanonischen bzw. CI-geprüften Provenienzen.  
-> **Aktiver mathematischer Stand:** M1-ND-IMG1 ist als **AI-GREEN candidate + independent GREEN (certificate)** im exakten endlichen/algebraischen Referenz-Scope gehärtet und post-review doppelt quergeprüft: alle `40` FREE- und `36` HUB-Speciesrelationen stimmen zwischen direkter physischer Herleitung, M1-FULL und IMG0 überein; der nach Review als tautologisch erkannte alte `lin`-Hilfstest ist entfernt und durch eine unabhängige formale Koeffizientenableitung plus `2508` exakte rationale Theta-Koordinatenchecks ersetzt; eine zweite direkte physische Implementierung ohne IMG1-Helper/`free_sr`/`hub_sr`/`Nwrap` reproduziert `117546` Terme, `22` Zustände und SHA256 `1cffd33529534a15c941b67086217f8f8c47b0cc302cb2cf740b0e08c2ff4474`. Der 6144-Atom-Lauf bleibt ein Referenz-\(r_0=7/2\)-Certificate; die **symbolische IMG1-Formel für jedes \(3<r<4\)** folgt separat als analytisch/kombinatorischer Korollar-Schritt aus C1B2A-TRANSFER `✓[M]` plus der termweisen \(r\)-unabhängigen Reduktionsabbildung. **Nächster mathematischer Schritt:** äquivalente Transfer-/Rekurrenzform auf \(\mathscr B_K\oplus\mathscr B_W\) ableiten. Noch keine Injektivität und keine neue `✓[M]`-Promotion.  
+> **Stand:** 1. September 2026  
+> **Aktuelle mathematische Basis:** `main` plus Promotionsbranch `research/sw1-m1-nd-img3-eliminator`; kanonischer Pre-Promotion-Provenienzhead `ad0a59a4c086f207ff3bdd9e31cebdafdfe646ec`, vollständiger Run `33467557472` SUCCESS. Frühere Promotions-/Certificate-Aussagen behalten ihre jeweils kanonischen Provenienzen.  
+> **Aktiver mathematischer Stand:** Der universelle M1-ND-Zielknoten auf dem gesamten SW1-Wedge ist **negativ entschieden**: für den expliziten Punkt `epsilon0=Delta/4`, `R0=T/100000`, `sigma0=R0/2` gilt `ker N_{R0} != {0}`. Kanonischer Promotionsrecord: `audits/P11_R32_SW1_M1_ND_IMG4_SMALLR_NEG_PROMOTION.md`; Status `✓[M]_neg`. Die ursprünglich verlangte externe Drittprüfung wurde als Prozesskriterium transparent gewavet; **kein** `independent GREEN (external)` wird behauptet. Die allgemeine Lower-Chamber-Small-`R`-Familienaussage bleibt Kandidat. **Nächster mathematischer Schritt:** M1-ND-SALVAGE — den verbleibenden Parameterbereich klassifizieren bzw. die finite-level Kopplung so ändern, dass der Small-`R`-Blindraum verschwindet.  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -12,64 +12,85 @@ Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist k
 
 ## 1. Aktuelles Ziel
 
-Die aktive Front ist **nicht** „Objekt X vollständig konstruieren“ und **nicht** „RH beweisen“.
+Die aktive Front ist **nicht** „Objekt X vollständig konstruieren“ und **nicht**
+„RH beweisen“.
 
-Der aktuelle eng gefasste Zielknoten lautet:
+Der bisherige universelle Zielknoten
+
+\[
+\ker\mathscr N_R=\{0\}
+\qquad
+\text{für alle SW1-Parameter}
+\]
+
+ist durch M1-ND-IMG4-SMALLR negativ entschieden.
+
+Promotet ist der explizite Witness
 
 \[
 \boxed{
-\text{Schur-/Cross-Gram-Nichtentartung auf dem einfachen SW1-Parameterwedge}
+\varepsilon_0=\Delta/4,\qquad
+R_0=T/100000,\qquad
+\sigma_0=R_0/2,
 }
 \]
 
 mit
-\[
-0<\sigma\le R<\varepsilon,
-\qquad
-R+\varepsilon<\Delta,
-\qquad
-S=T+\sigma,
-\qquad
-T_0=T+\varepsilon.
-\]
-
-Die operative Ja/Nein-Frage ist nach PR #40 nun in ihrer kleinsten aktuellen Form:
 
 \[
 \boxed{
-\mathrm{M1\text{-}ND}:
-\qquad
-\widehat{\mathscr C}_R F=0
-\Longrightarrow
-F=0
+\ker\mathscr N_{R_0}\ne\{0\}.
+}
+\]
+
+Status:
+
+\[
+\boxed{
+\mathrm{M1\!-\!ND\!-\!SMALLR}:\checkmark[M]_{\rm neg}.
+}
+\]
+
+Damit ist **universelle SW1-Cross-Gram-Nichtentartung in der aktuellen
+finite-level Geometrie ausgeschlossen**.
+
+Der neue eng gefasste Frontknoten lautet:
+
+\[
+\boxed{
+\mathrm{M1\!-\!ND\!-\!SALVAGE}
+}
+\]
+
+mit zwei möglichen Richtungen:
+
+1. **Parameterklassifikation:** Bestimme den maximalen Restbereich, auf dem
+   \(\ker\mathscr N_R=\{0\}\) noch möglich oder beweisbar ist.
+2. **Architekturreparatur:** Ändere die finite-level Kopplung so, dass der
+   durch FREE-Komponentensättigung erzeugte Small-\(R\)-Blindraum nicht mehr
+   existiert.
+
+Die allgemeine Aussage
+
+\[
+\forall\,0<\varepsilon<\Delta/2\ \exists R_\varepsilon^*>0:
 \quad
-\text{für }F\in\mathcal R_K\oplus\mathcal R_W\ ?
-}
-\]
-
-Durch die explizit gehärteten Kernelbijektionen ist dies äquivalent zu
-
-\[
-\boxed{
-\mathscr C_R(\xi,w)=0
+0<R<R_\varepsilon^*,\ 0<\sigma<R
 \Longrightarrow
-\xi=w=0
-}
+\ker\mathscr N_R\ne0
 \]
 
-und damit zu
+bleibt vorerst **Kandidat**, nicht mitpromotet.
+
+**Scope-Firewall:** Die Promotion betrifft den tatsächlichen zulässigen Raum
 
 \[
-\boxed{
-\ker\Gamma_I=\{0\}.
-}
+\mathscr B_K\oplus\mathscr B_W
 \]
 
-**Ambient-Firewall:** \(\widehat{\mathscr C}_R\) darf für M1-ND nicht auf dem gesamten formalen Slotraum getestet werden. Zulässig ist nur der echte C1C1-Bild-/Konsistenzraum
-\[
-\mathcal R_K\oplus\mathcal R_W,
-\]
-oder eine exakt äquivalent parametrisierte Darstellung dieses Raums.
+bzw. die dazu äquivalente IMG0/IMG2-Darstellung, nicht den größeren formalen
+Slot-Ambientraum. Keine separate Promotion von \(\ker\Gamma_I\ne0\), kein
+Objekt-X-Abschluss und keine RH-Folgerung.
 
 ---
 
@@ -244,37 +265,34 @@ M_j(\theta)F(\theta+j\Delta).
 }
 \]
 
-Damit ist der **einzige aktive mathematische Knoten**
+Damit ist der frühere universelle M1-ND-Knoten nicht mehr offen, sondern
+negativ entschieden.
 
-\[
-\boxed{
-\mathrm{M1\text{-}ND}:
-\ker\widehat{\mathscr C}_R=\{0\}
-\quad
-\text{auf }\mathcal R_K\oplus\mathcal R_W\ ?
-}
-\]
+### 4.1 Neue zwingende Reihenfolge: M1-ND-SALVAGE
 
-### 4.1 Zwingende Reihenfolge für M1-ND
+1. Den promotierten Small-\(R\)-Kernelmechanismus als feste Firewall behandeln:
+   FREE-Komponentensättigung + Hub-Blindset darf nicht erneut stillschweigend
+   ausgeschlossen werden.
+2. Entscheiden, ob außerhalb des Small-\(R\)-Bereichs ein offener
+   Nichtdegenerationswedge existiert.
+3. Falls ja, dessen Parametergrenzen und notwendigen Observabilitätsmechanismus
+   exakt charakterisieren.
+4. Falls nein oder falls der Restbereich architektonisch ungeeignet ist, die
+   finite-level Kopplung so ändern, dass Annulusdaten die KNF-Sättigung
+   vollständig beobachten.
 
-1. Den Bild-/Konsistenzraum \(\mathcal R_K\oplus\mathcal R_W\) in M1-Koordinaten explizit charakterisieren.
-2. Prüfen, wie die sieben Verschiebungslagen diesen zulässigen Zustandsraum koppeln.
-3. Eine äquivalente finite-state Transfer-/Rekurrenzform ableiten, **ohne** einen möglicherweise singulären Außenblock unzulässig zu invertieren.
-4. Erst dann Nichtentartung entscheiden:
-   \[
-   F=0
-   \]
-   für jede zulässige \(L^2\)-Lösung oder einen exakten zulässigen Gegenvektor konstruieren.
+Ein punktweiser Rang- oder Determinantentest nur von \(M_0(\theta)\) genügt
+weiterhin nicht.
 
-Ein punktweiser Rang- oder Determinantentest nur von \(M_0(\theta)\) genügt nicht.
-
-**Firewall:** Kein Resultat aus PR #40 beweist M1-ND. Keine Promotion, kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
+**Firewall:** Die negative Promotion ist ein Satz über die aktuelle
+M1-ND-Geometrie am expliziten Witness. Sie ist kein HT-RED, kein Objekt-X-
+Abschluss und keine RH-Folgerung.
 
 ---
 
 ## 5. Was derzeit ausdrücklich **nicht** bearbeitet wird
 
-Solange der SW1-Angriff nicht scheitert, sind folgende Fronten **nicht Priorität**:
+Nach der negativen M1-ND-Promotion bleiben folgende Fronten **nicht automatisch Priorität**; sie werden nur vorgezogen, wenn die neue Salvage-/Architekturroute sie benötigt:
 
 - globale HT-A4b-Exhaustivität aller 15 Chambers;
 - P12-Restproblem \(0<R<\rho,\ R<\sigma\);
@@ -470,13 +488,14 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 \text{C1B2A-CHIRO} & \checkmark[M] \text{ + independent GREEN (certificate)} \\
 \text{C1B2A-TRANSFER} & \checkmark[M] \\
 \text{M1-FULL}(r),\ 3<r<4 & \text{kanonische Konsequenz aus Referenz-Certificate + Transfer} \\
-\text{SW1-A10 gesamt} & ?[O] \text{ nur noch bzgl. Nichtentartung/Injektivität} \\
+\text{M1-ND-SMALLR} & \checkmark[M]_{\rm neg} \\
+\text{SW1-A10 / M1-ND universal} & \checkmark[M]_{\rm neg}\text{ am expliziten Witness; Restparameterklassifikation }?[O] \\
 \text{HT-RED} & ?[O] \\
-\text{Schur Cross-Gram} & ?[O]
+\text{Schur Cross-Gram salvage/classification} & ?[O]
 \end{array}
 }
 \]
 
-**Nächster Default:** **M1-ND Transfer-/Rekurrenzanalyse** — die 22 zertifizierten reduzierten Operatorzustände in eine äquivalente Rekurrenz-/Transferform auf dem echten zulässigen Raum \(\mathscr B_K\oplus\mathscr B_W\) überführen; keine möglicherweise singulären Außenblöcke unzulässig invertieren und Irrational-Shift-/Cocycle-Effekte explizit mitführen.
+**Nächster Default:** **M1-ND-SALVAGE / Parameterklassifikation** — den Bereich außerhalb des promotierten Small-`R`-No-Gos untersuchen und zugleich prüfen, welche minimale Kopplungsänderung den Blindraum beseitigt. Die bisherige universelle Injektivitätsroute wird nicht fortgesetzt.
 
-**Firewall:** IMG1 trägt ausschließlich `AI-GREEN candidate + independent GREEN (certificate)` im dokumentierten Referenz-Scope und keine `✓[M]`-Promotion. Insbesondere folgt noch weder \(\ker\Gamma_I=\{0\}\) noch \(\ker\Gamma_I\neq\{0\}\). Offen bleibt M1-ND selbst, jetzt in Form der Transfer-/Rekurrenz- und anschließenden Injektivitätsfrage; kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
+**Firewall:** IMG1 bleibt in seinem dokumentierten Certificate-Scope unpromotiert. Neu promotiert ist ausschließlich `M1-ND-SMALLR: ✓[M]_neg` für den expliziten Witness auf \(\mathscr B_K\oplus\mathscr B_W\). Eine separate formale Promotion von \(\ker\Gamma_I\neq\{0\}\) wird hier nicht gebucht. Offen ist nun die Restparameterklassifikation bzw. Architekturreparatur; kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
