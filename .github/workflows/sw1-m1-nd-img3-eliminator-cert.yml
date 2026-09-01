@@ -20,6 +20,7 @@ on:
       - 'scripts/certify_sw1_m1_nd_img4_gate1_gate9_graph_p12.py'
       - 'scripts/certify_sw1_m1_nd_img4_gateA_direct_words.py'
       - 'scripts/certify_sw1_m1_nd_img4_gateB_pmp_graphing.py'
+      - 'scripts/certify_sw1_m1_nd_img4_gateD_domain_support.py'
       - 'audits/P11_R32_SW1_M1_ND_IMG4_ANALYTIC_GATES_CANDIDATE.md'
       - 'audits/P11_R32_SW1_M1_ND_IMG4_EXTERNAL_REVIEW_PACKET.md'
       - 'audits/P11_R32_SW1_M1_ND_IMG4_GENERAL_SMALLR_NOGO_CANDIDATE.md'
@@ -62,6 +63,7 @@ jobs:
           git hash-object scripts/certify_sw1_m1_nd_img4_gate1_gate9_graph_p12.py
           git hash-object scripts/certify_sw1_m1_nd_img4_gateA_direct_words.py
           git hash-object scripts/certify_sw1_m1_nd_img4_gateB_pmp_graphing.py
+          git hash-object scripts/certify_sw1_m1_nd_img4_gateD_domain_support.py
           git hash-object audits/P11_R32_SW1_M1_ND_IMG4_EXTERNAL_REVIEW_PACKET.md
           git hash-object audits/P11_R32_SW1_M1_ND_IMG4_GENERAL_SMALLR_NOGO_CANDIDATE.md
           if [ -f audits/P11_R32_SW1_M1_ND_IMG4_ANALYTIC_GATES_CANDIDATE.md ]; then
@@ -113,3 +115,6 @@ jobs:
 
       - name: Run IMG4 Gate B pmp graphing certificate
         run: python scripts/certify_sw1_m1_nd_img4_gateB_pmp_graphing.py
+
+      - name: Run IMG4 Gate D domain/support certificate
+        run: python scripts/certify_sw1_m1_nd_img4_gateD_domain_support.py
