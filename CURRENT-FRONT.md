@@ -292,7 +292,7 @@ Abschluss und keine RH-Folgerung.
 
 ## 5. Was derzeit ausdrücklich **nicht** bearbeitet wird
 
-Solange der SW1-Angriff nicht scheitert, sind folgende Fronten **nicht Priorität**:
+Nach der negativen M1-ND-Promotion bleiben folgende Fronten **nicht automatisch Priorität**; sie werden nur vorgezogen, wenn die neue Salvage-/Architekturroute sie benötigt:
 
 - globale HT-A4b-Exhaustivität aller 15 Chambers;
 - P12-Restproblem \(0<R<\rho,\ R<\sigma\);
