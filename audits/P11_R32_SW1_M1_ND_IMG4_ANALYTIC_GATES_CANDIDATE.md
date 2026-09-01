@@ -339,37 +339,56 @@ countable additivity,
 M_L(A)=M_L(A^\top).
 }
 \]
-Applying this flip invariance to the measure with density
+Für die vorliegende Anwendung genügt nun die einzelne messbare Relationsteilmenge
+
 \[
-F(x,y)\ge0
+A_U
+:=
+\mathcal E\cap(X\times U_R).
 \]
-gives the Mass-Transport identity
+
+Dann ist
+
 \[
-\boxed{
-\int_X
-\sum_{y\mathrel{\mathcal E}x}F(x,y)\,d\mu(x)
+M_L(A_U)
 =
 \int_X
-\sum_{x\mathrel{\mathcal E}y}F(x,y)\,d\mu(y).
-}
+\#([x]_{\mathcal E}\cap U_R)\,d\mu(x)
+=
+\int_XN_U(x)\,d\mu(x).
 \tag{G3.2}
 \]
-Thus no external group-action or quotient-measure theorem is required.
 
-Setze
-
-\[
-F(x,y)=1_{U_R}(y).
-\]
-
-Dann ist die linke Seite von G3.2 gleich der rechten Seite von G3.1, während
-die rechte Seite
+Nach Flip-Invarianz gilt
 
 \[
-\int_{U_R}\#[y]_{\mathcal E}\,d\mu(y)
+M_L(A_U)
+=
+M_L(A_U^\top).
 \]
 
-ist.
+Aber
+
+\[
+A_U^\top
+=
+\mathcal E\cap(U_R\times X),
+\]
+
+also
+
+\[
+\boxed{
+\int_XN_U(x)\,d\mu(x)
+=
+\int_{U_R}\#[y]_{\mathcal E}\,d\mu(y).
+}
+\tag{G3.2a}
+\]
+
+Damit wird kein allgemeiner Mass-Transport-Satz für beliebige Dichten benötigt;
+die konkrete Identität folgt direkt aus der bereits bewiesenen
+Flip-Invarianz des Zählmaßes.
 
 Mit dem a.e. Bound G2.2:
 
