@@ -25,7 +25,7 @@ It proves exactly:
 3. A8.10B shows that the physical sheet-collision quotient glues at most two
    formal components.  Hence the universal physical component envelope is
        2 * 390 = 780 states.
-   The crude measure envelope for the annulus visibility set is therefore
+   Away from the null separator-boundary/midpoint orbit set, the physical\n   component envelope is 780 states.  This a.e. bound is sufficient for the\n   measure estimate.  The crude annulus visibility envelope is therefore
        6 KNF branches * 780 FREE states * 6 HUB branches * R0
        = 28080 R0
        = (351/1250) T,
@@ -168,9 +168,7 @@ MAX_LAYERS=RIGHT_OFFSET+3+LEFT_OFFSET+1
 assert MAX_LAYERS==65
 MAX_FORMAL_STATES=6*MAX_LAYERS
 assert MAX_FORMAL_STATES==390
-# A8.10B: the physical quotient saturates a formal component by C U J_K(C),
-# hence at most two formal components are glued.
-MAX_PHYSICAL_STATES=2*MAX_FORMAL_STATES
+# A8.10B: on the regular a.e. set, the physical quotient saturates a formal\n# component by C U J_K(C), hence at most two 390-state formal components are\n# glued.  Exceptional separator boundary/midpoint orbits are null and are not\n# assigned this explicit numeric bound.\nMAX_PHYSICAL_STATES=2*MAX_FORMAL_STATES
 assert MAX_PHYSICAL_STATES==780
 
 # Explicit physical parameter point.
@@ -209,7 +207,7 @@ print("a.e. separator cover of the full L-circle: PASS")
 print("max consecutive nonseparator run:",MAX_NONSEP_RUN)
 print("A8-derived layer envelope (analytic handoff):",MAX_LAYERS)
 print("A8-derived formal FREE-state envelope (analytic handoff):",MAX_FORMAL_STATES)
-print("A8.10B universal physical quotient envelope:",MAX_PHYSICAL_STATES)
+print("A8.10B a.e. physical quotient envelope:",MAX_PHYSICAL_STATES)
 print("explicit R0 = T/100000, sigma0 = R0/2")
 print("SW1 inequalities at explicit point: PASS")
 print("visibility factor:",VISIBLE_FACTOR)
