@@ -86,10 +86,7 @@ Inputs:
   \[
   C\cup J_K(C),
   \]
-  hence
-  \[
-  \boxed{\#C_{\rm phys}\le780.}
-  \]
+  hence on the regular full-measure set\n  \[\n  \boxed{\#C_{\rm phys}\le780\quad\text{a.e.}.}\n  \]
 
 Let \(U_R\) be the six KNF half-windows, so \(|U_R|=6R\). Let
 \[
@@ -100,7 +97,7 @@ for the physical A8 equivalence relation.
 Please verify that the nine A7 generators form a countable pmp Borel graphing:
 translations/reflections with Jacobi \(1\), with inverse branches included.
 
-Then check the mass-transport calculation
+The explicit 780 bound is not claimed on the countable separator-boundary/midpoint orbit set; A8 still gives finite components there. This null set does not affect the following integral estimate.\n\nThen check the mass-transport calculation
 \[
 |V_R|
 \le
