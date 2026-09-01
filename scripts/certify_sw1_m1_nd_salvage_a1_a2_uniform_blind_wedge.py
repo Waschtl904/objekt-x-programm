@@ -129,9 +129,21 @@ assert sp.simplify(h-(sp.simplify((a-Delta)/2)-2*Delta))==0
 assert 2**8 > 3**5
 assert sign_log(h)==1
 assert sign_log(eps_c)==1
+
+# The entire new wedge must remain inside the lower A7 chamber.
+# eps_c < Delta/2 is equivalent to 11*log(2) < 7*log(3),
+# hence to the exact integer inequality 2^11 < 3^7.
+assert 2**11 < 3**7
+assert sign_log(sp.expand(Delta/2-eps_c))==1
+
 assert sign_uniform(eps)==1
 assert sign_uniform(eps_c-eps)==1
 assert sign_uniform(h-2*eps)==1
+assert sign_uniform(Delta-2*eps)==1
+
+# Maximal KNF centers remain inside the positive Horizon.
+assert sign_uniform(a-eps)==1
+assert sign_uniform(b-eps)==1
 
 # ---------- 24 forbidden Horizon gaps ----------
 
@@ -286,7 +298,7 @@ assert sp.simplify(expected-sp.Rational(7,2)*(T-10*Delta-8*eps))==0
 assert sign_uniform(expected)==1
 
 print("h=(T-10 Delta)/4=d-3 Delta > 0: PASS")
-print("epsilon_c=(T-10 Delta)/8: PASS")
+print("epsilon_c=(T-10 Delta)/8 and epsilon_c<Delta/2: PASS")
 print("24 forbidden Horizon gaps: ordered/disjoint/uniform PASS")
 print("maximal KNF sampling set U_epsilon^max avoids F_epsilon: PASS")
 print("70 active forbidden-gap FREE images remain in F_epsilon: PASS")
