@@ -8,6 +8,8 @@ on:
       - 'audits/P11_R32_SW1_M1_ND_SALVAGE_A0_PHASE_DIAGRAM_FIREWALL.md'
       - 'scripts/certify_sw1_m1_nd_salvage_a0_counting_firewall.py'
       - 'scripts/probe_sw1_m1_nd_salvage_phase_diagram.py'
+      - 'scripts/certify_sw1_m1_nd_salvage_a1_a2_uniform_blind_wedge.py'
+      - 'audits/P11_R32_SW1_M1_ND_SALVAGE_A1_A2_UNIFORM_BLIND_WEDGE_CANDIDATE.md'
       - '.github/workflows/sw1-m1-nd-salvage-phase-diagram.yml'
   workflow_dispatch:
 
@@ -34,9 +36,14 @@ jobs:
           git hash-object audits/P11_R32_SW1_M1_ND_SALVAGE_A0_PHASE_DIAGRAM_FIREWALL.md
           git hash-object scripts/certify_sw1_m1_nd_salvage_a0_counting_firewall.py
           git hash-object scripts/probe_sw1_m1_nd_salvage_phase_diagram.py
+          git hash-object scripts/certify_sw1_m1_nd_salvage_a1_a2_uniform_blind_wedge.py
+          git hash-object audits/P11_R32_SW1_M1_ND_SALVAGE_A1_A2_UNIFORM_BLIND_WEDGE_CANDIDATE.md
 
       - name: Run counting firewall certificate
         run: python scripts/certify_sw1_m1_nd_salvage_a0_counting_firewall.py
 
       - name: Run full-saturation phase diagram probe
         run: python scripts/probe_sw1_m1_nd_salvage_phase_diagram.py
+
+      - name: Run exact uniform blind wedge certificate
+        run: python scripts/certify_sw1_m1_nd_salvage_a1_a2_uniform_blind_wedge.py
