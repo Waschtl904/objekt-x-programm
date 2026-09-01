@@ -1,401 +1,297 @@
 # P11/R32 — SALVAGE-A1/A2 Analytic Handoff Candidate
 
 > **Stand:** 1. September 2026  
-> **Status:** interner analytischer Handoff für Gate D; keine eigenständige Promotion.  
-> **Zweck:** zeigen, dass der neue uniform-blind-Wedge nur parameteruniforme
-> IMG0/IMG3/IMG4-Bausteine benutzt und nicht den alten speziellen
-> (arepsilon_0=Delta/4)-Mass-Transport-Teil.
+> **Status:** internal analytic handoff candidate; no independent promotion.  
+> **Purpose:** verify that the new uniform blind wedge uses only
+> parameter-uniform IMG0/IMG2/IMG3/IMG4 identities and does not import the old
+> \(\varepsilon_0=\Delta/4\) Mass-Transport argument.
 
 ---
 
 ## 1. Scope
 
-Fixiere
+Fix
 
-[
-0<arepsilon<arepsilon_c
+\[
+0<\varepsilon<\varepsilon_c
 :=
-rac{T-10Delta}{8}.
-]
+\frac{T-10\Delta}{8}.
+\]
 
-Da
+The exact certificate proves
 
-[
-arepsilon_c<Delta/2,
-]
+\[
+\varepsilon_c<\frac{\Delta}{2}.
+\]
 
-liegt der gesamte neue Wedge im unteren A7-Chamber.
+Hence the entire new wedge lies in the lower A7 chamber. Let
 
-Weiter:
+\[
+0<R<\varepsilon,\qquad 0<\sigma<R.
+\]
 
-[
-0<R<arepsilon,
-qquad
-0<sigma<R.
-]
+Then \(R+\varepsilon<2\varepsilon<\Delta\), so the SW1 chamber inequalities
+hold.
 
 ---
 
-## 2. FREE graph: nur A7 wird benötigt
+## 2. FREE graph
 
-A7 ist ausdrücklich für den gesamten unteren Chamber
+A7 is formulated for the full lower chamber
 
-[
-0<arepsilon<Delta/2
-]
+\[
+0<\varepsilon<\Delta/2.
+\]
 
-formuliert.
+Its complete nonidentity physical FREE map list is
 
-Die vollständige nichtdiagonale physische FREE-Mapliste ist
-
-[
-	au_{pm a},
-quad
-	au_{pm T},
-quad
+\[
+\tau_{\pm a},\quad
+\tau_{\pm T},\quad
 r_a,r_T,r_{3a},r_{4a},r_{2b}.
-	ag{HOF.1}
-]
+\tag{HOF.1}
+\]
 
-Der neue exakte SALVAGE-A1/A2-Check beweist, dass
+The SALVAGE-A1 certificate proves \(K_\varepsilon\) invariant under exactly
+this graphing.
 
-[
-K_arepsilon
-]
+For every \(R<\varepsilon\),
 
-unter genau diesem vollständigen Graphing invariant ist.
+\[
+U_R\subset U_\varepsilon^{\max}\subset K_\varepsilon.
+\]
 
-Für jedes (R<arepsilon) gilt
+Therefore
 
-[
-U_Rsubset U_arepsilon^{max}subset K_arepsilon.
-]
-
-Daher
-
-[
-V_{arepsilon,R}
+\[
+\boxed{
+V_{\varepsilon,R}
 :=
-operatorname{Sat}_{mathcal E_arepsilon}(U_R)
-subset K_arepsilon.
-	ag{HOF.2}
-]
+\operatorname{Sat}_{\mathcal E_\varepsilon}(U_R)
+\subset K_\varepsilon.
+}
+\tag{HOF.2}
+\]
 
-Hier wird weder ein Komponentenbound noch ein Separator-Return-Bound benutzt.
+No component bound is used.
 
 ---
 
-## 3. Horizonoperator ist parameteruniform
+## 3. Horizon operator
 
-IMG3 beweist auf dem gesamten IMG0-Horizonraum
+IMG3 gives on the full IMG0 Horizon basislift space
 
-[
-oxed{
-mathscr T_B
-=
-V^*(I+A)V.
+\[
+\boxed{
+\mathscr T_B=V^*(I+A)V.
 }
-	ag{HOF.3}
-]
+\tag{HOF.3}
+\]
 
-Dabei ist (V) die unitäre positive-Halbachsenidentifikation.
+Since \(A\ge0\),
 
-Da
-
-[
-I+Age I,
-]
-
-gilt für jeden SW1-Parameter
-
-[
-oxed{
-mathscr T_Bge I
+\[
+\boxed{
+\mathscr T_B\ge I,
 }
-	ag{HOF.4}
-]
+\tag{HOF.4}
+\]
 
-und somit
+so \(\mathscr T_B^{-1}\) is bounded.
 
-[
-mathscr T_B^{-1}
-]
+For the physical multiplication projection
 
-beschränkt.
-
-Sei
-
-[
-M_{V_{arepsilon,R}}h
+\[
+M_{V_{\varepsilon,R}}h
 =
-1_{V_{arepsilon,R}}h
-]
+1_{V_{\varepsilon,R}}h
+\]
 
-auf dem physischen Horizon und
+and the basislift projection
 
-[
-Pi_{arepsilon,R}
+\[
+\Pi_{\varepsilon,R}
 =
-V^*M_{V_{arepsilon,R}}V.
-]
+V^*M_{V_{\varepsilon,R}}V,
+\]
 
-Weil (V_{arepsilon,R}) per Definition unter dem vollständigen A7-Graphing
-gesättigt ist, gilt auf jeder aktiven FREE-Kante
+A7-saturation gives, on every active FREE edge,
 
-[
-1_{V_{arepsilon,R}}(x)
+\[
+1_{V_{\varepsilon,R}}(x)
 =
-1_{V_{arepsilon,R}}(phi(x)).
-]
+1_{V_{\varepsilon,R}}(\phi(x))
+\]
 
-Damit kommutiert der Multiplikator termweise mit allen Pullbacks und
-Diagonalmultiplikatoren:
+a.e. Hence \(M_{V_{\varepsilon,R}}\) commutes termwise with the physical
+FREE operator \(I+A\). Therefore
 
-[
-M_{V_{arepsilon,R}}(I+A)
+\[
+\boxed{
+\Pi_{\varepsilon,R}\mathscr T_B
 =
-(I+A)M_{V_{arepsilon,R}}.
-]
-
-Transportiert:
-
-[
-oxed{
-Pi_{arepsilon,R}mathscr T_B
-=
-mathscr T_BPi_{arepsilon,R},
+\mathscr T_B\Pi_{\varepsilon,R}
 }
-	ag{HOF.5}
-]
+\tag{HOF.5}
+\]
 
-und wegen HOF.4
+and
 
-[
-oxed{
-Pi_{arepsilon,R}mathscr T_B^{-1}
+\[
+\boxed{
+\Pi_{\varepsilon,R}\mathscr T_B^{-1}
 =
-mathscr T_B^{-1}Pi_{arepsilon,R}.
+\mathscr T_B^{-1}\Pi_{\varepsilon,R}.
 }
-	ag{HOF.6}
-]
+\tag{HOF.6}
+\]
 
-Dieser Schritt kennt weder (arepsilon_0=Delta/4) noch 780.
+This argument does not use \(\varepsilon=\Delta/4\), Mass Transport or a
+component-cardinality bound.
 
 ---
 
-## 4. Annulus-Hub ist parameteruniform
+## 4. Annulus and Hub
 
-IMG0 identifiziert
+IMG0 identifies
 
-[
-mathscr B_W
+\[
+\mathscr B_W
 =
-igoplus_{k=0}^2 n_kL^2(mathbb T_L)
-]
+\bigoplus_{k=0}^2 n_kL^2(\mathbb T_L)
+\]
 
-mit beliebigen positiven Annulus-(L^2)-Daten.
+with arbitrary positive Annulus \(L^2\)-data through the unitary odd transport
 
-Der unitäre Odd-Transport
+\[
+W:\mathscr B_W\to\mathscr H_-^{\rm ann}.
+\]
 
-[
-W:mathscr B_W	omathscr H_-^{m ann}
-]
+The effective Hub block is
 
-und die physische Hubabbildung
-
-[
-H=HE_{mathcal A}
-]
-
-geben exakt
-
-[
-oxed{
-mathcal H_R
-=
-V^*HW.
+\[
+\boxed{
+\mathcal H_R=V^*HW,
+\qquad
+H=HE_{\mathcal A}.
 }
-	ag{HOF.7}
-]
+\tag{HOF.7}
+\]
 
-Die sechs positiven Source-Maps sind für jeden SW1-Parameter
+The six positive physical source locations are
 
-[
-|x-a|, x+a, |x-b|, x+b, |x-T|, x+T.
-	ag{HOF.8}
-]
+\[
+|x-a|,\ x+a,\ |x-b|,\ x+b,\ |x-T|,\ x+T.
+\tag{HOF.8}
+\]
 
-SALVAGE-A2 beweist für
-
-[
-B_arepsilon
-subset(arepsilon,T)
-]
-
-und jeden (xin K_arepsilon), dass keiner der sechs Werte HOF.8 in
-(B_arepsilon) liegt.
-
-Wegen HOF.2 gilt dies insbesondere auf
-(V_{arepsilon,R}).
+SALVAGE-A2 proves that none of these locations lies in \(B_\varepsilon\) for
+any \(x\in K_\varepsilon\), hence in particular for
+\(x\in V_{\varepsilon,R}\).
 
 ---
 
-## 5. Zulässiger Annulusvektor
+## 5. Kernel handoff
 
-Da
+Because
 
-[
-R<arepsilon
-]
+\[
+B_\varepsilon\subset(\varepsilon,T)\subset(R,S),
+\qquad S=T+\sigma,
+\]
 
-und
+choose
 
-[
-S=T+sigma>T,
-]
+\[
+0\ne w_+\in L^2(B_\varepsilon).
+\]
 
-gilt
+IMG0 gives a unique nonzero \(g\in\mathscr B_W\) with that positive Annulus
+reconstruction. By HOF.7–HOF.8 and the blind support,
 
-[
-B_arepsilon
-subset
-(arepsilon,T)
-subset
-(R,S).
-	ag{HOF.9}
-]
-
-Wähle
-
-[
-0
-e w_+in L^2(B_arepsilon).
-]
-
-IMG0 liefert einen eindeutigen
-
-[
-0
-e ginmathscr B_W.
-]
-
-Aus HOF.7–HOF.9:
-
-[
-oxed{
-Pi_{arepsilon,R}mathcal H_Rg=0.
+\[
+\boxed{
+\Pi_{\varepsilon,R}\mathcal H_Rg=0.
 }
-	ag{HOF.10}
-]
+\tag{HOF.9}
+\]
 
----
+Set
 
-## 6. KNF-Handoff
+\[
+f=-\mathscr T_B^{-1}\mathcal H_Rg.
+\]
 
-Setze
+Using HOF.6,
 
-[
-f
-=
--mathscr T_B^{-1}mathcal H_Rg.
-]
+\[
+\Pi_{\varepsilon,R}f=0.
+\]
 
-Mit HOF.6 und HOF.10:
+Thus the physical Horizon reconstruction of \(f\) vanishes on
+\(V_{\varepsilon,R}\), hence on \(U_R\).
 
-[
-Pi_{arepsilon,R}f=0.
-]
+IMG2/KNF characterizes \(\mathscr B_K\) by
 
-Damit verschwindet die positive physische Horizonrekonstruktion von (f)
-auf
-
-[
-V_{arepsilon,R},
-]
-
-also insbesondere auf
-
-[
-U_R.
-]
-
-IMG2/KNF charakterisiert den zulässigen Horizonraum durch die einzige Row
-
-[
+\[
 p[f(a-u)-f(a+u)]
 +r[f(b-u)-f(b+u)]
 +q[f(T-u)-f(T+u)]
 =0
-]
+\]
 
-für fast jedes (0<u<R).
+for a.e. \(0<u<R\). Since all six sample values vanish,
 
-Alle sechs Samplewerte liegen in (U_R) und verschwinden. Daher
+\[
+\boxed{f\in\mathscr B_K.}
+\tag{HOF.10}
+\]
 
-[
-oxed{
-finmathscr B_K.
-}
-	ag{HOF.11}
-]
+Finally
 
-Schließlich
-
-[
-mathscr N_R(f,g)
+\[
+\mathscr N_R(f,g)
 =
-mathscr T_Bf+mathcal H_Rg
+\mathscr T_Bf+\mathcal H_Rg
 =
 0.
-]
+\]
 
-Wegen (g
-e0):
+Since \(g\ne0\),
 
-[
-oxed{
-kermathscr N_R
-e{0}.
-}
-	ag{HOF.12}
-]
+\[
+\boxed{\ker\mathscr N_R\ne\{0\}.}
+\tag{HOF.11}
+\]
 
 ---
 
-## 7. Was aus IMG4 nicht importiert wird
+## 6. Not imported from the old explicit IMG4 witness
 
-Der neue Wedge-Beweis benutzt ausdrücklich **nicht**:
+The new proof does **not** use:
 
-- den a.e.-780-Komponentenbound;
-- die (pm14)-Separatordeckung;
+- the a.e.-780 component bound;
+- the \(\pm14\) separator cover;
 - Mass Transport;
-- die alte Maßschranke (28080R);
-- den speziellen Witness (R_0=T/100000);
-- P12 zur eigentlichen Kernelkonstruktion.
-
-P12 kann weiterhin nur zur Interpretation verwendet werden, dass der
-Annulusvektor kein trivialer äußerer Hubkernel ist.
+- the \(28080R\) visibility estimate;
+- \(R_0=T/100000\);
+- the special value \(\varepsilon_0=\Delta/4\).
 
 ---
 
-## 8. Internes Gate-D-Verdict
+## 7. Internal verdict
 
-Unter Verwendung der bereits kanonischen IMG0/IMG2/IMG3/IMG4-Identitäten ist
-der Handoff von der neuen exakten Geometrie zum tatsächlichen zulässigen
-(mathscr N_R)-Kernel parameteruniform auf
+Subject to the exact SALVAGE-A1/A2 geometry, the analytic kernel handoff is
+parameter-uniform on
 
-[
-0<arepsilon<arepsilon_c,
-quad
-0<R<arepsilon,
-quad
-0<sigma<R.
-]
+\[
+0<\varepsilon<\varepsilon_c,\qquad
+0<R<\varepsilon,\qquad
+0<\sigma<R.
+\]
 
-[
-oxed{
-	ext{Gate D: intern GREEN candidate.}
-}
-]
+\[
+\boxed{\text{Gate D: internal GREEN candidate.}}
+\]
 
-Keine neue Promotion wird durch dieses Dokument allein erzeugt.
+No promotion is created by this document alone.
