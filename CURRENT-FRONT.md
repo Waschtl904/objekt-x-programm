@@ -2,7 +2,7 @@
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 1. September 2026  
-> **Aktuelle mathematische Basis:** `main@cf3d39a2e7787bc1c5b938390b6cdeec7943b0c2`. Die M1-ND-IMG4-SMALLR-Promotion ist integriert (`✓[M]_neg`). PR #49 (`research/sw1-m1-nd-salvage-phase-diagram`, geprüfter Head `2ed1583f074574c2fdb5a48203d63d520a86b5f6`) bleibt bewusst **offen und eingefroren** als intern adversarial GREEN geprüfter, aber unpromotierter Uniform-Blind-Wedge-Kandidat; finaler Review-Run `33532345053` SUCCESS. Frühere Promotions-/Certificate-Aussagen behalten ihre jeweils kanonischen Provenienzen.  
+> **Aktuelle mathematische Basis:** `main` mit mathematischer Basis durch PR #48 (Pre-Doku-Sync SHA `cf3d39a2e7787bc1c5b938390b6cdeec7943b0c2`). Die M1-ND-IMG4-SMALLR-Promotion ist integriert (`✓[M]_neg`). PR #49 (`research/sw1-m1-nd-salvage-phase-diagram`, geprüfter Head `2ed1583f074574c2fdb5a48203d63d520a86b5f6`) bleibt bewusst **offen und eingefroren** als intern adversarial GREEN geprüfter, aber unpromotierter Uniform-Blind-Wedge-Kandidat; finaler Review-Run `33532345053` SUCCESS. Frühere Promotions-/Certificate-Aussagen behalten ihre jeweils kanonischen Provenienzen.  
 > **Aktiver mathematischer Stand:** A / finite-level Cross-Gram ist im universellen SW1-Sinn **negativ entschieden**; PR #49 verstärkt dies als Kandidat möglicherweise zu einem ganzen offenen Wedge, wird aber nicht weiter verändert und nicht promotet. **Aktive Forschung wechselt jetzt zu B / Strong Terminal.** Erster Zielknoten ist R27-F: den festen Gamma-Crossblock bzw. den Grenzdefekt `D_infty^-` entscheiden. Danach folgt separat R22-F: der positive fixed-vector Polar-Gauge-/Angle-Defect.  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
@@ -298,20 +298,20 @@ Blocker exportiert. Die heutige Strong-Terminal-Frage ist auf zwei getrennte
 Restgates reduziert:
 
 1. **R27-F / Modulus-Gate**
-   [
-   D_infty^-
+   \[
+   D_\infty^-
    =
-   T_{S,infty}W-WT_{R,infty}
-   stackrel{?}=0.
-   ]
+   T_{S,\infty}W-WT_{R,\infty}
+   \stackrel{?}=0.
+   \]
    Äquivalent ist ein fester Gamma-Crossblock auf einem fixed window zu
    entscheiden. Dies ist der **nächste Default-Angriff**.
 
 2. **R22-F / Polar-Gauge-Gate**
-   [
-   mathscr G_U=(V_U-W)^*(V_U-W)
-   stackrel{s}{longrightarrow}0 ?
-   ]
+   \[
+   \mathscr G_U=(V_U-W)^*(V_U-W)
+   \stackrel{s}{\longrightarrow}0\ ?
+   \]
    Dieser fixed-vector Angle-Defect ist logisch separat und bleibt auch nach
    einem positiven R27-F zu prüfen.
 
@@ -526,6 +526,6 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 }
 \]
 
-**Nächster Default:** **M1-ND-SALVAGE / Parameterklassifikation** — den Bereich außerhalb des promotierten Small-`R`-No-Gos untersuchen und zugleich prüfen, welche minimale Kopplungsänderung den Blindraum beseitigt. Die bisherige universelle Injektivitätsroute wird nicht fortgesetzt.
+**Nächster Default:** **B / Strong Terminal — R27-F**. Entscheide den fixed Gamma-Crossblock bzw. ob \(D_\infty^-=0\). Erst danach R22-F / Polar-Gauge. PR #49 bleibt eingefrorener A-Kandidat und wird nicht parallel weiter verändert.
 
-**Firewall:** IMG1 bleibt in seinem dokumentierten Certificate-Scope unpromotiert. Neu promotiert ist ausschließlich `M1-ND-SMALLR: ✓[M]_neg` für den expliziten Witness auf \(\mathscr B_K\oplus\mathscr B_W\). Eine separate formale Promotion von \(\ker\Gamma_I\neq\{0\}\) wird hier nicht gebucht. Offen ist nun die Restparameterklassifikation bzw. Architekturreparatur; kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
+**Firewall:** IMG1 bleibt in seinem dokumentierten Certificate-Scope unpromotiert. Neu promotiert ist ausschließlich `M1-ND-SMALLR: ✓[M]_neg` für den expliziten Witness auf \(\mathscr B_K\oplus\mathscr B_W\). Eine separate formale Promotion von \(\ker\Gamma_I\neq\{0\}\) wird hier nicht gebucht. Die A-Restparameterklassifikation bleibt offen, ist aber derzeit geparkt; aktive Forschung ist B / R27-F. Kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
