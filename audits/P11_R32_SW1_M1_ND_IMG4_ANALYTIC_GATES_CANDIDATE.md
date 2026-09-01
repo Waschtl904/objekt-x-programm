@@ -2,7 +2,7 @@
 
 > **Stand:** 31. August 2026  
 > **Branch:** \`research/sw1-m1-nd-img3-eliminator\`  
-> **Status:** interne adversariale Schließung der IMG4-Gates 1–9 als **AI-GREEN candidate**; keine Promotion.
+> **Status:** Beweis-/Auditquelle der inzwischen erfolgten `✓[M]_neg`-Promotion des expliziten Small-`R`-Witness. Kanonischer Promotionsrecord: `audits/P11_R32_SW1_M1_ND_IMG4_SMALLR_NEG_PROMOTION.md`. Dieses Dokument bleibt die analytische Beweisquelle; der ursprüngliche externe-Unabhängigkeitsgate wurde per dokumentiertem Governance-Waiver nicht als `independent GREEN (external)` gebucht.
 >
 > Dieser Text ergänzt
 > \`P11_R32_SW1_M1_ND_IMG4_SMALLR_KERNEL_NOGO_CANDIDATE.md\`
@@ -1047,9 +1047,9 @@ unabhängiger Bestätigung auch
 
 am expliziten Witnesspunkt ergeben.
 
-## Promotions-Firewall
+## Promotions-Firewall / spätere Buchung
 
-Noch **keine** \(\checkmark[M]_{\rm neg}\)-Promotion in diesem Dokument.
+Dieses Dokument selbst erzeugte ursprünglich noch keine Promotion. Die Promotion wurde anschließend separat in `audits/P11_R32_SW1_M1_ND_IMG4_SMALLR_NEG_PROMOTION.md` gebucht.
 
 Für Promotion ist noch ein unabhängiger adversarialer Review erforderlich,
 der mindestens diese vier Punkte eigenständig bestätigt:
