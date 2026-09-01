@@ -53,6 +53,21 @@ Relevant files:
 - \`audits/P11_R32_SW1_A7_FINITE_STATE_COCYCLE_CANDIDATE.md\`
 - \`audits/P11_R32_SW1_A8_LOWER_FINITE_COMPONENTS_CANDIDATE.md\`
 - \`scripts/certify_sw1_m1_nd_img4_gate1_gate9_graph_p12.py\`
+- \`scripts/certify_sw1_m1_nd_img4_gateA_direct_words.py\`
+
+**Review note added 2026-09-01.** During adversarial re-reading, the first
+Gate1/Gate9 helper was found to have copied four auxiliary \(c_j\) definitions
+inconsistently with the canonical A1 raw-word table. Those helper constants
+have been corrected. The discrepancy did not alter the hard-coded map names,
+but the first helper alone should not be treated as independent Gate-A evidence.
+
+The preferred mechanical Gate-A check is now
+\`certify_sw1_m1_nd_img4_gateA_direct_words.py\`: it evaluates the original
+eleven A1 four-echo words and their gates directly, classifies all surviving
+folded nonidentity sources, proves that no tenth map survives, reconstructs
+the nine A7/A8 activity-domain unions, and checks the R6/R7 five-arm support
+and canonical aggregated coefficients. Gate signs are evaluated independently
+and exactly via rational log-linear forms and integer prime-power comparisons.
 
 Verdict:
 \[
