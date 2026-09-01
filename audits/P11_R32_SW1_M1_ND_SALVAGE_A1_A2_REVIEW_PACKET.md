@@ -1,67 +1,61 @@
 # P11/R32 — SALVAGE-A1/A2 Uniform Blind Wedge Review Packet
 
 **Date:** 1 September 2026  
-**Branch:** `research/sw1-m1-nd-salvage-phase-diagram`  
-**Current status:** AI-GREEN candidate + exact finite/algebraic certificate; no promotion.
+**Branch:** \`research/sw1-m1-nd-salvage-phase-diagram\`  
+**Status:** candidate only; no promotion.
 
-## Claim under review
+## Claim
 
 Let
 
-[
-arepsilon_c=rac{T-10Delta}{8}.
-]
+\[
+\varepsilon_c=\frac{T-10\Delta}{8}.
+\]
 
-For every
+Review whether
 
-[
-0<arepsilon<arepsilon_c,
-qquad
-0<R<arepsilon,
-qquad
-0<sigma<R,
-]
+\[
+0<\varepsilon<\varepsilon_c,\qquad
+0<R<\varepsilon,\qquad
+0<\sigma<R
+\]
 
-does the current effective operator satisfy
+implies
 
-[
-kermathscr N_R
-e{0}?
-]
+\[
+\ker\mathscr N_R\ne\{0\}.
+\]
 
 Primary proof:
-`audits/P11_R32_SW1_M1_ND_SALVAGE_A1_A2_UNIFORM_BLIND_WEDGE_CANDIDATE.md`
+\`audits/P11_R32_SW1_M1_ND_SALVAGE_A1_A2_UNIFORM_BLIND_WEDGE_CANDIDATE.md\`
 
-Primary exact certificate:
-`scripts/certify_sw1_m1_nd_salvage_a1_a2_uniform_blind_wedge.py`
+Exact certificate:
+\`scripts/certify_sw1_m1_nd_salvage_a1_a2_uniform_blind_wedge.py\`
 
 ---
 
-## Gate A — exact epsilon-uniform interval arithmetic
+## Gate A — uniform sign and chamber control
 
-Verify the sign engine independently.
+Verify independently:
 
-Every comparison used by the certificate is affine in (arepsilon).  The
-script evaluates its sign exactly at the two endpoints
-(arepsilon=0,arepsilon=arepsilon_c), with logarithmic signs reduced to
-integer comparisons (2^m) versus (3^n).
-
-Check especially:
-
-[
-h=rac{T-10Delta}{4}=d-3Delta>0,
-]
+\[
+h=\frac{T-10\Delta}{4}=d-3\Delta>0,
+\qquad
+\varepsilon_c=\frac h2,
+\]
 
 and
 
-[
-0<arepsilon<h/2
-Longrightarrow
-h-2arepsilon>0.
-]
+\[
+\boxed{\varepsilon_c<\Delta/2.}
+\]
 
-Confirm that no comparison marked uniform can cross zero inside the open
-wedge.
+The certificate reduces these signs to exact integer comparisons
+\(2^m\) versus \(3^n\).
+
+For every affine-in-\(\varepsilon\) comparison, check that endpoint signs at
+\(\varepsilon=0\) and \(\varepsilon=\varepsilon_c\) suffice to determine the
+sign on the open interval and that endpoint zeros are handled correctly.
 
 **Verdict:** GREEN / PARTIAL / FAIL
 
@@ -71,52 +65,29 @@ wedge.
 
 The 24 forbidden gaps are
 
-[
+\[
 F_{s,k,j}
 =
-(s+kDelta+jh+arepsilon,,
- s+kDelta+(j+1)h-arepsilon)
-]
+(s+k\Delta+jh+\varepsilon,\,
+s+k\Delta+(j+1)h-\varepsilon)
+\]
 
-for
-
-[
-sin{0,a},quad
-k=0,ldots,5,quad
-j=0,1.
-]
+for \(s\in\{0,a\}\), \(k=0,\ldots,5\), \(j=0,1\).
 
 Check:
 
-1. all 24 gaps are ordered/disjoint and lie in ((0,T));
-2. the maximal sampling majorant
-   [
-   U_arepsilon^{max}
-   =
-   (a-arepsilon,a+arepsilon)
-   cup
-   (b-arepsilon,b+arepsilon)
-   cup
-   (T-arepsilon,T+arepsilon)
-   ]
-   avoids them;
-3. every active image of (F_arepsilon) under all nine A7 maps lies back
-   in (F_arepsilon);
-4. the inverse-domain facts are sufficient to conclude that
-   (K_arepsilon=F_arepsilon^c) is invariant a.e.;
-5. hence for every (R<arepsilon),
-   [
-   V_{arepsilon,R}
-   =
-   operatorname{Sat}_{mathcal E_arepsilon}(U_R)
-   subset K_arepsilon.
-   ]
-
-The certificate reports exactly 70 nonempty forbidden-gap/map-domain pieces.
+1. all 24 gaps are nonempty, ordered, disjoint and lie in \((0,T)\);
+2. \(U_\varepsilon^{\max}\) avoids them;
+3. the loop over all 24 gaps and every A7 domain component is exhaustive;
+4. each nonempty image is covered by \(F_\varepsilon\);
+5. the reported count 70 is only a checksum, not the reason for exhaustivity;
+6. the verified inverse graphing relations imply
+   \(K_\varepsilon=F_\varepsilon^c\) is invariant a.e.;
+7. boundary points form only a finite null set.
 
 Relevant upstream:
-- `audits/P11_R32_SW1_A7_FINITE_STATE_COCYCLE_CANDIDATE.md`
-- `scripts/certify_sw1_m1_nd_img4_gateB_pmp_graphing.py`
+- \`audits/P11_R32_SW1_A7_FINITE_STATE_COCYCLE_CANDIDATE.md\`
+- \`scripts/certify_sw1_m1_nd_img4_gateB_pmp_graphing.py\`
 
 **Verdict:** GREEN / PARTIAL / FAIL
 
@@ -124,106 +95,73 @@ Relevant upstream:
 
 ## Gate C — 14-gap Hub exclusion
 
-The candidate positive Annulus blind set is
+Check the 14 intervals
 
-[
-B_arepsilon
+\[
+B_{\varepsilon,c}=(c+\varepsilon,c+h-\varepsilon)
+\]
+
+for
+
+\[
+\mathcal C=
+\{
+0,\Delta,2\Delta,3\Delta,
+d,d+\Delta,d+2\Delta,
+a,a+\Delta,a+2\Delta,a+3\Delta,
+b,b+\Delta,b+2\Delta
+\}.
+\]
+
+Verify:
+
+1. they are nonempty, ordered, disjoint and lie in \((\varepsilon,T)\);
+2. the complement \(K_\varepsilon\) has exactly 25 cells;
+3. for every cell and each \(\tau\in\{a,b,T\}\), the code includes:
+   - the left piece of \(|x-\tau|\),
+   - the right piece of \(|x-\tau|\),
+   - the full \(x+\tau\) piece;
+4. these are exactly the six physical positive Hub source maps;
+5. all 153 nonempty pieces avoid all 14 blind intervals;
+6. 153 is again only a checksum after exhaustive looping.
+
+Verify also
+
+\[
+|B_\varepsilon|
 =
-igcup_{cinmathcal C}
-(c+arepsilon,c+h-arepsilon)
-]
-
-with
-
-[
-mathcal C=
-{
-0,Delta,2Delta,3Delta,
-d,d+Delta,d+2Delta,
-a,a+Delta,a+2Delta,a+3Delta,
-b,b+Delta,b+2Delta
-}.
-]
-
-Check:
-
-1. the 14 intervals are pairwise disjoint and contained in
-   ((arepsilon,T));
-2. the 24-gap complement has exactly 25 interval cells;
-3. after splitting the three absolute-value maps at (a,b,T), every physical
-   Hub source piece
-   [
-   |x-a|, x+a, |x-b|, x+b, |x-T|, x+T
-   ]
-   from every (K_arepsilon)-cell avoids every interval of
-   (B_arepsilon);
-4. the reported 153 nonempty image pieces are exhaustive;
-5. therefore
-   [
-   H(V_{arepsilon,R})cap B_arepsilon=arnothing.
-   ]
-
-Check the exact measure identity
-
-[
-|B_arepsilon|
+14(h-2\varepsilon)
 =
-14(h-2arepsilon)
-=
-rac72(T-10Delta-8arepsilon)>0.
-]
+\frac72(T-10\Delta-8\varepsilon)>0.
+\]
 
 **Verdict:** GREEN / PARTIAL / FAIL
 
 ---
 
-## Gate D — parameter-uniform analytic kernel handoff
+## Gate D — parameter-uniform analytic handoff
 
-This is the only non-finite gate.
+Use
 
-Check that the already audited/promoted IMG4 mechanism used here does not rely
-on the old special value (arepsilon=Delta/4) except in the discarded
-Mass-Transport/780 estimate.
+\`audits/P11_R32_SW1_M1_ND_SALVAGE_A1_A2_ANALYTIC_HANDOFF_CANDIDATE.md\`.
 
-Needed statements:
+Check that the proof uses only parameter-uniform statements:
 
-1. for the lower chamber the actual FREE offdiagonal graph is contained in the
-   nine A7 maps;
-2. for any measurable A7-saturated (V),
-   [
-   Pi_Vmathscr T_B=mathscr T_BPi_V,
-   qquad
-   Pi_Vmathscr T_B^{-1}=mathscr T_B^{-1}Pi_V;
-   ]
-3. the unitary Annulus transport gives
-   [
-   mathcal H_R=V^*HW
-   ]
-   for all SW1 parameters;
-4. if (ginmathscr B_W) is supported in (B_arepsilon), then
-   [
-   Pi_{V_{arepsilon,R}}mathcal H_Rg=0;
-   ]
-5. with
-   [
-   f=-mathscr T_B^{-1}mathcal H_Rg,
-   ]
-   one gets (f=0) on (U_R), hence (finmathscr B_K);
-6. therefore
-   [
-   mathscr N_R(f,g)=0,
-   qquad
-   (f,g)
-e0.
-   ]
+\[
+\mathscr T_B=V^*(I+A)V,\qquad
+\mathscr T_B\ge I,
+\]
 
-Important: no 780 component bound, no Mass Transport, and no finite-component
-theorem is needed in this new proof.
+the reducing projection for any A7-saturated measurable set,
 
-Relevant files:
-- `audits/P11_R32_SW1_M1_ND_IMG4_ANALYTIC_GATES_CANDIDATE.md`
-- `audits/P11_R32_SW1_M1_ND_IMAGE_SPACE_CANDIDATE.md`
-- `audits/P11_R32_SW1_M1_ND_IMG4_SMALLR_NEG_PROMOTION.md`
+\[
+\mathcal H_R=V^*HW,
+\]
+
+and the IMG2/KNF characterization of \(\mathscr B_K\).
+
+Confirm explicitly that no 780 bound, Mass Transport, \(\pm14\) separator
+cover or special \(\varepsilon=\Delta/4\) value is imported.
 
 **Verdict:** GREEN / PARTIAL / FAIL
 
@@ -231,33 +169,12 @@ Relevant files:
 
 ## Promotion criterion
 
-Promote the wedge only if Gates A–D are all GREEN.
+Only if A–D are GREEN may the wedge be considered for
 
-If promoted, the exact scope would be
+\[
+\checkmark[M]_{\rm neg}.
+\]
 
-[
-oxed{
-0<arepsilon<rac{T-10Delta}{8},
-quad
-0<R<arepsilon,
-quad
-0<sigma<R
-Longrightarrow
-kermathscr N_R
-e{0}.
-}
-]
-
-with explicit uniform blind measure
-
-[
-oxed{
-|B_arepsilon|
-ge
-rac72(T-10Delta-8arepsilon)>0.
-}
-]
-
-No claim that (arepsilon_c) is the exact global phase transition.  
-No injectivity claim for (arepsilongearepsilon_c).  
+No claim that \(\varepsilon_c\) is the exact global phase transition.  
+No injectivity claim for \(\varepsilon\ge\varepsilon_c\).  
 No Object-X or RH conclusion.
