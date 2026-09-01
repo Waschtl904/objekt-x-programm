@@ -86,6 +86,28 @@ assert sp.simplify(sp.exp(-2*(2*a-x)) - q*sp.exp(2*x))==0
 assert sp.simplify(sp.exp(-(c-x)/2) - sp.exp(-c/2)*sp.exp(x/2))==0
 assert sp.simplify(sp.exp(-2*(c-x)) - q*r*sp.exp(2*x))==0
 
+
+# Independent mode-by-mode factorization.
+lam=sp.symbols("lam", positive=True)
+xv=sp.symbols("xv", real=True)
+raw_mode=(
+    sp.exp(-lam*xv)
+    -sp.exp(-lam*(2*a-xv))
+    +rho*sp.exp(-lam*(xv+d))
+    -rho*sp.exp(-lam*(c-xv))
+)
+B=1+rho*sp.exp(-lam*d)
+factored=sp.expand(
+    B*(sp.exp(-lam*xv)-sp.exp(-lam*(2*a-xv)))
+)
+assert sp.simplify(raw_mode-factored)==0
+
+# For the actual Gamma sequence lambda_n=2n+1/2, B_n is positive.
+for N in range(12):
+    lamN=2*N+sp.Rational(1,2)
+    BN=sp.simplify(B.subs(lam,lamN))
+    assert float(sp.N(BN,50))>0
+
 # Formal coefficients of the four Gamma-tail terms after multiplying
 # the orthogonality relation by z^{1/4}.
 Gz,Gqz,Grz,Gqrz=sp.symbols("Gz Gqz Grz Gqrz")
@@ -125,6 +147,7 @@ print("beta^2=e^{-2a}=1/2: PASS")
 print("e^{-2c}=q*r=1/6: PASS")
 print("rho*e^{-c/2}=beta*alpha: PASS")
 print("four chart exponential transforms: PASS")
+print("modewise factorization with common positive B_n: PASS")
 print("four-point relation -> single H inversion: PASS")
 print("squared relation -> K(q/z)=2 z K(z): PASS")
 print("coefficient multipliers 1+alpha*r^n are structurally positive: PASS")
