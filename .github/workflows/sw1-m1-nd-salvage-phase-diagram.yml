@@ -1,0 +1,42 @@
+name: SW1 M1-ND salvage phase diagram
+
+on:
+  push:
+    branches:
+      - research/sw1-m1-nd-salvage-phase-diagram
+    paths:
+      - 'audits/P11_R32_SW1_M1_ND_SALVAGE_A0_PHASE_DIAGRAM_FIREWALL.md'
+      - 'scripts/certify_sw1_m1_nd_salvage_a0_counting_firewall.py'
+      - 'scripts/probe_sw1_m1_nd_salvage_phase_diagram.py'
+      - '.github/workflows/sw1-m1-nd-salvage-phase-diagram.yml'
+  workflow_dispatch:
+
+jobs:
+  salvage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install SymPy
+        run: python -m pip install sympy==1.14.0
+
+      - name: Record provenance
+        run: |
+          python --version
+          python -c "import sympy; print('sympy='+sympy.__version__)"
+          git rev-parse HEAD
+          git hash-object audits/P11_R32_SW1_M1_ND_SALVAGE_A0_PHASE_DIAGRAM_FIREWALL.md
+          git hash-object scripts/certify_sw1_m1_nd_salvage_a0_counting_firewall.py
+          git hash-object scripts/probe_sw1_m1_nd_salvage_phase_diagram.py
+
+      - name: Run counting firewall certificate
+        run: python scripts/certify_sw1_m1_nd_salvage_a0_counting_firewall.py
+
+      - name: Run full-saturation phase diagram probe
+        run: python scripts/probe_sw1_m1_nd_salvage_phase_diagram.py
