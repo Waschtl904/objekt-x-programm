@@ -493,25 +493,48 @@ deren nichtdiagonale Graphkanten genau im rohen FREE/A1-Graphen liegen.
 
 Da \(V_R\) eine Vereinigung vollständiger Zusammenhangskomponenten ist, besitzt keine dieser Kanten einen Endpunkt in \(V_R\) und den anderen in \(V_R^c\).
 
-Somit
-
+Sei auf der physischen positiven Horizonhälfte
 \[
-P_{V_R}\mathscr T_B
+M_{V_R}h=1_{V_R}h.
+\]
+Wegen der FREE-Sättigung kommutiert \(M_{V_R}\) mit jedem physischen A1-Pullbackterm
+und damit mit \(I+A\).
+
+Mit der unitären IMG3-Identifikation
+\[
+V:\mathscr B_H^0\to\mathscr H_+,
+\qquad
+\mathscr T_B=V^*(I+A)V,
+\]
+definiere
+\[
+\boxed{
+\Pi_{V_R}:=V^*M_{V_R}V.
+}
+\]
+Dann
+\[
+\boxed{
+\Pi_{V_R}\mathscr T_B
 =
-\mathscr T_BP_{V_R}.
+\mathscr T_B\Pi_{V_R}.
+}
 \tag{IMG4.15}
 \]
 
-Da \(\mathscr T_B\) selbstadjungiert und invertierbar ist,
+Da \(\mathscr T_B\ge I\) invertierbar ist,
 
 \[
-P_{V_R}\mathscr T_B^{-1}
+\boxed{
+\Pi_{V_R}\mathscr T_B^{-1}
 =
-\mathscr T_B^{-1}P_{V_R}.
+\mathscr T_B^{-1}\Pi_{V_R}.
+}
 \tag{IMG4.16}
 \]
 
-Also reduzieren sowohl \(V_R\) als auch \(V_R^c\) den Horizonoperator und sein Inverses.
+Also reduziert der zu \(V_R\) gehörige Basislift-Unterraum den Horizonoperator
+und sein Inverses.
 
 Dies ist der entscheidende Unterschied zum früheren B96-Atomversuch: \(V_R\) ist eine echte **Graphkomponentensättigung**, keine nichtinvariante endliche Zellpartition.
 
@@ -566,11 +589,27 @@ Mit IMG4.14:
 \tag{IMG4.17}
 \]
 
-Wenn eine positive Annulusfunktion \(w_+\) außerhalb von \(W_R^{\rm vis}\) getragen ist und ungerade fortgesetzt wird, dann gilt
+Definiere zusätzlich den unitären Annulustransport
+\[
+W:\mathscr B_W\to\mathscr H_-^{\rm ann}
+\]
+durch \((Wg)(x)=2^{-1/2}\widetilde g(x)\) auf der positiven Seite und ungerade
+Fortsetzung. IMG0 rekonstruiert den physischen Annulusinput als \(w_g=2Wg\),
+und daher gilt exakt
+\[
+\mathcal H_R=V^*H W,
+\qquad H=HE_{\mathcal A}.
+\]
 
+Wenn die positive physische Annulusfunktion außerhalb von
+\(W_R^{\rm vis}\) getragen ist, gilt
+\[
+M_{V_R}H(Wg)=0,
+\]
+also
 \[
 \boxed{
-(\mathcal H_Rw)|_{V_R}=0.
+\Pi_{V_R}\mathcal H_Rg=0.
 }
 \tag{IMG4.18}
 \]
@@ -673,7 +712,7 @@ Erweitere \(w_+\) ungerade auf den symmetrischen Annulus; in Basisliftnotation s
 Nach IMG4.18:
 
 \[
-P_{V_{R_0}}\mathcal H_{R_0}w=0.
+\Pi_{V_{R_0}}\mathcal H_{R_0}w=0.
 \tag{IMG4.22}
 \]
 
@@ -692,15 +731,16 @@ Wegen der Reduktionsidentität IMG4.16:
 
 \[
 \begin{aligned}
-P_{V_{R_0}}f
+\Pi_{V_{R_0}}f
 &=
 -\mathscr T_B^{-1}
-P_{V_{R_0}}\mathcal H_{R_0}w\\
+\Pi_{V_{R_0}}\mathcal H_{R_0}w\\
 &=0.
 \end{aligned}
 \]
 
-Also verschwindet \(f\) insbesondere auf
+Da \(\Pi_{V_{R_0}}=V^*M_{V_{R_0}}V\), verschwindet die zu \(f\) gehörige
+positive physische Horizonrekonstruktion auf \(V_{R_0}\), insbesondere auf
 
 \[
 U_{R_0}\subset V_{R_0}.
