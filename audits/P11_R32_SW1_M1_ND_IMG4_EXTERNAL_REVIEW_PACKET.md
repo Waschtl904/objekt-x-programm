@@ -252,6 +252,16 @@ Please verify that this is genuinely on
 and not on the ambient slot space.
 
 Verdict:
+
+Domain/image-space source to check explicitly:
+- \`audits/P11_R32_SW1_M1_ND_IMAGE_SPACE_CANDIDATE.md\`
+
+In particular verify IMG.28--IMG.32: \(\mathscr B_W\) is exactly the three
+masked Annulus lift channels with a two-sided reconstruction to arbitrary
+positive-Annulus \(L^2\) data, and IMG.22--IMG.23: \(\mathscr B_K\) is
+exactly the KNF row. Thus a nonzero blind-set \(L^2\) function is admissible
+and vanishing of \(f\) on the six KNF sampling windows is sufficient for
+\(f\in\mathscr B_K\).
 \[
 \boxed{\text{GATE D: GREEN / PARTIAL / FAIL}}
 \]
