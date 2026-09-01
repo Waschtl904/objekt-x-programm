@@ -222,29 +222,35 @@ S_0-R_0
 \]
 so the complement \(B_0\) has positive measure.
 
-Choose
+Choose a nonzero positive-Annulus signal
 \[
-0\neq w\in L^2(B_0)
+0\neq w_+\in L^2(B_0).
 \]
-and odd-fold it. Let \(W:\mathscr B_W\to\mathscr H_-^{\rm ann}\) be the unitary Annulus
-transport defined in the analytic-gates audit.  IMG0 gives the effective Hub
-block
+Use IMG0/IMG.28--IMG.32 to define the unique basislift vector
+\[
+0\neq g\in\mathscr B_W
+\]
+whose physical positive Annulus reconstruction equals \(w_+\) (with odd
+extension on the negative side).
+
+Let \(W:\mathscr B_W\to\mathscr H_-^{\rm ann}\) be the unitary Annulus
+transport defined in the analytic-gates audit. IMG0 gives
 \[
 \mathcal H_R=V^*H W,
 \qquad H=HE_{\mathcal A}.
 \]
-Blind support gives
+Because \(w_+\) is supported in the blind set,
 \[
-M_{V_{R_0}}H(Ww)=0,
+M_{V_{R_0}}H(Wg)=0,
 \]
 hence
 \[
-\Pi_{V_{R_0}}\mathcal H_{R_0}w=0.
+\Pi_{V_{R_0}}\mathcal H_{R_0}g=0.
 \]
 
 Define
 \[
-f=-\mathscr T_B^{-1}\mathcal H_{R_0}w.
+f=-\mathscr T_B^{-1}\mathcal H_{R_0}g.
 \]
 Gate C gives
 \[
@@ -270,9 +276,9 @@ Finally IMG2 gives
 \]
 hence
 \[
-\mathscr N_{R_0}(f,w)=0.
+\mathscr N_{R_0}(f,g)=0.
 \]
-Because \(w\neq0\), the kernel pair is nonzero.
+Because \(g\neq0\), the kernel pair \((f,g)\) is nonzero.
 
 Please verify that this is genuinely on
 \[
