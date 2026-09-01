@@ -111,6 +111,15 @@ The explicit 780 bound is not claimed on the countable separator-boundary/midpoi
 \]
 
 Verdict:
+
+Mechanical premise certificate:
+- \`scripts/certify_sw1_m1_nd_img4_gateB_pmp_graphing.py\`
+
+It checks exactly that \(+a/-a\) and \(+T/-T\) have matching inverse
+domains, that \(r_a\) swaps its two domain components, that
+\(r_T,r_{3a},r_{4a},r_{2b}\) preserve their reflection domains, and that
+all nine graphing maps have Jacobian magnitude one. The remaining
+Mass-Transport identity is proved self-contained in the analytic-gates audit.
 \[
 \boxed{\text{GATE B: GREEN / PARTIAL / FAIL}}
 \]
