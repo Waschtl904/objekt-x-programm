@@ -2,7 +2,7 @@
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 1. September 2026  
-> **Aktuelle mathematische Basis:** `main` plus Promotionsbranch `research/sw1-m1-nd-img3-eliminator`; kanonischer Pre-Promotion-Provenienzhead `ad0a59a4c086f207ff3bdd9e31cebdafdfe646ec`, vollständiger Run `33467557472` SUCCESS. Frühere Promotions-/Certificate-Aussagen behalten ihre jeweils kanonischen Provenienzen.  
+> **Aktuelle mathematische Basis:** `main@7c3fd999d2405535d8879d1548cee39bdd65e104` — PR #46, Squash-Merge der M1-ND-IMG3/IMG4-Promotion. Kanonischer Pre-Promotion-Provenienzhead `ad0a59a4c086f207ff3bdd9e31cebdafdfe646ec`; finaler Promotionsbranch-Run `33526832159` auf `dad038c8d72774cfa40d73ec751a9c61ff5e48c8` SUCCESS. Frühere Promotions-/Certificate-Aussagen behalten ihre jeweils kanonischen Provenienzen.  
 > **Aktiver mathematischer Stand:** Der universelle M1-ND-Zielknoten auf dem gesamten SW1-Wedge ist **negativ entschieden**: für den expliziten Punkt `epsilon0=Delta/4`, `R0=T/100000`, `sigma0=R0/2` gilt `ker N_{R0} != {0}`. Kanonischer Promotionsrecord: `audits/P11_R32_SW1_M1_ND_IMG4_SMALLR_NEG_PROMOTION.md`; Status `✓[M]_neg`. Die ursprünglich verlangte externe Drittprüfung wurde als Prozesskriterium transparent gewavet; **kein** `independent GREEN (external)` wird behauptet. Die allgemeine Lower-Chamber-Small-`R`-Familienaussage bleibt Kandidat. **Nächster mathematischer Schritt:** M1-ND-SALVAGE — den verbleibenden Parameterbereich klassifizieren bzw. die finite-level Kopplung so ändern, dass der Small-`R`-Blindraum verschwindet.  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 

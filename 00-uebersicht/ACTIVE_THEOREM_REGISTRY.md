@@ -1,7 +1,7 @@
 # Active Theorem Registry
 
 > **Stand:** 1. September 2026  
-> **Aktuelle mathematische Promotionsbasis:** `research/sw1-m1-nd-img3-eliminator`; kanonischer Pre-Promotion-Head `ad0a59a4c086f207ff3bdd9e31cebdafdfe646ec`, vollständiger Run `33467557472` SUCCESS. Der explizite Small-`R`-M1-ND-Gegenvektor ist als `✓[M]_neg` promotet; Merge nach `main` folgt über den aktuellen PR-Workflow. Frühere Promotions-/Certificate-Aussagen behalten ihre eigenen Provenienzen.  
+> **Aktuelle mathematische Merge-Basis:** `main@7c3fd999d2405535d8879d1548cee39bdd65e104` — PR #46, Squash-Merge der M1-ND-IMG3/IMG4-Promotion. Kanonischer Pre-Promotion-Head `ad0a59a4c086f207ff3bdd9e31cebdafdfe646ec`; finaler Promotionsbranch-Run `33526832159` auf `dad038c8d72774cfa40d73ec751a9c61ff5e48c8` SUCCESS. Der explizite Small-`R`-M1-ND-Gegenvektor ist `✓[M]_neg`. Frühere Promotions-/Certificate-Aussagen behalten ihre eigenen Provenienzen.  
 > **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11/R32-SW1-/Schur-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
 > **Nicht-Zweck:** Ersatz für \`STATUS.md\`, \`OFFENE_PROBLEME.md\`, die Papers oder Promotionsrecords.
 
