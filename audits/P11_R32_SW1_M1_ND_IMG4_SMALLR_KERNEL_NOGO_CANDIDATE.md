@@ -341,8 +341,7 @@ Somit:
 \]
 
 A8.10B zeigt zusätzlich, dass der physische Sheet-Kollisionsquotient höchstens
-zwei formale Komponenten verklebt. Daher verwenden wir im Maßargument den
-universellen physischen Bound
+zwei formale Komponenten verklebt. Daher verwenden wir im Maßargument außerhalb der abzählbaren\nSeparator-/Kollisionsausnahmemenge den a.e. physischen Bound
 
 \[
 \boxed{
@@ -422,7 +421,7 @@ V_R
 
 Also ist \(V_R\) die Vereinigung aller FREE-Komponenten, welche ein KNF-Samplingfenster treffen.
 
-Wegen IMG4.9 und A8.10B besitzen die physischen Äquivalenzklassen höchstens 780 Elemente; außerhalb der abzählbaren Sheet-Kollisionsstrata gilt sogar 390.
+Wegen IMG4.9 und A8.10B besitzen die physischen Äquivalenzklassen a.e. höchstens 780 Elemente; die Separator-Endpunkt-/Midpoint- und globalen Sheet-Kollisionsstrata sind abzählbar und damit für die Maßschranke irrelevant.
 
 Alle erzeugenden FREE-Kanten sind partielle Translationen oder Reflexionen mit Jacobi-Betrag \(1\). Die Lebesguemaßklasse ist daher unter der Äquivalenzrelation invariant.
 
@@ -871,7 +870,7 @@ Der Befund würde ausschließlich zeigen:
 Vor jeder Promotion müssen unabhängig geprüft werden:
 
 1. **A8-Übertrag:** Ist der rohe A1-Graf exakt der Graph des Horizon-Horizon-Blocks \(\mathscr T_B\) nach IMG0/IMG1-Reduktion?
-2. **Separatorbound:** Folgt aus der exakten \(\pm14\)-Trefferdeckung wirklich der a.e. 65-Layer-/390-formal-State- und 780-physical-State-Bound?
+2. **Separatorbound:** Folgt aus der exakten \(\pm14\)-Trefferdeckung wirklich der a.e. a.e. 65-Layer-/390-formal-State- und 780-physical-State-Bound?
 3. **Mass Transport:** Ist
    \[
    |V_R|\le780|U_R|
