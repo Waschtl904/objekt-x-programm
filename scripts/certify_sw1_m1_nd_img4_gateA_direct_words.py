@@ -20,6 +20,7 @@ the analytic unitary transport or reducing-subspace argument.
 """
 
 import sympy as sp
+from fractions import Fraction as F
 import certify_sw1_a1_raw_archetypes as a1
 
 print("SW1 M1-ND IMG4 GATE-A DIRECT-WORD GRAPH CROSS-CHECK")
@@ -28,6 +29,64 @@ X=a1.X
 a,b,T,d,Delta=a1.a,a1.b,a1.T,a1.d,a1.Delta
 eps=sp.simplify(Delta/4)
 T0=sp.simplify(T+eps)
+
+# Independent exact sign evaluator for linear forms A*log(2)+B*log(3).
+# Every gate/source factor at the fixed rational-log parameter point is of
+# this form. Clear denominators and compare integer prime powers.
+L2,L3=sp.log(2),sp.log(3)
+def lin_coeffs(expr):
+    z=sp.expand(expr)
+    A=sp.simplify(z.coeff(L2))
+    B=sp.simplify(z.coeff(L3))
+    rest=sp.simplify(z-A*L2-B*L3)
+    assert rest==0, ("not-linear-log-form",expr,rest)
+    assert A.is_Rational and B.is_Rational,(expr,A,B)
+    return F(int(A.p),int(A.q)),F(int(B.p),int(B.q))
+
+def exact_sign(expr):
+    A,B=lin_coeffs(sp.simplify(expr))
+    if A==0 and B==0: return 0
+    if A>=0 and B>=0: return 1
+    if A<=0 and B<=0: return -1
+    from math import lcm
+    den=lcm(A.denominator,B.denominator)
+    ai=A.numerator*(den//A.denominator)
+    bi=B.numerator*(den//B.denominator)
+    if ai>0 and bi<0:
+        return (2**ai>3**(-bi))-(2**ai<3**(-bi))
+    if ai<0 and bi>0:
+        return (3**bi>2**(-ai))-(3**bi<2**(-ai))
+    raise AssertionError((expr,A,B))
+
+def inside_abs_exact(q,bound):
+    # bound^2-q^2=(bound-q)(bound+q); each factor is a linear log form.
+    s1=exact_sign(sp.simplify(bound-q))
+    s2=exact_sign(sp.simplify(bound+q))
+    return s1*s2>=0
+
+def folded_exact(src_sym,src_at_mid):
+    s=exact_sign(src_at_mid)
+    assert s!=0
+    return sp.simplify(src_sym if s>0 else -src_sym)
+
+def aggregate_direct(mid,eps):
+    out={}
+    bound0=T+eps
+    for j,(delta,eta,lam) in enumerate(a1.WORDS):
+        shifts=[-delta-eta,-delta+eta,delta-eta,delta+eta]
+        gates=[X-delta,X-delta,X+delta,X+delta]
+        for k,(gexpr,sh) in enumerate(zip(gates,shifts)):
+            gmid=sp.simplify(gexpr.subs(X,mid))
+            if not inside_abs_exact(gmid,bound0-lam):
+                continue
+            src=X+sh
+            smid=sp.simplify(src.subs(X,mid))
+            if not inside_abs_exact(smid,bound0):
+                continue
+            prof=folded_exact(src,smid)
+            out[prof]=sp.simplify(out.get(prof,0)+a1.SIGNS[k]*a1.weights[j])
+    return {sp.simplify(k):sp.simplify(v) for k,v in out.items()
+            if sp.simplify(v)!=0}
 
 # Exact lower-chamber row intervals at epsilon0.
 regions=[
@@ -41,7 +100,7 @@ regions=[
     ("R7", T, T+eps),
 ]
 for _,lo,hi in regions:
-    assert a1.sgn(sp.simplify(hi-lo))>0
+    assert exact_sign(sp.simplify(hi-lo))>0
 
 # Canonical source expressions -> A7 names.
 map_exprs={
@@ -68,7 +127,7 @@ row_coeffs={}
 by_map={}
 for row,lo,hi in regions:
     mid=sp.simplify((lo+hi)/2)
-    got=a1.aggregate(mid,eps)  # direct eleven-word evaluation
+    got=aggregate_direct(mid,eps)  # independent direct eleven-word evaluation
     names=[]
     coeffs={}
     for expr,coeff in got.items():
@@ -99,7 +158,7 @@ def merge(intervals):
         if not out:
             out.append([lo,hi]); continue
         gap=sp.simplify(lo-out[-1][1])
-        assert a1.sgn(gap)>=0
+        assert exact_sign(gap)>=0
         if gap==0:
             out[-1][1]=hi
         else:
@@ -140,7 +199,7 @@ assert sp.simplify(row_coeffs["R7"]["r_4a"]-a1.betaT)==0
 assert sp.simplify(row_coeffs["R7"]["-a"]-a1.betap)==0
 assert sp.simplify(row_coeffs["R7"]["r_2b"]-a1.betab)==0
 
-print("raw WORDS evaluated directly:",len(a1.WORDS))
+print("raw WORDS evaluated directly with independent exact gates:",len(a1.WORDS))
 print("derived off-diagonal map alphabet:",sorted(by_map))
 print("no tenth nonidentity source map survives: PASS")
 print("derived A1 map-domain unions == A7.1--A7.9: PASS")
