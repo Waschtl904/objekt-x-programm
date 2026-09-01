@@ -190,26 +190,28 @@ Diese Kollisionsstrata sind jedoch abzählbar: eine Kollision verlangt
 für ein \(k\in\mathbb Z\). Für jedes \(k\) entstehen nur endlich viele
 Restklassen; über \(k\in\mathbb Z\) ist die Ausnahmemenge abzählbar.
 
-Unabhängig davon liefert A8.10B die stärkere, für IMG4 bequemere
-**universelle** Quotientenschranke: eine physische Komponente ist die
-Sättigung einer formalen Komponente durch höchstens
+A8.10B zeigt zusätzlich, dass auf einem globalen Sheet-Kollisionsstratum die
+physische Sättigung einer formalen Komponente höchstens
 \[
-C\cup J_K(C).
+C\cup J_K(C)
 \]
-Daher
+ist.  Auf der regulären Menge, auf der der explizite 390-State-Bound gilt,
+folgt daher
 \[
 \boxed{
 \#C_{\rm phys}(x)\le 2\cdot390=780
+\quad\text{a.e.}
 }
 \tag{G2.2}
 \]
-für jeden regulär definierten physischen Punkt; auf Randpunkten wird wie üblich
-a.e. gelesen.
 
-Der generische 390-Bound bleibt richtig außerhalb der abzählbaren
-Sheet-Kollisionsstrata, wird im weiteren Beweis aber **nicht mehr benötigt**.
+Wichtig: Aus der expliziten \(\pm14\)-Deckung folgt **kein punktweise
+universeller** 780-Bound auf den Separator-Endpunkt-/Midpoint-Orbits. Diese
+Ausnahmemenge ist jedoch abzählbar und damit Lebesgue-null; A8.14 garantiert
+dort weiterhin Endlichkeit. Für den Mass-Transport-Schritt wird ausschließlich
+die a.e.-Schranke G2.2 benötigt.
 
-**Gate 2: intern GREEN mit universellem 780-Quotientenbound.**
+**Gate 2: intern GREEN mit a.e. 780-Quotientenbound.**
 
 ---
 
@@ -369,7 +371,7 @@ die rechte Seite
 
 ist.
 
-Mit dem universellen Bound G2.2:
+Mit dem a.e. Bound G2.2:
 
 \[
 \int_{U_R}\#[y]_{\mathcal E}\,d\mu(y)
