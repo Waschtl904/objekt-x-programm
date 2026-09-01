@@ -2,8 +2,8 @@
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 1. September 2026  
-> **Aktuelle mathematische Basis:** `main@7c3fd999d2405535d8879d1548cee39bdd65e104` — PR #46, Squash-Merge der M1-ND-IMG3/IMG4-Promotion. Kanonischer Pre-Promotion-Provenienzhead `ad0a59a4c086f207ff3bdd9e31cebdafdfe646ec`; finaler Promotionsbranch-Run `33526832159` auf `dad038c8d72774cfa40d73ec751a9c61ff5e48c8` SUCCESS. Frühere Promotions-/Certificate-Aussagen behalten ihre jeweils kanonischen Provenienzen.  
-> **Aktiver mathematischer Stand:** Der universelle M1-ND-Zielknoten auf dem gesamten SW1-Wedge ist **negativ entschieden**: für den expliziten Punkt `epsilon0=Delta/4`, `R0=T/100000`, `sigma0=R0/2` gilt `ker N_{R0} != {0}`. Kanonischer Promotionsrecord: `audits/P11_R32_SW1_M1_ND_IMG4_SMALLR_NEG_PROMOTION.md`; Status `✓[M]_neg`. Die ursprünglich verlangte externe Drittprüfung wurde als Prozesskriterium transparent gewavet; **kein** `independent GREEN (external)` wird behauptet. Die allgemeine Lower-Chamber-Small-`R`-Familienaussage bleibt Kandidat. **Nächster mathematischer Schritt:** M1-ND-SALVAGE — den verbleibenden Parameterbereich klassifizieren bzw. die finite-level Kopplung so ändern, dass der Small-`R`-Blindraum verschwindet.  
+> **Aktuelle mathematische Basis:** `main@cf3d39a2e7787bc1c5b938390b6cdeec7943b0c2`. Die M1-ND-IMG4-SMALLR-Promotion ist integriert (`✓[M]_neg`). PR #49 (`research/sw1-m1-nd-salvage-phase-diagram`, geprüfter Head `2ed1583f074574c2fdb5a48203d63d520a86b5f6`) bleibt bewusst **offen und eingefroren** als intern adversarial GREEN geprüfter, aber unpromotierter Uniform-Blind-Wedge-Kandidat; finaler Review-Run `33532345053` SUCCESS. Frühere Promotions-/Certificate-Aussagen behalten ihre jeweils kanonischen Provenienzen.  
+> **Aktiver mathematischer Stand:** A / finite-level Cross-Gram ist im universellen SW1-Sinn **negativ entschieden**; PR #49 verstärkt dies als Kandidat möglicherweise zu einem ganzen offenen Wedge, wird aber nicht weiter verändert und nicht promotet. **Aktive Forschung wechselt jetzt zu B / Strong Terminal.** Erster Zielknoten ist R27-F: den festen Gamma-Crossblock bzw. den Grenzdefekt `D_infty^-` entscheiden. Danach folgt separat R22-F: der positive fixed-vector Polar-Gauge-/Angle-Defect.  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -14,6 +14,11 @@ Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist k
 
 Die aktive Front ist **nicht** „Objekt X vollständig konstruieren“ und **nicht**
 „RH beweisen“.
+
+Operativ sind jetzt zwei Achsen getrennt:
+
+1. **A / M1-ND-SALVAGE:** PR #49 ist als geprüfter Kandidat eingefroren; keine weitere Arbeit und keine Promotion ohne bewusstes Reopening.
+2. **B / Strong Terminal:** aktive Forschungsachse; zuerst R27-F, danach R22-F.
 
 Der bisherige universelle Zielknoten
 
@@ -268,25 +273,51 @@ M_j(\theta)F(\theta+j\Delta).
 Damit ist der frühere universelle M1-ND-Knoten nicht mehr offen, sondern
 negativ entschieden.
 
-### 4.1 Neue zwingende Reihenfolge: M1-ND-SALVAGE
+### 4.1 M1-ND-SALVAGE — eingefrorener Kandidatenstand
 
-1. Den promotierten Small-\(R\)-Kernelmechanismus als feste Firewall behandeln:
-   FREE-Komponentensättigung + Hub-Blindset darf nicht erneut stillschweigend
-   ausgeschlossen werden.
-2. Entscheiden, ob außerhalb des Small-\(R\)-Bereichs ein offener
-   Nichtdegenerationswedge existiert.
-3. Falls ja, dessen Parametergrenzen und notwendigen Observabilitätsmechanismus
-   exakt charakterisieren.
-4. Falls nein oder falls der Restbereich architektonisch ungeeignet ist, die
-   finite-level Kopplung so ändern, dass Annulusdaten die KNF-Sättigung
-   vollständig beobachten.
+1. Der promotierte Small-\(R\)-Kernelmechanismus bleibt feste Firewall.
+2. PR #49 dokumentiert zusätzlich einen intern GREEN geprüften Kandidaten für den offenen Wedge
+   \[
+   0<\varepsilon<\frac{T-10\Delta}{8},\quad 0<R<\varepsilon,\quad 0<\sigma<R,
+   \]
+   mit explizitem \(R\)-unabhängigem Blindset. Dieser Satz ist **nicht promotet**.
+3. PR #49 bleibt auf Head `2ed1583f074574c2fdb5a48203d63d520a86b5f6` eingefroren; keine weiteren Commits, solange A nicht bewusst wieder geöffnet wird.
+4. Die Restparameterklassifikation bleibt `?[O]`, ist aber derzeit nicht die aktive Forschungsachse.
 
 Ein punktweiser Rang- oder Determinantentest nur von \(M_0(\theta)\) genügt
 weiterhin nicht.
 
 **Firewall:** Die negative Promotion ist ein Satz über die aktuelle
-M1-ND-Geometrie am expliziten Witness. Sie ist kein HT-RED, kein Objekt-X-
-Abschluss und keine RH-Folgerung.
+M1-ND-Geometrie am expliziten Witness. PR #49 ist nur Kandidatenfortschritt.
+Kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
+
+### 4.2 Aktive Forschungsachse: B / Strong Terminal
+
+Der historische C6-Strang ist lokal geschlossen und hat den residualspektralen
+Blocker exportiert. Die heutige Strong-Terminal-Frage ist auf zwei getrennte
+Restgates reduziert:
+
+1. **R27-F / Modulus-Gate**
+   [
+   D_infty^-
+   =
+   T_{S,infty}W-WT_{R,infty}
+   stackrel{?}=0.
+   ]
+   Äquivalent ist ein fester Gamma-Crossblock auf einem fixed window zu
+   entscheiden. Dies ist der **nächste Default-Angriff**.
+
+2. **R22-F / Polar-Gauge-Gate**
+   [
+   mathscr G_U=(V_U-W)^*(V_U-W)
+   stackrel{s}{longrightarrow}0 ?
+   ]
+   Dieser fixed-vector Angle-Defect ist logisch separat und bleibt auch nach
+   einem positiven R27-F zu prüfen.
+
+Bereits vorhanden sind die finite Terminalalgebra, die negative absolute
+Metrikgrenze, die Cross-Terminal-Cauchy-Identität, uniforme relative
+Coercivity sowie Mosco-/Resolvent- und inverse-root-Grenzen.
 
 ---
 
@@ -299,12 +330,11 @@ Nach der negativen M1-ND-Promotion bleiben folgende Fronten **nicht automatisch 
 - Round-29-/\(M_{68}\)-Übertragung;
 - neue globale Low-Radius-Schwellen;
 - Closed Range / bounded below;
-- Polar Gauge / Strong Terminal Transport;
 - Konstruktion des finalen \(\mathcal K_X\);
 - Objekt X als abgeschlossenes Objekt;
 - RH.
 
-**Wichtig:** „nicht Priorität“ bedeutet nicht „irrelevant“ oder „widerlegt“. Diese Fronten werden nur bewusst geparkt, bis der einfachste SW1-Test entschieden ist.
+**Wichtig:** „nicht Priorität“ bedeutet nicht „irrelevant“ oder „widerlegt“. A / PR #49 ist derzeit bewusst geparkt; B / Strong Terminal ist dagegen jetzt aktiv.
 
 ---
 
