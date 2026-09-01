@@ -557,73 +557,161 @@ Schritt nicht.
 
 ---
 
-# 5. Gate 5 — vollständige Hub-Sichtbarkeitsabschätzung
+# 5. Gate 5 — Hub-Sichtbarkeit mit explizitem Annulustransport
 
-Auf der positiven Halbachse lautet der odd-folded Hub
+Analog zum Horizontransport definiere für \(g\in\mathscr B_W\) zunächst die
+positive Rekonstruktion
 
 \[
-(\mathcal H_Rw)(x)
+\widetilde g(x)=g_k([x]_L),
+\qquad
+x=[x]_L+kL\in(R,S).
+\]
+
+Setze auf dem symmetrischen Annulus
+
+\[
+(Wg)(x)
 =
-p[w(x-a)-w(x+a)]
-+r[w(x-b)-w(x+b)]
-+q[w(x-T)-w(x+T)].
-\]
-
-Für ungerades \(w\) hängt jeder Term nur von einem positiven Annuluswert über
-eine der sechs partiellen Maps
-
-\[
-x\mapsto|x-a|,
-\quad
-x\mapsto x+a,
-\]
-
-\[
-x\mapsto|x-b|,
-\quad
-x\mapsto x+b,
-\]
-
-\[
-x\mapsto|x-T|,
-\quad
-x\mapsto x+T,
+\frac1{\sqrt2}
+\begin{cases}
+\widetilde g(x),&x>0,\\
+-\widetilde g(-x),&x<0.
+\end{cases}
 \tag{G5.1}
 \]
 
-nach Schnitt mit \((R,S)\).
-
-Jede Map in G5.1 ist auf höchstens zwei monotonen Teilintervallen eine
-Translation/Reflexion mit Jacobi \(1\). Deshalb gilt für jede einzelne
-Source-Map \(\psi\)
-
-\[
-\mu(\psi(V_R))\le\mu(V_R).
-\]
-
-Sei \(W_R^{\rm vis}\) die Vereinigung aller sechs positiven Annulusbilder.
-Dann
+Wegen der disjunkten Liftmasken ist
 
 \[
 \boxed{
-\mu(W_R^{\rm vis})
-\le
-6\mu(V_R)
-\le
-28080R.
+W:\mathscr B_W\to\mathscr H_-^{\rm ann}
+\text{ unitär}.
 }
 \tag{G5.2}
 \]
 
-Ist \(w_+\) außerhalb \(W_R^{\rm vis}\) getragen und wird ungerade fortgesetzt,
-so gilt
+IMG0 rekonstruiert aus \(g\) die physische Annulusfunktion
+
+\[
+w_g(x)=\sqrt2\,\widetilde g(x)
+\]
+
+auf der positiven Seite mit ungerader Fortsetzung. Daher
 
 \[
 \boxed{
-P_{V_R}\mathcal H_Rw=0.
+w_g=2Wg.
 }
 \tag{G5.3}
 \]
+
+Sei
+
+\[
+H:=HE_{\mathcal A}
+\]
+
+der physische Huboperator. Für physisches ungerades \(w\) lautet der positive
+Output
+
+\[
+(Hw)(x)
+=
+p[w(x-a)-w(x+a)]
++r[w(x-b)-w(x+b)]
++q[w(x-T)-w(x+T)].
+\tag{G5.4}
+\]
+
+Für einen geraden physischen Output \(h\) ist nach IMG0 die
+\(P_0\)-Basisliftkomponente
+
+\[
+\frac1{\sqrt2}h,
+\]
+
+während nach IMG3
+
+\[
+V^*h=\sqrt2\,h
+\]
+
+in Basisliftnotation gilt. Da der physische Annulusinput zu \(g\) gleich
+\(2Wg\) ist, folgt für den effektiven Hubblock exakt
+
+\[
+\boxed{
+\mathcal H_R
+=
+V^*HW.
+}
+\tag{G5.5}
+\]
+
+Es fehlt also auch im Hubblock kein versteckter Faktor.
+
+## 5.1 Sichtbarer Annulus
+
+Für \(x>0\) hängen die sechs physikalischen Sourcewerte in G5.4 nur von
+
+\[
+|x-a|,\quad x+a,\quad
+|x-b|,\quad x+b,\quad
+|x-T|,\quad x+T
+\tag{G5.6}
+\]
+
+nach Schnitt mit dem positiven Annulus \((R,S)\) ab.
+
+Jede Map in G5.6 ist \(1\)-Lipschitz und stückweise Translation oder Reflexion.
+Daher vergrößert sie eindimensionales Lebesguemaß nicht.
+
+Sei \(W_R^{\rm vis}\) die Vereinigung der positiven Annulusquellen, die aus
+\(V_R\) durch diese sechs Maps gesehen werden. Dann
+
+\[
+\boxed{
+|W_R^{\rm vis}|
+\le
+6|V_R|
+\le
+28080R.
+}
+\tag{G5.7}
+\]
+
+Wähle \(g\in\mathscr B_W\) so, dass die zugehörige positive physische
+Annulusfunktion außerhalb \(W_R^{\rm vis}\) getragen ist. Dann
+
+\[
+M_{V_R}H(Wg)=0.
+\]
+
+Mit G4.6 und G5.5:
+
+\[
+\begin{aligned}
+\Pi_{V_R}\mathcal H_Rg
+&=
+V^*M_{V_R}V\,V^*HWg\\
+&=
+V^*M_{V_R}HWg\\
+&=0.
+\end{aligned}
+\]
+
+Also
+
+\[
+\boxed{
+\Pi_{V_R}\mathcal H_Rg=0.
+}
+\tag{G5.8}
+\]
+
+Dies ist die präzise Basisliftform der früher verkürzten Aussage
+\(P_{V_R}\mathcal H_Rg=0\).
 
 **Gate 5: intern GREEN.**
 
@@ -714,27 +802,29 @@ f
 Nach Gate 5
 
 \[
-P_{V_{R_0}}\mathcal H_{R_0}w=0.
+\Pi_{V_{R_0}}\mathcal H_{R_0}w=0.
 \]
 
 Nach Gate 4
 
 \[
-P_{V_{R_0}}f
+\Pi_{V_{R_0}}f
 =
 -\mathscr T_B^{-1}
-P_{V_{R_0}}\mathcal H_{R_0}w
+\Pi_{V_{R_0}}\mathcal H_{R_0}w
 =
 0.
 \]
 
-Da
+Da \(\Pi_{V_{R_0}}=V^*M_{V_{R_0}}V\), verschwindet die zu \(f\) gehörige
+positive physische Horizonrekonstruktion auf \(V_{R_0}\). Insbesondere gilt
+wegen
 
 \[
 U_{R_0}\subset V_{R_0},
 \]
 
-verschwindet \(f\) auf \(U_{R_0}\). Gate 6 liefert
+dass alle sechs KNF-Samplewerte verschwinden. Gate 6 liefert
 
 \[
 f\in\mathscr B_K.
