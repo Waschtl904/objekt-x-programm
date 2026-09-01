@@ -3,7 +3,7 @@
 **Date:** 31 August 2026  
 **Repository:** \`Waschtl904/objekt-x-programm\`  
 **Branch:** \`research/sw1-m1-nd-img3-eliminator\`  
-**Current claim:** candidate only; no promotion.
+**Historical role:** frozen external-review packet for the pre-promotion candidate. The explicit Small-`R` theorem was later promoted as `✓[M]_neg` in `audits/P11_R32_SW1_M1_ND_IMG4_SMALLR_NEG_PROMOTION.md` under a documented independence waiver. This packet does not itself claim `independent GREEN (external)`.
 
 ## Claim to review
 
