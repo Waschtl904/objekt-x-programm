@@ -288,6 +288,96 @@ z^{1/4}G(z)
 \tag{R37.16}
 \]
 
+
+### 4.1 Independent mode-by-mode crosscheck
+
+There is a second way to see the same rigidity before introducing \(z\).
+
+With
+
+\[
+\lambda_n=2n+\frac12,
+\]
+
+the \(n\)-th Gamma mode in (R37.6) contributes
+
+\[
+A_n\Bigl[
+e^{-\lambda_nx}
+-e^{-\lambda_n(2a-x)}
++\rho e^{-\lambda_n(x+d)}
+-\rho e^{-\lambda_n(c-x)}
+\Bigr].
+\]
+
+Since
+
+\[
+c=2a+d,
+\]
+
+this factors **mode by mode** as
+
+\[
+\boxed{
+A_nB_n
+\Bigl[
+e^{-\lambda_nx}
+-e^{-\lambda_n(2a-x)}
+\Bigr],
+}
+\tag{R37.16a}
+\]
+
+where
+
+\[
+\boxed{
+B_n:=1+\rho e^{-\lambda_nd}>0.
+}
+\tag{R37.16b}
+\]
+
+Indeed,
+
+\[
+\rho e^{-\lambda_n(x+d)}
+=
+\rho e^{-\lambda_nd}e^{-\lambda_nx},
+\]
+
+while
+
+\[
+\rho e^{-\lambda_n(c-x)}
+=
+e^{-2a\lambda_n}
+\rho e^{-\lambda_nd}e^{\lambda_nx}.
+\]
+
+Thus the four-chart relation is exactly a weighted reflection relation about \(a\), with a strictly positive multiplier \(B_n\) on every Gamma mode.
+
+Equivalently,
+
+\[
+\mathcal F_{R,S}(x)
+=
+\sum_{n=0}^\infty
+A_nB_n
+\Bigl[
+e^{-\lambda_nx}
+-e^{-\lambda_n(2a-x)}
+\Bigr].
+\tag{R37.16c}
+\]
+
+This provides an independent algebraic check of the \(H(z)\)-reduction:
+the factor \(B_n\) is precisely the coefficient multiplier
+\(1+\alpha r^n\), up to the common positive factor coming from
+\(e^{-d/4}\).
+
+The mode factorization is not by itself the uniqueness proof; the Laurent argument below remains the analytic step that forces all coefficients to vanish.
+
 Define
 
 \[
