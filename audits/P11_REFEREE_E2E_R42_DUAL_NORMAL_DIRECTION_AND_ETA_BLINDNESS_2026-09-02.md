@@ -990,7 +990,154 @@ the constrained Gamma form in the fixed source Hilbert metric:
 \qquad f,g\in H_X^0.
 \tag{R42.39}
 \]
-Repeating the R27.10--R27.12 resolvent argument directly for the unwhitened Mosco family gives
+We now spell out the resolvent step, rather than importing it only by analogy with R27.
+
+Fix \(t\ge0\) and \(g\in\mathcal H_X\).  Put
+\[
+z_U:=(C_X(U)+tI)^{-1}g.
+\]
+Equivalently, \(z_U\) is the unique minimizer of
+\[
+F_{U,g,t}(z)
+:=
+\langle C_X(U)z,z\rangle
++t\|z\|_{X,X}^2
+-2\operatorname{Re}\langle g,z\rangle_{X,X}.
+\tag{R42.39a}
+\]
+On the limit hyperplane \(H_X^0\), define
+\[
+F_{\infty,g,t}(z)
+:=
+\mathfrak c_{\Gamma,X}[z]
++t\|z\|_{X,X}^2
+-2\operatorname{Re}\langle g,z\rangle_{X,X},
+\qquad z\in H_X^0,
+\tag{R42.39b}
+\]
+and \(F_{\infty,g,t}(z)=+\infty\) for \(z\notin H_X^0\).
+
+Because \(\Lambda_X\ge a_XI\) on \(H_X^0\), the unique minimizer of
+\(F_{\infty,g,t}\) is
+\[
+z_\infty
+=
+(\Lambda_X+tI_{H_X^0})^{-1}P_{H_X^0}g.
+\tag{R42.39c}
+\]
+
+The family \(z_U\) is bounded.  Indeed, minimality against \(0\) gives
+\[
+0\ge F_{U,g,t}(z_U)
+\ge
+(a_X+t)\|z_U\|^2
+-2\|g\|\,\|z_U\|,
+\]
+so
+\[
+\|z_U\|
+\le
+\frac{2\|g\|}{a_X+t}.
+\tag{R42.39d}
+\]
+
+Let \(U_n\to\infty\) and \(z_{U_n}\rightharpoonup z\).  By the Mosco liminf in
+(R42.38), weak lower semicontinuity of the norm, and weak continuity of the linear term,
+\[
+F_{\infty,g,t}(z)
+\le
+\liminf_{n\to\infty}F_{U_n,g,t}(z_{U_n}).
+\tag{R42.39e}
+\]
+Conversely, Mosco recovery for the unique limit minimizer gives vectors
+\[
+w_U\to z_\infty
+\quad\text{strongly}
+\]
+such that
+\[
+\langle C_X(U)w_U,w_U\rangle
+\to
+\mathfrak c_{\Gamma,X}[z_\infty].
+\]
+Hence
+\[
+F_{U,g,t}(w_U)\to F_{\infty,g,t}(z_\infty).
+\tag{R42.39f}
+\]
+By minimality of \(z_U\),
+\[
+F_{U,g,t}(z_U)\le F_{U,g,t}(w_U).
+\]
+Combining this with (R42.39e)--(R42.39f) shows that every weak cluster of \(z_U\) minimizes
+\(F_{\infty,g,t}\).  By uniqueness,
+\[
+z_U\rightharpoonup z_\infty
+\]
+for the full family, and the minimum values converge:
+\[
+F_{U,g,t}(z_U)\to F_{\infty,g,t}(z_\infty).
+\tag{R42.39g}
+\]
+
+For every \(w\in\mathcal H_X\), the quadratic Euler identity at the minimizer gives
+\[
+F_{U,g,t}(w)-F_{U,g,t}(z_U)
+=
+\langle (C_X(U)+tI)(w-z_U),w-z_U\rangle.
+\]
+Therefore
+\[
+F_{U,g,t}(w)-F_{U,g,t}(z_U)
+\ge
+(a_X+t)\|w-z_U\|^2.
+\tag{R42.39h}
+\]
+Applying this to the recovery sequence \(w_U\), and using
+(R42.39f)--(R42.39g), yields
+\[
+\|w_U-z_U\|\to0.
+\]
+Since \(w_U\to z_\infty\) strongly,
+\[
+\boxed{
+(C_X(U)+tI)^{-1}g
+\longrightarrow
+(\Lambda_X+tI_{H_X^0})^{-1}P_{H_X^0}g
+}
+\tag{R42.39i}
+\]
+strongly for every fixed \(g\in\mathcal H_X\) and every \(t\ge0\).
+
+Finally, \(C_X(U)\ge a_XI\), so
+\[
+C_X(U)^{-1/2}
+=
+\frac1\pi
+\int_0^\infty
+t^{-1/2}(C_X(U)+tI)^{-1}\,dt
+\tag{R42.39j}
+\]
+with the uniform operator bound
+\[
+\left\|
+t^{-1/2}(C_X(U)+tI)^{-1}
+\right\|
+\le
+\frac{t^{-1/2}}{a_X+t},
+\]
+whose scalar majorant is integrable on \((0,\infty)\).  Dominated convergence applied
+vectorwise to (R42.39i) gives
+\[
+C_X(U)^{-1/2}
+\xrightarrow[s]{}
+\frac1\pi
+\int_0^\infty
+t^{-1/2}
+(\Lambda_X+tI_{H_X^0})^{-1}P_{H_X^0}\,dt.
+\]
+By the spectral calculus of the bounded positive coercive operator \(\Lambda_X\), the
+right side equals \(\Lambda_X^{-1/2}P_{H_X^0}\).  Hence
 \[
 \boxed{
 C_X(U)^{-1/2}
@@ -1002,8 +1149,9 @@ S_{X,\infty}
 \tag{R42.40}
 \]
 
-No new compactness input is used here: (R42.40) is the same uniformly coercive
-Mosco-to-resolvent-to-inverse-root argument as R27, now before baseline whitening.
+Thus R42.40 is now proved directly in the unwhitened Hilbert space.  No new compactness input
+is used; only R27.7 Mosco convergence, the uniform coercive lower bound, uniqueness of the
+limit minimizer, and the standard inverse-square-root integral formula enter.
 
 ### 7A.2 Canonical Gamma isometry between the two hard-constraint realizations
 
@@ -1470,8 +1618,13 @@ Independent review ledger:
 - Blob `16745c2b8e9d892059cff637021d89858158fe45`, commit
   `0c49b76e8cfda361b58a1e0f783c2c9495ef1008`: independently reviewer-GREEN for
   R42.1--R42.37, including the strict inequality \(\gamma_R<\gamma_S\).
-- Section 7A, R42.38--R42.64: new internal derivation after that review; **not yet
-  independently reviewed**.
+- Section 7A, R42.38--R42.64: independently destructively reviewed on head
+  \`7fa5fc7ca190eb6171f3e77d297413a1574ce3bd\`; all checked conclusions were reported GREEN
+  except that R42.40 was judged structurally correct but insufficiently expanded because its
+  resolvent proof was only referenced by analogy to R27.
+- R42.39a--R42.39j and the expanded proof of R42.40 were added after that review to close
+  precisely that proof-completeness gap.  The expanded R42.40 text itself awaits the final
+  independent recheck.
 
 Current booking:
 \[
