@@ -973,9 +973,34 @@ R43 does **not** prove:
 - Object X;
 - RH.
 
+## External review ledger — Phase I head \`5432ec1a9d845d63316a2eccc28662545a0c7619\`
+
+Independent destructive review of the exact Phase-I head reported:
+
+- **R43.1--R43.6:** GREEN;
+- **R43.10a--R43.10m:** GREEN, including the intermediate-radius cocycle reduction and the
+  terminal-free Gamma cyclicity gate;
+- **R43 §4 and §6A firewalls:** GREEN;
+- **R43.31:** structurally plausible, but **not yet externally verified** because the
+  quantitative estimates R43.19--R43.22 and the passage through R43.23--R43.30 remain
+  insufficiently expanded.
+
+Accordingly:
+\[
+\boxed{
+\text{R43.10a--m: independently reviewed GREEN on the exact Phase-I head;}
+}
+\]
+\[
+\boxed{
+\text{R43.31: AI-GREEN analytic candidate only.}
+}
+\]
+
+No freeze is recorded for R43 as a whole.
+
 Current booking:
 \[
 \boxed{
-\text{R43 Phase I: AI-GREEN internal exploratory candidate only.}
-}
+\text{R43 Phase I: mixed reviewed/candidate status; overall still OPEN.}
 \]
