@@ -44,9 +44,12 @@ V_X=r_X^\perp
 the baseline-whitened hard-constraint hyperplane and \(L_X\) the bounded coercive
 constrained-Gamma operator on \(V_X\).
 
-The target is to characterize possible weak cluster points of \(Q_Ux\) for fixed source vectors.
+The target is to characterize possible weak cluster points of \(Q_Ux\) for fixed source vectors
+and then extract every strong-convergence consequence forced by that cluster geometry.
 
-No claim of strong convergence is made.
+No **unconditional full-space** strong convergence is assumed or claimed.  Section 7 shows,
+however, that the tangential restriction already converges strongly and reduces the remaining
+full-space question to one scalar normal coefficient.
 
 ---
 
@@ -376,8 +379,9 @@ If one could prove the additional no-escape statement
 with a controlled phase, then \(Q_Ue_R\) would have a concrete strong limit along the target
 normal.
 
-R38 does **not** prove this.  It shows only that every weak cluster point is already forced onto
-that one-dimensional normal line.
+R38 does **not** prove this no-escape statement.  Equations (R38.8) and the hardening in
+Section 7 instead show that the normal line is the only possible fixed weak limit direction;
+whether the normal coefficient has unimodular limit remains open.
 
 ---
 
@@ -602,13 +606,26 @@ This makes the scalar gate (R38.11) precise without assuming its limit.
 
 Status of (R38.12)--(R38.20): **AI-GREEN candidate**, no promotion.
 
+### Internal audit ledger
+
+As of 2026-09-02, the full chain (R38.1)--(R38.20) has been rederived internally against the
+committed definitions.  The dependencies used in the derivation have also been source-checked:
+
+- R24: uniform coercivity and the exact relative compression/isometry setup;
+- R27: constrained-Gamma Mosco limit and strong inverse-root limit;
+- R28: \(W^*r_S=r_R\), normal decomposition, and constrained-Gamma operator representation.
+
+This records an **AI-GREEN internal freeze candidate only**.  It is not a \(\checkmark[M]\)
+promotion; independent reviewer verification is still required.
+
 ---
 
 ## 8. Strong-Terminal firewall
 
 R38 does not prove:
 
-- strong convergence of \(Q_U\);
+- unconditional full-space strong convergence of \(Q_U\) (it proves strong convergence on
+  \(V_R\) and the exact scalar criterion (R38.18));
 - a phase limit for \(Q_Ue_R\);
 - strong convergence of the polar gauge;
 - strong convergence or Cauchy convergence of \(W_{R,S,-}^{[U]}\);
