@@ -157,27 +157,38 @@ Consequently
 \tag{R39.9}
 \]
 
-If both
-
+Equation (R39.8) contains a moving source gauge.  Therefore ordinary strong convergence
 \[
-Q_U\to W
-\quad\text{strongly in the relevant moving-gauge sense}
+Q_U\xrightarrow[s]{}W
+\]
+on fixed source vectors is **not by itself sufficient** to conclude that \(W_U-V_U\to0\)
+strongly, because the tested vector is \(U_R(U)^*f\).
+
+A sufficient exact condition is either
+\[
+\boxed{
+\|Q_U-W\|\to0
+}
+\]
+in operator norm, or more generally the moving-vector condition
+\[
+\boxed{
+(Q_U-W)U_R(U)^*f\to0
+\quad\text{for every fixed }f.
+}
+\tag{R39.10a}
+\]
+Under either of these conditions, together with
+\[
+V_U\xrightarrow[s]{}W,
+\]
+equation (R39.8) gives
+\[
+W_U\xrightarrow[s]{}W.
 \]
 
-and
-
-\[
-V_U\to W
-\quad\text{strongly},
-\]
-
-then indeed
-
-\[
-W_U\to W.
-\]
-
-That is a sufficient **baseline stabilization** route.
+This is a sufficient **baseline stabilization** route.  The distinction is exactly the
+moving-unitary strong-topology firewall recorded in R22.
 
 But Strong Terminal only asks for some limit
 
@@ -255,14 +266,16 @@ This does not prove anything positive or negative about the concrete P11 family.
 
 ## 4. R37 modulus mismatch also does not decide Strong Terminal
 
-R37 gives on an explicit concrete P11 two-shift region
+On the explicit concrete P11 two-shift region, the R37 finite/algebraic argument together
+with its still-open analytic Gate G4c gives the **conditional** conclusion
 
 \[
 Q_U\not\to W
 \quad\text{strongly}.
 \]
 
-This rules out one particular baseline-stabilization scenario.
+This paragraph does not promote R37 or close G4c.  Conditional on G4c, the conclusion rules
+out one particular baseline-stabilization scenario.
 
 It does **not** rule out
 
@@ -312,7 +325,9 @@ possess a strong/weakly rigid limit, possibly
 Q_\infty\ne W.
 \]
 
-R27/R28/R37/R38 are inputs here.
+R27/R28 and the independently reviewed R38 freeze are unconditional inputs here.
+Any use of the concrete R37 nonbaseline mismatch remains conditional on the still-open
+R37 Gate G4c.
 
 ### B-POL — relative polar limit geometry
 
@@ -375,30 +390,44 @@ not
 
 ## 7. New constructive priority
 
-Because R27 already supplies strong inverse-root limits, R38 gives a fixed tangential weak-cluster
-map for \(Q_U\), and R37 produces a concrete nonbaseline modulus defect, the next constructive
-question is:
+R38 now gives more than a weak tangential cluster map.  On the independently reviewed frozen
+R38 chain,
+\[
+Q_Ux\to Y_{R,S}x
+\quad\text{strongly for every }x\in V_R,
+\]
+and the entire remaining full-space modulus problem is encoded by
+\[
+a_U:=\langle Q_Ue_R,e_S\rangle.
+\]
 
+Indeed R38.18 gives the exact criterion
 \[
 \boxed{
-Q_U
-\text{ itself: does it converge strongly to a nonbaseline }Q_\infty?
+Q_U\text{ converges strongly}
+\iff
+a_U\to\eta
+\text{ for some }|\eta|=1.
 }
 \tag{R39.13}
 \]
+If this occurs, the limit is the nonbaseline candidate
+\[
+Q_\eta(v+\alpha e_R)
+=
+Y_{R,S}v+\alpha\eta e_S.
+\]
 
-If yes, the full Roadmap-B problem becomes a cleaner polar-coherence problem around a **known
-modulus limit**, instead of the artificial target \(Q_U\to W\).
+Thus the constructive B-MOD priority is no longer an unrestricted operator-limit search:
+it is the scalar phase/no-escape problem for \(a_U\).
 
-If no, a fixed-vector/subsequence witness for non-Cauchy modulus behavior may already feed the
-full cross-terminal Cauchy analysis.
-
-The first next-order scalar inside R39.13 is the R38 future-dual-normal ratio
-
+The R38 future-dual-normal ratio
 \[
 \frac{\|A_R(U)^{-1/2}r_R\|}
-{\|A_S(U)^{-1/2}r_S\|}.
+{\|A_S(U)^{-1/2}r_S\|}
 \]
+remains a useful **auxiliary no-escape/range-angle diagnostic**, via R38.20, but it is not
+itself equivalent to strong convergence of \(Q_U\).
 
 ---
 
@@ -414,12 +443,30 @@ It does not promote:
 - Object X;
 - RH.
 
+### Internal audit ledger
+
+As of 2026-09-02, the internal R39 logic has been rechecked against the committed sources:
+
+- R5: exact cross-terminal kernel and Cauchy identity (R39.6--R39.7);
+- R14: exact polar-gauge factorization;
+- R22: strong-gauge angle defect and the moving-\(U_R\) topology firewall;
+- R23: continuous canonical-inclusion counterexample to necessity of baseline return;
+- R38: independently reviewed strong tangential convergence and scalar WOT/SOT gate.
+
+The internal audit found and repaired one genuine formulation issue: fixed-vector strong
+convergence of \(Q_U-W\) cannot be passed through the moving factor \(U_R(U)^*\) without an
+additional moving-vector or operator-norm hypothesis.  R39.10a now states the correct condition.
+
+Any R37-based concrete mismatch remains conditional on the open R37 Gate G4c.
+
 Candidate status:
 
 \[
 \boxed{
-\text{Strong Terminal / C6 remains }?[O],
+\text{R39 internal logic: AI-GREEN candidate; Strong Terminal / C6 remains }?[O].
 }
 \]
 
-but its correct active target is **strong Cauchy / arbitrary strong limit**, not forced return to the baseline terminal geometry.
+No canonical promotion or R39 freeze is made before independent reviewer verification.
+The correct active Strong-Terminal target remains **strong Cauchy / arbitrary strong limit**,
+not forced return to the baseline terminal geometry.
