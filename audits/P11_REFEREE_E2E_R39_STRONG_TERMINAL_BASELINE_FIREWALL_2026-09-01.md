@@ -467,6 +467,15 @@ Candidate status:
 }
 \]
 
-No canonical promotion or R39 freeze is made before independent reviewer verification.
+Independent reviewer verification of the exact committed R39 head
+`49e8ff7444f2a25336c89f198f5cf6cb80be0869` was completed on 2026-09-02.  The reviewer
+checked R39.6--R39.7 against R5, the repaired moving-\(U_R\) firewall / (R39.10a) against R22,
+the R23 countermodel use against R23, and the scalar B-MOD reduction (R39.13) against the frozen
+R38 chain, with all checked steps reported GREEN.
+
+Accordingly R39 is now **FROZEN as independently verified AI-GREEN** on this research lineage.
+This freeze is a governance/reviewer freeze only; it is **not** a canonical \(\checkmark[M]\)
+promotion, and Strong Terminal / C6 remains \(?[O]\).
+
 The correct active Strong-Terminal target remains **strong Cauchy / arbitrary strong limit**,
 not forced return to the baseline terminal geometry.
