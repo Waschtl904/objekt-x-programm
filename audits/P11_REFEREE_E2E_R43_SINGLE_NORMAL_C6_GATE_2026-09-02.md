@@ -207,6 +207,226 @@ The remaining task is therefore a **no-escape / uniqueness problem for one unit 
 
 ---
 
+## 3A. Intermediate-radius orthogonality and a fixed Gamma cyclicity gate
+
+There is a second exact reduction which uses the finite-terminal source cocycle.
+
+Fix an intermediate source radius
+\[
+R<Q<S.
+\]
+Let
+\[
+\tau_{X,U}\to\tau_{X,\infty}\in H_X^0
+\]
+be the frozen R42 future-normal limit at level \(X\), and define the fixed target vector
+\[
+\boxed{
+g_{Q,S}
+:=
+W_{Q,S}^{(0)}\tau_{Q,\infty}
+\in H_S^0.
+}
+\tag{R43.10a}
+\]
+
+Frozen R42 gives
+\[
+W_{Q,S}^{[U]}\tau_{Q,U}
+\longrightarrow
+W_{Q,S}^{(0)}\tau_{Q,\infty}
+=
+g_{Q,S}
+\tag{R43.10b}
+\]
+strongly: use \(\tau_{Q,U}\to\tau_{Q,\infty}\), the isometry bound on \(W_{Q,S}^{[U]}\),
+and R42.51 on the fixed tangential vector \(\tau_{Q,\infty}\).
+
+The same-terminal source cocycle gives
+\[
+W_{R,S}^{[U]}
+=
+W_{Q,S}^{[U]}W_{R,Q}^{[U]}.
+\tag{R43.10c}
+\]
+Hence, with \(w_U=W_{R,S}^{[U]}\varepsilon_R\),
+\[
+\begin{aligned}
+\langle
+w_U,
+W_{Q,S}^{[U]}\tau_{Q,U}
+\rangle
+&=
+\langle
+W_{R,Q}^{[U]}\varepsilon_R,
+\tau_{Q,U}
+\rangle\\
+&=
+\langle
+\varepsilon_R,
+(W_{R,Q}^{[U]})^*\tau_{Q,U}
+\rangle.
+\end{aligned}
+\]
+R42.32 for the pair \(R<Q\) gives exactly
+\[
+(W_{R,Q}^{[U]})^*\tau_{Q,U}
+=
+\theta_{R,Q}(U)\tau_{R,U},
+\]
+so
+\[
+\langle
+w_U,
+W_{Q,S}^{[U]}\tau_{Q,U}
+\rangle
+=
+\theta_{R,Q}(U)
+\langle\varepsilon_R,\tau_{R,U}\rangle.
+\tag{R43.10d}
+\]
+But
+\[
+\tau_{R,U}\to\tau_{R,\infty}\in H_R^0
+=
+\varepsilon_R^\perp.
+\]
+Therefore
+\[
+\boxed{
+\langle w_U,g_{Q,S}\rangle
+\longrightarrow0
+\qquad
+\text{for every }R<Q<S.
+}
+\tag{R43.10e}
+\]
+
+Thus every weak cluster \(w\) of the last normal orbit satisfies, in addition to
+(R43.8)--(R43.10),
+\[
+w\perp g_{Q,S}
+\qquad
+\forall Q\in(R,S).
+\tag{R43.10f}
+\]
+
+Define the fixed subspace
+\[
+\boxed{
+\mathscr C_{R,S}
+:=
+\overline{
+\operatorname{Ran}W_{R,S}^{(0)}
++
+\operatorname{span}\{g_{Q,S}:R<Q<S\}
+}.
+}
+\tag{R43.10g}
+\]
+Then
+\[
+\boxed{
+\text{every weak cluster of }w_U
+\text{ lies in }\mathscr C_{R,S}^{\perp}.
+}
+\tag{R43.10h}
+\]
+
+Since every generator in (R43.10g) belongs to \(H_S^0\),
+\[
+\mathscr C_{R,S}\subseteq H_S^0.
+\]
+
+### Fixed Gamma cyclicity gate
+
+Under the frozen R42 Gamma-whitening unitary
+\[
+\mathcal J_S^\Gamma:H_S^0\to V_S,
+\]
+one has
+\[
+\mathcal J_S^\Gamma
+\operatorname{Ran}W_{R,S}^{(0)}
+=
+Y_{R,S}V_R
+\]
+and, because
+\[
+\tau_{Q,\infty}
+=
+(\mathcal J_Q^\Gamma)^*\zeta_Q,
+\]
+\[
+\mathcal J_S^\Gamma g_{Q,S}
+=
+Y_{Q,S}\zeta_Q.
+\]
+Therefore
+\[
+\boxed{
+\mathscr C_{R,S}=H_S^0
+}
+\tag{R43.10i}
+\]
+is equivalent to the purely fixed constrained-Gamma density statement
+\[
+\boxed{
+\overline{
+Y_{R,S}V_R
++
+\operatorname{span}\{
+Y_{Q,S}\zeta_Q:R<Q<S
+\}
+}
+=
+V_S.
+}
+\tag{R43.10j}
+\]
+
+No terminal parameter occurs in (R43.10j).
+
+If this **Gamma cyclicity gate** holds, every weak cluster of \(w_U\) must lie in
+\[
+(H_S^0)^\perp=\mathbb C\varepsilon_S.
+\tag{R43.10k}
+\]
+In that case the full Strong-Terminal question reduces further to the one-parameter scalar
+\[
+b_U:=\langle w_U,\varepsilon_S\rangle:
+\]
+\[
+\boxed{
+\text{under (R43.10j), }
+W_Ue_{R,0}\text{ converges strongly}
+\iff
+b_U\to b,\quad |b|=1.
+}
+\tag{R43.10l}
+\]
+
+The implication uses weak convergence plus equality of the limiting norm.  No sign or phase
+for \(b\) is asserted.
+
+At the present head, (R43.10j) is **open**.  Strict monotonicity
+\(\gamma_Q<\gamma_S\) proves that the individual residual directions are nonzero, but by
+itself does not prove cyclicity/density of their continuum family.
+
+This is nevertheless a new separation of the last gate:
+\[
+\boxed{
+\text{terminal normal escape}
+\quad\Longrightarrow\quad
+\text{fixed Gamma cyclicity question}
++
+\text{one residual scalar phase/no-escape question}.
+}
+\tag{R43.10m}
+\]
+
+---
+
 ## 4. Why zeroth-jet dominance alone does not close R43
 
 The canonical source inclusion is lower triangular in the jet bases:
