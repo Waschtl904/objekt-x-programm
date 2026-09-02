@@ -301,9 +301,21 @@ The unresolved possibilities are exactly:
 
 1. \(|\eta|=1\): no loss of norm, giving strong convergence along that subsequence to a phase
    multiple of \(e_S\);
-2. \(0<|\eta|<1\): part of the unit norm escapes weakly through terminal-dependent high-energy
-   tangential directions;
-3. \(\eta=0\): complete weak escape.
+2. \(0<|\eta|<1\): a nonzero tangential norm defect remains weakly invisible;
+3. \(\eta=0\): complete weak escape of the normal source vector from every fixed target direction.
+
+More precisely, along any subsequence with
+\[
+Q_{U_n}e_R\rightharpoonup \eta e_S,
+\]
+one has
+\[
+\|P_{V_S}Q_{U_n}e_R\|^2
+\longrightarrow
+1-|\eta|^2.
+\]
+Thus the escape statement here is purely Hilbert-geometric; no additional spectral or
+"high-energy" localization is asserted.
 
 R27 alone does not distinguish these cases.
 
@@ -435,7 +447,164 @@ This is a **next-order hard-constraint problem**, not contained in the unscaled 
 
 ---
 
-## 7. Strong-Terminal firewall
+## 7. Internal hardening: strong tangential convergence and one scalar global gate
+
+The preceding cluster description can be sharpened without any new dependency.
+
+### 7.1 Strong convergence on the tangential hyperplane
+
+Let \(x\in V_R\).  Every weak cluster point \(y\) of \(Q_Ux\) satisfies by (R38.5)
+\[
+P_{V_S}y=Y_{R,S}x.
+\]
+Because \(Y_{R,S}\) and \(Q_U\) are isometries,
+\[
+\|Y_{R,S}x\|=\|x\|=\|Q_Ux\|.
+\]
+Writing
+\[
+y=Y_{R,S}x+\eta e_S
+\]
+and using weak lower semicontinuity of the norm gives
+\[
+\|x\|^2+|\eta|^2
+=\|y\|^2
+\le \liminf_U\|Q_Ux\|^2
+=\|x\|^2.
+\]
+Hence \(\eta=0\).  Weak convergence together with equality of norms is strong convergence.
+A contradiction-subsequence argument therefore yields the full limit
+\[
+\boxed{
+Q_Ux\longrightarrow Y_{R,S}x
+\quad\text{strongly for every }x\in V_R.
+}
+\tag{R38.12}
+\]
+
+Thus the tangential sector is not merely weakly rigid: it is strongly convergent.
+
+### 7.2 The normal source direction is the only remaining degree of freedom
+
+Put
+\[
+a_U:=\langle Q_Ue_R,e_S\rangle.
+\tag{R38.13}
+\]
+Then
+\[
+Q_Ue_R=a_Ue_S+w_U,
+\qquad
+w_U:=P_{V_S}Q_Ue_R\in V_S,
+\]
+with
+\[
+\boxed{
+\|w_U\|^2=1-|a_U|^2.
+}
+\tag{R38.14}
+\]
+Moreover
+\[
+\boxed{
+w_U\rightharpoonup0.
+}
+\tag{R38.15}
+\]
+Indeed, otherwise one could choose a sequence and a fixed tangential test vector witnessing
+nonvanishing.  A weakly convergent subsequence of \(Q_Ue_R\) would then contradict (R38.8),
+which forces every weak cluster point onto \(\mathbb Ce_S\).
+
+Consequently, for
+\[
+x=v+\alpha e_R,
+\qquad v\in V_R,
+\]
+one has
+\[
+Q_Ux
+=
+Q_Uv+\alpha a_Ue_S+\alpha w_U,
+\]
+where the first term converges strongly to \(Y_{R,S}v\) and the last term converges weakly to zero.
+
+Therefore the complete weak-operator cluster family is parametrized by a **single scalar**
+\(\eta\in\overline{\mathbb D}\): along every subsequence for which \(a_U\to\eta\),
+\[
+\boxed{
+Q_U\xrightarrow[\mathrm{WOT}]{}
+Q_\eta,
+\qquad
+Q_\eta(v+\alpha e_R)
+=
+Y_{R,S}v+\alpha\eta e_S.
+}
+\tag{R38.16}
+\]
+
+In particular,
+\[
+\boxed{
+Q_U\text{ converges in WOT}
+\iff
+a_U\text{ converges in }\mathbb C.
+}
+\tag{R38.17}
+\]
+
+Since \(\|Q_Ue_R\|=1\), strong convergence occurs exactly when no norm escapes:
+\[
+\boxed{
+Q_U\text{ converges strongly}
+\iff
+a_U\to\eta\text{ for some }|\eta|=1.
+}
+\tag{R38.18}
+\]
+In that case the strong limit is the isometry
+\[
+Q_\eta(v+\alpha e_R)
+=
+Y_{R,S}v+\alpha\eta e_S.
+\]
+
+Thus the full modulus-limit problem has been reduced from an operator family to the scalar
+asymptotics of
+\[
+\boxed{
+a_U=\langle Q_Ue_R,e_S\rangle.
+}
+\tag{R38.19}
+\]
+
+### 7.3 Exact form of the R38.11 ratio gate
+
+Because \(Q_UQ_U^*\) is the orthogonal projection onto \(\operatorname{Ran}Q_U\), (R38.9) gives
+\[
+\boxed{
+\|(I-Q_UQ_U^*)v_{S,U}\|^2
+=
+\|v_{S,U}\|^2-\|v_{R,U}\|^2.
+}
+\tag{R38.20}
+\]
+Hence
+\[
+\frac{\|v_{R,U}\|}{\|v_{S,U}\|}\to1
+\]
+is exactly equivalent to
+\[
+\frac{\operatorname{dist}(v_{S,U},\operatorname{Ran}Q_U)}
+{\|v_{S,U}\|}
+\to0.
+\]
+This makes the scalar gate (R38.11) precise without assuming its limit.
+
+Status of (R38.12)--(R38.20): **AI-GREEN candidate**, no promotion.
+
+---
+
+## 8. Strong-Terminal firewall
 
 R38 does not prove:
 
