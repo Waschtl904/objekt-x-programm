@@ -1,6 +1,6 @@
 # Offene Probleme — Konsolidierte Liste
 
-> **Operative Front seit 30. August 2026:** Roadmap A / finite-level Cross-Gram-Nichtentartung \(\ker\Gamma_I=\{0\}\ ?[O]\). Siehe [CURRENT-FRONT.md](CURRENT-FRONT.md), [ACTIVE_THEOREM_REGISTRY.md](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md) und die [Forschungsroadmap](00-uebersicht/FORSCHUNGS_ROADMAP_2026-08-26.md).  
+> **Operative Front seit 2. September 2026:** B / Strong Terminal, derzeit R43. R38--R42 sind frozen als independently verified AI-GREEN; Strong Terminal / C6 bleibt \(?[O]\) und ist für jedes feste \(0<R<S\) auf genau die Normalbahn \(W_{R,S}^{[U]}\varepsilon_R\), äquivalent auf \(\operatorname{Re}\langle\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R\rangle\to1\), reduziert. R43 ist offen / exploratory. R37/G4c bleibt separat offen. Siehe [CURRENT-FRONT.md](CURRENT-FRONT.md) und [ACTIVE_THEOREM_REGISTRY.md](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md).  
 > **Historischer Hinweis:** Der nachfolgende Abschnitt „Aktuelle Front (Stand NEU-250a)“ dokumentiert die Wres-/BC-Front vom 6. August 2026 und ist **nicht mehr die heutige Prioritätsangabe**. Seine lokalen offenen Knoten bleiben als historische Problemprovenienz erhalten, soweit sie nicht separat geschlossen oder reklassifiziert wurden.
 
 Kompakte Gesamtbilanz: [STATUS.md](STATUS.md) · Alle Dokumente: [INDEX.md](INDEX.md) ·
@@ -9,6 +9,63 @@ Verbindliche Karte aller Bedingungen an Objekt X: [Ebene XVI — Kontrollblatt](
 > **Ebenentrennung beachten.** HP-1–HP-7 sind Realisierungsbedingungen für $H_X$, keine
 > Axiome von $X$. Das Stieltjes-Profil des NEU-221-Strangs impliziert das HP-Profil **nicht**
 > — Fortschritt an `[O-221-1c1a–d]` darf nicht als Fortschritt an HP-2/HP-3 verbucht werden.
+
+---
+
+# Operative Front — R43 / Single-Normal Strong-Terminal Gate
+
+## [P11-R43-C6] — letzter fixed-pair Strong-Terminal-Gate ❓ [O]
+
+Frozen R42 beweist für jedes feste \(0<R<S\) starke Konvergenz des echten Future-Transports
+auf
+\[
+H_R^0=\ker\beta_R^{(0)}.
+\]
+Mit dem kanonischen Riesz-/Jet-0-Normalvektor
+\[
+\varepsilon_R=e_{R,0}
+\]
+bleibt exakt
+\[
+\boxed{
+\operatorname{Re}
+\langle
+\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R
+\rangle
+\longrightarrow1
+\quad?
+}
+\]
+für \(T,U\to\infty\).
+
+**Ergebnisoffene Klassifikation:**
+
+- Grenzwert \(1\): Strong Terminal für das feste Paar geschlossen;
+- persistenter Defekt \(<1\): Strong-Terminal-No-Go;
+- kein zweiparametriger Grenzwert: ebenfalls kein Strong Terminal.
+
+**Aktuelle R43-Untergates:**
+
+1. **Gamma-Zyklizität über Zwischenradien**
+   \[
+   \overline{
+   Y_{R,S}V_R+
+   \operatorname{span}\{Y_{Q,S}\zeta_Q:R<Q<S\}
+   }
+   =V_S
+   \quad?
+   \]
+   — vollständig terminalfreie feste Gamma-Geometrie.
+2. **Quantitative Edge-Schicht:** intern hergeleiteter Hochrisikokandidat
+   \[
+   D_U(z_U,z_U)=O(U^{-1}),
+   \]
+   noch nicht extern verifiziert.
+3. **Dritter Edge-Offblock:** selbst ein Skalargrenzwert von \(UD_U\) wäre source-kompatibel
+   und reicht nicht; erforderlich wäre eine reskalierte Edge-Form samt Ziel-Offblock.
+
+**Governance:** R43 ist AI-GREEN internal exploratory candidate, nicht frozen und nicht
+\(\checkmark[M]\). R37/G4c bleibt davon unabhängig offen.
 
 ---
 
