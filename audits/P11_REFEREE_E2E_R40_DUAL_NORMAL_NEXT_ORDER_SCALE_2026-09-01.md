@@ -529,7 +529,45 @@ This is the correct current scope.
 
 ---
 
-## 7. Strong-Terminal firewall
+## 7. Audit ledger and freeze
+
+### Dependency source-check
+
+As of 2026-09-02, the R40 dependency chain has been rechecked directly against the committed
+canonical sources on the same research lineage:
+
+- R5-JET: the fixed-window boundary expansion and the first-order coefficient used in
+  (R40.4)--(R40.6) are source-verified; the separate R5 smooth-core self-containment issue is
+  not used by R40;
+- R16-B/D: the exact near-null vector satisfies \(\ell_U(z_U)=0\),
+  \(D_U(z_U,z_U)=O(1)\), and bounded full graph energy;
+- R17-C/D: the same near-null Schur core in fact satisfies \(D_U(z_U,z_U)\to0\), but with no
+  quantitative rate; this supports the R40 firewall against claiming a limit constant;
+- R24-A: \(A_X(U)\ge a_0I\) uniformly, exactly as used in Case B;
+- R27: \(d_U=2U+O(1)\), the rank-one variational lower bound, and the hard-constraint
+  inverse-root framework are source-verified;
+- frozen R38: \(Q_U^*v_{S,U}=v_{R,U}\) is exactly (R38.9).
+
+The variational identity (R40.3), the two-case lower bound (R40.9)--(R40.13), the normalized
+R16 recovery vector (R40.14)--(R40.23), and the nested ratio estimate (R40.24)--(R40.27) were
+also independently rederived against these definitions.  No R37/G4c input is used anywhere
+in R40.
+
+### Independent reviewer verification
+
+An independent reviewer read the exact R40 blob
+`7984fae11ab553cb19951ae9b5c0af08098d616a` on parent head
+`0af33a6024d74e0e7a8f65bf8668c0d906d6cc86` and reported GREEN for R40.1--R40.25,
+including both constrained-energy bounds and the uniform positive lower bound for the
+R/S dual-normal ratio.
+
+Accordingly R40 is now **FROZEN as independently verified AI-GREEN** on this research
+lineage.  This is a governance/reviewer freeze only; it is **not** a canonical
+\(\checkmark[M]\) promotion.
+
+---
+
+## 8. Strong-Terminal firewall
 
 R40 does not prove:
 
