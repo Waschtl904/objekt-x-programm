@@ -1623,14 +1623,32 @@ Independent review ledger:
   except that R42.40 was judged structurally correct but insufficiently expanded because its
   resolvent proof was only referenced by analogy to R27.
 - R42.39a--R42.39j and the expanded proof of R42.40 were added after that review to close
-  precisely that proof-completeness gap.  The expanded R42.40 text itself awaits the final
-  independent recheck.
+  precisely that proof-completeness gap.
+- Final independent recheck of the exact head
+  \`ca0f182a7e28dabc3a5d587b2ee10d646d8cbada\` verified R42.39a--R42.39j / R42.40
+  step by step, including the minimizer formulation, Mosco liminf/recovery sandwich,
+  quadratic Euler identity, strong resolvent convergence, and the dominated
+  inverse-square-root integral passage; all checked steps were reported GREEN.
+
+Accordingly R42 is now **FROZEN as independently verified AI-GREEN** on this research lineage.
+This freeze records the verified dual-normal direction theorem, strict intrinsic Gamma ratio,
+tangential polar collapse, genuine future-transport convergence on \(H_R^0\), and the exact
+codimension-one reduction of Strong Terminal / C6.
+
+This is a governance/reviewer freeze only.  It is **not** a canonical
+\(\checkmark[M]\) promotion.  R37/G4c remains open and Strong Terminal / C6 remains
+\(?[O]\); its remaining fixed-pair gate is exactly
+\[
+\operatorname{Re}\langle
+\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R
+\rangle_{X,R}
+\longrightarrow1
+\qquad(T,U\to\infty).
+\]
 
 Current booking:
 \[
 \boxed{
-\text{R42 core reviewer-GREEN; Section 7A reviewer-GREEN modulo final recheck of expanded R42.40.}
+\text{R42 FROZEN — independently verified AI-GREEN.}
 }
 \]
-
-No freeze and no canonical \(\checkmark[M]\) promotion before independent reviewer verification.
