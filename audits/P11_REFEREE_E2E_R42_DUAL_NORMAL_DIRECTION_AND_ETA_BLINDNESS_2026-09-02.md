@@ -1625,7 +1625,7 @@ Independent review ledger:
 - R42.39a--R42.39j and the expanded proof of R42.40 were added after that review to close
   precisely that proof-completeness gap.
 - Final independent recheck of the exact head
-  \`ca0f182a7e28dabc3a5d587b2ee10d646d8cbada\` verified R42.39a--R42.39j / R42.40
+  `ca0f182a7e28dabc3a5d587b2ee10d646d8cbada` verified R42.39a--R42.39j / R42.40
   step by step, including the minimizer formulation, Mosco liminf/recovery sandwich,
   quadratic Euler identity, strong resolvent convergence, and the dominated
   inverse-square-root integral passage; all checked steps were reported GREEN.
