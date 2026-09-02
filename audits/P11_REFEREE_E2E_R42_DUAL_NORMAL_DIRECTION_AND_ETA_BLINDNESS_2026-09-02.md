@@ -930,6 +930,473 @@ sharpen the next B-POL target to:
 
 ---
 
+## 7A. Tangential polar collapse and codimension-one C6 reduction
+
+This section is new relative to the independently reviewed blob
+\`16745c2b8e9d892059cff637021d89858158fe45\`.
+It is therefore **AI-GREEN internal candidate only** until a separate independent review.
+
+### 7A.1 Unwhitened constrained inverse-root limit
+
+Let
+\[
+\mathcal H_X:=\mathcal K_{X,X}^{-},
+\qquad
+H_X^0:=\ker\beta_X^{(0)}\subset\mathcal H_X,
+\]
+and let
+\[
+C_X(U):=G_{X,U}^{-}
+\]
+be the unwhitened terminal metric represented in the fixed source Hilbert space
+\(\mathcal H_X\).
+
+R27.7 already proves the Mosco limit
+\[
+\langle C_X(U)f,f\rangle
+\ \xrightarrow[M]{}\
+\begin{cases}
+\mathfrak c_{\Gamma,X}[f],&f\in H_X^0,\\
++\infty,&f\notin H_X^0.
+\end{cases}
+\tag{R42.38}
+\]
+At the fixed source level \(X\),
+\[
+q_X^X(f)
+\le
+(1+\|H_X\|^2)\mathfrak c_{\Gamma,X}[f],
+\]
+hence
+\[
+\mathfrak c_{\Gamma,X}[f]
+\ge
+a_X\|f\|_{X,X}^2,
+\qquad
+a_X:=(1+\|H_X\|^2)^{-1}>0.
+\]
+Therefore
+\[
+C_X(U)\ge a_XI
+\]
+uniformly in \(U\).
+
+Let \(\Lambda_X:H_X^0\to H_X^0\) be the bounded positive coercive operator representing
+the constrained Gamma form in the fixed source Hilbert metric:
+\[
+\mathfrak c_{\Gamma,X}[f,g]
+=
+\langle \Lambda_Xf,g\rangle_{X,X},
+\qquad f,g\in H_X^0.
+\tag{R42.39}
+\]
+Repeating the R27.10--R27.12 resolvent argument directly for the unwhitened Mosco family gives
+\[
+\boxed{
+C_X(U)^{-1/2}
+\xrightarrow[s]{}
+S_{X,\infty}
+:=
+\Lambda_X^{-1/2}P_{H_X^0}.
+}
+\tag{R42.40}
+\]
+
+No new compactness input is used here: (R42.40) is the same uniformly coercive
+Mosco-to-resolvent-to-inverse-root argument as R27, now before baseline whitening.
+
+### 7A.2 Canonical Gamma isometry between the two hard-constraint realizations
+
+Retain
+\[
+B_X:=G_{X,T_0}^{-},
+\qquad
+A_X(U):=B_X^{-1/2}C_X(U)B_X^{-1/2},
+\qquad
+V_X:=B_X^{1/2}H_X^0,
+\]
+and let \(L_X:V_X\to V_X\) represent the transported constrained Gamma form:
+\[
+\widetilde{\mathfrak c}_{\Gamma,X}[x,y]
+=
+\langle L_Xx,y\rangle.
+\]
+R27 gives
+\[
+A_X(U)^{-1/2}
+\xrightarrow[s]{}
+L_X^{-1/2}P_{V_X}.
+\tag{R42.41}
+\]
+
+Define
+\[
+\boxed{
+\mathcal J_X^\Gamma
+:=
+L_X^{1/2}B_X^{1/2}\Lambda_X^{-1/2}
+:
+H_X^0\longrightarrow V_X.
+}
+\tag{R42.42}
+\]
+For \(h,k\in H_X^0\),
+\[
+\langle L_XB_X^{1/2}h,B_X^{1/2}k\rangle
+=
+\mathfrak c_{\Gamma,X}[h,k]
+=
+\langle\Lambda_Xh,k\rangle.
+\tag{R42.43}
+\]
+Hence
+\[
+\|\mathcal J_X^\Gamma f\|=\|f\|_{X,X}.
+\]
+Every factor in (R42.42) is boundedly invertible between the displayed spaces, so
+\[
+\boxed{
+\mathcal J_X^\Gamma:H_X^0\to V_X
+\text{ is unitary onto }V_X.
+}
+\tag{R42.44}
+\]
+
+### 7A.3 Strong tangential convergence of the individual polar adjoints
+
+Recall
+\[
+X_X(U)
+=
+C_X(U)^{1/2}B_X^{-1/2}
+=
+U_X(U)A_X(U)^{1/2}.
+\]
+Taking inverses gives
+\[
+\boxed{
+A_X(U)^{-1/2}U_X(U)^*
+=
+B_X^{1/2}C_X(U)^{-1/2}.
+}
+\tag{R42.45}
+\]
+
+Fix \(f\in H_X^0\).  Along any subsequence with
+\[
+U_X(U_n)^*f\rightharpoonup y,
+\]
+the right side of (R42.45) converges strongly by (R42.40), while the left side converges
+weakly by (R42.41).  Therefore
+\[
+P_{V_X}y
+=
+L_X^{1/2}B_X^{1/2}\Lambda_X^{-1/2}f
+=
+\mathcal J_X^\Gamma f.
+\tag{R42.46}
+\]
+By (R42.44),
+\[
+\|P_{V_X}y\|=\|f\|.
+\]
+Since \(\|U_X(U_n)^*f\|=\|f\|\), weak lower semicontinuity gives \(\|y\|\le\|f\|\).
+Thus (R42.46) exhausts the whole possible norm and
+\[
+y=\mathcal J_X^\Gamma f.
+\]
+The weak cluster is unique and has the same norm as the sequence, hence
+\[
+\boxed{
+U_X(U)^*f
+\longrightarrow
+\mathcal J_X^\Gamma f
+\quad\text{strongly for every }f\in H_X^0.
+}
+\tag{R42.47}
+\]
+
+Because \(\mathcal J_X^\Gamma\) is unitary onto \(V_X\), if
+\(v=\mathcal J_X^\Gamma f\in V_X\), then
+\[
+\|U_X(U)v-f\|
+=
+\|v-U_X(U)^*f\|
+\to0.
+\]
+Therefore
+\[
+\boxed{
+U_X(U)v
+\longrightarrow
+(\mathcal J_X^\Gamma)^*v
+\quad\text{strongly for every }v\in V_X.
+}
+\tag{R42.48}
+\]
+
+Thus B-POL is already strongly convergent on the full tangential hard-constraint block.
+Only its normal channel remains open.
+
+### 7A.4 The future-gauge normals actually converge
+
+R42.16 gives
+\[
+\widehat v_{X,U}\to\zeta_X
+\]
+strongly, with \(\zeta_X\in V_X\).  Combining this with (R42.48),
+\[
+\boxed{
+\tau_{X,U}
+=
+U_X(U)\widehat v_{X,U}
+\longrightarrow
+\tau_{X,\infty}
+:=
+(\mathcal J_X^\Gamma)^*\zeta_X
+\in H_X^0
+}
+\tag{R42.49}
+\]
+strongly.
+
+The exact identity R42.32 then yields
+\[
+\boxed{
+W_U^*\tau_{S,\infty}
+\longrightarrow
+\theta_{R,S}\tau_{R,\infty}
+}
+\tag{R42.50}
+\]
+strongly.
+
+### 7A.5 Strong convergence of the actual future transport on the hard-constraint hyperplane
+
+Fix \(0<R<S<T_0\) and abbreviate
+\[
+\mathcal J_R:=\mathcal J_R^\Gamma,
+\qquad
+\mathcal J_S:=\mathcal J_S^\Gamma.
+\]
+For \(f\in H_R^0\), (R42.47) gives
+\[
+U_R^*f\to\mathcal J_Rf.
+\]
+Frozen R38.12 and the isometry of \(Q_U\) then give
+\[
+Q_UU_R^*f
+\longrightarrow
+Y_{R,S}\mathcal J_Rf.
+\]
+The limit lies in \(V_S\), so (R42.48) at level \(S\) gives
+\[
+\boxed{
+W_{R,S}^{[U]}f
+\longrightarrow
+W_{R,S}^{(0)}f
+:=
+\mathcal J_S^*Y_{R,S}\mathcal J_Rf
+\quad\text{strongly for every }f\in H_R^0.
+}
+\tag{R42.51}
+\]
+Thus
+\[
+\boxed{
+W_{R,S}^{(0)}
+=
+\mathcal J_S^*Y_{R,S}\mathcal J_R
+:
+H_R^0\to H_S^0
+}
+\tag{R42.52}
+\]
+is an isometry.
+
+This is a strong-limit theorem for the genuine P11 future transport on an
+infinite-dimensional closed codimension-one subspace.
+
+### 7A.6 Stabilization of the strict Gamma angle inside the actual strong limit
+
+Since
+\[
+\tau_{R,\infty}=\mathcal J_R^*\zeta_R,
+\qquad
+\tau_{S,\infty}=\mathcal J_S^*\zeta_S,
+\]
+R42.24 gives
+\[
+\boxed{
+(W_{R,S}^{(0)})^*\tau_{S,\infty}
+=
+\theta_{R,S}\tau_{R,\infty}.
+}
+\tag{R42.53}
+\]
+Hence
+\[
+\boxed{
+\langle W_{R,S}^{(0)}\tau_{R,\infty},\tau_{S,\infty}\rangle
+=
+\theta_{R,S}
+=
+\sqrt{\frac{\gamma_R}{\gamma_S}}
+\in(0,1).
+}
+\tag{R42.54}
+\]
+
+The residual from R42.34 also converges strongly:
+\[
+\boxed{
+\rho_{S,U}
+\longrightarrow
+\rho_{S,\infty}
+:=
+W_{R,S}^{(0)}\tau_{R,\infty}
+-
+\theta_{R,S}\tau_{S,\infty},
+}
+\tag{R42.55}
+\]
+with
+\[
+\boxed{
+\rho_{S,\infty}\perp\tau_{S,\infty},
+\qquad
+\|\rho_{S,\infty}\|^2
+=
+1-\frac{\gamma_R}{\gamma_S}
+>0.
+}
+\tag{R42.56}
+\]
+
+Thus the strict Gamma angle is a fixed feature of the already-existing strong tangential
+terminal limit, not merely a moving asymptotic diagnostic.
+
+### 7A.7 Exact codimension-one reduction of Strong Terminal / C6
+
+Let \(\varepsilon_R\) be the unit Riesz normal of \(\beta_R^{(0)}\) in the fixed source graph
+Hilbert metric:
+\[
+H_R^0=\varepsilon_R^\perp,
+\qquad
+\|\varepsilon_R\|_{X,R}=1.
+\tag{R42.57}
+\]
+Then
+\[
+\mathcal H_R=H_R^0\oplus\mathbb C\varepsilon_R.
+\]
+
+Since every \(W_{R,S}^{[U]}\) is an isometry and (R42.51) gives strong convergence on
+\(H_R^0\),
+\[
+\boxed{
+W_{R,S}^{[U]}
+\text{ is strongly Cauchy on }\mathcal H_R
+\iff
+\bigl(W_{R,S}^{[U]}\varepsilon_R\bigr)_U
+\text{ is strongly Cauchy}.
+}
+\tag{R42.58}
+\]
+
+By the exact R39 cross-terminal identity, this is equivalent to
+\[
+\boxed{
+\operatorname{Re}
+\langle
+\varepsilon_R,
+K_{R,S}^{T,U}\varepsilon_R
+\rangle_{X,R}
+\longrightarrow1
+\qquad(T,U\to\infty).
+}
+\tag{R42.59}
+\]
+
+Therefore B-C6 for a fixed strict pair \(R<S\) is reduced from an operator-valued
+strong-Cauchy problem to the orbit of **one fixed source normal vector**, equivalently
+to **one fixed scalar matrix coefficient of the exact cross-terminal kernel**:
+\[
+\boxed{
+\text{B-MOD: one normal scalar;}
+\qquad
+\text{B-POL: one normal channel;}
+\qquad
+\text{B-C6: one fixed normal orbit / one scalar cross-kernel coefficient.}
+}
+\tag{R42.60}
+\]
+
+### 7A.8 Constraints on any remaining normal-orbit cluster
+
+Let
+\[
+\mathcal M_{R,S}^{(0)}
+:=
+\operatorname{Ran}W_{R,S}^{(0)}
+\subset H_S^0.
+\]
+If
+\[
+W_{R,S}^{[U_n]}\varepsilon_R\rightharpoonup y,
+\]
+then orthogonality to the strongly convergent tangential images gives
+\[
+y\in(\mathcal M_{R,S}^{(0)})^\perp.
+\tag{R42.61}
+\]
+Equation (R42.50) also gives
+\[
+\langle y,\tau_{S,\infty}\rangle=0.
+\tag{R42.62}
+\]
+
+Since (R42.53) implies
+\[
+P_{\mathcal M_{R,S}^{(0)}}\tau_{S,\infty}
+=
+\theta_{R,S}
+W_{R,S}^{(0)}\tau_{R,\infty},
+\]
+the vector
+\[
+d_{R,S}
+:=
+\tau_{S,\infty}
+-
+\theta_{R,S}W_{R,S}^{(0)}\tau_{R,\infty}
+\in
+(\mathcal M_{R,S}^{(0)})^\perp
+\tag{R42.63}
+\]
+is nonzero and satisfies
+\[
+\|d_{R,S}\|^2
+=
+1-\theta_{R,S}^2
+>0.
+\]
+Every weak cluster of the one remaining normal orbit lies in
+\[
+\boxed{
+(\mathcal M_{R,S}^{(0)})^\perp
+\cap
+d_{R,S}^{\perp}.
+}
+\tag{R42.64}
+\]
+
+This does not yet force uniqueness of the normal-orbit cluster, because the complement may
+remain infinite-dimensional.  It does remove one explicit nonzero complement direction from
+the possible escape geometry.
+
+---
+
 ## 8. Attempted next-order expansion and the present wall
 
 The direct terminal expansion can be continued formally one order:
@@ -976,17 +1443,23 @@ R42 does **not** prove:
 - convergence of \(a_U\);
 - \(|a_U|\to1\);
 - strong convergence of \(Q_U\);
-- convergence of the polar factors \(U_X(U)\);
-- convergence of \(\tau_{X,U}\);
-- strong Cauchy convergence of \(W_{R,S}^{[U]}\);
+- full-space strong convergence of the polar factors \(U_X(U)\) or \(U_X(U)^*\);
+- full-space strong Cauchy convergence of \(W_{R,S}^{[U]}\);
 - Object X;
 - RH.
+
+Independent review ledger:
+
+- Blob \`16745c2b8e9d892059cff637021d89858158fe45\`, commit
+  \`0c49b76e8cfda361b58a1e0f783c2c9495ef1008\`: independently reviewer-GREEN for
+  R42.1--R42.37, including the strict inequality \(\gamma_R<\gamma_S\).
+- Section 7A, R42.38--R42.64: new internal derivation after that review; **not yet
+  independently reviewed**.
 
 Current booking:
 \[
 \boxed{
-\text{R42 internal exploratory result: AI-GREEN candidate only.}
-}
+\text{R42 reviewed core GREEN; Section 7A AI-GREEN candidate only.}
 \]
 
 No freeze and no canonical \(\checkmark[M]\) promotion before independent reviewer verification.
