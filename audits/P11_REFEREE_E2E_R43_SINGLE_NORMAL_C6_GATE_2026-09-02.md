@@ -1437,16 +1437,48 @@ Prove a uniform canonical-jet tail estimate for the single orbit \(W_Ue_{R,0}\).
 with convergence of every finite coordinate, such a tail estimate would prevent weak escape
 and force strong convergence.
 
-### Route C — third hard-constraint layer
+### Route C — third hard-constraint / edge layer
 
-Determine the limit structure of \(U D_U\) and combine it with the next boundary coefficient
+Use the bounded rescaled edge forms
 \[
-\frac{3}{8U^2}\beta^{(2)}
+\mathfrak e_{X,U}^{E}
+=
+U D_U(\mathcal N_{X,U}\cdot,\mathcal N_{X,U}\cdot)
 \]
-to obtain the next moving-vector asymptotic beyond R42.  This is the first route on which the
-remaining normal channel can enter without violating the R42 eta-blindness theorem.
+together with the next boundary coefficient
+\[
+\frac{3}{8U^2}\beta^{(2)}.
+\]
+The scalar \(UD_U(z_U,z_U)\) is source-compatible and cannot by itself decide the relative
+polar angle; the genuinely new datum would be a target off-block before square-root/polar
+functional calculus.
 
-At the present head none of A--C is yet closed.
+### Route D — Gamma radius-nest multiplicity
+
+Use R43.10n--R43.10aj.  The reviewed intermediate-radius cyclicity gate is equivalent to
+cyclicity of one fixed Gamma-Riesz vector \(g_S\) under the projection nest
+\[
+P_Q^\Gamma.
+\]
+The exact scalar nest distribution is
+\[
+\|P_Q^\Gamma g_S\|_{\Gamma,S}^2=\gamma_Q.
+\]
+The new candidate analysis further reduces the issue to:
+
+\[
+\boxed{
+\textbf{GC-M1: }
+\mathcal N_{R,S}^\Gamma
+\text{ has scalar multiplicity one in the natural radius model.}
+}
+\]
+
+The reduction R43.10n--v is algebraic; the real-analyticity step R43.10w--af and the
+GC-M1 implication R43.10ag--aj are **new and not yet independently reviewed**.
+
+At the present head none of A--D closes the final C6 gate.  Route D is the current primary
+research direction because it is terminal-free.
 
 ---
 
@@ -1471,7 +1503,7 @@ R43 does **not** prove:
 - Object X;
 - RH.
 
-## External review ledger — Phase I head \`5432ec1a9d845d63316a2eccc28662545a0c7619\`
+## External review ledger — Phase I head `5432ec1a9d845d63316a2eccc28662545a0c7619`
 
 Independent destructive review of the exact Phase-I head reported:
 
@@ -1496,6 +1528,17 @@ Accordingly:
 \]
 
 No freeze is recorded for R43 as a whole.
+
+**Post-review extension:** Commit \`8f7ef972caf7ea1237db98be21b194cc645c6799\`
+adds R43.10n--R43.10aj.  These statements were derived after the reviewed Phase-I head and
+are therefore **not covered by the preceding external GREEN verdict**.  In particular:
+
+- R43.10n--R43.10v: new intrinsic Gamma projection-nest algebra, internally checked;
+- R43.10w--R43.10af: real-analyticity / positive-a.e. nest-density candidate, with the
+  complex-sector form-holomorphy step R43.10z as the main analytic review gate;
+- R43.10ag--R43.10aj: conditional reduction to the structural multiplicity-one gate GC-M1.
+
+No claim that GC-M1 is true is booked at this head.
 
 Current booking:
 \[
