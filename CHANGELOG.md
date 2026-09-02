@@ -2,11 +2,67 @@
 
 Sitzungsprotokoll des Objekt-X-Programms, neueste Einträge zuerst.
 
-> **Aktueller Stand: NEU-228 — 26. Juli 2026**
+> **Operativer Forschungsstand: 2. September 2026 — P11 Strong Terminal / R43.**  
+> Der nachfolgende NEU-Changelog bleibt als historisches Journalprotokoll erhalten; die neuen
+> P11-Auditblöcke R38--R43 werden in diesem Addendum separat geführt.
 
 Die Einträge ab NEU-162 sind aus der Commit-Historie des Arbeitsjournals rekonstruiert und
 zu thematischen Blöcken zusammengefasst. Für Details siehe die jeweiligen Dokumente über
 den [Gesamtindex](INDEX.md).
+
+
+---
+
+## [P11 R38–R43] — 2. September 2026: Strong Terminal auf einen Normal-Koeffizienten reduziert
+
+Die Strong-Terminal-Front wurde in fünf unabhängig überprüften Auditblöcken stark verdichtet:
+
+- **R38** — Modulus-/WOT-Clustergeometrie, formal frozen auf Commit `ab2aff076934f2b3d330a509f3aed7be4b504d10`.
+- **R39** — Strong-Terminal-/Baseline-Firewall und exakter Cross-Terminal-Cauchy-Gate, frozen auf `0af33a6024d74e0e7a8f65bf8668c0d906d6cc86`.
+- **R40** — Dualnormalen-Skala \(\|v_{X,U}\|\asymp U^{-1}\), frozen auf `4f93f314a58973328a5804c42202bedded8953a0`.
+- **R41** — zweiter Hard-Constraint-Gamma-Layer und exakter Ratio-Limes, frozen auf `2ac1e5387f849321288bf64b3f8fc4d4008050ef`.
+- **R42** — Dualnormalen-Richtung, strikte \(\gamma_R<\gamma_S\), tangentialer Polar-Collapse und echte Future-Transport-Konvergenz auf Kodimension eins; Freeze `7aff837d0a11a18dbf1818a936bd67bcda93bf54`, Ledger-Bereinigung `f495ce6d89dcb8facc8fa0d4e09dda279b24fb73`.
+
+Governance für R38--R42:
+
+\[
+\boxed{\text{FROZEN — independently verified AI-GREEN}}
+\]
+
+aber **keine** kanonische \(\checkmark[M]\)-Promotion.
+
+R42 reduziert für jedes feste \(0<R<S\) den gesamten verbleibenden Strong-Terminal-/C6-Gate auf
+
+\[
+\boxed{
+\operatorname{Re}\langle
+\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R
+\rangle
+\longrightarrow1
+\qquad(T,U\to\infty).
+}
+\]
+
+Der echte Future-Transport konvergiert bereits stark auf
+\[
+H_R^0=\ker\beta_R^{(0)},
+\]
+also auf einem abgeschlossenen Unterraum von Kodimension eins.
+
+### R43 Phase I — offen / exploratory
+
+R43 wurde auf Commit `43a6762a55497f139e0f4b4f45a3865ddcf7cc28` eröffnet, mit
+`973a25ec6f8e1bf5335898905cfb3ac5a8771684` um die reskalierte Edge-Form-Front ergänzt und
+mit `5432ec1a9d845d63316a2eccc28662545a0c7619` um das Zwischenradius-/Gamma-Zyklizitätsgate erweitert.
+
+Derzeitiger Hochrisikokandidat in R43 ist
+\[
+D_U(z_U,z_U)=O(U^{-1}),
+\]
+noch ohne externe Verifikation. Die Gamma-Zyklizitätsfrage ist ebenfalls offen.
+
+**Firewalls:** Strong Terminal/C6 bleibt \(?[O]\). R37/G4c bleibt separat offen. Keine Aussage
+R38--R43 darf R37 rückwirkend promovieren; kein Object-X- oder RH-Abschluss folgt.
 
 ---
 
