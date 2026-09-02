@@ -615,8 +615,13 @@ committed definitions.  The dependencies used in the derivation have also been s
 - R27: constrained-Gamma Mosco limit and strong inverse-root limit;
 - R28: \(W^*r_S=r_R\), normal decomposition, and constrained-Gamma operator representation.
 
-This records an **AI-GREEN internal freeze candidate only**.  It is not a \(\checkmark[M]\)
-promotion; independent reviewer verification is still required.
+Independent reviewer verification of the exact committed chain (R38.12)--(R38.20) was
+completed on 2026-09-02 against head
+`64cc4dbf57a3522248ee303281749cf8ec220d82`, with all checked steps reported GREEN.
+
+Accordingly R38 is now **FROZEN as independently verified AI-GREEN** on the present research
+lineage.  This freeze records mathematical/reviewer verification of the R38 chain and its
+source-checked dependencies; it is still **not** a canonical \(\checkmark[M]\) promotion.
 
 ---
 
