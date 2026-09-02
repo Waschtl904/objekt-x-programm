@@ -1,9 +1,9 @@
-# CURRENT FRONT — Objekt X / P11-R32
+# CURRENT FRONT — Objekt X / P11 Strong Terminal
 
 > **Operative Kopfschicht — zuerst lesen.**  
-> **Stand:** 1. September 2026  
-> **Aktuelle mathematische Basis:** `main` mit mathematischer Basis durch PR #48 (Pre-Doku-Sync SHA `cf3d39a2e7787bc1c5b938390b6cdeec7943b0c2`). Die M1-ND-IMG4-SMALLR-Promotion ist integriert (`✓[M]_neg`). PR #49 (`research/sw1-m1-nd-salvage-phase-diagram`, geprüfter Head `2ed1583f074574c2fdb5a48203d63d520a86b5f6`) bleibt bewusst **offen und eingefroren** als intern adversarial GREEN geprüfter, aber unpromotierter Uniform-Blind-Wedge-Kandidat; finaler Review-Run `33532345053` SUCCESS. Frühere Promotions-/Certificate-Aussagen behalten ihre jeweils kanonischen Provenienzen.  
-> **Aktiver mathematischer Stand:** A / finite-level Cross-Gram ist im universellen SW1-Sinn **negativ entschieden**; PR #49 verstärkt dies als Kandidat möglicherweise zu einem ganzen offenen Wedge, wird aber nicht weiter verändert und nicht promotet. **Aktive Forschung wechselt jetzt zu B / Strong Terminal.** Erster Zielknoten ist R27-F: den festen Gamma-Crossblock bzw. den Grenzdefekt `D_infty^-` entscheiden. Danach folgt separat R22-F: der positive fixed-vector Polar-Gauge-/Angle-Defect.  
+> **Stand:** 2. September 2026  
+> **Aktuelle Research-Basis:** Branch `research/strong-terminal-r37-two-shift-mismatch`; R42-Freeze-Linie bis `f495ce6d89dcb8facc8fa0d4e09dda279b24fb73`, danach R43 Phase I bis Head `5432ec1a9d845d63316a2eccc28662545a0c7619`. Die frühere finite-level Achse A bleibt durch M1-ND-IMG4-SMALLR negativ entschieden; PR #49 bleibt geparkt und unpromotet.  
+> **Aktiver mathematischer Stand:** **B / Strong Terminal.** R38–R42 sind jeweils **FROZEN — independently verified AI-GREEN**, ohne kanonische `✓[M]`-Promotion. Für jedes feste (0<R<S) konvergiert der echte Future-Transport bereits stark auf (H_R^0=kereta_R^{(0)}). Strong Terminal / C6 ist exakt auf die eine feste Normalbahn (W_{R,S}^{[U]}arepsilon_R), äquivalent auf den einen Cross-Kernel-Koeffizienten (operatorname{Re}langlearepsilon_R,K_{R,S}^{T,U}arepsilon_Rangle	o1), reduziert. **R43 ist offen / exploratory** und untersucht diesen letzten Gate. R37/G4c bleibt separat offen und wird durch R38–R43 nicht rückwirkend geschlossen.  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -17,8 +17,12 @@ Die aktive Front ist **nicht** „Objekt X vollständig konstruieren“ und **ni
 
 Operativ sind jetzt zwei Achsen getrennt:
 
-1. **A / M1-ND-SALVAGE:** PR #49 ist als geprüfter Kandidat eingefroren; keine weitere Arbeit und keine Promotion ohne bewusstes Reopening.
-2. **B / Strong Terminal:** aktive Forschungsachse; zuerst R27-F, danach R22-F.
+1. **A / M1-ND-SALVAGE:** historisch/strategisch geparkt; PR #49 bleibt eingefrorener, unpromotierter Kandidat.
+2. **B / Strong Terminal:** aktive Forschungsachse. R38–R42 sind frozen; **R43** ist der einzige aktuelle Arbeitsblock. Sein Hauptobservable ist
+   [
+   L_{R,S}^{T,U}:=operatorname{Re}langle e_{R,0},K_{R,S}^{T,U}e_{R,0}angle,
+   ]
+   mit (e_{R,0}=arepsilon_R), und Strong Terminal gilt genau dann, wenn (L_{R,S}^{T,U}	o1) für (T,U	oinfty).
 
 Der bisherige universelle Zielknoten
 
@@ -293,31 +297,63 @@ Kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
 
 ### 4.2 Aktive Forschungsachse: B / Strong Terminal
 
-Der historische C6-Strang ist lokal geschlossen und hat den residualspektralen
-Blocker exportiert. Die heutige Strong-Terminal-Frage ist auf zwei getrennte
-Restgates reduziert:
+Die frühere R27-F/R22-F-Zerlegung ist durch die Folge R38--R42 wesentlich weiter
+geschlossen worden.
 
-1. **R27-F / Modulus-Gate**
+**Frozen Stand:**
+
+- **R38:** Modulus-Clustergeometrie; starke Konvergenz auf \(V_R\), Full-Space-SOT auf den
+  einen Normal-Skalar \(a_U\) reduziert.
+- **R39:** exakter Strong-Terminal-/C6-Cauchy-Gate; Moving-Gauge-Firewall.
+- **R40:** \(\|v_{X,U}\|\asymp U^{-1}\).
+- **R41:** exakter zweiter Gamma-Layer,
+  \[
+  U\|v_{X,U}\|\to\frac{\sqrt{\gamma_X}}2,
+  \qquad
+  \frac{\|v_{R,U}\|}{\|v_{S,U}\|}
+  \to\sqrt{\frac{\gamma_R}{\gamma_S}}.
+  \]
+- **R42:** Richtungslimes der Dualnormalen, \(\gamma_R<\gamma_S\) für jedes \(R<S\),
+  tangentiale Polar-Konvergenz und starke Konvergenz des **echten**
+  \(W_{R,S}^{[U]}\) auf
+  \[
+  H_R^0=\ker\beta_R^{(0)}.
+  \]
+
+Damit ist für jedes feste \(0<R<S\) nur noch die Kodimension-eins-Normalrichtung offen.
+Mit dem kanonischen Jet-0-Vektor
+\[
+\varepsilon_R=e_{R,0}
+\]
+lautet der exakte verbleibende C6-Gate
+\[
+\boxed{
+\operatorname{Re}
+\langle
+\varepsilon_R,
+K_{R,S}^{T,U}\varepsilon_R
+\rangle_{X,R}
+\longrightarrow1
+\qquad(T,U\to\infty).
+}
+\]
+
+**Aktiver Block R43:** ergebnisoffene Entscheidung dieses einen Gates. Phase I hat zwei
+neue Kandidatenfronten geöffnet:
+
+1. ein terminalfreies **Gamma-Zyklizitätsgate** über Zwischenradien \(R<Q<S\);
+2. ein quantitatives Edge-Upgrade mit dem derzeit intern hergeleiteten, aber noch nicht
+   extern verifizierten Hochrisikopunkt
    \[
-   D_\infty^-
-   =
-   T_{S,\infty}W-WT_{R,\infty}
-   \stackrel{?}=0.
+   D_U(z_U,z_U)=O(U^{-1}).
    \]
-   Äquivalent ist ein fester Gamma-Crossblock auf einem fixed window zu
-   entscheiden. Dies ist der **nächste Default-Angriff**.
 
-2. **R22-F / Polar-Gauge-Gate**
-   \[
-   \mathscr G_U=(V_U-W)^*(V_U-W)
-   \stackrel{s}{\longrightarrow}0\ ?
-   \]
-   Dieser fixed-vector Angle-Defect ist logisch separat und bleibt auch nach
-   einem positiven R27-F zu prüfen.
+R43 ist **nicht frozen** und erzeugt keine Promotion. Insbesondere ist weder
+\(L_{R,S}^{T,U}\to1\) noch ein Strong-Terminal-No-Go entschieden.
 
-Bereits vorhanden sind die finite Terminalalgebra, die negative absolute
-Metrikgrenze, die Cross-Terminal-Cauchy-Identität, uniforme relative
-Coercivity sowie Mosco-/Resolvent- und inverse-root-Grenzen.
+**Separate Firewall:** R37/G4c bleibt offen. Kein Resultat R38--R43 darf R37 rückwirkend
+promovieren.
+
 
 ---
 
