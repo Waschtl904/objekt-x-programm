@@ -64,6 +64,12 @@ Fehlt eine Angabe, gilt die Buchung als unvollständig und darf nicht als \`inde
 **Firewalls:** R43 ist nicht frozen. R38--R42 erzeugen keine kanonische \(\checkmark[M]\)-Promotion.
 R37/G4c bleibt separat offen und wird durch R38--R43 nicht rückwirkend geschlossen.
 
+**Terminologie-Hinweis:** Die in den Auditdateien verwendete Freeze-Formel
+**„FROZEN — independently verified AI-GREEN“** ist eine projektinterne Reviewer-/Governance-Buchung.
+Sie wird in dieser Registry **nicht automatisch** als einer der streng definierten Subtypen
+`independent GREEN (cross-model/certificate/human)` aus §0.1 umgedeutet. Eine solche
+Subtyp-Buchung erfordert weiterhin die dort genannten zusätzlichen Provenienzangaben.
+
 ---
 
 ## 1. Formell bewiesener Input
