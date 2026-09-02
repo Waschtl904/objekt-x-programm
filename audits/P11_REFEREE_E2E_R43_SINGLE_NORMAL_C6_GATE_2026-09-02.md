@@ -427,6 +427,504 @@ This is nevertheless a new separation of the last gate:
 
 ---
 
+## 3B. Intrinsic Gamma projection nest
+
+The terminal-free cyclicity gate R43.10j has a simpler intrinsic form.
+
+Let
+\[
+\mathscr G_X^0
+:=
+\bigl(H_X^0,\mathfrak c_{\Gamma,X}\bigr)
+\]
+denote the constrained Gamma Hilbert space, and define
+\[
+\mathcal U_X^\Gamma
+:
+\mathscr G_X^0\longrightarrow V_X,
+\qquad
+\mathcal U_X^\Gamma f
+:=
+L_X^{1/2}B_X^{1/2}f.
+\tag{R43.10n}
+\]
+By definition of the transported Gamma form,
+\[
+\|\mathcal U_X^\Gamma f\|^2
+=
+\mathfrak c_{\Gamma,X}[f],
+\]
+so \(\mathcal U_X^\Gamma\) is unitary onto \(V_X\).
+
+Let \(g_X\in\mathscr G_X^0\) be the Gamma-Riesz vector from frozen R42.26c:
+\[
+\mathfrak c_{\Gamma,X}[f,g_X]
+=
+\beta_X^{(1)}(f).
+\]
+Then
+\[
+\boxed{
+q_{1,X}
+=
+\mathcal U_X^\Gamma g_X.
+}
+\tag{R43.10o}
+\]
+Indeed, for \(f\in H_X^0\),
+\[
+\begin{aligned}
+\langle
+\mathcal U_X^\Gamma f,q_{1,X}
+\rangle
+&=
+\langle
+L_X^{1/2}B_X^{1/2}f,
+L_X^{-1/2}b_{1,X}
+\rangle\\
+&=
+\langle B_X^{1/2}f,b_{1,X}\rangle\\
+&=
+\beta_X^{(1)}(f)\\
+&=
+\langle
+\mathcal U_X^\Gamma f,
+\mathcal U_X^\Gamma g_X
+\rangle,
+\end{aligned}
+\]
+and surjectivity of \(\mathcal U_X^\Gamma\) gives (R43.10o).
+
+For \(0<Q<S\), the frozen R38/R42 Gamma isometry satisfies
+\[
+\boxed{
+Y_{Q,S}\mathcal U_Q^\Gamma
+=
+\mathcal U_S^\Gamma J_{Q,S}.
+}
+\tag{R43.10p}
+\]
+This is an exact algebraic cancellation:
+\[
+\begin{aligned}
+Y_{Q,S}\mathcal U_Q^\Gamma
+&=
+L_S^{1/2}
+\bigl(B_S^{1/2}J_{Q,S}B_Q^{-1/2}\bigr)
+L_Q^{-1/2}
+L_Q^{1/2}B_Q^{1/2}\\
+&=
+L_S^{1/2}B_S^{1/2}J_{Q,S}.
+\end{aligned}
+\]
+
+Let
+\[
+P_Q^\Gamma
+:
+\mathscr G_S^0\to J_{Q,S}\mathscr G_Q^0
+\]
+be Gamma-orthogonal projection.  Frozen R42.26c--d and source compatibility give
+\[
+\boxed{
+P_Q^\Gamma g_S
+=
+J_{Q,S}g_Q.
+}
+\tag{R43.10q}
+\]
+Consequently
+\[
+\boxed{
+Y_{Q,S}\zeta_Q
+=
+-
+\frac{
+\mathcal U_S^\Gamma P_Q^\Gamma g_S
+}{
+\sqrt{\gamma_Q}
+}.
+}
+\tag{R43.10r}
+\]
+Likewise
+\[
+Y_{R,S}V_R
+=
+\mathcal U_S^\Gamma
+J_{R,S}\mathscr G_R^0.
+\tag{R43.10s}
+\]
+
+Hence R43.10j is equivalent to the single-vector nest-cyclicity statement
+\[
+\boxed{
+\overline{
+J_{R,S}\mathscr G_R^0
++
+\operatorname{span}
+\{P_Q^\Gamma g_S:R<Q<S\}
+}
+=
+\mathscr G_S^0.
+}
+\tag{R43.10t}
+\]
+
+Thus the continuum family in R43.10j consists of projections of **one fixed vector**
+\(g_S\) onto one fixed increasing Gamma nest.
+
+---
+
+## 3C. The scalar nest measure is exactly \(\gamma_Q\)
+
+The projection identity (R43.10q) gives
+\[
+\boxed{
+\|P_Q^\Gamma g_S\|_{\Gamma,S}^2
+=
+\|g_Q\|_{\Gamma,Q}^2
+=
+\gamma_Q.
+}
+\tag{R43.10u}
+\]
+For \(0<Q_1<Q_2<S\), nested orthogonal projections satisfy
+\[
+P_{Q_1}^\Gamma P_{Q_2}^\Gamma=P_{Q_1}^\Gamma,
+\]
+so
+\[
+\boxed{
+\|
+(P_{Q_2}^\Gamma-P_{Q_1}^\Gamma)g_S
+\|_{\Gamma,S}^2
+=
+\gamma_{Q_2}-\gamma_{Q_1}.
+}
+\tag{R43.10v}
+\]
+Frozen R42.26l therefore says precisely that the scalar spectral measure of \(g_S\)
+for the radius nest charges every nonempty radius interval.
+
+Strict increase alone is not enough for cyclicity.  Two abstract obstructions must be kept
+separate:
+
+1. a nest may have multiplicity \(>1\), in which case one vector cannot generate all
+   multiplicity channels;
+2. even in a multiplicity-one model, a vector can vanish on a positive-measure set with
+   empty interior, so its cumulative norm can still increase on every interval without
+   being cyclic.
+
+The next subsection removes the second obstruction at the level of the natural radius
+parameter.
+
+---
+
+## 3D. Real-analyticity of the intrinsic Gamma ratio function
+
+We now show that
+\[
+Q\longmapsto\gamma_Q
+\]
+is real analytic on \((0,\infty)\).
+
+### Fixed-domain dilation
+
+Let
+\[
+(D_Qh)(u)
+=
+Q^{-1/2}h(u/Q),
+\qquad
+u\in(-Q,Q),
+\tag{R43.10w}
+\]
+for odd \(h\) on \((-1,1)\).  Under the binding Fourier convention,
+\[
+\widehat{E_QD_Qh}(\xi)
+=
+Q^{1/2}\widehat{E_1h}(Q\xi).
+\]
+Therefore the pulled-back Gamma form is
+\[
+\boxed{
+a_Q[h,k]
+=
+\frac1{2\pi}
+\int_{\mathbb R}
+m_\Gamma(\eta/Q)
+\widehat{E_1h}(\eta)
+\overline{\widehat{E_1k}(\eta)}
+\,d\eta.
+}
+\tag{R43.10x}
+\]
+
+Fix a compact interval
+\[
+I=[Q_-,Q_+]\Subset(0,\infty).
+\]
+R33.3 and monotonicity of the positive R33 series imply uniform two-sided comparability
+of
+\[
+m_\Gamma(\eta/Q),
+\qquad Q\in I,
+\]
+with any one reference weight \(m_\Gamma(\eta/Q_*)\), \(Q_*\in I\).
+Hence all forms \(a_Q\), \(Q\in I\), have one common Hilbert form domain
+\(\mathscr V_I\), with equivalent norms.
+
+The exact R33 series is
+\[
+m_\Gamma(\xi)
+=
+1+
+\sum_{n=0}^\infty
+\frac{\xi^2/4}{
+y_n\bigl(y_n^2+\xi^2/4\bigr)
+},
+\qquad
+y_n=n+\frac14.
+\tag{R43.10y}
+\]
+For \(Q\) in a sufficiently small complex neighborhood of \(I\) contained in a fixed
+sector
+\[
+|\arg Q|<\frac{\pi}{4},
+\qquad
+|Q|\ge \frac{Q_-}{2},
+\]
+every summand in
+\[
+m_\Gamma(\eta/Q)
+\]
+is holomorphic in \(Q\), and its denominator stays uniformly away from its purely
+imaginary zero set.  On that neighborhood the series and all local \(Q\)-derivatives
+are dominated, in form norm, by a constant multiple of one reference R33 weight.
+Consequently
+\[
+Q\longmapsto a_Q
+\]
+is a holomorphic family in
+\[
+\mathcal B(\mathscr V_I,\mathscr V_I^*).
+\tag{R43.10z}
+\]
+
+The pulled-back jet functionals
+\[
+b_{m,Q}(h)
+:=
+\beta_Q^{(m)}(D_Qh)
+=
+Q^{1/2}
+\int_{-1}^{1}
+h(y)\phi_m(Qy)\,dy
+\tag{R43.10aa}
+\]
+are holomorphic \(\mathscr V_I^*\)-valued functions of \(Q\), because the explicit
+kernels
+\[
+\phi_m(u)=\operatorname{sgn}(u)I_m(|u|)
+\]
+are entire in the radial variable away from the fixed sign and are uniformly bounded on
+compact \(Q\)-sets.
+
+Let
+\[
+A(Q):\mathscr V_I\to\mathscr V_I^*
+\]
+be the coercive operator represented by \(a_Q\).  Uniform coercivity on \(I\), together
+with (R43.10z), gives a locally holomorphic inverse
+\[
+A(Q)^{-1}.
+\]
+Put
+\[
+u_{j,Q}:=A(Q)^{-1}b_{j,Q},
+\qquad j=0,1.
+\tag{R43.10ab}
+\]
+On the real axis,
+\[
+d_Q:=b_{0,Q}(u_{0,Q})>0.
+\]
+Therefore locally
+\[
+\widetilde g_Q
+=
+u_{1,Q}
+-
+\frac{b_{0,Q}(u_{1,Q})}{d_Q}\,u_{0,Q}
+\tag{R43.10ac}
+\]
+is holomorphic and is exactly the pulled-back constrained Gamma-Riesz vector:
+\[
+D_Q\widetilde g_Q=g_Q.
+\]
+Hence
+\[
+\boxed{
+\gamma_Q
+=
+b_{1,Q}(\widetilde g_Q)
+}
+\tag{R43.10ad}
+\]
+is real analytic on \((0,\infty)\).
+
+Combining this with the frozen strict monotonicity
+\[
+\gamma_{Q_1}<\gamma_{Q_2}
+\qquad(Q_1<Q_2)
+\]
+gives
+\[
+\gamma_Q'\ge0
+\]
+everywhere.  Since \(\gamma'\) is real analytic and cannot vanish identically on any
+nonempty interval,
+\[
+\boxed{
+\gamma_Q'>0
+\quad
+\text{for all }Q>0
+\text{ except at most a discrete set.}
+}
+\tag{R43.10ae}
+\]
+Thus
+\[
+\boxed{
+d\nu_{g_S}(Q)
+:=
+d\|P_Q^\Gamma g_S\|_{\Gamma,S}^2
+=
+\gamma_Q'\,dQ
+}
+\tag{R43.10af}
+\]
+has strictly positive density for Lebesgue-a.e. radius.
+
+The proof of (R43.10z), especially the uniform complex-sector domination of the R33
+series in the common form norm, is a new analytic step and requires independent review
+before any freeze.
+
+---
+
+## 3E. Cyclicity is reduced to one Gamma-nest multiplicity theorem
+
+Define the constrained Gamma radius nest on the interval \((R,S)\):
+\[
+\mathcal N_{R,S}^\Gamma
+:=
+\{
+P_Q^\Gamma-P_R^\Gamma:
+R\le Q\le S
+\}
+\quad
+\text{on }
+\bigl(J_{R,S}\mathscr G_R^0\bigr)^\perp.
+\tag{R43.10ag}
+\]
+
+Suppose this nest has a multiplicity-one Lebesgue model, i.e. there exists a unitary
+\[
+\mathcal W_{R,S}
+:
+\bigl(J_{R,S}\mathscr G_R^0\bigr)^\perp
+\longrightarrow
+L^2((R,S),dQ)
+\]
+such that
+\[
+\mathcal W_{R,S}
+(P_Q^\Gamma-P_R^\Gamma)
+\mathcal W_{R,S}^*
+=
+M_{1_{(R,Q]}}.
+\tag{R43.10ah}
+\]
+Then by (R43.10v) and (R43.10af),
+\[
+\left|
+\mathcal W_{R,S}
+(I-P_R^\Gamma)g_S
+\right|^2
+=
+\gamma_Q'
+\quad\text{a.e. in the radius variable}.
+\]
+The right side is positive almost everywhere by (R43.10ae).  Hence
+\[
+(I-P_R^\Gamma)g_S
+\]
+is cyclic for the multiplication nest, and therefore
+\[
+\boxed{
+\text{(R43.10ah)}
+\Longrightarrow
+\text{R43.10t}
+\Longleftrightarrow
+\text{R43.10j}.
+}
+\tag{R43.10ai}
+\]
+
+Thus the terminal-free Gamma-cyclicity problem is sharpened to one structural theorem:
+
+\[
+\boxed{
+\textbf{GC-M1: }
+\mathcal N_{R,S}^\Gamma
+\text{ has multiplicity one in the natural radius/Lebesgue model.}
+}
+\tag{R43.10aj}
+\]
+
+The scalar-support part is already supplied by the analytic and strictly increasing
+function \(\gamma_Q\).
+
+### Why GC-M1 cannot be omitted
+
+Strict increase of \(\gamma_Q\) alone does not prove cyclicity.  For example, in the
+multiplicity-two standard nest
+\[
+L^2((R,S),dQ;\mathbb C^2)
+\]
+the vector
+\[
+g(Q)=(1,0)
+\]
+has strictly increasing cumulative norm on every interval but its nest-cyclic span misses
+the entire second component.
+
+Therefore no inference
+\[
+\gamma_{Q_1}<\gamma_{Q_2}\ \forall Q_1<Q_2
+\Longrightarrow
+\text{R43.10j}
+\]
+is permitted without a multiplicity theorem.
+
+### Candidate routes to GC-M1
+
+The exact Gamma geometry offers two natural routes, neither yet proved in the repository:
+
+1. **weighted Paley--Wiener / canonical-system route:** after Fourier transform,
+   \(\mathfrak c_{\Gamma,Q}\) is the exact R33-weighted Paley--Wiener norm on entire
+   functions of type \(Q\); prove that the odd, one-constraint radius chain remains
+   multiplicity one;
+2. **triangular spectral-factor route:** factor the positive scalar R33 symbol and construct
+   an explicit radius-triangular whitening of the constrained Gamma form.  A triangular
+   factor with triangular inverse would identify the nest with the standard Volterra
+   multiplicity-one nest.
+
+These are now fixed, terminal-free operator-theoretic questions.
+
+---
+
 ## 4. Why zeroth-jet dominance alone does not close R43
 
 The canonical source inclusion is lower triangular in the jet bases:
