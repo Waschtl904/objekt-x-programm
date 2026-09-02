@@ -523,6 +523,48 @@ this can also be written without an arbitrary polar choice as
 \]
 The polar factors are unique, so \(\tau_{X,U}\) is canonical.
 
+The vector \(\tau_{X,U}\) has an intrinsic future-metric interpretation.  Let
+\[
+C_X(U):=G_{X,U}^-,
+\qquad
+B_X:=G_{X,T_0}^-,
+\]
+and let \(\rho_{X,T_0}=B_X^{-1/2}r_X\) be the baseline Riesz representative.  Define the
+future Riesz representative \(\rho_{X,U}^{\rm fut}\) by
+\[
+\beta_X^{(0)}(f)
+=
+\langle C_X(U)f,\rho_{X,U}^{\rm fut}\rangle.
+\]
+Since the same functional is represented at baseline by \(B_X\rho_{X,T_0}\),
+\[
+C_X(U)\rho_{X,U}^{\rm fut}
+=
+B_X\rho_{X,T_0}
+=
+B_X^{1/2}r_X.
+\]
+Therefore
+\[
+C_X(U)^{1/2}\rho_{X,U}^{\rm fut}
+=
+C_X(U)^{-1/2}B_X^{1/2}r_X
+=
+X_X(U)^{-*}r_X.
+\]
+Hence
+\[
+\boxed{
+\tau_{X,U}
+=
+\frac{C_X(U)^{1/2}\rho_{X,U}^{\rm fut}}
+{\|C_X(U)^{1/2}\rho_{X,U}^{\rm fut}\|}.
+}
+\tag{R42.31a}
+\]
+Thus \(\tau_{X,U}\) is exactly the normalized first-boundary Riesz normal in the actual
+future metric, expressed in future-whitened coordinates.
+
 For the actual future transport
 \[
 W_U:=W_{R,S}^{[U]}
@@ -553,6 +595,30 @@ Equivalently,
 }
 \tag{R42.33}
 \]
+
+There is also an exact future-tangential invariance.  Put
+\[
+\mathcal V_{X,U}^{\rm fut}:=\tau_{X,U}^{\perp}.
+\]
+If \(x\in\mathcal V_{R,U}^{\rm fut}\), then by (R42.32)
+\[
+\langle W_Ux,\tau_{S,U}\rangle
+=
+\langle x,W_U^*\tau_{S,U}\rangle
+=
+\theta_U\langle x,\tau_{R,U}\rangle
+=0.
+\]
+Therefore
+\[
+\boxed{
+W_U\mathcal V_{R,U}^{\rm fut}
+\subset
+\mathcal V_{S,U}^{\rm fut}.
+}
+\tag{R42.33a}
+\]
+So the full future transport respects the moving hard-constraint hyperplanes exactly.
 
 This is the first direct placement of the R41 invariant inside the **actual** future transport,
 rather than only the modulus isometry.
