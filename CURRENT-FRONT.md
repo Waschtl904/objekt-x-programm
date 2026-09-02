@@ -2,8 +2,8 @@
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 2. September 2026  
-> **Aktuelle Research-Basis:** Branch `research/strong-terminal-r37-two-shift-mismatch`; R42-Freeze-Linie bis `f495ce6d89dcb8facc8fa0d4e09dda279b24fb73`, danach R43 Phase I bis Head `5432ec1a9d845d63316a2eccc28662545a0c7619`. Die frühere finite-level Achse A bleibt durch M1-ND-IMG4-SMALLR negativ entschieden; PR #49 bleibt geparkt und unpromotet.  
-> **Aktiver mathematischer Stand:** **B / Strong Terminal.** R38–R42 sind jeweils **FROZEN — independently verified AI-GREEN**, ohne kanonische `✓[M]`-Promotion. Für jedes feste (0<R<S) konvergiert der echte Future-Transport bereits stark auf (H_R^0=kereta_R^{(0)}). Strong Terminal / C6 ist exakt auf die eine feste Normalbahn (W_{R,S}^{[U]}arepsilon_R), äquivalent auf den einen Cross-Kernel-Koeffizienten (operatorname{Re}langlearepsilon_R,K_{R,S}^{T,U}arepsilon_Rangle	o1), reduziert. **R43 ist offen / exploratory** und untersucht diesen letzten Gate. R37/G4c bleibt separat offen und wird durch R38–R43 nicht rückwirkend geschlossen.  
+> **Aktuelle Research-Basis:** Branch \`research/strong-terminal-r37-two-shift-mismatch\`; R42-Freeze-Linie bis \`f495ce6d89dcb8facc8fa0d4e09dda279b24fb73\`, danach R43 Phase I bis mathematischem Head \`5432ec1a9d845d63316a2eccc28662545a0c7619\`. Die spätere Commitfolge enthält nur Dokumentationssynchronisation. Die frühere finite-level Achse A bleibt durch M1-ND-IMG4-SMALLR negativ entschieden; PR #49 bleibt geparkt und unpromotet.  
+> **Aktiver mathematischer Stand:** **B / Strong Terminal.** R38–R42 sind jeweils **FROZEN — independently verified AI-GREEN**, ohne kanonische \`✓[M]\`-Promotion. Für jedes feste \(0<R<S\) konvergiert der echte Future-Transport bereits stark auf \(H_R^0=\ker\beta_R^{(0)}\). Strong Terminal / C6 ist exakt auf die eine feste Normalbahn \(W_{R,S}^{[U]}\varepsilon_R\), äquivalent auf den einen Cross-Kernel-Koeffizienten \(\operatorname{Re}\langle\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R\rangle\to1\), reduziert. **R43 ist offen / exploratory** und untersucht diesen letzten Gate. R37/G4c bleibt separat offen und wird durch R38–R43 nicht rückwirkend geschlossen.  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -19,10 +19,17 @@ Operativ sind jetzt zwei Achsen getrennt:
 
 1. **A / M1-ND-SALVAGE:** historisch/strategisch geparkt; PR #49 bleibt eingefrorener, unpromotierter Kandidat.
 2. **B / Strong Terminal:** aktive Forschungsachse. R38–R42 sind frozen; **R43** ist der einzige aktuelle Arbeitsblock. Sein Hauptobservable ist
-   [
-   L_{R,S}^{T,U}:=operatorname{Re}langle e_{R,0},K_{R,S}^{T,U}e_{R,0}angle,
-   ]
-   mit (e_{R,0}=arepsilon_R), und Strong Terminal gilt genau dann, wenn (L_{R,S}^{T,U}	o1) für (T,U	oinfty).
+   \[
+   L_{R,S}^{T,U}
+   :=
+   \operatorname{Re}
+   \langle e_{R,0},K_{R,S}^{T,U}e_{R,0}\rangle,
+   \]
+   mit \(e_{R,0}=\varepsilon_R\). Strong Terminal gilt genau dann, wenn
+   \[
+   L_{R,S}^{T,U}\to1
+   \qquad(T,U\to\infty).
+   \]
 
 Der bisherige universelle Zielknoten
 
@@ -562,6 +569,20 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 }
 \]
 
-**Nächster Default:** **B / Strong Terminal — R27-F**. Entscheide den fixed Gamma-Crossblock bzw. ob \(D_\infty^-=0\). Erst danach R22-F / Polar-Gauge. PR #49 bleibt eingefrorener A-Kandidat und wird nicht parallel weiter verändert.
+**Nächster Default:** **R43 / Single-Normal C6 Gate.** Entscheide ergebnisoffen
+\[
+\operatorname{Re}
+\langle
+\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R
+\rangle
+\longrightarrow1
+\quad?
+\]
+Zulässige Untergates sind die terminalfreie Gamma-Zyklizität der Zwischenradius-Familie und,
+falls nötig, die reskalierte dritte Edge-Schicht. PR #49 bleibt eingefrorener A-Kandidat und
+wird nicht parallel weiter verändert.
 
-**Firewall:** IMG1 bleibt in seinem dokumentierten Certificate-Scope unpromotiert. Neu promotiert ist ausschließlich `M1-ND-SMALLR: ✓[M]_neg` für den expliziten Witness auf \(\mathscr B_K\oplus\mathscr B_W\). Eine separate formale Promotion von \(\ker\Gamma_I\neq\{0\}\) wird hier nicht gebucht. Die A-Restparameterklassifikation bleibt offen, ist aber derzeit geparkt; aktive Forschung ist B / R27-F. Kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
+**Firewall:** R38–R42 sind reviewer-governance-frozen, aber nicht kanonisch \(\checkmark[M]\)
+promotet. R43 ist offen. R37/G4c bleibt separat offen. Keine Rückkehr zur universellen
+SW1-Injektivitätsbehauptung ohne Architekturänderung; kein HT-RED, kein Objekt-X-Abschluss
+und keine RH-Folgerung.
