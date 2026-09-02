@@ -2,8 +2,8 @@
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 2. September 2026  
-> **Aktuelle Research-Basis:** Branch \`research/strong-terminal-r37-two-shift-mismatch\`; R42-Freeze-Linie bis \`f495ce6d89dcb8facc8fa0d4e09dda279b24fb73\`, danach R43 Phase I bis mathematischem Head \`5432ec1a9d845d63316a2eccc28662545a0c7619\`. Die spätere Commitfolge enthält nur Dokumentationssynchronisation. Die frühere finite-level Achse A bleibt durch M1-ND-IMG4-SMALLR negativ entschieden; PR #49 bleibt geparkt und unpromotet.  
-> **Aktiver mathematischer Stand:** **B / Strong Terminal.** R38–R42 sind jeweils **FROZEN — independently verified AI-GREEN**, ohne kanonische \`✓[M]\`-Promotion. Für jedes feste \(0<R<S\) konvergiert der echte Future-Transport bereits stark auf \(H_R^0=\ker\beta_R^{(0)}\). Strong Terminal / C6 ist exakt auf die eine feste Normalbahn \(W_{R,S}^{[U]}\varepsilon_R\), äquivalent auf den einen Cross-Kernel-Koeffizienten \(\operatorname{Re}\langle\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R\rangle\to1\), reduziert. **R43 ist offen / exploratory** und untersucht diesen letzten Gate. R37/G4c bleibt separat offen und wird durch R38–R43 nicht rückwirkend geschlossen.  
+> **Aktuelle Research-Basis:** Branch `research/strong-terminal-r37-two-shift-mismatch`; R42-Freeze-Linie bis `f495ce6d89dcb8facc8fa0d4e09dda279b24fb73`, danach R43 bis mathematischem Head `92acea23ecea203a823b3df22744dd086276ff59`. Phase I auf `5432ec1a9d845d63316a2eccc28662545a0c7619` ist partiell extern geprüft; die späteren Gamma-Nest-/GC-M1-Erweiterungen sind noch nicht unabhängig reviewed. Die frühere finite-level Achse A bleibt durch M1-ND-IMG4-SMALLR negativ entschieden; PR #49 bleibt geparkt und unpromotet.  
+> **Aktiver mathematischer Stand:** **B / Strong Terminal.** R38–R42 sind jeweils **FROZEN — independently verified AI-GREEN**, ohne kanonische `✓[M]`-Promotion. Für jedes feste \(0<R<S\) konvergiert der echte Future-Transport bereits stark auf \(H_R^0=\ker\beta_R^{(0)}\). Strong Terminal / C6 ist exakt auf die eine feste Normalbahn \(W_{R,S}^{[U]}\varepsilon_R\), äquivalent auf den einen Cross-Kernel-Koeffizienten \(\operatorname{Re}\langle\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R\rangle\to1\), reduziert. **R43 ist offen / exploratory** und untersucht diesen letzten Gate. R37/G4c bleibt separat offen und wird durch R38–R43 nicht rückwirkend geschlossen.  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
@@ -130,7 +130,7 @@ Status:
 \]
 
 Quelle:
-\`papers/P12_Adelic_Hub_Injectivity_Program.tex\`, Corollary \`cor:p12-consolidated\`.
+`papers/P12_Adelic_Hub_Injectivity_Program.tex`, Corollary `cor:p12-consolidated`.
 
 SW1 liegt vollständig in diesem Bereich. Daher muss die äußere Hub-Injektivität für den SW1-Angriff **nicht neu bewiesen** werden.
 
@@ -140,13 +140,13 @@ HT-A1, HT-A2, HT-A3 und HT-A4a sind AI-GREEN geprüfte Kandidaten, aber nicht fo
 
 FG-1, FG-TR1, die \(\widehat\Phi_R\)-Normalform und CG-FG1 sind ebenfalls AI-GREEN Kandidaten-/Kompositionsresultate ohne formale Promotion.
 
-SW1-KNF (\`audits/P11_R32_SW1_KNF_CANDIDATE.md\`, PR #15) ist ein AI-GREEN Kandidat, der auf SW1 eine vollständige sektorale Kernel-Normalform liefert und dort die globale FG-TR1-Blackbox ersetzt.
+SW1-KNF (`audits/P11_R32_SW1_KNF_CANDIDATE.md`, PR #15) ist ein AI-GREEN Kandidat, der auf SW1 eine vollständige sektorale Kernel-Normalform liefert und dort die globale FG-TR1-Blackbox ersetzt.
 
-SW1-BL7 (\`audits/P11_R32_SW1_BL7_CANDIDATE.md\`, PR #16) ist ein AI-GREEN Kandidat: für \(s\in(R,\varepsilon)\) gilt \(2d+s\in(a+R,b-R)\subset\mathcal Z_{R,\mathrm{SW1}}^{\rm phys}\), für jedes \(s\), als siebter direkter Blindwert neben den sechs promoteten.
+SW1-BL7 (`audits/P11_R32_SW1_BL7_CANDIDATE.md`, PR #16) ist ein AI-GREEN Kandidat: für \(s\in(R,\varepsilon)\) gilt \(2d+s\in(a+R,b-R)\subset\mathcal Z_{R,\mathrm{SW1}}^{\rm phys}\), für jedes \(s\), als siebter direkter Blindwert neben den sechs promoteten.
 
-SW1-2TP (\`audits/P11_R32_SW1_2TP_CANDIDATE.md\`, PR #17) ist AI-GREEN + \`independent GREEN (certificate)\`: die beiden \(T\pm s\)-Rows wurden direkt aus den elf Wörtern von \(A\) hergeleitet; \(M_T\) ist uniform positiv invertierbar; das reproduzierbare Zertifikat \`scripts/certify_sw1_2tp_ledger.py\` (Python/SymPy 1.14.0) prüft 88 Echo-Fälle, Hub-Support, Pivot und Eigenkanäle mit PASS. Der Perplexity-Blindcheck ist dokumentiert FAIL und erzeugt kein cross-model GREEN.
+SW1-2TP (`audits/P11_R32_SW1_2TP_CANDIDATE.md`, PR #17) ist AI-GREEN + `independent GREEN (certificate)`: die beiden \(T\pm s\)-Rows wurden direkt aus den elf Wörtern von \(A\) hergeleitet; \(M_T\) ist uniform positiv invertierbar; das reproduzierbare Zertifikat `scripts/certify_sw1_2tp_ledger.py` (Python/SymPy 1.14.0) prüft 88 Echo-Fälle, Hub-Support, Pivot und Eigenkanäle mit PASS. Der Perplexity-Blindcheck ist dokumentiert FAIL und erzeugt kein cross-model GREEN.
 
-SW1-AWI (\`audits/P11_R32_SW1_AWI_CANDIDATE.md\`, PR #18) ist AI-GREEN + \`independent GREEN (certificate)\`: die A-Wall-Dichotomie ist vollständig fallweise normalisiert; in der oberen Kammer wirkt die Kollision über die maßtreue Reflexion \(s\mapsto\Delta-s\), und der zugehörige Zwei-Kanal-Block ist strikt invertierbar. Das Vollzertifikat \`scripts/certify_sw1_awi.py\` (Python/SymPy 1.14.0) prüft Geometrie, Fixpunkt, Koeffizientenordnung, Eigenkanäle und Invertierbarkeit mit PASS. Perplexity ist PARTIAL/FAIL und erzeugt kein cross-model GREEN.
+SW1-AWI (`audits/P11_R32_SW1_AWI_CANDIDATE.md`, PR #18) ist AI-GREEN + `independent GREEN (certificate)`: die A-Wall-Dichotomie ist vollständig fallweise normalisiert; in der oberen Kammer wirkt die Kollision über die maßtreue Reflexion \(s\mapsto\Delta-s\), und der zugehörige Zwei-Kanal-Block ist strikt invertierbar. Das Vollzertifikat `scripts/certify_sw1_awi.py` (Python/SymPy 1.14.0) prüft Geometrie, Fixpunkt, Koeffizientenordnung, Eigenkanäle und Invertierbarkeit mit PASS. Perplexity ist PARTIAL/FAIL und erzeugt kein cross-model GREEN.
 
 Keine dieser Kandidatenzeilen trägt eine Promotion; keine Aussage über A0, HT-RED oder \(\ker\Gamma_I\).
 
@@ -157,7 +157,7 @@ Exakte Status- und Quellenliste:
 
 ## 3. Gemergter Zwischenmeilenstein: PR #10
 
-PR #10 theorematisiert nur den einfachen SW1-Membership-Satz und ist inzwischen in \`main\` gemergt.
+PR #10 theorematisiert nur den einfachen SW1-Membership-Satz und ist inzwischen in `main` gemergt.
 
 Ziel/Kern (§12, vollständig):
 \[
@@ -181,7 +181,7 @@ Aktueller Status:
 }
 \]
 
-Promotet mit kanonischem Promotionsrecord \`audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md\`. Exakter adversarial und mechanisch geprüfter Review-Head: \`f8f9f107b9c6879611ecb492979737a5541141e9\`; Squash-Merge in main: \`b06f50f12973e781b87db8b06e54fd590a053b10\`. Keine Mitpromotion von HT-A4b global, HT-RED, A0 oder Schur-Cross-Gram.
+Promotet mit kanonischem Promotionsrecord `audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md`. Exakter adversarial und mechanisch geprüfter Review-Head: `f8f9f107b9c6879611ecb492979737a5541141e9`; Squash-Merge in main: `b06f50f12973e781b87db8b06e54fd590a053b10`. Keine Mitpromotion von HT-A4b global, HT-RED, A0 oder Schur-Cross-Gram.
 
 ---
 
@@ -409,8 +409,8 @@ Daher lautet die operative Regel:
 
 Vor einer neuen Rechnung ist in dieser Reihenfolge zu lesen:
 
-1. **\`CURRENT-FRONT.md\`** — Was ist heute die aktive Frage?
-2. **\`00-uebersicht/ACTIVE_THEOREM_REGISTRY.md\`** — Welche Resultate dürfen mit welchem Status benutzt werden?
+1. **`CURRENT-FRONT.md`** — Was ist heute die aktive Frage?
+2. **`00-uebersicht/ACTIVE_THEOREM_REGISTRY.md`** — Welche Resultate dürfen mit welchem Status benutzt werden?
 3. **Kanonische Quelle des benötigten Inputs** — Paper oder Promotionsrecord.
 4. **Aktueller Kandidatenaudit / aktiver PR** — nur die konkrete Front.
 5. **Historische Audits / Journal** — nur bei einer klar benannten Provenienz-, Fehler- oder Gegenbeispielfrage.
@@ -446,26 +446,26 @@ Für mathematische Aussagen gilt:
 \]
 = interne KI-Konstruktion plus kritische Zweitprüfung (durch dasselbe oder ein zweites KI-System im selben Kontext); **keine** unabhängige Verifikation.
 
-**Subtypen von \`independent GREEN\`** (kumulativ buchbar; ein Kandidat kann mehrere Subtypen gleichzeitig tragen, ohne dass dies eine menschliche Prüfung suggeriert):
+**Subtypen von `independent GREEN`** (kumulativ buchbar; ein Kandidat kann mehrere Subtypen gleichzeitig tragen, ohne dass dies eine menschliche Prüfung suggeriert):
 
 | Subtyp | Bedeutung | Pflichtangaben |
 |---|---|---|
-| **independent GREEN (cross-model)** | Ein separates Modell/System prüft den exakten Satz **ohne Kenntnis** unserer Zielrechnung. Für 2TP zwingend: frische Perplexity-Session ohne diesen Thread-Verlauf. Kennt die prüfende Session bereits unsere Zielmatrix/diesen Verlauf, wird das Ergebnis höchstens als „cross-model nonblind“ protokolliert — das erzeugt **kein** \`independent GREEN\`. | Typ, Methode, Prüfer/System (inkl. Blind-/Nonblind-Vermerk), exakter geprüfter Head, exakter Satz/Scope, Verdict |
+| **independent GREEN (cross-model)** | Ein separates Modell/System prüft den exakten Satz **ohne Kenntnis** unserer Zielrechnung. Für 2TP zwingend: frische Perplexity-Session ohne diesen Thread-Verlauf. Kennt die prüfende Session bereits unsere Zielmatrix/diesen Verlauf, wird das Ergebnis höchstens als „cross-model nonblind“ protokolliert — das erzeugt **kein** `independent GREEN`. | Typ, Methode, Prüfer/System (inkl. Blind-/Nonblind-Vermerk), exakter geprüfter Head, exakter Satz/Scope, Verdict |
 | **independent GREEN (certificate)** | Reproduzierbares maschinelles/algebraisches Zertifikat (z. B. Python/SymPy/CAS-Skript), das den endlichen algebraischen Teil bestätigt. | zusätzlich: Tool/Version, Zertifikatsdatei bzw. Skriptpfad, exakter geprüfter Git-Head, reproduzierbares Ergebnis (Output dokumentiert) |
 | **independent GREEN (human)** | Unabhängige Prüfung durch einen externen Menschen. | zusätzlich: Reviewer bzw. nachvollziehbare Review-Provenienz |
 
-**Verbindliches Buchungsschema für jede \`independent GREEN\`-Zeile:**
+**Verbindliches Buchungsschema für jede `independent GREEN`-Zeile:**
 \[
 \boxed{
 \text{Typ}+\text{Methode}+\text{Prüfer/System}+\text{exakter Head}+\text{exakter Satz/Scope}+\text{Verdict}
 }
 \]
-Fehlt eine dieser Angaben, gilt die Buchung als unvollständig und darf nicht als \`independent GREEN\` gezählt werden.
+Fehlt eine dieser Angaben, gilt die Buchung als unvollständig und darf nicht als `independent GREEN` gezählt werden.
 
 \[
 \boxed{\checkmark[M]}
 \]
-= formaler Objekt-X-interner Promotionsstatus, unabhängig davon, ob zusätzlich externe Begutachtung existiert. **Kein** Ersatz für Fachjournal- oder Peer-Review-Verifikation. Orthogonal zu allen obigen Subtypen — eine \`✓[M]\`-Promotion setzt keinen bestimmten \`independent GREEN\`-Subtyp voraus und umgekehrt.
+= formaler Objekt-X-interner Promotionsstatus, unabhängig davon, ob zusätzlich externe Begutachtung existiert. **Kein** Ersatz für Fachjournal- oder Peer-Review-Verifikation. Orthogonal zu allen obigen Subtypen — eine `✓[M]`-Promotion setzt keinen bestimmten `independent GREEN`-Subtyp voraus und umgekehrt.
 
 **Beispiel für eine kumulative Buchung (Zielbild für SW1-2TP, noch nicht erreicht):**
 \[
@@ -473,17 +473,17 @@ Fehlt eine dieser Angaben, gilt die Buchung als unvollständig und darf nicht al
 \text{AI-GREEN}+\text{independent GREEN (cross-model)}+\text{independent GREEN (certificate)}
 }
 \]
-ohne dass dabei suggeriert wird, es liege bereits eine \`independent GREEN (human)\`-Prüfung vor.
+ohne dass dabei suggeriert wird, es liege bereits eine `independent GREEN (human)`-Prüfung vor.
 
 ### 8.2 Wo ein Mensch tatsächlich gebraucht wird
 
 Für elementare, endliche Bausteine wie SW1-BL7 (\(a+R<2d+s<b-R\)) ist die Beweislast überschaubar; AI-GREEN plus ggf. cross-model/certificate ist ausreichend. Mit steigender Tragweite steigt die Schwelle:
 
-- SW1-2TP: AI-GREEN + mindestens ein \`independent GREEN\`-Subtyp vor Promotion.
+- SW1-2TP: AI-GREEN + mindestens ein `independent GREEN`-Subtyp vor Promotion.
 - \(\Delta\)-Descent: höhere Schwelle, mehrere Subtypen empfohlen.
 - ein möglicher SW1-Gesamtsatz (\(\ker\mathcal K_{I,A}=\{0\}\) auf ganz SW1) oder eine öffentliche Behauptung eines großen Resultats: **independent GREEN (human)** durch einen externen Fachmathematiker wird empfohlen, bevor eine öffentliche Behauptung erfolgt — funktionalanalytische Domain-, Closure-, a.e.- und Operatoridentifikationsfragen können dort subtil werden.
 
-\`CURRENT-FRONT.md\` und die Registry sind **Navigationsdateien**. Bei einem Konflikt entscheiden die kanonischen mathematischen Quellen.
+`CURRENT-FRONT.md` und die Registry sind **Navigationsdateien**. Bei einem Konflikt entscheiden die kanonischen mathematischen Quellen.
 
 ---
 
@@ -493,8 +493,8 @@ Ein mathematisch relevanter Merge gilt operativ erst dann als vollständig abges
 
 1. **PR gemergt** — exakter Merge-Commit bekannt.
 2. **Main mechanisch verifiziert** — tatsächlicher Main-SHA und Diff geprüft.
-3. **Registry geprüft** — falls Status, Scope, Quelle oder aktive Abhängigkeit betroffen sind, \`ACTIVE_THEOREM_REGISTRY.md\` aktualisieren.
-4. **Front aktualisiert** — \`CURRENT-FRONT.md\` auf neuen Main-SHA, aktuellen offenen Knoten und nächsten Schritt bringen.
+3. **Registry geprüft** — falls Status, Scope, Quelle oder aktive Abhängigkeit betroffen sind, `ACTIVE_THEOREM_REGISTRY.md` aktualisieren.
+4. **Front aktualisiert** — `CURRENT-FRONT.md` auf neuen Main-SHA, aktuellen offenen Knoten und nächsten Schritt bringen.
 5. **Erst dann Abschluss buchen** — kein neuer mathematischer Angriff auf Basis eines veralteten operativen Frontstands.
 
 Kurz:
