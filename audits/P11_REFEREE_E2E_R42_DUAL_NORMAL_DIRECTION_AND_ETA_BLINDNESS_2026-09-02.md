@@ -435,6 +435,246 @@ strongly to a fixed tangential Gamma direction.
 
 ---
 
+## 5A. Intrinsic Gamma formula and strict nested ratio
+
+The constant \(\gamma_X\) introduced in R41 is in fact independent of the chosen baseline
+terminal \(T_0\).
+
+Indeed, under the fixed whitening map
+\[
+x=B_X^{1/2}f,
+\]
+one has
+\[
+x\in V_X
+\iff
+\beta_X^{(0)}(f)=0,
+\]
+while
+\[
+\ell_{1,X}(x)=\beta_X^{(1)}(f),
+\qquad
+\widetilde{\mathfrak c}_{\Gamma,X}[x]
+=
+\mathfrak c_{\Gamma,X}[f].
+\]
+Therefore
+\[
+\boxed{
+\gamma_X
+=
+\sup_{\substack{0\ne f\in\mathcal K_{X,X}^{-}\\
+\beta_X^{(0)}(f)=0}}
+\frac{|\beta_X^{(1)}(f)|^2}
+{\mathfrak c_{\Gamma,X}[f]}.
+}
+\tag{R42.26a}
+\]
+Thus \(\gamma_X\) is an intrinsic Gamma/jet invariant of the source radius \(X\), not of
+\(T_0\).  Consequently the R41 ratio limit is really
+\[
+\boxed{
+\theta_{R,S}
+=
+\sqrt{\frac{\gamma_R}{\gamma_S}},
+}
+\tag{R42.26b}
+\]
+independent of the baseline terminal.
+
+### Strict monotonicity for every strict source inclusion
+
+Let
+\[
+mathcal H_X^0
+:=
+\{f\in\mathcal K_{X,X}^{-}:\beta_X^{(0)}(f)=0\}
+\]
+with Gamma inner product \(\mathfrak c_{\Gamma,X}\), and let \(g_X\in\mathcal H_X^0\) be
+the Gamma-Riesz vector of \(\beta_X^{(1)}|_{\mathcal H_X^0}\):
+\[
+\mathfrak c_{\Gamma,X}[f,g_X]
+=
+\beta_X^{(1)}(f)
+\qquad(f\in\mathcal H_X^0).
+\tag{R42.26c}
+\]
+Then
+\[
+\gamma_X=\|g_X\|_{\Gamma,X}^2.
+\tag{R42.26d}
+\]
+
+For \(0<R<S\), zero extension is an isometric embedding
+\[
+J_{R,S}:\mathcal H_R^0\hookrightarrow\mathcal H_S^0
+\]
+for the Gamma inner products, and the first jet is compatible with zero extension.
+Hence the Gamma-orthogonal projection of \(g_S\) onto
+\(J_{R,S}\mathcal H_R^0\) is \(J_{R,S}g_R\).  Therefore
+\[
+\gamma_R\le\gamma_S,
+\]
+with equality iff
+\[
+g_S\in J_{R,S}\mathcal H_R^0,
+\tag{R42.26e}
+\]
+i.e. iff \(g_S\) is supported in \([-R,R]\).
+
+We now rule out (R42.26e) for every strict \(R<S\).
+
+Assume for contradiction that
+\[
+\operatorname{ess\,supp}g_S\subset[-R,R].
+\tag{R42.26f}
+\]
+Let
+\[
+\phi_m(u):=\operatorname{sgn}(u)I_m(|u|),
+\]
+so that
+\[
+\beta_S^{(m)}(f)=\langle f,\phi_m\rangle_{L^2(-S,S)}.
+\]
+Since (R42.26c) holds on the codimension-one kernel of \(\beta_S^{(0)}\), there is
+a scalar \(\lambda\in\mathbb C\) such that on the full Gamma form domain
+\[
+\mathfrak c_{\Gamma,S}[f,g_S]
+=
+\langle f,\phi_1+\lambda\phi_0\rangle.
+\tag{R42.26g}
+\]
+The right side is represented by an \(L^2\) vector, so the form representation theorem
+places \(g_S\) in the operator domain and gives
+\[
+C_{\Gamma,S}g_S
+=
+\phi_1+\lambda\phi_0.
+\tag{R42.26h}
+\]
+
+On the right annulus \(R<x<S\), the local multiplier constant contributes no off-support
+term.  By the concrete Gamma kernel from R31/R33,
+\[
+(C_{\Gamma,S}g_S)(x)
+=
+-\sum_{n=0}^{\infty}
+e^{-\lambda_nx}M_n(g_S),
+\qquad
+\lambda_n=2n+\frac12,
+\tag{R42.26i}
+\]
+where
+\[
+M_n(g_S)
+=
+\int_{-R}^{R}g_S(y)e^{\lambda_ny}\,dy.
+\]
+The series is normally convergent on every half-plane
+\(\operatorname{Re}x\ge R+\delta\), hence the left side of (R42.26h) is real analytic
+for \(x>R\).
+
+On \(x>0\),
+\[
+\phi_0(x)
+=
+I_0(x)
+=
+2(1-e^{-x/2}),
+\]
+\[
+\phi_1(x)
+=
+I_1(x)
+=
+4-2(x+2)e^{-x/2}.
+\tag{R42.26j}
+\]
+Thus equality on the nonempty interval \((R,S)\) extends analytically to all \(x>R\).
+Letting \(x\to\infty\) in (R42.26h) forces
+\[
+4+2\lambda=0,
+\qquad
+\lambda=-2.
+\]
+Then the right side becomes
+\[
+\phi_1(x)-2\phi_0(x)
+=
+-2xe^{-x/2}.
+\tag{R42.26k}
+\]
+Multiplying (R42.26i) by \(e^{x/2}\) gives
+\[
+-\sum_{n=0}^{\infty}M_n(g_S)e^{-2nx},
+\]
+which tends to the finite limit \(-M_0(g_S)\) as \(x\to\infty\).  But
+(R42.26k), multiplied by \(e^{x/2}\), equals \(-2x\), which is unbounded.
+Contradiction.
+
+Therefore
+\[
+\boxed{
+\gamma_R<\gamma_S
+\qquad
+\text{for every }0<R<S.
+}
+\tag{R42.26l}
+\]
+Equivalently,
+\[
+\boxed{
+0<\theta_{R,S}<1
+\qquad
+\text{for every strict source inclusion }R<S.
+}
+\tag{R42.26m}
+\]
+
+This strictness is unconditional and uses only the concrete Gamma symbol and jet compatibility;
+there is no R37/G4c input.
+
+### Small-radius quantitative check
+
+Since \(m_\Gamma\ge1\),
+\[
+\mathfrak c_{\Gamma,R}[f]\ge\|f\|_2^2.
+\]
+Moreover
+\[
+I_1(r)
+=
+\int_0^r se^{-s/2}\,ds
+\le\frac{r^2}{2}.
+\]
+Hence
+\[
+\boxed{
+\gamma_R
+\le
+\|\phi_1\|_{L^2(-R,R)}^2
+\le
+\frac{R^5}{10}.
+}
+\tag{R42.26n}
+\]
+For every fixed \(S>0\), jet independence gives \(\gamma_S>0\), so
+\[
+\boxed{
+\theta_{R,S}
+\le
+\frac{R^{5/2}}{\sqrt{10\gamma_S}}
+\longrightarrow0
+\qquad(R\downarrow0).
+}
+\tag{R42.26o}
+\]
+Thus the asymptotic moving-angle defect tends to its maximal value as the old source radius
+shrinks.
+
+---
+
 ## 6. Second-order eta-blindness
 
 Recall frozen R38:
