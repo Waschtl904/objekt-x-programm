@@ -555,6 +555,140 @@ No value or limit for (R43.33) is claimed.
 
 ---
 
+## 6A. The scalar \(UD_U\) is not itself a relative gauge diagnostic
+
+The quantitative upgrade (R43.31) makes
+\[
+UD_U(z_U,z_U)
+\]
+bounded, but the frozen R17 source-compatibility identity remains exact at every \(U\).
+
+If \(0<R<S\), the same fixed smooth pair is transported by zero extension and
+\[
+z_U^S=J_{R,S}z_U^R.
+\]
+R17 gives identically
+\[
+D_U^{(S)}(z_U^S,z_U^S)
+=
+D_U^{(R)}(z_U^R,z_U^R).
+\]
+Multiplying by \(U\) changes nothing:
+\[
+\boxed{
+U D_U^{(S)}(z_U^S,z_U^S)
+=
+U D_U^{(R)}(z_U^R,z_U^R).
+}
+\tag{R43.36}
+\]
+
+Therefore even a complete scalar limit
+\[
+UD_U(z_U,z_U)\to d
+\]
+would **not by itself** distinguish the source and target polar geometries.  This is the
+third-layer version of the R17/R18 source-compatible Gram firewall.
+
+Hence the correct possible third-layer object must retain off-block information.
+
+### Finite-block rescaled edge-form candidate
+
+Let \(E\subset C_c^\infty((-R,R))_{\rm odd}\cap H_R^0\) be a fixed finite-dimensional
+smooth subspace.  Choose a fixed smooth \(f_{0,R}\) with
+\[
+\beta_R^{(0)}(f_{0,R})\ne0
+\]
+and define the exact terminal boundary-null correction
+\[
+\mathcal N_{R,U}y
+:=
+y-
+\frac{\ell_U(y)}{\ell_U(f_{0,R})}f_{0,R},
+\qquad y\in E.
+\tag{R43.37}
+\]
+Then
+\[
+\ell_U(\mathcal N_{R,U}y)=0,
+\qquad
+\mathcal N_{R,U}y\to y.
+\]
+
+The R16 finite-dimensional uniformization together with the quantitative R43 refinement
+is uniform on the unit sphere of \(E\).  Consequently
+\[
+D_U(\mathcal N_{R,U}y,\mathcal N_{R,U}y)
+\le
+\frac{C_E}{U}\|y\|^2
+\qquad(y\in E)
+\tag{R43.38}
+\]
+for all sufficiently large \(U\).
+
+Define the positive sesquilinear form
+\[
+\boxed{
+\mathfrak e_{R,U}^{E}(y,z)
+:=
+U\,
+D_U(
+\mathcal N_{R,U}y,
+\mathcal N_{R,U}z
+).
+}
+\tag{R43.39}
+\]
+Then
+\[
+0\le \mathfrak e_{R,U}^{E}\le C_E I_E.
+\tag{R43.40}
+\]
+Thus every terminal sequence has a subsequence along which the finite matrix of
+\(\mathfrak e_{R,U}^{E}\) converges to a positive semidefinite form on \(E\).
+
+For source-compatible comparison, choose at level \(S\)
+\[
+f_{0,S}:=J_{R,S}f_{0,R}.
+\]
+Terminal compatibility of \(\ell_U\) gives
+\[
+\mathcal N_{S,U}J_{R,S}
+=
+J_{R,S}\mathcal N_{R,U}
+\quad\text{on }E,
+\tag{R43.41}
+\]
+and terminality of \(D_U\) gives the exact pullback identity
+\[
+\boxed{
+\mathfrak e_{S,U}^{J E}(Jy,Jz)
+=
+\mathfrak e_{R,U}^{E}(y,z).
+}
+\tag{R43.42}
+\]
+
+So any third-order edge layer extracted from these rescaled forms is itself
+source-compatible on the nested block.  The genuinely new relative information can only
+appear in its coupling to the target complement before square-root/polar functional
+calculus.
+
+This identifies the correct third-layer analogue of the R18 frontier:
+\[
+\boxed{
+\text{not the scalar }UD_U,
+\quad\text{but a rescaled edge form plus its target off-block.}
+}
+\tag{R43.43}
+\]
+
+The definition (R43.39) is presently a finite-block exploratory device.  Independence of the
+choice of the correction vector \(f_{0,R}\), existence of a global closed limiting edge form,
+and control of its target off-block are all open.
+
+---
+
 ## 7. Current R43 decision tree
 
 The shortest presently justified routes to the final C6 scalar are:
