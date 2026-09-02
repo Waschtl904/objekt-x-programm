@@ -1419,12 +1419,29 @@ Thus the current canonical inputs justify the first-order vector limits (R42.10)
 but do **not** yet justify a third-order expansion capable of exposing a normal component and
 hence the scalar \(a_U\).
 
-A viable next theorem would therefore be one of:
+After Section 7A, the earlier item “prove convergence of \(\tau_{X,U}\)” is closed, and
+the general fixed-vector C6 problem has collapsed to the single normal vector
+\(\varepsilon_R\).  The next live targets are therefore sharply separated:
 
-1. a quantitative rate for the R17 exact-boundary-null Schur remainder on the relevant
-   finite-jet recovery family;
-2. a direct compactness/convergence theorem for the future-gauge normals \(\tau_{X,U}\);
-3. a direct fixed-vector estimate for the cross-terminal kernel R39.7 that bypasses both.
+1. **B-C6 normal orbit:** determine
+   \[
+   \operatorname{Re}\langle
+   \varepsilon_R,K_{R,S}^{T,U}\varepsilon_R
+   \rangle\to1
+   \quad?
+   \]
+   This is now the exact remaining Strong-Terminal gate.
+2. **B-POL normal channel:** determine the one-dimensional/escape asymptotics of the polar
+   factors off \(H_X^0\) and \(V_X\); tangential polar convergence is already closed by
+   R42.47--R42.48.
+3. **B-MOD normal scalar:** determine the limit/no-escape behavior of
+   \(a_U=\langle Q_Ue_R,e_S\rangle\).
+4. **Higher-order route:** obtain a quantitative rate for the R17 exact-boundary-null Schur
+   remainder if a third-order jet expansion is needed to connect the remaining normal
+   channels.
+
+For Strong Terminal itself, item 1 is now the primary target; the higher-order R17 rate is no
+longer the only visible route.
 
 ---
 
