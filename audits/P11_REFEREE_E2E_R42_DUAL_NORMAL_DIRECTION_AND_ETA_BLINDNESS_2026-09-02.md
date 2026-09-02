@@ -933,7 +933,7 @@ sharpen the next B-POL target to:
 ## 7A. Tangential polar collapse and codimension-one C6 reduction
 
 This section is new relative to the independently reviewed blob
-\`16745c2b8e9d892059cff637021d89858158fe45\`.
+`16745c2b8e9d892059cff637021d89858158fe45`.
 It is therefore **AI-GREEN internal candidate only** until a separate independent review.
 
 ### 7A.1 Unwhitened constrained inverse-root limit
@@ -1467,8 +1467,8 @@ R42 does **not** prove:
 
 Independent review ledger:
 
-- Blob \`16745c2b8e9d892059cff637021d89858158fe45\`, commit
-  \`0c49b76e8cfda361b58a1e0f783c2c9495ef1008\`: independently reviewer-GREEN for
+- Blob `16745c2b8e9d892059cff637021d89858158fe45`, commit
+  `0c49b76e8cfda361b58a1e0f783c2c9495ef1008`: independently reviewer-GREEN for
   R42.1--R42.37, including the strict inequality \(\gamma_R<\gamma_S\).
 - Section 7A, R42.38--R42.64: new internal derivation after that review; **not yet
   independently reviewed**.
