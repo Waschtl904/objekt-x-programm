@@ -1,8 +1,8 @@
 # Active Theorem Registry
 
-> **Stand:** 1. September 2026  
-> **Aktuelle mathematische Merge-Basis:** `main` mit mathematischer Basis durch PR #48 (Pre-Doku-Sync SHA `cf3d39a2e7787bc1c5b938390b6cdeec7943b0c2`). Der explizite Small-`R`-M1-ND-Gegenvektor ist `✓[M]_neg`. PR #49 (`research/sw1-m1-nd-salvage-phase-diagram`, Head `2ed1583f074574c2fdb5a48203d63d520a86b5f6`, Run `33532345053` SUCCESS) ist ein **offener, eingefrorener AI-GREEN candidate** für einen uniformen negativen Wedge und ist nicht promotet. Aktive Forschungsachse ist derzeit B / Strong Terminal, zunächst R27-F. Frühere Promotions-/Certificate-Aussagen behalten ihre eigenen Provenienzen.  
-> **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11/R32-SW1-/Schur-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
+> **Stand:** 2. September 2026  
+> **Aktuelle Research-Basis:** `research/strong-terminal-r37-two-shift-mismatch`; R42-Freeze-Linie bis `f495ce6d89dcb8facc8fa0d4e09dda279b24fb73`, danach R43 Phase I bis `5432ec1a9d845d63316a2eccc28662545a0c7619`. R38--R42 sind jeweils **FROZEN — independently verified AI-GREEN**, ohne kanonische `✓[M]`-Promotion. Aktive Forschungsachse ist R43 / Single-Normal C6 Gate. Die frühere A-/SW1-Salvage-Achse und PR #49 bleiben geparkt.  
+> **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11-Strong-Terminal-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
 > **Nicht-Zweck:** Ersatz für \`STATUS.md\`, \`OFFENE_PROBLEME.md\`, die Papers oder Promotionsrecords.
 
 Diese Datei ist eine **Navigations- und Abhängigkeitsregistry**. Eine Statuszeile hier erzeugt keine Promotion. Bei Konflikten gilt die kanonische mathematische Quelle des jeweiligen Resultats.
@@ -34,6 +34,35 @@ Diese Datei ist eine **Navigations- und Abhängigkeitsregistry**. Eine Statuszei
 Fehlt eine Angabe, gilt die Buchung als unvollständig und darf nicht als \`independent GREEN\` gezählt werden. Subtypen sind **kumulativ**: z. B. \`AI-GREEN + independent GREEN (cross-model) + independent GREEN (certificate)\` ist zulässig und suggeriert **keine** \`independent GREEN (human)\`-Prüfung.
 
 **Rechtsverbindliche Klarstellung:** Alte Bezeichnungen wie \`independently GREEN candidate\`, \`OVERALL GREEN candidate\` oder \`CANDIDATE GREEN\` in früheren Versionen dieser Datei galten **nicht automatisch** als \`independent GREEN\` im obigen Sinn. Ohne dokumentierte externe Prüfprovenienz (Methode, Reviewer/System, exakter Head) werden sie ab jetzt als \`AI-GREEN candidate\` verstanden. Diese Registry wurde entsprechend normalisiert (siehe Abschnitt 2). Diese Regel gilt ex ante und darf nicht nachträglich an ein gewünschtes Ergebnis angepasst werden.
+
+
+---
+
+## 0A. Aktueller P11-Strong-Terminal-Stack
+
+| ID | Governance-Status | Kernaussage | Kanonische Quelle |
+|---|---|---|---|
+| **R38** | FROZEN — independently verified AI-GREEN | \(Q_U\) konvergiert stark auf \(V_R\); Full-Space-SOT iff der Normal-Skalar \(a_U\to\eta,\ |\eta|=1\) | `audits/P11_REFEREE_E2E_R38_MODULUS_WEAK_CLUSTER_GEOMETRY_2026-09-01.md` |
+| **R39** | FROZEN — independently verified AI-GREEN | exakter Strong-Terminal-/Cross-Terminal-Cauchy-Gate; Moving-Gauge-Firewall | `audits/P11_REFEREE_E2E_R39_STRONG_TERMINAL_BASELINE_FIREWALL_2026-09-01.md` |
+| **R40** | FROZEN — independently verified AI-GREEN | \(\|v_{X,U}\|\asymp U^{-1}\) und positiver Normratio-Unterrand | `audits/P11_REFEREE_E2E_R40_DUAL_NORMAL_NEXT_ORDER_SCALE_2026-09-01.md` |
+| **R41** | FROZEN — independently verified AI-GREEN | \(U\|v_{X,U}\|\to\sqrt{\gamma_X}/2\), Ratio-Limit \(\sqrt{\gamma_R/\gamma_S}\) | `audits/P11_REFEREE_E2E_R41_SECOND_ORDER_HARD_CONSTRAINT_GAMMA_LAYER_2026-09-01.md` |
+| **R42** | FROZEN — independently verified AI-GREEN | Dualnormalen-Richtung, \(\gamma_R<\gamma_S\), tangentialer Polar-Collapse; echter \(W_U\)-Limes auf \(H_R^0\); C6 auf eine Normalbahn reduziert | `audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md` |
+| **R43 Phase I** | AI-GREEN internal exploratory candidate | \(\varepsilon_R=e_{R,0}\); Single-Normal-C6-Observable; Zwischenradius-Gamma-Zyklizitätsgate; Kandidat \(D_U=O(U^{-1})\) | `audits/P11_REFEREE_E2E_R43_SINGLE_NORMAL_C6_GATE_2026-09-02.md` |
+
+**Verbleibender fixed-pair Strong-Terminal-Gate:**
+\[
+\boxed{
+\operatorname{Re}
+\langle
+\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R
+\rangle
+\longrightarrow1
+\qquad(T,U\to\infty).
+}
+\]
+
+**Firewalls:** R43 ist nicht frozen. R38--R42 erzeugen keine kanonische \(\checkmark[M]\)-Promotion.
+R37/G4c bleibt separat offen und wird durch R38--R43 nicht rückwirkend geschlossen.
 
 ---
 
