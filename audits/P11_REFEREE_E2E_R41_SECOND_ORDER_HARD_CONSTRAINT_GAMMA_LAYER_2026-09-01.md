@@ -435,10 +435,52 @@ Thus
 \widetilde{\mathfrak c}_{\Gamma,X}[y].
 \]
 
-Smooth odd vectors are a core for the Gamma graph norm.  Because both
-\(\widehat\beta_X^{(0)}\) and \(\widehat\beta_X^{(1)}\) are continuous, smooth vectors satisfying
-the two affine constraints are dense in the corresponding constrained affine subspace.
-Therefore
+It remains to justify density **with the two constraints imposed exactly**.
+
+Choose smooth odd vectors \(h_0,h_1\) such that
+\[
+\widehat\beta_X^{(0)}(h_0)=1,
+\qquad
+\widehat\beta_X^{(0)}(h_1)=0,
+\qquad
+\widehat\beta_X^{(1)}(h_1)=1.
+\tag{R41.23a}
+\]
+Such a pair exists because the first two odd jet functionals are linearly independent:
+on smooth odd sources they are represented by the nonproportional kernels \(I_0\) and \(I_1\).
+
+Let \(y\in V_X\) satisfy \(\widehat\beta_X^{(1)}(y)=-2\), and choose arbitrary smooth odd
+core vectors \(g_n\to y\) in the Gamma graph norm.  Define
+\[
+\widetilde g_n
+:=
+g_n
+-
+\widehat\beta_X^{(0)}(g_n)h_0
+-
+\Bigl(
+\widehat\beta_X^{(1)}(g_n)
+-
+\widehat\beta_X^{(0)}(g_n)\widehat\beta_X^{(1)}(h_0)
++2
+\Bigr)h_1.
+\tag{R41.23b}
+\]
+Then exactly
+\[
+\widehat\beta_X^{(0)}(\widetilde g_n)=0,
+\qquad
+\widehat\beta_X^{(1)}(\widetilde g_n)=-2.
+\]
+Continuity of both jet functionals and \(g_n\to y\) imply that both correction
+coefficients tend to zero.  Hence
+\[
+\widetilde g_n\to y
+\]
+in the Gamma graph norm.
+
+Thus smooth odd vectors satisfying both affine constraints are indeed dense in the constrained
+affine subspace.  Therefore
 
 \[
 \boxed{
@@ -610,23 +652,60 @@ range.
 
 ## 7. Equality criterion
 
-Because \(\ell_{1,R}\) is the restriction of \(\ell_{1,S}\) under the canonical nested inclusion,
-\(\gamma_R\le\gamma_S\) is also the usual monotonicity of squared dual norms under enlargement of
-the admissible constrained space.
-
-Equality
-
+Because \(\ell_{1,R}\) is the restriction of \(\ell_{1,S}\) under the canonical nested inclusion
+and Gamma compatibility makes
 \[
+W:(V_R,\widetilde{\mathfrak c}_{\Gamma,R})
+\longrightarrow
+(V_S,\widetilde{\mathfrak c}_{\Gamma,S})
+\]
+an isometric embedding, \(\gamma_R\le\gamma_S\) is the standard monotonicity of squared dual
+norms under enlargement of the admissible constrained space.
+
+Let
+\[
+M:=WV_R\subset V_S
+\]
+and let \(P_M^{\Gamma}\) denote orthogonal projection onto \(M\) in the
+\(\widetilde{\mathfrak c}_{\Gamma,S}\)-inner product.  If
+\[
+u_{1,S}=L_S^{-1}b_{1,S},
+\qquad
+u_{1,R}=L_R^{-1}b_{1,R},
+\]
+then the Riesz property and Gamma compatibility give the exact identity
+\[
+\boxed{
+P_M^{\Gamma}u_{1,S}=Wu_{1,R}.
+}
+\tag{R41.31a}
+\]
+Consequently
+\[
+\gamma_R
+=
+\|P_M^{\Gamma}u_{1,S}\|_{\Gamma,S}^2,
+\qquad
+\gamma_S
+=
+\|u_{1,S}\|_{\Gamma,S}^2.
+\tag{R41.31b}
+\]
+Therefore
+\[
+\boxed{
 \gamma_R=\gamma_S
+\iff
+u_{1,S}\in WV_R
+\iff
+u_{1,S}=Wu_{1,R}.
+}
+\tag{R41.31c}
 \]
 
-holds iff the constrained-Gamma Riesz representer of \(\ell_{1,S}\) lies in the nested
-subspace \(WV_R\) after the natural \(L_R/L_S\) identification.
-
-Equivalently, the target first-residual-jet functional gains no new Gamma-dual direction in the
-larger constrained space.
-
-This is a fixed-window question and a natural next candidate for an explicit Gamma offblock test.
+Equivalently, equality holds exactly when the target first-residual-jet Riesz representer has no
+new constrained-Gamma component orthogonal to the nested source subspace.  This is a fixed-window
+question and a natural next candidate for an explicit Gamma offblock test.
 
 ---
 
@@ -653,7 +732,34 @@ Strong-Terminal problem.
 
 ---
 
-## 9. Strong-Terminal firewall
+## 9. Internal audit ledger
+
+As of 2026-09-02, the R41 chain has been independently rederived internally against the committed
+definitions and the frozen R40/R38 inputs.
+
+Checked points include:
+
+- the rescaling identity (R41.6) and existence/boundedness of exact affine minimizers;
+- the liminf passage from bounded rescaled energy to the forced affine first-jet condition
+  \(\widehat\beta_X^{(1)}=-2\);
+- the exact boundary-null recovery sequence and normalization in (R41.18)--(R41.23);
+- the constrained density step, now made explicit in (R41.23a)--(R41.23b);
+- evaluation of the fixed Gamma minimization, including the factor \(1/4\);
+- the ratio theorem (R41.28)--(R41.31);
+- the equality criterion, now expressed exactly by the Gamma-orthogonal projection
+  (R41.31a)--(R41.31c).
+
+Dependencies used are R5-JET/R17 through the R27 recovery mechanism, R24/R27 for coercivity and
+hard-constraint convergence, frozen R40 for the first-order boundary expansion/scale, and frozen
+R38 for the nested dual-normal identity.  R41 uses no R37/G4c conclusion.
+
+Current status: **AI-GREEN internal candidate only**.  No freeze and no canonical
+\(\checkmark[M]\) promotion are recorded before independent reviewer verification of this
+hardened head.
+
+---
+
+## 10. Strong-Terminal firewall
 
 R41 does not prove:
 
