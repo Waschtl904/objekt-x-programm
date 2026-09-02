@@ -1619,7 +1619,7 @@ Independent review ledger:
   `0c49b76e8cfda361b58a1e0f783c2c9495ef1008`: independently reviewer-GREEN for
   R42.1--R42.37, including the strict inequality \(\gamma_R<\gamma_S\).
 - Section 7A, R42.38--R42.64: independently destructively reviewed on head
-  \`7fa5fc7ca190eb6171f3e77d297413a1574ce3bd\`; all checked conclusions were reported GREEN
+  `7fa5fc7ca190eb6171f3e77d297413a1574ce3bd`; all checked conclusions were reported GREEN
   except that R42.40 was judged structurally correct but insufficiently expanded because its
   resolvent proof was only referenced by analogy to R27.
 - R42.39a--R42.39j and the expanded proof of R42.40 were added after that review to close
@@ -1629,7 +1629,8 @@ Independent review ledger:
 Current booking:
 \[
 \boxed{
-\text{R42 reviewed core GREEN; Section 7A AI-GREEN candidate only.}
+\text{R42 core reviewer-GREEN; Section 7A reviewer-GREEN modulo final recheck of expanded R42.40.}
+}
 \]
 
 No freeze and no canonical \(\checkmark[M]\) promotion before independent reviewer verification.
