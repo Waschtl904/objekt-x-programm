@@ -753,9 +753,18 @@ Dependencies used are R5-JET/R17 through the R27 recovery mechanism, R24/R27 for
 hard-constraint convergence, frozen R40 for the first-order boundary expansion/scale, and frozen
 R38 for the nested dual-normal identity.  R41 uses no R37/G4c conclusion.
 
-Current status: **AI-GREEN internal candidate only**.  No freeze and no canonical
-\(\checkmark[M]\) promotion are recorded before independent reviewer verification of this
-hardened head.
+Independent reviewer verification of the exact hardened R41 head
+`f26896db27e1359c153940b35e2466f2af38b2a9` was completed on 2026-09-02.  The reviewer
+checked the forced first-jet condition (R41.14), the recovery and exact two-constraint density
+construction (R41.18)--(R41.23b), the factor \(1/4\) in (R41.2), the ratio limit (R41.28),
+and the Gamma-projection equality criterion (R41.31a)--(R41.31c), with all checked steps
+reported GREEN.  The dependency chain against frozen R38/R40 and the canonical R5/R16/R17/R24/R27
+inputs was also reported source-compatible, with no use of R37/G4c.
+
+Accordingly R41 is now **FROZEN as independently verified AI-GREEN** on this research lineage.
+This freeze records the verified second-order hard-constraint Gamma boundary layer and the
+scalar norm-ratio theorem only.  It is **not** a canonical \(\checkmark[M]\) promotion;
+R37/G4c remains open and Strong Terminal / C6 remains \(?[O]\).
 
 ---
 
