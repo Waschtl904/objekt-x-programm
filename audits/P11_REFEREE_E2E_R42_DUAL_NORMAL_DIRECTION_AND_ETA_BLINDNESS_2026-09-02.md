@@ -557,16 +557,69 @@ Equivalently,
 This is the first direct placement of the R41 invariant inside the **actual** future transport,
 rather than only the modulus isometry.
 
-However the vectors \(\tau_{R,U},\tau_{S,U}\) themselves move with \(U\).  Therefore
-(R42.32)--(R42.33) do **not** decide the fixed-vector C6 criterion of R39.7.  They identify
-precisely the remaining B-POL issue in this channel:
+There is also an exact moving-angle decomposition.  Since \(W_U\) and \(\tau_{X,U}\) are
+isometric/unit vectors and (R42.33) is real positive,
+\[
+\boxed{
+W_U\tau_{R,U}
+=
+\theta_U\tau_{S,U}
++
+\rho_{S,U},
+\qquad
+\rho_{S,U}\perp\tau_{S,U},
+\qquad
+\|\rho_{S,U}\|^2=1-\theta_U^2.
+}
+\tag{R42.34}
+\]
+Thus if \(\gamma_R<\gamma_S\), the actual future transport carries a persistent positive
+moving-angle residual of asymptotic squared norm
+\[
+1-\frac{\gamma_R}{\gamma_S}.
+\]
+This still does not contradict Strong Terminal because both the source/target normals and the
+orthogonal residual are terminal-dependent.
+
+The strong direction theorem (R42.16) converts the moving target into a fixed-vector polar
+observable:
+\[
+\boxed{
+\|\tau_{X,U}-U_X(U)\zeta_X\|
+=
+\|\widehat v_{X,U}-\zeta_X\|
+\longrightarrow0.
+}
+\tag{R42.35}
+\]
+Therefore
+\[
+\boxed{
+\tau_{X,U}\text{ is strongly convergent/Cauchy}
+\iff
+U_X(U)\zeta_X\text{ is strongly convergent/Cauchy}.
+}
+\tag{R42.36}
+\]
+So the first-residual-jet direction
+\[
+\zeta_X=-q_{1,X}/\sqrt{\gamma_X}
+\]
+is a **fixed vector on which B-POL can now be tested directly**.
+
+However (R42.35)--(R42.36) concern \(U_X\), while the exact future transport contains
+\(U_R^*\) on its fixed source input.  Hence they do not by themselves bypass the R22/R39
+moving-adjoint firewall.
+
+Accordingly (R42.32)--(R42.36) do **not** decide the fixed-vector C6 criterion of R39.7.  They
+sharpen the next B-POL target to:
 
 \[
 \boxed{
-\text{control the terminal motion of }\tau_{X,U}
-\text{ (or an equivalent fixed-vector surrogate).}
+\text{control }U_X(U)\zeta_X
+\text{ and then connect that one-sided polar control to the adjoint/cross-terminal action.}
 }
-\tag{R42.34}
+\tag{R42.37}
 \]
 
 ---
