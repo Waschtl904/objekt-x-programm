@@ -1,7 +1,7 @@
 # Active Theorem Registry
 
 > **Stand:** 2. September 2026  
-> **Aktuelle Research-Basis:** `research/strong-terminal-r37-two-shift-mismatch`; R42-Freeze-Linie bis `f495ce6d89dcb8facc8fa0d4e09dda279b24fb73`, danach R43 Phase I bis `5432ec1a9d845d63316a2eccc28662545a0c7619`. R38--R42 sind jeweils **FROZEN — independently verified AI-GREEN**, ohne kanonische `✓[M]`-Promotion. Aktive Forschungsachse ist R43 / Single-Normal C6 Gate. Die frühere A-/SW1-Salvage-Achse und PR #49 bleiben geparkt.  
+> **Aktuelle Research-Basis:** `research/strong-terminal-r37-two-shift-mismatch`; R42-Freeze-Linie bis `f495ce6d89dcb8facc8fa0d4e09dda279b24fb73`, danach R43 bis `92acea23ecea203a823b3df22744dd086276ff59`; Phase I (`5432ec1a...`) ist partiell extern reviewed, die spätere GC-M1-Erweiterung nicht. R38--R42 sind jeweils **FROZEN — independently verified AI-GREEN**, ohne kanonische `✓[M]`-Promotion. Aktive Forschungsachse ist R43 / Single-Normal C6 Gate. Die frühere A-/SW1-Salvage-Achse und PR #49 bleiben geparkt.  
 > **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11-Strong-Terminal-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
 > **Nicht-Zweck:** Ersatz für \`STATUS.md\`, \`OFFENE_PROBLEME.md\`, die Papers oder Promotionsrecords.
 
@@ -47,7 +47,7 @@ Fehlt eine Angabe, gilt die Buchung als unvollständig und darf nicht als \`inde
 | **R40** | FROZEN — independently verified AI-GREEN | \(\|v_{X,U}\|\asymp U^{-1}\) und positiver Normratio-Unterrand | `audits/P11_REFEREE_E2E_R40_DUAL_NORMAL_NEXT_ORDER_SCALE_2026-09-01.md` |
 | **R41** | FROZEN — independently verified AI-GREEN | \(U\|v_{X,U}\|\to\sqrt{\gamma_X}/2\), Ratio-Limit \(\sqrt{\gamma_R/\gamma_S}\) | `audits/P11_REFEREE_E2E_R41_SECOND_ORDER_HARD_CONSTRAINT_GAMMA_LAYER_2026-09-01.md` |
 | **R42** | FROZEN — independently verified AI-GREEN | Dualnormalen-Richtung, \(\gamma_R<\gamma_S\), tangentialer Polar-Collapse; echter \(W_U\)-Limes auf \(H_R^0\); C6 auf eine Normalbahn reduziert | `audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md` |
-| **R43 Phase I** | AI-GREEN internal exploratory candidate | \(\varepsilon_R=e_{R,0}\); Single-Normal-C6-Observable; Zwischenradius-Gamma-Zyklizitätsgate; Kandidat \(D_U=O(U^{-1})\) | `audits/P11_REFEREE_E2E_R43_SINGLE_NORMAL_C6_GATE_2026-09-02.md` |
+| **R43** | OPEN — mixed reviewed/candidate status | Phase-I R43.1–6 und R43.10a–m extern GREEN; \(D_U=O(U^{-1})\) weiterhin AI-GREEN candidate; neue R43.10n–aj reduzieren die Gamma-Zyklizität auf das unreviewed Struktur-Gate **GC-M1** | `audits/P11_REFEREE_E2E_R43_SINGLE_NORMAL_C6_GATE_2026-09-02.md` |
 
 **Verbleibender fixed-pair Strong-Terminal-Gate:**
 \[
