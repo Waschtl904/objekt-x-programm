@@ -76,7 +76,12 @@ A_R(U)^{-1/2}r_R,
 \tag{R38.2}
 \]
 
-because \(W^*r_S=r_R\).
+by R28.2: pullback compatibility of the baseline-whitened boundary functional gives
+\[
+W^*r_S=r_R.
+\]
+Thus (R38.2) uses the canonical R28 constraint-normal compatibility, not an additional
+asymptotic assumption.
 
 Equation (R38.2) identifies a potentially useful next-order scalar channel, but R38 does not
 assume any rate or normalized limit for these two shrinking vectors.
@@ -314,7 +319,8 @@ On the R37 open two-shift region,
 0<R<a<b<S<T_0<2a,
 \]
 
-R37 gives
+the R37 finite/algebraic argument, together with its still-open analytic Gate G4c,
+gives the conditional conclusion
 
 \[
 s_{R,S,T_0}\ne0
@@ -325,6 +331,10 @@ and hence
 \[
 Q_U\not\xrightarrow[s]{}W.
 \]
+
+This paragraph does **not** promote R37 or close G4c.  Without an independent closure of
+G4c, the displayed R37 conclusion remains conditional exactly as recorded in the R37
+dependency freeze.
 
 R38 explains geometrically why this does not yet identify the actual modulus limit.
 
@@ -433,6 +443,7 @@ R38 does not prove:
 - a phase limit for \(Q_Ue_R\);
 - strong convergence of the polar gauge;
 - strong convergence or Cauchy convergence of \(W_{R,S,-}^{[U]}\);
+- closure or promotion of R37 Gate G4c;
 - Object X;
 - RH.
 
