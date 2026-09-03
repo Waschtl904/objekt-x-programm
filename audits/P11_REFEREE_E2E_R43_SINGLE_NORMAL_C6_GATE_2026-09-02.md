@@ -3947,15 +3947,25 @@ Subsequent hardening on branch \(\texttt{research/r43-gcac-hardening}\) added:
 The current mathematical-content head for those statements is
 \[
 \boxed{
-\texttt{ade2cd34e7d9c94c9599b26574573e0ffd54ec06}
+\texttt{6614895dcddb55c24c473f98a55be831f590f56b}
 }
 \]
 with mathematical-content R43 blob
 \[
 \boxed{
-\texttt{f8ed8ffe617c9861b4b1df7e3bea3fa1e83028d4}.
+\texttt{b43d493d7a15f30877bfd0a0a9558c58ac52d77b}.
 }
 \]
+Relative to the earlier \(\texttt{ade2cd34...}\) hardening, this mathematical layer also:
+
+- fixes the scalar model once for the whole R43.10ct--R43.10cw contradiction;
+- records explicitly that R43.54 uses the canonical C6a ONB, not the Section-3K higher-jet
+  Riesz family;
+- introduces the canonical compact-resolvent jet-number operator R43.59a--R43.59e;
+- records the quantifier/change-of-basis firewall R43.59f against deriving B-JMOM from
+  fixed-\(m\) holomorphy alone;
+- weakens the sufficient B-SIGN regularity route from continuity to the Darboux property.
+
 Later commits which only reconcile review provenance or navigation do not enlarge that
 mathematical proof scope.
 
@@ -4006,9 +4016,11 @@ Aleksandrov--Clark or canonical-system boundary parameter is currently booked.
 
 \[
 \boxed{
-\text{B-TIGHT / B-JMOM / B-SIGN remain OPEN;}
-\qquad
-\text{R43 overall remains OPEN on the current post-review hardening.}
+\text{B-TIGHT remains the primary OPEN gate;}
+\quad
+\text{B-JMOM / compact-resolvent energy are sufficient subroutes;}
+\quad
+\text{B-SIGN/B-ORIENT remains secondary OPEN.}
 }
 \]
 
