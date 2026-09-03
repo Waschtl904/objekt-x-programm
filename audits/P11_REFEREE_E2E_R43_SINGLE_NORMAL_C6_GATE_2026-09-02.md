@@ -702,15 +702,47 @@ m_\Gamma(\eta/Q)
 is holomorphic in \(Q\), and its denominator stays uniformly away from its purely
 imaginary zero set.  On that neighborhood the series and all local \(Q\)-derivatives
 are dominated, in form norm, by a constant multiple of one reference R33 weight.
-Consequently
+At this point one convention matters.  On the real axis, \(a_Q\) is a Hermitian form,
+so its Hilbert-space Riesz identification is conjugate-linear in one slot and must **not**
+be treated as a holomorphic complex-linear operator.  For analyticity we instead pass to
+the underlying real Hilbert form.
+
+Let \(\mathscr V_I^{\mathbb R}\) be the real-valued odd form domain.  There \(a_Q\) is
+real symmetric.  Complexify \(\mathscr V_I^{\mathbb R}\) and extend this real symmetric
+form complex-bilinearly.  Denote the extension by
 \[
-Q\longmapsto a_Q
+\mathfrak a_Q^{\mathbb C}[h,k].
 \]
-is a holomorphic family in
+Equivalently, in Fourier coordinates one may use
 \[
-\mathcal B(\mathscr V_I,\mathscr V_I^*).
+\mathfrak a_Q^{\mathbb C}[h,k]
+=
+\frac1{2\pi}
+\int_{\mathbb R}
+m_\Gamma(\eta/Q)
+\widehat{E_1h}(\eta)
+\widehat{E_1k}(-\eta)
+\,d\eta.
+\]
+For real \(Q\) and real \(h,k\) this is exactly the original Gamma form.  The same
+form-norm estimates therefore show that its associated complex-linear operator
+\[
+A(Q):
+\mathscr V_I^{\mathbb C}
+\longrightarrow
+(\mathscr V_I^{\mathbb C})'
+\]
+into the **complex-linear dual** is operator-norm holomorphic:
+\[
+\boxed{
+Q\longmapsto A(Q)
+\text{ is holomorphic.}
+}
 \tag{R43.10z}
 \]
+All complex-analytic uses of \(A(Q)\) below refer to this bilinear complexification.
+The ordinary sesquilinear Hilbert-Riesz map is used only on the positive real axis.
+\tag{R43.10z0}
 
 The pulled-back jet functionals
 \[
@@ -731,21 +763,22 @@ kernels
 are entire in the radial variable away from the fixed sign and are uniformly bounded on
 compact \(Q\)-sets.
 
-Let
+At every real \(Q_0\in I\), coercivity of the real Gamma form makes the complexified
+operator \(A(Q_0)\) an isomorphism.  By (R43.10z) and openness of the invertible group,
+\(A(Q)\) remains invertible in a complex neighborhood of \(Q_0\), and
 \[
-A(Q):\mathscr V_I\to\mathscr V_I^*
+A(Q)^{-1}
 \]
-be the coercive operator represented by \(a_Q\).  Uniform coercivity on \(I\), together
-with (R43.10z), gives a locally holomorphic inverse
-\[
-A(Q)^{-1}.
-\]
+is holomorphic there.
 Put
 \[
 u_{j,Q}:=A(Q)^{-1}b_{j,Q},
 \qquad j=0,1.
 \tag{R43.10ab}
 \]
+Here the real jet functionals have been extended complex-linearly to the complexified real
+form domain.  For positive real \(Q\), all coefficients are real, hence \(u_{j,Q}\) is
+real and is exactly the usual Gamma-Riesz vector for the corresponding real functional.
 On the real axis,
 \[
 d_Q:=b_{0,Q}(u_{0,Q})>0.
@@ -759,7 +792,8 @@ u_{1,Q}
 \frac{b_{0,Q}(u_{1,Q})}{d_Q}\,u_{0,Q}
 \tag{R43.10ac}
 \]
-is holomorphic and is exactly the pulled-back constrained Gamma-Riesz vector:
+is holomorphic in the complexified bilinear problem, while for positive real \(Q\) it is
+exactly the pulled-back constrained Gamma-Riesz vector:
 \[
 D_Q\widetilde g_Q=g_Q.
 \]
@@ -772,7 +806,9 @@ b_{1,Q}(\widetilde g_Q)
 }
 \tag{R43.10ad}
 \]
-is real analytic on \((0,\infty)\).
+is the restriction of a holomorphic scalar function and is therefore real analytic on
+\((0,\infty)\).  The off-real analytic continuation is **not** being interpreted as a
+Hilbert norm; the norm identity is asserted only for real \(Q>0\).
 
 Combining this with the frozen strict monotonicity
 \[
@@ -1044,9 +1080,10 @@ Let \(\mathscr V_{Q_0}\) be the fixed Hilbert form domain with norm
 m_{Q_0}(\eta)
 |\widehat{E_1h}(\eta)|^2\,d\eta.
 \]
-For \(h,k\in\mathscr V_{Q_0}\), (R43.10ap) and weighted Cauchy--Schwarz imply
+For \(h,k\) in the complexified fixed form domain, (R43.10ap), evenness of the
+reference weight, and weighted Cauchy--Schwarz imply for the bilinear extension
 \[
-|\partial_Q^ja_Q[h,k]|
+|\partial_Q^j\mathfrak a_Q^{\mathbb C}[h,k]|
 \le
 C_{j,Q_0}
 \|h\|_{\mathscr V_{Q_0}}
@@ -2235,12 +2272,13 @@ and a real reference radius \(Q_0>0\).  We now verify the fixed-domain analytic 
 for this arbitrary \(m\), rather than importing the first-jet proof by analogy.
 
 Use the same complex disk \(\mathbb D_{Q_0}\) and fixed form domain
-\(\mathscr V_{Q_0}\) as in R43.10al--R43.10ar.  The estimates there are independent of
-the jet index and give an operator-norm holomorphic family
+\(\mathscr V_{Q_0}\) as in R43.10al--R43.10ar, with \(A(Q)\) understood throughout in
+the **complex-bilinear real-form complexification** fixed in R43.10z0.  In particular, no
+sesquilinear Hilbert-Riesz map is being analytically continued.  The estimates there are
+independent of the jet index and give an operator-norm holomorphic family
 \[
 Q\longmapsto
-A(Q)\in
-\mathcal B(\mathscr V_{Q_0},\mathscr V_{Q_0}^*)
+A(Q)
 \]
 with a holomorphic inverse \(A(Q)^{-1}\) on a smaller disk about \(Q_0\).
 
@@ -2378,8 +2416,9 @@ b_{m,Q}(\widetilde g_{m,Q}).
 }
 \tag{R43.10cq4}
 \]
-The right side is the restriction of a holomorphic scalar function to the positive real
-axis.  Thus
+The right side is the restriction of a holomorphic scalar function from the complexified
+bilinear problem to the positive real axis.  On that real axis it equals the genuine
+Hilbert norm square; no such norm interpretation is made off the real axis.  Thus
 \[
 \boxed{
 Q\longmapsto\gamma_m(Q)
