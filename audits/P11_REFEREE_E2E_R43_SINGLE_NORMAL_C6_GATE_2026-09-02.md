@@ -3158,9 +3158,18 @@ functional calculus.
 
 ### Route B — normal tail compactness
 
-Prove a uniform canonical-jet tail estimate for the single orbit \(W_Ue_{R,0}\).  Together
-with convergence of every finite coordinate, such a tail estimate would prevent weak escape
-and force strong convergence.
+Under the candidate GC-AC closure, Section 7A below makes this route exact.  Write
+\[
+W_U\varepsilon_R=b_U\varepsilon_S+h_U,
+\qquad h_U\in H_S^0.
+\]
+Then \(b_U\in\mathbb R\), \(h_U\rightharpoonup0\), and
+\[
+\|h_U\|^2=1-b_U^2.
+\]
+Thus the unresolved no-escape problem is precisely whether the weakly vanishing tangential
+remainder is uniformly tight in a fixed dense finite-dimensional exhaustion of \(H_S^0\).
+Section 7A gives an if-and-only-if tail criterion.
 
 ### Route C — third hard-constraint / edge layer
 
@@ -3205,17 +3214,192 @@ gap, R43.10av--bc scalarizes the full odd Gamma nest through a diagonal canonica
 and Lemma R43-GC1 proves that the compatible \(\beta^{(0)}\) hyperplane constraint preserves
 scalar nest multiplicity.
 
-The source check after the first GC-M1 candidate splits Route D more sharply:
+Sections 3J--3K now split and then candidate-close this route:
 
 - \(\textbf{GC-M1}_{\rm scalar}\): scalar multiplicity one, candidate-GREEN;
-- \(\textbf{GC-AC}\): absence of a singular-continuous scalar radius measure in the natural
-  \(Q\)-coordinate, **OPEN**.
+- \(\textbf{GC-AC}\): candidate-closed by the total higher-jet Riesz family in
+  R43.10cq0--R43.10cw.
 
-Only if GC-AC is closed does the reviewed cyclicity implication force the last weak normal
-orbit into \(\mathbb C\varepsilon_S\).  After that, the remaining full C6 problem is the one
-scalar normal coefficient \(b_U\) in R43.10bv--bw.
+The exact-head hardening review subsequently repaired two presentation-level proof hazards:
+the Bessonov--Denisov theorem-number version ambiguity and the sesquilinear-Riesz
+holomorphy convention.  The latter is now handled by the real symmetric form and its
+complex-bilinear complexification R43.10z0.
+
+Therefore Route D is no longer the active mathematical obstruction at candidate level.
+It remains a review/freeze dependency.  Conditional on this candidate closure, the live
+Strong-Terminal obstruction is the scalar \(b_U\) and its tangential no-escape defect
+described next.
 
 ---
+
+## 7A. Last Strong-Terminal scalar after GC-AC: reality and exact no-escape defect
+
+Assume the candidate GC-AC conclusion R43.10cx, hence the terminal-free cyclicity
+R43.10cy--R43.10da.  Put
+\[
+w_U:=W_{R,S}^{[U]}\varepsilon_R,
+\qquad
+b_U:=\langle w_U,\varepsilon_S\rangle.
+\]
+
+### 7A.1 The residual scalar is real
+
+Let \(\mathcal C_Xf=\overline f\) be complex conjugation on the odd graph space.
+The Gamma form, the finite hub/rest operators, the Schur term, and zero extension all have
+real coefficients/kernels.  Therefore every finite-terminal metric \(G_{X,U}\) commutes
+with \(\mathcal C_X\).  Positive functional calculus gives the same commutation for
+\(G_{X,U}^{\pm1/2}\), and hence
+\[
+\mathcal C_S W_{R,S}^{[U]}
+=
+W_{R,S}^{[U]}\mathcal C_R.
+\tag{R43.44}
+\]
+
+The boundary functional \(\beta_X^{(0)}\) is real.  Its normalized Riesz normal
+\(\varepsilon_X\) is therefore fixed by conjugation when the canonical positive phase
+\(\beta_X^{(0)}(\varepsilon_X)>0\) is chosen.  Consequently
+\[
+\boxed{
+b_U\in\mathbb R,
+\qquad -1\le b_U\le1.
+}
+\tag{R43.45}
+\]
+Thus the last phase ambiguity is only a possible **sign** ambiguity; there is no genuinely
+complex terminal phase.
+
+### 7A.2 Orthogonal defect decomposition
+
+Because
+\[
+H_S^0=\varepsilon_S^\perp,
+\]
+define
+\[
+\boxed{
+h_U
+:=
+P_{H_S^0}w_U
+=
+w_U-b_U\varepsilon_S.
+}
+\tag{R43.46}
+\]
+Since \(W_U\) is an isometry and \(\|\varepsilon_R\|=\|\varepsilon_S\|=1\),
+\[
+\boxed{
+\|h_U\|^2
+=
+1-b_U^2.
+}
+\tag{R43.47}
+\]
+
+Candidate GC-AC gives R43.10da: every weak cluster of \(w_U\) lies in
+\(\mathbb C\varepsilon_S\).  Hence
+\[
+\boxed{
+h_U\rightharpoonup0
+\quad\text{in }H_S^0.
+}
+\tag{R43.48}
+\]
+Indeed, a fixed tangential test vector detecting a nonzero subsequential limit would produce
+a weak cluster of \(w_U\) with a nonzero \(H_S^0\)-component, contradicting R43.10da.
+
+For two terminals \(T,U\), the fixed orthogonal splitting gives the exact identity
+\[
+\boxed{
+\|w_U-w_T\|^2
+=
+(b_U-b_T)^2
++
+\|h_U-h_T\|^2.
+}
+\tag{R43.49}
+\]
+Combining this with R43.5,
+\[
+\boxed{
+2-2L_{R,S}^{T,U}
+=
+(b_U-b_T)^2
++
+\|h_U-h_T\|^2.
+}
+\tag{R43.50}
+\]
+
+Since \(h_U\rightharpoonup0\), a strongly Cauchy \(h_U\)-orbit can only converge
+strongly to zero.  Therefore, under candidate GC-AC,
+\[
+\boxed{
+\text{Strong Terminal for the fixed pair }R<S
+\iff
+\bigl[b_U\text{ is Cauchy}\bigr]
+\ &\bigl[b_U^2\to1\bigr].
+}
+\tag{R43.51}
+\]
+Equivalently,
+\[
+b_U\to+1
+\quad\text{or}\quad
+b_U\to-1.
+\]
+No sign is selected at this stage.
+
+### 7A.3 Exact finite-dimensional tightness criterion for no escape
+
+Choose any increasing finite-dimensional sequence
+\[
+F_1\subset F_2\subset\cdots\subset H_S^0
+\]
+whose union is dense in the candidate-closed cyclic space.  Such an exhaustion can be
+chosen from a countable dense subset of the generators in R43.10g/R43.10cy: tangential
+limit vectors from \(\operatorname{Ran}W_{R,S}^{(0)}\) together with intermediate-radius
+Gamma generators.
+
+For every fixed \(N\), weak convergence R43.48 and finite dimensionality imply
+\[
+\|P_{F_N}h_U\|\longrightarrow0.
+\tag{R43.52}
+\]
+Hence
+\[
+1-b_U^2
+=
+\|P_{F_N}h_U\|^2
++
+\|(I-P_{F_N})h_U\|^2,
+\]
+and therefore
+\[
+\boxed{
+b_U^2\to1
+\iff
+\lim_{N\to\infty}
+\limsup_{U\to\infty}
+\|(I-P_{F_N})h_U\|
+=
+0.
+}
+\tag{R43.53}
+\]
+
+This is the exact **B-TIGHT** form of the last no-escape gate.  GC-AC supplies every fixed
+coordinate; what remains is a uniform tail estimate preventing those coordinates from
+running to infinity inside the fixed target graph Hilbert space.
+
+Thus R43 has now separated the final scalar problem into two sharply stated tasks:
+
+1. **B-TIGHT:** prove R43.53, equivalently \(b_U^2\to1\);
+2. **B-SIGN/Cauchy:** prove that the real scalar \(b_U\) has one terminal sign/limit.
+
+If a future theorem establishes suitable terminal continuity of \(b_U\), then B-TIGHT
+would automatically force eventual sign constancy.  Such continuity is **not** imported
+here; it is not presently a booked R4/R5 theorem.
 
 ## 8. Governance / firewall
 
