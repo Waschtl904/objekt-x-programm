@@ -3401,6 +3401,132 @@ If a future theorem establishes suitable terminal continuity of \(b_U\), then B-
 would automatically force eventual sign constancy.  Such continuity is **not** imported
 here; it is not presently a booked R4/R5 theorem.
 
+### 7A.4 Canonical jet-ONB form of B-TIGHT
+
+Use the complete canonical C6a jet ONB in the target,
+\[
+e_{S,0}=\varepsilon_S,
+\qquad
+\{e_{S,n}:n\ge1\}\text{ an ONB of }H_S^0.
+\]
+Set
+\[
+c_{n,U}
+:=
+\langle
+W_Ue_{R,0},
+e_{S,n}
+\rangle.
+\tag{R43.54}
+\]
+Then
+\[
+c_{0,U}=b_U\in\mathbb R,
+\qquad
+c_{n,U}\longrightarrow0
+\quad(n\ge1\text{ fixed})
+\tag{R43.55}
+\]
+by R43.48.  Parseval gives the exact identity
+\[
+\boxed{
+1-b_U^2
+=
+\sum_{n\ge1}|c_{n,U}|^2.
+}
+\tag{R43.56}
+\]
+Therefore
+\[
+\boxed{
+\text{B-TIGHT}
+\iff
+\lim_{N\to\infty}
+\limsup_{U\to\infty}
+\sum_{n>N}|c_{n,U}|^2
+=
+0.
+}
+\tag{R43.57}
+\]
+
+This exhibits the remaining obstruction as an exact failure-of-uniform-summability problem:
+GC-AC proves
+\[
+c_{n,U}\to0
+\quad\text{for every fixed }n,
+\]
+but Strong Terminal still requires permission to pass that fixed-coordinate limit through
+the infinite Parseval sum.
+
+A concrete sufficient target is now immediate.  Let \(\omega_n\uparrow\infty\).  If one
+can prove
+\[
+\boxed{
+\sup_{U\ge U_0}
+\sum_{n\ge1}
+\omega_n|c_{n,U}|^2
+<\infty,
+}
+\tag{R43.58}
+\]
+then
+\[
+\sum_{n>N}|c_{n,U}|^2
+\le
+\frac{1}{\omega_{N+1}}
+\sum_{n>N}\omega_n|c_{n,U}|^2,
+\]
+uniformly in \(U\), and hence B-TIGHT follows.  The simplest named subgate is
+\[
+\boxed{
+\textbf{B-JMOM: }
+\sup_{U\ge U_0}
+\sum_{n\ge1}(1+n)|c_{n,U}|^2
+<\infty.
+}
+\tag{R43.59}
+\]
+B-JMOM is sufficient, not claimed necessary.
+
+### 7A.5 Why R27 strong inverse-root convergence does not close B-TIGHT
+
+One tempting shortcut is to upgrade the frozen R27 strong convergence
+\[
+A_X(U)^{-1/2}
+\xrightarrow[s]{}
+L_X^{-1/2}P_{V_X}
+\]
+to operator-norm convergence and then attempt to control the moving normal uniformly.
+The available P11 geometry does not justify that upgrade.
+
+Frozen R42 has
+\[
+a_0I\le L_X\le I
+\quad\text{on the infinite-dimensional }V_X.
+\]
+Consequently
+\[
+L_X^{-1/2}\ge I
+\quad\text{on }V_X,
+\]
+so the strong limit \(L_X^{-1/2}P_{V_X}\) is **not compact**.  The usual compact-dominance
+route from strong to norm convergence is therefore unavailable.  Moreover the current
+R24/R27 stack does not book an operator monotonicity in the terminal parameter \(U\) that
+would supply an independent monotone-norm theorem.
+
+Thus
+\[
+\boxed{
+\text{R27 strong inverse-root convergence}
+\not\Rightarrow
+\text{the uniform jet-tail control R43.57.}
+}
+\tag{R43.60}
+\]
+This is a firewall against reintroducing the fixed-vector-to-uniformity jump in a disguised
+functional-calculus form.
+
 ## 8. Governance / firewall
 
 R43 uses:
