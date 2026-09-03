@@ -1131,7 +1131,8 @@ The function \(I_m\) is entire, and for positive real \(Q\),
 \Phi_m(Q,y)=\phi_m(Qy).
 \]
 Since the fixed interval \(y\in[-1,1]\) is bounded and
-\(\mathscr V_{Q_0}\hookrightarrow L^2(-1,1)\), the maps
+\(\mathscr V_{Q_0}\hookrightarrow L^2(-1,1)\) continuously — the fixed-domain norm
+from R43.10al--R43.10ar contains the (L^2(-1,1)) term and hence dominates it — the maps
 \[
 Q\longmapsto b_{m,Q}\in\mathscr V_{Q_0}^*
 \]
@@ -2533,26 +2534,52 @@ G_m=0
 \]
 for every \(m\ge1\).
 
-Because the jet index set is countable, there is one Borel set \(E\subset(0,S)\) such that
+Because
 \[
-\nu_S^{\mathrm{sc}}((0,S)\setminus E)=0
+d\nu_S^{\mathrm{sc}}\perp dQ,
 \]
-and
+choose first a Borel singular support \(E_0\subset(0,S)\) with
 \[
-G_m|_E=0
+|E_0|=0,
 \qquad
-\forall m\ge1.
+\nu_S^{\mathrm{sc}}((0,S)\setminus E_0)=0.
+\tag{R43.10cv0}
+\]
+For every \(m\ge1\), absolute continuity of \(d\gamma_m\) gives
+\[
+0=d\gamma_m(E_0)
+=
+\int_{E_0}|G_m(Q)|^2\,d\nu_S(Q)
+=
+\int_{E_0}|G_m(Q)|^2\,d\nu_S^{\mathrm{sc}}(Q).
+\tag{R43.10cv1}
+\]
+Hence \(G_m=0\) \(\nu_S^{\mathrm{sc}}\)-a.e. on \(E_0\).  Since the jet family is
+countable, intersect the corresponding full-measure sets to obtain one Borel
+\(E\subset E_0\) such that
+\[
+\nu_S^{\mathrm{sc}}((0,S)\setminus E)=0,
+\qquad
+G_m|_E=0
+\quad
+\nu_S^{\mathrm{sc}}\text{-a.e. for every }m\ge1.
+\tag{R43.10cv2}
 \]
 If
 \[
 \nu_S^{\mathrm{sc}}\ne0,
 \]
-then
+then the closed subspace
 \[
+\mathcal H_E
+:=
+\{F\in L^2((0,S),d\nu_S):F=0\text{ a.e. on }E^c\}
+\simeq
 L^2(E,d\nu_S^{\mathrm{sc}})
 \]
-is a nonzero closed subspace orthogonal to every \(G_m\).  This contradicts the density
-R43.10ct.
+is nonzero.  Because \(|E|=0\), its ambient measure is purely the singular part there,
+and R43.10cv2 makes \(\mathcal H_E\) orthogonal to every \(G_m\).  This contradicts
+the density R43.10ct.
 
 Therefore
 \[
@@ -3526,6 +3553,128 @@ Thus
 \]
 This is a firewall against reintroducing the fixed-vector-to-uniformity jump in a disguised
 functional-calculus form.
+
+### 7A.6 Cross-terminal sign reduction and boundary-parameter firewall
+
+The decomposition R43.46 also gives an exact scalar formula for the canonical R5/R39
+two-terminal observable.  For terminals \(T,U\),
+\[
+\boxed{
+L_{R,S}^{T,U}
+=
+b_Tb_U
++
+\operatorname{Re}\langle h_T,h_U\rangle.
+}
+\tag{R43.61}
+\]
+Indeed,
+\[
+\langle w_T,w_U\rangle
+=
+b_Tb_U+\langle h_T,h_U\rangle
+\]
+because the normal/tangential splitting
+\(H_S^0\oplus\mathbb C\varepsilon_S\) is orthogonal and the coefficients \(b_T,b_U\)
+are real.
+
+Under B-TIGHT, R43.47 gives
+\[
+\|h_U\|\longrightarrow0.
+\]
+Hence Cauchy--Schwarz yields the two-terminal asymptotic
+\[
+\boxed{
+L_{R,S}^{T,U}-b_Tb_U
+\longrightarrow0
+\qquad(T,U\to\infty).
+}
+\tag{R43.62}
+\]
+Combining this with the exact R39 criterion therefore sharpens R43.51:
+\[
+\boxed{
+\text{under candidate GC-AC + B-TIGHT,}qquad
+\text{Strong Terminal}
+\iff
+b_Tb_U\longrightarrow1.
+}
+\tag{R43.63}
+\]
+
+This also makes a sign failure maximally visible.  If cofinal terminal sequences
+\(T_n,U_n\to\infty\) have opposite asymptotic signs, then B-TIGHT gives
+\[
+b_{T_n}b_{U_n}\to-1,
+\qquad
+\operatorname{Re}\langle h_{T_n},h_{U_n}\rangle\to0,
+\]
+so
+\[
+\boxed{
+L_{R,S}^{T_n,U_n}\to-1,
+\qquad
+\|w_{U_n}-w_{T_n}\|^2\to4.
+}
+\tag{R43.64}
+\]
+Thus the post-B-TIGHT remainder is exactly an orientation/sign-coherence problem, not a
+small norm defect.  We call it
+\[
+\boxed{
+\textbf{B-SIGN: eventual sign coherence of }b_U.
+}
+\tag{R43.65}
+\]
+
+There is a simple sufficient route which is useful to isolate even though it is not yet
+proved for the concrete terminal family.  If \(U\mapsto b_U\) is continuous on some
+terminal tail, then B-TIGHT implies \(|b_U|>1/2\) there for all sufficiently large \(U\).
+A continuous real function on the connected tail cannot pass from the positive component
+to the negative component without crossing zero.  Consequently
+\[
+\boxed{
+\text{B-TIGHT + eventual terminal continuity of }b_U
+\Longrightarrow
+\text{B-SIGN}
+\Longrightarrow
+\text{Strong Terminal}.
+}
+\tag{R43.66}
+\]
+More generally, eventual piecewise continuity together with a uniform bound strictly below
+\(1\) on every sufficiently late jump of \(b_U\) would suffice once
+\(|b_U|>1/2\).  No such continuity or jump theorem is currently booked by R4/R5; the
+finite-terminal algebra alone does not supply it.
+
+Finally, the current P11 definition is
+\[
+b_U
+=
+\langle W_{R,S}^{[U]}\varepsilon_R,\varepsilon_S\rangle,
+\]
+a fixed matrix coefficient of the normalized finite-terminal transport.  No identity in the
+present stack identifies \(b_U\) with a de Branges/canonical-system boundary parameter,
+an Aleksandrov--Clark parameter, or a boundary condition at \(t=0\).  Therefore no
+Clark-measure stability theorem may be imported to control its sign or modulus without a
+new theorem establishing precisely such an identification:
+\[
+\boxed{
+\text{current }b_U
+\text{ is a transport coefficient, not a booked Clark/boundary parameter.}
+}
+\tag{R43.67}
+\]
+
+The live order of attack is therefore:
+
+1. **B-TIGHT**: prove \(b_U^2\to1\), equivalently R43.53/R43.57;
+2. **B-ORIENT**: prove either B-SIGN directly through R43.61--R43.63 or sufficient terminal
+   orientation regularity such as R43.66.
+
+B-JMOM remains only one sufficient route to the first item.
+
+---
 
 ## 8. Governance / firewall
 
