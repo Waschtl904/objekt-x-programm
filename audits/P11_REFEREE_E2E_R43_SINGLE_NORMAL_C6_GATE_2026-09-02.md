@@ -3677,6 +3677,64 @@ Hence \(\|h_U\|\to0\).
 Thus the polynomial choice \(\rho_n=1+n\) is only one convenient sufficient route.
 Logarithmic, fractional, superlinear, or any other coercive weight is equally legitimate.
 
+There is also an exact **flag-only** representation which removes any appearance that
+\(N_S\) is an arbitrary auxiliary operator.  C6a gives
+\[
+\mathcal H_S^{[m]}
+=
+\overline{\operatorname{span}}\{e_{S,n}:n\ge m\},
+\qquad m\ge1.
+\]
+Let \(P_S^{[m]}\) be the orthogonal projection onto \(\mathcal H_S^{[m]}\).  For
+\[
+h=\sum_{n\ge1}c_ne_{S,n}
+\]
+Tonelli's theorem gives
+\[
+\begin{aligned}
+\sum_{m\ge1}\|P_S^{[m]}h\|^2
+&=
+\sum_{m\ge1}\sum_{n\ge m}|c_n|^2\\
+&=
+\sum_{n\ge1}n|c_n|^2.
+\end{aligned}
+\]
+Hence
+\[
+\boxed{
+\langle N_Sh,h\rangle
+=
+\sum_{m\ge1}\|P_S^{[m]}h\|^2.
+}
+\tag{R43.59e0}
+\]
+More generally, if \(\rho_0=0\) and \(\rho_n\uparrow\infty\), then
+\[
+\boxed{
+\sum_{n\ge1}\rho_n|c_n|^2
+=
+\sum_{m\ge1}
+(\rho_m-\rho_{m-1})
+\|P_S^{[m]}h\|^2.
+}
+\tag{R43.59e1}
+\]
+
+Therefore the preferred orbit-energy problem can be stated intrinsically as
+\[
+\boxed{
+\sup_{U\ge U_0}
+\sum_{m\ge1}
+\|P_S^{[m]}h_U\|^2
+<\infty
+\Longrightarrow
+\text{B-TIGHT}.
+}
+\tag{R43.59e2}
+\]
+This formulation uses only the canonical nested jet kernels from C6a and the actual normal
+orbit.  It involves no quantitative conditioning of the Section-3K higher-jet Riesz family.
+
 #### 7A.4b Higher-jet holomorphy does not by itself give B-JMOM
 
 Section 3K proves local holomorphy for each fixed higher-jet Riesz datum and estimates of the
