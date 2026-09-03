@@ -3436,6 +3436,20 @@ e_{S,0}=\varepsilon_S,
 \qquad
 \{e_{S,n}:n\ge1\}\text{ an ONB of }H_S^0.
 \]
+
+#### Coordinate-provenance firewall
+
+These vectors are the **canonical C6a orthonormal basis in the fixed target graph Hilbert
+metric**.  They are not the higher-jet Gamma-Riesz family
+\(\{g_{m,S}\}\) used in Section 3K to close GC-AC.  Accordingly the coefficients below
+are genuine ONB Fourier coefficients and Parseval is exact; no Riesz-basis or frame theorem
+for the Section-3K Riesz vectors is being assumed.
+
+The normalization is also already fixed by C6a: each one-dimensional jet layer is normalized
+to graph-Hilbert norm one and its remaining phase is fixed by positivity of the first active
+jet.  Thus the index \(n\) below labels canonical orthogonal jet **layers**; it is not a raw
+derivative coefficient such as \(f^{(n)}(0)\) or \(f^{(n)}(0)/n!\).
+
 Set
 \[
 c_{n,U}
@@ -3515,6 +3529,109 @@ uniformly in \(U\), and hence B-TIGHT follows.  The simplest named subgate is
 \tag{R43.59}
 \]
 B-JMOM is sufficient, not claimed necessary.
+
+#### 7A.4a Canonical compact-resolvent reformulation
+
+The ONB makes the abstract compactness route completely canonical.  Define the positive
+selfadjoint **jet-number operator**
+\[
+\boxed{
+N_S e_{S,n}=n e_{S,n},
+\qquad n\ge1,
+}
+\tag{R43.59a}
+\]
+on \(H_S^0\), with
+\[
+\mathcal D(N_S)
+=
+\left\{
+x=\sum_{n\ge1}x_ne_{S,n}:
+\sum_{n\ge1}n^2|x_n|^2<\infty
+\right\}.
+\]
+Its resolvent is compact because its eigenvalues have multiplicity one and tend to
+\(+\infty\).  Its form domain is
+\[
+\mathcal D(N_S^{1/2})
+=
+\left\{
+x:
+\sum_{n\ge1}n|x_n|^2<\infty
+\right\}.
+\tag{R43.59b}
+\]
+Since
+\[
+h_U
+=
+\sum_{n\ge1}c_{n,U}e_{S,n},
+\]
+B-JMOM is exactly the uniform form-energy bound
+\[
+\boxed{
+\sup_{U\ge U_0}
+\left\|(I+N_S)^{1/2}h_U\right\|^2
+<\infty.
+}
+\tag{R43.59c}
+\]
+
+More generally, for any monotone weight \(\rho_n\uparrow\infty\), define
+\[
+N_{S,\rho}e_{S,n}=\rho_ne_{S,n}.
+\tag{R43.59d}
+\]
+Then \((I+N_{S,\rho})^{-1}\) is compact and
+\[
+\boxed{
+\sup_{U\ge U_0}
+\langle (I+N_{S,\rho})h_U,h_U\rangle
+<\infty
+\Longrightarrow
+\text{B-TIGHT}.
+}
+\tag{R43.59e}
+\]
+Indeed the form-unit ball of a positive compact-resolvent operator is relatively compact in
+\(H_S^0\).  Every subsequence of \(h_U\) therefore has a strongly convergent
+subsubsequence; R43.48 forces every such strong limit to equal the unique weak limit \(0\).
+Hence \(\|h_U\|\to0\).
+
+Thus the polynomial choice \(\rho_n=1+n\) is only one convenient sufficient route.
+Logarithmic, fractional, superlinear, or any other coercive weight is equally legitimate.
+
+#### 7A.4b Higher-jet holomorphy does not by itself give B-JMOM
+
+Section 3K proves local holomorphy for each fixed higher-jet Riesz datum and estimates of the
+form
+\[
+\|\partial_Q^k b_{m,Q}\|
+\le
+C_{m,k,Q_0}.
+\]
+Those statements have the quantifier order
+\[
+\forall m\quad \exists C_{m,k,Q_0}<\infty.
+\]
+They do **not** provide any summable or coercively weighted control as \(m\to\infty\).
+Moreover the Section-3K vectors \(g_{m,S}\) are a total Riesz family used for the GC-AC
+measure argument, whereas R43.54 uses the distinct canonical C6a ONB \(e_{S,n}\).
+Consequently there is currently no booked implication
+\[
+\{C_{m,k,Q_0}\text{ fixed-}m\text{ bounds}\}
+\Longrightarrow
+\text{R43.59c}.
+\tag{R43.59f}
+\]
+
+Any attempt to derive B-TIGHT from Section 3K must therefore supply an additional quantitative
+bridge: for example a controlled triangular/change-of-basis estimate from the higher-jet
+Riesz data to the C6a ONB, or a direct estimate of the compact-resolvent energy
+\(\langle N_{S,\rho}h_U,h_U\rangle\).
+
+This identifies the primary B-TIGHT target as **uniform compactness of the normal remainder
+in the fixed C6a coordinates**, not merely higher-jet holomorphy.
 
 ### 7A.5 Why R27 strong inverse-root convergence does not close B-TIGHT
 
@@ -3628,13 +3745,14 @@ small norm defect.  We call it
 \]
 
 There is a simple sufficient route which is useful to isolate even though it is not yet
-proved for the concrete terminal family.  If \(U\mapsto b_U\) is continuous on some
-terminal tail, then B-TIGHT implies \(|b_U|>1/2\) there for all sufficiently large \(U\).
-A continuous real function on the connected tail cannot pass from the positive component
-to the negative component without crossing zero.  Consequently
+proved for the concrete terminal family.  The weakest natural scalar regularity needed here
+is the **intermediate value (Darboux) property** on a connected terminal tail.  Under
+B-TIGHT, \(|b_U|>1/2\) for all sufficiently large \(U\).  A real Darboux function on the
+connected interval \([U_0,\infty)\) cannot pass from the positive component to the negative
+component without taking the value zero.  Consequently
 \[
 \boxed{
-\text{B-TIGHT + eventual terminal continuity of }b_U
+\text{B-TIGHT + eventual Darboux property of }b_U
 \Longrightarrow
 \text{B-SIGN}
 \Longrightarrow
@@ -3642,10 +3760,16 @@ to the negative component without crossing zero.  Consequently
 }
 \tag{R43.66}
 \]
-More generally, eventual piecewise continuity together with a uniform bound strictly below
-\(1\) on every sufficiently late jump of \(b_U\) would suffice once
-\(|b_U|>1/2\).  No such continuity or jump theorem is currently booked by R4/R5; the
-finite-terminal algebra alone does not supply it.
+Eventual continuity or real analyticity would each imply the required Darboux property, but
+they are stronger than necessary.  Direct eventual positivity of \(b_Tb_U\), or of the
+cross coefficient \(L^{T,U}\) together with R43.62, is another sufficient orientation
+route.
+
+The parameter \(U\) here genuinely ranges over the connected real tail of terminal radii.
+Nevertheless no Darboux, continuity, analyticity, or jump-control theorem for the concrete
+map \(U\mapsto b_U\) is currently booked by R4/R5.  In particular the finite-adic
+terminal formulas contain arithmetic cutoff/floor changes as \(U\) varies, so scalar
+regularity must be proved rather than inferred from formal dependence on a real parameter.
 
 Finally, the current P11 definition is
 \[
