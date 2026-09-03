@@ -3709,6 +3709,130 @@ Riesz data to the C6a ONB, or a direct estimate of the compact-resolvent energy
 This identifies the primary B-TIGHT target as **uniform compactness of the normal remainder
 in the fixed C6a coordinates**, not merely higher-jet holomorphy.
 
+#### 7A.4c Numerical conditioning firewall for the Section-3K higher-jet route
+
+A direct Galerkin diagnostic was run against the **normalized constrained-Gamma Riesz
+family**, not merely against the raw \(L^2\) moment kernels.  The reproducible script is
+
+\[
+\texttt{audits/P11\_R43\_JET\_GRAM\_CONDITIONING\_DIAGNOSTIC\_2026-09-03.py}.
+\]
+
+For each radius \(S\), the exact R33 multiplier is Galerkinized on an odd sine basis,
+the zeroth-jet constrained Gamma-Riesz vectors are constructed by whitening the Gamma form
+and projecting off the zeroth Riesz direction, and **each higher-jet Riesz vector is then
+renormalized to norm one**.  Thus the test removes the raw \(M^{m+1}\) scaling.
+
+At \(S=1\), Galerkin dimension \(P=120\), the smallest singular values of the first
+\(m\) normalized constrained Riesz vectors are approximately
+\[
+\begin{array}{c|cccc}
+m&4&8&12&16\\ \hline
+\sigma_{\min}
+&
+2.77\times10^{-3}
+&
+2.41\times10^{-6}
+&
+2.32\times10^{-9}
+&
+2.24\times10^{-12}.
+\end{array}
+\tag{R43.59g}
+\]
+Hence the corresponding normalized Gram minima are
+\[
+\lambda_{\min}
+\approx
+7.67\times10^{-6},
+\ 5.80\times10^{-12},
+\ 5.39\times10^{-18},
+\ 5.02\times10^{-24}.
+\tag{R43.59h}
+\]
+The same geometric decay is stable for \(S=0.5,2,4\), under Galerkin dimensions
+\(P=40,\dots,120\), and under Fourier cutoffs \(540,1620,4860\).  At \(S=1\),
+a log-linear fit for \(m=2,\dots,16\) gives diagnostically
+\[
+\log_{10}\sigma_{\min}
+\approx
+-0.7614\,m+0.5029.
+\tag{R43.59i}
+\]
+
+This is **not a theorem** and is not booked as a no-go.  It does, however, strongly
+contraindicate any B-TIGHT route whose main hypothesis is a dimension-uniform Riesz lower
+bound for the entire Section-3K higher-jet family.  In particular, the numerical
+degeneration survives individual normalization and therefore cannot be explained away by
+the crude exponential scaling in R43.10cq1b.
+
+The operational firewall is:
+\[
+\boxed{
+\text{do not make global higher-jet Riesz conditioning the primary B-TIGHT route.}
+}
+\tag{R43.59j}
+\]
+Orbit-adapted finite estimates are not excluded.  The preferred target is the intrinsic
+compact-resolvent energy of the actual orbit \(h_U\).
+
+#### 7A.4d Generator/commutator firewall
+
+A natural idea is to differentiate
+\[
+\mathcal E(U)
+:=
+\langle N_Sh_U,h_U\rangle
+\tag{R43.59k}
+\]
+and seek a Gronwall inequality from a commutator with a terminal generator.  The current
+repository does **not** yet justify that step.
+
+The terminal gauge is
+\[
+W_U
+=
+G_{S,U}^{1/2}J_{R,S}G_{R,U}^{-1/2},
+\]
+while the underlying finite-adic geometry contains the explicit martingale-depth floor
+\[
+J_{p,U}(u)
+=
+\max\left\{0,
+\left\lfloor\frac{2(U-|u|)_+}{\log p}\right\rfloor
+\right\}
+\]
+and terminal prime-power cutoffs.  No frozen R4--R42 theorem currently provides an
+operator-norm derivative \(dG_{X,U}/dU\), a derivative \(dW_U/dU\), or a closed
+skew/selfadjoint terminal generator \(\mathcal A_U\) satisfying
+\[
+\partial_U W_U=\mathcal A_UW_U.
+\]
+
+Therefore expressions such as
+\[
+\frac{d}{dU}\mathcal E(U)
+=
+\langle [N_S,\mathcal A_U]h_U,h_U\rangle+\cdots
+\]
+are presently formal only.  The R40/R41 scale
+\[
+\|v_{X,U}\|\asymp U^{-1},
+\qquad
+U\|v_{X,U}\|\to\frac{\sqrt{\gamma_X}}2
+\]
+controls one dual-normal channel; it is **not** a derivative estimate for the terminal
+transport.
+
+Thus a commutator/Gronwall route first needs one of:
+
+1. a genuine terminal differentiability/generator theorem with an integrable commutator
+   bound; or
+2. a finite-increment substitute controlling the compact-resolvent energy without
+   differentiating in \(U\).
+
+No \(U^{-1}\Rightarrow U^{-1-\delta}\) derivative gain may be inferred from R40/R41 alone.
+
 ### 7A.5 Why R27 strong inverse-root convergence does not close B-TIGHT
 
 One tempting shortcut is to upgrade the frozen R27 strong convergence
@@ -3820,32 +3944,83 @@ small norm defect.  We call it
 \tag{R43.65}
 \]
 
-There is a simple sufficient route which is useful to isolate even though it is not yet
-proved for the concrete terminal family.  The weakest natural scalar regularity needed here
-is the **intermediate value (Darboux) property** on a connected terminal tail.  Under
-B-TIGHT, \(|b_U|>1/2\) for all sufficiently large \(U\).  A real Darboux function on the
-connected interval \([U_0,\infty)\) cannot pass from the positive component to the negative
-component without taking the value zero.  Consequently
+A continuity/Darboux route is possible only if such scalar regularity is actually proved.
+Because the concrete finite-adic formulas contain moving arithmetic cutoffs and floor
+functions, it is preferable not to make Darboux the primary B-SIGN route.
+
+A purely metric **increment criterion** avoids any continuity assumption.  Suppose there
+exist
+\[
+\Delta>0,\qquad \eta>0,\qquad U_0
+\]
+such that
 \[
 \boxed{
-\text{B-TIGHT + eventual Darboux property of }b_U
+|b_V-b_U|
+\le
+2-\eta
+\qquad
+(U,V\ge U_0,\ |V-U|\le\Delta).
+}
+\tag{R43.66}
+\]
+Under B-TIGHT choose \(0<\varepsilon<\eta/2\) so that
+\[
+|b_U|>1-\varepsilon
+\]
+for all sufficiently large \(U\).  If two such nearby terminal values had opposite signs,
+then
+\[
+|b_V-b_U|
+\ge
+|b_V|+|b_U|
+>
+2-2\varepsilon
+>
+2-\eta,
+\]
+contradicting R43.66.  Hence the sign is constant on every sufficiently late
+\(\Delta\)-chain.  Since the real terminal tail \([U_1,\infty)\) is
+\(\Delta\)-chain-connected,
+\[
+\boxed{
+\text{B-TIGHT + R43.66}
 \Longrightarrow
 \text{B-SIGN}
 \Longrightarrow
 \text{Strong Terminal}.
 }
-\tag{R43.66}
+\tag{R43.66a}
 \]
-Eventual continuity or real analyticity would each imply the required Darboux property, but
-they are stronger than necessary.  Direct eventual positivity of \(b_Tb_U\), or of the
-cross coefficient \(L^{T,U}\) together with R43.62, is another sufficient orientation
-route.
 
-The parameter \(U\) here genuinely ranges over the connected real tail of terminal radii.
-Nevertheless no Darboux, continuity, analyticity, or jump-control theorem for the concrete
-map \(U\mapsto b_U\) is currently booked by R4/R5.  In particular the finite-adic
-terminal formulas contain arithmetic cutoff/floor changes as \(U\) varies, so scalar
-regularity must be proved rather than inferred from formal dependence on a real parameter.
+An orbit-level sufficient condition is even more intrinsic:
+\[
+\|w_V-w_U\|
+\le
+2-\eta
+\qquad(|V-U|\le\Delta,\ U,V\gg1),
+\tag{R43.66b}
+\]
+because
+\[
+|b_V-b_U|
+\le
+\|w_V-w_U\|.
+\]
+This asks only that neighboring terminal orbits never become asymptotically antipodal; it
+does not ask for Cauchy convergence.
+
+A second weak route is eventual positive two-terminal correlation:
+\[
+\boxed{
+\liminf_{T,U\to\infty}L_{R,S}^{T,U}>0.
+}
+\tag{R43.66c}
+\]
+Under B-TIGHT and R43.62 this forces \(b_Tb_U>0\) eventually, hence B-SIGN.
+
+Continuity, Darboux, or real analyticity remain sufficient special cases if independently
+proved, but none is currently booked or assumed.
 
 Finally, the current P11 definition is
 \[
@@ -3868,11 +4043,16 @@ new theorem establishing precisely such an identification:
 
 The live order of attack is therefore:
 
-1. **B-TIGHT**: prove \(b_U^2\to1\), equivalently R43.53/R43.57;
-2. **B-ORIENT**: prove either B-SIGN directly through R43.61--R43.63 or sufficient terminal
-   orientation regularity such as R43.66.
+1. **B-TIGHT / orbit energy:** prove \(b_U^2\to1\), preferably by a direct uniform
+   compact-resolvent energy bound for \(h_U\);
+2. **terminal regularity or finite increments:** before using a commutator/Gronwall route,
+   prove a genuine generator theorem or replace it by finite-increment energy estimates;
+3. **B-ORIENT:** after B-TIGHT, prove B-SIGN by the local increment criterion R43.66,
+   positive correlation R43.66c, or any stronger independently proved regularity theorem.
 
-B-JMOM remains only one sufficient route to the first item.
+B-JMOM remains one sufficient realization of the first item.  A global uniform
+higher-jet-Riesz conditioning theorem is no longer the preferred route after the numerical
+diagnostic R43.59g--R43.59j.
 
 ---
 
