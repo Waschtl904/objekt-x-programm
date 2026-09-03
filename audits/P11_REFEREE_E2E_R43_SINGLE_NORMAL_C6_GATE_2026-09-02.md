@@ -1160,8 +1160,8 @@ dependencies rather than silently importing them:
 A convenient source for (1) is Bessonov--Denisov,
 *Szegő condition, scattering, and vibration of Krein strings*,
 **Theorem 2.4** (Inverse Krein--de Branges theorem on exponential type), together with
-equations (2.7), (2.10), (2.18), and (2.21).  Theorem 2.5 in that paper is instead the
-Beurling--Malliavin multiplier theorem.
+equations (2.7), (2.10), (2.18), and (2.21).  No claim about the numbering or content of
+the subsequent theorem is needed here.
 A convenient source for (2) is the even-measure/diagonal-Hamiltonian theorem quoted as
 Theorem 2.6 in Zhang,
 *Direct spectral problems for Paley--Wiener canonical systems* (2026).
@@ -1278,157 +1278,176 @@ Thus \(\mathcal E_Q\) is not dense in \(L^2(\mu_\Gamma)\) for any finite \(Q\), 
 the inverse exponential-type theorem applies at every radius.
 
 Consequently the Fourier image of the full Gamma form space on \((-Q,Q)\) is exactly
-a de Branges truncation
+a de Branges truncation.
+
+Fix **one** diagonal canonical realization supplied by the even-measure theorem and denote
+that chosen realization by
+\[
+H_\Gamma^{\mathrm{diag}}(t)
+=
+\begin{pmatrix}
+h_1(t)&0\\
+0&h_2(t)
+\end{pmatrix}.
+\]
+No uniqueness of this Hamiltonian is asserted or needed.
+
+For this chosen realization put
 \[
 \mathcal B_Q^\Gamma
 =
 B_{r(Q)},
 \qquad
-r(Q)=L_{H_\Gamma}(Q).
+r(Q)=L_{H_\Gamma^{\mathrm{diag}}}(Q).
 \tag{R43.10ay}
 \]
-
 The inverse exponential-type theorem uses the type clock
 \[
-T_{H_\Gamma}(r)
+T_{H_\Gamma^{\mathrm{diag}}}(r)
 =
-\int_0^r\sqrt{\det H_\Gamma(t)}\,dt.
+\int_0^r\sqrt{\det H_\Gamma^{\mathrm{diag}}(t)}\,dt.
 \]
-Since \(r(Q)=L_{H_\Gamma}(Q)<\infty\) for every finite \(Q\), continuity of this clock gives
-\[
-T_{H_\Gamma}(r(Q))=Q.
-\tag{R43.10ay1}
-\]
-Thus the natural P11 support radius \(Q\) is exactly the canonical exponential-type
-coordinate.
 
-There is no hidden jump channel in this coordinate.  Indeed, (R43.10ax0)--(R43.10ax2)
-show that
-\[
-\overline{\bigcup_{q<Q}\mathcal B_q^\Gamma}
-=
-\mathcal B_Q^\Gamma,
-\]
-while support closedness gives
-\[
-\bigcap_{q>Q}\mathcal B_q^\Gamma
-=
-\mathcal B_Q^\Gamma.
-\]
-Hence the radius chain is continuous.  Any zero-type indivisible interval in a canonical
-representative is therefore collapsed by the type coordinate and contributes no separate
-nest fiber.
+### Szegő hardening: every finite support radius is reached
 
-After this standard type reparameterization, the active diagonal Hamiltonian is
-determinant-normalized and can be written
+The concrete density
+\[
+w_\Gamma(\xi)=\frac{m_\Gamma(\xi)}{2\pi}
+\]
+satisfies
+\[
+w_\Gamma(\xi)\ge\frac1{2\pi}
+\]
+and the Poisson-finiteness condition R43.10aw.  The source-checked spectral Szegő theorem
+therefore gives
+\[
+\sqrt{\det H_\Gamma^{\mathrm{diag}}}\notin L^1(\mathbb R_+).
+\]
+Hence
+\[
+T_{H_\Gamma^{\mathrm{diag}}}(r)\to\infty
+\qquad(r\to\infty),
+\]
+and consequently
 \[
 \boxed{
-H_\Gamma(Q)
+r(Q)=L_{H_\Gamma^{\mathrm{diag}}}(Q)<\infty
+\quad\text{for every finite }Q>0.
+}
+\tag{R43.10ay0}
+\]
+The defining property of the type clock now gives
+\[
+\boxed{
+T_{H_\Gamma^{\mathrm{diag}}}(r(Q))=Q.
+}
+\tag{R43.10ay1}
+\]
+This closes the former finiteness assumption in R43.10ay1.  It does **not** imply
+\(\det H_\Gamma^{\mathrm{diag}}>0\) a.e.
+
+### The determinant-normalized PW route is unavailable
+
+The concrete logarithmic growth also excludes \(\mu_\Gamma\) from the PW-sampling class
+required by the stronger determinant-normalized correspondence:
+\[
+m_\Gamma(\xi)\asymp\log(2+|\xi|)
+\]
+implies
+\[
+\boxed{
+\sup_{x\in\mathbb R}\mu_\Gamma((x,x+1))=\infty.
+}
+\tag{R43.10ay2}
+\]
+Thus Makarov--Poltoratski Theorem 3.6 cannot be applied here to deduce a diagonal
+**and determinant-normalized** Hamiltonian.
+
+This is a firewall about that literature route, not a theorem that no independent argument
+could ever prove stronger regularity.
+
+### Odd parity selects one scalar canonical coordinate
+
+For the chosen diagonal realization let
+\[
+\Theta(t,z)
 =
-\begin{pmatrix}
-a(Q)&0\\
-0&a(Q)^{-1}
-\end{pmatrix},
+\binom{\Theta_+(t,z)}{\Theta_-(t,z)}
+\]
+solve the canonical system with the standard first-coordinate initial condition.  ODE
+uniqueness gives
+\[
+\Theta_+(t,-z)=\Theta_+(t,z),
 \qquad
-0<a(Q)<\infty
-\quad\text{for a.e. }Q.
+\Theta_-(t,-z)=-\Theta_-(t,z).
+\tag{R43.10ba}
+\]
+Thus first-coordinate states transform to even spectral functions and second-coordinate
+states to odd spectral functions.
+
+The odd part of the radius-\(Q\) de Branges truncation is therefore the image of
+second-coordinate states \(X=(0,x_2)^t\) supported on \((0,r(Q))\), with norm
+\[
+\boxed{
+\|X\|^2
+=
+\int_0^{r(Q)}h_2(t)|x_2(t)|^2\,dt.
+}
+\tag{R43.10bb}
+\]
+Hence the full odd Gamma truncation chain is a **scalar multiplicity-one support nest**:
+\[
+\boxed{
+\mathcal B_{Q,\mathrm{odd}}^\Gamma
+\simeq
+L^2\!\left((0,r(Q)),h_2(t)\,dt\right).
 }
 \tag{R43.10az}
 \]
 
-
-### Odd parity selects one scalar canonical coordinate
-
-Let
+Push this scalar state measure forward by the type coordinate
 \[
-\Theta(Q,z)
-=
-\binom{\Theta_+(Q,z)}{\Theta_-(Q,z)}
+Q=T_{H_\Gamma^{\mathrm{diag}}}(t).
 \]
-solve the canonical system with initial condition \(\Theta(0,z)=(1,0)^t\).
-For diagonal \(H_\Gamma\), uniqueness of the ODE gives
-\[
-\Theta_+(Q,-z)=\Theta_+(Q,z),
-\qquad
-\Theta_-(Q,-z)=-\Theta_-(Q,z).
-\tag{R43.10ba}
-\]
-Therefore the canonical spectral transform sends first-coordinate states to even spectral
-functions and second-coordinate states to odd spectral functions.
-
-Since the spectral transform is unitary and
-\[
-L^2(\mu_\Gamma)
-=
-L^2_{\rm even}(\mu_\Gamma)
-\oplus
-L^2_{\rm odd}(\mu_\Gamma),
-\]
-the odd part of the radius-\(Q\) de Branges space is exactly the image of states
-\[
-X=(0,x_2)^t
-\]
-supported in the canonical interval \((0,Q)\).
-
-Their state norm is
-\[
-\|X\|^2
-=
-\int_0^Q
-a(q)^{-1}|x_2(q)|^2\,dq.
-\tag{R43.10bb}
-\]
-Multiplication by \(a^{-1/2}\) therefore identifies the **full odd Gamma radius nest**
-unitarily with
+Then there is a scalar Borel measure \(\nu_\Gamma^{\mathrm{odd}}\) such that
 \[
 \boxed{
-N_Q=L^2((0,Q),dq),
-\qquad
-0<Q<S.
+N_Q\simeq L^2((0,Q],d\nu_\Gamma^{\mathrm{odd}}),
+\qquad 0<Q<S.
 }
 \tag{R43.10bc}
 \]
-In particular, before the \(\beta^{(0)}\)-constraint is imposed, the Gamma radius nest has
-scalar multiplicity one in the natural type/radius coordinate.
+This proves scalar multiplicity one, but it does **not** identify
+\(d\nu_\Gamma^{\mathrm{odd}}\) with \(dQ\).
 
-The literature interface in R43.10ay--R43.10az is the main imported-theorem dependency of
-this block and must be source-checked independently before promotion.
+The intrinsic P11 radius chain is continuous: R43.10ax0--R43.10ax2 give left continuity,
+and support closedness gives right continuity.  Therefore
+\(\nu_\Gamma^{\mathrm{odd}}\) has no atoms.  A singular-continuous component in the natural
+radius variable remains possible at this stage and is exactly the GC-AC issue isolated in
+Section 3J.
 
 ### Source verification note
 
-The two literature interfaces have now been checked against the original statements:
+The literature interface has been checked against the original statements:
 
-- Bessonov--Denisov Theorem 2.4 assumes
+- Bessonov--Denisov Theorem 2.4 gives the inverse exponential-type identification under
+  Poisson finiteness and non-density; R43.10ax proves non-density explicitly.
+- The type clock is
   \[
-  \int_{\mathbb R}\frac{d\mu(x)}{1+x^2}<\infty
+  T(\tau)=\int_0^\tau\sqrt{\det H(s)}\,ds,
   \]
-  and non-density of the smooth support-\(Q\) Fourier class \(\mathcal E_Q\) in
-  \(L^2(\mu)\); it then identifies its \(L^2(\mu)\)-completion with the de Branges
-  truncation \(B_{L_Q}\).
-- Zhang Theorem 2.6 states that every **even positive Poisson-finite** measure is the
-  spectral measure of a canonical system with diagonal Hamiltonian.
+  with \(T(L_Q)=Q\) whenever \(L_Q<\infty\).
+- Zhang Theorem 2.6, equivalently Makarov--Poltoratski Theorem 3.5, gives existence of
+  **a** diagonal realization for an even positive Poisson-finite measure; no uniqueness is
+  asserted.
+- The general theorem does not guarantee \(\det H\ne0\) a.e.
+- The spectral Szegő input above gives \(L_Q<\infty\) for every finite \(Q\).
+- Makarov--Poltoratski Theorem 3.6 is tied to the PW-sampling class and is inapplicable
+  here because of R43.10ay2.
 
-For
-\[
-d\mu_\Gamma(\xi)=\frac1{2\pi}m_\Gamma(\xi)\,d\xi
-\]
-these hypotheses hold:
-\[
-m_\Gamma(\xi)\ge1,\qquad
-m_\Gamma(-\xi)=m_\Gamma(\xi),\qquad
-m_\Gamma(\xi)\asymp\log(2+|\xi|),
-\]
-hence
-\[
-\int_{\mathbb R}\frac{d\mu_\Gamma(\xi)}{1+\xi^2}<\infty.
-\]
-Non-density was proved explicitly in R43.10ax.
-
-This source check validates the existence of a diagonal canonical realization and the
-identification of the concrete smooth support-\(Q\) completion with the corresponding
-de Branges truncation.  It does **not yet** by itself validate the stronger claim that the
-natural \(Q\)-radius nest has no singular zero-type channel after type reparameterization;
-that remaining issue is isolated below.
+Thus the checked literature proves scalarity of the odd chain and reachability of every
+finite type radius.  It does **not** by itself prove Lebesgue absolute continuity in the
+natural \(Q\)-coordinate.
 
 
 ---
