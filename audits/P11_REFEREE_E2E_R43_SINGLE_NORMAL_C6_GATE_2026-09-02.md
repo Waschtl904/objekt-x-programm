@@ -1529,14 +1529,34 @@ Accordingly:
 
 No freeze is recorded for R43 as a whole.
 
-**Post-review extension:** Commit \`8f7ef972caf7ea1237db98be21b194cc645c6799\`
-adds R43.10n--R43.10aj.  These statements were derived after the reviewed Phase-I head and
-are therefore **not covered by the preceding external GREEN verdict**.  In particular:
+**Post-review extension:** Commit `8f7ef972caf7ea1237db98be21b194cc645c6799`
+added R43.10n--R43.10aj, later reconciled on mathematical head
+`92acea23ecea203a823b3df22744dd086276ff59`.
 
-- R43.10n--R43.10v: new intrinsic Gamma projection-nest algebra, internally checked;
-- R43.10w--R43.10af: real-analyticity / positive-a.e. nest-density candidate, with the
-  complex-sector form-holomorphy step R43.10z as the main analytic review gate;
-- R43.10ag--R43.10aj: conditional reduction to the structural multiplicity-one gate GC-M1.
+A second independent destructive review of that exact mathematical head reported:
+
+- **R43.10n--R43.10v:** GREEN. The intrinsic one-vector Gamma projection-nest reduction,
+  the identity \(P_Q^\Gamma g_S=J_{Q,S}g_Q\), and
+  \(\|P_Q^\Gamma g_S\|_{\Gamma,S}^2=\gamma_Q\) were checked and found correct.
+- **R43.10w--R43.10af:** not yet GREEN. The analyticity route remains plausible, but
+  R43.10z still needs an explicit uniform complex-sector denominator bound and a
+  summable common majorant for the complete R33 series / local \(Q\)-derivatives.
+- **R43.10ag--R43.10aj:** the conditional Hilbert-space implication
+  `multiplicity-one Lebesgue model => cyclicity` is GREEN.
+  **GC-M1 itself remains open.**
+
+Accordingly:
+\[
+\boxed{
+\text{R43.10n--v: independently reviewed GREEN;}
+}
+\]
+\[
+\boxed{
+\text{R43.10w--af: analytic candidate only;}\qquad
+\text{GC-M1: open structural gate.}
+}
+\]
 
 No claim that GC-M1 is true is booked at this head.
 
