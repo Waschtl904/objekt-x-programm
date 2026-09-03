@@ -1,5 +1,12 @@
 # Objekt X — strategische Forschungsroadmap
 
+> **HISTORISCHER SNAPSHOT.** Diese Roadmap ist durch
+> [FORSCHUNGS_ROADMAP_2026-09-03.md](FORSCHUNGS_ROADMAP_2026-09-03.md)
+> als operative Priorisierung ersetzt worden. Sie bleibt am ursprünglichen Pfad, damit
+> historische Links und Provenienz nicht brechen. Insbesondere sind die damaligen
+> Angaben „A offen“ und „B / R27-F“ heute nicht mehr operativ.
+>
+
 > **Stand:** 2026-08-26  
 > **Status:** Arbeitspriorisierung, **keine mathematische Implikationskette**.  
 > **Definition:** Die kanonische Definition von Objekt X bleibt ausschließlich in
