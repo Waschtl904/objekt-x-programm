@@ -925,6 +925,662 @@ These are now fixed, terminal-free operator-theoretic questions.
 
 ---
 
+## 3F. Explicit repair of the R43.10z holomorphy gate
+
+The second external review correctly isolated the missing point in R43.10z: the complex
+sector must be controlled uniformly in both the spectral variable and the R33 summation
+index.  We now supply that estimate explicitly.
+
+Write
+\[
+m_Q(\eta)
+:=
+m_\Gamma(\eta/Q)
+=
+1+\sum_{n\ge0}s_n(Q,\eta),
+\]
+where, after multiplying numerator and denominator of R43.10y by \(4Q^2\),
+\[
+\boxed{
+s_n(Q,\eta)
+=
+\frac{\eta^2}{
+y_n\bigl(\eta^2+4y_n^2Q^2\bigr)
+},
+\qquad
+y_n=n+\frac14.
+}
+\tag{R43.10ak}
+\]
+
+Fix a real reference point \(Q_0>0\).  Choose \(0<\rho<Q_0/4\), small enough that
+the closed disk
+\[
+\mathbb D_{Q_0}:=\{Q:|Q-Q_0|\le2\rho\}
+\]
+lies in the sector
+\[
+|\arg Q|<\frac{\pi}{4}.
+\]
+There are constants \(c_0,C_0>0\), depending only on this disk, such that
+\[
+\operatorname{Re}Q^2\ge c_0Q_0^2,
+\qquad
+|Q|\le C_0Q_0
+\qquad(Q\in\mathbb D_{Q_0}).
+\tag{R43.10al}
+\]
+For real \(\eta\) and every \(n\ge0\),
+\[
+\begin{aligned}
+\left|
+\eta^2+4y_n^2Q^2
+\right|
+&\ge
+\operatorname{Re}
+\bigl(\eta^2+4y_n^2Q^2\bigr)\\
+&=
+\eta^2+4y_n^2\operatorname{Re}Q^2\\
+&\ge
+\eta^2+4c_0y_n^2Q_0^2.
+\end{aligned}
+\tag{R43.10am}
+\]
+Thus the poles
+\[
+Q=\pm\frac{i\eta}{2y_n}
+\]
+are uniformly excluded from \(\mathbb D_{Q_0}\), simultaneously for all real \(\eta\)
+and all \(n\).
+
+Comparison of (R43.10am) with the positive real denominator at \(Q_0\) gives
+\[
+\boxed{
+|s_n(Q,\eta)|
+\le
+C\,s_n(Q_0,\eta)
+\qquad
+(Q\in\mathbb D_{Q_0}),
+}
+\tag{R43.10an}
+\]
+with \(C\) independent of \(n,\eta\).
+
+Now restrict \(Q\) to the smaller disk
+\[
+|Q-Q_0|\le\rho.
+\]
+For every such \(Q\), the Cauchy circle of radius \(\rho\) remains inside
+\(\mathbb D_{Q_0}\).  Applying the scalar Cauchy estimate to
+\(Q\mapsto s_n(Q,\eta)\) and using (R43.10an) yields, for every integer \(k\ge0\),
+\[
+\boxed{
+|\partial_Q^ks_n(Q,\eta)|
+\le
+C_{k,Q_0}\,s_n(Q_0,\eta),
+}
+\tag{R43.10ao}
+\]
+again uniformly in \(n,\eta\).
+
+The R33 series is positive at the real point \(Q_0\), so summing (R43.10ao) gives
+\[
+\boxed{
+|\partial_Q^km_Q(\eta)|
+\le
+C_{k,Q_0}\,m_{Q_0}(\eta).
+}
+\tag{R43.10ap}
+\]
+This is the common summable/form-norm majorant missing from the previous version of
+R43.10z.
+
+Let \(\mathscr V_{Q_0}\) be the fixed Hilbert form domain with norm
+\[
+\|h\|_{\mathscr V_{Q_0}}^2
+=
+\frac1{2\pi}
+\int_\mathbb R
+m_{Q_0}(\eta)
+|\widehat{E_1h}(\eta)|^2\,d\eta.
+\]
+For \(h,k\in\mathscr V_{Q_0}\), (R43.10ap) and weighted Cauchy--Schwarz imply
+\[
+|\partial_Q^ja_Q[h,k]|
+\le
+C_{j,Q_0}
+\|h\|_{\mathscr V_{Q_0}}
+\|k\|_{\mathscr V_{Q_0}}.
+\tag{R43.10aq}
+\]
+Hence the scalar matrix elements are holomorphic and locally uniformly bounded.
+Weak holomorphy plus local boundedness in the Banach space
+\[
+\mathcal B(\mathscr V_{Q_0},\mathscr V_{Q_0}^*)
+\]
+gives operator-norm holomorphy of
+\[
+Q\longmapsto A(Q).
+\tag{R43.10ar}
+\]
+
+For the jet functionals, define for complex \(Q\) near \(Q_0\)
+\[
+\Phi_m(Q,y)
+:=
+\operatorname{sgn}(y)\,I_m(Q|y|),
+\qquad
+I_m(z):=\int_0^z s^me^{-s/2}\,ds.
+\tag{R43.10as}
+\]
+The function \(I_m\) is entire, and for positive real \(Q\),
+\[
+\Phi_m(Q,y)=\phi_m(Qy).
+\]
+Since the fixed interval \(y\in[-1,1]\) is bounded and
+\(\mathscr V_{Q_0}\hookrightarrow L^2(-1,1)\), the maps
+\[
+Q\longmapsto b_{m,Q}\in\mathscr V_{Q_0}^*
+\]
+are locally holomorphic.
+
+At real \(Q_0\), \(A(Q_0)\) is coercive.  By continuity, \(A(Q)\) remains invertible
+in a smaller complex neighborhood, and the Banach-valued inverse theorem gives
+holomorphic \(A(Q)^{-1}\).  Therefore the construction R43.10ab--R43.10ac is genuinely
+holomorphic there, and
+\[
+\boxed{
+Q\longmapsto\gamma_Q
+\text{ is real analytic on }(0,\infty).
+}
+\tag{R43.10at}
+\]
+Together with frozen R42 strict monotonicity,
+\[
+\boxed{
+\gamma_Q'>0
+\quad\text{for every }Q>0
+\text{ except at most a discrete set.}
+}
+\tag{R43.10au}
+\]
+Thus the scalar nest measure in R43.10af has a density that is positive Lebesgue-a.e.
+
+This closes the specific proof-completeness objection to R43.10z internally.  The whole
+block R43.10ak--R43.10au remains a new AI-GREEN candidate until independent review.
+
+---
+
+## 3G. Literature interface: scalarization of the full odd Gamma radius chain
+
+We now attack GC-M1 itself.
+
+Define the full Gamma spectral measure
+\[
+\boxed{
+d\mu_\Gamma(\xi)
+=
+\frac1{2\pi}m_\Gamma(\xi)\,d\xi.
+}
+\tag{R43.10av}
+\]
+R33 gives
+\[
+m_\Gamma(\xi)\ge1,
+\qquad
+m_\Gamma(\xi)\asymp\log(2+|\xi|),
+\]
+so
+\[
+\int_\mathbb R\frac{d\mu_\Gamma(\xi)}{1+\xi^2}<\infty.
+\tag{R43.10aw}
+\]
+Moreover \(\mu_\Gamma\) is even.
+
+We use two standard Krein--de Branges inputs, recorded here as explicit literature
+dependencies rather than silently importing them:
+
+1. **Inverse exponential-type theorem.**  For a canonical Hamiltonian with spectral
+   measure \(\mu\), the \(L^2(\mu)\)-completion of the Fourier class of functions with
+   physical support in \([-Q,Q]\), when non-dense, is the de Branges space generated by
+   the canonical system up to the unique type radius \(r=L_H(Q)\).
+2. **Even-measure diagonalization.**  Every even positive Poisson-finite spectral
+   measure admits a canonical realization with diagonal Hamiltonian.
+
+A convenient source for (1) is Bessonov--Denisov,
+*Sz.-condition, scattering, and vibration of Krein strings*,
+Theorem 2.5 together with equations (2.7), (2.10), and (2.21).
+A convenient source for (2) is the even-measure/diagonal-Hamiltonian theorem quoted as
+Theorem 2.6 in Zhang,
+*Direct spectral problems for Paley--Wiener canonical systems* (2026).
+
+### Non-density is explicit for the concrete Gamma measure
+
+Let \(\mathcal E_Q\) be the Fourier transforms of smooth functions supported in
+\((-Q,Q)\).  Choose nonzero
+\[
+\psi\in C_c^\infty(\mathbb R\setminus[-Q,Q])
+\]
+and put
+\[
+G_\psi(\xi)
+:=
+\frac{\widehat\psi(\xi)}{m_\Gamma(\xi)}.
+\]
+Because \(m_\Gamma\ge1\),
+\[
+G_\psi\in L^2(\mu_\Gamma).
+\]
+For \(F=\widehat f\in\mathcal E_Q\),
+\[
+\begin{aligned}
+\langle F,G_\psi\rangle_{L^2(\mu_\Gamma)}
+&=
+\frac1{2\pi}
+\int_\mathbb R
+\widehat f(\xi)
+\overline{\widehat\psi(\xi)}
+\,d\xi\\
+&=
+\langle f,\psi\rangle_{L^2(\mathbb R)}
+=0.
+\end{aligned}
+\tag{R43.10ax}
+\]
+Thus \(\mathcal E_Q\) is not dense in \(L^2(\mu_\Gamma)\) for any finite \(Q\), so
+the inverse exponential-type theorem applies at every radius.
+
+Consequently the Fourier image of the full Gamma form space on \((-Q,Q)\) is exactly
+a de Branges truncation
+\[
+\mathcal B_Q^\Gamma
+=
+B_{r(Q)},
+\qquad
+r(Q)=L_{H_\Gamma}(Q).
+\tag{R43.10ay}
+\]
+The maximal exponential type is \(Q\).  After collapsing zero-type indivisible intervals
+and using type \(Q\) itself as the canonical coordinate, the diagonal Hamiltonian can be
+written in determinant-one form
+\[
+\boxed{
+H_\Gamma(Q)
+=
+\begin{pmatrix}
+a(Q)&0\\
+0&a(Q)^{-1}
+\end{pmatrix},
+\qquad
+a(Q)>0
+\quad\text{a.e.}
+}
+\tag{R43.10az}
+\]
+
+### Odd parity selects one scalar canonical coordinate
+
+Let
+\[
+\Theta(Q,z)
+=
+\binom{\Theta_+(Q,z)}{\Theta_-(Q,z)}
+\]
+solve the canonical system with initial condition \(\Theta(0,z)=(1,0)^t\).
+For diagonal \(H_\Gamma\), uniqueness of the ODE gives
+\[
+\Theta_+(Q,-z)=\Theta_+(Q,z),
+\qquad
+\Theta_-(Q,-z)=-\Theta_-(Q,z).
+\tag{R43.10ba}
+\]
+Therefore the canonical spectral transform sends first-coordinate states to even spectral
+functions and second-coordinate states to odd spectral functions.
+
+Since the spectral transform is unitary and
+\[
+L^2(\mu_\Gamma)
+=
+L^2_{\rm even}(\mu_\Gamma)
+\oplus
+L^2_{\rm odd}(\mu_\Gamma),
+\]
+the odd part of the radius-\(Q\) de Branges space is exactly the image of states
+\[
+X=(0,x_2)^t
+\]
+supported in the canonical interval \((0,Q)\).
+
+Their state norm is
+\[
+\|X\|^2
+=
+\int_0^Q
+a(q)^{-1}|x_2(q)|^2\,dq.
+\tag{R43.10bb}
+\]
+Multiplication by \(a^{-1/2}\) therefore identifies the **full odd Gamma radius nest**
+unitarily with
+\[
+\boxed{
+N_Q=L^2((0,Q),dq),
+\qquad
+0<Q<S.
+}
+\tag{R43.10bc}
+\]
+In particular, before the \(\beta^{(0)}\)-constraint is imposed, the Gamma radius nest has
+scalar multiplicity one in the natural type/radius coordinate.
+
+The literature interface in R43.10ay--R43.10az is the main imported-theorem dependency of
+this block and must be source-checked independently before promotion.
+
+---
+
+## 3H. A compatible codimension-one constraint preserves scalar nest multiplicity
+
+The review correctly warned that a generic rank-one perturbation need not preserve nest
+multiplicity.  Our constraint, however, is not a generic perturbation: it is the restriction
+of **one fixed functional** along a scalar support nest.  That special structure admits an
+explicit unitary model.
+
+### Lemma R43-GC1 — constrained scalar support nest
+
+Let
+\[
+H=L^2((0,S),dq),
+\qquad
+N_t=L^2((0,t),dq),
+\]
+and let \(h\in H\), \(h\ne0\).  Put
+\[
+M=h^\perp,
+\qquad
+M_t=N_t\cap M.
+\tag{R43.10bd}
+\]
+Then the nest \(\{M_t:0\le t\le S\}\) on \(M\) has scalar multiplicity one.  More
+precisely, there is a unitary
+\[
+\mathcal T_h:M\to L^2((0,S),dq)
+\]
+such that
+\[
+\boxed{
+\mathcal T_h P_t^M
+=
+M_{1_{(0,t)}}\mathcal T_h,
+}
+\tag{R43.10be}
+\]
+where \(P_t^M\) is orthogonal projection of \(M\) onto \(M_t\).
+
+### Proof
+
+Define
+\[
+A(t):=\int_0^t|h(s)|^2\,ds,
+\qquad
+F_f(t):=\int_0^t f(s)\overline{h(s)}\,ds.
+\tag{R43.10bf}
+\]
+For \(A(t)>0\),
+\[
+P_t^Mf
+=
+1_{(0,t)}
+\left(
+f-\frac{F_f(t)}{A(t)}h
+\right),
+\tag{R43.10bg}
+\]
+while if \(A(t)=0\), the correction term is zero.
+
+Define, with the same convention on \(\{A=0\}\),
+\[
+\boxed{
+(\mathcal T_hf)(t)
+=
+f(t)
+-
+h(t)\frac{F_f(t)}{A(t)}.
+}
+\tag{R43.10bh}
+\]
+Since
+\[
+dF_f=f\overline h\,dq,
+\qquad
+dA=|h|^2\,dq,
+\]
+the absolutely continuous quotient rule gives
+\[
+d\left(\frac{|F_f|^2}{A}\right)
+=
+2\operatorname{Re}
+\left(
+\frac{\overline{F_f}\,dF_f}{A}
+\right)
+-
+\frac{|F_f|^2}{A^2}\,dA
+\tag{R43.10bi}
+\]
+where \(A>0\).  Integrating (R43.10bi) yields
+\[
+\boxed{
+\|P_t^Mf\|^2
+=
+\int_0^t|\mathcal T_hf(q)|^2\,dq.
+}
+\tag{R43.10bj}
+\]
+For \(f\in M\),
+\[
+F_f(S)=0,
+\]
+so at \(t=S\),
+\[
+\|\mathcal T_hf\|=\|f\|.
+\tag{R43.10bk}
+\]
+Thus \(\mathcal T_h\) is an isometry.
+
+The projection formula also gives the exact intertwining.  If \(s\le t\), the constant
+subtracted in (R43.10bg) cancels inside the running quotient in (R43.10bh); if \(s>t\),
+the projected vector has zero support and zero total \(h\)-moment.  Hence
+\[
+\mathcal T_h(P_t^Mf)
+=
+1_{(0,t)}\mathcal T_hf.
+\tag{R43.10bl}
+\]
+
+It remains to prove that \(\mathcal T_h\) is onto.  Given
+\(y\in L^2((0,S))\), define
+\[
+r(t)
+:=
+-\int_{(t,S]}
+\frac{y(s)\overline{h(s)}}{A(s)}\,ds,
+\tag{R43.10bm}
+\]
+with the integrand set to zero where \(A=0\), and put
+\[
+f:=y+hr.
+\tag{R43.10bn}
+\]
+On \(\{h\ne0\}\), write
+\[
+z:=\frac{y}{h}.
+\]
+Then
+\[
+r(t)
+=
+-\int_{(t,S]}\frac{z(s)}{A(s)}\,dA(s).
+\]
+The classical adjoint Hardy inequality, applied in the monotone variable \(A\), gives
+\[
+\boxed{
+\int_0^S|r|^2\,dA
+\le
+4\int_0^S|z|^2\,dA
+\le
+4\|y\|_2^2.
+}
+\tag{R43.10bo}
+\]
+Hence
+\[
+hr\in L^2((0,S)).
+\]
+Moreover
+\[
+d(Ar)
+=
+r\,dA+A\,dr
+=
+r|h|^2\,dq+y\overline h\,dq
+=
+f\overline h\,dq.
+\]
+Both sides vanish at the initial zero set of \(A\), so
+\[
+F_f(t)=A(t)r(t).
+\tag{R43.10bp}
+\]
+Since \(r(S)=0\),
+\[
+F_f(S)=0,
+\]
+thus \(f\in M\), and (R43.10bh) gives
+\[
+\mathcal T_hf=y.
+\]
+Therefore \(\mathcal T_h\) is unitary, and (R43.10be) proves scalar multiplicity one.
+\(\square\)
+
+The lemma remains valid for any scalar support model
+\[
+L^2((0,S),w(q)\,dq),
+\qquad
+0<w(q)<\infty\text{ a.e.},
+\]
+after the support-preserving unitary multiplication by \(w^{1/2}\).
+
+---
+
+## 3I. GC-M1 closes at candidate level
+
+Return to the full odd Gamma nest from R43.10bc.  Fix the terminal source radius \(S\).
+Let \(h_{0,S}\) be the Riesz representative, in the **full odd Gamma Hilbert space at
+radius \(S\)**, of the compatible first boundary functional \(\beta_S^{(0)}\).
+
+For \(Q<S\), source compatibility gives
+\[
+\beta_Q^{(0)}(f)
+=
+\beta_S^{(0)}(J_{Q,S}f).
+\]
+Therefore, inside the full odd Gamma radius-\(S\) space,
+\[
+\boxed{
+H_Q^0
+=
+N_Q\cap h_{0,S}^{\perp}.
+}
+\tag{R43.10bq}
+\]
+Thus the constrained Gamma radius nest is exactly of the form covered by Lemma R43-GC1.
+Consequently
+\[
+\boxed{
+\textbf{GC-M1 holds}
+}
+\tag{R43.10br}
+\]
+provided the canonical-system literature interface R43.10ay--R43.10az is accepted.
+
+Combining GC-M1 with the repaired analyticity result R43.10au and the already reviewed
+conditional implication R43.10ai yields
+\[
+\boxed{
+\overline{
+J_{R,S}\mathscr G_R^0
++
+\operatorname{span}\{P_Q^\Gamma g_S:R<Q<S\}
+}
+=
+\mathscr G_S^0.
+}
+\tag{R43.10bs}
+\]
+Equivalently, the original terminal-free cyclicity gate is positive:
+\[
+\boxed{
+\overline{
+Y_{R,S}V_R+
+\operatorname{span}\{Y_{Q,S}\zeta_Q:R<Q<S\}
+}
+=
+V_S.
+}
+\tag{R43.10bt}
+\]
+
+Hence every weak cluster \(w\) of the last normal orbit
+\[
+w_U=W_{R,S}^{[U]}\varepsilon_R
+\]
+must satisfy
+\[
+\boxed{
+w\in(H_S^0)^\perp
+=
+\mathbb C\varepsilon_S.
+}
+\tag{R43.10bu}
+\]
+
+This is **not yet Strong Terminal**.  It removes all tangential weak escape, but the scalar
+normal coefficient
+\[
+b_U
+:=
+\langle
+W_{R,S}^{[U]}\varepsilon_R,
+\varepsilon_S
+\rangle
+\tag{R43.10bv}
+\]
+may still lose norm or fail to converge.  The remaining exact gate becomes
+\[
+\boxed{
+b_U\to b
+\quad\text{with}\quad
+|b|=1
+\quad?
+}
+\tag{R43.10bw}
+\]
+Equivalently one still must exclude weak norm escape of the unit normal orbit and control its
+phase.
+
+### Status of Sections 3F--3I
+
+- R43.10ak--R43.10au: new explicit repair of the analyticity proof, **AI-GREEN candidate**;
+- R43.10av--R43.10bc: canonical-system scalarization, **AI-GREEN candidate with explicit
+  literature dependencies**;
+- Lemma R43-GC1, R43.10bd--R43.10bp: new self-contained Hilbert-space/Hardy argument,
+  **AI-GREEN candidate**;
+- R43.10br--R43.10bu: GC-M1 and Gamma cyclicity are therefore **candidate-GREEN only**,
+  pending independent review of all three inputs above.
+
+No R37/G4c statement is used or changed.
+
+
+---
+
 ## 4. Why zeroth-jet dominance alone does not close R43
 
 The canonical source inclusion is lower triangular in the jet bases:
