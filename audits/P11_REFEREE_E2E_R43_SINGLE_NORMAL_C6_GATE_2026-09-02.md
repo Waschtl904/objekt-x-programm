@@ -2509,7 +2509,13 @@ w(Q)\,dQ+d\nu_S^{\mathrm{sc}}
 \]
 and no atoms.
 
-Let \(G_m\) denote the scalar representative of \(g_{m,S}\).
+Fix this unitary identification once and for all for the remainder of Section 3K.5.
+The density statement R43.10ct, the scalar representatives below, the measure decomposition
+\(d\nu_S=w(Q)dQ+d\nu_S^{\mathrm{sc}}\), and the identity R43.10cu are all read inside
+this **same** Hilbert model \(L^2((0,S),d\nu_S)\).  No change of scalar realization is
+made during the contradiction argument.
+
+Let \(G_m\) denote, in this fixed model, the scalar representative of \(g_{m,S}\).
 By the projection-nest spectral theorem,
 \[
 \boxed{
