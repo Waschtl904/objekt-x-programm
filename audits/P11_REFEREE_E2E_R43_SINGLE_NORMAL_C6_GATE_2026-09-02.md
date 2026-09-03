@@ -1210,17 +1210,25 @@ and after the Fourier change of variables,
 \int
 m_\Gamma(\eta/\lambda)|\widehat f(\eta)|^2\,d\eta.
 \]
-For \(\lambda\) in a fixed neighborhood of \(1\), R33.3 gives a uniform bound
+For \(\lambda\) in a fixed neighborhood of \(1\), R33.3 in both dilation
+directions gives a uniform operator bound
 \[
-m_\Gamma(\eta/\lambda)
-\le
-C\,m_\Gamma(\eta).
-\]
-Pointwise continuity and dominated convergence therefore give
-\[
-f_\lambda\to f
-\quad\text{in the Gamma form norm as }\lambda\uparrow1.
+\|D_\lambda\|_{\mathcal B(\mathcal D(q_\Gamma),\mathcal D(q_\Gamma))}
+\le C.
 \tag{R43.10ax1}
+\]
+On Schwartz functions, \(D_\lambda g\to g\) in the Gamma form norm by direct dominated
+convergence: the Fourier transforms are rapidly decreasing and
+\(m_\Gamma(\xi)\asymp\log(2+|\xi|)\).  The global P11 Gamma proof already uses Schwartz
+density in \(\mathcal D(q_\Gamma)\).  Uniform boundedness of \(D_\lambda\) near
+\(\lambda=1\) therefore extends the convergence from the dense Schwartz core to every
+\(f\in\mathcal D(q_\Gamma)\):
+\[
+\boxed{
+D_\lambda f\to f
+\quad\text{in the Gamma form norm as }\lambda\uparrow1.
+}
+\tag{R43.10ax2}
 \]
 For fixed \(\lambda<1\), convolve \(f_\lambda\) with a standard smooth mollifier of
 radius smaller than \(Q(1-\lambda)\).  The result lies in
