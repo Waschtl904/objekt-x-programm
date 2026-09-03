@@ -1961,22 +1961,432 @@ The earlier candidate statement
 in R43.10br was too strong if interpreted as the natural-radius Lebesgue model used in
 R43.10ah.
 
-The corrected booking is:
+The corrected booking at the end of Section 3J is:
 \[
 \boxed{
 \textbf{GC-M1}_{\rm scalar}
 \text{ candidate-GREEN;}
 \qquad
 \textbf{GC-AC}
-\text{ OPEN.}
+\text{ was OPEN at this stage.}
 }
 \tag{R43.10cg}
 \]
 
-Accordingly R43.10bs--R43.10bu remain **conditional on GC-AC**.  No strong-terminal
-conclusion is promoted.
+Section 3K, added subsequently, gives a new candidate proof of GC-AC using the **total
+higher-jet Riesz family**.  Thus R43.10bs--R43.10bu are no longer merely conditional in
+the current candidate chain, but they remain unpromoted pending independent review of 3K
+and the scalar multiplicity-one input.
 
 This correction uses no R37/G4c input.
+
+
+---
+
+## 3K. All constrained jet-Riesz vectors eliminate the singular-continuous radius channel
+
+Section 3J isolates GC-AC as the only possible obstruction left after scalar multiplicity one.
+There is, however, more information than the single first-jet Riesz vector \(g_S=g_{1,S}\):
+the entire compatible jet family is available.
+
+This closes the singular-continuous escape at candidate level without any lower bound on
+\(\det H_\Gamma\).
+
+### 3K.1 Totality of the integral jets on the odd finite window
+
+For \(m\ge0\), recall
+\[
+\phi_m(u)
+=
+\operatorname{sgn}(u)I_m(|u|),
+\qquad
+I_m(r)
+=
+\int_0^r t^m e^{-t/2}\,dt,
+\]
+and
+\[
+\beta_S^{(m)}(f)
+=
+\int_{-S}^{S}f(u)\phi_m(u)\,du.
+\]
+
+Let \(f\in L^2(-S,S)\) be odd and suppose
+\[
+\beta_S^{(m)}(f)=0
+\qquad
+\forall m\ge0.
+\tag{R43.10ch}
+\]
+By oddness,
+\[
+0
+=
+\frac12\beta_S^{(m)}(f)
+=
+\int_0^S f(u)I_m(u)\,du.
+\]
+Fubini gives
+\[
+\begin{aligned}
+0
+&=
+\int_0^S
+f(u)
+\int_0^u t^m e^{-t/2}\,dt\,du\\
+&=
+\int_0^S
+t^m e^{-t/2}
+\left(
+\int_t^S f(u)\,du
+\right)dt.
+\end{aligned}
+\tag{R43.10ci}
+\]
+Put
+\[
+F_f(t):=\int_t^S f(u)\,du.
+\]
+Then the finite signed measure
+\[
+d\sigma_f(t)
+=
+e^{-t/2}F_f(t)\,dt
+\]
+annihilates every polynomial.  Polynomials are uniformly dense in
+\(C([0,S])\), hence
+\[
+\sigma_f=0.
+\]
+Therefore \(F_f=0\) a.e., and since \(F_f\) is absolutely continuous with
+\[
+F_f'=-f
+\]
+a.e.,
+\[
+\boxed{
+f=0.
+}
+\tag{R43.10cj}
+\]
+
+Thus
+\[
+\boxed{
+\{\beta_S^{(m)}:m\ge0\}
+\text{ is total on the odd finite-window }L^2\text{ space.}
+}
+\tag{R43.10ck}
+\]
+
+In particular, on
+\[
+H_S^0=\ker\beta_S^{(0)}
+\]
+the restricted family
+\[
+\boxed{
+\{\beta_S^{(m)}|_{H_S^0}:m\ge1\}
+\text{ is total.}
+}
+\tag{R43.10cl}
+\]
+
+Because
+\[
+\mathfrak c_{\Gamma,S}[f]\ge \|f\|_{L^2(-S,S)}^2,
+\]
+every \(\beta_S^{(m)}\) is continuous in the constrained Gamma Hilbert norm.
+
+### 3K.2 Higher constrained Gamma-Riesz vectors
+
+For every \(m\ge1\), let
+\[
+g_{m,Q}\in H_Q^0
+\]
+be the constrained Gamma-Riesz vector defined by
+\[
+\boxed{
+\mathfrak c_{\Gamma,Q}[f,g_{m,Q}]
+=
+\beta_Q^{(m)}(f),
+\qquad
+f\in H_Q^0.
+}
+\tag{R43.10cm}
+\]
+For \(m=1\), this is the already frozen/reviewed vector
+\[
+g_{1,Q}=g_Q.
+\]
+
+Source compatibility gives, for \(Q<S\),
+\[
+\beta_S^{(m)}(J_{Q,S}f)
+=
+\beta_Q^{(m)}(f).
+\]
+Since zero extension is Gamma-isometric,
+\[
+\boxed{
+P_Q^\Gamma g_{m,S}
+=
+J_{Q,S}g_{m,Q}.
+}
+\tag{R43.10cn}
+\]
+
+Define
+\[
+\gamma_m(Q)
+:=
+\|g_{m,Q}\|_{\Gamma,Q}^2.
+\tag{R43.10co}
+\]
+Then
+\[
+\boxed{
+\|P_Q^\Gamma g_{m,S}\|_{\Gamma,S}^2
+=
+\gamma_m(Q).
+}
+\tag{R43.10cp}
+\]
+
+### 3K.3 Every higher-jet nest measure is absolutely continuous in \(Q\)
+
+The repaired fixed-domain holomorphy argument of Sections 3D/3F applies verbatim to every
+fixed jet order \(m\).
+
+On the fixed dilated form domain, let
+\[
+u_{m,Q}:=A(Q)^{-1}b_{m,Q},
+\qquad
+u_{0,Q}:=A(Q)^{-1}b_{0,Q},
+\]
+and
+\[
+d_Q:=b_{0,Q}(u_{0,Q})>0.
+\]
+The pulled-back constrained Riesz vector is
+\[
+\widetilde g_{m,Q}
+=
+u_{m,Q}
+-
+\frac{b_{0,Q}(u_{m,Q})}{d_Q}\,u_{0,Q}.
+\tag{R43.10cq}
+\]
+Every factor is locally holomorphic in \(Q\), so
+\[
+\boxed{
+Q\longmapsto\gamma_m(Q)
+=
+b_{m,Q}(\widetilde g_{m,Q})
+\text{ is real analytic on }(0,\infty)
+}
+\tag{R43.10cr}
+\]
+for every fixed \(m\ge1\).
+
+Consequently the scalar nest measure of \(g_{m,S}\) is absolutely continuous:
+\[
+\boxed{
+d\|P_Q^\Gamma g_{m,S}\|_{\Gamma,S}^2
+=
+d\gamma_m(Q)
+=
+\gamma_m'(Q)\,dQ.
+}
+\tag{R43.10cs}
+\]
+
+No positivity claim for \(\gamma_m'\) is required here.
+
+### 3K.4 The Riesz family is dense in the constrained Gamma space
+
+Suppose
+\[
+f\in H_S^0
+\]
+is Gamma-orthogonal to every \(g_{m,S}\), \(m\ge1\).  Then by (R43.10cm),
+\[
+\beta_S^{(m)}(f)=0
+\qquad
+\forall m\ge1.
+\]
+Since \(f\in H_S^0\),
+\[
+\beta_S^{(0)}(f)=0.
+\]
+The totality theorem R43.10cj therefore gives
+\[
+f=0.
+\]
+Hence
+\[
+\boxed{
+\overline{
+\operatorname{span}\{g_{m,S}:m\ge1\}
+}^{\ \|\cdot\|_{\Gamma,S}}
+=
+H_S^0.
+}
+\tag{R43.10ct}
+\]
+
+### 3K.5 GC-AC follows from total absolutely-continuous Riesz data
+
+Now use the scalar multiplicity-one model from Section 3J.4:
+\[
+H_S^0
+\simeq
+L^2((0,S),d\nu_S),
+\]
+with
+\[
+d\nu_S
+=
+w(Q)\,dQ+d\nu_S^{\mathrm{sc}}
+\]
+and no atoms.
+
+Let \(G_m\) denote the scalar representative of \(g_{m,S}\).
+By the projection-nest spectral theorem,
+\[
+\boxed{
+d\gamma_m(Q)
+=
+|G_m(Q)|^2\,d\nu_S(Q).
+}
+\tag{R43.10cu}
+\]
+But (R43.10cs) says
+\[
+d\gamma_m\ll dQ.
+\]
+Therefore
+\[
+\boxed{
+G_m=0
+\quad
+\nu_S^{\mathrm{sc}}\text{-a.e.}
+}
+\tag{R43.10cv}
+\]
+for every \(m\ge1\).
+
+Because the jet index set is countable, there is one Borel set \(E\subset(0,S)\) such that
+\[
+\nu_S^{\mathrm{sc}}((0,S)\setminus E)=0
+\]
+and
+\[
+G_m|_E=0
+\qquad
+\forall m\ge1.
+\]
+If
+\[
+\nu_S^{\mathrm{sc}}\ne0,
+\]
+then
+\[
+L^2(E,d\nu_S^{\mathrm{sc}})
+\]
+is a nonzero closed subspace orthogonal to every \(G_m\).  This contradicts the density
+R43.10ct.
+
+Therefore
+\[
+\boxed{
+\nu_S^{\mathrm{sc}}=0.
+}
+\tag{R43.10cw}
+\]
+
+Equivalently:
+\[
+\boxed{
+\textbf{GC-AC holds at candidate level.}
+}
+\tag{R43.10cx}
+\]
+
+This argument does **not** require pointwise positivity of \(\gamma_1'\), and it does not
+require \(\det H_\Gamma>0\) a.e.  It uses only:
+
+1. scalar multiplicity one of the constrained Gamma nest;
+2. analyticity/absolute continuity of each higher-jet scalar nest measure;
+3. totality of the compatible jet functionals.
+
+### 3K.6 Consequence: terminal-free Gamma cyclicity closes at candidate level
+
+Combining R43.10cx with Section 3J gives
+\[
+\boxed{
+\overline{
+J_{R,S}\mathscr G_R^0
++
+\operatorname{span}\{P_Q^\Gamma g_S:R<Q<S\}
+}
+=
+\mathscr G_S^0.
+}
+\tag{R43.10cy}
+\]
+Equivalently,
+\[
+\boxed{
+\overline{
+Y_{R,S}V_R+
+\operatorname{span}\{Y_{Q,S}\zeta_Q:R<Q<S\}
+}
+=
+V_S.
+}
+\tag{R43.10cz}
+\]
+
+Hence every weak cluster of
+\[
+w_U=W_{R,S}^{[U]}\varepsilon_R
+\]
+is forced onto the single target-normal line:
+\[
+\boxed{
+w\in\mathbb C\varepsilon_S.
+}
+\tag{R43.10da}
+\]
+
+At this candidate stage, the entire terminal-free Gamma-density front is closed.
+
+The remaining Strong-Terminal problem is therefore only
+\[
+\boxed{
+b_U
+=
+\langle
+W_{R,S}^{[U]}\varepsilon_R,
+\varepsilon_S
+\rangle
+\to b,
+\qquad
+|b|=1
+\quad?
+}
+\tag{R43.10db}
+\]
+
+### Status of Section 3K
+
+Section 3K is a new **AI-GREEN candidate** derived after the source-checked GC-AC split.
+Its key ingredients R43.10ch--R43.10ct are elementary/self-contained; the final measure-model
+step R43.10cu--R43.10cw depends on the scalar multiplicity-one candidate from Sections
+3G--3J.
+
+No R37/G4c conclusion is used.  No Strong-Terminal promotion is booked.
 
 
 ---
