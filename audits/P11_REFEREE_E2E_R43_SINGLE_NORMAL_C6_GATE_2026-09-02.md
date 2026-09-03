@@ -1053,14 +1053,24 @@ C_{j,Q_0}
 \|k\|_{\mathscr V_{Q_0}}.
 \tag{R43.10aq}
 \]
-Hence the scalar matrix elements are holomorphic and locally uniformly bounded.
-Weak holomorphy plus local boundedness in the Banach space
+The same estimate with \(j=2\) gives a uniform quadratic Taylor remainder in the
+operator form norm.  Indeed, scalar Taylor's formula on the complex disk and
+(R43.10aq) imply
 \[
-\mathcal B(\mathscr V_{Q_0},\mathscr V_{Q_0}^*)
+\|
+A(Q+h)-A(Q)-hA_1(Q)
+\|_{\mathcal B(\mathscr V_{Q_0},\mathscr V_{Q_0}^*)}
+\le
+C_{Q_0}|h|^2,
 \]
-gives operator-norm holomorphy of
+where \(A_1(Q)\) is the bounded form obtained by integrating
+\(\partial_Qm_Q\).  Thus no weak-to-strong shortcut is needed:
 \[
-Q\longmapsto A(Q).
+\boxed{
+Q\longmapsto A(Q)
+\text{ is operator-norm holomorphic in }
+\mathcal B(\mathscr V_{Q_0},\mathscr V_{Q_0}^*).
+}
 \tag{R43.10ar}
 \]
 
@@ -1153,6 +1163,73 @@ Theorem 2.5 together with equations (2.7), (2.10), and (2.21).
 A convenient source for (2) is the even-measure/diagonal-Hamiltonian theorem quoted as
 Theorem 2.6 in Zhang,
 *Direct spectral problems for Paley--Wiener canonical systems* (2026).
+
+### Fixed-radius Gamma core equals the weighted Fourier completion
+
+Let
+\[
+\mathcal V_Q^\Gamma
+=
+\left\{
+f\in\mathcal D(q_\Gamma):
+\operatorname{supp}f\subset[-Q,Q]
+\right\}.
+\]
+The P11 Gamma norm is
+\[
+\|f\|_{\Gamma}^2
+=
+\frac1{2\pi}
+\int m_\Gamma(\xi)|\widehat f(\xi)|^2\,d\xi.
+\]
+We need the fixed-radius statement
+\[
+\boxed{
+C_c^\infty((-Q,Q))
+\text{ is dense in }\mathcal V_Q^\Gamma
+\text{ for the Gamma form norm.}
+}
+\tag{R43.10ax0}
+\]
+
+To see this, first dilate inward.  For \(0<\lambda<1\), put
+\[
+f_\lambda(u)
+=
+\lambda^{-1/2}f(u/\lambda).
+\]
+Then
+\[
+\operatorname{supp}f_\lambda\subset[-\lambda Q,\lambda Q],
+\]
+and after the Fourier change of variables,
+\[
+\|f_\lambda\|_\Gamma^2
+=
+\frac1{2\pi}
+\int
+m_\Gamma(\eta/\lambda)|\widehat f(\eta)|^2\,d\eta.
+\]
+For \(\lambda\) in a fixed neighborhood of \(1\), R33.3 gives a uniform bound
+\[
+m_\Gamma(\eta/\lambda)
+\le
+C\,m_\Gamma(\eta).
+\]
+Pointwise continuity and dominated convergence therefore give
+\[
+f_\lambda\to f
+\quad\text{in the Gamma form norm as }\lambda\uparrow1.
+\tag{R43.10ax1}
+\]
+For fixed \(\lambda<1\), convolve \(f_\lambda\) with a standard smooth mollifier of
+radius smaller than \(Q(1-\lambda)\).  The result lies in
+\(C_c^\infty((-Q,Q))\); on the Fourier side the mollifier multiplier converges pointwise
+to \(1\) and is uniformly bounded, so another dominated-convergence argument in the
+weight \(m_\Gamma\) gives form-norm convergence.  This proves (R43.10ax0).
+
+Hence the Fourier image of the concrete full Gamma radius-\(Q\) form space is exactly
+the \(L^2(\mu_\Gamma)\)-completion of the smooth support-\(Q\) Fourier class used below.
 
 ### Non-density is explicit for the concrete Gamma measure
 
@@ -1419,12 +1496,28 @@ r(t)
 =
 -\int_{(t,S]}\frac{z(s)}{A(s)}\,dA(s).
 \]
-The classical adjoint Hardy inequality, applied in the monotone variable \(A\), gives
+Because Lebesgue measure has no atoms, \(A\) is continuous.  On the measure space with
+measure \(dA=|h|^2dq\), flat pieces of \(A\) have \(dA\)-measure zero.  The cumulative
+coordinate
+\[
+u=A(t)
+\]
+therefore pushes \(dA\) to Lebesgue measure \(du\) on \((0,A(S))\), modulo null sets.
+In this coordinate,
+\[
+r(t)
+=
+-\int_{A(t)}^{A(S)}
+\frac{\widetilde z(u)}{u}\,du.
+\]
+The classical adjoint Hardy inequality now applies literally:
 \[
 \boxed{
 \int_0^S|r|^2\,dA
 \le
 4\int_0^S|z|^2\,dA
+=
+4\int_{\{h\ne0\}}|y|^2\,dq
 \le
 4\|y\|_2^2.
 }
@@ -2130,11 +2223,15 @@ The new candidate analysis further reduces the issue to:
 }
 \]
 
-The reduction R43.10n--v is algebraic; the real-analyticity step R43.10w--af and the
-GC-M1 implication R43.10ag--aj are **new and not yet independently reviewed**.
+The reduction R43.10n--v is externally GREEN.  Sections 3F--3I now supply a new
+**candidate proof** of the previously open GC-M1 gate: R43.10ak--au repairs the analyticity
+gap, R43.10av--bc scalarizes the full odd Gamma nest through a diagonal canonical system,
+and Lemma R43-GC1 proves that the compatible \(\beta^{(0)}\) hyperplane constraint preserves
+scalar nest multiplicity.
 
-At the present head none of A--D closes the final C6 gate.  Route D is the current primary
-research direction because it is terminal-free.
+Thus Route D is **candidate-closed but unreviewed** at the current mathematical head.  Even
+if that candidate survives review, the final C6 gate is not yet closed: the remaining
+problem becomes the one scalar normal coefficient \(b_U\) in R43.10bv--bw.
 
 ---
 
