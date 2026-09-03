@@ -4255,13 +4255,13 @@ Subsequent hardening on branch \(\texttt{research/r43-gcac-hardening}\) added:
 The current mathematical-content head for those statements is
 \[
 \boxed{
-\texttt{2b8cd452d7998b5569416eca27af5e5236a28f72}
+\texttt{366c5e3dcdd2b2f16bf8b2663c0284a4db9538f5}
 }
 \]
 with mathematical-content R43 blob
 \[
 \boxed{
-\texttt{59b4083b6c1f9762eed9f582fbce63c0df482584}.
+\texttt{c843336d43dd13ca31e63f81550d545033a89d7d}.
 }
 \]
 Relative to the earlier \(\texttt{ade2cd34...}\) hardening, this mathematical layer also:
@@ -4282,6 +4282,9 @@ Relative to the earlier \(\texttt{ade2cd34...}\) hardening, this mathematical la
   not a derivative estimate for \(W_U\);
 - replaces Darboux as the preferred B-SIGN mechanism by the finite-increment criterion
   R43.66--R43.66b and the positive-correlation criterion R43.66c.
+- adds the exact flag-energy identities R43.59e0--R43.59e2, identifying the preferred
+  \(N_S\)-energy directly with the summed squared projections onto the canonical nested
+  jet kernels \(\mathcal H_S^{[m]}\).
 
 Later commits which only add reproducibility scripts, review provenance, ledger reconciliation,
 or navigation do not enlarge that mathematical proof scope.
