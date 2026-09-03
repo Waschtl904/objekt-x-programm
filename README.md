@@ -5,9 +5,10 @@
 Spektrale, nichtkommutative und arithmetische Zugänge zur RH — dokumentiert als
 lückenlos nachvollziehbare Kette aus Konstruktionen, Tests, Audits und No-Go-Resultaten.
 
-> **Stand:** 26. Juli 2026 (Journalkern) · **letzter Eintrag:** NEU-228 · **332 Forschungsdokumente**
-> **Objekt-X-Arbeitsdefinition aktualisiert:** 26. August 2026 — siehe
-> [Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
+> **Historischer Journalkern:** 26. Juli 2026 · letzter NEU-Eintrag NEU-228 · damaliger Indexstand 332 Dokumente.  
+> **Operative Forschungsfront:** 3. September 2026 — B / Strong Terminal / R43.  
+> **Aktuelle Roadmap:** [Forschungsroadmap 2026-09-03](00-uebersicht/FORSCHUNGS_ROADMAP_2026-09-03.md).  
+> **Objekt-X-Arbeitsdefinition:** [aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
 
 [CURRENT FRONT — operative Forschungsfront](CURRENT-FRONT.md) · [Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) · [Ebene XVI — historisch reklassifiziertes Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md) · [Gesamtindex](INDEX.md) · [Statusregister](STATUS.md) · [Offene Probleme](OFFENE_PROBLEME.md) · [Glossar](GLOSSAR.md) · [Konventionen](KONVENTIONEN.md) · [Literatur](REFERENCES.md) · [Einstiegsprompt](EINSTIEGSPROMPT.md)
 
@@ -29,7 +30,7 @@ bereits konstruierten Einzeloperator identifiziert.
 > Existenz, Eindeutigkeit und ein möglicher Weg zur Riemannschen Vermutung sind offen.
 > Details, Herleitung und Firewall: [Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
 
-> **Aktuelle P11/R32-Front (30. August 2026):** Der SW1-A10-C-Strang ist bis zur tatsächlichen-\(r\)-M1-Matrixdarstellung geschlossen. M1-RAW und M1-FULL(7/2) sind kanonische reproduzierbare Certificate-Ergebnisse; C1B2A-CHIRO und C1B2A-TRANSFER sind im dokumentierten Scope `✓[M]`; daraus folgt M1-FULL(\(r\)) für \(3<r<4\) auf offenen Parameterkammern/Kreisatomen. Offen bleibt die zentrale Roadmap-A-Frage \(\ker\Gamma_I=\{0\}\ ?[O]\). Operative Quelle: [CURRENT-FRONT.md](CURRENT-FRONT.md); Detailstatus: [P11/R32-Statusaddendum](00-uebersicht/P11_R32_STATUS_2026-08-25.md).
+> **Aktuelle P11/Strong-Terminal-Front (3. September 2026):** Der universelle SW1-Nichtentartungsanspruch ist inzwischen negativ entschieden. Die aktive Hauptfront ist B / Strong Terminal. R38–R42 sind frozen als independently verified AI-GREEN; R42 reduziert C6 auf eine einzelne Normalbahn. R43 untersucht den Rest. §3K liefert derzeit einen noch unabhängig zu prüfenden GC-AC-Kandidaten; falls dieser hält, bleibt nur der Normal-Skalar \(b_U\). Strong Terminal, Objekt X und RH bleiben offen. Operative Quelle: [CURRENT-FRONT.md](CURRENT-FRONT.md); strategische Quelle: [Roadmap 2026-09-03](00-uebersicht/FORSCHUNGS_ROADMAP_2026-09-03.md).
 
 Das folgende Fünfer-Tupel war die Arbeitsdefinition der früheren Forschungsphase
 (Stand 26. Juli 2026) und gilt seit der Konsolidierung vom 26. August 2026 ausdrücklich
