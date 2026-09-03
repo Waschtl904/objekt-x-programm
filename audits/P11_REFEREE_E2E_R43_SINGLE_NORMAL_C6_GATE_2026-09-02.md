@@ -4035,11 +4035,14 @@ it is built from the unknown future transports themselves.  R14's polar-gauge co
 shows that the finite-terminal pullback/modulus algebra alone does not control its
 asymptotics.
 
-Nevertheless it gives the correct derivative-free quantity to estimate.  Put
+The cocycle is still useful for exact bookkeeping, but there is an additional
+**range/flag-angle firewall** before it can be interpreted as local terminal dynamics.
+
+Put
 \[
-P_m:=P_S^{[m]}
+P_m:=P_S^{[m]}.
 \]
-and define the one-step shallow-to-deep flag leakage
+The previously natural off-flag block is
 \[
 \boxed{
 \delta_{U,V}(m)
@@ -4050,11 +4053,7 @@ P_m\mathcal T_{U\to V}(I-P_m)
 }
 \tag{R43.59p}
 \]
-Because \(P_m\varepsilon_S=0\) for \(m\ge1\),
-\[
-P_mw_U=P_mh_U.
-\]
-Using \(\|\mathcal T_{U\to V}\|\le1\), one obtains the exact one-step inequality
+It gives the valid estimate
 \[
 \begin{aligned}
 \|P_mh_V\|
@@ -4071,11 +4070,11 @@ Using \(\|\mathcal T_{U\to V}\|\le1\), one obtains the exact one-step inequality
 \end{aligned}
 \tag{R43.59q}
 \]
-Hence along any finite terminal chain
+Hence along a finite chain
 \[
 U_0<U_1<\cdots<U_K
 \]
-the cocycle gives the telescoping bound
+one still has
 \[
 \boxed{
 \|P_mh_{U_K}\|
@@ -4088,33 +4087,213 @@ the cocycle gives the telescoping bound
 \tag{R43.59r}
 \]
 
-Therefore a sufficient derivative-free route to B-FLAGTIGHT is to construct terminal
-chains reaching every sufficiently large endpoint for which
+However \(\delta_{U,V}(m)\) is **not a pure terminal increment**.  At zero terminal
+separation,
+\[
+\mathcal T_{U\to U}
+=
+W_UW_U^*
+=
+R_U,
+\]
+the orthogonal projection onto \(\operatorname{Ran}W_U\), rather than the identity on
+the whole target space.  Therefore
 \[
 \boxed{
+\delta_{U,U}(m)
+=
+\|P_mR_U(I-P_m)\|
+}
+\tag{R43.59p0}
+\]
+may be nonzero.  If
+\[
+B_{m,U}:=P_mR_UP_m
+\quad\text{on }P_mH_S,
+\]
+then
+\[
+\boxed{
+\delta_{U,U}(m)^2
+=
+\|B_{m,U}-B_{m,U}^2\|.
+}
+\tag{R43.59p1}
+\]
+Indeed
+\[
+P_mR_U(I-P_m)R_UP_m
+=
+P_mR_UP_m-P_mR_UP_mR_UP_m.
+\]
+Thus \(\delta_{U,U}(m)\) measures the static principal-angle defect between the moving
+range \(\operatorname{Ran}W_U\) and the fixed C6a flag cut.  Small terminal spacing alone
+does not force it to be small.
+
+Consequently the old sufficient condition
+\[
 \lim_{m\to\infty}
 \sup_{\text{admissible chains}}
 \sum_j\delta_{U_j,U_{j+1}}(m)
 =
-0.
-}
+0
 \tag{R43.59s}
 \]
-The fixed initial term tends to zero as \(m\to\infty\) because the C6a flag is complete.
+remains mathematically sufficient, but it is now booked as a **strong range/flag-angle
+criterion**, not as the primary local-increment route.  In particular the R40/R41
+\(U^{-1}\)-scale cannot be inserted into \(\delta_{U,V}(m)\) merely from the fact that
+\(V-U\) is small.
 
-R40/R41 may become relevant only if their \(U^{-1}\)-scale can be upgraded to an actual
-bound on the leakage \(\delta_{U,V}(m)\).  No such implication is presently proved.
-In particular a merely harmonic \(U^{-1}\) step bound is not summable along a linearly
-spaced cofinal chain.
+#### 7A.4f Fixed-source flag effects and a genuine terminal increment
 
-This isolates the new quantitative-dynamic subproblem:
+The target flag can be pulled back to the fixed source Hilbert space.  Define
 \[
 \boxed{
-\textbf{B-FLAGLEAK: control shallow-to-deep leakage of }\mathcal T_{U\to V}
-\textbf{ uniformly in the terminal horizon.}
+Q_{m,U}
+:=
+W_U^*P_mW_U.
 }
-\tag{R43.59t}
+\tag{R43.59t0}
 \]
+Then \(Q_{m,U}\) is a positive contraction,
+\[
+Q_{m+1,U}\le Q_{m,U},
+\]
+and, because \(P_m\varepsilon_S=0\),
+\[
+\boxed{
+q_m(U)
+:=
+\langle\varepsilon_R,Q_{m,U}\varepsilon_R\rangle
+=
+\|P_mw_U\|^2
+=
+\|P_mh_U\|^2.
+}
+\tag{R43.59t1}
+\]
+Therefore
+\[
+\boxed{
+\textbf{B-FLAGTIGHT}
+\iff
+\lim_{m\to\infty}\limsup_{U\to\infty}q_m(U)=0.
+}
+\tag{R43.59t2}
+\]
+For every fixed \(U\), \(P_m\to0\) strongly and hence \(Q_{m,U}\to0\) strongly.
+The issue is exactly the failure, or validity, of uniformity in the terminal horizon.
+
+Unlike \(\delta_{U,V}(m)\), the source-space difference
+\[
+\boxed{
+D_m^{U,V}
+:=
+Q_{m,V}-Q_{m,U}
+}
+\tag{R43.59t3}
+\]
+is a genuine terminal increment:
+\[
+D_m^{U,U}=0.
+\]
+
+C2 already gives the exact P11 horizon-gauge changes
+\[
+C_X^{U\to V}
+=
+G_{X,V}^{1/2}G_{X,U}^{-1/2},
+\qquad X\in\{R,S\},
+\]
+and
+\[
+W_V
+=
+C_S^{U\to V}W_U(C_R^{U\to V})^{-1}.
+\]
+Hence
+\[
+\boxed{
+Q_{m,V}
+=
+(C_R^{U\to V})^{-*}
+W_U^*
+(C_S^{U\to V})^*
+P_m
+C_S^{U\to V}
+W_U
+(C_R^{U\to V})^{-1}.
+}
+\tag{R43.59t4}
+\]
+This is the exact P11-specific dynamics of the flag effect.  It shows that the true
+increment is governed by:
+
+1. distortion of the fixed target flag by the target horizon gauge \(C_S^{U\to V}\);
+2. source renormalization by \((C_R^{U\to V})^{-1}\);
+3. their coupling through the actual finite-terminal isometry \(W_U\).
+
+O1's relative-metric/polar decomposition applies directly to these horizon gauges, so this
+formulation connects B-FLAGTIGHT to already isolated modulus, range-leakage and polar-phase
+defects without pretending that the partial-isometry cocycle itself supplies regularity.
+
+A scalar derivative-free sufficient criterion can now be stated with a true increment.
+Choose
+\[
+U_0<U_1<U_2<\cdots\to\infty
+\]
+and put
+\[
+\boxed{
+\Omega_{m,k}
+:=
+\sup_{V\in[U_k,U_{k+1}]}
+\bigl(q_m(V)-q_m(U_k)\bigr)_+.
+}
+\tag{R43.59t5}
+\]
+Then
+\[
+q_m(V)
+\le
+q_m(U_0)
++
+\sum_{j\le k}\Omega_{m,j}
+\qquad
+(V\in[U_k,U_{k+1}]).
+\]
+Therefore
+\[
+\boxed{
+\lim_{m\to\infty}
+\sum_{k\ge0}\Omega_{m,k}
+=
+0
+\Longrightarrow
+\lim_{m\to\infty}
+\sup_{U\ge U_0}q_m(U)
+=
+0
+\Longrightarrow
+\textbf{B-FLAGTIGHT}.
+}
+\tag{R43.59t6}
+\]
+This remains a sufficient criterion, stronger than the exact iterated-limsup gate, but
+unlike R43.59s its summands vanish identically at zero terminal change.
+
+The sharpened live quantitative problem is therefore
+\[
+\boxed{
+\textbf{B-FLAGDYN: control the positive terminal variation of }
+q_m(U)=\langle\varepsilon_R,W_U^*P_mW_U\varepsilon_R\rangle
+\textbf{ through the horizon-gauge dynamics R43.59t4.}
+}
+\tag{R43.59t7}
+\]
+
+The partial-isometry off-flag block R43.59p remains a valid strong sufficient diagnostic,
+but B-FLAGDYN is the cleaner incremental formulation.
 
 ### 7A.5 Why R27 strong inverse-root convergence does not close B-TIGHT
 
