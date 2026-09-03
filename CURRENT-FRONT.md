@@ -1,10 +1,10 @@
 # CURRENT FRONT — Objekt X / P11 Strong Terminal
 
 > **Operative Kopfschicht — zuerst lesen.**  
-> **Stand:** 2. September 2026  
+> **Stand:** 3. September 2026  
 > **Aktuelle Research-Basis:** Branch `research/strong-terminal-r37-two-shift-mismatch`; R42-Freeze-Linie bis `f495ce6d89dcb8facc8fa0d4e09dda279b24fb73`, R43 aktuell bis mathematischem Head `cfa6920f6e43a2fe63e76dfd4e301459a98eb39c`. Die bisher reviewten Gamma-Nest-Schichten bleiben GREEN; die Literatur-Schnittstelle ist source-checked. Neu in §3K: **GC-AC ist candidate-closed** durch die totale höhere Jet-Rieszfamilie; dieser neue Schluss ist noch nicht unabhängig reviewed. Unter diesem Kandidaten kollabiert die gesamte terminalfreie Gamma-Dichtefront und der verbleibende Strong-Terminal-Gate ist nur noch der Normal-Skalar `b_U`. Strong Terminal/C6 bleibt weiterhin offen.  
 > **Aktiver mathematischer Stand:** **B / Strong Terminal.** R38–R42 sind jeweils **FROZEN — independently verified AI-GREEN**, ohne kanonische `✓[M]`-Promotion. Für jedes feste \(0<R<S\) konvergiert der echte Future-Transport bereits stark auf \(H_R^0=\ker\beta_R^{(0)}\). Strong Terminal / C6 ist exakt auf die eine feste Normalbahn \(W_{R,S}^{[U]}\varepsilon_R\), äquivalent auf den einen Cross-Kernel-Koeffizienten \(\operatorname{Re}\langle\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R\rangle\to1\), reduziert. **R43 ist offen / exploratory** und untersucht diesen letzten Gate. R37/G4c bleibt separat offen und wird durch R38–R43 nicht rückwirkend geschlossen.  
-> **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
+> **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md) · **Roadmap:** [FORSCHUNGS_ROADMAP_2026-09-03](00-uebersicht/FORSCHUNGS_ROADMAP_2026-09-03.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
 
