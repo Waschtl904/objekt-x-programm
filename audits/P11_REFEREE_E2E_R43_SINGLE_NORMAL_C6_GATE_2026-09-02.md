@@ -4197,13 +4197,13 @@ Subsequent hardening on branch \(\texttt{research/r43-gcac-hardening}\) added:
 The current mathematical-content head for those statements is
 \[
 \boxed{
-\texttt{7647bc257f72e9f42e5be367292f20ced2136171}
+\texttt{2b8cd452d7998b5569416eca27af5e5236a28f72}
 }
 \]
 with mathematical-content R43 blob
 \[
 \boxed{
-\texttt{56cf95087c849d21c07ffa2748e975635728150c}.
+\texttt{59b4083b6c1f9762eed9f582fbce63c0df482584}.
 }
 \]
 Relative to the earlier \(\texttt{ade2cd34...}\) hardening, this mathematical layer also:
@@ -4214,13 +4214,19 @@ Relative to the earlier \(\texttt{ade2cd34...}\) hardening, this mathematical la
 - introduces the canonical compact-resolvent jet-number operator R43.59a--R43.59e;
 - records the quantifier/change-of-basis firewall R43.59f against deriving B-JMOM from
   fixed-\(m\) holomorphy alone;
-- weakens the sufficient B-SIGN regularity route from continuity to the Darboux property.
 - quantifies the local higher-jet holomorphy constants by the explicit at-most-exponential
-  bound R43.10cq1a--R43.10cq1c and isolates the remaining uniform jet-basis conditioning
-  gap R43.10cq1d.
+  bound R43.10cq1a--R43.10cq1c and isolates the remaining jet-basis conditioning gap
+  R43.10cq1d;
+- records the normalized constrained-Gamma conditioning diagnostic R43.59g--R43.59j as
+  strong numerical evidence against making a global higher-jet Riesz lower bound the
+  primary B-TIGHT route;
+- adds the terminal-generator/commutator firewall R43.59k: R40/R41's \(U^{-1}\) scale is
+  not a derivative estimate for \(W_U\);
+- replaces Darboux as the preferred B-SIGN mechanism by the finite-increment criterion
+  R43.66--R43.66b and the positive-correlation criterion R43.66c.
 
-Later commits which only reconcile review provenance or navigation do not enlarge that
-mathematical proof scope.
+Later commits which only add reproducibility scripts, review provenance, ledger reconciliation,
+or navigation do not enlarge that mathematical proof scope.
 
 A user-supplied Perplexity destructive review reports all seven GC-AC hardening targets GREEN
 on the exact earlier head
@@ -4271,7 +4277,12 @@ Aleksandrov--Clark or canonical-system boundary parameter is currently booked.
 \boxed{
 \text{B-TIGHT remains the primary OPEN gate;}
 \quad
-\text{B-JMOM / compact-resolvent energy are sufficient subroutes;}
+\text{direct compact-resolvent orbit energy is the preferred subroute;}
+}
+\]
+\[
+\boxed{
+\text{global higher-jet Riesz conditioning is numerically contraindicated, not theorem-level ruled out;}
 \quad
 \text{B-SIGN/B-ORIENT remains secondary OPEN.}
 }
