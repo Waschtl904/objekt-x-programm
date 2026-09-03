@@ -1,9 +1,9 @@
 # Active Theorem Registry
 
-> **Stand:** 2. September 2026  
+> **Stand:** 3. September 2026  
 > **Aktuelle Research-Basis:** `research/strong-terminal-r37-two-shift-mismatch`; R42-Freeze-Linie bis `f495ce6d89dcb8facc8fa0d4e09dda279b24fb73`, R43 mathematisch bis `cfa6920f6e43a2fe63e76dfd4e301459a98eb39c`. Die Gamma-Nest-Literaturimporte sind source-checked; **GC-M1_scalar** bleibt candidate-GREEN und §3K liefert einen noch unreviewed **GC-AC candidate closure** über die totale höhere Jet-Rieszfamilie. R38–R42 bleiben FROZEN — independently verified AI-GREEN ohne kanonische `✓[M]`-Promotion.  
 > **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11-Strong-Terminal-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
-> **Nicht-Zweck:** Ersatz für `STATUS.md`, `OFFENE_PROBLEME.md`, die Papers oder Promotionsrecords.
+> **Nicht-Zweck:** Ersatz für `STATUS.md`, `OFFENE_PROBLEME.md`, die Papers oder Promotionsrecords. Strategische Priorisierung steht in [FORSCHUNGS_ROADMAP_2026-09-03.md](FORSCHUNGS_ROADMAP_2026-09-03.md).
 
 Diese Datei ist eine **Navigations- und Abhängigkeitsregistry**. Eine Statuszeile hier erzeugt keine Promotion. Bei Konflikten gilt die kanonische mathematische Quelle des jeweiligen Resultats.
 
