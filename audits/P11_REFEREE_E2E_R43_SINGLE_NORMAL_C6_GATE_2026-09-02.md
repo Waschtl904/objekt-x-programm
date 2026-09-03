@@ -2160,41 +2160,176 @@ Then
 
 ### 3K.3 Every higher-jet nest measure is absolutely continuous in \(Q\)
 
-The repaired fixed-domain holomorphy argument of Sections 3D/3F applies verbatim to every
-fixed jet order \(m\).
-
-On the fixed dilated form domain, let
+Fix an arbitrary jet order
 \[
-u_{m,Q}:=A(Q)^{-1}b_{m,Q},
+m\ge1
+\]
+and a real reference radius \(Q_0>0\).  We now verify the fixed-domain analytic argument
+for this arbitrary \(m\), rather than importing the first-jet proof by analogy.
+
+Use the same complex disk \(\mathbb D_{Q_0}\) and fixed form domain
+\(\mathscr V_{Q_0}\) as in R43.10al--R43.10ar.  The estimates there are independent of
+the jet index and give an operator-norm holomorphic family
+\[
+Q\longmapsto
+A(Q)\in
+\mathcal B(\mathscr V_{Q_0},\mathscr V_{Q_0}^*)
+\]
+with a holomorphic inverse \(A(Q)^{-1}\) on a smaller disk about \(Q_0\).
+
+Choose the holomorphic branch of \(Q^{1/2}\) on this disk.  For the fixed order \(m\),
+define
+\[
+\Phi_m(Q,y)
+=
+\operatorname{sgn}(y)I_m(Q|y|),
 \qquad
-u_{0,Q}:=A(Q)^{-1}b_{0,Q},
+I_m(z)
+=
+\int_0^z s^me^{-s/2}\,ds.
+\]
+Because \(I_m\) is entire, the pulled-back jet functional is
+\[
+\boxed{
+b_{m,Q}(h)
+=
+Q^{1/2}
+\int_{-1}^1
+h(y)\Phi_m(Q,y)\,dy.
+}
+\tag{R43.10cq0}
+\]
+For every closed subdisk and every integer \(k\ge0\),
+\[
+\sup_{\substack{Q\text{ in subdisk}\\ |y|\le1}}
+\left|
+\partial_Q^k
+\bigl(
+Q^{1/2}\Phi_m(Q,y)
+\bigr)
+\right|
+<\infty.
+\]
+Since
+\[
+\mathscr V_{Q_0}\hookrightarrow L^2(-1,1),
+\]
+Cauchy--Schwarz gives
+\[
+\boxed{
+\|\partial_Q^k b_{m,Q}\|_{\mathscr V_{Q_0}^*}
+\le
+C_{m,k,Q_0}.
+}
+\tag{R43.10cq1}
+\]
+Thus
+\[
+\boxed{
+Q\longmapsto b_{m,Q}\in\mathscr V_{Q_0}^*
+\text{ is holomorphic.}
+}
+\tag{R43.10cq2}
+\]
+The same statement for \(m=0\) is already part of the Section 3F construction.
+
+Set
+\[
+u_{m,Q}
+=
+A(Q)^{-1}b_{m,Q},
+\qquad
+u_{0,Q}
+=
+A(Q)^{-1}b_{0,Q},
 \]
 and
 \[
-d_Q:=b_{0,Q}(u_{0,Q})>0.
+d_Q
+=
+b_{0,Q}(u_{0,Q}).
 \]
-The pulled-back constrained Riesz vector is
+All three maps are holomorphic.  At the real point \(Q_0\),
 \[
+d_{Q_0}>0,
+\]
+so after shrinking the disk,
+\[
+d_Q\ne0.
+\]
+Hence
+\[
+\boxed{
 \widetilde g_{m,Q}
 =
 u_{m,Q}
 -
-\frac{b_{0,Q}(u_{m,Q})}{d_Q}\,u_{0,Q}.
+\frac{b_{0,Q}(u_{m,Q})}{d_Q}
+u_{0,Q}
+}
 \tag{R43.10cq}
 \]
-Every factor is locally holomorphic in \(Q\), so
+is holomorphic as a \(\mathscr V_{Q_0}\)-valued map.
+
+For positive real \(Q\), this vector is exactly the pulled-back constrained Gamma-Riesz
+vector.  Indeed, if
+\[
+h\in\ker b_{0,Q},
+\]
+then
+\[
+\begin{aligned}
+a_Q[h,\widetilde g_{m,Q}]
+&=
+a_Q[h,u_{m,Q}]
+-
+\frac{b_{0,Q}(u_{m,Q})}{d_Q}
+a_Q[h,u_{0,Q}]\\
+&=
+b_{m,Q}(h)
+-
+\frac{b_{0,Q}(u_{m,Q})}{d_Q}
+b_{0,Q}(h)\\
+&=
+b_{m,Q}(h).
+\end{aligned}
+\tag{R43.10cq3}
+\]
+Therefore
+\[
+D_Q\widetilde g_{m,Q}=g_{m,Q}.
+\]
+
+Evaluating the Riesz identity at \(g_{m,Q}\) gives
+\[
+\boxed{
+\gamma_m(Q)
+=
+\|g_{m,Q}\|_{\Gamma,Q}^2
+=
+b_{m,Q}(\widetilde g_{m,Q}).
+}
+\tag{R43.10cq4}
+\]
+The right side is the restriction of a holomorphic scalar function to the positive real
+axis.  Thus
 \[
 \boxed{
 Q\longmapsto\gamma_m(Q)
-=
-b_{m,Q}(\widetilde g_{m,Q})
 \text{ is real analytic on }(0,\infty)
 }
 \tag{R43.10cr}
 \]
 for every fixed \(m\ge1\).
 
-Consequently the scalar nest measure of \(g_{m,S}\) is absolutely continuous:
+By R43.10cp,
+\[
+\gamma_m(Q)
+=
+\|P_Q^\Gamma g_{m,S}\|_{\Gamma,S}^2,
+\]
+so \(\gamma_m\) is nondecreasing in \(Q\).  Real analyticity implies local absolute
+continuity; therefore its Lebesgue--Stieltjes measure is
 \[
 \boxed{
 d\|P_Q^\Gamma g_{m,S}\|_{\Gamma,S}^2
@@ -2205,8 +2340,9 @@ d\gamma_m(Q)
 }
 \tag{R43.10cs}
 \]
+No strict-positivity statement for \(\gamma_m'\) is required.
 
-No positivity claim for \(\gamma_m'\) is required here.
+Since \(m\ge1\) was arbitrary, R43.10cs holds for the whole countable higher-jet family.
 
 ### 3K.4 The Riesz family is dense in the constrained Gamma space
 
@@ -2242,7 +2378,11 @@ H_S^0.
 
 ### 3K.5 GC-AC follows from total absolutely-continuous Riesz data
 
-Now use the scalar multiplicity-one model from Section 3J.4:
+Now use the scalar multiplicity-one conclusion from Section 3J.4.  This is a statement
+about the **intrinsic** projection nest \(\{P_Q^\Gamma\}\), so it is independent of which
+diagonal canonical realization was used to prove scalarity.  By the spectral theorem for a
+scalar continuous nest, choose any scalar representing measure \(\nu_S\) in the natural
+radius variable and a unitary model
 \[
 H_S^0
 \simeq
@@ -2386,10 +2526,12 @@ W_{R,S}^{[U]}\varepsilon_R,
 
 ### Status of Section 3K
 
-Section 3K is a new **AI-GREEN candidate** derived after the source-checked GC-AC split.
-Its key ingredients R43.10ch--R43.10ct are elementary/self-contained; the final measure-model
-step R43.10cu--R43.10cw depends on the scalar multiplicity-one candidate from Sections
-3G--3J.
+Section 3K remains an **AI-GREEN candidate** derived after the source-checked GC-AC
+split.  The all-(m) holomorphy step R43.10cq0--R43.10cs is now written explicitly rather
+than imported by analogy, and Section 3K.5 records why the scalar model is independent of
+the nonunique canonical realization.  The final measure-model step R43.10cu--R43.10cw
+still depends on the scalar multiplicity-one candidate from Sections 3G--3J and requires
+independent review on this hardened head before freeze.
 
 No R37/G4c conclusion is used.  No Strong-Terminal promotion is booked.
 
