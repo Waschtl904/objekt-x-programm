@@ -4017,13 +4017,13 @@ Subsequent hardening on branch \(\texttt{research/r43-gcac-hardening}\) added:
 The current mathematical-content head for those statements is
 \[
 \boxed{
-\texttt{6614895dcddb55c24c473f98a55be831f590f56b}
+\texttt{7647bc257f72e9f42e5be367292f20ced2136171}
 }
 \]
 with mathematical-content R43 blob
 \[
 \boxed{
-\texttt{b43d493d7a15f30877bfd0a0a9558c58ac52d77b}.
+\texttt{56cf95087c849d21c07ffa2748e975635728150c}.
 }
 \]
 Relative to the earlier \(\texttt{ade2cd34...}\) hardening, this mathematical layer also:
@@ -4035,6 +4035,9 @@ Relative to the earlier \(\texttt{ade2cd34...}\) hardening, this mathematical la
 - records the quantifier/change-of-basis firewall R43.59f against deriving B-JMOM from
   fixed-\(m\) holomorphy alone;
 - weakens the sufficient B-SIGN regularity route from continuity to the Darboux property.
+- quantifies the local higher-jet holomorphy constants by the explicit at-most-exponential
+  bound R43.10cq1a--R43.10cq1c and isolates the remaining uniform jet-basis conditioning
+  gap R43.10cq1d.
 
 Later commits which only reconcile review provenance or navigation do not enlarge that
 mathematical proof scope.
