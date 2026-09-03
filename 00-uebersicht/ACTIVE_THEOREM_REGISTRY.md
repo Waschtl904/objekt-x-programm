@@ -1,7 +1,7 @@
 # Active Theorem Registry
 
 > **Stand:** 2. September 2026  
-> **Aktuelle Research-Basis:** `research/strong-terminal-r37-two-shift-mismatch`; R42-Freeze-Linie bis `f495ce6d89dcb8facc8fa0d4e09dda279b24fb73`, R43 mathematisch bis `b31af535d39bd03d00cb2c1c7d9cec63eed5ea4b`. Die R43-Gamma-Nest-Literaturimporte sind source-checked; skalare Multiplizität eins ist Kandidat, **GC-AC** (kein singulär-kontinuierlicher natural-radius channel) bleibt offen. R38–R42 bleiben FROZEN — independently verified AI-GREEN ohne kanonische `✓[M]`-Promotion.  
+> **Aktuelle Research-Basis:** `research/strong-terminal-r37-two-shift-mismatch`; R42-Freeze-Linie bis `f495ce6d89dcb8facc8fa0d4e09dda279b24fb73`, R43 mathematisch bis `cfa6920f6e43a2fe63e76dfd4e301459a98eb39c`. Die Gamma-Nest-Literaturimporte sind source-checked; **GC-M1_scalar** bleibt candidate-GREEN und §3K liefert einen noch unreviewed **GC-AC candidate closure** über die totale höhere Jet-Rieszfamilie. R38–R42 bleiben FROZEN — independently verified AI-GREEN ohne kanonische `✓[M]`-Promotion.  
 > **Zweck:** operative, nicht exhaustive Registry der Resultate, die für die aktuelle P11-Strong-Terminal-Front tatsächlich benötigt oder unmittelbar angrenzend sind.  
 > **Nicht-Zweck:** Ersatz für `STATUS.md`, `OFFENE_PROBLEME.md`, die Papers oder Promotionsrecords.
 
@@ -47,7 +47,7 @@ Fehlt eine Angabe, gilt die Buchung als unvollständig und darf nicht als `indep
 | **R40** | FROZEN — independently verified AI-GREEN | \(\|v_{X,U}\|\asymp U^{-1}\) und positiver Normratio-Unterrand | `audits/P11_REFEREE_E2E_R40_DUAL_NORMAL_NEXT_ORDER_SCALE_2026-09-01.md` |
 | **R41** | FROZEN — independently verified AI-GREEN | \(U\|v_{X,U}\|\to\sqrt{\gamma_X}/2\), Ratio-Limit \(\sqrt{\gamma_R/\gamma_S}\) | `audits/P11_REFEREE_E2E_R41_SECOND_ORDER_HARD_CONSTRAINT_GAMMA_LAYER_2026-09-01.md` |
 | **R42** | FROZEN — independently verified AI-GREEN | Dualnormalen-Richtung, \(\gamma_R<\gamma_S\), tangentialer Polar-Collapse; echter \(W_U\)-Limes auf \(H_R^0\); C6 auf eine Normalbahn reduziert | `audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md` |
-| **R43** | OPEN — mixed reviewed/candidate status | R43.1–6, R43.10a–m und R43.10n–v extern GREEN; Analytizitätsreparatur intern geschlossen; Literaturimporte source-checked; **GC-M1_scalar** candidate-GREEN, **GC-AC** OPEN; `D_U=O(U^{-1})` bleibt separater AI-GREEN candidate | `audits/P11_REFEREE_E2E_R43_SINGLE_NORMAL_C6_GATE_2026-09-02.md` |
+| **R43** | OPEN — mixed reviewed/candidate status | R43.1–6, R43.10a–m und R43.10n–v extern GREEN; Analytizitätsreparatur intern geschlossen; Literaturimporte source-checked; **GC-M1_scalar** candidate-GREEN; §3K: **GC-AC candidate-closed via total higher-jet Riesz family**; `D_U=O(U^{-1})` bleibt separater AI-GREEN candidate; finaler C6-Rest unter diesem Kandidaten: Normal-Skalar `b_U` | `audits/P11_REFEREE_E2E_R43_SINGLE_NORMAL_C6_GATE_2026-09-02.md` |
 
 **Verbleibender fixed-pair Strong-Terminal-Gate:**
 \[
