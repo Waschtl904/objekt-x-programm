@@ -6,7 +6,7 @@ Knoten [OFFENE_PROBLEME.md](OFFENE_PROBLEME.md).
 
 > Stand: 3. August 2026 · letzter Eintrag NEU-228 · Direktaudits NEU-210/211 verbucht
 
-> **Konsolidierungsnotiz, aktualisiert 30. August 2026:** Dieses Statusregister bleibt die Bilanz des NEU-Journalkerns und ist **nicht** die operative Frontdatei. Aktuell maßgeblich sind [CURRENT-FRONT.md](CURRENT-FRONT.md), [ACTIVE_THEOREM_REGISTRY.md](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md), [Objekt X — aktuelle Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) und das [P11/R32-Statusaddendum](00-uebersicht/P11_R32_STATUS_2026-08-25.md).
+> **Konsolidierungsnotiz, aktualisiert 2. September 2026:** Dieses Statusregister bleibt die Bilanz des NEU-Journalkerns und ist **nicht** die operative Frontdatei. Aktuell maßgeblich sind [CURRENT-FRONT.md](CURRENT-FRONT.md), [ACTIVE_THEOREM_REGISTRY.md](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md) und die aktuelle P11-Strong-Terminal-Auditfolge R38--R43. R38--R42 sind frozen als independently verified AI-GREEN ohne kanonische \(\checkmark[M]\)-Promotion; R43 ist offen. Strong Terminal/C6 ist auf einen fixed-pair Normal-Kernel-Koeffizienten reduziert; R37/G4c bleibt separat offen.
 >
 > Die in diesem Dokument referenzierten früheren Objekt-X-Architekturen — insbesondere
 > Ebene XVI Revision 2 und die P04/Suzuki-Hypothese — sind seit 26. August 2026 als
@@ -195,9 +195,12 @@ Nach Dringlichkeit geordnet.
 | 7 | `[O-188-0..3]` | $H\notin\mathrm{LC}(\hat{\mathbb Z})$ mit $\alpha_k(H)-H\in\mathrm{LC}(\hat{\mathbb Z})$? | NEU-188 |
 | 8 | — | Rückrichtung: $\operatorname{Spec}\subset\mathbb R \Rightarrow \mathrm{RH}$ | — |
 
-> **Aktuellere P11/R32-Front:** Die obige Prioritätenliste ist der NEU-Journalkern vom
-> 3. August. Der post-freeze P11/R32-Engpass vom 26. August ist separat dokumentiert und
-> lautet weiterhin \(\ker\Gamma_I=\{0\}\ ?[O]\).
+> **Aktuellere P11-Front:** Die obige Prioritätenliste ist der NEU-Journalkern vom
+> 3. August und nicht mehr operativ. Nach der negativen finite-level SW1-Entscheidung wurde
+> die aktive Forschung auf B / Strong Terminal verlagert. R38--R42 sind frozen; R43 ist der
+> offene aktuelle Block. Der fixed-pair C6-Gate lautet
+> \(\operatorname{Re}\langle\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R\rangle\to1\ ?\).
+> Siehe CURRENT-FRONT und ACTIVE_THEOREM_REGISTRY.
 
 ---
 

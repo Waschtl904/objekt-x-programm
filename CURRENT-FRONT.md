@@ -1,10 +1,10 @@
-# CURRENT FRONT — Objekt X / P11-R32
+# CURRENT FRONT — Objekt X / P11 Strong Terminal
 
 > **Operative Kopfschicht — zuerst lesen.**  
-> **Stand:** 1. September 2026  
-> **Aktuelle mathematische Basis:** `main` mit mathematischer Basis durch PR #48 (Pre-Doku-Sync SHA `cf3d39a2e7787bc1c5b938390b6cdeec7943b0c2`). Die M1-ND-IMG4-SMALLR-Promotion ist integriert (`✓[M]_neg`). PR #49 (`research/sw1-m1-nd-salvage-phase-diagram`, geprüfter Head `2ed1583f074574c2fdb5a48203d63d520a86b5f6`) bleibt bewusst **offen und eingefroren** als intern adversarial GREEN geprüfter, aber unpromotierter Uniform-Blind-Wedge-Kandidat; finaler Review-Run `33532345053` SUCCESS. Frühere Promotions-/Certificate-Aussagen behalten ihre jeweils kanonischen Provenienzen.  
-> **Aktiver mathematischer Stand:** A / finite-level Cross-Gram ist im universellen SW1-Sinn **negativ entschieden**; PR #49 verstärkt dies als Kandidat möglicherweise zu einem ganzen offenen Wedge, wird aber nicht weiter verändert und nicht promotet. **Aktive Forschung wechselt jetzt zu B / Strong Terminal.** Erster Zielknoten ist R27-F: den festen Gamma-Crossblock bzw. den Grenzdefekt `D_infty^-` entscheiden. Danach folgt separat R22-F: der positive fixed-vector Polar-Gauge-/Angle-Defect.  
-> **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)
+> **Stand:** 3. September 2026  
+> **Aktuelle Research-Basis:** Branch `research/strong-terminal-r37-two-shift-mismatch`; R42-Freeze-Linie bis `f495ce6d89dcb8facc8fa0d4e09dda279b24fb73`, R43 aktuell bis mathematischem Head `cfa6920f6e43a2fe63e76dfd4e301459a98eb39c`. Die bisher reviewten Gamma-Nest-Schichten bleiben GREEN; die Literatur-Schnittstelle ist source-checked. Neu in §3K: **GC-AC ist candidate-closed** durch die totale höhere Jet-Rieszfamilie; dieser neue Schluss ist noch nicht unabhängig reviewed. Unter diesem Kandidaten kollabiert die gesamte terminalfreie Gamma-Dichtefront und der verbleibende Strong-Terminal-Gate ist nur noch der Normal-Skalar `b_U`. Strong Terminal/C6 bleibt weiterhin offen.  
+> **Aktiver mathematischer Stand:** **B / Strong Terminal.** R38–R42 sind jeweils **FROZEN — independently verified AI-GREEN**, ohne kanonische `✓[M]`-Promotion. Für jedes feste \(0<R<S\) konvergiert der echte Future-Transport bereits stark auf \(H_R^0=\ker\beta_R^{(0)}\). Strong Terminal / C6 ist exakt auf die eine feste Normalbahn \(W_{R,S}^{[U]}\varepsilon_R\), äquivalent auf den einen Cross-Kernel-Koeffizienten \(\operatorname{Re}\langle\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R\rangle\to1\), reduziert. **R43 ist offen / exploratory** und untersucht diesen letzten Gate. R37/G4c bleibt separat offen und wird durch R38–R43 nicht rückwirkend geschlossen.  
+> **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md) · **Roadmap:** [FORSCHUNGS_ROADMAP_2026-09-03](00-uebersicht/FORSCHUNGS_ROADMAP_2026-09-03.md)
 
 Diese Datei ist die **operative Navigationsschicht** des Repositories. Sie ist kein mathematischer Beweis und erzeugt keine Statuspromotion. Ihre Aufgabe ist, den gegenwärtigen Forschungsangriff, seine erlaubten Inputs und die ausdrücklich nicht benötigten Nebenfronten sichtbar zu halten.
 
@@ -17,8 +17,19 @@ Die aktive Front ist **nicht** „Objekt X vollständig konstruieren“ und **ni
 
 Operativ sind jetzt zwei Achsen getrennt:
 
-1. **A / M1-ND-SALVAGE:** PR #49 ist als geprüfter Kandidat eingefroren; keine weitere Arbeit und keine Promotion ohne bewusstes Reopening.
-2. **B / Strong Terminal:** aktive Forschungsachse; zuerst R27-F, danach R22-F.
+1. **A / M1-ND-SALVAGE:** historisch/strategisch geparkt; PR #49 bleibt eingefrorener, unpromotierter Kandidat.
+2. **B / Strong Terminal:** aktive Forschungsachse. R38–R42 sind frozen; **R43** ist der einzige aktuelle Arbeitsblock. Sein Hauptobservable ist
+   \[
+   L_{R,S}^{T,U}
+   :=
+   \operatorname{Re}
+   \langle e_{R,0},K_{R,S}^{T,U}e_{R,0}\rangle,
+   \]
+   mit \(e_{R,0}=\varepsilon_R\). Strong Terminal gilt genau dann, wenn
+   \[
+   L_{R,S}^{T,U}\to1
+   \qquad(T,U\to\infty).
+   \]
 
 Der bisherige universelle Zielknoten
 
@@ -119,7 +130,7 @@ Status:
 \]
 
 Quelle:
-\`papers/P12_Adelic_Hub_Injectivity_Program.tex\`, Corollary \`cor:p12-consolidated\`.
+`papers/P12_Adelic_Hub_Injectivity_Program.tex`, Corollary `cor:p12-consolidated`.
 
 SW1 liegt vollständig in diesem Bereich. Daher muss die äußere Hub-Injektivität für den SW1-Angriff **nicht neu bewiesen** werden.
 
@@ -129,13 +140,13 @@ HT-A1, HT-A2, HT-A3 und HT-A4a sind AI-GREEN geprüfte Kandidaten, aber nicht fo
 
 FG-1, FG-TR1, die \(\widehat\Phi_R\)-Normalform und CG-FG1 sind ebenfalls AI-GREEN Kandidaten-/Kompositionsresultate ohne formale Promotion.
 
-SW1-KNF (\`audits/P11_R32_SW1_KNF_CANDIDATE.md\`, PR #15) ist ein AI-GREEN Kandidat, der auf SW1 eine vollständige sektorale Kernel-Normalform liefert und dort die globale FG-TR1-Blackbox ersetzt.
+SW1-KNF (`audits/P11_R32_SW1_KNF_CANDIDATE.md`, PR #15) ist ein AI-GREEN Kandidat, der auf SW1 eine vollständige sektorale Kernel-Normalform liefert und dort die globale FG-TR1-Blackbox ersetzt.
 
-SW1-BL7 (\`audits/P11_R32_SW1_BL7_CANDIDATE.md\`, PR #16) ist ein AI-GREEN Kandidat: für \(s\in(R,\varepsilon)\) gilt \(2d+s\in(a+R,b-R)\subset\mathcal Z_{R,\mathrm{SW1}}^{\rm phys}\), für jedes \(s\), als siebter direkter Blindwert neben den sechs promoteten.
+SW1-BL7 (`audits/P11_R32_SW1_BL7_CANDIDATE.md`, PR #16) ist ein AI-GREEN Kandidat: für \(s\in(R,\varepsilon)\) gilt \(2d+s\in(a+R,b-R)\subset\mathcal Z_{R,\mathrm{SW1}}^{\rm phys}\), für jedes \(s\), als siebter direkter Blindwert neben den sechs promoteten.
 
-SW1-2TP (\`audits/P11_R32_SW1_2TP_CANDIDATE.md\`, PR #17) ist AI-GREEN + \`independent GREEN (certificate)\`: die beiden \(T\pm s\)-Rows wurden direkt aus den elf Wörtern von \(A\) hergeleitet; \(M_T\) ist uniform positiv invertierbar; das reproduzierbare Zertifikat \`scripts/certify_sw1_2tp_ledger.py\` (Python/SymPy 1.14.0) prüft 88 Echo-Fälle, Hub-Support, Pivot und Eigenkanäle mit PASS. Der Perplexity-Blindcheck ist dokumentiert FAIL und erzeugt kein cross-model GREEN.
+SW1-2TP (`audits/P11_R32_SW1_2TP_CANDIDATE.md`, PR #17) ist AI-GREEN + `independent GREEN (certificate)`: die beiden \(T\pm s\)-Rows wurden direkt aus den elf Wörtern von \(A\) hergeleitet; \(M_T\) ist uniform positiv invertierbar; das reproduzierbare Zertifikat `scripts/certify_sw1_2tp_ledger.py` (Python/SymPy 1.14.0) prüft 88 Echo-Fälle, Hub-Support, Pivot und Eigenkanäle mit PASS. Der Perplexity-Blindcheck ist dokumentiert FAIL und erzeugt kein cross-model GREEN.
 
-SW1-AWI (\`audits/P11_R32_SW1_AWI_CANDIDATE.md\`, PR #18) ist AI-GREEN + \`independent GREEN (certificate)\`: die A-Wall-Dichotomie ist vollständig fallweise normalisiert; in der oberen Kammer wirkt die Kollision über die maßtreue Reflexion \(s\mapsto\Delta-s\), und der zugehörige Zwei-Kanal-Block ist strikt invertierbar. Das Vollzertifikat \`scripts/certify_sw1_awi.py\` (Python/SymPy 1.14.0) prüft Geometrie, Fixpunkt, Koeffizientenordnung, Eigenkanäle und Invertierbarkeit mit PASS. Perplexity ist PARTIAL/FAIL und erzeugt kein cross-model GREEN.
+SW1-AWI (`audits/P11_R32_SW1_AWI_CANDIDATE.md`, PR #18) ist AI-GREEN + `independent GREEN (certificate)`: die A-Wall-Dichotomie ist vollständig fallweise normalisiert; in der oberen Kammer wirkt die Kollision über die maßtreue Reflexion \(s\mapsto\Delta-s\), und der zugehörige Zwei-Kanal-Block ist strikt invertierbar. Das Vollzertifikat `scripts/certify_sw1_awi.py` (Python/SymPy 1.14.0) prüft Geometrie, Fixpunkt, Koeffizientenordnung, Eigenkanäle und Invertierbarkeit mit PASS. Perplexity ist PARTIAL/FAIL und erzeugt kein cross-model GREEN.
 
 Keine dieser Kandidatenzeilen trägt eine Promotion; keine Aussage über A0, HT-RED oder \(\ker\Gamma_I\).
 
@@ -146,7 +157,7 @@ Exakte Status- und Quellenliste:
 
 ## 3. Gemergter Zwischenmeilenstein: PR #10
 
-PR #10 theorematisiert nur den einfachen SW1-Membership-Satz und ist inzwischen in \`main\` gemergt.
+PR #10 theorematisiert nur den einfachen SW1-Membership-Satz und ist inzwischen in `main` gemergt.
 
 Ziel/Kern (§12, vollständig):
 \[
@@ -170,7 +181,7 @@ Aktueller Status:
 }
 \]
 
-Promotet mit kanonischem Promotionsrecord \`audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md\`. Exakter adversarial und mechanisch geprüfter Review-Head: \`f8f9f107b9c6879611ecb492979737a5541141e9\`; Squash-Merge in main: \`b06f50f12973e781b87db8b06e54fd590a053b10\`. Keine Mitpromotion von HT-A4b global, HT-RED, A0 oder Schur-Cross-Gram.
+Promotet mit kanonischem Promotionsrecord `audits/P11_R32_HT_A4B_SW1_M_PROMOTION.md`. Exakter adversarial und mechanisch geprüfter Review-Head: `f8f9f107b9c6879611ecb492979737a5541141e9`; Squash-Merge in main: `b06f50f12973e781b87db8b06e54fd590a053b10`. Keine Mitpromotion von HT-A4b global, HT-RED, A0 oder Schur-Cross-Gram.
 
 ---
 
@@ -293,31 +304,63 @@ Kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
 
 ### 4.2 Aktive Forschungsachse: B / Strong Terminal
 
-Der historische C6-Strang ist lokal geschlossen und hat den residualspektralen
-Blocker exportiert. Die heutige Strong-Terminal-Frage ist auf zwei getrennte
-Restgates reduziert:
+Die frühere R27-F/R22-F-Zerlegung ist durch die Folge R38--R42 wesentlich weiter
+geschlossen worden.
 
-1. **R27-F / Modulus-Gate**
+**Frozen Stand:**
+
+- **R38:** Modulus-Clustergeometrie; starke Konvergenz auf \(V_R\), Full-Space-SOT auf den
+  einen Normal-Skalar \(a_U\) reduziert.
+- **R39:** exakter Strong-Terminal-/C6-Cauchy-Gate; Moving-Gauge-Firewall.
+- **R40:** \(\|v_{X,U}\|\asymp U^{-1}\).
+- **R41:** exakter zweiter Gamma-Layer,
+  \[
+  U\|v_{X,U}\|\to\frac{\sqrt{\gamma_X}}2,
+  \qquad
+  \frac{\|v_{R,U}\|}{\|v_{S,U}\|}
+  \to\sqrt{\frac{\gamma_R}{\gamma_S}}.
+  \]
+- **R42:** Richtungslimes der Dualnormalen, \(\gamma_R<\gamma_S\) für jedes \(R<S\),
+  tangentiale Polar-Konvergenz und starke Konvergenz des **echten**
+  \(W_{R,S}^{[U]}\) auf
+  \[
+  H_R^0=\ker\beta_R^{(0)}.
+  \]
+
+Damit ist für jedes feste \(0<R<S\) nur noch die Kodimension-eins-Normalrichtung offen.
+Mit dem kanonischen Jet-0-Vektor
+\[
+\varepsilon_R=e_{R,0}
+\]
+lautet der exakte verbleibende C6-Gate
+\[
+\boxed{
+\operatorname{Re}
+\langle
+\varepsilon_R,
+K_{R,S}^{T,U}\varepsilon_R
+\rangle_{X,R}
+\longrightarrow1
+\qquad(T,U\to\infty).
+}
+\]
+
+**Aktiver Block R43:** ergebnisoffene Entscheidung dieses einen Gates. Phase I hat zwei
+neue Kandidatenfronten geöffnet:
+
+1. ein terminalfreies **Gamma-Zyklizitätsgate** über Zwischenradien \(R<Q<S\);
+2. ein quantitatives Edge-Upgrade mit dem derzeit intern hergeleiteten, aber noch nicht
+   extern verifizierten Hochrisikopunkt
    \[
-   D_\infty^-
-   =
-   T_{S,\infty}W-WT_{R,\infty}
-   \stackrel{?}=0.
+   D_U(z_U,z_U)=O(U^{-1}).
    \]
-   Äquivalent ist ein fester Gamma-Crossblock auf einem fixed window zu
-   entscheiden. Dies ist der **nächste Default-Angriff**.
 
-2. **R22-F / Polar-Gauge-Gate**
-   \[
-   \mathscr G_U=(V_U-W)^*(V_U-W)
-   \stackrel{s}{\longrightarrow}0\ ?
-   \]
-   Dieser fixed-vector Angle-Defect ist logisch separat und bleibt auch nach
-   einem positiven R27-F zu prüfen.
+R43 ist **nicht frozen** und erzeugt keine Promotion. Insbesondere ist weder
+\(L_{R,S}^{T,U}\to1\) noch ein Strong-Terminal-No-Go entschieden.
 
-Bereits vorhanden sind die finite Terminalalgebra, die negative absolute
-Metrikgrenze, die Cross-Terminal-Cauchy-Identität, uniforme relative
-Coercivity sowie Mosco-/Resolvent- und inverse-root-Grenzen.
+**Separate Firewall:** R37/G4c bleibt offen. Kein Resultat R38--R43 darf R37 rückwirkend
+promovieren.
+
 
 ---
 
@@ -366,8 +409,8 @@ Daher lautet die operative Regel:
 
 Vor einer neuen Rechnung ist in dieser Reihenfolge zu lesen:
 
-1. **\`CURRENT-FRONT.md\`** — Was ist heute die aktive Frage?
-2. **\`00-uebersicht/ACTIVE_THEOREM_REGISTRY.md\`** — Welche Resultate dürfen mit welchem Status benutzt werden?
+1. **`CURRENT-FRONT.md`** — Was ist heute die aktive Frage?
+2. **`00-uebersicht/ACTIVE_THEOREM_REGISTRY.md`** — Welche Resultate dürfen mit welchem Status benutzt werden?
 3. **Kanonische Quelle des benötigten Inputs** — Paper oder Promotionsrecord.
 4. **Aktueller Kandidatenaudit / aktiver PR** — nur die konkrete Front.
 5. **Historische Audits / Journal** — nur bei einer klar benannten Provenienz-, Fehler- oder Gegenbeispielfrage.
@@ -403,26 +446,26 @@ Für mathematische Aussagen gilt:
 \]
 = interne KI-Konstruktion plus kritische Zweitprüfung (durch dasselbe oder ein zweites KI-System im selben Kontext); **keine** unabhängige Verifikation.
 
-**Subtypen von \`independent GREEN\`** (kumulativ buchbar; ein Kandidat kann mehrere Subtypen gleichzeitig tragen, ohne dass dies eine menschliche Prüfung suggeriert):
+**Subtypen von `independent GREEN`** (kumulativ buchbar; ein Kandidat kann mehrere Subtypen gleichzeitig tragen, ohne dass dies eine menschliche Prüfung suggeriert):
 
 | Subtyp | Bedeutung | Pflichtangaben |
 |---|---|---|
-| **independent GREEN (cross-model)** | Ein separates Modell/System prüft den exakten Satz **ohne Kenntnis** unserer Zielrechnung. Für 2TP zwingend: frische Perplexity-Session ohne diesen Thread-Verlauf. Kennt die prüfende Session bereits unsere Zielmatrix/diesen Verlauf, wird das Ergebnis höchstens als „cross-model nonblind“ protokolliert — das erzeugt **kein** \`independent GREEN\`. | Typ, Methode, Prüfer/System (inkl. Blind-/Nonblind-Vermerk), exakter geprüfter Head, exakter Satz/Scope, Verdict |
+| **independent GREEN (cross-model)** | Ein separates Modell/System prüft den exakten Satz **ohne Kenntnis** unserer Zielrechnung. Für 2TP zwingend: frische Perplexity-Session ohne diesen Thread-Verlauf. Kennt die prüfende Session bereits unsere Zielmatrix/diesen Verlauf, wird das Ergebnis höchstens als „cross-model nonblind“ protokolliert — das erzeugt **kein** `independent GREEN`. | Typ, Methode, Prüfer/System (inkl. Blind-/Nonblind-Vermerk), exakter geprüfter Head, exakter Satz/Scope, Verdict |
 | **independent GREEN (certificate)** | Reproduzierbares maschinelles/algebraisches Zertifikat (z. B. Python/SymPy/CAS-Skript), das den endlichen algebraischen Teil bestätigt. | zusätzlich: Tool/Version, Zertifikatsdatei bzw. Skriptpfad, exakter geprüfter Git-Head, reproduzierbares Ergebnis (Output dokumentiert) |
 | **independent GREEN (human)** | Unabhängige Prüfung durch einen externen Menschen. | zusätzlich: Reviewer bzw. nachvollziehbare Review-Provenienz |
 
-**Verbindliches Buchungsschema für jede \`independent GREEN\`-Zeile:**
+**Verbindliches Buchungsschema für jede `independent GREEN`-Zeile:**
 \[
 \boxed{
 \text{Typ}+\text{Methode}+\text{Prüfer/System}+\text{exakter Head}+\text{exakter Satz/Scope}+\text{Verdict}
 }
 \]
-Fehlt eine dieser Angaben, gilt die Buchung als unvollständig und darf nicht als \`independent GREEN\` gezählt werden.
+Fehlt eine dieser Angaben, gilt die Buchung als unvollständig und darf nicht als `independent GREEN` gezählt werden.
 
 \[
 \boxed{\checkmark[M]}
 \]
-= formaler Objekt-X-interner Promotionsstatus, unabhängig davon, ob zusätzlich externe Begutachtung existiert. **Kein** Ersatz für Fachjournal- oder Peer-Review-Verifikation. Orthogonal zu allen obigen Subtypen — eine \`✓[M]\`-Promotion setzt keinen bestimmten \`independent GREEN\`-Subtyp voraus und umgekehrt.
+= formaler Objekt-X-interner Promotionsstatus, unabhängig davon, ob zusätzlich externe Begutachtung existiert. **Kein** Ersatz für Fachjournal- oder Peer-Review-Verifikation. Orthogonal zu allen obigen Subtypen — eine `✓[M]`-Promotion setzt keinen bestimmten `independent GREEN`-Subtyp voraus und umgekehrt.
 
 **Beispiel für eine kumulative Buchung (Zielbild für SW1-2TP, noch nicht erreicht):**
 \[
@@ -430,17 +473,17 @@ Fehlt eine dieser Angaben, gilt die Buchung als unvollständig und darf nicht al
 \text{AI-GREEN}+\text{independent GREEN (cross-model)}+\text{independent GREEN (certificate)}
 }
 \]
-ohne dass dabei suggeriert wird, es liege bereits eine \`independent GREEN (human)\`-Prüfung vor.
+ohne dass dabei suggeriert wird, es liege bereits eine `independent GREEN (human)`-Prüfung vor.
 
 ### 8.2 Wo ein Mensch tatsächlich gebraucht wird
 
 Für elementare, endliche Bausteine wie SW1-BL7 (\(a+R<2d+s<b-R\)) ist die Beweislast überschaubar; AI-GREEN plus ggf. cross-model/certificate ist ausreichend. Mit steigender Tragweite steigt die Schwelle:
 
-- SW1-2TP: AI-GREEN + mindestens ein \`independent GREEN\`-Subtyp vor Promotion.
+- SW1-2TP: AI-GREEN + mindestens ein `independent GREEN`-Subtyp vor Promotion.
 - \(\Delta\)-Descent: höhere Schwelle, mehrere Subtypen empfohlen.
 - ein möglicher SW1-Gesamtsatz (\(\ker\mathcal K_{I,A}=\{0\}\) auf ganz SW1) oder eine öffentliche Behauptung eines großen Resultats: **independent GREEN (human)** durch einen externen Fachmathematiker wird empfohlen, bevor eine öffentliche Behauptung erfolgt — funktionalanalytische Domain-, Closure-, a.e.- und Operatoridentifikationsfragen können dort subtil werden.
 
-\`CURRENT-FRONT.md\` und die Registry sind **Navigationsdateien**. Bei einem Konflikt entscheiden die kanonischen mathematischen Quellen.
+`CURRENT-FRONT.md` und die Registry sind **Navigationsdateien**. Bei einem Konflikt entscheiden die kanonischen mathematischen Quellen.
 
 ---
 
@@ -450,8 +493,8 @@ Ein mathematisch relevanter Merge gilt operativ erst dann als vollständig abges
 
 1. **PR gemergt** — exakter Merge-Commit bekannt.
 2. **Main mechanisch verifiziert** — tatsächlicher Main-SHA und Diff geprüft.
-3. **Registry geprüft** — falls Status, Scope, Quelle oder aktive Abhängigkeit betroffen sind, \`ACTIVE_THEOREM_REGISTRY.md\` aktualisieren.
-4. **Front aktualisiert** — \`CURRENT-FRONT.md\` auf neuen Main-SHA, aktuellen offenen Knoten und nächsten Schritt bringen.
+3. **Registry geprüft** — falls Status, Scope, Quelle oder aktive Abhängigkeit betroffen sind, `ACTIVE_THEOREM_REGISTRY.md` aktualisieren.
+4. **Front aktualisiert** — `CURRENT-FRONT.md` auf neuen Main-SHA, aktuellen offenen Knoten und nächsten Schritt bringen.
 5. **Erst dann Abschluss buchen** — kein neuer mathematischer Angriff auf Basis eines veralteten operativen Frontstands.
 
 Kurz:
@@ -526,6 +569,20 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 }
 \]
 
-**Nächster Default:** **B / Strong Terminal — R27-F**. Entscheide den fixed Gamma-Crossblock bzw. ob \(D_\infty^-=0\). Erst danach R22-F / Polar-Gauge. PR #49 bleibt eingefrorener A-Kandidat und wird nicht parallel weiter verändert.
+**Nächster Default:** **R43 / Single-Normal C6 Gate.** Entscheide ergebnisoffen
+\[
+\operatorname{Re}
+\langle
+\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R
+\rangle
+\longrightarrow1
+\quad?
+\]
+Zulässige Untergates sind die terminalfreie Gamma-Zyklizität der Zwischenradius-Familie und,
+falls nötig, die reskalierte dritte Edge-Schicht. PR #49 bleibt eingefrorener A-Kandidat und
+wird nicht parallel weiter verändert.
 
-**Firewall:** IMG1 bleibt in seinem dokumentierten Certificate-Scope unpromotiert. Neu promotiert ist ausschließlich `M1-ND-SMALLR: ✓[M]_neg` für den expliziten Witness auf \(\mathscr B_K\oplus\mathscr B_W\). Eine separate formale Promotion von \(\ker\Gamma_I\neq\{0\}\) wird hier nicht gebucht. Die A-Restparameterklassifikation bleibt offen, ist aber derzeit geparkt; aktive Forschung ist B / R27-F. Kein HT-RED, kein Objekt-X-Abschluss und keine RH-Folgerung.
+**Firewall:** R38–R42 sind reviewer-governance-frozen, aber nicht kanonisch \(\checkmark[M]\)
+promotet. R43 ist offen. R37/G4c bleibt separat offen. Keine Rückkehr zur universellen
+SW1-Injektivitätsbehauptung ohne Architekturänderung; kein HT-RED, kein Objekt-X-Abschluss
+und keine RH-Folgerung.

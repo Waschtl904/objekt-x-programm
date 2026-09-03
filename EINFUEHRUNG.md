@@ -1,7 +1,7 @@
 # Das Objekt-X-Programm — Eine verständliche Einführung
 
 > **Textbasis:** 7. August 2026 — nach NEU-250k/l.  
-> **Konsolidierung 30. August 2026:** Die allgemeine Motivation bleibt als Einführung nützlich, aber route-spezifische Aussagen des August-7-Texts sind historisch. Die operative Front steht in [`CURRENT-FRONT.md`](CURRENT-FRONT.md); die aktuelle Objekt-X-Definition in [`00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md). Aktiver Kern ist Roadmap A, \(\ker\Gamma_I=\{0\}\ ?[O]\).
+> **Konsolidierung 3. September 2026:** Die allgemeine Motivation bleibt als Einführung nützlich; route-spezifische Aussagen des August-7-Texts sind historisch. Die operative Front steht in [`CURRENT-FRONT.md`](CURRENT-FRONT.md), die aktuelle Roadmap in [`00-uebersicht/FORSCHUNGS_ROADMAP_2026-09-03.md`](00-uebersicht/FORSCHUNGS_ROADMAP_2026-09-03.md), die Objekt-X-Definition in [`00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md). Aktiver Kern ist jetzt **B / Strong Terminal / R43**; A ist im universellen SW1-Sinn negativ entschieden.
 
 ---
 

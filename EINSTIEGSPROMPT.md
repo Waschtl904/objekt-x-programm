@@ -1,59 +1,81 @@
 # Einstiegsprompt — Neue Chat-Session
 
-> **Aktueller Stand: 30. August 2026.**
-> Für eine neue Session soll **nur der folgende aktuelle Einstieg** als operative Arbeitsgrundlage verwendet werden.
-> Der frühere NEU-250a/Wres-Prompt bleibt darunter ausschließlich als historische Provenienz erhalten.
+> **Aktueller Stand: 3. September 2026.**
+> Für eine neue Session soll **nur der folgende aktuelle Einstieg** als operative
+> Arbeitsgrundlage verwendet werden. Frühere Prompts bleiben darunter ausschließlich als
+> historische Provenienz erhalten.
 
 ## Aktueller Einstieg — kopierbarer Arbeitskontext
 
 Ich arbeite am Forschungsprogramm **Objekt X** zur Riemannschen Hypothese im Repository
-`Waschtl904/objekt-x-programm`. Arbeite als strenger mathematischer Auditor und
-Research Assistant. Prüfe bei jeder neuen Aufgabe zuerst den aktuellen `main`-Stand und
-verwende aktive mathematische Quellen vor älteren Navigationsdokumenten.
+Waschtl904/objekt-x-programm. Arbeite als strenger mathematischer Auditor und Research
+Assistant. Prüfe bei jeder neuen Aufgabe zuerst den aktuellen main-Stand und verwende aktive
+mathematische Quellen vor älteren Navigationsdokumenten.
 
 ### Kanonische operative Quellen
 
-1. `CURRENT-FRONT.md` — aktuelle Forschungsfront und nächster Schritt.
-2. `00-uebersicht/ACTIVE_THEOREM_REGISTRY.md` — Status, Scope, Provenienz.
-3. `00-uebersicht/P11_R32_STATUS_2026-08-25.md` — Post-Freeze-Statusaddendum, Update 2026-08-30.
-4. `00-uebersicht/FORSCHUNGS_ROADMAP_2026-08-26.md` — strategische Roadmap.
-5. `00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md` — Definition von Objekt X.
+1. CURRENT-FRONT.md — aktuelle Forschungsfront und nächster Schritt.
+2. 00-uebersicht/ACTIVE_THEOREM_REGISTRY.md — Status, Scope, Provenienz.
+3. 00-uebersicht/AKTUELLER_STAND.md — kurze operative Zusammenfassung.
+4. 00-uebersicht/FORSCHUNGS_ROADMAP_2026-09-03.md — strategische Roadmap.
+5. 00-uebersicht/DAG.md — aktuelle Abhängigkeits-/Firewall-Struktur.
+6. 00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md — Definition von Objekt X.
 
 ### Aktueller mathematischer Stand
 
-- PR #34 ist nach `main` gemergt; mathematische Merge-Basis:
-  `6ac0141b2de3a0b2af98fff6d11c403fe3b379b6`.
-- C1B2A-CHIRO: `✓[M]` plus reproduzierbares Certificate.
-- C1B2A-TRANSFER: `✓[M]`.
-- M1-RAW und M1-FULL(7/2): kanonische reproduzierbare Certificate-Ergebnisse.
-- Daraus folgt M1-FULL((r)) für jedes (3<r<4) auf offenen Parameterkammern und offenen Kreisatomen.
-- Die CI-geprüften Byte-Provenienzen bleiben die Script-Blobs
-  `b92f7778...` (AFF-CHIRO), `18f992d1...` (GATE1R) und
-  `d73993a3...` (M1-FULL), GitHub Actions Run `33328052407`.
-- Daraus folgt **keine** Cross-Gram-Injektivität, kein HT-RED, kein Objekt-X-Abschluss und keine RH-Aussage.
+- **A / finite-level Cross-Gram:** der universelle SW1-Nichtentartungsanspruch ist durch
+  M1-ND-IMG4-SMALLR negativ entschieden. PR #49 bleibt als unpromotierter
+  Blind-Wedge-Kandidat geparkt.
+- **B / Strong Terminal:** aktive Hauptfront.
+- R38–R42 sind jeweils **FROZEN — independently verified AI-GREEN**, ohne automatische
+  kanonische ✓[M]-Promotion.
+- Für jedes feste \(0<R<S\) konvergiert der echte Future-Transport bereits stark auf
+  \[
+  H_R^0=\ker\beta_R^{(0)}.
+  \]
+- Strong Terminal / C6 ist auf die eine Normalbahn
+  \[
+  W_{R,S}^{[U]}\varepsilon_R,\qquad \varepsilon_R=e_{R,0},
+  \]
+  bzw. auf
+  \[
+  \operatorname{Re}
+  \langle\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R\rangle\to1
+  \]
+  reduziert.
+- R43 ist **OPEN**. Die unteren Gamma-Nest-Reduktionen sind partiell extern GREEN; die
+  Krein/de-Branges-Literaturimporte wurden source-checked und korrigiert.
+- **GC-M1_scalar** ist candidate-GREEN.
+- R43 §3K liefert einen noch unabhängig zu prüfenden **GC-AC candidate closure** über die
+  totale Familie höherer constrained Gamma-Rieszvektoren.
+- Falls §3K GREEN wird, bleibt als finaler Strong-Terminal-Gate nur
+  \[
+  b_U
+  =
+  \langle W_{R,S}^{[U]}\varepsilon_R,\varepsilon_S\rangle,
+  \qquad
+  b_U\to b,\ |b|=1\ ?
+  \]
+- R37/G4c bleibt separat offen. R38–R43 dürfen R37 nicht rückwirkend promotieren.
+- Es gibt weiterhin keinen X-Kandidaten im Sinn der kanonischen Arbeitsdefinition und
+  keine RH-Aussage.
 
-### Aktive Frage
+### Nächste Default-Arbeitsfolge
 
-[
-\boxed{\ker\Gamma_I=\{0\}\ ?[O]}
-]
+1. R43 §3K destruktiv extern prüfen:
+   Jet-Totalität, höhere Gamma-Rieszvektoren, Analytizität der \(\gamma_m\)-Nestmaße,
+   Maßargument \(\Rightarrow\) GC-AC.
+2. Falls GREEN: terminalfreie Gamma-Dichtefront schließen.
+3. Den letzten Normal-Skalar \(b_U\) direkt angreifen.
+4. Strong Terminal positiv oder negativ entscheiden.
+5. Erst danach neu entscheiden, ob B in eine X-Kandidatenarchitektur überführt oder
+   R37/G4c wieder aufgenommen wird.
 
-bzw. die äquivalente Preimage-/augmentierte-System-Form auf SW1.
+### Governance
 
-### Nächste Arbeitsfolge aus Roadmap A
-
-1. Odd/even-Faltung exakt festlegen.
-2. Hub-Shifts (a,b,T) einsetzen.
-3. Rest-Martingaleblöcke einsetzen.
-4. Alle elf (K^*M_\Omega K)-Wörter nach Cutoff-Wänden zerlegen.
-5. A0 vollständig prüfen, inklusive Schwanz- und Randklassen.
-6. Rohsystem auf dem ersten globalen P12-Stratum aufbauen.
-7. Invertierbare Rohmatrix oder exakten Gegenvektor suchen.
-8. Erst danach über Promotion oder No-Go entscheiden.
-
-Statusmarker strikt verwenden: `✓[M]`, `✓[K/M]`, `✓[M]_part`,
-`✓[M]_neg`, `×[M]`, `?[O]`. Keine stärkere Aussage buchen als durch
-Beweis/Certificate und exakte Provenienz gedeckt.
+Statusmarker strikt verwenden: ✓[M], ✓[K/M], ✓[M]_part, ✓[M]_neg, ×[M], ?[O].
+FROZEN/AI-GREEN/independent review sind Reviewer-/Governance-Buchungen und erzeugen keine
+automatische ✓[M]-Promotion.
 
 ---
 

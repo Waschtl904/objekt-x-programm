@@ -1,15 +1,20 @@
 # Objekt-X-Programm — Repository-Karte
 
-> **Operativer Hinweis (30. August 2026):** Diese Datei enthält im unteren Teil noch
-> die Repository-/Syntheseorganisation des Stands 8. August 2026. Für die heutige
-> Forschungsfront zuerst [`../CURRENT-FRONT.md`](../CURRENT-FRONT.md),
-> [`ACTIVE_THEOREM_REGISTRY.md`](ACTIVE_THEOREM_REGISTRY.md),
-> [`AKTUELLER_STAND.md`](AKTUELLER_STAND.md) und
-> [`FORSCHUNGS_ROADMAP_2026-08-26.md`](FORSCHUNGS_ROADMAP_2026-08-26.md) lesen.
-> Aktiver mathematischer Kern: finite-level Cross-Gram-Nichtentartung
-> \(\ker\Gamma_I=\{0\}\ ?[O]\).
-**Stand:** 2026-08-08  
-**Architektur:** Zwei-Ebenen (Forschungsknoten + Synthese-Manuskripte)
+> **Operativer Hinweis (3. September 2026):** Für den heutigen Forschungsstand zuerst
+> [CURRENT-FRONT](../CURRENT-FRONT.md),
+> [ACTIVE_THEOREM_REGISTRY](ACTIVE_THEOREM_REGISTRY.md),
+> [AKTUELLER_STAND](AKTUELLER_STAND.md),
+> [DAG](DAG.md) und die
+> [Forschungsroadmap 2026-09-03](FORSCHUNGS_ROADMAP_2026-09-03.md) lesen.
+>
+> Aktiver mathematischer Kern: **B / Strong Terminal / R43**. R38–R42 sind frozen;
+> §3K liefert aktuell einen noch unabhängig zu prüfenden GC-AC-Kandidaten. Unter diesem
+> Kandidaten bleibt als finaler C6-Rest nur der Normal-Skalar (b_U). A / universelle
+> finite-level SW1-Injektivität ist negativ entschieden; R37/G4c bleibt separat offen.
+>
+> Die darunterstehende Repository-/Syntheseorganisation ist teilweise historisch
+> (Grundstruktur vom 8. August 2026). Historische Navigationsfassungen werden unter
+> [archiv/](archiv/) erhalten.
 
 ---
 

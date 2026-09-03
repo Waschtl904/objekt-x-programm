@@ -6,14 +6,21 @@
 > Aktuell maßgeblich sind [CURRENT-FRONT.md](CURRENT-FRONT.md),
 > [ACTIVE_THEOREM_REGISTRY.md](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md) und
 > [FORSCHUNGS_ROADMAP_2026-08-26.md](00-uebersicht/FORSCHUNGS_ROADMAP_2026-08-26.md).
-> Der aktive Kern ist seit 30. August 2026 Roadmap A:
-> (ker\Gamma_I=\{0\} ?[O]).
+> **Operativer Forschungsstand seit 2. September 2026:** B / Strong Terminal. R38--R42
+> sind frozen als independently verified AI-GREEN; R43 ist der aktive offene Block. Für jedes
+> feste \(0<R<S\) ist C6 auf
+> \(\operatorname{Re}\langle\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R\rangle\to1\ ?\)
+> reduziert. R37/G4c bleibt separat offen.
 
 > Direkt aus dem Repository verifiziert. Stand: 2026-07-28 (Bereinigungsdurchlauf).  
 > Auditstand aktualisiert: 2026-07-29 (NEU-123-Komplex + NEU-124/125/127 + NEU-128A/B/130–145 + NEU-151–155).  
 > Strukturupdate: 2026-08-05 (NEU-245b in 07 eingetragen; 06 vollständig aufgelistet; NEU-250 aus 06 entfernt).  
 > Forschungsupdate: 2026-08-06 (NEU-245c eingetragen; M3-No-Go und M4 notiert; aktiver Pfad gesetzt).  
 > **Forschungsupdate: 2026-08-06 Abend (NEU-245d, NEU-245e/f, NEU-246–NEU-250a eingetragen; aktiver Pfad auf [O-221-1c1a0-C] gesetzt).**
+> **Operatives Forschungsupdate: 2026-09-02:** P11 Strong-Terminal-Auditfolge
+> `audits/P11_REFEREE_E2E_R38_...` bis `R43_...` ergänzt. R38--R42 frozen; R43 offen.
+> Die nachfolgende Verzeichnisauflistung bleibt eine historische Strukturaufnahme und wird
+> nicht als vollständige aktuelle Dateiliste ausgegeben.
 
 ---
 

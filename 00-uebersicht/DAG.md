@@ -1,81 +1,157 @@
 # Abhängigkeitsgraph (DAG)
 
-> **Historischer SYN-DAG, Stand 8. August 2026.** Der untenstehende P01→P04→NEU-260-Pfad
-> ist nicht mehr die operative Forschungspriorität. Aktuelle operative Kette:
->
-> \[
-> \text{P12-RT / SW1-KNF--A10}
-> \to \text{M1-RAW/M1-FULL}
-> \to \text{C1B2A-TRANSFER}
-> \to \boxed{\ker\Gamma_I=\{0\}\ ?[O]}.
-> \]
->
-> Maßgeblich sind [`../CURRENT-FRONT.md`](../CURRENT-FRONT.md) und
-> [`ACTIVE_THEOREM_REGISTRY.md`](ACTIVE_THEOREM_REGISTRY.md). Der historische DAG
-> bleibt für Provenienz der damaligen SYN-Architektur erhalten.
-**Stand:** 2026-08-08 (Audit-Update)
-
-```
-BC/Frobenius/Nakayama
-        |
-        v
-    [P01] BC Prime Power Weights            [Entwurf, P01-Audit ausstehend]
-    Lambda(p^k)/sqrt(p^k) aus lokalem BC
-        |
-        v
-    [P02] Adelic Weil Amplitude Port        [checkmark SYN-Audit 2026-08-08]
-    F in S_adel^amp
-      --(R_PW)--> a in A_PW = Cc^inf(R;C)
-      --((a,b)->g_{a,b})--> G_ev^C
-      --(Weil)--> B_W
-    [Zwei getrennte Stufen; Typfehler Entwurf korrigiert]
-        |
-        v
-    [P03] Haar-L2 Firewall                  [checkmark SYN-Audit 2026-08-08]
-    B_W semibeschraenkt auf Cc^inf rel. L2(du) <=> RH
-    B_W nicht abschliessbar (mu_W not<< du, Kriterium q_mu closable <=> mu<<dx)
-    KLMN x[M]  (= Kato-Lions-Milgram-Nelson)
-    H_W cong ell^2(Gamma, m_gamma) unter RH
-        |
-        v
-    [P04] Finite Weil Geometry              [checkmark SYN-Audit 2026-08-08, in Arbeit]
-    Q_W^a, A_a, H(T_a), D-bar_{a,theta}    [Suzuki 2026, RH-frei]
-    lambda_w(a) = lambda_a - 1             [bequeme Konvention, c=1; checkmark]
-    N_{pm} = span{v_pm}, T_a v_pm = e^{pm x}  [Typfehler Entwurf korrigiert]
-    PA_a = A_aP                             [Suzuki, checkmark]
-    Pv+ = v-                               [checkmark]
-    U(1) --Paritaet--> {+P,-P} = Z2       [HAUPT-RESULTAT checkmark]
-        |
-        v
-    [NEU-260b.1] Z2-Selektion              [?[O] hoechste Prioritaet]
-    epsilon(a) in {+1,-1}: Stetigkeitsarg? BC/KMS-Zeitpfeil? Frobenius?
-        |
-        v
-    [NEU-260c] phi(a,z)                    [?[O]]
-        |
-        v
-    [NEU-260d] J_{a,b}                     [?[O]]
-        |
-        v (Objekt-X-Konjektur, unter RH)
-    K_X = lim-> H(T_a) --> H_W cong ell^2(Gamma, m_gamma)
-```
-
-## SYN-Audit-Status
-
-| Manuskript | Audit |
-|---|---|
-| P01 | Entwurf, ausstehend |
-| P02 | checkmark 2026-08-08 |
-| P03 | checkmark 2026-08-08 |
-| P04 | checkmark 2026-08-08 |
-
-## Veraltete Eintraege (gestrichen)
-
-- ~~"Q_W^a-Spiegelungssymmetrie => theta_can=0" als hoechste Prioritaet~~
-  (ersetzt durch Z2-Selektion)
-- ~~"N_{pm} = span{e^{pm x}}"~~ (Typfehler, korrigiert)
-- ~~"Antiunitaere Abbildung f->bar{f(-x)}"~~ (P linear, nicht antiunitaer)
+> **Stand:** 3. September 2026
+> Dieser DAG zeigt die **operative Abhängigkeits- und Firewall-Struktur**.
+> Der frühere SYN-DAG vom 8. August 2026 ist archiviert unter
+> [archiv/DAG_SYN_2026-08-08.md](archiv/DAG_SYN_2026-08-08.md).
 
 ---
 
-*Zuletzt aktualisiert: 2026-08-08 (SYN-Audit P02-P04)*
+## 1. Operativer Strong-Terminal-Pfad
+
+\[
+\boxed{
+\mathrm{R38}\to\mathrm{R39}\to\mathrm{R40}\to\mathrm{R41}\to\mathrm{R42}\to\mathrm{R43}
+}
+\]
+
+R38–R42 sind frozen als independently verified AI-GREEN.
+
+R42 liefert:
+\[
+W_{R,S}^{[U]}|_{H_R^0}
+\to
+W_{R,S}^{(0)}
+\quad\text{stark}.
+\]
+
+R43 zerlegt den Rest:
+
+    R42 codim-1 reduction
+            |
+            v
+    single normal orbit epsilon_R
+            |
+            +--> intermediate-radius Gamma family
+            |          |
+            |          v
+            |      one-vector Gamma nest
+            |          |
+            |          v
+            |      scalar multiplicity
+            |          |
+            |          v
+            |      GC-AC / higher jets
+            |          |
+            |          v
+            +----> weak clusters in C epsilon_S   [candidate]
+                       |
+                       v
+              b_U = <W_U epsilon_R, epsilon_S>
+                       |
+                       v
+                 Strong Terminal ?
+
+Aktueller unreviewed Kandidat:
+\[
+\mathrm{GC\!-\!AC}
+\]
+über die totale höhere Jet-Rieszfamilie.
+
+Wenn dieser Kandidat hält, ist der letzte Gate nur noch
+\[
+b_U\to b,\qquad |b|=1\ ?.
+\]
+
+---
+
+## 2. Separater R37-Pfad
+
+    R37 finite/algebraic certificate
+            |
+            v
+    G4c: real segment -> holomorphic annulus identity -> Laurent uniqueness
+            |
+            v
+    R37 promotion decision
+
+**Firewall:**
+\[
+\boxed{
+\mathrm{R38\text{--}R43}
+\not\Rightarrow
+\mathrm{R37/G4c}.
+}
+\]
+
+---
+
+## 3. Finite-level SW1-Pfad
+
+    P12-RT / SW1-KNF / A10
+            |
+            v
+    M1-RAW / M1-FULL / C1B2A
+            |
+            v
+    universal Cross-Gram injectivity
+            |
+            X  explicit small-R countervector
+
+Die universelle positive Route ist negativ geschlossen.
+
+PR #49:
+\[
+\text{geparkter, unpromotierter Blind-Wedge-Kandidat}.
+\]
+
+Dieser Pfad beweist weder Strong Terminal noch dessen Negation.
+
+---
+
+## 4. Objekt-X-Hauptarchitektur
+
+Die heutigen Forschungsfronten liefern nur Kandidatenbausteine:
+
+    finite-level geometry (A, negative information)
+                         \
+                          \
+    Strong Terminal (B) ---> candidate ingredients ----+
+                                                         |
+    R37 analytic/modulus information -------------------+
+                                                         |
+                                                         v
+                                          first genuine X candidate (C)
+                                                         |
+                                                         v
+                                          exact Weil-Gram identity (D)
+                                                         |
+                                                         v
+                                          Weil criterion / RH scope (E)
+
+Keine linke Front impliziert automatisch C, D oder E.
+
+---
+
+## 5. Publikations-/Konsolidierungsspur
+
+    R38--R43 audit chain
+            |
+            v
+    post-freeze Strong-Terminal consolidation
+            |
+            +--> P11 bleibt frozen
+            |
+            +--> P12 bleibt separater Hub-Strang
+            |
+            v
+    eigenständiger konsolidierter Abschnitt / Paper
+
+---
+
+## Kanonische Einstiegspunkte
+
+- [CURRENT-FRONT](../CURRENT-FRONT.md)
+- [ACTIVE_THEOREM_REGISTRY](ACTIVE_THEOREM_REGISTRY.md)
+- [FORSCHUNGS_ROADMAP_2026-09-03](FORSCHUNGS_ROADMAP_2026-09-03.md)
+- [OBJEKT_X_AKTUELLE_ARBEITSDEFINITION](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)

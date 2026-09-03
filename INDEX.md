@@ -1,8 +1,23 @@
 # Gesamtindex
 
-Vollstaendiges Register aller **332** Forschungsdokumente des Objekt-X-Programms, geordnet nach thematischen Straengen. Innerhalb eines Strangs ist nach Journalnummer sortiert.
+Historisches Grundregister der **332** bis zum damaligen Journalstand indexierten Forschungsdokumente des Objekt-X-Programms, geordnet nach thematischen Straengen. Neuere P11-Auditblöcke werden im aktuellen Addendum unten separat geführt; die Zahl 332 ist daher **keine aktuelle Gesamtdateizahl des Repositorys**.
 
 Zurueck zum [Repository-Start](README.md).
+
+## Aktuelles P11-Auditaddendum — Strong Terminal (2. September 2026)
+
+| Block | Status | Dokument |
+|---|---|---|
+| R38 | FROZEN — independently verified AI-GREEN | [Modulus weak-cluster geometry](audits/P11_REFEREE_E2E_R38_MODULUS_WEAK_CLUSTER_GEOMETRY_2026-09-01.md) |
+| R39 | FROZEN — independently verified AI-GREEN | [Strong-terminal baseline firewall](audits/P11_REFEREE_E2E_R39_STRONG_TERMINAL_BASELINE_FIREWALL_2026-09-01.md) |
+| R40 | FROZEN — independently verified AI-GREEN | [Dual-normal next-order scale](audits/P11_REFEREE_E2E_R40_DUAL_NORMAL_NEXT_ORDER_SCALE_2026-09-01.md) |
+| R41 | FROZEN — independently verified AI-GREEN | [Second-order hard-constraint Gamma layer](audits/P11_REFEREE_E2E_R41_SECOND_ORDER_HARD_CONSTRAINT_GAMMA_LAYER_2026-09-01.md) |
+| R42 | FROZEN — independently verified AI-GREEN | [Dual-normal direction and eta-blindness](audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md) |
+| R43 | AI-GREEN internal exploratory candidate | [Single-normal C6 gate](audits/P11_REFEREE_E2E_R43_SINGLE_NORMAL_C6_GATE_2026-09-02.md) |
+
+Operative Front: [CURRENT-FRONT.md](CURRENT-FRONT.md). Governance-/Abhängigkeitsstand: [ACTIVE_THEOREM_REGISTRY.md](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md).
+
+**Firewall:** R38--R42 sind keine kanonischen \(\checkmark[M]\)-Promotionen; R43 ist offen. R37/G4c und Strong Terminal/C6 bleiben separat offen.
 
 ## Straenge
 
