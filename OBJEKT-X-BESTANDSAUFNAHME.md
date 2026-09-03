@@ -1,5 +1,12 @@
 # Objekt X — Bestandsaufnahme und Steckbrief
 
+> **HISTORISCHER BESTANDSAUFNAHME-SNAPSHOT — Stand 5. August 2026.**
+> Dieses Dokument bleibt als damalige Inventur erhalten und wird nicht fortlaufend
+> nachgeführt. Für die heutige Definition und Forschungsfront gelten
+> [00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md),
+> [CURRENT-FRONT.md](CURRENT-FRONT.md) und
+> [00-uebersicht/FORSCHUNGS_ROADMAP_2026-09-03.md](00-uebersicht/FORSCHUNGS_ROADMAP_2026-09-03.md).
+>
 **Stand: 5. August 2026 (nach NEU-219-Finalaudit, NEU-220c und Abgleich mit NEU-223/225/227)**
 
 Eine Inventur nach 324+ Dokumenten: Was wissen wir über Objekt X, was ist ausgeschlossen,
