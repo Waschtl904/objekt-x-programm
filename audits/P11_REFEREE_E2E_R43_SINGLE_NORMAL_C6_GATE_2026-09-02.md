@@ -1772,136 +1772,150 @@ No R37/G4c statement is used or changed.
 
 ---
 
-## 3J. Source-checked correction: scalar multiplicity is not yet Lebesgue absolute continuity
+## 3J. Source-checked scalar multiplicity and the GC-AC split
 
-The literature source check validates the two imported statements used in Section 3G, but it
-also exposes an overreach in the first GC-M1 candidate.
+The literature source check validates the inverse exponential-type and even-measure
+diagonalization interfaces used in Section 3G, while also fixing exactly what they do and do
+not imply.
 
-### 3J.1 What the checked literature really gives
+### 3J.1 What the checked literature gives
 
-Bessonov--Denisov Theorem 2.4 identifies the smooth support-\(Q\) completion in
-\(L^2(\mu_\Gamma)\) with the de Branges truncation
+Bessonov--Denisov Theorem 2.4 identifies the intrinsic smooth support-\(Q\) completion in
+\(L^2(\mu_\Gamma)\) with a de Branges truncation.  For the **chosen** diagonal realization
+\(H_\Gamma^{\mathrm{diag}}\) from Section 3G,
 \[
 B_{L_Q},
 \qquad
 T(L_Q)=Q,
 \qquad
-T(r)=\int_0^r\sqrt{\det H_\Gamma(t)}\,dt.
+T(r)=\int_0^r\sqrt{\det H_\Gamma^{\mathrm{diag}}(t)}\,dt.
 \tag{R43.10bx}
 \]
-Zhang Theorem 2.6 (equivalently Makarov--Poltoratski Theorem 3.5) gives a **diagonal**
-canonical realization of every even positive Poisson-finite measure, hence of
-\(\mu_\Gamma\).
+Zhang Theorem 2.6, equivalently Makarov--Poltoratski Theorem 3.5, gives existence of
+**a diagonal canonical realization** of every even positive Poisson-finite measure, hence
+of \(\mu_\Gamma\).  No uniqueness of that realization is asserted.
 
-For a diagonal Hamiltonian
+For the chosen diagonal Hamiltonian
 \[
-H_\Gamma(t)
+H_\Gamma^{\mathrm{diag}}(t)
 =
 \begin{pmatrix}
 h_1(t)&0\\
 0&h_2(t)
 \end{pmatrix},
 \]
-the canonical parity identities imply that the odd spectral subspace is the image of the
-second coordinate only.  Therefore the **full odd canonical chain is scalar**: before the
-\(\beta^{(0)}\)-constraint it is a multiplicity-one scalar support nest.
+the parity identities R43.10ba imply that the odd spectral subspace is the image of the
+second coordinate only.  Therefore the **full odd canonical chain is scalar** before the
+\(\beta^{(0)}\)-constraint.
 
-This conclusion does **not** require
+The source-checked Szegő input also gives
 \[
-\det H_\Gamma>0\quad\text{a.e.}
+T(r)\to\infty,
 \]
-and survives possible zero-determinant pieces.
-
-### 3J.2 The missing point in the earlier determinant-normalized argument
-
-The checked sources do **not** assert that the diagonal Hamiltonian furnished for an
-arbitrary positive Poisson-finite measure satisfies
+hence every finite support radius \(Q\) is reached:
 \[
-\det H_\Gamma>0
+L_Q<\infty.
+\]
+
+### 3J.2 What the checked literature does not give
+
+The general even-measure diagonalization theorem does **not** assert
+\[
+\det H_\Gamma^{\mathrm{diag}}>0
 \quad\text{a.e.}
 \]
-The general inverse theory explicitly allows Hamiltonians with rank-one / zero-determinant
-parts.
+Rank-one / zero-determinant pieces are allowed.
 
-Consequently the type map
+The stronger Makarov--Poltoratski correspondence with diagonal determinant-normalized
+Hamiltonians is tied to the PW-sampling class.  Our concrete Gamma measure fails that
+hypothesis by R43.10ay2:
 \[
-Q=T(r)
+\sup_x\mu_\Gamma((x,x+1))=\infty.
 \]
-can push the scalar odd state measure to a measure in the natural radius variable \(Q\) with
-a singular component.  Open rank-one intervals would create atoms; more diffuse
-zero-determinant sets can in principle create a singular-continuous component.
+Therefore that theorem is not available to upgrade the natural radius model to Lebesgue
+measure.
 
-Thus the earlier statement
-\[
-H_\Gamma(Q)
-=
-\operatorname{diag}(a(Q),a(Q)^{-1})
-\quad\text{a.e. in the natural }Q\text{-coordinate}
-\]
-is **not justified solely by the two checked literature theorems**.
+This is a literature-interface limitation, not a universal impossibility theorem for all
+future methods.
 
-The determinant-normalized model R43.10az--R43.10bc must therefore be read as a
-**sufficient regular case**, not as an already established consequence of
-Bessonov--Denisov + Zhang.
+### 3J.3 Atomlessness of the intrinsic P11 radius chain
 
-### 3J.3 Atomlessness of the concrete P11 radius chain
-
-The concrete P11 Gamma support spaces are nevertheless continuous in the radius parameter.
-
-The fixed-radius core argument R43.10ax0--R43.10ax2 gives
+The concrete P11 Gamma support spaces are continuous in the radius parameter.  The
+fixed-radius core argument gives
 \[
 \overline{\bigcup_{q<Q}\mathcal V_q^\Gamma}^{\ \|\cdot\|_\Gamma}
 =
-\mathcal V_Q^\Gamma.
+\mathcal V_Q^\Gamma,
 \tag{R43.10by}
 \]
-Support closedness gives
+and support closedness gives
 \[
 \bigcap_{q>Q}\mathcal V_q^\Gamma
 =
 \mathcal V_Q^\Gamma.
 \tag{R43.10bz}
 \]
-Hence the orthogonal projection nest is strongly continuous from both sides.  Therefore the
-scalar measure of the odd radius nest has **no atoms**.
+Hence the orthogonal projection nest is strongly continuous from both sides.  Its scalar
+representing measure therefore has **no atoms**.
 
-So the only possible hidden scalar channel is singular-continuous with respect to Lebesgue
-measure in the natural radius variable \(Q\).
+Thus, after scalar multiplicity one is known, the only possible hidden radius channel is
+singular-continuous with respect to Lebesgue measure in the natural \(Q\)-coordinate.
 
-### 3J.4 The codimension-one constraint still preserves scalar multiplicity
+### 3J.4 Why scalar multiplicity is realization-independent
 
-Lemma R43-GC1 is not tied to Lebesgue measure.  An atomless scalar support nest can first be
-put into a standard scalar \(L^2\)-model by its cumulative measure coordinate; the same
-Hardy/Volterra construction then shows that the compatible hyperplane
-\[
-\beta^{(0)}=0
-\]
-preserves multiplicity one.
-
-Thus the checked diagonal canonical-system input plus Lemma R43-GC1 establish at candidate
-level:
+The P11 projection nest
 \[
 \boxed{
-\text{the constrained Gamma radius nest is scalar multiplicity one.}
+\{P_Q^\Gamma:0<Q<S\}
+}
+\]
+is defined intrinsically from the Gamma form and the support-constrained spaces \(H_Q^0\).
+It exists before any canonical-system realization is selected.
+
+On the Fourier side, the corresponding unconstrained support spaces are the intrinsic
+closures
+\[
+\overline{\mathcal E_Q}^{\,L^2(\mu_\Gamma)}.
+\]
+A canonical system provides a **unitary model** of this already defined nested family; it
+does not define the family itself.
+
+Nest multiplicity is invariant under unitary equivalence.  Therefore the existence of
+**one** diagonal realization exhibiting one odd coordinate is sufficient to prove scalar
+multiplicity of the intrinsic odd Gamma nest.  No uniqueness of
+\(H_\Gamma^{\mathrm{diag}}\) is required.
+
+Lemma R43-GC1 is likewise not tied to Lebesgue measure in the original radius coordinate:
+an atomless scalar support nest can first be placed in a standard scalar \(L^2\)-model by
+its cumulative measure coordinate, and the same Hardy/Volterra construction applies to the
+compatible hyperplane
+\[
+\beta^{(0)}=0.
+\]
+
+Hence, at candidate level,
+\[
+\boxed{
+\text{the constrained intrinsic Gamma radius nest has scalar multiplicity one.}
 }
 \tag{R43.10ca}
 \]
 
-This is weaker than the previous "Lebesgue model in natural \(Q\)" assertion but is the
-correct source-checked conclusion.
+This is exactly
+\[
+\boxed{
+\mathrm{GC\!-\!M1}_{\rm scalar}.
+}
+\]
 
-### 3J.5 Exact remaining cyclicity obstruction
+### 3J.5 Exact remaining cyclicity obstruction before Section 3K
 
 Let
 \[
 \nu_{R,S}
 \]
-be a scalar measure representing the constrained multiplicity-one nest in the natural radius
-parameter \(Q\in(R,S)\), and let
-\[
-G_{R,S}(Q)
-\]
-be the scalar representative of the vector
+be a scalar measure representing this constrained multiplicity-one nest in the natural
+radius variable \(Q\in(R,S)\), and let \(G_{R,S}(Q)\) be the scalar representative of
 \[
 (I-P_R^\Gamma)g_S.
 \]
@@ -1923,16 +1937,14 @@ d\gamma_Q
 \tag{R43.10cc}
 \]
 
-Decompose
+By atomlessness,
 \[
 d\nu_{R,S}
 =
-w(Q)\,dQ+d\nu_{R,S}^{\mathrm{sc}},
+w(Q)\,dQ+d\nu_{R,S}^{\mathrm{sc}}.
 \tag{R43.10cd}
 \]
-where atomlessness has already removed a pure-point part.
-
-Equation (R43.10cb) together with (R43.10cc) implies:
+Equating the Lebesgue and singular parts in R43.10cb--R43.10cc gives:
 
 1. \(w(Q)>0\) for Lebesgue-a.e. \(Q\);
 2. \(G_{R,S}(Q)\ne0\) for \(w(Q)dQ\)-a.e. \(Q\);
@@ -1949,58 +1961,32 @@ Therefore
 \tag{R43.10ce}
 \]
 
-So the previous GC-M1 gate splits into two logically distinct statements:
-
+This isolates
 \[
 \boxed{
-\textbf{GC-M1}_{\rm scalar}:
-\text{ scalar multiplicity one}
-}
-\]
-and
-\[
-\boxed{
-\textbf{GC-AC}:
-\nu_{R,S}\ll dQ
-\text{ in the natural radius variable.}
+\textbf{GC-AC: }
+\nu_{R,S}\ll dQ.
 }
 \tag{R43.10cf}
 \]
 
-The source-checked diagonal canonical-system argument plus R43-GC1 address
-\(\textbf{GC-M1}_{\rm scalar}\).  The **only remaining terminal-free density obstruction is
-GC-AC**, i.e. exclusion of a singular-continuous zero-type channel.
+### 3J.6 Booking before the higher-jet argument
 
-### 3J.6 Consequence for the previous GC-M1 candidate booking
-
-The earlier candidate statement
-\[
-\textbf{GC-M1 holds}
-\]
-in R43.10br was too strong if interpreted as the natural-radius Lebesgue model used in
-R43.10ah.
-
-The corrected booking at the end of Section 3J is:
+At the end of Section 3J alone the correct booking is
 \[
 \boxed{
-\textbf{GC-M1}_{\rm scalar}
+\mathrm{GC\!-\!M1}_{\rm scalar}
 \text{ candidate-GREEN;}
 \qquad
-\textbf{GC-AC}
-\text{ was OPEN at this stage.}
+\mathrm{GC\!-\!AC}
+\text{ still requires an additional argument.}
 }
 \tag{R43.10cg}
 \]
 
-Section 3K, added subsequently, gives a new candidate proof of GC-AC using the **total
-higher-jet Riesz family**.  Thus R43.10bs--R43.10bu are no longer merely conditional in
-the current candidate chain, but they remain unpromoted pending independent review of 3K
-and the scalar multiplicity-one input.
+Section 3K supplies that additional candidate argument using the total higher-jet Riesz
+family.  No R37/G4c conclusion is used, and no Strong-Terminal promotion is booked here.
 
-This correction uses no R37/G4c input.
-
-
----
 
 ## 3K. All constrained jet-Riesz vectors eliminate the singular-continuous radius channel
 
