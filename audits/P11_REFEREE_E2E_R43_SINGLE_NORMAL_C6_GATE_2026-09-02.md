@@ -4504,13 +4504,13 @@ Subsequent hardening on branch \(\texttt{research/r43-gcac-hardening}\) added:
 The current mathematical-content head for those statements is
 \[
 \boxed{
-\texttt{366c5e3dcdd2b2f16bf8b2663c0284a4db9538f5}
+\texttt{186526cf75417b520566406ad7aead9cf3ede42d}
 }
 \]
 with mathematical-content R43 blob
 \[
 \boxed{
-\texttt{c843336d43dd13ca31e63f81550d545033a89d7d}.
+\texttt{8255d84cbbdb44944ad8505a9139c8b1c791b86c}.
 }
 \]
 Relative to the earlier \(\texttt{ade2cd34...}\) hardening, this mathematical layer also:
@@ -4534,6 +4534,14 @@ Relative to the earlier \(\texttt{ade2cd34...}\) hardening, this mathematical la
 - adds the exact flag-energy identities R43.59e0--R43.59e2, identifying the preferred
   \(N_S\)-energy directly with the summed squared projections onto the canonical nested
   jet kernels \(\mathcal H_S^{[m]}\).
+- restores exact B-FLAGTIGHT R43.57a--R43.57b as the primary gate and records by
+  R43.59e3--R43.59e6 that the uniform \(N_S\)-energy bound is strictly stronger;
+- constructs the exact terminal-horizon partial-isometry cocycle
+  \(\mathcal T_{U\to V}=W_VW_U^*\) and the derivative-free flag-leakage recursion
+  R43.59l--R43.59t;
+- sharpens the post-B-TIGHT correlation criterion to the optimal antipodal threshold
+  \(\liminf L^{T,U}>-1\) and records that the current terminal domain is the full real
+  tail, hence automatically \(\Delta\)-chain-connected.
 
 Later commits which only add reproducibility scripts, review provenance, ledger reconciliation,
 or navigation do not enlarge that mathematical proof scope.
@@ -4585,16 +4593,23 @@ Aleksandrov--Clark or canonical-system boundary parameter is currently booked.
 
 \[
 \boxed{
-\text{B-TIGHT remains the primary OPEN gate;}
+\text{B-FLAGTIGHT is the primary OPEN gate and is exactly equivalent to B-TIGHT;}
 \quad
-\text{direct compact-resolvent orbit energy is the preferred subroute;}
+\text{B-FLAGLEAK is the preferred derivative-free dynamic subroute.}
 }
 \]
 \[
 \boxed{
-\text{global higher-jet Riesz conditioning is numerically contraindicated, not theorem-level ruled out;}
+\text{compact-resolvent orbit energy is sufficient but strictly stronger;}
 \quad
-\text{B-SIGN/B-ORIENT remains secondary OPEN.}
+\text{global higher-jet Riesz conditioning remains numerically contraindicated.}
+}
+\]
+\[
+\boxed{
+\text{B-SIGN/B-ORIENT remains secondary OPEN;}
+\quad
+\text{under B-TIGHT, Strong Terminal}\iff\liminf L^{T,U}>-1.
 }
 \]
 
