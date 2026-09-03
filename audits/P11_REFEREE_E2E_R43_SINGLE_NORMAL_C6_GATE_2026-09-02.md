@@ -2335,6 +2335,76 @@ C_{m,k,Q_0}.
 }
 \tag{R43.10cq1}
 \]
+
+The dependence on the jet order can be made explicit locally.  Keep the smaller disk
+\(|Q-Q_0|\le\rho\) and use the larger disk \(|Q-Q_0|\le2\rho\) from Section 3F.
+Put
+\[
+M_{Q_0,\rho}:=Q_0+2\rho.
+\]
+For every complex \(z\),
+\[
+I_m(z)
+=
+z^{m+1}
+\int_0^1
+t^m e^{-tz/2}\,dt,
+\]
+hence on the larger disk and \(|y|\le1\),
+\[
+|I_m(Q|y|)|
+\le
+\frac{
+M_{Q_0,\rho}^{m+1}e^{M_{Q_0,\rho}/2}
+}{m+1}.
+\tag{R43.10cq1a}
+\]
+The chosen square-root branch is uniformly bounded there.  Cauchy's derivative estimate
+from the larger disk to the smaller one therefore gives, for every fixed \(k\ge0\),
+\[
+\boxed{
+\sup_{|Q-Q_0|\le\rho}
+\|\partial_Q^k b_{m,Q}\|_{\mathscr V_{Q_0}^*}
+\le
+C_{k,Q_0,\rho}
+\frac{M_{Q_0,\rho}^{m+1}}{m+1},
+}
+\tag{R43.10cq1b}
+\]
+where the constant is independent of \(m\).  Thus the currently available local
+higher-jet holomorphy constants can be chosen with at most exponential growth in the jet
+order.
+
+Since \(A(Q)^{-1}\), the zeroth-jet correction, and \(d_Q^{-1}\) are uniformly bounded
+on a still smaller closed disk, the same argument yields the crude local bound
+\[
+\boxed{
+\sup_{|Q-Q_0|\le\rho'}
+\|\widetilde g_{m,Q}\|_{\mathscr V_{Q_0}}
+\le
+C'_{Q_0,\rho'}
+\frac{M_{Q_0,\rho}^{m+1}}{m+1}.
+}
+\tag{R43.10cq1c}
+\]
+
+This is useful quantitative information, but it is **not** a B-JMOM estimate.  The bound
+concerns the Section-3K higher-jet Riesz family.  Turning it into a weighted estimate for
+the canonical C6a ONB coefficients would require quantitative control of the
+orthogonalization/change-of-basis constants (equivalently suitable lower bounds for the
+relevant finite jet Gram determinants).  No such uniform-in-\(m\) conditioning theorem is
+currently booked.
+
+Thus
+\[
+\boxed{
+\text{explicit }C_{m,k,Q_0}\text{ growth}
+\not\Rightarrow
+\text{B-JMOM without a jet-basis conditioning theorem.}
+}
+\tag{R43.10cq1d}
+\]
+
 Thus
 \[
 \boxed{
