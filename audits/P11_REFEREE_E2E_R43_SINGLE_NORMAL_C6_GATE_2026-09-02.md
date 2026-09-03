@@ -2336,9 +2336,10 @@ A second independent destructive review of that exact mathematical head reported
   summable common majorant for the complete R33 series / local \(Q\)-derivatives.
 - **R43.10ag--R43.10aj:** the conditional Hilbert-space implication
   `multiplicity-one Lebesgue model => cyclicity` is GREEN.
-  **GC-M1 itself remains open.**
+  **GC-M1 itself was still open on that reviewed head.**
 
-Accordingly:
+Accordingly, for the exact reviewed head
+`92acea23ecea203a823b3df22744dd086276ff59`:
 \[
 \boxed{
 \text{R43.10n--v: independently reviewed GREEN;}
@@ -2347,14 +2348,47 @@ Accordingly:
 \[
 \boxed{
 \text{R43.10w--af: analytic candidate only;}\qquad
-\text{GC-M1: open structural gate.}
+\text{GC-M1: open on the reviewed head.}
 }
 \]
 
-No claim that GC-M1 is true is booked at this head.
+### Post-review GC-M1 candidate proof
+
+After that review, the following mathematical commits were added:
+
+- `6b030843d724defafad8110ae14e06f40b642fb3`: construct explicit
+  R43.10z repair, canonical-system scalarization, Lemma R43-GC1, and candidate GC-M1 closure;
+- `306094a8d92d9fd88d9c42c24709ff4110060033`: harden operator holomorphy,
+  fixed-radius Gamma core and Hardy/Volterra details;
+- `8880c0e9fe101802cdf86c1702ab1aab09addd3e`: repair the fixed-radius
+  dilation-density argument using uniform dilation bounds plus Schwartz density;
+- `bf22a185856e77279f8126211c3b760d8cbebc12`: harden the canonical
+  type/determinant parametrization and exclude hidden jump channels.
+
+Thus GC-M1 is no longer merely an unformulated open gate: there is now an explicit
+**AI-GREEN candidate proof** in Sections 3F--3I.  None of those post-review statements is
+covered by the external GREEN verdict above.
+
+Current candidate booking:
+\[
+\boxed{
+\text{GC-M1: candidate-closed, independently unreviewed;}
+}
+\]
+\[
+\boxed{
+\text{R43.10bs--bu: Gamma cyclicity / one-line weak-cluster confinement candidate only.}
+}
+\]
 
 Current booking:
 \[
 \boxed{
-\text{R43 Phase I: mixed reviewed/candidate status; overall still OPEN.}
+\text{R43 overall OPEN — reviewed lower layers + unreviewed GC-M1 candidate proof.}
+}
+\]
+\[
+\boxed{
+\text{Strong Terminal / C6 remains }?[O];
+\text{ the candidate reduction leaves the scalar }b_U\text{ gate.}
 \]
