@@ -1285,9 +1285,40 @@ B_{r(Q)},
 r(Q)=L_{H_\Gamma}(Q).
 \tag{R43.10ay}
 \]
-The maximal exponential type is \(Q\).  After collapsing zero-type indivisible intervals
-and using type \(Q\) itself as the canonical coordinate, the diagonal Hamiltonian can be
-written in determinant-one form
+
+The inverse exponential-type theorem uses the type clock
+\[
+T_{H_\Gamma}(r)
+=
+\int_0^r\sqrt{\det H_\Gamma(t)}\,dt.
+\]
+Since \(r(Q)=L_{H_\Gamma}(Q)<\infty\) for every finite \(Q\), continuity of this clock gives
+\[
+T_{H_\Gamma}(r(Q))=Q.
+\tag{R43.10ay1}
+\]
+Thus the natural P11 support radius \(Q\) is exactly the canonical exponential-type
+coordinate.
+
+There is no hidden jump channel in this coordinate.  Indeed, (R43.10ax0)--(R43.10ax2)
+show that
+\[
+\overline{\bigcup_{q<Q}\mathcal B_q^\Gamma}
+=
+\mathcal B_Q^\Gamma,
+\]
+while support closedness gives
+\[
+\bigcap_{q>Q}\mathcal B_q^\Gamma
+=
+\mathcal B_Q^\Gamma.
+\]
+Hence the radius chain is continuous.  Any zero-type indivisible interval in a canonical
+representative is therefore collapsed by the type coordinate and contributes no separate
+nest fiber.
+
+After this standard type reparameterization, the active diagonal Hamiltonian is
+determinant-normalized and can be written
 \[
 \boxed{
 H_\Gamma(Q)
@@ -1297,11 +1328,12 @@ a(Q)&0\\
 0&a(Q)^{-1}
 \end{pmatrix},
 \qquad
-a(Q)>0
-\quad\text{a.e.}
+0<a(Q)<\infty
+\quad\text{for a.e. }Q.
 }
 \tag{R43.10az}
 \]
+
 
 ### Odd parity selects one scalar canonical coordinate
 
