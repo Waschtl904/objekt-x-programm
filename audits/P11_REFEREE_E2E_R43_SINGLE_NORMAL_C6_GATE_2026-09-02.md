@@ -3576,6 +3576,48 @@ c_{n,U}\to0
 but Strong Terminal still requires permission to pass that fixed-coordinate limit through
 the infinite Parseval sum.
 
+Let
+\[
+P_S^{[m]}
+:
+H_S^0\to\mathcal H_S^{[m]}
+=
+\overline{\operatorname{span}}\{e_{S,n}:n\ge m\}
+\]
+be the canonical deep-flag projection.  Then
+\[
+\|P_S^{[m]}h_U\|^2
+=
+\sum_{n\ge m}|c_{n,U}|^2.
+\]
+Hence R43.57 is equivalently the **exact primary flag-tightness gate**
+\[
+\boxed{
+\textbf{B-FLAGTIGHT:}\qquad
+\lim_{m\to\infty}
+\limsup_{U\to\infty}
+\|P_S^{[m]}h_U\|
+=
+0.
+}
+\tag{R43.57a}
+\]
+Equivalently, for every \(\varepsilon>0\) there exist a flag depth \(m\) and a terminal
+threshold \(U_0\) such that
+\[
+\boxed{
+\|P_S^{[m]}h_U\|<\varepsilon
+\qquad
+\forall U\ge U_0.
+}
+\tag{R43.57b}
+\]
+The depth \(m\) and threshold \(U_0\) are chosen jointly.  No stronger uniformity on a
+fixed bounded terminal interval is being asserted.
+
+Thus **B-FLAGTIGHT is equivalent to B-TIGHT**.  Weighted jet moments and orbit energies
+below are only sufficient tools for proving this exact gate.
+
 A concrete sufficient target is now immediate.  Let \(\omega_n\uparrow\infty\).  If one
 can prove
 \[
@@ -3735,6 +3777,57 @@ Therefore the preferred orbit-energy problem can be stated intrinsically as
 This formulation uses only the canonical nested jet kernels from C6a and the actual normal
 orbit.  It involves no quantitative conditioning of the Section-3K higher-jet Riesz family.
 
+The energy condition is **strictly stronger** than B-FLAGTIGHT and must not replace it as
+the primary gate.  For example, let
+\[
+N(U):=\left\lceil(\log U)^2\right\rceil,
+\qquad
+h_U:=\frac{1}{\sqrt{\log U}}\,e_{S,N(U)}
+\qquad(U>e).
+\tag{R43.59e3}
+\]
+Then
+\[
+\|h_U\|^2=\frac1{\log U}\to0,
+\]
+so B-TIGHT/B-FLAGTIGHT holds, while
+\[
+\langle N_Sh_U,h_U\rangle
+=
+\frac{N(U)}{\log U}
+\sim
+\log U
+\to\infty.
+\tag{R43.59e4}
+\]
+Therefore failure of a uniform \(N_S\)-energy bound would **not** imply failure of
+B-TIGHT.
+
+What is genuinely needed is any uniform tail profile
+\[
+\|P_S^{[m]}h_U\|
+\le
+\varphi(m)
+\qquad(U\ge U_0),
+\qquad
+\varphi(m)\to0,
+\tag{R43.59e5}
+\]
+with no summability requirement.  The energy bound is one convenient way to produce such a
+profile, since monotonicity of
+\[
+q_m(U):=\|P_S^{[m]}h_U\|^2
+\]
+gives
+\[
+m\,q_m(U)
+\le
+\sum_{j=1}^{m}q_j(U)
+\le
+\langle N_Sh_U,h_U\rangle.
+\tag{R43.59e6}
+\]
+
 #### 7A.4b Higher-jet holomorphy does not by itself give B-JMOM
 
 Section 3K proves local holomorphy for each fixed higher-jet Riesz datum and estimates of the
@@ -3891,6 +3984,138 @@ Thus a commutator/Gronwall route first needs one of:
 
 No \(U^{-1}\Rightarrow U^{-1-\delta}\) derivative gain may be inferred from R40/R41 alone.
 
+#### 7A.4e Exact terminal-horizon partial-isometry cocycle and flag leakage
+
+Although no differentiable terminal generator is booked, the family of finite-terminal
+isometries has an exact **horizon partial-isometry cocycle**.  For \(U,V>S\), define
+\[
+\boxed{
+\mathcal T_{U\to V}
+:=
+W_VW_U^*
+\in\mathcal B(H_S).
+}
+\tag{R43.59l}
+\]
+Since \(W_U^*W_U=I_{H_R}\),
+\[
+\mathcal T_{U\to V}^*\mathcal T_{U\to V}
+=
+W_UW_U^*
+=
+P_{\operatorname{Ran}W_U},
+\]
+and
+\[
+\mathcal T_{U\to V}\mathcal T_{U\to V}^*
+=
+P_{\operatorname{Ran}W_V}.
+\tag{R43.59m}
+\]
+Thus \(\mathcal T_{U\to V}\) is the canonical partial isometry from
+\(\operatorname{Ran}W_U\) onto \(\operatorname{Ran}W_V\).  Moreover,
+\[
+\boxed{
+\mathcal T_{V\to Z}\mathcal T_{U\to V}
+=
+\mathcal T_{U\to Z}
+}
+\tag{R43.59n}
+\]
+for all \(U,V,Z>S\), because \(W_V^*W_V=I\), and
+\[
+\boxed{
+\mathcal T_{U\to V}w_U=w_V.
+}
+\tag{R43.59o}
+\]
+
+This is an exact algebraic cocycle, but it is **not** an independent regularity theorem:
+it is built from the unknown future transports themselves.  R14's polar-gauge countermodel
+shows that the finite-terminal pullback/modulus algebra alone does not control its
+asymptotics.
+
+Nevertheless it gives the correct derivative-free quantity to estimate.  Put
+\[
+P_m:=P_S^{[m]}
+\]
+and define the one-step shallow-to-deep flag leakage
+\[
+\boxed{
+\delta_{U,V}(m)
+:=
+\left\|
+P_m\mathcal T_{U\to V}(I-P_m)
+\right\|.
+}
+\tag{R43.59p}
+\]
+Because \(P_m\varepsilon_S=0\) for \(m\ge1\),
+\[
+P_mw_U=P_mh_U.
+\]
+Using \(\|\mathcal T_{U\to V}\|\le1\), one obtains the exact one-step inequality
+\[
+\begin{aligned}
+\|P_mh_V\|
+&=
+\|P_m\mathcal T_{U\to V}w_U\|\\
+&\le
+\|P_m\mathcal T_{U\to V}P_mw_U\|
++
+\|P_m\mathcal T_{U\to V}(I-P_m)w_U\|\\
+&\le
+\|P_mh_U\|
++
+\delta_{U,V}(m).
+\end{aligned}
+\tag{R43.59q}
+\]
+Hence along any finite terminal chain
+\[
+U_0<U_1<\cdots<U_K
+\]
+the cocycle gives the telescoping bound
+\[
+\boxed{
+\|P_mh_{U_K}\|
+\le
+\|P_mh_{U_0}\|
++
+\sum_{j=0}^{K-1}
+\delta_{U_j,U_{j+1}}(m).
+}
+\tag{R43.59r}
+\]
+
+Therefore a sufficient derivative-free route to B-FLAGTIGHT is to construct terminal
+chains reaching every sufficiently large endpoint for which
+\[
+\boxed{
+\lim_{m\to\infty}
+\sup_{\text{admissible chains}}
+\sum_j\delta_{U_j,U_{j+1}}(m)
+=
+0.
+}
+\tag{R43.59s}
+\]
+The fixed initial term tends to zero as \(m\to\infty\) because the C6a flag is complete.
+
+R40/R41 may become relevant only if their \(U^{-1}\)-scale can be upgraded to an actual
+bound on the leakage \(\delta_{U,V}(m)\).  No such implication is presently proved.
+In particular a merely harmonic \(U^{-1}\) step bound is not summable along a linearly
+spaced cofinal chain.
+
+This isolates the new quantitative-dynamic subproblem:
+\[
+\boxed{
+\textbf{B-FLAGLEAK: control shallow-to-deep leakage of }\mathcal T_{U\to V}
+\textbf{ uniformly in the terminal horizon.}
+}
+\tag{R43.59t}
+\]
+
 ### 7A.5 Why R27 strong inverse-root convergence does not close B-TIGHT
 
 One tempting shortcut is to upgrade the frozen R27 strong convergence
@@ -4038,8 +4263,16 @@ then
 2-\eta,
 \]
 contradicting R43.66.  Hence the sign is constant on every sufficiently late
-\(\Delta\)-chain.  Since the real terminal tail \([U_1,\infty)\) is
-\(\Delta\)-chain-connected,
+\(\Delta\)-chain.
+
+For the present P11 geometry the admissible terminal parameter is the full real tail
+\[
+U>S,
+\]
+not a discrete arithmetic subset.  The floor/cutoff formulas make the operators only
+piecewise regular; they do **not** remove terminal radii from the parameter domain.
+Therefore \([U_1,\infty)\) is automatically \(\Delta\)-chain-connected for every
+\(\Delta>0\), and
 \[
 \boxed{
 \text{B-TIGHT + R43.66}
@@ -4050,6 +4283,8 @@ contradicting R43.66.  Hence the sign is constant on every sufficiently late
 }
 \tag{R43.66a}
 \]
+If one later restricts the analysis to a sampled/discrete cofinal terminal subset, the
+corresponding \(\Delta\)-chain-connectivity must be stated separately.
 
 An orbit-level sufficient condition is even more intrinsic:
 \[
@@ -4068,14 +4303,25 @@ because
 This asks only that neighboring terminal orbits never become asymptotically antipodal; it
 does not ask for Cauchy convergence.
 
-A second weak route is eventual positive two-terminal correlation:
+The two-terminal correlation criterion can be weakened to its sharp threshold.  Since
+\(L_{R,S}^{T,U}\ge-1\) for unit vectors and, under B-TIGHT,
+\[
+L_{R,S}^{T,U}=b_Tb_U+o(1),
+\qquad
+|b_T|,|b_U|\to1,
+\]
+any cofinal opposite-sign pair forces \(L_{R,S}^{T,U}\to-1\).  Conversely, if signs are
+eventually coherent then \(L_{R,S}^{T,U}\to1\).  Hence
 \[
 \boxed{
-\liminf_{T,U\to\infty}L_{R,S}^{T,U}>0.
+\text{under candidate GC-AC + B-TIGHT,}\qquad
+\text{Strong Terminal}
+\iff
+\liminf_{T,U\to\infty}L_{R,S}^{T,U}>-1.
 }
 \tag{R43.66c}
 \]
-Under B-TIGHT and R43.62 this forces \(b_Tb_U>0\) eventually, hence B-SIGN.
+Thus the earlier sufficient threshold \(>0\) was unnecessarily strong.
 
 Continuity, Darboux, or real analyticity remain sufficient special cases if independently
 proved, but none is currently booked or assumed.
@@ -4101,16 +4347,19 @@ new theorem establishing precisely such an identification:
 
 The live order of attack is therefore:
 
-1. **B-TIGHT / orbit energy:** prove \(b_U^2\to1\), preferably by a direct uniform
-   compact-resolvent energy bound for \(h_U\);
-2. **terminal regularity or finite increments:** before using a commutator/Gronwall route,
-   prove a genuine generator theorem or replace it by finite-increment energy estimates;
-3. **B-ORIENT:** after B-TIGHT, prove B-SIGN by the local increment criterion R43.66,
-   positive correlation R43.66c, or any stronger independently proved regularity theorem.
+1. **B-FLAGTIGHT (exact):** prove the asymptotic deep-flag tightness R43.57a--R43.57b,
+   equivalently \(b_U^2\to1\);
+2. **B-FLAGLEAK (preferred dynamic route):** exploit the exact partial-isometry cocycle
+   R43.59l--R43.59n and prove a summable/uniform shallow-to-deep leakage estimate
+   R43.59p--R43.59s;
+3. **energy only as a sufficient tool:** B-JMOM / compact-resolvent energy may prove
+   B-FLAGTIGHT, but is strictly stronger and is not the primary gate;
+4. **B-ORIENT:** after B-TIGHT, use the local increment criterion R43.66 or equivalently
+   rule out the sharp antipodal threshold through R43.66c.
 
-B-JMOM remains one sufficient realization of the first item.  A global uniform
-higher-jet-Riesz conditioning theorem is no longer the preferred route after the numerical
-diagnostic R43.59g--R43.59j.
+A global uniform higher-jet-Riesz conditioning theorem is no longer the preferred route
+after the numerical diagnostic R43.59g--R43.59j.  A differential commutator/Gronwall route
+remains firewalled until a genuine terminal generator theorem is proved.
 
 ---
 
