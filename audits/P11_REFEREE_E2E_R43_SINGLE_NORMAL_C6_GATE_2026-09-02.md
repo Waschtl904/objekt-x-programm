@@ -3807,23 +3807,41 @@ Subsequent hardening on branch \(\texttt{research/r43-gcac-hardening}\) added:
 - the real-form complexification firewall R43.10z0 for Riesz analyticity;
 - the explicit all-\(m\) higher-jet argument R43.10cq0--R43.10cw, which
   **candidate-closes GC-AC**;
+- the explicit singular-support step R43.10cv0--R43.10cv2 in the final GC-AC
+  measure contradiction;
 - the real last scalar / no-escape decomposition R43.44--R43.53;
 - the canonical jet-tail formulation R43.54--R43.59 and the R27 operator-norm shortcut
-  firewall R43.60.
+  firewall R43.60;
+- the cross-terminal sign/orientation reduction R43.61--R43.67.
 
 The current mathematical-content head for those statements is
 \[
 \boxed{
-\texttt{b0338d78f09017e8a72ece49b7af7514445acd62}
+\texttt{ade2cd34e7d9c94c9599b26574573e0ffd54ec06}
 }
 \]
 with mathematical-content R43 blob
 \[
 \boxed{
-\texttt{d026726a88ed6bbe82f63318541a6d21004600f5}.
+\texttt{f8ed8ffe617c9861b4b1df7e3bea3fa1e83028d4}.
 }
 \]
-This ledger-only reconciliation commit does not enlarge that mathematical proof scope.
+Later commits which only reconcile review provenance or navigation do not enlarge that
+mathematical proof scope.
+
+A user-supplied Perplexity destructive review reports all seven GC-AC hardening targets GREEN
+on the exact earlier head
+\[
+\texttt{c7c6f04cd601ea868cb536327504f6c90b3f0807}
+\]
+with R43 blob
+\[
+\texttt{74a91c71b8b08f60d448811c57ceeca6f6113c87}.
+\]
+Because that review explicitly reused destructive vectors from a previous turn, it is booked
+as **external destructive GREEN (cross-model nonblind)** rather than formal
+\(\texttt{independent GREEN (cross-model)}\).  It does not cover the later
+R43.10cv0--cv2 or R43.61--R43.67 additions.
 
 Current candidate booking is therefore:
 \[
@@ -3845,11 +3863,22 @@ b_U\in\mathbb R,
 \quad\text{(conditional on candidate GC-AC).}
 }
 \]
+Under B-TIGHT this sharpens to
 \[
 \boxed{
-\text{B-TIGHT / B-JMOM remain OPEN;}
+\text{Strong Terminal}
+\iff
+b_Tb_U\to1,
+}
+\]
+and B-SIGN/B-ORIENT is the remaining orientation gate.  No identity with an
+Aleksandrov--Clark or canonical-system boundary parameter is currently booked.
+
+\[
+\boxed{
+\text{B-TIGHT / B-JMOM / B-SIGN remain OPEN;}
 \qquad
-\text{R43 overall remains OPEN and independently unreviewed on this exact hardening.}
+\text{R43 overall remains OPEN on the current post-review hardening.}
 }
 \]
 
