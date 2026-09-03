@@ -740,9 +740,14 @@ Q\longmapsto A(Q)
 }
 \tag{R43.10z}
 \]
+\[
+\boxed{
+\text{Complexify the real symmetric form, not the sesquilinear Hilbert-Riesz map.}
+}
+\tag{R43.10z0}
+\]
 All complex-analytic uses of \(A(Q)\) below refer to this bilinear complexification.
 The ordinary sesquilinear Hilbert-Riesz map is used only on the positive real axis.
-\tag{R43.10z0}
 
 The pulled-back jet functionals
 \[
@@ -755,7 +760,8 @@ Q^{1/2}
 h(y)\phi_m(Qy)\,dy
 \tag{R43.10aa}
 \]
-are holomorphic \(\mathscr V_I^*\)-valued functions of \(Q\), because the explicit
+are holomorphic \((\mathscr V_I^{\mathbb C})'\)-valued functions of \(Q\), because the
+real jet functionals are extended complex-linearly and the explicit
 kernels
 \[
 \phi_m(u)=\operatorname{sgn}(u)I_m(|u|)
