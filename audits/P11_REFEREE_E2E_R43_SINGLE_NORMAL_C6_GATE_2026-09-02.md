@@ -1349,11 +1349,26 @@ This closes the former finiteness assumption in R43.10ay1.  It does **not** impl
 ### The determinant-normalized PW route is unavailable
 
 The concrete logarithmic growth also excludes \(\mu_\Gamma\) from the PW-sampling class
-required by the stronger determinant-normalized correspondence:
+required by the stronger determinant-normalized correspondence.  From
 \[
 m_\Gamma(\xi)\asymp\log(2+|\xi|)
 \]
-implies
+there are \(c>0\) and \(x_0>0\) such that
+\[
+m_\Gamma(\xi)\ge c\log x
+\qquad
+(x\ge x_0,\ \xi\in[x,x+1]).
+\]
+Therefore
+\[
+\mu_\Gamma((x,x+1))
+=
+\frac1{2\pi}\int_x^{x+1}m_\Gamma(\xi)\,d\xi
+\ge
+\frac{c}{2\pi}\log x
+\longrightarrow\infty,
+\]
+and hence
 \[
 \boxed{
 \sup_{x\in\mathbb R}\mu_\Gamma((x,x+1))=\infty.
@@ -1659,13 +1674,44 @@ L^2((0,S),w(q)\,dq),
 \]
 after the support-preserving unitary multiplication by \(w^{1/2}\).
 
+More generally, let \(\nu\) be any finite **atomless** scalar Borel measure on \((0,S)\)
+and consider the standard support nest
+\[
+N_t^\nu=L^2((0,t],d\nu).
+\]
+Its cumulative function
+\[
+A_\nu(t):=\nu((0,t])
+\]
+is continuous and nondecreasing.  The probability-integral-transform / generalized-inverse
+map gives a unitary
+\[
+\mathcal C_\nu:
+L^2((0,S),d\nu)
+\longrightarrow
+L^2((0,A_\nu(S)),ds)
+\]
+which sends the support projection \(1_{(0,t]}\) to
+\(1_{(0,A_\nu(t)]}\), up to repetitions on \(\nu\)-null flat intervals.  Thus the
+atomless scalar support nest is unitarily equivalent to the standard Lebesgue support nest
+after cumulative-measure reparameterization.
+
+Applying Lemma R43-GC1 in that coordinate proves:
+\[
+\boxed{
+\text{a compatible codimension-one hyperplane preserves scalar multiplicity
+for every atomless scalar support nest.}
+}
+\tag{R43.10bp0}
+\]
+
 ---
 
-## 3I. GC-M1 closes at candidate level
+## 3I. First scalar-multiplicity candidate and its GC-AC firewall
 
 Return to the full odd Gamma nest from R43.10bc.  Fix the terminal source radius \(S\).
-Let \(h_{0,S}\) be the Riesz representative, in the **full odd Gamma Hilbert space at
-radius \(S\)**, of the compatible first boundary functional \(\beta_S^{(0)}\).
+Let \(h_{0,S}\) be the Riesz representative, in the full odd Gamma Hilbert space at radius
+\(S\), of the compatible first boundary functional \(\beta_S^{(0)}\).
 
 For \(Q<S\), source compatibility gives
 \[
@@ -1682,20 +1728,31 @@ N_Q\cap h_{0,S}^{\perp}.
 }
 \tag{R43.10bq}
 \]
-Thus the constrained Gamma radius nest is exactly of the form covered by Lemma R43-GC1.
-Consequently
+The intrinsic full odd nest is scalar and atomless by Sections 3G and 3J.3.  The
+atomless-measure extension R43.10bp0 of Lemma R43-GC1 therefore gives
 \[
 \boxed{
-\textbf{GC-M1 holds}
+\mathrm{GC\!-\!M1}_{\rm scalar}
+\text{ at candidate level.}
 }
 \tag{R43.10br}
 \]
-provided the canonical-system literature interface R43.10ay--R43.10az is accepted.
 
-Combining GC-M1 with the repaired analyticity result R43.10au and the already reviewed
-conditional implication R43.10ai yields
+This statement alone does **not** imply cyclicity of the first-jet vector in the natural
+radius variable.  A scalar vector may vanish on a singular-continuous part of the scalar
+representing measure.  The missing condition is exactly GC-AC:
+\[
+\nu_{R,S}\ll dQ.
+\]
+
+Accordingly, the earlier terminal-free conclusions are valid at this stage only under the
+additional GC-AC hypothesis:
 \[
 \boxed{
+\mathrm{GC\!-\!M1}_{\rm scalar}
++
+\mathrm{GC\!-\!AC}
+\Longrightarrow
 \overline{
 J_{R,S}\mathscr G_R^0
 +
@@ -1706,9 +1763,11 @@ J_{R,S}\mathscr G_R^0
 }
 \tag{R43.10bs}
 \]
-Equivalently, the original terminal-free cyclicity gate is positive:
+Equivalently,
 \[
 \boxed{
+\mathrm{GC\!-\!AC}
+\Longrightarrow
 \overline{
 Y_{R,S}V_R+
 \operatorname{span}\{Y_{Q,S}\zeta_Q:R<Q<S\}
@@ -1718,12 +1777,11 @@ V_S.
 }
 \tag{R43.10bt}
 \]
-
-Hence every weak cluster \(w\) of the last normal orbit
+Under the same hypothesis every weak cluster \(w\) of
 \[
 w_U=W_{R,S}^{[U]}\varepsilon_R
 \]
-must satisfy
+satisfies
 \[
 \boxed{
 w\in(H_S^0)^\perp
@@ -1733,8 +1791,7 @@ w\in(H_S^0)^\perp
 \tag{R43.10bu}
 \]
 
-This is **not yet Strong Terminal**.  It removes all tangential weak escape, but the scalar
-normal coefficient
+Even then this is **not yet Strong Terminal**.  The remaining scalar normal coefficient
 \[
 b_U
 :=
@@ -1744,33 +1801,30 @@ W_{R,S}^{[U]}\varepsilon_R,
 \rangle
 \tag{R43.10bv}
 \]
-may still lose norm or fail to converge.  The remaining exact gate becomes
+must still satisfy
 \[
 \boxed{
-b_U\to b
-\quad\text{with}\quad
+b_U\to b,
+\qquad
 |b|=1
 \quad?
 }
 \tag{R43.10bw}
 \]
-Equivalently one still must exclude weak norm escape of the unit normal orbit and control its
-phase.
 
 ### Status of Sections 3F--3I
 
-- R43.10ak--R43.10au: new explicit repair of the analyticity proof, **AI-GREEN candidate**;
-- R43.10av--R43.10bc: canonical-system scalarization, **AI-GREEN candidate with explicit
-  literature dependencies**;
-- Lemma R43-GC1, R43.10bd--R43.10bp: new self-contained Hilbert-space/Hardy argument,
-  **AI-GREEN candidate**;
-- R43.10br--R43.10bu: GC-M1 and Gamma cyclicity are therefore **candidate-GREEN only**,
-  pending independent review of all three inputs above.
+- R43.10ak--R43.10au: explicit analyticity repair, AI-GREEN candidate;
+- R43.10av--R43.10bc: source-checked scalarization interface, hardened to avoid any
+  determinant-normalized overclaim;
+- Lemma R43-GC1 and R43.10bp0: self-contained scalar/codimension-one mechanism plus
+  atomless-measure extension, AI-GREEN candidate;
+- R43.10br: \(\mathrm{GC\!-\!M1}_{\rm scalar}\) candidate only;
+- R43.10bs--R43.10bu: explicitly **conditional on GC-AC**.
 
-No R37/G4c statement is used or changed.
+Section 3K supplies the subsequent candidate proof of GC-AC.  No R37/G4c statement is used
+or changed.
 
-
----
 
 ## 3J. Source-checked scalar multiplicity and the GC-AC split
 
