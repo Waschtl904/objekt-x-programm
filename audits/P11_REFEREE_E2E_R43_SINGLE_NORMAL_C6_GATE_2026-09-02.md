@@ -1158,8 +1158,10 @@ dependencies rather than silently importing them:
    measure admits a canonical realization with diagonal Hamiltonian.
 
 A convenient source for (1) is Bessonov--Denisov,
-*Sz.-condition, scattering, and vibration of Krein strings*,
-Theorem 2.5 together with equations (2.7), (2.10), and (2.21).
+*Szegő condition, scattering, and vibration of Krein strings*,
+**Theorem 2.4** (Inverse Krein--de Branges theorem on exponential type), together with
+equations (2.7), (2.10), (2.18), and (2.21).  Theorem 2.5 in that paper is instead the
+Beurling--Malliavin multiplier theorem.
 A convenient source for (2) is the even-measure/diagonal-Hamiltonian theorem quoted as
 Theorem 2.6 in Zhang,
 *Direct spectral problems for Paley--Wiener canonical systems* (2026).
@@ -1391,6 +1393,43 @@ scalar multiplicity one in the natural type/radius coordinate.
 
 The literature interface in R43.10ay--R43.10az is the main imported-theorem dependency of
 this block and must be source-checked independently before promotion.
+
+### Source verification note
+
+The two literature interfaces have now been checked against the original statements:
+
+- Bessonov--Denisov Theorem 2.4 assumes
+  \[
+  \int_{\mathbb R}\frac{d\mu(x)}{1+x^2}<\infty
+  \]
+  and non-density of the smooth support-\(Q\) Fourier class \(\mathcal E_Q\) in
+  \(L^2(\mu)\); it then identifies its \(L^2(\mu)\)-completion with the de Branges
+  truncation \(B_{L_Q}\).
+- Zhang Theorem 2.6 states that every **even positive Poisson-finite** measure is the
+  spectral measure of a canonical system with diagonal Hamiltonian.
+
+For
+\[
+d\mu_\Gamma(\xi)=\frac1{2\pi}m_\Gamma(\xi)\,d\xi
+\]
+these hypotheses hold:
+\[
+m_\Gamma(\xi)\ge1,\qquad
+m_\Gamma(-\xi)=m_\Gamma(\xi),\qquad
+m_\Gamma(\xi)\asymp\log(2+|\xi|),
+\]
+hence
+\[
+\int_{\mathbb R}\frac{d\mu_\Gamma(\xi)}{1+\xi^2}<\infty.
+\]
+Non-density was proved explicitly in R43.10ax.
+
+This source check validates the existence of a diagonal canonical realization and the
+identification of the concrete smooth support-\(Q\) completion with the corresponding
+de Branges truncation.  It does **not yet** by itself validate the stronger claim that the
+natural \(Q\)-radius nest has no singular zero-type channel after type reparameterization;
+that remaining issue is isolated below.
+
 
 ---
 
