@@ -138,6 +138,112 @@ The Fourier cutoff check at \(S=1,P=100\) is also stable:
 
 Thus the observed decay is not a visible truncation artifact at these resolutions.
 
+## Numerical precision firewall
+
+The script computes
+\[
+\sigma_{\min}(Y_m)
+\]
+**directly** with an SVD of the normalized synthesis/Galerkin matrix \(Y_m\).  It does not
+form \(\mathcal G_m=Y_m^*Y_m\) and then call an eigenvalue solver on that Gram matrix.
+The reported
+\[
+\lambda_{\min}(\mathcal G_m)
+=
+\sigma_{\min}(Y_m)^2
+\]
+is obtained only by squaring the directly computed singular value.
+
+This distinction matters at \(m=16\): the displayed
+\(\lambda_{\min}\approx5\times10^{-24}\) lies far below double-precision relative machine
+epsilon if interpreted as an independently resolved eigenvalue of an explicitly formed
+Gram matrix.  By contrast the directly computed
+\(\sigma_{\min}\approx2.24\times10^{-12}\) is still well above machine epsilon.
+
+Accordingly:
+
+- the SVD singular values are the primary numerical observables;
+- the Gram minima are derived squares, not independent double-precision eigensolver data;
+- the Galerkin/cutoff stability tables are the present robustness check;
+- no arbitrary-precision certificate is claimed in this audit.
+
+At \(S=1\), the per-index geometric rates inferred from successive four-jet blocks are
+\[
+\left(\frac{\lambda_{8}}{\lambda_{4}}\right)^{1/4}\approx0.02949,
+\qquad
+\left(\frac{\lambda_{12}}{\lambda_{8}}\right)^{1/4}\approx0.03105,
+\qquad
+\left(\frac{\lambda_{16}}{\lambda_{12}}\right)^{1/4}\approx0.03108,
+\]
+with the \(m=4\) to \(m=16\) aggregate rate
+\[
+\boxed{
+\left(\frac{\lambda_{16}}{\lambda_{4}}\right)^{1/12}
+\approx0.03053.
+}
+\]
+For the singular values the aggregate rate is
+\[
+\left(\frac{\sigma_{16}}{\sigma_4}\right)^{1/12}
+\approx0.17472.
+\]
+
+## Classical Hankel comparison — literature-supported diagnostic only
+
+The observed rate is strikingly close to the classical compact-interval moment/Hankel
+scale, but this comparison must be kept at diagnostic level.
+
+Widom and Wilf, *Small eigenvalues of large Hankel matrices*, Proc. Amer. Math. Soc.
+**17** (1966), 338--344, study moment Hankel matrices for a measure on a finite interval
+satisfying a Szegő condition and derive an asymptotic law with geometric decay.  Their
+exponential constant is determined by the support interval.
+
+For the standard \([0,1]\) Jacobi/Hilbert-type moment geometry, the familiar dominant
+geometric factor is
+\[
+\boxed{
+(1+\sqrt2)^{-4}
+\approx0.0294373
+}
+\]
+for the smallest Gram eigenvalue, and
+\[
+(1+\sqrt2)^{-2}
+\approx0.171573
+\]
+at the singular-value level.  The present aggregate rates \(0.03053\) and \(0.17472\)
+are close to those prototype constants.
+
+A broader theorem is due to Christian Berg and Ryszard Szwarc,
+*The smallest eigenvalue of Hankel matrices*, Constructive Approximation **34** (2011),
+107--133: for every positive measure with compact support, the smallest eigenvalue of its
+moment Hankel matrices decays exponentially to zero.
+
+This attribution matters.  Berg--Chen--Ismail,
+*Small eigenvalues of large Hankel matrices: The indeterminate case*, Math. Scand.
+**91** (2002), 67--81, concerns the characterization of the indeterminate moment case by a
+strict positive lower bound for the Hankel minimum; it is not the source of the general
+compact-support exponential-decay theorem used in this comparison.
+
+### Transfer firewall
+
+None of those classical results applies automatically to the present normalized
+constrained-Gamma Gram matrices.
+
+The actual vectors include:
+
+1. the inverse Gamma-form operation \(C_{\Gamma,S}^{-1}\) / Galerkin whitening;
+2. projection off the zeroth constrained Riesz direction;
+3. individual normalization of every higher-jet Riesz vector.
+
+To promote the classical Hankel law to a theorem about the R43 family one would still need
+a quantitative comparison theorem showing that these operations preserve the relevant
+moment-matrix asymptotics or at least an exponential upper bound for
+\(\lambda_{\min}\).
+
+Therefore the literature comparison strengthens the **route diagnosis** but does not
+upgrade it to a no-go theorem.
+
 ## Interpretation
 
 The experiment specifically removes the objection that the earlier exponential
