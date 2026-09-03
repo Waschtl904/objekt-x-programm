@@ -1753,6 +1753,234 @@ No R37/G4c statement is used or changed.
 
 ---
 
+## 3J. Source-checked correction: scalar multiplicity is not yet Lebesgue absolute continuity
+
+The literature source check validates the two imported statements used in Section 3G, but it
+also exposes an overreach in the first GC-M1 candidate.
+
+### 3J.1 What the checked literature really gives
+
+Bessonov--Denisov Theorem 2.4 identifies the smooth support-\(Q\) completion in
+\(L^2(\mu_\Gamma)\) with the de Branges truncation
+\[
+B_{L_Q},
+\qquad
+T(L_Q)=Q,
+\qquad
+T(r)=\int_0^r\sqrt{\det H_\Gamma(t)}\,dt.
+\tag{R43.10bx}
+\]
+Zhang Theorem 2.6 (equivalently Makarov--Poltoratski Theorem 3.5) gives a **diagonal**
+canonical realization of every even positive Poisson-finite measure, hence of
+\(\mu_\Gamma\).
+
+For a diagonal Hamiltonian
+\[
+H_\Gamma(t)
+=
+\begin{pmatrix}
+h_1(t)&0\\
+0&h_2(t)
+\end{pmatrix},
+\]
+the canonical parity identities imply that the odd spectral subspace is the image of the
+second coordinate only.  Therefore the **full odd canonical chain is scalar**: before the
+\(\beta^{(0)}\)-constraint it is a multiplicity-one scalar support nest.
+
+This conclusion does **not** require
+\[
+\det H_\Gamma>0\quad\text{a.e.}
+\]
+and survives possible zero-determinant pieces.
+
+### 3J.2 The missing point in the earlier determinant-normalized argument
+
+The checked sources do **not** assert that the diagonal Hamiltonian furnished for an
+arbitrary positive Poisson-finite measure satisfies
+\[
+\det H_\Gamma>0
+\quad\text{a.e.}
+\]
+The general inverse theory explicitly allows Hamiltonians with rank-one / zero-determinant
+parts.
+
+Consequently the type map
+\[
+Q=T(r)
+\]
+can push the scalar odd state measure to a measure in the natural radius variable \(Q\) with
+a singular component.  Open rank-one intervals would create atoms; more diffuse
+zero-determinant sets can in principle create a singular-continuous component.
+
+Thus the earlier statement
+\[
+H_\Gamma(Q)
+=
+\operatorname{diag}(a(Q),a(Q)^{-1})
+\quad\text{a.e. in the natural }Q\text{-coordinate}
+\]
+is **not justified solely by the two checked literature theorems**.
+
+The determinant-normalized model R43.10az--R43.10bc must therefore be read as a
+**sufficient regular case**, not as an already established consequence of
+Bessonov--Denisov + Zhang.
+
+### 3J.3 Atomlessness of the concrete P11 radius chain
+
+The concrete P11 Gamma support spaces are nevertheless continuous in the radius parameter.
+
+The fixed-radius core argument R43.10ax0--R43.10ax2 gives
+\[
+\overline{\bigcup_{q<Q}\mathcal V_q^\Gamma}^{\ \|\cdot\|_\Gamma}
+=
+\mathcal V_Q^\Gamma.
+\tag{R43.10by}
+\]
+Support closedness gives
+\[
+\bigcap_{q>Q}\mathcal V_q^\Gamma
+=
+\mathcal V_Q^\Gamma.
+\tag{R43.10bz}
+\]
+Hence the orthogonal projection nest is strongly continuous from both sides.  Therefore the
+scalar measure of the odd radius nest has **no atoms**.
+
+So the only possible hidden scalar channel is singular-continuous with respect to Lebesgue
+measure in the natural radius variable \(Q\).
+
+### 3J.4 The codimension-one constraint still preserves scalar multiplicity
+
+Lemma R43-GC1 is not tied to Lebesgue measure.  An atomless scalar support nest can first be
+put into a standard scalar \(L^2\)-model by its cumulative measure coordinate; the same
+Hardy/Volterra construction then shows that the compatible hyperplane
+\[
+\beta^{(0)}=0
+\]
+preserves multiplicity one.
+
+Thus the checked diagonal canonical-system input plus Lemma R43-GC1 establish at candidate
+level:
+\[
+\boxed{
+\text{the constrained Gamma radius nest is scalar multiplicity one.}
+}
+\tag{R43.10ca}
+\]
+
+This is weaker than the previous "Lebesgue model in natural \(Q\)" assertion but is the
+correct source-checked conclusion.
+
+### 3J.5 Exact remaining cyclicity obstruction
+
+Let
+\[
+\nu_{R,S}
+\]
+be a scalar measure representing the constrained multiplicity-one nest in the natural radius
+parameter \(Q\in(R,S)\), and let
+\[
+G_{R,S}(Q)
+\]
+be the scalar representative of the vector
+\[
+(I-P_R^\Gamma)g_S.
+\]
+Then
+\[
+d\gamma_Q
+=
+|G_{R,S}(Q)|^2\,d\nu_{R,S}(Q).
+\tag{R43.10cb}
+\]
+The repaired analyticity theorem gives
+\[
+d\gamma_Q
+=
+\gamma_Q'\,dQ,
+\qquad
+\gamma_Q'>0
+\quad\text{for a.e. }Q.
+\tag{R43.10cc}
+\]
+
+Decompose
+\[
+d\nu_{R,S}
+=
+w(Q)\,dQ+d\nu_{R,S}^{\mathrm{sc}},
+\tag{R43.10cd}
+\]
+where atomlessness has already removed a pure-point part.
+
+Equation (R43.10cb) together with (R43.10cc) implies:
+
+1. \(w(Q)>0\) for Lebesgue-a.e. \(Q\);
+2. \(G_{R,S}(Q)\ne0\) for \(w(Q)dQ\)-a.e. \(Q\);
+3. \(G_{R,S}=0\) for \(\nu_{R,S}^{\mathrm{sc}}\)-a.e. \(Q\).
+
+Therefore
+\[
+\boxed{
+(I-P_R^\Gamma)g_S
+\text{ is cyclic}
+\iff
+\nu_{R,S}^{\mathrm{sc}}=0.
+}
+\tag{R43.10ce}
+\]
+
+So the previous GC-M1 gate splits into two logically distinct statements:
+
+\[
+\boxed{
+\textbf{GC-M1}_{\rm scalar}:
+\text{ scalar multiplicity one}
+}
+\]
+and
+\[
+\boxed{
+\textbf{GC-AC}:
+\nu_{R,S}\ll dQ
+\text{ in the natural radius variable.}
+}
+\tag{R43.10cf}
+\]
+
+The source-checked diagonal canonical-system argument plus R43-GC1 address
+\(\textbf{GC-M1}_{\rm scalar}\).  The **only remaining terminal-free density obstruction is
+GC-AC**, i.e. exclusion of a singular-continuous zero-type channel.
+
+### 3J.6 Consequence for the previous GC-M1 candidate booking
+
+The earlier candidate statement
+\[
+\textbf{GC-M1 holds}
+\]
+in R43.10br was too strong if interpreted as the natural-radius Lebesgue model used in
+R43.10ah.
+
+The corrected booking is:
+\[
+\boxed{
+\textbf{GC-M1}_{\rm scalar}
+\text{ candidate-GREEN;}
+\qquad
+\textbf{GC-AC}
+\text{ OPEN.}
+}
+\tag{R43.10cg}
+\]
+
+Accordingly R43.10bs--R43.10bu remain **conditional on GC-AC**.  No strong-terminal
+conclusion is promoted.
+
+This correction uses no R37/G4c input.
+
+
+---
+
 ## 4. Why zeroth-jet dominance alone does not close R43
 
 The canonical source inclusion is lower triangular in the jet bases:
@@ -2308,9 +2536,15 @@ gap, R43.10av--bc scalarizes the full odd Gamma nest through a diagonal canonica
 and Lemma R43-GC1 proves that the compatible \(\beta^{(0)}\) hyperplane constraint preserves
 scalar nest multiplicity.
 
-Thus Route D is **candidate-closed but unreviewed** at the current mathematical head.  Even
-if that candidate survives review, the final C6 gate is not yet closed: the remaining
-problem becomes the one scalar normal coefficient \(b_U\) in R43.10bv--bw.
+The source check after the first GC-M1 candidate splits Route D more sharply:
+
+- \(\textbf{GC-M1}_{\rm scalar}\): scalar multiplicity one, candidate-GREEN;
+- \(\textbf{GC-AC}\): absence of a singular-continuous scalar radius measure in the natural
+  \(Q\)-coordinate, **OPEN**.
+
+Only if GC-AC is closed does the reviewed cyclicity implication force the last weak normal
+orbit into \(\mathbb C\varepsilon_S\).  After that, the remaining full C6 problem is the one
+scalar normal coefficient \(b_U\) in R43.10bv--bw.
 
 ---
 
