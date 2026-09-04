@@ -35,11 +35,7 @@ For fine terminal steps `0<V-U<log(2)/2`, the frozen martingale cutoff yields
 \boxed{C_{V,U}=-R_VQ_B.}
 \]
 
-Thus the preferred quantitative BMIX target is
-
-\[
-\boxed{\|R_VQ_BB_V\|}.
-\]
+Thus the preferred quantitative BMIX target is `||R_VQ_BB_V||`.
 
 ## Live tree
 
