@@ -8,10 +8,10 @@ This is a navigation/status file only. It creates no mathematical promotion.
 
 - Base: `main@2102b538c220cd809ad876c425df4f30304eb997`
 - Active branch: `research/r43-gcac-hardening`
-- Current companion mathematical hardening head: `ca370c6b95c0a454da82376bc82b9e2261113e0d`
 - Canonical R43 core blob: `983b42949d6a4a1806c0b333727cb49000b99972`
 - O1 modulus-phase companion: `audits/P11_R43_FLAGDYN_O1_MODULUS_PHASE_REDUCTION_2026-09-04.md`
 - Terminal metric increment definitions audit: `audits/P11_R43_TERMINAL_METRIC_INCREMENT_DEFINITION_AUDIT_2026-09-04.md`
+- Spectral-width refinement: `audits/P11_R43_B_METINC_SPECTRAL_WIDTH_REFINEMENT_2026-09-04.md`
 
 ## Governance
 
@@ -44,18 +44,26 @@ Strong Terminal ?
 
 The middle implication is sufficient only, not an equivalence.
 
-Inside `B-FLAGMOD`, the current quantitative sub-node is `B-METINC`:
+Inside `B-FLAGMOD`, the primary quantitative sub-node is now the spectral-width route:
 
 ```text
-B-METINC
+B-METINC-WIDTH
    |
    | pairwise Sylvester bridge + projected modulus estimate
    v
-B-FLAGMOD
+B-FLAGMOD contribution to FD23
 ```
 
-Loewner positivity and a positive new-shell theorem are optional accelerators for
-`B-METINC`, not prerequisites in the logical definition of the route.
+with separately auditable channels
+
+```text
+B-METINC-NEW
+B-METINC-GEO
+B-METINC-COND
+```
+
+Loewner positivity and a positive new-shell theorem are optional structural/arithmetic
+results, not prerequisites for the logical B-METINC route.
 
 ## Exact B-FLAGTIGHT gate
 
@@ -186,9 +194,9 @@ Loewner monotonicity
 G_{X,V}-G_{X,U} >= 0  ?
 ```
 
-is a separate weaker gate and remains OPEN.
+is a separate structural gate and remains OPEN.
 
-## B-METINC: unconditional modulus input
+## B-METINC: exact off-diagonal identity
 
 Define the normalized true metric increment
 
@@ -205,70 +213,173 @@ P_U=W_UW_U^*,
 E_{U,V}=(I-P_U) Hbold_S^{U,V} W_U,
 ```
 
-one has unconditionally
+self-adjointness gives the exact identities
 
 ```text
-||E_{U,V}|| <= ||Hbold_S^{U,V}||.
+||E_{U,V}||
+ = ||(I-P_U) Hbold_S^{U,V} P_U||
+ = ||[Hbold_S^{U,V},P_U]||.
 ```
 
-Thus direct cofinal/partition control of normalized relative metric increments can feed
-B-FLAGMOD without first proving positivity.
+## Positivity-free spectral-width refinement
 
-The live metric sub-gate is
+Let
 
 ```text
-B-METINC:
-control ||Hbold_X^{U,V}|| cofinally in a form compatible with B-FLAGDYN summability.
+lambda_- = inf spec(Hbold_S^{U,V}),
+lambda_+ = sup spec(Hbold_S^{U,V}),
+width(Hbold_S)=lambda_+-lambda_-.
 ```
 
-### Conditional Loewner accelerator
-
-If, additionally,
+Subtracting the spectral midpoint does not change the off-diagonal block. Hence
 
 ```text
-G_{R,V}-G_{R,U} >= 0,
-G_{S,V}-G_{S,U} >= 0,
+||E_{U,V}|| <= (1/2) width(Hbold_S^{U,V}).
 ```
 
-then
+This is completely positivity-free. In particular, a two-sided bound
 
 ```text
-0 <= E^*E
-   <= ||Hbold_S|| Hbold_R - Hbold_R^2
-   <= ||Hbold_S|| Hbold_R,
+-delta I <= Hbold_S^{U,V} <= epsilon I
 ```
 
-hence
+implies
 
 ```text
-||E||^2 <= ||Hbold_S|| ||Hbold_R||,
-||E|| <= (1/2)||Hbold_S||.
+||E_{U,V}|| <= (epsilon+delta)/2.
 ```
 
-This is a conditional accelerator only. Positivity by itself still supplies no cofinal
-smallness or summability.
-
-## Sylvester conditioning firewall
-
-The square-root mismatch satisfies the exact pairwise Sylvester equation. For each fixed
-`U<V`, its norm is controlled by `||E_{U,V}||` with denominator
+Loewner positivity is now only a special case: if `Hbold_S>=0`, then
 
 ```text
-alpha_S(U,V)+alpha_R(U,V),
-alpha_X(U,V)=inf sigma((A_X^{U,V})^(1/2)) > 0.
+width(Hbold_S) <= ||Hbold_S||,
 ```
 
-No cofinal uniform lower bound for these pairwise relative spectral gaps is currently
-booked. The fixed-source lower bound for absolute future metrics does not by itself give
-such a uniform relative bound.
+so the previous conditional half-norm estimate follows automatically.
+
+`R43-MI-LOEWNER` therefore remains OPEN but is no longer needed even for the factor-`1/2`
+leakage mechanism.
+
+## Exact three-channel metric split
+
+The Schur-energy difference can be telescoped exactly through three intermediate stages:
+
+```text
+old-conditioning  : change B_U -> B_V on embedded old data,
+old-geometry      : change already-active P_T D_s E_T geometry at fixed B_V,
+new-shell         : activate Lambda_V \ Lambda_U at fixed terminal-V geometry/B_V.
+```
+
+After Riesz representation and normalization,
+
+```text
+Hbold_X
+ = Hbold_X,cond + Hbold_X,geo + Hbold_X,new.
+```
+
+No individual sign is supplied by the frozen definitions; even the new-shell energy
+contains cross terms with already present terminal-V old geometry.
+
+Spectral-width subadditivity yields the sufficient estimate
+
+```text
+||E||
+ <= (1/2) width(Hbold_S,new)
+    + ||Hbold_S,geo||
+    + ||Hbold_S,cond||.
+```
+
+Thus the active B-METINC subtargets are:
+
+```text
+B-METINC-NEW   : new-shell spectral width,
+B-METINC-GEO   : old-channel geometry drift,
+B-METINC-COND  : Feshbach-conditioning drift.
+```
+
+## Full Sylvester conditioning factor
+
+Let
+
+```text
+alpha_X(U,V)=inf spec((A_X^{U,V})^(1/2)) > 0.
+```
+
+The square-root mismatch satisfies
+
+```text
+||M|| <= ||E||/(alpha_S+alpha_R).
+```
+
+The actual projected modulus channel also contains `A_R^(-1/2)`, so the full
+pairwise operator-norm chain is
+
+```text
+d_mod(m;U,V)
+ <= ||E||/[alpha_R(alpha_S+alpha_R)]
+ <= width(Hbold_S)/[2 alpha_R(alpha_S+alpha_R)].
+```
+
+The norm-only fallback is
+
+```text
+d_mod(m;U,V)
+ <= ||Hbold_S||/[alpha_R(alpha_S+alpha_R)].
+```
+
+Both coercivity factors remain pairwise. No cofinal uniform positive lower bound is
+currently booked.
+
+## Summability firewall
+
+Mere step smallness
+
+```text
+||Hbold_S^{U_k,U_{k+1}}|| -> 0
+```
+
+is not enough. A useful partition majorant is
+
+```text
+b_k
+ = sup_{V in [U_k,U_{k+1}]}
+   width(Hbold_S^{U_k,V})
+   /[2 alpha_R(U_k,V)(alpha_S(U_k,V)+alpha_R(U_k,V))].
+```
+
+The total-variation requirement is
+
+```text
+sum_k b_k < infinity.
+```
+
+But this majorant alone does **not** imply the FD23 dominated-convergence limit. One also
+needs, for each fixed interval `k`,
+
+```text
+Delta_{m,k}^{mod} -> 0  as m -> infinity.
+```
+
+Strong convergence `P_m->0` is pointwise on fixed vectors and does not automatically make
+the supremum over `V in [U_k,U_{k+1}]` uniform. A sufficient extra mechanism would be
+relative compactness of the corresponding modulus-vector family, for example from a
+separately proved norm-continuity theorem in `V` on each compact interval.
+
+No such continuity theorem is silently booked.
 
 ## Current open mathematical targets
 
-### B-FLAGMOD / B-METINC
+### B-FLAGMOD / B-METINC-WIDTH
 
-First try to control the normalized true future-metric increments directly. Separately,
-Loewner monotonicity may be proved to sharpen the variance estimate; only after that is a
-positive atom/new-shell decomposition worth pursuing as a quantitative arithmetic tool.
+Seek a terminal partition with:
+
+1. summable width/conditioning majorants;
+2. fixed-interval projected-tail convergence;
+3. quantitative control of the NEW/GEO/COND channels above.
+
+This is a sufficient operator-norm route only. Failure of spectral-width control would not
+disprove B-FLAGMOD; it would force a return to the genuinely projected normal/flag
+quantity, which may be much smaller than the global operator norm.
 
 ### B-FLAGPHASE
 
@@ -285,3 +396,17 @@ Strong Terminal  <=>  liminf_{T,U->infinity} L_{R,S}^{T,U} > -1.
 ```
 
 Local sign-increment criteria additionally require one cofinal chain component.
+
+## Open status
+
+- `R43-MI-LOEWNER`: OPEN, optional structural theorem.
+- `B-METINC-WIDTH`: OPEN.
+- `B-METINC-NEW`: OPEN.
+- `B-METINC-GEO`: OPEN.
+- `B-METINC-COND`: OPEN.
+- B-METINC: OPEN.
+- B-FLAGMOD: OPEN.
+- B-FLAGPHASE: OPEN.
+- B-FLAGTIGHT: OPEN.
+- B-SIGN: OPEN.
+- Strong Terminal/C6: OPEN.
