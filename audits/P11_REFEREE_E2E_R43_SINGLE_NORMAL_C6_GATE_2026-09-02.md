@@ -702,15 +702,52 @@ m_\Gamma(\eta/Q)
 is holomorphic in \(Q\), and its denominator stays uniformly away from its purely
 imaginary zero set.  On that neighborhood the series and all local \(Q\)-derivatives
 are dominated, in form norm, by a constant multiple of one reference R33 weight.
-Consequently
+At this point one convention matters.  On the real axis, \(a_Q\) is a Hermitian form,
+so its Hilbert-space Riesz identification is conjugate-linear in one slot and must **not**
+be treated as a holomorphic complex-linear operator.  For analyticity we instead pass to
+the underlying real Hilbert form.
+
+Let \(\mathscr V_I^{\mathbb R}\) be the real-valued odd form domain.  There \(a_Q\) is
+real symmetric.  Complexify \(\mathscr V_I^{\mathbb R}\) and extend this real symmetric
+form complex-bilinearly.  Denote the extension by
 \[
-Q\longmapsto a_Q
+\mathfrak a_Q^{\mathbb C}[h,k].
 \]
-is a holomorphic family in
+Equivalently, in Fourier coordinates one may use
 \[
-\mathcal B(\mathscr V_I,\mathscr V_I^*).
+\mathfrak a_Q^{\mathbb C}[h,k]
+=
+\frac1{2\pi}
+\int_{\mathbb R}
+m_\Gamma(\eta/Q)
+\widehat{E_1h}(\eta)
+\widehat{E_1k}(-\eta)
+\,d\eta.
+\]
+For real \(Q\) and real \(h,k\) this is exactly the original Gamma form.  The same
+form-norm estimates therefore show that its associated complex-linear operator
+\[
+A(Q):
+\mathscr V_I^{\mathbb C}
+\longrightarrow
+(\mathscr V_I^{\mathbb C})'
+\]
+into the **complex-linear dual** is operator-norm holomorphic:
+\[
+\boxed{
+Q\longmapsto A(Q)
+\text{ is holomorphic.}
+}
 \tag{R43.10z}
 \]
+\[
+\boxed{
+\text{Complexify the real symmetric form, not the sesquilinear Hilbert-Riesz map.}
+}
+\tag{R43.10z0}
+\]
+All complex-analytic uses of \(A(Q)\) below refer to this bilinear complexification.
+The ordinary sesquilinear Hilbert-Riesz map is used only on the positive real axis.
 
 The pulled-back jet functionals
 \[
@@ -723,7 +760,8 @@ Q^{1/2}
 h(y)\phi_m(Qy)\,dy
 \tag{R43.10aa}
 \]
-are holomorphic \(\mathscr V_I^*\)-valued functions of \(Q\), because the explicit
+are holomorphic \((\mathscr V_I^{\mathbb C})'\)-valued functions of \(Q\), because the
+real jet functionals are extended complex-linearly and the explicit
 kernels
 \[
 \phi_m(u)=\operatorname{sgn}(u)I_m(|u|)
@@ -731,21 +769,22 @@ kernels
 are entire in the radial variable away from the fixed sign and are uniformly bounded on
 compact \(Q\)-sets.
 
-Let
+At every real \(Q_0\in I\), coercivity of the real Gamma form makes the complexified
+operator \(A(Q_0)\) an isomorphism.  By (R43.10z) and openness of the invertible group,
+\(A(Q)\) remains invertible in a complex neighborhood of \(Q_0\), and
 \[
-A(Q):\mathscr V_I\to\mathscr V_I^*
+A(Q)^{-1}
 \]
-be the coercive operator represented by \(a_Q\).  Uniform coercivity on \(I\), together
-with (R43.10z), gives a locally holomorphic inverse
-\[
-A(Q)^{-1}.
-\]
+is holomorphic there.
 Put
 \[
 u_{j,Q}:=A(Q)^{-1}b_{j,Q},
 \qquad j=0,1.
 \tag{R43.10ab}
 \]
+Here the real jet functionals have been extended complex-linearly to the complexified real
+form domain.  For positive real \(Q\), all coefficients are real, hence \(u_{j,Q}\) is
+real and is exactly the usual Gamma-Riesz vector for the corresponding real functional.
 On the real axis,
 \[
 d_Q:=b_{0,Q}(u_{0,Q})>0.
@@ -759,7 +798,8 @@ u_{1,Q}
 \frac{b_{0,Q}(u_{1,Q})}{d_Q}\,u_{0,Q}
 \tag{R43.10ac}
 \]
-is holomorphic and is exactly the pulled-back constrained Gamma-Riesz vector:
+is holomorphic in the complexified bilinear problem, while for positive real \(Q\) it is
+exactly the pulled-back constrained Gamma-Riesz vector:
 \[
 D_Q\widetilde g_Q=g_Q.
 \]
@@ -772,7 +812,9 @@ b_{1,Q}(\widetilde g_Q)
 }
 \tag{R43.10ad}
 \]
-is real analytic on \((0,\infty)\).
+is the restriction of a holomorphic scalar function and is therefore real analytic on
+\((0,\infty)\).  The off-real analytic continuation is **not** being interpreted as a
+Hilbert norm; the norm identity is asserted only for real \(Q>0\).
 
 Combining this with the frozen strict monotonicity
 \[
@@ -1044,9 +1086,10 @@ Let \(\mathscr V_{Q_0}\) be the fixed Hilbert form domain with norm
 m_{Q_0}(\eta)
 |\widehat{E_1h}(\eta)|^2\,d\eta.
 \]
-For \(h,k\in\mathscr V_{Q_0}\), (R43.10ap) and weighted Cauchy--Schwarz imply
+For \(h,k\) in the complexified fixed form domain, (R43.10ap), evenness of the
+reference weight, and weighted Cauchy--Schwarz imply for the bilinear extension
 \[
-|\partial_Q^ja_Q[h,k]|
+|\partial_Q^j\mathfrak a_Q^{\mathbb C}[h,k]|
 \le
 C_{j,Q_0}
 \|h\|_{\mathscr V_{Q_0}}
@@ -1088,7 +1131,8 @@ The function \(I_m\) is entire, and for positive real \(Q\),
 \Phi_m(Q,y)=\phi_m(Qy).
 \]
 Since the fixed interval \(y\in[-1,1]\) is bounded and
-\(\mathscr V_{Q_0}\hookrightarrow L^2(-1,1)\), the maps
+\(\mathscr V_{Q_0}\hookrightarrow L^2(-1,1)\) continuously — the fixed-domain norm
+from R43.10al--R43.10ar contains the (L^2(-1,1)) term and hence dominates it — the maps
 \[
 Q\longmapsto b_{m,Q}\in\mathscr V_{Q_0}^*
 \]
@@ -1153,15 +1197,20 @@ dependencies rather than silently importing them:
 1. **Inverse exponential-type theorem.**  For a canonical Hamiltonian with spectral
    measure \(\mu\), the \(L^2(\mu)\)-completion of the Fourier class of functions with
    physical support in \([-Q,Q]\), when non-dense, is the de Branges space generated by
-   the canonical system up to the unique type radius \(r=L_H(Q)\).
+   the canonical system up to the canonical generalized-inverse type radius
+   \(r=L_H(Q)\).
 2. **Even-measure diagonalization.**  Every even positive Poisson-finite spectral
    measure admits a canonical realization with diagonal Hamiltonian.
 
-A convenient source for (1) is Bessonov--Denisov,
-*Szegő condition, scattering, and vibration of Krein strings*,
+A convenient source for (1) is the **published Inventiones version** of
+Bessonov--Denisov, *Szegő condition, scattering, and vibration of Krein strings*,
+Invent. Math. 234 (2023), 291--373, DOI 10.1007/s00222-023-01201-9,
 **Theorem 2.4** (Inverse Krein--de Branges theorem on exponential type), together with
-equations (2.7), (2.10), (2.18), and (2.21).  Theorem 2.5 in that paper is instead the
-Beurling--Malliavin multiplier theorem.
+equations (2.7), (2.10), (2.18), and (2.21).  The authors' separately posted extended
+version inserts an additional theorem earlier in Section 2.2 and therefore renumbers the
+inverse theorem as Theorem 2.5.  Throughout R43, the phrase
+"Bessonov--Denisov Theorem 2.4" means the published Inventiones version.  This is a
+bibliographic version distinction only.
 A convenient source for (2) is the even-measure/diagonal-Hamiltonian theorem quoted as
 Theorem 2.6 in Zhang,
 *Direct spectral problems for Paley--Wiener canonical systems* (2026).
@@ -1278,157 +1327,199 @@ Thus \(\mathcal E_Q\) is not dense in \(L^2(\mu_\Gamma)\) for any finite \(Q\), 
 the inverse exponential-type theorem applies at every radius.
 
 Consequently the Fourier image of the full Gamma form space on \((-Q,Q)\) is exactly
-a de Branges truncation
+a de Branges truncation.
+
+Fix **one** diagonal canonical realization supplied by the even-measure theorem and denote
+that chosen realization by
+\[
+H_\Gamma^{\mathrm{diag}}(t)
+=
+\begin{pmatrix}
+h_1(t)&0\\
+0&h_2(t)
+\end{pmatrix}.
+\]
+No uniqueness of this Hamiltonian is asserted or needed.
+
+For this chosen realization put
 \[
 \mathcal B_Q^\Gamma
 =
 B_{r(Q)},
 \qquad
-r(Q)=L_{H_\Gamma}(Q).
+r(Q)=L_{H_\Gamma^{\mathrm{diag}}}(Q).
 \tag{R43.10ay}
 \]
-
 The inverse exponential-type theorem uses the type clock
 \[
-T_{H_\Gamma}(r)
+T_{H_\Gamma^{\mathrm{diag}}}(r)
 =
-\int_0^r\sqrt{\det H_\Gamma(t)}\,dt.
+\int_0^r\sqrt{\det H_\Gamma^{\mathrm{diag}}(t)}\,dt.
 \]
-Since \(r(Q)=L_{H_\Gamma}(Q)<\infty\) for every finite \(Q\), continuity of this clock gives
-\[
-T_{H_\Gamma}(r(Q))=Q.
-\tag{R43.10ay1}
-\]
-Thus the natural P11 support radius \(Q\) is exactly the canonical exponential-type
-coordinate.
 
-There is no hidden jump channel in this coordinate.  Indeed, (R43.10ax0)--(R43.10ax2)
-show that
-\[
-\overline{\bigcup_{q<Q}\mathcal B_q^\Gamma}
-=
-\mathcal B_Q^\Gamma,
-\]
-while support closedness gives
-\[
-\bigcap_{q>Q}\mathcal B_q^\Gamma
-=
-\mathcal B_Q^\Gamma.
-\]
-Hence the radius chain is continuous.  Any zero-type indivisible interval in a canonical
-representative is therefore collapsed by the type coordinate and contributes no separate
-nest fiber.
+### Szegő hardening: every finite support radius is reached
 
-After this standard type reparameterization, the active diagonal Hamiltonian is
-determinant-normalized and can be written
+The concrete density
+\[
+w_\Gamma(\xi)=\frac{m_\Gamma(\xi)}{2\pi}
+\]
+satisfies
+\[
+w_\Gamma(\xi)\ge\frac1{2\pi}
+\]
+and the Poisson-finiteness condition R43.10aw.  Moreover
+\(m_\Gamma(\xi)\asymp\log(2+|\xi|)\) gives
+\[
+\int_{\mathbb R}
+\frac{|\log w_\Gamma(\xi)|}{1+\xi^2}\,d\xi<\infty,
+\]
+so \(\mu_\Gamma\) lies in the spectral Szegő class.  The source-checked spectral Szegő
+theorem therefore gives
+\[
+\sqrt{\det H_\Gamma^{\mathrm{diag}}}\notin L^1(\mathbb R_+).
+\]
+Hence
+\[
+T_{H_\Gamma^{\mathrm{diag}}}(r)\to\infty
+\qquad(r\to\infty),
+\]
+and consequently
 \[
 \boxed{
-H_\Gamma(Q)
-=
-\begin{pmatrix}
-a(Q)&0\\
-0&a(Q)^{-1}
-\end{pmatrix},
+r(Q)=L_{H_\Gamma^{\mathrm{diag}}}(Q)<\infty
+\quad\text{for every finite }Q>0.
+}
+\tag{R43.10ay0}
+\]
+The defining property of the type clock now gives
+\[
+\boxed{
+T_{H_\Gamma^{\mathrm{diag}}}(r(Q))=Q.
+}
+\tag{R43.10ay1}
+\]
+This closes the former finiteness assumption in R43.10ay1.  It does **not** imply
+\(\det H_\Gamma^{\mathrm{diag}}>0\) a.e.
+
+### The determinant-normalized PW route is unavailable
+
+The concrete logarithmic growth also excludes \(\mu_\Gamma\) from the PW-sampling class
+required by the stronger determinant-normalized correspondence.  From
+\[
+m_\Gamma(\xi)\asymp\log(2+|\xi|)
+\]
+there are \(c>0\) and \(x_0>0\) such that
+\[
+m_\Gamma(\xi)\ge c\log x
 \qquad
-0<a(Q)<\infty
-\quad\text{for a.e. }Q.
+(x\ge x_0,\ \xi\in[x,x+1]).
+\]
+Therefore
+\[
+\mu_\Gamma((x,x+1))
+=
+\frac1{2\pi}\int_x^{x+1}m_\Gamma(\xi)\,d\xi
+\ge
+\frac{c}{2\pi}\log x
+\longrightarrow\infty,
+\]
+and hence
+\[
+\boxed{
+\sup_{x\in\mathbb R}\mu_\Gamma((x,x+1))=\infty.
+}
+\tag{R43.10ay2}
+\]
+Thus Makarov--Poltoratski Theorem 3.6 cannot be applied here to deduce a diagonal
+**and determinant-normalized** Hamiltonian.
+
+This is a firewall about that literature route, not a theorem that no independent argument
+could ever prove stronger regularity.
+
+### Odd parity selects one scalar canonical coordinate
+
+For the chosen diagonal realization let
+\[
+\Theta(t,z)
+=
+\binom{\Theta_+(t,z)}{\Theta_-(t,z)}
+\]
+solve the canonical system with the standard first-coordinate initial condition.  ODE
+uniqueness gives
+\[
+\Theta_+(t,-z)=\Theta_+(t,z),
+\qquad
+\Theta_-(t,-z)=-\Theta_-(t,z).
+\tag{R43.10ba}
+\]
+Thus first-coordinate states transform to even spectral functions and second-coordinate
+states to odd spectral functions.
+
+The odd part of the radius-\(Q\) de Branges truncation is therefore the image of
+second-coordinate states \(X=(0,x_2)^t\) supported on \((0,r(Q))\), with norm
+\[
+\boxed{
+\|X\|^2
+=
+\int_0^{r(Q)}h_2(t)|x_2(t)|^2\,dt.
+}
+\tag{R43.10bb}
+\]
+Hence the full odd Gamma truncation chain is a **scalar multiplicity-one support nest**:
+\[
+\boxed{
+\mathcal B_{Q,\mathrm{odd}}^\Gamma
+\simeq
+L^2\!\left((0,r(Q)),h_2(t)\,dt\right).
 }
 \tag{R43.10az}
 \]
 
-
-### Odd parity selects one scalar canonical coordinate
-
-Let
+Push this scalar state measure forward by the type coordinate
 \[
-\Theta(Q,z)
-=
-\binom{\Theta_+(Q,z)}{\Theta_-(Q,z)}
+Q=T_{H_\Gamma^{\mathrm{diag}}}(t).
 \]
-solve the canonical system with initial condition \(\Theta(0,z)=(1,0)^t\).
-For diagonal \(H_\Gamma\), uniqueness of the ODE gives
-\[
-\Theta_+(Q,-z)=\Theta_+(Q,z),
-\qquad
-\Theta_-(Q,-z)=-\Theta_-(Q,z).
-\tag{R43.10ba}
-\]
-Therefore the canonical spectral transform sends first-coordinate states to even spectral
-functions and second-coordinate states to odd spectral functions.
-
-Since the spectral transform is unitary and
-\[
-L^2(\mu_\Gamma)
-=
-L^2_{\rm even}(\mu_\Gamma)
-\oplus
-L^2_{\rm odd}(\mu_\Gamma),
-\]
-the odd part of the radius-\(Q\) de Branges space is exactly the image of states
-\[
-X=(0,x_2)^t
-\]
-supported in the canonical interval \((0,Q)\).
-
-Their state norm is
-\[
-\|X\|^2
-=
-\int_0^Q
-a(q)^{-1}|x_2(q)|^2\,dq.
-\tag{R43.10bb}
-\]
-Multiplication by \(a^{-1/2}\) therefore identifies the **full odd Gamma radius nest**
-unitarily with
+Then there is a scalar Borel measure \(\nu_\Gamma^{\mathrm{odd}}\) such that
 \[
 \boxed{
-N_Q=L^2((0,Q),dq),
-\qquad
-0<Q<S.
+N_Q\simeq L^2((0,Q],d\nu_\Gamma^{\mathrm{odd}}),
+\qquad 0<Q<S.
 }
 \tag{R43.10bc}
 \]
-In particular, before the \(\beta^{(0)}\)-constraint is imposed, the Gamma radius nest has
-scalar multiplicity one in the natural type/radius coordinate.
+This proves scalar multiplicity one, but it does **not** identify
+\(d\nu_\Gamma^{\mathrm{odd}}\) with \(dQ\).
 
-The literature interface in R43.10ay--R43.10az is the main imported-theorem dependency of
-this block and must be source-checked independently before promotion.
+The intrinsic P11 radius chain is continuous: R43.10ax0--R43.10ax2 give left continuity,
+and support closedness gives right continuity.  Therefore
+\(\nu_\Gamma^{\mathrm{odd}}\) has no atoms.  A singular-continuous component in the natural
+radius variable remains possible at this stage and is exactly the GC-AC issue isolated in
+Section 3J.
 
 ### Source verification note
 
-The two literature interfaces have now been checked against the original statements:
+The literature interface has been checked against the original statements:
 
-- Bessonov--Denisov Theorem 2.4 assumes
+- Bessonov--Denisov, **published Inventiones version**, Theorem 2.4 gives the inverse
+  exponential-type identification under Poisson finiteness and non-density; the separately
+  posted extended version renumbers this inverse theorem as Theorem 2.5.  R43.10ax proves
+  non-density explicitly.
+- The type clock is
   \[
-  \int_{\mathbb R}\frac{d\mu(x)}{1+x^2}<\infty
+  T(\tau)=\int_0^\tau\sqrt{\det H(s)}\,ds,
   \]
-  and non-density of the smooth support-\(Q\) Fourier class \(\mathcal E_Q\) in
-  \(L^2(\mu)\); it then identifies its \(L^2(\mu)\)-completion with the de Branges
-  truncation \(B_{L_Q}\).
-- Zhang Theorem 2.6 states that every **even positive Poisson-finite** measure is the
-  spectral measure of a canonical system with diagonal Hamiltonian.
+  with \(T(L_Q)=Q\) whenever \(L_Q<\infty\).
+- Zhang Theorem 2.6, equivalently Makarov--Poltoratski Theorem 3.5, gives existence of
+  **a** diagonal realization for an even positive Poisson-finite measure; no uniqueness is
+  asserted.
+- The general theorem does not guarantee \(\det H\ne0\) a.e.
+- The spectral Szegő input above gives \(L_Q<\infty\) for every finite \(Q\).
+- Makarov--Poltoratski Theorem 3.6 is tied to the PW-sampling class and is inapplicable
+  here because of R43.10ay2.
 
-For
-\[
-d\mu_\Gamma(\xi)=\frac1{2\pi}m_\Gamma(\xi)\,d\xi
-\]
-these hypotheses hold:
-\[
-m_\Gamma(\xi)\ge1,\qquad
-m_\Gamma(-\xi)=m_\Gamma(\xi),\qquad
-m_\Gamma(\xi)\asymp\log(2+|\xi|),
-\]
-hence
-\[
-\int_{\mathbb R}\frac{d\mu_\Gamma(\xi)}{1+\xi^2}<\infty.
-\]
-Non-density was proved explicitly in R43.10ax.
-
-This source check validates the existence of a diagonal canonical realization and the
-identification of the concrete smooth support-\(Q\) completion with the corresponding
-de Branges truncation.  It does **not yet** by itself validate the stronger claim that the
-natural \(Q\)-radius nest has no singular zero-type channel after type reparameterization;
-that remaining issue is isolated below.
+Thus the checked literature proves scalarity of the odd chain and reachability of every
+finite type radius.  It does **not** by itself prove Lebesgue absolute continuity in the
+natural \(Q\)-coordinate.
 
 
 ---
@@ -1640,13 +1731,44 @@ L^2((0,S),w(q)\,dq),
 \]
 after the support-preserving unitary multiplication by \(w^{1/2}\).
 
+More generally, let \(\nu\) be any finite **atomless** scalar Borel measure on \((0,S)\)
+and consider the standard support nest
+\[
+N_t^\nu=L^2((0,t],d\nu).
+\]
+Its cumulative function
+\[
+A_\nu(t):=\nu((0,t])
+\]
+is continuous and nondecreasing.  The probability-integral-transform / generalized-inverse
+map gives a unitary
+\[
+\mathcal C_\nu:
+L^2((0,S),d\nu)
+\longrightarrow
+L^2((0,A_\nu(S)),ds)
+\]
+which sends the support projection \(1_{(0,t]}\) to
+\(1_{(0,A_\nu(t)]}\), up to repetitions on \(\nu\)-null flat intervals.  Thus the
+atomless scalar support nest is unitarily equivalent to the standard Lebesgue support nest
+after cumulative-measure reparameterization.
+
+Applying Lemma R43-GC1 in that coordinate proves:
+\[
+\boxed{
+\text{a compatible codimension-one hyperplane preserves scalar multiplicity
+for every atomless scalar support nest.}
+}
+\tag{R43.10bp0}
+\]
+
 ---
 
-## 3I. GC-M1 closes at candidate level
+## 3I. First scalar-multiplicity candidate and its GC-AC firewall
 
 Return to the full odd Gamma nest from R43.10bc.  Fix the terminal source radius \(S\).
-Let \(h_{0,S}\) be the Riesz representative, in the **full odd Gamma Hilbert space at
-radius \(S\)**, of the compatible first boundary functional \(\beta_S^{(0)}\).
+Let \(h_{0,S}\) be the Riesz representative, in the full odd Gamma Hilbert space at radius
+\(S\), of the compatible first boundary functional \(\beta_S^{(0)}\).
 
 For \(Q<S\), source compatibility gives
 \[
@@ -1663,20 +1785,31 @@ N_Q\cap h_{0,S}^{\perp}.
 }
 \tag{R43.10bq}
 \]
-Thus the constrained Gamma radius nest is exactly of the form covered by Lemma R43-GC1.
-Consequently
+The intrinsic full odd nest is scalar and atomless by Sections 3G and 3J.3.  The
+atomless-measure extension R43.10bp0 of Lemma R43-GC1 therefore gives
 \[
 \boxed{
-\textbf{GC-M1 holds}
+\mathrm{GC\!-\!M1}_{\rm scalar}
+\text{ at candidate level.}
 }
 \tag{R43.10br}
 \]
-provided the canonical-system literature interface R43.10ay--R43.10az is accepted.
 
-Combining GC-M1 with the repaired analyticity result R43.10au and the already reviewed
-conditional implication R43.10ai yields
+This statement alone does **not** imply cyclicity of the first-jet vector in the natural
+radius variable.  A scalar vector may vanish on a singular-continuous part of the scalar
+representing measure.  The missing condition is exactly GC-AC:
+\[
+\nu_{R,S}\ll dQ.
+\]
+
+Accordingly, the earlier terminal-free conclusions are valid at this stage only under the
+additional GC-AC hypothesis:
 \[
 \boxed{
+\mathrm{GC\!-\!M1}_{\rm scalar}
++
+\mathrm{GC\!-\!AC}
+\Longrightarrow
 \overline{
 J_{R,S}\mathscr G_R^0
 +
@@ -1687,9 +1820,11 @@ J_{R,S}\mathscr G_R^0
 }
 \tag{R43.10bs}
 \]
-Equivalently, the original terminal-free cyclicity gate is positive:
+Equivalently,
 \[
 \boxed{
+\mathrm{GC\!-\!AC}
+\Longrightarrow
 \overline{
 Y_{R,S}V_R+
 \operatorname{span}\{Y_{Q,S}\zeta_Q:R<Q<S\}
@@ -1699,12 +1834,11 @@ V_S.
 }
 \tag{R43.10bt}
 \]
-
-Hence every weak cluster \(w\) of the last normal orbit
+Under the same hypothesis every weak cluster \(w\) of
 \[
 w_U=W_{R,S}^{[U]}\varepsilon_R
 \]
-must satisfy
+satisfies
 \[
 \boxed{
 w\in(H_S^0)^\perp
@@ -1714,8 +1848,7 @@ w\in(H_S^0)^\perp
 \tag{R43.10bu}
 \]
 
-This is **not yet Strong Terminal**.  It removes all tangential weak escape, but the scalar
-normal coefficient
+Even then this is **not yet Strong Terminal**.  The remaining scalar normal coefficient
 \[
 b_U
 :=
@@ -1725,164 +1858,175 @@ W_{R,S}^{[U]}\varepsilon_R,
 \rangle
 \tag{R43.10bv}
 \]
-may still lose norm or fail to converge.  The remaining exact gate becomes
+must still satisfy
 \[
 \boxed{
-b_U\to b
-\quad\text{with}\quad
+b_U\to b,
+\qquad
 |b|=1
 \quad?
 }
 \tag{R43.10bw}
 \]
-Equivalently one still must exclude weak norm escape of the unit normal orbit and control its
-phase.
 
 ### Status of Sections 3F--3I
 
-- R43.10ak--R43.10au: new explicit repair of the analyticity proof, **AI-GREEN candidate**;
-- R43.10av--R43.10bc: canonical-system scalarization, **AI-GREEN candidate with explicit
-  literature dependencies**;
-- Lemma R43-GC1, R43.10bd--R43.10bp: new self-contained Hilbert-space/Hardy argument,
-  **AI-GREEN candidate**;
-- R43.10br--R43.10bu: GC-M1 and Gamma cyclicity are therefore **candidate-GREEN only**,
-  pending independent review of all three inputs above.
+- R43.10ak--R43.10au: explicit analyticity repair, AI-GREEN candidate;
+- R43.10av--R43.10bc: source-checked scalarization interface, hardened to avoid any
+  determinant-normalized overclaim;
+- Lemma R43-GC1 and R43.10bp0: self-contained scalar/codimension-one mechanism plus
+  atomless-measure extension, AI-GREEN candidate;
+- R43.10br: \(\mathrm{GC\!-\!M1}_{\rm scalar}\) candidate only;
+- R43.10bs--R43.10bu: explicitly **conditional on GC-AC**.
 
-No R37/G4c statement is used or changed.
+Section 3K supplies the subsequent candidate proof of GC-AC.  No R37/G4c statement is used
+or changed.
 
 
----
+## 3J. Source-checked scalar multiplicity and the GC-AC split
 
-## 3J. Source-checked correction: scalar multiplicity is not yet Lebesgue absolute continuity
+The literature source check validates the inverse exponential-type and even-measure
+diagonalization interfaces used in Section 3G, while also fixing exactly what they do and do
+not imply.
 
-The literature source check validates the two imported statements used in Section 3G, but it
-also exposes an overreach in the first GC-M1 candidate.
+### 3J.1 What the checked literature gives
 
-### 3J.1 What the checked literature really gives
-
-Bessonov--Denisov Theorem 2.4 identifies the smooth support-\(Q\) completion in
-\(L^2(\mu_\Gamma)\) with the de Branges truncation
+Bessonov--Denisov, **published Inventiones version**, Theorem 2.4 identifies the intrinsic
+smooth support-\(Q\) completion in \(L^2(\mu_\Gamma)\) with a de Branges truncation.  For the **chosen** diagonal realization
+\(H_\Gamma^{\mathrm{diag}}\) from Section 3G,
 \[
 B_{L_Q},
 \qquad
 T(L_Q)=Q,
 \qquad
-T(r)=\int_0^r\sqrt{\det H_\Gamma(t)}\,dt.
+T(r)=\int_0^r\sqrt{\det H_\Gamma^{\mathrm{diag}}(t)}\,dt.
 \tag{R43.10bx}
 \]
-Zhang Theorem 2.6 (equivalently Makarov--Poltoratski Theorem 3.5) gives a **diagonal**
-canonical realization of every even positive Poisson-finite measure, hence of
-\(\mu_\Gamma\).
+Zhang Theorem 2.6, equivalently Makarov--Poltoratski Theorem 3.5, gives existence of
+**a diagonal canonical realization** of every even positive Poisson-finite measure, hence
+of \(\mu_\Gamma\).  No uniqueness of that realization is asserted.
 
-For a diagonal Hamiltonian
+For the chosen diagonal Hamiltonian
 \[
-H_\Gamma(t)
+H_\Gamma^{\mathrm{diag}}(t)
 =
 \begin{pmatrix}
 h_1(t)&0\\
 0&h_2(t)
 \end{pmatrix},
 \]
-the canonical parity identities imply that the odd spectral subspace is the image of the
-second coordinate only.  Therefore the **full odd canonical chain is scalar**: before the
-\(\beta^{(0)}\)-constraint it is a multiplicity-one scalar support nest.
+the parity identities R43.10ba imply that the odd spectral subspace is the image of the
+second coordinate only.  Therefore the **full odd canonical chain is scalar** before the
+\(\beta^{(0)}\)-constraint.
 
-This conclusion does **not** require
+The source-checked Szegő input also gives
 \[
-\det H_\Gamma>0\quad\text{a.e.}
+T(r)\to\infty,
 \]
-and survives possible zero-determinant pieces.
-
-### 3J.2 The missing point in the earlier determinant-normalized argument
-
-The checked sources do **not** assert that the diagonal Hamiltonian furnished for an
-arbitrary positive Poisson-finite measure satisfies
+hence every finite support radius \(Q\) is reached:
 \[
-\det H_\Gamma>0
+L_Q<\infty.
+\]
+
+### 3J.2 What the checked literature does not give
+
+The general even-measure diagonalization theorem does **not** assert
+\[
+\det H_\Gamma^{\mathrm{diag}}>0
 \quad\text{a.e.}
 \]
-The general inverse theory explicitly allows Hamiltonians with rank-one / zero-determinant
-parts.
+Rank-one / zero-determinant pieces are allowed.
 
-Consequently the type map
+The stronger Makarov--Poltoratski correspondence with diagonal determinant-normalized
+Hamiltonians is tied to the PW-sampling class.  Our concrete Gamma measure fails that
+hypothesis by R43.10ay2:
 \[
-Q=T(r)
+\sup_x\mu_\Gamma((x,x+1))=\infty.
 \]
-can push the scalar odd state measure to a measure in the natural radius variable \(Q\) with
-a singular component.  Open rank-one intervals would create atoms; more diffuse
-zero-determinant sets can in principle create a singular-continuous component.
+Therefore that theorem is not available to upgrade the natural radius model to Lebesgue
+measure.
 
-Thus the earlier statement
-\[
-H_\Gamma(Q)
-=
-\operatorname{diag}(a(Q),a(Q)^{-1})
-\quad\text{a.e. in the natural }Q\text{-coordinate}
-\]
-is **not justified solely by the two checked literature theorems**.
+This is a literature-interface limitation, not a universal impossibility theorem for all
+future methods.
 
-The determinant-normalized model R43.10az--R43.10bc must therefore be read as a
-**sufficient regular case**, not as an already established consequence of
-Bessonov--Denisov + Zhang.
+### 3J.3 Atomlessness of the intrinsic P11 radius chain
 
-### 3J.3 Atomlessness of the concrete P11 radius chain
-
-The concrete P11 Gamma support spaces are nevertheless continuous in the radius parameter.
-
-The fixed-radius core argument R43.10ax0--R43.10ax2 gives
+The concrete P11 Gamma support spaces are continuous in the radius parameter.  The
+fixed-radius core argument gives
 \[
 \overline{\bigcup_{q<Q}\mathcal V_q^\Gamma}^{\ \|\cdot\|_\Gamma}
 =
-\mathcal V_Q^\Gamma.
+\mathcal V_Q^\Gamma,
 \tag{R43.10by}
 \]
-Support closedness gives
+and support closedness gives
 \[
 \bigcap_{q>Q}\mathcal V_q^\Gamma
 =
 \mathcal V_Q^\Gamma.
 \tag{R43.10bz}
 \]
-Hence the orthogonal projection nest is strongly continuous from both sides.  Therefore the
-scalar measure of the odd radius nest has **no atoms**.
+Hence the orthogonal projection nest is strongly continuous from both sides.  Its scalar
+representing measure therefore has **no atoms**.
 
-So the only possible hidden scalar channel is singular-continuous with respect to Lebesgue
-measure in the natural radius variable \(Q\).
+Thus, after scalar multiplicity one is known, the only possible hidden radius channel is
+singular-continuous with respect to Lebesgue measure in the natural \(Q\)-coordinate.
 
-### 3J.4 The codimension-one constraint still preserves scalar multiplicity
+### 3J.4 Why scalar multiplicity is realization-independent
 
-Lemma R43-GC1 is not tied to Lebesgue measure.  An atomless scalar support nest can first be
-put into a standard scalar \(L^2\)-model by its cumulative measure coordinate; the same
-Hardy/Volterra construction then shows that the compatible hyperplane
-\[
-\beta^{(0)}=0
-\]
-preserves multiplicity one.
-
-Thus the checked diagonal canonical-system input plus Lemma R43-GC1 establish at candidate
-level:
+The P11 projection nest
 \[
 \boxed{
-\text{the constrained Gamma radius nest is scalar multiplicity one.}
+\{P_Q^\Gamma:0<Q<S\}
+}
+\]
+is defined intrinsically from the Gamma form and the support-constrained spaces \(H_Q^0\).
+It exists before any canonical-system realization is selected.
+
+On the Fourier side, the corresponding unconstrained support spaces are the intrinsic
+closures
+\[
+\overline{\mathcal E_Q}^{\,L^2(\mu_\Gamma)}.
+\]
+A canonical system provides a **unitary model** of this already defined nested family; it
+does not define the family itself.
+
+Nest multiplicity is invariant under unitary equivalence.  Therefore the existence of
+**one** diagonal realization exhibiting one odd coordinate is sufficient to prove scalar
+multiplicity of the intrinsic odd Gamma nest.  No uniqueness of
+\(H_\Gamma^{\mathrm{diag}}\) is required.
+
+Lemma R43-GC1 is likewise not tied to Lebesgue measure in the original radius coordinate:
+an atomless scalar support nest can first be placed in a standard scalar \(L^2\)-model by
+its cumulative measure coordinate, and the same Hardy/Volterra construction applies to the
+compatible hyperplane
+\[
+\beta^{(0)}=0.
+\]
+
+Hence, at candidate level,
+\[
+\boxed{
+\text{the constrained intrinsic Gamma radius nest has scalar multiplicity one.}
 }
 \tag{R43.10ca}
 \]
 
-This is weaker than the previous "Lebesgue model in natural \(Q\)" assertion but is the
-correct source-checked conclusion.
+This is exactly
+\[
+\boxed{
+\mathrm{GC\!-\!M1}_{\rm scalar}.
+}
+\]
 
-### 3J.5 Exact remaining cyclicity obstruction
+### 3J.5 Exact remaining cyclicity obstruction before Section 3K
 
 Let
 \[
 \nu_{R,S}
 \]
-be a scalar measure representing the constrained multiplicity-one nest in the natural radius
-parameter \(Q\in(R,S)\), and let
-\[
-G_{R,S}(Q)
-\]
-be the scalar representative of the vector
+be a scalar measure representing this constrained multiplicity-one nest in the natural
+radius variable \(Q\in(R,S)\), and let \(G_{R,S}(Q)\) be the scalar representative of
 \[
 (I-P_R^\Gamma)g_S.
 \]
@@ -1904,16 +2048,14 @@ d\gamma_Q
 \tag{R43.10cc}
 \]
 
-Decompose
+By atomlessness,
 \[
 d\nu_{R,S}
 =
-w(Q)\,dQ+d\nu_{R,S}^{\mathrm{sc}},
+w(Q)\,dQ+d\nu_{R,S}^{\mathrm{sc}}.
 \tag{R43.10cd}
 \]
-where atomlessness has already removed a pure-point part.
-
-Equation (R43.10cb) together with (R43.10cc) implies:
+Equating the Lebesgue and singular parts in R43.10cb--R43.10cc gives:
 
 1. \(w(Q)>0\) for Lebesgue-a.e. \(Q\);
 2. \(G_{R,S}(Q)\ne0\) for \(w(Q)dQ\)-a.e. \(Q\);
@@ -1930,58 +2072,32 @@ Therefore
 \tag{R43.10ce}
 \]
 
-So the previous GC-M1 gate splits into two logically distinct statements:
-
+This isolates
 \[
 \boxed{
-\textbf{GC-M1}_{\rm scalar}:
-\text{ scalar multiplicity one}
-}
-\]
-and
-\[
-\boxed{
-\textbf{GC-AC}:
-\nu_{R,S}\ll dQ
-\text{ in the natural radius variable.}
+\textbf{GC-AC: }
+\nu_{R,S}\ll dQ.
 }
 \tag{R43.10cf}
 \]
 
-The source-checked diagonal canonical-system argument plus R43-GC1 address
-\(\textbf{GC-M1}_{\rm scalar}\).  The **only remaining terminal-free density obstruction is
-GC-AC**, i.e. exclusion of a singular-continuous zero-type channel.
+### 3J.6 Booking before the higher-jet argument
 
-### 3J.6 Consequence for the previous GC-M1 candidate booking
-
-The earlier candidate statement
-\[
-\textbf{GC-M1 holds}
-\]
-in R43.10br was too strong if interpreted as the natural-radius Lebesgue model used in
-R43.10ah.
-
-The corrected booking at the end of Section 3J is:
+At the end of Section 3J alone the correct booking is
 \[
 \boxed{
-\textbf{GC-M1}_{\rm scalar}
+\mathrm{GC\!-\!M1}_{\rm scalar}
 \text{ candidate-GREEN;}
 \qquad
-\textbf{GC-AC}
-\text{ was OPEN at this stage.}
+\mathrm{GC\!-\!AC}
+\text{ still requires an additional argument.}
 }
 \tag{R43.10cg}
 \]
 
-Section 3K, added subsequently, gives a new candidate proof of GC-AC using the **total
-higher-jet Riesz family**.  Thus R43.10bs--R43.10bu are no longer merely conditional in
-the current candidate chain, but they remain unpromoted pending independent review of 3K
-and the scalar multiplicity-one input.
+Section 3K supplies that additional candidate argument using the total higher-jet Riesz
+family.  No R37/G4c conclusion is used, and no Strong-Terminal promotion is booked here.
 
-This correction uses no R37/G4c input.
-
-
----
 
 ## 3K. All constrained jet-Riesz vectors eliminate the singular-continuous radius channel
 
@@ -2155,41 +2271,248 @@ Then
 
 ### 3K.3 Every higher-jet nest measure is absolutely continuous in \(Q\)
 
-The repaired fixed-domain holomorphy argument of Sections 3D/3F applies verbatim to every
-fixed jet order \(m\).
-
-On the fixed dilated form domain, let
+Fix an arbitrary jet order
 \[
-u_{m,Q}:=A(Q)^{-1}b_{m,Q},
+m\ge1
+\]
+and a real reference radius \(Q_0>0\).  We now verify the fixed-domain analytic argument
+for this arbitrary \(m\), rather than importing the first-jet proof by analogy.
+
+Use the same complex disk \(\mathbb D_{Q_0}\) and fixed form domain
+\(\mathscr V_{Q_0}\) as in R43.10al--R43.10ar, with \(A(Q)\) understood throughout in
+the **complex-bilinear real-form complexification** fixed in R43.10z0.  In particular, no
+sesquilinear Hilbert-Riesz map is being analytically continued.  The estimates there are
+independent of the jet index and give an operator-norm holomorphic family
+\[
+Q\longmapsto
+A(Q)
+\]
+with a holomorphic inverse \(A(Q)^{-1}\) on a smaller disk about \(Q_0\).
+
+Choose the holomorphic branch of \(Q^{1/2}\) on this disk.  For the fixed order \(m\),
+define
+\[
+\Phi_m(Q,y)
+=
+\operatorname{sgn}(y)I_m(Q|y|),
 \qquad
-u_{0,Q}:=A(Q)^{-1}b_{0,Q},
+I_m(z)
+=
+\int_0^z s^me^{-s/2}\,ds.
+\]
+Because \(I_m\) is entire, the pulled-back jet functional is
+\[
+\boxed{
+b_{m,Q}(h)
+=
+Q^{1/2}
+\int_{-1}^1
+h(y)\Phi_m(Q,y)\,dy.
+}
+\tag{R43.10cq0}
+\]
+For every closed subdisk and every integer \(k\ge0\),
+\[
+\sup_{\substack{Q\text{ in subdisk}\\ |y|\le1}}
+\left|
+\partial_Q^k
+\bigl(
+Q^{1/2}\Phi_m(Q,y)
+\bigr)
+\right|
+<\infty.
+\]
+Since
+\[
+\mathscr V_{Q_0}\hookrightarrow L^2(-1,1),
+\]
+Cauchy--Schwarz gives
+\[
+\boxed{
+\|\partial_Q^k b_{m,Q}\|_{\mathscr V_{Q_0}^*}
+\le
+C_{m,k,Q_0}.
+}
+\tag{R43.10cq1}
+\]
+
+The dependence on the jet order can be made explicit locally.  Keep the smaller disk
+\(|Q-Q_0|\le\rho\) and use the larger disk \(|Q-Q_0|\le2\rho\) from Section 3F.
+Put
+\[
+M_{Q_0,\rho}:=Q_0+2\rho.
+\]
+For every complex \(z\),
+\[
+I_m(z)
+=
+z^{m+1}
+\int_0^1
+t^m e^{-tz/2}\,dt,
+\]
+hence on the larger disk and \(|y|\le1\),
+\[
+|I_m(Q|y|)|
+\le
+\frac{
+M_{Q_0,\rho}^{m+1}e^{M_{Q_0,\rho}/2}
+}{m+1}.
+\tag{R43.10cq1a}
+\]
+The chosen square-root branch is uniformly bounded there.  Cauchy's derivative estimate
+from the larger disk to the smaller one therefore gives, for every fixed \(k\ge0\),
+\[
+\boxed{
+\sup_{|Q-Q_0|\le\rho}
+\|\partial_Q^k b_{m,Q}\|_{\mathscr V_{Q_0}^*}
+\le
+C_{k,Q_0,\rho}
+\frac{M_{Q_0,\rho}^{m+1}}{m+1},
+}
+\tag{R43.10cq1b}
+\]
+where the constant is independent of \(m\).  Thus the currently available local
+higher-jet holomorphy constants can be chosen with at most exponential growth in the jet
+order.
+
+Since \(A(Q)^{-1}\), the zeroth-jet correction, and \(d_Q^{-1}\) are uniformly bounded
+on a still smaller closed disk, the same argument yields the crude local bound
+\[
+\boxed{
+\sup_{|Q-Q_0|\le\rho'}
+\|\widetilde g_{m,Q}\|_{\mathscr V_{Q_0}}
+\le
+C'_{Q_0,\rho'}
+\frac{M_{Q_0,\rho}^{m+1}}{m+1}.
+}
+\tag{R43.10cq1c}
+\]
+
+This is useful quantitative information, but it is **not** a B-JMOM estimate.  The bound
+concerns the Section-3K higher-jet Riesz family.  Turning it into a weighted estimate for
+the canonical C6a ONB coefficients would require quantitative control of the
+orthogonalization/change-of-basis constants (equivalently suitable lower bounds for the
+relevant finite jet Gram determinants).  No such uniform-in-\(m\) conditioning theorem is
+currently booked.
+
+Thus
+\[
+\boxed{
+\text{explicit }C_{m,k,Q_0}\text{ growth}
+\not\Rightarrow
+\text{B-JMOM without a jet-basis conditioning theorem.}
+}
+\tag{R43.10cq1d}
+\]
+
+Thus
+\[
+\boxed{
+Q\longmapsto b_{m,Q}\in\mathscr V_{Q_0}^*
+\text{ is holomorphic.}
+}
+\tag{R43.10cq2}
+\]
+The same statement for \(m=0\) is already part of the Section 3F construction.
+
+Set
+\[
+u_{m,Q}
+=
+A(Q)^{-1}b_{m,Q},
+\qquad
+u_{0,Q}
+=
+A(Q)^{-1}b_{0,Q},
 \]
 and
 \[
-d_Q:=b_{0,Q}(u_{0,Q})>0.
+d_Q
+=
+b_{0,Q}(u_{0,Q}).
 \]
-The pulled-back constrained Riesz vector is
+All three maps are holomorphic.  At the real point \(Q_0\),
 \[
+d_{Q_0}>0,
+\]
+so after shrinking the disk,
+\[
+d_Q\ne0.
+\]
+Hence
+\[
+\boxed{
 \widetilde g_{m,Q}
 =
 u_{m,Q}
 -
-\frac{b_{0,Q}(u_{m,Q})}{d_Q}\,u_{0,Q}.
+\frac{b_{0,Q}(u_{m,Q})}{d_Q}
+u_{0,Q}
+}
 \tag{R43.10cq}
 \]
-Every factor is locally holomorphic in \(Q\), so
+is holomorphic as a \(\mathscr V_{Q_0}\)-valued map.
+
+For positive real \(Q\), this vector is exactly the pulled-back constrained Gamma-Riesz
+vector.  Indeed, if
+\[
+h\in\ker b_{0,Q},
+\]
+then
+\[
+\begin{aligned}
+a_Q[h,\widetilde g_{m,Q}]
+&=
+a_Q[h,u_{m,Q}]
+-
+\frac{b_{0,Q}(u_{m,Q})}{d_Q}
+a_Q[h,u_{0,Q}]\\
+&=
+b_{m,Q}(h)
+-
+\frac{b_{0,Q}(u_{m,Q})}{d_Q}
+b_{0,Q}(h)\\
+&=
+b_{m,Q}(h).
+\end{aligned}
+\tag{R43.10cq3}
+\]
+Therefore
+\[
+D_Q\widetilde g_{m,Q}=g_{m,Q}.
+\]
+
+Evaluating the Riesz identity at \(g_{m,Q}\) gives
+\[
+\boxed{
+\gamma_m(Q)
+=
+\|g_{m,Q}\|_{\Gamma,Q}^2
+=
+b_{m,Q}(\widetilde g_{m,Q}).
+}
+\tag{R43.10cq4}
+\]
+The right side is the restriction of a holomorphic scalar function from the complexified
+bilinear problem to the positive real axis.  On that real axis it equals the genuine
+Hilbert norm square; no such norm interpretation is made off the real axis.  Thus
 \[
 \boxed{
 Q\longmapsto\gamma_m(Q)
-=
-b_{m,Q}(\widetilde g_{m,Q})
 \text{ is real analytic on }(0,\infty)
 }
 \tag{R43.10cr}
 \]
 for every fixed \(m\ge1\).
 
-Consequently the scalar nest measure of \(g_{m,S}\) is absolutely continuous:
+By R43.10cp,
+\[
+\gamma_m(Q)
+=
+\|P_Q^\Gamma g_{m,S}\|_{\Gamma,S}^2,
+\]
+so \(\gamma_m\) is nondecreasing in \(Q\).  Real analyticity implies local absolute
+continuity; therefore its Lebesgue--Stieltjes measure is
 \[
 \boxed{
 d\|P_Q^\Gamma g_{m,S}\|_{\Gamma,S}^2
@@ -2200,8 +2523,9 @@ d\gamma_m(Q)
 }
 \tag{R43.10cs}
 \]
+No strict-positivity statement for \(\gamma_m'\) is required.
 
-No positivity claim for \(\gamma_m'\) is required here.
+Since \(m\ge1\) was arbitrary, R43.10cs holds for the whole countable higher-jet family.
 
 ### 3K.4 The Riesz family is dense in the constrained Gamma space
 
@@ -2237,7 +2561,11 @@ H_S^0.
 
 ### 3K.5 GC-AC follows from total absolutely-continuous Riesz data
 
-Now use the scalar multiplicity-one model from Section 3J.4:
+Now use the scalar multiplicity-one conclusion from Section 3J.4.  This is a statement
+about the **intrinsic** projection nest \(\{P_Q^\Gamma\}\), so it is independent of which
+diagonal canonical realization was used to prove scalarity.  By the spectral theorem for a
+scalar continuous nest, choose any scalar representing measure \(\nu_S\) in the natural
+radius variable and a unitary model
 \[
 H_S^0
 \simeq
@@ -2251,7 +2579,13 @@ w(Q)\,dQ+d\nu_S^{\mathrm{sc}}
 \]
 and no atoms.
 
-Let \(G_m\) denote the scalar representative of \(g_{m,S}\).
+Fix this unitary identification once and for all for the remainder of Section 3K.5.
+The density statement R43.10ct, the scalar representatives below, the measure decomposition
+\(d\nu_S=w(Q)dQ+d\nu_S^{\mathrm{sc}}\), and the identity R43.10cu are all read inside
+this **same** Hilbert model \(L^2((0,S),d\nu_S)\).  No change of scalar realization is
+made during the contradiction argument.
+
+Let \(G_m\) denote, in this fixed model, the scalar representative of \(g_{m,S}\).
 By the projection-nest spectral theorem,
 \[
 \boxed{
@@ -2276,26 +2610,52 @@ G_m=0
 \]
 for every \(m\ge1\).
 
-Because the jet index set is countable, there is one Borel set \(E\subset(0,S)\) such that
+Because
 \[
-\nu_S^{\mathrm{sc}}((0,S)\setminus E)=0
+d\nu_S^{\mathrm{sc}}\perp dQ,
 \]
-and
+choose first a Borel singular support \(E_0\subset(0,S)\) with
 \[
-G_m|_E=0
+|E_0|=0,
 \qquad
-\forall m\ge1.
+\nu_S^{\mathrm{sc}}((0,S)\setminus E_0)=0.
+\tag{R43.10cv0}
+\]
+For every \(m\ge1\), absolute continuity of \(d\gamma_m\) gives
+\[
+0=d\gamma_m(E_0)
+=
+\int_{E_0}|G_m(Q)|^2\,d\nu_S(Q)
+=
+\int_{E_0}|G_m(Q)|^2\,d\nu_S^{\mathrm{sc}}(Q).
+\tag{R43.10cv1}
+\]
+Hence \(G_m=0\) \(\nu_S^{\mathrm{sc}}\)-a.e. on \(E_0\).  Since the jet family is
+countable, intersect the corresponding full-measure sets to obtain one Borel
+\(E\subset E_0\) such that
+\[
+\nu_S^{\mathrm{sc}}((0,S)\setminus E)=0,
+\qquad
+G_m|_E=0
+\quad
+\nu_S^{\mathrm{sc}}\text{-a.e. for every }m\ge1.
+\tag{R43.10cv2}
 \]
 If
 \[
 \nu_S^{\mathrm{sc}}\ne0,
 \]
-then
+then the closed subspace
 \[
+\mathcal H_E
+:=
+\{F\in L^2((0,S),d\nu_S):F=0\text{ a.e. on }E^c\}
+\simeq
 L^2(E,d\nu_S^{\mathrm{sc}})
 \]
-is a nonzero closed subspace orthogonal to every \(G_m\).  This contradicts the density
-R43.10ct.
+is nonzero.  Because \(|E|=0\), its ambient measure is purely the singular part there,
+and R43.10cv2 makes \(\mathcal H_E\) orthogonal to every \(G_m\).  This contradicts
+the density R43.10ct.
 
 Therefore
 \[
@@ -2381,10 +2741,12 @@ W_{R,S}^{[U]}\varepsilon_R,
 
 ### Status of Section 3K
 
-Section 3K is a new **AI-GREEN candidate** derived after the source-checked GC-AC split.
-Its key ingredients R43.10ch--R43.10ct are elementary/self-contained; the final measure-model
-step R43.10cu--R43.10cw depends on the scalar multiplicity-one candidate from Sections
-3G--3J.
+Section 3K remains an **AI-GREEN candidate** derived after the source-checked GC-AC
+split.  The all-(m) holomorphy step R43.10cq0--R43.10cs is now written explicitly rather
+than imported by analogy, and Section 3K.5 records why the scalar model is independent of
+the nonunique canonical realization.  The final measure-model step R43.10cu--R43.10cw
+still depends on the scalar multiplicity-one candidate from Sections 3G--3J and requires
+independent review on this hardened head before freeze.
 
 No R37/G4c conclusion is used.  No Strong-Terminal promotion is booked.
 
@@ -2899,9 +3261,18 @@ functional calculus.
 
 ### Route B — normal tail compactness
 
-Prove a uniform canonical-jet tail estimate for the single orbit \(W_Ue_{R,0}\).  Together
-with convergence of every finite coordinate, such a tail estimate would prevent weak escape
-and force strong convergence.
+Under the candidate GC-AC closure, Section 7A below makes this route exact.  Write
+\[
+W_U\varepsilon_R=b_U\varepsilon_S+h_U,
+\qquad h_U\in H_S^0.
+\]
+Then \(b_U\in\mathbb R\), \(h_U\rightharpoonup0\), and
+\[
+\|h_U\|^2=1-b_U^2.
+\]
+Thus the unresolved no-escape problem is precisely whether the weakly vanishing tangential
+remainder is uniformly tight in a fixed dense finite-dimensional exhaustion of \(H_S^0\).
+Section 7A gives an if-and-only-if tail criterion.
 
 ### Route C — third hard-constraint / edge layer
 
@@ -2946,15 +3317,1228 @@ gap, R43.10av--bc scalarizes the full odd Gamma nest through a diagonal canonica
 and Lemma R43-GC1 proves that the compatible \(\beta^{(0)}\) hyperplane constraint preserves
 scalar nest multiplicity.
 
-The source check after the first GC-M1 candidate splits Route D more sharply:
+Sections 3J--3K now split and then candidate-close this route:
 
 - \(\textbf{GC-M1}_{\rm scalar}\): scalar multiplicity one, candidate-GREEN;
-- \(\textbf{GC-AC}\): absence of a singular-continuous scalar radius measure in the natural
-  \(Q\)-coordinate, **OPEN**.
+- \(\textbf{GC-AC}\): candidate-closed by the total higher-jet Riesz family in
+  R43.10cq0--R43.10cw.
 
-Only if GC-AC is closed does the reviewed cyclicity implication force the last weak normal
-orbit into \(\mathbb C\varepsilon_S\).  After that, the remaining full C6 problem is the one
-scalar normal coefficient \(b_U\) in R43.10bv--bw.
+The exact-head hardening review subsequently repaired two presentation-level proof hazards:
+the Bessonov--Denisov theorem-number version ambiguity and the sesquilinear-Riesz
+holomorphy convention.  The latter is now handled by the real symmetric form and its
+complex-bilinear complexification R43.10z0.
+
+Therefore Route D is no longer the active mathematical obstruction at candidate level.
+It remains a review/freeze dependency.  Conditional on this candidate closure, the live
+Strong-Terminal obstruction is the scalar \(b_U\) and its tangential no-escape defect
+described next.
+
+---
+
+## 7A. Last Strong-Terminal scalar after GC-AC: reality and exact no-escape defect
+
+Assume the candidate GC-AC conclusion R43.10cx, hence the terminal-free cyclicity
+R43.10cy--R43.10da.  Put
+\[
+w_U:=W_{R,S}^{[U]}\varepsilon_R,
+\qquad
+b_U:=\langle w_U,\varepsilon_S\rangle.
+\]
+
+### 7A.1 The residual scalar is real
+
+Let \(\mathcal C_Xf=\overline f\) be complex conjugation on the odd graph space.
+The Gamma form, the finite hub/rest operators, the Schur term, and zero extension all have
+real coefficients/kernels.  Therefore every finite-terminal metric \(G_{X,U}\) commutes
+with \(\mathcal C_X\).  Positive functional calculus gives the same commutation for
+\(G_{X,U}^{\pm1/2}\), and hence
+\[
+\mathcal C_S W_{R,S}^{[U]}
+=
+W_{R,S}^{[U]}\mathcal C_R.
+\tag{R43.44}
+\]
+
+The boundary functional \(\beta_X^{(0)}\) is real.  Its normalized Riesz normal
+\(\varepsilon_X\) is therefore fixed by conjugation when the canonical positive phase
+\(\beta_X^{(0)}(\varepsilon_X)>0\) is chosen.  Consequently
+\[
+\boxed{
+b_U\in\mathbb R,
+\qquad -1\le b_U\le1.
+}
+\tag{R43.45}
+\]
+Thus the last phase ambiguity is only a possible **sign** ambiguity; there is no genuinely
+complex terminal phase.
+
+### 7A.2 Orthogonal defect decomposition
+
+Because
+\[
+H_S^0=\varepsilon_S^\perp,
+\]
+define
+\[
+\boxed{
+h_U
+:=
+P_{H_S^0}w_U
+=
+w_U-b_U\varepsilon_S.
+}
+\tag{R43.46}
+\]
+Since \(W_U\) is an isometry and \(\|\varepsilon_R\|=\|\varepsilon_S\|=1\),
+\[
+\boxed{
+\|h_U\|^2
+=
+1-b_U^2.
+}
+\tag{R43.47}
+\]
+
+Candidate GC-AC gives R43.10da: every weak cluster of \(w_U\) lies in
+\(\mathbb C\varepsilon_S\).  Hence
+\[
+\boxed{
+h_U\rightharpoonup0
+\quad\text{in }H_S^0.
+}
+\tag{R43.48}
+\]
+Indeed, a fixed tangential test vector detecting a nonzero subsequential limit would produce
+a weak cluster of \(w_U\) with a nonzero \(H_S^0\)-component, contradicting R43.10da.
+
+For two terminals \(T,U\), the fixed orthogonal splitting gives the exact identity
+\[
+\boxed{
+\|w_U-w_T\|^2
+=
+(b_U-b_T)^2
++
+\|h_U-h_T\|^2.
+}
+\tag{R43.49}
+\]
+Combining this with R43.5,
+\[
+\boxed{
+2-2L_{R,S}^{T,U}
+=
+(b_U-b_T)^2
++
+\|h_U-h_T\|^2.
+}
+\tag{R43.50}
+\]
+
+Since \(h_U\rightharpoonup0\), a strongly Cauchy \(h_U\)-orbit can only converge
+strongly to zero.  Therefore, under candidate GC-AC,
+\[
+\boxed{
+\text{Strong Terminal for the fixed pair }R<S
+\iff
+\bigl[b_U\text{ is Cauchy}\bigr]
+\ &\bigl[b_U^2\to1\bigr].
+}
+\tag{R43.51}
+\]
+Equivalently,
+\[
+b_U\to+1
+\quad\text{or}\quad
+b_U\to-1.
+\]
+No sign is selected at this stage.
+
+### 7A.3 Exact finite-dimensional tightness criterion for no escape
+
+Choose any increasing finite-dimensional sequence
+\[
+F_1\subset F_2\subset\cdots\subset H_S^0
+\]
+whose union is dense in the candidate-closed cyclic space.  Such an exhaustion can be
+chosen from a countable dense subset of the generators in R43.10g/R43.10cy: tangential
+limit vectors from \(\operatorname{Ran}W_{R,S}^{(0)}\) together with intermediate-radius
+Gamma generators.
+
+For every fixed \(N\), weak convergence R43.48 and finite dimensionality imply
+\[
+\|P_{F_N}h_U\|\longrightarrow0.
+\tag{R43.52}
+\]
+Hence
+\[
+1-b_U^2
+=
+\|P_{F_N}h_U\|^2
++
+\|(I-P_{F_N})h_U\|^2,
+\]
+and therefore
+\[
+\boxed{
+b_U^2\to1
+\iff
+\lim_{N\to\infty}
+\limsup_{U\to\infty}
+\|(I-P_{F_N})h_U\|
+=
+0.
+}
+\tag{R43.53}
+\]
+
+This is the exact **B-TIGHT** form of the last no-escape gate.  GC-AC supplies every fixed
+coordinate; what remains is a uniform tail estimate preventing those coordinates from
+running to infinity inside the fixed target graph Hilbert space.
+
+Thus R43 has now separated the final scalar problem into two sharply stated tasks:
+
+1. **B-TIGHT:** prove R43.53, equivalently \(b_U^2\to1\);
+2. **B-SIGN/Cauchy:** prove that the real scalar \(b_U\) has one terminal sign/limit.
+
+If a future theorem establishes suitable terminal continuity of \(b_U\), then B-TIGHT
+would automatically force eventual sign constancy.  Such continuity is **not** imported
+here; it is not presently a booked R4/R5 theorem.
+
+### 7A.4 Canonical jet-ONB form of B-TIGHT
+
+Use the complete canonical C6a jet ONB in the target,
+\[
+e_{S,0}=\varepsilon_S,
+\qquad
+\{e_{S,n}:n\ge1\}\text{ an ONB of }H_S^0.
+\]
+
+#### Coordinate-provenance firewall
+
+These vectors are the **canonical C6a orthonormal basis in the fixed target graph Hilbert
+metric**.  They are not the higher-jet Gamma-Riesz family
+\(\{g_{m,S}\}\) used in Section 3K to close GC-AC.  Accordingly the coefficients below
+are genuine ONB Fourier coefficients and Parseval is exact; no Riesz-basis or frame theorem
+for the Section-3K Riesz vectors is being assumed.
+
+The normalization is also already fixed by C6a: each one-dimensional jet layer is normalized
+to graph-Hilbert norm one and its remaining phase is fixed by positivity of the first active
+jet.  Thus the index \(n\) below labels canonical orthogonal jet **layers**; it is not a raw
+derivative coefficient such as \(f^{(n)}(0)\) or \(f^{(n)}(0)/n!\).
+
+Set
+\[
+c_{n,U}
+:=
+\langle
+W_Ue_{R,0},
+e_{S,n}
+\rangle.
+\tag{R43.54}
+\]
+Then
+\[
+c_{0,U}=b_U\in\mathbb R,
+\qquad
+c_{n,U}\longrightarrow0
+\quad(n\ge1\text{ fixed})
+\tag{R43.55}
+\]
+by R43.48.  Parseval gives the exact identity
+\[
+\boxed{
+1-b_U^2
+=
+\sum_{n\ge1}|c_{n,U}|^2.
+}
+\tag{R43.56}
+\]
+Therefore
+\[
+\boxed{
+\text{B-TIGHT}
+\iff
+\lim_{N\to\infty}
+\limsup_{U\to\infty}
+\sum_{n>N}|c_{n,U}|^2
+=
+0.
+}
+\tag{R43.57}
+\]
+
+This exhibits the remaining obstruction as an exact failure-of-uniform-summability problem:
+GC-AC proves
+\[
+c_{n,U}\to0
+\quad\text{for every fixed }n,
+\]
+but Strong Terminal still requires permission to pass that fixed-coordinate limit through
+the infinite Parseval sum.
+
+Let
+\[
+P_S^{[m]}
+:
+H_S^0\to\mathcal H_S^{[m]}
+=
+\overline{\operatorname{span}}\{e_{S,n}:n\ge m\}
+\]
+be the canonical deep-flag projection.  Then
+\[
+\|P_S^{[m]}h_U\|^2
+=
+\sum_{n\ge m}|c_{n,U}|^2.
+\]
+Hence R43.57 is equivalently the **exact primary flag-tightness gate**
+\[
+\boxed{
+\textbf{B-FLAGTIGHT:}\qquad
+\lim_{m\to\infty}
+\limsup_{U\to\infty}
+\|P_S^{[m]}h_U\|
+=
+0.
+}
+\tag{R43.57a}
+\]
+Equivalently, for every \(\varepsilon>0\) there exist a flag depth \(m\) and a terminal
+threshold \(U_0\) such that
+\[
+\boxed{
+\|P_S^{[m]}h_U\|<\varepsilon
+\qquad
+\forall U\ge U_0.
+}
+\tag{R43.57b}
+\]
+The depth \(m\) and threshold \(U_0\) are chosen jointly.  No stronger uniformity on a
+fixed bounded terminal interval is being asserted.
+
+Thus **B-FLAGTIGHT is equivalent to B-TIGHT**.  Weighted jet moments and orbit energies
+below are only sufficient tools for proving this exact gate.
+
+A concrete sufficient target is now immediate.  Let \(\omega_n\uparrow\infty\).  If one
+can prove
+\[
+\boxed{
+\sup_{U\ge U_0}
+\sum_{n\ge1}
+\omega_n|c_{n,U}|^2
+<\infty,
+}
+\tag{R43.58}
+\]
+then
+\[
+\sum_{n>N}|c_{n,U}|^2
+\le
+\frac{1}{\omega_{N+1}}
+\sum_{n>N}\omega_n|c_{n,U}|^2,
+\]
+uniformly in \(U\), and hence B-TIGHT follows.  The simplest named subgate is
+\[
+\boxed{
+\textbf{B-JMOM: }
+\sup_{U\ge U_0}
+\sum_{n\ge1}(1+n)|c_{n,U}|^2
+<\infty.
+}
+\tag{R43.59}
+\]
+B-JMOM is sufficient, not claimed necessary.
+
+#### 7A.4a Canonical compact-resolvent reformulation
+
+The ONB makes the abstract compactness route completely canonical.  Define the positive
+selfadjoint **jet-number operator**
+\[
+\boxed{
+N_S e_{S,n}=n e_{S,n},
+\qquad n\ge1,
+}
+\tag{R43.59a}
+\]
+on \(H_S^0\), with
+\[
+\mathcal D(N_S)
+=
+\left\{
+x=\sum_{n\ge1}x_ne_{S,n}:
+\sum_{n\ge1}n^2|x_n|^2<\infty
+\right\}.
+\]
+Its resolvent is compact because its eigenvalues have multiplicity one and tend to
+\(+\infty\).  Its form domain is
+\[
+\mathcal D(N_S^{1/2})
+=
+\left\{
+x:
+\sum_{n\ge1}n|x_n|^2<\infty
+\right\}.
+\tag{R43.59b}
+\]
+Since
+\[
+h_U
+=
+\sum_{n\ge1}c_{n,U}e_{S,n},
+\]
+B-JMOM is exactly the uniform form-energy bound
+\[
+\boxed{
+\sup_{U\ge U_0}
+\left\|(I+N_S)^{1/2}h_U\right\|^2
+<\infty.
+}
+\tag{R43.59c}
+\]
+
+More generally, for any monotone weight \(\rho_n\uparrow\infty\), define
+\[
+N_{S,\rho}e_{S,n}=\rho_ne_{S,n}.
+\tag{R43.59d}
+\]
+Then \((I+N_{S,\rho})^{-1}\) is compact and
+\[
+\boxed{
+\sup_{U\ge U_0}
+\langle (I+N_{S,\rho})h_U,h_U\rangle
+<\infty
+\Longrightarrow
+\text{B-TIGHT}.
+}
+\tag{R43.59e}
+\]
+Indeed the form-unit ball of a positive compact-resolvent operator is relatively compact in
+\(H_S^0\).  Every subsequence of \(h_U\) therefore has a strongly convergent
+subsubsequence; R43.48 forces every such strong limit to equal the unique weak limit \(0\).
+Hence \(\|h_U\|\to0\).
+
+Thus the polynomial choice \(\rho_n=1+n\) is only one convenient sufficient route.
+Logarithmic, fractional, superlinear, or any other coercive weight is equally legitimate.
+
+There is also an exact **flag-only** representation which removes any appearance that
+\(N_S\) is an arbitrary auxiliary operator.  C6a gives
+\[
+\mathcal H_S^{[m]}
+=
+\overline{\operatorname{span}}\{e_{S,n}:n\ge m\},
+\qquad m\ge1.
+\]
+Let \(P_S^{[m]}\) be the orthogonal projection onto \(\mathcal H_S^{[m]}\).  For
+\[
+h=\sum_{n\ge1}c_ne_{S,n}
+\]
+Tonelli's theorem gives
+\[
+\begin{aligned}
+\sum_{m\ge1}\|P_S^{[m]}h\|^2
+&=
+\sum_{m\ge1}\sum_{n\ge m}|c_n|^2\\
+&=
+\sum_{n\ge1}n|c_n|^2.
+\end{aligned}
+\]
+Hence
+\[
+\boxed{
+\langle N_Sh,h\rangle
+=
+\sum_{m\ge1}\|P_S^{[m]}h\|^2.
+}
+\tag{R43.59e0}
+\]
+More generally, if \(\rho_0=0\) and \(\rho_n\uparrow\infty\), then
+\[
+\boxed{
+\sum_{n\ge1}\rho_n|c_n|^2
+=
+\sum_{m\ge1}
+(\rho_m-\rho_{m-1})
+\|P_S^{[m]}h\|^2.
+}
+\tag{R43.59e1}
+\]
+
+Therefore the preferred orbit-energy problem can be stated intrinsically as
+\[
+\boxed{
+\sup_{U\ge U_0}
+\sum_{m\ge1}
+\|P_S^{[m]}h_U\|^2
+<\infty
+\Longrightarrow
+\text{B-TIGHT}.
+}
+\tag{R43.59e2}
+\]
+This formulation uses only the canonical nested jet kernels from C6a and the actual normal
+orbit.  It involves no quantitative conditioning of the Section-3K higher-jet Riesz family.
+
+The energy condition is **strictly stronger** than B-FLAGTIGHT and must not replace it as
+the primary gate.  For example, let
+\[
+N(U):=\left\lceil(\log U)^2\right\rceil,
+\qquad
+h_U:=\frac{1}{\sqrt{\log U}}\,e_{S,N(U)}
+\qquad(U>e).
+\tag{R43.59e3}
+\]
+Then
+\[
+\|h_U\|^2=\frac1{\log U}\to0,
+\]
+so B-TIGHT/B-FLAGTIGHT holds, while
+\[
+\langle N_Sh_U,h_U\rangle
+=
+\frac{N(U)}{\log U}
+\sim
+\log U
+\to\infty.
+\tag{R43.59e4}
+\]
+Therefore failure of a uniform \(N_S\)-energy bound would **not** imply failure of
+B-TIGHT.
+
+What is genuinely needed is any uniform tail profile
+\[
+\|P_S^{[m]}h_U\|
+\le
+\varphi(m)
+\qquad(U\ge U_0),
+\qquad
+\varphi(m)\to0,
+\tag{R43.59e5}
+\]
+with no summability requirement.  The energy bound is one convenient way to produce such a
+profile, since monotonicity of
+\[
+q_m(U):=\|P_S^{[m]}h_U\|^2
+\]
+gives
+\[
+m\,q_m(U)
+\le
+\sum_{j=1}^{m}q_j(U)
+\le
+\langle N_Sh_U,h_U\rangle.
+\tag{R43.59e6}
+\]
+
+#### 7A.4b Higher-jet holomorphy does not by itself give B-JMOM
+
+Section 3K proves local holomorphy for each fixed higher-jet Riesz datum and estimates of the
+form
+\[
+\|\partial_Q^k b_{m,Q}\|
+\le
+C_{m,k,Q_0}.
+\]
+Those statements have the quantifier order
+\[
+\forall m\quad \exists C_{m,k,Q_0}<\infty.
+\]
+They do **not** provide any summable or coercively weighted control as \(m\to\infty\).
+Moreover the Section-3K vectors \(g_{m,S}\) are a total Riesz family used for the GC-AC
+measure argument, whereas R43.54 uses the distinct canonical C6a ONB \(e_{S,n}\).
+Consequently there is currently no booked implication
+\[
+\{C_{m,k,Q_0}\text{ fixed-}m\text{ bounds}\}
+\Longrightarrow
+\text{R43.59c}.
+\tag{R43.59f}
+\]
+
+Any attempt to derive B-TIGHT from Section 3K must therefore supply an additional quantitative
+bridge: for example a controlled triangular/change-of-basis estimate from the higher-jet
+Riesz data to the C6a ONB, or a direct estimate of the compact-resolvent energy
+\(\langle N_{S,\rho}h_U,h_U\rangle\).
+
+This identifies the primary B-TIGHT target as **uniform compactness of the normal remainder
+in the fixed C6a coordinates**, not merely higher-jet holomorphy.
+
+#### 7A.4c Numerical conditioning firewall for the Section-3K higher-jet route
+
+A direct Galerkin diagnostic was run against the **normalized constrained-Gamma Riesz
+family**, not merely against the raw \(L^2\) moment kernels.  The reproducible script is
+
+\[
+\texttt{audits/P11\_R43\_JET\_GRAM\_CONDITIONING\_DIAGNOSTIC\_2026-09-03.py}.
+\]
+
+For each radius \(S\), the exact R33 multiplier is Galerkinized on an odd sine basis,
+the zeroth-jet constrained Gamma-Riesz vectors are constructed by whitening the Gamma form
+and projecting off the zeroth Riesz direction, and **each higher-jet Riesz vector is then
+renormalized to norm one**.  Thus the test removes the raw \(M^{m+1}\) scaling.
+
+At \(S=1\), Galerkin dimension \(P=120\), the smallest singular values of the first
+\(m\) normalized constrained Riesz vectors are approximately
+\[
+\begin{array}{c|cccc}
+m&4&8&12&16\\ \hline
+\sigma_{\min}
+&
+2.77\times10^{-3}
+&
+2.41\times10^{-6}
+&
+2.32\times10^{-9}
+&
+2.24\times10^{-12}.
+\end{array}
+\tag{R43.59g}
+\]
+Hence the corresponding normalized Gram minima are
+\[
+\lambda_{\min}
+\approx
+7.67\times10^{-6},
+\ 5.80\times10^{-12},
+\ 5.39\times10^{-18},
+\ 5.02\times10^{-24}.
+\tag{R43.59h}
+\]
+The same geometric decay is stable for \(S=0.5,2,4\), under Galerkin dimensions
+\(P=40,\dots,120\), and under Fourier cutoffs \(540,1620,4860\).  At \(S=1\),
+a log-linear fit for \(m=2,\dots,16\) gives diagnostically
+\[
+\log_{10}\sigma_{\min}
+\approx
+-0.7614\,m+0.5029.
+\tag{R43.59i}
+\]
+
+This is **not a theorem** and is not booked as a no-go.  It does, however, strongly
+contraindicate any B-TIGHT route whose main hypothesis is a dimension-uniform Riesz lower
+bound for the entire Section-3K higher-jet family.  In particular, the numerical
+degeneration survives individual normalization and therefore cannot be explained away by
+the crude exponential scaling in R43.10cq1b.
+
+The operational firewall is:
+\[
+\boxed{
+\text{do not make global higher-jet Riesz conditioning the primary B-TIGHT route.}
+}
+\tag{R43.59j}
+\]
+Orbit-adapted finite estimates are not excluded.  The preferred target is the intrinsic
+compact-resolvent energy of the actual orbit \(h_U\).
+
+#### 7A.4d Generator/commutator firewall
+
+A natural idea is to differentiate
+\[
+\mathcal E(U)
+:=
+\langle N_Sh_U,h_U\rangle
+\tag{R43.59k}
+\]
+and seek a Gronwall inequality from a commutator with a terminal generator.  The current
+repository does **not** yet justify that step.
+
+The terminal gauge is
+\[
+W_U
+=
+G_{S,U}^{1/2}J_{R,S}G_{R,U}^{-1/2},
+\]
+while the underlying finite-adic geometry contains the explicit martingale-depth floor
+\[
+J_{p,U}(u)
+=
+\max\left\{0,
+\left\lfloor\frac{2(U-|u|)_+}{\log p}\right\rfloor
+\right\}
+\]
+and terminal prime-power cutoffs.  No frozen R4--R42 theorem currently provides an
+operator-norm derivative \(dG_{X,U}/dU\), a derivative \(dW_U/dU\), or a closed
+skew/selfadjoint terminal generator \(\mathcal A_U\) satisfying
+\[
+\partial_U W_U=\mathcal A_UW_U.
+\]
+
+Therefore expressions such as
+\[
+\frac{d}{dU}\mathcal E(U)
+=
+\langle [N_S,\mathcal A_U]h_U,h_U\rangle+\cdots
+\]
+are presently formal only.  The R40/R41 scale
+\[
+\|v_{X,U}\|\asymp U^{-1},
+\qquad
+U\|v_{X,U}\|\to\frac{\sqrt{\gamma_X}}2
+\]
+controls one dual-normal channel; it is **not** a derivative estimate for the terminal
+transport.
+
+Thus a commutator/Gronwall route first needs one of:
+
+1. a genuine terminal differentiability/generator theorem with an integrable commutator
+   bound; or
+2. a finite-increment substitute controlling the compact-resolvent energy without
+   differentiating in \(U\).
+
+No \(U^{-1}\Rightarrow U^{-1-\delta}\) derivative gain may be inferred from R40/R41 alone.
+
+#### 7A.4e Exact terminal-horizon partial-isometry cocycle and flag leakage
+
+Although no differentiable terminal generator is booked, the family of finite-terminal
+isometries has an exact **horizon partial-isometry cocycle**.  For \(U,V>S\), define
+\[
+\boxed{
+\mathcal T_{U\to V}
+:=
+W_VW_U^*
+\in\mathcal B(H_S).
+}
+\tag{R43.59l}
+\]
+Since \(W_U^*W_U=I_{H_R}\),
+\[
+\mathcal T_{U\to V}^*\mathcal T_{U\to V}
+=
+W_UW_U^*
+=
+P_{\operatorname{Ran}W_U},
+\]
+and
+\[
+\mathcal T_{U\to V}\mathcal T_{U\to V}^*
+=
+P_{\operatorname{Ran}W_V}.
+\tag{R43.59m}
+\]
+Thus \(\mathcal T_{U\to V}\) is the canonical partial isometry from
+\(\operatorname{Ran}W_U\) onto \(\operatorname{Ran}W_V\).  Moreover,
+\[
+\boxed{
+\mathcal T_{V\to Z}\mathcal T_{U\to V}
+=
+\mathcal T_{U\to Z}
+}
+\tag{R43.59n}
+\]
+for all \(U,V,Z>S\), because \(W_V^*W_V=I\), and
+\[
+\boxed{
+\mathcal T_{U\to V}w_U=w_V.
+}
+\tag{R43.59o}
+\]
+
+This is an exact algebraic cocycle, but it is **not** an independent regularity theorem:
+it is built from the unknown future transports themselves.  R14's polar-gauge countermodel
+shows that the finite-terminal pullback/modulus algebra alone does not control its
+asymptotics.
+
+The cocycle is still useful for exact bookkeeping, but there is an additional
+**range/flag-angle firewall** before it can be interpreted as local terminal dynamics.
+
+Put
+\[
+P_m:=P_S^{[m]}.
+\]
+The previously natural off-flag block is
+\[
+\boxed{
+\delta_{U,V}(m)
+:=
+\left\|
+P_m\mathcal T_{U\to V}(I-P_m)
+\right\|.
+}
+\tag{R43.59p}
+\]
+It gives the valid estimate
+\[
+\begin{aligned}
+\|P_mh_V\|
+&=
+\|P_m\mathcal T_{U\to V}w_U\|\\
+&\le
+\|P_m\mathcal T_{U\to V}P_mw_U\|
++
+\|P_m\mathcal T_{U\to V}(I-P_m)w_U\|\\
+&\le
+\|P_mh_U\|
++
+\delta_{U,V}(m).
+\end{aligned}
+\tag{R43.59q}
+\]
+Hence along a finite chain
+\[
+U_0<U_1<\cdots<U_K
+\]
+one still has
+\[
+\boxed{
+\|P_mh_{U_K}\|
+\le
+\|P_mh_{U_0}\|
++
+\sum_{j=0}^{K-1}
+\delta_{U_j,U_{j+1}}(m).
+}
+\tag{R43.59r}
+\]
+
+However \(\delta_{U,V}(m)\) is **not a pure terminal increment**.  At zero terminal
+separation,
+\[
+\mathcal T_{U\to U}
+=
+W_UW_U^*
+=
+R_U,
+\]
+the orthogonal projection onto \(\operatorname{Ran}W_U\), rather than the identity on
+the whole target space.  Therefore
+\[
+\boxed{
+\delta_{U,U}(m)
+=
+\|P_mR_U(I-P_m)\|
+}
+\tag{R43.59p0}
+\]
+may be nonzero.  If
+\[
+B_{m,U}:=P_mR_UP_m
+\quad\text{on }P_mH_S,
+\]
+then
+\[
+\boxed{
+\delta_{U,U}(m)^2
+=
+\|B_{m,U}-B_{m,U}^2\|.
+}
+\tag{R43.59p1}
+\]
+Indeed
+\[
+P_mR_U(I-P_m)R_UP_m
+=
+P_mR_UP_m-P_mR_UP_mR_UP_m.
+\]
+Thus \(\delta_{U,U}(m)\) measures the static principal-angle defect between the moving
+range \(\operatorname{Ran}W_U\) and the fixed C6a flag cut.  Small terminal spacing alone
+does not force it to be small.
+
+Consequently the old sufficient condition
+\[
+\lim_{m\to\infty}
+\sup_{\text{admissible chains}}
+\sum_j\delta_{U_j,U_{j+1}}(m)
+=
+0
+\tag{R43.59s}
+\]
+remains mathematically sufficient, but it is now booked as a **strong range/flag-angle
+criterion**, not as the primary local-increment route.  In particular the R40/R41
+\(U^{-1}\)-scale cannot be inserted into \(\delta_{U,V}(m)\) merely from the fact that
+\(V-U\) is small.
+
+#### 7A.4f Fixed-source flag effects and a genuine terminal increment
+
+The target flag can be pulled back to the fixed source Hilbert space.  Define
+\[
+\boxed{
+Q_{m,U}
+:=
+W_U^*P_mW_U.
+}
+\tag{R43.59t0}
+\]
+Then \(Q_{m,U}\) is a positive contraction,
+\[
+Q_{m+1,U}\le Q_{m,U},
+\]
+and, because \(P_m\varepsilon_S=0\),
+\[
+\boxed{
+q_m(U)
+:=
+\langle\varepsilon_R,Q_{m,U}\varepsilon_R\rangle
+=
+\|P_mw_U\|^2
+=
+\|P_mh_U\|^2.
+}
+\tag{R43.59t1}
+\]
+Therefore
+\[
+\boxed{
+\textbf{B-FLAGTIGHT}
+\iff
+\lim_{m\to\infty}\limsup_{U\to\infty}q_m(U)=0.
+}
+\tag{R43.59t2}
+\]
+For every fixed \(U\), \(P_m\to0\) strongly and hence \(Q_{m,U}\to0\) strongly.
+The issue is exactly the failure, or validity, of uniformity in the terminal horizon.
+
+Unlike \(\delta_{U,V}(m)\), the source-space difference
+\[
+\boxed{
+D_m^{U,V}
+:=
+Q_{m,V}-Q_{m,U}
+}
+\tag{R43.59t3}
+\]
+is a genuine terminal increment:
+\[
+D_m^{U,U}=0.
+\]
+
+C2 already gives the exact P11 horizon-gauge changes
+\[
+C_X^{U\to V}
+=
+G_{X,V}^{1/2}G_{X,U}^{-1/2},
+\qquad X\in\{R,S\},
+\]
+and
+\[
+W_V
+=
+C_S^{U\to V}W_U(C_R^{U\to V})^{-1}.
+\]
+Hence
+\[
+\boxed{
+Q_{m,V}
+=
+(C_R^{U\to V})^{-*}
+W_U^*
+(C_S^{U\to V})^*
+P_m
+C_S^{U\to V}
+W_U
+(C_R^{U\to V})^{-1}.
+}
+\tag{R43.59t4}
+\]
+This is the exact P11-specific dynamics of the flag effect.  It shows that the true
+increment is governed by:
+
+1. distortion of the fixed target flag by the target horizon gauge \(C_S^{U\to V}\);
+2. source renormalization by \((C_R^{U\to V})^{-1}\);
+3. their coupling through the actual finite-terminal isometry \(W_U\).
+
+O1's relative-metric/polar decomposition applies directly to these horizon gauges, so this
+formulation connects B-FLAGTIGHT to already isolated modulus, range-leakage and polar-phase
+defects without pretending that the partial-isometry cocycle itself supplies regularity.
+
+A scalar derivative-free sufficient criterion can now be stated with a true increment.
+Choose
+\[
+U_0<U_1<U_2<\cdots\to\infty
+\]
+and put
+\[
+\boxed{
+\Omega_{m,k}
+:=
+\sup_{V\in[U_k,U_{k+1}]}
+\bigl(q_m(V)-q_m(U_k)\bigr)_+.
+}
+\tag{R43.59t5}
+\]
+Then
+\[
+q_m(V)
+\le
+q_m(U_0)
++
+\sum_{j\le k}\Omega_{m,j}
+\qquad
+(V\in[U_k,U_{k+1}]).
+\]
+Therefore
+\[
+\boxed{
+\lim_{m\to\infty}
+\sum_{k\ge0}\Omega_{m,k}
+=
+0
+\Longrightarrow
+\lim_{m\to\infty}
+\sup_{U\ge U_0}q_m(U)
+=
+0
+\Longrightarrow
+\textbf{B-FLAGTIGHT}.
+}
+\tag{R43.59t6}
+\]
+This remains a sufficient criterion, stronger than the exact iterated-limsup gate, but
+unlike R43.59s its summands vanish identically at zero terminal change.
+
+The sharpened live quantitative problem is therefore
+\[
+\boxed{
+\textbf{B-FLAGDYN: control the positive terminal variation of }
+q_m(U)=\langle\varepsilon_R,W_U^*P_mW_U\varepsilon_R\rangle
+\textbf{ through the horizon-gauge dynamics R43.59t4.}
+}
+\tag{R43.59t7}
+\]
+
+The partial-isometry off-flag block R43.59p remains a valid strong sufficient diagnostic,
+but B-FLAGDYN is the cleaner incremental formulation.
+
+### 7A.5 Why R27 strong inverse-root convergence does not close B-TIGHT
+
+One tempting shortcut is to upgrade the frozen R27 strong convergence
+\[
+A_X(U)^{-1/2}
+\xrightarrow[s]{}
+L_X^{-1/2}P_{V_X}
+\]
+to operator-norm convergence and then attempt to control the moving normal uniformly.
+The available P11 geometry does not justify that upgrade.
+
+Frozen R42 has
+\[
+a_0I\le L_X\le I
+\quad\text{on the infinite-dimensional }V_X.
+\]
+Consequently
+\[
+L_X^{-1/2}\ge I
+\quad\text{on }V_X,
+\]
+so the strong limit \(L_X^{-1/2}P_{V_X}\) is **not compact**.  The usual compact-dominance
+route from strong to norm convergence is therefore unavailable.  Moreover the current
+R24/R27 stack does not book an operator monotonicity in the terminal parameter \(U\) that
+would supply an independent monotone-norm theorem.
+
+Thus
+\[
+\boxed{
+\text{R27 strong inverse-root convergence}
+\not\Rightarrow
+\text{the uniform jet-tail control R43.57.}
+}
+\tag{R43.60}
+\]
+This is a firewall against reintroducing the fixed-vector-to-uniformity jump in a disguised
+functional-calculus form.
+
+### 7A.6 Cross-terminal sign reduction and boundary-parameter firewall
+
+The decomposition R43.46 also gives an exact scalar formula for the canonical R5/R39
+two-terminal observable.  For terminals \(T,U\),
+\[
+\boxed{
+L_{R,S}^{T,U}
+=
+b_Tb_U
++
+\operatorname{Re}\langle h_T,h_U\rangle.
+}
+\tag{R43.61}
+\]
+Indeed,
+\[
+\langle w_T,w_U\rangle
+=
+b_Tb_U+\langle h_T,h_U\rangle
+\]
+because the normal/tangential splitting
+\(H_S^0\oplus\mathbb C\varepsilon_S\) is orthogonal and the coefficients \(b_T,b_U\)
+are real.
+
+Under B-TIGHT, R43.47 gives
+\[
+\|h_U\|\longrightarrow0.
+\]
+Hence Cauchy--Schwarz yields the two-terminal asymptotic
+\[
+\boxed{
+L_{R,S}^{T,U}-b_Tb_U
+\longrightarrow0
+\qquad(T,U\to\infty).
+}
+\tag{R43.62}
+\]
+Combining this with the exact R39 criterion therefore sharpens R43.51:
+\[
+\boxed{
+\text{under candidate GC-AC + B-TIGHT,}qquad
+\text{Strong Terminal}
+\iff
+b_Tb_U\longrightarrow1.
+}
+\tag{R43.63}
+\]
+
+This also makes a sign failure maximally visible.  If cofinal terminal sequences
+\(T_n,U_n\to\infty\) have opposite asymptotic signs, then B-TIGHT gives
+\[
+b_{T_n}b_{U_n}\to-1,
+\qquad
+\operatorname{Re}\langle h_{T_n},h_{U_n}\rangle\to0,
+\]
+so
+\[
+\boxed{
+L_{R,S}^{T_n,U_n}\to-1,
+\qquad
+\|w_{U_n}-w_{T_n}\|^2\to4.
+}
+\tag{R43.64}
+\]
+Thus the post-B-TIGHT remainder is exactly an orientation/sign-coherence problem, not a
+small norm defect.  We call it
+\[
+\boxed{
+\textbf{B-SIGN: eventual sign coherence of }b_U.
+}
+\tag{R43.65}
+\]
+
+A continuity/Darboux route is possible only if such scalar regularity is actually proved.
+Because the concrete finite-adic formulas contain moving arithmetic cutoffs and floor
+functions, it is preferable not to make Darboux the primary B-SIGN route.
+
+A purely metric **increment criterion** avoids any continuity assumption.  Suppose there
+exist
+\[
+\Delta>0,\qquad \eta>0,\qquad U_0
+\]
+such that
+\[
+\boxed{
+|b_V-b_U|
+\le
+2-\eta
+\qquad
+(U,V\ge U_0,\ |V-U|\le\Delta).
+}
+\tag{R43.66}
+\]
+Under B-TIGHT choose \(0<\varepsilon<\eta/2\) so that
+\[
+|b_U|>1-\varepsilon
+\]
+for all sufficiently large \(U\).  If two such nearby terminal values had opposite signs,
+then
+\[
+|b_V-b_U|
+\ge
+|b_V|+|b_U|
+>
+2-2\varepsilon
+>
+2-\eta,
+\]
+contradicting R43.66.  Hence the sign is constant on every sufficiently late
+\(\Delta\)-chain.
+
+For the present P11 geometry the admissible terminal parameter is the full real tail
+\[
+U>S,
+\]
+not a discrete arithmetic subset.  The floor/cutoff formulas make the operators only
+piecewise regular; they do **not** remove terminal radii from the parameter domain.
+Therefore \([U_1,\infty)\) is automatically \(\Delta\)-chain-connected for every
+\(\Delta>0\), and
+\[
+\boxed{
+\text{B-TIGHT + R43.66}
+\Longrightarrow
+\text{B-SIGN}
+\Longrightarrow
+\text{Strong Terminal}.
+}
+\tag{R43.66a}
+\]
+If one later restricts the analysis to a sampled/discrete cofinal terminal subset, the
+corresponding \(\Delta\)-chain-connectivity must be stated separately.
+
+An orbit-level sufficient condition is even more intrinsic:
+\[
+\|w_V-w_U\|
+\le
+2-\eta
+\qquad(|V-U|\le\Delta,\ U,V\gg1),
+\tag{R43.66b}
+\]
+because
+\[
+|b_V-b_U|
+\le
+\|w_V-w_U\|.
+\]
+This asks only that neighboring terminal orbits never become asymptotically antipodal; it
+does not ask for Cauchy convergence.
+
+The two-terminal correlation criterion can be weakened to its sharp threshold.  Since
+\(L_{R,S}^{T,U}\ge-1\) for unit vectors and, under B-TIGHT,
+\[
+L_{R,S}^{T,U}=b_Tb_U+o(1),
+\qquad
+|b_T|,|b_U|\to1,
+\]
+any cofinal opposite-sign pair forces \(L_{R,S}^{T,U}\to-1\).  Conversely, if signs are
+eventually coherent then \(L_{R,S}^{T,U}\to1\).  Hence
+\[
+\boxed{
+\text{under candidate GC-AC + B-TIGHT,}\qquad
+\text{Strong Terminal}
+\iff
+\liminf_{T,U\to\infty}L_{R,S}^{T,U}>-1.
+}
+\tag{R43.66c}
+\]
+Thus the earlier sufficient threshold \(>0\) was unnecessarily strong.
+
+Continuity, Darboux, or real analyticity remain sufficient special cases if independently
+proved, but none is currently booked or assumed.
+
+Finally, the current P11 definition is
+\[
+b_U
+=
+\langle W_{R,S}^{[U]}\varepsilon_R,\varepsilon_S\rangle,
+\]
+a fixed matrix coefficient of the normalized finite-terminal transport.  No identity in the
+present stack identifies \(b_U\) with a de Branges/canonical-system boundary parameter,
+an Aleksandrov--Clark parameter, or a boundary condition at \(t=0\).  Therefore no
+Clark-measure stability theorem may be imported to control its sign or modulus without a
+new theorem establishing precisely such an identification:
+\[
+\boxed{
+\text{current }b_U
+\text{ is a transport coefficient, not a booked Clark/boundary parameter.}
+}
+\tag{R43.67}
+\]
+
+The live order of attack is therefore:
+
+1. **B-FLAGTIGHT (exact):** prove the asymptotic deep-flag tightness R43.57a--R43.57b,
+   equivalently \(b_U^2\to1\);
+2. **B-FLAGLEAK (preferred dynamic route):** exploit the exact partial-isometry cocycle
+   R43.59l--R43.59n and prove a summable/uniform shallow-to-deep leakage estimate
+   R43.59p--R43.59s;
+3. **energy only as a sufficient tool:** B-JMOM / compact-resolvent energy may prove
+   B-FLAGTIGHT, but is strictly stronger and is not the primary gate;
+4. **B-ORIENT:** after B-TIGHT, use the local increment criterion R43.66 or equivalently
+   rule out the sharp antipodal threshold through R43.66c.
+
+A global uniform higher-jet-Riesz conditioning theorem is no longer the preferred route
+after the numerical diagnostic R43.59g--R43.59j.  A differential commutator/Gronwall route
+remains firewalled until a genuine terminal generator theorem is proved.
 
 ---
 
@@ -3052,7 +4636,7 @@ Thus GC-M1 is no longer merely an unformulated open gate: there is now an explic
 **AI-GREEN candidate proof** in Sections 3F--3I.  None of those post-review statements is
 covered by the external GREEN verdict above.
 
-Current candidate booking:
+Booking at that post-review stage:
 \[
 \boxed{
 \text{GC-M1: candidate-closed, independently unreviewed;}
@@ -3064,7 +4648,7 @@ Current candidate booking:
 }
 \]
 
-Current booking:
+Historical booking at that stage:
 \[
 \boxed{
 \text{R43 overall OPEN — reviewed lower layers + unreviewed GC-M1 candidate proof.}
@@ -3075,3 +4659,138 @@ Current booking:
 \text{Strong Terminal / C6 remains }?[O];
 \text{ the candidate reduction leaves the scalar }b_U\text{ gate.}
 \]
+
+### Current exact-head hardening after GC-AC and the \(b_U\) reduction
+
+The historical external GREEN verdicts above remain scoped **only** to their stated exact
+heads.  They are not silently propagated to later mathematics.
+
+Subsequent hardening on branch \(\texttt{research/r43-gcac-hardening}\) added:
+
+- the source-version/type-radius repair (published Bessonov--Denisov inverse theorem =
+  Theorem 2.4; separately posted extended version = Theorem 2.5; generalized-inverse
+  radius \(L_H(Q)\));
+- the real-form complexification firewall R43.10z0 for Riesz analyticity;
+- the explicit all-\(m\) higher-jet argument R43.10cq0--R43.10cw, which
+  **candidate-closes GC-AC**;
+- the explicit singular-support step R43.10cv0--R43.10cv2 in the final GC-AC
+  measure contradiction;
+- the real last scalar / no-escape decomposition R43.44--R43.53;
+- the canonical jet-tail formulation R43.54--R43.59 and the R27 operator-norm shortcut
+  firewall R43.60;
+- the cross-terminal sign/orientation reduction R43.61--R43.67.
+
+The current mathematical-content head for those statements is
+\[
+\boxed{
+\texttt{186526cf75417b520566406ad7aead9cf3ede42d}
+}
+\]
+with mathematical-content R43 blob
+\[
+\boxed{
+\texttt{8255d84cbbdb44944ad8505a9139c8b1c791b86c}.
+}
+\]
+Relative to the earlier \(\texttt{ade2cd34...}\) hardening, this mathematical layer also:
+
+- fixes the scalar model once for the whole R43.10ct--R43.10cw contradiction;
+- records explicitly that R43.54 uses the canonical C6a ONB, not the Section-3K higher-jet
+  Riesz family;
+- introduces the canonical compact-resolvent jet-number operator R43.59a--R43.59e;
+- records the quantifier/change-of-basis firewall R43.59f against deriving B-JMOM from
+  fixed-\(m\) holomorphy alone;
+- quantifies the local higher-jet holomorphy constants by the explicit at-most-exponential
+  bound R43.10cq1a--R43.10cq1c and isolates the remaining jet-basis conditioning gap
+  R43.10cq1d;
+- records the normalized constrained-Gamma conditioning diagnostic R43.59g--R43.59j as
+  strong numerical evidence against making a global higher-jet Riesz lower bound the
+  primary B-TIGHT route;
+- adds the terminal-generator/commutator firewall R43.59k: R40/R41's \(U^{-1}\) scale is
+  not a derivative estimate for \(W_U\);
+- replaces Darboux as the preferred B-SIGN mechanism by the finite-increment criterion
+  R43.66--R43.66b and the positive-correlation criterion R43.66c.
+- adds the exact flag-energy identities R43.59e0--R43.59e2, identifying the preferred
+  \(N_S\)-energy directly with the summed squared projections onto the canonical nested
+  jet kernels \(\mathcal H_S^{[m]}\).
+- restores exact B-FLAGTIGHT R43.57a--R43.57b as the primary gate and records by
+  R43.59e3--R43.59e6 that the uniform \(N_S\)-energy bound is strictly stronger;
+- constructs the exact terminal-horizon partial-isometry cocycle
+  \(\mathcal T_{U\to V}=W_VW_U^*\) and the derivative-free flag-leakage recursion
+  R43.59l--R43.59t;
+- sharpens the post-B-TIGHT correlation criterion to the optimal antipodal threshold
+  \(\liminf L^{T,U}>-1\) and records that the current terminal domain is the full real
+  tail, hence automatically \(\Delta\)-chain-connected.
+
+Later commits which only add reproducibility scripts, review provenance, ledger reconciliation,
+or navigation do not enlarge that mathematical proof scope.
+
+A user-supplied Perplexity destructive review reports all seven GC-AC hardening targets GREEN
+on the exact earlier head
+\[
+\texttt{c7c6f04cd601ea868cb536327504f6c90b3f0807}
+\]
+with R43 blob
+\[
+\texttt{74a91c71b8b08f60d448811c57ceeca6f6113c87}.
+\]
+Because that review explicitly reused destructive vectors from a previous turn, it is booked
+as **external destructive GREEN (cross-model nonblind)** rather than formal
+\(\texttt{independent GREEN (cross-model)}\).  It does not cover the later
+R43.10cv0--cv2 or R43.61--R43.67 additions.
+
+Current candidate booking is therefore:
+\[
+\boxed{
+\mathrm{GC\!-\!M1}_{\rm scalar}
+\text{ candidate-GREEN;}
+\qquad
+\mathrm{GC\!-\!AC}
+\text{ candidate-closed;}
+}
+\]
+\[
+\boxed{
+b_U\in\mathbb R,
+\qquad
+\text{Strong Terminal}
+\iff
+[b_U\text{ Cauchy}]\ \&\ [b_U^2\to1]
+\quad\text{(conditional on candidate GC-AC).}
+}
+\]
+Under B-TIGHT this sharpens to
+\[
+\boxed{
+\text{Strong Terminal}
+\iff
+b_Tb_U\to1,
+}
+\]
+and B-SIGN/B-ORIENT is the remaining orientation gate.  No identity with an
+Aleksandrov--Clark or canonical-system boundary parameter is currently booked.
+
+\[
+\boxed{
+\text{B-FLAGTIGHT is the primary OPEN gate and is exactly equivalent to B-TIGHT;}
+\quad
+\text{B-FLAGLEAK is the preferred derivative-free dynamic subroute.}
+}
+\]
+\[
+\boxed{
+\text{compact-resolvent orbit energy is sufficient but strictly stronger;}
+\quad
+\text{global higher-jet Riesz conditioning remains numerically contraindicated.}
+}
+\]
+\[
+\boxed{
+\text{B-SIGN/B-ORIENT remains secondary OPEN;}
+\quad
+\text{under B-TIGHT, Strong Terminal}\iff\liminf L^{T,U}>-1.
+}
+\]
+
+No new \(\texttt{independent GREEN}\), freeze, \(\checkmark[M]\), Strong-Terminal,
+Object-X, or RH promotion is generated by this hardening pass.

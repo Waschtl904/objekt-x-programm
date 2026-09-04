@@ -2,7 +2,7 @@
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 3. September 2026  
-> **Aktuelle Research-Basis:** Branch `research/strong-terminal-r37-two-shift-mismatch`; R42-Freeze-Linie bis `f495ce6d89dcb8facc8fa0d4e09dda279b24fb73`, R43 aktuell bis mathematischem Head `cfa6920f6e43a2fe63e76dfd4e301459a98eb39c`. Die bisher reviewten Gamma-Nest-Schichten bleiben GREEN; die Literatur-Schnittstelle ist source-checked. Neu in §3K: **GC-AC ist candidate-closed** durch die totale höhere Jet-Rieszfamilie; dieser neue Schluss ist noch nicht unabhängig reviewed. Unter diesem Kandidaten kollabiert die gesamte terminalfreie Gamma-Dichtefront und der verbleibende Strong-Terminal-Gate ist nur noch der Normal-Skalar `b_U`. Strong Terminal/C6 bleibt weiterhin offen.  
+> **Aktuelle Research-Basis:** `main@2102b538c220cd809ad876c425df4f30304eb997` enthält die konsolidierte R37–R43-Linie. Aktive Härtung: Branch `research/r43-gcac-hardening`; aktueller **mathematischer R43-Head** `c4d0f03089659533fb06bf9a2822060c64e2d9e1` (kanonischer R43-Mathematikblob `983b42949d6a4a1806c0b333727cb49000b99972`). Der frühere Perplexity-Destruktivreview bleibt ausschließlich auf seinem exakten geprüften Head `c7c6f04cd601ea868cb536327504f6c90b3f0807` als **external destructive GREEN (cross-model nonblind)** gebucht; keine formale unabhängige GREEN-Promotion. **GC-AC** ist auf Kandidatenebene geschlossen. Der verbleibende Strong-Terminal-Block ist **B-FLAGTIGHT**, exakt `lim_m limsup_U ||P_{H_S^[m]}h_U||=0`; die Jet-Zahl-/Flaggenenergie ist nur ein stärkeres hinreichendes Werkzeug, nicht das Gate selbst. Der Higher-Jet-Riesz-Unterrand bleibt numerisch stark kontraindiziert, ohne theorem-level No-Go. Der partielle Kozykel `T_{U→V}=W_VW_U^*` ist algebraisch exakt, aber sein Off-Flag-Block enthält einen **statischen Range/Flag-Winkel**: bereits `T_{U→U}=P_{Ran W_U}`, daher ist `P_mT_{U→U}(I-P_m)` im Allgemeinen nicht null. Die saubere inkrementelle Front ist nun der feste Quellraum-Effekt `Q_{m,U}=W_U^*P_mW_U`, `q_m(U)=<ε_R,Q_{m,U}ε_R>`, mit echter Terminaldynamik `Q_{m,V}-Q_{m,U}` und exakter Horizon-Gauge-Formel über `C_X^{U→V}=G_{X,V}^{1/2}G_{X,U}^{-1/2}`. **B-FLAGDYN** bezeichnet die offene quantitative Kontrolle der positiven Terminalvariation von `q_m(U)`. Nach B-FLAGTIGHT bleibt **B-SIGN/B-ORIENT**; unter B-TIGHT gilt der scharfe Test `Strong Terminal ⇔ liminf_{T,U→∞}L_{R,S}^{T,U}>-1`. Kein Terminalgenerator, keine Darboux-/Clark-Identifikation und keine Object-X-/RH-Promotion wird importiert. R43 bleibt OPEN; kein Freeze, kein neues `✓[M]`.  
 > **Aktiver mathematischer Stand:** **B / Strong Terminal.** R38–R42 sind jeweils **FROZEN — independently verified AI-GREEN**, ohne kanonische `✓[M]`-Promotion. Für jedes feste \(0<R<S\) konvergiert der echte Future-Transport bereits stark auf \(H_R^0=\ker\beta_R^{(0)}\). Strong Terminal / C6 ist exakt auf die eine feste Normalbahn \(W_{R,S}^{[U]}\varepsilon_R\), äquivalent auf den einen Cross-Kernel-Koeffizienten \(\operatorname{Re}\langle\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R\rangle\to1\), reduziert. **R43 ist offen / exploratory** und untersucht diesen letzten Gate. R37/G4c bleibt separat offen und wird durch R38–R43 nicht rückwirkend geschlossen.  
 > **Detailregistry:** [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md) · **Roadmap:** [FORSCHUNGS_ROADMAP_2026-09-03](00-uebersicht/FORSCHUNGS_ROADMAP_2026-09-03.md)
 
@@ -345,18 +345,71 @@ K_{R,S}^{T,U}\varepsilon_R
 }
 \]
 
-**Aktiver Block R43:** ergebnisoffene Entscheidung dieses einen Gates. Phase I hat zwei
-neue Kandidatenfronten geöffnet:
+**Aktiver Block R43:** Die terminalfreie Gamma-Front ist auf Kandidatenebene bis **GC-AC**
+geschlossen. Für
+\[
+w_U=W_{R,S}^{[U]}\varepsilon_R=b_U\varepsilon_S+h_U,
+\qquad
+h_U\rightharpoonup0,
+\qquad
+\|h_U\|^2=1-b_U^2,
+\]
+ist das primäre offene Gate
+\[
+\boxed{
+\textbf{B-FLAGTIGHT:}\qquad
+\lim_{m\to\infty}\limsup_{U\to\infty}
+\|P_{\mathcal H_S^{[m]}}h_U\|=0.
+}
+\]
+Die Flaggen-/Jet-Zahlenergie ist nur hinreichend und ausdrücklich nicht notwendig.
 
-1. ein terminalfreies **Gamma-Zyklizitätsgate** über Zwischenradien \(R<Q<S\);
-2. ein quantitatives Edge-Upgrade mit dem derzeit intern hergeleiteten, aber noch nicht
-   extern verifizierten Hochrisikopunkt
-   \[
-   D_U(z_U,z_U)=O(U^{-1}).
-   \]
+Der algebraische moving-range Kozykel
+\[
+\mathcal T_{U\to V}=W_VW_U^*
+\]
+bleibt nützliches Bookkeeping, ist aber **kein** lokaler Regularitätssatz: auf dem vollen
+Zielraum gilt \(\mathcal T_{U\to U}=P_{\operatorname{Ran}W_U}\), sodass sein Off-Flag-Block
+auch ohne Terminalbewegung einen statischen Range/Flag-Winkel messen kann.
 
-R43 ist **nicht frozen** und erzeugt keine Promotion. Insbesondere ist weder
-\(L_{R,S}^{T,U}\to1\) noch ein Strong-Terminal-No-Go entschieden.
+Die bevorzugte inkrementelle Formulierung lebt deshalb auf dem festen Quellraum:
+\[
+Q_{m,U}=W_U^*P_mW_U,
+\qquad
+q_m(U)=
+\langle\varepsilon_R,Q_{m,U}\varepsilon_R\rangle
+=
+\|P_mh_U\|^2.
+\]
+Mit den C2-Horizon-Gauges
+\[
+C_X^{U\to V}=G_{X,V}^{1/2}G_{X,U}^{-1/2}
+\]
+gilt exakt
+\[
+Q_{m,V}
+=
+(C_R^{U\to V})^{-*}
+W_U^*
+(C_S^{U\to V})^*
+P_m
+C_S^{U\to V}
+W_U
+(C_R^{U\to V})^{-1}.
+\]
+Der aktuelle quantitative Knoten heißt daher **B-FLAGDYN**: Kontrolle der positiven
+Terminalvariation von \(q_m(U)\) durch diese Horizon-Gauge-Dynamik. O1s
+Relative-Metric-/Range-Leakage-/Polarphasenzerlegung ist dafür wieder direkt relevant.
+
+Nach B-FLAGTIGHT bleibt B-SIGN. Unter B-TIGHT ist die scharfe Restbedingung
+\[
+\text{Strong Terminal}
+\iff
+\liminf_{T,U\to\infty}L_{R,S}^{T,U}>-1.
+\]
+
+R43 ist **nicht frozen** und erzeugt keine Promotion. Strong Terminal/C6 bleibt offen; ebenso
+gibt es keinen theorem-level No-Go.
 
 **Separate Firewall:** R37/G4c bleibt offen. Kein Resultat R38--R43 darf R37 rückwirkend
 promovieren.
@@ -569,18 +622,21 @@ Sie soll **nicht** historische Forschungsprovenienz duplizieren. Dafür bleiben 
 }
 \]
 
-**Nächster Default:** **R43 / Single-Normal C6 Gate.** Entscheide ergebnisoffen
+**Nächster Default:** **R43 / B-FLAGDYN.** Arbeite auf dem festen Quellraum mit
 \[
-\operatorname{Re}
-\langle
-\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R
-\rangle
-\longrightarrow1
-\quad?
+Q_{m,U}=W_U^*P_{\mathcal H_S^{[m]}}W_U,
+\qquad
+q_m(U)=\langle\varepsilon_R,Q_{m,U}\varepsilon_R\rangle,
 \]
-Zulässige Untergates sind die terminalfreie Gamma-Zyklizität der Zwischenradius-Familie und,
-falls nötig, die reskalierte dritte Edge-Schicht. PR #49 bleibt eingefrorener A-Kandidat und
-wird nicht parallel weiter verändert.
+und kontrolliere die echte Terminalvariation \(Q_{m,V}-Q_{m,U}\) beziehungsweise die
+positive Variation von \(q_m\) über die exakten Horizon-Gauges
+\[
+C_X^{U\to V}=G_{X,V}^{1/2}G_{X,U}^{-1/2}.
+\]
+Die partielle Kozykel-Leckage bleibt nur als starkes hinreichendes Range/Flag-Kriterium.
+Erst nach B-FLAGTIGHT wird B-SIGN über den scharfen antipodalen Schwellenwert
+\(\liminf L>-1\) weitergeführt. PR #49 bleibt eingefrorener A-Kandidat und wird nicht
+parallel weiter verändert.
 
 **Firewall:** R38–R42 sind reviewer-governance-frozen, aber nicht kanonisch \(\checkmark[M]\)
 promotet. R43 ist offen. R37/G4c bleibt separat offen. Keine Rückkehr zur universellen
