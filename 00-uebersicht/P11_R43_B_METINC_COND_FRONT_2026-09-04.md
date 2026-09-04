@@ -52,11 +52,11 @@ K_{U,V}^{\rm Schur}
 
 Thus pairwise canonical antitonicity is equivalent to `K_Schur>=0`.
 
-## Breakthrough: the cofinal/local PSD hypothesis is false
+## Breakthrough: canonical and eventual-fine-step PSD are false
 
-The earlier logical observation remains true: eventual PSD for all sufficiently late fine steps **would** have been sufficient for the FD23 partition sign mechanism.  The new kernel-witness theorem shows that this sufficient hypothesis is not available in the frozen model.
+The previous logical lemma remains valid: eventual PSD on every sufficiently late, sufficiently fine terminal pair **would** have been enough for the FD23 partition sign mechanism. The new kernel-witness theorem proves that this hypothesis is false in the frozen model.
 
-For arbitrary `U_*>0` and `h_*>0`, choose `U>U_*` away from the locally finite resonance set
+For arbitrary `U_*>0` and `h_*>0`, choose `U>U_*` outside the locally finite resonance set
 
 \[
 \Lambda=\{n(\log p)/2:\ p\text{ prime},\ n\ge2\}.
@@ -76,28 +76,25 @@ With
 f=1_{I_P},\qquad g=1_{I_Q},
 \]
 
-the exact frozen residual geometry gives
+the frozen fine-step layer geometry gives
 
 \[
-\boxed{Cf=0}
+\boxed{Cf=0.}
 \]
 
-while the `p=2`, adjacent-index old/strip overlap gives
+At the same time the `p=2`, adjacent-index overlap between the old source interval and the new strip survives. The first `(l,k)=(1,2)` overlap alone contributes
 
 \[
-\boxed{
-\langle Mf,Sg\rangle>0,
-\qquad S^*Mf\ne0.
-}
+|I_P|(\log2)2^{-9/4}>0
 \]
 
-The first `(l,k)=(1,2)` overlap alone contributes
+to `\langle Mf,Sg\rangle`, and all other surviving exact `p=2` adjacent overlaps are nonnegative. Therefore
 
 \[
-|I_P|(\log2)2^{-9/4}>0.
+\boxed{S^*Mf\ne0.}
 \]
 
-Therefore
+Hence
 
 \[
 \boxed{
@@ -106,7 +103,7 @@ Therefore
 }
 \]
 
-Hence
+So
 
 \[
 \boxed{
@@ -124,7 +121,7 @@ R43-COND-CANONICAL-PSD-REALIZATION          ×[M]
 R43-COND-LOEWNER-ANTITONE-TELESCOPE-ROUTE   ×[M]
 ```
 
-This is a theorem-level negative result for the **global/canonical Loewner sign route only**.  It is not a negative result for `B-METINC-COND` on the structured canonical vectors and not a Strong-Terminal no-go.
+This is a theorem-level negative result for the **arbitrary-source Loewner sign route only**. It is not a negative result for `B-METINC-COND` on the structured canonical vectors and not a Strong-Terminal no-go.
 
 ## What remains valid
 
@@ -140,7 +137,7 @@ still satisfies
 \widehat B_{U;V}\preceq B_U
 \]
 
-because old-source residual energy increases.  The exact internal split
+because old-source residual energy increases. The exact internal split
 
 \[
 \iota^*B_V\iota-B_U
@@ -168,7 +165,7 @@ The `p=2` coupling coefficient saturates at
 F_\infty=\frac{10-\sqrt2}{28}>0,
 \]
 
-and the strip block `||(I-\Pi)S||` is not operator-norm small; indeed it diverges cofinally.  None of these facts decides the structured-vector COND estimate by itself because the exact Feshbach operator remains saturated.
+and the strip block `||(I-\Pi)S||` is not operator-norm small; indeed it diverges cofinally. None of these facts decides the structured-vector COND estimate by itself because the exact Feshbach operator remains saturated.
 
 ## New live tree
 
@@ -193,7 +190,7 @@ The abstract `R43-COND-REANCHOR-SUFFICIENT ✓[M]` theorem remains correct, but 
 
 ## Immediate next calculation
 
-Stop testing arbitrary-source Loewner positivity.  Insert the actual structured vector
+Stop testing arbitrary-source Loewner positivity. Insert the actual structured vector
 
 \[
 v_U=H_U^*E_{X,U}f
@@ -205,17 +202,8 @@ into the exact signed split and estimate
 \bigl|\langle v_U,(\iota^*B_V\iota-B_U)v_U\rangle\bigr|.
 \]
 
-The preferred target is a directly summable B-FLAGDYN-compatible bound
-
-\[
-\bigl|\Delta s_{\rm cond}^{U,V}(f)\bigr|
-\le \varepsilon_m\,\omega_X(U,V),
-\qquad
-\varepsilon_m\to0,
-\]
-
-or an equivalent structured-vector energy telescope that does not require global Loewner order.
+The preferred target is a directly summable B-FLAGDYN-compatible bound, ideally one carrying the fixed-source / `m`-tail mechanism before terminal summation.
 
 ## Status firewall
 
-Still OPEN: structured-vector `B-METINC-COND`, `B-METINC-NORMMIX`, `B-METINC-GEO-BMIX`, `B-METINC-GEO-BDRY`, `B-METINC-NEW`, `FD23-UNIF`, `B-METINC-WIDTH`, `B-METINC`, `B-FLAGMOD`, `B-FLAGPHASE`, `B-FLAGTIGHT`, `B-SIGN`, Strong Terminal/C6, R43, Object X, RH.  No freeze and no new formal independent GREEN.
+Still OPEN: structured-vector `B-METINC-COND`, `B-METINC-NORMMIX`, `B-METINC-GEO-BMIX`, `B-METINC-GEO-BDRY`, `B-METINC-NEW`, `FD23-UNIF`, `B-METINC-WIDTH`, `B-METINC`, `B-FLAGMOD`, `B-FLAGPHASE`, `B-FLAGTIGHT`, `B-SIGN`, Strong Terminal/C6, R43, Object X, RH. No freeze and no new formal independent GREEN.
