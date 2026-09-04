@@ -1,11 +1,14 @@
 # P11 / R43 — structured-vector COND front
 
 **Date:** 2026-09-04  
-**Status:** OPEN research front after theorem-level closure of the arbitrary-source Loewner/PSD route
+**Status:** OPEN research front after elimination of the overstrong uniform Loewner/PSD helper route
 
-## 0. Frozen negative input
+**Companion reconciliation:** `audits/P11_R43_POSTMERGE_REFEREE_RECONCILIATION_2026-09-04.md`  
+**Parallel epsilon route:** `00-uebersicht/P11_R43_COND_EPSILON_TELESCOPE_FRONT_2026-09-04.md`
 
-The merged PR #53 established, for arbitrarily late and arbitrarily fine generic terminal pairs, an explicit source direction `f` with
+## 0. Exact negative input and corrected scope
+
+Merged PR #53 established an explicit arbitrary-source direction `f` on arbitrarily late and arbitrarily fine selected terminal pairs such that
 
 \[
 C_{U,V}f=0,
@@ -19,33 +22,63 @@ and therefore
 \langle f,K_{U,V}^{\rm Schur}f\rangle<0.
 \]
 
-Hence the following are frozen negative route decisions:
+The theorem-level negative conclusions are:
 
 ```text
-R43-COND-COFINAL-LOCAL-PSD                  ×[M]
-R43-COND-CANONICAL-PSD-REALIZATION          ×[M]
-R43-COND-LOEWNER-ANTITONE-TELESCOPE-ROUTE   ×[M]
+R43-COND-C-KERNEL-WITNESS-REALIZED             ✓[M]_neg
+R43-COND-COFINAL-LOCAL-PSD                     ×[M]
+R43-COND-CANONICAL-PSD-REALIZATION             ×[M]
+R43-COND-UNIFORM-LOCAL-LOEWNER-TELESCOPE-ROUTE ×[M]
 ```
 
-This front must not reopen those arbitrary-source claims.
+The older shorter label `LOEWNER-ANTITONE-TELESCOPE-ROUTE ×[M]` is scope-corrected to the **uniform-local** route. The witness does not exclude a specially selected good partition, so
 
-## 1. Actual structured target
+```text
+R43-COND-PARTITION-SELECTIVE-PSD ?[O]
+```
 
-For fixed source `X<U<V`, canonical SW14 uses
+remains open.
+
+This is elimination of an overstrong helper route, not a Strong-Terminal or `B-METINC-COND` no-go.
+
+## 1. Provenance of the actual structured target — pre-no-go
+
+The structured vector is not introduced after the negative result. It was already fixed in
+
+```text
+ca370c6b95c0a454da82376bc82b9e2261113e0d
+```
+
+commit message:
+
+```text
+R43: audit terminal metric increments before shell reindexing
+```
+
+in file
+
+`audits/P11_R43_TERMINAL_METRIC_INCREMENT_DEFINITION_AUDIT_2026-09-04.md`.
+
+There equation `(MI12)` defines
 
 \[
-v_U:=H_U^*E_{X,U}f,
+\boxed{v_T(f):=H_T^*E_{X,T}f\in L^2(-T,T)}
 \]
 
-inside
+and `(MI15)` identifies canonical old-conditioning as
 
 \[
+\boxed{
 \Delta s_{\rm cond}^{U,V}(f)
-=
-\langle v_U,(\iota^*B_V\iota-B_U)v_U\rangle.
+=\langle v_U,(\iota^*B_V\iota-B_U)v_U\rangle.
+}
 \]
 
-The live target is a vector-sensitive estimate, not operator order:
+Thus this branch returns to the originally frozen scalar path; it is not an ad-hoc restriction invented after the arbitrary-source no-go.
+
+## 2. Actual structured target
+
+For fixed source `X<U<V`, the live target is vector-sensitive rather than operator order:
 
 \[
 \boxed{
@@ -54,9 +87,11 @@ The live target is a vector-sensitive estimate, not operator order:
 }
 \]
 
-with a cofinal summability mechanism compatible with the B-FLAGDYN / `m`-tail route.
+with a cofinal summability mechanism compatible with B-FLAGDYN and preferably an `m`-tail factor before terminal summation.
 
-## 2. Exact signed split retained
+A merely qualitative statement such as `Cv_U\ne0` is not enough. The exact competition is quantitative.
+
+## 3. Exact signed split retained
 
 The pre-existing comparator
 
@@ -73,24 +108,33 @@ gives
 +(\iota^*B_V\iota-\widehat B_{U;V}).
 \]
 
-The first term is nonpositive by old-source residual nesting.  The second is nonnegative and is the source-strip Schur correction.  The total has no fixed sign.
+Old-source residual nesting gives
 
-Thus the structured-vector scalar splits as
+\[
+\widehat B_{U;V}-B_U\preceq0,
+\]
+
+while the source-strip Schur correction satisfies
+
+\[
+\iota^*B_V\iota-\widehat B_{U;V}\succeq0.
+\]
+
+Therefore on `v_U`
 
 \[
 \Delta s_{\rm cond}^{U,V}
-=
--\mathcal E_{\rm inner}(U,V)
+=-\mathcal E_{\rm inner}(U,V)
 +\mathcal E_{\rm Schur}(U,V),
+\qquad
+\mathcal E_{\rm inner},\mathcal E_{\rm Schur}\ge0.
 \]
 
-with both energies nonnegative on the fixed vector `v_U`.
+The problem is quantitative control of the two scalar energies, not a global operator sign.
 
-The new problem is quantitative cancellation/control of these two scalar energies, not a Loewner comparison between the operators.
+## 4. Preferred frozen inputs
 
-## 3. Preferred frozen inputs
-
-### 3.1 Fixed-source `H` structure
+### 4.1 Fixed-source `H` structure
 
 \[
 H_U
@@ -98,11 +142,9 @@ H_U
 \sqrt{\log p}\,p^{-3k/4}D_{k\log p}E_U.
 \]
 
-Hence `v_U=H_U^*E_{X,U}f` is not arbitrary.  Every source component of `v_U` is generated from the fixed window `(-X,X)` by prime-power translations.
+Hence `v_U=H_U^*E_{X,U}f` is generated from the fixed source window by prime-power translations and is highly non-arbitrary.
 
-### 3.2 Fixed-source localization
-
-For a translated fixed-source component,
+### 4.2 Fixed-source localization
 
 \[
 D_{k\log p}E_Xf(u)\ne0
@@ -110,72 +152,99 @@ D_{k\log p}E_Xf(u)\ne0
 \left||u|-\frac{k\log p}{2}\right|<X.
 \]
 
-Thus interaction with a terminal threshold near `U` forces the contributing prime-power data into a fixed multiplicative shell around the terminal scale.
+Interaction with a terminal threshold near `U` therefore forces contributing prime powers into a fixed multiplicative shell around the terminal scale.
 
-### 3.3 H/R first-martingale coefficient match
+### 4.3 H/R first-martingale coefficient match
 
-The residual coefficient is
+Residual coefficient:
 
 \[
-\sqrt{\log p}\,p^{-k/4},
+\sqrt{\log p}\,p^{-k/4}.
 \]
 
-and the first martingale layer contributes
+First martingale layer factor:
 
 \[
 \sqrt{p-1}\,p^{-k/2}.
 \]
 
-After division by `\sqrt{p-1}`, their product is exactly the hub weight
+After division by `\sqrt{p-1}`, their product is
 
 \[
-\sqrt{\log p}\,p^{-3k/4}.
+\sqrt{\log p}\,p^{-3k/4},
 \]
 
-This coefficient-level alignment is a preferred structural input.  A full operator factorization `H=LR` is **not** assumed until proved.
+exactly the hub coefficient. This is coefficient-level only; no full factorization `H=LR` is assumed.
 
-## 4. First quantitative questions
+## 5. Referee-hardened quantitative questions
 
-The next audit should answer, in order:
+The next calculations must answer, in order:
 
-1. For `v_U=H_U^*E_{X,U}f`, what is the exact support/prime-power shell of `Cv_U`?
-2. What is the exact support/prime-power shell of `S^*Mv_U`?
-3. Does the structured path eliminate the arbitrary-source kernel witness mechanism automatically?
-4. Can both signed pieces be reduced to the same fixed-source shell sum, so that their difference or absolute sum gains a terminal-decaying coefficient?
-5. Can the resulting scalar bound be made `m`-tail sensitive **before** terminal summation?
+1. For `v_U=H_U^*E_{X,U}f`, determine the exact shell/support of `Cv_U`.
+2. Determine the exact shell/support of `S^*Mv_U`.
+3. Test whether the artificial interval-kernel mechanism can occur on the structured range of `H_U^*E_{X,U}`.
+4. Quantify, not merely sign-test,
+   \[
+   \|Cv_U\|^2
+   \quad\text{versus}\quad
+   \langle Mv_U,\Phi_SMv_U\rangle.
+   \]
+5. Reduce both signed pieces to a common fixed-source shell sum if possible.
+6. Insert any `m`-tail mechanism before the terminal summation.
 
-## 5. Success criterion
+Because `||S||` grows cofinally, no argument may infer positivity merely from `Cv_U\ne0`; the Feshbach term must be controlled with the saturated `\Phi_S`.
 
-A useful theorem should look like one of:
+## 6. Success criterion
+
+Useful theorem shapes include
 
 \[
 |\Delta s_{\rm cond}^{U,V}(f)|
-\le a_X(U,V)\,\|f\|_{\mathcal X_X}^2,
-\]
-
-with a cofinal partition satisfying
-
-\[
+\le a_X(U,V)\|f\|_{\mathcal X_X}^2,
+\qquad
 \sum_j a_X(U_j,U_{j+1})<\infty,
 \]
 
-or, preferably for B-FLAGDYN,
+or preferably
 
 \[
 |\Delta s_{\rm cond,m}^{U,V}(f)|
-\le \varepsilon_m\,a_X(U,V)\,\|f\|^2,
+\le \varepsilon_m a_X(U,V)\|f\|^2,
 \qquad
 \varepsilon_m\to0,
 \]
 
-with the same summability.
+with the same cofinal summability.
 
 No full operator-norm estimate is required unless it falls out for free.
 
-## 6. Governance
+## 7. Parallel epsilon-relaxed route
+
+Exact PSD is not necessary. A separate open route is
+
+\[
+K_{U,V}^{\rm Schur}\succeq-\delta(U,V)I
+\]
+
+or a structured-vector analogue with summable `\delta` along a chosen partition.
+
+Book only
+
+```text
+R43-COND-EPSILON-RELAXED-TELESCOPE ?[O]
+```
+
+No `Ue^{-U}` decay rate is currently proved by the witness.
+
+## 8. Governance
 
 - `B-METINC-COND`: OPEN.
-- arbitrary-source/eventual Loewner PSD: frozen `×[M]`; do not reopen.
+- `R43-COND-CANONICAL-PSD-REALIZATION`: `×[M]` for the universal/pairwise claim.
+- `R43-COND-COFINAL-LOCAL-PSD`: `×[M]` for the uniform eventual-fine-step claim.
+- `R43-COND-UNIFORM-LOCAL-LOEWNER-TELESCOPE-ROUTE`: `×[M]`.
+- `R43-COND-PARTITION-SELECTIVE-PSD`: `?[O]`.
+- `R43-COND-EPSILON-RELAXED-TELESCOPE`: `?[O]`.
+- structured-vector signed/absolute COND: OPEN.
 - `B-METINC-NORMMIX`, GEO-BMIX/BDRY, NEW, FD23-UNIF, B-METINC-WIDTH, B-METINC, B-FLAGMOD, B-FLAGPHASE, B-FLAGTIGHT, B-SIGN, Strong Terminal/C6: OPEN.
 - R43 remains OPEN; no freeze and no formal independent GREEN.
 - no Object-X/RH promotion.
