@@ -8,9 +8,10 @@ This is a navigation/status file only. It creates no mathematical promotion.
 
 - Base: `main@2102b538c220cd809ad876c425df4f30304eb997`
 - Active branch: `research/r43-gcac-hardening`
-- Current companion mathematical hardening head: `82a65915319885b85ff93fb44a51bcb4f3cf068d`
+- Current companion mathematical hardening head: `ca370c6b95c0a454da82376bc82b9e2261113e0d`
 - Canonical R43 core blob: `983b42949d6a4a1806c0b333727cb49000b99972`
-- New theorem companion: `audits/P11_R43_FLAGDYN_O1_MODULUS_PHASE_REDUCTION_2026-09-04.md`
+- O1 modulus-phase companion: `audits/P11_R43_FLAGDYN_O1_MODULUS_PHASE_REDUCTION_2026-09-04.md`
+- Terminal metric increment definitions audit: `audits/P11_R43_TERMINAL_METRIC_INCREMENT_DEFINITION_AUDIT_2026-09-04.md`
 
 ## Governance
 
@@ -42,6 +43,19 @@ Strong Terminal ?
 ```
 
 The middle implication is sufficient only, not an equivalence.
+
+Inside `B-FLAGMOD`, the current quantitative sub-node is `B-METINC`:
+
+```text
+B-METINC
+   |
+   | pairwise Sylvester bridge + projected modulus estimate
+   v
+B-FLAGMOD
+```
+
+Loewner positivity and a positive new-shell theorem are optional accelerators for
+`B-METINC`, not prerequisites in the logical definition of the route.
 
 ## Exact B-FLAGTIGHT gate
 
@@ -93,7 +107,7 @@ With
 B = W_U^* A_S^(1/2) W_U,
 ```
 
-the new exact identity is
+the exact identity is
 
 ```text
 A_R = B^2 + L^*L,
@@ -137,11 +151,124 @@ Both defects vanish identically for `V=U`.
 
 A terminal partition for which the sums of the corresponding interval suprema tend to zero as `m->infinity` is sufficient for B-FLAGTIGHT.
 
+## Terminal metric increment definitions audit
+
+For fixed source `X` and horizons `X<U<V`, frozen R4 puts both future metrics on the same
+fixed graph Hilbert space:
+
+```text
+G_{X,T}=J_{X,T}^*J_{X,T}.
+```
+
+The Gamma contribution is exactly invariant under zero extension. Therefore
+
+```text
+<f,(G_{X,V}-G_{X,U})f>
+ = <Sigma_V E_{X,V}f,E_{X,V}f>
+   - <Sigma_U E_{X,U}f,E_{X,U}f>.
+```
+
+All terminal variation sits in the Schur geometry
+
+```text
+Sigma_T = H_T B_T H_T^*,
+B_T = (I+R_T^*R_T)^(-1).
+```
+
+The frozen hub has fixed primitive prime-power coefficients, but both the finite-window
+operators `P_T D_s E_T` and the global Feshbach conditioning `B_T` are horizon dependent.
+Thus a naive new-shell-only positive Gram difference is **not** supplied by the frozen
+definitions.
+
+Loewner monotonicity
+
+```text
+G_{X,V}-G_{X,U} >= 0  ?
+```
+
+is a separate weaker gate and remains OPEN.
+
+## B-METINC: unconditional modulus input
+
+Define the normalized true metric increment
+
+```text
+Hbold_X^{U,V}
+ = G_{X,U}^(-1/2) (G_{X,V}-G_{X,U}) G_{X,U}^(-1/2)
+ = A_X^{U,V}-I.
+```
+
+For
+
+```text
+P_U=W_UW_U^*,
+E_{U,V}=(I-P_U) Hbold_S^{U,V} W_U,
+```
+
+one has unconditionally
+
+```text
+||E_{U,V}|| <= ||Hbold_S^{U,V}||.
+```
+
+Thus direct cofinal/partition control of normalized relative metric increments can feed
+B-FLAGMOD without first proving positivity.
+
+The live metric sub-gate is
+
+```text
+B-METINC:
+control ||Hbold_X^{U,V}|| cofinally in a form compatible with B-FLAGDYN summability.
+```
+
+### Conditional Loewner accelerator
+
+If, additionally,
+
+```text
+G_{R,V}-G_{R,U} >= 0,
+G_{S,V}-G_{S,U} >= 0,
+```
+
+then
+
+```text
+0 <= E^*E
+   <= ||Hbold_S|| Hbold_R - Hbold_R^2
+   <= ||Hbold_S|| Hbold_R,
+```
+
+hence
+
+```text
+||E||^2 <= ||Hbold_S|| ||Hbold_R||,
+||E|| <= (1/2)||Hbold_S||.
+```
+
+This is a conditional accelerator only. Positivity by itself still supplies no cofinal
+smallness or summability.
+
+## Sylvester conditioning firewall
+
+The square-root mismatch satisfies the exact pairwise Sylvester equation. For each fixed
+`U<V`, its norm is controlled by `||E_{U,V}||` with denominator
+
+```text
+alpha_S(U,V)+alpha_R(U,V),
+alpha_X(U,V)=inf sigma((A_X^{U,V})^(1/2)) > 0.
+```
+
+No cofinal uniform lower bound for these pairwise relative spectral gaps is currently
+booked. The fixed-source lower bound for absolute future metrics does not by itself give
+such a uniform relative bound.
+
 ## Current open mathematical targets
 
-### B-FLAGMOD
+### B-FLAGMOD / B-METINC
 
-Control the deep C6a-tail of the normalized O1 modulus/range-leakage term. The Jensen/compression correction is induced by the same range leakage through the modulus-lock identity.
+First try to control the normalized true future-metric increments directly. Separately,
+Loewner monotonicity may be proved to sharpen the variance estimate; only after that is a
+positive atom/new-shell decomposition worth pursuing as a quantitative arithmetic tool.
 
 ### B-FLAGPHASE
 
