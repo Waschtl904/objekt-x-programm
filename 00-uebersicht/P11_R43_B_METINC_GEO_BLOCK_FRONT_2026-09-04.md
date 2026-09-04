@@ -10,13 +10,13 @@
 
 ## Current front
 
-The fixed-terminal BMIX block is reduced by the type-correct residual intertwining defect
+With the type-correct residual intertwining defect
 
 \[
 C_{V,U}=R_VQ_I-\widetilde Q_I R_V
 \]
 
-and
+and `B_V=(I+R_V^*R_V)^{-1}`,
 
 \[
 \boxed{
@@ -27,7 +27,7 @@ and
 }
 \]
 
-For `0<V-U<log(2)/2`, the frozen martingale cutoff yields
+For fine terminal steps `0<V-U<log(2)/2`, the frozen martingale cutoff yields
 
 \[
 \widetilde Q_B R_V=0,
@@ -35,7 +35,11 @@ For `0<V-U<log(2)/2`, the frozen martingale cutoff yields
 \boxed{C_{V,U}=-R_VQ_B.}
 \]
 
-Thus the preferred quantitative BMIX target is `||R_VQ_BB_V||`.
+Thus the preferred quantitative BMIX target is
+
+\[
+\boxed{\|R_VQ_BB_V\|}.
+\]
 
 ## Live tree
 
@@ -79,24 +83,24 @@ and
 [R_V^*R_V,Q_I]=R_V^*C_{V,U}-C_{V,U}^*R_V.
 \]
 
-With `B_V=(I+R_V^*R_V)^{-1}`,
+Retaining both Feshbach factors gives
 
 \[
 Q_BB_VQ_I
 =-Q_BB_VR_V^*C_{V,U}B_VQ_I
-+Q_BB_VC_{V,U}^*R_VB_VQ_I,
++Q_BB_VC_{V,U}^*R_VB_VQ_I.
 \]
 
-while
+Since
 
 \[
 \|R_VB_V\|=\|B_VR_V^*\|
-=\sup_{t\ge0}\frac{t}{1+t^2}\le\frac12.
+=\sup_{t\ge0}\frac{t}{1+t^2}\le\frac12,
 \]
 
-This is `R43-BMIX-FESHBACH-ABSORPTION ✓[M]` locally; BMIX remains OPEN.
+the BMIX estimate above follows. This is `R43-BMIX-FESHBACH-ABSORPTION ✓[M]` locally; BMIX itself remains OPEN.
 
-The exact prime-power defect is
+The exact prime-power defect formula is
 
 \[
 (C_{V,U}f)(u)
@@ -109,15 +113,15 @@ The exact prime-power defect is
 
 Support localization alone does not imply operator-norm smallness.
 
-For fine steps the frozen depth
+For fine steps, the frozen depth
 
 \[
 J_{p,V}(u)=\max\left\{0,\left\lfloor\frac{2(V-|u|)_+}{\log p}\right\rfloor\right\}
 \]
 
-is zero throughout the new strip for every prime. This gives `R43-RESIDUAL-DEAD-LAYER ✓[M]` locally.
+is zero throughout the new strip for every prime. This is `R43-RESIDUAL-DEAD-LAYER ✓[M]` locally.
 
-For the residual marks, with `r=min{k,l,J_{p,V}(u)}`,
+For residual marks, with `r=min{k,l,J_{p,V}(u)}`,
 
 \[
 \langle q_{p,k;V},q_{p,l;V}\rangle
