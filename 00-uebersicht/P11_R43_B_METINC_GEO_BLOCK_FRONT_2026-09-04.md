@@ -19,13 +19,7 @@ With the type-correct residual intertwining defect `C_{V,U}=R_VQ_I-\widetilde Q_
 \le\|C_{V,U}B_V\|\le\|C_{V,U}\|.
 \]
 
-For `0<V-U<log(2)/2`, the frozen martingale cutoff yields `\widetilde Q_B R_V=0` and hence
-
-\[
-C_{V,U}=-R_VQ_B.
-\]
-
-Thus the preferred quantitative BMIX target is `||R_VQ_BB_V||`.
+For `0<V-U<log(2)/2`, the frozen martingale cutoff yields `\widetilde Q_B R_V=0` and hence `C_{V,U}=-R_VQ_B`. Thus the preferred quantitative BMIX target is `||R_VQ_BB_V||`.
 
 ## Live tree
 
@@ -50,13 +44,15 @@ Downstream remains `B-METINC -> B-FLAGMOD`, together with `B-FLAGPHASE` as the s
 
 ## Exact BMIX identities
 
-`R_V` acts between source and residual field spaces, so source projection `Q_I` and residual projection `\widetilde Q_I` are distinct. Then
+Because `R_V` acts between source and residual field spaces, source projection `Q_I` and residual projection `\widetilde Q_I` are distinct. Then
 
 \[
 C_{V,U}Q_I=\widetilde Q_B R_VQ_I,
 \qquad
 C_{V,U}Q_B=-\widetilde Q_I R_VQ_B,
 \]
+
+and
 
 \[
 [R_V^*R_V,Q_I]=R_V^*C_{V,U}-C_{V,U}^*R_V.
@@ -65,32 +61,30 @@ C_{V,U}Q_B=-\widetilde Q_I R_VQ_B,
 Retaining both Feshbach factors gives
 
 \[
-Q_BB_VQ_I
-=-Q_BB_VR_V^*C_{V,U}B_VQ_I
-+Q_BB_VC_{V,U}^*R_VB_VQ_I,
+Q_BB_VQ_I=-Q_BB_VR_V^*C_{V,U}B_VQ_I+Q_BB_VC_{V,U}^*R_VB_VQ_I,
 \]
 
-and `||R_VB_V||=||B_VR_V^*||<=1/2`. This is `R43-BMIX-FESHBACH-ABSORPTION ✓[M]` locally; BMIX remains OPEN.
+with `||R_VB_V||=||B_VR_V^*||<=1/2`. This is `R43-BMIX-FESHBACH-ABSORPTION ✓[M]` locally; BMIX remains OPEN.
 
-The exact prime-power defect is
+The exact prime-power defect formula is
 
 \[
 (C_{V,U}f)(u)=\sum_{p,k}\sqrt{\log p}\,p^{-k/4}([D_{k\log p},M_U]E_Vf)(u)\otimes\mathsf Q_V(u)\eta_{p,k}.
 \]
 
-For fine steps the frozen depth `J_{p,V}(u)` vanishes in the new strip for every prime, giving `R43-RESIDUAL-DEAD-LAYER ✓[M]` locally.
+Support localization alone does not imply norm smallness.
 
-For residual marks, with `r=min{k,l,J_{p,V}(u)}`,
+The fine-step dead-layer theorem `R43-RESIDUAL-DEAD-LAYER ✓[M]` follows from the frozen source-dependent depth. For residual marks, with `r=min{k,l,J_{p,V}(u)}`,
 
 \[
 \langle q_{p,k;V},q_{p,l;V}\rangle=\begin{cases}p^{r-(k+l)/2}-p^{-(k+l)/2},&r\ge1,\\0,&r=0,\end{cases}
 \]
 
-so `0<=<q_{p,k;V},q_{p,l;V}><=p^{-|k-l|/2}`. This is `R43-RESIDUAL-MARK-GRAM ✓[M]` locally.
+hence `0<=<q_{p,k;V},q_{p,l;V}><=p^{-|k-l|/2}`. This is `R43-RESIDUAL-MARK-GRAM ✓[M]` locally.
 
 ## Remaining firewalls
 
-BMIX conditioned decay/summability, BDRY strip quadratic control, NORMMIX, COND, and concrete FD23-UNIF remain OPEN.
+BMIX conditioned decay/summability, BDRY, NORMMIX, COND, and concrete FD23-UNIF remain OPEN.
 
 ## Governance
 
