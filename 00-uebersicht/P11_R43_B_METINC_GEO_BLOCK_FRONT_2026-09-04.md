@@ -10,13 +10,13 @@
 
 ## Current front
 
-With the type-correct residual intertwining defect
+The exact raw symmetric-strip theorem is local.  The fixed-terminal BMIX block is reduced by the type-correct residual intertwining defect
 
 \[
-C_{V,U}=R_VQ_I-\widetilde Q_I R_V
+C_{V,U}=R_VQ_I-\widetilde Q_I R_V.
 \]
 
-and `B_V=(I+R_V^*R_V)^{-1}`, the fixed-terminal BMIX cross block satisfies
+With `B_V=(I+R_V^*R_V)^{-1}`,
 
 \[
 \boxed{
@@ -27,13 +27,21 @@ and `B_V=(I+R_V^*R_V)^{-1}`, the fixed-terminal BMIX cross block satisfies
 }
 \]
 
-For fine terminal steps `0<V-U<log(2)/2`, the frozen martingale cutoff kills all residual output on the new outer strip, so
+For fine terminal steps
 
 \[
+0<V-U<\frac12\log2,
+\]
+
+the frozen martingale cutoff gives
+
+\[
+\widetilde Q_B R_V=0,
+\qquad
 \boxed{C_{V,U}=-R_VQ_B.}
 \]
 
-Therefore the preferred quantitative BMIX target is
+Hence the preferred quantitative BMIX target is
 
 \[
 \boxed{\|R_VQ_BB_V\|}.
@@ -68,9 +76,11 @@ B-METINC-WIDTH + FD23 machinery
   -> Strong Terminal ?
 ```
 
-## Exact local identities
+No converse is added.
 
-`R_V` acts from the source space to a residual field space, so `Q_I` acts on the source while `\widetilde Q_I` acts on the residual codomain. Then
+## Exact local BMIX identities
+
+Because `R_V` acts from the source space to a residual field space, `Q_I` acts on the source and `\widetilde Q_I` on the residual codomain.  Then
 
 \[
 C_{V,U}Q_I=\widetilde Q_B R_VQ_I,
@@ -79,7 +89,8 @@ C_{V,U}Q_B=-\widetilde Q_I R_VQ_B,
 \]
 
 \[
-\|C_{V,U}\|=
+\|C_{V,U}\|
+=
 \max\{\|\widetilde Q_B R_VQ_I\|,\|\widetilde Q_I R_VQ_B\|\},
 \]
 
@@ -89,7 +100,7 @@ and
 [R_V^*R_V,Q_I]=R_V^*C_{V,U}-C_{V,U}^*R_V.
 \]
 
-Retaining both Feshbach factors gives
+Retaining the Feshbach factors,
 
 \[
 Q_BB_VQ_I
@@ -104,7 +115,7 @@ Since
 =\sup_{t\ge0}\frac{t}{1+t^2}\le\frac12,
 \]
 
-the displayed BMIX bound follows. This is `R43-BMIX-FESHBACH-ABSORPTION ✓[M]` locally; BMIX itself remains OPEN.
+the displayed BMIX estimate follows.  This is `R43-BMIX-FESHBACH-ABSORPTION ✓[M]` locally; BMIX itself remains OPEN.
 
 The exact prime-power defect formula is
 
@@ -117,7 +128,7 @@ The exact prime-power defect formula is
 \otimes\mathsf Q_V(u)\eta_{p,k}.
 \]
 
-Each channel is a boundary-crossing translation commutator; support localization alone does not imply norm smallness.
+Each channel is a boundary-crossing translation commutator; support localization alone does not imply operator-norm smallness.
 
 The fine-step dead layer follows from the frozen depth
 
@@ -125,7 +136,7 @@ The fine-step dead layer follows from the frozen depth
 J_{p,V}(u)=\max\left\{0,\left\lfloor\frac{2(V-|u|)_+}{\log p}\right\rfloor\right\}.
 \]
 
-For `V-U<log(2)/2`, every prime has depth zero on the new strip. This is `R43-RESIDUAL-DEAD-LAYER ✓[M]` locally.
+For `V-U<log(2)/2`, every prime has depth zero on the new strip.  This is `R43-RESIDUAL-DEAD-LAYER ✓[M]` locally.
 
 For residual marks, with `r=min{k,l,J_{p,V}(u)}`,
 
@@ -138,7 +149,7 @@ p^{r-(k+l)/2}-p^{-(k+l)/2},&r\ge1,\\
 \end{cases}
 \]
 
-and therefore
+and
 
 \[
 0\le\langle q_{p,k;V},q_{p,l;V}\rangle\le p^{-|k-l|/2}.
@@ -160,4 +171,4 @@ The positivity-free spectral-width route and full pairwise coercivity factor are
 
 Local exact only: `R43-GEO-RAW-STRIP ✓[M]`, `R43-BMIX-FESHBACH-ABSORPTION ✓[M]`, `R43-RESIDUAL-DEAD-LAYER ✓[M]`, `R43-RESIDUAL-MARK-GRAM ✓[M]`, `FD23-TAIL-COMPACTNESS-EQUIV ✓[M]`.
 
-All project gates remain OPEN: B-METINC-GEO-BMIX, B-METINC-GEO-BDRY, B-METINC-NORMMIX, B-METINC-COND, FD23-UNIF, B-METINC-NEW, B-METINC-WIDTH, B-METINC, B-FLAGMOD, B-FLAGPHASE, B-FLAGTIGHT, B-SIGN, Strong Terminal/C6, R43. No freeze, no formal independent GREEN, no Object-X/RH promotion. R38–R42 unchanged/frozen; R37/G4c separate and OPEN.
+All project gates remain OPEN: B-METINC-GEO-BMIX, B-METINC-GEO-BDRY, B-METINC-NORMMIX, B-METINC-COND, FD23-UNIF, B-METINC-NEW, B-METINC-WIDTH, B-METINC, B-FLAGMOD, B-FLAGPHASE, B-FLAGTIGHT, B-SIGN, Strong Terminal/C6, R43.  No freeze, no formal independent GREEN, no Object-X/RH promotion.  R38–R42 unchanged/frozen; R37/G4c separate and OPEN.
