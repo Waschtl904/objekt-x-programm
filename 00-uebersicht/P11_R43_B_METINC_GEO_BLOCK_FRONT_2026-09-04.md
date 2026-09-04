@@ -24,7 +24,7 @@ one has the exact Feshbach-absorbed estimate
 \le\|C_{V,U}B_V\|\le\|C_{V,U}\|.
 \]
 
-Thus the old crude factor `2||R_V||` is not part of the preferred route. For fine steps `V-U<log(2)/2`, the frozen martingale cutoff creates an exact residual dead layer in the new outer strip and in fact
+Thus the old crude factor `2||R_V||` is not part of the preferred route. For fine steps `V-U<log(2)/2`, the frozen martingale cutoff creates an exact residual dead layer in the new outer strip and
 
 \[
 \boxed{C_{V,U}=-R_VQ_B.}
@@ -39,20 +39,20 @@ B-METINC-WIDTH [OPEN]
 ├─ summable width/conditioning majorants [OPEN]
 │  ├─ B-METINC-NEW [OPEN]
 │  ├─ B-METINC-GEO [OPEN]
-│  │  ├─ R43-GEO-RAW-STRIP ✓[M]        (local raw theorem)
+│  │  ├─ R43-GEO-RAW-STRIP ✓[M]
 │  │  ├─ B-METINC-GEO-BMIX [OPEN]
-│  │  │  ├─ FESHBACH-ABSORPTION ✓[M]   (local exact reduction)
-│  │  │  ├─ RESIDUAL-DEAD-LAYER ✓[M]   (fine-step local theorem)
-│  │  │  ├─ RESIDUAL-MARK-GRAM ✓[M]    (local exact algebra)
+│  │  │  ├─ FESHBACH-ABSORPTION ✓[M]
+│  │  │  ├─ RESIDUAL-DEAD-LAYER ✓[M]
+│  │  │  ├─ RESIDUAL-MARK-GRAM ✓[M]
 │  │  │  └─ conditioned defect decay/summability [OPEN]
 │  │  └─ B-METINC-GEO-BDRY [OPEN]
-│  ├─ B-METINC-NORMMIX [OPEN]          (G_{S,U}^{-1/2} offblock)
-│  └─ B-METINC-COND [OPEN]             (B_U -> B_V; elevated priority)
+│  ├─ B-METINC-NORMMIX [OPEN]
+│  └─ B-METINC-COND [OPEN]
 └─ FD23-UNIF [OPEN]
    └─ FD23-TAIL-COMPACTNESS-EQUIV ✓[M]
 ```
 
-Legacy normalized/source-metric `GEO-II` and `GEO-IB` remain OPEN. Their raw unweighted support analogues are closed jointly by `R43-GEO-RAW-STRIP`.
+Legacy normalized/source-metric `GEO-II` and `GEO-IB` remain OPEN. Their raw unweighted analogues are closed jointly by `R43-GEO-RAW-STRIP`.
 
 Downstream remains
 
@@ -78,7 +78,7 @@ E_T:\mathscr H_T\to L^2(\mathbb R)\text{ zero extension},
 P_T=E_T^*.
 \]
 
-For `X<U<V` and `\psi_s(f):=-D_sE_Xf`, one has
+For `X<U<V` and `\psi_s(f):=-D_sE_Xf`,
 
 \[
 K_{s,T}^*E_{X,T}f=P_T\psi_s(f),
@@ -118,13 +118,7 @@ Frozen Schur geometry uses
 B_V=(I+R_V^*R_V)^{-1}.
 \]
 
-The actual fixed-terminal cross term contains
-
-\[
-Q_BB_VQ_I.
-\]
-
-Because `R_V` has different domain and residual codomain, introduce `Q_I` on the source/domain and `\widetilde Q_I` as the corresponding spatial multiplication on the residual codomain, and define
+The actual fixed-terminal cross term contains `Q_BB_VQ_I`. Because `R_V` has different domain and residual codomain, use `Q_I` on the source/domain and `\widetilde Q_I` on the residual codomain, and define
 
 \[
 \boxed{C_{V,U}:=R_VQ_I-\widetilde Q_I R_V.}
@@ -141,7 +135,8 @@ C_{V,U}Q_B=-\widetilde Q_I R_VQ_B,
 and
 
 \[
-\|C_{V,U}\|=
+\|C_{V,U}\|
+=
 \max\{\|\widetilde Q_B R_VQ_I\|,\|\widetilde Q_I R_VQ_B\|\}.
 \]
 
@@ -190,14 +185,7 @@ With `M_U=1_{(-U,U)}` on ambient `L^2(R)`, zero extension gives `E_VQ_I=M_UE_V`,
 \otimes\mathsf Q_V(u)\eta_{p,k}.
 \]
 
-Every channel is therefore a boundary-crossing translation commutator. Support localization alone does not imply small operator norm.
-
-A stronger exact local fact follows from
-
-\[
-J_{p,V}(u)=
-\max\left\{0,\left\lfloor\frac{2(V-|u|)_+}{\log p}\right\rfloor\right\}.
-\]
+Every channel is a boundary-crossing translation commutator. Support localization alone does not imply small operator norm.
 
 If
 
@@ -205,21 +193,21 @@ If
 0<V-U<\frac12\log2,
 \]
 
-then for every `u` in `U<|u|<V` and every prime `p\ge2`, `J_{p,V}(u)=0`. Therefore
+then for every `u` in `U<|u|<V` and every prime `p\ge2`, the frozen martingale depth is zero. Therefore
 
 \[
-\widetilde Q_B R_V=0.
+\widetilde Q_B R_V=0,
+\qquad
+\widetilde Q_I R_V=R_V,
 \]
 
-Because `\widetilde Q_I R_V=R_V` on such a step,
+and
 
 \[
-\boxed{
-C_{V,U}=R_VQ_I-R_V=-R_VQ_B.
-}
+\boxed{C_{V,U}=-R_VQ_B.}
 \]
 
-This is `R43-RESIDUAL-DEAD-LAYER ✓[M]`, a local fine-step theorem only. It is one-sided: source vectors in the new strip can still be translated inward, so BMIX need not vanish.
+This is `R43-RESIDUAL-DEAD-LAYER ✓[M]`, a local fine-step theorem only. It is one-sided: new-strip source vectors can still be translated inward.
 
 ## Residual mark Gram algebra
 
@@ -251,7 +239,7 @@ so
 
 Thus the `k`-correlations inside a fixed prime sector decay geometrically. This is `R43-RESIDUAL-MARK-GRAM ✓[M]` as local exact algebra; it does not control the prime sum by itself.
 
-## NORMMIX and COND remain distinct
+## NORMMIX, COND, spectral width, FD23
 
 The normalized operator is
 
@@ -259,31 +247,12 @@ The normalized operator is
 \mathbf H_{\rm geo}=G_{S,U}^{-1/2}\Delta G_{\rm geo}G_{S,U}^{-1/2}.
 \]
 
-Thus `NORMMIX` remains
+Hence `NORMMIX` remains OPEN via the offblock `P_IG_{S,U}^{-1/2}P_B` (or equivalent commutator control), while `COND` remains the separate actual terminal drift `B_U\to B_V`.
 
-```text
-B-METINC-NORMMIX [OPEN]
-    control P_I G_{S,U}^{-1/2} P_B
-```
-
-or an equivalent commutator/reducing-subspace formulation.
-
-The mechanisms remain distinct:
-
-1. `BMIX`: fixed-`B_V` mixing, now reduced to conditioned `C_{V,U}B_V`;
-2. `NORMMIX`: source-metric inverse square root mixes after pullback;
-3. `COND`: actual terminal drift `B_U -> B_V`.
-
-## Spectral-width and FD23 routes retained
-
-For
+The spectral-width route remains
 
 \[
-\mathbf H_X^{U,V}=G_{X,U}^{-1/2}(G_{X,V}-G_{X,U})G_{X,U}^{-1/2},
-\]
-
-\[
-\|\mathscr E_{U,V}\|=\|[\mathbf H_S^{U,V},P_U]\|
+\|\mathscr E_{U,V}\|
 \le\frac12\operatorname{width}\sigma(\mathbf H_S^{U,V}),
 \]
 
@@ -310,7 +279,7 @@ This remains `FD23-TAIL-COMPACTNESS-EQUIV ✓[M]`; the concrete `FD23-UNIF` appl
 
 ## Immediate proof order
 
-1. Estimate the **conditioned fine-step defect** `||R_VQ_BB_V||` (equal to `||C_{V,U}B_V||` when `V-U<log(2)/2`).
+1. Estimate the **conditioned fine-step defect** `||R_VQ_BB_V||` (equal to `||C_{V,U}B_V||` for `V-U<log(2)/2`).
 2. Use the one-sided dead-layer identity before any crude prime summation.
 3. Derive a quantitative `COND` resolvent increment for `B_U -> B_V` without conflating it with BMIX.
 4. Control `NORMMIX` through the old-metric square-root offblock.
@@ -332,7 +301,7 @@ This remains `FD23-TAIL-COMPACTNESS-EQUIV ✓[M]`; the concrete `FD23-UNIF` appl
 - legacy normalized `GEO-II`: OPEN.
 - legacy normalized `GEO-IB`: OPEN.
 - `B-METINC-NORMMIX`: OPEN.
-- `B-METINC-COND`: OPEN, elevated priority.
+- `B-METINC-COND`: OPEN.
 - `FD23-UNIF`: OPEN.
 - `B-METINC-NEW`: OPEN.
 - `B-METINC-WIDTH`: OPEN.
