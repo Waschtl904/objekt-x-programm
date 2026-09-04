@@ -24,7 +24,13 @@ one has the exact Feshbach-absorbed estimate
 \le\|C_{V,U}B_V\|\le\|C_{V,U}\|.
 \]
 
-Thus the old crude factor `2||R_V||` is not part of the preferred route. For fine steps `V-U<log(2)/2`, the frozen martingale cutoff also creates an exact residual dead layer in the new outer strip.
+Thus the old crude factor `2||R_V||` is not part of the preferred route. For fine steps `V-U<log(2)/2`, the frozen martingale cutoff creates an exact residual dead layer in the new outer strip and in fact
+
+\[
+\boxed{C_{V,U}=-R_VQ_B.}
+\]
+
+So the only residual intertwining defect left on a fine step is **new-strip source input translated back into the old interior**.
 
 ## Live tree
 
@@ -202,18 +208,18 @@ If
 then for every `u` in `U<|u|<V` and every prime `p\ge2`, `J_{p,V}(u)=0`. Therefore
 
 \[
-\boxed{\widetilde Q_B R_V=0,}
+\widetilde Q_B R_V=0.
 \]
 
-and hence
+Because `\widetilde Q_I R_V=R_V` on such a step,
 
 \[
-C_{V,U}Q_I=0,
-\qquad
-C_{V,U}=-\widetilde Q_I R_VQ_B.
+\boxed{
+C_{V,U}=R_VQ_I-R_V=-R_VQ_B.
+}
 \]
 
-This is `R43-RESIDUAL-DEAD-LAYER ✓[M]`, again a local fine-step theorem only. It is one-sided: source vectors in the new strip can still be translated inward.
+This is `R43-RESIDUAL-DEAD-LAYER ✓[M]`, a local fine-step theorem only. It is one-sided: source vectors in the new strip can still be translated inward, so BMIX need not vanish.
 
 ## Residual mark Gram algebra
 
@@ -304,8 +310,8 @@ This remains `FD23-TAIL-COMPACTNESS-EQUIV ✓[M]`; the concrete `FD23-UNIF` appl
 
 ## Immediate proof order
 
-1. Estimate the **conditioned** BMIX defect `||C_{V,U}B_V||`, preserving the Feshbach factor.
-2. Exploit the fine-step one-sided dead-layer identity before any crude prime summation.
+1. Estimate the **conditioned fine-step defect** `||R_VQ_BB_V||` (equal to `||C_{V,U}B_V||` when `V-U<log(2)/2`).
+2. Use the one-sided dead-layer identity before any crude prime summation.
 3. Derive a quantitative `COND` resolvent increment for `B_U -> B_V` without conflating it with BMIX.
 4. Control `NORMMIX` through the old-metric square-root offblock.
 5. Prove fixed-interval compactness/norm continuity for `FD23-UNIF`.
