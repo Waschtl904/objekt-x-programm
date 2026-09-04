@@ -5,10 +5,25 @@
 **Companion audits:**
 - `audits/P11_R43_B_METINC_GEO_BLOCK_FIREWALL_2026-09-04.md`
 - `audits/P11_R43_GEO_STRIP_BMIX_NORMMIX_FD23_COMPACTNESS_AUDIT_2026-09-04.md`
+- `audits/P11_R43_BMIX_INTERTWINING_FESHBACH_ABSORPTION_2026-09-04.md`
 
 ## One-line update
 
-The frozen `P_T,E_T,D_s` definitions now give an exact **raw symmetric-strip theorem**.  Raw unweighted interior/interior and interior/boundary increments collapse together, but the actual Schur/normalized GEO channel still has two separate mixing firewalls: fixed-terminal Feshbach mixing (`BMIX`) and old-metric square-root mixing (`NORMMIX`).
+The raw symmetric-strip geometry is already local.  The BMIX cross block is now sharpened further: the type-correct residual intertwining defect
+
+\[
+C_{V,U}=R_VQ_I-\widetilde Q_I R_V
+\]
+
+satisfies an exact Feshbach-absorbed bound
+
+\[
+\|Q_BB_VQ_I\|
+\le \|C_{V,U}B_V\|
+\le \|C_{V,U}\|,
+\]
+
+so the crude factor `2||R_V||` is unnecessary.  For fine terminal steps `V-U<log(2)/2`, the frozen martingale cutoff also creates an exact residual dead layer in the new outer strip.
 
 ## Live tree
 
@@ -17,16 +32,20 @@ B-METINC-WIDTH [OPEN]
 ├─ summable width/conditioning majorants [OPEN]
 │  ├─ B-METINC-NEW [OPEN]
 │  ├─ B-METINC-GEO [OPEN]
-│  │  ├─ R43-GEO-RAW-STRIP ✓[M]      (local raw theorem)
-│  │  ├─ B-METINC-GEO-BMIX [OPEN]    (Q_B B_V Q_I)
-│  │  └─ B-METINC-GEO-BDRY [OPEN]    (strip quadratic / boundary size)
-│  ├─ B-METINC-NORMMIX [OPEN]        (G_{S,U}^{-1/2} offblock)
-│  └─ B-METINC-COND [OPEN]           (B_U -> B_V; elevated priority)
+│  │  ├─ R43-GEO-RAW-STRIP ✓[M]        (local raw theorem)
+│  │  ├─ B-METINC-GEO-BMIX [OPEN]
+│  │  │  ├─ FESHBACH-ABSORPTION ✓[M]   (local exact reduction)
+│  │  │  ├─ RESIDUAL-DEAD-LAYER ✓[M]   (fine-step local theorem)
+│  │  │  ├─ RESIDUAL-MARK-GRAM ✓[M]    (local exact algebra)
+│  │  │  └─ conditioned defect decay/summability [OPEN]
+│  │  └─ B-METINC-GEO-BDRY [OPEN]
+│  ├─ B-METINC-NORMMIX [OPEN]          (G_{S,U}^{-1/2} offblock)
+│  └─ B-METINC-COND [OPEN]             (B_U -> B_V; elevated priority)
 └─ FD23-UNIF [OPEN]
    └─ FD23-TAIL-COMPACTNESS-EQUIV ✓[M]
 ```
 
-Legacy labels `GEO-II` and `GEO-IB` remain OPEN at the actual normalized/source-metric level.  Their **raw unweighted** support analogues are closed jointly by `R43-GEO-RAW-STRIP`.
+Legacy normalized/source-metric `GEO-II` and `GEO-IB` remain OPEN.  Their raw unweighted support analogues are closed jointly by `R43-GEO-RAW-STRIP`.
 
 Downstream remains
 
@@ -65,14 +84,7 @@ K_{s,T}^*E_{X,T}f=P_T\psi_s(f),
 \qquad K_{s,T}=P_TD_sE_T,
 \]
 
-and therefore
-
-\[
-K_{s,V}^*E_{X,V}f-
-\iota_{U\to V}K_{s,U}^*E_{X,U}f
-\]
-
-is supported on
+and therefore the raw increment is supported on
 
 \[
 \mathcal S_{U,V}=\{x:U<|x|<V\}.
@@ -87,42 +99,25 @@ Equivalently,
 \int_{U<|x|<V}\psi_a\overline{\psi_b}.
 \]
 
-The strip is symmetric because the frozen windows are `(-T,T)`.
-
-For the entire old hub, if
+For the entire old hub, if `v_0` is the embedded terminal-`U` vector and `d` its old-geometry increment, then
 
 \[
-v_0=\iota H_U^*E_{X,U}f,
-\qquad
-v_1=H_{V,\rm old}^*E_{X,V}f,
-\qquad
-d=v_1-v_0,
+v_0=Q_Iv_0,
+\qquad d=Q_Bd,
+\qquad \langle d,v_0\rangle=0.
 \]
 
-then `v_0` is supported in `(-U,U)` and `d` in the strip, so
+This is `R43-GEO-RAW-STRIP ✓[M]`, a local exact frozen-definition theorem only.
 
-\[
-\langle d,v_0\rangle=0.
-\]
-
-This is `R43-GEO-RAW-STRIP ✓[M]`, a local exact frozen-definition result only.
-
-## GEO-BMIX: the surviving Schur cross term
+## GEO-BMIX: type-correct residual intertwining defect
 
 Frozen Schur geometry uses
 
 \[
-B_V=(I+R_V^*R_V)^{-1}
+B_V=(I+R_V^*R_V)^{-1}.
 \]
 
-inside the old-geometry term.  Let
-
-\[
-Q_I=1_{(-U,U)},
-\qquad Q_B=I-Q_I.
-\]
-
-Then exactly
+The actual fixed-terminal cross block is
 
 \[
 \Delta s_{\rm geo}
@@ -132,112 +127,279 @@ Then exactly
 \langle d,Q_BB_VQ_Bd\rangle.
 \]
 
-Thus the primitive cross obstruction is
+Because `R_V` has different domain and residual codomain, introduce
+
+- `Q_I` on the source/domain;
+- `\widetilde Q_I` as the same spatial multiplication on the residual codomain.
+
+Define
 
 \[
-\boxed{Q_BB_VQ_I.}
+\boxed{C_{V,U}:=R_VQ_I-\widetilde Q_I R_V.}
 \]
 
-It is **not** `COND`: `B_V` is fixed here.  `COND` is separately the horizon change `B_U\to B_V`.
-
-A useful exact reduction is
+Then
 
 \[
-[B_V,Q_I]=-B_V[R_V^*R_V,Q_I]B_V,
+C_{V,U}Q_I=\widetilde Q_B R_VQ_I,
+\qquad
+C_{V,U}Q_B=-\widetilde Q_I R_VQ_B,
 \]
 
-so
+and therefore
 
 \[
+\|C_{V,U}\|
+=
+\max\{\|\widetilde Q_B R_VQ_I\|,
+       \|\widetilde Q_I R_VQ_B\|\}.
+\]
+
+Moreover
+
+\[
+[R_V^*R_V,Q_I]
+=R_V^*C_{V,U}-C_{V,U}^*R_V.
+\]
+
+The crucial sharpening is to **retain** the two Feshbach factors.  Resolvent calculus gives
+
+\[
+Q_BB_VQ_I
+=-Q_BB_VR_V^*C_{V,U}B_VQ_I
++Q_BB_VC_{V,U}^*R_VB_VQ_I.
+\]
+
+Since
+
+\[
+\|R_VB_V\|=\|B_VR_V^*\|
+=\sup_{t\ge0}\frac{t}{1+t^2}
+\le\frac12,
+\]
+
+one obtains exactly
+
+\[
+\boxed{
 \|Q_BB_VQ_I\|
 \le
-\|[R_V^*R_V,Q_I]\|.
+\frac12\left(
+\|C_{V,U}B_VQ_I\|
++
+\|C_{V,U}B_VQ_B\|
+\right)
+\le
+\|C_{V,U}B_V\|
+\le
+\|C_{V,U}\|.
+}
 \]
 
-No smallness is yet booked.
+Book only the local reduction
 
-## NORMMIX: a second, later mixing layer
+```text
+R43-BMIX-FESHBACH-ABSORPTION ✓[M].
+```
 
-The spectral-width operator is normalized by
+BMIX remains OPEN because decay/summability of `||C_{V,U}B_V||` is not yet proved.
+
+## Exact prime-power form of the defect
+
+Let `M_U=1_{(-U,U)}` on ambient `L^2(R)`.  Since `E_VQ_I=M_UE_V` and the mark cutoff is pointwise in the spatial variable,
+
+\[
+\boxed{
+(C_{V,U}f)(u)
+=
+\sum_{p,k}
+\sqrt{\log p}\,p^{-k/4}
+([D_{k\log p},M_U]E_Vf)(u)
+\otimes\mathsf Q_V(u)\eta_{p,k}.
+}
+\]
+
+For `(U_tg)(u)=g(u-t)`, each `[U_t,M_U]` is supported on
+
+\[
+(-U,U)\triangle((-U,U)+t).
+\]
+
+Thus every prime-power channel is a boundary-crossing translation commutator.  Support localization by itself does not imply small operator norm.
+
+## Fine-step residual dead layer
+
+For `u` in the outer strip `U<|u|<V`,
+
+\[
+V-|u|<V-U.
+\]
+
+If
+
+\[
+0<V-U<\frac12\log2,
+\]
+
+then for every prime `p\ge2`
+
+\[
+\frac{2(V-|u|)}{\log p}<1,
+\]
+
+hence the frozen martingale depth satisfies `J_{p,V}(u)=0`. Therefore
+
+\[
+\boxed{
+\widetilde Q_B R_V=0
+}
+\]
+
+on every such fine step, and consequently
+
+\[
+C_{V,U}Q_I=0,
+\qquad
+C_{V,U}=-\widetilde Q_I R_VQ_B.
+\]
+
+Book only
+
+```text
+R43-RESIDUAL-DEAD-LAYER ✓[M]
+```
+
+as a local fine-step theorem.  It is one-sided: new-strip source vectors can still be translated inward, so BMIX does not vanish automatically.
+
+## Residual mark Gram algebra
+
+For
+
+\[
+q_{p,k;V}(u)=\mathsf Q_V(u)\eta_{p,k},
+\qquad
+r=\min\{k,\ell,J_{p,V}(u)\},
+\]
+
+direct summation yields
+
+\[
+\langle q_{p,k;V}(u),q_{p,\ell;V}(u)\rangle
+=
+\begin{cases}
+ p^{r-(k+\ell)/2}-p^{-(k+\ell)/2},&r\ge1,\\
+ 0,&r=0,
+\end{cases}
+\]
+
+so in particular
+
+\[
+0\le
+\langle q_{p,k;V}(u),q_{p,\ell;V}(u)\rangle
+\le p^{-|k-\ell|/2}.
+\]
+
+Thus `k`-correlations inside one prime sector decay geometrically.  The remaining difficulty is not this algebra alone but the prime sum, boundary translation geometry, and Feshbach/source normalization.
+
+Book the displayed exact algebra as
+
+```text
+R43-RESIDUAL-MARK-GRAM ✓[M].
+```
+
+## NORMMIX and COND remain distinct
+
+The normalized spectral-width operator is
 
 \[
 \mathbf H_{\rm geo}
 =G_{S,U}^{-1/2}\Delta G_{\rm geo}G_{S,U}^{-1/2}.
 \]
 
-Therefore even a Schur/source block cancellation need not survive unless the old metric square root respects the relevant split.  The live quantitative node is
+Thus a second mixing layer remains:
 
 ```text
 B-METINC-NORMMIX [OPEN]
     control P_I G_{S,U}^{-1/2} P_B
 ```
 
-(or the corresponding commutator/reducing-subspace formulation).
+or an equivalent commutator/reducing-subspace formulation.
 
-`BMIX`, `NORMMIX`, and `COND` are three distinct mechanisms:
+The three mechanisms remain distinct:
 
-1. `BMIX`: fixed `B_V` mixes old interior with the new strip;
-2. `NORMMIX`: `G_{S,U}^{-1/2}` mixes source blocks after pullback;
-3. `COND`: `B_U` changes to `B_V` with terminal horizon.
+1. `BMIX`: fixed `B_V` mixing, now reduced to the conditioned defect `C_{V,U}B_V`;
+2. `NORMMIX`: old source metric inverse square root mixes the split after pullback;
+3. `COND`: actual terminal drift `B_U -> B_V`.
 
-## Spectral-width sharpening
+## Spectral-width route retained
 
-For
-
-\[
-H=\begin{pmatrix}0&C\\ C^*&D\end{pmatrix}=H^*,
-\]
+For the normalized metric increment
 
 \[
-\operatorname{width}\sigma(H)
-\le
-2\|C\|+
-\operatorname{width}(\sigma(D)\cup\{0\})
-\le
-2\|C\|+2\|D\|.
+\mathbf H_X^{U,V}
+=G_{X,U}^{-1/2}(G_{X,V}-G_{X,U})G_{X,U}^{-1/2},
 \]
 
-If separately `D\ge0`, the last term improves to `\|D\|`.  No such positivity is silently promoted for the full normalized GEO block.
+and `P_U=W_UW_U^*`,
 
-## FD23 tail compactness
+\[
+\|\mathscr E_{U,V}\|
+=\|[\mathbf H_S^{U,V},P_U]\|
+\le
+\frac12\operatorname{width}\sigma(\mathbf H_S^{U,V}).
+\]
 
-The canonical tail is
+The actual modulus gate still carries
+
+\[
+\mathfrak d_{m,\rm mod}(U,V)
+\le
+\frac{\operatorname{width}\sigma(\mathbf H_S^{U,V})}
+{2\alpha_R(U,V)(\alpha_S(U,V)+\alpha_R(U,V))}.
+\]
+
+No cofinal uniform coercivity lower bound is booked.
+
+## FD23 tail compactness retained
+
+For the canonical jet tails
 
 \[
 \mathcal H_S^{[m]}
-=
-\overline{\operatorname{span}}\{e_{S,n}:n\ge m\},
+=\overline{\operatorname{span}}\{e_{S,n}:n\ge m\},
 \]
 
-which is generally infinite dimensional.  Its complement/head is finite dimensional.  Therefore for every bounded `K\subset\mathcal H_S^0`,
+and every bounded `K\subset\mathcal H_S^0`,
 
 \[
-\boxed{
 K\text{ relatively norm compact}
 \iff
 \sup_{x\in K}\|P_S^{[m]}x\|\to0.
-}
 \]
 
-This abstract/canonical-tail equivalence is `✓[M]`.  The actual R43 family still has to be shown bounded/compact (for example by fixed-interval norm continuity), so `FD23-UNIF` remains OPEN.
-
-In the more general strong-convergence lemma, `\sup_m\|T_m\|<\infty` is automatic from Banach–Steinhaus.  For the orthogonal tails it is trivial since `\|P_S^{[m]}\|\le1`.
+This remains `FD23-TAIL-COMPACTNESS-EQUIV ✓[M]`.  The actual R43 family has not yet been proved compact/norm-continuous on fixed intervals, so `FD23-UNIF` remains OPEN.
 
 ## Immediate proof order
 
-1. `B-METINC-GEO-BMIX`: estimate `Q_BB_VQ_I` or `[R_V^*R_V,Q_I]`.
-2. `B-METINC-COND`: derive a quantitative resolvent increment for `B_U\to B_V` without conflating it with BMIX.
-3. `B-METINC-NORMMIX`: control the old-metric square-root offblock.
-4. `FD23-UNIF`: prove fixed-interval boundedness plus relative compactness/norm continuity of the concrete modulus-vector family.
-5. Only then return to condition-weighted prime-power summability.
+1. Estimate the **conditioned** BMIX defect `||C_{V,U}B_V||`, preserving the Feshbach factor.
+2. Exploit the fine-step one-sided dead-layer identity before any crude prime summation.
+3. Derive a quantitative `COND` resolvent increment for `B_U -> B_V` without conflating it with BMIX.
+4. Control `NORMMIX` through the old-metric square-root offblock.
+5. Prove fixed-interval compactness/norm continuity for `FD23-UNIF`.
+6. Only then return to condition-weighted terminal summability.
 
 ## Governance
 
 - `R43-GEO-RAW-STRIP`: ✓[M] local exact theorem only.
+- `R43-BMIX-FESHBACH-ABSORPTION`: ✓[M] local exact theorem only.
+- `R43-RESIDUAL-DEAD-LAYER`: ✓[M] local exact theorem only.
+- `R43-RESIDUAL-MARK-GRAM`: ✓[M] local exact algebra only.
 - `FD23-TAIL-COMPACTNESS-EQUIV`: ✓[M] abstract/canonical-tail theorem only.
 - no new project-level `✓[M]`.
 - `B-METINC-GEO`: OPEN.
 - `B-METINC-GEO-BMIX`: OPEN.
+- conditioned BMIX decay/summability: OPEN.
 - `B-METINC-GEO-BDRY`: OPEN.
 - legacy normalized `GEO-II`: OPEN.
 - legacy normalized `GEO-IB`: OPEN.
