@@ -1,9 +1,10 @@
 # P11 / R43 — structured-vector COND front
 
-**Date:** 2026-09-04  
+**Date:** 2026-09-05  
 **Status:** OPEN research front after elimination of the overstrong uniform Loewner/PSD helper route
 
 **Companion reconciliation:** `audits/P11_R43_POSTMERGE_REFEREE_RECONCILIATION_2026-09-04.md`  
+**Two-prime strengthening:** `audits/P11_R43_COND_TWO_PRIME_POINTWISE_LOCAL_NOGO_2026-09-05.md`  
 **Parallel epsilon route:** `00-uebersicht/P11_R43_COND_EPSILON_TELESCOPE_FRONT_2026-09-04.md`
 
 ## 0. Exact negative input and corrected scope
@@ -31,7 +32,43 @@ R43-COND-CANONICAL-PSD-REALIZATION             ×[M]
 R43-COND-UNIFORM-LOCAL-LOEWNER-TELESCOPE-ROUTE ×[M]
 ```
 
-The older shorter label `LOEWNER-ANTITONE-TELESCOPE-ROUTE ×[M]` is scope-corrected to the **uniform-local** route. The witness does not exclude a specially selected good partition, so
+The older shorter label `LOEWNER-ANTITONE-TELESCOPE-ROUTE ×[M]` is scope-corrected to the **uniform-local** route.
+
+### 0.1 Two-prime strengthening
+
+The exact `p=2,3` argument sharpens the arbitrary-source no-go to
+
+\[
+\boxed{
+\exists U_0>0\ \forall U\ge U_0\ \exists h_0(U)>0\ \forall 0<h<h_0(U):
+K_{U,U+h}^{\rm Schur}\not\succeq0.
+}
+\]
+
+Thus every sufficiently late terminal has a punctured right neighbourhood containing **only non-PSD arbitrary-source canonical COND steps**.
+
+The same audit gives a nonoptimal absolute `c_*>0` with
+
+\[
+h_0(U)\ge c_*e^{-4U}
+\]
+
+for all sufficiently late `U`. Hence any actually PSD canonical step must satisfy
+
+\[
+K_{U,U+h}^{\rm Schur}\succeq0
+\Longrightarrow
+h\ge c_*e^{-4U}.
+\]
+
+Bookings:
+
+```text
+R43-COND-TWO-PRIME-POINTWISE-LOCAL-NOGO ✓[M]_neg
+R43-COND-PARTITION-PSD-STEP-FLOOR       ✓[M] necessary only
+```
+
+This still does not exclude a specially selected good partition, because the local forbidden radius may shrink. Therefore
 
 ```text
 R43-COND-PARTITION-SELECTIVE-PSD ?[O]
@@ -39,7 +76,9 @@ R43-COND-PARTITION-SELECTIVE-PSD ?[O]
 
 remains open.
 
-This is elimination of an overstrong helper route, not a Strong-Terminal or `B-METINC-COND` no-go.
+The strict referee's proposed `co-countable U / all h>0` statement is not adopted; the kernel construction uses a genuine fine-step dead-layer/one-new-layer regime.
+
+This is elimination and strengthening of an overstrong arbitrary-source helper route, not a Strong-Terminal or `B-METINC-COND` no-go.
 
 ## 1. Provenance of the actual structured target — pre-no-go
 
@@ -228,13 +267,14 @@ K_{U,V}^{\rm Schur}\succeq-\delta(U,V)I
 
 or a structured-vector analogue with summable `\delta` along a chosen partition.
 
-Book only
+The two-prime theorem does not produce the required upper bound on the whole negative part. It only supplies negative directions and a necessary floor for any exact-PSD step. Thus book only
 
 ```text
 R43-COND-EPSILON-RELAXED-TELESCOPE ?[O]
+R43-COND-STRIP-NORM-UPPER-BOUND     ?[O]
 ```
 
-No `Ue^{-U}` decay rate is currently proved by the witness.
+No `Ue^{-U}` or other negative-spectrum decay rate is currently proved.
 
 ## 8. Governance
 
@@ -242,6 +282,8 @@ No `Ue^{-U}` decay rate is currently proved by the witness.
 - `R43-COND-CANONICAL-PSD-REALIZATION`: `×[M]` for the universal/pairwise claim.
 - `R43-COND-COFINAL-LOCAL-PSD`: `×[M]` for the uniform eventual-fine-step claim.
 - `R43-COND-UNIFORM-LOCAL-LOEWNER-TELESCOPE-ROUTE`: `×[M]`.
+- `R43-COND-TWO-PRIME-POINTWISE-LOCAL-NOGO`: `✓[M]_neg`.
+- `R43-COND-PARTITION-PSD-STEP-FLOOR`: `✓[M]` necessary only.
 - `R43-COND-PARTITION-SELECTIVE-PSD`: `?[O]`.
 - `R43-COND-EPSILON-RELAXED-TELESCOPE`: `?[O]`.
 - structured-vector signed/absolute COND: OPEN.
