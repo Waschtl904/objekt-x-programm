@@ -203,10 +203,16 @@ which is impossible because `d_p>0`.
 The opposite translation sign would force
 
 \[
-d_p\approx(j+k)a_r\ge2a_2.
+d_p\approx(j+k)a_r.
 \]
 
-Therefore this direction is automatically excluded whenever
+Because `r` is prime, `r\ge2`, and because `j,k\ge1`, one has the explicit uniform floor
+
+\[
+(j+k)a_r\ge2a_2,
+\]
+
+with equality only at `r=2`, `j=k=1`. Therefore this direction is automatically excluded whenever
 
 \[
 a_p<2a_2
@@ -267,6 +273,12 @@ and then choose the interval length `\ell=|I_Q|` so that
 \tag{TP12}
 \]
 
+After `(TP11)`--`(TP12)`, shrink `\ell` once more if necessary by the finite non-exact-overlap gap `(H4)` from
+
+`audits/P11_R43_COND_TWO_PRIME_NONEXACT_OVERLAP_HARDENING_2026-09-05.md`.
+
+This additional condition depends on `(U,h,p)` and only decreases `\ell`; it does **not** alter the already chosen step `h` or any terminal-radius estimate below.
+
 The same-side alternatives are excluded by Sections 3.1--3.2.
 
 For a negative depth-increment row, the only possible hit of the positive interval `I_P` is an opposite-boundary translation.  Combining the depth band with a translation index `k\ge j` gives
@@ -300,7 +312,7 @@ This is a full-operator statement over all prime sectors.
 
 ## 5. The strip coupling is strictly nonzero for the same witness
 
-Because the source intervals differ by exactly `a_p`, an overlap between an `f`-translate and a `g`-translate in a prime sector `r` requires
+At fixed `V=U+h`, only finitely many translated source packets can participate. The hardening condition `(H4)` excludes every non-exact shift mismatch. Consequently an actual surviving overlap between an `f`-translate and a `g`-translate in a prime sector `r` must satisfy one of the exact relations
 
 \[
 |k-l|a_r=a_p
@@ -309,7 +321,13 @@ Because the source intervals differ by exactly `a_p`, an overlap between an `f`-
 \tag{TP15}
 \]
 
-The second alternative is impossible because `k+l\ge2`.  The first gives
+The second alternative is impossible because `k+l\ge2`, `r\ge2`, and therefore
+
+\[
+(k+l)a_r\ge2a_2>a_p
+\]
+
+for the witness primes `p\in\{2,3\}`.  The first gives
 
 \[
 r^{|k-l|}=p.
@@ -349,7 +367,7 @@ on that interval.  Therefore (TP2)--(TP3) give the exact positive contribution
 \tag{TP17}
 \]
 
-Every other surviving exact overlap has the same translation-sign product and a nonnegative projected-mark Gram coefficient by (TP1).  Hence no cancellation is possible and
+Every other surviving exact overlap has equal translation signs (hence sign product `+1`) and a nonnegative projected-mark Gram coefficient by (TP1).  Hence no cancellation is possible and
 
 \[
 \boxed{
@@ -370,7 +388,18 @@ Combining with (TP14),
 \tag{TP19}
 \]
 
-Therefore, for each `p\in\{2,3\}` and every `U\notin E_p`, there is a positive radius `h_p(U)` such that
+Therefore, for each `p\in\{2,3\}` and every `U\notin E_p`, one may take for example
+
+\[
+h_p(U):=
+\min\left\{
+\frac{a_2}{8},
+\frac{\delta_p}{16},
+\frac{\rho_{p,U}}{64}
+\right\}>0,
+\]
+
+and every smaller positive step admits the witness after choosing `\ell` as above. Thus
 
 \[
 \boxed{
@@ -437,7 +466,7 @@ Choose a fixed safe terminal threshold, for example
 U_0>2a_3.
 \]
 
-For every `U\ge U_0`, disjointness (TP22) implies that at least one of `U\notin E_2` or `U\notin E_3` holds.  Choose such a witness prime `p(U)\in\{2,3\}` and let `h_0(U):=h_{p(U)}(U)>0` be the radius from (TP20).
+For every `U\ge U_0`, disjointness (TP22) implies that at least one of `U\notin E_2` or `U\notin E_3` holds.  Choose any available witness prime `p(U)\in\{2,3\}` with `U\notin E_{p(U)}` and let `h_0(U):=h_{p(U)}(U)>0` be the radius from (TP20). If both witness primes are available, either choice proves TP23; for the quantitative floor in Section 8 one may choose the available prime with the larger `\rho_{p,U}`.
 
 Then
 
@@ -493,15 +522,23 @@ If both nearest-point distances are below `1`, then `x_2,x_3\le U+1`, so
 \max(N_2,N_3)\le e^{4(U+1)}.
 \]
 
-For distinct positive integers, with `N_2>N_3` without loss,
+For the two distinct positive integers put
+
+\[
+N_{\max}:=\max(N_2,N_3),
+\qquad
+N_{\min}:=\min(N_2,N_3).
+\]
+
+Then, without any hidden ordering convention,
 
 \[
 \begin{aligned}
 4|x_2-x_3|
-&=\log\frac{N_2}{N_3}\\
-&=\log\left(1+\frac{N_2-N_3}{N_3}\right)\\
-&\ge \frac{N_2-N_3}{N_2}\\
-&\ge \frac1{N_2}\\
+&=\log\frac{N_{\max}}{N_{\min}}\\
+&=\log\left(1+\frac{N_{\max}-N_{\min}}{N_{\min}}\right)\\
+&\ge \frac{N_{\max}-N_{\min}}{N_{\max}}\\
+&\ge \frac1{N_{\max}}\\
 &\ge e^{-4(U+1)}.
 \end{aligned}
 \tag{TP24}
@@ -513,26 +550,59 @@ Since
 |x_2-x_3|\le d_2(U)+d_3(U),
 \]
 
-we obtain
+we have
+
+\[
+d_2(U)+d_3(U)\ge\frac14e^{-4(U+1)}.
+\]
+
+Therefore
+
+\[
+\max\{d_2(U),d_3(U)\}
+\ge\frac18e^{-4(U+1)},
+\]
+
+and because `\rho_{p,U}=2d_p(U)`, this is exactly
 
 \[
 \boxed{
 \max\{\rho_{2,U},\rho_{3,U}\}
-\ge \frac14 e^{-4(U+1)}
+\ge \frac14 e^{-4(U+1)}.
 }
 \tag{TP25}
 \]
 
-whenever both distances are below `1`; if one is at least `1`, the estimate is trivial for large `U`.
+This proves TP25 when both `d_2(U),d_3(U)<1`.
 
-Thus the construction may be arranged with a forbidden radius satisfying, for some absolute `c_*>0` and all sufficiently large `U`,
+If instead one of the two distances, say `d_p(U)`, is at least `1`, then `\rho_{p,U}\ge2`. If this prime is available (`U\notin E_p`), TP20 gives
+
+\[
+h_p(U)\ge
+\min\left\{
+\frac{a_2}{8},
+\frac{\delta_p}{16},
+\frac{2}{64}
+\right\}
+=:c_p^{(0)}>0.
+\]
+
+If the prime with distance at least `1` is exceptional at `U`, its distance would be zero, so this case cannot occur; hence such a prime is automatically available. Thus in the `d_p(U)\ge1` case the forbidden radius has an absolute positive lower bound, which is certainly at least `c_*e^{-4U}` for all sufficiently large `U` after decreasing `c_*>0` once.
+
+In the remaining case, choose among the available witness primes one with maximal `\rho_{p,U}`. By TP25 and TP20,
+
+\[
+h_0(U)\ge \frac1{64}\max\{\rho_{2,U},\rho_{3,U}\}
+\]
+
+up to the fixed positive caps `a_2/8` and `\delta_p/16`; for sufficiently large `U` the exponentially small term is below those caps. Consequently there is an absolute `c_*>0` such that, for all sufficiently large `U`,
 
 \[
 \boxed{h_0(U)\ge c_*e^{-4U}.}
 \tag{TP26}
 \]
 
-No optimality is claimed.
+No optimality is claimed. The fixed factor `e^{-4}` coming from `(U+1)` is absorbed into `c_*`.
 
 Consequently, any terminal step that is actually canonical-PSD must obey the necessary floor
 
