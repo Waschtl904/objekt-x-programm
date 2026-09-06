@@ -4,11 +4,18 @@
 Governance-only check. It does not validate mathematical theorem status.
 
 Checks:
-- every stored SHA is a 40-character lowercase hex commit id;
+- current main is declared as live-tracked rather than self-recorded by SHA;
+- stack_root_base_sha is a 40-character lowercase hex commit id;
+- every stored stack SHA is 40-character lowercase hex;
 - every stacked parent_pr resolves to an earlier stack entry;
 - parent_head_sha equals the recorded parent head exactly;
-- the stack root parent_head_sha equals the recorded main head;
-- volatile SHA values are not manually duplicated in operative navigation files.
+- the stack root parent_head_sha equals stack_root_base_sha;
+- volatile stack/base SHA values are not manually duplicated in operative navigation files.
+
+Why no current main SHA is stored here:
+a versioned file cannot permanently contain the SHA of the commit that contains that
+same file. Updating the value creates a new commit SHA and immediately makes the stored
+value stale. The current main head must therefore be read live from GitHub.
 """
 
 from __future__ import annotations
@@ -29,7 +36,10 @@ NAV_FILES = [
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
 STACK_START_RE = re.compile(r"^  - pr: ([0-9]+)$")
 FIELD_RE = re.compile(r"^    ([a-z_]+): (.*)$")
-MAIN_SHA_RE = re.compile(r"(?m)^  sha: ([0-9a-f]+)$")
+STACK_ROOT_BASE_RE = re.compile(r"(?m)^stack_root_base_sha: ([0-9a-f]+)$")
+MAIN_TRACKING_RE = re.compile(r"(?m)^  tracking: live$")
+MAIN_SOURCE_RE = re.compile(r"(?m)^  source: github:refs/heads/main$")
+SELF_RECORDED_MAIN_SHA_RE = re.compile(r"(?m)^  sha: [0-9a-f]{7,40}$")
 
 
 def fail(message: str) -> None:
@@ -70,12 +80,22 @@ def parse_stack(text: str) -> list[dict[str, str]]:
 def main() -> None:
     text = FRONT.read_text(encoding="utf-8")
 
-    main_match = MAIN_SHA_RE.search(text)
-    if not main_match:
-        fail("main.sha is missing")
-    main_sha = main_match.group(1)
-    if not SHA_RE.fullmatch(main_sha):
-        fail(f"main.sha is not 40-hex: {main_sha!r}")
+    if SELF_RECORDED_MAIN_SHA_RE.search(text):
+        fail(
+            "current main SHA must not be self-recorded in ACTIVE_FRONT.yaml; "
+            "read refs/heads/main live from GitHub"
+        )
+    if not MAIN_TRACKING_RE.search(text):
+        fail("main.tracking must be 'live'")
+    if not MAIN_SOURCE_RE.search(text):
+        fail("main.source must be github:refs/heads/main")
+
+    root_match = STACK_ROOT_BASE_RE.search(text)
+    if not root_match:
+        fail("stack_root_base_sha is missing")
+    stack_root_base_sha = root_match.group(1)
+    if not SHA_RE.fullmatch(stack_root_base_sha):
+        fail(f"stack_root_base_sha is not 40-hex: {stack_root_base_sha!r}")
 
     entries = parse_stack(text)
     if not entries:
@@ -103,10 +123,10 @@ def main() -> None:
         if index == 0:
             if entry["base"] != "main":
                 fail(f"stack root PR #{pr}: base must be main")
-            if parent_head_sha != main_sha:
+            if parent_head_sha != stack_root_base_sha:
                 fail(
                     f"stack root PR #{pr}: parent_head_sha {parent_head_sha} "
-                    f"!= main.sha {main_sha}"
+                    f"!= stack_root_base_sha {stack_root_base_sha}"
                 )
             if "parent_pr" in entry:
                 fail(f"stack root PR #{pr}: parent_pr must be absent")
@@ -130,7 +150,7 @@ def main() -> None:
 
         by_pr[pr] = entry
 
-    volatile_values = {main_sha}
+    volatile_values = {stack_root_base_sha}
     volatile_values.update(entry["head_sha"] for entry in entries)
     volatile_values.update(entry["parent_head_sha"] for entry in entries)
 
@@ -138,20 +158,12 @@ def main() -> None:
         nav_text = path.read_text(encoding="utf-8")
         for sha in volatile_values:
             if sha in nav_text:
-                fail(f"volatile SHA {sha} duplicated in {path.relative_to(ROOT)}")
-
-        # Also reject the common short-main duplication form used before this validator.
-        short_main = main_sha[:8]
-        if f"main@{short_main}" in nav_text or f"main {short_main}" in nav_text:
-            fail(
-                f"short main SHA prefix {short_main} duplicated in "
-                f"{path.relative_to(ROOT)}"
-            )
+                fail(f"volatile stack/base SHA {sha} duplicated in {path.relative_to(ROOT)}")
 
     print(
-        "ACTIVE_FRONT validation PASS: "
-        f"main + {len(entries)} stacked PRs; parent heads consistent; "
-        "no volatile SHA duplication in operative navigation files."
+        "ACTIVE_FRONT validation PASS: live main tracking; "
+        f"historical stack root + {len(entries)} stacked PRs consistent; "
+        "no volatile stack/base SHA duplication in operative navigation files."
     )
 
 
