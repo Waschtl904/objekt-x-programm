@@ -76,6 +76,17 @@ stack:
     draft: true
     merged: false
 
+  - pr: 66
+    title: "R43: one-sided COND cap to FLAGDYN via reverse-normal stretch"
+    branch: r43-cond-flagdyn-reverse-normal-bridge
+    head_sha: 7d8a9e47c96962f49afedba83f1090a1598f5386
+    base: r43-transported-collar-prime-band
+    parent_pr: 64
+    parent_head_sha: 7409b9a13028fb8dc0fc44fb210e4783b6feaf7c
+    github_state: open
+    draft: true
+    merged: false
+
 firewall:
   - "This file records volatile active-stack metadata and exact dependency pins only."
   - "The live main head is read from GitHub and is intentionally not self-recorded here."
