@@ -131,6 +131,17 @@ stack:
     draft: true
     merged: false
 
+  - pr: 74
+    title: "R43: reverse prime-shift variance/mean split and H1 firewall"
+    branch: r43-reverse-shift-variance-mean-firewall
+    head_sha: 117cb0afdde12b984808fbf97d24c28252a81acb
+    base: r43-reverse-extension-galerkin-graph-proxy
+    parent_pr: 72
+    parent_head_sha: 25c27bd7f0646e7a63c3cba109336c6414fee72b
+    github_state: open
+    draft: true
+    merged: false
+
 firewall:
   - "This file records volatile active-stack metadata and exact dependency pins only."
   - "The live main head is read from GitHub and is intentionally not self-recorded here."
