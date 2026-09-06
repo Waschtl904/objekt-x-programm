@@ -55,9 +55,9 @@ stack:
     merged: false
 
   - pr: 61
-    title: "R43: primitive martingale-level peeling for hard11/hard22"
+    title: "R43: retained-row cancellation removes primitive hard channels"
     branch: r43-hard11-level0-saturation
-    head_sha: c2ce324a47b1461fe1eeaa6b816d03a77da5485b
+    head_sha: e29545a6040640e754e885888826d1cf235df58c
     base: r43-good-normal-tail-reduction
     parent_pr: 58
     parent_head_sha: 0e57cf230291abd16ce88b0ceed95d68036799e5
