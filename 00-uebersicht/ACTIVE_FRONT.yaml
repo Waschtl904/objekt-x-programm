@@ -87,6 +87,39 @@ stack:
     draft: true
     merged: false
 
+  - pr: 68
+    title: "R43: reverse-normal Schur extension-cost reduction"
+    branch: r43-reverse-normal-schur-extension
+    head_sha: b9b3b70929df482588ad07c96dc3c1c06faa2fce
+    base: r43-cond-flagdyn-reverse-normal-bridge
+    parent_pr: 66
+    parent_head_sha: 7d8a9e47c96962f49afedba83f1090a1598f5386
+    github_state: open
+    draft: true
+    merged: false
+
+  - pr: 69
+    title: "R43: adversarial reverse-extension countertest"
+    branch: r43-reverse-extension-countertest
+    head_sha: 5a5776c36ed31475ef6e8a715371307f1f6b8341
+    base: r43-reverse-normal-schur-extension
+    parent_pr: 68
+    parent_head_sha: b9b3b70929df482588ad07c96dc3c1c06faa2fce
+    github_state: open
+    draft: true
+    merged: false
+
+  - pr: 70
+    title: "R43: multichannel prime-shift extension coherence diagnostic"
+    branch: r43-reverse-extension-multichannel-toy
+    head_sha: 1a64e9d1841de170f96dd9d9f018ec41da46e415
+    base: r43-reverse-extension-countertest
+    parent_pr: 69
+    parent_head_sha: 5a5776c36ed31475ef6e8a715371307f1f6b8341
+    github_state: open
+    draft: true
+    merged: false
+
 firewall:
   - "This file records volatile active-stack metadata and exact dependency pins only."
   - "The live main head is read from GitHub and is intentionally not self-recorded here."
