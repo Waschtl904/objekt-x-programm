@@ -1,4 +1,4 @@
-# Objekt X — kanonische Forschungsroadmap v2.1
+# Objekt X — kanonische Forschungsroadmap v2.1.1
 
 > **Stand:** 2026-09-06  
 > **Rolle:** kanonische Abhängigkeits- und Forschungsstrategiekarte.  
@@ -66,9 +66,11 @@ Logische Aussagen und Forschungsabhängigkeiten werden getrennt.
 
 Nicht-logische Labels:
 
-`uses`, `requires`, `reduces-to`, `candidate-input`, `sufficient-route`, `optional-route`, `repairs`, `blocks-on`, `provenance`.
+`uses`, `requires`, `reduces-to`, `candidate-input`, `sufficient-route`, `optional-route`, `repairs`, `blocks-on`, `open-bridge`, `provenance`.
 
-Ein PR ist dabei Provenienz/Container; **DAG-Knoten sind Sätze oder explizite Forschungsfragen**, nicht PR-Nummern.
+Ein PR ist dabei Provenienz/Container; **DAG-Knoten sind Sätze oder explizite Forschungsfragen, nicht PR-Nummern**.
+
+Unbeschriftete ASCII-Pfeile sind in technischen DAGs nicht zulässig.
 
 ---
 
@@ -76,29 +78,54 @@ Ein PR ist dabei Provenienz/Container; **DAG-Knoten sind Sätze oder explizite F
 
 Die heutige Struktur ist kein linearer 0→100%-Pfad.
 
+### 3.1 Bereits bekannte Kandidateninputs
+
 ```text
-A finite-level / SW1       B Strong Terminal / C6       R R37 / G4c
-         \                         |                         /
-          \                        |                        /
-           +------ candidate ingredients / constraints ---+
-                                   |
-                                   v
-                         C genuine X candidate
-                                   |
-                                   | separate exact proof
-                                   v
-                        D exact full Weil-Gram identity
-                                   |
-                                   | + intrinsicity/test class/normalization
-                                   v
-                         Object-X realization
-                                   |
-                                   | exact Weil-scope verification
-                                   v
-                         E Weil criterion / RH bridge
+A finite-level constraints
+        |
+        | --candidate-input-->
+        v
+C genuine X candidate ?[O]
+
+B Strong Terminal result
+        |
+        | --candidate-input only-->
+        v
+C genuine X candidate ?[O]
 ```
 
-Die linken Kanten nach C sind strategische `candidate-input`-Kanten, keine logischen Implikationen.
+Diese Kanten sind **keine logischen Implikationen** und sagen insbesondere nicht, dass A oder B notwendige Bedingungen jeder denkbaren Object-X-Realisierung sind.
+
+### 3.2 R37 bleibt bewusst unverbunden
+
+Für R37/G4c ist die Beziehung zu einer späteren X-Kandidatenarchitektur derzeit `unresolved`. Deshalb wird **keine Kante** von R37/G4c nach C gezeichnet — weder `requires`, noch `candidate-input`, noch eine logische Kante.
+
+### 3.3 X-Pfad
+
+```text
+C genuine X candidate ?[O]
+        |
+        | --requires separate exact proof-->
+        v
+D exact full Weil-Gram identity ?[O]
+        |
+        | --component of realization together with
+        |    intrinsicity + test class + normalization-->
+        v
+Object-X realization ?[O]
+        |
+        | ⇒ by the Gram identity
+        v
+Q_W(f,f)=||T_X f||² ≥ 0
+        |
+        | --requires exact Weil-scope verification-->
+        v
+E Weil-criterion-scope verification ?[O]
+        |
+        | --unlocks exact classical criterion application-->
+        v
+RH
+```
 
 ---
 
@@ -114,12 +141,13 @@ Salvage-/Parameterklassifikationen können weitergeführt werden, sind gegenwär
 
 R37/G4c bleibt separat offen. Fortschritt an R38–R43 darf R37/G4c nicht rückwirkend promoten.
 
-Die Beziehung des R37-Pfads zu einer späteren konkreten X-Kandidatenarchitektur ist derzeit **unaufgelöst**; daher wird keine prerequisite-Kante gesetzt.
+Die Beziehung des R37-Pfads zu einer späteren konkreten X-Kandidatenarchitektur ist derzeit **unaufgelöst**; daher wird keine Kante zum X-Pfad gesetzt.
 
 ```text
 ROADMAP-R37-G4C-DEPENDENCY
   type: research-question
-  status: open
+  research_status: open
+  math_status: null
 ```
 
 Frage: Wird R37/G4c für eine spätere X-Kandidatenarchitektur tatsächlich benötigt, oder ist es ein unabhängiger Kandidatenbaustein?
@@ -140,7 +168,15 @@ Strong Terminal / C6 bleibt `?[O]`.
 
 ### 6.1 R38–R42
 
-R38–R42 bleiben gemäß ihrer exakten Governance-Provenienz eingefrorene, unabhängig geprüfte AI-GREEN-Schichten. Sie reduzieren die echte Future-Transportfrage auf die verbleibende Normalbahn; R43 bleibt offen.
+Der **exakte Registry-Governance-String** lautet für R38–R42:
+
+```text
+FROZEN — independently verified AI-GREEN
+```
+
+Die Registry stellt ausdrücklich klar, dass diese projektinterne Freeze-/Reviewer-Buchung nicht automatisch als einer der formal definierten Subtypen `independent GREEN (cross-model/certificate/human)` umgedeutet werden darf.
+
+R38–R42 reduzieren die Future-Transportfrage auf die verbleibende Normalbahn. R43 bleibt OPEN.
 
 ---
 
@@ -159,9 +195,13 @@ Ein Decay-Satz auf einem strukturierten Vektor impliziert nicht automatisch eine
 
 Die volatile PR-/SHA-Struktur steht ausschließlich in `ACTIVE_FRONT.yaml`.
 
-### 8.1 PR #55 — strukturierter Schur-Defekt
+### 8.1 Draft-source IDs versus Registry
 
-Lokale Buchungen umfassen insbesondere:
+Die folgenden lokalen IDs sind **exakte IDs der jeweiligen Draft-Audits** im aktiven Stack. Sie sind auf dem aktuellen `main` noch nicht als neue Zeilen in `ACTIVE_THEOREM_REGISTRY.md` integriert. Die Roadmap darf sie daher als Draft-source IDs referenzieren, aber nicht als bereits registrierte Promotion darstellen.
+
+### 8.2 Strukturierter Schur-Defekt
+
+Draft-source IDs:
 
 ```text
 R43-COND-C-TWO-SPECIES-RESIDUAL-DECOMPOSITION
@@ -172,11 +212,22 @@ Für den strukturierten Vektor `v_U=H_U^*E_{X,U}f` wird der negative skalare Sch
 
 **Firewall:** Ein skalarer Schur-Defekt ist nicht automatisch ein Inkrement der komprimierten inversen Metrik.
 
-### 8.2 PR #56 — relativer Resolventenvorläufer
+### 8.3 Halbverschiebungs-/Resolventenvorläufer
 
-PR #56 fixiert Halbverschiebungs-/Translationskonventionen, terminale Collar-Shell-Geometrie und die relative Resolventendarstellung. Die frühere Begründung des strikten fixed-pair Bounds `||(L_{U,V})_-||<1` wurde durch PR #57 stärker repariert; keine cofinale negative Spektraldecay-Aussage wird importiert.
+Der gestackte Vorläufer fixiert Halbverschiebungs-/Translationskonventionen, terminale Collar-Shell-Geometrie und die relative Resolventendarstellung.
 
-### 8.3 PR #57 — geometrischer Mittelwert / exakter Resolvententransport
+Draft-source IDs umfassen:
+
+```text
+R43-TRANSLATION-ANTISYMMETRIC-HALFSHIFT
+R43-STRUCTURED-HUB-TERMINAL-COLLAR-SHELL
+R43-COND-NORMAL-EQUATION-PRIME-SECTOR-HALFSHIFT
+R43-COND-RELATIVE-RESOLVENT-TRANSFER
+```
+
+Die frühere Begründung des strikten fixed-pair Bounds `||(L_{U,V})_-||<1` wird durch den nachfolgenden geometrischen-Mittelwert-Audit stärker repariert. Keine cofinale negative Spektraldecay-Aussage wird importiert.
+
+### 8.4 Geometrischer Mittelwert / exakter Resolvententransport
 
 Zentral ist
 
@@ -190,7 +241,7 @@ und die exakte Kongruenz
 \boxed{\iota^*B_V\iota-B_U=-Q_{U,V}K_{U,V}^{\rm Schur}Q_{U,V}.}
 \]
 
-Lokale Buchungen umfassen:
+Draft-source IDs:
 
 ```text
 R43-COND-FIXED-PAIR-RELATIVE-SPECTRAL-GAP
@@ -210,9 +261,9 @@ Für den strukturierten Vektor:
 
 **Firewall:** `Q_{U,V}\le I` ist Normkontraktion, kein Collar-Support- oder Collar-Decay-Satz.
 
-### 8.4 PR #58 — Prime-/Sign-Zerlegung
+### 8.5 Prime-/Sign-Zerlegung
 
-Lokale Buchungen umfassen:
+Draft-source IDs:
 
 ```text
 R43-COND-NORMAL-SIGN-BRANCH-EXPANSION
@@ -253,11 +304,11 @@ ROADMAP-HARD11 — research-subquestion — k=l=1
 ROADMAP-HARD22 — research-subquestion — k=l=2
 ```
 
-Diese Namen sind noch keine kanonischen Registry-Theorem-IDs.
+Diese ROADMAP-Labels sind keine kanonischen Registry-Theorem-IDs und tragen daher keinen Registry-`math_status`.
 
 ### 9.1 Quantoren-Firewall
 
-Gebucht/erkennbar: fixes `0<R<S`, strukturierte terminale Quellklasse, Graphnormalisierung wie in PR #58.
+Gebucht/erkennbar: fixes `0<R<S`, strukturierte terminale Quellklasse, Graphnormalisierung wie im aktiven Good-Normal-Draft.
 
 Noch **nicht** erraten werden dürfen:
 
@@ -276,47 +327,55 @@ Unbekannte Quantoren werden ausdrücklich als `unresolved` geführt.
 
 ### 10.1 Route S — strukturierter Direktweg
 
+Die DAG-Knoten sind ausschließlich mathematische IDs/Forschungsfragen:
+
 ```text
-PR57 transported structured leakage bound
+R43-COND-RESOLVENT-TRANSPORTED-LEAKAGE-BOUND
         |
+        | --used-by-->
         v
-PR58 good-tail + collar + hard-channel reduction
+R43-COND-GOOD-NORMAL-COLLAR-PLUS-TAIL
+R43-COND-TWO-HARD-DIAGONAL-NORMAL-CHANNELS
         |
-        +--> transported collar decay ?[O]
-        +--> hard (1,1)+(2,2) saturated decay ?[O]
+        | --reduces current target to-->
+        +---- R43-COND-TRANSPORTED-COLLAR-MASS-DECAY ?[O]
+        |
+        +---- R43-COND-TWO-HARD-CHANNEL-SATURATED-DECAY ?[O]
         |
         v
 R43-COND-RESOLVENT-STRUCTURED-SATURATED-LEAKAGE-DECAY ?[O]
         |
-        | OPEN direct quantitative composition bridge
+        | --open-bridge-->
+        v
+ROADMAP-BRIDGE-COND-DIRECT-FLAGDYN
+        |
+        | --sufficient-route-->
         v
 projected B-FLAGDYN / FD23-compatible control ?[O]
         |
-        | sufficient route
+        | --sufficient-route-->
         v
 B-FLAGTIGHT ?[O]
 ```
 
-Der Übergang vom structured leakage decay zu einer direkt B-FLAGDYN-/FD23-kompatiblen Summierbarkeit ist **nicht automatisch** durch PR #57/#58 bewiesen.
+Die PR-Nummern/Heads zu den Draft-source IDs stehen nur in `ACTIVE_FRONT.yaml` und den jeweiligen Auditquellen.
 
-```text
-ROADMAP-BRIDGE-COND-DIRECT-FLAGDYN
-  type: open-bridge
-```
+Der Übergang vom structured leakage decay zu einer direkt B-FLAGDYN-/FD23-kompatiblen Summierbarkeit ist **nicht automatisch** bewiesen.
 
 ### 10.2 Route O — stärkerer Operator-/B-METINC-Weg
 
 ```text
-B-METINC-COND ?[O]
-B-METINC-GEO  ?[O]
-B-METINC-NEW  ?[O]
-        |
-        v
+B-METINC-WIDTH ?[O]
+  uses:
+    - B-METINC-COND ?[O]
+    - B-METINC-GEO  ?[O]
+    - B-METINC-NEW  ?[O]
+
 B-METINC-WIDTH ?[O]
         |
-        | Sylvester / spectral-width sufficient route
+        | --sufficient-route-->
         v
-B-FLAGMOD contribution
+B-FLAGMOD ?[O]
 ```
 
 Diese Route kontrolliert normalisierte metrische Inkremente bzw. Spektralbreiten und ist stärker als bloße structured-vector Kontrolle.
@@ -354,7 +413,8 @@ Punktweise starke Konvergenz allein macht das Zwischenhorizont-Supremum nicht un
 ```text
 FD23-MINIMAL-CONDITION
   type: research-question
-  status: open
+  research_status: open
+  math_status: null
 ```
 
 Frage: Was ist die schwächste quantitative Bedingung, die tatsächlich genügt, um die benötigte cofinale FD23-/Flag-Summierbarkeit zu schließen?
@@ -486,10 +546,10 @@ Erst danach darf ein exakt referenzierter `Q_W≥0 ⇔ RH`-Satz mit passender Te
 
 ## 19. Rollback-/Falsifikationsregeln
 
-- **PR55 fällt:** abhängige Schur-/Leakage-Argumente neu auditieren; Strong Terminal bleibt offen.
-- **PR57 fällt:** geometrischer-Mittelwert-abhängige PR58-Teile verlieren ihre Grundlage; unabhängige Branchklassifikation nur nach Re-Audit weiterführen.
-- **PR58 fällt:** Zwei-Hard-Channel-/Good-Tail-Reduktion fällt; PR57 bleibt logisch unberührt.
-- **Transported-Collar-Decay fällt:** aktuelle PR57/#58-Structured-COND-Route scheitert/reparaturbedürftig; Strong Terminal nicht automatisch widerlegt.
+- **Draft-source Schur-Leakage fällt:** abhängige Schur-/Leakage-Argumente neu auditieren; Strong Terminal bleibt offen.
+- **Geometric-mean transport fällt:** davon abhängige Good-Normal-/transportierte Teile verlieren ihre Grundlage; unabhängige Branchklassifikation nur nach Re-Audit weiterführen.
+- **Good-Normal reduction fällt:** Zwei-Hard-Channel-/Good-Tail-Reduktion fällt; geometrischer Mittelwert bleibt logisch unberührt.
+- **Transported-Collar-Decay fällt:** aktuelle Structured-COND-Route scheitert/reparaturbedürftig; Strong Terminal nicht automatisch widerlegt.
 - **Hard-channel decay fällt:** aktuelle COND-Decay-Route scheitert; alternative Saturation/Cancellation/direct-projected routes bleiben möglich.
 - **B-METINC-WIDTH fällt:** nur globale Operator-/Spectral-Width-Route fällt; direkte projected Flagroute bleibt offen.
 - **Strong Terminal negativ:** heutige B-/Future-Transport-Kandidatenroute negativ; ohne Necessity-Satz kein Object-X-No-Go und keine RH-Folgerung.
@@ -500,15 +560,41 @@ Erst danach darf ein exakt referenzierter `Q_W≥0 ⇔ RH`-Satz mit passender Te
 
 ## 20. Pflicht-Ledger für neue Roadmap-Knoten
 
+Theorem-/open-theorem-Knoten:
+
 ```yaml
-id: <canonical theorem id or ROADMAP research label>
-type: <theorem | open-theorem | research-question | open-bridge | definition>
-math_status: <import from registry; do not invent>
-review_status: <import from registry>
+id: <canonical theorem id>
+type: <theorem | open-theorem>
+math_status: <exact registry/canonical-source value>
+review_status: <exact registry value or null if not booked>
 source:
   file: <canonical source>
   pr: <if applicable>
-  head_sha: <exact SHA>
+  head_sha: <exact SHA if applicable>
+scope:
+  known: []
+  unresolved: []
+quantifiers:
+  resolved: []
+  unresolved: []
+depends_on: []
+used_by: []
+edge_types: []
+if_false:
+  direct_effect: []
+  does_not_imply: []
+firewalls: []
+```
+
+Reine Roadmap-/Research-Knoten:
+
+```yaml
+id: <ROADMAP label>
+type: <research-question | research-subquestion | open-bridge>
+math_status: null
+review_status: null
+research_status: <open | parked | resolved>
+source: null
 scope:
   known: []
   unresolved: []
@@ -538,6 +624,8 @@ Explorative Downstream-Arbeit darf auf einem exakten Draft-/Candidate-Head aufba
 4. bei Fall des Parent-Heads abhängige Claims neu auditiert werden;
 5. unabhängige GREEN-Provenienz nur nach Registry-Regel behauptet wird.
 
+`ACTIVE_FRONT.yaml` enthält deshalb neben `parent_pr` auch `parent_head_sha`.
+
 ---
 
 ## 22. Review, Formalisierung, Numerik
@@ -558,15 +646,22 @@ Gezielt bei falsifizierbaren quantitativen Hypothesen: Gegenbeispiele, Skalierun
 
 ## 23. Source-of-Truth-Drift
 
-`ACTIVE_FRONT.yaml` hält ausschließlich volatile Stackdaten (main-SHA, aktive PRs, Heads, Parentbeziehungen, GitHub-State, Hauptgate). Theoremstatus bleibt in Registry/kanonischen Quellen.
+`ACTIVE_FRONT.yaml` hält ausschließlich volatile Stackdaten: Main-Head, aktive PRs, Heads, Parentbeziehungen, GitHub-State, Hauptgate. Theoremstatus bleibt in Registry/kanonischen Quellen.
 
-`CURRENT-FRONT.md`, diese Roadmap und `ACTIVE_THEOREM_REGISTRY.md` sollen auf `ACTIVE_FRONT.yaml` referenzieren statt dieselben SHA-Listen mehrfach manuell zu pflegen.
+`CURRENT-FRONT.md`, diese Roadmap, `AKTUELLER_STAND.md` und `ACTIVE_THEOREM_REGISTRY.md` sollen auf `ACTIVE_FRONT.yaml` referenzieren statt dieselben SHA-Werte mehrfach manuell zu pflegen.
+
+Eine technische Validierung soll insbesondere prüfen:
+
+- 40-Hex-Format aller gespeicherten Heads;
+- `parent_pr`/`parent_head_sha`-Konsistenz;
+- Parent-Head des Stack-Roots gegen den gespeicherten Main-Head;
+- keine Duplizierung der in `ACTIVE_FRONT.yaml` gespeicherten volatilen SHA-Werte in den operativen Navigationsdateien.
 
 ---
 
 ## 24. Aktuelle Default-Forschungspriorität
 
-Die aktuelle COND-Front ist nicht mehr „short/long/sum finden“. Der PR58-Stack hat diese Struktur bereits lokal isoliert.
+Die aktuelle COND-Front ist nicht mehr „short/long/sum finden“. Der aktive Good-Normal-Draft hat diese Struktur bereits lokal isoliert.
 
 Prioritäten:
 
@@ -604,12 +699,12 @@ R43 as a whole
 R37/G4c
 genuine X candidate
 exact full Weil-Gram identity
-Object X realization
+Object-X realization
 Weil-criterion scope verification
 RH
 ```
 
-Keine lokale Buchung aus dem PR55–58-Stack promoviert einen dieser globalen Knoten.
+Keine lokale Buchung aus dem aktiven Draft-Stack promoviert einen dieser globalen Knoten.
 
 ---
 
@@ -657,63 +752,74 @@ Wenn eine globale Schranke schwer ist: Negation konkretisieren, Witness suchen, 
 
 ## Kurzkarte
 
-```text
-                         R37 / G4c ?[O]
-                   dependency to X unresolved
+PR-Nummern erscheinen hier bewusst nicht als Knoten; ihre Provenienz steht in `ACTIVE_FRONT.yaml`.
 
-R38–R42
-   |
-   | reduces Strong Terminal
-   v
+```text
+[R38,R39,R40,R41,R42]
+        |
+        | --reduces-to-->
+        v
 R43 fixed-normal gate ?[O]
-   |
-   +----------------------------------------------+
-   |                                              |
-   | STRUCTURED DIRECT ROUTE                      | OPERATOR ROUTE
-   v                                              v
-PR55 Schur leakage                         B-METINC-COND ?[O]
-   |                                       B-METINC-GEO  ?[O]
-   v                                       B-METINC-NEW  ?[O]
-PR57 geometric-mean transport                     |
-   |                                               v
-   v                                       B-METINC-WIDTH ?[O]
-PR58 good-tail reduction                           |
-   |                                               | sufficient
-   +---------+------------------+                  v
-   |         |                  |              B-FLAGMOD ?[O]
-   v         v                  v                  |
-collar    hard(1,1)          hard(2,2)             |
- ?[O]       ?[O]               ?[O]               |
-   \         |                  /                  |
-    +--------+-----------------+                   |
-              |                                    |
-              v                                    |
-structured leakage decay ?[O]                     |
-              |                                    |
-              | open direct composition bridge     |
-              v                                    |
-     projected B-FLAGDYN / FD23                    |
-              |                                    |
-              +------------------+-----------------+
-                                 |
-                           B-FLAGTIGHT ?[O]
-                                 |
-                           B-SIGN / ORIENT ?[O]
-                                 |
-                           Strong Terminal ?[O]
-                                 |
-                           candidate-input only
-                                 v
-                         genuine X candidate ?[O]
-                                 |
-                         exact Weil-Gram ?[O]
-                                 |
-                         Object X realization ?[O]
-                                 |
-                         Weil scope verification
-                                 |
-                                 v
-                                RH
+        |
+        | --optional-route: structured-->
+        v
+R43-COND-RESOLVENT-TRANSPORTED-LEAKAGE-BOUND
+        |
+        | --used-by-->
+        v
+[R43-COND-GOOD-NORMAL-COLLAR-PLUS-TAIL,
+ R43-COND-TWO-HARD-DIAGONAL-NORMAL-CHANNELS]
+        |
+        | --reduces current target to-->
+        +---- collar mass decay ?[O]
+        |
+        +---- hard (1,1)+(2,2) saturated decay ?[O]
+        |
+        v
+structured leakage decay ?[O]
+        |
+        | --open-bridge-->
+        v
+projected B-FLAGDYN / FD23 ?[O]
+        |
+        | --sufficient-route-->
+        v
+B-FLAGTIGHT ?[O]
+        |
+        | --reduces-to-->
+        v
+B-SIGN / B-ORIENT ?[O]
+        |
+        | --current open route-->
+        v
+Strong Terminal ?[O]
+        |
+        | --candidate-input only-->
+        v
+genuine X candidate ?[O]
+        |
+        | --requires separate proof-->
+        v
+exact full Weil-Gram identity ?[O]
+        |
+        | --component-of-->
+        v
+Object-X realization ?[O]
+        |
+        | ⇒
+        v
+Q_W(f,f)≥0
+        |
+        | --requires exact scope verification-->
+        v
+Weil criterion / RH bridge
 ```
 
-**Firewall:** Keine strategische, `candidate-input`-, `uses`- oder `sufficient-route`-Kante darf als logische Implikation gelesen werden.
+Separat und **ohne Kante zum X-Pfad**:
+
+```text
+R37 / G4c ?[O]
+relation to X route: unresolved
+```
+
+**Firewall:** Keine strategische, `candidate-input`-, `uses`-, `open-bridge`- oder `sufficient-route`-Kante darf als logische Implikation gelesen werden.
