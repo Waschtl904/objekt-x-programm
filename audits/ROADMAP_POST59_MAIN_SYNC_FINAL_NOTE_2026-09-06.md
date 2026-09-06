@@ -1,0 +1,1 @@
+This file intentionally contains no mathematical claim. It marks the end of the post-PR59 governance-sync editing pass before opening the follow-up PR.

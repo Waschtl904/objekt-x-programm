@@ -7,7 +7,7 @@
 > [ACTIVE_THEOREM_REGISTRY](ACTIVE_THEOREM_REGISTRY.md) und die
 > [kanonische Forschungsroadmap](FORSCHUNGS_ROADMAP_AKTUELL.md).
 >
-> Volatile Heads/States werden hier **nicht** dupliziert. Historische Fassungen bleiben über Git und `archiv/` erhalten.
+> Volatile Stack-Heads/States werden hier **nicht** dupliziert. Der aktuelle `main`-Head wird live aus GitHub gelesen und nicht selbstreferenziell als SHA in einer versionierten Repo-Datei gespeichert. Historische Fassungen bleiben über Git und `archiv/` erhalten.
 
 ---
 
@@ -47,6 +47,8 @@ ist der verbleibende Strong-Terminal-Gate auf die eine Normalbahn reduziert, äq
 ## 2. Aktiver ungemergter Stack
 
 Exakte Branches, Heads, Parent-Heads und GitHub-States stehen ausschließlich in `ACTIVE_FRONT.yaml`.
+
+Der mathematische Stack-Root bleibt auf seinem historischen Base-Commit gepinnt. Spätere Governance-/Navigations-Merges auf `main` ändern diesen Base-Pin nicht und rebasen die Drafts nicht automatisch.
 
 Die vier Draft-Container sind reine Provenienz:
 
@@ -219,12 +221,13 @@ Parallel: `FD23-MINIMAL-CONDITION` als Route-Optimierungsfrage.
 
 ## 8. Governance
 
-- Volatile Stackdaten: ausschließlich `ACTIVE_FRONT.yaml`.
-- R43: OPEN, kein Freeze.
-- aktiver Stack: Draft/unmerged gemäß `ACTIVE_FRONT.yaml`.
-- Strong Terminal/C6: `?[O]`.
-- R37/G4c: offen/separat.
-- genuine X candidate: `?[O]`.
-- Object-X realization: `?[O]`.
-- RH: `?[O]`.
-- Kein Object-X- oder RH-Abschluss.
+- aktueller `main`-Head: live aus GitHub; nicht selbstreferenziell im Repo gespeichert;
+- volatile Stackdaten und historischer Stack-Root-Base-Pin: `ACTIVE_FRONT.yaml`;
+- R43: OPEN, kein Freeze;
+- aktiver Stack: Draft/unmerged gemäß `ACTIVE_FRONT.yaml`;
+- Strong Terminal/C6: `?[O]`;
+- R37/G4c: offen/separat;
+- genuine X candidate: `?[O]`;
+- Object-X realization: `?[O]`;
+- RH: `?[O]`;
+- kein Object-X- oder RH-Abschluss.

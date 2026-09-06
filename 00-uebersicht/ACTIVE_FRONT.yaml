@@ -1,10 +1,13 @@
-schema_version: 2
+schema_version: 3
 updated: 2026-09-06
 repository: Waschtl904/objekt-x-programm
 
 main:
-  sha: 434cd6bd49b66e49d4e8b556fd18687fe9887ffa
+  tracking: live
+  source: github:refs/heads/main
+  note: "The current main SHA is intentionally read live from GitHub and is not stored in this versioned file, because a commit that updates its own main SHA would immediately make that value stale."
 
+stack_root_base_sha: 434cd6bd49b66e49d4e8b556fd18687fe9887ffa
 active_gate: R43
 
 stack:
@@ -52,7 +55,9 @@ stack:
     merged: false
 
 firewall:
-  - "This file records volatile front/stack metadata only."
+  - "This file records volatile active-stack metadata and exact dependency pins only."
+  - "The live main head is read from GitHub and is intentionally not self-recorded here."
+  - "stack_root_base_sha records the historical main commit on which the mathematical draft stack was rooted; later governance-only main commits do not rebase or promote that stack."
   - "It does not create theorem status, review provenance, freeze, promotion, Object-X, or RH claims."
   - "Theorem/review status remains governed by ACTIVE_THEOREM_REGISTRY.md and canonical mathematical sources."
   - "parent_head_sha pins the exact dependency head; parent_pr alone is not sufficient provenance."
