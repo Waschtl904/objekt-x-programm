@@ -65,6 +65,17 @@ stack:
     draft: true
     merged: false
 
+  - pr: 64
+    title: "R43: prime-band transported-collar escape and scalar COND decay"
+    branch: r43-transported-collar-prime-band
+    head_sha: 7409b9a13028fb8dc0fc44fb210e4783b6feaf7c
+    base: r43-hard11-level0-saturation
+    parent_pr: 61
+    parent_head_sha: e29545a6040640e754e885888826d1cf235df58c
+    github_state: open
+    draft: true
+    merged: false
+
 firewall:
   - "This file records volatile active-stack metadata and exact dependency pins only."
   - "The live main head is read from GitHub and is intentionally not self-recorded here."
