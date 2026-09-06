@@ -164,6 +164,28 @@ stack:
     draft: true
     merged: false
 
+  - pr: 80
+    title: "R43: shellwise collar refinement and common-mode obstruction"
+    branch: r43-shellwise-collar-common-mode-firewall
+    head_sha: 645d2bafe3c0f74fbfc769d4958ecf93316ae165
+    base: r43-reverse-occupancy-kernel-firewall
+    parent_pr: 78
+    parent_head_sha: a9d1f1a944bbb154db7bdb5844135501630bda5c
+    github_state: open
+    draft: true
+    merged: false
+
+  - pr: 81
+    title: "R43: reflection audit rules out parity common-mode elimination"
+    branch: r43-reverse-reflection-common-mode-firewall
+    head_sha: 4ca4abb37e7fcaa8d045e94ad5f816d481ec40d0
+    base: r43-shellwise-collar-common-mode-firewall
+    parent_pr: 80
+    parent_head_sha: 645d2bafe3c0f74fbfc769d4958ecf93316ae165
+    github_state: open
+    draft: true
+    merged: false
+
 firewall:
   - "This file records volatile active-stack metadata and exact dependency pins only."
   - "The live main head is read from GitHub and is intentionally not self-recorded here."
