@@ -36,7 +36,13 @@ mit Ziel
 \boxed{L_{R,S}^{T,U}\to1\qquad(T,U\to\infty).}
 \]
 
-R38–R42 bleiben gemäß ihrer exakten Reviewer-/Governance-Provenienz frozen; R43 bleibt OPEN.
+Exakter Registry-Governance-String für R38–R42:
+
+```text
+FROZEN — independently verified AI-GREEN
+```
+
+Die Registry stellt klar, dass dieser projektinterne String nicht automatisch als formaler `independent GREEN (cross-model/certificate/human)`-Subtyp gelesen werden darf. R43 bleibt OPEN.
 
 R37/G4c bleibt **separat offen** und wird durch R38–R43 nicht rückwirkend geschlossen.
 
@@ -44,27 +50,30 @@ R37/G4c bleibt **separat offen** und wird durch R38–R43 nicht rückwirkend ges
 
 ## 2. Aktiver ungemergter R43-Stack
 
-Die exakten Heads und GitHub-States stehen ausschließlich in `ACTIVE_FRONT.yaml`.
+Die exakten Heads, Parent-Heads, Branches und GitHub-States stehen ausschließlich in `ACTIVE_FRONT.yaml`.
 
-Schematisch:
+Die vier aktuellen Draft-Container haben folgende Rollen:
 
-```text
-main (post-PR54)
-   |
-   +-- PR55 structured Schur defect -> saturated leakage       [Draft]
-          |
-          +-- PR56 half-shift shell + relative resolvent       [Draft]
-                 |
-                 +-- PR57 geometric-mean resolvent transport   [Draft]
-                        |
-                        +-- PR58 good-normal tail + hard chans  [Draft]
-```
+| Container | Rolle |
+|---|---|
+| PR #55 | strukturierter Schur-Defekt → gesättigte Leakage |
+| PR #56 | Halbverschiebungs-Shell + relativer Resolventenvorläufer |
+| PR #57 | geometrischer Mittelwert + exakter Resolvententransport |
+| PR #58 | Good-Normal-Tail + Zwei-Hard-Channel-Reduktion |
 
-Alle vier PRs sind bewusst ungemergt. Downstream-Arbeit darf auf exakten Draft-Heads aufbauen, aber sie promotet die Parent-Heads nicht.
+Diese Tabelle ist **Provenienz**, kein mathematischer DAG. Downstream-Arbeit darf auf exakten Draft-Heads aufbauen, aber sie promotet die Parent-Heads nicht.
+
+Die lokalen IDs aus diesen Drafts sind auf dem aktuellen `main` noch nicht als neue Registry-Zeilen integriert; die Roadmap bezeichnet sie deshalb ausdrücklich als **Draft-source IDs**.
 
 ---
 
-## 3. Was PR #57 strukturell geändert hat
+## 3. Exakter lokaler Resolvententransport
+
+Draft-source ID:
+
+```text
+R43-COND-GEOMETRIC-MEAN-RESOLVENT-FACTORIZATION
+```
 
 Mit
 
@@ -72,7 +81,7 @@ Mit
 Q_{U,V}=B_U\#(\iota^*B_V\iota)
 \]
 
-gilt auf dem PR57-Head die exakte lokale Faktorisierung
+gilt auf dem entsprechenden Draft-Head die exakte lokale Faktorisierung
 
 \[
 \boxed{
@@ -83,7 +92,7 @@ gilt auf dem PR57-Head die exakte lokale Faktorisierung
 
 Damit wird die frühere Firewall zwischen skalarem Schur-Defekt und tatsächlichem Inversmetrik-Inkrement über eine kanonisch **resolvententransportierte strukturierte Klasse** überbrückt.
 
-Für den strukturierten Vektor `v_U=H_U^*E_{X,U}f` lautet der einseitige lokale Bound
+Für den strukturierten Vektor `v_U=H_U^*E_{X,U}f` lautet der lokale Bound
 
 \[
 (\Delta s_{\rm cond}^{U,V}(f))_+
@@ -95,11 +104,19 @@ Für den strukturierten Vektor `v_U=H_U^*E_{X,U}f` lautet der einseitige lokale 
 
 ---
 
-## 4. Was PR #58 strukturell geändert hat
+## 4. Good-Normal-/Hard-Channel-Reduktion
+
+Draft-source IDs umfassen:
+
+```text
+R43-COND-GOOD-NORMAL-COLLAR-PLUS-TAIL
+R43-COND-TWO-HARD-DIAGONAL-NORMAL-CHANNELS
+R43-COND-NORMALIZED-GEOMETRIC-TRANSPORT-CONTRACTION
+```
 
 Der Normaloperator wird prime-by-prime und translation-sign-by-translation-sign zerlegt.
 
-Alle guten Zweige besitzen im PR58-Scope ein horizontuniformes exponentielles Verschiebungsmoment; bei `beta=1/8` entsteht ein guter Tail von der Form
+Alle guten Zweige besitzen im Draft-Scope ein horizontuniformes exponentielles Verschiebungsmoment; bei `beta=1/8` entsteht ein guter Tail von der Form
 
 \[
 O(e^{-r/8}).
@@ -128,19 +145,19 @@ Für terminal-graph-normalisierte Quellen reduziert sich die resolvententranspor
 Exakt offen bleiben:
 
 ```text
-R43-COND-TRANSPORTED-COLLAR-MASS-DECAY              ?[O]
-R43-COND-TWO-HARD-CHANNEL-SATURATED-DECAY           ?[O]
+R43-COND-TRANSPORTED-COLLAR-MASS-DECAY                ?[O]
+R43-COND-TWO-HARD-CHANNEL-SATURATED-DECAY             ?[O]
 R43-COND-RESOLVENT-STRUCTURED-SATURATED-LEAKAGE-DECAY ?[O]
 ```
 
 Die praktische Forschung darf die beiden harten Kanäle getrennt untersuchen:
 
 ```text
-ROADMAP-HARD11  -> k=l=1
-ROADMAP-HARD22  -> k=l=2
+ROADMAP-HARD11  — research-subquestion — k=l=1
+ROADMAP-HARD22  — research-subquestion — k=l=2
 ```
 
-Diese ROADMAP-Namen sind noch keine kanonischen Theorem-IDs.
+Diese ROADMAP-Namen sind keine kanonischen Theorem-IDs und tragen keinen Registry-`math_status`.
 
 ### Quantoren-Firewall
 
@@ -162,45 +179,49 @@ Unbekannte Quantoren bleiben `unresolved`.
 ### 6.1 Strukturierter Direktweg
 
 ```text
-PR57 transported structured leakage
+R43-COND-RESOLVENT-TRANSPORTED-LEAKAGE-BOUND
+        |
+        | --used-by-->
+        v
+[R43-COND-GOOD-NORMAL-COLLAR-PLUS-TAIL,
+ R43-COND-TWO-HARD-DIAGONAL-NORMAL-CHANNELS]
+        |
+        | --reduces current target to-->
+        +---- R43-COND-TRANSPORTED-COLLAR-MASS-DECAY ?[O]
+        |
+        +---- R43-COND-TWO-HARD-CHANNEL-SATURATED-DECAY ?[O]
         |
         v
-PR58 collar + good tail + hard-channel reduction
+R43-COND-RESOLVENT-STRUCTURED-SATURATED-LEAKAGE-DECAY ?[O]
         |
-        +--> transported collar decay ?[O]
-        +--> hard (1,1)+(2,2) saturated decay ?[O]
-        |
+        | --open-bridge-->
         v
-structured leakage decay ?[O]
+ROADMAP-BRIDGE-COND-DIRECT-FLAGDYN
         |
-        | OPEN direct composition bridge
+        | --sufficient-route-->
         v
 projected B-FLAGDYN / FD23-compatible control ?[O]
         |
+        | --sufficient-route-->
         v
 B-FLAGTIGHT ?[O]
 ```
 
-Der offene Kompositionsknoten wird in der Roadmap als
-
-```text
-ROADMAP-BRIDGE-COND-DIRECT-FLAGDYN
-```
-
-geführt, bis Aussage und Quantoren theorematisiert sind.
-
 ### 6.2 Stärkerer Operator-/B-METINC-Weg
 
-Separat offen:
-
 ```text
-B-METINC-COND
-B-METINC-GEO
-B-METINC-NEW
-B-METINC-WIDTH
-```
+B-METINC-WIDTH ?[O]
+  uses:
+    - B-METINC-COND ?[O]
+    - B-METINC-GEO  ?[O]
+    - B-METINC-NEW  ?[O]
 
-Die Spectral-Width-/Sylvester-Kette ist nur eine **hinreichende Operatorroute** zu B-FLAGMOD.
+B-METINC-WIDTH ?[O]
+        |
+        | --sufficient-route-->
+        v
+B-FLAGMOD ?[O]
+```
 
 **Wichtige Firewall:** Scheitert diese globale Operatorroute, ist B-FLAGMOD/Strong Terminal nicht widerlegt; dann ist zur direkt projizierten Normal-/Flaggröße zurückzukehren.
 
@@ -267,27 +288,29 @@ Die aktuelle Object-X-Arbeitsdefinition steht ausschließlich in `OBJEKT_X_AKTUE
 
 Eine echte Object-X-Realisierung verlangt insbesondere einen intrinsischen, nicht-zirkulären gemeinsamen Prime-/Archimedes-Mediator sowie die vollständige korrekt normalisierte Weil-Gram-Identität auf einer geeigneten Testklasse.
 
-RH bleibt OPEN.
+Offen sind daher getrennt:
+
+```text
+genuine X candidate      ?[O]
+Object-X realization     ?[O]
+RH                       ?[O]
+```
+
+Die **Definition** von Objekt X selbst ist nicht `?[O]`; sie ist kanonisch festgelegt.
 
 ---
 
 ## 10. Separater R37-Pfad
 
-R37/G4c bleibt separat offen:
+R37/G4c bleibt separat offen. Innerhalb von R37 ist der analytische Promotionsblocker die noch offene Passage vom reellen Segment zur holomorphen Annulusidentität und zur Laurent-Eindeutigkeit.
 
-```text
-real segment
-   -> holomorphic annulus identity
-   -> Laurent uniqueness
-```
-
-Die Abhängigkeit des R37-Pfads von einer späteren X-Kandidatenarchitektur ist derzeit **unresolved**; es wird keine prerequisite-Kante gesetzt.
+Die Abhängigkeit des R37-Pfads von einer späteren X-Kandidatenarchitektur ist derzeit **unresolved**. Deshalb gibt es **keine Kante** von R37/G4c zum X-Pfad.
 
 ---
 
 ## 11. Default-Arbeitsfolge
 
-Solange der PR55–58-Stack nicht durch Review fällt, ist die Default-Reihenfolge:
+Solange der aktive Draft-Stack nicht durch Review fällt, ist die Default-Reihenfolge:
 
 1. **Hard Channel `k=l=1`** unter der echten Sättigung angreifen;
 2. **Hard Channel `k=l=2`** unter der echten Sättigung angreifen;
@@ -301,7 +324,7 @@ Parallel als Route-Optimierungsfrage:
 FD23-MINIMAL-CONDITION
 ```
 
-Nicht automatisch priorisiert: finite-level Salvage, R37/G4c, finaler `K_X`, Object X, RH.
+Nicht automatisch priorisiert: finite-level Salvage, R37/G4c, finaler `K_X`, Object-X-Realisierung, RH.
 
 ---
 
@@ -315,6 +338,8 @@ Nicht automatisch priorisiert: finite-level Salvage, R37/G4c, finaler `K_X`, Obj
 6. aktueller PR/Audit.
 7. historische Dateien nur bei klarer Provenienzfrage.
 
+Der Verlust-/Migrationscheck gegenüber der vor-v2 Langfassung ist separat im Governance-Audit dieses Roadmap-PRs dokumentiert; historische Mathematik wird nicht durch Kürzung dieser Navigationsdatei gelöscht.
+
 ---
 
 ## 13. Merge-/Rollback-Regel
@@ -322,7 +347,7 @@ Nicht automatisch priorisiert: finite-level Salvage, R37/G4c, finaler `K_X`, Obj
 Ein mathematisch relevanter Merge ist operativ erst abgeschlossen nach:
 
 ```text
-Merge -> main verification -> Registry -> ACTIVE_FRONT -> CURRENT_FRONT -> next work
+Merge --then--> main verification --then--> Registry --then--> ACTIVE_FRONT --then--> CURRENT_FRONT --then--> next work
 ```
 
 Für gestackte Drafts gilt: fällt ein Parent-Head, werden alle davon abhängigen Claims re-auditiert. Ein gescheiterter hinreichender Weg ist kein gescheitertes Fernziel, solange keine Notwendigkeitskante bewiesen wurde.
@@ -331,22 +356,21 @@ Für gestackte Drafts gilt: fällt ein Parent-Head, werden alle davon abhängige
 
 ## Kurzstatus
 
+Die exakten Heads/States stehen ausschließlich in `ACTIVE_FRONT.yaml`.
+
 ```text
-main                                434cd6bd...  (post-PR54)
-PR55                                Draft / unmerged
-PR56                                Draft / unmerged
-PR57                                Draft / unmerged
-PR58                                Draft / unmerged
-R43 COND collar decay               ?[O]
-R43 COND hard channels              ?[O]
-structured COND leakage decay       ?[O]
-B-METINC-COND                       ?[O]
-B-FLAGDYN / B-FLAGTIGHT            ?[O]
-B-SIGN / B-ORIENT                   ?[O]
-Strong Terminal / C6                ?[O]
-R37/G4c                             ?[O], separate
-Object X                            ?[O]
-RH                                  ?[O]
+active R43 draft stack                  open/draft/unmerged (see ACTIVE_FRONT.yaml)
+R43 COND collar decay                  ?[O]
+R43 COND hard channels                 ?[O]
+structured COND leakage decay          ?[O]
+B-METINC-COND                          ?[O]
+B-FLAGDYN / B-FLAGTIGHT               ?[O]
+B-SIGN / B-ORIENT                      ?[O]
+Strong Terminal / C6                   ?[O]
+R37/G4c                                ?[O], separate
+genuine X candidate                    ?[O]
+Object-X realization                   ?[O]
+RH                                     ?[O]
 ```
 
-**Kein Freeze und keine globale Promotion aus dem PR55–58-Stack.**
+**Kein Freeze und keine globale Promotion aus dem aktiven Draft-Stack.**
