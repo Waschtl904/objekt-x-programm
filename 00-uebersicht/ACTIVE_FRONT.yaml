@@ -142,6 +142,17 @@ stack:
     draft: true
     merged: false
 
+  - pr: 76
+    title: "R43: shifted-preimage mean localization diagnostic"
+    branch: r43-reverse-mean-localization-diagnostic
+    head_sha: d2d8b9077a61f5d103bcec02548fdf29fa282c2e
+    base: r43-reverse-shift-variance-mean-firewall
+    parent_pr: 74
+    parent_head_sha: 117cb0afdde12b984808fbf97d24c28252a81acb
+    github_state: open
+    draft: true
+    merged: false
+
 firewall:
   - "This file records volatile active-stack metadata and exact dependency pins only."
   - "The live main head is read from GitHub and is intentionally not self-recorded here."
