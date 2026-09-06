@@ -1,0 +1,58 @@
+schema_version: 2
+updated: 2026-09-06
+repository: Waschtl904/objekt-x-programm
+
+main:
+  sha: 434cd6bd49b66e49d4e8b556fd18687fe9887ffa
+
+active_gate: R43
+
+stack:
+  - pr: 55
+    title: "R43: structured Schur defect → saturated leakage"
+    branch: r43-structured-schur-leakage
+    head_sha: b221e6c2c4fc0b379b1b71d0100e482d8861448e
+    base: main
+    parent_head_sha: 434cd6bd49b66e49d4e8b556fd18687fe9887ffa
+    github_state: open
+    draft: true
+    merged: false
+
+  - pr: 56
+    title: "R43: exact half-shift shell + relative resolvent transfer"
+    branch: r43-translation-resolvent-transfer
+    head_sha: 08153af2447dfd58973ddf93d8acedbf1dabe601
+    base: r43-structured-schur-leakage
+    parent_pr: 55
+    parent_head_sha: b221e6c2c4fc0b379b1b71d0100e482d8861448e
+    github_state: open
+    draft: true
+    merged: false
+
+  - pr: 57
+    title: "R43: geometric-mean resolvent transport for COND leakage"
+    branch: r43-geometric-mean-resolvent-leakage
+    head_sha: 4a28bde4d02e983d32ba9e2c28c0110445a7685b
+    base: r43-translation-resolvent-transfer
+    parent_pr: 56
+    parent_head_sha: 08153af2447dfd58973ddf93d8acedbf1dabe601
+    github_state: open
+    draft: true
+    merged: false
+
+  - pr: 58
+    title: "R43: good-normal exponential tail + two hard channels"
+    branch: r43-good-normal-tail-reduction
+    head_sha: 0e57cf230291abd16ce88b0ceed95d68036799e5
+    base: r43-geometric-mean-resolvent-leakage
+    parent_pr: 57
+    parent_head_sha: 4a28bde4d02e983d32ba9e2c28c0110445a7685b
+    github_state: open
+    draft: true
+    merged: false
+
+firewall:
+  - "This file records volatile front/stack metadata only."
+  - "It does not create theorem status, review provenance, freeze, promotion, Object-X, or RH claims."
+  - "Theorem/review status remains governed by ACTIVE_THEOREM_REGISTRY.md and canonical mathematical sources."
+  - "parent_head_sha pins the exact dependency head; parent_pr alone is not sufficient provenance."

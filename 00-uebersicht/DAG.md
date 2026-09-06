@@ -1,157 +1,259 @@
 # Abhängigkeitsgraph (DAG)
 
-> **Stand:** 3. September 2026
-> Dieser DAG zeigt die **operative Abhängigkeits- und Firewall-Struktur**.
-> Der frühere SYN-DAG vom 8. August 2026 ist archiviert unter
-> [archiv/DAG_SYN_2026-08-08.md](archiv/DAG_SYN_2026-08-08.md).
+> **Stand:** 6. September 2026  
+> **Rolle:** kompakte operative Abhängigkeits- und Firewall-Struktur.  
+> **Keine Beweisautorität.** Status/Provenienz stehen im [ACTIVE_THEOREM_REGISTRY](ACTIVE_THEOREM_REGISTRY.md), volatile PR-/SHA-Daten in [ACTIVE_FRONT.yaml](ACTIVE_FRONT.yaml), die ausführliche Strategie in [FORSCHUNGS_ROADMAP_AKTUELL.md](FORSCHUNGS_ROADMAP_AKTUELL.md).
 
 ---
 
-## 1. Operativer Strong-Terminal-Pfad
+## 1. Kantenregel
 
-\[
-\boxed{
-\mathrm{R38}\to\mathrm{R39}\to\mathrm{R40}\to\mathrm{R41}\to\mathrm{R42}\to\mathrm{R43}
-}
-\]
+Logische Kanten:
 
-R38–R42 sind frozen als independently verified AI-GREEN.
+- `A ⇔ B` — bewiesene Äquivalenz;
+- `A ⇒ B` — bewiesene Implikation;
+- `A ?⇒ B` — offene Implikation.
 
-R42 liefert:
-\[
-W_{R,S}^{[U]}|_{H_R^0}
-\to
-W_{R,S}^{(0)}
-\quad\text{stark}.
-\]
+Forschungs-/Beweisabhängigkeiten sind ausdrücklich beschriftet:
 
-R43 zerlegt den Rest:
+- `A --uses--> B` — A verwendet B;
+- `A --reduces-to--> B` — A ist auf B zurückgeführt;
+- `A --sufficient-route--> B` — A ist ein hinreichender Weg zu B;
+- `A --candidate-input--> B` — A ist nur Kandidatenbaustein für B;
+- `A --open-bridge--> B` — die Verbindung selbst ist offen.
 
-    R42 codim-1 reduction
-            |
-            v
-    single normal orbit epsilon_R
-            |
-            +--> intermediate-radius Gamma family
-            |          |
-            |          v
-            |      one-vector Gamma nest
-            |          |
-            |          v
-            |      scalar multiplicity
-            |          |
-            |          v
-            |      GC-AC / higher jets
-            |          |
-            |          v
-            +----> weak clusters in C epsilon_S   [candidate]
-                       |
-                       v
-              b_U = <W_U epsilon_R, epsilon_S>
-                       |
-                       v
-                 Strong Terminal ?
-
-Aktueller unreviewed Kandidat:
-\[
-\mathrm{GC\!-\!AC}
-\]
-über die totale höhere Jet-Rieszfamilie.
-
-Wenn dieser Kandidat hält, ist der letzte Gate nur noch
-\[
-b_U\to b,\qquad |b|=1\ ?.
-\]
+Ein unbeschriftetes `->` wird in diesem DAG nicht verwendet.
 
 ---
 
-## 2. Separater R37-Pfad
+## 2. Operativer Strong-Terminal-Pfad
 
-    R37 finite/algebraic certificate
-            |
-            v
-    G4c: real segment -> holomorphic annulus identity -> Laurent uniqueness
-            |
-            v
-    R37 promotion decision
+R38–R42 werden hier nicht durch Pfeile als vermeintliche Theoremimplikationskette verbunden. Sie bilden die eingefrorene Forschungs-/Provenienzkette gemäß Registry.
 
-**Firewall:**
+```text
+[R38, R39, R40, R41, R42]
+        |
+        | --reduces-to-->
+        v
+R43 FIXED-NORMAL STRONG-TERMINAL GATE ?[O]
+```
+
+Exakter Registry-Governance-String für R38–R42:
+
+```text
+FROZEN — independently verified AI-GREEN
+```
+
+Dieser String ist gemäß Registry eine projektinterne Reviewer-/Governance-Buchung und nicht automatisch ein formaler `independent GREEN (cross-model/certificate/human)`-Subtyp.
+
+R43 bleibt OPEN.
+
+---
+
+## 3. R43 — strukturierter Direktweg
+
+PR-Nummern sind nur Provenienz und deshalb **keine Knoten**.
+
+### 3.1 Exakte Draft-source Resultate
+
+```text
+R43-COND-SCHUR-NEGATIVE-PART-LEAKAGE-BOUND
+  source: active-stack base audit
+
+R43-COND-GEOMETRIC-MEAN-RESOLVENT-FACTORIZATION
+R43-COND-RESOLVENT-TRANSPORTED-LEAKAGE-BOUND
+  uses: R43-COND-SCHUR-NEGATIVE-PART-LEAKAGE-BOUND
+
+R43-COND-GOOD-NORMAL-COLLAR-PLUS-TAIL
+R43-COND-TWO-HARD-DIAGONAL-NORMAL-CHANNELS
+R43-COND-NORMALIZED-GEOMETRIC-TRANSPORT-CONTRACTION
+  uses: R43-COND-RESOLVENT-TRANSPORTED-LEAKAGE-BOUND
+```
+
+Die exakten PR-/Head-Zuordnungen stehen ausschließlich in `ACTIVE_FRONT.yaml`. Diese IDs stammen aus den jeweiligen Draft-Audits; sie sind auf `main` noch nicht als neue Registry-Zeilen integriert.
+
+### 3.2 Offene quantitative Reduktion
+
+```text
+R43-COND-RESOLVENT-STRUCTURED-SATURATED-LEAKAGE-DECAY ?[O]
+        |
+        | --reduces-to-->
+        +---------------- R43-COND-TRANSPORTED-COLLAR-MASS-DECAY ?[O]
+        |
+        +---------------- R43-COND-TWO-HARD-CHANNEL-SATURATED-DECAY ?[O]
+```
+
+Falls beide benötigten Zweige in der richtigen Quantorenform geschlossen werden, muss ihre exakte Komposition zum Leakage-Decay separat gebucht werden; die Roadmap nimmt diese Komposition nicht stillschweigend vorweg.
+
+Danach bleibt die direkte Flag-Brücke ausdrücklich offen:
+
+```text
+R43-COND-RESOLVENT-STRUCTURED-SATURATED-LEAKAGE-DECAY ?[O]
+        |
+        | --open-bridge-->
+        v
+ROADMAP-BRIDGE-COND-DIRECT-FLAGDYN
+        |
+        | --sufficient-route-->
+        v
+projected B-FLAGDYN / FD23-compatible control ?[O]
+        |
+        | --sufficient-route-->
+        v
+B-FLAGTIGHT ?[O]
+```
+
+**Firewall:** structured-vector Kontrolle ist nicht automatisch operatorweite `B-METINC-COND`-Kontrolle.
+
+---
+
+## 4. R43 — stärkerer Operator-/Spectral-Width-Weg
+
+```text
+B-METINC-WIDTH ?[O]
+  uses:
+    - B-METINC-COND ?[O]
+    - B-METINC-GEO  ?[O]
+    - B-METINC-NEW  ?[O]
+
+B-METINC-WIDTH ?[O]
+        |
+        | --sufficient-route-->
+        v
+B-FLAGMOD ?[O]
+```
+
+Scheitert `B-METINC-WIDTH`, folgt daraus nicht das Scheitern von B-FLAGMOD oder Strong Terminal; eine direkt projizierte Route bleibt möglich.
+
+---
+
+## 5. Tightness / Sign / Strong Terminal
+
+Mit
+
 \[
-\boxed{
-\mathrm{R38\text{--}R43}
-\not\Rightarrow
-\mathrm{R37/G4c}.
-}
+Q_{m,U}=W_U^*P_mW_U,
+\qquad
+q_m(U)=\langle\varepsilon_R,Q_{m,U}\varepsilon_R\rangle,
 \]
 
----
+gilt im gebuchten Scope
 
-## 3. Finite-level SW1-Pfad
-
-    P12-RT / SW1-KNF / A10
-            |
-            v
-    M1-RAW / M1-FULL / C1B2A
-            |
-            v
-    universal Cross-Gram injectivity
-            |
-            X  explicit small-R countervector
-
-Die universelle positive Route ist negativ geschlossen.
-
-PR #49:
 \[
-\text{geparkter, unpromotierter Blind-Wedge-Kandidat}.
+\mathrm{B\!-\!FLAGTIGHT}\Longleftrightarrow\lim_m\limsup_U q_m(U)=0.
 \]
 
-Dieser Pfad beweist weder Strong Terminal noch dessen Negation.
+Der aktuell verfolgte hinreichende Weg lautet:
+
+```text
+[B-FLAGDYN, B-FLAGMOD, B-FLAGPHASE]
+        |
+        | --sufficient-route-->
+        v
+B-FLAGTIGHT ?[O]
+        |
+        | --reduces-to-->
+        v
+B-SIGN / B-ORIENT ?[O]
+        |
+        | --open-bridge within current R43 route-->
+        v
+Strong Terminal / C6 ?[O]
+```
+
+Die letzte Darstellung ist eine Forschungsroute; nur ausdrücklich separat gebuchte Äquivalenzen/Implikationen dürfen logisch gelesen werden.
 
 ---
 
-## 4. Objekt-X-Hauptarchitektur
+## 6. Separater R37-Pfad
 
-Die heutigen Forschungsfronten liefern nur Kandidatenbausteine:
+```text
+R37 finite/algebraic certificate
+        |
+        | --reduces-to within R37-->
+        v
+G4c: real segment → holomorphic annulus identity → Laurent uniqueness ?[O]
+```
 
-    finite-level geometry (A, negative information)
-                         \
-                          \
-    Strong Terminal (B) ---> candidate ingredients ----+
-                                                         |
-    R37 analytic/modulus information -------------------+
-                                                         |
-                                                         v
-                                          first genuine X candidate (C)
-                                                         |
-                                                         v
-                                          exact Weil-Gram identity (D)
-                                                         |
-                                                         v
-                                          Weil criterion / RH scope (E)
+**Firewall:** R38–R43 dürfen R37/G4c nicht rückwirkend promoten.
 
-Keine linke Front impliziert automatisch C, D oder E.
+Die Beziehung von R37/G4c zu einer späteren Object-X-Realisierung ist derzeit **unresolved**. Deshalb gibt es in diesem DAG **keine Kante** von R37/G4c zum X-Pfad.
 
 ---
 
-## 5. Publikations-/Konsolidierungsspur
+## 7. Finite-level / SW1
 
-    R38--R43 audit chain
-            |
-            v
-    post-freeze Strong-Terminal consolidation
-            |
-            +--> P11 bleibt frozen
-            |
-            +--> P12 bleibt separater Hub-Strang
-            |
-            v
-    eigenständiger konsolidierter Abschnitt / Paper
+Die universelle positive finite-level Cross-Gram-/SW1-Route ist in ihrem gebuchten Scope negativ entschieden. Salvage-/Wedge-Fragen bleiben mögliche Nebenfronten.
+
+Dieser Pfad beweist weder Strong Terminal noch dessen Negation und erzeugt kein Object-X-/RH-No-Go.
+
+---
+
+## 8. Objekt-X-Hauptarchitektur
+
+Die aktuelle Arbeitsdefinition steht ausschließlich in [OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
+
+R37/G4c ist wegen ungeklärter Abhängigkeit **nicht** an diese Grafik angeschlossen.
+
+```text
+finite-level constraints
+        |
+        | --candidate-input-->
+        v
+GENUINE X CANDIDATE ?[O]
+
+Strong Terminal result
+        |
+        | --candidate-input only-->
+        v
+GENUINE X CANDIDATE ?[O]
+
+GENUINE X CANDIDATE ?[O]
+        |
+        | --requires separate proof-->
+        v
+EXACT FULL WEIL-GRAM IDENTITY ?[O]
+        |
+        | --component of realization together with
+        |    intrinsicity + test class + normalization-->
+        v
+OBJECT-X REALIZATION ?[O]
+        |
+        | ⇒ by the Gram identity
+        v
+Q_W(f,f) = ||T_X f||² ≥ 0
+        |
+        | --requires exact Weil-scope verification-->
+        v
+E — WEIL-CRITERION-SCOPE-VERIFICATION ?[O]
+        |
+        | --unlocks exact classical criterion application-->
+        v
+RH
+```
+
+Keine linke Front impliziert automatisch einen X-Kandidaten, Objekt X oder RH.
+
+---
+
+## 9. Aktuelle offene Forschungsfragen
+
+```text
+ROADMAP-HARD11                          research-subquestion
+ROADMAP-HARD22                          research-subquestion
+FD23-MINIMAL-CONDITION                  research-question
+ROADMAP-BRIDGE-COND-DIRECT-FLAGDYN      open-bridge
+ROADMAP-R37-G4C-DEPENDENCY              research-question
+```
+
+Diese ROADMAP-Labels sind keine kanonischen Theorem-IDs und tragen daher keinen aus der Registry importierten `math_status`.
 
 ---
 
 ## Kanonische Einstiegspunkte
 
 - [CURRENT-FRONT](../CURRENT-FRONT.md)
+- [ACTIVE_FRONT](ACTIVE_FRONT.yaml)
+- [FORSCHUNGS_ROADMAP_AKTUELL](FORSCHUNGS_ROADMAP_AKTUELL.md)
 - [ACTIVE_THEOREM_REGISTRY](ACTIVE_THEOREM_REGISTRY.md)
-- [FORSCHUNGS_ROADMAP_2026-09-03](FORSCHUNGS_ROADMAP_2026-09-03.md)
 - [OBJEKT_X_AKTUELLE_ARBEITSDEFINITION](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)

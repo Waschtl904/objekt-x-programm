@@ -1,44 +1,36 @@
 # Aktueller Stand — Objekt X / P11 Strong Terminal
 
-> **Stand:** 3. September 2026
+> **Stand:** 6. September 2026  
 > **Operative Kurzfassung.** Für Details gelten
 > [CURRENT-FRONT](../CURRENT-FRONT.md),
+> [ACTIVE_FRONT](ACTIVE_FRONT.yaml),
 > [ACTIVE_THEOREM_REGISTRY](ACTIVE_THEOREM_REGISTRY.md) und die
-> [Forschungsroadmap 2026-09-03](FORSCHUNGS_ROADMAP_2026-09-03.md).
+> [kanonische Forschungsroadmap](FORSCHUNGS_ROADMAP_AKTUELL.md).
 >
-> Die frühere Fassung dieser Datei (P11-Sonderupdate 21.–30. August) ist vollständig unter
-> [archiv/AKTUELLER_STAND_2026-08-21_bis_2026-08-30.md](archiv/AKTUELLER_STAND_2026-08-21_bis_2026-08-30.md)
-> erhalten.
+> Volatile Heads/States werden hier **nicht** dupliziert. Historische Fassungen bleiben über Git und `archiv/` erhalten.
 
 ---
 
 ## 1. Aktive Forschungsfront
 
-Die aktive Hauptfront ist **B / Strong Terminal / C6**.
+Die aktive Hauptfront ist **B / Strong Terminal / C6**, derzeit **R43**.
 
-R38–R42 sind
+Exakter Registry-Governance-String für R38–R42:
+
+```text
+FROZEN — independently verified AI-GREEN
+```
+
+Die Registry-Firewall bleibt maßgeblich: dieser projektinterne String ist nicht automatisch ein formaler `independent GREEN (cross-model/certificate/human)`-Subtyp. R43 ist OPEN.
+
+Für jedes feste
 
 \[
-\boxed{
-\text{FROZEN — independently verified AI-GREEN}
-}
+0<R<S
 \]
 
-ohne automatische kanonische \(\checkmark[M]\)-Promotion.
+ist der verbleibende Strong-Terminal-Gate auf die eine Normalbahn reduziert, äquivalent auf
 
-Für jedes feste \(0<R<S\) ist starke Konvergenz des echten Future-Transports bereits auf
-\[
-H_R^0=\ker\beta_R^{(0)}
-\]
-bewiesen. Der verbleibende fixed-pair Strong-Terminal-Gate liegt vollständig in der einen
-Normalbahn
-\[
-W_{R,S}^{[U]}\varepsilon_R,
-\qquad
-\varepsilon_R=e_{R,0}.
-\]
-
-Äquivalent:
 \[
 \boxed{
 \operatorname{Re}
@@ -52,111 +44,187 @@ W_{R,S}^{[U]}\varepsilon_R,
 
 ---
 
-## 2. R43 — aktueller Arbeitsblock
+## 2. Aktiver ungemergter Stack
 
-R43 ist **OPEN** mit gemischtem reviewed/candidate Status.
+Exakte Branches, Heads, Parent-Heads und GitHub-States stehen ausschließlich in `ACTIVE_FRONT.yaml`.
 
-Extern GREEN sind die unteren Gamma-Nest-Reduktionen bis einschließlich R43.10v sowie die
-reparierte Analytizitätsargumentation und das selbständige Hardy-/Constraint-Lemma im
-geprüften Scope.
+Die vier Draft-Container sind reine Provenienz:
 
-Die Literatur-Schnittstelle zu Krein/de Branges wurde source-checked und anschließend
-korrigiert:
+| Container | Rolle |
+|---|---|
+| PR #55 | strukturierte Schur-Leakage |
+| PR #56 | Halbverschiebung + relativer Resolventenvorläufer |
+| PR #57 | geometrischer Mittelwert + Resolvententransport |
+| PR #58 | Good-Normal-Tail + Hard-Channel-Reduktion |
 
-- skalare Multiplizität eins des odd/constrained Gamma-Nests ist ein Kandidatenbaustein;
-- absolute Stetigkeit in der natürlichen Radiusvariable durfte nicht allein aus
-  Diagonalität des Hamiltonians gefolgert werden.
-
-Der neue §3K-Kandidat benutzt stattdessen **alle höheren Jet-Rieszvektoren** und schließt
-GC-AC kandidatenseitig:
-
-\[
-\boxed{
-\mathrm{GC\!-\!AC}
-\text{ candidate-closed, independent review pending.}
-}
-\]
-
-Kern:
-
-\[
-\overline{\operatorname{span}\{g_{m,S}:m\ge1\}}^{\,\Gamma}=H_S^0,
-\]
-während jedes einzelne Radius-Nestmaß
-\[
-d\|P_Q^\Gamma g_{m,S}\|^2=d\gamma_m(Q)
-\]
-absolut stetig ist. Ein gemeinsamer singulär-kontinuierlicher Nestkanal wäre daher zu einer
-dichten Familie orthogonal.
+Keiner dieser Drafts ist durch die Stackbeziehung automatisch extern GREEN oder gemergt. Die lokalen IDs aus diesen Drafts sind auf aktuellem `main` noch nicht als neue Registry-Zeilen integriert.
 
 ---
 
-## 3. Wenn §3K den Review übersteht
+## 3. Aktueller COND-Kern
 
-Dann kollabiert jeder schwache Cluster der letzten Normalbahn auf
+Der geometrische-Mittelwert-Draft liefert lokal
+
 \[
-\mathbb C\varepsilon_S.
+Q_{U,V}=B_U\#(\iota^*B_V\iota)
 \]
 
-Es bleibt nur
+und
+
 \[
-\boxed{
-b_U
-=
-\langle
-W_{R,S}^{[U]}\varepsilon_R,\varepsilon_S
-\rangle
-}
+\iota^*B_V\iota-B_U=-Q_{U,V}K_{U,V}^{\rm Schur}Q_{U,V}.
 \]
-und die Frage
+
+Die Good-Normal-Reduktion führt die strukturierte Leakage schematisch auf
+
 \[
 \boxed{
-b_U\to b,\qquad |b|=1\quad?
+\text{hard saturated}
++C_*\|\chi_{U,r}Q_{U,V}v_U\|
++C_*e^{-r/8}
 }
 \]
 
-Das ist noch **kein** Strong-Terminal-Beweis.
+zurück, mit nur zwei durch die crude absolute Summierbarkeit nicht erledigten diagonal-sum Kanälen
+
+\[
+\boxed{k=\ell=1},\qquad\boxed{k=\ell=2}.
+\]
+
+Offen:
+
+```text
+R43-COND-TRANSPORTED-COLLAR-MASS-DECAY                ?[O]
+R43-COND-TWO-HARD-CHANNEL-SATURATED-DECAY             ?[O]
+R43-COND-RESOLVENT-STRUCTURED-SATURATED-LEAKAGE-DECAY ?[O]
+```
 
 ---
 
-## 4. Andere Fronten
+## 4. Zwei Wege Richtung B-FLAGTIGHT
 
-### A / finite-level Cross-Gram
+### Strukturierter Direktweg
 
-Der universelle SW1-Nichtentartungsanspruch ist negativ entschieden. PR #49 bleibt als
-unpromotierter Blind-Wedge-Kandidat geparkt.
+```text
+R43-COND-RESOLVENT-TRANSPORTED-LEAKAGE-BOUND
+        |
+        | --used-by-->
+        v
+[R43-COND-GOOD-NORMAL-COLLAR-PLUS-TAIL,
+ R43-COND-TWO-HARD-DIAGONAL-NORMAL-CHANNELS]
+        |
+        | --reduces current target to-->
+        +---- collar decay ?[O]
+        +---- hard-channel decay ?[O]
+        |
+        v
+structured leakage decay ?[O]
+        |
+        | --open-bridge-->
+        v
+projected B-FLAGDYN / FD23-compatible control ?[O]
+        |
+        | --sufficient-route-->
+        v
+B-FLAGTIGHT ?[O]
+```
 
-### R37
+### Stärkerer Operatorweg
 
-R37 bleibt separat. Der finite/algebraische Certificate-Scope ist reproduzierbar GREEN,
-aber G4c bleibt analytisch offen. R38–R43 dürfen R37 nicht rückwirkend promotieren.
+```text
+B-METINC-WIDTH ?[O]
+  uses:
+    - B-METINC-COND ?[O]
+    - B-METINC-GEO  ?[O]
+    - B-METINC-NEW  ?[O]
+
+B-METINC-WIDTH ?[O]
+        |
+        | --sufficient-route-->
+        v
+B-FLAGMOD ?[O]
+```
+
+**Firewall:** Scheitert die globale Spectral-Width-/Operatorroute, ist die direkt projizierte Normal-/Flagroute nicht widerlegt.
+
+---
+
+## 5. Tightness / Sign / Strong Terminal
+
+Mit
+
+\[
+Q_{m,U}=W_U^*P_mW_U,
+\qquad
+q_m(U)=\langle\varepsilon_R,Q_{m,U}\varepsilon_R\rangle
+\]
+
+gilt im gebuchten Scope
+
+\[
+\mathrm{B\!-\!FLAGTIGHT}
+\Longleftrightarrow
+\lim_m\limsup_U q_m(U)=0.
+\]
+
+Danach bleibt B-SIGN/B-ORIENT. Unter B-TIGHT gilt der scharfe Resttest
+
+\[
+\text{Strong Terminal}
+\Longleftrightarrow
+\liminf_{T,U\to\infty}L_{R,S}^{T,U}>-1.
+\]
+
+Strong Terminal/C6 bleibt OPEN.
+
+---
+
+## 6. Andere Fronten
+
+### A / finite-level
+
+Die universelle positive SW1-Cross-Gram-Route ist in ihrem gebuchten Scope negativ entschieden; Salvage bleibt Nebenfront.
+
+### R37/G4c
+
+Separat offen. Die Beziehung zu einer späteren X-Kandidatenarchitektur ist derzeit `unresolved`; es gibt keine Kante von R37/G4c zum X-Pfad. R38–R43 promoten R37 nicht rückwirkend.
 
 ### Objekt X
 
-Es existiert weiterhin **kein** X-Kandidat im Sinn der kanonischen Arbeitsdefinition.
+Die aktuelle Definition steht in `OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md` und ist **nicht** offen.
 
-### P12
+Offen sind getrennt:
 
-P12 bleibt ein separater Adelic-Hub-Injektivitätsstrang und ist kein Beweisinput für R38–R43.
+```text
+genuine X candidate      ?[O]
+Object-X realization     ?[O]
+RH                       ?[O]
+```
 
----
-
-## 5. Nächste Arbeitsfolge
-
-1. R43 §3K destruktiv extern prüfen.
-2. Falls GREEN: terminalfreie Gamma-Dichtefront schließen.
-3. Den letzten Normal-Skalar \(b_U\) direkt angreifen.
-4. Strong Terminal positiv oder negativ entscheiden.
-5. Danach entweder:
-   - das B-Ergebnis in eine X-Kandidatenarchitektur überführen,
-   - R37/G4c wieder aufnehmen,
-   - oder einen unabhängigen Kandidatenpfad öffnen.
+Strong Terminal wäre höchstens ein X-Kandidatenbaustein; es existiert kein Satz `Strong Terminal => Objekt X`.
 
 ---
 
-## 6. Governance
+## 7. Nächste Default-Arbeitsfolge
 
-- R43: **OPEN**, kein Freeze.
-- Strong Terminal/C6: \(?[O]\).
-- R37/G4c: offen.
+1. Hard Channel `k=l=1` unter echter Sättigung angreifen.
+2. Hard Channel `k=l=2` unter echter Sättigung angreifen.
+3. Transported Collar `||chi_{U,r}Q_{U,V}v_U||` kontrollieren.
+4. Die schwächste hinreichende direkte FD23-/B-FLAGDYN-Kompositionsbedingung identifizieren.
+5. Nur bei Bedarf den stärkeren globalen B-METINC-WIDTH-Weg verfolgen.
+
+Parallel: `FD23-MINIMAL-CONDITION` als Route-Optimierungsfrage.
+
+---
+
+## 8. Governance
+
+- Volatile Stackdaten: ausschließlich `ACTIVE_FRONT.yaml`.
+- R43: OPEN, kein Freeze.
+- aktiver Stack: Draft/unmerged gemäß `ACTIVE_FRONT.yaml`.
+- Strong Terminal/C6: `?[O]`.
+- R37/G4c: offen/separat.
+- genuine X candidate: `?[O]`.
+- Object-X realization: `?[O]`.
+- RH: `?[O]`.
 - Kein Object-X- oder RH-Abschluss.
