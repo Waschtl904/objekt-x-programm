@@ -153,6 +153,17 @@ stack:
     draft: true
     merged: false
 
+  - pr: 78
+    title: "R43: primitive occupancy-kernel asymptotics and large-prime firewall"
+    branch: r43-reverse-occupancy-kernel-firewall
+    head_sha: a9d1f1a944bbb154db7bdb5844135501630bda5c
+    base: r43-reverse-mean-localization-diagnostic
+    parent_pr: 76
+    parent_head_sha: d2d8b9077a61f5d103bcec02548fdf29fa282c2e
+    github_state: open
+    draft: true
+    merged: false
+
 firewall:
   - "This file records volatile active-stack metadata and exact dependency pins only."
   - "The live main head is read from GitHub and is intentionally not self-recorded here."
