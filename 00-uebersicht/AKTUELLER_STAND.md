@@ -7,7 +7,7 @@
 > [ACTIVE_THEOREM_REGISTRY](ACTIVE_THEOREM_REGISTRY.md) und die
 > [kanonische Forschungsroadmap](FORSCHUNGS_ROADMAP_AKTUELL.md).
 >
-> Historische Fassungen bleiben über Git und `archiv/` erhalten.
+> Volatile Heads/States werden hier **nicht** dupliziert. Historische Fassungen bleiben über Git und `archiv/` erhalten.
 
 ---
 
@@ -15,7 +15,13 @@
 
 Die aktive Hauptfront ist **B / Strong Terminal / C6**, derzeit **R43**.
 
-R38–R42 bleiben gemäß ihrer exakten Provenienz frozen/reviewed; R43 ist OPEN.
+Exakter Registry-Governance-String für R38–R42:
+
+```text
+FROZEN — independently verified AI-GREEN
+```
+
+Die Registry-Firewall bleibt maßgeblich: dieser projektinterne String ist nicht automatisch ein formaler `independent GREEN (cross-model/certificate/human)`-Subtyp. R43 ist OPEN.
 
 Für jedes feste
 
@@ -40,39 +46,36 @@ ist der verbleibende Strong-Terminal-Gate auf die eine Normalbahn reduziert, äq
 
 ## 2. Aktiver ungemergter Stack
 
-Die exakten Heads/States stehen in `ACTIVE_FRONT.yaml`.
+Exakte Branches, Heads, Parent-Heads und GitHub-States stehen ausschließlich in `ACTIVE_FRONT.yaml`.
 
-```text
-main@434cd6bd...
-   |
-   +-- PR55 structured Schur leakage              [Draft]
-          |
-          +-- PR56 relative resolvent             [Draft]
-                 |
-                 +-- PR57 geometric-mean transport [Draft]
-                        |
-                        +-- PR58 good tail + hard channels [Draft]
-```
+Die vier Draft-Container sind reine Provenienz:
 
-Keiner dieser Drafts ist durch die Stackbeziehung automatisch extern GREEN oder gemergt.
+| Container | Rolle |
+|---|---|
+| PR #55 | strukturierte Schur-Leakage |
+| PR #56 | Halbverschiebung + relativer Resolventenvorläufer |
+| PR #57 | geometrischer Mittelwert + Resolvententransport |
+| PR #58 | Good-Normal-Tail + Hard-Channel-Reduktion |
+
+Keiner dieser Drafts ist durch die Stackbeziehung automatisch extern GREEN oder gemergt. Die lokalen IDs aus diesen Drafts sind auf aktuellem `main` noch nicht als neue Registry-Zeilen integriert.
 
 ---
 
 ## 3. Aktueller COND-Kern
 
-PR #57 liefert auf seinem exakten Draft-Head den kanonischen geometrischen-Mittelwert-Transport
+Der geometrische-Mittelwert-Draft liefert lokal
 
 \[
 Q_{U,V}=B_U\#(\iota^*B_V\iota)
 \]
 
-und die exakte lokale Kongruenz
+und
 
 \[
 \iota^*B_V\iota-B_U=-Q_{U,V}K_{U,V}^{\rm Schur}Q_{U,V}.
 \]
 
-PR #58 reduziert die resultierende strukturierte Leakage auf:
+Die Good-Normal-Reduktion führt die strukturierte Leakage schematisch auf
 
 \[
 \boxed{
@@ -82,7 +85,7 @@ PR #58 reduziert die resultierende strukturierte Leakage auf:
 }
 \]
 
-mit nur zwei durch die crude absolute Summierbarkeit nicht erledigten diagonal-sum Kanälen
+zurück, mit nur zwei durch die crude absolute Summierbarkeit nicht erledigten diagonal-sum Kanälen
 
 \[
 \boxed{k=\ell=1},\qquad\boxed{k=\ell=2}.
@@ -91,8 +94,8 @@ mit nur zwei durch die crude absolute Summierbarkeit nicht erledigten diagonal-s
 Offen:
 
 ```text
-R43-COND-TRANSPORTED-COLLAR-MASS-DECAY              ?[O]
-R43-COND-TWO-HARD-CHANNEL-SATURATED-DECAY           ?[O]
+R43-COND-TRANSPORTED-COLLAR-MASS-DECAY                ?[O]
+R43-COND-TWO-HARD-CHANNEL-SATURATED-DECAY             ?[O]
 R43-COND-RESOLVENT-STRUCTURED-SATURATED-LEAKAGE-DECAY ?[O]
 ```
 
@@ -103,15 +106,25 @@ R43-COND-RESOLVENT-STRUCTURED-SATURATED-LEAKAGE-DECAY ?[O]
 ### Strukturierter Direktweg
 
 ```text
-collar + hard channels
+R43-COND-RESOLVENT-TRANSPORTED-LEAKAGE-BOUND
+        |
+        | --used-by-->
+        v
+[R43-COND-GOOD-NORMAL-COLLAR-PLUS-TAIL,
+ R43-COND-TWO-HARD-DIAGONAL-NORMAL-CHANNELS]
+        |
+        | --reduces current target to-->
+        +---- collar decay ?[O]
+        +---- hard-channel decay ?[O]
         |
         v
 structured leakage decay ?[O]
         |
-        | offene quantitative Kompositionsbrücke
+        | --open-bridge-->
         v
 projected B-FLAGDYN / FD23-compatible control ?[O]
         |
+        | --sufficient-route-->
         v
 B-FLAGTIGHT ?[O]
 ```
@@ -119,12 +132,15 @@ B-FLAGTIGHT ?[O]
 ### Stärkerer Operatorweg
 
 ```text
-B-METINC-COND / GEO / NEW ?[O]
-        |
-        v
+B-METINC-WIDTH ?[O]
+  uses:
+    - B-METINC-COND ?[O]
+    - B-METINC-GEO  ?[O]
+    - B-METINC-NEW  ?[O]
+
 B-METINC-WIDTH ?[O]
         |
-        | hinreichend
+        | --sufficient-route-->
         v
 B-FLAGMOD ?[O]
 ```
@@ -171,15 +187,21 @@ Die universelle positive SW1-Cross-Gram-Route ist in ihrem gebuchten Scope negat
 
 ### R37/G4c
 
-Separat offen. Die Abhängigkeit von einer späteren X-Kandidatenarchitektur ist derzeit unresolved; R38–R43 promoten R37 nicht rückwirkend.
+Separat offen. Die Beziehung zu einer späteren X-Kandidatenarchitektur ist derzeit `unresolved`; es gibt keine Kante von R37/G4c zum X-Pfad. R38–R43 promoten R37 nicht rückwirkend.
 
 ### Objekt X
 
-Die aktuelle Definition steht in `OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`. Strong Terminal wäre höchstens ein X-Kandidatenbaustein; es existiert kein Satz `Strong Terminal => Objekt X`.
+Die aktuelle Definition steht in `OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md` und ist **nicht** offen.
 
-### RH
+Offen sind getrennt:
 
-OPEN. Keine lokale PR55–58-Buchung erzeugt eine RH-Aussage.
+```text
+genuine X candidate      ?[O]
+Object-X realization     ?[O]
+RH                       ?[O]
+```
+
+Strong Terminal wäre höchstens ein X-Kandidatenbaustein; es existiert kein Satz `Strong Terminal => Objekt X`.
 
 ---
 
@@ -197,8 +219,12 @@ Parallel: `FD23-MINIMAL-CONDITION` als Route-Optimierungsfrage.
 
 ## 8. Governance
 
+- Volatile Stackdaten: ausschließlich `ACTIVE_FRONT.yaml`.
 - R43: OPEN, kein Freeze.
-- PR55–58: Draft/unmerged gemäß `ACTIVE_FRONT.yaml`.
+- aktiver Stack: Draft/unmerged gemäß `ACTIVE_FRONT.yaml`.
 - Strong Terminal/C6: `?[O]`.
 - R37/G4c: offen/separat.
+- genuine X candidate: `?[O]`.
+- Object-X realization: `?[O]`.
+- RH: `?[O]`.
 - Kein Object-X- oder RH-Abschluss.
