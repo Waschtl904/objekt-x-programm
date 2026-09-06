@@ -1,9 +1,10 @@
-# Objekt X — kanonische Forschungsroadmap v2.1.1
+# Objekt X — kanonische Forschungsroadmap v2.1.2
 
 > **Stand:** 2026-09-06  
 > **Rolle:** kanonische Abhängigkeits- und Forschungsstrategiekarte.  
 > **Keine Beweisautorität:** Dieses Dokument erzeugt keine `✓[M]`-Promotion, kein `independent GREEN`, keinen Freeze, keinen Merge-Anspruch und keine Object-X-/RH-Folgerung.  
 > **Volatile Frontdaten:** [ACTIVE_FRONT.yaml](ACTIVE_FRONT.yaml)  
+> **Live-main-Policy:** Der aktuelle `main`-Head wird live aus GitHub gelesen; er wird nicht selbstreferenziell als SHA in einer versionierten Repo-Datei gespeichert.  
 > **Objekt-X-Definition:** [OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)  
 > **Theorem-/Review-Registry:** [ACTIVE_THEOREM_REGISTRY.md](ACTIVE_THEOREM_REGISTRY.md)  
 > **Operative Front:** [CURRENT-FRONT.md](../CURRENT-FRONT.md)  
@@ -646,16 +647,21 @@ Gezielt bei falsifizierbaren quantitativen Hypothesen: Gegenbeispiele, Skalierun
 
 ## 23. Source-of-Truth-Drift
 
-`ACTIVE_FRONT.yaml` hält ausschließlich volatile Stackdaten: Main-Head, aktive PRs, Heads, Parentbeziehungen, GitHub-State, Hauptgate. Theoremstatus bleibt in Registry/kanonischen Quellen.
+`ACTIVE_FRONT.yaml` hält ausschließlich die **persistierbaren** volatilen Stackdaten: aktive PRs, exakte Draft-Heads, Parentbeziehungen, GitHub-State, Hauptgate sowie den historischen `stack_root_base_sha`.
 
-`CURRENT-FRONT.md`, diese Roadmap, `AKTUELLER_STAND.md` und `ACTIVE_THEOREM_REGISTRY.md` sollen auf `ACTIVE_FRONT.yaml` referenzieren statt dieselben SHA-Werte mehrfach manuell zu pflegen.
+Der **aktuelle** `main`-Head wird dagegen live aus GitHub `refs/heads/main` gelesen und absichtlich nicht als SHA in `ACTIVE_FRONT.yaml` oder einer anderen versionierten Navigationsdatei gespeichert. Grund: Eine Datei kann die SHA des Commits, der sie selbst enthält, nicht dauerhaft als exakten Current-Head-Wert führen — jeder Aktualisierungscommit erzeugt sofort eine neue SHA.
+
+Der historische `stack_root_base_sha` ist davon verschieden: Er pinnt den exakten mathematischen Base-Commit des aktiven Draft-Stacks und bleibt auch dann unverändert, wenn `main` später durch Governance-/Navigations-Merges fortschreitet. Solche Merges rebasen oder promoten den Draft-Stack nicht automatisch.
+
+`CURRENT-FRONT.md`, diese Roadmap, `AKTUELLER_STAND.md` und `ACTIVE_THEOREM_REGISTRY.md` sollen auf `ACTIVE_FRONT.yaml` referenzieren statt dieselben Stack-/Base-SHA-Werte mehrfach manuell zu pflegen.
 
 Eine technische Validierung soll insbesondere prüfen:
 
-- 40-Hex-Format aller gespeicherten Heads;
+- Live-main-Policy (`tracking: live`, Quelle `github:refs/heads/main`) und Verbot einer selbstgespeicherten Current-main-SHA;
+- 40-Hex-Format von `stack_root_base_sha` und allen gespeicherten Draft-Heads;
 - `parent_pr`/`parent_head_sha`-Konsistenz;
-- Parent-Head des Stack-Roots gegen den gespeicherten Main-Head;
-- keine Duplizierung der in `ACTIVE_FRONT.yaml` gespeicherten volatilen SHA-Werte in den operativen Navigationsdateien.
+- Parent-Head des Stack-Roots gegen `stack_root_base_sha`;
+- keine Duplizierung der in `ACTIVE_FRONT.yaml` gespeicherten Stack-/Base-SHA-Werte in den operativen Navigationsdateien.
 
 ---
 
