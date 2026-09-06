@@ -3,6 +3,7 @@
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 6. September 2026  
 > **Volatile PR-/SHA-Single-Source:** [`00-uebersicht/ACTIVE_FRONT.yaml`](00-uebersicht/ACTIVE_FRONT.yaml)  
+> **Live-main-Policy:** Der aktuelle `main`-Head wird direkt aus GitHub gelesen und absichtlich nicht als SHA in einer versionierten Repo-Datei selbst gespeichert.  
 > **Kanonische Roadmap:** [`00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md`](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)  
 > **Theorem-/Reviewstatus:** [`00-uebersicht/ACTIVE_THEOREM_REGISTRY.md`](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md)  
 > **Objekt-X-Definition:** [`00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)
@@ -51,6 +52,8 @@ R37/G4c bleibt **separat offen** und wird durch R38–R43 nicht rückwirkend ges
 ## 2. Aktiver ungemergter R43-Stack
 
 Die exakten Heads, Parent-Heads, Branches und GitHub-States stehen ausschließlich in `ACTIVE_FRONT.yaml`.
+
+**Wichtige Post-Merge-Regel:** Der Stack-Root besitzt einen historischen, exakten Base-Pin. Ein späterer Governance-/Navigations-Merge auf `main` rebaset PR #55–#58 **nicht** und verändert ihre Parent-Heads nicht. Der aktuelle `main`-Head wird live aus GitHub gelesen; der mathematische Stack-Root-Base bleibt separat gepinnt.
 
 Die vier aktuellen Draft-Container haben folgende Rollen:
 
@@ -349,6 +352,8 @@ Ein mathematisch relevanter Merge ist operativ erst abgeschlossen nach:
 ```text
 Merge --then--> main verification --then--> Registry --then--> ACTIVE_FRONT --then--> CURRENT_FRONT --then--> next work
 ```
+
+Dabei wird der aktuelle `main`-Head **live** verifiziert. Ein versionierter Ledger speichert nicht die SHA seines eigenen aktuellen Commits. Für gestackte Drafts bleibt stattdessen der historische Stack-Root-Base-Pin exakt erhalten.
 
 Für gestackte Drafts gilt: fällt ein Parent-Head, werden alle davon abhängigen Claims re-auditiert. Ein gescheiterter hinreichender Weg ist kein gescheitertes Fernziel, solange keine Notwendigkeitskante bewiesen wurde.
 
