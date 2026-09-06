@@ -120,6 +120,17 @@ stack:
     draft: true
     merged: false
 
+  - pr: 72
+    title: "R43: primitive-band Galerkin graph proxy diagnostic"
+    branch: r43-reverse-extension-galerkin-graph-proxy
+    head_sha: 25c27bd7f0646e7a63c3cba109336c6414fee72b
+    base: r43-reverse-extension-multichannel-toy
+    parent_pr: 70
+    parent_head_sha: 1a64e9d1841de170f96dd9d9f018ec41da46e415
+    github_state: open
+    draft: true
+    merged: false
+
 firewall:
   - "This file records volatile active-stack metadata and exact dependency pins only."
   - "The live main head is read from GitHub and is intentionally not self-recorded here."
