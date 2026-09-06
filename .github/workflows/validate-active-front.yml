@@ -1,0 +1,31 @@
+name: Validate active front metadata
+
+on:
+  pull_request:
+    paths:
+      - '00-uebersicht/ACTIVE_FRONT.yaml'
+      - 'CURRENT-FRONT.md'
+      - '00-uebersicht/AKTUELLER_STAND.md'
+      - '00-uebersicht/DAG.md'
+      - '00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md'
+      - 'scripts/validate_active_front.py'
+      - '.github/workflows/validate-active-front.yml'
+  push:
+    paths:
+      - '00-uebersicht/ACTIVE_FRONT.yaml'
+      - 'CURRENT-FRONT.md'
+      - '00-uebersicht/AKTUELLER_STAND.md'
+      - '00-uebersicht/DAG.md'
+      - '00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md'
+      - 'scripts/validate_active_front.py'
+      - '.github/workflows/validate-active-front.yml'
+
+jobs:
+  validate-active-front:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate ACTIVE_FRONT single-source invariants
+        run: python3 scripts/validate_active_front.py
