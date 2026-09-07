@@ -210,6 +210,40 @@ ihnen noch die Summe über alle Aktivierungen ist dadurch
 kontrolliert. Insbesondere wird keine uniforme kleine
 Normbewegung auf jedem Intervall fester Länge behauptet.
 
+### Verschärfung durch die exakte Isometrie
+
+Der erste unabhängige Gegencheck liefert eine stärkere
+Abschätzung, die den wachsenden Faktor \(\sqrt{M_t}\) ganz vermeidet:
+\[
+\boxed{
+\|W_{t+}-W_{t-}\|
+\le C'_{R,S}\,t e^{-t},
+\qquad
+C'_{R,S}=32\left(
+\frac{\|J\|}{\sqrt{c_Sc_R}}+\frac1{c_R}
+\right).
+}
+\tag{J7'}
+\]
+In der Tat ist aufgrund der Definitionen
+\[
+W_{t\pm}G_{R,t\pm}^{1/2}=G_{S,t\pm}^{1/2}J.
+\]
+Daher gilt exakt
+\[
+W_{t+}-W_{t-}
+=\left[
+(G_{S,t+}^{1/2}-G_{S,t-}^{1/2})J
+-W_{t-}(G_{R,t+}^{1/2}-G_{R,t-}^{1/2})
+\right]G_{R,t+}^{-1/2}.
+\]
+Auch der einseitige Normgrenzwert \(W_{t-}\) ist eine Isometrie:
+Isometrien sind in Operatornorm abgeschlossen. Mit \(\|W_{t-}\|=1\),
+den Wurzeldifferenzschranken und J6 folgt unmittelbar J7'.
+J7 bleibt als bereits hergeleitete gröbere Schranke gültig;
+für die folgende Orientierungsaussage genügt jede der beiden.
+Auch J7' ist keine summierte Variationsabschätzung.
+
 ## Satz: Tightness schließt nun die Orientierung mit
 
 Bezeichne wie in R43
@@ -232,7 +266,7 @@ w_V\longrightarrow\sigma\varepsilon_S
 \]
 
 Beweis: Aus der Voraussetzung folgt \(|b_V|\to1\). Wähle einen
-festen hinreichend späten Start \(T_*>S\), sodass
+festen hinreichend späten Start \(T_*>S\), \(T_*\notin\mathcal A\), sodass
 \[
 |b_V|>3/4\quad(V\ge T_*),\qquad
 \|W_{t+}-W_{t-}\|<1
