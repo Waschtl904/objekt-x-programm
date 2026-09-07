@@ -129,7 +129,7 @@ einem Radius 0.
 Für das feste obere Intervallende `B` genügen die endlichen Indexmengen
 
 ```math
-\mathcal I_B=\{(p,a):p\ {m prim},\ a\ge0,
+\mathcal I_B=\{(p,a):p\ \mathrm{prim},\ a\ge0,
                        (a+1)\log p\le2B\},
 \qquad K_B(p)=\lfloor4B/\log p\rfloor.
 ```
@@ -602,6 +602,6 @@ Asymptotik- oder GC-AC-Lemma.
    Governance-/Statusquelle, kein zusätzlicher mathematischer Eingang.
 
 Zusätzliche Hilfsschritte — Maskengrenzen, vollständige lokale Indexbindung,
-Kompakttransfer, Normkontinuität/Kompatheit der Wurzeldifferenzen und die
+Kompakttransfer, Normkontinuität/Kompaktheit der Wurzeldifferenzen und die
 uniforme Projektion der Defektfamilien — sind in diesem Dokument bewiesen,
 nicht als ungeprüfte Literaturbehauptung ergänzt.
