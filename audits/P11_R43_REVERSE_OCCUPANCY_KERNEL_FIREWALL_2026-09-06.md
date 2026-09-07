@@ -267,7 +267,13 @@ into fixed logarithmic bands of the same width used in OK5.  In each full band, 
 
 to `\omega_+(u)`.
 
-There are `\asymp 1+(V-U)` such fixed-width bands.  Consequently, away from only `O(1)` endpoint-band effects,
+For the following two-sided comparison, impose `L:=V-U>=L_0`, where
+`L_0>0` is a fixed sufficiently large constant depending only on the
+fixed-band width `log Lambda` and the lower threshold in OK5. Choose it so
+that every interval of length `L>=L_0` with nonnegative left endpoint
+contains a number comparable to `1+L` of full OK5 bands above that threshold.
+Only a fixed number of initial and endpoint bands is discarded. Thus,
+in this explicitly restricted regime,
 
 \[
 \boxed{
@@ -278,7 +284,9 @@ There are `\asymp 1+(V-U)` such fixed-width bands.  Consequently, away from only
 \tag{OK20}
 \]
 
-For the two-sided strip, the corresponding upper profile is
+For arbitrary `L>0`, an interval in OK18 can contain no log-prime at all,
+so the lower comparison in OK20 is not asserted. The upper estimate does
+not require the minimum width: for all `L>0`, the two-sided strip obeys
 
 \[
 \boxed{
@@ -292,6 +300,12 @@ For the two-sided strip, the corresponding upper profile is
 }
 \tag{OK21}
 \]
+
+Merge-review correction (2026-09-07): the earlier unqualified band-count
+sentence did not specify a minimum strip width. OK20 is now restricted to
+`L>=L_0`; OK21 keeps the factor `1+L` and remains the bound for arbitrary
+positive strip width. The dyadic regime below eventually satisfies this
+minimum-width condition.
 
 Thus the primitive occupancy kernel is indeed exponentially concentrated near the old boundaries — but each strip sees most strongly the **opposite** old boundary.
 
