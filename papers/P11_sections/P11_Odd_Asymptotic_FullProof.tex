@@ -288,31 +288,104 @@ Then
  =\int C_T^-(r,t)\overline{\bigl(b(t)-b(2r-t)\bigr)}\,dt,
 \tag{6.21b}\label{eq:odd-source-representer-pairing}
 \]
-and, since $C_T^-(r,t)=2k_T^0(t)\alpha(2r-t)$,
+The zero extension of $k_T^0$ generally has jumps at $0$ and $T$.
+In particular $k_T(T)=0$ by the fixed support gap, whereas
+$k_T^0(T-)=-K_T/T$.  Thus the following derivative is only the
+regular part, away from the moving jump lines:
 \[
- \boxed{\partial_r\Phi_T(r)(v)
+ \boxed{\partial_r\Phi_{T,\mathrm{reg}}(r)(v)
  =4k_T^0(v)\alpha'(2r-v)-4(k_T^0)'(2r-v)\alpha(v).}
 \tag{6.21c}\label{eq:odd-source-representer-derivative}
 \]
-Hence~\eqref{eq:odd-kernel-bound} controls the required Hilbert-space Lipschitz norm;
-no operator-norm continuity of the raw reflection is used.  Apply
-\eqref{eq:prime-cell-quadrature} to $\Phi_T$.  The cost
-identity~\eqref{eq:prime-cell-cost} and~\eqref{eq:odd-cont-cost} produce a primitive
+No global Hilbert-space Lipschitz assertion is made for $\Phi_T$.
+Instead put $L_T=(T+\varepsilon)/2$ and form the signed quadrature measure
+\[
+ d\mu_T=\sum_{I,q:r_q\in I}\lambda_q^{(I)}\delta_{r_q}
+       -1_{[0,L_T]}(r)\,dr,\qquad
+ F_T(r)=\mu_T([0,r]).
+\]
+The positive weights and exact cell masses give, with the usual one-sided
+endpoint convention,
+\[
+ F_T=0\ \text{at cell boundaries},\qquad
+ |F_T(r)|\le |I|\le C e^{-\frac45(T-r)}\quad(r\in I).
+\tag{6.21d}\label{eq:odd-quadrature-cumulative}
+\]
+For almost every fixed $v$, scalar integration by parts includes both jumps
+of $r\mapsto\Phi_T(r)(v)$: they are
+$-2k_T^0(0+)\alpha(v)$ at $r=v/2$ and
+$2k_T^0(T-)\alpha(v)$ at $r=(T+v)/2$.
+Coincidences with the finitely many quadrature atoms form a null set of $v$.
+Consequently, after taking the $L^2_v$ norm and using Minkowski,
+\[
+ \begin{aligned}
+ \left\|\int\Phi_T(r)\,d\mu_T(r)\right\|_2
+ \le{}&
+ \int_0^{L_T}|F_T(r)|\,
+       \|\partial_r\Phi_{T,\mathrm{reg}}(r)\|_2\,dr\\
+ &+2|k_T^0(0+)|\,\|\alpha(v)F_T(v/2)\|_2\\
+ &+2|k_T^0(T-)|\,\|\alpha(v)F_T((T+v)/2)\|_2.
+ \end{aligned}
+\tag{6.21e}\label{eq:odd-quadrature-with-traces}
+\]
+This is pointwise scalar bounded-variation integration, not an assertion
+of Hilbert-valued bounded variation.
+
+On $0\le r\le T/2$, the kernel bound~\eqref{eq:odd-kernel-bound},
+up to fixed $\varepsilon$-shifts, gives
+\[
+ \|\partial_r\Phi_{T,\mathrm{reg}}(r)\|_2
+ \le C_f\frac{e^{(T-2r)/2}}{\sqrt{1+T-2r}}
+       +C_\alpha\frac{|K_T|}{T}.
+\]
+On the remaining fixed-width strip the growing kernel vanishes by
+$a_*>\rho_f+2\varepsilon$, and only the second bound is needed.
+The growing part of the weighted integral is bounded by
+$C_f e^{-3T/10}\int_0^{T/2}e^{-r/5}\,dr$.
+The constant part is bounded by $C_\alpha |K_T|T^{-1}e^{-2T/5}$.
+At the two jumps, respectively,
+\[
+ |F_T(v/2)|\le C e^{-4T/5},\qquad
+ |F_T((T+v)/2)|\le C e^{-2T/5}
+ \quad(v\in\operatorname{supp}\alpha),
+\]
+and
+$|k_T^0(0+)|\le C_f e^{T/2}/\sqrt T+|K_T|/T$,
+$|k_T^0(T-)|=|K_T|/T$.
+Thus the source quadrature remainder satisfies the explicit bound
+\[
+ \boxed{\|Z_T^{\rm quad}\|_2
+ \le C_f e^{-3T/10}
+      +C_\alpha\frac{|K_T|}{T}e^{-2T/5}.}
+\tag{6.21f}\label{eq:odd-quadrature-trace-bound}
+\]
+The fixed even-source identification only changes the harmless bound constant.
+
+The certificate costs involve $C_T^-(r,\cdot)$ itself and do not require a
+Lipschitz claim for its reflected representer.  Its direct local envelope,
+together with~\eqref{eq:prime-cell-cost}, gives
+\[
+ \|Y_T^{\rm prim,-}\|^2
+ \le C_f\left(T^{-1}+Te^{-T/4}
+       +\frac{|K_T|^2}{T^2}e^{-T/2}\right).
+\]
+This produces the same primitive
 discrete certificate $Y_T^{\rm prim,-}$ with
 \[
  \boxed{\|Y_T^{\rm prim,-}\|^2=o(M_T).}
 \tag{6.22}\label{eq:odd-prim-cost}
 \]
-The derivative bound~\eqref{eq:odd-kernel-bound} and
-$\max_I|I|\ll e^{-2T/5}$ give the source quadrature remainder
+Equation~\eqref{eq:odd-quadrature-trace-bound} and
+$M_T=|K_T|^2/(2T)$ give
 \[
  \boxed{\|Z_T^{\rm quad}\|_2=o(\sqrt{M_T}).}
 \tag{6.23}\label{eq:odd-quadrature-error}
 \]
-Indeed,~\eqref{eq:prime-cell-quadrature} summed over the $O(T)$ total $r$-length gives an
-exponential factor at most $e^{-cT}$ for the $k_T$ part; the constant part
-$-K_T/T$ has zero $t$-derivative and contributes
-$O(|K_T|e^{-2T/5})=o(\sqrt{M_T})$.
+This also preserves the absolute near-null quadrature conclusion when
+$K_T=O(\sqrt T)$ and the smooth source bounds are uniform in the relevant
+fixed finite family.  In that case the displayed error is $o(1)$.
+Both endpoint traces, including that of the mean-zero constant subtraction,
+have been retained.
 
 \paragraph{Step 6: full-rest lift; no primitive form domination.}
 The primitive certificate of Step~5 is not inserted into the full Schur problem by an

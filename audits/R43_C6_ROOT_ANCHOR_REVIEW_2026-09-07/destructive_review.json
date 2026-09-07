@@ -1,0 +1,294 @@
+{
+  "title": "Destruktiver Review des positiven Wurzelankers",
+  "date": "2026-09-07",
+  "reviewer_role": "independent destructive mathematical subagent",
+  "requested_pin": "55a3a1617513cc5d82c47d0cfd606c6b0894c984",
+  "actual_HEAD": "55a3a1617513cc5d82c47d0cfd606c6b0894c984",
+  "repository_policy": {
+    "reviewer_edits": false,
+    "main_agent_local_patch_observed": true,
+    "publication": false,
+    "registry_promotion": false,
+    "git_status_at_finalization": "M papers/P11_sections/P11_O3o_TC1_NearNull_Remainder_Collapse.tex\n M papers/P11_sections/P11_O3p_Vanishing_NearNull_Core.tex\n M papers/P11_sections/P11_Odd_Asymptotic_FullProof.tex\n?? audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md\n?? audits/P11_R43_QUADRATIC_ACTIVATION_JUMP_BUDGET_2026-09-07.md\n?? audits/P11_R43_QUADRATURE_BOUNDARY_TRACE_REPAIR_2026-09-07.md\n?? scripts/check_r43_positive_root_anchor.py"
+  },
+  "reviewed_candidates": [
+    {
+      "name": "PA",
+      "path": "/home/user/workspace/r43_global_budget_55a3/audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md",
+      "git_blob_reviewed": "a3229f0882a31046434389e5915badea686dae73",
+      "git_blob_at_finalization": "a3229f0882a31046434389e5915badea686dae73",
+      "unchanged_since_review": true,
+      "sha256": "9423dba35eee19075813100c6ebd558efef0122ee5c8869b0f07a3c7babd230c",
+      "snapshot": "/home/user/workspace/c6_review_snapshot_PA_a3229f0882.md"
+    },
+    {
+      "name": "QR",
+      "path": "/home/user/workspace/r43_global_budget_55a3/audits/P11_R43_QUADRATURE_BOUNDARY_TRACE_REPAIR_2026-09-07.md",
+      "git_blob_reviewed": "08936b6ed315510a606986f96802b1e914b385be",
+      "git_blob_at_finalization": "08936b6ed315510a606986f96802b1e914b385be",
+      "unchanged_since_review": true,
+      "sha256": "4b1266f753838f2b21afd525a68f24d7a1f83b3c61345c41cb9cbcb3a7eb5696",
+      "snapshot": "/home/user/workspace/c6_review_snapshot_QR_08936b6ed3.md"
+    },
+    {
+      "name": "P11_patched",
+      "path": "/home/user/workspace/r43_global_budget_55a3/papers/P11_sections/P11_Odd_Asymptotic_FullProof.tex",
+      "git_blob_reviewed": "6df7308cf269f09c6564ab162ed9b647cb3929da",
+      "git_blob_at_finalization": "6df7308cf269f09c6564ab162ed9b647cb3929da",
+      "unchanged_since_review": true,
+      "sha256": "14d58a72ec4a39497a52bcb2dce4f19e420df5885dc9b5569d4a3f42379d01cb",
+      "snapshot": "/home/user/workspace/c6_review_snapshot_P11_patched_6df7308cf2.tex"
+    },
+    {
+      "name": "R16_patched",
+      "path": "/home/user/workspace/r43_global_budget_55a3/papers/P11_sections/P11_O3o_TC1_NearNull_Remainder_Collapse.tex",
+      "git_blob_reviewed": "741124dd8dbab29452b24ca9af5d4be5dd7a8f67",
+      "git_blob_at_finalization": "741124dd8dbab29452b24ca9af5d4be5dd7a8f67",
+      "unchanged_since_review": true,
+      "sha256": "399ac24ff4eb54a69ce8d4785d6c909c00031a7537bd4340a03baeec3b1ec742",
+      "snapshot": "/home/user/workspace/c6_review_snapshot_R16_patched_741124dd8d.tex"
+    },
+    {
+      "name": "R17_patched",
+      "path": "/home/user/workspace/r43_global_budget_55a3/papers/P11_sections/P11_O3p_Vanishing_NearNull_Core.tex",
+      "git_blob_reviewed": "1fb4217407e68ac3e2be3d2259ccd97ef450a40d",
+      "git_blob_at_finalization": "1fb4217407e68ac3e2be3d2259ccd97ef450a40d",
+      "unchanged_since_review": true,
+      "sha256": "c83677cc075ab68fda50a0b85a71371fb39413c6d99701cfe4aa2fe3662a6ff9",
+      "snapshot": "/home/user/workspace/c6_review_snapshot_R17_patched_1fb4217407.tex"
+    }
+  ],
+  "original_PA_blob": "d6489e38e82185406eb41b9464eb72ff18dfde71",
+  "base_source_blobs": {
+    "papers/P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex": "6d9260d2f3e9b0f3bb463578a8530e078aa0a050",
+    "papers/P11_sections/P11_Odd_Asymptotic_FullProof.tex": "b2c9bb240d8f078d17966f143dd8cec3929c6d3c",
+    "papers/P11_sections/P11_Direct_Terminal_Bridge.tex": "33e050142a21f68c4dea7cecae80ff8b947c6810",
+    "audits/P11_REFEREE_E2E_R27_CONSTRAINED_GAMMA_MOSCO_LIMIT_2026-08-15.md": "5e51053f4124204be25798ae822f80ca63b26108",
+    "audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md": "804d9040db4867f5f3967fbccc62e189492a7e2e"
+  },
+  "verdicts": {
+    "N11_PA8": "PASS_PROVED independently; no operator norm bound used",
+    "N16_PA16": "PASS_PROVED exact intertwining plus norm-one isometry",
+    "PA7_m0_only": "PASS: parallelogram reduces tangent energies to three fixed m=0 energies",
+    "N17_N23": "PASS under stated exact-data hypotheses; not an effective finite numerical certificate",
+    "normal_noescape": "PASS from explicit P11 global lower bound, dual norm convergence and repaired sharp m=0 source energy; no R42 or GCAC required",
+    "QR1_QR5": "PASS: both moving endpoint jumps included; preserves relative fixed m and absolute R16 scales",
+    "patched_P11_Step5": "PASS of exact diff specified above",
+    "R17_second_absorption_repair": "PASS implemented source diff explicitly retains k_g(U-)=2g(0) and obtains O_g(exp(-2U/5)).",
+    "R42_tangent": "Actually derived in source via R27 Mosco; inverse-root/isometry argument independently checked",
+    "fixed_pair_odd_C6": "PASS in explicit P11 plus R27/R42 framework with the stated endpoint repairs; no new mathematical blocker found",
+    "unmodified_pinned_source_text": "NOT CLEAN: false global Hilbert-Lipschitz claims in P11/R1/R16/R17; initial P11 source text refuted, not theorem refuted",
+    "current_exact_package_text": "READY / SCOPED GREEN: all five final files reviewed; last PA typing declaration fixed; no remaining scoped findings.",
+    "R16_implemented_followthrough": "PASS exact diff uses trace-bound with K_U=O(sqrt(U))."
+  },
+  "closed_statement": {
+    "normal": "For each fixed 0<R<S, W_{R,S}^{[U]} epsilon_R -> epsilon_S strongly as all real U -> infinity.",
+    "flags": "sup_{m>=1} ||P_m W_U epsilon_R||^2 -> 0, with common tail threshold for all m>=1.",
+    "full_odd": "Using R42.51: W_U(v+a epsilon_R) -> W_{R,S}^{(0)}v+a epsilon_S for every v in ker beta_R and complex a.",
+    "cross_terminal": "||W_U epsilon_R-W_T epsilon_R|| -> 0 jointly as real T,U -> infinity."
+  },
+  "proof_checks": [
+    "Linear-first inner product: beta(f)=<f,nu>; beta(f)=1 implies <epsilon,f>=1/rho; limiting phase c forced real >=1.",
+    "Global positive-root monotonicity is used, not a root/compression interchange.",
+    "d_U=2U+O(1), alpha_U=-sqrt(U/d_U) gamma_U -> beta; exact sharp coefficient one.",
+    "Normals are original graph Riesz normals; not whitened r_X=B_X^{-1/2}nu_X.",
+    "D cap ker beta dense by fixed smooth jet correction.",
+    "Whole real-parameter limit follows from arbitrary contradiction sequences; no continuity across jumps assumed.",
+    "No extension of root convergence from dense core to all H is claimed.",
+    "Only W_U of norm one is applied to moving small anchor errors."
+  ],
+  "issues": [
+    {
+      "id": "I1",
+      "severity": "high_for_source_proof_text",
+      "location": "Pinned P11 Odd Asymptotic FullProof (6.21c), R1 reconciliation, R16.7",
+      "finding": "Zero extension of k_T-K_T/T has moving jumps; global L2 Lipschitz assertion false. Upper trace alone gives a nonzero sqrt(|h|) modulus.",
+      "repair_status": "Current reviewed P11 Step5 and QR1-QR5 correctly repair both relative m=0 and absolute R16 error scales.",
+      "theorem_counterexample": false
+    },
+    {
+      "id": "I2",
+      "severity": "medium",
+      "location": "Current PA lines60-61 and definitions lines74-76",
+      "finding": "All adjoints are declared graph adjoints, but terminal R_U,H_U, A_U, d_U and ell retain original L2/rest target conventions.",
+      "repair_status": "FIXED and reviewed in final PA blob a3229f0882a31046434389e5915badea686dae73; complete diff is editorial typing clarification only."
+    },
+    {
+      "id": "I3",
+      "severity": "high_for_full_source_repair_claim",
+      "location": "R17 audit line157; papers/P11_sections/P11_O3p_Vanishing_NearNull_Core.tex lines136-141",
+      "finding": "For k_g(t)=2g(T-t), K=0 but k_g(T-)=2g(0) may be nonzero; second fixed-profile absorption also lacks global Hilbert derivative.",
+      "repair_status": "FIXED in reviewed R17 patched blob 1fb4217407e68ac3e2be3d2259ccd97ef450a40d and final QR audit; PASS of actual diff.",
+      "theorem_counterexample": false
+    },
+    {
+      "id": "I4",
+      "severity": "low",
+      "location": "Original PA17-18",
+      "finding": "Deep flag index must be m>=1, not m=0.",
+      "repair_status": "FIXED in current reviewed PA blob."
+    }
+  ],
+  "bv_repair": {
+    "method": "Pointwise scalar BV integration in r at fixed v; positive exact-cell masses; only afterwards L2 and Minkowski. No Hilbert-BV assertion.",
+    "cumulative": "|D_T(r)| <= C exp(-4T/5+4r/5).",
+    "regular_1": "L2 bound C_f exp(-3T/10)+C |K|/T exp(-2T/5).",
+    "regular_2": "L2 bound C_f exp(-3T/10).",
+    "lower_jump": "C_f exp(-3T/10)+C |K|/T exp(-4T/5).",
+    "upper_jump_original_kernel": "C |K|/T exp(-2T/5), using k_T(T)=0.",
+    "result": "||Zquad|| <= C_f exp(-3T/10)+C |K|/T exp(-2T/5).",
+    "R16": "Bounded fixed smooth finite family and |K|=O(sqrt(T)) give absolute o(1).",
+    "R17_second": "k_g(0)=0 and k_g(T)=2g(0), compact moving support [T-L,T]; both regular terms and upper jump O_g(exp(-2T/5)), hence second absorption retained.",
+    "finite_m0": "Error divided by sqrt(Mcost) <= C_f T exp(-4T/5)+C T^-1/2 exp(-2T/5).",
+    "cost": "||Yprim||^2 <= C_f (T^-1+T exp(-T/4)+|K|^2/T^2 exp(-T/2)); no derivative needed.",
+    "arithmetic_input": "Existing positive short-interval prime cell masses at theta=3/5 retained; external number-theoretic theorem not independently re-proved."
+  },
+  "countermodels": [
+    {
+      "drop": "Global rank-one lower order",
+      "space": "l2(N0), D=c00",
+      "definition": "T_n=[[1/n,1],[1,n]]+n^-2 I on e0,en; n^-2 I elsewhere; M_n=T_n^2.",
+      "result": "Sharp energies on each fixed D vector but T_n e0=(n^-1+n^-2)e0+en escapes. Every fixed coordinate compression eventually satisfies P M_n P >= P0."
+    },
+    {
+      "drop": "Norm convergence of lower-bound Riesz direction",
+      "definition": "nu_n=e0+en; M_n=nu_n nu_n*.",
+      "result": "nu_n weak -> e0; fixed energies sharp; root e0=(e0+en)/sqrt(2) escapes."
+    },
+    {
+      "drop": "Sharp saturation",
+      "definition": "T_n=[[2,1],[1,n]] on e0,en; small positive complement; M_n=T_n^2.",
+      "result": "M_n>=P0 for n>=2, but root e0=2e0+en; fixed limiting normal energy 5 instead of 1."
+    },
+    {
+      "invalid_extension": "Dense-core root convergence to all H",
+      "definition": "M_n=P0+n^4 Pn+n^-2 I; h=sum_{k>=1} ek/k.",
+      "result": "All core hypotheses hold but moving nth root coordinate of h has magnitude ~n."
+    },
+    {
+      "drop": "Separate tangential convergence",
+      "definition": "Fixed normal rank-one metric plus alternating positive tangent 2x2 metrics and a fixed nonunitary J with exact pullback.",
+      "result": "Normal orbit converges while tangential polar isometries oscillate; normal data alone do not imply full C6."
+    }
+  ],
+  "regression": {
+    "path": "/home/user/workspace/c6_root_anchor_canonical_regression.json",
+    "status": "PASS_ALGEBRAIC_REGRESSION_NOT_P11_CERTIFICATE",
+    "checks_passed": 110,
+    "scope": "Finite-dimensional algebraic model regression, run before parent source patch. Not a P11 theorem certificate or postpatch source-hash pass."
+  },
+  "not_claimed": [
+    "RH",
+    "global Object X realization",
+    "R37/G4c",
+    "even-sector proof",
+    "operator norm convergence of W_U",
+    "uniformity in R,S",
+    "effective finite error threshold",
+    "summable variation budget",
+    "external human/formal certification",
+    "repository publication"
+  ],
+  "artifacts": {
+    "report": "/home/user/workspace/c6_root_anchor_destructive_review.md",
+    "countermodel_data": "/home/user/workspace/c6_root_anchor_countermodel_checks.json",
+    "endpoint_data": "/home/user/workspace/c6_root_anchor_endpoint_check.json",
+    "regression": "/home/user/workspace/c6_root_anchor_canonical_regression.json"
+  },
+  "earlier_reviewed_candidates": [
+    {
+      "name": "PA",
+      "path": "/home/user/workspace/r43_global_budget_55a3/audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md",
+      "git_blob_reviewed": "53dbdbc1b540f8c750da4876823d02f157b2ffe9",
+      "git_blob_at_finalization": "53dbdbc1b540f8c750da4876823d02f157b2ffe9",
+      "unchanged_since_review": true,
+      "sha256": "d1164a7a748fb13a26f9d4617b9e9e81f53455c0c300d0d48e2aded1339c8a25",
+      "bytes": 13095,
+      "snapshot": "/home/user/workspace/c6_review_snapshot_PA_53dbdbc1b5.md"
+    },
+    {
+      "name": "QR",
+      "path": "/home/user/workspace/r43_global_budget_55a3/audits/P11_R43_QUADRATURE_BOUNDARY_TRACE_REPAIR_2026-09-07.md",
+      "git_blob_reviewed": "300001d99259f3dbb5fd2c18155adb92cf4c551c",
+      "git_blob_at_finalization": "08936b6ed315510a606986f96802b1e914b385be",
+      "unchanged_since_review": false,
+      "sha256": "4b1266f753838f2b21afd525a68f24d7a1f83b3c61345c41cb9cbcb3a7eb5696",
+      "bytes": 6910,
+      "snapshot": "/home/user/workspace/c6_review_snapshot_QR_08936b6ed3.md"
+    },
+    {
+      "name": "P11_patched",
+      "path": "/home/user/workspace/r43_global_budget_55a3/papers/P11_sections/P11_Odd_Asymptotic_FullProof.tex",
+      "git_blob_reviewed": "6df7308cf269f09c6564ab162ed9b647cb3929da",
+      "git_blob_at_finalization": "6df7308cf269f09c6564ab162ed9b647cb3929da",
+      "unchanged_since_review": true,
+      "sha256": "14d58a72ec4a39497a52bcb2dce4f19e420df5885dc9b5569d4a3f42379d01cb",
+      "bytes": 14340,
+      "snapshot": "/home/user/workspace/c6_review_snapshot_P11_patched_6df7308cf2.tex"
+    }
+  ],
+  "final_gate": {
+    "status": "READY_SCOPED_GREEN",
+    "mathematics": "GREEN",
+    "required_before_literal_text_release": null,
+    "new_analytic_blocker": null,
+    "remaining_scoped_issues": [],
+    "all_reviewed_blobs_unchanged": true,
+    "last_change": "PA typing declaration only; full diff verified; QR and three TeX byte-identical to independently approved versions."
+  },
+  "pre_editorial_final_candidates": [
+    {
+      "name": "PA",
+      "path": "/home/user/workspace/r43_global_budget_55a3/audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md",
+      "git_blob_reviewed": "53dbdbc1b540f8c750da4876823d02f157b2ffe9",
+      "git_blob_at_finalization": "53dbdbc1b540f8c750da4876823d02f157b2ffe9",
+      "unchanged_since_review": true,
+      "sha256": "d1164a7a748fb13a26f9d4617b9e9e81f53455c0c300d0d48e2aded1339c8a25",
+      "snapshot": "/home/user/workspace/c6_review_snapshot_PA_53dbdbc1b5.md"
+    },
+    {
+      "name": "QR",
+      "path": "/home/user/workspace/r43_global_budget_55a3/audits/P11_R43_QUADRATURE_BOUNDARY_TRACE_REPAIR_2026-09-07.md",
+      "git_blob_reviewed": "08936b6ed315510a606986f96802b1e914b385be",
+      "git_blob_at_finalization": "08936b6ed315510a606986f96802b1e914b385be",
+      "unchanged_since_review": true,
+      "sha256": "4b1266f753838f2b21afd525a68f24d7a1f83b3c61345c41cb9cbcb3a7eb5696",
+      "snapshot": "/home/user/workspace/c6_review_snapshot_QR_08936b6ed3.md"
+    },
+    {
+      "name": "P11_patched",
+      "path": "/home/user/workspace/r43_global_budget_55a3/papers/P11_sections/P11_Odd_Asymptotic_FullProof.tex",
+      "git_blob_reviewed": "6df7308cf269f09c6564ab162ed9b647cb3929da",
+      "git_blob_at_finalization": "6df7308cf269f09c6564ab162ed9b647cb3929da",
+      "unchanged_since_review": true,
+      "sha256": "14d58a72ec4a39497a52bcb2dce4f19e420df5885dc9b5569d4a3f42379d01cb",
+      "snapshot": "/home/user/workspace/c6_review_snapshot_P11_patched_6df7308cf2.tex"
+    },
+    {
+      "name": "R16_patched",
+      "path": "/home/user/workspace/r43_global_budget_55a3/papers/P11_sections/P11_O3o_TC1_NearNull_Remainder_Collapse.tex",
+      "git_blob_reviewed": "741124dd8dbab29452b24ca9af5d4be5dd7a8f67",
+      "git_blob_at_finalization": "741124dd8dbab29452b24ca9af5d4be5dd7a8f67",
+      "unchanged_since_review": true,
+      "sha256": "399ac24ff4eb54a69ce8d4785d6c909c00031a7537bd4340a03baeec3b1ec742",
+      "snapshot": "/home/user/workspace/c6_review_snapshot_R16_patched_741124dd8d.tex"
+    },
+    {
+      "name": "R17_patched",
+      "path": "/home/user/workspace/r43_global_budget_55a3/papers/P11_sections/P11_O3p_Vanishing_NearNull_Core.tex",
+      "git_blob_reviewed": "1fb4217407e68ac3e2be3d2259ccd97ef450a40d",
+      "git_blob_at_finalization": "1fb4217407e68ac3e2be3d2259ccd97ef450a40d",
+      "unchanged_since_review": true,
+      "sha256": "c83677cc075ab68fda50a0b85a71371fb39413c6d99701cfe4aa2fe3662a6ff9",
+      "snapshot": "/home/user/workspace/c6_review_snapshot_R17_patched_1fb4217407.tex"
+    }
+  ],
+  "closeout_editorial_review": {
+    "PA_before": "53dbdbc1b540f8c750da4876823d02f157b2ffe9",
+    "PA_after": "a3229f0882a31046434389e5915badea686dae73",
+    "first_lines_read": 82,
+    "complete_diff_checked": true,
+    "new_mathematics": false,
+    "QR_and_three_TeX_unchanged": true
+  }
+}
