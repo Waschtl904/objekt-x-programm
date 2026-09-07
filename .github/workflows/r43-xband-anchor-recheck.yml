@@ -1,0 +1,40 @@
+name: R43 XBAND anchor recheck (finite proxy)
+on:
+  pull_request:
+    paths:
+      - 'audits/P11_R43_SCHUR_XBAND_ANCHOR_RECHECK_2026-09-07.py'
+      - 'audits/P11_R43_SCHUR_XBAND_ANCHOR_RECHECK_2026-09-07.md'
+      - '.github/workflows/r43-xband-anchor-recheck.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  finite-proxy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install numerical dependencies
+        run: python -m pip install numpy==2.3.5 scipy==1.17.0
+      - name: Exact-head provenance and finite tests
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: |
+          set -euo pipefail
+          git rev-parse HEAD
+          git hash-object audits/P11_R43_SCHUR_XBAND_ANCHOR_RECHECK_2026-09-07.py
+          python --version
+          python audits/P11_R43_SCHUR_XBAND_ANCHOR_RECHECK_2026-09-07.py --output xband_recheck_results.json | tee xband_recheck.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r43-xband-anchor-recheck
+          path: |
+            xband_recheck_results.json
+            xband_recheck_results.csv
+            xband_recheck.log
