@@ -1,7 +1,7 @@
 # CURRENT FRONT — Objekt X / P11 Strong Terminal
 
 > **Operative Kopfschicht — zuerst lesen.**  
-> **Stand:** 6. September 2026  
+> **Stand (Governance):** 7. September 2026; mathematische Darstellung unverändert.<br>
 > **Volatile PR-/SHA-Single-Source:** [`00-uebersicht/ACTIVE_FRONT.yaml`](00-uebersicht/ACTIVE_FRONT.yaml)  
 > **Live-main-Policy:** Der aktuelle `main`-Head wird direkt aus GitHub gelesen und absichtlich nicht als SHA in einer versionierten Repo-Datei selbst gespeichert.  
 > **Kanonische Roadmap:** [`00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md`](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)  
@@ -49,13 +49,15 @@ R37/G4c bleibt **separat offen** und wird durch R38–R43 nicht rückwirkend ges
 
 ---
 
-## 2. Aktiver ungemergter R43-Stack
+## 2. R43-Stack und Integrationsstand
 
 Die exakten Heads, Parent-Heads, Branches und GitHub-States stehen ausschließlich in `ACTIVE_FRONT.yaml`.
 
-**Wichtige Post-Merge-Regel:** Der Stack-Root besitzt einen historischen, exakten Base-Pin. Ein späterer Governance-/Navigations-Merge auf `main` rebaset PR #55–#58 **nicht** und verändert ihre Parent-Heads nicht. Der aktuelle `main`-Head wird live aus GitHub gelesen; der mathematische Stack-Root-Base bleibt separat gepinnt.
+**Historische Abhängigkeitskette:** `base`, Heads und Parent-Heads in `ACTIVE_FRONT.yaml` bewahren die ursprünglichen Review-Beziehungen aller 20 R43-PRs; `github_base` bezeichnet separat das gebuchte GitHub-Ziel. Der historische Stack-Root-Base-Pin bleibt unverändert. GitHub-Mergestatus und offene Anzahl werden ausschließlich dort nach belegten Merge-Ereignissen geführt; der aktuelle `main`-Head wird live aus GitHub gelesen.
 
-Die vier aktuellen Draft-Container haben folgende Rollen:
+`head_sha`/`parent_head_sha` sind **historical_dependency_pins**, nicht heutige Branch-Heads. Der tatsächlich freigegebene und gemergte Head steht separat als `merged_head_sha`; nach Review-Korrekturen (etwa PR #64/#78/#80) kann er vom historischen Pin abweichen, ohne die Parent-Kette umzuschreiben.
+
+Die folgenden vier Container bilden den historischen Anfang der Kette, nicht den gesamten aktuellen Integrationsstand:
 
 | Container | Rolle |
 |---|---|
@@ -66,7 +68,11 @@ Die vier aktuellen Draft-Container haben folgende Rollen:
 
 Diese Tabelle ist **Provenienz**, kein mathematischer DAG. Downstream-Arbeit darf auf exakten Draft-Heads aufbauen, aber sie promotet die Parent-Heads nicht.
 
-Die lokalen IDs aus diesen Drafts sind auf dem aktuellen `main` noch nicht als neue Registry-Zeilen integriert; die Roadmap bezeichnet sie deshalb ausdrücklich als **Draft-source IDs**.
+**Draft-source IDs** bleiben historische Quellbezeichnungen, keine Aussage zum heutigen GitHub-Draftstatus. Eine Stackintegration erzeugt keine Registry-Promotion; die Registry bleibt bei diesem Governance-Abgleich unverändert.
+
+Jüngste XBAND-Audits der Kette: [Kommutatoren](audits/P11_R43_SCHUR_XBAND_COMM_2026-09-07.md), [Anker/Phase](audits/P11_R43_SCHUR_XBAND_ANCHOR_PHASE_2026-09-07.md) und [symmetrische Quellen-Nachrechnung](audits/P11_R43_SCHUR_XBAND_ANCHOR_RECHECK_2026-09-07.md). Hier ausschließlich **lokale Diagnostik**, keine neue mathematische Front oder Promotion; ihr Integrationsstand folgt `ACTIVE_FRONT.yaml`, nicht historischen Draft-Kopfzeilen.
+
+Der [Integrationsaudit vom 7. September 2026](audits/R43_STACK_INTEGRATION_2026-09-07.md) dokumentiert die abgeschlossenen Merges, begrenzten Korrekturen und exakten Review-Heads. Die Registry bleibt unverändert.
 
 ---
 
@@ -313,7 +319,7 @@ Die Abhängigkeit des R37-Pfads von einer späteren X-Kandidatenarchitektur ist 
 
 ## 11. Default-Arbeitsfolge
 
-Solange der aktive Draft-Stack nicht durch Review fällt, ist die Default-Reihenfolge:
+Für die hier unverändert dargestellten historischen Quellstände gilt vorbehaltlich ihres Reviews die Default-Reihenfolge:
 
 1. **Hard Channel `k=l=1`** unter der echten Sättigung angreifen;
 2. **Hard Channel `k=l=2`** unter der echten Sättigung angreifen;
@@ -355,6 +361,8 @@ Merge --then--> main verification --then--> Registry --then--> ACTIVE_FRONT --th
 
 Dabei wird der aktuelle `main`-Head **live** verifiziert. Ein versionierter Ledger speichert nicht die SHA seines eigenen aktuellen Commits. Für gestackte Drafts bleibt stattdessen der historische Stack-Root-Base-Pin exakt erhalten.
 
+`Registry` bedeutet hier Statusprüfung, keine automatische Änderung oder Promotion durch einen GitHub-Merge.
+
 Für gestackte Drafts gilt: fällt ein Parent-Head, werden alle davon abhängigen Claims re-auditiert. Ein gescheiterter hinreichender Weg ist kein gescheitertes Fernziel, solange keine Notwendigkeitskante bewiesen wurde.
 
 ---
@@ -364,7 +372,7 @@ Für gestackte Drafts gilt: fällt ein Parent-Head, werden alle davon abhängige
 Die exakten Heads/States stehen ausschließlich in `ACTIVE_FRONT.yaml`.
 
 ```text
-active R43 draft stack                  open/draft/unmerged (see ACTIVE_FRONT.yaml)
+R43 integration / historical chain      see ACTIVE_FRONT.yaml
 R43 COND collar decay                  ?[O]
 R43 COND hard channels                 ?[O]
 structured COND leakage decay          ?[O]
@@ -378,4 +386,4 @@ Object-X realization                   ?[O]
 RH                                     ?[O]
 ```
 
-**Kein Freeze und keine globale Promotion aus dem aktiven Draft-Stack.**
+**Kein Freeze und keine globale Promotion durch Stackintegration.**

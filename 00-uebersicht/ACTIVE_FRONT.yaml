@@ -1,5 +1,5 @@
 schema_version: 3
-updated: 2026-09-06
+updated: 2026-09-07
 repository: Waschtl904/objekt-x-programm
 
 main:
@@ -10,6 +10,13 @@ main:
 stack_root_base_sha: 434cd6bd49b66e49d4e8b556fd18687fe9887ffa
 active_gate: R43
 
+stack_mode: historical_dependency_chain
+base_meaning: original_review_base
+dependency_pin_mode: historical_dependency_pins
+open_pr_count: 0
+state_note: "GitHub integration state is reconciled from the original PR inventory and completed merge records only; unrecorded entries retain their original open/draft/base snapshot. open_pr_count counts R43 stack entries, not all repository PRs. This is not a live GitHub query."
+head_note: "head_sha and parent_head_sha are original historical dependency pins, not current branch or actual merged heads. merged_head_sha is the actual approved head in each completed merge record. After review corrections (including PRs 64, 78 and 80), it can differ from head_sha without rebasing the historical chain."
+
 stack:
   - pr: 55
     title: "R43: structured Schur defect → saturated leakage"
@@ -17,9 +24,12 @@ stack:
     head_sha: b221e6c2c4fc0b379b1b71d0100e482d8861448e
     base: main
     parent_head_sha: 434cd6bd49b66e49d4e8b556fd18687fe9887ffa
-    github_state: open
-    draft: true
-    merged: false
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: b221e6c2c4fc0b379b1b71d0100e482d8861448e
+    merge_commit_sha: 52ae724a8825053d9be14e45a66e47d6703b4992
 
   - pr: 56
     title: "R43: exact half-shift shell + relative resolvent transfer"
@@ -28,9 +38,12 @@ stack:
     base: r43-structured-schur-leakage
     parent_pr: 55
     parent_head_sha: b221e6c2c4fc0b379b1b71d0100e482d8861448e
-    github_state: open
-    draft: true
-    merged: false
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: 08153af2447dfd58973ddf93d8acedbf1dabe601
+    merge_commit_sha: 77b1649383680b95aa14c76b1577595e8cadc8a1
 
   - pr: 57
     title: "R43: geometric-mean resolvent transport for COND leakage"
@@ -39,9 +52,12 @@ stack:
     base: r43-translation-resolvent-transfer
     parent_pr: 56
     parent_head_sha: 08153af2447dfd58973ddf93d8acedbf1dabe601
-    github_state: open
-    draft: true
-    merged: false
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: 4a28bde4d02e983d32ba9e2c28c0110445a7685b
+    merge_commit_sha: 04ab9f53e1813fe42b5f10050afeefc1e310928b
 
   - pr: 58
     title: "R43: good-normal exponential tail + two hard channels"
@@ -50,9 +66,12 @@ stack:
     base: r43-geometric-mean-resolvent-leakage
     parent_pr: 57
     parent_head_sha: 4a28bde4d02e983d32ba9e2c28c0110445a7685b
-    github_state: open
-    draft: true
-    merged: false
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: 0e57cf230291abd16ce88b0ceed95d68036799e5
+    merge_commit_sha: 824e7856171540d00257da52045c933d96441065
 
   - pr: 61
     title: "R43: retained-row cancellation removes primitive hard channels"
@@ -61,9 +80,12 @@ stack:
     base: r43-good-normal-tail-reduction
     parent_pr: 58
     parent_head_sha: 0e57cf230291abd16ce88b0ceed95d68036799e5
-    github_state: open
-    draft: true
-    merged: false
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: e29545a6040640e754e885888826d1cf235df58c
+    merge_commit_sha: d45c051f16aa75fe2beeb9f2a9399ab007e13364
 
   - pr: 64
     title: "R43: prime-band transported-collar escape and scalar COND decay"
@@ -72,9 +94,12 @@ stack:
     base: r43-hard11-level0-saturation
     parent_pr: 61
     parent_head_sha: e29545a6040640e754e885888826d1cf235df58c
-    github_state: open
-    draft: true
-    merged: false
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: ff327e3fb59dcfde7bd8260e779919961dd6f88d
+    merge_commit_sha: 1545ef5baafe9fb48167d8fbefe2af0fd110b1a3
 
   - pr: 66
     title: "R43: one-sided COND cap to FLAGDYN via reverse-normal stretch"
@@ -83,9 +108,12 @@ stack:
     base: r43-transported-collar-prime-band
     parent_pr: 64
     parent_head_sha: 7409b9a13028fb8dc0fc44fb210e4783b6feaf7c
-    github_state: open
-    draft: true
-    merged: false
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: 7d8a9e47c96962f49afedba83f1090a1598f5386
+    merge_commit_sha: 1a5d1e0749969efbd4307a68810c32da5ac47e61
 
   - pr: 68
     title: "R43: reverse-normal Schur extension-cost reduction"
@@ -94,9 +122,12 @@ stack:
     base: r43-cond-flagdyn-reverse-normal-bridge
     parent_pr: 66
     parent_head_sha: 7d8a9e47c96962f49afedba83f1090a1598f5386
-    github_state: open
-    draft: true
-    merged: false
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: b9b3b70929df482588ad07c96dc3c1c06faa2fce
+    merge_commit_sha: 569c4f261cae2f696d6aec0bfa2fcb4f833082fc
 
   - pr: 69
     title: "R43: adversarial reverse-extension countertest"
@@ -105,9 +136,12 @@ stack:
     base: r43-reverse-normal-schur-extension
     parent_pr: 68
     parent_head_sha: b9b3b70929df482588ad07c96dc3c1c06faa2fce
-    github_state: open
-    draft: true
-    merged: false
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: 5a5776c36ed31475ef6e8a715371307f1f6b8341
+    merge_commit_sha: a8eec8d48bb647ee33fdca7ac63a62b6dbb4f800
 
   - pr: 70
     title: "R43: multichannel prime-shift extension coherence diagnostic"
@@ -116,9 +150,12 @@ stack:
     base: r43-reverse-extension-countertest
     parent_pr: 69
     parent_head_sha: 5a5776c36ed31475ef6e8a715371307f1f6b8341
-    github_state: open
-    draft: true
-    merged: false
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: 1a64e9d1841de170f96dd9d9f018ec41da46e415
+    merge_commit_sha: b07c2799238471e042c68a1919a18f70b31779f1
 
   - pr: 72
     title: "R43: primitive-band Galerkin graph proxy diagnostic"
@@ -127,9 +164,12 @@ stack:
     base: r43-reverse-extension-multichannel-toy
     parent_pr: 70
     parent_head_sha: 1a64e9d1841de170f96dd9d9f018ec41da46e415
-    github_state: open
-    draft: true
-    merged: false
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: 25c27bd7f0646e7a63c3cba109336c6414fee72b
+    merge_commit_sha: cf0203949198128c3708db0d155ebd1c399963c0
 
   - pr: 74
     title: "R43: reverse prime-shift variance/mean split and H1 firewall"
@@ -138,9 +178,12 @@ stack:
     base: r43-reverse-extension-galerkin-graph-proxy
     parent_pr: 72
     parent_head_sha: 25c27bd7f0646e7a63c3cba109336c6414fee72b
-    github_state: open
-    draft: true
-    merged: false
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: 117cb0afdde12b984808fbf97d24c28252a81acb
+    merge_commit_sha: 5da4e98616338ccaefd561b6a557b46967da60c5
 
   - pr: 76
     title: "R43: shifted-preimage mean localization diagnostic"
@@ -149,9 +192,12 @@ stack:
     base: r43-reverse-shift-variance-mean-firewall
     parent_pr: 74
     parent_head_sha: 117cb0afdde12b984808fbf97d24c28252a81acb
-    github_state: open
-    draft: true
-    merged: false
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: d2d8b9077a61f5d103bcec02548fdf29fa282c2e
+    merge_commit_sha: 9fbeb475632702979450bf6fc7fe935414d2e867
 
   - pr: 78
     title: "R43: primitive occupancy-kernel asymptotics and large-prime firewall"
@@ -160,9 +206,12 @@ stack:
     base: r43-reverse-mean-localization-diagnostic
     parent_pr: 76
     parent_head_sha: d2d8b9077a61f5d103bcec02548fdf29fa282c2e
-    github_state: open
-    draft: true
-    merged: false
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: 6807d1e04588de81d0e5b4c14a0a4e8e5756ba97
+    merge_commit_sha: e9c23d0a887c125f4fddcf4a6181ae5499f51b58
 
   - pr: 80
     title: "R43: shellwise collar refinement and common-mode obstruction"
@@ -171,9 +220,12 @@ stack:
     base: r43-reverse-occupancy-kernel-firewall
     parent_pr: 78
     parent_head_sha: a9d1f1a944bbb154db7bdb5844135501630bda5c
-    github_state: open
-    draft: true
-    merged: false
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: 483421fe5eb94a4474103083ec998f4dfa3e4266
+    merge_commit_sha: dcf846af0a0c14083080c27e00112533b4f1f300
 
   - pr: 81
     title: "R43: reflection audit rules out parity common-mode elimination"
@@ -182,9 +234,68 @@ stack:
     base: r43-shellwise-collar-common-mode-firewall
     parent_pr: 80
     parent_head_sha: 645d2bafe3c0f74fbfc769d4958ecf93316ae165
-    github_state: open
-    draft: true
-    merged: false
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: 4ca4abb37e7fcaa8d045e94ad5f816d481ec40d0
+    merge_commit_sha: 0ae2a543660a09804e5786f6e3331aea6cc01a2f
+
+  - pr: 83
+    title: "R43: structured hub-to-Schur correlation proxy"
+    branch: r43-schur-corr-structured-hub-proxy
+    head_sha: 4abccc2dd29d87f914440478c286dbc6edf11169
+    base: r43-reverse-reflection-common-mode-firewall
+    parent_pr: 81
+    parent_head_sha: 4ca4abb37e7fcaa8d045e94ad5f816d481ec40d0
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: 4abccc2dd29d87f914440478c286dbc6edf11169
+    merge_commit_sha: 053255b87d79fa2e030da48084a761c26cc0600f
+
+  - pr: 84
+    title: "R43: SCHUR-VAR fixed-mass delta sweep"
+    branch: r43-schur-var-delta-sweep
+    head_sha: 3e4e5a73679db9f88624869587c4bd3bc3fec266
+    base: r43-schur-corr-structured-hub-proxy
+    parent_pr: 83
+    parent_head_sha: 4abccc2dd29d87f914440478c286dbc6edf11169
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: 3e4e5a73679db9f88624869587c4bd3bc3fec266
+    merge_commit_sha: a66c2030a2c1fa69e5badece970cc3e39fa4fc38
+
+  - pr: 85
+    title: "R43: XBAND commutators, finite Q and anchor-phase firewall"
+    branch: r43-schur-xband-comm
+    head_sha: 4381c73e4220953899d8484a0ed58cd4815256d9
+    base: r43-schur-var-delta-sweep
+    parent_pr: 84
+    parent_head_sha: 3e4e5a73679db9f88624869587c4bd3bc3fec266
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: 4381c73e4220953899d8484a0ed58cd4815256d9
+    merge_commit_sha: be47f1278e29ae6d464bd9c1013fc212b8f40ed6
+
+  - pr: 86
+    title: "R43: anchor-symmetric XBAND source recheck"
+    branch: r43-schur-xband-anchor-recheck
+    head_sha: a7f00fd6ef4824f2aecc934b52088127112a2b5f
+    base: r43-schur-xband-comm
+    parent_pr: 85
+    parent_head_sha: 4381c73e4220953899d8484a0ed58cd4815256d9
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    merged_head_sha: 8f49e2397ff991b378600b092ce9b52c26b58fd0
+    merge_commit_sha: 2ae9407cd3111113ef01d40e5270e4c9c3f6df07
 
 firewall:
   - "This file records volatile active-stack metadata and exact dependency pins only."
@@ -193,3 +304,5 @@ firewall:
   - "It does not create theorem status, review provenance, freeze, promotion, Object-X, or RH claims."
   - "Theorem/review status remains governed by ACTIVE_THEOREM_REGISTRY.md and canonical mathematical sources."
   - "parent_head_sha pins the exact dependency head; parent_pr alone is not sufficient provenance."
+  - "base, head_sha and parent_head_sha retain the original review dependency chain; github_base records the integration target separately. Neither retargeting nor merging rewrites this historical ancestry."
+  - "Only completed merge records authorize merged=true, draft=false, github_state=merged, merged_head_sha and merge_commit_sha; their github_base is main. Unrecorded entries retain inventory GitHub base and draft flag. Integration does not promote registry or theorem status."

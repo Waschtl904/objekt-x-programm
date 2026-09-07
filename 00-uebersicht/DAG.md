@@ -1,6 +1,6 @@
 # Abhängigkeitsgraph (DAG)
 
-> **Stand:** 6. September 2026  
+> **Stand (Governance):** 7. September 2026; mathematische Darstellung unverändert.<br>
 > **Rolle:** kompakte operative Abhängigkeits- und Firewall-Struktur.  
 > **Keine Beweisautorität.** Status/Provenienz stehen im [ACTIVE_THEOREM_REGISTRY](ACTIVE_THEOREM_REGISTRY.md), volatile PR-/SHA-Daten in [ACTIVE_FRONT.yaml](ACTIVE_FRONT.yaml), die ausführliche Strategie in [FORSCHUNGS_ROADMAP_AKTUELL.md](FORSCHUNGS_ROADMAP_AKTUELL.md).
 
@@ -70,7 +70,9 @@ R43-COND-NORMALIZED-GEOMETRIC-TRANSPORT-CONTRACTION
   uses: R43-COND-RESOLVENT-TRANSPORTED-LEAKAGE-BOUND
 ```
 
-Die exakten PR-/Head-Zuordnungen stehen ausschließlich in `ACTIVE_FRONT.yaml`. Diese IDs stammen aus den jeweiligen Draft-Audits; sie sind auf `main` noch nicht als neue Registry-Zeilen integriert.
+Die exakten PR-/Head-Zuordnungen und belegten GitHub-Mergestates stehen ausschließlich in `ACTIVE_FRONT.yaml`; `base` bewahrt die historische Review-Basis, `github_base` das separat gebuchte GitHub-Ziel und `merged_head_sha` den tatsächlich gemergten Head, getrennt von historischen Abhängigkeitspins. **Draft-source IDs** bleiben historische Quellbezeichnungen, keine aktuellen GitHub-Statusangaben. Die Registry bleibt bei diesem Governance-Abgleich unverändert; kein Merge erzeugt Registry-Promotion.
+
+Die jüngsten XBAND-Audits sind in [CURRENT-FRONT, Abschnitt 2](../CURRENT-FRONT.md#2-r43-stack-und-integrationsstand) ausschließlich als lokale Diagnostik verlinkt; sie erzeugen hier keine neuen DAG-Knoten oder Kanten.
 
 ### 3.2 Offene quantitative Reduktion
 

@@ -1,6 +1,6 @@
 # Objekt X — kanonische Forschungsroadmap v2.1.2
 
-> **Stand:** 2026-09-06  
+> **Stand (Governance):** 2026-09-07; mathematische Darstellung unverändert.<br>
 > **Rolle:** kanonische Abhängigkeits- und Forschungsstrategiekarte.  
 > **Keine Beweisautorität:** Dieses Dokument erzeugt keine `✓[M]`-Promotion, kein `independent GREEN`, keinen Freeze, keinen Merge-Anspruch und keine Object-X-/RH-Folgerung.  
 > **Volatile Frontdaten:** [ACTIVE_FRONT.yaml](ACTIVE_FRONT.yaml)  
@@ -198,7 +198,9 @@ Die volatile PR-/SHA-Struktur steht ausschließlich in `ACTIVE_FRONT.yaml`.
 
 ### 8.1 Draft-source IDs versus Registry
 
-Die folgenden lokalen IDs sind **exakte IDs der jeweiligen Draft-Audits** im aktiven Stack. Sie sind auf dem aktuellen `main` noch nicht als neue Zeilen in `ACTIVE_THEOREM_REGISTRY.md` integriert. Die Roadmap darf sie daher als Draft-source IDs referenzieren, aber nicht als bereits registrierte Promotion darstellen.
+Die folgenden lokalen IDs sind **exakte IDs der jeweiligen historischen Draft-Audits**. **Draft-source IDs** bezeichnen ihre Herkunft, nicht ihren heutigen GitHub-Draft- oder Mergestatus. Die Registry bleibt bei diesem Governance-Abgleich unverändert; auch ein Merge ist keine Registry-Promotion.
+
+Die jüngsten XBAND-Audits sind in [CURRENT-FRONT, Abschnitt 2](../CURRENT-FRONT.md#2-r43-stack-und-integrationsstand) ausschließlich als lokale Diagnostik verlinkt. Dieser Navigationsabgleich übernimmt keine neue mathematische Front und ändert keine Claims oder Gates.
 
 ### 8.2 Strukturierter Schur-Defekt
 
@@ -309,7 +311,7 @@ Diese ROADMAP-Labels sind keine kanonischen Registry-Theorem-IDs und tragen dahe
 
 ### 9.1 Quantoren-Firewall
 
-Gebucht/erkennbar: fixes `0<R<S`, strukturierte terminale Quellklasse, Graphnormalisierung wie im aktiven Good-Normal-Draft.
+Gebucht/erkennbar: fixes `0<R<S`, strukturierte terminale Quellklasse, Graphnormalisierung wie im historischen Good-Normal-Draft.
 
 Noch **nicht** erraten werden dürfen:
 
@@ -647,11 +649,11 @@ Gezielt bei falsifizierbaren quantitativen Hypothesen: Gegenbeispiele, Skalierun
 
 ## 23. Source-of-Truth-Drift
 
-`ACTIVE_FRONT.yaml` hält ausschließlich die **persistierbaren** volatilen Stackdaten: aktive PRs, exakte Draft-Heads, Parentbeziehungen, GitHub-State, Hauptgate sowie den historischen `stack_root_base_sha`.
+`ACTIVE_FRONT.yaml` hält ausschließlich die **persistierbaren** Stackdaten: alle 20 R43-PRs, exakte historische Review-Heads und Parentbeziehungen, belegten GitHub-State, Hauptgate sowie den historischen `stack_root_base_sha`. `stack_mode: historical_dependency_chain` kennzeichnet die erhaltene Provenienz; `base` bleibt die ursprüngliche Review-Basis, `github_base` das separat gebuchte GitHub-Ziel. `head_sha`/`parent_head_sha` bleiben ausdrücklich `historical_dependency_pins`; der tatsächlich gemergte, gegebenenfalls korrigierte Head wird separat als `merged_head_sha` gebucht. Dieser Head, Merge-Commit und Mergestatus werden nur für tatsächlich belegte Merges eingetragen; `open_pr_count` zählt die verbleibenden offenen R43-Einträge.
 
 Der **aktuelle** `main`-Head wird dagegen live aus GitHub `refs/heads/main` gelesen und absichtlich nicht als SHA in `ACTIVE_FRONT.yaml` oder einer anderen versionierten Navigationsdatei gespeichert. Grund: Eine Datei kann die SHA des Commits, der sie selbst enthält, nicht dauerhaft als exakten Current-Head-Wert führen — jeder Aktualisierungscommit erzeugt sofort eine neue SHA.
 
-Der historische `stack_root_base_sha` ist davon verschieden: Er pinnt den exakten mathematischen Base-Commit des aktiven Draft-Stacks und bleibt auch dann unverändert, wenn `main` später durch Governance-/Navigations-Merges fortschreitet. Solche Merges rebasen oder promoten den Draft-Stack nicht automatisch.
+Der historische `stack_root_base_sha` ist davon verschieden: Er pinnt den ursprünglichen mathematischen Review-Base-Commit der Kette und bleibt auch bei Stackintegration und späteren Governance-/Navigations-Merges auf `main` unverändert. Die historischen Parentbeziehungen sind keine Behauptung über heutige GitHub-Bases; ein Merge promotet keine mathematischen Claims.
 
 `CURRENT-FRONT.md`, diese Roadmap, `AKTUELLER_STAND.md` und `ACTIVE_THEOREM_REGISTRY.md` sollen auf `ACTIVE_FRONT.yaml` referenzieren statt dieselben Stack-/Base-SHA-Werte mehrfach manuell zu pflegen.
 
@@ -667,7 +669,7 @@ Eine technische Validierung soll insbesondere prüfen:
 
 ## 24. Aktuelle Default-Forschungspriorität
 
-Die aktuelle COND-Front ist nicht mehr „short/long/sum finden“. Der aktive Good-Normal-Draft hat diese Struktur bereits lokal isoliert.
+Die aktuelle COND-Front ist nicht mehr „short/long/sum finden“. Der historische Good-Normal-Draft hat diese Struktur bereits lokal isoliert.
 
 Prioritäten:
 
@@ -710,7 +712,7 @@ Weil-criterion scope verification
 RH
 ```
 
-Keine lokale Buchung aus dem aktiven Draft-Stack promoviert einen dieser globalen Knoten.
+Keine lokale Buchung oder Integration der historischen Stack-Quellen promoviert einen dieser globalen Knoten.
 
 ---
 

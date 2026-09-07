@@ -1,6 +1,6 @@
 # Aktueller Stand — Objekt X / P11 Strong Terminal
 
-> **Stand:** 6. September 2026  
+> **Stand (Governance):** 7. September 2026; mathematische Darstellung unverändert.<br>
 > **Operative Kurzfassung.** Für Details gelten
 > [CURRENT-FRONT](../CURRENT-FRONT.md),
 > [ACTIVE_FRONT](ACTIVE_FRONT.yaml),
@@ -44,13 +44,13 @@ ist der verbleibende Strong-Terminal-Gate auf die eine Normalbahn reduziert, äq
 
 ---
 
-## 2. Aktiver ungemergter Stack
+## 2. R43-Stack und Integrationsstand
 
 Exakte Branches, Heads, Parent-Heads und GitHub-States stehen ausschließlich in `ACTIVE_FRONT.yaml`.
 
-Der mathematische Stack-Root bleibt auf seinem historischen Base-Commit gepinnt. Spätere Governance-/Navigations-Merges auf `main` ändern diesen Base-Pin nicht und rebasen die Drafts nicht automatisch.
+Die ursprünglichen Review-Bases, Heads und Parent-Heads aller 20 R43-PRs bleiben als historische Abhängigkeitskette erhalten; der Stack-Root bleibt auf seinem historischen Base-Commit gepinnt. GitHub-Ziel (`github_base`), tatsächlich gemergter Head (`merged_head_sha`), belegter Mergestatus und offene Anzahl werden davon getrennt in `ACTIVE_FRONT.yaml` geführt.
 
-Die vier Draft-Container sind reine Provenienz:
+Die vier folgenden Container sind der historische Anfang der Kette, nicht deren vollständiger Integrationsstand:
 
 | Container | Rolle |
 |---|---|
@@ -59,7 +59,9 @@ Die vier Draft-Container sind reine Provenienz:
 | PR #57 | geometrischer Mittelwert + Resolvententransport |
 | PR #58 | Good-Normal-Tail + Hard-Channel-Reduktion |
 
-Keiner dieser Drafts ist durch die Stackbeziehung automatisch extern GREEN oder gemergt. Die lokalen IDs aus diesen Drafts sind auf aktuellem `main` noch nicht als neue Registry-Zeilen integriert.
+**Draft-source IDs** bleiben historische Quellbezeichnungen, keine aktuellen GitHub-Statusangaben. Weder Stackbeziehung noch Merge erzeugen externes GREEN oder Registry-Promotion; die Registry bleibt bei diesem Governance-Abgleich unverändert.
+
+Die jüngsten XBAND-Audits sind in [CURRENT-FRONT, Abschnitt 2](../CURRENT-FRONT.md#2-r43-stack-und-integrationsstand) ausschließlich als lokale Diagnostik verlinkt; keine neue mathematische Front.
 
 ---
 
@@ -224,7 +226,7 @@ Parallel: `FD23-MINIMAL-CONDITION` als Route-Optimierungsfrage.
 - aktueller `main`-Head: live aus GitHub; nicht selbstreferenziell im Repo gespeichert;
 - volatile Stackdaten und historischer Stack-Root-Base-Pin: `ACTIVE_FRONT.yaml`;
 - R43: OPEN, kein Freeze;
-- aktiver Stack: Draft/unmerged gemäß `ACTIVE_FRONT.yaml`;
+- R43-Integrationsstand und historische Abhängigkeitskette: gemäß `ACTIVE_FRONT.yaml`;
 - Strong Terminal/C6: `?[O]`;
 - R37/G4c: offen/separat;
 - genuine X candidate: `?[O]`;
