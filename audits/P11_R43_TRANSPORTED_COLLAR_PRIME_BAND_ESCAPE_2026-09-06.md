@@ -401,7 +401,15 @@ This estimate is uniform over **all** `x\in L^2(-U,U)`.
 
 ### Interpretation
 
-The leading `r/U` term is unavoidable at this level of generality: a normalized constant vector lies in the kernel of the old residual difference operator and has exactly order `r/U` of its mass in the two terminal collars.  Thus CE23 has the correct universal scale up to constants.
+A normalized constant vector has collar mass squared exactly `r/U` when
+`0<r<U`. It annihilates the retained primitive `k=1` differences, but not the
+full residual operator `R_U`: higher-`k` boundary contributions remain.
+No full-residual kernel or optimality claim is used here.
+
+Merge-review correction (2026-09-07): the earlier interpretation incorrectly
+asserted that the constant vector was in `ker R_U`. That assertion and the
+optimality conclusion drawn from it are withdrawn. The proof of CE23 and
+the subsequent CE24–CE42 estimates do not use this interpretation.
 
 ### Local draft booking
 
