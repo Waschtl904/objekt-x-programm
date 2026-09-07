@@ -1,0 +1,244 @@
+{
+  "status": "PASS_ALGEBRAIC_REGRESSION_NOT_P11_CERTIFICATE",
+  "checks_passed": 112,
+  "base_commit": "55a3a1617513cc5d82c47d0cfd606c6b0894c984",
+  "scope": "Finite algebraic identities and counterfamily only; no numerical infinite-horizon or P11 proof.",
+  "source_blobs": {
+    "papers/P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex": "6d9260d2f3e9b0f3bb463578a8530e078aa0a050",
+    "papers/P11_sections/P11_Odd_Asymptotic_FullProof.tex": "b2c9bb240d8f078d17966f143dd8cec3929c6d3c",
+    "papers/P11_sections/P11_Direct_Terminal_Bridge.tex": "33e050142a21f68c4dea7cecae80ff8b947c6810",
+    "papers/P11_sections/P11_O3o_TC1_NearNull_Remainder_Collapse.tex": "01f8eecd3c92e2900304f16679c3ab66408475b8",
+    "papers/P11_sections/P11_O3p_Vanishing_NearNull_Core.tex": "3f8d142275e5a119af11ca457b19c256a0670c3e",
+    "audits/P11_REFEREE_E2E_R27_CONSTRAINED_GAMMA_MOSCO_LIMIT_2026-08-15.md": "5e51053f4124204be25798ae822f80ca63b26108",
+    "audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md": "804d9040db4867f5f3967fbccc62e189492a7e2e"
+  },
+  "repaired_source_blobs": {
+    "papers/P11_sections/P11_Odd_Asymptotic_FullProof.tex": "6df7308cf269f09c6564ab162ed9b647cb3929da",
+    "papers/P11_sections/P11_O3o_TC1_NearNull_Remainder_Collapse.tex": "741124dd8dbab29452b24ca9af5d4be5dd7a8f67",
+    "papers/P11_sections/P11_O3p_Vanishing_NearNull_Core.tex": "1fb4217407e68ac3e2be3d2259ccd97ef450a40d"
+  },
+  "anchor_models": [
+    {
+      "case": "real_n8",
+      "normal_error": 0.03175485581243594,
+      "anchor_error_bound": 0.15809757641341576,
+      "fixed_source_error_bound": 0.48252976129131214,
+      "root_order_min_eigenvalues": [
+        0.01229595809700154,
+        0.011734702932280117
+      ],
+      "target_scaled_gram_norm": 64.05111571179224
+    },
+    {
+      "case": "real_n16",
+      "normal_error": 0.015947665640593446,
+      "anchor_error_bound": 0.08206465228406369,
+      "fixed_source_error_bound": 0.2415232761136043,
+      "root_order_min_eigenvalues": [
+        0.003268273851309275,
+        0.003124156127446876
+      ],
+      "target_scaled_gram_norm": 256.0127161167986
+    },
+    {
+      "case": "real_n32",
+      "normal_error": 0.00798290723013806,
+      "anchor_error_bound": 0.04210253253819475,
+      "fixed_source_error_bound": 0.12079420632801485,
+      "root_order_min_eigenvalues": [
+        0.0008441546847331206,
+        0.0008078466178632669
+      ],
+      "target_scaled_gram_norm": 1024.0031751267409
+    },
+    {
+      "case": "real_n64",
+      "normal_error": 0.003992596734733003,
+      "anchor_error_bound": 0.02136036714534334,
+      "fixed_source_error_bound": 0.06040118267855741,
+      "root_order_min_eigenvalues": [
+        0.0002146283787235811,
+        0.00020553240361931462
+      ],
+      "target_scaled_gram_norm": 4096.000793538167
+    },
+    {
+      "case": "complex_n8",
+      "normal_error": 0.03175485581243599,
+      "anchor_error_bound": 0.17615100045349122,
+      "fixed_source_error_bound": 0.48252976129131214,
+      "root_order_min_eigenvalues": [
+        0.012295958097000395,
+        0.01173470293228103
+      ],
+      "target_scaled_gram_norm": 64.05111571179224
+    },
+    {
+      "case": "complex_n16",
+      "normal_error": 0.01594766564059362,
+      "anchor_error_bound": 0.08715037189694036,
+      "fixed_source_error_bound": 0.2415232761136043,
+      "root_order_min_eigenvalues": [
+        0.0032682738513099543,
+        0.003124156127445879
+      ],
+      "target_scaled_gram_norm": 256.0127161167988
+    },
+    {
+      "case": "complex_n32",
+      "normal_error": 0.007982907230137982,
+      "anchor_error_bound": 0.04344342077811212,
+      "fixed_source_error_bound": 0.12079420632801485,
+      "root_order_min_eigenvalues": [
+        0.0008441546847320028,
+        0.0008078466178612049
+      ],
+      "target_scaled_gram_norm": 1024.0031751267404
+    },
+    {
+      "case": "complex_n64",
+      "normal_error": 0.003992596734733042,
+      "anchor_error_bound": 0.021704070218837364,
+      "fixed_source_error_bound": 0.06040118267855741,
+      "root_order_min_eigenvalues": [
+        0.0002146283787262686,
+        0.00020553240362490587
+      ],
+      "target_scaled_gram_norm": 4096.000793538169
+    }
+  ],
+  "escaping_counterfamily": [
+    {
+      "n": 4,
+      "fixed_normal_energy": 1.09765625,
+      "normal_root_coefficient": 0.3125,
+      "escaped_root_coefficient": 1.0
+    },
+    {
+      "n": 16,
+      "fixed_normal_energy": 1.0044097900390625,
+      "normal_root_coefficient": 0.06640625,
+      "escaped_root_coefficient": 1.0
+    },
+    {
+      "n": 64,
+      "fixed_normal_energy": 1.000251829624176,
+      "normal_root_coefficient": 0.015869140625,
+      "escaped_root_coefficient": 1.0
+    }
+  ],
+  "checks": [
+    "exact_feature_pullback_real_n8",
+    "full_transport_isometry_real_n8",
+    "exact_scaled_anchor_intertwining_real_n8",
+    "isometry_transfer_bound_real_n8",
+    "global_root_order_R_real_n8",
+    "finite_source_distance_bound_R_real_n8",
+    "m0_parallelogram_reduction_R_real_n8",
+    "global_root_order_S_real_n8",
+    "finite_source_distance_bound_S_real_n8",
+    "m0_parallelogram_reduction_S_real_n8",
+    "four_fixed_source_bound_real_n8",
+    "full_tangential_remainder_bound_real_n8",
+    "exact_feature_pullback_real_n16",
+    "full_transport_isometry_real_n16",
+    "exact_scaled_anchor_intertwining_real_n16",
+    "isometry_transfer_bound_real_n16",
+    "global_root_order_R_real_n16",
+    "finite_source_distance_bound_R_real_n16",
+    "m0_parallelogram_reduction_R_real_n16",
+    "global_root_order_S_real_n16",
+    "finite_source_distance_bound_S_real_n16",
+    "m0_parallelogram_reduction_S_real_n16",
+    "four_fixed_source_bound_real_n16",
+    "full_tangential_remainder_bound_real_n16",
+    "exact_feature_pullback_real_n32",
+    "full_transport_isometry_real_n32",
+    "exact_scaled_anchor_intertwining_real_n32",
+    "isometry_transfer_bound_real_n32",
+    "global_root_order_R_real_n32",
+    "finite_source_distance_bound_R_real_n32",
+    "m0_parallelogram_reduction_R_real_n32",
+    "global_root_order_S_real_n32",
+    "finite_source_distance_bound_S_real_n32",
+    "m0_parallelogram_reduction_S_real_n32",
+    "four_fixed_source_bound_real_n32",
+    "full_tangential_remainder_bound_real_n32",
+    "exact_feature_pullback_real_n64",
+    "full_transport_isometry_real_n64",
+    "exact_scaled_anchor_intertwining_real_n64",
+    "isometry_transfer_bound_real_n64",
+    "global_root_order_R_real_n64",
+    "finite_source_distance_bound_R_real_n64",
+    "m0_parallelogram_reduction_R_real_n64",
+    "global_root_order_S_real_n64",
+    "finite_source_distance_bound_S_real_n64",
+    "m0_parallelogram_reduction_S_real_n64",
+    "four_fixed_source_bound_real_n64",
+    "full_tangential_remainder_bound_real_n64",
+    "exact_feature_pullback_complex_n8",
+    "full_transport_isometry_complex_n8",
+    "exact_scaled_anchor_intertwining_complex_n8",
+    "isometry_transfer_bound_complex_n8",
+    "global_root_order_R_complex_n8",
+    "finite_source_distance_bound_R_complex_n8",
+    "m0_parallelogram_reduction_R_complex_n8",
+    "global_root_order_S_complex_n8",
+    "finite_source_distance_bound_S_complex_n8",
+    "m0_parallelogram_reduction_S_complex_n8",
+    "four_fixed_source_bound_complex_n8",
+    "full_tangential_remainder_bound_complex_n8",
+    "exact_feature_pullback_complex_n16",
+    "full_transport_isometry_complex_n16",
+    "exact_scaled_anchor_intertwining_complex_n16",
+    "isometry_transfer_bound_complex_n16",
+    "global_root_order_R_complex_n16",
+    "finite_source_distance_bound_R_complex_n16",
+    "m0_parallelogram_reduction_R_complex_n16",
+    "global_root_order_S_complex_n16",
+    "finite_source_distance_bound_S_complex_n16",
+    "m0_parallelogram_reduction_S_complex_n16",
+    "four_fixed_source_bound_complex_n16",
+    "full_tangential_remainder_bound_complex_n16",
+    "exact_feature_pullback_complex_n32",
+    "full_transport_isometry_complex_n32",
+    "exact_scaled_anchor_intertwining_complex_n32",
+    "isometry_transfer_bound_complex_n32",
+    "global_root_order_R_complex_n32",
+    "finite_source_distance_bound_R_complex_n32",
+    "m0_parallelogram_reduction_R_complex_n32",
+    "global_root_order_S_complex_n32",
+    "finite_source_distance_bound_S_complex_n32",
+    "m0_parallelogram_reduction_S_complex_n32",
+    "four_fixed_source_bound_complex_n32",
+    "full_tangential_remainder_bound_complex_n32",
+    "exact_feature_pullback_complex_n64",
+    "full_transport_isometry_complex_n64",
+    "exact_scaled_anchor_intertwining_complex_n64",
+    "isometry_transfer_bound_complex_n64",
+    "global_root_order_R_complex_n64",
+    "finite_source_distance_bound_R_complex_n64",
+    "m0_parallelogram_reduction_R_complex_n64",
+    "global_root_order_S_complex_n64",
+    "finite_source_distance_bound_S_complex_n64",
+    "m0_parallelogram_reduction_S_complex_n64",
+    "four_fixed_source_bound_complex_n64",
+    "full_tangential_remainder_bound_complex_n64",
+    "escaping_counterfamily_positive_n4",
+    "escaping_counterfamily_missing_lower_order_n4",
+    "escaping_counterfamily_exact_column_n4",
+    "escaping_counterfamily_positive_n16",
+    "escaping_counterfamily_missing_lower_order_n16",
+    "escaping_counterfamily_exact_column_n16",
+    "escaping_counterfamily_positive_n64",
+    "escaping_counterfamily_missing_lower_order_n64",
+    "escaping_counterfamily_exact_column_n64",
+    "canonical_source_unchanged_papers/P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex",
+    "reviewed_source_repair_exact_blob_papers/P11_sections/P11_Odd_Asymptotic_FullProof.tex",
+    "canonical_source_unchanged_papers/P11_sections/P11_Direct_Terminal_Bridge.tex",
+    "reviewed_source_repair_exact_blob_papers/P11_sections/P11_O3o_TC1_NearNull_Remainder_Collapse.tex",
+    "reviewed_source_repair_exact_blob_papers/P11_sections/P11_O3p_Vanishing_NearNull_Core.tex",
+    "canonical_source_unchanged_audits/P11_REFEREE_E2E_R27_CONSTRAINED_GAMMA_MOSCO_LIMIT_2026-08-15.md",
+    "canonical_source_unchanged_audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md"
+  ]
+}

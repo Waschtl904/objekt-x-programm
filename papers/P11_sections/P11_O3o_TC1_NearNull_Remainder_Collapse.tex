@@ -98,15 +98,15 @@ For the mean subtraction,~\eqref{eq:o3o-Kmu} gives
 \]
 Thus the continuous signed certificate has squared norm $O(U^{-1})$.
 The prime-cell mass/cost identity~\eqref{eq:prime-cell-cost} transfers the same
-absolute bound to the discrete primitive certificate.  The source-representer
-quadrature estimate~\eqref{eq:prime-cell-quadrature}, together with the exponentially
-small future-cell mesh and the uniform derivative bound
-\eqref{eq:odd-source-representer-derivative}, gives
+absolute bound to the discrete primitive certificate.  The trace-aware
+source-representer estimate~\eqref{eq:odd-quadrature-trace-bound}, with uniform
+smooth source bounds and $K_U=O(\sqrt U)$, gives
 \[
- \|Z_U^{\rm quad}\|_2=o(1).
+ \|Z_U^{\rm quad}\|_2
+ \le C e^{-3U/10}+C\frac{|K_U|}{U}e^{-2U/5}=o(1).
 \]
-The constant part contributes only
-$O(|K_U|e^{-2U/5})=o(1)$.  Finally
+Both moving endpoint traces of the zero-extended mean subtraction are
+included; no global Hilbert-Lipschitz claim is used.  Finally
 \eqref{eq:future-tail-small} and the $O(U^{-1})$ certificate cost give
 \[
  \|Z_U^{\rm tail}\|_2=o(1).

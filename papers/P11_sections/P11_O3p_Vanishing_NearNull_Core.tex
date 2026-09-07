@@ -133,13 +133,21 @@ bounded by
  \ll_g e^{-U/2}.
 \tag{O3P.8}\label{eq:o3p-fixed-cont-cost}
 \]
-Because $g$ is fixed smooth and compactly supported, the source-representer derivative
-is uniformly bounded.  All required future cells satisfy
+Because $g$ is fixed smooth and compactly supported, the regular part of the
+source-representer derivative is uniformly bounded and supported in an $r$-strip
+of fixed width near $U/2$.  Its zero extension may still have the upper trace
+$k_g^{(U)}(U-)=2g(0)$; this trace must not be discarded.
+All required future cells satisfy
 $r\le(U+O(1))/2$, hence the $\theta=3/5$ cells of
 \eqref{eq:prime-cell-mass} have maximal width $O(e^{-2U/5})$.
-The mass-normalized quadrature~\eqref{eq:prime-cell-cost}--
-\eqref{eq:prime-cell-quadrature} therefore has vanishing source error and vanishing
-certificate cost.  The exact $a=0$ full-rest lift has vanishing higher-prime-power tail
+The cumulative-error bound~\eqref{eq:odd-quadrature-cumulative} and the
+scalar integration-by-parts formula~\eqref{eq:odd-quadrature-with-traces}
+give a regular error $O_g(e^{-2U/5})$ and an upper-trace error
+$O_g(e^{-2U/5})$; the lower trace is zero for large $U$.
+Thus the mass-normalized quadrature has vanishing source error, with both
+traces retained.  The positive mass/cost identity~\eqref{eq:prime-cell-cost}
+and~\eqref{eq:o3p-fixed-cont-cost} give vanishing certificate cost.
+The exact $a=0$ full-rest lift has vanishing higher-prime-power tail
 by~\eqref{eq:future-tail-small}.  This gives~\eqref{eq:o3p-fixed-cert}; inserting it into
 the dual formula~\eqref{eq:odd-dual} gives~\eqref{eq:o3p-fixed-energy}.
 \end{proof}

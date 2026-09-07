@@ -1,0 +1,37 @@
+[
+  {
+    "file": "papers/P11_sections/P11_O3o_TC1_NearNull_Remainder_Collapse.tex",
+    "git_blob_sha1": "741124dd8dbab29452b24ca9af5d4be5dd7a8f67",
+    "sha256": "399ac24ff4eb54a69ce8d4785d6c909c00031a7537bd4340a03baeec3b1ec742",
+    "bytes": 7171,
+    "lines": 250
+  },
+  {
+    "file": "papers/P11_sections/P11_O3p_Vanishing_NearNull_Core.tex",
+    "git_blob_sha1": "1fb4217407e68ac3e2be3d2259ccd97ef450a40d",
+    "sha256": "c83677cc075ab68fda50a0b85a71371fb39413c6d99701cfe4aa2fe3662a6ff9",
+    "bytes": 9859,
+    "lines": 298
+  },
+  {
+    "file": "papers/P11_sections/P11_Odd_Asymptotic_FullProof.tex",
+    "git_blob_sha1": "6df7308cf269f09c6564ab162ed9b647cb3929da",
+    "sha256": "14d58a72ec4a39497a52bcb2dce4f19e420df5885dc9b5569d4a3f42379d01cb",
+    "bytes": 14340,
+    "lines": 467
+  },
+  {
+    "file": "audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md",
+    "git_blob_sha1": "53dbdbc1b540f8c750da4876823d02f157b2ffe9",
+    "sha256": "d1164a7a748fb13a26f9d4617b9e9e81f53455c0c300d0d48e2aded1339c8a25",
+    "bytes": 13095,
+    "lines": 348
+  },
+  {
+    "file": "audits/P11_R43_QUADRATURE_BOUNDARY_TRACE_REPAIR_2026-09-07.md",
+    "git_blob_sha1": "08936b6ed315510a606986f96802b1e914b385be",
+    "sha256": "4b1266f753838f2b21afd525a68f24d7a1f83b3c61345c41cb9cbcb3a7eb5696",
+    "bytes": 6910,
+    "lines": 162
+  }
+]
