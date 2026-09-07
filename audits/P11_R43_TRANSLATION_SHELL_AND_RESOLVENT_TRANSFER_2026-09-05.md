@@ -1,0 +1,508 @@
+# P11 / R43 — translation shell and relative resolvent transfer
+
+**Date:** 2026-09-05  
+**Status:** exact local hardening stacked on PR #55; `B-METINC-COND` and Strong Terminal remain OPEN
+
+## 0. Scope and governance firewall
+
+This note is stacked on the frozen PR-#55 head
+
+```text
+b221e6c2c4fc0b379b1b71d0100e482d8861448e
+```
+
+and does not modify that review head.
+
+It fixes two points needed by the next R43 attack:
+
+1. the exact translation convention and the resulting fixed-source hub shell;
+2. the exact nonlinear resolvent transfer from the Schur sign operator to the actual old-conditioning inverse increment.
+
+No decay rate for the structured saturated leakage is proved. No sign theorem for canonical `COND`, no `B-METINC-COND`, no `B-METINC`, no `B-FLAGDYN/TIGHT`, no `B-SIGN/B-ORIENT`, no Strong Terminal/C6, no Object X and no RH consequence is asserted.
+
+---
+
+## 1. Exact translation convention
+
+The frozen P11 manuscript defines ambient translation `U_t` on `L^2(R)` and
+
+\[
+\boxed{
+D_s:=U_{s/2}-U_{-s/2}.
+}
+\tag{TR1}
+\]
+
+Hence `D_s` is an antisymmetric half-shift, not a one-sided shift and not a symmetric average.
+Since translations are unitary and `U_t^*=U_{-t}`,
+
+\[
+\boxed{D_s^*=-D_s.}
+\tag{TR2}
+\]
+
+For the finite-window translation-difference operator
+
+\[
+K_{p,k;T}:=P_TD_{k\log p}E_T,
+\]
+
+with `P_T=E_T^*`, one therefore has
+
+\[
+\boxed{K_{p,k;T}^*=-K_{p,k;T}.}
+\tag{TR3}
+\]
+
+The hub is
+
+\[
+H_T
+=\sum_{p^k\le e^{2T}}
+ a_{p,k}K_{p,k;T},
+\qquad
+a_{p,k}:=\sqrt{\log p}\,p^{-3k/4}\in\mathbb R_+.
+\]
+
+Thus
+
+\[
+\boxed{H_T^*=-H_T.}
+\tag{TR4}
+\]
+
+### Local booking
+
+```text
+R43-TRANSLATION-ANTISYMMETRIC-HALFSHIFT ✓[M]
+```
+
+This is an exact consequence of the frozen P11 definition.
+
+---
+
+## 2. Exact fixed-source formula for the structured vector
+
+Fix `X<U` and let `E_{X,U}` be zero extension from `(-X,X)` to `(-U,U)`. For `f\in L^2(-X,X)`,
+
+\[
+v_U(f):=H_U^*E_{X,U}f.
+\]
+
+Since `E_UE_{X,U}=E_X` as ambient zero extensions, (TR4) gives
+
+\[
+\boxed{
+ v_U(f)
+ =-P_U\sum_{p^k\le e^{2U}}
+ \sqrt{\log p}\,p^{-3k/4}
+ D_{k\log p}E_Xf.
+}
+\tag{TR5}
+\]
+
+Put
+
+\[
+a_p:=\frac12\log p.
+\]
+
+Each `(p,k)` term in (TR5) is supported in the two translates of the fixed source support centered at `\pm k a_p`. In particular, because `E_Xf` is supported in `[-X,X]`,
+
+\[
+\operatorname{supp}(D_{k\log p}E_Xf)
+\subset
+([-X,X]+k a_p)\cup([-X,X]-k a_p),
+\tag{TR6}
+\]
+
+up to the immaterial choice of translation sign convention.
+
+This reconciles the R43 notation `a_p=(1/2)\log p` with the manuscript notation `D_{k\log p}`: the physical half-shift magnitude is exactly `k a_p`.
+
+---
+
+## 3. Exact terminal collar-shell lemma
+
+For `\rho>0` with `U>\rho`, define the old-source terminal collar
+
+\[
+\mathcal B_{U,\rho}
+:=\{x\in(-U,U):|x|>U-\rho\}.
+\]
+
+If
+
+\[
+1_{\mathcal B_{U,\rho}}
+D_{k\log p}E_Xf\ne0,
+\]
+
+then there are `x` in the collar and `y\in[-X,X]` with
+
+\[
+|x-y|=k a_p.
+\]
+
+The reverse triangle inequality therefore gives
+
+\[
+k a_p
+\ge |x|-|y|
+>U-\rho-X.
+\]
+
+On the other hand hub activation `p^k\le e^{2U}` is exactly `k a_p\le U`. Consequently
+
+\[
+\boxed{
+1_{\mathcal B_{U,\rho}}v_U(f)
+=-1_{\mathcal B_{U,\rho}}
+\sum_{\substack{p,k:\\ U-X-\rho<k a_p\le U}}
+\sqrt{\log p}\,p^{-3k/4}
+D_{k\log p}E_Xf.
+}
+\tag{TR7}
+\]
+
+Thus the boundary collar of the structured vector is fed only by the terminal prime-power shell
+
+\[
+\boxed{U-X-\rho<\frac{k}{2}\log p\le U.}
+\tag{TR8}
+\]
+
+### Local booking
+
+```text
+R43-STRUCTURED-HUB-TERMINAL-COLLAR-SHELL ✓[M]
+```
+
+### Rate firewall
+
+(TR7) is a support theorem only. It does **not** imply that the collar norm decays like the coefficient of one terminal prime power. The number and overlap of active prime-power translates also depend on `U`. In particular, replacing the whole shell by the largest individual coefficient is not a valid norm estimate. Therefore no exponential leakage rate is booked from (TR7).
+
+---
+
+## 4. Prime-sector structure of the normal equation
+
+The frozen full-rest representation writes
+
+\[
+\langle R_Vf,R_Vg\rangle
+=\sum_p(\log p)(p-1)\sum_{a\ge0}p^a
+\int_{\Omega_{p,a,V}}
+\Phi_{p,a,V}[f](u)\overline{\Phi_{p,a,V}[g](u)}\,du,
+\]
+
+where
+
+\[
+\Phi_{p,a,V}[f]
+=\sum_{k\ge a+1}p^{-3k/4}K_{p,k;V}f.
+\]
+
+Hence, if
+
+\[
+T_{p,a;V}
+:=\sqrt{(\log p)(p-1)p^a}\,
+1_{\Omega_{p,a,V}}
+\sum_{k\ge a+1}p^{-3k/4}K_{p,k;V},
+\]
+
+then
+
+\[
+\boxed{
+A_V:=R_V^*R_V
+=\sum_p\sum_{a\ge0}T_{p,a;V}^*T_{p,a;V}.
+}
+\tag{TR9}
+\]
+
+Thus there are no cross-prime terms inside the residual normal operator itself. Cross-`k,l` terms remain within one fixed prime sector.
+
+For an individual `(p,a,k,l)` cross term, multiplication by `1_{\Omega_{p,a,V}}` changes amplitudes/support eligibility but not the translation lengths. If an input value at `z` can contribute to an output value at `x`, then for some signs `\sigma,\tau\in\{\pm1\}`,
+
+\[
+\boxed{
+x-z=(\sigma k+\tau l)a_p.}
+\tag{TR10}
+\]
+
+Equivalently the source displacement belongs to the same-prime arithmetic half-shift set generated by `|k-l|a_p` and `(k+l)a_p`.
+
+### Local booking
+
+```text
+R43-COND-NORMAL-EQUATION-PRIME-SECTOR-HALFSHIFT ✓[M]
+```
+
+This is a support/typing statement. It does not produce a small norm: small displacements such as `|k-l|a_p=a_p` can cross the source boundary with fixed small `k,l`, so a terminal decay estimate cannot be obtained from `A_V` displacement size alone. The fixed-source hub shell and/or the saturated factor must enter.
+
+---
+
+## 5. Exact compression Schur operator as the inverse denominator
+
+Retain the PR-#55 notation
+
+\[
+M=R_V\iota,
+\qquad
+S=R_VP_{\mathcal N},
+\]
+
+and
+
+\[
+K:=K_{U,V}^{\rm Schur}
+=M^*(I+SS^*)^{-1}M-R_U^*R_U.
+\tag{TR11}
+\]
+
+Put
+
+\[
+\mathscr A_U:=I+R_U^*R_U
+\qquad\text{and}\qquad
+\mathscr G_{U,V}:=\mathscr A_U+K.
+\tag{TR12}
+\]
+
+The exact block inverse/Schur-complement formula for `I+R_V^*R_V` gives
+
+\[
+\boxed{
+\iota^*B_V\iota=\mathscr G_{U,V}^{-1},
+\qquad
+B_U=\mathscr A_U^{-1}.
+}
+\tag{TR13}
+\]
+
+Both `\mathscr A_U` and `\mathscr G_{U,V}` are strictly positive and boundedly invertible at fixed finite horizons.
+
+This is the precise nonlinear link that was deliberately left as a firewall in PR #55.
+
+---
+
+## 6. Relative resolvent-transfer identity
+
+Define the selfadjoint relative Schur perturbation
+
+\[
+\boxed{
+L_{U,V}
+:=\mathscr A_U^{-1/2}
+K_{U,V}^{\rm Schur}
+\mathscr A_U^{-1/2}.
+}
+\tag{TR14}
+\]
+
+Then
+
+\[
+\mathscr G_{U,V}
+=\mathscr A_U^{1/2}(I+L_{U,V})\mathscr A_U^{1/2},
+\]
+
+so `I+L_{U,V}` is strictly positive. From (TR13),
+
+\[
+\boxed{
+\iota^*B_V\iota-B_U
+=\mathscr A_U^{-1/2}
+\bigl((I+L_{U,V})^{-1}-I\bigr)
+\mathscr A_U^{-1/2}.
+}
+\tag{TR15}
+\]
+
+For the structured old-source vector, let
+
+\[
+y_U:=\mathscr A_U^{-1/2}v_U.
+\]
+
+Then the actual old-conditioning increment is exactly
+
+\[
+\boxed{
+\Delta s_{\rm cond}^{U,V}(f)
+=\langle y_U,((I+L_{U,V})^{-1}-I)y_U\rangle.
+}
+\tag{TR16}
+\]
+
+Because `L_{U,V}` commutes with its functional calculus, one may equivalently put
+
+\[
+z_{U,V}:=(I+L_{U,V})^{-1/2}y_U
+\]
+
+and obtain
+
+\[
+\boxed{
+\Delta s_{\rm cond}^{U,V}(f)
+=-\langle z_{U,V},L_{U,V}z_{U,V}\rangle.
+}
+\tag{TR17}
+\]
+
+Equation (TR17) makes the PR-#55 firewall sharp: the relevant quadratic vector is the **resolvent-transported relative vector** `z_{U,V}`, not the original `v_U`. Therefore a scalar estimate on `\langle v_U,Kv_U\rangle` alone does not control the sign or size of `\Delta s_{\rm cond}`.
+
+---
+
+## 7. Quantitative relative lower-bound transfer
+
+Assume for one pair `(U,V)` that
+
+\[
+\boxed{
+K_{U,V}^{\rm Schur}\succeq-\delta\,\mathscr A_U,
+\qquad 0\le\delta<1.
+}
+\tag{TR18}
+\]
+
+Equivalently,
+
+\[
+L_{U,V}\succeq-\delta I.
+\]
+
+For the scalar function
+
+\[
+g(\lambda)=\frac1{1+\lambda}-1=-\frac{\lambda}{1+\lambda},
+\qquad \lambda>-1,
+\]
+
+`g` is decreasing. Hence functional calculus gives
+
+\[
+(I+L_{U,V})^{-1}-I
+\preceq\frac{\delta}{1-\delta}I.
+\]
+
+Using (TR15),
+
+\[
+\boxed{
+\iota^*B_V\iota-B_U
+\preceq
+\frac{\delta}{1-\delta}B_U.
+}
+\tag{TR19}
+\]
+
+Consequently, for every old-source vector `v`,
+
+\[
+\boxed{
+\bigl(\langle v,(\iota^*B_V\iota-B_U)v\rangle\bigr)_+
+\le
+\frac{\delta}{1-\delta}\langle v,B_Uv\rangle.
+}
+\tag{TR20}
+\]
+
+One may choose the sharp relative negative spectral size
+
+\[
+\delta_{U,V}:=\|(L_{U,V})_-\|<1,
+\tag{TR21}
+\]
+
+because `I+L_{U,V}` is strictly positive at each finite pair. Then (TR19)--(TR20) hold with `\delta=\delta_{U,V}`.
+
+### Local booking
+
+```text
+R43-COND-RELATIVE-RESOLVENT-TRANSFER ✓[M]
+```
+
+This is an exact abstract/canonical transfer theorem. It does **not** prove that `\delta_{U,V}` is small, summable, or decaying cofinally.
+
+---
+
+## 8. What the new theorem changes in the live target
+
+PR #55 supplied the structured scalar Schur bound
+
+\[
+(-\langle v_U,Kv_U\rangle)_+
+\le
+\|(I+S^*S)^{-1/2}S^*Mv_U\|^2.
+\]
+
+That remains correct but is not itself a metric-increment estimate.
+
+The exact resolvent transfer now identifies two legitimate routes to `B-METINC-COND`:
+
+1. **relative operator route:** prove a useful cofinal bound
+   \[
+   K_{U,V}^{\rm Schur}\succeq-\delta_{U,V}\mathscr A_U
+   \]
+   with enough control of `\delta_{U,V}/(1-\delta_{U,V})` and the old Schur energy `\langle v_U,B_Uv_U\rangle`;
+2. **transported-vector route:** estimate directly the negative relative quadratic form in (TR17) on `z_{U,V}`.
+
+The original PR-#55 scalar leakage target can still be useful, but an additional comparison from that target to either route above is required.
+
+A sufficient summability statement, not proved here, would be for a cofinal chain `(U_j)`:
+
+\[
+\sum_j
+\frac{\delta_j}{1-\delta_j}
+\langle v_{U_j},B_{U_j}v_{U_j}\rangle
+<\infty.
+\tag{TR22?}
+\]
+
+No boundedness of the old Schur energy and no summability of `\delta_j` is asserted here.
+
+---
+
+## 9. Status ledger
+
+New exact local bookings:
+
+```text
+R43-TRANSLATION-ANTISYMMETRIC-HALFSHIFT          ✓[M]
+R43-STRUCTURED-HUB-TERMINAL-COLLAR-SHELL        ✓[M]
+R43-COND-NORMAL-EQUATION-PRIME-SECTOR-HALFSHIFT ✓[M]
+R43-COND-RELATIVE-RESOLVENT-TRANSFER             ✓[M]
+```
+
+Retained OPEN:
+
+```text
+R43-COND-STRUCTURED-SATURATED-LEAKAGE-DECAY ?[O]
+R43-COND-STRUCTURED-WITNESS-EXCLUSION        ?[O]
+R43-COND-RELATIVE-NEGATIVE-SPECTRAL-DECAY    ?[O]
+R43-COND-EPSILON-RELAXED-TELESCOPE           ?[O]
+B-METINC-COND                                ?[O]
+B-METINC                                     ?[O]
+B-FLAGMOD / B-FLAGDYN                       ?[O]
+B-FLAGTIGHT                                  ?[O]
+B-SIGN / B-ORIENT                           ?[O]
+Strong Terminal / C6                        ?[O]
+Object X / RH                               ?[O]
+```
+
+The arbitrary-source negative theorems and the step-floor theorems are unchanged.
+
+## 10. Next attack
+
+The fixed-source shell theorem says where the structured hub can reach the old boundary; the normal-equation theorem says how nuisance coupling can return that mass to the new source strip; and the relative resolvent theorem says what must ultimately be controlled for the actual inverse metric increment.
+
+The next quantitative attack should therefore keep the saturation and split the source-normal interaction by half-shift displacement:
+
+- short `|k-l|a_p` displacement: forces the structured input toward the terminal hub collar, where (TR7) applies;
+- long normal displacement: seek decay from the full-rest coefficients before summing over martingale depth;
+- after the split, estimate either the relative negative operator `L_-` or directly the transported vector in (TR17).
+
+No terminal convergence claim is made until one of these quantitative estimates is proved.
