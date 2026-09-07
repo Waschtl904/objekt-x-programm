@@ -9,21 +9,22 @@
 PR #78 shows, in the primitive denominator-normalized occupancy model, that the mean-channel kernel has an opposite-boundary layer of the form
 
 \[
-\omega_U^{U,V}(u)\lesssim L\left(e^{-(U-u)/2}+e^{-(U+u)/2}\right),
+\omega_U^{U,V}(u)\lesssim (1+L)\left(e^{-(U-u)/2}+e^{-(U+u)/2}\right),
 \qquad L:=V-U,
 \tag{SC0}
 \]
 
-up to fixed-band/end-point constants in the local primitive model.
+with fixed-band/end-point constants in the local primitive model, for all
+`L>0`. The additive `1` cannot be discarded uniformly as `L` tends to zero.
 
 The crude estimate by `||omega||_infty` loses a factor of order `U` on a dyadic step.  A natural proposed repair is to combine the exponential kernel with a shellwise version of the PR-#64 collar escape estimate instead of using one whole collar at once.
 
 This note records the exact outcome of that refinement:
 
 1. PR #64 already gives the needed collar estimate for every admissible radius `r`, hence a shellwise distribution bound is available essentially for free.
-2. Integrating that sharp universal distribution bound against the exponential boundary kernel improves the crude `O(log U)` estimate to `O((V-U)/U)`.
+2. Integrating that distribution bound against the exponential boundary kernel improves the crude dyadic `O(log U)` estimate to `O((1+V-U)/U)`.
 3. On a geometric/dyadic step `V-U \asymp U`, this is only `O(1)`, not the target `O(log U/U)`.
-4. The universal `r/U` collar scale cannot be improved without extra structure: the normalized constant residual-difference mode saturates it.
+4. The distribution information `F_U(r)<=Cr/U` alone cannot force a smaller scale: the normalized constant profile saturates it. It is also a primitive difference-graph mode, but no kernel or unit-ball claim for the full residual operator is made.
 
 Thus shell refinement alone does **not** close the reverse mean channel.  The next useful question is whether the actual structured reverse-normal vector excludes or suppresses the constant/common mode, or whether one must use the exact two-sided Schur/least-squares correlations rather than a positive occupancy majorant.
 
@@ -115,15 +116,15 @@ F_+(r)\le C\frac rU
 The corresponding positive exponential boundary weight is
 
 \[
-I_+:=L\int_0^U e^{-d/2}\,d\mu_+(d).
+I_+:=(1+L)\int_0^U e^{-d/2}\,d\mu_+(d).
 \tag{SC8}
 \]
 
 Split at `U/8`.  The deep-bulk tail satisfies, using `||x_rev||<=1`,
 
 \[
-L\int_{U/8}^U e^{-d/2}\,d\mu_+(d)
-\le Le^{-U/16}.
+(1+L)\int_{U/8}^U e^{-d/2}\,d\mu_+(d)
+\le (1+L)e^{-U/16}.
 \tag{SC9}
 \]
 
@@ -157,7 +158,7 @@ Consequently
 
 \[
 \boxed{
-I_+\le C\frac LU+Le^{-cU}.
+I_+\le C\frac{1+L}{U}+(1+L)e^{-cU}.
 }
 \tag{SC12}
 \]
@@ -168,8 +169,8 @@ The reflected negative terminal side gives the same bound, so the primitive oppo
 \boxed{
 \mathcal O_{\rm shell}(x_{\rm rev})
 \le
-C\frac{V-U}{U}
-+(V-U)e^{-cU}.
+C\frac{1+V-U}{U}
++(1+V-U)e^{-cU}.
 }
 \tag{SC13}
 \]
@@ -198,9 +199,12 @@ The first is confined to the primitive occupancy majorant from PR #78.  The seco
 
 ---
 
-## 3. Why the `r/U` distribution scale is universally sharp
+## 3. Why the distribution estimate alone does not force a smaller scale
 
-PR #64 already identifies the obstruction: a normalized constant vector lies in the kernel of the old primitive residual-difference operator and places a fraction of order `r/U` of its `L^2` mass in the two terminal collars.
+A normalized constant vector annihilates the retained primitive `k=1`
+differences and places the fraction `r/U` of its `L^2` mass in the two
+terminal collars. This is a primitive-model statement: higher-`k` boundary
+terms mean that the constant need not be in `ker R_U` for the full residual.
 
 For the normalized constant profile on `(-U,U)`,
 
@@ -216,27 +220,39 @@ one has exactly
 \tag{SC16}
 \]
 
-Hence no argument based only on the universal old residual-graph bound can replace SC4 by `o(r/U)` uniformly over the whole graph unit ball.
+Hence the distribution bound SC4 and `L^2` normalization, considered as
+information about a distribution alone, cannot imply `o(r/U)`. This does
+not by itself prove sharpness on the unit ball of the full residual graph;
+such a claim would require an additional bound on the constant's full
+residual energy.
 
-Inserting SC16 into an exponential boundary weight of height `L` gives the natural scale
+Inserting SC16 into an exponential boundary weight of height `1+L` gives
 
 \[
-L\int_0^\infty e^{-d/2}\frac{dd}{2U}
-\asymp \frac LU,
+(1+L)\int_0^{2U} e^{-d/2}\frac{dd}{2U}
+\asymp \frac{1+L}{U},
 \tag{SC17}
 \]
 
-matching SC13.  Therefore SC13 is not merely an artifact of integration by parts; it reflects the true universal common-mode obstruction.
+matching SC13 at this distribution-only level. It demonstrates the
+limitation of that positive majorant, not a theorem about the constant
+component of the canonical reverse-normal vector.
 
 ### Firewall
 
-SC15--SC17 do **not** assert that the actual structured vector `x_rev` contains a constant component.  They only show that PR #64's graph estimate, by itself, cannot exclude one strongly enough.
+SC15--SC17 do **not** assert that the actual structured vector `x_rev`
+contains a constant component. They show only that the distribution
+estimate SC4, without further source-specific information, cannot exclude
+this scalar comparison profile.
 
 ---
 
 ## 4. Finite Galerkin diagnostic of shell distribution
 
-Using the same `U=30, V=40` primitive-band Galerkin proxy as PR #72/#76 and normalizing each profile by the same old graph norm, the cumulative two-sided outer-collar masses behave qualitatively as follows.
+Use the same integer-grid `U=30, V=40` primitive-band Galerkin proxy as
+PR #72/#76. For the constant profile, the old graph energy is its `L^2`
+energy, and the strict outer collar `|z|>U-r` contains `2r` of the `61`
+old nodes. Its graph-normalized mass is therefore exactly `2r/61`.
 
 ### Constant profile
 
@@ -245,42 +261,20 @@ r=1   : 0.03279
 r=2   : 0.06557
 r=4   : 0.13115
 r=8   : 0.26230
-r=16  : 0.52460
+r=16  : 0.52459
 ```
 
-This tracks `r/U` essentially exactly and illustrates the universal obstruction.
+This is the discrete constant-profile illustration of the distribution
+scale. It is not a full-P11 residual-kernel assertion.
 
-### Center-localized Gaussian proxy
+### Withdrawn Gaussian tables
 
-```text
-r=1   : 1.6e-7
-r=2   : 2.36e-7
-r=4   : 5.2e-7
-r=8   : 4.4e-6
-r=16  : 1.5e-3
-```
-
-### Wide edge-localized Gaussian proxy
-
-```text
-r=1   : 2.14e-4
-r=2   : 4.20e-4
-r=4   : 7.41e-4
-r=8   : 9.78e-4
-r=16  : 9.82e-4
-```
-
-### Narrow edge-localized Gaussian proxy
-
-```text
-r=1   : 2.29e-4
-r=2   : 5.06e-4
-r=4   : 8.95e-4
-r=8   : 1.015e-3
-r=16  : 1.016e-3
-```
-
-These numbers are diagnostic only.  They do not implement the actual `x_rev`.  Their role is to show that profiles with additional structural localization can beat the universal `r/U` law by orders of magnitude, whereas the common mode saturates it.
+Merge-review correction (2026-09-07): the earlier center/wide-edge/narrow-
+edge Gaussian tables did not specify sufficient profile parameters and
+could not be reproduced from the cited PR72/76 definitions. Those numbers
+are withdrawn rather than replaced by a newly selected experiment. Only
+the explicitly reproducible constant-profile table is retained here;
+neither it nor the withdrawn tables implement the actual `x_rev`.
 
 ```text
 R43-COND-REVERSE-COMMON-MODE-OBSTRUCTION  ✓[M]_proxy
@@ -292,7 +286,10 @@ R43-COND-REVERSE-COMMON-MODE-OBSTRUCTION  ✓[M]_proxy
 
 ## 5. The next structural question
 
-The shellwise route fails precisely because the universal graph class contains the constant/common mode.  The actual vector is highly structured:
+The shellwise distribution majorant alone does not supply the missing
+dyadic decay. Whether the full graph geometry and the actual conditioned
+source supply additional information remains separate. The actual vector
+is highly structured:
 
 \[
 x_{\rm rev}
@@ -315,12 +312,16 @@ and an explicit sum of antisymmetric centered half-shifts
 \[
 H_U^*E_{R,U}f
 =
--\sum_p\sqrt{\log p}\sum_{k\ge1}p^{-3k/4}
+-\sum_p\sqrt{\log p}\sum_{\substack{k\ge1\\p^k\le e^{2U}}}p^{-3k/4}
 P_UD_{k\log p}E_{R,\infty}f,
 \qquad
 D_s=U_{s/2}-U_{-s/2}.
 \tag{SC20}
 \]
+
+The activation cutoff `p^k<=e^{2U}` is part of the hub definition, not a
+consequence of the spatial projection `P_U`. Its omission in the earlier
+display was corrected during the merge review.
 
 The centered difference `D_s` flips reflection parity.  This suggests a concrete next test:
 
@@ -347,7 +348,11 @@ ROADMAP-COND-REVERSE-NORMAL-STRETCH-DECAY              ?[O]
 
 ## 6. Scope / no-promotion firewall
 
-This note proves only the shellwise consequence of the already established PR-#64 collar estimate and the resulting no-go for closing the dyadic primitive occupancy majorant by shell refinement alone.
+This note proves only the shellwise consequence of the already established
+PR-#64 collar estimate, with the corrected factor `1+V-U`, and the limitation
+of attempting to close the dyadic primitive occupancy majorant using that
+distribution information alone. The former full-graph sharpness inference
+from a constant residual-kernel claim is not retained.
 
 It does **not** prove:
 
