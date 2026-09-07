@@ -1,6 +1,6 @@
 # Aktueller Stand — Objekt X / P11 Strong Terminal
 
-> **Stand (Governance):** 7. September 2026; mathematische Darstellung unverändert.<br>
+> **Stand:** 7. September 2026; analytische Anschlussresultate gemäß verlinkten Audits, Registry unverändert.<br>
 > **Operative Kurzfassung.** Für Details gelten
 > [CURRENT-FRONT](../CURRENT-FRONT.md),
 > [ACTIVE_FRONT](ACTIVE_FRONT.yaml),
@@ -62,6 +62,10 @@ Die vier folgenden Container sind der historische Anfang der Kette, nicht deren 
 **Draft-source IDs** bleiben historische Quellbezeichnungen, keine aktuellen GitHub-Statusangaben. Weder Stackbeziehung noch Merge erzeugen externes GREEN oder Registry-Promotion; die Registry bleibt bei diesem Governance-Abgleich unverändert.
 
 Die jüngsten XBAND-Audits sind in [CURRENT-FRONT, Abschnitt 2](../CURRENT-FRONT.md#2-r43-stack-und-integrationsstand) ausschließlich als lokale Diagnostik verlinkt; keine neue mathematische Front.
+
+**Spätere analytische Anschlussresultate:** PR87 und PR88 sind integriert und unter `integrated_followups` separat protokolliert. [LOCAL-O1](../audits/P11_R43_O1_LOCAL_INTERVAL_UNIFORMITY_2026-09-07.md) schließt die echte feste-Intervall-Uniformität; [der Orientierungsbeweis](../audits/P11_R43_HUB_JUMP_DECAY_AND_CONDITIONAL_ORIENTATION_2026-09-07.md) liefert unter starker Rest-Tightness terminale Vorzeichenkohärenz; [der Conditioning-Satz](../audits/P11_R43_COND_FIXED_OLD_ALL_FUTURE_UNIFORMITY_2026-09-07.md) liefert BR42 für COND bei festem alten Horizont über alle zukünftigen V. Globale Flag-Tightness, BR39 und unbedingtes C6 bleiben offen.
+
+Aktueller analytischer Hauptauftrag ist das globale tatsächliche Flagbudget. Die folgenden historischen COND-Abschnitte ersetzen diesen neuen Prioritätshinweis nicht; [Review- und Integrationsnachweis](../audits/R43_LOCAL_O1_AND_ORIENTATION_INTEGRATION_2026-09-07.md).
 
 ---
 

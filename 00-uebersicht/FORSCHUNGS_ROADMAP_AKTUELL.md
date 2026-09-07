@@ -1,6 +1,6 @@
 # Objekt X — kanonische Forschungsroadmap v2.1.2
 
-> **Stand (Governance):** 2026-09-07; mathematische Darstellung unverändert.<br>
+> **Stand:** 2026-09-07; analytische Anschlussresultate gemäß verlinkten Audits, Registry unverändert.<br>
 > **Rolle:** kanonische Abhängigkeits- und Forschungsstrategiekarte.  
 > **Keine Beweisautorität:** Dieses Dokument erzeugt keine `✓[M]`-Promotion, kein `independent GREEN`, keinen Freeze, keinen Merge-Anspruch und keine Object-X-/RH-Folgerung.  
 > **Volatile Frontdaten:** [ACTIVE_FRONT.yaml](ACTIVE_FRONT.yaml)  
@@ -668,6 +668,10 @@ Eine technische Validierung soll insbesondere prüfen:
 ---
 
 ## 24. Aktuelle Default-Forschungspriorität
+
+**Aktueller Anschlussstand:** [LOCAL-O1](../audits/P11_R43_O1_LOCAL_INTERVAL_UNIFORMITY_2026-09-07.md) und [die feste-alte/all-future Conditioning-Uniformität](../audits/P11_R43_COND_FIXED_OLD_ALL_FUTURE_UNIFORMITY_2026-09-07.md) sind im dokumentierten Umfang analytisch geprüft. [Der echte Hub-Sprungabfall](../audits/P11_R43_HUB_JUMP_DECAY_AND_CONDITIONAL_ORIENTATION_2026-09-07.md) liefert Orientierung aus starker Rest-Tightness; die P11-/R42-/GC-AC-Voraussetzungen bleiben ausdrücklich erhalten. Primärer neuer Auftrag ist das globale tatsächliche Flagbudget auf einer vorgegebenen Terminalkette, nicht eine weitere Proxyfamilie oder erneute lokale Uniformitätsprüfung. BR39 und B-FLAGTIGHT bleiben offen; keine Registry-Promotion.
+
+Die folgende Liste ist der historische COND-Prioritätsstand vor der Integration von PR87/PR88. Sie wird als Herkunft der verlinkten Reduktionen erhalten, nicht als erneuter Auftrag zu bereits erledigter Diagnostik.
 
 Die aktuelle COND-Front ist nicht mehr „short/long/sum finden“. Der historische Good-Normal-Draft hat diese Struktur bereits lokal isoliert.
 

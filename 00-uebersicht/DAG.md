@@ -1,6 +1,6 @@
 # Abhängigkeitsgraph (DAG)
 
-> **Stand (Governance):** 7. September 2026; mathematische Darstellung unverändert.<br>
+> **Stand:** 7. September 2026; analytische Anschlussresultate gemäß verlinkten Audits, Registry unverändert.<br>
 > **Rolle:** kompakte operative Abhängigkeits- und Firewall-Struktur.  
 > **Keine Beweisautorität.** Status/Provenienz stehen im [ACTIVE_THEOREM_REGISTRY](ACTIVE_THEOREM_REGISTRY.md), volatile PR-/SHA-Daten in [ACTIVE_FRONT.yaml](ACTIVE_FRONT.yaml), die ausführliche Strategie in [FORSCHUNGS_ROADMAP_AKTUELL.md](FORSCHUNGS_ROADMAP_AKTUELL.md).
 
@@ -27,6 +27,8 @@ Ein unbeschriftetes `->` wird in diesem DAG nicht verwendet.
 ---
 
 ## 2. Operativer Strong-Terminal-Pfad
+
+**Analytischer Anschluss, keine Registry-Promotion:** [LOCAL-O1](../audits/P11_R43_O1_LOCAL_INTERVAL_UNIFORMITY_2026-09-07.md) liefert feste-Intervall-Uniformität. [J7'/J10/J11](../audits/P11_R43_HUB_JUMP_DECAY_AND_CONDITIONAL_ORIENTATION_2026-09-07.md) liefern Orientierung aus starker Rest-Tightness; unter den ausdrücklich ausgewiesenen P11-/R42-/GC-AC-Eingängen ist C6 damit auf B-FLAGTIGHT zurückgeführt, ohne zusätzliches unabhängiges Sign-Gate. [CF1–CF6](../audits/P11_R43_COND_FIXED_OLD_ALL_FUTURE_UNIFORMITY_2026-09-07.md) liefern BR42 nur für den Conditioning-Schritt bei festem alten U. Keine dieser Aussagen beweist B-FLAGTIGHT oder wertet GC-AC neu auf.
 
 R38–R42 werden hier nicht durch Pfeile als vermeintliche Theoremimplikationskette verbunden. Sie bilden die eingefrorene Forschungs-/Provenienzkette gemäß Registry.
 

@@ -17,6 +17,41 @@ open_pr_count: 0
 state_note: "GitHub integration state is reconciled from the original PR inventory and completed merge records only; unrecorded entries retain their original open/draft/base snapshot. open_pr_count counts R43 stack entries, not all repository PRs. This is not a live GitHub query."
 head_note: "head_sha and parent_head_sha are original historical dependency pins, not current branch or actual merged heads. merged_head_sha is the actual approved head in each completed merge record. After review corrections (including PRs 64, 78 and 80), it can differ from head_sha without rebasing the historical chain."
 
+tracked_integrated_pr_count: 22
+integrated_followup_count: 2
+followup_note: "The mapping below records two later integrations, not extensions of the original 20-PR historical dependency chain. Their metadata was checked against GitHub merge commits and the reviewed proof blobs. No theorem-registry promotion."
+integrated_followups:
+  local_o1:
+    pr: 87
+    title: "R43: actual O1 fixed-interval uniformity via compact graph pullback"
+    branch: r43-o1-local-interval-uniformity
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    math_review_head: f1d2860e0ae3837b1ca8348d172843ac6c2cd7ec
+    merged_head_sha: 775158ee656d03bc3601857e8cb0e47fa791caf1
+    merge_commit_sha: f8b644ea20ce5f7cf5b6396531f8d7b01adecdff
+    previous_main_sha: 2a43813480629c56200d2910963294fa0c4137fd
+    proof_blob: 03f9cf519fab66b3d00a5f60690d967adbaa5e95
+    review_note: "The mathematical review covers f1d2860e; the descendant merged head changes only the two reviewed editorial lines."
+  jump_and_conditioning:
+    pr: 88
+    title: "R43: hub-jump decay, conditional orientation and fixed-old COND uniformity"
+    branch: research/r43-hub-jump-orientation
+    github_base: main
+    github_state: merged
+    draft: false
+    merged: true
+    reviewed_head_sha: 528153ec944a8201afe9235a53d96afc944fa9fc
+    merged_head_sha: 528153ec944a8201afe9235a53d96afc944fa9fc
+    merge_commit_sha: 82f22c1100d15fc7922e566cb440e8290fa55112
+    previous_main_sha: f8b644ea20ce5f7cf5b6396531f8d7b01adecdff
+    definition_base_sha: 775158ee656d03bc3601857e8cb0e47fa791caf1
+    orientation_blob: 501ea5acfdcbb812ba25534b9d4503ab307a18aa
+    conditioning_blob: 57ad312edcac0c9436f0ce7ca0ece109604dd0ab
+    review_note: "SCOPED READY for the exact two-file package. Conditional orientation from tightness and fixed-old all-future COND uniformity only; no B-FLAGTIGHT or unconditional C6 claim."
+
 stack:
   - pr: 55
     title: "R43: structured Schur defect → saturated leakage"

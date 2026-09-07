@@ -1,0 +1,24 @@
+[
+  {
+    "baseRefName": "main",
+    "headRefOid": "775158ee656d03bc3601857e8cb0e47fa791caf1",
+    "mergeCommit": {
+      "oid": "f8b644ea20ce5f7cf5b6396531f8d7b01adecdff"
+    },
+    "number": 87,
+    "state": "MERGED",
+    "title": "R43: actual O1 fixed-interval uniformity via compact graph pullback",
+    "url": "https://github.com/Waschtl904/objekt-x-programm/pull/87"
+  },
+  {
+    "baseRefName": "main",
+    "headRefOid": "528153ec944a8201afe9235a53d96afc944fa9fc",
+    "mergeCommit": {
+      "oid": "82f22c1100d15fc7922e566cb440e8290fa55112"
+    },
+    "number": 88,
+    "state": "MERGED",
+    "title": "R43: hub-jump decay, conditional orientation and fixed-old COND uniformity",
+    "url": "https://github.com/Waschtl904/objekt-x-programm/pull/88"
+  }
+]

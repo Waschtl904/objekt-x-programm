@@ -1,7 +1,7 @@
 # CURRENT FRONT — Objekt X / P11 Strong Terminal
 
 > **Operative Kopfschicht — zuerst lesen.**  
-> **Stand (Governance):** 7. September 2026; mathematische Darstellung unverändert.<br>
+> **Stand:** 7. September 2026; analytische Anschlussresultate gemäß verlinkten Audits, Registry unverändert.<br>
 > **Volatile PR-/SHA-Single-Source:** [`00-uebersicht/ACTIVE_FRONT.yaml`](00-uebersicht/ACTIVE_FRONT.yaml)  
 > **Live-main-Policy:** Der aktuelle `main`-Head wird direkt aus GitHub gelesen und absichtlich nicht als SHA in einer versionierten Repo-Datei selbst gespeichert.  
 > **Kanonische Roadmap:** [`00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md`](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)  
@@ -73,6 +73,16 @@ Diese Tabelle ist **Provenienz**, kein mathematischer DAG. Downstream-Arbeit dar
 Jüngste XBAND-Audits der Kette: [Kommutatoren](audits/P11_R43_SCHUR_XBAND_COMM_2026-09-07.md), [Anker/Phase](audits/P11_R43_SCHUR_XBAND_ANCHOR_PHASE_2026-09-07.md) und [symmetrische Quellen-Nachrechnung](audits/P11_R43_SCHUR_XBAND_ANCHOR_RECHECK_2026-09-07.md). Hier ausschließlich **lokale Diagnostik**, keine neue mathematische Front oder Promotion; ihr Integrationsstand folgt `ACTIVE_FRONT.yaml`, nicht historischen Draft-Kopfzeilen.
 
 Der [Integrationsaudit vom 7. September 2026](audits/R43_STACK_INTEGRATION_2026-09-07.md) dokumentiert die abgeschlossenen Merges, begrenzten Korrekturen und exakten Review-Heads. Die Registry bleibt unverändert.
+
+### Analytischer Anschlussstand nach PR87 und PR88
+
+Die später integrierten Ergebnisse und ihre exakten Merge-/Review-Heads stehen getrennt von der historischen 20-PR-Kette unter `integrated_followups` in `ACTIVE_FRONT.yaml`. Der [Anschluss-Integrationsaudit](audits/R43_LOCAL_O1_AND_ORIENTATION_INTEGRATION_2026-09-07.md) sichert die Reviewprovenienz.
+
+- **LOCAL-O1:** [Operatornorm-Uniformität beider vollständiger O1-Kanäle](audits/P11_R43_O1_LOCAL_INTERVAL_UNIFORMITY_2026-09-07.md) auf jedem festen beschränkten Terminalintervall ist analytisch geprüft; keine gemeinsame globale Horizontuniformität.
+- **Bedingte Orientierung:** [Echte Hub-Sprungabschätzung und J10/J11](audits/P11_R43_HUB_JUMP_DECAY_AND_CONDITIONAL_ORIENTATION_2026-09-07.md) liefern Vorzeichenkohärenz aus starker Rest-Tightness. Unter dem ausgewiesenen P11-/R42-/GC-AC-Rahmen genügt damit B-FLAGTIGHT für C6 ohne zusätzliche unabhängige Orientierungspflicht. B-FLAGTIGHT selbst und die ausgewiesenen Rahmenvoraussetzungen werden dadurch nicht neu bewiesen.
+- **Conditioning:** [Uniformität für alle Zukunftshorizonte bei festem alten Horizont](audits/P11_R43_COND_FIXED_OLD_ALL_FUTURE_UNIFORMITY_2026-09-07.md) liefert BR42 für COND; BR39 und der globale tatsächliche Flagbudgetnachweis bleiben offen.
+
+Die aktuelle analytische Hauptfrage ist das globale tatsächliche No-escape-/Flagbudget, etwa der Endpunkt-/Ausschlagsvertrag auf einer vorgegebenen Kette. Historische Aussagen in den folgenden Quellstandsabschnitten sind im Licht dieses Anschlussstands zu lesen; Registry, GC-AC-Zertifizierungsstatus und unbedingtes Strong Terminal/C6 bleiben unverändert.
 
 ---
 
@@ -319,6 +329,10 @@ Die Abhängigkeit des R37-Pfads von einer späteren X-Kandidatenarchitektur ist 
 
 ## 11. Default-Arbeitsfolge
 
+Aktueller Vorrang ist das globale tatsächliche Flagbudget am kanonischen Normalorbit. LOCAL-O1 und die feste-alte/all-future COND-Uniformität werden nicht erneut als offene lokale Beweisaufträge behandelt; die bedingte Orientierung folgt nun aus Tightness. Details und Hypothesen stehen im Anschlussstand in Abschnitt 2.
+
+Die folgende Liste dokumentiert die historische Reihenfolge vor diesen Anschlussresultaten, nicht einen neuen Auftrag, bereits bearbeitete Hard-Channel- oder Proxyfragen erneut zu öffnen.
+
 Für die hier unverändert dargestellten historischen Quellstände gilt vorbehaltlich ihres Reviews die Default-Reihenfolge:
 
 1. **Hard Channel `k=l=1`** unter der echten Sättigung angreifen;
@@ -373,12 +387,14 @@ Die exakten Heads/States stehen ausschließlich in `ACTIVE_FRONT.yaml`.
 
 ```text
 R43 integration / historical chain      see ACTIVE_FRONT.yaml
+LOCAL-O1                               analytically reviewed; fixed interval
+COND future uniformity                 analytically reviewed; old U fixed
 R43 COND collar decay                  ?[O]
 R43 COND hard channels                 ?[O]
 structured COND leakage decay          ?[O]
 B-METINC-COND                          ?[O]
 B-FLAGDYN / B-FLAGTIGHT               ?[O]
-B-SIGN / B-ORIENT                      ?[O]
+B-SIGN / B-ORIENT                      follows from strong rest-tightness in stated framework
 Strong Terminal / C6                   ?[O]
 R37/G4c                                ?[O], separate
 genuine X candidate                    ?[O]

@@ -1,0 +1,48 @@
+{
+  "review_head": "528153ec944a8201afe9235a53d96afc944fa9fc",
+  "review_parent": "e7813fc7c5e1120a1e8aa5c9b26aff1d0bb9dea9",
+  "review_file": "audits/P11_R43_HUB_JUMP_DECAY_AND_CONDITIONAL_ORIENTATION_2026-09-07.md",
+  "review_blob": "501ea5acfdcbb812ba25534b9d4503ab307a18aa",
+  "verdict": "SCOPED READY",
+  "scope": "J1-J11 plus J7prime. Prior full scoped review plus exact final orientation-file diff. Final file lines 26-337.",
+  "excluded": "J12-J15 (final lines 338-403); separately added COND_FIXED_OLD_ALL_FUTURE_UNIFORMITY file; no blanket whole-commit certification",
+  "blockers": [],
+  "nonblocking_notes": [],
+  "independent_strengthening": "||Delta W|| <= 32 (||J||/sqrt(c_S c_R) + 1/c_R) t exp(-t), by Delta W = [Delta(G_S^.5) J - W_- Delta(G_R^.5)] G_R,+^(-.5).",
+  "gcac_scope": "Not needed for jump bounds or |b|->1 implies eventual sign; needed in the cited R43 stack for h weak->0 and B-FLAGTIGHT iff |b|->1. R42 is needed to extend normal strong limit to all odd vectors.",
+  "not_claimed": [
+    "unconditional B-SIGN",
+    "B-FLAGTIGHT itself",
+    "unconditional C6",
+    "global total variation",
+    "summable activation jump variation",
+    "J12-J15 validation",
+    "GCAC recertification",
+    "RH"
+  ],
+  "files": [
+    "/home/user/workspace/c6_jump_orientation_independent.md",
+    "/home/user/workspace/c6-jump-orientation-independent.pplx.md"
+  ],
+  "no_repository_or_github_writes_by_reviewer": true,
+  "previous_review": {
+    "head": "e7813fc7c5e1120a1e8aa5c9b26aff1d0bb9dea9",
+    "blob": "4df927c3a8d30c18274a644de99aece44f6dfaa4",
+    "verdict": "SCOPED READY for J1-J11",
+    "nonblocking_boundary_note": "resolved by final line 269"
+  },
+  "published_definition_base": "775158ee656d03bc3601857e8cb0e47fa791caf1",
+  "publication_status": "LOCAL UNPUBLISHED: no GitHub blob links for these two review commits",
+  "delta_checked": [
+    {
+      "lines": "213-245",
+      "result": "READY: exact isometry identity and 32*(||J||/sqrt(c_S*c_R)+1/c_R)*t*exp(-t) bound correct"
+    },
+    {
+      "line": 269,
+      "result": "READY: T_* outside activation set removes boundary ambiguity"
+    }
+  ],
+  "local_source_snapshot": "/home/user/workspace/c6_jump_orientation_reviewed_local_528153ec.md",
+  "local_exact_diff": "/home/user/workspace/c6_jump_orientation_exact_diff_528153ec.txt"
+}
