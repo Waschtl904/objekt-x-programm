@@ -1,6 +1,6 @@
-# Objekt X — kanonische Forschungsroadmap v2.1.2
+# Objekt X — kanonische Forschungsroadmap v2.1.3
 
-> **Stand:** 2026-09-07; analytische Anschlussresultate gemäß verlinkten Audits, Registry unverändert.<br>
+> **Stand:** 2026-09-08; redaktionelle Post-C6-Nachführung gemäß benannten Quellen, Registry unverändert.<br>
 > **Rolle:** kanonische Abhängigkeits- und Forschungsstrategiekarte.  
 > **Keine Beweisautorität:** Dieses Dokument erzeugt keine `✓[M]`-Promotion, kein `independent GREEN`, keinen Freeze, keinen Merge-Anspruch und keine Object-X-/RH-Folgerung.  
 > **Volatile Frontdaten:** [ACTIVE_FRONT.yaml](ACTIVE_FRONT.yaml)  
@@ -157,33 +157,47 @@ Frage: Wird R37/G4c für eine spätere X-Kandidatenarchitektur tatsächlich ben�
 
 ## 6. Front B — Strong Terminal / C6
 
-Für jedes feste Paar `0<R<S` ist der operative Endpunkt
+**Analytischer Anschlussstand nach PR90:** Der
+[positive Wurzelanker](../audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md)
+liefert PA1 und PA17–PA19. Für jedes feste Paar `0<R<S` folgt
 
 \[
-L_{R,S}^{T,U}
-:=\operatorname{Re}\langle\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R\rangle
-\longrightarrow1.
+W_{R,S}^{[U]}\varepsilon_R\longrightarrow\varepsilon_S,
+\qquad
+L_{R,S}^{T,U}\longrightarrow1\quad(T,U\to\infty).
 \]
 
-Strong Terminal / C6 bleibt `?[O]`.
+Zusammen mit dem ausdrücklich übernommenen tangentialen Satz R42.51
+ist damit Strong Terminal/C6 im **ungeraden P11-Graphraum** hergeleitet.
+Die [dokumentierten AI-Reviews](../audits/R43_C6_ROOT_ANCHOR_REVIEW_2026-09-07/README.md)
+behalten ihre eigene Provenienz; diese Redaktion erzeugt keine Registry-Buchung,
+keine menschliche/formale Zertifizierung und keine neue Vollprüfung von R42.51.
+
+Es wird weder Radienuniformität noch Operatornormkonvergenz, volle
+Objekt-X-Realisierung oder RH beansprucht. Der gerade Sektor ist kein
+zusätzlicher Gegenstand dieser Nachführung.
 
 ### 6.1 R38–R42
 
-Der **exakte Registry-Governance-String** lautet für R38–R42:
+Der **exakte Registry-Governance-String** für R38–R42 bleibt:
 
 ```text
 FROZEN — independently verified AI-GREEN
 ```
 
-Die Registry stellt ausdrücklich klar, dass diese projektinterne Freeze-/Reviewer-Buchung nicht automatisch als einer der formal definierten Subtypen `independent GREEN (cross-model/certificate/human)` umgedeutet werden darf.
-
-R38–R42 reduzieren die Future-Transportfrage auf die verbleibende Normalbahn. R43 bleibt OPEN.
+Er wird nicht in einen der formal definierten Subtypen
+`independent GREEN (cross-model/certificate/human)` umgedeutet.
+R38–R42 liefern den ausgewiesenen Vorbau und insbesondere den Tangentialsatz.
+PA schließt den zuvor verbleibenden Normalkanal; die Gesamtheit aller
+R43-Nebenfragen wird damit nicht pauschal geschlossen oder promotet.
 
 ---
 
 ## 7. R43 — zwei quantitative Ebenen
 
-R43 besitzt zwei unterschiedliche Angriffsebenen:
+Die historische quantitative R43-Route besitzt zwei unterschiedliche Angriffsebenen.
+Sie bleiben optionale Wege für ihre eigenen offenen Abschätzungen, nicht
+Voraussetzungen des direkten PA-Abschlusses aus §6:
 
 1. **strukturierter Direktweg** auf der tatsächlichen fixed-normal-/Flagbahn;
 2. **stärkerer operatorweiter B-METINC-/Spectral-Width-Weg**.
@@ -200,7 +214,7 @@ Die volatile PR-/SHA-Struktur steht ausschließlich in `ACTIVE_FRONT.yaml`.
 
 Die folgenden lokalen IDs sind **exakte IDs der jeweiligen historischen Draft-Audits**. **Draft-source IDs** bezeichnen ihre Herkunft, nicht ihren heutigen GitHub-Draft- oder Mergestatus. Die Registry bleibt bei diesem Governance-Abgleich unverändert; auch ein Merge ist keine Registry-Promotion.
 
-Die jüngsten XBAND-Audits sind in [CURRENT-FRONT, Abschnitt 2](../CURRENT-FRONT.md#2-r43-stack-und-integrationsstand) ausschließlich als lokale Diagnostik verlinkt. Dieser Navigationsabgleich übernimmt keine neue mathematische Front und ändert keine Claims oder Gates.
+Die XBAND-Audits sind in [CURRENT-FRONT, Abschnitt 2](../CURRENT-FRONT.md#2-r43-stack-und-integrationsstand) ausschließlich als lokale Diagnostik verlinkt. Ihr mathematischer Scope bleibt unverändert; die neue operative Priorisierung folgt §24, nicht einer Aufwertung dieser Diagnostik.
 
 ### 8.2 Strukturierter Schur-Defekt
 
@@ -292,7 +306,8 @@ Für terminal-graph-normalisierte Quellen reduziert sich die resolvententranspor
 
 ## 9. Aktueller quantitative COND-Kern
 
-Offen bleiben:
+Diese weiter offenen quantitativen COND-Fragen sind seit dem direkten
+PA-Abschluss Nebenfragen, nicht der aktuelle C6-Hauptgate. Offen bleiben:
 
 ```text
 R43-COND-TRANSPORTED-COLLAR-MASS-DECAY ?[O]
@@ -330,7 +345,9 @@ Unbekannte Quantoren werden ausdrücklich als `unresolved` geführt.
 
 ### 10.1 Route S — strukturierter Direktweg
 
-Die DAG-Knoten sind ausschließlich mathematische IDs/Forschungsfragen:
+Die folgende Kette bewahrt den **historischen hinreichenden COND-Weg**.
+Die DAG-Knoten sind mathematische IDs/Forschungsfragen; das Tightness-Ziel
+ist inzwischen unabhängig durch PA17–PA18 im §6-Scope erreicht.
 
 ```text
 R43-COND-RESOLVENT-TRANSPORTED-LEAKAGE-BOUND
@@ -358,7 +375,7 @@ projected B-FLAGDYN / FD23-compatible control ?[O]
         |
         | --sufficient-route-->
         v
-B-FLAGTIGHT ?[O]
+B-FLAGTIGHT (im §6-Scope bereits via PA17–PA18)
 ```
 
 Die PR-Nummern/Heads zu den Draft-source IDs stehen nur in `ACTIVE_FRONT.yaml` und den jeweiligen Auditquellen.
@@ -383,7 +400,7 @@ B-FLAGMOD ?[O]
 
 Diese Route kontrolliert normalisierte metrische Inkremente bzw. Spektralbreiten und ist stärker als bloße structured-vector Kontrolle.
 
-**Firewall:** Scheitert B-METINC-WIDTH, folgt daraus nicht das Scheitern von B-FLAGMOD oder Strong Terminal; dann ist zur genuin projizierten fixed-normal-/Flaggröße zurückzukehren.
+**Firewall:** Scheitert B-METINC-WIDTH, folgt daraus nicht das Scheitern von B-FLAGMOD oder Strong Terminal. Der direkte PA-Abschluss hängt nicht von diesem hinreichenden Operatorweg ab.
 
 ---
 
@@ -420,7 +437,7 @@ FD23-MINIMAL-CONDITION
   math_status: null
 ```
 
-Frage: Was ist die schwächste quantitative Bedingung, die tatsächlich genügt, um die benötigte cofinale FD23-/Flag-Summierbarkeit zu schließen?
+Frage innerhalb dieser optionalen Route: Was ist die schwächste quantitative Bedingung, die tatsächlich für ihre cofinale FD23-/Flag-Summierbarkeit genügt? Für den direkten PA-Abschluss wird diese Summierbarkeit nicht benötigt.
 
 Diese Frage optimiert die Route; sie ist kein Pflicht-Theoremknoten. Exponentielles Decay wird nicht zum Selbstzweck erhoben.
 
@@ -441,7 +458,11 @@ lautet der exakte Tightness-Gate
 \boxed{\mathrm{B\!-\!FLAGTIGHT}\Longleftrightarrow\lim_m\limsup_U q_m(U)=0.}
 \]
 
-B-FLAGDYN bezeichnet die quantitative Kontrolle der echten Terminalvariation dieser festen Quellraumgröße.
+PA17–PA18 erfüllen die Tightness-Eigenschaft im festen ungeraden §6-Scope
+bereits unmittelbar. Das schließt keine Summierbarkeit ihrer positiven Variation.
+
+B-FLAGDYN bezeichnet weiterhin die gesonderte quantitative Kontrolle der
+echten Terminalvariation dieser festen Quellraumgröße.
 
 Ein stärkerer hinreichender Weg zerlegt in `B-FLAGMOD` und `B-FLAGPHASE` und summiert projizierte Defekte entlang einer geeigneten Terminalpartition.
 
@@ -451,19 +472,26 @@ Ein stärkerer hinreichender Weg zerlegt in `B-FLAGMOD` und `B-FLAGPHASE` und su
 
 ## 13. Nach B-FLAGTIGHT — Sign/Orient und Strong Terminal
 
-Unter B-TIGHT/B-FLAGTIGHT gilt im gebuchten Scope der scharfe Resttest
+**Historisches Kriterium der Tightness-/Orientierungsroute:** Unter ihren
+gebuchten Voraussetzungen gilt der scharfe Resttest
 
 \[
 \boxed{\text{Strong Terminal}\Longleftrightarrow\liminf_{T,U\to\infty}L_{R,S}^{T,U}>-1.}
 \]
 
-B-SIGN/B-ORIENT bezeichnet die verbleibende normale Vorzeichen-/Orientierungsfront. Strong Terminal bleibt `?[O]`.
+Die spätere [Hub-Sprung-/Orientierungsableitung](../audits/P11_R43_HUB_JUMP_DECAY_AND_CONDITIONAL_ORIENTATION_2026-09-07.md)
+behält ihren eigenen bedingten Rahmen. Auf dem **direkten PA-Pfad** folgt
+bereits das positive Grenzvorzeichen aus PA1; PA17–PA19 liefern Tightness
+und den Kreuzterminaltest. B-SIGN/B-ORIENT ist dort keine zusätzliche offene
+Voraussetzung. GC-AC und die übrigen Variationsfragen erhalten dadurch
+keine neue Buchung.
 
 ---
 
 ## 14. Strong Terminal ist noch nicht Objekt X
 
-Ein positiver Abschluss von Strong Terminal/C6 wäre zunächst ein **X-Kandidatenbaustein**.
+Der ausgewiesene fixed-pair-Abschluss von Strong Terminal/C6 ist zunächst
+ein **X-Kandidatenbaustein**, nicht die vollständige Objekt-X-Realisierung.
 
 Es existiert derzeit kein Satz
 
@@ -549,14 +577,15 @@ Erst danach darf ein exakt referenzierter `Q_W≥0 ⇔ RH`-Satz mit passender Te
 
 ## 19. Rollback-/Falsifikationsregeln
 
-- **Draft-source Schur-Leakage fällt:** abhängige Schur-/Leakage-Argumente neu auditieren; Strong Terminal bleibt offen.
+- **Draft-source Schur-Leakage fällt:** abhängige Schur-/Leakage-Argumente neu auditieren; der unabhängige PA-Abschluss wird dadurch nicht automatisch berührt.
 - **Geometric-mean transport fällt:** davon abhängige Good-Normal-/transportierte Teile verlieren ihre Grundlage; unabhängige Branchklassifikation nur nach Re-Audit weiterführen.
 - **Good-Normal reduction fällt:** Zwei-Hard-Channel-/Good-Tail-Reduktion fällt; geometrischer Mittelwert bleibt logisch unberührt.
 - **Transported-Collar-Decay fällt:** aktuelle Structured-COND-Route scheitert/reparaturbedürftig; Strong Terminal nicht automatisch widerlegt.
 - **Hard-channel decay fällt:** aktuelle COND-Decay-Route scheitert; alternative Saturation/Cancellation/direct-projected routes bleiben möglich.
-- **B-METINC-WIDTH fällt:** nur globale Operator-/Spectral-Width-Route fällt; direkte projected Flagroute bleibt offen.
-- **Strong Terminal negativ:** heutige B-/Future-Transport-Kandidatenroute negativ; ohne Necessity-Satz kein Object-X-No-Go und keine RH-Folgerung.
-- **R37/G4c fällt:** konkreter R37-Pfad fällt; R43/Strong Terminal/Object X bleiben ohne Abhängigkeitssatz unentschieden.
+- **B-METINC-WIDTH fällt:** nur die globale Operator-/Spectral-Width-Route fällt; PA wird dadurch nicht erneut offen.
+- **PA oder ein benannter Tangentialeingang fällt:** genau den betroffenen C6-Schluss neu auditieren; andere R43-Ergebnisse und Objekt X werden nicht pauschal widerlegt.
+- **Ein tatsächliches C6-Gegenbeispiel im selben Scope wird bewiesen:** Widerspruch zur PA-/R42-Schlusskette lokalisieren und deren Status berichtigen; ohne Notwendigkeitssatz kein allgemeines Objekt-X-No-Go und keine RH-Folgerung.
+- **R37/G4c fällt:** konkreter R37-Pfad fällt; ohne Abhängigkeitssatz keine Statusänderung von PA/C6 oder Objekt X.
 - **Ein X-Kandidat fällt an D:** dieser Kandidat ist kein Objekt X; kein universelles Object-X-No-Go.
 
 ---
@@ -657,6 +686,11 @@ Der historische `stack_root_base_sha` ist davon verschieden: Er pinnt den urspr�
 
 `CURRENT-FRONT.md`, diese Roadmap, `AKTUELLER_STAND.md` und `ACTIVE_THEOREM_REGISTRY.md` sollen auf `ACTIVE_FRONT.yaml` referenzieren statt dieselben Stack-/Base-SHA-Werte mehrfach manuell zu pflegen.
 
+Die Datei ist dabei ein Ledger gebuchter historischer Daten, keine vollständige
+Live-Liste aller späteren PRs. Nicht nachgeführte Angaben wie `active_gate: R43`
+werden durch diese Redaktion nicht geändert und dürfen den Post-C6-Quellenstand
+in §6/§24 nicht wieder öffnen. Aktuelle PR-Zustände bleiben live zu prüfen.
+
 Eine technische Validierung soll insbesondere prüfen:
 
 - Live-main-Policy (`tracking: live`, Quelle `github:refs/heads/main`) und Verbot einer selbstgespeicherten Current-main-SHA;
@@ -669,13 +703,42 @@ Eine technische Validierung soll insbesondere prüfen:
 
 ## 24. Aktuelle Default-Forschungspriorität
 
-**Aktueller Anschlussstand:** [LOCAL-O1](../audits/P11_R43_O1_LOCAL_INTERVAL_UNIFORMITY_2026-09-07.md) und [die feste-alte/all-future Conditioning-Uniformität](../audits/P11_R43_COND_FIXED_OLD_ALL_FUTURE_UNIFORMITY_2026-09-07.md) sind im dokumentierten Umfang analytisch geprüft. [Der echte Hub-Sprungabfall](../audits/P11_R43_HUB_JUMP_DECAY_AND_CONDITIONAL_ORIENTATION_2026-09-07.md) liefert Orientierung aus starker Rest-Tightness; die P11-/R42-/GC-AC-Voraussetzungen bleiben ausdrücklich erhalten. Primärer neuer Auftrag ist das globale tatsächliche Flagbudget auf einer vorgegebenen Terminalkette, nicht eine weitere Proxyfamilie oder erneute lokale Uniformitätsprüfung. BR39 und B-FLAGTIGHT bleiben offen; keine Registry-Promotion.
+**Redaktionelle Nachführung: 8. September 2026 — nach PR90.**
+Diese Priorisierung beschreibt den belegten Anschlussstand; sie ändert keine
+Registry-Buchung, keinen Beweis und keinen Reviewumfang.
 
-Die folgende Liste ist der historische COND-Prioritätsstand vor der Integration von PR87/PR88. Sie wird als Herkunft der verlinkten Reduktionen erhalten, nicht als erneuter Auftrag zu bereits erledigter Diagnostik.
+**Verfügbarer C6-Eingang:** Der integrierte
+[positive Wurzelanker](../audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md)
+liefert PA1 und PA17–PA19. Zusammen mit dem ausdrücklich übernommenen
+Tangentialsatz R42.51 folgt Strong Terminal/C6 für jedes feste `0<R<S`
+im ungeraden P11-Graphraum. Die [Reviewprovenienz](../audits/R43_C6_ROOT_ANCHOR_REVIEW_2026-09-07/README.md)
+bleibt auf ihren dokumentierten Umfang beschränkt. Keine Radienuniformität,
+keine Operatornormkonvergenz und keine Objekt-X-/RH-Folgerung werden ergänzt.
 
-Die aktuelle COND-Front ist nicht mehr „short/long/sum finden“. Der historische Good-Normal-Draft hat diese Struktur bereits lokal isoliert.
+**Nicht erneut als Hauptauftrag:** B-FLAGTIGHT und das positive terminale
+Grenzvorzeichen folgen auf diesem direkten Pfad aus dem Normalenlimes.
+Der neue Normalenbeweis benötigt weder GC-AC noch ein vorausgesetztes
+Flagbudget. FD23, das J12–J15-Budget, globale O1-Variation und BR39 werden
+dadurch nicht bewiesen; sie bleiben gesonderte, für diesen C6-Abschluss
+nicht erforderliche Fragen. Die bereits geprüften LOCAL-O1- und
+feste-alte/all-future-COND-Ergebnisse bleiben verfügbare Bausteine.
 
-Prioritäten:
+**Primärer neuer Auftrag:** Eine intrinsische, nichtzirkuläre
+Quellen-/Mediator-Realisierung konkretisieren und die vollständige Weil-Gram-Identität
+auf der geeigneten Testklasse mit exakter Normalisierung prüfen. Maßgeblich
+bleiben die [Objekt-X-Arbeitsdefinition](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)
+und die getrennten Fronten C–E. Die Existenz des Terminaltransports allein
+ist noch keine solche Realisierung.
+
+**Anschluss in Prüfung:** [PR #91](https://github.com/Waschtl904/objekt-x-programm/pull/91)
+behandelt Quellenabstieg und eine exakte Weil-Trennung. Er wird ausschließlich
+als analytischer Kandidat mit offenem unabhängigem Exact-Head-Review geführt,
+nicht als geprüfter Eingang oder vollständiger X-Kandidat. Sein Review ist
+der nächste begrenzte Prüfschritt, keine erneute C6-Prüfung.
+
+**Historische COND-Prioritäten — keine Voraussetzungen des direkten PA-Abschlusses:**
+Die folgende Liste bewahrt den früheren Arbeitsweg. Ihre Reaktivierung
+benötigt einen ausdrücklich benannten Bezug zu einer offenen Realisierungsfrage.
 
 1. gesättigte Kontrolle des Hard Channels `k=l=1`;
 2. gesättigte Kontrolle des Hard Channels `k=l=2`;
@@ -683,13 +746,16 @@ Prioritäten:
 4. exakte direkte Kompositionsbrücke von structured COND control zu B-FLAGDYN/FD23;
 5. parallel: `FD23-MINIMAL-CONDITION` — wie schwach darf die ausreichende Summierbarkeit sein?
 
-R37/G4c bleibt separat offen, aber nicht Default, solange die R43/B-Front produktiv bleibt.
+R37/G4c bleibt separat offen; eine notwendige Abhängigkeit der neuen
+Realisierungsroute wird nicht unterstellt. Historische Stackmetadaten bleiben
+in [ACTIVE_FRONT.yaml](ACTIVE_FRONT.yaml); aktuelle PR-Zustände und `main`
+sind live zu prüfen. Keine duplizierte Liste von Head-/Base-SHAs.
 
 ---
 
 ## 25. Explizit weiter OPEN
 
-Unter anderem:
+Weiterhin offen beziehungsweise durch PA **nicht** geschlossen sind unter anderem:
 
 ```text
 R43-COND-TRANSPORTED-COLLAR-MASS-DECAY
@@ -704,10 +770,7 @@ FD23-UNIF
 B-FLAGMOD
 B-FLAGPHASE
 B-FLAGDYN
-B-FLAGTIGHT
-B-SIGN / B-ORIENT
-Strong Terminal / C6
-R43 as a whole
+gemeinsame Conditioning-Horizontkontrolle / BR39
 R37/G4c
 genuine X candidate
 exact full Weil-Gram identity
@@ -716,7 +779,12 @@ Weil-criterion scope verification
 RH
 ```
 
-Keine lokale Buchung oder Integration der historischen Stack-Quellen promoviert einen dieser globalen Knoten.
+**Davon getrennt:** Der in §6 ausgewiesene ungerade fixed-pair-C6-Satz,
+seine Flag-Tightness und positive Orientierung sind PA-Folgerungen, nicht
+weitere offene Voraussetzungen dieses Pfads. Das ist keine pauschale
+Schließung aller R43-Fragen und keine formale Registry-Promotion.
+Der Post-C6-Quellenabstieg aus §24 bleibt ein Kandidat mit eigenem offenen
+Exact-Head-Review; seine Resultate werden nicht als freigegebene Eingänge gebucht.
 
 ---
 
@@ -764,49 +832,21 @@ Wenn eine globale Schranke schwer ist: Negation konkretisieren, Witness suchen, 
 
 ## Kurzkarte
 
-PR-Nummern erscheinen hier bewusst nicht als Knoten; ihre Provenienz steht in `ACTIVE_FRONT.yaml`.
+PR-Nummern sind Provenienz/Container, keine mathematischen Knoten.
+Alle PA-/C6-Aussagen bleiben im festen ungeraden §6-Scope.
 
 ```text
-[R38,R39,R40,R41,R42]
+[P11-Rang-eins-Unterordnung + Rieszkonvergenz + scharfe feste Quellenergien]
         |
-        | --reduces-to-->
+        | --uses positive-root-anchor lemma; implies in stated scope-->
         v
-R43 fixed-normal gate ?[O]
+starker positiver Normalenlimes (PA1)
         |
-        | --optional-route: structured-->
+        | --together with R42.51 implies-->
         v
-R43-COND-RESOLVENT-TRANSPORTED-LEAKAGE-BOUND
+fixed-pair Strong Terminal/C6 (ungerader P11-Graphraum)
         |
-        | --used-by-->
-        v
-[R43-COND-GOOD-NORMAL-COLLAR-PLUS-TAIL,
- R43-COND-TWO-HARD-DIAGONAL-NORMAL-CHANNELS]
-        |
-        | --reduces current target to-->
-        +---- collar mass decay ?[O]
-        |
-        +---- hard (1,1)+(2,2) saturated decay ?[O]
-        |
-        v
-structured leakage decay ?[O]
-        |
-        | --open-bridge-->
-        v
-projected B-FLAGDYN / FD23 ?[O]
-        |
-        | --sufficient-route-->
-        v
-B-FLAGTIGHT ?[O]
-        |
-        | --reduces-to-->
-        v
-B-SIGN / B-ORIENT ?[O]
-        |
-        | --current open route-->
-        v
-Strong Terminal ?[O]
-        |
-        | --candidate-input only-->
+        | --candidate-input only; no implication to Object X-->
         v
 genuine X candidate ?[O]
         |
@@ -814,24 +854,31 @@ genuine X candidate ?[O]
         v
 exact full Weil-Gram identity ?[O]
         |
-        | --component-of-->
+        | --component-of realization with intrinsicity + test scope-->
         v
 Object-X realization ?[O]
         |
-        | ⇒
+        | ==> by exact Gram identity
         v
-Q_W(f,f)≥0
+Q_W(f,f) >= 0
         |
-        | --requires exact scope verification-->
+        | --requires exact criterion-scope verification-->
         v
-Weil criterion / RH bridge
+Weil criterion / RH bridge ?[O]
 ```
 
-Separat und **ohne Kante zum X-Pfad**:
+Der Quellenabstieg/Weil-Trennungs-Kandidat aus §24 ist ein begrenzter
+Anschluss in Prüfung, kein bereits konstruierter voller X-Kandidat.
+COND-/FD23-/Variationswege bleiben als optionale Nebenrouten in §§7–13;
+sie werden nicht vor den bereits ausgewiesenen PA-Abschluss gesetzt.
+
+Separat und **ohne unbelegte Kante zum X-Pfad**:
 
 ```text
 R37 / G4c ?[O]
 relation to X route: unresolved
 ```
 
-**Firewall:** Keine strategische, `candidate-input`-, `uses`-, `open-bridge`- oder `sufficient-route`-Kante darf als logische Implikation gelesen werden.
+**Firewall:** `candidate-input`, `uses`, `open-bridge` und `sufficient-route`
+sind keine unbenannten logischen Implikationen. Kein neuer Beweis,
+kein Reviewtransfer und keine Registry-Promotion durch diese Karte.
