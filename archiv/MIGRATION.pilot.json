@@ -1,0 +1,64 @@
+{
+  "schema_version": "1",
+  "basis_commit": "fb49221b50174615d37ffe763b6aa3cdd87b91d6",
+  "migration_date": "2026-09-08",
+  "wave": "PR-A",
+  "entries": [
+    {
+      "old_path": "ARCHIV-AUDIT-NEU203.md",
+      "new_path": "archiv/journal-audits/ARCHIV-AUDIT-NEU203.md",
+      "byte_identical": true,
+      "content_modified": false,
+      "source_blob": "BITTE_EINTRAGEN",
+      "destination_blob": "BITTE_EINTRAGEN"
+    },
+    {
+      "old_path": "ARCHIV-AUDIT-NEU204.md",
+      "new_path": "archiv/journal-audits/ARCHIV-AUDIT-NEU204.md",
+      "byte_identical": true,
+      "content_modified": false,
+      "source_blob": "BITTE_EINTRAGEN",
+      "destination_blob": "BITTE_EINTRAGEN"
+    },
+    {
+      "old_path": "ARCHIV-AUDIT-NEU205.md",
+      "new_path": "archiv/journal-audits/ARCHIV-AUDIT-NEU205.md",
+      "byte_identical": true,
+      "content_modified": false,
+      "source_blob": "BITTE_EINTRAGEN",
+      "destination_blob": "BITTE_EINTRAGEN"
+    },
+    {
+      "old_path": "ARCHIV-AUDIT-NEU206.md",
+      "new_path": "archiv/journal-audits/ARCHIV-AUDIT-NEU206.md",
+      "byte_identical": true,
+      "content_modified": false,
+      "source_blob": "BITTE_EINTRAGEN",
+      "destination_blob": "BITTE_EINTRAGEN"
+    },
+    {
+      "old_path": "ARCHIV-AUDIT-NEU207.md",
+      "new_path": "archiv/journal-audits/ARCHIV-AUDIT-NEU207.md",
+      "byte_identical": true,
+      "content_modified": false,
+      "source_blob": "BITTE_EINTRAGEN",
+      "destination_blob": "BITTE_EINTRAGEN"
+    },
+    {
+      "old_path": "ARCHIV-AUDIT-NEU208.md",
+      "new_path": "archiv/journal-audits/ARCHIV-AUDIT-NEU208.md",
+      "byte_identical": true,
+      "content_modified": false,
+      "source_blob": "BITTE_EINTRAGEN",
+      "destination_blob": "BITTE_EINTRAGEN"
+    },
+    {
+      "old_path": "OP-4-1-forschungsagenda.md",
+      "new_path": "archiv/forschungsagenden/OP-4-1-forschungsagenda.md",
+      "byte_identical": true,
+      "content_modified": false,
+      "source_blob": "BITTE_EINTRAGEN",
+      "destination_blob": "BITTE_EINTRAGEN"
+    }
+  ]
+}
