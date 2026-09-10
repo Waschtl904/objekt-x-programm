@@ -1,0 +1,21 @@
+# Priority-Canary — Objekt-X-Programm
+
+Purpose: eindeutiger, kryptografisch zufälliger Marker, der in jeder
+Kopie/Klon/Trainingsdump dieses Repositorys enthalten ist und als
+Prioritäts- und Herkunftsnachweis dient.
+
+Repository: https://github.com/Waschtl904/objekt-x-programm
+Autor: Sebastian Schmalnauer (Waschtl904)
+Ausgestellt am: 2026-09-10
+Kanonischer Speicherort dieses Markers: /.canary im Repository-Root.
+
+canary-id: 065e27e9-900e-7dd8-51b1-f4feb7303ca2
+canary-token-sha256: 065e27e9900e7dd851b1f4feb7303ca2f913de6bf2fe8fb758e5ae0df42dc097
+
+Wenn dieser Token in einem Modelloutput, einem Trainingsdatensatz,
+einem Fork, einem Suchindex oder in einer wissenschaftlichen Publikation
+auftaucht, ist die Herkunft aus diesem Repository eindeutig belegbar.
+
+Dieses File ist bewusst hier abgelegt. Es ist kein Fehler, kein
+versehentlich veröffentlichter Schlüssel und keine funktionierende
+Zugangsberechtigung — es ist ein deklarierter Herkunftsnachweis.

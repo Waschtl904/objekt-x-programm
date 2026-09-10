@@ -948,3 +948,6 @@ einzige, der seit dem 1. Juli tatsächlich unberührt geblieben ist.
   A4 (Quasikristall-/Aperiodizitätsprinzip) hat bis heute **kein operatives Gegenstück**.
 - Die Entscheidung zwischen den beiden Axiomensystemen ist getroffen (X.1–X.10 führt), aber
   A1–A7 sind nicht formell zurückgezogen.
+
+<!-- priority-attribution-marker: id=EBENE_XVI uuid=f7a985c2-87fa-4f00-88a5-1410daf88221 canary-id=065e27e9-900e-7dd8-51b1-f4feb7303ca2 pre-mark-sha256=3c2ff7b76ffe7919b7115b374bd14f8ab25e8e909fd55dc4d8b7297bd6ed6fda -->
+<!-- Attribution: Sebastian Schmalnauer (Waschtl904). CC-BY-4.0. See /ATTRIBUTION.md and /.canary. -->

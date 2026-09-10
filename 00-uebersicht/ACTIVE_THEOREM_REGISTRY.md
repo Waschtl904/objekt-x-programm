@@ -279,3 +279,6 @@ Diese Registry wird nur geändert, wenn sich mindestens eines der folgenden Ding
 6. eine Änderung der Statusnomenklatur selbst (Abschnitt 0).
 
 Historische oder thematisch entfernte Resultate werden hier nicht vollständig katalogisiert.
+
+<!-- priority-attribution-marker: id=ACTIVE_REGISTRY uuid=e614aa0a-7217-4f67-8699-32df53a27ee8 canary-id=065e27e9-900e-7dd8-51b1-f4feb7303ca2 pre-mark-sha256=54d92ee861b2b68fe6e06ca772b2a1e8fbdf49ec49be857966b7b5121797ae77 -->
+<!-- Attribution: Sebastian Schmalnauer (Waschtl904). CC-BY-4.0. See /ATTRIBUTION.md and /.canary. -->

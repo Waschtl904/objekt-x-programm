@@ -397,3 +397,6 @@ Nicht-Implikations-Firewalls wird separat geführt in
 Der lokale Schur-Test \(\ker\Gamma_I=\{0\}\) bleibt `?[O]`; quantitative
 Winkel-/Closed-Range-Sätze sind stärkere Stufen und dürfen nicht in diesen offenen
 Injektivitätstest hineingelesen werden.
+
+<!-- priority-attribution-marker: id=OBJ_X_DEF uuid=e0adf7eb-7461-4d72-8ed6-97d4bf8c4c29 canary-id=065e27e9-900e-7dd8-51b1-f4feb7303ca2 pre-mark-sha256=b3c66124bba5dc66174601e5d75a29fa2f6a679419cb316b388f8caca595e1a9 -->
+<!-- Attribution: Sebastian Schmalnauer (Waschtl904). CC-BY-4.0. See /ATTRIBUTION.md and /.canary. -->
