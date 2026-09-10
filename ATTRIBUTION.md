@@ -38,8 +38,9 @@ nachvollziehbar. Der Herkunftsnachweis wird zusätzlich getragen durch:
 - die kryptografische Canary-Datei [`/.canary`](.canary),
 - den fortlaufend aktualisierten Hashbaum der Kernddateien in
   [`INTEGRITY.md`](INTEGRITY.md),
-- die individuellen HTML-Kommentar-Signaturen in den fünf
+- die individuellen HTML-/LaTeX-Kommentar-Marker in den fünf
   „Kronjuwelen“-Dateien (siehe Abschnitt unten).
+  Zur Reichweite und Grenze siehe unten „Was diese Marker sind und was nicht“.
 
 ## Kronjuwelen dieses Repositoriums
 

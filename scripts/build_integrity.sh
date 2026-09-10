@@ -19,6 +19,17 @@ FILES=(
   "tests/fixtures/dummy_credentials.json"
 )
 
+# Pflichtdateiprüfung VOR jeder Manifestausgabe: fehlt eine Eingabe
+# oder ist sie unlesbar, muss der Generator fehlschlagen. Eine gültige
+# Beschreibung einer fehlenden Datei ist kein Integritätsnachweis.
+for f in "${FILES[@]}"; do
+  if [[ ! -f "$f" || ! -r "$f" ]]; then
+    printf 'build_integrity: required file missing or unreadable: %s\n' \
+      "$f" >&2
+    exit 1
+  fi
+done
+
 cat <<'HEAD'
 # INTEGRITY.md — Hashbaum der Kernddateien
 
@@ -36,12 +47,8 @@ neues Manifest erzeugen.
 HEAD
 
 for f in "${FILES[@]}"; do
-  if [ -f "$f" ]; then
-    H=$(sha256sum -- "$f" | awk '{print $1}')
-    printf "| \`%s\` | \`%s\` |\n" "$f" "$H"
-  else
-    printf "| \`%s\` | MISSING |\n" "$f"
-  fi
+  H=$(sha256sum -- "$f" | awk '{print $1}')
+  printf "| \`%s\` | \`%s\` |\n" "$f" "$H"
 done
 
 cat <<'TAIL'

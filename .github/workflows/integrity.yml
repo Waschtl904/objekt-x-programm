@@ -20,11 +20,15 @@ on:
       - ".github/workflows/integrity.yml"
       - "scripts/build_integrity.sh"
       - "scripts/verify_integrity.sh"
+      # INTEGRITY.md selbst, damit auch reine Manifest-Aenderungen
+      # (z. B. Nachpflegen von Hashwerten) einen Lauf ausloesen.
+      - "INTEGRITY.md"
   workflow_dispatch: {}
 
-# Koordinieren nur teilnehmender Workflow-Laeufe untereinander; ersetzt
-# keine korrekte Veroeffentlichung. Ein wartender Lauf wird nicht
-# frueher abgebrochen.
+# Koordiniert teilnehmende Workflow-Laeufe untereinander; ersetzt keine
+# korrekte Veroeffentlichung. cancel-in-progress: false schuetzt den
+# gerade laufenden Job; in der Standard-Warteschlange kann jedoch ein
+# neuer wartender Lauf einen bereits wartenden ersetzen.
 concurrency:
   group: integrity-main
   cancel-in-progress: false
@@ -67,12 +71,16 @@ jobs:
             # Sofortige Selbstpruefung: Manifest muss zu Quellen passen.
             bash scripts/verify_integrity.sh INTEGRITY.md
 
-            if git diff --quiet -- INTEGRITY.md; then
+            # Erst aufnehmen, dann vorgemerkte Aenderungen pruefen.
+            # git diff -- <path> erkennt untracked new files nicht;
+            # ein fehlendes Remote-INTEGRITY.md wuerde sonst faelschlich
+            # als "nichts zu tun" gemeldet.
+            git add -- INTEGRITY.md
+            if git diff --cached --quiet -- INTEGRITY.md; then
               echo "INTEGRITY.md already matches source snapshot; nothing to publish."
               exit 0
             fi
 
-            git add INTEGRITY.md
             git commit -m "chore(integrity): refresh INTEGRITY.md hash tree"
 
             if git push origin HEAD:main; then
