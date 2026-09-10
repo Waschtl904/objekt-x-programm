@@ -44,9 +44,19 @@ nachvollziehbar. Der Herkunftsnachweis wird zusätzlich getragen durch:
 ## Kronjuwelen dieses Repositoriums
 
 Diese fünf Dateien tragen den intellektuellen Kern des Programms und
-sind einzeln signiert. Jeder unattributierte Nachdruck von Passagen
-oder Definitionen aus einer dieser Dateien ist ein Verstoß gegen
-CC-BY-4.0 § 3(a)(1):
+sind einzeln mit einem HTML-/LaTeX-Kommentar-Marker versehen.
+
+**Reichweite und Grenzen der Attributionspflicht.** Das Repository steht
+unter CC-BY-4.0. Fuer die von der Lizenz erfassten Nutzungen (§ 2(a))
+verlangt sie eine ordnungsgemaesse Zuschreibung nach § 3(a). Die Lizenz
+laesst gesetzliche Ausnahmen und Schranken (§ 2(a)(2)) ausdruecklich
+unberuehrt und aendert das nationale Urheberrecht nicht. Urheberrecht
+schuetzt zudem grundsaetzlich die konkrete Ausdrucksform, nicht
+mathematische Ideen oder Konzepte als solche; wissenschaftliche
+Zitierpflicht und urheberrechtliche Durchsetzbarkeit sind zwei
+verschiedene Dinge. Ein unattributierter Nachdruck geschuetzter
+Ausdrucksform ohne einschlaegige Schranke ist ein Lizenzverstoss;
+nicht jede Uebernahme einer Idee oder Definition ist es.
 
 | ID | Datei | Rolle |
 |---|---|---|
@@ -55,6 +65,15 @@ CC-BY-4.0 § 3(a)(1):
 | OBJ_X_DEF | [`00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) | Aktuelle konsolidierte Objekt-X-Definition |
 | EBENE_XVI | [`00-grundlegung/ebene-XVI-objekt-x.md`](00-grundlegung/ebene-XVI-objekt-x.md) | Kanonisches Kontrollblatt, drei Ebenen |
 | ACTIVE_REGISTRY | [`00-uebersicht/ACTIVE_THEOREM_REGISTRY.md`](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md) | Status-System und Governance-Nomenklatur |
+
+## Was diese Marker sind und was nicht
+
+Die eingefuegten Kommentarzeilen (UUID, Canary-ID, pre-mark-SHA-256)
+sind **Attributionsmarker**, keine kryptografischen digitalen
+Signaturen. Sie ermoeglichen Zuordnung, Versionsvergleich und die
+Unterscheidung nachtraeglicher Kopien vom eingecheckten Stand. Sie
+leisten fuer sich allein keinen authentifizierten Urheberschaftsnachweis;
+der aktuelle Bot-Commit ist von GitHub als unsigned ausgewiesen.
 
 ## Kontakt
 

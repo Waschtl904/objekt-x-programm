@@ -1,9 +1,13 @@
 # INTEGRITY.md — Hashbaum der Kernddateien
 
-Zuletzt aktualisiert: 2026-09-10T04:13:42Z
+Dieses Manifest wird durch den Workflow `.github/workflows/integrity.yml`
+und das Skript `scripts/build_integrity.sh` deterministisch aus den
+unten aufgezaehlten Quelldateien erzeugt und veroeffentlicht.
 
-Diese Datei wird durch den Workflow `.github/workflows/integrity.yml` bei jedem Push automatisch aktualisiert.
-Jede Zeile enthält die SHA-256-Prüfsumme einer intellektuellen Kronjuwel-, Attributions- oder Canary-Datei.
+Der Inhalt aendert sich ausschliesslich, wenn sich mindestens eine
+dieser Quelldateien inhaltlich aendert. Zeitstempel werden bewusst
+nicht in das Manifest aufgenommen, damit unveraenderte Quellen kein
+neues Manifest erzeugen.
 
 | Datei | SHA-256 |
 |---|---|
@@ -22,5 +26,6 @@ Jede Zeile enthält die SHA-256-Prüfsumme einer intellektuellen Kronjuwel-, Att
 Reproduktion:
 
 ```
-sha256sum papers/P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex papers/P11_sections/P11_O3af_Gamma_Symbol_Bridge.tex 00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md 00-grundlegung/ebene-XVI-objekt-x.md 00-uebersicht/ACTIVE_THEOREM_REGISTRY.md .canary ATTRIBUTION.md SECURITY.md CITATION.cff LICENSE tests/fixtures/dummy_credentials.json
+bash scripts/build_integrity.sh > INTEGRITY.md
+bash scripts/verify_integrity.sh INTEGRITY.md
 ```

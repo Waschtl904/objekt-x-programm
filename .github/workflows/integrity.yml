@@ -15,7 +15,19 @@ on:
       - "CITATION.cff"
       - "LICENSE"
       - "tests/fixtures/dummy_credentials.json"
+      # Workflow-Datei selbst mit aufnehmen, damit Änderungen am
+      # Publikationspfad garantiert einen Lauf auslösen.
+      - ".github/workflows/integrity.yml"
+      - "scripts/build_integrity.sh"
+      - "scripts/verify_integrity.sh"
   workflow_dispatch: {}
+
+# Koordinieren nur teilnehmender Workflow-Laeufe untereinander; ersetzt
+# keine korrekte Veroeffentlichung. Ein wartender Lauf wird nicht
+# frueher abgebrochen.
+concurrency:
+  group: integrity-main
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -24,86 +36,61 @@ jobs:
   refresh-integrity:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout main tip explicitly
+        uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
           persist-credentials: true
 
-      - name: Recompute INTEGRITY.md
+      - name: Recompute-and-publish loop
         shell: bash
+        env:
+          GIT_AUTHOR_NAME: "github-actions[bot]"
+          GIT_AUTHOR_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
+          GIT_COMMITTER_NAME: "github-actions[bot]"
+          GIT_COMMITTER_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
         run: |
           set -euo pipefail
-          FILES=(
-            "papers/P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex"
-            "papers/P11_sections/P11_O3af_Gamma_Symbol_Bridge.tex"
-            "00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md"
-            "00-grundlegung/ebene-XVI-objekt-x.md"
-            "00-uebersicht/ACTIVE_THEOREM_REGISTRY.md"
-            ".canary"
-            "ATTRIBUTION.md"
-            "SECURITY.md"
-            "CITATION.cff"
-            "LICENSE"
-            "tests/fixtures/dummy_credentials.json"
-          )
-          NOW=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-          {
-            echo "# INTEGRITY.md — Hashbaum der Kernddateien"
-            echo
-            echo "Zuletzt aktualisiert: ${NOW}"
-            echo
-            echo "Diese Datei wird durch den Workflow \`.github/workflows/integrity.yml\` bei jedem Push automatisch aktualisiert."
-            echo "Jede Zeile enthält die SHA-256-Prüfsumme einer intellektuellen Kronjuwel-, Attributions- oder Canary-Datei."
-            echo
-            echo "| Datei | SHA-256 |"
-            echo "|---|---|"
-            for f in "${FILES[@]}"; do
-              if [ -f "$f" ]; then
-                H=$(sha256sum "$f" | awk '{print $1}')
-                echo "| \`$f\` | \`$H\` |"
-              else
-                echo "| \`$f\` | MISSING |"
-              fi
-            done
-            echo
-            echo "Reproduktion:"
-            echo
-            echo '```'
-            echo "sha256sum ${FILES[*]}"
-            echo '```'
-          } > INTEGRITY.md
+          git config user.name  "$GIT_AUTHOR_NAME"
+          git config user.email "$GIT_AUTHOR_EMAIL"
 
-      - name: Commit if changed
-        shell: bash
-        run: |
-          set -euo pipefail
-          if git diff --quiet -- INTEGRITY.md; then
-            echo "INTEGRITY.md unchanged."
-            exit 0
-          fi
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add INTEGRITY.md
-          git commit -m "chore(integrity): refresh INTEGRITY.md hash tree"
-          # Robust against concurrent runs: rebase-and-retry, then bail
-          # gracefully if a sibling run already pushed a newer hash tree.
           for attempt in 1 2 3; do
-            if git push; then
-              echo "pushed on attempt $attempt"
+            echo "== attempt $attempt =="
+            # Immer frischen main-Stand holen und darauf zuruecksetzen.
+            git fetch --quiet origin main
+            git checkout --quiet -B main origin/main
+
+            # Manifest AUS DIESEM Snapshot neu berechnen.
+            bash scripts/build_integrity.sh > INTEGRITY.md
+
+            # Sofortige Selbstpruefung: Manifest muss zu Quellen passen.
+            bash scripts/verify_integrity.sh INTEGRITY.md
+
+            if git diff --quiet -- INTEGRITY.md; then
+              echo "INTEGRITY.md already matches source snapshot; nothing to publish."
               exit 0
             fi
-            echo "push rejected on attempt $attempt, rebasing"
-            git fetch origin main
-            if git rebase origin/main; then
-              continue
-            fi
-            git rebase --abort || true
-            echo "rebase conflict; sibling run has the authoritative INTEGRITY.md"
-            exit 0
-          done
-          echo "gave up after 3 attempts; sibling run likely already refreshed"
-          exit 0
 
-concurrency:
-  group: integrity-main
-  cancel-in-progress: false
+            git add INTEGRITY.md
+            git commit -m "chore(integrity): refresh INTEGRITY.md hash tree"
+
+            if git push origin HEAD:main; then
+              echo "published on attempt $attempt"
+              exit 0
+            fi
+            echo "fast-forward push rejected on attempt $attempt; restart from fresh snapshot"
+            # Lokalen Commit verwerfen; naechste Runde beginnt neu.
+            git reset --hard HEAD~1
+          done
+
+          echo "== gave up after 3 attempts; verify remote independently =="
+          # Frischen Snapshot ziehen und Remote-Manifest gegen Remote-Quellen pruefen.
+          git fetch --quiet origin main
+          git checkout --quiet -B main origin/main
+          if bash scripts/verify_integrity.sh INTEGRITY.md; then
+            echo "remote INTEGRITY.md matches remote sources; accepting sibling publication"
+            exit 0
+          fi
+          echo "remote INTEGRITY.md does NOT match remote sources"
+          exit 1
