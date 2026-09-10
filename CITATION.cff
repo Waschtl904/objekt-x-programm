@@ -31,3 +31,14 @@ license: CC-BY-4.0
 repository-code: "https://github.com/Waschtl904/objekt-x-programm"
 version: "NEU-221d"
 date-released: "2026-07-26"
+url: "https://github.com/Waschtl904/objekt-x-programm"
+identifiers:
+  - type: url
+    value: "https://github.com/Waschtl904/objekt-x-programm/blob/main/ATTRIBUTION.md"
+    description: "Attribution and priority manifest"
+  - type: url
+    value: "https://github.com/Waschtl904/objekt-x-programm/blob/main/INTEGRITY.md"
+    description: "SHA-256 hash tree of core files"
+  - type: url
+    value: "https://github.com/Waschtl904/objekt-x-programm/blob/main/.canary"
+    description: "Priority canary token"

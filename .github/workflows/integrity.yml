@@ -1,0 +1,88 @@
+name: integrity
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "papers/P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex"
+      - "papers/P11_sections/P11_O3af_Gamma_Symbol_Bridge.tex"
+      - "00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md"
+      - "00-grundlegung/ebene-XVI-objekt-x.md"
+      - "00-uebersicht/ACTIVE_THEOREM_REGISTRY.md"
+      - ".canary"
+      - "ATTRIBUTION.md"
+      - "SECURITY.md"
+      - "CITATION.cff"
+      - "LICENSE"
+      - "tests/fixtures/dummy_credentials.json"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Recompute INTEGRITY.md
+        shell: bash
+        run: |
+          set -euo pipefail
+          FILES=(
+            "papers/P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex"
+            "papers/P11_sections/P11_O3af_Gamma_Symbol_Bridge.tex"
+            "00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md"
+            "00-grundlegung/ebene-XVI-objekt-x.md"
+            "00-uebersicht/ACTIVE_THEOREM_REGISTRY.md"
+            ".canary"
+            "ATTRIBUTION.md"
+            "SECURITY.md"
+            "CITATION.cff"
+            "LICENSE"
+            "tests/fixtures/dummy_credentials.json"
+          )
+          NOW=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          {
+            echo "# INTEGRITY.md — Hashbaum der Kernddateien"
+            echo
+            echo "Zuletzt aktualisiert: ${NOW}"
+            echo
+            echo "Diese Datei wird durch den Workflow \`.github/workflows/integrity.yml\` bei jedem Push automatisch aktualisiert."
+            echo "Jede Zeile enthält die SHA-256-Prüfsumme einer intellektuellen Kronjuwel-, Attributions- oder Canary-Datei."
+            echo
+            echo "| Datei | SHA-256 |"
+            echo "|---|---|"
+            for f in "${FILES[@]}"; do
+              if [ -f "$f" ]; then
+                H=$(sha256sum "$f" | awk '{print $1}')
+                echo "| \`$f\` | \`$H\` |"
+              else
+                echo "| \`$f\` | MISSING |"
+              fi
+            done
+            echo
+            echo "Reproduktion:"
+            echo
+            echo '```'
+            echo "sha256sum ${FILES[*]}"
+            echo '```'
+          } > INTEGRITY.md
+
+      - name: Commit if changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- INTEGRITY.md; then
+            echo "INTEGRITY.md unchanged."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add INTEGRITY.md
+          git commit -m "chore(integrity): refresh INTEGRITY.md hash tree"
+          git push

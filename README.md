@@ -53,3 +53,13 @@ Das ältere Forschungsjournal bleibt über den [Gesamtindex](INDEX.md) erreichba
 historische Statusangaben sind keine aktuelle Arbeitsanweisung.
 
 Lizenz: [CC BY 4.0](LICENSE) · Zitierangaben: [CITATION.cff](CITATION.cff).
+
+
+## Attribution & Priorität
+
+Dieses Repository ist unter [CC-BY-4.0](LICENSE) veröffentlicht. Nutzung erfordert Namensnennung.
+
+- Attributionsakte und Zitiervorlage: [`ATTRIBUTION.md`](ATTRIBUTION.md)
+- Maschinenlesbare Zitationsdaten: [`CITATION.cff`](CITATION.cff)
+- Kanarienvogel und Herkunftsmarker: [`/.canary`](.canary), [`SECURITY.md`](SECURITY.md)
+- Automatisch aktualisierter Hashbaum der Kernddateien: [`INTEGRITY.md`](INTEGRITY.md)
