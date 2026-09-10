@@ -1,6 +1,6 @@
 # INTEGRITY.md — Hashbaum der Kernddateien
 
-Zuletzt aktualisiert: 2026-09-10T03:51:14Z
+Zuletzt aktualisiert: 2026-09-10T04:13:42Z
 
 Diese Datei wird durch den Workflow `.github/workflows/integrity.yml` bei jedem Push automatisch aktualisiert.
 Jede Zeile enthält die SHA-256-Prüfsumme einer intellektuellen Kronjuwel-, Attributions- oder Canary-Datei.
