@@ -85,4 +85,25 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add INTEGRITY.md
           git commit -m "chore(integrity): refresh INTEGRITY.md hash tree"
-          git push
+          # Robust against concurrent runs: rebase-and-retry, then bail
+          # gracefully if a sibling run already pushed a newer hash tree.
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "push rejected on attempt $attempt, rebasing"
+            git fetch origin main
+            if git rebase origin/main; then
+              continue
+            fi
+            git rebase --abort || true
+            echo "rebase conflict; sibling run has the authoritative INTEGRITY.md"
+            exit 0
+          done
+          echo "gave up after 3 attempts; sibling run likely already refreshed"
+          exit 0
+
+concurrency:
+  group: integrity-main
+  cancel-in-progress: false
