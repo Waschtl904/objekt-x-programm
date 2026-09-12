@@ -7,6 +7,7 @@ Usage:
   python scripts/run_ox_gen_normalization_hardened.py 2000 c
 
 where a=1/2, b=4/5, c=1.
+The process exits nonzero if any A--F/C2 residual ball rigorously excludes zero.
 """
 import sys, time
 from flint import arb
@@ -18,10 +19,22 @@ MIX=[(0,1),(1,2)]
 key=sys.argv[2] if len(sys.argv)>2 else 'a'
 AL={'a':[arb(1)/2],'b':[arb(8)/10],'c':[arb(1)]}[key]
 
+
+def contains_zero(x):
+    # Arb comparisons are proof-oriented: x>0 or x<0 is true only if the whole ball has that sign.
+    return not (x > 0) and not (x < 0)
+
+
+def require_zero(label,x):
+    if not contains_zero(x):
+        raise AssertionError(f"{label}: residual ball excludes zero: {x}")
+
+
 print(f"### Hardened normalization gate, Arb prec {g.ctx.prec} Bit, Z={Z}")
 print(f"### 2A+1 = log(2pi)+C0 = {g.fmt(g.TWOAP1)}")
 print(f"### uniform r1pp tail |u|<=2 after NB={g.NB}: <= {g._RTAIL.str(8,radius=False)}")
 
+checks=0
 for a in AL:
     W=g.vm_upto((2*a).exp())
     Aa=2*sum((lp/arb(n).sqrt() for n,lp in W.items()),arb(0))
@@ -40,13 +53,27 @@ for a in AL:
         psF=g.fint(g.W_psi,i,j,a,Z,g.mk_tail('loglike'),logw=True)
         Qr=Lr+P-(Aa+g.TWOAP1)*ip-r0-r1
         Qf=psF-TrF-r0F
+        residuals={
+            'A': ip-ipF,
+            'B': Lr-LF,
+            'C': Tr-TrF,
+            'C2': P-(Aa*ip-Tr),
+            'D': r0-r0F,
+            'E': r1-r1F,
+            'F': Qr-Qf,
+        }
+        for nm,x in residuals.items():
+            require_zero(f"a={a}, pair=({i+1},{j+1}), block={nm}",x)
+            checks += 1
         tag='MIX' if (i,j) in MIX else 'same parity'
         print(f"--- (i,j)=({i+1},{j+1}) {tag} [{time.time()-t0:.0f}s]")
-        print(f"  A  <v,w>  d {g.fmt(ip-ipF)}")
-        print(f"  B  L_a    d {g.fmt(Lr-LF)}")
-        print(f"  C  Tr     d {g.fmt(Tr-TrF)}")
-        print(f"  C2 P_a    d {g.fmt(P-(Aa*ip-Tr))}")
-        print(f"  D  R0     d {g.fmt(r0-r0F)}")
-        print(f"  E  R1     d {g.fmt(r1-r1F)}")
-        print(f"  F  Q      RESID {g.fmt(Qr-Qf)}")
+        print(f"  A  <v,w>  d {g.fmt(residuals['A'])}")
+        print(f"  B  L_a    d {g.fmt(residuals['B'])}")
+        print(f"  C  Tr     d {g.fmt(residuals['C'])}")
+        print(f"  C2 P_a    d {g.fmt(residuals['C2'])}")
+        print(f"  D  R0     d {g.fmt(residuals['D'])}")
+        print(f"  E  R1     d {g.fmt(residuals['E'])}")
+        print(f"  F  Q      RESID {g.fmt(residuals['F'])}")
         sys.stdout.flush()
+
+print(f"NORMALIZATION HARDENED PASS: {checks} residual balls contain zero")
