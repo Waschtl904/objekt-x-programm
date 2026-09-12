@@ -147,7 +147,7 @@ def SINC(w):
         for m in range(1,45):
             term=term*(-t)/((2*m)*(2*m+1)); s=s+term
         r=(thresh*thresh)/(arb(92)*arb(93))
-        first=(thresh**90)/arb(sp.factorial(91))
+        first=(thresh**90)/arb(int(sp.factorial(91)))
         tail=first/(1-r)
         return s + arb(0,tail)
     return w.sin()/w
