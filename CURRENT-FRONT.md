@@ -39,7 +39,7 @@ Für `a<=1` liegt Suzukis lokalisierte Weilform in der endlichen Form
 Q_{B_a}(v)=G_a^+(v)-N_a(v)
 ```
 
-vor. `G_a^+` besteht aus explizit positiven logarithmischen Douglas-/Prime-Kanal-/Log-Multiplikator-Formen; `N_a=c_aI+C_a` enthält den expliziten Skalar und den stetigen `r''`-Korrektor.
+vor. `G_a^+` besteht aus explizit positiven **logarithmischen Formraum-/`log|D|`-**, Prime-Kanal- und Log-Multiplikator-Formen; `N_a=c_aI+C_a` enthält den expliziten Skalar und den stetigen `r''`-Korrektor.
 
 Die frühere Frage
 
@@ -100,7 +100,7 @@ w_{p,k}=\log p\,p^{-k/2}.
 
 ### OX-GEN
 
-**Frage:** Ist `R_0` als Rand-/Defektterm derselben Exponentialstruktur darstellbar, die die Prime-Power-Kanäle normiert? Gibt es eine explizit aus `{e^{+x/2}, e^{-x/2}, K_n, logarithmischer Douglas-Geometrie}` gebaute Abbildung, die insbesondere
+**Frage:** Ist `R_0` als Rand-/Defektterm derselben Exponentialstruktur darstellbar, die die Prime-Power-Kanäle normiert? Gibt es eine explizit aus `{e^{+x/2}, e^{-x/2}, K_n, logarithmischer Formraum-/log|D|-Geometrie}` gebaute Abbildung, die insbesondere
 
 ```math
 \left(\int\cosh\frac x2\,v\right)^2
@@ -117,7 +117,7 @@ Positive Antwort: expliziter geometrischer Baustein. Negative Antwort: Klassen-N
 In dieser Reihenfolge:
 
 1. **CERT-HARDEN** — Gate 1/2 mit explizitem Bernoulli-Tail oder geschlossener `r_1''`-Form, reinem Arb-Randfehler und Arb-sicherem Prime-Power-Cutoff rerunnen.
-2. **OX-GEN-A** — bei `a=0.5` die `cosh/sinh`-Momentfunktionale innerhalb der Prime-/Douglas-Featureabbildung isolieren. Dieser Radius wird bevorzugt, weil die endliche Extremalrichtung dort deutlich stabiler war als bei `a>=0.8`.
+2. **OX-GEN-A** — bei `a=0.5` die `cosh/sinh`-Momentfunktionale innerhalb der Prime-/logarithmischen Formraum-Featureabbildung isolieren. Dieser Radius wird bevorzugt, weil die endliche Extremalrichtung dort deutlich stabiler war als bei `a>=0.8`.
 3. **GENERATOR-CLASS** — vor einem No-Go eine natürliche Klasse von Generatorabbildungen festschreiben; beide Ausgänge müssen vorab logisch möglich sein.
 4. **OX-GEN-B** — expliziten Intertwiner oder Klassen-No-Go suchen.
 
@@ -149,11 +149,16 @@ Nicht wieder als aktive Front verwenden:
 - OX-REN/OX-REN' als Hauptfront;
 - Radiusvariation durch bloßes Ersetzen von `R=1` im PR97-Checker;
 - neue speziell angepasste Witness-Runden ohne einen vorab definierten Architekturtest;
-- weitere OX-GRAM-Existenztests, die nur bekannte Weil-Positivität reproduzieren.
+- weitere OX-GRAM-Existenztests, die nur bekannte Weil-Positivität reproduzieren;
+- `H^{1/2}`-/klassische Douglas-Terminologie für den Kernel `1/|x-y|`;
+- die Aussage, die Defektnorm `||I-W^*W||` kollabiere; kollabierend beobachtet wurde der kleinste relative Eigenwert, nicht die Operatornorm;
+- die radius-/sektorabhängige Koeffizienten-Koinzidenz nahe `0.603` als Konstante zu deuten.
 
 ## 9. Offene PRs und Governance
 
 PR #91 bleibt ein eigener analytischer Draft; diese Front promotet ihn nicht. PR #92 und PR #95 sind Archiv-/Integritäts-Governance und orthogonal zur OX-GEN-Forschung. Die gemergten PR #96/#97 bleiben lokale Negativresultate in ihrem damaligen Scope.
+
+Zusätzliche PR-Schuld ist separat abzuarbeiten: insbesondere der ältere Ready-PR #49 sowie der weiterhin ungeprüfte Draft #91 dürfen durch die OX-GEN-Front nicht aus dem Blick geraten.
 
 Registry, `ACTIVE_FRONT.yaml` und Arbeitsdefinition bleiben unverändert.
 
