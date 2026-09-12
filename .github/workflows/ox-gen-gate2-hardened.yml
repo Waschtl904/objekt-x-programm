@@ -1,10 +1,6 @@
 name: OX-GEN Gate 2 hardened Arb certificate
 on:
   pull_request:
-    paths:
-      - 'scripts/check_ox_gen_gate2_hardened.py'
-      - 'audits/P11_OX_GRAM_GATE2_AND_OX_GEN_2026-09-12.md'
-      - '.github/workflows/ox-gen-gate2-hardened.yml'
   workflow_dispatch:
 permissions:
   contents: read
