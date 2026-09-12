@@ -1,0 +1,39 @@
+name: OX-GEN hardened Suzuki normalization gate
+on:
+  pull_request:
+    paths:
+      - 'scripts/ox_gen_gate_norm_hardened.py'
+      - 'scripts/run_ox_gen_normalization_hardened.py'
+      - '.github/workflows/ox-gen-normalization-hardened.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  normalization-hardened:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Install exact numerical dependencies
+        run: python -m pip install python-flint==0.9.0 sympy==1.14.0
+      - name: Run hardened normalization gate at all three radii
+        run: |
+          set -euo pipefail
+          git rev-parse HEAD
+          git hash-object scripts/ox_gen_gate_norm_hardened.py
+          git hash-object scripts/run_ox_gen_normalization_hardened.py
+          python --version
+          for r in a b c; do
+            python scripts/run_ox_gen_normalization_hardened.py 2000 "$r" | tee "ox_gen_normalization_${r}.log"
+            grep -q 'NORMALIZATION HARDENED PASS: 42 residual balls contain zero' "ox_gen_normalization_${r}.log"
+          done
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: ox-gen-normalization-hardened
+          path: ox_gen_normalization_*.log
