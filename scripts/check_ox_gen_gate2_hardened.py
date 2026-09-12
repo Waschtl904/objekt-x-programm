@@ -2,11 +2,12 @@
 """Gate 2 (OX-GRAM) hardening checker, Arb prec 512.
 
 This is a hardened version of the external Gate-2 checker. It keeps the same
-Dirichlet-basis and Cholesky logic, but closes three interval-firewall gaps:
+Dirichlet-basis and Cholesky logic, but closes the interval-firewall gaps:
 
 1. the Bernoulli truncation for r1'' gets an explicit rigorous tail ball;
 2. the prime-power cutoff n < exp(2a) is decided only by Arb comparisons;
-3. the logarithmic endpoint bound contains no float conversion.
+3. the logarithmic endpoint bound contains no float conversion;
+4. Cholesky accepts a pivot only via the direct proof-oriented Arb test s>0.
 
 Scope: a in {1/2, 4/5, 1}, hence exp(2a) < 8.
 No Registry promotion and no RH/Object-X claim.
@@ -73,7 +74,7 @@ def IP(i,j,a):
 
 
 def log_form(i,j,a):
-    """The positive logarithmic difference form (formerly called Douglas)."""
+    """The positive logarithmic difference form (log|D|-type geometry)."""
     ki,kj=acb(kk(i,a)),acb(kk(j,a)); pi_,pj_=acb(ph(i,a)),acb(ph(j,a)); same=(i==j)
     def f(u,_):
         lo,hi=acb(-a)+u,acb(a)
@@ -92,7 +93,6 @@ def Mterm(i,j,a):
     ki,kj,pi_,pj_=kk(i,a),kk(j,a),ph(i,a),ph(j,a); e=arb(2)**(-50)
     f=lambda z,_:(acb(a*a)-z*z).log()*(acb(ki)*z+acb(pi_)).sin()*(acb(kj)*z+acb(pj_)).sin()
     v=acb.integral(f,acb(-a+e),acb(a-e),abs_tol=arb(2)**-300,rel_tol=arb(2)**-300,eval_limit=10**7,depth_limit=400).real
-    # Since a<=1 and e=2^-50, 0<2*a*e<1 and |log(2ae)|=-log(2ae).
     B=2*ki*kj*e*e*(-(2*a*e).log()+1)
     return -(v+arb(0,B))/2
 
@@ -112,10 +112,6 @@ _C=[None]*(NB+1); f=arb(1); pw=arb(1)
 for n in range(1,NB+1):
     f=f*n; pw=pw*(-2); _C[n]=_B[n]*pw/(2*f)
 
-# Uniform rigorous Bernoulli-tail bound for |u|<=2.
-# From |B_n(1/4)| <= 2 n! zeta(n)/(2pi)^n and zeta(n)<=zeta(2)=pi^2/6,
-# |c_n| <= zeta(2)/pi^n and therefore
-# sum_{n>NB}|c_n u^(n-1)| <= (pi^2/12)*(2/pi)^(NB+1)/(1-2/pi).
 _RTAIL=(PI*PI/12)*(arb(2)/PI)**(NB+1)/(1-arb(2)/PI)
 
 
@@ -129,8 +125,6 @@ def r1pp_partial(u):
 def R1(i,j,a):
     f=lambda u,_: r1pp_partial(u)*(SHp(i,j,u,a)+SHm(i,j,u,a))
     v=acb.integral(f,acb(0),acb(2*a),abs_tol=arb(2)**-300,rel_tol=arb(2)**-300,eval_limit=10**7,depth_limit=400).real
-    # For each u, |SHp|,|SHm| <= ||phi_i|| ||phi_j|| = a.
-    # Integration length is 2a, so the omitted series contributes <=4 a^2 RTAIL.
     return v + arb(0, 4*a*a*_RTAIL)
 
 
@@ -153,7 +147,7 @@ def build(a,N,W,ca):
 
 
 def cholesky_certified(Q,idx):
-    """Return PASS only when every Arb Cholesky pivot has strict positive lower bound."""
+    """PASS only when every pivot ball is rigorously contained in (0,infinity)."""
     n=len(idx); L=[[arb(0)]*n for _ in range(n)]; piv=[]
     for i in range(n):
         for j in range(i+1):
@@ -161,9 +155,8 @@ def cholesky_certified(Q,idx):
             for k in range(j):
                 s=s-L[i][k]*L[j][k]
             if i==j:
-                lo=arb(s.mid())-arb(s.rad())
-                if not (lo>0): return False,piv,i
-                piv.append(lo); L[i][i]=s.sqrt()
+                if not (s > 0): return False,piv,i
+                piv.append(s); L[i][i]=s.sqrt()
             else:
                 L[i][j]=s/L[j][j]
     return True,piv,None
