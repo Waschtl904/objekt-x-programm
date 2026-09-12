@@ -1,8 +1,8 @@
-# CURRENT FRONT — Objekt X / OX-GRAM
+# CURRENT FRONT — Objekt X / OX-GEN
 
 > **Operative Kopfschicht — zuerst lesen.**
 > **Redaktioneller Stand:** 12. September 2026; keine Registry-Promotion.
-> **Konsolidierungsquelle:** [AR(1)/Weil-Tail/OX-GRAM-Audit](audits/P11_OBJECT_X_AR1_OX_GRAM_CONSOLIDATION_2026-09-12.md).
+> **Konsolidierungsquellen:** [AR(1)/Weil-Tail/OX-GRAM-Audit](audits/P11_OBJECT_X_AR1_OX_GRAM_CONSOLIDATION_2026-09-12.md) und [Gate-2/OX-GEN-Audit](audits/P11_OX_GRAM_GATE2_AND_OX_GEN_2026-09-12.md).
 > **Strategie:** [kanonische Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md).
 > **Suchgegenstand:** [Objekt-X-Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
 > **Buchungen:** [Theorem-/Review-Registry](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md).
@@ -15,30 +15,9 @@ Der integrierte positive Wurzelanker plus R42.51 liefert Strong Terminal/C6 für
 
 Diese C6-Front wird nicht erneut geöffnet, solange kein tatsächlicher Eingang fällt.
 
-## 2. Neue operative Hauptfront
+## 2. Belastbare Prime-Power-Struktur
 
-Die Suche ist von frei erfundenen Cross-Term-/Mediatoransätzen auf die **fensterendliche OX-GRAM-Form** umgestellt.
-
-Für `a<=1` liegt die lokalisierte Weilform in der Form
-
-```math
-Q_{B_a}(v)=G_a^+(v)-N_a(v)
-```
-
-vor, wobei `G_a^+` aus explizit positiven logarithmischen Douglas-/Prime-Kanal-/Log-Multiplikator-Formen besteht und
-
-```math
-N_a=c_aI+C_a,
-\qquad c_a=A_a^{\rm Zhu}+2A+1,
-```
-
-mit kompakt/Hilbert-Schmidt-artigem `r''`-Korrektor `C_a`.
-
-**Objekt-X-Frage jetzt:** Kann dieser explizite Defekt intrinsisch aus derselben positiven Feature-Geometrie erklärt bzw. faktorisiert werden, ohne RH, `B_a^{1/2}` oder das unbekannte Forminfimum vorauszusetzen?
-
-## 3. Belastbare Prime-Power-Struktur
-
-Der neue Konsolidierungsaudit hält insbesondere fest:
+Die seit PR #97 konsolidierte Struktur lautet:
 
 - exaktes Ledger
   `C_jk^(p)=(log p)p^min(j,k)p^{-3(j+k)/4}`;
@@ -50,29 +29,113 @@ Der neue Konsolidierungsaudit hält insbesondere fest:
 - exakte Weil-Tail-Normalform der P11-Restseite;
 - cross-prime Root-Gram ist fensterloser Bulk, kein räumlicher Boundaryterm.
 
-Diese Aussagen sind lokale/koeffizienten- bzw. Kanalraum-Struktur. Sie sind noch keine volle Objekt-X-Realisierung.
+Diese Aussagen sind exakte Kanal-/Koeffizientenstruktur, noch keine volle Objekt-X-Realisierung.
 
-## 4. Nächste Gates
+## 3. OX-GRAM: endliche Normalform, aber Existenzgate geschlossen
+
+Für `a<=1` liegt Suzukis lokalisierte Weilform in der endlichen Form
+
+```math
+Q_{B_a}(v)=G_a^+(v)-N_a(v)
+```
+
+vor. `G_a^+` besteht aus explizit positiven logarithmischen Douglas-/Prime-Kanal-/Log-Multiplikator-Formen; `N_a=c_aI+C_a` enthält den expliziten Skalar und den stetigen `r''`-Korrektor.
+
+Die frühere Frage
+
+```text
+N_a <= G_a^+ ?
+```
+
+ist **kein nichtzirkulärer Objekt-X-Gate**: Sobald lokale Weil-Positivität bekannt ist, kann ein kontraktiver `W_a` rückwärts aus `Q=G_a^+-N_a` definiert werden. Das beweist keine intrinsische Geometrie.
+
+**Buchung:** OX-GRAM als Existenzfrage ist geschlossen/vakuant. Übrig bleibt Kanonizität: ein Objekt-X-Baustein muss aus den vorhandenen Generatoren konstruiert werden, ohne `Q_{B_a}`, `B_a^{1/2}`, `lambda_a` oder RH rückwärts zu verwenden.
+
+## 4. Gate 2: starke Evidenz, Repo-Zertifikat noch nicht eingefroren
+
+Der externe 512-Bit-Lauf testete eine Dirichletbasis bis `N=14`, drei Radien und beide Paritätssektoren. Die ausgegebene Arb-Cholesky akzeptierte 42/42 endliche Blöcke; kein numerischer Gegenvektor wurde gefunden.
+
+**Aber:** Die übergebene Implementierung ist noch nicht vollständig interval-geschlossen:
+
+1. `r_1''` wird als Bernoulli-Partialsumme bis `N=340` integriert, ohne den Tail `n>340` in die Arb-Bälle einzuschließen;
+2. der Prime-Power-Cutoff wird über `float(exp(2a))` entschieden;
+3. ein Log-Endpunktfehler verwendet einen Float in einer sonst rigorosen oberen Schranke.
+
+Der Bernoulli-Tail ist für `|u|<=2` extrem klein; er kann explizit beschränkt oder durch die geschlossene Formel
+
+```math
+r_1''(u)=\frac{e^{u/2}}{2\sinh u}-\frac1{2u},
+\qquad r_1''(0)=\frac14
+```
+
+ersetzt werden. Bis zum gehärteten Rerun wird Gate 2 als **starke Arb-Evidenz, nicht als vollständiger Repo-Freeze** geführt.
+
+## 5. Neue operative Hauptfront: OX-GEN
+
+Suzukis Teilkern
+
+```math
+r_0''(t)=-2\cosh(t/2)
+```
+
+liefert exakt
+
+```math
+R_0(v,v)
+=-2\left(\int\cosh\frac x2\,v(x)\,dx\right)^2
++2\left(\int\sinh\frac x2\,v(x)\,dx\right)^2.
+```
+
+Damit ist `R_0` Rang höchstens 2; im geraden Sektor bleibt eine negative Rang-1-Richtung, im ungeraden eine positive Rang-1-Richtung.
+
+Gleichzeitig werden die Prime-Kanäle durch dieselbe Exponentialfamilie normiert:
+
+```math
+p^{-1/2}=e^{-(\log p)/2},
+\qquad
+R_p(j,k)=p^{-|j-k|/2},
+\qquad
+w_{p,k}=\log p\,p^{-k/2}.
+```
+
+### OX-GEN
+
+**Frage:** Ist `R_0` als Rand-/Defektterm derselben Exponentialstruktur darstellbar, die die Prime-Power-Kanäle normiert? Gibt es eine explizit aus `{e^{+x/2}, e^{-x/2}, K_n, logarithmischer Douglas-Geometrie}` gebaute Abbildung, die insbesondere
+
+```math
+\left(\int\cosh\frac x2\,v\right)^2
+```
+
+im geraden Sektor als intrinsischen Defekt der Prime-/archimedischen Featuregeometrie erzeugt, ohne die zu erklärende Weilform rückwärts zu benutzen?
+
+Positive Antwort: expliziter geometrischer Baustein. Negative Antwort: Klassen-No-Go, sofern die Generator-Klasse vorher natürlich und eng definiert wurde.
+
+**Scope:** `R_1` und der dominante Skalar `c_aI` bleiben offen; OX-GEN ist ein Teilproblem.
+
+## 6. Nächste Gates
 
 In dieser Reihenfolge:
 
-1. **CERT-HARDEN** — Normalisierungs-Gate vollständig zertifizieren: Bernoulli-Rest bzw. geschlossene `r_1''`-Form explizit einschließen; Prime-Power-Cutoff ohne Float-Grenzentscheidung.
-2. **OX-COMPACT** — Kompaktheit der natürlichen Einbettung des positiven logarithmischen Formraums in `L^2(-a,a)` und damit des relativen Defekts
-   `A_a^rel=J_a^*(c_aI+C_a)J_a` beweisen.
-3. **OX-RITZ** — verschachtelte Paritätsbasen `N=3,4,6,8,12,16,20`; mehrere oberste Ritzwerte und die Eigenvektoren speichern.
-4. **MODE-DECOMP** — beinahe-kritische Mode in logarithmische Douglas-, Prime-, Skalar-, `r_0''`- und `r_1''`-Beiträge zerlegen.
-5. Nur bei einer robusten dominanten Mode: Verbindung zum AR(1)-Root/Hub untersuchen.
-6. Erst danach einen kanonischen Intertwiner/Kontraktor `W_a` konstruieren.
+1. **CERT-HARDEN** — Gate 1/2 mit explizitem Bernoulli-Tail oder geschlossener `r_1''`-Form, reinem Arb-Randfehler und Arb-sicherem Prime-Power-Cutoff rerunnen.
+2. **OX-GEN-A** — bei `a=0.5` die `cosh/sinh`-Momentfunktionale innerhalb der Prime-/Douglas-Featureabbildung isolieren. Dieser Radius wird bevorzugt, weil die endliche Extremalrichtung dort deutlich stabiler war als bei `a>=0.8`.
+3. **GENERATOR-CLASS** — vor einem No-Go eine natürliche Klasse von Generatorabbildungen festschreiben; beide Ausgänge müssen vorab logisch möglich sein.
+4. **OX-GEN-B** — expliziten Intertwiner oder Klassen-No-Go suchen.
 
-Ein robust zertifiziertes `mu>1` ist kein gewöhnlicher Architektur-Fail: es würde einen negativen lokalen Weil-Vektor liefern und verlangt sofort einen unabhängigen zweiten Checker.
+Keine weiteren `mu_max`-Dimensionssweeps als Hauptfront: ohne neuen Mechanismus messen sie bekannte lokale Weil-Positivität.
 
-## 5. Aktueller Zertifikationsstand
+## 7. Spur B — eigenständige Mathematik
 
-Ein externer 256-Bit-Arb-Gegencheck der fensterendlichen Normalisierung war nach Korrektur eines echten `log n`-statt-`Lambda(n)`-Fehlers auf Testblöcken bei `a=0.5,0.8,1.0` GREEN. Die übergebene `r_1''`-Implementierung schneidet ihre Bernoulli-Reihe jedoch bei `N=300` ab, ohne den verbleibenden Tail als Arb-Ball zu buchen. Deshalb ist der Gate **noch nicht eingefroren**.
+Die Prime-Power-AR(1)/Martingal-Faktorisierung wird getrennt als theorem-ready Nebenprojekt geführt:
 
-Die erste 3-dimensionale OX-GRAM-Ritzmessung hatte `mu_max<1` in beiden Paritäten und allen drei Radien. Das ist nur numerische Nicht-Falsifikation auf einem kleinen Unterraum, kein Beweis eines kanonischen `W_a`.
+```math
+C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}\,p^{-|j-k|/2},
+\qquad
+T_q^*T_q+uu^*=R_q.
+```
 
-## 6. Gesperrte alte Deutungen
+Fensterfrei, exakt, RH-unabhängig und ausdrücklich **nicht** als Objekt X vermarkten. Der bisherige Literaturbefund ist nur Neuheitsindikator, kein Prioritätsbeweis.
+
+## 8. Gesperrte alte Deutungen
 
 Nicht wieder als aktive Front verwenden:
 
@@ -85,23 +148,22 @@ Nicht wieder als aktive Front verwenden:
 - matched-cutoff `epsilon=e^{-A_L}` als Mechanismus;
 - OX-REN/OX-REN' als Hauptfront;
 - Radiusvariation durch bloßes Ersetzen von `R=1` im PR97-Checker;
-- neue speziell angepasste Witness-Runden ohne Bezug auf OX-GRAM.
+- neue speziell angepasste Witness-Runden ohne einen vorab definierten Architekturtest;
+- weitere OX-GRAM-Existenztests, die nur bekannte Weil-Positivität reproduzieren.
 
-Details und Gründe stehen im Konsolidierungsaudit.
+## 9. Offene PRs und Governance
 
-## 7. Offene PRs und Governance
+PR #91 bleibt ein eigener analytischer Draft; diese Front promotet ihn nicht. PR #92 und PR #95 sind Archiv-/Integritäts-Governance und orthogonal zur OX-GEN-Forschung. Die gemergten PR #96/#97 bleiben lokale Negativresultate in ihrem damaligen Scope.
 
-PR #91 bleibt ein eigener analytischer Draft; diese Front promotet ihn nicht. PR #92 und PR #95 sind Archiv-/Integritäts-Governance und orthogonal zur OX-GRAM-Forschung. Die gemergten PR #96/#97 bleiben lokale Negativresultate in ihrem damaligen Scope.
+Registry, `ACTIVE_FRONT.yaml` und Arbeitsdefinition bleiben unverändert.
 
-Registry, `ACTIVE_FRONT.yaml` und Arbeitsdefinition bleiben durch diese Redaktion unverändert.
-
-## 8. Arbeitsregel
+## 10. Arbeitsregel
 
 Ein Schritt zählt auf der Objekt-X-Hauptfront nur, wenn er
 
 1. einen expliziten Teil der gemeinsamen Gramgeometrie konstruiert,
-2. eine ganze Architekturklasse ausschließt,
-3. eine notwendige Struktur des relativen Defektoperators beweist oder
+2. eine ganze vorab definierte Architekturklasse ausschließt,
+3. eine notwendige Struktur des gemeinsamen Prime-/Archimedean-Generators beweist oder
 4. eine tatsächlich benötigte Normalisierungs-/Domain-/Konvergenzlücke schließt.
 
-Bloße Umschreibungen, Witness-Wertabgleiche oder neue Proxy-Runden ohne Bezug zu einem dieser Gates sind Nebenarbeit.
+Ein Falsifikationsgate zählt nur, wenn **beide Ausgänge vorab logisch möglich** sind. Bloße Umschreibungen, Witness-Wertabgleiche oder Positivitätsreproduktionen ohne neuen Mechanismus sind Nebenarbeit.
