@@ -6,15 +6,16 @@ Gesucht wird eine gemeinsame arithmetisch-analytische Hilbert-/Gram-Geometrie,
 in der Primzahlpotenz- und archimedische Beiträge der vollständigen Weil-Form
 aus demselben Mechanismus hervorgehen. Arbeitsname: **Objekt X**.
 
-> **Redaktioneller Stand: 8. September 2026.**
+> **Redaktioneller Stand: 12. September 2026.**
 > Eine vollständige Objekt-X-Realisierung und ein Beweis der Riemannschen
 > Hypothese liegen nicht vor.
 
 ## Hier beginnen
 
-1. **[Aktueller Arbeitsstand](CURRENT-FRONT.md)** — erreicht, in Prüfung, offen.
-2. **[Forschungsroadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)** — Hauptaufgabe, Abhängigkeiten und Nebenwege.
-3. **[Objekt-X-Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)** — was eine vollständige Realisierung leisten muss.
+1. **[Aktueller Arbeitsstand](CURRENT-FRONT.md)** — operative OX-GRAM-Front, nächste Gates und gesperrte alte Deutungen.
+2. **[AR(1)/Weil-Tail/OX-GRAM-Konsolidierung](audits/P11_OBJECT_X_AR1_OX_GRAM_CONSOLIDATION_2026-09-12.md)** — belastbare neue Prime-Power-/Defektstruktur seit PR #97.
+3. **[Forschungsroadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)** — kanonische historische Abhängigkeitskarte; §24 lag vor diesem Konsolidierungs-PR noch auf dem Post-C6/PR91-Stand.
+4. **[Objekt-X-Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)** — was eine vollständige Realisierung leisten muss.
 
 ## Erreichter Meilenstein
 
@@ -28,17 +29,22 @@ Operatornormkonvergenz oder die vollständige Objekt-X-Realisierung.
 Beweisumfang und [dokumentierte AI-Reviews](audits/R43_C6_ROOT_ANCHOR_REVIEW_2026-09-07/README.md)
 bleiben von einer menschlichen oder formalen Zertifizierung getrennt.
 
-## Nächste Forschungsaufgabe
+## Aktuelle Forschungsaufgabe
 
-Eine intrinsische Quellen-/Mediator-Konstruktion angeben und ihre Gramform
-mit der **vollständigen, korrekt normalisierten Weil-Form** auf einer
-geeigneten Testklasse identifizieren. Die Konstruktion darf weder deren
-Positivität noch die Riemannsche Hypothese voraussetzen.
+Die operative Front ist jetzt **OX-GRAM**. Die Prime-Power-Seite besitzt eine
+exakte Weil-dekorierte AR(1)-/Martingalstruktur; die lokalisierte Suzuki-Form kann
+für `a<=1` als explizite positive Featureform minus einen konkreten relativen
+Defekt geschrieben werden.
 
-[PR #91](https://github.com/Waschtl904/objekt-x-programm/pull/91) untersucht
-hierzu Quellenabstieg und Weil-Trennung: analytischer Kandidat, unabhängiger
-Exact-Head-Review offen. Die operative Detailplanung steht in der Frontdatei
-und in §24 der kanonischen Roadmap.
+Der nächste Weg ist bewusst eng:
+
+1. Normalisierungs-Gate vollständig härten;
+2. Kompaktheit des relativen Defektoperators beweisen;
+3. verschachteltes Ritz-Spektrum und beinahe-kritische Mode untersuchen;
+4. erst danach einen **kanonischen, nichtzirkulären Intertwiner/Defektmechanismus** konstruieren.
+
+Die alten 7D/7G-/Witness-/Boundary-Routen sind keine Default-Aufgabe mehr, sofern
+sie nicht aus einem OX-GRAM-Gate erneut erzwungen werden.
 
 ## Nachweise und Orientierung
 
@@ -53,7 +59,6 @@ Das ältere Forschungsjournal bleibt über den [Gesamtindex](INDEX.md) erreichba
 historische Statusangaben sind keine aktuelle Arbeitsanweisung.
 
 Lizenz: [CC BY 4.0](LICENSE) · Zitierangaben: [CITATION.cff](CITATION.cff).
-
 
 ## Attribution & Priorität
 
