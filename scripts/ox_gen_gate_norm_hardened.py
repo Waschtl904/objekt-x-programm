@@ -6,7 +6,8 @@ as merge firewalls in PR #98:
 
 1. the Bernoulli truncation for r1'' gets an explicit uniform tail ball;
 2. the prime-power cutoff n<exp(2a) is decided only by Arb comparisons;
-3. the logarithmic endpoint bound contains no float conversion.
+3. the logarithmic endpoint bound contains no float conversion;
+4. the removable sinc singularity is handled by a Taylor series with an explicit tail ball.
 
 The positive singular block is referred to as the logarithmic form / log|D|
 geometry, not the classical H^{1/2}/Douglas seminorm.
@@ -29,7 +30,6 @@ def kk(i,a): return PI*arb(KC[i].numerator)/arb(KC[i].denominator)/a
 
 
 def vm_upto(X):
-    """Prime powers n<X, with every inclusion/exclusion certified by Arb."""
     if not (X < arb(8)):
         raise RuntimeError("vm_upto hardening scope requires X<8 (a<=1)")
     primes=[]
@@ -54,11 +54,9 @@ def vm_upto(X):
 def _ic(m,c,lo,hi,mzero):
     if mzero: return (hi-lo)*c.cos()
     return ((m*hi+c).sin()-(m*lo+c).sin())/m
-
 def _is(m,c,lo,hi,mzero):
     if mzero: return (hi-lo)*c.sin()
     return ((m*lo+c).cos()-(m*hi+c).cos())/m
-
 def prodint(ti,ki,ci,tj,kj,cj,lo,hi,same):
     md,cd,ms,cs = ki-kj, ci-cj, ki+kj, ci+cj
     if ti=='c' and tj=='c': return (_ic(md,cd,lo,hi,same)+_ic(ms,cs,lo,hi,False))/2
@@ -70,11 +68,9 @@ def prodint(ti,ki,ci,tj,kj,cj,lo,hi,same):
 def SHp(i,j,tau,a):
     ki,kj=acb(kk(i,a)),acb(kk(j,a))
     return prodint(TYPE[i],ki,acb(0),TYPE[j],kj,kj*tau,acb(-a),acb(a)-tau,i==j)
-
 def SHm(i,j,tau,a):
     ki,kj=acb(kk(i,a)),acb(kk(j,a))
     return prodint(TYPE[i],ki,acb(0),TYPE[j],kj,-kj*tau,acb(-a)+tau,acb(a),i==j)
-
 def IP(i,j,a): return SHp(i,j,acb(0),a).real
 
 
@@ -102,7 +98,6 @@ def Mterm(i,j,a):
     v=acb.integral(f,acb(-a+e),acb(a-e)).real
     B=2*ki*kj*e*e*(-(2*a*e).log()+1)
     return -(v+arb(0,B))/2
-
 def L_real(i,j,a): return log_form(i,j,a)+Mterm(i,j,a)
 
 
@@ -144,11 +139,17 @@ def R1(i,j,a):
 
 
 def SINC(w):
-    # Either branch is a valid enclosure; the threshold only selects the numerically stable formula.
-    if float(w.abs_upper())<0.35:
+    # Rigorous entire extension of sin(w)/w near zero.
+    thresh=arb(35)/100
+    if w.abs_upper() < thresh:
         t=w*w; s=acb(1); term=acb(1)
-        for m in range(1,45): term=term*(-t)/((2*m)*(2*m+1)); s=s+term
-        return s
+        # include m=1,...,44; first omitted term is m=45: |w|^90/91!
+        for m in range(1,45):
+            term=term*(-t)/((2*m)*(2*m+1)); s=s+term
+        r=(thresh*thresh)/(arb(92)*arb(93))
+        first=(thresh**90)/arb(sp.factorial(91))
+        tail=first/(1-r)
+        return s + arb(0,tail)
     return w.sin()/w
 
 def S(w,a): return acb(a)*SINC(w*acb(a))
