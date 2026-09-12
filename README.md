@@ -15,7 +15,7 @@ aus demselben Mechanismus hervorgehen. Arbeitsname: **Objekt X**.
 1. **[Aktueller Arbeitsstand](CURRENT-FRONT.md)** — operative OX-GEN-Front, Zertifikationsgate und gesperrte alte Deutungen.
 2. **[AR(1)/Weil-Tail/OX-GRAM-Konsolidierung](audits/P11_OBJECT_X_AR1_OX_GRAM_CONSOLIDATION_2026-09-12.md)** — belastbare Prime-Power-/Defektstruktur seit PR #97.
 3. **[Gate 2 / OX-GEN](audits/P11_OX_GRAM_GATE2_AND_OX_GEN_2026-09-12.md)** — warum die bloße OX-GRAM-Existenzfrage zirkulär/vakuant ist und welcher explizite Generator jetzt geprüft wird.
-4. **[Forschungsroadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)** — kanonische historische Abhängigkeitskarte; §24 lag vor diesem Konsolidierungs-PR noch auf dem Post-C6/PR91-Stand.
+4. **[Forschungsroadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)** — kanonische historische Abhängigkeitskarte; §24 wird nach Integration dieser Konsolidierung separat auf OX-GEN synchronisiert.
 5. **[Objekt-X-Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)** — was eine vollständige Realisierung leisten muss.
 
 ## Erreichter Meilenstein
@@ -38,8 +38,8 @@ Die operative Hauptfrage ist jetzt **OX-GEN**. Suzukis `r_0''` besitzt die exakt
 
 Der nächste Weg ist bewusst eng:
 
-1. Normalisierungs-/Gate-2-Skripte vollständig härten (`r_1''`-Tail bzw. geschlossene Form, Arb-Cutoff, reine Arb-Fehlerbälle);
-2. bei `a=0.5` die `cosh/sinh`-Momentfunktionale innerhalb der Prime-/Douglas-Featureabbildung isolieren;
+1. die gehärteten Normalisierungs-/Gate-2-Zertifikate einfrieren;
+2. bei `a=0.5` die `cosh/sinh`-Momentfunktionale innerhalb der Prime-/logarithmischen `log|D|`-Featureabbildung isolieren;
 3. eine natürliche Generator-Klasse vor einem möglichen No-Go festschreiben;
 4. erst dann expliziten Intertwiner oder Klassen-No-Go suchen.
 
