@@ -1,0 +1,37 @@
+name: OX-GEN Gate 2 hardened Arb certificate
+on:
+  pull_request:
+    paths:
+      - 'scripts/check_ox_gen_gate2_hardened.py'
+      - 'audits/P11_OX_GRAM_GATE2_AND_OX_GEN_2026-09-12.md'
+      - '.github/workflows/ox-gen-gate2-hardened.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  gate2-hardened:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Install exact numerical dependencies
+        run: python -m pip install python-flint==0.9.0 sympy==1.14.0 mpmath==1.3.0
+      - name: Run hardened Gate-2 exact-head certificate
+        run: |
+          set -euo pipefail
+          git rev-parse HEAD
+          git hash-object scripts/check_ox_gen_gate2_hardened.py
+          python --version
+          python scripts/check_ox_gen_gate2_hardened.py 14 all | tee ox_gen_gate2_hardened.log
+          test "$(grep -c 'Q>0 ZERTIFIZIERT' ox_gen_gate2_hardened.log)" -eq 42
+          ! grep -q 'Cholesky-FAIL' ox_gen_gate2_hardened.log
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: ox-gen-gate2-hardened
+          path: ox_gen_gate2_hardened.log
