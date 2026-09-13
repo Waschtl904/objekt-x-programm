@@ -1,112 +1,126 @@
-# Offene Probleme — NP-OVERLAP-AR1
+# Offene Probleme — NP-DISCREPANCY / NP-CORR
 
 > **Stand:** 13. September 2026.  
-> Operative Quellen: [CURRENT-FRONT](CURRENT-FRONT.md), [Prime-overlap AR(1)](audits/P11_NP_OVERLAP_AR1_FIBERIZATION_2026-09-13.md), [Review correction](audits/P11_NP_GAP_REVIEW_CORRECTION_PRIME_OVERLAP_2026-09-13.md).
+> Operative Quellen: [CURRENT-FRONT](CURRENT-FRONT.md), [Pole-cleared discrepancy](audits/P11_NP_DISCREPANCY_POLE_CLEARED_CORRELATION_2026-09-13.md), [Prime-overlap AR(1)](audits/P11_NP_OVERLAP_AR1_FIBERIZATION_2026-09-13.md).
 
 ## Neu geschlossen
 
-### Einzelshift-Geometrie `✓[M]`
+### `[SHIFT-NORM-SUM]` `×[M]`
+
+Unabhängige Einzelshift-/Blocknormsummation verfehlt den all-window-Bereich exponentiell. Für `a<log n<2a` ist die Shift-Norm `1/2`, daher ist der separate Normbudget-Term mindestens
 
 ```math
-\|S_t\|
-=\cos\frac{\pi}{\lceil2a/t\rceil+1}
+2e^a(1+o(1)).
 ```
 
-für `0<t<2a`, und `S_t=0` für `t>=2a`.
+### `[RAW-PROLATE]` `×[M]` als hinreichender Mechanismus
 
-### Einzelshift-Nullpolverbesserung `×[M]`
+Ein `a`-unabhängiger Zeit-Frequenz-Konzentrationsfaktor kann die rohe Prime-Multiplikatoramplitude `~e^a` nicht auf die benötigte Skala bringen. Prolate bleibt nur nach arithmetischer Zentrierung interessant.
 
-Dieselbe Top-Norm wird bereits auf `D_NP(a)` erreicht. Zwei Nullpolmomente beseitigen die unendlichdimensionale Top-Eigensphäre nicht.
-
-**Konsequenz:** eine Summe unabhängiger Einzelshift-Normschranken kann die Nullpolstruktur nicht ausnutzen und ist als Hauptstrategie ausgeschieden.
-
-### Vollständiger p-Block `✓[M]`
-
-Für `q=p^{-1/2}`:
+### `[NULLPOLE-CORR-GAUGE]` `✓[M]`
 
 ```math
-\boxed{
-O_{p,a}^{(N)}=(\log p)(R_q^{(N)}-I_N),
-\qquad R_q^{(N)}=(q^{|j-k|}).
-}
+\int_0^{2a}2\cosh(t/2)\operatorname{Re}\langle T_tv,v\rangle dt=0
 ```
 
-Der positive Sektor ist
+für `v in D_NP(a)`.
+
+### `[PRIME-DISCREPANCY]` `✓[M]`
 
 ```math
-|theta|<arccos(q).
+d\mathfrak D(t)
+=\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}(dt)
+-2\cosh(t/2)dt.
 ```
 
-Damit ist die alte Prime-Power-AR(1)-Struktur exakt die Fasergeometrie des neuen Overlap-Problems.
+Dann
+
+```math
+\mathcal O_a(v)
+=2\int Re\langle T_tv,v\rangle d\mathfrak D(t).
+```
+
+Kumulativ:
+
+```math
+\mathfrak D(T)
+=\sum_{\log n\le T}\frac{\Lambda(n)}{\sqrt n}-4\sinh(T/2).
+```
+
+Der PNT-Hauptterm ist entfernt.
+
+### `[POLE-CLEARED-ZETA]` `✓[M]`
+
+```math
+\mathcal L[d\mathfrak D](s)
+=-\frac{d}{ds}\log[(s^2-1/4)\zeta(s+1/2)].
+```
+
+Die beiden Nullpolpunkte `0,1` erscheinen exakt als die herausgenommenen Polfaktoren.
 
 ---
 
-## Priorität 0 — `[MULTIPRIME-AR1]` `?[O]`
+## Priorität 0 — `[NP-CORR]` `?[O]`
 
-Zu quantifizieren ist die gleichzeitige positive Energie derselben Funktion in den AR(1)-Blöcken vieler Primzahlen.
-
-Da
+Zu beweisen ist die strukturierte signed-pairing-Ungleichung
 
 ```math
-log p/log r notin Q
+\boxed{
+\mathcal A(v)
+\ge
+-2\int_0^{2a}\mathfrak D(t)
+\frac{d}{dt}\operatorname{Re}\langle T_tv,v\rangle dt
+}
 ```
 
-für `p!=r`, liegen die gefährlichen Niedrigfrequenzsektoren auf inkommensurablen Gittern.
+für alle `v in D_NP(a)` und alle `a>0`.
 
 ### Pflichtfragen
 
-1. Gibt es eine quantitative Uncertainty-/Frame-Ungleichung zwischen zwei oder mehreren `log p`-Faserungen?
-2. Kann eine Funktion gleichzeitig nahe am positiven Topsektor von `R_{p^{-1/2}}-I` für viele `p` liegen?
-3. Liefert die bekannte AR(1)-Inverse/Markov-Struktur eine gemeinsame Kontraktion?
-4. Wie verändert der Q0-Sobolevtransport diese simultaneous-low-frequency-Frage?
-5. Kann die Überlappungsbreite `delta_n=2a-log n` eine zusätzliche Randstrafe liefern?
+1. Welche Signwechsel-/Oszillationsinformation über `D(t)` ist wirklich nutzbar, ohne bereits RH einzubauen?
+2. Welche Restriktionen erzwingt positive Definitheit der Autokorrelation zusätzlich zum cosh-Moment?
+3. Was wird aus `C_v'(t)` nach `v=Q_0u`?
+4. Wie erscheinen die exakten per-prime AR(1)-Blöcke innerhalb derselben Diskrepanz?
+5. Kann ein centered Toeplitz-/Paley-Wiener-/Prolate-Argument das signed pairing kontrollieren?
+6. Gibt es einen expliziten Korrelationszeugen, der diese ganze Mechanismusklasse falsifiziert?
+
+### Harte Firewall
+
+Ein polynomialer Absolutbound
+
+```math
+D(T)=O(T^K)
+```
+
+für irgendein festes `K` wäre bereits RH-hart. Gesucht ist daher **keine** globale absolute Diskrepanzmajorante, sondern Antikorrelation gegen die spezielle Testklasse.
 
 ---
 
 ## Priorität 1 — `[AR1-RECONNECT]`
 
-Verbinde die exakte Faserform systematisch mit den bereits bewiesenen Prime-Power-Sätzen des Programms, insbesondere
+Die exakten Fasern
 
 ```math
-C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2}
+O_{p,a}^{(N)}=(\log p)(R_{p^{-1/2}}^{(N)}-I)
 ```
 
-und den Markov-/Weil-tail-Faktorisierungen.
-
-Gesucht ist eine echte Ungleichung für `sum_p O_{p,a}`, nicht nur eine weitere Identifikation der Matrixklasse.
+bleiben als lokale Struktur relevant. Ziel ist, die alte AR(1)/Markov-/Weil-tail-Faktorisierung in eine signed-correlation-Aussage für `dD` zu übersetzen.
 
 ---
 
-## Priorität 2 — `[ARCH-COUPLING]`
+## Priorität 2 — `[CENTERED-PROLATE]`
 
-Der Zieloperator bleibt
-
-```math
-\boxed{
-(A_\infty-\kappa_*I)|_{D_{NP}(a)}
-\succeq
-\sum_p O_{p,a}|_{D_{NP}(a)}.
-}
-```
-
-Die archimedische Seite darf nicht getrennt von der kollektiven Prime-Seite optimiert werden, wenn dadurch nur mehr Einzelkanalmasse entsteht.
+Prolate/Paley-Wiener nur noch auf der pole-cleared Diskrepanz testen. Ein Gate, das lediglich einen konstanten Konzentrationsfaktor für die rohe Prime-Amplitude verbessert, zählt nicht als Hauptfortschritt.
 
 ---
-
-## Auxiliary
-
-- finite Gamma-null ladder: strukturell zulässig, aber ohne Prime-overlap-Kontrolle Nebenfront;
-- short-window Coercivity: intern `✓[M]_part`, Neuheitsclaim `×[M]`;
-- Arb-`a_*`-Gate: numerisches Seitengate;
-- finite Ritzwerte: nur Diagnostik/Falsifikationshilfe.
 
 ## Endziel
 
 ```text
-collective multi-prime AR1 suppression
+NP-DISCREPANCY signed anti-correlation
         |
         v
-all-a NP-OVERLAP
+all-a NP-GAP
         |
         v
 global null-pole Weil positivity
@@ -117,10 +131,7 @@ RH
 
 ## Firewalls
 
-Nicht behaupten:
-
-- Einzelshift-No-Go widerlege kollektive Mechanismen;
-- Inkommensurabilität allein liefere bereits einen quantitativen Bound;
-- bekannte Kleinfensterpositivität sei neu;
-- ein fixes Fenster sei RH-äquivalent;
-- Object X oder RH seien bewiesen.
+- bekannte Kleinfensterpositivität bleibt Literaturbestand;
+- Einzelshift-/Blocknorm-No-Go nicht auf kollektive signed mechanisms überdehnen;
+- polynomialer D-Bound nicht als Zwischenziel verkaufen;
+- Object X und RH bleiben offen.
