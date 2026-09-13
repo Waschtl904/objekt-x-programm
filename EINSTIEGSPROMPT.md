@@ -17,7 +17,11 @@ Arbeite als strenger mathematischer Auditor und Research Assistant. Prüfe zuers
 5. `00-uebersicht/ACTIVE_THEOREM_REGISTRY.md`
 6. `00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`
 
-Aktueller Strang zusätzlich:
+Aktueller Hauptaudit:
+
+- `audits/P11_NULLPOLE_STRATEGIC_RECLASSIFICATION_2026-09-13.md`
+
+Auxiliary Pole-layer-Provenienz:
 
 - `audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md`
 - `audits/P11_POS_DIL_1_PRIME_MOMENT_HILBERTIZATION_2026-09-13.md`
@@ -28,7 +32,7 @@ Aktueller Strang zusätzlich:
 
 ### Governance
 
-ChatGPT übernimmt sämtliche GitHub-/Repository-Arbeiten. Perplexity ist nur externer Reviewer/Auditor. Statusmarker strikt trennen: `✓[M]`, `✓[K/M]`, `✓[M]_part`, `✓[M]_neg`, `×[M]`, `?[O]`.
+ChatGPT übernimmt sämtliche GitHub-/Repository-Arbeiten. Perplexity dient ausschließlich als externer Reviewer/Auditor. Statusmarker strikt trennen: `✓[M]`, `✓[K/M]`, `✓[M]_part`, `✓[M]_neg`, `×[M]`, `?[O]`.
 
 ---
 
@@ -36,127 +40,117 @@ ChatGPT übernimmt sämtliche GitHub-/Repository-Arbeiten. Perplexity ist nur ex
 
 ### 1. Lokale Weil-Normalform
 
-Für `0<a<=1`:
+Für `0<a<=1` im kanonischen Suzuki-Gauge:
 
 ```math
 Q_{B_a}=G_a^+-c_aI-R_0-R_1.
 ```
 
-### 2. OX-GEN-A / POS-DIL-1
+### 2. Polfunktionale identifiziert `✓[M]`
 
 ```math
-\mathcal ET_t=\rho(t)\mathcal E,
+M(v)(s)=\int_{\mathbb R}v(x)e^{(s-1/2)x}\,dx,
+```
+
+```math
+\boxed{E_-(v)=M(v)(0),\qquad E_+(v)=M(v)(1).}
+```
+
+Auf der Nullpolklasse
+
+```math
+\mathscr D_{NP}=\{v:M(v)(0)=M(v)(1)=0\}
+```
+
+gilt exakt
+
+```math
+R_0=0,
 \qquad
-\mathcal EK_n=D_n\mathcal E,
+\|\mathcal Ev\|^2=0.
 ```
+
+Für komplexe `v`:
 
 ```math
-R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle.
+R_0(v,v)
+=-2\operatorname{Re}(E_+(v)\overline{E_-(v)}).
 ```
 
-Prime-moment-Hilbertisierung:
+### 3. Restricted global Weil criterion
 
-```math
-\|V_Nv\|^2=\|\mathcal Ev\|^2,
-\qquad
-R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.
+Connes–Consani Proposition C.1: Für jede endliche Nullstellenmenge `F superset {0,1}` ohne nichttriviale Zeta-Nullstelle bleibt die **globale** Weil-Vorzeichenbedingung auf Testfunktionen mit `\tilde g|_F=0` RH-äquivalent.
+
+**Firewall:** keine fixed-`a`-RH-Äquivalenz daraus ableiten.
+
+### 4. Strategische Reklassifikation
+
+OX-GEN-A bleibt `✓[M]`, aber als exakte **Pole-layer geometry**. Die frühere Deutung als notwendiger Object-X-Klassenschnitt ist zurückgezogen.
+
+POS-DIL #101--#105 bleibt mathematisch gültig und wird als
+
+```text
+AUX-POS-DIL / full-class pole-layer route
 ```
 
-### 3. Exterior-shell Geometrie
+geführt. Nicht mehr Default-Hauptfront.
 
-```math
-\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\}.
-```
+### 5. Nullpol-Normalform
 
-Jeder Außenkanal `c_n>a` ist auf dem Fenster reine Identitätsmasse:
-
-```math
-w_n\langle K_nv,K_nw\rangle
-=2w_n\langle v,w\rangle.
-```
-
-Für den ersten Außenshell
-
-```math
-A_a^{out}:=G_a^++H_a^{out}
-\succeq\mathcal E^*\mathcal E
-```
-
-für alle `0<a<=1`.
-
-### 4. Exakte Prime-cutoff-Gauge `✓[M]`
-
-Für jede endliche Außenkanalmenge `J`:
-
-```math
-Q_{B_a}
-=(G_a^++H_{a,J})-(c_a+b_J)I-R_0-R_1,
-```
-
-```math
-b_J=2\sum_{n\in J}\frac{\Lambda(n)}{\sqrt n}.
-```
-
-Für den ersten Shell:
-
-```math
-c_a^{out}=c_a+A_{e^{4a}}-A_{e^{2a}}.
-```
-
-Damit ist der isolierte `c_a`-Wert cutoff-gaugeabhängig und nicht ohne Gauge-Fixierung kanonisch.
-
-### 5. Exakte positive `R_0`-Absorption `✓[M]`
-
-```math
-D_a^{out}=A_a^{out}-\mathcal E^*\mathcal E\succeq0,
-```
-
-```math
-L_+(v)=E_+(v)+E_-(v)
-=2\int_{-a}^a\cosh(x/2)v(x)\,dx.
-```
-
-Dann
-
-```math
-P_a^{(0)}
-:=A_a^{out}-R_0
-=D_a^{out}+L_+^*L_+\succeq0.
-```
-
-Und exakt
+Auf Nullpol:
 
 ```math
 \boxed{
-Q_{B_a}=P_a^{(0)}-c_a^{out}I-R_1,
-\qquad0<a\le1.
+Q_{B_a}(v)
+=G_a^+(v)-c_a\|v\|^2-R_1(v,v).
 }
 ```
 
-Der elementare archimedische `r_0`-/`R_0`-Layer ist damit positiv absorbiert, während die volle Weilform unverändert bleibt.
+Der verbleibende aktive Kern ist damit
+
+```text
+positive Prime/log|D| geometry
+minus scalar ledger
+minus R_1.
+```
+
+### 6. Gauge-Firewall
+
+PR #105 bleibt exakt: Außen-Prime-Kanäle können positive Featuremasse und denselben Skalarbetrag gegeneinander verschieben. Daher ist `c_a` ohne Gaugewahl nicht isoliert kanonisch.
+
+Auf der Nullpol-Hauptroute entweder:
+
+- originalen Suzuki-Gauge explizit fixieren; oder
+- gaugeinvariante Reststruktur formulieren.
 
 ---
 
 ## Nächster Default-Auftrag
 
-**OX-GEN-B / `R_1` + gaugeinvarianter Skalarrest.**
+**NULLPOL-CORE / NP-R1 zuerst.**
 
-Arbeite algebraisch zuerst:
+Arbeite in dieser Reihenfolge:
 
-1. Rekonstruiere die exakte polarisierte Formel bzw. den Kernel von `R_1` aus den kanonischen Suzuki-/OX-GRAM-Quellen.
-2. Bestimme Parität, Translation-/Reflexionssymmetrien und mögliche Generatorrepräsentationen.
-3. Definiere eine natürliche positive Absorptions-/Intertwinerklasse **vor** dem Ergebnis und prüfe Konstruktion oder No-Go.
-4. Behandle den skalaren Ledger gaugeinvariant; den nackten Wert `c_a` nicht als kanonisch voraussetzen.
-5. Prüfe bevorzugt eine gemeinsame Behandlung von `R_1` und Skalarrest.
+1. Rekonstruiere `R_1` aus den kanonischen Suzuki-/OX-GRAM-Quellen vollständig polarisiert.
+2. Bestimme `R_1`-Parität, Spiegelung, Translation/Faltung und mögliche Spektral-/Generatorrepräsentationen.
+3. Restriktiere jede Kandidatenstruktur ausdrücklich auf `M(v)(0)=M(v)(1)=0`.
+4. Definiere eine natürliche Generator-/Absorptionsklasse **vor** dem Ergebnis und prüfe Konstruktion oder No-Go.
+5. Behandle den Skalarledger parallel im fixed Suzuki gauge und gaugeinvariant.
+6. Bevorzuge einen gemeinsamen Mechanismus für `R_1` + Skalarrest.
 
-Keine weitere beliebige Diagonalaugmentation als Fortschritt verbuchen.
+### Verbindliche Hauptfront-Frage
+
+> Wirkt und schneidet dieser Mechanismus die zulässige Geometrie auch nach der Nullpolrestriktion?
+
+Wenn nein: als auxiliary dokumentieren, nicht als Object-X-Hauptfortschritt.
 
 ---
 
-## Firewalls
+## Präzisierungen / Firewalls
 
-- `P_a^{(0)}` ist noch nicht die volle Weil-Gram-Realisierung.
-- `R_1` und der endgültige Skalarrest bleiben offen.
-- Keine Aussage für `a>1` ohne separaten Beweis.
-- Object X und RH bleiben offen.
-- PR #91, PR #49 und R37/G4c bleiben separate Nebenfronten.
+- Companion-Block bei `t=1` nur semidefinit/entartet; strikt positiv erst `t>1`.
+- Anti-Kovarianz-No-Go lässt `b in C` frei.
+- Die alte Rayleigh-Obstruktion ist extern numerisch im geraden Sektor lokalisiert; sie ist für NULLPOL-CORE nicht tragend.
+- OX-GEN-A/POS-DIL nicht als falsch bezeichnen.
+- Keine Aussage für fixed `a` als vollständiges RH-Kriterium ohne separaten Satz.
+- `R_1`, Skalarrest, Object X und RH bleiben offen.
