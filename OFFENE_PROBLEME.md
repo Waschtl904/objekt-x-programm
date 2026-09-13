@@ -1,142 +1,152 @@
-# Offene Probleme — aktuelle NULLPOL-CORE-Priorität
+# Offene Probleme — COMMON-JUMP / NP-GAP
 
 > **Stand:** 13. September 2026.  
-> Operative Quellen: [CURRENT-FRONT](CURRENT-FRONT.md), [Nullpol-Audit](audits/P11_NULLPOLE_STRATEGIC_RECLASSIFICATION_2026-09-13.md), [Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](00-uebersicht/DAG.md), [Registry](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md).
+> Operative Quellen: [CURRENT-FRONT](CURRENT-FRONT.md), [Common-Jump-Audit](audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md), [Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](00-uebersicht/DAG.md).
 
-## Neu geschlossen / geklärt
+## Neu geschlossen
 
-### `[NP-POLES]` Polfunktionale `✓[M]`
+### `[NP-R1]` separate Geometriefrage — `✓[M]`
 
-```math
-E_-=M(v)(0),\qquad E_+=M(v)(1).
-```
-
-Auf
+`R_1` ist nicht mehr als separater Generatorblock offen. Zusammen mit dem logarithmischen archimedischen Anteil wird er vom kontinuierlichen positiven Kanal
 
 ```math
-\mathscr D_{NP}=\ker M(0)\cap\ker M(1)
+K_t=T_{t/2}-T_{-t/2},
+\qquad
+h(t)dt=\frac{e^{-t/2}}{1-e^{-2t}}dt
 ```
 
-gilt
+erzeugt.
+
+### `[NP-COMMON]` — `✓[M]`
+
+Archimedischer Ort und Primzahlpotenzen liegen in derselben positiven Hilbert-Geometrie:
 
 ```math
-R_0=0,\qquad\|\mathcal Ev\|^2=0.
+\mu_a=h(t)dt+
+\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}.
 ```
 
-### `[NP-WEIL-SCOPE]` globaler restricted Weil-Scope `✓[K/M]`
+Die Featureform ist `X_a^*X_a>=0`.
 
-Connes–Consani Proposition C.1: RH bleibt äquivalent zur globalen Weil-Vorzeichenbedingung nach Vorgabe einer endlichen Nullstellenmenge `F superset {0,1}`, solange `F` keine nichttriviale Zeta-Nullstelle enthält.
-
-**Firewall:** keine fixed-`a`-Äquivalenz behauptet.
-
-### `[OX-GEN-A]`
-
-Mathematik bleibt `✓[M]`; strategisch als Pole-layer auxiliary reklassifiziert. Kein notwendiger Klassenschnitt auf der Nullpolroute.
-
-### `[AUX-POS-DIL]`
-
-PR #101--#105 bleiben vollständig mathematisch gültig, werden aber als auxiliary full-class route geführt.
-
----
-
-## Priorität 0 — `[NP-R1]` `?[O]`
-
-Bestimme `R_1` auf der Nullpolklasse.
-
-Pflichtfragen:
-
-1. exakter polarisierter Kernel;
-2. geschlossene Form von `r_1''` einschließlich hebbarer Singularität;
-3. Paritäts- und Spiegelungssymmetrien;
-4. Translation-/Faltungs-/Spektraldarstellung;
-5. bleibt eine natürliche Generator- oder Featureklasse nach Nullpol nichttrivial?
-6. falls nein: enger vorab definierter Klassen-No-Go.
-
-Ein Ergebnis, das nur außerhalb `\mathscr D_{NP}` wirkt, zählt nicht als Hauptfront-Fortschritt.
-
----
-
-## Priorität 1 — `[NP-SCALAR]` `?[O]`
-
-Im canonical-Suzuki-Gauge bleibt auf Nullpol
+### `[NP-SCALAR-GAUGE]` — `✓[M]`
 
 ```math
-c_a\|v\|^2
+\Gamma_a
+=2\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}
++\log\pi-\psi(1/4).
 ```
 
-als nichtannihilierbarer Skalarledger bestehen.
+Neue Außen-Prime-Atome erhöhen `X_a^*X_a` und `Gamma_a I` exakt gleich. Gaugeinvariant ist die zentrierte Paarung
 
-Zu klären:
+```math
+X_a^*X_a-\Gamma_aI.
+```
 
-- intrinsische Herkunft im fixierten Suzuki-Gauge;
-- Verhalten unter den exakten Außen-Prime-cutoff-Gauges aus PR #105;
-- Existenz einer gaugeinvarianten Skalar-Restgröße;
-- Zusammenhang mit `R_1` statt isolierter post-hoc Gegenmasse.
+### `[COMMON-JUMP-NORMAL-FORM]` — `✓[M]`
 
-**Nicht erlaubt:** beliebiges `tI` als Lösung.
+Für alle `a>0`:
+
+```math
+Q_W(v,w)
+=\langle Ev,PEw\rangle
++\langle X_av,X_aw\rangle
+-\Gamma_a\langle v,w\rangle.
+```
+
+Auf Nullpol:
+
+```math
+\boxed{Q_W|_{NP}=X_a^*X_a-\Gamma_aI.}
+```
+
+---
+
+## Priorität 0 — `[NP-GAP]` `?[O]`
+
+Der neue einzige harte Hauptengpass ist
+
+```math
+\boxed{
+\lambda_{NP}(a)
+:=
+\inf_{\substack{0\ne v\in C_c^\infty(-a,a)\\M(v)(0)=M(v)(1)=0}}
+\frac{\|X_av\|^2}{\|v\|_2^2}
+\stackrel{?}{\ge}\Gamma_a.
+}
+```
+
+Für die Familie aller Fenster ist dies die verbleibende RH-äquivalente Lower-Frame-/Spektralgap-Frage.
+
+### `[NP-GAP-A]` support-erhaltende Momentfaktorisierung
+
+Nutze die Nullpolbedingungen als
+
+```math
+\widehat v(i/2)=\widehat v(-i/2)=0
+```
+
+und untersuche die Faktorisierung
+
+```math
+v=Q_0u,
+\qquad
+Q_0=-d^2/dx^2+1/4,
+```
+
+mit gleichem kompaktem Trägerscope.
+
+Ziel: echte coercivity von `X_a^*X_a` auf `Ran Q_0`, oder ein enger No-Go gegen diese Methode.
+
+### `[NP-GAP-B]` Fourier-/Paley-Wiener
+
+Arbeite mit
+
+```math
+\Phi_a(z)=
+\operatorname{Re}\psi\left(\frac14+\frac{iz}{2}\right)-\psi(1/4)
++2\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}(1-\cos(z\log n)).
+```
+
+Die Schwierigkeit ist nicht `Phi_a>=0`, sondern die scharfe Untergrenze auf Funktionen mit den komplexen Nullbedingungen `z=±i/2`.
+
+### `[NP-GAP-C]` nonlocal Poincare / frame mechanism
+
+Teste nur vorab definierte, nichtzirkuläre Mechanismen:
+
+- nonlocal Poincare-/Dirichlet-form-Ungleichungen;
+- Paley-Wiener-/sampling-Struktur;
+- de-Branges-/reproduzierende-Kern-Methoden;
+- Schur-/Shorting-Mechanismen, sofern sie den Bound nicht aus fertiger Weil-Positivität zurückdefinieren.
 
 ---
 
-## Priorität 2 — `[NP-COMMON]` `?[O]`
+## Danach
 
-Gesucht ist ein gemeinsamer Mechanismus für `R_1` plus Skalarrest, der auf `\mathscr D_{NP}` nichttrivial ist.
+```text
+NP-GAP
+  |
+  v
+positive Weil form on global null-pole class
+  |
+  v
+RH
+```
 
-Beidseitig offenes Gate vor jedem Test:
-
-> Verkleinert oder konstruiert der Mechanismus die zulässige Geometrie noch nach `M(v)(0)=M(v)(1)=0`?
-
-Nur bei **ja** zählt er als Object-X-Hauptfront.
-
----
-
-## Priorität 3 — vollständiger Object-X-Pfad
-
-- `[OX-CANDIDATE]` genuine X candidate `?[O]`;
-- `[OX-WEIL-GRAM]` exakte volle Weil-Gram-Identität auf einer RH-äquivalenten Nullpol-Testklasse `?[O]`;
-- `[OX-REALIZATION]` Object-X-Realisierung `?[O]`;
-- `[OX-WEIL-SCOPE]` exakte Rückbindung an das klassische/restricted Weil-Kriterium `?[O]`;
-- RH `?[O]`.
-
----
+Ein Beweis von NP-GAP für alle `a` wäre daher bereits RH. Hier ist besondere Zirkularitätskontrolle Pflicht.
 
 ## Auxiliary / separate
 
-### AUX-POS-DIL
+- OX-GEN-A: exakte Pole-layer geometry;
+- POS-DIL #101--#105: auxiliary full-class route;
+- Prime-Power AR(1): eigenständige positive Struktur;
+- R37/G4c, PR #91, PR #49 separat.
 
-Full-class Pole-layer-Geometrie #101--#105; korrekt, aber nicht Default-Priorität.
-
-### AR1-WRITEUP
-
-Prime-Power-AR(1)/Martingal-Faktorisierung als eigenständige RH-unabhängige Mathematik.
-
-### Separat
-
-- R37/G4c;
-- PR #91;
-- PR #49.
-
----
-
-## Präzisierungen, die nicht erneut verloren gehen dürfen
-
-- komplex:
-  ```math
-  R_0(v,v)=-2\operatorname{Re}(E_+(v)\overline{E_-(v)});
-  ```
-- Companion-Block semidefinit genau für `t>=1`, strikt positiv für `t>1`;
-- Anti-Kovarianzform hat freien `b in C`, nicht nur einen reellen Parameter;
-- numerischer alte POS-DIL-No-Go sitzt in der externen Sektorauswertung im geraden Sektor;
-- `c_a` ist unter Außen-Prime-cutoff-Gauge nicht isoliert invariant.
-
----
-
-## Gesperrte Überdehnungen
+## Firewalls
 
 Nicht behaupten:
 
-- Nullpolklasse löse bereits den Skalar- oder `R_1`-Term;
-- globale Nullpol-RH-Äquivalenz gelte automatisch für jedes feste Fenster;
-- OX-GEN-A/POS-DIL seien falsch;
-- POS-DIL sei weiterhin notwendiger Hauptengpass;
-- `c_a` sei ohne Gaugewahl kanonisch;
+- COMMON-JUMP beweise den Lower-Frame-Bound;
+- die exakte Differenz `X_a^*X_a-Gamma_aI` sei bereits eine positive Gramdarstellung der Weilform;
+- fixed-`a`-Positivität allein sei RH-äquivalent;
+- Publikationsneuheit sei geklärt;
 - Object X oder RH seien bewiesen.
