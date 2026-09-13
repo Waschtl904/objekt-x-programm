@@ -1,126 +1,127 @@
-# Abhängigkeitsgraph (DAG) — Objekt X / NP-DUAL-COMP
+# Abhängigkeitsgraph (DAG) — Objekt X / A1-SCHUR
 
-> **Stand:** 13. September 2026; Registry unverändert.
+> **Stand:** 13. September 2026; Registry und Arbeitsdefinition unverändert.
 
-## 1. Base geometry
-
-```text
-COMMON-JUMP ✓[M]
-   |
-E=(E_+,E_-)
-   |
-D_NP(a)=ker E
-   |
-q_a=X_a^*X_a-Gamma_a I
-   |
-Q_W^a=q_a+E^*PE
-```
-
-## 2. Screw literature edge
+## 1. Completion basis
 
 ```text
-prime/polar discrepancy D
-   |
-   | exact identity
-   v
-D=(g0+r0)' in Suzuki screw decomposition       ✓[M]
-   |
-   v
-D as literature-new object                      ×[M]
-```
-
-## 3. Autocorrelation edge
-
-```text
-v in ker E
-   |
-C_v(t)=<T_t v,v>
-   |
-H_v(s)=E_s(v) overline(E_-s(v))
-   |
-   +--> L0(C_v)=0                              ✓[M]
-   +--> L1(C_v)=0                              ✓[M]
-```
-
-But:
-
-```text
-L0=L1=0 on scalar C
-   |
-   X
-exact reconstruction E_+=E_-=0                 ×[M]
-```
-
-Hence scalar Turan is an outer relaxation.
-
-## 4. Exact dual edge
-
-```text
-q_a >= delta I on ker E
-   |
-   v
-exists lambda: q_a+lambda E^*E >=0              ✓[M]
-```
-
-Semidefinite closure:
-
-```text
-q_a >=0 on ker E
-   |
-   <=>
-forall eps>0 exists lambda_eps:
-q_a+eps I+lambda_eps E^*E >=0                    ✓[M]
-```
-
-This is the exact fixed-window rank-2 completion node.
-
-## 5. Pole matrix edge
-
-```text
-arbitrary completion H          exact Weil pole P
-         |                             |
-         v                             v
-null-pole certificate          full fixed-window Weil positivity
-```
-
-`H=P` is much stronger than existence of some `H`.
-
-## 6. Computational edge
-
-```text
-finite basis + 2x2 completion optimization
+COMMON-JUMP / Q0 ✓[M]
         |
-        +--> Arb PSD on resolved block
-        +--> rigorous tail / Schur complement
+D_NP(a)=ker E
+        |
+q_a=X_a^*X_a-Gamma_a I
+        |
+rank-2 completion / Morse / parity ✓[M]
+        |
+canonical lambda=1 ✓[M]
+```
+
+## 2. Exact `a=1` Fourier edge
+
+```text
+q_1 on time-limited functions
+        |
+whole-line Plancherel
+        v
+q_1(v)=integral m_1(xi)|vhat(xi)|^2 dxi    ✓[M]
+```
+
+with active prime powers `{2,3,4,5,7}` and no additional window remainder.
+
+## 3. High-frequency edge
+
+```text
+DLMF digamma series
+ + monotone integral tail
+ + cos(theta)<=1
         |
         v
-certified fixed-window completion ?[O]
+m_1(xi)>0.04 for |xi|>=2300                ✓[K/M]
 ```
 
-Without the tail edge, finite PSD is only diagnostic.
+Also globally `m_1>=-Gamma_1`.
 
-## 7. Baseline / barrier
+## 4. Prolate concentration edge
 
 ```text
-literature full-class positivity through a=0.8
-Landau-Widom tiny-gap scale
-pointwise-envelope doubly-exponential barrier
+C_2300=P[-1,1] B[-2300,2300] P[-1,1]
+        |
+PSWF eigenvalues lambda_k
+        |
+Karnik-Romberg-Davenport Cor. 3
+        |
+        v
+lambda_1490(c=2300)<0.0035                  ✓[K/M]
 ```
 
-Therefore the first potentially new fixed-window target is `a>0.8`, naturally `a=1.0`.
-
-## 8. Main path
+Therefore for `T_1490=span{psi_0,...,psi_1489}^perp`:
 
 ```text
-rank-2 completion theorem ✓[M]
+band mass <= lambda_1490
+        +
+high-frequency m_1>0.04
+        +
+global m_1>=-Gamma_1
+        |
+        v
+q_1 > 0.01 I on T_1490                       ✓[K/M]
+```
+
+The infinite tail is closed.
+
+## 5. Parity edge
+
+```text
+PSWF reflection symmetry
+        |
+first 1490 modes = 745 even + 745 odd
+        |
+        v
+compatible with 2-channel parity completion ✓[M]
+```
+
+## 6. Remaining A1-SCHUR edge
+
+For
+
+```math
+A_1=q_1+E^*E
+```
+
+and decomposition `R_1490 + T_1490`:
+
+```text
+A_TT > 0.01 I                                ✓[K/M]
+        |
+        +--> certify A_RR on 1490 modes       ?[O]
+        +--> certify ||A_RT||                  ?[O]
+        |
+        v
+A_RR-A_RT A_TT^{-1} A_TR >=0                 ?[O]
+        |
+        v
+certified a=1 completion                      ?[O]
+```
+
+## 7. Global path
+
+```text
+A1-SCHUR
    |
-rigorous fixed-a completion beyond 0.8 ?[O]
+fixed-window a=1 completion
    |
-structural completion for every a ?[O]
+structural scaling / further windows
    |
-all-a NP-GAP ?[O]
+all-a NP-GAP
+   |
+restricted Weil criterion
    |
 RH
 ```
 
-Registry and working definition unchanged.
+## 8. Firewalls
+
+- PSWF basis diagonalizes concentration, not `q_1`.
+- Positive tail does not imply positive full operator.
+- Earlier finite Dirichlet Ritz values remain non-certified.
+- Resolved PSD without crossblock bound is not a theorem.
