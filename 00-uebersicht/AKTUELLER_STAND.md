@@ -1,23 +1,16 @@
 # Aktueller Stand — Objekt X / POS-DIL
 
 > **Stand:** 13. September 2026; Registry unverändert.  
-> Details: [CURRENT-FRONT](../CURRENT-FRONT.md), [Roadmap](FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](DAG.md), [Registry](ACTIVE_THEOREM_REGISTRY.md), [Arbeitsdefinition](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
+> Details: [CURRENT-FRONT](../CURRENT-FRONT.md), [Roadmap](FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](DAG.md), [Registry](ACTIVE_THEOREM_REGISTRY.md).
 
-## 1. Strong Terminal / C6
+## 1. Basis
 
-Für jedes feste `0<R<S` liegt Strong Terminal/C6 im ungeraden P11-Graphraum vor. Keine Radienuniformität, Operatornormkonvergenz, vollständige Object-X-Realisierung oder RH-Folgerung.
-
-## 2. Prime-Power-/AR(1)-Struktur
+Fixed-pair Strong Terminal/C6 liegt im ungeraden P11-Graphraum vor. Die Prime-Power-Seite besitzt die exakte AR(1)/Weil-Tail-Struktur
 
 ```math
 C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2},
-\qquad
-T_q^*T_q+uu^*=R_q.
+\qquad T_q^*T_q+uu^*=R_q.
 ```
-
-Die P11-Restseite besitzt die exakte Weil-Tail-Normalform. Cross-prime Root-Gram ist fensterloser Bulk.
-
-## 3. OX-GRAM
 
 Für `a<=1`:
 
@@ -26,9 +19,7 @@ Q_{B_a}=G_a^+-N_a,
 \qquad N_a=c_aI+C_a.
 ```
 
-Die bloße Existenz eines rückwärts aus `Q` definierten Kontraktors ist kein Object-X-Gate. CERT-HARDEN ist im dokumentierten endlichen Scope geschlossen.
-
-## 4. OX-GEN-A `✓[M]`
+## 2. OX-GEN-A / POS-DIL-1
 
 ```math
 \mathcal ET_t=\rho(t)\mathcal E,
@@ -37,26 +28,10 @@ Die bloße Existenz eines rückwärts aus `Q` definierten Kontraktors ist kein O
 ```
 
 ```math
-r_0''(t)=-\operatorname{tr}\rho(t),
-\qquad
 R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle.
 ```
 
-Prime-only-A2 aus `{w_n,lambda_n}` bleibt `×[M]` im engen Scope.
-
-## 5. POS-DIL-1
-
-Die natürliche Companion-Symmetrie erzwingt `M=tI`; minimale Blockpositivität liefert `M=I`. Volle positive `rho`-Invarianz erzwingt dagegen `M=0`.
-
-Für jede endliche nichtleere Prime-Power-Menge `N`:
-
-```math
-V_Nv=\kappa_N^{-1/2}(\sqrt{w_n}\,\mathcal EK_nv)_{n\in N},
-\qquad
-\kappa_N=\sum_{n\in N}w_n\lambda_n^2.
-```
-
-Dann
+Die Prime-moment-Abbildung realisiert
 
 ```math
 \|V_Nv\|^2=\|\mathcal Ev\|^2,
@@ -70,127 +45,90 @@ AR(1)-Brücke:
 \sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S.
 ```
 
-`OX-GEN-A2'`: insgesamt `✓[M]_part`.
+## 3. POS-DIL-2A
 
-## 6. POS-DIL-2A — unit-gain bestehende Featureform `×[M]`
+Die unveränderte lokale Form `G_{1/2}^+` ist für unit-gain Shorting zu klein. Eine Plateaufolge liefert einen exakten positiven Massendefekt `delta_0>5/32`.
 
-Bei `a=1/2` verletzt eine explizite gerade Plateaufolge
+## 4. Erster äußerer Prime-Shell
 
 ```math
-\|\mathcal Ev\|^2\le G_{1/2}^+(v).
+\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\},
+\qquad c_n=\frac12\log n,
 ```
 
-Grenzwerte:
-
 ```math
-\|\mathcal Ev_\varepsilon\|^2
-\to32\sinh^2\frac14,
-\qquad
-G_{1/2}^+(v_\varepsilon)
-\to1+\sqrt2(\log2)^2,
+H_a^{out}(v,w)=\sum_{n\in\mathscr S_a^{out}}
+\frac{\Lambda(n)}{\sqrt n}\langle K_nv,K_nw\rangle.
 ```
 
-mit
+Für jeden Shell-Kanal gilt
 
 ```math
-32\sinh^2\frac14>2>1+\sqrt2(\log2)^2.
+\|K_nv\|^2=2\|v\|^2,
 ```
 
-Notwendiger Zusatzmassendefekt:
+also
 
 ```math
-\delta_0
-=32\sinh^2\frac14-1-\sqrt2(\log2)^2
->\frac5{32}.
+H_a^{out}(v)=2B_a^{out}\|v\|^2.
 ```
 
-## 7. POS-DIL-2B — erster äußerer Prime-Shell `✓[M]` bei `a=1/2`
+Dies ist intrinsische Prime-Masse aus echten Kanälen.
 
-Definiere
+## 5. POS-DIL-2C-R — vollständige Radiusfortsetzung `✓[M]`
+
+Für `0<a<=1`:
 
 ```math
-\mathscr S_a^{\rm out}
-=\{n=p^k: a<c_n\le2a\},
-\qquad c_n=\tfrac12\log n,
+G_a^+(v)\ge(-\log a)\|v\|^2,
+```
+
+```math
+\|\mathcal Ev\|^2\le4\sinh(a)\|v\|^2.
+```
+
+Eine siebenintervallige elementare Analyse der Prime-Power-Shellwechsel beweist
+
+```math
+-\log a+2B_a^{out}>4\sinh(a)
+\qquad(0<a\le1).
+```
+
+Daher für **jeden** Radius im lokalen Scope:
+
+```math
+\boxed{
+\|\mathcal Ev\|^2
+\le G_a^+(v)+H_a^{out}(v),
+\qquad0<a\le1.
+}
 ```
 
 und
 
 ```math
-H_a^{\rm out}(v,w)
-=\sum_{n\in\mathscr S_a^{\rm out}}
-\frac{\Lambda(n)}{\sqrt n}
-\langle K_nv,K_nw\rangle.
-```
-
-Für `c_n>a` sind die beiden verschobenen Fenster disjunkt, also exakt
-
-```math
-\boxed{\|K_nv\|_2^2=2\|v\|_2^2.}
-```
-
-Damit
-
-```math
-H_a^{\rm out}(v)
-=2B_a^{\rm out}\|v\|_2^2.
-```
-
-Bei `a=1/2` enthält der Shell insbesondere `3,4,5`. Aus diesen echten Prime-Kanälen plus dem vorhandenen Log-Multiplikator folgt für jedes nichttriviale `v`
-
-```math
-G_{1/2}^+(v)+H_{1/2}^{\rm out}(v)
->\frac83\|v\|_2^2.
-```
-
-Andererseits
-
-```math
-\|\mathcal Ev\|^2
-\le4\sinh\frac12\|v\|_2^2
-<\frac83\|v\|_2^2.
-```
-
-Also uniform auf der ganzen Testklasse:
-
-```math
-\boxed{
-\|\mathcal Ev\|^2
-\le G_{1/2}^+(v)+H_{1/2}^{\rm out}(v).
-}
-```
-
-Mit `A_{1/2}^{out}=G_{1/2}^++H_{1/2}^{out}` folgt
-
-```math
 \boxed{
 \begin{pmatrix}
-A_{1/2}^{\rm out}&R_0\\
-R_0&A_{1/2}^{\rm out}
+G_a^++H_a^{out}&R_0\\
+R_0&G_a^++H_a^{out}
 \end{pmatrix}\succeq0.
 }
 ```
 
-Kanonische Quelle: `audits/P11_POS_DIL_2B_FIRST_EXTERIOR_PRIME_SHELL_2026-09-13.md`.
+Kanonische Quelle: `audits/P11_POS_DIL_2C_EXTERIOR_SHELL_RADIUS_0_1_2026-09-13.md`.
 
-## 8. Bedeutung und Firewall
+## 6. Neue einzige POS-DIL-Hauptfrage
 
-Dies ist der erste positive Reparaturbaustein nach dem POS-DIL-2A-No-Go, dessen Zusatzmasse vorwärts aus **echten Prime-Kanälen mit den kanonischen Weilgewichten** entsteht.
+**POS-DIL-2C-B / EXACT-SHELL-BOOKING `?[O]`**:
 
-Noch offen:
+Wie kann die positive Außenkanalenergie in einer exakten gemeinsamen Prime-/Archimedean-Geometrie bilanziert werden, ohne die vollständige Weilform künstlich zu vergrößern?
 
-- Radiusfortsetzung auf andere `a`;
-- exakte Buchung/Renormalisierung der äußeren Kanäle in einer vollen Weil-Identität;
-- `r_1` und `c_aI`;
-- genuine X candidate, volle Weil-Gram-Identität, Object X, RH.
+Priorität:
 
-Die Shellmasse wird ausdrücklich **nicht** mit `c_aI` identifiziert.
+1. Außenkanalmasse vor der Cutoff-Umschreibung rekonstruieren.
+2. Shell-Differenzen/Teleskopierung untersuchen.
+3. AR(1)-Root/Hub-Gegenbuchung prüfen.
+4. Rolle von `1-u_k` prüfen.
+5. Erst danach mögliche Verbindung zu `c_aI`.
 
-## 9. Nächste Arbeitsfolge
-
-1. **POS-DIL-2C / SHELL-BOOKING:** klären, wie der positive äußere Shell in einer exakten gemeinsamen Prime-/Archimedean-Geometrie bilanziert werden kann, ohne künstliche Zusatzenergie.
-2. **POS-DIL-2C / RADIUS:** danach bzw. parallel die Dominanz für andere `0<a<=1` beweisen oder den Radiusbereich exakt bestimmen.
-3. Root/Hub-/AR(1)-Teleskopierung und Shell-Differenzen als mögliche Gegenbuchung untersuchen.
-4. Erst danach `r_1`/`c_aI` einbeziehen, wenn ihre Rolle vorwärts motiviert ist.
-
-Registry unverändert; keine automatische Promotion durch Merge oder CI.
+Weiter offen: exakte Shell-Buchung, `r_1`, `c_aI`, genuine X candidate, volle Weil-Gram-Identität, Object X und RH.
