@@ -1,129 +1,132 @@
-# Offene Probleme — aktuelle OX-GEN-B-Priorität
+# Offene Probleme — aktuelle NULLPOL-CORE-Priorität
 
 > **Stand:** 13. September 2026.  
-> Operative Quellen: [CURRENT-FRONT](CURRENT-FRONT.md), [AKTUELLER_STAND](00-uebersicht/AKTUELLER_STAND.md), [Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](00-uebersicht/DAG.md), [Registry](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md).
+> Operative Quellen: [CURRENT-FRONT](CURRENT-FRONT.md), [Nullpol-Audit](audits/P11_NULLPOLE_STRATEGIC_RECLASSIFICATION_2026-09-13.md), [Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](00-uebersicht/DAG.md), [Registry](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md).
 
-## Geschlossen im dokumentierten Scope
+## Neu geschlossen / geklärt
 
-### OX-GEN-A / POS-DIL-1
-
-Gemeinsame Translation-/Reflexions-Generator-Ebene und Prime-moment-Hilbertisierung sind konstruiert.
-
-### POS-DIL-2A
-
-Die unveränderte lokale `G_{1/2}^+`-Norm ist für unit-gain Shorting zu klein.
-
-### POS-DIL-2B/2C-R
-
-Der erste äußere Prime-Shell
+### `[NP-POLES]` Polfunktionale `✓[M]`
 
 ```math
-\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\}
+E_-=M(v)(0),\qquad E_+=M(v)(1).
 ```
 
-liefert echte Prime-Kanalmasse und dominiert zusammen mit `G_a^+` die Momentmasse für **alle** `0<a<=1`.
-
-### POS-DIL-2C-B — exakte Shell-Buchung `✓[M]`
-
-Für jede endliche Außenkanalmenge `J` gilt
+Auf
 
 ```math
-H_{a,J}=b_JI,
-\qquad
-b_J=2\sum_{n\in J}\frac{\Lambda(n)}{\sqrt n}.
+\mathscr D_{NP}=\ker M(0)\cap\ker M(1)
 ```
 
-Daher
+gilt
 
 ```math
-Q_{B_a}
-=(G_a^++H_{a,J})-(c_a+b_J)I-R_0-R_1.
+R_0=0,\qquad\|\mathcal Ev\|^2=0.
 ```
 
-Die volle Weilform bleibt exakt unverändert. Der isolierte `c_a`-Wert ist cutoff-gaugeabhängig.
+### `[NP-WEIL-SCOPE]` globaler restricted Weil-Scope `✓[K/M]`
 
-### Positive `R_0`-Absorption `✓[M]`
+Connes–Consani Proposition C.1: RH bleibt äquivalent zur globalen Weil-Vorzeichenbedingung nach Vorgabe einer endlichen Nullstellenmenge `F superset {0,1}`, solange `F` keine nichttriviale Zeta-Nullstelle enthält.
 
-Für den ersten Außenshell setze
+**Firewall:** keine fixed-`a`-Äquivalenz behauptet.
 
-```math
-A_a^{out}=G_a^++H_a^{out},
-```
+### `[OX-GEN-A]`
 
-```math
-D_a^{out}=A_a^{out}-\mathcal E^*\mathcal E\succeq0,
-```
+Mathematik bleibt `✓[M]`; strategisch als Pole-layer auxiliary reklassifiziert. Kein notwendiger Klassenschnitt auf der Nullpolroute.
 
-```math
-L_+=E_++E_-.
-```
+### `[AUX-POS-DIL]`
 
-Dann
-
-```math
-P_a^{(0)}
-=A_a^{out}-R_0
-=D_a^{out}+L_+^*L_+\succeq0.
-```
-
-Die exakte Normalform lautet
-
-```math
-\boxed{
-Q_{B_a}=P_a^{(0)}-c_a^{out}I-R_1,
-\qquad0<a\le1.
-}
-```
-
-Kanonische Quelle: `audits/P11_POS_DIL_2C_EXACT_SHELL_GAUGE_R0_ABSORPTION_2026-09-13.md`.
+PR #101--#105 bleiben vollständig mathematisch gültig, werden aber als auxiliary full-class route geführt.
 
 ---
 
-## Priorität 0 — OX-GEN-B / R1-GENERATOR `?[O]`
+## Priorität 0 — `[NP-R1]` `?[O]`
 
-Bestimme die exakte mathematische Struktur von `R_1` und teste vorab definierte natürliche Generator-/Featureklassen.
+Bestimme `R_1` auf der Nullpolklasse.
+
+Pflichtfragen:
+
+1. exakter polarisierter Kernel;
+2. geschlossene Form von `r_1''` einschließlich hebbarer Singularität;
+3. Paritäts- und Spiegelungssymmetrien;
+4. Translation-/Faltungs-/Spektraldarstellung;
+5. bleibt eine natürliche Generator- oder Featureklasse nach Nullpol nichttrivial?
+6. falls nein: enger vorab definierter Klassen-No-Go.
+
+Ein Ergebnis, das nur außerhalb `\mathscr D_{NP}` wirkt, zählt nicht als Hauptfront-Fortschritt.
+
+---
+
+## Priorität 1 — `[NP-SCALAR]` `?[O]`
+
+Im canonical-Suzuki-Gauge bleibt auf Nullpol
+
+```math
+c_a\|v\|^2
+```
+
+als nichtannihilierbarer Skalarledger bestehen.
 
 Zu klären:
 
-1. exakter Kernel bzw. die polarisierte Formel für `R_1`;
-2. Parität und Symmetrien;
-3. Darstellung als Integral/Superposition natürlicher Translation-/Reflexionskanäle;
-4. mögliche positive Absorption zusammen mit bereits vorhandenen Features;
-5. andernfalls ein enger, vorab definierter Klassen-No-Go.
+- intrinsische Herkunft im fixierten Suzuki-Gauge;
+- Verhalten unter den exakten Außen-Prime-cutoff-Gauges aus PR #105;
+- Existenz einer gaugeinvarianten Skalar-Restgröße;
+- Zusammenhang mit `R_1` statt isolierter post-hoc Gegenmasse.
 
-Keine fertige Weil-Positivität und keine rückwärts definierte Positivitätswurzel als Input.
-
----
-
-## Priorität 1 — GAUGE-INVARIANT-SCALAR `?[O]`
-
-Der nackte Wert `c_a` ist unter der exakten Außen-Prime-Gauge nicht invariant.
-
-Gesucht ist daher entweder:
-
-- ein geometrisch kanonischer cutoff-Gauge; oder
-- eine gaugeinvariante Kombination von Skalarledger und `R_1`.
-
-Bevorzugt ist eine gemeinsame Lösung von `R_1` und Skalarrest statt zweier unabhängiger post-hoc Korrekturen.
+**Nicht erlaubt:** beliebiges `tI` als Lösung.
 
 ---
 
-## Priorität 2 — vollständiger Object-X-Pfad
+## Priorität 2 — `[NP-COMMON]` `?[O]`
 
-- genuine X candidate `?[O]`;
-- exakte volle Weil-Gram-Identität `?[O]`;
-- Object-X-Realisierung `?[O]`;
-- Weil-Kriterium-Scope `?[O]`;
+Gesucht ist ein gemeinsamer Mechanismus für `R_1` plus Skalarrest, der auf `\mathscr D_{NP}` nichttrivial ist.
+
+Beidseitig offenes Gate vor jedem Test:
+
+> Verkleinert oder konstruiert der Mechanismus die zulässige Geometrie noch nach `M(v)(0)=M(v)(1)=0`?
+
+Nur bei **ja** zählt er als Object-X-Hauptfront.
+
+---
+
+## Priorität 3 — vollständiger Object-X-Pfad
+
+- `[OX-CANDIDATE]` genuine X candidate `?[O]`;
+- `[OX-WEIL-GRAM]` exakte volle Weil-Gram-Identität auf einer RH-äquivalenten Nullpol-Testklasse `?[O]`;
+- `[OX-REALIZATION]` Object-X-Realisierung `?[O]`;
+- `[OX-WEIL-SCOPE]` exakte Rückbindung an das klassische/restricted Weil-Kriterium `?[O]`;
 - RH `?[O]`.
 
 ---
 
-## Separate Nebenfronten
+## Auxiliary / separate
 
-- Prime-Power-AR(1)/Martingal-Faktorisierung als eigenständiger RH-unabhängiger Satz;
-- R37/G4c separat offen;
-- PR #91 analytischer Draft;
-- PR #49 Candidate-only.
+### AUX-POS-DIL
+
+Full-class Pole-layer-Geometrie #101--#105; korrekt, aber nicht Default-Priorität.
+
+### AR1-WRITEUP
+
+Prime-Power-AR(1)/Martingal-Faktorisierung als eigenständige RH-unabhängige Mathematik.
+
+### Separat
+
+- R37/G4c;
+- PR #91;
+- PR #49.
+
+---
+
+## Präzisierungen, die nicht erneut verloren gehen dürfen
+
+- komplex:
+  ```math
+  R_0(v,v)=-2\operatorname{Re}(E_+(v)\overline{E_-(v)});
+  ```
+- Companion-Block semidefinit genau für `t>=1`, strikt positiv für `t>1`;
+- Anti-Kovarianzform hat freien `b in C`, nicht nur einen reellen Parameter;
+- numerischer alte POS-DIL-No-Go sitzt in der externen Sektorauswertung im geraden Sektor;
+- `c_a` ist unter Außen-Prime-cutoff-Gauge nicht isoliert invariant.
 
 ---
 
@@ -131,8 +134,9 @@ Bevorzugt ist eine gemeinsame Lösung von `R_1` und Skalarrest statt zweier unab
 
 Nicht behaupten:
 
-- `c_a` sei ohne Gauge-Fixierung ein kanonischer isolierter Skalar;
-- die Prime-cutoff-Gauge erlaube beliebige positive Diagonalergänzungen;
-- `P_a^{(0)}` sei bereits die volle Weil-Gram-Realisierung;
-- `R_1` sei gelöst;
+- Nullpolklasse löse bereits den Skalar- oder `R_1`-Term;
+- globale Nullpol-RH-Äquivalenz gelte automatisch für jedes feste Fenster;
+- OX-GEN-A/POS-DIL seien falsch;
+- POS-DIL sei weiterhin notwendiger Hauptengpass;
+- `c_a` sei ohne Gaugewahl kanonisch;
 - Object X oder RH seien bewiesen.
