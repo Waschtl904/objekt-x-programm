@@ -1,136 +1,149 @@
-# Objekt X — kanonische Forschungsroadmap v3.3
+# Objekt X — kanonische Forschungsroadmap v3.4
 
 > **Stand:** 13. September 2026; Registry unverändert.  
 > **Keine Beweisautorität.** Operative Front: [CURRENT-FRONT](../CURRENT-FRONT.md).
 
-## 1. Gesicherte Architektur
+## 1. Gesicherte Basis
 
-COMMON-JUMP liefert auf Nullpol
+- COMMON-JUMP gemeinsame Prime-/archimedische Featurefamilie `✓[M]`;
+- `Q_0` support-erhaltende Nullpolparametrisierung `✓[M]`;
+- zentrierter Prime-overlap `✓[M]`;
+- exakte per-prime AR(1)-Fasern `✓[M]`.
 
-```math
-Q_W|_{NP}=X_a^*X_a-\Gamma_aI
-```
-
-mit gemeinsamer Translation-Differenzfamilie `K_t`. Q0 lokalisiert den ersten Gamma-Kanal exakt, und die höheren Kanäle besitzen den rigorosen `e^{-alpha a}`-Schur-Bound.
-
-Die Kleinfenster-Coercivity ist eine interne Reproduktion bekannter Positivität, kein neuer Literatur-Satz.
-
-## 2. Zentriertes all-window Problem
-
-Exakt:
+Auf Nullpol:
 
 ```math
-Q_W(v)=\mathcal A(v)-\mathcal O_a(v),
+Q_W(v)=\mathcal A(v)-\mathcal O_a(v).
 ```
+
+## 2. Gate D0 — methodische No-Gos
+
+### Independent shift/block norm sum
+
+Für `a<log n<2a` gilt `||S_{log n}||=1/2`. Deshalb wächst der unabhängige Normbudget-Term mindestens wie
 
 ```math
-\mathcal O_a(v)
-=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
-Re\langle T_{\log n}v,v\rangle.
+2e^a(1+o(1)).
 ```
 
-Die Prime-Diagonalmasse ist wegzentriert. Ziel:
+Eine rein skalare archimedische Untergrenze kann auf den wachsenden Nullpolräumen nicht entsprechend wachsen. Diese Beweisklasse ist `×[M]`.
 
-```math
-(A_\infty-\kappa_*I)|_{D_{NP}(a)}\succeq O_a|_{D_{NP}(a)}.
-```
+### Raw Prolate factor
 
-## 3. Gate O1 — Einzelshift abgeschlossen `✓[M] / ×[M]`
+Ein `a`-unabhängiger Konzentrationsfaktor gegen die rohe Prime-Multiplikatoramplitude `~4e^a` ändert die Skala nicht. Prolate bleibt nur nach arithmetischer Zentrierung als möglicher Hilfsmechanismus zulässig.
 
-Faserung modulo `t` gibt
-
-```math
-\|S_t\|=\cos\frac{\pi}{\lceil2a/t\rceil+1}.
-```
-
-Dieselbe scharfe Norm wird auf `D_NP(a)` erreicht. Daher ist eine Nullpol-Verbesserung einzelner Shiftkanäle ausgeschlossen:
-
-```text
-single-shift null-pole norm improvement  ×[M]
-```
-
-Unabhängige Einzelshift-Normabschätzungen sind nicht mehr Default-Strategie.
-
-## 4. Gate O2 — vollständiger Block einer Primzahl `✓[M]`
+## 3. Gate D1 — Nullpol correlation gauge `✓[M]`
 
 Für
 
 ```math
-ell_p=log p,
-q_p=p^{-1/2}
+C_v(t)=\langle T_tv,v\rangle
 ```
 
-ist die `N`-Punkt-Faser des vollständigen `p`-Blocks
+gilt auf `D_NP(a)`
 
 ```math
 \boxed{
-O_{p,a}^{(N)}=(\log p)(R_{q_p}^{(N)}-I),
-\qquad R_q^{(N)}=(q^{|j-k|}).
+\int_0^{2a}2\cosh(t/2)\operatorname{Re}C_v(t)dt=0.
 }
 ```
 
-Der positive Sektor des AR(1)-Symbols ist
+Damit kann die Prime-Power-Maßseite exakt um `2 cosh(t/2)dt` zentriert werden.
+
+## 4. Gate D2 — pole-cleared Prime discrepancy `✓[M]`
 
 ```math
-|theta|<arccos(q_p).
+d\mathfrak D(t)
+=\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}(dt)
+-2\cosh(t/2)dt.
 ```
 
-Damit ist die frühere Prime-Power-AR(1)-Struktur exakt in der neuen Hauptfront wiedergefunden.
-
-## 5. Gate O3 — kollektive Multi-Prime-Interferenz `?[O]`
-
-Für `p!=r` gilt
+Dann
 
 ```math
-log p/log r notin Q.
+\boxed{
+\mathcal O_a(v)
+=2\int\operatorname{Re}C_v(t)d\mathfrak D(t)
+=-2\int_0^{2a}\mathfrak D(t)
+\frac{d}{dt}\operatorname{Re}C_v(t)dt.
+}
 ```
 
-Die gefährlichen Niedrigfrequenzsektoren liegen also auf inkommensurablen logarithmischen Gittern.
-
-Zu quantifizieren:
-
-1. Wie groß kann die simultane positive AR(1)-Energie für viele Primzahlen sein?
-2. Gibt es eine Frame-/uncertainty-Ungleichung zwischen den `log p`-Faserungen?
-3. Kann die alte AR(1)/Markov-/Weil-tail-Faktorisierung eine gemeinsame Kontraktion liefern?
-4. Welche Rolle spielen Parität und die Overlap-Breite `delta_n=2a-log n`?
-5. Wie koppelt der Q0-Sobolevtransport diese Prime-Energien an den archimedischen Überschuss?
-
-## 6. Gate O4 — Prime-Power AR(1) reconnect
-
-Vergleiche die neue exakte Faseridentität systematisch mit den bereits bewiesenen Projektresultaten
+Der PNT-Hauptterm ist herauszentriert:
 
 ```math
-C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2}
+\mathfrak D(T)=o(e^{T/2}).
 ```
 
-und der Markov-/AR(1)-Faktorisierung. Ziel ist kein bloßer Strukturvergleich, sondern eine quantitative Mehrprimzahl-Ungleichung.
+## 5. Gate D3 — analytic fingerprint `✓[M]`
 
-## 7. Auxiliary
+Für `Re(s)>1/2`:
 
-Die finite Gamma-null ladder `{-2m,2m+1}` bleibt Connes--Consani-kompatibel, aber ohne Kontrolle des Prime-overlap nur Nebenfront.
+```math
+\boxed{
+\mathcal L[d\mathfrak D](s)
+=-\frac{d}{ds}\log\left[(s^2-1/4)\zeta(s+1/2)\right].
+}
+```
+
+Damit entfernt die Nullpolzentrierung exakt die beiden Pole `z=0,1` der endlichen Stelle. In `xi`-Notation ist derselbe Ausdruck der zero-bearing logarithmic derivative plus der bekannte Gamma-Korrektor.
+
+## 6. Gate D4 — NP-CORR `?[O]`
+
+Nicht gesucht ist eine absolute Majorante von `D(T)`: polynomialer Wuchs von `D` ist bereits RH-hart.
+
+Gesucht ist eine **Korrelationsungleichung** für die spezielle Testklasse
+
+```text
+positive-definite autocorrelations
+compact support [-2a,2a]
+null-pole cosh moment = 0
+Q0-parametrizable origin
+```
+
+gegen das signierte Maß `dD`.
+
+Vorab zulässige Mechanismen:
+
+1. Signwechsel/Oszillation von `D`;
+2. positive-definite constraints on `C_v`;
+3. `Q_0`-Transport von `C_v'`;
+4. per-prime AR(1) als lokale Faserung von `dnu`;
+5. centered Toeplitz/Paley-Wiener/Prolate estimates;
+6. explizite Falsifikationszeugen, falls die Korrelationsroute scheitert.
+
+## 7. Rolle der AR(1)-Struktur
+
+Die Identität
+
+```math
+O_{p,a}^{(N)}=(\log p)(R_{p^{-1/2}}^{(N)}-I)
+```
+
+bleibt wichtig, aber nicht als separat zu normierender Block. Sie soll die lokale Vorzeichen-/Markov-Struktur von `dD` erklären und mit der bereits bewiesenen Prime-Power-AR(1)/Weil-tail-Faktorisierung reconnecten.
 
 ## 8. Object-X-Pfad
 
 ```text
 COMMON-JUMP ✓[M]
    |
-centered Prime-overlap ✓[M]
+centered Prime overlap ✓[M]
    |
-per-prime AR(1) fibers ✓[M]
+null-pole cosh gauge ✓[M]
    |
-collective multi-prime suppression ?[O]
+pole-cleared discrepancy ✓[M]
    |
-all-a NP-OVERLAP ?[O]
+NP-CORR anti-correlation ?[O]
    |
-global null-pole Weil positivity
+all-a NP-GAP ?[O]
    |
 RH
 ```
 
-## 9. Numerik / Firewalls
+## 9. Firewalls
 
-- Ritz-Minima sind obere Schranken für das wahre Infimum.
-- Der Arb-Gate für `a_*` ist nur ein short-window-Seitengate.
-- Bekannte Kleinfensterpositivität nicht als Neuheit beanspruchen.
-- Einzelshift-No-Go nicht zu einem No-Go für kollektive Multi-Prime-Mechanismen überdehnen.
+- polynomial absolute control of `D` is already RH-hard;
+- no return to independent shift/block norm summation;
+- raw Prolate constant-factor concentration is not a sufficient main mechanism;
+- AR(1) identification alone is not yet the collective inequality;
 - Registry/Arbeitsdefinition unverändert.
