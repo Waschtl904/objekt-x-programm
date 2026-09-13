@@ -10,141 +10,112 @@ Gesucht wird eine gemeinsame arithmetisch-analytische Hilbert-/Gram-Geometrie, i
 ## Hier beginnen
 
 1. **[Aktueller Arbeitsstand](CURRENT-FRONT.md)**
-2. **[Aktueller Stand](00-uebersicht/AKTUELLER_STAND.md)**
-3. **[Forschungsroadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)**
-4. **[DAG](00-uebersicht/DAG.md)**
-5. **[Objekt-X-Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)**
+2. **[Nullpol-Reklassifikation](audits/P11_NULLPOLE_STRATEGIC_RECLASSIFICATION_2026-09-13.md)**
+3. **[Aktueller Stand](00-uebersicht/AKTUELLER_STAND.md)**
+4. **[Forschungsroadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)**
+5. **[DAG](00-uebersicht/DAG.md)**
+6. **[Objekt-X-Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)**
 
-Aktuelle Audits:
+## Aktueller Schlüsselfund: die OX-GEN-A-Ebene ist die Pol-Ebene
+
+Für
+
+```math
+M(v)(s)=\int_{\mathbb R}v(x)e^{(s-1/2)x}\,dx
+```
+
+gilt exakt
+
+```math
+\boxed{E_-(v)=M(v)(0),\qquad E_+(v)=M(v)(1).}
+```
+
+Die beiden OX-GEN-A-Funktionale sind damit die zwei Polfunktionale der expliziten Formel.
+
+Auf der Nullpolklasse
+
+```math
+\mathscr D_{NP}=\{v:M(v)(0)=M(v)(1)=0\}
+```
+
+verschwinden exakt
+
+```math
+R_0(v,w),
+\qquad
+\|\mathcal Ev\|^2.
+```
+
+Connes–Consani Proposition C.1 zeigt zugleich, dass die **globale** Weil-Vorzeichenbedingung nach Vorgabe einer endlichen Nullstellenmenge `F superset {0,1}` ohne nichttriviale Zeta-Nullstelle RH-äquivalent bleibt.
+
+Damit ist die Nullpolrestriktion logisch mit dem globalen RH-Scope verträglich.
+
+## Strategische Korrektur
+
+OX-GEN-A bleibt mathematisch `✓[M]`: Prime-Kanäle und `R_0` besitzen weiterhin die exakte gemeinsame Translation-/Reflexions-Generatorstruktur.
+
+Die Schlussfolgerung, diese Rang-2-Struktur sei ein **notwendiger** Object-X-Hauptengpass, wird jedoch zurückgezogen: Auf der global RH-äquivalenten Nullpolklasse ist ihr gesamter Zielterm identisch Null.
+
+Dasselbe gilt strategisch für die auf OX-GEN-A aufbauende POS-DIL-Kette PR #101--#105. Ihre Mathematik bleibt erhalten und bildet künftig die
+
+```text
+AUX-POS-DIL / full-class pole-layer route.
+```
+
+Sie ist nützlich für eine vollständige Testklassenrealisierung, aber nicht mehr Default-Priorität.
+
+## Neue Hauptfront: NULLPOL-CORE
+
+Für `0<a<=1` gilt lokal im kanonischen Suzuki-Gauge
+
+```math
+Q_{B_a}=G_a^+-c_aI-R_0-R_1.
+```
+
+Auf der lokalen Nullpol-Unterklasse reduziert sich dies exakt zu
+
+```math
+\boxed{
+Q_{B_a}(v)
+=G_a^+(v)-c_a\|v\|_2^2-R_1(v,v).
+}
+```
+
+Die Hauptfront liegt damit bei:
+
+1. **NP-R1:** exakter Kernel, Parität, Translation-/Generatorstruktur von `R_1` auf Nullpol;
+2. **NP-SCALAR:** Skalarledger im explizit fixierten Suzuki-Gauge beziehungsweise gaugeinvariante Reststruktur;
+3. **NP-COMMON:** ein gemeinsamer Prime-/archimedischer Mechanismus für `R_1` plus Skalarrest, der auf Nullpol nichttrivial bleibt.
+
+### Verbindliche Gate-Regel
+
+Ein neuer Object-X-Hauptfront-Schritt zählt nur dann als Klassenschnitt oder Konstruktionsfortschritt, wenn er nach
+
+```math
+M(v)(0)=M(v)(1)=0
+```
+
+noch nichttrivial wirkt.
+
+## Was aus POS-DIL erhalten bleibt
+
+Die folgenden Sätze bleiben vollständig gültig:
 
 - [OX-GEN-A](audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md)
-- [POS-DIL-1 Prime-moment Hilbertization](audits/P11_POS_DIL_1_PRIME_MOMENT_HILBERTIZATION_2026-09-13.md)
-- [POS-DIL-2A Unit-Gain No-Go](audits/P11_POS_DIL_2_UNIT_GAIN_FEATURE_SHORTING_NOGO_2026-09-13.md)
-- [POS-DIL-2B erster äußerer Prime-Shell](audits/P11_POS_DIL_2B_FIRST_EXTERIOR_PRIME_SHELL_2026-09-13.md)
-- [POS-DIL-2C Radius `0<a<=1`](audits/P11_POS_DIL_2C_EXTERIOR_SHELL_RADIUS_0_1_2026-09-13.md)
-- [POS-DIL-2C exakte Shell-Gauge und `R_0`-Absorption](audits/P11_POS_DIL_2C_EXACT_SHELL_GAUGE_R0_ABSORPTION_2026-09-13.md)
+- [POS-DIL-1](audits/P11_POS_DIL_1_PRIME_MOMENT_HILBERTIZATION_2026-09-13.md)
+- [POS-DIL-2A](audits/P11_POS_DIL_2_UNIT_GAIN_FEATURE_SHORTING_NOGO_2026-09-13.md)
+- [erster äußerer Prime-Shell](audits/P11_POS_DIL_2B_FIRST_EXTERIOR_PRIME_SHELL_2026-09-13.md)
+- [Radius `0<a<=1`](audits/P11_POS_DIL_2C_EXTERIOR_SHELL_RADIUS_0_1_2026-09-13.md)
+- [exakte Shell-Gauge / positive `R_0`-Absorption](audits/P11_POS_DIL_2C_EXACT_SHELL_GAUGE_R0_ABSORPTION_2026-09-13.md)
 
-## Forschungsstand
+Sie werden nicht widerrufen, sondern strategisch als auxiliary klassifiziert.
 
-### Gemeinsame Generator-Ebene
+## Wichtige Firewalls
 
-```math
-\mathcal ET_t=\rho(t)\mathcal E,
-\qquad
-\mathcal EK_n=D_n\mathcal E,
-```
-
-```math
-R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle.
-```
-
-Die Prime-moment-Abbildung realisiert die minimale Rang-2-Masse und denselben `R_0`-Block in einem positiven Zielraum.
-
-### Außen-Prime-Kanäle als exakte Cutoff-Gauge
-
-Für jeden Prime-Power-Kanal mit `c_n>a` sind die beiden verschobenen Fenster disjunkt. Deshalb gilt polarisiert
-
-```math
-w_n\langle K_nv,K_nw\rangle
-=2w_n\langle v,w\rangle.
-```
-
-Für jede endliche Außenkanalmenge `J` folgt
-
-```math
-H_{a,J}=b_JI,
-\qquad
-b_J=2\sum_{n\in J}\frac{\Lambda(n)}{\sqrt n}.
-```
-
-Damit ist die Transformation
-
-```math
-G_a^+\mapsto G_a^++H_{a,J},
-\qquad
-c_a\mapsto c_a+b_J
-```
-
-eine **exakte Prime-cutoff-Gauge** der lokalisierten Weilform:
-
-```math
-Q_{B_a}
-=(G_a^++H_{a,J})-(c_a+b_J)I-R_0-R_1.
-```
-
-Für den ersten geometrischen Außenshell `a<c_n<=2a` lautet das Skalarinkrement
-
-```math
-A_{e^{4a}}-A_{e^{2a}}.
-```
-
-Der isolierte `c_a`-Wert ist damit nicht ohne Gauge-Fixierung kanonisch.
-
-### Positive Absorption des elementaren archimedischen `R_0`-Layers
-
-Für den ersten Außenshell setze
-
-```math
-A_a^{out}=G_a^++H_a^{out}.
-```
-
-Auf dem gesamten lokalen Bereich `0<a<=1` gilt
-
-```math
-A_a^{out}\succeq\mathcal E^*\mathcal E.
-```
-
-Definiere
-
-```math
-D_a^{out}=A_a^{out}-\mathcal E^*\mathcal E\succeq0
-```
-
-und
-
-```math
-L_+=E_++E_-.
-```
-
-Dann exakt
-
-```math
-\mathcal E^*\mathcal E-R_0=L_+^*L_+,
-```
-
-also
-
-```math
-\boxed{
-P_a^{(0)}:=A_a^{out}-R_0
-=D_a^{out}+L_+^*L_+\succeq0.
-}
-```
-
-Die vollständige lokalisierte Form wird damit, ohne ihren Wert zu verändern,
-
-```math
-\boxed{
-Q_{B_a}=P_a^{(0)}-c_a^{out}I-R_1,
-\qquad0<a\le1.
-}
-```
-
-Der elementare `r_0`-/`R_0`-Block ist somit exakt in einen positiven gemeinsamen Prime-/archimedischen Block absorbiert.
-
-## Aktuelle Front: OX-GEN-B / `R_1` und gaugeinvarianter Skalarrest
-
-Übrig bleibt der exakte Rest
-
-```math
-c_a^{out}I+R_1.
-```
-
-Die nächste Arbeit konzentriert sich auf die Struktur von `R_1` und eine gaugeinvariante Behandlung des skalaren Ledgers. Der nackte Wert `c_a` wird nicht mehr als kanonisches Einzelobjekt vorausgesetzt.
-
-Zu prüfen sind insbesondere Kernel, Parität, Translation-/Reflexionssymmetrien und eine mögliche gemeinsame Generator-/Feature-Realisierung von `R_1` plus Skalarrest.
-
-Es gibt weiterhin keine vollständige Weil-Gram-Identität, keine Object-X-Realisierung und keinen RH-Beweis.
+- Die globale RH-Äquivalenz der Nullpolklasse ist keine fixed-`a`-Äquivalenz.
+- Das Verschwinden von `R_0` löst weder `R_1` noch den Skalarledger.
+- Der nackte Wert `c_a` ist unter der exakten Außen-Prime-cutoff-Gauge nicht isoliert invariant; eine Gaugewahl oder gaugeinvariante Formulierung bleibt nötig.
+- Es gibt keine vollständige Weil-Gram-Identität, keine Object-X-Realisierung und keinen RH-Beweis.
 
 ## Nachweise und Orientierung
 

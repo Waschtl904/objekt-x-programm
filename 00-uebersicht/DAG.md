@@ -1,181 +1,180 @@
-# Abhängigkeitsgraph (DAG) — Objekt X / OX-GEN-B
+# Abhängigkeitsgraph (DAG) — Objekt X / NULLPOL-CORE
 
 > **Stand:** 13. September 2026; Registry unverändert.  
 > **Keine Beweisautorität.** Aktuelle Front: [CURRENT-FRONT](../CURRENT-FRONT.md).
 
-## 1. Importierte Basis
+## 1. Basis
 
 ```text
-fixed-pair Strong Terminal / C6
 Prime-Power AR(1) / Weil-Tail
-OX-GEN-A common generator plane
-POS-DIL-1 prime-moment Hilbertization
+fixed-pair Strong Terminal / C6
+local Suzuki/OX-GRAM normal form
 ```
-
-Lokale Weil-Normalform:
 
 ```math
 Q_{B_a}=G_a^+-c_aI-R_0-R_1.
 ```
 
-## 2. Exterior-shell Route
+## 2. Pole-functionals identification
 
 ```text
-actual outer Prime channels c_n>a
-        |
-        | disjoint shifted supports
-        v
-w_n K_n^*K_n = 2 w_n I
+E_-(v) = M(v)(0)
+E_+(v) = M(v)(1)
         |
         v
-H_{a,J}=b_J I  ✓[M]
+D_NP = ker M(0) ∩ ker M(1)
+        |
+        +----------------------+
+        |                      |
+        v                      v
+R_0 = 0                    E^*E = 0
 ```
 
-Daher exakte cutoff-Gauge:
+Status: exact `✓[M]`.
+
+## 3. Imported global criterion edge
 
 ```text
-G_a^+  --------> G_a^+ + H_{a,J}
-c_a I --------> (c_a+b_J) I
+Connes–Consani Prop. C.1
+finite F ⊃ {0,1}, F ∩ Z = ∅
         |
+        | imported theorem
         v
-Q_{B_a} unchanged  ✓[M]
-```
-
-Für den ersten Außenshell:
-
-```math
-b_J=A_{e^{4a}}-A_{e^{2a}}.
-```
-
-## 3. Radiusdominanz
-
-Für
-
-```math
-A_a^{out}=G_a^++H_a^{out}
-```
-
-gilt auf jedem `0<a<=1`
-
-```math
-A_a^{out}\succeq\mathcal E^*\mathcal E.
-```
-
-Damit
-
-```text
-A_a^{out}
-        |
-        | subtract E^*E
-        v
-D_a^{out}>=0  ✓[M]
-```
-
-## 4. Exakte `R_0`-Absorption
-
-```math
-R_0(v,w)
-=-E_+(v)\overline{E_-(w)}-E_-(v)\overline{E_+(w)}.
-```
-
-Setze
-
-```math
-L_+=E_++E_-.
-```
-
-Dann
-
-```math
-\mathcal E^*\mathcal E-R_0=L_+^*L_+.
-```
-
-Folglich
-
-```text
-A_a^{out}-R_0
- = (A_a^{out}-E^*E) + (E^*E-R_0)
- = D_a^{out} + L_+^*L_+
-        |
-        v
-P_a^(0) >= 0  ✓[M]
-```
-
-und exakt
-
-```math
-\boxed{
-Q_{B_a}=P_a^{(0)}-c_a^{out}I-R_1.
-}
-```
-
-Der `R_0`-Layer ist damit aus dem Rest entfernt.
-
-## 5. Gauge-Konsequenz
-
-```text
-isolated c_a
-        |
-        | changes under exact exterior-Prime cutoff gauge
-        v
-not canonical by itself  ✓[M]
-```
-
-Gesucht werden muss eine Gauge-Fixierung oder eine gaugeinvariante Reststruktur.
-
-## 6. Aktueller Engpass — OX-GEN-B / R1-SCALAR
-
-```text
-positive common block P_a^(0)  ✓[M]
-        |
-        | remaining exact defect
-        v
-c_a^{out} I + R_1  ?[O]
-        |
-        +------------------------------+
-        |                              |
-        | common generator geometry    | natural class obstruction
-        v                              v
-next positive block               narrower architecture
-```
-
-Prüfreihenfolge:
-
-```text
-R_1 exact kernel / parity / generator structure
-        ↓
-interaction with cutoff gauge
-        ↓
-gauge-invariant scalar remainder
-        ↓
-OX-GEN-B candidate
-```
-
-## 7. Object-X-Pfad
-
-```text
-P_a^(0) positive common Prime/r0 block  ✓[M]
-        +
-R1 / scalar remainder ?[O]
-        |
-        v
-genuine X candidate ?[O]
-        |
-        v
-exact full Weil-Gram identity ?[O]
-        |
-        v
-Object-X realization ?[O]
-        |
-        v
+global Weil sign criterion on functions vanishing on F
+        ⇔
 RH
 ```
 
-## 8. Firewalls
+**No edge:** `fixed a null-pole positivity ⇔ RH` is **not** asserted.
 
-- cutoff-Gauge != arbitrary positive diagonal freedom;
-- `P_a^(0)` != complete Object X;
-- `c_a^{out}` != canonical final scalar;
-- `R_1` open;
+## 4. Strategic filter
+
+```text
+candidate mechanism
+        |
+        | restrict to D_NP
+        v
+nontrivial? ---------------- no ---> auxiliary only
+   |
+  yes
+   |
+   v
+eligible for Object-X main-front edge
+```
+
+This filter is binding for future research prioritization.
+
+## 5. OX-GEN-A / POS-DIL after filter
+
+```text
+OX-GEN-A common generator plane ✓[M]
+        |
+        | target is R_0 / E-mass
+        v
+restrict to D_NP
+        |
+        v
+zero
+```
+
+Therefore:
+
+```text
+OX-GEN-A -> AUX pole-layer structure
+```
+
+The same applies strategically to the POS-DIL chain #101--#105. Their mathematical statements remain valid.
+
+```text
+#101 Prime-moment Hilbertization
+  ↓
+#102 full-class unit-gain No-Go
+  ↓
+#103 exterior shell
+  ↓
+#104 radius domination
+  ↓
+#105 exact cutoff gauge + R_0 absorption
+  ↓
+AUX-POS-DIL [preserved]
+```
+
+No automatic Object-X main-front edge remains from this chain.
+
+## 6. Null-pole local normal form
+
+On the local null-pole subspace:
+
+```math
+\boxed{
+Q_{B_a}|_{NP}=G_a^+|_{NP}-c_aI-R_1|_{NP}.
+}
+```
+
+Thus the active exact remainder is
+
+```text
+positive Prime/log|D| geometry
+        minus
+scalar ledger + R_1
+```
+
+## 7. Current main-front DAG
+
+```text
+NULLPOL-CORE
+    |
+    +--> NP-R1 ?[O]
+    |      |
+    |      +--> kernel / parity / generator structure
+    |      +--> natural class construction or No-Go
+    |
+    +--> NP-SCALAR ?[O]
+    |      |
+    |      +--> canonical Suzuki gauge
+    |      +--> gauge-invariant remainder
+    |
+    +--> NP-COMMON ?[O]
+           |
+           | common nontrivial mechanism on D_NP
+           v
+      genuine X candidate ?[O]
+           |
+           v
+      exact Weil-Gram identity on RH-equivalent class ?[O]
+           |
+           v
+      Object-X realization ?[O]
+           |
+           v
+      criterion-scope verification ?[O]
+           |
+           v
+          RH
+```
+
+## 8. Gauge side edge
+
+PR #105 remains an exact identity:
+
+```text
+outer Prime channels
+    |
+    v
+G_a^+ -> G_a^+ + H_{a,J}
+c_a   -> c_a + b_J
+    |
+    v
+Q_Ba unchanged
+```
+
+Therefore an isolated scalar value is not invariant. NP-SCALAR must either fix the Suzuki gauge or formulate the remainder gauge-invariantly.
+
+## 9. Firewalls
+
+- annihilation of `R_0` != positivity of the remaining form;
+- global null-pole RH equivalence != fixed-window equivalence;
+- auxiliary != false;
+- cutoff gauge != arbitrary diagonal freedom;
 - Registry unchanged;
-- PR #91, PR #49, R37/G4c separate.
+- PR #91, PR #49 and R37/G4c remain separate.
