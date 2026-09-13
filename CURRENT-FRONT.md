@@ -1,9 +1,9 @@
-# CURRENT FRONT — Objekt X / NULLPOL-COMMON → NP-GAP
+# CURRENT FRONT — Objekt X / NULLPOL-COMMON → CRITICAL-HALF → NP-GAP
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 13. September 2026; keine Registry-Promotion.  
-> **Kanonischer neuer Audit:** [NULLPOL common jump-Gram](audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md).  
-> Vorheriger strategischer Filter: [Nullpol-Reklassifikation](audits/P11_NULLPOLE_STRATEGIC_RECLASSIFICATION_2026-09-13.md).
+> **Common-Jump-Audit:** [NULLPOL common jump-Gram](audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md).  
+> **Neue bevorzugte Route:** [Critical-half Green/tree bridge](audits/P11_CRITICAL_HALF_GREEN_TREE_BRIDGE_2026-09-13.md) und [Critical-half rigidity / Schur-gap](audits/P11_CRITICAL_HALF_RIGIDITY_AND_SCHUR_GAP_2026-09-13.md).
 
 Diese Datei ordnet die Arbeit; sie beweist nichts. Registry und Arbeitsdefinition bleiben unverändert.
 
@@ -27,192 +27,272 @@ Auf
 \mathscr D_{NP}=\ker M(0)\cap\ker M(1)
 ```
 
-verschwinden daher `R_0` und `\mathcal E`. Connes–Consani Proposition C.1 liefert global einen RH-äquivalenten Weil-Scope mit diesen Nullbedingungen. Keine fixed-`a`-Äquivalenz wird behauptet.
+verschwinden `R_0` und `\mathcal E`. Connes–Consani Proposition C.1 liefert global einen RH-aequivalenten Weil-Scope mit diesen Nullbedingungen. Keine fixed-`a`-Aequivalenz wird behauptet.
 
-## 2. Der gemeinsame Prime-/archimedische Kanal `✓[M]`
-
-Setze für `t>0`
-
-```math
-\boxed{K_t:=T_{t/2}-T_{-t/2}.}
-```
-
-Dann
-
-```math
-K_t^*K_t=2I-T_t-T_{-t}.
-```
-
-Die archimedische positive Dichte ist
-
-```math
-\boxed{
-h(t)=\frac{e^{-t/2}}{1-e^{-2t}}
-=\frac{e^{t/2}}{e^t-e^{-t}}>0.
-}
-```
-
-Die Prime-Power-Gewichte sind
-
-```math
-w_n=\frac{\Lambda(n)}{\sqrt n}.
-```
-
-Für `supp(v),supp(w) subset [-a,a]` sei
-
-```math
-\mathcal P_a=\{n=p^k:\log n\le2a\}.
-```
-
-Definiere die positive gemischte Maßstruktur
-
-```math
-\boxed{
-\mu_a=h(t)dt+\sum_{n\in\mathcal P_a}w_n\delta_{\log n}.
-}
-```
-
-**Archimedes = kontinuierlicher Teil, Primzahlpotenzen = atomarer Teil desselben `K_t`-Features.**
-
-## 3. Positive Featureabbildung `✓[M]`
-
-Ein natürlicher Hilbert-Zielraum ist
-
-```math
-\mathscr H_a=
-L^2((0,\infty),h(t)dt;L^2(\mathbb R))
-\oplus
-\bigoplus_{n\in\mathcal P_a}L^2(\mathbb R).
-```
+## 2. Gemeinsamer Prime-/archimedischer Kanal `✓[M]`
 
 Setze
 
 ```math
-\boxed{
+K_t:=T_{t/2}-T_{-t/2},
+\qquad
+h(t)=\frac{e^{-t/2}}{1-e^{-2t}}>0,
+\qquad
+w_n=\frac{\Lambda(n)}{\sqrt n}.
+```
+
+Fuer
+
+```math
+\mathcal P_a=\{n=p^k:\log n\le2a\}
+```
+
+ist
+
+```math
+\mu_a=h(t)dt+\sum_{n\in\mathcal P_a}w_n\delta_{\log n}.
+```
+
+Archimedes ist der kontinuierliche, Prime powers der atomare Teil **derselben** Translation-Differenz-Familie.
+
+Die positive Featureabbildung ist
+
+```math
 \mathcal X_av=
 \left(
 [t\mapsto K_tv],
 [\sqrt{w_n}K_{\log n}v]_{n\in\mathcal P_a}
 \right).
-}
 ```
 
-Dann
+## 3. Exakte COMMON-JUMP-Normalform `✓[M]`
+
+Mit
+
+```math
+\kappa_*
+=\log(8\pi)+\gamma+\frac\pi2
+=\log\pi-\psi(1/4)
+```
+
+und
+
+```math
+\Gamma_a
+=2\sum_{n\in\mathcal P_a}\frac{\Lambda(n)}{\sqrt n}+\kappa_*
+```
+
+gilt fuer jedes `a>0` exakt
+
+```math
+Q_W(v,w)
+=\langle\mathcal Ev,P\mathcal Ew\rangle
++\langle\mathcal X_av,\mathcal X_aw\rangle
+-\Gamma_a\langle v,w\rangle.
+```
+
+Auf NULLPOL:
 
 ```math
 \boxed{
-\langle\mathcal X_av,\mathcal X_aw\rangle
-=
-\int_0^\infty h(t)\langle K_tv,K_tw\rangle dt
-+
-\sum_{n\in\mathcal P_a}w_n
-\langle K_{\log n}v,K_{\log n}w\rangle.
+Q_W(v,w)
+=\langle\mathcal X_av,\mathcal X_aw\rangle
+-\Gamma_a\langle v,w\rangle.
 }
 ```
 
-Diese Form ist vorwärts konstruiert und positiv; keine Weil-Positivität und keine RH-Annahme gehen ein.
+`R_1`, `log|D|`, Prime shifts und Exterior-shell-Masse sind damit keine getrennten Hauptgeometrien mehr.
 
-## 4. Exakte archimedische Schwelle `✓[M]`
+## 4. Cutoff-Gauge `✓[M]`
 
-Direkt aus dem Integralterm der expliziten Formel:
+Neue Prime-Atome ausserhalb eines bereits kleineren Trägers liefern exakt
 
 ```math
-2\int_0^\infty h(t)(1-e^{-t/2})dt
-=\log2+\frac\pi2.
+\langle K_{\log n}v,K_{\log n}w\rangle=2\langle v,w\rangle.
+```
+
+Gramform und `Gamma_a I` wachsen daher um denselben Skalar. Invariant ist
+
+```math
+\mathcal X_a^*\mathcal X_a-\Gamma_aI.
+```
+
+## 5. Neuer Critical-half Quellenoperator `✓[M]`
+
+Setze
+
+```math
+\boxed{
+L_{1/2}:=-\partial_x^2+\frac14.
+}
+```
+
+Sein Green-Kern auf `R` ist
+
+```math
+\boxed{
+G_{1/2}(x,y)=e^{-|x-y|/2}.
+}
+```
+
+Fuer jedes `a>0` gilt die exakte lokale Range-Identitaet
+
+```math
+\boxed{
+C_c^\infty(-a,a)\cap\ker M(0)\cap\ker M(1)
+=L_{1/2}C_c^\infty(-a,a).
+}
+```
+
+Die zwei Nullpolbedingungen sind genau die Bedingungen, welche die beiden exponentiellen Aussenschwaenze des Green-Inversen vernichten.
+
+## 6. Derselbe Kernel auf der Prime-Seite `✓[M]`
+
+Der aus PR #98 bekannte normierte Prime-Power-Kern ist
+
+```math
+p^{-|j-k|/2}
+=e^{-\frac12|j-k|\log p},
+```
+
+also exakt die Abtastung von `G_{1/2}` auf dem logarithmischen Primast `k log p`.
+
+Auf einem verwurzelten Sternbaum mit einem Halbast pro Primzahl existiert eine explizite positive OU-Featurefamilie `Phi` mit
+
+```math
+\langle\Phi_\alpha,\Phi_\beta\rangle
+=e^{-d(\alpha,\beta)/2}.
+```
+
+Nach Weil-Gewichtung reproduziert ihr Gram **den gesamten fensterlosen P11-Hub+Rest-Kanalindex-Ledger**, inklusive cross-prime Hub-Korrelation. Die vorhandene Faktorisierung
+
+```math
+T_q^*T_q+uu^*=R_q
+```
+
+ist exakt die Zerlegung in gemeinsame Root-Koordinate plus orthogonale Ast-Innovationen.
+
+Firewall: Fensterprojektionen und die raeumliche P11-Geometrie bleiben bestehen.
+
+## 7. Critical-half rigidity `✓[M]`
+
+In der natürlichen OU-Familie
+
+```math
+\langle\Phi^{(\sigma)}_\alpha,
+\Phi^{(\sigma)}_\beta\rangle=e^{-\sigma d(\alpha,\beta)}
+```
+
+hat die gewichtete Prime-Rootamplitude den Exponenten
+
+```math
+\beta(\sigma)=\frac14+\sigma.
+```
+
+P11 erzwingt unabhaengig `beta=3/4`; also
+
+```math
+\boxed{\sigma=1/2.}
+```
+
+Dieselbe Skala wird separat von NULLPOL (`e^{±x/2}`) und vom Grundmodus der Gamma-Resolventenleiter erzwungen. Die `1/2` ist innerhalb dieser Familie kein Fitparameter.
+
+## 8. Gamma-Schicht als Resolventenleiter `✓[M]`
+
+Die archimedische Dichte zerfaellt positiv:
+
+```math
+h(t)=\sum_{m\ge0}e^{-\mu_mt},
+\qquad
+\mu_m=2m+\frac12.
 ```
 
 Daher
 
 ```math
 \boxed{
-\kappa_*
-=\log(8\pi)+\gamma+\frac\pi2
-=\log\pi-\psi(1/4).
+\Phi_\infty(D)
+=\sum_{m\ge0}
+\frac{2}{\mu_m}D^2(D^2+\mu_m^2)^{-1}.
 }
 ```
 
-und
+Der Grundmodus ist
 
 ```math
-\boxed{
-\Gamma_a=
-2\sum_{n\in\mathcal P_a}\frac{\Lambda(n)}{\sqrt n}
-+\log\pi-\psi(1/4).
-}
+\mu_0=1/2,
 ```
 
-## 5. Exakte COMMON-JUMP-GRAM-Normalform `✓[M]`
+also exakt derselbe Operator `L_{1/2}` wie in NULLPOL und derselbe Zerfall wie im Prime-AR(1)-Kern.
 
-Für glatte kompakt getragene `v,w` in `[-a,a]`, **für jedes `a>0`**, gilt exakt
+Ferner ist
 
 ```math
-\boxed{
-Q_W(v,w)
-=
-\langle\mathcal Ev,P\mathcal Ew\rangle
-+
-\langle\mathcal X_av,\mathcal X_aw\rangle
--
-\Gamma_a\langle v,w\rangle,
-}
+2\int_0^\infty h(t)(1-e^{-t/2})dt
+```
+
+das kontinuierliche `h(t)dt`-Mittel der quadrierten Root-Chordaldistanz derselben OU-Geometrie.
+
+## 9. Momentfreier NP-GAP-Lift `✓[M]`
+
+Jedes Nullpol-`v` laesst sich eindeutig schreiben als
+
+```math
+v=L_{1/2}u,
+\qquad
+u\in C_c^\infty(-a,a).
+```
+
+Damit wird NP-GAP exakt zu einer Ungleichung **ohne Momentennebenbedingungen**. Insbesondere wird der erste Gamma-Modus lokal:
+
+```math
+\frac{2}{\mu_0}
+\|D(D^2+\mu_0^2)^{-1/2}L_{1/2}u\|^2
+=4\|u''\|^2+\|u'\|^2,
+```
+
+waehrend
+
+```math
+\|L_{1/2}u\|^2
+=\|u''\|^2+\frac12\|u'\|^2+\frac1{16}\|u\|^2.
+```
+
+Dies ist jetzt die bevorzugte analytische Route.
+
+## 10. Forward Lower-Frame-Test `✓[M]` im kleinen Radius
+
+Der Schur-Test auf jedem Gamma-Resolventenmodus liefert fuer beliebiges in `[-a,a]` getragenes `v`
+
+```math
+\langle v,\Phi_\infty(D)v\rangle
+\ge S(a)\|v\|^2,
 ```
 
 mit
 
 ```math
-P=\begin{pmatrix}0&1\\1&0\end{pmatrix}.
-```
-
-Auf Nullpol:
-
-```math
 \boxed{
-Q_W(v,w)
-=
-\langle\mathcal X_av,\mathcal X_aw\rangle
--
-\Gamma_a\langle v,w\rangle.
+S(a)=
+\log\frac{1+e^{-a/2}}{1-e^{-a/2}}
++2\arctan(e^{-a/2}).
 }
 ```
 
-Damit sind `log|D|`, `R_1`, Prime shifts und Exterior-shell-Masse nicht mehr getrennte Geometriefragen: sie liegen in derselben positiven `K_t`-Jump-Gram-Struktur.
-
-## 6. Fourier-Gegencheck
-
-Die positive Featureform hat Symbol
+Rein elementar folgt
 
 ```math
-\Phi_a(z)=
-\operatorname{Re}\psi\left(\frac14+\frac{iz}{2}\right)-\psi(1/4)
-+2\sum_{n\in\mathcal P_a}w_n(1-\cos(z\log n))\ge0
+S(a)>\kappa_*
+\qquad(0<a\le1/16).
 ```
 
-für reelles `z`. Nach Abzug von `Gamma_a` erhält man exakt den nichtpolaren Suzuki-/Weil-Multiplikator.
+Da dort noch kein Prime-Atom aktiv ist, ist NP-GAP in diesem kleinen Bereich unkonditional bewiesen.
 
-## 7. Cutoff-Gauge jetzt geometrisiert `✓[M]`
+**Neuheitsfirewall:** lokale Weil-Positivitaet ist aus der Literatur fuer wesentlich groessere Fenster bekannt. Dieser Satz ist hier kein Radiusrekord, sondern ein forward Zertifikat fuer den neuen Resolventenmechanismus.
 
-Für `0<a<b` und bereits in `[-a,a]` getragenes `v,w` liefern neue Prime-Atome mit `2a<log n<=2b`
+## 11. Einziger Hauptengpass — NP-GAP `?[O]`
 
-```math
-\langle K_{\log n}v,K_{\log n}w\rangle
-=2\langle v,w\rangle.
-```
-
-Daher wachsen positive Gramform und Schwelle um exakt denselben Skalar:
-
-```math
-\boxed{
-\langle X_bv,X_bw\rangle-\Gamma_b\langle v,w\rangle
-=
-\langle X_av,X_aw\rangle-\Gamma_a\langle v,w\rangle.
-}
-```
-
-Der invariant sinnvolle Gegenstand ist also die **zentrierte Gram-Paarung**, nicht ein isolierter `c_a`-Wert.
-
-## 8. Neuer einziger Hauptengpass — NP-GAP `?[O]`
-
-Auf der global RH-äquivalenten Nullpolklasse wird RH zu der scharfen Lower-Frame-Bedingung
+Global bleibt zu beweisen
 
 ```math
 \boxed{
@@ -220,44 +300,55 @@ Auf der global RH-äquivalenten Nullpolklasse wird RH zu der scharfen Lower-Fram
 }
 ```
 
-für jedes `a>0` und jede glatte Nullpol-Testfunktion mit Träger in `[-a,a]`.
+fuer jedes `a>0` und jedes Nullpol-`v` mit Traeger in `[-a,a]`.
 
-Äquivalent:
+Aequivalent:
 
 ```math
 \lambda_{NP}(a)
 :=
 \inf_{\substack{0\ne v\in C_c^\infty(-a,a)\\M(v)(0)=M(v)(1)=0}}
 \frac{\|\mathcal X_av\|^2}{\|v\|_2^2}
-\stackrel{?}{\ge}\Gamma_a.
+\stackrel?\ge\Gamma_a.
 ```
 
-**Das ist jetzt der Default-Auftrag.** Ein Beweis für alle `a` wäre bereits RH; deshalb darf Weil-Positivität nicht rückwärts als Input verwendet werden.
+Die Familie aller Fenster ist global RH-aequivalent; ein einzelnes fixes `a` wird nicht als RH-aequivalent behauptet.
 
-## 9. Strategische Statusänderung
+### Bevorzugter naechster Angriff
+
+```text
+NULLPOL = Range(L_{1/2})
+ -> momentfreier Lift
+ -> erste Gamma-Moden lokal/coerciv
+ -> Resolventenrest per Schur
+ -> Prime-Jumps in derselben critical-half / Tree-Metrik
+ -> radiusstabiler Lower-Frame-Mechanismus oder enger No-Go.
+```
+
+## 12. Status / Firewalls
 
 ```text
 NP-R1 separate geometry question                       closed/subsumed ✓[M]
-NP-COMMON common Prime/archimedean feature family      ✓[M]
-NP-SCALAR cutoff-gauge covariance                      ✓[M]
-COMMON-JUMP exact normal form, all a>0                 ✓[M]
-forward Object-X candidate architecture                ✓[M]_part
-sharp NULLPOL frame/spectral gap                       ?[O]
+NP-COMMON common Prime/archimedean jump family         ✓[M]
+COMMON-JUMP exact all-a normal form                    ✓[M]
+critical-half Green/OU bridge                          ✓[M]
+NULLPOL = Range(L_{1/2})                               ✓[M]
+critical-half rigidity                                 ✓[M]
+Gamma resolvent ladder                                 ✓[M]
+NP-GAP moment-free lift                                ✓[M]
+small-window forward Schur gap                         ✓[M]
+sharp NP-GAP for all a                                 ?[O]
 full positive Object-X realization / RH                ?[O]
 publication novelty                                    ?[O]
 ```
 
-OX-GEN-A bleibt die exakte Polschicht. POS-DIL #101--#105 bleibt eine mathematisch gültige auxiliary full-class route.
-
-## 10. Firewalls
-
 Nicht behaupten:
 
-- `Q_W>=0` sei bewiesen;
-- der scharfe Lower-Frame-Bound sei bewiesen;
-- ein einzelnes fixes `a` sei bereits RH-äquivalent;
-- Publikationsneuheit sei geklärt;
-- die Theorem-Registry werde durch diese Navigation promoviert;
-- Object X oder RH seien gelöst.
-
-PR #91, PR #49 und R37/G4c bleiben separate Nebenfronten.
+- globales `Q_W>=0` sei bewiesen;
+- der scharfe Lower-Frame-Bound sei fuer alle Radien bewiesen;
+- der Sternbaum allein sei bereits die volle Weilform;
+- Fensterprojektionen duerften entfallen;
+- `log(4pi)+gamma` sei bereits als Baumenergie erklaert;
+- ein einzelnes fixes `a` sei RH-aequivalent;
+- Publikationsneuheit sei geklaert;
+- Registry, Arbeitsdefinition oder RH-Status seien promoviert.
