@@ -2,7 +2,7 @@
 
 > **Stand:** 13. September 2026; Registry unverändert.  
 > **Rolle:** kompakte operative Abhängigkeits- und Firewall-Struktur.  
-> **Keine Beweisautorität.** Status/Provenienz stehen im [ACTIVE_THEOREM_REGISTRY](ACTIVE_THEOREM_REGISTRY.md), die aktuelle Front in [CURRENT-FRONT](../CURRENT-FRONT.md), die Strategie in [FORSCHUNGS_ROADMAP_AKTUELL](FORSCHUNGS_ROADMAP_AKTUELL.md).
+> **Keine Beweisautorität.** Status/Provenienz: [ACTIVE_THEOREM_REGISTRY](ACTIVE_THEOREM_REGISTRY.md), aktuelle Front: [CURRENT-FRONT](../CURRENT-FRONT.md), Strategie: [FORSCHUNGS_ROADMAP_AKTUELL](FORSCHUNGS_ROADMAP_AKTUELL.md).
 
 ---
 
@@ -29,8 +29,6 @@ Ein PR ist Provenienz/Container, kein mathematischer DAG-Knoten.
 
 ## 2. Verfügbarer Strong-Terminal-Baustein
 
-Im ausgewiesenen Scope gilt für jedes feste `0<R<S` im ungeraden P11-Graphraum Strong Terminal/C6 aus positivem Wurzelanker plus R42.51.
-
 ```text
 fixed-pair Strong Terminal / C6  [verfügbarer scoped result]
         |
@@ -39,32 +37,20 @@ fixed-pair Strong Terminal / C6  [verfügbarer scoped result]
 GENUINE X CANDIDATE ?[O]
 ```
 
-**Firewall:** Es existiert kein Satz `Strong Terminal ⇒ Objekt X`, und Strong Terminal ist nicht als notwendige Bedingung jeder denkbaren X-Realisierung bewiesen.
-
-Historische R43-COND-/FD23-/Flagfragen bleiben Nebenrouten in ihrem eigenen Scope; sie öffnen den fixed-pair-C6-Abschluss nicht automatisch wieder.
+Scope: jedes feste `0<R<S`, ungerader P11-Graphraum. Keine Radienuniformität, Operatornormkonvergenz oder Object-X-/RH-Folgerung.
 
 ---
 
 ## 3. Exakte Prime-Power-Struktur
 
-Für jeden Primast:
-
 ```math
 C_{jk}^{(p)}=(\log p)p^{\min(j,k)}p^{-3(j+k)/4},
 \qquad
-C_{kk}^{(p)}=(\log p)p^{-k/2}.
+C_{kk}^{(p)}=(\log p)p^{-k/2},
 ```
 
-Mit `q_p=p^{-1/2}`:
-
 ```math
-C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}q_p^{|j-k|}.
-```
-
-Tail-/Root-Struktur:
-
-```math
-T_q^*T_q=R_q-uu^*,
+C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2},
 \qquad
 T_q^*T_q+uu^*=R_q.
 ```
@@ -80,24 +66,17 @@ Prime-Power AR(1) / Weil-Tail structure  ✓[M] in documented scope
         |
         | --candidate-input-->
         v
-OX-GEN ?[O]
+OX-GEN
 ```
-
-**Firewall:** Diese exakte Struktur ist noch keine Objekt-X-Realisierung.
 
 ---
 
 ## 4. Endliche Suzuki-/OX-GRAM-Normalform
 
-Für `a<=1`:
-
 ```math
 Q_{B_a}=G_a^+-N_a,
-\qquad
-N_a=c_aI+C_a.
+\qquad N_a=c_aI+C_a.
 ```
-
-Die bloße Existenz eines Kontraktors, der `N_a` relativ zu `G_a^+` faktorisiert, ist bei bereits bekannter lokaler Positivität zirkulär konstruierbar und deshalb **kein** Object-X-Gate.
 
 ```text
 finite OX-GRAM identity
@@ -107,59 +86,145 @@ finite OX-GRAM identity
 contractor existence [closed/vacuous as X-gate]
 ```
 
-Was offen bleibt, ist eine **kanonische, vorwärts konstruierte** gemeinsame Geometrie.
+Offen bleibt eine **kanonische, vorwärts konstruierte** gemeinsame Geometrie.
 
 ---
 
-## 5. OX-GEN — aktuelle Hauptfront
+## 5. OX-GEN-A — gemeinsamer Translation-/Reflexions-Generator `✓[M]`
 
-Suzukis Rang-2-Teil:
-
-```math
-R_0(v,v)
-=-2\left(\int\cosh\frac x2\,v\right)^2
-+2\left(\int\sinh\frac x2\,v\right)^2.
-```
-
-Dieselbe Exponentialfamilie erscheint in
+Setze
 
 ```math
-p^{-1/2}=e^{-\log p/2},
+\mathcal Ev=(E_+(v),E_-(v)),
 \qquad
-R_p(j,k)=p^{-|j-k|/2},
-\qquad
-w_{p,k}=\log p\,p^{-k/2}.
+E_\pm(v)=\int e^{\pm x/2}v(x)\,dx.
 ```
 
-Operativer DAG:
+Dann
+
+```math
+\mathcal ET_t=\rho(t)\mathcal E,
+\qquad
+\rho(t)=\operatorname{diag}(e^{-t/2},e^{t/2}).
+```
+
+Für Prime-Power-Kanäle
+
+```math
+K_n=T_{\frac12\log n}-T_{-\frac12\log n},
+\qquad
+\lambda_n=n^{1/4}-n^{-1/4}
+```
+
+gilt
+
+```math
+\mathcal EK_n
+=\lambda_n\operatorname{diag}(-1,1)\mathcal E.
+```
+
+Archimedischer Teil:
+
+```math
+r_0''(t)=-\operatorname{tr}\rho(t),
+\qquad
+r_0(\log n)=-4\lambda_n^2.
+```
+
+Mit Austausch/Spiegelung
+
+```math
+P=\begin{pmatrix}0&1\\1&0\end{pmatrix}
+```
+
+gilt
+
+```math
+R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle.
+```
+
+Operative Bedeutung:
 
 ```text
-Prime AR(1) / Weil-Tail structure
+Prime AR(1) / Weil-Tail
         |
         | --candidate-input-->
         v
-OX-GEN-A ?[O]
-  isolate cosh/sinh moments at a=0.5
+2D translation representation rho
         |
-        | --requires-->
-        v
-GENERATOR-CLASS ?[O]
-  define natural noncircular class before no-go
+        + --odd finite difference--> Prime channel K_n
         |
-        +------------------------------+
-        |                              |
-        | positive construction        | class no-go
-        v                              v
-OX-GEN-B geometry piece ?[O]      generator-class obstruction ?[O]
+        + --negative character-----> archimedean r_0''
+        |
+        + --reflection pullback----> R_0 = E^*(-P)E
 ```
 
-A positive OX-GEN result would be a **partial geometric building block**, not yet a full X candidate. A negative result applies only to the generator class fixed in advance.
-
-`R_1` and the scalar block `c_aI` remain separate open pieces.
+Dies ist eine exakte gemeinsame Prime-/Archimedean-Generatorstruktur, aber `-P` ist indefinit und daher noch keine positive Object-X-Realisierung.
 
 ---
 
-## 6. True Object-X path
+## 6. Prime-only-A2 — enger Klassen-No-Go `×[M]`
+
+Die positive Prime-Gram-Form
+
+```math
+\sum_n w_n\langle K_n\cdot,K_n\cdot\rangle
+```
+
+**descendiert nicht** durch `\mathcal E`, weil `ker \mathcal E` nicht in ihrem Radikal liegt.
+
+Auf dem Quotienten erzwingt
+
+```math
+D_n^*HD_n=-\lambda_n^2H
+```
+
+nur
+
+```math
+H=\begin{pmatrix}0&b\\\bar b&0\end{pmatrix};
+```
+
+der Maßstab `b` bleibt frei.
+
+```text
+{w_n, lambda_n} alone
+        |
+        | --insufficient to fix absolute R_0 normalization-->
+        v
+Prime-only A2  ×[M]  [eng definierter Scope]
+```
+
+Mit voller Translation-/Reflexionsstruktur ist die Form hingegen kanonisch: `R_0=E^*(-P)E`.
+
+---
+
+## 7. Aktuelle Hauptfront — POSITIVE-DILATION
+
+```text
+OX-GEN-A common generator plane  ✓[M]
+        |
+        | --requires positive embedding/dilation-->
+        v
+GENERATOR-CLASS / POSITIVE-DILATION-CLASS ?[O]
+        |
+        +-------------------------------+
+        |                               |
+        | explicit positive dilation    | class no-go
+        v                               v
+OX-GEN-A2' geometry piece ?[O]     obstruction ?[O]
+        |
+        | --candidate-input only-->
+        v
+OX-GEN-B ?[O]
+  incorporate r_1 and/or c_a I
+```
+
+Eine positive Antwort auf A2' wäre der erste explizite gemeinsame Prime-/Archimedean-Baustein **mit positiver Umgebung**. Eine negative Antwort gilt nur für die vorher definierte natürliche Klasse.
+
+---
+
+## 8. True Object-X path
 
 ```text
 OX-GEN partial geometry ?[O]
@@ -172,8 +237,6 @@ GENUINE X CANDIDATE ?[O]
         v
 EXACT FULL WEIL-GRAM IDENTITY ?[O]
         |
-        | --component of realization with intrinsicity,
-        |    test class and normalization-->
         v
 OBJECT-X REALIZATION ?[O]
         |
@@ -185,48 +248,26 @@ Q_W(f,f)=||T_Xf||^2 >= 0
         v
 WEIL-CRITERION-SCOPE ?[O]
         |
-        | --unlocks classical criterion if scope matches-->
         v
 RH
 ```
 
-No candidate-input edge may be read as a theorem implication.
+No candidate-input edge is a theorem implication.
 
 ---
 
-## 7. Separate / parked routes
+## 9. Separate / parked routes
 
-### R37/G4c
-
-```text
-R37 finite/algebraic certificate
-        |
-        | --reduces-to within R37-->
-        v
-G4c ?[O]
-```
-
-Relation to OX-GEN/Object X: unresolved. No edge is asserted.
-
-### Historical R43 quantitative routes
-
-COND, FD23, global variation, BR39, hard channels and related flag routes remain valid historical/open questions in their scopes, but are not current prerequisites for fixed-pair C6 or OX-GEN.
-
-### PR #91
-
-Source-descent/Weil-separation Draft. No independent Exact-Head GREEN has been promoted or transferred by PR #98.
-
-### SW1 salvage / PR #49
-
-Candidate-only side route. No automatic merge or Object-X implication.
+- **R37/G4c:** separat offen; Beziehung zu OX-GEN/Object X unresolved.
+- **Historische R43-COND-/FD23-/Flagfragen:** eigene offene Quantoren, nicht aktuelle Voraussetzung.
+- **PR #91:** Source-descent/Weil-separation Draft ohne übertragenes unabhängiges Exact-Head-GREEN.
+- **PR #49 / SW1 salvage:** Candidate-only Nebenfront; kein stiller Merge.
 
 ---
 
-## 8. Gate rule
+## 10. Gate-Regel
 
-A falsification gate counts as a genuine narrowing of the Object-X search space only when **both outcomes were logically possible before the test**.
-
-Pure reformulations of known positivity, fitted witness values, or post-hoc factorizations are not Object-X progress.
+Ein Falsifikationsgate zählt nur, wenn **beide Ausgänge vorher logisch möglich** waren. Reine Reformulierungen bekannter Positivität, gefittete Witness-Werte und post-hoc-Faktorisierungen sind kein Object-X-Fortschritt.
 
 ---
 
