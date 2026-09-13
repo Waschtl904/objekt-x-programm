@@ -1,99 +1,110 @@
-# Offene Probleme — aktuelle POS-DIL-Priorität
+# Offene Probleme — aktuelle OX-GEN-B-Priorität
 
 > **Stand:** 13. September 2026.  
 > Operative Quellen: [CURRENT-FRONT](CURRENT-FRONT.md), [AKTUELLER_STAND](00-uebersicht/AKTUELLER_STAND.md), [Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](00-uebersicht/DAG.md), [Registry](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md).
 
 ## Geschlossen im dokumentierten Scope
 
-### OX-GEN-A `✓[M]`
+### OX-GEN-A / POS-DIL-1
 
-Prime-Kanäle und `r_0` liegen auf derselben zweidimensionalen Translation-/Reflexions-Generator-Ebene.
+Gemeinsame Translation-/Reflexions-Generator-Ebene und Prime-moment-Hilbertisierung sind konstruiert.
 
-### POS-DIL-1 `✓[M]` / enger No-Go `×[M]`
+### POS-DIL-2A
 
-Die Prime-moment-Hilbertisierung erfüllt
+Die unveränderte lokale `G_{1/2}^+`-Norm ist für unit-gain Shorting zu klein.
+
+### POS-DIL-2B/2C-R
+
+Der erste äußere Prime-Shell
 
 ```math
-\|V_Nv\|^2=\|\mathcal Ev\|^2,
+\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\}
+```
+
+liefert echte Prime-Kanalmasse und dominiert zusammen mit `G_a^+` die Momentmasse für **alle** `0<a<=1`.
+
+### POS-DIL-2C-B — exakte Shell-Buchung `✓[M]`
+
+Für jede endliche Außenkanalmenge `J` gilt
+
+```math
+H_{a,J}=b_JI,
 \qquad
-R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.
+b_J=2\sum_{n\in J}\frac{\Lambda(n)}{\sqrt n}.
 ```
 
-Volle positive `rho`-Invarianz auf positivem Rang 2 ist nur trivial.
-
-### POS-DIL-2A bestehende G-Masse `×[M]`
-
-Bei `a=1/2` ist die unveränderte `G_{1/2}^+`-Norm zu klein für unit-gain Shorting.
-
-### POS-DIL-2B/2C-R erster Außenshell `✓[M]`
+Daher
 
 ```math
-\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\},
+Q_{B_a}
+=(G_a^++H_{a,J})-(c_a+b_J)I-R_0-R_1.
+```
+
+Die volle Weilform bleibt exakt unverändert. Der isolierte `c_a`-Wert ist cutoff-gaugeabhängig.
+
+### Positive `R_0`-Absorption `✓[M]`
+
+Für den ersten Außenshell setze
+
+```math
+A_a^{out}=G_a^++H_a^{out},
 ```
 
 ```math
-H_a^{out}(v)=2B_a^{out}\|v\|^2.
+D_a^{out}=A_a^{out}-\mathcal E^*\mathcal E\succeq0,
 ```
 
-Für **alle** `0<a<=1` gilt
+```math
+L_+=E_++E_-.
+```
+
+Dann
+
+```math
+P_a^{(0)}
+=A_a^{out}-R_0
+=D_a^{out}+L_+^*L_+\succeq0.
+```
+
+Die exakte Normalform lautet
 
 ```math
 \boxed{
-\|\mathcal Ev\|^2
-\le G_a^+(v)+H_a^{out}(v).
+Q_{B_a}=P_a^{(0)}-c_a^{out}I-R_1,
+\qquad0<a\le1.
 }
 ```
 
-Damit ist für jeden Radius im lokalen Scope auch der entsprechende `R_0`-Schurblock positiv.
-
-Kanonische Radiusquelle: `audits/P11_POS_DIL_2C_EXTERIOR_SHELL_RADIUS_0_1_2026-09-13.md`.
+Kanonische Quelle: `audits/P11_POS_DIL_2C_EXACT_SHELL_GAUGE_R0_ABSORPTION_2026-09-13.md`.
 
 ---
 
-## Priorität 0 — POS-DIL-2C-B / EXACT-SHELL-BOOKING `?[O]`
+## Priorität 0 — OX-GEN-B / R1-GENERATOR `?[O]`
 
-Frage:
+Bestimme die exakte mathematische Struktur von `R_1` und teste vorab definierte natürliche Generator-/Featureklassen.
 
-> Wie kann die positive Energie der äußeren Prime-Kanäle in einer **exakten unveränderten Weil-Geometrie** erscheinen, ohne dass `H_a^{out}` bloß zusätzlich zur Ziel-Form addiert wird?
+Zu klären:
 
-### A. Vor-Cutoff-Rekonstruktion
+1. exakter Kernel bzw. die polarisierte Formel für `R_1`;
+2. Parität und Symmetrien;
+3. Darstellung als Integral/Superposition natürlicher Translation-/Reflexionskanäle;
+4. mögliche positive Absorption zusammen mit bereits vorhandenen Features;
+5. andernfalls ein enger, vorab definierter Klassen-No-Go.
 
-Bestimme exakt, wo die reine lokale Identitätsmasse der Kanäle `c_n>a` in der ungekürzten Prime-Darstellung sitzt und durch welche lokale Umschreibung/Cutoff-Buchung sie verschwindet.
-
-### B. Shell-Differenzen / Teleskopierung
-
-Prüfe, ob benachbarte Shift-Shells eine kanonische Differenzzerlegung erzeugen, in der positive Außenmasse und eine Gegenkomponente exakt bilanzieren.
-
-### C. AR(1)-Root/Hub-Gegenbuchung
-
-Nutze
-
-```math
-T_q^*T_q+uu^*=R_q
-```
-
-und prüfe, ob die Shellenergie pro Primast gegen Root-/Hub-Masse gebucht werden kann.
-
-### D. Quotientenamplitude `1-u_k`
-
-Die POS-DIL-1-Identität
-
-```math
-\sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-u_k)S
-```
-
-macht `1-u_k` zum natürlichen Kandidaten für eine Buchungs-/Differenzrolle. Das ist zu beweisen oder in einer vorab definierten Klasse auszuschließen.
-
-**Erfolgskriterium:** exakte Formgleichheit; keine fertige Weil-Positivität, kein RH, keine rückwärts definierte Wurzel.
+Keine fertige Weil-Positivität und keine rückwärts definierte Positivitätswurzel als Input.
 
 ---
 
-## Priorität 1 — OX-GEN-B `?[O]`
+## Priorität 1 — GAUGE-INVARIANT-SCALAR `?[O]`
 
-- `r_1`;
-- `c_aI`.
+Der nackte Wert `c_a` ist unter der exakten Außen-Prime-Gauge nicht invariant.
 
-Erst nach exakter Shell-Buchung darf geprüft werden, ob die dabei auftretende Skalarmasse mit einem Teil von `c_aI` zusammenhängt. Keine stille Identifikation.
+Gesucht ist daher entweder:
+
+- ein geometrisch kanonischer cutoff-Gauge; oder
+- eine gaugeinvariante Kombination von Skalarledger und `R_1`.
+
+Bevorzugt ist eine gemeinsame Lösung von `R_1` und Skalarrest statt zweier unabhängiger post-hoc Korrekturen.
 
 ---
 
@@ -120,7 +131,8 @@ Erst nach exakter Shell-Buchung darf geprüft werden, ob die dabei auftretende S
 
 Nicht behaupten:
 
-- der Außenshell sei bereits exakte Weil-Buchung;
-- Außenshellmasse = `c_aI`;
-- positiver `R_0`-Schurblock = vollständiges Objekt X;
-- Radiuspositivität = RH.
+- `c_a` sei ohne Gauge-Fixierung ein kanonischer isolierter Skalar;
+- die Prime-cutoff-Gauge erlaube beliebige positive Diagonalergänzungen;
+- `P_a^{(0)}` sei bereits die volle Weil-Gram-Realisierung;
+- `R_1` sei gelöst;
+- Object X oder RH seien bewiesen.
