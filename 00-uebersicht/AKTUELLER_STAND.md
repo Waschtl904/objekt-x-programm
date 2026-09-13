@@ -1,41 +1,15 @@
-# Aktueller Stand — Objekt X / NP-OVERLAP-AR1
+# Aktueller Stand — Objekt X / NP-DISCREPANCY
 
 > **Stand:** 13. September 2026; Registry unverändert.  
-> Details: [CURRENT-FRONT](../CURRENT-FRONT.md), [Prime-overlap AR(1)](../audits/P11_NP_OVERLAP_AR1_FIBERIZATION_2026-09-13.md), [Review correction](../audits/P11_NP_GAP_REVIEW_CORRECTION_PRIME_OVERLAP_2026-09-13.md).
+> Details: [CURRENT-FRONT](../CURRENT-FRONT.md), [Pole-cleared discrepancy](../audits/P11_NP_DISCREPANCY_POLE_CLEARED_CORRELATION_2026-09-13.md), [Prime-overlap AR(1)](../audits/P11_NP_OVERLAP_AR1_FIBERIZATION_2026-09-13.md).
 
-## 1. COMMON-JUMP und Q0 `✓[M]`
+## 1. Gesicherte Architektur
 
-Auf der Nullpolklasse gilt
-
-```math
-Q_W(v)=\|X_av\|^2-\Gamma_a\|v\|^2.
-```
-
-Der erste archimedische Kanal erfüllt mit `Q0=-partial_x^2+1/4`
+COMMON-JUMP und `Q_0` bleiben `✓[M]`. Auf Nullpol
 
 ```math
-A_{1/2}Q_0=-4\partial_x^2,
-\qquad
-Q_0:C_c^\infty(-a,a)\cong D_{NP}(a).
+Q_W(v)=\mathcal A(v)-\mathcal O_a(v),
 ```
-
-Für höhere Kanäle gilt rigoros
-
-```math
-A_\alpha\succeq\frac2\alpha e^{-\alpha a}I.
-```
-
-Die projektinterne Kleinfenster-Coercivity bleibt `✓[M]_part`, ist aber kein neuer Kleinfenster-Positivitätssatz der Literatur (`×[M]` als Neuheitsclaim; Suzuki Theorem 1.4 ist stärker).
-
-## 2. Zentrierte Restform `✓[M]`
-
-Nach exakter Prime-Zentrierung:
-
-```math
-\boxed{Q_W(v)=\mathcal A(v)-\mathcal O_a(v)}
-```
-
-mit
 
 ```math
 \mathcal O_a(v)
@@ -43,85 +17,108 @@ mit
 \operatorname{Re}\langle T_{\log n}v,v\rangle.
 ```
 
-Der harte Rest ist also ein endlicher gewichteter Overlap-Operator, nicht die nackte Prime-Schwelle.
+Jeder vollständige Primzahlblock besitzt exakt die AR(1)-Faserform
 
-## 3. Einzelshift exakt — und als Strategie ausgeschöpft
+```math
+O_{p,a}^{(N)}=(\log p)(R_{p^{-1/2}}^{(N)}-I).
+```
+
+## 2. Methodischer No-Go
+
+Die unabhängige Summe scharfer Einzelshift-Normen wächst mindestens wie
+
+```math
+2e^a(1+o(1)),
+```
+
+weil für `a<log n<2a` die komprimierte Shift-Norm exakt `1/2` ist. Rein skalare archimedische Untergrenzen plus unabhängige Shift-/Blocknormsummation können deshalb den all-window-Satz nicht beweisen.
+
+Auch ein roher Prime-Multiplikator kombiniert nur mit einem `a`-unabhängigen Prolate-Konzentrationsfaktor beseitigt diese exponentielle Skala nicht.
+
+## 3. Nullpol-Zentrierung des Prime-Maßes
 
 Für
 
 ```math
-S_t=\frac12(T_t+T_{-t})
+C_v(t)=\langle T_tv,v\rangle
 ```
 
-liefert Faserung modulo `t`
+gilt auf Nullpol
 
 ```math
 \boxed{
-\|S_t\|
-=\cos\frac{\pi}{\lceil2a/t\rceil+1}
-\quad(0<t<2a).
+\int_0^{2a}2\cosh(t/2)\operatorname{Re}C_v(t)dt=0.
 }
 ```
 
-Dieselbe Norm wird bereits auf `D_NP(a)` erreicht. Daher
+Definiere
+
+```math
+d\mathfrak D(t)
+=\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}(dt)
+-2\cosh(t/2)dt.
+```
+
+Dann exakt
+
+```math
+\boxed{
+\mathcal O_a(v)=2\int\operatorname{Re}C_v(t)d\mathfrak D(t).
+}
+```
+
+Die kumulative Diskrepanz
+
+```math
+\mathfrak D(T)
+=\sum_{\log n\le T}\frac{\Lambda(n)}{\sqrt n}-4\sinh(T/2)
+```
+
+hat keinen exponentiellen PNT-Hauptterm mehr.
+
+## 4. Pole-cleared Zeta-Struktur
+
+Für `Re(s)>1/2`:
+
+```math
+\boxed{
+\mathcal L[d\mathfrak D](s)
+=-\frac{d}{ds}\log\left[(s^2-1/4)\zeta(s+1/2)\right].
+}
+```
+
+Die Nullpol-Autokorrelation entfernt damit exakt die Polfaktoren `z=0,1` aus der Prime-Seite.
+
+## 5. Neue Hauptfront
+
+Durch Stieltjes-Integration:
+
+```math
+\boxed{
+\mathcal O_a(v)
+=-2\int_0^{2a}\mathfrak D(t)
+\frac{d}{dt}\operatorname{Re}C_v(t)dt.
+}
+```
+
+Die aktive Frage lautet nun: Welche Sign-/Antikorrelationsstruktur erzwingt die positive-definite, kompakt getragene Autokorrelation gegen die pole-cleared Prime-Diskrepanz?
 
 ```text
-single-shift null-pole norm improvement   ×[M]
+NP-DISCREPANCY / NP-CORR    ?[O]
 ```
 
-Nullpol allein verbessert keinen einzelnen Shiftkanal. Kollektive Prime-Struktur ist notwendig.
-
-## 4. Prime-Power-Block = exakte AR(1)-Matrix `✓[M]`
-
-Für eine Primzahl `p`,
-
-```math
-\ell_p=\log p,
-\qquad q_p=p^{-1/2},
-```
-
-ist nach Faserung modulo `ell_p` auf einer `N`-Punkt-Faser
-
-```math
-\boxed{
-O_{p,a}^{(N)}
-=(\log p)(R_{q_p}^{(N)}-I_N),
-\qquad
-R_q^{(N)}=(q^{|j-k|})_{j,k}.
-}
-```
-
-Der positive Symbolsektor ist
-
-```math
-|\theta|<\arccos(q_p).
-```
-
-Damit kehrt die bereits bekannte Prime-Power-AR(1)-Geometrie exakt als Faserstruktur des neuen Overlap-Problems zurück.
-
-## 5. Neue Hauptfront `?[O]`
-
-Für verschiedene Primzahlen sind `log p/log r` irrational. Die zentrale Frage ist daher die **gleichzeitige** Konzentration derselben Funktion in den positiven Niedrigfrequenzsektoren vieler inkommensurabler AR(1)-Gitter.
-
-Zu beweisen bleibt
-
-```math
-\boxed{
-(A_\infty-\kappa_*I)|_{D_{NP}(a)}
-\succeq
-\sum_p O_{p,a}|_{D_{NP}(a)}.
-}
-```
+Polynomialer Wuchs von `D(T)` wäre bereits RH-hart; Ziel ist daher keine absolute Majorante, sondern eine strukturierte Korrelationsungleichung.
 
 ## 6. Status
 
 ```text
-COMMON-JUMP / Q0                              ✓[M]
-centered Prime-overlap form                   ✓[M]
-exact single-shift fiber theorem              ✓[M]
-single-shift null-pole improvement            ×[M]
-exact per-prime AR(1) fiberization            ✓[M]
-collective multi-prime suppression            ?[O]
-forward Object-X candidate architecture       ✓[M]_part
+COMMON-JUMP / Q0                               ✓[M]
+per-prime AR(1) fibers                        ✓[M]
+independent shift/block norm-sum route        ×[M]
+raw-amplitude constant-Prolate route          ×[M]
+null-pole correlation gauge                   ✓[M]
+pole-cleared Prime discrepancy                ✓[M]
+NP-DISCREPANCY / anti-correlation             ?[O]
+forward Object-X candidate                    ✓[M]_part
 full positive Object-X / RH                   ?[O]
 ```

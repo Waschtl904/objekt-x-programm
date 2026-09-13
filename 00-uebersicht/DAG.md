@@ -1,152 +1,139 @@
-# Abhängigkeitsgraph (DAG) — Objekt X / NP-OVERLAP-AR1
+# Abhängigkeitsgraph (DAG) — Objekt X / NP-DISCREPANCY
 
 > **Stand:** 13. September 2026; Registry unverändert.
 
-## 1. COMMON-JUMP
+## 1. Gesicherte Kette
 
 ```text
 D_NP = ker M(0) ∩ ker M(1)
         |
         v
-Q_W|NP = X_a^*X_a - Gamma_a I            ✓[M]
+Q_W = A_arch - O_a                         ✓[M]
         |
-        v
-Q_W = A_arch - O_a                        ✓[M]
+        +--> per-prime AR(1) fibers       ✓[M]
+        +--> Q0 support map               ✓[M]
 ```
 
-mit
+## 2. Methodische Sackgassen
+
+```text
+independent single-shift norms
+        |
+        | near-boundary shifts have norm 1/2
+        v
+scalar budget >= 2 e^a(1+o(1))            ×[M] for all-window proof
+```
+
+```text
+raw Prime multiplier ~ e^a
+        +
+constant Prolate concentration factor
+        |
+        v
+same exponential scale                       ×[M] as sufficient mechanism
+```
+
+## 3. Null-pole correlation gauge
+
+```text
+E_+=E_-=0
+        |
+        v
+integral exp(t/2) C_v(t) dt = 0
+        |
+real part
+        v
+integral_0^{2a} 2 cosh(t/2) Re C_v(t) dt = 0   ✓[M]
+```
+
+## 4. Pole-cleared Prime measure
+
+```text
+dnu = sum Lambda(n)/sqrt(n) delta_log n
+        |
+subtract 2 cosh(t/2) dt using null-pole gauge
+        v
+dD = dnu - 2 cosh(t/2) dt                    ✓[M]
+```
+
+and
 
 ```math
-O_a(v)=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}Re\langle T_{\log n}v,v\rangle.
+O_a(v)=2\int Re C_v(t)dD(t).
 ```
 
-## 2. Q0/Gamma edge
-
-```text
-A_alpha=(2/alpha)L(L+alpha^2)^(-1)        ✓[M]
-        |
-alpha=1/2, Q0=L+1/4
-        |
-        v
-A_{1/2}Q0=4L                              ✓[M]
-Q0 : C_c^infty(-a,a) <-> D_NP(a)          ✓[M]
-```
-
-Higher channels:
-
-```text
-compressed resolvent + Schur
-        |
-        v
-A_alpha >= (2/alpha)e^{-alpha a}I         ✓[M]
-```
-
-## 3. Single-shift fiber node
-
-```text
-S_t=(T_t+T_-t)/2 on (-a,a)
-        |
-fiberize modulo t
-        |
-path graph P_N, N<=ceil(2a/t)
-        |
-        v
-||S_t||=cos(pi/(ceil(2a/t)+1))            ✓[M]
-```
-
-The top eigenvalue has infinite multiplicity through the residue parameter. Two null-pole moment constraints can be imposed inside that top eigenspace:
-
-```text
-D_NP restriction
-        |
-        v
-same sharp single-shift norm               ✓[M]
-        |
-        v
-single-shift null-pole improvement          ×[M]
-```
-
-Therefore no main edge remains from independent single-shift norm bounds.
-
-## 4. Group by prime
-
-```text
-p fixed, ell_p=log p, q_p=p^(-1/2)
-        |
-all powers p^k in O_a
-        |
-fiberize modulo ell_p
-        |
-        v
-O_{p,a}^{(N)}=(log p)(R_q^(N)-I_N)         ✓[M]
-```
-
-where
+Cumulative form:
 
 ```math
-R_q^{(N)}=(q^{|j-k|})_{j,k}.
+D(T)=\sum_{\log n\le T}\frac{\Lambda(n)}{\sqrt n}-4\sinh(T/2).
 ```
 
-This is exactly the Prime-Power AR(1)/KMS matrix.
+PNT main exponential cancels.
 
-## 5. Positive AR(1) sector
-
-```math
-P_q(theta)-1
-=\frac{2q(\cos\theta-q)}{1-2q\cos\theta+q^2}.
-```
+## 5. Stieltjes separation
 
 ```text
-positive iff cos(theta)>q
+C_v(2a)=0, D(0)=0
         |
         v
-|theta|<arccos(q) mod 2pi                  ✓[M]
+O_a(v)=-2 integral_0^{2a} D(t) d/dt Re C_v(t) dt   ✓[M]
 ```
-
-Thus the dangerous p-block directions are low frequencies on the `log p` lattice.
-
-## 6. Multi-prime main edge
-
-For distinct primes:
-
-```math
-log p/log r notin Q.                        ✓[M]
-```
-
-Hence:
 
 ```text
-positive low-frequency sector on log 2 lattice
-positive low-frequency sector on log 3 lattice
-positive low-frequency sector on log 5 lattice
-                ...
-                 |
-                 | incommensurable lattices
-                 v
-simultaneous concentration bound ?[O]
-                 |
-                 v
-sum_p O_{p,a} <= A_infty-kappa_* I ?[O]
-                 |
-                 v
+arithmetic side = D(t)
+analytic side   = derivative of positive-definite compact-support autocorrelation
+```
+
+## 6. Pole-cleared zeta fingerprint
+
+For `Re s>1/2`:
+
+```math
+L[dD](s)
+=-zeta'/zeta(s+1/2)-1/(s-1/2)-1/(s+1/2)
+```
+
+```text
+        |
+        v
+-d/ds log[(s^2-1/4) zeta(s+1/2)]           ✓[M]
+```
+
+The subtraction is exactly the `z=0,1` pole pair.
+
+## 7. RH-hard scale firewall
+
+```text
+RH -> D(T)=O(T^3)
+polynomial D(T)=O(T^K) for some fixed K -> RH
+```
+
+Status: imported/classical bridge `✓[K/M]`.
+
+Therefore the next edge cannot be a mere absolute polynomial estimate for `D`.
+
+## 8. New main edge
+
+```text
+pole-cleared D(t)
+        +
+positive-definite C_v with null-pole constraint
+        |
+        v
+structured anti-correlation / signed pairing bound ?[O]
+        |
+        v
+A_arch >= O_a on D_NP(a) for every a ?[O]
+        |
+        v
 RH
 ```
 
-This is the new default Object-X path.
+AR(1), Q0 and centered Prolate/Toeplitz methods feed into this edge as auxiliary mechanisms.
 
-## 7. Reconnect to old AR(1)
+## 9. Firewalls
 
-The earlier project node
-
-```math
-C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2}
-```
-
-now connects directly to the exact overlap fibers. The open edge is quantitative: convert the known AR(1)/Markov/Weil-tail factorization into a collective multi-prime suppression inequality.
-
-## 8. Side nodes
-
-- Short-window COMMON-JUMP/Q0 coercivity `✓[M]_part`, but novelty claim `×[M]`.
-- Arb `a_*` certificate = side gate.
-- Finite Gamma-null ladder = structurally valid auxiliary route.
+- raw Prime amplitude is no longer the canonical arithmetic object;
+- independent block norms remain excluded;
+- Prolate is allowed only after arithmetic centering, not as a raw constant-factor cure;
 - Registry unchanged.
