@@ -1,4 +1,4 @@
-# Abhängigkeitsgraph (DAG) — Objekt X / A1-FINITE-1212
+# Abhängigkeitsgraph (DAG) — Objekt X / A1-FINITE
 
 > **Stand:** 13. September 2026; Registry und Arbeitsdefinition unverändert.
 
@@ -12,102 +12,96 @@ rank-2 completion / Morse / parity ✓[M]
 canonical lambda=1 ✓[M]
         |
 exact a=1 Fourier multiplier ✓[M]
+        |
+Omega1551 high-frequency certificate ✓[K/M]
 ```
 
-## 2. Sharpened frequency gate
+## 2. Canonical PSWF branch
 
 ```text
-DLMF positive digamma series
- + rigorous derivative bound
- + 0.02 Arb grid on [1551,2500]
- + far-field monotonicity
+bounded band r, ||r||<12
+        |
+moment-augmented PSWF split
+        |
+KRD lambda_1210<1.5e-42
+        |
+Schur penalty <2.2e-39                     ✓[K/M]
         |
         v
-m_1(xi)>0.1 for |xi|>=1551                 ✓[K/M]
-```
-
-## 3. Reduced bounded operator
-
-```text
-c=0.1
-r=(m_1-c)1_{|xi|<=1551}
-s=(m_1-c)1_{|xi|>1551} >=0
-        |
-        v
-q_1 >= cI+K                                  ✓[M]
-```
-
-Arb also certifies `||r||<12`. `✓[K/M]`.
-
-## 4. Moment-augmented Prolate split
-
-```text
-R_N^0 = first N PSWFs
-M = span{e^{x/2},e^{-x/2}}
-R_N=R_N^0+M
-T_N=R_N^perp
-        |
-        +--> E|T_N=0
-        +--> band mass on T_N <= lambda_N
-```
-
-Thus the completion term has no tail/crossblock. `✓[M]`.
-
-## 5. Bounded Schur theorem
-
-```math
-\|L_{RT}\|\le\|r\|_\infty\sqrt{\lambda_N},
-```
-
-```math
-L_{TT}\succeq
-[c-(\Gamma_1+c)\lambda_N]I.
-```
-
-Hence
-
-```math
-L_{RR}\succeq\mu_RI,
-\qquad
-\mu_R\ge
-\frac{\|r\|_\infty^2\lambda_N}
-{c-(\Gamma_1+c)\lambda_N}
-```
-
-is sufficient. `✓[M]`.
-
-## 6. Certified N=1210 constants
-
-```text
-lambda_1210(c=1551)<1.5e-42
-||r||<12
-tau_1210>0.099
-        |
-        v
-Schur penalty <2.2e-39                       ✓[K/M]
-```
-
-## 7. Final a=1 edge
-
-```text
 R_1210 dimension <=1212
-  = <=606 even + <=606 odd
-        |
-        v
-certify L_RR >=3e-39 I                       ?[O]
-        |
-        v
-canonical a=1 completion                     ?[O]
+certify L_RR >=3e-39 I                     ?[O]
 ```
 
-No separate infinite-dimensional tail or crossblock theorem remains.
+This remains the **canonical smaller finite reduction**.
 
-## 8. Global path
+## 3. Alternative Legendre branch
 
 ```text
-A1-FINITE-1212
-   |
-fixed-window a=1 completion
+orthonormal T_n=sqrt(n+1/2) P_n
+        |
+Gram I + exact parity + spherical-Bessel Fourier form
+        |
+M=2150 Legendre tail/cross certificate              ✓[K/M]
+        |
+1075 even + 1075 odd blocks, target 1e-35
+```
+
+## 4. Legendre quadrature edge
+
+```text
+analytic continuation of Re psi
+        +
+strip |Im xi|<=0.4
+        +
+|r(z)|<42
+        +
+|j_n(z)|<=exp(|Im z|)
+        |
+        v
+full matrix integrand <260000
+        |
+width<=0.4 panels + Gauss q=40
+rho=2+sqrt(5)
+        |
+        v
+per-entry error <3.678e-41
+        |
+        v
+parity operator quadrature error <4e-38          ✓[K/M]
+```
+
+Hence analytic quadrature truncation is already far below the `1e-35` finite-head target.
+
+## 5. Remaining Legendre edge
+
+```text
+assemble 1075x1075 even/odd matrices
+        +
+rigorous special-function/rounding enclosure
+        +
+verified LDL/Cholesky residual
+        |
+        v
+A_even >=1e-35 I and A_odd >=1e-35 I             ?[O]
+```
+
+## 6. A1 closure
+
+```text
+PSWF finite gate ?[O]
+       OR
+Legendre finite gate ?[O]
+        |
+        v
+canonical a=1 completion ?[O]
+```
+
+No separate infinite-dimensional tail or crossblock problem remains on either certified route.
+
+## 7. Global path
+
+```text
+a=1 completion
    |
 further windows / structural scaling
    |
@@ -118,9 +112,9 @@ restricted Weil criterion
 RH
 ```
 
-## 9. Firewalls
+## 8. Firewalls
 
-- `3e-39` is a predeclared sufficient threshold, not a measured eigenvalue.
-- The older `2300/1680` certificate remains valid but is superseded quantitatively.
-- Resolved lower bound remains open.
+- Legendre quadrature budget does not prove finite PSD.
+- Pivot intervals containing zero are undecided.
+- PSWF route remains canonical/smaller.
 - Fixed-window a=1 and RH are not proved.
