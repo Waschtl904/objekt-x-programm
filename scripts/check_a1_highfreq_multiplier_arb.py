@@ -1,16 +1,22 @@
 # -*- coding: utf-8 -*-
-"""Rigorous Arb certificate for high-frequency positivity of the a=1 NP-DUAL multiplier.
+"""Rigorous Arb certificate for high-frequency positivity and a Prolate tail at a=1.
 
 For a=1, the centered COMMON-JUMP/null-pole form has exact Fourier multiplier
 
     m_1(xi) = Re psi(1/4 + i xi/2) - log(pi)
               - 2 * sum_{n in {2,3,4,5,7}} Lambda(n)/sqrt(n) * cos(xi log n).
 
-We certify a uniform bound
+This script certifies:
 
-    m_1(xi) > 0.04    for |xi| >= 2300.
+    m_1(xi) > 0.04    for |xi| >= 2300,
 
-The proof uses DLMF 5.7.6.  For x>0 and y real,
+and combines this with the non-asymptotic continuous-PSWF eigenvalue bound of
+Karnik--Romberg--Davenport, Corollary 3 (arXiv:2006.00427v2), to certify that
+the Prolate concentration eigenvalue lambda_1490(c=2300) is < 0.0035.
+Consequently the orthogonal Prolate tail after the first 1490 timelimited PSWFs
+has a strictly positive q_1 reserve.
+
+The digamma proof uses DLMF 5.7.6.  For x>0 and y real,
 
     Re psi(x+iy) - psi(x)
       = sum_{k>=0} y^2 / ((k+x)((k+x)^2+y^2)).
@@ -55,8 +61,13 @@ GAMMA1 = KAPPA + 2 * W
 OMEGA = arb(2300)
 TARGET = arb("0.04")
 RHO = arb("0.0035")
-TAIL_TARGET = arb("0.0005")
+TAIL_TARGET = arb("0.01")
 N = 64
+
+# Continuous time interval is [-1,1], so T=2 and the PSWF parameter c=Omega*T/2=Omega.
+PROLATE_C = OMEGA
+PROLATE_K = 1490
+SHANNON_CEIL = 1465  # certified below as ceil(2*c/pi)
 
 
 def digamma_increment_lower(y: arb, n_terms: int = N) -> arb:
@@ -78,6 +89,13 @@ def multiplier_lower_at_omega() -> arb:
     return PSI_QUARTER + digamma_increment_lower(y) - PI.log() - 2 * W
 
 
+def krd_pswf_upper() -> arb:
+    """Karnik--Romberg--Davenport Corollary 3 upper bound for lambda_k(c)."""
+    denom = (2 / (PI * PI)) * (100 * PROLATE_C / PI + 25).log()
+    exponent = -(arb(PROLATE_K - SHANNON_CEIL - 6)) / denom
+    return 10 * exponent.exp()
+
+
 def main() -> None:
     # Certify the active cutoff boundary itself.
     if not (arb(7).log() < 2):
@@ -94,25 +112,37 @@ def main() -> None:
     if not (rho_star > RHO):
         raise RuntimeError(f"Prolate concentration threshold too small: rho*={rho_star}")
 
-    # If band concentration <= RHO, then
-    # q_1(v) >= TARGET*(1-RHO)||v||^2 - GAMMA1*RHO||v||^2.
-    tail_margin = TARGET - (TARGET + GAMMA1) * RHO
+    # Certify ceil(2c/pi)=1465, then apply the explicit KRD bound at k=1490.
+    shannon = 2 * PROLATE_C / PI
+    if not (arb(1464) < shannon and shannon < arb(1465)):
+        raise RuntimeError(f"failed to certify 1464 < 2c/pi < 1465: {shannon}")
+
+    prolate_upper = krd_pswf_upper()
+    if not (prolate_upper < RHO):
+        raise RuntimeError(f"KRD Prolate upper bound failed: lambda_1490 <= {prolate_upper}")
+
+    # If band concentration <= prolate_upper, then
+    # q_1(v) >= TARGET*(1-rho)||v||^2 - GAMMA1*rho||v||^2.
+    tail_margin = TARGET - (TARGET + GAMMA1) * prolate_upper
     if not (tail_margin > TAIL_TARGET):
         raise RuntimeError(f"certified Prolate-tail margin too small: margin={tail_margin}")
 
-    print("A1 high-frequency multiplier Arb certificate")
-    print(f"prec_bits   = {ctx.prec}")
-    print(f"W           = {W.str(40)}")
-    print(f"Gamma_1     = {GAMMA1.str(40)}")
-    print(f"Omega       = {OMEGA.str(20, radius=False)}")
-    print(f"N_series    = {N}")
-    print(f"m1 lower    = {lb.str(50)}")
-    print(f"target c    = {TARGET.str(20, radius=False)}")
-    print(f"rho_*       = {rho_star.str(50)}")
-    print(f"rho chosen  = {RHO.str(20, radius=False)}")
-    print(f"tail margin = {tail_margin.str(50)}")
+    print("A1 high-frequency / Prolate-tail Arb certificate")
+    print(f"prec_bits       = {ctx.prec}")
+    print(f"W               = {W.str(40)}")
+    print(f"Gamma_1         = {GAMMA1.str(40)}")
+    print(f"Omega           = {OMEGA.str(20, radius=False)}")
+    print(f"N_series        = {N}")
+    print(f"m1 lower        = {lb.str(50)}")
+    print(f"target c        = {TARGET.str(20, radius=False)}")
+    print(f"rho_*           = {rho_star.str(50)}")
+    print(f"2c/pi           = {shannon.str(50)}")
+    print(f"PSWF index k    = {PROLATE_K}")
+    print(f"KRD lambda_k ub = {prolate_upper.str(50)}")
+    print(f"tail margin     = {tail_margin.str(50)}")
     print("CERTIFIED: m_1(xi) > 0.04 for every |xi| >= 2300")
-    print("CERTIFIED: band concentration <= 0.0035 implies q_1-tail margin > 0.0005")
+    print("CERTIFIED: PSWF lambda_1490(c=2300) < 0.0035")
+    print("CERTIFIED: Prolate tail k>=1490 has q_1 margin > 0.01")
 
 
 if __name__ == "__main__":
