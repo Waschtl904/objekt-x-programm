@@ -1,4 +1,4 @@
-# Objekt X — kanonische Forschungsroadmap v3.9
+# Objekt X — kanonische Forschungsroadmap v3.10
 
 > **Stand:** 13. September 2026; Registry und Arbeitsdefinition unverändert.
 
@@ -14,94 +14,125 @@ moment-augmented Prolate Schur theorem
 
 ## Gate C1 — Sharpened high-frequency band `✓[K/M]`
 
-Exact-head Arb zertifiziert
+Exact-Head Arb zertifiziert
 
 ```math
-\boxed{m_1(\xi)>0.1\quad(|\xi|\ge1551).}
+\boxed{m_1(\xi)>0.1\quad(|\xi|\ge1551),}
 ```
 
-Der Beweis benutzt eine rigorose Gitter-/Lipschitzkontrolle auf `[1551,2500]` und einen monotonen far-field Digamma-Bound.
-
-## Gate C2 — Reduced bounded lower operator `✓[M] / ✓[K/M]`
+und für
 
 ```math
-c=0.1,
-\quad
-r=(m_1-c)1_{[-1551,1551]},
-\quad
-K=P_I\mathcal F^{-1}M_r\mathcal F P_I,
+r=(m_1-0.1)1_{[-1551,1551]}
 ```
-
-```math
-q_1\succeq cI+K.
-```
-
-Arb zertifiziert
 
 ```math
 \|r\|_\infty<12.
 ```
 
-## Gate C3 — Moment-augmented PSWF split `✓[M]`
+## Gate C2 — Canonical PSWF finite reduction `✓[K/M]`
 
-```math
-R_N=\operatorname{span}\{\psi_0,\ldots,\psi_{N-1}\}
-+\operatorname{span}\{e^{x/2},e^{-x/2}\},
-\qquad
-T_N=R_N^\perp.
-```
-
-Dann `E|T_N=0` und
-
-```math
-\|(L_1)_{RT}\|\le\|r\|_\infty\sqrt{\lambda_N},
-```
-
-```math
-(L_1)_{TT}\succeq
-[c-(\Gamma_1+c)\lambda_N]I.
-```
-
-## Gate C4 — Certified N=1210 Schur constants `✓[K/M]`
-
-Für `c_PSWF=1551`:
+Für `N=1210`:
 
 ```math
 \lambda_{1210}<1.5\times10^{-42},
+\qquad
+\text{Schur penalty}<2.2\times10^{-39}.
 ```
+
+Daher genügt kanonisch
 
 ```math
-\tau_{1210}>0.099,
+\boxed{(L_1)_{RR}\succeq3\times10^{-39}I}
 ```
+
+auf höchstens `1212 = 606 even + 606 odd` Dimensionen.
+
+Dieser resolved lower bound bleibt `?[O]`.
+
+## Gate C3 — Alternative orthonormale Legendre-Route `✓[K/M]`
+
+Mit
 
 ```math
-\boxed{\text{Schur penalty}<2.2\times10^{-39}.}
+T_n(x)=\sqrt{n+\frac12}P_n(x),
+\qquad n=0,\ldots,2149,
 ```
 
-Der Exact-Head-Upper-Bound des Penalty ist etwa `2.11526e-39`.
-
-## Gate C5 — A1-FINITE-1212 `?[O]`
-
-Es genügt jetzt nur noch
-
-```math
-\boxed{
-(L_1)_{RR}\succeq3\times10^{-39}I.
-}
-```
-
-Resolved dimension:
+ist `G=I` exakt.  Der zertifizierte Legendre-Tail bei `M=2150` reduziert die alternative Route auf
 
 ```text
-at most 1212 total
-606 even + 606 odd.
+1075 even + 1075 odd
 ```
 
-`3e-39` wurde vor resolved-space Numerik festgelegt und ist kein gemessener Eigenwert.
+mit finite target
+
+```math
+10^{-35}I.
+```
+
+Die kleinere PSWF-Route bleibt kanonisch.
+
+## Gate C4 — Legendre analytic quadrature budget `✓[K/M]`
+
+Predeclared Integrationsbackend:
+
+```text
+panel width <=0.4
+Gauss-Legendre q=40
+analytic strip |Im xi|<=0.4
+```
+
+Exact-Head Arb zertifiziert
+
+```math
+|r(z)|<42,
+```
+
+sowie für jeden Paritätsblock
+
+```math
+\boxed{\|K-\widetilde K\|_{op}<4\times10^{-38}.}
+```
+
+Zwischenwerte:
+
+```text
+per-panel remainder <9.483e-45
+per-entry remainder <3.678e-41
+operator remainder  <3.954e-38
+```
+
+Damit liegt die analytische Quadraturtrunkation mehr als Faktor `250` unter dem `1e-35` Legendre-Headziel.
+
+## Gate C5A — Canonical A1-FINITE-1212 `?[O]`
+
+```math
+(L_1)_{RR}\succeq3\times10^{-39}I
+```
+
+auf der moment-augmentierten PSWF-Reduktion.
+
+## Gate C5B — LEGENDRE-MATRIX `?[O]`
+
+Alternativ müssen die beiden orthonormalen Paritätsblöcke rigoros erfüllen
+
+```math
+A_e\succeq10^{-35}I,
+\qquad
+A_o\succeq10^{-35}I.
+```
+
+Noch erforderlich:
+
+1. hochpräzise Matrixassemblierung;
+2. rigoroses Special-function/Rounding-Budget;
+3. verifizierte LDL/Cholesky-/Inertia-Prüfung;
+4. Residual/Weyl-Abschluss unter Einbezug des bereits zertifizierten Quadraturfehlers.
 
 ## Gate C6 — certified a=1 completion `?[O]`
 
-C5 plus der bereits zertifizierte Schur-Penalty ergibt die volle kanonische Completion bei `a=1` und damit Nullpolpositivität in diesem Fenster.
+C5A **oder** C5B schließt den fixed-window `a=1`-Satz.
 
 ## Gate C7 — all-window mechanism `?[O]`
 
@@ -119,8 +150,8 @@ RH-hard global criterion.
 
 ## Firewalls
 
-- Der ältere `2300/1680`-Gate bleibt gültig, ist aber gröber.
-- `3e-39` ist ein sufficient threshold, kein beobachteter Eigenwert.
-- Resolved lower bound bleibt offen.
-- Fixed-window `a=1`, Object X und RH sind nicht bewiesen.
-- Registry/Arbeitsdefinition unverändert.
+- Quadrature budget is not finite PSD.
+- `3e-39` and `1e-35` are sufficient thresholds, not fitted eigenvalues.
+- The Legendre backend does not supersede the smaller PSWF route.
+- Fixed-window `a=1`, Object X and RH are not proved.
+- Registry/Arbeitsdefinition unchanged.
