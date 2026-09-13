@@ -27,7 +27,7 @@ global Weil sign criterion on D_NP
 
 Keine Kante `fixed a <=> RH`.
 
-## 2. Eine gemeinsame Operatorfamilie
+## 2. COMMON-JUMP `✓[M]`
 
 ```math
 K_t=T_{t/2}-T_{-t/2},
@@ -56,31 +56,12 @@ h(t)=\frac{e^{-t/2}}{1-e^{-2t}},
 w_n=\frac{\Lambda(n)}{\sqrt n}.
 ```
 
-## 3. Exakte Schwelle
-
-```text
-gamma-factor scalar log(4pi)+gamma
-        +
-2 integral h(t)(1-e^{-t/2}) dt
-        |
-        v
-kappa_* = log pi - psi(1/4)
-```
-
-Prime-Diagonalledger:
-
-```math
-2\sum_{\log n\le2a}w_n.
-```
-
-Daher
+## 3. Exakte zentrierte Weil-Normalform
 
 ```math
 \Gamma_a
 =2\sum_{\log n\le2a}w_n+\log\pi-\psi(1/4).
 ```
-
-## 4. Exact COMMON-JUMP normal form
 
 ```text
 pole block <Ev, P Ew>
@@ -93,7 +74,7 @@ Gamma_a <v,w>
 Q_W(v,w) exactly, all a>0   ✓[M]
 ```
 
-Restriktion auf Nullpol:
+Auf Nullpol:
 
 ```text
 E=0
@@ -102,50 +83,118 @@ E=0
 Q_W|NP = X_a^* X_a - Gamma_a I   ✓[M]
 ```
 
-## 5. Frühere offene Knoten werden subsumiert
+`NP-R1`, `NP-COMMON` und die cutoff-Gauge-Struktur sind in diesem Knoten geschlossen/subsumiert.
+
+## 4. Archimedische Kanalzerlegung
 
 ```text
-NP-R1 ?[O] -----> continuous K_t channel -----> closed/subsumed ✓[M]
-NP-COMMON ?[O] -> mixed common measure --------> ✓[M]
-NP-SCALAR ?[O] -> Gram/threshold covariance ---> ✓[M] (structural)
-```
-
-Die scharfe Schwellenungleichung bleibt offen.
-
-## 6. Cutoff-Gauge edge
-
-Für `0<a<b` und `supp v,w subset [-a,a]`:
-
-```text
-new prime atom, 2a<log n<=2b
+h(t) = sum_{m>=0} exp(-alpha_m t)
+alpha_m = 2m+1/2
         |
         v
-<K_log n v,K_log n w> = 2<v,w>
+A_alpha = integral exp(-alpha t) K_t^* K_t dt
         |
-        +---------------------------+
-        |                           |
-        v                           v
-Gram increases by 2w_n I     Gamma increases by 2w_n
-        |                           |
-        +-------------+-------------+
-                      v
-centered form unchanged ✓[M]
+        v
+A_alpha = (2/alpha) L(L+alpha^2)^(-1)   ✓[M]
 ```
 
-Damit ist die frühere Exterior-shell-Gauge ein Spezialfall der Common-Jump-Kovarianz.
+mit `L=-d^2/dx^2`.
 
-## 7. Neuer Hauptpfad
+## 5. Exakter Q0-First-Channel-Knoten `✓[M]`
+
+```text
+Q0 = L + 1/4
+alpha_0 = 1/2
+        |
+        v
+A_{1/2} = 4I - Q0^(-1)
+        |
+        v
+A_{1/2} Q0 = 4L = -4 d^2/dx^2
+```
+
+Für `alpha>0` cancelt der Resolventennenner in `A_alpha Q0` nur bei `alpha=1/2`.
+
+## 6. Support-preserving null-pole edge `✓[M]`
+
+```text
+Green kernel Q0^(-1): exp(-|x-y|/2)
+        |
+        +--> right tail = exp(-x/2) E_+(v)
+        +--> left tail  = exp(+x/2) E_-(v)
+        |
+        v
+E_+=E_-=0
+        |
+        v
+Q0 : C_c^infty(-a,a)  <-->  D_NP(a)   support preserving
+```
+
+Damit wird der erste nichtlokale Kanal nach `v=Q0u` lokal:
+
+```math
+\langle v,A_{1/2}v\rangle
+=4\|u''\|^2+\|u'\|^2.
+```
+
+## 7. Quantitative Coercivity edges
+
+Nullpol + Dirichlet-Poincaré:
+
+```math
+\langle v,A_{1/2}v\rangle
+\ge
+\frac{4\pi^2}{\pi^2+a^2}\|v\|^2.
+```
+
+Jeder höhere Kanal + Schur-Test:
+
+```math
+\langle v,A_\alpha v\rangle
+\ge
+\frac{2}{\alpha}e^{-\alpha a}\|v\|^2.
+```
+
+Beide Kanten sind `✓[M]` und verwenden keine Weil-Positivität als Input.
+
+## 8. Short-window NP-GAP `✓[M]_part`
+
+```text
+first-channel null-pole coercivity
+        +
+higher-channel Schur bounds
+        |
+        v
+B(a) = 4pi^2/(pi^2+a^2)
+       + sum_{m>=1} (2/alpha_m) exp(-alpha_m a)
+        |
+        v
+B(a) >= kappa_* on a nonempty short-window interval
+        |
+        v
+||X_a v||^2 >= Gamma_a ||v||^2 on D_NP(a)
+        |
+        v
+NP-GAP short-window ✓[M]_part
+```
+
+Die Prime-Summe ist in diesem Bereich noch leer (`2a<log2`).
+
+## 9. Verbleibender Hauptpfad
 
 ```text
 COMMON-JUMP positive geometry ✓[M]
         |
         v
-forward Object-X architecture ✓[M]_part
+Q0 first-channel intertwining ✓[M]
         |
         v
-NP-GAP ?[O]
+short-window NP-GAP ✓[M]_part
         |
-        | prove lambda_NP(a) >= Gamma_a for all a
+        | extend coercivity through all windows / prime thresholds
+        v
+NP-GAP for every a>0 ?[O]
+        |
         v
 global null-pole Weil positivity
         |
@@ -153,25 +202,21 @@ global null-pole Weil positivity
 RH
 ```
 
-## 8. NP-GAP Unterpfade
+## 10. Numerik-Firewall
 
 ```text
-null-pole moments
-M(v)(0)=M(v)(1)=0
-        |
-        +--> support-preserving Q_0=-d^2/dx^2+1/4 factorization
-        |
-        +--> Fourier zeros at z=±i/2
-        |
-        +--> nonlocal Poincare / frame / Paley-Wiener tests
+finite-dimensional null-pole space V_N
         |
         v
-sharp lower bound for X_a^*X_a ?[O]
+Ritz minimum lambda_NP^(N)(a)
+        |
+        v
+lambda_NP^(N)(a) >= true lambda_NP(a)
 ```
 
-Keine Weil-Positivität darf als Input in diese Kante zurückgeschleift werden.
+Also: positive endliche Ritz-Gaps sind keine Beweise; ein zertifizierter Wert unter der Schwelle wäre dagegen ein Falsifikator.
 
-## 9. Auxiliary edges
+## 11. Auxiliary edges
 
 ```text
 OX-GEN-A -> exact pole-layer geometry
@@ -181,10 +226,11 @@ Prime AR(1) -> independent positive structure
 
 PR #91, PR #49 und R37/G4c bleiben separat.
 
-## 10. Firewalls
+## 12. Firewalls
 
-- common geometry != sharp frame bound;
-- exact difference-of-Gram-and-threshold != positive Weil-Gram realization;
+- short-window gap != all-`a` gap;
+- exact Q0 intertwining != RH;
+- common geometry != vollständige positive Objekt-X-Realisierung;
 - global null-pole criterion != fixed-window criterion;
 - publication novelty `?[O]`;
 - Registry unchanged.
