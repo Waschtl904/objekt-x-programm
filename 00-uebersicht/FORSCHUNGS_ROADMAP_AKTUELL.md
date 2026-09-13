@@ -1,146 +1,154 @@
-# Objekt X — kanonische Forschungsroadmap v3.7
+# Objekt X — kanonische Forschungsroadmap v3.8
 
 > **Stand:** 13. September 2026; Registry und Arbeitsdefinition unverändert.
 
-## Gate C0 — Gesicherte Architektur `✓[M]`
+## Gate C0 — Completion / A1-TAIL `✓[M] / ✓[K/M]`
+
+Geschlossen sind:
 
 ```text
 COMMON-JUMP / Q0
-rank-2 completion
-Morse-index filters
-reflection/parity reduction
-canonical lambda=1 identity
+rank-2 completion / Morse / parity
+canonical lambda=1
+exact a=1 Fourier multiplier
+high-frequency positivity
+full infinite Prolate tail
 ```
 
-Fixed-window Nullpolpositivität ist exakt ein zweikanaliges Completionproblem.
+Insbesondere gilt `q_1>0.01I` auf dem orthogonalen Tail nach den ersten `1490` PSWF-Moden.
 
-## Gate C1 — `a=1` exact multiplier `✓[M]`
+## Gate C1 — Bounded lower operator `✓[M]`
 
-Für zeitbegrenztes `v` auf `(-1,1)` gilt exakt
+Mit
 
 ```math
-q_1(v)=\int m_1(\xi)|\widehat v(\xi)|^2d\xi,
+c=0.04,
+\quad
+r=(m_1-c)1_{[-2300,2300]},
+\quad
+K=P_I\mathcal F^{-1}M_r\mathcal F P_I
+```
+
+ist
+
+```math
+q_1\succeq cI+K.
+```
+
+Für `A_1=q_1+E^*E` genügt deshalb
+
+```math
+L_1=cI+K+E^*E.
+```
+
+## Gate C2 — Moment-augmented PSWF split `✓[M]`
+
+```math
+R_N=\operatorname{span}\{\psi_0,\ldots,\psi_{N-1}\}
++\operatorname{span}\{e^{x/2},e^{-x/2}\},
+\qquad
+T_N=R_N^\perp.
+```
+
+Dann
+
+```math
+E|_{T_N}=0,
+```
+
+und damit besitzt der Completionterm keinen Tail- oder Crossblock.
+
+Für den bounded band operator:
+
+```math
+\|(L_1)_{RT}\|\le\|r\|_\infty\sqrt{\lambda_N},
 ```
 
 ```math
-m_1(\xi)=
-\operatorname{Re}\psi\left(\frac14+\frac{i\xi}{2}\right)-\log\pi
--2\sum_{n\in\{2,3,4,5,7\}}
-\frac{\Lambda(n)}{\sqrt n}\cos(\xi\log n).
+(L_1)_{TT}\succeq
+[c-(\Gamma_1+c)\lambda_N]I.
 ```
 
-Kein zusätzlicher Fensterrest tritt im quadratischen Wert auf.
+## Gate C3 — Explicit N=1680 Schur constants — candidate `✓[K/M]`
 
-## Gate C2 — High-frequency positivity `✓[K/M]`
-
-Ein Exact-Head-Arb-Zertifikat beweist
-
-```math
-\boxed{m_1(\xi)>0.04\quad(|\xi|\ge2300).}
-```
-
-Die globale grobe Untergrenze lautet `m_1>=-Gamma_1`.
-
-## Gate C3 — Prolate tail `✓[K/M]`
-
-Für den Zeit-Band-Konzentrationsoperator auf `[-1,1]` mit Band `[-2300,2300]` ist `c=2300`.
-
-Karnik--Romberg--Davenport Corollary 3 plus Arb liefert
-
-```math
-\boxed{\lambda_{1490}(2300)<0.0035.}
-```
-
-Daraus folgt für den orthogonalen Prolate-Tail
-
-```math
-\boxed{q_1(v)>0.01\|v\|^2\qquad(v\in T_{1490}).}
-```
-
-Damit ist der unendlichdimensionale Tail selbst geschlossen.
-
-## Gate C4 — Parity-compatible finite reduction
-
-Die ersten `1490` timelimitierten PSWF-Moden zerfallen in
+Vorab fixiert:
 
 ```text
-745 even + 745 odd.
+Omega=2300,
+c=0.04,
+N=1680.
 ```
 
-Der Completionblock bleibt dadurch mit der bereits theorematischen even/odd Dualität kompatibel.
-
-## Gate C5 — A1-SCHUR `?[O]`
-
-Setze
+Der neue Exact-Head-Arb-Gate soll zertifizieren
 
 ```math
-A_1=q_1+\mathcal E^*\mathcal E
+\|r\|_\infty<12,
+\qquad
+\lambda_{1680}<1.1\times10^{-39},
 ```
-
-und zerlege
 
 ```math
-L^2(-1,1)=R_{1490}\oplus T_{1490}.
+\tau_{1680}>0.039,
 ```
 
-Bereits bewiesen:
+und
 
 ```math
-A_{TT}>0.01I.
+\frac{\|r\|_\infty^2\lambda_{1680}}{\tau_{1680}}
+<4.1\times10^{-36}.
 ```
 
-Offen ist
+Bis CI grün ist, bleibt dieser Gate candidate.
+
+## Gate C4 — A1-FINITE `?[O]`
+
+Nach erfolgreichem C3 genügt der eine resolved-space Satz
 
 ```math
 \boxed{
-A_{RR}-A_{RT}A_{TT}^{-1}A_{TR}\succeq0.
+(L_1)_{RR}\succeq5\times10^{-36}I.
 }
 ```
 
-Pflichten:
-
-1. PSWF-resolved Formmatrix und Momentzeilen rigoros einschließen;
-2. `lambda=1` zuerst testen;
-3. finite Inertia/PSD zertifizieren;
-4. `||A_RT||` rigoros einschließen;
-5. finalen Schur-Komplement-Bound schließen.
-
-Ein einfacher ausreichender Gate wäre
-
-```math
-A_{RR}\succeq\mu_RI,
-\qquad
-\|A_{RT}\|^2\le0.01\mu_R.
-```
-
-## Gate C6 — fixed-window `a=1` completion `?[O]`
-
-Nur wenn C5 grün ist, wird
+Resolved dimension:
 
 ```text
-certified a=1 null-pole completion
+at most 1682 total
+at most 841 even + 841 odd.
 ```
 
-als theorematischer fixed-window Fortschritt gebucht. Der externe volle-Klasse-Benchmark von Marcus Chuk liegt derzeit bei `L=0.8`.
+Das ist der gesamte verbleibende `a=1`-Beweisobligation.
 
-## Gate C7 — all-window mechanism `?[O]`
+## Gate C5 — certified a=1 completion `?[O]`
+
+C4 plus der zertifizierte Schur-Penalty ergibt
 
 ```text
-A1-SCHUR
+A_1>=0
+  => q_1>=0 on ker E
+  => fixed-window null-pole positivity at a=1.
+```
+
+Kein solcher Satz ist bisher bewiesen.
+
+## Gate C6 — all-window mechanism `?[O]`
+
+Erst nach einem `a=1`-Abschluss:
+
+```text
+finite fixed-window certificate
   |
-fixed-a certificates / structural scaling
+structural scaling / further windows
   |
 all-a NP-GAP
   |
-global restricted Weil criterion
-  |
-RH
+RH-hard global criterion.
 ```
 
-## Auxiliary / Firewalls
+## Firewalls
 
-- Frühere Dirichlet-Ritzwerte bleiben nicht zertifiziert.
-- PSWFs diagonalieren den Konzentrationsoperator, nicht `q_1`.
-- Tail positivity allein beweist `a=1` noch nicht.
-- Kein finite resolved PSD ohne Crossblock-Schur als Theorem buchen.
+- N=1680 Schurkonstanten erst nach exact-head CI promoten.
+- `5e-36` ist ein vorab berechnetes sufficient target, kein beobachteter Eigenwert.
+- resolved lower bound ist weiterhin offen.
+- fixed-window `a=1` ist noch nicht bewiesen.
 - Registry/Arbeitsdefinition unverändert.
