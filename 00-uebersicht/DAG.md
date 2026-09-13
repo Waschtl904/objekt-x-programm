@@ -1,149 +1,165 @@
-# Abhängigkeitsgraph (DAG) — Objekt X / POS-DIL
+# Abhängigkeitsgraph (DAG) — Objekt X / OX-GEN-B
 
 > **Stand:** 13. September 2026; Registry unverändert.  
 > **Keine Beweisautorität.** Aktuelle Front: [CURRENT-FRONT](../CURRENT-FRONT.md).
 
-## 1. Basis
+## 1. Importierte Basis
 
 ```text
 fixed-pair Strong Terminal / C6
-        |
-        | --candidate-input only-->
-        v
-GENUINE X CANDIDATE ?[O]
+Prime-Power AR(1) / Weil-Tail
+OX-GEN-A common generator plane
+POS-DIL-1 prime-moment Hilbertization
 ```
 
-```text
-Prime-Power AR(1) / Weil-Tail  ✓[M]
-        |
-        v
-OX-GEN / POS-DIL
-```
-
-## 2. OX-GEN-A / POS-DIL-1
-
-```text
-translation/reflection generator plane  ✓[M]
-        |
-        +--> Prime channels K_n
-        +--> archimedean r_0
-        +--> R_0=<E.,J E.>
-```
-
-```text
-Prime channels + Weil weights + E
-        |
-        v
-Prime-moment Hilbertization V_N  ✓[M]
-        |
-        +--> ||V_N v||^2=||Ev||^2
-        +--> R_0 via target involution
-```
-
-AR(1)-Brücke:
+Lokale Weil-Normalform:
 
 ```math
-\sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S.
+Q_{B_a}=G_a^+-c_aI-R_0-R_1.
 ```
 
-## 3. POS-DIL-2A
+## 2. Exterior-shell Route
 
 ```text
-existing G_{1/2}^+
+actual outer Prime channels c_n>a
         |
-        | --unit-gain shorting?-->
+        | disjoint shifted supports
         v
-moment mass / R_0
+w_n K_n^*K_n = 2 w_n I
+        |
+        v
+H_{a,J}=b_J I  ✓[M]
 ```
+
+Daher exakte cutoff-Gauge:
 
 ```text
-FAIL ×[M]
-necessary extra mass delta_0>5/32
+G_a^+  --------> G_a^+ + H_{a,J}
+c_a I --------> (c_a+b_J) I
+        |
+        v
+Q_{B_a} unchanged  ✓[M]
 ```
 
-## 4. Erster äußerer Prime-Shell
+Für den ersten Außenshell:
 
 ```math
-\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\}.
+b_J=A_{e^{4a}}-A_{e^{2a}}.
 ```
 
-```text
-actual outer Prime channels
-        |
-        | --disjoint shifted supports-->
-        v
-||K_n v||^2=2||v||^2  ✓[M]
-        |
-        v
-H_a^{out}=2B_a^{out} I
-```
+## 3. Radiusdominanz
 
-Die Skalarmasse ist ein Resultat echter Prime-Kanalenergie, kein freier Diagonalparameter.
-
-## 5. POS-DIL-2C-R — Radiusfrage geschlossen
-
-```text
-log multiplier:       G_a^+ >= (-log a) I
-outer shell:           H_a^{out}=2B_a^{out} I
-moment upper bound:    ||E.||^2 <= 4 sinh(a) I
-```
-
-Sieben elementare Radiusintervalle liefern
+Für
 
 ```math
--\log a+2B_a^{out}>4\sinh a,
-\qquad 0<a\le1.
-```
-
-Daher
-
-```text
 A_a^{out}=G_a^++H_a^{out}
-        |
-        | --uniform on every 0<a<=1-->
-        v
-||Ev||^2  ✓[M]
-        |
-        v
-positive R_0 Schur block  ✓[M]
 ```
 
-Radius extension: `✓[M]`.
+gilt auf jedem `0<a<=1`
 
-## 6. Aktueller Engpass — EXACT-SHELL-BOOKING
+```math
+A_a^{out}\succeq\mathcal E^*\mathcal E.
+```
+
+Damit
 
 ```text
-positive outer-shell geometry  ✓[M]
+A_a^{out}
         |
-        | --must preserve exact Weil form-->
+        | subtract E^*E
         v
-POS-DIL-2C-B exact booking ?[O]
-        |
-        +-----------------------------+
-        |                             |
-        | exact counterbooking        | class obstruction
-        v                             v
-common geometry                  narrower architecture
+D_a^{out}>=0  ✓[M]
 ```
 
-Priorisierte mögliche Mechanismen:
+## 4. Exakte `R_0`-Absorption
+
+```math
+R_0(v,w)
+=-E_+(v)\overline{E_-(w)}-E_-(v)\overline{E_+(w)}.
+```
+
+Setze
+
+```math
+L_+=E_++E_-.
+```
+
+Dann
+
+```math
+\mathcal E^*\mathcal E-R_0=L_+^*L_+.
+```
+
+Folglich
 
 ```text
-pre-cutoff outer-channel identity mass
-shell differences / telescoping
-AR(1) root-hub: T_q^*T_q+uu^*=R_q
-POS-DIL-1 amplitude 1-u_k
+A_a^{out}-R_0
+ = (A_a^{out}-E^*E) + (E^*E-R_0)
+ = D_a^{out} + L_+^*L_+
+        |
+        v
+P_a^(0) >= 0  ✓[M]
 ```
 
-Nur eine exakte Bilanz zählt; bloßes Addieren von `H_a^{out}` zur Weilform nicht.
+und exakt
+
+```math
+\boxed{
+Q_{B_a}=P_a^{(0)}-c_a^{out}I-R_1.
+}
+```
+
+Der `R_0`-Layer ist damit aus dem Rest entfernt.
+
+## 5. Gauge-Konsequenz
+
+```text
+isolated c_a
+        |
+        | changes under exact exterior-Prime cutoff gauge
+        v
+not canonical by itself  ✓[M]
+```
+
+Gesucht werden muss eine Gauge-Fixierung oder eine gaugeinvariante Reststruktur.
+
+## 6. Aktueller Engpass — OX-GEN-B / R1-SCALAR
+
+```text
+positive common block P_a^(0)  ✓[M]
+        |
+        | remaining exact defect
+        v
+c_a^{out} I + R_1  ?[O]
+        |
+        +------------------------------+
+        |                              |
+        | common generator geometry    | natural class obstruction
+        v                              v
+next positive block               narrower architecture
+```
+
+Prüfreihenfolge:
+
+```text
+R_1 exact kernel / parity / generator structure
+        ↓
+interaction with cutoff gauge
+        ↓
+gauge-invariant scalar remainder
+        ↓
+OX-GEN-B candidate
+```
 
 ## 7. Object-X-Pfad
 
 ```text
-exact shell booking ?[O]
+P_a^(0) positive common Prime/r0 block  ✓[M]
+        +
+R1 / scalar remainder ?[O]
         |
         v
-OX-GEN-B / genuine X candidate ?[O]
+genuine X candidate ?[O]
         |
         v
 exact full Weil-Gram identity ?[O]
@@ -157,8 +173,9 @@ RH
 
 ## 8. Firewalls
 
-- Radiuspositivität != exakte Weil-Buchung.
-- Außenshellmasse != bereits `c_aI`.
-- `r_1` offen.
-- Registry unverändert.
-- PR #91, PR #49, R37/G4c separat.
+- cutoff-Gauge != arbitrary positive diagonal freedom;
+- `P_a^(0)` != complete Object X;
+- `c_a^{out}` != canonical final scalar;
+- `R_1` open;
+- Registry unchanged;
+- PR #91, PR #49, R37/G4c separate.
