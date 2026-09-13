@@ -11,8 +11,8 @@ Arbeite als strenger mathematischer Auditor und Research Assistant. Prüfe zuers
 ### Kanonische Hauptquellen
 
 1. `CURRENT-FRONT.md`
-2. `audits/P11_NP_OVERLAP_AR1_FIBERIZATION_2026-09-13.md`
-3. `audits/P11_NP_GAP_REVIEW_CORRECTION_PRIME_OVERLAP_2026-09-13.md`
+2. `audits/P11_NP_DISCREPANCY_POLE_CLEARED_CORRELATION_2026-09-13.md`
+3. `audits/P11_NP_OVERLAP_AR1_FIBERIZATION_2026-09-13.md`
 4. `audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md`
 5. `00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md`
 6. `00-uebersicht/ACTIVE_THEOREM_REGISTRY.md`
@@ -24,9 +24,9 @@ ChatGPT übernimmt sämtliche GitHub-/Repository-Arbeiten. Externe Modelle sind 
 
 ## Aktueller mathematischer Stand
 
-### COMMON-JUMP / Q0
+### 1. COMMON-JUMP / centered overlap
 
-Auf Nullpol
+Auf
 
 ```math
 D_{NP}=ker M(0)\cap ker M(1)
@@ -35,107 +35,113 @@ D_{NP}=ker M(0)\cap ker M(1)
 gilt
 
 ```math
-Q_W(v)=\mathcal A(v)-\mathcal O_a(v),
+Q_W(v)=\mathcal A(v)-\mathcal O_a(v).
 ```
 
+Per-prime sind die vollständigen Prime-Power-Blöcke exakt AR(1)-Matrizen. Einzelshift- und unabhängige Blocknormsummation sind als all-window-Hauptweg ausgeschlossen.
+
+### 2. Null-pole autocorrelation gauge `✓[M]`
+
+Mit
+
 ```math
+C_v(t)=\langle T_tv,v\rangle
+```
+
+gilt
+
+```math
+\boxed{
+\int_0^{2a}2\cosh(t/2)\operatorname{Re}C_v(t)dt=0.
+}
+```
+
+### 3. Pole-cleared Prime discrepancy `✓[M]`
+
+```math
+\boxed{
+d\mathfrak D(t)
+=\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}(dt)
+-2\cosh(t/2)dt.
+}
+```
+
+Dann exakt
+
+```math
+\boxed{
 \mathcal O_a(v)
-=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
-Re\langle T_{\log n}v,v\rangle.
-```
-
-`Q0=-partial_x^2+1/4` parametrisiert `D_NP(a)` support-erhaltend und intertwined den ersten Gamma-Kanal exakt.
-
-### Einzelshift `✓[M]` + enger No-Go
-
-Für
-
-```math
-S_t=(T_t+T_{-t})/2
-```
-
-auf `(-a,a)`:
-
-```math
-\boxed{
-||S_t||=\cos\frac{\pi}{\lceil2a/t\rceil+1}
+=2\int Re C_v(t)d\mathfrak D(t)
+=-2\int_0^{2a}\mathfrak D(t)\frac{d}{dt}Re C_v(t)dt.
 }
 ```
 
-für `0<t<2a`. Dieselbe Norm wird bereits auf `D_NP(a)` erreicht.
+Der rohe `e^{t/2}`-PNT-Hauptterm ist damit auf der zulässigen Nullpolklasse exakt herauszentriert.
 
-```text
-single-shift null-pole norm improvement   ×[M]
-```
+### 4. Pole-cleared zeta fingerprint `✓[M]`
 
-Also keine Einzelshift-Normstrategie als Hauptweg weiterverfolgen.
-
-### Vollständiger Prime-Power-Block = AR(1) `✓[M]`
-
-Für
-
-```math
-ell_p=log p,
-q_p=p^{-1/2}
-```
-
-ist nach Faserung modulo `ell_p`
+Für `Re(s)>1/2`:
 
 ```math
 \boxed{
-O_{p,a}^{(N)}=(\log p)(R_{q_p}^{(N)}-I_N),
-\qquad R_q^{(N)}=(q^{|j-k|}).
+\mathcal L[d\mathfrak D](s)
+=-\frac{d}{ds}\log[(s^2-1/4)\zeta(s+1/2)].
 }
 ```
 
-Der positive Sektor des AR(1)-Symbols ist
+Die Nullpolzentrierung entfernt exakt die Polfaktoren `z=0,1`.
 
-```math
-|theta|<arccos(q_p).
-```
+### 5. RH-hard scale
 
-Für verschiedene Primzahlen sind die logarithmischen Gitter inkommensurabel.
+Unter RH gilt klassisch `D(T)=O(T^3)`. Umgekehrt impliziert bereits irgendein polynomialer Bound `D(T)=O(T^K)` RH. Also nicht versuchen, die Hauptfront durch eine globale absolute Diskrepanzschranke zu lösen.
 
 ---
 
-## Nächster Default-Auftrag — MULTIPRIME-AR1
+## Nächster Default-Auftrag — NP-DISCREPANCY / NP-CORR
 
 Zu beweisen bleibt
 
 ```math
 \boxed{
-(A_\infty-\kappa_*I)|_{D_{NP}(a)}
-\succeq
-\sum_pO_{p,a}|_{D_{NP}(a)}
-\quad\forall a>0.
+\mathcal A(v)
+\ge
+-2\int_0^{2a}\mathfrak D(t)
+\frac{d}{dt}\operatorname{Re}C_v(t)dt
+\quad\forall v\in D_{NP}(a),\ a>0.
 }
 ```
 
 Arbeitsreihenfolge:
 
-1. Quantifiziere die Inkompatibilität der positiven Niedrigfrequenzsektoren verschiedener `log p`-Gitter.
-2. Prüfe, ob die bereits bewiesene Prime-Power-AR(1)/Markov-/Weil-tail-Faktorisierung eine gemeinsame Kontraktion liefert.
-3. Nutze den Q0-Sobolevtransport der Overlap-Korrelationen.
-4. Respektiere exakt die Randvariable `delta_n=2a-log n`.
-5. Einzelshift-Normabschätzungen nur noch als Baseline/No-Go, nicht als Hauptmechanismus.
+1. Sign-/Oszillationsstruktur von `D(t)` gegen positive-definite Autokorrelationen untersuchen.
+2. `Q_0`-Transport von `C_v'(t)` explizit bestimmen.
+3. AR(1)-Fasern als lokale Zerlegung derselben Diskrepanz nutzen, nicht separat normieren.
+4. Toeplitz/Paley-Wiener/Prolate nur auf der **zentrierten** Diskrepanz testen.
+5. Vor jeder Numerik eine Falsifikationsbedingung definieren; ein Korrelationszeuge gegen die Mechanismusklasse zählt als Fortschritt.
+
+### Verbindliche No-Gos
+
+```text
+independent shift/block scalar norm sum       ×[M]
+raw Prime amplitude × constant Prolate factor ×[M]
+```
 
 ### Firewalls
 
-- Inkommensurabilität ist noch keine quantitative suppression inequality.
-- Short-window-Positivität ist literaturbekannt; nur die interne COMMON-JUMP/Q0-Herleitung ist projektintern neu strukturiert.
-- Endliche Ritz-Minima sind obere Schranken für das wahre Infimum.
-- Ein all-`a`-Beweis ist RH-hart; keine Weil-Positivität rückwärts verwenden.
-- Registry und Arbeitsdefinition bleiben ohne separate Promotion unverändert.
+- polynomialer Absolutbound für `D` ist bereits RH-hart;
+- Inkommensurabilität der `log p`-Gitter allein beweist nichts;
+- bekannte Kleinfensterpositivität nicht als Neuheit beanspruchen;
+- all-`a`-Beweis bleibt RH-hart;
+- Registry und Arbeitsdefinition nur separat promovieren.
 
 ## Status
 
 ```text
 COMMON-JUMP / Q0                            ✓[M]
-centered Prime-overlap                      ✓[M]
-single-shift exact geometry                 ✓[M]
-single-shift null-pole improvement          ×[M]
-per-prime AR(1) fibers                      ✓[M]
-collective multi-prime suppression          ?[O]
-forward Object-X candidate architecture     ✓[M]_part
-full positive Object-X / RH                 ?[O]
+per-prime AR(1) fibers                     ✓[M]
+null-pole correlation gauge                ✓[M]
+pole-cleared Prime discrepancy             ✓[M]
+NP-DISCREPANCY / anti-correlation          ?[O]
+forward Object-X candidate architecture    ✓[M]_part
+full positive Object-X / RH                ?[O]
 ```
