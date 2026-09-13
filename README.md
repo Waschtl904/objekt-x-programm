@@ -3,32 +3,27 @@
 *Ein lakatosianisches Forschungsjournal zur Riemannschen Hypothese.*
 
 > **Stand: 13. September 2026.**  
-> COMMON-JUMP liefert eine gemeinsame Prime-/archimedische positive Featurearchitektur. Die aktuelle Hauptfront formuliert Nullpol-Positivität bei festem Fenster exakt als Rang-2-Completionproblem. Eine vollständige positive Objekt-X-Realisierung und RH bleiben offen.
+> COMMON-JUMP liefert eine gemeinsame Prime-/archimedische positive Featurearchitektur. Die aktuelle Hauptfront formuliert Nullpol-Positivität bei festem Fenster exakt als Rang-2-Completionproblem; der erste neue Stresspunkt ist `a=1`. Eine vollständige positive Objekt-X-Realisierung und RH bleiben offen.
 
 ## Hier beginnen
 
 1. [CURRENT-FRONT](CURRENT-FRONT.md)
-2. [NP-DUAL-COMP / Screw audit](audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md)
-3. [COMMON-JUMP](audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md)
-4. [Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)
+2. [A1 Morse / Completion diagnostic](audits/P11_NP_DUAL_A1_MORSE_DIAGNOSTIC_2026-09-13.md)
+3. [NP-DUAL-COMP / Screw audit](audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md)
+4. [COMMON-JUMP](audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md)
+5. [Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)
 
 ## 1. Exact null-pole form
-
-Setze
 
 ```math
 q_a(v)=\|X_av\|^2-\Gamma_a\|v\|^2,
 \qquad
-\mathcal Ev=(E_+(v),E_-(v))^T.
+\mathcal Ev=(E_+(v),E_-(v))^T,
+\qquad
+D_{NP}(a)=\ker\mathcal E.
 ```
 
-Dann
-
-```math
-D_{NP}(a)=\ker\mathcal E
-```
-
-und
+Die volle lokale Weilform ist
 
 ```math
 \boxed{
@@ -38,9 +33,9 @@ P=\begin{pmatrix}0&1\\1&0\end{pmatrix}.
 }
 ```
 
-## 2. Screw-Function-Abgleich
+## 2. Literaturkorrekturen
 
-Die in PR #110 benutzte pole-cleared Prime-Diskrepanz ist strukturell kanonisch, aber als arithmetisches Objekt literaturbekannt: sie ist die Ableitung des Prime+Polar-Blocks in Suzukis Screw-Funktion.
+Die pole-cleared Prime-Diskrepanz aus PR #110 ist als arithmetisches Objekt literaturbekannt: sie ist die Ableitung des Prime+Polar-Blocks in Suzukis Screw-Funktion.
 
 ```text
 identity / null-pole use                 ✓[M]
@@ -48,85 +43,143 @@ D as literature-new object               ×[M]
 publication novelty of architecture      ?[O]
 ```
 
-## 3. Warum scalar Turán nicht exakt genug ist
+Bibliographisches Erratum: arXiv:2608.24827 (*Weil positivity in compact windows: certified two-sided bounds and a Landau--Widom decay law*) ist von **Marcus Chuk**, nicht Xuefeng Zhu. Das Paper zertifiziert volle Positivität bei `L=0.8` mit Lower Bound `8.9e-18` und dokumentiert die Landau--Widom-/Tail-Barriere.
 
-Für die Autokorrelation `C_v(t)=<T_t v,v>` gilt
+## 3. Scalar Turán ist nur eine Relaxation
+
+Für `C_v(t)=<T_t v,v>` gilt
 
 ```math
 \int e^{st}C_v(t)dt
 =E_s(v)\overline{E_{-s}(v)}.
 ```
 
-Nullpol erzeugt deshalb zwei notwendige lineare Autokorrelationsbedingungen bei `s=1/2`, aber die Autokorrelation sieht nur das Produkt der beiden Faktoren. Selbst beide Bedingungen rekonstruieren `E_+=E_-=0` nicht eindeutig.
+Nullpol erzeugt notwendige lineare Autokorrelationsgauges, aber die Autokorrelation sieht nur das Produkt der beiden Faktoren. Selbst zwei skalare Bedingungen rekonstruieren `E_+=E_-=0` nicht.
 
-Ein scalar-Turán-/positive-definite SDP ist also eine **äußere Relaxation**: ein positives Zertifikat ist gültig, ein negatives Relaxationsresultat ist kein NP-GAP-Gegenbeispiel.
+Ein scalar-Turán-/positive-definite SDP ist daher eine **äußere Relaxation**: ein positives Zertifikat genügt; ein negativer Relaxationszeuge ist kein NP-GAP-Gegenbeispiel.
 
 ## 4. Exact rank-2 completion
 
-Die exakte Dualität bleibt auf der Funktionsebene.
-
-Strikte Version:
-
-```math
-q_a\ge\delta I\text{ on ker E}
-\Longrightarrow
-\exists\lambda_a>0:\ q_a+\lambda_aE^*E\succeq0.
-```
-
-Semidefinite Version:
+Strikte Coercivity:
 
 ```math
 \boxed{
-q_a\ge0\text{ on ker E}
+q_a\ge\delta I\text{ on }\ker E
 \iff
-\forall\varepsilon>0\ \exists\lambda_{a,\varepsilon}>0:
-q_a+\varepsilon I+\lambda_{a,\varepsilon}E^*E\succeq0.
+\exists\lambda,\mu>0:
+q_a+\lambda E^*E\succeq\mu I.
 }
 ```
 
-Damit ist fixed-window NP-GAP ein **finite-rank completion problem** mit nur zwei Momentkanälen.
-
-## 5. Verbindung zum klassischen Poleblock
-
-Die volle Weilform verwendet nicht irgendeine Completion, sondern exakt
+Semidefinite Grenze:
 
 ```math
-E^*PE,
-\qquad
-P=\begin{pmatrix}0&1\\1&0\end{pmatrix}.
+\boxed{
+q_a\ge0\text{ on }\ker E
+\iff
+\forall\varepsilon>0\ \exists\lambda_\varepsilon>0:
+q_a+\varepsilon I+\lambda_\varepsilon E^*E\succeq0.
+}
 ```
 
-`H=P` als positive Completion wäre bereits volle fixed-window Weil-Positivität. Das allgemeine Completion-Zertifikat ist schwächer und darf nicht mit einer vollständigen Objekt-X-Realisierung verwechselt werden.
+Damit ist fixed-window NP-GAP ein zweikanaliges finite-rank completion problem auf Funktionsebene.
 
-## 6. Nächster harter Gate
+## 5. Morse-Index-Filter
 
-Aktuelle Literatur zertifiziert volle Weil-Positivität bereits für Fenster bis `a=0.8`. Ein neuer fixed-window-Test soll daher bei
+Für jede positive Hermitian Completion gilt notwendig
+
+```math
+q_a+E^*HE\succeq0
+\Longrightarrow
+n_-(q_a)\le n_+(H)\le2.
+```
+
+Für den physischen Weil-Poleblock `P`, der nur eine positive Eigenrichtung besitzt,
+
+```math
+\boxed{Q_W^a\succeq0\Longrightarrow n_-(q_a)\le1.}
+```
+
+Damit sind drei bzw. zwei zertifizierte negative Richtungen sofortige Falsifikationsgates für allgemeine bzw. physische Completion.
+
+## 6. Parity-reduced dual and canonical `lambda=1`
+
+Reflection symmetry reduziert jede relevante Hermitian Completion auf zwei reelle even/odd Parameter:
+
+```math
+H\sim\operatorname{diag}(h_e,h_o),
+\qquad
+P\sim\operatorname{diag}(+1,-1).
+```
+
+Zudem gilt exakt
+
+```math
+\boxed{
+q_a+E^*E
+=Q_W^a+E^*(I-P)E,
+\qquad I-P\succeq0.
+}
+```
+
+Daher ist `lambda=1` der kanonische erste scalar-completion Kandidat für `a=1`, nicht ein nachträglich gefitteter Wert.
+
+## 7. `a=1` Diagnostic — ausdrücklich nicht zertifiziert
+
+In der vorab festgelegten Dirichletbasis
+
+```math
+\phi_n(x)=\sin\left(\frac{n\pi(x+1)}2\right)
+```
+
+wurden auf den endlichen Nullpol-Unterräumen ungefähr beobachtet:
 
 ```text
-a=1.0
+N=4    min Ritz ~ 8.22e-4
+N=6    min Ritz ~ 6.21e-7
+N=8    min Ritz ~ 3.26e-9
+N=10   min Ritz ~ 2.70e-9
+N=12   min Ritz ~ 6.67e-11
 ```
 
-ansetzen.
+Der `N=12`-Block von `q_1` zeigte numerisch eine negative Richtung im even-Sektor; die scalar completion wurde bei `lambda≈1` numerisch PSD.
 
-Ein theorematisches Computerzertifikat braucht gleichzeitig:
+Diese Werte beruhen auf ordinary floating-point quadrature und besitzen **keine** Arb-/Tail-Zertifizierung.
 
-- interval-zertifizierte finite PSD;
-- exakte Momentconstraints;
-- optimierte Rang-2-Completion;
-- rigorose Tail-/Schur-Komplement-Untergrenze.
+## 8. Nächster harter Gate — A1-CERT
 
-Finite Ritzwerte oder ein endliches SDP ohne Tailkontrolle bleiben Diagnostik.
+Der erste natürliche Stresspunkt jenseits des publizierten Marcus-Chuk-Lower-Bound-Fensters `L=0.8` ist
 
-## 7. Status
+```text
+a=1.0.
+```
+
+Ein theorematisches Computerzertifikat benötigt gemeinsam:
+
+1. parity-adaptierte vorab festgelegte Basis/Trunkierung;
+2. Arb-Enclosures der Formmatrix und Momentzeilen;
+3. `lambda=1` als ersten Completiontest, danach höchstens zwei even/odd Dualparameter;
+4. certified finite inertia / PSD;
+5. rigorose lower bounds für unresolved even/odd tails;
+6. rigorous resolved-tail coupling bounds;
+7. finalen Schur-Komplement-Nachweis.
+
+**Finite PSD ohne Tailkontrolle bleibt Diagnostik. Der Tail ist jetzt der eigentliche theorematische Engpass.**
+
+## 9. Status
 
 ```text
 COMMON-JUMP / Q0                          ✓[M]
 Suzuki screw redundancy                  ✓[M]
 D as new arithmetic object              ×[M]
-necessary autocorrelation gauges        ✓[M]
 scalar Turan exactness                   ×[M]
 rank-2 completion duality               ✓[M]
-certified completion beyond a=0.8       ?[O]
+Morse filters                            ✓[M]
+parity-reduced dual                      ✓[M]
+canonical lambda=1 identity              ✓[M]
+a=1 finite diagnostic                   non-certified
+rigorous a=1 tail / Schur complement    ?[O]
+certified a=1 completion                ?[O]
 all-a NP-GAP                             ?[O]
 forward Object-X architecture           ✓[M]_part
 full positive Object-X / RH             ?[O]
