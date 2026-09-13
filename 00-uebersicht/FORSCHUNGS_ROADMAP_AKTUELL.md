@@ -1,251 +1,202 @@
-# Objekt X — kanonische Forschungsroadmap v3.1
+# Objekt X — kanonische Forschungsroadmap v3.2
 
 > **Stand:** 13. September 2026; Registry unverändert.  
 > **Keine Beweisautorität.** Operative Front: [CURRENT-FRONT](../CURRENT-FRONT.md).
 
-## 1. Nullpol-Filter bleibt verbindlich
+## 1. Gesicherte Basis
+
+Auf der Nullpolklasse
 
 ```math
-D_{NP}=\ker M(0)\cap\ker M(1),
-\qquad E|_{D_{NP}}=0.
+D_{NP}=\ker M(0)\cap\ker M(1)
 ```
 
-Connes–Consani Proposition C.1 liefert den global RH-äquivalenten Weil-Scope; keine fixed-window-Äquivalenz wird importiert.
-
-## 2. COMMON-JUMP abgeschlossen `✓[M]`
-
-Die gemeinsame Generatorfamilie ist
+liefert COMMON-JUMP für jedes `a>0`
 
 ```math
-K_t=T_{t/2}-T_{-t/2}.
+Q_W|_{NP}=X_a^*X_a-\Gamma_aI.
 ```
 
-Archimedes und Primzahlpotenzen sind kontinuierlicher bzw. atomarer Teil derselben positiven Maß-/Featuregeometrie
+Prime powers und archimedischer Gamma-Anteil werden von derselben Translation-Differenzfamilie
 
 ```math
-\mu_a
-=
-\frac{e^{-t/2}}{1-e^{-2t}}dt
-+
-\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}.
+K_t=T_{t/2}-T_{-t/2}
 ```
 
-Damit gilt für alle `a>0`
+erzeugt. Status `✓[M]`.
 
-```math
-Q_W(v,w)
-=\langle Ev,PEw\rangle
-+\langle X_av,X_aw\rangle
--\Gamma_a\langle v,w\rangle,
-```
-
-und auf Nullpol
-
-```math
-Q_W(v,w)=\langle X_av,X_aw\rangle-\Gamma_a\langle v,w\rangle.
-```
-
-`NP-R1`, `NP-COMMON` und die cutoff-Gauge-Struktur sind damit `✓[M]` geschlossen/subsumiert.
-
-## 3. NP-GAP-A hat jetzt einen exakten Einstieg `✓[M]`
-
-Die archimedische Dichte zerfällt als
-
-```math
-\frac{e^{-t/2}}{1-e^{-2t}}
-=\sum_{m\ge0}e^{-\alpha_m t},
-\qquad
-\alpha_m=2m+\frac12.
-```
-
-Mit
-
-```math
-A_\alpha=\int_0^\infty e^{-\alpha t}K_t^*K_t\,dt
-```
-
-gilt exakt
-
-```math
-\boxed{
-A_\alpha
-=\frac{2}{\alpha}
-(-\partial_x^2)(-\partial_x^2+\alpha^2)^{-1}.
-}
-```
-
-Für den ersten Kanal `alpha_0=1/2` und
-
-```math
-Q_0=-\partial_x^2+\frac14
-```
-
-folgt
-
-```math
-\boxed{
-A_{1/2}=4I-Q_0^{-1},
-\qquad
-A_{1/2}Q_0=-4\partial_x^2.
-}
-```
-
-Nur bei `alpha=1/2` cancelt der Resolventennenner. Die frühere `1/2`-Beobachtung ist damit theorematisch erklärt.
-
-## 4. Support-erhaltende Nullpolfaktorisierung `✓[M]`
-
-Der Green-Kern
-
-```math
-Q_0^{-1}(x,y)=e^{-|x-y|/2}
-```
-
-zeigt direkt, dass die beiden äußeren Tails genau durch `E_+` und `E_-` gesteuert werden. Deshalb
-
-```math
-\boxed{
-Q_0:C_c^\infty(-a,a)\xrightarrow{\cong}D_{NP}(a)
-}
-```
-
-support-erhaltend.
-
-Für `v=Q_0u` wird der erste Kanal lokal:
-
-```math
-\boxed{
-\langle v,A_{1/2}v\rangle
-=4\|u''\|^2+\|u'\|^2.
-}
-```
-
-## 5. NP-GAP-Basisabschätzungen `✓[M]`
-
-Auf Nullpol liefert Dirichlet-Poincaré
-
-```math
-\boxed{
-\langle v,A_{1/2}v\rangle
-\ge
-\frac{4\pi^2}{\pi^2+a^2}\|v\|^2.
-}
-```
-
-Für jeden höheren Kanal liefert der positive Resolventenkern per Schur-Test
-
-```math
-\boxed{
-\langle v,A_\alpha v\rangle
-\ge
-\frac{2}{\alpha}e^{-\alpha a}\|v\|^2.
-}
-```
-
-Damit ist erstmals echte Coercivity des COMMON-JUMP-Operators aus seiner eigenen Generatorstruktur gewonnen, nicht aus Weil-Positivität rückwärts.
-
-## 6. Short-window NP-GAP abgeschlossen `✓[M]_part`
-
-Setze
-
-```math
-B(a)
-=
-\frac{4\pi^2}{\pi^2+a^2}
-+
-\sum_{m=1}^\infty\frac{2}{\alpha_m}e^{-\alpha_m a}.
-```
-
-`B` ist stetig und streng fallend von `+infinity` nach `0`. Sei `a_*` die eindeutige positive Lösung
-
-```math
-B(a_*)=\kappa_*,
-\qquad
-\kappa_*=\log\pi-\psi(1/4).
-```
+## 2. Q0-Kanalstruktur `✓[M]`
 
 Für
 
 ```math
-0<a<\min\{a_*,\tfrac12\log2\}
+A_\alpha=\int_0^\infty e^{-\alpha t}K_t^*K_tdt
 ```
 
-enthält der kanonische Cutoff noch keine Prime-Power-Atome und es gilt
+gilt
+
+```math
+A_\alpha=\frac2\alpha L(L+\alpha^2)^{-1},
+\qquad L=-\partial_x^2.
+```
+
+Mit `Q_0=L+1/4`:
+
+```math
+A_{1/2}Q_0=4L,
+\qquad
+Q_0:C_c^\infty(-a,a)\cong D_{NP}(a)
+```
+
+support-erhaltend.
+
+Die höhere Kanalabschätzung
+
+```math
+A_\alpha\succeq\frac2\alpha e^{-\alpha a}I
+```
+
+ist durch einen expliziten Schur-Test geschlossen.
+
+## 3. Short-window-Korrektur
+
+Die Architektur liefert intern einen analytischen Kleinfenster-Bound. Dies ist **keine neue Kleinfensterpositivität in der Literatur**, da Suzuki Theorem 1.4 eine stärkere volle-Klasse-Aussage beweist.
+
+```text
+COMMON-JUMP/Q0 reproduction                ✓[M]_part
+novel short-window Weil theorem            ×[M]
+```
+
+Der projektinterne Schwellenwert `a_*` wird durch einen Arb-Exact-Head-Gate zertifiziert; Zielbracket:
+
+```math
+0.1033784517534<a_*<0.1033784517535.
+```
+
+## 4. Neue kanonische Restform `✓[M]`
+
+Setze
+
+```math
+\mathcal A(v)
+=\int_0^\infty h(t)\|K_tv\|^2dt-\kappa_*\|v\|^2.
+```
+
+Dann auf Nullpol:
+
+```math
+\boxed{Q_W(v)=\mathcal A(v)-\mathcal O_a(v)}
+```
+
+mit
 
 ```math
 \boxed{
-\|X_av\|^2\ge\Gamma_a\|v\|^2
-\qquad(v\in D_{NP}(a)).
+\mathcal O_a(v)
+=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
+\operatorname{Re}\langle T_{\log n}v,v\rangle.
 }
 ```
 
-Also ist NP-GAP für einen nichtleeren short-window-Bereich analytisch bewiesen.
+Die Prime-Diagonalmasse ist exakt wegzentriert. Nur überlappende Prime-Power-Shifts verbleiben.
 
-## 7. Neue Default-Priorität — den bewiesenen Bereich vergrößern
+## 5. Neue Default-Priorität — NP-OVERLAP
 
-Der offene Kern lautet weiterhin
+Der all-window Satz ist exakt
 
 ```math
 \boxed{
-\lambda_{NP}(a)
-\ge\Gamma_a
-\quad\text{für jedes }a>0.
+(A_\infty-\kappa_*I)|_{D_{NP}(a)}
+\succeq
+\mathbf O_a|_{D_{NP}(a)}
+\quad\forall a>0.
 }
 ```
 
-Die Forschungsreihenfolge wird jetzt enger:
+### Gate O1 — Spektrum des overlap operators
 
-1. **NP-GAP-EXTEND:** verbessere die Kanaluntergrenzen über den elementaren Schur-Test hinaus;
-2. nutze die exakte `Q_0`-Parametrisierung bei möglichst vielen Kanälen oder bei deren Summe;
-3. analysiere den Übergang am ersten Prime-Cutoff `2a=log2` ohne post-hoc Gegenbuchung;
-4. prüfe nonlocal-Poincare-, Paley-Wiener-, de-Branges- und Prolate-Mechanismen nur vorwärts;
-5. Numerik dient ausschließlich zum Falsifizieren/Lenken und braucht für Promotion Arb-Zertifikate.
-
-## 8. Wichtiger Numerik-Hinweis
-
-Für endliche Nullpol-Unterräume `V_N` gilt
+Bestimme positive Spektralmasse, Parität und Extremalrichtungen von
 
 ```math
-\lambda_{NP}^{(N)}(a)\ge\lambda_{NP}(a).
+\mathbf O_a
+=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
+\frac{T_{\log n}+T_{-\log n}}2
 ```
 
-Ritz-Minima sind also **obere Schranken** für das wahre Infimum. Ein positiver endlicher Gap beweist nichts; ein zertifizierter Wert unter `Gamma_a` würde dagegen falsifizieren.
+nach Kompression auf `D_NP(a)`.
 
-## 9. Object-X-Pfad
+### Gate O2 — Q0-Sobolev transport
+
+Für `v=Q_0u` gilt
+
+```math
+\operatorname{Re}\langle T_tv,v\rangle
+=\operatorname{Re}\langle T_tu'',u''\rangle
++\frac12\operatorname{Re}\langle T_tu',u'\rangle
++\frac1{16}\operatorname{Re}\langle T_tu,u\rangle.
+```
+
+Suche daraus scharfe supportabhängige Korrelationseinschränkungen.
+
+### Gate O3 — Randüberlappung
+
+Expliziere die Abhängigkeit vom Überlappungsradius
+
+```math
+\delta_n=2a-\log n.
+```
+
+Insbesondere muss die Methode die exakte Auslöschung für `delta_n<=0` und den Übergang `delta_n downarrow0` respektieren.
+
+### Gate O4 — Prime-Power AR(1)
+
+Prüfe, ob die bereits bewiesene Prime-Power-AR(1)/Weil-tail-Struktur den positiven Spektralteil von `O_a` kontrolliert. Dies ist jetzt die bevorzugte Rückkopplung an frühere Objekt-X-Arbeit.
+
+## 6. Auxiliary: finite Gamma-null ladder
+
+Für `alpha_m=2m+1/2` und `Q_m=-partial_x^2+alpha_m^2` entstehen Mellin-Nullstellen bei
+
+```math
+-2m,\qquad2m+1.
+```
+
+Endliche Mengen dieser Punkte sind nach Connes--Consani Proposition C.1 zulässig; die negativen geraden Punkte sind triviale Zeta-Nullstellen, während Proposition C.1 nur die nichttrivialen Nullstellen ausschließt.
+
+Die Leiter ist mathematisch legitim, aber nicht Default-Priorität, solange sie den Prime-overlap nicht quantitativ verbessert.
+
+## 7. Object-X-Pfad
 
 ```text
 COMMON-JUMP common positive geometry ✓[M]
         |
         v
-Q0 first-channel intertwining ✓[M]
+centered Prime-overlap form ✓[M]
         |
         v
-short-window NP-GAP ✓[M]_part
-        |
-        | extend to every a>0
-        v
-full NP-GAP ?[O]
+NP-OVERLAP domination ?[O]
         |
         v
-Weil positivity on global null-pole class
+global null-pole Weil positivity
         |
         v
 RH
 ```
 
-Die Architekturfrage ist damit weiter verengt: Objekt X besitzt einen konkreten positiven Kandidatenoperator und einen ersten bewiesenen Coercivity-Bereich; offen ist die globale Fortsetzung des Gaps.
+Die Architektur ist konstruiert; der harte Rest ist jetzt eine explizite arithmetische Shift-Korrelationsungleichung.
 
-## 10. Auxiliary / separate
+## 8. Numerik-Firewall
 
-- OX-GEN-A = exakte Pole-layer geometry;
-- POS-DIL #101--#105 = auxiliary full-class route;
-- Prime-Power AR(1) = eigenständige positive Struktur;
-- PR #91, PR #49, R37/G4c separat.
+Ritz-Minima in endlichen Nullpolräumen sind obere Schranken für das wahre Infimum. Nur zertifizierte Falsifikationen oder unabhängige Intervallbeweise dürfen theorematisch promoted werden.
 
-## 11. Firewalls
+## 9. Auxiliary / separate
 
-- short-window NP-GAP != all-`a` NP-GAP;
-- kein einzelnes fixes Fenster wird als RH-äquivalent behauptet;
-- nicht zertifizierte Ritzwerte bekommen keinen strengen Numerikstatus;
-- `forward Object-X architecture` != vollständige positive Objekt-X-Realisierung;
-- Publikationsneuheit bleibt `?[O]`;
-- keine Registry-Promotion durch Roadmap/CI.
+OX-GEN-A, POS-DIL #101--#105, Prime-Power AR(1), PR #91, PR #49 und R37/G4c bleiben erhalten. Prime-Power AR(1) wird für Gate O4 ausdrücklich wieder als möglicher Input priorisiert.
+
+## 10. Firewalls
+
+- bekannte Kleinfensterpositivität nicht als Projektneuheit verkaufen;
+- große Prime-Schwelle nicht mit dem zentrierten Restproblem verwechseln;
+- finite Gamma-null ladder nicht als all-window coercivity ausgeben;
+- kein fixed-`a` als RH-äquivalent behaupten;
+- Registry/Arbeitsdefinition nicht automatisch promovieren;
+- RH bleibt offen.
