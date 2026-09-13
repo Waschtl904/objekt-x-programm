@@ -8,20 +8,11 @@
 
 ## 1. Kantenregel
 
-Logische Kanten:
-
 - `A ⇔ B` — bewiesene Äquivalenz;
 - `A ⇒ B` — bewiesene Implikation;
 - `A ?⇒ B` — offene Implikation.
 
-Forschungs-/Beweisabhängigkeiten:
-
-- `uses`
-- `reduces-to`
-- `candidate-input`
-- `requires`
-- `open-bridge`
-- `sufficient-route`
+Forschungs-/Beweisabhängigkeiten: `uses`, `reduces-to`, `candidate-input`, `requires`, `open-bridge`, `sufficient-route`.
 
 Ein PR ist Provenienz/Container, kein mathematischer DAG-Knoten.
 
@@ -30,35 +21,23 @@ Ein PR ist Provenienz/Container, kein mathematischer DAG-Knoten.
 ## 2. Verfügbarer Strong-Terminal-Baustein
 
 ```text
-fixed-pair Strong Terminal / C6  [verfügbarer scoped result]
+fixed-pair Strong Terminal / C6
         |
         | --candidate-input only-->
         v
 GENUINE X CANDIDATE ?[O]
 ```
 
-Scope: jedes feste `0<R<S`, ungerader P11-Graphraum. Keine Radienuniformität, Operatornormkonvergenz oder Object-X-/RH-Folgerung.
+Scope: jedes feste `0<R<S`, ungerader P11-Graphraum; keine Radienuniformität oder Object-X-/RH-Folgerung.
 
 ---
 
-## 3. Exakte Prime-Power-Struktur
-
-```math
-C_{jk}^{(p)}=(\log p)p^{\min(j,k)}p^{-3(j+k)/4},
-\qquad
-C_{kk}^{(p)}=(\log p)p^{-k/2},
-```
+## 3. Prime-Power-/AR(1)-Struktur
 
 ```math
 C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2},
 \qquad
 T_q^*T_q+uu^*=R_q.
-```
-
-P11-Restseite:
-
-```math
-R_R^*R_R=\sum_{p,k}w_{p,k}Z_{p,k,R}^*Z_{p,k,R}.
 ```
 
 ```text
@@ -71,7 +50,7 @@ OX-GEN / POS-DIL
 
 ---
 
-## 4. Endliche Suzuki-/OX-GRAM-Normalform
+## 4. OX-GRAM positive Featureform
 
 ```math
 Q_{B_a}=G_a^+-N_a,
@@ -81,62 +60,28 @@ Q_{B_a}=G_a^+-N_a,
 ```text
 finite OX-GRAM identity
         |
-        | --shows only reformulation-->
+        | --reformulation only-->
         v
-contractor existence [closed/vacuous as X-gate]
+arbitrary backward contractor [closed/vacuous as X-gate]
 ```
 
-Offen bleibt eine **kanonische, vorwärts konstruierte** gemeinsame Geometrie.
+Gesucht bleibt eine vorwärts definierte gemeinsame Geometrie.
 
 ---
 
-## 5. OX-GEN-A — gemeinsamer Translation-/Reflexions-Generator `✓[M]`
-
-Mit
-
-```math
-\mathcal Ev=(E_+(v),E_-(v)),
-\qquad
-\rho(t)=\operatorname{diag}(e^{-t/2},e^{t/2}),
-```
-
-und
-
-```math
-K_n=T_{\frac12\log n}-T_{-\frac12\log n},
-\qquad
-D_n=\lambda_nS,
-\qquad
-S=\operatorname{diag}(-1,1),
-```
-
-gilt
+## 5. OX-GEN-A `✓[M]`
 
 ```math
 \mathcal ET_t=\rho(t)\mathcal E,
 \qquad
-\mathcal EK_n=D_n\mathcal E.
+\mathcal EK_n=D_n\mathcal E,
 ```
-
-Archimedischer Teil:
 
 ```math
 r_0''(t)=-\operatorname{tr}\rho(t),
 \qquad
-r_0(\log n)=-4\lambda_n^2.
-```
-
-Mit
-
-```math
-P=\begin{pmatrix}0&1\\1&0\end{pmatrix},
-\qquad J=-P
-```
-
-gilt
-
-```math
-R_0(v,w)=\langle\mathcal Ev,J\mathcal Ew\rangle.
+R_0(v,w)=\langle\mathcal Ev,J\mathcal Ew\rangle,
+\qquad J=-P.
 ```
 
 ```text
@@ -144,46 +89,25 @@ R_0(v,w)=\langle\mathcal Ev,J\mathcal Ew\rangle.
         |
         + --odd finite difference--> Prime channel K_n
         + --negative character-----> archimedean r_0''
-        + --reflection pullback----> R_0 = E^* J E
+        + --reflection pullback----> R_0
 ```
 
-Prime-only-A2 bleibt `×[M]` im engen Scope: die volle positive Prime-Gram-Form descendiert nicht durch `E`, und `{w_n,lambda_n}` allein fixieren die absolute `R_0`-Normierung nicht.
+Prime-only-A2 aus `{w_n,lambda_n}`: `×[M]` im engen Scope.
 
 ---
 
-## 6. POS-DIL-1A — natürliche Companion-Klasse
+## 6. POS-DIL-1 — positive Quotientenumgebung
 
-Die zwei vorhandenen Involutionen sind
-
-```math
-P^2=S^2=I,
-\qquad PSP=-S,
-\qquad S=2\rho'(0).
-```
-
-Für eine positive Hermiteform `M` auf `C^2`:
+Mit
 
 ```math
-PMP=M,
-\qquad SMS=M
+S=D_n/\lambda_n=2\rho'(0),
 ```
 
-zwingt
-
-```math
-M=tI.
-```
-
-Die zusätzliche Blockpositivität
-
-```math
-\begin{pmatrix}M&J\\J&M\end{pmatrix}\succeq0
-```
-
-ist genau für `t>=1` möglich. Somit:
+gilt in der natürlichen Companion-Klasse
 
 ```text
-P- and S-symmetric positive companions
+PMP=M and SMS=M
         |
         | --rigidity-->
         v
@@ -194,119 +118,148 @@ M=tI
 M_min=I  ✓[M]
 ```
 
-Demgegenüber gilt für volle positive Translationinvarianz:
-
-```math
-\rho(t)^*M\rho(t)=M\ \forall t,\quad M\succeq0
-\quad\Longrightarrow\quad
-M=0.
-```
+Volle positive `rho`-Invarianz:
 
 ```text
-exact unitary Hilbertization of full rho on positive rank 2
+rho(t)^* M rho(t)=M, M>=0
         |
         v
-×[M]  [enger Scope]
+M=0
+        |
+        v
+exact unitary same-space Hilbertization ×[M]
 ```
 
----
-
-## 7. POS-DIL-1C — Prime-moment Hilbertisierung `✓[M]`
-
-Für jede endliche nichtleere Prime-Power-Menge `N` setze
-
-```math
-\kappa_N=\sum_{n\in N}w_n\lambda_n^2,
-```
-
-und
+Prime-moment-Abbildung:
 
 ```math
 V_Nv=\kappa_N^{-1/2}
-\bigl(\sqrt{w_n}\,\mathcal EK_nv\bigr)_{n\in N}
-\in\bigoplus_{n\in N}\mathbb C^2.
+(\sqrt{w_n}\,\mathcal EK_nv)_{n\in N}.
 ```
-
-Dann
-
-```math
-\boxed{\|V_Nv\|^2=\|\mathcal Ev\|^2=|E_+(v)|^2+|E_-(v)|^2.}
-```
-
-Mit `\mathbb P_N=\oplus P` gilt gleichzeitig
-
-```math
-\boxed{R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.}
-```
-
-Für `n=p^k`, `q_p=p^{-1/2}`:
-
-```math
-\boxed{\sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S.}
-```
-
-Damit sitzt die Kanalindex-Amplitude exakt auf `flat minus AR(1)-root`.
 
 ```text
-Prime channels K_n + Weil weights + E
+Prime channels + Weil weights + E
         |
-        | --normalized moment postcompression-->
+        | --normalized moment map-->
         v
-positive Hilbert target H_N
-        |                         |
-        | norm                    | target involution P_N
-        v                         v
-|E_+|^2+|E_-|^2  ✓[M]        R_0  ✓[M]
+positive H_N
+   |                 |
+   | norm            | involution P_N
+   v                 v
+||Ev||^2 ✓[M]       R_0 ✓[M]
 ```
 
-**Firewall:** Der volle positive Prime-Gramoperator descendiert weiterhin nicht durch `E`; `log|D|`, `r_1` und `c_aI` sind nicht integriert. Daher:
+AR(1)-Brücke:
+
+```math
+\sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S.
+```
+
+`OX-GEN-A2' overall`: `✓[M]_part`.
+
+---
+
+## 7. POS-DIL-2A — unit-gain FEATURE-SHORTING `×[M]`
+
+Vorab definierter Gate:
 
 ```text
-OX-GEN-A2' overall  ✓[M]_part
+existing G_a^+ feature norm
+        |
+        | --contractive shorting?-->
+        v
+minimal E-mass / R_0
+```
+
+Notwendige Bedingung:
+
+```math
+|R_0(v,v)|\le G_a^+(v).
+```
+
+Bei `a=1/2` liefert eine zulässige gerade Plateaufolge
+
+```math
+|R_0(v_\varepsilon,v_\varepsilon)|
+\to32\sinh^2\frac14,
+```
+
+```math
+G_{1/2}^+(v_\varepsilon)
+\to1+\sqrt2(\log2)^2,
+```
+
+mit
+
+```math
+32\sinh^2\frac14>2>1+\sqrt2(\log2)^2.
+```
+
+Also:
+
+```text
+unit-gain C F^+=V                         ×[M]
+contractive target-observable for R_0     ×[M]
+unit-diagonal positive Schur block        ×[M]
+```
+
+Dieser No-Go betrifft die bestehende `G_{1/2}^+`-Masse; POS-DIL-1 bleibt erhalten.
+
+---
+
+## 8. Notwendiger Massendefekt
+
+```math
+\delta_0
+=32\sinh^2\frac14
+-1-\sqrt2(\log2)^2
+>\frac5{32}>0.
+```
+
+```text
+any positive augmentation H enabling unit-gain shorting
+        |
+        | --must satisfy on plateau sequence-->
+        v
+liminf H(v_epsilon,v_epsilon) >= delta_0  ✓[M]
 ```
 
 ---
 
-## 8. Aktuelle Hauptfront — POS-DIL-2 / FEATURE-SHORTING
+## 9. Aktuelle Hauptfront — POS-DIL-2B / INTRINSIC-MASS-AUGMENTATION
 
 ```text
-POS-DIL-1 prime-moment Hilbertization  ✓[M]
+POS-DIL-2A no-go  ×[M]
         |
-        | --requires contractive placement in existing positive features-->
+        | --forces extra positive mass-->
         v
-POS-DIL-2 / FEATURE-SHORTING ?[O]
+INTRINSIC-MASS-AUGMENTATION ?[O]
         |
-        +-------------------------------+
-        |                               |
-        | PASS                          | FAIL
-        v                               v
-contractive canonical shorting     class obstruction
-inside G_a^+                       [POS-DIL-1 survives]
+        +-----------------------------------+
+        |                                   |
+        | construct canonical mass          | further class no-go
+        v                                   v
+positive augmented environment         narrower admissible class
         |
         | --candidate-input only-->
         v
 OX-GEN-B ?[O]
-  incorporate r_1 and/or c_a I
 ```
 
-Eine erste scharfe Testform ist
+Candidate inputs, not conclusions:
 
-```math
-\|\mathcal Ev\|^2\stackrel?\le G_a^+(v).
+```text
+AR(1) root/hub u_k=q_p^k
+prime-moment complement 1-u_k
+global prime channels outside local Suzuki cutoff
+existing positive log|D| geometry
 ```
 
-Nach Fixierung der positiven Featureabbildung `\mathcal F_a^+` lautet die typkorrekte Intertwinerform:
-
-```math
-C_a\mathcal F_a^+v=V_{N_a}v,
-\qquad \|C_a\|\le1,
-```
-
-wobei `C_a` **vorwärts** aus vorhandenen Daten gebaut werden muss.
+Forbidden shortcuts: arbitrary diagonal mass, finished Weil form, RH, backward positivity root, or silently identifying the deficit with `c_aI`.
 
 ---
 
-## 9. True Object-X path
+## 10. True Object-X path
 
 ```text
 OX-GEN / POS-DIL partial geometry
@@ -315,7 +268,6 @@ OX-GEN / POS-DIL partial geometry
         v
 GENUINE X CANDIDATE ?[O]
         |
-        | --requires separate exact proof-->
         v
 EXACT FULL WEIL-GRAM IDENTITY ?[O]
         |
@@ -323,32 +275,28 @@ EXACT FULL WEIL-GRAM IDENTITY ?[O]
 OBJECT-X REALIZATION ?[O]
         |
         v
-Q_W(f,f)=||T_Xf||^2 >= 0
-        |
-        | --requires exact criterion-scope verification-->
-        v
 WEIL-CRITERION-SCOPE ?[O]
         |
         v
 RH
 ```
 
-Keine candidate-input-Kante ist eine Theoremimplikation.
+No candidate-input edge is a theorem implication.
 
 ---
 
-## 10. Separate / parked routes
+## 11. Separate / parked routes
 
-- **R37/G4c:** separat offen; Beziehung zu OX-GEN/Object X unresolved.
-- **Historische R43-COND-/FD23-/Flagfragen:** eigene offene Quantoren, nicht aktuelle Voraussetzung.
-- **PR #91:** Source-descent/Weil-separation Draft ohne übertragenes unabhängiges Exact-Head-GREEN.
-- **PR #49 / SW1 salvage:** Candidate-only Nebenfront; kein stiller Merge.
+- R37/G4c: separat offen.
+- Historische R43-COND-/FD23-/Flagfragen: eigene Quantoren, nicht aktuelle Voraussetzung.
+- PR #91: Draft ohne übertragenes unabhängiges Exact-Head-GREEN.
+- PR #49 / SW1 salvage: Candidate-only; kein stiller Merge.
 
 ---
 
-## 11. Gate-Regel
+## 12. Gate-Regel
 
-Ein Falsifikationsgate zählt nur, wenn **beide Ausgänge vorher logisch möglich** waren. Reine Reformulierungen bekannter Positivität, gefittete Witness-Werte und post-hoc-Faktorisierungen sind kein Object-X-Fortschritt.
+Ein Falsifikationsgate zählt nur, wenn beide Ausgänge vorher logisch möglich waren. POS-DIL-2A erfüllt diese Bedingung: die unit-gain Shorting-Klasse wurde in POS-DIL-1 vor der Plateau-Gegenrechnung als nächster Gate definiert.
 
 ---
 

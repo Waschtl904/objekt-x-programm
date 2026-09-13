@@ -24,129 +24,127 @@ Zentrale Quellen des aktuellen Strangs:
 - [Gate 2 / OX-GEN](audits/P11_OX_GRAM_GATE2_AND_OX_GEN_2026-09-12.md)
 - [OX-GEN-A gemeinsamer Exponentialgenerator](audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md)
 - [POS-DIL-1 Prime-moment Hilbertization](audits/P11_POS_DIL_1_PRIME_MOMENT_HILBERTIZATION_2026-09-13.md)
+- [POS-DIL-2 Unit-Gain Feature-Shorting No-Go](audits/P11_POS_DIL_2_UNIT_GAIN_FEATURE_SHORTING_NOGO_2026-09-13.md)
 
 ## Erreichter Meilenstein
 
-Der integrierte [positive Wurzelanker-Beweis](audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md)
-liefert den starken Normalenlimes. Zusammen mit dem ausdrücklich übernommenen
-Tangentialsatz **R42.51** folgt **Strong Terminal/C6 für jedes feste
-`0 < R < S` im ungeraden P11-Graphraum**.
-
-Dieser Satz beansprucht weder Uniformität über alle Radien noch
-Operatornormkonvergenz, den geraden Gesamtsektor oder die vollständige Objekt-X-Realisierung.
+Der integrierte [positive Wurzelanker-Beweis](audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md) plus R42.51 liefert **Strong Terminal/C6 für jedes feste `0<R<S` im ungeraden P11-Graphraum**. Keine Radienuniformität, Operatornormkonvergenz, vollständige Objekt-X-Realisierung oder RH-Folgerung wird beansprucht.
 
 ## Aktuelle Forschungsaufgabe
 
-Die Prime-Power-Seite besitzt eine exakte Weil-dekorierte AR(1)/Martingalstruktur. Für `a<=1` kann die lokalisierte Suzuki-/Weilform als
+### Gemeinsame Generator-Ebene
+
+Mit
 
 ```math
-Q_{B_a}=G_a^+-N_a
-```
-
-mit explizit positiver Featureform `G_a^+` und explizitem Defekt `N_a` geschrieben werden. Die bloße Existenz eines kontraktiven Faktors ist kein nichtzirkulärer Objekt-X-Gate, weil sie bei bekannter Positivität rückwärts aus `Q_{B_a}` konstruiert werden kann.
-
-**OX-GEN-A ist positiv geschlossen.** Mit
-
-```math
-E_\pm(v)=\int e^{\pm x/2}v(x)\,dx,
+\mathcal Ev=(E_+(v),E_-(v)),
 \qquad
 \rho(t)=\operatorname{diag}(e^{-t/2},e^{t/2})
 ```
 
-gilt exakt
+gilt
 
 ```math
 \mathcal ET_t=\rho(t)\mathcal E,
 \qquad
-\mathcal EK_n=\lambda_n\operatorname{diag}(-1,1)\mathcal E,
+\mathcal EK_n=D_n\mathcal E.
 ```
 
-und Suzukis elementarer archimedischer Anteil ist das negative Charakter derselben Darstellung:
+Suzukis `r_0` ist dieselbe Darstellung auf der archimedischen Seite:
 
 ```math
 r_0''(t)=-\operatorname{tr}\rho(t),
 \qquad
-r_0(\log n)=-4\lambda_n^2.
+R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle.
 ```
 
-Mit `P(E_+,E_-)=(E_-,E_+)`, `J=-P` gilt
+### POS-DIL-1
 
-```math
-R_0(v,w)=\langle\mathcal Ev,J\mathcal Ew\rangle.
-```
+Die natürliche Companion-Symmetrie erzwingt `M=tI`; der minimale blockpositive Begleiter ist `M=I`. Eine exakte positive `rho`-invariante Same-space-Hilbertmetrik existiert nur trivial.
 
-Die engere Prime-only-Idee bleibt negativ entschieden: die volle Prime-Gram-Form descendiert nicht auf den Rang-2-Quotienten, und die reine Quotientenkovarianz lässt den absoluten Maßstab frei.
-
-**POS-DIL-1 liefert nun erstmals eine positive Hilbertumgebung dieses gemeinsamen Rang-2-Blocks.** Setzt man
-
-```math
-S=\operatorname{diag}(-1,1)=D_n/\lambda_n=2\rho'(0),
-```
-
-so erzwingen Spiegelung und normalisierter Prime-Generator in der natürlichen Companion-Klasse
-
-```math
-PMP=M,
-\qquad SMS=M
-```
-
-bereits `M=tI`; die minimale blockpositive Wahl ist exakt `M=I`. Eine volle positive `rho`-invariante Metrik existiert dagegen nicht außer `M=0`.
-
-Für jede endliche nichtleere Prime-Power-Menge `N` mit
-
-```math
-\kappa_N=\sum_{n\in N}w_n\lambda_n^2
-```
-
-ist die explizite Prime-moment-Abbildung
+Für jede endliche nichtleere Prime-Power-Menge `N` ist
 
 ```math
 V_Nv=\kappa_N^{-1/2}
 \bigl(\sqrt{w_n}\,\mathcal EK_nv\bigr)_{n\in N}
 ```
 
-isometrisch auf der Generator-Ebene:
+mit
 
 ```math
-\boxed{\|V_Nv\|^2=|E_+(v)|^2+|E_-(v)|^2.}
+\|V_Nv\|^2=|E_+(v)|^2+|E_-(v)|^2,
 ```
 
-Mit `\mathbb P_N=\oplus P` entsteht aus derselben positiven Zielraumabbildung
+und derselbe positive Zielraum trägt über `\mathbb P_N=\oplus P` die Form
 
 ```math
-\boxed{R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.}
+R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.
 ```
 
-Für `n=p^k`, `q_p=p^{-1/2}` verbindet sich diese Konstruktion zusätzlich exakt mit der AR(1)-Root-Geometrie:
+Für `n=p^k`, `q_p=p^{-1/2}` gilt
 
 ```math
-\sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S.
+\sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S,
 ```
 
-Damit ist `OX-GEN-A2'` **partiell** positiv geschlossen (`✓[M]_part`): die minimale positive Rang-2-Masse und `R_0` sitzen in derselben vorwärts aus echten Prime-Kanalausgängen konstruierten Hilbertumgebung. Noch offen ist die stärkere Frage, ob diese Momentabbildung kontraktiv in der vollständigen positiven Featuregeometrie `G_a^+` sitzt.
+also eine exakte Brücke zur AR(1)-Root-Komponente. `OX-GEN-A2'` ist damit `✓[M]_part`.
 
-Der aktive Gate ist deshalb **POS-DIL-2 / FEATURE-SHORTING**. Eine erste scharfe Form lautet
+### POS-DIL-2A: unit-gain Shorting fällt
+
+Der anschließend vorab definierte Gate
 
 ```math
-\|\mathcal Ev\|^2\stackrel?\le G_a^+(v).
+\|\mathcal Ev\|^2\stackrel?\le G_a^+(v)
 ```
 
-Ein PASS würde den Rang-2-Baustein als kanonische kontraktive Postkompression/Shorting der vorhandenen positiven Prime-/`log|D|`-Geometrie verankern. Ein FAIL würde nur diese natürliche Klasse ausschließen; POS-DIL-1 bliebe bestehen.
+ist bereits bei `a=1/2` falsch. Eine explizite `H_0^1`-Plateaufolge erfüllt
 
-`r_1` und der dominante Skalar `c_aI` bleiben offen.
+```math
+|R_0(v_\varepsilon,v_\varepsilon)|
+=\|\mathcal Ev_\varepsilon\|^2
+\to32\sinh^2\frac14,
+```
 
-Parallel wird die exakte Prime-Power-AR(1)/Martingal-Faktorisierung als eigenständige, RH-unabhängige Mathematik verschriftlicht — ausdrücklich **nicht** als Objekt X.
+aber
+
+```math
+G_{1/2}^+(v_\varepsilon)
+\to1+\sqrt2(\log2)^2,
+```
+
+und exakt
+
+```math
+32\sinh^2\frac14>2>1+\sqrt2(\log2)^2.
+```
+
+Damit kann die vorhandene `G_{1/2}^+`-Featuremasse `R_0` nicht mit Gain `1` als kontraktive Zielraumkompression tragen. Ausgeschlossen sind sowohl `C F^+=V` mit `||C||<=1` als auch jede allgemeinere kontraktive Target-observable-Realisierung innerhalb derselben Feature-Norm.
+
+Der notwendige Plateau-Massendefekt ist
+
+```math
+\boxed{
+\delta_0
+=32\sinh^2\frac14
+-1-\sqrt2(\log2)^2
+>\frac5{32}>0.
+}
+```
+
+### Neue Front
+
+**POS-DIL-2B / INTRINSIC-MASS-AUGMENTATION:** Welche schwächste zusätzliche positive Masse entsteht **intrinsisch** aus bereits vorhandener Prime-/AR(1)-Root/Hub-/`log|D|`-Geometrie, liefert am Plateau mindestens `delta_0` und trägt `R_0` im selben positiven Umraum?
+
+Kandidaten wie globale Prime-Kanäle außerhalb des lokalen Suzuki-Cutoffs dürfen untersucht werden, aber ihre Buchungsrichtung muss nichtzirkulär sein. Eine beliebige Diagonalergänzung oder das bloße Umbenennen des offenen `c_aI`-Blocks zählt nicht.
+
+`r_1` und `c_aI` bleiben offen.
 
 ## Nachweise und Orientierung
 
 Ausarbeitungen: [papers/](papers/) · Prüfberichte: [audits/](audits/).
-Theorem- und Reviewbuchungen stehen in der
-[Registry](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md).
-Ein Merge oder erfolgreicher Test ist keine mathematische Promotion.
+Theorem- und Reviewbuchungen stehen in der [Registry](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md). Ein Merge oder erfolgreicher Test ist keine mathematische Promotion.
 
-Für neue Arbeitssitzungen: [Einstiegsprompt](EINSTIEGSPROMPT.md).
-Das ältere Forschungsjournal bleibt über den [Gesamtindex](INDEX.md) erreichbar;
-historische Statusangaben sind keine aktuelle Arbeitsanweisung.
+Für neue Arbeitssitzungen: [Einstiegsprompt](EINSTIEGSPROMPT.md). Historische Statusangaben sind keine aktuelle Arbeitsanweisung.
 
 Lizenz: [CC BY 4.0](LICENSE) · Zitierangaben: [CITATION.cff](CITATION.cff).
 

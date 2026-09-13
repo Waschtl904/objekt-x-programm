@@ -1,4 +1,4 @@
-# Objekt X — kanonische Forschungsroadmap v2.4
+# Objekt X — kanonische Forschungsroadmap v2.5
 
 > **Stand:** 13. September 2026; Registry unverändert.  
 > **Rolle:** aktuelle Abhängigkeits- und Forschungsstrategiekarte.  
@@ -22,55 +22,35 @@ Bei Konflikten gilt nach Zuständigkeit:
 5. diese Roadmap für Strategie;
 6. `ACTIVE_FRONT.yaml` für historische Stack-/PR-Provenienz.
 
-Der aktuelle `main`-Head wird live aus GitHub gelesen und nicht selbstreferenziell als SHA gespeichert.
+Der aktuelle `main`-Head wird live aus GitHub gelesen.
 
 ---
 
 ## 1. Verfügbarer Meilenstein: fixed-pair Strong Terminal / C6
 
-Der positive Wurzelanker plus R42.51 liefert für jedes feste `0<R<S`
+Für jedes feste `0<R<S` gilt im ungeraden P11-Graphraum der Strong-Terminal/C6-Abschluss aus positivem Wurzelanker plus R42.51.
 
-```math
-W_{R,S}^{[U]}\varepsilon_R\longrightarrow\varepsilon_S
-```
-
-im ungeraden P11-Graphraum.
-
-Nicht enthalten: Radienuniformität, Operatornormkonvergenz, vollständiger gerader Sektor, Object-X-Realisierung oder RH.
+Keine Radienuniformität, keine Operatornormkonvergenz, kein vollständiger gerader Sektor, keine Object-X-/RH-Folgerung.
 
 ---
 
-## 2. Belastbare Prime-Power-Geometrie
+## 2. Prime-Power-/AR(1)-Geometrie
 
 ```math
 C_{jk}^{(p)}=(\log p)p^{\min(j,k)}p^{-3(j+k)/4},
-\qquad C_{kk}^{(p)}=(\log p)p^{-k/2}.
+\qquad
+C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2},
 ```
-
-Nach Weil-Diagonalnormalisierung:
 
 ```math
-C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2}.
+T_q^*T_q+uu^*=R_q.
 ```
 
-Mit `q=p^{-1/2}`:
-
-```math
-T_q^*T_q=R_q-uu^*,
-\qquad T_q^*T_q+uu^*=R_q.
-```
-
-Die P11-Restseite besitzt die exakte Weil-Tail-Normalform
-
-```math
-R_R^*R_R=\sum_{p,k}w_{p,k}Z_{p,k,R}^*Z_{p,k,R}.
-```
-
-Buchung: exakte Strukturinformation und theorem-ready Nebenprojekt; noch keine vollständige gemeinsame Prime-/Archimedean-Geometrie.
+Die P11-Restseite besitzt die exakte Weil-Tail-Normalform. Dies bleibt theorem-ready Spur B, nicht selbst Objekt X.
 
 ---
 
-## 3. Endliche Suzuki-/OX-GRAM-Normalform
+## 3. OX-GRAM / positive Featurebasis
 
 Für `a<=1`:
 
@@ -79,76 +59,49 @@ Q_{B_a}=G_a^+-N_a,
 \qquad N_a=c_aI+C_a.
 ```
 
-`G_a^+` besteht aus positiven Prime-Kanal-, Log-Multiplikator- und logarithmischen `log|D|`-Formen.
+`G_a^+` besteht aus positiver logarithmischer Douglas-/`log|D|`-Geometrie, positiven Prime-Kanalformen und positivem Log-Multiplikator. Die bloße Existenz eines rückwärts aus `Q` definierten Kontraktors ist als Object-X-Gate geschlossen.
 
-Die Frage „existiert irgendein kontraktiver Faktor?“ ist kein Object-X-Gate: bei bereits bekannter lokaler Positivität kann ein solcher Faktor zirkulär aus `Q_{B_a}` konstruiert werden. Offen bleibt eine **vorwärts konstruierte kanonische** Geometrie.
-
----
-
-## 4. Zertifikationsstand
-
-PR #98 hat die endlichen Gate-1/Gate-2-Pfade gehärtet.
-
-- Normalisierung: `a=0.5,0.8,1.0`, Realraum/Fourier, fail-closed Arb-Residualtests, explizite Bernoulli-/`sinc`-Restbälle, Arb-Cutoffs und Endpunktfehler.
-- Gate 2: Arb 512 Bit, `N<=14`, drei Radien, beide Paritäten, **42/42** verschachtelte Blöcke mit strikt positiven Cholesky-Pivots.
-
-Firewall: endliche Zertifikate, kein globaler Weil-Positivitäts- oder RH-Beweis.
+CERT-HARDEN bleibt im dokumentierten endlichen Scope geschlossen.
 
 ---
 
-## 5. OX-GEN-A — gemeinsamer Exponentialgenerator `✓[M]`
-
-Definiere
-
-```math
-E_\pm(v)=\int e^{\pm x/2}v(x)\,dx,
-\qquad \mathcal Ev=(E_+(v),E_-(v)).
-```
-
-Für
-
-```math
-\rho(t)=\operatorname{diag}(e^{-t/2},e^{t/2}),
-\qquad
-K_n=T_{\frac12\log n}-T_{-\frac12\log n},
-\qquad
-\lambda_n=n^{1/4}-n^{-1/4}
-```
-
-gilt
-
-```math
-\boxed{\mathcal ET_t=\rho(t)\mathcal E,}
-\qquad
-\boxed{\mathcal EK_n=\lambda_n\operatorname{diag}(-1,1)\mathcal E.}
-```
-
-Suzukis elementarer archimedischer Teil ist das negative Charakter derselben Darstellung:
-
-```math
-\boxed{r_0''(t)=-\operatorname{tr}\rho(t),}
-\qquad
-\boxed{r_0(\log n)=-4\lambda_n^2.}
-```
+## 4. OX-GEN-A — gemeinsame Generator-Ebene `✓[M]`
 
 Mit
 
 ```math
-P=\begin{pmatrix}0&1\\1&0\end{pmatrix},
-\qquad J=-P
+\mathcal Ev=(E_+(v),E_-(v)),
+\qquad
+\rho(t)=\operatorname{diag}(e^{-t/2},e^{t/2}),
 ```
 
-gilt
+und `D_n=lambda_n diag(-1,1)` gilt
 
 ```math
-\boxed{R_0(v,w)=\langle\mathcal Ev,J\mathcal Ew\rangle.}
+\mathcal ET_t=\rho(t)\mathcal E,
+\qquad
+\mathcal EK_n=D_n\mathcal E.
 ```
 
-Prime-only-A2 aus `{w_n,lambda_n}` bleibt im dokumentierten engen Scope `×[M]`: die volle Prime-Gram-Form descendiert nicht durch `E`, und die Anti-Kovarianz fixiert den absoluten Maßstab nicht.
+Suzuki:
+
+```math
+r_0''(t)=-\operatorname{tr}\rho(t),
+\qquad
+r_0(\log n)=-4\lambda_n^2.
+```
+
+Mit `J=-P`:
+
+```math
+R_0(v,w)=\langle\mathcal Ev,J\mathcal Ew\rangle.
+```
+
+Prime-only-A2 aus `{w_n,lambda_n}` bleibt `×[M]` im dokumentierten engen Scope.
 
 ---
 
-## 6. POS-DIL-1 — erste natürliche positive Companion-Klasse
+## 5. POS-DIL-1 — positiver Rang-2-Quotientenbaustein
 
 Setze
 
@@ -156,143 +109,145 @@ Setze
 S=\operatorname{diag}(-1,1)=D_n/\lambda_n=2\rho'(0).
 ```
 
-Dann `S^2=P^2=I`, `PSP=-S` und `rho(t)=e^{tS/2}`.
-
-### 6.1 Symmetrierigidität `✓[M]`
-
-Für eine positive Hermiteform `M` verlangen wir nur die beiden bereits vorhandenen involutiven Symmetrien
+Die natürliche Companion-Klasse
 
 ```math
 PMP=M,
-\qquad SMS=M.
+\qquad SMS=M
 ```
 
-Dann zwingt die Algebra
+zwingt `M=tI`; die minimale blockpositive Wahl ist `M=I`. Volle positive `rho`-Invarianz erzwingt dagegen `M=0`.
+
+Für jede endliche nichtleere Prime-Power-Menge `N`:
 
 ```math
-\boxed{M=tI.}
-```
-
-Die Blockpositivität
-
-```math
-\begin{pmatrix}M&J\\J&M\end{pmatrix}\succeq0
-```
-
-ist genau für `t>=1` erfüllt. Der eindeutige minimale positive Begleiter in dieser Klasse ist daher
-
-```math
-\boxed{M_{\min}=I.}
-```
-
-### 6.2 Enger No-Go für volle positive `rho`-Invarianz `×[M]`
-
-Fordert man dagegen
-
-```math
-\rho(t)^*M\rho(t)=M
-```
-
-für alle `t` und `M>=0`, folgt `M=0`. Eine injektive exakte unitäre Hilbert-Intertwinerrealisierung der Boost-Darstellung auf positivem Rang 2 ist damit ausgeschlossen.
-
-### 6.3 Prime-moment Hilbertisierung `✓[M]`
-
-Für eine endliche nichtleere Prime-Power-Menge `N` setze
-
-```math
-w_n=\frac{\Lambda(n)}{\sqrt n},
-\qquad
 \kappa_N=\sum_{n\in N}w_n\lambda_n^2,
 ```
 
-und
-
 ```math
 V_Nv=\kappa_N^{-1/2}
-\bigl(\sqrt{w_n}\,\mathcal EK_nv\bigr)_{n\in N}
-\in \bigoplus_{n\in N}\mathbb C^2.
+\bigl(\sqrt{w_n}\,\mathcal EK_nv\bigr)_{n\in N}.
 ```
 
-Dann gilt exakt
+Dann
 
 ```math
-\boxed{\|V_Nv\|^2=|E_+(v)|^2+|E_-(v)|^2.}
+\|V_Nv\|^2=\|\mathcal Ev\|^2,
+\qquad
+R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.
 ```
 
-Mit `\mathbb P_N=\oplus_{n\in N}P` gilt im **selben positiven Zielraum**
+Für `n=p^k`, `q_p=p^{-1/2}`:
 
 ```math
-\boxed{R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.}
+\sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S.
 ```
 
-Die minimale positive Companion-Masse wird damit nicht post hoc als Diagonalblock eingesetzt, sondern als normierte Grammasse echter gewichteter Prime-Kanalausgänge erzeugt.
-
-Für `n=p^k`, `q_p=p^{-1/2}` ist zusätzlich
-
-```math
-\boxed{\sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S.}
-```
-
-Die Kanalindex-Amplitude der neuen Momentabbildung ist exakt `flat minus AR(1)-root`.
-
-**Buchung:** `OX-GEN-A2'` ist damit `✓[M]_part`, nicht vollständig geschlossen.
+Buchung: `OX-GEN-A2'` insgesamt `✓[M]_part`.
 
 ---
 
-## 7. Aktuelle Default-Priorität: POS-DIL-2 / FEATURE-SHORTING
+## 6. POS-DIL-2A — unit-gain FEATURE-SHORTING fällt `×[M]`
 
-POS-DIL-1 liefert eine positive Hilbertisierung des **Rang-2-Momentquotienten**, aber noch keine kontraktive Einbettung dieses Quotienten in die vollständige positive Featuregeometrie `G_a^+`.
-
-Der nächste echte Gate lautet:
-
-> Ist die kanonische Prime-moment-Abbildung als kontraktive Postkompression bzw. als natürliches Shorting/Schur-Komplement der bereits vorhandenen positiven Prime-/`log|D|`-Featuregeometrie realisierbar?
-
-Eine erste scharfe Form ist
+Der nach POS-DIL-1 definierte Gate
 
 ```math
-\boxed{\|\mathcal Ev\|^2\stackrel?\le G_a^+(v).}
+\|\mathcal Ev\|^2\stackrel?\le G_a^+(v)
 ```
 
-oder typkorrekt, sobald die positive Featureabbildung `\mathcal F_a^+` fixiert ist, die Existenz eines **vorwärts definierten kontraktiven** Operators `C_a` mit
+ist bereits bei `a=1/2` falsch.
+
+Für eine explizite gerade Plateaufolge `v_epsilon in H_0^1(-1/2,1/2)`:
 
 ```math
-C_a\mathcal F_a^+v=V_{N_a}v.
+\mathcal D(v_\varepsilon)\to0,
 ```
 
-Beide Ausgänge bleiben logisch offen:
+```math
+|R_0(v_\varepsilon,v_\varepsilon)|
+=\|\mathcal Ev_\varepsilon\|^2
+\to32\sinh^2\frac14,
+```
 
-- **PASS:** die minimale positive Rang-2-Masse sitzt tatsächlich kontraktiv in der vorhandenen positiven Featuregeometrie;
-- **FAIL:** POS-DIL-1 bleibt gültig, aber diese Shorting-Klasse fällt und muss mit Root/Hub-/`log|D|`-Struktur weiter verengt werden.
+während
 
-Keine fertige Weilform, kein RH und keine rückwärts definierte Positivitätswurzel dürfen als Input verwendet werden.
+```math
+G_{1/2}^+(v_\varepsilon)
+\to1+\sqrt2(\log2)^2.
+```
+
+Und exakt
+
+```math
+32\sinh^2\frac14>2>
+1+\sqrt2(\log2)^2.
+```
+
+Daraus folgen im dokumentierten Scope:
+
+- kein Kontraktor `C` mit `CF^+=V`, `||C||<=1`;
+- kein Target-observable `A`, `||A||<=1`, mit `R_0=<F.,AF.>` und `||Fv||^2=G_{1/2}^+(v)`;
+- kein unit-diagonaler positiver Schurblock mit `G_{1/2}^+` und Kreuzform `R_0`.
+
+Das ist ein echter Klassen-No-Go, weil die Klasse vor der Gegenrechnung festgelegt war.
 
 ---
 
-## 8. Danach: OX-GEN-B
+## 7. Quantitative Konsequenz — notwendige Zusatzmasse
 
-Erst nach POS-DIL-2 werden die bislang offenen archimedischen Teile systematisch in dieselbe Geometrie einbezogen:
+```math
+\boxed{
+\delta_0
+=32\sinh^2\frac14
+-1-\sqrt2(\log2)^2
+>\frac5{32}>0.
+}
+```
 
-- `r_1` / regulärer archimedischer Korrektor;
-- dominanter Skalarblock `c_aI`.
+Jede positive Augmentation `H`, die unit-gain Shorting nach `G_{1/2}^++H` ermöglichen soll, muss entlang der Plateaufolge notwendig
 
-POS-DIL-1 erklärt diese Blöcke ausdrücklich noch nicht.
+```math
+\liminf_{\varepsilon\downarrow0}H(v_\varepsilon,v_\varepsilon)
+\ge\delta_0
+```
 
-Parallel: Prime-Power-AR(1)/Martingal-Faktorisierung als eigenständigen RH-unabhängigen Satz verschriftlichen; nicht als Objekt X vermarkten.
+liefern.
 
 ---
 
-## 9. Vollständiger Object-X-Pfad
+## 8. Aktuelle Default-Priorität: POS-DIL-2B / INTRINSIC-MASS-AUGMENTATION
 
-Ein echter X-Kandidat muss mindestens spezifizieren:
+Die vorhandene lokale positive Featuremasse ist nachweislich zu klein. Der nächste Gate lautet:
 
-- intrinsische gemeinsame Geometrie,
-- Hilbert-/Mediatorraum,
-- kanonische Abbildung `T_X`,
-- Prime-Power-Kanal,
-- archimedischen Kanal,
-- gemeinsame nichtorthogonale Kopplung,
-- Testklasse und Normalisierung,
-- Nicht-Zirkularität.
+> Welche **schwächste intrinsische zusätzliche positive Masse** aus bereits vorhandener Prime-/AR(1)-Root/Hub-/`log|D|`-Geometrie kann den Defekt `delta_0` liefern und `R_0` im selben positiven Umraum tragen?
+
+Vorläufig zulässige Kandidateninputs:
+
+- AR(1)-Root/Hub-Vektor `u_k=q_p^k`;
+- Prime-moment-Amplitude `1-u_k`;
+- globale Prime-Kanäle jenseits des lokalen Suzuki-Cutoffs, die auf dem Fenster reine lokale Masse tragen;
+- weitere bereits vorhandene positive `log|D|`-Featurekomponenten.
+
+Nicht als Lösung verbuchen:
+
+- beliebige Diagonalergänzung von Hand;
+- fertige Weilform oder rückwärts definierte Positivitätswurzel;
+- RH;
+- bloßes Umbenennen des offenen Skalars `c_aI` als „fehlende Masse“.
+
+Beide Ausgänge bleiben offen: Konstruktion oder weiterer vorab definierter Klassen-No-Go.
+
+---
+
+## 9. Danach: OX-GEN-B
+
+`r_1` und `c_aI` erst dann einbeziehen, wenn ihre Rolle aus der gemeinsamen Geometrie vorwärts motiviert ist. POS-DIL-2A zeigt ausdrücklich, dass zusätzliche positive Masse nötig ist; es identifiziert deren Quelle noch nicht.
+
+Parallel: AR(1)/Martingal-Faktorisierung theorem-ready als eigenständige RH-unabhängige Mathematik verschriftlichen.
+
+---
+
+## 10. Vollständiger Object-X-Pfad
 
 ```text
 OX-GEN / POS-DIL partial geometry
@@ -301,7 +256,6 @@ OX-GEN / POS-DIL partial geometry
         v
 GENUINE X CANDIDATE ?[O]
         |
-        | --requires separate proof-->
         v
 EXACT FULL WEIL-GRAM IDENTITY ?[O]
         |
@@ -315,57 +269,43 @@ WEIL-CRITERION-SCOPE ?[O]
 RH
 ```
 
-Keine `candidate-input`-Kante ist als logische Implikation zu lesen.
+Keine candidate-input-Kante ist eine Theoremimplikation.
 
 ---
 
-## 10. Separate Nebenfronten
+## 11. Separate Nebenfronten
 
-- **R37/G4c:** separat offen; Beziehung zur OX-GEN-/X-Route unresolved.
-- **Historische R43-COND-/FD23-/Flagfragen:** eigene offene Quantoren, nicht aktuelle Voraussetzung.
-- **PR #91:** analytischer Source-descent/Weil-separation-Draft; kein unabhängiger Exact-Head-GREEN wird übertragen.
-- **PR #49 / SW1 salvage:** Candidate-only Nebenfront; kein stiller Merge.
+- R37/G4c separat offen.
+- Historische R43-COND-/FD23-/Flagfragen: eigene Quantoren, nicht aktuelle Voraussetzung.
+- PR #91: analytischer Draft ohne übertragenes unabhängiges Exact-Head-GREEN.
+- PR #49 / SW1 salvage: Candidate-only, kein stiller Merge.
 
 ---
 
-## 11. Gesperrte Interpretationen
+## 12. Gesperrte Interpretationen
 
 Nicht reaktivieren:
 
 - PR91-Zeugenmatrix Rang 1;
-- `3/4` als bloße Dämpfung;
+- `3/4` als freie Dämpfung;
 - Vier-Boundary-Erklärung;
 - cross-prime als Fensterrand;
 - „Nichtunitarität = Hub“;
-- matched cutoff als Objekt-X-Mechanismus;
-- OX-REN/OX-REN' als Hauptfront;
-- klassische `H^{1/2}`-/Douglas-Terminologie für `1/|x-y|`;
-- globaler Kollaps von `||I-W^*W||`;
+- matched cutoff / OX-REN;
+- klassische `H^{1/2}`-Deutung des `1/|x-y|`-Kerns;
 - `0.603` als Konstante;
 - reine OX-GRAM-Existenztests;
-- Prime-only-Rang-2-Gram ohne zusätzliche Quotientenstruktur;
-- Behauptung, POS-DIL-1 erkläre bereits `r_1` oder `c_aI`;
-- Behauptung, `rho` sei für die neue positive Hilbertnorm unitär.
-
----
-
-## 12. Falsifikations-/Rollback-Regeln
-
-- **OX-GEN-A fällt:** darauf beruhende POS-DIL-Sätze neu auditieren; Prime-AR(1), C6 und Object-X-Ziel bleiben getrennt.
-- **POS-DIL-1A-Klasse fällt:** nur Symmetrie-Companion-Buchung zurücknehmen.
-- **Prime-moment-Identität fällt:** POS-DIL-1C und die Root-Amplitudenbrücke zurücknehmen; OX-GEN-A bleibt separat.
-- **POS-DIL-2 fällt:** nur die kontraktive Feature-Shorting-Klasse ist ausgeschlossen; POS-DIL-1 bleibt bestehen.
-- **Prime-AR(1)-Algebra fällt:** alle darauf gestützten Root/Hub-Interpretationen neu auditieren.
-- **R37/G4c fällt:** keine automatische Wirkung auf OX-GEN/POS-DIL/C6.
-- **PR91 fällt:** nur sein Kandidat fällt.
-- **Ein X-Kandidat fällt an der vollen Weil-Gram-Identität:** kein universelles No-Go.
+- Prime-only-Rang-2-Gram ohne Zusatzstruktur;
+- Behauptung, POS-DIL-1 erkläre `r_1` oder `c_aI`;
+- Behauptung, der POS-DIL-2A-No-Go schließe jede positive Erweiterung aus.
 
 ---
 
 ## 13. Explizit offen
 
 ```text
-POS-DIL-2 / FEATURE-SHORTING
+POS-DIL-2B / INTRINSIC-MASS-AUGMENTATION
+source of the necessary mass delta_0
 OX-GEN-B
 r_1 / regular archimedean correction
 scalar block c_a I in intrinsic geometry
@@ -376,5 +316,3 @@ Weil-criterion scope verification
 RH
 R37/G4c [separate]
 ```
-
-Historische Nebenfragen bleiben über Audits, Git-Historie und Registry-/Problemprovenienz zugänglich; sie werden hier nicht zur Default-Priorität erhoben.
