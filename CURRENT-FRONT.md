@@ -1,8 +1,8 @@
-# CURRENT FRONT — Objekt X / OX-GEN
+# CURRENT FRONT — Objekt X / POS-DIL
 
 > **Operative Kopfschicht — zuerst lesen.**
 > **Redaktioneller Stand:** 13. September 2026; keine Registry-Promotion.
-> **Konsolidierungsquellen:** [AR(1)/Weil-Tail/OX-GRAM](audits/P11_OBJECT_X_AR1_OX_GRAM_CONSOLIDATION_2026-09-12.md), [Gate-2/OX-GEN](audits/P11_OX_GRAM_GATE2_AND_OX_GEN_2026-09-12.md), [OX-GEN-A gemeinsamer Exponentialgenerator](audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md).
+> **Konsolidierungsquellen:** [AR(1)/Weil-Tail/OX-GRAM](audits/P11_OBJECT_X_AR1_OX_GRAM_CONSOLIDATION_2026-09-12.md), [Gate-2/OX-GEN](audits/P11_OX_GRAM_GATE2_AND_OX_GEN_2026-09-12.md), [OX-GEN-A gemeinsamer Exponentialgenerator](audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md), [POS-DIL-1 Prime-moment Hilbertization](audits/P11_POS_DIL_1_PRIME_MOMENT_HILBERTIZATION_2026-09-13.md).
 > **Strategie:** [kanonische Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md).
 > **Suchgegenstand:** [Objekt-X-Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
 > **Buchungen:** [Theorem-/Review-Registry](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md).
@@ -102,16 +102,8 @@ folgt
 
 ```math
 \boxed{\mathcal EK_n
-=\lambda_n\operatorname{diag}(-1,1)\mathcal E,}
+=\lambda_n\operatorname{diag}(-1,1)\mathcal E.}
 ```
-
-also
-
-```math
-E_\pm(K_nv)=\mp\lambda_nE_\pm(v)
-```
-
-**ohne Fensterrandterm**. Die Funktionen `e^{\pm x/2}` müssen selbst nicht im Fensterraum liegen.
 
 Suzukis elementarer Anteil erfüllt zugleich
 
@@ -126,37 +118,24 @@ sogar
 \qquad r_0(\log n)=-4\lambda_n^2.}
 ```
 
-Damit sind Prime-Kanäle und archimedischer `r_0`-Term **zwei exakte Funktoren derselben zweidimensionalen Translationrepräsentation**.
-
-### Rang-2-Form / Spiegelung
-
-Mit Austauschoperator
+Mit
 
 ```math
-P=\begin{pmatrix}0&1\\1&0\end{pmatrix}
+P=\begin{pmatrix}0&1\\1&0\end{pmatrix},
+\qquad J=-P
 ```
 
-gilt polarisiert
+gilt
 
 ```math
-\boxed{R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle_{\mathbb C^2}.}
+\boxed{R_0(v,w)=\langle\mathcal Ev,J\mathcal Ew\rangle_{\mathbb C^2}.}
 ```
-
-Für reelle `v`:
-
-```math
-R_0(v,v)=-2E_+(v)E_-(v).
-```
-
-Die Spiegelung `v(x)->v(-x)` induziert genau `P`; damit folgt die bekannte Paritätssignatur intrinsisch.
 
 Unter jedem Kanal:
 
 ```math
 \boxed{R_0(K_nv,K_nw)=-\lambda_n^2R_0(v,w).}
 ```
-
-Das ist Anti-Kovarianz einer indefiniten Rang-2-Form, **keine** positive Kontraktionsidentität.
 
 ## 6. Prime-only-A2 aus `{w_n,lambda_n}` geschlossen `×[M]`
 
@@ -169,42 +148,200 @@ Der zunächst vorgeschlagene Test „Prime-Gram direkt auf dem Rang-2-Quotienten
 Auch die reine Quotienten-Kovarianz fixiert den Maßstab nicht. Für eine Hermiteform `H` mit
 
 ```math
-D_n^*HD_n=-\lambda_n^2H,
-\qquad D_n=\lambda_n\operatorname{diag}(-1,1),
+D_n^*HD_n=-\lambda_n^2H
 ```
 
-folgt lediglich
+folgt nur eine off-diagonale Formklasse; der absolute Maßstab bleibt frei.
+
+## 7. POS-DIL-1 — natürliche Rang-2-Companion-Klasse geschlossen
+
+Setze
 
 ```math
-H=\begin{pmatrix}0&b\\\bar b&0\end{pmatrix};
+S=\operatorname{diag}(-1,1)=D_n/\lambda_n=2\rho'(0).
 ```
 
-der Skalar `b` bleibt frei. Die Gewichte `w_n` ändern daran nichts.
+Dann
 
-**Enges No-Go:** Der absolute Koeffizient `2` in `R_0=-2E_+E_-` kann nicht allein aus den diskreten Daten `{w_n,lambda_n}` plus Anti-Kovarianz bestimmt werden.
+```math
+S^2=P^2=I,
+\qquad PSP=-S,
+\qquad \rho(t)=e^{tS/2}.
+```
 
-Mit der vollen Translation-/Spiegelstruktur ist die Normierung dagegen kanonisch: `R_0=\mathcal E^*(-P)\mathcal E`.
+### 7.1 Symmetrierigidität `✓[M]`
 
-## 7. Neue operative Hauptfrage: OX-GEN-A2' / POSITIVE-DILATION
+Für eine positive Hermiteform `M` auf `C^2` verlangen wir als erste minimale natürliche Companion-Klasse nur
 
-Gesucht ist jetzt nicht mehr irgendeine Rang-2-Form, sondern:
+```math
+PMP=M,
+\qquad SMS=M.
+```
 
-> **Kann die kanonische Translation-/Reflexions-Geometrie `(C^2,rho,P,E)` intrinsisch in die positive Prime-/`log|D|`-Featuregeometrie eingebettet oder als Schur-/Defektterm einer positiven Erweiterung realisiert werden — ohne `Q_{B_a}`, RH oder eine rückwärts definierte Positivitätswurzel?**
+Dann ist zwingend
 
-Positive Antwort: erster expliziter gemeinsamer Prime-/Archimedean-Baustein mit positiver Umgebung.
+```math
+\boxed{M=tI.}
+```
 
-Negative Antwort: nur dann Klassen-No-Go, wenn die natürliche Dilatations-/Intertwinerklasse vorher festgeschrieben ist.
+Die Schur-Bedingung
 
-**Scope:** `r_1` und `c_aI` bleiben offen. Die Rang-2-Geometrie allein ist noch kein Objekt X.
+```math
+\begin{pmatrix}M&J\\J&M\end{pmatrix}\succeq0
+```
 
-## 8. Nächste Gates
+ist damit genau für `t>=1` erfüllt. Der eindeutige minimale Begleiter in dieser Klasse ist
 
-1. **GENERATOR-CLASS / POSITIVE-DILATION-CLASS** — natürliche positive Erweiterungs-/Intertwinerklasse definieren.
-2. **OX-GEN-A2'** — explizite positive Dilatation/Schur-Realisierung oder Klassen-No-Go.
-3. **OX-GEN-B** — erst danach `r_1` und/oder den dominanten Skalar `c_aI` in dieselbe gemeinsame Geometrie einbeziehen.
-4. **Spur B parallel:** AR(1)/Martingal-Faktorisierung theorem-ready verschriftlichen.
+```math
+\boxed{M_{\min}=I.}
+```
 
-## 9. Gesperrte Deutungen
+### 7.2 Vollständige positive `rho`-Invarianz ist unmöglich `×[M]`
+
+Fordert man stattdessen
+
+```math
+\rho(t)^*M\rho(t)=M
+```
+
+für alle `t` und `M>=0`, folgt bereits aus der Ableitung bei `t=0`
+
+```math
+SM+MS=0,
+```
+
+und Positivität erzwingt
+
+```math
+\boxed{M=0.}
+```
+
+Damit gibt es insbesondere keine injektive exakte unitäre Hilbert-Intertwinerrealisierung von `rho` auf positivem Rang 2.
+
+## 8. POS-DIL-1 — Prime-moment Hilbertization `✓[M]`
+
+Sei `N` eine endliche nichtleere Prime-Power-Menge und
+
+```math
+w_n=\frac{\Lambda(n)}{\sqrt n},
+\qquad
+\kappa_N=\sum_{n\in N}w_n\lambda_n^2>0.
+```
+
+Auf
+
+```math
+\mathcal H_N=\bigoplus_{n\in N}\mathbb C^2
+```
+
+definiere
+
+```math
+\iota_Nz
+=\kappa_N^{-1/2}
+\bigl(\sqrt{w_n}D_nz\bigr)_{n\in N}.
+```
+
+Dann
+
+```math
+\boxed{\iota_N^*\iota_N=I.}
+```
+
+Mit `\mathbb P_N=\oplus_{n\in N}P` gilt sogar
+
+```math
+\boxed{\mathbb P_N\iota_N=\iota_NJ,
+\qquad
+\iota_N^*\mathbb P_N\iota_N=J.}
+```
+
+Für Testfunktionen ist
+
+```math
+V_Nv=\iota_N\mathcal Ev
+=\kappa_N^{-1/2}
+\bigl(\sqrt{w_n}\,\mathcal EK_nv\bigr)_{n\in N}.
+```
+
+Also exakt
+
+```math
+\boxed{\|V_Nv\|^2=|E_+(v)|^2+|E_-(v)|^2,}
+```
+
+und mit derselben positiven Featureabbildung
+
+```math
+\boxed{R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.}
+```
+
+Damit taucht die minimale positive Rang-2-Masse in der vorab definierten **Prime-moment-Klasse** kanonisch als Gramnorm echter gewichteter Prime-Kanalausgänge auf.
+
+### 8.1 AR(1)-Root-Brücke
+
+Für `n=p^k`, `q_p=p^{-1/2}` gilt
+
+```math
+\boxed{
+\sqrt{w_{p,k}}\,D_{p^k}
+=\sqrt{\log p}\,(1-q_p^k)S.
+}
+```
+
+Die Kanalindex-Amplitude ist damit exakt `flat minus AR(1)-root`, weil der Root-Vektor des Primasts `u_k=q_p^k` ist.
+
+**Firewall:** Das identifiziert nicht den P11-Huboperator mit `E_±`; bewiesen ist die Amplitudenrelation in der Momentkompression.
+
+## 9. Status von OX-GEN-A2'
+
+Die Prime-moment-Konstruktion ist der erste positive gemeinsame **Quotientenbaustein**:
+
+```text
+OX-GEN-A common generator plane                 ✓[M]
+POS-DIL-1 symmetry-rigid minimal companion      ✓[M]
+POS-DIL-1 full-rho same-space Hilbertization    ×[M] [enger Scope]
+POS-DIL-1 prime-moment positive embedding       ✓[M]
+OX-GEN-A2' overall                              ✓[M]_part
+```
+
+Warum nur `✓[M]_part` für A2' insgesamt:
+
+- der volle positive Prime-Gramoperator descendiert weiterhin nicht durch `E`;
+- der Zielbereich von `iota_N` bleibt zweidimensional;
+- noch nicht bewiesen ist, dass die Momentabbildung **kontraktiv** in der vorhandenen `G_a^+`-Featuregeometrie sitzt;
+- `log|D|`, `r_1` und `c_aI` sind noch nicht integriert.
+
+## 10. Neue operative Hauptfrage: POS-DIL-2 / FEATURE-SHORTING
+
+Für die vollständige positive Featureform `G_a^+` ist jetzt der schärfere, weiterhin nichtzirkuläre Gate:
+
+> **Ist die kanonische Prime-moment-Abbildung als kontraktive Postkompression bzw. als natürliches Shorting/Schur-Komplement der vorhandenen positiven Prime-/`log|D|`-Featuregeometrie realisierbar?**
+
+Eine erste scharfe Form lautet
+
+```math
+\boxed{\|\mathcal Ev\|^2\stackrel?\le G_a^+(v).}
+```
+
+bzw. typkorrekt nach Fixierung der Featureabbildung `\mathcal F_a^+` die Existenz eines **vorwärts definierten kontraktiven** Operators `C_a` mit
+
+```math
+C_a\mathcal F_a^+v=V_{N_a}v.
+```
+
+Beide Ausgänge sind logisch offen.
+
+- **PASS:** die minimale positive Rang-2-Masse sitzt tatsächlich kontraktiv in der bestehenden positiven Featuregeometrie.
+- **FAIL:** POS-DIL-1 bleibt gültig, aber nicht als kontraktiver Schur-/Defektbaustein von `G_a^+`; dann ist die Klasse mit Root/Hub-/`log|D|`-Struktur weiter zu verengen.
+
+## 11. Nächste Gates
+
+1. **POS-DIL-2 / FEATURE-SHORTING** — analytisch zuerst; Numerik nur als Gegenvektorsuche/Orientierung.
+2. **OX-GEN-B** — erst nach Klärung des positiven Feature-Gates `r_1` und/oder `c_aI` einbeziehen.
+3. **Spur B parallel:** AR(1)/Martingal-Faktorisierung theorem-ready verschriftlichen.
+
+## 12. Gesperrte Deutungen
 
 Nicht wieder aktivieren:
 
@@ -218,9 +355,10 @@ Nicht wieder aktivieren:
 - Kollaps von `||I-W^*W||`;
 - `0.603` als Konstante;
 - Prime-only-Rang-2-Gram ohne zusätzliche Quotientenstruktur;
-- Behauptung, die Generator-Ebene erkläre bereits `c_aI`.
+- Behauptung, POS-DIL-1 erkläre bereits `r_1` oder `c_aI`;
+- Behauptung, `rho` sei für die neue positive Hilbertnorm unitär.
 
-## 10. Governance
+## 13. Governance
 
 - PR #91 bleibt analytischer Draft ohne übertragenes unabhängiges Exact-Head-GREEN.
 - PR #49 ist formal Ready, inhaltlich aber weiterhin `candidate only; no merge requested yet`.
