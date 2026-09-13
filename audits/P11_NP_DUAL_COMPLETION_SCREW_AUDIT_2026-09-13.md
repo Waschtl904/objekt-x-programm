@@ -2,73 +2,52 @@
 
 **Date:** 2026-09-13  
 **Status:** theorem-level project audit; no Registry promotion.  
-**Parent main:** `d3842cd47c443a05fd2a2ff43ed8667ef713f31a` / PR #110.  
+**Parent main:** `d3842cd47c443a05fd2a2ff43ed8667ef713f31a` / PR #110.
 
 ## 1. Purpose
 
-PR #110 introduced the null-pole correlation gauge and the pole-cleared Prime discrepancy
+This audit performs the required redundancy check of the PR #110 pole-cleared discrepancy against Suzuki's screw-function representation, audits the proposed Turán/SDP reduction, and proves an exact factor-level finite-rank completion theorem for fixed-window null-pole positivity.
 
-```math
-d\mathfrak D(t)
-=\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}(dt)
--2\cosh(t/2)dt.
-```
+Main conclusions:
 
-This audit performs the required redundancy check against Suzuki's screw-function representation and then replaces the potentially over-relaxed scalar-autocorrelation SDP idea by an exact factor-level finite-rank completion theorem.
-
-The conclusions are:
-
-1. `\mathfrak D` is **not** a literature-new arithmetic object; it is exactly the derivative of the Prime+polar component already present in Suzuki's screw function.
-2. The null-pole use of that component as a correlation gauge remains an exact project identity.
-3. A scalar Turán formulation using only positive definiteness, support and one autocorrelation moment is **not equivalent** to the true null-pole class.
-4. Null-pole autocorrelations satisfy two exact linear necessary constraints, but these still do not characterize the factor-level null-pole condition.
-5. Fixed-window NP-GAP admits an exact rank-2 completion duality on the original function/form domain.
-6. A finite numerical SDP is not automatically a proof: a rigorous infinite-dimensional tail certificate is still required.
-
-No all-window positivity and no RH claim is made.
+1. the pole-cleared discrepancy is **not** a literature-new arithmetic object;
+2. its null-pole gauge use remains exact;
+3. scalar autocorrelation constraints do not exactly encode the two null-pole factor constraints;
+4. fixed-window NP-GAP is exactly expressible as a rank-2 completion problem on the form domain;
+5. finite numerical SDP positivity is not a theorem without rigorous tail control.
 
 ---
 
-## 2. Imported COMMON-JUMP notation
+## 2. COMMON-JUMP notation
 
-For fixed `a>0`, on functions supported in `(-a,a)`, let
+For fixed `a>0`, let
 
 ```math
 q_a(v,w)
 :=\langle X_av,X_aw\rangle-\Gamma_a\langle v,w\rangle,
 ```
 
-with
+and
 
 ```math
-\Gamma_a
-=2\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}
-+\kappa_*,
-\qquad
-\kappa_*=\log\pi-\psi(1/4).
+\mathcal Ev=(E_+(v),E_-(v))^T,
 ```
 
-Define the two moment functionals
+where
 
 ```math
 E_+(v)=\int_{-a}^a v(x)e^{x/2}dx,
 \qquad
-E_-(v)=\int_{-a}^a v(x)e^{-x/2}dx,
-```
-
-and the moment map
-
-```math
-\mathcal Ev=(E_+(v),E_-(v))^T\in\mathbb C^2.
+E_-(v)=\int_{-a}^a v(x)e^{-x/2}dx.
 ```
 
 Then
 
 ```math
-D_{NP}(a)=\ker\mathcal E,
+D_{NP}(a)=\ker\mathcal E.
 ```
 
-and the full local Weil form is
+The full local Weil form is
 
 ```math
 \boxed{
@@ -79,17 +58,13 @@ P=\begin{pmatrix}0&1\\1&0\end{pmatrix}.
 }
 ```
 
-Thus on null-pole,
-
-```math
-Q_W^a=q_a.
-```
+Thus `Q_W^a=q_a` on null-pole.
 
 ---
 
-## 3. Literature audit: `\mathfrak D` is contained in Suzuki's screw function `✓[M]`
+## 3. Screw-function redundancy of the discrepancy `✓[M]`
 
-Suzuki, *Weil's quadratic form via the screw function* (arXiv:2606.09096v2), writes the screw function with the explicit Prime/polar part
+Suzuki, *Weil's quadratic form via the screw function* (arXiv:2606.09096v2), contains the explicit Prime/polar pieces
 
 ```math
 g_0(t)
@@ -102,74 +77,73 @@ and
 r_0(t)=-4(e^{t/2}+e^{-t/2}-2).
 ```
 
-For `t>0` away from Prime-Power jump points,
+For `t>0`, away from jump points,
 
 ```math
 \frac d{dt}g_0(t)
 =\sum_{\log n\le t}\frac{\Lambda(n)}{\sqrt n},
 ```
 
-while
+and
 
 ```math
-\frac d{dt}r_0(t)
-=-2e^{t/2}+2e^{-t/2}
-=-4\sinh(t/2).
+\frac d{dt}r_0(t)=-4\sinh(t/2).
 ```
 
-Therefore
+Therefore the PR #110 cumulative discrepancy
+
+```math
+\mathfrak D(t)
+=\sum_{\log n\le t}\frac{\Lambda(n)}{\sqrt n}-4\sinh(t/2)
+```
+
+satisfies
 
 ```math
 \boxed{
-\mathfrak D(t)
-=\frac d{dt}\bigl(g_0(t)+r_0(t)\bigr),
-\qquad t>0.
+\mathfrak D(t)=\frac d{dt}(g_0(t)+r_0(t)),\qquad t>0.
 }
 ```
 
 Distributionally on the positive half-line,
 
 ```math
-\boxed{
-d\mathfrak D=(g_0+r_0)''.
-}
+\boxed{d\mathfrak D=(g_0+r_0)''.}
 ```
 
-Hence:
+Suzuki also realizes the localized Weil form through the screw kernel by `B_a=D^*G_aD`. Hence the Prime+polar block is structurally canonical and literature-known.
+
+Status:
 
 ```text
-pole-cleared discrepancy identity                    ✓[M]
-D as a literature-new arithmetic object              ×[M]
-null-pole gauge/use of this known component           ✓[M]
-publication novelty of the use/architecture           ?[O]
+pole-cleared discrepancy identity                   ✓[M]
+D as literature-new arithmetic object               ×[M]
+null-pole gauge/use of known Prime+polar block       ✓[M]
+publication novelty of architecture/use              ?[O]
 ```
-
-This correction does not invalidate PR #110's identities; it only corrects novelty interpretation.
-
-Suzuki also relates the full screw kernel directly to the localized Weil form through `B_a=D^*G_aD`, so the appearance of this Prime+polar block is structurally canonical rather than fitted.
 
 ---
 
 ## 4. External fixed-window baseline / Landau--Widom firewall
 
-Xuefeng Zhu, *Weil positivity in compact windows: a finite reduction, certified two-sided bounds, and a Landau--Widom decay law* (arXiv:2608.24827v2), gives an unconditional full-class certificate at window radius `L=0.8`:
+Xuefeng Zhu, arXiv:2608.24827v2, gives an unconditional full-class certificate
 
 ```math
-Q(f)\ge 8.9\times10^{-18}\|f\|_2^2.
+Q(f)\ge 8.9\times10^{-18}\|f\|_2^2
 ```
 
-The same work obtains extremely small certified upper bounds at larger windows and identifies the Landau--Widom plunge scale, while explaining a doubly-exponential frequency barrier for its pointwise-envelope lower-bound route.
+at window radius `a=0.8`, together with extremely small certified upper bounds at larger windows and a Landau--Widom plunge law. The same work identifies a doubly-exponential frequency barrier for its pointwise-envelope lower-bound route.
 
-Project consequence:
+Consequences:
 
-- a future fixed-window certificate below or at `a=0.8` is not a literature extension;
-- any computational NP-DUAL certificate intended as a new fixed-window result should target `a>0.8`;
-- tiny positive gaps are expected and must not be interpreted as evidence of a missing macroscopic term;
-- any finite-matrix route requires a rigorous tail mechanism.
+- a new fixed-window literature extension must target `a>0.8`;
+- tiny positive gaps are expected;
+- finite-matrix positivity needs an independent rigorous tail mechanism;
+- this project's completion formulation is not claimed to have overcome Zhu's barrier until such a tail theorem exists.
 
 ---
 
-## 5. Autocorrelation transform and loss of factor information
+## 5. Autocorrelation transform and factor-information loss
 
 For `v\in L^2(-a,a)` define
 
@@ -177,15 +151,21 @@ For `v\in L^2(-a,a)` define
 C_v(t)=\langle T_tv,v\rangle.
 ```
 
-Then `C_v(-t)=\overline{C_v(t)}` and `supp(C_v)\subset[-2a,2a]`.
+Then
 
-For real `s`, direct Fubini calculation gives the bilateral Laplace transform
+```math
+C_v(-t)=\overline{C_v(t)},
+\qquad
+\operatorname{supp}C_v\subset[-2a,2a].
+```
+
+For real `s`, Fubini gives
 
 ```math
 \boxed{
 H_v(s)
 :=\int_{\mathbb R}e^{st}C_v(t)dt
-=E_s(v)\,\overline{E_{-s}(v)},
+=E_s(v)\overline{E_{-s}(v)},
 }
 ```
 
@@ -195,47 +175,25 @@ where
 E_s(v)=\int_{-a}^a v(x)e^{sx}dx.
 ```
 
-At `s=1/2`, null-pole means
-
-```math
-E_{1/2}(v)=E_{-1/2}(v)=0.
-```
-
-Therefore `H_v` has a zero of order at least two at `s=1/2` (and by symmetry at `-1/2`).
-
-### Information loss
-
-The scalar autocorrelation sees the **product**
-
-```math
-E_s(v)\overline{E_{-s}(v)},
-```
-
-not the two factors separately. Thus a scalar positive-definite function satisfying the induced moment conditions need not come from a factor satisfying both null-pole conditions.
-
-This is the basic firewall against treating a one-moment Turán program as an exact reformulation.
+Thus the scalar autocorrelation sees only the **product** of the two factors. It forgets how zeros are distributed between `E_s(v)` and `E_{-s}(v)`.
 
 ---
 
 ## 6. Two exact necessary autocorrelation gauges `✓[M]`
 
-Restrict for clarity to real `v`; complex positivity splits into real and imaginary parts because all kernels and moment functionals are real.
-
-Then `C_v` is real and even, and
+For real `v`, `C_v` is real and even, hence
 
 ```math
 H_v(s)=2\int_0^{2a}C_v(t)\cosh(st)dt.
 ```
 
-Null-pole gives
+If `v\in D_{NP}(a)`, then
 
 ```math
-H_v(1/2)=0,
-\qquad
-H_v'(1/2)=0.
+E_{1/2}(v)=E_{-1/2}(v)=0.
 ```
 
-Hence every real null-pole autocorrelation satisfies
+So `H_v` has a zero of order at least two at `s=1/2`. Therefore
 
 ```math
 \boxed{
@@ -249,34 +207,25 @@ and
 ```math
 \boxed{
 L_1(C_v)
-:=\int_0^{2a}t\,C_v(t)\sinh(t/2)dt=0.
+:=\int_0^{2a}tC_v(t)\sinh(t/2)dt=0.
 }
 ```
 
-Consequently, on the null-pole class one may add to the Prime measure any linear combination
+Hence one may change the Prime measure, on the null-pole class, by any linear combination
 
 ```math
-\eta_0\cosh(t/2)dt
-+\eta_1 t\sinh(t/2)dt
+\eta_0\cosh(t/2)dt+\eta_1t\sinh(t/2)dt.
 ```
 
-without changing its pairing with `C_v`.
-
-The canonical pole-cleared choice from PR #110 corresponds, under this normalization, to
-
-```math
-(\eta_0,\eta_1)=(2,0).
-```
-
-The second coefficient is a genuine dual gauge parameter available to extremal/SDP certificates.
+The PR #110 canonical pole-cleared gauge is `(eta_0,eta_1)=(2,0)` under this normalization.
 
 ---
 
-## 7. Even the two scalar constraints are not sufficient `×[M]`
+## 7. Scalar Turán constraints are not exact `×[M]`
 
-The conditions `L_0(C)=L_1(C)=0` are necessary but still do not characterize null-pole factors.
+Even `L_0=L_1=0` does not imply factor-level null-pole.
 
-Indeed the three real linear functionals on `C_c^\infty(-a,a)`
+The three real linear functionals
 
 ```math
 v\mapsto E_{1/2}(v),
@@ -286,7 +235,7 @@ v\mapsto E'_{1/2}(v)=\int xv(x)e^{x/2}dx,
 v\mapsto E_{-1/2}(v)
 ```
 
-are linearly independent because the functions
+are independent because
 
 ```math
 e^{x/2},\qquad xe^{x/2},\qquad e^{-x/2}
@@ -294,7 +243,7 @@ e^{x/2},\qquad xe^{x/2},\qquad e^{-x/2}
 
 are linearly independent on every nonempty interval.
 
-Hence there exists real `v\in C_c^\infty(-a,a)` such that
+Therefore there exists real `v\in C_c^\infty(-a,a)` with
 
 ```math
 E_{1/2}(v)=E'_{1/2}(v)=0,
@@ -302,44 +251,34 @@ E_{1/2}(v)=E'_{1/2}(v)=0,
 E_{-1/2}(v)\ne0.
 ```
 
-For this `v`,
+Its autocorrelation satisfies `L_0=L_1=0`, but `v\notin D_{NP}(a)`.
 
-```math
-H_v(1/2)=H_v'(1/2)=0,
-```
-
-so its autocorrelation satisfies both `L_0=L_1=0`, but `v\notin D_{NP}(a)`.
-
-Therefore:
+Hence:
 
 ```text
-one-moment Turan class = exact null-pole class         ×[M]
-two scalar double-zero moments = exact null-pole class ×[M]
-L0,L1 as necessary linear gauges                       ✓[M]
+one scalar moment = exact null-pole class             ×[M]
+two scalar double-zero moments = exact null-pole      ×[M]
+L0,L1 as necessary linear gauges                      ✓[M]
 ```
 
-A scalar Turán/positive-definite optimization with these constraints is an **outer relaxation**. A positivity certificate on the relaxation is sufficient for NP-GAP, but a counterexample in the relaxation does not falsify NP-GAP.
+A scalar positive-definite/Turán optimization is an **outer relaxation**. Positivity on that larger class is sufficient for NP-GAP; failure on the relaxation does not falsify NP-GAP.
 
 ---
 
-## 8. Form-domain setup for exact duality
+## 8. Form-domain setup
 
-Let `\mathcal D_a` be the closed form domain of `q_a` on `L^2(-a,a)` (or initially the smooth core, followed by closure).
-
-Because the COMMON-JUMP positive part is nonnegative,
+Let `\mathcal D_a` be the closed form domain of `q_a`. Since the COMMON-JUMP positive part is nonnegative,
 
 ```math
 q_a(v)\ge-\Gamma_a\|v\|_2^2.
 ```
 
-Thus the shifted form
+Define the positive shifted form
 
 ```math
 p_a(v,w)
-:=q_a(v,w)+(\Gamma_a+1)\langle v,w\rangle
+=q_a(v,w)+(\Gamma_a+1)\langle v,w\rangle.
 ```
-
-is positive and defines a form norm.
 
 The moment map
 
@@ -347,12 +286,12 @@ The moment map
 \mathcal E:\mathcal D_a\to\mathbb C^2
 ```
 
-is continuous in the form norm because each `E_\pm` is already bounded on `L^2(-a,a)`.
+is continuous in the form norm because it is already bounded on `L^2(-a,a)`.
 
-It is surjective on the smooth core: choose two compactly supported smooth correctors whose moment vectors are linearly independent. Hence there exists a bounded finite-dimensional right inverse
+It is surjective on the smooth core: the two weights `e^{x/2}` and `e^{-x/2}` are linearly independent, so two smooth compactly supported correctors with independent moment vectors can be chosen. Thus there is a finite-dimensional right inverse
 
 ```math
-R_a:\mathbb C^2\to C_c^\infty(-a,a)\subset\mathcal D_a,
+R_a:\mathbb C^2\to C_c^\infty(-a,a),
 \qquad
 \mathcal ER_a=I_2.
 ```
@@ -369,25 +308,26 @@ y=\mathcal Ev.
 
 ---
 
-## 9. Strict rank-2 completion theorem `✓[M]`
+## 9. Strict rank-2 completion equivalence `✓[M]`
 
 ### Theorem
 
-Assume there exists `\delta>0` such that
+The following are equivalent.
+
+**(A)** There exists `delta>0` such that
 
 ```math
 q_a(k)\ge\delta\|k\|_2^2
-\qquad
-(k\in\ker\mathcal E).
+\qquad(k\in\ker\mathcal E).
 ```
 
-Then there exists `\lambda_a>0` such that
+**(B)** There exist `lambda>0` and `mu>0` such that
 
 ```math
 \boxed{
-q_a(v)+\lambda_a\|\mathcal Ev\|_{\mathbb C^2}^2\ge0
-\qquad
-(v\in\mathcal D_a).
+q_a(v)+\lambda\|\mathcal Ev\|_{\mathbb C^2}^2
+\ge\mu\|v\|_2^2
+\qquad(v\in\mathcal D_a).
 }
 ```
 
@@ -395,23 +335,13 @@ Equivalently,
 
 ```math
 \boxed{
-q_a+\lambda_a\mathcal E^*\mathcal E\succeq0
+q_a+\lambda\mathcal E^*\mathcal E\succeq\mu I.
 }
 ```
 
-as a form on the full domain.
+### Proof `(A)=> (B)`
 
-Conversely, any Hermitian completion
-
-```math
-q_a(v)+\langle H\mathcal Ev,\mathcal Ev\rangle\ge0
-```
-
-implies `q_a\ge0` on `ker E`.
-
-### Proof
-
-Write `v=k+R_ay`, `k\in ker E`, `y=Ev`.
+Write `v=k+R_ay`.
 
 Since `p_a` is positive,
 
@@ -420,49 +350,67 @@ Since `p_a` is positive,
 \le p_a(k)^{1/2}p_a(R_ay)^{1/2}.
 ```
 
-On `ker E`, strict coercivity gives
+On `ker E`, assumption `(A)` gives
 
 ```math
 p_a(k)
-=q_a(k)+(\Gamma_a+1)\|k\|^2
 \le\left(1+\frac{\Gamma_a+1}{\delta}\right)q_a(k).
 ```
 
 Because `R_a\mathbb C^2` is finite dimensional, there are constants `C_1,C_2` such that
 
 ```math
-|q_a(k,R_ay)|\le C_1 q_a(k)^{1/2}|y|,
+|q_a(k,R_ay)|\le C_1q_a(k)^{1/2}|y|,
 ```
-
-and
 
 ```math
 q_a(R_ay)\ge-C_2|y|^2.
 ```
 
-Therefore
+Thus
 
 ```math
 q_a(v)
-\ge q_a(k)-2C_1q_a(k)^{1/2}|y|-C_2|y|^2
-\ge\frac12q_a(k)-C_3|y|^2.
+\ge\frac12q_a(k)-C_3|y|^2
+\ge\frac\delta2\|k\|^2-C_3|y|^2.
 ```
 
-Taking `\lambda_a\ge C_3` gives the result.
+Choose `lambda>C_3`. Since `R_a` is bounded and
 
-The reverse implication follows by setting `Ev=0`.
+```math
+v=k+R_ay,
+```
 
-### Interpretation
+there exists `C_R>0` with
 
-Strict NP-GAP at fixed `a` is equivalent to existence of a positive **rank-at-most-two completion** of the centered COMMON-JUMP form. A general Hermitian `2x2` matrix `H_a` may be optimized, but existence already follows with `H_a=\lambda_a I_2`.
+```math
+\|v\|^2\le C_R(\|k\|^2+|y|^2).
+```
+
+Therefore for some `mu>0`,
+
+```math
+q_a(v)+\lambda|y|^2
+\ge\mu\|v\|^2.
+```
+
+### Proof `(B)=> (A)`
+
+For `k\in ker E`, the completion term vanishes, so
+
+```math
+q_a(k)\ge\mu\|k\|^2.
+```
+
+This proves exact strict equivalence.
+
+A general Hermitian `2x2` matrix `H_a` can be used in place of scalar `lambda I`; scalar completion already suffices for existence.
 
 ---
 
 ## 10. Exact semidefinite epsilon-completion `✓[M]`
 
-Without a strict margin, a fixed finite completion need not exist because null directions can couple linearly to the two-dimensional complement.
-
-The exact semidefinite statement is:
+The semidefinite statement is
 
 ```math
 \boxed{
@@ -474,118 +422,87 @@ q_a+\varepsilon I+
 }
 ```
 
-### Forward direction
+### Forward
 
 If `q_a\ge0` on `ker E`, then
 
 ```math
-q_a(k)+\varepsilon\|k\|^2\ge\varepsilon\|k\|^2
+q_a+\varepsilon I\ge\varepsilon I
 ```
 
-is strict there. Apply the strict theorem to the shifted form `q_a+\varepsilon I`.
+there. Apply the strict theorem to the shifted form.
 
-### Reverse direction
+### Reverse
 
-Restrict the completed inequality to `ker E`:
+Restrict to `ker E`:
 
 ```math
 q_a(k)+\varepsilon\|k\|^2\ge0.
 ```
 
-Let `\varepsilon\downarrow0`.
+Let `epsilon` decrease to zero.
 
-This is the exact fixed-window dual reformulation appropriate for the potentially zero-gap case.
+A fixed completion need not exist at a genuinely semidefinite boundary because null directions can couple linearly to the two-dimensional complement. The epsilon formulation is therefore the safe exact equivalence.
 
 ---
 
-## 11. Connection with the actual Weil pole block
+## 11. Relation to the actual Weil pole block
 
-Recall
+The full Weil form is
 
 ```math
-Q_W^a
-=q_a+\mathcal E^*P\mathcal E,
+Q_W^a=q_a+\mathcal E^*P\mathcal E,
 \qquad
 P=\begin{pmatrix}0&1\\1&0\end{pmatrix}.
 ```
 
 Therefore:
 
-- `H=P` is not an arbitrary completion: it is exactly the physical/classical pole block of the full Weil form;
-- proving
-  ```math
-  q_a+\mathcal E^*P\mathcal E\succeq0
-  ```
-  is full fixed-window Weil positivity;
-- NP-GAP on the null-pole class asks only for positivity on `ker E`, equivalently for existence of **some** completion (strictly, or with epsilon in the semidefinite case), not necessarily `P`.
+- `H=P` is exactly the classical pole block;
+- `q_a+E^*PE>=0` is full fixed-window Weil positivity;
+- null-pole positivity asks only for positivity of `q_a` on `ker E`, equivalently for some completion in the strict/epsilon sense;
+- existence of an arbitrary completion does **not** identify the physical pole matrix `P`.
 
-This gives a concrete finite-dimensional dual parameter space without pretending that the final Weil pole matrix has already been recovered.
+This is an exact finite-rank dual interface, not yet a full positive Object-X realization.
 
 ---
 
-## 12. Why this is a better SDP interface
+## 12. Turán / Fejer--Riesz scope correction
 
-A discretized SDP can now optimize over:
+The scalar autocorrelation class is genuinely Turán-like: positive definite and compactly supported. Boas--Kac--Krein type factorization explains why half-support convolution roots are natural.
 
-1. coefficients of `v` in a predeclared basis;
-2. a Hermitian `2x2` completion matrix `H` (four real parameters), or simply a scalar penalty `lambda`;
-3. rigorous tail/envelope variables needed to certify the infinite-dimensional remainder.
+But:
 
-The null-pole constraints are preserved **exactly at factor level** rather than replaced by a scalar autocorrelation moment.
+1. scalar autocorrelation loses factor zero allocation;
+2. the exact null-pole constraints live on the factor map `E`;
+3. continuous Turán duality is not automatic merely because finite-group/finite-polynomial duality is familiar;
+4. an exact finite SDP still requires a separate discretization and tail theorem.
 
-However:
+Thus scalar Turán/SDP remains a sufficient relaxation or exploratory tool. `NP-DUAL-COMP` is the exact route.
+
+---
+
+## 13. Computational theorem gate
+
+Current literature already certifies full-class positivity through `a=0.8`. The first potentially new fixed-window stress test is therefore
 
 ```text
-finite PSD matrix without tail control != theorem
+a_test=1.0.
 ```
 
-A rigorous certificate must include an analytic or interval-certified bound on the orthogonal complement / unresolved frequency tail.
+A valid certificate must predeclare and then rigorously verify:
 
-Zhu's 2026 fixed-window work illustrates both the power and the severe scaling limits of one such finite-envelope strategy. The present completion formulation does not by itself prove that the doubly-exponential barrier is avoided.
+1. basis and truncation;
+2. interval entries for the form and both moment rows;
+3. an optimized Hermitian `2x2` completion `H` or scalar `lambda`;
+4. Arb PSD of the resolved block;
+5. a rigorous lower bound for the unresolved tail / Schur complement.
 
----
-
-## 13. Turán / Fejer--Riesz scope correction
-
-The scalar autocorrelation problem is genuinely related to Turán-type extremal problems: `C_v` is positive definite and compactly supported.
-
-Boas--Kac--Krein factorization supplies half-support convolution roots under suitable hypotheses. Nevertheless, two cautions are binding here:
-
-1. the scalar autocorrelation forgets which factor carries the two zeros at `±1/2`;
-2. continuous Turán duality is an infinite-dimensional theorem and an exact finite SDP does not appear automatically from the words “Fejer--Riesz”.
-
-The recent Kolountzakis--Lev--Matolcsi work explicitly distinguishes the automatic finite-group duality from the continuous case, where duality requires proof.
-
-Therefore scalar Turán/SDP remains useful as a **sufficient relaxation** or exploratory dual, while `NP-DUAL-COMP` on the factor/form domain is the exact route.
+A positive finite Galerkin eigenvalue alone remains diagnostic, because finite subspace minima are upper bounds for the true infimum.
 
 ---
 
-## 14. Recommended computational theorem gate
-
-The next theorem-producing numerical target should not repeat known short-window positivity.
-
-Predeclare a fixed radius
-
-```text
-a_test > 0.8
-```
-
-with `a_test=1.0` the natural first stress point.
-
-Required certificate architecture:
-
-1. choose a fixed basis and truncation rule before observing the sign;
-2. build the interval matrix of `q_a` and the exact two moment rows;
-3. optimize a Hermitian `2x2` completion `H` or scalar `lambda`;
-4. prove PSD of the resolved block in Arb;
-5. prove a rigorous lower bound for the unresolved tail / Schur complement;
-6. only then promote a fixed-window positivity theorem.
-
-A positive finite Galerkin eigenvalue alone remains only an upper-bound diagnostic for the true infimum.
-
----
-
-## 15. Status
+## 14. Status
 
 ```text
 COMMON-JUMP architecture                               ✓[M]
@@ -594,10 +511,9 @@ prime/polar discrepancy identity                       ✓[M]
 D as literature-new arithmetic object                  ×[M]
 Suzuki screw redundancy of D                           ✓[M]
 null-pole correlation gauge/use                        ✓[M]
-one-moment Turan = exact null-pole class               ×[M]
-two scalar double-zero moments = exact null-pole       ×[M]
 L0,L1 necessary autocorrelation gauges                 ✓[M]
-strict rank-2 completion equivalence                   ✓[M]
+scalar Turan moments = exact null-pole class            ×[M]
+strict rank-2 coercive completion equivalence          ✓[M]
 semidefinite epsilon-completion equivalence             ✓[M]
 finite exact SDP certificate beyond a=0.8              ?[O]
 all-a NP-GAP / completion                              ?[O]
@@ -608,17 +524,15 @@ publication novelty of architecture/use                ?[O]
 
 Registry and Object-X working definition remain unchanged.
 
----
-
-## 16. Firewalls
+## 15. Firewalls
 
 Do not claim:
 
 - `mathfrak D` itself is a new arithmetic object;
 - one or two scalar autocorrelation moments characterize null-pole factors;
-- Fejer--Riesz/Turan automatically yields a finite exact SDP;
+- Turán/Fejer--Riesz automatically gives a finite exact SDP;
 - a finite PSD truncation proves the infinite-dimensional gap without tail control;
-- existence of an arbitrary completion `H` identifies the Weil pole matrix `P`;
+- existence of an arbitrary completion identifies the Weil pole matrix `P`;
 - fixed-window positivity is RH-equivalent;
 - all-window NP-GAP, Object X, or RH is solved;
 - publication novelty is established.
