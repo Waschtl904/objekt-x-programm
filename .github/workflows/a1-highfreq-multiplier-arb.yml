@@ -1,0 +1,32 @@
+name: A1 high-frequency multiplier Arb certificate
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  a1-highfreq:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5cdfd6c8c55ca9469853a32dbbb03 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Install exact numerical dependency
+        run: python -m pip install python-flint==0.9.0
+      - name: Run exact-head a=1 high-frequency certificate
+        run: |
+          set -euo pipefail
+          git rev-parse HEAD
+          git hash-object scripts/check_a1_highfreq_multiplier_arb.py
+          python scripts/check_a1_highfreq_multiplier_arb.py | tee a1_highfreq_multiplier_arb.log
+          grep -q 'CERTIFIED: m_1(xi) > 0.04 for every |xi| >= 2300' a1_highfreq_multiplier_arb.log
+          grep -q 'CERTIFIED: any Prolate tail with band concentration <= 0.0035 is q_1-positive' a1_highfreq_multiplier_arb.log
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: a1-highfreq-multiplier-arb
+          path: a1_highfreq_multiplier_arb.log
