@@ -54,6 +54,8 @@ GAMMA1 = KAPPA + 2 * W
 
 OMEGA = arb(2300)
 TARGET = arb("0.04")
+RHO = arb("0.0035")
+TAIL_TARGET = arb("0.0005")
 N = 64
 
 
@@ -89,21 +91,28 @@ def main() -> None:
 
     # Global form lower bound q_1 >= -Gamma_1 ||v||^2.
     rho_star = TARGET / (TARGET + GAMMA1)
-    rho_floor = arb("0.0035")
-    if not (rho_star > rho_floor):
+    if not (rho_star > RHO):
         raise RuntimeError(f"Prolate concentration threshold too small: rho*={rho_star}")
 
+    # If band concentration <= RHO, then
+    # q_1(v) >= TARGET*(1-RHO)||v||^2 - GAMMA1*RHO||v||^2.
+    tail_margin = TARGET - (TARGET + GAMMA1) * RHO
+    if not (tail_margin > TAIL_TARGET):
+        raise RuntimeError(f"certified Prolate-tail margin too small: margin={tail_margin}")
+
     print("A1 high-frequency multiplier Arb certificate")
-    print(f"prec_bits = {ctx.prec}")
-    print(f"W         = {W.str(40)}")
-    print(f"Gamma_1   = {GAMMA1.str(40)}")
-    print(f"Omega     = {OMEGA.str(20, radius=False)}")
-    print(f"N_series  = {N}")
-    print(f"m1 lower  = {lb.str(50)}")
-    print(f"target c  = {TARGET.str(20, radius=False)}")
-    print(f"rho_*     = {rho_star.str(50)}")
+    print(f"prec_bits   = {ctx.prec}")
+    print(f"W           = {W.str(40)}")
+    print(f"Gamma_1     = {GAMMA1.str(40)}")
+    print(f"Omega       = {OMEGA.str(20, radius=False)}")
+    print(f"N_series    = {N}")
+    print(f"m1 lower    = {lb.str(50)}")
+    print(f"target c    = {TARGET.str(20, radius=False)}")
+    print(f"rho_*       = {rho_star.str(50)}")
+    print(f"rho chosen  = {RHO.str(20, radius=False)}")
+    print(f"tail margin = {tail_margin.str(50)}")
     print("CERTIFIED: m_1(xi) > 0.04 for every |xi| >= 2300")
-    print("CERTIFIED: any Prolate tail with band concentration <= 0.0035 is q_1-positive")
+    print("CERTIFIED: band concentration <= 0.0035 implies q_1-tail margin > 0.0005")
 
 
 if __name__ == "__main__":
