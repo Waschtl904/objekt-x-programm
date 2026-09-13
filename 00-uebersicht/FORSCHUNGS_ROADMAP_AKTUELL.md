@@ -1,219 +1,146 @@
-# Objekt X — kanonische Forschungsroadmap v3.6
+# Objekt X — kanonische Forschungsroadmap v3.7
 
 > **Stand:** 13. September 2026; Registry und Arbeitsdefinition unverändert.
 
-## Gate C0 — Gesicherte Architektur
+## Gate C0 — Gesicherte Architektur `✓[M]`
 
 ```text
-COMMON-JUMP / Q0                    ✓[M]
-centered Prime-overlap              ✓[M]
-per-prime AR(1) fibers             ✓[M]
+COMMON-JUMP / Q0
+rank-2 completion
+Morse-index filters
+reflection/parity reduction
+canonical lambda=1 identity
 ```
 
-Auf Nullpol ist `Q_W=q_a` mit
+Fixed-window Nullpolpositivität ist exakt ein zweikanaliges Completionproblem.
+
+## Gate C1 — `a=1` exact multiplier `✓[M]`
+
+Für zeitbegrenztes `v` auf `(-1,1)` gilt exakt
 
 ```math
-q_a=X_a^*X_a-\Gamma_a I,
-\qquad
-D_{NP}(a)=\ker\mathcal E,
-\qquad
-\mathcal E=(E_+,E_-).
+q_1(v)=\int m_1(\xi)|\widehat v(\xi)|^2d\xi,
 ```
-
-## Gate C1 — Screw redundancy `✓[M] / ×[M]`
-
-Die pole-cleared Diskrepanz ist der Prime+Polar-Ableitungsblock von Suzukis Screw-Funktion:
 
 ```math
-\mathfrak D=(g_0+r_0)'.
+m_1(\xi)=
+\operatorname{Re}\psi\left(\frac14+\frac{i\xi}{2}\right)-\log\pi
+-2\sum_{n\in\{2,3,4,5,7\}}
+\frac{\Lambda(n)}{\sqrt n}\cos(\xi\log n).
 ```
 
-Die Identität bleibt gültig; Neuheit des arithmetischen Objekts ist `×[M]`.
+Kein zusätzlicher Fensterrest tritt im quadratischen Wert auf.
 
-## Gate C2 — Autocorrelation relaxation
+## Gate C2 — High-frequency positivity `✓[K/M]`
 
-Nullpol erzeugt zwei notwendige lineare Autokorrelationsbedingungen
+Ein Exact-Head-Arb-Zertifikat beweist
 
 ```math
-L_0(C)=0,
-\qquad
-L_1(C)=0,
+\boxed{m_1(\xi)>0.04\quad(|\xi|\ge2300).}
 ```
 
-aber sie charakterisieren `E_+=E_-=0` auf Faktorebene nicht.
+Die globale grobe Untergrenze lautet `m_1>=-Gamma_1`.
+
+## Gate C3 — Prolate tail `✓[K/M]`
+
+Für den Zeit-Band-Konzentrationsoperator auf `[-1,1]` mit Band `[-2300,2300]` ist `c=2300`.
+
+Karnik--Romberg--Davenport Corollary 3 plus Arb liefert
+
+```math
+\boxed{\lambda_{1490}(2300)<0.0035.}
+```
+
+Daraus folgt für den orthogonalen Prolate-Tail
+
+```math
+\boxed{q_1(v)>0.01\|v\|^2\qquad(v\in T_{1490}).}
+```
+
+Damit ist der unendlichdimensionale Tail selbst geschlossen.
+
+## Gate C4 — Parity-compatible finite reduction
+
+Die ersten `1490` timelimitierten PSWF-Moden zerfallen in
 
 ```text
-scalar Turan relaxation as sufficient certificate   allowed
-scalar Turan relaxation as exact equivalence        ×[M]
+745 even + 745 odd.
 ```
 
-## Gate C3 — Exact finite-rank completion `✓[M]`
+Der Completionblock bleibt dadurch mit der bereits theorematischen even/odd Dualität kompatibel.
 
-### strict coercive equivalence
+## Gate C5 — A1-SCHUR `?[O]`
+
+Setze
+
+```math
+A_1=q_1+\mathcal E^*\mathcal E
+```
+
+und zerlege
+
+```math
+L^2(-1,1)=R_{1490}\oplus T_{1490}.
+```
+
+Bereits bewiesen:
+
+```math
+A_{TT}>0.01I.
+```
+
+Offen ist
 
 ```math
 \boxed{
-q_a\ge\delta I\text{ on }\ker\mathcal E
-\iff
-\exists\lambda,\mu>0:
-q_a+\lambda\mathcal E^*\mathcal E\succeq\mu I.
+A_{RR}-A_{RT}A_{TT}^{-1}A_{TR}\succeq0.
 }
 ```
 
-### semidefinite exact equivalence
+Pflichten:
+
+1. PSWF-resolved Formmatrix und Momentzeilen rigoros einschließen;
+2. `lambda=1` zuerst testen;
+3. finite Inertia/PSD zertifizieren;
+4. `||A_RT||` rigoros einschließen;
+5. finalen Schur-Komplement-Bound schließen.
+
+Ein einfacher ausreichender Gate wäre
 
 ```math
-\boxed{
-q_a\ge0\text{ on }\ker\mathcal E
-\iff
-\forall\varepsilon>0\ \exists\lambda_\varepsilon>0:
-q_a+\varepsilon I+\lambda_\varepsilon\mathcal E^*\mathcal E\succeq0.
-}
-```
-
-Ein general Hermitian `2x2` block may be optimized; scalar `lambda I` already suffices for existence in the strict theorem.
-
-## Gate C4 — Morse-index filters `✓[M]`
-
-For any Hermitian completion `H`:
-
-```math
-q_a+\mathcal E^*H\mathcal E\succeq0
-\Longrightarrow
-n_-(q_a)\le n_+(H)\le2.
-```
-
-Hence
-
-```text
-certified n_-(q_a) >= 3  => no rank-2 NP completion
-```
-
-For the physical pole matrix
-
-```math
-P=\begin{pmatrix}0&1\\1&0\end{pmatrix}
-```
-
-one has `n_+(P)=1`, so
-
-```text
-Q_W^a >= 0 => n_-(q_a) <= 1.
-```
-
-A certified second negative direction therefore rules out the physical `P`-completion at that fixed window.
-
-## Gate C5 — Reflection/parity reduction `✓[M]`
-
-Reflection exchanges `E_+` and `E_-`. Any valid Hermitian completion can be averaged with its reflection, so only
-
-```math
-H=\begin{pmatrix}\alpha&\beta\\\beta&\alpha\end{pmatrix}
-```
-
-with real `alpha,beta` need be considered.
-
-In even/odd moment coordinates:
-
-```math
-H\sim\operatorname{diag}(h_e,h_o),
+A_{RR}\succeq\mu_RI,
 \qquad
-P\sim\operatorname{diag}(+1,-1).
+\|A_{RT}\|^2\le0.01\mu_R.
 ```
 
-Thus the optimized dual has only two real parameters.
+## Gate C6 — fixed-window `a=1` completion `?[O]`
 
-If the physical Weil form is positive, the odd sector of `q_a` is automatically nonnegative and every negative direction of `q_a` is even.
-
-## Gate C6 — Canonical candidate `lambda=1` `✓[M]`
-
-```math
-\boxed{
-q_a+\mathcal E^*\mathcal E
-=Q_W^a+\mathcal E^*(I-P)\mathcal E,
-\qquad I-P\succeq0.
-}
-```
-
-Therefore physical fixed-window Weil positivity would automatically imply the scalar completion `lambda=1`.
-
-`lambda=1` is the first **predeclared** completion candidate for `a=1`, not a fitted parameter.
-
-## Gate C7 — Non-certified `a=1` diagnostic
-
-Predeclared nested Dirichlet basis:
-
-```math
-\phi_n(x)=\sin\left(\frac{n\pi(x+1)}2\right),
-\qquad -1<x<1.
-```
-
-Observed restricted Ritz minima:
+Nur wenn C5 grün ist, wird
 
 ```text
-N=4    ~8.22e-4
-N=6    ~6.21e-7
-N=8    ~3.26e-9
-N=10   ~2.70e-9
-N=12   ~6.67e-11
+certified a=1 null-pole completion
 ```
 
-At `N=12`, the full `q_1` block displayed one numerical negative direction, in the even sector, and the scalar completion crossed numerical PSD at `lambda≈1`.
+als theorematischer fixed-window Fortschritt gebucht. Der externe volle-Klasse-Benchmark von Marcus Chuk liegt derzeit bei `L=0.8`.
 
-**No strict status:** floating-point quadrature, finite Fourier cutoff, no Arb matrix enclosure, no infinite-dimensional tail.
-
-## Gate C8 — Rigorous A1-CERT `?[O]`
-
-Correct external benchmark:
-
-> Marcus Chuk, arXiv:2608.24827, certifies full-class positivity at `L=0.8` with lower bound `8.9e-18` and documents Landau--Widom decay / doubly-exponential envelope barriers.
-
-The first natural stress point beyond that published lower-bound radius is
+## Gate C7 — all-window mechanism `?[O]`
 
 ```text
-a_test=1.0.
-```
-
-Required theorem certificate:
-
-1. predeclared parity-adapted basis/truncation;
-2. Arb form entries and moment rows;
-3. test `lambda=1` first, otherwise optimize only two parity dual parameters;
-4. certified finite inertia/PSD;
-5. rigorous tail lower bounds in even and odd sectors;
-6. rigorous resolved-tail coupling bound;
-7. final Schur-complement positivity.
-
-The dual dimension is **not** the bottleneck. The unresolved infinite-dimensional tail is.
-
-## Gate C9 — all-window completion `?[O]`
-
-```text
-fixed-a exact completion certificates
-        |
-uniform/structural tail mechanism
-        |
+A1-SCHUR
+  |
+fixed-a certificates / structural scaling
+  |
 all-a NP-GAP
-        |
+  |
 global restricted Weil criterion
-        |
+  |
 RH
 ```
 
-Landau--Widom remains calibration for tiny gaps; it is not itself the missing tail certificate.
+## Auxiliary / Firewalls
 
-## Auxiliary
-
-- scalar Turán/Fejer--Riesz = sufficient relaxation / exploratory dual;
-- pole-cleared discrepancy = canonical gauge but literature-known Prime+polar component;
-- AR(1) = independent local structure;
-- Prolate = extremal/falsification calibration.
-
-## Firewalls
-
-- do not claim `D` is new;
-- do not identify scalar autocorrelation moments with exact null-pole constraints;
-- do not promote the `a=1` Galerkin numbers;
-- do not call finite PSD exact without tail control;
-- fixed-window positivity is not RH-equivalent;
-- Registry/Arbeitsdefinition unchanged.
+- Frühere Dirichlet-Ritzwerte bleiben nicht zertifiziert.
+- PSWFs diagonalieren den Konzentrationsoperator, nicht `q_1`.
+- Tail positivity allein beweist `a=1` noch nicht.
+- Kein finite resolved PSD ohne Crossblock-Schur als Theorem buchen.
+- Registry/Arbeitsdefinition unverändert.
