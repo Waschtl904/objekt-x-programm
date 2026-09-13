@@ -1,4 +1,4 @@
-# Objekt X — kanonische Forschungsroadmap v3.0
+# Objekt X — kanonische Forschungsroadmap v3.1
 
 > **Stand:** 13. September 2026; Registry unverändert.  
 > **Keine Beweisautorität.** Operative Front: [CURRENT-FRONT](../CURRENT-FRONT.md).
@@ -10,163 +10,221 @@ D_{NP}=\ker M(0)\cap\ker M(1),
 \qquad E|_{D_{NP}}=0.
 ```
 
-Ein Hauptfront-Mechanismus muss auf `D_NP` nichttrivial bleiben. Connes–Consani Proposition C.1 liefert den global RH-äquivalenten Weil-Scope; keine fixed-window-Äquivalenz wird importiert.
+Connes–Consani Proposition C.1 liefert den global RH-äquivalenten Weil-Scope; keine fixed-window-Äquivalenz wird importiert.
 
 ## 2. COMMON-JUMP abgeschlossen `✓[M]`
 
-Die eine Generatorfamilie ist
+Die gemeinsame Generatorfamilie ist
 
 ```math
-\boxed{K_t=T_{t/2}-T_{-t/2}.}
+K_t=T_{t/2}-T_{-t/2}.
 ```
 
-Die positive gemischte Maßstruktur lautet
+Archimedes und Primzahlpotenzen sind kontinuierlicher bzw. atomarer Teil derselben positiven Maß-/Featuregeometrie
 
 ```math
-\boxed{
 \mu_a
 =
-h(t)dt+
-\sum_{\log n\le2a}w_n\delta_{\log n},
-}
+\frac{e^{-t/2}}{1-e^{-2t}}dt
++
+\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}.
 ```
 
-mit
+Damit gilt für alle `a>0`
 
 ```math
-h(t)=\frac{e^{-t/2}}{1-e^{-2t}},
-\qquad
-w_n=\frac{\Lambda(n)}{\sqrt n}.
-```
-
-Damit sind
-
-```text
-archimedean gamma contribution = continuous K_t energy
-prime powers                    = atomic K_t energies
-```
-
-innerhalb derselben positiven Hilbert-Geometrie realisiert.
-
-## 3. Exakte gemeinsame Normalform `✓[M]`
-
-Definiere die positive Featureabbildung `X_a` aus `mu_a`. Dann für alle `a>0` und kompakt in `[-a,a]` getragene Testfunktionen:
-
-```math
-\boxed{
 Q_W(v,w)
 =\langle Ev,PEw\rangle
 +\langle X_av,X_aw\rangle
 -\Gamma_a\langle v,w\rangle,
-}
 ```
 
-wobei
+und auf Nullpol
+
+```math
+Q_W(v,w)=\langle X_av,X_aw\rangle-\Gamma_a\langle v,w\rangle.
+```
+
+`NP-R1`, `NP-COMMON` und die cutoff-Gauge-Struktur sind damit `✓[M]` geschlossen/subsumiert.
+
+## 3. NP-GAP-A hat jetzt einen exakten Einstieg `✓[M]`
+
+Die archimedische Dichte zerfällt als
+
+```math
+\frac{e^{-t/2}}{1-e^{-2t}}
+=\sum_{m\ge0}e^{-\alpha_m t},
+\qquad
+\alpha_m=2m+\frac12.
+```
+
+Mit
+
+```math
+A_\alpha=\int_0^\infty e^{-\alpha t}K_t^*K_t\,dt
+```
+
+gilt exakt
 
 ```math
 \boxed{
-\Gamma_a
-=2\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}
-+\log\pi-\psi(1/4).
+A_\alpha
+=\frac{2}{\alpha}
+(-\partial_x^2)(-\partial_x^2+\alpha^2)^{-1}.
 }
 ```
 
-Auf Nullpol:
+Für den ersten Kanal `alpha_0=1/2` und
+
+```math
+Q_0=-\partial_x^2+\frac14
+```
+
+folgt
 
 ```math
 \boxed{
-Q_W(v,w)
-=\langle X_av,X_aw\rangle-\Gamma_a\langle v,w\rangle.
+A_{1/2}=4I-Q_0^{-1},
+\qquad
+A_{1/2}Q_0=-4\partial_x^2.
 }
 ```
 
-## 4. Frühere getrennte Fronten werden subsumiert
+Nur bei `alpha=1/2` cancelt der Resolventennenner. Die frühere `1/2`-Beobachtung ist damit theorematisch erklärt.
 
-### NP-R1
+## 4. Support-erhaltende Nullpolfaktorisierung `✓[M]`
 
-`R_1` ist kein eigener notwendiger Generatorblock mehr. Gemeinsam mit der logarithmischen archimedischen Form steckt er im kontinuierlichen positiven `K_t`-Kanal.
+Der Green-Kern
 
-```text
-NP-R1 separate geometry question -> closed/subsumed ✓[M]
+```math
+Q_0^{-1}(x,y)=e^{-|x-y|/2}
 ```
 
-### NP-SCALAR
+zeigt direkt, dass die beiden äußeren Tails genau durch `E_+` und `E_-` gesteuert werden. Deshalb
 
-Der isolierte Skalar ist cutoffabhängig; die Kovarianz ist jetzt vollständig geometrisiert. Neue Außen-Prime-Atome erhöhen Gramenergie und Schwelle exakt gleich.
-
-```text
-NP-SCALAR gauge covariance -> ✓[M]
+```math
+\boxed{
+Q_0:C_c^\infty(-a,a)\xrightarrow{\cong}D_{NP}(a)
+}
 ```
 
-### NP-COMMON
+support-erhaltend.
 
-```text
-NP-COMMON common Prime/archimedean feature geometry -> ✓[M]
+Für `v=Q_0u` wird der erste Kanal lokal:
+
+```math
+\boxed{
+\langle v,A_{1/2}v\rangle
+=4\|u''\|^2+\|u'\|^2.
+}
 ```
 
-## 5. Neue Default-Priorität — NP-GAP
+## 5. NP-GAP-Basisabschätzungen `✓[M]`
 
-Der einzige harte Rest ist
+Auf Nullpol liefert Dirichlet-Poincaré
+
+```math
+\boxed{
+\langle v,A_{1/2}v\rangle
+\ge
+\frac{4\pi^2}{\pi^2+a^2}\|v\|^2.
+}
+```
+
+Für jeden höheren Kanal liefert der positive Resolventenkern per Schur-Test
+
+```math
+\boxed{
+\langle v,A_\alpha v\rangle
+\ge
+\frac{2}{\alpha}e^{-\alpha a}\|v\|^2.
+}
+```
+
+Damit ist erstmals echte Coercivity des COMMON-JUMP-Operators aus seiner eigenen Generatorstruktur gewonnen, nicht aus Weil-Positivität rückwärts.
+
+## 6. Short-window NP-GAP abgeschlossen `✓[M]_part`
+
+Setze
+
+```math
+B(a)
+=
+\frac{4\pi^2}{\pi^2+a^2}
++
+\sum_{m=1}^\infty\frac{2}{\alpha_m}e^{-\alpha_m a}.
+```
+
+`B` ist stetig und streng fallend von `+infinity` nach `0`. Sei `a_*` die eindeutige positive Lösung
+
+```math
+B(a_*)=\kappa_*,
+\qquad
+\kappa_*=\log\pi-\psi(1/4).
+```
+
+Für
+
+```math
+0<a<\min\{a_*,\tfrac12\log2\}
+```
+
+enthält der kanonische Cutoff noch keine Prime-Power-Atome und es gilt
+
+```math
+\boxed{
+\|X_av\|^2\ge\Gamma_a\|v\|^2
+\qquad(v\in D_{NP}(a)).
+}
+```
+
+Also ist NP-GAP für einen nichtleeren short-window-Bereich analytisch bewiesen.
+
+## 7. Neue Default-Priorität — den bewiesenen Bereich vergrößern
+
+Der offene Kern lautet weiterhin
 
 ```math
 \boxed{
 \lambda_{NP}(a)
-:=
-\inf_{\substack{0\ne v\in C_c^\infty(-a,a)\\M(v)(0)=M(v)(1)=0}}
-\frac{\|X_av\|^2}{\|v\|_2^2}
-\stackrel{?}{\ge}\Gamma_a.
+\ge\Gamma_a
+\quad\text{für jedes }a>0.
 }
 ```
 
-Für alle Fenster zusammen ist dies die verbleibende RH-äquivalente Frame-/Spektralgap-Frage.
+Die Forschungsreihenfolge wird jetzt enger:
 
-### Gate NP-GAP-A — Momentfaktorisierung
+1. **NP-GAP-EXTEND:** verbessere die Kanaluntergrenzen über den elementaren Schur-Test hinaus;
+2. nutze die exakte `Q_0`-Parametrisierung bei möglichst vielen Kanälen oder bei deren Summe;
+3. analysiere den Übergang am ersten Prime-Cutoff `2a=log2` ohne post-hoc Gegenbuchung;
+4. prüfe nonlocal-Poincare-, Paley-Wiener-, de-Branges- und Prolate-Mechanismen nur vorwärts;
+5. Numerik dient ausschließlich zum Falsifizieren/Lenken und braucht für Promotion Arb-Zertifikate.
 
-Nutze
+## 8. Wichtiger Numerik-Hinweis
 
-```math
-M(v)(0)=M(v)(1)=0
-\Longleftrightarrow
-\widehat v(i/2)=\widehat v(-i/2)=0
-```
-
-und die support-erhaltende Faktorisierung durch
+Für endliche Nullpol-Unterräume `V_N` gilt
 
 ```math
-Q_0=-\frac{d^2}{dx^2}+\frac14.
+\lambda_{NP}^{(N)}(a)\ge\lambda_{NP}(a).
 ```
 
-Ziel: intrinsische coercivity des Common-Jump-Operators auf `Ran Q_0` oder enger No-Go.
+Ritz-Minima sind also **obere Schranken** für das wahre Infimum. Ein positiver endlicher Gap beweist nichts; ein zertifizierter Wert unter `Gamma_a` würde dagegen falsifizieren.
 
-### Gate NP-GAP-B — symbol / Paley-Wiener
-
-Untersuche den positiven Multiplikator
-
-```math
-\Phi_a(z)=
-\operatorname{Re}\psi\left(\frac14+\frac{iz}{2}\right)-\psi(1/4)
-+2\sum_{\log n\le2a}w_n(1-\cos(z\log n))
-```
-
-unter den komplexen Nullstellenbedingungen bei `z=±i/2`.
-
-### Gate NP-GAP-C — nonlocal Poincare / frame theory
-
-Teste vorab definierte Klassen von Poincare-, sampling-, de-Branges-/Paley-Wiener- oder Dirichlet-form-Mechanismen. Keine Rückwärtsdefinition aus Weil-Positivität.
-
-## 6. Object-X-Pfad
+## 9. Object-X-Pfad
 
 ```text
-common positive K_t geometry ✓[M]
+COMMON-JUMP common positive geometry ✓[M]
         |
         v
-forward Object-X architecture ✓[M]_part
+Q0 first-channel intertwining ✓[M]
         |
-        | sharp lower frame bound
         v
-NP-GAP ?[O]
+short-window NP-GAP ✓[M]_part
         |
-        | if solved for all a
+        | extend to every a>0
+        v
+full NP-GAP ?[O]
+        |
         v
 Weil positivity on global null-pole class
         |
@@ -174,19 +232,20 @@ Weil positivity on global null-pole class
 RH
 ```
 
-Der Generator-/Geometrie-Suchteil des Programms ist damit wesentlich enger: der offene Kern ist jetzt ein präziser Spektralgap in einem bereits konstruierten positiven Hilbertraum.
+Die Architekturfrage ist damit weiter verengt: Objekt X besitzt einen konkreten positiven Kandidatenoperator und einen ersten bewiesenen Coercivity-Bereich; offen ist die globale Fortsetzung des Gaps.
 
-## 7. Auxiliary routes
+## 10. Auxiliary / separate
 
 - OX-GEN-A = exakte Pole-layer geometry;
 - POS-DIL #101--#105 = auxiliary full-class route;
 - Prime-Power AR(1) = eigenständige positive Struktur;
 - PR #91, PR #49, R37/G4c separat.
 
-## 8. Firewalls
+## 11. Firewalls
 
-- COMMON-JUMP beweist den Lower-Frame-Bound **nicht**.
-- Kein einzelnes fixes `a` wird als RH-äquivalent behauptet.
-- `forward Object-X architecture` bedeutet nicht vollständige positive Weil-Gram-Realisierung.
-- Publikationsneuheit bleibt `?[O]`.
-- Keine Registry-Promotion durch Roadmap/CI.
+- short-window NP-GAP != all-`a` NP-GAP;
+- kein einzelnes fixes Fenster wird als RH-äquivalent behauptet;
+- nicht zertifizierte Ritzwerte bekommen keinen strengen Numerikstatus;
+- `forward Object-X architecture` != vollständige positive Objekt-X-Realisierung;
+- Publikationsneuheit bleibt `?[O]`;
+- keine Registry-Promotion durch Roadmap/CI.
