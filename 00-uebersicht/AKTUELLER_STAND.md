@@ -1,220 +1,127 @@
-# Aktueller Stand — Objekt X / COMMON-JUMP → NP-GAP
+# Aktueller Stand — Objekt X / NP-OVERLAP-AR1
 
 > **Stand:** 13. September 2026; Registry unverändert.  
-> Details: [CURRENT-FRONT](../CURRENT-FRONT.md), [COMMON-JUMP](../audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md), [Q0/short-window NP-GAP](../audits/P11_NP_GAP_Q0_FIRST_CHANNEL_2026-09-13.md), [Roadmap](FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](DAG.md).
+> Details: [CURRENT-FRONT](../CURRENT-FRONT.md), [Prime-overlap AR(1)](../audits/P11_NP_OVERLAP_AR1_FIBERIZATION_2026-09-13.md), [Review correction](../audits/P11_NP_GAP_REVIEW_CORRECTION_PRIME_OVERLAP_2026-09-13.md).
 
-## 1. Gemeinsame Jump-Geometrie `✓[M]`
+## 1. COMMON-JUMP und Q0 `✓[M]`
+
+Auf der Nullpolklasse gilt
+
+```math
+Q_W(v)=\|X_av\|^2-\Gamma_a\|v\|^2.
+```
+
+Der erste archimedische Kanal erfüllt mit `Q0=-partial_x^2+1/4`
+
+```math
+A_{1/2}Q_0=-4\partial_x^2,
+\qquad
+Q_0:C_c^\infty(-a,a)\cong D_{NP}(a).
+```
+
+Für höhere Kanäle gilt rigoros
+
+```math
+A_\alpha\succeq\frac2\alpha e^{-\alpha a}I.
+```
+
+Die projektinterne Kleinfenster-Coercivity bleibt `✓[M]_part`, ist aber kein neuer Kleinfenster-Positivitätssatz der Literatur (`×[M]` als Neuheitsclaim; Suzuki Theorem 1.4 ist stärker).
+
+## 2. Zentrierte Restform `✓[M]`
+
+Nach exakter Prime-Zentrierung:
+
+```math
+\boxed{Q_W(v)=\mathcal A(v)-\mathcal O_a(v)}
+```
+
+mit
+
+```math
+\mathcal O_a(v)
+=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
+\operatorname{Re}\langle T_{\log n}v,v\rangle.
+```
+
+Der harte Rest ist also ein endlicher gewichteter Overlap-Operator, nicht die nackte Prime-Schwelle.
+
+## 3. Einzelshift exakt — und als Strategie ausgeschöpft
 
 Für
 
 ```math
-K_t=T_{t/2}-T_{-t/2}
+S_t=\frac12(T_t+T_{-t})
 ```
 
-entstehen Archimedes und Primzahlpotenzen aus derselben positiven Featurefamilie:
-
-```math
-\mu_a
-=
-\frac{e^{-t/2}}{1-e^{-2t}}dt
-+
-\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}.
-```
-
-Mit
-
-```math
-\kappa_*=\log\pi-\psi(1/4)
-=\log(8\pi)+\gamma+\frac\pi2,
-```
-
-```math
-\Gamma_a
-=2\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}+\kappa_*
-```
-
-gilt für jedes `a>0`
-
-```math
-Q_W(v,w)
-=
-\langle Ev,PEw\rangle
-+
-\langle X_av,X_aw\rangle
--
-\Gamma_a\langle v,w\rangle.
-```
-
-Auf der global RH-kompatiblen Nullpolklasse `D_NP=ker M(0) cap ker M(1)`:
+liefert Faserung modulo `t`
 
 ```math
 \boxed{
-Q_W(v,w)
-=
-\langle X_av,X_aw\rangle
--
-\Gamma_a\langle v,w\rangle.
+\|S_t\|
+=\cos\frac{\pi}{\lceil2a/t\rceil+1}
+\quad(0<t<2a).
 }
 ```
 
-## 2. Archimedische Resolventenkanäle `✓[M]`
-
-```math
-\frac{e^{-t/2}}{1-e^{-2t}}
-=\sum_{m\ge0}e^{-\alpha_m t},
-\qquad
-\alpha_m=2m+\frac12.
-```
-
-Für
-
-```math
-A_\alpha=\int_0^\infty e^{-\alpha t}K_t^*K_t\,dt
-```
-
-gilt exakt
-
-```math
-\boxed{
-A_\alpha
-=\frac{2}{\alpha}
-(-\partial_x^2)(-\partial_x^2+\alpha^2)^{-1}.
-}
-```
-
-## 3. Exakter `Q_0`-Treffer des ersten Kanals `✓[M]`
-
-Mit
-
-```math
-Q_0=-\partial_x^2+\frac14
-```
-
-ist
-
-```math
-\boxed{
-A_{1/2}=4I-Q_0^{-1},
-\qquad
-A_{1/2}Q_0=-4\partial_x^2.
-}
-```
-
-Nur bei `alpha=1/2` cancelt der Resolventennenner in `A_alpha Q_0`. Damit ist die frühere `1/2`-Übereinstimmung ein exakter und in dieser Kanalfolge eindeutiger Intertwining-Satz.
-
-## 4. Support-erhaltende Nullpolparametrisierung `✓[M]`
-
-Der Green-Kern von `Q_0^{-1}` lautet
-
-```math
-G_0(x)=e^{-|x|/2}.
-```
-
-Für `supp(v) subset (-a,a)` sind die äußeren Tails proportional zu `E_+(v)` bzw. `E_-(v)`. Daher
-
-```math
-\boxed{
-Q_0:C_c^\infty(-a,a)
-\xrightarrow{\cong}
-D_{NP}(a)
-}
-```
-
-support-erhaltend.
-
-Für `v=Q_0u` wird der erste nichtlokale Kanal exakt lokal:
-
-```math
-\boxed{
-\langle v,A_{1/2}v\rangle
-=4\|u''\|_2^2+\|u'\|_2^2.
-}
-```
-
-## 5. Quantitative Schranken `✓[M]`
-
-Dirichlet-Poincaré liefert auf Nullpol
-
-```math
-\boxed{
-\langle v,A_{1/2}v\rangle
-\ge
-\frac{4\pi^2}{\pi^2+a^2}\|v\|_2^2.
-}
-```
-
-Für jeden höheren Kanal und jedes auf `(-a,a)` getragene `v` ergibt der Schur-Test
-
-```math
-\boxed{
-\langle v,A_\alpha v\rangle
-\ge
-\frac{2}{\alpha}e^{-\alpha a}\|v\|_2^2.
-}
-```
-
-## 6. Short-window NP-GAP `✓[M]_part`
-
-Definiere
-
-```math
-B(a)
-=
-\frac{4\pi^2}{\pi^2+a^2}
-+
-\sum_{m=1}^\infty
-\frac{2}{\alpha_m}e^{-\alpha_m a}.
-```
-
-`B` ist stetig, streng fallend, `B(a)->infinity` für `a downarrow0` und `B(a)->0` für `a->infinity`. Sei `a_*` die eindeutige positive Lösung
-
-```math
-B(a_*)=\kappa_*.
-```
-
-Dann gilt für
-
-```math
-0<a<\min\{a_*,\tfrac12\log2\}
-```
-
-unkonditional
-
-```math
-\boxed{
-\|X_av\|^2\ge\Gamma_a\|v\|_2^2
-\qquad(v\in D_{NP}(a)).
-}
-```
-
-Also ist der NP-GAP für einen nichtleeren Bereich ausreichend kleiner Fenster bewiesen.
-
-## 7. Weiterhin offen
-
-```math
-\boxed{
-\lambda_{NP}(a)\ge\Gamma_a
-\quad\text{für alle }a>0
-}
-```
-
-bleibt `?[O]`. Erst der all-`a`-Satz würde den verbleibenden globalen RH-äquivalenten Frame-Gap schließen.
-
-## 8. Numerik-Firewall
-
-Endlichdimensionale Ritz-Minima sind **obere** Schranken für das wahre Infimum. Die bisher während der Exploration genannten positiven Ritz-Gaps sind nicht Arb-zertifiziert und werden nicht promoted.
-
-## 9. Status
+Dieselbe Norm wird bereits auf `D_NP(a)` erreicht. Daher
 
 ```text
-COMMON-JUMP common feature architecture       ✓[M]
-Q0 first-channel intertwining                 ✓[M]
-Q0 support-preserving null-pole map           ✓[M]
-short-window NP-GAP                           ✓[M]_part
-forward Object-X candidate architecture       ✓[M]_part
-NP-GAP for every a>0                          ?[O]
-full positive Object-X / RH                   ?[O]
-publication novelty                           ?[O]
+single-shift null-pole norm improvement   ×[M]
 ```
 
-OX-GEN-A bleibt exakte Polschicht; POS-DIL #101--#105 bleibt auxiliary full-class geometry.
+Nullpol allein verbessert keinen einzelnen Shiftkanal. Kollektive Prime-Struktur ist notwendig.
+
+## 4. Prime-Power-Block = exakte AR(1)-Matrix `✓[M]`
+
+Für eine Primzahl `p`,
+
+```math
+\ell_p=\log p,
+\qquad q_p=p^{-1/2},
+```
+
+ist nach Faserung modulo `ell_p` auf einer `N`-Punkt-Faser
+
+```math
+\boxed{
+O_{p,a}^{(N)}
+=(\log p)(R_{q_p}^{(N)}-I_N),
+\qquad
+R_q^{(N)}=(q^{|j-k|})_{j,k}.
+}
+```
+
+Der positive Symbolsektor ist
+
+```math
+|\theta|<\arccos(q_p).
+```
+
+Damit kehrt die bereits bekannte Prime-Power-AR(1)-Geometrie exakt als Faserstruktur des neuen Overlap-Problems zurück.
+
+## 5. Neue Hauptfront `?[O]`
+
+Für verschiedene Primzahlen sind `log p/log r` irrational. Die zentrale Frage ist daher die **gleichzeitige** Konzentration derselben Funktion in den positiven Niedrigfrequenzsektoren vieler inkommensurabler AR(1)-Gitter.
+
+Zu beweisen bleibt
+
+```math
+\boxed{
+(A_\infty-\kappa_*I)|_{D_{NP}(a)}
+\succeq
+\sum_p O_{p,a}|_{D_{NP}(a)}.
+}
+```
+
+## 6. Status
+
+```text
+COMMON-JUMP / Q0                              ✓[M]
+centered Prime-overlap form                   ✓[M]
+exact single-shift fiber theorem              ✓[M]
+single-shift null-pole improvement            ×[M]
+exact per-prime AR(1) fiberization            ✓[M]
+collective multi-prime suppression            ?[O]
+forward Object-X candidate architecture       ✓[M]_part
+full positive Object-X / RH                   ?[O]
+```

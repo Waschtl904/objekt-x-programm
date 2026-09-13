@@ -2,211 +2,187 @@
 
 *Ein lakatosianisches Forschungsjournal zur Riemannschen Hypothese.*
 
-Gesucht wird eine gemeinsame arithmetisch-analytische Hilbert-/Gram-Geometrie, in der Primzahlpotenz- und archimedische Beiträge der vollständigen Weil-Form aus demselben Mechanismus hervorgehen. Arbeitsname: **Objekt X**.
+Gesucht wird eine gemeinsame arithmetisch-analytische Hilbert-/Gram-Geometrie für Primzahlpotenzen und archimedischen Beitrag der Weil-Form. Arbeitsname: **Objekt X**.
 
-> **Redaktioneller Stand: 13. September 2026.**  
-> Eine gemeinsame positive Prime-/archimedische Featurearchitektur ist konstruiert, und für einen nichtleeren Bereich kurzer Fenster ist der zugehörige Nullpol-Frame-Gap analytisch bewiesen. Eine vollständige positive Objekt-X-Realisierung und ein RH-Beweis liegen nicht vor.
+> **Stand: 13. September 2026.**  
+> COMMON-JUMP liefert eine gemeinsame positive Featurearchitektur. Nach exakter Zentrierung ist der verbleibende harte arithmetische Rest ein Prime-Power-Überlappungsoperator, dessen vollständige Blöcke pro Primzahl exakt AR(1)-Matrizen sind. RH bleibt offen.
 
 ## Hier beginnen
 
-1. **[Aktueller Arbeitsstand](CURRENT-FRONT.md)**
-2. **[COMMON-JUMP-Audit](audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md)**
-3. **[Q0 / short-window NP-GAP](audits/P11_NP_GAP_Q0_FIRST_CHANNEL_2026-09-13.md)**
-4. **[Nullpol-Reklassifikation](audits/P11_NULLPOLE_STRATEGIC_RECLASSIFICATION_2026-09-13.md)**
-5. **[Aktueller Stand](00-uebersicht/AKTUELLER_STAND.md)**
-6. **[Forschungsroadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)**
-7. **[DAG](00-uebersicht/DAG.md)**
+1. [CURRENT-FRONT](CURRENT-FRONT.md)
+2. [Prime-overlap AR(1)](audits/P11_NP_OVERLAP_AR1_FIBERIZATION_2026-09-13.md)
+3. [Review correction / Prime overlap](audits/P11_NP_GAP_REVIEW_CORRECTION_PRIME_OVERLAP_2026-09-13.md)
+4. [COMMON-JUMP](audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md)
+5. [Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)
 
-## Gemeinsame Prime-/archimedische Jump-Geometrie
+## 1. Gemeinsame Geometrie
 
-Für die unitäre Translation `T_t` setze
+Für
 
 ```math
-\boxed{K_t=T_{t/2}-T_{-t/2}.}
+K_t=T_{t/2}-T_{-t/2}
 ```
 
-Archimedes und Primzahlpotenzen verwenden exakt dieselbe Operatorfamilie. Das gemischte positive Maß ist
+entstehen Prime-Power- und archimedische Beiträge aus derselben positiven Jump-Familie. Auf der Nullpolklasse `D_NP` gilt exakt
 
 ```math
-\mu_a
-=
-\frac{e^{-t/2}}{1-e^{-2t}}dt
-+
-\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}.
+Q_W(v)=\|X_av\|^2-\Gamma_a\|v\|^2.
 ```
 
-Die daraus gebaute Hilbert-Featureabbildung `X_a` besitzt eine positive Gramform.
-
-Mit
+Der erste Gamma-Kanal wird durch
 
 ```math
-\Gamma_a
-=2\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}
-+\log\pi-\psi(1/4)
+Q_0=-\partial_x^2+1/4
 ```
 
-gilt für jedes `a>0`
+support-erhaltend lokalisiert:
 
 ```math
-\boxed{
-Q_W(v,w)
-=\langle Ev,PEw\rangle
-+\langle X_av,X_aw\rangle
--\Gamma_a\langle v,w\rangle.
-}
-```
-
-Auf der Nullpolklasse
-
-```math
-D_{NP}=\ker M(0)\cap\ker M(1)
-```
-
-verschwindet die Polschicht:
-
-```math
-\boxed{
-Q_W(v,w)=\langle X_av,X_aw\rangle-\Gamma_a\langle v,w\rangle.
-}
-```
-
-## Neuer exakter `Q_0`-Treffer
-
-Die archimedische Dichte zerfällt als
-
-```math
-\frac{e^{-t/2}}{1-e^{-2t}}
-=\sum_{m\ge0}e^{-\alpha_m t},
+A_{1/2}Q_0=-4\partial_x^2,
 \qquad
-\alpha_m=2m+\frac12.
+Q_0:C_c^\infty(-a,a)\cong D_{NP}(a).
 ```
 
-Jeder Einzelkanal hat die exakte Resolventenform
+## 2. Korrekte Kleinfensterbuchung
 
-```math
-\boxed{
-A_\alpha
-=\frac{2}{\alpha}
-(-\partial_x^2)(-\partial_x^2+\alpha^2)^{-1}.
-}
-```
-
-Für den ersten Kanal `alpha_0=1/2` und
-
-```math
-Q_0=-\partial_x^2+\frac14
-```
-
-gilt
-
-```math
-\boxed{
-A_{1/2}=4I-Q_0^{-1},
-\qquad
-A_{1/2}Q_0=-4\partial_x^2.
-}
-```
-
-Nur bei `alpha=1/2` cancelt der Resolventennenner. Die Übereinstimmung mit der Nullpolskala `1/2` ist damit eine exakte Intertwining-Identität, nicht nur ein numerischer Hinweis.
-
-## Support-erhaltende Nullpolparametrisierung
-
-Der Green-Kern von `Q_0^{-1}` ist
-
-```math
-G_0(x-y)=e^{-|x-y|/2}.
-```
-
-Für eine in `(-a,a)` getragene Funktion sind die beiden äußeren Tails genau proportional zu `E_+` beziehungsweise `E_-`. Deshalb
-
-```math
-\boxed{
-Q_0:C_c^\infty(-a,a)\xrightarrow{\cong}D_{NP}(a)
-}
-```
-
-support-erhaltend.
-
-Für `v=Q_0u` wird der erste nichtlokale Jump-Kanal lokal:
-
-```math
-\boxed{
-\langle v,A_{1/2}v\rangle
-=4\|u''\|^2+\|u'\|^2.
-}
-```
-
-## Erster bewiesener Bereich des NP-GAP
-
-Dirichlet-Poincaré liefert
-
-```math
-\langle v,A_{1/2}v\rangle
-\ge
-\frac{4\pi^2}{\pi^2+a^2}\|v\|^2,
-```
-
-während jeder höhere Kanal per Schur-Test
-
-```math
-\langle v,A_\alpha v\rangle
-\ge
-\frac{2}{\alpha}e^{-\alpha a}\|v\|^2
-```
-
-erfüllt.
-
-Damit folgt analytisch ein nichtleerer short-window-Bereich, in dem
-
-```math
-\boxed{
-\|X_av\|^2\ge\Gamma_a\|v\|^2
-\qquad(v\in D_{NP}(a))
-}
-```
-
-bereits unkonditional bewiesen ist.
-
-Status:
+Die eigene Architektur reproduziert analytisch Kleinfenster-Coercivity. Kleinfensterpositivität selbst ist jedoch nicht neu: Suzuki Theorem 1.4 beweist bereits eine stärkere volle-Klasse-Aussage.
 
 ```text
-COMMON-JUMP common geometry                 ✓[M]
-Q0 first-channel intertwining               ✓[M]
-short-window NP-GAP                         ✓[M]_part
-forward Object-X candidate architecture     ✓[M]_part
-NP-GAP for every a>0                        ?[O]
-full positive Object-X realization / RH     ?[O]
-publication novelty                         ?[O]
+COMMON-JUMP/Q0 internal reproduction      ✓[M]_part
+short-window positivity as new theorem    ×[M]
 ```
 
-## Was jetzt noch offen ist
+Ein eigener Arb-Gate prüft nur den expliziten projektinternen Schwellenwert `a_*`.
 
-Der verbleibende harte Satz lautet
+## 3. Exakte zentrierte Restform
+
+Nach Cancellation der Prime-Diagonalmasse gilt
+
+```math
+\boxed{Q_W(v)=\mathcal A(v)-\mathcal O_a(v)}
+```
+
+mit
 
 ```math
 \boxed{
-\lambda_{NP}(a)
-:=
-\inf_{0\ne v\in D_{NP}(a)}
-\frac{\|X_av\|^2}{\|v\|^2}
-\stackrel{?}{\ge}\Gamma_a
-\quad\text{für jedes }a>0.
+\mathcal O_a(v)
+=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
+Re\langle T_{\log n}v,v\rangle.
 }
 ```
 
-Für die Familie aller Fenster ist dies über das globale restricted Weil-Kriterium die verbleibende RH-äquivalente Frame-/Spektralgap-Frage.
+Die Wand ist damit nicht der nackte Skalar `Gamma_a`, sondern die kollektive Überlappung der inneren Prime-Power-Shifts.
+
+## 4. Einzelshift: exakte Geometrie und No-Go
+
+Für
+
+```math
+S_t=(T_t+T_{-t})/2
+```
+
+auf `L^2(-a,a)` liefert Faserung modulo `t`
+
+```math
+\boxed{
+\|S_t\|=\cos\frac{\pi}{\lceil2a/t\rceil+1}
+}
+```
+
+für `0<t<2a`. Dieselbe scharfe Norm ist bereits auf der Nullpolklasse erreichbar.
+
+Daher:
+
+```text
+single-shift null-pole norm improvement   ×[M]
+```
+
+Ein Beweis kann also nicht aus unabhängigen besseren Einzelshift-Normen entstehen.
+
+## 5. Vollständiger Block einer Primzahl ist exakt AR(1)
+
+Für eine Primzahl `p` setze
+
+```math
+ell_p=log p,
+q_p=p^{-1/2}.
+```
+
+Gruppiert man **alle** Potenzen `p^k` und fasert modulo `ell_p`, erhält man auf einer `N`-Punkt-Faser
+
+```math
+\boxed{
+O_{p,a}^{(N)}=(\log p)(R_{q_p}^{(N)}-I_N),
+\qquad
+R_q^{(N)}=(q^{|j-k|})_{j,k}.
+}
+```
+
+Das ist genau die Kac--Murdock--Szegő-/AR(1)-Korrelationsmatrix, die im früheren Prime-Power-Strang des Programms bereits unabhängig gefunden wurde.
+
+Ihr zentrierter Symbolfaktor ist
+
+```math
+P_q(theta)-1
+=\frac{2q(\cos theta-q)}{1-2q\cos theta+q^2},
+```
+
+also positiv genau im Niedrigfrequenzsektor
+
+```math
+|theta|<arccos(q).
+```
+
+## 6. Neue Hauptfrage: kollektive Prime-Interferenz
+
+Für verschiedene Primzahlen `p!=r` ist
+
+```math
+log p/log r notin Q.
+```
+
+Die gefährlichen positiven AR(1)-Sektoren leben daher auf inkommensurablen logarithmischen Gittern.
+
+Die neue Hauptfrage lautet:
+
+> Wie stark kann dieselbe Funktion gleichzeitig in den positiven Niedrigfrequenzsektoren vieler verschiedener Prime-Gitter konzentriert sein?
+
+Formal bleibt
+
+```math
+\boxed{
+(A_\infty-\kappa_*I)|_{D_{NP}(a)}
+\succeq
+\sum_pO_{p,a}|_{D_{NP}(a)}
+\quad\forall a>0
+}
+```
+
+zu beweisen.
+
+Die bevorzugte Route verbindet diese exakte Faserform mit der bereits bewiesenen Prime-Power-AR(1)/Markov-/Weil-tail-Geometrie.
+
+## Status
+
+```text
+COMMON-JUMP common geometry                  ✓[M]
+Q0 first-channel / support map               ✓[M]
+centered Prime-overlap                       ✓[M]
+exact single-shift fibers                    ✓[M]
+single-shift null-pole improvement           ×[M]
+exact per-prime AR(1) fibers                 ✓[M]
+collective multi-prime suppression           ?[O]
+forward Object-X candidate architecture      ✓[M]_part
+full positive Object-X / RH                  ?[O]
+```
 
 ## Firewalls
 
-- Short-window NP-GAP ist nicht der all-`a`-Satz.
-- Kein einzelnes fixes Fenster wird als RH-äquivalent behauptet.
-- Endlichdimensionale Ritz-Minima sind obere Schranken für das wahre Infimum; positive nicht zertifizierte Ritz-Gaps beweisen nichts.
-- COMMON-JUMP plus Teil-Gap ist noch keine vollständige positive Objekt-X-Realisierung.
-- Keine Publikationspriorität wird beansprucht.
-- Registry und Arbeitsdefinition werden nicht automatisch promoviert.
+- Inkommensurabilität allein ist noch keine quantitative Ungleichung.
+- Der Einzelshift-No-Go gilt nicht gegen kollektive Multi-Prime-Mechanismen.
+- Bekannte Kleinfensterpositivität wird nicht als Neuheit beansprucht.
+- Endliche Ritz-Minima beweisen keinen globalen Gap.
+- Registry und Objekt-X-Arbeitsdefinition bleiben ohne separate Promotion unverändert.
 
-OX-GEN-A bleibt die exakte Polschicht. POS-DIL #101--#105 bleibt eine mathematisch gültige auxiliary full-class route.
-
-Ausarbeitungen: [papers/](papers/) · Audits: [audits/](audits/) · Registry: [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md) · Einstieg: [EINSTIEGSPROMPT](EINSTIEGSPROMPT.md).
-
-Lizenz: [CC BY 4.0](LICENSE) · Zitierangaben: [CITATION.cff](CITATION.cff).
+Lizenz: [CC BY 4.0](LICENSE).

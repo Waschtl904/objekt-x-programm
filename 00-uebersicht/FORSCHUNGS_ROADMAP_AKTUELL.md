@@ -1,251 +1,136 @@
-# Objekt X — kanonische Forschungsroadmap v3.1
+# Objekt X — kanonische Forschungsroadmap v3.3
 
 > **Stand:** 13. September 2026; Registry unverändert.  
 > **Keine Beweisautorität.** Operative Front: [CURRENT-FRONT](../CURRENT-FRONT.md).
 
-## 1. Nullpol-Filter bleibt verbindlich
+## 1. Gesicherte Architektur
+
+COMMON-JUMP liefert auf Nullpol
 
 ```math
-D_{NP}=\ker M(0)\cap\ker M(1),
-\qquad E|_{D_{NP}}=0.
+Q_W|_{NP}=X_a^*X_a-\Gamma_aI
 ```
 
-Connes–Consani Proposition C.1 liefert den global RH-äquivalenten Weil-Scope; keine fixed-window-Äquivalenz wird importiert.
+mit gemeinsamer Translation-Differenzfamilie `K_t`. Q0 lokalisiert den ersten Gamma-Kanal exakt, und die höheren Kanäle besitzen den rigorosen `e^{-alpha a}`-Schur-Bound.
 
-## 2. COMMON-JUMP abgeschlossen `✓[M]`
+Die Kleinfenster-Coercivity ist eine interne Reproduktion bekannter Positivität, kein neuer Literatur-Satz.
 
-Die gemeinsame Generatorfamilie ist
+## 2. Zentriertes all-window Problem
+
+Exakt:
 
 ```math
-K_t=T_{t/2}-T_{-t/2}.
+Q_W(v)=\mathcal A(v)-\mathcal O_a(v),
 ```
-
-Archimedes und Primzahlpotenzen sind kontinuierlicher bzw. atomarer Teil derselben positiven Maß-/Featuregeometrie
 
 ```math
-\mu_a
-=
-\frac{e^{-t/2}}{1-e^{-2t}}dt
-+
-\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}.
+\mathcal O_a(v)
+=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
+Re\langle T_{\log n}v,v\rangle.
 ```
 
-Damit gilt für alle `a>0`
+Die Prime-Diagonalmasse ist wegzentriert. Ziel:
 
 ```math
-Q_W(v,w)
-=\langle Ev,PEw\rangle
-+\langle X_av,X_aw\rangle
--\Gamma_a\langle v,w\rangle,
+(A_\infty-\kappa_*I)|_{D_{NP}(a)}\succeq O_a|_{D_{NP}(a)}.
 ```
 
-und auf Nullpol
+## 3. Gate O1 — Einzelshift abgeschlossen `✓[M] / ×[M]`
+
+Faserung modulo `t` gibt
 
 ```math
-Q_W(v,w)=\langle X_av,X_aw\rangle-\Gamma_a\langle v,w\rangle.
+\|S_t\|=\cos\frac{\pi}{\lceil2a/t\rceil+1}.
 ```
 
-`NP-R1`, `NP-COMMON` und die cutoff-Gauge-Struktur sind damit `✓[M]` geschlossen/subsumiert.
+Dieselbe scharfe Norm wird auf `D_NP(a)` erreicht. Daher ist eine Nullpol-Verbesserung einzelner Shiftkanäle ausgeschlossen:
 
-## 3. NP-GAP-A hat jetzt einen exakten Einstieg `✓[M]`
-
-Die archimedische Dichte zerfällt als
-
-```math
-\frac{e^{-t/2}}{1-e^{-2t}}
-=\sum_{m\ge0}e^{-\alpha_m t},
-\qquad
-\alpha_m=2m+\frac12.
+```text
+single-shift null-pole norm improvement  ×[M]
 ```
 
-Mit
+Unabhängige Einzelshift-Normabschätzungen sind nicht mehr Default-Strategie.
 
-```math
-A_\alpha=\int_0^\infty e^{-\alpha t}K_t^*K_t\,dt
-```
-
-gilt exakt
-
-```math
-\boxed{
-A_\alpha
-=\frac{2}{\alpha}
-(-\partial_x^2)(-\partial_x^2+\alpha^2)^{-1}.
-}
-```
-
-Für den ersten Kanal `alpha_0=1/2` und
-
-```math
-Q_0=-\partial_x^2+\frac14
-```
-
-folgt
-
-```math
-\boxed{
-A_{1/2}=4I-Q_0^{-1},
-\qquad
-A_{1/2}Q_0=-4\partial_x^2.
-}
-```
-
-Nur bei `alpha=1/2` cancelt der Resolventennenner. Die frühere `1/2`-Beobachtung ist damit theorematisch erklärt.
-
-## 4. Support-erhaltende Nullpolfaktorisierung `✓[M]`
-
-Der Green-Kern
-
-```math
-Q_0^{-1}(x,y)=e^{-|x-y|/2}
-```
-
-zeigt direkt, dass die beiden äußeren Tails genau durch `E_+` und `E_-` gesteuert werden. Deshalb
-
-```math
-\boxed{
-Q_0:C_c^\infty(-a,a)\xrightarrow{\cong}D_{NP}(a)
-}
-```
-
-support-erhaltend.
-
-Für `v=Q_0u` wird der erste Kanal lokal:
-
-```math
-\boxed{
-\langle v,A_{1/2}v\rangle
-=4\|u''\|^2+\|u'\|^2.
-}
-```
-
-## 5. NP-GAP-Basisabschätzungen `✓[M]`
-
-Auf Nullpol liefert Dirichlet-Poincaré
-
-```math
-\boxed{
-\langle v,A_{1/2}v\rangle
-\ge
-\frac{4\pi^2}{\pi^2+a^2}\|v\|^2.
-}
-```
-
-Für jeden höheren Kanal liefert der positive Resolventenkern per Schur-Test
-
-```math
-\boxed{
-\langle v,A_\alpha v\rangle
-\ge
-\frac{2}{\alpha}e^{-\alpha a}\|v\|^2.
-}
-```
-
-Damit ist erstmals echte Coercivity des COMMON-JUMP-Operators aus seiner eigenen Generatorstruktur gewonnen, nicht aus Weil-Positivität rückwärts.
-
-## 6. Short-window NP-GAP abgeschlossen `✓[M]_part`
-
-Setze
-
-```math
-B(a)
-=
-\frac{4\pi^2}{\pi^2+a^2}
-+
-\sum_{m=1}^\infty\frac{2}{\alpha_m}e^{-\alpha_m a}.
-```
-
-`B` ist stetig und streng fallend von `+infinity` nach `0`. Sei `a_*` die eindeutige positive Lösung
-
-```math
-B(a_*)=\kappa_*,
-\qquad
-\kappa_*=\log\pi-\psi(1/4).
-```
+## 4. Gate O2 — vollständiger Block einer Primzahl `✓[M]`
 
 Für
 
 ```math
-0<a<\min\{a_*,\tfrac12\log2\}
+ell_p=log p,
+q_p=p^{-1/2}
 ```
 
-enthält der kanonische Cutoff noch keine Prime-Power-Atome und es gilt
+ist die `N`-Punkt-Faser des vollständigen `p`-Blocks
 
 ```math
 \boxed{
-\|X_av\|^2\ge\Gamma_a\|v\|^2
-\qquad(v\in D_{NP}(a)).
+O_{p,a}^{(N)}=(\log p)(R_{q_p}^{(N)}-I),
+\qquad R_q^{(N)}=(q^{|j-k|}).
 }
 ```
 
-Also ist NP-GAP für einen nichtleeren short-window-Bereich analytisch bewiesen.
-
-## 7. Neue Default-Priorität — den bewiesenen Bereich vergrößern
-
-Der offene Kern lautet weiterhin
+Der positive Sektor des AR(1)-Symbols ist
 
 ```math
-\boxed{
-\lambda_{NP}(a)
-\ge\Gamma_a
-\quad\text{für jedes }a>0.
-}
+|theta|<arccos(q_p).
 ```
 
-Die Forschungsreihenfolge wird jetzt enger:
+Damit ist die frühere Prime-Power-AR(1)-Struktur exakt in der neuen Hauptfront wiedergefunden.
 
-1. **NP-GAP-EXTEND:** verbessere die Kanaluntergrenzen über den elementaren Schur-Test hinaus;
-2. nutze die exakte `Q_0`-Parametrisierung bei möglichst vielen Kanälen oder bei deren Summe;
-3. analysiere den Übergang am ersten Prime-Cutoff `2a=log2` ohne post-hoc Gegenbuchung;
-4. prüfe nonlocal-Poincare-, Paley-Wiener-, de-Branges- und Prolate-Mechanismen nur vorwärts;
-5. Numerik dient ausschließlich zum Falsifizieren/Lenken und braucht für Promotion Arb-Zertifikate.
+## 5. Gate O3 — kollektive Multi-Prime-Interferenz `?[O]`
 
-## 8. Wichtiger Numerik-Hinweis
-
-Für endliche Nullpol-Unterräume `V_N` gilt
+Für `p!=r` gilt
 
 ```math
-\lambda_{NP}^{(N)}(a)\ge\lambda_{NP}(a).
+log p/log r notin Q.
 ```
 
-Ritz-Minima sind also **obere Schranken** für das wahre Infimum. Ein positiver endlicher Gap beweist nichts; ein zertifizierter Wert unter `Gamma_a` würde dagegen falsifizieren.
+Die gefährlichen Niedrigfrequenzsektoren liegen also auf inkommensurablen logarithmischen Gittern.
 
-## 9. Object-X-Pfad
+Zu quantifizieren:
+
+1. Wie groß kann die simultane positive AR(1)-Energie für viele Primzahlen sein?
+2. Gibt es eine Frame-/uncertainty-Ungleichung zwischen den `log p`-Faserungen?
+3. Kann die alte AR(1)/Markov-/Weil-tail-Faktorisierung eine gemeinsame Kontraktion liefern?
+4. Welche Rolle spielen Parität und die Overlap-Breite `delta_n=2a-log n`?
+5. Wie koppelt der Q0-Sobolevtransport diese Prime-Energien an den archimedischen Überschuss?
+
+## 6. Gate O4 — Prime-Power AR(1) reconnect
+
+Vergleiche die neue exakte Faseridentität systematisch mit den bereits bewiesenen Projektresultaten
+
+```math
+C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2}
+```
+
+und der Markov-/AR(1)-Faktorisierung. Ziel ist kein bloßer Strukturvergleich, sondern eine quantitative Mehrprimzahl-Ungleichung.
+
+## 7. Auxiliary
+
+Die finite Gamma-null ladder `{-2m,2m+1}` bleibt Connes--Consani-kompatibel, aber ohne Kontrolle des Prime-overlap nur Nebenfront.
+
+## 8. Object-X-Pfad
 
 ```text
-COMMON-JUMP common positive geometry ✓[M]
-        |
-        v
-Q0 first-channel intertwining ✓[M]
-        |
-        v
-short-window NP-GAP ✓[M]_part
-        |
-        | extend to every a>0
-        v
-full NP-GAP ?[O]
-        |
-        v
-Weil positivity on global null-pole class
-        |
-        v
+COMMON-JUMP ✓[M]
+   |
+centered Prime-overlap ✓[M]
+   |
+per-prime AR(1) fibers ✓[M]
+   |
+collective multi-prime suppression ?[O]
+   |
+all-a NP-OVERLAP ?[O]
+   |
+global null-pole Weil positivity
+   |
 RH
 ```
 
-Die Architekturfrage ist damit weiter verengt: Objekt X besitzt einen konkreten positiven Kandidatenoperator und einen ersten bewiesenen Coercivity-Bereich; offen ist die globale Fortsetzung des Gaps.
+## 9. Numerik / Firewalls
 
-## 10. Auxiliary / separate
-
-- OX-GEN-A = exakte Pole-layer geometry;
-- POS-DIL #101--#105 = auxiliary full-class route;
-- Prime-Power AR(1) = eigenständige positive Struktur;
-- PR #91, PR #49, R37/G4c separat.
-
-## 11. Firewalls
-
-- short-window NP-GAP != all-`a` NP-GAP;
-- kein einzelnes fixes Fenster wird als RH-äquivalent behauptet;
-- nicht zertifizierte Ritzwerte bekommen keinen strengen Numerikstatus;
-- `forward Object-X architecture` != vollständige positive Objekt-X-Realisierung;
-- Publikationsneuheit bleibt `?[O]`;
-- keine Registry-Promotion durch Roadmap/CI.
+- Ritz-Minima sind obere Schranken für das wahre Infimum.
+- Der Arb-Gate für `a_*` ist nur ein short-window-Seitengate.
+- Bekannte Kleinfensterpositivität nicht als Neuheit beanspruchen.
+- Einzelshift-No-Go nicht zu einem No-Go für kollektive Multi-Prime-Mechanismen überdehnen.
+- Registry/Arbeitsdefinition unverändert.
