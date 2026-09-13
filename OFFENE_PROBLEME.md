@@ -1,141 +1,92 @@
-# Offene Probleme — A1-FINITE
+# Offene Probleme — A1-FINITE-1212
 
 > **Stand:** 13. September 2026.  
-> Operative Audits: [A1-TAIL](audits/P11_A1_HIGHFREQ_PROLATE_TAIL_2026-09-13.md) · [A1 bounded Schur remainder](audits/P11_A1_SCHUR_BOUNDED_REMAINDER_2026-09-13.md).
+> Operative Audits: [A1 Omega1551](audits/P11_A1_OMEGA1551_REDUCTION_2026-09-13.md) · [A1 bounded Schur remainder](audits/P11_A1_SCHUR_BOUNDED_REMAINDER_2026-09-13.md).
 
 ## Neu geschlossen
 
-### `[A1-TAIL]` `✓[K/M]`
-
-Der gesamte unendlichdimensionale Prolate-Tail ist bereits positiv:
+### `[A1-OMEGA1551]` `✓[K/M]`
 
 ```math
-q_1>0.01I
+\boxed{m_1(\xi)>0.1\quad(|\xi|\ge1551).}
 ```
 
-auf dem orthogonalen Komplement der ersten `1490` PSWF-Moden.
+Der Beweis ist ein Exact-Head-Arb-Zertifikat mit rigorosem Digamma-Bound, Ableitungsschranke, rationalem Gitter und far-field Monotonie.
 
-### `[A1-BOUNDED-LOWER]` `✓[M]`
+### `[A1-REDUCED-BAND]` `✓[K/M]`
 
-Mit `c=0.04` und
-
-```math
-r=(m_1-c)\mathbf1_{[-2300,2300]}
-```
-
-ist
+Mit
 
 ```math
-q_1\succeq cI+K,
+c=0.1,
 \qquad
-K=P_I\mathcal F^{-1}M_r\mathcal F P_I.
+r=(m_1-c)\mathbf1_{[-1551,1551]}
 ```
 
-Für `A_1=q_1+E^*E` genügt also `L_1=cI+K+E^*E`.
+ist `||r||<12` zertifiziert.
 
-### `[A1-MOMENT-AUGMENT]` `✓[M]`
+### `[A1-CROSS-1210]` `✓[K/M]`
 
-```math
-R_N=\operatorname{span}\{\psi_0,\ldots,\psi_{N-1}\}
-+\operatorname{span}\{e^{x/2},e^{-x/2}\},
-\qquad
-T_N=R_N^\perp.
-```
-
-Dann `E|T_N=0`; der Completionterm hat keinen Tail-/Crossblock.
-
-### `[A1-CROSS-ABSTRACT]` `✓[M]`
+KRD plus Arb liefert
 
 ```math
-\|(L_1)_{RT}\|
-\le\|r\|_\infty\sqrt{\lambda_N},
+\lambda_{1210}(1551)<1.5\times10^{-42},
 ```
 
 ```math
-(L_1)_{TT}\succeq
-\tau_NI,
-\qquad
-\tau_N=0.04-(\Gamma_1+0.04)\lambda_N.
+\tau_{1210}>0.099,
 ```
 
-Daher genügt
+und
 
 ```math
-(L_1)_{RR}\succeq\mu_RI,
-\qquad
-\mu_R\ge\frac{\|r\|_\infty^2\lambda_N}{\tau_N}.
+\boxed{\text{Schur penalty}<2.2\times10^{-39}.}
 ```
+
+Damit sind Infinite Tail und Crossblock quantitativ absorbiert.
 
 ---
 
-## Priorität 0 — `[A1-CROSS-1680]` candidate `✓[K/M]`
+## Priorität 0 — `[A1-RESOLVED-3E39]` `?[O]`
 
-Vorab festgelegter exact-head Gate:
-
-```text
-Omega = 2300
-N = 1680
-c = 0.04
-```
-
-Zu zertifizieren:
-
-```math
-\|r\|_\infty<12,
-\quad
-\lambda_{1680}<1.1\times10^{-39},
-```
-
-```math
-\tau_{1680}>0.039,
-\quad
-\text{Schur penalty}<4.1\times10^{-36}.
-```
-
-Bis zum grünen CI-Lauf keine strenge Numerikpromotion.
-
----
-
-## Priorität 1 — `[A1-RESOLVED-5E36]` `?[O]`
-
-Wenn der Cross-Gate grün ist, ist **nur noch** zu beweisen:
+Es bleibt **nur noch** die finite Aussage
 
 ```math
 \boxed{
-(L_1)_{RR}\succeq5\times10^{-36}I.
+(L_1)_{RR}\succeq3\times10^{-39}I.
 }
 ```
 
-Resolved dimension höchstens
+auf dem moment-augmentierten resolved PSWF-Raum
 
 ```text
-1682 total
-841 even + 841 odd.
+N = 1210 PSWF modes
++ at most 2 moment directions
+= at most 1212 dimensions
+= at most 606 even + 606 odd.
 ```
 
 Pflichten:
 
 1. rigorose Darstellung des augmented PSWF-Raums;
-2. Arb-Einschließung der finite Formmatrix;
+2. interval-zertifizierte finite Matrix von `L_1`;
 3. parity-getrennte Inertia/PSD;
-4. lower eigenvalue bound `>=5e-36`.
+4. lower eigenvalue bound `>=3e-39`.
 
-`5e-36` ist ein **vorab deklarierter sufficient threshold**, kein beobachteter Eigenwert.
+`3e-39` ist ein **vorab deklarierter sufficient threshold**, kein beobachteter Eigenwert.
 
 ---
 
 ## Danach — `[A1-CERT]` `?[O]`
 
-Resolved lower bound + zertifizierter Schur-Penalty ergibt die volle kanonische Completion bei `a=1`.
-
-Erst dann ist ein fixed-window theorem erreicht.
+Der resolved lower bound plus der bereits zertifizierte Schur-Penalty ergibt die volle kanonische Completion bei `a=1`.
 
 ---
 
 ## Firewalls
 
-- Cross-Konstanten erst nach exact-head CI promoten.
-- resolved lower bound ist offen.
-- vorherige 12-dimensionale Ritzwerte bleiben Diagnostik.
-- fixed-window `a=1` ist noch nicht bewiesen.
-- all-a NP-GAP, Object X und RH bleiben offen.
+- Der ältere `2300/1680`-Gate bleibt korrekt, ist aber gröber.
+- Resolved lower bound ist weiterhin offen.
+- Frühere Dirichlet-Ritzwerte bleiben Diagnostik.
+- Fixed-window `a=1` ist noch nicht bewiesen.
+- All-a NP-GAP, Object X und RH bleiben offen.

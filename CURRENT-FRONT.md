@@ -1,7 +1,7 @@
-# CURRENT FRONT — Objekt X / A1-FINITE
+# CURRENT FRONT — Objekt X / A1-FINITE-1212
 
 > **Stand:** 13. September 2026; Registry und Objekt-X-Arbeitsdefinition unverändert.  
-> **Hauptaudits:** [NP-DUAL-COMP](audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md) · [A1-TAIL](audits/P11_A1_HIGHFREQ_PROLATE_TAIL_2026-09-13.md) · [A1 bounded Schur remainder](audits/P11_A1_SCHUR_BOUNDED_REMAINDER_2026-09-13.md).
+> **Hauptaudits:** [A1 Omega1551](audits/P11_A1_OMEGA1551_REDUCTION_2026-09-13.md) · [A1 bounded Schur remainder](audits/P11_A1_SCHUR_BOUNDED_REMAINDER_2026-09-13.md) · [A1-TAIL](audits/P11_A1_HIGHFREQ_PROLATE_TAIL_2026-09-13.md) · [NP-DUAL-COMP](audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md).
 
 ## 1. Gesicherte Completion-Architektur `✓[M]`
 
@@ -15,15 +15,13 @@ q_a=X_a^*X_a-\Gamma_aI,
 
 ist `D_NP(a)=ker E`. Rank-2 Completion-Dualität, Morse-Index-Filter, Reflection/Parity-Reduktion und die kanonische Completion `lambda=1` sind geschlossen.
 
-## 2. A1-TAIL ist geschlossen `✓[M] / ✓[K/M]`
+## 2. Exact `a=1` Fourier form `✓[M]`
 
-Bei `a=1` gilt exakt
+Für zero-extended `v` mit Träger in `(-1,1)` gilt exakt
 
 ```math
-q_1(v)=\int_{\mathbb R}m_1(\xi)|\widehat v(\xi)|^2d\xi
+q_1(v)=\int_{\mathbb R}m_1(\xi)|\widehat v(\xi)|^2d\xi,
 ```
-
-mit
 
 ```math
 m_1(\xi)=
@@ -32,189 +30,149 @@ m_1(\xi)=
 \frac{\Lambda(n)}{\sqrt n}\cos(\xi\log n).
 ```
 
-Exact-head Arb zertifiziert
+Die Fensterbedingung erzeugt keinen zusätzlichen quadratischen Rest.
+
+## 3. Sharpened high-frequency certificate `✓[K/M]`
+
+Der neue Exact-Head-Arb-Gate kombiniert:
+
+- 64 positive Digamma-Reihenterme plus rigorosen Integralrest;
+- einen globalen Ableitungsbound `|m_1'|<8.214249` für `|xi|>=1551`;
+- ein rationales `0.02`-Gitter auf `[1551,2500]`;
+- einen monotone Worst-Case-Bound für `|xi|>=2500`.
+
+Zertifiziert ist
 
 ```math
-m_1(\xi)>0.04\qquad(|\xi|\ge2300).
+\boxed{m_1(\xi)>0.1\qquad(|\xi|\ge1551).}
 ```
 
-Karnik--Romberg--Davenport plus Arb liefert
+Konservative Zwischenschranken:
 
-```math
-\lambda_{1490}(2300)<0.0035,
+```text
+grid-point lower bound > 0.2315764
+compact global floor  > 0.1078
+far-field floor       > 0.1259187
 ```
 
-und damit auf dem vollständigen orthogonalen Prolate-Tail
+Der ältere `m_1>0.04`-Satz ab `2300` bleibt gültig, ist für die finite Reduktion aber überholt.
 
-```math
-q_1>0.01I.
-```
-
-Der unendlichdimensionale Tail selbst ist also kein offener Gate mehr.
-
-## 3. Bounded-band lower operator `✓[M]`
+## 4. Reduced bounded-band operator `✓[M] / ✓[K/M]`
 
 Setze
 
 ```math
-c=0.04,
+c=0.1,
 \qquad
-r(\xi)=(m_1(\xi)-c)\mathbf1_{|\xi|\le2300},
+\Omega=1551,
+```
+
+```math
+r(\xi)=(m_1(\xi)-c)\mathbf1_{[-\Omega,\Omega]}(\xi),
+\qquad
+K=P_I\mathcal F^{-1}M_r\mathcal F P_I.
+```
+
+Dann
+
+```math
+q_1\succeq cI+K.
+```
+
+Der Exact-Head-Gate zertifiziert
+
+```math
+\boxed{\|r\|_\infty<12.}
+```
+
+## 5. Moment-augmented Prolate Schur theorem `✓[M]`
+
+Für die PSWFs des Bandes `[-1551,1551]` setze
+
+```math
+R_N=
+\operatorname{span}\{\psi_0,\ldots,\psi_{N-1}\}
++\operatorname{span}\{e^{x/2},e^{-x/2}\},
+\qquad
+T_N=R_N^\perp.
+```
+
+Dann `E|_{T_N}=0`; der Completionterm besitzt keinen Tail- und keinen Crossblock. Für
+
+```math
+L_1=0.1I+K+E^*E
+```
+
+gilt
+
+```math
+\|(L_1)_{RT}\|\le\|r\|_\infty\sqrt{\lambda_N},
+```
+
+```math
+(L_1)_{TT}\succeq
+[0.1-(\Gamma_1+0.1)\lambda_N]I.
+```
+
+Daher reicht
+
+```math
+(L_1)_{RR}\succeq\mu_RI,
+\qquad
+\mu_R\ge
+\frac{\|r\|_\infty^2\lambda_N}
+{0.1-(\Gamma_1+0.1)\lambda_N}.
+```
+
+## 6. Certified `N=1210` reduction `✓[K/M]`
+
+Für den Prolate-Parameter `c_PSWF=1551` liefert Karnik--Romberg--Davenport plus Arb
+
+```math
+\boxed{\lambda_{1210}(1551)<1.5\times10^{-42}.}
+```
+
+Tatsächlicher Exact-Head-Upper-Bound:
+
+```math
+<1.468930504452317\times10^{-42}.
+```
+
+Außerdem
+
+```math
+\tau_{1210}>0.099,
 ```
 
 und
 
 ```math
-K=P_I\mathcal F^{-1}M_r\mathcal F P_I,
-\qquad I=(-1,1).
+\boxed{\text{Schur penalty}<2.2\times10^{-39}.}
 ```
 
-Der Hochfrequenzrest
+Tatsächlicher Upper-Bound:
 
 ```math
-s(\xi)=(m_1(\xi)-c)\mathbf1_{|\xi|>2300}
+2.115259926411337\times10^{-39}.
 ```
 
-ist positiv. Daher
+## 7. Einziger verbleibender `a=1`-Gate — A1-FINITE `?[O]`
 
-```math
-\boxed{q_1\succeq cI+K.}
-```
-
-Für die kanonische Completion
-
-```math
-A_1=q_1+\mathcal E^*\mathcal E
-```
-
-genügt deshalb der bounded lower operator
-
-```math
-\boxed{L_1=cI+K+\mathcal E^*\mathcal E.}
-```
-
-## 4. Moment-augmented Prolate split `✓[M]`
-
-Sei
-
-```math
-R_N^0=\operatorname{span}\{\psi_0,\ldots,\psi_{N-1}\}
-```
-
-der resolved PSWF-Raum und
-
-```math
-\mathcal M
-=\operatorname{span}\{e^{x/2},e^{-x/2}\}
-```
-
-die Riesz-Range des Momentoperators.
-
-Definiere
-
-```math
-\boxed{R_N=R_N^0+\mathcal M,\qquad T_N=R_N^\perp.}
-```
-
-Dann gilt gleichzeitig
-
-```math
-T_N\subset(R_N^0)^\perp,
-\qquad
-\mathcal E|_{T_N}=0.
-```
-
-Also besitzt der Completionterm `E^*E` **keinen Tailblock und keinen resolved--tail Crossblock**.
-
-## 5. Explicit bounded crossblock `✓[M]`
-
-Für `u in R_N`, `t in T_N` ist
-
-```math
-\langle u,L_1t\rangle=\langle u,Kt\rangle.
-```
-
-Da `r` bandbegrenzt ist,
+Vor jeder resolved-space Rechnung wurde der sufficient target festgelegt:
 
 ```math
 \boxed{
-\|(L_1)_{RT}\|
-\le\|r\|_\infty\sqrt{\lambda_N}.
+(L_1)_{RR}\succeq3\times10^{-39}I.
 }
 ```
 
-Auf dem Tail gilt zugleich
-
-```math
-\boxed{
-(L_1)_{TT}\succeq
-\tau_N I,
-\qquad
-\tau_N=c-(\Gamma_1+c)\lambda_N.
-}
-```
-
-Daher reicht für den Schurabschluss
-
-```math
-\boxed{
-(L_1)_{RR}\succeq\mu_RI,
-\qquad
-\mu_R\ge
-\frac{\|r\|_\infty^2\lambda_N}{\tau_N}.
-}
-```
-
-## 6. Predeclared `N=1680` certificate target — exact-head CI pending
-
-Der neue Arb-Gate ist vorab auf
+Die ersten `1210` PSWF-Moden sind `605 even + 605 odd`; die Momentaugmentation erhöht die Dimension auf höchstens
 
 ```text
-Omega = 2300,
-c = 0.04,
-N = 1680
+1212 total = 606 even + 606 odd.
 ```
 
-fixiert und soll zertifizieren:
-
-```math
-\|r\|_\infty<12,
-```
-
-```math
-\lambda_{1680}(2300)<1.1\times10^{-39},
-```
-
-```math
-\tau_{1680}>0.039,
-```
-
-```math
-\frac{\|r\|_\infty^2\lambda_{1680}}{\tau_{1680}}
-<4.1\times10^{-36}.
-```
-
-Diese vier numerischen Aussagen bleiben bis zum grünen Exact-Head-Lauf **candidate `✓[K/M]`**.
-
-Wenn der Gate grün wird, genügt anschließend die einzige finite Aussage
-
-```math
-\boxed{
-(L_1)_{RR}\succeq5\times10^{-36}I.
-}
-```
-
-Der resolved Raum hat Dimension höchstens `1682`, parity-getrennt höchstens `841+841`.
-
-## 7. Neue Default-Front — A1-FINITE `?[O]`
-
-Nach erfolgreichem Cross-Gate besteht der gesamte offene `a=1`-Satz nur noch aus dem finite resolved lower bound
-
-```math
-(L_1)_{RR}\succeq5\times10^{-36}I.
-```
-
-Es bleibt kein separates unendlichdimensionales Tail- oder Crossblockproblem.
+Nach dieser Zertifizierung wäre der gesamte kanonische `a=1`-Completion-Satz geschlossen. Es bleibt kein separates Infinite-Tail- oder Crossblockproblem.
 
 ## 8. Status
 
@@ -222,25 +180,27 @@ Es bleibt kein separates unendlichdimensionales Tail- oder Crossblockproblem.
 COMMON-JUMP / Q0                                      ✓[M]
 rank-2 completion / Morse / parity                    ✓[M]
 exact a=1 Fourier multiplier                          ✓[M]
-full infinite Prolate tail positivity                 ✓[K/M]
-bounded-band lower operator                           ✓[M]
-moment-augmented split                                ✓[M]
-abstract bounded crossblock / Schur criterion         ✓[M]
-||r||<12, lambda_1680<1.1e-39                         candidate ✓[K/M]
-tau_1680>0.039                                        candidate ✓[K/M]
-Schur penalty <4.1e-36                                candidate ✓[K/M]
-resolved lower bound >=5e-36                          ?[O]
+Omega1551: m_1>0.1                                    ✓[K/M]
+||r||<12 on |xi|<=1551                                ✓[K/M]
+KRD lambda_1210<1.5e-42                               ✓[K/M]
+Schur penalty <2.2e-39                                ✓[K/M]
+1212-dimensional finite reduction                     ✓[K/M]
+resolved lower bound >=3e-39                          ?[O]
 certified a=1 completion                              ?[O]
 all-a NP-GAP                                          ?[O]
 forward Object-X candidate architecture               ✓[M]_part
 full positive Object-X / RH                           ?[O]
 ```
 
-## 9. Firewalls
+## 9. Literature metadata firewall
+
+The current arXiv v2 metadata for arXiv:2608.24827 lists **Xuefeng Zhu** as author and notes that the author name/affiliation were updated in v2. Historical project text that temporarily stated `Marcus Chuk` should be read as superseded bibliographic metadata; the mathematical benchmark claims are unchanged.
+
+## 10. Firewalls
 
 Do not claim:
 
-- the new numerical Schur constants are certified before exact-head CI;
-- the resolved `5e-36` lower bound has been proved;
-- the PSWF basis diagonalizes `q_1` or `K`;
+- the resolved `3e-39` lower bound has been proved;
+- `3e-39` is an observed or fitted eigenvalue;
+- the older `2300/1680` reduction was wrong (it remains valid but coarser);
 - fixed-window `a=1`, all-window NP-GAP, Object X, or RH is solved.
