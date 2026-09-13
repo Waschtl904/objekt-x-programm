@@ -1,189 +1,149 @@
-# Offene Probleme — NP-DUAL-COMP / A1-CERT
+# Offene Probleme — A1-SCHUR
 
 > **Stand:** 13. September 2026.  
-> Operative Audits: [NP-DUAL-COMP](audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md) · [A1 Morse diagnostic](audits/P11_NP_DUAL_A1_MORSE_DIAGNOSTIC_2026-09-13.md).
+> Operative Audits: [NP-DUAL-COMP](audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md) · [A1-TAIL](audits/P11_A1_HIGHFREQ_PROLATE_TAIL_2026-09-13.md).
 
 ## Neu geschlossen
 
-### `[SCREW-REDUNDANCY]` `✓[M]`
+### `[A1-FOURIER]` `✓[M]`
 
-Die pole-cleared Diskrepanz aus PR #110 ist der Prime+Polar-Ableitungsblock der Suzuki-Screw-Funktion. Neuheitsclaim als neues arithmetisches Objekt: `×[M]`.
-
-### `[TURAN-EXACTNESS]` `×[M]`
-
-Die notwendigen Autokorrelationsgauges
+Bei `a=1` besitzt `q_1` exakt den ganzen Fouriermultiplikator
 
 ```math
-L_0(C)=L_1(C)=0
+m_1(\xi)=
+\operatorname{Re}\psi\left(\frac14+\frac{i\xi}{2}\right)-\log\pi
+-2\sum_{n\in\{2,3,4,5,7\}}
+\frac{\Lambda(n)}{\sqrt n}\cos(\xi\log n).
 ```
 
-charakterisieren `E_+=E_-=0` auf Faktorebene nicht. Scalar-Turán bleibt nur eine äußere Relaxation.
+Für zeitbegrenztes `v` gilt ohne zusätzlichen Fensterrest
 
-### `[RANK2-COMPLETION]` `✓[M]`
+```math
+q_1(v)=\int m_1(\xi)|\widehat v(\xi)|^2d\xi.
+```
 
-Strict exakt:
+### `[A1-HIGHFREQ]` `✓[K/M]`
+
+Der Exact-Head-Arb-Gate zertifiziert
+
+```math
+\boxed{m_1(\xi)>0.04\quad(|\xi|\ge2300).}
+```
+
+### `[A1-PROLATE-TAIL]` `✓[K/M]`
+
+Für das Band `[-2300,2300]` auf dem Zeitintervall `[-1,1]` gilt `c=2300`. Die explizite Karnik--Romberg--Davenport-Schranke liefert intervallrigoros
+
+```math
+\boxed{\lambda_{1490}(2300)<0.0035.}
+```
+
+Daraus folgt auf dem gesamten orthogonalen Prolate-Tail
 
 ```math
 \boxed{
-q_a\ge\delta I\text{ on }\ker E
-\iff
-\exists\lambda,\mu>0:
-q_a+\lambda E^*E\succeq\mu I.
+q_1(v)>0.01\|v\|^2.
 }
 ```
 
-Semidefinite exakt:
+Der unendlichdimensionale Tail selbst ist damit geschlossen.
+
+### `[PARITY-TAIL]` `✓[M]`
+
+Die ersten `1490` PSWF-Moden zerfallen in `745` even und `745` odd Moden. Die Tailzerlegung ist mit der theorematischen parity-completion kompatibel.
+
+---
+
+## Priorität 0 — `[A1-SCHUR]` `?[O]`
+
+Für die kanonische Completion
+
+```math
+A_1=q_1+\mathcal E^*\mathcal E
+```
+
+und
+
+```math
+L^2(-1,1)=R_{1490}\oplus T_{1490}
+```
+
+ist bereits
+
+```math
+A_{TT}>0.01I
+```
+
+bewiesen.
+
+Zu schließen ist nur noch
 
 ```math
 \boxed{
-q_a\ge0\text{ on }\ker E
-\iff
-\forall\varepsilon>0\ \exists\lambda_\varepsilon>0:
-q_a+\varepsilon I+\lambda_\varepsilon E^*E\succeq0.
+A_{RR}-A_{RT}A_{TT}^{-1}A_{TR}\succeq0.
 }
 ```
 
-### `[MORSE-FILTER]` `✓[M]`
+### Pflichten
 
-Für jede Hermitesche `2x2`-Completion `H`:
+1. resolved PSWF-Formmatrix `A_RR` rigoros/Arb einschließen;
+2. Momentzeilen in der PSWF-Basis einschließen;
+3. `lambda=1` als ersten predeclared Completionwert benutzen;
+4. resolved Inertia und kleinste Eigenwertuntergrenze zertifizieren;
+5. `||A_RT||` rigoros begrenzen;
+6. finalen Schur-Komplement-Gate schließen.
 
-```math
-q_a+E^*HE\succeq0
-\Longrightarrow
-n_-(q_a)\le n_+(H)\le2.
-```
-
-Für die physische Weil-Matrix
-
-```math
-P=\begin{pmatrix}0&1\\1&0\end{pmatrix}
-```
-
-folgt wegen `n_+(P)=1`:
+Ein einfacher sufficient gate ist
 
 ```math
-Q_W^a\succeq0\Longrightarrow n_-(q_a)\le1.
+A_{RR}\succeq\mu_R I,
+\qquad
+\|A_{RT}\|^2\le0.01\mu_R.
 ```
-
-Damit gelten die Falsifikationsgates:
-
-```text
-certified 3 negative directions of q_a => no fixed-window rank-2 NP completion
-certified 2 negative directions of q_a => physical P-completion impossible
-```
-
-### `[PARITY-DUAL]` `✓[M]`
-
-Reflection symmetrization reduces every relevant Hermitian completion to
-
-```math
-H=\begin{pmatrix}\alpha&\beta\\\beta&\alpha\end{pmatrix},
-```
-
-also auf zwei reelle even/odd Dualparameter.
-
-Der physische Poleblock ist in dieser Basis `diag(+1,-1)`.
-
-### `[LAMBDA-ONE]` `✓[M]`
-
-```math
-q_a+E^*E
-=Q_W^a+E^*(I-P)E,
-\qquad I-P\succeq0.
-```
-
-Daher ist `lambda=1` der kanonische erste Completion-Kandidat für den `a=1`-Versuch.
 
 ---
 
-## Priorität 0 — `[DUAL-CERT-1.0]` `?[O]`
+## Priorität 1 — `[A1-RESOLVED]` `?[O]`
 
-Baue ein **rigoroses** fixed-window Completion-Zertifikat bei
+Die neue finite Größe ist `1490 x 1490`, parity-getrennt `745 x 745` pro Sektor.
 
-```text
-a=1.0.
-```
+Zu entscheiden:
 
-Der externe Lower-Bound-Benchmark `L=0.8`, `8.9e-18` stammt korrekt von **Marcus Chuk**, arXiv:2608.24827.
+- direkte Arb-Quadratur der PSWF-Matrixelemente;
+- zertifizierte Spektralmethode für die PSWFs;
+- alternativ eine basisunabhängige resolved-space Untergrenze, die den vollen Matrixbau vermeidet.
 
-Pflichten:
-
-1. parity-adaptierte Basis/Trunkierung vor dem Ergebnis festlegen;
-2. Arb-Enclosures für Formmatrix und beide Momentzeilen;
-3. `lambda=1` zuerst testen; danach höchstens zwei reflection-symmetrische Dualparameter optimieren;
-4. finite Inertia/PSD rigoros zertifizieren;
-5. Tail-Untergrenze in beiden Paritätssektoren beweisen;
-6. resolved-tail Kopplung rigoros begrenzen;
-7. finalen Schur-Komplement-Nachweis führen.
-
-**Der Tail ist die Hauptwand.** Eine finite positive Matrix ist ohne Punkte 5--7 nur Diagnostik.
-
-### Aktuelle Diagnostik — kein Status
-
-In der vorab festgelegten Dirichletbasis bei `a=1` wurden beobachtet:
-
-```text
-null-pole min Ritz: N=4  ~8.22e-4
-                   N=6  ~6.21e-7
-                   N=8  ~3.26e-9
-                   N=10 ~2.70e-9
-                   N=12 ~6.67e-11
-```
-
-Der `N=12`-Vollblock von `q_1` zeigte numerisch eine negative Richtung, im even-Sektor, und die scalar completion wurde bei `lambda≈1` numerisch PSD.
-
-Keine Arb-Enclosures, kein Tail: **nicht zertifiziert**.
+Die früheren 12-dimensionalen Dirichlet-Ritzwerte sind hierfür nur Diagnostik.
 
 ---
 
-## Priorität 1 — `[A1-TAIL]` `?[O]`
+## Priorität 2 — `[A1-CROSS]` `?[O]`
 
-Gesucht ist eine rigorose lower-bound architecture für den unresolved Tail der completed form.
+Gesucht ist eine normierte Schranke für den resolved--tail Block. Prolate diagonalisiert nur den Bandkonzentrationsoperator, nicht `q_1`; daher muss die Kopplung separat kontrolliert werden.
 
-Zu prüfen:
+Mögliche Mechanismen:
 
-- parity-separierte Fourier-/Dirichlet-Tails;
-- resolvent-channel decomposition des archimedischen Operators;
-- Prime-shift / AR(1)-Tail nur zentriert, nicht per separater Normsumme;
-- Landau--Widom als Kalibrierung, nicht als Beweis;
-- Schur-Komplement-Bound für resolved-tail coupling.
-
-Ein bloßer Punktweise-Envelope-Ansatz muss gegen die von Marcus Chuk dokumentierte doppelt-exponentielle Frequenzbarriere geprüft werden.
+- split `m_1=m_{in}+m_{out}` und nutze PSWF band-concentration identities;
+- subtractiere einen positiven Außenboden `0.04` und schätze nur den verbleibenden bounded multiplier;
+- parity-separierte Hilbert--Schmidt-/Schur-Bounds, sofern endlich;
+- graph norm statt bloßer `L^2`-Norm, falls `m_1` unbeschränkt wächst.
 
 ---
 
-## Priorität 2 — `[COMPLETION-STRUCTURE]` `?[O]`
+## Danach — `[A1-CERT]` `?[O]`
 
-Suche eine analytische Regel für den even/odd Completionblock
+Wenn `A1-SCHUR` grün ist, folgt ein rigoroses fixed-window Nullpol-Completion-Zertifikat bei `a=1`.
 
-```math
-H_a\sim\operatorname{diag}(h_e(a),h_o(a))
-```
-
-oder für scalar `lambda_a`, die nicht auf jedem Fenster neu gefittet wird.
-
-Besonders prüfen:
-
-- ob `lambda=1` auf einem größeren Bereich direkt zertifizierbar ist;
-- Verbindung zum klassischen Poleblock `diag(+1,-1)`;
-- Monotonie oder cutoff-gauge covariance in `a`;
-- Q0/COMMON-JUMP als Tailmechanismus.
-
----
-
-## Priorität 3 — `[TURAN-RELAX]`
-
-Scalar-Turán/positive-definite SDP bleibt als sufficient relaxation zulässig. Ein positives Zertifikat beweist mehr als nötig; ein negativer Relaxationszeuge falsifiziert NP-GAP **nicht**.
+Erst danach lohnt sich die Frage nach Skalierung in `a` oder weiteren Fenstern.
 
 ---
 
 ## Firewalls
 
-- `D` nicht als neue arithmetische Größe verkaufen;
-- falsche Attribution `Xuefeng Zhu` nicht weiterverwenden; arXiv:2608.24827 ist Marcus Chuk;
-- scalar autocorrelation nicht mit factor-level null-pole verwechseln;
-- die `a=1` Galerkinwerte nicht promoten;
-- finite PSD ohne tail != theorem;
-- fixed-window positivity != RH;
-- all-a completion bleibt RH-hart;
-- Object X / RH offen.
+- positive high-frequency symbol alone != full positivity;
+- Prolate tail positivity != resolved block positivity;
+- PSWF basis diagonalizes concentration, not `q_1`;
+- finite resolved PSD without crossblock != theorem;
+- previous finite Dirichlet diagnostics remain non-certified;
+- fixed-window `a=1` != RH;
+- all-a NP-GAP, Object X and RH remain open.
