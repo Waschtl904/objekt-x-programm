@@ -1,180 +1,190 @@
-# Abhängigkeitsgraph (DAG) — Objekt X / NULLPOL-CORE
+# Abhängigkeitsgraph (DAG) — Objekt X / COMMON-JUMP → NP-GAP
 
 > **Stand:** 13. September 2026; Registry unverändert.  
 > **Keine Beweisautorität.** Aktuelle Front: [CURRENT-FRONT](../CURRENT-FRONT.md).
 
-## 1. Basis
+## 1. Nullpol-Filter
 
 ```text
-Prime-Power AR(1) / Weil-Tail
-fixed-pair Strong Terminal / C6
-local Suzuki/OX-GRAM normal form
-```
-
-```math
-Q_{B_a}=G_a^+-c_aI-R_0-R_1.
-```
-
-## 2. Pole-functionals identification
-
-```text
-E_-(v) = M(v)(0)
-E_+(v) = M(v)(1)
+E_-(v)=M(v)(0), E_+(v)=M(v)(1)
         |
         v
 D_NP = ker M(0) ∩ ker M(1)
         |
-        +----------------------+
-        |                      |
-        v                      v
-R_0 = 0                    E^*E = 0
+        v
+R_0 = 0, E = 0
 ```
 
-Status: exact `✓[M]`.
-
-## 3. Imported global criterion edge
+Globaler Criterion-Import:
 
 ```text
 Connes–Consani Prop. C.1
-finite F ⊃ {0,1}, F ∩ Z = ∅
         |
-        | imported theorem
         v
-global Weil sign criterion on functions vanishing on F
-        ⇔
+global Weil sign criterion on D_NP
+        <=> RH
+```
+
+Keine Kante `fixed a <=> RH`.
+
+## 2. Eine gemeinsame Operatorfamilie
+
+```math
+K_t=T_{t/2}-T_{-t/2},
+\qquad
+K_t^*K_t=2I-T_t-T_{-t}.
+```
+
+```text
+                        K_t
+                     /       \
+                    /         \
+                   v           v
+archimedean h(t)dt             prime atoms w_n delta_log n
+continuous feature energy      discrete feature energies
+                   \           /
+                    \         /
+                     v       v
+                X_a^* X_a >= 0   ✓[M]
+```
+
+mit
+
+```math
+h(t)=\frac{e^{-t/2}}{1-e^{-2t}},
+\qquad
+w_n=\frac{\Lambda(n)}{\sqrt n}.
+```
+
+## 3. Exakte Schwelle
+
+```text
+gamma-factor scalar log(4pi)+gamma
+        +
+2 integral h(t)(1-e^{-t/2}) dt
+        |
+        v
+kappa_* = log pi - psi(1/4)
+```
+
+Prime-Diagonalledger:
+
+```math
+2\sum_{\log n\le2a}w_n.
+```
+
+Daher
+
+```math
+\Gamma_a
+=2\sum_{\log n\le2a}w_n+\log\pi-\psi(1/4).
+```
+
+## 4. Exact COMMON-JUMP normal form
+
+```text
+pole block <Ev, P Ew>
+        +
+positive common Gram <X_a v, X_a w>
+        -
+Gamma_a <v,w>
+        |
+        v
+Q_W(v,w) exactly, all a>0   ✓[M]
+```
+
+Restriktion auf Nullpol:
+
+```text
+E=0
+ |
+ v
+Q_W|NP = X_a^* X_a - Gamma_a I   ✓[M]
+```
+
+## 5. Frühere offene Knoten werden subsumiert
+
+```text
+NP-R1 ?[O] -----> continuous K_t channel -----> closed/subsumed ✓[M]
+NP-COMMON ?[O] -> mixed common measure --------> ✓[M]
+NP-SCALAR ?[O] -> Gram/threshold covariance ---> ✓[M] (structural)
+```
+
+Die scharfe Schwellenungleichung bleibt offen.
+
+## 6. Cutoff-Gauge edge
+
+Für `0<a<b` und `supp v,w subset [-a,a]`:
+
+```text
+new prime atom, 2a<log n<=2b
+        |
+        v
+<K_log n v,K_log n w> = 2<v,w>
+        |
+        +---------------------------+
+        |                           |
+        v                           v
+Gram increases by 2w_n I     Gamma increases by 2w_n
+        |                           |
+        +-------------+-------------+
+                      v
+centered form unchanged ✓[M]
+```
+
+Damit ist die frühere Exterior-shell-Gauge ein Spezialfall der Common-Jump-Kovarianz.
+
+## 7. Neuer Hauptpfad
+
+```text
+COMMON-JUMP positive geometry ✓[M]
+        |
+        v
+forward Object-X architecture ✓[M]_part
+        |
+        v
+NP-GAP ?[O]
+        |
+        | prove lambda_NP(a) >= Gamma_a for all a
+        v
+global null-pole Weil positivity
+        |
+        v
 RH
 ```
 
-**No edge:** `fixed a null-pole positivity ⇔ RH` is **not** asserted.
-
-## 4. Strategic filter
+## 8. NP-GAP Unterpfade
 
 ```text
-candidate mechanism
+null-pole moments
+M(v)(0)=M(v)(1)=0
         |
-        | restrict to D_NP
-        v
-nontrivial? ---------------- no ---> auxiliary only
-   |
-  yes
-   |
-   v
-eligible for Object-X main-front edge
-```
-
-This filter is binding for future research prioritization.
-
-## 5. OX-GEN-A / POS-DIL after filter
-
-```text
-OX-GEN-A common generator plane ✓[M]
+        +--> support-preserving Q_0=-d^2/dx^2+1/4 factorization
         |
-        | target is R_0 / E-mass
-        v
-restrict to D_NP
+        +--> Fourier zeros at z=±i/2
+        |
+        +--> nonlocal Poincare / frame / Paley-Wiener tests
         |
         v
-zero
+sharp lower bound for X_a^*X_a ?[O]
 ```
 
-Therefore:
+Keine Weil-Positivität darf als Input in diese Kante zurückgeschleift werden.
+
+## 9. Auxiliary edges
 
 ```text
-OX-GEN-A -> AUX pole-layer structure
+OX-GEN-A -> exact pole-layer geometry
+POS-DIL #101-#105 -> auxiliary full-class route
+Prime AR(1) -> independent positive structure
 ```
 
-The same applies strategically to the POS-DIL chain #101--#105. Their mathematical statements remain valid.
+PR #91, PR #49 und R37/G4c bleiben separat.
 
-```text
-#101 Prime-moment Hilbertization
-  ↓
-#102 full-class unit-gain No-Go
-  ↓
-#103 exterior shell
-  ↓
-#104 radius domination
-  ↓
-#105 exact cutoff gauge + R_0 absorption
-  ↓
-AUX-POS-DIL [preserved]
-```
+## 10. Firewalls
 
-No automatic Object-X main-front edge remains from this chain.
-
-## 6. Null-pole local normal form
-
-On the local null-pole subspace:
-
-```math
-\boxed{
-Q_{B_a}|_{NP}=G_a^+|_{NP}-c_aI-R_1|_{NP}.
-}
-```
-
-Thus the active exact remainder is
-
-```text
-positive Prime/log|D| geometry
-        minus
-scalar ledger + R_1
-```
-
-## 7. Current main-front DAG
-
-```text
-NULLPOL-CORE
-    |
-    +--> NP-R1 ?[O]
-    |      |
-    |      +--> kernel / parity / generator structure
-    |      +--> natural class construction or No-Go
-    |
-    +--> NP-SCALAR ?[O]
-    |      |
-    |      +--> canonical Suzuki gauge
-    |      +--> gauge-invariant remainder
-    |
-    +--> NP-COMMON ?[O]
-           |
-           | common nontrivial mechanism on D_NP
-           v
-      genuine X candidate ?[O]
-           |
-           v
-      exact Weil-Gram identity on RH-equivalent class ?[O]
-           |
-           v
-      Object-X realization ?[O]
-           |
-           v
-      criterion-scope verification ?[O]
-           |
-           v
-          RH
-```
-
-## 8. Gauge side edge
-
-PR #105 remains an exact identity:
-
-```text
-outer Prime channels
-    |
-    v
-G_a^+ -> G_a^+ + H_{a,J}
-c_a   -> c_a + b_J
-    |
-    v
-Q_Ba unchanged
-```
-
-Therefore an isolated scalar value is not invariant. NP-SCALAR must either fix the Suzuki gauge or formulate the remainder gauge-invariantly.
-
-## 9. Firewalls
-
-- annihilation of `R_0` != positivity of the remaining form;
-- global null-pole RH equivalence != fixed-window equivalence;
-- auxiliary != false;
-- cutoff gauge != arbitrary diagonal freedom;
-- Registry unchanged;
-- PR #91, PR #49 and R37/G4c remain separate.
+- common geometry != sharp frame bound;
+- exact difference-of-Gram-and-threshold != positive Weil-Gram realization;
+- global null-pole criterion != fixed-window criterion;
+- publication novelty `?[O]`;
+- Registry unchanged.
