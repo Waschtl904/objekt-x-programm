@@ -1,137 +1,101 @@
-# Offene Probleme — NP-DISCREPANCY / NP-CORR
+# Offene Probleme — NP-DUAL-COMP
 
 > **Stand:** 13. September 2026.  
-> Operative Quellen: [CURRENT-FRONT](CURRENT-FRONT.md), [Pole-cleared discrepancy](audits/P11_NP_DISCREPANCY_POLE_CLEARED_CORRELATION_2026-09-13.md), [Prime-overlap AR(1)](audits/P11_NP_OVERLAP_AR1_FIBERIZATION_2026-09-13.md).
+> Operative Quelle: [NP-DUAL-COMP-Audit](audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md).
 
 ## Neu geschlossen
 
-### `[SHIFT-NORM-SUM]` `×[M]`
+### `[SCREW-REDUNDANCY]` `✓[M]`
 
-Unabhängige Einzelshift-/Blocknormsummation verfehlt den all-window-Bereich exponentiell. Für `a<log n<2a` ist die Shift-Norm `1/2`, daher ist der separate Normbudget-Term mindestens
-
-```math
-2e^a(1+o(1)).
-```
-
-### `[RAW-PROLATE]` `×[M]` als hinreichender Mechanismus
-
-Ein `a`-unabhängiger Zeit-Frequenz-Konzentrationsfaktor kann die rohe Prime-Multiplikatoramplitude `~e^a` nicht auf die benötigte Skala bringen. Prolate bleibt nur nach arithmetischer Zentrierung interessant.
-
-### `[NULLPOLE-CORR-GAUGE]` `✓[M]`
+Die pole-cleared Diskrepanz aus PR #110 ist der bekannte Prime+Polar-Ableitungsblock der Suzuki-Screw-Funktion:
 
 ```math
-\int_0^{2a}2\cosh(t/2)\operatorname{Re}\langle T_tv,v\rangle dt=0
+D=(g_0+r_0)'.
 ```
 
-für `v in D_NP(a)`.
+Neuheitsclaim `D` als neues arithmetisches Objekt: `×[M]`.
 
-### `[PRIME-DISCREPANCY]` `✓[M]`
+### `[AUTOCORR-GAUGES]` `✓[M]`
+
+Nullpol erzeugt die notwendigen linearen Bedingungen
 
 ```math
-d\mathfrak D(t)
-=\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}(dt)
--2\cosh(t/2)dt.
+L_0(C)=0,
+\qquad L_1(C)=0.
 ```
 
-Dann
+### `[TURAN-EXACTNESS]` `×[M]`
+
+Weder eine noch beide skalaren Momentbedingungen charakterisieren `E_+=E_-=0` exakt auf Faktorebene. Scalar-Turán ist nur eine äußere Relaxation.
+
+### `[RANK2-COMPLETION]` `✓[M]`
+
+Strict:
 
 ```math
-\mathcal O_a(v)
-=2\int Re\langle T_tv,v\rangle d\mathfrak D(t).
+q_a\ge\delta I\text{ on ker E}
+\Longrightarrow
+\exists\lambda>0:\ q_a+\lambda E^*E\succeq0.
 ```
 
-Kumulativ:
+Semidefinite exact:
 
 ```math
-\mathfrak D(T)
-=\sum_{\log n\le T}\frac{\Lambda(n)}{\sqrt n}-4\sinh(T/2).
+q_a\ge0\text{ on ker E}
+\iff
+\forall\varepsilon>0\ \exists\lambda_\varepsilon>0:
+q_a+\varepsilon I+\lambda_\varepsilon E^*E\succeq0.
 ```
-
-Der PNT-Hauptterm ist entfernt.
-
-### `[POLE-CLEARED-ZETA]` `✓[M]`
-
-```math
-\mathcal L[d\mathfrak D](s)
-=-\frac{d}{ds}\log[(s^2-1/4)\zeta(s+1/2)].
-```
-
-Die beiden Nullpolpunkte `0,1` erscheinen exakt als die herausgenommenen Polfaktoren.
 
 ---
 
-## Priorität 0 — `[NP-CORR]` `?[O]`
+## Priorität 0 — `[DUAL-CERT-1.0]` `?[O]`
 
-Zu beweisen ist die strukturierte signed-pairing-Ungleichung
-
-```math
-\boxed{
-\mathcal A(v)
-\ge
--2\int_0^{2a}\mathfrak D(t)
-\frac{d}{dt}\operatorname{Re}\langle T_tv,v\rangle dt
-}
-```
-
-für alle `v in D_NP(a)` und alle `a>0`.
-
-### Pflichtfragen
-
-1. Welche Signwechsel-/Oszillationsinformation über `D(t)` ist wirklich nutzbar, ohne bereits RH einzubauen?
-2. Welche Restriktionen erzwingt positive Definitheit der Autokorrelation zusätzlich zum cosh-Moment?
-3. Was wird aus `C_v'(t)` nach `v=Q_0u`?
-4. Wie erscheinen die exakten per-prime AR(1)-Blöcke innerhalb derselben Diskrepanz?
-5. Kann ein centered Toeplitz-/Paley-Wiener-/Prolate-Argument das signed pairing kontrollieren?
-6. Gibt es einen expliziten Korrelationszeugen, der diese ganze Mechanismusklasse falsifiziert?
-
-### Harte Firewall
-
-Ein polynomialer Absolutbound
-
-```math
-D(T)=O(T^K)
-```
-
-für irgendein festes `K` wäre bereits RH-hart. Gesucht ist daher **keine** globale absolute Diskrepanzmajorante, sondern Antikorrelation gegen die spezielle Testklasse.
-
----
-
-## Priorität 1 — `[AR1-RECONNECT]`
-
-Die exakten Fasern
-
-```math
-O_{p,a}^{(N)}=(\log p)(R_{p^{-1/2}}^{(N)}-I)
-```
-
-bleiben als lokale Struktur relevant. Ziel ist, die alte AR(1)/Markov-/Weil-tail-Faktorisierung in eine signed-correlation-Aussage für `dD` zu übersetzen.
-
----
-
-## Priorität 2 — `[CENTERED-PROLATE]`
-
-Prolate/Paley-Wiener nur noch auf der pole-cleared Diskrepanz testen. Ein Gate, das lediglich einen konstanten Konzentrationsfaktor für die rohe Prime-Amplitude verbessert, zählt nicht als Hauptfortschritt.
-
----
-
-## Endziel
+Baue einen **rigorosen** fixed-window Completion-Certificate bei
 
 ```text
-NP-DISCREPANCY signed anti-correlation
-        |
-        v
-all-a NP-GAP
-        |
-        v
-global null-pole Weil positivity
-        |
-        v
-RH
+a=1.0
 ```
+
+oder einem vorab festgelegten Wert `>0.8`.
+
+Pflichten:
+
+1. Basis/Trunkierung vor Ergebnis festlegen;
+2. exact/Arb Momentmatrix für `E_±`;
+3. Hermiteschen `2x2` Completionblock `H` oder scalar `lambda` optimieren;
+4. resolved PSD zertifizieren;
+5. unresolved tail rigoros kontrollieren;
+6. keine Promotion aus einem bloßen finite Ritz/SDP value.
+
+Literaturbenchmark: volle fixed-window Positivität ist bereits bis `a=0.8` zertifiziert.
+
+---
+
+## Priorität 1 — `[COMPLETION-STRUCTURE]` `?[O]`
+
+Suche eine analytische Regel für `H_a` oder `lambda_a`, die mit `a` skaliert und nicht auf jedem Fenster neu numerisch gefittet wird.
+
+Besonders prüfen:
+
+- Verbindung von `H_a` zum klassischen Poleblock `P`;
+- Q0-Transport und COMMON-JUMP;
+- signed discrepancy / AR(1) nur als Mechanismen zur Tailkontrolle;
+- mögliche Monotonie/Schur-Komplement-Kovarianz in `a`.
+
+---
+
+## Priorität 2 — `[TURAN-RELAX]`
+
+Scalar-Turán/positive-definite SDP darf als sufficient relaxation getestet werden. Ein positives Zertifikat dort beweist mehr als nötig; ein negativer Relaxationszeuge falsifiziert NP-GAP **nicht**.
+
+---
 
 ## Firewalls
 
-- bekannte Kleinfensterpositivität bleibt Literaturbestand;
-- Einzelshift-/Blocknorm-No-Go nicht auf kollektive signed mechanisms überdehnen;
-- polynomialer D-Bound nicht als Zwischenziel verkaufen;
-- Object X und RH bleiben offen.
+- `D` nicht als neue arithmetische Größe verkaufen;
+- scalar autocorrelation nicht mit factor-level null-pole verwechseln;
+- finite matrix PSD ohne tail != theorem;
+- fixed-window positivity != RH;
+- all-a completion bleibt RH-hart;
+- Object X / RH offen.
