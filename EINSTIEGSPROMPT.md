@@ -1,15 +1,14 @@
 # Einstiegsprompt — Neue Chat-Session
 
 > **Aktueller Stand: 13. September 2026.**
-> Dieser Text ist der operative Einstieg für eine neue Session. Ältere Stände sind über Git erhalten und nicht als heutige Arbeitsanweisung zu verwenden.
 
 ## Arbeitskontext
 
 Forschungsprogramm **Objekt X** zur Riemannschen Hypothese im Repository `Waschtl904/objekt-x-programm`.
 
-Arbeite als strenger mathematischer Auditor und Research Assistant. Prüfe zu Beginn den aktuellen `main`-Stand direkt im Repository. Verwende kanonische mathematische Quellen vor älteren Navigations-/Archivdokumenten. Keine Behauptung darf durch Merge, CI oder numerische Evidenz still promotet werden.
+Arbeite als strenger mathematischer Auditor und Research Assistant. Prüfe zuerst den aktuellen `main`-Stand live. Keine mathematische Promotion allein durch Merge, CI oder Numerik.
 
-### Kanonische operative Quellen
+### Kanonische Quellen
 
 1. `CURRENT-FRONT.md`
 2. `00-uebersicht/AKTUELLER_STAND.md`
@@ -18,50 +17,32 @@ Arbeite als strenger mathematischer Auditor und Research Assistant. Prüfe zu Be
 5. `00-uebersicht/ACTIVE_THEOREM_REGISTRY.md`
 6. `00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`
 
-Aktueller mathematischer Strang zusätzlich:
+Aktueller Strang zusätzlich:
 
-- `audits/P11_OBJECT_X_AR1_OX_GRAM_CONSOLIDATION_2026-09-12.md`
 - `audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md`
 - `audits/P11_POS_DIL_1_PRIME_MOMENT_HILBERTIZATION_2026-09-13.md`
 - `audits/P11_POS_DIL_2_UNIT_GAIN_FEATURE_SHORTING_NOGO_2026-09-13.md`
 - `audits/P11_POS_DIL_2B_FIRST_EXTERIOR_PRIME_SHELL_2026-09-13.md`
+- `audits/P11_POS_DIL_2C_EXTERIOR_SHELL_RADIUS_0_1_2026-09-13.md`
 
 ### Governance
 
-ChatGPT übernimmt sämtliche GitHub-/Repository-Arbeiten. Perplexity dient ausschließlich als externer Reviewer/Auditor und nimmt keine Repo-Mutationen vor.
-
-Statusmarker strikt trennen: `✓[M]`, `✓[K/M]`, `✓[M]_part`, `✓[M]_neg`, `×[M]`, `?[O]`.
+ChatGPT übernimmt sämtliche GitHub-/Repository-Arbeiten. Perplexity ist nur externer Reviewer/Auditor. Statusmarker strikt trennen: `✓[M]`, `✓[K/M]`, `✓[M]_part`, `✓[M]_neg`, `×[M]`, `?[O]`.
 
 ---
 
 ## Aktueller mathematischer Stand
 
-### 1. Strong Terminal / C6
+### Strong Terminal / Prime-AR(1)
 
-Fixed-pair Strong Terminal/C6 liegt für jedes feste `0<R<S` im ungeraden P11-Graphraum vor. Keine Radienuniformität, Operatornormkonvergenz, Object-X- oder RH-Folgerung.
-
-### 2. Prime-Power-/AR(1)-Struktur
+Fixed-pair Strong Terminal/C6 liegt im ungeraden P11-Graphraum vor. Prime-Power-Geometrie:
 
 ```math
 C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2},
-\qquad
-T_q^*T_q+uu^*=R_q.
+\qquad T_q^*T_q+uu^*=R_q.
 ```
 
-Die P11-Restseite besitzt die exakte Weil-Tail-Normalform.
-
-### 3. OX-GRAM
-
-Für `a<=1`:
-
-```math
-Q_{B_a}=G_a^+-N_a,
-\qquad N_a=c_aI+C_a.
-```
-
-Arbiträre rückwärts konstruierte Kontraktorexistenz ist kein Object-X-Gate.
-
-### 4. OX-GEN-A `✓[M]`
+### OX-GEN-A / POS-DIL-1
 
 ```math
 \mathcal ET_t=\rho(t)\mathcal E,
@@ -70,22 +51,10 @@ Arbiträre rückwärts konstruierte Kontraktorexistenz ist kein Object-X-Gate.
 ```
 
 ```math
-r_0''(t)=-\operatorname{tr}\rho(t),
-\qquad
 R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle.
 ```
 
-Prime-only-A2 bleibt `×[M]` im engen Scope.
-
-### 5. POS-DIL-1
-
-Die Companion-Symmetrien erzwingen `M=tI`; minimale Blockpositivität liefert `M=I`; volle positive `rho`-Invarianz ist nur trivial.
-
 Prime-moment-Hilbertisierung:
-
-```math
-V_Nv=\kappa_N^{-1/2}(\sqrt{w_n}\,\mathcal EK_nv)_{n\in N},
-```
 
 ```math
 \|V_Nv\|^2=\|\mathcal Ev\|^2,
@@ -99,96 +68,95 @@ AR(1)-Brücke:
 \sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S.
 ```
 
-`OX-GEN-A2'` insgesamt `✓[M]_part`.
+### POS-DIL-2A
 
-### 6. POS-DIL-2A `×[M]`
+Die unveränderte lokale `G_{1/2}^+`-Featuremasse ist für unit-gain Shorting zu klein; Plateau-Defekt `delta_0>5/32`.
 
-Bei `a=1/2` ist die bestehende `G_{1/2}^+`-Masse zu klein für unit-gain Shorting:
-
-```math
-\|\mathcal Ev_\varepsilon\|^2\to32\sinh^2\frac14,
-```
-
-```math
-G_{1/2}^+(v_\varepsilon)\to1+\sqrt2(\log2)^2,
-```
-
-mit strikt größerem Momentwert. Notwendiger Defekt `delta_0>5/32`.
-
-### 7. POS-DIL-2B — erster äußerer Prime-Shell `✓[M]` bei a=1/2
-
-Definiere rein aus der Shift-Geometrie
+### POS-DIL-2B/2C-R — erster Außenshell
 
 ```math
 \mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\},
-\qquad c_n=\frac12\log n,
+\qquad c_n=\frac12\log n.
 ```
-
-und
 
 ```math
 H_a^{out}(v,w)=\sum_{n\in\mathscr S_a^{out}}
 \frac{\Lambda(n)}{\sqrt n}\langle K_nv,K_nw\rangle.
 ```
 
-Für `c_n>a` sind die verschobenen Fenster disjunkt:
+Für jeden Shell-Kanal:
 
 ```math
-\boxed{\|K_nv\|^2=2\|v\|^2.}
+\|K_nv\|^2=2\|v\|^2.
 ```
 
-Die resultierende Skalarmasse stammt daher exakt aus echten Prime-Kanälen.
-
-Bei `a=1/2` enthält der Shell insbesondere `3,4,5`, und
+Daher
 
 ```math
-G_{1/2}^+(v)+H_{1/2}^{out}(v)>\frac83\|v\|^2,
+H_a^{out}(v)=2B_a^{out}\|v\|^2.
 ```
 
-während
+Für **alle** `0<a<=1` wurde rein elementar bewiesen:
 
 ```math
-\|\mathcal Ev\|^2<\frac83\|v\|^2.
+-\log a+2B_a^{out}>4\sinh a.
 ```
 
-Somit uniform für alle Testfunktionen:
+Mit
+
+```math
+G_a^+(v)\ge(-\log a)\|v\|^2,
+\qquad
+\|\mathcal Ev\|^2\le4\sinh(a)\|v\|^2
+```
+
+folgt
 
 ```math
 \boxed{
 \|\mathcal Ev\|^2
-\le G_{1/2}^+(v)+H_{1/2}^{out}(v).
+\le G_a^+(v)+H_a^{out}(v),
+\qquad0<a\le1.
 }
 ```
 
-Mit `A=G+H_out` gilt außerdem
+und damit
 
 ```math
 \boxed{
-\begin{pmatrix}A&R_0\\R_0&A\end{pmatrix}\succeq0.
+\begin{pmatrix}
+G_a^++H_a^{out}&R_0\\
+R_0&G_a^++H_a^{out}
+\end{pmatrix}\succeq0
+\qquad(0<a\le1).
 }
 ```
 
-Dies ist ein positiver gemeinsamer Prime-/`r_0`-Schurbaustein bei `a=1/2`.
+**Radiusfrage geschlossen `✓[M]`.** `OX-GEN-A2'` bleibt insgesamt `✓[M]_part`, weil die exakte Weil-Buchung noch fehlt.
 
 ---
 
-## Nächste Default-Arbeitsfolge
+## Nächster Default-Auftrag
 
-1. **POS-DIL-2C / SHELL-BOOKING:** klären, wie die reale positive Energie der Kanäle `c_n>a` in einer exakten gemeinsamen Geometrie bilanziert werden kann, ohne die Weilform künstlich zu vergrößern. Prüfe Shell-Differenzen, Teleskopierung, AR(1)-Root/Hub und `1-u_k`.
-2. **POS-DIL-2C / RADIUS:** bestimme algebraisch den Radiusbereich, auf dem derselbe erste Außenshell die Momentmasse dominiert.
-3. **OX-GEN-B:** `r_1`/`c_aI` erst nach sauberer Buchungsanalyse; Shellmasse nicht still mit `c_aI` identifizieren.
-4. Parallel AR(1)/Martingal-Faktorisierung theorem-ready verschriftlichen.
+**POS-DIL-2C-B / EXACT-SHELL-BOOKING.**
+
+Untersuche algebraisch, wie `H_a^{out}` in einer exakten gemeinsamen Prime-/Archimedean-Geometrie gegengebucht/renormalisiert werden kann, ohne die Weilform zu verändern.
+
+Reihenfolge:
+
+1. Außenkanal-Identitätsmasse vor der Cutoff-Umschreibung rekonstruieren.
+2. Shell-Differenzen/Teleskopierung prüfen.
+3. Gegenbuchung über `T_q^*T_q+uu^*=R_q` prüfen.
+4. Rolle der Amplitude `1-u_k` untersuchen.
+5. Erst danach `c_aI` oder `r_1` anbinden.
+
+Keine weitere bloße Positivitätsverstärkung als Hauptfortschritt verbuchen.
 
 ---
 
 ## Firewalls
 
-Nicht behaupten:
-
-- Außenshell-Positivität sei schon eine volle Weil-Identität;
-- der Radius-1/2-Satz sei radienuniform;
-- Shellmasse = `c_aI`;
-- POS-DIL-2A sei ein globaler No-Go;
-- positiver Schurblock = Object X oder RH.
-
-PR #91, PR #49 und R37/G4c bleiben separate Nebenfronten. Es gibt weiterhin keine vollständige Object-X-Realisierung und keinen RH-Beweis.
+- Außenshellmasse ist nicht bereits `c_aI`.
+- Radiuspositivität ist keine exakte Weil-Buchung.
+- `r_1`, volle Weil-Gram-Identität, Object X und RH bleiben offen.
+- PR #91, PR #49 und R37/G4c bleiben separat.
