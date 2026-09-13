@@ -45,6 +45,10 @@ Predeclared gate:
     M = 1730,
     parity head dimensions = 865 + 865.
 
+The checker also transports the already certified PR #118 Gauss-40/panel-width
+0.4 quadrature architecture to the smaller final head and certifies an improved
+per-parity analytic quadrature operator error below 2.6e-38.
+
 No binary float enters an acceptance test.
 """
 
@@ -57,9 +61,19 @@ OMEGA = arb(1551)
 C = arb("0.1")
 R = arb(12)
 M = 1730
+PARITY_DIM = M // 2
+NMAX = M - 1
 ETA_TARGET = arb("1.2e-46")
 PENALTY_TARGET = arb("2e-43")
 FINITE_TARGET = arb("1e-35")
+
+# Quadrature backend inherited from #118.
+STRIP = arb(2) / 5
+GAUSS_N = 40
+PANELS = 3878
+R_STRIP_BOUND = arb(42)
+INTEGRAND_BOUND_TARGET = arb(210000)
+QUAD_OP_TARGET = arb("2.6e-38")
 
 
 def odd_double_factorial(n: int) -> int:
@@ -72,7 +86,6 @@ def odd_double_factorial(n: int) -> int:
 
 def dlmf_band_tail_bound() -> tuple[arb, arb, arb]:
     """Return (eta_M, d_M, q_M) from the DLMF 10.14.5 envelope."""
-    # Certify monotonicity condition n(n+1)>Omega^2 at the first discarded n.
     if not (arb(M * (M + 1)) > OMEGA * OMEGA):
         raise RuntimeError("DLMF spherical envelope is not monotone on the full band")
 
@@ -83,11 +96,8 @@ def dlmf_band_tail_bound() -> tuple[arb, arb, arb]:
 
     s = (1 - x * x).sqrt()
     phi = x.log() + s - (1 + s).log()
-
-    # Diagonal concentration bound at n=M.
     dM = 2 * nu * (2 * nu * phi).exp()
 
-    # Concavity-derived ratio bound for all later n.
     q = (1 / nu).exp() * (x / (1 + s)) ** 2
     if not (q < 1):
         raise RuntimeError(f"DLMF tail ratio bound is not <1: q={q}")
@@ -97,7 +107,6 @@ def dlmf_band_tail_bound() -> tuple[arb, arb, arb]:
 
 
 def moment_tail_bound_one_weight() -> arb:
-    """Existing rigorous tail bound for the Legendre coefficients of e^{x/2}."""
     z = arb(1) / 2
     df = arb(odd_double_factorial(2 * M + 1))
     nu = arb(M) + arb(1) / 2
@@ -111,6 +120,25 @@ def moment_tail_bound_one_weight() -> arb:
     return sM / (1 - q)
 
 
+def reduced_quadrature_budget() -> tuple[arb, arb, arb]:
+    """Transport PR #118 analytic Gauss budget to the reduced 865-mode head."""
+    nu_max = arb(NMAX) + arb(1) / 2
+    integrand_bound = (4 / PI) * nu_max * (2 * STRIP).exp() * R_STRIP_BOUND
+    if not (integrand_bound < INTEGRAND_BOUND_TARGET):
+        raise RuntimeError(f"reduced integrand bound failed: M={integrand_bound}")
+
+    rho = arb(2) + arb(5).sqrt()
+    panel_error = (
+        4 * INTEGRAND_BOUND_TARGET * rho
+        / ((rho - 1) * (rho ** (2 * GAUSS_N) - 1))
+    )
+    entry_error = arb(PANELS) * panel_error
+    op_error = arb(PARITY_DIM) * entry_error
+    if not (op_error < QUAD_OP_TARGET):
+        raise RuntimeError(f"reduced operator quadrature budget failed: {op_error}")
+    return integrand_bound, entry_error, op_error
+
+
 def main() -> None:
     eta, dM, q = dlmf_band_tail_bound()
     if not (eta < ETA_TARGET):
@@ -118,8 +146,6 @@ def main() -> None:
 
     sigma2 = moment_tail_bound_one_weight()
     delta_E = (2 * sigma2).sqrt()
-
-    # ||E|| <= sqrt(||e^{x/2}||^2+||e^{-x/2}||^2)=sqrt(4 sinh 1).
     E_norm = (2 * (arb(1).exp() - (-arb(1)).exp())).sqrt()
 
     cross = R * eta.sqrt() + E_norm * delta_E
@@ -135,12 +161,14 @@ def main() -> None:
             f"finite target has insufficient clearance: target={FINITE_TARGET}, penalty={penalty}"
         )
 
+    integrand_bound, entry_error, op_error = reduced_quadrature_budget()
+
     print("A1 sharpened DLMF Legendre-tail Arb certificate")
     print(f"prec_bits             = {ctx.prec}")
     print(f"Omega                 = {OMEGA.str(20, radius=False)}")
     print(f"first discarded n     = {M}")
-    print(f"even head dim          = {M//2}")
-    print(f"odd head dim           = {M//2}")
+    print(f"even head dim          = {PARITY_DIM}")
+    print(f"odd head dim           = {PARITY_DIM}")
     print(f"DLMF d_M upper         = {dM.str(60)}")
     print(f"DLMF ratio q_M upper   = {q.str(60)}")
     print(f"eta_M upper            = {eta.str(60)}")
@@ -148,9 +176,13 @@ def main() -> None:
     print(f"total cross upper      = {cross.str(60)}")
     print(f"tail tau lower         = {tau.str(60)}")
     print(f"Schur penalty upper    = {penalty.str(60)}")
+    print(f"reduced integrand ub   = {integrand_bound.str(50)}")
+    print(f"reduced entry q-error  = {entry_error.str(60)}")
+    print(f"reduced op q-error     = {op_error.str(60)}")
     print(f"finite target          = {FINITE_TARGET.str(20, radius=False)}")
     print("CERTIFIED: DLMF Legendre band-tail eta_1730 < 1.2e-46")
     print("CERTIFIED: sharpened Legendre Schur penalty < 2e-43")
+    print("CERTIFIED: reduced 865x865 Legendre quadrature operator error < 2.6e-38")
     print("CERTIFIED: final Legendre parity blocks reduce to 865x865 at target 1e-35")
 
 
