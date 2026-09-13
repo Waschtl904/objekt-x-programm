@@ -1,16 +1,16 @@
-# CURRENT FRONT — Objekt X / NP-DUAL-COMP
+# CURRENT FRONT — Objekt X / NP-DUAL-COMP → A1-CERT
 
 > **Stand:** 13. September 2026; Registry und Objekt-X-Arbeitsdefinition unverändert.  
-> **Hauptaudit:** [NP-DUAL-COMP / Screw audit](audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md).
+> **Hauptaudits:** [NP-DUAL-COMP](audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md) · [A1 Morse diagnostic](audits/P11_NP_DUAL_A1_MORSE_DIAGNOSTIC_2026-09-13.md).
 
 ## 1. Gesicherte Architektur
 
-COMMON-JUMP und `Q_0` bleiben `✓[M]`. Für
+Mit
 
 ```math
-\mathcal Ev=(E_+(v),E_-(v))^T,
-\qquad
 q_a(v)=\|X_av\|^2-\Gamma_a\|v\|^2,
+\qquad
+\mathcal Ev=(E_+(v),E_-(v))^T,
 ```
 
 gilt
@@ -19,7 +19,7 @@ gilt
 D_{NP}(a)=\ker\mathcal E,
 ```
 
-und die volle lokale Weilform ist exakt
+und
 
 ```math
 \boxed{
@@ -29,34 +29,28 @@ P=\begin{pmatrix}0&1\\1&0\end{pmatrix}.
 }
 ```
 
-## 2. Screw-Redundanzaudit
+COMMON-JUMP und die support-erhaltende `Q_0`-Nullpolparametrisierung bleiben `✓[M]`.
 
-Die in PR #110 definierte pole-cleared Diskrepanz ist algebraisch korrekt, aber kein literatur-neues arithmetisches Objekt. Für den Prime-/Polar-Teil von Suzukis Screw-Funktion gilt auf `t>0`
+## 2. Screw- und Literaturkorrektur
 
-```math
-\boxed{
-\mathfrak D(t)=\frac d{dt}(g_0(t)+r_0(t)),
-}
-```
-
-mit
+Die pole-cleared Diskrepanz aus PR #110 ist algebraisch korrekt, aber als arithmetisches Objekt bereits im Prime+Polar-Teil von Suzukis Screw-Funktion enthalten:
 
 ```math
-g_0(t)=\sum_{n\le e^t}\frac{\Lambda(n)}{\sqrt n}(t-\log n),
-\qquad
-r_0(t)=-4(e^{t/2}+e^{-t/2}-2).
+\mathfrak D(t)=\frac d{dt}(g_0(t)+r_0(t)).
 ```
 
-Daher:
+Daher
 
 ```text
-prime/polar discrepancy identity                  ✓[M]
-D as literature-new arithmetic object              ×[M]
-null-pole gauge/use                                 ✓[M]
-publication novelty of the architecture/use         ?[O]
+prime/polar discrepancy identity             ✓[M]
+D as literature-new arithmetic object         ×[M]
+null-pole gauge/use                           ✓[M]
+publication novelty of the architecture/use   ?[O]
 ```
 
-## 3. Autokorrelation: Turán ja, aber nur als Relaxation
+**Bibliographisches Erratum:** arXiv:2608.24827 (*Weil positivity in compact windows: certified two-sided bounds and a Landau--Widom decay law*) ist von **Marcus Chuk**, nicht Xuefeng Zhu. Die inhaltlich importierten Zahlen bleiben unverändert: voller `L=0.8`-Lower-Bound `8.9e-18`, Upper-Bounds bis `3.2e-283` bei `L=2`, Landau--Widom-Plunge und doppelt-exponentielle Envelope-Barriere.
+
+## 3. Turán-Firewall
 
 Für
 
@@ -64,114 +58,184 @@ Für
 C_v(t)=\langle T_tv,v\rangle
 ```
 
-gilt bilateral
+gilt
 
 ```math
 \int_{\mathbb R}e^{st}C_v(t)dt
 =E_s(v)\overline{E_{-s}(v)}.
 ```
 
-Nullpol erzeugt daher bei `s=1/2` mindestens eine doppelte Nullstelle. Für reelle `v` folgen zwei lineare Bedingungen
+Nullpol erzwingt zwar die beiden notwendigen linearen Gauges
 
 ```math
-\boxed{
-L_0(C_v)=\int_0^{2a}C_v(t)\cosh(t/2)dt=0,
-}
+L_0(C_v)=0,
+\qquad
+L_1(C_v)=0,
 ```
 
-```math
-\boxed{
-L_1(C_v)=\int_0^{2a}tC_v(t)\sinh(t/2)dt=0.
-}
-```
-
-Aber selbst `L_0=L_1=0` charakterisiert Nullpol **nicht**: die zwei Nullstellen können vollständig in nur einem Spektralfaktor liegen. Deshalb
+aber selbst beide charakterisieren die Faktorbedingung `E_+=E_-=0` nicht. Daher ist ein skalares positiv-definites Turán-SDP nur eine **äußere Relaxation**.
 
 ```text
-one-moment Turan = exact null-pole class           ×[M]
-two scalar moments = exact null-pole class          ×[M]
-L0,L1 as necessary dual gauges                      ✓[M]
+scalar Turan exactness   ×[M]
+L0,L1 necessary gauges   ✓[M]
 ```
 
-Ein skalare positive-definite Turán-SDP ist damit eine **äußere Relaxation**: ein Positivitätszertifikat genügt, ein Gegenbeispiel falsifiziert NP-GAP nicht.
+## 4. Exakte rank-2 completion `✓[M]`
 
-## 4. Exakte Hauptfront — rank-2 completion `✓[M]`
-
-Sei `q_a` die geschlossene, nach unten beschränkte COMMON-JUMP-Form und `E` der zweikomponentige Momentoperator.
-
-### Strikte Version
-
-Falls
-
-```math
-q_a(k)\ge\delta\|k\|^2
-\qquad(k\in\ker\mathcal E)
-```
-
-für ein `delta>0`, dann existiert `lambda_a>0` mit
+### Strikte Coercivity
 
 ```math
 \boxed{
-q_a+\lambda_a\mathcal E^*\mathcal E\succeq0
+q_a\ge\delta I\text{ auf }\ker\mathcal E
+\iff
+\exists\lambda,\mu>0:\
+q_a+\lambda\mathcal E^*\mathcal E\succeq\mu I.
 }
 ```
 
-auf der vollen Formdomäne. Umgekehrt impliziert jede solche Completion Positivität auf `ker E`.
-
-### Semidefinite exakte Version
+### Semidefinite Grenze
 
 ```math
 \boxed{
 q_a\ge0\text{ auf }\ker\mathcal E
 \iff
-\forall\varepsilon>0\ \exists\lambda_{a,\varepsilon}>0:
+\forall\varepsilon>0\ \exists\lambda_{a,\varepsilon}>0:\
 q_a+\varepsilon I+\lambda_{a,\varepsilon}\mathcal E^*\mathcal E\succeq0.
 }
 ```
 
-Damit ist fixed-window NP-GAP exakt ein **Rang-2-Finite-Completion-Problem**.
+Damit ist fixed-window NP-GAP exakt ein zweikanaliges finite-rank completion problem auf Funktionsebene.
 
-## 5. Verbindung zur echten Polschicht
+## 5. Morse-Index-Falsifikationsgates `✓[M]`
 
-Die klassische Weil-Polschicht selbst ist
+Für jede Hermitesche Completion `H` gilt notwendig
 
 ```math
-\mathcal E^*P\mathcal E.
+q_a+\mathcal E^*H\mathcal E\succeq0
+\Longrightarrow
+n_-(q_a)\le n_+(H)\le2.
 ```
 
-`H=P` als positive Completion wäre daher bereits volle fixed-window Weil-Positivität. NP-GAP verlangt nur die Existenz irgendeiner geeigneten Completion; sie muss nicht `P` sein.
+Also:
 
-Das verhindert eine Überpromotion: die Dualcompletion ist ein Zertifikatsmechanismus, noch keine vollständige positive Objekt-X-Realisierung.
+```math
+\boxed{\text{fixed-window NP completion}\Rightarrow n_-(q_a)\le2.}
+```
 
-## 6. Computational gate
+Für den physischen Poleblock `P` ist `n_+(P)=1`, daher
 
-Ein endliches SDP ist **nicht automatisch exakt**. Für einen theorematischen fixed-window-Nachweis braucht es:
+```math
+\boxed{Q_W^a\succeq0\Rightarrow n_-(q_a)\le1.}
+```
 
-1. vorab festgelegte Basis und Trunkierung;
-2. exakte/Intervall-Momentzeilen für `E_±`;
-3. Optimierung eines Hermiteschen `2x2`-Completionblocks oder eines skalaren `lambda`;
-4. Arb-PSD des aufgelösten Blocks;
-5. rigorose Tail-/Schur-Komplement-Untergrenze.
+Ein zertifizierter dritter negativer Modus von `q_a` widerlegt fixed-window NP-GAP; ein zertifizierter zweiter negativer Modus schließt die spezielle `P`-Completion aus.
 
-Zhu zertifiziert volle Weil-Positivität bereits bis `a=0.8`; ein potentiell neues fixed-window-Ziel muss daher `a>0.8` wählen. `a=1.0` ist der natürliche Stresspunkt.
+## 6. Reflection/parity reduction `✓[M]`
 
-## 7. Landau--Widom / Falsifikationsrolle
+Mit `Jv(x)=v(-x)` gilt
 
-Die winzigen Gaps sind mit der Landau--Widom-Plunge-Skala kompatibel. Prolate-/Landau--Widom-Strukturen bleiben Kalibrierungs- und Falsifikationswerkzeuge; ein konstanter Konzentrationsfaktor ist kein all-window-Beweis.
+```math
+q_a(Jv,Jw)=q_a(v,w),
+\qquad
+\mathcal E(Jv)=P\mathcal Ev.
+```
 
-## 8. Status
+Jede gültige Hermitesche Completion kann daher mit ihrer Spiegelung gemittelt werden. Es genügt
+
+```math
+\boxed{
+H=\begin{pmatrix}\alpha&\beta\\\beta&\alpha\end{pmatrix},
+\qquad \alpha,\beta\in\mathbb R.
+}
+```
+
+Im even/odd Momentkanal ist dies diagonal. Der physische Poleblock ist
+
+```math
+P\sim\operatorname{diag}(+1,-1),
+```
+
+während eine skalare Completion `lambda I` zu `diag(lambda,lambda)` wird.
+
+Unter voller Weil-Positivität ist der odd-Sektor von `q_a` automatisch nichtnegativ; jede negative Richtung von `q_a` muss dann even sein.
+
+## 7. Kanonische Completion `lambda=1` `✓[M]`
+
+Exakt:
+
+```math
+\boxed{
+q_a+\mathcal E^*\mathcal E
+=Q_W^a+\mathcal E^*(I-P)\mathcal E,
+}
+```
+
+und `I-P\succeq0`. Daher würde volle fixed-window Weil-Positivität automatisch die skalare Completion `lambda=1` liefern.
+
+`lambda=1` ist somit der erste **vorab festgelegte** Completion-Kandidat für `a=1`, nicht ein numerisch gefitteter Parameter.
+
+## 8. Nicht-zertifizierter `a=1` Galerkin-Stresstest
+
+Vorab festgelegte Basis:
+
+```math
+\phi_n(x)=\sin\left(\frac{n\pi(x+1)}2\right),
+\qquad -1<x<1.
+```
+
+Für die verschachtelten Nullpol-Unterräume wurden diagnostisch beobachtet:
+
+```text
+N=4    min Ritz ~ 8.22e-4
+N=6    min Ritz ~ 6.21e-7
+N=8    min Ritz ~ 3.26e-9
+N=10   min Ritz ~ 2.70e-9
+N=12   min Ritz ~ 6.67e-11
+```
+
+Der `N=12`-Block von `q_1` zeigt diagnostisch genau eine negative Richtung (`~ -4.15624`), im even-Sektor; der odd-Block blieb numerisch nichtnegativ. Die finite scalar completion wurde bei `lambda≈1` numerisch PSD, mit einem winzigen resolved margin von Größenordnung `1e-15`.
+
+**Firewall:** gewöhnliche Floating-Point-Quadratur, endlicher Frequenzcutoff, keine Arb-Enclosures und kein operatorischer Tail. Diese Zahlen sind ausschließlich Diagnostik.
+
+## 9. Neue Default-Front — A1-CERT `?[O]`
+
+Ziel ist ein rigoroses fixed-window Completion-Zertifikat bei
+
+```text
+a=1.0
+```
+
+— dem ersten natürlichen Stresspunkt oberhalb des publizierten `L=0.8`-Lower-Bound-Benchmarks von Marcus Chuk.
+
+Ein gültiges Zertifikat braucht gleichzeitig:
+
+1. vorab festgelegte parity-adaptierte Basis und Trunkierung;
+2. Arb-Enclosures aller resolved Formeinträge und Momentzeilen;
+3. Completion zunächst bei `lambda=1`, danach höchstens zwei reelle parity-Dualparameter;
+4. zertifizierte finite Inertia/PSD;
+5. rigorose Tail-Untergrenze in beiden Paritätssektoren;
+6. rigorose resolved-tail Kopplungsnorm;
+7. finalen Schur-Komplement-Nachweis.
+
+Die Dualdimension ist nicht mehr die Wand. **Der theorematische Engpass ist der unendlichdimensionale Tail.**
+
+## 10. Status
 
 ```text
 COMMON-JUMP / Q0                                      ✓[M]
-prime/polar discrepancy identity                      ✓[M]
+Screw redundancy                                      ✓[M]
 D as literature-new object                            ×[M]
-Suzuki screw redundancy                               ✓[M]
-L0,L1 necessary autocorrelation gauges                ✓[M]
-scalar Turan moments = exact null-pole class           ×[M]
+scalar Turan exactness                                 ×[M]
 strict rank-2 completion equivalence                  ✓[M]
 semidefinite epsilon-completion equivalence            ✓[M]
-finite exact SDP certificate beyond a=0.8             ?[O]
-all-a NP-GAP / completion                             ?[O]
-forward Object-X candidate architecture               ✓[M]_part
-full positive Object-X / RH                           ?[O]
+Morse filters                                          ✓[M]
+reflection-symmetric 2-parameter completion            ✓[M]
+canonical lambda=1 identity                            ✓[M]
+a=1 finite Galerkin diagnostic                        non-certified
+rigorous a=1 finite block                              ?[O]
+rigorous a=1 tail / Schur complement                   ?[O]
+certified a=1 NP-DUAL completion                       ?[O]
+all-a NP-GAP                                           ?[O]
+forward Object-X candidate architecture                ✓[M]_part
+full positive Object-X / RH                            ?[O]
 ```
