@@ -1,199 +1,121 @@
-# Abhängigkeitsgraph (DAG) — Objekt X / COMMON-JUMP → NP-GAP
+# Abhängigkeitsgraph (DAG) — Objekt X / COMMON-JUMP → NP-OVERLAP
 
 > **Stand:** 13. September 2026; Registry unverändert.  
 > **Keine Beweisautorität.** Aktuelle Front: [CURRENT-FRONT](../CURRENT-FRONT.md).
 
-## 1. Nullpol-Filter
+## 1. Nullpol und COMMON-JUMP
 
 ```text
-E_-(v)=M(v)(0), E_+(v)=M(v)(1)
+E_-=M(0), E_+=M(1)
         |
         v
 D_NP = ker M(0) ∩ ker M(1)
         |
         v
-R_0 = 0, E = 0
+Q_W|NP = X_a^* X_a - Gamma_a I      ✓[M]
 ```
 
-Globaler Criterion-Import:
+`X_a` wird aus derselben Familie `K_t=T_{t/2}-T_{-t/2}` mit kontinuierlichem archimedischen Maß und atomaren Prime-Power-Massen gebaut.
+
+## 2. Q0 / Gamma channel
 
 ```text
-Connes–Consani Prop. C.1
+h(t)=sum exp(-alpha_m t), alpha_m=2m+1/2
         |
         v
-global Weil sign criterion on D_NP
-        <=> RH
+A_alpha=(2/alpha)L(L+alpha^2)^(-1)    ✓[M]
+        |
+        v
+alpha=1/2, Q0=L+1/4
+        |
+        v
+A_{1/2}Q0=4L                          ✓[M]
+        |
+        v
+Q0 : C_c^infty(-a,a) <-> D_NP(a)      ✓[M]
 ```
 
-Keine Kante `fixed a <=> RH`.
-
-## 2. COMMON-JUMP `✓[M]`
-
-```math
-K_t=T_{t/2}-T_{-t/2},
-\qquad
-K_t^*K_t=2I-T_t-T_{-t}.
-```
+Higher channel:
 
 ```text
-                        K_t
-                     /       \
-                    /         \
-                   v           v
-archimedean h(t)dt             prime atoms w_n delta_log n
-continuous feature energy      discrete feature energies
-                   \           /
-                    \         /
-                     v       v
-                X_a^* X_a >= 0   ✓[M]
+Schur on compressed resolvent
+        |
+        v
+A_alpha >= (2/alpha)e^{-alpha a} I    ✓[M]
 ```
 
-mit
-
-```math
-h(t)=\frac{e^{-t/2}}{1-e^{-2t}},
-\qquad
-w_n=\frac{\Lambda(n)}{\sqrt n}.
-```
-
-## 3. Exakte zentrierte Weil-Normalform
-
-```math
-\Gamma_a
-=2\sum_{\log n\le2a}w_n+\log\pi-\psi(1/4).
-```
+## 3. Short-window correction
 
 ```text
-pole block <Ev, P Ew>
+COMMON-JUMP/Q0 channel bounds
+        |
+        v
+internal short-window coercivity       ✓[M]_part
+```
+
+But:
+
+```text
+Suzuki Thm 1.4
+full local class positive for small a
+        |
+        v
+short-window positivity as NEW theorem   ×[M]
+```
+
+The project result is an architectural reproduction, not a novelty claim.
+
+## 4. Exact centering exposes the arithmetic wall
+
+For one Prime atom:
+
+```math
+w_n\|K_{\log n}v\|^2-2w_n\|v\|^2
+=-2w_n\operatorname{Re}\langle T_{\log n}v,v\rangle.
+```
+
+Summing:
+
+```text
+Prime feature diagonal
         +
-positive common Gram <X_a v, X_a w>
-        -
-Gamma_a <v,w>
+Prime threshold ledger
         |
+        | exact cancellation
         v
-Q_W(v,w) exactly, all a>0   ✓[M]
+only inner-shift correlations remain
 ```
 
-Auf Nullpol:
-
-```text
-E=0
- |
- v
-Q_W|NP = X_a^* X_a - Gamma_a I   ✓[M]
-```
-
-`NP-R1`, `NP-COMMON` und die cutoff-Gauge-Struktur sind in diesem Knoten geschlossen/subsumiert.
-
-## 4. Archimedische Kanalzerlegung
-
-```text
-h(t) = sum_{m>=0} exp(-alpha_m t)
-alpha_m = 2m+1/2
-        |
-        v
-A_alpha = integral exp(-alpha t) K_t^* K_t dt
-        |
-        v
-A_alpha = (2/alpha) L(L+alpha^2)^(-1)   ✓[M]
-```
-
-mit `L=-d^2/dx^2`.
-
-## 5. Exakter Q0-First-Channel-Knoten `✓[M]`
-
-```text
-Q0 = L + 1/4
-alpha_0 = 1/2
-        |
-        v
-A_{1/2} = 4I - Q0^(-1)
-        |
-        v
-A_{1/2} Q0 = 4L = -4 d^2/dx^2
-```
-
-Für `alpha>0` cancelt der Resolventennenner in `A_alpha Q0` nur bei `alpha=1/2`.
-
-## 6. Support-preserving null-pole edge `✓[M]`
-
-```text
-Green kernel Q0^(-1): exp(-|x-y|/2)
-        |
-        +--> right tail = exp(-x/2) E_+(v)
-        +--> left tail  = exp(+x/2) E_-(v)
-        |
-        v
-E_+=E_-=0
-        |
-        v
-Q0 : C_c^infty(-a,a)  <-->  D_NP(a)   support preserving
-```
-
-Damit wird der erste nichtlokale Kanal nach `v=Q0u` lokal:
+Thus
 
 ```math
-\langle v,A_{1/2}v\rangle
-=4\|u''\|^2+\|u'\|^2.
+Q_W(v)=\mathcal A(v)-\mathcal O_a(v),
 ```
-
-## 7. Quantitative Coercivity edges
-
-Nullpol + Dirichlet-Poincaré:
 
 ```math
-\langle v,A_{1/2}v\rangle
-\ge
-\frac{4\pi^2}{\pi^2+a^2}\|v\|^2.
+\mathcal O_a(v)
+=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
+\operatorname{Re}\langle T_{\log n}v,v\rangle.
 ```
 
-Jeder höhere Kanal + Schur-Test:
+Status `✓[M]`.
 
-```math
-\langle v,A_\alpha v\rangle
-\ge
-\frac{2}{\alpha}e^{-\alpha a}\|v\|^2.
-```
-
-Beide Kanten sind `✓[M]` und verwenden keine Weil-Positivität als Input.
-
-## 8. Short-window NP-GAP `✓[M]_part`
+## 5. New main DAG
 
 ```text
-first-channel null-pole coercivity
-        +
-higher-channel Schur bounds
+COMMON-JUMP geometry ✓[M]
         |
         v
-B(a) = 4pi^2/(pi^2+a^2)
-       + sum_{m>=1} (2/alpha_m) exp(-alpha_m a)
+centered Prime-overlap identity ✓[M]
+        |
+        +--> Q0 Sobolev transport ✓[M]
+        |
+        +--> overlap radius delta_n=2a-log n
+        |
+        +--> Prime-Power AR(1) / Weil-tail input
         |
         v
-B(a) >= kappa_* on a nonempty short-window interval
-        |
-        v
-||X_a v||^2 >= Gamma_a ||v||^2 on D_NP(a)
-        |
-        v
-NP-GAP short-window ✓[M]_part
-```
-
-Die Prime-Summe ist in diesem Bereich noch leer (`2a<log2`).
-
-## 9. Verbleibender Hauptpfad
-
-```text
-COMMON-JUMP positive geometry ✓[M]
-        |
-        v
-Q0 first-channel intertwining ✓[M]
-        |
-        v
-short-window NP-GAP ✓[M]_part
-        |
-        | extend coercivity through all windows / prime thresholds
-        v
-NP-GAP for every a>0 ?[O]
+(A_infty-kappa_* I)|D_NP >= O_a|D_NP ?[O]
         |
         v
 global null-pole Weil positivity
@@ -202,35 +124,50 @@ global null-pole Weil positivity
 RH
 ```
 
-## 10. Numerik-Firewall
+## 6. Q0 transport edge
 
-```text
-finite-dimensional null-pole space V_N
-        |
-        v
-Ritz minimum lambda_NP^(N)(a)
-        |
-        v
-lambda_NP^(N)(a) >= true lambda_NP(a)
+For `v=Q0u`:
+
+```math
+Re<T_t v,v>
+=Re<T_tu'',u''>
++\frac12Re<T_tu',u'>
++\frac1{16}Re<T_tu,u>.
 ```
 
-Also: positive endliche Ritz-Gaps sind keine Beweise; ein zertifizierter Wert unter der Schwelle wäre dagegen ein Falsifikator.
+The arithmetic defect is therefore a finite Sobolev-level shift-correlation operator.
 
-## 11. Auxiliary edges
+## 7. Finite Gamma-null ladder — auxiliary
 
 ```text
-OX-GEN-A -> exact pole-layer geometry
-POS-DIL #101-#105 -> auxiliary full-class route
-Prime AR(1) -> independent positive structure
+Q_m=L+alpha_m^2
+        |
+        v
+M(Q_m u)(s)=(alpha_m^2-(s-1/2)^2)M(u)(s)
+        |
+        v
+zeros at {-2m,2m+1}
 ```
 
-PR #91, PR #49 und R37/G4c bleiben separat.
+Finite unions are compatible with Connes--Consani Proposition C.1. Negative even points are trivial zeta zeros and do not violate the condition `F ∩ Z_nontrivial = empty`.
 
-## 12. Firewalls
+No main coercivity edge is granted unless this ladder controls `O_a`.
 
-- short-window gap != all-`a` gap;
-- exact Q0 intertwining != RH;
-- common geometry != vollständige positive Objekt-X-Realisierung;
-- global null-pole criterion != fixed-window criterion;
-- publication novelty `?[O]`;
+## 8. Certified short-window scalar side gate
+
+A dedicated Arb workflow brackets the project-internal `a_*` root of `B(a)=kappa_*` in
+
+```math
+(0.1033784517534,0.1033784517535)
+```
+
+and checks it lies below `log2/2`. This is a side certificate, not the all-window proof.
+
+## 9. Firewalls
+
+- Prime threshold growth != centered arithmetic obstruction;
+- short-window reproduction != novelty;
+- Gamma ladder != all-window domination;
+- positive finite Ritz gap != proof;
+- global restricted criterion != fixed-window criterion;
 - Registry unchanged.
