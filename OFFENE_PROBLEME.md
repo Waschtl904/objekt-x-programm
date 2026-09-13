@@ -1,146 +1,131 @@
-# Offene Probleme — COMMON-JUMP / NP-GAP
+# Offene Probleme — COMMON-JUMP / NP-OVERLAP
 
 > **Stand:** 13. September 2026.  
-> Operative Quellen: [CURRENT-FRONT](CURRENT-FRONT.md), [COMMON-JUMP](audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md), [Q0/short-window NP-GAP](audits/P11_NP_GAP_Q0_FIRST_CHANNEL_2026-09-13.md), [Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](00-uebersicht/DAG.md).
+> Operative Quellen: [CURRENT-FRONT](CURRENT-FRONT.md), [Review correction / Prime overlap](audits/P11_NP_GAP_REVIEW_CORRECTION_PRIME_OVERLAP_2026-09-13.md), [Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](00-uebersicht/DAG.md).
 
-## Neu geschlossen
+## Neu geklärt
 
-### `[NP-R1]`, `[NP-COMMON]`, `[NP-SCALAR-GAUGE]` — `✓[M]`
+### `[HIGHER-CHANNEL-EXPONENT]` — `✓[M]`
 
-COMMON-JUMP liefert die gemeinsame positive Operatorfamilie
-
-```math
-K_t=T_{t/2}-T_{-t/2}
-```
-
-für den kontinuierlichen archimedischen Anteil und die atomaren Prime-Power-Anteile. Die zentrierte Nullpolform ist
+Der stärkere Bound
 
 ```math
-\boxed{Q_W|_{NP}=X_a^*X_a-\Gamma_aI.}
+A_\alpha\succeq\frac2\alpha e^{-\alpha a}I
 ```
 
-### `[NP-GAP-A1]` archimedische Kanalzerlegung — `✓[M]`
+folgt direkt aus dem Schur-Test für den komprimierten Resolventenkern. Die `e^{-alpha a}`/`e^{-2alpha a}`-Diskrepanz ist geschlossen.
+
+### `[SHORT-WINDOW-BOOKING]`
+
+```text
+interne COMMON-JUMP/Q0-Coercivity   ✓[M]_part
+neuer short-window Weil-Satz        ×[M]
+```
+
+Suzuki Theorem 1.4 enthält bereits eine stärkere volle-Klasse-Kleinfensterpositivität.
+
+### `[PRIME-CENTERING]` — `✓[M]`
+
+Auf Nullpol gilt exakt
 
 ```math
-\frac{e^{-t/2}}{1-e^{-2t}}
-=\sum_{m\ge0}e^{-\alpha_m t},
-\qquad
-\alpha_m=2m+\frac12,
+\boxed{Q_W(v)=\mathcal A(v)-\mathcal O_a(v)}
 ```
 
-und
+mit
 
 ```math
-\boxed{
-A_\alpha
-:=\int_0^\infty e^{-\alpha t}K_t^*K_tdt
-=\frac{2}{\alpha}(-\partial_x^2)(-\partial_x^2+\alpha^2)^{-1}.
-}
+\mathcal O_a(v)
+=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
+\operatorname{Re}\langle T_{\log n}v,v\rangle.
 ```
 
-### `[NP-GAP-A2]` erster Kanal trifft `Q_0` exakt — `✓[M]`
+Alle äußeren Prime-Kanäle und der gesamte Prime-Diagonalledger verschwinden nach exakter Zentrierung aus dem Restproblem.
 
-Mit
+### `[Q0-OVERLAP-TRANSPORT]` — `✓[M]`
+
+Für `v=Q0u`:
 
 ```math
-Q_0=-\partial_x^2+\frac14
+Re<T_t v,v>
+=Re<T_tu'',u''>
++\frac12Re<T_tu',u'>
++\frac1{16}Re<T_tu,u>.
 ```
-
-gilt
-
-```math
-\boxed{
-A_{1/2}=4I-Q_0^{-1},
-\qquad
-A_{1/2}Q_0=-4\partial_x^2.
-}
-```
-
-Nur bei `alpha=1/2` cancelt der Resolventennenner. Die frühere `1/2`-Beobachtung ist damit theorematisch geschlossen.
-
-### `[NP-GAP-A3]` support-erhaltende Nullpolparametrisierung — `✓[M]`
-
-Der Green-Kern `e^{-|x-y|/2}` zeigt
-
-```math
-\boxed{
-Q_0:C_c^\infty(-a,a)\xrightarrow{\cong}D_{NP}(a)
-}
-```
-
-support-erhaltend. Für `v=Q_0u`:
-
-```math
-\boxed{
-\langle v,A_{1/2}v\rangle
-=4\|u''\|^2+\|u'\|^2.
-}
-```
-
-### `[NP-GAP-SHORT]` — `✓[M]_part`
-
-Aus Dirichlet-Poincaré und Schur-Tests folgt mit
-
-```math
-B(a)
-=
-\frac{4\pi^2}{\pi^2+a^2}
-+
-\sum_{m=1}^\infty\frac{2}{\alpha_m}e^{-\alpha_m a}
-```
-
-ein nichtleerer short-window-Bereich, in dem
-
-```math
-\boxed{
-\|X_av\|^2\ge\Gamma_a\|v\|^2
-\qquad(v\in D_{NP}(a))
-}
-```
-
-unkonditional bewiesen ist.
 
 ---
 
-## Priorität 0 — `[NP-GAP-EXTEND]` `?[O]`
+## Priorität 0 — `[NP-OVERLAP]` `?[O]`
 
-Der harte Rest ist jetzt nicht mehr, *ob* die Architektur Coercivity liefern kann, sondern wie weit der bewiesene Bereich fortgesetzt werden kann:
+Der harte Satz ist jetzt
 
 ```math
 \boxed{
-\lambda_{NP}(a)\ge\Gamma_a
-\quad\text{für alle }a>0.
+(A_\infty-\kappa_*I)|_{D_{NP}(a)}
+\succeq
+\mathbf O_a|_{D_{NP}(a)}
+\quad\forall a>0.
 }
 ```
 
-### Pflichtfragen
+mit
 
-1. Kann die exakte `Q_0`-Faktorisierung auf die Summe der höheren Kanäle stärker übertragen werden als mit dem elementaren Schur-Test?
-2. Welche scharfe Untergrenze besitzt die komprimierte Resolvente `(L+alpha^2)^{-1}` auf `(-a,a)`?
-3. Was passiert am ersten Prime-Cutoff `2a=log2`? Die Schwelle springt um `2 Lambda(2)/sqrt2`, der zugehörige `K_{log2}`-Kanal ist aber innerhalb des Fensters nicht diagonal.
-4. Gibt es eine monotone Fortsetzung oder ein Schur-Komplement, das archimedische und neue Prime-Kanäle gemeinsam kontrolliert?
-5. Können Prolate-/Paley-Wiener-/de-Branges-Strukturen die fast-extremalen Richtungen erklären, ohne Weil-Positivität rückwärts einzubauen?
+```math
+\mathbf O_a
+=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
+\frac{T_{\log n}+T_{-\log n}}2.
+```
+
+### `[OVERLAP-SPEC]`
+
+Bestimme das positive Spektrum von `O_a` nach Nullpolkompression. Besonders wichtig: gerade/ungerade Sektoren und die Entwicklung beim Eintritt neuer Prime-Power-Shifts.
+
+### `[OVERLAP-EDGE]`
+
+Für
+
+```math
+\delta_n=2a-\log n
+```
+
+muss eine scharfe Korrelationseinschränkung gefunden werden, die exakt bei `delta_n=0` verschwindet. Grobe Normschranken ohne Randgeometrie sind voraussichtlich zu schwach.
+
+### `[OVERLAP-Q0]`
+
+Nutze die Sobolev-Korrelationsform nach `v=Q0u`. Gesucht ist eine direkte Kontrolle der positiven Shift-Korrelationen durch den archimedischen Überschuss.
+
+### `[OVERLAP-AR1]`
+
+Prüfe, ob die bereits bewiesene Prime-Power-AR(1)/Weil-tail-Geometrie die gewichtete Summe der Shift-Korrelationen einschränkt. Diese Rückkopplung hat jetzt höhere Priorität als weitere reine Gamma-Kanalverbesserungen.
 
 ---
 
-## Numerik-Firewall
+## Priorität 1 — `[GAMMA-LADDER]` auxiliary
 
-Für einen endlichen Nullpol-Unterraum `V_N` gilt
+Die Operatoren
 
 ```math
-\lambda_{NP}^{(N)}(a)\ge\lambda_{NP}(a).
+Q_m=-\partial_x^2+(2m+1/2)^2
 ```
 
-Ritz-Minima sind daher **obere** Schranken für das wahre Infimum. Positive endliche Gaps beweisen nichts. Nur ein zertifizierter Wert unter `Gamma_a` würde unmittelbar falsifizieren.
+erzeugen Mellin-Nullstellen bei `-2m` und `2m+1`. Endliche Mengen dieser Bedingungen bleiben im Connes--Consani-Scope zulässig; negative gerade Punkte sind triviale Zeta-Nullstellen.
 
-Die während der Exploration genannten positiven Werte sind nicht Arb-zertifiziert und erhalten keinen strengen Numerikstatus.
+Offen ist eine saubere simultane support-erhaltende Isomorphie/Faktorisierung und vor allem die Frage, ob sie **quantitativ** `O_a` kontrolliert. Ohne solche Kontrolle bleibt die Leiter auxiliary.
+
+---
+
+## Priorität 2 — Arb-/Numerikgates
+
+- neuer Exact-Head-Arb-Gate für `a_*`;
+- endliche Ritz-Minima bleiben obere Schranken für das wahre Infimum;
+- numerische Overlap-Spektren dürfen nur als Diagnostik dienen, bis Intervallzertifikate vorliegen.
 
 ---
 
 ## Danach
 
 ```text
-NP-GAP for every a>0
+NP-OVERLAP all a
   |
   v
 positive Weil form on global null-pole class
@@ -149,22 +134,15 @@ positive Weil form on global null-pole class
 RH
 ```
 
-Ein all-`a`-Beweis wäre bereits RH. Zirkularitätskontrolle bleibt deshalb bindend.
-
-## Auxiliary / separate
-
-- OX-GEN-A: exakte Pole-layer geometry;
-- POS-DIL #101--#105: auxiliary full-class route;
-- Prime-Power AR(1): eigenständige positive Struktur;
-- R37/G4c, PR #91, PR #49 separat.
+Ein all-`a`-Beweis bleibt RH-hart.
 
 ## Firewalls
 
 Nicht behaupten:
 
-- short-window NP-GAP sei der globale Gap;
-- ein einzelnes fixes `a` sei RH-äquivalent;
-- positive Ritzwerte zertifizierten den Gap;
-- die vollständige positive Objekt-X-Realisierung liege vor;
-- Publikationsneuheit sei geklärt;
-- Object X oder RH seien bewiesen.
+- Kleinfensterpositivität sei neu;
+- `Gamma_a ~ 4e^a` sei als nackter Skalar die eigentliche Wand;
+- die Mehrkanalleiter löse den Prime-overlap;
+- ein fixes Fenster sei RH-äquivalent;
+- positive Ritzwerte bewiesen Positivität;
+- Object X oder RH seien gelöst.
