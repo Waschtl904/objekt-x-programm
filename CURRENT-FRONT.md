@@ -1,7 +1,7 @@
 # CURRENT FRONT — Objekt X / A1-FINITE-1212
 
 > **Stand:** 13. September 2026; Registry und Objekt-X-Arbeitsdefinition unverändert.  
-> **Hauptaudits:** [A1 Omega1551](audits/P11_A1_OMEGA1551_REDUCTION_2026-09-13.md) · [A1 bounded Schur remainder](audits/P11_A1_SCHUR_BOUNDED_REMAINDER_2026-09-13.md) · [A1-TAIL](audits/P11_A1_HIGHFREQ_PROLATE_TAIL_2026-09-13.md) · [NP-DUAL-COMP](audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md).
+> **Hauptaudits:** [A1 Omega1551](audits/P11_A1_OMEGA1551_REDUCTION_2026-09-13.md) · [A1 bounded Schur remainder](audits/P11_A1_SCHUR_BOUNDED_REMAINDER_2026-09-13.md) · [A1 Legendre finite backend](audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md) · [A1 Legendre quadrature budget](audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md).
 
 ## 1. Gesicherte Completion-Architektur `✓[M]`
 
@@ -34,58 +34,25 @@ Die Fensterbedingung erzeugt keinen zusätzlichen quadratischen Rest.
 
 ## 3. Sharpened high-frequency certificate `✓[K/M]`
 
-Der neue Exact-Head-Arb-Gate kombiniert:
-
-- 64 positive Digamma-Reihenterme plus rigorosen Integralrest;
-- einen globalen Ableitungsbound `|m_1'|<8.214249` für `|xi|>=1551`;
-- ein rationales `0.02`-Gitter auf `[1551,2500]`;
-- einen monotone Worst-Case-Bound für `|xi|>=2500`.
-
-Zertifiziert ist
+Exact-Head-Arb zertifiziert
 
 ```math
 \boxed{m_1(\xi)>0.1\qquad(|\xi|\ge1551).}
 ```
 
-Konservative Zwischenschranken:
-
-```text
-grid-point lower bound > 0.2315764
-compact global floor  > 0.1078
-far-field floor       > 0.1259187
-```
-
-Der ältere `m_1>0.04`-Satz ab `2300` bleibt gültig, ist für die finite Reduktion aber überholt.
-
-## 4. Reduced bounded-band operator `✓[M] / ✓[K/M]`
-
-Setze
+Mit
 
 ```math
-c=0.1,
-\qquad
-\Omega=1551,
+r=(m_1-0.1)\mathbf1_{[-1551,1551]}
 ```
 
-```math
-r(\xi)=(m_1(\xi)-c)\mathbf1_{[-\Omega,\Omega]}(\xi),
-\qquad
-K=P_I\mathcal F^{-1}M_r\mathcal F P_I.
-```
-
-Dann
-
-```math
-q_1\succeq cI+K.
-```
-
-Der Exact-Head-Gate zertifiziert
+ist zugleich
 
 ```math
 \boxed{\|r\|_\infty<12.}
 ```
 
-## 5. Moment-augmented Prolate Schur theorem `✓[M]`
+## 4. Moment-augmented Prolate Schur theorem `✓[M]`
 
 Für die PSWFs des Bandes `[-1551,1551]` setze
 
@@ -97,7 +64,7 @@ R_N=
 T_N=R_N^\perp.
 ```
 
-Dann `E|_{T_N}=0`; der Completionterm besitzt keinen Tail- und keinen Crossblock. Für
+Dann `E|T_N=0`. Für
 
 ```math
 L_1=0.1I+K+E^*E
@@ -114,31 +81,13 @@ gilt
 [0.1-(\Gamma_1+0.1)\lambda_N]I.
 ```
 
-Daher reicht
+## 5. Certified `N=1210` reduction `✓[K/M]`
+
+Für `c_PSWF=1551` liefert Karnik--Romberg--Davenport plus Arb
 
 ```math
-(L_1)_{RR}\succeq\mu_RI,
-\qquad
-\mu_R\ge
-\frac{\|r\|_\infty^2\lambda_N}
-{0.1-(\Gamma_1+0.1)\lambda_N}.
+\lambda_{1210}<1.5\times10^{-42},
 ```
-
-## 6. Certified `N=1210` reduction `✓[K/M]`
-
-Für den Prolate-Parameter `c_PSWF=1551` liefert Karnik--Romberg--Davenport plus Arb
-
-```math
-\boxed{\lambda_{1210}(1551)<1.5\times10^{-42}.}
-```
-
-Tatsächlicher Exact-Head-Upper-Bound:
-
-```math
-<1.468930504452317\times10^{-42}.
-```
-
-Außerdem
 
 ```math
 \tau_{1210}>0.099,
@@ -150,13 +99,9 @@ und
 \boxed{\text{Schur penalty}<2.2\times10^{-39}.}
 ```
 
-Tatsächlicher Upper-Bound:
+Der tatsächliche Exact-Head-Upper-Bound des Penalty ist etwa `2.11526e-39`.
 
-```math
-2.115259926411337\times10^{-39}.
-```
-
-## 7. Einziger verbleibender `a=1`-Gate — A1-FINITE `?[O]`
+## 6. Kanonischer letzter `a=1`-Gate — A1-FINITE `?[O]`
 
 Vor jeder resolved-space Rechnung wurde der sufficient target festgelegt:
 
@@ -172,35 +117,114 @@ Die ersten `1210` PSWF-Moden sind `605 even + 605 odd`; die Momentaugmentation e
 1212 total = 606 even + 606 odd.
 ```
 
-Nach dieser Zertifizierung wäre der gesamte kanonische `a=1`-Completion-Satz geschlossen. Es bleibt kein separates Infinite-Tail- oder Crossblockproblem.
+Diese kleinere PSWF-Reduktion bleibt die **kanonische** finale Beweisobligation.
 
-## 8. Status
+## 7. Alternative orthonormale Legendre-Backend `✓[K/M]`
+
+PR #117 konstruiert zusätzlich eine explizite orthonormale Legendre-Route mit
+
+```math
+T_n(x)=\sqrt{n+\frac12}P_n(x),
+\qquad n=0,\ldots,2149.
+```
+
+Damit ist die Gram-Matrix exakt `I`, Parität ist exakt und
+
+```math
+\widehat T_n(\xi)
+=(-i)^n\sqrt{\frac{2(n+1/2)}{\pi}}j_n(\xi).
+```
+
+Der zertifizierte Legendre-Tail bei `M=2150` reduziert diese alternative Route auf zwei Paritätsblöcke
+
+```text
+1075 even + 1075 odd
+```
+
+mit predeclared finite target
+
+```math
+10^{-35}I.
+```
+
+Sie ist größer als die PSWF-Reduktion, aber basisexplizit und hat `G=I`.
+
+## 8. Legendre quadrature budget `✓[K/M]`
+
+Der neue Exact-Head-Arb-Gate fixiert vor Matrixassemblierung:
+
+```text
+panel width <= 0.4,
+Gauss-Legendre order = 40,
+analytic strip |Im xi| <= 0.4.
+```
+
+Er zertifiziert auf der komplexen Fortsetzung
+
+```math
+|r(z)|<42,
+```
+
+und daraus für alle Legendreordnungen bis `2149`
+
+```math
+|\text{matrix integrand}|<260000.
+```
+
+Mit Bernstein-Ellipse
+
+```math
+\rho=2+\sqrt5
+```
+
+folgt intervallrigoros
+
+```text
+per-panel error   < 9.483e-45
+per-entry error   < 3.678e-41
+```
+
+und für jeden `1075 x 1075` Paritätsblock
+
+```math
+\boxed{
+\|K-\widetilde K\|_{op}<4\times10^{-38}.
+}
+```
+
+Dieser analytische Quadraturfehler liegt mehr als Faktor `250` unter dem Legendre-Headziel `1e-35`.
+
+**Folge:** Für die Legendre-Route ist die Quadraturtrunkation kein offener Engpass mehr. Offen bleiben Matrixassemblierung mit rigorosem Special-function/Rounding-Budget und die verifizierte positive Faktorisierung der beiden Paritätsblöcke.
+
+## 9. Status
 
 ```text
 COMMON-JUMP / Q0                                      ✓[M]
 rank-2 completion / Morse / parity                    ✓[M]
 exact a=1 Fourier multiplier                          ✓[M]
 Omega1551: m_1>0.1                                    ✓[K/M]
-||r||<12 on |xi|<=1551                                ✓[K/M]
-KRD lambda_1210<1.5e-42                               ✓[K/M]
-Schur penalty <2.2e-39                                ✓[K/M]
-1212-dimensional finite reduction                     ✓[K/M]
-resolved lower bound >=3e-39                          ?[O]
+KRD / Schur 1212-dimensional finite reduction         ✓[K/M]
+canonical PSWF resolved lower bound >=3e-39           ?[O]
+Legendre M=2150 orthonormal backend                    ✓[K/M]
+Legendre analytic quadrature error <4e-38              ✓[K/M]
+Legendre even 1075x1075 lower bound >=1e-35            ?[O]
+Legendre odd 1075x1075 lower bound >=1e-35             ?[O]
 certified a=1 completion                              ?[O]
 all-a NP-GAP                                          ?[O]
 forward Object-X candidate architecture               ✓[M]_part
 full positive Object-X / RH                           ?[O]
 ```
 
-## 9. Literature metadata firewall
+## 10. Literature metadata firewall
 
-The current arXiv v2 metadata for arXiv:2608.24827 lists **Xuefeng Zhu** as author and notes that the author name/affiliation were updated in v2. Historical project text that temporarily stated `Marcus Chuk` should be read as superseded bibliographic metadata; the mathematical benchmark claims are unchanged.
+Current arXiv v2 metadata for arXiv:2608.24827 lists **Xuefeng Zhu** as author and notes that the author name/affiliation were updated in v2. Historical project text that temporarily stated `Marcus Chuk` is superseded bibliographic metadata; the mathematical benchmark claims are unchanged.
 
-## 10. Firewalls
+## 11. Firewalls
 
 Do not claim:
 
-- the resolved `3e-39` lower bound has been proved;
-- `3e-39` is an observed or fitted eigenvalue;
-- the older `2300/1680` reduction was wrong (it remains valid but coarser);
+- the Legendre quadrature-budget certificate proves either finite matrix positive;
+- arithmetic/special-function evaluation and verified factorization are already certified;
+- the Legendre route supersedes the smaller PSWF reduction;
+- the resolved `3e-39` or Legendre `1e-35` lower bounds have been proved;
 - fixed-window `a=1`, all-window NP-GAP, Object X, or RH is solved.
