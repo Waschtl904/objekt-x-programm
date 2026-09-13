@@ -1,47 +1,48 @@
-# Objekt X — kanonische Forschungsroadmap v3.8
+# Objekt X — kanonische Forschungsroadmap v3.9
 
 > **Stand:** 13. September 2026; Registry und Arbeitsdefinition unverändert.
 
-## Gate C0 — Completion / A1-TAIL `✓[M] / ✓[K/M]`
-
-Geschlossen sind:
+## Gate C0 — Gesicherte Completionstruktur `✓[M]`
 
 ```text
 COMMON-JUMP / Q0
 rank-2 completion / Morse / parity
 canonical lambda=1
 exact a=1 Fourier multiplier
-high-frequency positivity
-full infinite Prolate tail
+moment-augmented Prolate Schur theorem
 ```
 
-Insbesondere gilt `q_1>0.01I` auf dem orthogonalen Tail nach den ersten `1490` PSWF-Moden.
+## Gate C1 — Sharpened high-frequency band `✓[K/M]`
 
-## Gate C1 — Bounded lower operator `✓[M]`
-
-Mit
+Exact-head Arb zertifiziert
 
 ```math
-c=0.04,
-\quad
-r=(m_1-c)1_{[-2300,2300]},
-\quad
-K=P_I\mathcal F^{-1}M_r\mathcal F P_I
+\boxed{m_1(\xi)>0.1\quad(|\xi|\ge1551).}
 ```
 
-ist
+Der Beweis benutzt eine rigorose Gitter-/Lipschitzkontrolle auf `[1551,2500]` und einen monotonen far-field Digamma-Bound.
+
+## Gate C2 — Reduced bounded lower operator `✓[M] / ✓[K/M]`
+
+```math
+c=0.1,
+\quad
+r=(m_1-c)1_{[-1551,1551]},
+\quad
+K=P_I\mathcal F^{-1}M_r\mathcal F P_I,
+```
 
 ```math
 q_1\succeq cI+K.
 ```
 
-Für `A_1=q_1+E^*E` genügt deshalb
+Arb zertifiziert
 
 ```math
-L_1=cI+K+E^*E.
+\|r\|_\infty<12.
 ```
 
-## Gate C2 — Moment-augmented PSWF split `✓[M]`
+## Gate C3 — Moment-augmented PSWF split `✓[M]`
 
 ```math
 R_N=\operatorname{span}\{\psi_0,\ldots,\psi_{N-1}\}
@@ -50,15 +51,7 @@ R_N=\operatorname{span}\{\psi_0,\ldots,\psi_{N-1}\}
 T_N=R_N^\perp.
 ```
 
-Dann
-
-```math
-E|_{T_N}=0,
-```
-
-und damit besitzt der Completionterm keinen Tail- oder Crossblock.
-
-Für den bounded band operator:
+Dann `E|T_N=0` und
 
 ```math
 \|(L_1)_{RT}\|\le\|r\|_\infty\sqrt{\lambda_N},
@@ -69,76 +62,55 @@ Für den bounded band operator:
 [c-(\Gamma_1+c)\lambda_N]I.
 ```
 
-## Gate C3 — Explicit N=1680 Schur constants — candidate `✓[K/M]`
+## Gate C4 — Certified N=1210 Schur constants `✓[K/M]`
 
-Vorab fixiert:
-
-```text
-Omega=2300,
-c=0.04,
-N=1680.
-```
-
-Der neue Exact-Head-Arb-Gate soll zertifizieren
+Für `c_PSWF=1551`:
 
 ```math
-\|r\|_\infty<12,
-\qquad
-\lambda_{1680}<1.1\times10^{-39},
+\lambda_{1210}<1.5\times10^{-42},
 ```
 
 ```math
-\tau_{1680}>0.039,
+\tau_{1210}>0.099,
 ```
-
-und
 
 ```math
-\frac{\|r\|_\infty^2\lambda_{1680}}{\tau_{1680}}
-<4.1\times10^{-36}.
+\boxed{\text{Schur penalty}<2.2\times10^{-39}.}
 ```
 
-Bis CI grün ist, bleibt dieser Gate candidate.
+Der Exact-Head-Upper-Bound des Penalty ist etwa `2.11526e-39`.
 
-## Gate C4 — A1-FINITE `?[O]`
+## Gate C5 — A1-FINITE-1212 `?[O]`
 
-Nach erfolgreichem C3 genügt der eine resolved-space Satz
+Es genügt jetzt nur noch
 
 ```math
 \boxed{
-(L_1)_{RR}\succeq5\times10^{-36}I.
+(L_1)_{RR}\succeq3\times10^{-39}I.
 }
 ```
 
 Resolved dimension:
 
 ```text
-at most 1682 total
-at most 841 even + 841 odd.
+at most 1212 total
+606 even + 606 odd.
 ```
 
-Das ist der gesamte verbleibende `a=1`-Beweisobligation.
+`3e-39` wurde vor resolved-space Numerik festgelegt und ist kein gemessener Eigenwert.
 
-## Gate C5 — certified a=1 completion `?[O]`
+## Gate C6 — certified a=1 completion `?[O]`
 
-C4 plus der zertifizierte Schur-Penalty ergibt
+C5 plus der bereits zertifizierte Schur-Penalty ergibt die volle kanonische Completion bei `a=1` und damit Nullpolpositivität in diesem Fenster.
 
-```text
-A_1>=0
-  => q_1>=0 on ker E
-  => fixed-window null-pole positivity at a=1.
-```
+## Gate C7 — all-window mechanism `?[O]`
 
-Kein solcher Satz ist bisher bewiesen.
-
-## Gate C6 — all-window mechanism `?[O]`
-
-Erst nach einem `a=1`-Abschluss:
+Erst danach:
 
 ```text
-finite fixed-window certificate
+a=1 fixed-window theorem
   |
-structural scaling / further windows
+further windows / structural scaling
   |
 all-a NP-GAP
   |
@@ -147,8 +119,8 @@ RH-hard global criterion.
 
 ## Firewalls
 
-- N=1680 Schurkonstanten erst nach exact-head CI promoten.
-- `5e-36` ist ein vorab berechnetes sufficient target, kein beobachteter Eigenwert.
-- resolved lower bound ist weiterhin offen.
-- fixed-window `a=1` ist noch nicht bewiesen.
+- Der ältere `2300/1680`-Gate bleibt gültig, ist aber gröber.
+- `3e-39` ist ein sufficient threshold, kein beobachteter Eigenwert.
+- Resolved lower bound bleibt offen.
+- Fixed-window `a=1`, Object X und RH sind nicht bewiesen.
 - Registry/Arbeitsdefinition unverändert.
