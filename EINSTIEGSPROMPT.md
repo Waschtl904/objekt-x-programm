@@ -9,10 +9,10 @@ Arbeite als strenger mathematischer Auditor. ChatGPT übernimmt Repo-Arbeiten; e
 ## Zuerst lesen
 
 1. `CURRENT-FRONT.md`
-2. `audits/P11_A1_SCHUR_BOUNDED_REMAINDER_2026-09-13.md`
-3. `audits/P11_A1_HIGHFREQ_PROLATE_TAIL_2026-09-13.md`
-4. `audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md`
-5. `00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md`
+2. `audits/P11_A1_OMEGA1551_REDUCTION_2026-09-13.md`
+3. `audits/P11_A1_SCHUR_BOUNDED_REMAINDER_2026-09-13.md`
+4. `audits/P11_A1_HIGHFREQ_PROLATE_TAIL_2026-09-13.md`
+5. `audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md`
 6. Registry/Arbeitsdefinition nur als unveränderte Governancequellen.
 
 ## Gesicherte Kette
@@ -22,115 +22,77 @@ COMMON-JUMP / Q0                         ✓[M]
 rank-2 completion / Morse / parity      ✓[M]
 canonical lambda=1                      ✓[M]
 exact a=1 Fourier multiplier            ✓[M]
-high-frequency positivity               ✓[K/M]
-full infinite Prolate tail              ✓[K/M]
+Omega1551 high-frequency floor          ✓[K/M]
+N=1210 Prolate/Schur reduction          ✓[K/M]
 ```
 
-## Bounded Schur reduction `✓[M]`
+## Certified reduced band
+
+```math
+\boxed{m_1(\xi)>0.1\quad(|\xi|\ge1551).}
+```
 
 Mit
 
 ```math
-c=0.04,
-\qquad
-r=(m_1-c)\mathbf1_{[-2300,2300]},
+r=(m_1-0.1)\mathbf1_{[-1551,1551]}
 ```
 
 ist
 
 ```math
-q_1\succeq cI+K,
-\qquad
-K=P_I\mathcal F^{-1}M_r\mathcal F P_I.
+\|r\|_\infty<12.
 ```
 
-Für die kanonische Completion genügt
-
-```math
-L_1=cI+K+\mathcal E^*\mathcal E.
-```
-
-Definiere für PSWFs `psi_k`
+Für den moment-augmentierten PSWF-Raum
 
 ```math
 R_N=
 \operatorname{span}\{\psi_0,\ldots,\psi_{N-1}\}
-+\operatorname{span}\{e^{x/2},e^{-x/2}\},
-\qquad
-T_N=R_N^\perp.
++\operatorname{span}\{e^{x/2},e^{-x/2}\}
 ```
 
-Dann
+liefert `N=1210`
 
 ```math
-\mathcal E|_{T_N}=0,
+\lambda_{1210}<1.5\times10^{-42},
 ```
+
+und den zertifizierten Schur-Penalty
 
 ```math
-\|(L_1)_{RT}\|
-\le\|r\|_\infty\sqrt{\lambda_N},
+<2.2\times10^{-39}.
 ```
 
-und
+## Default-Auftrag — A1-FINITE-1212
 
-```math
-(L_1)_{TT}\succeq
-[0.04-(\Gamma_1+0.04)\lambda_N]I.
-```
-
-## Predeclared N=1680 gate — exact-head CI pending
-
-Der neue Arb-Workflow soll zertifizieren
-
-```math
-\|r\|_\infty<12,
-\quad
-\lambda_{1680}(2300)<1.1\times10^{-39},
-```
-
-```math
-\tau_{1680}>0.039,
-```
-
-und
-
-```math
-\text{Schur penalty}<4.1\times10^{-36}.
-```
-
-Bis zum grünen Exact-Head-Lauf: candidate `✓[K/M]`.
-
-## Default-Auftrag — A1-FINITE
-
-Wenn der Cross-Gate grün ist, ist nur noch zu beweisen:
+Es bleibt nur noch zu beweisen:
 
 ```math
 \boxed{
-(L_1)_{RR}\succeq5\times10^{-36}I
+(L_1)_{RR}\succeq3\times10^{-39}I.
 }
 ```
 
-auf dem augmented resolved space `R_1680`.
-
-Dimension höchstens:
+Resolved dimension höchstens:
 
 ```text
-1682 total
-841 even + 841 odd.
+1212 total
+606 even + 606 odd.
 ```
 
 Arbeitsreihenfolge:
 
-1. neue Cross-Arb-Werte verifizieren und promoten;
-2. rigorose PSWF-Darstellung des resolved Raums wählen;
-3. parity-getrennte finite Matrix von `L_1` intervallzertifizieren;
-4. kleinste Eigenwertuntergrenze gegen `5e-36` prüfen;
-5. nur bei bestandenem Gate fixed-window `a=1` promoten.
+1. rigorose Darstellung des augmented PSWF-Raums wählen;
+2. parity-getrennte finite Matrix von `L_1` intervallzertifizieren;
+3. kleinste Eigenwertuntergrenze gegen `3e-39` prüfen;
+4. nur bei bestandenem Gate fixed-window `a=1` promoten.
 
 ### Firewalls
 
-- `5e-36` ist ein sufficient threshold, kein beobachteter Eigenwert.
-- Keine Promotion der Crosszahlen vor Exact-Head-CI.
+- `3e-39` ist ein vorab deklarierter sufficient threshold, kein beobachteter Eigenwert.
+- Der ältere `2300/1680`-Gate bleibt gültig, ist aber gröber.
 - Frühere Dirichlet-Ritzwerte bleiben Diagnostik.
 - Fixed-window `a=1`, all-a NP-GAP, Object X und RH bleiben offen.
+- Aktuelle arXiv-v2-Metadaten von 2608.24827 führen Xuefeng Zhu als Autor; ältere Projekttexte mit Marcus Chuk sind bibliographisch superseded.
 - Registry/Arbeitsdefinition unverändert.
