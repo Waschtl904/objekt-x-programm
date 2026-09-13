@@ -1,116 +1,117 @@
-# Abhängigkeitsgraph (DAG) — Objekt X / A1-SCHUR
+# Abhängigkeitsgraph (DAG) — Objekt X / A1-FINITE
 
 > **Stand:** 13. September 2026; Registry und Arbeitsdefinition unverändert.
 
-## 1. Completion basis
+## 1. Closed base
 
 ```text
 COMMON-JUMP / Q0 ✓[M]
         |
-D_NP(a)=ker E
-        |
-q_a=X_a^*X_a-Gamma_a I
-        |
 rank-2 completion / Morse / parity ✓[M]
         |
 canonical lambda=1 ✓[M]
-```
-
-## 2. Exact `a=1` Fourier edge
-
-```text
-q_1 on time-limited functions
         |
-whole-line Plancherel
-        v
-q_1(v)=integral m_1(xi)|vhat(xi)|^2 dxi    ✓[M]
+exact a=1 multiplier ✓[M]
+        |
+high-frequency + full Prolate tail ✓[K/M]
 ```
 
-with active prime powers `{2,3,4,5,7}` and no additional window remainder.
-
-## 3. High-frequency edge
+## 2. Bounded-band reduction
 
 ```text
-DLMF digamma series
- + monotone integral tail
- + cos(theta)<=1
+m_1 = c + r_band + s_out,
+s_out >=0
         |
         v
-m_1(xi)>0.04 for |xi|>=2300                ✓[K/M]
+q_1 >= c I + K                              ✓[M]
+        |
+A_1=q_1+E^*E >= L_1=cI+K+E^*E              ✓[M]
 ```
 
-Also globally `m_1>=-Gamma_1`.
+with `c=0.04` and `r_band=(m_1-c)1_{|xi|<=2300}`.
 
-## 4. Prolate concentration edge
+## 3. Moment augmentation
 
 ```text
-C_2300=P[-1,1] B[-2300,2300] P[-1,1]
+R_N^0 = first N PSWFs
+M = span{e^{x/2},e^{-x/2}}
         |
-PSWF eigenvalues lambda_k
+R_N=R_N^0+M
+T_N=R_N^perp
         |
-Karnik-Romberg-Davenport Cor. 3
-        |
-        v
-lambda_1490(c=2300)<0.0035                  ✓[K/M]
+        +--> T_N subset (R_N^0)^perp
+        +--> E|T_N=0
 ```
 
-Therefore for `T_1490=span{psi_0,...,psi_1489}^perp`:
+Hence the completion term has no tail/crossblock. `✓[M]`.
+
+## 4. Bounded crossblock theorem
 
 ```text
-band mass <= lambda_1490
+band concentration on T_N <= lambda_N
         +
-high-frequency m_1>0.04
-        +
-global m_1>=-Gamma_1
+||r||_infty finite
         |
         v
-q_1 > 0.01 I on T_1490                       ✓[K/M]
+||L_RT|| <= ||r|| sqrt(lambda_N)             ✓[M]
 ```
 
-The infinite tail is closed.
-
-## 5. Parity edge
+and
 
 ```text
-PSWF reflection symmetry
-        |
-first 1490 modes = 745 even + 745 odd
-        |
-        v
-compatible with 2-channel parity completion ✓[M]
+L_TT >= tau_N I,
+tau_N=c-(Gamma_1+c)lambda_N                    ✓[M]
 ```
 
-## 6. Remaining A1-SCHUR edge
-
-For
+Therefore
 
 ```math
-A_1=q_1+E^*E
+L_{RR}\succeq\mu_RI,
+\qquad
+\mu_R\ge\frac{\|r\|_\infty^2\lambda_N}{\tau_N}
 ```
 
-and decomposition `R_1490 + T_1490`:
+is sufficient for `L_1>=0`, hence for the canonical completion.
+
+## 5. Explicit N=1680 gate — candidate until CI
 
 ```text
-A_TT > 0.01 I                                ✓[K/M]
-        |
-        +--> certify A_RR on 1490 modes       ?[O]
-        +--> certify ||A_RT||                  ?[O]
-        |
-        v
-A_RR-A_RT A_TT^{-1} A_TR >=0                 ?[O]
+||r||<12
+lambda_1680(c=2300)<1.1e-39
+tau_1680>0.039
         |
         v
-certified a=1 completion                      ?[O]
+Schur penalty <4.1e-36
+        |
+        v
+resolved target mu_R=5e-36 sufficient
 ```
+
+All numeric constants remain candidate `✓[K/M]` until the new exact-head Arb workflow is green.
+
+## 6. Final open edge after C5
+
+```text
+R_1680 dimension <=1682
+  = <=841 even + <=841 odd
+        |
+        v
+certify L_RR >=5e-36 I                         ?[O]
+        |
+        v
+canonical a=1 completion                       ?[O]
+```
+
+After the new cross gate is certified, no separate infinite-dimensional tail or crossblock theorem remains.
 
 ## 7. Global path
 
 ```text
-A1-SCHUR
+A1-FINITE
    |
 fixed-window a=1 completion
    |
-structural scaling / further windows
+further windows / structural scaling
    |
 all-a NP-GAP
    |
@@ -121,7 +122,7 @@ RH
 
 ## 8. Firewalls
 
-- PSWF basis diagonalizes concentration, not `q_1`.
-- Positive tail does not imply positive full operator.
-- Earlier finite Dirichlet Ritz values remain non-certified.
-- Resolved PSD without crossblock bound is not a theorem.
+- `5e-36` is a predeclared sufficient threshold, not a measured eigenvalue.
+- New Schur constants require exact-head CI before promotion.
+- Resolved lower bound remains open.
+- Fixed-window a=1 and RH are not proved.
