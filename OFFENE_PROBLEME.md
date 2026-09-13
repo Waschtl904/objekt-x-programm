@@ -1,149 +1,141 @@
-# Offene Probleme — A1-SCHUR
+# Offene Probleme — A1-FINITE
 
 > **Stand:** 13. September 2026.  
-> Operative Audits: [NP-DUAL-COMP](audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md) · [A1-TAIL](audits/P11_A1_HIGHFREQ_PROLATE_TAIL_2026-09-13.md).
+> Operative Audits: [A1-TAIL](audits/P11_A1_HIGHFREQ_PROLATE_TAIL_2026-09-13.md) · [A1 bounded Schur remainder](audits/P11_A1_SCHUR_BOUNDED_REMAINDER_2026-09-13.md).
 
 ## Neu geschlossen
 
-### `[A1-FOURIER]` `✓[M]`
+### `[A1-TAIL]` `✓[K/M]`
 
-Bei `a=1` besitzt `q_1` exakt den ganzen Fouriermultiplikator
+Der gesamte unendlichdimensionale Prolate-Tail ist bereits positiv:
 
 ```math
-m_1(\xi)=
-\operatorname{Re}\psi\left(\frac14+\frac{i\xi}{2}\right)-\log\pi
--2\sum_{n\in\{2,3,4,5,7\}}
-\frac{\Lambda(n)}{\sqrt n}\cos(\xi\log n).
+q_1>0.01I
 ```
 
-Für zeitbegrenztes `v` gilt ohne zusätzlichen Fensterrest
+auf dem orthogonalen Komplement der ersten `1490` PSWF-Moden.
+
+### `[A1-BOUNDED-LOWER]` `✓[M]`
+
+Mit `c=0.04` und
 
 ```math
-q_1(v)=\int m_1(\xi)|\widehat v(\xi)|^2d\xi.
+r=(m_1-c)\mathbf1_{[-2300,2300]}
 ```
 
-### `[A1-HIGHFREQ]` `✓[K/M]`
-
-Der Exact-Head-Arb-Gate zertifiziert
+ist
 
 ```math
-\boxed{m_1(\xi)>0.04\quad(|\xi|\ge2300).}
-```
-
-### `[A1-PROLATE-TAIL]` `✓[K/M]`
-
-Für das Band `[-2300,2300]` auf dem Zeitintervall `[-1,1]` gilt `c=2300`. Die explizite Karnik--Romberg--Davenport-Schranke liefert intervallrigoros
-
-```math
-\boxed{\lambda_{1490}(2300)<0.0035.}
-```
-
-Daraus folgt auf dem gesamten orthogonalen Prolate-Tail
-
-```math
-\boxed{
-q_1(v)>0.01\|v\|^2.
-}
-```
-
-Der unendlichdimensionale Tail selbst ist damit geschlossen.
-
-### `[PARITY-TAIL]` `✓[M]`
-
-Die ersten `1490` PSWF-Moden zerfallen in `745` even und `745` odd Moden. Die Tailzerlegung ist mit der theorematischen parity-completion kompatibel.
-
----
-
-## Priorität 0 — `[A1-SCHUR]` `?[O]`
-
-Für die kanonische Completion
-
-```math
-A_1=q_1+\mathcal E^*\mathcal E
-```
-
-und
-
-```math
-L^2(-1,1)=R_{1490}\oplus T_{1490}
-```
-
-ist bereits
-
-```math
-A_{TT}>0.01I
-```
-
-bewiesen.
-
-Zu schließen ist nur noch
-
-```math
-\boxed{
-A_{RR}-A_{RT}A_{TT}^{-1}A_{TR}\succeq0.
-}
-```
-
-### Pflichten
-
-1. resolved PSWF-Formmatrix `A_RR` rigoros/Arb einschließen;
-2. Momentzeilen in der PSWF-Basis einschließen;
-3. `lambda=1` als ersten predeclared Completionwert benutzen;
-4. resolved Inertia und kleinste Eigenwertuntergrenze zertifizieren;
-5. `||A_RT||` rigoros begrenzen;
-6. finalen Schur-Komplement-Gate schließen.
-
-Ein einfacher sufficient gate ist
-
-```math
-A_{RR}\succeq\mu_R I,
+q_1\succeq cI+K,
 \qquad
-\|A_{RT}\|^2\le0.01\mu_R.
+K=P_I\mathcal F^{-1}M_r\mathcal F P_I.
+```
+
+Für `A_1=q_1+E^*E` genügt also `L_1=cI+K+E^*E`.
+
+### `[A1-MOMENT-AUGMENT]` `✓[M]`
+
+```math
+R_N=\operatorname{span}\{\psi_0,\ldots,\psi_{N-1}\}
++\operatorname{span}\{e^{x/2},e^{-x/2}\},
+\qquad
+T_N=R_N^\perp.
+```
+
+Dann `E|T_N=0`; der Completionterm hat keinen Tail-/Crossblock.
+
+### `[A1-CROSS-ABSTRACT]` `✓[M]`
+
+```math
+\|(L_1)_{RT}\|
+\le\|r\|_\infty\sqrt{\lambda_N},
+```
+
+```math
+(L_1)_{TT}\succeq
+\tau_NI,
+\qquad
+\tau_N=0.04-(\Gamma_1+0.04)\lambda_N.
+```
+
+Daher genügt
+
+```math
+(L_1)_{RR}\succeq\mu_RI,
+\qquad
+\mu_R\ge\frac{\|r\|_\infty^2\lambda_N}{\tau_N}.
 ```
 
 ---
 
-## Priorität 1 — `[A1-RESOLVED]` `?[O]`
+## Priorität 0 — `[A1-CROSS-1680]` candidate `✓[K/M]`
 
-Die neue finite Größe ist `1490 x 1490`, parity-getrennt `745 x 745` pro Sektor.
+Vorab festgelegter exact-head Gate:
 
-Zu entscheiden:
+```text
+Omega = 2300
+N = 1680
+c = 0.04
+```
 
-- direkte Arb-Quadratur der PSWF-Matrixelemente;
-- zertifizierte Spektralmethode für die PSWFs;
-- alternativ eine basisunabhängige resolved-space Untergrenze, die den vollen Matrixbau vermeidet.
+Zu zertifizieren:
 
-Die früheren 12-dimensionalen Dirichlet-Ritzwerte sind hierfür nur Diagnostik.
+```math
+\|r\|_\infty<12,
+\quad
+\lambda_{1680}<1.1\times10^{-39},
+```
+
+```math
+\tau_{1680}>0.039,
+\quad
+\text{Schur penalty}<4.1\times10^{-36}.
+```
+
+Bis zum grünen CI-Lauf keine strenge Numerikpromotion.
 
 ---
 
-## Priorität 2 — `[A1-CROSS]` `?[O]`
+## Priorität 1 — `[A1-RESOLVED-5E36]` `?[O]`
 
-Gesucht ist eine normierte Schranke für den resolved--tail Block. Prolate diagonalisiert nur den Bandkonzentrationsoperator, nicht `q_1`; daher muss die Kopplung separat kontrolliert werden.
+Wenn der Cross-Gate grün ist, ist **nur noch** zu beweisen:
 
-Mögliche Mechanismen:
+```math
+\boxed{
+(L_1)_{RR}\succeq5\times10^{-36}I.
+}
+```
 
-- split `m_1=m_{in}+m_{out}` und nutze PSWF band-concentration identities;
-- subtractiere einen positiven Außenboden `0.04` und schätze nur den verbleibenden bounded multiplier;
-- parity-separierte Hilbert--Schmidt-/Schur-Bounds, sofern endlich;
-- graph norm statt bloßer `L^2`-Norm, falls `m_1` unbeschränkt wächst.
+Resolved dimension höchstens
+
+```text
+1682 total
+841 even + 841 odd.
+```
+
+Pflichten:
+
+1. rigorose Darstellung des augmented PSWF-Raums;
+2. Arb-Einschließung der finite Formmatrix;
+3. parity-getrennte Inertia/PSD;
+4. lower eigenvalue bound `>=5e-36`.
+
+`5e-36` ist ein **vorab deklarierter sufficient threshold**, kein beobachteter Eigenwert.
 
 ---
 
 ## Danach — `[A1-CERT]` `?[O]`
 
-Wenn `A1-SCHUR` grün ist, folgt ein rigoroses fixed-window Nullpol-Completion-Zertifikat bei `a=1`.
+Resolved lower bound + zertifizierter Schur-Penalty ergibt die volle kanonische Completion bei `a=1`.
 
-Erst danach lohnt sich die Frage nach Skalierung in `a` oder weiteren Fenstern.
+Erst dann ist ein fixed-window theorem erreicht.
 
 ---
 
 ## Firewalls
 
-- positive high-frequency symbol alone != full positivity;
-- Prolate tail positivity != resolved block positivity;
-- PSWF basis diagonalizes concentration, not `q_1`;
-- finite resolved PSD without crossblock != theorem;
-- previous finite Dirichlet diagnostics remain non-certified;
-- fixed-window `a=1` != RH;
-- all-a NP-GAP, Object X and RH remain open.
+- Cross-Konstanten erst nach exact-head CI promoten.
+- resolved lower bound ist offen.
+- vorherige 12-dimensionale Ritzwerte bleiben Diagnostik.
+- fixed-window `a=1` ist noch nicht bewiesen.
+- all-a NP-GAP, Object X und RH bleiben offen.
