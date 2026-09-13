@@ -1,159 +1,75 @@
-# CURRENT FRONT — Objekt X / COMMON-JUMP → NP-GAP
+# CURRENT FRONT — Objekt X / COMMON-JUMP → NP-OVERLAP
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Stand:** 13. September 2026; keine Registry-Promotion.  
-> **Kanonische Hauptaudits:** [COMMON-JUMP](audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md) · [Q0 first channel / short-window NP-GAP](audits/P11_NP_GAP_Q0_FIRST_CHANNEL_2026-09-13.md).  
-> Vorheriger strategischer Filter: [Nullpol-Reklassifikation](audits/P11_NULLPOLE_STRATEGIC_RECLASSIFICATION_2026-09-13.md).
+> **Kanonische Hauptaudits:** [COMMON-JUMP](audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md) · [Q0 first channel](audits/P11_NP_GAP_Q0_FIRST_CHANNEL_2026-09-13.md) · [Review correction / Prime overlap](audits/P11_NP_GAP_REVIEW_CORRECTION_PRIME_OVERLAP_2026-09-13.md).
 
 Diese Datei ordnet die Arbeit; sie beweist nichts. Registry und Arbeitsdefinition bleiben unverändert.
 
-## 1. Nullpol-Hauptklasse
+## 1. Gesicherte gemeinsame Geometrie `✓[M]`
 
 Mit
 
 ```math
-M(v)(s)=\int_{\mathbb R}v(x)e^{(s-1/2)x}\,dx
+K_t=T_{t/2}-T_{-t/2}
 ```
 
-gilt
+entstehen archimedischer Ort und Primzahlpotenzen aus derselben positiven Featurefamilie. Auf der Nullpolklasse
 
 ```math
-E_-(v)=M(v)(0),\qquad E_+(v)=M(v)(1).
+D_{NP}=\ker M(0)\cap\ker M(1)
 ```
 
-Auf
+gilt für jedes `a>0`
 
 ```math
-\mathscr D_{NP}=\ker M(0)\cap\ker M(1)
+\boxed{
+Q_W(v,w)=\langle X_av,X_aw\rangle-\Gamma_a\langle v,w\rangle,
+}
 ```
 
-verschwinden `R_0` und `\mathcal E`. Connes–Consani Proposition C.1 liefert global einen RH-äquivalenten Weil-Scope mit diesen Nullbedingungen. Keine fixed-`a`-Äquivalenz wird behauptet.
-
-## 2. COMMON-JUMP `✓[M]`
-
-Setze
-
-```math
-K_t:=T_{t/2}-T_{-t/2},
-\qquad
-K_t^*K_t=2I-T_t-T_{-t}.
-```
-
-Archimedes und Primzahlpotenzen benutzen exakt diese eine positive Featurefamilie:
-
-```math
-\mu_a
-=
-\frac{e^{-t/2}}{1-e^{-2t}}dt
-+
-\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}.
-```
-
-Die vorwärts konstruierte Hilbert-Featureabbildung `\mathcal X_a` erfüllt
-
-```math
-\langle\mathcal X_av,\mathcal X_aw\rangle
-=
-\int_0^\infty\frac{e^{-t/2}}{1-e^{-2t}}
-\langle K_tv,K_tw\rangle dt
-+
-\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}
-\langle K_{\log n}v,K_{\log n}w\rangle.
-```
-
-Die exakte Schwelle ist
-
-```math
-\kappa_*=\log\pi-\psi(1/4)
-=\log(8\pi)+\gamma+\frac\pi2,
-```
+mit
 
 ```math
 \Gamma_a
-=2\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}+\kappa_*.
+=2\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}
++\kappa_*,
+\qquad
+\kappa_*=\log\pi-\psi(1/4).
 ```
 
-Für jedes `a>0` gilt exakt
+COMMON-JUMP, NP-R1-Subsumption und cutoff-gauge covariance bleiben `✓[M]`.
 
-```math
-\boxed{
-Q_W(v,w)
-=
-\langle\mathcal Ev,P\mathcal Ew\rangle
-+
-\langle\mathcal X_av,\mathcal X_aw\rangle
--
-\Gamma_a\langle v,w\rangle.
-}
-```
+## 2. `Q_0` / erster Gamma-Kanal `✓[M]`
 
-Auf Nullpol:
-
-```math
-\boxed{
-Q_W(v,w)
-=
-\langle\mathcal X_av,\mathcal X_aw\rangle
--
-\Gamma_a\langle v,w\rangle.
-}
-```
-
-Damit sind `log|D|`, `R_1`, Prime shifts und Exterior-shell-Masse in derselben zentrierten Jump-Gram-Struktur subsumiert.
-
-## 3. Cutoff-Gauge `✓[M]`
-
-Neue äußere Prime-Atome erfüllen auf einem kleineren alten Träger
-
-```math
-\langle K_{\log n}v,K_{\log n}w\rangle
-=2\langle v,w\rangle.
-```
-
-Positive Gramform und Schwelle wachsen deshalb exakt gleich. Der gaugeinvariante Gegenstand ist
-
-```math
-\mathcal X_a^*\mathcal X_a-\Gamma_aI.
-```
-
-## 4. Archimedische Resolventenkanäle `✓[M]`
-
-Die Dichte besitzt die exakte positive Zerlegung
+Die archimedische Dichte zerfällt als
 
 ```math
 \frac{e^{-t/2}}{1-e^{-2t}}
-=\sum_{m=0}^\infty e^{-\alpha_m t},
-\qquad
-\alpha_m=2m+\frac12.
+=\sum_{m\ge0}e^{-\alpha_m t},
+\qquad \alpha_m=2m+\frac12.
 ```
 
 Für
 
 ```math
-A_\alpha:=\int_0^\infty e^{-\alpha t}K_t^*K_t\,dt
+A_\alpha=\int_0^\infty e^{-\alpha t}K_t^*K_tdt
 ```
 
-gilt exakt
+gilt
 
 ```math
-\boxed{
 A_\alpha
-=\frac{2}{\alpha}
-(-\partial_x^2)(-\partial_x^2+\alpha^2)^{-1}.
-}
+=\frac{2}{\alpha}(-\partial_x^2)(-\partial_x^2+\alpha^2)^{-1}.
 ```
 
-Damit ist jeder archimedische Kanal ein positiver Resolventenkanal derselben Jump-Familie.
-
-## 5. `Q_0` trifft den ersten Kanal exakt `✓[M]`
-
-Setze
+Mit
 
 ```math
-Q_0:=-\partial_x^2+\frac14.
+Q_0=-\partial_x^2+\frac14
 ```
 
-Für `alpha_0=1/2` gilt
+folgt exakt
 
 ```math
 \boxed{
@@ -163,162 +79,220 @@ A_{1/2}Q_0=-4\partial_x^2.
 }
 ```
 
-Für `alpha>0` cancelt der Resolventennenner in `A_\alpha Q_0` nur bei `alpha=1/2`. Die frühere Beobachtung `alpha_0=1/2` ist damit keine bloße Skalenanalogie mehr, sondern eine exakte und innerhalb dieser Kanalfolge eindeutige Intertwining-Identität.
-
-## 6. Support-erhaltende Nullpol-Parametrisierung `✓[M]`
-
-Der Green-Kern von `Q_0^{-1}` ist
+Außerdem
 
 ```math
-G_0(x)=e^{-|x|/2}.
+\boxed{
+Q_0:C_c^\infty(-a,a)\xrightarrow{\cong}D_{NP}(a)
+}
 ```
 
-Für `supp(v) subset (-a,a)` sind die äußeren Tails von `Q_0^{-1}v` exakt
+support-erhaltend und
 
 ```math
-e^{-x/2}E_+(v)\quad(x>a),
-\qquad
-e^{x/2}E_-(v)\quad(x<-a).
+\langle Q_0u,A_{1/2}Q_0u\rangle
+=4\|u''\|^2+\|u'\|^2.
+```
+
+## 3. Höhere Gamma-Kanäle: Exponent geklärt `✓[M]`
+
+Für den komprimierten Resolventenkern
+
+```math
+R_\alpha(x,y)=\frac{1}{2\alpha}e^{-\alpha|x-y|}
+```
+
+liefert der Schur-Test exakt
+
+```math
+\|1_{(-a,a)}R_\alpha1_{(-a,a)}\|
+\le\frac{1-e^{-\alpha a}}{\alpha^2}.
 ```
 
 Daher
 
 ```math
 \boxed{
-Q_0:C_c^\infty(-a,a)
-\xrightarrow{\cong}
-\mathscr D_{NP}(a)
-}
-```
-
-support-erhaltend. Für `v=Q_0u` wird der erste archimedische Kanal lokal:
-
-```math
-\boxed{
-\langle v,A_{1/2}v\rangle
-=4\|u''\|_2^2+\|u'\|_2^2.
-}
-```
-
-## 7. Erste quantitative Coercivity `✓[M]`
-
-Mit dem ersten Dirichlet-Eigenwert
-
-```math
-\lambda_1(a)=\frac{\pi^2}{4a^2}
-```
-
-folgt
-
-```math
-\boxed{
-\langle v,A_{1/2}v\rangle
-\ge
-\frac{4\pi^2}{\pi^2+a^2}\|v\|_2^2,
-\qquad v\in\mathscr D_{NP}(a).
-}
-```
-
-Für jeden höheren Kanal liefert der positive Resolventenkern per Schur-Test für auf `(-a,a)` getragenes `v`
-
-```math
-\boxed{
 \langle v,A_\alpha v\rangle
-\ge
-\frac{2}{\alpha}e^{-\alpha a}\|v\|_2^2.
+\ge\frac{2}{\alpha}e^{-\alpha a}\|v\|^2.
 }
 ```
 
-## 8. NP-GAP auf kurzen Fenstern `✓[M]_part`
+Die im externen Review aufgeworfene `e^{-alpha a}`/`e^{-2alpha a}`-Frage ist damit zugunsten des stärkeren Exponenten geschlossen.
 
-Definiere
+## 4. Short-window-Buchung korrigiert
 
-```math
-B(a)
-:=
-\frac{4\pi^2}{\pi^2+a^2}
-+
-\sum_{m=1}^\infty
-\frac{2}{\alpha_m}e^{-\alpha_m a}.
-```
-
-`B` ist stetig und streng fallend, mit `B(a)->infinity` für `a downarrow 0` und `B(a)->0` für `a->infinity`. Sei `a_*` die eindeutige positive Lösung
+Aus den `Q_0`- und höheren Kanalabschätzungen folgt architekturintern ein short-window Gap. Der dazugehörige Bound ist
 
 ```math
-B(a_*)=\kappa_*.
+B(a)=\frac{4\pi^2}{\pi^2+a^2}
++\sum_{m=1}^\infty\frac{2}{\alpha_m}e^{-\alpha_ma}.
 ```
 
-Dann gilt für
+Mit `x=e^{-a/2}` gilt geschlossen
 
 ```math
-0<a<\min\{a_*,\tfrac12\log2\}
+B(a)=\frac{4\pi^2}{\pi^2+a^2}
++\log\frac{1+x}{1-x}+2\arctan x-4x.
 ```
 
-unkonditional
+Ein eigener Arb-Checker zertifiziert den eindeutigen Schnittpunkt `B(a_*)=kappa_*` auf dem Exact Head; die vorgesehene Bracket ist
 
 ```math
-\boxed{
-\|\mathcal X_av\|^2\ge\Gamma_a\|v\|_2^2
-\qquad(v\in\mathscr D_{NP}(a)).
-}
+0.1033784517534<a_*<0.1033784517535<\frac12\log2.
 ```
 
-Also ist NP-GAP für einen **nichtleeren short-window-Bereich bewiesen**.
-
-Das ist ein echter Teilabschluss, aber kein all-`a`-Satz und kein RH-Beweis.
-
-## 9. Verbleibender Hauptengpass — NP-GAP global `?[O]`
-
-Offen bleibt
-
-```math
-\boxed{
-\lambda_{NP}(a)
-:=
-\inf_{0\ne v\in\mathscr D_{NP}(a)}
-\frac{\|\mathcal X_av\|^2}{\|v\|_2^2}
-\stackrel{?}{\ge}\Gamma_a
-\quad\text{für jedes }a>0.
-}
-```
-
-Für die Familie aller Fenster ist dies die verbleibende RH-äquivalente Lower-Frame-/Spektralgap-Frage. Ein einzelnes festes `a` ist nicht als RH-äquivalent behauptet.
-
-## 10. Numerik-Firewall
-
-Endlichdimensionale Nullpol-Ritzwerte erfüllen für einen Teilraum `V_N`
-
-```math
-\lambda_{NP}^{(N)}(a)\ge\lambda_{NP}(a).
-```
-
-Sie sind **obere Schranken** für das wahre Infimum. Positive endliche Ritz-Gaps beweisen daher nichts Globales. Die während der Exploration genannten Werte sind nicht Arb-zertifiziert und werden nicht als `✓[N]` geführt.
-
-## 11. Status
+**Literatur-Firewall:** Die Existenz der Kleinfensterpositivität ist kein neuer Satz des Projekts. Suzuki Theorem 1.4 beweist bereits eine stärkere unbedingte Kleinfensterpositivität auf der vollen lokalen Klasse. Unsere Buchung ist daher:
 
 ```text
-COMMON-JUMP exact common feature architecture          ✓[M]
-NP-R1 / NP-COMMON / cutoff-gauge structure             ✓[M]
-forward Object-X candidate architecture                ✓[M]_part
-Q0 first-channel intertwining                          ✓[M]
-Q0 support-preserving null-pole bijection              ✓[M]
-short-window NP-GAP                                    ✓[M]_part
-NP-GAP for all a>0                                     ?[O]
-full positive Object-X realization                     ?[O]
-publication novelty                                    ?[O]
-RH                                                     ?[O]
+COMMON-JUMP/Q0 interne Herleitung der Kleinfenster-Coercivity  ✓[M]_part
+Short-window positivity als neuer Literatur-Satz               ×[M]
 ```
 
-OX-GEN-A bleibt die exakte Polschicht. POS-DIL #101--#105 bleibt eine mathematisch gültige auxiliary full-class route. PR #91, PR #49 und R37/G4c bleiben separate Nebenfronten.
+Der Wert des Resultats ist strukturell: die eigene positive Architektur reproduziert die bekannte Kleinfenster-Coercivity und deren führende `log(1/a)`-Skala.
 
-## 12. Firewalls
+## 5. Exakte neue Restform — Prime overlap `✓[M]`
 
-Nicht behaupten:
+Setze
 
-- NP-GAP sei für alle `a>0` bewiesen;
-- ein positives endliches Ritz-Spektrum zertifiziere den globalen Gap;
-- ein einzelnes fixes Fenster sei RH-äquivalent;
-- die volle positive Objekt-X-Realisierung liege bereits vor;
-- Publikationsneuheit sei geklärt;
-- Registry oder Arbeitsdefinition seien automatisch promoviert;
-- RH sei bewiesen.
+```math
+\mathcal A(v)
+:=\int_0^\infty\frac{e^{-t/2}}{1-e^{-2t}}\|K_tv\|^2dt
+-\kappa_*\|v\|^2.
+```
+
+Da
+
+```math
+\|K_tv\|^2
+=2\|v\|^2-2\operatorname{Re}\langle T_tv,v\rangle,
+```
+
+cancelt der gesamte Prime-Diagonalledger exakt gegen den Prime-Anteil von `Gamma_a`. Auf `D_NP(a)` bleibt
+
+```math
+\boxed{
+Q_W(v)=\mathcal A(v)-\mathcal O_a(v),
+}
+```
+
+mit
+
+```math
+\boxed{
+\mathcal O_a(v)
+=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
+\operatorname{Re}\langle T_{\log n}v,v\rangle.
+}
+```
+
+Für `log n>=2a` sind die Träger disjunkt und die Korrelation ist null.
+
+Äquivalent ist all-`a` NP-GAP genau die Operatorungleichung
+
+```math
+\boxed{
+(A_\infty-\kappa_*I)|_{D_{NP}(a)}
+\succeq
+\mathbf O_a|_{D_{NP}(a)},
+}
+```
+
+wobei
+
+```math
+\mathbf O_a
+=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
+\frac{T_{\log n}+T_{-\log n}}2.
+```
+
+**Das ist jetzt der kanonische harte Rest.** Die große Prime-Schwelle selbst ist nach Zentrierung nicht die Wand; die Wand ist der endliche gewichtete Überlappungsoperator.
+
+## 6. `Q_0`-Transport des Prime overlap `✓[M]`
+
+Für `v=Q_0u` gilt exakt
+
+```math
+\boxed{
+\operatorname{Re}\langle T_tv,v\rangle
+=
+\operatorname{Re}\langle T_tu'',u''\rangle
++\frac12\operatorname{Re}\langle T_tu',u'\rangle
++\frac1{16}\operatorname{Re}\langle T_tu,u\rangle.
+}
+```
+
+Damit wird der arithmetische Defekt auf Nullpol zu einer endlichen Summe gewöhnlicher Shift-Korrelationen auf den Sobolev-Ebenen `0,1,2`.
+
+## 7. Mehrkanal-Gamma-Leiter — zulässig, aber auxiliary
+
+Für
+
+```math
+Q_m=-\partial_x^2+\alpha_m^2
+```
+
+gilt
+
+```math
+M(Q_mu)(s)=\left(\alpha_m^2-(s-1/2)^2\right)M(u)(s),
+```
+
+also Nullstellen bei
+
+```math
+s=-2m,\qquad s=2m+1.
+```
+
+Die endlichen Mengen
+
+```math
+F_N=\{-2m,2m+1:0\le m<N\}
+```
+
+sind mit Connes--Consani Proposition C.1 verträglich: die negativen geraden Punkte sind triviale, nicht nichttriviale Zeta-Nullstellen. Die Leiter ist damit strukturell legitim, bleibt aber auxiliary, solange sie den Prime-overlap nicht quantitativ kontrolliert.
+
+## 8. Neue Default-Hauptfront — NP-OVERLAP `?[O]`
+
+Zu beweisen ist
+
+```math
+\boxed{
+\mathcal A(v)\ge\mathcal O_a(v)
+\quad
+(v\in D_{NP}(a),\ a>0).
+}
+```
+
+Priorität:
+
+1. Spektrum und positive Spektralmasse von `O_a` auf Nullpol;
+2. `Q_0`-transportierte Shift-Korrelationen und Parität;
+3. scharfe Abklingung der Überlappung für `log n -> 2a`;
+4. Verbindung zur bereits bewiesenen Prime-Power-AR(1)/Weil-tail-Struktur;
+5. Gamma-Mehrkanalleiter nur dann weiterziehen, wenn sie eine quantitative Kontrolle von `O_a` liefert.
+
+Ein Beweis für alle `a` bleibt RH-hart.
+
+## 9. Numerik-Firewall
+
+Endlichdimensionale Ritz-Minima sind obere Schranken für das wahre Infimum. Positive nicht zertifizierte Ritz-Gaps beweisen nichts. Der neue `a_*`-Checker ist ein separater Arb-Zertifikatsgate und betrifft nur den short-window Schwellenwert.
+
+## 10. Status
+
+```text
+COMMON-JUMP architecture                                  ✓[M]
+Q0 first-channel intertwining                             ✓[M]
+e^{-alpha a} higher-channel bound                         ✓[M]
+short-window coercivity inside COMMON-JUMP                ✓[M]_part
+short-window positivity as a new literature theorem       ×[M]
+centered Prime-overlap decomposition                      ✓[M]
+Q0 Sobolev transport of Prime overlap                     ✓[M]
+finite multi-null Gamma ladder                            ✓[M] auxiliary
+all-a NP-OVERLAP domination                               ?[O]
+forward Object-X candidate architecture                   ✓[M]_part
+full positive Object-X realization / RH                   ?[O]
+publication novelty of the architecture                   ?[O]
+```
+
+PR #91, PR #49 und R37/G4c bleiben separate Nebenfronten.
