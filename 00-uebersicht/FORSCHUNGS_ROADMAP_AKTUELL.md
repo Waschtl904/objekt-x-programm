@@ -1,75 +1,27 @@
-# Objekt X — kanonische Forschungsroadmap v2.7
+# Objekt X — kanonische Forschungsroadmap v2.8
 
 > **Stand:** 13. September 2026; Registry unverändert.  
 > **Keine Beweisautorität.** Operative Front: [CURRENT-FRONT](../CURRENT-FRONT.md).
 
-## 1. Verfügbare Basis
+## 1. Gesicherte lokale Normalform
 
-- fixed-pair Strong Terminal/C6 im ungeraden P11-Graphraum;
-- Prime-Power-AR(1)/Weil-Tail:
-  ```math
-  C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2},
-  \qquad T_q^*T_q+uu^*=R_q;
-  ```
-- lokalisierte Normalform
-  ```math
-  Q_{B_a}=G_a^+-N_a,
-  \qquad N_a=c_aI+C_a.
-  ```
-
-Arbiträre rückwärts definierte Kontraktorexistenz bleibt kein Object-X-Gate.
-
-## 2. OX-GEN-A / POS-DIL-1
-
-Die gemeinsame Generator-Ebene erfüllt
+Für `0<a<=1`:
 
 ```math
-\mathcal ET_t=\rho(t)\mathcal E,
-\qquad
-\mathcal EK_n=D_n\mathcal E,
+Q_{B_a}=G_a^+-c_aI-R_0-R_1.
 ```
+
+Prime-Power-AR(1), OX-GEN-A und die Prime-moment-Hilbertisierung bleiben als importierte positive Struktur verfügbar.
+
+## 2. Exterior-shell Geometrie
+
+Der geometrisch definierte erste Außenshell ist
 
 ```math
-R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle.
+\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\}.
 ```
 
-Die Prime-moment-Hilbertisierung liefert
-
-```math
-\|V_Nv\|^2=\|\mathcal Ev\|^2,
-\qquad
-R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.
-```
-
-AR(1)-Brücke:
-
-```math
-\sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S.
-```
-
-## 3. POS-DIL-2A — lokale bestehende G-Masse allein fällt
-
-Bei `a=1/2` ist unit-gain Shorting in der unveränderten `G_{1/2}^+`-Norm unmöglich. Notwendiger Massendefekt:
-
-```math
-\delta_0>\frac5{32}.
-```
-
-## 4. POS-DIL-2B/2C-R — äußerer Prime-Shell löst die Positivitätsfrage auf 0<a<=1
-
-Geometrisch:
-
-```math
-\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\},
-\qquad c_n=\frac12\log n.
-```
-
-```math
-H_a^{out}(v,w)=\sum_{n\in\mathscr S_a^{out}}
-\frac{\Lambda(n)}{\sqrt n}\langle K_nv,K_nw\rangle.
-```
-
-Jeder äußere Kanal ist auf dem Fenster reine lokale Masse:
+Für jeden äußeren Kanal gilt exakt
 
 ```math
 \|K_nv\|^2=2\|v\|^2.
@@ -78,94 +30,126 @@ Jeder äußere Kanal ist auf dem Fenster reine lokale Masse:
 Damit
 
 ```math
-H_a^{out}(v)=2B_a^{out}\|v\|^2.
+H_a^{out}=2B_a^{out}I.
 ```
 
-Für alle `0<a<=1` liefert der vorhandene Log-Multiplikator
+Für alle `0<a<=1` wurde bewiesen
 
 ```math
-G_a^+(v)\ge(-\log a)\|v\|^2,
+A_a^{out}:=G_a^++H_a^{out}
+\succeq\mathcal E^*\mathcal E.
 ```
 
-während
+## 3. Exakte Prime-cutoff-Gauge `✓[M]`
+
+Für jede endliche Außenkanalmenge `J`:
 
 ```math
-\|\mathcal Ev\|^2\le4\sinh(a)\|v\|^2.
+H_{a,J}=b_JI,
+\qquad
+b_J=2\sum_{n\in J}\frac{\Lambda(n)}{\sqrt n}.
 ```
 
-Eine endliche siebenintervallige Prime-Power-Analyse beweist
+Deshalb bleibt die vollständige Form invariant unter
 
 ```math
-\boxed{-\log a+2B_a^{out}>4\sinh(a)}
+G_a^+\mapsto G_a^++H_{a,J},
+\qquad
+c_a\mapsto c_a+b_J.
 ```
 
-für den gesamten Bereich `0<a<=1`. Daher
+Exakt:
+
+```math
+Q_{B_a}
+=(G_a^++H_{a,J})-(c_a+b_J)I-R_0-R_1.
+```
+
+Für den ersten Shell:
+
+```math
+c_a^{out}=c_a+A_{e^{4a}}-A_{e^{2a}}.
+```
+
+**Konsequenz:** `c_a` ist als isolierter Zahlenwert innerhalb dieser Prime-feature-Gauge nicht kanonisch. Zukünftige Arbeit muss eine Gauge-Fixierung oder eine gaugeinvariante Skalarstruktur adressieren.
+
+## 4. Exakte positive Absorption des elementaren archimedischen Layers `✓[M]`
+
+Setze
+
+```math
+D_a^{out}=A_a^{out}-\mathcal E^*\mathcal E\succeq0,
+```
+
+und
+
+```math
+L_+(v)=E_+(v)+E_-(v).
+```
+
+Da
+
+```math
+\mathcal E^*\mathcal E-R_0=L_+^*L_+,
+```
+
+folgt
 
 ```math
 \boxed{
-\|\mathcal Ev\|^2
-\le G_a^+(v)+H_a^{out}(v)
-\qquad(0<a\le1),
+P_a^{(0)}:=A_a^{out}-R_0
+=D_a^{out}+L_+^*L_+\succeq0.
 }
 ```
 
-und folglich
+Die lokalisierte Weilform besitzt damit die exakte neue Normalform
 
 ```math
 \boxed{
-\begin{pmatrix}
-G_a^++H_a^{out}&R_0\\
-R_0&G_a^++H_a^{out}
-\end{pmatrix}\succeq0.
+Q_{B_a}=P_a^{(0)}-c_a^{out}I-R_1,
+\qquad0<a\le1.
 }
 ```
 
-**Radiusfrage geschlossen `✓[M]`.**
+Der `r_0`-/`R_0`-Layer ist innerhalb der unveränderten Weilform positiv absorbiert.
 
-## 5. Aktuelle Default-Priorität: POS-DIL-2C-B / EXACT-SHELL-BOOKING
+## 5. Aktuelle Default-Priorität: OX-GEN-B / R1-SCALAR
 
-Die positive Geometrie ist nun auf dem gesamten lokalen Radiusbereich stark genug. Der Engpass ist ausschließlich die exakte Bilanz:
-
-> Kann `H_a^{out}` in die gemeinsame Prime-/Archimedean-Geometrie eingebaut werden, ohne die vollständige Weilform durch zusätzliche Energie zu verändern?
-
-Priorisierte Reihenfolge:
-
-### 5.1 Vor-Cutoff-Rekonstruktion
-
-Rekonstruiere exakt, wo die Identitätsmasse der Kanäle `c_n>a` vor der lokalisierten Cutoff-/Normalform-Umschreibung sitzt.
-
-### 5.2 Shell-Differenzen / Teleskopierung
-
-Prüfe aufeinanderfolgende Shift-Shells auf eine kanonische Differenzzerlegung, bei der äußere positive Masse und Gegenmasse exakt bilanzieren.
-
-### 5.3 AR(1)-Root/Hub
-
-Prüfe pro Primast
+Der verbleibende Rest ist
 
 ```math
-T_q^*T_q+uu^*=R_q
+\boxed{c_a^{out}I+R_1.}
 ```
 
-als mögliche Gegenbuchungsgeometrie. Insbesondere ist die bereits gefundene Quotientenamplitude
+### 5.1 `R_1`-Generatorfrage
 
-```math
-1-u_k=1-q_p^k
-```
+Bestimme die exakte Struktur von `R_1` auf der OX-GEN-Ebene:
 
-auf eine Buchungsrolle zu testen.
+- besitzt `R_1` eine Darstellung durch dieselben `E_\pm`, Translation/Spiegelung oder deren natürliche Erweiterung?
+- ist `R_1` ein Integral/Superposition von Translationcharakteren oder positiven/indefiniten Rang-endlichen Kanälen?
+- welche Paritätsstruktur besitzt `R_1`?
+- lässt sich eine vorab definierte natürliche Absorptionsklasse konstruieren oder ausschließen?
 
-### 5.4 Erst danach c_a / r_1
+### 5.2 Gaugeinvarianter Skalarrest
 
-Eine Verbindung des Shell-Skalars mit `c_aI` oder dem regulären `r_1`-Block darf erst nach einer exakten Bilanz untersucht werden. Keine stille Identifikation.
+Nicht mehr den nackten Wert `c_a` als kanonisch behandeln. Zu suchen ist entweder:
 
-## 6. Danach: vollständiger Object-X-Pfad
+1. ein geometrisch kanonischer cutoff-Gauge, oder
+2. eine gaugeinvariante Kombination aus Skalarledger und `R_1`.
+
+### 5.3 Gemeinsame Behandlung bevorzugt
+
+`R_1` und Skalarrest nicht reflexartig getrennt lösen. Möglich ist, dass ihre natürliche gemeinsame Geometrie erst nach korrekter Gauge-Fixierung sichtbar wird.
+
+## 6. Danach: echter X-Kandidat
 
 ```text
-exact shell booking ?[O]
+positive common block P_a^(0)  ✓[M]
+        +
+R1 / scalar remainder ?[O]
         |
-        | --candidate-input only-->
         v
-OX-GEN-B / genuine X candidate ?[O]
+genuine X candidate ?[O]
         |
         v
 exact full Weil-Gram identity ?[O]
@@ -182,22 +166,21 @@ RH
 
 ## 7. Firewalls
 
-- Radiuspositivität ist nicht exakte Weil-Buchung.
-- Außenshellmasse ist nicht bereits `c_aI`.
-- POS-DIL-2A war nur ein No-Go gegen die unveränderte `G^+`-Norm.
+- Gauge-Invarianz ist keine Erlaubnis für beliebige Diagonalmasse; zulässig war die vorab definierte Klasse echter Außen-Prime-Kanäle mit Weilgewichten.
+- `P_a^{(0)}` ist ein positiver gemeinsamer Baustein, noch nicht die vollständige Weil-Gram-Realisierung.
+- `Q_{B_a}`-Positivität folgt nicht allein aus der neuen Normalform.
+- `R_1` und der endgültige Skalarrest bleiben offen.
 - Keine Registry-Promotion durch Merge/CI.
-- PR #91, PR #49 und R37/G4c bleiben separat.
 
 ## 8. Explizit offen
 
 ```text
-POS-DIL-2C-B exact shell booking / renormalization
-OX-GEN-B
-r_1
-c_a I in intrinsic geometry
+OX-GEN-B / R1 generator-feature structure
+gauge fixing or gauge-invariant scalar remainder
 genuine X candidate
 exact full Weil-Gram identity
 Object-X realization
 Weil-criterion scope
 RH
+R37/G4c [separate]
 ```
