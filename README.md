@@ -12,16 +12,17 @@ aus demselben Mechanismus hervorgehen. Arbeitsname: **Objekt X**.
 
 ## Hier beginnen
 
-1. **[Aktueller Arbeitsstand](CURRENT-FRONT.md)** — operative OX-GEN-Front, geschlossene Zertifikationsgates und gesperrte alte Deutungen.
+1. **[Aktueller Arbeitsstand](CURRENT-FRONT.md)** — operative OX-GEN-Front und nächster Gate.
 2. **[Aktueller Stand](00-uebersicht/AKTUELLER_STAND.md)** — kurze Zusammenfassung für neue Sessions.
-3. **[Forschungsroadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)** — aktuelle Strategie und Nebenfronten.
+3. **[Forschungsroadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)** — Strategie und Nebenfronten.
 4. **[Abhängigkeitsgraph](00-uebersicht/DAG.md)** — kompakte logische/strategische Kanten.
 5. **[Objekt-X-Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)** — was eine vollständige Realisierung leisten muss.
 
-Zentrale Konsolidierungsquellen des aktuellen Strangs:
+Zentrale Quellen des aktuellen Strangs:
 
 - [AR(1)/Weil-Tail/OX-GRAM-Konsolidierung](audits/P11_OBJECT_X_AR1_OX_GRAM_CONSOLIDATION_2026-09-12.md)
 - [Gate 2 / OX-GEN](audits/P11_OX_GRAM_GATE2_AND_OX_GEN_2026-09-12.md)
+- [OX-GEN-A gemeinsamer Exponentialgenerator](audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md)
 
 ## Erreichter Meilenstein
 
@@ -43,9 +44,43 @@ Q_{B_a}=G_a^+-N_a
 
 mit explizit positiver Featureform `G_a^+` und explizitem Defekt `N_a` geschrieben werden. Die bloße Existenz eines kontraktiven Faktors ist jedoch kein nichtzirkulärer Objekt-X-Gate, weil sie bei bekannter Positivität rückwärts aus `Q_{B_a}` konstruiert werden kann.
 
-Die operative Hauptfrage ist daher **OX-GEN**: Suzukis `r_0''` besitzt eine exakte Rang-2-Zerlegung über `cosh(x/2)` und `sinh(x/2)`, während dieselbe Exponentialfamilie in `p^{-1/2}=e^{-\log p/2}`, der AR(1)-Korrelation und den Weilgewichten erscheint. Gesucht ist ein **expliziter, nichtzirkulärer gemeinsamer Generator-/Defektmechanismus**.
+**OX-GEN-A ist inzwischen positiv geschlossen.** Mit
 
-Die endlichen Normalisierungs- und Gate-2-Zertifikate wurden vor Merge von PR #98 gehärtet und waren auf dem geprüften Exact Head GREEN. Das nächste aktive Gate ist deshalb **OX-GEN-A bei `a=0.5`**, nicht weitere Zertifikationshärtung.
+```math
+E_\pm(v)=\int e^{\pm x/2}v(x)\,dx,
+\qquad
+\rho(t)=\operatorname{diag}(e^{-t/2},e^{t/2})
+```
+
+gilt exakt
+
+```math
+\mathcal ET_t=\rho(t)\mathcal E,
+\qquad
+\mathcal EK_n=\lambda_n\operatorname{diag}(-1,1)\mathcal E,
+```
+
+und Suzukis elementarer archimedischer Anteil ist das negative Charakter derselben Darstellung:
+
+```math
+r_0''(t)=-\operatorname{tr}\rho(t),
+\qquad
+r_0(\log n)=-4\lambda_n^2.
+```
+
+Mit der Spiegelung `P(E_+,E_-)=(E_-,E_+)` gilt
+
+```math
+R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle.
+```
+
+Damit ist erstmals eine exakte gemeinsame Prime-/Archimedean-Generatorgeometrie isoliert. Sie ist jedoch indefinit und noch **keine** positive Object-X-Realisierung.
+
+Die engere Idee, den absoluten `R_0`-Koeffizienten allein aus den diskreten Daten `{w_n,lambda_n}` zu gewinnen, ist negativ entschieden: die volle Prime-Gram-Form descendiert nicht auf den Rang-2-Quotienten, und die Quotientenkovarianz lässt den Maßstab frei.
+
+Der nächste Gate ist daher **OX-GEN-A2' / POSITIVE-DILATION**: Kann die kanonische Translation-/Reflexions-Geometrie intrinsisch in die positive Prime-/`log|D|`-Featuregeometrie eingebettet oder als Schur-/Defektterm einer positiven Erweiterung realisiert werden?
+
+`r_1` und der dominante Skalar `c_aI` bleiben offen.
 
 Parallel wird die exakte Prime-Power-AR(1)/Martingal-Faktorisierung als eigenständige, RH-unabhängige Mathematik verschriftlicht — ausdrücklich **nicht** als Objekt X.
 
