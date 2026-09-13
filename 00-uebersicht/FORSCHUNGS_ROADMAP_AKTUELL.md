@@ -1,186 +1,202 @@
-# Objekt X — kanonische Forschungsroadmap v2.8
+# Objekt X — kanonische Forschungsroadmap v2.9
 
 > **Stand:** 13. September 2026; Registry unverändert.  
-> **Keine Beweisautorität.** Operative Front: [CURRENT-FRONT](../CURRENT-FRONT.md).
+> **Keine Beweisautorität.** Operative Front: [CURRENT-FRONT](../CURRENT-FRONT.md).  
+> **Strategische Korrektur:** POS-DIL bleibt mathematisch erhalten, ist aber nach Identifikation der Polfunktionale keine Default-Hauptfront mehr.
 
-## 1. Gesicherte lokale Normalform
+---
 
-Für `0<a<=1`:
+## 1. Gesicherte Basis
 
-```math
-Q_{B_a}=G_a^+-c_aI-R_0-R_1.
-```
+- fixed-pair Strong Terminal/C6 im dokumentierten ungeraden P11-Scope;
+- Prime-Power-AR(1)/Weil-Tail;
+- lokale Suzuki-Normalform
+  ```math
+  Q_{B_a}=G_a^+-c_aI-R_0-R_1;
+  ```
+- OX-GEN-A und POS-DIL #101--#105 als exakte full-class Pole-layer-Struktur.
 
-Prime-Power-AR(1), OX-GEN-A und die Prime-moment-Hilbertisierung bleiben als importierte positive Struktur verfügbar.
+---
 
-## 2. Exterior-shell Geometrie
-
-Der geometrisch definierte erste Außenshell ist
-
-```math
-\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\}.
-```
-
-Für jeden äußeren Kanal gilt exakt
+## 2. Nullpol-Reduktion `✓[M]` + importierter Weil-Scope
 
 ```math
-\|K_nv\|^2=2\|v\|^2.
+M(v)(s)=\int v(x)e^{(s-1/2)x}\,dx,
 ```
-
-Damit
 
 ```math
-H_a^{out}=2B_a^{out}I.
+\boxed{E_-=M(v)(0),\qquad E_+=M(v)(1).}
 ```
 
-Für alle `0<a<=1` wurde bewiesen
+Daher auf
 
 ```math
-A_a^{out}:=G_a^++H_a^{out}
-\succeq\mathcal E^*\mathcal E.
+\mathscr D_{NP}=\ker M(0)\cap\ker M(1)
 ```
-
-## 3. Exakte Prime-cutoff-Gauge `✓[M]`
-
-Für jede endliche Außenkanalmenge `J`:
 
 ```math
-H_{a,J}=b_JI,
-\qquad
-b_J=2\sum_{n\in J}\frac{\Lambda(n)}{\sqrt n}.
+\boxed{R_0=0,\qquad\mathcal E=0.}
 ```
 
-Deshalb bleibt die vollständige Form invariant unter
+Connes–Consani Proposition C.1: Die globale Weil-Vorzeichenbedingung bleibt nach Vorgabe einer endlichen Nullstellenmenge `F superset {0,1}`, `F cap Z = empty`, RH-äquivalent.
 
-```math
-G_a^+\mapsto G_a^++H_{a,J},
-\qquad
-c_a\mapsto c_a+b_J.
-```
+**Firewall:** keine Behauptung einer fixed-`a`-RH-Äquivalenz.
 
-Exakt:
+---
 
-```math
-Q_{B_a}
-=(G_a^++H_{a,J})-(c_a+b_J)I-R_0-R_1.
-```
+## 3. Neue Forschungsregel — NULLPOL-CORE
 
-Für den ersten Shell:
+Ein Object-X-Hauptfront-Schritt muss mindestens eines leisten:
 
-```math
-c_a^{out}=c_a+A_{e^{4a}}-A_{e^{2a}}.
-```
+1. konstruiert einen nichttrivialen gemeinsamen Prime-/archimedischen Mechanismus auf `\mathscr D_{NP}`;
+2. schließt eine vorab definierte Architekturklasse **auch nach** Nullpolrestriktion aus;
+3. beweist eine notwendige Struktur von `R_1` oder des skalaren/gaugeinvarianten Restes auf Nullpol;
+4. schließt eine Domain-/Konvergenz-/Normalisierungslücke, die für diesen Nullpolpfad tatsächlich benötigt wird.
 
-**Konsequenz:** `c_a` ist als isolierter Zahlenwert innerhalb dieser Prime-feature-Gauge nicht kanonisch. Zukünftige Arbeit muss eine Gauge-Fixierung oder eine gaugeinvariante Skalarstruktur adressieren.
+Ein Schritt, dessen gesamter Zielterm auf `\mathscr D_{NP}` verschwindet, ist auxiliary und bekommt keine automatische Hauptfront-Kante.
 
-## 4. Exakte positive Absorption des elementaren archimedischen Layers `✓[M]`
+---
 
-Setze
+## 4. OX-GEN-A / POS-DIL — neue Rolle
 
-```math
-D_a^{out}=A_a^{out}-\mathcal E^*\mathcal E\succeq0,
-```
+### Mathematischer Status
 
-und
+Unverändert gültig:
 
-```math
-L_+(v)=E_+(v)+E_-(v).
-```
+- gemeinsame `rho/P/E`-Generatorstruktur;
+- Prime-moment Hilbertization;
+- unit-gain full-class No-Go;
+- Außen-Prime-Shell;
+- Radiusdomination `0<a<=1`;
+- exakte Prime-cutoff-Gauge;
+- positive `R_0`-Absorption.
 
-Da
-
-```math
-\mathcal E^*\mathcal E-R_0=L_+^*L_+,
-```
-
-folgt
-
-```math
-\boxed{
-P_a^{(0)}:=A_a^{out}-R_0
-=D_a^{out}+L_+^*L_+\succeq0.
-}
-```
-
-Die lokalisierte Weilform besitzt damit die exakte neue Normalform
-
-```math
-\boxed{
-Q_{B_a}=P_a^{(0)}-c_a^{out}I-R_1,
-\qquad0<a\le1.
-}
-```
-
-Der `r_0`-/`R_0`-Layer ist innerhalb der unveränderten Weilform positiv absorbiert.
-
-## 5. Aktuelle Default-Priorität: OX-GEN-B / R1-SCALAR
-
-Der verbleibende Rest ist
-
-```math
-\boxed{c_a^{out}I+R_1.}
-```
-
-### 5.1 `R_1`-Generatorfrage
-
-Bestimme die exakte Struktur von `R_1` auf der OX-GEN-Ebene:
-
-- besitzt `R_1` eine Darstellung durch dieselben `E_\pm`, Translation/Spiegelung oder deren natürliche Erweiterung?
-- ist `R_1` ein Integral/Superposition von Translationcharakteren oder positiven/indefiniten Rang-endlichen Kanälen?
-- welche Paritätsstruktur besitzt `R_1`?
-- lässt sich eine vorab definierte natürliche Absorptionsklasse konstruieren oder ausschließen?
-
-### 5.2 Gaugeinvarianter Skalarrest
-
-Nicht mehr den nackten Wert `c_a` als kanonisch behandeln. Zu suchen ist entweder:
-
-1. ein geometrisch kanonischer cutoff-Gauge, oder
-2. eine gaugeinvariante Kombination aus Skalarledger und `R_1`.
-
-### 5.3 Gemeinsame Behandlung bevorzugt
-
-`R_1` und Skalarrest nicht reflexartig getrennt lösen. Möglich ist, dass ihre natürliche gemeinsame Geometrie erst nach korrekter Gauge-Fixierung sichtbar wird.
-
-## 6. Danach: echter X-Kandidat
+### Strategischer Status
 
 ```text
-positive common block P_a^(0)  ✓[M]
-        +
-R1 / scalar remainder ?[O]
+AUX-POS-DIL / full-class pole-layer route
+```
+
+Diese Route bleibt wertvoll für eine spätere volle Testklassenrealisierung, ist aber kein notwendiger Engpass für einen RH-äquivalenten Nullpolpfad.
+
+---
+
+## 5. Default-Priorität A — NP-R1
+
+Rekonstruiere `R_1` aus der kanonischen Suzuki-/OX-GRAM-Quelle **vor** jeder neuen Architekturidee.
+
+Zu bestimmen:
+
+- polarisierter Kernel;
+- geschlossene Formel für `r_1''` und hebbare Singularitäten;
+- Parität und Spiegelung;
+- Translation-/Faltungsstruktur;
+- Verhalten unter `M(v)(0)=M(v)(1)=0`;
+- natürliche positive/indefinite Generatorfamilie oder ein vorab definierter No-Go.
+
+Ein positiver Kandidat zählt nur, wenn er auf Nullpol nicht trivialisiert.
+
+---
+
+## 6. Default-Priorität B — NP-SCALAR
+
+Im kanonischen Suzuki-Gauge bleibt
+
+```math
+c_aI
+```
+
+auf Nullpol bestehen.
+
+PR #105 zeigt zugleich die cutoff-gauge-Abhängigkeit des isolierten Skalarlagers. Daher zwei parallele, aber kompatible Wege:
+
+1. **canonical-Suzuki gauge:** Gauge explizit fixieren und die Herkunft von `c_a` dort untersuchen;
+2. **gauge-invariant route:** eine Kombination aus Skalarledger und positiver Featureenergie/R1 finden, die unter exakten Außen-Prime-Gauges invariant ist.
+
+Kein künstliches `tI` als Lösung.
+
+---
+
+## 7. Default-Priorität C — NP-COMMON
+
+Nach NP-R1/NP-SCALAR prüfen:
+
+> Entstehen `R_1` und der skalare Rest aus demselben Prime-/archimedischen Mechanismus?
+
+Bevorzugt werden:
+
+- echte Features/Intertwiner;
+- relative Operator- oder Spurklassenstrukturen;
+- Schur-/Shorting-Mechanismen mit vorwärts definierten Daten;
+- semilokale/`log|D|`-Strukturen, sofern sie auf Nullpol nichttrivial bleiben.
+
+Nicht bevorzugt: getrennte post-hoc Gegenbuchungen.
+
+---
+
+## 8. Danach: genuine X candidate
+
+```text
+NULLPOL-CORE geometry
         |
+        | requires nontrivial NP-R1 + NP-SCALAR mechanism
         v
 genuine X candidate ?[O]
         |
+        | separate exact proof
         v
-exact full Weil-Gram identity ?[O]
+full Weil-Gram identity on RH-equivalent test class ?[O]
         |
         v
 Object-X realization ?[O]
         |
-        v
-Weil-criterion scope ?[O]
-        |
+        | criterion-scope verification
         v
 RH
 ```
 
-## 7. Firewalls
+Die Rückbindung muss ausdrücklich prüfen, dass die realisierte Testklasse exakt im Connes–Consani/Weil-Scope liegt.
 
-- Gauge-Invarianz ist keine Erlaubnis für beliebige Diagonalmasse; zulässig war die vorab definierte Klasse echter Außen-Prime-Kanäle mit Weilgewichten.
-- `P_a^{(0)}` ist ein positiver gemeinsamer Baustein, noch nicht die vollständige Weil-Gram-Realisierung.
-- `Q_{B_a}`-Positivität folgt nicht allein aus der neuen Normalform.
-- `R_1` und der endgültige Skalarrest bleiben offen.
-- Keine Registry-Promotion durch Merge/CI.
+---
 
-## 8. Explizit offen
+## 9. Separate / auxiliary routes
+
+### AUX-POS-DIL
+
+Vollklassen-Pole-layer-Geometrie #101--#105. Kein Widerruf, keine Default-Priorität.
+
+### AR1-WRITEUP
+
+Prime-Power-AR(1)/Martingal-Faktorisierung als eigenständige RH-unabhängige Mathematik.
+
+### Weitere
+
+- R37/G4c separat;
+- PR #91 analytischer Draft;
+- PR #49 Candidate-only.
+
+---
+
+## 10. Firewalls
+
+- `R_0=0` auf Nullpol bedeutet nicht, dass die volle Weilform positiv ist.
+- Die globale RH-Äquivalenz der Nullpolklasse bedeutet nicht fixed-`a`-Äquivalenz.
+- `c_a` ist ohne Gaugewahl kein isoliertes kanonisches Object-X-Objekt.
+- POS-DIL ist nicht mathematisch widerlegt; nur strategisch zurückgestuft.
+- Keine Registry-Promotion durch diese Roadmap.
+
+---
+
+## 11. Explizit offen
 
 ```text
-OX-GEN-B / R1 generator-feature structure
-gauge fixing or gauge-invariant scalar remainder
+NP-R1
+NP-SCALAR / gauge-invariant scalar remainder
+NP-COMMON
 genuine X candidate
-exact full Weil-Gram identity
+exact full Weil-Gram identity on RH-equivalent null-pole scope
 Object-X realization
-Weil-criterion scope
+criterion-scope verification
 RH
 R37/G4c [separate]
 ```
