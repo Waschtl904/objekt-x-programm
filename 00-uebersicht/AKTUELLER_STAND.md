@@ -1,108 +1,101 @@
 # Aktueller Stand — Objekt X / A1-FINITE-1212
 
 > **Stand:** 13. September 2026; Registry und Objekt-X-Arbeitsdefinition unverändert.  
-> Details: [CURRENT-FRONT](../CURRENT-FRONT.md), [A1 Omega1551](../audits/P11_A1_OMEGA1551_REDUCTION_2026-09-13.md), [A1 bounded Schur remainder](../audits/P11_A1_SCHUR_BOUNDED_REMAINDER_2026-09-13.md).
+> Details: [CURRENT-FRONT](../CURRENT-FRONT.md), [A1 Omega1551](../audits/P11_A1_OMEGA1551_REDUCTION_2026-09-13.md), [A1 Legendre quadrature budget](../audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md).
 
-## 1. Gesicherte A1-Basis
+## 1. Kanonische `a=1`-Reduktion
 
-Rank-2 Completion, Morse/Parity, exakte Fourierform sowie die Prolate-Schur-Reduktion sind geschlossen.
-
-Der neue Exact-Head-Arb-Gate verschärft die Hochfrequenzschranke zu
+Rank-2 Completion, Morse/Parity, exakte Fourierform sowie die Prolate-Schur-Reduktion sind geschlossen. Exact-Head Arb zertifiziert
 
 ```math
-\boxed{m_1(\xi)>0.1\quad(|\xi|\ge1551).}
-```
-
-## 2. Reduced bounded operator
-
-Mit
-
-```math
-c=0.1,
+m_1(\xi)>0.1\quad(|\xi|\ge1551),
 \qquad
-r=(m_1-c)\mathbf1_{[-1551,1551]},
+\|r\|_\infty<12,
 ```
 
-```math
-K=P_I\mathcal F^{-1}M_r\mathcal F P_I
-```
-
-gilt
+und mit `N=1210`
 
 ```math
-A_1=q_1+E^*E\succeq L_1:=0.1I+K+E^*E.
-```
-
-Arb zertifiziert
-
-```math
-\|r\|_\infty<12.
-```
-
-## 3. Moment-augmented Prolate split
-
-Für
-
-```math
-R_N=\operatorname{span}\{\psi_0,\ldots,\psi_{N-1}\}
-+\operatorname{span}\{e^{x/2},e^{-x/2}\},
+\lambda_{1210}<1.5\times10^{-42},
 \qquad
-T_N=R_N^\perp,
+\text{Schur penalty}<2.2\times10^{-39}.
 ```
 
-gilt `E|T_N=0` und
+Damit bleibt kanonisch nur
 
 ```math
-\|(L_1)_{RT}\|\le\|r\|_\infty\sqrt{\lambda_N}.
+\boxed{(L_1)_{RR}\succeq3\times10^{-39}I}
 ```
 
-## 4. Certified N=1210 reduction `✓[K/M]`
+auf höchstens `1212 = 606 even + 606 odd` Dimensionen. Dieser Satz ist `?[O]`.
 
-Für `c_PSWF=1551` liefert KRD plus Arb
+## 2. Orthogonale Legendre-Alternative
 
-```math
-\boxed{\lambda_{1210}<1.5\times10^{-42}.}
-```
-
-Weiter:
-
-```math
-\tau_{1210}>0.099,
-```
-
-```math
-\boxed{\text{Schur penalty}<2.2\times10^{-39}.}
-```
-
-Der tatsächliche Exact-Head-Upper-Bound ist etwa `2.11526e-39`.
-
-## 5. Einziges offenes a=1-Ziel
-
-Es genügt nun
-
-```math
-\boxed{(L_1)_{RR}\succeq3\times10^{-39}I.}
-```
-
-auf einem augmented resolved Raum von höchstens
+PR #117 liefert zusätzlich eine basisexplizite orthonormale Route mit den ersten `2150` normalisierten Legendrepolynomen. Die finite Matrix zerfällt in
 
 ```text
-1212 total = 606 even + 606 odd.
+1075 even + 1075 odd
 ```
 
-Der Threshold `3e-39` wurde vor jeder resolved-space Rechnung festgelegt und ist kein beobachteter Eigenwert.
+und hat den predeclared sufficient target
 
-## 6. Status
+```math
+10^{-35}I.
+```
+
+Die kleinere PSWF-Reduktion bleibt kanonisch; die Legendre-Route ist ein alternativer Zertifikatsbackend mit Gram `I`.
+
+## 3. Quadraturfehler ist geschlossen `✓[K/M]`
+
+Der neue Arb-Gate fixiert
 
 ```text
-completion / Morse / parity                  ✓[M]
-exact a=1 multiplier                         ✓[M]
-Omega1551 high-frequency floor               ✓[K/M]
-N=1210 Prolate / Schur constants             ✓[K/M]
-1212-dimensional finite reduction            ✓[K/M]
-resolved lower bound >=3e-39                 ?[O]
-certified a=1 completion                     ?[O]
-all-a NP-GAP                                 ?[O]
-forward Object-X architecture                ✓[M]_part
-full positive Object-X / RH                  ?[O]
+panel width <= 0.4,
+Gauss order 40,
+strip |Im xi|<=0.4.
+```
+
+Er zertifiziert
+
+```math
+|r(z)|<42
+```
+
+auf der analytischen Fortsetzung und daraus
+
+```math
+\boxed{
+\|K-\widetilde K\|_{op}<4\times10^{-38}
+}
+```
+
+für jeden `1075 x 1075` Paritätsblock.
+
+Der tatsächliche Exact-Head-Wert liegt bei etwa `3.9534e-38`. Damit ist die analytische Quadraturtrunkation mehr als Faktor `250` kleiner als das Legendre-Headziel `1e-35`.
+
+## 4. Verbleibender Legendre-Gate
+
+Offen ist jetzt nur noch:
+
+1. hochpräzise Assemblierung der beiden Paritätsmatrizen;
+2. rigoroses Special-function/Rounding-Budget zusätzlich zum bereits geschlossenen Quadraturbudget;
+3. verifizierte LDL/Cholesky- oder gleichwertige Inertia-Prüfung von
+   ```math
+   A_{e,o}-10^{-35}I.
+   ```
+
+Ein Pivotintervall, das `0` enthält, ist `undecided`, nicht positiv.
+
+## 5. Status
+
+```text
+canonical PSWF finite reduction <=1212        ✓[K/M]
+canonical resolved lower bound >=3e-39        ?[O]
+Legendre orthonormal backend M=2150           ✓[K/M]
+Legendre quadrature operator error <4e-38     ✓[K/M]
+Legendre even/odd finite positivity           ?[O]
+certified a=1 completion                      ?[O]
+all-a NP-GAP                                  ?[O]
+forward Object-X architecture                 ✓[M]_part
+full positive Object-X / RH                   ?[O]
 ```
