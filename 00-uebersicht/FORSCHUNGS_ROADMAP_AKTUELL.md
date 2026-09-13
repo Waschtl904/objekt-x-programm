@@ -1,884 +1,314 @@
-# Objekt X — kanonische Forschungsroadmap v2.1.3
+# Objekt X — kanonische Forschungsroadmap v2.2
 
-> **Stand:** 2026-09-08; redaktionelle Post-C6-Nachführung gemäß benannten Quellen, Registry unverändert.<br>
-> **Rolle:** kanonische Abhängigkeits- und Forschungsstrategiekarte.  
-> **Keine Beweisautorität:** Dieses Dokument erzeugt keine `✓[M]`-Promotion, kein `independent GREEN`, keinen Freeze, keinen Merge-Anspruch und keine Object-X-/RH-Folgerung.  
-> **Volatile Frontdaten:** [ACTIVE_FRONT.yaml](ACTIVE_FRONT.yaml)  
-> **Live-main-Policy:** Der aktuelle `main`-Head wird live aus GitHub gelesen; er wird nicht selbstreferenziell als SHA in einer versionierten Repo-Datei gespeichert.  
-> **Objekt-X-Definition:** [OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)  
-> **Theorem-/Review-Registry:** [ACTIVE_THEOREM_REGISTRY.md](ACTIVE_THEOREM_REGISTRY.md)  
-> **Operative Front:** [CURRENT-FRONT.md](../CURRENT-FRONT.md)  
-> **Offene Problemprovenienz:** [OFFENE_PROBLEME.md](../OFFENE_PROBLEME.md)
+> **Stand:** 13. September 2026; Registry unverändert.  
+> **Rolle:** aktuelle Abhängigkeits- und Forschungsstrategiekarte.  
+> **Keine Beweisautorität:** Diese Roadmap erzeugt keine `✓[M]`-Promotion, kein unabhängiges GREEN, keinen Freeze und keine Object-X-/RH-Folgerung.  
+> **Operative Front:** [CURRENT-FRONT](../CURRENT-FRONT.md)  
+> **Kurzstand:** [AKTUELLER_STAND](AKTUELLER_STAND.md)  
+> **DAG:** [DAG](DAG.md)  
+> **Objekt-X-Definition:** [OBJEKT_X_AKTUELLE_ARBEITSDEFINITION](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)  
+> **Registry:** [ACTIVE_THEOREM_REGISTRY](ACTIVE_THEOREM_REGISTRY.md)
 
 ---
 
 ## 0. Autorität und Konfliktregel
 
-Die Roadmap navigiert; sie beweist nichts. Bei Konflikten gilt nach Zuständigkeit:
+Bei Konflikten gilt nach Zuständigkeit:
 
-1. **Objekt-X-Definition:** `OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`.
-2. **Theorem-/Reviewstatus:** `ACTIVE_THEOREM_REGISTRY.md`.
-3. **Mathematische Gültigkeit:** kanonische Theorem-/Audit-/Paper-/Certificate-Quelle am exakten Head.
-4. **Aktuelle operative Front:** `CURRENT-FRONT.md`.
-5. **Volatile Stackmetadaten:** `ACTIVE_FRONT.yaml`.
+1. Arbeitsdefinition für die Identität von Objekt X;
+2. Registry für gebuchten Theorem-/Reviewstatus;
+3. kanonische Audit-/Beweisquelle für Mathematik im benannten Scope;
+4. `CURRENT-FRONT.md` für aktuelle Priorität;
+5. diese Roadmap für Strategie;
+6. `ACTIVE_FRONT.yaml` für historische Stack-/PR-Provenienz.
 
-Eine fehlerhafte Roadmap-Zeile darf niemals eine kanonische mathematische Quelle überschreiben; die Roadmap ist stattdessen zu korrigieren.
-
----
-
-## 1. Drei orthogonale Statusachsen
-
-Die Roadmap importiert die bestehende Registry-Nomenklatur und erfindet kein zweites Statussystem.
-
-### 1.1 Mathematischer Status
-
-Beispiele: `✓[M]`, `?[O]`, `×[M]`, `✓[M]_neg` sowie bestehende Registry-Varianten.
-
-### 1.2 Review-Provenienz
-
-Gemäß Registry insbesondere:
-
-- `AI-GREEN candidate`,
-- `independent GREEN (cross-model)`,
-- `independent GREEN (certificate)`,
-- `independent GREEN (human)`.
-
-Blind-/Nonblind-Provenienz, Prüfer/System, exakter Head und Scope sind nach Registry-Regel getrennt zu dokumentieren.
-
-### 1.3 GitHub-/Governance-Status
-
-Separat zu führen: Draft/Open, Ready, Merged, Closed, frozen head, exakter SHA.
-
-Ein lokales `✓[M]` in einem Draft-PR ist nicht automatisch extern verifiziert. Umgekehrt erzeugt ein positives Review allein keine mathematische Promotion.
+Der aktuelle `main`-Head wird live aus GitHub gelesen und nicht selbstreferenziell als SHA in dieser Datei gespeichert.
 
 ---
 
-## 2. Zwei Klassen von DAG-Kanten
+## 1. Verfügbarer Meilenstein: fixed-pair Strong Terminal / C6
 
-Logische Aussagen und Forschungsabhängigkeiten werden getrennt.
+Der positive Wurzelanker plus R42.51 liefert für jedes feste `0<R<S`
 
-### 2.1 Logische Kanten
-
-- `A ⇔ B`: bewiesene Äquivalenz.
-- `A ⇒ B`: bewiesene Implikation.
-- `A ?⇒ B`: offene, noch zu beweisende Implikation.
-
-### 2.2 Forschungs-/Beweisabhängigkeiten
-
-Nicht-logische Labels:
-
-`uses`, `requires`, `reduces-to`, `candidate-input`, `sufficient-route`, `optional-route`, `repairs`, `blocks-on`, `open-bridge`, `provenance`.
-
-Ein PR ist dabei Provenienz/Container; **DAG-Knoten sind Sätze oder explizite Forschungsfragen, nicht PR-Nummern**.
-
-Unbeschriftete ASCII-Pfeile sind in technischen DAGs nicht zulässig.
-
----
-
-## 3. Globale Projektarchitektur
-
-Die heutige Struktur ist kein linearer 0→100%-Pfad.
-
-### 3.1 Bereits bekannte Kandidateninputs
-
-```text
-A finite-level constraints
-        |
-        | --candidate-input-->
-        v
-C genuine X candidate ?[O]
-
-B Strong Terminal result
-        |
-        | --candidate-input only-->
-        v
-C genuine X candidate ?[O]
+```math
+W_{R,S}^{[U]}\varepsilon_R\longrightarrow\varepsilon_S
 ```
 
-Diese Kanten sind **keine logischen Implikationen** und sagen insbesondere nicht, dass A oder B notwendige Bedingungen jeder denkbaren Object-X-Realisierung sind.
+im ungeraden P11-Graphraum.
 
-### 3.2 R37 bleibt bewusst unverbunden
+**Nicht enthalten:** Radienuniformität, Operatornormkonvergenz, vollständiger gerader Sektor, Object-X-Realisierung oder RH.
 
-Für R37/G4c ist die Beziehung zu einer späteren X-Kandidatenarchitektur derzeit `unresolved`. Deshalb wird **keine Kante** von R37/G4c nach C gezeichnet — weder `requires`, noch `candidate-input`, noch eine logische Kante.
-
-### 3.3 X-Pfad
-
-```text
-C genuine X candidate ?[O]
-        |
-        | --requires separate exact proof-->
-        v
-D exact full Weil-Gram identity ?[O]
-        |
-        | --component of realization together with
-        |    intrinsicity + test class + normalization-->
-        v
-Object-X realization ?[O]
-        |
-        | ⇒ by the Gram identity
-        v
-Q_W(f,f)=||T_X f||² ≥ 0
-        |
-        | --requires exact Weil-scope verification-->
-        v
-E Weil-criterion-scope verification ?[O]
-        |
-        | --unlocks exact classical criterion application-->
-        v
-RH
-```
+Historische quantitative R43-COND-/FD23-/Flagfragen bleiben in ihrem eigenen Scope offen, sind aber keine Voraussetzungen des direkten fixed-pair-C6-Abschlusses.
 
 ---
 
-## 4. Front A — finite-level / SW1
+## 2. Belastbare Prime-Power-Geometrie
 
-Die frühere universelle positive Cross-Gram-/SW1-Route ist in ihrem gebuchten Scope negativ entschieden. Das liefert finite-level Strukturinformation und Constraints, aber weder Strong-Terminal-No-Go noch Object-X-No-Go noch RH-Aussage.
+Für einen Primast gilt exakt
 
-Salvage-/Parameterklassifikationen können weitergeführt werden, sind gegenwärtig jedoch nicht die operative Hauptfront.
-
----
-
-## 5. Separater R37-/G4c-Pfad
-
-R37/G4c bleibt separat offen. Fortschritt an R38–R43 darf R37/G4c nicht rückwirkend promoten.
-
-Die Beziehung des R37-Pfads zu einer späteren konkreten X-Kandidatenarchitektur ist derzeit **unaufgelöst**; daher wird keine Kante zum X-Pfad gesetzt.
-
-```text
-ROADMAP-R37-G4C-DEPENDENCY
-  type: research-question
-  research_status: open
-  math_status: null
-```
-
-Frage: Wird R37/G4c für eine spätere X-Kandidatenarchitektur tatsächlich benötigt, oder ist es ein unabhängiger Kandidatenbaustein?
-
----
-
-## 6. Front B — Strong Terminal / C6
-
-**Analytischer Anschlussstand nach PR90:** Der
-[positive Wurzelanker](../audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md)
-liefert PA1 und PA17–PA19. Für jedes feste Paar `0<R<S` folgt
-
-\[
-W_{R,S}^{[U]}\varepsilon_R\longrightarrow\varepsilon_S,
+```math
+C_{jk}^{(p)}=(\log p)p^{\min(j,k)}p^{-3(j+k)/4},
 \qquad
-L_{R,S}^{T,U}\longrightarrow1\quad(T,U\to\infty).
-\]
-
-Zusammen mit dem ausdrücklich übernommenen tangentialen Satz R42.51
-ist damit Strong Terminal/C6 im **ungeraden P11-Graphraum** hergeleitet.
-Die [dokumentierten AI-Reviews](../audits/R43_C6_ROOT_ANCHOR_REVIEW_2026-09-07/README.md)
-behalten ihre eigene Provenienz; diese Redaktion erzeugt keine Registry-Buchung,
-keine menschliche/formale Zertifizierung und keine neue Vollprüfung von R42.51.
-
-Es wird weder Radienuniformität noch Operatornormkonvergenz, volle
-Objekt-X-Realisierung oder RH beansprucht. Der gerade Sektor ist kein
-zusätzlicher Gegenstand dieser Nachführung.
-
-### 6.1 R38–R42
-
-Der **exakte Registry-Governance-String** für R38–R42 bleibt:
-
-```text
-FROZEN — independently verified AI-GREEN
+C_{kk}^{(p)}=(\log p)p^{-k/2}.
 ```
 
-Er wird nicht in einen der formal definierten Subtypen
-`independent GREEN (cross-model/certificate/human)` umgedeutet.
-R38–R42 liefern den ausgewiesenen Vorbau und insbesondere den Tangentialsatz.
-PA schließt den zuvor verbleibenden Normalkanal; die Gesamtheit aller
-R43-Nebenfragen wird damit nicht pauschal geschlossen oder promotet.
+Der Exponent `3/4` ist damit durch Martingalmultiplizität plus Weil-Diagonale erzwungen.
+
+Nach Weil-Diagonalnormalisierung:
+
+```math
+C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}\,p^{-|j-k|/2}.
+```
+
+Mit `q=p^{-1/2}`:
+
+```math
+T_q^*T_q=R_q-uu^*,
+\qquad
+T_q^*T_q+uu^*=R_q.
+```
+
+Die P11-Restseite besitzt die exakte Weil-Tail-Normalform
+
+```math
+R_R^*R_R=\sum_{p,k}w_{p,k}Z_{p,k,R}^*Z_{p,k,R}.
+```
+
+**Buchung:** exakte Strukturinformation und theorem-ready Nebenprojekt; noch keine vollständige gemeinsame Prime-/Archimedean-Geometrie.
 
 ---
 
-## 7. R43 — zwei quantitative Ebenen
+## 3. Endliche Suzuki-/OX-GRAM-Normalform
 
-Die historische quantitative R43-Route besitzt zwei unterschiedliche Angriffsebenen.
-Sie bleiben optionale Wege für ihre eigenen offenen Abschätzungen, nicht
-Voraussetzungen des direkten PA-Abschlusses aus §6:
+Für `a<=1`:
 
-1. **strukturierter Direktweg** auf der tatsächlichen fixed-normal-/Flagbahn;
-2. **stärkerer operatorweiter B-METINC-/Spectral-Width-Weg**.
+```math
+Q_{B_a}=G_a^+-N_a,
+\qquad
+N_a=c_aI+C_a.
+```
 
-Ein Decay-Satz auf einem strukturierten Vektor impliziert nicht automatisch einen Operatornorm- oder Spektralbreitensatz.
+`G_a^+` besteht aus positiven Prime-Kanal-, Log-Multiplikator- und logarithmischen `log|D|`-Formen.
+
+Die frühere Forschungsfrage
+
+```text
+existiert irgendein kontraktiver W_a ?
+```
+
+wird **nicht weiter als Object-X-Gate geführt**. Sobald lokale Positivität bereits bekannt ist, kann ein solcher Operator zirkulär aus `Q_{B_a}` konstruiert werden. Damit würde nur bekannte Positivität umgeschrieben.
+
+**Offen ist Kanonizität:** Kann der Defekt aus derselben bereits vorhandenen Geometrie vorwärts konstruiert werden?
 
 ---
 
-## 8. R43-COND — lokaler Schur-/Resolventenstack
+## 4. Zertifikationsstand
 
-Die volatile PR-/SHA-Struktur steht ausschließlich in `ACTIVE_FRONT.yaml`.
+PR #98 hat die endlichen Gate-1/Gate-2-Pfade gehärtet.
 
-### 8.1 Draft-source IDs versus Registry
+### Normalisierung
 
-Die folgenden lokalen IDs sind **exakte IDs der jeweiligen historischen Draft-Audits**. **Draft-source IDs** bezeichnen ihre Herkunft, nicht ihren heutigen GitHub-Draft- oder Mergestatus. Die Registry bleibt bei diesem Governance-Abgleich unverändert; auch ein Merge ist keine Registry-Promotion.
+Für `a=0.5,0.8,1.0` wurden Realraum und Fourierdarstellung mit fail-closed Arb-Residualtests verglichen. Explizit kontrolliert sind Bernoulli-Tail, `sinc`-Rest, Prime-Power-Cutoff und Endpunktfehler.
 
-Die XBAND-Audits sind in [CURRENT-FRONT, Abschnitt 2](../CURRENT-FRONT.md#2-r43-stack-und-integrationsstand) ausschließlich als lokale Diagnostik verlinkt. Ihr mathematischer Scope bleibt unverändert; die neue operative Priorisierung folgt §24, nicht einer Aufwertung dieser Diagnostik.
+### Gate 2
 
-### 8.2 Strukturierter Schur-Defekt
+Arb 512 Bit, Dirichletbasis `N<=14`, drei Radien und beide Paritäten: 42/42 verschachtelte Blöcke mit strikt positiven Cholesky-Pivots.
 
-Draft-source IDs:
-
-```text
-R43-COND-C-TWO-SPECIES-RESIDUAL-DECOMPOSITION
-R43-COND-SCHUR-NEGATIVE-PART-LEAKAGE-BOUND
-```
-
-Für den strukturierten Vektor `v_U=H_U^*E_{X,U}f` wird der negative skalare Schur-Defekt auf gesättigte Leakage reduziert.
-
-**Firewall:** Ein skalarer Schur-Defekt ist nicht automatisch ein Inkrement der komprimierten inversen Metrik.
-
-### 8.3 Halbverschiebungs-/Resolventenvorläufer
-
-Der gestackte Vorläufer fixiert Halbverschiebungs-/Translationskonventionen, terminale Collar-Shell-Geometrie und die relative Resolventendarstellung.
-
-Draft-source IDs umfassen:
-
-```text
-R43-TRANSLATION-ANTISYMMETRIC-HALFSHIFT
-R43-STRUCTURED-HUB-TERMINAL-COLLAR-SHELL
-R43-COND-NORMAL-EQUATION-PRIME-SECTOR-HALFSHIFT
-R43-COND-RELATIVE-RESOLVENT-TRANSFER
-```
-
-Die frühere Begründung des strikten fixed-pair Bounds `||(L_{U,V})_-||<1` wird durch den nachfolgenden geometrischen-Mittelwert-Audit stärker repariert. Keine cofinale negative Spektraldecay-Aussage wird importiert.
-
-### 8.4 Geometrischer Mittelwert / exakter Resolvententransport
-
-Zentral ist
-
-\[
-Q_{U,V}=B_U\#(\iota^*B_V\iota)
-\]
-
-und die exakte Kongruenz
-
-\[
-\boxed{\iota^*B_V\iota-B_U=-Q_{U,V}K_{U,V}^{\rm Schur}Q_{U,V}.}
-\]
-
-Draft-source IDs:
-
-```text
-R43-COND-FIXED-PAIR-RELATIVE-SPECTRAL-GAP
-R43-COND-GEOMETRIC-MEAN-RESOLVENT-FACTORIZATION
-R43-COND-RESOLVENT-TRANSPORTED-LEAKAGE-BOUND
-```
-
-Für den strukturierten Vektor:
-
-\[
-(\Delta s_{\rm cond}^{U,V}(f))_+
-\le
-\|(I+S^*S)^{-1/2}S^*M Q_{U,V}H_U^*E_{X,U}f\|^2.
-\]
-
-**Strategische Konsequenz:** Globale cofinale Kontrolle von `||(L_{U,V})_-||` ist für diese strukturierte Route kein notwendiger Zwischenschritt mehr.
-
-**Firewall:** `Q_{U,V}\le I` ist Normkontraktion, kein Collar-Support- oder Collar-Decay-Satz.
-
-### 8.5 Prime-/Sign-Zerlegung
-
-Draft-source IDs:
-
-```text
-R43-COND-NORMAL-SIGN-BRANCH-EXPANSION
-R43-COND-TWO-HARD-DIAGONAL-NORMAL-CHANNELS
-R43-COND-GOOD-NORMAL-EXPONENTIAL-DISPLACEMENT-MOMENT
-R43-COND-GOOD-NORMAL-COLLAR-PLUS-TAIL
-R43-COND-NORMALIZED-GEOMETRIC-TRANSPORT-CONTRACTION
-```
-
-Alle guten Zweige besitzen bei `beta=1/8` ein horizontuniformes exponentielles Verschiebungsmoment. Die einzigen nicht durch diese absolute Summierbarkeit erledigten nichttrivialen diagonal-sum Kanäle sind
-
-\[
-\boxed{k=\ell=1},\qquad \boxed{k=\ell=2}.
-\]
-
-Für terminal-graph-normalisierte Quellen reduziert sich die resolvententransportierte Leakage schematisch auf
-
-\[
-\boxed{\text{hard saturated}+C_*\|\chi_{U,r}Q_{U,V}v_U\|+C_*e^{-r/8}.}
-\]
+**Firewall:** Das sind endliche Zertifikate. Sie beweisen keine unendlichdimensionale lokale Positivität jenseits des bekannten Scopes und keine RH.
 
 ---
 
-## 9. Aktueller quantitative COND-Kern
+## 5. Aktuelle Hauptfront: OX-GEN
 
-Diese weiter offenen quantitativen COND-Fragen sind seit dem direkten
-PA-Abschluss Nebenfragen, nicht der aktuelle C6-Hauptgate. Offen bleiben:
+Suzukis Teilkern
 
-```text
-R43-COND-TRANSPORTED-COLLAR-MASS-DECAY ?[O]
-R43-COND-TWO-HARD-CHANNEL-SATURATED-DECAY ?[O]
-R43-COND-RESOLVENT-STRUCTURED-SATURATED-LEAKAGE-DECAY ?[O]
+```math
+r_0''(t)=-2\cosh(t/2)
 ```
 
-Für die Forschung dürfen die beiden harten Kanäle zusätzlich getrennt geführt werden:
+liefert exakt
 
-```text
-ROADMAP-HARD11 — research-subquestion — k=l=1
-ROADMAP-HARD22 — research-subquestion — k=l=2
+```math
+R_0(v,v)
+=-2\left(\int\cosh\frac x2\,v\right)^2
++2\left(\int\sinh\frac x2\,v\right)^2.
 ```
 
-Diese ROADMAP-Labels sind keine kanonischen Registry-Theorem-IDs und tragen daher keinen Registry-`math_status`.
+Die Prime-Power-Geometrie verwendet dieselbe Exponentialfamilie:
 
-### 9.1 Quantoren-Firewall
-
-Gebucht/erkennbar: fixes `0<R<S`, strukturierte terminale Quellklasse, Graphnormalisierung wie im historischen Good-Normal-Draft.
-
-Noch **nicht** erraten werden dürfen:
-
-- erforderliche Relation zwischen `U` und `V`,
-- Uniformität in `V`,
-- zulässige cofinale Partitionen,
-- pointwise-in-`f` versus uniforme Quellkontrolle,
-- Wahl von `r=r(U,V)`,
-- Reihenfolge der Grenzübergänge.
-
-Unbekannte Quantoren werden ausdrücklich als `unresolved` geführt.
-
----
-
-## 10. Zwei Wege aus COND
-
-### 10.1 Route S — strukturierter Direktweg
-
-Die folgende Kette bewahrt den **historischen hinreichenden COND-Weg**.
-Die DAG-Knoten sind mathematische IDs/Forschungsfragen; das Tightness-Ziel
-ist inzwischen unabhängig durch PA17–PA18 im §6-Scope erreicht.
-
-```text
-R43-COND-RESOLVENT-TRANSPORTED-LEAKAGE-BOUND
-        |
-        | --used-by-->
-        v
-R43-COND-GOOD-NORMAL-COLLAR-PLUS-TAIL
-R43-COND-TWO-HARD-DIAGONAL-NORMAL-CHANNELS
-        |
-        | --reduces current target to-->
-        +---- R43-COND-TRANSPORTED-COLLAR-MASS-DECAY ?[O]
-        |
-        +---- R43-COND-TWO-HARD-CHANNEL-SATURATED-DECAY ?[O]
-        |
-        v
-R43-COND-RESOLVENT-STRUCTURED-SATURATED-LEAKAGE-DECAY ?[O]
-        |
-        | --open-bridge-->
-        v
-ROADMAP-BRIDGE-COND-DIRECT-FLAGDYN
-        |
-        | --sufficient-route-->
-        v
-projected B-FLAGDYN / FD23-compatible control ?[O]
-        |
-        | --sufficient-route-->
-        v
-B-FLAGTIGHT (im §6-Scope bereits via PA17–PA18)
+```math
+p^{-1/2}=e^{-\log p/2},
+\qquad
+R_p(j,k)=p^{-|j-k|/2},
+\qquad
+w_{p,k}=\log p\,p^{-k/2}.
 ```
 
-Die PR-Nummern/Heads zu den Draft-source IDs stehen nur in `ACTIVE_FRONT.yaml` und den jeweiligen Auditquellen.
+### OX-GEN-Frage
 
-Der Übergang vom structured leakage decay zu einer direkt B-FLAGDYN-/FD23-kompatiblen Summierbarkeit ist **nicht automatisch** bewiesen.
+Kann `R_0` als intrinsischer Rand-/Defektterm derselben Exponentialstruktur konstruiert werden, die die Prime-Power-Kanäle normiert, ohne `Q_{B_a}`, `B_a^{1/2}`, ein unbekanntes Forminfimum oder RH rückwärts zu verwenden?
 
-### 10.2 Route O — stärkerer Operator-/B-METINC-Weg
+Dies ist ein **Teilproblem**. `R_1` und der Skalarblock `c_aI` bleiben offen.
 
-```text
-B-METINC-WIDTH ?[O]
-  uses:
-    - B-METINC-COND ?[O]
-    - B-METINC-GEO  ?[O]
-    - B-METINC-NEW  ?[O]
+---
 
-B-METINC-WIDTH ?[O]
-        |
-        | --sufficient-route-->
-        v
-B-FLAGMOD ?[O]
+## 6. Nächste Gates
+
+### OX-GEN-A — jetzt
+
+Bei `a=0.5` die Funktionale
+
+```math
+v\mapsto\int\cosh(x/2)v(x)\,dx,
+\qquad
+v\mapsto\int\sinh(x/2)v(x)\,dx
 ```
 
-Diese Route kontrolliert normalisierte metrische Inkremente bzw. Spektralbreiten und ist stärker als bloße structured-vector Kontrolle.
+innerhalb der vorhandenen Prime-/`log|D|`-Featuregeometrie isolieren.
 
-**Firewall:** Scheitert B-METINC-WIDTH, folgt daraus nicht das Scheitern von B-FLAGMOD oder Strong Terminal. Der direkte PA-Abschluss hängt nicht von diesem hinreichenden Operatorweg ab.
+Der Radius `a=0.5` wird zuerst benutzt, weil dort die endliche Extremalrichtung im Gate-2-Sweep deutlich stabiler war als bei `a>=0.8`. Diese Stabilität ist Diagnostik, kein Theorem.
+
+### GENERATOR-CLASS
+
+Vor jedem No-Go eine **natürliche und enge Generator-Klasse** definieren. Ein Gate zählt nur, wenn positive Konstruktion und negativer Ausgang vorab beide logisch möglich sind.
+
+### OX-GEN-B
+
+Danach entweder:
+
+- expliziten nichtzirkulären Intertwiner/Defektmechanismus konstruieren, oder
+- die vorher definierte Generator-Klasse ausschließen.
 
 ---
 
-## 11. B-METINC-WIDTH / FD23
+## 7. Spur B — eigenständige Mathematik
 
-Für
+Parallel die Prime-Power-AR(1)/Martingal-Faktorisierung als eigenständigen Satz verschriftlichen:
 
-\[
-\mathbf H_X^{U,V}=G_{X,U}^{-1/2}(G_{X,V}-G_{X,U})G_{X,U}^{-1/2}
-\]
-
-ist der relevante alte/neue Offblock durch die Spektralbreite kontrollierbar, schematisch
-
-\[
-\|E_{U,V}\|\le\tfrac12\operatorname{width}(\mathbf H_S^{U,V}).
-\]
-
-Der volle modulusseitige Bound enthält pairwise Conditioning-Faktoren.
-
-### Summability-Firewall
-
-Mere Schritt-Kleinheit `||H^{U_k,U_{k+1}}||→0` genügt nicht. Eine hinreichende Partition benötigt insbesondere:
-
-1. summierbare width-/conditioning-Majoranten;
-2. fixed-interval projected-tail convergence;
-3. die erforderliche FD23-Uniformität.
-
-Punktweise starke Konvergenz allein macht das Zwischenhorizont-Supremum nicht uniform.
-
-```text
-FD23-MINIMAL-CONDITION
-  type: research-question
-  research_status: open
-  math_status: null
+```math
+C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2},
+\qquad
+T_q^*T_q+uu^*=R_q.
 ```
 
-Frage innerhalb dieser optionalen Route: Was ist die schwächste quantitative Bedingung, die tatsächlich für ihre cofinale FD23-/Flag-Summierbarkeit genügt? Für den direkten PA-Abschluss wird diese Summierbarkeit nicht benötigt.
-
-Diese Frage optimiert die Route; sie ist kein Pflicht-Theoremknoten. Exponentielles Decay wird nicht zum Selbstzweck erhoben.
+Scope: fensterfrei, exakt, RH-unabhängig. Nicht als Objekt X vermarkten. Ein bisheriger Literaturbefund ist nur Neuheitsindikator, kein Prioritätsbeweis.
 
 ---
 
-## 12. B-FLAGDYN / B-FLAGMOD / B-FLAGPHASE
+## 8. Vollständiger Object-X-Pfad
 
-Mit
-
-\[
-Q_{m,U}=W_U^*P_mW_U,\qquad
-q_m(U)=\langle\varepsilon_R,Q_{m,U}\varepsilon_R\rangle=\|P_mh_U\|^2
-\]
-
-lautet der exakte Tightness-Gate
-
-\[
-\boxed{\mathrm{B\!-\!FLAGTIGHT}\Longleftrightarrow\lim_m\limsup_U q_m(U)=0.}
-\]
-
-PA17–PA18 erfüllen die Tightness-Eigenschaft im festen ungeraden §6-Scope
-bereits unmittelbar. Das schließt keine Summierbarkeit ihrer positiven Variation.
-
-B-FLAGDYN bezeichnet weiterhin die gesonderte quantitative Kontrolle der
-echten Terminalvariation dieser festen Quellraumgröße.
-
-Ein stärkerer hinreichender Weg zerlegt in `B-FLAGMOD` und `B-FLAGPHASE` und summiert projizierte Defekte entlang einer geeigneten Terminalpartition.
-
-**Firewall:** Dieser Zwei-Defekt-Weg ist hinreichend; er ist nicht als einzige denkbare Beweisroute zu B-FLAGTIGHT gebucht.
-
----
-
-## 13. Nach B-FLAGTIGHT — Sign/Orient und Strong Terminal
-
-**Historisches Kriterium der Tightness-/Orientierungsroute:** Unter ihren
-gebuchten Voraussetzungen gilt der scharfe Resttest
-
-\[
-\boxed{\text{Strong Terminal}\Longleftrightarrow\liminf_{T,U\to\infty}L_{R,S}^{T,U}>-1.}
-\]
-
-Die spätere [Hub-Sprung-/Orientierungsableitung](../audits/P11_R43_HUB_JUMP_DECAY_AND_CONDITIONAL_ORIENTATION_2026-09-07.md)
-behält ihren eigenen bedingten Rahmen. Auf dem **direkten PA-Pfad** folgt
-bereits das positive Grenzvorzeichen aus PA1; PA17–PA19 liefern Tightness
-und den Kreuzterminaltest. B-SIGN/B-ORIENT ist dort keine zusätzliche offene
-Voraussetzung. GC-AC und die übrigen Variationsfragen erhalten dadurch
-keine neue Buchung.
-
----
-
-## 14. Strong Terminal ist noch nicht Objekt X
-
-Der ausgewiesene fixed-pair-Abschluss von Strong Terminal/C6 ist zunächst
-ein **X-Kandidatenbaustein**, nicht die vollständige Objekt-X-Realisierung.
-
-Es existiert derzeit kein Satz
-
-\[
-\text{Strong Terminal}\Longrightarrow\text{Objekt X}.
-\]
-
-Ebenso ist Strong Terminal nicht als notwendige Bedingung jeder denkbaren Object-X-Realisierung etabliert. Positive oder negative Ergebnisse an B dürfen daher nicht automatisch als Object-X- oder RH-Ergebnisse kommuniziert werden.
-
----
-
-## 15. Front C — erster echter X-Kandidat
-
-Die kanonische Arbeitsdefinition von Objekt X ist bereits vorhanden. Ein echter X-Kandidat muss mindestens spezifizieren:
+Ein echter X-Kandidat muss mindestens spezifizieren:
 
 - intrinsische gemeinsame Geometrie,
-- Hilbertraum/Mediatorraum,
+- Hilbert-/Mediatorraum,
 - kanonische Abbildung `T_X`,
 - Prime-Power-Kanal,
 - archimedischen Kanal,
 - gemeinsame nichtorthogonale Kopplung,
-- Testklasse,
-- Normalisierung,
+- Testklasse und Normalisierung,
 - Nicht-Zirkularität.
 
-```text
-C — GENUINE X CANDIDATE ?[O]
-```
-
-Historische konkrete Architekturen sind Constraints/Kandidaten, nicht die aktuelle Definition von X.
-
----
-
-## 16. Front D — exakte vollständige Weil-Gram-Identität
-
-Für einen konkret spezifizierten X-Kandidaten ist separat zu beweisen:
-
-\[
-\boxed{Q_W(f,g)=\langle T_Xf,T_Xg\rangle_{\mathcal K_X}}
-\]
-
-auf der richtigen vollständig normalisierten Weil-Testklasse.
-
-Nicht ausreichend sind ein bloßer positiver Teil, eine nachträgliche GNS-Faktorisierung bereits vorausgesetzter Positivität oder getrennte Prime-/Archimedes-Blöcke ohne gemeinsamen geometrischen Ursprung.
+Danach separat:
 
 ```text
-D — EXACT FULL WEIL-GRAM IDENTITY ?[O]
+GENUINE X CANDIDATE ?[O]
+        |
+        | --requires separate proof-->
+        v
+EXACT FULL WEIL-GRAM IDENTITY ?[O]
+        |
+        v
+OBJECT-X REALIZATION ?[O]
+        |
+        | ⇒ Q_W(f,f)>=0 on realized scope
+        v
+WEIL-CRITERION-SCOPE ?[O]
+        |
+        v
+RH
 ```
 
----
-
-## 17. Object-X-Realisierung und Positivität
-
-Eine erfolgreiche Object-X-Realisierung bedeutet gemäß Arbeitsdefinition: intrinsische gemeinsame Geometrie + nicht-zirkuläre Konstruktion + korrekte Prime-/Archimedes-Kopplung + geeignete Testklasse/Normalisierung + exakte vollständige Weil-Gram-Identität.
-
-Dann folgt unmittelbar
-
-\[
-Q_W(f,f)=\|T_Xf\|_{\mathcal K_X}^2\ge0.
-\]
-
-Die Nichtnegativität ist daher kein zusätzlicher schwerer Forschungsübergang **nach** einer vollständigen Object-X-Realisierung; die Arbeit liegt in Konstruktion, Testklasse, Normalisierung und Identität.
+Keine Forschungs-/candidate-input-Kante ist als logische Implikation zu lesen.
 
 ---
 
-## 18. Front E — Weil-Kriterium / RH-Rückbindung
+## 9. Separate Nebenfronten
 
-Auch nach einer Gram-Realisierung ist exakt zu prüfen:
+### R37/G4c
 
-- welche Weil-Form realisiert wurde,
-- welche Testklasse verwendet wird,
-- ob sie für das benötigte Weil-Kriterium vollständig ist,
-- Fourier-/Gamma-/Pol-Normalisierung,
-- welche exakte etablierte Weil-Kriterium-Version auf diesem Scope gilt.
+Separat offen; Beziehung zur OX-GEN-/X-Route ist unresolved.
+
+### Historische R43-COND-/FD23-/Flagfragen
+
+Weiterhin in ihren eigenen Quantoren offen, aber nicht aktuelle Default-Aufgabe und keine Voraussetzung des direkten fixed-pair-C6-Abschlusses.
+
+### PR #91
+
+Analytischer Source-descent/Weil-separation-Draft. Kein unabhängiger Exact-Head-GREEN wird durch PR #98 übertragen.
+
+### SW1 salvage / PR #49
+
+Candidate-only Nebenfront; kein stiller Merge und keine unbewiesene Object-X-Kante.
+
+---
+
+## 10. Gesperrte Interpretationen
+
+Nicht als aktive Strategie reaktivieren:
+
+- PR91-Zeugenmatrix sei Rang 1;
+- `3/4` sei bloße Dämpfung;
+- Vier-Boundary-Erklärung der Interior/Baseline-Differenz;
+- cross-prime sei Fensterrand;
+- „Nichtunitarität = Hub“;
+- matched cutoff als Objekt-X-Mechanismus;
+- OX-REN/OX-REN' als Hauptfront;
+- Radius-Swap im PR97-Checker durch bloßes Ersetzen von `R=1`;
+- klassische `H^{1/2}`-/Douglas-Terminologie für den Kernel `1/|x-y|`;
+- globaler Kollaps von `||I-W^*W||`;
+- `0.603`-Koeffizientenratio als Konstante;
+- weitere reine OX-GRAM-Existenztests ohne neuen Mechanismus.
+
+---
+
+## 11. Falsifikations-/Rollback-Regeln
+
+- **OX-GEN-A scheitert:** Nur die aktuelle Generatorintuition fällt; Prime-AR(1), C6 und Object-X-Ziel bleiben unberührt.
+- **Eine definierte GENERATOR-CLASS fällt:** Nur diese Klasse ist ausgeschlossen.
+- **Prime-AR(1)-Algebra fällt im Exact-Head-Audit:** alle darauf gestützten OX-GEN-Interpretationen neu auditieren.
+- **R37/G4c fällt:** R37-Pfad fällt; keine automatische Wirkung auf OX-GEN/C6.
+- **PR91 fällt:** nur sein Source-descent/Weil-separation-Kandidat fällt.
+- **Ein X-Kandidat fällt an der vollen Weil-Gram-Identität:** dieser Kandidat ist kein Objekt X; kein universelles No-Go.
+
+---
+
+## 12. Forschungsregel
+
+Ein Schritt zählt als Object-X-Hauptfront-Fortschritt nur, wenn er
+
+1. einen expliziten Teil gemeinsamer Gramgeometrie konstruiert,
+2. eine vorab definierte Architekturklasse ausschließt,
+3. eine notwendige Prime-/Archimedean-Generatorstruktur beweist oder
+4. eine tatsächlich benötigte Domain-/Normalisierungs-/Konvergenzlücke schließt.
+
+Bloße Umschreibungen, gefittete Witness-Werte und Positivitätsreproduktionen sind Nebenarbeit.
+
+---
+
+## 13. Explizit offen
 
 ```text
-E — WEIL-CRITERION-SCOPE-VERIFICATION ?[O]
-```
-
-Erst danach darf ein exakt referenzierter `Q_W≥0 ⇔ RH`-Satz mit passender Testklasse als logische Kante im finalen DAG eingetragen werden.
-
----
-
-## 19. Rollback-/Falsifikationsregeln
-
-- **Draft-source Schur-Leakage fällt:** abhängige Schur-/Leakage-Argumente neu auditieren; der unabhängige PA-Abschluss wird dadurch nicht automatisch berührt.
-- **Geometric-mean transport fällt:** davon abhängige Good-Normal-/transportierte Teile verlieren ihre Grundlage; unabhängige Branchklassifikation nur nach Re-Audit weiterführen.
-- **Good-Normal reduction fällt:** Zwei-Hard-Channel-/Good-Tail-Reduktion fällt; geometrischer Mittelwert bleibt logisch unberührt.
-- **Transported-Collar-Decay fällt:** aktuelle Structured-COND-Route scheitert/reparaturbedürftig; Strong Terminal nicht automatisch widerlegt.
-- **Hard-channel decay fällt:** aktuelle COND-Decay-Route scheitert; alternative Saturation/Cancellation/direct-projected routes bleiben möglich.
-- **B-METINC-WIDTH fällt:** nur die globale Operator-/Spectral-Width-Route fällt; PA wird dadurch nicht erneut offen.
-- **PA oder ein benannter Tangentialeingang fällt:** genau den betroffenen C6-Schluss neu auditieren; andere R43-Ergebnisse und Objekt X werden nicht pauschal widerlegt.
-- **Ein tatsächliches C6-Gegenbeispiel im selben Scope wird bewiesen:** Widerspruch zur PA-/R42-Schlusskette lokalisieren und deren Status berichtigen; ohne Notwendigkeitssatz kein allgemeines Objekt-X-No-Go und keine RH-Folgerung.
-- **R37/G4c fällt:** konkreter R37-Pfad fällt; ohne Abhängigkeitssatz keine Statusänderung von PA/C6 oder Objekt X.
-- **Ein X-Kandidat fällt an D:** dieser Kandidat ist kein Objekt X; kein universelles Object-X-No-Go.
-
----
-
-## 20. Pflicht-Ledger für neue Roadmap-Knoten
-
-Theorem-/open-theorem-Knoten:
-
-```yaml
-id: <canonical theorem id>
-type: <theorem | open-theorem>
-math_status: <exact registry/canonical-source value>
-review_status: <exact registry value or null if not booked>
-source:
-  file: <canonical source>
-  pr: <if applicable>
-  head_sha: <exact SHA if applicable>
-scope:
-  known: []
-  unresolved: []
-quantifiers:
-  resolved: []
-  unresolved: []
-depends_on: []
-used_by: []
-edge_types: []
-if_false:
-  direct_effect: []
-  does_not_imply: []
-firewalls: []
-```
-
-Reine Roadmap-/Research-Knoten:
-
-```yaml
-id: <ROADMAP label>
-type: <research-question | research-subquestion | open-bridge>
-math_status: null
-review_status: null
-research_status: <open | parked | resolved>
-source: null
-scope:
-  known: []
-  unresolved: []
-quantifiers:
-  resolved: []
-  unresolved: []
-depends_on: []
-used_by: []
-edge_types: []
-if_false:
-  direct_effect: []
-  does_not_imply: []
-firewalls: []
-```
-
-Unbekannte Quantoren werden als `unresolved` gebucht, nicht geraten.
-
----
-
-## 21. Gestackte Draft-Arbeit
-
-Explorative Downstream-Arbeit darf auf einem exakten Draft-/Candidate-Head aufbauen, sofern:
-
-1. Parent-SHA explizit ist;
-2. Abhängigkeit dokumentiert ist;
-3. Parent-Status nicht still hochgestuft wird;
-4. bei Fall des Parent-Heads abhängige Claims neu auditiert werden;
-5. unabhängige GREEN-Provenienz nur nach Registry-Regel behauptet wird.
-
-`ACTIVE_FRONT.yaml` enthält deshalb neben `parent_pr` auch `parent_head_sha`.
-
----
-
-## 22. Review, Formalisierung, Numerik
-
-### Review
-
-Vor Merge/Promotion gilt die bestehende Registry-Governance. Menschlicher Fachreview ist spätestens vor öffentlichen Behauptungen eines großen globalen Struktursatzes, einer Object-X-Realisierung oder einer RH-Konsequenz erforderlich.
-
-### Lean / Formalisierung
-
-Nicht mechanisch jedes n-te Lemma. Priorität haben strukturell zentrale Resultate mit großem Downstream-Radius, z. B. geometrischer-Mittelwert-/Resolventenidentität, Riccati-Identitäten für `Q`, finite Branch-/Summationslemmas und zentrale FD23-Kompositionslemmas. Axiom-Inventar bleibt Pflicht.
-
-### Numerik
-
-Gezielt bei falsifizierbaren quantitativen Hypothesen: Gegenbeispiele, Skalierung, Multiplikität, konkurrierende Asymptotiken, Cancellation, Konditionierung. Numerik erzeugt keine Promotion.
-
----
-
-## 23. Source-of-Truth-Drift
-
-`ACTIVE_FRONT.yaml` hält ausschließlich die **persistierbaren** Stackdaten: alle 20 R43-PRs, exakte historische Review-Heads und Parentbeziehungen, belegten GitHub-State, Hauptgate sowie den historischen `stack_root_base_sha`. `stack_mode: historical_dependency_chain` kennzeichnet die erhaltene Provenienz; `base` bleibt die ursprüngliche Review-Basis, `github_base` das separat gebuchte GitHub-Ziel. `head_sha`/`parent_head_sha` bleiben ausdrücklich `historical_dependency_pins`; der tatsächlich gemergte, gegebenenfalls korrigierte Head wird separat als `merged_head_sha` gebucht. Dieser Head, Merge-Commit und Mergestatus werden nur für tatsächlich belegte Merges eingetragen; `open_pr_count` zählt die verbleibenden offenen R43-Einträge.
-
-Der **aktuelle** `main`-Head wird dagegen live aus GitHub `refs/heads/main` gelesen und absichtlich nicht als SHA in `ACTIVE_FRONT.yaml` oder einer anderen versionierten Navigationsdatei gespeichert. Grund: Eine Datei kann die SHA des Commits, der sie selbst enthält, nicht dauerhaft als exakten Current-Head-Wert führen — jeder Aktualisierungscommit erzeugt sofort eine neue SHA.
-
-Der historische `stack_root_base_sha` ist davon verschieden: Er pinnt den ursprünglichen mathematischen Review-Base-Commit der Kette und bleibt auch bei Stackintegration und späteren Governance-/Navigations-Merges auf `main` unverändert. Die historischen Parentbeziehungen sind keine Behauptung über heutige GitHub-Bases; ein Merge promotet keine mathematischen Claims.
-
-`CURRENT-FRONT.md`, diese Roadmap, `AKTUELLER_STAND.md` und `ACTIVE_THEOREM_REGISTRY.md` sollen auf `ACTIVE_FRONT.yaml` referenzieren statt dieselben Stack-/Base-SHA-Werte mehrfach manuell zu pflegen.
-
-Die Datei ist dabei ein Ledger gebuchter historischer Daten, keine vollständige
-Live-Liste aller späteren PRs. Nicht nachgeführte Angaben wie `active_gate: R43`
-werden durch diese Redaktion nicht geändert und dürfen den Post-C6-Quellenstand
-in §6/§24 nicht wieder öffnen. Aktuelle PR-Zustände bleiben live zu prüfen.
-
-Eine technische Validierung soll insbesondere prüfen:
-
-- Live-main-Policy (`tracking: live`, Quelle `github:refs/heads/main`) und Verbot einer selbstgespeicherten Current-main-SHA;
-- 40-Hex-Format von `stack_root_base_sha` und allen gespeicherten Draft-Heads;
-- `parent_pr`/`parent_head_sha`-Konsistenz;
-- Parent-Head des Stack-Roots gegen `stack_root_base_sha`;
-- keine Duplizierung der in `ACTIVE_FRONT.yaml` gespeicherten Stack-/Base-SHA-Werte in den operativen Navigationsdateien.
-
----
-
-## 24. Aktuelle Default-Forschungspriorität
-
-**Redaktionelle Nachführung: 8. September 2026 — nach PR90.**
-Diese Priorisierung beschreibt den belegten Anschlussstand; sie ändert keine
-Registry-Buchung, keinen Beweis und keinen Reviewumfang.
-
-**Verfügbarer C6-Eingang:** Der integrierte
-[positive Wurzelanker](../audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md)
-liefert PA1 und PA17–PA19. Zusammen mit dem ausdrücklich übernommenen
-Tangentialsatz R42.51 folgt Strong Terminal/C6 für jedes feste `0<R<S`
-im ungeraden P11-Graphraum. Die [Reviewprovenienz](../audits/R43_C6_ROOT_ANCHOR_REVIEW_2026-09-07/README.md)
-bleibt auf ihren dokumentierten Umfang beschränkt. Keine Radienuniformität,
-keine Operatornormkonvergenz und keine Objekt-X-/RH-Folgerung werden ergänzt.
-
-**Nicht erneut als Hauptauftrag:** B-FLAGTIGHT und das positive terminale
-Grenzvorzeichen folgen auf diesem direkten Pfad aus dem Normalenlimes.
-Der neue Normalenbeweis benötigt weder GC-AC noch ein vorausgesetztes
-Flagbudget. FD23, das J12–J15-Budget, globale O1-Variation und BR39 werden
-dadurch nicht bewiesen; sie bleiben gesonderte, für diesen C6-Abschluss
-nicht erforderliche Fragen. Die bereits geprüften LOCAL-O1- und
-feste-alte/all-future-COND-Ergebnisse bleiben verfügbare Bausteine.
-
-**Primärer neuer Auftrag:** Eine intrinsische, nichtzirkuläre
-Quellen-/Mediator-Realisierung konkretisieren und die vollständige Weil-Gram-Identität
-auf der geeigneten Testklasse mit exakter Normalisierung prüfen. Maßgeblich
-bleiben die [Objekt-X-Arbeitsdefinition](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)
-und die getrennten Fronten C–E. Die Existenz des Terminaltransports allein
-ist noch keine solche Realisierung.
-
-**Anschluss in Prüfung:** [PR #91](https://github.com/Waschtl904/objekt-x-programm/pull/91)
-behandelt Quellenabstieg und eine exakte Weil-Trennung. Er wird ausschließlich
-als analytischer Kandidat mit offenem unabhängigem Exact-Head-Review geführt,
-nicht als geprüfter Eingang oder vollständiger X-Kandidat. Sein Review ist
-der nächste begrenzte Prüfschritt, keine erneute C6-Prüfung.
-
-**Historische COND-Prioritäten — keine Voraussetzungen des direkten PA-Abschlusses:**
-Die folgende Liste bewahrt den früheren Arbeitsweg. Ihre Reaktivierung
-benötigt einen ausdrücklich benannten Bezug zu einer offenen Realisierungsfrage.
-
-1. gesättigte Kontrolle des Hard Channels `k=l=1`;
-2. gesättigte Kontrolle des Hard Channels `k=l=2`;
-3. transported collar mass `||chi_{U,r}Q_{U,V}v_U||`;
-4. exakte direkte Kompositionsbrücke von structured COND control zu B-FLAGDYN/FD23;
-5. parallel: `FD23-MINIMAL-CONDITION` — wie schwach darf die ausreichende Summierbarkeit sein?
-
-R37/G4c bleibt separat offen; eine notwendige Abhängigkeit der neuen
-Realisierungsroute wird nicht unterstellt. Historische Stackmetadaten bleiben
-in [ACTIVE_FRONT.yaml](ACTIVE_FRONT.yaml); aktuelle PR-Zustände und `main`
-sind live zu prüfen. Keine duplizierte Liste von Head-/Base-SHAs.
-
----
-
-## 25. Explizit weiter OPEN
-
-Weiterhin offen beziehungsweise durch PA **nicht** geschlossen sind unter anderem:
-
-```text
-R43-COND-TRANSPORTED-COLLAR-MASS-DECAY
-R43-COND-TWO-HARD-CHANNEL-SATURATED-DECAY
-R43-COND-RESOLVENT-STRUCTURED-SATURATED-LEAKAGE-DECAY
-ROADMAP-BRIDGE-COND-DIRECT-FLAGDYN
-B-METINC-COND
-B-METINC-GEO
-B-METINC-NEW
-B-METINC-WIDTH
-FD23-UNIF
-B-FLAGMOD
-B-FLAGPHASE
-B-FLAGDYN
-gemeinsame Conditioning-Horizontkontrolle / BR39
-R37/G4c
+OX-GEN-A
+GENERATOR-CLASS
+OX-GEN-B
+R_1 / regular archimedean correction
+scalar block c_a I in intrinsic geometry
 genuine X candidate
 exact full Weil-Gram identity
 Object-X realization
 Weil-criterion scope verification
 RH
+R37/G4c [separate]
 ```
 
-**Davon getrennt:** Der in §6 ausgewiesene ungerade fixed-pair-C6-Satz,
-seine Flag-Tightness und positive Orientierung sind PA-Folgerungen, nicht
-weitere offene Voraussetzungen dieses Pfads. Das ist keine pauschale
-Schließung aller R43-Fragen und keine formale Registry-Promotion.
-Der Post-C6-Quellenabstieg aus §24 bleibt ein Kandidat mit eigenem offenen
-Exact-Head-Review; seine Resultate werden nicht als freigegebene Eingänge gebucht.
-
----
-
-# Research Heuristics Appendix — kein Beweisgewicht
-
-Alles ab hier ist Ideengenerator, keine mathematische Prämisse. Bei Konflikt gilt ausschließlich die technische Roadmap und die kanonische Mathematik.
-
-## H1. Pi-/Euklid-Heuristik
-
-Frage nicht nach der stärksten verfügbaren Abschätzung, sondern nach der einfachsten Invariante oder Konstruktion, die den **nächsten echten Gate** erzwingt.
-
-Praktisch:
-
-1. aktuellen offenen Knoten zehn Minuten ohne Fachvokabular beschreiben;
-2. fragen, was bei Variation von `U,V,p,k` invariant bleibt;
-3. nach einer expliziten Konstruktion statt eines Grenzwerts suchen;
-4. in Fachsprache rückübersetzen;
-5. Nullresultate dokumentieren.
-
-## H2. Sokratische Gegenfrage
-
-Vor einem neuen Theoremvorschlag mindestens drei konkrete Mechanismen formulieren, durch die der gewünschte Satz falsch sein könnte.
-
-## H3. Rückübersetzung
-
-Nach jeder neuen Operatorabschätzung fragen: Was sagt dieser Bound arithmetisch/geometrisch ohne Operatorsymbole? Wenn nichts Sinnvolles übrigbleibt, prüfen, ob ein strategisch irrelevanter stärkerer Satz verfolgt wird.
-
-## H4. Anamnesis / Literatur
-
-Vor neuer Konstruktion prüfen, ob die Struktur bereits in anderer Sprache existiert: Weil-Positivität, de-Branges/screw-function, geometrische Mittel, Feshbach/Schur, Martingal-/Flaggeometrie. Literaturverweise müssen source-checked werden.
-
-## H5. Kontraposition / Umkehr
-
-Wenn eine globale Schranke schwer ist: Negation konkretisieren, Witness suchen, Firewalls testen und ggf. vom globalen Operatorweg auf eine strukturierte/projected Route wechseln. Das ist Suchstrategie, keine Metatheorem-Folgerung.
-
----
-
-## Leitsätze
-
-> **Beweise nicht die stärkste Aussage, die du formulieren kannst. Beweise die schwächste Aussage, die der nächste echte Gate tatsächlich braucht.**
-
-> **Ein gescheiterter Beweisweg ist kein gescheitertes Fernziel, solange keine Notwendigkeitskante bewiesen wurde.**
-
----
-
-## Kurzkarte
-
-PR-Nummern sind Provenienz/Container, keine mathematischen Knoten.
-Alle PA-/C6-Aussagen bleiben im festen ungeraden §6-Scope.
-
-```text
-[P11-Rang-eins-Unterordnung + Rieszkonvergenz + scharfe feste Quellenergien]
-        |
-        | --uses positive-root-anchor lemma; implies in stated scope-->
-        v
-starker positiver Normalenlimes (PA1)
-        |
-        | --together with R42.51 implies-->
-        v
-fixed-pair Strong Terminal/C6 (ungerader P11-Graphraum)
-        |
-        | --candidate-input only; no implication to Object X-->
-        v
-genuine X candidate ?[O]
-        |
-        | --requires separate proof-->
-        v
-exact full Weil-Gram identity ?[O]
-        |
-        | --component-of realization with intrinsicity + test scope-->
-        v
-Object-X realization ?[O]
-        |
-        | ==> by exact Gram identity
-        v
-Q_W(f,f) >= 0
-        |
-        | --requires exact criterion-scope verification-->
-        v
-Weil criterion / RH bridge ?[O]
-```
-
-Der Quellenabstieg/Weil-Trennungs-Kandidat aus §24 ist ein begrenzter
-Anschluss in Prüfung, kein bereits konstruierter voller X-Kandidat.
-COND-/FD23-/Variationswege bleiben als optionale Nebenrouten in §§7–13;
-sie werden nicht vor den bereits ausgewiesenen PA-Abschluss gesetzt.
-
-Separat und **ohne unbelegte Kante zum X-Pfad**:
-
-```text
-R37 / G4c ?[O]
-relation to X route: unresolved
-```
-
-**Firewall:** `candidate-input`, `uses`, `open-bridge` und `sufficient-route`
-sind keine unbenannten logischen Implikationen. Kein neuer Beweis,
-kein Reviewtransfer und keine Registry-Promotion durch diese Karte.
+Historische Nebenfragen bleiben über Audits, Git-Historie und die Registry-/Problemprovenienz zugänglich; sie werden hier nicht zur aktuellen Default-Priorität erhoben.

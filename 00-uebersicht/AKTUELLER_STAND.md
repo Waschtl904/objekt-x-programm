@@ -1,239 +1,77 @@
-# Aktueller Stand — Objekt X / P11 Strong Terminal
+# Aktueller Stand — Objekt X / OX-GEN
 
-> **Stand:** 7. September 2026; analytische Anschlussresultate gemäß verlinkten Audits, Registry unverändert.<br>
-> **Operative Kurzfassung.** Für Details gelten
-> [CURRENT-FRONT](../CURRENT-FRONT.md),
-> [ACTIVE_FRONT](ACTIVE_FRONT.yaml),
-> [ACTIVE_THEOREM_REGISTRY](ACTIVE_THEOREM_REGISTRY.md) und die
-> [kanonische Forschungsroadmap](FORSCHUNGS_ROADMAP_AKTUELL.md).
->
-> Volatile Stack-Heads/States werden hier **nicht** dupliziert. Der aktuelle `main`-Head wird live aus GitHub gelesen und nicht selbstreferenziell als SHA in einer versionierten Repo-Datei gespeichert. Historische Fassungen bleiben über Git und `archiv/` erhalten.
+> **Stand:** 13. September 2026; Registry unverändert.
+> Diese Datei ist die kurze operative Zusammenfassung. Details: [CURRENT-FRONT](../CURRENT-FRONT.md), [Roadmap](FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](DAG.md), [Registry](ACTIVE_THEOREM_REGISTRY.md), [Arbeitsdefinition](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
 
----
+## 1. Strong Terminal / C6
 
-## 1. Aktive Forschungsfront
+Der positive Wurzelanker plus R42.51 liefert Strong Terminal/C6 für jedes feste `0<R<S` im **ungeraden P11-Graphraum**.
 
-Die aktive Hauptfront ist **B / Strong Terminal / C6**, derzeit **R43**.
+Nicht enthalten: Radienuniformität, Operatornormkonvergenz, vollständiger gerader Sektor, Objekt-X-Realisierung oder RH. Historische R43-COND-/FD23-Fragen und R37/G4c bleiben getrennte Nebenfragen.
 
-Exakter Registry-Governance-String für R38–R42:
+## 2. Prime-Power-Struktur
 
-```text
-FROZEN — independently verified AI-GREEN
+Exakt gilt
+
+```math
+C_{jk}^{(p)}=(\log p)p^{\min(j,k)}p^{-3(j+k)/4},
+\qquad C_{kk}^{(p)}=(\log p)p^{-k/2}.
 ```
 
-Die Registry-Firewall bleibt maßgeblich: dieser projektinterne String ist nicht automatisch ein formaler `independent GREEN (cross-model/certificate/human)`-Subtyp. R43 ist OPEN.
+Mit `q_p=p^{-1/2}` folgt die Weil-dekorierte AR(1)-Struktur
 
-Für jedes feste
-
-\[
-0<R<S
-\]
-
-ist der verbleibende Strong-Terminal-Gate auf die eine Normalbahn reduziert, äquivalent auf
-
-\[
-\boxed{
-\operatorname{Re}
-\langle
-\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R
-\rangle
-\to1
-\quad?
-}
-\]
-
----
-
-## 2. R43-Stack und Integrationsstand
-
-Exakte Branches, Heads, Parent-Heads und GitHub-States stehen ausschließlich in `ACTIVE_FRONT.yaml`.
-
-Die ursprünglichen Review-Bases, Heads und Parent-Heads aller 20 R43-PRs bleiben als historische Abhängigkeitskette erhalten; der Stack-Root bleibt auf seinem historischen Base-Commit gepinnt. GitHub-Ziel (`github_base`), tatsächlich gemergter Head (`merged_head_sha`), belegter Mergestatus und offene Anzahl werden davon getrennt in `ACTIVE_FRONT.yaml` geführt.
-
-Die vier folgenden Container sind der historische Anfang der Kette, nicht deren vollständiger Integrationsstand:
-
-| Container | Rolle |
-|---|---|
-| PR #55 | strukturierte Schur-Leakage |
-| PR #56 | Halbverschiebung + relativer Resolventenvorläufer |
-| PR #57 | geometrischer Mittelwert + Resolvententransport |
-| PR #58 | Good-Normal-Tail + Hard-Channel-Reduktion |
-
-**Draft-source IDs** bleiben historische Quellbezeichnungen, keine aktuellen GitHub-Statusangaben. Weder Stackbeziehung noch Merge erzeugen externes GREEN oder Registry-Promotion; die Registry bleibt bei diesem Governance-Abgleich unverändert.
-
-Die jüngsten XBAND-Audits sind in [CURRENT-FRONT, Abschnitt 2](../CURRENT-FRONT.md#2-r43-stack-und-integrationsstand) ausschließlich als lokale Diagnostik verlinkt; keine neue mathematische Front.
-
-**Spätere analytische Anschlussresultate:** PR87 und PR88 sind integriert und unter `integrated_followups` separat protokolliert. [LOCAL-O1](../audits/P11_R43_O1_LOCAL_INTERVAL_UNIFORMITY_2026-09-07.md) schließt die echte feste-Intervall-Uniformität; [der Orientierungsbeweis](../audits/P11_R43_HUB_JUMP_DECAY_AND_CONDITIONAL_ORIENTATION_2026-09-07.md) liefert unter starker Rest-Tightness terminale Vorzeichenkohärenz; [der Conditioning-Satz](../audits/P11_R43_COND_FIXED_OLD_ALL_FUTURE_UNIFORMITY_2026-09-07.md) liefert BR42 für COND bei festem alten Horizont über alle zukünftigen V. Globale Flag-Tightness, BR39 und unbedingtes C6 bleiben offen.
-
-Aktueller analytischer Hauptauftrag ist das globale tatsächliche Flagbudget. Die folgenden historischen COND-Abschnitte ersetzen diesen neuen Prioritätshinweis nicht; [Review- und Integrationsnachweis](../audits/R43_LOCAL_O1_AND_ORIENTATION_INTEGRATION_2026-09-07.md).
-
----
-
-## 3. Aktueller COND-Kern
-
-Der geometrische-Mittelwert-Draft liefert lokal
-
-\[
-Q_{U,V}=B_U\#(\iota^*B_V\iota)
-\]
-
-und
-
-\[
-\iota^*B_V\iota-B_U=-Q_{U,V}K_{U,V}^{\rm Schur}Q_{U,V}.
-\]
-
-Die Good-Normal-Reduktion führt die strukturierte Leakage schematisch auf
-
-\[
-\boxed{
-\text{hard saturated}
-+C_*\|\chi_{U,r}Q_{U,V}v_U\|
-+C_*e^{-r/8}
-}
-\]
-
-zurück, mit nur zwei durch die crude absolute Summierbarkeit nicht erledigten diagonal-sum Kanälen
-
-\[
-\boxed{k=\ell=1},\qquad\boxed{k=\ell=2}.
-\]
-
-Offen:
-
-```text
-R43-COND-TRANSPORTED-COLLAR-MASS-DECAY                ?[O]
-R43-COND-TWO-HARD-CHANNEL-SATURATED-DECAY             ?[O]
-R43-COND-RESOLVENT-STRUCTURED-SATURATED-LEAKAGE-DECAY ?[O]
+```math
+C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}q_p^{|j-k|},
+\qquad T_q^*T_q+uu^*=R_q.
 ```
 
----
+Die P11-Restseite besitzt die exakte Weil-Tail-Normalform. Cross-prime Root-Gram ist fensterloser Bulk, kein Boundaryterm.
 
-## 4. Zwei Wege Richtung B-FLAGTIGHT
+## 3. Endliche OX-GRAM-Normalform
 
-### Strukturierter Direktweg
+Für `a<=1` liegt
 
-```text
-R43-COND-RESOLVENT-TRANSPORTED-LEAKAGE-BOUND
-        |
-        | --used-by-->
-        v
-[R43-COND-GOOD-NORMAL-COLLAR-PLUS-TAIL,
- R43-COND-TWO-HARD-DIAGONAL-NORMAL-CHANNELS]
-        |
-        | --reduces current target to-->
-        +---- collar decay ?[O]
-        +---- hard-channel decay ?[O]
-        |
-        v
-structured leakage decay ?[O]
-        |
-        | --open-bridge-->
-        v
-projected B-FLAGDYN / FD23-compatible control ?[O]
-        |
-        | --sufficient-route-->
-        v
-B-FLAGTIGHT ?[O]
+```math
+Q_{B_a}=G_a^+-N_a,
+\qquad N_a=c_aI+C_a
 ```
 
-### Stärkerer Operatorweg
+vor. `G_a^+` besteht aus positiven Prime-Kanal-, Log-Multiplikator- und logarithmischen `log|D|`-Formen.
 
-```text
-B-METINC-WIDTH ?[O]
-  uses:
-    - B-METINC-COND ?[O]
-    - B-METINC-GEO  ?[O]
-    - B-METINC-NEW  ?[O]
+Die bloße Existenz eines kontraktiven Faktors ist kein nichtzirkulärer Objekt-X-Gate: Bei bereits bekannter lokaler Positivität kann er rückwärts aus `Q_{B_a}` definiert werden. Offen ist **Kanonizität**, nicht Existenz.
 
-B-METINC-WIDTH ?[O]
-        |
-        | --sufficient-route-->
-        v
-B-FLAGMOD ?[O]
+## 4. CERT-HARDEN geschlossen
+
+Vor Merge von PR #98 waren auf demselben Exact Head GREEN:
+
+- gehärteter Normalisierungsvergleich Realraum/Fourier für `a=0.5,0.8,1.0` mit expliziten Bernoulli-/sinc-Restbällen, Arb-Cutoffs und fail-closed Residualtests;
+- Gate 2 mit Arb 512 Bit, Dirichletbasis `N<=14`, drei Radien, beiden Paritäten und **42/42** strikt positiven Cholesky-Blöcken.
+
+Das sind endliche Zertifikate, kein unendlichdimensionaler Positivitäts- oder RH-Beweis.
+
+## 5. Aktuelle Hauptfront OX-GEN
+
+Suzukis Kernteil liefert exakt
+
+```math
+R_0(v,v)
+=-2\left(\int\cosh\frac x2\,v\right)^2
++2\left(\int\sinh\frac x2\,v\right)^2.
 ```
 
-**Firewall:** Scheitert die globale Spectral-Width-/Operatorroute, ist die direkt projizierte Normal-/Flagroute nicht widerlegt.
+Dieselbe Exponentialfamilie erscheint in `p^{-1/2}=e^{-\log p/2}`, der AR(1)-Korrelation und den Weilgewichten.
 
----
+**OX-GEN:** Kann der archimedische Rang-2-Defekt als intrinsischer Rand-/Defektterm derselben Exponentialstruktur konstruiert werden, die die Prime-Power-Geometrie normiert, ohne die fertige Weilform oder RH rückwärts zu verwenden?
 
-## 5. Tightness / Sign / Strong Terminal
+`R_1` und der Skalarblock `c_aI` bleiben offen.
 
-Mit
+## 6. Nächste Arbeitsfolge
 
-\[
-Q_{m,U}=W_U^*P_mW_U,
-\qquad
-q_m(U)=\langle\varepsilon_R,Q_{m,U}\varepsilon_R\rangle
-\]
+1. **OX-GEN-A:** bei `a=0.5` die `cosh/sinh`-Momentfunktionale in der Prime-/`log|D|`-Featuregeometrie isolieren.
+2. **GENERATOR-CLASS:** natürliche Generator-Klasse vor einem No-Go festschreiben.
+3. **OX-GEN-B:** expliziten Intertwiner oder Klassen-No-Go suchen.
+4. Parallel: AR(1)/Martingal-Faktorisierung als eigenständigen RH-unabhängigen Satz verschriftlichen.
 
-gilt im gebuchten Scope
+Weiter offen bleiben genuine X candidate, exakte volle Weil-Gram-Identität, Object-X-Realisierung, Weil-Kriterium-Scope und RH.
 
-\[
-\mathrm{B\!-\!FLAGTIGHT}
-\Longleftrightarrow
-\lim_m\limsup_U q_m(U)=0.
-\]
-
-Danach bleibt B-SIGN/B-ORIENT. Unter B-TIGHT gilt der scharfe Resttest
-
-\[
-\text{Strong Terminal}
-\Longleftrightarrow
-\liminf_{T,U\to\infty}L_{R,S}^{T,U}>-1.
-\]
-
-Strong Terminal/C6 bleibt OPEN.
-
----
-
-## 6. Andere Fronten
-
-### A / finite-level
-
-Die universelle positive SW1-Cross-Gram-Route ist in ihrem gebuchten Scope negativ entschieden; Salvage bleibt Nebenfront.
-
-### R37/G4c
-
-Separat offen. Die Beziehung zu einer späteren X-Kandidatenarchitektur ist derzeit `unresolved`; es gibt keine Kante von R37/G4c zum X-Pfad. R38–R43 promoten R37 nicht rückwirkend.
-
-### Objekt X
-
-Die aktuelle Definition steht in `OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md` und ist **nicht** offen.
-
-Offen sind getrennt:
-
-```text
-genuine X candidate      ?[O]
-Object-X realization     ?[O]
-RH                       ?[O]
-```
-
-Strong Terminal wäre höchstens ein X-Kandidatenbaustein; es existiert kein Satz `Strong Terminal => Objekt X`.
-
----
-
-## 7. Nächste Default-Arbeitsfolge
-
-1. Hard Channel `k=l=1` unter echter Sättigung angreifen.
-2. Hard Channel `k=l=2` unter echter Sättigung angreifen.
-3. Transported Collar `||chi_{U,r}Q_{U,V}v_U||` kontrollieren.
-4. Die schwächste hinreichende direkte FD23-/B-FLAGDYN-Kompositionsbedingung identifizieren.
-5. Nur bei Bedarf den stärkeren globalen B-METINC-WIDTH-Weg verfolgen.
-
-Parallel: `FD23-MINIMAL-CONDITION` als Route-Optimierungsfrage.
-
----
-
-## 8. Governance
-
-- aktueller `main`-Head: live aus GitHub; nicht selbstreferenziell im Repo gespeichert;
-- volatile Stackdaten und historischer Stack-Root-Base-Pin: `ACTIVE_FRONT.yaml`;
-- R43: OPEN, kein Freeze;
-- R43-Integrationsstand und historische Abhängigkeitskette: gemäß `ACTIVE_FRONT.yaml`;
-- Strong Terminal/C6: `?[O]`;
-- R37/G4c: offen/separat;
-- genuine X candidate: `?[O]`;
-- Object-X realization: `?[O]`;
-- RH: `?[O]`;
-- kein Object-X- oder RH-Abschluss.
+**Governance:** Merge ist keine Registry-Promotion. `ACTIVE_FRONT.yaml` bleibt historisches Stackledger; `STATUS.md`, `INDEX.md` und ältere NEU-/R43-Fronten sind Provenienz, nicht operative Arbeitsanweisung.
