@@ -1,4 +1,4 @@
-# Abhängigkeitsgraph (DAG) — Objekt X / OX-GEN
+# Abhängigkeitsgraph (DAG) — Objekt X / POS-DIL
 
 > **Stand:** 13. September 2026; Registry unverändert.  
 > **Rolle:** kompakte operative Abhängigkeits- und Firewall-Struktur.  
@@ -66,7 +66,7 @@ Prime-Power AR(1) / Weil-Tail structure  ✓[M] in documented scope
         |
         | --candidate-input-->
         v
-OX-GEN
+OX-GEN / POS-DIL
 ```
 
 ---
@@ -92,35 +92,30 @@ Offen bleibt eine **kanonische, vorwärts konstruierte** gemeinsame Geometrie.
 
 ## 5. OX-GEN-A — gemeinsamer Translation-/Reflexions-Generator `✓[M]`
 
-Setze
+Mit
 
 ```math
 \mathcal Ev=(E_+(v),E_-(v)),
 \qquad
-E_\pm(v)=\int e^{\pm x/2}v(x)\,dx.
+\rho(t)=\operatorname{diag}(e^{-t/2},e^{t/2}),
 ```
 
-Dann
-
-```math
-\mathcal ET_t=\rho(t)\mathcal E,
-\qquad
-\rho(t)=\operatorname{diag}(e^{-t/2},e^{t/2}).
-```
-
-Für Prime-Power-Kanäle
+und
 
 ```math
 K_n=T_{\frac12\log n}-T_{-\frac12\log n},
 \qquad
-\lambda_n=n^{1/4}-n^{-1/4}
+D_n=\lambda_nS,
+\qquad
+S=\operatorname{diag}(-1,1),
 ```
 
 gilt
 
 ```math
-\mathcal EK_n
-=\lambda_n\operatorname{diag}(-1,1)\mathcal E.
+\mathcal ET_t=\rho(t)\mathcal E,
+\qquad
+\mathcal EK_n=D_n\mathcal E.
 ```
 
 Archimedischer Teil:
@@ -131,88 +126,162 @@ r_0''(t)=-\operatorname{tr}\rho(t),
 r_0(\log n)=-4\lambda_n^2.
 ```
 
-Mit Austausch/Spiegelung
+Mit
 
 ```math
-P=\begin{pmatrix}0&1\\1&0\end{pmatrix}
+P=\begin{pmatrix}0&1\\1&0\end{pmatrix},
+\qquad J=-P
 ```
 
 gilt
 
 ```math
-R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle.
+R_0(v,w)=\langle\mathcal Ev,J\mathcal Ew\rangle.
 ```
 
-Operative Bedeutung:
-
 ```text
-Prime AR(1) / Weil-Tail
-        |
-        | --candidate-input-->
-        v
 2D translation representation rho
         |
         + --odd finite difference--> Prime channel K_n
-        |
         + --negative character-----> archimedean r_0''
-        |
-        + --reflection pullback----> R_0 = E^*(-P)E
+        + --reflection pullback----> R_0 = E^* J E
 ```
 
-Dies ist eine exakte gemeinsame Prime-/Archimedean-Generatorstruktur, aber `-P` ist indefinit und daher noch keine positive Object-X-Realisierung.
+Prime-only-A2 bleibt `×[M]` im engen Scope: die volle positive Prime-Gram-Form descendiert nicht durch `E`, und `{w_n,lambda_n}` allein fixieren die absolute `R_0`-Normierung nicht.
 
 ---
 
-## 6. Prime-only-A2 — enger Klassen-No-Go `×[M]`
+## 6. POS-DIL-1A — natürliche Companion-Klasse
 
-Die positive Prime-Gram-Form
-
-```math
-\sum_n w_n\langle K_n\cdot,K_n\cdot\rangle
-```
-
-**descendiert nicht** durch `\mathcal E`, weil `ker \mathcal E` nicht in ihrem Radikal liegt.
-
-Auf dem Quotienten erzwingt
+Die zwei vorhandenen Involutionen sind
 
 ```math
-D_n^*HD_n=-\lambda_n^2H
+P^2=S^2=I,
+\qquad PSP=-S,
+\qquad S=2\rho'(0).
 ```
 
-nur
+Für eine positive Hermiteform `M` auf `C^2`:
 
 ```math
-H=\begin{pmatrix}0&b\\\bar b&0\end{pmatrix};
+PMP=M,
+\qquad SMS=M
 ```
 
-der Maßstab `b` bleibt frei.
+zwingt
+
+```math
+M=tI.
+```
+
+Die zusätzliche Blockpositivität
+
+```math
+\begin{pmatrix}M&J\\J&M\end{pmatrix}\succeq0
+```
+
+ist genau für `t>=1` möglich. Somit:
 
 ```text
-{w_n, lambda_n} alone
+P- and S-symmetric positive companions
         |
-        | --insufficient to fix absolute R_0 normalization-->
+        | --rigidity-->
         v
-Prime-only A2  ×[M]  [eng definierter Scope]
+M=tI
+        |
+        | --minimal block positivity-->
+        v
+M_min=I  ✓[M]
 ```
 
-Mit voller Translation-/Reflexionsstruktur ist die Form hingegen kanonisch: `R_0=E^*(-P)E`.
+Demgegenüber gilt für volle positive Translationinvarianz:
+
+```math
+\rho(t)^*M\rho(t)=M\ \forall t,\quad M\succeq0
+\quad\Longrightarrow\quad
+M=0.
+```
+
+```text
+exact unitary Hilbertization of full rho on positive rank 2
+        |
+        v
+×[M]  [enger Scope]
+```
 
 ---
 
-## 7. Aktuelle Hauptfront — POSITIVE-DILATION
+## 7. POS-DIL-1C — Prime-moment Hilbertisierung `✓[M]`
+
+Für jede endliche nichtleere Prime-Power-Menge `N` setze
+
+```math
+\kappa_N=\sum_{n\in N}w_n\lambda_n^2,
+```
+
+und
+
+```math
+V_Nv=\kappa_N^{-1/2}
+\bigl(\sqrt{w_n}\,\mathcal EK_nv\bigr)_{n\in N}
+\in\bigoplus_{n\in N}\mathbb C^2.
+```
+
+Dann
+
+```math
+\boxed{\|V_Nv\|^2=\|\mathcal Ev\|^2=|E_+(v)|^2+|E_-(v)|^2.}
+```
+
+Mit `\mathbb P_N=\oplus P` gilt gleichzeitig
+
+```math
+\boxed{R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.}
+```
+
+Für `n=p^k`, `q_p=p^{-1/2}`:
+
+```math
+\boxed{\sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S.}
+```
+
+Damit sitzt die Kanalindex-Amplitude exakt auf `flat minus AR(1)-root`.
 
 ```text
-OX-GEN-A common generator plane  ✓[M]
+Prime channels K_n + Weil weights + E
         |
-        | --requires positive embedding/dilation-->
+        | --normalized moment postcompression-->
         v
-GENERATOR-CLASS / POSITIVE-DILATION-CLASS ?[O]
+positive Hilbert target H_N
+        |                         |
+        | norm                    | target involution P_N
+        v                         v
+|E_+|^2+|E_-|^2  ✓[M]        R_0  ✓[M]
+```
+
+**Firewall:** Der volle positive Prime-Gramoperator descendiert weiterhin nicht durch `E`; `log|D|`, `r_1` und `c_aI` sind nicht integriert. Daher:
+
+```text
+OX-GEN-A2' overall  ✓[M]_part
+```
+
+---
+
+## 8. Aktuelle Hauptfront — POS-DIL-2 / FEATURE-SHORTING
+
+```text
+POS-DIL-1 prime-moment Hilbertization  ✓[M]
+        |
+        | --requires contractive placement in existing positive features-->
+        v
+POS-DIL-2 / FEATURE-SHORTING ?[O]
         |
         +-------------------------------+
         |                               |
-        | explicit positive dilation    | class no-go
+        | PASS                          | FAIL
         v                               v
-OX-GEN-A2' geometry piece ?[O]     obstruction ?[O]
+contractive canonical shorting     class obstruction
+inside G_a^+                       [POS-DIL-1 survives]
         |
         | --candidate-input only-->
         v
@@ -220,14 +289,27 @@ OX-GEN-B ?[O]
   incorporate r_1 and/or c_a I
 ```
 
-Eine positive Antwort auf A2' wäre der erste explizite gemeinsame Prime-/Archimedean-Baustein **mit positiver Umgebung**. Eine negative Antwort gilt nur für die vorher definierte natürliche Klasse.
+Eine erste scharfe Testform ist
+
+```math
+\|\mathcal Ev\|^2\stackrel?\le G_a^+(v).
+```
+
+Nach Fixierung der positiven Featureabbildung `\mathcal F_a^+` lautet die typkorrekte Intertwinerform:
+
+```math
+C_a\mathcal F_a^+v=V_{N_a}v,
+\qquad \|C_a\|\le1,
+```
+
+wobei `C_a` **vorwärts** aus vorhandenen Daten gebaut werden muss.
 
 ---
 
-## 8. True Object-X path
+## 9. True Object-X path
 
 ```text
-OX-GEN partial geometry ?[O]
+OX-GEN / POS-DIL partial geometry
         |
         | --candidate-input only-->
         v
@@ -240,7 +322,6 @@ EXACT FULL WEIL-GRAM IDENTITY ?[O]
         v
 OBJECT-X REALIZATION ?[O]
         |
-        | ⇒ by Gram identity
         v
 Q_W(f,f)=||T_Xf||^2 >= 0
         |
@@ -252,11 +333,11 @@ WEIL-CRITERION-SCOPE ?[O]
 RH
 ```
 
-No candidate-input edge is a theorem implication.
+Keine candidate-input-Kante ist eine Theoremimplikation.
 
 ---
 
-## 9. Separate / parked routes
+## 10. Separate / parked routes
 
 - **R37/G4c:** separat offen; Beziehung zu OX-GEN/Object X unresolved.
 - **Historische R43-COND-/FD23-/Flagfragen:** eigene offene Quantoren, nicht aktuelle Voraussetzung.
@@ -265,7 +346,7 @@ No candidate-input edge is a theorem implication.
 
 ---
 
-## 10. Gate-Regel
+## 11. Gate-Regel
 
 Ein Falsifikationsgate zählt nur, wenn **beide Ausgänge vorher logisch möglich** waren. Reine Reformulierungen bekannter Positivität, gefittete Witness-Werte und post-hoc-Faktorisierungen sind kein Object-X-Fortschritt.
 
