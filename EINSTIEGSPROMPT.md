@@ -20,6 +20,7 @@ Arbeite als strenger mathematischer Auditor und Research Assistant. Prüfe zuers
 Aktuelle Hauptaudits:
 
 - `audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md`
+- `audits/P11_NP_GAP_Q0_FIRST_CHANNEL_2026-09-13.md`
 - `audits/P11_NULLPOLE_STRATEGIC_RECLASSIFICATION_2026-09-13.md`
 
 ### Governance
@@ -30,78 +31,30 @@ ChatGPT übernimmt sämtliche GitHub-/Repository-Arbeiten. Externe Modelle diene
 
 ## Aktueller mathematischer Stand
 
-### 1. Nullpol
+### 1. COMMON-JUMP `✓[M]`
 
 ```math
-E_-(v)=M(v)(0),\qquad E_+(v)=M(v)(1).
+K_t=T_{t/2}-T_{-t/2}.
 ```
 
-Auf
+Archimedischer Ort und Primzahlpotenzen entstehen als kontinuierlicher bzw. atomarer Teil derselben positiven `K_t`-Featuregeometrie. Mit
 
 ```math
-D_{NP}=\ker M(0)\cap\ker M(1)
-```
-
-verschwinden `R_0` und `E`. Global bleibt die Weil-Vorzeichenbedingung auf dieser Testklasse nach Connes–Consani Proposition C.1 RH-äquivalent. Keine fixed-`a`-Äquivalenz behaupten.
-
-### 2. COMMON-JUMP-GRAM `✓[M]`
-
-Die gemeinsame Operatorfamilie ist
-
-```math
-\boxed{K_t=T_{t/2}-T_{-t/2}.}
-```
-
-Archimedischer und nichtarchimedischer Anteil sind kontinuierlicher beziehungsweise atomarer Teil desselben positiven Jump-Maßes:
-
-```math
-\boxed{
-\mu_a
-=\frac{e^{-t/2}}{1-e^{-2t}}dt
-+\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}.
-}
-```
-
-Die Featureabbildung `X_a` erfüllt
-
-```math
-\langle X_av,X_aw\rangle
-=
-\int_0^\infty\frac{e^{-t/2}}{1-e^{-2t}}
-\langle K_tv,K_tw\rangle dt
-+
-\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}
-\langle K_{\log n}v,K_{\log n}w\rangle.
-```
-
-### 3. Exakte Schwelle
-
-```math
-\kappa_*=\log\pi-\psi(1/4)
-=\log(8\pi)+\gamma+\frac\pi2,
-```
-
-```math
-\boxed{
 \Gamma_a
-=2\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}+\kappa_*.
-}
+=2\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}
++\log\pi-\psi(1/4)
 ```
 
-### 4. Exakte Weil-Normalform für alle `a>0`
-
-Für `supp(v),supp(w) subset [-a,a]`:
+gilt für jedes `a>0`
 
 ```math
-\boxed{
 Q_W(v,w)
 =\langle Ev,PEw\rangle
 +\langle X_av,X_aw\rangle
 -\Gamma_a\langle v,w\rangle.
-}
 ```
 
-Auf Nullpol:
+Auf Nullpol `D_NP=ker M(0) cap ker M(1)`:
 
 ```math
 \boxed{
@@ -109,57 +62,137 @@ Q_W(v,w)=\langle X_av,X_aw\rangle-\Gamma_a\langle v,w\rangle.
 }
 ```
 
-Diese Identität ist unkonditional und vorwärts aus der expliziten Formel konstruiert. Sie beweist keine Positivität.
+### 2. Archimedische Resolventenkanäle `✓[M]`
 
-### 5. Strategischer Status
-
-```text
-NP-R1 separate geometry question                    closed/subsumed ✓[M]
-NP-COMMON common Prime/archimedean geometry          ✓[M]
-NP-SCALAR cutoff-gauge covariance                    ✓[M]
-forward Object-X candidate architecture              ✓[M]_part
-sharp frame/spectral gap                             ?[O]
+```math
+\frac{e^{-t/2}}{1-e^{-2t}}
+=\sum_{m\ge0}e^{-\alpha_m t},
+\qquad
+\alpha_m=2m+\frac12.
 ```
 
-OX-GEN-A bleibt die exakte Polschicht. POS-DIL #101--#105 bleibt auxiliary full-class geometry.
+Für
 
----
+```math
+A_\alpha=\int_0^\infty e^{-\alpha t}K_t^*K_tdt
+```
 
-## Nächster Default-Auftrag — NP-GAP
-
-Untersuche ausschließlich vorwärts den scharfen Bound
+gilt
 
 ```math
 \boxed{
-\lambda_{NP}(a)
-:=
-\inf_{\substack{0\ne v\in C_c^\infty(-a,a)\\M(v)(0)=M(v)(1)=0}}
-\frac{\|X_av\|^2}{\|v\|_2^2}
-\stackrel{?}{\ge}\Gamma_a
+A_\alpha
+=\frac{2}{\alpha}
+(-\partial_x^2)(-\partial_x^2+\alpha^2)^{-1}.
 }
 ```
 
-für alle `a>0`.
+### 3. Exakter `Q_0`-First-Channel-Satz `✓[M]`
 
-Arbeitsreihenfolge:
+Mit
 
-1. Nutze die Nullpolbedingungen als `hat v(±i/2)=0`.
-2. Prüfe die support-erhaltende Faktorisierung durch `Q_0=-d^2/dx^2+1/4`.
-3. Suche nonlocal-Poincare-/Dirichlet-form-, Paley-Wiener-/sampling- oder de-Branges-Mechanismen.
-4. Definiere jede getestete Mechanismusklasse **vor** dem Resultat.
+```math
+Q_0=-\partial_x^2+\frac14
+```
+
+folgt für `alpha_0=1/2`
+
+```math
+\boxed{
+A_{1/2}=4I-Q_0^{-1},
+\qquad
+A_{1/2}Q_0=-4\partial_x^2.
+}
+```
+
+Nur beim ersten Kanal cancelt der Resolventennenner.
+
+### 4. Support-erhaltende Nullpolparametrisierung `✓[M]`
+
+Der Green-Kern `e^{-|x-y|/2}` zeigt
+
+```math
+\boxed{
+Q_0:C_c^\infty(-a,a)\xrightarrow{\cong}D_{NP}(a)
+}
+```
+
+support-erhaltend. Für `v=Q_0u`:
+
+```math
+\boxed{
+\langle v,A_{1/2}v\rangle
+=4\|u''\|^2+\|u'\|^2.
+}
+```
+
+### 5. Short-window NP-GAP `✓[M]_part`
+
+Dirichlet-Poincaré und Schur-Tests liefern
+
+```math
+\langle v,A_{1/2}v\rangle
+\ge\frac{4\pi^2}{\pi^2+a^2}\|v\|^2,
+```
+
+```math
+\langle v,A_\alpha v\rangle
+\ge\frac{2}{\alpha}e^{-\alpha a}\|v\|^2.
+```
+
+Daraus folgt analytisch ein nichtleerer Bereich ausreichend kleiner Fenster, in dem
+
+```math
+\boxed{
+\|X_av\|^2\ge\Gamma_a\|v\|^2
+\qquad(v\in D_{NP}(a))
+}
+```
+
+bereits bewiesen ist.
+
+---
+
+## Nächster Default-Auftrag — `NP-GAP-EXTEND`
+
+Der verbleibende harte Satz ist
+
+```math
+\boxed{
+\lambda_{NP}(a)\ge\Gamma_a
+\quad\text{für jedes }a>0.
+}
+```
+
+Arbeite in dieser Reihenfolge:
+
+1. Verbessere die höheren Kanaluntergrenzen über den elementaren Schur-Test hinaus.
+2. Nutze die exakte `Q_0`-Parametrisierung und prüfe, ob die Summe der Resolventenkanäle einen stärkeren lokalen Operator ergibt.
+3. Analysiere den ersten Prime-Cutoff `2a=log2` exakt; keine post-hoc Gegenmasse.
+4. Prüfe nonlocal-Poincare-, Paley-Wiener-, de-Branges- und Prolate-Mechanismen nur vorwärts.
 5. Ein enger No-Go gegen eine natürliche Klasse zählt als Fortschritt.
 
 ### Zirkularitäts-Firewall
 
-Ein Beweis des Bounds für alle Fenster wäre bereits RH. Daher niemals Weil-Positivität, RH, fertige Zeta-Nullstellenpositivität oder einen rückwärts daraus definierten Operator als Input verwenden.
+Ein Beweis des Bounds für alle Fenster wäre bereits RH. Niemals Weil-Positivität, RH oder einen rückwärts aus positiver Weilform definierten Operator als Input verwenden.
+
+### Numerik-Firewall
+
+Endlichdimensionale Ritz-Minima sind **obere Schranken** für das wahre Infimum. Positive endliche Ritz-Gaps beweisen nichts. Nicht Arb-zertifizierte Werte nicht promoten.
 
 ---
 
-## Nichtbehauptungen
+## Status
 
-- COMMON-JUMP ist noch keine vollständige positive Weil-Gram-Realisierung.
-- Der Lower-Frame-Bound ist offen.
-- Kein einzelnes fixes `a` wird als RH-äquivalent behauptet.
-- Publikationsneuheit bleibt offen.
-- Object X und RH sind nicht gelöst.
-- Registry und Arbeitsdefinition werden nicht automatisch promoviert.
+```text
+COMMON-JUMP architecture                         ✓[M]
+Q0 first-channel intertwining                    ✓[M]
+support-preserving null-pole Q0 map              ✓[M]
+short-window NP-GAP                              ✓[M]_part
+forward Object-X candidate architecture          ✓[M]_part
+NP-GAP for every a>0                             ?[O]
+full positive Object-X realization / RH          ?[O]
+publication novelty                              ?[O]
+```
+
+Registry und Arbeitsdefinition werden nicht automatisch promoviert.
