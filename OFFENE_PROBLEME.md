@@ -3,100 +3,154 @@
 > **Stand:** 13. September 2026.  
 > Operative Quellen: [CURRENT-FRONT](CURRENT-FRONT.md), [AKTUELLER_STAND](00-uebersicht/AKTUELLER_STAND.md), [Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](00-uebersicht/DAG.md), [Registry](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md).
 >
-> **Wichtige Korrektur gegenüber älteren Fassungen:** fixed-pair Strong Terminal/C6 ist im ausgewiesenen ungeraden P11-Scope nicht mehr offen. Historische R43-/NEU-Probleme bleiben Provenienz und Nebenfragen, nicht heutige Default-Priorität.
+> Fixed-pair Strong Terminal/C6 ist im ausgewiesenen ungeraden P11-Scope verfügbar. OX-GEN-A ist seit dem 13. September positiv geschlossen; die operative Front liegt jetzt bei einer **positiven Dilatation/Einbettung** der gemeinsamen Rang-2-Generatorgeometrie.
 
 ---
 
-## Priorität 0 — OX-GEN-A
+## Geschlossenes OX-GEN-A-Ergebnis
 
-### `[OX-GEN-A]` Gemeinsamen Exponentialgenerator lokalisieren `?[O]`
+### `[OX-GEN-A]` Gemeinsamer Exponentialgenerator `✓[M]`
 
-Für `a=0.5` die beiden Funktionale
-
-```math
-v\mapsto\int\cosh(x/2)v(x)\,dx,
-\qquad
-v\mapsto\int\sinh(x/2)v(x)\,dx
-```
-
-innerhalb der vorhandenen Prime-/`log|D|`-Featuregeometrie isolieren.
-
-Motivation: Suzukis exakter Rang-2-Term
+Mit
 
 ```math
-R_0(v,v)
-=-2\left(\int\cosh\frac x2\,v\right)^2
-+2\left(\int\sinh\frac x2\,v\right)^2
+E_\pm(v)=\int e^{\pm x/2}v(x)\,dx,
+\qquad
+\mathcal Ev=(E_+(v),E_-(v))
 ```
 
-verwendet dieselbe Exponentialfamilie wie
+und
 
 ```math
-p^{-1/2}=e^{-\log p/2},
-\qquad
-R_p(j,k)=p^{-|j-k|/2},
-\qquad
-w_{p,k}=\log p\,p^{-k/2}.
+\rho(t)=\operatorname{diag}(e^{-t/2},e^{t/2})
 ```
 
-**Erfolgskriterium:** eine explizite vorwärts konstruierte Relation, nicht aus der fertigen Weilform rückwärts definiert.
+gilt
 
-**Firewall:** Ein bloßer numerischer Wertabgleich oder eine GNS-/Quadratwurzel-Faktorisierung von bereits bekannter Positivität zählt nicht.
+```math
+\mathcal ET_t=\rho(t)\mathcal E,
+```
+
+sowie für
+
+```math
+K_n=T_{\frac12\log n}-T_{-\frac12\log n},
+\qquad
+\lambda_n=n^{1/4}-n^{-1/4}
+```
+
+```math
+\mathcal EK_n=\lambda_n\operatorname{diag}(-1,1)\mathcal E.
+```
+
+Suzukis elementarer archimedischer Anteil ist das negative Charakter derselben Darstellung:
+
+```math
+r_0''(t)=-\operatorname{tr}\rho(t),
+\qquad
+r_0(\log n)=-4\lambda_n^2.
+```
+
+Mit Austauschoperator
+
+```math
+P=\begin{pmatrix}0&1\\1&0\end{pmatrix}
+```
+
+gilt
+
+```math
+R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle.
+```
+
+Die Struktur ist fensterunabhängig; für Nullfortsetzungen aus `H_0^1(-a,a)` tritt in `E_\pm(K_nv)` kein Randterm auf.
+
+Kanonische Quelle: `audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md`.
 
 ---
 
-## Priorität 1 — GENERATOR-CLASS
+## Geschlossener enger No-Go
 
-### `[GENERATOR-CLASS]` Natürliche zulässige Klasse definieren `?[O]`
+### `[OX-GEN-A2-PRIME-ONLY]` Nur aus `{w_n,lambda_n}` `×[M]`
 
-Vor einem No-Go ist eine enge, mathematisch natürliche Klasse von Generatorabbildungen festzuschreiben, gebaut aus Daten wie
+Die volle positive Prime-Gram-Form descendiert nicht durch `\mathcal E`, weil `ker \mathcal E` nicht in ihrem Radikal liegt.
+
+Die reine Quotientenkovarianz
+
+```math
+D_n^*HD_n=-\lambda_n^2H
+```
+
+fixiert nur eine off-diagonale Hermiteform
+
+```math
+H=\begin{pmatrix}0&b\\\bar b&0\end{pmatrix};
+```
+
+der Maßstab `b` bleibt frei. Die diskreten Daten `{w_n,lambda_n}` allein können daher den absoluten `R_0`-Koeffizienten nicht kanonisch bestimmen.
+
+**Scope-Firewall:** Dies ist kein No-Go gegen eine Konstruktion, die die vollständige Translation-/Spiegelstruktur oder zusätzliche positive Geometrie benutzt.
+
+---
+
+## Priorität 0 — POSITIVE-DILATION-CLASS
+
+### `[POSITIVE-DILATION-CLASS]` Natürliche zulässige Klasse definieren `?[O]`
+
+Vor jedem No-Go eine enge, mathematisch natürliche Klasse positiver Erweiterungen/Intertwiner festschreiben, die aus
 
 ```text
-e^{+x/2}, e^{-x/2}, K_n, Prime-AR(1), log|D|-Geometrie.
+(C^2, rho, P, E), Prime channels K_n, Prime AR(1), log|D|-geometry
 ```
+
+gebaut werden darf.
 
 Die Klasse darf nicht post hoc auf ein gewünschtes Ergebnis zugeschnitten werden.
 
-**Gate-Regel:** Positive Konstruktion und negativer Ausgang müssen vorab beide logisch möglich sein.
+**Gate-Regel:** Positive Konstruktion und negativer Ausgang müssen beide vorab logisch möglich sein.
+
+---
+
+## Priorität 1 — OX-GEN-A2' / POSITIVE-DILATION
+
+### `[OX-GEN-A2']` Positive Einbettung des Rang-2-Generators `?[O]`
+
+Frage:
+
+> Lässt sich die kanonische indefinite Translation-/Reflexions-Geometrie
+> 
+> ```math
+> (\mathbb C^2,\rho,P,\mathcal E)
+> ```
+> 
+> intrinsisch in die positive Prime-/`log|D|`-Featuregeometrie einbetten oder als Schur-/Defektterm einer positiven Erweiterung realisieren — ohne die fertige Weilform, RH oder eine rückwärts definierte Positivitätswurzel zu verwenden?
+
+Positive Antwort: erster expliziter gemeinsamer Prime-/Archimedean-Baustein **mit positiver Umgebung**.
+
+Negative Antwort: Klassen-No-Go nur für die vorher definierte `POSITIVE-DILATION-CLASS`.
 
 ---
 
 ## Priorität 2 — OX-GEN-B
 
-### `[OX-GEN-B]` Konstruktion oder Klassen-No-Go `?[O]`
+### `[OX-GEN-B]` Verbleibende archimedische Teile `?[O]`
 
-Nach Festlegung der Generator-Klasse:
+Erst nach A2' sollen die bislang unberührten Teile in dieselbe Geometrie einbezogen werden:
 
-- entweder einen expliziten nichtzirkulären Intertwiner/Defektmechanismus konstruieren, der den `R_0`-Term intrinsisch erklärt;
-- oder die gesamte definierte Klasse ausschließen.
+- `[OX-R1]` regulärer `r_1''`-Korrektor;
+- `[OX-SCALAR]` dominanter Skalarblock `c_aI`.
 
-Eine positive Antwort wäre ein **echter geometrischer Teilbaustein** in Richtung Objekt X, aber noch keine vollständige Realisierung.
-
----
-
-## Priorität 3 — verbleibende archimedische Teile
-
-### `[OX-R1]` Regulärer Korrektor `R_1` `?[O]`
-
-Wie wird der verbleibende reguläre `r_1''`-Block in eine gemeinsame Prime-/Archimedean-Geometrie eingebettet?
-
-### `[OX-SCALAR]` Skalarblock `c_a I` `?[O]`
-
-Wie entsteht der explizite Skalarblock intrinsisch aus derselben Geometrie, statt als nachträglich abgezogene Konstante?
-
-Diese Fragen werden erst dann Hauptfront, wenn OX-GEN-A/B eine tragfähige Generatorstruktur liefert oder deren Klasse ausschließt.
+Die gemeinsame Rang-2-Generatorstruktur erklärt diese Teile **noch nicht**.
 
 ---
 
-## Priorität 4 — vollständiger Objekt-X-Pfad
+## Priorität 3 — vollständiger Objekt-X-Pfad
 
 ### `[OX-CANDIDATE]` Genuine X candidate `?[O]`
 
 Gesucht wird eine intrinsische gemeinsame Geometrie mit Hilbert-/Mediatorraum, kanonischer Abbildung, Prime-Power- und archimedischem Kanal, gemeinsamer nichtorthogonaler Kopplung, Testklasse, Normalisierung und Nicht-Zirkularität.
 
 ### `[OX-WEIL-GRAM]` Exakte volle Weil-Gram-Identität `?[O]`
-
-Für einen konkreten Kandidaten separat zu beweisen:
 
 ```math
 Q_W(f,g)=\langle T_Xf,T_Xg\rangle_{\mathcal K_X}
@@ -110,7 +164,7 @@ Erst gemeinsame intrinsische Geometrie plus exakte volle Weil-Gram-Identität bi
 
 ### `[OX-WEIL-SCOPE]` Weil-Kriterium-Scope `?[O]`
 
-Nach einer Realisierung ist separat zu prüfen, ob die realisierte Form/Testklasse exakt den benötigten klassischen Weil-Kriterium-Scope erfüllt.
+Nach einer Realisierung separat prüfen, ob Form und Testklasse exakt den benötigten klassischen Weil-Kriterium-Scope erfüllen.
 
 ### `RH` `?[O]`
 
@@ -122,17 +176,13 @@ Unverändert offen.
 
 ### `[AR1-WRITEUP]` Prime-Power-AR(1)/Martingal-Faktorisierung
 
-Die exakte Struktur
-
 ```math
 C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2},
 \qquad
-T_q^*T_q+uu^*=R_q
+T_q^*T_q+uu^*=R_q.
 ```
 
-ist theorem-ready und soll separat, RH-unabhängig und **nicht als Objekt X** verschriftlicht werden.
-
-Ein Literaturbefund kann Neuheitsindikator sein, ist aber kein Prioritätsbeweis.
+Theorem-ready, RH-unabhängig und **nicht als Objekt X** verschriftlichen.
 
 ---
 
@@ -140,35 +190,29 @@ Ein Literaturbefund kann Neuheitsindikator sein, ist aber kein Prioritätsbeweis
 
 ### R37/G4c `?[O]`
 
-Separat offen. Beziehung zur OX-GEN-/X-Route ist unresolved; keine notwendige Kante wird behauptet.
+Separat offen. Beziehung zur OX-GEN-/X-Route unresolved.
 
 ### Historische R43-COND-/FD23-/Flagfragen
 
-Einzelne quantitative Fragen bleiben in ihren eigenen Quantoren offen. Sie sind jedoch **keine** Voraussetzungen des abgeschlossenen fixed-pair-C6-Pfads und derzeit nicht Default-Priorität.
+Einzelne quantitative Fragen bleiben in ihren eigenen Quantoren offen, sind aber keine Voraussetzungen des fixed-pair-C6-Pfads und derzeit nicht Default-Priorität.
 
-### PR #91 — Source descent / Weil separation
+### PR #91
 
 Analytischer Draft; kein unabhängiger Exact-Head-GREEN wird durch die aktuelle Front übertragen.
 
 ### PR #49 / SW1 salvage
 
-Candidate-only Nebenfront. Kein stiller Merge und keine unbewiesene Object-X-Kante.
+Candidate-only Nebenfront. Kein stiller Merge.
 
 ---
 
 ## Geschlossen / nicht erneut öffnen ohne neuen Widerspruch
 
-### Fixed-pair Strong Terminal / C6
-
-Im ungeraden P11-Graphraum für jedes feste `0<R<S` verfügbar aus positivem Wurzelanker plus R42.51.
-
-### OX-GRAM-Existenzfrage
-
-Die Frage nach der bloßen Existenz eines kontraktiven Faktors ist als Object-X-Gate geschlossen/vakuant, weil bei bekannter lokaler Positivität eine rückwärts aus `Q` definierte Faktorisierung existiert. Offen bleibt nur eine **kanonische nichtzirkuläre** Konstruktion.
-
-### CERT-HARDEN im dokumentierten endlichen Scope
-
-Normalisierungs- und Gate-2-Checker wurden in PR #98 interval-gehärtet und waren vor Merge auf demselben Exact Head GREEN.
+- fixed-pair Strong Terminal/C6 im dokumentierten ungeraden Scope;
+- OX-GRAM-Existenzfrage als zirkuläres/vakuantes X-Gate;
+- CERT-HARDEN im dokumentierten endlichen Scope;
+- OX-GEN-A gemeinsamer Translation-/Reflexionsgenerator;
+- Prime-only-A2 aus `{w_n,lambda_n}` im exakt definierten engen Scope.
 
 ---
 
@@ -182,10 +226,11 @@ Nicht als neue offene Probleme wieder einführen:
 - cross-prime als Boundary;
 - „Nichtunitarität = Hub“;
 - matched cutoff / OX-REN;
-- reiner Radius-Swap im PR97-Checker;
 - klassische `H^{1/2}`-/Douglas-Deutung von `1/|x-y|`;
 - globaler Defektnorm-Kollaps;
 - `0.603` als Konstante;
-- weitere reine OX-GRAM-Existenzsweeps ohne neuen Mechanismus.
+- reine OX-GRAM-Existenzsweeps;
+- Prime-Gram auf dem Rang-2-Quotienten ohne zusätzliche Quotientenstruktur;
+- Behauptung, der Rang-2-Generator erkläre bereits `r_1` oder `c_aI`.
 
-Historische NEU-/Wres-/HH-Probleme bleiben über Git, INDEX, STATUS und die ursprünglichen Dokumente als Provenienz verfügbar.
+Historische NEU-/Wres-/HH-Probleme bleiben über Git, INDEX, STATUS und ursprüngliche Dokumente als Provenienz verfügbar.

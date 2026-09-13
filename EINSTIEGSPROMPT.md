@@ -24,10 +24,11 @@ Für den aktuellen mathematischen Strang zusätzlich:
 
 - `audits/P11_OBJECT_X_AR1_OX_GRAM_CONSOLIDATION_2026-09-12.md`
 - `audits/P11_OX_GRAM_GATE2_AND_OX_GEN_2026-09-12.md`
+- `audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md`
 
 ### Governance
 
-Für **Objekt X** übernimmt ChatGPT sämtliche GitHub-/Repository-Arbeiten: Dateien ändern, Branches, Commits/Pushes, PRs, Kommentare und Merges. Perplexity dient ausschließlich als externer Reviewer/Auditor und nimmt keine Repo-Mutationen vor.
+Für **Objekt X** übernimmt ChatGPT sämtliche GitHub-/Repository-Arbeiten. Perplexity dient ausschließlich als externer Reviewer/Auditor und nimmt keine Repo-Mutationen vor.
 
 Statusmarker strikt trennen: `✓[M]`, `✓[K/M]`, `✓[M]_part`, `✓[M]_neg`, `×[M]`, `?[O]`. Reviewer-/Governance-Status erzeugen keine automatische mathematische Promotion.
 
@@ -48,15 +49,13 @@ Exakt:
 ```math
 C_{jk}^{(p)}=(\log p)p^{\min(j,k)}p^{-3(j+k)/4},
 \qquad
-C_{kk}^{(p)}=(\log p)p^{-k/2}.
+C_{kk}^{(p)}=(\log p)p^{-k/2},
 ```
 
-Der Exponent `3/4` ist durch Martingalmultiplizität plus Weil-Diagonale erzwungen.
-
-Mit `q_p=p^{-1/2}`:
+und nach Weil-Diagonalnormalisierung
 
 ```math
-C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}q_p^{|j-k|}.
+C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2}.
 ```
 
 Tail/Root:
@@ -73,102 +72,119 @@ P11-Restseite:
 R_R^*R_R=\sum_{p,k}w_{p,k}Z_{p,k,R}^*Z_{p,k,R}.
 ```
 
-Cross-prime Root-Gram ist fensterloser Bulk, kein Boundaryterm.
-
 ### 3. Endliche OX-GRAM-Normalform
 
 Für `a<=1`:
 
 ```math
 Q_{B_a}=G_a^+-N_a,
-\qquad
-N_a=c_aI+C_a.
+\qquad N_a=c_aI+C_a.
 ```
 
-`G_a^+` besteht aus positiven Prime-Kanal-, Log-Multiplikator- und logarithmischen `log|D|`-Formen.
-
-Die bloße Existenz eines kontraktiven Faktors ist **kein** nichtzirkulärer Object-X-Gate: Bei bereits bekannter lokaler Positivität kann er rückwärts aus `Q_{B_a}` konstruiert werden. Diese Existenzfront ist geschlossen; offen ist **Kanonizität**.
+Die bloße Existenz eines kontraktiven Faktors ist als Object-X-Gate zirkulär/vakuant. Offen ist **Kanonizität**.
 
 ### 4. CERT-HARDEN
 
-Die endlichen Gate-1/Gate-2-Checker wurden vor Merge von PR #98 gehärtet und liefen auf demselben Exact Head GREEN:
+Die endlichen Gate-1/Gate-2-Checker sind gehärtet und auf demselben Exact Head GREEN. Gate 2: Arb 512 Bit, drei Radien, beide Paritäten, Dirichletbasis bis `N=14`, **42/42** strikt positive Cholesky-Blöcke. Kein globaler Positivitäts-/RH-Schluss.
 
-- Normalisierung Realraum/Fourier für `a=0.5,0.8,1.0`, fail-closed Residualbälle;
-- explizite Bernoulli- und `sinc`-Restbälle;
-- Arb-sichere Prime-Power-Cutoffs und Endpunktfehler;
-- Gate 2: Arb 512 Bit, Dirichletbasis `N<=14`, beide Paritäten, drei Radien, **42/42** strikt positive Cholesky-Blöcke.
+### 5. OX-GEN-A — gemeinsamer Exponentialgenerator `✓[M]`
 
-Diese Zertifikate sind endlich und kein RH-/unendlichdimensionaler Positivitätsbeweis.
-
-### 5. Aktuelle Hauptfront OX-GEN
-
-Suzukis Kernteil liefert exakt
+Setze
 
 ```math
-R_0(v,v)
-=-2\left(\int\cosh\frac x2\,v\right)^2
-+2\left(\int\sinh\frac x2\,v\right)^2.
+E_\pm(v)=\int e^{\pm x/2}v(x)\,dx,
+\qquad \mathcal Ev=(E_+(v),E_-(v)).
 ```
 
-Damit ist `R_0` höchstens Rang 2; gerade Parität liefert die negative `cosh`-Rang-1-Richtung, ungerade Parität die positive `sinh`-Rang-1-Richtung.
-
-Dieselbe Exponentialfamilie erscheint auf der Primseite:
+Für Translationen `(T_t v)(x)=v(x+t)` gilt
 
 ```math
-p^{-1/2}=e^{-\log p/2},
-\qquad
-R_p(j,k)=p^{-|j-k|/2},
-\qquad
-w_{p,k}=\log p\,p^{-k/2}.
+\boxed{\mathcal ET_t=\rho(t)\mathcal E,
+\qquad \rho(t)=\operatorname{diag}(e^{-t/2},e^{t/2}).}
 ```
 
-**OX-GEN:** Ist `R_0` ein intrinsischer Rand-/Defektterm derselben Exponentialstruktur, die die Prime-Power-Geometrie normiert? Gesucht ist eine explizite, vorwärts konstruierte Geometrie ohne Verwendung der fertigen Weilform, `B_a^{1/2}`, eines unbekannten Forminfimums oder RH.
+Mit
 
-`R_1` und der Skalarblock `c_aI` bleiben offen.
+```math
+K_n=T_{\frac12\log n}-T_{-\frac12\log n},
+\qquad \lambda_n=n^{1/4}-n^{-1/4}
+```
+
+folgt ohne Fensterrandterm
+
+```math
+\boxed{E_\pm(K_nv)=\mp\lambda_nE_\pm(v).}
+```
+
+Suzukis elementarer archimedischer Teil ist exakt das negative Charakter derselben Darstellung:
+
+```math
+\boxed{r_0''(t)=-\operatorname{tr}\rho(t)=-2\cosh(t/2),}
+```
+
+und sogar
+
+```math
+\boxed{r_0(\log n)=-4\lambda_n^2.}
+```
+
+Mit Austauschoperator
+
+```math
+P=\begin{pmatrix}0&1\\1&0\end{pmatrix}
+```
+
+gilt polarisiert
+
+```math
+\boxed{R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle_{\mathbb C^2}.}
+```
+
+Damit sind Prime-Kanäle und `r_0` zwei exakte Funktoren derselben zweidimensionalen Translation-/Reflexions-Geometrie.
+
+### 6. Prime-only-A2 aus `{w_n,lambda_n}` `×[M]` im engen Scope
+
+Die volle positive Prime-Gram-Form descendiert nicht auf den Quotienten `v -> (E_+,E_-)`, weil `ker \mathcal E` nicht in ihrem Radikal liegt.
+
+Außerdem fixiert
+
+```math
+D_n^*HD_n=-\lambda_n^2H
+```
+
+nur die off-diagonale Formklasse
+
+```math
+H=\begin{pmatrix}0&b\\\bar b&0\end{pmatrix};
+```
+
+der Maßstab `b` bleibt frei. Die diskreten Daten `{w_n,lambda_n}` allein bestimmen daher den absoluten Koeffizienten `2` in `R_0=-2E_+E_-` nicht.
+
+Mit der vollständigen Spiegelstruktur ist die Form dagegen kanonisch: `R_0=\mathcal E^*(-P)\mathcal E`.
+
+`r_1` und `c_aI` bleiben offen.
 
 ---
 
 ## Nächste Default-Arbeitsfolge
 
-1. **OX-GEN-A:** bei `a=0.5` die `cosh/sinh`-Momentfunktionale innerhalb der Prime-/`log|D|`-Featuregeometrie isolieren.
-2. **GENERATOR-CLASS:** eine natürliche Generator-Klasse vor einem möglichen No-Go festschreiben, sodass positive und negative Ausgänge beide vorab logisch möglich sind.
-3. **OX-GEN-B:** expliziten Intertwiner/Defektmechanismus konstruieren oder die definierte Klasse ausschließen.
-4. Parallel die AR(1)/Martingal-Faktorisierung als eigenständigen RH-unabhängigen Satz verschriftlichen; ausdrücklich nicht als Objekt X.
+1. **GENERATOR-CLASS / POSITIVE-DILATION-CLASS:** natürliche positive Erweiterungs-/Intertwinerklasse für `(C^2,rho,P,E)` festschreiben.
+2. **OX-GEN-A2' / POSITIVE-DILATION:** diese kanonische indefinite Rang-2-Geometrie intrinsisch in die positive Prime-/`log|D|`-Featuregeometrie einbetten oder die definierte Klasse ausschließen.
+3. **OX-GEN-B:** erst danach `r_1` und/oder den dominanten Skalar `c_aI` in dieselbe gemeinsame Geometrie einbeziehen.
+4. Parallel die AR(1)/Martingal-Faktorisierung als eigenständigen RH-unabhängigen Satz verschriftlichen.
 
 ---
 
 ## Nicht reaktivieren
 
-Folgende Deutungen sind zurückgezogen oder gesperrt:
-
-- PR91-Zeugenmatrix sei Rang 1;
-- `3/4` sei bloße Dämpfung;
-- Vier-Boundary-Erklärung der Interior/Baseline-Differenz;
-- cross-prime sei Fensterrand;
-- „Nichtunitarität = genau Hub“;
-- matched cutoff als Object-X-Mechanismus;
-- OX-REN/OX-REN' als Hauptfront;
-- Radiusvariation durch bloßes Ersetzen von `R=1` im PR97-Checker;
-- klassische `H^{1/2}`-/Douglas-Terminologie für den Kernel `1/|x-y|`;
-- globaler Kollaps von `||I-W^*W||`;
-- `0.603`-Koeffizientenratio als Konstante;
-- weitere reine OX-GRAM-Existenztests ohne nichtzirkulären Mechanismus.
+Nicht wieder als aktive Front verwenden: matched-cutoff, OX-REN/OX-REN', Vier-Boundary-Erklärung, cross-prime als Fensterrand, „Nichtunitarität = genau Hub“, klassische `H^{1/2}`-/Douglas-Terminologie für `1/|x-y|`, Kollaps von `||I-W^*W||`, `0.603` als Konstante, reine OX-GRAM-Existenztests sowie eine Prime-only-Rang-2-Gramform ohne zusätzliche Quotientenstruktur.
 
 ---
 
 ## Offene Nebenfronten
 
 - PR #91: analytischer Draft, kein übertragener unabhängiger Exact-Head-GREEN.
-- PR #49 / SW1 salvage: Candidate-only Nebenfront, kein stiller Merge.
+- PR #49: formal Ready, inhaltlich weiterhin Candidate-only.
 - R37/G4c: separat offen, Beziehung zu OX-GEN/Object X unresolved.
-- Historische R43-COND-/FD23-/Flagfragen: eigene offene Quantoren, aber nicht aktuelle Default-Aufgabe.
-
----
-
-## Arbeitsregel
-
-Ein Schritt zählt als Object-X-Hauptfront-Fortschritt nur, wenn er einen expliziten Geometrieteil konstruiert, eine vorab definierte Architekturklasse ausschließt, eine notwendige gemeinsame Generatorstruktur beweist oder eine tatsächlich benötigte mathematische Lücke schließt.
-
-Ein Falsifikationsgate zählt nur, wenn **beide Ausgänge vorab logisch möglich** sind.
 
 Es gibt weiterhin **keine vollständige Object-X-Realisierung und keinen RH-Beweis**.
