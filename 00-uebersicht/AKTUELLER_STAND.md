@@ -1,132 +1,96 @@
-# Aktueller Stand — Objekt X / OX-GEN-B
+# Aktueller Stand — Objekt X / NULLPOL-CORE
 
 > **Stand:** 13. September 2026; Registry unverändert.  
-> Details: [CURRENT-FRONT](../CURRENT-FRONT.md), [Roadmap](FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](DAG.md), [Registry](ACTIVE_THEOREM_REGISTRY.md).
+> Details: [CURRENT-FRONT](../CURRENT-FRONT.md), [Nullpol-Audit](../audits/P11_NULLPOLE_STRATEGIC_RECLASSIFICATION_2026-09-13.md), [Roadmap](FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](DAG.md).
 
 ## 1. Basis
 
-Fixed-pair Strong Terminal/C6 liegt im ungeraden P11-Graphraum vor. Die Prime-Power-Seite besitzt die exakte AR(1)/Weil-Tail-Struktur. Für `0<a<=1`:
+Prime-Power-AR(1), fixed-pair Strong Terminal/C6 und die lokale Normalform bleiben verfügbar. Für `0<a<=1` im kanonischen Suzuki-Gauge:
 
 ```math
 Q_{B_a}=G_a^+-c_aI-R_0-R_1.
 ```
 
-## 2. OX-GEN-A / POS-DIL-1
+## 2. Nullpol-Schlüsselidentität `✓[M]`
+
+Mit
 
 ```math
-\mathcal ET_t=\rho(t)\mathcal E,
-\qquad
-\mathcal EK_n=D_n\mathcal E,
+M(v)(s)=\int_{\mathbb R}v(x)e^{(s-1/2)x}\,dx
 ```
+
+gilt
 
 ```math
-R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle.
+\boxed{E_-(v)=M(v)(0),\qquad E_+(v)=M(v)(1).}
 ```
 
-Die Prime-moment-Hilbertisierung erfüllt
+Auf
 
 ```math
-\|V_Nv\|^2=\|\mathcal Ev\|^2,
-\qquad
-R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.
+\mathscr D_{NP}=\{v:M(v)(0)=M(v)(1)=0\}
 ```
 
-## 3. Erster Außenshell und Radius
+verschwinden daher exakt
 
 ```math
-\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\},
+R_0(v,w),\qquad \|\mathcal Ev\|^2.
 ```
 
-```math
-H_a^{out}=2B_a^{out}I.
-```
+Connes–Consani, Proposition C.1, liefert eine **globale RH-äquivalente** Weil-Testklasse mit diesen Nullbedingungen; keine fixed-`a`-Äquivalenz wird daraus behauptet.
 
-Für alle `0<a<=1` gilt
+## 3. Strategische Korrektur
 
-```math
-A_a^{out}:=G_a^++H_a^{out}
-\succeq \mathcal E^*\mathcal E.
-```
+OX-GEN-A bleibt `✓[M]`, wird aber als exakte **Pole-layer geometry** reklassifiziert. Die frühere Deutung als notwendiger Object-X-Klassenschnitt ist zurückgezogen.
 
-## 4. Exakte Prime-cutoff-Gauge `✓[M]`
+Die mathematischen Resultate PR #101--#105 bleiben vollständig gültig und bilden nun die auxiliary full-class POS-DIL-Route. Sie sind nicht mehr Default-Hauptfront.
 
-Für jede endliche Außenkanalmenge `J` mit `c_n>a` gilt polarisiert
+## 4. Nullpol-Normalform
 
-```math
-H_{a,J}=b_JI,
-\qquad
-b_J=2\sum_{n\in J}\frac{\Lambda(n)}{\sqrt n}.
-```
-
-Damit exakt
-
-```math
-Q_{B_a}
-=(G_a^++H_{a,J})-(c_a+b_J)I-R_0-R_1.
-```
-
-Für den ersten Außenshell:
+Auf der lokalen Nullpol-Unterklasse gilt exakt
 
 ```math
 \boxed{
-Q_{B_a}=A_a^{out}-c_a^{out}I-R_0-R_1,
+Q_{B_a}(v)
+=G_a^+(v)-c_a\|v\|_2^2-R_1(v,v).
 }
 ```
 
-```math
-c_a^{out}=c_a+2B_a^{out}
-=c_a+A_{e^{4a}}-A_{e^{2a}}.
+Damit verbleiben als aktive nichtannihilierbare Blöcke:
+
+```text
+positive Prime/log|D| geometry
+minus scalar ledger
+minus R_1.
 ```
 
-Der isolierte Skalar `c_a` ist damit cutoff-gaugeabhängig; die vollständige Differenzbuchung ist invariant.
+## 5. Neue Default-Hauptfrage
 
-## 5. Exakte positive `R_0`-Absorption `✓[M]`
+**NULLPOL-CORE / `R_1` + Skalarledger `?[O]`.**
 
-Setze
+Nächste Schritte:
 
-```math
-D_a^{out}:=A_a^{out}-\mathcal E^*\mathcal E\succeq0,
+1. exakten polarisierten `R_1`-Kernel rekonstruieren;
+2. `R_1`-Parität und Generator-/Translationsstruktur auf Nullpol bestimmen;
+3. canonical-Suzuki-Gauge und gaugeinvariante Skalarformulierung parallel prüfen;
+4. nur Mechanismen als Hauptfortschritt zählen, die nach `M(v)(0)=M(v)(1)=0` nichttrivial bleiben.
+
+## 6. POS-DIL-Präzisierungen
+
+- Für komplexe `v`: `R_0(v,v)=-2 Re(E_+(v) overline(E_-(v)))`.
+- Der minimale Companion-Block ist bei `t=1` semidefinit/entartet; strikt positiv erst für `t>1`.
+- Im Anti-Kovarianz-No-Go bleibt `b in C`, also zwei reelle Parameter.
+- Die externe Rayleigh-Diagnostik lokalisiert die alte Domination-Obstruktion numerisch im geraden Sektor.
+
+## 7. Offen
+
+```text
+NP-R1
+NP-SCALAR / gauge-invariant scalar remainder
+NP-COMMON
+genuine X candidate
+exact full Weil-Gram identity
+Object-X realization
+Weil-criterion scope
+RH
 ```
-
-```math
-L_+(v)=E_+(v)+E_-(v)
-=2\int_{-a}^a\cosh(x/2)v(x)\,dx.
-```
-
-Dann polarisiert
-
-```math
-\mathcal E^*\mathcal E-R_0=L_+^*L_+.
-```
-
-Folglich
-
-```math
-\boxed{
-P_a^{(0)}:=A_a^{out}-R_0
-=D_a^{out}+L_+^*L_+\succeq0.
-}
-```
-
-Die volle lokalisierte Form lautet jetzt exakt
-
-```math
-\boxed{
-Q_{B_a}=P_a^{(0)}-c_a^{out}I-R_1,
-\qquad0<a\le1.
-}
-```
-
-Damit ist der elementare `r_0`-/`R_0`-Layer positiv absorbiert, ohne die Weilform zu verändern.
-
-## 6. Neue Hauptfrage
-
-**OX-GEN-B / `R_1` + gaugeinvarianter Skalarrest `?[O]`**.
-
-Zu klären:
-
-1. `R_1` auf dieselbe Generator-/Featuregeometrie zurückführen oder eine natürliche Klasse ausschließen;
-2. den Skalarrest gaugeinvariant formulieren oder einen kanonischen cutoff-Gauge fixieren;
-3. `R_1` und Skalarledger möglichst gemeinsam behandeln.
-
-Weiter offen: `R_1`, gaugeinvarianter Skalarrest, genuine X candidate, volle Weil-Gram-Identität, Object X und RH.
