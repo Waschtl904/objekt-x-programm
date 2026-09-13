@@ -21,11 +21,11 @@ Aktuelle Hauptaudits:
 
 - `audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md`
 - `audits/P11_NP_GAP_Q0_FIRST_CHANNEL_2026-09-13.md`
-- `audits/P11_NULLPOLE_STRATEGIC_RECLASSIFICATION_2026-09-13.md`
+- `audits/P11_NP_GAP_REVIEW_CORRECTION_PRIME_OVERLAP_2026-09-13.md`
 
 ### Governance
 
-ChatGPT übernimmt sämtliche GitHub-/Repository-Arbeiten. Externe Modelle dienen ausschließlich als Reviewer/Auditoren. Statusmarker strikt trennen: `✓[M]`, `✓[K/M]`, `✓[M]_part`, `✓[M]_neg`, `×[M]`, `?[O]`.
+ChatGPT übernimmt sämtliche GitHub-/Repository-Arbeiten. Externe Modelle dienen als Reviewer/Auditoren. Statusmarker strikt trennen: `✓[M]`, `✓[K/M]`, `✓[M]_part`, `✓[M]_neg`, `×[M]`, `?[O]`.
 
 ---
 
@@ -34,151 +34,130 @@ ChatGPT übernimmt sämtliche GitHub-/Repository-Arbeiten. Externe Modelle diene
 ### 1. COMMON-JUMP `✓[M]`
 
 ```math
-K_t=T_{t/2}-T_{-t/2}.
+K_t=T_{t/2}-T_{-t/2}
 ```
 
-Archimedischer Ort und Primzahlpotenzen entstehen als kontinuierlicher bzw. atomarer Teil derselben positiven `K_t`-Featuregeometrie. Mit
+erzeugt archimedischen und Prime-Power-Anteil in einer gemeinsamen positiven Featuregeometrie. Auf Nullpol:
 
 ```math
-\Gamma_a
-=2\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}
-+\log\pi-\psi(1/4)
+\boxed{Q_W(v)=\|X_av\|^2-\Gamma_a\|v\|^2.}
 ```
 
-gilt für jedes `a>0`
+### 2. Q0 / erster Gamma-Kanal `✓[M]`
 
 ```math
-Q_W(v,w)
-=\langle Ev,PEw\rangle
-+\langle X_av,X_aw\rangle
--\Gamma_a\langle v,w\rangle.
-```
-
-Auf Nullpol `D_NP=ker M(0) cap ker M(1)`:
-
-```math
-\boxed{
-Q_W(v,w)=\langle X_av,X_aw\rangle-\Gamma_a\langle v,w\rangle.
-}
-```
-
-### 2. Archimedische Resolventenkanäle `✓[M]`
-
-```math
-\frac{e^{-t/2}}{1-e^{-2t}}
-=\sum_{m\ge0}e^{-\alpha_m t},
-\qquad
-\alpha_m=2m+\frac12.
-```
-
-Für
-
-```math
-A_\alpha=\int_0^\infty e^{-\alpha t}K_t^*K_tdt
-```
-
-gilt
-
-```math
-\boxed{
 A_\alpha
-=\frac{2}{\alpha}
-(-\partial_x^2)(-\partial_x^2+\alpha^2)^{-1}.
-}
+=\frac2\alpha(-\partial_x^2)(-\partial_x^2+\alpha^2)^{-1},
 ```
-
-### 3. Exakter `Q_0`-First-Channel-Satz `✓[M]`
-
-Mit
 
 ```math
-Q_0=-\partial_x^2+\frac14
+Q_0=-\partial_x^2+\frac14,
 ```
-
-folgt für `alpha_0=1/2`
 
 ```math
-\boxed{
-A_{1/2}=4I-Q_0^{-1},
-\qquad
-A_{1/2}Q_0=-4\partial_x^2.
-}
+\boxed{A_{1/2}Q_0=-4\partial_x^2.}
 ```
 
-Nur beim ersten Kanal cancelt der Resolventennenner.
+Außerdem
 
-### 4. Support-erhaltende Nullpolparametrisierung `✓[M]`
+```math
+Q_0:C_c^\infty(-a,a)\cong D_{NP}(a)
+```
 
-Der Green-Kern `e^{-|x-y|/2}` zeigt
+support-erhaltend.
+
+### 3. Höhere Kanäle `✓[M]`
+
+Der Schur-Test beweist
 
 ```math
 \boxed{
-Q_0:C_c^\infty(-a,a)\xrightarrow{\cong}D_{NP}(a)
+A_\alpha\succeq\frac2\alpha e^{-\alpha a}I
 }
 ```
 
-support-erhaltend. Für `v=Q_0u`:
+auf Funktionen mit Träger in `(-a,a)`. Die Exponentendiskrepanz aus dem externen Review ist geschlossen.
+
+### 4. Short-window-Korrektur
+
+Die eigene Architektur reproduziert Kleinfenster-Coercivity, aber die Positivität für kleine Fenster ist nicht neu: Suzuki Theorem 1.4 beweist eine stärkere volle-Klasse-Aussage.
+
+```text
+COMMON-JUMP/Q0 interne Reproduktion      ✓[M]_part
+neuer short-window Weil-Satz             ×[M]
+```
+
+Ein separater Arb-Gate zertifiziert den projektinternen Schwellenwert `a_*`.
+
+### 5. Neue exakte Restform `✓[M]`
+
+Definiere
+
+```math
+\mathcal A(v)
+=\int_0^\infty\frac{e^{-t/2}}{1-e^{-2t}}\|K_tv\|^2dt
+-\kappa_*\|v\|^2.
+```
+
+Dann auf Nullpol:
+
+```math
+\boxed{Q_W(v)=\mathcal A(v)-\mathcal O_a(v)}
+```
+
+mit
 
 ```math
 \boxed{
-\langle v,A_{1/2}v\rangle
-=4\|u''\|^2+\|u'\|^2.
+\mathcal O_a(v)
+=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
+\operatorname{Re}\langle T_{\log n}v,v\rangle.
 }
 ```
 
-### 5. Short-window NP-GAP `✓[M]_part`
+Die Prime-Diagonalmasse cancelt exakt. Der arithmetische Rest besteht ausschließlich aus den überlappenden inneren Prime-Power-Shifts.
 
-Dirichlet-Poincaré und Schur-Tests liefern
+### 6. Q0-Transport des overlap `✓[M]`
 
-```math
-\langle v,A_{1/2}v\rangle
-\ge\frac{4\pi^2}{\pi^2+a^2}\|v\|^2,
-```
+Für `v=Q0u`:
 
 ```math
-\langle v,A_\alpha v\rangle
-\ge\frac{2}{\alpha}e^{-\alpha a}\|v\|^2.
+Re<T_t v,v>
+=Re<T_tu'',u''>
++\frac12Re<T_tu',u'>
++\frac1{16}Re<T_tu,u>.
 ```
-
-Daraus folgt analytisch ein nichtleerer Bereich ausreichend kleiner Fenster, in dem
-
-```math
-\boxed{
-\|X_av\|^2\ge\Gamma_a\|v\|^2
-\qquad(v\in D_{NP}(a))
-}
-```
-
-bereits bewiesen ist.
 
 ---
 
-## Nächster Default-Auftrag — `NP-GAP-EXTEND`
+## Nächster Default-Auftrag — NP-OVERLAP
 
-Der verbleibende harte Satz ist
+Zu beweisen ist
 
 ```math
 \boxed{
-\lambda_{NP}(a)\ge\Gamma_a
-\quad\text{für jedes }a>0.
+(A_\infty-\kappa_*I)|_{D_{NP}(a)}
+\succeq
+\mathbf O_a|_{D_{NP}(a)}
+\quad\text{für alle }a>0.
 }
 ```
 
-Arbeite in dieser Reihenfolge:
+Arbeitsreihenfolge:
 
-1. Verbessere die höheren Kanaluntergrenzen über den elementaren Schur-Test hinaus.
-2. Nutze die exakte `Q_0`-Parametrisierung und prüfe, ob die Summe der Resolventenkanäle einen stärkeren lokalen Operator ergibt.
-3. Analysiere den ersten Prime-Cutoff `2a=log2` exakt; keine post-hoc Gegenmasse.
-4. Prüfe nonlocal-Poincare-, Paley-Wiener-, de-Branges- und Prolate-Mechanismen nur vorwärts.
-5. Ein enger No-Go gegen eine natürliche Klasse zählt als Fortschritt.
+1. Bestimme das positive Spektrum von `O_a` nach Nullpolkompression, getrennt nach Parität.
+2. Nutze den exakten `Q0`-Sobolevtransport der Shift-Korrelationen.
+3. Finde scharfe Abschätzungen in der Überlappungsbreite `delta_n=2a-log n`, insbesondere für `delta_n downarrow0`.
+4. Verknüpfe diese Frage mit der bereits bewiesenen Prime-Power-AR(1)/Weil-tail-Struktur.
+5. Behandle die finite Gamma-null ladder nur auxiliary, solange sie `O_a` nicht quantitativ kontrolliert.
 
 ### Zirkularitäts-Firewall
 
-Ein Beweis des Bounds für alle Fenster wäre bereits RH. Niemals Weil-Positivität, RH oder einen rückwärts aus positiver Weilform definierten Operator als Input verwenden.
+Ein all-`a`-Beweis wäre bereits RH. Niemals Weil-Positivität oder RH als Input zurückverwenden.
 
 ### Numerik-Firewall
 
-Endlichdimensionale Ritz-Minima sind **obere Schranken** für das wahre Infimum. Positive endliche Ritz-Gaps beweisen nichts. Nicht Arb-zertifizierte Werte nicht promoten.
+Endlichdimensionale Ritz-Minima sind obere Schranken für das wahre Infimum. Positive endliche Ritz-Gaps beweisen nichts. Intervall-/Arb-Zertifikate getrennt kennzeichnen.
 
 ---
 
@@ -186,13 +165,13 @@ Endlichdimensionale Ritz-Minima sind **obere Schranken** für das wahre Infimum.
 
 ```text
 COMMON-JUMP architecture                         ✓[M]
-Q0 first-channel intertwining                    ✓[M]
-support-preserving null-pole Q0 map              ✓[M]
-short-window NP-GAP                              ✓[M]_part
+Q0 first-channel / support map                   ✓[M]
+centered Prime-overlap form                      ✓[M]
+short-window internal reproduction               ✓[M]_part
+short-window novelty                             ×[M]
 forward Object-X candidate architecture          ✓[M]_part
-NP-GAP for every a>0                             ?[O]
+NP-OVERLAP for every a>0                         ?[O]
 full positive Object-X realization / RH          ?[O]
-publication novelty                              ?[O]
 ```
 
 Registry und Arbeitsdefinition werden nicht automatisch promoviert.
