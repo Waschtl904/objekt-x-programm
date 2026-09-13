@@ -1,363 +1,174 @@
 # Einstiegsprompt — Neue Chat-Session
 
-> **Aktueller Stand: 3. September 2026.**
-> Für eine neue Session soll **nur der folgende aktuelle Einstieg** als operative
-> Arbeitsgrundlage verwendet werden. Frühere Prompts bleiben darunter ausschließlich als
-> historische Provenienz erhalten.
+> **Aktueller Stand: 13. September 2026.**
+> Dieser Text ist der operative Einstieg für eine neue Session. Ältere Stände sind über Git erhalten und nicht als heutige Arbeitsanweisung zu verwenden.
 
-## Aktueller Einstieg — kopierbarer Arbeitskontext
+## Kopierbarer Arbeitskontext
 
-Ich arbeite am Forschungsprogramm **Objekt X** zur Riemannschen Hypothese im Repository
-Waschtl904/objekt-x-programm. Arbeite als strenger mathematischer Auditor und Research
-Assistant. Prüfe bei jeder neuen Aufgabe zuerst den aktuellen main-Stand und verwende aktive
-mathematische Quellen vor älteren Navigationsdokumenten.
+Ich arbeite am Forschungsprogramm **Objekt X** zur Riemannschen Hypothese im Repository `Waschtl904/objekt-x-programm`.
+
+Arbeite als strenger mathematischer Auditor und Research Assistant. Prüfe zu Beginn den aktuellen `main`-Stand direkt im Repository. Verwende kanonische mathematische Quellen vor älteren Navigations- oder Archivdokumenten. Keine Behauptung darf durch einen Merge oder einen positiven numerischen Test still promotet werden.
 
 ### Kanonische operative Quellen
 
-1. CURRENT-FRONT.md — aktuelle Forschungsfront und nächster Schritt.
-2. 00-uebersicht/ACTIVE_THEOREM_REGISTRY.md — Status, Scope, Provenienz.
-3. 00-uebersicht/AKTUELLER_STAND.md — kurze operative Zusammenfassung.
-4. 00-uebersicht/FORSCHUNGS_ROADMAP_2026-09-03.md — strategische Roadmap.
-5. 00-uebersicht/DAG.md — aktuelle Abhängigkeits-/Firewall-Struktur.
-6. 00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md — Definition von Objekt X.
+Lies in dieser Reihenfolge:
 
-### Aktueller mathematischer Stand
+1. `CURRENT-FRONT.md`
+2. `00-uebersicht/AKTUELLER_STAND.md`
+3. `00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md`
+4. `00-uebersicht/DAG.md`
+5. `00-uebersicht/ACTIVE_THEOREM_REGISTRY.md`
+6. `00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`
 
-- **A / finite-level Cross-Gram:** der universelle SW1-Nichtentartungsanspruch ist durch
-  M1-ND-IMG4-SMALLR negativ entschieden. PR #49 bleibt als unpromotierter
-  Blind-Wedge-Kandidat geparkt.
-- **B / Strong Terminal:** aktive Hauptfront.
-- R38–R42 sind jeweils **FROZEN — independently verified AI-GREEN**, ohne automatische
-  kanonische ✓[M]-Promotion.
-- Für jedes feste \(0<R<S\) konvergiert der echte Future-Transport bereits stark auf
-  \[
-  H_R^0=\ker\beta_R^{(0)}.
-  \]
-- Strong Terminal / C6 ist auf die eine Normalbahn
-  \[
-  W_{R,S}^{[U]}\varepsilon_R,\qquad \varepsilon_R=e_{R,0},
-  \]
-  bzw. auf
-  \[
-  \operatorname{Re}
-  \langle\varepsilon_R,K_{R,S}^{T,U}\varepsilon_R\rangle\to1
-  \]
-  reduziert.
-- R43 ist **OPEN**. Die unteren Gamma-Nest-Reduktionen sind partiell extern GREEN; die
-  Krein/de-Branges-Literaturimporte wurden source-checked und korrigiert.
-- **GC-M1_scalar** ist candidate-GREEN.
-- R43 §3K liefert einen noch unabhängig zu prüfenden **GC-AC candidate closure** über die
-  totale Familie höherer constrained Gamma-Rieszvektoren.
-- Falls §3K GREEN wird, bleibt als finaler Strong-Terminal-Gate nur
-  \[
-  b_U
-  =
-  \langle W_{R,S}^{[U]}\varepsilon_R,\varepsilon_S\rangle,
-  \qquad
-  b_U\to b,\ |b|=1\ ?
-  \]
-- R37/G4c bleibt separat offen. R38–R43 dürfen R37 nicht rückwirkend promotieren.
-- Es gibt weiterhin keinen X-Kandidaten im Sinn der kanonischen Arbeitsdefinition und
-  keine RH-Aussage.
+Für den aktuellen mathematischen Strang zusätzlich:
 
-### Nächste Default-Arbeitsfolge
-
-1. R43 §3K destruktiv extern prüfen:
-   Jet-Totalität, höhere Gamma-Rieszvektoren, Analytizität der \(\gamma_m\)-Nestmaße,
-   Maßargument \(\Rightarrow\) GC-AC.
-2. Falls GREEN: terminalfreie Gamma-Dichtefront schließen.
-3. Den letzten Normal-Skalar \(b_U\) direkt angreifen.
-4. Strong Terminal positiv oder negativ entscheiden.
-5. Erst danach neu entscheiden, ob B in eine X-Kandidatenarchitektur überführt oder
-   R37/G4c wieder aufgenommen wird.
+- `audits/P11_OBJECT_X_AR1_OX_GRAM_CONSOLIDATION_2026-09-12.md`
+- `audits/P11_OX_GRAM_GATE2_AND_OX_GEN_2026-09-12.md`
 
 ### Governance
 
-Statusmarker strikt verwenden: ✓[M], ✓[K/M], ✓[M]_part, ✓[M]_neg, ×[M], ?[O].
-FROZEN/AI-GREEN/independent review sind Reviewer-/Governance-Buchungen und erzeugen keine
-automatische ✓[M]-Promotion.
+Für **Objekt X** übernimmt ChatGPT sämtliche GitHub-/Repository-Arbeiten: Dateien ändern, Branches, Commits/Pushes, PRs, Kommentare und Merges. Perplexity dient ausschließlich als externer Reviewer/Auditor und nimmt keine Repo-Mutationen vor.
+
+Statusmarker strikt trennen: `✓[M]`, `✓[K/M]`, `✓[M]_part`, `✓[M]_neg`, `×[M]`, `?[O]`. Reviewer-/Governance-Status erzeugen keine automatische mathematische Promotion.
 
 ---
 
-## Historischer Alt-Prompt — nicht als aktuelle Front verwenden
+## Aktueller mathematischer Stand
 
-> **Historischer Stand:** 6. August 2026 — nach NEU-250a / Ausgang B / damaliger nächster Knoten [O-221-1c1a0-C].
-> Die folgenden Abschnitte bleiben nur als Forschungsprovenienz erhalten.
+### 1. Strong Terminal / C6
 
-## Kontext: Wer ich bin und woran ich arbeite
+Für jedes feste `0<R<S` gilt im **ungeraden P11-Graphraum** der fixed-pair Strong-Terminal/C6-Abschluss aus positivem Wurzelanker plus R42.51.
 
-Ich arbeite an einem langfristigen, eigenständigen Forschungsprogramm zur Riemannschen
-Hypothese (RH). Das Programm ist auf mehrere GitHub-Repositories unter dem Account
-**Waschtl904** verteilt und wird durch einen lakatosianisch strukturierten Fragenkatalog
-koordiniert: jede Aussage trägt eine explizite epistemische Statusmarke, negative Resultate
-sind gleichrangige Ergebnisse, und jeder offene Punkt hat eine eindeutige Knoten-ID.
+Scope-Firewall: keine Radienuniformität, keine Operatornormkonvergenz, kein vollständiger gerader Sektor, keine Object-X- oder RH-Folgerung.
 
-Das ist kein Einsteigeransatz. Die Repos enthalten ausgearbeitete mathematische Texte, die
-im Dialog mit KI-Assistenten entstanden sind. Es gibt **keinen Beweis der RH** — das Ziel
-ist eine belastbare Spektralrealisierung, und der Weg dorthin ist dokumentiert
-einschließlich aller Sackgassen.
+### 2. Prime-Power-AR(1)-Struktur
+
+Exakt:
+
+```math
+C_{jk}^{(p)}=(\log p)p^{\min(j,k)}p^{-3(j+k)/4},
+\qquad
+C_{kk}^{(p)}=(\log p)p^{-k/2}.
+```
+
+Der Exponent `3/4` ist durch Martingalmultiplizität plus Weil-Diagonale erzwungen.
+
+Mit `q_p=p^{-1/2}`:
+
+```math
+C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}q_p^{|j-k|}.
+```
+
+Tail/Root:
+
+```math
+T_q^*T_q=R_q-uu^*,
+\qquad
+T_q^*T_q+uu^*=R_q.
+```
+
+P11-Restseite:
+
+```math
+R_R^*R_R=\sum_{p,k}w_{p,k}Z_{p,k,R}^*Z_{p,k,R}.
+```
+
+Cross-prime Root-Gram ist fensterloser Bulk, kein Boundaryterm.
+
+### 3. Endliche OX-GRAM-Normalform
+
+Für `a<=1`:
+
+```math
+Q_{B_a}=G_a^+-N_a,
+\qquad
+N_a=c_aI+C_a.
+```
+
+`G_a^+` besteht aus positiven Prime-Kanal-, Log-Multiplikator- und logarithmischen `log|D|`-Formen.
+
+Die bloße Existenz eines kontraktiven Faktors ist **kein** nichtzirkulärer Object-X-Gate: Bei bereits bekannter lokaler Positivität kann er rückwärts aus `Q_{B_a}` konstruiert werden. Diese Existenzfront ist geschlossen; offen ist **Kanonizität**.
+
+### 4. CERT-HARDEN
+
+Die endlichen Gate-1/Gate-2-Checker wurden vor Merge von PR #98 gehärtet und liefen auf demselben Exact Head GREEN:
+
+- Normalisierung Realraum/Fourier für `a=0.5,0.8,1.0`, fail-closed Residualbälle;
+- explizite Bernoulli- und `sinc`-Restbälle;
+- Arb-sichere Prime-Power-Cutoffs und Endpunktfehler;
+- Gate 2: Arb 512 Bit, Dirichletbasis `N<=14`, beide Paritäten, drei Radien, **42/42** strikt positive Cholesky-Blöcke.
+
+Diese Zertifikate sind endlich und kein RH-/unendlichdimensionaler Positivitätsbeweis.
+
+### 5. Aktuelle Hauptfront OX-GEN
+
+Suzukis Kernteil liefert exakt
+
+```math
+R_0(v,v)
+=-2\left(\int\cosh\frac x2\,v\right)^2
++2\left(\int\sinh\frac x2\,v\right)^2.
+```
+
+Damit ist `R_0` höchstens Rang 2; gerade Parität liefert die negative `cosh`-Rang-1-Richtung, ungerade Parität die positive `sinh`-Rang-1-Richtung.
+
+Dieselbe Exponentialfamilie erscheint auf der Primseite:
+
+```math
+p^{-1/2}=e^{-\log p/2},
+\qquad
+R_p(j,k)=p^{-|j-k|/2},
+\qquad
+w_{p,k}=\log p\,p^{-k/2}.
+```
+
+**OX-GEN:** Ist `R_0` ein intrinsischer Rand-/Defektterm derselben Exponentialstruktur, die die Prime-Power-Geometrie normiert? Gesucht ist eine explizite, vorwärts konstruierte Geometrie ohne Verwendung der fertigen Weilform, `B_a^{1/2}`, eines unbekannten Forminfimums oder RH.
+
+`R_1` und der Skalarblock `c_aI` bleiben offen.
 
 ---
 
-## Repositories
+## Nächste Default-Arbeitsfolge
 
-| Repo | Inhalt |
-|---|---|
-| [`objekt-x-programm`](https://github.com/Waschtl904/objekt-x-programm) | **Öffentliche Hauptfassung.** Primäres aktives Repo. Enthält README, INDEX, STATUS, GLOSSAR, OFFENE_PROBLEME, KONVENTIONEN, CHANGELOG, **KARTE.md** (Großschreibung!). |
-| [`rh-fragenkatalog`](https://github.com/Waschtl904/rh-fragenkatalog) | Privates Archivrepo (älter, nicht mehr aktiv). |
-| [`prolate-primes-paper`](https://github.com/Waschtl904/prolate-primes-paper) | Funktionalanalysis $H_c$, SOT-Limes, Spektralstruktur (TeX). |
-| [`prolate-gram-coercivity`](https://github.com/Waschtl904/prolate-gram-coercivity) | Gram-Koerzivität, Edge-Block, XXII-Programm (TeX). |
-
-### Struktur von `objekt-x-programm`
-
-```
-00-grundlegung/               Minimalaxiome, Ebenen I–XVI, Spektraltriage
-01-primkanten-werkzeuge/      NEU-003 – NEU-056, NEU-223 – NEU-249   Wodzicki, Feshbach, Fourier-Hebung, Nelson, Dirichletresiduumsform
-02-jacobi-limes/              NEU-058 – NEU-090   Weyl-Funktion, Divisorgraph, Schleifenspuren
-03-weil-form-statistik/       NEU-091 – NEU-120   Bochner-Tor, GUE-Formfaktor, Herglotz-Weil
-04-grenzoperator-renormierung/NEU-121 – NEU-150   PSWF, Selbstenergie, Mangoldt-Spur, Mellin
-05-primkanal-fourierladung/   NEU-151 – NEU-173   Kanalgewichte, L3°-Zeugenroute, Typfundament
-06-hochschild-bc-algebra/     NEU-174 – NEU-222   HH⁴, Derivationen, B^log, O-219-No-Go
-07-weil-explizitformel/       NEU-220 – NEU-250a  Gammafaktor, Kontur, Krein, Hankel, Momentquelle, Wres-Typaudit
-audits/                       Quer-Audits und Methodik
-INDEX.md  STATUS.md  OFFENE_PROBLEME.md  GLOSSAR.md  KONVENTIONEN.md  CHANGELOG.md  KARTE.md
-```
-
-**Dateinamenkonvention:** `NEU-NNN[suffix]_Titel.md` mit dreistelliger, nullaufgefüllter
-Nummer. Die Katalog-ID im Text bleibt unverändert.
-
-**Wichtige Korrekturen gegenüber früheren Sessions:**
-- Das primäre aktive Repo ist **`objekt-x-programm`**, nicht `rh-fragenkatalog`.
-- Die Karte heißt **`KARTE.md`** (Großschreibung) im Root des Repos.
-- Höchste vergebene Nummer: **NEU-250a** (in `07-weil-explizitformel/`).
-- Nächste freie Nummer: **NEU-251**.
-- NEU-057 ist eine ältere Lücke in 01 — nicht die nächste aktive Nummer.
-- Im Strang 07 geht die Nummerierung bis NEU-250a; NEU-245d, NEU-245e/f ebenfalls vorhanden.
-- NEU-246 existiert doppelt (in 01 und 07) — Klärung ausstehend.
+1. **OX-GEN-A:** bei `a=0.5` die `cosh/sinh`-Momentfunktionale innerhalb der Prime-/`log|D|`-Featuregeometrie isolieren.
+2. **GENERATOR-CLASS:** eine natürliche Generator-Klasse vor einem möglichen No-Go festschreiben, sodass positive und negative Ausgänge beide vorab logisch möglich sind.
+3. **OX-GEN-B:** expliziten Intertwiner/Defektmechanismus konstruieren oder die definierte Klasse ausschließen.
+4. Parallel die AR(1)/Martingal-Faktorisierung als eigenständigen RH-unabhängigen Satz verschriftlichen; ausdrücklich nicht als Objekt X.
 
 ---
 
-## Objekt X — Fünfschicht-Profil
+## Nicht reaktivieren
 
-```
-Objekt X = (A_2D^r, [ω̃₂], [L₃], Wres_BC^top, m →^p pm)
-```
+Folgende Deutungen sind zurückgezogen oder gesperrt:
 
-Fünfte Schicht: relative Primkanten $m \to pm$ mit
-$\mathcal H_{\mathrm{rel},N} = \bigoplus_{p\le N}\bigoplus_m \mathcal H_{m\to pm}$.
-
-### Zwei RH-Äquivalenzen
-
-```
-(1) Jacobi-Kanal   RH ⟺ Spec(lim A_N^{Jac,-}) ⊂ ℝ           ⚠[M]  NEU-63D
-(2) Hankel-Kanal   RH ⟺ H_N^(0) ⪰ 0 ∧ H_N^(1) ⪰ 0  ∀N       ✓[M]  NEU-220w
-                   mit μ_k = −(k+1)/(2k+2)! · (log Ξ)^(2k+2)(0)
-                   H_N^(0) = (μ_{i+j}),  H_N^(1) = (μ_{i+j+1})
-```
-
-Der Hankel-Kanal ist die stärkste unkonditionale Äquivalenz des Programms — beide
-Richtungen sind bewiesen. **Was fehlt, ist nicht die Äquivalenz, sondern eine adelische
-Quelle für die Positivität der Momentfolge.**
+- PR91-Zeugenmatrix sei Rang 1;
+- `3/4` sei bloße Dämpfung;
+- Vier-Boundary-Erklärung der Interior/Baseline-Differenz;
+- cross-prime sei Fensterrand;
+- „Nichtunitarität = genau Hub“;
+- matched cutoff als Object-X-Mechanismus;
+- OX-REN/OX-REN' als Hauptfront;
+- Radiusvariation durch bloßes Ersetzen von `R=1` im PR97-Checker;
+- klassische `H^{1/2}`-/Douglas-Terminologie für den Kernel `1/|x-y|`;
+- globaler Kollaps von `||I-W^*W||`;
+- `0.603`-Koeffizientenratio als Konstante;
+- weitere reine OX-GRAM-Existenztests ohne nichtzirkulären Mechanismus.
 
 ---
 
-## Gesicherter Kern (Auswahl)
+## Offene Nebenfronten
 
-| Bereich | Einträge | Kernresultat |
-|---|---|---|
-| Primkantenraum | NEU-44, 44.X/X' | $\mathcal H_{\mathrm{rel},N}$ notwendig; Kantendiagonalität; Rang-1-$C_p^{\mathrm{rel}}$ |
-| Fourier-Hebung | NEU-42 | $T_p^{\mathrm{rel}} = \log p$; $e^{-sT_p^{\mathrm{rel}}} = p^{-s}$ |
-| Nelson / Konfinement | NEU-53–56 | $iJ^-$ wesentlich selbstadjungiert (konditional); $\gamma_N = C/\log N$ widerlegt; Weg B Standard |
-| Welt-2-Entscheidung | NEU-135D | $\lVert\varepsilon_p\rVert^2 = 1$; $\lvert c_p\rvert^2 = O((\log p)^2/p)$ |
-| Selbstenergie | NEU-136/137 | $\Sigma_{\mathrm{rel}}^{\mathrm{ren}}(\beta)$ konvergent, spurklassig für $\Re\beta>0$ |
-| Mangoldt-Spur | NEU-141 | $\operatorname{Tr}(R\Sigma_{\mathrm{rel}}^{\mathrm{ren}}) = -\zeta'/\zeta(\beta)$, $\Re\beta>1$ |
-| Koeffiziententyp | NEU-216 | $\mathcal B^{\log}$ submultiplikativ **ohne** Renormierung |
-| Cup-Aufstieg | NEU-218 | $L^{\mathrm{cup}}_{g;\mathbf p}\in Z^4(A_{\mathrm{alg}},M)_g$ |
-| Xi-Masterkontur | NEU-220k | exakte Vorzeichen, Faktor 2, Polbuchhaltung |
-| Hankel-Kriterium | NEU-220w | vollständige Hierarchie RH-äquivalent, beide Richtungen |
-| BC-Residuenarchitektur | NEU-15–25 | Dirichlet-/Laurent-Residuenstruktur auf $F^3A_{\mathrm{BC}}^{\mathrm{an}}$ vorhanden |
+- PR #91: analytischer Draft, kein übertragener unabhängiger Exact-Head-GREEN.
+- PR #49 / SW1 salvage: Candidate-only Nebenfront, kein stiller Merge.
+- R37/G4c: separat offen, Beziehung zu OX-GEN/Object X unresolved.
+- Historische R43-COND-/FD23-/Flagfragen: eigene offene Quantoren, aber nicht aktuelle Default-Aufgabe.
 
 ---
 
-## Wie das Programm hierher kam — drei abgeschlossene Strangwechsel
+## Arbeitsregel
 
-### 1. Der $[L_3]$-Repräsentantenpfad ist blockiert (NEU-161 – NEU-173)
+Ein Schritt zählt als Object-X-Hauptfront-Fortschritt nur, wenn er einen expliziten Geometrieteil konstruiert, eine vorab definierte Architekturklasse ausschließt, eine notwendige gemeinsame Generatorstruktur beweist oder eine tatsächlich benötigte mathematische Lücke schließt.
 
-Zweifache, logisch unabhängige Blockade: die Typbrücke $[L_3] \to L_3^\circ = e_1V_1$ fehlt,
-und das Nichtverschwinden des Zielkantenvektors $E_{1;1\to p}^{\mathrm{rel}}$ ist unbewiesen.
-Volldokumentation: [`NEU-170d`](05-primkanal-fourierladung/NEU-170d_DAG_Audit_NEU28_NEU162_bereinigt.md).
+Ein Falsifikationsgate zählt nur, wenn **beide Ausgänge vorab logisch möglich** sind.
 
-### 2. Die kohomologische Route endet im O-219-No-Go (NEU-174 – NEU-219z)
-
-Der Cup-Aufstieg zu $HH^4$ gelang (NEU-218), aber der Faktor $g^{-\beta}$ ist
-**eingabeunabhängig** und blockiert die zyklische Klasse in $HC^4(A_{\mathrm{alg}})$.
-
-### 3. Der Weil-Strang liefert die aktuelle Architektur (NEU-220 – NEU-250a)
-
-Pfad `[O-219-6]` führte über Gammafaktor, Konturtransport, Nullstellenpaar-Kreinraum und
-Spektraldeterminante zum Hankel-Kriterium (NEU-220w). Der Wres-Typaudit-Strang
-(NEU-246–NEU-250a) hat die tiefste gemeinsame Lücke identifiziert.
-
----
-
-## Aktueller Stand (nach Session vom 6. August 2026 — NEU-250a)
-
-### Abgeschlossene Kette dieser Session
-
-```
-NEU-246   Typ-Grad-Kerninvarianzaudit Koszul-Kandidat          ✓[M]
-NEU-247   Tensor-Lift Typbrücke                                 ✓[M]
-NEU-247a  Präzisierungen Typbrücke                              ✓[M]
-NEU-247b  Domänenpräzisierung P5, Auditplan c2b2a               ✓[M]
-NEU-248   Wohldefiniertheit Tensoroperator                      ✓[M]
-NEU-249   Präzisierungen Notation/Konstruktion/Stabilität       ✓[M]
-NEU-250   Wres-Minimalblock Kleinfallprüfung                    ✓[M]  → Ausgang E
-NEU-250a  Typisierung Dirichletresiduumsform, rel. Primkantenraum ✓[M]_part → Ausgang B
-```
-
-### Endentscheidung B (NEU-250a) — ✓[M]_neg, Quelle
-
-> Die Dateien NEU-015 bis NEU-025 liefern eine eigenständige arithmetische
-> Dirichlet-/Laurent-Residuenarchitektur auf der BC-Seite. Sie definieren jedoch keine
-> Repräsentationsabbildung
-> $j_{p,N}: \mathscr V_{\mathrm{rel},p,N}^{\mathrm{pre}} \to F^3 A_{\mathrm{BC}}^{\mathrm{an}}$
-> vom relativen Primkantenraum in den Definitionsbereich dieser Funktionale. Die bisherige
-> relative Wres-Paarung $\langle E_a, E_b\rangle_{\mathrm{Wres,rel}}$ ist kein konstruiertes
-> mathematisches Objekt.
-
-### Tiefste gemeinsame Lücke (deepest gap)
-
-```
-fehlende Repräsentation  j_{p,N} : V^pre_rel → F³ A_BC^an
-```
-
-Alle abhängigen offenen Fragen — `[O-221-1c1a0]`, `[O-246/0corr-2]`, Bestimmung
-von $\mathcal N_{\mathrm{Wres,rel}}$, Hebungsunabhängigkeit von $J_{p,b}$ — setzen diese
-Abbildung voraus. Korrigierter DAG:
-
-```
-BC-Residuenarchitektur
-  ⟶ [Repräsentation j_{p,N}]   ← fehlt  →  [O-221-1c1a0-C]  ← aktiver Knoten
-      ⟶ relative Paarung h_{p,N}
-          ⟶ Grammatrix
-              ⟶ Radikal
-                  ⟶ Hebungsabstieg  →  [O-221-1c1a0]
-```
-
-### Nächster atomarer Knoten
-
-```
-[O-221-1c1a0-C]  BC-Repräsentation eines primitiven relativen Primkantenvektors
-```
-
-Für $p=2$: ein explizites BC-Element
-$j_{2,N}(E_{R;1\to 2}^{\mathrm{rel}}) \in F^3 A_{\mathrm{BC}}^{\mathrm{an}}$ konstruieren,
-das sechs Bedingungen erfüllt (NEU-250a §12):
-
-| Nr. | Bedingung |
-|---|---|
-| 1 | Typkorrektheit: $j_{2,N}(E_R)\in F^3A_{\mathrm{BC}}^{\mathrm{an}}$ |
-| 2 | Linearität |
-| 3 | Indexverträglichkeit |
-| 4 | Involutionsverträglichkeit: $j_{2,N}(E_R)^*$ explizit |
-| 5 | Residuenfähigkeit: $\lambda_\beta^{\mathrm{mod}}(R_3(\cdots))$ bei $\beta=1$ auswertbar |
-| 6 | Nichttautologie |
-
----
-
-## Repository-Korrekturen (ausstehend)
-
-| Datei | Korrektur |
-|---|---|
-| NEU-044 (alle Varianten) | Relative Wres-Paarung als symbolischen Kandidaten kennzeichnen; Hinweis auf fehlende $j_{p,N}$ |
-| NEU-221e | Vor Definition des Wres-Radikals: Formalitätsvermerk |
-| NEU-246 bis NEU-249 | Vorläufer-Rückbindung an `[O-221-1c1a0-C]` |
-
-**Terminologie (strikt einhalten):**
-- `Wres_BC^(q,ℓ)` — tatsächlich definiertes BC-Dirichletresiduum
-- `h_Wres,rel` — erst zu konstruierende relative Paarung  
-Diese beiden Objekte sind **nicht identisch** und dürfen nicht identisch benannt werden.
-
----
-
-## Bekannte Dubletten / offene Klärungen
-
-| Eintrag | Status |
-|---|---|
-| NEU-246 | Existiert doppelt (in 01 und 07) — Klärung ausstehend |
-| NEU-219u | Doppelt in 06 |
-| NEU-219y | Doppelt in 06 |
-| NEU-057 | Lücke in 01 — ältere, nicht mehr aktive Lücke; keine Priorität |
-
----
-
-## Erste Aufgaben für die neue Session
-
-1. Lies **`KARTE.md`** vollständig (Großschreibung, Root des Repos) — sie ist die
-   verlässlichste Übersicht des aktuellen Standes.
-
-2. Lies **`NEU-250a`** in `07-weil-explizitformel/` — dort stehen alle sechs Konstruktions-
-   bedingungen für $j_{2,N}$ sowie die Deepest-Gap-Box.
-
-3. Lade NEU-046, NEU-015, NEU-016, NEU-019, NEU-020 aus `01-primkanten-werkzeuge/` und
-   prüfe, ob dort ein Ansatz für $j_{2,N}$ erkennbar ist.
-
-4. Eröffne Knoten **`[O-221-1c1a0-C]`** als neue Datei
-   `07-weil-explizitformel/NEU-251_O221-1c1a0-C_BC-Repraesentation_primitiver_Primkantenvektor.md`.
-
-5. Schau auch in NEU-221e (in 07) — dein Knoten schließt inhaltlich direkt daran an
-   (Wres-Quotient, affine Hebungsfaser).
-
----
-
-## Gleichzeitig offene Nebenstränge
-
-| Strang | Letzter Stand | Nächste Aufgabe |
-|---|---|---|
-| **A: Wres-Repräsentation** (aktive Front) | NEU-250a — Ausgang B | `[O-221-1c1a0-C]`: $j_{2,N}$ konstruieren |
-| **B: Adelische Momentquelle** | NEU-245c/d — Kanonisierung $\Psi_N$ | NEU-245d abschließen; `[O-245c/2]` |
-| **C: Positivitätsquelle Hankel** | NEU-220w — Modell konditional | $(\mu_k)$ aus adelischer Konstruktion |
-| **D: Regulierte Spur (krit. Streifen)** | NEU-141 | NEU-141.D: Schema für $0<\Re\beta\le 1$ |
-| **E: Singulärwert-Wachstum $J^-$** | NEU-56 | $s_k(J^-)$ divergent oder akkumulierend? |
-| **F: Erweiterbarkeit punktierter Kozykel** | NEU-188 | `[O-188-0..3]` |
-| **G: Rückrichtung RH** | — | $\operatorname{Spec}\subset\mathbb R \Rightarrow \mathrm{RH}$ |
-
----
-
-## Epistemologische Marker
-
-```
-✓ [M]       mathematisch gesichert — vollständiger Beweis im Dokument
-✓ [K]       konstruktiv/typgeprüft — Objekt wohldefiniert, Konsequenzen offen
-✓ [K/M]     konstruiert mit bewiesenen Teilaussagen
-✓ [M]neg    negativer Befund gesichert (Quellennegativ)
-✓ [M]_part  teilweise geschlossen
-✓ [R]       methodisches Resultat / Reduktionssatz
-⚠ [M]       konditional — gilt unter benannter offener Voraussetzung
-✗ [M]       Obstruktion gesichert / widerlegt
-? [O]       explizit offen
-[H-xxx]     Eingangshypothese / externe Modellwahl
-[O-xxx]     Knoten-ID im Abhängigkeits-DAG
-```
-
----
-
-## Arbeitsregeln
-
-- **Lakatosianische Epistemik.** Jede Aussage erhält einen Status. Kein Kartenhaus.
-- **Quellenbasiert.** Keine Behauptung ohne direkten Dateinachweis. Ein Verzeichnislisting
-  ist **nicht** dasselbe wie eine gelesene Datei.
-- **Konventionen haben Vorrang.** Bei Widersprüchen gilt [`KONVENTIONEN.md`](KONVENTIONEN.md).
-  Besonders: $\rho_k$ ist **nicht** unital, $\sigma_k$ schon; $T_a := \sigma_a$.
-- **Negative Resultate sind Ergebnisse.** Ein sauber geschlossenes No-Go ist wertvoller
-  als ein offener Kandidat.
-- **Keine Wiederöffnung geschlossener Routen.** Vor jedem neuen Ansatz [`STATUS.md`](STATUS.md) §3 prüfen.
-- **Sprache.** Deutsch für die Diskussion, LaTeX für Formeln.
-- **Nummerierung.** Nächste freie Nummer: **NEU-251**.
-- **KARTE.md lesen vor jeder Session** — nicht nur das Listing, sondern den vollen Inhalt.
-- **Frühe Werkzeugblätter.** NEU-3 bis NEU-56 in `01-primkanten-werkzeuge/`. Dort stehen
-  viele Primärdefinitionen — vor jeder Quellensuche nachsehen.
-- **Repo-Pflege.** Wesentliche Ergebnisse direkt als Datei ins Repo; CHANGELOG, STATUS und
-  OFFENE_PROBLEME mitführen.
-- **Erfolgsmeldungen verifizieren.** Nach jedem Commit den Diff auf GitHub prüfen —
-  nicht allein der Zusammenfassung des Assistenten vertrauen.
+Es gibt weiterhin **keine vollständige Object-X-Realisierung und keinen RH-Beweis**.
