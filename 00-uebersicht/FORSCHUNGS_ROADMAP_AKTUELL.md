@@ -1,202 +1,136 @@
-# Objekt X — kanonische Forschungsroadmap v3.2
+# Objekt X — kanonische Forschungsroadmap v3.3
 
 > **Stand:** 13. September 2026; Registry unverändert.  
 > **Keine Beweisautorität.** Operative Front: [CURRENT-FRONT](../CURRENT-FRONT.md).
 
-## 1. Gesicherte Basis
+## 1. Gesicherte Architektur
 
-Auf der Nullpolklasse
-
-```math
-D_{NP}=\ker M(0)\cap\ker M(1)
-```
-
-liefert COMMON-JUMP für jedes `a>0`
+COMMON-JUMP liefert auf Nullpol
 
 ```math
-Q_W|_{NP}=X_a^*X_a-\Gamma_aI.
+Q_W|_{NP}=X_a^*X_a-\Gamma_aI
 ```
 
-Prime powers und archimedischer Gamma-Anteil werden von derselben Translation-Differenzfamilie
+mit gemeinsamer Translation-Differenzfamilie `K_t`. Q0 lokalisiert den ersten Gamma-Kanal exakt, und die höheren Kanäle besitzen den rigorosen `e^{-alpha a}`-Schur-Bound.
+
+Die Kleinfenster-Coercivity ist eine interne Reproduktion bekannter Positivität, kein neuer Literatur-Satz.
+
+## 2. Zentriertes all-window Problem
+
+Exakt:
 
 ```math
-K_t=T_{t/2}-T_{-t/2}
+Q_W(v)=\mathcal A(v)-\mathcal O_a(v),
 ```
 
-erzeugt. Status `✓[M]`.
+```math
+\mathcal O_a(v)
+=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
+Re\langle T_{\log n}v,v\rangle.
+```
 
-## 2. Q0-Kanalstruktur `✓[M]`
+Die Prime-Diagonalmasse ist wegzentriert. Ziel:
+
+```math
+(A_\infty-\kappa_*I)|_{D_{NP}(a)}\succeq O_a|_{D_{NP}(a)}.
+```
+
+## 3. Gate O1 — Einzelshift abgeschlossen `✓[M] / ×[M]`
+
+Faserung modulo `t` gibt
+
+```math
+\|S_t\|=\cos\frac{\pi}{\lceil2a/t\rceil+1}.
+```
+
+Dieselbe scharfe Norm wird auf `D_NP(a)` erreicht. Daher ist eine Nullpol-Verbesserung einzelner Shiftkanäle ausgeschlossen:
+
+```text
+single-shift null-pole norm improvement  ×[M]
+```
+
+Unabhängige Einzelshift-Normabschätzungen sind nicht mehr Default-Strategie.
+
+## 4. Gate O2 — vollständiger Block einer Primzahl `✓[M]`
 
 Für
 
 ```math
-A_\alpha=\int_0^\infty e^{-\alpha t}K_t^*K_tdt
+ell_p=log p,
+q_p=p^{-1/2}
 ```
 
-gilt
-
-```math
-A_\alpha=\frac2\alpha L(L+\alpha^2)^{-1},
-\qquad L=-\partial_x^2.
-```
-
-Mit `Q_0=L+1/4`:
-
-```math
-A_{1/2}Q_0=4L,
-\qquad
-Q_0:C_c^\infty(-a,a)\cong D_{NP}(a)
-```
-
-support-erhaltend.
-
-Die höhere Kanalabschätzung
-
-```math
-A_\alpha\succeq\frac2\alpha e^{-\alpha a}I
-```
-
-ist durch einen expliziten Schur-Test geschlossen.
-
-## 3. Short-window-Korrektur
-
-Die Architektur liefert intern einen analytischen Kleinfenster-Bound. Dies ist **keine neue Kleinfensterpositivität in der Literatur**, da Suzuki Theorem 1.4 eine stärkere volle-Klasse-Aussage beweist.
-
-```text
-COMMON-JUMP/Q0 reproduction                ✓[M]_part
-novel short-window Weil theorem            ×[M]
-```
-
-Der projektinterne Schwellenwert `a_*` wird durch einen Arb-Exact-Head-Gate zertifiziert; Zielbracket:
-
-```math
-0.1033784517534<a_*<0.1033784517535.
-```
-
-## 4. Neue kanonische Restform `✓[M]`
-
-Setze
-
-```math
-\mathcal A(v)
-=\int_0^\infty h(t)\|K_tv\|^2dt-\kappa_*\|v\|^2.
-```
-
-Dann auf Nullpol:
-
-```math
-\boxed{Q_W(v)=\mathcal A(v)-\mathcal O_a(v)}
-```
-
-mit
+ist die `N`-Punkt-Faser des vollständigen `p`-Blocks
 
 ```math
 \boxed{
-\mathcal O_a(v)
-=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
-\operatorname{Re}\langle T_{\log n}v,v\rangle.
+O_{p,a}^{(N)}=(\log p)(R_{q_p}^{(N)}-I),
+\qquad R_q^{(N)}=(q^{|j-k|}).
 }
 ```
 
-Die Prime-Diagonalmasse ist exakt wegzentriert. Nur überlappende Prime-Power-Shifts verbleiben.
-
-## 5. Neue Default-Priorität — NP-OVERLAP
-
-Der all-window Satz ist exakt
+Der positive Sektor des AR(1)-Symbols ist
 
 ```math
-\boxed{
-(A_\infty-\kappa_*I)|_{D_{NP}(a)}
-\succeq
-\mathbf O_a|_{D_{NP}(a)}
-\quad\forall a>0.
-}
+|theta|<arccos(q_p).
 ```
 
-### Gate O1 — Spektrum des overlap operators
+Damit ist die frühere Prime-Power-AR(1)-Struktur exakt in der neuen Hauptfront wiedergefunden.
 
-Bestimme positive Spektralmasse, Parität und Extremalrichtungen von
+## 5. Gate O3 — kollektive Multi-Prime-Interferenz `?[O]`
+
+Für `p!=r` gilt
 
 ```math
-\mathbf O_a
-=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
-\frac{T_{\log n}+T_{-\log n}}2
+log p/log r notin Q.
 ```
 
-nach Kompression auf `D_NP(a)`.
+Die gefährlichen Niedrigfrequenzsektoren liegen also auf inkommensurablen logarithmischen Gittern.
 
-### Gate O2 — Q0-Sobolev transport
+Zu quantifizieren:
 
-Für `v=Q_0u` gilt
+1. Wie groß kann die simultane positive AR(1)-Energie für viele Primzahlen sein?
+2. Gibt es eine Frame-/uncertainty-Ungleichung zwischen den `log p`-Faserungen?
+3. Kann die alte AR(1)/Markov-/Weil-tail-Faktorisierung eine gemeinsame Kontraktion liefern?
+4. Welche Rolle spielen Parität und die Overlap-Breite `delta_n=2a-log n`?
+5. Wie koppelt der Q0-Sobolevtransport diese Prime-Energien an den archimedischen Überschuss?
+
+## 6. Gate O4 — Prime-Power AR(1) reconnect
+
+Vergleiche die neue exakte Faseridentität systematisch mit den bereits bewiesenen Projektresultaten
 
 ```math
-\operatorname{Re}\langle T_tv,v\rangle
-=\operatorname{Re}\langle T_tu'',u''\rangle
-+\frac12\operatorname{Re}\langle T_tu',u'\rangle
-+\frac1{16}\operatorname{Re}\langle T_tu,u\rangle.
+C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2}
 ```
 
-Suche daraus scharfe supportabhängige Korrelationseinschränkungen.
+und der Markov-/AR(1)-Faktorisierung. Ziel ist kein bloßer Strukturvergleich, sondern eine quantitative Mehrprimzahl-Ungleichung.
 
-### Gate O3 — Randüberlappung
+## 7. Auxiliary
 
-Expliziere die Abhängigkeit vom Überlappungsradius
+Die finite Gamma-null ladder `{-2m,2m+1}` bleibt Connes--Consani-kompatibel, aber ohne Kontrolle des Prime-overlap nur Nebenfront.
 
-```math
-\delta_n=2a-\log n.
-```
-
-Insbesondere muss die Methode die exakte Auslöschung für `delta_n<=0` und den Übergang `delta_n downarrow0` respektieren.
-
-### Gate O4 — Prime-Power AR(1)
-
-Prüfe, ob die bereits bewiesene Prime-Power-AR(1)/Weil-tail-Struktur den positiven Spektralteil von `O_a` kontrolliert. Dies ist jetzt die bevorzugte Rückkopplung an frühere Objekt-X-Arbeit.
-
-## 6. Auxiliary: finite Gamma-null ladder
-
-Für `alpha_m=2m+1/2` und `Q_m=-partial_x^2+alpha_m^2` entstehen Mellin-Nullstellen bei
-
-```math
--2m,\qquad2m+1.
-```
-
-Endliche Mengen dieser Punkte sind nach Connes--Consani Proposition C.1 zulässig; die negativen geraden Punkte sind triviale Zeta-Nullstellen, während Proposition C.1 nur die nichttrivialen Nullstellen ausschließt.
-
-Die Leiter ist mathematisch legitim, aber nicht Default-Priorität, solange sie den Prime-overlap nicht quantitativ verbessert.
-
-## 7. Object-X-Pfad
+## 8. Object-X-Pfad
 
 ```text
-COMMON-JUMP common positive geometry ✓[M]
-        |
-        v
-centered Prime-overlap form ✓[M]
-        |
-        v
-NP-OVERLAP domination ?[O]
-        |
-        v
+COMMON-JUMP ✓[M]
+   |
+centered Prime-overlap ✓[M]
+   |
+per-prime AR(1) fibers ✓[M]
+   |
+collective multi-prime suppression ?[O]
+   |
+all-a NP-OVERLAP ?[O]
+   |
 global null-pole Weil positivity
-        |
-        v
+   |
 RH
 ```
 
-Die Architektur ist konstruiert; der harte Rest ist jetzt eine explizite arithmetische Shift-Korrelationsungleichung.
+## 9. Numerik / Firewalls
 
-## 8. Numerik-Firewall
-
-Ritz-Minima in endlichen Nullpolräumen sind obere Schranken für das wahre Infimum. Nur zertifizierte Falsifikationen oder unabhängige Intervallbeweise dürfen theorematisch promoted werden.
-
-## 9. Auxiliary / separate
-
-OX-GEN-A, POS-DIL #101--#105, Prime-Power AR(1), PR #91, PR #49 und R37/G4c bleiben erhalten. Prime-Power AR(1) wird für Gate O4 ausdrücklich wieder als möglicher Input priorisiert.
-
-## 10. Firewalls
-
-- bekannte Kleinfensterpositivität nicht als Projektneuheit verkaufen;
-- große Prime-Schwelle nicht mit dem zentrierten Restproblem verwechseln;
-- finite Gamma-null ladder nicht als all-window coercivity ausgeben;
-- kein fixed-`a` als RH-äquivalent behaupten;
-- Registry/Arbeitsdefinition nicht automatisch promovieren;
-- RH bleibt offen.
+- Ritz-Minima sind obere Schranken für das wahre Infimum.
+- Der Arb-Gate für `a_*` ist nur ein short-window-Seitengate.
+- Bekannte Kleinfensterpositivität nicht als Neuheit beanspruchen.
+- Einzelshift-No-Go nicht zu einem No-Go für kollektive Multi-Prime-Mechanismen überdehnen.
+- Registry/Arbeitsdefinition unverändert.
