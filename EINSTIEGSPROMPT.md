@@ -24,6 +24,7 @@ Aktueller Strang zusätzlich:
 - `audits/P11_POS_DIL_2_UNIT_GAIN_FEATURE_SHORTING_NOGO_2026-09-13.md`
 - `audits/P11_POS_DIL_2B_FIRST_EXTERIOR_PRIME_SHELL_2026-09-13.md`
 - `audits/P11_POS_DIL_2C_EXTERIOR_SHELL_RADIUS_0_1_2026-09-13.md`
+- `audits/P11_POS_DIL_2C_EXACT_SHELL_GAUGE_R0_ABSORPTION_2026-09-13.md`
 
 ### Governance
 
@@ -33,16 +34,15 @@ ChatGPT übernimmt sämtliche GitHub-/Repository-Arbeiten. Perplexity ist nur ex
 
 ## Aktueller mathematischer Stand
 
-### Strong Terminal / Prime-AR(1)
+### 1. Lokale Weil-Normalform
 
-Fixed-pair Strong Terminal/C6 liegt im ungeraden P11-Graphraum vor. Prime-Power-Geometrie:
+Für `0<a<=1`:
 
 ```math
-C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2},
-\qquad T_q^*T_q+uu^*=R_q.
+Q_{B_a}=G_a^+-c_aI-R_0-R_1.
 ```
 
-### OX-GEN-A / POS-DIL-1
+### 2. OX-GEN-A / POS-DIL-1
 
 ```math
 \mathcal ET_t=\rho(t)\mathcal E,
@@ -62,101 +62,101 @@ Prime-moment-Hilbertisierung:
 R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.
 ```
 
-AR(1)-Brücke:
+### 3. Exterior-shell Geometrie
 
 ```math
-\sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S.
+\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\}.
 ```
 
-### POS-DIL-2A
-
-Die unveränderte lokale `G_{1/2}^+`-Featuremasse ist für unit-gain Shorting zu klein; Plateau-Defekt `delta_0>5/32`.
-
-### POS-DIL-2B/2C-R — erster Außenshell
+Jeder Außenkanal `c_n>a` ist auf dem Fenster reine Identitätsmasse:
 
 ```math
-\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\},
-\qquad c_n=\frac12\log n.
+w_n\langle K_nv,K_nw\rangle
+=2w_n\langle v,w\rangle.
+```
+
+Für den ersten Außenshell
+
+```math
+A_a^{out}:=G_a^++H_a^{out}
+\succeq\mathcal E^*\mathcal E
+```
+
+für alle `0<a<=1`.
+
+### 4. Exakte Prime-cutoff-Gauge `✓[M]`
+
+Für jede endliche Außenkanalmenge `J`:
+
+```math
+Q_{B_a}
+=(G_a^++H_{a,J})-(c_a+b_J)I-R_0-R_1,
 ```
 
 ```math
-H_a^{out}(v,w)=\sum_{n\in\mathscr S_a^{out}}
-\frac{\Lambda(n)}{\sqrt n}\langle K_nv,K_nw\rangle.
+b_J=2\sum_{n\in J}\frac{\Lambda(n)}{\sqrt n}.
 ```
 
-Für jeden Shell-Kanal:
+Für den ersten Shell:
 
 ```math
-\|K_nv\|^2=2\|v\|^2.
+c_a^{out}=c_a+A_{e^{4a}}-A_{e^{2a}}.
 ```
 
-Daher
+Damit ist der isolierte `c_a`-Wert cutoff-gaugeabhängig und nicht ohne Gauge-Fixierung kanonisch.
+
+### 5. Exakte positive `R_0`-Absorption `✓[M]`
 
 ```math
-H_a^{out}(v)=2B_a^{out}\|v\|^2.
+D_a^{out}=A_a^{out}-\mathcal E^*\mathcal E\succeq0,
 ```
-
-Für **alle** `0<a<=1` wurde rein elementar bewiesen:
 
 ```math
--\log a+2B_a^{out}>4\sinh a.
+L_+(v)=E_+(v)+E_-(v)
+=2\int_{-a}^a\cosh(x/2)v(x)\,dx.
 ```
 
-Mit
+Dann
 
 ```math
-G_a^+(v)\ge(-\log a)\|v\|^2,
-\qquad
-\|\mathcal Ev\|^2\le4\sinh(a)\|v\|^2
+P_a^{(0)}
+:=A_a^{out}-R_0
+=D_a^{out}+L_+^*L_+\succeq0.
 ```
 
-folgt
+Und exakt
 
 ```math
 \boxed{
-\|\mathcal Ev\|^2
-\le G_a^+(v)+H_a^{out}(v),
+Q_{B_a}=P_a^{(0)}-c_a^{out}I-R_1,
 \qquad0<a\le1.
 }
 ```
 
-und damit
-
-```math
-\boxed{
-\begin{pmatrix}
-G_a^++H_a^{out}&R_0\\
-R_0&G_a^++H_a^{out}
-\end{pmatrix}\succeq0
-\qquad(0<a\le1).
-}
-```
-
-**Radiusfrage geschlossen `✓[M]`.** `OX-GEN-A2'` bleibt insgesamt `✓[M]_part`, weil die exakte Weil-Buchung noch fehlt.
+Der elementare archimedische `r_0`-/`R_0`-Layer ist damit positiv absorbiert, während die volle Weilform unverändert bleibt.
 
 ---
 
 ## Nächster Default-Auftrag
 
-**POS-DIL-2C-B / EXACT-SHELL-BOOKING.**
+**OX-GEN-B / `R_1` + gaugeinvarianter Skalarrest.**
 
-Untersuche algebraisch, wie `H_a^{out}` in einer exakten gemeinsamen Prime-/Archimedean-Geometrie gegengebucht/renormalisiert werden kann, ohne die Weilform zu verändern.
+Arbeite algebraisch zuerst:
 
-Reihenfolge:
+1. Rekonstruiere die exakte polarisierte Formel bzw. den Kernel von `R_1` aus den kanonischen Suzuki-/OX-GRAM-Quellen.
+2. Bestimme Parität, Translation-/Reflexionssymmetrien und mögliche Generatorrepräsentationen.
+3. Definiere eine natürliche positive Absorptions-/Intertwinerklasse **vor** dem Ergebnis und prüfe Konstruktion oder No-Go.
+4. Behandle den skalaren Ledger gaugeinvariant; den nackten Wert `c_a` nicht als kanonisch voraussetzen.
+5. Prüfe bevorzugt eine gemeinsame Behandlung von `R_1` und Skalarrest.
 
-1. Außenkanal-Identitätsmasse vor der Cutoff-Umschreibung rekonstruieren.
-2. Shell-Differenzen/Teleskopierung prüfen.
-3. Gegenbuchung über `T_q^*T_q+uu^*=R_q` prüfen.
-4. Rolle der Amplitude `1-u_k` untersuchen.
-5. Erst danach `c_aI` oder `r_1` anbinden.
-
-Keine weitere bloße Positivitätsverstärkung als Hauptfortschritt verbuchen.
+Keine weitere beliebige Diagonalaugmentation als Fortschritt verbuchen.
 
 ---
 
 ## Firewalls
 
-- Außenshellmasse ist nicht bereits `c_aI`.
-- Radiuspositivität ist keine exakte Weil-Buchung.
-- `r_1`, volle Weil-Gram-Identität, Object X und RH bleiben offen.
-- PR #91, PR #49 und R37/G4c bleiben separat.
+- `P_a^{(0)}` ist noch nicht die volle Weil-Gram-Realisierung.
+- `R_1` und der endgültige Skalarrest bleiben offen.
+- Keine Aussage für `a>1` ohne separaten Beweis.
+- Object X und RH bleiben offen.
+- PR #91, PR #49 und R37/G4c bleiben separate Nebenfronten.
