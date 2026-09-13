@@ -2,35 +2,28 @@
 
 *Ein lakatosianisches Forschungsjournal zur Riemannschen Hypothese.*
 
-Gesucht wird eine gemeinsame arithmetisch-analytische Hilbert-/Gram-Geometrie,
-in der Primzahlpotenz- und archimedische Beiträge der vollständigen Weil-Form
-aus demselben Mechanismus hervorgehen. Arbeitsname: **Objekt X**.
+Gesucht wird eine gemeinsame arithmetisch-analytische Hilbert-/Gram-Geometrie, in der Primzahlpotenz- und archimedische Beiträge der vollständigen Weil-Form aus demselben Mechanismus hervorgehen. Arbeitsname: **Objekt X**.
 
-> **Redaktioneller Stand: 13. September 2026.**
-> Eine vollständige Objekt-X-Realisierung und ein Beweis der Riemannschen
-> Hypothese liegen nicht vor.
+> **Redaktioneller Stand: 13. September 2026.**  
+> Eine vollständige Objekt-X-Realisierung und ein Beweis der Riemannschen Hypothese liegen nicht vor.
 
 ## Hier beginnen
 
-1. **[Aktueller Arbeitsstand](CURRENT-FRONT.md)** — operative POS-DIL-Front und nächster Gate.
-2. **[Aktueller Stand](00-uebersicht/AKTUELLER_STAND.md)** — kurze Zusammenfassung für neue Sessions.
-3. **[Forschungsroadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)** — Strategie und Nebenfronten.
-4. **[Abhängigkeitsgraph](00-uebersicht/DAG.md)** — kompakte logische/strategische Kanten.
-5. **[Objekt-X-Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)** — was eine vollständige Realisierung leisten muss.
+1. **[Aktueller Arbeitsstand](CURRENT-FRONT.md)** — operative POS-DIL-Front.
+2. **[Aktueller Stand](00-uebersicht/AKTUELLER_STAND.md)** — kurze Zusammenfassung.
+3. **[Forschungsroadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)** — Strategie.
+4. **[DAG](00-uebersicht/DAG.md)** — Abhängigkeiten und Firewalls.
+5. **[Objekt-X-Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)**.
 
-Zentrale Quellen des aktuellen Strangs:
+Aktuelle Audits:
 
-- [AR(1)/Weil-Tail/OX-GRAM-Konsolidierung](audits/P11_OBJECT_X_AR1_OX_GRAM_CONSOLIDATION_2026-09-12.md)
-- [Gate 2 / OX-GEN](audits/P11_OX_GRAM_GATE2_AND_OX_GEN_2026-09-12.md)
-- [OX-GEN-A gemeinsamer Exponentialgenerator](audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md)
+- [AR(1)/Weil-Tail/OX-GRAM](audits/P11_OBJECT_X_AR1_OX_GRAM_CONSOLIDATION_2026-09-12.md)
+- [OX-GEN-A](audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md)
 - [POS-DIL-1 Prime-moment Hilbertization](audits/P11_POS_DIL_1_PRIME_MOMENT_HILBERTIZATION_2026-09-13.md)
-- [POS-DIL-2 Unit-Gain Feature-Shorting No-Go](audits/P11_POS_DIL_2_UNIT_GAIN_FEATURE_SHORTING_NOGO_2026-09-13.md)
+- [POS-DIL-2A unit-gain No-Go](audits/P11_POS_DIL_2_UNIT_GAIN_FEATURE_SHORTING_NOGO_2026-09-13.md)
+- [POS-DIL-2B erster äußerer Prime-Shell](audits/P11_POS_DIL_2B_FIRST_EXTERIOR_PRIME_SHELL_2026-09-13.md)
 
-## Erreichter Meilenstein
-
-Der integrierte [positive Wurzelanker-Beweis](audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md) plus R42.51 liefert **Strong Terminal/C6 für jedes feste `0<R<S` im ungeraden P11-Graphraum**. Keine Radienuniformität, Operatornormkonvergenz, vollständige Objekt-X-Realisierung oder RH-Folgerung wird beansprucht.
-
-## Aktuelle Forschungsaufgabe
+## Forschungsstand
 
 ### Gemeinsame Generator-Ebene
 
@@ -60,91 +53,98 @@ R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle.
 
 ### POS-DIL-1
 
-Die natürliche Companion-Symmetrie erzwingt `M=tI`; der minimale blockpositive Begleiter ist `M=I`. Eine exakte positive `rho`-invariante Same-space-Hilbertmetrik existiert nur trivial.
+Die natürliche Companion-Klasse liefert den minimalen positiven Begleiter `M=I`; eine volle positive `rho`-invariante Same-space-Metrik existiert nur trivial.
 
-Für jede endliche nichtleere Prime-Power-Menge `N` ist
+Die Prime-moment-Abbildung
 
 ```math
-V_Nv=\kappa_N^{-1/2}
-\bigl(\sqrt{w_n}\,\mathcal EK_nv\bigr)_{n\in N}
+V_Nv=\kappa_N^{-1/2}(\sqrt{w_n}\,\mathcal EK_nv)_{n\in N}
 ```
 
-mit
+realisiert
 
 ```math
-\|V_Nv\|^2=|E_+(v)|^2+|E_-(v)|^2,
-```
-
-und derselbe positive Zielraum trägt über `\mathbb P_N=\oplus P` die Form
-
-```math
+\|V_Nv\|^2=\|\mathcal Ev\|^2,
+\qquad
 R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.
 ```
 
-Für `n=p^k`, `q_p=p^{-1/2}` gilt
+### POS-DIL-2A: bestehende positive Featuremasse reicht nicht
+
+Bei `a=1/2` ist
 
 ```math
-\sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S,
+\|\mathcal Ev\|^2\le G_{1/2}^+(v)
 ```
 
-also eine exakte Brücke zur AR(1)-Root-Komponente. `OX-GEN-A2'` ist damit `✓[M]_part`.
+falsch; eine explizite Plateaufolge liefert einen notwendigen positiven Massendefekt `delta_0>5/32`. Damit ist unit-gain Shorting innerhalb der unveränderten lokalen `G_{1/2}^+`-Feature-Norm ausgeschlossen.
 
-### POS-DIL-2A: unit-gain Shorting fällt
+### POS-DIL-2B: intrinsische positive Reparatur durch den ersten äußeren Prime-Shell
 
-Der anschließend vorab definierte Gate
+Definiere ohne Anpassung an `delta_0`
 
 ```math
-\|\mathcal Ev\|^2\stackrel?\le G_a^+(v)
+\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\},
+\qquad c_n=\frac12\log n.
 ```
 
-ist bereits bei `a=1/2` falsch. Eine explizite `H_0^1`-Plateaufolge erfüllt
+Für jeden solchen äußeren Kanal sind die beiden verschobenen Fenster disjunkt, daher exakt
 
 ```math
-|R_0(v_\varepsilon,v_\varepsilon)|
-=\|\mathcal Ev_\varepsilon\|^2
-\to32\sinh^2\frac14,
+\boxed{\|K_nv\|^2=2\|v\|^2.}
 ```
 
-aber
+Die Shellform
 
 ```math
-G_{1/2}^+(v_\varepsilon)
-\to1+\sqrt2(\log2)^2,
+H_a^{out}(v,w)=\sum_{n\in\mathscr S_a^{out}}
+\frac{\Lambda(n)}{\sqrt n}\langle K_nv,K_nw\rangle
 ```
 
-und exakt
+liefert somit echte positive lokale Prime-Masse.
+
+Bei `a=1/2` enthält der erste Shell insbesondere `3,4,5`. Zusammen mit dem bereits vorhandenen Log-Multiplikator erhält man uniform
 
 ```math
-32\sinh^2\frac14>2>1+\sqrt2(\log2)^2.
+G_{1/2}^+(v)+H_{1/2}^{out}(v)>\frac83\|v\|^2,
 ```
 
-Damit kann die vorhandene `G_{1/2}^+`-Featuremasse `R_0` nicht mit Gain `1` als kontraktive Zielraumkompression tragen. Ausgeschlossen sind sowohl `C F^+=V` mit `||C||<=1` als auch jede allgemeinere kontraktive Target-observable-Realisierung innerhalb derselben Feature-Norm.
+während
 
-Der notwendige Plateau-Massendefekt ist
+```math
+\|\mathcal Ev\|^2<\frac83\|v\|^2.
+```
+
+Folglich
 
 ```math
 \boxed{
-\delta_0
-=32\sinh^2\frac14
--1-\sqrt2(\log2)^2
->\frac5{32}>0.
+\|\mathcal Ev\|^2
+\le G_{1/2}^+(v)+H_{1/2}^{out}(v)
 }
 ```
 
-### Neue Front
+für alle Testfunktionen. Die augmentierte positive Form trägt `R_0` kontraktiv und liefert einen positiven Schurblock.
 
-**POS-DIL-2B / INTRINSIC-MASS-AUGMENTATION:** Welche schwächste zusätzliche positive Masse entsteht **intrinsisch** aus bereits vorhandener Prime-/AR(1)-Root/Hub-/`log|D|`-Geometrie, liefert am Plateau mindestens `delta_0` und trägt `R_0` im selben positiven Umraum?
+Das ist der erste positive Reparaturbaustein nach dem POS-DIL-2A-No-Go, dessen Zusatzmasse vollständig aus bereits vorhandenen echten Prime-Kanälen und ihren Weilgewichten stammt.
 
-Kandidaten wie globale Prime-Kanäle außerhalb des lokalen Suzuki-Cutoffs dürfen untersucht werden, aber ihre Buchungsrichtung muss nichtzirkulär sein. Eine beliebige Diagonalergänzung oder das bloße Umbenennen des offenen `c_aI`-Blocks zählt nicht.
+## Aktuelle Front: POS-DIL-2C / SHELL-BOOKING-AND-RADIUS
 
-`r_1` und `c_aI` bleiben offen.
+Der zentrale Engpass ist jetzt **Buchung statt bloßer Positivität**. Die Außenkanalenergie ist real, darf aber nicht einfach zusätzlich zur lokalisierten Weilform addiert werden.
+
+Zu klären sind:
+
+1. **Shell-Buchung:** Gibt es eine kanonische Gegenbuchung, Teleskopierung oder AR(1)-Root/Hub-Zerlegung, die den positiven Außenshell in einer exakten gemeinsamen Geometrie erscheinen lässt, ohne die volle Weilform zu verändern?
+2. **Radius:** Für welche `0<a<=1` dominiert derselbe geometrische Shell die Momentmasse?
+
+Die Shellmasse wird ausdrücklich nicht mit `c_aI` identifiziert. `r_1`, `c_aI`, eine volle Weil-Gram-Identität, Object X und RH bleiben offen.
 
 ## Nachweise und Orientierung
 
-Ausarbeitungen: [papers/](papers/) · Prüfberichte: [audits/](audits/).
-Theorem- und Reviewbuchungen stehen in der [Registry](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md). Ein Merge oder erfolgreicher Test ist keine mathematische Promotion.
+Ausarbeitungen: [papers/](papers/) · Prüfberichte: [audits/](audits/).  
+Theorem- und Reviewbuchungen: [Registry](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md). Ein Merge oder erfolgreicher Test ist keine mathematische Promotion.
 
-Für neue Arbeitssitzungen: [Einstiegsprompt](EINSTIEGSPROMPT.md). Historische Statusangaben sind keine aktuelle Arbeitsanweisung.
+Für neue Arbeitssitzungen: [Einstiegsprompt](EINSTIEGSPROMPT.md).
 
 Lizenz: [CC BY 4.0](LICENSE) · Zitierangaben: [CITATION.cff](CITATION.cff).
 
@@ -152,7 +152,7 @@ Lizenz: [CC BY 4.0](LICENSE) · Zitierangaben: [CITATION.cff](CITATION.cff).
 
 Dieses Repository ist unter [CC-BY-4.0](LICENSE) veröffentlicht. Nutzung erfordert Namensnennung.
 
-- Attributionsakte und Zitiervorlage: [`ATTRIBUTION.md`](ATTRIBUTION.md)
-- Maschinenlesbare Zitationsdaten: [`CITATION.cff`](CITATION.cff)
-- Kanarienvogel und Herkunftsmarker: [`/.canary`](.canary), [`SECURITY.md`](SECURITY.md)
-- Automatisch aktualisierter Hashbaum der Kernddateien: [`INTEGRITY.md`](INTEGRITY.md)
+- [`ATTRIBUTION.md`](ATTRIBUTION.md)
+- [`CITATION.cff`](CITATION.cff)
+- [`.canary`](.canary), [`SECURITY.md`](SECURITY.md)
+- [`INTEGRITY.md`](INTEGRITY.md)
