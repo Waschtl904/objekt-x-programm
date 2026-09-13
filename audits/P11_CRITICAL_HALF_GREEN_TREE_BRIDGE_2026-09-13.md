@@ -1,0 +1,766 @@
+# P11 Audit — Critical-half Green/tree bridge
+
+**Datum:** 13. September 2026  
+**Rolle:** theorem-level Strukturaudit nach `NULLPOL-COMMON`; keine Registry-Promotion.  
+**Basis:** `main` nach Merge von PR #107 (`6e7b0c8229cc69a8d86d85a9db99d6646339ffda`).  
+**Scope:** exakte Operator-/Gram-Identitaeten; kein NP-GAP-, Object-X- oder RH-Abschluss.
+
+---
+
+## 0. Kurzurteil
+
+Die bisher getrennten Strukturen
+
+- NULLPOL-Bedingungen `M(v)(0)=M(v)(1)=0`,
+- Prime-Power-AR(1)/Kac--Murdock--Szego aus PR #98,
+- cross-prime Hub-Korrelation,
+- die POS-DIL-Amplitude `1-p^{-k/2}` aus PR #101,
+- der archimedische Root-Defekt `1-e^{-t/2}` aus NULLPOL-COMMON,
+- und der Grundmodus der archimedischen Digamma-/Gamma-Schicht
+
+werden durch **denselben critical-half Kernel** verbunden:
+
+```math
+\boxed{G_{1/2}(x,y)=e^{-|x-y|/2}.}
+```
+
+Er ist zugleich
+
+1. der Green-Kern von `L_{1/2}:=-\partial_x^2+1/4` auf `R`;
+2. der exakt auf `k log p` abgetastete AR(1)-Kernel `p^{-|j-k|/2}`;
+3. der Grundmodus `mu_0=1/2` der positiven Gamma-Resolventenleiter;
+4. der Root-Korrelationskern eines expliziten OU-/Sternbaum-Hilbertraums, dessen gewichtete Gram-Matrix den fensterlosen P11-Prime-Index-Ledger inklusive cross-prime Hub exakt reproduziert.
+
+Zusaetzlich gilt exakt
+
+```math
+\boxed{
+C_c^\infty(-a,a)\cap\ker M(0)\cap\ker M(1)
+=
+L_{1/2}C_c^\infty(-a,a).
+}
+```
+
+Damit wird der NULLPOL-Gate zu einer **Range-Bedingung desselben Operators**, dessen Green-Kern die Prime-Power-Korrelation erzeugt.
+
+**Status:**
+
+```text
+NULLPOL = range(L_{1/2}) on every compact window       ✓[M]
+critical-half Green kernel                             ✓[M]
+prime star-tree Gram realization                       ✓[M]
+P11 root+tail factorization from tree innovations      ✓[M]
+POS-DIL root-defect identity                           ✓[M]
+Gamma resolvent ladder with ground mass 1/2            ✓[M]
+archimedean J as same root-chord energy                 ✓[M]
+NP-GAP moment-free L_{1/2}-lift                        ✓[M]
+sharp NP-GAP lower frame bound                         ?[O]
+full positive Object-X realization / RH                ?[O]
+publication novelty                                    ?[O]
+```
+
+---
+
+# 1. Der critical-half Operator und sein Green-Kern
+
+Setze
+
+```math
+D=-i\partial_x,
+\qquad
+L_{1/2}:=D^2+\frac14=-\partial_x^2+\frac14.
+```
+
+Dann gilt distributionell auf `R`
+
+```math
+\boxed{
+L_{1/2}\,e^{-|x|/2}=\delta_0.
+}
+```
+
+Also besitzt `L_{1/2}^{-1}` den Faltungskern
+
+```math
+\boxed{
+G_{1/2}(x,y)=e^{-|x-y|/2}.
+}
+```
+
+Der Faktor vor dem Exponential ist hier genau `1`, weil der allgemeine Green-Kern von `D^2+mu^2` gleich
+
+```math
+\frac1{2\mu}e^{-\mu|x-y|}
+```
+
+ist und fuer `mu=1/2` gerade `2mu=1` gilt.
+
+---
+
+# 2. NULLPOL ist exakt die lokale Range von `L_{1/2}`
+
+Wir verwenden
+
+```math
+M(v)(s)=\int_{\mathbb R}v(x)e^{(s-1/2)x}\,dx.
+```
+
+Damit
+
+```math
+M(v)(0)=\int e^{-x/2}v(x)\,dx,
+\qquad
+M(v)(1)=\int e^{x/2}v(x)\,dx.
+```
+
+## Satz 2.1 — lokale Range-Charakterisierung
+
+Fuer jedes `a>0` gilt
+
+```math
+\boxed{
+\mathscr D_{NP,a}
+:=
+\{v\in C_c^\infty(-a,a):M(v)(0)=M(v)(1)=0\}
+=
+L_{1/2}C_c^\infty(-a,a).
+}
+```
+
+### Beweis: `Range subset NULLPOL`
+
+Sei `u in C_c^infty(-a,a)` und `v=L_{1/2}u`. Zweimalige partielle Integration liefert
+
+```math
+\int e^{\pm x/2}\left(-u''+\frac14u\right)dx=0,
+```
+
+denn
+
+```math
+\left(-\partial_x^2+\frac14\right)e^{\pm x/2}=0.
+```
+
+Also `M(v)(0)=M(v)(1)=0`.
+
+### Beweis: `NULLPOL subset Range`
+
+Sei umgekehrt `v in D_{NP,a}` und setze vorwaerts
+
+```math
+\boxed{
+u(x):=(L_{1/2}^{-1}v)(x)
+=\int_{\mathbb R}e^{-|x-y|/2}v(y)\,dy.
+}
+```
+
+Dann gilt `L_{1/2}u=v`. Liegt `x` rechts vom Traeger von `v`, so
+
+```math
+u(x)
+=e^{-x/2}\int e^{y/2}v(y)dy
+=e^{-x/2}M(v)(1)=0.
+```
+
+Liegt `x` links vom Traeger, so
+
+```math
+u(x)
+=e^{x/2}\int e^{-y/2}v(y)dy
+=e^{x/2}M(v)(0)=0.
+```
+
+Damit ist `u` wieder kompakt im selben Fenster getragen; aus `L_{1/2}u=v` und glattem `v` folgt `u in C_c^infty(-a,a)`. Also `v=L_{1/2}u`.
+
+Da `L_{1/2}>0` auf `L^2(R)` ist die Darstellung eindeutig.
+
+**Wichtig:** Hier wird kein Paley--Wiener-Satz benoetigt. Die beiden Mellin-Nullen sind exakt die Bedingungen, welche die beiden exponentiellen Aussenschwaenze des Green-Resolventen vernichten.
+
+---
+
+# 3. Der logarithmische Prim-Sternbaum
+
+Definiere einen verwurzelten metrischen Sternbaum `T_P` mit Root `o` und fuer jede Primzahl `p` einer eigenen Halbgeraden `R_p=[0,infty)`.
+
+Ein Punkt auf Ast `p` in Radius `x>=0` werde `(p,x)` genannt. Die Metrik ist
+
+```math
+d((p,x),(p,y))=|x-y|,
+```
+
+und fuer `p!=r`
+
+```math
+d((p,x),(r,y))=x+y.
+```
+
+Die Prime-Power-Knoten sind
+
+```math
+\boxed{x_{p,k}:=(p,k\log p),\qquad k>=1.}
+```
+
+Damit liegen Potenzen derselben Primzahl auf einer logarithmisch aequidistanten Halbgeraden, waehrend verschiedene Primzahlen nur den Root teilen.
+
+---
+
+# 4. Explizite positive Hilbert-Realisierung des Baumkerns
+
+Setze
+
+```math
+\mathscr K
+:=
+\mathbb C e_o
+\oplus
+\bigoplus_p L^2(\mathbb R_+,ds).
+```
+
+Fuer `x>=0` definiere
+
+```math
+\boxed{
+\Phi_{p,x}
+:=
+e^{-x/2}e_o
+\oplus
+\left[
+\mathbf1_{[0,x]}(s)e^{-(x-s)/2}
+\right]_p.
+}
+```
+
+Am Root sei `Phi_o=e_o`.
+
+Zunaechst
+
+```math
+\|\Phi_{p,x}\|^2
+=e^{-x}+\int_0^x e^{-(x-s)}ds
+=1.
+```
+
+Sind `0<=x<=y` auf demselben Ast, dann
+
+```math
+\begin{aligned}
+\langle\Phi_{p,x},\Phi_{p,y}\rangle
+&=e^{-(x+y)/2}
++e^{-(x+y)/2}\int_0^x e^s ds\\
+&=e^{-(y-x)/2}.
+\end{aligned}
+```
+
+Auf verschiedenen Aesten ueberlappt nur die Root-Koordinate:
+
+```math
+\langle\Phi_{p,x},\Phi_{r,y}\rangle
+=e^{-(x+y)/2}
+\qquad(p\ne r).
+```
+
+Somit allgemein
+
+```math
+\boxed{
+\langle\Phi_\alpha,\Phi_\beta\rangle
+=e^{-d(\alpha,\beta)/2}.
+}
+```
+
+Dies ist eine explizite Kolmogorov-/OU-Realisierung; Positivitaet des Baumkerns wird nicht aus einem abstrakten Existenzsatz importiert.
+
+---
+
+# 5. Der komplette fensterlose P11-Prime-Ledger ist dieser Baum-Gram
+
+Aus PR #98:
+
+```math
+w_{p,k}=(\log p)p^{-k/2},
+\qquad
+\alpha_{p,k}=\sqrt{\log p}\,p^{-3k/4},
+```
+
+und fuer denselben Primast
+
+```math
+C_{jk}^{(p)}
+=(\log p)p^{\min(j,k)}p^{-3(j+k)/4}
+=\sqrt{w_{p,j}w_{p,k}}\,p^{-|j-k|/2}.
+```
+
+Definiere gewichtete Baumfeatures
+
+```math
+\boxed{
+\Psi_{p,k}:=\sqrt{w_{p,k}}\,\Phi_{p,k\log p}.
+}
+```
+
+Dann gilt fuer `p=r`
+
+```math
+\begin{aligned}
+\langle\Psi_{p,j},\Psi_{p,k}\rangle
+&=\sqrt{w_{p,j}w_{p,k}}\,p^{-|j-k|/2}\\
+&=(\log p)p^{\min(j,k)}p^{-3(j+k)/4}\\
+&=C_{jk}^{(p)}.
+\end{aligned}
+```
+
+Fuer `p!=r` gilt
+
+```math
+\begin{aligned}
+\langle\Psi_{p,j},\Psi_{r,k}\rangle
+&=\sqrt{w_{p,j}w_{r,k}}
+ p^{-j/2}r^{-k/2}\\
+&=\sqrt{\log p\log r}\,
+ p^{-3j/4}r^{-3k/4}\\
+&=\alpha_{p,j}\alpha_{r,k},
+\end{aligned}
+```
+
+also exakt der gemeinsame Hub-Kreuzkoeffizient.
+
+Damit ist fuer jede endliche Prime-Power-Kanalmenge der **gesamte fensterlose Hub+Rest-Indexledger** ein einziger positiver Baum-Gram:
+
+```math
+\boxed{
+\mathcal C_{(p,j),(r,k)}
+=
+\langle\Psi_{p,j},\Psi_{r,k}\rangle.
+}
+```
+
+Insbesondere erhaelt der in PR #98 erzwungene Exponent `3/4` eine direkte geometrische Zerlegung:
+
+```math
+\boxed{
+\alpha_{p,k}
+=\sqrt{w_{p,k}}\,
+\langle\Phi_o,\Phi_{p,k\log p}\rangle
+=\sqrt{\log p}\,p^{-k/4}p^{-k/2}.
+}
+```
+
+Also `3/4 = 1/4 + 1/2`: halbes Weil-Diagonalgewicht plus critical-half Root-Korrelation.
+
+### Firewall
+
+Dies ist eine Aussage ueber den fensterlosen Kanalindex-Ledger. Fensterprojektionen und die raeumliche P11-Operatorgeometrie duerfen nicht stillschweigend entfernt werden.
+
+---
+
+# 6. Hub und Rest sind exakt Root plus OU-Innovationen
+
+Setze auf Ast `p`
+
+```math
+h_p:=\log p,
+\qquad
+q_p=e^{-h_p/2}=p^{-1/2},
+\qquad
+\Phi_{p,0}:=\Phi_o.
+```
+
+Definiere fuer `k>=1`
+
+```math
+\boxed{
+\eta_{p,k}
+:=
+\frac{\Phi_{p,kh_p}-q_p\Phi_{p,(k-1)h_p}}
+{\sqrt{1-q_p^2}}.
+}
+```
+
+Root-Anteil und alle frueheren Astsegmente heben sich exakt weg. `eta_{p,k}` lebt nur auf dem neuen Segment `((k-1)h_p,kh_p]`. Daher ist
+
+```math
+\boxed{
+\{\Phi_o\}\cup\{\eta_{p,k}:p\text{ prim},\ k>=1\}
+}
+```
+
+ein orthonormales System.
+
+Die Rekursion lautet
+
+```math
+\boxed{
+\Phi_{p,kh_p}
+=q_p^k\Phi_o
++\sqrt{1-q_p^2}
+\sum_{m=1}^k q_p^{k-m}\eta_{p,m}.
+}
+```
+
+Fuer eine endlich getragene Kanalfolge `X=(X_k)` folgt somit
+
+```math
+\left\|\sum_k X_k\Phi_{p,kh_p}\right\|^2
+=
+\left|\sum_k q_p^kX_k\right|^2
++
+\sum_m
+\left|
+\sqrt{1-q_p^2}\sum_{k>=m}q_p^{k-m}X_k
+\right|^2.
+```
+
+Mit
+
+```math
+(T_qX)_m
+=\sqrt{1-q^2}\sum_{k>=m}q^{k-m}X_k,
+\qquad
+u_k=q^k,
+```
+
+ist dies exakt
+
+```math
+\boxed{
+R_q=T_q^*T_q+uu^*,
+}
+```
+
+die bereits in PR #98 gefundene Tail-/Hub-Faktorisierung.
+
+Der Sternbaum liefert daher eine kanonische geometrische Bedeutung:
+
+- `Hub` = gemeinsame Root-Koordinate;
+- `Rest` = voneinander orthogonale Ast-Innovationen;
+- cross-prime Korrelation = ausschliesslich gemeinsam geerbte Root-Koordinate.
+
+Dies widerspricht nicht der frueheren Firewall, dass der Hub metrisch nicht irrelevant ist; er ist gerade die gemeinsame Root-Komponente.
+
+---
+
+# 7. POS-DIL-Amplitude ist die Root-Distanz desselben Kerns
+
+Aus PR #101 gilt fuer `n=p^k`
+
+```math
+\sqrt{w_{p,k}}D_{p^k}
+=\sqrt{\log p}(1-q_p^k)S.
+```
+
+Da alle `Phi` Einheitsvektoren sind,
+
+```math
+\boxed{
+1-q_p^k
+=1-\langle\Phi_o,\Phi_{p,k\log p}\rangle
+=\frac12\|\Phi_{p,k\log p}-\Phi_o\|^2.
+}
+```
+
+Also
+
+```math
+\boxed{
+\sqrt{w_{p,k}}D_{p^k}
+=\frac{\sqrt{\log p}}2
+\|\Phi_{p,k\log p}-\Phi_o\|^2 S.
+}
+```
+
+Der fruehere Faktor `flat minus AR(1)-root` ist damit kein isoliertes algebraisches Muster, sondern die quadrierte Chordaldistanz zum gemeinsamen Root im selben positiven Hilbertraum.
+
+---
+
+# 8. Die archimedische Gamma-Schicht ist eine positive Resolventenleiter
+
+Aus NULLPOL-COMMON ist
+
+```math
+h(t)=\frac{e^{-t/2}}{1-e^{-2t}}.
+```
+
+Fuer `t>0` gilt absolut positiv
+
+```math
+\boxed{
+h(t)=\sum_{m=0}^\infty e^{-\mu_m t},
+\qquad
+\mu_m:=2m+\frac12.}
+```
+
+Das archimedische positive Symbol ist
+
+```math
+\Phi_\infty(z)
+=2\int_0^\infty h(t)(1-\cos zt)dt.
+```
+
+Tonelli und
+
+```math
+\int_0^\infty e^{-\mu t}(1-\cos zt)dt
+=\frac{z^2}{\mu(\mu^2+z^2)}
+```
+
+liefern exakt
+
+```math
+\boxed{
+\Phi_\infty(z)
+=2\sum_{m=0}^\infty
+\frac{z^2}{\mu_m(\mu_m^2+z^2)}.
+}
+```
+
+Mit der klassischen Digamma-Partialbruchreihe ist dies identisch zu
+
+```math
+\boxed{
+\Phi_\infty(z)
+=
+\operatorname{Re}\psi\left(\frac14+\frac{iz}{2}\right)
+-\psi(1/4).
+}
+```
+
+Operatorisch:
+
+```math
+\boxed{
+\Phi_\infty(D)
+=
+\sum_{m=0}^\infty
+\frac{2}{\mu_m}
+D^2(D^2+\mu_m^2)^{-1}
+}
+```
+
+als positive Form-/Spektralmultiplizierer.
+
+Jeder Summand ist ein positiver Resolventendefekt des massiven eindimensionalen Operators
+
+```math
+L_{\mu_m}=D^2+\mu_m^2.
+```
+
+Der Grundmodus ist
+
+```math
+\boxed{\mu_0=\frac12,}
+```
+
+und daher
+
+```math
+L_{\mu_0}=L_{1/2},
+\qquad
+L_{\mu_0}^{-1}(x,y)=e^{-|x-y|/2}.
+```
+
+**Dies ist exakt derselbe Kernel wie in §§1--7.**
+
+Zusaetzlich sind die Zahlen
+
+```math
+\mu_m=2m+\frac12
+```
+
+genau die reellen Abstaende der kritischen Mittellinie `Re(s)=1/2` von den Gammafaktor-Polstellen `s=-2m` von `Gamma(s/2)`. Dies ist die spektrale Herkunft der Leiter; es wird keine neue Aussage ueber Zeta-Nullstellen behauptet.
+
+Literaturcheck fuer die Digamma-Partialbruchreihe: NIST DLMF §5.7.6. Die hier relevante Prime-/NULLPOL-Verknuepfung wird nicht als publikationsneu beansprucht.
+
+---
+
+# 9. Der archimedische Skalar `J` ist dieselbe Root-Chord-Energie
+
+NULLPOL-COMMON hat exakt bewiesen
+
+```math
+J
+:=2\int_0^\infty h(t)(1-e^{-t/2})dt
+=\log2+\frac\pi2.
+```
+
+Fuege dem Sternbaum formal einen archimedischen kontinuierlichen Ast hinzu und verwende auf ihm denselben `mu_0=1/2`-Featurekernel. Dann
+
+```math
+\|\Phi_{\infty,t}-\Phi_o\|^2
+=2(1-e^{-t/2}).
+```
+
+Somit
+
+```math
+\boxed{
+J
+=\int_0^\infty
+h(t)\|\Phi_{\infty,t}-\Phi_o\|^2dt.
+}
+```
+
+Der nichttriviale Integralanteil der archimedischen Schwelle ist also die kontinuierliche `h(t)dt`-gemittelte Root-Distanz **derselben critical-half OU-Geometrie**, deren diskrete Root-Distanzen in §7 die Prime-moment-Amplituden erzeugen.
+
+Firewall: `kappa_* = log(4pi)+gamma+J` ist damit noch nicht vollstaendig als reine Baumenergie geometrisiert; `log(4pi)+gamma` bleibt eine separate Normalisierungskonstante.
+
+---
+
+# 10. Exakter momentfreier Lift von NP-GAP
+
+Die Range-Identitaet aus §2 entfernt die zwei Nebenbedingungen vollstaendig.
+
+Schreibe fuer beliebiges
+
+```math
+u\in C_c^\infty(-a,a)
+```
+
+```math
+v=L_{1/2}u.
+```
+
+Dann ist `v` automatisch Nullpol, und jedes Nullpol-`v` entsteht eindeutig so.
+
+Da `K_t` mit `L_{1/2}` kommutiert,
+
+```math
+K_t v=L_{1/2}K_tu.
+```
+
+Fuer die archimedische Resolventenleiter gilt daher exakt
+
+```math
+\begin{aligned}
+\langle v,\Phi_\infty(D)v\rangle
+&=
+\sum_{m=0}^\infty
+\frac{2}{\mu_m}
+\left\|
+D(D^2+\mu_m^2)^{-1/2}L_{1/2}u
+\right\|_2^2.
+\end{aligned}
+```
+
+Der Grundmodus wird **lokal**:
+
+```math
+\boxed{
+\frac{2}{\mu_0}
+\left\|D(D^2+\mu_0^2)^{-1/2}L_{1/2}u\right\|^2
+=4\|u''\|_2^2+\|u'\|_2^2.
+}
+```
+
+Ferner
+
+```math
+\boxed{
+\|L_{1/2}u\|_2^2
+=\|u''\|_2^2
++\frac12\|u'\|_2^2
++\frac1{16}\|u\|_2^2.
+}
+```
+
+Die Prime-Atome werden
+
+```math
+\boxed{
+\|K_{\log n}v\|_2^2
+=\|L_{1/2}K_{\log n}u\|_2^2.
+}
+```
+
+Damit ist NP-GAP exakt aequivalent zu der **momentfreien** Ungleichung
+
+```math
+\boxed{
+\begin{aligned}
+&\sum_{m=0}^\infty
+\frac{2}{\mu_m}
+\left\|
+D(D^2+\mu_m^2)^{-1/2}L_{1/2}u
+\right\|_2^2\\
+&\quad+
+\sum_{n\in\mathcal P_a}
+\frac{\Lambda(n)}{\sqrt n}
+\|L_{1/2}K_{\log n}u\|_2^2\\
+&\qquad\ge
+\Gamma_a\|L_{1/2}u\|_2^2,
+\qquad
+u\in C_c^\infty(-a,a).
+\end{aligned}
+}
+```
+
+Es gibt hier **keine Mellin-/Momentennebenbedingungen mehr**. Der Preis ist die feste positive Quellmetrik `||L_{1/2}u||^2`; dafuer ist der erste archimedische Modus ein rein lokaler coerciver `H^2/H^1`-Term.
+
+Status:
+
+```text
+NP-GAP-LIFT exact equivalence ✓[M]
+sharp inequality             ?[O]
+```
+
+Ein Beweis der Ungleichung fuer alle `a` bleibt RH-aequivalent und wird nicht behauptet.
+
+---
+
+# 11. Objekt-X-Bedeutung
+
+Die neue Struktur ist mehr als eine Umbenennung der bereits bekannten AR(1)-Formel:
+
+1. **Source-Seite:** NULLPOL ist exakt `Range(L_{1/2})` mit lokalem Green-Inversen.
+2. **Prime-Seite:** derselbe Green-Kern, logarithmisch auf Prime-Power-Aesten abgetastet, ist der P11-AR(1)-/Hub-Gramkern.
+3. **Hub/Rest:** die bestehende `T_q^*T_q+uu^*=R_q`-Faktorisierung ist die Root-/Innovationszerlegung dieses Baumes.
+4. **POS-DIL:** `1-u_k` ist exakt die Root-Chordaldistanz.
+5. **Archimedes:** die Digamma-Schicht ist eine positive Resolventenleiter, deren Grundoperator exakt `L_{1/2}` ist.
+6. **Archimedischer Skalar:** `J` ist das kontinuierliche Mittel derselben Root-Chordaldistanz.
+
+Damit existiert nun ein vorwaerts definierter, RH-unabhaengiger **critical-half Green/OU-Kern**, der mehrere bisher nur paarweise verbundene Objekt-X-Bausteine gleichzeitig erklaert.
+
+Der natuerliche naechste analytische Gate ist nicht, einen weiteren Generator zu erfinden, sondern den `NP-GAP-LIFT` aus §10 mit dieser Green-/Resolventenstruktur anzugreifen.
+
+---
+
+# 12. Firewalls / Nichtbehauptungen
+
+Nicht behauptet wird:
+
+- NP-GAP sei bewiesen;
+- `Q_W>=0` sei unkonditional bewiesen;
+- RH sei bewiesen;
+- der Sternbaum allein realisiere bereits die volle Weilform;
+- die archimedischen `K_t`-Kanäle seien bereits mit den Prime-Aesten zu einem einzigen vollstaendigen Object-X-Operator verklebt;
+- Fensterprojektionen duerften aus P11 entfernt werden;
+- `log(4pi)+gamma` sei bereits durch die Baumenergie erklaert;
+- Publikationsneuheit sei geklaert.
+
+Allgemeine OU-Prozesse auf Baeumen und KMS/AR(1)-Kovarianzen sind klassische Strukturen. Der neue projektinterne Befund ist die **exakte Gleichzeitigkeit** dieser Struktur mit dem NULLPOL-Green-Inversen, dem P11-Prime-Ledger, POS-DIL und dem Grundmodus der Gamma-Resolventenleiter.
+
+---
+
+# 13. Neuer Arbeitsauftrag
+
+Default-Hauptengpass bleibt
+
+```text
+NP-GAP / COMMON-JUMP FRAME BOUND.
+```
+
+Neue bevorzugte Route:
+
+```text
+CRITICAL-HALF GREEN BRIDGE
+    -> NULLPOL = Range(L_{1/2})
+    -> momentfreier NP-GAP-LIFT
+    -> Gamma-Resolventenleiter + Prime-Jumps in L_{1/2}-Metrik
+    -> echte Lower-Frame-Schranke oder enger Klassen-No-Go.
+```
+
+Insbesondere sollen als naechstes **vorwaerts** untersucht werden:
+
+1. coercive Schranken der ersten endlich vielen Gamma-Resolventenmodi in der `L_{1/2}`-Metrik;
+2. exakte Rolle der Prime-Jumps nach `L_{1/2}`-Lift;
+3. ob die OU-Tree-Innovationskoordinaten eine kanonische Vergleichsmetrik zwischen P11 und COMMON-JUMP liefern;
+4. ein No-Go gegen jede rein punktweise Kanal-Domination, falls diese die notwendige kleine-`t`-Geometrie nicht respektiert.
