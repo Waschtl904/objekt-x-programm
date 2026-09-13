@@ -25,7 +25,7 @@ jobs:
           git hash-object scripts/check_a1_highfreq_multiplier_arb.py
           python scripts/check_a1_highfreq_multiplier_arb.py | tee a1_highfreq_multiplier_arb.log
           grep -q 'CERTIFIED: m_1(xi) > 0.04 for every |xi| >= 2300' a1_highfreq_multiplier_arb.log
-          grep -q 'CERTIFIED: any Prolate tail with band concentration <= 0.0035 is q_1-positive' a1_highfreq_multiplier_arb.log
+          grep -q 'CERTIFIED: band concentration <= 0.0035 implies q_1-tail margin > 0.0005' a1_highfreq_multiplier_arb.log
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: a1-highfreq-multiplier-arb
