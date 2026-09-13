@@ -1,148 +1,126 @@
-# Offene Probleme — COMMON-JUMP / NP-OVERLAP
+# Offene Probleme — NP-OVERLAP-AR1
 
 > **Stand:** 13. September 2026.  
-> Operative Quellen: [CURRENT-FRONT](CURRENT-FRONT.md), [Review correction / Prime overlap](audits/P11_NP_GAP_REVIEW_CORRECTION_PRIME_OVERLAP_2026-09-13.md), [Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](00-uebersicht/DAG.md).
+> Operative Quellen: [CURRENT-FRONT](CURRENT-FRONT.md), [Prime-overlap AR(1)](audits/P11_NP_OVERLAP_AR1_FIBERIZATION_2026-09-13.md), [Review correction](audits/P11_NP_GAP_REVIEW_CORRECTION_PRIME_OVERLAP_2026-09-13.md).
 
-## Neu geklärt
+## Neu geschlossen
 
-### `[HIGHER-CHANNEL-EXPONENT]` — `✓[M]`
-
-Der stärkere Bound
+### Einzelshift-Geometrie `✓[M]`
 
 ```math
-A_\alpha\succeq\frac2\alpha e^{-\alpha a}I
+\|S_t\|
+=\cos\frac{\pi}{\lceil2a/t\rceil+1}
 ```
 
-folgt direkt aus dem Schur-Test für den komprimierten Resolventenkern. Die `e^{-alpha a}`/`e^{-2alpha a}`-Diskrepanz ist geschlossen.
+für `0<t<2a`, und `S_t=0` für `t>=2a`.
 
-### `[SHORT-WINDOW-BOOKING]`
+### Einzelshift-Nullpolverbesserung `×[M]`
 
-```text
-interne COMMON-JUMP/Q0-Coercivity   ✓[M]_part
-neuer short-window Weil-Satz        ×[M]
-```
+Dieselbe Top-Norm wird bereits auf `D_NP(a)` erreicht. Zwei Nullpolmomente beseitigen die unendlichdimensionale Top-Eigensphäre nicht.
 
-Suzuki Theorem 1.4 enthält bereits eine stärkere volle-Klasse-Kleinfensterpositivität.
+**Konsequenz:** eine Summe unabhängiger Einzelshift-Normschranken kann die Nullpolstruktur nicht ausnutzen und ist als Hauptstrategie ausgeschieden.
 
-### `[PRIME-CENTERING]` — `✓[M]`
+### Vollständiger p-Block `✓[M]`
 
-Auf Nullpol gilt exakt
+Für `q=p^{-1/2}`:
 
 ```math
-\boxed{Q_W(v)=\mathcal A(v)-\mathcal O_a(v)}
+\boxed{
+O_{p,a}^{(N)}=(\log p)(R_q^{(N)}-I_N),
+\qquad R_q^{(N)}=(q^{|j-k|}).
+}
 ```
 
-mit
+Der positive Sektor ist
 
 ```math
-\mathcal O_a(v)
-=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
-\operatorname{Re}\langle T_{\log n}v,v\rangle.
+|theta|<arccos(q).
 ```
 
-Alle äußeren Prime-Kanäle und der gesamte Prime-Diagonalledger verschwinden nach exakter Zentrierung aus dem Restproblem.
-
-### `[Q0-OVERLAP-TRANSPORT]` — `✓[M]`
-
-Für `v=Q0u`:
-
-```math
-Re<T_t v,v>
-=Re<T_tu'',u''>
-+\frac12Re<T_tu',u'>
-+\frac1{16}Re<T_tu,u>.
-```
+Damit ist die alte Prime-Power-AR(1)-Struktur exakt die Fasergeometrie des neuen Overlap-Problems.
 
 ---
 
-## Priorität 0 — `[NP-OVERLAP]` `?[O]`
+## Priorität 0 — `[MULTIPRIME-AR1]` `?[O]`
 
-Der harte Satz ist jetzt
+Zu quantifizieren ist die gleichzeitige positive Energie derselben Funktion in den AR(1)-Blöcken vieler Primzahlen.
+
+Da
+
+```math
+log p/log r notin Q
+```
+
+für `p!=r`, liegen die gefährlichen Niedrigfrequenzsektoren auf inkommensurablen Gittern.
+
+### Pflichtfragen
+
+1. Gibt es eine quantitative Uncertainty-/Frame-Ungleichung zwischen zwei oder mehreren `log p`-Faserungen?
+2. Kann eine Funktion gleichzeitig nahe am positiven Topsektor von `R_{p^{-1/2}}-I` für viele `p` liegen?
+3. Liefert die bekannte AR(1)-Inverse/Markov-Struktur eine gemeinsame Kontraktion?
+4. Wie verändert der Q0-Sobolevtransport diese simultaneous-low-frequency-Frage?
+5. Kann die Überlappungsbreite `delta_n=2a-log n` eine zusätzliche Randstrafe liefern?
+
+---
+
+## Priorität 1 — `[AR1-RECONNECT]`
+
+Verbinde die exakte Faserform systematisch mit den bereits bewiesenen Prime-Power-Sätzen des Programms, insbesondere
+
+```math
+C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2}
+```
+
+und den Markov-/Weil-tail-Faktorisierungen.
+
+Gesucht ist eine echte Ungleichung für `sum_p O_{p,a}`, nicht nur eine weitere Identifikation der Matrixklasse.
+
+---
+
+## Priorität 2 — `[ARCH-COUPLING]`
+
+Der Zieloperator bleibt
 
 ```math
 \boxed{
 (A_\infty-\kappa_*I)|_{D_{NP}(a)}
 \succeq
-\mathbf O_a|_{D_{NP}(a)}
-\quad\forall a>0.
+\sum_p O_{p,a}|_{D_{NP}(a)}.
 }
 ```
 
-mit
-
-```math
-\mathbf O_a
-=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
-\frac{T_{\log n}+T_{-\log n}}2.
-```
-
-### `[OVERLAP-SPEC]`
-
-Bestimme das positive Spektrum von `O_a` nach Nullpolkompression. Besonders wichtig: gerade/ungerade Sektoren und die Entwicklung beim Eintritt neuer Prime-Power-Shifts.
-
-### `[OVERLAP-EDGE]`
-
-Für
-
-```math
-\delta_n=2a-\log n
-```
-
-muss eine scharfe Korrelationseinschränkung gefunden werden, die exakt bei `delta_n=0` verschwindet. Grobe Normschranken ohne Randgeometrie sind voraussichtlich zu schwach.
-
-### `[OVERLAP-Q0]`
-
-Nutze die Sobolev-Korrelationsform nach `v=Q0u`. Gesucht ist eine direkte Kontrolle der positiven Shift-Korrelationen durch den archimedischen Überschuss.
-
-### `[OVERLAP-AR1]`
-
-Prüfe, ob die bereits bewiesene Prime-Power-AR(1)/Weil-tail-Geometrie die gewichtete Summe der Shift-Korrelationen einschränkt. Diese Rückkopplung hat jetzt höhere Priorität als weitere reine Gamma-Kanalverbesserungen.
+Die archimedische Seite darf nicht getrennt von der kollektiven Prime-Seite optimiert werden, wenn dadurch nur mehr Einzelkanalmasse entsteht.
 
 ---
 
-## Priorität 1 — `[GAMMA-LADDER]` auxiliary
+## Auxiliary
 
-Die Operatoren
+- finite Gamma-null ladder: strukturell zulässig, aber ohne Prime-overlap-Kontrolle Nebenfront;
+- short-window Coercivity: intern `✓[M]_part`, Neuheitsclaim `×[M]`;
+- Arb-`a_*`-Gate: numerisches Seitengate;
+- finite Ritzwerte: nur Diagnostik/Falsifikationshilfe.
 
-```math
-Q_m=-\partial_x^2+(2m+1/2)^2
-```
-
-erzeugen Mellin-Nullstellen bei `-2m` und `2m+1`. Endliche Mengen dieser Bedingungen bleiben im Connes--Consani-Scope zulässig; negative gerade Punkte sind triviale Zeta-Nullstellen.
-
-Offen ist eine saubere simultane support-erhaltende Isomorphie/Faktorisierung und vor allem die Frage, ob sie **quantitativ** `O_a` kontrolliert. Ohne solche Kontrolle bleibt die Leiter auxiliary.
-
----
-
-## Priorität 2 — Arb-/Numerikgates
-
-- neuer Exact-Head-Arb-Gate für `a_*`;
-- endliche Ritz-Minima bleiben obere Schranken für das wahre Infimum;
-- numerische Overlap-Spektren dürfen nur als Diagnostik dienen, bis Intervallzertifikate vorliegen.
-
----
-
-## Danach
+## Endziel
 
 ```text
-NP-OVERLAP all a
-  |
-  v
-positive Weil form on global null-pole class
-  |
-  v
+collective multi-prime AR1 suppression
+        |
+        v
+all-a NP-OVERLAP
+        |
+        v
+global null-pole Weil positivity
+        |
+        v
 RH
 ```
-
-Ein all-`a`-Beweis bleibt RH-hart.
 
 ## Firewalls
 
 Nicht behaupten:
 
-- Kleinfensterpositivität sei neu;
-- `Gamma_a ~ 4e^a` sei als nackter Skalar die eigentliche Wand;
-- die Mehrkanalleiter löse den Prime-overlap;
+- Einzelshift-No-Go widerlege kollektive Mechanismen;
+- Inkommensurabilität allein liefere bereits einen quantitativen Bound;
+- bekannte Kleinfensterpositivität sei neu;
 - ein fixes Fenster sei RH-äquivalent;
-- positive Ritzwerte bewiesen Positivität;
-- Object X oder RH seien gelöst.
+- Object X oder RH seien bewiesen.
