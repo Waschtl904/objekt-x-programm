@@ -1,153 +1,127 @@
-# Aktueller Stand — Objekt X / COMMON-JUMP → NP-OVERLAP
+# Aktueller Stand — Objekt X / NP-OVERLAP-AR1
 
 > **Stand:** 13. September 2026; Registry unverändert.  
-> Details: [CURRENT-FRONT](../CURRENT-FRONT.md), [COMMON-JUMP](../audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md), [Q0 first channel](../audits/P11_NP_GAP_Q0_FIRST_CHANNEL_2026-09-13.md), [Review correction / Prime overlap](../audits/P11_NP_GAP_REVIEW_CORRECTION_PRIME_OVERLAP_2026-09-13.md).
+> Details: [CURRENT-FRONT](../CURRENT-FRONT.md), [Prime-overlap AR(1)](../audits/P11_NP_OVERLAP_AR1_FIBERIZATION_2026-09-13.md), [Review correction](../audits/P11_NP_GAP_REVIEW_CORRECTION_PRIME_OVERLAP_2026-09-13.md).
 
-## 1. Gemeinsame positive Geometrie `✓[M]`
+## 1. COMMON-JUMP und Q0 `✓[M]`
 
-Für
-
-```math
-K_t=T_{t/2}-T_{-t/2}
-```
-
-liegen archimedischer Ort und Primzahlpotenzen in derselben positiven Featurearchitektur. Auf Nullpol gilt exakt
+Auf der Nullpolklasse gilt
 
 ```math
-\boxed{Q_W(v)=\|X_av\|^2-\Gamma_a\|v\|^2.}
+Q_W(v)=\|X_av\|^2-\Gamma_a\|v\|^2.
 ```
 
-## 2. `Q_0` / erster Gamma-Kanal `✓[M]`
-
-Mit
+Der erste archimedische Kanal erfüllt mit `Q0=-partial_x^2+1/4`
 
 ```math
-A_\alpha=\int_0^\infty e^{-\alpha t}K_t^*K_tdt
+A_{1/2}Q_0=-4\partial_x^2,
+\qquad
+Q_0:C_c^\infty(-a,a)\cong D_{NP}(a).
 ```
 
-ist
+Für höhere Kanäle gilt rigoros
 
 ```math
-A_\alpha=\frac2\alpha(-\partial_x^2)(-\partial_x^2+\alpha^2)^{-1}.
+A_\alpha\succeq\frac2\alpha e^{-\alpha a}I.
 ```
 
-Für `alpha=1/2` und `Q_0=-partial_x^2+1/4`:
+Die projektinterne Kleinfenster-Coercivity bleibt `✓[M]_part`, ist aber kein neuer Kleinfenster-Positivitätssatz der Literatur (`×[M]` als Neuheitsclaim; Suzuki Theorem 1.4 ist stärker).
+
+## 2. Zentrierte Restform `✓[M]`
+
+Nach exakter Prime-Zentrierung:
 
 ```math
-\boxed{A_{1/2}Q_0=-4\partial_x^2.}
-```
-
-Außerdem
-
-```math
-Q_0:C_c^\infty(-a,a)\cong D_{NP}(a)
-```
-
-support-erhaltend.
-
-## 3. Höhere Kanalabschätzung `✓[M]`
-
-Der komprimierte Resolventenkern liefert per Schur-Test
-
-```math
-\boxed{
-\langle v,A_\alpha v\rangle
-\ge\frac2\alpha e^{-\alpha a}\|v\|^2.
-}
-```
-
-Die externe Exponentenfrage ist damit geschlossen.
-
-## 4. Short-window: Mathematik bleibt, Neuheitsbuchung korrigiert
-
-Die COMMON-JUMP/Q0-Architektur reproduziert auf einem expliziten kleinen Fensterbereich Coercivity. Die Existenz von Kleinfensterpositivität ist aber **kein neuer Literatur-Satz**: Suzuki Theorem 1.4 beweist bereits eine stärkere Positivität auf der vollen lokalen Klasse.
-
-Daher:
-
-```text
-architekturinterne short-window Coercivity     ✓[M]_part
-short-window positivity als neuer Satz         ×[M]
-```
-
-Für den projektinternen Bound gilt mit `x=e^{-a/2}`
-
-```math
-B(a)=\frac{4\pi^2}{\pi^2+a^2}
-+\log\frac{1+x}{1-x}+2\arctan x-4x.
-```
-
-Ein eigener Arb-Gate zertifiziert die Wurzel `B(a_*)=kappa_*` im Intervall
-
-```math
-0.1033784517534<a_*<0.1033784517535<\frac12\log2.
-```
-
-## 5. Exakte Prime-overlap-Restform `✓[M]`
-
-Definiere den archimedischen Überschuss
-
-```math
-\mathcal A(v)
-=\int_0^\infty\frac{e^{-t/2}}{1-e^{-2t}}\|K_tv\|^2dt
--\kappa_*\|v\|^2.
-```
-
-Dann gilt auf `D_NP(a)` exakt
-
-```math
-\boxed{
-Q_W(v)=\mathcal A(v)-\mathcal O_a(v),
-}
+\boxed{Q_W(v)=\mathcal A(v)-\mathcal O_a(v)}
 ```
 
 mit
 
 ```math
-\boxed{
 \mathcal O_a(v)
 =2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
 \operatorname{Re}\langle T_{\log n}v,v\rangle.
+```
+
+Der harte Rest ist also ein endlicher gewichteter Overlap-Operator, nicht die nackte Prime-Schwelle.
+
+## 3. Einzelshift exakt — und als Strategie ausgeschöpft
+
+Für
+
+```math
+S_t=\frac12(T_t+T_{-t})
+```
+
+liefert Faserung modulo `t`
+
+```math
+\boxed{
+\|S_t\|
+=\cos\frac{\pi}{\lceil2a/t\rceil+1}
+\quad(0<t<2a).
 }
 ```
 
-Die große Prime-Diagonalmasse cancelt vollständig gegen den Prime-Anteil der Schwelle. Übrig bleibt ausschließlich die gewichtete Überlappung der inneren Prime-Power-Shifts.
+Dieselbe Norm wird bereits auf `D_NP(a)` erreicht. Daher
 
-## 6. `Q_0`-Transport des arithmetischen Defekts `✓[M]`
-
-Für `v=Q_0u`:
-
-```math
-\operatorname{Re}\langle T_tv,v\rangle
-=
-\operatorname{Re}\langle T_tu'',u''\rangle
-+\frac12\operatorname{Re}\langle T_tu',u'\rangle
-+\frac1{16}\operatorname{Re}\langle T_tu,u\rangle.
+```text
+single-shift null-pole norm improvement   ×[M]
 ```
 
-Damit ist die neue Hauptfrage eine endliche gewichtete Shift-Korrelationsfrage auf Sobolev-Ebenen `0,1,2`.
+Nullpol allein verbessert keinen einzelnen Shiftkanal. Kollektive Prime-Struktur ist notwendig.
 
-## 7. Neue Hauptfront
+## 4. Prime-Power-Block = exakte AR(1)-Matrix `✓[M]`
+
+Für eine Primzahl `p`,
+
+```math
+\ell_p=\log p,
+\qquad q_p=p^{-1/2},
+```
+
+ist nach Faserung modulo `ell_p` auf einer `N`-Punkt-Faser
+
+```math
+\boxed{
+O_{p,a}^{(N)}
+=(\log p)(R_{q_p}^{(N)}-I_N),
+\qquad
+R_q^{(N)}=(q^{|j-k|})_{j,k}.
+}
+```
+
+Der positive Symbolsektor ist
+
+```math
+|\theta|<\arccos(q_p).
+```
+
+Damit kehrt die bereits bekannte Prime-Power-AR(1)-Geometrie exakt als Faserstruktur des neuen Overlap-Problems zurück.
+
+## 5. Neue Hauptfront `?[O]`
+
+Für verschiedene Primzahlen sind `log p/log r` irrational. Die zentrale Frage ist daher die **gleichzeitige** Konzentration derselben Funktion in den positiven Niedrigfrequenzsektoren vieler inkommensurabler AR(1)-Gitter.
+
+Zu beweisen bleibt
 
 ```math
 \boxed{
 (A_\infty-\kappa_*I)|_{D_{NP}(a)}
 \succeq
-\mathbf O_a|_{D_{NP}(a)}
-\quad\forall a>0.
+\sum_p O_{p,a}|_{D_{NP}(a)}.
 }
 ```
 
-Status:
+## 6. Status
 
 ```text
-COMMON-JUMP                                  ✓[M]
-Q0 first-channel / support map               ✓[M]
-centered Prime-overlap decomposition         ✓[M]
-short-window internal reproduction           ✓[M]_part
-short-window novelty claim                   ×[M]
-all-a NP-OVERLAP                             ?[O]
-forward Object-X candidate architecture      ✓[M]_part
-full positive Object-X / RH                  ?[O]
+COMMON-JUMP / Q0                              ✓[M]
+centered Prime-overlap form                   ✓[M]
+exact single-shift fiber theorem              ✓[M]
+single-shift null-pole improvement            ×[M]
+exact per-prime AR(1) fiberization            ✓[M]
+collective multi-prime suppression            ?[O]
+forward Object-X candidate architecture       ✓[M]_part
+full positive Object-X / RH                   ?[O]
 ```
-
-Die endliche Mehrkanal-Gamma-Leiter ist strukturell zulässig, aber auxiliary, solange sie `O_a` nicht quantitativ kontrolliert.
