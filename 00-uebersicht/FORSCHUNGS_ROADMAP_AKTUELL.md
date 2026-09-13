@@ -1,36 +1,27 @@
-# Objekt X — kanonische Forschungsroadmap v2.6
+# Objekt X — kanonische Forschungsroadmap v2.7
 
 > **Stand:** 13. September 2026; Registry unverändert.  
-> **Rolle:** aktuelle Abhängigkeits- und Forschungsstrategiekarte.  
-> **Keine Beweisautorität:** Diese Roadmap erzeugt keine `✓[M]`-Promotion, kein unabhängiges GREEN, keinen Freeze und keine Object-X-/RH-Folgerung.  
-> **Operative Front:** [CURRENT-FRONT](../CURRENT-FRONT.md)  
-> **Kurzstand:** [AKTUELLER_STAND](AKTUELLER_STAND.md)  
-> **DAG:** [DAG](DAG.md)  
-> **Registry:** [ACTIVE_THEOREM_REGISTRY](ACTIVE_THEOREM_REGISTRY.md)
+> **Keine Beweisautorität.** Operative Front: [CURRENT-FRONT](../CURRENT-FRONT.md).
 
----
+## 1. Verfügbare Basis
 
-## 1. Ausgangsbasis
+- fixed-pair Strong Terminal/C6 im ungeraden P11-Graphraum;
+- Prime-Power-AR(1)/Weil-Tail:
+  ```math
+  C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2},
+  \qquad T_q^*T_q+uu^*=R_q;
+  ```
+- lokalisierte Normalform
+  ```math
+  Q_{B_a}=G_a^+-N_a,
+  \qquad N_a=c_aI+C_a.
+  ```
 
-Fixed-pair Strong Terminal/C6 ist im ungeraden P11-Graphraum verfügbar. Die Prime-Power-Seite besitzt die exakte AR(1)/Weil-Tail-Struktur
+Arbiträre rückwärts definierte Kontraktorexistenz bleibt kein Object-X-Gate.
 
-```math
-C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2},
-\qquad T_q^*T_q+uu^*=R_q.
-```
+## 2. OX-GEN-A / POS-DIL-1
 
-Für `a<=1` ist die lokalisierte Suzuki-/Weilform
-
-```math
-Q_{B_a}=G_a^+-N_a,
-\qquad N_a=c_aI+C_a.
-```
-
-Die rückwärts aus bekannter Positivität definierte Kontraktorexistenz ist kein Object-X-Gate.
-
----
-
-## 2. OX-GEN-A `✓[M]`
+Die gemeinsame Generator-Ebene erfüllt
 
 ```math
 \mathcal ET_t=\rho(t)\mathcal E,
@@ -39,26 +30,10 @@ Die rückwärts aus bekannter Positivität definierte Kontraktorexistenz ist kei
 ```
 
 ```math
-r_0''(t)=-\operatorname{tr}\rho(t),
-\qquad
 R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle.
 ```
 
-Prime-only-A2 aus `{w_n,lambda_n}` bleibt `×[M]` im engen Scope.
-
----
-
-## 3. POS-DIL-1 — positive Rang-2-Hilbertumgebung
-
-Die Companion-Symmetrien erzwingen `M=tI`; minimale Blockpositivität liefert `M=I`. Volle positive `rho`-Invarianz erzwingt `M=0`.
-
-Die Prime-moment-Abbildung
-
-```math
-V_Nv=\kappa_N^{-1/2}(\sqrt{w_n}\,\mathcal EK_nv)_{n\in N}
-```
-
-liefert
+Die Prime-moment-Hilbertisierung liefert
 
 ```math
 \|V_Nv\|^2=\|\mathcal Ev\|^2,
@@ -66,201 +41,157 @@ liefert
 R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.
 ```
 
-Für `n=p^k`:
+AR(1)-Brücke:
 
 ```math
-\sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-p^{-k/2})S.
+\sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S.
 ```
 
-Buchung: `OX-GEN-A2'` insgesamt `✓[M]_part`.
+## 3. POS-DIL-2A — lokale bestehende G-Masse allein fällt
 
----
-
-## 4. POS-DIL-2A — bestehende lokale Featuremasse reicht nicht `×[M]`
-
-Bei `a=1/2` verletzt eine explizite Plateaufolge die notwendige unit-gain-Bedingung
+Bei `a=1/2` ist unit-gain Shorting in der unveränderten `G_{1/2}^+`-Norm unmöglich. Notwendiger Massendefekt:
 
 ```math
-\|\mathcal Ev\|^2\le G_{1/2}^+(v).
+\delta_0>\frac5{32}.
 ```
 
-Der exakte Grenzdefekt ist
+## 4. POS-DIL-2B/2C-R — äußerer Prime-Shell löst die Positivitätsfrage auf 0<a<=1
+
+Geometrisch:
 
 ```math
-\delta_0
-=32\sinh^2\frac14-1-\sqrt2(\log2)^2
->\frac5{32}>0.
-```
-
-Damit sind unit-gain Shorting und kontraktive Target-observables innerhalb der unveränderten `G_{1/2}^+`-Norm ausgeschlossen.
-
----
-
-## 5. POS-DIL-2B — erster äußerer Prime-Shift-Shell `✓[M]` bei a=1/2
-
-Die nächste positive Klasse wird rein geometrisch definiert:
-
-```math
-\mathscr S_a^{\rm out}
-=\{n=p^k:a<c_n\le2a\},
+\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\},
 \qquad c_n=\frac12\log n.
 ```
 
 ```math
-H_a^{\rm out}(v,w)
-=\sum_{n\in\mathscr S_a^{\rm out}}
-\frac{\Lambda(n)}{\sqrt n}
-\langle K_nv,K_nw\rangle.
+H_a^{out}(v,w)=\sum_{n\in\mathscr S_a^{out}}
+\frac{\Lambda(n)}{\sqrt n}\langle K_nv,K_nw\rangle.
 ```
 
-Für jeden äußeren Kanal (`c_n>a`) sind die beiden verschobenen Fenster disjunkt:
+Jeder äußere Kanal ist auf dem Fenster reine lokale Masse:
 
 ```math
-\boxed{\|K_nv\|_2^2=2\|v\|_2^2.}
-```
-
-Folglich
-
-```math
-H_a^{\rm out}(v)=2B_a^{\rm out}\|v\|_2^2.
-```
-
-Diese Skalarmasse ist **kein gefittetes `tI`**, sondern die exakte lokale Form echter Prime-Kanäle mit ihren Weilgewichten.
-
-Bei `a=1/2` enthält der Shell insbesondere `3,4,5`. Zusammen mit dem vorhandenen Log-Multiplikator:
-
-```math
-G_{1/2}^+(v)+H_{1/2}^{\rm out}(v)
->\frac83\|v\|_2^2.
-```
-
-Andererseits
-
-```math
-\|\mathcal Ev\|^2
-\le4\sinh\frac12\|v\|_2^2
-<\frac83\|v\|_2^2.
+\|K_nv\|^2=2\|v\|^2.
 ```
 
 Damit
 
 ```math
+H_a^{out}(v)=2B_a^{out}\|v\|^2.
+```
+
+Für alle `0<a<=1` liefert der vorhandene Log-Multiplikator
+
+```math
+G_a^+(v)\ge(-\log a)\|v\|^2,
+```
+
+während
+
+```math
+\|\mathcal Ev\|^2\le4\sinh(a)\|v\|^2.
+```
+
+Eine endliche siebenintervallige Prime-Power-Analyse beweist
+
+```math
+\boxed{-\log a+2B_a^{out}>4\sinh(a)}
+```
+
+für den gesamten Bereich `0<a<=1`. Daher
+
+```math
 \boxed{
 \|\mathcal Ev\|^2
-\le G_{1/2}^+(v)+H_{1/2}^{\rm out}(v)
+\le G_a^+(v)+H_a^{out}(v)
+\qquad(0<a\le1),
 }
 ```
 
-auf der ganzen Testklasse.
-
-Mit `A_{1/2}^{out}=G_{1/2}^++H_{1/2}^{out}` folgt
+und folglich
 
 ```math
 \boxed{
 \begin{pmatrix}
-A_{1/2}^{\rm out}&R_0\\
-R_0&A_{1/2}^{\rm out}
+G_a^++H_a^{out}&R_0\\
+R_0&G_a^++H_a^{out}
 \end{pmatrix}\succeq0.
 }
 ```
 
-Dies ist der erste nach dem POS-DIL-2A-No-Go konstruierte positive gemeinsame Prime-/`r_0`-Schurbaustein.
+**Radiusfrage geschlossen `✓[M]`.**
 
----
+## 5. Aktuelle Default-Priorität: POS-DIL-2C-B / EXACT-SHELL-BOOKING
 
-## 6. Warum der Fortschritt noch partiell ist
+Die positive Geometrie ist nun auf dem gesamten lokalen Radiusbereich stark genug. Der Engpass ist ausschließlich die exakte Bilanz:
 
-Die äußeren Kanäle `c_n>a` wurden in der lokalisierten Suzuki-Normalform nicht als Teil des endlichen `G_a^+`-Blocks behalten. Ihre positive Restriktion auf das Fenster ist mathematisch echt, aber eine **vollständige Weil-Identität darf diese Energie nicht einfach zusätzlich erfinden**.
+> Kann `H_a^{out}` in die gemeinsame Prime-/Archimedean-Geometrie eingebaut werden, ohne die vollständige Weilform durch zusätzliche Energie zu verändern?
 
-Daher bleiben zwei Fragen offen:
+Priorisierte Reihenfolge:
 
-1. **Radius:** Für welche `a` trägt derselbe geometrische Shell die Momentmasse?
-2. **Buchung:** Welche kanonische Gegenbuchung/Teleskopierung/Root-Hub-Struktur erlaubt den Shell in einer exakten gemeinsamen Geometrie, ohne die Weilform zu verändern?
+### 5.1 Vor-Cutoff-Rekonstruktion
 
-Die zweite Frage hat strategisch Vorrang vor weiteren bloßen Positivitätssweeps.
+Rekonstruiere exakt, wo die Identitätsmasse der Kanäle `c_n>a` vor der lokalisierten Cutoff-/Normalform-Umschreibung sitzt.
 
----
+### 5.2 Shell-Differenzen / Teleskopierung
 
-## 7. Aktuelle Default-Priorität: POS-DIL-2C / SHELL-BOOKING-AND-RADIUS
+Prüfe aufeinanderfolgende Shift-Shells auf eine kanonische Differenzzerlegung, bei der äußere positive Masse und Gegenmasse exakt bilanzieren.
 
-### Gate 2C-B — exakte Shell-Buchung `?[O]`
+### 5.3 AR(1)-Root/Hub
 
-Untersuche zuerst die Provenienz der reinen Außenkanalmasse:
-
-- Wo erscheint sie vor der lokalen Cutoff-/Normalform-Umschreibung?
-- Lässt sie sich durch Shell-Differenzen oder eine telescopische Prime-Zerlegung bilanzieren?
-- Gibt die AR(1)-Root/Hub-Zerlegung `T_q^*T_q+uu^*=R_q` eine natürliche Gegenkomponente?
-- Gibt es eine Beziehung der POS-DIL-1-Amplitude `1-u_k` zu dieser Gegenbuchung?
-
-Erfolg nur, wenn die volle Form unverändert bleibt und die Konstruktion vorwärts aus vorhandenen Daten kommt.
-
-### Gate 2C-R — Radiusfortsetzung `?[O]`
-
-Bestimme den maximalen Radiusbereich, auf dem
+Prüfe pro Primast
 
 ```math
-\|\mathcal Ev\|^2
-\le G_a^+(v)+H_a^{\rm out}(v)
+T_q^*T_q+uu^*=R_q
 ```
 
-gilt. Algebraische Intervallanalyse an Prime-Power-Shellwechseln ist numerischen Sweeps vorzuziehen.
+als mögliche Gegenbuchungsgeometrie. Insbesondere ist die bereits gefundene Quotientenamplitude
 
----
+```math
+1-u_k=1-q_p^k
+```
 
-## 8. Danach: OX-GEN-B
+auf eine Buchungsrolle zu testen.
 
-`r_1` und `c_aI` erst dann einbeziehen, wenn ihre Rolle aus der gemeinsamen Geometrie vorwärts motiviert ist. Der Außenshell darf nicht still mit `c_aI` identifiziert werden.
+### 5.4 Erst danach c_a / r_1
 
-Parallel: Prime-Power-AR(1)/Martingal-Faktorisierung als eigenständige RH-unabhängige Mathematik verschriftlichen.
+Eine Verbindung des Shell-Skalars mit `c_aI` oder dem regulären `r_1`-Block darf erst nach einer exakten Bilanz untersucht werden. Keine stille Identifikation.
 
----
-
-## 9. Vollständiger Object-X-Pfad
+## 6. Danach: vollständiger Object-X-Pfad
 
 ```text
-OX-GEN / POS-DIL partial geometry
+exact shell booking ?[O]
         |
         | --candidate-input only-->
         v
-GENUINE X CANDIDATE ?[O]
+OX-GEN-B / genuine X candidate ?[O]
         |
         v
-EXACT FULL WEIL-GRAM IDENTITY ?[O]
+exact full Weil-Gram identity ?[O]
         |
         v
-OBJECT-X REALIZATION ?[O]
+Object-X realization ?[O]
         |
         v
-WEIL-CRITERION-SCOPE ?[O]
+Weil-criterion scope ?[O]
         |
         v
 RH
 ```
 
-Keine candidate-input-Kante ist eine Theoremimplikation.
+## 7. Firewalls
 
----
+- Radiuspositivität ist nicht exakte Weil-Buchung.
+- Außenshellmasse ist nicht bereits `c_aI`.
+- POS-DIL-2A war nur ein No-Go gegen die unveränderte `G^+`-Norm.
+- Keine Registry-Promotion durch Merge/CI.
+- PR #91, PR #49 und R37/G4c bleiben separat.
 
-## 10. Firewalls
-
-Nicht reaktivieren oder überdehnen:
-
-- arbitrary contractor aus fertiger Weil-Positivität;
-- Prime-only Rang-2-Gram ohne Zusatzstruktur;
-- matched cutoff/OX-REN;
-- cross-prime als Boundary;
-- klassische `H^{1/2}`-Deutung des `1/|x-y|`-Kerns;
-- POS-DIL-2A als globaler No-Go gegen positive Erweiterungen;
-- Außenshellmasse als bereits identifizierter `c_aI`-Block;
-- Shell-Positivität als volle Weil-Buchung.
-
----
-
-## 11. Explizit offen
+## 8. Explizit offen
 
 ```text
-POS-DIL-2C exact shell booking / renormalization
-POS-DIL-2C radius extension
+POS-DIL-2C-B exact shell booking / renormalization
 OX-GEN-B
 r_1
 c_a I in intrinsic geometry
@@ -269,5 +200,4 @@ exact full Weil-Gram identity
 Object-X realization
 Weil-criterion scope
 RH
-R37/G4c [separate]
 ```

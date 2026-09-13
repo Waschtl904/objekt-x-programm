@@ -7,21 +7,11 @@
 
 ### OX-GEN-A `✓[M]`
 
-```math
-\mathcal ET_t=\rho(t)\mathcal E,
-\qquad
-\mathcal EK_n=D_n\mathcal E,
-```
+Prime-Kanäle und `r_0` liegen auf derselben zweidimensionalen Translation-/Reflexions-Generator-Ebene.
 
-```math
-R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle.
-```
+### POS-DIL-1 `✓[M]` / enger No-Go `×[M]`
 
-Prime-only-A2 bleibt `×[M]` im engen Scope.
-
-### POS-DIL-1 `✓[M]` / `×[M]` gemischt
-
-Die natürliche positive Companion-Klasse liefert `M_min=I`; volle positive `rho`-Invarianz ist nur trivial. Die Prime-moment-Abbildung realisiert
+Die Prime-moment-Hilbertisierung erfüllt
 
 ```math
 \|V_Nv\|^2=\|\mathcal Ev\|^2,
@@ -29,105 +19,85 @@ Die natürliche positive Companion-Klasse liefert `M_min=I`; volle positive `rho
 R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.
 ```
 
+Volle positive `rho`-Invarianz auf positivem Rang 2 ist nur trivial.
+
 ### POS-DIL-2A bestehende G-Masse `×[M]`
 
-Bei `a=1/2` ist unit-gain Shorting innerhalb der unveränderten `G_{1/2}^+`-Norm ausgeschlossen. Notwendiger Plateau-Massendefekt:
+Bei `a=1/2` ist die unveränderte `G_{1/2}^+`-Norm zu klein für unit-gain Shorting.
+
+### POS-DIL-2B/2C-R erster Außenshell `✓[M]`
 
 ```math
-\delta_0>\frac5{32}.
+\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\},
 ```
-
-### POS-DIL-2B erster äußerer Prime-Shell `✓[M]` bei a=1/2
-
-Definiere
 
 ```math
-\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\}.
+H_a^{out}(v)=2B_a^{out}\|v\|^2.
 ```
 
-Für jeden Shell-Kanal gilt exakt
-
-```math
-\|K_nv\|^2=2\|v\|^2.
-```
-
-Daher ist
-
-```math
-H_a^{out}(v)=2B_a^{out}\|v\|^2
-```
-
-die Restriktion echter Prime-Kanalenergie, keine künstliche Diagonalmasse.
-
-Bei `a=1/2`:
+Für **alle** `0<a<=1` gilt
 
 ```math
 \boxed{
 \|\mathcal Ev\|^2
-\le G_{1/2}^+(v)+H_{1/2}^{out}(v)
+\le G_a^+(v)+H_a^{out}(v).
 }
 ```
 
-auf der ganzen Testklasse; folglich trägt die augmentierte positive Form `R_0` kontraktiv und liefert einen positiven Schurblock.
+Damit ist für jeden Radius im lokalen Scope auch der entsprechende `R_0`-Schurblock positiv.
 
-Kanonische Quelle: `audits/P11_POS_DIL_2B_FIRST_EXTERIOR_PRIME_SHELL_2026-09-13.md`.
+Kanonische Radiusquelle: `audits/P11_POS_DIL_2C_EXTERIOR_SHELL_RADIUS_0_1_2026-09-13.md`.
 
 ---
 
-## Priorität 0 — POS-DIL-2C / SHELL-BOOKING `?[O]`
+## Priorität 0 — POS-DIL-2C-B / EXACT-SHELL-BOOKING `?[O]`
 
 Frage:
 
-> Wie kann die positive Energie der äußeren Prime-Kanäle `c_n>a` in einer **exakten gemeinsamen Prime-/Archimedean-Geometrie** bilanziert werden, ohne die volle Weilform durch bloßes Hinzufügen positiver Energie zu verändern?
+> Wie kann die positive Energie der äußeren Prime-Kanäle in einer **exakten unveränderten Weil-Geometrie** erscheinen, ohne dass `H_a^{out}` bloß zusätzlich zur Ziel-Form addiert wird?
 
-Zu prüfen:
+### A. Vor-Cutoff-Rekonstruktion
 
-1. die ursprüngliche Herkunft der reinen lokalen Identitätsmasse aus Kanälen `c_n>a` vor dem lokalen Cutoff;
-2. Shell-Differenzen und mögliche Teleskopierungen;
-3. die AR(1)-Root/Hub-Zerlegung
-   ```math
-   T_q^*T_q+uu^*=R_q;
-   ```
-4. die POS-DIL-1-Amplitude `1-u_k` als möglicher Buchungsindikator;
-5. erst danach eine mögliche Beziehung zum offenen `c_aI`-Block.
+Bestimme exakt, wo die reine lokale Identitätsmasse der Kanäle `c_n>a` in der ungekürzten Prime-Darstellung sitzt und durch welche lokale Umschreibung/Cutoff-Buchung sie verschwindet.
 
-**Erfolgskriterium:** Die volle Ziel-Form muss unverändert bleiben; keine rückwärts aus `Q_{B_a}` definierte Positivitätswurzel.
+### B. Shell-Differenzen / Teleskopierung
 
-Ein negativer Ausgang zählt nur für eine vorab definierte Buchungsklasse.
+Prüfe, ob benachbarte Shift-Shells eine kanonische Differenzzerlegung erzeugen, in der positive Außenmasse und eine Gegenkomponente exakt bilanzieren.
 
----
+### C. AR(1)-Root/Hub-Gegenbuchung
 
-## Priorität 1 — POS-DIL-2C / RADIUS `?[O]`
-
-Bestimme den maximalen Radiusbereich, auf dem der geometrisch gleiche Shell
+Nutze
 
 ```math
-\mathscr S_a^{out}=\{n:p^k,\ a<c_n\le2a\}
+T_q^*T_q+uu^*=R_q
 ```
 
-die Dominanz
+und prüfe, ob die Shellenergie pro Primast gegen Root-/Hub-Masse gebucht werden kann.
+
+### D. Quotientenamplitude `1-u_k`
+
+Die POS-DIL-1-Identität
 
 ```math
-\|\mathcal Ev\|^2
-\le G_a^+(v)+H_a^{out}(v)
+\sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-u_k)S
 ```
 
-liefert.
+macht `1-u_k` zum natürlichen Kandidaten für eine Buchungs-/Differenzrolle. Das ist zu beweisen oder in einer vorab definierten Klasse auszuschließen.
 
-Bevorzugt: endliche algebraische Intervallanalyse an Prime-Power-Ein-/Austrittsschwellen; Numerik nur zur Orientierung oder Gegenvektorsuche.
-
----
-
-## Priorität 2 — OX-GEN-B `?[O]`
-
-- regulärer `r_1''`-Korrektor;
-- dominanter Skalarblock `c_aI`.
-
-Der Außenshell wird ausdrücklich **nicht** bereits als `c_aI` gebucht.
+**Erfolgskriterium:** exakte Formgleichheit; keine fertige Weil-Positivität, kein RH, keine rückwärts definierte Wurzel.
 
 ---
 
-## Priorität 3 — vollständiger Object-X-Pfad
+## Priorität 1 — OX-GEN-B `?[O]`
+
+- `r_1`;
+- `c_aI`.
+
+Erst nach exakter Shell-Buchung darf geprüft werden, ob die dabei auftretende Skalarmasse mit einem Teil von `c_aI` zusammenhängt. Keine stille Identifikation.
+
+---
+
+## Priorität 2 — vollständiger Object-X-Pfad
 
 - genuine X candidate `?[O]`;
 - exakte volle Weil-Gram-Identität `?[O]`;
@@ -137,17 +107,12 @@ Der Außenshell wird ausdrücklich **nicht** bereits als `c_aI` gebucht.
 
 ---
 
-## Spur B
-
-Prime-Power-AR(1)/Martingal-Faktorisierung theorem-ready und RH-unabhängig verschriftlichen; nicht als Objekt X vermarkten.
-
----
-
 ## Separate Nebenfronten
 
-- R37/G4c separat offen.
-- PR #91 analytischer Draft ohne übertragenes unabhängiges Exact-Head-GREEN.
-- PR #49 Candidate-only; kein stiller Merge.
+- Prime-Power-AR(1)/Martingal-Faktorisierung als eigenständiger RH-unabhängiger Satz;
+- R37/G4c separat offen;
+- PR #91 analytischer Draft;
+- PR #49 Candidate-only.
 
 ---
 
@@ -155,8 +120,7 @@ Prime-Power-AR(1)/Martingal-Faktorisierung theorem-ready und RH-unabhängig vers
 
 Nicht behaupten:
 
-- POS-DIL-2A schließe alle positiven Erweiterungen aus;
-- der Außenshell sei bereits eine exakte Weil-Buchung;
-- die Außenshellmasse sei bereits `c_aI`;
-- der Radius-1/2-Satz sei radienuniform;
-- ein positiver Schurblock sei bereits Object X oder RH.
+- der Außenshell sei bereits exakte Weil-Buchung;
+- Außenshellmasse = `c_aI`;
+- positiver `R_0`-Schurblock = vollständiges Objekt X;
+- Radiuspositivität = RH.

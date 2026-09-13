@@ -2,106 +2,55 @@
 
 > **Operative Kopfschicht — zuerst lesen.**  
 > **Redaktioneller Stand:** 13. September 2026; keine Registry-Promotion.  
-> **Konsolidierungsquellen:** [AR(1)/Weil-Tail/OX-GRAM](audits/P11_OBJECT_X_AR1_OX_GRAM_CONSOLIDATION_2026-09-12.md), [OX-GEN-A](audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md), [POS-DIL-1](audits/P11_POS_DIL_1_PRIME_MOMENT_HILBERTIZATION_2026-09-13.md), [POS-DIL-2A No-Go](audits/P11_POS_DIL_2_UNIT_GAIN_FEATURE_SHORTING_NOGO_2026-09-13.md), [POS-DIL-2B exterior shell](audits/P11_POS_DIL_2B_FIRST_EXTERIOR_PRIME_SHELL_2026-09-13.md).  
-> **Strategie:** [kanonische Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md).  
-> **Buchungen:** [Registry](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md).
+> **Aktuelle Audits:** [OX-GEN-A](audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md), [POS-DIL-1](audits/P11_POS_DIL_1_PRIME_MOMENT_HILBERTIZATION_2026-09-13.md), [POS-DIL-2A No-Go](audits/P11_POS_DIL_2_UNIT_GAIN_FEATURE_SHORTING_NOGO_2026-09-13.md), [POS-DIL-2B exterior shell](audits/P11_POS_DIL_2B_FIRST_EXTERIOR_PRIME_SHELL_2026-09-13.md), [POS-DIL-2C full radius](audits/P11_POS_DIL_2C_EXTERIOR_SHELL_RADIUS_0_1_2026-09-13.md).
 
-Diese Datei ordnet die Arbeit; sie beweist nichts. Der aktuelle `main`-Head und PR-Zustände werden live aus GitHub gelesen.
+Diese Datei ordnet die Arbeit; sie beweist nichts. Registry und Arbeitsdefinition werden nicht automatisch durch Merge/CI promoviert.
 
-## 1. Verfügbarer Strong-Terminal-Baustein
+## 1. Gesicherte Basis
 
-Für jedes feste `0<R<S` liegt Strong Terminal/C6 im **ungeraden P11-Graphraum** vor. Keine Radienuniformität, Operatornormkonvergenz, vollständige Objekt-X-Realisierung oder RH-Folgerung.
-
-## 2. Belastbare Prime-Power-/AR(1)-Struktur
+Fixed-pair Strong Terminal/C6 liegt für jedes feste `0<R<S` im ungeraden P11-Graphraum vor. Die Prime-Power-Seite besitzt die exakte AR(1)/Weil-Tail-Struktur
 
 ```math
-C_{jk}^{(p)}=(\log p)p^{\min(j,k)}p^{-3(j+k)/4}
-=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2},
+C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2},
+\qquad T_q^*T_q+uu^*=R_q.
 ```
 
-```math
-T_q^*T_q+uu^*=R_q,
-\qquad q=p^{-1/2}.
-```
-
-Die P11-Restseite besitzt die exakte Weil-Tail-Normalform. Cross-prime Root-Gram ist fensterloser Bulk, kein Boundaryterm.
-
-## 3. Lokalisierte positive Featureform
-
-Für `a<=1`:
+Für `a<=1` gilt die lokalisierte Normalform
 
 ```math
 Q_{B_a}=G_a^+-N_a,
 \qquad N_a=c_aI+C_a.
 ```
 
-Die bloße Existenz eines rückwärts aus `Q_{B_a}` erzeugten Kontraktors ist als Object-X-Gate zirkulär/vakuant. Gesucht bleibt eine **vorwärts konstruierte kanonische** positive Geometrie.
+Die bloße rückwärts definierte Kontraktorexistenz bleibt als Object-X-Gate gesperrt.
 
-## 4. OX-GEN-A — gemeinsame Generator-Ebene `✓[M]`
-
-Mit
-
-```math
-\mathcal Ev=(E_+(v),E_-(v)),
-\qquad
-\rho(t)=\operatorname{diag}(e^{-t/2},e^{t/2}),
-```
-
-```math
-K_n=T_{\frac12\log n}-T_{-\frac12\log n},
-\qquad D_n=\lambda_n\operatorname{diag}(-1,1),
-```
-
-gilt
+## 2. OX-GEN-A `✓[M]`
 
 ```math
 \mathcal ET_t=\rho(t)\mathcal E,
 \qquad
-\mathcal EK_n=D_n\mathcal E.
+\mathcal EK_n=D_n\mathcal E,
 ```
-
-Suzukis elementarer archimedischer Teil:
 
 ```math
 r_0''(t)=-\operatorname{tr}\rho(t),
 \qquad
-r_0(\log n)=-4\lambda_n^2.
+R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle.
 ```
 
-Mit `P=[[0,1],[1,0]]`, `J=-P`:
+Prime-only-A2 bleibt `×[M]` im engen Scope.
+
+## 3. POS-DIL-1 `✓[M]` im dokumentierten Scope
+
+Die natürliche Companion-Klasse erzwingt `M=tI`; minimale Blockpositivität liefert `M=I`. Volle positive `rho`-Invarianz ist nur trivial.
+
+Die Prime-moment-Abbildung
 
 ```math
-R_0(v,w)=\langle\mathcal Ev,J\mathcal Ew\rangle.
+V_Nv=\kappa_N^{-1/2}(\sqrt{w_n}\,\mathcal EK_nv)_{n\in N}
 ```
 
-Prime-only-A2 aus `{w_n,lambda_n}` bleibt `×[M]` im dokumentierten engen Scope.
-
-## 5. POS-DIL-1 — positiver Prime-moment-Quotientenbaustein
-
-Setze
-
-```math
-S=\operatorname{diag}(-1,1)=D_n/\lambda_n=2\rho'(0).
-```
-
-Die natürliche Companion-Klasse
-
-```math
-PMP=M,
-\qquad SMS=M
-```
-
-zwingt `M=tI`; minimale Blockpositivität liefert `M=I`. Volle positive `rho`-Invarianz erzwingt dagegen `M=0`.
-
-Für jede endliche nichtleere Prime-Power-Menge `N`:
-
-```math
-\kappa_N=\sum_{n\in N}w_n\lambda_n^2,
-\qquad
-V_Nv=\kappa_N^{-1/2}(\sqrt{w_n}\,\mathcal EK_nv)_{n\in N}.
-```
-
-Dann
+liefert
 
 ```math
 \|V_Nv\|^2=\|\mathcal Ev\|^2,
@@ -109,239 +58,143 @@ Dann
 R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.
 ```
 
-Für `n=p^k`, `q_p=p^{-1/2}`:
+AR(1)-Brücke:
 
 ```math
 \sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S.
 ```
 
-`OX-GEN-A2'` bleibt insgesamt `✓[M]_part`.
+## 4. POS-DIL-2A — bestehende G-Masse allein `×[M]`
 
-## 6. POS-DIL-2A — bestehende `G^+`-Masse ist bei `a=1/2` zu klein `×[M]`
-
-Für eine explizite gerade Plateaufolge in `H_0^1(-1/2,1/2)`:
-
-```math
-|R_0(v_\varepsilon,v_\varepsilon)|
-=\|\mathcal Ev_\varepsilon\|^2
-\to32\sinh^2\frac14,
-```
-
-während
-
-```math
-G_{1/2}^+(v_\varepsilon)
-\to1+\sqrt2(\log2)^2.
-```
-
-Exakt:
-
-```math
-32\sinh^2\frac14>2>1+\sqrt2(\log2)^2.
-```
-
-Damit gibt es innerhalb der unveränderten `G_{1/2}^+`-Feature-Norm weder unit-gain Shorting noch ein kontraktives Target-observable für `R_0`.
-
-Notwendiger Plateau-Massendefekt:
+Bei `a=1/2` ist `G_{1/2}^+` für unit-gain Shorting zu klein. Eine Plateaufolge liefert den notwendigen Defekt
 
 ```math
 \delta_0
 =32\sinh^2\frac14-1-\sqrt2(\log2)^2
->\frac5{32}>0.
+>\frac5{32}.
 ```
 
-## 7. POS-DIL-2B — erster äußerer Prime-Shift-Shell `✓[M]` bei `a=1/2`
+## 5. POS-DIL-2B — intrinsischer erster Außenshell
 
-Definiere rein aus der Shift-Geometrie
+Definiere
 
 ```math
-\boxed{
-\mathscr S_a^{\rm out}
-=\left\{n=p^k:\ a<c_n\le2a\right\},
-\qquad c_n=\frac12\log n.
-}
+\mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\},
+\qquad c_n=\frac12\log n,
 ```
-
-Äquivalent:
 
 ```math
-e^{2a}<n\le e^{4a}.
+H_a^{out}(v,w)=\sum_{n\in\mathscr S_a^{out}}
+\frac{\Lambda(n)}{\sqrt n}\langle K_nv,K_nw\rangle.
 ```
 
-Die positive Shellform ist
+Für jeden Kanal im Shell gilt exakt
 
 ```math
-H_a^{\rm out}(v,w)
-=\sum_{n\in\mathscr S_a^{\rm out}}
-\frac{\Lambda(n)}{\sqrt n}
-\langle K_nv,K_nw\rangle.
+\boxed{\|K_nv\|^2=2\|v\|^2.}
 ```
 
-### 7.1 Reine lokale Masse außerhalb des Fensters `✓[M]`
+Somit ist die Zusatzmasse die Restriktion **echter Prime-Kanalenergie**, keine von Hand eingesetzte Diagonalmasse.
 
-Für jeden Kanal mit `c_n>a` sind die beiden verschobenen Kopien von `(-a,a)` disjunkt. Daher für **jedes** fenstergetragene `v`
-
-```math
-\boxed{\|K_nv\|_2^2=2\|v\|_2^2.}
-```
-
-Somit
-
-```math
-\boxed{
-H_a^{\rm out}(v)
-=2B_a^{\rm out}\|v\|_2^2,
-\qquad
-B_a^{\rm out}
-=\sum_{n\in\mathscr S_a^{\rm out}}
-\frac{\Lambda(n)}{\sqrt n}.
-}
-```
-
-Die Skalarmasse ist also **Folge echter Prime-Kanalenergie**, nicht eine von Hand eingesetzte Diagonalergänzung.
-
-### 7.2 Uniforme Reparatur bei `a=1/2` `✓[M]`
-
-Bei `a=1/2` enthält der erste Außenshell insbesondere die Prime Powers `3,4,5`. Der bereits vorhandene Log-Multiplikator liefert
-
-```math
-G_{1/2}^+(v)\ge(\log2)\|v\|_2^2.
-```
-
-Mit den elementaren Schranken
-
-```math
-\log2>\frac12,
-\qquad
-\frac{\log3}{\sqrt3}>\frac12,
-\qquad
-\frac{\log2}{2}>\frac14,
-\qquad
-\frac{\log5}{\sqrt5}>\frac13
-```
-
-folgt
-
-```math
-\boxed{
-G_{1/2}^+(v)+H_{1/2}^{\rm out}(v)
->\frac83\|v\|_2^2
-}
-```
-
-für jedes nichttriviale `v`.
-
-Cauchy-Schwarz liefert allgemein
-
-```math
-\|\mathcal Ev\|^2\le4\sinh(a)\|v\|_2^2.
-```
-
-Da
-
-```math
-\sinh\frac12<\frac23,
-```
-
-gilt
-
-```math
-\boxed{
-\|\mathcal Ev\|^2
-<\frac83\|v\|_2^2
-< G_{1/2}^+(v)+H_{1/2}^{\rm out}(v).
-}
-```
-
-Dies repariert den POS-DIL-2A-Massendefekt **uniform auf der ganzen Testklasse** bei `a=1/2`.
-
-## 8. Positiver Schurbaustein für `R_0` `✓[M]`
+## 6. POS-DIL-2C-R — Radiusfrage vollständig geschlossen `✓[M]`
 
 Setze
 
 ```math
-A_{1/2}^{\rm out}=G_{1/2}^++H_{1/2}^{\rm out}.
+A_a^{out}:=G_a^++H_a^{out}.
 ```
 
-Aus `||J||=1` und §7 folgt
+Für den Log-Multiplikator gilt auf `0<a<=1`
 
 ```math
-|R_0(v,w)|
-\le\sqrt{A_{1/2}^{\rm out}(v)}
-\sqrt{A_{1/2}^{\rm out}(w)}.
+G_a^+(v)\ge(-\log a)\|v\|^2,
 ```
 
-Also
+und der Shell liefert
+
+```math
+H_a^{out}(v)=2B_a^{out}\|v\|^2.
+```
+
+Cauchy-Schwarz liefert
+
+```math
+\|\mathcal Ev\|^2\le4\sinh(a)\|v\|^2.
+```
+
+Eine siebenintervallige rein elementare Prime-Power-Abschätzung beweist
+
+```math
+\boxed{-\log a+2B_a^{out}>4\sinh(a)
+\qquad(0<a\le1).}
+```
+
+Daher auf dem **gesamten lokalen Radiusbereich**:
+
+```math
+\boxed{
+\|\mathcal Ev\|^2\le A_a^{out}(v),
+\qquad 0<a\le1.
+}
+```
+
+und damit
 
 ```math
 \boxed{
 \begin{pmatrix}
-A_{1/2}^{\rm out} & R_0\\
-R_0 & A_{1/2}^{\rm out}
-\end{pmatrix}\succeq0.
+A_a^{out}&R_0\\
+R_0&A_a^{out}
+\end{pmatrix}\succeq0,
+\qquad0<a\le1.
 }
 ```
 
-Damit existiert bei `a=1/2` eine explizite positive Schur-Umgebung von `R_0`, deren Zusatzmasse vollständig aus echten vorhandenen Prime-Kanälen stammt.
+Die POS-DIL-Radiusfrage des ersten Außenshells ist damit im gesamten dokumentierten `a<=1`-Scope geschlossen.
 
-## 9. Harte Firewall: positive Reparatur ist noch keine volle Weil-Buchung
+## 7. Der einzige aktive POS-DIL-Engpass: EXACT-SHELL-BOOKING `?[O]`
 
-Nicht bewiesen ist:
+Die positive Geometrie ist jetzt stark genug. Noch fehlt aber die **exakte Buchung**:
 
-- derselbe Shellsatz für alle `0<a<=1`;
-- Radienuniformität;
-- dass die äußeren Kanäle ohne Gegenbuchung in die **exakte** lokalisierte/full Weilform aufgenommen werden dürfen;
-- eine Identifikation der Shellmasse mit `c_aI`;
-- eine Erklärung von `r_1`;
-- volle Weil-Gram-Identität, Object X oder RH.
+> Wie kann `H_a^{out}` in einer gemeinsamen Prime-/Archimedean-Geometrie erscheinen, ohne die vollständige Weilform durch zusätzliche Energie zu verändern?
 
-Die zentrale offene Frage ist jetzt nicht mehr bloß Positivität, sondern **Buchung**: Wie kann die intrinsische positive Außenkanalmasse in einer exakten gemeinsamen Prime-/Archimedean-Geometrie auftreten, ohne künstlich Energie zur Weilform hinzuzufügen?
+Priorisierte algebraische Prüfrichtung:
 
-## 10. Neue operative Hauptfront: POS-DIL-2C / SHELL-BOOKING-AND-RADIUS
+1. Außenkanal-Identitätsmasse vor der lokalen Cutoff-Umschreibung rekonstruieren.
+2. Differenzen benachbarter Shiftshells auf Teleskopierung prüfen.
+3. Pro Primast gegen
+   ```math
+   T_q^*T_q+uu^*=R_q
+   ```
+   bilanzieren.
+4. Prüfen, ob die POS-DIL-1-Amplitude `1-u_k` die notwendige Gegenbuchung markiert.
+5. Erst nach exakter Bilanz eine mögliche Beziehung zu `c_aI` untersuchen.
 
-### 10.1 Radiusfortsetzung `?[O]`
+Eine bloße weitere Positivitätsverstärkung zählt jetzt nicht mehr als Hauptfortschritt.
 
-Für welche `0<a<=1` gilt
+## 8. Firewalls
 
-```math
-\|\mathcal Ev\|^2
-\le G_a^+(v)+H_a^{\rm out}(v)
-```
+Nicht behaupten:
 
-auf der ganzen Testklasse?
+- Außenshellmasse = `c_aI`;
+- positiver Shell-Schurblock = volle Weil-Gram-Identität;
+- Shellaugmentation dürfe ohne Gegenbuchung zur Weilform addiert werden;
+- `r_1` sei erklärt;
+- Object X oder RH seien gelöst.
 
-### 10.2 Exakte Shell-Buchung / Renormalisierung `?[O]`
-
-Kann `H_a^{\rm out}` als vorwärts definierter Bestandteil einer **exakten** gemeinsamen Prime-/Archimedean-Geometrie erscheinen, wobei seine zusätzliche positive Energie durch eine kanonische Gegenbuchung/Teleskopierung/Root-Hub-Struktur bilanziert wird?
-
-Priorität hat diese Buchungsfrage vor weiteren bloßen Positivitätssweeps.
-
-Naheliegende Prüfpunkte:
-
-- äußere Kanäle `c_n>a` als bereits bekannte reine lokale Identitätsmasse;
-- AR(1)-Root/Hub-Zerlegung und die Amplitude `1-u_k`;
-- mögliche Shell-Differenzen oder Teleskopierungen;
-- erst danach Verbindung zum offenen Skalarblock `c_aI`.
-
-## 11. Status
+## 9. Status
 
 ```text
 OX-GEN-A common generator plane                         ✓[M]
 POS-DIL-1 prime-moment Hilbertization                  ✓[M]
-POS-DIL-2A unit-gain existing-G shorting at a=1/2      ×[M]
+POS-DIL-2A existing-G unit-gain no-go at a=1/2        ×[M]
 first exterior shell pure-mass identity                ✓[M]
-first exterior shell unit-gain repair at a=1/2         ✓[M]
-contractive R_0 Schur block after shell augmentation   ✓[M]
+first exterior shell domination for every 0<a<=1      ✓[M]
+contractive R_0 Schur block for every 0<a<=1           ✓[M]
+POS-DIL-2C radius extension                            ✓[M]
 OX-GEN-A2' overall                                     ✓[M]_part
-POS-DIL-2C radius extension                            ?[O]
-POS-DIL-2C exact shell booking / renormalization       ?[O]
+POS-DIL-2C-B exact shell booking / renormalization     ?[O]
 r_1 / c_aI / full Object-X realization / RH            ?[O]
 ```
 
-## 12. Governance / Nebenfronten
-
-- Registry bleibt ohne automatische Promotion unverändert.
-- PR #91 bleibt analytischer Draft ohne übertragenes unabhängiges Exact-Head-GREEN.
-- PR #49 bleibt Candidate-only ohne stillen Merge.
-- R37/G4c bleibt separat offen.
-- Kein Object-X- oder RH-Abschluss.
+PR #91, PR #49 und R37/G4c bleiben separate Nebenfronten. Registry unverändert.

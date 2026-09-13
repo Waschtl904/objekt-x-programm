@@ -1,7 +1,7 @@
 # Abhängigkeitsgraph (DAG) — Objekt X / POS-DIL
 
 > **Stand:** 13. September 2026; Registry unverändert.  
-> **Keine Beweisautorität.** Aktuelle Front: [CURRENT-FRONT](../CURRENT-FRONT.md), Strategie: [Roadmap](FORSCHUNGS_ROADMAP_AKTUELL.md).
+> **Keine Beweisautorität.** Aktuelle Front: [CURRENT-FRONT](../CURRENT-FRONT.md).
 
 ## 1. Basis
 
@@ -16,68 +16,28 @@ GENUINE X CANDIDATE ?[O]
 ```text
 Prime-Power AR(1) / Weil-Tail  ✓[M]
         |
-        | --candidate-input-->
         v
 OX-GEN / POS-DIL
 ```
 
-## 2. OX-GEN-A
-
-```math
-\mathcal ET_t=\rho(t)\mathcal E,
-\qquad
-\mathcal EK_n=D_n\mathcal E,
-```
-
-```math
-r_0''(t)=-\operatorname{tr}\rho(t),
-\qquad
-R_0(v,w)=\langle\mathcal Ev,J\mathcal Ew\rangle.
-```
+## 2. OX-GEN-A / POS-DIL-1
 
 ```text
-2D generator plane  ✓[M]
+translation/reflection generator plane  ✓[M]
         |
         +--> Prime channels K_n
         +--> archimedean r_0
-        +--> indefinite R_0
+        +--> R_0=<E.,J E.>
 ```
-
-Prime-only-A2: `×[M]` im engen Scope.
-
-## 3. POS-DIL-1
-
-```text
-PMP=M, SMS=M
-        |
-        v
-M=tI
-        |
-        v
-M_min=I  ✓[M]
-```
-
-```text
-rho(t)^*M rho(t)=M, M>=0
-        |
-        v
-M=0
-        |
-        v
-exact unitary same-space Hilbertization ×[M]
-```
-
-Prime-moment-Abbildung:
 
 ```text
 Prime channels + Weil weights + E
         |
         v
-V_N
-   |                 |
-   | norm            | target involution
-   v                 v
-||Ev||^2 ✓[M]       R_0 ✓[M]
+Prime-moment Hilbertization V_N  ✓[M]
+        |
+        +--> ||V_N v||^2=||Ev||^2
+        +--> R_0 via target involution
 ```
 
 AR(1)-Brücke:
@@ -86,152 +46,119 @@ AR(1)-Brücke:
 \sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S.
 ```
 
-## 4. POS-DIL-2A — bestehende G-Masse fällt
+## 3. POS-DIL-2A
 
 ```text
 existing G_{1/2}^+
         |
         | --unit-gain shorting?-->
         v
-||E v||^2 / R_0
+moment mass / R_0
 ```
-
-Plateaufolge:
-
-```math
-\|\mathcal Ev_\varepsilon\|^2\to32\sinh^2\frac14,
-```
-
-```math
-G_{1/2}^+(v_\varepsilon)\to1+\sqrt2(\log2)^2,
-```
-
-mit strikt größerem Momentgrenzwert.
 
 ```text
-unit-gain shorting inside existing G^+  ×[M]
-necessary extra mass delta_0>5/32       ✓[M]
+FAIL ×[M]
+necessary extra mass delta_0>5/32
 ```
 
-## 5. POS-DIL-2B — erster äußerer Prime-Shift-Shell
-
-Geometrisch definierte Klasse:
+## 4. Erster äußerer Prime-Shell
 
 ```math
 \mathscr S_a^{out}=\{n=p^k:a<c_n\le2a\}.
 ```
 
-Für jedes `n` darin:
-
-```math
-\|K_nv\|^2=2\|v\|^2.
-```
-
-Also
-
 ```text
 actual outer Prime channels
         |
-        | --restriction to the window-->
+        | --disjoint shifted supports-->
         v
-pure positive local mass 2 B_a^{out} I  ✓[M]
+||K_n v||^2=2||v||^2  ✓[M]
+        |
+        v
+H_a^{out}=2B_a^{out} I
 ```
 
-Bei `a=1/2`:
+Die Skalarmasse ist ein Resultat echter Prime-Kanalenergie, kein freier Diagonalparameter.
+
+## 5. POS-DIL-2C-R — Radiusfrage geschlossen
 
 ```text
-existing G_{1/2}^+
-        +
-first exterior shell H_{1/2}^{out}
-        |
-        | --uniform domination-->
-        v
-||Ev||^2
+log multiplier:       G_a^+ >= (-log a) I
+outer shell:           H_a^{out}=2B_a^{out} I
+moment upper bound:    ||E.||^2 <= 4 sinh(a) I
 ```
 
-Exakt:
+Sieben elementare Radiusintervalle liefern
 
 ```math
-G_{1/2}^+(v)+H_{1/2}^{out}(v)
->\frac83\|v\|^2
->\|\mathcal Ev\|^2.
+-\log a+2B_a^{out}>4\sinh a,
+\qquad 0<a\le1.
 ```
 
-Damit
+Daher
 
 ```text
-first exterior shell unit-gain repair   ✓[M]
-contractive R_0 Schur block             ✓[M]
-```
-
-## 6. Der neue Engpass ist Buchung, nicht bloß Positivität
-
-```text
-outer-shell positive repair  ✓[M] at a=1/2
+A_a^{out}=G_a^++H_a^{out}
         |
-        | --needs exact accounting-->
+        | --uniform on every 0<a<=1-->
         v
-POS-DIL-2C SHELL-BOOKING ?[O]
+||Ev||^2  ✓[M]
         |
-        +---------------------------+
-        |                           |
-        | exact counterbooking      | obstruction
-        v                           v
-common positive geometry        narrower class
+        v
+positive R_0 Schur block  ✓[M]
 ```
 
-Die Shellenergie darf nicht einfach zur lokalisierten Weilform addiert werden. Gesucht ist eine kanonische Gegenbuchung, Teleskopierung oder Root/Hub-Zerlegung, die die **volle Form unverändert** lässt.
+Radius extension: `✓[M]`.
 
-Kandidateninputs:
+## 6. Aktueller Engpass — EXACT-SHELL-BOOKING
 
 ```text
-outer channels c_n>a as pure local mass
-AR(1) root/hub T_q^*T_q+uu^*=R_q
-POS-DIL-1 amplitude 1-u_k
+positive outer-shell geometry  ✓[M]
+        |
+        | --must preserve exact Weil form-->
+        v
+POS-DIL-2C-B exact booking ?[O]
+        |
+        +-----------------------------+
+        |                             |
+        | exact counterbooking        | class obstruction
+        v                             v
+common geometry                  narrower architecture
+```
+
+Priorisierte mögliche Mechanismen:
+
+```text
+pre-cutoff outer-channel identity mass
 shell differences / telescoping
+AR(1) root-hub: T_q^*T_q+uu^*=R_q
+POS-DIL-1 amplitude 1-u_k
 ```
 
-## 7. Parallelfrage — Radiusfortsetzung
+Nur eine exakte Bilanz zählt; bloßes Addieren von `H_a^{out}` zur Weilform nicht.
+
+## 7. Object-X-Pfad
 
 ```text
-first exterior shell theorem at a=1/2
-        |
-        | --extend?-->
-        v
-for which 0<a<=1:
-||Ev||^2 <= G_a^+(v)+H_a^{out}(v) ?[O]
-```
-
-Algebraische Analyse an Prime-Power-Ein-/Austrittsschwellen vor bloßem Numeriksweep.
-
-## 8. True Object-X path
-
-```text
-OX-GEN / POS-DIL partial geometry
-        |
-        | --candidate-input only-->
-        v
-GENUINE X CANDIDATE ?[O]
+exact shell booking ?[O]
         |
         v
-EXACT FULL WEIL-GRAM IDENTITY ?[O]
+OX-GEN-B / genuine X candidate ?[O]
         |
         v
-OBJECT-X REALIZATION ?[O]
+exact full Weil-Gram identity ?[O]
         |
         v
-WEIL-CRITERION-SCOPE ?[O]
+Object-X realization ?[O]
         |
         v
 RH
 ```
 
-Keine candidate-input-Kante ist eine Theoremimplikation.
+## 8. Firewalls
 
-## 9. Firewalls
-
-- Außenshellmasse ist **nicht** bereits `c_aI`.
-- Shell-Positivität ist **nicht** exakte Weil-Buchung.
-- POS-DIL-2A ist kein globaler No-Go gegen positive Erweiterungen.
-- Registry bleibt unverändert.
-- PR #91, PR #49 und R37/G4c bleiben separate Nebenfronten.
+- Radiuspositivität != exakte Weil-Buchung.
+- Außenshellmasse != bereits `c_aI`.
+- `r_1` offen.
+- Registry unverändert.
+- PR #91, PR #49, R37/G4c separat.
