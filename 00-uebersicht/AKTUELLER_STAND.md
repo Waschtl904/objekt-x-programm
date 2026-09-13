@@ -1,4 +1,4 @@
-# Aktueller Stand — Objekt X / OX-GEN
+# Aktueller Stand — Objekt X / POS-DIL
 
 > **Stand:** 13. September 2026; Registry unverändert.  
 > Kurze operative Zusammenfassung. Details: [CURRENT-FRONT](../CURRENT-FRONT.md), [Roadmap](FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](DAG.md), [Registry](ACTIVE_THEOREM_REGISTRY.md), [Arbeitsdefinition](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
@@ -50,7 +50,7 @@ Die endlichen Gate-1/Gate-2-Checker sind gehärtet und auf demselben Exact Head 
 
 Das ist kein globaler Positivitäts- oder RH-Beweis.
 
-## 5. OX-GEN-A — gemeinsam erzeugte Rang-2-Geometrie `✓[M]`
+## 5. OX-GEN-A — gemeinsame Generator-Ebene `✓[M]`
 
 Definiere
 
@@ -59,69 +59,127 @@ E_\pm(v)=\int e^{\pm x/2}v(x)\,dx,
 \qquad \mathcal Ev=(E_+(v),E_-(v)).
 ```
 
-Für Translationen `(T_t v)(x)=v(x+t)` gilt
+Für
+
+```math
+\rho(t)=\operatorname{diag}(e^{-t/2},e^{t/2}),
+\qquad
+K_n=T_{\frac12\log n}-T_{-\frac12\log n}
+```
+
+gilt
 
 ```math
 \mathcal ET_t=\rho(t)\mathcal E,
 \qquad
-\rho(t)=\operatorname{diag}(e^{-t/2},e^{t/2}).
+\mathcal EK_n=\lambda_n\operatorname{diag}(-1,1)\mathcal E.
 ```
 
-Mit
+Suzukis elementarer archimedischer Teil erfüllt
 
 ```math
-K_n=T_{\frac12\log n}-T_{-\frac12\log n},
+r_0''(t)=-\operatorname{tr}\rho(t),
+\qquad r_0(\log n)=-4\lambda_n^2.
+```
+
+Mit `P(E_+,E_-)=(E_-,E_+)` und `J=-P`:
+
+```math
+R_0(v,w)=\langle\mathcal Ev,J\mathcal Ew\rangle.
+```
+
+## 6. Prime-only-A2 `×[M]` im engen Scope
+
+Die volle positive Prime-Gram-Form descendiert nicht auf `v -> (E_+,E_-)`, weil `ker \mathcal E` nicht in ihrem Radikal liegt. Die reine Quotientenkovarianz fixiert außerdem nur die off-diagonale Formklasse, nicht ihren absoluten Maßstab.
+
+## 7. POS-DIL-1 — positiver Quotientenbaustein
+
+Setze
+
+```math
+S=\operatorname{diag}(-1,1)=D_n/\lambda_n=2\rho'(0).
+```
+
+### Companion-Rigidität `✓[M]`
+
+Die minimale natürliche Symmetrieklasse
+
+```math
+PMP=M,
+\qquad SMS=M
+```
+
+zwingt
+
+```math
+M=tI.
+```
+
+Die Blockpositivität
+
+```math
+\begin{pmatrix}M&J\\J&M\end{pmatrix}\succeq0
+```
+
+ist genau für `t>=1` möglich. Also ist
+
+```math
+\boxed{M_{\min}=I.}
+```
+
+### Vollständige positive `rho`-Invarianz `×[M]`
+
+Aus
+
+```math
+\rho(t)^*M\rho(t)=M
+```
+
+für alle `t` und `M>=0` folgt `M=0`. Eine exakte unitäre Hilbertisierung der vollen Boost-Repräsentation auf demselben positiven Rang-2-Raum ist damit ausgeschlossen.
+
+### Prime-moment Hilbertisierung `✓[M]`
+
+Für eine endliche nichtleere Prime-Power-Menge `N` setze
+
+```math
+\kappa_N=\sum_{n\in N}w_n\lambda_n^2,
 \qquad
-\lambda_n=n^{1/4}-n^{-1/4}
+V_Nv=\kappa_N^{-1/2}
+\bigl(\sqrt{w_n}\,\mathcal EK_nv\bigr)_{n\in N}.
 ```
 
-folgt **ohne Fensterrandterm**
+Dann exakt
 
 ```math
-E_\pm(K_nv)=\mp\lambda_nE_\pm(v).
+\boxed{\|V_Nv\|^2=|E_+(v)|^2+|E_-(v)|^2,}
 ```
 
-Suzukis elementarer archimedischer Teil ist zugleich das negative Charakter derselben Darstellung:
+und mit `\mathbb P_N=\oplus P`
 
 ```math
-\boxed{r_0''(t)=-\operatorname{tr}\rho(t),
-\qquad r_0(\log n)=-4\lambda_n^2.}
+\boxed{R_0(v,w)=\langle V_Nv,\mathbb P_NV_Nw\rangle.}
 ```
 
-Mit dem Austauschoperator `P(E_+,E_-)=(E_-,E_+)` gilt
+Damit entstehen minimale positive Companion-Masse und `R_0` aus derselben gewichteten Prime-moment-Featureabbildung.
+
+Für `n=p^k`, `q_p=p^{-1/2}` gilt zusätzlich
 
 ```math
-\boxed{R_0(v,w)=\langle\mathcal Ev,-P\mathcal Ew\rangle_{\mathbb C^2}.}
+\sqrt{w_{p,k}}D_{p^k}=\sqrt{\log p}(1-q_p^k)S,
 ```
 
-Prime-Kanäle und `r_0` sind damit zwei exakte Funktoren derselben zweidimensionalen Translation-/Reflexions-Geometrie.
+also exakt `flat minus AR(1)-root` auf der Kanalindex-Ebene.
 
-## 6. Prime-only-A2 aus `{w_n,lambda_n}` `×[M]` im engen Scope
+**Status:** OX-GEN-A2' insgesamt `✓[M]_part`, nicht vollständig geschlossen.
 
-Die volle positive Prime-Gram-Form descendiert nicht auf `v -> (E_+,E_-)`, weil `ker \mathcal E` nicht in ihrem Radikal liegt.
+## 8. Nächste Arbeitsfolge
 
-Die Quotientenkovarianz
-
-```math
-D_n^*HD_n=-\lambda_n^2H
-```
-
-fixiert nur
-
-```math
-H=\begin{pmatrix}0&b\\\bar b&0\end{pmatrix};
-```
-
-der Maßstab `b` bleibt frei. Die diskreten Daten `{w_n,lambda_n}` allein bestimmen den absoluten Koeffizienten der `R_0`-Form daher nicht.
-
-Mit voller Translation-/Spiegelstruktur ist die Form hingegen kanonisch: `R_0=\mathcal E^*(-P)\mathcal E`.
-
-## 7. Nächste Arbeitsfolge
-
-1. **GENERATOR-CLASS / POSITIVE-DILATION-CLASS:** natürliche positive Erweiterungs-/Intertwinerklasse für `(C^2,rho,P,E)` festschreiben.
-2. **OX-GEN-A2' / POSITIVE-DILATION:** die kanonische indefinite Rang-2-Geometrie in die positive Prime-/`log|D|`-Featuregeometrie einbetten oder die definierte Klasse ausschließen.
-3. **OX-GEN-B:** danach `r_1` und/oder `c_aI` in dieselbe gemeinsame Geometrie einbeziehen.
-4. Parallel: AR(1)/Martingal-Faktorisierung als eigenständigen RH-unabhängigen Satz verschriftlichen.
+1. **POS-DIL-2 / FEATURE-SHORTING:** prüfen, ob die kanonische Momentabbildung kontraktiv in der vollständigen positiven Featuregeometrie sitzt, insbesondere
+   ```math
+   \|\mathcal Ev\|^2\stackrel?\le G_a^+(v).
+   ```
+2. **OX-GEN-B:** danach `r_1` und/oder `c_aI` einbeziehen.
+3. Parallel: AR(1)/Martingal-Faktorisierung als eigenständigen RH-unabhängigen Satz verschriftlichen.
 
 Weiter offen: genuine X candidate, volle Weil-Gram-Identität, Object-X-Realisierung, Weil-Kriterium-Scope und RH.
 
