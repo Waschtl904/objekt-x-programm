@@ -1,9 +1,9 @@
-# CURRENT FRONT — Objekt X / NP-DUAL-COMP → A1-CERT
+# CURRENT FRONT — Objekt X / NP-DUAL-COMP → A1-SCHUR
 
 > **Stand:** 13. September 2026; Registry und Objekt-X-Arbeitsdefinition unverändert.  
-> **Hauptaudits:** [NP-DUAL-COMP](audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md) · [A1 Morse diagnostic](audits/P11_NP_DUAL_A1_MORSE_DIAGNOSTIC_2026-09-13.md).
+> **Hauptaudits:** [NP-DUAL-COMP](audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md) · [A1 Morse diagnostic](audits/P11_NP_DUAL_A1_MORSE_DIAGNOSTIC_2026-09-13.md) · [A1 high-frequency / Prolate tail](audits/P11_A1_HIGHFREQ_PROLATE_TAIL_2026-09-13.md).
 
-## 1. Gesicherte Architektur
+## 1. Gesicherte Completion-Architektur
 
 Mit
 
@@ -29,213 +29,206 @@ P=\begin{pmatrix}0&1\\1&0\end{pmatrix}.
 }
 ```
 
-COMMON-JUMP und die support-erhaltende `Q_0`-Nullpolparametrisierung bleiben `✓[M]`.
+Strict und semidefinite rank-2 Completion-Dualität, Morse-Index-Filter, Reflection/Parity-Reduktion sowie die kanonische Completion `lambda=1` bleiben `✓[M]`.
 
-## 2. Screw- und Literaturkorrektur
+## 2. `a=1`: exakter Fouriermultiplikator `✓[M]`
 
-Die pole-cleared Diskrepanz aus PR #110 ist algebraisch korrekt, aber als arithmetisches Objekt bereits im Prime+Polar-Teil von Suzukis Screw-Funktion enthalten:
+Für zero-extended `v` mit Träger in `(-1,1)` gilt exakt
 
 ```math
-\mathfrak D(t)=\frac d{dt}(g_0(t)+r_0(t)).
+\boxed{
+q_1(v)=\int_{\mathbb R}m_1(\xi)|\widehat v(\xi)|^2\,d\xi,
+}
 ```
 
-Daher
+mit
+
+```math
+\boxed{
+m_1(\xi)
+=
+\operatorname{Re}\psi\left(\frac14+\frac{i\xi}{2}\right)
+-\log\pi
+-2\sum_{n\in\{2,3,4,5,7\}}
+\frac{\Lambda(n)}{\sqrt n}\cos(\xi\log n).
+}
+```
+
+Die Fensterlokalisierung erzeugt **keinen zusätzlichen Rest im quadratischen Wert**. Sie schränkt lediglich die zulässigen Fouriertransformierten auf die Paley--Wiener-Klasse zeitbegrenzter Funktionen ein.
+
+## 3. Hochfrequenz-Positivität `✓[K/M]`
+
+Aus der DLMF-Reihe
+
+```math
+\operatorname{Re}\psi(x+iy)-\psi(x)
+=
+\sum_{k\ge0}\frac{y^2}{(k+x)((k+x)^2+y^2)}
+```
+
+und einem monotonen Integralrest folgt eine elementare explizite Untergrenze.
+
+Der Exact-Head-Arb-Gate
 
 ```text
-prime/polar discrepancy identity             ✓[M]
-D as literature-new arithmetic object         ×[M]
-null-pole gauge/use                           ✓[M]
-publication novelty of the architecture/use   ?[O]
+scripts/check_a1_highfreq_multiplier_arb.py
 ```
 
-**Bibliographisches Erratum:** arXiv:2608.24827 (*Weil positivity in compact windows: certified two-sided bounds and a Landau--Widom decay law*) ist von **Marcus Chuk**, nicht Xuefeng Zhu. Die inhaltlich importierten Zahlen bleiben unverändert: voller `L=0.8`-Lower-Bound `8.9e-18`, Upper-Bounds bis `3.2e-283` bei `L=2`, Landau--Widom-Plunge und doppelt-exponentielle Envelope-Barriere.
+zertifiziert
 
-## 3. Turán-Firewall
+```math
+\boxed{
+m_1(\xi)>0.04
+\qquad(|\xi|\ge2300).
+}
+```
+
+Global gilt zugleich
+
+```math
+m_1(\xi)\ge-\Gamma_1,
+```
+
+mit `Gamma_1` explizit aus COMMON-JUMP.
+
+## 4. Rigorous Prolate tail `✓[K/M]`
+
+Sei `B_2300` die Fourierprojektion auf `[-2300,2300]` und
+
+```math
+C_{2300}=P_{[-1,1]}B_{2300}P_{[-1,1]}.
+```
+
+Seine timelimitierten PSWF-Eigenfunktionen `psi_k` besitzen Konzentrationseigenwerte `lambda_k`.
+
+Karnik--Romberg--Davenport, Corollary 3, liefert für den kontinuierlichen Prolate-Parameter `c=2300` eine explizite nichtasymptotische obere Schranke. Der Arb-Gate zertifiziert
+
+```math
+\boxed{
+\lambda_{1490}(2300)<0.0035.
+}
+```
 
 Für
 
 ```math
-C_v(t)=\langle T_tv,v\rangle
-```
-
-gilt
-
-```math
-\int_{\mathbb R}e^{st}C_v(t)dt
-=E_s(v)\overline{E_{-s}(v)}.
-```
-
-Nullpol erzwingt zwar die beiden notwendigen linearen Gauges
-
-```math
-L_0(C_v)=0,
+\mathcal R_{1490}
+=\operatorname{span}\{\psi_0,\ldots,\psi_{1489}\},
 \qquad
-L_1(C_v)=0,
+\mathcal T_{1490}=\mathcal R_{1490}^{\perp},
 ```
 
-aber selbst beide charakterisieren die Faktorbedingung `E_+=E_-=0` nicht. Daher ist ein skalares positiv-definites Turán-SDP nur eine **äußere Relaxation**.
+gilt deshalb für jedes `v in T_1490`
+
+```math
+\|B_{2300}v\|^2\le\lambda_{1490}\|v\|^2.
+```
+
+Mit Hochfrequenz-Positivität und `m_1>=-Gamma_1` folgt
+
+```math
+\boxed{
+q_1(v)>0.01\|v\|^2
+\qquad(v\in\mathcal T_{1490}).
+}
+```
+
+**Der gesamte unendlichdimensionale Prolate-Tail ist damit rigoros coercive.**
+
+## 5. Parität
+
+Der Prolate-Konzentrationsoperator kommutiert mit Spiegelung. Die ersten `1490` PSWF-Moden teilen sich in
 
 ```text
-scalar Turan exactness   ×[M]
-L0,L1 necessary gauges   ✓[M]
+745 even,
+745 odd.
 ```
 
-## 4. Exakte rank-2 completion `✓[M]`
+Resolved space und Tail sind also mit der bereits bewiesenen even/odd Completion kompatibel.
 
-### Strikte Coercivity
+## 6. Was für `a=1` noch offen ist — A1-SCHUR `?[O]`
+
+Für die kanonische Completion
+
+```math
+A_1=q_1+\mathcal E^*\mathcal E
+```
+
+zerlege
+
+```math
+L^2(-1,1)=\mathcal R_{1490}\oplus\mathcal T_{1490}
+```
+
+und schreibe
+
+```math
+A_1=
+\begin{pmatrix}
+A_{RR}&A_{RT}\\
+A_{TR}&A_{TT}
+\end{pmatrix}.
+```
+
+Der neue Tail-Satz gibt bereits
+
+```math
+\boxed{A_{TT}>0.01I.}
+```
+
+Damit ist ein vollständiges `a=1`-Zertifikat auf den endlichen Schur-Komplement-Gate reduziert:
 
 ```math
 \boxed{
-q_a\ge\delta I\text{ auf }\ker\mathcal E
-\iff
-\exists\lambda,\mu>0:\
-q_a+\lambda\mathcal E^*\mathcal E\succeq\mu I.
+A_{RR}-A_{RT}A_{TT}^{-1}A_{TR}\succeq0.
 }
 ```
 
-### Semidefinite Grenze
+Eine einfache hinreichende Version wäre
 
 ```math
-\boxed{
-q_a\ge0\text{ auf }\ker\mathcal E
-\iff
-\forall\varepsilon>0\ \exists\lambda_{a,\varepsilon}>0:\
-q_a+\varepsilon I+\lambda_{a,\varepsilon}\mathcal E^*\mathcal E\succeq0.
-}
-```
-
-Damit ist fixed-window NP-GAP exakt ein zweikanaliges finite-rank completion problem auf Funktionsebene.
-
-## 5. Morse-Index-Falsifikationsgates `✓[M]`
-
-Für jede Hermitesche Completion `H` gilt notwendig
-
-```math
-q_a+\mathcal E^*H\mathcal E\succeq0
-\Longrightarrow
-n_-(q_a)\le n_+(H)\le2.
-```
-
-Also:
-
-```math
-\boxed{\text{fixed-window NP completion}\Rightarrow n_-(q_a)\le2.}
-```
-
-Für den physischen Poleblock `P` ist `n_+(P)=1`, daher
-
-```math
-\boxed{Q_W^a\succeq0\Rightarrow n_-(q_a)\le1.}
-```
-
-Ein zertifizierter dritter negativer Modus von `q_a` widerlegt fixed-window NP-GAP; ein zertifizierter zweiter negativer Modus schließt die spezielle `P`-Completion aus.
-
-## 6. Reflection/parity reduction `✓[M]`
-
-Mit `Jv(x)=v(-x)` gilt
-
-```math
-q_a(Jv,Jw)=q_a(v,w),
+A_{RR}\succeq\mu_RI,
 \qquad
-\mathcal E(Jv)=P\mathcal Ev.
+\|A_{RT}\|^2\le0.01\mu_R.
 ```
 
-Jede gültige Hermitesche Completion kann daher mit ihrer Spiegelung gemittelt werden. Es genügt
+Die offene Wand ist also **nicht mehr der infinite tail selbst**, sondern die zertifizierte resolved matrix und ihre Kopplung an den bereits positiven Tail.
 
-```math
-\boxed{
-H=\begin{pmatrix}\alpha&\beta\\\beta&\alpha\end{pmatrix},
-\qquad \alpha,\beta\in\mathbb R.
-}
-```
+## 7. Nicht-zertifizierte frühere Diagnostik
 
-Im even/odd Momentkanal ist dies diagonal. Der physische Poleblock ist
+Die Dirichlet-Galerkinwerte aus PR #112 bleiben reine Diagnostik. Insbesondere der kleine positive Nullpol-Ritzwert und das beobachtete `lambda≈1` erhalten durch den neuen Tail-Satz **noch keinen** theorematischen Status, weil sie in einer anderen endlichen Basis ohne Arb-Schurabschluss berechnet wurden.
 
-```math
-P\sim\operatorname{diag}(+1,-1),
-```
+## 8. Literaturkontext
 
-während eine skalare Completion `lambda I` zu `diag(lambda,lambda)` wird.
+Marcus Chuk (arXiv:2608.24827) schreibt denselben exakten Weil-Symbolmultiplikator für kompakte Fenster und zertifiziert volle Weil-Positivität bei `L=0.8` mit einer anderen finite-reduction/envelope-Methode.
 
-Unter voller Weil-Positivität ist der odd-Sektor von `q_a` automatisch nichtnegativ; jede negative Richtung von `q_a` muss dann even sein.
+Die A1-TAIL-Front beansprucht noch keine Literaturerweiterung: Erst ein vollständiger resolved+cross Schur-Abschluss bei `a=1` wäre ein neuer fixed-window Kandidat.
 
-## 7. Kanonische Completion `lambda=1` `✓[M]`
-
-Exakt:
-
-```math
-\boxed{
-q_a+\mathcal E^*\mathcal E
-=Q_W^a+\mathcal E^*(I-P)\mathcal E,
-}
-```
-
-und `I-P\succeq0`. Daher würde volle fixed-window Weil-Positivität automatisch die skalare Completion `lambda=1` liefern.
-
-`lambda=1` ist somit der erste **vorab festgelegte** Completion-Kandidat für `a=1`, nicht ein numerisch gefitteter Parameter.
-
-## 8. Nicht-zertifizierter `a=1` Galerkin-Stresstest
-
-Vorab festgelegte Basis:
-
-```math
-\phi_n(x)=\sin\left(\frac{n\pi(x+1)}2\right),
-\qquad -1<x<1.
-```
-
-Für die verschachtelten Nullpol-Unterräume wurden diagnostisch beobachtet:
-
-```text
-N=4    min Ritz ~ 8.22e-4
-N=6    min Ritz ~ 6.21e-7
-N=8    min Ritz ~ 3.26e-9
-N=10   min Ritz ~ 2.70e-9
-N=12   min Ritz ~ 6.67e-11
-```
-
-Der `N=12`-Block von `q_1` zeigt diagnostisch genau eine negative Richtung (`~ -4.15624`), im even-Sektor; der odd-Block blieb numerisch nichtnegativ. Die finite scalar completion wurde bei `lambda≈1` numerisch PSD, mit einem winzigen resolved margin von Größenordnung `1e-15`.
-
-**Firewall:** gewöhnliche Floating-Point-Quadratur, endlicher Frequenzcutoff, keine Arb-Enclosures und kein operatorischer Tail. Diese Zahlen sind ausschließlich Diagnostik.
-
-## 9. Neue Default-Front — A1-CERT `?[O]`
-
-Ziel ist ein rigoroses fixed-window Completion-Zertifikat bei
-
-```text
-a=1.0
-```
-
-— dem ersten natürlichen Stresspunkt oberhalb des publizierten `L=0.8`-Lower-Bound-Benchmarks von Marcus Chuk.
-
-Ein gültiges Zertifikat braucht gleichzeitig:
-
-1. vorab festgelegte parity-adaptierte Basis und Trunkierung;
-2. Arb-Enclosures aller resolved Formeinträge und Momentzeilen;
-3. Completion zunächst bei `lambda=1`, danach höchstens zwei reelle parity-Dualparameter;
-4. zertifizierte finite Inertia/PSD;
-5. rigorose Tail-Untergrenze in beiden Paritätssektoren;
-6. rigorose resolved-tail Kopplungsnorm;
-7. finalen Schur-Komplement-Nachweis.
-
-Die Dualdimension ist nicht mehr die Wand. **Der theorematische Engpass ist der unendlichdimensionale Tail.**
-
-## 10. Status
+## 9. Status
 
 ```text
 COMMON-JUMP / Q0                                      ✓[M]
-Screw redundancy                                      ✓[M]
-D as literature-new object                            ×[M]
-scalar Turan exactness                                 ×[M]
-strict rank-2 completion equivalence                  ✓[M]
-semidefinite epsilon-completion equivalence            ✓[M]
-Morse filters                                          ✓[M]
-reflection-symmetric 2-parameter completion            ✓[M]
+rank-2 completion / Morse / parity                    ✓[M]
 canonical lambda=1 identity                            ✓[M]
-a=1 finite Galerkin diagnostic                        non-certified
-rigorous a=1 finite block                              ?[O]
-rigorous a=1 tail / Schur complement                   ?[O]
-certified a=1 NP-DUAL completion                       ?[O]
+exact a=1 Fourier multiplier                           ✓[M]
+no window remainder in q_1 Fourier form                ✓[M]
+m_1(xi)>0.04 for |xi|>=2300                            ✓[K/M]
+KRD lambda_1490(c=2300)<0.0035                         ✓[K/M]
+q_1>0.01 on full Prolate tail k>=1490                  ✓[K/M]
+resolved 1490-mode Arb block                           ?[O]
+resolved-tail coupling                                 ?[O]
+final a=1 Schur complement / certificate               ?[O]
 all-a NP-GAP                                           ?[O]
 forward Object-X candidate architecture                ✓[M]_part
 full positive Object-X / RH                            ?[O]
 ```
+
+## 10. Firewalls
+
+Do not claim:
+
+- the positive Prolate tail proves `a=1` positivity by itself;
+- the PSWF basis diagonalizes `q_1`;
+- the resolved-tail crossblock is already controlled;
+- the old finite Dirichlet Ritz values are now certified;
+- fixed-window `a=1`, all-window NP-GAP, Object X, or RH is solved.
