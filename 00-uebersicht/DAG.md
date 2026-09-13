@@ -1,173 +1,152 @@
-# Abhängigkeitsgraph (DAG) — Objekt X / COMMON-JUMP → NP-OVERLAP
+# Abhängigkeitsgraph (DAG) — Objekt X / NP-OVERLAP-AR1
 
-> **Stand:** 13. September 2026; Registry unverändert.  
-> **Keine Beweisautorität.** Aktuelle Front: [CURRENT-FRONT](../CURRENT-FRONT.md).
+> **Stand:** 13. September 2026; Registry unverändert.
 
-## 1. Nullpol und COMMON-JUMP
+## 1. COMMON-JUMP
 
 ```text
-E_-=M(0), E_+=M(1)
-        |
-        v
 D_NP = ker M(0) ∩ ker M(1)
         |
         v
-Q_W|NP = X_a^* X_a - Gamma_a I      ✓[M]
+Q_W|NP = X_a^*X_a - Gamma_a I            ✓[M]
+        |
+        v
+Q_W = A_arch - O_a                        ✓[M]
 ```
 
-`X_a` wird aus derselben Familie `K_t=T_{t/2}-T_{-t/2}` mit kontinuierlichem archimedischen Maß und atomaren Prime-Power-Massen gebaut.
+mit
 
-## 2. Q0 / Gamma channel
+```math
+O_a(v)=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}Re\langle T_{\log n}v,v\rangle.
+```
+
+## 2. Q0/Gamma edge
 
 ```text
-h(t)=sum exp(-alpha_m t), alpha_m=2m+1/2
+A_alpha=(2/alpha)L(L+alpha^2)^(-1)        ✓[M]
         |
-        v
-A_alpha=(2/alpha)L(L+alpha^2)^(-1)    ✓[M]
-        |
-        v
 alpha=1/2, Q0=L+1/4
         |
         v
-A_{1/2}Q0=4L                          ✓[M]
-        |
-        v
-Q0 : C_c^infty(-a,a) <-> D_NP(a)      ✓[M]
+A_{1/2}Q0=4L                              ✓[M]
+Q0 : C_c^infty(-a,a) <-> D_NP(a)          ✓[M]
 ```
 
-Higher channel:
+Higher channels:
 
 ```text
-Schur on compressed resolvent
+compressed resolvent + Schur
         |
         v
-A_alpha >= (2/alpha)e^{-alpha a} I    ✓[M]
+A_alpha >= (2/alpha)e^{-alpha a}I         ✓[M]
 ```
 
-## 3. Short-window correction
+## 3. Single-shift fiber node
 
 ```text
-COMMON-JUMP/Q0 channel bounds
+S_t=(T_t+T_-t)/2 on (-a,a)
+        |
+fiberize modulo t
+        |
+path graph P_N, N<=ceil(2a/t)
         |
         v
-internal short-window coercivity       ✓[M]_part
+||S_t||=cos(pi/(ceil(2a/t)+1))            ✓[M]
 ```
 
-But:
+The top eigenvalue has infinite multiplicity through the residue parameter. Two null-pole moment constraints can be imposed inside that top eigenspace:
 
 ```text
-Suzuki Thm 1.4
-full local class positive for small a
+D_NP restriction
         |
         v
-short-window positivity as NEW theorem   ×[M]
+same sharp single-shift norm               ✓[M]
+        |
+        v
+single-shift null-pole improvement          ×[M]
 ```
 
-The project result is an architectural reproduction, not a novelty claim.
+Therefore no main edge remains from independent single-shift norm bounds.
 
-## 4. Exact centering exposes the arithmetic wall
+## 4. Group by prime
 
-For one Prime atom:
+```text
+p fixed, ell_p=log p, q_p=p^(-1/2)
+        |
+all powers p^k in O_a
+        |
+fiberize modulo ell_p
+        |
+        v
+O_{p,a}^{(N)}=(log p)(R_q^(N)-I_N)         ✓[M]
+```
+
+where
 
 ```math
-w_n\|K_{\log n}v\|^2-2w_n\|v\|^2
-=-2w_n\operatorname{Re}\langle T_{\log n}v,v\rangle.
+R_q^{(N)}=(q^{|j-k|})_{j,k}.
 ```
 
-Summing:
+This is exactly the Prime-Power AR(1)/KMS matrix.
 
-```text
-Prime feature diagonal
-        +
-Prime threshold ledger
-        |
-        | exact cancellation
-        v
-only inner-shift correlations remain
-```
-
-Thus
+## 5. Positive AR(1) sector
 
 ```math
-Q_W(v)=\mathcal A(v)-\mathcal O_a(v),
+P_q(theta)-1
+=\frac{2q(\cos\theta-q)}{1-2q\cos\theta+q^2}.
 ```
-
-```math
-\mathcal O_a(v)
-=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
-\operatorname{Re}\langle T_{\log n}v,v\rangle.
-```
-
-Status `✓[M]`.
-
-## 5. New main DAG
 
 ```text
-COMMON-JUMP geometry ✓[M]
+positive iff cos(theta)>q
         |
         v
-centered Prime-overlap identity ✓[M]
-        |
-        +--> Q0 Sobolev transport ✓[M]
-        |
-        +--> overlap radius delta_n=2a-log n
-        |
-        +--> Prime-Power AR(1) / Weil-tail input
-        |
-        v
-(A_infty-kappa_* I)|D_NP >= O_a|D_NP ?[O]
-        |
-        v
-global null-pole Weil positivity
-        |
-        v
+|theta|<arccos(q) mod 2pi                  ✓[M]
+```
+
+Thus the dangerous p-block directions are low frequencies on the `log p` lattice.
+
+## 6. Multi-prime main edge
+
+For distinct primes:
+
+```math
+log p/log r notin Q.                        ✓[M]
+```
+
+Hence:
+
+```text
+positive low-frequency sector on log 2 lattice
+positive low-frequency sector on log 3 lattice
+positive low-frequency sector on log 5 lattice
+                ...
+                 |
+                 | incommensurable lattices
+                 v
+simultaneous concentration bound ?[O]
+                 |
+                 v
+sum_p O_{p,a} <= A_infty-kappa_* I ?[O]
+                 |
+                 v
 RH
 ```
 
-## 6. Q0 transport edge
+This is the new default Object-X path.
 
-For `v=Q0u`:
+## 7. Reconnect to old AR(1)
 
-```math
-Re<T_t v,v>
-=Re<T_tu'',u''>
-+\frac12Re<T_tu',u'>
-+\frac1{16}Re<T_tu,u>.
-```
-
-The arithmetic defect is therefore a finite Sobolev-level shift-correlation operator.
-
-## 7. Finite Gamma-null ladder — auxiliary
-
-```text
-Q_m=L+alpha_m^2
-        |
-        v
-M(Q_m u)(s)=(alpha_m^2-(s-1/2)^2)M(u)(s)
-        |
-        v
-zeros at {-2m,2m+1}
-```
-
-Finite unions are compatible with Connes--Consani Proposition C.1. Negative even points are trivial zeta zeros and do not violate the condition `F ∩ Z_nontrivial = empty`.
-
-No main coercivity edge is granted unless this ladder controls `O_a`.
-
-## 8. Certified short-window scalar side gate
-
-A dedicated Arb workflow brackets the project-internal `a_*` root of `B(a)=kappa_*` in
+The earlier project node
 
 ```math
-(0.1033784517534,0.1033784517535)
+C_{jk}^{(p)}=\sqrt{w_{p,j}w_{p,k}}p^{-|j-k|/2}
 ```
 
-and checks it lies below `log2/2`. This is a side certificate, not the all-window proof.
+now connects directly to the exact overlap fibers. The open edge is quantitative: convert the known AR(1)/Markov/Weil-tail factorization into a collective multi-prime suppression inequality.
 
-## 9. Firewalls
+## 8. Side nodes
 
-- Prime threshold growth != centered arithmetic obstruction;
-- short-window reproduction != novelty;
-- Gamma ladder != all-window domination;
-- positive finite Ritz gap != proof;
-- global restricted criterion != fixed-window criterion;
+- Short-window COMMON-JUMP/Q0 coercivity `✓[M]_part`, but novelty claim `×[M]`.
+- Arb `a_*` certificate = side gate.
+- Finite Gamma-null ladder = structurally valid auxiliary route.
 - Registry unchanged.
