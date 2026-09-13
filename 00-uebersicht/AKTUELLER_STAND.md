@@ -1,96 +1,131 @@
-# Aktueller Stand — Objekt X / NULLPOL-CORE
+# Aktueller Stand — Objekt X / NULLPOL-COMMON
 
 > **Stand:** 13. September 2026; Registry unverändert.  
-> Details: [CURRENT-FRONT](../CURRENT-FRONT.md), [Nullpol-Audit](../audits/P11_NULLPOLE_STRATEGIC_RECLASSIFICATION_2026-09-13.md), [Roadmap](FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](DAG.md).
+> Details: [CURRENT-FRONT](../CURRENT-FRONT.md), [Common-Jump-Audit](../audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md), [Roadmap](FORSCHUNGS_ROADMAP_AKTUELL.md), [DAG](DAG.md).
 
-## 1. Basis
-
-Prime-Power-AR(1), fixed-pair Strong Terminal/C6 und die lokale Normalform bleiben verfügbar. Für `0<a<=1` im kanonischen Suzuki-Gauge:
+## 1. Nullpol-Scope
 
 ```math
-Q_{B_a}=G_a^+-c_aI-R_0-R_1.
+E_-(v)=M(v)(0),\qquad E_+(v)=M(v)(1).
 ```
 
-## 2. Nullpol-Schlüsselidentität `✓[M]`
+Auf `D_NP=ker M(0) cap ker M(1)` verschwinden `R_0` und `E`. Die globale Weil-Vorzeichenbedingung bleibt dort nach Connes–Consani Proposition C.1 RH-äquivalent.
 
-Mit
+## 2. Gemeinsame Jump-Geometrie `✓[M]`
+
+Für
 
 ```math
-M(v)(s)=\int_{\mathbb R}v(x)e^{(s-1/2)x}\,dx
+K_t=T_{t/2}-T_{-t/2}
 ```
 
 gilt
 
 ```math
-\boxed{E_-(v)=M(v)(0),\qquad E_+(v)=M(v)(1).}
+K_t^*K_t=2I-T_t-T_{-t}.
 ```
 
-Auf
+Archimedes und Primzahlpotenzen benutzen exakt diese eine Familie:
 
 ```math
-\mathscr D_{NP}=\{v:M(v)(0)=M(v)(1)=0\}
+\mu_a
+=
+\frac{e^{-t/2}}{1-e^{-2t}}dt
++
+\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}.
 ```
 
-verschwinden daher exakt
+Die zugehörige positive Featureabbildung `X_a` erfüllt
 
 ```math
-R_0(v,w),\qquad \|\mathcal Ev\|^2.
+\langle X_av,X_aw\rangle
+=
+\int_0^\infty\frac{e^{-t/2}}{1-e^{-2t}}
+\langle K_tv,K_tw\rangle dt
++
+\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}
+\langle K_{\log n}v,K_{\log n}w\rangle.
 ```
 
-Connes–Consani, Proposition C.1, liefert eine **globale RH-äquivalente** Weil-Testklasse mit diesen Nullbedingungen; keine fixed-`a`-Äquivalenz wird daraus behauptet.
+## 3. Exakte Schwelle
 
-## 3. Strategische Korrektur
+```math
+\kappa_*
+=\log\pi-\psi(1/4)
+=\log(8\pi)+\gamma+\frac\pi2,
+```
 
-OX-GEN-A bleibt `✓[M]`, wird aber als exakte **Pole-layer geometry** reklassifiziert. Die frühere Deutung als notwendiger Object-X-Klassenschnitt ist zurückgezogen.
+```math
+\Gamma_a
+=2\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}+\kappa_*.
+```
 
-Die mathematischen Resultate PR #101--#105 bleiben vollständig gültig und bilden nun die auxiliary full-class POS-DIL-Route. Sie sind nicht mehr Default-Hauptfront.
+## 4. Exakte Weil-Normalform für alle `a>0`
 
-## 4. Nullpol-Normalform
-
-Auf der lokalen Nullpol-Unterklasse gilt exakt
+Für `supp(v),supp(w) subset [-a,a]`:
 
 ```math
 \boxed{
-Q_{B_a}(v)
-=G_a^+(v)-c_a\|v\|_2^2-R_1(v,v).
+Q_W(v,w)
+=
+\langle Ev,PEw\rangle
++
+\langle X_av,X_aw\rangle
+-
+\Gamma_a\langle v,w\rangle.
 }
 ```
 
-Damit verbleiben als aktive nichtannihilierbare Blöcke:
+Auf Nullpol:
 
-```text
-positive Prime/log|D| geometry
-minus scalar ledger
-minus R_1.
+```math
+\boxed{
+Q_W(v,w)
+=
+\langle X_av,X_aw\rangle
+-
+\Gamma_a\langle v,w\rangle.
+}
 ```
 
-## 5. Neue Default-Hauptfrage
+Dies ist eine vorwärts konstruierte gemeinsame Prime-/archimedische Hilbert-Geometrie. Keine RH-Annahme geht in die Identität ein.
 
-**NULLPOL-CORE / `R_1` + Skalarledger `?[O]`.**
-
-Nächste Schritte:
-
-1. exakten polarisierten `R_1`-Kernel rekonstruieren;
-2. `R_1`-Parität und Generator-/Translationsstruktur auf Nullpol bestimmen;
-3. canonical-Suzuki-Gauge und gaugeinvariante Skalarformulierung parallel prüfen;
-4. nur Mechanismen als Hauptfortschritt zählen, die nach `M(v)(0)=M(v)(1)=0` nichttrivial bleiben.
-
-## 6. POS-DIL-Präzisierungen
-
-- Für komplexe `v`: `R_0(v,v)=-2 Re(E_+(v) overline(E_-(v)))`.
-- Der minimale Companion-Block ist bei `t=1` semidefinit/entartet; strikt positiv erst für `t>1`.
-- Im Anti-Kovarianz-No-Go bleibt `b in C`, also zwei reelle Parameter.
-- Die externe Rayleigh-Diagnostik lokalisiert die alte Domination-Obstruktion numerisch im geraden Sektor.
-
-## 7. Offen
+## 5. Was dadurch geschlossen wird
 
 ```text
-NP-R1
-NP-SCALAR / gauge-invariant scalar remainder
-NP-COMMON
-genuine X candidate
-exact full Weil-Gram identity
-Object-X realization
-Weil-criterion scope
-RH
+NP-R1 separate generator search          geschlossen/subsumiert ✓[M]
+NP-COMMON common feature geometry        ✓[M]
+NP-SCALAR cutoff-gauge covariance        ✓[M]
 ```
+
+`log|D|`, `R_1`, Prime shifts und die Exterior-shell-Buchung sind verschiedene Darstellungen derselben zentrierten Jump-Gram-Struktur.
+
+## 6. Neuer Hauptengpass — NP-GAP
+
+```math
+\lambda_{NP}(a)
+=
+\inf_{0\ne v\in C_c^\infty(-a,a)\cap D_{NP}}
+\frac{\|X_av\|^2}{\|v\|_2^2}.
+```
+
+Offen ist genau
+
+```math
+\boxed{\lambda_{NP}(a)\ge\Gamma_a\quad\text{für alle }a>0.}
+```
+
+Für die Familie aller Fenster ist dies die verbleibende RH-äquivalente Spektralgap-/Frame-Frage. Ein einzelnes fixes `a` wird nicht als RH-äquivalent behauptet.
+
+## 7. Status
+
+```text
+common jump-Gram architecture               ✓[M]
+exact all-a normal form                      ✓[M]
+forward Object-X candidate architecture      ✓[M]_part
+sharp NP-GAP                                 ?[O]
+full positive Object-X / RH                  ?[O]
+publication novelty                          ?[O]
+```
+
+OX-GEN-A bleibt exakte Polschicht; POS-DIL #101--#105 bleibt auxiliary full-class geometry.

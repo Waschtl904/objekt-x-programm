@@ -17,140 +17,149 @@ Arbeite als strenger mathematischer Auditor und Research Assistant. Prüfe zuers
 5. `00-uebersicht/ACTIVE_THEOREM_REGISTRY.md`
 6. `00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`
 
-Aktueller Hauptaudit:
+Aktuelle Hauptaudits:
 
+- `audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md`
 - `audits/P11_NULLPOLE_STRATEGIC_RECLASSIFICATION_2026-09-13.md`
-
-Auxiliary Pole-layer-Provenienz:
-
-- `audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md`
-- `audits/P11_POS_DIL_1_PRIME_MOMENT_HILBERTIZATION_2026-09-13.md`
-- `audits/P11_POS_DIL_2_UNIT_GAIN_FEATURE_SHORTING_NOGO_2026-09-13.md`
-- `audits/P11_POS_DIL_2B_FIRST_EXTERIOR_PRIME_SHELL_2026-09-13.md`
-- `audits/P11_POS_DIL_2C_EXTERIOR_SHELL_RADIUS_0_1_2026-09-13.md`
-- `audits/P11_POS_DIL_2C_EXACT_SHELL_GAUGE_R0_ABSORPTION_2026-09-13.md`
 
 ### Governance
 
-ChatGPT übernimmt sämtliche GitHub-/Repository-Arbeiten. Perplexity dient ausschließlich als externer Reviewer/Auditor. Statusmarker strikt trennen: `✓[M]`, `✓[K/M]`, `✓[M]_part`, `✓[M]_neg`, `×[M]`, `?[O]`.
+ChatGPT übernimmt sämtliche GitHub-/Repository-Arbeiten. Externe Modelle dienen ausschließlich als Reviewer/Auditoren. Statusmarker strikt trennen: `✓[M]`, `✓[K/M]`, `✓[M]_part`, `✓[M]_neg`, `×[M]`, `?[O]`.
 
 ---
 
 ## Aktueller mathematischer Stand
 
-### 1. Lokale Weil-Normalform
-
-Für `0<a<=1` im kanonischen Suzuki-Gauge:
+### 1. Nullpol
 
 ```math
-Q_{B_a}=G_a^+-c_aI-R_0-R_1.
+E_-(v)=M(v)(0),\qquad E_+(v)=M(v)(1).
 ```
 
-### 2. Polfunktionale identifiziert `✓[M]`
+Auf
 
 ```math
-M(v)(s)=\int_{\mathbb R}v(x)e^{(s-1/2)x}\,dx,
+D_{NP}=\ker M(0)\cap\ker M(1)
+```
+
+verschwinden `R_0` und `E`. Global bleibt die Weil-Vorzeichenbedingung auf dieser Testklasse nach Connes–Consani Proposition C.1 RH-äquivalent. Keine fixed-`a`-Äquivalenz behaupten.
+
+### 2. COMMON-JUMP-GRAM `✓[M]`
+
+Die gemeinsame Operatorfamilie ist
+
+```math
+\boxed{K_t=T_{t/2}-T_{-t/2}.}
+```
+
+Archimedischer und nichtarchimedischer Anteil sind kontinuierlicher beziehungsweise atomarer Teil desselben positiven Jump-Maßes:
+
+```math
+\boxed{
+\mu_a
+=\frac{e^{-t/2}}{1-e^{-2t}}dt
++\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}.
+}
+```
+
+Die Featureabbildung `X_a` erfüllt
+
+```math
+\langle X_av,X_aw\rangle
+=
+\int_0^\infty\frac{e^{-t/2}}{1-e^{-2t}}
+\langle K_tv,K_tw\rangle dt
++
+\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}
+\langle K_{\log n}v,K_{\log n}w\rangle.
+```
+
+### 3. Exakte Schwelle
+
+```math
+\kappa_*=\log\pi-\psi(1/4)
+=\log(8\pi)+\gamma+\frac\pi2,
 ```
 
 ```math
-\boxed{E_-(v)=M(v)(0),\qquad E_+(v)=M(v)(1).}
+\boxed{
+\Gamma_a
+=2\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}+\kappa_*.
+}
 ```
 
-Auf der Nullpolklasse
+### 4. Exakte Weil-Normalform für alle `a>0`
+
+Für `supp(v),supp(w) subset [-a,a]`:
 
 ```math
-\mathscr D_{NP}=\{v:M(v)(0)=M(v)(1)=0\}
+\boxed{
+Q_W(v,w)
+=\langle Ev,PEw\rangle
++\langle X_av,X_aw\rangle
+-\Gamma_a\langle v,w\rangle.
+}
 ```
-
-gilt exakt
-
-```math
-R_0=0,
-\qquad
-\|\mathcal Ev\|^2=0.
-```
-
-Für komplexe `v`:
-
-```math
-R_0(v,v)
-=-2\operatorname{Re}(E_+(v)\overline{E_-(v)}).
-```
-
-### 3. Restricted global Weil criterion
-
-Connes–Consani Proposition C.1: Für jede endliche Nullstellenmenge `F superset {0,1}` ohne nichttriviale Zeta-Nullstelle bleibt die **globale** Weil-Vorzeichenbedingung auf Testfunktionen mit `\tilde g|_F=0` RH-äquivalent.
-
-**Firewall:** keine fixed-`a`-RH-Äquivalenz daraus ableiten.
-
-### 4. Strategische Reklassifikation
-
-OX-GEN-A bleibt `✓[M]`, aber als exakte **Pole-layer geometry**. Die frühere Deutung als notwendiger Object-X-Klassenschnitt ist zurückgezogen.
-
-POS-DIL #101--#105 bleibt mathematisch gültig und wird als
-
-```text
-AUX-POS-DIL / full-class pole-layer route
-```
-
-geführt. Nicht mehr Default-Hauptfront.
-
-### 5. Nullpol-Normalform
 
 Auf Nullpol:
 
 ```math
 \boxed{
-Q_{B_a}(v)
-=G_a^+(v)-c_a\|v\|^2-R_1(v,v).
+Q_W(v,w)=\langle X_av,X_aw\rangle-\Gamma_a\langle v,w\rangle.
 }
 ```
 
-Der verbleibende aktive Kern ist damit
+Diese Identität ist unkonditional und vorwärts aus der expliziten Formel konstruiert. Sie beweist keine Positivität.
+
+### 5. Strategischer Status
 
 ```text
-positive Prime/log|D| geometry
-minus scalar ledger
-minus R_1.
+NP-R1 separate geometry question                    closed/subsumed ✓[M]
+NP-COMMON common Prime/archimedean geometry          ✓[M]
+NP-SCALAR cutoff-gauge covariance                    ✓[M]
+forward Object-X candidate architecture              ✓[M]_part
+sharp frame/spectral gap                             ?[O]
 ```
 
-### 6. Gauge-Firewall
-
-PR #105 bleibt exakt: Außen-Prime-Kanäle können positive Featuremasse und denselben Skalarbetrag gegeneinander verschieben. Daher ist `c_a` ohne Gaugewahl nicht isoliert kanonisch.
-
-Auf der Nullpol-Hauptroute entweder:
-
-- originalen Suzuki-Gauge explizit fixieren; oder
-- gaugeinvariante Reststruktur formulieren.
+OX-GEN-A bleibt die exakte Polschicht. POS-DIL #101--#105 bleibt auxiliary full-class geometry.
 
 ---
 
-## Nächster Default-Auftrag
+## Nächster Default-Auftrag — NP-GAP
 
-**NULLPOL-CORE / NP-R1 zuerst.**
+Untersuche ausschließlich vorwärts den scharfen Bound
 
-Arbeite in dieser Reihenfolge:
+```math
+\boxed{
+\lambda_{NP}(a)
+:=
+\inf_{\substack{0\ne v\in C_c^\infty(-a,a)\\M(v)(0)=M(v)(1)=0}}
+\frac{\|X_av\|^2}{\|v\|_2^2}
+\stackrel{?}{\ge}\Gamma_a
+}
+```
 
-1. Rekonstruiere `R_1` aus den kanonischen Suzuki-/OX-GRAM-Quellen vollständig polarisiert.
-2. Bestimme `R_1`-Parität, Spiegelung, Translation/Faltung und mögliche Spektral-/Generatorrepräsentationen.
-3. Restriktiere jede Kandidatenstruktur ausdrücklich auf `M(v)(0)=M(v)(1)=0`.
-4. Definiere eine natürliche Generator-/Absorptionsklasse **vor** dem Ergebnis und prüfe Konstruktion oder No-Go.
-5. Behandle den Skalarledger parallel im fixed Suzuki gauge und gaugeinvariant.
-6. Bevorzuge einen gemeinsamen Mechanismus für `R_1` + Skalarrest.
+für alle `a>0`.
 
-### Verbindliche Hauptfront-Frage
+Arbeitsreihenfolge:
 
-> Wirkt und schneidet dieser Mechanismus die zulässige Geometrie auch nach der Nullpolrestriktion?
+1. Nutze die Nullpolbedingungen als `hat v(±i/2)=0`.
+2. Prüfe die support-erhaltende Faktorisierung durch `Q_0=-d^2/dx^2+1/4`.
+3. Suche nonlocal-Poincare-/Dirichlet-form-, Paley-Wiener-/sampling- oder de-Branges-Mechanismen.
+4. Definiere jede getestete Mechanismusklasse **vor** dem Resultat.
+5. Ein enger No-Go gegen eine natürliche Klasse zählt als Fortschritt.
 
-Wenn nein: als auxiliary dokumentieren, nicht als Object-X-Hauptfortschritt.
+### Zirkularitäts-Firewall
+
+Ein Beweis des Bounds für alle Fenster wäre bereits RH. Daher niemals Weil-Positivität, RH, fertige Zeta-Nullstellenpositivität oder einen rückwärts daraus definierten Operator als Input verwenden.
 
 ---
 
-## Präzisierungen / Firewalls
+## Nichtbehauptungen
 
-- Companion-Block bei `t=1` nur semidefinit/entartet; strikt positiv erst `t>1`.
-- Anti-Kovarianz-No-Go lässt `b in C` frei.
-- Die alte Rayleigh-Obstruktion ist extern numerisch im geraden Sektor lokalisiert; sie ist für NULLPOL-CORE nicht tragend.
-- OX-GEN-A/POS-DIL nicht als falsch bezeichnen.
-- Keine Aussage für fixed `a` als vollständiges RH-Kriterium ohne separaten Satz.
-- `R_1`, Skalarrest, Object X und RH bleiben offen.
+- COMMON-JUMP ist noch keine vollständige positive Weil-Gram-Realisierung.
+- Der Lower-Frame-Bound ist offen.
+- Kein einzelnes fixes `a` wird als RH-äquivalent behauptet.
+- Publikationsneuheit bleibt offen.
+- Object X und RH sind nicht gelöst.
+- Registry und Arbeitsdefinition werden nicht automatisch promoviert.

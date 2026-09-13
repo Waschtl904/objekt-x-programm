@@ -5,122 +5,153 @@
 Gesucht wird eine gemeinsame arithmetisch-analytische Hilbert-/Gram-Geometrie, in der Primzahlpotenz- und archimedische Beiträge der vollständigen Weil-Form aus demselben Mechanismus hervorgehen. Arbeitsname: **Objekt X**.
 
 > **Redaktioneller Stand: 13. September 2026.**  
-> Eine vollständige Objekt-X-Realisierung und ein Beweis der Riemannschen Hypothese liegen nicht vor.
+> Ein wesentlicher gemeinsamer Prime-/archimedischer Hilbert-Baustein ist konstruiert. Eine vollständige positive Objekt-X-Realisierung und ein Beweis der Riemannschen Hypothese liegen nicht vor.
 
 ## Hier beginnen
 
 1. **[Aktueller Arbeitsstand](CURRENT-FRONT.md)**
-2. **[Nullpol-Reklassifikation](audits/P11_NULLPOLE_STRATEGIC_RECLASSIFICATION_2026-09-13.md)**
-3. **[Aktueller Stand](00-uebersicht/AKTUELLER_STAND.md)**
-4. **[Forschungsroadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)**
-5. **[DAG](00-uebersicht/DAG.md)**
-6. **[Objekt-X-Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)**
+2. **[Common-Jump-Audit](audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md)**
+3. **[Nullpol-Reklassifikation](audits/P11_NULLPOLE_STRATEGIC_RECLASSIFICATION_2026-09-13.md)**
+4. **[Aktueller Stand](00-uebersicht/AKTUELLER_STAND.md)**
+5. **[Forschungsroadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)**
+6. **[DAG](00-uebersicht/DAG.md)**
 
-## Aktueller Schlüsselfund: die OX-GEN-A-Ebene ist die Pol-Ebene
+## Aktueller Durchbruch: dieselbe Jump-Geometrie an allen Stellen
 
-Für
-
-```math
-M(v)(s)=\int_{\mathbb R}v(x)e^{(s-1/2)x}\,dx
-```
-
-gilt exakt
+Für die unitäre Translation `T_t` setze
 
 ```math
-\boxed{E_-(v)=M(v)(0),\qquad E_+(v)=M(v)(1).}
+\boxed{K_t=T_{t/2}-T_{-t/2}.}
 ```
 
-Die beiden OX-GEN-A-Funktionale sind damit die zwei Polfunktionale der expliziten Formel.
+Die Weil-Form zeigt dann einen gemeinsamen positiven Mechanismus:
 
-Auf der Nullpolklasse
+- der **archimedische Ort** ist der kontinuierliche Maßanteil
+  ```math
+  h(t)dt=\frac{e^{-t/2}}{1-e^{-2t}}dt;
+  ```
+- jede **Primzahlpotenz** `n=p^k` ist ein Atom bei `t=log n` mit Gewicht
+  ```math
+  w_n=\frac{\Lambda(n)}{\sqrt n}.
+  ```
 
-```math
-\mathscr D_{NP}=\{v:M(v)(0)=M(v)(1)=0\}
-```
-
-verschwinden exakt
-
-```math
-R_0(v,w),
-\qquad
-\|\mathcal Ev\|^2.
-```
-
-Connes–Consani Proposition C.1 zeigt zugleich, dass die **globale** Weil-Vorzeichenbedingung nach Vorgabe einer endlichen Nullstellenmenge `F superset {0,1}` ohne nichttriviale Zeta-Nullstelle RH-äquivalent bleibt.
-
-Damit ist die Nullpolrestriktion logisch mit dem globalen RH-Scope verträglich.
-
-## Strategische Korrektur
-
-OX-GEN-A bleibt mathematisch `✓[M]`: Prime-Kanäle und `R_0` besitzen weiterhin die exakte gemeinsame Translation-/Reflexions-Generatorstruktur.
-
-Die Schlussfolgerung, diese Rang-2-Struktur sei ein **notwendiger** Object-X-Hauptengpass, wird jedoch zurückgezogen: Auf der global RH-äquivalenten Nullpolklasse ist ihr gesamter Zielterm identisch Null.
-
-Dasselbe gilt strategisch für die auf OX-GEN-A aufbauende POS-DIL-Kette PR #101--#105. Ihre Mathematik bleibt erhalten und bildet künftig die
-
-```text
-AUX-POS-DIL / full-class pole-layer route.
-```
-
-Sie ist nützlich für eine vollständige Testklassenrealisierung, aber nicht mehr Default-Priorität.
-
-## Neue Hauptfront: NULLPOL-CORE
-
-Für `0<a<=1` gilt lokal im kanonischen Suzuki-Gauge
-
-```math
-Q_{B_a}=G_a^+-c_aI-R_0-R_1.
-```
-
-Auf der lokalen Nullpol-Unterklasse reduziert sich dies exakt zu
+Für Funktionen mit Träger in `[-a,a]` ist das gemischte positive Maß
 
 ```math
 \boxed{
-Q_{B_a}(v)
-=G_a^+(v)-c_a\|v\|_2^2-R_1(v,v).
+\mu_a=h(t)dt+
+\sum_{\log n\le2a}w_n\delta_{\log n}.
 }
 ```
 
-Die Hauptfront liegt damit bei:
-
-1. **NP-R1:** exakter Kernel, Parität, Translation-/Generatorstruktur von `R_1` auf Nullpol;
-2. **NP-SCALAR:** Skalarledger im explizit fixierten Suzuki-Gauge beziehungsweise gaugeinvariante Reststruktur;
-3. **NP-COMMON:** ein gemeinsamer Prime-/archimedischer Mechanismus für `R_1` plus Skalarrest, der auf Nullpol nichttrivial bleibt.
-
-### Verbindliche Gate-Regel
-
-Ein neuer Object-X-Hauptfront-Schritt zählt nur dann als Klassenschnitt oder Konstruktionsfortschritt, wenn er nach
+Damit entsteht eine konkrete Hilbert-Featureabbildung `X_a`, deren Gramform
 
 ```math
-M(v)(0)=M(v)(1)=0
+\langle X_av,X_aw\rangle
+=
+\int_0^\infty h(t)\langle K_tv,K_tw\rangle dt
++
+\sum_{\log n\le2a}w_n
+\langle K_{\log n}v,K_{\log n}w\rangle
 ```
 
-noch nichttrivial wirkt.
+positiv ist.
 
-## Was aus POS-DIL erhalten bleibt
+**Prime und Archimedes verwenden also exakt dieselbe Operatorfamilie `K_t`; nur das Maß über `t` zerfällt in einen kontinuierlichen und einen atomaren Teil.**
 
-Die folgenden Sätze bleiben vollständig gültig:
+## Exakte Weil-Normalform
 
-- [OX-GEN-A](audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md)
-- [POS-DIL-1](audits/P11_POS_DIL_1_PRIME_MOMENT_HILBERTIZATION_2026-09-13.md)
-- [POS-DIL-2A](audits/P11_POS_DIL_2_UNIT_GAIN_FEATURE_SHORTING_NOGO_2026-09-13.md)
-- [erster äußerer Prime-Shell](audits/P11_POS_DIL_2B_FIRST_EXTERIOR_PRIME_SHELL_2026-09-13.md)
-- [Radius `0<a<=1`](audits/P11_POS_DIL_2C_EXTERIOR_SHELL_RADIUS_0_1_2026-09-13.md)
-- [exakte Shell-Gauge / positive `R_0`-Absorption](audits/P11_POS_DIL_2C_EXACT_SHELL_GAUGE_R0_ABSORPTION_2026-09-13.md)
+Die feste archimedische Schwelle ist
 
-Sie werden nicht widerrufen, sondern strategisch als auxiliary klassifiziert.
+```math
+\kappa_*=\log\pi-\psi(1/4)
+=\log(8\pi)+\gamma+\frac\pi2,
+```
 
-## Wichtige Firewalls
+und
 
-- Die globale RH-Äquivalenz der Nullpolklasse ist keine fixed-`a`-Äquivalenz.
-- Das Verschwinden von `R_0` löst weder `R_1` noch den Skalarledger.
-- Der nackte Wert `c_a` ist unter der exakten Außen-Prime-cutoff-Gauge nicht isoliert invariant; eine Gaugewahl oder gaugeinvariante Formulierung bleibt nötig.
-- Es gibt keine vollständige Weil-Gram-Identität, keine Object-X-Realisierung und keinen RH-Beweis.
+```math
+\Gamma_a
+=2\sum_{\log n\le2a}\frac{\Lambda(n)}{\sqrt n}+\kappa_*.
+```
 
-## Nachweise und Orientierung
+Für jedes `a>0` und kompakt in `[-a,a]` getragene glatte Testfunktionen gilt exakt
 
-Ausarbeitungen: [papers/](papers/) · Prüfberichte: [audits/](audits/) · Theorem-/Reviewstatus: [Registry](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md). Ein Merge oder erfolgreicher Test ist keine mathematische Promotion.
+```math
+\boxed{
+Q_W(v,w)
+=\langle Ev,PEw\rangle
++\langle X_av,X_aw\rangle
+-\Gamma_a\langle v,w\rangle.
+}
+```
 
-Für neue Arbeitssitzungen: [Einstiegsprompt](EINSTIEGSPROMPT.md).
+Hier ist `E` die bereits identifizierte Polschicht:
+
+```math
+E_-(v)=M(v)(0),\qquad E_+(v)=M(v)(1).
+```
+
+## Nullpol-Hauptroute
+
+Auf
+
+```math
+D_{NP}=\ker M(0)\cap\ker M(1)
+```
+
+verschwindet die Polschicht. Daher
+
+```math
+\boxed{
+Q_W(v,w)
+=\langle X_av,X_aw\rangle
+-\Gamma_a\langle v,w\rangle.
+}
+```
+
+Damit sind die bisher getrennten Blöcke `log|D|`, `R_1`, Prime shifts und Exterior-shell-Buchung in einer positiven gemeinsamen Geometrie vereinigt.
+
+## Was jetzt noch offen ist
+
+Der Generator-/Feature-Suchteil ist nicht mehr der Hauptengpass. Offen ist die scharfe Lower-Frame-Bedingung
+
+```math
+\boxed{
+\lambda_{NP}(a)
+:=
+\inf_{0\ne v\in C_c^\infty(-a,a)\cap D_{NP}}
+\frac{\|X_av\|^2}{\|v\|_2^2}
+\stackrel{?}{\ge}\Gamma_a
+}
+```
+
+für alle `a>0`.
+
+Für die Familie aller Fenster ist dies, über das globale restricted Weil-Kriterium von Connes–Consani, die verbleibende RH-äquivalente Spektralgap-/Frame-Frage.
+
+## Status
+
+```text
+common Prime/archimedean K_t geometry       ✓[M]
+exact all-a common-jump normal form          ✓[M]
+cutoff-gauge covariance                      ✓[M]
+forward Object-X candidate architecture      ✓[M]_part
+sharp NULLPOL frame bound                    ?[O]
+full positive Object-X realization / RH      ?[O]
+publication novelty                          ?[O]
+```
+
+OX-GEN-A bleibt die exakte Polschicht. POS-DIL #101--#105 bleibt eine mathematisch gültige auxiliary full-class route.
+
+## Firewalls
+
+- Eine exakte Darstellung als **positive Gramform minus Schwelle** ist noch keine positive Gramdarstellung der gesamten Weilform.
+- Der Lower-Frame-Bound ist nicht bewiesen.
+- Kein einzelnes fixes Fenster wird als RH-äquivalent behauptet.
+- Keine Publikationspriorität wird beansprucht.
+- Ein Merge oder erfolgreicher CI-Lauf ist keine Theorem-Registry-Promotion.
+
+Ausarbeitungen: [papers/](papers/) · Audits: [audits/](audits/) · Registry: [ACTIVE_THEOREM_REGISTRY](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md) · Einstieg: [EINSTIEGSPROMPT](EINSTIEGSPROMPT.md).
 
 Lizenz: [CC BY 4.0](LICENSE) · Zitierangaben: [CITATION.cff](CITATION.cff).
