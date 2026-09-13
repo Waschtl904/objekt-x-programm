@@ -1,234 +1,177 @@
-# CURRENT FRONT — Objekt X / COMMON-JUMP → NP-DISCREPANCY
+# CURRENT FRONT — Objekt X / NP-DUAL-COMP
 
-> **Operative Kopfschicht — zuerst lesen.**  
-> **Stand:** 13. September 2026; keine Registry-Promotion.  
-> **Hauptaudits:** [COMMON-JUMP](audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md) · [Prime-overlap AR(1)](audits/P11_NP_OVERLAP_AR1_FIBERIZATION_2026-09-13.md) · [Pole-cleared Prime discrepancy](audits/P11_NP_DISCREPANCY_POLE_CLEARED_CORRELATION_2026-09-13.md).
+> **Stand:** 13. September 2026; Registry und Objekt-X-Arbeitsdefinition unverändert.  
+> **Hauptaudit:** [NP-DUAL-COMP / Screw audit](audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md).
 
-Registry und Objekt-X-Arbeitsdefinition bleiben unverändert.
+## 1. Gesicherte Architektur
 
-## 1. Gesicherte Basis `✓[M]`
-
-Auf
+COMMON-JUMP und `Q_0` bleiben `✓[M]`. Für
 
 ```math
-D_{NP}=\ker M(0)\cap\ker M(1)
+\mathcal Ev=(E_+(v),E_-(v))^T,
+\qquad
+q_a(v)=\|X_av\|^2-\Gamma_a\|v\|^2,
 ```
 
 gilt
 
 ```math
-Q_W(v)=\mathcal A(v)-\mathcal O_a(v),
+D_{NP}(a)=\ker\mathcal E,
+```
+
+und die volle lokale Weilform ist exakt
+
+```math
+\boxed{
+Q_W^a(v)=q_a(v)+\langle P\mathcal Ev,\mathcal Ev\rangle,
+\qquad
+P=\begin{pmatrix}0&1\\1&0\end{pmatrix}.
+}
+```
+
+## 2. Screw-Redundanzaudit
+
+Die in PR #110 definierte pole-cleared Diskrepanz ist algebraisch korrekt, aber kein literatur-neues arithmetisches Objekt. Für den Prime-/Polar-Teil von Suzukis Screw-Funktion gilt auf `t>0`
+
+```math
+\boxed{
+\mathfrak D(t)=\frac d{dt}(g_0(t)+r_0(t)),
+}
 ```
 
 mit
 
 ```math
-\mathcal O_a(v)
-=2\sum_{\log n<2a}\frac{\Lambda(n)}{\sqrt n}
-\operatorname{Re}\langle T_{\log n}v,v\rangle.
+g_0(t)=\sum_{n\le e^t}\frac{\Lambda(n)}{\sqrt n}(t-\log n),
+\qquad
+r_0(t)=-4(e^{t/2}+e^{-t/2}-2).
 ```
 
-COMMON-JUMP, die `Q_0`-Nullpolparametrisierung und die exakten per-prime AR(1)-Fasern bleiben `✓[M]`.
-
-## 2. Einzelshift-/Blocknormsummation als all-window-Strategie ausgeschlossen `×[M]`
-
-Für `S_t=(T_t+T_{-t})/2` gilt exakt
-
-```math
-\|S_t\|
-=\cos\frac{\pi}{\lceil2a/t\rceil+1}.
-```
-
-Für `a<log n<2a` ist `||S_{log n}||=1/2`. Daher wächst die unabhängige Shift-Normsumme mindestens wie
-
-```math
-\sum_{e^a<n<e^{2a}}\frac{\Lambda(n)}{\sqrt n}
-=2e^a(1+o(1)).
-```
-
-Dagegen kann jede rein skalare untere Schranke für den archimedischen Operator auf den wachsenden Räumen `D_NP(a)` höchstens durch einen festen Testvektor beschränkt sein. Somit kann
+Daher:
 
 ```text
-archimedean scalar lower bound + independent shift/block norm sum
+prime/polar discrepancy identity                  ✓[M]
+D as literature-new arithmetic object              ×[M]
+null-pole gauge/use                                 ✓[M]
+publication novelty of the architecture/use         ?[O]
 ```
 
-den all-window-Satz nicht beweisen.
+## 3. Autokorrelation: Turán ja, aber nur als Relaxation
 
-Dasselbe gilt für eine rohe `Phi_a`-Amplitude kombiniert nur mit einem `a`-unabhängigen Prolate-Konzentrationsfaktor: ein konstanter Faktor beseitigt die exponentielle Skala nicht.
-
-## 3. Nullpol-Autokorrelations-Gauge `✓[M]`
-
-Setze
+Für
 
 ```math
-C_v(t):=\langle T_tv,v\rangle.
+C_v(t)=\langle T_tv,v\rangle
 ```
 
-Für Nullpolfunktionen gilt exakt
+gilt bilateral
 
 ```math
-\int_{\mathbb R}e^{t/2}C_v(t)dt
-=E_-(v)\overline{E_+(v)}=0.
+\int_{\mathbb R}e^{st}C_v(t)dt
+=E_s(v)\overline{E_{-s}(v)}.
 ```
 
-Da `C_v(-t)=overline{C_v(t)}`,
+Nullpol erzeugt daher bei `s=1/2` mindestens eine doppelte Nullstelle. Für reelle `v` folgen zwei lineare Bedingungen
 
 ```math
 \boxed{
-\int_0^{2a}
-2\cosh(t/2)\operatorname{Re}C_v(t)dt=0.
+L_0(C_v)=\int_0^{2a}C_v(t)\cosh(t/2)dt=0,
 }
-```
-
-Damit darf auf `D_NP(a)` der glatte Maßanteil `2 cosh(t/2)dt` exakt aus dem Prime-overlap herauszentriert werden.
-
-## 4. Pole-cleared Prime discrepancy `✓[M]`
-
-Definiere
-
-```math
-d\nu(t)
-=\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}(dt),
 ```
 
 ```math
 \boxed{
-d\mathfrak D(t)=d\nu(t)-2\cosh(t/2)dt.
+L_1(C_v)=\int_0^{2a}tC_v(t)\sinh(t/2)dt=0.
 }
 ```
 
-Dann für jedes `v in D_NP(a)`:
-
-```math
-\boxed{
-\mathcal O_a(v)
-=2\int_0^\infty
-\operatorname{Re}C_v(t)\,d\mathfrak D(t).
-}
-```
-
-Die kumulative Diskrepanz ist
-
-```math
-\boxed{
-\mathfrak D(T)
-=\sum_{\log n\le T}\frac{\Lambda(n)}{\sqrt n}
--4\sinh(T/2).
-}
-```
-
-Der PNT-Hauptterm `~2e^{T/2}` cancelt dadurch. Insbesondere
-
-```math
-\mathfrak D(T)=o(e^{T/2}).
-```
-
-## 5. Exakte Stieltjesform `✓[M]`
-
-Weil `C_v(2a)=0` und `D(0)=0`,
-
-```math
-\boxed{
-\mathcal O_a(v)
-=-2\int_0^{2a}
-\mathfrak D(t)
-\frac{d}{dt}\operatorname{Re}C_v(t)dt.
-}
-```
-
-Der RH-harte Rest trennt sich damit in
+Aber selbst `L_0=L_1=0` charakterisiert Nullpol **nicht**: die zwei Nullstellen können vollständig in nur einem Spektralfaktor liegen. Deshalb
 
 ```text
-arithmetisch:  pole-cleared Prime discrepancy D(t)
-analytisch:    derivative of a compactly-supported positive-definite autocorrelation
+one-moment Turan = exact null-pole class           ×[M]
+two scalar moments = exact null-pole class          ×[M]
+L0,L1 as necessary dual gauges                      ✓[M]
 ```
 
-statt in eine exponentiell große rohe Prime-Summe.
+Ein skalare positive-definite Turán-SDP ist damit eine **äußere Relaxation**: ein Positivitätszertifikat genügt, ein Gegenbeispiel falsifiziert NP-GAP nicht.
 
-## 6. Laplace transform = pole-cleared zeta logarithmic derivative `✓[M]`
+## 4. Exakte Hauptfront — rank-2 completion `✓[M]`
 
-Für `Re(s)>1/2`:
+Sei `q_a` die geschlossene, nach unten beschränkte COMMON-JUMP-Form und `E` der zweikomponentige Momentoperator.
+
+### Strikte Version
+
+Falls
+
+```math
+q_a(k)\ge\delta\|k\|^2
+\qquad(k\in\ker\mathcal E)
+```
+
+für ein `delta>0`, dann existiert `lambda_a>0` mit
 
 ```math
 \boxed{
-\mathcal L[d\mathfrak D](s)
-=-\frac{\zeta'}{\zeta}\left(s+\frac12\right)
--\frac1{s-1/2}-\frac1{s+1/2}.
+q_a+\lambda_a\mathcal E^*\mathcal E\succeq0
 }
 ```
 
-Äquivalent
+auf der vollen Formdomäne. Umgekehrt impliziert jede solche Completion Positivität auf `ker E`.
+
+### Semidefinite exakte Version
 
 ```math
 \boxed{
-\mathcal L[d\mathfrak D](s)
-=-\frac{d}{ds}
-\log\left[(s^2-1/4)\zeta(s+1/2)\right].
+q_a\ge0\text{ auf }\ker\mathcal E
+\iff
+\forall\varepsilon>0\ \exists\lambda_{a,\varepsilon}>0:
+q_a+\varepsilon I+\lambda_{a,\varepsilon}\mathcal E^*\mathcal E\succeq0.
 }
 ```
 
-Die Nullpol-Zentrierung entfernt damit im Prime-Maß exakt die beiden Polfaktoren `z=0,1`.
+Damit ist fixed-window NP-GAP exakt ein **Rang-2-Finite-Completion-Problem**.
 
-## 7. RH-harte Skala `✓[K/M]`
+## 5. Verbindung zur echten Polschicht
 
-Unter RH folgt klassisch
-
-```math
-\mathfrak D(T)=O(T^3).
-```
-
-Umgekehrt impliziert bereits irgendein polynomialer Bound
+Die klassische Weil-Polschicht selbst ist
 
 ```math
-\mathfrak D(T)=O(T^K)
+\mathcal E^*P\mathcal E.
 ```
 
-für festes `K` den klassischen Fehlerterm
+`H=P` als positive Completion wäre daher bereits volle fixed-window Weil-Positivität. NP-GAP verlangt nur die Existenz irgendeiner geeigneten Completion; sie muss nicht `P` sein.
 
-```math
-\psi(x)=x+O(\sqrt x(\log x)^K)
-```
+Das verhindert eine Überpromotion: die Dualcompletion ist ein Zertifikatsmechanismus, noch keine vollständige positive Objekt-X-Realisierung.
 
-und damit RH.
+## 6. Computational gate
 
-**Firewall:** Die Diskrepanz selbst polynomial zu majorisieren ist also bereits RH-hart. Der neue Gewinn ist die exakte Zentrierung und die richtige Korrelationsform, nicht eine Abkürzung um die harte Arithmetik.
+Ein endliches SDP ist **nicht automatisch exakt**. Für einen theorematischen fixed-window-Nachweis braucht es:
 
-## 8. Neue Default-Hauptfront — NP-DISCREPANCY / NP-CORR `?[O]`
+1. vorab festgelegte Basis und Trunkierung;
+2. exakte/Intervall-Momentzeilen für `E_±`;
+3. Optimierung eines Hermiteschen `2x2`-Completionblocks oder eines skalaren `lambda`;
+4. Arb-PSD des aufgelösten Blocks;
+5. rigorose Tail-/Schur-Komplement-Untergrenze.
 
-Zu beweisen bleibt
+Zhu zertifiziert volle Weil-Positivität bereits bis `a=0.8`; ein potentiell neues fixed-window-Ziel muss daher `a>0.8` wählen. `a=1.0` ist der natürliche Stresspunkt.
 
-```math
-\boxed{
-\mathcal A(v)
-\ge
--2\int_0^{2a}
-\mathfrak D(t)
-\frac{d}{dt}\operatorname{Re}C_v(t)dt
-\quad(v\in D_{NP}(a)).
-}
-```
+## 7. Landau--Widom / Falsifikationsrolle
 
-Priorität:
+Die winzigen Gaps sind mit der Landau--Widom-Plunge-Skala kompatibel. Prolate-/Landau--Widom-Strukturen bleiben Kalibrierungs- und Falsifikationswerkzeuge; ein konstanter Konzentrationsfaktor ist kein all-window-Beweis.
 
-1. Sign-/Oszillationsstruktur von `D(t)` gegen positive-definite Autokorrelationen;
-2. `Q_0`-Transport von `C_v'`;
-3. per-prime AR(1) als lokale Zerlegung desselben Diskrepanzproblems;
-4. Toeplitz/Paley-Wiener/Prolate nur auf der **zentrierten** Diskrepanz, nicht auf der rohen Prime-Amplitude;
-5. vorab definierte Korrelations-Zeugen als Falsifikationsgate.
-
-## 9. Status
+## 8. Status
 
 ```text
 COMMON-JUMP / Q0                                      ✓[M]
-centered Prime-overlap                                ✓[M]
-exact per-prime AR(1) fibers                         ✓[M]
-independent shift/block norm-sum route               ×[M]
-raw-amplitude × constant-Prolate route               ×[M]
-null-pole cosh autocorrelation identity              ✓[M]
-pole-cleared Prime discrepancy                       ✓[M]
-Stieltjes discrepancy-correlation identity           ✓[M]
-pole-cleared zeta log-derivative identity            ✓[M]
-NP-DISCREPANCY / anti-correlation domination         ?[O]
-forward Object-X candidate architecture              ✓[M]_part
-full positive Object-X / RH                          ?[O]
+prime/polar discrepancy identity                      ✓[M]
+D as literature-new object                            ×[M]
+Suzuki screw redundancy                               ✓[M]
+L0,L1 necessary autocorrelation gauges                ✓[M]
+scalar Turan moments = exact null-pole class           ×[M]
+strict rank-2 completion equivalence                  ✓[M]
+semidefinite epsilon-completion equivalence            ✓[M]
+finite exact SDP certificate beyond a=0.8             ?[O]
+all-a NP-GAP / completion                             ?[O]
+forward Object-X candidate architecture               ✓[M]_part
+full positive Object-X / RH                           ?[O]
 ```

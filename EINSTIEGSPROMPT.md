@@ -2,146 +2,105 @@
 
 > **Aktueller Stand: 13. September 2026.**
 
-## Arbeitskontext
+Forschungsprogramm **Objekt X** im Repository `Waschtl904/objekt-x-programm`.
 
-Forschungsprogramm **Objekt X** zur Riemannschen Hypothese im Repository `Waschtl904/objekt-x-programm`.
+Arbeite als strenger mathematischer Auditor. ChatGPT übernimmt Repo-Arbeiten; externe Modelle sind Reviewer. Keine Promotion allein durch Merge, CI oder Numerik.
 
-Arbeite als strenger mathematischer Auditor und Research Assistant. Prüfe zuerst den aktuellen `main`-Stand live. Keine mathematische Promotion allein durch Merge, CI oder Numerik.
-
-### Kanonische Hauptquellen
+## Zuerst lesen
 
 1. `CURRENT-FRONT.md`
-2. `audits/P11_NP_DISCREPANCY_POLE_CLEARED_CORRELATION_2026-09-13.md`
-3. `audits/P11_NP_OVERLAP_AR1_FIBERIZATION_2026-09-13.md`
+2. `audits/P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md`
+3. `audits/P11_NP_DISCREPANCY_POLE_CLEARED_CORRELATION_2026-09-13.md`
 4. `audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md`
 5. `00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md`
-6. `00-uebersicht/ACTIVE_THEOREM_REGISTRY.md`
-7. `00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`
+6. Registry und Objekt-X-Arbeitsdefinition nur als unverändert gültige Governancequellen.
 
-ChatGPT übernimmt sämtliche GitHub-/Repository-Arbeiten. Externe Modelle sind Reviewer/Auditoren. Statusmarker strikt trennen.
-
----
-
-## Aktueller mathematischer Stand
-
-### 1. COMMON-JUMP / centered overlap
-
-Auf
-
-```math
-D_{NP}=ker M(0)\cap ker M(1)
-```
-
-gilt
-
-```math
-Q_W(v)=\mathcal A(v)-\mathcal O_a(v).
-```
-
-Per-prime sind die vollständigen Prime-Power-Blöcke exakt AR(1)-Matrizen. Einzelshift- und unabhängige Blocknormsummation sind als all-window-Hauptweg ausgeschlossen.
-
-### 2. Null-pole autocorrelation gauge `✓[M]`
+## Aktueller Kern
 
 Mit
 
 ```math
-C_v(t)=\langle T_tv,v\rangle
+q_a=X_a^*X_a-\Gamma_a I,
+\qquad
+\mathcal E=(E_+,E_-),
 ```
 
-gilt
+ist
+
+```math
+D_{NP}(a)=\ker\mathcal E
+```
+
+und
+
+```math
+Q_W^a=q_a+\mathcal E^*P\mathcal E,
+\qquad
+P=\begin{pmatrix}0&1\\1&0\end{pmatrix}.
+```
+
+### Literaturkorrektur
+
+Die pole-cleared Diskrepanz ist nicht als neues arithmetisches Objekt zu beanspruchen; sie ist der Prime+Polar-Ableitungsblock von Suzukis Screw-Funktion.
+
+### Autocorrelation firewall
+
+Nullpol impliziert zwei notwendige lineare Bedingungen auf `C_v`, aber selbst beide sind nicht hinreichend, um `E_+=E_-=0` auf Faktorebene zu rekonstruieren. Scalar-Turán ist deshalb nur eine äußere Relaxation.
+
+### Exact dual completion
+
+Strict:
+
+```math
+q_a\ge\delta I\text{ on ker E}
+\Rightarrow
+\exists\lambda>0:\ q_a+\lambda E^*E\succeq0.
+```
+
+Semidefinite exact:
 
 ```math
 \boxed{
-\int_0^{2a}2\cosh(t/2)\operatorname{Re}C_v(t)dt=0.
+q_a\ge0\text{ on ker E}
+\iff
+\forall\varepsilon>0\ \exists\lambda_\varepsilon>0:
+q_a+\varepsilon I+\lambda_\varepsilon E^*E\succeq0.
 }
 ```
 
-### 3. Pole-cleared Prime discrepancy `✓[M]`
+## Default-Auftrag — DUAL-CERT-1.0
 
-```math
-\boxed{
-d\mathfrak D(t)
-=\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}(dt)
--2\cosh(t/2)dt.
-}
-```
+Versuche einen rigorosen Completion-Certificate bei `a=1.0`.
 
-Dann exakt
+Pflichtreihenfolge:
 
-```math
-\boxed{
-\mathcal O_a(v)
-=2\int Re C_v(t)d\mathfrak D(t)
-=-2\int_0^{2a}\mathfrak D(t)\frac{d}{dt}Re C_v(t)dt.
-}
-```
-
-Der rohe `e^{t/2}`-PNT-Hauptterm ist damit auf der zulässigen Nullpolklasse exakt herauszentriert.
-
-### 4. Pole-cleared zeta fingerprint `✓[M]`
-
-Für `Re(s)>1/2`:
-
-```math
-\boxed{
-\mathcal L[d\mathfrak D](s)
-=-\frac{d}{ds}\log[(s^2-1/4)\zeta(s+1/2)].
-}
-```
-
-Die Nullpolzentrierung entfernt exakt die Polfaktoren `z=0,1`.
-
-### 5. RH-hard scale
-
-Unter RH gilt klassisch `D(T)=O(T^3)`. Umgekehrt impliziert bereits irgendein polynomialer Bound `D(T)=O(T^K)` RH. Also nicht versuchen, die Hauptfront durch eine globale absolute Diskrepanzschranke zu lösen.
-
----
-
-## Nächster Default-Auftrag — NP-DISCREPANCY / NP-CORR
-
-Zu beweisen bleibt
-
-```math
-\boxed{
-\mathcal A(v)
-\ge
--2\int_0^{2a}\mathfrak D(t)
-\frac{d}{dt}\operatorname{Re}C_v(t)dt
-\quad\forall v\in D_{NP}(a),\ a>0.
-}
-```
-
-Arbeitsreihenfolge:
-
-1. Sign-/Oszillationsstruktur von `D(t)` gegen positive-definite Autokorrelationen untersuchen.
-2. `Q_0`-Transport von `C_v'(t)` explizit bestimmen.
-3. AR(1)-Fasern als lokale Zerlegung derselben Diskrepanz nutzen, nicht separat normieren.
-4. Toeplitz/Paley-Wiener/Prolate nur auf der **zentrierten** Diskrepanz testen.
-5. Vor jeder Numerik eine Falsifikationsbedingung definieren; ein Korrelationszeuge gegen die Mechanismusklasse zählt als Fortschritt.
-
-### Verbindliche No-Gos
-
-```text
-independent shift/block scalar norm sum       ×[M]
-raw Prime amplitude × constant Prolate factor ×[M]
-```
+1. Basis/Trunkierung **vor** Resultat festlegen.
+2. Exakte/Arb `E_±`-Momentzeilen bauen.
+3. Hermiteschen `2x2` Completionblock oder scalar `lambda` optimieren.
+4. Finite PSD intervallzertifizieren.
+5. Analytische/Arb Tail-Untergrenze für das ungelöste Komplement beweisen.
+6. Nur wenn 4+5 zusammen grün sind: fixed-window theorem promoten.
 
 ### Firewalls
 
-- polynomialer Absolutbound für `D` ist bereits RH-hart;
-- Inkommensurabilität der `log p`-Gitter allein beweist nichts;
-- bekannte Kleinfensterpositivität nicht als Neuheit beanspruchen;
-- all-`a`-Beweis bleibt RH-hart;
-- Registry und Arbeitsdefinition nur separat promovieren.
+- finite Ritz/SDP PSD ohne tail ist kein Beweis;
+- `a<=0.8` wäre keine Erweiterung des aktuellen Literaturbenchmarks;
+- scalar Turán failure falsifiziert NP-GAP nicht;
+- existence of arbitrary completion != Weil pole matrix `P`;
+- all-a completion ist RH-hart;
+- Registry/Arbeitsdefinition unverändert.
 
 ## Status
 
 ```text
-COMMON-JUMP / Q0                            ✓[M]
-per-prime AR(1) fibers                     ✓[M]
-null-pole correlation gauge                ✓[M]
-pole-cleared Prime discrepancy             ✓[M]
-NP-DISCREPANCY / anti-correlation          ?[O]
-forward Object-X candidate architecture    ✓[M]_part
-full positive Object-X / RH                ?[O]
+COMMON-JUMP / Q0                         ✓[M]
+Suzuki screw redundancy                 ✓[M]
+D as new arithmetic object             ×[M]
+necessary autocorrelation gauges       ✓[M]
+scalar Turan exactness                  ×[M]
+rank-2 completion duality              ✓[M]
+certified completion at a>0.8          ?[O]
+all-a NP-GAP                            ?[O]
+forward Object-X architecture          ✓[M]_part
+full positive Object-X / RH            ?[O]
 ```
