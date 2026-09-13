@@ -1,0 +1,481 @@
+# P11 Audit — Euler/Gamma scattering-phase realization
+
+**Datum:** 13. September 2026  
+**Basis:** Prime AR(1)-Poisson / Gamma harmonic bridge.  
+**Rolle:** theorem-level unitary phase representation des zentrierten Fensteroperators.  
+**Registry:** unveraendert.  
+**Nonclaim:** kein Positivitaets-/RH-Beweis; allgemeine Zeta-Streuinterpretationen sind aus anderen Kontexten bekannt, daher keine Publikationsneuheit behauptet.
+
+---
+
+## 0. Kurzurteil
+
+Der zentrierte nichtpolare Weil-Multiplikator auf einem kompakten Fenster ist exakt die Phasenableitung eines **expliziten unitären endlichen Euler/Gamma-Streufaktors**.
+
+Fuer jede Primzahl definiere
+
+```math
+\boxed{
+S_p(z)
+:=
+\frac{1-p^{-1/2}e^{iz\log p}}
+     {1-p^{-1/2}e^{-iz\log p}}.
+}
+```
+
+Fuer reelles `z` gilt `|S_p(z)|=1` und
+
+```math
+\boxed{
+-i\overline{S_p(z)}S_p'(z)
+=
+\frac{d}{dz}\arg S_p(z)
+=
+(\log p)\left[1-P_{p^{-1/2}}^{\mathbb D}(z\log p)\right].
+}
+```
+
+Archimedisch setze
+
+```math
+\boxed{
+S_\infty(z)
+:=
+\pi^{-iz}
+\frac{\Gamma(1/4+iz/2)}
+     {\Gamma(1/4-iz/2)}.
+}
+```
+
+Auch `|S_infty(z)|=1` fuer reelles `z`, und exakt
+
+```math
+\boxed{
+-i\overline{S_\infty(z)}S_\infty'(z)
+=
+\operatorname{Re}\psi\left(\frac14+\frac{iz}{2}\right)-\log\pi.
+}
+```
+
+Fuer ein Fenster `[-a,a]` definiere den endlichen Streufaktor
+
+```math
+\boxed{
+S_a(z)
+:=
+S_\infty(z)
+\prod_{p\le e^{2a}}S_p(z).
+}
+```
+
+Dann ist fuer alle reellen `z`
+
+```math
+\boxed{
+-i\overline{S_a(z)}S_a'(z)
+=
+B_{\infty}(z)
++
+\sum_{p\le e^{2a}}B_p(z),
+}
+```
+
+wobei `B_infty` der zentrierte archimedische und `B_p` der **vollstaendige** zentrierte `p`-Power-Multiplikator ist.
+
+Auf Funktionen mit Traeger in `[-a,a]` ist dies in der quadratischen Form exakt der zentrierte COMMON-JUMP-/Weil-Operator; die ueber den geometrischen Cutoff hinaus ergaenzten Prime powers tragen exakt null.
+
+Auf NULLPOL gilt daher
+
+```math
+\boxed{
+Q_W(v)
+=
+\int_{\mathbb R}
+|\widehat v(z)|^2
+\left[-i\overline{S_a(z)}S_a'(z)\right]dz.
+}
+```
+
+Der Weiloperator ist damit ein skalarer **Wigner--Smith / phase-delay operator** des expliziten Fenster-Streufaktors.
+
+Status:
+
+```text
+local Euler scattering factors S_p                     ✓[M]
+archimedean Gamma scattering factor S_infty             ✓[M]
+window product S_a unitary on real axis                 ✓[M]
+phase derivative = centered COMMON-JUMP multiplier      ✓[M]
+NULLPOL Weil form = Wigner-Smith quadratic form         ✓[M]
+positive scattering dilation / monotone time delay      ?[O]
+full positive Object X                                  ?[O]
+RH                                                      ?[O]
+publication novelty                                     ?[O]
+```
+
+---
+
+# 1. Lokaler Prime-Streufaktor
+
+Fixiere `p`, setze
+
+```math
+q=p^{-1/2},
+\qquad
+\theta=z\log p.
+```
+
+Dann
+
+```math
+S_p(z)
+=\frac{1-qe^{i\theta}}{1-qe^{-i\theta}}.
+```
+
+Fuer reelles `theta` sind Zaehler und Nenner komplex konjugiert, also
+
+```math
+|S_p(z)|=1.
+```
+
+Logarithmisch differenziert nach `theta`:
+
+```math
+\frac{d}{d\theta}\log S_p
+=
+-i\left(
+\frac{qe^{i\theta}}{1-qe^{i\theta}}
++
+\frac{qe^{-i\theta}}{1-qe^{-i\theta}}
+\right).
+```
+
+Somit
+
+```math
+\frac{d}{d\theta}\arg S_p
+=-2\operatorname{Re}
+\frac{qe^{i\theta}}{1-qe^{i\theta}}.
+```
+
+Aus
+
+```math
+P_q^{\mathbb D}(\theta)
+=1+2\operatorname{Re}
+\frac{qe^{i\theta}}{1-qe^{i\theta}}
+```
+
+folgt
+
+```math
+\boxed{
+\frac{d}{d\theta}\arg S_p
+=1-P_q^{\mathbb D}(\theta).
+}
+```
+
+Mit `d theta/dz=log p`:
+
+```math
+\boxed{
+-i\overline{S_p(z)}S_p'(z)
+=(\log p)(1-P_q^{\mathbb D}(z\log p)).
+}
+```
+
+Nach dem Poisson-Audit ist dies exakt der zentrierte gesamte Weil-Prime-Power-Turm von `p`.
+
+---
+
+# 2. Beziehung zum lokalen Eulerfaktor
+
+Schreibe
+
+```math
+\zeta_p(s)=(1-p^{-s})^{-1}.
+```
+
+Dann gilt direkt
+
+```math
+\boxed{
+S_p(z)
+=
+\frac{\zeta_p(1/2+iz)}{\zeta_p(1/2-iz)}.
+}
+```
+
+Die P11-AR(1)-Poisson-Dichte ist somit die Phasengeschwindigkeit des Quotienten der beiden kritischen Randwerte des lokalen Eulerfaktors.
+
+Firewall: Der endliche Fensterfaktor verwendet nur endlich viele Primzahlen. Ein unkritisches Produkt ueber **alle** Primzahlen auf `Re(s)=1/2` wird nicht gebildet; dort konvergiert das Eulerprodukt nicht klassisch.
+
+---
+
+# 3. Archimedischer Streufaktor
+
+Setze
+
+```math
+S_\infty(z)
+=\pi^{-iz}
+\frac{\Gamma(1/4+iz/2)}
+     {\Gamma(1/4-iz/2)}.
+```
+
+Fuer reelles `z` sind die Gammawerte komplex konjugiert; daher
+
+```math
+|S_\infty(z)|=1.
+```
+
+Logarithmisch differenziert:
+
+```math
+\begin{aligned}
+\frac{d}{dz}\log S_\infty(z)
+&=-i\log\pi
++\frac{i}{2}\psi\left(\frac14+\frac{iz}{2}\right)
++\frac{i}{2}\psi\left(\frac14-\frac{iz}{2}\right)\\
+&=i\left[
+\operatorname{Re}\psi\left(\frac14+\frac{iz}{2}\right)
+-\log\pi
+\right].
+\end{aligned}
+```
+
+Somit
+
+```math
+\boxed{
+-i\overline{S_\infty(z)}S_\infty'(z)
+=
+\operatorname{Re}\psi\left(\frac14+\frac{iz}{2}\right)-\log\pi.
+}
+```
+
+Dies ist exakt der zentrierte archimedische Multiplikator aus COMMON-JUMP.
+
+Ferner ist `S_infty` genau das Verhaeltnis des archimedischen completed-zeta-Faktors
+
+```math
+\pi^{-s/2}\Gamma(s/2)
+```
+
+an `s=1/2+iz` und `s=1/2-iz`.
+
+---
+
+# 4. Fenster-Streumatrix
+
+Fuer `a>0` setze
+
+```math
+\boxed{
+S_a(z)
+=S_\infty(z)
+\prod_{p\le e^{2a}}S_p(z).
+}
+```
+
+Das Produkt ist endlich und fuer reelles `z` unitär:
+
+```math
+|S_a(z)|=1.
+```
+
+Daher ist
+
+```math
+\boxed{
+\tau_a(z):=-i\overline{S_a(z)}S_a'(z)
+}
+```
+
+reell. Durch logarithmische Ableitung
+
+```math
+\boxed{
+\tau_a(z)
+=
+\operatorname{Re}\psi\left(\frac14+\frac{iz}{2}\right)-\log\pi
++
+\sum_{p\le e^{2a}}
+(\log p)
+\left[1-P_{p^{-1/2}}^{\mathbb D}(z\log p)\right].
+}
+```
+
+---
+
+# 5. Warum ganze Prime-Tuerme trotz Fenster exakt sind
+
+COMMON-JUMP verwendet geometrisch nur Prime powers mit
+
+```math
+k\log p\le2a.
+```
+
+Im Faktor `S_p` steckt dagegen formal der ganze geometrische Turm `k>=1`. Dies ist auf dem Testfunktionsraum kein Fehler:
+
+Fuer `v` mit Traeger in `[-a,a]` und `k log p>2a` gilt
+
+```math
+\|K_{k\log p}v\|^2-2\|v\|^2=0.
+```
+
+Unter Fouriertransformation bedeutet dies
+
+```math
+\int|\widehat v(z)|^2\cos(kz\log p)dz=0.
+```
+
+Daher duerfen die fehlenden hohen Potenzen **innerhalb der quadratischen Form** exakt ergaenzt werden.
+
+Somit gilt fuer alle solchen `v`
+
+```math
+\boxed{
+\langle v,(X_a^*X_a-\Gamma_aI)v\rangle
+=
+\int|\widehat v(z)|^2\tau_a(z)dz.
+}
+```
+
+Auf NULLPOL ist die linke Seite exakt `Q_W(v)`.
+
+---
+
+# 6. Wigner--Smith-Lesart
+
+Fuer eine skalare unitäre Streumatrix `S(z)` ist der Wigner--Smith-/phase-delay-Ausdruck
+
+```math
+Q_S(z)=-iS(z)^*\frac{dS}{dz}(z).
+```
+
+Da `S_a` skalar ist,
+
+```math
+Q_{S_a}(z)=\tau_a(z).
+```
+
+Daher:
+
+```math
+\boxed{
+Q_W(v)
+=
+\langle\widehat v,
+Q_{S_a}\widehat v\rangle_{L^2(\mathbb R)}
+\qquad
+(v\in\mathscr D_{NP,a}).
+}
+```
+
+Dies ist eine exakte Operatoridentitaet, keine physikalische Analogie.
+
+### Firewall
+
+Wigner-Zeitverzoegerungen koennen lokal negativ sein. Aus Unitaritaet von `S_a` folgt **keine** Positivitaet von `Q_{S_a}`. NP-GAP bleibt daher unangetastet offen.
+
+---
+
+# 7. Relation zur Poisson-/Blaschke-Geometrie
+
+Fuer reelles `0<q<1` sei der Disk-Blaschkefaktor
+
+```math
+b_q(w)=\frac{w-q}{1-qw}.
+```
+
+Auf `w=e^{i\theta}` gilt
+
+```math
+\frac{d}{d\theta}\arg b_q(e^{i\theta})
+=P_q^{\mathbb D}(\theta).
+```
+
+Auf dem Rand kann `S_p` daher als der Quotient
+
+```math
+S_p\sim\frac{w}{b_q(w)}
+```
+
+gelesen werden; seine Phasenableitung ist `1-P_q`.
+
+Archimedisch ist
+
+```math
+\frac{2\mu}{z^2+\mu^2}
+```
+
+die Phasenableitung des Half-plane-Blaschke-Faktors
+
+```math
+B_\mu(z)=\frac{z-i\mu}{z+i\mu}.
+```
+
+Die Gamma-Resolventenleiter ist damit zugleich eine Blaschke-/harmonic-measure-Leiter.
+
+Dies erklaert die enge Naehe der neuen Architektur zu Hardy-/de-Branges-/scattering-Methoden, ohne deren Positivitaetssaetze rueckwaerts zu importieren.
+
+---
+
+# 8. Vergleich mit allgemeiner Literatur
+
+Streumatrizen mit Zeta-Quotienten und Wigner-Zeitverzoegerungen sind in anderen spektralen/geometrischen Kontexten bekannt, insbesondere in der Streutheorie hyperbolischer Flaechen. Daher wird die allgemeine Idee `zeta ratio -> scattering phase` **nicht** als neu beansprucht.
+
+Der projektinterne neue Punkt ist die exakt hergeleitete Kette
+
+```text
+P11 AR(1) covariance
+ -> disk Poisson symbol
+ -> exact centered local Euler tower
+ -> finite-window Euler scattering phase
+```
+
+parallel zu
+
+```text
+critical-half Gamma resolvent ladder
+ -> half-plane Poisson comb
+ -> exact archimedean scattering phase,
+```
+
+und ihre Identifikation mit dem bereits bewiesenen COMMON-JUMP-Fensteroperator.
+
+Publikationsneuheit dieser spezifischen Kombination bleibt `?[O]`.
+
+---
+
+# 9. Neuer Object-X-Gate
+
+Die jetzt kanonische Frage lautet:
+
+> Gibt es ein explizites positives scattering system / conservative dilation, dessen Wigner--Smith-Operator nach einem **vorwaerts konstruierten** Compression-/Schur-Schritt genau `Q_{S_a}` auf `Ran L_{1/2}` liefert?
+
+Die Daten dafuer sind jetzt vollstaendig explizit:
+
+```text
+boundary/source:     L_{1/2}, E_±,
+prime channels:      disk Blaschke points q_p=p^{-1/2},
+arch channels:       half-plane points i mu_m,
+window scattering:   S_a,
+Weil operator:       -i S_a^* S_a'.
+```
+
+Ein positiver konservativer Dilationmechanismus waere ein echter Object-X-Kandidat. Ein theorem-level No-Go fuer diese Klasse waere ebenfalls wertvoll.
+
+---
+
+# 10. Firewalls
+
+Nicht behaupten:
+
+- `tau_a(z)>=0` punktweise;
+- Unitaritaet impliziere Wigner--Smith-Positivitaet;
+- das endliche Eulerprodukt konvergiere zum vollen Eulerprodukt auf der kritischen Linie;
+- die funktionale Gleichung liefere die Fensterform ohne Renormierungs-/Cutoffkontrolle;
+- ein bekanntes hyperbolisches Streumodell sei bereits unser Object X;
+- NP-GAP, Object X oder RH seien geloest;
+- Publikationsneuheit sei geklaert.
