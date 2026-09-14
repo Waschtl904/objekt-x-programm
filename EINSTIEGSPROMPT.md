@@ -23,20 +23,17 @@ rank-2 completion / Morse / parity      ✓[M]
 canonical lambda=1                      ✓[M]
 exact a=1 Fourier multiplier            ✓[M]
 Omega1551 high-frequency floor          ✓[K/M]
+Osipov N=1102 Schur reduction           ✓[K/M]
 ```
 
 ## Kanonischer finite Gate — PSWF / Osipov
 
-Osipov Theorem 4 liefert für den finite-Fourier-Eigenwert
+Osipov Theorem 4 liefert
 
 ```math
 |\lambda_n^F|\le
 \frac{\sqrt\pi\,c^n(n!)^2}{(2n)!\Gamma(n+3/2)},
-```
-
-und damit für die Konzentration
-
-```math
+\qquad
 \mu_n=\frac{c}{2\pi}|\lambda_n^F|^2.
 ```
 
@@ -47,19 +44,19 @@ c=1551,
 N=1102
 ```
 
-hat der Arb-Gate bereits auf dem aktuellen Main-basierten Head zertifiziert
+zertifiziert der 256-bit-Arb-Gate
 
 ```math
-\mu_{1102}<10^{-43},
+\boxed{\mu_{1102}<10^{-43}},
 \qquad
-\tau_{1102}>0.099,
+\boxed{\tau_{1102}>0.099},
 ```
 
 ```math
-\text{Schur penalty}<1.5\times10^{-40}.
+\boxed{\text{Schur penalty}<1.5\times10^{-40}.}
 ```
 
-Nach dem finalen Exact-Head-Rerun genügt kanonisch nur noch
+Daher genügt kanonisch nur noch
 
 ```math
 \boxed{(L_1)_{RR}\succeq3\times10^{-39}I}
@@ -71,7 +68,7 @@ auf höchstens
 1104 total = 552 even + 552 odd.
 ```
 
-Der PSWF-Tail wird durch Osipovs analytischen Eigenwertbound kontrolliert; dafür müssen keine PSWF-Eigenvektoren numerisch konstruiert werden.
+Für die Osipov-Tail-Schranke müssen keine PSWF-Eigenvektoren numerisch konstruiert werden.
 
 ## Alternative explizite Backend — Legendre
 
@@ -102,9 +99,9 @@ PR #118 zertifiziert zusätzlich für jeden Paritätsblock
 
 Die Legendre-Route bleibt ein unabhängiger, basisexpliziter Backup-/Crosscheck-Backend; die kleinere PSWF-/Osipov-Route bleibt kanonisch.
 
-## Default-Auftrag nach Abschluss von Durchlauf A
+## Default-Auftrag nach Durchlauf A
 
-**Nicht in diesem Durchlauf ausführen:**
+**Nicht in Durchlauf A ausführen.** Im nächsten getrennten Durchlauf:
 
 1. finite resolved Darstellung für die kanonische `<=1104`-Route festlegen;
 2. parity-getrennte `552 x 552`-Zertifikatsstrategie wählen;
@@ -114,7 +111,6 @@ Die Legendre-Route bleibt ein unabhängiger, basisexpliziter Backup-/Crosscheck-
 
 ### Firewalls
 
-- Osipov-Numerik erst nach finalem Exact-Head-Rerun dauerhaft promoten.
 - Float-Cholesky oder Float-Eigenwerte haben keinen Beweisstatus.
 - `3e-39` und `1e-35` sind predeclared sufficient targets, keine beobachteten Eigenwerte.
 - Fixed-window `a=1`, all-a NP-GAP, Object X und RH bleiben offen.
