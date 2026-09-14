@@ -24,7 +24,7 @@ PANEL = Q(2, 5)
 OMEGA = Q(1551)
 C = Q(1, 10)
 MAX_DEGREE = 2150
-CF_DEPTH = 192
+CF_DEPTH = 768
 SAMPLES = ((0, 0), (1250, 20), (2500, 20), (3877, 39))
 CHECK_ORDERS = (0, 2, 100, 500, 1000, 1500, 2148)
 MOMENT_ORDERS = (0, 2, 100, 1000, 2148)
@@ -89,17 +89,38 @@ def elementary_j1(z: arb) -> arb:
     return z.sin() / (z * z) - z.cos() / z
 
 
-def spherical_ratio_cf(n: int, z: arb, depth: int = CF_DEPTH) -> arb:
-    """Enclose j_(n+1)(z)/j_n(z) by a backward continued fraction.
+def fixed_point_ratio_bound(k: int, z: arb) -> arb:
+    """Upper bound q_k for the positive recessive ratio above the turning point.
 
-    C-even only calls this at n > 3z/2, where the recessive spherical-Bessel
-    solution has a positive ratio below 1. The initial interval [-1,1] is
-    therefore a conservative tail box; every backward denominator is checked
-    away from zero in Arb.
+    For r_k=z/(2k+3-z r_(k+1)), the interval [0,q_k] is invariant for all
+    higher orders if q_k is the small positive fixed point of the worst-case
+    map t -> z/(2k+3-z t):
+
+        q_k = 2z / ((2k+3)+sqrt((2k+3)^2-4z^2)).
+
+    We only call this with k>z, so the discriminant is strictly positive and
+    q_k<1.  The true recessive ratio tends to zero as order tends to infinity,
+    hence backward continued-fraction approximants remain in this invariant
+    interval.
     """
-    r = arb(0, 1)
-    for k in range(n + depth, n - 1, -1):
-        denom = 2 * (A(k) + Q(3, 2)) - z * r
+    a = A(2 * k + 3)
+    disc = a * a - 4 * z * z
+    if not (disc > 0):
+        raise RuntimeError("ratio fixed-point discriminant is not positive")
+    q = 2 * z / (a + disc.sqrt())
+    if not (q < 1):
+        raise RuntimeError("ratio fixed-point bound is not below one")
+    return q
+
+
+def spherical_ratio_cf(n: int, z: arb, depth: int = CF_DEPTH) -> arb:
+    """Enclose j_(n+1)(z)/j_n(z) by a rigorously seeded backward CF."""
+    tail_index = n + depth + 1
+    q = fixed_point_ratio_bound(tail_index, z)
+    # Symmetric ball [-q,q] encloses the sharper positive interval [0,q].
+    r = arb(0, q.upper())
+    for k in range(tail_index - 1, n - 1, -1):
+        denom = A(2 * k + 3) - z * r
         if denom.contains(0):
             raise RuntimeError("continued-fraction ratio denominator contains zero")
         r = z / denom
@@ -119,14 +140,12 @@ def choose_miller_top(z: arb, degree: int) -> int:
 
 
 def elementary_normalization(values: list[arb], z: arb) -> tuple[int, arb]:
-    """Normalize Miller with exact elementary spherical j0/j1 formulas."""
     j0 = elementary_j0(z)
     if not values[0].contains(0) and not j0.contains(0):
         return 0, j0
     j1 = elementary_j1(z)
     if not values[1].contains(0) and not j1.contains(0):
         return 1, j1
-    # This cannot persist for real z>0 because j0 and j1 have no common zero.
     raise RuntimeError("both elementary j0/j1 normalization intervals contain zero")
 
 
@@ -230,7 +249,6 @@ def main() -> None:
                     f"direct/mixed Bessel mismatch panel={panel}, node={node_index}, n={n}"
                 )
 
-        # Explicitly check elementary normalization against direct Arb Bessel.
         if not elementary_j0(x).overlaps(spherical_j_direct(0, x)):
             raise RuntimeError("elementary/direct j0 mismatch")
         if not elementary_j1(x).overlaps(spherical_j_direct(1, x)):
@@ -257,7 +275,7 @@ def main() -> None:
         raise RuntimeError("even Legendre Fourier phase convention failed")
 
     print("CERTIFIED: frozen Gauss-40 / panel-0.4 sample nodes are valid")
-    print("CERTIFIED: C-even elementary-normalized Miller/tail enclosures overlap direct Arb values")
+    print("CERTIFIED: C-even tightly-seeded Miller/tail enclosures overlap direct Arb values")
     print("CERTIFIED: C-even moment-series sample coefficients are positive finite enclosures")
     print("CERTIFIED: C-even special-function engine preflight passed")
     print("FIREWALL: this is not the 1075x1075 finite positivity certificate")
