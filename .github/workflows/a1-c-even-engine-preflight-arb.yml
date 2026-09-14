@@ -18,12 +18,16 @@ jobs:
           python-version: '3.13'
       - name: Install exact numerical dependency
         run: python -m pip install python-flint==0.9.0
-      - name: Run exact-head C-even special-function / energy-tail preflight
+      - name: Run frozen C-even precision ladder preflight
         run: |
           set -euo pipefail
           git rev-parse HEAD
           git hash-object scripts/check_a1_c_even_engine_preflight_arb.py
-          python scripts/check_a1_c_even_engine_preflight_arb.py | tee a1_c_even_engine_preflight.log
+          : > a1_c_even_engine_preflight.log
+          for p in 512 768 1024 1536 2048 3072; do
+            echo "===== PRECISION ${p} =====" | tee -a a1_c_even_engine_preflight.log
+            A1_PREC_BITS="$p" python scripts/check_a1_c_even_engine_preflight_arb.py | tee -a a1_c_even_engine_preflight.log
+          done
           grep -q 'CERTIFIED: C-even direct-turning-anchor Bessel enclosures overlap direct Arb values' a1_c_even_engine_preflight.log
           grep -q 'CERTIFIED: C-even addition-theorem energy-tail l2 bounds computed' a1_c_even_engine_preflight.log
           grep -q 'CERTIFIED: C-even moment-series sample coefficients are positive finite enclosures' a1_c_even_engine_preflight.log
