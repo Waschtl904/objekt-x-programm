@@ -1,3 +1,5 @@
+#define _POSIX_C_SOURCE 200809L
+
 /*
  * Direct rigorous SPD gate for the frozen A1 C-even exact integer matrix.
  *
