@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Exact-head Arb preflight for the frozen A1 C-even matrix engine.
 
-This is NOT the 1075x1075 positivity certificate. It checks the two-sided
-special-function engine used by the frozen C-even backend.
+This is NOT the 1075x1075 positivity certificate. It checks the final
+turning-anchor special-function engine used by the frozen C-even backend.
 """
 
 from flint import acb, arb, ctx, fmpq
@@ -24,7 +24,6 @@ PANEL = Q(2, 5)
 OMEGA = Q(1551)
 C = Q(1, 10)
 MAX_DEGREE = 2150
-CF_DEPTH = 768
 SAMPLES = ((0, 0), (1250, 20), (2500, 20), (3877, 39))
 CHECK_ORDERS = (0, 2, 100, 500, 1000, 1500, 2148)
 MOMENT_ORDERS = (0, 2, 100, 1000, 2148)
@@ -89,51 +88,15 @@ def elementary_j1(z: arb) -> arb:
     return z.sin() / (z * z) - z.cos() / z
 
 
-def fixed_point_ratio_bound(k: int, z: arb) -> arb:
-    a = A(2 * k + 3)
-    disc = a * a - 4 * z * z
-    if not (disc > 0):
-        raise RuntimeError("ratio fixed-point discriminant is not positive")
-    q = 2 * z / (a + disc.sqrt())
-    if not (q < 1):
-        raise RuntimeError("ratio fixed-point bound is not below one")
-    return q
-
-
-def spherical_ratio_cf(n: int, z: arb, depth: int = CF_DEPTH) -> arb:
-    tail_index = n + depth + 1
-    q = fixed_point_ratio_bound(tail_index, z)
-    r = arb(0, q.upper())
-    for k in range(tail_index - 1, n - 1, -1):
-        denom = A(2 * k + 3) - z * r
-        if denom.contains(0):
-            raise RuntimeError("continued-fraction ratio denominator contains zero")
-        r = z / denom
-    if not r.is_finite():
-        raise RuntimeError("non-finite continued-fraction ratio")
-    return r
-
-
-def choose_miller_top(z: arb, degree: int) -> int:
-    top = max(32, int(1.5 * float(z.mid())) + 32)
-    top = min(degree, top)
-    while top < degree and not (A(top) > 3 * z / 2):
-        top += 1
-    if top < degree and not (A(top) > 3 * z / 2):
-        raise RuntimeError("failed exact Miller-top safety check")
-    return top
-
-
-def choose_overlap_top(z: arb, recurrence_top: int) -> int:
-    """Choose a splice safely below the O(z^(1/3)) turning region.
-
-    The numeric proposal affects conditioning only. All correctness is
-    subsequently checked by Arb interval overlap.
-    """
+def turning_indices(z: arb, degree: int) -> tuple[int, int]:
+    """Conditioning proposal; correctness is certified by interval overlap."""
     zm = float(z.mid())
     margin = int(8 * (zm ** (1.0 / 3.0))) + 16
-    proposal = max(2, int(zm) - margin)
-    return min(recurrence_top - 2, proposal)
+    low = max(2, int(zm) - margin)
+    high = min(degree - 2, int(zm) + margin)
+    if high <= low + 4:
+        high = min(degree - 2, low + 8)
+    return low, high
 
 
 def upward_vector(z: arb, top: int) -> list[arb]:
@@ -143,20 +106,20 @@ def upward_vector(z: arb, top: int) -> list[arb]:
     for n in range(1, top + 1):
         vals[n + 1] = (2 * n + 1) * vals[n] / z - vals[n - 1]
     if any(not v.is_finite() for v in vals):
-        raise RuntimeError("non-finite upward spherical-Bessel recurrence")
+        raise RuntimeError("non-finite upward recurrence")
     return vals
 
 
-def downward_unscaled(z: arb, top: int, low: int) -> list[arb]:
-    ratio = spherical_ratio_cf(top, z)
-    vals = [A(0) for _ in range(top + 2)]
-    vals[top] = A(1)
-    vals[top + 1] = ratio
-    for n in range(top, low, -1):
+def downward_from_direct_turning_anchors(z: arb, high: int, low: int) -> list[arb]:
+    vals = [A(0) for _ in range(high + 2)]
+    vals[high] = spherical_j_direct(high, z)
+    vals[high + 1] = spherical_j_direct(high + 1, z)
+    if not vals[high].is_finite() or not vals[high + 1].is_finite():
+        raise RuntimeError("non-finite direct turning anchors")
+    for n in range(high, low, -1):
         vals[n - 1] = (2 * n + 1) * vals[n] / z - vals[n + 1]
-    for n in range(low, top + 2):
-        if not vals[n].is_finite():
-            raise RuntimeError("non-finite downward recurrence")
+    if any(not vals[n].is_finite() for n in range(low, high + 2)):
+        raise RuntimeError("non-finite direct-anchor downward recurrence")
     return vals
 
 
@@ -167,64 +130,44 @@ def analytic_j_bounds(z: arb, degree: int) -> list[arb]:
     return bounds
 
 
-def two_sided_vector(z: arb, degree: int) -> tuple[list[arb], int, int]:
-    miller_top = choose_miller_top(z, degree)
-    represented_top = degree - 1 if miller_top == degree else miller_top
-    recurrence_top = degree if miller_top == degree else miller_top
-    overlap_top = choose_overlap_top(z, recurrence_top)
-    if overlap_top < 2:
-        raise RuntimeError("overlap top too small")
-
-    up = upward_vector(z, overlap_top + 12)
-    low = max(2, overlap_top - 24)
-    down = downward_unscaled(z, recurrence_top, low)
-
-    glue = None
-    scale = None
-    for n in range(overlap_top - 12, overlap_top + 13):
-        if n < low or n >= len(up):
-            continue
-        if not up[n].contains(0) and not down[n].contains(0):
-            candidate = up[n] / down[n]
-            if candidate.is_finite():
-                glue = n
-                scale = candidate
-                break
-    if glue is None or scale is None:
-        raise RuntimeError("no nonzero two-sided glue index found")
+def turning_anchor_vector(z: arb, degree: int) -> tuple[list[arb], int, int]:
+    low, high = turning_indices(z, degree)
+    up = upward_vector(z, low + 12)
+    down = downward_from_direct_turning_anchors(z, high, max(2, low - 12))
 
     result = [A(0) for _ in range(degree)]
     for n in range(min(len(up), degree)):
         result[n] = up[n]
 
-    for n in range(low, min(represented_top + 1, degree)):
-        hi = down[n] * scale
-        if n < len(up):
-            overlap = result[n].intersection(hi)
-            if overlap is None:
-                raise RuntimeError(f"upward/downward Bessel intervals do not overlap at n={n}")
-            result[n] = overlap
-        else:
-            result[n] = hi
+    overlap_low = max(2, low - 8)
+    overlap_high = min(low + 12, len(up) - 1, high)
+    for n in range(overlap_low, overlap_high + 1):
+        overlap = up[n].intersection(down[n])
+        if overlap is None:
+            raise RuntimeError(f"upward/direct-anchor intervals do not overlap at n={n}")
+        result[n] = overlap
 
-    if represented_top + 1 < degree:
+    for n in range(overlap_high + 1, min(high + 1, degree)):
+        result[n] = down[n]
+
+    if high + 1 < degree:
         bounds = analytic_j_bounds(z, degree)
-        for n in range(represented_top + 1, degree):
+        for n in range(high + 1, degree):
             result[n] = arb(0, bounds[n].upper())
 
     if any(not v.is_finite() for v in result):
-        raise RuntimeError("non-finite two-sided spherical-Bessel vector")
-    return result, represented_top, glue
+        raise RuntimeError("non-finite turning-anchor Bessel vector")
+    return result, low, high
 
 
 def spherical_j_even_vector(z: arb) -> tuple[list[arb], int, int]:
     if z < 1:
         full = [spherical_j_direct(n, z) for n in range(MAX_DEGREE)]
-        top = MAX_DEGREE - 1
-        glue = 0
+        low = 0
+        high = MAX_DEGREE - 1
     else:
-        full, top, glue = two_sided_vector(z, MAX_DEGREE)
-    return [full[n] for n in range(0, MAX_DEGREE, 2)], top, glue
+        full, low, high = turning_anchor_vector(z, MAX_DEGREE)
+    return [full[n] for n in range(0, MAX_DEGREE, 2)], low, high
 
 
 def modified_spherical_i_series(n: int, z: arb) -> arb:
@@ -265,7 +208,7 @@ def main() -> None:
         if not r.is_finite() or not alpha.is_finite():
             raise RuntimeError("non-finite scalar multiplier/weight")
 
-        vals, represented_top, glue = spherical_j_even_vector(x)
+        vals, low, high = spherical_j_even_vector(x)
         if len(vals) != 1075:
             raise RuntimeError("wrong even-vector dimension")
         max_rad = max((v.rad() for v in vals), default=A(0))
@@ -275,7 +218,7 @@ def main() -> None:
             direct = spherical_j_direct(n, x)
             if not value.overlaps(direct):
                 raise RuntimeError(
-                    f"direct/two-sided Bessel mismatch panel={panel}, node={node_index}, n={n}"
+                    f"direct/turning-anchor Bessel mismatch panel={panel}, node={node_index}, n={n}"
                 )
 
         if not elementary_j0(x).overlaps(spherical_j_direct(0, x)):
@@ -288,8 +231,8 @@ def main() -> None:
             "x=", x.str(22, radius=True),
             "r=", r.str(18, radius=True),
             "alpha=", alpha.str(18, radius=True),
-            "Miller_top=", represented_top,
-            "glue=", glue,
+            "turn_low=", low,
+            "turn_high=", high,
             "max_j_radius=", max_rad.str(8, radius=True),
         )
 
@@ -305,7 +248,7 @@ def main() -> None:
         raise RuntimeError("even Legendre Fourier phase convention failed")
 
     print("CERTIFIED: frozen Gauss-40 / panel-0.4 sample nodes are valid")
-    print("CERTIFIED: C-even two-sided Bessel enclosures overlap direct Arb values")
+    print("CERTIFIED: C-even direct-turning-anchor Bessel enclosures overlap direct Arb values")
     print("CERTIFIED: C-even moment-series sample coefficients are positive finite enclosures")
     print("CERTIFIED: C-even special-function engine preflight passed")
     print("FIREWALL: this is not the 1075x1075 finite positivity certificate")
