@@ -19,7 +19,7 @@ m_1(\xi)>0.1\quad(|\xi|\ge1551),
 \qquad \|r\|_\infty<12.
 ```
 
-## Gate C2 — Osipov analytic concentration bound
+## Gate C2 — Osipov N1102 `✓[M] / ✓[K/M]`
 
 Osipov Theorem 4:
 
@@ -34,19 +34,17 @@ and
 \mu_n=\frac{c}{2\pi}|\lambda_n^F|^2.
 ```
 
-At predeclared `c=1551`, `N=1102`, the Arb gate has certified on the current-main-based precursor head
+At predeclared `c=1551`, `N=1102`, Exact-Head Arb certifies
 
 ```math
-\mu_{1102}<10^{-43},
-\quad \tau_{1102}>0.099,
-\quad \text{penalty}<1.5\times10^{-40}.
+\boxed{\mu_{1102}<10^{-43}},
+\quad \boxed{\tau_{1102}>0.099},
+\quad \boxed{\text{penalty}<1.5\times10^{-40}}.
 ```
-
-Final exact-head rerun is required for promotion.
 
 ## Gate C3 — Canonical A1-FINITE-1104 `?[O]`
 
-After C2 promotion it suffices to prove
+It suffices to prove
 
 ```math
 \boxed{(L_1)_{RR}\succeq3\times10^{-39}I}
@@ -92,7 +90,6 @@ RH-hard global criterion
 
 ## Firewalls
 
-- No promotion of N=1102 constants before final exact-head rerun.
 - `3e-39` is a predeclared sufficient threshold, not a measured eigenvalue.
 - Legendre route remains independent and does not supersede the smaller PSWF route.
 - Fixed-window `a=1`, Object X and RH are not proved.
