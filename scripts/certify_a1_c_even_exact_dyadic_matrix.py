@@ -65,12 +65,15 @@ DYAD_BITS = 160
 HALF_ULP = A(2) ** (-(DYAD_BITS + 1))
 BLOCK_ROWS = 256
 DEC38 = 10 ** 38
-TWO160 = 1 << 160
 TWO161 = 1 << 161
 TWO480 = 1 << 480
 DIAG_INTEGER = (10 ** 37 - 1005) * TWO480
 EIG_PREC_LADDER = (512, 768, 1024, 1536, 2048, 3072)
 EIG_SCALE_POW = 600
+
+
+def matrix_trace_int(m: fmpz_mat) -> int:
+    return sum(int(m[i, i]) for i in range(min(m.nrows(), m.ncols())))
 
 
 def sharp_even_head(z: arb):
@@ -122,10 +125,6 @@ def dyadic_point(q: int, bits: int = DYAD_BITS) -> arb:
 
 
 def quantize_exact_target(target: arb, label: str) -> int:
-    """Choose a dyadic integer and rigorously prove half-ulp proximity.
-
-    target may be a tiny Arb enclosure of an exact irrational proposal value.
-    """
     if not target.is_finite():
         raise RuntimeError(f"non-finite quantization target: {label}")
     q = round_binary_mid_to_dyadic_int(target)
@@ -138,13 +137,11 @@ def quantize_exact_target(target: arb, label: str) -> int:
 
 
 def quantized_node(panel: int, node_index: int):
-    """Return exact integer (A_s, B_s) for one frozen Gauss node."""
     x, w = gauss_node(panel, node_index)
     if not (x > 0 and x < A(OMEGA)):
         raise RuntimeError(f"Gauss node outside band at panel={panel}, node={node_index}")
 
     alpha_ball = w * r_on_real_ball(x)
-    # The certified alpha proposal is the exact binary midpoint of the Arb ball.
     alpha0 = A(alpha_ball.mid())
     a_int = quantize_exact_target(alpha0, f"alpha[{panel},{node_index}]")
 
@@ -153,12 +150,8 @@ def quantized_node(panel: int, node_index: int):
     for n, jball in head:
         phase = -1 if ((n // 2) & 1) else 1
         coeff = (2 * A(2 * n + 1) / PI).sqrt()
-        # Evaluation-error certificate uses the exact normalization times the
-        # exact binary midpoint of the sharp j_n enclosure.
         target = phase * coeff * A(jball.mid())
-        b_int[n // 2] = quantize_exact_target(
-            target, f"b[{panel},{node_index},{n}]"
-        )
+        b_int[n // 2] = quantize_exact_target(target, f"b[{panel},{node_index},{n}]")
     return a_int, b_int
 
 
@@ -239,27 +232,23 @@ def build_shifted_integer_matrix(k_int: fmpz_mat):
 def smoke_checks(s: fmpz_mat, node_count: int):
     if node_count <= 0:
         raise RuntimeError("smoke build produced no nodes")
-    # Algebra/API smoke: exact principal block remains symmetric and finite.
     n = 12
     lead = fmpz_mat(n, n, [s[i, j] for i in range(n) for j in range(n)])
     if lead != lead.transpose():
         raise RuntimeError("smoke leading block is not symmetric")
     if any(int(lead[i, i]) == 0 for i in range(n)):
         raise RuntimeError("smoke leading block has zero diagonal")
-    print(f"SMOKE: leading12_trace_bits={abs(int(lead.trace())).bit_length()}")
+    print(f"SMOKE: leading12_trace_bits={abs(matrix_trace_int(lead)).bit_length()}")
     print("CERTIFIED: exact signed weighted-Gram and common integer scaling smoke passed")
     print("FIREWALL: smoke mode is not full C-even positivity")
 
 
 def certify_positive_by_arb_eigenvalues(s: fmpz_mat):
-    """Attempt a rigorous complete eigenvalue certificate on a fixed ladder."""
     for prec in EIG_PREC_LADDER:
         ctx.prec = prec
         print(f"===== EIG_PRECISION {prec} =====", flush=True)
         t0 = perf_counter()
-        # Multiplication by 2^-600 is exact dyadic scaling and only keeps
-        # numerical exponents moderate.  It does not change signs.
-        a = arb_mat(s) * A((1, -EIG_SCALE_POW))
+        a = arb_mat.convert(s) * A((1, -EIG_SCALE_POW))
         try:
             vals = a.eig(multiple=True)
         except Exception as exc:
@@ -270,24 +259,27 @@ def certify_positive_by_arb_eigenvalues(s: fmpz_mat):
             continue
 
         ok = True
-        min_re = None
         min_val = None
+        min_mid = None
         for z in vals:
             re = z.real
-            if min_re is None or re < min_re:
-                min_re = re; min_val = z
+            # Midpoint is diagnostic only; acceptance below uses re > 0 for every ball.
+            midpoint = re.mid()
+            if min_mid is None or midpoint < min_mid:
+                min_mid = midpoint
+                min_val = z
             if not (re > 0):
                 ok = False
         print(
-            f"eig_done precision={prec} elapsed={perf_counter()-t0:.3f}s "
-            f"min_ball={min_val}",
+            f"eig_done precision={prec} elapsed={perf_counter()-t0:.3f}s min_ball={min_val}",
             flush=True,
         )
         if ok:
-            # Convert the scaled integer eigenvalue lower enclosure back to the
-            # physical eigenvalue of A_q - 1.005e-35 I:
-            # S = 10^38 * 2^480 * (A_q-shift), and a=S*2^-600.
-            # Hence physical = a * 2^120 / 10^38.
+            lower_candidates = [z.real for z in vals]
+            min_re = lower_candidates[0]
+            for re in lower_candidates[1:]:
+                if re.lower() < min_re.lower():
+                    min_re = re
             physical = min_re * A((1, 120)) / A(DEC38)
             if not (physical > 0):
                 raise RuntimeError("positive scaled eigenvalues but physical lower bound not positive")
@@ -322,7 +314,7 @@ def main():
     print(f"K_int_complete nodes={node_count} elapsed={t_assembly:.3f}s", flush=True)
     s, t_finish = build_shifted_integer_matrix(k_int)
     print(f"shifted_matrix_complete elapsed={t_finish:.3f}s", flush=True)
-    print(f"shifted_trace_bits={abs(int(s.trace())).bit_length()}", flush=True)
+    print(f"shifted_trace_bits={abs(matrix_trace_int(s)).bit_length()}", flush=True)
 
     if args.smoke:
         smoke_checks(s, node_count)
