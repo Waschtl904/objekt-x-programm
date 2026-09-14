@@ -181,22 +181,7 @@ def lower_abs(v: arb) -> arb:
 
 
 def even_b_vector_error(z: arb, vals: list[arb], high: int) -> tuple[arb, arb, arb]:
-    """Rigorous l2 error for a midpoint head plus zero unresolved tail.
-
-    The normalized even Fourier vector has coordinates
-
-        b_n = (-1)^(n/2) sqrt(2(2n+1)/pi) j_n(z), n even.
-
-    Spherical addition gives the exact infinite even energy
-
-        ||b_even^infty(z)||^2 = (1 + j_0(2z))/pi.
-
-    We use midpoint coordinates through the last sharply represented even order
-    <= high, and zero above.  The head error is the l2 norm of interval radii.
-    The unresolved tail is bounded by total even energy minus a rigorous lower
-    bound for the represented head energy.  Including orders >=2150 in this
-    tail only makes the finite-vector error estimate more conservative.
-    """
+    """Rigorous l2 upper bound for midpoint-head plus zero unresolved tail."""
     represented_even = min(MAX_DEGREE - 2, high if high % 2 == 0 else high - 1)
     head_rad2 = A(0)
     head_energy_lower = A(0)
@@ -209,18 +194,23 @@ def even_b_vector_error(z: arb, vals: list[arb], high: int) -> tuple[arb, arb, a
         head_energy_lower += c2 * lb * lb
 
     total_even_energy = (1 + elementary_j0(2 * z)) / PI
-    tail2 = total_even_energy - head_energy_lower
-    if not tail2.is_finite():
-        raise RuntimeError("non-finite even-energy tail")
-    tail_upper = tail2.upper()
+    if not total_even_energy.is_finite() or not head_energy_lower.is_finite():
+        raise RuntimeError("non-finite even-energy components")
+
+    # We need scalar upper/lower bounds, not a symmetric Arb ball for [0,U].
+    tail_upper = total_even_energy.upper() - head_energy_lower.lower()
     if tail_upper < 0:
         tail_upper = A(0).upper()
-    tail2_safe = arb(0, tail_upper)
+    head_rad_upper = head_rad2.upper()
+    if head_rad_upper < 0:
+        head_rad_upper = A(0).upper()
 
-    eb2 = head_rad2 + tail2_safe
-    if not eb2.is_finite() or eb2 < 0:
-        raise RuntimeError("invalid even-vector error square")
-    return eb2.sqrt(), head_rad2, tail2_safe
+    tail2_bound = A(tail_upper)
+    head_rad2_bound = A(head_rad_upper)
+    eb2_bound = head_rad2_bound + tail2_bound
+    if not eb2_bound.is_finite() or eb2_bound < 0:
+        raise RuntimeError("invalid even-vector error-square upper bound")
+    return eb2_bound.sqrt(), head_rad2_bound, tail2_bound
 
 
 def modified_spherical_i_series(n: int, z: arb) -> arb:
