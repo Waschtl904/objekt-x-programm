@@ -15,14 +15,11 @@ uniform vector-error contribution to certify epsilon_eval <4e-39.
 import os
 from flint import arb, ctx
 
-# The sample precision ladder proved that 3072 is the first allowed precision
-# at which all four frozen representative nodes meet e_b < 1e-43.
 ctx.prec = 3072
 os.environ["A1_PREC_BITS"] = "3072"
 
 from check_a1_c_even_engine_preflight_arb import (  # noqa: E402
     A,
-    C,
     GAUSS_N,
     MAX_DEGREE,
     OMEGA,
@@ -30,9 +27,10 @@ from check_a1_c_even_engine_preflight_arb import (  # noqa: E402
     downward_from_direct_turning_anchors,
     elementary_j0,
     gauss_node,
-    lower_abs,
+    lower_abs_point,
     r_on_real_ball,
     turning_indices,
+    upper_point,
     upward_vector,
 )
 
@@ -42,8 +40,8 @@ SHARD_INDEX = int(os.environ["A1_SHARD_INDEX"])
 E_B_TARGET = A("1e-43")
 SCALAR_TOTAL_TARGET = A("1e-39")
 SCALAR_SHARD_TARGET = SCALAR_TOTAL_TARGET / SHARD_COUNT
-BMAX = (2 / PI).sqrt()              # true infinite even-vector norm <= sqrt(2/pi)
-B0_BOUND = BMAX + E_B_TARGET        # midpoint proposal norm <= true norm + e_b
+BMAX = (2 / PI).sqrt()
+B0_BOUND = BMAX + E_B_TARGET
 SCALAR_FACTOR = (B0_BOUND + E_B_TARGET) ** 2
 
 if SHARD_COUNT != 32:
@@ -78,25 +76,46 @@ def sharp_even_head(z: arb):
 
 def vector_error_bound(z: arb, head) -> arb:
     """l2 error of exact-scaled midpoint head plus zero unresolved tail."""
-    head_rad2 = A(0)
+    head_rad2_upper = A(0)
     head_energy_lower = A(0)
+
     for n, v in head:
         c2 = 2 * A(2 * n + 1) / PI
-        head_rad2 += c2 * v.rad() * v.rad()
-        lb = lower_abs(v)
-        head_energy_lower += c2 * lb * lb
+        c2_upper = upper_point(c2)
+        c2_lower = A(c2.mid()) - A(c2.rad())
+        if c2_lower < 0:
+            c2_lower = A(0)
+        rad = A(v.rad())
+        lb = lower_abs_point(v)
+        head_rad2_upper += c2_upper * rad * rad
+        head_energy_lower += c2_lower * lb * lb
 
     total_even_energy = (1 + elementary_j0(2 * z)) / PI
-    tail_upper = total_even_energy.upper() - head_energy_lower.lower()
+    if not total_even_energy.is_finite() or not head_energy_lower.is_finite():
+        raise RuntimeError("non-finite shard even-energy components")
+
+    total_upper = upper_point(total_even_energy)
+    head_lower = A(head_energy_lower.mid()) - A(head_energy_lower.rad())
+    if head_lower < 0:
+        head_lower = A(0)
+    tail_upper = total_upper - head_lower
     if tail_upper < 0:
-        tail_upper = A(0).upper()
-    head_upper = head_rad2.upper()
-    if head_upper < 0:
-        head_upper = A(0).upper()
-    eb2 = A(tail_upper) + A(head_upper)
+        tail_upper = A(0)
+
+    head_rad2_upper = upper_point(head_rad2_upper)
+    if head_rad2_upper < 0:
+        head_rad2_upper = A(0)
+
+    eb2 = tail_upper + head_rad2_upper
     if not eb2.is_finite() or eb2 < 0:
-        raise RuntimeError("invalid node vector error square")
-    return eb2.sqrt()
+        raise RuntimeError(
+            f"invalid node vector error square: total={total_upper}, head={head_lower}, "
+            f"tail={tail_upper}, head_rad2={head_rad2_upper}"
+        )
+    eb = eb2.sqrt()
+    if not eb.is_finite():
+        raise RuntimeError(f"non-finite node vector error sqrt: eb2={eb2}")
+    return eb
 
 
 def main() -> None:
