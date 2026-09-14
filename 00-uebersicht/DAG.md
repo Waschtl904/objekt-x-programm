@@ -27,14 +27,12 @@ predeclared c=1551, N=1102
    |
 mu_1102 <1e-43
 tau >0.099
-Schur penalty <1.5e-40          candidate ✓[K/M]
+Schur penalty <1.5e-40          ✓[K/M]
    |
 R_1102 dimension <=1104
    |
 certify L_RR >=3e-39 I          ?[O]
 ```
-
-Final exact-head rerun promotes the candidate numerical edge.
 
 ## Independent Legendre branch
 
@@ -77,7 +75,6 @@ RH
 
 ## Firewalls
 
-- N=1102 constants require final exact-head rerun.
 - No PSWF eigenvectors are numerically needed for the Osipov bound.
 - `3e-39` and `1e-35` are sufficient thresholds, not fitted eigenvalues.
 - Fixed-window `a=1` and RH are not proved.
