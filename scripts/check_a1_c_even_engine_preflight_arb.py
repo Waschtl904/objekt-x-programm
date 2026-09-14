@@ -179,43 +179,67 @@ def spherical_j_even_vector(z: arb) -> tuple[list[arb], int, int]:
     return [full[n] for n in range(0, MAX_DEGREE, 2)], low, high
 
 
-def lower_abs(v: arb) -> arb:
-    m = v.mid()
+def lower_abs_point(v: arb) -> arb:
+    """Nonnegative point lower bound for |v|, built from midpoint/radius."""
+    m = A(v.mid())
     if m < 0:
         m = -m
-    out = m - v.rad()
+    r = A(v.rad())
+    out = m - r
     return out if out > 0 else A(0)
 
 
-def even_b_vector_error(z: arb, vals: list[arb], high: int) -> tuple[arb, arb, arb]:
+def upper_point(v: arb) -> arb:
+    """Point upper bound for a real Arb ball."""
+    return A(v.mid()) + A(v.rad())
+
+
+def even_b_vector_error(z: arb, vals: list[arb], high: int) -> tuple[arb, arb, arb, arb]:
     represented_even = min(MAX_DEGREE - 2, high if high % 2 == 0 else high - 1)
-    head_rad2 = A(0)
+    head_rad2_upper = A(0)
     head_energy_lower = A(0)
 
     for n in range(0, represented_even + 1, 2):
         v = vals[n // 2]
         c2 = 2 * A(2 * n + 1) / PI
-        head_rad2 += c2 * v.rad() * v.rad()
-        lb = lower_abs(v)
-        head_energy_lower += c2 * lb * lb
+        c2_upper = upper_point(c2)
+        c2_lower = A(c2.mid()) - A(c2.rad())
+        if c2_lower < 0:
+            c2_lower = A(0)
+        rad = A(v.rad())
+        lb = lower_abs_point(v)
+        head_rad2_upper += c2_upper * rad * rad
+        head_energy_lower += c2_lower * lb * lb
 
     total_even_energy = (1 + elementary_j0(2 * z)) / PI
     if not total_even_energy.is_finite() or not head_energy_lower.is_finite():
         raise RuntimeError("non-finite even-energy components")
 
-    tail_upper = total_even_energy.upper() - head_energy_lower.lower()
-    if tail_upper < 0:
-        tail_upper = A(0).upper()
-    head_rad_upper = head_rad2.upper()
-    if head_rad_upper < 0:
-        head_rad_upper = A(0).upper()
+    total_upper = upper_point(total_even_energy)
+    head_lower = A(head_energy_lower.mid()) - A(head_energy_lower.rad())
+    if head_lower < 0:
+        head_lower = A(0)
+    tail2_upper = total_upper - head_lower
+    if tail2_upper < 0:
+        tail2_upper = A(0)
 
-    tail2_bound = A(tail_upper)
-    head_rad2_bound = A(head_rad_upper)
-    eb2_bound = head_rad2_bound + tail2_bound
-    if not eb2_bound.is_finite() or eb2_bound < 0:
-        raise RuntimeError("invalid even-vector error-square upper bound")
-    return eb2_bound.sqrt(), head_rad2_bound, tail2_bound
+    head_rad2_upper = upper_point(head_rad2_upper)
+    if head_rad2_upper < 0:
+        head_rad2_upper = A(0)
+
+    eb2_upper = head_rad2_upper + tail2_upper
+    if not eb2_upper.is_finite() or eb2_upper < 0:
+        raise RuntimeError(
+            f"invalid even-vector error-square upper bound: total={total_upper}, "
+            f"head_lower={head_lower}, tail2={tail2_upper}, head_rad2={head_rad2_upper}"
+        )
+    eb = eb2_upper.sqrt()
+    if not eb.is_finite():
+        raise RuntimeError(
+            f"non-finite sqrt in even-vector error: eb2={eb2_upper}, total={total_upper}, "
+            f"head_lower={head_lower}, tail2={tail2_upper}, head_rad2={head_rad2_upper}"
+        )
+    return eb, head_rad2_upper, tail2_upper, total_upper
 
 
 def modified_spherical_i_series(n: int, z: arb) -> arb:
@@ -275,12 +299,11 @@ def main() -> None:
         if not elementary_j1(x).overlaps(spherical_j_direct(1, x)):
             raise RuntimeError("elementary/direct j1 mismatch")
 
-        eb, head_rad2, tail2 = even_b_vector_error(x, vals, high)
-        if not eb.is_finite():
-            raise RuntimeError("non-finite even-vector l2 error")
+        eb, head_rad2, tail2, total_e = even_b_vector_error(x, vals, high)
         if not (eb < E_B_SAMPLE_TARGET):
             raise RuntimeError(
-                f"sample even-vector error exceeds 1e-43: panel={panel}, node={node_index}, e_b={eb}"
+                f"sample even-vector error exceeds 1e-43: panel={panel}, node={node_index}, e_b={eb}, "
+                f"head_rad2={head_rad2}, tail2={tail2}, totalE={total_e}"
             )
 
         print(
