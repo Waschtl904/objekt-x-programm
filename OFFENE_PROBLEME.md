@@ -1,11 +1,11 @@
 # Offene Probleme — A1-FINITE-1104 / LEGENDRE-CERT
 
 > **Stand:** 14. September 2026.  
-> Operative Audits: [A1 Omega1551](audits/P11_A1_OMEGA1551_REDUCTION_2026-09-13.md) · [A1 Osipov N1102](audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md) · [A1 Legendre finite backend](audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md) · [A1 Legendre quadrature budget](audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md).
+> Operative Audits: [A1 Osipov N1102](audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md) · [A1 Omega1551](audits/P11_A1_OMEGA1551_REDUCTION_2026-09-13.md) · [A1 Legendre finite backend](audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md) · [A1 Legendre quadrature budget](audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md).
 
 ## Neu geschlossen
 
-### `[A1-OSIPOV-1102]` candidate `✓[K/M]` bis finaler Exact-Head-Rerun
+### `[A1-OSIPOV-1102]` `✓[M] / ✓[K/M]`
 
 Osipov Theorem 4 gibt für den finite-Fourier-Eigenwert
 
@@ -21,17 +21,19 @@ Für die Konzentration gilt
 \mu_n=\frac{c}{2\pi}|\lambda_n^F|^2.
 ```
 
-Der bereits grüne Arb-Gate auf dem aktuellen Main-basierten Head liefert bei
+Für
 
 ```text
 c=1551,
 N=1102
 ```
 
+zertifiziert der 256-bit-Arb-Gate
+
 ```math
-\mu_{1102}<10^{-43},
+\boxed{\mu_{1102}<10^{-43}},
 \qquad
-\tau_{1102}>0.099,
+\boxed{\tau_{1102}>0.099},
 ```
 
 und
@@ -42,8 +44,6 @@ und
 
 Der tatsächliche Intervall-Upper-Bound des Penalty liegt bei etwa `1.229e-40`.
 
-Nach der letzten Navigationsänderung wird diese Numerik erst nach dem erneuten finalen Exact-Head-Lauf fest auf `✓[K/M]` gebucht.
-
 ### `[A1-LEGENDRE-TAIL]` `✓[K/M]`
 
 Die alternative orthonormale Legendre-Route mit `M=2150` besitzt einen rigorosen Tail-/Crossabschluss und reduziert auf zwei `1075 x 1075` Paritätsblöcke mit finite target `1e-35`.
@@ -53,7 +53,7 @@ Die alternative orthonormale Legendre-Route mit `M=2150` besitzt einen rigorosen
 Exact-Head Arb zertifiziert für jeden `1075 x 1075` Legendre-Paritätsblock
 
 ```math
-\boxed{\|K-\widetilde K\|_{op}<4\times10^{-38}.}
+\boxed{\|K-\widetilde K\|_{op}<4\times10^{-38}}.
 ```
 
 Die analytische Quadraturtrunkation ist damit nicht mehr der Engpass.
@@ -62,7 +62,7 @@ Die analytische Quadraturtrunkation ist damit nicht mehr der Engpass.
 
 ## Priorität 0A — `[A1-RESOLVED-3E39]` `?[O]`
 
-Nach final grünem Osipov-Gate ist die kanonische kleinere Route:
+Kanonische kleinere Route:
 
 ```math
 \boxed{(L_1)_{RR}\succeq3\times10^{-39}I}
@@ -133,7 +133,6 @@ Erst danach ist fixed-window `a=1` theorematisch geschlossen.
 
 ## Firewalls
 
-- Osipov-Numerik erst nach finalem Exact-Head-Rerun dauerhaft promoten.
 - Legendre quadrature budget != finite PSD certificate.
 - Special-function/Rounding-Fehler müssen separat eingeschlossen werden.
 - Pivotintervalle mit `0` sind undecided.
