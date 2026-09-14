@@ -1,41 +1,30 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Exact dyadic full-matrix gate for the frozen A1 C-even certificate.
+"""Exact dyadic matrix builder / positivity gate for frozen A1 C-even.
 
-This script uses exactly the C-even proposal architecture already certified on
-this branch:
+The exact dyadic finite block is
 
-* 3878 panels, Gauss-Legendre order 40, Omega=1551;
-* direct turning-anchor even spherical-Bessel head, zero unresolved tail;
-* nearest dyadic quantization with 160 fractional bits for alpha, b and moment;
-* exact FLINT integer accumulation of B^T diag(A) B in row blocks.
+    A_q = 0.1 I + sum_s alpha_q,s b_q,s b_q,s^T + 2 a_q a_q^T,
 
-Let alpha_q=A_s/2^160, b_q=B_s/2^160 and a_q=M/2^160.  The exact dyadic
-finite block is
-
-    A_q = 0.1 I + sum_s alpha_q,s b_q,s b_q,s^T + 2 a_q a_q^T.
-
-Positivity above the already frozen stronger shift 1.005e-35 is equivalent,
-after multiplication by the positive scale 10^38 * 2^480, to positivity of
+with 160 fractional bits for alpha, b and a.  Positivity above the stronger
+shift 1.005e-35 is equivalent, after multiplying by 10^38*2^480, to
+positivity of the exact integer symmetric matrix
 
     S = 10^38 K_int
         + 10^38 * 2^161 M M^T
-        + (10^37 - 1005) * 2^480 I,
+        + (10^37 - 1005) * 2^480 I.
 
-where K_int=sum_s A_s B_s B_s^T is an exact integer symmetric matrix.
+Modes:
+  --smoke      : few-panel backend/API smoke only;
+  --build-only : build all 155120 nodes and fingerprint the complete S;
+  --full       : rebuild complete S and attempt rigorous Arb positivity.
 
-The script has two modes:
-
-  --smoke : build only a few panels and verify the dyadic/Gram machinery;
-  --full  : build the complete 1075x1075 integer matrix and attempt a rigorous
-            Arb eigenvalue positivity certificate on a fixed precision ladder.
-
-No floating-point BLAS result enters the exact matrix.  If the final Arb
-eigenvalue stage is undecided, the exact matrix assembly remains valid but the
-C-even positivity theorem remains open.
+The split is deliberate: the expensive exact matrix construction gets its own
+stable checkpoint before any large spectral calculation.
 """
 
 import argparse
+import hashlib
 import os
 from time import perf_counter
 
@@ -46,17 +35,9 @@ ctx.threads = 2
 os.environ["A1_PREC_BITS"] = "3072"
 
 from check_a1_c_even_engine_preflight_arb import (  # noqa: E402
-    A,
-    GAUSS_N,
-    MAX_DEGREE,
-    OMEGA,
-    PI,
-    downward_from_direct_turning_anchors,
-    gauss_node,
-    moment_coeff,
-    r_on_real_ball,
-    turning_indices,
-    upward_vector,
+    A, GAUSS_N, MAX_DEGREE, OMEGA, PI,
+    downward_from_direct_turning_anchors, gauss_node, moment_coeff,
+    r_on_real_ball, turning_indices, upward_vector,
 )
 
 DIM = 1075
@@ -76,14 +57,28 @@ def matrix_trace_int(m: fmpz_mat) -> int:
     return sum(int(m[i, i]) for i in range(min(m.nrows(), m.ncols())))
 
 
+def matrix_sha256(m: fmpz_mat) -> str:
+    """Deterministic row-major hash, independent of Python object encoding."""
+    h = hashlib.sha256()
+    h.update(f"fmpz-matrix-v1:{m.nrows()}:{m.ncols()}\n".encode("ascii"))
+    for i in range(m.nrows()):
+        for j in range(m.ncols()):
+            z = int(m[i, j])
+            sign = b"-" if z < 0 else b"+"
+            a = abs(z)
+            raw = a.to_bytes(max(1, (a.bit_length() + 7) // 8), "big")
+            h.update(sign)
+            h.update(len(raw).to_bytes(4, "big"))
+            h.update(raw)
+    return h.hexdigest()
+
+
 def sharp_even_head(z: arb):
-    """Same sharp-head construction used by the certified 32-shard sweep."""
     low, high = turning_indices(z, MAX_DEGREE)
     up = upward_vector(z, low + 12)
     down = downward_from_direct_turning_anchors(z, high, max(2, low - 12))
     overlap_low = max(2, low - 8)
     overlap_high = min(low + 12, len(up) - 1, high)
-
     out = []
     for n in range(0, high + 1, 2):
         if n < overlap_low:
@@ -101,10 +96,6 @@ def sharp_even_head(z: arb):
 
 
 def round_binary_mid_to_dyadic_int(x: arb, bits: int = DYAD_BITS) -> int:
-    """Round the exact binary midpoint of x to an integer numerator / 2^bits.
-
-    Ties are rounded away from zero.  The returned point is deterministic.
-    """
     if not x.is_finite():
         raise RuntimeError("cannot quantize non-finite ball")
     man, exp = x.mid().man_exp()
@@ -140,14 +131,10 @@ def quantized_node(panel: int, node_index: int):
     x, w = gauss_node(panel, node_index)
     if not (x > 0 and x < A(OMEGA)):
         raise RuntimeError(f"Gauss node outside band at panel={panel}, node={node_index}")
-
     alpha_ball = w * r_on_real_ball(x)
-    alpha0 = A(alpha_ball.mid())
-    a_int = quantize_exact_target(alpha0, f"alpha[{panel},{node_index}]")
-
+    a_int = quantize_exact_target(A(alpha_ball.mid()), f"alpha[{panel},{node_index}]")
     b_int = [0] * DIM
-    head = sharp_even_head(x)
-    for n, jball in head:
+    for n, jball in sharp_even_head(x):
         phase = -1 if ((n // 2) & 1) else 1
         coeff = (2 * A(2 * n + 1) / PI).sqrt()
         target = phase * coeff * A(jball.mid())
@@ -159,8 +146,7 @@ def quantized_moment_vector():
     out = []
     for k in range(DIM):
         n = 2 * k
-        target = moment_coeff(n)
-        out.append(quantize_exact_target(target, f"moment[{n}]"))
+        out.append(quantize_exact_target(moment_coeff(n), f"moment[{n}]"))
     return out
 
 
@@ -188,13 +174,10 @@ def build_k_int(panel_limit: int):
     node_count = 0
     t0 = perf_counter()
     last = t0
-
     for panel in range(panel_limit):
         for node_index in range(GAUSS_N):
             aa, bb = quantized_node(panel, node_index)
-            alpha_rows.append(aa)
-            b_rows.append(bb)
-            node_count += 1
+            alpha_rows.append(aa); b_rows.append(bb); node_count += 1
             if len(alpha_rows) >= BLOCK_ROWS:
                 k_int = flush_block(k_int, alpha_rows, b_rows)
                 alpha_rows.clear(); b_rows.clear()
@@ -202,11 +185,9 @@ def build_k_int(panel_limit: int):
             now = perf_counter()
             print(
                 f"assembly_progress panels={panel+1}/{panel_limit} nodes={node_count} "
-                f"elapsed={now-t0:.3f}s delta={now-last:.3f}s",
-                flush=True,
+                f"elapsed={now-t0:.3f}s delta={now-last:.3f}s", flush=True
             )
             last = now
-
     k_int = flush_block(k_int, alpha_rows, b_rows)
     if k_int != k_int.transpose():
         raise RuntimeError("complete K_int is not symmetric")
@@ -218,12 +199,10 @@ def build_shifted_integer_matrix(k_int: fmpz_mat):
     m = quantized_moment_vector()
     mrow = fmpz_mat(1, DIM, m)
     mm = mrow.transpose() * mrow
-
     s = k_int * DEC38
     s = s + mm * (DEC38 * TWO161)
     for i in range(DIM):
         s[i, i] += DIAG_INTEGER
-
     if s != s.transpose():
         raise RuntimeError("shifted exact integer matrix is not symmetric")
     return s, perf_counter() - t0
@@ -239,6 +218,14 @@ def smoke_checks(s: fmpz_mat, node_count: int):
     if any(int(lead[i, i]) == 0 for i in range(n)):
         raise RuntimeError("smoke leading block has zero diagonal")
     print(f"SMOKE: leading12_trace_bits={abs(matrix_trace_int(lead)).bit_length()}")
+    # Exercise the exact integer -> Arb matrix API used later, without making a
+    # positivity claim about this truncated four-panel smoke matrix.
+    ctx.prec = 512
+    a = arb_mat.convert(lead) * A((1, -EIG_SCALE_POW))
+    vals = a.eig(multiple=True)
+    if len(vals) != n:
+        raise RuntimeError(f"smoke Arb eig returned {len(vals)} values instead of {n}")
+    print("SMOKE: arb_mat.convert/eig API passed")
     print("CERTIFIED: exact signed weighted-Gram and common integer scaling smoke passed")
     print("FIREWALL: smoke mode is not full C-even positivity")
 
@@ -257,17 +244,14 @@ def certify_positive_by_arb_eigenvalues(s: fmpz_mat):
         if len(vals) != DIM:
             print(f"eig_wrong_count precision={prec}: {len(vals)}", flush=True)
             continue
-
         ok = True
         min_val = None
         min_mid = None
         for z in vals:
             re = z.real
-            # Midpoint is diagnostic only; acceptance below uses re > 0 for every ball.
             midpoint = re.mid()
             if min_mid is None or midpoint < min_mid:
-                min_mid = midpoint
-                min_val = z
+                min_mid = midpoint; min_val = z
             if not (re > 0):
                 ok = False
         print(
@@ -275,9 +259,9 @@ def certify_positive_by_arb_eigenvalues(s: fmpz_mat):
             flush=True,
         )
         if ok:
-            lower_candidates = [z.real for z in vals]
-            min_re = lower_candidates[0]
-            for re in lower_candidates[1:]:
+            min_re = vals[0].real
+            for z in vals[1:]:
+                re = z.real
                 if re.lower() < min_re.lower():
                     min_re = re
             physical = min_re * A((1, 120)) / A(DEC38)
@@ -294,18 +278,19 @@ def certify_positive_by_arb_eigenvalues(s: fmpz_mat):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--smoke", action="store_true")
+    parser.add_argument("--build-only", action="store_true")
     parser.add_argument("--full", action="store_true")
     parser.add_argument("--smoke-panels", type=int, default=4)
     args = parser.parse_args()
-    if args.smoke == args.full:
-        raise SystemExit("choose exactly one of --smoke or --full")
+    if sum((args.smoke, args.build_only, args.full)) != 1:
+        raise SystemExit("choose exactly one of --smoke, --build-only or --full")
 
     panel_limit = args.smoke_panels if args.smoke else PANEL_COUNT
     if not (1 <= panel_limit <= PANEL_COUNT):
         raise RuntimeError("invalid panel limit")
-
+    mode = "smoke" if args.smoke else ("build-only" if args.build_only else "full")
     print("A1 C-even exact dyadic matrix gate")
-    print(f"mode={'smoke' if args.smoke else 'full'}")
+    print(f"mode={mode}")
     print(f"prec_bits={ctx.prec} threads={ctx.threads}")
     print(f"dim={DIM} panels={panel_limit} gauss_order={GAUSS_N} dyad_bits={DYAD_BITS}")
     print(f"block_rows={BLOCK_ROWS}")
@@ -323,8 +308,14 @@ def main():
     expected_nodes = PANEL_COUNT * GAUSS_N
     if node_count != expected_nodes:
         raise RuntimeError(f"full build node count mismatch: {node_count} != {expected_nodes}")
+    digest = matrix_sha256(s)
+    print(f"MATRIX_SHA256={digest}", flush=True)
     print("CERTIFIED: full exact integer 1075x1075 matrix assembly completed")
     print("CERTIFIED: epsilon_gemm = epsilon_storage = 0 for the exact dyadic matrix")
+
+    if args.build_only:
+        print("FIREWALL: exact matrix build is not yet the C-even positivity certificate")
+        return
 
     if not certify_positive_by_arb_eigenvalues(s):
         raise RuntimeError(
