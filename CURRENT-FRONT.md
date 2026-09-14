@@ -14,7 +14,7 @@ m_1(\xi)=\operatorname{Re}\psi\left(\frac14+\frac{i\xi}{2}\right)-\log\pi
 -2\sum_{n\in\{2,3,4,5,7\}}\frac{\Lambda(n)}{\sqrt n}\cos(\xi\log n),
 ```
 
-Exact-Head Arb already certifies
+Exact-Head Arb certifies
 
 ```math
 m_1(\xi)>0.1\quad(|\xi|\ge1551),
@@ -24,7 +24,7 @@ m_1(\xi)>0.1\quad(|\xi|\ge1551),
 
 for `r=(m_1-0.1)1_{[-1551,1551]}`.
 
-## 2. New analytic PSWF bound
+## 2. Osipov analytic PSWF bound `✓[M] / ✓[K/M]`
 
 Osipov Theorem 4 gives for the finite-Fourier eigenvalue
 
@@ -39,21 +39,23 @@ The concentration eigenvalue is
 \mu_n=\frac{c}{2\pi}|\lambda_n^F|^2.
 ```
 
-At the predeclared values `c=1551`, `N=1102`, the Arb checker certified on the current-main-based precursor head
+At the predeclared values `c=1551`, `N=1102`, the 256-bit Exact-Head Arb gate certifies
 
 ```math
-\mu_{1102}<10^{-43},
-\qquad
-\tau_{1102}>0.099,
+\boxed{\mu_{1102}<10^{-43}},
+```
+
+```math
+\boxed{\tau_{1102}>0.099},
 ```
 
 and
 
 ```math
-\boxed{\text{Schur penalty}<1.5\times10^{-40}.}
+\boxed{\text{Schur penalty}<1.5\times10^{-40}}.
 ```
 
-The final documented exact-head rerun is the promotion gate.
+The actual certified upper bound for the penalty is about `1.22873e-40`.
 
 ## 3. Canonical remaining finite theorem
 
@@ -69,7 +71,7 @@ The first `1102` PSWF modes split into `551 even + 551 odd`; moment augmentation
 resolved dimension <=1104 = 552 even + 552 odd.
 ```
 
-This is now the **canonical smallest certified reduction**. The resolved lower bound itself remains `?[O]`.
+This is the **canonical smallest certified reduction**. The resolved lower bound itself remains `?[O]`.
 
 ## 4. Alternative orthonormal Legendre backend
 
@@ -82,7 +84,7 @@ Gram matrix exactly I,
 finite target 1e-35.
 ```
 
-The analytic Gauss-Legendre remainder is already certified with per-parity operator error
+The analytic Gauss-Legendre remainder is certified with per-parity operator error
 
 ```math
 <4\times10^{-38}.
@@ -97,8 +99,8 @@ COMMON-JUMP / Q0                                      ✓[M]
 rank-2 completion / Morse / parity                    ✓[M]
 Omega1551 multiplier floor / ||r||                    ✓[K/M]
 Osipov theorem + concentration conversion             ✓[M]
-N=1102 Arb concentration / Schur constants            candidate ✓[K/M]
-canonical finite reduction <=1104                     candidate ✓[K/M]
+N=1102 Arb concentration / Schur constants            ✓[K/M]
+canonical finite reduction <=1104                     ✓[K/M]
 canonical resolved lower bound >=3e-39                ?[O]
 Legendre M=2150 backend                               ✓[K/M]
 Legendre quadrature operator error <4e-38             ✓[K/M]
@@ -111,7 +113,6 @@ full positive Object-X / RH                           ?[O]
 
 ## 6. Firewalls
 
-- Final exact-head rerun required before promoting the new `N=1102` constants.
 - `3e-39` is a sufficient target, not a fitted eigenvalue.
 - No PSWF eigenvector is certified or needed for the Osipov tail bound.
 - The finite resolved lower bound is still open.
