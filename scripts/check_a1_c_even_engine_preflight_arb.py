@@ -26,6 +26,11 @@ PANEL = Q(2, 5)
 OMEGA = Q(1551)
 C = Q(1, 10)
 MAX_DEGREE = 2150
+LOW_MARGIN_MULT = 8
+LOW_MARGIN_ADD = 16
+HIGH_MARGIN_MULT = 24
+HIGH_MARGIN_ADD = 32
+E_B_SAMPLE_TARGET = A("1e-43")
 SAMPLES = ((0, 0), (1250, 20), (2500, 20), (3877, 39))
 CHECK_ORDERS = (0, 2, 100, 500, 1000, 1500, 2148)
 MOMENT_ORDERS = (0, 2, 100, 1000, 2148)
@@ -93,9 +98,11 @@ def elementary_j1(z: arb) -> arb:
 def turning_indices(z: arb, degree: int) -> tuple[int, int]:
     """Conditioning proposal; correctness is certified by interval overlap."""
     zm = float(z.mid())
-    margin = int(8 * (zm ** (1.0 / 3.0))) + 16
-    low = max(2, int(zm) - margin)
-    high = min(degree - 2, int(zm) + margin)
+    cbrt = zm ** (1.0 / 3.0)
+    low_margin = int(LOW_MARGIN_MULT * cbrt) + LOW_MARGIN_ADD
+    high_margin = int(HIGH_MARGIN_MULT * cbrt) + HIGH_MARGIN_ADD
+    low = max(2, int(zm) - low_margin)
+    high = min(degree - 2, int(zm) + high_margin)
     if high <= low + 4:
         high = min(degree - 2, low + 8)
     return low, high
@@ -173,7 +180,6 @@ def spherical_j_even_vector(z: arb) -> tuple[list[arb], int, int]:
 
 
 def lower_abs(v: arb) -> arb:
-    """Rigorous nonnegative lower bound for |v| from midpoint/radius."""
     m = v.mid()
     if m < 0:
         m = -m
@@ -182,7 +188,6 @@ def lower_abs(v: arb) -> arb:
 
 
 def even_b_vector_error(z: arb, vals: list[arb], high: int) -> tuple[arb, arb, arb]:
-    """Rigorous l2 upper bound for midpoint-head plus zero unresolved tail."""
     represented_even = min(MAX_DEGREE - 2, high if high % 2 == 0 else high - 1)
     head_rad2 = A(0)
     head_energy_lower = A(0)
@@ -242,6 +247,8 @@ def main() -> None:
     print("A1 C-even special-function / energy-tail preflight")
     print(f"prec_bits = {ctx.prec}")
     print(f"Gauss order = {GAUSS_N}, panel = 0.4, Omega = 1551")
+    print(f"high-margin rule = {HIGH_MARGIN_MULT}*x^(1/3)+{HIGH_MARGIN_ADD}")
+    print(f"sample e_b target = {E_B_SAMPLE_TARGET.str(12, radius=False)}")
 
     for panel, node_index in SAMPLES:
         x, w = gauss_node(panel, node_index)
@@ -271,6 +278,10 @@ def main() -> None:
         eb, head_rad2, tail2 = even_b_vector_error(x, vals, high)
         if not eb.is_finite():
             raise RuntimeError("non-finite even-vector l2 error")
+        if not (eb < E_B_SAMPLE_TARGET):
+            raise RuntimeError(
+                f"sample even-vector error exceeds 1e-43: panel={panel}, node={node_index}, e_b={eb}"
+            )
 
         print(
             "sample", panel, node_index,
@@ -298,6 +309,7 @@ def main() -> None:
     print("CERTIFIED: frozen Gauss-40 / panel-0.4 sample nodes are valid")
     print("CERTIFIED: C-even direct-turning-anchor Bessel enclosures overlap direct Arb values")
     print("CERTIFIED: C-even addition-theorem energy-tail l2 bounds computed")
+    print("CERTIFIED: C-even sample vector errors e_b < 1e-43")
     print("CERTIFIED: C-even moment-series sample coefficients are positive finite enclosures")
     print("CERTIFIED: C-even special-function / energy-tail preflight passed")
     print("FIREWALL: this is not the 1075x1075 finite positivity certificate")
