@@ -2,7 +2,8 @@
 """Exact-head Arb preflight for the frozen A1 C-even matrix engine.
 
 This is NOT the 1075x1075 positivity certificate. It checks the final
-turning-anchor special-function engine used by the frozen C-even backend.
+turning-anchor special-function engine and the exact even-energy tail bound
+used by the frozen C-even backend.
 """
 
 from flint import acb, arb, ctx, fmpq
@@ -170,6 +171,58 @@ def spherical_j_even_vector(z: arb) -> tuple[list[arb], int, int]:
     return [full[n] for n in range(0, MAX_DEGREE, 2)], low, high
 
 
+def lower_abs(v: arb) -> arb:
+    """Rigorous nonnegative lower bound for |v| from midpoint/radius."""
+    m = v.mid()
+    if m < 0:
+        m = -m
+    out = m - v.rad()
+    return out if out > 0 else A(0)
+
+
+def even_b_vector_error(z: arb, vals: list[arb], high: int) -> tuple[arb, arb, arb]:
+    """Rigorous l2 error for a midpoint head plus zero unresolved tail.
+
+    The normalized even Fourier vector has coordinates
+
+        b_n = (-1)^(n/2) sqrt(2(2n+1)/pi) j_n(z), n even.
+
+    Spherical addition gives the exact infinite even energy
+
+        ||b_even^infty(z)||^2 = (1 + j_0(2z))/pi.
+
+    We use midpoint coordinates through the last sharply represented even order
+    <= high, and zero above.  The head error is the l2 norm of interval radii.
+    The unresolved tail is bounded by total even energy minus a rigorous lower
+    bound for the represented head energy.  Including orders >=2150 in this
+    tail only makes the finite-vector error estimate more conservative.
+    """
+    represented_even = min(MAX_DEGREE - 2, high if high % 2 == 0 else high - 1)
+    head_rad2 = A(0)
+    head_energy_lower = A(0)
+
+    for n in range(0, represented_even + 1, 2):
+        v = vals[n // 2]
+        c2 = 2 * A(2 * n + 1) / PI
+        head_rad2 += c2 * v.rad() * v.rad()
+        lb = lower_abs(v)
+        head_energy_lower += c2 * lb * lb
+
+    total_even_energy = (1 + elementary_j0(2 * z)) / PI
+    tail2 = total_even_energy - head_energy_lower
+    if not tail2.is_finite():
+        raise RuntimeError("non-finite even-energy tail")
+    tail_upper = tail2.upper()
+    if tail_upper < 0:
+        tail_upper = A(0).upper()
+    tail2_safe = arb(0, tail_upper)
+
+    eb2 = head_rad2 + tail2_safe
+    if not eb2.is_finite() or eb2 < 0:
+        raise RuntimeError("invalid even-vector error square")
+    return eb2.sqrt(), head_rad2, tail2_safe
+
+
 def modified_spherical_i_series(n: int, z: arb) -> arb:
     df = A(odd_double_factorial(2 * n + 1))
     term = (z ** n) / df
@@ -196,7 +249,7 @@ def main() -> None:
     if not A(8).log() > 2:
         raise RuntimeError("inactive-mask check log(8)>2 failed")
 
-    print("A1 C-even special-function engine preflight")
+    print("A1 C-even special-function / energy-tail preflight")
     print(f"prec_bits = {ctx.prec}")
     print(f"Gauss order = {GAUSS_N}, panel = 0.4, Omega = 1551")
 
@@ -211,7 +264,6 @@ def main() -> None:
         vals, low, high = spherical_j_even_vector(x)
         if len(vals) != 1075:
             raise RuntimeError("wrong even-vector dimension")
-        max_rad = max((v.rad() for v in vals), default=A(0))
 
         for n in CHECK_ORDERS:
             value = vals[n // 2]
@@ -226,6 +278,10 @@ def main() -> None:
         if not elementary_j1(x).overlaps(spherical_j_direct(1, x)):
             raise RuntimeError("elementary/direct j1 mismatch")
 
+        eb, head_rad2, tail2 = even_b_vector_error(x, vals, high)
+        if not eb.is_finite():
+            raise RuntimeError("non-finite even-vector l2 error")
+
         print(
             "sample", panel, node_index,
             "x=", x.str(22, radius=True),
@@ -233,7 +289,9 @@ def main() -> None:
             "alpha=", alpha.str(18, radius=True),
             "turn_low=", low,
             "turn_high=", high,
-            "max_j_radius=", max_rad.str(8, radius=True),
+            "e_b=", eb.str(16, radius=True),
+            "head_rad2=", head_rad2.str(10, radius=True),
+            "tail2=", tail2.str(10, radius=True),
         )
 
     for n in MOMENT_ORDERS:
@@ -249,8 +307,9 @@ def main() -> None:
 
     print("CERTIFIED: frozen Gauss-40 / panel-0.4 sample nodes are valid")
     print("CERTIFIED: C-even direct-turning-anchor Bessel enclosures overlap direct Arb values")
+    print("CERTIFIED: C-even addition-theorem energy-tail l2 bounds computed")
     print("CERTIFIED: C-even moment-series sample coefficients are positive finite enclosures")
-    print("CERTIFIED: C-even special-function engine preflight passed")
+    print("CERTIFIED: C-even special-function / energy-tail preflight passed")
     print("FIREWALL: this is not the 1075x1075 finite positivity certificate")
 
 
