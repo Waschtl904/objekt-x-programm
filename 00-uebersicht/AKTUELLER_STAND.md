@@ -11,7 +11,7 @@ m_1(\xi)>0.1\ (|\xi|\ge1551),
 \qquad \|r\|_\infty<12.
 ```
 
-Neu importiert wird Osipov Theorem 4:
+Osipov Theorem 4 liefert
 
 ```math
 |\lambda_n^F|\le
@@ -20,15 +20,17 @@ Neu importiert wird Osipov Theorem 4:
 \mu_n=\frac{c}{2\pi}|\lambda_n^F|^2.
 ```
 
-Für `c=1551`, `N=1102` hat der Arb-Gate bereits auf dem current-main-basierten Precursor-Head zertifiziert
+Für `c=1551`, `N=1102` zertifiziert der 256-bit-Arb-Gate
 
 ```math
-\mu_{1102}<10^{-43},
-\quad \tau_{1102}>0.099,
-\quad \text{Schur penalty}<1.5\times10^{-40}.
+\boxed{\mu_{1102}<10^{-43}},
+\quad \boxed{\tau_{1102}>0.099},
+\quad \boxed{\text{Schur penalty}<1.5\times10^{-40}}.
 ```
 
-Nach finalem Exact-Head-Rerun reduziert dies den kanonischen Rest auf höchstens
+Der tatsächliche Penalty-Upper-Bound liegt bei etwa `1.22873e-40`.
+
+Damit reduziert sich der kanonische Rest auf höchstens
 
 ```text
 1104 = 552 even + 552 odd
@@ -57,7 +59,7 @@ Offen sind dort die finale intervalle Matrixassemblierung und positive Faktorisi
 ## Status
 
 ```text
-canonical PSWF reduction <=1104                candidate ✓[K/M]
+canonical PSWF reduction <=1104                ✓[K/M]
 canonical resolved lower bound >=3e-39         ?[O]
 Legendre orthonormal backend M=2150            ✓[K/M]
 Legendre quadrature budget                     ✓[K/M]
