@@ -3,7 +3,7 @@
 *Ein lakatosianisches Forschungsjournal zur Riemannschen Hypothese.*
 
 > **Stand: 14. September 2026.**  
-> COMMON-JUMP liefert die gemeinsame Prime-/archimedische Featurearchitektur. Für `a=1` reduzieren rigorose Fourier-, Prolate- und Schur-Schranken den offenen fixed-window Satz kanonisch auf höchstens `1104` Dimensionen, sobald der finale Exact-Head-Rerun der neuen Osipov-Schranke bestätigt ist. Zusätzlich existiert ein orthonormaler Legendre-Zertifikatsbackend mit bereits geschlossenem Tail/Cross- und Quadraturbudget. Objekt X und RH bleiben offen.
+> COMMON-JUMP liefert die gemeinsame Prime-/archimedische Featurearchitektur. Für `a=1` reduzieren rigorose Fourier-, Prolate- und Schur-Schranken den offenen fixed-window Satz kanonisch auf höchstens `1104` Dimensionen. Zusätzlich existiert ein orthonormaler Legendre-Zertifikatsbackend mit bereits geschlossenem Tail/Cross- und Quadraturbudget. Objekt X und RH bleiben offen.
 
 ## Hier beginnen
 
@@ -22,7 +22,7 @@ Exakt gilt
 q_1(v)=\int_{\mathbb R}m_1(\xi)|\widehat v(\xi)|^2d\xi.
 ```
 
-Exact-Head Arb zertifiziert bereits
+Exact-Head Arb zertifiziert
 
 ```math
 m_1(\xi)>0.1\quad(|\xi|\ge1551),
@@ -46,12 +46,12 @@ c=1551,
 N=1102
 ```
 
-hat der neue Arb-Gate auf dem aktuellen Main-basierten Head bereits ergeben
+zertifiziert der 256-bit-Arb-Gate
 
 ```math
-\mu_{1102}<10^{-43},
+\boxed{\mu_{1102}<10^{-43}},
 \qquad
-\tau_{1102}>0.099,
+\boxed{\tau_{1102}>0.099},
 ```
 
 und
@@ -60,9 +60,9 @@ und
 \boxed{\text{Schur penalty}<1.5\times10^{-40}.}
 ```
 
-Der tatsächliche zertifizierte Penalty-Upper-Bound liegt bei etwa `1.229e-40`.
+Der tatsächliche zertifizierte Penalty-Upper-Bound liegt bei etwa `1.22873e-40`.
 
-Nach finalem Exact-Head-Rerun genügt damit kanonisch nur noch
+Damit genügt kanonisch nur noch
 
 ```math
 \boxed{(L_1)_{RR}\succeq3\times10^{-39}I}
@@ -97,7 +97,7 @@ mit predeclared target
 10^{-35}I.
 ```
 
-Der Legendre-Tail/Cross ist zertifiziert. Zusätzlich beweist der Exact-Head-Arb-Gate für jeden Paritätsblock
+Der Legendre-Tail/Cross ist zertifiziert. Zusätzlich beweist Exact-Head Arb für jeden Paritätsblock
 
 ```math
 \boxed{\|K-\widetilde K\|_{op}<4\times10^{-38}.}
@@ -120,7 +120,7 @@ Ein Pivotintervall mit `0` ist **undecided**, nicht positiv.
 ```text
 COMMON-JUMP / completion / parity             ✓[M]
 Omega1551 multiplier / bounded remainder      ✓[K/M]
-Osipov N=1102 finite reduction                candidate ✓[K/M] bis finaler rerun
+Osipov N=1102 finite reduction                ✓[K/M]
 canonical <=1104-dimensional finite gate      ?[O]
 Legendre orthonormal backend M=2150           ✓[K/M]
 Legendre quadrature operator error <4e-38     ✓[K/M]
