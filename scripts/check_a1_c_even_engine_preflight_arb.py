@@ -101,10 +101,9 @@ def fixed_point_ratio_bound(k: int, z: arb) -> arb:
 
 
 def spherical_ratio_cf(n: int, z: arb, depth: int = CF_DEPTH) -> arb:
-    """Rigorous high-order ratio enclosure in the recessive region."""
     tail_index = n + depth + 1
     q = fixed_point_ratio_bound(tail_index, z)
-    r = arb(0, q.upper())  # symmetric [-q,q], containing the positive ratio
+    r = arb(0, q.upper())
     for k in range(tail_index - 1, n - 1, -1):
         denom = A(2 * k + 3) - z * r
         if denom.contains(0):
@@ -126,8 +125,14 @@ def choose_miller_top(z: arb, degree: int) -> int:
 
 
 def choose_overlap_top(z: arb, recurrence_top: int) -> int:
-    """Choose an upward recurrence endpoint below the turning region."""
-    proposal = max(2, int(float(z.mid())) - 24)
+    """Choose a splice safely below the O(z^(1/3)) turning region.
+
+    The numeric proposal affects conditioning only. All correctness is
+    subsequently checked by Arb interval overlap.
+    """
+    zm = float(z.mid())
+    margin = int(8 * (zm ** (1.0 / 3.0))) + 16
+    proposal = max(2, int(zm) - margin)
     return min(recurrence_top - 2, proposal)
 
 
@@ -163,7 +168,6 @@ def analytic_j_bounds(z: arb, degree: int) -> list[arb]:
 
 
 def two_sided_vector(z: arb, degree: int) -> tuple[list[arb], int, int]:
-    """Rigorous upward/downward splice around the turning region."""
     miller_top = choose_miller_top(z, degree)
     represented_top = degree - 1 if miller_top == degree else miller_top
     recurrence_top = degree if miller_top == degree else miller_top
@@ -171,13 +175,13 @@ def two_sided_vector(z: arb, degree: int) -> tuple[list[arb], int, int]:
     if overlap_top < 2:
         raise RuntimeError("overlap top too small")
 
-    up = upward_vector(z, overlap_top + 8)
-    low = max(2, overlap_top - 16)
+    up = upward_vector(z, overlap_top + 12)
+    low = max(2, overlap_top - 24)
     down = downward_unscaled(z, recurrence_top, low)
 
     glue = None
     scale = None
-    for n in range(overlap_top - 8, overlap_top + 9):
+    for n in range(overlap_top - 12, overlap_top + 13):
         if n < low or n >= len(up):
             continue
         if not up[n].contains(0) and not down[n].contains(0):
@@ -190,11 +194,9 @@ def two_sided_vector(z: arb, degree: int) -> tuple[list[arb], int, int]:
         raise RuntimeError("no nonzero two-sided glue index found")
 
     result = [A(0) for _ in range(degree)]
-    # Exact upward enclosure on the stable low side.
     for n in range(min(len(up), degree)):
         result[n] = up[n]
 
-    # Scaled recessive enclosure on the high side; intersect where both exist.
     for n in range(low, min(represented_top + 1, degree)):
         hi = down[n] * scale
         if n < len(up):
@@ -205,7 +207,6 @@ def two_sided_vector(z: arb, degree: int) -> tuple[list[arb], int, int]:
         else:
             result[n] = hi
 
-    # Analytic tail above represented Miller top.
     if represented_top + 1 < degree:
         bounds = analytic_j_bounds(z, degree)
         for n in range(represented_top + 1, degree):
