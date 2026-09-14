@@ -1,119 +1,154 @@
-# CURRENT FRONT — Objekt X / A1-FINITE-1104
+# CURRENT FRONT — Objekt X / A1-FINITE-CERT
 
 > **Stand:** 14. September 2026; Registry und Objekt-X-Arbeitsdefinition unverändert.  
-> **Hauptaudits:** [A1 Osipov N1102](audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md) · [A1 Omega1551](audits/P11_A1_OMEGA1551_REDUCTION_2026-09-13.md) · [A1 Legendre backend](audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md) · [Legendre quadrature budget](audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md).
+> **Hauptaudits:** [A1 Osipov N1102](audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md) · [A1 finite gate architecture](audits/P11_A1_FINITE_GATE_ARCHITECTURE_2026-09-14.md) · [A1 Legendre backend](audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md) · [Legendre quadrature budget](audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md).
 
-## 1. Closed architecture
+## 1. Closed mathematical reduction
 
-`COMMON-JUMP/Q0`, rank-2 completion, Morse/parity, canonical `lambda=1`, exact `a=1` Fourier multiplier and the moment-augmented Schur theorem remain `✓[M]`.
+`COMMON-JUMP/Q0`, rank-2 completion, Morse/parity, canonical `lambda=1`, exact `a=1` Fourier multiplier and the moment-augmented Schur theorem are closed.
 
-For
-
-```math
-m_1(\xi)=\operatorname{Re}\psi\left(\frac14+\frac{i\xi}{2}\right)-\log\pi
--2\sum_{n\in\{2,3,4,5,7\}}\frac{\Lambda(n)}{\sqrt n}\cos(\xi\log n),
-```
-
-Exact-Head Arb certifies
+Exact-Head Arb gives
 
 ```math
 m_1(\xi)>0.1\quad(|\xi|\ge1551),
+\qquad \|r\|_\infty<12.
+```
+
+Osipov Theorem 4 plus Arb at `c=1551`, `N=1102` gives
+
+```math
+\mu_{1102}<10^{-43},
 \qquad
-\|r\|_\infty<12,
+\text{Schur penalty}<1.5\times10^{-40}.
 ```
 
-for `r=(m_1-0.1)1_{[-1551,1551]}`.
-
-## 2. Osipov analytic PSWF bound `✓[M] / ✓[K/M]`
-
-Osipov Theorem 4 gives for the finite-Fourier eigenvalue
+Hence the **canonical smallest mathematical reduction** is
 
 ```math
-|\lambda_n^F|\le
-\nu(n,c)=\frac{\sqrt\pi c^n(n!)^2}{(2n)!\Gamma(n+3/2)}.
+(L_1)_{RR}\succeq3\times10^{-39}I
 ```
 
-The concentration eigenvalue is
-
-```math
-\mu_n=\frac{c}{2\pi}|\lambda_n^F|^2.
-```
-
-At the predeclared values `c=1551`, `N=1102`, the 256-bit Exact-Head Arb gate certifies
-
-```math
-\boxed{\mu_{1102}<10^{-43}},
-```
-
-```math
-\boxed{\tau_{1102}>0.099},
-```
-
-and
-
-```math
-\boxed{\text{Schur penalty}<1.5\times10^{-40}}.
-```
-
-The actual certified upper bound for the penalty is about `1.22873e-40`.
-
-## 3. Canonical remaining finite theorem
-
-The existing predeclared sufficient threshold remains
-
-```math
-\boxed{(L_1)_{RR}\succeq3\times10^{-39}I.}
-```
-
-The first `1102` PSWF modes split into `551 even + 551 odd`; moment augmentation adds at most one direction in each parity sector. Hence
+on at most
 
 ```text
-resolved dimension <=1104 = 552 even + 552 odd.
+1104 = 552 even + 552 odd
 ```
 
-This is the **canonical smallest certified reduction**. The resolved lower bound itself remains `?[O]`.
+dimensions.  This finite lower bound is still `?[O]`.
 
-## 4. Alternative orthonormal Legendre backend
+## 2. Operational certificate decision `✓[M]`
 
-PRs #117–#118 remain an independent explicit verification route:
+For the first full computer certificate, use the independent orthonormal Legendre backend rather than constructing a rigorous PSWF basis.
+
+Reason:
 
 ```text
-M=2150,
-1075 even + 1075 odd,
-Gram matrix exactly I,
-finite target 1e-35.
+PSWF/Osipov: <=552 x 552 per parity, but resolved spectral subspace still needs certification.
+Legendre:    1075 x 1075 per parity, but G=I exactly and tail/cross + quadrature are already certified.
 ```
 
-The analytic Gauss-Legendre remainder is certified with per-parity operator error
+Thus PSWF remains the canonical smaller reduction, while **Legendre is the execution backend for C**.
+
+## 3. Fixed Legendre finite blocks
+
+Use
 
 ```math
-<4\times10^{-38}.
+T_n(x)=\sqrt{n+\frac12}P_n(x),
+\qquad n=0,\ldots,2149.
 ```
 
-Open there are matrix assembly / special-function rounding and verified positive factorization. This route does not supersede the smaller PSWF route.
+Each parity block has dimension `1075`.  For
 
-## 5. Status
+```math
+L_1=0.1I+K+\mathcal E^*\mathcal E,
+```
+
+the exact same-parity block is
+
+```math
+(A_p)_{nm}=0.1\delta_{nm}+K_{nm}+2a_na_m,
+```
+
+with exact Gram `I`.
+
+The fixed theorem targets are
+
+```math
+\boxed{A_e\succeq10^{-35}I_{1075}},
+\qquad
+\boxed{A_o\succeq10^{-35}I_{1075}}.
+```
+
+PR #117 already closes the Legendre tail/cross transfer. PR #118 already certifies the analytic quadrature operator error
+
+```math
+<4\times10^{-38}
+```
+
+per parity block.
+
+## 4. C protocol
+
+The certificate architecture is frozen:
 
 ```text
-COMMON-JUMP / Q0                                      ✓[M]
-rank-2 completion / Morse / parity                    ✓[M]
-Omega1551 multiplier floor / ||r||                    ✓[K/M]
-Osipov theorem + concentration conversion             ✓[M]
-N=1102 Arb concentration / Schur constants            ✓[K/M]
-canonical finite reduction <=1104                     ✓[K/M]
-canonical resolved lower bound >=3e-39                ?[O]
-Legendre M=2150 backend                               ✓[K/M]
-Legendre quadrature operator error <4e-38             ✓[K/M]
-Legendre finite positivity                            ?[O]
+M=2150
+1075 modes per parity
+finite target=1e-35
+panel width<=0.4
+Gauss-Legendre q=40
+analytic strip |Im xi|<=0.4
+python-flint Arb
+```
+
+Matrix entries are assembled in Arb with the certified quadrature radius included directly in every interval entry.  The final proof uses an untrusted approximate preconditioner only as a proposal, freezes it to dyadic points, forms the exact interval congruence
+
+```math
+V^T(A-10^{-35}I)V,
+```
+
+and accepts only if verified interval Cholesky/LDL has strictly positive pivots.
+
+A pivot interval containing `0` is **undecided**.
+
+The only allowed adaptation is working precision on the fixed ladder
+
+```text
+512, 768, 1024, 1536, 2048, 3072 bits.
+```
+
+## 5. Split execution
+
+To reduce timeout risk:
+
+```text
+C-even first: certify A_e >=1e-35 I.
+C-odd second: certify A_o >=1e-35 I.
+```
+
+No `a=1` promotion after only one parity succeeds.
+
+## 6. Status
+
+```text
+canonical PSWF/Osipov finite reduction <=1104        ✓[K/M]
+Legendre orthonormal backend                          ✓[K/M]
+Legendre tail/cross transfer                          ✓[K/M]
+Legendre quadrature op error <4e-38                   ✓[K/M]
+final finite certificate architecture                 ✓[M]
+C-even finite positivity                              ?[O]
+C-odd finite positivity                               ?[O]
 certified a=1 completion                              ?[O]
 all-a NP-GAP                                          ?[O]
 forward Object-X candidate architecture               ✓[M]_part
 full positive Object-X / RH                           ?[O]
 ```
 
-## 6. Firewalls
+## 7. Firewalls
 
-- `3e-39` is a sufficient target, not a fitted eigenvalue.
-- No PSWF eigenvector is certified or needed for the Osipov tail bound.
-- The finite resolved lower bound is still open.
+- Architecture is not positivity.
+- The Legendre execution backend does not supersede the smaller PSWF reduction.
+- Target, basis size and quadrature rule may not be retuned inside C.
+- Only precision may increase along the fixed ladder.
 - Fixed-window `a=1`, all-window NP-GAP, Object X and RH remain open.

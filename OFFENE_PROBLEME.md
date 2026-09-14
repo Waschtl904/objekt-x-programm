@@ -1,141 +1,119 @@
-# Offene Probleme — A1-FINITE-1104 / LEGENDRE-CERT
+# Offene Probleme — A1-FINITE-CERT
 
 > **Stand:** 14. September 2026.  
-> Operative Audits: [A1 Osipov N1102](audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md) · [A1 Omega1551](audits/P11_A1_OMEGA1551_REDUCTION_2026-09-13.md) · [A1 Legendre finite backend](audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md) · [A1 Legendre quadrature budget](audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md).
+> Operative Audits: [A1 finite gate architecture](audits/P11_A1_FINITE_GATE_ARCHITECTURE_2026-09-14.md) · [A1 Osipov N1102](audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md) · [A1 Legendre backend](audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md) · [A1 Legendre quadrature budget](audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md).
 
-## Neu geschlossen
+## Geschlossen
 
 ### `[A1-OSIPOV-1102]` `✓[M] / ✓[K/M]`
 
-Osipov Theorem 4 gibt für den finite-Fourier-Eigenwert
-
 ```math
-|\lambda_n^F|\le
-\nu(n,c)=
-\frac{\sqrt\pi\,c^n(n!)^2}{(2n)!\Gamma(n+3/2)}.
+\mu_{1102}<10^{-43},
+\qquad
+\text{Schur penalty}<1.5\times10^{-40}.
 ```
 
-Für die Konzentration gilt
-
-```math
-\mu_n=\frac{c}{2\pi}|\lambda_n^F|^2.
-```
-
-Für
+Damit ist die kanonische mathematische Restreduktion höchstens
 
 ```text
-c=1551,
-N=1102
+1104 = 552 even + 552 odd.
 ```
-
-zertifiziert der 256-bit-Arb-Gate
-
-```math
-\boxed{\mu_{1102}<10^{-43}},
-\qquad
-\boxed{\tau_{1102}>0.099},
-```
-
-und
-
-```math
-\boxed{\text{Schur penalty}<1.5\times10^{-40}.}
-```
-
-Der tatsächliche Intervall-Upper-Bound des Penalty liegt bei etwa `1.229e-40`.
 
 ### `[A1-LEGENDRE-TAIL]` `✓[K/M]`
 
-Die alternative orthonormale Legendre-Route mit `M=2150` besitzt einen rigorosen Tail-/Crossabschluss und reduziert auf zwei `1075 x 1075` Paritätsblöcke mit finite target `1e-35`.
+Alternative orthonormale Vollraumroute:
+
+```text
+M=2150
+1075 even + 1075 odd
+G=I exactly
+finite target=1e-35
+```
+
+Tail/Cross sind zertifiziert.
 
 ### `[A1-LEGENDRE-QBUDGET]` `✓[K/M]`
 
-Exact-Head Arb zertifiziert für jeden `1075 x 1075` Legendre-Paritätsblock
+Für jeden Legendre-Paritätsblock ist der analytische Quadratur-Operatorfehler zertifiziert:
 
 ```math
-\boxed{\|K-\widetilde K\|_{op}<4\times10^{-38}}.
+\|K-\widetilde K\|_{op}<4\times10^{-38}.
 ```
 
-Die analytische Quadraturtrunkation ist damit nicht mehr der Engpass.
+### `[A1-FINITE-ARCH]` `✓[M]`
+
+Die Ausführungsarchitektur für den ersten vollständigen finite Gate ist fixiert:
+
+- Legendre ist der operative Zertifikatsbackend;
+- PSWF/Osipov bleibt die kleinere kanonische mathematische Reduktion;
+- `M=2150`, `1075` pro Parität, target `1e-35` werden in C nicht retuned;
+- quadrature rule bleibt width `<=0.4`, Gauss `q=40`, strip `0.4`;
+- Arb-Intervallmatrix + dyadisch eingefrorener untrusted preconditioner + intervalle Congruence/Cholesky;
+- Precision ladder: `512,768,1024,1536,2048,3072` bits;
+- Pivotintervall mit `0` = undecided.
 
 ---
 
-## Priorität 0A — `[A1-RESOLVED-3E39]` `?[O]`
+## Priorität 0 — `[C-EVEN]` `?[O]`
 
-Kanonische kleinere Route:
+Als nächstes **nur** den geraden Block zertifizieren:
 
 ```math
-\boxed{(L_1)_{RR}\succeq3\times10^{-39}I}
+\boxed{A_e\succeq10^{-35}I_{1075}}.
 ```
 
-auf höchstens
+Pflichten:
 
-```text
-1104 total = 552 even + 552 odd
-```
+1. common-node Arb assembly;
+2. spherical-Bessel vector evaluation with fail-closed recurrence;
+3. exact/Arb moment rank-one block;
+4. certified #118 quadrature radius in every matrix entry;
+5. deterministic interval symmetry checks;
+6. untrusted midpoint preconditioner frozen to dyadic points;
+7. Arb congruence `V^T(A_e-1e-35 I)V`;
+8. verified positive pivots at one fixed precision-ladder level;
+9. reproducible matrix/preconditioner/pivot artifacts.
 
-im moment-augmentierten PSWF-Raum.
-
-`3e-39` ist ein vorab deklarierter sufficient threshold, kein beobachteter Eigenwert.
-
-Keine numerische Konstruktion der PSWF-Eigenvektoren ist für die Osipov-Tail-Schranke nötig.
+No odd-block work in the same pass if even has not certified.
 
 ---
 
-## Priorität 0B — `[A1-LEGENDRE-MATRIX]` `?[O]`
+## Priorität 1 — `[C-ODD]` `?[O]`
 
-Alternative basisexplizite Zertifikatsroute:
+Only after C-even succeeds:
 
 ```math
-\boxed{
-A_e\succeq10^{-35}I,
-\qquad
-A_o\succeq10^{-35}I
-}
+\boxed{A_o\succeq10^{-35}I_{1075}}.
 ```
 
-für zwei orthonormale Legendre-Blöcke `1075 x 1075`.
-
-Bereits geschlossen:
-
-- Gram `G=I` exakt;
-- Parität exakt;
-- Legendre Tail/Cross `✓[K/M]`;
-- analytischer Quadratur-Operatorfehler `<4e-38` `✓[K/M]`.
-
-Noch zu schließen:
-
-1. Matrixassemblierung mit genügend Arbeitspräzision;
-2. Special-function/Rounding-Enclosures;
-3. verifizierte LDL/Cholesky-/Inertia-Prüfung;
-4. vollständiges Residual/Weyl-Budget gegen den Shift `1e-35`.
-
-Ein numerischer positiver Eigenwert oder Float-Cholesky genügt nicht.
+Use the identical fixed protocol and a separate certificate artifact.
 
 ---
 
 ## Danach — `[A1-CERT]` `?[O]`
 
-**Eine** der beiden endlichen Routen genügt:
-
 ```text
-PSWF <=1104-dimensional gate
-          OR
-Legendre two 1075x1075 blocks
-          |
-          v
+C-even green
+   +
+C-odd green
+   +
+#117 certified full-space transfer
+   |
+   v
+L_1 >=0
+   |
 canonical a=1 completion
 ```
 
-Erst danach ist fixed-window `a=1` theorematisch geschlossen.
+A future direct PSWF finite certificate remains an independent alternate closure route.
 
 ---
 
 ## Firewalls
 
-- Legendre quadrature budget != finite PSD certificate.
-- Special-function/Rounding-Fehler müssen separat eingeschlossen werden.
-- Pivotintervalle mit `0` sind undecided.
-- Die Legendre-Route ersetzt die kleinere PSWF-Route nicht.
-- Fixed-window `a=1` ist noch nicht bewiesen.
-- All-a NP-GAP, Object X und RH bleiben offen.
+- B is architecture, not a positivity result.
+- Do not lower `1e-35` after seeing a matrix.
+- Do not change `M`, quadrature or basis inside C.
+- Only precision may increase along the fixed ladder.
+- Float eigenvalues/preconditioners are proposals only.
+- Fixed-window `a=1`, all-a NP-GAP, Object X and RH remain open.

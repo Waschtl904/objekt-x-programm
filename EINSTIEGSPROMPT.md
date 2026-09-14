@@ -9,13 +9,13 @@ Arbeite als strenger mathematischer Auditor. ChatGPT übernimmt Repo-Arbeiten; e
 ## Zuerst lesen
 
 1. `CURRENT-FRONT.md`
-2. `audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md`
-3. `audits/P11_A1_OMEGA1551_REDUCTION_2026-09-13.md`
-4. `audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md`
-5. `audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md`
+2. `audits/P11_A1_FINITE_GATE_ARCHITECTURE_2026-09-14.md`
+3. `audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md`
+4. `audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md`
+5. `audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md`
 6. Registry/Arbeitsdefinition nur als unveränderte Governancequellen.
 
-## Gesicherte Kette
+## Gesicherter Stand
 
 ```text
 COMMON-JUMP / Q0                         ✓[M]
@@ -24,95 +24,80 @@ canonical lambda=1                      ✓[M]
 exact a=1 Fourier multiplier            ✓[M]
 Omega1551 high-frequency floor          ✓[K/M]
 Osipov N=1102 Schur reduction           ✓[K/M]
+canonical mathematical reduction <=1104 ✓[K/M]
 ```
 
-## Kanonischer finite Gate — PSWF / Osipov
-
-Osipov Theorem 4 liefert
+Die kleinste kanonische Restobligation bleibt
 
 ```math
-|\lambda_n^F|\le
-\frac{\sqrt\pi\,c^n(n!)^2}{(2n)!\Gamma(n+3/2)},
-\qquad
-\mu_n=\frac{c}{2\pi}|\lambda_n^F|^2.
+(L_1)_{RR}\succeq3\times10^{-39}I
 ```
 
-Für die vorab festgelegten Werte
+auf höchstens `552 even + 552 odd` PSWF/moment-augmentierten Dimensionen.
+
+## Durchlauf B — Architekturentscheidung `✓[M]`
+
+Für den **ersten ausführbaren Vollzertifikatsversuch** wird nicht die kleinere PSWF-Basis konstruiert, sondern der bereits vorbereitete orthonormale Legendre-Backend verwendet.
+
+Fixiert:
 
 ```text
-c=1551,
-N=1102
+M=2150
+1075 even + 1075 odd
+Gram I exactly
+finite target=1e-35
+panel width<=0.4
+Gauss-Legendre q=40
+analytic strip |Im xi|<=0.4
+quadrature operator error <4e-38
 ```
 
-zertifiziert der 256-bit-Arb-Gate
+Die Legendre-Ausführung ersetzt die kleinere PSWF-Reduktion nicht; sie ist die derzeit robustere Zertifikatsbasis, weil Basis, Gram, Parität, Tail/Cross und Quadraturbudget bereits rigoros geschlossen sind.
+
+## Default-Auftrag — C-even ONLY
+
+Im nächsten Durchlauf **nur den geraden Paritätsblock** bauen und zertifizieren:
 
 ```math
-\boxed{\mu_{1102}<10^{-43}},
-\qquad
-\boxed{\tau_{1102}>0.099},
+\boxed{A_e\succeq10^{-35}I_{1075}}.
 ```
 
-```math
-\boxed{\text{Schur penalty}<1.5\times10^{-40}.}
-```
+### Fixiertes Verfahren
 
-Daher genügt kanonisch nur noch
+1. common-node Arb matrix assembly;
+2. spherical-Bessel vector evaluation with deterministic fail-closed recurrence;
+3. moment block `2aa^T` in Arb;
+4. certified #118 quadrature radius directly in every matrix entry;
+5. interval symmetry checks;
+6. untrusted midpoint eigenbasis/preconditioner as proposal only;
+7. freeze proposal to dyadic Arb points;
+8. form in Arb
+   ```math
+   V^T(A_e-10^{-35}I)V;
+   ```
+9. verified interval Cholesky/LDL;
+10. accept only if every decisive pivot lower endpoint is strictly positive.
 
-```math
-\boxed{(L_1)_{RR}\succeq3\times10^{-39}I}
-```
-
-auf höchstens
+### Fixed precision ladder
 
 ```text
-1104 total = 552 even + 552 odd.
+512
+768
+1024
+1536
+2048
+3072 bits
 ```
 
-Für die Osipov-Tail-Schranke müssen keine PSWF-Eigenvektoren numerisch konstruiert werden.
+Only precision may increase. Do **not** retune `M`, target, quadrature order, panel width or basis after seeing results.
 
-## Alternative explizite Backend — Legendre
-
-Mit
-
-```math
-T_n(x)=\sqrt{n+\frac12}P_n(x),
-\qquad n=0,\ldots,2149,
-```
-
-ist die Basis orthonormal, `G=I`, und die beiden finite Blöcke haben Dimension
-
-```text
-1075 even + 1075 odd.
-```
-
-PR #117 zertifiziert Tail/Cross und setzt den finite target
-
-```math
-10^{-35}I.
-```
-
-PR #118 zertifiziert zusätzlich für jeden Paritätsblock
-
-```math
-\boxed{\|K-\widetilde K\|_{op}<4\times10^{-38}.}
-```
-
-Die Legendre-Route bleibt ein unabhängiger, basisexpliziter Backup-/Crosscheck-Backend; die kleinere PSWF-/Osipov-Route bleibt kanonisch.
-
-## Default-Auftrag nach Durchlauf A
-
-**Nicht in Durchlauf A ausführen.** Im nächsten getrennten Durchlauf:
-
-1. finite resolved Darstellung für die kanonische `<=1104`-Route festlegen;
-2. parity-getrennte `552 x 552`-Zertifikatsstrategie wählen;
-3. Arb/LDL/Cholesky mit adaptiver Präzision und fail-closed Pivots entwerfen;
-4. alternativ den bereits vorbereiteten Legendre-Backend weiterführen;
-5. fixed-window `a=1` nur bei vollständigem finite PSD-Gate promoten.
+If C-even is green, stop and checkpoint. Run C-odd only in a separate later pass.
 
 ### Firewalls
 
-- Float-Cholesky oder Float-Eigenwerte haben keinen Beweisstatus.
-- `3e-39` und `1e-35` sind predeclared sufficient targets, keine beobachteten Eigenwerte.
-- Fixed-window `a=1`, all-a NP-GAP, Object X und RH bleiben offen.
-- Aktuelle arXiv-v2-Metadaten von 2608.24827 führen Xuefeng Zhu als Autor.
-- Registry/Arbeitsdefinition unverändert.
+- A pivot containing `0` is undecided.
+- Float eigenvectors/factors are untrusted proposals only.
+- B defined architecture; it did not prove finite positivity.
+- No `a=1` promotion after even alone.
+- Fixed-window `a=1`, all-a NP-GAP, Object X and RH remain open.
+- Registry/Arbeitsdefinition unchanged.
