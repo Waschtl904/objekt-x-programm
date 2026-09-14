@@ -6,9 +6,10 @@ turning-anchor special-function engine and the exact even-energy tail bound
 used by the frozen C-even backend.
 """
 
+import os
 from flint import acb, arb, ctx, fmpq
 
-ctx.prec = 512
+ctx.prec = int(os.environ.get("A1_PREC_BITS", "512"))
 
 
 def Q(n: int, d: int = 1) -> fmpq:
@@ -197,7 +198,6 @@ def even_b_vector_error(z: arb, vals: list[arb], high: int) -> tuple[arb, arb, a
     if not total_even_energy.is_finite() or not head_energy_lower.is_finite():
         raise RuntimeError("non-finite even-energy components")
 
-    # We need scalar upper/lower bounds, not a symmetric Arb ball for [0,U].
     tail_upper = total_even_energy.upper() - head_energy_lower.lower()
     if tail_upper < 0:
         tail_upper = A(0).upper()
