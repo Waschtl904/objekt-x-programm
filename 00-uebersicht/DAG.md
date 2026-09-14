@@ -1,120 +1,80 @@
-# Abhängigkeitsgraph (DAG) — Objekt X / A1-FINITE
+# Abhängigkeitsgraph (DAG) — Objekt X / A1-FINITE-1104
 
-> **Stand:** 13. September 2026; Registry und Arbeitsdefinition unverändert.
+> **Stand:** 14. September 2026; Registry und Arbeitsdefinition unverändert.
 
-## 1. Closed base
+## Closed base
 
 ```text
 COMMON-JUMP / Q0 ✓[M]
-        |
+   |
 rank-2 completion / Morse / parity ✓[M]
-        |
+   |
 canonical lambda=1 ✓[M]
-        |
-exact a=1 Fourier multiplier ✓[M]
-        |
-Omega1551 high-frequency certificate ✓[K/M]
+   |
+exact a=1 multiplier ✓[M]
+   |
+Omega1551: m_1>0.1, ||r||<12 ✓[K/M]
 ```
 
-## 2. Canonical PSWF branch
+## Canonical PSWF branch
 
 ```text
-bounded band r, ||r||<12
-        |
-moment-augmented PSWF split
-        |
-KRD lambda_1210<1.5e-42
-        |
-Schur penalty <2.2e-39                     ✓[K/M]
-        |
-        v
-R_1210 dimension <=1212
-certify L_RR >=3e-39 I                     ?[O]
+Osipov Theorem 4
+|lambda_n^F| <= nu(n,c)
+mu_n = c|lambda_n^F|^2/(2pi)
+   |
+predeclared c=1551, N=1102
+   |
+mu_1102 <1e-43
+tau >0.099
+Schur penalty <1.5e-40          ✓[K/M]
+   |
+R_1102 dimension <=1104
+   |
+certify L_RR >=3e-39 I          ?[O]
 ```
 
-This remains the **canonical smaller finite reduction**.
-
-## 3. Alternative Legendre branch
+## Independent Legendre branch
 
 ```text
-orthonormal T_n=sqrt(n+1/2) P_n
-        |
-Gram I + exact parity + spherical-Bessel Fourier form
-        |
-M=2150 Legendre tail/cross certificate              ✓[K/M]
-        |
-1075 even + 1075 odd blocks, target 1e-35
+orthonormal Legendre M=2150
+   |
+Gram I / exact parity
+   |
+tail/cross ✓[K/M]
+quadrature op error <4e-38 ✓[K/M]
+   |
+1075 even +1075 odd
+certify each block >=1e-35 I    ?[O]
 ```
 
-## 4. Legendre quadrature edge
-
-```text
-analytic continuation of Re psi
-        +
-strip |Im xi|<=0.4
-        +
-|r(z)|<42
-        +
-|j_n(z)|<=exp(|Im z|)
-        |
-        v
-full matrix integrand <260000
-        |
-width<=0.4 panels + Gauss q=40
-rho=2+sqrt(5)
-        |
-        v
-per-entry error <3.678e-41
-        |
-        v
-parity operator quadrature error <4e-38          ✓[K/M]
-```
-
-Hence analytic quadrature truncation is already far below the `1e-35` finite-head target.
-
-## 5. Remaining Legendre edge
-
-```text
-assemble 1075x1075 even/odd matrices
-        +
-rigorous special-function/rounding enclosure
-        +
-verified LDL/Cholesky residual
-        |
-        v
-A_even >=1e-35 I and A_odd >=1e-35 I             ?[O]
-```
-
-## 6. A1 closure
+## A1 closure
 
 ```text
 PSWF finite gate ?[O]
-       OR
+      OR
 Legendre finite gate ?[O]
-        |
-        v
+       |
+       v
 canonical a=1 completion ?[O]
 ```
 
-No separate infinite-dimensional tail or crossblock problem remains on either certified route.
-
-## 7. Global path
+## Global path
 
 ```text
 a=1 completion
-   |
+  |
 further windows / structural scaling
-   |
+  |
 all-a NP-GAP
-   |
+  |
 restricted Weil criterion
-   |
+  |
 RH
 ```
 
-## 8. Firewalls
+## Firewalls
 
-- Legendre quadrature budget does not prove finite PSD.
-- Pivot intervals containing zero are undecided.
-- PSWF route remains canonical/smaller.
-- Fixed-window a=1 and RH are not proved.
+- No PSWF eigenvectors are numerically needed for the Osipov bound.
+- `3e-39` and `1e-35` are sufficient thresholds, not fitted eigenvalues.
+- Fixed-window `a=1` and RH are not proved.

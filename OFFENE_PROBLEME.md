@@ -1,21 +1,48 @@
-# Offene Probleme — A1-FINITE-1212 / LEGENDRE-CERT
+# Offene Probleme — A1-FINITE-1104 / LEGENDRE-CERT
 
-> **Stand:** 13. September 2026.  
-> Operative Audits: [A1 Omega1551](audits/P11_A1_OMEGA1551_REDUCTION_2026-09-13.md) · [A1 Legendre finite backend](audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md) · [A1 Legendre quadrature budget](audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md).
+> **Stand:** 14. September 2026.  
+> Operative Audits: [A1 Osipov N1102](audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md) · [A1 Omega1551](audits/P11_A1_OMEGA1551_REDUCTION_2026-09-13.md) · [A1 Legendre finite backend](audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md) · [A1 Legendre quadrature budget](audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md).
 
 ## Neu geschlossen
 
-### `[A1-CROSS-1210]` `✓[K/M]`
+### `[A1-OSIPOV-1102]` `✓[M] / ✓[K/M]`
 
-KRD plus Arb liefert
+Osipov Theorem 4 gibt für den finite-Fourier-Eigenwert
 
 ```math
-\lambda_{1210}(1551)<1.5\times10^{-42},
-\qquad
-\text{Schur penalty}<2.2\times10^{-39}.
+|\lambda_n^F|\le
+\nu(n,c)=
+\frac{\sqrt\pi\,c^n(n!)^2}{(2n)!\Gamma(n+3/2)}.
 ```
 
-Damit sind Infinite Tail und Crossblock der kanonischen PSWF-Route quantitativ absorbiert.
+Für die Konzentration gilt
+
+```math
+\mu_n=\frac{c}{2\pi}|\lambda_n^F|^2.
+```
+
+Für
+
+```text
+c=1551,
+N=1102
+```
+
+zertifiziert der 256-bit-Arb-Gate
+
+```math
+\boxed{\mu_{1102}<10^{-43}},
+\qquad
+\boxed{\tau_{1102}>0.099},
+```
+
+und
+
+```math
+\boxed{\text{Schur penalty}<1.5\times10^{-40}.}
+```
+
+Der tatsächliche Intervall-Upper-Bound des Penalty liegt bei etwa `1.229e-40`.
 
 ### `[A1-LEGENDRE-TAIL]` `✓[K/M]`
 
@@ -23,27 +50,11 @@ Die alternative orthonormale Legendre-Route mit `M=2150` besitzt einen rigorosen
 
 ### `[A1-LEGENDRE-QBUDGET]` `✓[K/M]`
 
-Für die finale Legendre-Matrix ist nun ein konkreter Integrationsbackend zertifiziert:
-
-```text
-panel width <=0.4
-Gauss-Legendre order 40
-analytic strip |Im xi|<=0.4
-```
-
-Exact-Head Arb beweist
+Exact-Head Arb zertifiziert für jeden `1075 x 1075` Legendre-Paritätsblock
 
 ```math
-|r(z)|<42
+\boxed{\|K-\widetilde K\|_{op}<4\times10^{-38}}.
 ```
-
-und
-
-```math
-\boxed{\|K-\widetilde K\|_{op}<4\times10^{-38}}
-```
-
-pro `1075 x 1075` Paritätsblock.
 
 Die analytische Quadraturtrunkation ist damit nicht mehr der Engpass.
 
@@ -60,12 +71,14 @@ Kanonische kleinere Route:
 auf höchstens
 
 ```text
-1212 total = 606 even + 606 odd
+1104 total = 552 even + 552 odd
 ```
 
 im moment-augmentierten PSWF-Raum.
 
 `3e-39` ist ein vorab deklarierter sufficient threshold, kein beobachteter Eigenwert.
+
+Keine numerische Konstruktion der PSWF-Eigenvektoren ist für die Osipov-Tail-Schranke nötig.
 
 ---
 
@@ -106,7 +119,7 @@ Ein numerischer positiver Eigenwert oder Float-Cholesky genügt nicht.
 **Eine** der beiden endlichen Routen genügt:
 
 ```text
-PSWF 1212-dimensional gate
+PSWF <=1104-dimensional gate
           OR
 Legendre two 1075x1075 blocks
           |
