@@ -12,7 +12,7 @@ function and convention layer that the full C-even assembler will use:
 * positive-series moment coefficients for e^{x/2};
 * even parity phases and finite scalar quadrature coefficients.
 
-No binary float enters an acceptance decision.
+No binary float enters a sign/inequality acceptance decision.
 """
 
 from flint import acb, arb, ctx, fmpq
@@ -29,12 +29,12 @@ def A(x) -> arb:
 
 
 PI = arb.pi()
-I = acb(0, 1)
 GAUSS_N = 40
 PANEL = Q(2, 5)  # 0.4
 OMEGA = Q(1551)
 C = Q(1, 10)
 MAX_DEGREE = 2150
+CF_DEPTH = 160
 
 # (panel index, Gauss-node index), fixed before this run.
 SAMPLES = ((0, 0), (1250, 20), (2500, 20), (3877, 39))
@@ -92,34 +92,64 @@ def r_on_real_ball(x: arb) -> arb:
 
 def spherical_j_direct(n: int, z: arb) -> arb:
     if z.contains(0):
-        if n == 0:
-            return A(1)
-        return A(0)
+        return A(1) if n == 0 else A(0)
     return z.bessel_j(Q(2 * n + 1, 2)) * (PI / (2 * z)).sqrt()
 
 
+def spherical_ratio_cf(n: int, z: arb, depth: int = CF_DEPTH) -> arb:
+    """Enclose j_(n+1)(z)/j_n(z) by backward continued fraction.
+
+    For spherical j, write nu=n+1/2 and R_n=J_(nu+1)/J_nu.  The exact
+    recurrence is
+
+        R_k = z / (2(k+3/2) - z R_(k+1)).
+
+    At all uses here k>=n=2150 and 0<z<1551<k.  Standard order monotonicity
+    for J_mu(z) in the region mu>z>0 gives 0<R_k<1.  We therefore start the
+    finite backward enclosure with the rigorous tail box [-1,1]; contraction
+    over 160 levels makes its effect negligible.  Every denominator is
+    checked away from zero.
+    """
+    # Symmetric interval [-1,1] is deliberately conservative.
+    r = arb(0, 1)
+    for k in range(n + depth, n - 1, -1):
+        denom = 2 * (A(k) + Q(3, 2)) - z * r
+        if denom.contains(0):
+            raise RuntimeError("continued-fraction Bessel ratio denominator contains zero")
+        r = z / denom
+    if not r.is_finite():
+        raise RuntimeError("non-finite continued-fraction Bessel ratio")
+    return r
+
+
 def spherical_j_vector_downward(z: arb, degree: int) -> list[arb]:
-    """Rigorous j_0,...,j_(degree-1) via anchored downward recurrence."""
+    """Rigorous j_0,...,j_(degree-1) by Miller downward recurrence."""
     top = degree
-    j_top = spherical_j_direct(top, z)
-    if j_top.contains(0):
-        raise RuntimeError("top spherical-Bessel anchor contains zero")
-    ratio = spherical_j_direct(top + 1, z) / j_top
+    ratio = spherical_ratio_cf(top, z)
     values = [A(0) for _ in range(top + 2)]
     values[top] = A(1)
     values[top + 1] = ratio
     for n in range(top, 0, -1):
         values[n - 1] = (2 * n + 1) * values[n] / z - values[n + 1]
 
-    # Deterministic normalization pivot: nearest integer to the exact rational
-    # midpoint of the node, clipped into the represented range.
-    pivot = int(float(z.mid()))
-    pivot = min(degree - 1, max(0, pivot))
+    # Pivot selection is only an implementation choice; correctness is
+    # subsequently re-proved by a direct Arb value and interval overlap.
+    pivot = min(degree - 1, max(0, int(float(z.mid()))))
     if values[pivot].contains(0):
         raise RuntimeError("downward recurrence normalization pivot contains zero")
     direct = spherical_j_direct(pivot, z)
     if direct.contains(0):
-        raise RuntimeError("direct normalization Bessel interval contains zero")
+        # Move deterministically downward until a nonzero direct interval is found.
+        found = False
+        for candidate in range(pivot - 1, max(-1, pivot - 64), -1):
+            candidate_direct = spherical_j_direct(candidate, z)
+            if not values[candidate].contains(0) and not candidate_direct.contains(0):
+                pivot = candidate
+                direct = candidate_direct
+                found = True
+                break
+        if not found:
+            raise RuntimeError("no nonzero normalization pivot found")
     scale = direct / values[pivot]
     result = [v * scale for v in values[:degree]]
     if any(not v.is_finite() for v in result):
@@ -143,13 +173,10 @@ def modified_spherical_i_series(n: int, z: arb) -> arb:
     df = A(odd_double_factorial(2 * n + 1))
     term = (z ** n) / df
     total = term
-    # term_{k+1}/term_k = z^2 / [2(k+1)(2n+2k+3)].
     for k in range(200):
         ratio = (z * z) / (2 * (k + 1) * (2 * n + 2 * k + 3))
         term = term * ratio
         total += term
-        # Pure Arb stopping decision: once the next-tail majorant is tiny
-        # relative to 2^-400, close the positive series rigorously.
         next_ratio = (z * z) / (2 * (k + 2) * (2 * n + 2 * k + 5))
         if next_ratio < A(Q(1, 4)) and term < A(2) ** (-400):
             tail = term * next_ratio / (1 - next_ratio)
@@ -162,7 +189,6 @@ def moment_coeff(n: int) -> arb:
 
 
 def main() -> None:
-    # Exact support mask check for a=1: log n < 2 for 2,3,4,5,7; next pp 8 is out.
     for n in (2, 3, 4, 5, 7):
         if not A(n).log() < 2:
             raise RuntimeError(f"active mask failed at n={n}")
@@ -191,7 +217,6 @@ def main() -> None:
             if v.rad() > max_rad:
                 max_rad = v.rad()
 
-        # Independent direct Arb overlap checks.
         for n in CHECK_ORDERS:
             recurrence_value = vals[n // 2]
             direct = spherical_j_direct(n, x)
@@ -201,9 +226,7 @@ def main() -> None:
                 )
 
         print(
-            "sample",
-            panel,
-            node_index,
+            "sample", panel, node_index,
             "x=", x.str(22, radius=True),
             "r=", r.str(18, radius=True),
             "alpha=", alpha.str(18, radius=True),
@@ -216,14 +239,13 @@ def main() -> None:
             raise RuntimeError(f"moment coefficient invalid at n={n}")
         print("moment", n, a.str(24, radius=True))
 
-    # Exact even phase convention: (-1)^(n/2).
     expected = (1, -1, 1, -1, 1, -1)
-    got = tuple(1 if ((2 * k) // 2) % 2 == 0 else -1 for k in range(6))
+    got = tuple(1 if k % 2 == 0 else -1 for k in range(6))
     if got != expected:
         raise RuntimeError("even Legendre Fourier phase convention failed")
 
     print("CERTIFIED: frozen Gauss-40 / panel-0.4 sample nodes are valid")
-    print("CERTIFIED: C-even Bessel recurrence overlaps independent direct Arb values")
+    print("CERTIFIED: C-even Miller/continued-fraction recurrence overlaps independent direct Arb values")
     print("CERTIFIED: C-even moment-series sample coefficients are positive finite enclosures")
     print("CERTIFIED: C-even special-function engine preflight passed")
     print("FIREWALL: this is not the 1075x1075 finite positivity certificate")
