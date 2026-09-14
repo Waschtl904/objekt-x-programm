@@ -1,13 +1,13 @@
 # P11 A1 C-EVEN — verified assembly engine before the 1075x1075 factorization
 
 **Date:** 2026-09-14  
-**Status:** theorem-level assembly/error architecture plus preflight; **no C-even positivity claim**.  
+**Status:** theorem-level assembly/error architecture plus engine preflight; **no C-even positivity claim**.  
 **Parent main:** `a660aef4b99d50f07e04c03a51db52196347d262` / PR #121.  
 **Registry / Object-X working definition:** unchanged.
 
 ## 1. Frozen C-even target
 
-Nothing in this audit changes the protocol frozen in PR #121:
+Nothing here changes the protocol frozen in PR #121:
 
 ```text
 M = 2150
@@ -21,7 +21,7 @@ analytic strip |Im xi| <= 0.4
 precision ladder = 512,768,1024,1536,2048,3072 bits
 ```
 
-The theorem to be certified later remains
+The open theorem remains
 
 ```math
 A_e\succeq10^{-35}I_{1075}.
@@ -35,127 +35,70 @@ The already certified analytic quadrature operator error is
 
 ## 2. Why a second assembly gate is needed
 
-The fixed quadrature has `3878*40 = 155120` positive-frequency nodes.  A literal interval rank-one update of a `1075x1075` Arb matrix at every node would require an impractical number of interval scalar products.  This is a certification-engineering issue, not a mathematical change.
-
-The proof-safe alternative is to separate
-
-1. a fast midpoint proposal, which has no proof status;
-2. rigorous nodewise enclosures of the scalar quadrature coefficient and Legendre-Fourier vector;
-3. a theorem converting those nodewise errors into an operator-norm enclosure for the whole matrix;
-4. an Arb interval matrix obtained by inflating the midpoint matrix by that proved operator budget;
-5. the already frozen interval congruence / Cholesky stage.
+The fixed quadrature contains `3878*40 = 155120` positive-frequency nodes.  Literal interval outer-product accumulation at all nodes would be unnecessarily expensive.  We therefore separate a fast midpoint proposal from a rigorous operator error ledger.
 
 ## 3. Exact node form
 
-For an even Gauss node `x_s>0`, let
+For each positive Gauss node `x_s`, let
 
 ```math
 b_s=(b_{0,s},b_{2,s},\ldots,b_{2148,s})^T,
 ```
 
-where
-
 ```math
-b_{n,s}=(-1)^{n/2}\sqrt{\frac{4(n+1/2)}\pi}\,j_n(x_s).
-```
-
-Let `w_s>0` be the affine Gauss weight and
-
-```math
-\alpha_s=w_s r(x_s).
-```
-
-Then the Gauss approximation of the bounded-band block is exactly
-
-```math
-K_e^{(Q)}=\sum_s\alpha_s b_s b_s^T.
-```
-
-The full finite even block is
-
-```math
-A_e^{(Q)}=0.1I+K_e^{(Q)}+2aa^T,
-```
-
-with
-
-```math
-a_n=2\sqrt{n+1/2}\,i_n(1/2).
-```
-
-## 4. Nodewise perturbation lemma `✓[M]`
-
-Suppose for each node we have point proposals `alpha0_s`, `b0_s` and rigorous bounds
-
-```math
-|\alpha_s-\alpha^0_s|\le e_{\alpha,s},
+b_{n,s}=(-1)^{n/2}\sqrt{\frac{4(n+1/2)}\pi}\,j_n(x_s),
 \qquad
-\|b_s-b^0_s\|_2\le e_{b,s}.
-```
-
-Put
-
-```math
-B_s=\|b_s^0\|_2.
+\alpha_s=w_s r(x_s).
 ```
 
 Then
 
 ```math
+K_e^{(Q)}=\sum_s\alpha_s b_sb_s^T,
+```
+
+and
+
+```math
+A_e^{(Q)}=0.1I+K_e^{(Q)}+2aa^T,
+\qquad
+a_n=2\sqrt{n+1/2}\,i_n(1/2).
+```
+
+## 4. Nodewise perturbation lemma `✓[M]`
+
+For point proposals `alpha0_s,b0_s` with
+
+```math
+|\alpha_s-\alpha^0_s|\le e_{\alpha,s},
+\qquad
+\|b_s-b^0_s\|_2\le e_{b,s},
+```
+
+and `B_s=||b0_s||`,
+
+```math
+\boxed{
 \|\alpha_s b_sb_s^T-\alpha_s^0b_s^0(b_s^0)^T\|_{op}
 \le
  e_{\alpha,s}(B_s+e_{b,s})^2
 +|\alpha_s^0|(2B_se_{b,s}+e_{b,s}^2).
-```
-
-**Proof.** Split
-
-```math
-\alpha bb^T-\alpha_0b_0b_0^T
-=(\alpha-\alpha_0)bb^T
-+\alpha_0(bb^T-b_0b_0^T).
-```
-
-Use `||bb^T||=||b||^2`, `||b||<=B+e_b`, and with `d=b-b0`,
-
-```math
-bb^T-b_0b_0^T=b_0d^T+db_0^T+dd^T,
-```
-
-whose operator norm is at most `2 B e_b+e_b^2`.  ∎
-
-Therefore
-
-```math
-\boxed{
-\|K_e^{(Q)}-\widetilde K_e^{(Q)}\|_{op}
-\le\varepsilon_{eval}
-:=\sum_s
-\left[
- e_{\alpha,s}(B_s+e_{b,s})^2
-+|\alpha_s^0|(2B_se_{b,s}+e_{b,s}^2)
-\right].
 }
 ```
 
-This theorem removes the need to perform all outer products in interval arithmetic.  Only the **nodewise vector enclosure** and the scalar error sum need be rigorous.  The midpoint matrix may be produced by a fast dense backend because its lack of proof status is absorbed by `epsilon_eval`.
-
-## 5. Midpoint linear-algebra rounding firewall
-
-If the midpoint outer-product sum is itself accumulated in ordinary floating arithmetic, its matrix-rounding error must be bounded separately by `epsilon_gemm`.  It is **not** silently included in `epsilon_eval`.
-
-The final exact Gauss matrix enclosure must satisfy
+Hence
 
 ```math
-\|K_e^{(Q)}-\widetilde K_{e,\rm stored}\|_{op}
-\le \varepsilon_{eval}+\varepsilon_{gemm}.
+\boxed{
+\|K_e^{(Q)}-\widetilde K_e^{(Q)}\|_{op}\le\varepsilon_{eval}
+}
 ```
 
-A proof run may instead use a dyadic/high-precision midpoint accumulator for which `epsilon_gemm` is certified by an exact residual replay.  No BLAS result is accepted without an explicit rounding/error ledger.
+with `epsilon_eval` equal to the sum of the displayed node bounds.  This allows fast midpoint outer products while all loss of rigor is paid explicitly in an operator-norm error budget.
 
-## 6. Full finite error ledger
+## 5. Full finite error ledger
 
-Let
+Keep separate
 
 ```math
 \varepsilon_{tot}
@@ -166,61 +109,105 @@ Let
 +\varepsilon_{storage}.
 ```
 
-The final factorization may use an interval matrix centered at the stored midpoint with an operator inflation at least `epsilon_tot`.  Equivalently, if a factorization is checked against the midpoint matrix, the shift must include the whole error budget:
+No BLAS/GEMM or storage error is silently absorbed into `epsilon_eval`.  A midpoint factorization must ultimately prove positivity after the complete shift
 
 ```math
-\widetilde A_e-
-(10^{-35}+\varepsilon_{tot})I.
+10^{-35}+\varepsilon_{tot}.
 ```
 
-No component may be inferred from observed pivots.  All budgets are computed independently of the positivity outcome.
+## 6. Bessel engine: negative result and replacement
 
-## 7. Bessel vector certification plan
+### 6.1 Pure downward Miller — engineering No-Go
 
-For every fixed Gauss node the exact `b_s` vector is enclosed by Arb using the two regimes frozen in PR #121:
+Four exact-head preflight variants tested a single interval Miller recurrence propagated from a high order all the way to order `0`:
 
-- `0<x<=1`: entire `0F1` representation;
-- `x>1`: high-order Arb anchor pair plus downward three-term recurrence and a deterministic normalization pivot.
+1. direct tiny high-order Arb anchors;
+2. a continued-fraction ratio with a broad tail box;
+3. adaptive Miller top plus analytic high-order tail;
+4. an orderspecific fixed-point ratio bound and elementary `j_0,j_1` normalization.
 
-The preflight checks the implementation at fixed frequency locations spanning the complete band.  The final run must fail closed if an anchor/pivot interval contains zero or any enclosure becomes non-finite.
+All failed **fail-closed** because interval wrapping made the low-order Miller values contain zero at frequencies in the middle/high band.  This is not a mathematical counterexample and does not affect the Legendre backend.  It is an implementation-class negative result:
 
-The vector error `e_b,s` is the Euclidean norm of the radii plus the exact difference between the stored dyadic/double proposal and the Arb midpoint point used to define the enclosure.
+```text
+one interval downward-Miller chain from n>>x to n=0  ×[engine]
+```
 
-## 8. Moment block
+No further tuning of this engine class is permitted in C-even.
 
-The even moment vector is evaluated independently from the positive series for `i_n(1/2)`.  Its interval outer product is rank one.  Because it costs only `O(N^2)` once rather than once per Gauss node, it may be formed directly in Arb.  Its resulting operator uncertainty is recorded as `epsilon_moment`.
+### 6.2 Two-sided rigorous recurrence — active engine
 
-## 9. Preflight scope
+Use the numerically natural split at the turning region `n≈x`.
 
-The preflight is deliberately **not** a truncated positivity test.  It checks only:
+**Low side.** Start with the elementary Arb formulas
 
-1. fixed Gauss rule generation;
-2. exact active prime-power mask `{2,3,4,5,7}`;
-3. Bessel vector enclosure at predeclared representative nodes;
+```math
+j_0(x)=\frac{\sin x}{x},
+\qquad
+j_1(x)=\frac{\sin x}{x^2}-\frac{\cos x}{x},
+```
+
+and propagate the exact recurrence upward through a deterministic overlap index below the turning region.
+
+**High side.** Choose the already predeclared adaptive top above the turning region.  Enclose the recessive ratio by the backward continued fraction.  For `k>x`, use
+
+```math
+0<r_k=\frac{j_{k+1}(x)}{j_k(x)}\le q_k<1,
+```
+
+where
+
+```math
+q_k=
+\frac{2x}{(2k+3)+\sqrt{(2k+3)^2-4x^2}}
+```
+
+is the small fixed point of the worst-case quotient map.  Propagate downward only into the overlap region.
+
+**Glue.** At an overlap order where both rigorous intervals exclude zero, divide the upward value by the downward unnormalised value.  This interval quotient contains the exact scale factor.  Multiply the high-side vector by that scale.  Wherever both sides are available, intersect their intervals; non-overlap is a hard bug.
+
+**Very high orders.** Above the represented Miller top use
+
+```math
+|j_n(x)|\le\frac{x^n}{(2n+1)!!}
+```
+
+as a symmetric interval around zero.
+
+The two-sided construction prevents uncertainty in the recessive high-order solution from being propagated through the unstable low-order regime.
+
+## 7. Moment block
+
+The even moment vector is evaluated independently from the positive series for `i_n(1/2)`.  Its rank-one interval block is formed directly; its operator uncertainty is recorded as `epsilon_moment`.
+
+## 8. Preflight scope
+
+The preflight checks only:
+
+1. the frozen Gauss rule and active prime-power mask;
+2. two-sided Bessel vector enclosures at fixed representative nodes;
+3. interval agreement in the overlap region and against independent direct Arb Bessel values at fixed orders;
 4. even moment coefficients at low/mid/high orders;
-5. deterministic parity/phasing conventions;
-6. finiteness and enclosure overlap against an independent direct Arb Bessel evaluation for selected orders.
+5. parity/phasing and finite scalar weights.
 
-Passing the preflight gives the assembly engine status `✓[K/M]_part`; it does not change `C-even ?[O]`.
+Passing this gives only an engine status `✓[K/M]_part`.  It is not a truncated positivity result.
 
-## 10. C-even acceptance remains unchanged
+## 9. C-even acceptance unchanged
 
-C-even is proved only when a later exact-head run produces the full `1075x1075` even block enclosure and verifies
+C-even is proved only when a later exact-head run produces the full `1075x1075` even-block enclosure and verifies
 
 ```math
 A_e-10^{-35}I>0
 ```
 
-by the frozen interval-congruence / fail-closed Cholesky or LDL protocol.
+by the frozen interval-congruence / fail-closed LDL or Cholesky protocol.  A zero-containing pivot or missing error-ledger term is `undecided`.
 
-A zero-containing pivot, missing error ledger component, or non-finite special-function enclosure is `undecided`.
-
-## 11. Status
+## 10. Status
 
 ```text
 nodewise perturbation/operator-error lemma             ✓[M]
 full C-even error-ledger architecture                  ✓[M]
-C-even Bessel/moment engine preflight                  ?[K/M]_part
+pure downward interval Miller to order 0               ×[engine]
+two-sided Bessel engine preflight                      ?[K/M]_part
 full even matrix evaluation-error budget               ?[O]
 C-even finite positivity A_e>=1e-35 I                  ?[O]
 C-odd                                                  not started
