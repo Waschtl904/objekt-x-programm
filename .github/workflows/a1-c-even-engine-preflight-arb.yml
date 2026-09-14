@@ -24,7 +24,7 @@ jobs:
           git rev-parse HEAD
           git hash-object scripts/check_a1_c_even_engine_preflight_arb.py
           python scripts/check_a1_c_even_engine_preflight_arb.py | tee a1_c_even_engine_preflight.log
-          grep -q 'CERTIFIED: C-even two-sided Bessel enclosures overlap direct Arb values' a1_c_even_engine_preflight.log
+          grep -q 'CERTIFIED: C-even direct-turning-anchor Bessel enclosures overlap direct Arb values' a1_c_even_engine_preflight.log
           grep -q 'CERTIFIED: C-even moment-series sample coefficients are positive finite enclosures' a1_c_even_engine_preflight.log
           grep -q 'CERTIFIED: C-even special-function engine preflight passed' a1_c_even_engine_preflight.log
           grep -q 'FIREWALL: this is not the 1075x1075 finite positivity certificate' a1_c_even_engine_preflight.log
