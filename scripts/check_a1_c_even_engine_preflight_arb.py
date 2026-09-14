@@ -1,18 +1,8 @@
 # -*- coding: utf-8 -*-
 """Exact-head Arb preflight for the frozen A1 C-even matrix engine.
 
-This is NOT the 1075x1075 positivity certificate.  It checks the special-
-function and convention layer that the full C-even assembler will use:
-
-* frozen Gauss-40 / width<=0.4 nodes;
-* exact A1 prime-power mask {2,3,4,5,7};
-* rigorous spherical-Bessel even vectors at four fixed nodes;
-* Miller recurrence only through the numerically relevant order range;
-* a rigorous analytic enclosure for all higher orders;
-* direct-Arb overlap checks at fixed low/mid/high orders;
-* positive-series moment coefficients for e^{x/2}.
-
-No binary float enters a sign/inequality acceptance decision.
+This is NOT the 1075x1075 positivity certificate. It checks the special-
+function and convention layer of the frozen C-even backend.
 """
 
 from flint import acb, arb, ctx, fmpq
@@ -35,7 +25,6 @@ OMEGA = Q(1551)
 C = Q(1, 10)
 MAX_DEGREE = 2150
 CF_DEPTH = 192
-
 SAMPLES = ((0, 0), (1250, 20), (2500, 20), (3877, 39))
 CHECK_ORDERS = (0, 2, 100, 500, 1000, 1500, 2148)
 MOMENT_ORDERS = (0, 2, 100, 1000, 2148)
@@ -92,9 +81,23 @@ def spherical_j_direct(n: int, z: arb) -> arb:
     return z.bessel_j(Q(2 * n + 1, 2)) * (PI / (2 * z)).sqrt()
 
 
+def elementary_j0(z: arb) -> arb:
+    return z.sin() / z
+
+
+def elementary_j1(z: arb) -> arb:
+    return z.sin() / (z * z) - z.cos() / z
+
+
 def spherical_ratio_cf(n: int, z: arb, depth: int = CF_DEPTH) -> arb:
-    """Enclose j_(n+1)(z)/j_n(z) by a contracting backward CF."""
-    r = arb(0, 1)  # conservative tail box [-1,1]
+    """Enclose j_(n+1)(z)/j_n(z) by a backward continued fraction.
+
+    C-even only calls this at n > 3z/2, where the recessive spherical-Bessel
+    solution has a positive ratio below 1. The initial interval [-1,1] is
+    therefore a conservative tail box; every backward denominator is checked
+    away from zero in Arb.
+    """
+    r = arb(0, 1)
     for k in range(n + depth, n - 1, -1):
         denom = 2 * (A(k) + Q(3, 2)) - z * r
         if denom.contains(0):
@@ -106,7 +109,6 @@ def spherical_ratio_cf(n: int, z: arb, depth: int = CF_DEPTH) -> arb:
 
 
 def choose_miller_top(z: arb, degree: int) -> int:
-    """Implementation proposal followed by an exact Arb safety check."""
     top = max(32, int(1.5 * float(z.mid())) + 32)
     top = min(degree, top)
     while top < degree and not (A(top) > 3 * z / 2):
@@ -116,17 +118,19 @@ def choose_miller_top(z: arb, degree: int) -> int:
     return top
 
 
-def low_order_normalization(values: list[arb], z: arb, top: int) -> tuple[int, arb]:
-    """Normalize Miller at a well-conditioned low order."""
-    for pivot in range(min(12, top + 1)):
-        direct = spherical_j_direct(pivot, z)
-        if not values[pivot].contains(0) and not direct.contains(0):
-            return pivot, direct
-    raise RuntimeError("no nonzero low-order Miller normalization pivot found")
+def elementary_normalization(values: list[arb], z: arb) -> tuple[int, arb]:
+    """Normalize Miller with exact elementary spherical j0/j1 formulas."""
+    j0 = elementary_j0(z)
+    if not values[0].contains(0) and not j0.contains(0):
+        return 0, j0
+    j1 = elementary_j1(z)
+    if not values[1].contains(0) and not j1.contains(0):
+        return 1, j1
+    # This cannot persist for real z>0 because j0 and j1 have no common zero.
+    raise RuntimeError("both elementary j0/j1 normalization intervals contain zero")
 
 
 def analytic_j_bounds(z: arb, degree: int) -> list[arb]:
-    """Return b_n=z^n/(2n+1)!! for n=0,...,degree-1 recursively."""
     bounds = [A(1)]
     for n in range(degree - 1):
         bounds.append(bounds[-1] * z / (2 * n + 3))
@@ -134,14 +138,9 @@ def analytic_j_bounds(z: arb, degree: int) -> list[arb]:
 
 
 def spherical_j_vector_mixed(z: arb, degree: int) -> tuple[list[arb], int]:
-    """Miller through an adaptive top, analytic symmetric enclosures above."""
     top = choose_miller_top(z, degree)
-    if top == degree:
-        represented_top = degree - 1
-        recurrence_top = degree
-    else:
-        represented_top = top
-        recurrence_top = top
+    represented_top = degree - 1 if top == degree else top
+    recurrence_top = degree if top == degree else top
 
     ratio = spherical_ratio_cf(recurrence_top, z)
     values = [A(0) for _ in range(recurrence_top + 2)]
@@ -150,7 +149,7 @@ def spherical_j_vector_mixed(z: arb, degree: int) -> tuple[list[arb], int]:
     for n in range(recurrence_top, 0, -1):
         values[n - 1] = (2 * n + 1) * values[n] / z - values[n + 1]
 
-    pivot, direct = low_order_normalization(values, z, recurrence_top)
+    pivot, direct = elementary_normalization(values, z)
     scale = direct / values[pivot]
     low = [v * scale for v in values[: represented_top + 1]]
     if any(not v.is_finite() for v in low):
@@ -221,18 +220,21 @@ def main() -> None:
         if len(vals) != 1075:
             raise RuntimeError("wrong even-vector dimension")
 
-        max_rad = A(0)
-        for v in vals:
-            if v.rad() > max_rad:
-                max_rad = v.rad()
+        max_rad = max((v.rad() for v in vals), default=A(0))
 
         for n in CHECK_ORDERS:
-            recurrence_value = vals[n // 2]
+            value = vals[n // 2]
             direct = spherical_j_direct(n, x)
-            if not recurrence_value.overlaps(direct):
+            if not value.overlaps(direct):
                 raise RuntimeError(
                     f"direct/mixed Bessel mismatch panel={panel}, node={node_index}, n={n}"
                 )
+
+        # Explicitly check elementary normalization against direct Arb Bessel.
+        if not elementary_j0(x).overlaps(spherical_j_direct(0, x)):
+            raise RuntimeError("elementary/direct j0 mismatch")
+        if not elementary_j1(x).overlaps(spherical_j_direct(1, x)):
+            raise RuntimeError("elementary/direct j1 mismatch")
 
         print(
             "sample", panel, node_index,
@@ -255,7 +257,7 @@ def main() -> None:
         raise RuntimeError("even Legendre Fourier phase convention failed")
 
     print("CERTIFIED: frozen Gauss-40 / panel-0.4 sample nodes are valid")
-    print("CERTIFIED: C-even adaptive Miller/tail enclosures overlap independent direct Arb values")
+    print("CERTIFIED: C-even elementary-normalized Miller/tail enclosures overlap direct Arb values")
     print("CERTIFIED: C-even moment-series sample coefficients are positive finite enclosures")
     print("CERTIFIED: C-even special-function engine preflight passed")
     print("FIREWALL: this is not the 1075x1075 finite positivity certificate")
