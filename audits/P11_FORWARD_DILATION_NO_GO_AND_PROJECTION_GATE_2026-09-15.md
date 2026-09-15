@@ -1,7 +1,7 @@
 # P11 Audit — Forward-dilation no-go and projection gate
 
 **Datum:** 15. September 2026  
-**Basis:** Critical-half Green/tree, COMMON-JUMP diagonal finite part, Poisson/Gamma harmonic bridge, Hard-Audit 524bc5f.  
+**Basis:** Critical-half Green/tree, COMMON-JUMP diagonal finite part, Poisson/Gamma harmonic bridge, Hard-Audit `524bc5f`.  
 **Rolle:** theorem-level necessity statements fuer jede nichtzirkulaere positive Dilation.  
 **Registry:** unveraendert.  
 **Nonclaim:** keine Konstruktion von Object X, kein all-window NP-GAP, kein RH-Beweis, keine Publikationsneuheit.
@@ -18,26 +18,27 @@ Die zentrierten Prime- und Gamma-Kanaele sind **nicht einzeln positive Residuen*
 - ein zentrierter Gamma-Modus ist strikt negativ;
 - ein Schur-Komplement eines positiven Blocks ist dagegen positiv.
 
-Daher kann eine exakte positive Object-X-Dilation die zentrierten Prime-/Gamma-Kanaele nicht als orthogonale, voneinander unabhaengige positive Schur-Komplemente realisieren. Die Zentrierung/Renormierung muss **nach gemeinsamer Kopplung** geschehen.
+Daher kann eine exakte positive Object-X-Dilation die zentrierten Prime-/Gamma-Kanaele nicht als voneinander unabhaengige positive Schur-Komplemente realisieren. Zentrierung/Renormierung muss erst **nach einer gemeinsamen Kopplung** erfolgen oder die NULLPOL-/Range-Geometrie bereits in die Boundary-Struktur eingebaut sein.
 
-Zugleich ist eine formale Blockmatrix, deren Positivitaet bereits aequivalent zu NP-GAP ist, kein Fortschritt. Das fuehrt zu einem expliziten Forward-Kriterium: die Hilbertraeume, Feature-Maps und Shorting-Unterraeume muessen vor der Zielpositivitaet aus OU/tree, Green-Randtransfer, COMMON-JUMP-Inzidenzen und der Gamma-Leiter definiert sein.
+Zugleich ist eine formale Blockmatrix, deren Positivitaet bereits aequivalent zu NP-GAP ist, kein Fortschritt. Das fuehrt zu einem expliziten Forward-Kriterium: Hilbertraeume, Feature-Maps, Shorting-Unterraeume und connecting maps muessen vor der Zielpositivitaet aus der vorhandenen Geometrie definiert sein.
 
 Status:
 
 ```text
-prime symmetric/antisymmetric signature identity       ✓[M]
-prime centered symbol changes sign                       ✓[M]
-gamma centered mode is strictly negative                 ✓[M]
-channelwise centered positive-Schur realization no-go    ✓[M]
-canonical block positivity is exactly NP-GAP             ✓[M]
-exterior new-prime diagonal cancellation                 ✓[M]
-forward radius-consistent projection/dilation exists     ?[O]
-all-window NP-GAP / Object X / RH                        ?[O]
+prime symmetric/antisymmetric signature identity          ✓[M]
+prime centered symbol changes sign                          ✓[M]
+gamma centered mode is strictly negative                    ✓[M]
+channelwise centered positive-Schur realization no-go       ✓[M]
+canonical block positivity is exactly NP-GAP                ✓[M]
+cutoff-gauge diagonal cancellation                          ✓[M]
+exterior absorption under split-compatible shorting         ✓[M]
+forward radius-consistent projection/dilation exists        ?[O]
+all-window NP-GAP / Object X / RH                           ?[O]
 ```
 
 ---
 
-# 1. Ein Prime-Atom besitzt eine exakte Krein-artige Signatur
+# 1. Ein Prime-Atom besitzt eine exakte Signatur
 
 Fuer
 
@@ -53,7 +54,7 @@ a=T_{t/2}v,
 b=T_{-t/2}v,
 ```
 
-und die symmetrische/antisymmetrische Kombination
+und
 
 ```math
 s=\frac{a+b}{\sqrt2},
@@ -65,21 +66,11 @@ Da Translationen unitaer sind,
 
 ```math
 \|a\|=\|b\|=\|v\|,
-```
-
-und die unitare Zweikanaltransformation liefert
-
-```math
+\qquad
 \|s\|^2+\|d\|^2=2\|v\|^2.
 ```
 
-Aus
-
-```math
-K_tv=a-b=\sqrt2\,d
-```
-
-folgt exakt
+Aus `K_tv=a-b=sqrt(2)d` folgt exakt
 
 ```math
 \boxed{
@@ -98,60 +89,48 @@ w_n(\|K_tv\|^2-2\|v\|^2)
 }
 ```
 
-Die Signatur entsteht bereits vor jeder Fouriertransformation.
+Die Indefinitheit ist damit bereits in der Zwei-Shift-Geometrie sichtbar.
 
 ---
 
-# 2. Fourierseitig: der Prime-Defekt ist wirklich indefinit
+# 2. Fourierseitig: der Prime-Defekt ist vorzeichenwechselnd
 
-Setze fuer `q in (0,1)`
+Fuer `0<q<1` ist
 
 ```math
 P_q^{\mathbb D}(\theta)
 =\frac{1-q^2}{1-2q\cos\theta+q^2}.
 ```
 
-Der gesamte zentrierte Prime-Turm besitzt bis auf den positiven Faktor `log p` das Symbol
+Der zentrierte gesamte `p`-Turm besitzt bis auf den positiven Faktor `log p` das Symbol
 
 ```math
 1-P_q^{\mathbb D}(\theta).
 ```
 
-Bei `theta=0` gilt
+Dabei
 
 ```math
 P_q^{\mathbb D}(0)=\frac{1+q}{1-q}>1,
 ```
 
-also
+aber
 
 ```math
-1-P_q^{\mathbb D}(0)<0.
+P_q^{\mathbb D}(\pi)=\frac{1-q}{1+q}<1.
 ```
 
-Bei `theta=pi` gilt dagegen
+Also
 
 ```math
-P_q^{\mathbb D}(\pi)=\frac{1-q}{1+q}<1,
+\boxed{1-P_q^{\mathbb D}\text{ wechselt das Vorzeichen}.}
 ```
 
-also
-
-```math
-1-P_q^{\mathbb D}(\pi)>0.
-```
-
-Damit ist
-
-```math
-\boxed{1-P_q^{\mathbb D}\text{ vorzeichenwechselnd}.}
-```
-
-Insbesondere ist der zugehoerige Multiplikationsoperator auf dem vollen Rand-Hilbertraum weder positiv noch negativ.
+Der entsprechende Multiplikationsoperator auf dem vollen Rand-Hilbertraum ist daher indefinit.
 
 ---
 
-# 3. Gamma: nach Moden-Zentrierung bleibt ein strikt negativer Kern
+# 3. Gamma: der einzeln zentrierte Modus ist strikt negativ
 
 Der positive Gamma-Modus lautet
 
@@ -161,7 +140,7 @@ A_\mu(z)
 \qquad \mu>0.
 ```
 
-Seine Diagonal-/Hochfrequenzmasse ist `2/mu`. Nach deren Abzug bleibt
+Seine Hochfrequenz-/Diagonalmasse ist `2/mu`. Nach deren Abzug bleibt
 
 ```math
 \boxed{
@@ -172,13 +151,11 @@ A_\mu(z)-\frac2\mu
 
 fuer jedes reelle `z`.
 
-Dies ist exakt der negative Half-plane-Poisson-Kern aus dem harmonischen Bridge-Audit.
-
-Folglich kann auch ein einzelner **zentrierter** Gamma-Modus nicht als positives Residuum eines unabhaengigen positiven Kanals gelesen werden.
+Das ist genau der negative Half-plane-Poisson-Kern des harmonischen Bridge-Audits.
 
 ---
 
-# 4. Positiver Schur-Komplement-Satz
+# 4. Positiver Schur-Komplement-Satz und Channelwise No-Go
 
 Seien `H,K` Hilbertraeume und
 
@@ -193,49 +170,38 @@ B&C
 \qquad C\succ0.
 ```
 
-Dann ist das Schur-Komplement
+Dann ist
 
 ```math
-\boxed{
-S=A-B^*C^{-1}B\succeq0.
-}
+\boxed{A-B^*C^{-1}B\succeq0.}
 ```
 
-Daher kann weder der vorzeichenwechselnde Prime-Defekt `1-P_q^D` noch der strikt negative zentrierte Gamma-Modus als **eigenstaendiges** Schur-Komplement eines positiven Blocks auf dem jeweiligen vollen Boundary-Kanal auftreten.
+Folglich kann weder der vorzeichenwechselnde Prime-Defekt noch der strikt negative zentrierte Gamma-Modus als **eigenstaendiges** Schur-Komplement eines positiven Blocks auf seinem vollen Boundary-Kanal auftreten.
 
-## Korollar 4.1 — Channelwise no-go
+Damit ist insbesondere eine Dilation ausgeschlossen, die jeden zentrierten Prime-/Gamma-Kanal separat durch einen positiven Block realisiert und diese Resultate danach nur orthogonal direkt summiert.
 
-Eine Dilation der Form
+Eine erfolgreiche Konstruktion muss vor dem Shorting mindestens eine der folgenden Strukturen benutzen:
 
 ```text
-orthogonale direkte Summe unabhaengiger Prime-Bloecke
-+
-orthogonale direkte Summe unabhaengiger Gamma-Bloecke
+- Cross-channel coupling;
+- NULLPOL / Ran(L_{1/2}) bereits auf Boundary-Ebene;
+- gemeinsame Prime-/Archimedes-Hub- oder Randvariablen;
+- globale finite-part/Quotienten-Renormierung der unzentrierten positiven Modi.
 ```
 
-bei der jeder zentrierte Kanal separat durch ein positives Schur-Komplement reproduziert werden soll, ist unmoeglich.
-
-Eine erfolgreiche positive Dilation muss daher mindestens eine der folgenden Strukturen benutzen:
-
-1. Kopplung zwischen verschiedenen Kanaelen vor dem Shorting;
-2. die NULLPOL-/Range-Bedingung bereits in der Boundary-Geometrie;
-3. gemeinsame Prime-/Archimedes-Hub- oder Randvariablen;
-4. eine globale finite-part/Quotientenoperation nach Aufbau der unzentrierten positiven Geometrie.
-
-Dies ist genau die Stelle, an der Nichtorthogonalitaet nicht Dekoration, sondern notwendig wird.
+Nichtorthogonalitaet ist hier also keine Dekoration, sondern durch das Vorzeichenproblem erzwungen.
 
 ---
 
-# 5. Warum eine beliebige Blockmatrix zirkulaer waere
+# 5. Eine beliebige Blockmatrix waere zirkulaer
 
 Auf einem festen Fenster gilt auf NULLPOL
 
 ```math
-Q_W(v)
-=\langle v,(X_a^*X_a-\Gamma_aI)v\rangle.
+Q_W(v)=\langle v,(X_a^*X_a-\Gamma_aI)v\rangle.
 ```
 
-Man kann formal die Blockmatrix
+Formal kann man setzen
 
 ```math
 \mathcal B_a
@@ -243,16 +209,10 @@ Man kann formal die Blockmatrix
 \begin{pmatrix}
 X_a^*X_a&\sqrt{\Gamma_a}I\\
 \sqrt{\Gamma_a}I&I
-\end{pmatrix}
+\end{pmatrix}.
 ```
 
-hinschreiben. Ihr Schur-Komplement bezueglich des unteren `I` ist exakt
-
-```math
-X_a^*X_a-\Gamma_aI.
-```
-
-Aber nach dem Schur-Satz gilt ebenso exakt
+Das Schur-Komplement des unteren `I` ist `X_a^*X_a-Gamma_a I`, und daher
 
 ```math
 \boxed{
@@ -262,92 +222,117 @@ X_a^*X_a-\Gamma_aI\succeq0.
 }
 ```
 
-Die Positivitaet dieser Blockmatrix ist daher **nur eine Umschreibung von NP-GAP** und keine vorwaerts definierte Dilation.
-
-Dasselbe Problem trifft jede Konstruktion, bei der die fehlenden Blockeintraege erst durch eine Faktorisierung des bereits als positiv vorausgesetzten Zieloperators definiert werden.
+Die Positivitaet dieser Blockmatrix ist nur eine Umschreibung von NP-GAP. Dasselbe gilt fuer jede Konstruktion, deren fehlende Features oder Blockeintraege erst aus einer vorausgesetzten positiven Faktorisierung des Zieloperators definiert werden.
 
 ---
 
 # 6. Forward-admissibility firewall
 
-Eine Dilation zaehlt nur dann als echter Object-X-Kandidat, wenn vor jeder Benutzung von Weil-/NP-GAP-Positivitaet explizit gegeben sind:
+Eine Dilation zaehlt nur dann als echter Forward-Kandidat, wenn **vor** jeder Benutzung von Weil-/NP-GAP-Positivitaet explizit gegeben sind:
 
 ```text
-1. ein Hilbertraum K_a;
+1. Hilbertraeume K_a;
 2. Feature-Maps aus OU/tree, Green propagation, K_t-Inzidenzen und Gamma-Moden;
-3. ein kanonischer Shorting-/Boundary-Unterraum M_a;
-4. alle connecting maps fuer a<b;
-5. die Identitaet des Schur-Komplements mit Q_W.
+3. kanonische Boundary-/Shorting-Unterraeume M_a;
+4. connecting maps fuer a<b;
+5. die algebraische Identitaet des resultierenden Schur-Komplements mit Q_W.
 ```
 
-Erst danach darf die manifest positive Gramstruktur von `K_a` als Positivitaetsinput benutzt werden.
-
-Insbesondere ist eine nachtraegliche Wahl von `M_a`, die nur dadurch charakterisiert wird, dass
+Eine nachtraegliche Wahl von `M_a`, die nur dadurch charakterisiert wird, dass
 
 ```math
 F_a^*P_{M_a}F_a=\Gamma_aI,
 ```
 
-ohne eine unabhaengige geometrische Definition von `M_a` kein Fortschritt: die Existenz einer solchen Wahl traegt bereits den Lower-Frame-Inhalt.
+ist ohne unabhaengige geometrische Definition von `M_a` kein Fortschritt: die Existenz einer solchen Wahl traegt bereits den Lower-Frame-Inhalt.
 
 ---
 
-# 7. Radius-Konsistenz erzwingt Exterior-Mode-Absorption
+# 7. Cutoff-Gauge und ein praeziser Exterior-Absorptionssatz
 
-Sei `0<a<b` und `i_{a,b}` die Nullfortsetzungs-Einbettung vom kleineren in das groessere Fenster.
-
-Betrachte einen Prime-Power-Atom mit
+Sei `0<a<b` und `i_{a,b}` die Nullfortsetzungs-Einbettung. Fuer einen neu eintretenden Prime-Power-Atom
 
 ```math
-2a<t=\log n\le2b.
+2a<t=\log n\le2b
 ```
 
-Auf einem alten Vektor `v` mit Traeger in `[-a,a]` sind die beiden verschobenen Traeger disjunkt. Daher
+sind auf jedem alten Vektor die beiden verschobenen Traeger disjunkt. Daher
 
 ```math
-\boxed{
-\|K_t i_{a,b}v\|^2=2\|v\|^2.
-}
+\boxed{\|K_t i_{a,b}v\|^2=2\|v\|^2.}
 ```
 
-Somit ist der neue positive Featurebeitrag auf dem alten Raum exakt
+Der neue positive Featurebeitrag ist auf dem alten Raum exakt `2w_n I`, und die COMMON-JUMP-Schwelle steigt um genau `2w_n`. Folglich
 
 ```math
-2w_n I,
+\boxed{Q_{W,b}(i_{a,b}v)=Q_{W,a}(v).}
 ```
 
-waehrend die neue COMMON-JUMP-Schwelle um exakt denselben Betrag `2w_n` steigt.
+Dies ist die exakte Cutoff-Gauge-Kovarianz.
 
-Also
+## Satz 7.1 — Exterior-Absorption unter split-kompatiblem Shorting
+
+Angenommen, ein Forward-Modell besitzt fuer `a<b` eine orthogonale Feature-Erweiterung
 
 ```math
-\boxed{
-Q_{W,b}(i_{a,b}v)=Q_{W,a}(v).
-}
+\mathcal K_b
+=J_{a,b}\mathcal K_a\oplus\mathcal E_{a,b},
 ```
 
-Dies ist die bekannte Cutoff-Gauge-Kovarianz, jetzt aber als notwendige Bedingung an jede Forward-Dilation gelesen.
+mit
 
-Nimmt man eine manifest positive, orthogonale Feature-Erweiterung von `a` nach `b`, so haben die neu hinzukommenden Exterior-Features auf dem alten Raum zunaechst **null zentriertes Residuum**. In einem Shorting-/Projektionsmodell muessen sie daher auf alten Vektoren vollstaendig vom kanonischen Shorting-Anteil absorbiert werden; erst wenn der wachsende Traeger die beiden Shiftbilder ueberlappen laesst, darf ein nichttrivialer Residualkanal entstehen.
+```math
+F_b i_{a,b}
+=J_{a,b}F_a\oplus E_{a,b},
+```
 
-Dies liefert ein konkretes Testkriterium fuer Kandidaten:
+und die Shorting-Projektionen sind auf dem alten Block kompatibel:
 
-> **Exterior-before-overlap = pure gauge/shorted mode; interaction-after-overlap = residual geometry.**
+```math
+\boxed{P_bJ_{a,b}=J_{a,b}P_a.}
+```
 
-Eine Kandidatenkonstruktion, die dieses Verhalten unter `a<b` nicht exakt reproduziert, kann die COMMON-JUMP-Cutoff-Kovarianz nicht sein.
+Ferner sei die positive Residualform
+
+```math
+Q_a(v)=\|(I-P_a)F_av\|^2,
+\qquad
+Q_b(w)=\|(I-P_b)F_bw\|^2.
+```
+
+Dann zerfaellt fuer alte Vektoren wegen der Orthogonalitaet und Projektionskompatibilitaet
+
+```math
+Q_b(i_{a,b}v)
+=Q_a(v)+\|(I-P_b)E_{a,b}v\|^2.
+```
+
+Erzwingt die COMMON-JUMP-Gauge-Kovarianz `Q_b(i v)=Q_a(v)` fuer alle alten `v`, so folgt
+
+```math
+\boxed{(I-P_b)E_{a,b}=0.}
+```
+
+Also liegt jedes neue Exterior-Feature auf dem alten Raum vollstaendig im geshorteten Anteil.
+
+### Firewall
+
+Ohne die explizite Kompatibilitaetsannahme `P_bJ=JP_a` folgt die einzelne Exterior-Absorption **nicht** allein aus Gauge-Kovarianz: eine Aenderung des alten Shorting-Anteils koennte positive neue Residualenergie kompensieren. Der Satz ist deshalb bewusst nur fuer split-kompatible Forward-Systeme formuliert.
+
+In dieser Klasse entsteht ein scharfes Kandidatenkriterium:
+
+> **Exterior-before-overlap = shorted/pure-gauge mode; interaction-after-overlap = moeglicher Residualkanal.**
 
 ---
 
 # 8. Konsequenz fuer die Suchstrategie
-
-Die naechste Front ist damit wesentlich enger.
 
 Nicht suchen:
 
 ```text
 - positive Realisierung jedes zentrierten Prime-Kanals fuer sich;
 - positive Realisierung jedes zentrierten Gamma-Modus fuer sich;
-- beliebige Schur-Komplemente, deren Positivitaet NP-GAP nur umformuliert;
+- Blockmatrizen, deren Positivitaet NP-GAP nur umschreibt;
 - window-by-window Faktorisierungen ohne connecting maps.
 ```
 
@@ -358,7 +343,7 @@ Suchen:
 - aufgebaut aus den unzentrierten positiven COMMON-JUMP-Moden;
 - mit kanonischer globaler Diagonal-/finite-part-Renormierung;
 - mit NULLPOL bereits als Range/Boundary-Bedingung;
-- und mit exakter Exterior-Mode-Absorption unter Fenstereinbettungen.
+- und mit explizit gepruefter Radius-Kompatibilitaet.
 ```
 
 Ein solcher Kandidat waere ein echter Forward-Object-X-Mechanismus. Ein No-Go fuer diese enger definierte Klasse waere ebenfalls theorem-level Fortschritt.
