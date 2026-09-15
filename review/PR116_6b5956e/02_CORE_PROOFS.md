@@ -1,0 +1,151 @@
+# PR #116 — Core proof map
+
+This file is **not a second proof source**. It points to the frozen originals at
+
+`6b5956e69dfcb8124e8e31083613fd89c5f35fb3`.
+
+If this map and an original audit ever disagree, the original audit controls until corrected by an explicit follow-up commit.
+
+## A. Critical-half range / Green / P11 ledger
+
+Source:
+
+`audits/P11_CRITICAL_HALF_GREEN_TREE_BRIDGE_2026-09-13.md`
+
+Permanent source URL:
+
+`https://github.com/Waschtl904/objekt-x-programm/blob/6b5956e69dfcb8124e8e31083613fd89c5f35fb3/audits/P11_CRITICAL_HALF_GREEN_TREE_BRIDGE_2026-09-13.md`
+
+Review targets:
+
+- §1: `L_{1/2}=-∂_x²+1/4` and Green kernel `e^{-|x-y|/2}`.
+- §2: exact compact-window range identity
+  `D_NP,a=L_{1/2}C_c^∞(-a,a)`.
+- §§3–5: logarithmic prime star tree and exact Gram realization of the **windowless P11 prime-index ledger**.
+- §6: OU innovation decomposition / hub-plus-tail factorization.
+
+Primary attack:
+
+- verify both inclusions in the range theorem;
+- verify no support leakage at the endpoints;
+- verify same-prime and cross-prime coefficients independently;
+- enforce the ledger/operator firewall.
+
+## B. Gamma / Poisson / harmonic bridge
+
+Source:
+
+`audits/P11_PRIME_AR1_POISSON_GAMMA_HARMONIC_BRIDGE_2026-09-13.md`
+
+Permanent source URL:
+
+`https://github.com/Waschtl904/objekt-x-programm/blob/6b5956e69dfcb8124e8e31083613fd89c5f35fb3/audits/P11_PRIME_AR1_POISSON_GAMMA_HARMONIC_BRIDGE_2026-09-13.md`
+
+Review targets:
+
+- expansion with `μ_m=2m+1/2`;
+- exact appearance of `μ_0=1/2`;
+- normalization of each resolvent kernel;
+- separation between exact algebraic identities and interpretive synthesis.
+
+## C. Pointwise scattering-positivity no-go
+
+Source:
+
+`audits/P11_SCATTERING_POINTWISE_POSITIVITY_NOGO_2026-09-13.md`
+
+Permanent source URL:
+
+`https://github.com/Waschtl904/objekt-x-programm/blob/6b5956e69dfcb8124e8e31083613fd89c5f35fb3/audits/P11_SCATTERING_POINTWISE_POSITIVITY_NOGO_2026-09-13.md`
+
+Review targets:
+
+- exact value/sign of `τ_a(0)`;
+- logarithmic growth of the archimedean term;
+- boundedness of the finite prime contribution for fixed `a`;
+- scope of the conclusion: pointwise multiplier positivity only, not all compressed/operator positivity mechanisms.
+
+## D. Rank-2 Paley–Wiener shorting / trace class
+
+Source:
+
+`audits/P11_NP_GAP_PROLATE_COMPRESSION_2026-09-13.md`
+
+Permanent source URL:
+
+`https://github.com/Waschtl904/objekt-x-programm/blob/6b5956e69dfcb8124e8e31083613fd89c5f35fb3/audits/P11_NP_GAP_PROLATE_COMPRESSION_2026-09-13.md`
+
+Review targets:
+
+- §3: definition of `N_a={F∈PW_a:F(±i/2)=0}` and finite-window multiplier;
+- §4: Gram matrix
+  `(1/π)[[sinh a,a],[a,sinh a]]` and exact shorted kernel;
+- §5: positivity, trace class, and exact trace formula for the negative block;
+- §6: Birman–Schwinger reduction and its precise coercivity assumptions.
+
+Domain firewall:
+
+Do not treat `(z²+1/4)PW_a` as an unrestricted Hilbert-space equality. The clean theorem-level range statement is on the smooth compactly supported test class; the Paley–Wiener NULLPOL space is defined by the two evaluations.
+
+## E. Trace-minus-Ritz certificate
+
+Source:
+
+`audits/P11_NP_PROLATE_TRACE_RITZ_CERTIFICATE_2026-09-13.md`
+
+Permanent source URL:
+
+`https://github.com/Waschtl904/objekt-x-programm/blob/6b5956e69dfcb8124e8e31083613fd89c5f35fb3/audits/P11_NP_PROLATE_TRACE_RITZ_CERTIFICATE_2026-09-13.md`
+
+Review targets:
+
+- §1: exact trace formula;
+- §2: min-max derivation
+  `λ1(D)≤tr D-Σ_{j=2}^m θ_j`;
+- §3: parity splitting and normalization;
+- §§4–6: all quoted floating values are diagnostics only; verify that theorem promotion does not depend on them.
+
+## F. Rigorous Arb candidate certificate
+
+Checker:
+
+`scripts/check_np_prolate_1_arb.py`
+
+Permanent source URL:
+
+`https://github.com/Waschtl904/objekt-x-programm/blob/6b5956e69dfcb8124e8e31083613fd89c5f35fb3/scripts/check_np_prolate_1_arb.py`
+
+Workflow:
+
+`.github/workflows/np-prolate-1-arb.yml`
+
+Permanent workflow URL:
+
+`https://github.com/Waschtl904/objekt-x-programm/blob/6b5956e69dfcb8124e8e31083613fd89c5f35fb3/.github/workflows/np-prolate-1-arb.yml`
+
+Review targets:
+
+- exact-decimal inputs really enter Arb as exact point balls;
+- root brackets are not trusted as unique roots;
+- complement sign is interval-certified;
+- every omitted root bracket is charged to an explicit trace upper error;
+- tail positivity is certified independently;
+- parity-shortened Gram is certified positive;
+- the constructed inner operator really satisfies `D_inner≤D`;
+- `U G-A_inner>0` by interval Cholesky really implies the stated Ritz upper control;
+- final inequality uses an upper trace bound and certified finite-dimensional information in the correct direction;
+- PASS strings can only be emitted after all proof decisions have succeeded.
+
+## G. Supporting audits
+
+The remaining PR #116 files are supporting structure and should be audited only after A–F:
+
+- `audits/P11_COMMON_JUMP_DIAGONAL_FINITE_PART_2026-09-13.md`
+- `audits/P11_CONTINUOUS_OU_MOMENT_QUOTIENT_2026-09-13.md`
+- `audits/P11_CRITICAL_HALF_POLE_TRANSFER_2026-09-13.md`
+- `audits/P11_CRITICAL_HALF_RIGIDITY_AND_SCHUR_GAP_2026-09-13.md`
+- `audits/P11_CRIT_HALF_COMPRESS1_BAD_CHANNEL_POSITIVITY_2026-09-13.md`
+- `audits/P11_EULER_GAMMA_SCATTERING_PHASE_2026-09-13.md`
+- `audits/P11_PRIME_THRESHOLD_BAD_CHANNEL_2026-09-13.md`
+
+They are not required to understand the narrow exact-head `NP-PROLATE-1` certification chain.
