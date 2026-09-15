@@ -1,0 +1,208 @@
+# P11 Audit — Continuous Euler product and Critical-half allpass
+
+**Datum:** 15. September 2026  
+**Branch:** `research/critical-half-green-tree-bridge-2026-09-13`  
+**Registry:** unveraendert.  
+**Nonclaim:** kein RH-/Object-X-Beweis; keine Publikationsneuheit behauptet.
+
+## 0. Result
+
+Let
+
+```math
+\rho(h)=\sum_{m\ge1}\frac{h^{m-1}}{m!\zeta(m+1)}
+=\frac{d}{dh}R(e^h),
+```
+
+where `R` is the classical Riemann prime-counting approximation (Gram series). The previous audit proved
+
+```math
+\int_0^\infty\rho(h)
+\sum_{k\ge1}h e^{-kh/2}\delta_{kh}(dt)\,dh
+=(e^{t/2}-e^{-t/2})dt.
+```
+
+Taking the shifted Laplace transform gives, for `Re S>1`,
+
+```math
+\boxed{
+\int_0^\infty \rho(h)\frac{h}{e^{Sh}-1}\,dh
+=\frac1{S(S-1)}.
+}
+```
+
+Define the positive continuous Euler product by
+
+```math
+\boxed{
+Z_0(S)
+:=
+\exp\left(
+\int_0^\infty\rho(h)
+\log\frac1{1-e^{-Sh}}\,dh
+\right),
+\qquad \Re S>1.
+}
+```
+
+Then
+
+```math
+\boxed{Z_0(S)=\frac{S}{S-1}.}
+```
+
+Consequently, after the critical shift `S=1/2+s`,
+
+```math
+\boxed{
+Z_0(1/2+s)^{-1}
+=\frac{s-1/2}{s+1/2}.
+}
+```
+
+This is the elementary right-half-plane Blaschke/allpass factor of the Critical-half first-order state.
+
+Status:
+
+```text
+continuous Euler product identity                 ✓[M]
+critical-half inverse allpass                     ✓[M]
+positive Riemann-R cell background                ✓[M]
+relative discrete/continuous determinant view     ✓[M]_part
+positive global cross-prime storage               ?[O]
+```
+
+---
+
+## 1. Laplace transform of the positive cell continuum
+
+For the cell
+
+```math
+\nu_h(dt)=\sum_{k\ge1}h e^{-kh/2}\delta_{kh}(dt),
+```
+
+and shifted parameter `s=S-1/2`,
+
+```math
+\int e^{-s t}d\nu_h(t)
+=\sum_{k\ge1}h e^{-S k h}
+=\frac{h}{e^{Sh}-1}.
+```
+
+The continuum-cell identity therefore gives
+
+```math
+\int_0^\infty \rho(h)\frac{h}{e^{Sh}-1}dh
+=\int_0^\infty e^{-s t}(e^{t/2}-e^{-t/2})dt.
+```
+
+Since `s=S-1/2`, the right side is
+
+```math
+\frac1{S-1}-\frac1S
+=\frac1{S(S-1)}.
+```
+
+All integrands on the cell side are positive for real `S>1`; complex extension follows by absolute convergence on `Re S>1`.
+
+---
+
+## 2. Integration to the continuous Euler product
+
+For `Re S>1`, differentiation under the integral gives
+
+```math
+\frac{d}{dS}\log Z_0(S)
+=-\int_0^\infty\rho(h)\frac{h}{e^{Sh}-1}dh
+=-\frac1{S(S-1)}.
+```
+
+But
+
+```math
+\frac{d}{dS}\log\frac{S}{S-1}
+=-\frac1{S(S-1)}.
+```
+
+Both logarithms tend to zero as real `S -> +infinity`; hence
+
+```math
+Z_0(S)=S/(S-1).
+```
+
+Near `h=0`, `rho(h)` is bounded and the logarithmic singularity in the integrand is integrable. For large `h`, the Gram/Riemann-R density has the expected exponential scale, while `Re S>1` supplies exponential decay; the differentiated identity also supplies a direct convergence control.
+
+---
+
+## 3. Relative Euler determinant
+
+For `Re S>1`, the ordinary Euler product is
+
+```math
+\zeta(S)=\prod_p(1-e^{-S\log p})^{-1}.
+```
+
+Thus
+
+```math
+\boxed{
+\frac{\zeta(S)}{Z_0(S)}
+=\frac{S-1}{S}\zeta(S).
+}
+```
+
+This can be read as a relative discrete-versus-continuum Euler product:
+
+```text
+discrete base spacings:   h=log p
+continuous background:    rho(h) dh = d R(e^h)
+local cell factor:         (1-e^{-S h})^{-1}.
+```
+
+The completed xi function can consequently be written
+
+```math
+\boxed{
+\xi(S)
+=\frac12 S^2\pi^{-S/2}\Gamma(S/2)
+\frac{\zeta(S)}{Z_0(S)}.
+}
+```
+
+This is only an exact reorganization of classical factors, not a new xi formula.
+
+---
+
+## 4. Critical-half allpass
+
+Put `S=1/2+s`. Then
+
+```math
+Z_0(1/2+s)^{-1}
+=\frac{s-1/2}{s+1/2}.
+```
+
+For `Re s>0`,
+
+```math
+|s-1/2|<|s+1/2|,
+```
+
+so the factor is Schur; for `s=i omega` its modulus is one. It is therefore the canonical one-pole lossless/allpass transfer associated with the Critical-half first-order state.
+
+This gives a positive-system meaning to the smooth pole compensator: division by the full positive Riemann-R continuum Euler background collapses to one lossless Critical-half boundary scatterer.
+
+---
+
+## 5. Firewall
+
+This does not make the discrete prime Euler product a Schur function on the whole shifted right half-plane. A normalized local cell
+
+```math
+F_h(s)=\frac{1-e^{-h/2}}{1-e^{-(s+1/2)h}}
+```
+
+is Schur for `Re s>0`, but the infinite orthogonal product over prime spacings carries a divergent normalization and its natural Euler/log-derivative realization is only directly convergent in the classical half-plane `Re s>1/2` (equivalently `Re S>1`).
+
+Hence a direct orthogonal sum/product of local passive cells cannot supply the needed all-right-half-plane Object-X realization. A nontrivial cross-prime / discrete-continuum coupling remains necessary.
