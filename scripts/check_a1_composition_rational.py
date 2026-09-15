@@ -102,6 +102,24 @@ def main() -> None:
     require(delta < tau and (mu-delta)*(tau-delta) > b2,
             "shifted Schur test at delta=9e-36")
 
+    # A midpoint need not inherit the exact scalar bound. The all-shard
+    # scalar budget is sum(e_alpha)*(Bmax+2E)^2<1e-39. Its factor>1/2,
+    # hence sum(e_alpha)<2e-39 and sum(abs(alpha_mid))<18613.
+    require(2/pi_hi > F(1, 2), "scalar-error conversion factor>1/2")
+    require(12*1551+F(2, 10**39) < 18613, "safe alpha midpoint mass<18613")
+    E, Bmid = F(1, 10**43), F(4, 5)+F(1, 10**43)
+    require(2/pi_lo < F(4, 5)**2, "Bmax=sqrt(2/pi)<4/5")
+    vector = 18613*(2*Bmid*E+E*E)
+    require(vector < F(3, 10**39), "repaired midpoint-mass vector budget<3e-39")
+    require(vector+F(1, 10**39) < F(4, 10**39), "repaired total evaluation budget<4e-39")
+    q, qvec = F(1, 2**161), F(33, 2**161)
+    require(1075 < 33**2, "dyadic vector radius<33 half-ulps")
+    # Both parity moment vectors have norm<2. Moment target-ball rounding
+    # is guarded directly by the unchanged builders' half-ulp test.
+    quant = 155120*q*(Bmid+qvec)**2+18613*(2*Bmid*qvec+qvec*qvec)
+    quant += 2*(4*qvec+qvec*qvec)
+    require(quant < F(4, 10**43), "independent both-parity dyadic budget<4e-43")
+
     ledger = F(4, 10**38)+F(4, 10**39)+F(4, 10**43)
     require(ledger == F(440004, 10**43) < F(45, 10**39), "finite ledger sum=4.40004e-38<4.5e-38")
     shift, scale = F(1005, 10**38), 10**38*2**480
