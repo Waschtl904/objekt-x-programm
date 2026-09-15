@@ -1,0 +1,503 @@
+# P11 Audit — Critical-half finite-part discrepancy transfer
+
+**Datum:** 15. September 2026  
+**Branch:** `research/critical-half-green-tree-bridge-2026-09-13`  
+**Rolle:** theorem-level Abel-/Finite-Part-Transferform der Prime-Diskrepanz.  
+**Registry:** unveraendert.  
+**Nonclaim:** kein Positivitaets-, Object-X-, RH- oder Publikationsneuheitsclaim.
+
+---
+
+## 0. Kurzurteil
+
+Die im vorherigen Audit eingefuehrte signierte Prime-Diskrepanz
+
+```math
+\Delta
+=
+\sum_{n=p^k}\frac{\Lambda(n)}{\sqrt n}\delta_{\log n}
+-e^{t/2}dt
+```
+
+besitzt neben dem absolut konvergenten OU-Hamiltonian-Tail mit Rate `1` einen kanonischen **kritischen Halb-Raten-Tail**. Prime- und Continuum-Anteil divergieren bei dieser Rate einzeln, aber ihre Abel-Differenz besitzt fuer jedes feste `L>=0` eine explizite endliche Grenze.
+
+Definiere fuer `epsilon>0`
+
+```math
+J_{\Delta,\varepsilon}(L)
+=
+\int_{[L,\infty)}
+ e^{-(1/2+\varepsilon)(t-L)}d\Delta(t).
+```
+
+Dann existiert
+
+```math
+\boxed{
+J_\Delta(L)
+:=\lim_{\varepsilon\downarrow0}J_{\Delta,\varepsilon}(L)
+}
+```
+
+und
+
+```math
+\boxed{
+J_\Delta(L)
+=e^{L/2}
+\left(
+L-\gamma-
+\sum_{\log n<L}\frac{\Lambda(n)}{n}
+\right).
+}
+```
+
+Insbesondere
+
+```math
+\boxed{J_\Delta(0)=-\gamma.}
+```
+
+Im Stieltjes-/Distributionssinn gilt exakt
+
+```math
+\boxed{
+d\Delta(L)
+=\frac12J_\Delta(L)dL-dJ_\Delta(L).
+}
+```
+
+Daher wird die Diskrepanzpaarung fuer die Autokorrelation `F_v=f_v+f_v(-.)` zu
+
+```math
+\boxed{
+-\int F_v\,d\Delta
+=
+2\gamma\|v\|_2^2
+-
+\int_0^\infty
+J_\Delta(L)
+\left(F_v'(L)+\frac12F_v(L)\right)dL.
+}
+```
+
+In Mittelpunktskoordinaten erscheint exakt der first-order Critical-half-Faktor:
+
+```math
+\boxed{
+F_v'(L)+\frac12F_v(L)
+=
+2\operatorname{Re}
+\int
+\left(\partial_x+\frac12\right)
+ v(x+L/2)
+\overline{v(x-L/2)}dx.
+}
+```
+
+Somit lautet der nichtlokale Transferterm
+
+```math
+\boxed{
+-\int F_v\,d\Delta
+=
+2\gamma\|v\|_2^2
+-2\operatorname{Re}
+\iint_{\mathcal C_R}
+J_\Delta(L)
+\left(\partial_x+\frac12\right)v(x+L/2)
+\overline{v(x-L/2)}\,dx\,dL.
+}
+```
+
+Dies ist die bislang schaerfste gemeinsame Form von Prime-Diskrepanz, overlap cone und Critical-half-Operator. Der Koeffizient `1/2` ist hier durch die kanonische pole-subtrahierte Abel-Grenze erzwungen, nicht angepasst.
+
+Status:
+
+```text
+Abel finite-part tail J_Delta exists                    ✓[M]
+closed formula for J_Delta                              ✓[M]
+Stieltjes inversion dDelta=(1/2)J dL-dJ                 ✓[M]
+critical-half first-order transfer identity              ✓[M]
+window/overlap-cone Volterra representation              ✓[M]
+positivity / positive parent realization                 ?[O]
+publication novelty                                      ?[O]
+```
+
+---
+
+# 1. Abel regularization at the critical rate
+
+For `epsilon>0` define
+
+```math
+J_{\Delta,\varepsilon}(L)
+=
+\int_{[L,\infty)}
+ e^{-(1/2+\varepsilon)(t-L)}d\Delta(t).
+```
+
+Both terms are absolutely convergent. The prime part is
+
+```math
+\begin{aligned}
+J_{P,\varepsilon}(L)
+&=
+\sum_{\log n\ge L}
+\frac{\Lambda(n)}{\sqrt n}
+ e^{-(1/2+\varepsilon)(\log n-L)}\\
+&=
+e^{(1/2+\varepsilon)L}
+\sum_{\log n\ge L}
+\frac{\Lambda(n)}{n^{1+\varepsilon}}.
+\end{aligned}
+```
+
+The continuous compensator is
+
+```math
+\begin{aligned}
+J_{0,\varepsilon}(L)
+&=
+\int_L^\infty
+ e^{-(1/2+\varepsilon)(t-L)}e^{t/2}dt\\
+&=
+\frac{e^{L/2}}{\varepsilon}.
+\end{aligned}
+```
+
+Hence
+
+```math
+J_{\Delta,\varepsilon}
+=J_{P,\varepsilon}-J_{0,\varepsilon}.
+```
+
+---
+
+# 2. Closed finite-part formula
+
+For `epsilon>0`,
+
+```math
+\sum_{n\ge2}\frac{\Lambda(n)}{n^{1+\varepsilon}}
+=-\frac{\zeta'}{\zeta}(1+\varepsilon).
+```
+
+The Laurent expansion of zeta at `1` gives
+
+```math
+-\frac{\zeta'}{\zeta}(1+\varepsilon)
+=\frac1\varepsilon-\gamma+O(\varepsilon).
+```
+
+Therefore, writing
+
+```math
+S_<(L)
+:=
+\sum_{\log n<L}\frac{\Lambda(n)}{n},
+```
+
+one has
+
+```math
+\begin{aligned}
+J_{P,\varepsilon}(L)
+&=e^{L/2}e^{\varepsilon L}
+\left(
+\frac1\varepsilon-\gamma-S_<(L)+O(\varepsilon)
+\right)\\
+&=e^{L/2}
+\left(
+\frac1\varepsilon
++L-\gamma-S_<(L)+O(\varepsilon)
+\right).
+\end{aligned}
+```
+
+Subtracting `e^{L/2}/epsilon` gives
+
+```math
+\boxed{
+J_\Delta(L)
+=e^{L/2}\left(L-\gamma-S_<(L)\right).
+}
+```
+
+No PNT or RH is needed for this fixed-`L` identity. It uses only the Euler product for `Re s>1` and the standard Laurent expansion of zeta at `s=1`.
+
+At `L=0`, the finite sum is empty, so
+
+```math
+\boxed{J_\Delta(0)=-\gamma.}
+```
+
+---
+
+# 3. Jumps and the continuous drift
+
+Between prime-power locations, `S_<(L)` is constant. Therefore
+
+```math
+J_\Delta'(L)
+=\frac12J_\Delta(L)+e^{L/2}.
+```
+
+Thus
+
+```math
+\frac12J_\Delta(L)-J_\Delta'(L)
+=-e^{L/2},
+```
+
+which is exactly the absolutely continuous density of `Delta`.
+
+At an atom `L_0=log n`, crossing `L_0` from below to above inserts `Lambda(n)/n` into `S_<`. Consequently
+
+```math
+J_\Delta(L_0+)-J_\Delta(L_0-)
+=-e^{L_0/2}\frac{\Lambda(n)}{n}
+=-\frac{\Lambda(n)}{\sqrt n}.
+```
+
+Therefore `-dJ_Delta` contains the positive atom of `Delta`. Both statements combine into
+
+```math
+\boxed{
+d\Delta
+=\frac12J_\Delta dL-dJ_\Delta.
+}
+```
+
+---
+
+# 4. Stieltjes integration by parts
+
+Let `v` be smooth and compactly supported and put
+
+```math
+F_v(L)=f_v(L)+f_v(-L),
+\qquad
+f_v=v*\widetilde v.
+```
+
+Then `F_v` is compactly supported on the positive half-line and
+
+```math
+F_v(0)=2\|v\|_2^2.
+```
+
+Using the inversion identity,
+
+```math
+\begin{aligned}
+-\int F_v\,d\Delta
+&=-\frac12\int F_vJ_\Delta dL
++\int F_v\,dJ_\Delta.
+\end{aligned}
+```
+
+Stieltjes integration by parts gives
+
+```math
+\int F_v\,dJ_\Delta
+=-F_v(0)J_\Delta(0)
+-\int J_\Delta F_v' dL.
+```
+
+Since `J_Delta(0)=-gamma`,
+
+```math
+\boxed{
+-\int F_v\,d\Delta
+=
+2\gamma\|v\|_2^2
+-
+\int_0^\infty
+J_\Delta(L)
+\left(F_v'(L)+\frac12F_v(L)\right)dL.
+}
+```
+
+---
+
+# 5. Midpoint-coordinate transfer identity
+
+With the convention
+
+```math
+f_v(L)
+=\int v(x+L/2)\overline{v(x-L/2)}dx,
+```
+
+differentiate:
+
+```math
+\begin{aligned}
+f_v'(L)
+&=\frac12\int v'(x+L/2)\overline{v(x-L/2)}dx\\
+&\quad-
+\frac12\int v(x+L/2)\overline{v'(x-L/2)}dx.
+\end{aligned}
+```
+
+Integration by parts in `x` turns the second integral into minus the first. Hence
+
+```math
+\boxed{
+f_v'(L)
+=\int v'(x+L/2)\overline{v(x-L/2)}dx.
+}
+```
+
+Since `F_v=2 Re f_v`,
+
+```math
+\boxed{
+F_v'(L)+\frac12F_v(L)
+=
+2\operatorname{Re}\int
+\left(\partial_x+\frac12\right)v(x+L/2)
+\overline{v(x-L/2)}dx.
+}
+```
+
+For `supp(v) subset (-R,R)`, the integrand is automatically supported in
+
+```math
+\mathcal C_R
+=\{(x,L):0<L<2(R-|x|)\}.
+```
+
+Thus
+
+```math
+\boxed{
+-\int F_v\,d\Delta
+=
+2\gamma\|v\|_2^2
+-2\operatorname{Re}
+\iint_{\mathcal C_R}
+J_\Delta(L)
+\left(\partial_x+\frac12\right)v(x+L/2)
+\overline{v(x-L/2)}dx\,dL.
+}
+```
+
+---
+
+# 6. Updated NULLPOL discrepancy normal form
+
+The previous theorem gives on NULLPOL
+
+```math
+Q_W(v)
+=
+\int_0^\infty h_1(L)\|K_Lv\|^2dL
+-(\kappa_*-4)\|v\|^2
+-\int F_v\,d\Delta.
+```
+
+Substituting the finite-part transfer identity yields
+
+```math
+\boxed{
+Q_W(v)
+=
+\int_0^\infty h_1(L)\|K_Lv\|^2dL
+-c_*\|v\|^2
+-2\operatorname{Re}
+\iint_{\mathcal C_R}
+J_\Delta(L)
+\left(\partial_x+\frac12\right)v(x+L/2)
+\overline{v(x-L/2)}dx\,dL,
+}
+```
+
+where
+
+```math
+\boxed{
+c_*
+=\kappa_*-4-2\gamma
+=\log(8\pi)+\frac\pi2-4-\gamma.
+}
+```
+
+Numerically only for orientation,
+
+```text
+c_* ~ 0.2177...
+```
+
+The large radius-dependent scalar has disappeared; the remaining scalar is fixed.
+
+---
+
+# 7. Why this is structurally stronger than the rate-1 Hamiltonian transform
+
+The absolutely convergent Hamiltonian transform `H_Delta` has inversion rate `1` and therefore couples to
+
+```math
+F_v'+F_v.
+```
+
+The canonical Abel finite part at the exact convergence boundary uses rate `1/2` and couples to
+
+```math
+F_v'+\frac12F_v.
+```
+
+The latter is precisely the midpoint correlation generated by the Critical-half first-order operator
+
+```math
+\partial_x+\frac12.
+```
+
+Together with
+
+```math
+L_{1/2}
+=\left(\frac12-\partial_x\right)
+ \left(\frac12+\partial_x\right),
+```
+
+this gives a sharper algebraic meeting point between
+
+```text
+NULLPOL source factorization,
+prime-pole discrepancy,
+and overlap-cone boundary transfer.
+```
+
+No positivity conclusion follows automatically because `J_Delta` is signed and RH-scale growth remains hidden in it.
+
+---
+
+# 8. Literature / novelty firewall
+
+The ingredients
+
+```text
+- Laurent expansion of zeta at s=1,
+- sums of Lambda(n)/n,
+- Abel/finite-part subtraction of the pole,
+- explicit-formula manipulations
+```
+
+are classical. No novelty is claimed for the scalar function `J_Delta` itself.
+
+The project-specific question is narrower: whether this exact critical-half Volterra transfer can be realized as the boundary term of the already present stopped P11/OU geometry in a forward positive system. That question remains open.
+
+---
+
+# 9. Next destructive gate
+
+The next candidate class should be tested at `R=1` before any global claim:
+
+1. use the stopped OU boundary-tail shorting as the positive bulk;
+2. use `J_Delta(L)` only as a **transfer coefficient**, never as a positive density;
+3. exploit the canonical factor `partial_x+1/2` forced by the finite-part inversion;
+4. check the exact Prime-2 mixed witness `B_W-c_Gamma=-log2/sqrt2`;
+5. if a natural coefficient-free transfer misses that target, record a class no-go rather than fitting a scalar.
