@@ -1,4 +1,4 @@
-# PR #116 — Reproduce the exact-head certificate
+# PR #116 — Reproduce the frozen certificate
 
 ## Frozen source
 
@@ -8,11 +8,21 @@ The theorem/checker snapshot under review is exactly
 6b5956e69dfcb8124e8e31083613fd89c5f35fb3
 ```
 
-Source PR #116 was a Draft and unmerged at this SHA.
+and is anchored at
 
-**Do not substitute current `main` and do not silently rebase.**
+```text
+freeze/pr116-6b5956e
+```
 
-## Pre-existing certificate implementation at the frozen head
+because the live PR #116 research branch has since advanced.
+
+**Do not substitute current `main`, the current PR #116 head, or a silent rebase.**
+
+Frozen checker Git blob:
+
+```text
+b73ab9858cbc19626fb19794ab4ce4a0a7d3dbd8
+```
 
 Workflow:
 
@@ -20,114 +30,147 @@ Workflow:
 .github/workflows/np-prolate-1-arb.yml
 ```
 
-Checker:
-
-```text
-scripts/check_np_prolate_1_arb.py
-```
-
-The workflow installs
+Dependency pinned by the workflow:
 
 ```text
 python-flint==0.9.0
 ```
 
-and runs both sectors independently:
+---
+
+## First rigorous GitHub Actions execution
+
+A real pull-request execution is now available:
 
 ```text
-python scripts/check_np_prolate_1_arb.py even
-python scripts/check_np_prolate_1_arb.py odd
+workflow: NP-PROLATE-1 Arb certificate
+run id:   34924681973
+run no.:  3
+result:   failure
 ```
 
-The job itself prints:
+The jobs successfully checked out the review head, printed the frozen checker hash, installed Python 3.13.15 and `python-flint==0.9.0`, and entered the rigorous checker.
+
+Both parity sectors failed in the **first proof gate** `verify_partition()` before trace integration, Ritz matrices, Cholesky or the final certificate gap were evaluated.
+
+### Even
+
+The unresolved sign interval was immediately outside the first pre-booked root bracket, near
 
 ```text
-git rev-parse HEAD
-git hash-object scripts/check_np_prolate_1_arb.py
-python --version
+13.258880140...
 ```
 
-before using the checker output as the PASS gate.
-
-## Exact-head GitHub status before this review package
-
-Direct query of workflow runs associated with
+whereas the frozen diagnostic center was
 
 ```text
-6b5956e69dfcb8124e8e31083613fd89c5f35fb3
+13.2588803604
 ```
 
-returned **no run** for PR #116 before this review branch was opened.
+with only `ROOT_EPS=1e-7`.
 
-Therefore the correct pre-review status is:
+### Odd
+
+Likewise the unresolved interval was near
 
 ```text
-Trace-minus-Ritz lemma                  ✓[M]
-Arb certificate implementation         ✓[M]_part
-NP-PROLATE-1 even at a=1/2              ?[O]
-NP-PROLATE-1 odd at a=1/2               ?[O]
+12.503989551...
 ```
 
-No PASS may be backfilled from floating/Nyström diagnostics.
-
-## Review PR / CI trigger audit
-
-Review PR #125 is stacked directly on
+while the frozen center was
 
 ```text
-research/critical-half-green-tree-bridge-2026-09-13
+12.5039896611
 ```
 
-whose base SHA is the frozen source
+again with half-width `1e-7`.
+
+Therefore run #3 establishes:
 
 ```text
-6b5956e69dfcb8124e8e31083613fd89c5f35fb3.
+frozen root-enclosure data too narrow             confirmed
+trace/Ritz/Cholesky gate                           not reached
+NP-PROLATE-1 even PASS                             not established
+NP-PROLATE-1 odd PASS                              not established
 ```
 
-The review branch itself was created exactly from that SHA and changes only the five documents under `review/PR116_6b5956e/`.
+This is **not** a counterexample to the mathematical trace-minus-Ritz lemma and **not** a PASS.
 
-Two trigger attempts were checked:
+---
 
-1. PR #125 was initially opened while its head still equaled exact source SHA `6b5956e…`;
-2. after stacking it on the PR #116 research branch, a neutral synchronize commit was created and then removed.
+## Static checker audit
 
-Neither produced a recorded pull-request workflow run. The neutral trigger file is not present in the final diff.
+The frozen checker logic has been independently inspected. The central inequality directions are consistent:
 
-The relevant infrastructure fact is that `np-prolate-1-arb.yml` is introduced by the unmerged PR #116 research branch and is not registered on current default branch `main`. We do **not** modify `main` merely to force CI.
+```math
+0\le D_{inner}\le D_c,
+```
 
-Therefore GitHub Actions currently supplies no exact-head certificate evidence.
+`U G-A_inner > 0` certifies the top generalized inner Ritz value `<U`, and
 
-## Local execution status in the review environment
+```math
+trR=tr(G^{-1}A_{inner})=\sum_j\rho_j.
+```
 
-A second independent execution route was tested in the review runtime. It cannot currently execute the frozen checker because:
+Hence
+
+```math
+\lambda_{max}(D_c)
+\le T_{full}-trR+U.
+```
+
+The code emits a sector PASS only after Arb proves
+
+```math
+c-(T_{full}-trR+U)>0.
+```
+
+The positive-half-line doubled-parity-kernel convention was also checked: trace and generalized Ritz normalization are consistent; no factor-2 certificate defect was found.
+
+---
+
+## Separate certificate-repair experiment
+
+The frozen source is not edited. A separate Draft PR #126 is stacked on the immutable freeze anchor:
 
 ```text
-python-flint is not installed
+cert/np-prolate-1-root-bracket-repair-2026-09-15
 ```
 
-and the runtime has no external network resolution from which to install `python-flint==0.9.0` or clone the repository.
+It preserves the frozen checker byte-for-byte as
 
-This is an infrastructure limitation, **not** a mathematical failure and not a certificate PASS.
+```text
+scripts/check_np_prolate_1_arb_base.py
+```
 
-## Required evidence for promotion
+and verifies Git blob
 
-To change either sector from `?[O]` to theorem-level PASS, record and audit all of:
+```text
+b73ab9858cbc19626fb19794ab4ce4a0a7d3dbd8
+```
 
-1. an immutable execution of frozen theorem/checker source `6b5956e…` (or a documentation-only descendant whose checker/workflow blobs are independently shown identical);
-2. successful even job;
-3. successful odd job;
-4. full retained logs for both jobs;
-5. printed checked-out SHA;
-6. printed checker blob hash;
-7. Python version and `python-flint==0.9.0` installation;
-8. certified sign partition and tail lower bound;
-9. certified shorted Gram positivity;
-10. certified Cholesky/generalized Ritz inequalities;
-11. final strict interval inequality before the PASS string.
+before executing it.
 
-## Local reproduction
+The wrapper changes only
 
-A reviewer with the repository checked out and network/package access can run:
+```text
+ROOT_EPS: 1e-7 -> 1e-5
+```
+
+so that every enlarged uncertainty interval is still booked by the original `root_edge_trace_upper` proof path. It does **not** change `c`, `U`, Ritz nodes, multiplier, tail firewall, Gram test, Cholesky test or terminal inequality.
+
+Repair workflow run:
+
+```text
+run id: 34995713417
+run no.: 4
+```
+
+At the latest recorded audit point both parity jobs had passed checkout/setup/dependency installation and were executing the expensive exact certificate step. No terminal status is inferred until the jobs finish and logs are inspected.
+
+---
+
+## Local reproduction of the frozen failure/pass target
 
 ```bash
 git fetch origin
@@ -145,7 +188,7 @@ python scripts/check_np_prolate_1_arb.py even | tee np_prolate_1_even.log
 python scripts/check_np_prolate_1_arb.py odd  | tee np_prolate_1_odd.log
 ```
 
-Expected workflow gate strings are:
+Expected terminal gate strings, if a rigorous execution really closes, are
 
 ```text
 NP-PROLATE-1 EVEN PASS ZERTIFIZIERT
@@ -153,28 +196,28 @@ NP-PROLATE-1 ODD PASS ZERTIFIZIERT
 ALL REQUESTED NP-PROLATE-1 SECTORS PASS ZERTIFIZIERT
 ```
 
-The strings are evidence only if they arise from a successful immutable-source execution of the rigorous code path.
+---
 
-## Independent checker review before trusting a PASS
+## Required evidence for promotion
 
-Even if both jobs are green, independently inspect these proof-critical points in `scripts/check_np_prolate_1_arb.py`:
+A sector may be promoted only after retaining and auditing:
 
-- `verify_partition`: no uncovered frequency interval;
-- root brackets: all uncertainty charged into `root_edge_trace_upper`;
-- tail firewall: rigorous lower bound exceeds the sector `c`;
-- parity normalization: no missing factor two;
-- shorted kernel denominator: interval-certified positive;
-- Ritz Gram: interval-certified SPD;
-- `D_inner ≤ D`: follows from the certified positive inner subweight/subregions;
-- `U G-A_inner`: interval-certified SPD;
-- final bound uses upper trace/error data in the correct direction.
+1. immutable proof-input commit / exact checker blob;
+2. installed Python and `python-flint` versions;
+3. certified sign partition and tail bound;
+4. all root uncertainty charged to the trace bound;
+5. shorted Gram interval-SPD;
+6. `U G-A_inner` interval-SPD;
+7. rigorous Ritz trace;
+8. full trace upper bound;
+9. strict final Arb gap;
+10. terminal PASS string from that exact execution.
 
-## Current promotion rule
-
-Until the immutable-source execution and logs are present and reviewed:
+Until then:
 
 ```text
-NP-PROLATE-1 / a=1/2 remains ?[O].
+NP-PROLATE-1 even / a=1/2  ?[O]
+NP-PROLATE-1 odd  / a=1/2  ?[O]
 ```
 
-A green run on a later source-modifying commit is not automatically a certificate for the frozen PR #116 snapshot.
+A later repaired certificate is evidence for its explicitly documented proof inputs; it does not retroactively make the frozen `ROOT_EPS=1e-7` checker a passing program.
