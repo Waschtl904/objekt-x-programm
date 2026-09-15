@@ -1,0 +1,550 @@
+# P11 Audit — RP2 point-Weyl channel and a bounded zonal mixer
+
+**Datum:** 15. September 2026  
+**Basis:** `P11_RP2_TRANSVERSE_KERNEL_GAMMA_P11_BRIDGE_2026-09-15.md`, eingefroren bei `ac574089215767f3b353fd6d6af0649b4ded454c`.  
+**Rolle:** theorem-level Verfeinerung des transversalen RP2-Kerns; Konstruktion eines konkreten nichtkommutierenden Mixers mit harter Radius-/Source-Firewall.  
+**Registry:** unveraendert.  
+**Nonclaim:** kein Object-X-Abschluss, kein NP-GAP, kein RH-Beweis, keine Publikationsneuheit.
+
+---
+
+## 0. Kurzurteil
+
+Der RP2-Audit hat gezeigt, dass
+
+```math
+P=\sqrt{\Delta_Y+1/4},
+\qquad Y=\mathbb{RP}^2,
+```
+
+einen positiven operatorwertigen Kernel
+
+```math
+\mathcal K(d)=(2P)^{-1}e^{-Pd}
+```
+
+erzeugt, dessen
+
+```text
+Grundzustands-Matrixelement = P11 OU/tree,
+transversaler Trace         = Gamma COMMON-JUMP-Dichte.
+```
+
+Der bislang fehlende naechste Schritt war ein **nicht mit `P` kommutierender transversaler Kanal**, der den P11-Grundzustand mit angeregten Gamma-Moden koppeln kann.
+
+Ein solcher Kanal entsteht kanonisch bis auf Isometrie durch die Wahl eines Punktes
+
+```math
+y_0\in Y.
+```
+
+Die regularisierte diagonale `RP^2`-Resolvente an `y_0` ist exakt die zentrierte archimedische Digamma-/Gamma-Schicht. Gleichzeitig besitzt die Punktladung in jedem Gamma-Eigenspace genau eine zonale Richtung.
+
+Noch wichtiger: Der geglaettete Punktvektor
+
+```math
+\boxed{
+g_{y_0}
+:=(\Delta_Y+1/4)^{-1}\delta_{y_0}
+=P^{-2}\delta_{y_0}
+}
+```
+
+liegt tatsaechlich in `L^2(Y)`. Daher ist
+
+```math
+\boxed{
+M_{y_0}:=|g_{y_0}\rangle\langle g_{y_0}|
+}
+```
+
+ein wohldefinierter beschraenkter positiver Rang-1-Operator, der den konstanten Grundzustand mit **jeder zonalen geraden Gamma-Stufe** koppelt und nicht mit `P` kommutiert.
+
+Dies ist erstmals ein konkreter Forward-Transversalmixer innerhalb der neuen RP2-Geometrie.
+
+Status:
+
+```text
+homogeneous diagonal = trace / vol                       ✓[M]
+Gamma layer = regularized RP2 point-Weyl function        ✓[M]
+zonal one-direction-per-eigenspace reduction             ✓[M]
+g_y0=P^-2 delta_y0 belongs to L2                         ✓[M]
+M_y0 positive bounded rank-one mixer                     ✓[M]
+M_y0 couples P11 ground to every zonal Gamma level       ✓[M]
+fully Isom(RP2)-equivariant ground/excited mixer no-go   ✓[M]
+point choice canonical up to unitary/isometry             ✓[M]
+radius/source-compatible use of M_y0                     ?[O]
+centered Weil positivity / Object X                      ?[O]
+publication novelty                                      ?[O]
+```
+
+---
+
+# 1. Homogenitaet macht Spur und Punktdiagonale aequivalent
+
+Sei
+
+```math
+V:=\operatorname{vol}(Y)=2\pi
+```
+
+fuer die runde Einheitsmetrik auf
+
+```math
+Y=\mathbb{RP}^2=S^2/\{\pm1\}.
+```
+
+Sei `A=f(P)` ein isometrieinvarianter trace-class Operator mit stetigem Integralkern `A(y,y')`.
+
+Da die Isometriegruppe transitiv auf `Y` wirkt, ist die Diagonale
+
+```math
+A(y,y)
+```
+
+konstant. Deshalb
+
+```math
+\operatorname{Tr}A
+=\int_Y A(y,y)dy
+=V A(y_0,y_0)
+```
+
+fuer jeden Punkt `y_0`.
+
+Somit
+
+```math
+\boxed{
+A(y_0,y_0)=\frac1{2\pi}\operatorname{Tr}A.
+}
+```
+
+Diese Aussage ist elementare Homogenitaet und kein Neuheitsclaim.
+
+---
+
+# 2. Die positive Gamma-Schicht ist eine endliche Punkt-Resolventendifferenz
+
+Setze
+
+```math
+R_z:=(P^2+z^2)^{-1}
+=(\Delta_Y+1/4+z^2)^{-1}.
+```
+
+Fuer reelles `z` ist
+
+```math
+A_z:=P^{-2}-R_z
+```
+
+auf der 2-dimensionalen kompakten Mannigfaltigkeit von Ordnung `-4` und insbesondere trace class mit stetigem Diagonalkern.
+
+Aus dem RP2-Kernel-Audit ist
+
+```math
+\Phi_\infty(z)=\operatorname{Tr}A_z.
+```
+
+Daher fuer jeden `y_0 in Y`
+
+```math
+\boxed{
+\Phi_\infty(z)
+=2\pi\,
+\bigl[P^{-2}-R_z\bigr](y_0,y_0).
+}
+```
+
+Aequivalent in distributioneller Schreibweise:
+
+```math
+\boxed{
+\Phi_\infty(z)
+=2\pi\,
+\langle\delta_{y_0},
+[P^{-2}-(P^2+z^2)^{-1}]
+\delta_{y_0}\rangle,
+}
+```
+
+wobei nur die **Differenz** als diagonale Paarung verwendet wird; die einzelnen 2D-Resolventendiagonalen sind logarithmisch divergent.
+
+---
+
+# 3. Der zentrierte archimedische Kanal ist die regularisierte Punkt-Weyl-Funktion
+
+Sei `Pi_m` die Spektralprojektion auf den `m`-ten `RP^2`-Eigenspace
+
+```math
+E_m,
+\qquad
+\dim E_m=d_m=4m+1,
+\qquad
+P|_{E_m}=\mu_m=2m+1/2.
+```
+
+Homogenitaet gibt fuer jeden `y_0`
+
+```math
+\boxed{
+\Pi_m(y_0,y_0)=\frac{d_m}{V}
+=\frac{4m+1}{2\pi}.
+}
+```
+
+Definiere die spektral regularisierte Punkt-Weyl-Funktion
+
+```math
+\boxed{
+\Sigma_{y_0}(z)
+:=
+\lim_{N\to\infty}
+\left[
+\sum_{m=0}^N
+\frac{\Pi_m(y_0,y_0)}{\mu_m^2+z^2}
+-\frac1{2\pi}\log\frac{N+1}{\pi}
+\right].
+}
+```
+
+Dann ist nach der bereits bewiesenen `kappa_*`-Finite-Part-Identitaet
+
+```math
+\boxed{
+\Phi_\infty(z)-\kappa_*
+=-2\pi\,\Sigma_{y_0}(z).
+}
+```
+
+Die zentrierte archimedische Digamma-Funktion ist also exakt die negative regularisierte diagonale Resolvente an **einem Punkt** von `RP^2`.
+
+Diese Form gehoert zur klassischen 2D-Punktinteraktions-/Weyl-Funktionsgeometrie. Der Projektfortschritt ist die exakte Identifikation mit der bereits vorhandenen Gamma-Schicht, nicht die allgemeine Punktinteraktionstheorie.
+
+---
+
+# 4. Ein Punkt selektiert genau eine zonale Richtung pro Gamma-Stufe
+
+Setze distributionell
+
+```math
+k_{m,y_0}:=\Pi_m\delta_{y_0}.
+```
+
+Dann
+
+```math
+\|k_{m,y_0}\|_2^2
+=\Pi_m(y_0,y_0)
+=\frac{d_m}{V}.
+```
+
+Definiere den normierten zonalen Vektor
+
+```math
+\boxed{
+\zeta_{m,y_0}
+:=\sqrt{\frac{V}{d_m}}\,k_{m,y_0}
+\in E_m.
+}
+```
+
+Dann besitzt die Punktladung die formale Spektralzerlegung
+
+```math
+\delta_{y_0}
+\sim
+\sum_{m\ge0}
+\sqrt{\frac{d_m}{V}}\,\zeta_{m,y_0}.
+```
+
+Die diagonale Resolvente reduziert sich daher auf **eine einzige zonale Leiter**:
+
+```math
+\boxed{
+\Sigma_{y_0}(z)
+=
+\operatorname{FP}
+\sum_{m\ge0}
+\frac{d_m/V}{\mu_m^2+z^2}.
+}
+```
+
+Die vollen Multiplizitaetsraeume `E_m` sind fuer die skalare Gamma-Weyl-Funktion nicht einzeln noetig; relevant ist genau die durch den Punkt bestimmte zonale Richtung in jedem `E_m`.
+
+---
+
+# 5. Der erste zonale Vektor ist exakt der P11-Grundzustand
+
+Fuer `m=0` ist
+
+```math
+E_0=\operatorname{span}\{e_0\}
+```
+
+mit normiertem konstanten Vektor
+
+```math
+e_0(y)=V^{-1/2}.
+```
+
+Da `d_0=1`, folgt
+
+```math
+\boxed{
+\zeta_{0,y_0}=e_0.
+}
+```
+
+Damit beginnt die punktselektierte zonale Gamma-Leiter **genau im bereits identifizierten P11-Grundzustandskanal**.
+
+Die Punkt-Weyl-Geometrie liefert also nicht bloss angeregte Gamma-Moden neben P11, sondern eine einzelne Leiter
+
+```text
+P11 ground state = zeta_0
+        |
+        zeta_1
+        |
+        zeta_2
+        |
+        ...
+```
+
+in der alle Stufen durch denselben Punktkanal angesprochen werden.
+
+---
+
+# 6. Der geglaettete Punktvektor ist ein echtes `L^2`-Objekt
+
+Die nackte Punktladung `delta_y0` liegt nicht in `L^2(Y)`. Fuer eine echte beschraenkte Mixer-Konstruktion setze daher
+
+```math
+\boxed{
+g_{y_0}:=P^{-2}\delta_{y_0}
+=(\Delta_Y+1/4)^{-1}\delta_{y_0}.
+}
+```
+
+Seine Spektralkoeffizienten in der zonalen Leiter sind
+
+```math
+\boxed{
+\langle\zeta_{m,y_0},g_{y_0}\rangle
+=
+\frac{\sqrt{d_m/V}}{\mu_m^2}.
+}
+```
+
+Daher
+
+```math
+\|g_{y_0}\|_2^2
+=
+\sum_{m\ge0}
+\frac{d_m/V}{\mu_m^4}.
+```
+
+Da
+
+```math
+d_m\asymp m,
+\qquad
+\mu_m\asymp m,
+```
+
+verhaelt sich der Summand wie `m^{-3}`. Also
+
+```math
+\boxed{g_{y_0}\in L^2(Y).}
+```
+
+Es wird keine distributionelle Rank-one-Operation benoetigt, sobald dieser natuerliche Critical-half-Resolventenlift benutzt wird.
+
+---
+
+# 7. Ein konkreter beschraenkter positiver Mixer
+
+Definiere
+
+```math
+\boxed{
+M_{y_0}
+:=
+|g_{y_0}\rangle\langle g_{y_0}|
+\succeq0.
+}
+```
+
+Dies ist ein beschraenkter positiver Rang-1-Operator auf `L^2(Y)`.
+
+Fuer alle `m>=0` gilt
+
+```math
+\langle\zeta_{m,y_0},g_{y_0}\rangle>0.
+```
+
+Insbesondere ist
+
+```math
+\langle e_0,g_{y_0}\rangle
+=\frac{1}{\sqrt V\,\mu_0^2}
+=\frac4{\sqrt V}
+ne0.
+```
+
+Daher fuer jedes `m>=1`
+
+```math
+\boxed{
+\langle\zeta_{m,y_0},M_{y_0}e_0\rangle
+=
+\langle\zeta_{m,y_0},g_{y_0}\rangle
+\langle g_{y_0},e_0\rangle
+\ne0.
+}
+```
+
+Also koppelt `M_y0` den P11-Grundzustand gleichzeitig an **jede** zonale Gamma-Stufe.
+
+Weil `g_y0` Komponenten in mehr als einem `P`-Eigenspace besitzt, ist er kein Eigenvektor von `P`; folglich
+
+```math
+\boxed{[M_{y_0},P]\ne0.}
+```
+
+Damit ist `M_y0` genau die Art von nichtdiagonalem Transversalmixer, deren Existenz der Forward-Dilation-Audit als notwendig isoliert hatte.
+
+---
+
+# 8. Isometrieinvariante Mixer koennen dies nicht leisten
+
+Der vorige Satz wirft die Frage auf, ob man den Punkt `y_0` vermeiden und einen voll isometrieinvarianten Mixer verwenden kann.
+
+Die Antwort ist nein.
+
+Sei `A` ein beschraenkter Operator auf `L^2(Y)`, der mit allen Isometrien von `Y` kommutiert. Da `e_0` unter jeder Isometrie invariant ist, ist auch
+
+```math
+Ae_0
+```
+
+unter jeder Isometrie invariant.
+
+Auf dem zusammenhaengenden homogenen Raum `Y` sind die invarianten `L^2`-Funktionen genau die Konstanten. Daher
+
+```math
+\boxed{Ae_0\in E_0.}
+```
+
+Somit kann kein voll `Isom(RP^2)`-equivarianter beschraenkter Operator den P11-Grundzustand in angeregte Gamma-Eigenspaces mischen.
+
+```math
+\boxed{
+\text{Ground/excited mixing erzwingt Symmetriebrechung.}
+}
+```
+
+Dies ist ein neues Klassen-No-Go fuer die RP2-Transversalroute.
+
+---
+
+# 9. Die Punktwahl ist nur bis auf Isometrie nichtkanonisch
+
+Obwohl ein Punkt `y_0` gewaehlt werden muss, ist auf dem runden `RP^2` kein Punkt ausgezeichnet.
+
+Fuer `y_1=g y_0` mit einer Isometrie `g` gilt fuer die zugehoerige unitäre Darstellung `U_g`
+
+```math
+\boxed{
+g_{y_1}=U_g g_{y_0},
+\qquad
+M_{y_1}=U_gM_{y_0}U_g^*.
+}
+```
+
+Alle Punktmixer sind daher unitär aequivalent.
+
+Die Konstruktion besitzt keinen kontinuierlichen **Spektralparameter**; die einzige Wahl ist ein homogener Gauge-/Basisentscheid innerhalb des transversalen Raums.
+
+Ob diese Wahl durch die bereits existierende P11-Root-/Boundary-Geometrie kanonisch fixiert werden kann, ist offen.
+
+---
+
+# 10. Verbindung zur klassischen Punktinteraktions-/Weyl-Theorie
+
+In zwei Dimensionen ist die diagonale Resolvente logarithmisch divergent, und eine Punktinteraktion wird klassisch ueber die regularisierte diagonale Green-Funktion bzw. eine Weyl-/Self-energy-Funktion organisiert.
+
+Genau dieses Muster tritt hier auf:
+
+```math
+\Sigma_{y_0}(z)
+=
+\operatorname{FP}
+(\Delta_Y+1/4+z^2)^{-1}(y_0,y_0).
+```
+
+Dass shifted spherical Laplacians, Green-Funktionen, 2D-Renormierung und Punktpotentiale zu Digamma-Funktionen fuehren, ist klassische/aktuelle Literatur; insbesondere:
+
+- J. Dereziński, C. Gaß, B. Ruba, *Point Potentials on Euclidean Space, Hyperbolic Space and Sphere in Any Dimension*, Ann. Henri Poincaré, DOI `10.1007/s00023-024-01496-1`.
+
+Daher **kein Neuheitsclaim** fuer die allgemeine Point-Weyl-Technik.
+
+Projektintern neu hergeleitet ist die exakte Zuordnung
+
+```text
+project Gamma centered multiplier
+      = -2 pi * RP2 point-Weyl function,
+```
+
+zusammen mit der Tatsache, dass deren zonale Leiter im bereits vorhandenen P11-Grundzustand startet.
+
+---
+
+# 11. Was dieser Mixer noch nicht loest
+
+`M_y0` ist ein echter positiver, beschraenkter, nichtkommutierender Transversalmixer. Aber daraus folgt **noch keine Object-X-Dilation**.
+
+Offen bleiben insbesondere:
+
+1. **Typ:** Wie koppelt `M_y0` an die bereits bewiesenen source-conditioned spatial P11/COMMON-JUMP-Features?
+2. **Radius:** Welche connecting maps fuer `R<S` transportieren den Punktkanal?
+3. **Cutoff-Gauge:** Wie wird Exterior-before-overlap exakt geshortet/absorbiert?
+4. **Finite part:** Wie wird die `kappa_*`-Renormierung innerhalb eines positiven Gesamtblocks realisiert, ohne NP-GAP zirkulaer vorauszusetzen?
+5. **Prime arithmetic:** Warum sollte gerade die bestehende Prime-root-/Feshbach-Geometrie die Punktwahl bzw. diesen Rang-1-Kanal selektieren?
+
+Damit ist der Status
+
+```text
+transverse noncommuting mixer exists       ✓[M]
+correct Object-X coupling of that mixer    ?[O]
+```
+
+---
+
+# 12. Naechster Gate
+
+Der naechste sinnvolle Test ist jetzt **nicht** mehr die abstrakte Frage, ob irgendein Gamma/P11-Mixer existiert. Einer existiert explizit.
+
+Die scharfe Frage lautet:
+
+```math
+\boxed{
+\text{Laesst sich }M_{y_0}
+\text{ als Boundary-/Feshbach-Kanal der bereits vorhandenen}
+\atop
+\text{source-conditioned P11-Rootgeometrie ableiten?}
+}
+```
+
+Dafuer muss eine typkorrekte Map zwischen
+
+```text
+P11 root / source boundary data
+        und
+RP2 point-Weyl boundary data
+```
+
+gebaut werden, **ohne** die Zielpositivitaet zu verwenden.
+
+Ein positiver Erfolg waere erstmals ein konkreter Forward-Kopplungsbaustein. Ein No-Go, dass keine radiuskompatible Identifikation dieser beiden Boundary-Kanaele moeglich ist, waere ebenfalls substanziell.
