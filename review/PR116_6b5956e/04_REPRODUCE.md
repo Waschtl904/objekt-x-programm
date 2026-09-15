@@ -70,29 +70,50 @@ NP-PROLATE-1 odd at a=1/2               ?[O]
 
 No PASS may be backfilled from floating/Nyström diagnostics.
 
-## Review PR trigger
+## Review PR / CI trigger audit
 
-Review PR #125 was opened from
+Review PR #125 is stacked directly on
 
 ```text
-review/critical-half-116-6b5956e-2026-09-15
+research/critical-half-green-tree-bridge-2026-09-13
 ```
 
-**before any review-package file was committed.** At PR creation its head SHA was exactly
+whose base SHA is the frozen source
 
 ```text
 6b5956e69dfcb8124e8e31083613fd89c5f35fb3.
 ```
 
-This was done specifically so the pre-existing `pull_request` workflow could, if enabled by GitHub, create an execution tied to the frozen source SHA.
+The review branch itself was created exactly from that SHA and changes only the five documents under `review/PR116_6b5956e/`.
 
-Subsequent commits on PR #125 add only the five review documents. They are not proof inputs for the frozen theorem/checker snapshot.
+Two trigger attempts were checked:
+
+1. PR #125 was initially opened while its head still equaled exact source SHA `6b5956e…`;
+2. after stacking it on the PR #116 research branch, a neutral synchronize commit was created and then removed.
+
+Neither produced a recorded pull-request workflow run. The neutral trigger file is not present in the final diff.
+
+The relevant infrastructure fact is that `np-prolate-1-arb.yml` is introduced by the unmerged PR #116 research branch and is not registered on current default branch `main`. We do **not** modify `main` merely to force CI.
+
+Therefore GitHub Actions currently supplies no exact-head certificate evidence.
+
+## Local execution status in the review environment
+
+A second independent execution route was tested in the review runtime. It cannot currently execute the frozen checker because:
+
+```text
+python-flint is not installed
+```
+
+and the runtime has no external network resolution from which to install `python-flint==0.9.0` or clone the repository.
+
+This is an infrastructure limitation, **not** a mathematical failure and not a certificate PASS.
 
 ## Required evidence for promotion
 
 To change either sector from `?[O]` to theorem-level PASS, record and audit all of:
 
-1. workflow run attached to exact source SHA `6b5956e…`, or an equivalently immutable execution that explicitly checks out that SHA;
+1. an immutable execution of frozen theorem/checker source `6b5956e…` (or a documentation-only descendant whose checker/workflow blobs are independently shown identical);
 2. successful even job;
 3. successful odd job;
 4. full retained logs for both jobs;
@@ -106,7 +127,7 @@ To change either sector from `?[O]` to theorem-level PASS, record and audit all 
 
 ## Local reproduction
 
-A reviewer with the repository checked out can run:
+A reviewer with the repository checked out and network/package access can run:
 
 ```bash
 git fetch origin
@@ -132,7 +153,7 @@ NP-PROLATE-1 ODD PASS ZERTIFIZIERT
 ALL REQUESTED NP-PROLATE-1 SECTORS PASS ZERTIFIZIERT
 ```
 
-The strings are evidence only if they arise from a successful exact-source execution of the rigorous code path.
+The strings are evidence only if they arise from a successful immutable-source execution of the rigorous code path.
 
 ## Independent checker review before trusting a PASS
 
@@ -150,7 +171,7 @@ Even if both jobs are green, independently inspect these proof-critical points i
 
 ## Current promotion rule
 
-Until the exact-head execution and logs are present and reviewed:
+Until the immutable-source execution and logs are present and reviewed:
 
 ```text
 NP-PROLATE-1 / a=1/2 remains ?[O].
