@@ -1,0 +1,293 @@
+# P11 Audit — Safe relative root transfer and the Critical-half lift firewall
+
+**Datum:** 16. September 2026  
+**Branch:** `research/critical-half-green-tree-bridge-2026-09-13`  
+**Registry:** unveraendert.  
+**Status:** relative root transfer `✓[K/M]`; bounded Critical-half lift `×[M]` for the plain root-storage class; no RH/Object-X closure.
+
+---
+
+## 0. Result
+
+Use the monotone root-mass cells from the preceding audit:
+
+```math
+h_j=\log n_j,
+\qquad
+a_j=\frac{\Lambda(n_j)}{n_j},
+```
+
+```math
+s_0=\gamma,
+\qquad
+s_j=\gamma+\sum_{i\le j}a_i,
+\qquad
+I_0=[0,\gamma),
+\qquad I_j=[s_{j-1},s_j).
+```
+
+Then for `Re s>0`,
+
+```math
+\boxed{
+\gamma+
+\sum_j a_j e^{-s h_j}
+-
+\int_0^\infty e^{-sL}dL
+=
+\gamma-\frac1s-\frac{\zeta'}{\zeta}(1+s).
+}
+```
+
+The cellwise transport representation is
+
+```math
+\boxed{
+\gamma-\int_0^\gamma e^{-sL}dL
++
+\sum_j
+\left[
+a_j e^{-s h_j}
+-
+\int_{I_j}e^{-sL}dL
+\right].
+}
+```
+
+The series of cell differences converges absolutely for every fixed `s` with `Re s>=0`, because
+
+```math
+\boxed{
+\sum_j a_j
+\sup_{L\in I_j}|L-h_j|<\infty.
+}
+```
+
+Thus the monotone transport gives a forward, unconditional relative storage/transfer realization of the pole-subtracted logarithmic derivative in the safe half-plane `Re(1+s)>=1`.
+
+However the Critical-half lift from root-square weights to Weil weights is
+
+```math
+a_j
+\mapsto
+e^{h_j/2}a_j
+=\frac{\Lambda(n_j)}{\sqrt{n_j}}.
+```
+
+On the plain root-storage line this is an unbounded exponential multiplier. No finite-order source Sobolev norm repairs this tail, since for every nonzero compactly supported source the large-shift jump norm satisfies
+
+```math
+\|K_t v\|^2=2\|v\|^2
+```
+
+for all sufficiently large `t`.
+
+Hence the plain monotone root-storage class cannot be Critical-half lifted by bounded diagonal rescaling. The remaining coupling must perform discrete/continuum cancellation **before** the critical amplification.
+
+---
+
+# 1. Safe relative transfer
+
+Since
+
+```math
+\sum_j a_j e^{-s h_j}
+=\sum_{n\ge2}\frac{\Lambda(n)}{n^{1+s}}
+=-\frac{\zeta'}{\zeta}(1+s),
+```
+
+and
+
+```math
+\int_0^\infty e^{-sL}dL=\frac1s,
+```
+
+the first boxed identity is immediate for `Re s>0`.
+
+Because the cells partition the half-line after `I_0`,
+
+```math
+\int_0^\infty e^{-sL}dL
+=\int_0^\gamma e^{-sL}dL
++\sum_j\int_{I_j}e^{-sL}dL,
+```
+
+which gives the cellwise difference form.
+
+---
+
+# 2. Absolute convergence on the boundary
+
+Let
+
+```math
+\delta_j=\sup_{L\in I_j}|L-h_j|.
+```
+
+The preceding PNT audit gives
+
+```math
+\delta_j
+\ll
+(1+\sqrt{h_j})e^{-c\sqrt{h_j}}+a_j.
+```
+
+Hence
+
+```math
+\sum_j a_j\delta_j
+\ll
+\sum_n\frac{\Lambda(n)}n
+(1+\sqrt{\log n})e^{-c\sqrt{\log n}}
++
+\sum_n\left(\frac{\Lambda(n)}n\right)^2.
+```
+
+The second sum converges absolutely. For the first, partial summation with
+
+```math
+\sum_{n\le e^H}\frac{\Lambda(n)}n=H+O(1)
+```
+
+reduces convergence to
+
+```math
+\int_0^\infty(1+\sqrt H)e^{-c\sqrt H}dH<\infty.
+```
+
+Thus
+
+```math
+\boxed{\sum_j a_j\delta_j<\infty.}
+```
+
+For fixed `s` with `Re s>=0`,
+
+```math
+|e^{-s h_j}-e^{-sL}|
+\le |s|\,|h_j-L|
+```
+
+for `L>=0`. Therefore
+
+```math
+\sum_j
+\left|
+a_j e^{-s h_j}-\int_{I_j}e^{-sL}dL
+\right|
+\le |s|\sum_j a_j\delta_j<\infty.
+```
+
+So the relative cell transfer has a direct absolutely convergent boundary representation, independent of analytic continuation of zeta.
+
+This is a useful distinction: the safe relative transfer is genuinely constructed from positive root masses and monotone transport; it is not defined backwards from a zeta continuation.
+
+---
+
+# 3. Critical-half lift
+
+The Weil atom at depth `h_j` is
+
+```math
+w_j
+=\frac{\Lambda(n_j)}{\sqrt{n_j}}
+=e^{h_j/2}a_j.
+```
+
+Thus passing from the root-square relative storage to the Weil layer requires the depth multiplier
+
+```math
+M_{crit}:f(L)\mapsto e^{L/4}f(L)
+```
+
+at the amplitude level, or `e^{L/2}` at the energy/measure level.
+
+This is unbounded on `L^2(dL)`.
+
+More importantly, it is unbounded on the actual universal source field. Recall
+
+```math
+X_v(t)=e^{-t/4}K_tv.
+```
+
+At large `t` relative to the support of a nonzero compact source,
+
+```math
+\|K_tv\|^2=2\|v\|^2.
+```
+
+Hence
+
+```math
+\|X_v(t)\|^2
+=2e^{-t/2}\|v\|^2,
+```
+
+which is integrable, but after critical energy rescaling
+
+```math
+e^{t/2}\|X_v(t)\|^2
+=2\|v\|^2,
+```
+
+whose integral over the tail diverges.
+
+Applying any fixed finite-order differential operator in the source variable `x` does not alter this conclusion: for compact `v`, shifted supports are eventually disjoint and
+
+```math
+\|K_tPv\|^2=2\|Pv\|^2
+```
+
+for every fixed differential operator `P` and large `t`.
+
+Therefore
+
+```text
+plain root storage + diagonal Critical-half amplification
+```
+
+is not a bounded global Hilbert construction.
+
+---
+
+# 4. Meaning of the obstruction
+
+The safe root transfer uses
+
+```math
+-\frac{\zeta'}{\zeta}(1+s)-\frac1s,
+```
+
+which lives in the classical zero-free half-plane after subtracting the pole.
+
+The desired Critical-half arithmetic transfer uses the same coefficients after shifting the decay exponent by `1/2`. In depth space this is exactly the unbounded multiplier `e^{L/2}`.
+
+The monotone transport displacement is
+
+```math
+L-\gamma-M_P(L)=e^{-L/2}J_\Delta(L).
+```
+
+Classical PNT gives only subexponential decay in `L`, while Critical-half amplification multiplies by `e^{L/2}`. Thus the finite-part kernel `J_Delta` is not obtained as a bounded diagonal image of the safe transport.
+
+This pinpoints the remaining architecture requirement:
+
+```text
+perform prime/continuum relative cancellation at root-square level first,
+then realize the Critical-half transfer through a genuinely non-diagonal
+boundary/state mechanism; do not amplify the two sides separately.
+```
+
+---
+
+# 5. Firewall / next gate
+
+This no-go is scoped to **diagonal** Critical-half amplification of the plain root-storage construction. It does not exclude a larger conservative colligation in which cancellation is internal before the output port.
+
+The next valid candidate must therefore:
+
+1. use the local Schur factors `Phi_h` from the Euler-cell domination theorem;
+2. use the monotone root-mass transport as the relative scale geometry;
+3. couple discrete and continuum states before the Critical-half output weighting;
+4. expose only the finite relative output corresponding to `J_Delta`;
+5. reproduce the exact Prime-2 mixed witness with no fitted parameter.
