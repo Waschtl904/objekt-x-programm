@@ -113,15 +113,15 @@ Setze
 
 ```math
 \ell=\log2,\quad\varepsilon=1/100,\quad\delta=2\varepsilon=1/50,
-\qquad I_j=((j-1/2)\ell-\varepsilon,(j-1/2)\ell+\varepsilon),
+\qquad B_j=((j-1/2)\ell-\varepsilon,(j-1/2)\ell+\varepsilon),
 \quad j=0,\ldots,5.
 ```
 
-Für jede nichtleere Menge A subset {0,...,5} setze S_A=union_{j in A} I_j. Es gibt 63 solche Trägermengen; jede zugehörige Quellenklasse ist unendlichdimensional. Die ursprünglichen f und g aus C0 §10.2 sind unverändert in den Abschlüssen von I_0 und I_1 getragen und gehören zu H1_0(S_{0,1}). Die gesamte neue Familie liegt z.B. in I_4=(-4,4). Kleinere passende Quellenfenster bleiben zulässig.
+Für jede nichtleere Menge A subset {0,...,5} setze S_A=union_{j in A} B_j. Es gibt 63 solche Trägermengen; jede zugehörige Quellenklasse ist unendlichdimensional. Die ursprünglichen f und g aus C0 §10.2 sind unverändert in den Abschlüssen von B_0 und B_1 getragen und gehören zu H1_0(S_{0,1}). Die gesamte neue Familie liegt z.B. in I_4=(-4,4). Kleinere passende Quellenfenster bleiben zulässig.
 
 ### 3.1 Sämtliche anderen Primzahlen sind exakt ausgeschlossen
 
-Zwischen I_i und I_j liegt die Mittelpunktdifferenz k log2, 1<=k<=5. Eine ganzzahlige Verschiebung log n kann die Intervalle nur verbinden, wenn
+Zwischen B_i und B_j liegt die Mittelpunktdifferenz k log2, 1<=k<=5. Eine ganzzahlige Verschiebung log n kann die Intervalle nur verbinden, wenn
 
 ```math
 |\log n-\log(2^k)|<\delta.
@@ -137,7 +137,7 @@ Die jeweils nächsten anderen ganzen Zahlen liegen weiter entfernt: Aus log(1+x)
 
 Daher bleiben genau n=2^k. Innerhalb eines einzelnen Intervalls gibt es wegen delta<log2 keine Primkante. Dies ist kein numerischer Cutoff und keine Ersetzung der gesamten Arithmetik durch ein dyadisches Modell.
 
-Auf x in I_i ist somit
+Auf x in B_i ist somit
 
 ```math
 d_{P,S_A}(x)=\sum_{j\in A,\ j\ne i}
@@ -157,14 +157,14 @@ Schreibe hier omega_k:=w_{2^k}=(log2)2^{-k/2}, um k nicht mit dem ganzzahligen I
 Schreibe H(s)=integral_s^infinity h(t)dt. Weil h positiv und fallend ist, ist H konvex. Für x in einer einzelnen delta-breiten Zelle gilt deshalb
 
 ```math
-W_{I_i}(x)=H(x-\inf I_i)+H(\sup I_i-x)
+W_{B_i}(x)=H(x-\inf B_i)+H(\sup B_i-x)
 \ge2H(\delta/2).
 ```
 
 Von dieser Leckage müssen beim Hinzufügen anderer Zellen deren Gamma-Verbindungen abgezogen werden. Für j!=i gilt
 
 ```math
-\int_{I_j}h(|x-y|)dy
+\int_{B_j}h(|x-y|)dy
 \le\delta h(|i-j|\ell-\delta)
 <g_{|i-j|},
 \qquad g_k:=\delta\left(1+\frac1{2(2k/3-\delta)}\right).  \tag{SG8}
@@ -255,7 +255,7 @@ auf dem geschlossenen physischen C0-Teilraum
 \qquad C_SH:=\mathcal C_S(R_0H).
 ```
 
-Setze W_S=C_c^infinity(S) intersect ker E_+ intersect ker E_-. Diese glatten momentfreien Quellen sind dort dicht: Man approximiert in H1_0(S) und korrigiert die zwei kleinen Momentfehler mit zwei festen glatten Bumps an verschiedenen Punkten von S; deren 2x2-Momentmatrix ist invertierbar. Hierdurch werden keine Readout-Parameter angepasst.
+Setze die Quellenklasse mathcal W_S=C_c^infinity(S) intersect ker E_+ intersect ker E_-, unterschieden von der Leckagefunktion W_S(x). Diese glatten momentfreien Quellen sind dort dicht: Man approximiert in H1_0(S) und korrigiert die zwei kleinen Momentfehler mit zwei festen glatten Bumps an verschiedenen Punkten von S; deren 2x2-Momentmatrix ist invertierbar. Hierdurch werden keine Readout-Parameter angepasst.
 
 **Nicht ersetzt:** Die ganze C0-Geometrie bleibt M mit ihren vollständigen Gedächtnisschwänzen. Der Readout benutzt deren Quellenrandspur. Die Green-Potentiale phi=G*u dürfen in Lücken von S ungleich null sein; nirgendwo wird supp phi subset S angenommen.
 
@@ -316,7 +316,7 @@ J_{S,T}\mathcal C_Su=\mathcal C_T\widetilde u,     \tag{SG17}
 
 wobei tilde u die Nullfortsetzung von S nach T ist. Bereits erzeugte Kanten bleiben erhalten; spätere neue Kanten lesen dieselbe alte Knotenspur z.
 
-Für ein festes S ist der äußere Fensterwechsel a->b wörtlich unverändert: T_b^0u=T_a^0u und C_S hat denselben Wert. Kombinierte Fenster-/Trägerinklusionen kommutieren somit mit SG15. Auf den abgeschlossenen erzeugten Räumen K_{X,S}:=closure(C_ST_a^0 W_S) beschränken sich J_{S,T} zu den gewünschten isometrischen Verbindungsabbildungen **dieser Teilklasse**.
+Für ein festes S ist der äußere Fensterwechsel a->b wörtlich unverändert: T_b^0u=T_a^0u und C_S hat denselben Wert. Kombinierte Fenster-/Trägerinklusionen kommutieren somit mit SG15. Auf den abgeschlossenen erzeugten Räumen K_{X,S}:=closure(C_ST_a^0 mathcal W_S) beschränken sich J_{S,T} zu den gewünschten isometrischen Verbindungsabbildungen **dieser Teilklasse**.
 
 ## 6. Der eingefrorene Prime-2-Mischtest wird jetzt vom Readout reproduziert
 
