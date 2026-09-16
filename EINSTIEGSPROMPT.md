@@ -1,103 +1,44 @@
 # Einstiegsprompt — Neue Chat-Session
 
-> **Aktueller Stand: 14. September 2026.**
+> **Aktueller Stand: 16. September 2026.**
 
 Forschungsprogramm **Objekt X** im Repository `Waschtl904/objekt-x-programm`.
 
-Arbeite als strenger mathematischer Auditor. ChatGPT übernimmt Repo-Arbeiten; externe Modelle sind Reviewer. Keine Promotion allein durch Merge, CI oder Numerik.
+Arbeite als strenger mathematischer Auditor und konstruktiver Forscher. Unterscheide stets zwischen bewiesenen Theoremen, autorverifizierten Zertifikaten und offenen Konstruktionshypothesen. Keine Promotion allein durch Merge, CI oder unbegründete Plausibilität.
+
+---
 
 ## Zuerst lesen
 
-1. `CURRENT-FRONT.md`
-2. `audits/P11_A1_FINITE_GATE_ARCHITECTURE_2026-09-14.md`
-3. `audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md`
-4. `audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md`
-5. `audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md`
-6. Registry/Arbeitsdefinition nur als unveränderte Governancequellen.
+1. `CURRENT-FRONT.md` (aktuelle Front-Trennung: eingefrorener A1-Import vs. aktive X-C1-Konstruktion)
+2. `research/x-c0/A1_COMP_STATUS_CAPSULE.md` (eingefrorener A1-Importstatus auf PR #131)
+3. `X_CANDIDATE_C0_SPEC.md` (gemeinsamer Vormediator und Portgeometrie)
+4. `research/x-c1/X_C1_STORAGE.md` (positive Gedächtnisenergie, exakte Flussidentität und Präfix-No-Go)
+5. `00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md` (aktuelle Verzweigungs-Roadmap v4.0)
 
-## Gesicherter Stand
+---
 
-```text
-COMMON-JUMP / Q0                         ✓[M]
-rank-2 completion / Morse / parity      ✓[M]
-canonical lambda=1                      ✓[M]
-exact a=1 Fourier multiplier            ✓[M]
-Omega1551 high-frequency floor          ✓[K/M]
-Osipov N=1102 Schur reduction           ✓[K/M]
-canonical mathematical reduction <=1104 ✓[K/M]
-```
-
-Die kleinste kanonische Restobligation bleibt
-
-```math
-(L_1)_{RR}\succeq3\times10^{-39}I
-```
-
-auf höchstens `552 even + 552 odd` PSWF/moment-augmentierten Dimensionen.
-
-## Durchlauf B — Architekturentscheidung `✓[M]`
-
-Für den **ersten ausführbaren Vollzertifikatsversuch** wird nicht die kleinere PSWF-Basis konstruiert, sondern der bereits vorbereitete orthonormale Legendre-Backend verwendet.
-
-Fixiert:
+## Aktueller Projektstatus
 
 ```text
-M=2150
-1075 even + 1075 odd
-Gram I exactly
-finite target=1e-35
-panel width<=0.4
-Gauss-Legendre q=40
-analytic strip |Im xi|<=0.4
-quadrature operator error <4e-38
+[A1-COMP] Completion a=1: L_1 >= 9e-36 I              ✓[Author-verified / External-open]
+[X-C0]    Gemeinsamer Vormediator M, Ports J_t        ✓[M]
+[X-C1]    Gedächtnisfluss, Randform B_a, Kokzyklus   ✓[M]
+[X-C1]    Kausaler Präfix-Speicher (Supply < -1/20)   ✗[No-Go bewiesen]
+[rho_1]   Ungerader Rang-1-Defekt                    ?[O] (konditionale Nebenstrecke)
+[X-C1]    Zweiseitige/endpunktbedingte Faktorisierung ?[O] (aktive Front)
+[X-C2]    Polarisierte Gram-Identität                 ?[O]
+[X-C3]    Kompatible Fensterübertragung               ?[O]
+[RH]      Globale Weil-Positivität / Objekt X         ?[O]
 ```
 
-Die Legendre-Ausführung ersetzt die kleinere PSWF-Reduktion nicht; sie ist die derzeit robustere Zertifikatsbasis, weil Basis, Gram, Parität, Tail/Cross und Quadraturbudget bereits rigoros geschlossen sind.
+---
 
-## Default-Auftrag — C-even ONLY
+## Operative Auftragsregeln
 
-Im nächsten Durchlauf **nur den geraden Paritätsblock** bauen und zertifizieren:
-
-```math
-\boxed{A_e\succeq10^{-35}I_{1075}}.
-```
-
-### Fixiertes Verfahren
-
-1. common-node Arb matrix assembly;
-2. spherical-Bessel vector evaluation with deterministic fail-closed recurrence;
-3. moment block `2aa^T` in Arb;
-4. certified #118 quadrature radius directly in every matrix entry;
-5. interval symmetry checks;
-6. untrusted midpoint eigenbasis/preconditioner as proposal only;
-7. freeze proposal to dyadic Arb points;
-8. form in Arb
-   ```math
-   V^T(A_e-10^{-35}I)V;
-   ```
-9. verified interval Cholesky/LDL;
-10. accept only if every decisive pivot lower endpoint is strictly positive.
-
-### Fixed precision ladder
-
-```text
-512
-768
-1024
-1536
-2048
-3072 bits
-```
-
-Only precision may increase. Do **not** retune `M`, target, quadrature order, panel width or basis after seeing results.
-
-If C-even is green, stop and checkpoint. Run C-odd only in a separate later pass.
-
-### Firewalls
-
-- A pivot containing `0` is undecided.
-- Float eigenvectors/factors are untrusted proposals only.
-- B defined architecture; it did not prove finite positivity.
-- No `a=1` promotion after even alone.
-- Fixed-window `a=1`, all-a NP-GAP, Object X and RH remain open.
-- Registry/Arbeitsdefinition unchanged.
+1. **Kein A1-Daueraudit:** PR #131 ist auf Head `0a7c970` eingefroren. Keine weiteren Selbstrechnungen oder Reviews dort, solange kein externer Reviewer eine Kante beanstandet oder sich der Head ändert.
+2. **C1-Konstruktion ist die Hauptspur:** Suche nicht nach weiteren naiven kausalen Speichern $V \ge 0$. Erlaubt sind ausschließlich:
+   - Zweiseitige/terminale Speicher, bei denen $V_a(x)$ vorübergehend negativ werden darf ($V_a = \widetilde V_a - F_a$) und die Energie am rechten Rand exakt zurückgegeben wird.
+   - Genuin zweiseitige Randwert-Faktorisierungen der Randform $2\operatorname{Re}(\overline{v} \mathcal B_a v)$.
+3. **Falsifikations-Gates beachten:** Jeder C1-Kandidat muss vor weiteren Verfeinerungen den festen Prime-2-Mischtest $Q_{\mathrm{fin}}(f,g) = -\frac{\log 2}{\sqrt 2}\|f\|_2^2$ bestehen.
+4. **$\rho_1$ getrennt behandeln:** Das Variationsproblem $\rho_1 = \langle d_1, \mathcal A_1^{-1} d_1 \rangle$ ist eine konditionale Nebenstrecke für den vollen ungeraden Operator und kein Blocker für die $\mathrm{NULLPOL}$-Forschung.

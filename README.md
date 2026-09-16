@@ -2,17 +2,17 @@
 
 *Ein lakatosianisches Forschungsjournal zur Riemannschen Hypothese.*
 
-> **Stand: 14. September 2026.**  
-> COMMON-JUMP liefert die gemeinsame Prime-/archimedische Featurearchitektur. Für `a=1` reduzieren rigorose Fourier-, Prolate- und Schur-Schranken den offenen fixed-window Satz kanonisch auf höchstens `1104` Dimensionen. Zusätzlich existiert ein orthonormaler Legendre-Zertifikatsbackend mit bereits geschlossenem Tail/Cross- und Quadraturbudget. Objekt X und RH bleiben offen.
+> **Stand: 16. September 2026.**  
+> Das Programm trennt strikt zwischen dem eingefrorenen Einheitsfenster-Autorennachweis ($L_1 \succeq 9\cdot 10^{-36}I_{L^2(-1,1)}$ auf [PR #131](https://github.com/Waschtl904/objekt-x-programm/pull/131), `AUTHOR-VERIFIED / EXTERNAL-OPEN`) und der aktiven X-C0/X-C1-Konstruktionsspur auf [PR #137](https://github.com/Waschtl904/objekt-x-programm/pull/137) (gemeinsamer Vormediator, exakte Flussidentität, kausale Präfix-Positivität widerlegt). Objekt X und RH bleiben offen.
 
 ## Hier beginnen
 
-1. [CURRENT-FRONT](CURRENT-FRONT.md)
-2. [A1 Osipov N1102 reduction](audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md)
-3. [A1 Omega1551 reduction](audits/P11_A1_OMEGA1551_REDUCTION_2026-09-13.md)
-4. [A1 Legendre quadrature budget](audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md)
-5. [A1 Legendre finite backend](audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md)
-6. [Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)
+1. [CURRENT-FRONT](CURRENT-FRONT.md) (aktuelle Front-Trennung und nächste Schritte)
+2. [X-C0 Spezifikation](X_CANDIDATE_C0_SPEC.md) (gemeinsamer Vormediator & Portgeometrie)
+3. [X-C1 Speicherfluss](research/x-c1/X_C1_STORAGE.md) (Gedächtnisfluss & Präfix-No-Go)
+4. [A1 Statuskapsel](research/x-c0/A1_COMP_STATUS_CAPSULE.md) (eingefrorener A1-Importstatus)
+5. [Forschungsroadmap v4.0](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md) (Trennung A1-G0..G7 und X-C0..C3)
+6. [Einstiegsprompt](EINSTIEGSPROMPT.md) (Regeln für neue Arbeitssitzungen)
 
 ## Kanonische `a=1`-Reduktion
 
