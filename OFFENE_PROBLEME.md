@@ -1,119 +1,67 @@
-# Offene Probleme — A1-FINITE-CERT
+# Offene Probleme — X-C1, Diagnose und Governance
 
-> **Stand:** 14. September 2026.  
-> Operative Audits: [A1 finite gate architecture](audits/P11_A1_FINITE_GATE_ARCHITECTURE_2026-09-14.md) · [A1 Osipov N1102](audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md) · [A1 Legendre backend](audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md) · [A1 Legendre quadrature budget](audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md).
-
-## Geschlossen
-
-### `[A1-OSIPOV-1102]` `✓[M] / ✓[K/M]`
-
-```math
-\mu_{1102}<10^{-43},
-\qquad
-\text{Schur penalty}<1.5\times10^{-40}.
-```
-
-Damit ist die kanonische mathematische Restreduktion höchstens
-
-```text
-1104 = 552 even + 552 odd.
-```
-
-### `[A1-LEGENDRE-TAIL]` `✓[K/M]`
-
-Alternative orthonormale Vollraumroute:
-
-```text
-M=2150
-1075 even + 1075 odd
-G=I exactly
-finite target=1e-35
-```
-
-Tail/Cross sind zertifiziert.
-
-### `[A1-LEGENDRE-QBUDGET]` `✓[K/M]`
-
-Für jeden Legendre-Paritätsblock ist der analytische Quadratur-Operatorfehler zertifiziert:
-
-```math
-\|K-\widetilde K\|_{op}<4\times10^{-38}.
-```
-
-### `[A1-FINITE-ARCH]` `✓[M]`
-
-Die Ausführungsarchitektur für den ersten vollständigen finite Gate ist fixiert:
-
-- Legendre ist der operative Zertifikatsbackend;
-- PSWF/Osipov bleibt die kleinere kanonische mathematische Reduktion;
-- `M=2150`, `1075` pro Parität, target `1e-35` werden in C nicht retuned;
-- quadrature rule bleibt width `<=0.4`, Gauss `q=40`, strip `0.4`;
-- Arb-Intervallmatrix + dyadisch eingefrorener untrusted preconditioner + intervalle Congruence/Cholesky;
-- Precision ladder: `512,768,1024,1536,2048,3072` bits;
-- Pivotintervall mit `0` = undecided.
+> **Stand:** 16. September 2026.  
+> Operative Spezifikationen: [CURRENT-FRONT](CURRENT-FRONT.md) · [A1 Statuskapsel](research/x-c0/A1_COMP_STATUS_CAPSULE.md) · [X-C0 Spezifikation](X_CANDIDATE_C0_SPEC.md) · [X-C1 Speicherfluss](research/x-c1/X_C1_STORAGE.md).
 
 ---
 
-## Priorität 0 — `[C-EVEN]` `?[O]`
+## 1. Abgeschlossen / Eingefroren
 
-Als nächstes **nur** den geraden Block zertifizieren:
+### `[A1-COMP]` `✓[Author-verified / External-open]`
+- Finite Legendre-Paritätsblöcke $A_e \succeq 10^{-35}I$, $A_o \succeq 10^{-35}I$ (gemergt via PR #123 und #124).
+- Quadratur-, Tail- und Auswertungsbudgets geschlossen.
+- Vollständige Ganzzahl-Gleichheitsbrücke zwischen kanonischer und historischer Matrix geschlossen (Lauf 35005611795).
+- Zusammengesetzter Operator: $L_1 \succeq 9\cdot 10^{-36}I_{L^2(-1,1)}$ auf Draft-PR #131 (Head `0a7c970`, Review 5218037890).
+- Eingefroren als konditionaler Import; Stop-Regel aktiv.
 
+### `[X-C0-TYPE]` `✓[M]`
+- Gemeinsamer Vormediator $\mathfrak M = L^2(\mathbb R_x; \mathfrak h_r)$ mit $\mathfrak h = H^1(0,\infty)$ und Kern $k_t(r) = e^{-|r-t|/2}$.
+- Physische Zustände $T_a^0 v$, wörtlich geschachtelte Fenstereinbettungen.
+- Prime-, Gamma- und Polports aus demselben Feld abgeleitet.
+
+### `[X-C1-STORAGE-NO-GO]` `✓[M]`
+- Exakte Flussidentität $s_a[z_x] + \frac{d}{dx}F_a[z_x] = 2\operatorname{Re}(\overline{v(x)}\,(\mathcal B_a v)(x))$ mit $F_a \ge 0$.
+- Kausaler Präfix-No-Go für naive nichtnegative Speicher $V \ge 0, V[0]=0$ auf glatter $\mathrm{NULLPOL}$-Rampe ($< -1/20$) bewiesen.
+
+---
+
+## 2. Aktive Front: Priorität 0 — `[X-C1-GEOM]` `?[O]`
+
+Gesucht ist eine nichtzirkuläre Faktorisierung oder positive Auswertung für die signierte Randform
 ```math
-\boxed{A_e\succeq10^{-35}I_{1075}}.
+2\operatorname{Re}\left( \overline{v(x)}\,(\mathcal B_a v)(x) \right),
 ```
+nachdem naive kausale Speicherflüsse ausgeschlossen sind.
 
-Pflichten:
+### Zulässige Lösungswege
+1. **Zweiseitige/terminale Speicher:** Vorübergehend negative Speicherwerte $V_a(x) < 0$ (mit $V_a = \widetilde V_a - F_a$), die am rechten Rand exakt zurückgegeben werden.
+2. **Genuin zweiseitige Randwert-Faktorisierung:** Direkte Faktorisierung der Randform $2\operatorname{Re}(\overline{v} \mathcal B_a v)$ unter Einbeziehung beider Endpunkte und der globalen $\mathrm{NULLPOL}$-Momentbedingungen.
 
-1. common-node Arb assembly;
-2. spherical-Bessel vector evaluation with fail-closed recurrence;
-3. exact/Arb moment rank-one block;
-4. certified #118 quadrature radius in every matrix entry;
-5. deterministic interval symmetry checks;
-6. untrusted midpoint preconditioner frozen to dyadic points;
-7. Arb congruence `V^T(A_e-1e-35 I)V`;
-8. verified positive pivots at one fixed precision-ladder level;
-9. reproducible matrix/preconditioner/pivot artifacts.
-
-No odd-block work in the same pass if even has not certified.
+### Harte Gates
+- Exakte Reproduktion des Prime-2-Mischterms $Q_{\mathrm{fin}}(f,g) = -\frac{\log 2}{\sqrt 2}\|f\|_2^2$ auf disjunkten Trägern.
+- Absicherung gegen Vorzeichenfehler durch komplexe Mischtests $f \pm ig$.
+- Keine Annahme von $Q_W \ge 0$ zur Definition der Operatoren (Zirkularitätsverbot).
 
 ---
 
-## Priorität 1 — `[C-ODD]` `?[O]`
+## 3. Konditionale Nebenstrecke: Priorität 1 — `[RHO-1-DIAGNOSE]` `?[O]`
 
-Only after C-even succeeds:
-
+Rigorose Schranke für das ungerade Rang-1-Defektfunktional
 ```math
-\boxed{A_o\succeq10^{-35}I_{1075}}.
+\rho_1 = \sup_{v\ne0} \frac{|E_+(v)-E_-(v)|^2}{\mathfrak A_1[v]} = \langle d_1, \mathcal A_1^{-1} d_1 \rangle.
 ```
 
-Use the identical fixed protocol and a separate certificate artifact.
+- **Verfahren:** Richtungsbezogener Residualtest mit $u \in D(\mathcal A_1)$, $r = d_1 - \mathcal A_1 u$:
+  ```math
+  b(u) \le \rho_1 \le b(u) + \frac{\|r\|_2^2}{9\cdot 10^{-36}}.
+  ```
+- **Ziel:** Sauberes Intervall oder numerische Schranke für den vollen Operator $\mathcal A_1$.
+- **Firewall:** $\rho_1$ misst nicht den lokalen Präfixdefekt und ist kein Blocker für die $\mathrm{NULLPOL}$-Forschung.
 
 ---
 
-## Danach — `[A1-CERT]` `?[O]`
+## 4. Folge-Gates
 
-```text
-C-even green
-   +
-C-odd green
-   +
-#117 certified full-space transfer
-   |
-   v
-L_1 >=0
-   |
-canonical a=1 completion
-```
-
-A future direct PSWF finite certificate remains an independent alternate closure route.
-
----
-
-## Firewalls
-
-- B is architecture, not a positivity result.
-- Do not lower `1e-35` after seeing a matrix.
-- Do not change `M`, quadrature or basis inside C.
-- Only precision may increase along the fixed ladder.
-- Float eigenvalues/preconditioners are proposals only.
-- Fixed-window `a=1`, all-a NP-GAP, Object X and RH remain open.
+- **`[X-C2-ID]` `?[O]`:** Polarisierte Gram-Identität $\langle C_a T_a^0 v, C_a T_a^0 w \rangle = Q_W(v,w)$ auf Basisfunktionen.
+- **`[X-C3-WINDOW]` `?[O]`:** Kompatible Verbindungsabbildungen $J_{a,b}$ und Konsistenz des additiven Fenster-Kokzyklus $F_b - F_a \ge 0$.
+- **`[EXT-REVIEW-A1]` `?[O]`:** Unabhängige externe Begutachtung des eingefrorenen PR #131 bzw. Benchmark-Abgleich mit Fremdzertifikaten.

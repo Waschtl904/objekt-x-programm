@@ -1,154 +1,73 @@
-# CURRENT FRONT — Objekt X / A1-FINITE-CERT
+# CURRENT FRONT — Objekt X / X-C1 & A1-Import
 
-> **Stand:** 14. September 2026; Registry und Objekt-X-Arbeitsdefinition unverändert.  
-> **Hauptaudits:** [A1 Osipov N1102](audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md) · [A1 finite gate architecture](audits/P11_A1_FINITE_GATE_ARCHITECTURE_2026-09-14.md) · [A1 Legendre backend](audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md) · [Legendre quadrature budget](audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md).
+> **Stand:** 16. September 2026; Registry und Objekt-X-Arbeitsdefinition unverändert.  
+> **Eingefrorener A1-Import:** [PR #131](https://github.com/Waschtl904/objekt-x-programm/pull/131) (`0a7c970`, `AUTHOR-VERIFIED / EXTERNAL-OPEN`, [Review 5218037890](https://github.com/Waschtl904/objekt-x-programm/pull/131#pullrequestreview-5218037890)).  
+> **Aktive Konstruktionsspur:** [PR #137](https://github.com/Waschtl904/objekt-x-programm/pull/137) (`research/x-c0-common-memory-2026-09-16`).  
+> **Hauptaudits & Spezifikationen:** [A1 Statuskapsel](research/x-c0/A1_COMP_STATUS_CAPSULE.md) · [X-C0 Spezifikation](X_CANDIDATE_C0_SPEC.md) · [X-C1 Speicherfluss & Präfix-No-Go](research/x-c1/X_C1_STORAGE.md).
 
-## 1. Closed mathematical reduction
+---
 
-`COMMON-JUMP/Q0`, rank-2 completion, Morse/parity, canonical `lambda=1`, exact `a=1` Fourier multiplier and the moment-augmented Schur theorem are closed.
+## 1. Operative Frontentflechtung: Zwei Spuren
 
-Exact-Head Arb gives
-
-```math
-m_1(\xi)>0.1\quad(|\xi|\ge1551),
-\qquad \|r\|_\infty<12.
-```
-
-Osipov Theorem 4 plus Arb at `c=1551`, `N=1102` gives
-
-```math
-\mu_{1102}<10^{-43},
-\qquad
-\text{Schur penalty}<1.5\times10^{-40}.
-```
-
-Hence the **canonical smallest mathematical reduction** is
-
-```math
-(L_1)_{RR}\succeq3\times10^{-39}I
-```
-
-on at most
+Das Programm trennt ab sofort strikt zwischen dem formal eingefrorenen Einheitsfenster-Zertifikat und der aktiven Konstruktionsforschung:
 
 ```text
-1104 = 552 even + 552 odd
+[Spur A — A1-Completion (eingefroren)]
+  PR #131: L_1 ⪰ 9·10^-36 I (Author-verified / External-open)
+  Status:  Gestoppt. Kein weiterer Selbstaudit ohne externen Auslöser.
+
+[Spur B — X-C0 / X-C1 (aktive Konstruktion)]
+  PR #137: Gemeinsamer Vormediator M = L^2(R_x; h_r), Zustände T_a^0 v, exakte Ports.
+  Status:  C0-TYPE erreicht. C1-STORAGE Flussidentität formuliert;
+           kausale Präfix-Positivität widerlegt (< -1/20).
+           Nächstes Gate: Zweiseitige/endpunktbedingte Randfaktorisierung.
 ```
 
-dimensions.  This finite lower bound is still `?[O]`.
+---
 
-## 2. Operational certificate decision `✓[M]`
+## 2. Geschlossener mathematischer Status (A1)
 
-For the first full computer certificate, use the independent orthonormal Legendre backend rather than constructing a rigorous PSWF basis.
-
-Reason:
-
-```text
-PSWF/Osipov: <=552 x 552 per parity, but resolved spectral subspace still needs certification.
-Legendre:    1075 x 1075 per parity, but G=I exactly and tail/cross + quadrature are already certified.
-```
-
-Thus PSWF remains the canonical smaller reduction, while **Legendre is the execution backend for C**.
-
-## 3. Fixed Legendre finite blocks
-
-Use
+Die finite Reduktion, Legendre-Tail- und Cross-Blöcke sowie die Quadratur- und Integer-Gleichheitsbrücken sind im Autorenaudit PR #131 geschlossen:
 
 ```math
-T_n(x)=\sqrt{n+\frac12}P_n(x),
-\qquad n=0,\ldots,2149.
+A_e \succeq 10^{-35}I_{1075}, \qquad A_o \succeq 10^{-35}I_{1075}, \qquad L_1 \succeq 9\cdot 10^{-36}I_{L^2(-1,1)}.
 ```
 
-Each parity block has dimension `1075`.  For
+- **Scope:** Beschränkter Vergleichsoperator $L_1$, Completion $\mathfrak A_1$ und Weil-Form $Q_W$ auf $\mathrm{NULLPOL}$ und geraden Testfunktionen für $0 < a \le 1$.
+- **Keine Folgerung auf:** Uneingeschränkte ungerade Weil-Positivität, Fortsetzung auf $a > 1$, all-window NP-GAP oder RH.
 
-```math
-L_1=0.1I+K+\mathcal E^*\mathcal E,
-```
+---
 
-the exact same-parity block is
+## 3. Aktive Konstruktionsfront: X-C0 und X-C1
 
-```math
-(A_p)_{nm}=0.1\delta_{nm}+K_{nm}+2a_na_m,
-```
+### X-C0: Gemeinsamer Vormediator `✓[M]`
+- Raum $\mathfrak h = H^1(0,\infty)$ mit Kern $k_t(r) = e^{-|r-t|/2}$.
+- Physische Zustände $(T_a^0 v)(x,r) = e^{-r/4}(E_a v)(x-r)$.
+- Gemeinsame Ausleseabbildung $\mathcal J_t$ erzeugt Prime-Power-, Gamma- und Pol-Ports aus demselben Feld.
+- Wörtliche Fensterkompatibilität $T_b^0 i_{a,b} v = T_a^0 v$ für $a < b$.
 
-with exact Gram `I`.
+### X-C1: Speicherfluss und Präfix-No-Go `✓[M]`
+- **Positive Gedächtnisenergie:** Exakte Definition von $F_a = F_\gamma + \sum F_{p,k} \ge 0$.
+- **Flussidentität:**
+  ```math
+  s_a[z_x] + \frac{d}{dx}F_a[z_x] = 2\operatorname{Re}\left( \overline{v(x)}\,(\mathcal B_a v)(x) \right).
+  ```
+- **Kausaler Präfix-No-Go:** Eine überall nichtnegative kausale Speicheridentität $s_1 = R + V'$ mit $R, V \ge 0, V[0]=0$ ist auf glatten $\mathrm{NULLPOL}$-Funktionen im Einheitsfenster ausgeschlossen (Rampen-Präfix-Supply $< -1/20$).
+- **Fenster-Kokzyklus:** Auf alten Zuständen gilt $s_b - s_a = -\frac{d}{dx}(F_b - F_a)$ mit $F_b - F_a \ge 0$, also $\widetilde s_b = \widetilde s_a$.
 
-The fixed theorem targets are
+---
 
-```math
-\boxed{A_e\succeq10^{-35}I_{1075}},
-\qquad
-\boxed{A_o\succeq10^{-35}I_{1075}}.
-```
+## 4. Nächste zulässige Aufgaben
 
-PR #117 already closes the Legendre tail/cross transfer. PR #118 already certifies the analytic quadrature operator error
+1. **Säule 1 (Navigation & Evidenz):** Pointer-Kette auf `main` pflegen, A1-Beweisartefakte dauerhaft an Commit `0a7c970` binden.
+2. **Säule 2 (Lokale Diagnose $\rho_1$):** Richtungsbezogener unendlichdimensionaler Residuen-Pilot für $\rho_1 = \langle d_1, \mathcal A_1^{-1} d_1 \rangle$ im ungeraden Sektor (konditionale Nebenstrecke).
+3. **Säule 3 (C1-Konstruktion):** Zweiseitige oder endpunktbedingte Faktorisierung der Randform $2\operatorname{Re}(\overline{v} \mathcal B_a v)$ unter Verlassen der naiven Präfix-Positivität; Falsifikation am Prime-2-Mischtest $Q_{\mathrm{fin}}(f,g) = -\frac{\log 2}{\sqrt 2}\|f\|_2^2$.
 
-```math
-<4\times10^{-38}
-```
+---
 
-per parity block.
+## 5. Firewalls
 
-## 4. C protocol
-
-The certificate architecture is frozen:
-
-```text
-M=2150
-1075 modes per parity
-finite target=1e-35
-panel width<=0.4
-Gauss-Legendre q=40
-analytic strip |Im xi|<=0.4
-python-flint Arb
-```
-
-Matrix entries are assembled in Arb with the certified quadrature radius included directly in every interval entry.  The final proof uses an untrusted approximate preconditioner only as a proposal, freezes it to dyadic points, forms the exact interval congruence
-
-```math
-V^T(A-10^{-35}I)V,
-```
-
-and accepts only if verified interval Cholesky/LDL has strictly positive pivots.
-
-A pivot interval containing `0` is **undecided**.
-
-The only allowed adaptation is working precision on the fixed ladder
-
-```text
-512, 768, 1024, 1536, 2048, 3072 bits.
-```
-
-## 5. Split execution
-
-To reduce timeout risk:
-
-```text
-C-even first: certify A_e >=1e-35 I.
-C-odd second: certify A_o >=1e-35 I.
-```
-
-No `a=1` promotion after only one parity succeeds.
-
-## 6. Status
-
-```text
-canonical PSWF/Osipov finite reduction <=1104        ✓[K/M]
-Legendre orthonormal backend                          ✓[K/M]
-Legendre tail/cross transfer                          ✓[K/M]
-Legendre quadrature op error <4e-38                   ✓[K/M]
-final finite certificate architecture                 ✓[M]
-C-even finite positivity                              ?[O]
-C-odd finite positivity                               ?[O]
-certified a=1 completion                              ?[O]
-all-a NP-GAP                                          ?[O]
-forward Object-X candidate architecture               ✓[M]_part
-full positive Object-X / RH                           ?[O]
-```
-
-## 7. Firewalls
-
-- Architecture is not positivity.
-- The Legendre execution backend does not supersede the smaller PSWF reduction.
-- Target, basis size and quadrature rule may not be retuned inside C.
-- Only precision may increase along the fixed ladder.
-- Fixed-window `a=1`, all-window NP-GAP, Object X and RH remain open.
+- Kein weiterer Selbstaudit von PR #131 ohne externe Beanstandung oder Head-Änderung.
+- Der C1-Präfix-No-Go ist ein Klassen-No-Go für naive kausale Speicher, keine Widerlegung von Weil-Positivität oder RH.
+- $\rho_1$ ist kein Blocker für die C1-$\mathrm{NULLPOL}$-Konstruktion.
+- Feste Fensterresultate ($a=1$), all-window NP-GAP, Objekt X und RH bleiben strikt getrennt.
