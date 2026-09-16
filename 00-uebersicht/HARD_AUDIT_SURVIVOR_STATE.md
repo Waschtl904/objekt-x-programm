@@ -237,7 +237,7 @@ b_h=\Phi_h b_0,
 
 Lokale Prime-/Euler-Zellen sind somit passive Kontraktionen der Gamma-Grundzelle. Der globale Engpass liegt nicht mehr lokal pro Primzahl, sondern in der Skalenkopplung.
 
-Primaerquelle: `audits/P11_EULER_CELL_DOMINATION_BY_GAMMA_GROUND_2026-09-16.md`.
+Primaerquelle: `audits/P11_EULER_CELL_DOMINATED_BY_GAMMA_GROUND_2026-09-16.md`.
 
 ## S11 — Root-Trace-Bilanz `✓[M]`
 
@@ -270,7 +270,7 @@ e^{-L/2}J_\Delta(L)
 
 Der kritische Volterra-Kern ist damit direkt die relative gestoppte Root-Storage-Bilanz.
 
-Primaerquelle: `audits/P11_ROOT_TRACE_RELATIVE_STORAGE_BALANCE_2026-09-16.md`.
+Primaerquelle: `audits/P11_CRITICAL_TRANSFER_AS_STOPPED_ROOT_TRACE_DEFECT_2026-09-16.md`.
 
 ## S12 — Monotone Root-Mass-Transportkopplung `✓[K/M]`
 
@@ -339,7 +339,7 @@ Nicht neu beanspruchen:
 - RH als Positive-Real/Herglotz-Kriterium fuer `xi'/xi`;
 - Lagarias-Positivitaet;
 - Zeta-bezogene Kontroll-/Transfer-Systeme allgemein;
-- Eulerprodukt, Poisson-, OU-/AR(1)-, Green-, de-Branges-, Paley-Wiener- oder Prolate-Theorie an sich;
+- Eulerprodukt, Poisson-, OU-/AR(1)-, Green-, de-Branges-, Paley-Wiener-, Toeplitz-, Prolate-Theorie an sich;
 - passive/KYP-Realisierungen an sich;
 - klassische PNT-Fehlerabschaetzungen.
 

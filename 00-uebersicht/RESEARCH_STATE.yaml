@@ -89,14 +89,14 @@ claims:
   - id: S11_EULER_CELL_DOMINATION
     status: proven
     statement: "For every h>0, 0 <= A_h <= A_0 where A_h is the complete Euler/AR(1) cell and A_0 the Gamma ground operator; equivalently b_h=Phi_h b_0 with Phi_h Schur."
-    proof: audits/P11_EULER_CELL_DOMINATION_BY_GAMMA_GROUND_2026-09-16.md
+    proof: audits/P11_EULER_CELL_DOMINATED_BY_GAMMA_GROUND_2026-09-16.md
     dependencies: [S10_EULER_AR1_RESOLVENT]
     consequence: "local prime-cell storage solved; global scale coupling remains"
 
   - id: S12_ROOT_TRACE_BALANCE
     status: proven
     statement: "e^-L/2 J_Delta(L)=M_R(L)+M_Gamma0(L)-M_P(L)-gamma, with M_P(L)=sum_{log n<L}Lambda(n)/n."
-    proof: audits/P11_ROOT_TRACE_RELATIVE_STORAGE_BALANCE_2026-09-16.md
+    proof: audits/P11_CRITICAL_TRANSFER_AS_STOPPED_ROOT_TRACE_DEFECT_2026-09-16.md
     dependencies: [S8_CRITICAL_FINITE_PART_TRANSFER, S3_STOPPED_OU_FILTRATION]
 
   - id: S13_ROOT_MASS_TRANSPORT
