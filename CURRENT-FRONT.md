@@ -1,73 +1,41 @@
-# CURRENT FRONT — Objekt X / X-C1 & A1-Import
+# CURRENT FRONT — eingefrorenes A1 / aktive X-C1-Konstruktion
 
-> **Stand:** 16. September 2026; Registry und Objekt-X-Arbeitsdefinition unverändert.  
-> **Eingefrorener A1-Import:** [PR #131](https://github.com/Waschtl904/objekt-x-programm/pull/131) (`0a7c970`, `AUTHOR-VERIFIED / EXTERNAL-OPEN`, [Review 5218037890](https://github.com/Waschtl904/objekt-x-programm/pull/131#pullrequestreview-5218037890)).  
-> **Aktive Konstruktionsspur:** [PR #137](https://github.com/Waschtl904/objekt-x-programm/pull/137) (`research/x-c0-common-memory-2026-09-16`).  
-> **Hauptaudits & Spezifikationen:** [A1 Statuskapsel](research/x-c0/A1_COMP_STATUS_CAPSULE.md) · [X-C0 Spezifikation](X_CANDIDATE_C0_SPEC.md) · [X-C1 Speicherfluss & Präfix-No-Go](research/x-c1/X_C1_STORAGE.md).
+> Stand: 16. September 2026. Navigation, keine Satzpromotion.
+> Mathematischer Modellanker: `ac164bbbd2c46623aa64e567d21f813f41f164b0`.
+> Navigation nach dem parallelen Merge #139: `383cafc9ea8c9cd01569292ece7c92063f00ed14`.
 
----
+## Eingefrorener konditionaler Import
 
-## 1. Operative Frontentflechtung: Zwei Spuren
+`A1-COMP@0a7c970 / AUTHOR-VERIFIED / EXTERNAL-OPEN`.
+[PR #131](https://github.com/Waschtl904/objekt-x-programm/pull/131), Head `0a7c970fc5983c9c198915e2c7c1f6280834b13a`.
+Autorennachweis: `L_1 >= 9e-36 I`; Completion zuerst, Weil-Transfer nur auf NULLPOL und geraden Tests für `0<a<=1`.
+Keine allgemeine Odd-Positivität, kein `a>1`, all-window NP-GAP, Objekt X oder RH.
+[Statuskapsel und Primärbelege](https://github.com/Waschtl904/objekt-x-programm/blob/d7b32ccfb9d0d90f19d4a7a5b0fbd19b0928f257/research/x-c0/A1_COMP_STATUS_CAPSULE.md).
+Die finiten C-even/C-odd-Resultate aus #123/#124 sind auf main; das Gesamtpaket #131 ist ungemergt und extern review-offen.
+Kein A1-Selbstaudit ohne konkreten Auslöser: Headänderung, externe Kantenbeanstandung, echter Scope-Mehrbedarf oder ausgefallener Import/Provenienz.
 
-Das Programm trennt ab sofort strikt zwischen dem formal eingefrorenen Einheitsfenster-Zertifikat und der aktiven Konstruktionsforschung:
+## Aktive Konstruktion, nicht gemergt
 
-```text
-[Spur A — A1-Completion (eingefroren)]
-  PR #131: L_1 ⪰ 9·10^-36 I (Author-verified / External-open)
-  Status:  Gestoppt. Kein weiterer Selbstaudit ohne externen Auslöser.
+[PR #137](https://github.com/Waschtl904/objekt-x-programm/pull/137), gelesener Head `708542fb8a6a230b2e1ae4b8d44d51a7aa1e393d`.
+[C0-Spezifikation](https://github.com/Waschtl904/objekt-x-programm/blob/d7b32ccfb9d0d90f19d4a7a5b0fbd19b0928f257/X_CANDIDATE_C0_SPEC.md): positiver Vormediator, nicht die Weil-Norm.
+[C1-STORAGE](https://github.com/Waschtl904/objekt-x-programm/blob/3a81019e43d95750493d47030728966576b3b942/research/x-c1/X_C1_STORAGE.md): exakter Fluss; ursprüngliche nichtnegative kausale Speicherklasse ausgeschlossen, kein negativer vollständiger Weil-Test.
+[Endpunkt-Green-Brücke](https://github.com/Waschtl904/objekt-x-programm/blob/708542fb8a6a230b2e1ae4b8d44d51a7aa1e393d/research/x-c1/X_C1_ENDPOINT_GREEN_BRIDGE.md): tatsächliche Mellin-Endbedingungen und kompletter Prime-2-Mischtest; Residual weiterhin signiert.
+Die Positivität auf dem dort festgelegten zweidimensionalen Proberaum ist kein C1-GEOM-Abschluss.
 
-[Spur B — X-C0 / X-C1 (aktive Konstruktion)]
-  PR #137: Gemeinsamer Vormediator M = L^2(R_x; h_r), Zustände T_a^0 v, exakte Ports.
-  Status:  C0-TYPE erreicht. C1-STORAGE Flussidentität formuliert;
-           kausale Präfix-Positivität widerlegt (< -1/20).
-           Nächstes Gate: Zweiseitige/endpunktbedingte Randfaktorisierung.
-```
+**Nächster Gate: X-C1-GEOM.** Einen quellen-/endpunktbedingten oder zweiseitigen positiven Readout konstruieren, seine Domain und vollständige komplexe Gramidentität beweisen.
+Keine Fits, keine aus Weil-Positivität definierte Quadratwurzel; Prime-/Gamma-/Polkanäle und Fensterbuchhaltung erhalten.
+PR #138 ist eine getrennte ergänzende Forschungsquelle, kein pauschaler Import und kein Positivitätsbeweis.
 
----
+## Getrennte Diagnose
 
-## 2. Geschlossener mathematischer Status (A1)
+`rho_1=<d_1,Acal_1^(-1)d_1>` benutzt die vollständige Completion, nicht die vorhandene finite L1-Matrix.
+Rigoroser Trial/Galerkinwert: Untergrenze. Erforderlich für eine obere Schranke: vollständiger Residual-/Tailnachweis.
+Ein Pilot darf unentschieden bleiben; kein garantierter Termin. Kein logischer Vorgänger der A1-unabhängigen NULLPOL-C1-Spur.
 
-Die finite Reduktion, Legendre-Tail- und Cross-Blöcke sowie die Quadratur- und Integer-Gleichheitsbrücken sind im Autorenaudit PR #131 geschlossen:
+## Navigation und Grenzen
 
-```math
-A_e \succeq 10^{-35}I_{1075}, \qquad A_o \succeq 10^{-35}I_{1075}, \qquad L_1 \succeq 9\cdot 10^{-36}I_{L^2(-1,1)}.
-```
-
-- **Scope:** Beschränkter Vergleichsoperator $L_1$, Completion $\mathfrak A_1$ und Weil-Form $Q_W$ auf $\mathrm{NULLPOL}$ und geraden Testfunktionen für $0 < a \le 1$.
-- **Keine Folgerung auf:** Uneingeschränkte ungerade Weil-Positivität, Fortsetzung auf $a > 1$, all-window NP-GAP oder RH.
-
----
-
-## 3. Aktive Konstruktionsfront: X-C0 und X-C1
-
-### X-C0: Gemeinsamer Vormediator `✓[M]`
-- Raum $\mathfrak h = H^1(0,\infty)$ mit Kern $k_t(r) = e^{-|r-t|/2}$.
-- Physische Zustände $(T_a^0 v)(x,r) = e^{-r/4}(E_a v)(x-r)$.
-- Gemeinsame Ausleseabbildung $\mathcal J_t$ erzeugt Prime-Power-, Gamma- und Pol-Ports aus demselben Feld.
-- Wörtliche Fensterkompatibilität $T_b^0 i_{a,b} v = T_a^0 v$ für $a < b$.
-
-### X-C1: Speicherfluss und Präfix-No-Go `✓[M]`
-- **Positive Gedächtnisenergie:** Exakte Definition von $F_a = F_\gamma + \sum F_{p,k} \ge 0$.
-- **Flussidentität:**
-  ```math
-  s_a[z_x] + \frac{d}{dx}F_a[z_x] = 2\operatorname{Re}\left( \overline{v(x)}\,(\mathcal B_a v)(x) \right).
-  ```
-- **Kausaler Präfix-No-Go:** Eine überall nichtnegative kausale Speicheridentität $s_1 = R + V'$ mit $R, V \ge 0, V[0]=0$ ist auf glatten $\mathrm{NULLPOL}$-Funktionen im Einheitsfenster ausgeschlossen (Rampen-Präfix-Supply $< -1/20$).
-- **Fenster-Kokzyklus:** Auf alten Zuständen gilt $s_b - s_a = -\frac{d}{dx}(F_b - F_a)$ mit $F_b - F_a \ge 0$, also $\widetilde s_b = \widetilde s_a$.
-
----
-
-## 4. Nächste zulässige Aufgaben
-
-1. **Säule 1 (Navigation & Evidenz):** Pointer-Kette auf `main` pflegen, A1-Beweisartefakte dauerhaft an Commit `0a7c970` binden.
-2. **Säule 2 (Lokale Diagnose $\rho_1$):** Richtungsbezogener unendlichdimensionaler Residuen-Pilot für $\rho_1 = \langle d_1, \mathcal A_1^{-1} d_1 \rangle$ im ungeraden Sektor (konditionale Nebenstrecke).
-3. **Säule 3 (C1-Konstruktion):** Zweiseitige oder endpunktbedingte Faktorisierung der Randform $2\operatorname{Re}(\overline{v} \mathcal B_a v)$ unter Verlassen der naiven Präfix-Positivität; Falsifikation am Prime-2-Mischtest $Q_{\mathrm{fin}}(f,g) = -\frac{\log 2}{\sqrt 2}\|f\|_2^2$.
-
----
-
-## 5. Firewalls
-
-- Kein weiterer Selbstaudit von PR #131 ohne externe Beanstandung oder Head-Änderung.
-- Der C1-Präfix-No-Go ist ein Klassen-No-Go für naive kausale Speicher, keine Widerlegung von Weil-Positivität oder RH.
-- $\rho_1$ ist kein Blocker für die C1-$\mathrm{NULLPOL}$-Konstruktion.
-- Feste Fensterresultate ($a=1$), all-window NP-GAP, Objekt X und RH bleiben strikt getrennt.
+[Roadmap v4.0](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md) · [Offene Probleme](OFFENE_PROBLEME.md) · [Draft-Triage](00-uebersicht/PR_TRIAGE_2026-09-16.md).
+Historische Namensräume: `A1-G0 bis A1-G7` versus `X-C0-TYPE / X-C1-GEOM / X-C2-ID / X-C3-WINDOW`.
+[Früherer vollständiger Fronttext](https://github.com/Waschtl904/objekt-x-programm/blob/ac164bbbd2c46623aa64e567d21f813f41f164b0/CURRENT-FRONT.md) bleibt am Originalcommit erhalten.
+Registry, Arbeitsdefinition, historische Register und eingefrorene Spezifikationen bleiben unverändert.
+Ein Release archiviert Evidenz; es ersetzt keine externe Prüfung. Sein Vollzug muss separat belegt werden.
