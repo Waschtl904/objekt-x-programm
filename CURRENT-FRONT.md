@@ -1,7 +1,8 @@
 # CURRENT FRONT — eingefrorenes A1 / aktive X-C1-Konstruktion
 
 > Stand: 16. September 2026. Navigation, keine Satzpromotion.
-> Gelesene main-Basis: `ac164bbbd2c46623aa64e567d21f813f41f164b0`.
+> Mathematischer Modellanker: `ac164bbbd2c46623aa64e567d21f813f41f164b0`.
+> Navigation nach dem parallelen Merge #139: `383cafc9ea8c9cd01569292ece7c92063f00ed14`.
 
 ## Eingefrorener konditionaler Import
 
@@ -34,7 +35,7 @@ Ein Pilot darf unentschieden bleiben; kein garantierter Termin. Kein logischer V
 ## Navigation und Grenzen
 
 [Roadmap v4.0](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md) · [Offene Probleme](OFFENE_PROBLEME.md) · [Draft-Triage](00-uebersicht/PR_TRIAGE_2026-09-16.md).
-Historische Namensräume: `A1-CERT/C0-C7` versus `X-C0-TYPE / X-C1-GEOM / X-C2-ID / X-C3-WINDOW`.
+Historische Namensräume: `A1-G0 bis A1-G7` versus `X-C0-TYPE / X-C1-GEOM / X-C2-ID / X-C3-WINDOW`.
 [Früherer vollständiger Fronttext](https://github.com/Waschtl904/objekt-x-programm/blob/ac164bbbd2c46623aa64e567d21f813f41f164b0/CURRENT-FRONT.md) bleibt am Originalcommit erhalten.
 Registry, Arbeitsdefinition, historische Register und eingefrorene Spezifikationen bleiben unverändert.
 Ein Release archiviert Evidenz; es ersetzt keine externe Prüfung. Sein Vollzug muss separat belegt werden.
