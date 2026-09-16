@@ -1,0 +1,507 @@
+# X-C0 — Exact `J_Delta` decomposition into transport defect plus P11 boundary tails
+
+**Datum:** 16. September 2026  
+**Basis:** Critical-half finite-part transfer `J_Delta`; P11 stopped OU filtration; prime-base safe transport cells.  
+**Registry:** unverändert.  
+**Nonclaim:** noch keine Positivitaet des finalen C1-Readouts; kein Object-X-/NP-GAP-/RH-Abschluss.
+
+---
+
+## 0. Kurzurteil
+
+Der bisher als arithmetischer Finite-Part-Koeffizient eingefuehrte Kernel
+
+```math
+J_\Delta(L)
+=e^{L/2}
+\left(
+L-\gamma-
+\sum_{\log n<L}\frac{\Lambda(n)}n
+\right)
+```
+
+laesst sich **exakt** in zwei bereits konstruierten geometrischen Groessen zerlegen:
+
+1. den signed Positionsdefekt des monotonen Prime-base-Massentransports;
+2. die Summe der noch nicht aufgeloesten P11-OU-Boundary-Tail-Massen auf allen bereits gestarteten Prim-Aesten.
+
+Fuer
+
+```math
+h_p=\log p,
+\qquad
+a_p=\frac{h_p}{p-1},
+```
+
+ordne die Primzahlen zunehmend und setze
+
+```math
+s_0=\gamma,
+\qquad
+s_N=\gamma+\sum_{j\le N}a_{p_j}.
+```
+
+Fuer `L>0`, ausserhalb der Prime-Power-Sprungstellen, setze
+
+```math
+N(L)=\#\{p:h_p<L\},
+```
+
+und fuer `h_p<L`
+
+```math
+J_p(L)=\left\lfloor\frac{L}{h_p}\right\rfloor.
+```
+
+Die unresolved Root-Masse des p-Astes ist
+
+```math
+\boxed{
+U_p(L)
+:=h_p\sum_{k>J_p(L)}p^{-k}
+=\frac{h_p p^{-J_p(L)}}{p-1}.
+}
+```
+
+Dann gilt exakt
+
+```math
+\boxed{
+ e^{-L/2}J_\Delta(L)
+ =
+ [L-s_{N(L)}]
+ +
+ \sum_{h_p<L}U_p(L).
+}
+```
+
+Noch staerker: `U_p(L)` ist exakt das Quadrat des **einen normierten geometrischen OU-Boundary-State**, auf den der P11-Shorting den ungelösten p-Power-Tail komprimiert.
+
+Damit sind alle Prime-Power-Spruenge von `J_Delta` bereits in der gestoppten P11-Grenzgeometrie enthalten. Es fehlt an dieser Stelle kein externer arithmetischer Koeffizient mehr.
+
+Status:
+
+```text
+exact transport+tail decomposition of J_Delta                  ✓[M]
+P11 boundary state norm^2 = unresolved root tail U_p           ✓[M]
+prime-power jump normalization -Lambda(n)/sqrt(n)              ✓[M]
+J_Delta(0)=-gamma from initial transport block                  ✓[M]
+source-operator Volterra identity (imported previous audit)     ✓[M]
+positive realization of the signed transport-defect part        ?[O]
+final C1 / Object X / RH                                        ?[O]
+```
+
+---
+
+# 1. Full safe Root mass of one prime tower
+
+Let
+
+```math
+q_p=p^{-1/2}.
+```
+
+The squared P11 Root amplitude at the k-th node, including the logarithmic base weight, is
+
+```math
+h_p q_p^{2k}
+=h_p p^{-k}.
+```
+
+The full Root-square mass of the p-tower is therefore
+
+```math
+\boxed{
+ a_p
+ =h_p\sum_{k\ge1}p^{-k}
+ =\frac{h_p}{p-1}.
+}
+```
+
+This is exactly the prime-base transport cell mass used in the preceding safe-transfer audit.
+
+---
+
+# 2. Visible and unresolved mass at physical depth `L`
+
+Assume first that `L` is not a multiple of `h_p`.
+
+If `h_p<L`, then the visible p-power levels are
+
+```math
+k=1,...,J_p(L),
+\qquad
+J_p(L)=\lfloor L/h_p\rfloor.
+```
+
+Their safe Root mass is
+
+```math
+V_p(L)
+:=h_p\sum_{k=1}^{J_p(L)}p^{-k}.
+```
+
+The unresolved tail is
+
+```math
+\begin{aligned}
+U_p(L)
+&:=a_p-V_p(L)\\
+&=h_p\sum_{k>J_p(L)}p^{-k}\\
+&=\boxed{\frac{h_pp^{-J_p(L)}}{p-1}}.
+\end{aligned}
+```
+
+Therefore
+
+```math
+\boxed{V_p(L)=a_p-U_p(L).}
+```
+
+If `h_p>=L`, no p-power lies below `L`, and that prime does not enter either side of the finite sum below.
+
+---
+
+# 3. Recovering the exact `Lambda(n)/n` staircase
+
+By grouping prime powers prime by prime,
+
+```math
+\begin{aligned}
+\sum_{\log n<L}\frac{\Lambda(n)}n
+&=\sum_{h_p<L}
+ h_p\sum_{k h_p<L}p^{-k}\\
+&=\sum_{h_p<L}V_p(L)\\
+&=\sum_{h_p<L}a_p
+-
+\sum_{h_p<L}U_p(L).
+\end{aligned}
+```
+
+Since the primes with `h_p<L` are exactly `p_1,...,p_{N(L)}`,
+
+```math
+\sum_{h_p<L}a_p
+=s_{N(L)}-\gamma.
+```
+
+Hence
+
+```math
+\begin{aligned}
+L-\gamma-
+\sum_{\log n<L}\frac{\Lambda(n)}n
+&=L-\gamma-(s_{N(L)}-\gamma)
++\sum_{h_p<L}U_p(L)\\
+&=\boxed{
+L-s_{N(L)}
++\sum_{h_p<L}U_p(L).
+}
+\end{aligned}
+```
+
+Multiplication by `e^(L/2)` gives the main formula.
+
+No PNT and no RH are used in this identity. PNT is needed only for the **asymptotic smallness** of the transport defect `L-s_N`, not for the decomposition itself.
+
+---
+
+# 4. `U_p(L)` is exactly one P11 OU boundary-state norm
+
+Consider the unresolved root-amplitude sequence beyond level `J`:
+
+```math
+r_k=\sqrt{h_p}\,q_p^k,
+\qquad k>J.
+```
+
+Its squared norm is
+
+```math
+\sum_{k>J}|r_k|^2
+=h_p\sum_{k>J}q_p^{2k}
+=U_p.
+```
+
+The normalized geometric OU boundary direction on that tail is
+
+```math
+\eta_{J}^{tail}(k)
+=\sqrt{1-q_p^2}\,q_p^{k-J-1},
+\qquad k>J.
+```
+
+It has unit `ell^2` norm.
+
+The projection coefficient of the root sequence on this direction is
+
+```math
+\begin{aligned}
+b_{p,J}
+&=\sum_{k>J}r_k\eta_J^{tail}(k)\\
+&=\sqrt{h_p}\sqrt{1-q_p^2}
+  q_p^{-J-1}
+  \sum_{k>J}q_p^{2k}\\
+&=\frac{\sqrt{h_p}\,q_p^{J+1}}
+        {\sqrt{1-q_p^2}}.
+\end{aligned}
+```
+
+Thus
+
+```math
+\boxed{
+|b_{p,J}|^2
+=\frac{h_pq_p^{2J+2}}{1-q_p^2}
+=\frac{h_pp^{-J}}{p-1}
+=U_p.
+}
+```
+
+Because the unresolved root sequence is itself exactly geometric, the P11 OU Shorting loses **no** Root-tail information here: the entire unresolved safe mass is carried by the single normalized endpoint mode.
+
+This identifies the second term in the `J_Delta` decomposition with an actual P11 Boundary-State norm, not merely with a numerical tail sum.
+
+---
+
+# 5. Prime-power jump normalization
+
+The decomposition reproduces every jump of `J_Delta` with the correct Weil-normalized size.
+
+## 5.1 Higher powers `k>=2`
+
+Cross `L_0=k h_p` from below to above, with the prime already active.
+
+Then `J_p(L)` increases from `k-1` to `k`, so
+
+```math
+U_p(L_0+)-U_p(L_0-)
+=-h_pp^{-k}.
+```
+
+The transport term `L-s_N` is continuous there. Therefore
+
+```math
+J_\Delta(L_0+)-J_\Delta(L_0-)
+=e^{L_0/2}(-h_pp^{-k}).
+```
+
+Since `e^(L_0/2)=p^(k/2)`, this is
+
+```math
+\boxed{
+-\frac{h_p}{p^{k/2}}
+=-\frac{\Lambda(p^k)}{\sqrt{p^k}}.
+}
+```
+
+## 5.2 First power `k=1`
+
+At `L_0=h_p`, the prime enters the base sum.
+
+Immediately below the crossing it contributes neither `a_p` nor a tail.
+Immediately above:
+
+```math
+L-s_N
+```
+
+has jumped by `-a_p`, while the newly active unresolved tail after resolving `k=1` is
+
+```math
+U_p(h_p+)
+=\frac{h_p}{p(p-1)}.
+```
+
+Hence the total unscaled jump is
+
+```math
+-a_p+U_p(h_p+)
+=-\frac{h_p}{p}.
+```
+
+After multiplication by `e^(h_p/2)=sqrt(p)`:
+
+```math
+\boxed{
+-\frac{h_p}{\sqrt p}
+=-\frac{\Lambda(p)}{\sqrt p}.
+}
+```
+
+Thus the same formula handles the first prime node and every higher p-power with no extra convention-dependent coefficient.
+
+---
+
+# 6. The initial finite-part boundary value
+
+At `L=0` no prime is active and no unresolved prime tail is present.
+
+By definition
+
+```math
+s_0=\gamma.
+```
+
+Therefore
+
+```math
+\boxed{
+ e^{-0/2}J_\Delta(0)
+ =0-s_0
+ =-\gamma.
+}
+```
+
+So
+
+```math
+\boxed{J_\Delta(0)=-\gamma}
+```
+
+is precisely the initial offset of the monotone safe Root-mass transport.
+
+In this decomposition Euler's constant is not added later to repair a formula; it is the starting boundary displacement required by the finite-part normalization.
+
+---
+
+# 7. Geometric meaning of the two terms
+
+The exact identity is
+
+```math
+\boxed{
+e^{-L/2}J_\Delta(L)
+=\underbrace{L-s_{N(L)}}_{\text{transport-coordinate defect}}
++\underbrace{\sum_{h_p<L}|b_{p,J_p(L)}|^2}_{\text{unresolved P11 OU boundary tails}}.
+}
+```
+
+Thus:
+
+### Base transport defect
+
+```math
+L-s_{N(L)}
+```
+
+compares the physical logarithmic depth with the cumulative positive safe Root mass assigned by the monotone prime-base transport.
+
+Classical PNT implies this displacement tends to zero along the corresponding large-depth cells, but it is signed.
+
+### Boundary tails
+
+```math
+\sum_p|b_{p,J_p(L)}|^2
+```
+
+is positive and consists of actual stopped-P11 endpoint-state masses.
+
+It decreases by one exact p-power root-square atom whenever a new p-power layer becomes resolved.
+
+The Critical-half factor `e^(L/2)` then turns each safe `Lambda(n)/n` jump into its Weil `Lambda(n)/sqrt(n)` jump.
+
+This is the requested coefficient bridge at scalar/Root-boundary level.
+
+---
+
+# 8. Relation to the Volterra source operator
+
+The prior finite-part audit proved
+
+```math
+ d\Delta
+ =\frac12J_\Delta dL-dJ_\Delta
+```
+
+and
+
+```math
+-\int F_vd\Delta
+=2\gamma\|v\|^2
+-\int J_\Delta(L)
+\left(F_v'(L)+\frac12F_v(L)\right)dL.
+```
+
+The present theorem shows that the scalar coefficient appearing in this source-space Volterra transfer is **entirely reconstructible** from
+
+```text
+- the monotone positive Prime-base mass transport,
+- stopped P11 OU endpoint states,
+- the fixed Critical-half amplification.
+```
+
+No zeta zeros and no Weil positivity are inputs.
+
+What is still missing is a positive parent that produces the signed transport-defect contribution and this Volterra cross term as its boundary/Feshbach readout.
+
+---
+
+# 9. Why the previous endpoint colligation was close but not yet the identity
+
+The positive common-endpoint Shorting constructed in the preceding audit produces a **quadratic mismatch cost**
+
+```math
+R_P(h,L)\sim(e^{-Ph}-e^{-PL})^2.
+```
+
+The exact `J_Delta` coefficient contains instead
+
+```text
+- a signed first-order transport displacement L-s_N,
+- plus positive unresolved tail norms |b_p,J|^2.
+```
+
+Therefore
+
+```math
+\boxed{
+\text{positive endpoint mismatch energy alone}\ne J_\Delta.
+}
+```
+
+This is not a failure of the endpoint state. The endpoint state supplies the tail term **exactly**. What remains is the signed transport-coordinate defect.
+
+Hence the final C1 must retain a two-port / off-diagonal structure; merely adding the positive square mismatch as another energy channel would lose the first-order signed information.
+
+---
+
+# 10. Updated C1 gate
+
+The unresolved object has now shrunk to one specific part:
+
+```math
+\boxed{d_{tr}(L):=L-s_{N(L)}.}
+```
+
+Everything else in `J_Delta` is already supplied by positive stopped-P11 boundary-state norms.
+
+A viable C1 mechanism must therefore:
+
+```text
+1. keep the exact X-C0 Jump/Gamma ports;
+2. keep the stopped P11 boundary-tail states b_(p,J);
+3. represent the signed monotone transport displacement d_tr(L) as an
+   off-diagonal/conservative boundary term, not as a positive density;
+4. apply the Critical-half factor only after the relative combination;
+5. reproduce the Volterra cross term with D_+=partial+1/2;
+6. pass the fixed Prime-2 quartet before global use.
+```
+
+The positive-tail coefficient problem is closed. The **only scalar coefficient not yet placed inside a positive parent is the signed transport displacement**.
+
+---
+
+# 11. Status
+
+```text
+J_Delta coefficient from P11/transport geometry             ✓[M]
+all p-power jumps exact                                      ✓[M]
+positive boundary-tail component                            ✓[M]
+signed transport-coordinate component                       exact, parent ?[O]
+source Volterra coupling                                     ✓[M] identity
+positive C1 parent                                           ?[O]
+Object X / NP-GAP / RH                                       ?[O]
+```
+
+No Registry change.
