@@ -1,0 +1,243 @@
+# P11 Audit — finite-rank shorting no-go for the COMMON-JUMP threshold
+
+**Datum:** 16. September 2026  
+**Basis:** Critical-half Forward-dilation gate, COMMON-JUMP diagonal finite part.  
+**Rolle:** theorem-level necessity statement for any Schur/shorting realization that keeps the uncentered COMMON-JUMP energy as its upper-left block.  
+**Registry:** unveraendert.  
+**Nonclaim:** keine Konstruktion von Object X, kein NP-GAP-/RH-Beweis, keine Publikationsneuheit.
+
+---
+
+## 0. Kurzurteil
+
+Die gesamte Zentrierung
+
+```math
+X_a^*X_a\longmapsto X_a^*X_a-\Gamma_a I
+```
+
+kann auf der unendlichdimensionalen NULLPOL-Klasse **nicht** durch Shorting ueber einen endlichdimensionalen Hilfs-/Hubraum erzeugt werden.
+
+Der Grund ist rein rangtheoretisch: ein endlicher Auxiliary-Block erzeugt im Schur-Komplement nur einen Operator endlichen Ranges, waehrend `Gamma_a I` auf NULLPOL unendlichen Rang besitzt.
+
+Damit reichen insbesondere
+
+```text
+- ein einzelner gemeinsamer Hub,
+- endlich viele globale Hubvariablen,
+- nur die zwei NULLPOL-Randmoden,
+- irgendein anderer endlichdimensionaler Boundary-Block
+```
+
+nicht aus, um die gesamte COMMON-JUMP-Schwelle als Schur-Abzug zu realisieren, solange oben links wirklich die unzentrierte Energie `X_a^*X_a` stehen bleibt.
+
+Status:
+
+```text
+NULLPOL fixed-window space infinite-dimensional          ✓[M]
+Gamma_a > 0                                               ✓[M]
+finite auxiliary Schur correction has finite rank         ✓[M]
+finite-rank threshold-shortening no-go                    ✓[M]
+required auxiliary dimension / alternative architecture   ?[O]
+Object X / RH                                              ?[O]
+```
+
+---
+
+# 1. Die NULLPOL-Klasse ist unendlichdimensional
+
+Fuer jedes `a>0` gilt aus dem Critical-half Range-Satz
+
+```math
+\mathscr D_{NP,a}
+=L_{1/2}C_c^\infty(-a,a),
+\qquad
+L_{1/2}=-\partial_x^2+\frac14.
+```
+
+`L_{1/2}` ist auf `C_c^\infty(-a,a)` injektiv: eine kompakt getragene Loesung von
+
+```math
+L_{1/2}u=0
+```
+
+muss identisch null sein. Da `C_c^\infty(-a,a)` unendlichdimensional ist, folgt
+
+```math
+\boxed{\dim \mathscr D_{NP,a}=\infty.}
+```
+
+Dasselbe gilt fuer den zugehoerigen abgeschlossenen NULLPOL-Unterraum, soweit die jeweilige Hilbertraumformulierung benutzt wird.
+
+---
+
+# 2. Die Schwelle ist strikt positiv
+
+Die COMMON-JUMP-Schwelle lautet
+
+```math
+\Gamma_a
+=2\sum_{n\in\mathcal P_a}\frac{\Lambda(n)}{\sqrt n}
++\kappa_*.
+```
+
+Alle Prime-Gewichte sind nichtnegativ und
+
+```math
+\kappa_*=\log\pi-\psi(1/4)>0.
+```
+
+Daher
+
+```math
+\boxed{\Gamma_a>0}
+```
+
+fuer jedes `a>0`.
+
+Somit besitzt
+
+```math
+\Gamma_a I_{\mathscr D_{NP,a}}
+```
+
+unendlichen Rang.
+
+---
+
+# 3. Endlicher Auxiliary-Raum erzeugt nur endlichen Rang
+
+Seien `H` ein Hilbertraum und `K` endlichdimensional. Betrachte einen positiven Blockoperator
+
+```math
+\mathcal G
+=
+\begin{pmatrix}
+A&B^*\\
+B&C
+\end{pmatrix},
+\qquad C\succ0,
+```
+
+mit
+
+```math
+B:H\to K.
+```
+
+Das Schur-Komplement ist
+
+```math
+S=A-B^*C^{-1}B.
+```
+
+Da `ran(B)\subseteq K`, gilt
+
+```math
+\operatorname{rank}(B)\le\dim K<\infty.
+```
+
+Daher auch
+
+```math
+\boxed{
+\operatorname{rank}(B^*C^{-1}B)
+\le\dim K<\infty.
+}
+```
+
+Diese Aussage benoetigt keine Positivitaet von `A`; nur die endliche Dimension des eliminierten Blocks und Invertierbarkeit von `C`.
+
+---
+
+# 4. No-Go fuer die gesamte COMMON-JUMP-Zentrierung
+
+Nehmen wir nun an, eine Forward-Dilation soll auf `\mathscr D_{NP,a}` exakt
+
+```math
+A=X_a^*X_a
+```
+
+als unzentrierten positiven COMMON-JUMP-Block benutzen und nach Shorting liefern
+
+```math
+S=X_a^*X_a-\Gamma_a I.
+```
+
+Dann muesste notwendig
+
+```math
+\boxed{
+B^*C^{-1}B=\Gamma_a I_{\mathscr D_{NP,a}}.
+}
+```
+
+Die linke Seite hat fuer endlichdimensionales `K` endlichen Rang, die rechte Seite wegen `Gamma_a>0` und `dim D_{NP,a}=infty` unendlichen Rang. Widerspruch.
+
+Also:
+
+```math
+\boxed{
+\dim K<\infty
+\quad\Longrightarrow\quad
+\text{keine solche exakte Shorting-Realisierung.}
+}
+```
+
+---
+
+# 5. Konsequenz fuer Hub- und NULLPOL-Ideen
+
+Dieser Satz trennt zwei Rollen, die leicht verwechselt werden koennen.
+
+Die zwei NULLPOL-Bedingungen
+
+```math
+F(i/2)=F(-i/2)=0
+```
+
+werden im Paley-Wiener-Bild tatsaechlich durch ein rank-2 Shorting beschrieben. Das ist korrekt, weil dort **nur die codimension-2 Nebenbedingung** implementiert wird.
+
+Aber die gesamte skalare Schwelle
+
+```math
+\Gamma_a I
+```
+
+ist ein anderer Operator: sie wirkt auf jeder Richtung der unendlichdimensionalen NULLPOL-Klasse. Sie kann deshalb nicht von demselben rank-2 Mechanismus oder irgendeinem anderen endlichdimensionalen Hubblock vollstaendig erzeugt werden.
+
+Insbesondere:
+
+> `rank-2 NULLPOL shorting` und `COMMON-JUMP threshold subtraction` duerfen nicht als derselbe Shorting-Mechanismus identifiziert werden.
+
+---
+
+# 6. Was fuer einen erfolgreichen Kandidaten uebrig bleibt
+
+Mindestens eine der folgenden Moeglichkeiten ist notwendig:
+
+```text
+1. ein unendlichdimensionaler Boundary-/Auxiliary-Kanal;
+2. die Diagonalmasse ist bereits ueber unendlich viele positive Features verteilt,
+   bevor ein kleinerer geometrischer Shorting-Schritt erfolgt;
+3. der obere linke Block ist nicht schlicht X_a^* X_a, sondern entsteht selbst
+   aus einer groesseren vorwaerts definierten gekoppelten Geometrie;
+4. eine kanonische Quotienten-/finite-part-Konstruktion ersetzt den Versuch,
+   Gamma_a I als endlichen Schur-Abzug zu erzeugen.
+```
+
+Das passt zur bereits bewiesenen Herkunft von `Gamma_a`: Prime-Seite und Gamma-Seite liefern die Schwelle als Summe ihrer Diagonal-/finite-part-Massen. Eine plausible Forward-Konstruktion sollte diese verteilte Herkunft erhalten, statt sie nachtraeglich in wenige Hubkoordinaten zu komprimieren.
+
+---
+
+# 7. Firewall
+
+Der Satz behauptet **nicht**, dass jede positive Dilation einen unendlichdimensionalen neuen Hilbertraum einfuehren muss. Er gilt fuer die klar definierte Klasse, in der
+
+```math
+A=X_a^*X_a
+```
+
+festgehalten und die gesamte Subtraktion `Gamma_a I` durch einen Schur-Term `B^*C^{-1}B` erzeugt werden soll.
+
+Eine groessere gekoppelte Geometrie kann die Diagonalmasse anders organisieren. Genau diese Alternative ist die verbleibende Forward-Front.
