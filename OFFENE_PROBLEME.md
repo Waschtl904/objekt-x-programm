@@ -1,119 +1,29 @@
-# Offene Probleme — A1-FINITE-CERT
+# Offene Probleme — lokale Diagnose und positive X-Auswertung
 
-> **Stand:** 14. September 2026.  
-> Operative Audits: [A1 finite gate architecture](audits/P11_A1_FINITE_GATE_ARCHITECTURE_2026-09-14.md) · [A1 Osipov N1102](audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md) · [A1 Legendre backend](audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md) · [A1 Legendre quadrature budget](audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md).
+> Stand: 16. September 2026. [Front](CURRENT-FRONT.md) und [Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md) sind die operative Navigation.
 
-## Geschlossen
+## Eingefrorene Reviewpflicht
 
-### `[A1-OSIPOV-1102]` `✓[M] / ✓[K/M]`
+A1-COMP ist `AUTHOR-VERIFIED / EXTERNAL-OPEN`; [Statuskapsel](https://github.com/Waschtl904/objekt-x-programm/blob/d7b32ccfb9d0d90f19d4a7a5b0fbd19b0928f257/research/x-c0/A1_COMP_STATUS_CAPSULE.md).
+Kein neuer C-even/C-odd-Default. Kein erneuter Selbstaudit ohne einen der vier dort genannten Auslöser.
+Ein Fremdzertifikat für QW ersetzt keinen Exact-Head-Review unserer L1-Untergrenze.
 
-```math
-\mu_{1102}<10^{-43},
-\qquad
-\text{Schur penalty}<1.5\times10^{-40}.
-```
+## Getrennte lokale Diagnose
 
-Damit ist die kanonische mathematische Restreduktion höchstens
+Den scharfen Riesz-Quotienten rho1 der vollständigen Completion einschließen.
+Unterscheiden: tatsächliche Obergrenze, Trial-Untergrenze und bloße Inverse der finiten Vergleichsmatrix.
+Ein Trialwert unter eins entscheidet nicht den Supremumswert. Rest-/Domainkontrolle bleibt erforderlich.
+Die Diagnose ist kein logischer Flaschenhals für NULLPOL-C1.
 
-```text
-1104 = 552 even + 552 odd.
-```
+## Aktive positive Konstruktionspflicht
 
-### `[A1-LEGENDRE-TAIL]` `✓[K/M]`
+[PR #137](https://github.com/Waschtl904/objekt-x-programm/pull/137): positive Vorstruktur, Speicher-/Fluss- und Endpunktidentitäten vorhanden; endgültiges C_a offen.
+Quellen-/Endbedingungen oder zweiseitige Ports vor der Positivitätsbehauptung einbauen.
+Vollständige komplexe Weil-Gramidentität und kompatible X-Fensterabbildungen nachweisen.
+Kein endlicher Proberaum, kein positiver Hilfsspeicher und keine signierte IN/OUT-Normalform ersetzt diese Pflicht.
 
-Alternative orthonormale Vollraumroute:
+## Reichweite
 
-```text
-M=2150
-1075 even + 1075 odd
-G=I exactly
-finite target=1e-35
-```
-
-Tail/Cross sind zertifiziert.
-
-### `[A1-LEGENDRE-QBUDGET]` `✓[K/M]`
-
-Für jeden Legendre-Paritätsblock ist der analytische Quadratur-Operatorfehler zertifiziert:
-
-```math
-\|K-\widetilde K\|_{op}<4\times10^{-38}.
-```
-
-### `[A1-FINITE-ARCH]` `✓[M]`
-
-Die Ausführungsarchitektur für den ersten vollständigen finite Gate ist fixiert:
-
-- Legendre ist der operative Zertifikatsbackend;
-- PSWF/Osipov bleibt die kleinere kanonische mathematische Reduktion;
-- `M=2150`, `1075` pro Parität, target `1e-35` werden in C nicht retuned;
-- quadrature rule bleibt width `<=0.4`, Gauss `q=40`, strip `0.4`;
-- Arb-Intervallmatrix + dyadisch eingefrorener untrusted preconditioner + intervalle Congruence/Cholesky;
-- Precision ladder: `512,768,1024,1536,2048,3072` bits;
-- Pivotintervall mit `0` = undecided.
-
----
-
-## Priorität 0 — `[C-EVEN]` `?[O]`
-
-Als nächstes **nur** den geraden Block zertifizieren:
-
-```math
-\boxed{A_e\succeq10^{-35}I_{1075}}.
-```
-
-Pflichten:
-
-1. common-node Arb assembly;
-2. spherical-Bessel vector evaluation with fail-closed recurrence;
-3. exact/Arb moment rank-one block;
-4. certified #118 quadrature radius in every matrix entry;
-5. deterministic interval symmetry checks;
-6. untrusted midpoint preconditioner frozen to dyadic points;
-7. Arb congruence `V^T(A_e-1e-35 I)V`;
-8. verified positive pivots at one fixed precision-ladder level;
-9. reproducible matrix/preconditioner/pivot artifacts.
-
-No odd-block work in the same pass if even has not certified.
-
----
-
-## Priorität 1 — `[C-ODD]` `?[O]`
-
-Only after C-even succeeds:
-
-```math
-\boxed{A_o\succeq10^{-35}I_{1075}}.
-```
-
-Use the identical fixed protocol and a separate certificate artifact.
-
----
-
-## Danach — `[A1-CERT]` `?[O]`
-
-```text
-C-even green
-   +
-C-odd green
-   +
-#117 certified full-space transfer
-   |
-   v
-L_1 >=0
-   |
-canonical a=1 completion
-```
-
-A future direct PSWF finite certificate remains an independent alternate closure route.
-
----
-
-## Firewalls
-
-- B is architecture, not a positivity result.
-- Do not lower `1e-35` after seeing a matrix.
-- Do not change `M`, quadrature or basis inside C.
-- Only precision may increase along the fixed ladder.
-- Float eigenvalues/preconditioners are proposals only.
-- Fixed-window `a=1`, all-a NP-GAP, Object X and RH remain open.
+Klassen-No-Gos gelten nur mit ihren genauen Hypothesen; zwei Fehlversuche sind kein allgemeiner No-Go.
+all-window NP-GAP, intrinsisches Objekt X und der globale RH-Transfer sind nicht durch diese Navigation bewiesen.
+[Alter A1-Auftrag](https://github.com/Waschtl904/objekt-x-programm/blob/ac164bbbd2c46623aa64e567d21f813f41f164b0/OFFENE_PROBLEME.md) bleibt als historische Quelle erhalten.

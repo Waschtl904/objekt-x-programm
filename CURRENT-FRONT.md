@@ -1,154 +1,40 @@
-# CURRENT FRONT — Objekt X / A1-FINITE-CERT
+# CURRENT FRONT — eingefrorenes A1 / aktive X-C1-Konstruktion
 
-> **Stand:** 14. September 2026; Registry und Objekt-X-Arbeitsdefinition unverändert.  
-> **Hauptaudits:** [A1 Osipov N1102](audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md) · [A1 finite gate architecture](audits/P11_A1_FINITE_GATE_ARCHITECTURE_2026-09-14.md) · [A1 Legendre backend](audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md) · [Legendre quadrature budget](audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md).
+> Stand: 16. September 2026. Navigation, keine Satzpromotion.
+> Gelesene main-Basis: `ac164bbbd2c46623aa64e567d21f813f41f164b0`.
 
-## 1. Closed mathematical reduction
+## Eingefrorener konditionaler Import
 
-`COMMON-JUMP/Q0`, rank-2 completion, Morse/parity, canonical `lambda=1`, exact `a=1` Fourier multiplier and the moment-augmented Schur theorem are closed.
+`A1-COMP@0a7c970 / AUTHOR-VERIFIED / EXTERNAL-OPEN`.
+[PR #131](https://github.com/Waschtl904/objekt-x-programm/pull/131), Head `0a7c970fc5983c9c198915e2c7c1f6280834b13a`.
+Autorennachweis: `L_1 >= 9e-36 I`; Completion zuerst, Weil-Transfer nur auf NULLPOL und geraden Tests für `0<a<=1`.
+Keine allgemeine Odd-Positivität, kein `a>1`, all-window NP-GAP, Objekt X oder RH.
+[Statuskapsel und Primärbelege](https://github.com/Waschtl904/objekt-x-programm/blob/d7b32ccfb9d0d90f19d4a7a5b0fbd19b0928f257/research/x-c0/A1_COMP_STATUS_CAPSULE.md).
+Die finiten C-even/C-odd-Resultate aus #123/#124 sind auf main; das Gesamtpaket #131 ist ungemergt und extern review-offen.
+Kein A1-Selbstaudit ohne konkreten Auslöser: Headänderung, externe Kantenbeanstandung, echter Scope-Mehrbedarf oder ausgefallener Import/Provenienz.
 
-Exact-Head Arb gives
+## Aktive Konstruktion, nicht gemergt
 
-```math
-m_1(\xi)>0.1\quad(|\xi|\ge1551),
-\qquad \|r\|_\infty<12.
-```
+[PR #137](https://github.com/Waschtl904/objekt-x-programm/pull/137), gelesener Head `708542fb8a6a230b2e1ae4b8d44d51a7aa1e393d`.
+[C0-Spezifikation](https://github.com/Waschtl904/objekt-x-programm/blob/d7b32ccfb9d0d90f19d4a7a5b0fbd19b0928f257/X_CANDIDATE_C0_SPEC.md): positiver Vormediator, nicht die Weil-Norm.
+[C1-STORAGE](https://github.com/Waschtl904/objekt-x-programm/blob/3a81019e43d95750493d47030728966576b3b942/research/x-c1/X_C1_STORAGE.md): exakter Fluss; ursprüngliche nichtnegative kausale Speicherklasse ausgeschlossen, kein negativer vollständiger Weil-Test.
+[Endpunkt-Green-Brücke](https://github.com/Waschtl904/objekt-x-programm/blob/708542fb8a6a230b2e1ae4b8d44d51a7aa1e393d/research/x-c1/X_C1_ENDPOINT_GREEN_BRIDGE.md): tatsächliche Mellin-Endbedingungen und kompletter Prime-2-Mischtest; Residual weiterhin signiert.
+Die Positivität auf dem dort festgelegten zweidimensionalen Proberaum ist kein C1-GEOM-Abschluss.
 
-Osipov Theorem 4 plus Arb at `c=1551`, `N=1102` gives
+**Nächster Gate: X-C1-GEOM.** Einen quellen-/endpunktbedingten oder zweiseitigen positiven Readout konstruieren, seine Domain und vollständige komplexe Gramidentität beweisen.
+Keine Fits, keine aus Weil-Positivität definierte Quadratwurzel; Prime-/Gamma-/Polkanäle und Fensterbuchhaltung erhalten.
+PR #138 ist eine getrennte ergänzende Forschungsquelle, kein pauschaler Import und kein Positivitätsbeweis.
 
-```math
-\mu_{1102}<10^{-43},
-\qquad
-\text{Schur penalty}<1.5\times10^{-40}.
-```
+## Getrennte Diagnose
 
-Hence the **canonical smallest mathematical reduction** is
+`rho_1=<d_1,Acal_1^(-1)d_1>` benutzt die vollständige Completion, nicht die vorhandene finite L1-Matrix.
+Rigoroser Trial/Galerkinwert: Untergrenze. Erforderlich für eine obere Schranke: vollständiger Residual-/Tailnachweis.
+Ein Pilot darf unentschieden bleiben; kein garantierter Termin. Kein logischer Vorgänger der A1-unabhängigen NULLPOL-C1-Spur.
 
-```math
-(L_1)_{RR}\succeq3\times10^{-39}I
-```
+## Navigation und Grenzen
 
-on at most
-
-```text
-1104 = 552 even + 552 odd
-```
-
-dimensions.  This finite lower bound is still `?[O]`.
-
-## 2. Operational certificate decision `✓[M]`
-
-For the first full computer certificate, use the independent orthonormal Legendre backend rather than constructing a rigorous PSWF basis.
-
-Reason:
-
-```text
-PSWF/Osipov: <=552 x 552 per parity, but resolved spectral subspace still needs certification.
-Legendre:    1075 x 1075 per parity, but G=I exactly and tail/cross + quadrature are already certified.
-```
-
-Thus PSWF remains the canonical smaller reduction, while **Legendre is the execution backend for C**.
-
-## 3. Fixed Legendre finite blocks
-
-Use
-
-```math
-T_n(x)=\sqrt{n+\frac12}P_n(x),
-\qquad n=0,\ldots,2149.
-```
-
-Each parity block has dimension `1075`.  For
-
-```math
-L_1=0.1I+K+\mathcal E^*\mathcal E,
-```
-
-the exact same-parity block is
-
-```math
-(A_p)_{nm}=0.1\delta_{nm}+K_{nm}+2a_na_m,
-```
-
-with exact Gram `I`.
-
-The fixed theorem targets are
-
-```math
-\boxed{A_e\succeq10^{-35}I_{1075}},
-\qquad
-\boxed{A_o\succeq10^{-35}I_{1075}}.
-```
-
-PR #117 already closes the Legendre tail/cross transfer. PR #118 already certifies the analytic quadrature operator error
-
-```math
-<4\times10^{-38}
-```
-
-per parity block.
-
-## 4. C protocol
-
-The certificate architecture is frozen:
-
-```text
-M=2150
-1075 modes per parity
-finite target=1e-35
-panel width<=0.4
-Gauss-Legendre q=40
-analytic strip |Im xi|<=0.4
-python-flint Arb
-```
-
-Matrix entries are assembled in Arb with the certified quadrature radius included directly in every interval entry.  The final proof uses an untrusted approximate preconditioner only as a proposal, freezes it to dyadic points, forms the exact interval congruence
-
-```math
-V^T(A-10^{-35}I)V,
-```
-
-and accepts only if verified interval Cholesky/LDL has strictly positive pivots.
-
-A pivot interval containing `0` is **undecided**.
-
-The only allowed adaptation is working precision on the fixed ladder
-
-```text
-512, 768, 1024, 1536, 2048, 3072 bits.
-```
-
-## 5. Split execution
-
-To reduce timeout risk:
-
-```text
-C-even first: certify A_e >=1e-35 I.
-C-odd second: certify A_o >=1e-35 I.
-```
-
-No `a=1` promotion after only one parity succeeds.
-
-## 6. Status
-
-```text
-canonical PSWF/Osipov finite reduction <=1104        ✓[K/M]
-Legendre orthonormal backend                          ✓[K/M]
-Legendre tail/cross transfer                          ✓[K/M]
-Legendre quadrature op error <4e-38                   ✓[K/M]
-final finite certificate architecture                 ✓[M]
-C-even finite positivity                              ?[O]
-C-odd finite positivity                               ?[O]
-certified a=1 completion                              ?[O]
-all-a NP-GAP                                          ?[O]
-forward Object-X candidate architecture               ✓[M]_part
-full positive Object-X / RH                           ?[O]
-```
-
-## 7. Firewalls
-
-- Architecture is not positivity.
-- The Legendre execution backend does not supersede the smaller PSWF reduction.
-- Target, basis size and quadrature rule may not be retuned inside C.
-- Only precision may increase along the fixed ladder.
-- Fixed-window `a=1`, all-window NP-GAP, Object X and RH remain open.
+[Roadmap v4.0](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md) · [Offene Probleme](OFFENE_PROBLEME.md) · [Draft-Triage](00-uebersicht/PR_TRIAGE_2026-09-16.md).
+Historische Namensräume: `A1-CERT/C0-C7` versus `X-C0-TYPE / X-C1-GEOM / X-C2-ID / X-C3-WINDOW`.
+[Früherer vollständiger Fronttext](https://github.com/Waschtl904/objekt-x-programm/blob/ac164bbbd2c46623aa64e567d21f813f41f164b0/CURRENT-FRONT.md) bleibt am Originalcommit erhalten.
+Registry, Arbeitsdefinition, historische Register und eingefrorene Spezifikationen bleiben unverändert.
+Ein Release archiviert Evidenz; es ersetzt keine externe Prüfung. Sein Vollzug muss separat belegt werden.

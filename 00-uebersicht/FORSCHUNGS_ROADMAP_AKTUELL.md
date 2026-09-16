@@ -1,133 +1,51 @@
-# Objekt X — kanonische Forschungsroadmap v3.12
+# Objekt X — operative Roadmap v4.0
 
-> **Stand:** 14. September 2026; Registry und Arbeitsdefinition unverändert.
+> Stand: 16. September 2026. Verzweigte Arbeitsplanung, keine Fertigstellungsprognose oder Satzpromotion.
+> [Kanonischer Einstieg](../CURRENT-FRONT.md); exakte Quellen/Heads stehen dort.
 
-## Gate C0 — Completionstruktur `✓[M]`
+## Historischer Namensraum
 
-```text
-COMMON-JUMP / Q0
-rank-2 completion / Morse / parity
-canonical lambda=1
-exact a=1 Fourier multiplier
-moment-augmented Prolate Schur theorem
-```
+[v3.12 am Originalcommit](https://github.com/Waschtl904/objekt-x-programm/blob/ac164bbbd2c46623aa64e567d21f813f41f164b0/00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md) bleibt vollständig erhalten.
+Deren C0-C7 heißen in neuen Verweisen `A1-CERT/C0-C7`.
+`X-C0-TYPE / X-C1-GEOM / X-C2-ID / X-C3-WINDOW` bezeichnen das andere, neue Konstruktionsprogramm.
+Die historischen kleineren PSWF-Gates werden nicht nachträglich mit den Legendre-Zertifikaten identifiziert.
 
-## Gate C1 — Omega1551 `✓[K/M]`
+## P0 — Navigation und Aufbewahrung
 
-```math
-m_1(\xi)>0.1\quad(|\xi|\ge1551),
-\qquad \|r\|_\infty<12.
-```
+Schlanke Pointer; Originalaudits, Journale, Registry und Spezifikationen nicht umschreiben.
+Archivierung erhält die tatsächlichen Bytes plus Herkunft, nicht nur Hashlisten.
+Geplanter Archivtag: `a1-comp-2026-09-16` auf `0a7c970fc5983c9c198915e2c7c1f6280834b13a`.
+Ein veröffentlichtes Release ist erst nach zurückgelesenem Tag und vollständiger Assetprüfung als erledigt zu markieren.
+Gutachten-ZIPs allein sind nicht das gesamte numerische Reproduktionspaket; ursprüngliche Matrixartefakte und historische Abhängigkeiten separat nennen.
+[Draft-Triage](PR_TRIAGE_2026-09-16.md) ist eine Dispositionsnotiz, keine automatische Merge-/Close-Anweisung.
 
-## Gate C2 — Osipov N1102 `✓[M] / ✓[K/M]`
+## P1 — unabhängige Prüfung, parallel
 
-At predeclared `c=1551`, `N=1102`, Exact-Head Arb certifies
+`A1-COMP@0a7c970 / AUTHOR-VERIFIED / EXTERNAL-OPEN` bleibt eingefroren.
+Ein externes Vergleichszertifikat und ein Normierungslemma sind kein unabhängiger Review des anderen Operators L1.
+Fremde Autorenbehauptungen, eigene Wiederholungen und externe Reproduktionen strikt trennen.
 
-```math
-\mu_{1102}<10^{-43},
-\quad \tau_{1102}>0.099,
-\quad \text{Schur penalty}<1.5\times10^{-40}.
-```
+## P2 — rho1-Pilot, getrennte Nebenstrecke
 
-## Gate C3 — Canonical mathematical reduction `✓[K/M] / ?[O]`
+Ziel: `rho_1=<d_1,Acal_1^(-1)d_1>`, `d_1=2sinh(x/2)`; Acal ist der volle Completionoperator.
+Trial-/Galerkinwerte liefern untere Schranken. Ein oberer Vergleich aus L1 ist nur hinreichend.
+Für u in D(Acal), r=d-Acal*u gilt `b(u)<=rho1<=b(u)+||r||^2/delta`, mit explizitem vollständigem Residual.
+Resultat darf ein Enclosure, ein tatsächlich negativer Vollform-Zeuge oder eine Genauigkeitsbarriere sein; keine garantierte Entscheidung oder Frist.
+Auf NULLPOL verschwindet D; P2 ist kein notwendiger Vorgänger von P3.
 
-The smallest certified finite reduction is
+## P3 — X-C1-GEOM, aktive Hauptspur
 
-```math
-\boxed{(L_1)_{RR}\succeq3\times10^{-39}I}
-```
+C0-TYPE und die C1-Fluss-/Endpunktidentitäten sind Autorenresultate; positive vollständige Auswertung bleibt offen.
+Kandidat benennt seine tatsächliche Änderung gegenüber dem ausgeschlossenen positiven kausalen Originalspeicher.
+Vorwärts definierte quellen-/endpunktbedingte oder zweiseitige Geometrie; keine Fits, kein GNS aus angenommener Positivität.
+Die vorhandenen Prime-, Gamma- und Polkanäle erhalten; festen Prime-2-Test einschließlich Gamma und f±ig behandeln.
+Bei IN/OUT-Formen ist `||I_a v||<=||O_a v||` für JEDES v erforderlich; Vergleich der zwei Operatornormen genügt nicht.
+Ein Arbeitsbudget begrenzt Versuche. Nur ein Beweis für eine benannte Klasse begründet deren No-Go; erfolglose Versuche allein nicht.
 
-on at most
+## P4/P5 — X-C2-ID und X-C3-WINDOW
 
-```text
-1104 total = 552 even + 552 odd.
-```
-
-The reduction is certified; the finite lower bound remains `?[O]`.
-
-## Gate C4 — Operational execution backend `✓[M]`
-
-For the first full computer certificate, use the already prepared orthonormal Legendre backend:
-
-```text
-M=2150
-1075 even + 1075 odd
-Gram I exactly
-finite target 1e-35
-panel width <=0.4
-Gauss-Legendre q=40
-quadrature operator error <4e-38
-```
-
-Reason: the PSWF route is smaller but still needs a certified resolved spectral basis; Legendre already has exact basis/Gram/parity plus closed tail/cross and quadrature budgets.
-
-This is an execution choice only. PSWF/Osipov remains the canonical smaller mathematical reduction.
-
-## Gate C5E — C-even `?[O]`
-
-First certify
-
-```math
-\boxed{A_e\succeq10^{-35}I_{1075}}.
-```
-
-Protocol:
-
-1. fixed common-node Arb matrix assembly;
-2. certified #118 quadrature radius included in entries;
-3. positive moment rank-one block;
-4. untrusted approximate preconditioner frozen to dyadic points;
-5. Arb congruence `V^T(A_e-1e-35 I)V`;
-6. fail-closed interval Cholesky/LDL.
-
-Allowed precision ladder only:
-
-```text
-512 -> 768 -> 1024 -> 1536 -> 2048 -> 3072 bits.
-```
-
-No target/basis/quadrature retuning inside this gate.
-
-## Gate C5O — C-odd `?[O]`
-
-Only after C-even succeeds, certify
-
-```math
-\boxed{A_o\succeq10^{-35}I_{1075}}
-```
-
-with the same frozen architecture and an independent certificate artifact.
-
-## Gate C6 — certified a=1 completion `?[O]`
-
-Both Legendre parity certificates plus the already certified #117 full-space transfer imply
-
-```text
-L_1 >= 0
-  => canonical lambda=1 completion >=0
-  => fixed-window a=1 null-pole positivity.
-```
-
-Alternatively a future direct PSWF finite certificate may close the same gate.
-
-## Gate C7 — all-window mechanism `?[O]`
-
-Only after fixed-window `a=1`:
-
-```text
-a=1 theorem
-  |
-further windows / structural scaling
-  |
-all-a NP-GAP
-  |
-RH-hard global criterion
-```
-
-## Firewalls
-
-- B defines architecture only; no finite positivity is claimed.
-- A pivot interval containing `0` is undecided.
-- Working precision may increase; target, basis size and quadrature rule may not be retuned inside C.
-- Legendre execution does not supersede the smaller PSWF reduction.
-- Fixed-window `a=1`, Object X and RH remain open.
+Exakte polarisierte Identität auf dem gesamten genannten Testkern, dann Abschluss/Domain/Kernkontrolle.
+Fensterkompatibilität ist schon beim Kandidaten zu berücksichtigen; additive F-Kokzyklen allein beweisen keinen positiven Readout.
+Bei bereits exakten gemeinsamen Gramidentitäten ist `T_a v -> T_b v` auf erzeugten Räumen isometrisch; ein uniformer positiver L2-Gap ist dafür nicht nötig.
+Konkrete Port-/Rand-Intertwiner und der vollständige globale Weil-/RH-Transfer bleiben eigene Beweispflichten.
+Keine behauptete Äquivalenz von RH mit einer speziell vorgeschriebenen intrinsischen Architektur.
