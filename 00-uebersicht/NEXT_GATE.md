@@ -4,7 +4,9 @@
 **Gate-ID:** `RELATIVE-COLLIGATION / CANCEL-FIRST`  
 **Status:** `?[O]`  
 **Branch:** `research/critical-half-green-tree-bridge-2026-09-13`  
-**PR:** #116
+**PR:** #116  
+**Memory-layer parent:** `b3a74a7497d9c92c4dcb289d72a395b341deb727`  
+**Canonical memory-layer commit:** see the Git commit that contains this file; do not replace by a floating branch assumption.
 
 > Dies ist die einzige aktuelle Hauptfront dieses Forschungsastes. Keine neue Proxy-Suche, kein weiterer Methodenwechsel und keine Wiedereroeffnung gesperrter Klassen, solange dieser Gate nicht PASS oder FAIL erhalten hat.
 
