@@ -1,0 +1,181 @@
+{
+  "status": "EXACT_SCALAR_AND_POLYNOMIAL_CHECKS_ONLY",
+  "check_count": 40,
+  "interval_half_width": "3/8",
+  "length": "3/4",
+  "central_reserve_lower": "-3249/2000",
+  "vertex_lower": "1/2000",
+  "B_norm_squared_upper": "13/500",
+  "Q_lower": "487/20008",
+  "coarse_claim": "1/50",
+  "gamma_upper_rational": "1094513190394048693521249795305292610920315455705285725894230180661543463760540375097025897757881264153682884360408834086384392504605972879291945552732513182233476460536993116336334632739554226521186613164900453787718832859691312034596100316272138571284705074313112528259174630503121259697839981598950273426337709147135449096475680957537307396037591088858663297006491/1892098774864804189108484081561427038937710143194612589114219594552166382993841976553938768437137162551231306412747142315349244136229824868936744171189708316749738887851999016644304151614423464534957747373871543360831283322574204554760264104921872901603171337663785477857905985778868739376246029893306331176100028593044114475502107410404960178007022787586016160352000",
+  "checks": [
+    {
+      "name": "69/100 < log 2 < 7/10",
+      "status": "PASS"
+    },
+    {
+      "name": "log 3 > 1: only Prime 2 is active on length 3/4",
+      "status": "PASS"
+    },
+    {
+      "name": "one active shift, with disjoint endpoint bands",
+      "status": "PASS"
+    },
+    {
+      "name": "the original fixed Prime-2 pair lies inside the new interval",
+      "status": "PASS"
+    },
+    {
+      "name": "w2 < 1/2",
+      "status": "PASS"
+    },
+    {
+      "name": "geometric sinh(t)/t majorant coefficient",
+      "status": "PASS"
+    },
+    {
+      "name": "uniform polynomial margin for h(t) > 1/(2t) + 1/5",
+      "status": "PASS"
+    },
+    {
+      "name": "convex exponential bound for h(t) < 1/(2t) + 1/3",
+      "status": "PASS"
+    },
+    {
+      "name": "gamma < H400-log400 < 579/1000",
+      "status": "PASS"
+    },
+    {
+      "name": "log(33/14) < 429/500",
+      "status": "PASS"
+    },
+    {
+      "name": "central exterior reserve > -3249/2000 > -13/8",
+      "status": "PASS"
+    },
+    {
+      "name": "pi < 22/7 gives the correct logarithmic ratio",
+      "status": "PASS"
+    },
+    {
+      "name": "L-log2 < 3/50",
+      "status": "PASS"
+    },
+    {
+      "name": "endpoint leakage logarithmic ratio",
+      "status": "PASS"
+    },
+    {
+      "name": "log(375/112) > 6/5",
+      "status": "PASS"
+    },
+    {
+      "name": "endpoint leakage gain > 167/300 > w2",
+      "status": "PASS"
+    },
+    {
+      "name": "positive vertex weight V > 1/2000",
+      "status": "PASS"
+    },
+    {
+      "name": "cosh(x/2)-1 < 1/50 on the full interval",
+      "status": "PASS"
+    },
+    {
+      "name": "sinh(x/2)/(x/2)-1 < 1/150",
+      "status": "PASS"
+    },
+    {
+      "name": "constant-kernel complete-graph energy coefficient",
+      "status": "PASS"
+    },
+    {
+      "name": "exact negative first-mode coefficient",
+      "status": "PASS"
+    },
+    {
+      "name": "high-mode weights H_n-59/40",
+      "status": "PASS"
+    },
+    {
+      "name": "smallest high-mode weight is 1/40",
+      "status": "PASS"
+    },
+    {
+      "name": "even moment row norm squared < 13/500",
+      "status": "PASS"
+    },
+    {
+      "name": "odd moment row is smaller; parities are orthogonal",
+      "status": "PASS"
+    },
+    {
+      "name": "rank-two contraction has norm < 1/6",
+      "status": "PASS"
+    },
+    {
+      "name": "full connected NULLPOL lower bound > 1/50",
+      "status": "PASS"
+    },
+    {
+      "name": "polynomial regression A P_0 = H_0 P_0",
+      "status": "PASS"
+    },
+    {
+      "name": "polynomial regression A P_1 = H_1 P_1",
+      "status": "PASS"
+    },
+    {
+      "name": "polynomial regression A P_2 = H_2 P_2",
+      "status": "PASS"
+    },
+    {
+      "name": "polynomial regression A P_3 = H_3 P_3",
+      "status": "PASS"
+    },
+    {
+      "name": "polynomial regression A P_4 = H_4 P_4",
+      "status": "PASS"
+    },
+    {
+      "name": "polynomial regression A P_5 = H_5 P_5",
+      "status": "PASS"
+    },
+    {
+      "name": "polynomial regression A P_6 = H_6 P_6",
+      "status": "PASS"
+    },
+    {
+      "name": "polynomial regression A P_7 = H_7 P_7",
+      "status": "PASS"
+    },
+    {
+      "name": "polynomial regression A P_8 = H_8 P_8",
+      "status": "PASS"
+    },
+    {
+      "name": "polynomial regression A P_9 = H_9 P_9",
+      "status": "PASS"
+    },
+    {
+      "name": "polynomial regression A P_10 = H_10 P_10",
+      "status": "PASS"
+    },
+    {
+      "name": "polynomial regression A P_11 = H_11 P_11",
+      "status": "PASS"
+    },
+    {
+      "name": "polynomial regression A P_12 = H_12 P_12",
+      "status": "PASS"
+    }
+  ],
+  "not_tested": [
+    "external mathematical review",
+    "full unit window",
+    "all-window X",
+    "A1",
+    "pointwise or arbitrary-source numerical positivity"
+  ]
+}
