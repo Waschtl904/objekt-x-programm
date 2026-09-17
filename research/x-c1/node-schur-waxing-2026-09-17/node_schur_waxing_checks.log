@@ -1,0 +1,14 @@
+PASS fixed theta gap positive at a_lo
+PASS fixed-theta Schur scalar stays below delta on interval
+PASS m decreases on [0.392,a_lo]
+PASS lambda/delta decrease on [0.392,a_lo]
+PASS fixed theta gap strictly decreases on [0.392,a_lo]
+PASS upper-end optimizer objective strictly concave
+PASS upper-end even tail delta >1/2
+PASS upper-end Schur scalar stays below delta
+PASS optimizer derivative positive at theta lower bracket
+PASS optimizer derivative negative at theta upper bracket
+PASS global optimized even gap negative at a_hi
+PASS odd gap at a_hi remains >1/4
+PASS 2a_hi < 4/5
+TOTAL 13
