@@ -1,13 +1,22 @@
-# X-C1 Node-Schur Waxing Function
+# X-C1 Node-Schur Waxing Function — corrected normalization
 
 Append-only research package for PR #137.
 
 Status: `AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN`.
 
-Result: the optimized variable-node Schur mechanism has a rigorously enclosed local crossing
-`0.3930108 < a_node < 0.3930110` on the continuation from the proved `a=0.392` gate.
-The odd gap remains `>1/4`; the limiting channel is even.
+The corrected full even gap is
+`G_even=(eta-beta_e*K)/(1+beta_e)`.
+The earlier committed formula omitted the division of the `eta` term by `1+beta_e`.
 
-The package does **not** claim global monotonicity of `G_node(a)` over the entire Prime-2-only interval, and therefore does not promote the bracket to a globally first zero without an additional monotonicity lemma.
+After correction the rigorous local crossing survives:
+`0.3930108 < a_node_corr < 0.3930110`.
 
-Unused positive resources remain: the nonconstant Gamma residual and the Prime-2 difference energy. C15 is not yet forced.
+At the upper endpoint the unique theta maximizer is enclosed by
+`0.791428 < theta_* < 0.791429`.
+The odd gap remains `>1/4`.
+
+This remains a local crossing of the continuation from the proved `a=0.392` gate;
+no global monotonicity of `G_node(a)` is claimed.
+
+Unused positive resources remain the nonconstant Gamma residual and Prime-2 difference energy.
+The next research gate is `FULL-RESIDUAL-SCHUR`.

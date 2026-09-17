@@ -1,7 +1,15 @@
 # Provenance note
 
-The optimized Node-Schur package is append-only and independent of the older `connected-49_125-rest-schur-2026-09-17/SHA256SUMS` mismatch reported by external audit.
+This package supersedes the initial Node-Schur formula on the same research branch.
 
-The older mismatch is **not** silently repaired here. Its proof blob on commit `58c12944bc4bc7adf54406160eb73a4e9b26dafb` is Git blob `5185f2e2f986e39bf6f228a445bdb1d5fc836f4e`; the existing manifest proof SHA-256 is known to be stale. A later repair must recompute SHA-256 from the exact committed raw bytes and change only that manifest entry.
+External audit identified a normalization error in the final conversion from the high-mode
+coordinate `x` to the full even norm: the correct gap is
+`(eta-beta_e*K)/(1+beta_e)`, not `eta-beta_e*K/(1+beta_e)`.
 
-This package therefore makes no claim that the older `49/125` package is currently SHA-256-clean.
+The corrected checker, log and JSON are regenerated from that formula. The local
+`a` crossing survives, but the upper theta bracket changes to
+`0.791428 < theta_* < 0.791429`.
+
+`SHA256SUMS` in the corrected package is generated from the final UTF-8 bytes written in
+this correction. The older `49/125` manifest mismatch remains a separate provenance item
+unless and until its exact committed raw-byte SHA-256 is independently recomputed.

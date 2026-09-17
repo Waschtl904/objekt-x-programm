@@ -1,21 +1,17 @@
-# X-C1 NODE-SCHUR-WAXING — optimierter Knotensplit im Prime-2-only-Bereich
+# X-C1 NODE-SCHUR-WAXING — korrigierter optimierter Knotensplit im Prime-2-only-Bereich
 
 **Datum:** 17. September 2026  
-**Status:** neue analytische Autorenableitung; externe Prüfung offen.  
+**Status:** `AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN`  
 **Elternstand:** Connected-Faktorisierung, analytische Gamma-Waxing-Funktion und Rest-Schur-Gate `a=49/125` auf PR #137.  
 **Scope:** Prime-2-only-Bereich `log(2)/2 < a < log(3)/2`; keine Aussage jenseits des Eintritts von Prime 3.
 
-## 0. Ergebnis
+## 0. Korrigiertes Ergebnis
 
-Der variable Knotenmechanismus des `49/125`-Gates lässt sich als eindimensionale optimierte Waxing-Funktion formulieren. Für
-
+Setze
 \[
 \ell=\log2,\qquad w=\frac{\ell}{\sqrt2},\qquad
 H(s)=\int_s^\infty h(t)\,dt,
 \]
-
-setze
-
 \[
 C(a)=\kappa_*+w-H(2a-\ell)-H(\ell),
 \]
@@ -27,240 +23,296 @@ z(a)=\frac{\ell}{2a},\qquad
 p(a)=1-\frac94z^5+\frac52z^3-\frac54z,
 \]
 \[
-\lambda_2(a)=1+2a h(2a)-C(a),\qquad
+\lambda_2(a)=1+2ah(2a)-C(a),\qquad
 \delta(a)=\lambda_2(a)+\frac7{12}.
 \]
 
-Für `0<theta<1` folgt aus
-
+Für \(0<\theta<1\) folgt aus
 \[
-|A+B|^2\ge\theta |A|^2-\frac{\theta}{1-\theta}|B|^2
+|A+B|^2\ge \theta|A|^2-\frac{\theta}{1-\theta}|B|^2
 \]
-
 der Knotenkopplungskoeffizient
-
 \[
 \mu(a,\theta)=\theta m(a).
 \]
 
 Der rohe unendlichdimensionale Schur-Pivot wird von unten kontrolliert durch
-
 \[
 S_{\rm node}(a,\theta)
-=\lambda_2(a)+\mu p\left(1-\frac{\mu}{\delta}\right).
+=
+\lambda_2(a)+\mu p\left(1-\frac{\mu}{\delta}\right).
 \]
 
-Die Rücktransformation kostet den Faktor `(1+mu/delta)^2`. Mit
-
+Nach Schur-Quadratvervollständigung ist
 \[
-\beta_e(a)=\left[\frac{(a/2)^2}{2\left(1-(a/2)^2/12\right)}\right]^2
-\]
-
-erhält man den vollständigen even-Gap
-
-\[
-G_e(a,\theta)
+\eta(a,\theta)
 =
 \frac{\min\{S_{\rm node}(a,\theta),\delta(a)\}}
-     {(1+\mu(a,\theta)/\delta(a))^2}
--
-\frac{\beta_e(a)}{1+\beta_e(a)}
-\left(C(a)+\frac{\theta}{1-\theta}m(a)\right).
-\tag{N1}
+     {(1+\mu(a,\theta)/\delta(a))^2}.
 \]
 
-Definiere
-
+Mit
 \[
-G_{\rm node}(a)=\sup_{0<\theta<1}G_e(a,\theta).
-\tag{N2}
+\beta_e(a)=
+\left[
+\frac{(a/2)^2}{2(1-(a/2)^2/12)}
+\right]^2
 \]
-
-Der aktuelle Gate liefert eine rigorose lokale Crossing-Einschließung
-
+und
 \[
-\boxed{0.3930108<a_{\rm node}<0.3930110}
-\tag{N3}
+K(a,\theta)
+=
+C(a)+\frac{\theta}{1-\theta}m(a)
 \]
-
-in folgendem präzisen Sinn:
-
-- bei `a=0.3930108` ist `G_e(a,0.791438)>0`;
-- bei `a=0.3930110` ist der eindeutige theta-Maximierer in `0.791438<theta_*<0.791439` eingeschlossen und selbst dort gilt `G_e<0`;
-- der Odd-Gap ist am oberen Endpunkt weiterhin `>1/4`.
-
-Damit ist der erste Verlust **dieses optimierten Node-Schur-Mechanismus in der betrachteten lokalen Fortsetzung** auf etwa `0.393011` lokalisiert. Ein globaler Monotoniesatz von `G_node(a)` auf dem gesamten Prime-2-only-Bereich wird hier ausdrücklich noch NICHT behauptet; deshalb wird (N3) als rigoros eingeschlossener Crossing der von `a=0.392` fortgesetzten Architektur, nicht als bereits bewiesene global erste Nullstelle, bezeichnet.
-
-## 1. Herleitung des Schur-Pivots
-
-Wie im `49/125`-Beweis schreibe im even-Sektor
-
-\[
-x=\alpha e_2+y,\qquad y\in Y_{\rm even}=\overline{\operatorname{span}}\{e_4,e_6,\ldots\}.
-\]
-
-Auf der äußeren Prime-2-Zone
-
-\[
-J_a=\{|x|\ge \ell/2\}
-\]
-gilt `V_a>=m(a)`. Nach dem theta-Split bleibt im Hochmodenblock
-
-\[
-\lambda_2|\alpha|^2+\delta\|y\|^2+\mu\langle x,P_Jx\rangle.
-\]
-
-Relativ zu `C e_2 direct-sum Y_even` ist
-
-\[
-D=\delta I+\mu P_YP_JP_Y\succeq\delta I,
-\quad
-b=\mu P_YP_Je_2,
-\quad
-A_{22}=\lambda_2+\mu p.
-\]
-
-Daher
-
-\[
-A_{22}-\langle b,D^{-1}b\rangle
-\ge
-\lambda_2+\mu p-\frac{\mu^2}{\delta}p
-=S_{\rm node}.
-\]
-
-Dies ist dasselbe unendlichdimensionale Schur-Argument wie am Punkt `49/125`, nun als Funktion von `a` und `theta`.
-
-## 2. Momenttransport
-
-Die even-NULLPOL-Bedingung liefert weiterhin
-
+liefert die even-Momentbedingung
 \[
 |u_0|^2\le\beta_e(a)\|x\|^2.
 \]
 
-Der theta-Split kostet auf `u_0` zusätzlich
+Aus
+\[
+q_{\rm even}[u]\ge
+\eta(a,\theta)\|x\|^2-K(a,\theta)|u_0|^2
+\]
+und
+\[
+\|u_{\rm even}\|^2=\|x\|^2+|u_0|^2
+\le(1+\beta_e(a))\|x\|^2
+\]
+folgt daher **nicht** die frühere Formel, sondern
+\[
+\boxed{
+G_e^{\rm corr}(a,\theta)
+=
+\frac{\eta(a,\theta)-\beta_e(a)K(a,\theta)}
+     {1+\beta_e(a)}.
+}
+\tag{N1-corr}
+\]
 
+Die Differenz zur früher committed Formel ist
+\[
+G_e^{\rm commit}-G_e^{\rm corr}
+=
+\frac{\beta_e\,\eta}{1+\beta_e}>0
+\]
+im positiven Bereich. Der frühere Ausdruck war daher geringfügig zu groß.
+
+Trotz dieser Korrektur bleibt die lokale Crossing-Einschließung bestehen:
+\[
+\boxed{
+0.3930108<a_{\rm node}^{\rm corr}<0.3930110.
+}
+\tag{N2-corr}
+\]
+
+Präzise:
+- bei \(a=0.3930108\) gilt
+  \[
+  G_e^{\rm corr}(a,0.791438)>0;
+  \]
+- bei \(a=0.3930110\) liegt der eindeutige \(\theta\)-Maximierer in
+  \[
+  \boxed{0.791428<\theta_*<0.791429},
+  \]
+  und selbst auf diesem gesamten Bracket ist
+  \[
+  G_e^{\rm corr}<0;
+  \]
+- der Odd-Gap bleibt am oberen Endpunkt \(>1/4\).
+
+Der exakte Checker liefert für die gerichteten Außenintervalle insbesondere
+\[
+G_e^{\rm corr}(0.3930108,0.791438)>7.23\times10^{-8},
+\]
+\[
+\sup_{\theta\in(0.791428,0.791429)}
+G_e^{\rm corr}(0.3930110,\theta)
+<-9.16\times10^{-7}.
+\]
+
+Ohne einen zusätzlichen Monotoniesatz in \(a\) ist dies ein rigoros eingeschlossener **lokaler Crossing der von \(a=0.392\) fortgesetzten Node-Schur-Architektur**, nicht die bereits bewiesene global erste Nullstelle im gesamten Prime-2-only-Bereich.
+
+## 1. Unendlichdimensionaler Schur-Pivot
+
+Im even-Sektor schreibe
+\[
+x=\alpha e_2+y,\qquad
+y\in Y_{\rm even}
+=
+\overline{\operatorname{span}}\{e_4,e_6,\ldots\}.
+\]
+
+Auf
+\[
+J_a=\{|x|\ge\ell/2\}
+\]
+gilt \(V_a\ge m(a)\). Nach dem \(\theta\)-Split bleibt
+\[
+\lambda_2|\alpha|^2+\delta\|y\|^2
++\mu\langle x,P_Jx\rangle.
+\]
+
+Relativ zu \(\mathbb Ce_2\oplus Y_{\rm even}\):
+\[
+D=\delta I+\mu P_YP_JP_Y\succeq\delta I,
+\]
+\[
+b=\mu P_YP_Je_2,\qquad
+A_{22}=\lambda_2+\mu p.
+\]
+
+Daher
+\[
+A_{22}-\langle b,D^{-1}b\rangle
+\ge
+\lambda_2+\mu p-\frac{\mu^2}{\delta}p
+=
+S_{\rm node}.
+\]
+
+Dies ist ein Operator-Schur-Argument auf dem unendlichdimensionalen \(Y_{\rm even}\), keine endliche Matrixapproximation.
+
+## 2. Korrigierter Momenttransport
+
+Der Knotensplit kostet auf der rekonstruierten konstanten Mode
 \[
 \frac{\theta}{1-\theta}m(a)|u_0|^2,
 \]
+der globale negative Knotenboden kostet
+\[
+C(a)|u_0|^2.
+\]
 
-während der globale negative Knotenboden `C(a)|u_0|^2` beträgt. Nach Rückrechnung von `x` auf die volle even-Norm folgt exakt (N1).
+Damit ist der gesamte Momentverlust \(K(a,\theta)|u_0|^2\). Die Division durch \(1+\beta_e(a)\) in (N1-corr) ist ein eigener notwendiger Normschritt und wird im Checker explizit mitgeführt.
 
-Keine dritte Momentbedingung wird eingeführt.
+Keine dritte Mellinbedingung wird eingeführt.
 
 ## 3. Odd-Sektor
 
 Setze
-
 \[
-\beta_o(a)=\left[\frac{(a/2)^2}{6\left(1-(a/2)^2/20\right)}\right]^2.
+\beta_o(a)
+=
+\left[
+\frac{(a/2)^2}{6(1-(a/2)^2/20)}
+\right]^2.
 \]
 
-Ohne irgendeine Knotenreserve liefert bereits der skalare Odd-Tail
-
+Ohne Knotenreserve genügt
 \[
 G_o(a)
 =
-\frac{\lambda_3(a)-[-\lambda_1(a)]\beta_o(a)}{1+\beta_o(a)},
+\frac{\lambda_3(a)-[-\lambda_1(a)]\beta_o(a)}
+     {1+\beta_o(a)},
 \]
-
 mit
-
 \[
 \lambda_1=\lambda_2-\frac12,\qquad
 \lambda_3=\lambda_2+\frac13.
 \]
 
-Der Checker schließt am oberen Crossing-Endpunkt rigoros
-
+Der korrigierte Checker schließt
 \[
 \boxed{G_o(0.3930110)>\frac14.}
 \]
 
-Der erste Architekturverlust ist in diesem Bereich somit even, nicht odd.
+Der lokale Architekturverlust ist damit even.
 
-## 4. Warum die theta-Optimierung eindimensional rigoros ist
+## 4. Rigorose \(\theta\)-Optimierung
 
-Im Crossing-Bereich gilt `S_node<delta`, daher ist der erste Term von (N1)
-
-\[
-\eta(\theta)
-=\frac{\lambda_2+A\theta-B\theta^2}{(1+q\theta)^2},
-\]
-
-wobei
-
+Im Crossing-Bereich gilt \(S_{\rm node}<\delta\). Setze
 \[
 A=mp,\qquad q=m/\delta,\qquad B=Aq.
 \]
-
-Direkte Differentiation ergibt
-
+Dann
 \[
-\eta'(\theta)=
+\eta(\theta)
+=
+\frac{\lambda_2+A\theta-B\theta^2}{(1+q\theta)^2},
+\]
+\[
+\eta'(\theta)
+=
 \frac{A-2\lambda_2q-3Aq\theta}{(1+q\theta)^3},
 \]
-
-und
-
 \[
-\eta''(\theta)=
-\frac{6q\,[Aq\theta-A+\lambda_2q]}{(1+q\theta)^4}.
+\eta''(\theta)
+=
+\frac{6q(Aq\theta-A+\lambda_2q)}{(1+q\theta)^4}.
 \]
 
-Die rational eingeschlossenen Daten am oberen Endpunkt zeigen bereits bei `theta=1`
-
+Am oberen Endpunkt zeigen die gerichteten rationalen Intervalle
 \[
 Aq-A+\lambda_2q<0,
 \]
+also \(\eta''<0\) auf \((0,1)\).
 
-also `eta''<0` auf `(0,1)`. Der Momentverlust
-
+Für die korrigierte Funktion
 \[
-\frac{\beta_e}{1+\beta_e}
-\left(C+\frac{\theta}{1-\theta}m\right)
+G_e^{\rm corr}
+=
+\frac{\eta-\beta_e K}{1+\beta_e}
 \]
-ist strikt konvex in `theta`; sein Negativ ist daher strikt konkav. Somit besitzt `G_e(a,theta)` im relevanten Bereich höchstens einen inneren Maximierer.
-
-Am oberen Endpunkt beweisen die rationalen Enclosures
-
+ist
 \[
-G_\theta(a,0.791438)>0,
-\qquad
-G_\theta(a,0.791439)<0,
+\partial_\theta G_e^{\rm corr}
+=
+\frac{\eta'
+-\beta_e m/(1-\theta)^2}
+{1+\beta_e}.
 \]
 
-sodass der eindeutige Maximierer zwischen diesen beiden rationalen Zahlen liegt. Eine direkte Intervallauswertung auf diesem gesamten theta-Intervall liefert eine strikt negative Obergrenze für `G_e`.
+Der zweite Summand stammt von einer strikt konvexen Funktion in \(\theta\), daher bleibt \(G_e^{\rm corr}\) im relevanten Bereich strikt konkav. Die exakten Enclosures ergeben am oberen Endpunkt
+\[
+\partial_\theta G_e^{\rm corr}(0.791428)>0,
+\]
+\[
+\partial_\theta G_e^{\rm corr}(0.791429)<0.
+\]
+Der Maximierer ist also eindeutig und liegt im angegebenen Bracket.
 
 ## 5. Zertifikatsstruktur
 
-Die beigefügte schnelle Standardbibliothek-Datei `check_x_c1_node_schur_function.py` führt die endgültigen Gate-Entscheidungen ausschließlich mit `fractions.Fraction` aus. Ihre Eingangsdaten sind 30-stellige rationale Außenintervalle für
+`check_x_c1_node_schur_function.py` benutzt für alle PASS-Entscheidungen `fractions.Fraction`.
 
-- `C(a)`, `m(a)`, `p(a)`, `lambda_2(a)`, `delta(a)`, `beta_e(a)`, `beta_o(a)`
+Die Eingangsdaten sind gerichtete 30-stellige Außenintervalle für
+\(C,m,p,\lambda_2,\delta,\beta_e,\beta_o\) an den beiden rationalen \(a\)-Endpunkten.
 
-an den beiden rationalen Endpunkten. Diese Außenintervalle wurden separat mit 80-stelliger gerichteter Intervallarithmetik aus den ausgeschriebenen Formeln erzeugt; sie sind im Checker sichtbar und können unabhängig ersetzt werden.
+Geprüft werden:
+1. korrigierter positiver even-Gap am unteren Endpunkt;
+2. positives korrigiertes \(\theta\)-Derivat bei \(0.791428\);
+3. negatives korrigiertes \(\theta\)-Derivat bei \(0.791429\);
+4. korrigierter negativer even-Gap auf dem gesamten Maximierer-Bracket am oberen Endpunkt;
+5. strikte Konkavität des \(\eta\)-Anteils;
+6. Odd-Gap \(>1/4\).
 
-Der Checker beweist sechs algebraische Gate-Aussagen:
+## 6. Aussagegrenze und nächster Gate
 
-1. positiver even-Gap am unteren Endpunkt;
-2. positives theta-Derivat am linken theta-Bracket;
-3. negatives theta-Derivat am rechten theta-Bracket;
-4. negativer even-Gap auf dem gesamten Maximierer-Bracket am oberen Endpunkt;
-5. strikte Konkavität des eta-Anteils;
-6. Odd-Gap `>1/4`.
+Die korrigierte Node-Schur-Architektur verliert ihren positiven vollständigen even-Gap lokal bei ungefähr \(a=0.393011\).
 
-## 6. Aussagegrenze und nächster Mechanismus
+Unbenutzt bleiben weiterhin:
+\[
+R_{\Gamma,a}[u]
+=
+\int_{x<y}
+\bigl(g(y-x)-g(2a)\bigr)
+|u(y)-u(x)|^2\,dx\,dy,
+\]
+sowie
+\[
+R_{2,a}[u]
+=
+w_2\int_{-a}^{a-\log2}
+|u(x+\log2)-u(x)|^2\,dx.
+\]
 
-Der optimierte Knotensplit verschiebt den bewiesenen Punkt `a=0.392` nur bis ungefähr `0.393011`. Das ist eine kleine, aber strukturell saubere Erweiterung. Entscheidend ist, dass hier **der gesamte verfügbare äußere Knotenboden `m(a)` und der Splitparameter theta optimiert** werden; die frühere feste Wahl `theta=1/2` ist nicht mehr die Ursache des Versagens.
+Der lokale Crossing ist deshalb weder ein Negativitätszeugnis für \(Q_W\) noch ein Nachweis der C15-Notwendigkeit.
 
-Noch unbenutzt bleiben jedoch:
-
-- der nichtkonstante positive Gamma-Rest `r_a(t)=g(t)-g(2a)`;
-- die Prime-2-Differenzenergie.
-
-Daher ist der Verlust von `G_node` weiterhin kein C15-No-Go. Der nächste qualitative Gate sollte diese beiden positiven Restenergien gemeinsam in den even-Hauptblock aufnehmen. Erst wenn auch deren vollständiger Schur-Beitrag rigoros ausgereizt ist, entsteht ein belastbarer Grund, Mode 2 in die C15-Restarchitektur zu überführen.
-
-Beim Eintritt von Prime 3 bei `a>log(3)/2` muss die Knotengeometrie ohnehin neu aufgesetzt werden; keine Formel dieses Dokuments wird unverändert über diese Grenze extrapoliert.
+Der nächste Gate ist **FULL-RESIDUAL-SCHUR**: Node-, nichtkonstante Gamma- und Prime-2-Differenzenergie werden gemeinsam als positiver Restoperator auf
+\[
+\mathbb Ce_2\oplus Y_{\ge4}^{\rm even}
+\]
+behalten. Erst nach dem vollständigen Schur-Pivot, Rücktransport und der expliziten Division durch \(1+\beta_e(a)\) darf ein vollständiger NULLPOL-Gap gebucht werden.
 
 **Status:** `AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN`.
