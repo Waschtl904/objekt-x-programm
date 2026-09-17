@@ -1,512 +1,280 @@
-# X-C1-CONNECTED-WAXING-193/500 — rational closure below the third-mode crossing
+# X-C1-CONNECTED-WAXING — rationaler Gate bei a=193/500
 
 **Datum:** 17. September 2026.  
 **Status:** neue analytische Autorenableitung; externe Prüfung offen.  
-**Elternstand:** `X-C1-CONNECTED-19/50` auf PR #137.  
-**Auditimpuls:** der eingegangene Delta-Audit identifiziert `a=193/500` als letzten sinnvollen rationalen Testpunkt knapp unter der Nullstelle der skalarisierten Mode 2.  
+**Elternstand:** Connected-3/8 und Waxing-19/50 auf PR #137.  
 **Scope:** gesamte Klasse
 \[
-\mathcal W_{193/500}
-=
-H^1_0(-193/500,193/500;\mathbb C)\cap\ker E_+\cap\ker E_-.
+\mathcal W_a=H^1_0((-a,a);\mathbb C)\cap\ker E_+\cap\ker E_-,
+\qquad a=\frac{193}{500}.
 \]
-
-Kein A1-Import, keine numerische Matrix, keine zusätzliche Mellinbedingung.
+Kein A1-Import, keine numerische Eigenwertannahme und keine zusätzliche Momentbedingung.
 
 ## 0. Ergebnis
 
-Setze
-\[
-a=\frac{193}{500}=0.386,\qquad L=2a=\frac{193}{250}=0.772.
-\]
-Dann ist Prime 2 aktiv und Prime 3 noch inaktiv. Auf der gesamten verbundenen NULLPOL-Klasse existiert dieselbe vorwärts definierte positive Auswertung wie in den beiden vorherigen Connected-Fenstern. Insbesondere
+Für \(a=193/500\) bleibt die bisherige globale Connected-Faktorisierung der skalarisierten Unterform noch im Zwei-Moden-Regime. Es gibt eine vorwärts definierte positive Auswertung mit
 \[
 \boxed{
-Q_W[u]\ge
-\frac{1193}{5002000}\|u\|_2^2
->
-\frac1{5000}\|u\|_2^2
-\qquad
-(u\in\mathcal W_{193/500}).
+Q_W[u]\ge \frac{1193}{5002000}\|u\|_2^2
+>\frac1{5000}\|u\|_2^2
+\qquad (u\ne0,\ u\in\mathcal W_a).
 }
-\tag{W0}
 \]
 
-Der Schritt vergrößert den rigoros geschlossenen zusammenhängenden Bereich
+Die Prime-2-Korrelation ist aktiv. Prime 3 ist noch inaktiv, da \(2a=193/250<\log3\).
+
+Der Beweis verwendet dieselbe unzerlegte regionale Gamma-Differenzenergie und genau die zwei globalen Mellinmomente wie der Elternnachweis. Neu geschlossen werden drei knappe Delta-Punkte:
+
+1. globale Knotenreserve \(\rho_a(x)>-3307/2000\);
+2. zusätzliche äußere Gamma-Leckage auf den Prime-2-Endbändern ist \(>1/2>w_2\);
+3. die bisherigen Moment-Taylorbudgets \(1/50\) und \(1/150\) bleiben bei \(|x|/2\le193/1000\) gültig.
+
+## 1. Ausgangsidentität
+
+Setze
 \[
-\frac38\longrightarrow\frac{19}{50}\longrightarrow\frac{193}{500}.
+I_a=(-a,a),\qquad h(t)=\frac{e^{-t/2}}{1-e^{-2t}},
+\qquad \kappa_*=\log(8\pi)+\gamma+\frac\pi2,
 \]
-
-Die Zahl `0.3869` bleibt nur eine Warnschwelle der konkret skalarisierten Unterform. Dieses Dokument behauptet keinen Weil-No-Go oder C1-No-Go jenseits davon.
-
-## 1. Ausgangsform und Kanalregime
-
-Es gelten unverändert
 \[
-h(t)=\frac{e^{-t/2}}{1-e^{-2t}},\qquad
-\kappa_*=\log(8\pi)+\gamma+\frac\pi2.
+t_2=\log2,\qquad w_2=\frac{\log2}{\sqrt2},
+\qquad H(s)=\int_s^\infty h(t)\,dt.
 \]
-Der exakte Kanten-/Knotenansatz des Connected-Elternbeweises liefert
+
+Auf NULLPOL gilt wie im Connected-Elternnachweis
 \[
 Q_W[u]
 =
-\int_{x<y\in I}h(y-x)|u(y)-u(x)|^2\,dx\,dy
+\int_{x<y,\ x,y\in I_a} h(y-x)|u(y)-u(x)|^2\,dx\,dy
 +
-w_2\int_{-a}^{a-\log2}|u(x+\log2)-u(x)|^2\,dx
+w_2\!\int_{-a}^{a-t_2}|u(x+t_2)-u(x)|^2dx
 +
-\int_I\rho_a(x)|u(x)|^2\,dx,
-\tag{W1}
-\]
-für \(I=(-a,a)\), \(w_2=\log2/\sqrt2\).
-
-Mit der klassischen Reihe
-\[
-\log2=2\sum_{n\ge0}\frac{3^{-(2n+1)}}{2n+1}
-\]
-und einem geometrischen Rest erhält man rational
-\[
-\frac{6931}{10000}<\log2<\frac{6932}{10000}<\frac{193}{250}.
-\]
-Außerdem ist \(\log3>1>193/250\), etwa weil \(e<11/4<3\). Damit ist genau der Shift \(\log2\) aktiv.
-
-## 2. Schärferer Kernsplit auf dem ganzen Abstand \(0<t\le193/250\)
-
-Für den neuen Endpunkt genügt der folgende stärkere Vergleich:
-\[
-\boxed{
-\frac1{2t}+\frac14-\frac{t}{16}
-<
-h(t)
-<
-\frac1{2t}+\frac14-\frac{t}{50}
-\qquad
-(0<t\le193/250).
-}
-\tag{W2}
-\]
-
-### 2.1 Untere Schranke
-
-Da
-\[
-h(t)=\frac{e^{t/2}}{2\sinh t},
-\]
-ist die untere Schranke äquivalent zu
-\[
-e^{t/2}>
-\left(1+\frac t2-\frac{t^2}{8}\right)\frac{\sinh t}{t}.
-\]
-Für \(t<4/5\) gilt
-\[
-\frac{\sinh t}{t}
-\le
-1+\frac{t^2}{6(1-t^2/20)},
-\]
-weil nach dem \(t^2/6\)-Term das Verhältnis aufeinanderfolgender positiver Terme höchstens \(t^2/20\) ist. Andererseits
-\[
-e^{t/2}>1+\frac t2+\frac{t^2}{8}.
-\]
-Die Differenz dieser beiden rationalen Schranken ist
-\[
--\frac{t^2(t^2-10t+10)}{6(t^2-20)}>0
-\qquad(0<t\le4/5),
-\]
-da \(t^2-10t+10>0\) und \(t^2-20<0\).
-
-### 2.2 Obere Schranke
-
-Aus \(\sinh t/t\ge1+t^2/6\) und \(t/2<2/5\) folgt
-\[
-e^{t/2}
-<
-1+\frac t2+\frac{t^2}{8}+\frac{t^3}{40}.
-\]
-Für den Exponentialrest genügt
-\[
-\sum_{k\ge3}\frac{x^k}{k!}
-\le
-\frac{x^3/6}{1-x/4}
-<
-\frac{x^3}{5},
-\qquad x=t/2<2/5.
-\]
-Weiter ist
-\[
-\left(1+\frac t2-\frac{t^2}{25}\right)
-\left(1+\frac{t^2}{6}\right)
--
-\left(1+\frac t2+\frac{t^2}{8}+\frac{t^3}{40}\right)
-=
--\frac{t^2(4t^2-35t-1)}{600}>0.
-\]
-Damit folgt die rechte Seite von (W2).
-
-Insbesondere bleibt der bereits benutzte schwächere Split
-\[
-h(t)=\frac1{2t}+\frac15+r(t),\qquad r(t)\ge0
-\tag{W3}
-\]
-auf dem gesamten neuen Intervall gültig.
-
-## 3. Rationaler Zentrumsnachweis
-
-Schreibe
-\[
-H(s)=\int_s^\infty h(t)\,dt,
-\qquad
-z=\frac a4=\frac{193}{2000}.
-\]
-Dann
-\[
-2H(a)-\kappa_*
-=
-\log\coth z-\log(8\pi)-\gamma
--2\arctan(\tanh z).
-\tag{W4}
-\]
-
-Wir zeigen
-\[
-\boxed{
-2H(a)-\kappa_*>-\frac{3307}{2000}.
-}
-\tag{W5}
-\]
-
-### 3.1 Drei elementare Verbesserungen
-
-Erstens gilt für jedes \(z>0\)
-\[
-\coth z>
-\frac1z+\frac z3-\frac{z^3}{45}.
-\tag{W6}
-\]
-Nach Multiplikation mit \(z\sinh z>0\) ist die Differenz
-\[
-z\cosh z-
-\left(1+\frac{z^2}{3}-\frac{z^4}{45}\right)\sinh z,
-\]
-deren Potenzreihenkoeffizient bei \(z^{2m+1}\), mit \((2m+1)!\) multipliziert, gleich
-\[
-\frac{16}{45}m(m-1)(m-2)(m+2)
-\]
-ist. Er verschwindet für \(m=0,1,2\) und ist danach positiv.
-
-Zweitens
-\[
-\arctan(\tanh z)
-=
-\int_0^z\operatorname{sech}(2s)\,ds
-\le z-\frac{z^3}{2}.
-\tag{W7}
-\]
-Denn für \(s^2\le1/6\),
-\[
-\cosh(2s)\ge1+2s^2\ge\frac1{1-\frac32s^2},
-\]
-also \(\operatorname{sech}(2s)\le1-\frac32s^2\).
-
-Drittens benutzen wir
-\[
-\pi<\frac{22}{7},
-\qquad
-\gamma<\frac{5773}{10000}.
-\tag{W8}
-\]
-Die Gamma-Schranke wird ohne Gleitkomma aus
-\[
-\gamma<H_{10000}-\log10000
-\]
-gewonnen. Für \(\log10000\) wird
-\[
-\log x
-=
-2\sum_{n=0}^{N-1}\frac{q^{2n+1}}{2n+1}+R_N,
-\qquad
-q=\frac{x-1}{x+1},
-\]
-nach dyadischer Reduktion verwendet, mit
-\[
-0<R_N<
-\frac{2q^{2N+1}}{(2N+1)(1-q^2)}.
-\]
-Der Begleitprüfer führt die komplette rationale Rechnung aus.
-
-### 3.2 Abschluss
-
-Setze
-\[
-C_z=\frac1z+\frac z3-\frac{z^3}{45},
-\qquad
-X=C_z\frac7{176}.
-\]
-Aus derselben rationalen Logarithmusreihe folgt
-\[
-\log X>-\frac{8833}{10000}.
-\]
-Mit (W7)--(W8):
-\[
-\begin{aligned}
-2H(a)-\kappa_*
-&>
--\frac{8833}{10000}
--\frac{5773}{10000}
--\left(2z-z^3\right)\\
-&>-\frac{3307}{2000}.
-\end{aligned}
-\]
-Dies beweist (W5).
-
-## 4. Rationaler Prime-2-Endbandnachweis
-
-Auf einem Prime-2-aktiven Endband muss zusätzlich der Knotengrad \(w_2\) bezahlt werden. Setze
-\[
-\ell=\log2,\qquad d=2a-\ell.
-\]
-Dann
-\[
-W_I(\ell-a)-2H(a)
-=
-\int_d^a h(t)\,dt-\int_a^\ell h(t)\,dt.
-\tag{W9}
-\]
-
-Mit (W2) erhalten wir
-\[
-\begin{aligned}
-W_I(\ell-a)-2H(a)
->{}&
-\frac12\log\frac{a^2}{d\ell}
--\frac{a^2-d^2}{32}
-+\frac{\ell^2-a^2}{100}.
-\end{aligned}
-\tag{W10}
-\]
-Die konstanten \(1/4\)-Anteile löschen sich exakt, weil
-\[
-a-d=\ell-a.
-\]
-
-Aus
-\[
-\ell_-=\frac{6931}{10000}<\ell<\frac{6932}{10000}=\ell_+
-\]
-folgt konservativ
-\[
-\frac{a^2}{d\ell}
->
-\frac{a^2}{\ell_-(2a-\ell_-)}.
-\]
-Für den negativen quadratischen Term wird \(d>2a-\ell_+\), für den positiven Term \(\ell>\ell_-\) verwendet. Eine achtgliedrige rationale atanh-Reihe liefert
-\[
-\log\frac{a^2}{\ell_-(2a-\ell_-)}
->
-\frac{5011481639}{5000000000}.
-\]
-Daraus folgt exakt
-\[
-\boxed{
-W_I(\ell-a)-2H(a)>
-\frac{50001}{100000}>
-\frac12>w_2.
-}
-\tag{W11}
-\]
-Somit wird der Prime-2-Knotengrad vollständig durch die zusätzliche äußere Gamma-Leckage der Endbänder bezahlt.
-
-Aus (W5) und (W11) folgt auf dem ganzen Intervall
-\[
-\boxed{
-\rho_a(x)>-\beta,\qquad
-\beta=\frac{3307}{2000}.
-}
-\tag{W12}
-\]
-Also ist
-\[
-V_a(x)=\rho_a(x)+\beta>0.
-\]
-
-## 5. Globale Gamma-Moden: Mode 2 bleibt knapp positiv
-
-Die singuläre Energie aus \(1/(2|x-y|)\) wird wie im Elternbeweis auf dem ganzen verbundenen Intervall diagonalisiert:
-\[
-\mathcal E_0[u]
-=
-\sum_{n\ge0}\mathsf H_n|u_n|^2.
-\tag{W13}
-\]
-Der konstante Anteil \(1/5\) liefert jetzt
-\[
-\frac{L}{5}\sum_{n\ge1}|u_n|^2
-=
-\frac{193}{1250}\sum_{n\ge1}|u_n|^2.
-\tag{W14}
-\]
-
-Nach Ausgliederung der positiven \(r\)-Kanten, des Prime-2-Differenzports und des positiven Knotengewichts \(V_a\) verbleibt
-\[
-\sum_{n\ge2}\lambda_n|u_n|^2
--\frac{3307}{2000}|u_0|^2
--\frac{4991}{10000}|u_1|^2,
-\tag{W15}
+\int_{I_a}\rho_a(x)|u(x)|^2dx,
 \]
 mit
 \[
-\lambda_n
-=
-\mathsf H_n+\frac{193}{1250}-\frac{3307}{2000}.
-\]
-Insbesondere
-\[
-\lambda_1=-\frac{4991}{10000},
-\qquad
-\boxed{\lambda_2=\frac9{10000}>0.}
-\tag{W16}
-\]
-Da die harmonischen Zahlen wachsen, gilt
-\[
-\lambda_n\ge\frac9{10000}\qquad(n\ge2).
-\]
-In dieser konkreten Unterform bleiben also weiterhin genau zwei negative niedrige Moden.
-
-## 6. Dieselben zwei globalen Mellinmomente schließen den Defekt
-
-Auf \(|x|\le193/500\), also \(|x|/2\le193/1000\), gelten noch
-\[
-\frac{\|c_\perp\|}{c_0}<\frac1{50},
-\qquad
-\frac{\|s_\perp\|}{s_1}<\frac1{150},
-\tag{W17}
-\]
-für \(c(x)=\cosh(x/2)\), \(s(x)=\sinh(x/2)\).
-
-Tatsächlich genügen
-\[
-\cosh z-1
-\le
-\frac{z^2}{2(1-z^2/12)}
-<\frac1{50},
-\]
-und
-\[
-\frac{\sinh z}{z}-1
-\le
-\frac{z^2}{6(1-z^2/20)}
-<\frac1{150},
-\qquad z=\frac{193}{1000}.
+\rho_a(x)=H(a+x)+H(a-x)-\kappa_*
+-w_2\bigl(1_{I_a}(x-t_2)+1_{I_a}(x+t_2)\bigr).
 \]
 
-Die zwei NULLPOL-Bedingungen rekonstruieren \(u_0,u_1\) aus den höheren Paritätsmoden genau wie im Elternbeweis. Für
+Für alle vorkommenden Abstände \(0<t\le2a<4/5\) behalten wir die bereits bewiesene Unterzerlegung
 \[
-z_n=\sqrt{\lambda_n}\,u_n,\qquad n\ge2,
+h(t)>\frac1{2t}+\frac15.
 \]
-erhält man einen festen Rang-zwei-Operator \(B_a\) mit
+Der positive Restkernel und die Prime-Differenzenergie werden als positive Ausgänge beibehalten.
+
+## 2. Rigorose rationale Einschließung der Knotenreserve
+
+Die Schwierigkeit ist die knappe Reserve nahe dem Mode-2-Crossing. Deshalb werden \(H\), \(\pi\), \(\gamma\) und \(\log2\) im Begleitprüfer ausschließlich mit exakten Brüchen eingeschlossen.
+
+### 2.1 Zentrum
+
+Konvexität von \(H\) gibt
 \[
-\begin{aligned}
-\|B_a\|^2
-&<
-\max\left\{
-\frac{3307}{2000}\frac{1}{(9/10000)50^2},
-\frac{4991}{10000}\frac{1}{(9/10000)150^2}
-\right\}\\
-&=
-\boxed{\frac{3307}{4500}<1.}
-\end{aligned}
-\tag{W18}
+H(a+x)+H(a-x)\ge2H(a).
 \]
 
-Damit ist
+Für Euler-\(\gamma\) benutzen wir die klassische rationale Schranke
 \[
-S_a=(I-B_a^*B_a)^{1/2}
-\tag{W19}
+\gamma<H_{200}-\log200-\frac1{401}.
 \]
-durch eine normkonvergente Binomialreihe definiert, bevor die Weil-Normidentität verwendet wird.
+Der Logarithmus wird durch die positive atanh-Reihe mit rationalem Rest eingeschlossen. \(\pi\) wird durch Machins Formel
+\[
+\pi=16\arctan\frac15-4\arctan\frac1{239}
+\]
+mit alternierenden rationalen Reihen eingeschlossen.
 
-## 7. Positiver Output und quantitative Untergrenze
+Ebenso wird
+\[
+H(s)=\operatorname{atanh}(e^{-s/2})+\arctan(e^{-s/2})
+\]
+durch exakte rationale Intervalle berechnet; \(e^{-s/2}\) benutzt die alternierende Exponentialreihe.
 
-Mit demselben Zielraumtyp wie im Connected-Elternbeweis setze
+Der resultierende exakte Intervallvergleich liefert
 \[
-T_a u=(D_Iu,\ u,\ S_a z(u)),
-\tag{W20}
+\boxed{2H(a)-\kappa_*>-\frac{3307}{2000}.}
+\tag{W1}
 \]
-wobei \(D_I\) die positive \(r\)-/Prime-Differenzausgabe und der zweite Eintrag die positive \(V_a(x)\,dx\)-Knotenausgabe bezeichnet.
 
-Aus der exakten Bilanz folgt
-\[
-\boxed{
-\|T_a u\|^2=Q_W[u].
-}
-\tag{W21}
-\]
-Die komplexe polarisierte Identität folgt ebenfalls.
+### 2.2 Prime-2-Endbänder
 
-Weiter:
+Auf einem aktiven Endband gilt \(|x|\ge t_2-a\). Dort ist das Minimum der äußeren Gamma-Leckage
 \[
-\|S_a z\|^2
-\ge
-\left(1-\frac{3307}{4500}\right)\|z\|^2
-=
-\frac{1193}{4500}\|z\|^2.
+W_a(t_2-a)=H(2a-t_2)+H(t_2).
 \]
-Wegen \(\lambda_n\ge9/10000\) und
+
+Die Funktion
 \[
-\|u\|^2
-\le
-\left(1+\frac1{2500}\right)
-\sum_{n\ge2}|u_n|^2
+F(\ell)=H(2a-\ell)+H(\ell)
 \]
-erhalten wir exakt
+ist im relevanten Bereich streng wachsend, denn
 \[
-Q_W[u]
-\ge
-\frac{1193}{4500}
-\frac9{10000}
-\frac{2500}{2501}
-\|u\|^2
-=
-\boxed{
-\frac{1193}{5002000}\|u\|^2
+F'(\ell)=h(2a-\ell)-h(\ell)>0.
+\]
+
+Der Prüfer beweist zunächst
+\[
+\log2>\frac{693}{1000}.
+\]
+Daher
+\[
+W_a(t_2-a)-2H(a)
 >
-\frac1{5000}\|u\|^2.
-}
+H\!\left(2a-\frac{693}{1000}\right)
++
+H\!\left(\frac{693}{1000}\right)
+-2H(a)
+>\frac12.
+\tag{W2}
 \]
-Dies beweist (W0).
 
-## 8. Bedeutung der Schwelle
-
-Der neue Punkt liegt strikt unter
+Außerdem
 \[
-0.3869
+w_2<\frac12
 \]
-und damit auch unter der numerisch diagnostizierten Nullstelle
+aus \(\log2<7/10\) und \(\sqrt2>7/5\).
+
+Damit kompensiert die zusätzliche äußere Gamma-Leckage den Prime-2-Knotengrad vollständig. Zusammen mit (W1) folgt fast überall
 \[
-a_*\approx0.386942674
+\boxed{\rho_a(x)>-\frac{3307}{2000}.}
+\tag{W3}
 \]
-der **skalarisierten** Mode 2. Der Begleitprüfer bestätigt lediglich die rationale Lage
+
+Setze daher
 \[
-\frac{193}{500}=0.386<0.3869.
+V_a(x)=\rho_a(x)+\frac{3307}{2000}>0.
 \]
 
-Der methodische Befund lautet jetzt präzise:
+## 3. Globale Gamma-Diagonalisierung bleibt unverändert
 
-- Die C9--C14-Zweimodenmethode ist rigoros bis \(a=193/500\) fortgesetzt.
-- Ihr positiver Mode-2-Boden ist dort bereits nur \(9/10000\).
-- Ein Vorzeichenwechsel dieses Bodens wäre eine Grenze dieser Unterform, kein negativer Weil-Zeuge.
-- Jenseits des Crossings muss entweder mehr vorhandene positive Energie in den Hauptblock einbezogen oder Mode 2 als echter Restfreiheitsgrad über C15 beziehungsweise eine äquivalente Form-Schur-Struktur transportiert werden.
+Die singuläre regionale Energie
+\[
+\mathcal E_0[u]
+=
+\int_{x<y\in I_a}\frac{|u(y)-u(x)|^2}{2(y-x)}\,dx\,dy
+\]
+wird auf der normierten Legendrebasis des **gesamten Intervalls** diagonalisiert:
+\[
+\mathcal E_0[u]=\sum_{n\ge0}\mathsf H_n|u_n|^2.
+\]
 
-## 9. Checks und Nichtaussagen
+Der konstante Anteil \(1/5\) der Gamma-Unterform ergibt
+\[
+\frac15\int_{x<y}|u(y)-u(x)|^2dxdy
+=
+\frac{2a}{5}\sum_{n\ge1}|u_n|^2.
+\]
 
-Der Begleitprüfer benutzt nur Python-Standardbibliothek und exakte Brüche. Er führt **27 exakte rationale Checks** aus:
+Nach Abzug der konservativen Konstante \(3307/2000\) besitzt der modale Rest daher
+\[
+\lambda_0=-\frac{3307}{2000},
+\]
+und für \(n\ge1\)
+\[
+\lambda_n=\mathsf H_n+\frac{2a}{5}-\frac{3307}{2000}.
+\]
 
-- rationales \(\log2\)-Enclosure und Kanalregime;
-- Gültigkeit der beiden Kernschranken;
-- \(\gamma<5773/10000\);
-- rationaler Zentrumsnachweis;
-- Prime-2-Endband-Leakage \(>1/2\);
-- Taylorkontrolle der zwei Momentrekonstruktionen;
-- exakte Modenkoeffizienten;
-- Kontraktivität des Rang-zwei-Defekts;
-- Enduntergrenze \(1193/5002000>1/5000\).
+Am neuen Endpunkt folgt exakt
+\[
+\boxed{\lambda_1=-\frac{4991}{10000},\qquad \lambda_2=\frac9{10000}>0.}
+\tag{W4}
+\]
+Da die harmonischen Zahlen wachsen,
+\[
+\lambda_n\ge\lambda_2=\frac9{10000}\qquad(n\ge2).
+\]
 
-Nicht bewiesen: der Schwellenübertritt, Prime 3, das volle Einheitsfenster, all-window NP-GAP, vollständiges C1-GEOM, Objekt X oder RH. Kein A1-Replay und keine Neuheitsbehauptung.
+Somit besitzt **diese konkret skalarisierte Unterform** weiterhin nur zwei negative Moden.
+
+## 4. Die zwei Mellinmomente kontrollieren weiterhin genau diese zwei Moden
+
+Setze
+\[
+c(x)=\cosh(x/2),\qquad s(x)=\sinh(x/2).
+\]
+NULLPOL ist äquivalent zu
+\[
+\langle u,c\rangle=\langle u,s\rangle=0.
+\]
+
+Wie im Elternbeweis werden \(u_0\) und \(u_1\) dadurch aus den höheren Legendrekoeffizienten rekonstruiert.
+
+Für
+\[
+z=\frac a2=\frac{193}{1000}
+\]
+liefern die positiven Taylorreihen rigoros
+\[
+\cosh z-1\le\frac{z^2}{2(1-z^2/12)}<\frac1{50},
+\]
+\[
+\frac{\sinh z}{z}-1\le\frac{z^2}{6(1-z^2/20)}<\frac1{150}.
+\]
+Daher bleiben
+\[
+\frac{\|c_\perp\|}{c_0}<\frac1{50},\qquad
+\frac{\|s_\perp\|}{s_1}<\frac1{150}.
+\tag{W5}
+\]
+
+Für \(n\ge2\) setze \(z_n=\sqrt{\lambda_n}\,u_n\). Der Rang-zwei-Defektoperator \(B\) wird wie zuvor aus den beiden Momentzeilen definiert. Mit \(\lambda_n\ge9/10000\) folgt
+\[
+\|B\|^2<\max\left\{
+\frac{3307}{2000}\frac{10000}{9}\frac1{50^2},
+\frac{4991}{10000}\frac{10000}{9}\frac1{150^2}
+\right\}.
+\]
+
+Der erste Term dominiert und ist exakt
+\[
+\boxed{\|B\|^2<\frac{3307}{4500}<1.}
+\tag{W6}
+\]
+
+Damit ist \(S=(I-B^*B)^{1/2}\) durch die normkonvergente Binomialreihe konstruiert, bevor die Weil-Identität verwendet wird.
+
+## 5. Positiver Output und quantitativer Gap
+
+Der Output ist derselbe strukturelle Connected-Output wie im Elternbeweis: positiver Restkanten-/Prime-Differenzport, positiver Knotenport \(L^2(I_a,V_a dx)\), höherer Legendreport \(Sz\).
+
+Durch exakte Quadratbilanz gilt
+\[
+\|T_a u\|^2=Q_W[u]\qquad(u\in\mathcal W_a).
+\]
+
+Aus (W6), \(\lambda_n\ge9/10000\), und
+\[
+\|u\|^2\le\left(1+\frac1{2500}\right)\sum_{n\ge2}|u_n|^2
+\]
+folgt
+\[
+Q_W[u]\ge
+\frac{(1-3307/4500)(9/10000)}{1+1/2500}\|u\|^2
+=
+\boxed{\frac{1193}{5002000}\|u\|^2>\frac1{5000}\|u\|^2.}
+\tag{W7}
+\]
+
+Keine Matrixeigenwerte und keine vorausgesetzte Positivität gehen in die Konstruktion ein.
+
+## 6. Bedeutung der nächsten Schwelle
+
+Die Nullstelle der **skalarisierten** Mode-2-Funktion
+\[
+\lambda_2(a)=\frac32+\frac{2a}{5}+2H(a)-\kappa_*
+\]
+liegt numerisch nahe \(a\approx0.38694\).
+
+Das ist eine Warnschwelle dieser Unterzerlegung, kein Weil-No-Go und kein allgemeiner C1-No-Go. Nach ihrem Überschreiten gibt es mindestens zwei zulässige Richtungen: mehr bereits vorhandene positive Gamma-/Knotenenergie in den Hauptblock aufnehmen; oder Mode 2 als echten Restfreiheitsgrad über die Form-Schur-Schnittstelle C15 oder eine äquivalente Konstruktion transportieren.
+
+Insbesondere darf keine dritte künstliche NULLPOL-Bedingung eingeführt werden.
+
+## 7. Checks und Status
+
+Der Begleitprüfer `check_x_c1_connected_193_500.py` verwendet nur Python-Standardbibliothek und exakte Brüche. Er verifiziert insbesondere rationale Einschließungen von \(\log2\), \(\pi\), Euler-\(\gamma\) und \(H(s)\), (W1) und (W2), die exakten Modenwerte (W4), die Taylorbudgets (W5), \(\|B\|^2<3307/4500<1\), und den exakten Gap \(1193/5002000>1/5000\).
+
+Die unendlichdimensionale Legendre- und Formidentität wird aus dem Elternbeweis importiert; der Checker ersetzt diesen analytischen Beweis nicht.
+
+**Status:** `X-C1-CONNECTED-193/500 / AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN`.
+
+Kein Merge, keine Registry-Promotion, kein A1-/C0-Replay und kein Gesamtclaim für \((-1,1)\), Objekt X oder RH.

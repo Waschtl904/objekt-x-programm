@@ -1,138 +1,142 @@
 #!/usr/bin/env python3
-from fractions import Fraction as Q
-import json, sys
-sys.set_int_max_str_digits(0)
+from fractions import Fraction as F
+import sys
+sys.set_int_max_str_digits(1000000)
+import json
+from pathlib import Path
 
-checks = []
-results = {}
+checks=[]
 
-def check(name, cond, value=None):
+def ok(name, cond, value=None):
     if not cond:
-        raise AssertionError(name)
+        raise AssertionError(f"{name}: {value!r}")
     checks.append(name)
-    if value is not None:
-        results[name] = str(value)
 
-def atanh_bounds(q, N):
-    s = Q(0)
-    p = q
-    q2 = q*q
+def exp_neg_iv(x, N=24):
+    s=F(0); term=F(1); sums=[]
+    for k in range(N+1):
+        if k==0: term=F(1)
+        elif k>0: term *= x/F(k)
+        s += term if k%2==0 else -term
+        sums.append(s)
+    if N%2==0: return sums[N-1], sums[N]
+    return sums[N], sums[N-1]
+
+def atanh_series_iv(t,N=24):
+    s=F(0)
     for n in range(N):
-        s += p / Q(2*n+1)
-        p *= q2
-    lo = 2*s
-    hi = lo + 2*p / (Q(2*N+1)*(1-q2))
-    return lo, hi
+        s += t**(2*n+1)/F(2*n+1)
+    tail=t**(2*N+1)/F(2*N+1)/(1-t*t)
+    return s,s+tail
 
-def log_bounds(x, N=12):
-    if x <= 0:
-        raise ValueError("x must be positive")
-    k = 0
-    y = x
-    while y >= 2:
-        y /= 2
-        k += 1
-    while y < 1:
-        y *= 2
-        k -= 1
-    lo2, hi2 = atanh_bounds(Q(1,3), N)
-    q = (y-1)/(y+1)
-    loy, hiy = atanh_bounds(q, N)
-    if k >= 0:
-        return k*lo2 + loy, k*hi2 + hiy
-    return k*hi2 + loy, k*lo2 + hiy
+def log2_iv(N=24):
+    lo,hi=atanh_series_iv(F(1,3),N)
+    return 2*lo,2*hi
 
-a = Q(193,500)
-L = 2*a
-z = a/4
-beta = Q(3307,2000)
+def log_iv(x,N=24):
+    assert x>0
+    k=0; y=x
+    while y>=2:
+        y/=2; k+=1
+    while y<1:
+        y*=2; k-=1
+    t=(y-1)/(y+1)
+    alo,ahi=atanh_series_iv(t,N)
+    lylo,lyhi=2*alo,2*ahi
+    l2lo,l2hi=log2_iv(N)
+    if k>=0:
+        return lylo+k*l2lo, lyhi+k*l2hi
+    return lylo+k*l2hi, lyhi+k*l2lo
 
-# 1. Channel regime.
-log2_lo, log2_hi = atanh_bounds(Q(1,3), 4)
-check("log2_lower_6931e4", log2_lo > Q(6931,10000))
-check("log2_upper_6932e4", log2_hi < Q(6932,10000))
-check("prime2_active", log2_hi < L, L-log2_hi)
-# log 3 > 1 because e<3; rational exp-series bound e<11/4<3 is checked.
-e_upper = Q(1)+Q(1)+Q(1,2)+Q(1,6)/(1-Q(1,4))
-check("e_upper_11_4", e_upper == Q(49,18) and e_upper < Q(11,4), e_upper)
-check("prime3_inactive_via_log3_gt_1", L < 1, 1-L)
+def atan_small_iv(x,N=12):
+    sums=[]; s=F(0)
+    for n in range(N):
+        s += ((-1)**n)*x**(2*n+1)/F(2*n+1)
+        sums.append(s)
+    a,b=sums[-1],sums[-2]
+    return min(a,b),max(a,b)
 
-# 2. Kernel split valid on 0<t<=L, using stronger range t<=4/5.
-check("L_below_4_5", L < Q(4,5), Q(4,5)-L)
-# Lower proof reduces to t^2 - 10t + 10 >0; decreasing on [0,4/5].
-poly_lower_at_4_5 = Q(4,5)**2 - 10*Q(4,5) + 10
-check("kernel_lower_polynomial", poly_lower_at_4_5 > 0, poly_lower_at_4_5)
-# Upper proof reduces to 4 t^2 - 35 t -1 <0.
-poly_upper_at_0 = -Q(1)
-poly_upper_at_4_5 = 4*Q(4,5)**2 - 35*Q(4,5) - 1
-check("kernel_upper_polynomial_left", poly_upper_at_0 < 0, poly_upper_at_0)
-check("kernel_upper_polynomial_right", poly_upper_at_4_5 < 0, poly_upper_at_4_5)
-check("exp_tail_range", L/2 < Q(2,5) < Q(2,3), L/2)
+def pi_iv():
+    a1lo,a1hi=atan_small_iv(F(1,5),15)
+    a2lo,a2hi=atan_small_iv(F(1,239),8)
+    return 16*a1lo-4*a2hi,16*a1hi-4*a2lo
 
-# 3. Gamma upper bound gamma < 5773/10000 via H_10000-log10000.
-H10000 = Q(0)
-for k in range(1,10001):
-    H10000 += Q(1,k)
-log10000_lo, _ = log_bounds(Q(10000), 12)
-gamma_upper = H10000 - log10000_lo
-check("gamma_upper_5773e4", gamma_upper < Q(5773,10000))
+def H_iv(s):
+    qlo,qhi=exp_neg_iv(s/2,24)
+    ratio_lo=(1+qlo)/(1-qlo)
+    ratio_hi=(1+qhi)/(1-qhi)
+    llo,_=log_iv(ratio_lo,24)
+    _,lhi=log_iv(ratio_hi,24)
+    ahlo,ahhi=llo/2,lhi/2
+    pilo,pihi=pi_iv()
+    rhi=(1-qlo)/(1+qlo)
+    rlo=(1-qhi)/(1+qhi)
+    _,ar_hi=atan_small_iv(rhi,10)
+    ar_lo,_=atan_small_iv(rlo,10)
+    return ahlo+pilo/4-ar_hi, ahhi+pihi/4-ar_lo
 
-# 4. Center reserve.
-coth_lb = 1/z + z/Q(3) - z**3/Q(45)
-X = coth_lb * Q(7,176)
-logX_lo, _ = log_bounds(X, 6)
-atan2_upper = 2*z - z**3
-center_lb = logX_lo - Q(5773,10000) - atan2_upper
-check("center_rho_floor", center_lb > -beta)
+def harmonic(n):
+    return sum((F(1,k) for k in range(1,n+1)),F(0))
 
-# 5. Prime-2 endband leakage.
-llo = Q(6931,10000)
-lhi = Q(6932,10000)
-ratio = a*a / (llo*(2*a-llo))
-logratio_lo, _ = log_bounds(ratio, 8)
-dmin = 2*a-lhi
-leak_lb = Q(1,2)*logratio_lo - (a*a-dmin*dmin)/Q(32) + (llo*llo-a*a)/Q(100)
-check("prime2_endband_leak_gt_half", leak_lb > Q(1,2))
-check("w2_lt_half_proxy", Q(7,10)/Q(7,5) == Q(1,2))
+a=F(193,500)
+C=F(3307,2000)
+ell0=F(693,1000)
 
-# 6. Moment reconstruction Taylor bounds at |x|/2<=193/1000.
-r = Q(193,1000)
-cosh_err = r*r / (2*(1-r*r/Q(12)))
-sinh_rel_err = r*r / (6*(1-r*r/Q(20)))
-check("cosh_moment_ratio_lt_1_50", cosh_err < Q(1,50), cosh_err)
-check("sinh_moment_ratio_lt_1_150", sinh_rel_err < Q(1,150), sinh_rel_err)
+l2lo,l2hi=log2_iv()
+ok("log2 > 693/1000", l2lo>ell0, l2lo)
+ok("log2 < 7/10", l2hi<F(7,10), l2hi)
+ok("sqrt2 > 7/5", F(2) > F(49,25))
 
-# 7. Modal coefficients.
-L5 = L/Q(5)
-lam0 = -beta
-lam1 = Q(1) + L5 - beta
-lam2 = Q(3,2) + L5 - beta
-check("lambda0", lam0 == -Q(3307,2000), lam0)
-check("lambda1", lam1 == -Q(4991,10000), lam1)
-check("lambda2", lam2 == Q(9,10000), lam2)
-check("higher_modes_positive", lam2 > 0, lam2)
+H200=harmonic(200)
+log200lo,_=log_iv(F(200))
+gamma_up=H200-log200lo-F(1,401)
+ok("gamma upper < 57722/100000", gamma_up<F(57722,100000), gamma_up)
 
-# 8. Rank-two defect norm.
-even_row_sq = beta / (lam2 * Q(2500))
-odd_row_sq = (-lam1) / (lam2 * Q(22500))
-B2 = Q(3307,4500)
-check("even_row_sq", even_row_sq == B2, even_row_sq)
-check("odd_row_below_even", odd_row_sq < B2, odd_row_sq)
-check("B_contractive", B2 < 1, 1-B2)
+pilo,pihi=pi_iv()
+_,log8pi_hi=log_iv(8*pihi)
+kappa_hi=log8pi_hi+gamma_up+pihi/2
+Halo,Hahi=H_iv(a)
+center_lo=2*Halo-kappa_hi
+ok("center rho > -3307/2000", center_lo>-C, center_lo)
 
-# 9. Source norm recovery and final quantitative gap.
-norm_inflation = Q(1) + Q(1,2500)
-gap = (1-B2)*lam2/norm_inflation
-check("final_gap_exact", gap == Q(1193,5002000), gap)
-check("final_gap_gt_1_5000", gap > Q(1,5000), gap-Q(1,5000))
+d0=2*a-ell0
+Hdlo,_=H_iv(d0)
+Hello,_=H_iv(ell0)
+endband_lo=Hdlo+Hello-2*Hahi
+ok("endband extra leakage > 1/2", endband_lo>F(1,2), endband_lo)
 
-# 10. Audit interpretation guard.
-check("a_193_500_above_19_50", a > Q(19,50), a-Q(19,50))
-check("a_193_500_below_reported_scalar_crossing_3869e4", a < Q(3869,10000), Q(3869,10000)-a)
+lam1=F(1)+F(2,5)*a-C
+lam2=F(3,2)+F(2,5)*a-C
+ok("lambda1 exact", lam1==-F(4991,10000), lam1)
+ok("lambda2 exact", lam2==F(9,10000), lam2)
+ok("lambda2 positive", lam2>0, lam2)
 
-print(f"{len(checks)} exact rational checks PASS")
+z=a/2
+cosh_bound=z*z/(2*(1-z*z/F(12)))
+sinh_bound=z*z/(6*(1-z*z/F(20)))
+ok("cosh relative remainder <1/50", cosh_bound<F(1,50), cosh_bound)
+ok("sinh relative remainder <1/150", sinh_bound<F(1,150), sinh_bound)
+
+B_even=C/lam2*F(1,2500)
+B_odd=(-lam1)/lam2*F(1,22500)
+B2=max(B_even,B_odd)
+ok("B_even = 3307/4500", B_even==F(3307,4500), B_even)
+ok("B2 < 1", B2<1, B2)
+gap=(1-B2)*lam2/(1+F(1,2500))
+ok("gap exact", gap==F(1193,5002000), gap)
+ok("gap >1/5000", gap>F(1,5000), gap)
+
+results={
+    "a": str(a),
+    "center_lower_decimal": f"{float(center_lo):.15f}",
+    "endband_lower_decimal": f"{float(endband_lo):.15f}",
+    "lambda1": str(lam1),
+    "lambda2": str(lam2),
+    "B2_upper": str(B2),
+    "gap": str(gap),
+    "checks": len(checks),
+}
+Path("connected_193_500_results.json").write_text(json.dumps(results,indent=2)+"\n",encoding="utf-8")
 for name in checks:
-    print("PASS", name)
-with open("connected_193_500_results.json","w",encoding="utf-8") as f:
-    json.dump({"checks": checks, "results": results}, f, indent=2, sort_keys=True)
-    f.write("\n")
+    print(f"PASS {name}")
+print(f"TOTAL {len(checks)}")

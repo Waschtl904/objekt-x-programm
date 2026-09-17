@@ -1,28 +1,16 @@
-27 exact rational checks PASS
-PASS log2_lower_6931e4
-PASS log2_upper_6932e4
-PASS prime2_active
-PASS e_upper_11_4
-PASS prime3_inactive_via_log3_gt_1
-PASS L_below_4_5
-PASS kernel_lower_polynomial
-PASS kernel_upper_polynomial_left
-PASS kernel_upper_polynomial_right
-PASS exp_tail_range
-PASS gamma_upper_5773e4
-PASS center_rho_floor
-PASS prime2_endband_leak_gt_half
-PASS w2_lt_half_proxy
-PASS cosh_moment_ratio_lt_1_50
-PASS sinh_moment_ratio_lt_1_150
-PASS lambda0
-PASS lambda1
-PASS lambda2
-PASS higher_modes_positive
-PASS even_row_sq
-PASS odd_row_below_even
-PASS B_contractive
-PASS final_gap_exact
-PASS final_gap_gt_1_5000
-PASS a_193_500_above_19_50
-PASS a_193_500_below_reported_scalar_crossing_3869e4
+PASS log2 > 693/1000
+PASS log2 < 7/10
+PASS sqrt2 > 7/5
+PASS gamma upper < 57722/100000
+PASS center rho > -3307/2000
+PASS endband extra leakage > 1/2
+PASS lambda1 exact
+PASS lambda2 exact
+PASS lambda2 positive
+PASS cosh relative remainder <1/50
+PASS sinh relative remainder <1/150
+PASS B_even = 3307/4500
+PASS B2 < 1
+PASS gap exact
+PASS gap >1/5000
+TOTAL 15
