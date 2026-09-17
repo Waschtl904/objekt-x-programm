@@ -1,0 +1,41 @@
+{
+  "status": "EXACT_SCALAR_CHECKS_FOR_CONNECTED_19_50",
+  "half_width": "19/50",
+  "length": "19/25",
+  "mode0": "-33/20",
+  "mode1": "-249/500",
+  "mode2_floor": "1/500",
+  "B_norm_squared_upper": "33/100",
+  "Q_lower": "67/50020",
+  "check_count": 22,
+  "checks": [
+    "69/100 < log2 < 7/10",
+    "Prime-2 active with two disjoint endpoint bands",
+    "no Prime-3 shift on length 19/25",
+    "w2<1/2",
+    "kernel lower margin stays positive through t=19/25",
+    "exp(L/2)=exp(19/50)<3/2",
+    "gamma < H400-log400 < 579/1000",
+    "log(418/175)<881/1000",
+    "central reserve budget totals 33/20",
+    "endpoint leakage ratio lower bound 1444/483",
+    "log(1444/483)>407/375",
+    "leakage lower bound is strictly >1/2>w2",
+    "mode 0 coefficient",
+    "mode 1 coefficient",
+    "mode 2 and higher floor is 1/500",
+    "cosh moment residual <1/50",
+    "sinh moment residual <1/150",
+    "even defect row norm squared <33/100",
+    "odd defect row smaller",
+    "rank-two defect remains contractive",
+    "connected 19/50 lower bound 67/50020",
+    "coarse lower bound >1/1000"
+  ],
+  "not_tested": [
+    "external review",
+    "full unit window",
+    "A1",
+    "all-window Object X"
+  ]
+}
