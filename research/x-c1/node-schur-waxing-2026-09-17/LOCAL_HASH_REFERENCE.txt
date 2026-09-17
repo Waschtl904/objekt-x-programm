@@ -1,0 +1,1 @@
+Temporary local-byte alignment marker; will be removed before final checkpoint.
