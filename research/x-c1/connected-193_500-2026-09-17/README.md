@@ -9,7 +9,7 @@ Contents:
 - `check_x_c1_connected_193_500.py` — standard-library exact rational checker.
 - `connected_193_500_checks.log` — local checker stdout, 15 PASS.
 - `connected_193_500_results.json` — compact exact/rational result summary.
-- `SHA256SUMS` — hashes of the four primary files.
+- `SHA256SUMS` — hashes of the five hashed package files (README, proof, checker, log and JSON); the manifest does not hash itself.
 
 Scope: full connected source class
 `H1_0((-193/500,193/500)) ∩ ker E_+ ∩ ker E_-`.
