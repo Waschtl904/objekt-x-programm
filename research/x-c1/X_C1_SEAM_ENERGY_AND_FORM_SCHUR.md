@@ -295,7 +295,8 @@ Primverzögerungs-Kopplungen gemeinsam gebucht. Im Einheitsfenster sind die
 aktiven Primzahlpotenzen 2,3,4,5,7; ihr Gewicht ist Lambda(n)/sqrt(n), bei
 n=4 also log2/2. Kein Zellpaar erhält eine erneut freie Diagonalreserve.
 R_tot hat Nullblöcke auf der Diagonale, da die Zellbreite kleiner als log2 ist,
-und selbstadjungierte Offdiagonalblöcke mit den oben festgelegten Vorzeichen.
+und paarweise adjungierte Offdiagonalblöcke mit den festgelegten Vorzeichen;
+der Gesamtoperator R_tot ist selbstadjungiert.
 Für die Nichtpolform gilt dann auf dem globalen Formraum exakt
 
 ```math
