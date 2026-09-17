@@ -1,0 +1,12 @@
+{
+  "a": "49/125",
+  "C_upper_decimal": "1.710276246863574",
+  "center_minus_end_lower_decimal": "0.040113790116591",
+  "outer_node_surplus_lower_decimal": "0.316121302258934",
+  "lambda2_lower_decimal": "-0.041007282818296",
+  "outer_P2_mass_lower_decimal": "0.407125343986235",
+  "even_gap": "16181/1323029000",
+  "odd_gap": "3277229/11250500",
+  "published_gap": "1/100000",
+  "checks": 18
+}

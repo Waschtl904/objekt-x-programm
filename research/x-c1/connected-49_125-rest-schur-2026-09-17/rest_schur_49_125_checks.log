@@ -1,0 +1,19 @@
+PASS sqrt2 lower square < 2
+PASS sqrt2 upper square > 2
+PASS C < 1711/1000
+PASS center node level above endband floor
+PASS outer-half node surplus > 3/10
+PASS lambda2 > -21/500
+PASS even tail floor > 27/50
+PASS odd tail floor > 437/1500
+PASS odd low-mode magnitude < 271/500
+PASS outer-slab P2 mass > 2/5
+PASS even moment ratio < 1/50
+PASS odd moment ratio < 1/150
+PASS even Schur scalar = 1/750
+PASS Schur shear = 5/18
+PASS pre-moment even gap = 54/66125
+PASS even high gap positive
+PASS even source gap > 1/100000
+PASS odd source gap > 1/4
+TOTAL 18
