@@ -1,0 +1,7 @@
+PASS Gnode positive at a=0.3930108
+PASS Gtheta positive at left bracket
+PASS Gtheta negative at right bracket
+PASS Gnode negative at a=0.3930110
+PASS eta concave
+PASS odd gap >1/4
+TOTAL 6
