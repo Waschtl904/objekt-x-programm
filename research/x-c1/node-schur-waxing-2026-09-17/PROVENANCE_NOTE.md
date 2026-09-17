@@ -1,0 +1,1 @@
+This package was verified locally before publication. The final SHA256SUMS is generated from the same local bytes used for the proof, checker, log, JSON, and README. No CI or external review claim is implied.
