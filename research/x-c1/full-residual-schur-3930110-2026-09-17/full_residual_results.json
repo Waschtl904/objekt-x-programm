@@ -1,0 +1,14 @@
+{
+  "a": "393011/1000000",
+  "gamma_e2_floor_decimal": "0.010998390594168",
+  "gamma_norm_upper_decimal": "0.053800370996765",
+  "delta_gamma_lower_decimal": "0.495288718205795",
+  "theta_node": "18/25",
+  "gamma_split": "2/5",
+  "full_schur_lower_decimal": "0.002913827222547",
+  "pre_moment_gap_lower_decimal": "0.001369608286465",
+  "even_gap_lower_decimal": "0.000419130358658",
+  "odd_gap_lower_decimal": "0.281120984403860",
+  "published_gap": "1/4000",
+  "checks": 9
+}

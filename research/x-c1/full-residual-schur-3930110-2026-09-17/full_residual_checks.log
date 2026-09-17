@@ -1,0 +1,10 @@
+PASS Gamma residual e2 floor > 1/100
+PASS Gamma residual norm < 27/500
+PASS Gamma-reduced tail > 99/200
+PASS mu < deltaG/2
+PASS full residual Schur pivot > 1/500
+PASS pre-moment full residual gap > 1/800
+PASS post-moment numerator > 3/10000
+PASS full even source gap > 1/4000
+PASS odd source gap > 1/4
+TOTAL 9
