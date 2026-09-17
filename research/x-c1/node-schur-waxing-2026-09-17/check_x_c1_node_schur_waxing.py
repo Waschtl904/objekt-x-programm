@@ -118,6 +118,7 @@ def pars(a):
     dl_lo=lam_lo+F(7,12); dl_hi=lam_hi+F(7,12)
     return {'C':(C_lo,C_hi),'m':(m_lo,m_hi),'p':(p_lo,p_hi),'lam':(lam_lo,lam_hi),'d':(dl_lo,dl_hi),'be':beta_e(a),'bo':beta_o(a)}
 
+# --- compact rigorous interval layer ---
 DROUND=10**28
 def floorq(x): return F(x.numerator*DROUND//x.denominator,DROUND)
 def ceilq(x): return F(-((-x.numerator*DROUND)//x.denominator),DROUND)
@@ -147,6 +148,7 @@ def isc(c,x): return imul((c,c),x)
 def h_arg_iv(tlo,thi):
     lo,_=h_iv(thi); _,hi=h_iv(tlo); return floorq(lo),ceilq(hi)
 def hprime_arg_iv(tlo,thi):
+    # h'(t)=-q(1+3r)/(2(1-r)^2), q=e^-t/2, r=e^-2t
     qlo,_=exp_neg_iv(thi/2); _,qhi=exp_neg_iv(tlo/2)
     rlo,_=exp_neg_iv(2*thi); _,rhi=exp_neg_iv(2*tlo)
     q=(floorq(qlo),ceilq(qhi)); r=(floorq(rlo),ceilq(rhi))
@@ -170,6 +172,7 @@ def deriv_theta_iv(q,t):
     Nlo=plo-3*phi*muhi/dlo+(-2*lhi)/dhi
     Nhi=phi-3*plo*mulo/dhi+(-2*llo)/dlo
     qlo=1+mulo/dhi;qhi=1+muhi/dlo
+    # dPhi/dmu; sign is same as d/dtheta since m>0
     pen=b/(1-t)**2
     return Nlo/qhi**3-pen,Nhi/qlo**3-pen
 
@@ -185,22 +188,31 @@ def odd_gap_lower(q):
     llo,lhi=q['lam']; b=q['bo']
     return ((llo+F(1,3))-(F(1,2)-llo)*b)/(1+b)
 
+# Whole-interval derivative of the fixed-theta even gap.
 def fixed_gap_derivative_interval(a0,a1,t,q0,q1):
+    # Proven monotonic component ranges on this narrow interval:
+    # C increases; m decreases; p increases; lambda and delta decrease; beta_e increases.
     C=(floorq(q0['C'][0]),ceilq(q1['C'][1]))
     m=(floorq(q1['m'][0]),ceilq(q0['m'][1]))
     p=(floorq(q0['p'][0]),ceilq(q1['p'][1]))
     lam=(floorq(q1['lam'][0]),ceilq(q0['lam'][1]))
     d=(floorq(q1['d'][0]),ceilq(q0['d'][1]))
     b=(floorq(beta_e(a0)),ceilq(beta_e(a1)))
+    # C'=2h(2a-ell)
     darg=(2*a0-ELL_HI,2*a1-ELL_LO)
     Cp=isc(F(2),h_arg_iv(*darg))
+    # m'=-h(a+ell/2)-h(a-ell/2)+2h(2a-ell)
     s1=(a0+ELL_LO/2,a1+ELL_HI/2); s2=(a0-ELL_HI/2,a1-ELL_LO/2)
     mp=iadd(iadd(ineg(h_arg_iv(*s1)),ineg(h_arg_iv(*s2))),isc(F(2),h_arg_iv(*darg)))
+    # p'=(5/4)(3z^2-1)^2 z/a, z=ell/(2a)
     z=(floorq(ELL_LO/(2*a1)),ceilq(ELL_HI/(2*a0)))
     pp=isc(F(5,4),imul(isq(isub(isc(F(3),isq(z)),(F(1),F(1)))),idiv(z,(a0,a1))))
+    # lambda'=2h(2a)+4a h'(2a)-C'
     lp=isub(iadd(isc(F(2),h_arg_iv(2*a0,2*a1)),isc(F(4),imul((a0,a1),hprime_arg_iv(2*a0,2*a1)))),Cp)
+    # beta_e'=q*z/(1-z^2/12)^2, z=a/2, q=z^2/[2(1-z^2/12)]
     za=(a0/2,a1/2); den=isub((F(1),F(1)),isc(F(1,12),isq(za)))
     qq=idiv(isq(za),isc(F(2),den)); bp=idiv(imul(qq,za),isq(den))
+    # Verify the monotonicities used above directly on this interval.
     ok('m decreases on [0.392,a_lo]',mp[1]<0,mp)
     ok('lambda/delta decrease on [0.392,a_lo]',lp[1]<0,lp)
     mu=isc(t,m); mup=isc(t,mp); one=(F(1),F(1)); mud=idiv(mu,d)
@@ -215,19 +227,28 @@ def fixed_gap_derivative_interval(a0,a1,t,q0,q1):
     N=isub(E,imul(b,M)); Np=isub(isub(Ep,imul(bp,M)),imul(b,Mp))
     return idiv(isub(imul(Np,iadd(one,b)),imul(N,bp)),isq(iadd(one,b)))
 
-a0=F(49,125); a_lo=F(3930108,10_000_000); a_hi=F(3930109,10_000_000)
-tfix=F(79142,100000); t0=F(791425,1_000_000); t1=F(791426,1_000_000)
+a0=F(49,125)
+a_lo=F(3930108,10_000_000)
+a_hi=F(3930109,10_000_000)
+tfix=F(79142,100000)
+t0=F(791425,1_000_000); t1=F(791426,1_000_000)
+
+# Raw rigorous transcendental intervals are immediately rounded OUTWARD to denominator 1e28.
 q0raw=pars(a0); qloraw=pars(a_lo); qhiraw=pars(a_hi)
 q0=compact_pars(q0raw); qlo=compact_pars(qloraw); qhi=compact_pars(qhiraw)
+
 lo_gap=fixed_gap_lower(qlo,tfix)
 ok('fixed theta gap positive at a_lo',lo_gap>0,lo_gap)
 Sfixed_hi=q0['lam'][1] + qlo['p'][1]*(tfix*q0['m'][1])
 ok('fixed-theta Schur scalar stays below delta on interval',Sfixed_hi<qlo['d'][0],Sfixed_hi)
 Gp=fixed_gap_derivative_interval(a0,a_lo,tfix,q0raw,qloraw)
 ok('fixed theta gap strictly decreases on [0.392,a_lo]',Gp[1]<0,Gp)
+
+# Therefore G_node >= G_theta >0 throughout [0.392,a_lo].
 qconc=concavity_lower(qhi)
 ok('upper-end optimizer objective strictly concave',qconc>0,qconc)
 ok('upper-end even tail delta >1/2',qhi['d'][0]>F(1,2),qhi['d'])
+# S(mu)<delta for all 0<=mu<=m: S<=lambda+p*delta/4.
 Smax=qhi['lam'][1]+qhi['p'][1]*qhi['d'][1]/4
 ok('upper-end Schur scalar stays below delta',Smax<qhi['d'][0],Smax)
 d0=deriv_theta_iv(qhi,t0); d1=deriv_theta_iv(qhi,t1)
@@ -237,16 +258,28 @@ up_gap=optimized_gap_upper_bracket(qhi,t0,t1)
 ok('global optimized even gap negative at a_hi',up_gap<0,up_gap)
 odd=odd_gap_lower(qhi)
 ok('odd gap at a_hi remains >1/4',odd>F(1,4),odd)
+
+# Prime 3 is still inactive: 2*a_hi<4/5<1<log 3 (e<3).
 ok('2a_hi < 4/5',2*a_hi<F(4,5),2*a_hi)
+
 results={
- 'architecture_domain_start':str(a0),'first_failure_lower':str(a_lo),'first_failure_upper':str(a_hi),
- 'fixed_theta':str(tfix),'fixed_theta_gap_at_lower_decimal':f'{float(lo_gap):.18g}',
- 'fixed_theta_derivative_lower_decimal':f'{float(Gp[0]):.18g}','fixed_theta_derivative_upper_decimal':f'{float(Gp[1]):.18g}',
- 'theta_optimizer_lower':str(t0),'theta_optimizer_upper':str(t1),
- 'optimizer_derivative_at_lower_lower_decimal':f'{float(d0[0]):.18g}','optimizer_derivative_at_lower_upper_decimal':f'{float(d0[1]):.18g}',
- 'optimizer_derivative_at_upper_lower_decimal':f'{float(d1[0]):.18g}','optimizer_derivative_at_upper_upper_decimal':f'{float(d1[1]):.18g}',
- 'concavity_margin_decimal':f'{float(qconc):.18g}','optimized_gap_upper_decimal':f'{float(up_gap):.18g}',
- 'odd_gap_lower_decimal':f'{float(odd):.18g}','checks':len(checks),
+ 'architecture_domain_start':str(a0),
+ 'first_failure_lower':str(a_lo),
+ 'first_failure_upper':str(a_hi),
+ 'fixed_theta':str(tfix),
+ 'fixed_theta_gap_at_lower_decimal':f'{float(lo_gap):.18g}',
+ 'fixed_theta_derivative_lower_decimal':f'{float(Gp[0]):.18g}',
+ 'fixed_theta_derivative_upper_decimal':f'{float(Gp[1]):.18g}',
+ 'theta_optimizer_lower':str(t0),
+ 'theta_optimizer_upper':str(t1),
+ 'optimizer_derivative_at_lower_lower_decimal':f'{float(d0[0]):.18g}',
+ 'optimizer_derivative_at_lower_upper_decimal':f'{float(d0[1]):.18g}',
+ 'optimizer_derivative_at_upper_lower_decimal':f'{float(d1[0]):.18g}',
+ 'optimizer_derivative_at_upper_upper_decimal':f'{float(d1[1]):.18g}',
+ 'concavity_margin_decimal':f'{float(qconc):.18g}',
+ 'optimized_gap_upper_decimal':f'{float(up_gap):.18g}',
+ 'odd_gap_lower_decimal':f'{float(odd):.18g}',
+ 'checks':len(checks),
 }
 Path('node_schur_waxing_results.json').write_text(json.dumps(results,indent=2)+'\n',encoding='utf-8')
 for name in checks: print('PASS',name)
