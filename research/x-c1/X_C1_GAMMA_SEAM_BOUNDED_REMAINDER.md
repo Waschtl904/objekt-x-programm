@@ -1,0 +1,143 @@
+# X-C1-GAMMA-SEAM — expliziter beschränkter Rest und gemeinsame Formdomain
+
+**Datum:** 17. September 2026. **Status:** AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN.
+**Import:** `X_C1_GAMMA_ONLY_OBSTRUCTION.md`, GO5, bei
+`87149ae683800ab9d2328783c55c72637b1b9cba`.
+**Koordination:** Ergänzung der in PR #137 bei `4871a5343a996be49e66a565d1e232b2ecd38f54`
+gelesenen THREE-CELLS-/Gamma-Naht-Spur. Kein unabhängiger Review dieser Spur;
+keine Änderung ihres Heads oder ihrer Dateien. Keine Neuheitsbehauptung.
+
+## 1. Globaler, nicht nur asymptotischer Rest
+
+Für h(t)=exp(-t/2)/(1-exp(-2t)) gilt für JEDES t>0
+
+```math
+\boxed{h(t)=\frac1{2t}+r(t),\qquad |r(t)|<\frac14.} \tag{SR1}
+```
+
+Die obere Schranke ist GO5: h(t)<1/(2t)+1/4, bewiesen durch die positiven
+Koeffizienten von (1+t/2)sinh(t)-t exp(t/2).
+Die untere Schranke folgt direkt aus 1-exp(-2t)<2t und
+exp(-t/2)>1-t/2:
+
+```math
+h(t)>\frac{e^{-t/2}}{2t}>\frac1{2t}-\frac14.
+```
+
+Das Argument gilt auch, wenn die rechte Seite negativ ist. Keine
+Diagonalauswertung eines L2-Zustands und keine unendliche Subtraktion sind nötig.
+
+## 2. Angrenzende Intervalle: der Kreuzoperator
+
+Seien alpha,beta>0. Schreibe s und t für die Abstände von derselben Naht
+auf ihrer linken bzw. rechten Seite. Der Gamma-Kreuzoperator hat den Kern
+h(s+t), 0<s<alpha, 0<t<beta. Definiere
+
+```math
+(T_\Gamma f)(s)=\int_0^\beta h(s+t)f(t)dt,
+\qquad (T_C f)(s)=\frac12\int_0^\beta\frac{f(t)}{s+t}dt.
+```
+
+SR1 liefert T_Gamma=T_C+R mit einem expliziten Hilbert-Schmidt-Rest:
+
+```math
+(Rf)(s)=\int_0^\beta r(s+t)f(t)dt,
+\qquad\boxed{\|R\|\le\|R\|_{HS}\le\frac{\sqrt{\alpha\beta}}4.} \tag{SR2}
+```
+
+Zum Beweis genügt die Integration von |r|²<=1/16 über das Rechteck.
+Der singuläre Operator T_C wird dabei NICHT als klein oder kompakt
+behauptet. SR2 isoliert nur den beschränkten Rest. Die klassische
+Carleman-Beschränktheit oder seine wesentliche Norm werden für SR2 nicht
+neu beansprucht oder unabhängig zertifiziert.
+
+Bei alpha=beta=1/50 erhält man insbesondere ||R||<=1/200. Das ist eine
+Schranke für den Rest, nicht für den vollen Gamma-Kreuzoperator.
+
+## 3. Gekoppelte Nahtenergie: keine künstliche Nullspur
+
+Für u_- in L2(0,alpha), u_+ in L2(0,beta) setze
+
+```math
+\mathcal S_C[u_-,u_+]
+=\frac12\int_0^\alpha\int_0^\beta
+ \frac{|u_-(s)-u_+(t)|^2}{s+t}\,dt\,ds,
+```
+
+```math
+\mathcal S_\Gamma[u_-,u_+]
+=\int_0^\alpha\int_0^\beta
+ h(s+t)|u_-(s)-u_+(t)|^2\,dt\,ds.
+```
+
+Beide sind zunächst nichtnegative Integrale mit möglichem Wert infinity.
+Der Rest ist dagegen auf dem GANZEN L2-Paarraum endlich und erfüllt
+
+```math
+\boxed{|\mathcal S_\Gamma-\mathcal S_C|
+\le\frac\beta2\|u_-\|_2^2+\frac\alpha2\|u_+\|_2^2} \tag{SR3}
+```
+
+auf dem gemeinsamen endlichen Bereich. Präzise definiert man vor einem
+Differenzsymbol zuerst
+
+```math
+\mathcal R[u_-,u_+]
+=\int_0^\alpha\int_0^\beta r(s+t)|u_-(s)-u_+(t)|^2dt ds.
+```
+
+Dann folgt die Schranke aus |r|<=1/4 und |z-w|²<=2|z|²+2|w|².
+Auf abgeschnittenen Rechtecken gilt S_Gamma=S_C+R exakt. Monotone
+Konvergenz für die positiven Teile und dominierte Konvergenz für R geben
+
+```math
+\boxed{\mathcal D(\mathcal S_\Gamma)
+=\mathcal D(\mathcal S_C)
+=\{(u_-,u_+):\mathcal S_C[u_-,u_+]<\infty\}.}       \tag{SR4}
+```
+
+Im endlichen Bereich ist S_Gamma=S_C+R. Es wird niemals infinity-infinity
+als Formwert benutzt. Durch den beschränkten Rest sind die jeweils mit
+einer ausreichend großen L2-Norm versehenen Formnormen äquivalent.
+
+Die maximalen Differenzoperatoren in die gewichteten L2-Paarräume sind
+geschlossen: L2-Konvergenz einer Quellfolge liefert eine a.e. konvergente
+Teilfolge; auf dem Produktmaß stimmen die a.e. Grenzdifferenzen mit der
+Differenz der Grenzquellen überein. Dies identifiziert jeden konvergenten
+Output. Damit sind auch die positiven maximalen Nahtformen geschlossen.
+
+Alle stückweise H1-Quellen liegen in dieser Nahtdomain, weil sie auf den
+endlichen Intervallen beschränkt sind und integral integral 1/(s+t)<infinity.
+Es wird KEINE Nullspur an der Naht verlangt. Insbesondere bleiben die
+Einschränkungen einer globalen H1-Quelle mit nichtverschwindendem gemeinsamen
+Nahtwert zugelassen. Die größere Nahtdomain erlaubt auch verschiedene
+beidseitige Spuren; daraus wird keine Erweiterung des C0-H1-Liftings behauptet.
+
+Bei alpha=beta=1/50 lautet SR3
+
+```math
+|\mathcal R[u_-,u_+]|\le\frac1{100}
+ (\|u_-\|_2^2+\|u_+\|_2^2).
+```
+
+## 4. Nutzen, Grenze und Prüfumfang
+
+Die vollständige positive singuläre Nahtenergie kann nun als gemeinsamer
+Block erhalten bleiben; nur der ausdrücklich begrenzte Rest ist eine
+beschränkte Störung. Dies ist ein konkreter Definitionsbereichs- und
+Abschätzungsbaustein für verbundene Quellen, kein positiver Gesamtreadout
+für Q_W und keine Kontrolle sämtlicher Prim-/Gamma-Schur-Kopplungen.
+Die zwei globalen Mellinbedingungen sind im nächsten Gesamtblock weiter
+zu erhalten; SR1--SR4 beseitigen sie nicht.
+
+Die 43 ausgeführten exakten Unterstützungstests des Begleitpakets prüfen
+GO5 betreffende Folgealgebra und die Zeugenbudgets, NICHT eine neue
+numerische Diskretisierung dieses Nahtoperators. SR1--SR4 werden hier
+analytisch aus GO5, dem elementaren Exponentialvergleich und L2-Abschätzungen
+bewiesen. Keine zusätzlichen Testzahlen oder unabhängige Zertifizierung.
+
+Quellen: die festgelegte Dichte und Nahtkonvention aus
+`X_C1_THREE_CELLS_AND_INTERFACE.md` (oben genannter PR-Head), GO5 aus dem
+getrennten Begleitpaket; klassische Gamma-Konvention NIST DLMF §5.9,
+https://dlmf.nist.gov/5.9 . Keine Literatur-Neuheitsbehauptung, kein A1-/C0-
+Replay, keine Registry-Promotion und keine RH-/Objekt-X-Folgerung.
