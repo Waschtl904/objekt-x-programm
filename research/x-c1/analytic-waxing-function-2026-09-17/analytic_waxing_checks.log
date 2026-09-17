@@ -1,0 +1,7 @@
+PASS sinh-square coefficient = 1240/3249
+PASS sinh-square coefficient < 1/2
+PASS Lambda2(a_lo) > 0
+PASS Lambda2(a_hi) < 0
+PASS optimal constant-floor Lambda2(0.387) > 0
+PASS optimal constant-floor Lambda2(0.392) < 0
+TOTAL 6
