@@ -1,0 +1,9 @@
+{
+  "a_root_lower": "3916683/10000000",
+  "a_root_upper": "979171/2500000",
+  "Lambda2_lower_endpoint_lower_decimal": "2.18224974211390937e-07",
+  "Lambda2_upper_endpoint_upper_decimal": "-5.12031374577738801e-08",
+  "Lambda2_at_0.387_lower_decimal": "0.0126436793075032083",
+  "Lambda2_at_0.392_upper_decimal": "-0.000893146128080255972",
+  "checks": 6
+}
