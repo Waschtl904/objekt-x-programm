@@ -1,0 +1,6 @@
+PASS explicit even source Rayleigh lower endpoint positive
+PASS explicit even source Rayleigh interval ordered
+PASS explicit even source Rayleigh upper below 3.3e-12
+PASS published positive endpoint gap lies below explicit source Rayleigh
+PASS zero-extension quantitative ceiling is nontrivial
+TOTAL 5
