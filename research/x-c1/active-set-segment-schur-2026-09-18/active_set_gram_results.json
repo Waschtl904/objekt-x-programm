@@ -1,0 +1,15 @@
+{
+  "status": "AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN",
+  "checks": 381,
+  "tested_shift_regimes": [
+    "d<1 overlapping",
+    "d>1 disjoint"
+  ],
+  "test_gram_pivots": [
+    "32/5",
+    "118/75",
+    "16219/31250",
+    "560558401/1290625000",
+    "714086110403/4561593750000"
+  ]
+}
