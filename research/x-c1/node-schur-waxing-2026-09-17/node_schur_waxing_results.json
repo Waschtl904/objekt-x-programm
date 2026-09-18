@@ -1,0 +1,19 @@
+{
+  "architecture_domain_start": "49/125",
+  "first_failure_lower": "982527/2500000",
+  "first_failure_upper": "3930109/10000000",
+  "fixed_theta": "39571/50000",
+  "fixed_theta_gap_at_lower_decimal": "7.2371170475002327e-08",
+  "fixed_theta_derivative_lower_decimal": "-5.52268545503693886",
+  "fixed_theta_derivative_upper_decimal": "-5.18887894213979894",
+  "theta_optimizer_lower": "31657/40000",
+  "theta_optimizer_upper": "395713/500000",
+  "optimizer_derivative_at_lower_lower_decimal": "2.20186818787688826e-07",
+  "optimizer_derivative_at_lower_upper_decimal": "2.2018724139850752e-07",
+  "optimizer_derivative_at_upper_lower_decimal": "-1.04163032489716308e-07",
+  "optimizer_derivative_at_upper_upper_decimal": "-1.04162609879401943e-07",
+  "concavity_margin_decimal": "0.265626184165447754",
+  "optimized_gap_upper_decimal": "-3.9196306948242199e-07",
+  "odd_gap_lower_decimal": "0.281122077480334742",
+  "checks": 13
+}

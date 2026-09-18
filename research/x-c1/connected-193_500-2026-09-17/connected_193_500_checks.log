@@ -1,0 +1,16 @@
+PASS log2 > 693/1000
+PASS log2 < 7/10
+PASS sqrt2 > 7/5
+PASS gamma upper < 57722/100000
+PASS center rho > -3307/2000
+PASS endband extra leakage > 1/2
+PASS lambda1 exact
+PASS lambda2 exact
+PASS lambda2 positive
+PASS cosh relative remainder <1/50
+PASS sinh relative remainder <1/150
+PASS B_even = 3307/4500
+PASS B2 < 1
+PASS gap exact
+PASS gap >1/5000
+TOTAL 15

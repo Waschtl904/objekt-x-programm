@@ -1,0 +1,12 @@
+{
+  "status": "AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN",
+  "checks": 349,
+  "groups": {
+    "unitary_scaling": 3,
+    "moment_scaling_coefficients": 25,
+    "partial_shift_selfadjointness": 256,
+    "cutoff_d_equals_2": 64,
+    "centered_cutoff_cancellation": 1
+  },
+  "parent_active_set_checker": "381/381 exact Fraction checks"
+}

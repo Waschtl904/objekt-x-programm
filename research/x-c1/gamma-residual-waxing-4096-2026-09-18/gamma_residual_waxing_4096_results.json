@@ -1,0 +1,33 @@
+{
+  "N": 4096,
+  "node_floor_C2_minus_C0": {
+    "lo": "0.0520436221650845965",
+    "hi": "0.0520507126687685395"
+  },
+  "a_lower": "3934355/10000000",
+  "a_upper": "3934360/10000000",
+  "lower_split_s": "63597/125000",
+  "lower_split_theta": "1459223/2000000",
+  "lower_even_gap": {
+    "lo": "7.65804837111823607e-07",
+    "hi": "7.65804837111823607e-07"
+  },
+  "published_lower_gap": "1/1500000",
+  "upper_tangent_point_s": "5088559/10000000",
+  "upper_tangent_point_theta": "7295959/10000000",
+  "upper_tangent_bound": "-3.78357283984451177e-07",
+  "upper_q_riemann": "left-endpoint upper sum q_4096_plus",
+  "lower_q_riemann": "right-endpoint lower sum q_4096_minus",
+  "worst_Gss_upper": "-0.00454963449524214275",
+  "worst_Hessian_det_lower": "0.000374492299216893265",
+  "max_Gtheta_at_095_upper": "-0.0550567926376066066",
+  "odd_lower": {
+    "lo": "0.276501597050957726",
+    "hi": "0.276501597050957726"
+  },
+  "odd_upper": {
+    "lo": "0.276496180359010524",
+    "hi": "0.276496180359010524"
+  },
+  "checks": 20
+}

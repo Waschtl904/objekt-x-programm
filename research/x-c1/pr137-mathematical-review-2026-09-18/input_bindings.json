@@ -1,0 +1,270 @@
+{
+  "review_target": "8074d14508873e09068222b9703b1f34e8607fc6",
+  "mathematical_anchor": "fc597f6129db57787c85ec20627ed608233187ba",
+  "files": [
+    {
+      "path": "audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md",
+      "git_blob": "8463e84058630c09687cc5b98681b357b1b2a805",
+      "sha256": "f8e47e6cf1b0a43f0023f50d2646c3e30c57ce32e76e8753a2b03001043a338e",
+      "bytes": 18712
+    },
+    {
+      "path": "research/x-c1/active-set-segment-schur-2026-09-18/PROOF.md",
+      "git_blob": "61739834b44b1afd30b91debed8f5baeac09fba2",
+      "sha256": "a9e90cdfab133627db0c87a0eeb955464394f6139877807feed69a49c913a5c1",
+      "bytes": 9022
+    },
+    {
+      "path": "research/x-c1/active-set-segment-schur-2026-09-18/README.md",
+      "git_blob": "dc686100957be667244113d64b656a5cbe2f72da",
+      "sha256": "35ace365f9f98cfb210f281e2a66a34029403593f7050109e0c049c7be2dc154",
+      "bytes": 1053
+    },
+    {
+      "path": "research/x-c1/active-set-segment-schur-2026-09-18/SHA256SUMS",
+      "git_blob": "d874477764a9e1491cf88df68ea02f65efcb7b83",
+      "sha256": "43ccb40bd602c1ba6732bf276bc3c93052f55a3504d088fa804761e8acfb5bc5",
+      "bytes": 430
+    },
+    {
+      "path": "research/x-c1/active-set-segment-schur-2026-09-18/active_set_gram_checks.log",
+      "git_blob": "f72b748e5873e9990920a39e90323fb3ad8e5781",
+      "sha256": "ebb32f5d8a2ee95235d5c0e9d6b26348561c0e8fbe516d954c76373829ac67bb",
+      "bytes": 243
+    },
+    {
+      "path": "research/x-c1/active-set-segment-schur-2026-09-18/active_set_gram_results.json",
+      "git_blob": "0fa2012a3e21d0c0d18a1e446fd80fef8aa17484",
+      "sha256": "16b2de71cd14f00ed6380b7546e01fc9fd4892626d4dc2638b055c3ee3fa27b1",
+      "bytes": 283
+    },
+    {
+      "path": "research/x-c1/active-set-segment-schur-2026-09-18/check_active_set_gram.py",
+      "git_blob": "01aace6df46129f8e6db578d3a9d5dea558a6de2",
+      "sha256": "aee79b5b9c964fb5da127381156f9d16b752dc5048b0d8da93c727a859c556c3",
+      "bytes": 4234
+    },
+    {
+      "path": "research/x-c1/connected-3_8-2026-09-17/X_C1_CONNECTED_MOMENT_FACTORIZATION.md",
+      "git_blob": "fb8e6e568f2719fd02a957aedece34de75c4825c",
+      "sha256": "b19cdc50a91f73ae4eb0fb6d630d9ef08ae8abb532f51ce78a0075554208edc9",
+      "bytes": 21149
+    },
+    {
+      "path": "research/x-c1/near-null-source-transport-2026-09-18/PROOF.md",
+      "git_blob": "afd840d3cad61fead67a729fe60b25f4bb517ec4",
+      "sha256": "2a2b38543d3b82873276b2a63c288aedda12cf3f4f776e61ed407b4976420096",
+      "bytes": 15778
+    },
+    {
+      "path": "research/x-c1/near-null-source-transport-2026-09-18/README.md",
+      "git_blob": "369a655d3c29533a3d285bcc8aee037d2b5712a3",
+      "sha256": "70c29cf4a1964538d8656d4fb924208b0c4964d6cbcad079474dc65a4527115f",
+      "bytes": 1714
+    },
+    {
+      "path": "research/x-c1/near-null-source-transport-2026-09-18/SHA256SUMS",
+      "git_blob": "171655536da1d3bbf74e0970d86431ca4c0de4ac",
+      "sha256": "4beb36c0d0e88d3c36ccdbd4d60712387180fb8014d7244efc3881a0c58960ab",
+      "bytes": 397
+    },
+    {
+      "path": "research/x-c1/near-null-source-transport-2026-09-18/check_near.py",
+      "git_blob": "10252ebf5c1777be919e453d12fdd7dc9a0a5108",
+      "sha256": "e10988eb4bbaf8810a36b98981ebf24b3f80a1e9d373c9478dc49da75b5efbe3",
+      "bytes": 32875
+    },
+    {
+      "path": "research/x-c1/near-null-source-transport-2026-09-18/near_checks.log",
+      "git_blob": "333e3646d2e700b4528d14b3d0a0d0dd3c56ccf6",
+      "sha256": "3dca46e340e0c96e9b0e907f0c2174399a1c468b7261c8a9162f836099b9100b",
+      "bytes": 2582
+    },
+    {
+      "path": "research/x-c1/near-null-source-transport-2026-09-18/near_results.json",
+      "git_blob": "30fd9eccee61eaa3aec0c53d997766df4a1cbf2c",
+      "sha256": "74919289ad3982d1748afe1c3d692c9904f858d9a0148cd65bd4d2b7f77978df",
+      "bytes": 279839
+    },
+    {
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/PROOF.md",
+      "git_blob": "e583ce27b67103c5aaca2a3c7174cdb947ee4c3f",
+      "sha256": "cd916ca46874d63cf663d9a611ec91b62d314456c500cc5f0a205cab237134df",
+      "bytes": 22297
+    },
+    {
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/README.md",
+      "git_blob": "02d150c4fdf2e3142bb3ead44ef583d2eec1320d",
+      "sha256": "31a358c5008c5855817b692644e8c35e73e3beec32ad961dc84add9e4ae20495",
+      "bytes": 2641
+    },
+    {
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/SHA256SUMS",
+      "git_blob": "48f23e026dfa4ec53ac0b04432311980a01a0a2d",
+      "sha256": "9a8367e1797dfbae9bb91dcbc133c30b68d9b4f7a4574022482375273a0db55a",
+      "bytes": 406
+    },
+    {
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/check_segment.py",
+      "git_blob": "eeebaef908a96cc1982d50ad094fda82f22e1e1b",
+      "sha256": "aa39d30b98dae1fedb3c81e65a9933f6b90755d7523fedcfbcf3b9ffafae3392",
+      "bytes": 23778
+    },
+    {
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/segment_checks.log",
+      "git_blob": "7af413707d95faed6600a5000d625f407357b85c",
+      "sha256": "a35ee4a38e5da52f62a59eeea8139c17770f80a2a78f47639015c2d09466582c",
+      "bytes": 9031
+    },
+    {
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/segment_results.json",
+      "git_blob": "ec29897cd614fe1ee759aa97e791c40ac154c141",
+      "sha256": "b37e0e8ed3da94722652fbea40117246a9f180cae3b7d9ac0578368109bb44ed",
+      "bytes": 105018
+    },
+    {
+      "path": "research/x-c1/prime2-interval-continuation-2026-09-18/PROOF.md",
+      "git_blob": "e2e5e51d7c3c454b6f1d05d0447c583f33e5cf0a",
+      "sha256": "999de6fb355d8daefca4523dc51f46811c0250bc68e8132567d6c04dbe8093d2",
+      "bytes": 19992
+    },
+    {
+      "path": "research/x-c1/prime2-interval-continuation-2026-09-18/README.md",
+      "git_blob": "9e0a6062c43cfa2fdb1170cd69880d074a8b0c09",
+      "sha256": "1e4afc1926342156a5c64d3c90d47988cc34efa6c2c8803c5602539d7d826d07",
+      "bytes": 1844
+    },
+    {
+      "path": "research/x-c1/prime2-interval-continuation-2026-09-18/SHA256SUMS",
+      "git_blob": "a95c0f71230cfdaed60a93af4a3322b4ea0b817f",
+      "sha256": "3de0a05fb30b7d95e4601dc574edf8a266042e2a0b7e3062e7f2f9d938c9d6a7",
+      "bytes": 409
+    },
+    {
+      "path": "research/x-c1/prime2-interval-continuation-2026-09-18/check_interval.py",
+      "git_blob": "73ed826da19d975977bff029e601c7027feb83db",
+      "sha256": "582d7aa229a35e29765c129c73e4f3459e209a38cbe56609e4e61e849f1f6aaf",
+      "bytes": 17839
+    },
+    {
+      "path": "research/x-c1/prime2-interval-continuation-2026-09-18/interval_checks.log",
+      "git_blob": "2854f7c88f96695fe54ec9596feeeed38d471543",
+      "sha256": "38ad5f2e3492c026a6d80c9e321d1541a411a9b0df7170df381c301b35bcd841",
+      "bytes": 3940
+    },
+    {
+      "path": "research/x-c1/prime2-interval-continuation-2026-09-18/interval_results.json",
+      "git_blob": "ba5ccabdd58fb8130375defd2b02a7f2ed251440",
+      "sha256": "73b2c6e19549c7d513700d4eddd468d216c8a9b02e45d37765534cc607203512",
+      "bytes": 22694
+    },
+    {
+      "path": "research/x-c1/prime3-transition-unified-shifts-2026-09-18/PROOF.md",
+      "git_blob": "7c5292804acb0dbc80bd95ffe77aaa6745d22718",
+      "sha256": "7cccbcfc6241670792e8d537abbb828e12647050dc0896a5538a8671d239f2d1",
+      "bytes": 22758
+    },
+    {
+      "path": "research/x-c1/prime3-transition-unified-shifts-2026-09-18/README.md",
+      "git_blob": "40c7feb18069110ee4dca2aeb26180905c672e77",
+      "sha256": "7d887e19e09655a3282370cdedb33eef85dc44ce218f2aa8245effadfdfea527",
+      "bytes": 2256
+    },
+    {
+      "path": "research/x-c1/prime3-transition-unified-shifts-2026-09-18/SHA256SUMS",
+      "git_blob": "c0f96214a032174645fda1defb6552819a2436fb",
+      "sha256": "281b72b446da51dd391be5cdc81675595db9ef90ea6c53b52a6b2439fc0066da",
+      "bytes": 403
+    },
+    {
+      "path": "research/x-c1/prime3-transition-unified-shifts-2026-09-18/check_prime3.py",
+      "git_blob": "92e0c839ab8c219170d248a64e864fa44bf218e7",
+      "sha256": "2556eb83367cd973262f0016766f5b6ecdf66fdae53f3eaf2ef6167ff4eed499",
+      "bytes": 20040
+    },
+    {
+      "path": "research/x-c1/prime3-transition-unified-shifts-2026-09-18/prime3_checks.log",
+      "git_blob": "fd96a96ae314a5fe10f10bc91028d625a384225e",
+      "sha256": "fb59df2dd9e2039a7296df3d21827fce18e711fc151133040aabd98a70872be9",
+      "bytes": 4090
+    },
+    {
+      "path": "research/x-c1/prime3-transition-unified-shifts-2026-09-18/prime3_results.json",
+      "git_blob": "aa8794bc4398284d2895bfdef28f4218ab51817f",
+      "sha256": "1667e4be0002586d1d81bbc5aacba01615663ce1cd2b91839d1c3eba8e318e15",
+      "bytes": 28432
+    },
+    {
+      "path": "research/x-c1/universal-prime-power-family-2026-09-18/PROOF.md",
+      "git_blob": "72a53b682a280bb8ca9a45efbedd458b0dcaf18e",
+      "sha256": "639cfd30c71828ad56caf04447c7d174ec05071f250e19cb6be189d8c3e5f853",
+      "bytes": 6764
+    },
+    {
+      "path": "research/x-c1/universal-prime-power-family-2026-09-18/README.md",
+      "git_blob": "79b83e4c8abc352c44abe869fb12a3f5c50dc2d4",
+      "sha256": "15b56356caecf3975341151e9b1beaa5bea7c2b64932b4640fcb10d3ae77a1ba",
+      "bytes": 884
+    },
+    {
+      "path": "research/x-c1/universal-prime-power-family-2026-09-18/SHA256SUMS",
+      "git_blob": "1c2e630d917a1dca365f90cdb230ec02262576e7",
+      "sha256": "57d1085d2654654e4d3025eef0fbbc25ef1891a449bd159c765e605ef70722c5",
+      "bytes": 433
+    },
+    {
+      "path": "research/x-c1/universal-prime-power-family-2026-09-18/check_universal_family.py",
+      "git_blob": "f4060efd46957089dd16bc7aa1f038491b85864e",
+      "sha256": "12e3d17a08bf839b4f675135a7fedddd7880a82bcbfbcce275c7790e816d6668",
+      "bytes": 5432
+    },
+    {
+      "path": "research/x-c1/universal-prime-power-family-2026-09-18/universal_family_checks.log",
+      "git_blob": "fe0a808674a6a2cc6b72c55b587ef55b0bb06f6b",
+      "sha256": "f97cfbf491cd25d3afb71653af9d469838592d7df5bea189824aab954a03f42f",
+      "bytes": 255
+    },
+    {
+      "path": "research/x-c1/universal-prime-power-family-2026-09-18/universal_family_results.json",
+      "git_blob": "e7de96821665e4f1b5a6930658fe9b5440593725",
+      "sha256": "d0d0929b232919fc68895468d5872ae51d26f86eaaa6d5e6340e12849a2aa295",
+      "bytes": 330
+    },
+    {
+      "path": "research/x-c1/window-gap-monotonicity-2026-09-18/PROOF.md",
+      "git_blob": "151ae5b5e6507b4eb2700931f133757415110cb9",
+      "sha256": "b82e672cb447039cbe48278b82b98d171fcd88ae52dd4032363b4234ede8c983",
+      "bytes": 6778
+    },
+    {
+      "path": "research/x-c1/window-gap-monotonicity-2026-09-18/README.md",
+      "git_blob": "439e99997a6b6d5d9df4a633ffa1714f69773e5b",
+      "sha256": "f0dc7acb84deece65b0022b4cd51d508ad6e996201c2a24d7c87770c5030e0b3",
+      "bytes": 1041
+    },
+    {
+      "path": "research/x-c1/window-gap-monotonicity-2026-09-18/SHA256SUMS",
+      "git_blob": "19fe15bb94bbbbf06fce7aa80a5afac791d14eee",
+      "sha256": "e8391141ec574dea13d67f1aed98cff5ca84ae7e2d1a7eb14c2f73e51fc922a7",
+      "bytes": 454
+    },
+    {
+      "path": "research/x-c1/window-gap-monotonicity-2026-09-18/check_window_gap_monotonicity.py",
+      "git_blob": "e9b7a90deb2c5d274e0f3c04323eabaef045e8d5",
+      "sha256": "058853dbef7a5396086bc8822363d054e7a5202d0035eccf82ceb7207901e20d",
+      "bytes": 2162
+    },
+    {
+      "path": "research/x-c1/window-gap-monotonicity-2026-09-18/window_gap_monotonicity_checks.log",
+      "git_blob": "3ee857a6fe464bc1337681df8523cf6755ff4806",
+      "sha256": "d2257501a9027cfe8b2eea73624664358a0914c47538ba304240300fb3578348",
+      "bytes": 302
+    },
+    {
+      "path": "research/x-c1/window-gap-monotonicity-2026-09-18/window_gap_monotonicity_results.json",
+      "git_blob": "23ac489481b043f789f3c085c315bbec60ba3802",
+      "sha256": "9b84ff42f67de3e5045de04e2289936627001046273df9ea98866050d9717199",
+      "bytes": 1120
+    }
+  ]
+}

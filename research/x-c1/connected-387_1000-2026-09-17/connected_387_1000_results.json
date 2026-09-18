@@ -1,0 +1,13 @@
+{
+  "a": "387/1000",
+  "L": "387/500",
+  "center_lower_decimal": "-1.654954271038844",
+  "endband_lower_decimal": "0.495590442503662",
+  "old_lambda2": "-1/5000",
+  "strengthened_constant": "43/200",
+  "lambda1": "-48859/100000",
+  "lambda2": "1141/100000",
+  "B2_upper": "331/5705",
+  "gap": "2687/250100",
+  "checks": 22
+}

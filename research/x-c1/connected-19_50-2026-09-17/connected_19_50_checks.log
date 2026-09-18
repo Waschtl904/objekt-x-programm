@@ -1,0 +1,23 @@
+PASS: 69/100 < log2 < 7/10
+PASS: Prime-2 active with two disjoint endpoint bands
+PASS: no Prime-3 shift on length 19/25
+PASS: w2<1/2
+PASS: kernel lower margin stays positive through t=19/25
+PASS: exp(L/2)=exp(19/50)<3/2
+PASS: gamma < H400-log400 < 579/1000
+PASS: log(418/175)<881/1000
+PASS: central reserve budget totals 33/20
+PASS: endpoint leakage ratio lower bound 1444/483
+PASS: log(1444/483)>407/375
+PASS: leakage lower bound is strictly >1/2>w2
+PASS: mode 0 coefficient
+PASS: mode 1 coefficient
+PASS: mode 2 and higher floor is 1/500
+PASS: cosh moment residual <1/50
+PASS: sinh moment residual <1/150
+PASS: even defect row norm squared <33/100
+PASS: odd defect row smaller
+PASS: rank-two defect remains contractive
+PASS: connected 19/50 lower bound 67/50020
+PASS: coarse lower bound >1/1000
+TOTAL: 22 exact scalar checks PASS

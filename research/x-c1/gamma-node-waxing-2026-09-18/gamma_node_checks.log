@@ -1,0 +1,22 @@
+PASS sqrt2 enclosed algebraically
+PASS window strictly inside Prime-2-only domain
+PASS active-endband node floor is the global floor on the crossing interval
+PASS exact Gamma primitive at half and full length
+PASS eight derivative intervals certify g second derivative negative on [0,4/5]
+PASS Gamma optimizer isolated by derivative signs
+PASS positive coefficients and negative lambda2 plus maximal Gamma diagonal
+PASS nonpositive pivots lie below comparison level
+PASS small theta and large s are excluded globally
+PASS theta approaching one excluded globally
+PASS closed search rectangle has positive tail and inactive min branch
+PASS uniform interior witness exceeds exclusion level
+PASS entire s=0 boundary excluded by complete interval cover
+PASS exhaustive adaptive derivative cover isolates all possible maximizers
+PASS negative definite Hessian gives unique maximizer
+PASS optimized envelope decreases strictly across crossing interval
+PASS positive certified envelope at lower rational endpoint
+PASS negative global upper bound at upper rational endpoint
+PASS odd sector stays above 1/4 throughout crossing interval
+TOTAL 19
+STATIONARY_COVER {"ds": 79, "dtheta": 60, "inside": 6, "value": 4, "visited": 297}
+S_ZERO_BOUNDARY_LEAVES 24

@@ -1,0 +1,23 @@
+PASS log2 > 693/1000
+PASS log2 < 694/1000
+PASS sqrt2 > 707/500
+PASS w2 < 491/1000
+PASS gamma upper < 578/1000
+PASS center rho > -331/200
+PASS endband extra leakage > 99/200
+PASS endband extra leakage > w2
+PASS kernel lower polynomial coefficients B,D negative
+PASS kernel lower endpoint margin positive
+PASS old scalarized lambda2 crosses negative
+PASS new lambda1 exact
+PASS new lambda2 exact
+PASS new lambda2 positive
+PASS new lambda3-lambda2=1/3
+PASS cosh relative remainder <1/50
+PASS sinh relative remainder <1/150
+PASS B_even exact
+PASS B_odd exact
+PASS B2 < 3/50
+PASS gap exact
+PASS gap > 1/100
+TOTAL 22
