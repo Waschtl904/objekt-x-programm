@@ -1,0 +1,40 @@
+PASS source degree 62, even parity and exact zero endpoint traces
+PASS transport interval and exact active-set thresholds
+PASS B numerical moment enclosure consistent with exact cancellation
+PASS B direct positive Rayleigh enclosure
+B Rayleigh ['0.000000000003296290826591316669', '0.000000000003296290826640692301']
+PASS 17/20 numerical moment enclosure consistent with exact cancellation
+PASS 17/20 direct positive Rayleigh enclosure
+17/20 Rayleigh ['0.002333871565490292751690373879', '0.002333871565490292751742527848']
+PASS 9/10 numerical moment enclosure consistent with exact cancellation
+PASS 9/10 direct positive Rayleigh enclosure
+9/10 Rayleigh ['0.005352587854755404013991036146', '0.005352587854755404014046257996']
+PASS 19/20 numerical moment enclosure consistent with exact cancellation
+PASS 19/20 direct positive Rayleigh enclosure
+19/20 Rayleigh ['0.005627067979967328531986042244', '0.005627067979967328532044331974']
+PASS C numerical moment enclosure consistent with exact cancellation
+PASS C direct positive Rayleigh enclosure
+C Rayleigh ['0.004965774460964074255234096236', '0.004965774460964074255293794435']
+PASS reconstructs the pinned original source Rayleigh enclosure
+PASS whole-family normalized overlap squared > 0.99998
+PASS energy all cells positive
+PASS energy exact continuum cover
+PASS channel5 all cells positive
+PASS channel5 exact continuum cover
+PASS B higher precision and Gamma degree strictly narrow the enclosure
+B higher precision Rayleigh ['0.000000000003296290826616004472', '0.000000000003296290826616004499']
+PASS C higher precision and Gamma degree strictly narrow the enclosure
+C higher precision Rayleigh ['0.004965774460964074255263945319', '0.004965774460964074255263945352']
+PASS 435 exact Gamma image versus triangle-integral comparisons
+PASS all nine ordered mixed shift Gram entries and their symmetry
+PASS cutoff 63 full tail and directional Schur lower bound positive
+cutoff 63 Schur deduction ['0.000000000000460445852750974530', '0.000000000000460445852750974531']
+PASS cutoff 79 full tail and directional Schur lower bound positive
+PASS cutoff 79 tail subtraction decreases
+cutoff 79 Schur deduction ['0.000000000000275894810893027178', '0.000000000000275894810893027179']
+PASS cutoff 95 full tail and directional Schur lower bound positive
+PASS cutoff 95 tail subtraction decreases
+cutoff 95 Schur deduction ['0.000000000000211163131343802077', '0.000000000000211163131343802078']
+TOTAL 27 checks PASS
+ONLY THIS TRANSPORTED FAMILY: Rayleigh > 1/10^12 for B<=a<=C
+NO ALL-SOURCE COERCIVITY CLAIM AT C; EXTERNAL REVIEW OPEN
