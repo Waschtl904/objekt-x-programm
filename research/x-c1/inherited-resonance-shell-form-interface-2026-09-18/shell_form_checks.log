@@ -1,0 +1,13 @@
+PASS B in (4/5,81/100)
+PASS log(7)/2 below 1
+PASS log(8)/2 above 1
+PASS w2 < 1/2
+PASS w3 < 13/20
+PASS w4 < 7/20
+PASS w5 < 3/4
+PASS w7 < 3/4
+PASS kappa_* < 11/2
+PASS unit-window Gamma upper < 12
+PASS frozen common core gap positive
+PASS frozen core gap below 3.3e-12
+TOTAL 12
