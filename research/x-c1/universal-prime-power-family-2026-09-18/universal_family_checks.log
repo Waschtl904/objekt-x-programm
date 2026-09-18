@@ -1,0 +1,6 @@
+PASS 3 exact unitary-scaling polynomial regressions
+PASS 25 exact Mellin-scaling Taylor-coefficient regressions
+PASS 256 partial-shift self-adjointness identities
+PASS 64 exact d=2 cutoff identities
+PASS centered new-channel cutoff cancellation
+TOTAL 349
