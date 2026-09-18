@@ -1,0 +1,45 @@
+{
+  "target": "8074d14508873e09068222b9703b1f34e8607fc6",
+  "reviewer": "GPT 2 (author of parts of the chain)",
+  "review_kind": "critical author review; not independent external review",
+  "research_status": "AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN",
+  "scoped_verdict": "no new blocking mathematical defect found in all-source gap 1e-13 through log(5)/2",
+  "blanket_PR_approval": false,
+  "findings": [
+    {
+      "id": "R1",
+      "kind": "mathematical defect in future construction",
+      "endpoint_blocker": false,
+      "path": "research/x-c1/window-gap-monotonicity-2026-09-18/PROOF.md",
+      "lines": [
+        147,
+        153
+      ],
+      "summary": "The asserted H1 orthogonal core/shell split is not valid; already documented at target."
+    },
+    {
+      "id": "R2",
+      "kind": "historical integrity exceptions",
+      "endpoint_blocker": false,
+      "manifests": 5,
+      "stale_entries": 9,
+      "summary": "All seven core package manifests clean; no blanket historical integrity claim."
+    },
+    {
+      "id": "R3",
+      "kind": "reproduced implementation limitation",
+      "endpoint_blocker": false,
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/check_segment.py",
+      "lines": [
+        361,
+        374
+      ],
+      "summary": "Exact coincident band breakpoints are rejected; certified endpoint has strictly separated breakpoints."
+    }
+  ],
+  "additional_checks": 678,
+  "bound_inputs": 44,
+  "prior_full_replays": 7,
+  "external_review_complete": false,
+  "merge_authorized_by_this_review": false
+}
