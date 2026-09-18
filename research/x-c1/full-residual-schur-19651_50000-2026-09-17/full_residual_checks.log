@@ -1,0 +1,17 @@
+PASS algebraic sqrt(2) enclosure
+PASS only prime 2 active and its endpoint bands disjoint
+PASS Gamma monotonicity rational coefficient
+PASS endband node floor is global
+PASS positive outer node reserve
+PASS exact projected node tail mass positive
+PASS negative scalar mode 2 and positive full infinite tail
+PASS Gamma and Prime-2 both contribute strictly positive mode-2 energy
+PASS bounded Gamma and Prime-2 tails
+PASS joint residual comparison tail positive
+PASS full infinite-dimensional Schur pivot greater than 1/50
+PASS actual full inverse shear norm less than 3/2
+PASS full back-transformed gap greater than 2/225
+PASS positive moment-subtracted numerator
+PASS final division by 1+beta_even gives gap greater than 1/150
+PASS odd gap greater than 1/4
+TOTAL 16
