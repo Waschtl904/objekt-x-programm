@@ -1,0 +1,61 @@
+INHERITED direction 31 PASS; coordinate 28 PASS; shell 43 PASS; A-gauge 9 PASS
+PASS input anchor is the inherited published research head
+PASS publication parent preserves the concurrent A-gauge package
+PASS 57 distinct immutable input files
+PASS all input byte counts SHA256 and Git blob bindings match
+PASS parent direction 31 coordinate 28 and shell 43 checks reproduce
+PASS concurrent complete A-gauge theorem 9 arithmetic checks reproduce
+PASS physical inherited source gap and shell normalization
+PASS parent physical psi norm exceeds one half
+PASS parent physical psi energy is positive and below three twentieths
+PASS all-core trace reserve exceeds ten thirds epsilon
+PASS entire energy-orthogonal complement trace norm below 4.2e-11
+PASS uniform shell Young and moment losses are below three
+PASS growing shell floor exceeds log floor on whole original interval
+PASS sqrt h0 retained exactly without underflow
+PASS physical even reflection radical bounded rationally
+PASS full Carleman plus opposite-core Gamma coefficient below four
+PASS all four arithmetic shifts plus Gamma coefficient below twelve
+PASS chi Gamma Cauchy-Schwarz coefficient below forty
+PASS chi bounded remainder coefficient below sixty
+PASS moment residual coefficient below thirteen
+PASS dyadic exponent is positive integer and at least eighty
+PASS small integer power proves hstar below h0
+PASS dyadic width implies required positive logarithmic floor
+PASS entire residual beta equals 169 over 500 and is below one
+PASS entire reduced-core relative margin exceeds 2e-13
+PASS entire reduced-core absolute reserve is 331 over 500 epsilon
+PASS block square-root lower bound has a positive rational witness
+PASS physical norm factor 65 and shell factor 32 both paid
+PASS original L2-gauge physical gap is strictly above 1e-30
+PASS entire A-gauge relative bound is below nine twenty-fifths
+PASS A-gauge physical conversion pays forward 65 and shell 32
+PASS stronger A-gauge physical gap exceeds 1e-17
+PASS original h0 sufficient comparison fails without a negativity conclusion
+PASS complex trace elimination cancels exactly in real and imaginary parts
+PASS shifted positive-form Cauchy-Schwarz retains positive norm slack
+PASS trace residual annihilation is an exact Laurent identity
+PASS full residual majorant retains mixed trace terms exactly
+PASS operator majorant is beta I plus one-minus-beta trace operator
+PASS negative algebra control detects an omitted trace term
+PASS uniform shell loss monotonicity derivatives are exact
+all_core_trace_reserve_tau ['0.000000000000368478307746571249961882', '0.000000000000368478307746571249961883']
+all_core_trace_operator_norm_upper ['0.000000000000000000000000000000000000', '0.999999999999631521692253428750038118']
+full_complement_trace_operator_norm_upper ['0.000000000000000000000000000000000000', '0.000000000041529686444480912947257743']
+trace_direction_complement_mixed_squared_upper ['0.000000000000000000000000000000000000', '0.000000000041529686442740895302498534']
+shell_uniform_Young_and_moment_loss_upper ['2.215116800000000008260000000000000000', '2.215116800000000008260000000000000000']
+complete_L2_core_shell_pairing_coefficient_upper ['12.000000000000000000000000000000000000', '12.000000000000000000000000000000000000']
+complete_residual_coefficient_upper ['13.000000000000000000000000000000000000', '13.000000000000000000000000000000000000']
+dyadic_exponent ['10000000000000000.000000000000000000000000000000000000', '10000000000000000.000000000000000000000000000000000000']
+logarithmic_floor ['5000000000000000.000000000000000000000000000000000000', '5000000000000000.000000000000000000000000000000000000']
+full_residual_relative_upper ['0.338000000000000000000000000000000000', '0.338000000000000000000000000000000000']
+R0_absolute_lower ['0.000000000000066200000000000000000000', '0.000000000000066200000000000000000000']
+derived_Theta_margin_lower_bound ['0.000000000000243932639728230167474765', '0.000000000000243932639728230167474766']
+published_Theta0_upper ['0.999999999999800000000000000000000000', '0.999999999999800000000000000000000000']
+original_L2_gauge_physical_gap_strict_lower ['0.000000000000000000000000000004807692', '0.000000000000000000000000000004807693']
+entire_A_gauge_Theta_upper ['0.338000000000000000000000000000000000', '0.338000000000000000000000000000000000']
+physical_gap_strict_lower ['0.000000000000000019230769230769230769', '0.000000000000000019230769230769230770']
+published_physical_gap_strict_lower ['0.000000000000000010000000000000000000', '0.000000000000000010000000000000000000']
+comparison_beta_at_original_h0 ['35957446808510.638297872340425531914893617021276595', '36739130434782.608695652173913043478260869565217392']
+TOTAL 40 NEW EXACT CHECKS PASS
+ENTIRE-REDUCED-CORE-POSITIVE-ON-DYADIC-SUBINTERVAL / ORIGINAL-WIDTH-UNDECIDED
