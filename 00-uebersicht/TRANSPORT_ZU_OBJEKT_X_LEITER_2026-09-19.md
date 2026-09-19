@@ -1022,3 +1022,105 @@ intrinsische kompatible C1-Mediatorgeometrie. Eine weitere Reihe rein
 mikroskopischer Breitenoptimierungen wird daraus nicht als Hauptfront
 abgeleitet. Die neuen Interface-Dateien von 0dea95c/56231ad bleiben
 unverändert erhalten.
+
+---
+
+## 2026-09-19: C1-Kandidaten ausgeschlossen – kurze räumliche Reichweite plus endlicher globaler Rang
+
+Status: **AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN**.
+Anker: `617ffe2a3bfe12bef768b536b9eeffbbfb21f1da`.
+Neues Paket:
+`research/x-c1/c1-readout-nonlocality-obstruction-2026-09-19/`.
+
+Dieser Nachtrag bearbeitet die benannte C1-Schnittstelle durch den
+rigorosen Ausschluss konkreter Kandidatenklassen. Er ist kein weiterer
+mikroskopischer Breitenrekord und keine Konstruktion von Objekt X.
+
+### Nichtlokalität lässt sich nicht durch endlich viele globale Merkmale ersetzen
+
+Für jeden B<=a<=1 ist ein exakter positiver Weil-Gram-Readout
+
+    T_a=L_a+K_a,
+    q_a(u,v)=<T_a u,T_a v>
+
+ausgeschlossen, falls L_a die physische räumliche Reichweite R_a<a hat
+und K_a eine beliebige nichtlokale Korrektur endlichen Ranges ist.
+Die Zielanteile müssen nicht orthogonal sein; der endliche Rang darf
+vom Endpunkt abhängen. Räumliche Reichweite bedeutet eine festgelegte
+physische Ortsstruktur der lokalen Ausgabe, nicht bloß ein Fensterlabel.
+
+Der Beweis konstruiert echte kompakte H1-Quellen mittels
+
+    phi=(D^2-1/4)psi.
+
+Sie erfüllen exakt die beiden ursprünglichen Mellinbedingungen.
+Zwischen zwei getrennten Quellenblöcken verschwinden alle Prime-
+und L2-Paarungen. Der vollständige Gamma-Kern liefert dennoch
+Mischmatrizen jedes Ranges N. Nach Auslöschung des ersten Exponentialmodus
+bleiben unendlich viele positive Modengewichte; eine exakte
+Vandermonde-Identität beweist Rang N für jedes N.
+
+Eine lokale Ausgabe plus Korrektur vom Rang m kann auf solchen Blöcken
+nur Mischrang <=2m erzeugen. N=2m+1 ergibt den Widerspruch. Insbesondere
+können 31 oder 191 globale Merkmale einen räumlich lokalen unendlichen
+Rest nicht zu einer exakten C1-Gram-Darstellung ergänzen. Die bisherigen
+Low/Hard-Beweise bleiben unberührt: Ihre vollständigen Hard-Formen wurden
+nie als räumlich lokale Readouts vorausgesetzt.
+
+Für einen rein räumlich begrenzten linearen Readout ohne globale
+Zusatzkorrektur gilt außerdem: Bei R<73/200 erzwingt ein festes
+Even/Odd-Quellenpaar im schon positiven B-Core einen relativen
+Darstellungsfehler >10^-11 in physischer L2-Norm. Diese quantitative
+Schranke wird nicht für den Fall eines zusätzlichen K_a beansprucht;
+dort gilt der separate exakte Rang-Ausschluss.
+
+### Einzelne Prime-Beiträge sind keine positiven Gram-Komponenten
+
+Jeder strikt aktive Prime-Power-Kanal hat auf jeder Parität beide
+Vorzeichen. Vier exakt Mellin-nullige kompakte Quellenstücke isolieren
+den gewünschten Kanal und lassen alle anderen arithmetischen Beiträge
+verschwinden. Sein signierter Rayleigh-Wert ist dabei exakt +/-w_q.
+
+Der Checker enthält zwanzig Fälle für q=2,3,4,5,7 bei a=1. Diese
+isolierten Kanalwerte beweisen dort keine Positivität oder Negativität
+der vollständigen Weil-Form. Die q=2-Gegenbeispiele passen bereits
+in den positiven B-Core. Weder das ursprüngliche Vorzeichen noch
+sein Gegenteil erlaubt eine individuelle positive Kanal-Gram-Identität.
+
+### Geschlossen und offen
+
+| C1-Frage | Stand |
+| --- | --- |
+| Readout mit R_a<a plus beliebiger Korrektur endlichen Ranges | Kandidatenklasse ausgeschlossen |
+| Einzelne signierte Prime-Beiträge als positive Gram-Komponenten | Kandidatenklasse ausgeschlossen |
+| Nichtlokaler gemeinsamer Prime-/Gamma-Readout | Offen |
+| Indefinite Prime-Beobachtungen in einem positiven Mediator | Nicht ausgeschlossen; Konstruktion offen |
+| Kompatible intrinsische C1-Mediatorgeometrie | Offen |
+| Moving 191D Low/Profile | Unverändert offen |
+| Objekt X / globale Weil-Gram-Identität / RH | Nicht erreicht |
+
+Der Ausschluss betrifft die ausdrücklich definierte räumliche Klasse.
+Abstrakte, Fourier-indizierte oder vollständig nichtlokale Readouts
+werden nicht pauschal ausgeschlossen. Eine negative gemischte Paarung
+ist keine negative Weil-Energie einer Quelle. Das vorhandene C0-System
+und die physischen Nullfortsetzungen bleiben unverändert.
+
+### Reproduktion und Vergleichsanker
+
+84 neue exakte Prüfungen, sechs byte-/SHA-/Git-gebundene analytische
+Herkunftsdateien, rationale Quellennormen und Fehlerschranken, ein exaktes
+Rang-drei-Beispiel sowie alle zwanzig Kanal-/Paritätsfälle reproduzieren.
+JSON und Log sind bytegleich; alle sieben Payload-Hashes stimmen.
+Die allgemeinen Rang-, Träger- und Ausschlusssätze sind analytische
+Beweise, keine Folgerungen aus endlichen Stichproben. Der neue Checker
+benötigt keine früheren numerischen Matrizen und wiederholt deren
+Prüfkette nicht. Reproduktion bleibt von unabhängigem Audit getrennt.
+
+Die Breitenfaktoren werden mit ihren richtigen Ankern festgehalten:
+
+    10^-10 / (5*10^-13) = 200       gegenüber b1c0186,
+    10^-10 / (5*10^-19) = 200000000 gegenüber ca3849a.
+
+617ffe2 verwendete ausdrücklich den ersten Vergleich. Beide Rechnungen
+sind korrekt; historische Pakete oder Satzschranken werden nicht geändert.
+

@@ -1,0 +1,42 @@
+{
+  "anchor": "617ffe2a3bfe12bef768b536b9eeffbbfb21f1da",
+  "files": [
+    {
+      "bytes": 22770,
+      "git_blob": "eb624f6829d7aac9118fb963117802e7c3e3820c",
+      "path": "research/x-c1/all-parity-window-and-restart-2026-09-19/PROOF.md",
+      "sha256": "eb22fca82973b85d316d480132604338aaecde9501bd91dabc72db6a692e66d7"
+    },
+    {
+      "bytes": 22635,
+      "git_blob": "e7f6ba40b24b1dbc59a36004f448142e3a369b42",
+      "path": "research/x-c1/block-adaptive-profile-transport-2026-09-19/PROOF.md",
+      "sha256": "81d40eab8456b7bc51700d58b5b5a3586bedb5b93ae074c7d8a2f04eb9025f8a"
+    },
+    {
+      "bytes": 26747,
+      "git_blob": "bc65cae420029c34278e16f5b41d9942c6509f6e",
+      "path": "research/x-c1/moving-endpoint-harmonic-block-renewal-2026-09-19/PROOF.md",
+      "sha256": "e21fae202d4c94e76e8ba87f0cef6ca0fda582703d5f3a95a696e9d7b79f22b0"
+    },
+    {
+      "bytes": 6764,
+      "git_blob": "72a53b682a280bb8ca9a45efbedd458b0dcaf18e",
+      "path": "research/x-c1/universal-prime-power-family-2026-09-18/PROOF.md",
+      "sha256": "639cfd30c71828ad56caf04447c7d174ec05071f250e19cb6be189d8c3e5f853"
+    },
+    {
+      "bytes": 11722,
+      "git_blob": "b0ca1d113662f93aea1cfe445b2229becf52b976",
+      "path": "research/x-c1/x-interface-directed-system-2026-09-19/PROOF.md",
+      "sha256": "9c6db7cdc9b90212eeb128450c8ee62907193adf7ccbc29f426f2c2db131feff"
+    },
+    {
+      "bytes": 971,
+      "git_blob": "2fdb671abe348b16a30b5847a35f9587538b5824",
+      "path": "research/x-c1/x-interface-directed-system-2026-09-19/README.md",
+      "sha256": "a01c53ac170e0ac77b84553e7716b8702c3a9b8e815ff534639cac0da6cc3fa7"
+    }
+  ],
+  "role": "Immutable analytic provenance and prior-window comparison; no inherited numerical matrix is a new certificate input."
+}
