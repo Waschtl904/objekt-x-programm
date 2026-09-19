@@ -187,3 +187,167 @@ Die Shell-Schur-Fortsetzung liefert dafür lokale Positivitäts- und Schnittstel
 - Nur eine zulässige Quelle mit strikt negativer gerichteter Energieeinschließung wäre ein tatsächlicher Negativitätsbefund.
 - Keine Aussage zu `log(7)/2`, `a=1`, full C1-GEOM, Objekt X oder RH ohne neue geschlossene Beweise.
 - `main` und der PR-#137-Milestone bleiben ohne konkreten neuen Einwand eingefroren.
+
+
+---
+
+## Fortschrittsnachtrag — 19.09.2026, Head `7741eca`
+
+> **Kanonischer Branch-Head dieses Nachtrags:**  
+> `7741eca6f14bdc3017f6a299aff06eb66db2e697`  
+> **main unverändert:** `d455a664c7885eeef9f0d07f246cffc75c1ad267`  
+> **Status:** `AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN`
+
+Dieser Abschnitt ist ein **append-only Statusnachtrag**. Er ändert die historischen
+Zwischenstände weiter oben nicht rückwirkend. Soweit frühere Abschnitte
+`Even-All-Source bis h=10^-20`, den 31-dimensionalen Low-Block oder dessen
+Mischblöcke noch als offen führen, sind sie durch den folgenden neueren Stand
+überholt.
+
+### WIDTH AMPLIFICATION im Even-Sektor geschlossen
+
+Der Commit `7741eca6f14bdc3017f6a299aff06eb66db2e697` schließt die nach
+`7d269c7` verbliebenen Even-Verpflichtungen auf dem gesamten bisherigen
+Shellintervall
+
+\[
+B=\frac{\log5}{2},
+\qquad
+0<h=b-B\le10^{-20}.
+\]
+
+Für jede nichtverschwindende tatsächliche gerade Quelle
+
+\[
+u\in H_0^1((-b,b))
+\]
+
+mit genau den beiden ursprünglichen Mellinbedingungen gilt autorenseitig
+
+\[
+\boxed{
+Q_W[u]>3\cdot10^{-15}\|u\|_2^2.
+}
+\]
+
+Auf Operatorebene sind außerdem zertifiziert
+
+\[
+\boxed{
+\Theta_A(b)<1-9\cdot10^{-23},
+\qquad
+\Theta_0(b)<1-2\cdot10^{-29}.
+}
+\]
+
+Diese relativen Reserven sind konservative Konsequenzen des absoluten
+physischen Gaps und keine Aussagen über optimale Spektralabstände.
+
+### Was gegenüber dem Zwischenstand `7d269c7` zusätzlich geschlossen ist
+
+Der neue Beweis enthält gemeinsam:
+
+- den exakt definierten Low-Core
+  \[
+  L_0=\operatorname{span}\{P_2,P_4,\ldots,P_{62}\},
+  \qquad \dim L_0=31;
+  \]
+- den vollständigen unendlichen Coretail
+  \[
+  Y=\overline{\operatorname{span}}\{P_{64},P_{66},\ldots\};
+  \]
+- die vollständige Low/High-Kopplung;
+- die vollständige Low/Profile-Kopplung;
+- die vollständige High/Profile-Kopplung;
+- sämtliche Near/Low-, Near/High- und Low/High-Mischterme;
+- die vollständige physische Normumrechnung;
+- die daraus folgende vollständige A-Gauge- und ursprüngliche
+  physische-`L^2`-Gauge-Operatoraussage.
+
+Die 31-dimensionale Matrix ist dabei ausschließlich der exakt vorab definierte
+Low-Block. Sie ersetzt weder den unendlichen Coretail noch die vollständige
+Shell.
+
+Die gerichtete rationale `LDL^*`-Zerlegung des Low-Schurvergleichs besitzt
+31 strikt positive Pivots und liefert
+
+\[
+R_{\rm cmp}\succeq\sigma_LJ,
+\qquad
+\sigma_L>1.23769\cdot10^{-12}.
+\]
+
+Der vollständige Vergleich einschließlich beider Off-Diagonaloperatoren und
+der physischen Rücknorm ergibt den veröffentlichten Gap
+`3*10^-15`.
+
+### Aktualisierte Forschungsleiter
+
+| Stufe | Mathematisches Ziel | Neuer Status nach `7741eca` |
+|---|---|---|
+| 1 | Endpunktpositivität bis `B=log(5)/2` | geschlossen auf `main`; autorenseitig |
+| 2 | Vollständiger Shell-Pivot und Trace-Quotient | geschlossen; autorenseitig |
+| 3 | Formbereich, `H^1`-Gluing und A-Gauge-Kongruenz | geschlossen; autorenseitig |
+| 4 | Near-Null-Richtung mit vollständiger Shellantwort | positiv geschlossen; autorenseitig |
+| 5 | erster Even-All-Source-Transport rechts von `B` | geschlossen |
+| 6 | High-Tail auf `h<=10^-20` | geschlossen; Zwischenstufe `7d269c7` |
+| 7 | WIDTH AMPLIFICATION im Even-Sektor bis `10^-20` | **geschlossen** |
+| 8 | Even-All-Source auf `0<h<=10^-20` | **geschlossen**, Gap `>3*10^-15` |
+| 9 | Odd-All-Source auf demselben Fenster | **nächster lokaler Gate; offen** |
+| 10 | Lokaler All-Parity-Satz | offen; verlangt Odd-Abschluss |
+| 11 | Größeres oder iterierbares Fenster | offen |
+| 12 | Connected Unit-Window Coercivity | offen |
+| 13 | full C1-GEOM | offen |
+| 14 | kanonischer positiver C1-Readout | offen |
+| 15 | globaler C0/C1-Vermittler | offen |
+| 16 | intrinsischer vollständiger X-Kandidat | noch nicht konstruiert |
+| 17 | exakte Weil-Gram-Identität auf der korrekten Testklasse | offen |
+| 18 | globale Weil-Positivität | offen |
+| 19 | vollständige Anwendung des Weil-Kriteriums / RH | offen; keine Behauptung |
+
+### Neuer unmittelbarer Forschungsfrontpunkt
+
+Der nächste lokale Gate ist jetzt eindeutig
+
+\[
+\boxed{
+\text{ODD CONTINUATION auf }0<h\le10^{-20}.
+}
+\]
+
+Der Odd-Beweis ist separat zu typisieren und darf nicht allein aus dem
+Even-Satz gefolgert werden. Erst nach einem Odd-All-Source-Satz auf demselben
+Fenster darf ein lokaler All-Parity-Transport formuliert werden.
+
+Eine weitere Vergrößerung des Even-Fensters kann parallel untersucht werden,
+ist aber **kein Ersatz** für den fehlenden Odd-Abschluss.
+
+### Aktualisierte Firewalls
+
+- Kein Odd-Gap ohne eigenständigen Odd-Beweis.
+- Kein lokaler All-Parity-Satz vor gemeinsamem Even-/Odd-Abschluss.
+- Keine endliche Matrix als Ersatz für einen unendlichen Tail.
+- Die geschlossene Even-WIDTH bis `10^-20` darf nicht automatisch auf
+  größere rechte Breiten, `log(7)/2` oder `a=1` fortgesetzt werden.
+- Strong Terminal im historischen P11/R43-Sinn bleibt eine getrennte offene
+  Front.
+- Connected Unit-Window Coercivity, full C1-GEOM, ein intrinsischer
+  vollständiger X-Kandidat, globale Weil-Positivität und RH bleiben offen.
+- `main` und der PR-#137-Milestone bleiben ohne konkreten neuen Einwand
+  eingefroren.
+
+### Aktueller Kurzstatus
+
+```text
+Even-All-Source bis B+10^-20: JA, autorenseitig geschlossen
+WIDTH AMPLIFICATION bis 10^-20: JA, autorenseitig geschlossen
+Odd-All-Source rechts von B: OFFEN
+lokaler All-Parity-Transport: OFFEN
+größere / iterierbare Fenster: OFFEN
+Strong Terminal: OFFEN
+Connected Unit-Window Coercivity: OFFEN
+full C1-GEOM: OFFEN
+Objekt X: OFFEN
+globale Weil-Positivität: OFFEN
+RH: OFFEN
+```
