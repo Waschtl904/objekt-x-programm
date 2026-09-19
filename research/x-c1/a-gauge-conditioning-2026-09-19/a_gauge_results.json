@@ -1,0 +1,26 @@
+{
+  "L2_functional_bound": 272,
+  "all_core_schur_closed": false,
+  "anchor": "d145ba88c86d4d0de665355bf3bff15844dbf414",
+  "core_inverse_factor": 139707530,
+  "ell_A_L2_bound": 1943,
+  "forward_factor": 65,
+  "full_inverse_factor": 140000000,
+  "interval": "b = log(5)/2 + h, 0 < h <= 10^-20",
+  "new_exact_checks": 9,
+  "odd_continuation_closed": false,
+  "passed_checks": [
+    "parent trace energy exceeds 0.14",
+    "Gamma representative square bound",
+    "non-Gamma plus Gamma functional bound",
+    "A-gauge coefficient bound",
+    "core inverse conditioning integer",
+    "shell moment correction below chosen mu",
+    "core coefficient remains below 140m",
+    "shell coefficient is harmless",
+    "forward coordinate constant unchanged"
+  ],
+  "pure_trace_cross_exactly_zero": "analytic identity in PROOF.md",
+  "q_psi_psi_lower_import": "1458134670025441579070841467469215998932429449991113441393200453083211698281147217455271234367805846623148353219911357050595908342370706303230238221092604830737/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "status": "AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN"
+}

@@ -1,0 +1,10 @@
+PASS parent trace energy exceeds 0.14
+PASS Gamma representative square bound
+PASS non-Gamma plus Gamma functional bound
+PASS A-gauge coefficient bound
+PASS core inverse conditioning integer
+PASS shell moment correction below chosen mu
+PASS core coefficient remains below 140m
+PASS shell coefficient is harmless
+PASS forward coordinate constant unchanged
+TOTAL 9 A-GAUGE ARITHMETIC CHECKS PASS
