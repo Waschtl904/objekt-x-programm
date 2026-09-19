@@ -908,3 +908,117 @@ nur, wenn er mindestens eine der folgenden Fragen schließt:
 - intrinsische gemeinsame Prime-/Gamma-Geometrie;
 - ausdrücklich benannte C1-/Objekt-X-Schnittstelle;
 - globale Testklasse beziehungsweise exakte Weil-Gram-Identität.
+
+---
+
+## 2026-09-19: Harmonische Blockreserven an beweglichen Endpunkten bis B+10^-10
+
+Status: **AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN**.
+Einordnung nach dem inzwischen hinzugekommenen C0/C1-Interface
+`0dea95c` / `56231ad`: ergänzender, bereits ausgearbeiteter endlicher
+Bandsatz; keine Promotion der strategischen Hauptfront.
+Mathematischer Anker: `b1c01860fef2a960cae57634041f75b29d37f836`.
+Der parallele Nachtrag `a0ea6f80f317e4ef1132fc02c86be5bd2064e738`
+mit uniformem beweglichem High-Tail-Boden bis a=1 bleibt vollständig
+erhalten. Er ist kein benötigter mathematischer Eingang des neuen Satzes.
+
+Neues Paket:
+`research/x-c1/moving-endpoint-harmonic-block-renewal-2026-09-19/`.
+
+### Tatsächlich bewiesenes größeres Fenster
+
+Für B=log(5)/2 gilt für jede nichttriviale ursprüngliche Zwei-Mellin-
+Quelle u in H1_0((-b,b)), 0<b<=B+10^-10:
+
+    Q_W[u] > 2*10^-15 ||u||_2^2.
+
+Der Odd-Gap ist >10^-12. Das zusätzliche Fenster ist 200-mal breiter
+als das äußere Fenster von b1c0186. Die stärkeren älteren Schranken
+auf schmaleren Fenstern bleiben als eigene Aussagen erhalten.
+
+Der vollständige korrigierte Profilboden wird durch die exakte
+Gamma-Stammfunktion von 2log(2/h)-17 auf 2log(2/h)-5 verschärft.
+Alle Prime-Power-, Moment-, Gamma- und Operatorrestkosten sind bezahlt.
+
+### Uniforme tatsächliche Zerlegung auf dem endlichen Band
+
+Für jeden a in [B,B+10^-10] wird F_a=N_a direct-sum L_a direct-sum H_a
+konstruiert. N_a folgt der geerbten Even-Near-Null-Linie durch tatsächliche
+Formprojektion. L_a hat 61 übrige Koordinaten über beide Paritäten;
+der gesamte Soft-Raum hat unverändert 31 Koordinaten je Parität.
+Der vollständige Hard-Raum umfasst die beiden unendlichen Core-Tails
+und sämtliche angesammelten Profile.
+
+| Größe | Uniforme Schranke |
+| --- | --- |
+| Vollständiger Hard-Boden in Referenzkoordinaten | >2/5 |
+| Vollständiger Hard-Boden in physischer Norm | >1/15 |
+| Low/Hard-Operatornorm | <3 |
+| Tatsächlicher harmonischer Lift | Norm <15/2 |
+| Physische Gesamtkoordinaten | Quadratische Normfaktoren 1/162 und 486 |
+| Tatsächlicher Soft-Schur-Boden Even / Odd | >8*10^-13 / >4*10^-10 |
+| Zusammengesetzter Endpunkttransport | Norm und inverse Norm auf dem Bild <16 |
+| Gesamte quadrierte physische Near-Null-Veränderung | <8.2*10^-12 |
+
+Verschachtelte tatsächliche Hard-Räume liefern exakte Formprojektionen,
+eine Schur-Energiebilanz und einen Transportkokzyklus. Die Konstanten
+hängen nicht von der Zahl der Unterteilungen dieses Bandes ab.
+Alle Near-Null/Low-Mischterme bleiben im Soft-Schur-Block erhalten.
+Die physische ursprüngliche Quelle wird weder gewechselt noch normiert.
+
+Zwei gleich große Schritte 5*10^-11 füllen das neue Band, ohne einen
+skalaren Gap zu halbieren. Jeder zuvor erreichte neue Endpunkt
+B<=a<=B+5*10^-13 erlaubt diesen tatsächlichen weiteren Schritt.
+
+### Reichweite und nächste Restobligation
+
+Geschlossen ist die **endliche Bandversion** von MOVING-ENDPOINT
+BLOCK-ADAPTIVE RESERVE RENEWAL. Die Vergleichsdaten bleiben an B
+verankert; das angesammelte Profil wird nicht an neuen Endpunkten
+auf null zurückgesetzt. Die Summe der Schrittweiten innerhalb des
+Bandes ist weiterhin höchstens 10^-10.
+
+Die Erneuerung jenseits dieses Bandes, nicht summierbarer Transport,
+Positivität bis log(7)/2 oder 1, Connected Unit-Window Coercivity,
+Full C1-GEOM, Objekt X und RH bleiben offen. Der parallele Satz bis
+a=1 kontrolliert dort allein den High-Tail mit 191 offenen Low-
+Koordinaten je Parität; seine Reichweite darf nicht mit unseren
+vollständigen Blockschranken auf dem kleinen Band vermischt werden.
+
+### Reproduktion und Modusnotiz
+
+Das neue Paket liefert 80 neue exakte Prüfungen, 111 byte-/SHA-/Git-
+gebundene Eingaben, zwei volle rationale LDL-Vergleiche mit insgesamt
+62 positiven Pivots und die vollständige frühere Prüfkette. JSON und
+Log reproduzieren bytegleich; alle sieben Payload-Hashes werden geprüft.
+Die unendlichdimensionalen Projektions- und Formbereichsargumente
+stehen im Beweis; numerische Reproduktion ist kein unabhängiges Audit.
+
+Append-only zur parallelen Veröffentlichung a0ea6f8: Ihr normaler
+`check_tail.py --verify` erzeugt 26 Prüfungen, während die veröffentlichten
+Ergebnisdateien die 25 Prüfungen von `--math-only` enthalten. Erfolgreich
+reproduziert wurden `check_tail.py --math-only --verify` (25 Prüfungen,
+sieben Hashes) und anschließend `check_tail.py` ohne Modusargument
+(26 Prüfungen einschließlich aller vier Eingabebindungen). Die genaue
+Modusabweichung steht in PROOF.md, Abschnitt 10. Keine alte Datei wurde
+korrigierend überschrieben; kein negativer mathematischer Befund folgt.
+
+### Anschluss an das inzwischen kanonische C0/C1-Interface
+
+Die C0-Quellenabbildungen sind bereits die kanonischen Nullfortsetzungen.
+Der hier quantitativ kontrollierte harmonische Kokzyklus beschreibt
+diese Abbildungen in beweglichen Koordinaten; er erfindet keine neuen
+physischen Übergänge. Seine q-orthogonalen Projektionen verwenden die
+auf dem endlichen Band separat bewiesene Positivität. Sie sind deshalb
+keine intrinsische Konstruktion eines positiven C1-Readouts oder
+gemeinsamen Prime-/Gamma-Mediators.
+
+Die uniforme Konditionierung und Energiebilanz dieses Hilfssatzes sind
+auf das genannte Band beschränkt. Sie ersetzen weder den beweglichen
+191D-Low/Profile-Nachweis noch ein nicht kollabierendes Fortsetzungsgesetz
+über weitere Bänder. Hauptfront bleibt gemäß der vorstehenden Stop-Regel
+**MOVING 191D LOW-BLOCK + PROFILE RESERVE RENEWAL** beziehungsweise die
+intrinsische kompatible C1-Mediatorgeometrie. Eine weitere Reihe rein
+mikroskopischer Breitenoptimierungen wird daraus nicht als Hauptfront
+abgeleitet. Die neuen Interface-Dateien von 0dea95c/56231ad bleiben
+unverändert erhalten.
