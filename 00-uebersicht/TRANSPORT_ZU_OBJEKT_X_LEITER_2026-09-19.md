@@ -690,3 +690,81 @@ verbessert werden.
 | Connected Unit-Window Coercivity | offen |
 | Strong Terminal | getrennt offen |
 | full C1-GEOM / Objekt X / globale Weil-Positivität / RH | offen |
+
+## Append 2026-09-19: Blockadaptive Fortsetzung bis B+5*10^-13
+
+Mathematischer Anker: `ca3849ab2a5abf6268ee892109a293332c1030e9`.
+Der parallele Summierbarkeitsbeitrag `6cbef9d` bleibt vollständig erhalten;
+eine quantitative Rundungskorrektur dazu steht am Ende dieses Nachtrags.
+Status: **AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN**.
+
+Das neue Paket
+[`block-adaptive-profile-transport-2026-09-19`](../research/x-c1/block-adaptive-profile-transport-2026-09-19/README.md)
+realisiert die getrennte Behandlung der Blockreserven an einem festen
+Core B=log(5)/2. Für alle tatsächlichen komplexen H1_0-Quellen unter genau
+den ursprünglichen zwei Mellinbedingungen gilt:
+
+| Rechter Endpunkt höchstens | Physischer All-Parity-Gap |
+| --- | --- |
+| B+10^-13 | >4*10^-15 |
+| B+5*10^-13 | >10^-15 |
+
+Der Odd-Gap ist jeweils >10^-12. Die äußere Breite ist **eine Million
+Mal größer** als die bisherige Breite 5*10^-19. Die bessere zertifizierte
+Gap-Untergrenze ist eine schärfere Abschätzung, kein Anstieg des wahren
+optimalen Gaps unter Nullfortsetzung.
+
+Zwei Verbesserungen tragen den Beweis:
+
+1. Eine Trennung der Core-Eingaben nahe dem Rand und im übrigen Core
+   verbessert die vollständige Tail-Profil-Kopplung. Die Eingaben sind
+   getrennt; Ausgaben in dieselbe Shell dürfen vollständig ausgerichtet sein.
+2. Der gesamte Low-Block wird in seiner eigenen Schur-Energiemetrik
+   ausgewertet. Logarithmischer Randterm und konstanter Kopplungsterm
+   werden mit ihrem vorzeichenbehafteten Mischterm exakt integriert.
+   Der Rest ist auf dem vollständigen Low-Raum und Shellprofil kontrolliert.
+
+Der relative Low-Profil-Abzug dieses benannten Vergleichs liegt auf
+dem äußeren Bereich unter 10^-3. Er ist nicht mit der tatsächlichen
+vollständigen Profil-Schur-Norm Theta gleichgesetzt. Beide Paritäten,
+sämtliche 31 Low-Richtungen, die vollständigen unendlichen Tails und
+alle Mischblöcke bleiben erhalten. Das analytische Zweitermodell ist
+keine endliche Shellersetzung ohne Fehlerkontrolle.
+
+71 neue exakte Prüfungen bestehen. 103 Eingabedateien sind nach Bytes, SHA-256 und Git-Blob gebunden. Beide
+Corematrizen, die vollständigen Gram-Ausdrücke, die Kopplungsvektoren und
+vier Vergleiche mit jeweils 31 positiven rationalen LDL-Pivots werden
+neu berechnet. Die gesamte Voraussetzungskette aus ca3849a wird ebenfalls
+reproduziert. Keine Quellenneuwahl, physische Renormierung, A1, zusätzliche
+Mellinbedingung, Quadratur oder numerischen Eigenwerte als Beweis.
+
+Aktualisierter positiver Stand:
+
+    All-Parity-Fenster 5*10^-19
+      -> blockadaptives All-Parity-Fenster 5*10^-13
+      -> getrennte Low-, Tail- und Profilbudgets an festem Core B.
+
+**Weiter offen:** Erneuerung dieser feineren Reserven an beweglichen
+Endpunkten oder gemeinsame Mehrschalenkontrolle mit genügend Gesamtbreite.
+Insbesondere folgen daraus kein nicht summierbarer Transport, kein
+Erreichen von log7/2, keine Connected Unit-Window Coercivity, kein
+historischer Strong Terminal und keine Konstruktion von Objekt X.
+Volle C1-GEOM, globale Weil-Positivität und RH bleiben offen. Die
+Summierbarkeitsbarriere der früheren reinen Globalgap-Regeln bleibt
+qualitativ bestehen. Reproduktion ist kein unabhängiges externes Audit.
+
+### Append-only Korrektur der Ceiling-Abschätzung aus 6cbef9d
+
+Für c=1600/epsilon_0 und N_n=ceil(2^n c) gilt im Allgemeinen nicht
+N_n>=2^n ceil(c). Am dort diskutierten epsilon_0=3*10^-16 ist
+N_0=5333333333333333334 und N_1=10666666666666666667<2N_0.
+Die dortige Zwischenabschätzung h_n<=(2^(-ceil(c)))^(2^n) ist deshalb
+in dieser Form nicht gültig.
+
+Die qualitative Schlussfolgerung wird durch K=floor(c) repariert:
+Für das tatsächliche Neustartregime 0<epsilon_0<=1 gilt K>=1600,
+s=2^(-K)<1/2 und h_n<=s^(2^n)<=s^(n+1). Also
+sum h_n<=s/(1-s)<2s<infinity. Abschnitt 9 des neuen Beweises gibt
+die vollständige Korrektur. Die explizite ca3849a-Folge mit per Definition
+N_n=2^n ceil(c) und das separate Target-Gap-Argument aus 6cbef9d sind
+hiervon nicht betroffen. Die historischen Dateien bleiben unverändert.
