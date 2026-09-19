@@ -609,3 +609,84 @@ analytische Beweis in `PROOF.md` bleibt extern zu prüfen; Reproduktion
 ist kein unabhängiges Audit. Keine neue Quellenwahl, kein A1, keine
 dritte Mellinbedingung, keine numerischen Eigenwerte oder Quadratur als
 Beweis. Die bisherigen Einträge dieser Leiter bleiben unverändert.
+
+
+---
+
+## Fortschrittsnachtrag — 19.09.2026, Scalar-Gap-Iterationsbarriere
+
+> **Mathematischer Anker:** `ca3849ab2a5abf6268ee892109a293332c1030e9`  
+> **Paralleler Restart-Satz:** `829019d7e62f936ab4db903bb9c7758edf427609`  
+> **Status:** `AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN`
+
+Das Paket
+`research/x-c1/scalar-gap-restart-summability-barrier-2026-09-19/`
+schließt ein negatives Struktur-Gate für die beiden derzeit bewiesenen
+skalaren Restartgesetze.
+
+### Exakte Barriere
+
+1. Beim Halbierungs-Restart aus `ca3849a`
+
+```text
+epsilon -> epsilon/2,
+h <= 2^(-ceil(1600/epsilon))
+```
+
+ist jede allein aus diesem Gesetz garantierte unendliche Schrittfolge
+summierbar.
+
+2. Beim Target-Gap-Restart aus `829019d` gilt für den Verlust
+`m=epsilon-gamma` unter anderem
+
+```text
+h <= 2 exp(-16/m).
+```
+
+Jede ausschließlich damit erzeugte Folge, deren zertifizierter Gap gegen
+einen positiven Grenzwert konvergiert, besitzt summierbare Verluste
+`sum m_n<infinity`; daraus folgt elementar `h_n<=m_n^2` für alle
+hinreichend großen `n` und damit ebenfalls `sum h_n<infinity`.
+
+Die Aussage betrifft **nur diese beiden hinreichenden skalaren
+Zertifikatsmechanismen**. Sie ist kein Negativitätsbefund für die Weil-Form.
+
+### Monotonie-Firewall
+
+Die exakte Nullfortsetzung liefert für den wahren optimalen Gap
+
+```text
+lambda(b) <= lambda(a)   für a<=b.
+```
+
+"Reserve Renewal" kann daher nicht bedeuten, dass der wahre optimale physische
+Gap nach rechts wieder anwächst. Erneuert oder getrennt transportiert werden
+müssen interne Reserven: Soft-Schur-, Low-, Tail-, Profil- oder andere
+Blockreserven.
+
+### Neuer positiver Frontpunkt
+
+Damit ist die nächste lokale Front enger gefasst:
+
+```text
+BLOCK-ADAPTIVE RESERVE RENEWAL / NON-SUMMABLE TRANSPORT
+```
+
+Gesucht ist ein Satz, der den kleinen endlichen Soft-Block explizit hält und
+die wesentlich größeren Hard-Tail-/Profilreserven separat bezahlt. Alternativ
+müsste das Breiten-Gesetz selbst von der exponentiellen
+Inverse-Reserve-Abhängigkeit auf eine mildere quantitative Abhängigkeit
+verbessert werden.
+
+| Stufe | Status |
+|---|---|
+| Reale All-Parity-Breite bis `B+5*10^-19` | geschlossen |
+| Bedingter Restart bis `b<=1` | geschlossen |
+| Shrinking-step Iteration | geschlossen |
+| Scalar-gap-only nicht-summierbarer Transport | **durch Barriere ausgeschlossen** |
+| Blockadaptive Reserve Renewal | **offen; nächster positiver Gate** |
+| Nicht-summierbarer / uniform-step Transport | offen |
+| Tatsächlicher Transport bis Kanal 7 | offen |
+| Connected Unit-Window Coercivity | offen |
+| Strong Terminal | getrennt offen |
+| full C1-GEOM / Objekt X / globale Weil-Positivität / RH | offen |

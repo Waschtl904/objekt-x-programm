@@ -1,0 +1,23 @@
+PASS anchor is ca3849a
+PASS parallel positive-floor restart is 829019d
+PASS four distinct immutable mathematical inputs
+PASS current largest-window gap is three e minus sixteen
+PASS first ca3849a halving exponent exact
+PASS first halving width is below one half
+PASS dyadic exponent doubles under gap halving
+PASS two to n dominates n plus one
+PASS halving-chain geometric majorant is summable
+PASS halving-chain total certified width below twice first width
+PASS Taylor quadratic coefficient witness is 128
+PASS two over 128 equals one over 64
+PASS positive-floor target losses telescope
+PASS summable positive losses have summable squares
+PASS 829019d scalar positive-floor widths are summable
+PASS exact zero-extension gap direction is nonincreasing
+PASS true physical gap renewal upward is excluded
+PASS barrier concerns certificate laws not Weil negativity
+PASS block-adaptive reserve transport remains an open escape route
+PASS non-summable transport is not claimed
+PASS channel seven endpoint is not claimed reached
+TOTAL 21 SCALAR-GAP BARRIER EXACT CHECKS PASS
+SCALAR-GAP-RESTART-SUMMABILITY-BARRIER-CLOSED

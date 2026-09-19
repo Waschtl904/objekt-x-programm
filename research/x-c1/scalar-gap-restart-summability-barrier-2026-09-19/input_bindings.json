@@ -1,0 +1,30 @@
+{
+  "anchor": "ca3849ab2a5abf6268ee892109a293332c1030e9",
+  "files": [
+    {
+      "bytes": 22770,
+      "git_blob": "eb624f6829d7aac9118fb963117802e7c3e3820c",
+      "path": "research/x-c1/all-parity-window-and-restart-2026-09-19/PROOF.md",
+      "sha256": "eb22fca82973b85d316d480132604338aaecde9501bd91dabc72db6a692e66d7"
+    },
+    {
+      "bytes": 43898,
+      "git_blob": "9b665ce674a2f68e7f6a24221d8268175faf4ff5",
+      "path": "research/x-c1/all-parity-window-and-restart-2026-09-19/restart_results.json",
+      "sha256": "14c6a1c72a3c9b6781f7557cee6d7e3bb65c5c0a39bfc7a99ef2c6362b3c37c8"
+    },
+    {
+      "bytes": 11105,
+      "git_blob": "4cc66051808aad08579d10a9eba2eb0bf673e227",
+      "path": "research/x-c1/all-parity-shrinking-step-iteration-2026-09-19/PROOF.md",
+      "sha256": "d8adfac48be1347a09316c991cddad70784fa7e994a0027c8137656734bcefff"
+    },
+    {
+      "bytes": 6778,
+      "git_blob": "151ae5b5e6507b4eb2700931f133757415110cb9",
+      "path": "research/x-c1/window-gap-monotonicity-2026-09-18/PROOF.md",
+      "sha256": "b82e672cb447039cbe48278b82b98d171fcd88ae52dd4032363b4234ede8c983"
+    }
+  ],
+  "parallel_restart": "829019d7e62f936ab4db903bb9c7758edf427609"
+}
