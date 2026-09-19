@@ -1,0 +1,58 @@
+INHERITED all-core 40 PASS; direction 31 PASS; coordinate 28 PASS; shell 43 PASS; A-gauge 9 PASS
+PASS anchor retains the published tiny-window entire-core theorem
+PASS 65 distinct pinned input files
+PASS all inherited input bytes SHA256 and Git blob hashes match
+PASS entire inherited proof chain reproduces
+PASS psi norm lies between one half and nine sixteenths
+PASS psi energy lies between seven fiftieths and three twentieths
+PASS bounded trace functional yields ell norm below 1943
+PASS full transition squared constant is exact
+PASS full transition norm below 3111
+PASS inverse weighted Cauchy constant below three
+PASS inverse norm upper sqrt three is below two
+PASS core transition squared constant is exact
+PASS core transition norm below 1458
+PASS complete inverse form product bound below 1 plus 9e12
+PASS A-orthogonal source energy denominator strictly positive
+PASS complete shell residual bound is nonnegative and below 5e-18
+PASS full A-gauge direction quotient below 7.55e-6
+PASS preserved actual Schur remainder is above 5.449e-13
+PASS direct energy minus entire residual supports the same positive floor
+PASS conditional complement example yields theta below one
+PASS conditional Schur margin equals 19849 over 20000000
+PASS the full original width remains explicitly uncertified
+PASS the existing tiny-window full-core result is preserved
+PASS existing full A-gauge tiny-window bound remains sharper than split bound
+PASS forward lands in ell kernel using ell psi equals one
+PASS forward then inverse restores both core and shell coefficients
+PASS inverse then forward restores both core and shell coefficients
+PASS negative control detects a wrong inverse shell sign
+PASS physical core and moment-corrector image is unchanged
+PASS joint H1 trace transports forward exactly
+PASS joint H1 trace transports backward exactly
+PASS fixed physical source transforms to fA and alpha e
+PASS fixed physical source endpoint traces cancel exactly
+PASS full complex block congruence is an exact polynomial identity
+PASS negative control detects omitted complex trace-shell cross
+PASS forward product-energy majorant retains the subtracted trace energy
+PASS conditional mixed Gram determinant retains every term
+PASS full block and Schur factors are not identified
+T_A_L2_norm_squared_upper ['9678321.00000000000000000000000000000000', '9678321.00000000000000000000000000000000']
+T_A_L2_norm_squared_finer_upper ['9674076.56250000000000000000000000000000', '9674076.56250000000000000000000000000000']
+T_A_L2_lower_squared ['0.33333333333333333333333333333333', '0.33333333333333333333333333333334']
+T_A_inverse_L2_norm_squared_upper ['3.00000000000000000000000000000000', '3.00000000000000000000000000000000']
+core_U_L2_norm_squared_upper ['2125764.00000000000000000000000000000000', '2125764.00000000000000000000000000000000']
+core_inverse_V_L2_norm_upper ['1.00000000000000000000000000000000', '1.00000000000000000000000000000000']
+form_product_forward_factor_upper ['2.00000000000000000000000000000000', '2.00000000000000000000000000000000']
+form_product_inverse_factor_upper ['9000000000001.00000000000000000000000000000000', '9000000000001.00000000000000000000000000000000']
+fixed_source_alpha ['-0.00000005342822828315496000414143', '-0.00000005342822828315496000408793']
+fixed_A_coordinate_energy ['0.00000000000054490682972024025643', '0.00000000000054490682972024026076']
+fixed_A_coordinate_eta ['0.00000000000000000000000000000000', '0.00000754787047326073295903257262']
+published_A_direction_eta_upper ['0.00000755000000000000000000000000', '0.00000755000000000000000000000000']
+invariant_Schur_remainder ['0.00000000000054490271683406953291', '0.00000000000054490682972024026076']
+conditional_example_complement_target ['0.99900000000000000000000000000000', '0.99900000000000000000000000000000']
+conditional_example_full_Theta_upper ['0.99900755000000000000000000000000', '0.99900755000000000000000000000000']
+conditional_example_mixed_squared_upper ['0.00000754245000000000000000000000', '0.00000754245000000000000000000000']
+conditional_example_Schur_margin ['0.00099245000000000000000000000000', '0.00099245000000000000000000000000']
+TOTAL 38 NEW EXACT CHECKS PASS
+GAUGE-TRANSITION-AND-CONGRUENCE-CLOSED / FULL-ORIGINAL-WIDTH-COMPLEMENT-UNDECIDED
