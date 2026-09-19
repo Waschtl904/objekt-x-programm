@@ -1,0 +1,151 @@
+INHERITED odd 51 PASS; even 41 PASS; transition 38 PASS; all-core 40 PASS; direction 31 PASS; coordinate 28 PASS; shell 43 PASS; A-gauge 9 PASS; universal regressions 349 PASS
+PASS 95 distinct input files match pinned bytes SHA256 and Git blobs
+PASS 349 universal-family regression checks and five payload hashes reproduce
+PASS fixed core endpoint and enlarged window lie below one
+PASS enlarged fixed-core window contains only channels 2 3 4 5
+PASS four fixed-core input intervals remain inside the positive half
+PASS four fixed-core input intervals remain pairwise disjoint
+PASS even complete core-profile coupling stays below four at enlarged width
+even_enlarged_complete_coupling_upper ['3.821887940083631089735206', '3.821887940083631089735207']
+PASS odd complete core-profile coupling stays below four at enlarged width
+odd_enlarged_complete_coupling_upper ['3.821888266766963997920162', '3.821888266766963997920163']
+PASS largest window logarithm is enclosed by 214 over 5 and 43
+PASS even profile moment loss remains below one
+PASS odd profile moment loss remains below one
+PASS all window loss and squared low-coupling bounds increase with width
+PASS physical factor six remains valid for both profile lifts
+PASS high-profile payment leaves the same exact tail deduction
+PASS window_1 directed logarithm enclosure
+PASS window_1 remaining shell floor positive after paying sixty
+window_1_width ['0.000000000000000000100000', '0.000000000000000000100000']
+window_1_logarithm ['44.442263947446813305759069', '44.442263947446813305759070']
+window_1_remaining_profile_floor ['11.000000000000000000000000', '11.000000000000000000000000']
+PASS window_1 even baseline scalar deduction matches parent
+PASS window_1 even exact scalar matrix transport keeps positive reserve
+PASS window_1 even inverse shear bounded by integer square root
+PASS window_1 even physical gap exceeds published rational bound
+window_1_even_new_low_reserve ['0.000000000001064334763595', '0.000000000001064334763596']
+window_1_even_scalar_deduction_increment ['0.000000000000173362551272', '0.000000000000173362551273']
+window_1_even_exact_effective_tail_floor ['0.439281961783385512514372', '0.439281961783385512514373']
+window_1_even_low_profile_squared_bound ['0.000000000002068430400000', '0.000000000002068430400000']
+window_1_even_inverse_shear_squared_bound ['55.892938440964000000000000', '55.892938440964000000000000']
+window_1_even_physical_gap_lower ['0.000000000000003173730568', '0.000000000000003173730569']
+window_1_even_published_gap ['0.000000000000003000000000', '0.000000000000003000000000']
+PASS window_1 odd baseline scalar deduction matches parent
+PASS window_1 odd exact scalar matrix transport keeps positive reserve
+PASS window_1 odd inverse shear bounded by integer square root
+PASS window_1 odd physical gap exceeds published rational bound
+window_1_odd_new_low_reserve ['0.000000000486751082210215', '0.000000000486751082210216']
+window_1_odd_scalar_deduction_increment ['0.000000000000484322642424', '0.000000000000484322642425']
+window_1_odd_exact_effective_tail_floor ['0.454666577168000897129757', '0.454666577168000897129758']
+window_1_odd_low_profile_squared_bound ['0.000000000005776000000000', '0.000000000005776000000000']
+window_1_odd_inverse_shear_squared_bound ['52.370463721536000000000000', '52.370463721536000000000000']
+window_1_odd_physical_gap_lower ['0.000000000001549063624865', '0.000000000001549063624866']
+window_1_odd_published_gap ['0.000000000001000000000000', '0.000000000001000000000000']
+PASS window_2 directed logarithm enclosure
+PASS window_2 remaining shell floor positive after paying sixty
+window_2_width ['0.000000000000000000400000', '0.000000000000000000400000']
+window_2_logarithm ['43.055969586326922686924605', '43.055969586326922686924606']
+window_2_remaining_profile_floor ['9.000000000000000000000000', '9.000000000000000000000000']
+PASS window_2 even baseline scalar deduction matches parent
+PASS window_2 even exact scalar matrix transport keeps positive reserve
+PASS window_2 even inverse shear bounded by integer square root
+PASS window_2 even physical gap exceeds published rational bound
+window_2_even_new_low_reserve ['0.000000000000361948290868', '0.000000000000361948290869']
+window_2_even_scalar_deduction_increment ['0.000000000000875749024000', '0.000000000000875749024000']
+window_2_even_exact_effective_tail_floor ['0.439281961783385512514372', '0.439281961783385512514373']
+window_2_even_low_profile_squared_bound ['0.000000000008013830400000', '0.000000000008013830400000']
+window_2_even_inverse_shear_squared_bound ['55.892938440964000000000000', '55.892938440964000000000000']
+window_2_even_physical_gap_lower ['0.000000000000001079290458', '0.000000000000001079290459']
+window_2_even_published_gap ['0.000000000000001000000000', '0.000000000000001000000000']
+PASS window_2 odd baseline scalar deduction matches parent
+PASS window_2 odd exact scalar matrix transport keeps positive reserve
+PASS window_2 odd inverse shear bounded by integer square root
+PASS window_2 odd physical gap exceeds published rational bound
+window_2_odd_new_low_reserve ['0.000000000484782835341528', '0.000000000484782835341529']
+window_2_odd_scalar_deduction_increment ['0.000000000002452569511111', '0.000000000002452569511112']
+window_2_odd_exact_effective_tail_floor ['0.454666577168000897129757', '0.454666577168000897129758']
+window_2_odd_low_profile_squared_bound ['0.000000000022440040000000', '0.000000000022440040000000']
+window_2_odd_inverse_shear_squared_bound ['52.370463721536000000000000', '52.370463721536000000000000']
+window_2_odd_physical_gap_lower ['0.000000000001542799766929', '0.000000000001542799766930']
+window_2_odd_published_gap ['0.000000000001000000000000', '0.000000000001000000000000']
+PASS window_3 directed logarithm enclosure
+PASS window_3 remaining shell floor positive after paying sixty
+window_3_width ['0.000000000000000000500000', '0.000000000000000000500000']
+window_3_logarithm ['42.832826035012712931158310', '42.832826035012712931158311']
+window_3_remaining_profile_floor ['8.600000000000000000000000', '8.600000000000000000000000']
+PASS window_3 even baseline scalar deduction matches parent
+PASS window_3 even exact scalar matrix transport keeps positive reserve
+PASS window_3 even inverse shear bounded by integer square root
+PASS window_3 even physical gap exceeds published rational bound
+window_3_even_new_low_reserve ['0.000000000000124745053658', '0.000000000000124745053659']
+window_3_even_scalar_deduction_increment ['0.000000000001112952261209', '0.000000000001112952261210']
+window_3_even_exact_effective_tail_floor ['0.439281961783385512514372', '0.439281961783385512514373']
+window_3_even_low_profile_squared_bound ['0.000000000009697608000000', '0.000000000009697608000000']
+window_3_even_inverse_shear_squared_bound ['55.892938440964000000000000', '55.892938440964000000000000']
+window_3_even_physical_gap_lower ['0.000000000000000371976189', '0.000000000000000371976190']
+window_3_even_published_gap ['0.000000000000000300000000', '0.000000000000000300000000']
+PASS window_3 odd baseline scalar deduction matches parent
+PASS window_3 odd exact scalar matrix transport keeps positive reserve
+PASS window_3 odd inverse shear bounded by integer square root
+PASS window_3 odd physical gap exceeds published rational bound
+window_3_odd_new_low_reserve ['0.000000000484109638235585', '0.000000000484109638235586']
+window_3_odd_scalar_deduction_increment ['0.000000000003125766617054', '0.000000000003125766617055']
+window_3_odd_exact_effective_tail_floor ['0.454666577168000897129757', '0.454666577168000897129758']
+window_3_odd_low_profile_squared_bound ['0.000000000027232200000000', '0.000000000027232200000000']
+window_3_odd_inverse_shear_squared_bound ['52.370463721536000000000000', '52.370463721536000000000000']
+window_3_odd_physical_gap_lower ['0.000000000001540657347144', '0.000000000001540657347145']
+window_3_odd_published_gap ['0.000000000001000000000000', '0.000000000001000000000000']
+PASS largest width is fifty times the inherited window
+PASS all possible channels through unit half-width are 2 3 4 5 7
+PASS uniform channel 2 weight below one
+PASS uniform channel 3 weight below one
+PASS uniform channel 4 weight below one
+PASS uniform channel 5 weight below one
+PASS uniform channel 7 weight below one
+PASS kappa bounded by six using Euler gamma below one
+PASS uniform bounded non-Gamma remainder below sixteen
+PASS uniform two original moment weights bounded by six fifths and three fifths
+PASS uniform corrector moments bounded away from zero
+PASS uniform even corrector supremum Lipschitz and squared norm bounds
+PASS uniform odd corrector supremum Lipschitz and squared norm bounds
+PASS even corrector Gamma pointwise coefficients
+PASS odd corrector Gamma pointwise coefficients
+PASS uniform even complete corrector functional at most 225
+PASS uniform odd complete corrector functional at most 1230
+PASS uniform Gamma coupling below three
+PASS both moment corrections bounded by 738 sqrt h
+PASS uniform entire core-profile mixed operator below fourteen
+uniform_complete_core_profile_coupling_upper ['12.221442208846950076474309', '12.221442208846950076474310']
+PASS shell prime self-interactions paid even at channel entrance
+PASS uniform shell lower floor exceeds twice L minus eighteen
+PASS bounded core to shell loss includes all five channels
+PASS even profile correction fits uniform loss 12 L plus 1400
+PASS odd profile correction fits uniform loss 12 L plus 1400
+PASS uniform cap logarithm lies between 42 and 43
+PASS uniform moment loss below one and increases with h
+PASS uniform profile floor exceeds L
+PASS moment-corrector squared cost at most 72 h
+PASS uniform lift and inverse Hilbert bounds
+PASS anisotropic physical norm bounded by three halves core plus three profile
+PASS closed-form graph comparison constants
+PASS dyadic width bound lies inside uniform cap
+PASS log two is larger than one half
+PASS restart threshold gives L greater than 800 over epsilon
+PASS full relative profile Schur norm below one quarter
+PASS full relative Schur reserve above 151 over 200
+PASS physical Young payment leaves sixteen over epsilon
+PASS anisotropic physical estimate gives half of input gap
+PASS first exact restart exponent is the integer ceiling
+PASS all dyadic iterates retain the restart threshold algebraically
+PASS iteration total width bound remains within unit half-width
+PASS squared step recurrence has a summable geometric majorant
+restart_initial_gap ['0.000000000000000300000000', '0.000000000000000300000000']
+restart_initial_exponent ['5333333333333333334.000000000000000000000000', '5333333333333333334.000000000000000000000000']
+restart_Theta_upper ['0.245000000000000000000000', '0.245000000000000000000000']
+restart_relative_Schur_floor ['0.755000000000000000000000', '0.755000000000000000000000']
+restart_gap_retained_fraction ['0.500000000000000000000000', '0.500000000000000000000000']
+uniform_width_cap ['0.000000000000000001000000', '0.000000000000000001000000']
+PASS odd 51 even 41 and the entire inherited chain reproduce
+TOTAL 88 NEW EXACT CHECKS PASS
+FIFTYFOLD-ALL-PARITY-WINDOW-AND-QUANTITATIVE-CONDITIONAL-RESTART

@@ -538,3 +538,74 @@ also entweder
 
 Erst ein solcher Mechanismus wäre ein ernsthafter Übergang von lokaler
 Restartability in Richtung Connected Unit-Window Coercivity.
+
+## Append 2026-09-19: Fünfzigfaches All-Parity-Fenster und quantitatives Neustartlemma
+
+Aufbauend auf `a659047e00d024c0daa3991ea59fd21afd9f8793` liefert
+[`all-parity-window-and-restart-2026-09-19`](../research/x-c1/all-parity-window-and-restart-2026-09-19/README.md)
+zwei getrennte Fortschritte. Status bleibt **AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN**.
+
+Der parallele Nachtrag aus `829019d7e62f936ab4db903bb9c7758edf427609`
+mit positivem uniformen Gap-Floor seiner schrumpfenden Kette bleibt
+vollständig bestehen. Die unten gewählte Halbungskette ist eine andere,
+schwächere Gap-Strategie. Der neue Beitrag dieses Pakets liegt in der
+fünfzigfachen tatsächlichen Fensterbreite und der größeren bedingten
+Endpunktreichweite bis b<=1 samt Kanal 7, nicht in einer Rücknahme des
+bereits eingetragenen positiven Gap-Floors.
+
+Für B=log(5)/2 sind jetzt folgende geschachtelte All-Source-Bereiche
+unter genau den ursprünglichen zwei Mellinbedingungen zertifiziert:
+
+| Endpunkt b höchstens | Physischer All-Parity-Gap |
+| --- | --- |
+| B+10^-19 | >3*10^-15 |
+| B+4*10^-19 | >10^-15 |
+| B+5*10^-19 | >3*10^-16 |
+
+Der Odd-Gap bleibt jeweils >10^-12. Die maximale neue Breite ist
+fünfzigmal so groß wie 10^-20. Beide vollständigen ursprünglichen
+Schur-Matrizen und unendlichen Tails werden reproduziert; die Erweiterung
+folgt aus einem exakt rationalen zusätzlichen skalaren Schalenabzug.
+Die früheren stärkeren Aussagen auf kleineren Intervallen bleiben gültig.
+Die früheren relativen A-Gauge-Konstanten werden hier nicht ungeprüft
+auf das größere Fenster übertragen.
+
+Das neue bedingte Neustartlemma gilt mit uniformen analytischen Konstanten
+für B<=a<b<=1: Aus q_a>=epsilon I, 0<epsilon<=1, und
+0<b-a<=2^(-ceil(1600/epsilon)) folgt q_b>=(epsilon/2)I.
+Die tatsächliche vollständige Profil-Schur-Norm erfüllt Theta<49/200.
+Kontrolliert sind vollständiger Kern, sämtliche Mischblöcke, Formbereiche,
+Konditionierung, beide Mellinbedingungen und alle möglichen Kanäle
+2,3,4,5,7 einschließlich neu eintretender Schalen-Selbstwechselwirkungen.
+Separate mitwandernde Legendre-Tailkonstanten werden durch volle
+Kernkoerzivität und volle Kern-Profil-Operatorkontrolle ersetzt.
+
+Ein konkreter Start ist a_0=B+5*10^-19, epsilon_0=3*10^-16. Mit
+N_0=5333333333333333334, N_n=2^n N_0 und h_n=2^(-N_n) ist jeder endliche
+Schritt a_(n+1)=a_n+h_n mit Gap epsilon_0/2^(n+1) zertifiziert.
+Die Breiten erfüllen aber h_(n+1)=h_n^2 und sum h_n<2^(1-N_0).
+Die garantierte Kette akkumuliert und ihr Gap geht gegen null. Sie
+erreicht insbesondere keinen neuen Prime-Power-Eintritt.
+
+Damit gilt die aktualisierte Leiter:
+
+    lokales All-Parity-Fenster 10^-20
+      -> All-Parity-Fenster 5*10^-19
+      -> uniformes bedingtes Neustartlemma mit explizitem Gapverbrauch
+      -> jeder endliche Schritt einer summierbaren Neustartkette.
+
+**Weiter offen:** Reserveerneuerung beziehungsweise nicht summierbarer
+zertifizierter Fortschritt, positiver Grenzendpunkt-Gap dieser Halbungskette, Connected
+Unit-Window Coercivity, historisches P11/R43 Strong Terminal, C1-GEOM,
+Objekt X, globale Weil-Positivität und RH. Die neue Aussage ist kein
+uniform koerziver Transport über unendlich viele Schritte. Ein Scheitern
+eines hinreichenden Vergleichs wäre UNDECIDED, keine negative Quelle.
+
+88 neue exakte Prüfungen bestehen. 95 Eingabedateien sind nach Bytezahl, SHA-256 und Git-Blob gebunden;
+reproduziert werden die 51/41/38/40/31/28/43/9-Kette und 349 universelle
+algebraische Regressionen. Ganzzahlen, rationale Zahlen und gerichtete
+Intervalle tragen alle arithmetischen Entscheidungen. Der vollständige
+analytische Beweis in `PROOF.md` bleibt extern zu prüfen; Reproduktion
+ist kein unabhängiges Audit. Keine neue Quellenwahl, kein A1, keine
+dritte Mellinbedingung, keine numerischen Eigenwerte oder Quadratur als
+Beweis. Die bisherigen Einträge dieser Leiter bleiben unverändert.
