@@ -400,3 +400,19 @@ Injektivitätstest hineingelesen werden.
 
 <!-- priority-attribution-marker: id=OBJ_X_DEF uuid=e0adf7eb-7461-4d72-8ed6-97d4bf8c4c29 canary-id=065e27e9-900e-7dd8-51b1-f4feb7303ca2 pre-mark-sha256=b3c66124bba5dc66174601e5d75a29fa2f6a679419cb316b388f8caca595e1a9 -->
 <!-- Attribution: Sebastian Schmalnauer (Waschtl904). CC-BY-4.0. See /ATTRIBUTION.md and /.canary. -->
+
+
+---
+
+## Interface-Begleitdokument — 19.09.2026
+
+Die aktuelle Arbeitsdefinition bleibt unverändert. Für die inzwischen
+bewiesenen lokalen Shell-Schur-Strukturen und ihre genaue Abgrenzung zu einem
+vollständigen X-Kandidaten gilt ergänzend:
+
+`00-uebersicht/OBJEKT_X_INTERFACE_2026-09-19.md`
+
+Dort werden das bereits kanonische C0-Quellen-/Form-Direktsystem und die noch
+offene C1-Schicht der intrinsischen positiven Prime-/Gamma-Mediatorgeometrie
+getrennt ausgewiesen. Insbesondere ist die source-level Komposition der
+Nullfortsetzungen nicht mehr als offene X-Schnittstelle zu führen.

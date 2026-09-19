@@ -858,3 +858,53 @@ MOVING 191D LOW-BLOCK + PROFILE RESERVE RENEWAL
 Ein positiver Tailfloor allein beweist weder die Positivität des
 191-dimensionalen beweglichen Low-Blocks noch einen nicht-summierbaren
 Fenstertransport.
+
+
+---
+
+## Strategische Stop-Regel und X-Interface — 19.09.2026
+
+Der Transportstrang und der X-Strang werden ab diesem Stand ausdrücklich
+getrennt.
+
+### Transport
+
+Hauptfront ist ausschließlich ein skalierbarer Fortschritt, derzeit
+
+```text
+MOVING 191D LOW-BLOCK + PROFILE RESERVE RENEWAL
+```
+
+mit dem Ziel eines nicht summierbaren beziehungsweise uniformen
+All-Parity-Transports.
+
+Reine mikroskopische Fensterverbesserungen ohne neues Skalierungsgesetz werden
+nicht mehr als strategische Hauptfront geführt.
+
+### Objekt X
+
+Das neue Interface-Dokument
+
+`00-uebersicht/OBJEKT_X_INTERFACE_2026-09-19.md`
+
+hält fest: Die physischen Quellenräume besitzen bereits kanonische
+kompositionale Nullfortsetzungen und eine exakt kompatible Hermiteform.
+Damit ist auf dieser Ebene ein C0-Direktsystem vorhanden.
+
+Offen ist die C1-Schicht: intrinsische positive Readouts und Mediatorräume,
+deren Übergänge mit den Quellenabbildungen intertwinen und Prime/Gamma als
+Komponenten derselben positiven Geometrie erklären.
+
+### Commit-Filter
+
+Ein weiterer technischer Commit zählt als strategischer Transport-/X-Schritt
+nur, wenn er mindestens eine der folgenden Fragen schließt:
+
+- nicht summierbare oder uniforme Transportskalierung;
+- erneuerbare bewegliche Blockreserve;
+- Moving-191D-Low/Profile-Interface;
+- kanonischer positiver Readout-/Mediatorübergang;
+- neues Kompositions-/Intertwininggesetz;
+- intrinsische gemeinsame Prime-/Gamma-Geometrie;
+- ausdrücklich benannte C1-/Objekt-X-Schnittstelle;
+- globale Testklasse beziehungsweise exakte Weil-Gram-Identität.
