@@ -445,3 +445,96 @@ Keine zusätzliche Mellinbedingung, keine A1, keine Quadratur oder
 numerischen Eigenwerte als Beweis, keine neue Quellenwahl. Reproduktion
 ist keine unabhängige externe Prüfung. `main` bleibt der eingefrorene
 PR-#137-Milestone; kein neuer PR, kein Merge.
+
+
+---
+
+## Fortschrittsnachtrag — 19.09.2026, Restart- und schrumpfende Iterationsstufe
+
+> **Mathematischer Anker:** `a659047e00d024c0daa3991ea59fd21afd9f8793`  
+> **Status:** `AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN`
+
+Der lokale All-Parity-Satz ist nicht nur am einmaligen Fenster
+`B+10^-20` verfügbar. Das Paket
+`research/x-c1/all-parity-shrinking-step-iteration-2026-09-19/`
+beweist ein eigenständiges Restart-Lemma auf einem festen lokalen
+Endpunktband rechts von `B=log(5)/2`.
+
+### Restart-Lemma
+
+Besitzt ein bereits erreichter Endpunkt `a` auf
+
+`B <= a <= B+10^-2`
+
+einen vollständigen All-Parity-Gap `epsilon>0`, dann kann für jedes
+`0<gamma<epsilon` eine explizit kleine neue rechte Shellbreite `h>0`
+gewählt werden, so dass am neuen Endpunkt `a+h` wieder der vollständige
+All-Parity-Gap mindestens `gamma` gilt.
+
+Die Even- und Odd-Profilkorrektoren, der aktive Prime-Power-Satz
+`{2,3,4,5}`, die disjunkte Core-Eingabegeometrie, die vollständige
+Core/Profile-Kopplung `<4` und der Profilboden sind auf diesem Band
+endpoint-uniform. Nur die zulässige Schrittweite hängt vom ausgegebenen
+Gap-Budget `epsilon-gamma` ab.
+
+### Explizite unendliche Kette
+
+Ausgehend von
+
+`b_0=B+10^-20`, `epsilon_0=3*10^-15`
+
+werden
+
+`N_n=4*10^16*2^n`,
+`h_n=2^(-N_n)`,
+`b_(n+1)=b_n+h_n`
+
+und
+
+`epsilon_n=10^-15*(1+2^(1-n))`
+
+gewählt. Dann ist `b_(n+1)>b_n` für jedes `n`, und am gesamten Endpunkt
+`b_n` gilt der vollständige All-Parity-Gap mindestens `epsilon_n`.
+Insbesondere bleibt an jedem endlichen Schritt
+
+`epsilon_n>10^-15`.
+
+Die gesamte zusätzliche Breite dieser unendlichen Kette ist kleiner als
+`10^-20`; die Schrittweiten schrumpfen sehr stark.
+
+### Präzise Statusgrenze
+
+| Stufe | Neuer Status |
+|---|---|
+| Local All-Parity bis `B+10^-20` | geschlossen |
+| Restart von einem neu positiven Endpunkt | **geschlossen** |
+| Unendliche shrinking-step Iteration mit positivem Gap-Floor | **geschlossen** |
+| Uniforme positive Schrittweite `h_n>=h_*>0` | offen |
+| Nicht-summierbarer / makroskopischer Fenstertransport | offen |
+| Übergang über `log(7)/2` mit dem Iterationsmechanismus | offen |
+| Connected Unit-Window Coercivity | offen |
+| Strong Terminal | getrennt offen |
+| full C1-GEOM / Objekt X / globale Weil-Positivität / RH | offen |
+
+Damit ist `Iteration Lemma` nur in der präzisen Form
+**shrinking-step restartability** erreicht. Die stärkere Form eines
+uniformen positiven Schritts ist nicht bewiesen und darf nicht aus der
+Existenz der obigen Kette abgeleitet werden.
+
+### Neuer Frontpunkt
+
+Der nächste strukturelle Gate ist nun:
+
+```text
+UNIFORM-STEP / NON-SUMMABLE WINDOW TRANSPORT
+```
+
+also entweder
+
+1. eine positive Schrittuntergrenze, die bei wiederholter Anwendung nicht
+   gegen null kollabiert, oder
+2. eine andere quantitative Window-Amplification, die einen tatsächlich
+   makroskopischen Endpunkt erreicht.
+
+Erst ein solcher Mechanismus wäre ein ernsthafter Übergang von lokaler
+Restartability in Richtung Connected Unit-Window Coercivity.
