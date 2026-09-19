@@ -1,0 +1,26 @@
+PASS reduced core orthogonal 0
+PASS gauge core identity 0
+PASS gauge shell identity 0
+PASS reduction idempotent core 0
+PASS reduction idempotent shell 0
+PASS gauge invariance 0
+PASS reduced core orthogonal 1
+PASS gauge core identity 1
+PASS gauge shell identity 1
+PASS reduction idempotent core 1
+PASS reduction idempotent shell 1
+PASS gauge invariance 1
+PASS reduced core orthogonal 2
+PASS gauge core identity 2
+PASS gauge shell identity 2
+PASS reduction idempotent core 2
+PASS reduction idempotent shell 2
+PASS gauge invariance 2
+PASS kernel generator reduces to zero
+PASS shell delta below inherited epsilon
+PASS conditioning denominator exact
+PASS reduced base gap exact
+PASS inverse-free scalar inequality 0
+PASS inverse-free scalar inequality 1
+PASS inverse-free scalar inequality 2
+TOTAL 25
