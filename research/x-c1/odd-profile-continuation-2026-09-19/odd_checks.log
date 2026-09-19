@@ -1,0 +1,132 @@
+INHERITED even-width 41 PASS; transition 38 PASS; all-core 40 PASS; direction 31 PASS; coordinate 28 PASS; shell 43 PASS; A-gauge 9 PASS
+PASS 81 distinct pinned input files and provenance commits match
+PASS original target width and logarithm bounds
+PASS physical support endpoint remains below one
+PASS only prime powers 2 3 4 5 are active
+PASS odd shell moment coefficient at most three fifths
+PASS positive-series sinh t over t bound at t one half
+PASS exact odd corrector moment lower integral coefficient
+PASS odd corrector positive-half moment exceeds two seventy-fifths
+PASS odd corrector supremum below ten
+PASS odd corrector Lipschitz constant below 47
+PASS odd corrector full physical norm squared below 200
+PASS odd corrector Gamma action pointwise majorant
+PASS odd corrector Gamma action L2 norm below 1000
+PASS odd corrector bounded remainder below 200
+PASS complete odd corrector functional bounded by 1200
+odd_corrector_moment_lower ['0.026982191603960780678960', '0.026982191603960780678961']
+odd_corrector_Gamma_action_norm_squared_upper ['980800.000000000000000000000000', '980800.000000000000000000000000']
+odd_corrector_nonpole_functional_norm_upper ['1200.000000000000000000000000', '1200.000000000000000000000000']
+PASS four reflected odd core input intervals stay inside the positive half
+PASS all four prime input intervals are disjoint uniformly
+prime_2_input_left_at_h0 ['0.111571775657104877883147', '0.111571775657104877883148']
+prime_2_input_right_at_h0 ['0.111571775657104877893147', '0.111571775657104877893148']
+prime_3_input_left_at_h0 ['0.293893332451059504084865', '0.293893332451059504084866']
+prime_3_input_right_at_h0 ['0.293893332451059504094865', '0.293893332451059504094866']
+prime_4_input_left_at_h0 ['0.581575404902840431524084', '0.581575404902840431524085']
+prime_4_input_right_at_h0 ['0.581575404902840431534084', '0.581575404902840431534085']
+prime_5_input_left_at_h0 ['0.804718956217050187290379', '0.804718956217050187290380']
+prime_5_input_right_at_h0 ['0.804718956217050187300379', '0.804718956217050187300380']
+PASS entire odd core-profile pairing is bounded by four
+prime_weight_square_sum ['1.280714159505558716817620', '1.280714159505558716817621']
+complete_disjoint_prime_coupling_upper ['1.600446287449571808851691', '1.600446287449571808851692']
+complete_Gamma_coupling_upper ['2.221441469237762653655380', '2.221441469237762653655381']
+complete_odd_core_profile_coupling_upper ['3.821887828687334462507071', '3.821887828687334462507072']
+published_odd_core_profile_coupling_upper ['4.000000000000000000000000', '4.000000000000000000000000']
+PASS odd profile moment losses have coefficients 12 and 1140
+PASS odd profile loss is increasing throughout the interval
+PASS odd profile uniform loss is below one
+PASS odd profile shell floor is above 75
+odd_profile_uniform_loss_upper ['0.000000000000000017040000', '0.000000000000000017040000']
+odd_profile_shell_floor_lower ['75.000000000000000000000000', '75.000000000000000000000000']
+PASS odd exact moment ratios have magnitude below two
+PASS odd low-space physical supremum constant 110
+PASS odd low-space moment correction paid by 1440
+PASS odd low-profile squared coefficient is monotone
+PASS odd uniform low-profile amplitude 7820 sqrt h0
+PASS high-profile Young payment and positive remainders
+PASS odd profile lift squared norm below four
+PASS odd physical inverse coordinate squared constant two
+PASS odd physical forward reference-coordinate squared constant six
+PASS complete odd form graph uses a positive closed physical norm
+PASS endpoint range for uniform Gamma model
+PASS active prime powers 2,3,4 with von Mangoldt weights
+PASS positive decreasing regular Gamma floor
+endpoint_a ['0.804718956217050187300379', '0.804718956217050187300380']
+q0 ['-2.197830546078043655772457', '-2.197830546078043655772456']
+uniform_Gamma_error ['0.000000000000000000229770', '0.000000000000000000229771']
+joint_shift_operator_norm_upper ['1.674004871437481941312235', '1.674004871437481941312236']
+PASS kernel and shift norms used for moment reconstruction
+PASS low basis Qnorm ingredient 1
+PASS exact 31-dimensional low space and full tail starting at degree 65
+PASS global moment norm below square root two
+PASS moment-corrected full high-tail coupling below 41 over 10
+PASS tail remains above 0.454 after high-profile payment
+PASS tail physical coercivity above 0.734 with exact norm correction
+odd_beta ['0.000739969782224899503368', '0.000739969782224899503369']
+odd_moment_tail_operator_error ['0.000000000000000000000000', '0.000000000000000000000001']
+odd_Gamma_form_error ['0.000000000000000000739601', '0.000000000000000000739602']
+odd_infinite_moment_form_error ['0.000000000000000000000000', '0.000000000000000000000001']
+odd_total_form_error ['0.000000000000000000739601', '0.000000000000000000739602']
+odd_original_tail_floor ['0.734833243834667563796423', '0.734833243834667563796424']
+odd_physical_tail_floor_lower ['0.734833243834667563796423', '0.734833243834667563796424']
+odd_effective_tail_floor ['0.454666577168000897129757', '0.454666577168000897129758']
+odd_finite_Mellin_correction_HS_squared_upper ['0.000018303837147917943675', '0.000018303837147917943676']
+odd_coupling_HS_squared ['8.040847556496107838762262', '8.040847556496107838762263']
+low_profile_squared_operator_upper ['0.000000000000611524000000', '0.000000000000611524000000']
+low_profile_Schur_deduction ['0.000000000000040768266666', '0.000000000000040768266667']
+odd_finite_Mellin_block_reserve_lower ['0.000000000638329082611597', '0.000000000638329082611598']
+odd_three_block_Schur_LDL_pivot_3 ['0.035837318045255808801251', '0.035837318045255808801252']
+odd_three_block_Schur_LDL_pivot_5 ['0.006738187433195568819899', '0.006738187433195568819900']
+odd_three_block_Schur_LDL_pivot_7 ['0.012582439182556061199039', '0.012582439182556061199040']
+odd_three_block_Schur_LDL_pivot_9 ['0.001535163243146749866861', '0.001535163243146749866862']
+odd_three_block_Schur_LDL_pivot_11 ['0.000902067853292469369766', '0.000902067853292469369767']
+odd_three_block_Schur_LDL_pivot_13 ['0.003635932356182003529872', '0.003635932356182003529873']
+odd_three_block_Schur_LDL_pivot_15 ['0.003955593448801075581750', '0.003955593448801075581751']
+odd_three_block_Schur_LDL_pivot_17 ['0.001344733909677598427190', '0.001344733909677598427191']
+odd_three_block_Schur_LDL_pivot_19 ['0.003657590844875720824699', '0.003657590844875720824700']
+odd_three_block_Schur_LDL_pivot_21 ['0.008762524436987074172313', '0.008762524436987074172314']
+odd_three_block_Schur_LDL_pivot_23 ['0.006925905876866343072494', '0.006925905876866343072495']
+odd_three_block_Schur_LDL_pivot_25 ['0.006414049909053132627270', '0.006414049909053132627271']
+odd_three_block_Schur_LDL_pivot_27 ['0.005924895441909618901104', '0.005924895441909618901105']
+odd_three_block_Schur_LDL_pivot_29 ['0.005974478831208513720698', '0.005974478831208513720699']
+odd_three_block_Schur_LDL_pivot_31 ['0.025446345449411072398502', '0.025446345449411072398503']
+odd_three_block_Schur_LDL_pivot_33 ['0.021654576240715694593359', '0.021654576240715694593360']
+odd_three_block_Schur_LDL_pivot_35 ['0.019479757582196822170115', '0.019479757582196822170116']
+odd_three_block_Schur_LDL_pivot_37 ['0.022991417068376713038409', '0.022991417068376713038410']
+odd_three_block_Schur_LDL_pivot_39 ['0.025230235490336497155906', '0.025230235490336497155907']
+odd_three_block_Schur_LDL_pivot_41 ['0.019763913117603459182363', '0.019763913117603459182364']
+odd_three_block_Schur_LDL_pivot_43 ['0.025750693233782151430525', '0.025750693233782151430526']
+odd_three_block_Schur_LDL_pivot_45 ['0.019878069959601535415531', '0.019878069959601535415532']
+odd_three_block_Schur_LDL_pivot_47 ['0.018413853963653819544506', '0.018413853963653819544507']
+odd_three_block_Schur_LDL_pivot_49 ['0.018420777718504808384020', '0.018420777718504808384021']
+odd_three_block_Schur_LDL_pivot_51 ['0.018184225345423807314361', '0.018184225345423807314362']
+odd_three_block_Schur_LDL_pivot_53 ['0.016442110859083089941048', '0.016442110859083089941049']
+odd_three_block_Schur_LDL_pivot_55 ['0.018549041307252725353665', '0.018549041307252725353666']
+odd_three_block_Schur_LDL_pivot_57 ['0.013941347871412618639571', '0.013941347871412618639572']
+odd_three_block_Schur_LDL_pivot_59 ['0.014964080641670019449665', '0.014964080641670019449666']
+odd_three_block_Schur_LDL_pivot_61 ['0.014393419005972124719379', '0.014393419005972124719380']
+odd_three_block_Schur_LDL_pivot_63 ['0.007157367785947758424820', '0.007157367785947758424821']
+PASS all 31 three-block comparison LDL pivots are strictly positive
+odd_three_block_Schur_inverse_trace_reserve_lower ['0.000000000487235404852639', '0.000000000487235404852640']
+PASS comparison inverse shear includes core-tail and low-profile operators
+comparison_shear_increment_squared_upper ['38.896969678420716095881010', '38.896969678420716095881011']
+comparison_inverse_shear_norm_squared_upper ['52.370463721536000000000000', '52.370463721536000000000000']
+entire_three_block_coordinate_gap_lower ['0.000000000009303629760533', '0.000000000009303629760534']
+entire_odd_physical_gap_lower ['0.000000000001550604960088', '0.000000000001550604960089']
+PASS even 41 and complete inherited 38 40 31 28 43 9 checks reproduce
+PASS canonical odd endpoint tail enclosure reproduced exactly
+PASS uniform physical odd gap exceeds 10^-12
+PASS full odd profile Schur norm below one minus 2e-12
+PASS full-width even all-source theorem preserved with gap 3e-15
+PASS all-parity gap is the smaller proved parity gap
+PASS both moment components are exact parity projections of the original two
+published_physical_odd_gap ['0.000000000001000000000000', '0.000000000001000000000000']
+odd_actual_profile_Schur_floor ['0.000000000000500000000000', '0.000000000000500000000000']
+odd_full_subtraction_norm_upper ['0.213333333333333333333333', '0.213333333333333333333334']
+odd_full_profile_Theta_upper ['0.999999999997656250000005', '0.999999999997656250000006']
+published_odd_profile_relative_margin ['0.000000000002000000000000', '0.000000000002000000000000']
+preserved_physical_even_gap ['0.000000000000003000000000', '0.000000000000003000000000']
+published_local_all_parity_gap ['0.000000000000003000000000', '0.000000000000003000000000']
+TOTAL 51 NEW EXACT CHECKS PASS
+ODD-ALL-SOURCE-AND-LOCAL-ALL-PARITY-CLOSED

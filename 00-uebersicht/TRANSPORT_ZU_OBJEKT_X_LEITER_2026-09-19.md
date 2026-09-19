@@ -351,3 +351,97 @@ Objekt X: OFFEN
 globale Weil-Positivität: OFFEN
 RH: OFFEN
 ```
+
+
+---
+
+## Fortschrittsnachtrag — 19.09.2026, Odd- und lokaler All-Parity-Abschluss
+
+> **Mathematischer Anker:** `7741eca6f14bdc3017f6a299aff06eb66db2e697`  
+> **Erhaltener vorheriger Leiter-Nachtrag:** `cb56df64ca60c046f99ddba2822e4e216657504d`  
+> **Status:** `AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN`
+
+Dieser weitere append-only Nachtrag bewahrt alle historischen Abschnitte.
+Die zuletzt als offen geführte Odd-Fortsetzung und der davon abhängige
+lokale All-Parity-Satz werden durch das neue
+[Odd-Beweispaket](../research/x-c1/odd-profile-continuation-2026-09-19/PROOF.md)
+auf dem vollständigen bisherigen Shellfenster geschlossen:
+
+\[
+B=\frac{\log5}{2},\qquad 0<h=b-B\le10^{-20}.
+\]
+
+### Eigenständiger Odd-Satz
+
+Für jede nichtverschwindende tatsächliche ungerade H1_0-Quelle mit genau
+den beiden ursprünglichen Mellinbedingungen gilt
+
+\[
+\boxed{Q_W[u]>10^{-12}\|u\|_2^2.}
+\]
+
+Der Beweis konstruiert einen eigenen ungeraden, exakt sinh-normalisierten
+Momentkorrektor und beweist vollständige Hilbert- und Formkoordinaten samt
+der tatsächlichen H1-Gluing-Bedingung. Der niedrige Core ist exakt
+`span{P3,P5,...,P63}` mit Dimension 31; der gesamte unendliche Tail
+`closure span{P65,P67,...}` und das vollständige Shellprofil bleiben
+enthalten. Alle Low/High-, Low/Profile- und High/Profile-Mischterme sowie
+die physische Normumrechnung sind bezahlt. Alle 31 gerichteten rationalen
+Schur-LDL-Pivots sind positiv.
+
+In diesen nichtredundanten Odd-Core/Profil-Koordinaten sind außerdem
+
+\[
+R_o\succeq\frac{1}{2\cdot10^{12}}I,\qquad
+\Theta_o<1-2\cdot10^{-12}
+\]
+
+für die tatsächlichen vollständigen geschlossenen Operatoren bewiesen.
+`Theta_o` ist hier eigenständig definiert und wird nicht mit einem der
+Even-Gauge-Operatoren identifiziert.
+
+### Lokaler All-Parity-Satz
+
+Die orthogonalen geraden und ungeraden Projektionen erhalten die gemeinsame
+ursprüngliche Mellin-Kernbedingung. Reflexionsinvarianz der gesamten
+Nichtpolform macht ihren gemischten Formterm exakt null. Aus dem bestehenden
+Even-Gap `3*10^-15` und dem neuen Odd-Gap `10^-12` folgt daher für JEDE
+nichtverschwindende tatsächliche H1_0-Quelle mit den ursprünglichen zwei
+Mellinbedingungen:
+
+\[
+\boxed{Q_W[u]>3\cdot10^{-15}\|u\|_2^2.}
+\]
+
+Dies gilt für das gesamte obige rechte Fenster. Exakte isometrische
+Nullfortsetzung liefert dieselbe Schranke für alle `0<b<=B+10^-20`.
+Der stärkere eingefrorene Endpunkt-Gap auf `b<=B` bleibt erhalten.
+
+### Aktualisierte lokale Leiter
+
+| Stufe | Neuer Status |
+|---|---|
+| Even-All-Source auf `0<h<=10^-20` | geschlossen; Gap `>3*10^-15` |
+| Odd-All-Source auf demselben Fenster | **geschlossen; Gap `>10^-12`** |
+| Lokaler All-Parity-Transport | **geschlossen; Gap `>3*10^-15`** |
+| Größeres oder iterierbares All-Parity-Fenster | nächster Fenster-Gate; offen |
+| Strong Terminal im historischen P11/R43-Sinn | getrennte offene Front |
+| Connected Unit-Window Coercivity und full C1-GEOM | offen |
+| Intrinsisches Objekt X und globale Weil-Positivität | offen |
+| RH | offen; keine Behauptung |
+
+Der lokale All-Parity-Abschluss ist keine Iterationsgarantie. Insbesondere
+sind `log(7)/2`, `a=1` und die späteren globalen Stufen nicht erreicht.
+
+### Reproduktion und Grenzen
+
+51 neue rationale Prüfungen bestehen. Der Checker bindet 81 Eingabedateien,
+reproduziert die vollständige Even-Kette, berechnet die Odd-Matrizen und
+den vollständigen unendlichen Kopplungsgram neu und vergleicht JSON,
+Protokoll sowie sieben Payload-Hashes. Die neue endliche Matrix dient
+ausschließlich dem exakt definierten 31-dimensionalen niedrigen Raum.
+
+Keine zusätzliche Mellinbedingung, keine A1, keine Quadratur oder
+numerischen Eigenwerte als Beweis, keine neue Quellenwahl. Reproduktion
+ist keine unabhängige externe Prüfung. `main` bleibt der eingefrorene
+PR-#137-Milestone; kein neuer PR, kein Merge.
