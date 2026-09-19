@@ -768,3 +768,93 @@ sum h_n<=s/(1-s)<2s<infinity. Abschnitt 9 des neuen Beweises gibt
 die vollständige Korrektur. Die explizite ca3849a-Folge mit per Definition
 N_n=2^n ceil(c) und das separate Target-Gap-Argument aus 6cbef9d sind
 hiervon nicht betroffen. Die historischen Dateien bleiben unverändert.
+
+
+---
+
+## Fortschrittsnachtrag — 19.09.2026, Moving-Endpoint High-Tail Renewal
+
+> **Mathematischer Anker:** `b1c01860fef2a960cae57634041f75b29d37f836`  
+> **Status:** `AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN`
+
+Das Paket
+`research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/`
+schließt eine der bislang offenen Moving-Endpoint-Verpflichtungen unabhängig
+vom winzigen globalen All-Source-Gap.
+
+### Endpunktuniformer High-Tail
+
+Für jeden bereits betrachteten Core-Endpunkt
+
+[
+B=\frac{\log5}{2}\le a\le1
+]
+
+werden feste Referenz-Tails gewählt:
+
+[
+Y_0=\overline{\operatorname{span}}\{P_{384},P_{386},\ldots\},
+\qquad
+Y_1=\overline{\operatorname{span}}\{P_{385},P_{387},\ldots\}.
+]
+
+Nach der jeweils exakten cosh-/sinh-Mellinrekonstruktion gilt auf dem
+vollständigen unendlichen Tail beider Paritäten
+
+[
+\boxed{
+q_a[f]>\frac1{41}\|f\|_2^2.
+}
+]
+
+Die Schranke ist uniform auf dem gesamten Band `B<=a<=1`. Sie bezahlt alle
+dort möglichen Prime-Power-Kanäle `2,3,4,5,7` und verwendet keinen
+bereits bewiesenen kleinen All-Source-Gap als Tailreserve.
+
+### Konsequenz für die bewegliche Blockzerlegung
+
+Der unendliche High-Tail ist damit nicht mehr der offene Teil des
+Moving-Endpoint-Problems. Es genügt fortan, einen festen endlichen Low-Raum je
+Parität zu behandeln:
+
+[
+L_0=\operatorname{span}\{P_2,P_4,\ldots,P_{382}\},
+\qquad
+L_1=\operatorname{span}\{P_3,P_5,\ldots,P_{383}\},
+]
+
+also jeweils
+
+[
+\dim L_0=\dim L_1=191.
+]
+
+Der Preis für die endpoint-uniforme Tailreserve ist somit ein größerer, aber
+fester endlicher Low-Block.
+
+### Präzisierter Frontpunkt
+
+| Stufe | Status |
+|---|---|
+| Reale All-Parity-Breite bis `B+5*10^-13` | geschlossen |
+| Blockadaptive feste-Core-Verstärkung | geschlossen |
+| Moving High-Tail auf `B<=a<=1` | **geschlossen; Floor `>1/41`** |
+| Moving Low-Dimension | **fest 191 je Parität** |
+| Moving 191D Low-Block-Positivität/Konditionierung | offen |
+| Moving Low/High-Mischterm | offen |
+| Moving Low/Profile-Rank-2-Modell und Operatorrest | offen |
+| Moving blockadaptives Restartgesetz | offen |
+| Nicht-summierbarer Transport | offen |
+| Tatsächlicher Endpunkt `log(7)/2` | offen |
+| Connected Unit-Window Coercivity / Strong Terminal | offen |
+| full C1-GEOM / Objekt X / globale Weil-Positivität / RH | offen |
+
+Der neue unmittelbare Gate lautet daher:
+
+```text
+MOVING 191D LOW-BLOCK + PROFILE RESERVE RENEWAL
+```
+
+Ein positiver Tailfloor allein beweist weder die Positivität des
+191-dimensionalen beweglichen Low-Blocks noch einen nicht-summierbaren
+Fenstertransport.

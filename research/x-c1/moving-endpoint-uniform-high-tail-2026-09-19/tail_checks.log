@@ -1,0 +1,27 @@
+PASS anchor is b1c0186
+PASS four distinct immutable mathematical inputs
+PASS log2 upper seven tenths
+PASS log3 upper eleven tenths
+PASS log5 upper one point six one
+PASS log7 upper two
+PASS sqrt2 lower seven fifths
+PASS sqrt3 lower seventeen tenths
+PASS sqrt5 lower eleven fifths
+PASS sqrt7 lower thirteen fifths
+PASS uniform weighted shift norm below seven halves
+PASS q0 scalar loss below five halves using pinned gamma bound
+PASS regular Gamma operator loss at most one half
+PASS raw moving tail total bounded loss thirteen halves
+PASS H384 exceeds 261 over 40
+PASS H385 exceeds H384
+PASS raw even and odd tail floor exceeds one fortieth
+PASS uniform moment correction norm below one millionth
+PASS moment energy correction loss below one fifty-thousandth
+PASS corrected reference tail floor dominates one forty-first after norm conversion
+PASS moving endpoint high-tail physical floor one forty-first
+PASS fixed moving low dimensions are 191 in each parity
+PASS all possible prime powers through half-width one are covered by 2 3 4 5 7
+PASS no scalar all-source gap is used in the high-tail floor
+PASS low block and mixed moving-endpoint renewal remain open
+TOTAL 25 MOVING-ENDPOINT HIGH-TAIL EXACT CHECKS PASS
+MOVING-ENDPOINT-UNIFORM-HIGH-TAIL-RENEWAL-CLOSED
