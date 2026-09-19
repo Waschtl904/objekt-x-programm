@@ -1,0 +1,127 @@
+INHERITED transition 38 PASS; all-core 40 PASS; direction 31 PASS; coordinate 28 PASS; shell 43 PASS; A-gauge 9 PASS
+PASS 73 distinct pinned input files and both provenance commits match
+PASS transition 38 and inherited 40 31 28 43 9 checks reproduce
+PASS original target width and logarithm bounds
+PASS exact active prime-power set stays 2 3 4 5
+PASS all four sampled core intervals lie in the positive core
+PASS four sampled core intervals are pairwise disjoint uniformly
+prime_2_input_left_at_h0 ['0.111571775657104877883147', '0.111571775657104877883148']
+prime_2_input_right_at_h0 ['0.111571775657104877893147', '0.111571775657104877893148']
+prime_3_input_left_at_h0 ['0.293893332451059504084865', '0.293893332451059504084866']
+prime_3_input_right_at_h0 ['0.293893332451059504094865', '0.293893332451059504094866']
+prime_4_input_left_at_h0 ['0.581575404902840431524084', '0.581575404902840431524085']
+prime_4_input_right_at_h0 ['0.581575404902840431534084', '0.581575404902840431534085']
+prime_5_input_left_at_h0 ['0.804718956217050187290379', '0.804718956217050187290380']
+prime_5_input_right_at_h0 ['0.804718956217050187300379', '0.804718956217050187300380']
+PASS chi Gamma action integral has the stated exact L2 majorant
+PASS chi bounded remainder is below sixty
+PASS chi entire nonpole functional bound is 215
+PASS complete core-profile coupling is strictly below four
+prime_weight_square_sum ['1.280714159505558716817620', '1.280714159505558716817621']
+complete_disjoint_prime_coupling_upper ['1.600446287449571808851691', '1.600446287449571808851692']
+complete_Gamma_coupling_upper ['2.221441469237762653655380', '2.221441469237762653655381']
+complete_core_profile_coupling_upper ['3.821887782487334462507071', '3.821887782487334462507072']
+published_core_profile_coupling_upper ['4.000000000000000000000000', '4.000000000000000000000000']
+PASS complete trace-shell loss is below three
+PASS pure profile shell loss is below one
+PASS full shell floor exceeds 73 and pure profile floor exceeds 75
+full_shell_total_uniform_loss_upper ['2.215116800000000008260000', '2.215116800000000008260000']
+full_shell_profile_coefficient_lower ['73.000000000000000000000000', '73.000000000000000000000000']
+pure_profile_shell_floor_lower ['75.000000000000000000000000', '75.000000000000000000000000']
+PASS low-space pointwise bound in physical normalization
+PASS low-space moment correction is paid
+PASS low-profile squared bound is monotone up to target endpoint
+PASS uniform finite low-profile amplitude is 4692 sqrt h0
+PASS high-profile Young payment leaves fifteen shell units
+PASS high-profile Young tail deduction equals 1681 over 6000
+PASS profile lift norm squared below four
+PASS physical forward norm squared costs at most six
+PASS endpoint range for uniform Gamma model
+PASS active prime powers 2,3,4 with von Mangoldt weights
+PASS positive decreasing regular Gamma floor
+endpoint_a ['0.804718956217050187300379', '0.804718956217050187300380']
+q0 ['-2.197830546078043655772457', '-2.197830546078043655772456']
+uniform_Gamma_error ['0.000000000000000000229770', '0.000000000000000000229771']
+joint_shift_operator_norm_upper ['1.674004871437481941312235', '1.674004871437481941312236']
+PASS kernel and shift norms used for moment reconstruction
+PASS low basis Qnorm ingredient 0
+PASS exact 31-dimensional low space and full tail starting at degree 64
+PASS global moment norm below square root two
+PASS moment-corrected full high-tail coupling below 41 over 10
+PASS tail remains above 0.439 after high-profile payment
+PASS tail physical coercivity above 0.719 with exact norm correction
+even_beta ['0.006732787914843592696178', '0.006732787914843592696179']
+even_moment_tail_operator_error ['0.000000000000000000000000', '0.000000000000000000000001']
+even_Gamma_form_error ['0.000000000000000000739601', '0.000000000000000000739602']
+even_infinite_moment_form_error ['0.000000000000000000000000', '0.000000000000000000000001']
+even_total_form_error ['0.000000000000000000739601', '0.000000000000000000739602']
+even_original_tail_floor ['0.719448628450052179181039', '0.719448628450052179181040']
+even_physical_tail_floor_lower ['0.719448628450052179181039', '0.719448628450052179181040']
+even_effective_tail_floor ['0.439281961783385512514372', '0.439281961783385512514373']
+even_finite_Mellin_correction_HS_squared_upper ['0.000155343703236469224539', '0.000155343703236469224540']
+even_coupling_HS_squared ['8.093223555830155071955095', '8.093223555830155071955096']
+low_profile_squared_operator_upper ['0.000000000000220148640000', '0.000000000000220148640000']
+low_profile_Schur_deduction ['0.000000000000014676576000', '0.000000000000014676576000']
+even_finite_Mellin_block_reserve_lower ['0.000000000003210487628048', '0.000000000003210487628049']
+even_three_block_Schur_LDL_pivot_2 ['0.069913721053450294243739', '0.069913721053450294243740']
+even_three_block_Schur_LDL_pivot_4 ['0.005002806857317237047503', '0.005002806857317237047504']
+even_three_block_Schur_LDL_pivot_6 ['0.000986334054030132278512', '0.000986334054030132278513']
+even_three_block_Schur_LDL_pivot_8 ['0.003199252099750073113287', '0.003199252099750073113288']
+even_three_block_Schur_LDL_pivot_10 ['0.000404293404007960034540', '0.000404293404007960034541']
+even_three_block_Schur_LDL_pivot_12 ['0.000321788352023243860838', '0.000321788352023243860839']
+even_three_block_Schur_LDL_pivot_14 ['0.001669829160967526136306', '0.001669829160967526136307']
+even_three_block_Schur_LDL_pivot_16 ['0.002417413284551895201815', '0.002417413284551895201816']
+even_three_block_Schur_LDL_pivot_18 ['0.000562380585798769292715', '0.000562380585798769292716']
+even_three_block_Schur_LDL_pivot_20 ['0.001921357907862108886741', '0.001921357907862108886742']
+even_three_block_Schur_LDL_pivot_22 ['0.004085196780923913830738', '0.004085196780923913830739']
+even_three_block_Schur_LDL_pivot_24 ['0.004205533773683641097843', '0.004205533773683641097844']
+even_three_block_Schur_LDL_pivot_26 ['0.005104996408304382752978', '0.005104996408304382752979']
+even_three_block_Schur_LDL_pivot_28 ['0.003919969475577961669688', '0.003919969475577961669689']
+even_three_block_Schur_LDL_pivot_30 ['0.002927634574350160890579', '0.002927634574350160890580']
+even_three_block_Schur_LDL_pivot_32 ['0.019995957859679313233397', '0.019995957859679313233398']
+even_three_block_Schur_LDL_pivot_34 ['0.019428093197074206432387', '0.019428093197074206432388']
+even_three_block_Schur_LDL_pivot_36 ['0.016086508533020656911324', '0.016086508533020656911325']
+even_three_block_Schur_LDL_pivot_38 ['0.020648293861644018355708', '0.020648293861644018355709']
+even_three_block_Schur_LDL_pivot_40 ['0.023489040281774057249476', '0.023489040281774057249477']
+even_three_block_Schur_LDL_pivot_42 ['0.021838060737062612851250', '0.021838060737062612851251']
+even_three_block_Schur_LDL_pivot_44 ['0.020446331615351549645142', '0.020446331615351549645143']
+even_three_block_Schur_LDL_pivot_46 ['0.021448761804371539121037', '0.021448761804371539121038']
+even_three_block_Schur_LDL_pivot_48 ['0.014755913156332962279126', '0.014755913156332962279127']
+even_three_block_Schur_LDL_pivot_50 ['0.017064713784148082051483', '0.017064713784148082051484']
+even_three_block_Schur_LDL_pivot_52 ['0.019365515602007241219690', '0.019365515602007241219691']
+even_three_block_Schur_LDL_pivot_54 ['0.014852901357799634403177', '0.014852901357799634403178']
+even_three_block_Schur_LDL_pivot_56 ['0.015038002300342959507137', '0.015038002300342959507138']
+even_three_block_Schur_LDL_pivot_58 ['0.014213717153696116215035', '0.014213717153696116215036']
+even_three_block_Schur_LDL_pivot_60 ['0.013435942693908032883956', '0.013435942693908032883957']
+even_three_block_Schur_LDL_pivot_62 ['0.001608381832689262469742', '0.001608381832689262469743']
+PASS all 31 three-block comparison LDL pivots are strictly positive
+even_three_block_Schur_inverse_trace_reserve_lower ['0.000000000001237697314868', '0.000000000001237697314869']
+PASS comparison inverse shear includes core-tail and low-profile operators
+comparison_shear_increment_squared_upper ['41.940615190732245191236964', '41.940615190732245191236965']
+comparison_inverse_shear_norm_squared_upper ['55.892938440964000000000000', '55.892938440964000000000000']
+entire_three_block_coordinate_gap_lower ['0.000000000000022144073104', '0.000000000000022144073105']
+entire_even_physical_gap_lower ['0.000000000000003690678850', '0.000000000000003690678851']
+PASS canonical endpoint tail enclosure is reproduced exactly
+PASS uniform physical even gap exceeds three times 10^-15
+PASS original gauge full subtraction norm below one million
+PASS entire A-gauge Gram norm strictly below one minus 9e-23
+PASS entire original-gauge Gram norm strictly below one minus 2e-29
+PASS exactly specified energy high subspace has Gram norm below 31 over 100
+PASS fixed near-null full-shell Gram quotient remains below 7.55e-6
+published_physical_even_gap ['0.000000000000003000000000', '0.000000000000003000000000']
+both_gauges_absolute_Schur_floor ['0.000000000000000000000021', '0.000000000000000000000022']
+A_gauge_full_subtraction_norm_upper ['0.219178082191780821917808', '0.219178082191780821917809']
+original_gauge_full_subtraction_norm_upper ['994378.019569471624266144814090', '994378.019569471624266144814091']
+entire_A_gauge_Theta_upper ['0.999999999999999999999902', '0.999999999999999999999903']
+entire_original_gauge_Theta_upper ['0.999999999999999999999999', '1.000000000000000000000000']
+published_A_gauge_relative_margin ['0.000000000000000000000090', '0.000000000000000000000090']
+published_original_gauge_relative_margin ['0.000000000000000000000000', '0.000000000000000000000001']
+specified_energy_high_Gram_bound ['0.304837388305675691123516', '0.304837388305675691123517']
+fixed_near_null_Gram_bound ['0.000007547870473260732959', '0.000007547870473260732960']
+energy_low_Gram_bound ['0.999999999999999999999902', '0.999999999999999999999903']
+near_low_mixed_squared_bound ['0.000007547870473260732959', '0.000007547870473260732960']
+near_high_mixed_squared_bound ['0.000002300873122338326201', '0.000002300873122338326202']
+low_high_mixed_squared_bound ['0.304837388305675691123486', '0.304837388305675691123487']
+PASS previous dyadic endpoint is included without expanding a huge integer
+TOTAL 41 NEW EXACT CHECKS PASS
+EVEN-ALL-SOURCE-FULL-ORIGINAL-WIDTH-CLOSED
