@@ -44,6 +44,8 @@ def gamma_columns_at(N,M,pg,a):
 def compute_parities(precision=2048):
     ctx.prec=precision
     N=63;M=64;size=N+1
+    old_engine=load_module('frozen_segment_engine',SEG)
+    old_adaptive=load_module('frozen_adaptive_engine',ADAPT)
     a=arb(5).log()/2
     channels=[(q,arb(p).log()/arb(q).sqrt(),arb(q).log()/a) for q,p in [(2,2),(3,3),(4,2)]]
     assert channels[-1][2]<2 and (arb(5).log()/a).contains(2)
@@ -58,7 +60,13 @@ def compute_parities(precision=2048):
         if i!=j:return arb(1)/(abs(i-j)*(i+j+1))
         return (arb(1)/(2*i+1)+2*(harm[2*i]-harm[i])-log2)/(2*i+1)
     P=t.matrix([[potential(i,j) for j in range(size)] for i in range(size)])
-    pg,epsq=t.gamma_polynomial(M);eps=arb(epsq)
+    pg,terminal_epsq=t.gamma_polynomial(M)
+    old_pg,old_eps=old_engine.kernel_polynomial(M)
+    assert all(fmpq(old_pg[k].numerator,old_pg[k].denominator)==pg[k] for k in range(M+1))
+    # Same Gamma polynomial coefficients; endpoint-specific rigorous remainder
+    # from the frozen B engine instead of the terminal x_max=1 envelope.
+    eps=(arb(fmpq(old_eps.lo.numerator,old_eps.lo.denominator))+arb(fmpq(old_eps.hi.numerator,old_eps.hi.denominator)))/2
+    eps+=arb(0,(arb(fmpq(old_eps.hi.numerator,old_eps.hi.denominator))-arb(fmpq(old_eps.lo.numerator,old_eps.lo.denominator)))/2)
     kcols=gamma_columns_at(N,M,pg,a)
     def gamma_entry(i,j):
         if i<=N:return kcols[i].get(j,arb(0))/(2*j+1)
@@ -165,8 +173,6 @@ def compute_parities(precision=2048):
 
     snorm=arb(2).log()+arb(3).log()/arb(3).sqrt()+arb(2).log()/2
     gend=(-a).exp()/(1-(-4*a).exp())-1/(4*a)
-    old_engine=load_module('frozen_segment_engine',SEG)
-    old_adaptive=load_module('frozen_adaptive_engine',ADAPT)
     out={}
     for parity in (0,1):
         label='even' if parity==0 else 'odd'
@@ -179,7 +185,7 @@ def compute_parities(precision=2048):
         rem=(a/2)**tail/arb(factorial(tail))/(1-(a/2)**2/((tail+1)*(tail+2)))
         epsmoment=rem if parity==0 else 4*rem/a
         err=4*a*eps+80*epsmoment
-        delta=harm[tail]+q0-2*a*(arb(1)/4-gend+eps)-snorm-80*epsmoment
+        delta=harm[tail]+q0-2*a*(arb(1)/4-gend+eps)-snorm-err
         Gact=G*(arb(1001)/1000)
         for i in range(n):Gact[i,i]+=1001*err**2
         lower=A-Gact/delta
