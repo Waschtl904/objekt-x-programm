@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "REPLACE-WITH-PACKAGE-ID",
+  "date": "2026-09-20",
+  "kind": "DIAGNOSTIC",
+  "strategic": false,
+  "local_only": true,
+  "mathematical_status": "OPEN",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "REPLACE: genaue Quellenklasse und Parametergrenzen.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "REPLACE: präzise Ergebnisgrenze; keine negative volle Weil-Quelle behauptet.",
+  "depends_on": [],
+  "closes": [],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Objekt X, globale Weil-Positivität oder RH."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/REPLACE-WITH-PACKAGE-DIRECTORY/PROOF.md",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  }
+}

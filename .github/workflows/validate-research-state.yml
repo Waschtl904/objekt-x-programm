@@ -1,0 +1,39 @@
+name: Validate canonical research state
+
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  research-state:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out complete provenance
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Check deterministic generated views
+        run: python scripts/generate_research_state.py --check
+      - name: Check canonical status and evidence bindings
+        env:
+          BASE_REF: ${{ github.event.pull_request.base.sha || github.event.before }}
+        shell: bash
+        run: |
+          if [[ -n "$BASE_REF" && ! "$BASE_REF" =~ ^0+$ ]]; then
+            python scripts/check_research_state.py --base-ref "$BASE_REF"
+          else
+            python scripts/check_research_state.py
+          fi
+      - name: Exercise consistency failures and metadata lifecycle
+        run: python -m unittest discover -s tests -p test_research_state.py -v
+      - name: Preserve the historical front check
+        run: python scripts/validate_active_front.py

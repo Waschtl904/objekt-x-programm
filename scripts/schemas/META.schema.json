@@ -1,0 +1,241 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Waschtl904/objekt-x-programm/blob/research/x-c1-inherited-resonance-shell-schur-2026-09-18/scripts/schemas/META.schema.json",
+  "title": "New research package metadata, schema 1",
+  "description": "JSON subset of YAML 1.2. The repository validator additionally verifies proof bytes, safe paths, known effect IDs and pending/registered package coverage.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "date",
+    "kind",
+    "strategic",
+    "local_only",
+    "mathematical_status",
+    "review_status",
+    "integration_status",
+    "scope",
+    "claim_polarity",
+    "negative_claim_boundary",
+    "depends_on",
+    "closes",
+    "opens",
+    "supersedes",
+    "does_not_claim",
+    "canonical_proof"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "kind": {
+      "enum": [
+        "THEOREM",
+        "NO_GO",
+        "CONSTRUCTION",
+        "REDUCTION",
+        "DIAGNOSTIC"
+      ]
+    },
+    "strategic": {
+      "type": "boolean"
+    },
+    "local_only": {
+      "type": "boolean"
+    },
+    "mathematical_status": {
+      "enum": [
+        "AUTHOR_DERIVED",
+        "AUTHOR_DERIVED_NO_GO",
+        "OPEN",
+        "NOT_CONSTRUCTED"
+      ]
+    },
+    "review_status": {
+      "const": "EXTERNAL_REVIEW_OPEN"
+    },
+    "integration_status": {
+      "const": "RESEARCH_BRANCH_UNMERGED"
+    },
+    "scope": {
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "claim_polarity": {
+      "enum": [
+        "POSITIVE_RESULT",
+        "CONSTRUCTION",
+        "EQUIVALENCE_OR_REDUCTION",
+        "NEGATIVE_FOR_CANDIDATE_CLASS"
+      ]
+    },
+    "negative_claim_boundary": {
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "depends_on": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+      },
+      "uniqueItems": true
+    },
+    "closes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+      },
+      "uniqueItems": true
+    },
+    "opens": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+      },
+      "uniqueItems": true
+    },
+    "supersedes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+      },
+      "uniqueItems": true
+    },
+    "does_not_claim": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "\\S"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "canonical_proof": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^research/(?!.*(?:^|/)\\.\\.?/)[^\\\\:]+/PROOF\\.md$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "strategic": {
+          "const": true
+        },
+        "local_only": {
+          "const": false
+        }
+      },
+      "anyOf": [
+        {
+          "properties": {
+            "closes": {
+              "minItems": 1
+            }
+          }
+        },
+        {
+          "properties": {
+            "opens": {
+              "minItems": 1
+            }
+          }
+        },
+        {
+          "properties": {
+            "supersedes": {
+              "minItems": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "properties": {
+        "strategic": {
+          "const": false
+        },
+        "local_only": {
+          "const": true
+        },
+        "closes": {
+          "maxItems": 0
+        },
+        "opens": {
+          "maxItems": 0
+        },
+        "supersedes": {
+          "maxItems": 0
+        }
+      }
+    }
+  ],
+  "allOf": [
+    {
+      "if": {
+        "anyOf": [
+          {
+            "properties": {
+              "kind": {
+                "const": "NO_GO"
+              }
+            }
+          },
+          {
+            "properties": {
+              "mathematical_status": {
+                "const": "AUTHOR_DERIVED_NO_GO"
+              }
+            }
+          },
+          {
+            "properties": {
+              "claim_polarity": {
+                "const": "NEGATIVE_FOR_CANDIDATE_CLASS"
+              }
+            }
+          }
+        ]
+      },
+      "then": {
+        "properties": {
+          "kind": {
+            "const": "NO_GO"
+          },
+          "mathematical_status": {
+            "const": "AUTHOR_DERIVED_NO_GO"
+          },
+          "claim_polarity": {
+            "const": "NEGATIVE_FOR_CANDIDATE_CLASS"
+          }
+        }
+      }
+    }
+  ]
+}
