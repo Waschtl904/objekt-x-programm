@@ -774,7 +774,7 @@
         {
           "commit": "ecfac52133582290ab3568bf33029b3ad5938360",
           "path": "papers/P02_Adelic_Weil_Amplitude_Port.tex",
-          "sha256": "689915b4a040fc1ff1fb17df9a2d9a0cbb1b2b73f6e291cbac8f2a951d0d2ec2"
+          "sha256": "4945e80a19dbe5796a56a8415362f9260a1a4ed9d31a376257a2d3fdae601baf"
         }
       ],
       "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
@@ -788,7 +788,7 @@
       "replaced_by": [],
       "canonical_commit": "ecfac52133582290ab3568bf33029b3ad5938360",
       "canonical_proof": "papers/P02_Adelic_Weil_Amplitude_Port.tex",
-      "proof_sha256": "689915b4a040fc1ff1fb17df9a2d9a0cbb1b2b73f6e291cbac8f2a951d0d2ec2",
+      "proof_sha256": "4945e80a19dbe5796a56a8415362f9260a1a4ed9d31a376257a2d3fdae601baf",
       "negative_claim_boundary": "Der Port ist eine algebraisch/analytische Eingangsbrücke; daraus folgt keine Positivität der vollständigen Weil-Form.",
       "does_not_claim": [
         "Positivität der vollständigen Weil-Form.",
@@ -808,7 +808,7 @@
         {
           "commit": "ecfac52133582290ab3568bf33029b3ad5938360",
           "path": "papers/P03_Haar_L2_Firewall.tex",
-          "sha256": "b9c7dbaa44fa56896cfee5b74bf9bb341943f7d32cba454e4cbb7aff3875e101"
+          "sha256": "de6c782b8fe6e86bf72a70f6e9a7859618a43b5bbc37a1b1f34819367d14d10e"
         }
       ],
       "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
@@ -824,7 +824,7 @@
       "replaced_by": [],
       "canonical_commit": "ecfac52133582290ab3568bf33029b3ad5938360",
       "canonical_proof": "papers/P03_Haar_L2_Firewall.tex",
-      "proof_sha256": "b9c7dbaa44fa56896cfee5b74bf9bb341943f7d32cba454e4cbb7aff3875e101",
+      "proof_sha256": "de6c782b8fe6e86bf72a70f6e9a7859618a43b5bbc37a1b1f34819367d14d10e",
       "negative_claim_boundary": "Die RH-konditionalen Sätze bleiben ausdrücklich konditional und liefern keine RH-freie positive Realisierung.",
       "does_not_claim": [
         "Eine RH-freie positive Hilbert-Realisierung.",
@@ -844,7 +844,7 @@
         {
           "commit": "be58767794eabb96e92152b493ee72a0a465a8ee",
           "path": "audits/P11_REFEREE_E2E_R27_CONSTRAINED_GAMMA_MOSCO_LIMIT_2026-08-15.md",
-          "sha256": "1c3c5a92788e6fae2b0ac08de10ffb753039e48642a2177c606edc5ac903ada9"
+          "sha256": "09a63ccee193c79a3c67b37b62a36be993e8e46be4b2b9f87c2cda89376b34b8"
         }
       ],
       "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
@@ -858,7 +858,7 @@
       "replaced_by": [],
       "canonical_commit": "be58767794eabb96e92152b493ee72a0a465a8ee",
       "canonical_proof": "audits/P11_REFEREE_E2E_R27_CONSTRAINED_GAMMA_MOSCO_LIMIT_2026-08-15.md",
-      "proof_sha256": "1c3c5a92788e6fae2b0ac08de10ffb753039e48642a2177c606edc5ac903ada9",
+      "proof_sha256": "09a63ccee193c79a3c67b37b62a36be993e8e46be4b2b9f87c2cda89376b34b8",
       "negative_claim_boundary": "R27 liefert strukturelle Abhängigkeiten, aber keine bewegliche Polarfaktor-Konvergenz und keinen eigenständigen Strong-Terminal-Satz.",
       "does_not_claim": [
         "Bewegliche Polarfaktor-Konvergenz.",
@@ -878,7 +878,7 @@
         {
           "commit": "f495ce6d89dcb8facc8fa0d4e09dda279b24fb73",
           "path": "audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md",
-          "sha256": "e4ffb9e263fb3fd3d13b5f397c074c5caa2fbe87a375ed79c5a383235d262603"
+          "sha256": "c1d2bd92eb9c5372ef573f2a291f34447651dc4fb7f6d032f1d0ebe672d72c3c"
         }
       ],
       "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
@@ -894,7 +894,7 @@
       "replaced_by": [],
       "canonical_commit": "f495ce6d89dcb8facc8fa0d4e09dda279b24fb73",
       "canonical_proof": "audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md",
-      "proof_sha256": "e4ffb9e263fb3fd3d13b5f397c074c5caa2fbe87a375ed79c5a383235d262603",
+      "proof_sha256": "c1d2bd92eb9c5372ef573f2a291f34447651dc4fb7f6d032f1d0ebe672d72c3c",
       "negative_claim_boundary": "R42 kontrolliert die tangentiale Teilrichtung und ihre Normalreduktion, nicht bereits den vollständigen fixed-pair Strong Terminal.",
       "does_not_claim": [
         "Volle Strong-Terminal-Konvergenz allein.",
@@ -915,7 +915,7 @@
         {
           "commit": "084b8b7855601c5fae87bf4e59a00648ffbb9116",
           "path": "audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md",
-          "sha256": "a478b296452ebb677d60d73feec08ff96fbe4d1f5ec75afb328efe6f02e40f39"
+          "sha256": "9423dba35eee19075813100c6ebd558efef0122ee5c8869b0f07a3c7babd230c"
         }
       ],
       "claim_polarity": "POSITIVE_RESULT",
@@ -933,7 +933,7 @@
       "replaced_by": [],
       "canonical_commit": "084b8b7855601c5fae87bf4e59a00648ffbb9116",
       "canonical_proof": "audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md",
-      "proof_sha256": "a478b296452ebb677d60d73feec08ff96fbe4d1f5ec75afb328efe6f02e40f39",
+      "proof_sha256": "9423dba35eee19075813100c6ebd558efef0122ee5c8869b0f07a3c7babd230c",
       "negative_claim_boundary": "Geschlossen ist nur die feste Paarstufe des ursprünglichen P11-Transportproblems; keine Aussage folgt für variable oder unbeschränkte Terminalhorizonte.",
       "does_not_claim": [
         "Uniformität in R,S.",
