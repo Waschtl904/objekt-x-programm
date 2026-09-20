@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "TERMINAL-191D-SCHUR-DIAGNOSTIC-PREFLIGHT",
+  "date": "2026-09-20",
+  "kind": "DIAGNOSTIC",
+  "strategic": false,
+  "local_only": true,
+  "mathematical_status": "OPEN",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Fixed horizon B<=a<=1; direct floating-point physical-quadrature diagnostic for the 191D terminal Schur coordinates, calibrated at the rigorously positive endpoint B.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Calibration failure excludes only this direct floating-point quadrature pipeline as a sign certificate; it is not a negative Weil source and does not decide the terminal Schur sign.",
+  "depends_on": ["ALL-PARITY-BAND-B-PLUS-1E-10","C1-MOVING-191D-SCHUR-CONGRUENCE","C1-COMPLETE-HIGH-RESPONSE-BOUND","TERMINAL-191D-DEFECT-SCHUR-A1"],
+  "closes": [],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": ["S_1^even or S_1^odd has either sign.","C1c is closed or refuted.","A negative full Weil source exists.","Objekt X, global Weil positivity, or RH."],
+  "canonical_proof": {
+    "path": "research/x-c1/terminal-191d-schur-diagnostic-2026-09-20/PROOF.md",
+    "sha256": "e87ad333e540cd526989d4389d7bcea6895ee4de1690d6e8cce5c35eb001d49c"
+  }
+}
