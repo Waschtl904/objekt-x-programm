@@ -1,0 +1,160 @@
+{
+  "C1c_exact_positive_Gram_proved": false,
+  "Gram_error": "E_a(u,v)=-<D u,D v>; strictly negative on every nonzero diagonal",
+  "Object_X_constructed": false,
+  "R_one_contraction_certified": false,
+  "anchor": "f77116a890410dfbb2c612956dee9e5342247cd7",
+  "candidate": "T=(g+omega-c)/sqrt(g+kappa+2omega) times the unitary Fourier transform",
+  "candidate_intertwining_proved": true,
+  "candidate_properties_are_analytic_theorems_not_inferred_from_finite_checks": true,
+  "checks": [
+    "fixed analytic provenance anchor",
+    "five distinct immutable analytic provenance inputs",
+    "byte SHA256 and Git binding research/x-c1/all-parity-window-and-restart-2026-09-19/PROOF.md",
+    "byte SHA256 and Git binding research/x-c1/c1-readout-nonlocality-obstruction-2026-09-19/PROOF.md",
+    "byte SHA256 and Git binding research/x-c1/moving-endpoint-harmonic-block-renewal-2026-09-19/PROOF.md",
+    "byte SHA256 and Git binding research/x-c1/universal-prime-power-family-2026-09-18/PROOF.md",
+    "byte SHA256 and Git binding research/x-c1/x-interface-directed-system-2026-09-19/PROOF.md",
+    "fixed horizon active prime powers stop at seven",
+    "B lies inside four fifths and one",
+    "exact tangent calculation for the Machin pi identity",
+    "directed Machin intervals prove three less than pi less than 22 over seven",
+    "integral-test Euler constant enclosure lies between one half and two thirds",
+    "intrinsic kappa is strictly between five and eleven halves",
+    "positive directed prime-power weight 2",
+    "positive directed prime-power weight 3",
+    "positive directed prime-power weight 4",
+    "positive directed prime-power weight 5",
+    "positive directed prime-power weight 7",
+    "q4 uses the prime logarithm log2 and exact square root two",
+    "sum of all five horizon weights is between five halves and three",
+    "intrinsic envelope constant is between ten and 23 halves",
+    "formal common-envelope sum m plus n equals A",
+    "formal difference m minus n equals the full signed symbol",
+    "exact Gram factorization holds as a four-variable polynomial",
+    "positive readout includes the Gamma Prime cross term",
+    "positive readout includes the square of the common prime sum",
+    "defect includes coupled mass prime and prime prime terms",
+    "exact exponential tail proves e less than three",
+    "Jensen physical readout floor is two fifteenths",
+    "physical inverse norm squared bound is fifteen halves",
+    "bounded defect transfer norm squared bound is ninety",
+    "form completion comparison constant is 257 halves",
+    "graph shift dominates the defect bound by five",
+    "Gamma observation bound is ninety one",
+    "small-frequency Gamma coefficient bound is 131 eighths",
+    "lower imaginary-axis endpoint first Gamma term is 64 ninths",
+    "all remaining imaginary Gamma modes have the stated convergent majorant",
+    "lower endpoint complete absolute Gamma bound is below eight",
+    "upper endpoint first Gamma term is 324 nineteenth",
+    "upper endpoint already makes the envelope strictly negative",
+    "imaginary zero bracket stays strictly between zero and Mellin exponent",
+    "Mellin annihilator is nonzero throughout the imaginary zero bracket",
+    "positive complete Gamma interval at frequency 1",
+    "nested Gamma interval after doubling exact modes at frequency 1",
+    "positive complete Gamma interval at frequency 4",
+    "nested Gamma interval after doubling exact modes at frequency 4",
+    "positive complete Gamma interval at frequency 16",
+    "nested Gamma interval after doubling exact modes at frequency 16",
+    "harmonic divergence lower bound has a verified finite instance",
+    "rank 129 Taylor cutoff factor is less than one e minus one hundred",
+    "explicit rational finite-rank approximation error squared is below seventy",
+    "this conservative error bound does not certify contraction",
+    "conditional contraction comparison has the exact cleared-denominator identity"
+  ],
+  "checks_passed": 53,
+  "defect_compact": true,
+  "defect_infinite_rank": true,
+  "defect_naturality_proved": true,
+  "domain": "Original two-Mellin physical sources; fixed horizon B<=a<=1",
+  "full_C1_closed": false,
+  "moving_191D_low_profile_closed": false,
+  "negative_full_Weil_source_certified": false,
+  "new_transport_window_certified": false,
+  "physical_nonlocality_proved": true,
+  "reproduction_scope": "New exact arithmetic and five provenance bindings only. No inherited matrix-chain replay; no independent analytic audit.",
+  "status": "AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN",
+  "unrestricted_horizon_compatibility_proved": false,
+  "values": {
+    "Euler_gamma": {
+      "lower": "0.5206325655209234743523",
+      "upper": "0.6384156011773069288912"
+    },
+    "Gamma_directed_intervals": {
+      "1": {
+        "lower": "3.3470295670137914472298",
+        "upper": "3.3470372852066022291334"
+      },
+      "16": {
+        "lower": "6.3047752908065214000767",
+        "upper": "6.3067511481660815673785"
+      },
+      "4": {
+        "lower": "4.9178335661310980572628",
+        "upper": "4.9179570572160705677193"
+      }
+    },
+    "finite_rank_example": {
+      "M": "16",
+      "N": 128,
+      "proves_contraction": false,
+      "rank_at_most": 129,
+      "squared_operator_error_upper": {
+        "lower": "66.2382633760650511291579",
+        "upper": "66.2382633760650511291580"
+      }
+    },
+    "imaginary_pole_bracket": {
+      "lower": "2/5",
+      "lower_Gamma_absolute_upper": "26209/3654",
+      "strict": true,
+      "upper": "9/20"
+    },
+    "kappa": {
+      "lower": "5.3156003198450561959788",
+      "upper": "5.4333833555014396505177"
+    },
+    "omega": {
+      "lower": "2.9262341821764090152690",
+      "upper": "2.9262341821764090152691"
+    },
+    "pi": {
+      "lower": "3.1415926535897932384626",
+      "upper": "3.1415926535897932384627"
+    },
+    "s": {
+      "lower": "11.1680686841978742265168",
+      "upper": "11.2858517198542576810557"
+    },
+    "uniform_rational_constants": {
+      "Gamma_observation_bound": "91",
+      "R_squared_bound": "90",
+      "form_comparison": "257/2",
+      "inverse_squared": "15/2",
+      "physical_T_floor": "2/15"
+    },
+    "weights": {
+      "2": {
+        "lower": "0.4901290717342735958569",
+        "upper": "0.4901290717342735958570"
+      },
+      "3": {
+        "lower": "0.6342841005975639771863",
+        "upper": "0.6342841005975639771864"
+      },
+      "4": {
+        "lower": "0.3465735902799726547086",
+        "upper": "0.3465735902799726547087"
+      },
+      "5": {
+        "lower": "0.7197625155536004912186",
+        "upper": "0.7197625155536004912187"
+      },
+      "7": {
+        "lower": "0.7354849040109982962983",
+        "upper": "0.7354849040109982962985"
+      }
+    }
+  },
+  "verdict": "C1-CANDIDATE-CONSTRUCTED-INTERTWINING-PROVED-COMPACT-GRAM-DEFECT-EXPLICIT"
+}

@@ -1124,3 +1124,79 @@ Die Breitenfaktoren werden mit ihren richtigen Ankern festgehalten:
 617ffe2 verwendete ausdrücklich den ersten Vergleich. Beide Rechnungen
 sind korrekt; historische Pakete oder Satzschranken werden nicht geändert.
 
+
+## Nachtrag 20.09.2026: gekoppelter spektraler C1-Kandidat und kompakter Defekt
+
+**AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN**.
+Anker: `f77116a890410dfbb2c612956dee9e5342247cd7`.
+Paket: `research/x-c1/c1-coupled-spectral-mediator-2026-09-20/`.
+
+Nach dem Ausschluss lokaler-plus-endlichrangiger Readouts wird jetzt ein
+konkreter wesentlich nichtlokaler Kandidat konstruiert. Der Horizont ist
+fest auf 1 gesetzt; alle Fenster `B<=a<=1` verwenden dieselben fuenf
+Prime-Power-Kanaele 2,3,4,5,7 und das vollstaendige Gamma-Symbol g.
+Schreibe omega fuer die Summe der Gewichte, c fuer ihre Kosinussumme und
+`s=kappa+2 omega`. Dann sind im positiven gemeinsamen Spektralraum
+`H=L2(R,dxi)` intrinsisch definiert:
+
+    T u = (g+omega-c)/sqrt(g+s) * Fourier(u),
+    D u = (kappa+omega+c)/sqrt(g+s) * Fourier(u).
+
+Die Definition verwendet weder vorausgesetzte Weil-Positivitaet noch eine
+nachtraegliche GNS-Vervollstaendigung. Prime-/Gamma-Mischterme und
+Prime-/Prime-Mischterme sind Teil desselben Gram-Multiplikators.
+
+Die geschlossenen unendlichdimensionalen Raeume `H_a=closure(T W_a)`
+besitzen isometrische Inklusionen `I_ab` mit den exakten Identitaeten
+
+    T_b J_ab = I_ab T_a,    I_bc I_ab = I_ac.
+
+Ein analytischer Pol bei `i beta`, rational lokalisiert durch
+`2/5<beta<9/20`, beweist nichtkompakten physischen Output fuer geeignete
+gerade und ungerade glatte Zwei-Mellin-Quellen. Der Readout ist damit
+tatsaechlich langreichweitig, nicht nur spektral umgeschrieben.
+
+Die exakte verbleibende Gramabweichung lautet
+
+    q_a(u,v) = <T u,T v> - <D u,D v>,
+    E_a(u,v) = -<D u,D v>.
+
+Fuer jede nichtverschwindende Quelle ist `E_a[u]<0`. Das beweist keine
+negative volle Weil-Energie; es beweist, dass der unberichtigte Kandidat
+die gewuenschte Gramidentitaet noch nicht erfuellt.
+
+Der Defekttransfer `R_a(Tu)=Du` ist kompakt, injektiv und von unendlichem
+Rang. Er ist explizit die Multiplikation mit
+`(kappa+omega+c)/(g+omega-c)` auf dem konstruierten Unterraum H_a und
+erfuellt `R_b I_ab=R_a`. Ein Frequenz-/Taylorverfahren liefert quantitative
+normkonvergente endlichrangige Approximationen mit vollstaendigem Rest.
+
+Die normierte Form ist `I-R_a*R_a`. Damit ist der verbleibende Gate genau
+
+    q_a >= 0  genau dann, wenn  ||R_a|| <= 1.
+
+Kompaktheit beschraenkt moegliche Spektralhindernisse bei oder ueber eins
+auf einen endlichen Raum, entscheidet deren Vorhandensein aber nicht.
+Die konservative Beispielschranke im Paket ist UNDECIDED hinsichtlich
+Kontraktion. Fuer `C_a=R_a*R_a` gilt lediglich die bewiesene Kompressionslaw
+`I_ab* C_b I_ab=C_a`; lokale Quadratwurzelkorrekturen duerfen nicht ohne
+Beweis als miteinander intertwiniert behandelt werden.
+
+Die alten positiven Gap-Aussagen koennen bedingt in
+`||R_a||^2 <= s/(s+delta)` uebersetzt werden. Das ist kein neues Fenster.
+Der bestehende Bereich bis B+10^-10 und der uniforme High-Tail bis 1
+werden durch diesen Nachtrag nicht erweitert.
+
+**Geschlossen fuer den benannten Kandidaten:** intrinsische Konstruktion,
+gemeinsame Kanalbeobachtungen, Readout-Intertwining, exakter kompakter
+Gramdefekt, Direktsystem innerhalb des festgelegten Horizonts 1.
+**Offen:** C1c, voller positiver C1-Mediator, kompatible unbeschraenkte
+Horizontfolge, Moving-191D Low/Profile, nicht summierbarer Transport,
+Strong Terminal, Objekt X und RH.
+
+Reproduktion: 53 exakte neue Pruefungen einschliesslich fuenf gebundener
+Herkunftsdateien; bytegleiche Ergebnis-JSON/Log und sieben Nutzdatei-Hashes.
+Keine Quadratur, keine numerischen Eigenwerte als Beweis, keine dritte
+Mellinbedingung, keine Aenderung der geerbten Near-Null-Quelle und kein
+erneuter Lauf der alten numerischen Matrixkette. Checker-Reproduktion
+bleibt von einem unabhaengigen analytischen Audit getrennt.

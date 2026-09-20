@@ -1,0 +1,55 @@
+PASS fixed analytic provenance anchor
+PASS five distinct immutable analytic provenance inputs
+PASS byte SHA256 and Git binding research/x-c1/all-parity-window-and-restart-2026-09-19/PROOF.md
+PASS byte SHA256 and Git binding research/x-c1/c1-readout-nonlocality-obstruction-2026-09-19/PROOF.md
+PASS byte SHA256 and Git binding research/x-c1/moving-endpoint-harmonic-block-renewal-2026-09-19/PROOF.md
+PASS byte SHA256 and Git binding research/x-c1/universal-prime-power-family-2026-09-18/PROOF.md
+PASS byte SHA256 and Git binding research/x-c1/x-interface-directed-system-2026-09-19/PROOF.md
+PASS fixed horizon active prime powers stop at seven
+PASS B lies inside four fifths and one
+PASS exact tangent calculation for the Machin pi identity
+PASS directed Machin intervals prove three less than pi less than 22 over seven
+PASS integral-test Euler constant enclosure lies between one half and two thirds
+PASS intrinsic kappa is strictly between five and eleven halves
+PASS positive directed prime-power weight 2
+PASS positive directed prime-power weight 3
+PASS positive directed prime-power weight 4
+PASS positive directed prime-power weight 5
+PASS positive directed prime-power weight 7
+PASS q4 uses the prime logarithm log2 and exact square root two
+PASS sum of all five horizon weights is between five halves and three
+PASS intrinsic envelope constant is between ten and 23 halves
+PASS formal common-envelope sum m plus n equals A
+PASS formal difference m minus n equals the full signed symbol
+PASS exact Gram factorization holds as a four-variable polynomial
+PASS positive readout includes the Gamma Prime cross term
+PASS positive readout includes the square of the common prime sum
+PASS defect includes coupled mass prime and prime prime terms
+PASS exact exponential tail proves e less than three
+PASS Jensen physical readout floor is two fifteenths
+PASS physical inverse norm squared bound is fifteen halves
+PASS bounded defect transfer norm squared bound is ninety
+PASS form completion comparison constant is 257 halves
+PASS graph shift dominates the defect bound by five
+PASS Gamma observation bound is ninety one
+PASS small-frequency Gamma coefficient bound is 131 eighths
+PASS lower imaginary-axis endpoint first Gamma term is 64 ninths
+PASS all remaining imaginary Gamma modes have the stated convergent majorant
+PASS lower endpoint complete absolute Gamma bound is below eight
+PASS upper endpoint first Gamma term is 324 nineteenth
+PASS upper endpoint already makes the envelope strictly negative
+PASS imaginary zero bracket stays strictly between zero and Mellin exponent
+PASS Mellin annihilator is nonzero throughout the imaginary zero bracket
+PASS positive complete Gamma interval at frequency 1
+PASS nested Gamma interval after doubling exact modes at frequency 1
+PASS positive complete Gamma interval at frequency 4
+PASS nested Gamma interval after doubling exact modes at frequency 4
+PASS positive complete Gamma interval at frequency 16
+PASS nested Gamma interval after doubling exact modes at frequency 16
+PASS harmonic divergence lower bound has a verified finite instance
+PASS rank 129 Taylor cutoff factor is less than one e minus one hundred
+PASS explicit rational finite-rank approximation error squared is below seventy
+PASS this conservative error bound does not certify contraction
+PASS conditional contraction comparison has the exact cleared-denominator identity
+PASS 53 exact arithmetic checks
+STATUS AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN
