@@ -59,7 +59,11 @@ jobs:
           print(d["attempts"][0]["finite_high_shifted_artifact_sha256"])
           PY
           )
+          set +e
           ./check_terminal_high_floor_ldl terminal_even_high_minus_1e-3.bin "$SHA" | tee terminal_even_high_ldl.log
+          HIGH_RC=${PIPESTATUS[0]}
+          set -e
+          echo "EVEN_HIGH_LDL_RC=$HIGH_RC (diagnostic only)"
           cc -O3 -std=c11 -Wall -Wextra \
             research/x-c1/terminal-191d-defect-schur-a1-2026-09-20/check_terminal_source_floor_ldl.c \
             -o check_terminal_source_floor_ldl \
@@ -131,7 +135,11 @@ jobs:
           print(d["attempts"][0]["finite_high_shifted_artifact_sha256"])
           PY
           )
+          set +e
           ./check_terminal_high_floor_ldl terminal_odd_high_minus_1e-3.bin "$SHA" | tee terminal_odd_high_ldl.log
+          HIGH_RC=${PIPESTATUS[0]}
+          set -e
+          echo "ODD_HIGH_LDL_RC=$HIGH_RC (diagnostic only)"
           cc -O3 -std=c11 -Wall -Wextra \
             research/x-c1/terminal-191d-defect-schur-a1-2026-09-20/check_terminal_source_floor_ldl.c \
             -o check_terminal_source_floor_ldl \
