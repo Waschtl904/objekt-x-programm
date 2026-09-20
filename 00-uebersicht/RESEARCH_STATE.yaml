@@ -907,7 +907,7 @@
       "id": "P11-FIXED-PAIR-STRONG-TERMINAL",
       "title": "P11 fixed-pair Strong Terminal",
       "mathematical_status": "AUTHOR_DERIVED",
-      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "review_status": "SCOPED_GREEN",
       "integration_status": "MERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
