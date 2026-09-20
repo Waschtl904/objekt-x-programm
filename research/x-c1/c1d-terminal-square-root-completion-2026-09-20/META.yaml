@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "C1D-TERMINAL-SQUARE-ROOT-COMPLETION",
+  "date": "2026-09-20",
+  "kind": "THEOREM",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Established coupled spectral C1 system on the fixed terminal horizon B<=a<=1; one terminal square-root correction on H_1 and exact compatible positive Weil-Gram readouts.",
+  "claim_polarity": "CONSTRUCTION",
+  "negative_claim_boundary": "Positive completion only on the already constructed fixed C1 horizon. No claim for horizons >1, global test classes, global Object X or RH.",
+  "depends_on": [
+    "C1a-COUPLED-SPECTRAL-MEDIATOR",
+    "C1b-ZERO-EXTENSION-INTERTWINING",
+    "C1-COMPACT-DEFECT-IDENTITY",
+    "TERMINAL-191D-DEFECT-SCHUR-A1"
+  ],
+  "closes": [
+    "C1d-COMPATIBLE-POSITIVE-COMPLETION"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Any compatible horizon larger than 1.",
+    "A cofinal global family of positive terminal completions.",
+    "The full global Weil test class.",
+    "Global Object X, global Weil positivity, or RH."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/c1d-terminal-square-root-completion-2026-09-20/PROOF.md",
+    "sha256": "94e0afae7ffc92b0825ddd1aa4286028c975a8eda8b3eda5b78dc3bbaf1e4cc0"
+  }
+}

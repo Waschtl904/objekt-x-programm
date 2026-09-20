@@ -838,5 +838,11 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": []
+  "pending_packages": [
+    {
+      "id": "C1D-TERMINAL-SQUARE-ROOT-COMPLETION",
+      "meta_path": "research/x-c1/c1d-terminal-square-root-completion-2026-09-20/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    }
+  ]
 }

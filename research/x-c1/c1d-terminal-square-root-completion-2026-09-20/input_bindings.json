@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "anchor": "2de6d199ad29182869e77b6785b962473250e813",
+  "files": [
+    {
+      "commit": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
+      "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md",
+      "sha256": "4ebc12a5a84593d4a2fa0e21fd7b0ca6b5cc3fb1cb29e1b4c4f68dbdaa95f1b5"
+    },
+    {
+      "commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "path": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md",
+      "sha256": "aa3c6d5a28ee10caf69cf7dcee2222f48c991db32721356a30e703b6aedaba83"
+    },
+    {
+      "commit": "2d361bed76248d0a966d6d6453ce0364eae9007d",
+      "path": "research/x-c1/terminal-191d-schur-enclosure-2026-09-20/PROOF.md",
+      "sha256": "14717ba224be7bbbb5ab17b83ab1896f967cde1b82452dcf599876a59098f2fb"
+    },
+    {
+      "commit": "2de6d199ad29182869e77b6785b962473250e813",
+      "path": "audits/TERMINAL_191D_SCHUR_PROMOTION_AUDIT_2026-09-20.md",
+      "sha256": "af5bed4e22077162cf4a5d16a5d4029757ec34eee0b25566f684d4b924c1be5c"
+    }
+  ]
+}
