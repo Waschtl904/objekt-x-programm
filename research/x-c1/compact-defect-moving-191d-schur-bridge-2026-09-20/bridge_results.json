@@ -1,0 +1,203 @@
+{
+  "Object_X_constructed": false,
+  "actual_191D_matrix_entries_certified": false,
+  "actual_191D_matrix_sign_certified": false,
+  "anchor": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
+  "checks": [
+    "current mathematical anchor is 5557d94",
+    "24 distinct complete-package and dependency bindings",
+    "input bytes SHA256 and Git blob research/x-c1/active-set-segment-schur-2026-09-18/PROOF.md",
+    "input bytes SHA256 and Git blob research/x-c1/all-parity-window-and-restart-2026-09-19/PROOF.md",
+    "input bytes SHA256 and Git blob research/x-c1/block-adaptive-profile-transport-2026-09-19/PROOF.md",
+    "input bytes SHA256 and Git blob research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md",
+    "input bytes SHA256 and Git blob research/x-c1/c1-coupled-spectral-mediator-2026-09-20/README.md",
+    "input bytes SHA256 and Git blob research/x-c1/c1-coupled-spectral-mediator-2026-09-20/SHA256SUMS",
+    "input bytes SHA256 and Git blob research/x-c1/c1-coupled-spectral-mediator-2026-09-20/STATUS_DE.md",
+    "input bytes SHA256 and Git blob research/x-c1/c1-coupled-spectral-mediator-2026-09-20/check_mediator.py",
+    "input bytes SHA256 and Git blob research/x-c1/c1-coupled-spectral-mediator-2026-09-20/input_bindings.json",
+    "input bytes SHA256 and Git blob research/x-c1/c1-coupled-spectral-mediator-2026-09-20/mediator_checks.log",
+    "input bytes SHA256 and Git blob research/x-c1/c1-coupled-spectral-mediator-2026-09-20/mediator_results.json",
+    "input bytes SHA256 and Git blob research/x-c1/c1-readout-nonlocality-obstruction-2026-09-19/PROOF.md",
+    "input bytes SHA256 and Git blob research/x-c1/moving-endpoint-harmonic-block-renewal-2026-09-19/PROOF.md",
+    "input bytes SHA256 and Git blob research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/PROOF.md",
+    "input bytes SHA256 and Git blob research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/README.md",
+    "input bytes SHA256 and Git blob research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/SHA256SUMS",
+    "input bytes SHA256 and Git blob research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/STATUS_DE.md",
+    "input bytes SHA256 and Git blob research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/check_tail.py",
+    "input bytes SHA256 and Git blob research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/input_bindings.json",
+    "input bytes SHA256 and Git blob research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/tail_checks.log",
+    "input bytes SHA256 and Git blob research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/tail_results.json",
+    "input bytes SHA256 and Git blob research/x-c1/prime-power-segment-4-2026-09-18/PROOF.md",
+    "input bytes SHA256 and Git blob research/x-c1/universal-prime-power-family-2026-09-18/PROOF.md",
+    "input bytes SHA256 and Git blob research/x-c1/x-interface-directed-system-2026-09-19/PROOF.md",
+    "candidate frozen replay",
+    "moving-tail frozen math-only replay",
+    "moving-tail full provenance run",
+    "full high defect reserve is exactly two over 945",
+    "full high defect norm squared upper is exactly 943 over 945",
+    "high contraction and positive reserve sum to one",
+    "norm floor conversion denominator is 945 halves",
+    "full high inverse norm upper is 945 halves",
+    "singular tail itself is below 999 over 1000",
+    "191 even low coordinates with next degree 384",
+    "191 odd low coordinates with next degree 385",
+    "critical singular indices are 192 per parity and 383 jointly",
+    "bounded transfer input norm and physical inverse are consistent",
+    "sharper s bound is compatible with the inherited norm ninety",
+    "Neumann remainder prefactor is 42525",
+    "one exact block of 1024 high powers is below one eighth",
+    "geometric full-response error after 16382 powers meets the rational target",
+    "geometric full-response error after 20478 powers meets the rational target",
+    "geometric full-response error after 22526 powers meets the rational target",
+    "entrywise radius converts to a 191 dimensional operator radius",
+    "algebra model C is positive by exact LDL",
+    "algebra model high block lies below the proved theta",
+    "algebra model mixed block inequality holds",
+    "algebra model is not falsely treated as block diagonal",
+    "exact noncommuting square completion has the claimed signs",
+    "model low Gram square root is strictly positive",
+    "physical Schur and defect Schur have exact low-Gram congruence",
+    "adding an arbitrary high lift does not alter the model quotient Schur form",
+    "model resolvent full-tail identity at N 0",
+    "model omitted response is strictly positive at N 0",
+    "model Schur enclosure retains the complete response at N 0",
+    "model resolvent full-tail identity at N 2",
+    "model omitted response is strictly positive at N 2",
+    "model Schur enclosure retains the complete response at N 2",
+    "model resolvent full-tail identity at N 5",
+    "model omitted response is strictly positive at N 5",
+    "model Schur enclosure retains the complete response at N 5",
+    "upper-singular certificate specializes at Lambda one N 0",
+    "upper-singular certificate specializes at Lambda one N 2",
+    "upper-singular certificate specializes at Lambda one N 17",
+    "failed coarse largest-norm bound is not a contraction certificate"
+  ],
+  "checks_passed": 67,
+  "finite_model_role": "Noncommuting block algebra only; not actual physical 191D entries or spectral evidence",
+  "full_R_one_contraction_certified": false,
+  "full_positive_C1_closed": false,
+  "inherited_mode_note": "25-check math-only frozen replay plus 26-check full provenance run; their stored historical files are not changed.",
+  "inherited_replays": [
+    {
+      "arguments": [
+        "--verify"
+      ],
+      "label": "candidate frozen replay",
+      "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/check_mediator.py",
+      "reported_checks": 53,
+      "scope": "Arithmetic reproduction, not independent analytic audit",
+      "stdout_sha256": "58d34001aaca93ada347696b5f2ca7464075a3e5050b2ad56525b9c6aeeb4017"
+    },
+    {
+      "arguments": [
+        "--math-only",
+        "--verify"
+      ],
+      "label": "moving-tail frozen math-only replay",
+      "path": "research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/check_tail.py",
+      "reported_checks": 25,
+      "scope": "Arithmetic reproduction, not independent analytic audit",
+      "stdout_sha256": "f30759c07b5b0ab76b2906c3c281052aea751076b7e290cf8af5b27d28ffcf9a"
+    },
+    {
+      "arguments": [],
+      "label": "moving-tail full provenance run",
+      "path": "research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/check_tail.py",
+      "reported_checks": 26,
+      "scope": "Arithmetic reproduction, not independent analytic audit",
+      "stdout_sha256": "0400ed04e19cb39e02d0012da7936c2c1e05d8f9fb3dadbe0aa6f91b8703b943"
+    }
+  ],
+  "input_files_bound": 24,
+  "moving_profile_renewal_closed": false,
+  "negative_actual_Weil_source": false,
+  "new_analytic_theorems": [
+    "complete high defect contraction",
+    "critical singular multiplicity bound",
+    "physical/defect Schur congruence",
+    "Neumann complete-response enclosure",
+    "moving singular-value continuity and monotonicity"
+  ],
+  "new_positive_window": false,
+  "review_note": "Analytic theorems are in PROOF.md. Reproduction is not independent external review; no old finite matrix chain replay.",
+  "scope": "Both parities, original two Mellin constraints, fixed horizon log(5)/2<=a<=1",
+  "singular_modes_equal_physical_Legendre_low_basis": false,
+  "status": "AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN",
+  "values": {
+    "Neumann_prefactor": "42525",
+    "critical_dimension_per_parity": 191,
+    "critical_dimension_total": 382,
+    "delta": "2/945",
+    "high_inverse_upper": "945/2",
+    "model_residuals": [
+      {
+        "N": 0,
+        "exact_resolvent_tail": [
+          [
+            "131/381",
+            "16/127"
+          ],
+          [
+            "16/127",
+            "65/127"
+          ]
+        ]
+      },
+      {
+        "N": 2,
+        "exact_resolvent_tail": [
+          [
+            "2675/97536",
+            "659/24384"
+          ],
+          [
+            "659/24384",
+            "18569/292608"
+          ]
+        ]
+      },
+      {
+        "N": 5,
+        "exact_resolvent_tail": [
+          [
+            "861509/898891776",
+            "16663937/10786701312"
+          ],
+          [
+            "16663937/10786701312",
+            "12208759/4045012992"
+          ]
+        ]
+      }
+    ],
+    "remainder_examples": [
+      {
+        "N": 16382,
+        "block_count": 16,
+        "decimal_upper": "0.000000000151079149190992",
+        "operator_powers_evaluated": false,
+        "published_upper": "1/5000000000",
+        "strict_upper": "42525/281474976710656"
+      },
+      {
+        "N": 20478,
+        "block_count": 20,
+        "decimal_upper": "0.000000000000036884557908",
+        "operator_powers_evaluated": false,
+        "published_upper": "1/25000000000000",
+        "strict_upper": "42525/1152921504606846976"
+      },
+      {
+        "N": 22526,
+        "block_count": 22,
+        "decimal_upper": "0.000000000000000576321218",
+        "operator_powers_evaluated": false,
+        "published_upper": "3/5000000000000000",
+        "strict_upper": "42525/73786976294838206464"
+      }
+    ],
+    "s192_upper": "999/1000",
+    "theta": "943/945"
+  },
+  "verdict": "UNIFORM-191D-COMPACT-DEFECT-SCHUR-BRIDGE-CLOSED"
+}

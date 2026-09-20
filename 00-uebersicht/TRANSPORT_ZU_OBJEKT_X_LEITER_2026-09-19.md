@@ -1200,3 +1200,83 @@ Keine Quadratur, keine numerischen Eigenwerte als Beweis, keine dritte
 Mellinbedingung, keine Aenderung der geerbten Near-Null-Quelle und kein
 erneuter Lauf der alten numerischen Matrixkette. Checker-Reproduktion
 bleibt von einem unabhaengigen analytischen Audit getrennt.
+
+## Nachtrag 20.09.2026: kompakter Defekt und Moving-191D exakt verbunden
+
+**AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN**.
+Anker: `5557d94d048dc05e7c3b4534a5a2d1711bdc71dc`.
+Paket: `research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/`.
+
+Der bestehende physische High-Tail-Satz `q>=1/41` und das konkrete
+Spektralmodell `q=||T.||^2-||D.||^2` mit `||D.||^2<=s||.||^2`, `s<23/2`,
+liefern auf dem vollstaendigen hohen Bildraum uniform fuer `B<=a<=1`:
+
+    q[T^(-1)h] >= (2/945) ||h||^2,
+    ||R_a h||^2 <= (943/945) ||h||^2.
+
+Der hohe Raum hat Kodimension 191 je Paritaet. Daher gilt fuer die
+geordneten Singularwerte des tatsaechlichen kompakten Defekttransfers
+
+    s_192(R_a^p)^2 <= 943/945,
+    s_192(R_a^p) < 999/1000,
+
+beziehungsweise dieselbe Schranke fuer `s_383(R_a)` ueber beide Paritaeten.
+Es koennen also hoechstens 191 Singularwerte je Paritaet die Grenze eins
+erreichen. Die endlichrangige Approximation `R_a Q_low` hat den kompletten
+Operatorrest `||R_a(I-Q_low)||^2<=943/945`; kein hoher Modus wird verworfen.
+
+Mit dem T-orthogonalen Low-/High-Split hat `C_a=R_a*R_a` die Bloecke
+`alpha,beta,K`, wobei `0<=K<=943/945`. Der exakte verbleibende Gate ist
+
+    S_a^p = I-alpha-beta* (I-K)^(-1) beta >= 0.
+
+Der volle High-Inversenrest wird durch
+
+    0 <= S_N-S_a^p <= 42525*(943/945)^(N+2) I
+
+kontrolliert. Die rational gepruefte Blockabschaetzung
+`(943/945)^1024<1/8` liefert beliebig kleine Restschranken. Die benoetigten
+endlichen Eintraege wurden damit noch nicht eingeschlossen; der positive
+endliche Gate bleibt auf neuen Fenstern **UNDECIDED**.
+
+Die vorgeschlagene Verbindungshypothese zum Transportkern wird in einem
+genauen Scope zum Satz: Fuer die kanonischen 191 physischen Low-Koordinaten
+und ihre vollstaendige q-harmonische High-Elimination gilt
+
+    S_physical = G^(1/2) S_a^p G^(1/2),  G>0.
+
+Beide Schurformen haben damit dieselbe Inertie. Das ist eine Kongruenz der
+vollstaendigen Formen, keine Gleichsetzung der Legendre-Low-Basis mit den
+fuehrenden Singularvektoren. Kritische Eigenvektoren besitzen einen
+eigenwertabhaengigen High-Anteil `(lambda I-K)^(-1) beta x`.
+Die zusaetzlichen Low/Profile-Kopplungen einer Fortsetzung a->b sind durch
+diesen Core-Vergleich nicht geschlossen.
+
+Auf den geschachtelten Kandidatenraeumen sind die geordneten Singularwerte
+stetig und monoton wachsend in a. Das gilt auch am Eintritt von Kanal 7.
+Der feste Horizont verwendet bereits alle fuenf Kanaele; es entsteht kein
+neuer Ausgaberaum und kein Sprung. Eine quantitative Schrittweite oder
+nicht summierbare Transportregel folgt daraus nicht.
+
+Die Dichte echter glatter Zwei-Mellin-Quellen im abgeschlossenen
+Gamma-/Weil-Formbereich wird explizit bewiesen. Polynomiellen
+Low-Repräsentanten wird keine falsche H1-Nullrandbedingung zugeschrieben.
+Die geerbte Near-Null-Quelle und die beiden urspruenglichen Mellinbedingungen
+bleiben unveraendert; kein A1-Import.
+
+**Neu geschlossen:** uniforme hohe Defektkontraktion, endliche kritische
+Dimension, physische/Defekt-Schur-Kongruenz, vollstaendiger Rest des
+High-Responses und qualitative Endpunktkontrolle.
+**Offen:** rigorose endliche Schur-Eintraege und positiver Vorzeichennachweis,
+volle Kontraktion bis 1, Moving-Low/Profile-Reserve, groessere positive
+Fenster, unbegrenzte Horizontkompatibilitaet, positiver C1-Abschluss,
+Strong Terminal, Objekt X und RH. Keine negative volle Weil-Quelle.
+
+Reproduktion: 67 neue Ledger-Checks einschliesslich 24 Herkunftsbindungen
+und drei gepruefter Replay-Aufrufe. Die Kandidatenpruefung mit 53 Checks
+sowie die beiden dokumentierten High-Tail-Modi (25 eingefrorene
+Math-only-Checks und 26 Checks mit voller Eingabeprovenienz) bestehen.
+JSON/Log sind bytegleich; sieben Nutzdatei-Hashes passen. Kleine rationale
+Modellmatrizen pruefen ausschliesslich die Blockalgebra, keine physischen
+191D-Singularwerte. Kein unabhaengiger analytischer Audit und keine erneute
+Ausfuehrung der alten finiten Matrixkette.
