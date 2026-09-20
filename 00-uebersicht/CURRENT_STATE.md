@@ -41,7 +41,7 @@ Integration: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 | `C1-MOVING-191D-SCHUR-CONGRUENCE` | AUTHOR_DERIVED | [7998887](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md) |
 | `C1-COMPLETE-HIGH-RESPONSE-BOUND` | AUTHOR_DERIVED | [7998887](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md) |
 | `C1-MOVING-SINGULAR-CONTINUITY` | AUTHOR_DERIVED | [7998887](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md) |
-| `TERMINAL-191D-SCHUR-ENCLOSURE-A1` | AUTHOR_DERIVED | [2d361be](https://github.com/Waschtl904/objekt-x-programm/blob/2d361bed76248d0a966d6d6453ce0364eae9007d/research/x-c1/terminal-191d-schur-enclosure-2026-09-20/PROOF.md) |
+| `TERMINAL-191D-DEFECT-SCHUR-A1` | AUTHOR_DERIVED | [2d361be](https://github.com/Waschtl904/objekt-x-programm/blob/2d361bed76248d0a966d6d6453ce0364eae9007d/research/x-c1/terminal-191d-schur-enclosure-2026-09-20/PROOF.md) |
 
 Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGISTRY.md).
 

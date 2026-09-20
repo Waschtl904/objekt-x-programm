@@ -487,7 +487,7 @@ Does not claim:
 
 Dokumentierte Reproduktion: [bridge_checks.log](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/bridge_checks.log).
 
-## TERMINAL-191D-SCHUR-ENCLOSURE-A1
+## TERMINAL-191D-DEFECT-SCHUR-A1
 
 Strikte terminale 191D-Schurpositivität in beiden Paritäten
 

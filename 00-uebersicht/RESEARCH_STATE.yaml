@@ -46,7 +46,7 @@
         "C1a-COUPLED-SPECTRAL-MEDIATOR",
         "C1b-ZERO-EXTENSION-INTERTWINING",
         "C1-COMPACT-DEFECT-IDENTITY",
-        "TERMINAL-191D-SCHUR-ENCLOSURE-A1"
+        "TERMINAL-191D-DEFECT-SCHUR-A1"
       ],
       "candidate": "C1a-COUPLED-SPECTRAL-MEDIATOR",
       "accepted_progress": [
@@ -77,7 +77,7 @@
         "C1a-COUPLED-SPECTRAL-MEDIATOR",
         "C1b-ZERO-EXTENSION-INTERTWINING",
         "C1-MOVING-SINGULAR-CONTINUITY",
-        "TERMINAL-191D-SCHUR-ENCLOSURE-A1"
+        "TERMINAL-191D-DEFECT-SCHUR-A1"
       ],
       "candidate": "C1a-COUPLED-SPECTRAL-MEDIATOR",
       "accepted_progress": [
@@ -679,7 +679,7 @@
       ]
     },
     {
-      "id": "TERMINAL-191D-SCHUR-ENCLOSURE-A1",
+      "id": "TERMINAL-191D-DEFECT-SCHUR-A1",
       "title": "Strikte terminale 191D-Schurpositivität in beiden Paritäten",
       "mathematical_status": "AUTHOR_DERIVED",
       "review_status": "EXTERNAL_REVIEW_OPEN",

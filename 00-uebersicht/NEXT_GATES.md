@@ -25,7 +25,7 @@ Nicht ausreichend:
 - Nur die bereits bewiesene Positivität oder Kontraktion erneut formulieren.
 - Eine globale Horizontbehauptung über a=1 hinaus.
 
-Verwendbare Registereinträge: `C1a-COUPLED-SPECTRAL-MEDIATOR`, `C1b-ZERO-EXTENSION-INTERTWINING`, `C1-COMPACT-DEFECT-IDENTITY`, `TERMINAL-191D-SCHUR-ENCLOSURE-A1`.
+Verwendbare Registereinträge: `C1a-COUPLED-SPECTRAL-MEDIATOR`, `C1b-ZERO-EXTENSION-INTERTWINING`, `C1-COMPACT-DEFECT-IDENTITY`, `TERMINAL-191D-DEFECT-SCHUR-A1`.
 
 ## Nachgelagerte globale Fortsetzung und Profilreserve
 
@@ -51,6 +51,6 @@ Nicht ausreichend:
 - Eine neue Horizontformel ohne Intertwining- und Testklassenkontrolle.
 - Mikroskopische Breitenverbesserungen ohne neues Skalierungsgesetz.
 
-Verwendbare Registereinträge: `C0-DIRECTED-FORM-SYSTEM`, `C1a-COUPLED-SPECTRAL-MEDIATOR`, `C1b-ZERO-EXTENSION-INTERTWINING`, `C1-MOVING-SINGULAR-CONTINUITY`, `TERMINAL-191D-SCHUR-ENCLOSURE-A1`.
+Verwendbare Registereinträge: `C0-DIRECTED-FORM-SYSTEM`, `C1a-COUPLED-SPECTRAL-MEDIATOR`, `C1b-ZERO-EXTENSION-INTERTWINING`, `C1-MOVING-SINGULAR-CONTINUITY`, `TERMINAL-191D-DEFECT-SCHUR-A1`.
 
 Horizont und Testklasse sind gemäß dem jeweiligen Scope zu beachten. Ein lokaler Gate-Abschluss ist keine RH-Promotion.
