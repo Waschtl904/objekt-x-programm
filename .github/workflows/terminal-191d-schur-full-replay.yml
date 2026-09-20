@@ -1,0 +1,50 @@
+name: Terminal 191D Schur full replay
+
+on:
+  push:
+    paths:
+      - ".github/workflows/terminal-191d-schur-full-replay.yml"
+      - "research/x-c1/terminal-191d-schur-enclosure-2026-09-20/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install pinned Arb/FLINT binding
+        run: python -m pip install "python-flint==0.9.0"
+      - name: Record environment
+        working-directory: research/x-c1/terminal-191d-schur-enclosure-2026-09-20
+        run: |
+          {
+            uname -a
+            python --version
+            python - <<'PY'
+          import flint, platform
+          print("python_flint="+flint.__version__)
+          print("platform="+platform.platform())
+          PY
+          } | tee terminal_replay_environment.log
+      - name: Full verify and matrix recomputation
+        working-directory: research/x-c1/terminal-191d-schur-enclosure-2026-09-20
+        shell: bash
+        run: |
+          set -o pipefail
+          python check_terminal.py --verify --recompute 2>&1 | tee terminal_replay.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: terminal-191d-schur-full-replay
+          path: |
+            research/x-c1/terminal-191d-schur-enclosure-2026-09-20/terminal_replay.log
+            research/x-c1/terminal-191d-schur-enclosure-2026-09-20/terminal_replay_environment.log
+          if-no-files-found: warn
