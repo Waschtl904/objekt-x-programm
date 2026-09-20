@@ -187,19 +187,20 @@ def compute_parities(precision=2048):
         z=a/2
         beta=((z*z)/(2*(1-z*z/3)))**2 if parity==0 else ((z*z)/(6*(1-z*z/5)))**2
         gap=min(sigma.lower(),delta.lower())/(inverse.upper()*(1+beta).upper())
+        target=arb(1)/10**13
         out[label]={
           'dimension':n,'delta':delta.str(30),'sigma':sigma.str(30),'shear':shear.str(30),
-          'moment_beta':beta.str(30),'physical_gap_lower':str(gap),
+          'moment_beta':beta.str(30),'physical_gap_lower':gap.str(40),
+          'gap_exceeds_1e_minus_13':bool(gap>target),
           'positive_pivots':len(piv),'min_pivot':min(piv).str(30)}
     return out
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--output',default='calibration_results.json');args=ap.parse_args()
     out=compute_parities()
-    target=fmpq(1,10**13)
     for parity in ('even','odd'):
         if out[parity]['positive_pivots']!=31:raise RuntimeError(parity+' wrong pivot count')
-        if fmpq(out[parity]['physical_gap_lower'])<=target:
+        if not out[parity]['gap_exceeds_1e_minus_13']:
             raise RuntimeError(parity+' physical gap does not reproduce >1e-13: '+out[parity]['physical_gap_lower'])
     report={'status':'SAME_ENGINE_B_CALIBRATION_PASS','endpoint':'log(5)/2','target_gap':'1/10^13',
             'parities':out,'terminal_gate_promoted':False,'meaning':'audit calibration only'}
