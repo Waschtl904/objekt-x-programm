@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "research-state.schema.json",
+  "title": "Objekt-X canonical operative research state",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "state_date",
+    "repository",
+    "published_baseline",
+    "live_frontier",
+    "fronts",
+    "closed_results",
+    "no_go_results",
+    "global_status",
+    "canonical_files",
+    "historical_navigation_files"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "state_date": {
+      "type": "string",
+      "pattern": "^\\\\d{4}-\\\\d{2}-\\\\d{2}$"
+    },
+    "repository": {
+      "const": "Waschtl904/objekt-x-programm"
+    },
+    "published_baseline": {
+      "type": "object"
+    },
+    "live_frontier": {
+      "type": "object",
+      "required": [
+        "branch",
+        "branch_head_at_generation",
+        "verified_through",
+        "head_policy"
+      ]
+    },
+    "fronts": {
+      "type": "object",
+      "required": [
+        "transport",
+        "c1"
+      ]
+    },
+    "closed_results": {
+      "type": "array"
+    },
+    "no_go_results": {
+      "type": "array"
+    },
+    "global_status": {
+      "type": "object"
+    },
+    "canonical_files": {
+      "type": "object"
+    },
+    "historical_navigation_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

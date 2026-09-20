@@ -1,0 +1,43 @@
+name: Research state registry
+
+on:
+  pull_request:
+    paths:
+      - "00-uebersicht/**"
+      - "CURRENT-FRONT.md"
+      - "research/**/META.yaml"
+      - "research/**/PROOF.md"
+      - "scripts/generate_research_state.py"
+      - "scripts/validate_research_state.py"
+      - "scripts/test_research_state_registry.py"
+      - "schemas/research-*.schema.json"
+      - ".github/workflows/research-state-registry.yml"
+  push:
+    paths:
+      - "00-uebersicht/**"
+      - "CURRENT-FRONT.md"
+      - "research/**/META.yaml"
+      - "research/**/PROOF.md"
+      - "scripts/generate_research_state.py"
+      - "scripts/validate_research_state.py"
+      - "scripts/test_research_state_registry.py"
+      - "schemas/research-*.schema.json"
+      - ".github/workflows/research-state-registry.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check generated current state
+        run: python scripts/generate_research_state.py --check
+      - name: Validate research-state registry
+        run: python scripts/validate_research_state.py
+      - name: Unit tests
+        run: python -m unittest scripts/test_research_state_registry.py

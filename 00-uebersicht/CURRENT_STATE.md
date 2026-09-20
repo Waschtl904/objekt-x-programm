@@ -9,7 +9,7 @@
 
 `main@d455a664c7885eeef9f0d07f246cffc75c1ad267`
 
-PR #137 is merged and frozen as the published baseline through (B=\log(5)/2).  
+PR #137 is merged and frozen as the published baseline through \(B=\log(5)/2\).  
 Mathematical status: **AUTHOR_DERIVED**. Review status: **EXTERNAL_REVIEW_OPEN**.
 
 ## Verified research frontier
@@ -25,26 +25,26 @@ Commits after `verified_through` remain outside the canonical mathematical state
 
 ## Active fronts
 
-### Transport — MOVING 191D LOW-BLOCK + PROFILE RESERVE RENEWAL
+### Transport — MOVING 191D LOW BLOCK AND PROFILE RESERVE RENEWAL
 
-Scope: (B\le a\le1).
+Scope: \(B\le a\le1\).
 
 Open obligations:
 - rigorous moving 191D Low block control;
 - Low/High and Low/Profile mixed terms;
 - renewable profile reserve;
-- a non-summable or uniform transport law.
+- non-summable or uniform transport law.
 
 ### C1 — COMPACT DEFECT CONTRACTION
 
 Candidate: **C1-COUPLED-SPECTRAL-MEDIATOR**.
 
 Open target:
-[
+\[
 \|R_a\|\le1
-]
-proved independently of already-known Weil positivity on the fixed horizon (B\le a\le1).
-Where the nested restriction structure is used, terminal control at (a=1) may serve as the sufficient endpoint formulation.
+\]
+proved independently of already-known Weil positivity on the fixed horizon \(B\le a\le1\).
+Where the nested restriction structure is used, terminal control at \(a=1\) may serve as the sufficient endpoint formulation.
 
 ## Closed operative results
 
