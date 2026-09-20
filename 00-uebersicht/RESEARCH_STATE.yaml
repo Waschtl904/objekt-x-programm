@@ -33,7 +33,7 @@
     "proof_principle": "Dieses Register verwaltet operative Statusangaben. Die jeweils gepinnten Beweispakete begründen die mathematischen Aussagen; Definitionen und Auditregeln behalten ihre eigenen Rollen. Checker-PASS, CI und Merge ersetzen keinen unabhängigen analytischen Audit."
   },
   "fronts": {
-    "unrestricted_horizon": {
+    "unified_terminal": {
       "id": "UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION",
       "title": "Unbeschränkte Horizonterweiterung und kompatibler Transport",
       "mathematical_status": "OPEN",
@@ -64,7 +64,7 @@
         "Mikroskopische Breitenfortsetzungen ohne kofinale Skalierungsstruktur."
       ]
     },
-    "global_test_class": {
+    "global_continuation": {
       "id": "FULL-WEIL-TEST-CLASS",
       "title": "Globale Weil-Testklasse und fensterunabhängiger Readout",
       "mathematical_status": "OPEN",
