@@ -172,6 +172,10 @@ class RepositoryTests(unittest.TestCase):
             item['canonical_proof'] = path
             item['proof_sha256'] = evidence['sha256']
             item['reproduction_evidence'] = [evidence]
+        # Fixture integration roles are synthetic and must not inherit the
+        # repository's current post-merge statuses.
+        state['results'][0]['integration_status'] = 'MERGED'
+        state['results'][1]['integration_status'] = 'RESEARCH_BRANCH_UNMERGED'
         for front in state['fronts'].values():
             front['uses_results'] = [state['results'][0]['id']]
             front['candidate'] = None
