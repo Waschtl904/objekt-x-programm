@@ -1,3 +1,12 @@
+> [!WARNING]
+> **HISTORICAL SNAPSHOT**
+>
+> As of: 2026-09-14 branch snapshot / later navigation also superseded  
+> Retained for provenance; do **not** use this file to identify the current research frontier.
+>
+> Canonical current state: `00-uebersicht/RESEARCH_STATE.yaml` and generated `00-uebersicht/CURRENT_STATE.md`.
+> This supersedes only the navigation role, not historical mathematical content.
+
 # CURRENT FRONT — Objekt X / A1-FINITE-CERT
 
 > **Stand:** 14. September 2026; Registry und Objekt-X-Arbeitsdefinition unverändert.  

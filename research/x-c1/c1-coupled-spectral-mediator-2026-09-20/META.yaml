@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "C1-COUPLED-SPECTRAL-MEDIATOR",
+  "date": "2026-09-20",
+  "kind": "CONSTRUCTION",
+  "strategic": true,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "depends_on": [
+    "C0-DIRECTED-FORM-SYSTEM",
+    "C1-NOGO-SHORT-RANGE-FINITE-RANK"
+  ],
+  "closes": [
+    "C1a-NONLOCAL-MEDIATOR",
+    "C1b-ZERO-EXTENSION-INTERTWINING"
+  ],
+  "opens": [
+    "C1c-COMPACT-DEFECT-CONTRACTION"
+  ],
+  "does_not_claim": [
+    "OBJECT_X",
+    "FULL_C1_GEOM",
+    "GLOBAL_WEIL_POSITIVITY",
+    "RH"
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md",
+    "commit": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc"
+  }
+}

@@ -1,3 +1,11 @@
+> [!IMPORTANT]
+> **Canonical navigation since 20 September 2026**
+>
+> Start with `RESEARCH_STATE.yaml`, `CURRENT_STATE.md`, `NEXT_GATES.md`,
+> `SURVIVOR_REGISTRY.md`, and `OBJEKT_X_ARCHITECTURE.md`.
+>
+> Older files named CURRENT / ACTIVE / AKTUELL are retained as historical snapshots and no longer define the current frontier.
+
 # Objekt-X-Programm — Repository-Karte
 
 > **Operativer Hinweis (19. September 2026):** Für die aktuelle Shell-Schur-Fortsetzung und ihre genaue Stellung auf dem Weg zu Objekt X zuerst die

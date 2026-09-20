@@ -1,3 +1,12 @@
+> [!WARNING]
+> **HISTORICAL SNAPSHOT**
+>
+> As of: historical roadmap snapshot  
+> Retained for provenance; do **not** use this file to identify the current research frontier.
+>
+> Canonical current state: `00-uebersicht/RESEARCH_STATE.yaml` and generated `00-uebersicht/CURRENT_STATE.md`.
+> This supersedes only the navigation role, not historical mathematical content.
+
 # Objekt X — kanonische Forschungsroadmap v3.12
 
 > **Stand:** 14. September 2026; Registry und Arbeitsdefinition unverändert.

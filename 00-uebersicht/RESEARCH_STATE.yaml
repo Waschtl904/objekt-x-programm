@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "state_date": "2026-09-20",
+  "format_note": "JSON-compatible YAML; parseable with Python stdlib json for deterministic CI.",
+  "repository": "Waschtl904/objekt-x-programm",
+  "published_baseline": {
+    "branch": "main",
+    "sha": "d455a664c7885eeef9f0d07f246cffc75c1ad267",
+    "integration_status": "MERGED",
+    "meaning": "Frozen PR #137 endpoint theorem through B=log(5)/2.",
+    "mathematical_status": "AUTHOR_DERIVED",
+    "review_status": "EXTERNAL_REVIEW_OPEN"
+  },
+  "live_frontier": {
+    "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
+    "branch_head_at_generation": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+    "verified_through": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
+    "integration_status": "RESEARCH_BRANCH_UNMERGED",
+    "review_status": "EXTERNAL_REVIEW_OPEN",
+    "head_policy": "verified_through is the audited registry frontier; never infer that it equals the current branch HEAD.",
+    "unverified_after_verified_through": [
+      {
+        "sha": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+        "note": "Later compact-defect/Moving-191D bridge exists on the branch but is intentionally not promoted by this registry revision."
+      }
+    ]
+  },
+  "fronts": {
+    "transport": {
+      "id": "MOVING-191D-LOW-PROFILE",
+      "title": "Moving 191D low block and profile reserve renewal",
+      "strategic_status": "ACTIVE_FRONT",
+      "mathematical_status": "OPEN",
+      "target_scope": "B <= a <= 1",
+      "obligations": [
+        "rigorous moving 191D Low block control",
+        "Low/High and Low/Profile mixed terms",
+        "renewable profile reserve",
+        "non-summable or uniform transport law"
+      ]
+    },
+    "c1": {
+      "id": "C1c-COMPACT-DEFECT-CONTRACTION",
+      "title": "Independent contraction of the compact defect transfer",
+      "strategic_status": "ACTIVE_FRONT",
+      "mathematical_status": "OPEN",
+      "candidate": "C1-COUPLED-SPECTRAL-MEDIATOR",
+      "target_scope": "B <= a <= 1 on fixed horizon 1",
+      "target": "Prove ||R_a|| <= 1 independently of already-known Weil positivity; terminal control at a=1 may be used when justified by the nested restriction structure.",
+      "obligations": [
+        "rigorous Low/Tail decomposition of the compact defect",
+        "complete singular-value tail control",
+        "upper enclosure of the critical largest singular value",
+        "globally compatible positive defect completion after contraction"
+      ]
+    }
+  },
+  "closed_results": [
+    {
+      "id": "ENDPOINT-B",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "scope": "All-parity connected positivity through B=log(5)/2.",
+      "canonical_snapshot_commit": "d455a664c7885eeef9f0d07f246cffc75c1ad267",
+      "canonical_proof": "research/x-c1/prime-power-segment-4-2026-09-18/PROOF.md"
+    },
+    {
+      "id": "ALL-PARITY-BAND-B-PLUS-1E-10",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "scope": "All-parity original two-Mellin sources through B+1e-10.",
+      "origin_commit": "617ffe2a3bfe12bef768b536b9eeffbbfb21f1da",
+      "canonical_proof": "research/x-c1/moving-endpoint-harmonic-block-renewal-2026-09-19/PROOF.md"
+    },
+    {
+      "id": "MOVING-HIGH-TAIL-1-OVER-41",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "scope": "Uniform complete moving high-tail floor >1/41 on B<=a<=1.",
+      "origin_commit": "a0ea6f80f317e4ef1132fc02c86be5bd2064e738",
+      "canonical_proof": "research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/PROOF.md"
+    },
+    {
+      "id": "C0-DIRECTED-FORM-SYSTEM",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "scope": "Canonical zero-extension directed source/form system on the current band.",
+      "origin_commit": "0dea95c6f470b3e7e1efc5e9d7c18ba7895aa413",
+      "canonical_proof": "research/x-c1/x-interface-directed-system-2026-09-19/PROOF.md"
+    },
+    {
+      "id": "C1a-COUPLED-SPECTRAL-MEDIATOR",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "scope": "Fixed horizon B<=a<=1; intrinsic common nonlocal Prime/Gamma spectral candidate.",
+      "origin_commit": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
+      "canonical_proof": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md"
+    },
+    {
+      "id": "C1b-ZERO-EXTENSION-INTERTWINING",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "scope": "Candidate-specific exact T_b J_ab = I_ab T_a and defect naturality.",
+      "origin_commit": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
+      "canonical_proof": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md"
+    }
+  ],
+  "no_go_results": [
+    {
+      "id": "C1-NOGO-SHORT-RANGE-FINITE-RANK",
+      "mathematical_status": "AUTHOR_DERIVED_NO_GO",
+      "claim_polarity": "NEGATIVE_FOR_CANDIDATE_CLASS",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "scope": "Exact C1 readouts T=L+K with physical propagation R<a and finite-rank nonlocal K.",
+      "negative_claim_boundary": "Does not exclude arbitrary nonlocal, abstract-target, or infinite-rank readouts.",
+      "origin_commit": "f77116a890410dfbb2c612956dee9e5342247cd7",
+      "canonical_proof": "research/x-c1/c1-readout-nonlocality-obstruction-2026-09-19/PROOF.md"
+    },
+    {
+      "id": "C1-NOGO-INDIVIDUAL-PRIME-POSITIVE-BLOCK",
+      "mathematical_status": "AUTHOR_DERIVED_NO_GO",
+      "claim_polarity": "NEGATIVE_FOR_CANDIDATE_CLASS",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "scope": "A strictly active signed individual Prime-power contribution cannot itself be a positive Gram block on either parity.",
+      "negative_claim_boundary": "Does not exclude indefinite Prime observations inside a common positive mediator.",
+      "origin_commit": "f77116a890410dfbb2c612956dee9e5342247cd7",
+      "canonical_proof": "research/x-c1/c1-readout-nonlocality-obstruction-2026-09-19/PROOF.md"
+    }
+  ],
+  "strategic_packages": [
+    {
+      "id": "C1-COUPLED-SPECTRAL-MEDIATOR",
+      "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20",
+      "meta": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/META.yaml"
+    }
+  ],
+  "global_status": {
+    "connected_unit_window_coercivity": "OPEN",
+    "strong_terminal": "OPEN",
+    "full_c1_geom": "OPEN",
+    "object_x": "NOT_CONSTRUCTED",
+    "global_weil_gram_identity": "OPEN",
+    "global_weil_positivity": "OPEN",
+    "rh": "OPEN"
+  },
+  "canonical_files": {
+    "generated_current_state": "00-uebersicht/CURRENT_STATE.md",
+    "survivor_registry": "00-uebersicht/SURVIVOR_REGISTRY.md",
+    "next_gates": "00-uebersicht/NEXT_GATES.md",
+    "architecture": "00-uebersicht/OBJEKT_X_ARCHITECTURE.md"
+  },
+  "historical_navigation_files": [
+    "CURRENT-FRONT.md",
+    "00-uebersicht/ACTIVE_FRONT.yaml",
+    "00-uebersicht/AKTUELLER_STAND.md",
+    "00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md",
+    "00-uebersicht/ACTIVE_THEOREM_REGISTRY.md"
+  ]
+}

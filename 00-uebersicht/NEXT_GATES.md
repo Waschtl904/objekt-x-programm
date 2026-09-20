@@ -1,0 +1,34 @@
+# Next Gates
+
+> Canonical strategic front derived from the research state verified through
+> `5557d94d048dc05e7c3b4534a5a2d1711bdc71dc`.
+
+## 1. Transport
+
+[
+\boxed{\text{MOVING 191D LOW-BLOCK + PROFILE RESERVE RENEWAL}}
+]
+
+Strategic progress includes a uniform moving Low-block theorem, renewable Profile reserve, a non-summable or uniform continuation law, or rigorous channel-7 entry control.
+
+A microscopic width improvement with the same collapsing mechanism is not by itself a new strategic front.
+
+## 2. C1
+
+[
+\boxed{\text{COMPACT DEFECT CONTRACTION}}
+]
+
+For the coupled spectral candidate, prove independently
+[
+\|R_a\|\le1
+]
+on the fixed horizon. Endpoint control at (a=1) is especially important when the nested restriction argument is made explicit.
+
+Strategic progress includes a rigorous Low/Tail split, full singular-value-tail control, a directed upper enclosure for the critical largest singular value, a theorem linking critical defect modes to Moving-191D geometry, or a compatible positive defect completion.
+
+Finite-rank diagnostics without a full operator remainder, circular use of already-known Weil positivity, or a formal square root without compatibility do not close this gate.
+
+## Scope firewall
+
+Closing either gate does **not** by itself prove Objekt X, global Weil positivity, Strong Terminal, or RH.
