@@ -12,7 +12,7 @@ Hexwerte, Inhaltsprüfsummen SHA-256 mit 64 Hexstellen.
 | `schema_version`, `render_version` | Schema 1; positive ganzzahlige Ausgabeversion. |
 | `state_date`, `repository` | Datum `YYYY-MM-DD`; dieses Repository. |
 | `published_baseline` | `branch`, `sha`, `integration_status`, `meaning`, `mathematical_status`, `review_status`: gepinnte gemergte Main-Basis. |
-| `live_frontier` | `branch`, `verified_through`, `integration_status`, `review_status`, `head_policy`: geprüfter ungemergter Snapshot. Head-Policy exakt `VERIFIED_SNAPSHOT_NOT_CURRENT_HEAD`. |
+| `live_frontier` | `branch`, `branch_head_at_generation`, `verified_through`, `integration_status`, `review_status`, `head_policy`: geprüfter ungemergter Snapshot plus der bei Registererzeugung beobachtete Dokumentations-Branch-Head. `branch_head_at_generation` ist nur eine dokumentarische Abstammungsmarke und keine mathematische Verifikation. Head-Policy exakt `VERIFIED_SNAPSHOT_NOT_CURRENT_HEAD`. |
 | `authority_roles` | `definition`, `review_rules`: jeweils `{commit,path,sha256}`; dazu `proof_principle` als Text. |
 | `fronts` | Exakt zwei strategische Achsen. Kanonisch seit `7998887`: `unified_terminal` und `global_continuation`; der Validator akzeptiert für historische Übergangstests auch die frühere Paarung `transport` und `c1`. Jede Front trägt `id`, `title`, `mathematical_status: OPEN`, `strategic_status: ACTIVE_FRONT`, `target_scope`, nichtleere `obligation_ids`, `uses_results`, `accepted_progress`, `insufficient` und `candidate` (Survivor-ID oder null). |
 | `obligations` | Liste aus `id`, `title`, `mathematical_status: OPEN`, `scope`; keine ID darf zugleich Survivor sein. |

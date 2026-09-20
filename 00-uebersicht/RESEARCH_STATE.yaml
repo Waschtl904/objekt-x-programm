@@ -13,6 +13,7 @@
   },
   "live_frontier": {
     "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
+    "branch_head_at_generation": "f1fa23f7e1b5de407f4179986cdfe76d2024812f",
     "verified_through": "79988874cceeb01f17e0cda67485838c0b7c4f63",
     "integration_status": "RESEARCH_BRANCH_UNMERGED",
     "review_status": "EXTERNAL_REVIEW_OPEN",

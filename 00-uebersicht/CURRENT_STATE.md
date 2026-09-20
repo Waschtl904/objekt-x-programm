@@ -13,6 +13,7 @@ Mathematik: AUTHOR_DERIVED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 ## Verifizierter Forschungsstand
 
 Geprüft bis [7998887](https://github.com/Waschtl904/objekt-x-programm/commit/79988874cceeb01f17e0cda67485838c0b7c4f63) auf `research/x-c1-inherited-resonance-shell-schur-2026-09-18`.
+Dokumentarischer Branch-Head bei Registererzeugung: [f1fa23f](https://github.com/Waschtl904/objekt-x-programm/commit/f1fa23f7e1b5de407f4179986cdfe76d2024812f).
 **Dies ist ein geprüfter Snapshot, keine Behauptung über den dauerhaft aktuellen Branch-HEAD.**
 Integration: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 

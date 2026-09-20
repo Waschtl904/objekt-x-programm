@@ -43,6 +43,17 @@ class StructureTests(unittest.TestCase):
         with self.assertRaisesRegex(rs.StateError, 'verified_through'):
             rs.validate_structure(self.state)
 
+    def test_documentary_branch_head_is_distinct_from_verified_snapshot(self):
+        self.assertEqual(self.state['live_frontier']['branch_head_at_generation'],
+                         'f1fa23f7e1b5de407f4179986cdfe76d2024812f')
+        self.assertNotEqual(self.state['live_frontier']['branch_head_at_generation'],
+                            self.state['live_frontier']['verified_through'])
+
+    def test_short_documentary_branch_head_is_rejected(self):
+        self.state['live_frontier']['branch_head_at_generation'] = 'f1fa23f'
+        with self.assertRaisesRegex(rs.StateError, 'branch_head_at_generation'):
+            rs.validate_structure(self.state)
+
     def test_current_head_claim_is_rejected(self):
         self.state['live_frontier']['head_policy'] = 'CURRENT_HEAD'
         with self.assertRaisesRegex(rs.StateError, 'current HEAD'):
@@ -146,6 +157,7 @@ class RepositoryTests(unittest.TestCase):
         state = rs.load(ROOT / rs.STATE)
         state['published_baseline']['sha'] = baseline
         state['live_frontier']['verified_through'] = frontier
+        state['live_frontier']['branch_head_at_generation'] = frontier
         state['metadata_policy']['enforced_after'] = frontier
         state['authority_roles']['definition'] = ref(baseline, definition)
         state['authority_roles']['review_rules'] = ref(baseline, definition)
@@ -300,6 +312,7 @@ class RepositoryTests(unittest.TestCase):
         self.s['results'].append(item)
         self.s['pending_packages'] = []
         self.s['live_frontier']['verified_through'] = package_commit
+        self.s['live_frontier']['branch_head_at_generation'] = package_commit
         self.save_state()
         checked = rs.validate(self.root, self.initial_commit)
         self.assertEqual(checked['results'], 3)
@@ -349,6 +362,7 @@ class RepositoryTests(unittest.TestCase):
         added = self.commit('fixture attempt to grandfather new package')
         self.s['metadata_policy']['enforced_after'] = added
         self.s['live_frontier']['verified_through'] = added
+        self.s['live_frontier']['branch_head_at_generation'] = added
         self.save_state()
         with self.assertRaisesRegex(rs.StateError, 'Cannot reset metadata enforcement'):
             rs.validate(self.root, self.initial_commit)

@@ -12,8 +12,10 @@ gebunden. Diese Trennung wird durch die CI geprüft, nicht mathematisch bewiesen
    samt Scope, Grenzen und dokumentierter Reproduktion prüfen.
 2. `verified_through` nur auf den tatsächlich geprüften vollständigen Commit
    setzen. Er darf hinter HEAD liegen; ein späterer Dokumentationscommit macht
-   den geprüften mathematischen Snapshot nicht automatisch ungültig. Es gibt
-   kein automatisch fortgeschriebenes Feld für den aktuellen HEAD.
+   den geprüften mathematischen Snapshot nicht automatisch ungültig. `branch_head_at_generation`
+   hält zusätzlich den bei der Registererzeugung beobachteten Dokumentations-Branch-Head
+   fest. Dieses Feld beschreibt nur die Dokumentationsabstammung und darf niemals als
+   mathematische Verifikation oder Snapshot-Promotion gelesen werden.
 3. Wiederverwendbare Resultate, offene Obligationen und die beiden Fronten in
    `RESEARCH_STATE.yaml` aktualisieren. Historische Zwischenzertifikate bleiben
    in ihren Paketen; ersetzte Resultate verlassen die kompakte Auswahl.

@@ -111,8 +111,9 @@ def validate_structure(s):
     require(isinstance(base['sha'], str) and SHA.fullmatch(base['sha']), 'Invalid baseline SHA')
     require(base['mathematical_status'] == 'AUTHOR_DERIVED' and base['review_status'] == 'EXTERNAL_REVIEW_OPEN', 'Invalid baseline epistemic status')
     string(base['meaning'], 'baseline meaning')
-    fields(front, ('branch', 'verified_through', 'integration_status', 'review_status', 'head_policy'), 'frontier')
+    fields(front, ('branch', 'branch_head_at_generation', 'verified_through', 'integration_status', 'review_status', 'head_policy'), 'frontier')
     string(front['branch'], 'frontier branch')
+    require(isinstance(front['branch_head_at_generation'], str) and SHA.fullmatch(front['branch_head_at_generation']), 'Invalid branch_head_at_generation SHA')
     require(isinstance(front['verified_through'], str) and SHA.fullmatch(front['verified_through']), 'Invalid verified_through SHA')
     require(front['integration_status'] == 'RESEARCH_BRANCH_UNMERGED' and front['review_status'] == 'EXTERNAL_REVIEW_OPEN', 'Invalid frontier status')
     require(front['head_policy'] == 'VERIFIED_SNAPSHOT_NOT_CURRENT_HEAD', 'verified_through must not be presented as current HEAD')
@@ -244,7 +245,7 @@ def render(s):
     generated = '> GENERATED FILE — DO NOT EDIT\n> Quelle: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml). Navigation, keine Satzpromotion.\n'
     b = s['published_baseline']
     f = s['live_frontier']
-    current = ['# Aktueller Forschungsstand', '', generated, 'Stand: ' + s['state_date'] + '.', '', '## Gemergte Basis', '', '`main@' + b['sha'][:7] + '` — ' + commit_link(s, b['sha']) + '. ' + b['meaning'], 'Mathematik: ' + b['mathematical_status'] + '; externe Prüfung: ' + b['review_status'] + '.', '', '## Verifizierter Forschungsstand', '', 'Geprüft bis ' + commit_link(s, f['verified_through']) + ' auf `' + f['branch'] + '`.', '**Dies ist ein geprüfter Snapshot, keine Behauptung über den dauerhaft aktuellen Branch-HEAD.**', 'Integration: ' + f['integration_status'] + '; externe Prüfung: ' + f['review_status'] + '.', '', '## Zwei aktive Hauptfronten', '']
+    current = ['# Aktueller Forschungsstand', '', generated, 'Stand: ' + s['state_date'] + '.', '', '## Gemergte Basis', '', '`main@' + b['sha'][:7] + '` — ' + commit_link(s, b['sha']) + '. ' + b['meaning'], 'Mathematik: ' + b['mathematical_status'] + '; externe Prüfung: ' + b['review_status'] + '.', '', '## Verifizierter Forschungsstand', '', 'Geprüft bis ' + commit_link(s, f['verified_through']) + ' auf `' + f['branch'] + '`.', 'Dokumentarischer Branch-Head bei Registererzeugung: ' + commit_link(s, f['branch_head_at_generation']) + '.', '**Dies ist ein geprüfter Snapshot, keine Behauptung über den dauerhaft aktuellen Branch-HEAD.**', 'Integration: ' + f['integration_status'] + '; externe Prüfung: ' + f['review_status'] + '.', '', '## Zwei aktive Hauptfronten', '']
     for key, front in s['fronts'].items():
         current += ['- **' + front['title'] + '** — `' + front['id'] + '`, OPEN. ' + front['target_scope']]
     current += ['', '## Verwendbare Bausteine', '', '| ID | Mathematischer Status | Beleg |', '|---|---|---|']
@@ -309,9 +310,10 @@ def validate(root, base_ref=None):
     require([p for p in paths if PurePosixPath(p).name.upper() == 'RESEARCH_STATE.YAML'] == [STATE], 'Exactly one canonical RESEARCH_STATE.yaml is required')
     s = load(root / STATE)
     result_ids, open_ids = validate_structure(s)
-    for sha in (s['published_baseline']['sha'], s['live_frontier']['verified_through'], s['metadata_policy']['enforced_after']):
+    for sha in (s['published_baseline']['sha'], s['live_frontier']['verified_through'], s['live_frontier']['branch_head_at_generation'], s['metadata_policy']['enforced_after']):
         git(root, 'cat-file', '-e', sha + '^{commit}')
     require(ancestor(root, s['metadata_policy']['enforced_after'], s['live_frontier']['verified_through']), 'Metadata enforcement anchor cannot move beyond verified_through')
+    require(ancestor(root, s['live_frontier']['verified_through'], s['live_frontier']['branch_head_at_generation']), 'branch_head_at_generation must descend from verified_through')
     refs = [s['authority_roles'][key] for key in ('definition', 'review_rules')]
     for r in s['results']:
         refs.append({'commit': r['canonical_commit'], 'path': r['canonical_proof'], 'sha256': r['proof_sha256']})
