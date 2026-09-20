@@ -1,0 +1,30 @@
+{
+  "anchor": "d145ba88c86d4d0de665355bf3bff15844dbf414",
+  "files": [
+    {
+      "path": "research/x-c1/full-shell-pivot-trace-quotient-2026-09-18/PROOF.md",
+      "sha256": "413577cb24d00b7af971333193c987e2021c6985ecf06e0c702f60c5999720c8",
+      "git_blob": "20c605bf8f14ea309dbeeb49815ac68d7cf76f39"
+    },
+    {
+      "path": "research/x-c1/reduced-shell-coordinate-theorem-2026-09-19/PROOF.md",
+      "sha256": "a13c5487bde6a7c3372988364b4b1b82cd50b7be892267de638732b87fabf10c",
+      "git_blob": "9d7508be5a134206f613996e8920e098a12a6d06"
+    },
+    {
+      "path": "research/x-c1/near-null-reduced-schur-direction-2026-09-19/PROOF.md",
+      "sha256": "6716e782f46270aefb2106f38d3e79a713a4e64a7e8a1bc92ebd90d75c6bbcf6",
+      "git_blob": "f32d754ce6c806a6a5a5d40b9841528d4f45d3f6"
+    },
+    {
+      "path": "research/x-c1/near-null-reduced-schur-direction-2026-09-19/check_direction.py",
+      "sha256": "4ed9cfa307e7db5b9624e4c3cbe8ecd4cb0fbc32db4e86adecac722cb264d747",
+      "git_blob": "57c8f2d673df354fa95c8a92eb6d0cbcc96bd742"
+    },
+    {
+      "path": "research/x-c1/near-null-reduced-schur-direction-2026-09-19/direction_results.json",
+      "sha256": "d57b87a9df67bb4226a8d9d88847a9fa3d081e73fdf78f9646a3830cba93fbe0",
+      "git_blob": "5a2da80b5d3e4bef296a68e910925d1058c180c7"
+    }
+  ]
+}

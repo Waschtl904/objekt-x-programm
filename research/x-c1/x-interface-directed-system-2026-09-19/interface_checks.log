@@ -1,0 +1,30 @@
+PASS anchor is a0ea6f8
+PASS six distinct immutable mathematical inputs
+PASS all bound input bytes SHA256 and Git blobs match
+PASS graph shift seventeen exceeds uniform semibound sixteen
+PASS shifted graph norm dominates physical L2 norm
+PASS physical zero extension is L2 isometric
+PASS quadratic Weil form is natural under zero extension
+PASS Hermitian polarization upgrades quadratic naturality to sesquilinear naturality
+PASS physical Mellin moments are unchanged by zero extension
+PASS parity commutes with zero extension
+PASS reference scale factors compose
+PASS reference support cutoffs compose
+PASS identity transition J_a_a is exact
+PASS graph inner products are natural
+PASS form completions inherit isometric transition maps
+PASS transition composition extends to the completed form spaces
+PASS direct-limit Hermitian form is independent of common endpoint
+PASS Prime observables are natural under physical inclusion
+PASS newly active Prime channels vanish on old supported sources
+PASS archimedean jump observable is natural under physical inclusion
+PASS quotient and A-gauge data are coordinate charts rather than new source degrees
+PASS chart overlap maps obey the cocycle identity where charts coexist
+PASS C1 intertwining is sufficient for a well-defined direct-limit readout
+PASS local Gram identities descend to the positive readout direct limit
+PASS C1 positive readout is not claimed closed
+PASS historical Suzuki H(T_a) transition maps are not claimed closed
+PASS moving 191D Low-Profile reserve renewal remains open
+PASS strategic stop rule excludes pure microscopic width optimization from the main front
+TOTAL 28 X-INTERFACE EXACT/STRUCTURAL CHECKS PASS
+C0-SOURCE-DIRECTED-SYSTEM-AND-X-INTERFACE-CLOSED

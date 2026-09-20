@@ -1,0 +1,224 @@
+{
+  "A1_used": false,
+  "a_gauge_replay_stdout_sha256": "4be698cafbe181abfdc04c3f8c729d1a3aa25ccebcc0cd91bf7c98bb5361474d",
+  "all_core_operator_norm_certified_on_stated_subinterval": true,
+  "analytic_proof": "PROOF.md; finite algebra does not replace the full-domain estimates",
+  "anchor": "d145ba88c86d4d0de665355bf3bff15844dbf414",
+  "arithmetic": "integer/Fraction; inherited outward interval endpoints; compressed exact dyadic power",
+  "bound_inputs": 57,
+  "certified_window": {
+    "B": "log(5)/2",
+    "exact_positive_rational_width": true,
+    "h": "0 < h <= 2^(-10000000000000000)",
+    "width_base": 2,
+    "width_exponent": 10000000000000000
+  },
+  "endpoint_theorem": "Imported with physical epsilon=10^-13; not rerun in full here",
+  "even_all_source_continuation_on_stated_subinterval": true,
+  "finite_core_or_shell_truncation": false,
+  "fixed_near_null_source_changed": false,
+  "inherited_replay_checks": {
+    "a_gauge": 9,
+    "coordinate": 28,
+    "direction": 31,
+    "shell": 43
+  },
+  "inherited_replay_stdout_sha256": "e57f2fb12d00fe6c9b547b0839cb42e702b3506f07e600a08c0f7b0e12be501b",
+  "mellin_constraints": 2,
+  "negative_physical_source_certified": false,
+  "new_exact_checks": 40,
+  "odd_continuation_closed": false,
+  "original_full_width_gate_certified": false,
+  "original_window": "0 < h <= 10^-20",
+  "passed_checks": [
+    "input anchor is the inherited published research head",
+    "publication parent preserves the concurrent A-gauge package",
+    "57 distinct immutable input files",
+    "all input byte counts SHA256 and Git blob bindings match",
+    "parent direction 31 coordinate 28 and shell 43 checks reproduce",
+    "concurrent complete A-gauge theorem 9 arithmetic checks reproduce",
+    "physical inherited source gap and shell normalization",
+    "parent physical psi norm exceeds one half",
+    "parent physical psi energy is positive and below three twentieths",
+    "all-core trace reserve exceeds ten thirds epsilon",
+    "entire energy-orthogonal complement trace norm below 4.2e-11",
+    "uniform shell Young and moment losses are below three",
+    "growing shell floor exceeds log floor on whole original interval",
+    "sqrt h0 retained exactly without underflow",
+    "physical even reflection radical bounded rationally",
+    "full Carleman plus opposite-core Gamma coefficient below four",
+    "all four arithmetic shifts plus Gamma coefficient below twelve",
+    "chi Gamma Cauchy-Schwarz coefficient below forty",
+    "chi bounded remainder coefficient below sixty",
+    "moment residual coefficient below thirteen",
+    "dyadic exponent is positive integer and at least eighty",
+    "small integer power proves hstar below h0",
+    "dyadic width implies required positive logarithmic floor",
+    "entire residual beta equals 169 over 500 and is below one",
+    "entire reduced-core relative margin exceeds 2e-13",
+    "entire reduced-core absolute reserve is 331 over 500 epsilon",
+    "block square-root lower bound has a positive rational witness",
+    "physical norm factor 65 and shell factor 32 both paid",
+    "original L2-gauge physical gap is strictly above 1e-30",
+    "entire A-gauge relative bound is below nine twenty-fifths",
+    "A-gauge physical conversion pays forward 65 and shell 32",
+    "stronger A-gauge physical gap exceeds 1e-17",
+    "original h0 sufficient comparison fails without a negativity conclusion",
+    "complex trace elimination cancels exactly in real and imaginary parts",
+    "shifted positive-form Cauchy-Schwarz retains positive norm slack",
+    "trace residual annihilation is an exact Laurent identity",
+    "full residual majorant retains mixed trace terms exactly",
+    "operator majorant is beta I plus one-minus-beta trace operator",
+    "negative algebra control detects an omitted trace term",
+    "uniform shell loss monotonicity derivatives are exact"
+  ],
+  "publication_parent": "4ab3341f0e2190cc967affd460c1f370f7918ebc",
+  "status": "AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN",
+  "values": {
+    "R0_absolute_lower": {
+      "hi": "331/5000000000000000",
+      "lo": "331/5000000000000000",
+      "outward_decimal": [
+        "0.000000000000066200000000000000000000",
+        "0.000000000000066200000000000000000000"
+      ]
+    },
+    "all_core_trace_operator_norm_upper": {
+      "hi": "14581346700249042880751638878265868190284265866781627440429424367760711181100304358472045440897004853782804411460857532795964885567640449455074029832216609753782104019766899/14581346700254415790708414676097838996154133949208509194723252821288475656017373533713180759723780652237600149770758153108610478037019142751754006959152395917010000000000000",
+      "lo": "0",
+      "outward_decimal": [
+        "0.000000000000000000000000000000000000",
+        "0.999999999999631521692253428750038118"
+      ]
+    },
+    "all_core_trace_reserve_tau": {
+      "hi": "5372909956775797831970805869868082426881754293828453527764474917081604130812285158446845813928380868345172016011185917737372740127879327097602401095231926274859/14581346700254415790708414674692159989324294499911134413932004530832116982811472174552712343678058466231483532199113570505959083423707063032302382210926048307370000000000000",
+      "lo": "5372909956775797831970805869868082426881754293828453527764474917069175241135318826775798454795738309900620312645592469378693296679977126935786163227895980233101/14581346700254415790708414676097838996154133949208509194723252821288475656017373533713180759723780652237600149770758153108610478037019142751754006959152395917010000000000000",
+      "outward_decimal": [
+        "0.000000000000368478307746571249961882",
+        "0.000000000000368478307746571249961883"
+      ]
+    },
+    "comparison_beta_at_original_h0": {
+      "hi": "845000000000000/23",
+      "lo": "1690000000000000/47",
+      "outward_decimal": [
+        "35957446808510.638297872340425531914893617021276595",
+        "36739130434782.608695652173913043478260869565217392"
+      ]
+    },
+    "complete_L2_core_shell_pairing_coefficient_upper": {
+      "hi": "12",
+      "lo": "12",
+      "outward_decimal": [
+        "12.000000000000000000000000000000000000",
+        "12.000000000000000000000000000000000000"
+      ]
+    },
+    "complete_residual_coefficient_upper": {
+      "hi": "13",
+      "lo": "13",
+      "outward_decimal": [
+        "13.000000000000000000000000000000000000",
+        "13.000000000000000000000000000000000000"
+      ]
+    },
+    "derived_Theta_margin_lower_bound": {
+      "hi": "1778433195692789082382336742926335283297860671257218117690041197554010967298866387445905964410294067422251937299702538771070376982328057269306394762521767596978329/7290673350127207895354207337346079994662147249955567206966002265416058491405736087276356171839029233115741766099556785252979541711853531516151191105463024153685000000000000000",
+      "lo": "1778433195692789082382336742926335283297860671257218117690041197549897004815790531662789288537389380577105323485691107364347481201072429015745220028433569457156431/7290673350127207895354207338048919498077066974604254597361626410644237828008686766856590379861890326118800074885379076554305239018509571375877003479576197958505000000000000000",
+      "outward_decimal": [
+        "0.000000000000243932639728230167474765",
+        "0.000000000000243932639728230167474766"
+      ]
+    },
+    "dyadic_exponent": {
+      "hi": "10000000000000000",
+      "lo": "10000000000000000",
+      "outward_decimal": [
+        "10000000000000000.000000000000000000000000000000000000",
+        "10000000000000000.000000000000000000000000000000000000"
+      ]
+    },
+    "entire_A_gauge_Theta_upper": {
+      "hi": "169/500",
+      "lo": "169/500",
+      "outward_decimal": [
+        "0.338000000000000000000000000000000000",
+        "0.338000000000000000000000000000000000"
+      ]
+    },
+    "full_complement_trace_operator_norm_upper": {
+      "hi": "302779378199916150615564551793256606791656659714462293988284138605006178296165173259806580801488371610371858263856399618209340871562096905588231860092049141129446548001608778717184185952709895321745022131356606984276921612439570507007659649452775400635044733835578345575715480385703825268782956683712017375499/7290673350127207895354207338048919498077066974604254597361626410644237828008686766856590379861890326118800074885379076554305239018509571375877003479576197958505000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "lo": "0",
+      "outward_decimal": [
+        "0.000000000000000000000000000000000000",
+        "0.000000000041529686444480912947257743"
+      ]
+    },
+    "full_residual_relative_upper": {
+      "hi": "169/500",
+      "lo": "169/500",
+      "outward_decimal": [
+        "0.338000000000000000000000000000000000",
+        "0.338000000000000000000000000000000000"
+      ]
+    },
+    "logarithmic_floor": {
+      "hi": "5000000000000000",
+      "lo": "5000000000000000",
+      "outward_decimal": [
+        "5000000000000000.000000000000000000000000000000000000",
+        "5000000000000000.000000000000000000000000000000000000"
+      ]
+    },
+    "original_L2_gauge_physical_gap_strict_lower": {
+      "hi": "1/208000000000000000000000000000",
+      "lo": "1/208000000000000000000000000000",
+      "outward_decimal": [
+        "0.000000000000000000000000000004807692",
+        "0.000000000000000000000000000004807693"
+      ]
+    },
+    "physical_gap_strict_lower": {
+      "hi": "1/52000000000000000",
+      "lo": "1/52000000000000000",
+      "outward_decimal": [
+        "0.000000000000000019230769230769230769",
+        "0.000000000000000019230769230769230770"
+      ]
+    },
+    "published_Theta0_upper": {
+      "hi": "4999999999999/5000000000000",
+      "lo": "4999999999999/5000000000000",
+      "outward_decimal": [
+        "0.999999999999800000000000000000000000",
+        "0.999999999999800000000000000000000000"
+      ]
+    },
+    "published_physical_gap_strict_lower": {
+      "hi": "1/100000000000000000",
+      "lo": "1/100000000000000000",
+      "outward_decimal": [
+        "0.000000000000000010000000000000000000",
+        "0.000000000000000010000000000000000000"
+      ]
+    },
+    "shell_uniform_Young_and_moment_loss_upper": {
+      "hi": "110755840000000000413/50000000000000000000",
+      "lo": "110755840000000000413/50000000000000000000",
+      "outward_decimal": [
+        "2.215116800000000008260000000000000000",
+        "2.215116800000000008260000000000000000"
+      ]
+    },
+    "trace_direction_complement_mixed_squared_upper": {
+      "hi": "3027793781872302503441674706328439072857248641740051048891116232618588616378387631913931808079099706306220355201473998181493205409110721603348293826984454471036123247847494555447299404223981481480052362351552377369256179054080152325933367020149919142317954750768213647045908811459495345793482560641282711934554458542496849579110551363898778158200765123868485324807030927760462120968159414869060537916035012508200169516684267193416060358483520002371522338737451885984901/72906733501272078953542073380489194980770669746042545973616264106442378280086867668565903798618903261188000748853790765543052390185095713758770034795761979585050000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "lo": "0",
+      "outward_decimal": [
+        "0.000000000000000000000000000000000000",
+        "0.000000000041529686442740895302498534"
+      ]
+    }
+  },
+  "verdict": "ENTIRE-REDUCED-CORE-POSITIVE-ON-DYADIC-SUBINTERVAL / ORIGINAL-WIDTH-UNDECIDED"
+}

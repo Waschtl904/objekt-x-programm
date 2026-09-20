@@ -1,0 +1,41 @@
+{
+  "anchor": "a0ea6f80f317e4ef1132fc02c86be5bd2064e738",
+  "files": [
+    {
+      "path": "research/x-c1/window-gap-monotonicity-2026-09-18/PROOF.md",
+      "bytes": 6778,
+      "sha256": "b82e672cb447039cbe48278b82b98d171fcd88ae52dd4032363b4234ede8c983",
+      "git_blob": "151ae5b5e6507b4eb2700931f133757415110cb9"
+    },
+    {
+      "path": "research/x-c1/all-parity-window-and-restart-2026-09-19/PROOF.md",
+      "bytes": 22770,
+      "sha256": "eb22fca82973b85d316d480132604338aaecde9501bd91dabc72db6a692e66d7",
+      "git_blob": "eb624f6829d7aac9118fb963117802e7c3e3820c"
+    },
+    {
+      "path": "research/x-c1/inherited-resonance-shell-form-interface-2026-09-18/PROOF.md",
+      "bytes": 8425,
+      "sha256": "45800f058febe31aa462b0c30649109cc29c8cb7cfe69fcbc65a3dacf98432d9",
+      "git_blob": "ee71a0dca1f525dbc576e3bac9c43fdce12304a4"
+    },
+    {
+      "path": "research/x-c1/active-set-segment-schur-2026-09-18/PROOF.md",
+      "bytes": 9022,
+      "sha256": "a9e90cdfab133627db0c87a0eeb955464394f6139877807feed69a49c913a5c1",
+      "git_blob": "61739834b44b1afd30b91debed8f5baeac09fba2"
+    },
+    {
+      "path": "research/x-c1/block-adaptive-profile-transport-2026-09-19/PROOF.md",
+      "bytes": 22635,
+      "sha256": "81d40eab8456b7bc51700d58b5b5a3586bedb5b93ae074c7d8a2f04eb9025f8a",
+      "git_blob": "e7f6ba40b24b1dbc59a36004f448142e3a369b42"
+    },
+    {
+      "path": "research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/PROOF.md",
+      "bytes": 6891,
+      "sha256": "db613db809a7be877340583aecafc0696ba5d5403c73deef1ba960d89d46d96d",
+      "git_blob": "df49e3f972d13e00aa8ecb930f56347103798c70"
+    }
+  ]
+}

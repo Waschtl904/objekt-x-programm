@@ -1,0 +1,86 @@
+PASS analytic provenance anchor is 617ffe2
+PASS six distinct immutable analytic provenance files
+PASS bytes SHA256 and Git blob research/x-c1/all-parity-window-and-restart-2026-09-19/PROOF.md
+PASS bytes SHA256 and Git blob research/x-c1/block-adaptive-profile-transport-2026-09-19/PROOF.md
+PASS bytes SHA256 and Git blob research/x-c1/moving-endpoint-harmonic-block-renewal-2026-09-19/PROOF.md
+PASS bytes SHA256 and Git blob research/x-c1/universal-prime-power-family-2026-09-18/PROOF.md
+PASS bytes SHA256 and Git blob research/x-c1/x-interface-directed-system-2026-09-19/PROOF.md
+PASS bytes SHA256 and Git blob research/x-c1/x-interface-directed-system-2026-09-19/README.md
+PASS log2 lies strictly between 69 and 70 hundredths
+PASS log3 exceeds one point zero nine
+PASS B lies strictly above four fifths
+PASS strict active set at a one ends at seven
+PASS explicit nonnegative cubic bump factorization has degree six
+PASS bump and first two derivatives vanish at both support endpoints
+PASS Mellin-annihilated source has zero traces and is nonzero
+PASS differential annihilator identity holds coefficient by coefficient
+PASS exact Mellin exponents are roots of the annihilator
+PASS bump and annihilated source are even
+PASS exact positive bump mass is 32 delta over 35
+PASS exact source norm agrees with integrated derivative identity
+PASS explicit rational source norm below forty million
+PASS two witness supports are disjoint and inside the canonical B core
+PASS all mixed prime channels vanish by the log2 log3 gap
+PASS fixed witness supports have gap 73 over 100
+PASS fixed locality obstruction radius is 73 over 200
+PASS all Gamma mode factors satisfy an exact polynomial identity
+PASS Mellin carrier mode vanishes and every higher integer mode is positive
+PASS first surviving Gamma mode has exact squared coefficient 36
+PASS exact Taylor remainder certifies exp fifteen eighths below seven
+PASS complete mixed form is strictly below minus one over 2500 via positive series
+PASS two-state locality approximation error exceeds one e minus eleven
+PASS even and odd twin states have equal physical norms
+PASS twin-state polarization difference is four times mixed pairing
+PASS shifted rank witnesses retain prime-free separated support blocks
+PASS all shifted rank witnesses remain inside the canonical B core
+PASS explicit reciprocal Vandermonde nodes are positive and distinct
+PASS node positions one half log z stay within eta
+PASS rank-three exact determinant equals positive Vandermonde product
+PASS prime witness bump satisfies identical exact zero-moment and H1 boundary conditions
+PASS prime witness norm is positive
+PASS q2 four bumps lie strictly inside endpoint one
+PASS q2 four source supports are disjoint
+PASS q2 exactly two q edges and no other prime overlaps
+PASS q2 exact von Mangoldt weight is strictly positive
+PASS q2 signed-channel witnesses already lie inside B
+PASS q2 parity 0 sign -1 exact parity norm and isolated-channel Rayleigh identity
+PASS q2 parity 0 sign 1 exact parity norm and isolated-channel Rayleigh identity
+PASS q2 parity 1 sign -1 exact parity norm and isolated-channel Rayleigh identity
+PASS q2 parity 1 sign 1 exact parity norm and isolated-channel Rayleigh identity
+PASS q3 four bumps lie strictly inside endpoint one
+PASS q3 four source supports are disjoint
+PASS q3 exactly two q edges and no other prime overlaps
+PASS q3 exact von Mangoldt weight is strictly positive
+PASS q3 parity 0 sign -1 exact parity norm and isolated-channel Rayleigh identity
+PASS q3 parity 0 sign 1 exact parity norm and isolated-channel Rayleigh identity
+PASS q3 parity 1 sign -1 exact parity norm and isolated-channel Rayleigh identity
+PASS q3 parity 1 sign 1 exact parity norm and isolated-channel Rayleigh identity
+PASS q4 four bumps lie strictly inside endpoint one
+PASS q4 four source supports are disjoint
+PASS q4 exactly two q edges and no other prime overlaps
+PASS q4 exact von Mangoldt weight is strictly positive
+PASS q4 parity 0 sign -1 exact parity norm and isolated-channel Rayleigh identity
+PASS q4 parity 0 sign 1 exact parity norm and isolated-channel Rayleigh identity
+PASS q4 parity 1 sign -1 exact parity norm and isolated-channel Rayleigh identity
+PASS q4 parity 1 sign 1 exact parity norm and isolated-channel Rayleigh identity
+PASS q5 four bumps lie strictly inside endpoint one
+PASS q5 four source supports are disjoint
+PASS q5 exactly two q edges and no other prime overlaps
+PASS q5 exact von Mangoldt weight is strictly positive
+PASS q5 parity 0 sign -1 exact parity norm and isolated-channel Rayleigh identity
+PASS q5 parity 0 sign 1 exact parity norm and isolated-channel Rayleigh identity
+PASS q5 parity 1 sign -1 exact parity norm and isolated-channel Rayleigh identity
+PASS q5 parity 1 sign 1 exact parity norm and isolated-channel Rayleigh identity
+PASS q7 four bumps lie strictly inside endpoint one
+PASS q7 four source supports are disjoint
+PASS q7 exactly two q edges and no other prime overlaps
+PASS q7 exact von Mangoldt weight is strictly positive
+PASS q7 parity 0 sign -1 exact parity norm and isolated-channel Rayleigh identity
+PASS q7 parity 0 sign 1 exact parity norm and isolated-channel Rayleigh identity
+PASS q7 parity 1 sign -1 exact parity norm and isolated-channel Rayleigh identity
+PASS q7 parity 1 sign 1 exact parity norm and isolated-channel Rayleigh identity
+PASS both signs in both parities certified for all five channels
+PASS factor 200 refers to immediate b1c0186 outer window
+PASS factor 200 million refers to older ca3849a outer window
+TOTAL 84 NEW EXACT CHECKS PASS
+C1-FINITE-PROPAGATION-PLUS-FINITE-RANK-AND-CHANNEL-GRAM-CLASSES-EXCLUDED

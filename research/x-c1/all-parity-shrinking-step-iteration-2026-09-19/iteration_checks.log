@@ -1,0 +1,40 @@
+PASS anchor is the local all-parity commit
+PASS six distinct immutable mathematical inputs
+PASS log six fifths lower witness
+PASS log four thirds lower witness
+PASS log five fourths lower witness
+PASS q7 stays inactive on the restart band
+PASS even corrector moment lower gives sup below three
+PASS even corrector Lipschitz below four
+PASS even corrector norm squared below thirteen
+PASS odd corrector moment lower is two seventy fifths
+PASS odd corrector sup below ten
+PASS odd corrector Lipschitz below 47
+PASS odd corrector norm squared below 200
+PASS cosh one half below six fifths
+PASS sinh one half below three fifths
+PASS even Gamma action norm below 155
+PASS even bounded remainder below sixty
+PASS even complete corrector functional below 215
+PASS odd Gamma action norm below 1000
+PASS odd bounded remainder below 200
+PASS odd complete corrector functional below 1200
+PASS pinned disjoint-prime coupling below 1.601
+PASS uniform complete restart core-profile coupling below four
+PASS even profile moment loss below one
+PASS odd profile moment loss below one
+PASS common profile floor ledger is two L minus seventeen
+PASS restart Young allocation is positive
+PASS core norm target has strict reserve
+PASS restart profile Schur deduction is sixteen over delta
+PASS log two lower witness from positive atanh series
+PASS base scheduled profile reserve dominates every target
+PASS scheduled exponents exceed eighty
+PASS two to eighty exceeds ten to twenty
+PASS scheduled norm-loss universal bound below one
+PASS scheduled total extra width is below ten to minus twenty
+PASS gap sequence starts at three e minus fifteen
+PASS gap sequence has positive limiting floor one e minus fifteen
+PASS profile scale coefficient remains positive under doubling
+TOTAL 38 RESTART/ITERATION EXACT CHECKS PASS
+ALL-PARITY-RESTART-AND-SHRINKING-STEP-ITERATION-CLOSED

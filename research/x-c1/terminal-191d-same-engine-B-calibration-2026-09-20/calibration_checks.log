@@ -1,0 +1,21 @@
+PASS pinned python-flint 0.9.0 environment
+PASS same terminal Arb/Legendre active-set assembly primitives reused at B=log(5)/2
+PASS endpoint-specific Gamma remainder matches frozen B domain
+PASS even A entry crosscheck: 0 nonoverlaps
+PASS even Gact entry crosscheck: 0 nonoverlaps
+PASS even delta overlaps frozen Fraction enclosure
+PASS even lower Schur entry crosscheck: 0 nonoverlaps
+PASS even 31 directed LDL pivots positive
+PASS even physical gap lower > 1e-13
+PASS odd A entry crosscheck: 0 nonoverlaps
+PASS odd Gact entry crosscheck: 0 nonoverlaps
+PASS odd delta overlaps frozen Fraction enclosure
+PASS odd lower Schur entry crosscheck: 0 nonoverlaps
+PASS odd 31 directed LDL pivots positive
+PASS odd physical gap lower > 1e-13
+PASS SAME_ENGINE_B_CALIBRATION
+NO TERMINAL A1 STATUS PROMOTION
+workflow_run_id=35518951368
+workflow_job_id=106099567779
+artifact_id=10607872401
+artifact_zip_sha256=143b7e556cddcb38f9d24155fac51bb337d80d1e71a515710e75f7e6e452b5f7

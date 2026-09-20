@@ -1,6 +1,0 @@
-PASS 134 frozen Git blobs, byte lengths and SHA256 bindings
-PASS historical inventory reproduced: 14 clean, 5 discrepant manifests / 9 entries
-PASS 7 central manifests; exact scope and two-moment/source bindings
-PASS archived fresh replay evidence for all 7 central checkers
-PASS consolidation payload SHA256SUMS; external review remains open
-NOTICE historical manifest mismatches are recorded findings, not repaired successes

@@ -1,5 +1,0 @@
-PASS 128 same-parity generic shift identities across d<1 and d>1
-PASS 216 self-adjointness and mixed-shift Gram symmetry identities
-PASS 32 exact parity-block d=0 limits
-PASS 5 exact positive LDL pivots for nontrivial two-shift Gram
-TOTAL 381

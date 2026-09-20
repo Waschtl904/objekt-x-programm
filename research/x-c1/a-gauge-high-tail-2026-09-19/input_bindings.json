@@ -1,0 +1,47 @@
+{
+  "anchor": "8f5b711145b28b6dbfc8280d8e51625f3d2f1532",
+  "files": [
+    {
+      "path": "research/x-c1/a-gauge-transition-congruence-2026-09-19/PROOF.md",
+      "bytes": 13363,
+      "sha256": "d6fd8d07ee4c4675d90a21271cea6e8f1124ebaf72aabd6b2da21ae2dc5fdfc9",
+      "git_blob": "61771b423f90716548747485992df6505ec1dcfe"
+    },
+    {
+      "path": "research/x-c1/a-gauge-transition-congruence-2026-09-19/check_transition.py",
+      "bytes": 13525,
+      "sha256": "45488a08c30a216986d4d9c7fe19775f5031e1f6c9b65c37120dd3365c798896",
+      "git_blob": "ea9954f1f97fc15043a5ceaef78db1964377bb2b"
+    },
+    {
+      "path": "research/x-c1/a-gauge-transition-congruence-2026-09-19/transition_results.json",
+      "bytes": 9403,
+      "sha256": "c939bea3e833809bfcede365a0eb71ae3d87d224be27c8644a575588c4c62823",
+      "git_blob": "f6fb27556a5f4bf944ef0dab814d0ee16f972d4b"
+    },
+    {
+      "path": "research/x-c1/all-core-logarithmic-shell-gate-2026-09-19/PROOF.md",
+      "bytes": 16125,
+      "sha256": "c741342d2dcbd31c6a5925560cfdc8cb2977fc633244fabcaa7f4e0313ed3efa",
+      "git_blob": "cb7e89a3e1d3e9df56a4a00cd74c1fa9c9b2adf1"
+    },
+    {
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/PROOF.md",
+      "bytes": 22297,
+      "sha256": "cd916ca46874d63cf663d9a611ec91b62d314456c500cc5f0a205cab237134df",
+      "git_blob": "e583ce27b67103c5aaca2a3c7174cdb947ee4c3f"
+    },
+    {
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/check_segment.py",
+      "bytes": 23778,
+      "sha256": "aa39d30b98dae1fedb3c81e65a9933f6b90755d7523fedcfbcf3b9ffafae3392",
+      "git_blob": "eeebaef908a96cc1982d50ad094fda82f22e1e1b"
+    },
+    {
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/segment_results.json",
+      "bytes": 105018,
+      "sha256": "b37e0e8ed3da94722652fbea40117246a9f180cae3b7d9ac0578368109bb44ed",
+      "git_blob": "ec29897cd614fe1ee759aa97e791c40ac154c141"
+    }
+  ]
+}

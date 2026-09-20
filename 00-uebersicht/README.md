@@ -1,20 +1,45 @@
+> [!WARNING]
+> **HISTORICAL SNAPSHOT — nur die operative Navigation ist ersetzt.**
+>
+> As of: 2026-09-19
+> Nicht zur Bestimmung der aktuellen Forschungsfront verwenden.
+> Kanonischer Status: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml).
+> Lesbarer Einstieg: [CURRENT_STATE.md](CURRENT_STATE.md).
+> Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten.
+> Mathematische Inhalte werden durch diesen Hinweis nicht pauschal verworfen.
+
 # Objekt-X-Programm — Repository-Karte
 
-> **Operativer Hinweis (3. September 2026):** Für den heutigen Forschungsstand zuerst
+> **Operativer Hinweis (19. September 2026):** Für die aktuelle Shell-Schur-Fortsetzung und ihre genaue Stellung auf dem Weg zu Objekt X zuerst die
+> [Transportleiter zu Objekt X](TRANSPORT_ZU_OBJEKT_X_LEITER_2026-09-19.md) lesen.
+> Der aktuelle Forschungs-Head schließt den unendlichen geraden A-Gauge-High-Tail auf `0<h<=10^-20`, aber noch nicht den endlichen Low-Block, die Mischblöcke oder den Odd-Sektor.
+>
+> Für die ältere kanonische Gesamtorganisation außerdem
 > [CURRENT-FRONT](../CURRENT-FRONT.md),
 > [ACTIVE_THEOREM_REGISTRY](ACTIVE_THEOREM_REGISTRY.md),
 > [AKTUELLER_STAND](AKTUELLER_STAND.md),
 > [DAG](DAG.md) und die
-> [Forschungsroadmap 2026-09-03](FORSCHUNGS_ROADMAP_2026-09-03.md) lesen.
->
-> Aktiver mathematischer Kern: **B / Strong Terminal / R43**. R38–R42 sind frozen;
-> §3K liefert aktuell einen noch unabhängig zu prüfenden GC-AC-Kandidaten. Unter diesem
-> Kandidaten bleibt als finaler C6-Rest nur der Normal-Skalar (b_U). A / universelle
-> finite-level SW1-Injektivität ist negativ entschieden; R37/G4c bleibt separat offen.
+> [Forschungsroadmap 2026-09-03](FORSCHUNGS_ROADMAP_2026-09-03.md) konsultieren.
 >
 > Die darunterstehende Repository-/Syntheseorganisation ist teilweise historisch
 > (Grundstruktur vom 8. August 2026). Historische Navigationsfassungen werden unter
 > [archiv/](archiv/) erhalten.
+
+---
+
+## Aktuelle Forschungsleiter
+
+| Stufe | Stand |
+|---|---|
+| Endpunkt `B=log(5)/2` | positiv geschlossen auf `main` |
+| lokaler Even-All-Source-Transport | geschlossen für `h<=2^(-10^16)` |
+| Even-WIDTH-AMPLIFICATION | unendlicher High-Tail geschlossen für `h<=10^-20`; Low- und Mischblöcke offen |
+| Odd-Fortsetzung | offen |
+| Strong Terminal | offen und von der lokalen Shell-Schur-Fortsetzung zu unterscheiden |
+| full C1-GEOM / Objekt X / RH | offen |
+
+Die vollständige Status- und Abhängigkeitsleiter steht in
+[TRANSPORT_ZU_OBJEKT_X_LEITER_2026-09-19.md](TRANSPORT_ZU_OBJEKT_X_LEITER_2026-09-19.md).
 
 ---
 
@@ -34,7 +59,8 @@
 objekt-x-programm/
 ├── 00-uebersicht/
 │   ├── README.md          ← diese Datei
-│   ├── AKTUELLER_STAND.md ← aktive Fronten, offene Fragen
+│   ├── TRANSPORT_ZU_OBJEKT_X_LEITER_2026-09-19.md
+│   ├── AKTUELLER_STAND.md ← ältere Gesamtübersicht
 │   └── DAG.md             ← Abhängigkeitsgraph
 ├── papers/
 │   ├── README_papers.md   ← Manuskript-Index
@@ -57,9 +83,10 @@ objekt-x-programm/
 
 ## Tages-Workflow
 
-1. **Neue Mathematik:** `active/NEU-XXX` anlegen.
+1. **Neue Mathematik:** `active/NEU-XXX` oder ein klar abgegrenztes reproduzierbares Forschungspaket anlegen.
 2. **Abgeschlossener Block:** Block in `papers/PXX` verdichten; Knoten nach `archive-nodes/` verschieben.
-3. **Audit:** Immer gegen `papers/` auditieren; für Provenienz `archive-nodes/` konsultieren.
+3. **Audit:** Immer gegen die kanonischen Beweisartefakte auditieren; für Provenienz die gebundenen Pakete konsultieren.
+4. **Statuspromotion:** Checker-PASS, CI, Merge und Prüfsummen allein erzeugen keine mathematische Statuspromotion.
 
 ---
 

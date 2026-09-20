@@ -1,0 +1,881 @@
+{
+  "schema_version": 1,
+  "render_version": 1,
+  "state_date": "2026-09-20",
+  "repository": "Waschtl904/objekt-x-programm",
+  "published_baseline": {
+    "branch": "main",
+    "sha": "d455a664c7885eeef9f0d07f246cffc75c1ad267",
+    "integration_status": "MERGED",
+    "meaning": "Eingefrorener gemergter PR-#137-Endpunktsatz bis B=log(5)/2.",
+    "mathematical_status": "AUTHOR_DERIVED",
+    "review_status": "EXTERNAL_REVIEW_OPEN"
+  },
+  "live_frontier": {
+    "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
+    "branch_head_at_generation": "5f19065e28b9f2e09ae93bef0b4c752ab58997d4",
+    "verified_through": "5f19065e28b9f2e09ae93bef0b4c752ab58997d4",
+    "integration_status": "RESEARCH_BRANCH_UNMERGED",
+    "review_status": "EXTERNAL_REVIEW_OPEN",
+    "head_policy": "VERIFIED_SNAPSHOT_NOT_CURRENT_HEAD"
+  },
+  "authority_roles": {
+    "definition": {
+      "commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "path": "00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md",
+      "sha256": "77818aee8e1df25cf067ceb55ea205f35c520942895508f1bac09e75faffc6ce"
+    },
+    "review_rules": {
+      "commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "path": "00-uebersicht/ACTIVE_THEOREM_REGISTRY.md",
+      "sha256": "8c7f0b69d7326e074e6b4db2ab967cc2d59bbe24026353b63c49deda9700aaba"
+    },
+    "proof_principle": "Dieses Register verwaltet operative Statusangaben. Die jeweils gepinnten Beweispakete begründen die mathematischen Aussagen; Definitionen und Auditregeln behalten ihre eigenen Rollen. Checker-PASS, CI und Merge ersetzen keinen unabhängigen analytischen Audit."
+  },
+  "fronts": {
+    "unified_terminal": {
+      "id": "UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION",
+      "title": "Unbeschränkte Horizonterweiterung und kompatibler Transport",
+      "mathematical_status": "OPEN",
+      "strategic_status": "ACTIVE_FRONT",
+      "target_scope": "Nach geschlossenem C1a-C1d auf B<=a<=1: neue Prime-Power-Horizonte a>1, erneuerbare Profilreserve, nicht summierbarer/kofinaler Transport und kompatible positive Terminalabschlüsse.",
+      "obligation_ids": [
+        "MOVING-PROFILE-RESERVE-RENEWAL",
+        "NON-SUMMABLE-TRANSPORT",
+        "UNBOUNDED-HORIZON-COMPATIBILITY"
+      ],
+      "uses_results": [
+        "C0-DIRECTED-FORM-SYSTEM",
+        "C1a-COUPLED-SPECTRAL-MEDIATOR",
+        "C1b-ZERO-EXTENSION-INTERTWINING",
+        "TERMINAL-191D-DEFECT-SCHUR-A1",
+        "C1d-COMPATIBLE-POSITIVE-COMPLETION"
+      ],
+      "candidate": "C1d-COMPATIBLE-POSITIVE-COMPLETION",
+      "accepted_progress": [
+        "Konstruiere den Spektralkandidaten bei Eintritt weiterer Prime-Power-Kanäle für Horizonte >1.",
+        "Beweise kompatible Terminalräume und positive Abschlüsse für eine wachsende oder kofinale Horizontfamilie.",
+        "Ersetze endliche Schrittketten durch ein nicht summierbares oder uniformes Fortsetzungsgesetz.",
+        "Kontrolliere Low/Profile-Kopplungen mit erneuerbarer Reserve."
+      ],
+      "insufficient": [
+        "Den festen Horizont 1 lediglich numerisch vergrößern ohne neues Kompatibilitätsgesetz.",
+        "Neue Terminalabschlüsse ohne Intertwining untereinander.",
+        "Mikroskopische Breitenfortsetzungen ohne kofinale Skalierungsstruktur."
+      ]
+    },
+    "global_continuation": {
+      "id": "FULL-WEIL-TEST-CLASS",
+      "title": "Globale Weil-Testklasse und fensterunabhängiger Readout",
+      "mathematical_status": "OPEN",
+      "strategic_status": "ACTIVE_FRONT",
+      "target_scope": "Nach Aufbau einer kofinal kompatiblen C1-Geometrie: exakte Rückbindung an die vollständige geeignete Weil-Testklasse und einen globalen/fensterunabhängigen positiven Readout.",
+      "obligation_ids": [
+        "FULL-WEIL-TEST-CLASS"
+      ],
+      "uses_results": [
+        "C0-DIRECTED-FORM-SYSTEM",
+        "C1d-COMPATIBLE-POSITIVE-COMPLETION"
+      ],
+      "candidate": "C1d-COMPATIBLE-POSITIVE-COMPLETION",
+      "accepted_progress": [
+        "Identifiziere eine präzise kofinale Testklassen-Erschöpfung und ihre Normalisierung.",
+        "Beweise, dass der künftige globale Readout auf dieser Klasse exakt die Weil-Form reproduziert.",
+        "Trenne Testklassen-Dichte, Readout-Kompatibilität und den eigentlichen globalen Positivitätsschritt."
+      ],
+      "insufficient": [
+        "Fixed-Horizon-Positivität als globale Weil-Positivität bezeichnen.",
+        "Eine dichte Teilklasse ohne Nachweis der für das Weil-Kriterium erforderlichen Abschluss-/Approximationseigenschaften.",
+        "Objekt X oder RH vor Abschluss der globalen Testklasse behaupten."
+      ]
+    }
+  },
+  "obligations": [
+    {
+      "id": "MOVING-PROFILE-RESERVE-RENEWAL",
+      "title": "Erneuerbare Low/Profile-Reserve konstruieren",
+      "mathematical_status": "OPEN",
+      "scope": "Zusätzliche Kopplungen bei der physischen Fortsetzung a->b; die Core-Kongruenz allein reicht nicht."
+    },
+    {
+      "id": "NON-SUMMABLE-TRANSPORT",
+      "title": "Nicht summierbares oder uniformes Fortsetzungsgesetz beweisen",
+      "mathematical_status": "OPEN",
+      "scope": "Über das vorhandene endliche positive Band hinaus; quantitative Schrittweiten."
+    },
+    {
+      "id": "UNBOUNDED-HORIZON-COMPATIBILITY",
+      "title": "Kompatible unbeschränkte Horizontfolge konstruieren",
+      "mathematical_status": "OPEN",
+      "scope": "Der bisherige Spektralkandidat verwendet den festen Horizont 1."
+    },
+    {
+      "id": "FULL-WEIL-TEST-CLASS",
+      "title": "Vollständige geeignete Weil-Testklasse identifizieren",
+      "mathematical_status": "OPEN",
+      "scope": "Exakte Normalisierung, kanonischer globaler Readout und nichtzirkuläre Rückbindung an das Weil-Kriterium."
+    }
+  ],
+  "results": [
+    {
+      "id": "ENDPOINT-B",
+      "title": "Eingefrorener PR-#137-Endpunktsatz",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "d455a664c7885eeef9f0d07f246cffc75c1ad267",
+          "path": "research/x-c1/prime-power-segment-4-2026-09-18/segment_checks.log",
+          "sha256": "a35ee4a38e5da52f62a59eeea8139c17770f80a2a78f47639015c2d09466582c"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "0<a<=B=log(5)/2; tatsächliche H1_0-Quellen mit genau den zwei ursprünglichen Mellinbedingungen; beide Paritäten.",
+      "claim": [
+        "Q_W[u]>10^-13 ||u||_2^2 für jede nichtverschwindende zulässige Quelle.",
+        "Kein A1-Import und keine zusätzliche Momentbedingung."
+      ],
+      "depends_on": [],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "d455a664c7885eeef9f0d07f246cffc75c1ad267",
+      "canonical_proof": "research/x-c1/prime-power-segment-4-2026-09-18/PROOF.md",
+      "proof_sha256": "cd916ca46874d63cf663d9a611ec91b62d314456c500cc5f0a205cab237134df",
+      "negative_claim_boundary": "Kein No-Go und kein Nachweis einer negativen vollständigen Weil-Energie.",
+      "does_not_claim": [
+        "Positivität bis zum Einheitsfenster.",
+        "Objekt X ist konstruiert.",
+        "Globale Weil-Positivität oder RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "SHELL-REDUCED-SOURCE-COORDINATES",
+      "title": "Reduzierte Quellenkoordinaten und gekoppelte H1-Spuren",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "1f7628b20e4bd7b3588ae36cfdf66c3f1656d1ca",
+          "path": "research/x-c1/reduced-shell-coordinate-theorem-2026-09-19/quotient_checks.log",
+          "sha256": "0300fafb370b18e7ed09c7e95568e58fd404ac38113406ffde090498e4930d5f"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "Gerader Sektor, B<b<=B+10^-20; physisches L2(dx), abgeschlossene Formräume und ausdrücklich gekoppelte H1-Spuren.",
+      "claim": [
+        "Bijektion K_B^0 direkt-sum X -> K_b mit trivialem Kern und quadratischen Normfaktoren 1/32 und 65.",
+        "Bijektion der abgeschlossenen Formräume; die tatsächliche H1-Urbildbedingung lautet w(B)+t=s(B), s(b)=0.",
+        "Die Trace-Redundanz wird entfernt, ohne eine physische Quelle zu streichen oder eine dritte Mellinbedingung einzuführen."
+      ],
+      "depends_on": [
+        "ENDPOINT-B"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "1f7628b20e4bd7b3588ae36cfdf66c3f1656d1ca",
+      "canonical_proof": "research/x-c1/reduced-shell-coordinate-theorem-2026-09-19/PROOF.md",
+      "proof_sha256": "a13c5487bde6a7c3372988364b4b1b82cd50b7be892267de638732b87fabf10c",
+      "negative_claim_boundary": "Kein No-Go und kein Nachweis einer negativen vollständigen Weil-Energie.",
+      "does_not_claim": [
+        "Eine ungekoppelte H1_0-Produktzerlegung.",
+        "Ein neuer positiver Fortsetzungsbereich.",
+        "Objekt X ist konstruiert.",
+        "Globale Weil-Positivität oder RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "ALL-PARITY-BAND-B-PLUS-1E-10",
+      "title": "Tatsächlicher All-Parity-Transport auf dem endlichen Band",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "617ffe2a3bfe12bef768b536b9eeffbbfb21f1da",
+          "path": "research/x-c1/moving-endpoint-harmonic-block-renewal-2026-09-19/moving_checks.log",
+          "sha256": "22fce9999d4a4c41f8f718fc4faedbdd45bf5a65bf97b4b0a2e44b3a7ebed8a2"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "B<=a<=B+10^-10; tatsächliche Zwei-Mellin-Quellen mit voller Shell- und Coreantwort.",
+      "claim": [
+        "Q_W[u]>2*10^-15 ||u||_2^2 über beide Paritäten; im Odd-Sektor gilt die stärkere Schranke >10^-12.",
+        "Der 31-dimensionale weiche Block je Parität wird mit vollständigen unendlichen Antworten und Mischtermen kontrolliert."
+      ],
+      "depends_on": [
+        "ENDPOINT-B",
+        "SHELL-REDUCED-SOURCE-COORDINATES"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "617ffe2a3bfe12bef768b536b9eeffbbfb21f1da",
+      "canonical_proof": "research/x-c1/moving-endpoint-harmonic-block-renewal-2026-09-19/PROOF.md",
+      "proof_sha256": "e21fae202d4c94e76e8ba87f0cef6ca0fda582703d5f3a95a696e9d7b79f22b0",
+      "negative_claim_boundary": "Kein No-Go und kein Nachweis einer negativen vollständigen Weil-Energie.",
+      "does_not_claim": [
+        "Ein nicht summierbares Fortsetzungsgesetz.",
+        "Eine positive Aussage am Kanal-7-Eintritt oder bei a=1.",
+        "Objekt X ist konstruiert.",
+        "Globale Weil-Positivität oder RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "MOVING-HIGH-TAIL-1-OVER-41",
+      "title": "Uniformer vollständiger beweglicher High-Tail",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "a0ea6f80f317e4ef1132fc02c86be5bd2064e738",
+          "path": "research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/tail_checks.log",
+          "sha256": "6e97eaca460729879407352a0101864273fe0dca6eb3a3a7190298b9c46673e0"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "B<=a<=1; physischer beweglicher High-Raum mit geraden Indizes ab 384 und ungeraden ab 385; genau 191 Low-Koordinaten je Parität.",
+      "claim": [
+        "Auf dem vollständigen hohen Quellenraum gilt q_a[u]>(1/41)||u||_2^2.",
+        "Alle unendlichen hohen Moden bleiben enthalten; dies kontrolliert auch den hohen Anteil beim Eintritt von Kanal 7."
+      ],
+      "depends_on": [],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "a0ea6f80f317e4ef1132fc02c86be5bd2064e738",
+      "canonical_proof": "research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/PROOF.md",
+      "proof_sha256": "db613db809a7be877340583aecafc0696ba5d5403c73deef1ba960d89d46d96d",
+      "negative_claim_boundary": "Kein No-Go und kein Nachweis einer negativen vollständigen Weil-Energie.",
+      "does_not_claim": [
+        "Positivität der 191 niedrigen Richtungen oder ihrer Low/Profile-Kopplung.",
+        "Volle Weil-Positivität bei a=1.",
+        "Objekt X ist konstruiert.",
+        "Globale Weil-Positivität oder RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "C0-DIRECTED-FORM-SYSTEM",
+      "title": "Kanonisches gerichtetes physisches Formsystem",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "0dea95c6f470b3e7e1efc5e9d7c18ba7895aa413",
+          "path": "research/x-c1/x-interface-directed-system-2026-09-19/interface_checks.log",
+          "sha256": "7565878e84b428293ab72f10019c11806d9862f69404c0fa9e7fa87052911f67"
+        }
+      ],
+      "claim_polarity": "CONSTRUCTION",
+      "scope": "B<=a<=b<1 im ursprünglichen C0-Interface; Zwei-Mellin-Quellen und abgeschlossene Formräume.",
+      "claim": [
+        "Nullfortsetzungen J_ab erfüllen exakte Komposition J_bc J_ab=J_ac und Formnaturality q_b(J_ab u,J_ab v)=q_a(u,v).",
+        "Parität, ursprüngliche Mellinbedingungen, Prime-Power-Observablen und Gamma-/Jump-Kanal sind kompatibel."
+      ],
+      "depends_on": [
+        "MOVING-HIGH-TAIL-1-OVER-41"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "0dea95c6f470b3e7e1efc5e9d7c18ba7895aa413",
+      "canonical_proof": "research/x-c1/x-interface-directed-system-2026-09-19/PROOF.md",
+      "proof_sha256": "9c6db7cdc9b90212eeb128450c8ee62907193adf7ccbc29f426f2c2db131feff",
+      "negative_claim_boundary": "Kein No-Go und kein Nachweis einer negativen vollständigen Weil-Energie.",
+      "does_not_claim": [
+        "Ein positiver unverschobener Weil-Gram-Readout.",
+        "Ein Abschluss der historischen Suzuki-Einbettungsfrage.",
+        "Objekt X ist konstruiert.",
+        "Globale Weil-Positivität oder RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "C0-SHIFTED-HILBERT-DIRECT-LIMIT",
+      "title": "Hilbert-Direktlimes der verschobenen Formräume",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "0dea95c6f470b3e7e1efc5e9d7c18ba7895aa413",
+          "path": "research/x-c1/x-interface-directed-system-2026-09-19/interface_checks.log",
+          "sha256": "7565878e84b428293ab72f10019c11806d9862f69404c0fa9e7fa87052911f67"
+        }
+      ],
+      "claim_polarity": "CONSTRUCTION",
+      "scope": "Dasselbe gerichtete C0-System B<=a<1; Graphnorm aus q_a+17 I.",
+      "claim": [
+        "Der uniforme Semibound q_a>=-16 I macht q_a+17 I positiv.",
+        "Die Nullfortsetzungen sind in dieser Graphnorm isometrisch; der verschobene Hilbert-Direktlimes existiert."
+      ],
+      "depends_on": [
+        "C0-DIRECTED-FORM-SYSTEM"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "0dea95c6f470b3e7e1efc5e9d7c18ba7895aa413",
+      "canonical_proof": "research/x-c1/x-interface-directed-system-2026-09-19/PROOF.md",
+      "proof_sha256": "9c6db7cdc9b90212eeb128450c8ee62907193adf7ccbc29f426f2c2db131feff",
+      "negative_claim_boundary": "Kein No-Go und kein Nachweis einer negativen vollständigen Weil-Energie.",
+      "does_not_claim": [
+        "Der künstliche Shift sei eine positive Realisierung der unverschobenen Weil-Form.",
+        "Objekt X ist konstruiert.",
+        "Globale Weil-Positivität oder RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "C1-NOGO-SHORT-RANGE-FINITE-RANK",
+      "title": "No-Go für kurze physische Reichweite plus endlichen Rang",
+      "mathematical_status": "AUTHOR_DERIVED_NO_GO",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "f77116a890410dfbb2c612956dee9e5342247cd7",
+          "path": "research/x-c1/c1-readout-nonlocality-obstruction-2026-09-19/nonlocal_checks.log",
+          "sha256": "a863535ad4b23d36a0d0d8033a7854bb1abb1cf13538c88e0b740add420a74e9"
+        }
+      ],
+      "claim_polarity": "NEGATIVE_FOR_CANDIDATE_CLASS",
+      "scope": "Jedes B<=a<=1; exakte positive Gram-Readouts T_a=L_a+K_a mit physisch definierter räumlicher Reichweite R_a<a für L_a und beliebigem endlichem Rang von K_a.",
+      "claim": [
+        "Diese gesamte ausdrücklich benannte Kandidatenklasse ist ausgeschlossen, auch bei nichtorthogonalen Zielanteilen.",
+        "Der vollständige Gamma-Mischkern trägt zwischen getrennten Mellin-nulligen Quellenblöcken beliebig hohen Rang."
+      ],
+      "depends_on": [],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "f77116a890410dfbb2c612956dee9e5342247cd7",
+      "canonical_proof": "research/x-c1/c1-readout-nonlocality-obstruction-2026-09-19/PROOF.md",
+      "proof_sha256": "dbd53ec6cbe37795c5c49e5f762d2c0b09ef8a84e7002a416c250005802d7e22",
+      "negative_claim_boundary": "Ausgeschlossen ist ausschließlich T=L+K mit physischer Reichweite R<a und rank(K)<unendlich. Kein allgemeines Nichtlokalitäts-No-Go und kein Negativitätsbefund für die volle Weil-Form.",
+      "does_not_claim": [
+        "Ein Ausschluss aller nichtlokalen oder Fourier-indizierten Readouts.",
+        "Eine negative Quelle der vollständigen Weil-Form.",
+        "Objekt X ist konstruiert.",
+        "Globale Weil-Positivität oder RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "C1-NOGO-INDIVIDUAL-PRIME-POSITIVE-BLOCK",
+      "title": "No-Go für einzelne Prime-Kanäle als positive Gram-Blöcke",
+      "mathematical_status": "AUTHOR_DERIVED_NO_GO",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "f77116a890410dfbb2c612956dee9e5342247cd7",
+          "path": "research/x-c1/c1-readout-nonlocality-obstruction-2026-09-19/nonlocal_checks.log",
+          "sha256": "a863535ad4b23d36a0d0d8033a7854bb1abb1cf13538c88e0b740add420a74e9"
+        }
+      ],
+      "claim_polarity": "NEGATIVE_FOR_CANDIDATE_CLASS",
+      "scope": "Jeder strikt aktive einzelne signierte Prime-Power-Kanal, jeweils auf geraden und ungeraden ursprünglichen Zwei-Mellin-Quellen.",
+      "claim": [
+        "Jeder solche Einzelkanal nimmt beide Vorzeichen an und kann weder in seinem ursprünglichen noch im umgekehrten Vorzeichen eine individuelle positive Gram-Komponente sein."
+      ],
+      "depends_on": [],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "f77116a890410dfbb2c612956dee9e5342247cd7",
+      "canonical_proof": "research/x-c1/c1-readout-nonlocality-obstruction-2026-09-19/PROOF.md",
+      "proof_sha256": "dbd53ec6cbe37795c5c49e5f762d2c0b09ef8a84e7002a416c250005802d7e22",
+      "negative_claim_boundary": "Nur die individuelle positive Gram-Realisierung eines isolierten signierten Prime-Kanals ist ausgeschlossen; seine Indefinitheit entscheidet nicht das Vorzeichen der gekoppelten vollständigen Weil-Form.",
+      "does_not_claim": [
+        "Indefinite Prime-Observablen innerhalb eines gemeinsamen positiven Mediators seien ausgeschlossen.",
+        "Die vollständige Weil-Form sei negativ.",
+        "Objekt X ist konstruiert.",
+        "Globale Weil-Positivität oder RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "C1a-COUPLED-SPECTRAL-MEDIATOR",
+      "title": "Intrinsischer gekoppelter spektraler Mediator",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
+          "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/mediator_checks.log",
+          "sha256": "db533098fe8340efee3ac8a00a97b4265372cdd0f73d2e61cc3fbb8851748550"
+        }
+      ],
+      "claim_polarity": "CONSTRUCTION",
+      "scope": "Fester Horizont 1, B<=a<=1, gemeinsame Kanäle 2,3,4,5,7 und vollständiges Gamma-Symbol g; kein vorausgesetztes q>=0.",
+      "claim": [
+        "Mit omega=sum w_q, c=sum w_q cos(xi log q), s=kappa+2 omega gilt T u=(g+omega-c)/sqrt(g+s) Fourier(u).",
+        "H_a=closure(T W_a) ist unendlichdimensional; geeignete glatte Quellen beider Paritäten haben tatsächlich nichtkompakten physischen Output.",
+        "Prime/Gamma- und Prime/Prime-Mischterme gehören zur selben Konstruktion."
+      ],
+      "depends_on": [
+        "C0-DIRECTED-FORM-SYSTEM"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
+      "canonical_proof": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md",
+      "proof_sha256": "4ebc12a5a84593d4a2fa0e21fd7b0ca6b5cc3fb1cb29e1b4c4f68dbdaa95f1b5",
+      "negative_claim_boundary": "Kein No-Go und kein Nachweis einer negativen vollständigen Weil-Energie.",
+      "does_not_claim": [
+        "Die unberichtigte T-Gram-Form sei bereits die volle Weil-Form.",
+        "Ein unbeschränktes, kompatibles Horizontsystem.",
+        "Objekt X ist konstruiert.",
+        "Globale Weil-Positivität oder RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "C1b-ZERO-EXTENSION-INTERTWINING",
+      "title": "Exaktes Intertwining des benannten Kandidaten",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
+          "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/mediator_checks.log",
+          "sha256": "db533098fe8340efee3ac8a00a97b4265372cdd0f73d2e61cc3fbb8851748550"
+        }
+      ],
+      "claim_polarity": "CONSTRUCTION",
+      "scope": "Kandidat C1a-COUPLED-SPECTRAL-MEDIATOR innerhalb des festen Horizonts 1, B<=a<=b<=1.",
+      "claim": [
+        "Isometrische Inklusionen I_ab:H_a->H_b erfüllen I_bc I_ab=I_ac und T_b J_ab=I_ab T_a.",
+        "Der Defekttransfer erfüllt R_b I_ab=R_a; für C_a=R_a*R_a gilt die Kompressionsidentität I_ab* C_b I_ab=C_a."
+      ],
+      "depends_on": [
+        "C1a-COUPLED-SPECTRAL-MEDIATOR"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
+      "canonical_proof": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md",
+      "proof_sha256": "4ebc12a5a84593d4a2fa0e21fd7b0ca6b5cc3fb1cb29e1b4c4f68dbdaa95f1b5",
+      "negative_claim_boundary": "Kein No-Go und kein Nachweis einer negativen vollständigen Weil-Energie.",
+      "does_not_claim": [
+        "Das Intertwining von lokalen Quadratwurzelkorrekturen folge bereits aus der Kompressionsidentität.",
+        "C1c oder C1d sei geschlossen.",
+        "Objekt X ist konstruiert.",
+        "Globale Weil-Positivität oder RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "C1-COMPACT-DEFECT-IDENTITY",
+      "title": "Exakte kompakte Gramabweichung und Kontraktionsäquivalenz",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
+          "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/mediator_checks.log",
+          "sha256": "db533098fe8340efee3ac8a00a97b4265372cdd0f73d2e61cc3fbb8851748550"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "Derselbe feste Horizont und dieselben geschlossenen Kandidatenräume H_a; B<=a<=1.",
+      "claim": [
+        "D u=(kappa+omega+c)/sqrt(g+s) Fourier(u); q_a(u,v)=<Tu,Tv>-<Du,Dv>.",
+        "R_a(Tu)=Du ist kompakt, injektiv und von unendlichem Rang; q_a>=0 genau dann, wenn ||R_a||<=1.",
+        "Die unberichtigte Gramabweichung E_a[u]=-||Du||^2 ist für jede nichtverschwindende Quelle strikt negativ."
+      ],
+      "depends_on": [
+        "C1a-COUPLED-SPECTRAL-MEDIATOR"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
+      "canonical_proof": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md",
+      "proof_sha256": "4ebc12a5a84593d4a2fa0e21fd7b0ca6b5cc3fb1cb29e1b4c4f68dbdaa95f1b5",
+      "negative_claim_boundary": "E_a<0 betrifft allein den Fehler der unberichtigten T-Gram-Darstellung. Das ist weder q_a<0 noch ein No-Go für den korrigierten Kandidaten.",
+      "does_not_claim": [
+        "Die volle Defektkontraktion sei bewiesen.",
+        "Ein negativer Defekt sei eine negative vollständige Weil-Energie.",
+        "Objekt X ist konstruiert.",
+        "Globale Weil-Positivität oder RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "C1-191D-HIGH-DEFECT-CONTRACTION",
+      "title": "Uniforme hohe Defektkontraktion und endliche kritische Dimension",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+          "path": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/bridge_checks.log",
+          "sha256": "810613bbe8b1e4dd643e3b4dab762377db5ee933c9f7769e0d9a05d426f71369"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "B<=a<=1; vollständiger hoher T-Bildraum, Kodimension 191 je Parität.",
+      "claim": [
+        "||R_a h||^2<=(943/945)||h||^2 und q_a[T^-1 h]>=(2/945)||h||^2.",
+        "s_192(R_a^p)^2<=943/945 und s_192(R_a^p)<999/1000 je Parität; entsprechend s_383 im gemeinsamen Raum.",
+        "Der vollständige hohe Rest von R_a Q_low ist eingeschlossen."
+      ],
+      "depends_on": [
+        "MOVING-HIGH-TAIL-1-OVER-41",
+        "C1-COMPACT-DEFECT-IDENTITY"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "canonical_proof": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md",
+      "proof_sha256": "aa3c6d5a28ee10caf69cf7dcee2222f48c991db32721356a30e703b6aedaba83",
+      "negative_claim_boundary": "Kein No-Go und kein Nachweis einer negativen vollständigen Weil-Energie.",
+      "does_not_claim": [
+        "Die ersten 191 Singularwerte je Parität lägen bereits unter eins.",
+        "Ein neues positives Fenster.",
+        "Objekt X ist konstruiert.",
+        "Globale Weil-Positivität oder RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "C1-MOVING-191D-SCHUR-CONGRUENCE",
+      "title": "Exakte Kongruenz zwischen physischem und Defekt-Schurrest",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+          "path": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/bridge_checks.log",
+          "sha256": "810613bbe8b1e4dd643e3b4dab762377db5ee933c9f7769e0d9a05d426f71369"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "B<=a<=1; kanonischer 191D-Core je Parität nach vollständiger hoher Elimination.",
+      "claim": [
+        "Mit C=R*R in Low/High-Blöcken alpha,beta,K ist S=I-alpha-beta* (I-K)^-1 beta; q_a>=0 genau dann, wenn S>=0.",
+        "Der physische bewegliche Core-Schurrest ist G^(1/2) S G^(1/2), G>0; beide Formen haben dieselbe Inertie."
+      ],
+      "depends_on": [
+        "C1-191D-HIGH-DEFECT-CONTRACTION"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "canonical_proof": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md",
+      "proof_sha256": "aa3c6d5a28ee10caf69cf7dcee2222f48c991db32721356a30e703b6aedaba83",
+      "negative_claim_boundary": "Kein No-Go und kein Nachweis einer negativen vollständigen Weil-Energie.",
+      "does_not_claim": [
+        "Identität der Legendre-Low-Basis mit führenden Singularvektoren.",
+        "Rigorose Einschließung aller tatsächlichen 191D-Einträge oder positiver Vorzeichennachweis.",
+        "Abschluss zusätzlicher Shell-/Profilkopplungen beim Übergang a->b.",
+        "Objekt X ist konstruiert.",
+        "Globale Weil-Positivität oder RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "C1-COMPLETE-HIGH-RESPONSE-BOUND",
+      "title": "Vollständige rationale Schranke für die hohe Antwort",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+          "path": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/bridge_checks.log",
+          "sha256": "810613bbe8b1e4dd643e3b4dab762377db5ee933c9f7769e0d9a05d426f71369"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "B<=a<=1; Neumann-Abbruch N des hohen Responses im exakten 191D-Schurrest.",
+      "claim": [
+        "0<=S_N-S<=42525*(943/945)^(N+2) I; kein hoher Modus wird weggelassen.",
+        "Die rationale Schranke (943/945)^1024<1/8 liefert beliebig kleine Restschranken."
+      ],
+      "depends_on": [
+        "C1-MOVING-191D-SCHUR-CONGRUENCE"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "canonical_proof": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md",
+      "proof_sha256": "aa3c6d5a28ee10caf69cf7dcee2222f48c991db32721356a30e703b6aedaba83",
+      "negative_claim_boundary": "Kein No-Go und kein Nachweis einer negativen vollständigen Weil-Energie.",
+      "does_not_claim": [
+        "Der vollständige Schurrest sei aufgrund dieser Restschranke bereits positiv.",
+        "Die tatsächlichen endlichen Matrixeinträge seien durch Modellmatrizen ersetzt.",
+        "Objekt X ist konstruiert.",
+        "Globale Weil-Positivität oder RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "C1-MOVING-SINGULAR-CONTINUITY",
+      "title": "Qualitative Endpunktkontrolle der geordneten Singularwerte",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+          "path": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/bridge_checks.log",
+          "sha256": "810613bbe8b1e4dd643e3b4dab762377db5ee933c9f7769e0d9a05d426f71369"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "Geschachtelte Kandidatenräume im festen Horizont 1, B<=a<=1 einschließlich des Eintritts von Kanal 7.",
+      "claim": [
+        "Jeder geordnete Singularwert ist stetig und monoton nicht fallend in a.",
+        "Beim Kanal-7-Eintritt entsteht im festen spektralen Zielraum kein Sprung."
+      ],
+      "depends_on": [
+        "C1b-ZERO-EXTENSION-INTERTWINING",
+        "C1-191D-HIGH-DEFECT-CONTRACTION"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "canonical_proof": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md",
+      "proof_sha256": "aa3c6d5a28ee10caf69cf7dcee2222f48c991db32721356a30e703b6aedaba83",
+      "negative_claim_boundary": "Kein No-Go und kein Nachweis einer negativen vollständigen Weil-Energie.",
+      "does_not_claim": [
+        "Ein quantitativer Stetigkeitsmodul oder eine nicht summierbare Transportregel.",
+        "Positive Kontrolle der niedrigen Moden beim Kanal-7-Eintritt.",
+        "Objekt X ist konstruiert.",
+        "Globale Weil-Positivität oder RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "TERMINAL-191D-DEFECT-SCHUR-A1",
+      "title": "Strikte terminale 191D-Schurpositivität in beiden Paritäten",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "0e725ae83d7217caf3e54315ddbce3d553f426a6",
+          "path": "research/x-c1/terminal-191d-same-engine-B-calibration-2026-09-20/calibration_results.json",
+          "sha256": "790b9d1755f6da397a52ea7a94e7e8e71cc9c446ab1d8aa3f46d622d6f19fb03"
+        },
+        {
+          "commit": "2de6d199ad29182869e77b6785b962473250e813",
+          "path": "audits/TERMINAL_191D_SCHUR_FULL_REPLAY_2026-09-20.json",
+          "sha256": "fc588cfb6afa163fc59f2653ae3f9205b32f8fd8e564932f185c0d9862216858"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "Tatsächliche H1_0-Zwei-Mellin-Quellen auf dem festen Horizont 0<a<=1; terminale 191D-Schurmatrizen bei a=1, beide Paritäten, vollständige hohe Antwort.",
+      "claim": [
+        "Die tatsächlichen terminalen Even- und Odd-Schurreste sind strikt positiv definit; je Parität bestehen 191 gerichtete positive LDL*-Pivots nach vollständiger High-Elimination.",
+        "Für jede nichtverschwindende zulässige Quelle gilt am Terminalpunkt q_1[u]>10^-26 ||u||_2^2; durch exakte Nullfortsetzungs-Naturality gilt dieselbe feste-Horizont-Positivität für 0<a<=1.",
+        "Über die bewiesene physisch/Defekt-Schur-Kongruenz gilt ||R_1^p||<1 in beiden Paritäten; ein strikter Defektreserveboden >10^-28 ist zertifiziert."
+      ],
+      "depends_on": [
+        "C1-191D-HIGH-DEFECT-CONTRACTION",
+        "C1-MOVING-191D-SCHUR-CONGRUENCE",
+        "C1-COMPLETE-HIGH-RESPONSE-BOUND"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "2d361bed76248d0a966d6d6453ce0364eae9007d",
+      "canonical_proof": "research/x-c1/terminal-191d-schur-enclosure-2026-09-20/PROOF.md",
+      "proof_sha256": "14717ba224be7bbbb5ab17b83ab1896f967cde1b82452dcf599876a59098f2fb",
+      "negative_claim_boundary": "Positives Result ausschließlich auf dem festen Horizont bis a=1. Keine Aussage über unbeschränkte Horizonte, globale Testklassen oder RH.",
+      "does_not_claim": [
+        "Die kompatible positive Quadratwurzel-Readout-Konstruktion C1d sei bereits als eigener Satz abgeschlossen.",
+        "Eine Fortsetzung über a=1 oder neue Prime-Power-Horizonte.",
+        "Nicht summierbarer globaler Transport oder die vollständige globale Weil-Testklasse.",
+        "Objekt X im globalen Sinn, globale Weil-Positivität oder RH."
+      ]
+    },
+    {
+      "id": "C1d-COMPATIBLE-POSITIVE-COMPLETION",
+      "title": "Kompatibler positiver terminaler C1-Abschluss",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "5f19065e28b9f2e09ae93bef0b4c752ab58997d4",
+          "path": "audits/C1D_TERMINAL_SQUARE_ROOT_PROMOTION_AUDIT_2026-09-20.md",
+          "sha256": "a7ce4a42f123b97ac8714c593bfd4395a012d8e125512c8a0df8df08113068e3"
+        },
+        {
+          "commit": "5f19065e28b9f2e09ae93bef0b4c752ab58997d4",
+          "path": "research/x-c1/c1d-terminal-square-root-completion-2026-09-20/c1d_checks.log",
+          "sha256": "851f34deec1de6a4bfff6c69b548a8f30198d0e209a483502439a6b5a81551e2"
+        }
+      ],
+      "claim_polarity": "CONSTRUCTION",
+      "scope": "Kandidatenspezifischer fester C1-Horizont B<=a<=1; eine einzige terminale Quadratwurzelkorrektur auf H_1, positive geschlossene Zielräume und exaktes Nullfortsetzungs-Intertwining.",
+      "claim": [
+        "Mit eta=10^-26/(23/2+10^-26)>10^-28 gilt I-R_1^*R_1 >= eta I auf dem gesamten geschlossenen Terminalraum H_1.",
+        "Delta_1=(I-R_1^*R_1)^(1/2) ist wohldefiniert und beschränkt invertierbar; K_X,a=Delta_1 H_a ist für B<=a<=1 geschlossen und verschachtelt.",
+        "T_X,a=Delta_1 I_{a,1}T_a erfüllt q_a(u,v)=<T_X,a u,T_X,a v> exakt sesquilinear und T_X,b J_{a,b}=T_X,a für B<=a<=b<=1.",
+        "Die q_a-Norm ist der bereits vollständigen F_a-Norm äquivalent; T_X,a ist unitär von (F_a,q_a) auf K_X,a."
+      ],
+      "depends_on": [
+        "C1a-COUPLED-SPECTRAL-MEDIATOR",
+        "C1b-ZERO-EXTENSION-INTERTWINING",
+        "C1-COMPACT-DEFECT-IDENTITY",
+        "TERMINAL-191D-DEFECT-SCHUR-A1"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "a0c57ddd5c4b7dd2cf18c17b19f5af4069915387",
+      "canonical_proof": "research/x-c1/c1d-terminal-square-root-completion-2026-09-20/PROOF.md",
+      "proof_sha256": "c15561467c8c30b6fdf75a5c5bbb001e6305d5489002358735ee6b0894e69f3c",
+      "negative_claim_boundary": "Geschlossen ist ausschließlich der kandidatenspezifische positive C1-Abschluss auf B<=a<=1. Keine Aussage über größere Horizonte, globale Testklassen oder RH.",
+      "does_not_claim": [
+        "Eine C1-Erweiterung auf a>1.",
+        "Eine kofinale Familie kompatibler positiver Terminalabschlüsse.",
+        "Full C1-GEOM auf unbeschränktem Horizont.",
+        "Die vollständige globale Weil-Testklasse.",
+        "Globales Objekt X, globale Weil-Positivität oder RH."
+      ]
+    }
+  ],
+  "global_status": {
+    "connected_unit_window_coercivity": "AUTHOR_DERIVED",
+    "strong_terminal": "OPEN",
+    "full_c1_geom": "OPEN",
+    "object_x": "NOT_CONSTRUCTED",
+    "global_weil_gram_identity": "OPEN",
+    "global_weil_positivity": "OPEN",
+    "rh": "OPEN"
+  },
+  "historical_navigation": [
+    {
+      "path": "CURRENT-FRONT.md",
+      "as_of": "2026-09-14",
+      "content_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "content_sha256": "24d2bb0481d955ed9b3073f0cf3210b6ece94a15bb9193d2f607c8ac60b1e5e1",
+      "note": "Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten."
+    },
+    {
+      "path": "README.md",
+      "as_of": "2026-09-14",
+      "content_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "content_sha256": "5540cfeb7ce66d27b9d791ce569b1fadbceda23fb83826e6e7424627e104961e",
+      "note": "Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten."
+    },
+    {
+      "path": "EINSTIEGSPROMPT.md",
+      "as_of": "2026-09-14",
+      "content_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "content_sha256": "52c581c127e23ddcf8108fc2834eb6dc8883dff98f1689e80681df43c2b51c17",
+      "note": "Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten."
+    },
+    {
+      "path": "00-uebersicht/README.md",
+      "as_of": "2026-09-19",
+      "content_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "content_sha256": "693838ef1f2dd4b2578278117968d47e9653848fe1212e6fb444c60f027ac663",
+      "note": "Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten."
+    },
+    {
+      "path": "00-uebersicht/ACTIVE_FRONT.yaml",
+      "as_of": "2026-09-07",
+      "content_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "content_sha256": "ade50031b11d68ee01d63c42a54bb6b46db2e07525a2fd40303653439c7615d2",
+      "note": "Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten."
+    },
+    {
+      "path": "00-uebersicht/ACTIVE_THEOREM_REGISTRY.md",
+      "as_of": "2026-09-03",
+      "content_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "content_sha256": "8c7f0b69d7326e074e6b4db2ab967cc2d59bbe24026353b63c49deda9700aaba",
+      "note": "Die Status- und Auditregeln bleiben fachlich relevant; ersetzt ist nur der Anspruch auf aktuelle Frontnavigation."
+    },
+    {
+      "path": "00-uebersicht/AKTUELLER_STAND.md",
+      "as_of": "2026-09-14",
+      "content_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "content_sha256": "bc814a8071123aa6a08173590d4939cbcd67b90c67570b32e2ada8b12d2c9d42",
+      "note": "Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten."
+    },
+    {
+      "path": "00-uebersicht/DAG.md",
+      "as_of": "2026-09-14",
+      "content_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "content_sha256": "5ccdcd643818993bcc24f3192b0a596f75f618ebe9357e13c594f3a6672270f3",
+      "note": "Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten."
+    },
+    {
+      "path": "00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md",
+      "as_of": "2026-09-14",
+      "content_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "content_sha256": "86dd4674ca2696dd8e1d87005a7b843078c99471f31c07e7e3c52a68f829749e",
+      "note": "Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten."
+    },
+    {
+      "path": "00-grundlegung/kritischer_pfad_aktuell.md",
+      "as_of": "2026-07-28",
+      "content_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "content_sha256": "af6f3bc2eba25b0b2d7d967c03190bea994863edc5f4bc12f4cbc9c1b5a73ee0",
+      "note": "Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten."
+    },
+    {
+      "path": "00-uebersicht/archiv/AKTUELLER_STAND_2026-08-21_bis_2026-08-30.md",
+      "as_of": "2026-08-30",
+      "content_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "content_sha256": "b4e62633328911dad8ba16cbad4cdf4a5c287590922d5cef499fe1e0b5a48fa1",
+      "note": "Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten."
+    },
+    {
+      "path": "00-uebersicht/OBJEKT_X_INTERFACE_2026-09-19.md",
+      "as_of": "2026-09-19",
+      "content_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "content_sha256": "927372ac771219d260bcf67b91c9669e607757214aad6a74a055b7eadf7ee9cc",
+      "note": "Die C0/C1-Definitionen und der bedingte Direktlimes bleiben relevant; die damalige Tabelle offener Gates ist historisch."
+    },
+    {
+      "path": "00-uebersicht/TRANSPORT_ZU_OBJEKT_X_LEITER_2026-09-19.md",
+      "as_of": "2026-09-20",
+      "content_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "content_sha256": "b6ee10c32a45739406af04e7a45af775b90a89643f41e489b23388f74b3290f2",
+      "note": "Die chronologischen Nachträge bleiben Forschungsprovenienz; maßgebliche aktuelle Navigation ist das neue Register."
+    }
+  ],
+  "navigation_exceptions": [
+    {
+      "path": "00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md",
+      "role": "MATHEMATICAL_DEFINITION",
+      "reason": "Eigenständige fachliche Definitionsautorität; keine operative Statusquelle. Genaue Fassung unter authority_roles.definition."
+    }
+  ],
+  "metadata_policy": {
+    "enforced_after": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+    "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
+    "format": "JSON_SUBSET_OF_YAML_1_2"
+  },
+  "pending_packages": []
+}

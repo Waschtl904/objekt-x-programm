@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "TERMINAL-191D-SCHUR-ENCLOSURE-A1",
+  "date": "2026-09-20",
+  "kind": "THEOREM",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Fester Horizont 0<a<=1 am Terminalpunkt a=1; die beiden tats�chlichen 191x191-Schurmatrizen mit vollst�ndiger hoher Antwort und gerichteter rationaler LDL*-Zertifizierung.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "Der Rohvergleich ohne Vorconditionierung wird nicht als negative vollst�ndige Weil-Quelle gewertet; keine globale Positivit�t und kein No-Go werden behauptet.",
+  "depends_on": [
+    "C1-191D-HIGH-DEFECT-CONTRACTION",
+    "C1-MOVING-191D-SCHUR-CONGRUENCE",
+    "C1-COMPLETE-HIGH-RESPONSE-BOUND"
+  ],
+  "closes": [
+    "TERMINAL-191D-DEFECT-SCHUR-A1"
+  ],
+  "opens": [
+    "C1d-COMPATIBLE-POSITIVE-COMPLETION"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "Automatische Promotion des mathematischen Verifikationsstands.",
+    "Positivit�t au�erhalb des festen Horizonts oder eine globale Profilfortsetzung.",
+    "Objekt X, globale Weil-Positivit�t oder RH."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/terminal-191d-schur-enclosure-2026-09-20/PROOF.md",
+    "sha256": "14717ba224be7bbbb5ab17b83ab1896f967cde1b82452dcf599876a59098f2fb"
+  }
+}

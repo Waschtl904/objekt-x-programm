@@ -1,0 +1,10 @@
+{
+  "base_gap_before_(1-sqrt(theta))": "1/20800000000000000",
+  "checks": 25,
+  "delta": "1/320000000000000",
+  "epsilon": "1/10000000000000",
+  "gauge_kernel": "span{(-psi,e)}",
+  "note": "Exact finite algebra regressions only; the quotient/form-domain theorem is analytic in PROOF.md.",
+  "reduced_core": "L2-orthogonal complement of psi",
+  "status": "AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN"
+}

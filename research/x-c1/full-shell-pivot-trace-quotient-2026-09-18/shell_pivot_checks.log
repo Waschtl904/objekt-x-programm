@@ -1,0 +1,45 @@
+PASS parent coordinate constants pass
+PASS B enclosure in (4/5,81/100)
+PASS A_T < 1
+PASS M_B > 2/5
+PASS H maximum < 6/5
+PASS kappa < 6 using gamma < 1
+PASS full interval stays below unit window
+PASS all core to shell distances bounded by 2
+PASS shell width below every arithmetic shift
+PASS next prime power 7 inactive
+PASS endpoint logarithm between 46 and 47
+PASS active prime-power labels including correct base for 4
+PASS channel 2 weight < 1
+PASS channel 3 weight < 1
+PASS channel 4 weight < 1
+PASS channel 5 weight < 1
+PASS psi supremum < 4
+PASS psi internal Lipschitz < 4
+PASS chi supremum < 3
+PASS chi internal Lipschitz < 4
+PASS trace strip exists inside core
+PASS psi lower norm by its two trace strips
+PASS non-Gamma bounded operator ledger
+PASS complete internal Gamma polynomial integral
+PASS complete boundary Gamma integral bound
+PASS Gamma energies ledger
+PASS core mixed form bound < 500
+PASS chi lower energy loss
+PASS Gamma opposite-shell kernel < 1
+PASS logarithmic square remainder coefficients
+PASS trace-shell mixed coefficient
+PASS shell moment loss dominated by 8L+450
+PASS Young coefficient exactly 32 times 10^13
+PASS linear h-loss derivative positive
+PASS quadratic h-loss derivative positive
+PASS uniform rational shell reserve > 70
+PASS trace reserve delta positive
+PASS lift forward physical norm bound
+PASS lift inverse and reduced coordinate norm bound
+PASS full physical coordinate forward bound
+PASS physical lifted-source gap conversion
+PASS trace redundancy homogeneous quadratic cancellation
+PASS trace redundancy nonzero coordinate pair
+TOTAL 43 PASS
+FULL-SHELL-PIVOT-POSITIVE / REDUCED-SCHUR-UNDECIDED

@@ -1,0 +1,37 @@
+{
+  "A_B": [
+    0.849573073608483,
+    0.849573073608483
+  ],
+  "A_T": [
+    0.7851553607723273,
+    0.7851553607723273
+  ],
+  "B": [
+    0.8047189562170501,
+    0.8047189562170501
+  ],
+  "C_alpha_upper": [
+    0.422488075237824,
+    0.422488075237824
+  ],
+  "C_gamma_upper": [
+    2.307071046933723,
+    2.307071046933723
+  ],
+  "H_B": [
+    1.0820445430988213,
+    1.0820445430988213
+  ],
+  "M_B": [
+    0.407817126538235,
+    0.407817126538235
+  ],
+  "checks": 11,
+  "h_max_to_unit_window": [
+    0.1952810437829498,
+    0.1952810437829498
+  ],
+  "note": "Numeric directed checks support only the closed-form constants; analytic source-space lemmas are proved in PROOF.md.",
+  "status": "AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN"
+}

@@ -1,0 +1,611 @@
+{
+  "A1_used": false,
+  "C1_mediator_constructed": false,
+  "Object_X_constructed": false,
+  "analytic_proof": "PROOF.md; Mellin annihilator, full Gamma series, arbitrary-N Vandermonde rank obstruction, and exact isolated-prime constructions.",
+  "anchor": "617ffe2a3bfe12bef768b536b9eeffbbfb21f1da",
+  "arbitrary_nonlocal_C1_readout_excluded": false,
+  "bound_inputs": 6,
+  "check_count": 84,
+  "checks": [
+    "analytic provenance anchor is 617ffe2",
+    "six distinct immutable analytic provenance files",
+    "bytes SHA256 and Git blob research/x-c1/all-parity-window-and-restart-2026-09-19/PROOF.md",
+    "bytes SHA256 and Git blob research/x-c1/block-adaptive-profile-transport-2026-09-19/PROOF.md",
+    "bytes SHA256 and Git blob research/x-c1/moving-endpoint-harmonic-block-renewal-2026-09-19/PROOF.md",
+    "bytes SHA256 and Git blob research/x-c1/universal-prime-power-family-2026-09-18/PROOF.md",
+    "bytes SHA256 and Git blob research/x-c1/x-interface-directed-system-2026-09-19/PROOF.md",
+    "bytes SHA256 and Git blob research/x-c1/x-interface-directed-system-2026-09-19/README.md",
+    "log2 lies strictly between 69 and 70 hundredths",
+    "log3 exceeds one point zero nine",
+    "B lies strictly above four fifths",
+    "strict active set at a one ends at seven",
+    "explicit nonnegative cubic bump factorization has degree six",
+    "bump and first two derivatives vanish at both support endpoints",
+    "Mellin-annihilated source has zero traces and is nonzero",
+    "differential annihilator identity holds coefficient by coefficient",
+    "exact Mellin exponents are roots of the annihilator",
+    "bump and annihilated source are even",
+    "exact positive bump mass is 32 delta over 35",
+    "exact source norm agrees with integrated derivative identity",
+    "explicit rational source norm below forty million",
+    "two witness supports are disjoint and inside the canonical B core",
+    "all mixed prime channels vanish by the log2 log3 gap",
+    "fixed witness supports have gap 73 over 100",
+    "fixed locality obstruction radius is 73 over 200",
+    "all Gamma mode factors satisfy an exact polynomial identity",
+    "Mellin carrier mode vanishes and every higher integer mode is positive",
+    "first surviving Gamma mode has exact squared coefficient 36",
+    "exact Taylor remainder certifies exp fifteen eighths below seven",
+    "complete mixed form is strictly below minus one over 2500 via positive series",
+    "two-state locality approximation error exceeds one e minus eleven",
+    "even and odd twin states have equal physical norms",
+    "twin-state polarization difference is four times mixed pairing",
+    "shifted rank witnesses retain prime-free separated support blocks",
+    "all shifted rank witnesses remain inside the canonical B core",
+    "explicit reciprocal Vandermonde nodes are positive and distinct",
+    "node positions one half log z stay within eta",
+    "rank-three exact determinant equals positive Vandermonde product",
+    "prime witness bump satisfies identical exact zero-moment and H1 boundary conditions",
+    "prime witness norm is positive",
+    "q2 four bumps lie strictly inside endpoint one",
+    "q2 four source supports are disjoint",
+    "q2 exactly two q edges and no other prime overlaps",
+    "q2 exact von Mangoldt weight is strictly positive",
+    "q2 signed-channel witnesses already lie inside B",
+    "q2 parity 0 sign -1 exact parity norm and isolated-channel Rayleigh identity",
+    "q2 parity 0 sign 1 exact parity norm and isolated-channel Rayleigh identity",
+    "q2 parity 1 sign -1 exact parity norm and isolated-channel Rayleigh identity",
+    "q2 parity 1 sign 1 exact parity norm and isolated-channel Rayleigh identity",
+    "q3 four bumps lie strictly inside endpoint one",
+    "q3 four source supports are disjoint",
+    "q3 exactly two q edges and no other prime overlaps",
+    "q3 exact von Mangoldt weight is strictly positive",
+    "q3 parity 0 sign -1 exact parity norm and isolated-channel Rayleigh identity",
+    "q3 parity 0 sign 1 exact parity norm and isolated-channel Rayleigh identity",
+    "q3 parity 1 sign -1 exact parity norm and isolated-channel Rayleigh identity",
+    "q3 parity 1 sign 1 exact parity norm and isolated-channel Rayleigh identity",
+    "q4 four bumps lie strictly inside endpoint one",
+    "q4 four source supports are disjoint",
+    "q4 exactly two q edges and no other prime overlaps",
+    "q4 exact von Mangoldt weight is strictly positive",
+    "q4 parity 0 sign -1 exact parity norm and isolated-channel Rayleigh identity",
+    "q4 parity 0 sign 1 exact parity norm and isolated-channel Rayleigh identity",
+    "q4 parity 1 sign -1 exact parity norm and isolated-channel Rayleigh identity",
+    "q4 parity 1 sign 1 exact parity norm and isolated-channel Rayleigh identity",
+    "q5 four bumps lie strictly inside endpoint one",
+    "q5 four source supports are disjoint",
+    "q5 exactly two q edges and no other prime overlaps",
+    "q5 exact von Mangoldt weight is strictly positive",
+    "q5 parity 0 sign -1 exact parity norm and isolated-channel Rayleigh identity",
+    "q5 parity 0 sign 1 exact parity norm and isolated-channel Rayleigh identity",
+    "q5 parity 1 sign -1 exact parity norm and isolated-channel Rayleigh identity",
+    "q5 parity 1 sign 1 exact parity norm and isolated-channel Rayleigh identity",
+    "q7 four bumps lie strictly inside endpoint one",
+    "q7 four source supports are disjoint",
+    "q7 exactly two q edges and no other prime overlaps",
+    "q7 exact von Mangoldt weight is strictly positive",
+    "q7 parity 0 sign -1 exact parity norm and isolated-channel Rayleigh identity",
+    "q7 parity 0 sign 1 exact parity norm and isolated-channel Rayleigh identity",
+    "q7 parity 1 sign -1 exact parity norm and isolated-channel Rayleigh identity",
+    "q7 parity 1 sign 1 exact parity norm and isolated-channel Rayleigh identity",
+    "both signs in both parities certified for all five channels",
+    "factor 200 refers to immediate b1c0186 outer window",
+    "factor 200 million refers to older ca3849a outer window"
+  ],
+  "exact_mellin_constraints": 2,
+  "finite_rank_nonlocal_correction_repairs_exact_local_Gram": false,
+  "forbidden_exact_physical_propagation": "R_a<a on any B<=a<=1; output must have a specified physical-position direct-integral support structure.",
+  "indefinite_channel_observables_in_positive_mediator_excluded": false,
+  "infinite_rank_separated_Gamma_pairing_proved": true,
+  "inherited_numerical_matrix_chain_replayed": false,
+  "intrinsic_positive_readout_constructed": false,
+  "isolated_prime_cases": [
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "epsilon": -1,
+      "parity": 0,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 2,
+      "q": 2,
+      "signed_prime_Rayleigh_multiplier_of_weight": 1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "epsilon": 1,
+      "parity": 0,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 2,
+      "q": 2,
+      "signed_prime_Rayleigh_multiplier_of_weight": -1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "epsilon": -1,
+      "parity": 1,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 2,
+      "q": 2,
+      "signed_prime_Rayleigh_multiplier_of_weight": 1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "epsilon": 1,
+      "parity": 1,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 2,
+      "q": 2,
+      "signed_prime_Rayleigh_multiplier_of_weight": -1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "epsilon": -1,
+      "parity": 0,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 3,
+      "q": 3,
+      "signed_prime_Rayleigh_multiplier_of_weight": 1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "epsilon": 1,
+      "parity": 0,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 3,
+      "q": 3,
+      "signed_prime_Rayleigh_multiplier_of_weight": -1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "epsilon": -1,
+      "parity": 1,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 3,
+      "q": 3,
+      "signed_prime_Rayleigh_multiplier_of_weight": 1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "epsilon": 1,
+      "parity": 1,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 3,
+      "q": 3,
+      "signed_prime_Rayleigh_multiplier_of_weight": -1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "epsilon": -1,
+      "parity": 0,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 2,
+      "q": 4,
+      "signed_prime_Rayleigh_multiplier_of_weight": 1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "epsilon": 1,
+      "parity": 0,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 2,
+      "q": 4,
+      "signed_prime_Rayleigh_multiplier_of_weight": -1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "epsilon": -1,
+      "parity": 1,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 2,
+      "q": 4,
+      "signed_prime_Rayleigh_multiplier_of_weight": 1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "epsilon": 1,
+      "parity": 1,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 2,
+      "q": 4,
+      "signed_prime_Rayleigh_multiplier_of_weight": -1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "epsilon": -1,
+      "parity": 0,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 5,
+      "q": 5,
+      "signed_prime_Rayleigh_multiplier_of_weight": 1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "epsilon": 1,
+      "parity": 0,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 5,
+      "q": 5,
+      "signed_prime_Rayleigh_multiplier_of_weight": -1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "epsilon": -1,
+      "parity": 1,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 5,
+      "q": 5,
+      "signed_prime_Rayleigh_multiplier_of_weight": 1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "epsilon": 1,
+      "parity": 1,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 5,
+      "q": 5,
+      "signed_prime_Rayleigh_multiplier_of_weight": -1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "epsilon": -1,
+      "parity": 0,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 7,
+      "q": 7,
+      "signed_prime_Rayleigh_multiplier_of_weight": 1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "epsilon": 1,
+      "parity": 0,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 7,
+      "q": 7,
+      "signed_prime_Rayleigh_multiplier_of_weight": -1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "epsilon": -1,
+      "parity": 1,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 7,
+      "q": 7,
+      "signed_prime_Rayleigh_multiplier_of_weight": 1
+    },
+    {
+      "all_other_prime_quadratic_terms_zero": true,
+      "coefficients": [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "epsilon": 1,
+      "parity": 1,
+      "physical_norm_squared": "219648000099840000032/1876875",
+      "prime": 7,
+      "q": 7,
+      "signed_prime_Rayleigh_multiplier_of_weight": -1
+    }
+  ],
+  "moving_191D_low_profile_closed": false,
+  "negative_Weil_source_certified": false,
+  "negative_mixed_pairing_is_negative_Weil_source": false,
+  "new_transport_window_certified": false,
+  "non_summable_transport_certified": false,
+  "omitted_Gamma_modes": "Retained in exact convergent series; all higher summands are positive for the mixed witness.",
+  "quantitative_error_relative_to": "Physical L2 squared norm; at least one of the fixed even/odd twin states.",
+  "quantitative_one_e_minus_eleven_error_applies_to": "Pure finite propagation T, with no extra finite-rank nonlocal correction, and R<73/200.",
+  "rank_obstruction": "If T=L+K and rank K<=m, separated local outputs give mixed Gram rank<=2m; exact Gamma witnesses have arbitrary rank N, so choose N=2m+1.",
+  "reproduction_scope": "All new witnesses and rational inequalities rebuilt; six analytic provenance files bound. Prior matrix certificates are unchanged and are not rerun by this checker.",
+  "source_class": "Actual compactly supported physical H1 sources; auxiliary counterexample tests, no change of inherited near-null source.",
+  "status": "AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN",
+  "universal_no_go_is_a_finite_sampling_claim": false,
+  "values": {
+    "bump_half_width": {
+      "decimal_lower": "0.0100000000000000000000000",
+      "decimal_upper": "0.0100000000000000000000000",
+      "exact": "1/100"
+    },
+    "bump_mass": {
+      "decimal_lower": "0.0091428571428571428571428",
+      "decimal_upper": "0.0091428571428571428571429",
+      "exact": "8/875"
+    },
+    "exp_15_over_8_upper": {
+      "decimal_lower": "6.5208191203301125653221000",
+      "decimal_upper": "6.5208191203301125653221001",
+      "exact": "41001685663902473847688917224301967528524043107390078630917447608425001097/6287812145573942564757116718520157211398602682768149830140751924388954112"
+    },
+    "fixed_locality_radius_threshold": {
+      "decimal_lower": "0.3650000000000000000000000",
+      "decimal_upper": "0.3650000000000000000000000",
+      "exact": "73/200"
+    },
+    "mixed_form_strict_upper": {
+      "decimal_lower": "-0.0004299008746355685131196",
+      "decimal_upper": "-0.0004299008746355685131195",
+      "exact": "-2304/5359375"
+    },
+    "phi_coefficient_0": {
+      "decimal_lower": "-60000.2500000000000000000000000",
+      "decimal_upper": "-60000.2500000000000000000000000",
+      "exact": "-240001/4"
+    },
+    "phi_coefficient_1": {
+      "decimal_lower": "0.0000000000000000000000000",
+      "decimal_upper": "0.0000000000000000000000000",
+      "exact": "0"
+    },
+    "phi_coefficient_2": {
+      "decimal_lower": "3600007500.0000000000000000000000000",
+      "decimal_upper": "3600007500.0000000000000000000000000",
+      "exact": "3600007500"
+    },
+    "phi_coefficient_3": {
+      "decimal_lower": "0.0000000000000000000000000",
+      "decimal_upper": "0.0000000000000000000000000",
+      "exact": "0"
+    },
+    "phi_coefficient_4": {
+      "decimal_lower": "-30000075000000.0000000000000000000000000",
+      "decimal_upper": "-30000075000000.0000000000000000000000000",
+      "exact": "-30000075000000"
+    },
+    "phi_coefficient_5": {
+      "decimal_lower": "0.0000000000000000000000000",
+      "decimal_upper": "0.0000000000000000000000000",
+      "exact": "0"
+    },
+    "phi_coefficient_6": {
+      "decimal_lower": "250000000000.0000000000000000000000000",
+      "decimal_upper": "250000000000.0000000000000000000000000",
+      "exact": "250000000000"
+    },
+    "prime_single_bump_norm_squared": {
+      "decimal_lower": "29257142870441.5584458208458208458208458",
+      "decimal_upper": "29257142870441.5584458208458208458208459",
+      "exact": "54912000024960000008/1876875"
+    },
+    "prime_witness_half_width": {
+      "decimal_lower": "0.0001000000000000000000000",
+      "decimal_upper": "0.0001000000000000000000000",
+      "exact": "1/10000"
+    },
+    "prime_witness_offset": {
+      "decimal_lower": "0.0010000000000000000000000",
+      "decimal_upper": "0.0010000000000000000000000",
+      "exact": "1/1000"
+    },
+    "psi_coefficient_0": {
+      "decimal_lower": "1.0000000000000000000000000",
+      "decimal_upper": "1.0000000000000000000000000",
+      "exact": "1"
+    },
+    "psi_coefficient_1": {
+      "decimal_lower": "0.0000000000000000000000000",
+      "decimal_upper": "0.0000000000000000000000000",
+      "exact": "0"
+    },
+    "psi_coefficient_2": {
+      "decimal_lower": "-30000.0000000000000000000000000",
+      "decimal_upper": "-30000.0000000000000000000000000",
+      "exact": "-30000"
+    },
+    "psi_coefficient_3": {
+      "decimal_lower": "0.0000000000000000000000000",
+      "decimal_upper": "0.0000000000000000000000000",
+      "exact": "0"
+    },
+    "psi_coefficient_4": {
+      "decimal_lower": "300000000.0000000000000000000000000",
+      "decimal_upper": "300000000.0000000000000000000000000",
+      "exact": "300000000"
+    },
+    "psi_coefficient_5": {
+      "decimal_lower": "0.0000000000000000000000000",
+      "decimal_upper": "0.0000000000000000000000000",
+      "exact": "0"
+    },
+    "psi_coefficient_6": {
+      "decimal_lower": "-1000000000000.0000000000000000000000000",
+      "decimal_upper": "-1000000000000.0000000000000000000000000",
+      "exact": "-1000000000000"
+    },
+    "published_relative_error_lower": {
+      "decimal_lower": "0.0000000000100000000000000",
+      "decimal_upper": "0.0000000000100000000000000",
+      "exact": "1/100000000000"
+    },
+    "q2_weight_lower": {
+      "decimal_lower": "0.4901290717342735958569508",
+      "decimal_upper": "0.4901290717342735958569509",
+      "exact": "17645505229907806479818305991596053927452874103142709984993092196086797442576869483481659469272886820346171824774040804033049883502239411622104995438806125222860298403366685056307542084380764092852358152745316116422692702936902641133247580459871413630008752712570687133597697258362009387505558053277526101406246267530704844800000000000000000000000000/36001751880317808509480570463937208155687551229173050884816175285967978995974793380849082718662504106661682370870413869379959013908742730487408390212587943652597807623232032641371082640138388536115045837108646876152157450295040703257476136004321574495948337858490541940892656471345813752341289657192490663941057733284267931709466603532132111635154689"
+    },
+    "q2_weight_upper": {
+      "decimal_lower": "0.4901290717342735958569508",
+      "decimal_upper": "0.4901290717342735958569509",
+      "exact": "3352645993682483231165478138403250246216046079597114897148687517256491514089605201861515299161848495865772646707067752766279477865425488208199949133373163792343456696639670162430100870172145133610306266765911444737541631792086933066469003465933489687079109578932943024773511694039197861429267991278157906337375077907236503762000000000000000000000000000/6840332857260383616801308388143232703831692764044178478576384830197894344690152054160952120062610118011771552719067968270691471308226677822606709272795887447533338535054893920204442941670083981205125169846343569007285253866781660192643784198666059367243989285812635941882750608357232284561774060158983779420522109736638600657624242779485208215718137639"
+    },
+    "q3_weight_lower": {
+      "decimal_lower": "0.6342841005975639771863877",
+      "decimal_upper": "0.6342841005975639771863878",
+      "exact": "17772224976366393486569590065383088688123185063833667127440075645157635964701598429973263460679722212967736710341961023414295905632550270578217959017520931996809639371144788957251167273639852830496465562915217017861437692486782393507148998939173636287633062146604061126708984375/28019344895486174590638105141302445648382749640798200802188917902829497681465520556620189267770720589873342246982088959789489482099709841457992018468559957730326113307149456342132363520506226997469759896377469316952040360266396766379107447004679415109123352098922735485128278016"
+    },
+    "q3_weight_upper": {
+      "decimal_lower": "0.6342841005975639771863877",
+      "decimal_upper": "0.6342841005975639771863878",
+      "exact": "33767227455096147624482221124227868507434051621283967542136143725799508332933037016949200575291472204638699749698063429044700079421200450831838609732966375462476642990006014348916433751752278489819253197267270771071080451270145200669517840946182600463129195947945117950439453125/53236755301423731722212399768443910476923165089499759407422325331705146723582683744534249137076613614242899757908165939449298269376507838885774215096448022327582390515595420035800800554692296669962974299026096911445189715469713661779208805230467237600608754325048585260254625792"
+    },
+    "q4_weight_lower": {
+      "decimal_lower": "0.3465735902799726547086160",
+      "decimal_upper": "0.3465735902799726547086161",
+      "exact": "176455052299078064798183059915960539274528741031427099849930921960867974425768694834816594692728868203461718247740408040330498835022394116221049954388061252228602984033666850563075420843807640928523581527453161164226927029369026411332475804598714136300087527125706871335976972583620093875055580532775261014062462675307048448000000000000000000000000000/509141657783365210389598898809567637778540582085056715278204286350912956444276535832721443130776227953833159881477915900165496539732856194125549904195860092572627696148751088960775667537133327326783178513561190619563380824298204633021617653466488535996360614391711391687670925145062710690930721529284906840424465763677834124588126941664204894471644909"
+    },
+    "q4_weight_upper": {
+      "decimal_lower": "0.3465735902799726547086160",
+      "decimal_upper": "0.3465735902799726547086161",
+      "exact": "1676322996841241615582739069201625123108023039798557448574343758628245757044802600930757649580924247932886323353533876383139738932712744104099974566686581896171728348319835081215050435086072566805153133382955722368770815896043466533234501732966744843539554789466471512386755847019598930714633995639078953168687538953618251881/4836845748941969498701189538688474136021664545058688200373596483265662253948097746310666911500741334434440970000884867595821846460244913359192281656062759956209840656733539204299337461624661689276073426276681642155039786986194907300567026886854121198472328383070974707589446728278859587372306367174411891619892994961253271000"
+    },
+    "q5_weight_lower": {
+      "decimal_lower": "0.7197625155536004912186630",
+      "decimal_upper": "0.7197625155536004912186631",
+      "exact": "102428985854512054613935901234185496044512636350291310374542448405270227994589617418606386108630034511451943102156284749599592891461744189404265911549912436966193879145924775584395609615652679669767609889517461376914730460100156820666884992163163133166076095456937682222155725640283455513467531749579318109678262473263847224000000000000000000000000000/142309419622567438102607660484884254948466942462444713904619698517220313101936063444917513360194071754155156213576549923287988836897780531745767505274162285278564662127087764636433490780697561254864018543078690055376032258937145417426165369274476807036488729780376599495758026395592117426116954243780686211189728635842226747137061240442879040575071347"
+    },
+    "q5_weight_upper": {
+      "decimal_lower": "0.7197625155536004912186630",
+      "decimal_upper": "0.7197625155536004912186631",
+      "exact": "7784602924942916150659128493798097699382960362622139588465226078813551393962054952480426241990904588178437490194538763692126191859767124826493983562691427190483860481237996491474752473334967084804104570863686960790898769024953100931714462689361992958048160966451501604385563282638473169592124822539968658339445712487817995424000000000000000000000000000/10815515891315125295798182196846366530334545657647097067212408613172722131202082133613357418891483791061843774485507127258386410269796879442677445533240511834710669408299477830712882539376804814712931870069681106746953789989946978298111886422705197547786948556008054534790755884866528596001817547819742705322140516736636926415242242382038914088744169101"
+    },
+    "q7_weight_lower": {
+      "decimal_lower": "0.7354849040109982962983999",
+      "decimal_upper": "0.7354849040109982962984000",
+      "exact": "32888040022165771168265435405708585308856172075454262788324475794938343348825517845434453517995470540300814876883615082257429316761001106304274861295141802919679862737882233808090295264974885496717290437856946915515362483184801212765052677570076014999283522761690803282061189347813972790465650378445848115598883545257635367440589179700795867691770034178536256752020524442195892333984375/44716131959758034543770409961830082145223413534641471593307709576591040136165297537078025088038539192057006516840107336508728070104328317641955758791643754386977681696649699682396177942225270266764663965381428365903081808980809868323678614606283679508695447670748652738738070810087837081870611143393745026943101346704244779645125072398944905174989856736778464518081748559202374089965568"
+    },
+    "q7_weight_upper": {
+      "decimal_lower": "0.7354849040109982962983999",
+      "decimal_upper": "0.7354849040109982962984000",
+      "exact": "1562181901052874130492608181771157802170668173592099241987023820494678548225171872563691142387655989211148224227074944359567007328263094056240705183302302762613097939554427455788662306649918711163356565373853396230990180165508160953555723171616075630636321373019040113233481191223263862170924666643745430466768222044751654387221131020827407049129263715381544469538939274847507476806640625/2124016268088506640829094473186126099208681044984898949586889785517122192820506811266470723283980268399618917523006924999167761384312309913886180956899645844638730694770612500458150548923096867041531962554044907832057680503988047376329600848548287567018268308507027584513950370864470401982518529043737814352308864226406862357615751676765385461283150931974777526943704079623910976020021248"
+    },
+    "rank_three_rational_Vandermonde_determinant": {
+      "decimal_lower": "0.0000000019970039950059930",
+      "decimal_upper": "0.0000000019970039950059931",
+      "exact": "2001/1002001000000"
+    },
+    "rank_witness_translation_margin": {
+      "decimal_lower": "0.0010000000000000000000000",
+      "decimal_upper": "0.0010000000000000000000000",
+      "exact": "1/1000"
+    },
+    "relative_two_state_error_strict_lower": {
+      "decimal_lower": "0.0000000000146938107607574",
+      "decimal_upper": "0.0000000000146938107607575",
+      "exact": "30888/2102109555030625"
+    },
+    "single_source_norm_squared": {
+      "decimal_lower": "29257275.8445820845820845820845820",
+      "decimal_upper": "29257275.8445820845820845820845821",
+      "exact": "2196489984032/75075"
+    },
+    "two_bump_center_distance": {
+      "decimal_lower": "0.7500000000000000000000000",
+      "decimal_upper": "0.7500000000000000000000000",
+      "exact": "3/4"
+    }
+  },
+  "verdict": "C1-FINITE-PROPAGATION-PLUS-FINITE-RANK-AND-CHANNEL-GRAM-CLASSES-EXCLUDED"
+}

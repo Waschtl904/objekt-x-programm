@@ -1,0 +1,31 @@
+INHERITED full shell pivot: 43 PASS and all hashes verified
+PASS moment correction on the entire core
+PASS projection makes the reduced core L2 orthogonal
+PASS forward then inverse recovers trace coordinate
+PASS inverse then forward recovers core psi component
+PASS transfer of old core psi coefficient preserves physical core
+PASS joint source trace is exactly physical trace matching
+PASS independent trace correction is graph-domain e addition
+PASS unreduced trace direction represents physical zero
+PASS inverse norm projection identity
+PASS physical upper bound is exact Cauchy remainder
+PASS mixed graph term Young identity
+PASS positive graph shift lower coefficient
+PASS inverse-free conditional remainder identity
+PASS Laurent normalization inverse
+PASS reject omitting the shell-moment correction from projection
+PASS reject separately forcing reduced core trace to zero
+PASS bound input count
+PASS inherited full pivot reserve matches
+PASS inherited shell interval matches
+PASS core projection lower-norm multiplier
+PASS lift squared norm coefficient for trace
+PASS lift squared norm coefficient for shell
+PASS reduced inverse norm shell coefficient
+PASS two reflected shell halves in physical norm
+PASS physical coordinate forward constant
+PASS graph shift exceeds physical semibound
+PASS compressed core and shell lower bounds positive
+PASS conditional inverse-free normalization constant
+TOTAL 28 NEW EXACT CHECKS PASS
+REDUCED-COORDINATE-AND-FORM-DOMAIN-THEOREM / SCHUR-ESTIMATE-OPEN

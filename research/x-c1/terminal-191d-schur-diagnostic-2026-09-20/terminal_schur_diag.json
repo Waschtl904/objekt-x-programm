@@ -1,0 +1,18 @@
+{
+  "calibration_pass": false,
+  "high_galerkin_dimension": 32,
+  "nt": 300,
+  "numpy": "2.3.5",
+  "nx": 900,
+  "python": "3.13.5",
+  "rows": [
+    {"a": 0.8047189562170501, "case": "certified_B_calibration", "high_galerkin_dimension": 32, "low_dimension": 191, "max_schur_eigenvalue": 9.106735622964749, "min_high_eigenvalue": 3.9577686858517778, "min_schur_eigenvalue": -0.005929863719430231, "moment_max_abs_ratio": 0.02376743151671826, "parity": "even", "second_schur_eigenvalue": -0.0024763866044982463},
+    {"a": 0.8047189562170501, "case": "certified_B_calibration", "high_galerkin_dimension": 32, "low_dimension": 191, "max_schur_eigenvalue": 9.111879994608252, "min_high_eigenvalue": 3.963875540236159, "min_schur_eigenvalue": -0.005045542516966335, "moment_max_abs_ratio": 0.007015149943622054, "parity": "odd", "second_schur_eigenvalue": -0.00030380699595657334},
+    {"a": 1.0, "case": "terminal_a1", "high_galerkin_dimension": 32, "low_dimension": 191, "max_schur_eigenvalue": 8.889342315113982, "min_high_eigenvalue": 3.74786819959235, "min_schur_eigenvalue": -0.011598574624972748, "moment_max_abs_ratio": 0.03640210792312417, "parity": "even", "second_schur_eigenvalue": -0.004490093540348913},
+    {"a": 1.0, "case": "terminal_a1", "high_galerkin_dimension": 32, "low_dimension": 191, "max_schur_eigenvalue": 8.896247558348623, "min_high_eigenvalue": 3.748639694875918, "min_schur_eigenvalue": -0.014443544891920361, "moment_max_abs_ratio": 0.010791101064857991, "parity": "odd", "second_schur_eigenvalue": -0.006018079812839529}
+  ],
+  "scipy": "1.17.0",
+  "sign_interpretation_allowed": false,
+  "status": "DIAGNOSTIC_ONLY / NO_SIGN_CERTIFICATE",
+  "verdict": "CALIBRATION_FAILED_DIRECT_QUADRATURE_NOT_SIGN_SAFE"
+}

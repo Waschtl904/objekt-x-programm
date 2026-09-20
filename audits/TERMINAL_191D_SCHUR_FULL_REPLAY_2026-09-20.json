@@ -1,0 +1,25 @@
+{
+  "status": "FULL_TERMINAL_REPLAY_PASS",
+  "date": "2026-09-20",
+  "workflow_run_id": 35519233118,
+  "workflow_job_id": 106100314824,
+  "head_sha": "746b5afb75a7dd4e3ebb41e9f093aaf12802dd6e",
+  "environment": {
+    "os": "Linux 6.17.0-1022-azure x86_64",
+    "python": "3.13.15",
+    "python_flint": "0.9.0",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "precision_bits": 2048
+  },
+  "recompute_seconds": 154.06611490249634,
+  "terminal_checks": 442,
+  "even_directed_positive_pivots": 191,
+  "odd_directed_positive_pivots": 191,
+  "result": "STRICT_POSITIVE_BOTH_PARITIES",
+  "physical_gap": "greater than 1e-26 on fixed horizon",
+  "regenerated_A_G_matches_stored_certificate": true,
+  "byte_identical_results_log": true,
+  "all_twelve_payload_hashes_pass": true,
+  "artifact_id": 10607328659,
+  "artifact_zip_sha256": "2e1e4a082369b8de6fc2bec269860894a70204e8e9a45820b78576bc87770f90"
+}

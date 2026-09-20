@@ -1,0 +1,70 @@
+PASS current mathematical anchor is 5557d94
+PASS 24 distinct complete-package and dependency bindings
+PASS input bytes SHA256 and Git blob research/x-c1/active-set-segment-schur-2026-09-18/PROOF.md
+PASS input bytes SHA256 and Git blob research/x-c1/all-parity-window-and-restart-2026-09-19/PROOF.md
+PASS input bytes SHA256 and Git blob research/x-c1/block-adaptive-profile-transport-2026-09-19/PROOF.md
+PASS input bytes SHA256 and Git blob research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md
+PASS input bytes SHA256 and Git blob research/x-c1/c1-coupled-spectral-mediator-2026-09-20/README.md
+PASS input bytes SHA256 and Git blob research/x-c1/c1-coupled-spectral-mediator-2026-09-20/SHA256SUMS
+PASS input bytes SHA256 and Git blob research/x-c1/c1-coupled-spectral-mediator-2026-09-20/STATUS_DE.md
+PASS input bytes SHA256 and Git blob research/x-c1/c1-coupled-spectral-mediator-2026-09-20/check_mediator.py
+PASS input bytes SHA256 and Git blob research/x-c1/c1-coupled-spectral-mediator-2026-09-20/input_bindings.json
+PASS input bytes SHA256 and Git blob research/x-c1/c1-coupled-spectral-mediator-2026-09-20/mediator_checks.log
+PASS input bytes SHA256 and Git blob research/x-c1/c1-coupled-spectral-mediator-2026-09-20/mediator_results.json
+PASS input bytes SHA256 and Git blob research/x-c1/c1-readout-nonlocality-obstruction-2026-09-19/PROOF.md
+PASS input bytes SHA256 and Git blob research/x-c1/moving-endpoint-harmonic-block-renewal-2026-09-19/PROOF.md
+PASS input bytes SHA256 and Git blob research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/PROOF.md
+PASS input bytes SHA256 and Git blob research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/README.md
+PASS input bytes SHA256 and Git blob research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/SHA256SUMS
+PASS input bytes SHA256 and Git blob research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/STATUS_DE.md
+PASS input bytes SHA256 and Git blob research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/check_tail.py
+PASS input bytes SHA256 and Git blob research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/input_bindings.json
+PASS input bytes SHA256 and Git blob research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/tail_checks.log
+PASS input bytes SHA256 and Git blob research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/tail_results.json
+PASS input bytes SHA256 and Git blob research/x-c1/prime-power-segment-4-2026-09-18/PROOF.md
+PASS input bytes SHA256 and Git blob research/x-c1/universal-prime-power-family-2026-09-18/PROOF.md
+PASS input bytes SHA256 and Git blob research/x-c1/x-interface-directed-system-2026-09-19/PROOF.md
+PASS candidate frozen replay
+PASS moving-tail frozen math-only replay
+PASS moving-tail full provenance run
+PASS full high defect reserve is exactly two over 945
+PASS full high defect norm squared upper is exactly 943 over 945
+PASS high contraction and positive reserve sum to one
+PASS norm floor conversion denominator is 945 halves
+PASS full high inverse norm upper is 945 halves
+PASS singular tail itself is below 999 over 1000
+PASS 191 even low coordinates with next degree 384
+PASS 191 odd low coordinates with next degree 385
+PASS critical singular indices are 192 per parity and 383 jointly
+PASS bounded transfer input norm and physical inverse are consistent
+PASS sharper s bound is compatible with the inherited norm ninety
+PASS Neumann remainder prefactor is 42525
+PASS one exact block of 1024 high powers is below one eighth
+PASS geometric full-response error after 16382 powers meets the rational target
+PASS geometric full-response error after 20478 powers meets the rational target
+PASS geometric full-response error after 22526 powers meets the rational target
+PASS entrywise radius converts to a 191 dimensional operator radius
+PASS algebra model C is positive by exact LDL
+PASS algebra model high block lies below the proved theta
+PASS algebra model mixed block inequality holds
+PASS algebra model is not falsely treated as block diagonal
+PASS exact noncommuting square completion has the claimed signs
+PASS model low Gram square root is strictly positive
+PASS physical Schur and defect Schur have exact low-Gram congruence
+PASS adding an arbitrary high lift does not alter the model quotient Schur form
+PASS model resolvent full-tail identity at N 0
+PASS model omitted response is strictly positive at N 0
+PASS model Schur enclosure retains the complete response at N 0
+PASS model resolvent full-tail identity at N 2
+PASS model omitted response is strictly positive at N 2
+PASS model Schur enclosure retains the complete response at N 2
+PASS model resolvent full-tail identity at N 5
+PASS model omitted response is strictly positive at N 5
+PASS model Schur enclosure retains the complete response at N 5
+PASS upper-singular certificate specializes at Lambda one N 0
+PASS upper-singular certificate specializes at Lambda one N 2
+PASS upper-singular certificate specializes at Lambda one N 17
+PASS failed coarse largest-norm bound is not a contraction certificate
+PASS 67 bridge checks
+INHERITED candidate 53; moving-tail frozen 25; moving-tail full 26
+STATUS AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN

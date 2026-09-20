@@ -1,33 +1,113 @@
-# Einstiegsprompt — neue Forschungssitzung
+> [!WARNING]
+> **HISTORICAL SNAPSHOT — nur die operative Navigation ist ersetzt.**
+>
+> As of: 2026-09-14
+> Nicht zur Bestimmung der aktuellen Forschungsfront verwenden.
+> Kanonischer Status: [RESEARCH_STATE.yaml](00-uebersicht/RESEARCH_STATE.yaml).
+> Lesbarer Einstieg: [CURRENT_STATE.md](00-uebersicht/CURRENT_STATE.md).
+> Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten.
+> Mathematische Inhalte werden durch diesen Hinweis nicht pauschal verworfen.
 
-> Stand: 16. September 2026. Navigation, kein neuer mathematischer Status.
+# Einstiegsprompt — Neue Chat-Session
 
-Repository: `Waschtl904/objekt-x-programm`. ChatGPT übernimmt Repo-Arbeiten; externe Reviewer arbeiten lesend.
-Vor Writes main und Zielbranch live prüfen. Historische Ergebnisse nur am bezeichneten Commit importieren.
+> **Aktueller Stand: 14. September 2026.**
 
-## Lesereihenfolge
+Forschungsprogramm **Objekt X** im Repository `Waschtl904/objekt-x-programm`.
 
-1. [CURRENT-FRONT](CURRENT-FRONT.md).
-2. [A1-Statuskapsel](https://github.com/Waschtl904/objekt-x-programm/blob/d7b32ccfb9d0d90f19d4a7a5b0fbd19b0928f257/research/x-c0/A1_COMP_STATUS_CAPSULE.md).
-3. [X-C0-Spezifikation](https://github.com/Waschtl904/objekt-x-programm/blob/d7b32ccfb9d0d90f19d4a7a5b0fbd19b0928f257/X_CANDIDATE_C0_SPEC.md).
-4. [X-C1-STORAGE](https://github.com/Waschtl904/objekt-x-programm/blob/3a81019e43d95750493d47030728966576b3b942/research/x-c1/X_C1_STORAGE.md).
-5. [Endpunkt-Green-Brücke](https://github.com/Waschtl904/objekt-x-programm/blob/708542fb8a6a230b2e1ae4b8d44d51a7aa1e393d/research/x-c1/X_C1_ENDPOINT_GREEN_BRIDGE.md).
-6. [Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md); Registry/Arbeitsdefinition als unveränderte Governancequellen.
+Arbeite als strenger mathematischer Auditor. ChatGPT übernimmt Repo-Arbeiten; externe Modelle sind Reviewer. Keine Promotion allein durch Merge, CI oder Numerik.
 
-## Arbeitsauftrag
+## Zuerst lesen
 
-Aktive Spur: PR #137 / X-C1-GEOM, zuletzt gelesen `708542fb8a6a230b2e1ae4b8d44d51a7aa1e393d`.
-Gesucht ist eine konkrete positive Auswertung der endpunktbedingten signierten Randpaarung auf der gesamten angegebenen Testklasse.
-Die lokale positive Vorstruktur und eine bestandene zweidimensionale Kalibrierung ersetzen diese Auswertung nicht.
-Zuerst benennen, welche Hypothese des kausalen Präfix-No-Go der neue Kandidat verlässt.
-Dann feste Ports, Domain, vollständige komplexe Mischidentität und kompatible Fensterabbildungen behandeln.
-PR #138 bleibt ein separater Referenzzweig; kein ungeprüfter Komplettimport.
+1. `CURRENT-FRONT.md`
+2. `audits/P11_A1_FINITE_GATE_ARCHITECTURE_2026-09-14.md`
+3. `audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md`
+4. `audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md`
+5. `audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md`
+6. Registry/Arbeitsdefinition nur als unveränderte Governancequellen.
 
-## Stop-Regeln
+## Gesicherter Stand
 
-A1-COMP ist `AUTHOR-VERIFIED / EXTERNAL-OPEN`; kein routinemäßiger neuer A1-/C0-Selbstaudit.
-Nur Headänderung, konkrete externe Beanstandung, echter Scope-Mehrbedarf oder ausgefallene Provenienz öffnet den betroffenen Gate.
-Die getrennte rho1-Diagnose benutzt den vollständigen Completionoperator und kontrollierte Reste, nicht bloß die alte Matrixinverse.
-Zwei erfolglose Ansätze können eine Arbeitspause begründen, aber keinen allgemeinen No-Go-Satz.
-Kein Merge, Approval, Registry-Upgrade oder großer Rechenlauf ohne den dafür bestimmten Auftrag.
-[Historischer C-even-Einstieg](https://github.com/Waschtl904/objekt-x-programm/blob/ac164bbbd2c46623aa64e567d21f813f41f164b0/EINSTIEGSPROMPT.md) ist kein aktueller Default-Auftrag.
+```text
+COMMON-JUMP / Q0                         ✓[M]
+rank-2 completion / Morse / parity      ✓[M]
+canonical lambda=1                      ✓[M]
+exact a=1 Fourier multiplier            ✓[M]
+Omega1551 high-frequency floor          ✓[K/M]
+Osipov N=1102 Schur reduction           ✓[K/M]
+canonical mathematical reduction <=1104 ✓[K/M]
+```
+
+Die kleinste kanonische Restobligation bleibt
+
+```math
+(L_1)_{RR}\succeq3\times10^{-39}I
+```
+
+auf höchstens `552 even + 552 odd` PSWF/moment-augmentierten Dimensionen.
+
+## Durchlauf B — Architekturentscheidung `✓[M]`
+
+Für den **ersten ausführbaren Vollzertifikatsversuch** wird nicht die kleinere PSWF-Basis konstruiert, sondern der bereits vorbereitete orthonormale Legendre-Backend verwendet.
+
+Fixiert:
+
+```text
+M=2150
+1075 even + 1075 odd
+Gram I exactly
+finite target=1e-35
+panel width<=0.4
+Gauss-Legendre q=40
+analytic strip |Im xi|<=0.4
+quadrature operator error <4e-38
+```
+
+Die Legendre-Ausführung ersetzt die kleinere PSWF-Reduktion nicht; sie ist die derzeit robustere Zertifikatsbasis, weil Basis, Gram, Parität, Tail/Cross und Quadraturbudget bereits rigoros geschlossen sind.
+
+## Default-Auftrag — C-even ONLY
+
+Im nächsten Durchlauf **nur den geraden Paritätsblock** bauen und zertifizieren:
+
+```math
+\boxed{A_e\succeq10^{-35}I_{1075}}.
+```
+
+### Fixiertes Verfahren
+
+1. common-node Arb matrix assembly;
+2. spherical-Bessel vector evaluation with deterministic fail-closed recurrence;
+3. moment block `2aa^T` in Arb;
+4. certified #118 quadrature radius directly in every matrix entry;
+5. interval symmetry checks;
+6. untrusted midpoint eigenbasis/preconditioner as proposal only;
+7. freeze proposal to dyadic Arb points;
+8. form in Arb
+   ```math
+   V^T(A_e-10^{-35}I)V;
+   ```
+9. verified interval Cholesky/LDL;
+10. accept only if every decisive pivot lower endpoint is strictly positive.
+
+### Fixed precision ladder
+
+```text
+512
+768
+1024
+1536
+2048
+3072 bits
+```
+
+Only precision may increase. Do **not** retune `M`, target, quadrature order, panel width or basis after seeing results.
+
+If C-even is green, stop and checkpoint. Run C-odd only in a separate later pass.
+
+### Firewalls
+
+- A pivot containing `0` is undecided.
+- Float eigenvectors/factors are untrusted proposals only.
+- B defined architecture; it did not prove finite positivity.
+- No `a=1` promotion after even alone.
+- Fixed-window `a=1`, all-a NP-GAP, Object X and RH remain open.
+- Registry/Arbeitsdefinition unchanged.

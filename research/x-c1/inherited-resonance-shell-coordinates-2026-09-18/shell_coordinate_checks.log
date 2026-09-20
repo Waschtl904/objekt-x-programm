@@ -1,0 +1,12 @@
+PASS B lies strictly between 4/5 and 81/100
+PASS unit endpoint leaves positive shell width
+PASS H(B)>1
+PASS A_B positive and > 4/5
+PASS M_B positive and > 2/5
+PASS A_T positive
+PASS orthogonal alpha constant < 43/100
+PASS phi_T H1 norm squared positive
+PASS phi_M H1 norm squared positive
+PASS uniform gamma coefficient < 231/100
+PASS closed-form Mellin corrector mass identity
+TOTAL 11

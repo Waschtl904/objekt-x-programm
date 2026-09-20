@@ -1,0 +1,150 @@
+{
+  "anchor": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
+  "files": [
+    {
+      "bytes": 9022,
+      "git_blob": "61739834b44b1afd30b91debed8f5baeac09fba2",
+      "path": "research/x-c1/active-set-segment-schur-2026-09-18/PROOF.md",
+      "sha256": "a9e90cdfab133627db0c87a0eeb955464394f6139877807feed69a49c913a5c1"
+    },
+    {
+      "bytes": 22770,
+      "git_blob": "eb624f6829d7aac9118fb963117802e7c3e3820c",
+      "path": "research/x-c1/all-parity-window-and-restart-2026-09-19/PROOF.md",
+      "sha256": "eb22fca82973b85d316d480132604338aaecde9501bd91dabc72db6a692e66d7"
+    },
+    {
+      "bytes": 22635,
+      "git_blob": "e7f6ba40b24b1dbc59a36004f448142e3a369b42",
+      "path": "research/x-c1/block-adaptive-profile-transport-2026-09-19/PROOF.md",
+      "sha256": "81d40eab8456b7bc51700d58b5b5a3586bedb5b93ae074c7d8a2f04eb9025f8a"
+    },
+    {
+      "bytes": 19970,
+      "git_blob": "2f8db9f492cfd39c92b2bbab03b250e5bcbff3b9",
+      "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md",
+      "sha256": "4ebc12a5a84593d4a2fa0e21fd7b0ca6b5cc3fb1cb29e1b4c4f68dbdaa95f1b5"
+    },
+    {
+      "bytes": 2178,
+      "git_blob": "aa5532a335df461c3c9fa89ceeb330e252344e59",
+      "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/README.md",
+      "sha256": "812a6b121ef2cf60a58ffb6218fdcb160cbfb779f4a887349d3a06c1c3b4e0e1"
+    },
+    {
+      "bytes": 574,
+      "git_blob": "a6bd9c98f23d03461ec2c7482246f58b59be5c94",
+      "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/SHA256SUMS",
+      "sha256": "f12d60f493a062621c6c95ab37118d0ea6b8193ea16b629fcd96d7b5655a7806"
+    },
+    {
+      "bytes": 3532,
+      "git_blob": "c3104cb686cdc141ba59f4b742fa7bcd2b388422",
+      "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/STATUS_DE.md",
+      "sha256": "3feb902d8b590fb566bee79acf2a4a6a09ccca444a50ec6a707879c53fe6cc6e"
+    },
+    {
+      "bytes": 12559,
+      "git_blob": "844484fec9a5d6f719b701d8e4335b2151f0a0e4",
+      "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/check_mediator.py",
+      "sha256": "2a34e00b8a9dc7eddbaa8127dfda8b34334aecea0c530efc3218d53e73a50f2f"
+    },
+    {
+      "bytes": 1515,
+      "git_blob": "6c804c15ee17c2bae35a5bea888509134b2c4418",
+      "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/input_bindings.json",
+      "sha256": "71f6de6d84eae0920faa550ff981e3f01873d7e0fe94243265a27634ca9ea8f0"
+    },
+    {
+      "bytes": 3467,
+      "git_blob": "48c8b101a4ef4f6a0e024f538200bf9ba2491536",
+      "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/mediator_checks.log",
+      "sha256": "db533098fe8340efee3ac8a00a97b4265372cdd0f73d2e61cc3fbb8851748550"
+    },
+    {
+      "bytes": 6870,
+      "git_blob": "2087c26b5d4e8e38fc93500694c3f7097947b8cd",
+      "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/mediator_results.json",
+      "sha256": "6a36006e22c7597795af89b69572953b124accd6c28523cc641525ff34119865"
+    },
+    {
+      "bytes": 21378,
+      "git_blob": "1c57f970687819cef898886e6ba8911de7e4f032",
+      "path": "research/x-c1/c1-readout-nonlocality-obstruction-2026-09-19/PROOF.md",
+      "sha256": "dbd53ec6cbe37795c5c49e5f762d2c0b09ef8a84e7002a416c250005802d7e22"
+    },
+    {
+      "bytes": 26747,
+      "git_blob": "bc65cae420029c34278e16f5b41d9942c6509f6e",
+      "path": "research/x-c1/moving-endpoint-harmonic-block-renewal-2026-09-19/PROOF.md",
+      "sha256": "e21fae202d4c94e76e8ba87f0cef6ca0fda582703d5f3a95a696e9d7b79f22b0"
+    },
+    {
+      "bytes": 6891,
+      "git_blob": "df49e3f972d13e00aa8ecb930f56347103798c70",
+      "path": "research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/PROOF.md",
+      "sha256": "db613db809a7be877340583aecafc0696ba5d5403c73deef1ba960d89d46d96d"
+    },
+    {
+      "bytes": 693,
+      "git_blob": "25574360798a849555eb2c7f921ee7c2d7189465",
+      "path": "research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/README.md",
+      "sha256": "30cbdd57b4eaccb374386a6eff036ab5e7b9696486d4dcbe9f0178e9e4f361b5"
+    },
+    {
+      "bytes": 562,
+      "git_blob": "de26f213996adaa2402e490ecb190755e5ac97a7",
+      "path": "research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/SHA256SUMS",
+      "sha256": "1a9fe40138b6bda75f20c86c171e9cc14f68e95c2bf5b38882374e47798bdec5"
+    },
+    {
+      "bytes": 854,
+      "git_blob": "f126806f0259fdfac2b6be2e269955c60db4eb22",
+      "path": "research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/STATUS_DE.md",
+      "sha256": "4756da17fb4caf997896fa3b440459429e91e4b577e212800c791c71a76c891a"
+    },
+    {
+      "bytes": 5442,
+      "git_blob": "5d57ee8e106ba78294449a9f6edd60156903bf4f",
+      "path": "research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/check_tail.py",
+      "sha256": "680d4f27994a5495ea5d5c88d003c16c7dca2fbe8335f85a7704bfcad1dd0d52"
+    },
+    {
+      "bytes": 1109,
+      "git_blob": "43daf6406dfb9a09f111d37822c055bb814a5062",
+      "path": "research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/input_bindings.json",
+      "sha256": "cf7470e34dc98f2e235f4efa1e58d9cec88154d3b1c3c0d837838cb01711282c"
+    },
+    {
+      "bytes": 1264,
+      "git_blob": "86db0be2f295bac1a46db8b6a0018fe753ff3cde",
+      "path": "research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/tail_checks.log",
+      "sha256": "6e97eaca460729879407352a0101864273fe0dca6eb3a3a7190298b9c46673e0"
+    },
+    {
+      "bytes": 1968,
+      "git_blob": "26a0de77d22b7c839cedd20343bfadf152fd418a",
+      "path": "research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/tail_results.json",
+      "sha256": "c9380794ea7be819e6f79fef096ae136ae98bbc8883f5ac538719430e60939ee"
+    },
+    {
+      "bytes": 22297,
+      "git_blob": "e583ce27b67103c5aaca2a3c7174cdb947ee4c3f",
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/PROOF.md",
+      "sha256": "cd916ca46874d63cf663d9a611ec91b62d314456c500cc5f0a205cab237134df"
+    },
+    {
+      "bytes": 6764,
+      "git_blob": "72a53b682a280bb8ca9a45efbedd458b0dcaf18e",
+      "path": "research/x-c1/universal-prime-power-family-2026-09-18/PROOF.md",
+      "sha256": "639cfd30c71828ad56caf04447c7d174ec05071f250e19cb6be189d8c3e5f853"
+    },
+    {
+      "bytes": 11722,
+      "git_blob": "b0ca1d113662f93aea1cfe445b2229becf52b976",
+      "path": "research/x-c1/x-interface-directed-system-2026-09-19/PROOF.md",
+      "sha256": "9c6db7cdc9b90212eeb128450c8ee62907193adf7ccbc29f426f2c2db131feff"
+    }
+  ],
+  "role": "Both complete input packages and the union of their immutable analytic dependencies; old numerical finite-matrix certificates are not replayed."
+}

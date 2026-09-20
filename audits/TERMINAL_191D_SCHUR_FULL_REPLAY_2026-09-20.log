@@ -1,0 +1,17 @@
+PASS fresh Ubuntu x86_64 replay environment
+PASS Python 3.13.15
+PASS python-flint 0.9.0
+PASS terminal Arb precision 2048 bits
+PASS full terminal matrix recomputation completed in 154.06611490249634 seconds
+PASS TOTAL 442 terminal certificate checks
+PASS even 191 directed positive pivots
+PASS odd 191 directed positive pivots
+PASS both parities STRICT_POSITIVE
+PASS physical gap > 1e-26 on fixed horizon
+PASS every regenerated actual A/G matrix enclosure matches stored certificate
+PASS byte-identical results/log
+PASS all twelve payload hashes
+workflow_run_id=35519233118
+workflow_job_id=106100314824
+artifact_id=10607328659
+artifact_zip_sha256=2e1e4a082369b8de6fc2bec269860894a70204e8e9a45820b78576bc87770f90

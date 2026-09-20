@@ -1,0 +1,444 @@
+{
+  "anchor": "8f5b711145b28b6dbfc8280d8e51625f3d2f1532",
+  "files": [
+    {
+      "bytes": 18712,
+      "git_blob": "8463e84058630c09687cc5b98681b357b1b2a805",
+      "path": "audits/P11_NP_COMMON_JUMP_GRAM_2026-09-13.md",
+      "sha256": "f8e47e6cf1b0a43f0023f50d2646c3e30c57ce32e76e8753a2b03001043a338e"
+    },
+    {
+      "bytes": 8040,
+      "git_blob": "622ecd69f978c39cfd5b277c3edfdacde216890a",
+      "path": "research/x-c1/a-gauge-conditioning-2026-09-19/PROOF.md",
+      "sha256": "56199fcadecd4da56e667b2d3976647927c7ffa813019ab33e2041cf63a1428c"
+    },
+    {
+      "bytes": 1384,
+      "git_blob": "156450748de791850a9959492835eacfc4b3a032",
+      "path": "research/x-c1/a-gauge-conditioning-2026-09-19/README.md",
+      "sha256": "4ce4940b59aaa8b3cb2bc363622d768f982da0aa2e284b3f7a8841cbaf606275"
+    },
+    {
+      "bytes": 571,
+      "git_blob": "dcac8ed22591f420d8dd4918ae6b5ef3ae35fe8e",
+      "path": "research/x-c1/a-gauge-conditioning-2026-09-19/SHA256SUMS",
+      "sha256": "0c2da42b9dbe39ba5e1c6139b4933aec96980e0b89dfe76ffff271c6a6897e17"
+    },
+    {
+      "bytes": 1797,
+      "git_blob": "aedea1aae7f5ce947986e24f2fe0622c093dc932",
+      "path": "research/x-c1/a-gauge-conditioning-2026-09-19/STATUS_DE.md",
+      "sha256": "1d97efb9a3588115ef28666bd2f9c85ac362312b1ba5decee694bd550dd0320a"
+    },
+    {
+      "bytes": 393,
+      "git_blob": "6f2b3fdb1a131472a3d28c019611df45ea2b2907",
+      "path": "research/x-c1/a-gauge-conditioning-2026-09-19/a_gauge_checks.log",
+      "sha256": "031440f712d83caea29e2dd99620bff6fee9f5bdd21f9e00809a81d528fcef8f"
+    },
+    {
+      "bytes": 1229,
+      "git_blob": "1f106f62a0a57838dfe34bb6b6509920614e1b6f",
+      "path": "research/x-c1/a-gauge-conditioning-2026-09-19/a_gauge_results.json",
+      "sha256": "cbb764ce79a413961b3277f168c662deb284dca36ff45cfb60cf44e5528979b4"
+    },
+    {
+      "bytes": 3925,
+      "git_blob": "4bf4e9a6e6d63e6eb1ad2c8b8fefe12d54301c00",
+      "path": "research/x-c1/a-gauge-conditioning-2026-09-19/check_a_gauge.py",
+      "sha256": "6664c1cb164505860dd1962cec7f92bdc5229b0c95560ee489160c8f88179d83"
+    },
+    {
+      "bytes": 1312,
+      "git_blob": "b572d82c0566bc335aa487a85f57fb86fd2fb1aa",
+      "path": "research/x-c1/a-gauge-conditioning-2026-09-19/input_bindings.json",
+      "sha256": "44f67fedc26fd60d51f291b013811cdeb0f7ec4daf6b392ca818fb4a75cd8939"
+    },
+    {
+      "bytes": 13363,
+      "git_blob": "61771b423f90716548747485992df6505ec1dcfe",
+      "path": "research/x-c1/a-gauge-transition-congruence-2026-09-19/PROOF.md",
+      "sha256": "d6fd8d07ee4c4675d90a21271cea6e8f1124ebaf72aabd6b2da21ae2dc5fdfc9"
+    },
+    {
+      "bytes": 2041,
+      "git_blob": "af2ba16f0de31c64a1ee29cada8f2a26381e277f",
+      "path": "research/x-c1/a-gauge-transition-congruence-2026-09-19/README.md",
+      "sha256": "422222248e1b2d3854428ee13644d22e9b837f5a697aa5ac82a24f4dc9486752"
+    },
+    {
+      "bytes": 580,
+      "git_blob": "170336f5a888c8f341538d9fa49cb0490a1948bb",
+      "path": "research/x-c1/a-gauge-transition-congruence-2026-09-19/SHA256SUMS",
+      "sha256": "f9bb5a43f846b74910d58f08afb9a870afaa91271de0ac3dbc985596d61ddcd1"
+    },
+    {
+      "bytes": 1921,
+      "git_blob": "aa81728591492231babae1666ec2aa00e03c9265",
+      "path": "research/x-c1/a-gauge-transition-congruence-2026-09-19/STATUS_DE.md",
+      "sha256": "783094b29bec0f800bb309d7c377e938428ac597915b31bec8347772751fbbc6"
+    },
+    {
+      "bytes": 13525,
+      "git_blob": "ea9954f1f97fc15043a5ceaef78db1964377bb2b",
+      "path": "research/x-c1/a-gauge-transition-congruence-2026-09-19/check_transition.py",
+      "sha256": "45488a08c30a216986d4d9c7fe19775f5031e1f6c9b65c37120dd3365c798896"
+    },
+    {
+      "bytes": 17471,
+      "git_blob": "ed6d5e55af32fe29d034496667255ae88230b5c1",
+      "path": "research/x-c1/a-gauge-transition-congruence-2026-09-19/input_bindings.json",
+      "sha256": "6d1420a89b2b490d4318ec062798430a14e1f6b0df7cb9209c744a7ea34a688d"
+    },
+    {
+      "bytes": 4268,
+      "git_blob": "981c308e6368583c787f59df6cdad67e0b7e823d",
+      "path": "research/x-c1/a-gauge-transition-congruence-2026-09-19/transition_checks.log",
+      "sha256": "5e1944e99899c83e5892a2117ccd59c7c99f28c21f31f28a6418afa912e4504f"
+    },
+    {
+      "bytes": 9403,
+      "git_blob": "f6fb27556a5f4bf944ef0dab814d0ee16f972d4b",
+      "path": "research/x-c1/a-gauge-transition-congruence-2026-09-19/transition_results.json",
+      "sha256": "c939bea3e833809bfcede365a0eb71ae3d87d224be27c8644a575588c4c62823"
+    },
+    {
+      "bytes": 16125,
+      "git_blob": "cb7e89a3e1d3e9df56a4a00cd74c1fa9c9b2adf1",
+      "path": "research/x-c1/all-core-logarithmic-shell-gate-2026-09-19/PROOF.md",
+      "sha256": "c741342d2dcbd31c6a5925560cfdc8cb2977fc633244fabcaa7f4e0313ed3efa"
+    },
+    {
+      "bytes": 2318,
+      "git_blob": "e6a1480cba86daa56fb689f3b17047588bc559fb",
+      "path": "research/x-c1/all-core-logarithmic-shell-gate-2026-09-19/README.md",
+      "sha256": "77af93e9a42890d2ec79217c81703771ea921c44a5031dfb9a94fa6f5d6edd18"
+    },
+    {
+      "bytes": 574,
+      "git_blob": "be04d177386820ee9f74ac44a9e58bf9d71ba4f3",
+      "path": "research/x-c1/all-core-logarithmic-shell-gate-2026-09-19/SHA256SUMS",
+      "sha256": "d16a8a614e5379e60513209388d209fc4addd47f08281f323b5ffce5caf1f20d"
+    },
+    {
+      "bytes": 2522,
+      "git_blob": "7561e488968272d2245d66dc4b3711095c27bbdd",
+      "path": "research/x-c1/all-core-logarithmic-shell-gate-2026-09-19/STATUS_DE.md",
+      "sha256": "cd1427059cd5ac99ee7ce2686ca36b7e3edc3e4cd868398ef50ffaa13a2c073a"
+    },
+    {
+      "bytes": 4821,
+      "git_blob": "0bdc8d6083649b884a63ea3c2e6ff10e3b98fd07",
+      "path": "research/x-c1/all-core-logarithmic-shell-gate-2026-09-19/all_core_checks.log",
+      "sha256": "d5de251d36cbae76236ce430203a4c52a248c94966251fd2d58697fb7a4e34af"
+    },
+    {
+      "bytes": 11789,
+      "git_blob": "118f6c864b065b3008fa93ec9019d31a2246d5ab",
+      "path": "research/x-c1/all-core-logarithmic-shell-gate-2026-09-19/all_core_results.json",
+      "sha256": "369a8b3ed1ea58e74b52fc7f1483831836eb6482d565d5f1669b54ecc8231fa1"
+    },
+    {
+      "bytes": 15058,
+      "git_blob": "336c72d0e925876219b93bc4f65f0ae26724878b",
+      "path": "research/x-c1/all-core-logarithmic-shell-gate-2026-09-19/check_all_core.py",
+      "sha256": "9e4a973a58a4fb3f445bae18b70e8de282380ed8a5ce3ee8e8cee35563a9e269"
+    },
+    {
+      "bytes": 15389,
+      "git_blob": "ab7274e022c6d9e4c502fb7c4ec0b7046aabb352",
+      "path": "research/x-c1/all-core-logarithmic-shell-gate-2026-09-19/input_bindings.json",
+      "sha256": "90bc53e81ffb3fc9e2225793b2e3b844723cc778e5aac70fef5beb6ee65e3a9d"
+    },
+    {
+      "bytes": 18815,
+      "git_blob": "20c605bf8f14ea309dbeeb49815ac68d7cf76f39",
+      "path": "research/x-c1/full-shell-pivot-trace-quotient-2026-09-18/PROOF.md",
+      "sha256": "413577cb24d00b7af971333193c987e2021c6985ecf06e0c702f60c5999720c8"
+    },
+    {
+      "bytes": 2175,
+      "git_blob": "301956bc0d4d87cb10954e79bb800d1fe579626f",
+      "path": "research/x-c1/full-shell-pivot-trace-quotient-2026-09-18/README.md",
+      "sha256": "cfbef97827373b217d268fc7d1918909c9d2463efddcca50b4794561bf75bd23"
+    },
+    {
+      "bytes": 583,
+      "git_blob": "72cb66f7bd4e162111b008cc5753f1f8e0b1899d",
+      "path": "research/x-c1/full-shell-pivot-trace-quotient-2026-09-18/SHA256SUMS",
+      "sha256": "4739af995013342a515b4a8b1efa9099743b6ed7e585b865d7e3ef3025b89579"
+    },
+    {
+      "bytes": 3823,
+      "git_blob": "468c1694df2d44c1654fe856ca3e4c883cdb2b8e",
+      "path": "research/x-c1/full-shell-pivot-trace-quotient-2026-09-18/STATUS_DE.md",
+      "sha256": "e6de8b90c8891b90705cd9e1c777db684cc0ac24a72c443b843c588d42ae029d"
+    },
+    {
+      "bytes": 6813,
+      "git_blob": "822e7ad0b7549f1f167d8df65613f8f253e67e3f",
+      "path": "research/x-c1/full-shell-pivot-trace-quotient-2026-09-18/check_shell_pivot.py",
+      "sha256": "cd4e77d5cb1027a84e2818a2d5ea7d5e7e3774ded20ca49b367e750207bb6a22"
+    },
+    {
+      "bytes": 5285,
+      "git_blob": "b64963c22cdc88fcc28f8716778890fa3808412e",
+      "path": "research/x-c1/full-shell-pivot-trace-quotient-2026-09-18/input_bindings.json",
+      "sha256": "5b52471b84e2d4b437e58aa70148e49c3e0ed97394b17c39b5a160f79923bd20"
+    },
+    {
+      "bytes": 1642,
+      "git_blob": "73c9e3d067ded9ae4e0c2f348d12d4fac8508fd5",
+      "path": "research/x-c1/full-shell-pivot-trace-quotient-2026-09-18/shell_pivot_checks.log",
+      "sha256": "d865188579526c388c21bea7d39caa074f56c5bdeec782e807b50310e3cb0661"
+    },
+    {
+      "bytes": 4174,
+      "git_blob": "2517d4c3390a85d10982e049371969265bfcef01",
+      "path": "research/x-c1/full-shell-pivot-trace-quotient-2026-09-18/shell_pivot_results.json",
+      "sha256": "41ab2fa6519de0763d50b8e5d7815f4af0f8697a253b7f25f620745788a6e209"
+    },
+    {
+      "bytes": 11735,
+      "git_blob": "687e78b24d3ee0c711cfaa6331464705838e2553",
+      "path": "research/x-c1/inherited-resonance-shell-coordinates-2026-09-18/PROOF.md",
+      "sha256": "76cde3b448de2f242a11157611c21b2564b08cf2fe03f61c0b4847e15676e7dc"
+    },
+    {
+      "bytes": 1316,
+      "git_blob": "bb2db436799df2d43a086791772581f079f4a3b4",
+      "path": "research/x-c1/inherited-resonance-shell-coordinates-2026-09-18/README.md",
+      "sha256": "5d3d1dffab12cf2c7b09d028f4c671de66cc4a0721752a7ebb46f594d70eeacb"
+    },
+    {
+      "bytes": 443,
+      "git_blob": "add20d246f4d9b0e26e93af280753b075a9f618a",
+      "path": "research/x-c1/inherited-resonance-shell-coordinates-2026-09-18/SHA256SUMS",
+      "sha256": "c1ea47955376423f62f5f50050983d5049a97235b0e4dc26f54efad3d10a354b"
+    },
+    {
+      "bytes": 5274,
+      "git_blob": "c8b247f16cfb11bc4e194b3d0f59e6c17a62062a",
+      "path": "research/x-c1/inherited-resonance-shell-coordinates-2026-09-18/check_shell_coordinate_constants.py",
+      "sha256": "2e2509e845565cfea6017bd69cde6486b1291aceff8a53bc21b96c8c0ec33899"
+    },
+    {
+      "bytes": 387,
+      "git_blob": "876d4d04cc60ea6d3f162df4e0957ca5d7f1b2b9",
+      "path": "research/x-c1/inherited-resonance-shell-coordinates-2026-09-18/shell_coordinate_checks.log",
+      "sha256": "9d541777da1d1a0f1fbf4f1c9b83dfeb2ee01318009c1130addf41efbb90367a"
+    },
+    {
+      "bytes": 733,
+      "git_blob": "bdbd04a7fff06edcbb7b8b7ace89baa7a34c0370",
+      "path": "research/x-c1/inherited-resonance-shell-coordinates-2026-09-18/shell_coordinate_results.json",
+      "sha256": "40e6075c15f4e415476ea8815f5d9b6c550b056190fe2c72e413fa6f0f9c3be0"
+    },
+    {
+      "bytes": 8425,
+      "git_blob": "ee71a0dca1f525dbc576e3bac9c43fdce12304a4",
+      "path": "research/x-c1/inherited-resonance-shell-form-interface-2026-09-18/PROOF.md",
+      "sha256": "45800f058febe31aa462b0c30649109cc29c8cb7cfe69fcbc65a3dacf98432d9"
+    },
+    {
+      "bytes": 1269,
+      "git_blob": "7aa77891f7cf3c60cca51a2108bc8b18391a0d4b",
+      "path": "research/x-c1/inherited-resonance-shell-form-interface-2026-09-18/README.md",
+      "sha256": "fed60e7c0df92bb84b4837622b315f52a9d38bfe98e967f70a988bf6b1c698e3"
+    },
+    {
+      "bytes": 425,
+      "git_blob": "295428f1b254dd54b419f070ab308406fa64bfbb",
+      "path": "research/x-c1/inherited-resonance-shell-form-interface-2026-09-18/SHA256SUMS",
+      "sha256": "e02edd96d8d65a4b7ac275d5b5a37195115ec1e1198e094b3925bc53c3230e7c"
+    },
+    {
+      "bytes": 4798,
+      "git_blob": "4e9f70e90780f0f05c49ee4f15ad19bc00e7d390",
+      "path": "research/x-c1/inherited-resonance-shell-form-interface-2026-09-18/check_shell_form_constants.py",
+      "sha256": "9bda256a3d851b28f61c78b3cb3235e2f631d3352a067085ed4cd7722bc286ac"
+    },
+    {
+      "bytes": 275,
+      "git_blob": "30e5cf1f487276fa8a475df065853b5c1a7598b0",
+      "path": "research/x-c1/inherited-resonance-shell-form-interface-2026-09-18/shell_form_checks.log",
+      "sha256": "962813d3cc4a9831caaab0a7c2a9c410dc9c65fdcb7db479ae894164c1eed545"
+    },
+    {
+      "bytes": 1367,
+      "git_blob": "776a7c81f4f75d2cf02e1ef8c6f886e7899ea707",
+      "path": "research/x-c1/inherited-resonance-shell-form-interface-2026-09-18/shell_form_results.json",
+      "sha256": "12d92cf72c6036cc91e1fa24a01a5dc9cc87067208a606e18f6a876f626cee3e"
+    },
+    {
+      "bytes": 16116,
+      "git_blob": "f32d754ce6c806a6a5a5d40b9841528d4f45d3f6",
+      "path": "research/x-c1/near-null-reduced-schur-direction-2026-09-19/PROOF.md",
+      "sha256": "6716e782f46270aefb2106f38d3e79a713a4e64a7e8a1bc92ebd90d75c6bbcf6"
+    },
+    {
+      "bytes": 2205,
+      "git_blob": "7e48bd5cb6647da8b6d3151a9966bd01851fd799",
+      "path": "research/x-c1/near-null-reduced-schur-direction-2026-09-19/README.md",
+      "sha256": "c9179b1dcede6b132b480305a2796bce3f388039f8b2983cedc4f4aefdb0f684"
+    },
+    {
+      "bytes": 577,
+      "git_blob": "2447712f828cac07fa07e889953235a7dbbb9a88",
+      "path": "research/x-c1/near-null-reduced-schur-direction-2026-09-19/SHA256SUMS",
+      "sha256": "314e81071d92d7a18569f199cb4e99ec2827ba04d3196c15e0f4265e67bc1953"
+    },
+    {
+      "bytes": 3150,
+      "git_blob": "20b9f9aacb7b6a00e8375c86b3ab3f227f5c9a4b",
+      "path": "research/x-c1/near-null-reduced-schur-direction-2026-09-19/STATUS_DE.md",
+      "sha256": "3bb209d9e5d27ee588b06f8ec46526dfebf71ff258c0b2668008903048d8a3b0"
+    },
+    {
+      "bytes": 14911,
+      "git_blob": "57c8f2d673df354fa95c8a92eb6d0cbcc96bd742",
+      "path": "research/x-c1/near-null-reduced-schur-direction-2026-09-19/check_direction.py",
+      "sha256": "4ed9cfa307e7db5b9624e4c3cbe8ecd4cb0fbc32db4e86adecac722cb264d747"
+    },
+    {
+      "bytes": 5140,
+      "git_blob": "ba5631c22895507fb07a0a744d0ddca446743b51",
+      "path": "research/x-c1/near-null-reduced-schur-direction-2026-09-19/direction_checks.log",
+      "sha256": "50a8c34e2c45ab5360d101dac7443546a4b2d4f3378ac2d453b9e012fe0ff940"
+    },
+    {
+      "bytes": 29899,
+      "git_blob": "5a2da80b5d3e4bef296a68e910925d1058c180c7",
+      "path": "research/x-c1/near-null-reduced-schur-direction-2026-09-19/direction_results.json",
+      "sha256": "d57b87a9df67bb4226a8d9d88847a9fa3d081e73fdf78f9646a3830cba93fbe0"
+    },
+    {
+      "bytes": 11098,
+      "git_blob": "71b4c28465248338f057e612aff06ab0db4c968e",
+      "path": "research/x-c1/near-null-reduced-schur-direction-2026-09-19/input_bindings.json",
+      "sha256": "80f429d13e5999b5fc63ff54538accb8a3c21d4b264323e50c9c17748454fd30"
+    },
+    {
+      "bytes": 15778,
+      "git_blob": "afd840d3cad61fead67a729fe60b25f4bb517ec4",
+      "path": "research/x-c1/near-null-source-transport-2026-09-18/PROOF.md",
+      "sha256": "2a2b38543d3b82873276b2a63c288aedda12cf3f4f776e61ed407b4976420096"
+    },
+    {
+      "bytes": 1714,
+      "git_blob": "369a655d3c29533a3d285bcc8aee037d2b5712a3",
+      "path": "research/x-c1/near-null-source-transport-2026-09-18/README.md",
+      "sha256": "70c29cf4a1964538d8656d4fb924208b0c4964d6cbcad079474dc65a4527115f"
+    },
+    {
+      "bytes": 397,
+      "git_blob": "171655536da1d3bbf74e0970d86431ca4c0de4ac",
+      "path": "research/x-c1/near-null-source-transport-2026-09-18/SHA256SUMS",
+      "sha256": "4beb36c0d0e88d3c36ccdbd4d60712387180fb8014d7244efc3881a0c58960ab"
+    },
+    {
+      "bytes": 32875,
+      "git_blob": "10252ebf5c1777be919e453d12fdd7dc9a0a5108",
+      "path": "research/x-c1/near-null-source-transport-2026-09-18/check_near.py",
+      "sha256": "e10988eb4bbaf8810a36b98981ebf24b3f80a1e9d373c9478dc49da75b5efbe3"
+    },
+    {
+      "bytes": 2582,
+      "git_blob": "333e3646d2e700b4528d14b3d0a0d0dd3c56ccf6",
+      "path": "research/x-c1/near-null-source-transport-2026-09-18/near_checks.log",
+      "sha256": "3dca46e340e0c96e9b0e907f0c2174399a1c468b7261c8a9162f836099b9100b"
+    },
+    {
+      "bytes": 279839,
+      "git_blob": "30fd9eccee61eaa3aec0c53d997766df4a1cbf2c",
+      "path": "research/x-c1/near-null-source-transport-2026-09-18/near_results.json",
+      "sha256": "74919289ad3982d1748afe1c3d692c9904f858d9a0148cd65bd4d2b7f77978df"
+    },
+    {
+      "bytes": 22297,
+      "git_blob": "e583ce27b67103c5aaca2a3c7174cdb947ee4c3f",
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/PROOF.md",
+      "sha256": "cd916ca46874d63cf663d9a611ec91b62d314456c500cc5f0a205cab237134df"
+    },
+    {
+      "bytes": 2641,
+      "git_blob": "02d150c4fdf2e3142bb3ead44ef583d2eec1320d",
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/README.md",
+      "sha256": "31a358c5008c5855817b692644e8c35e73e3beec32ad961dc84add9e4ae20495"
+    },
+    {
+      "bytes": 406,
+      "git_blob": "48f23e026dfa4ec53ac0b04432311980a01a0a2d",
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/SHA256SUMS",
+      "sha256": "9a8367e1797dfbae9bb91dcbc133c30b68d9b4f7a4574022482375273a0db55a"
+    },
+    {
+      "bytes": 23778,
+      "git_blob": "eeebaef908a96cc1982d50ad094fda82f22e1e1b",
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/check_segment.py",
+      "sha256": "aa39d30b98dae1fedb3c81e65a9933f6b90755d7523fedcfbcf3b9ffafae3392"
+    },
+    {
+      "bytes": 9031,
+      "git_blob": "7af413707d95faed6600a5000d625f407357b85c",
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/segment_checks.log",
+      "sha256": "a35ee4a38e5da52f62a59eeea8139c17770f80a2a78f47639015c2d09466582c"
+    },
+    {
+      "bytes": 105018,
+      "git_blob": "ec29897cd614fe1ee759aa97e791c40ac154c141",
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/segment_results.json",
+      "sha256": "b37e0e8ed3da94722652fbea40117246a9f180cae3b7d9ac0578368109bb44ed"
+    },
+    {
+      "bytes": 16863,
+      "git_blob": "9d7508be5a134206f613996e8920e098a12a6d06",
+      "path": "research/x-c1/reduced-shell-coordinate-theorem-2026-09-19/PROOF.md",
+      "sha256": "a13c5487bde6a7c3372988364b4b1b82cd50b7be892267de638732b87fabf10c"
+    },
+    {
+      "bytes": 1746,
+      "git_blob": "a8dbde6836aa10e3cb6352c836d7b171158dfc0b",
+      "path": "research/x-c1/reduced-shell-coordinate-theorem-2026-09-19/README.md",
+      "sha256": "1b298ab6b8bc6310c506280b533d5afab2ec64427aaab16c7b8dd55bbe60c691"
+    },
+    {
+      "bytes": 574,
+      "git_blob": "acc7d0b77e36d9d06f5700db693c95b859105044",
+      "path": "research/x-c1/reduced-shell-coordinate-theorem-2026-09-19/SHA256SUMS",
+      "sha256": "b00f6f4eef19918d7743754308a1124e638312fe8e307de749feca16084f46a4"
+    },
+    {
+      "bytes": 3167,
+      "git_blob": "cd48250f723f60fff3d62ab246d493b77d139247",
+      "path": "research/x-c1/reduced-shell-coordinate-theorem-2026-09-19/STATUS_DE.md",
+      "sha256": "0352f1dbe135f13573f0eda84ab375e2fa9c7eab6829ac473a09b52d7294ccfa"
+    },
+    {
+      "bytes": 7443,
+      "git_blob": "a1df38fca7e8990bdc7d4e51f10701e2188b46f5",
+      "path": "research/x-c1/reduced-shell-coordinate-theorem-2026-09-19/check_quotient.py",
+      "sha256": "d4d134f8477b160fa9cb688eb04ba392dbf4cc80dbd7dbdb6106efe49cb0e3ea"
+    },
+    {
+      "bytes": 7374,
+      "git_blob": "e8d194b285597f2f70cffa0801155e2e2613d8d0",
+      "path": "research/x-c1/reduced-shell-coordinate-theorem-2026-09-19/input_bindings.json",
+      "sha256": "1eb9cedc1eb73b6de7b4b72d17c2f41a7c41808d38a2ab980a7105c79db335bd"
+    },
+    {
+      "bytes": 1498,
+      "git_blob": "0253c1fccc18209e92992138116cf3e6785b5cc1",
+      "path": "research/x-c1/reduced-shell-coordinate-theorem-2026-09-19/quotient_checks.log",
+      "sha256": "0300fafb370b18e7ed09c7e95568e58fd404ac38113406ffde090498e4930d5f"
+    },
+    {
+      "bytes": 3018,
+      "git_blob": "8c7068c27823e111a26d02906a6beb3a21822567",
+      "path": "research/x-c1/reduced-shell-coordinate-theorem-2026-09-19/quotient_results.json",
+      "sha256": "0acf7ffeaeec2993a246fc3e5ee31b9b7800d30ed41caf797dc68c5a699641af"
+    }
+  ],
+  "tail_origin_commit": "6a16d90b551588572c87e622c21c2df7f7b1adc2"
+}

@@ -1,0 +1,390 @@
+"""Navigation invariants and adversarial changes, using isolated Git histories.
+
+These tests exercise the governance checks, not the mathematical claims.
+"""
+from copy import deepcopy
+import hashlib
+import json
+from pathlib import Path
+import shutil
+import sys
+import tempfile
+import unittest
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'scripts'))
+import research_state as rs
+
+
+class StructureTests(unittest.TestCase):
+    def setUp(self):
+        self.state = rs.load(ROOT / rs.STATE)
+
+    def test_current_selection_has_exactly_two_fronts(self):
+        ids, _ = rs.validate_structure(self.state)
+        self.assertIn(set(self.state['fronts']), ({'transport', 'c1'}, {'unified_terminal', 'global_continuation'}))
+        self.assertTrue(ids)
+
+    def test_determinism_survives_serialization(self):
+        first = rs.render(self.state)
+        second = rs.render(json.loads(rs.encoded(self.state)))
+        self.assertEqual(first, second)
+        for raw in first.values():
+            self.assertNotIn(b'\r', raw)
+            self.assertTrue(raw.endswith(b'\n'))
+
+    def test_duplicate_keys_are_not_silently_overwritten(self):
+        with self.assertRaisesRegex(rs.StateError, 'Duplicate key'):
+            json.loads('{"status":"OPEN","status":"AUTHOR_DERIVED"}',
+                       object_pairs_hook=rs.unique_object)
+
+    def test_short_commit_is_rejected(self):
+        self.state['live_frontier']['verified_through'] = '7998887'
+        with self.assertRaisesRegex(rs.StateError, 'verified_through'):
+            rs.validate_structure(self.state)
+
+    def test_documentary_branch_head_has_snapshot_semantics(self):
+        front = self.state['live_frontier']
+        self.assertRegex(front['branch_head_at_generation'], rs.SHA)
+        self.assertRegex(front['verified_through'], rs.SHA)
+        self.assertEqual(front['head_policy'], 'VERIFIED_SNAPSHOT_NOT_CURRENT_HEAD')
+
+    def test_short_documentary_branch_head_is_rejected(self):
+        self.state['live_frontier']['branch_head_at_generation'] = 'f1fa23f'
+        with self.assertRaisesRegex(rs.StateError, 'branch_head_at_generation'):
+            rs.validate_structure(self.state)
+
+    def test_current_head_claim_is_rejected(self):
+        self.state['live_frontier']['head_policy'] = 'CURRENT_HEAD'
+        with self.assertRaisesRegex(rs.StateError, 'current HEAD'):
+            rs.validate_structure(self.state)
+
+    def test_open_result_cannot_be_a_survivor(self):
+        self.state['results'][0]['mathematical_status'] = 'OPEN'
+        with self.assertRaisesRegex(rs.StateError, 'Survivor cannot'):
+            rs.validate_structure(self.state)
+
+    def test_result_and_open_obligation_cannot_share_id(self):
+        self.state['obligations'][0]['id'] = self.state['results'][0]['id']
+        with self.assertRaisesRegex(rs.StateError, 'ID overlap'):
+            rs.validate_structure(self.state)
+
+    def test_unconstructed_x_cannot_have_closed_global_gram_identity(self):
+        self.state['global_status']['global_weil_gram_identity'] = 'AUTHOR_DERIVED'
+        with self.assertRaisesRegex(rs.StateError, 'contradicts'):
+            rs.validate_structure(self.state)
+
+    def test_scope_and_claim_limits_are_mandatory(self):
+        for field, value in [('scope', ' '), ('does_not_claim', []),
+                             ('negative_claim_boundary', '')]:
+            with self.subTest(field=field):
+                changed = deepcopy(self.state)
+                changed['results'][0][field] = value
+                with self.assertRaises(rs.StateError):
+                    rs.validate_structure(changed)
+
+    def test_no_go_cannot_be_relabelled_as_full_negative_result(self):
+        nogo = next(r for r in self.state['results']
+                    if r['mathematical_status'] == 'AUTHOR_DERIVED_NO_GO')
+        nogo['claim_polarity'] = 'POSITIVE_RESULT'
+        with self.assertRaisesRegex(rs.StateError, 'No-go polarity'):
+            rs.validate_structure(self.state)
+
+    def test_active_front_needs_an_open_obligation(self):
+        next(iter(self.state['fronts'].values()))['obligation_ids'] = []
+        with self.assertRaisesRegex(rs.StateError, 'obligation_ids'):
+            rs.validate_structure(self.state)
+
+    def test_active_front_cannot_point_to_survivor_as_open_gate(self):
+        next(iter(self.state['fronts'].values()))['obligation_ids'] = [self.state['results'][0]['id']]
+        with self.assertRaisesRegex(rs.StateError, 'missing or closed obligation'):
+            rs.validate_structure(self.state)
+
+    def test_cyclic_dependencies_are_rejected(self):
+        first, second = self.state['results'][:2]
+        first['depends_on'] = [second['id']]
+        second['depends_on'] = [first['id']]
+        with self.assertRaisesRegex(rs.StateError, 'Cyclic'):
+            rs.validate_structure(self.state)
+
+    def test_external_review_requires_provenance(self):
+        self.state['results'][0]['review_status'] = 'EXTERNALLY_REVIEWED_WITH_PROVENANCE'
+        with self.assertRaisesRegex(rs.StateError, 'External review needs'):
+            rs.validate_structure(self.state)
+
+    def test_reproduction_is_not_inferred_from_math_status(self):
+        self.state['results'][0]['reproduction_evidence'] = []
+        with self.assertRaisesRegex(rs.StateError, 'Reproduction evidence/status'):
+            rs.validate_structure(self.state)
+
+
+class RepositoryTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.temp = tempfile.TemporaryDirectory(prefix='objekt-x-state-tests-')
+        cls.base_dir = Path(cls.temp.name) / 'fixture'
+        cls.base_dir.mkdir()
+        root = cls.base_dir
+        rs.git(root, 'init', '--quiet')
+        rs.git(root, 'config', 'user.name', 'Research state fixture')
+        rs.git(root, 'config', 'user.email', 'fixture@example.invalid')
+        rs.git(root, 'config', 'core.autocrlf', 'false')
+        rs.git(root, 'config', 'commit.gpgsign', 'false')
+        rs.git(root, 'config', 'core.hooksPath', str(root / '.git' / 'fixture-hooks'))
+
+        def put(path, raw):
+            dest = root / path
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_bytes(raw)
+
+        def commit(message):
+            rs.git(root, 'add', '--all')
+            rs.git(root, 'commit', '--quiet', '-m', message)
+            return rs.git(root, 'rev-parse', 'HEAD').stdout.decode().strip()
+
+        def ref(sha, path):
+            raw = rs.git_blob(root, sha, path)
+            return {'commit': sha, 'path': path,
+                    'sha256': hashlib.sha256(raw).hexdigest()}
+
+        definition = '00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md'
+        put('research/frozen/PROOF.md', b'Frozen baseline fixture.\n')
+        put('CURRENT-FRONT.md', b'Historical navigation.\r\n')
+        put(definition, b'Independent mathematical definition.\n')
+        baseline = commit('fixture baseline')
+        put('research/frontier/PROOF.md', b'Frontier proof fixture.\n')
+        frontier = commit('fixture frontier')
+        state = rs.load(ROOT / rs.STATE)
+        # Repository-level pending packages are not part of this isolated fixture.
+        # Individual tests add their own pending package when exercising that lifecycle.
+        state['pending_packages'] = []
+        state['published_baseline']['sha'] = baseline
+        state['live_frontier']['verified_through'] = frontier
+        state['live_frontier']['branch_head_at_generation'] = frontier
+        state['metadata_policy']['enforced_after'] = frontier
+        state['authority_roles']['definition'] = ref(baseline, definition)
+        state['authority_roles']['review_rules'] = ref(baseline, definition)
+        state['results'] = state['results'][:2]
+        for item, sha, path in zip(state['results'], [baseline, frontier],
+                                  ['research/frozen/PROOF.md', 'research/frontier/PROOF.md']):
+            evidence = ref(sha, path)
+            item['canonical_commit'] = sha
+            item['canonical_proof'] = path
+            item['proof_sha256'] = evidence['sha256']
+            item['reproduction_evidence'] = [evidence]
+        for front in state['fronts'].values():
+            front['uses_results'] = [state['results'][0]['id']]
+            front['candidate'] = None
+        original = ref(frontier, 'CURRENT-FRONT.md')
+        state['historical_navigation'] = [{
+            'path': original['path'], 'as_of': '2026-09-20',
+            'content_commit': frontier, 'content_sha256': original['sha256'],
+            'note': 'Fixture: only navigation is superseded.'}]
+        put(rs.STATE, rs.encoded(state))
+        for path, raw in rs.render(state).items():
+            put(path, raw)
+        historical = state['historical_navigation'][0]
+        put(historical['path'], rs.banner(state, historical)
+            + rs.git_blob(root, frontier, historical['path']))
+        cls.initial_commit = commit('fixture canonical registry')
+        cls.state = state
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.temp.cleanup()
+
+    def setUp(self):
+        self.test_dir = tempfile.TemporaryDirectory(dir=self.temp.name, prefix='case-')
+        self.root = Path(self.test_dir.name) / 'repo'
+        shutil.copytree(self.base_dir, self.root)
+        self.s = deepcopy(self.state)
+
+    def tearDown(self):
+        self.test_dir.cleanup()
+
+    def put(self, path, raw):
+        target = self.root / path
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(raw)
+
+    def save_state(self):
+        self.put(rs.STATE, rs.encoded(self.s))
+        for path, raw in rs.render(self.s).items():
+            self.put(path, raw)
+
+    def commit(self, message):
+        rs.git(self.root, 'add', '--all')
+        rs.git(self.root, 'commit', '--quiet', '-m', message)
+        return rs.git(self.root, 'rev-parse', 'HEAD').stdout.decode().strip()
+
+    def package(self, strategic=True, pending=True):
+        directory = 'research/new-package'
+        raw = b'New explicitly scoped proof fixture.\n'
+        self.put(directory + '/PROOF.md', raw)
+        meta = json.loads((ROOT / 'scripts/schemas/META.example.json').read_text(encoding='utf-8'))
+        meta.update(id='NEW-PACKAGE', strategic=strategic, local_only=not strategic,
+                    scope='Explicit fixture source class.',
+                    negative_claim_boundary='No full Weil negativity claim.')
+        meta['canonical_proof'] = {'path': directory + '/PROOF.md',
+                                   'sha256': hashlib.sha256(raw).hexdigest()}
+        meta['opens'] = [self.s['obligations'][0]['id']] if strategic else []
+        self.put(directory + '/META.yaml', rs.encoded(meta))
+        if pending:
+            self.s['pending_packages'] = [{'id': 'NEW-PACKAGE',
+                'meta_path': directory + '/META.yaml', 'status': 'PENDING_STATUS_REVIEW'}]
+        self.save_state()
+        return meta
+
+    def test_valid_snapshot_need_not_equal_head(self):
+        result = rs.validate(self.root, self.initial_commit)
+        self.assertEqual(result['results'], 2)
+        self.assertNotEqual(result['verified_through'], self.initial_commit)
+
+    def test_duplicate_state_anywhere_is_rejected(self):
+        self.put('research/RESEARCH_STATE.yaml', rs.encoded(self.s))
+        with self.assertRaisesRegex(rs.StateError, 'Exactly one'):
+            rs.validate(self.root)
+
+    def test_pinned_proof_must_exist(self):
+        self.s['results'][0]['canonical_proof'] = 'research/missing/PROOF.md'
+        self.save_state()
+        with self.assertRaisesRegex(rs.StateError, 'Git check failed'):
+            rs.validate(self.root)
+
+    def test_pinned_hash_must_match(self):
+        self.s['results'][0]['proof_sha256'] = '0' * 64
+        self.save_state()
+        with self.assertRaisesRegex(rs.StateError, 'Pinned evidence hash mismatch'):
+            rs.validate(self.root)
+
+    def test_merge_status_cannot_be_self_promoted(self):
+        self.s['results'][1]['integration_status'] = 'MERGED'
+        self.save_state()
+        with self.assertRaisesRegex(rs.StateError, 'outside declared integration scope'):
+            rs.validate(self.root)
+
+    def test_manual_edit_of_each_generated_view_fails(self):
+        for path in rs.GENERATED:
+            with self.subTest(path=path):
+                original = (self.root / path).read_bytes()
+                self.put(path, original + b'Unauthorized manual drift.\n')
+                with self.assertRaisesRegex(rs.StateError, 'Generated file differs'):
+                    rs.validate(self.root)
+                self.put(path, original)
+
+    def test_historical_body_is_byte_preserved(self):
+        path = self.root / 'CURRENT-FRONT.md'
+        path.write_bytes(path.read_bytes().replace(b'Historical navigation.', b'Rewritten navigation.'))
+        with self.assertRaisesRegex(rs.StateError, 'Historical banner/original bytes changed'):
+            rs.validate(self.root)
+
+    def test_new_current_document_needs_explicit_role(self):
+        self.put('00-uebersicht/NEW_CURRENT.md', b'Alternate current frontier.\n')
+        with self.assertRaisesRegex(rs.StateError, 'Unclassified current/active'):
+            rs.validate(self.root)
+
+    def test_frozen_packages_need_no_meta(self):
+        self.assertFalse((self.root / 'research/frozen/META.yaml').exists())
+        self.assertEqual(rs.validate(self.root)['new_metadata_packages'], 0)
+
+    def test_new_proof_requires_metadata(self):
+        self.put('research/new-package/PROOF.md', b'New proof.\n')
+        with self.assertRaisesRegex(rs.StateError, 'requires META.yaml'):
+            rs.validate(self.root)
+
+    def test_new_strategic_package_requires_pending_or_registered_entry(self):
+        self.package(pending=False)
+        with self.assertRaisesRegex(rs.StateError, 'missing from registered or pending'):
+            rs.validate(self.root)
+
+    def test_strategic_pending_package_is_visible_without_snapshot_promotion(self):
+        self.package()
+        result = rs.validate(self.root, self.initial_commit)
+        self.assertEqual(result['new_metadata_packages'], 1)
+        self.assertEqual(result['verified_through'], self.state['live_frontier']['verified_through'])
+        self.assertIn(b'PENDING_STATUS_REVIEW', (self.root / rs.GENERATED[0]).read_bytes())
+
+    def test_published_pending_package_can_be_registered_at_its_actual_commit(self):
+        meta = self.package()
+        package_commit = self.commit('fixture publish pending package')
+        item = deepcopy(self.s['results'][1])
+        item.update(id=meta['id'], canonical_commit=package_commit,
+                    canonical_proof=meta['canonical_proof']['path'],
+                    proof_sha256=meta['canonical_proof']['sha256'],
+                    reproduction_status='ANALYTIC_ONLY', reproduction_evidence=[])
+        self.s['results'].append(item)
+        self.s['pending_packages'] = []
+        self.s['live_frontier']['verified_through'] = package_commit
+        self.s['live_frontier']['branch_head_at_generation'] = package_commit
+        self.save_state()
+        checked = rs.validate(self.root, self.initial_commit)
+        self.assertEqual(checked['results'], 3)
+        self.assertEqual(checked['verified_through'], package_commit)
+
+    def test_local_only_package_needs_no_strategic_state_change(self):
+        self.package(strategic=False, pending=False)
+        self.assertEqual(rs.validate(self.root, self.initial_commit)['new_metadata_packages'], 1)
+        self.assertEqual(self.s, self.state)
+
+    def test_strategic_package_must_declare_effect(self):
+        meta = self.package()
+        meta['opens'] = []
+        self.put('research/new-package/META.yaml', rs.encoded(meta))
+        with self.assertRaisesRegex(rs.StateError, 'must declare closes, opens or supersedes'):
+            rs.validate(self.root)
+
+    def test_meta_no_go_needs_consistent_polarity(self):
+        meta = self.package()
+        meta['kind'] = 'NO_GO'
+        self.put('research/new-package/META.yaml', rs.encoded(meta))
+        with self.assertRaisesRegex(rs.StateError, 'no-go kind/status/polarity'):
+            rs.validate(self.root)
+
+    def test_local_only_cannot_hide_strategic_effects(self):
+        meta = self.package(strategic=False)
+        meta['closes'] = [self.s['obligations'][0]['id']]
+        self.put('research/new-package/META.yaml', rs.encoded(meta))
+        with self.assertRaisesRegex(rs.StateError, 'local_only cannot'):
+            rs.validate(self.root)
+
+    def test_unknown_meta_obligation_is_rejected(self):
+        meta = self.package()
+        meta['opens'] = ['UNDECLARED-GATE']
+        self.put('research/new-package/META.yaml', rs.encoded(meta))
+        with self.assertRaisesRegex(rs.StateError, 'effects/dependencies'):
+            rs.validate(self.root)
+
+    def test_meta_binds_actual_new_proof_bytes(self):
+        self.package()
+        self.put('research/new-package/PROOF.md', b'Different proof.\n')
+        with self.assertRaisesRegex(rs.StateError, 'META proof hash mismatch'):
+            rs.validate(self.root)
+
+    def test_metadata_anchor_cannot_be_reset_to_grandfather_new_package(self):
+        self.put('research/new-package/PROOF.md', b'Undeclared new proof.\n')
+        added = self.commit('fixture attempt to grandfather new package')
+        self.s['metadata_policy']['enforced_after'] = added
+        self.s['live_frontier']['verified_through'] = added
+        self.s['live_frontier']['branch_head_at_generation'] = added
+        self.save_state()
+        with self.assertRaisesRegex(rs.StateError, 'Cannot reset metadata enforcement'):
+            rs.validate(self.root, self.initial_commit)
+
+    def test_generated_format_change_requires_state_change(self):
+        self.put(rs.GENERATED[0], b'Previous generator format.\n')
+        previous = self.commit('fixture previous generator format')
+        self.save_state()
+        with self.assertRaisesRegex(rs.StateError, 'without a state change'):
+            rs.validate(self.root, previous)
+        self.s['render_version'] += 1
+        self.save_state()
+        rs.validate(self.root, previous)
+
+    def test_safe_paths_reject_repository_escape(self):
+        self.s['results'][0]['canonical_proof'] = '../outside.md'
+        with self.assertRaisesRegex(rs.StateError, 'Unsafe repository path'):
+            rs.validate_structure(self.s)
+
+
+if __name__ == '__main__':
+    unittest.main()

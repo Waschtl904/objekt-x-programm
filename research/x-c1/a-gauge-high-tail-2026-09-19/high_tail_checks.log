@@ -1,0 +1,27 @@
+PASS anchor is current A-gauge transition head
+PASS seven direct immutable inputs
+PASS all direct input bytes SHA256 and Git blobs match
+PASS endpoint tail begins after degree 62
+PASS even tail floor exceeds 0.719
+PASS even Mellin norm beta is below 0.007
+PASS physical reconstructed tail floor exceeds seven tenths
+PASS radical lower witnesses
+PASS w2 below 0.491
+PASS w3 below 0.635
+PASS w4 below 0.347
+PASS w5 below 0.721
+PASS four reflected prime channels below 4.388
+PASS sqrt two upper witness
+PASS full Gamma Carleman coefficient below 2.224
+PASS Gamma plus exact-weight prime coefficient below 6.62
+PASS Gamma chi Cauchy coefficient below 48
+PASS bounded chi remainder coefficient below 84
+PASS tail moment correction below one hundredth energy amplitude
+PASS shell term below 7.92 energy amplitude
+PASS combined squared energy amplitude below 63
+PASS full shell profile floor exceeds 73 at h0
+PASS complete high-tail block strictly below one
+PASS near-null A direction is inherited below 7.55e-6
+PASS Near-High mixed Gram square bound below one hundred thousandth
+TOTAL 25 HIGH-TAIL EXACT CHECKS PASS
+FULL-A-GAUGE-HIGH-TAIL-CONTRACTIVE / FINITE-LOW-BLOCK-OPEN

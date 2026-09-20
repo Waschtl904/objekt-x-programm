@@ -1,0 +1,206 @@
+{
+  "A1_used": false,
+  "analytic_proof": "PROOF.md; no operator-domain invariance or finite-tail surrogate",
+  "anchor": "04bc2466053f1ba939158e6a9ecc023ba40bc756",
+  "arithmetic": "integer/Fraction and pinned outward rational interval endpoints",
+  "bound_inputs": 65,
+  "conditional_complement_example_is_certified_bound": false,
+  "existing_all_core_interval_preserved": "0<h<=2^(-10000000000000000)",
+  "fixed_source_changed_or_physically_renormalized": false,
+  "full_original_width_complement_bound_certified": false,
+  "inherited_replay_checks": {
+    "a_gauge": 9,
+    "all_core": 40,
+    "coordinate": 28,
+    "direction": 31,
+    "shell": 43
+  },
+  "inherited_replay_stdout_sha256": "f592dd95f1a360dcb0f1f0780fca18011393d33d7afef03fac4a66ab7843acae",
+  "mellin_constraints": 2,
+  "negative_physical_source_certified": false,
+  "new_Riesz_solver": false,
+  "new_all_source_width_extension": false,
+  "new_exact_checks": 38,
+  "odd_continuation_closed": false,
+  "passed_checks": [
+    "anchor retains the published tiny-window entire-core theorem",
+    "65 distinct pinned input files",
+    "all inherited input bytes SHA256 and Git blob hashes match",
+    "entire inherited proof chain reproduces",
+    "psi norm lies between one half and nine sixteenths",
+    "psi energy lies between seven fiftieths and three twentieths",
+    "bounded trace functional yields ell norm below 1943",
+    "full transition squared constant is exact",
+    "full transition norm below 3111",
+    "inverse weighted Cauchy constant below three",
+    "inverse norm upper sqrt three is below two",
+    "core transition squared constant is exact",
+    "core transition norm below 1458",
+    "complete inverse form product bound below 1 plus 9e12",
+    "A-orthogonal source energy denominator strictly positive",
+    "complete shell residual bound is nonnegative and below 5e-18",
+    "full A-gauge direction quotient below 7.55e-6",
+    "preserved actual Schur remainder is above 5.449e-13",
+    "direct energy minus entire residual supports the same positive floor",
+    "conditional complement example yields theta below one",
+    "conditional Schur margin equals 19849 over 20000000",
+    "the full original width remains explicitly uncertified",
+    "the existing tiny-window full-core result is preserved",
+    "existing full A-gauge tiny-window bound remains sharper than split bound",
+    "forward lands in ell kernel using ell psi equals one",
+    "forward then inverse restores both core and shell coefficients",
+    "inverse then forward restores both core and shell coefficients",
+    "negative control detects a wrong inverse shell sign",
+    "physical core and moment-corrector image is unchanged",
+    "joint H1 trace transports forward exactly",
+    "joint H1 trace transports backward exactly",
+    "fixed physical source transforms to fA and alpha e",
+    "fixed physical source endpoint traces cancel exactly",
+    "full complex block congruence is an exact polynomial identity",
+    "negative control detects omitted complex trace-shell cross",
+    "forward product-energy majorant retains the subtracted trace energy",
+    "conditional mixed Gram determinant retains every term",
+    "full block and Schur factors are not identified"
+  ],
+  "status": "AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN",
+  "structural_and_directional_interval": "B=log(5)/2; 0<h<=10^-20",
+  "values": {
+    "T_A_L2_lower_squared": {
+      "hi": "1/3",
+      "lo": "1/3",
+      "outward_decimal": [
+        "0.33333333333333333333333333333333",
+        "0.33333333333333333333333333333334"
+      ]
+    },
+    "T_A_L2_norm_squared_finer_upper": {
+      "hi": "154785225/16",
+      "lo": "154785225/16",
+      "outward_decimal": [
+        "9674076.56250000000000000000000000000000",
+        "9674076.56250000000000000000000000000000"
+      ]
+    },
+    "T_A_L2_norm_squared_upper": {
+      "hi": "9678321",
+      "lo": "9678321",
+      "outward_decimal": [
+        "9678321.00000000000000000000000000000000",
+        "9678321.00000000000000000000000000000000"
+      ]
+    },
+    "T_A_inverse_L2_norm_squared_upper": {
+      "hi": "3",
+      "lo": "3",
+      "outward_decimal": [
+        "3.00000000000000000000000000000000",
+        "3.00000000000000000000000000000000"
+      ]
+    },
+    "conditional_example_Schur_margin": {
+      "hi": "19849/20000000",
+      "lo": "19849/20000000",
+      "outward_decimal": [
+        "0.00099245000000000000000000000000",
+        "0.00099245000000000000000000000000"
+      ]
+    },
+    "conditional_example_complement_target": {
+      "hi": "999/1000",
+      "lo": "999/1000",
+      "outward_decimal": [
+        "0.99900000000000000000000000000000",
+        "0.99900000000000000000000000000000"
+      ]
+    },
+    "conditional_example_full_Theta_upper": {
+      "hi": "19980151/20000000",
+      "lo": "19980151/20000000",
+      "outward_decimal": [
+        "0.99900755000000000000000000000000",
+        "0.99900755000000000000000000000000"
+      ]
+    },
+    "conditional_example_mixed_squared_upper": {
+      "hi": "150849/20000000000",
+      "lo": "150849/20000000000",
+      "outward_decimal": [
+        "0.00000754245000000000000000000000",
+        "0.00000754245000000000000000000000"
+      ]
+    },
+    "core_U_L2_norm_squared_upper": {
+      "hi": "2125764",
+      "lo": "2125764",
+      "outward_decimal": [
+        "2125764.00000000000000000000000000000000",
+        "2125764.00000000000000000000000000000000"
+      ]
+    },
+    "core_inverse_V_L2_norm_upper": {
+      "hi": "1",
+      "lo": "1",
+      "outward_decimal": [
+        "1.00000000000000000000000000000000",
+        "1.00000000000000000000000000000000"
+      ]
+    },
+    "fixed_A_coordinate_energy": {
+      "hi": "1362267074300600651895861408697901010694679300461246617788833494794677318050630526019900850772011430179731888514599477715549239388881388455085008663/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "lo": "5449068297202402564301674373037060267439873232004766025615920621398287141289175796360812174194119785495649274626746322368249929411603460804204700739/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "outward_decimal": [
+        "0.00000000000054490682972024025643",
+        "0.00000000000054490682972024026076"
+      ]
+    },
+    "fixed_A_coordinate_eta": {
+      "hi": "4569873523026128280094695120954607258653507748960887578032909790434860057022314621989181554845263964619019947901931049300688805694743050356575/605452033022489173811297152559673363048874803556085113957324513488698571254352866262312463799346642832849919402971813596472214379067051200467188971",
+      "lo": "0",
+      "outward_decimal": [
+        "0.00000000000000000000000000000000",
+        "0.00000754787047326073295903257262"
+      ]
+    },
+    "fixed_source_alpha": {
+      "hi": "-267141141415774800020439662691953857455861284436775426021890373812489167880285826188208903416720737962283269198848781733721829611427752672810856530311489/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "lo": "-534282282831549600041414256617091165789718423699609279091940152151356028383544789739748406707138175395442226106533945589274761322327150311168174355239463/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "outward_decimal": [
+        "-0.00000005342822828315496000414143",
+        "-0.00000005342822828315496000408793"
+      ]
+    },
+    "form_product_forward_factor_upper": {
+      "hi": "2",
+      "lo": "2",
+      "outward_decimal": [
+        "2.00000000000000000000000000000000",
+        "2.00000000000000000000000000000000"
+      ]
+    },
+    "form_product_inverse_factor_upper": {
+      "hi": "9000000000001",
+      "lo": "9000000000001",
+      "outward_decimal": [
+        "9000000000001.00000000000000000000000000000000",
+        "9000000000001.00000000000000000000000000000000"
+      ]
+    },
+    "invariant_Schur_remainder": {
+      "hi": "1362267074300600651895861408697901010694679300461246617788833494794677318050630526019900850772011430179731888514599477715549239388881388455085008663/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "lo": "1362256792085173832286788380195242918993636337608756344406929581302543306887165648882303567890031544529991925861803801247201555803088052029187872891/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "outward_decimal": [
+        "0.00000000000054490271683406953291",
+        "0.00000000000054490682972024026076"
+      ]
+    },
+    "published_A_direction_eta_upper": {
+      "hi": "151/20000000",
+      "lo": "151/20000000",
+      "outward_decimal": [
+        "0.00000755000000000000000000000000",
+        "0.00000755000000000000000000000000"
+      ]
+    }
+  },
+  "verdict": "GAUGE-TRANSITION-AND-CONGRUENCE-CLOSED / FULL-ORIGINAL-WIDTH-COMPLEMENT-UNDECIDED"
+}

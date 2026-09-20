@@ -1,0 +1,68 @@
+INHERITED coordinate replay: 28 PASS; full shell pivot replay: 43 PASS
+PASS source positive norm and bounded Gamma energy
+PASS degree 62, even parity and original exact endpoint traces
+PASS exact Mellin ratio denominator excludes zero
+PASS new reflected-half source calculation overlaps pinned higher-precision Rayleigh
+PASS direct source energy strictly positive
+PASS Gamma rational uniform remainder sufficiently small
+PASS cosh argument lies in stated rational Taylor range
+PASS all physical cosh approximation errors below 10^-60
+PASS true trace-corrector physical norm strictly positive
+PASS true trace-corrector energy strictly positive
+PASS trace coefficient excludes zero before any trace quotient
+PASS reduced near-null core direction nonzero
+PASS all trace diagnostic denominators positive
+PASS interval regression reconstruction contains the direct source energy
+PASS exact Laurent reconstruction of the original source energy
+PASS exact trace Riesz coefficient
+PASS exact residual annihilates the trace direction
+PASS exact cancellation before enclosing the Schur remainder
+PASS negative control detects omitted trace cross term
+PASS uniform shell width agrees with complete pivot theorem
+PASS logarithmic monotonicity range
+PASS residual amplitude bounds on the exact A-orthogonal core
+PASS entire shell dual residual squared below 5e-18
+PASS trace-only ratio is below one
+PASS full infinite-shell directional eta below 1-4e-11
+PASS full directional Schur remainder above 5.449e-13
+PASS residual margin exceeds the certified approximation errors
+PASS harmonic cusp formula agrees with independent Legendre eigenvalues
+PASS absolute-value cusp logarithm retained
+PASS reflected Gamma moments equal independent two-triangle moments through degree 8
+PASS signed translations agree with independent beta-polynomial integration
+B ['0.804718956217050187300379666613', '0.804718956217050187300379666614']
+h_max ['0.000000000000000000010000000000', '0.000000000000000000010000000000']
+source_moment_ratio ['-0.060758744300491549336931143917', '-0.060758744300491549336931143916']
+source_norm_squared ['0.165435361734099621278093812198', '0.165435361734099621278093812199']
+source_energy ['0.000000000000545323065282012955', '0.000000000000545323065282012961']
+source_Rayleigh ['0.000000000003296290826616004472', '0.000000000003296290826616004499']
+psi_norm_squared ['0.537290995677579783197080586986', '0.537290995677579783197080586987']
+physical_source_psi_inner_product ['0.160462772635710349022783538111', '0.160462772635710349022783538112']
+cv ['0.298651520175487245474490692893', '0.298651520175487245474490692894']
+wv_norm_squared ['0.117512910754871149291668703970', '0.117512910754871149291668703971']
+q_v_psi ['-0.000000007790555201770212265899', '-0.000000007790555201770212265890']
+q_psi_psi ['0.145813467002544157907084146746', '0.145813467002544157907084146761']
+a0_wv ['0.013005505919952513170909362278', '0.013005505919952513170909362290']
+d_cv_e ['0.013005501266084882066180035310', '0.013005501266084882066180035312']
+c0_wv_cv_e ['-0.013005503592746036085903692321', '-0.013005503592746036085903692316']
+source_reconstruction_enclosure ['0.000000000000545323065282012948', '0.000000000000545323065282012968']
+rho_e ['0.999999999958101835247772515802', '0.999999999958101835247772517238']
+trace_Riesz_coefficient ['-0.298651573603715528629450697064', '-0.298651573603715528629450696952']
+A_orthogonal_projection_coefficient ['-0.000000053428228283154960004142', '-0.000000053428228283154960004087']
+trace_Riesz_energy ['0.013005505919407606341189122021', '0.013005505919407606341189122030']
+trace_eliminated_core_energy ['0.000000000000544906829720240256', '0.000000000000544906829720240261']
+source_supremum_upper_bound ['2.110726605153764406166438979801', '2.110726605153764406166438979802']
+A_orthogonal_core_supremum_bound ['2.110726818866677538786278996367', '2.110726818866677538786278996368']
+A_orthogonal_core_chi_pairing_abs_bound ['39.827632829404128983628683929407', '39.827632829404128983628683929423']
+residual_shell_coefficient_bound ['169.676760916351206036987759716080', '169.676760916351206036987759716098']
+full_shell_residual_dual_squared_bound ['0.000000000000000000000000000000', '0.000000000000000004112886170724']
+full_Riesz_energy_enclosure ['0.013005505919407606341189122021', '0.013005505919407610454075292754']
+eta_v_uniform ['0.999999999958101835247772515802', '0.999999999958102151489693134390']
+r_v_uniform ['0.000000000000544902716834069532', '0.000000000000544906829720240261']
+Gamma_uniform_error ['0.000000000000000000000000000008', '0.000000000000000000000000000009']
+cosh_error_supremum ['0.000000000000000000000000000000', '0.000000000000000000000000000001']
+cosh_error_physical_derivative ['0.000000000000000000000000000000', '0.000000000000000000000000000001']
+physical_q_v_psi_approximation_radius ['0.000000000000000000000000000000', '0.000000000000000000000000000001']
+physical_q_psi_psi_approximation_radius ['0.000000000000000000000000000000', '0.000000000000000000000000000001']
+TOTAL 31 NEW EXACT CHECKS PASS
+FULL-INFINITE-SHELL-DIRECTIONAL-SCHUR-POSITIVE / ALL-CORE-OPEN
