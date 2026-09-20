@@ -1,0 +1,15 @@
+PASS terminal strict operator reserve on H_1
+PASS eta = 10^-26/(23/2+10^-26) > 10^-28
+PASS Delta_1=(I-R_1^*R_1)^(1/2) by continuous functional calculus
+PASS sqrt(eta) I <= Delta_1 <= I
+PASS ||Delta_1^-1|| < 10^14
+PASS exact sesquilinear Weil-Gram identity
+PASS q_a norm equivalent to transported H_a norm
+PASS (F_a,q_a) complete
+PASS K_X,a closed and nested
+PASS T_X,b J_a,b = T_X,a
+PASS no local square-root intertwining assumed
+PASS no GNS circularity
+PASS scope B<=a<=1 only
+VERDICT C1D_FIXED_HORIZON_PROMOTION_READY
+EXTERNAL_REVIEW_OPEN
