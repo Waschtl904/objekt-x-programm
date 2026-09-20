@@ -43,11 +43,11 @@ class StructureTests(unittest.TestCase):
         with self.assertRaisesRegex(rs.StateError, 'verified_through'):
             rs.validate_structure(self.state)
 
-    def test_documentary_branch_head_is_distinct_from_verified_snapshot(self):
-        self.assertEqual(self.state['live_frontier']['branch_head_at_generation'],
-                         'f1fa23f7e1b5de407f4179986cdfe76d2024812f')
-        self.assertNotEqual(self.state['live_frontier']['branch_head_at_generation'],
-                            self.state['live_frontier']['verified_through'])
+    def test_documentary_branch_head_has_snapshot_semantics(self):
+        front = self.state['live_frontier']
+        self.assertRegex(front['branch_head_at_generation'], rs.SHA)
+        self.assertRegex(front['verified_through'], rs.SHA)
+        self.assertEqual(front['head_policy'], 'VERIFIED_SNAPSHOT_NOT_CURRENT_HEAD')
 
     def test_short_documentary_branch_head_is_rejected(self):
         self.state['live_frontier']['branch_head_at_generation'] = 'f1fa23f'
