@@ -80,3 +80,34 @@ Quelle der vollständigen Weil-Form.
 Ob einzelne Teilaufgaben heute geschlossen sind, ist bewusst keine zweite
 Statustabelle dieser Architekturdatei: dafür gilt
 [CURRENT_STATE.md](CURRENT_STATE.md).
+
+
+## Terminaler 191D-Zusammenschluss
+
+Seit `7998887` ist der feste-Horizont-Kern der früher getrennten Transport- und C1-Kontraktionsfronten ein und derselbe endliche Schurtest.
+
+Für jede Parität gilt auf (B\le a\le1):
+[
+s_{192}(R_a^p)^2\le\frac{943}{945}<1,
+]
+also ist der vollständige unendliche High-Defekttail strikt kontraktiv. Der verbleibende kritische Rest ist
+[
+S_a^p=I-\alpha-\beta^*(I-K)^{-1}\beta,
+]
+wobei die komplette High-Antwort in der Schurkorrektur erhalten bleibt.
+
+Die physische Moving-191D-Core-Schurform ist positiv-Gram-kongruent dazu:
+[
+S_{\mathrm{phys}}=G^{1/2}S_a^pG^{1/2},
+\qquad G>0.
+]
+Damit haben beide exakt dieselbe Inertie.
+
+Wegen der bewiesenen Monotonie der intrinsischen Defekt-Singularwerte ist der kanonische feste-Horizont-Gate
+[
+S_1^{\mathrm{even}}\succeq0,
+\qquad
+S_1^{\mathrm{odd}}\succeq0.
+]
+
+Dieser Zusammenschluss schließt **nicht** automatisch die zusätzlichen Low/Profile-Kopplungen einer physischen Fortsetzung, nicht summierbare Skalierung, Horizonte größer als (1) oder die globale Weil-Testklasse.

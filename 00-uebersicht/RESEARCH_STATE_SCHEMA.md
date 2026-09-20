@@ -14,7 +14,7 @@ Hexwerte, Inhaltsprüfsummen SHA-256 mit 64 Hexstellen.
 | `published_baseline` | `branch`, `sha`, `integration_status`, `meaning`, `mathematical_status`, `review_status`: gepinnte gemergte Main-Basis. |
 | `live_frontier` | `branch`, `verified_through`, `integration_status`, `review_status`, `head_policy`: geprüfter ungemergter Snapshot. Head-Policy exakt `VERIFIED_SNAPSHOT_NOT_CURRENT_HEAD`. |
 | `authority_roles` | `definition`, `review_rules`: jeweils `{commit,path,sha256}`; dazu `proof_principle` als Text. |
-| `fronts` | Exakt `transport` und `c1`, jeweils `id`, `title`, `mathematical_status: OPEN`, `strategic_status: ACTIVE_FRONT`, `target_scope`, nichtleere `obligation_ids`, `uses_results`, `accepted_progress`, `insufficient` und `candidate` (Survivor-ID oder null). |
+| `fronts` | Exakt zwei strategische Achsen. Kanonisch seit `7998887`: `unified_terminal` und `global_continuation`; der Validator akzeptiert für historische Übergangstests auch die frühere Paarung `transport` und `c1`. Jede Front trägt `id`, `title`, `mathematical_status: OPEN`, `strategic_status: ACTIVE_FRONT`, `target_scope`, nichtleere `obligation_ids`, `uses_results`, `accepted_progress`, `insufficient` und `candidate` (Survivor-ID oder null). |
 | `obligations` | Liste aus `id`, `title`, `mathematical_status: OPEN`, `scope`; keine ID darf zugleich Survivor sein. |
 | `results` | Nichtleere Auswahl verwendbarer Survivors; vollständige Felder siehe unten. |
 | `global_status` | `connected_unit_window_coercivity`, `strong_terminal`, `full_c1_geom`, `object_x`, `global_weil_gram_identity`, `global_weil_positivity`, `rh`. Objekt X `NOT_CONSTRUCTED` und globale Gram-Identität `AUTHOR_DERIVED` schließen sich aus. |

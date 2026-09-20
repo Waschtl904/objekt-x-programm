@@ -18,8 +18,8 @@ Integration: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 
 ## Zwei aktive Hauptfronten
 
-- **Transport: Moving 191D Low-Block und Profilreserve** — `MOVING-191D-LOW-PROFILE`, OPEN. B<=a<=1; bisherige volle Positivität reicht bis B+10^-10. Der uniforme hohe Tail und die Core-Schur-Kongruenz sind belegt; Low/Profile bleibt offen.
-- **C1: kompakte Defektkontraktion** — `C1c-COMPACT-DEFECT-CONTRACTION`, OPEN. Fester Horizont 1, B<=a<=1: q_a>=0 genau dann, wenn ||R_a||<=1, äquivalent S_a^p>=0 je Parität. C1a und C1b sind für den benannten Kandidaten autorenseitig abgeleitet.
+- **Gemeinsamer Gate: terminaler 191D-Defekt-Schurtest bei a=1** — `TERMINAL-191D-DEFECT-SCHUR-A1`, OPEN. Fester Horizont B<=a<=1. Der vollständige High-Defekttail ist strikt kontraktiv; physischer Moving-191D-Core und C1-Defekt-Schurrest haben exakt dieselbe Inertie. Wegen monotoner intrinsischer Defekt-Singularwerte ist a=1 der terminale Prüfpunkt.
+- **Nachgelagerte globale Fortsetzung und Profilreserve** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Nach einem terminalen Fixed-Horizon-Abschluss bleiben Profilkopplungen der physischen Fortsetzung, nicht summierbare Skalierung, Horizonte >1 und die globale Weil-Testklasse separat offen.
 
 ## Verwendbare Bausteine
 
