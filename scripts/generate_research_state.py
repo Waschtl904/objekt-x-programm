@@ -23,8 +23,8 @@ def load_state(path: Path = STATE_PATH) -> dict:
 def render_current_state(state: dict) -> str:
     baseline = state["published_baseline"]
     frontier = state["live_frontier"]
-    transport = state["fronts"]["transport"]
-    c1 = state["fronts"]["c1"]
+    unified = state["fronts"]["unified_terminal"]
+    follow_on = state["fronts"]["global_continuation"]
     global_status = state["global_status"]
 
     lines = [
@@ -47,62 +47,65 @@ def render_current_state(state: dict) -> str:
         f'Verified through `{frontier["verified_through"]}` on',
         f'`{frontier["branch"]}`.',
         "",
-        "Branch head observed at generation:",
-        f'`{frontier["branch_head_at_generation"]}`.',
+        "At registry generation the observed research-branch head was the same commit.",
         "",
-        "**The observed branch head is not automatically promoted to the verified frontier.**",
-        "Commits after `verified_through` remain outside the canonical mathematical state until explicitly audited and promoted.",
+        "## Unified fixed-horizon front",
         "",
-        "## Active fronts",
+        f'### {unified["id"]}',
         "",
-        f'### Transport — {transport["title"].upper()}',
+        f'**{unified["title"]}.**',
         "",
-        "Scope: \\(B\\le a\\le1\\).",
-        "",
-        "Open obligations:",
+        "Equivalent fixed-horizon targets:",
     ]
-    for item in transport["obligations"]:
-        lines.append(f"- {item};" if item != transport["obligations"][-1] else f"- {item}.")
-    lines += [
+    lines.extend(f"- {item}" for item in unified["equivalent_targets"])
+    lines.extend(["", "Open certification obligations:"])
+    lines.extend(f"- {item}" for item in unified["obligations"])
+    lines.extend([
         "",
-        "### C1 — COMPACT DEFECT CONTRACTION",
+        "This terminal gate now represents both the fixed-horizon Moving-191D core positivity problem and C1 defect contraction.",
         "",
-        f'Candidate: **{c1["candidate"]}**.',
+        "## Follow-on global continuation",
         "",
-        "Open target:",
-        "\\[",
-        "\\|R_a\\|\\le1",
-        "\\]",
-        "proved independently of already-known Weil positivity on the fixed horizon \\(B\\le a\\le1\\).",
-        "Where the nested restriction structure is used, terminal control at \\(a=1\\) may serve as the sufficient endpoint formulation.",
+        f'### {follow_on["id"]}',
+        "",
+        f'**{follow_on["title"]}.**',
+        "",
+    ])
+    lines.extend(f"- {item}" for item in follow_on["obligations"])
+    lines.extend([
+        "",
+        "The bridge does not remove these profile/global-horizon obligations.",
         "",
         "## Closed operative results",
         "",
-    ]
-    for result in state["closed_results"]:
-        lines.append(f'- `{result["id"]}`')
-    lines += [
+    ])
+    lines.extend(f'- `{result["id"]}`' for result in state["closed_results"])
+    lines.extend([
         "",
         "## Active No-Go firewalls",
         "",
-    ]
-    for result in state["no_go_results"]:
-        lines.append(f'- `{result["id"]}`')
-    lines += [
+    ])
+    lines.extend(f'- `{result["id"]}`' for result in state["no_go_results"])
+    lines.extend([
         "",
         "These are candidate-class exclusions, not negative results for the full Weil form.",
         "",
         "## Global limits",
         "",
+        f'- C1a: **{global_status["c1a"]}**',
+        f'- C1b: **{global_status["c1b"]}**',
+        f'- C1 High: **{global_status["c1_high"]}**',
+        f'- C1 Bridge: **{global_status["c1_bridge"]}**',
+        f'- C1c: **{global_status["c1c"]}**',
+        f'- C1d: **{global_status["c1d"]}**',
         f'- Connected Unit-Window Coercivity: **{global_status["connected_unit_window_coercivity"]}**',
         f'- Strong Terminal: **{global_status["strong_terminal"]}**',
-        f'- Full C1-GEOM: **{global_status["full_c1_geom"]}**',
         f'- Objekt X: **{global_status["object_x"].replace("_", " ")}**',
         f'- Global Weil-Gram identity: **{global_status["global_weil_gram_identity"]}**',
         f'- Global Weil positivity: **{global_status["global_weil_positivity"]}**',
         f'- RH: **{global_status["rh"]}**',
         "",
-    ]
+    ])
     return "\n".join(lines)
 
 

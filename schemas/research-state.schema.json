@@ -42,9 +42,37 @@
     "fronts": {
       "type": "object",
       "required": [
-        "transport",
-        "c1"
-      ]
+        "unified_terminal",
+        "global_continuation"
+      ],
+      "properties": {
+        "unified_terminal": {
+          "type": "object",
+          "required": [
+            "id",
+            "strategic_status",
+            "mathematical_status",
+            "endpoint",
+            "dimensions_per_parity",
+            "target",
+            "obligations"
+          ]
+        },
+        "global_continuation": {
+          "type": "object",
+          "required": [
+            "id",
+            "strategic_status",
+            "mathematical_status",
+            "target_scope",
+            "obligations"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "superseded_fronts": {
+      "type": "array"
     },
     "closed_results": {
       "type": "array"
