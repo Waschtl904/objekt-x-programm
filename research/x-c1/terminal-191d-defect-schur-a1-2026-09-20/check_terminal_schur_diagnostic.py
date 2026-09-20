@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import struct
 from pathlib import Path
 import sys
 from time import perf_counter
@@ -93,6 +94,27 @@ def scaled_ball_matrix(Z, denominator: int):
     return arb_mat.convert(Z) / arb(denominator)
 
 
+def write_symmetric_integer_artifact(path: Path, M: fmpz_mat) -> str:
+    if M.nrows() != M.ncols() or M != M.transpose():
+        raise RuntimeError("integer artifact requires a symmetric square matrix")
+    magic = b"T191HIGH1"
+    h = hashlib.sha256()
+    with path.open("wb") as f:
+        f.write(magic)
+        f.write(struct.pack(">I", M.nrows()))
+        for i in range(M.nrows()):
+            for j in range(i, M.ncols()):
+                z = int(M[i, j])
+                sign = 1 if z < 0 else 0
+                raw = abs(z).to_bytes(max(1, (abs(z).bit_length() + 7) // 8), "big")
+                if len(raw) >= 65536:
+                    raise RuntimeError("integer magnitude too large")
+                record = bytes((sign,)) + struct.pack(">H", len(raw)) + raw
+                f.write(record)
+                h.update(record)
+    return h.hexdigest()
+
+
 def interval_tsv(M: arb_mat) -> bytes:
     rows = []
     for i in range(M.nrows()):
@@ -148,18 +170,24 @@ def run(parity: str, artifact: Path, precisions, output_prefix: Path):
         B = scaled_ball_matrix(Bint, denominator)
         H = scaled_ball_matrix(Hint, denominator)
 
-        high_eig_seconds = None
-        high_min_ball = None
-        high_positive_balls = None
+        high_floor_artifact = None
+        high_floor_sha256 = None
+        b_frobenius_upper = None
         if prec == precisions[0]:
-            th = perf_counter()
-            high_vals = H.eig(multiple=True)
-            high_eig_seconds = perf_counter() - th
-            if len(high_vals) != HIGH_DIM:
-                raise RuntimeError(f"high eigenvalue count mismatch: {len(high_vals)}")
-            high_vals = sorted(high_vals, key=lambda z: float(z.real.mid()))
-            high_min_ball = high_vals[0].real
-            high_positive_balls = sum(1 for z in high_vals if z.real > 0)
+            b_sq = sum(int(Bint[i, j]) ** 2
+                       for i in range(Bint.nrows())
+                       for j in range(Bint.ncols()))
+            b_frobenius_upper = (arb(b_sq).sqrt() / arb(denominator)).str(40, radius=True)
+
+            shifted_high = Hint * 1000
+            for i in range(HIGH_DIM):
+                shifted_high[i, i] -= denominator
+            high_floor_artifact = output_prefix.with_name(
+                output_prefix.name + f"_{parity}_high_minus_1e-3.bin"
+            )
+            high_floor_sha256 = write_symmetric_integer_artifact(
+                high_floor_artifact, shifted_high
+            )
 
         try:
             X = H.solve(B, algorithm="precond")
@@ -205,11 +233,12 @@ def run(parity: str, artifact: Path, precisions, output_prefix: Path):
             "matrix_tsv_sha256": matrix_hash,
             "solve_seconds": solve_seconds,
             "eig_seconds": eig_seconds,
-            "finite_high_eig_seconds": high_eig_seconds,
-            "finite_high_minimum_eigenvalue_ball": (
-                None if high_min_ball is None else high_min_ball.str(50, radius=True)
+            "finite_high_floor_target": "1e-3",
+            "finite_high_shifted_artifact": (
+                None if high_floor_artifact is None else high_floor_artifact.name
             ),
-            "finite_high_positive_eigenvalue_balls": high_positive_balls,
+            "finite_high_shifted_artifact_sha256": high_floor_sha256,
+            "mixed_block_frobenius_upper": b_frobenius_upper,
         }
         attempts.append(attempt)
         final = (verdict, vals, matrix_path)
