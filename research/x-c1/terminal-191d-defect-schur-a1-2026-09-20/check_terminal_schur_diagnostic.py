@@ -94,6 +94,33 @@ def scaled_ball_matrix(Z, denominator: int):
     return arb_mat.convert(Z) / arb(denominator)
 
 
+def write_source_floor_artifact(path: Path, A, B, H, denominator: int) -> str:
+    """Write 10^34*M_d - denominator*I as an exact symmetric integer matrix."""
+    magic = b"T191SRC01"
+    dim = SOURCE_DIM
+    h = hashlib.sha256()
+    with path.open("wb") as f:
+        f.write(magic)
+        f.write(struct.pack(">I", dim))
+        for i in range(dim):
+            for j in range(i, dim):
+                if i < LOW_DIM and j < LOW_DIM:
+                    base = int(A[i, j])
+                elif i < LOW_DIM <= j:
+                    base = int(B[j - LOW_DIM, i])
+                else:
+                    base = int(H[i - LOW_DIM, j - LOW_DIM])
+                z = (10 ** 34) * base - (denominator if i == j else 0)
+                sign = 1 if z < 0 else 0
+                raw = abs(z).to_bytes(max(1, (abs(z).bit_length() + 7) // 8), "big")
+                if len(raw) >= 65536:
+                    raise RuntimeError("source-floor integer magnitude too large")
+                record = bytes((sign,)) + struct.pack(">H", len(raw)) + raw
+                f.write(record)
+                h.update(record)
+    return h.hexdigest()
+
+
 def write_symmetric_integer_artifact(path: Path, M: fmpz_mat) -> str:
     if M.nrows() != M.ncols() or M != M.transpose():
         raise RuntimeError("integer artifact requires a symmetric square matrix")
@@ -172,6 +199,8 @@ def run(parity: str, artifact: Path, precisions, output_prefix: Path):
 
         high_floor_artifact = None
         high_floor_sha256 = None
+        source_floor_artifact = None
+        source_floor_sha256 = None
         b_frobenius_upper = None
         if prec == precisions[0]:
             b_sq = sum(int(Bint[i, j]) ** 2
@@ -187,6 +216,12 @@ def run(parity: str, artifact: Path, precisions, output_prefix: Path):
             )
             high_floor_sha256 = write_symmetric_integer_artifact(
                 high_floor_artifact, shifted_high
+            )
+            source_floor_artifact = output_prefix.with_name(
+                output_prefix.name + f"_{parity}_source_minus_1e-34.bin"
+            )
+            source_floor_sha256 = write_source_floor_artifact(
+                source_floor_artifact, Aint, Bint, Hint, denominator
             )
 
         try:
@@ -239,6 +274,11 @@ def run(parity: str, artifact: Path, precisions, output_prefix: Path):
             ),
             "finite_high_shifted_artifact_sha256": high_floor_sha256,
             "mixed_block_frobenius_upper": b_frobenius_upper,
+            "full_source_floor_target": "1e-34",
+            "full_source_shifted_artifact": (
+                None if source_floor_artifact is None else source_floor_artifact.name
+            ),
+            "full_source_shifted_artifact_sha256": source_floor_sha256,
         }
         attempts.append(attempt)
         final = (verdict, vals, matrix_path)
