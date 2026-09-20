@@ -12,6 +12,13 @@ TERM=ROOT/'research/x-c1/terminal-191d-schur-enclosure-2026-09-20'
 spec=importlib.util.spec_from_file_location('term_engine',TERM/'generate_terminal_matrices.py')
 t=importlib.util.module_from_spec(spec);spec.loader.exec_module(t)
 
+def load_module(name,path):
+    spec=importlib.util.spec_from_file_location(name,path)
+    mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod);return mod
+
+SEG=ROOT/'research/x-c1/prime-power-segment-4-2026-09-18/check_segment.py'
+ADAPT=ROOT/'research/x-c1/block-adaptive-profile-transport-2026-09-19/check_adaptive.py'
+
 def gamma_columns_at(N,M,pg,a):
     out=[]
     for j in range(N+1):
@@ -158,6 +165,8 @@ def compute_parities(precision=2048):
 
     snorm=arb(2).log()+arb(3).log()/arb(3).sqrt()+arb(2).log()/2
     gend=(-a).exp()/(1-(-4*a).exp())-1/(4*a)
+    old_engine=load_module('frozen_segment_engine',SEG)
+    old_adaptive=load_module('frozen_adaptive_engine',ADAPT)
     out={}
     for parity in (0,1):
         label='even' if parity==0 else 'odd'
@@ -171,8 +180,35 @@ def compute_parities(precision=2048):
         epsmoment=rem if parity==0 else 4*rem/a
         err=4*a*eps+80*epsmoment
         delta=harm[tail]+q0-2*a*(arb(1)/4-gend+eps)-snorm-80*epsmoment
-        lower=A-G*(arb(1001)/1000)/delta
-        for i in range(n):lower[i,i]-=err+1001*err**2/delta
+        Gact=G*(arb(1001)/1000)
+        for i in range(n):Gact[i,i]+=1001*err**2
+        lower=A-Gact/delta
+        for i in range(n):lower[i,i]-=err
+
+        # Crosscheck every endpoint entry against the frozen Fraction engine.
+        old=old_adaptive.compute_data(old_engine,parity)
+        assert old['ix']==ix
+        def old_ball(v):
+            return arb(fmpq(v.lo.numerator,v.lo.denominator), fmpq(0)) + arb(0,0) if v.lo==v.hi else arb(fmpq(v.lo.numerator,v.lo.denominator), fmpq(v.hi.numerator,v.hi.denominator))
+        # Build Arb intervals from exact rational endpoints without midpoint assumptions.
+        def enclosure(v):
+            lo=arb(fmpq(v.lo.numerator,v.lo.denominator)); hi=arb(fmpq(v.hi.numerator,v.hi.denominator))
+            return (lo+hi)/2 + arb(0,(hi-lo)/2)
+        cross={'A_nonoverlap':0,'Gact_nonoverlap':0,'lower_nonoverlap':0,'delta_overlap':False}
+        old_delta=enclosure(old['tail_floor'])
+        cross['delta_overlap']=delta.overlaps(old_delta)
+        for ii,iidx in enumerate(ix):
+            si=arb(2*iidx+1).sqrt()
+            for jj,jidx in enumerate(ix):
+                sj=arb(2*jidx+1).sqrt()
+                oa=enclosure(old['amat'][ii][jj])*si*sj
+                og=enclosure(old['gmat'][ii][jj])*si*sj
+                ol=oa-og/old_delta
+                if ii==jj:ol-=enclosure(old['err'])
+                if not A[ii,jj].overlaps(oa):cross['A_nonoverlap']+=1
+                if not Gact[ii,jj].overlaps(og):cross['Gact_nonoverlap']+=1
+                if not lower[ii,jj].overlaps(ol):cross['lower_nonoverlap']+=1
+
         low,piv,fail=t.ldl(lower)
         if fail is not None:raise RuntimeError(label+' directed LDL failed: '+str(fail))
         trace_inv=arb(0)
@@ -192,6 +228,7 @@ def compute_parities(precision=2048):
           'dimension':n,'delta':delta.str(30),'sigma':sigma.str(30),'shear':shear.str(30),
           'moment_beta':beta.str(30),'physical_gap_lower':gap.str(40),
           'gap_exceeds_1e_minus_13':bool(gap>target),
+          'crosscheck_against_frozen_fraction_engine':cross,
           'positive_pivots':len(piv),'min_pivot':min(piv).str(30)}
     return out
 
