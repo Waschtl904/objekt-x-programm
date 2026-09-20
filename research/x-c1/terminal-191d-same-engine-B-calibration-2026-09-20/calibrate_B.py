@@ -65,8 +65,7 @@ def compute_parities(precision=2048):
     assert all(fmpq(old_pg[k].numerator,old_pg[k].denominator)==pg[k] for k in range(M+1))
     # Same Gamma polynomial coefficients; endpoint-specific rigorous remainder
     # from the frozen B engine instead of the terminal x_max=1 envelope.
-    eps=(arb(fmpq(old_eps.lo.numerator,old_eps.lo.denominator))+arb(fmpq(old_eps.hi.numerator,old_eps.hi.denominator)))/2
-    eps+=arb(0,(arb(fmpq(old_eps.hi.numerator,old_eps.hi.denominator))-arb(fmpq(old_eps.lo.numerator,old_eps.lo.denominator)))/2)
+    eps=arb(fmpq(old_eps.numerator,old_eps.denominator))
     kcols=gamma_columns_at(N,M,pg,a)
     def gamma_entry(i,j):
         if i<=N:return kcols[i].get(j,arb(0))/(2*j+1)
