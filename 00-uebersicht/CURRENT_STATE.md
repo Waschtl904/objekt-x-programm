@@ -51,10 +51,14 @@ Integration: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 
 Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGISTRY.md).
 
+## Transportstatus
+
+- `p11_fixed_pair_strong_terminal`: **AUTHOR_DERIVED / SCOPED_GREEN**. Scope: fixed 0 < R < S < infinity. Topologie: STRONG_VECTORWISE; Parität: ODD_P11_GRAPH; uniform in R,S: false; operator-norm convergence: false.
+- `c1_unbounded_horizon_compatibility`: **OPEN**. Scope: positive C1 compatibility across changing terminal horizons and prime-power walls.
+
 ## Globale Grenzen
 
 - `connected_unit_window_coercivity`: **AUTHOR_DERIVED**.
-- `strong_terminal`: **OPEN**.
 - `full_c1_geom`: **OPEN**.
 - `object_x`: **NOT_CONSTRUCTED**.
 - `global_weil_gram_identity`: **OPEN**.

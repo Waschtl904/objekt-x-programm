@@ -685,7 +685,7 @@ Dokumentierte Reproduktion: [P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_B
 P11 fixed-pair Strong Terminal
 
 - Mathematical status: `AUTHOR_DERIVED`.
-- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Review status: `SCOPED_GREEN`.
 - Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.

@@ -17,7 +17,7 @@ Hexwerte, Inhaltsprüfsummen SHA-256 mit 64 Hexstellen.
 | `fronts` | Exakt zwei strategische Achsen. Kanonisch seit `7998887`: `unified_terminal` und `global_continuation`; der Validator akzeptiert für historische Übergangstests auch die frühere Paarung `transport` und `c1`. Jede Front trägt `id`, `title`, `mathematical_status: OPEN`, `strategic_status: ACTIVE_FRONT`, `target_scope`, nichtleere `obligation_ids`, `uses_results`, `accepted_progress`, `insufficient` und `candidate` (Survivor-ID oder null). |
 | `obligations` | Liste aus `id`, `title`, `mathematical_status: OPEN`, `scope`; keine ID darf zugleich Survivor sein. |
 | `results` | Nichtleere Auswahl verwendbarer Survivors; vollständige Felder siehe unten. |
-| `global_status` | `connected_unit_window_coercivity`, `strong_terminal`, `full_c1_geom`, `object_x`, `global_weil_gram_identity`, `global_weil_positivity`, `rh`. Objekt X `NOT_CONSTRUCTED` und globale Gram-Identität `AUTHOR_DERIVED` schließen sich aus. |
+| `global_status` | `connected_unit_window_coercivity`, `full_c1_geom`, `object_x`, `global_weil_gram_identity`, `global_weil_positivity`, `rh`. Objekt X `NOT_CONSTRUCTED` und globale Gram-Identität `AUTHOR_DERIVED` schließen sich aus. |
 | `historical_navigation` | Liste aus `path`, `as_of`, `content_commit`, `content_sha256`, `note`. Der Originalinhalt wird vor dem Banner aus Git gelesen. |
 | `navigation_exceptions` | Liste begründeter fachlicher Ausnahmen: `path`, `role`, `reason`. |
 | `metadata_policy` | Fester `enforced_after`-Commit, `discovery: NEW_RESEARCH_PROOF_DIRECTORIES`, `format: JSON_SUBSET_OF_YAML_1_2`. |
@@ -27,7 +27,7 @@ Jeder Survivor trägt:
 
 - `id`, `title`, nichtleeren `scope`, nichtleere `claim`-Liste;
 - `mathematical_status`: `AUTHOR_DERIVED` oder `AUTHOR_DERIVED_NO_GO`;
-- `review_status`: `EXTERNAL_REVIEW_OPEN` oder
+- `review_status`: `EXTERNAL_REVIEW_OPEN`, `SCOPED_GREEN` oder
   `EXTERNALLY_REVIEWED_WITH_PROVENANCE`, letzteres mit zusätzlichem
   `external_review_evidence: {commit,path,sha256}`;
 - `integration_status`: `MERGED` oder `RESEARCH_BRANCH_UNMERGED`;

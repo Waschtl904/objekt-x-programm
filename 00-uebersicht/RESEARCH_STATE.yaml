@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "render_version": 1,
+  "render_version": 2,
   "state_date": "2026-09-20",
   "repository": "Waschtl904/objekt-x-programm",
   "published_baseline": {
@@ -946,7 +946,6 @@
   ],
   "global_status": {
     "connected_unit_window_coercivity": "AUTHOR_DERIVED",
-    "strong_terminal": "OPEN",
     "full_c1_geom": "OPEN",
     "object_x": "NOT_CONSTRUCTED",
     "global_weil_gram_identity": "OPEN",
@@ -1058,5 +1057,20 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": []
+  "pending_packages": [],
+  "transport_status": {
+    "p11_fixed_pair_strong_terminal": {
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "SCOPED_GREEN",
+      "scope": "fixed 0 < R < S < infinity",
+      "topology": "STRONG_VECTORWISE",
+      "parity": "ODD_P11_GRAPH",
+      "uniform_in_R_S": false,
+      "operator_norm_convergence": false
+    },
+    "c1_unbounded_horizon_compatibility": {
+      "mathematical_status": "OPEN",
+      "scope": "positive C1 compatibility across changing terminal horizons and prime-power walls"
+    }
+  }
 }
