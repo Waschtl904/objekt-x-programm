@@ -147,6 +147,20 @@ def run(parity: str, artifact: Path, precisions, output_prefix: Path):
         A = scaled_ball_matrix(Aint, denominator)
         B = scaled_ball_matrix(Bint, denominator)
         H = scaled_ball_matrix(Hint, denominator)
+
+        high_eig_seconds = None
+        high_min_ball = None
+        high_positive_balls = None
+        if prec == precisions[0]:
+            th = perf_counter()
+            high_vals = H.eig(multiple=True)
+            high_eig_seconds = perf_counter() - th
+            if len(high_vals) != HIGH_DIM:
+                raise RuntimeError(f"high eigenvalue count mismatch: {len(high_vals)}")
+            high_vals = sorted(high_vals, key=lambda z: float(z.real.mid()))
+            high_min_ball = high_vals[0].real
+            high_positive_balls = sum(1 for z in high_vals if z.real > 0)
+
         try:
             X = H.solve(B, algorithm="precond")
         except ZeroDivisionError as exc:
@@ -191,6 +205,11 @@ def run(parity: str, artifact: Path, precisions, output_prefix: Path):
             "matrix_tsv_sha256": matrix_hash,
             "solve_seconds": solve_seconds,
             "eig_seconds": eig_seconds,
+            "finite_high_eig_seconds": high_eig_seconds,
+            "finite_high_minimum_eigenvalue_ball": (
+                None if high_min_ball is None else high_min_ball.str(50, radius=True)
+            ),
+            "finite_high_positive_eigenvalue_balls": high_positive_balls,
         }
         attempts.append(attempt)
         final = (verdict, vals, matrix_path)
