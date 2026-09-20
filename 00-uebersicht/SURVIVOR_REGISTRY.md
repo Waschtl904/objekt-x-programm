@@ -1,7 +1,7 @@
 # Survivor Registry
 
 > Operative registry of results reusable at the verified frontier
-> `5557d94d048dc05e7c3b4534a5a2d1711bdc71dc`.
+> `79988874cceeb01f17e0cda67485838c0b7c4f63`.
 
 ## ENDPOINT-B
 - Mathematical status: AUTHOR_DERIVED
@@ -103,3 +103,21 @@
 - Canonical commit: `5557d94d048dc05e7c3b4534a5a2d1711bdc71dc`
 - Canonical proof: `research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md`
 - Does not claim: contraction of (R_a) on new windows or positive C1 closure
+
+## C1-COMPACT-DEFECT-HIGH-TAIL
+- Mathematical status: AUTHOR_DERIVED
+- Review status: EXTERNAL_REVIEW_OPEN
+- Integration status: RESEARCH_BRANCH_UNMERGED
+- Scope: complete High defect contraction (s_{192}(R_a^p)^2\le943/945<1) uniformly for (B\le a\le1), each parity
+- Canonical commit: `79988874cceeb01f17e0cda67485838c0b7c4f63`
+- Canonical proof: `research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md`
+- Does not claim: that any of the first 191 singular directions actually violate or satisfy contraction
+
+## C1-MOVING-191D-SCHUR-BRIDGE
+- Mathematical status: AUTHOR_DERIVED
+- Review status: EXTERNAL_REVIEW_OPEN
+- Integration status: RESEARCH_BRANCH_UNMERGED
+- Scope: exact congruence (S_{phys}=G^{1/2}S_a^pG^{1/2}) with identical inertia, plus continuity and monotonicity of intrinsic defect singular values on the fixed horizon
+- Canonical commit: `79988874cceeb01f17e0cda67485838c0b7c4f63`
+- Canonical proof: `research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md`
+- Does not claim: positivity of the terminal matrices, closure of additional Low/Profile shell couplings, or unrestricted-horizon compatibility

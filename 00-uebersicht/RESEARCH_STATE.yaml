@@ -14,44 +14,45 @@
   "live_frontier": {
     "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
     "branch_head_at_generation": "79988874cceeb01f17e0cda67485838c0b7c4f63",
-    "verified_through": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
+    "verified_through": "79988874cceeb01f17e0cda67485838c0b7c4f63",
     "integration_status": "RESEARCH_BRANCH_UNMERGED",
     "review_status": "EXTERNAL_REVIEW_OPEN",
-    "head_policy": "verified_through is the audited registry frontier; never infer that it equals the current branch HEAD.",
-    "unverified_after_verified_through": [
-      {
-        "sha": "79988874cceeb01f17e0cda67485838c0b7c4f63",
-        "note": "Later compact-defect/Moving-191D bridge exists on the branch but is intentionally not promoted by this registry revision."
-      }
-    ]
+    "head_policy": "verified_through is the audited registry frontier; never infer future branch HEADs from this value.",
+    "unverified_after_verified_through": []
   },
   "fronts": {
-    "transport": {
-      "id": "MOVING-191D-LOW-PROFILE",
-      "title": "Moving 191D low block and profile reserve renewal",
+    "unified_terminal": {
+      "id": "TERMINAL-191D-DEFECT-SCHUR-A1",
+      "title": "Certify terminal even/odd 191D defect Schur matrices at a=1",
       "strategic_status": "ACTIVE_FRONT",
       "mathematical_status": "OPEN",
-      "target_scope": "B <= a <= 1",
+      "endpoint": "1",
+      "dimensions_per_parity": 191,
+      "target_scope": "fixed horizon B <= a <= 1",
+      "target": "Prove S_1^even >= 0 and S_1^odd >= 0 by rigorous directed finite-matrix certification.",
+      "equivalent_targets": [
+        "||R_1^even|| <= 1 and ||R_1^odd|| <= 1",
+        "fixed-horizon physical Moving-191D core Schur positivity via exact positive-Gram congruence"
+      ],
       "obligations": [
-        "rigorous moving 191D Low block control",
-        "Low/High and Low/Profile mixed terms",
-        "renewable profile reserve",
-        "non-summable or uniform transport law"
+        "directed enclosures for alpha_1^p entries",
+        "directed enclosures for beta_1^p Low/High coupling",
+        "rigorous complete inverse High-response enclosure",
+        "directed enclosure of the full 191x191 Schur rest",
+        "exact or interval LDL* positivity certificate for even and odd"
       ]
     },
-    "c1": {
-      "id": "C1c-COMPACT-DEFECT-CONTRACTION",
-      "title": "Independent contraction of the compact defect transfer",
-      "strategic_status": "ACTIVE_FRONT",
+    "global_continuation": {
+      "id": "UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION",
+      "title": "Extend beyond the fixed horizon and close remaining profile transport",
+      "strategic_status": "FOLLOW_ON_FRONT",
       "mathematical_status": "OPEN",
-      "candidate": "C1-COUPLED-SPECTRAL-MEDIATOR",
-      "target_scope": "B <= a <= 1 on fixed horizon 1",
-      "target": "Prove ||R_a|| <= 1 independently of already-known Weil positivity; terminal control at a=1 may be used when justified by the nested restriction structure.",
+      "target_scope": "beyond the fixed horizon a=1 and/or scalable continuation",
       "obligations": [
-        "rigorous Low/Tail decomposition of the compact defect",
-        "complete singular-value tail control",
-        "upper enclosure of the critical largest singular value",
-        "globally compatible positive defect completion after contraction"
+        "moving Low/Profile reserve renewal where continuation is still required",
+        "non-summable or uniform continuation mechanism",
+        "compatibility of the C1 candidate across arbitrarily larger horizons",
+        "global/cofinal Weil test-class identification"
       ]
     }
   },
@@ -109,6 +110,24 @@
       "scope": "Candidate-specific exact T_b J_ab = I_ab T_a and defect naturality.",
       "origin_commit": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
       "canonical_proof": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md"
+    },
+    {
+      "id": "C1-COMPACT-DEFECT-HIGH-TAIL",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "scope": "Uniform complete high defect contraction s_192(R_a^p)^2 <= 943/945 on B<=a<=1, each parity.",
+      "origin_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "canonical_proof": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md"
+    },
+    {
+      "id": "C1-MOVING-191D-SCHUR-BRIDGE",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "scope": "Exact positive-Gram congruence between the physical moving-191D core Schur form and the C1 defect Schur rest; same inertia. Includes continuity and monotonicity of intrinsic defect singular values on the fixed horizon.",
+      "origin_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+      "canonical_proof": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md"
     }
   ],
   "no_go_results": [
@@ -140,6 +159,11 @@
       "id": "C1-COUPLED-SPECTRAL-MEDIATOR",
       "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20",
       "meta": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/META.yaml"
+    },
+    {
+      "id": "C1-COMPACT-DEFECT-MOVING-191D-BRIDGE",
+      "path": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20",
+      "meta": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/META.yaml"
     }
   ],
   "global_status": {
@@ -149,7 +173,13 @@
     "object_x": "NOT_CONSTRUCTED",
     "global_weil_gram_identity": "OPEN",
     "global_weil_positivity": "OPEN",
-    "rh": "OPEN"
+    "rh": "OPEN",
+    "c1a": "AUTHOR_DERIVED_FOR_5557D94",
+    "c1b": "AUTHOR_DERIVED_FOR_5557D94",
+    "c1_high": "AUTHOR_DERIVED_FOR_7998887",
+    "c1_bridge": "AUTHOR_DERIVED_FOR_7998887",
+    "c1c": "OPEN",
+    "c1d": "OPEN"
   },
   "canonical_files": {
     "generated_current_state": "00-uebersicht/CURRENT_STATE.md",
@@ -163,5 +193,17 @@
     "00-uebersicht/AKTUELLER_STAND.md",
     "00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md",
     "00-uebersicht/ACTIVE_THEOREM_REGISTRY.md"
+  ],
+  "superseded_fronts": [
+    {
+      "id": "MOVING-191D-LOW-PROFILE",
+      "replaced_by": "TERMINAL-191D-DEFECT-SCHUR-A1",
+      "boundary": "Its fixed-horizon 191D core positivity part is now the same Schur gate; additional Low/Profile continuation remains open under UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION."
+    },
+    {
+      "id": "C1c-COMPACT-DEFECT-CONTRACTION",
+      "replaced_by": "TERMINAL-191D-DEFECT-SCHUR-A1",
+      "boundary": "The abstract fixed-horizon contraction gate is now exactly reduced to the terminal even/odd 191D Schur matrices."
+    }
   ]
 }

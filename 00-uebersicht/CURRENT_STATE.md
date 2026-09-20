@@ -14,37 +14,42 @@ Mathematical status: **AUTHOR_DERIVED**. Review status: **EXTERNAL_REVIEW_OPEN**
 
 ## Verified research frontier
 
-Verified through `5557d94d048dc05e7c3b4534a5a2d1711bdc71dc` on
+Verified through `79988874cceeb01f17e0cda67485838c0b7c4f63` on
 `research/x-c1-inherited-resonance-shell-schur-2026-09-18`.
 
-Branch head observed at generation:
-`79988874cceeb01f17e0cda67485838c0b7c4f63`.
+At registry generation the observed research-branch head was the same commit.
 
-**The observed branch head is not automatically promoted to the verified frontier.**
-Commits after `verified_through` remain outside the canonical mathematical state until explicitly audited and promoted.
+## Unified fixed-horizon front
 
-## Active fronts
+### TERMINAL-191D-DEFECT-SCHUR-A1
 
-### Transport — MOVING 191D LOW BLOCK AND PROFILE RESERVE RENEWAL
+**Certify terminal even/odd 191D defect Schur matrices at a=1.**
 
-Scope: \(B\le a\le1\).
+Equivalent fixed-horizon targets:
+- ||R_1^even|| <= 1 and ||R_1^odd|| <= 1
+- fixed-horizon physical Moving-191D core Schur positivity via exact positive-Gram congruence
 
-Open obligations:
-- rigorous moving 191D Low block control;
-- Low/High and Low/Profile mixed terms;
-- renewable profile reserve;
-- non-summable or uniform transport law.
+Open certification obligations:
+- directed enclosures for alpha_1^p entries
+- directed enclosures for beta_1^p Low/High coupling
+- rigorous complete inverse High-response enclosure
+- directed enclosure of the full 191x191 Schur rest
+- exact or interval LDL* positivity certificate for even and odd
 
-### C1 — COMPACT DEFECT CONTRACTION
+This terminal gate now represents both the fixed-horizon Moving-191D core positivity problem and C1 defect contraction.
 
-Candidate: **C1-COUPLED-SPECTRAL-MEDIATOR**.
+## Follow-on global continuation
 
-Open target:
-\[
-\|R_a\|\le1
-\]
-proved independently of already-known Weil positivity on the fixed horizon \(B\le a\le1\).
-Where the nested restriction structure is used, terminal control at \(a=1\) may serve as the sufficient endpoint formulation.
+### UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION
+
+**Extend beyond the fixed horizon and close remaining profile transport.**
+
+- moving Low/Profile reserve renewal where continuation is still required
+- non-summable or uniform continuation mechanism
+- compatibility of the C1 candidate across arbitrarily larger horizons
+- global/cofinal Weil test-class identification
+
+The bridge does not remove these profile/global-horizon obligations.
 
 ## Closed operative results
 
@@ -54,6 +59,8 @@ Where the nested restriction structure is used, terminal control at \(a=1\) may 
 - `C0-DIRECTED-FORM-SYSTEM`
 - `C1a-COUPLED-SPECTRAL-MEDIATOR`
 - `C1b-ZERO-EXTENSION-INTERTWINING`
+- `C1-COMPACT-DEFECT-HIGH-TAIL`
+- `C1-MOVING-191D-SCHUR-BRIDGE`
 
 ## Active No-Go firewalls
 
@@ -64,9 +71,14 @@ These are candidate-class exclusions, not negative results for the full Weil for
 
 ## Global limits
 
+- C1a: **AUTHOR_DERIVED_FOR_5557D94**
+- C1b: **AUTHOR_DERIVED_FOR_5557D94**
+- C1 High: **AUTHOR_DERIVED_FOR_7998887**
+- C1 Bridge: **AUTHOR_DERIVED_FOR_7998887**
+- C1c: **OPEN**
+- C1d: **OPEN**
 - Connected Unit-Window Coercivity: **OPEN**
 - Strong Terminal: **OPEN**
-- Full C1-GEOM: **OPEN**
 - Objekt X: **NOT CONSTRUCTED**
 - Global Weil-Gram identity: **OPEN**
 - Global Weil positivity: **OPEN**

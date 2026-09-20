@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "C1-COMPACT-DEFECT-MOVING-191D-BRIDGE",
+  "date": "2026-09-20",
+  "kind": "REDUCTION_AND_BRIDGE",
+  "strategic": true,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "depends_on": [
+    "C1-COUPLED-SPECTRAL-MEDIATOR",
+    "MOVING-HIGH-TAIL-1-OVER-41"
+  ],
+  "closes": [
+    "C1-COMPACT-DEFECT-HIGH-TAIL",
+    "C1-MOVING-191D-SCHUR-BRIDGE"
+  ],
+  "supersedes": [
+    "MOVING-191D-LOW-PROFILE@FIXED-HORIZON-CORE",
+    "C1c-COMPACT-DEFECT-CONTRACTION@ABSTRACT"
+  ],
+  "opens": [
+    "TERMINAL-191D-DEFECT-SCHUR-A1"
+  ],
+  "does_not_claim": [
+    "R1_CONTRACTION",
+    "POSITIVE_WEIL_THROUGH_A1",
+    "FULL_C1_GEOM",
+    "UNRESTRICTED_HORIZON_COMPATIBILITY",
+    "OBJECT_X",
+    "GLOBAL_WEIL_POSITIVITY",
+    "RH"
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md",
+    "commit": "79988874cceeb01f17e0cda67485838c0b7c4f63"
+  }
+}

@@ -1,34 +1,55 @@
 # Next Gates
 
-> Canonical strategic front derived from the research state verified through
-> `5557d94d048dc05e7c3b4534a5a2d1711bdc71dc`.
+> Canonical strategic front verified through
+> `79988874cceeb01f17e0cda67485838c0b7c4f63`.
 
-## 1. Transport
-
-[
-\boxed{\text{MOVING 191D LOW-BLOCK + PROFILE RESERVE RENEWAL}}
-]
-
-Strategic progress includes a uniform moving Low-block theorem, renewable Profile reserve, a non-summable or uniform continuation law, or rigorous channel-7 entry control.
-
-A microscopic width improvement with the same collapsing mechanism is not by itself a new strategic front.
-
-## 2. C1
+## 1. Unified fixed-horizon gate
 
 [
-\boxed{\text{COMPACT DEFECT CONTRACTION}}
+\boxed{\texttt{TERMINAL-191D-DEFECT-SCHUR@a=1}}
 ]
 
-For the coupled spectral candidate, prove independently
+Construct and rigorously certify, independently of any assumed full-window positivity,
+
 [
-\|R_a\|\le1
+S_1^{\mathrm{even}}\succeq0,
+\qquad
+S_1^{\mathrm{odd}}\succeq0.
 ]
-on the fixed horizon. Endpoint control at (a=1) is especially important when the nested restriction argument is made explicit.
 
-Strategic progress includes a rigorous Low/Tail split, full singular-value-tail control, a directed upper enclosure for the critical largest singular value, a theorem linking critical defect modes to Moving-191D geometry, or a compatible positive defect completion.
+For the compact defect this is equivalent to terminal contraction
+[
+\|R_1^{p}\|\le1.
+]
 
-Finite-rank diagnostics without a full operator remainder, circular use of already-known Weil positivity, or a formal square root without compatibility do not close this gate.
+By the proved singular-value monotonicity on the nested fixed-horizon spaces, terminal contraction implies contraction for every (B\le a\le1). By the exact positive-Gram congruence, the same finite Schur sign is also the sign of the physical Moving-191D core Schur form.
+
+### Required certification work
+
+1. Directed enclosures of all entries of (alpha_1^p).
+2. Directed enclosures of the complete Low/High coupling (eta_1^p).
+3. Rigorous enclosure of the full inverse High response ((I-K_1^p)^{-1}).
+4. Directed enclosure of the complete 191-by-191 Schur rest.
+5. Exact rational or rigorous interval (LDL^*) certification.
+6. Positive semidefinite verdict in both parities; record a positive reserve if strict.
+
+The complete infinite High response must remain present through the certified Schur correction. Sampled high modes or ordinary floating-point eigenvalues are not sign certificates.
+
+## 2. Follow-on global continuation
+
+[
+\boxed{\texttt{UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION}}
+]
+
+Even after a successful terminal fixed-horizon certificate, still open are:
+
+- Low/Profile reserve renewal needed by continuation arguments;
+- a non-summable or uniform continuation mechanism where required;
+- compatibility of the C1 construction across horizons beyond (1);
+- global/cofinal Weil test-class identification.
+
+Thus the old Transport and C1 fixed-horizon fronts have converged, but the full global continuation problem has not disappeared.
 
 ## Scope firewall
 
-Closing either gate does **not** by itself prove Objekt X, global Weil positivity, Strong Terminal, or RH.
+`7998887` does **not** prove the terminal matrix signs, positivity through (a=1), full C1-GEOM, Objekt X, global Weil positivity, or RH.

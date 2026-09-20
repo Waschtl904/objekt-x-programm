@@ -3,45 +3,73 @@
 > Long-lived architecture document. Change this file only when the conceptual architecture changes, not when a constant or microscopic window improves.
 
 ## C0 — canonical signed carrier
+
 C0 contains the physical two-Mellin source/form system, zero-extension maps, exact composition, form naturality, parity, Prime-power observations, the Gamma/archimedean observation, and the shifted Hilbert direct-limit carrier.
 
 C0 is a carrier. Its shifted positivity is not the desired Weil-Gram positivity.
 
 ## C1-0 — structural firewalls
+
 1. Short-range physical propagation plus only finite-rank global repair cannot give an exact C1 Gram readout.
 2. A single signed Prime-power contribution cannot itself be a positive Gram block.
 
 These are candidate-class No-Gos, not a No-Go for C1 as a whole.
 
 ## C1a — nonlocal common mediator
-The active candidate class is the coupled spectral Prime/Gamma mediator: intrinsic before any sign decision for (q), infinite-dimensional, physically nonlocal, and channel-coupled. For the candidate pinned at `5557d94`, C1a is author-derived.
+
+The active candidate is the coupled spectral Prime/Gamma mediator: intrinsic before any sign decision for (q), infinite-dimensional, physically nonlocal, and channel-coupled. For the candidate pinned at `5557d94`, C1a is author-derived.
 
 ## C1b — transition law
-The target spaces must satisfy
+
+The target spaces satisfy
 [
 T_bJ_{a,b}=I_{a,b}T_a.
 ]
-For the current fixed-horizon spectral candidate this is author-derived.
 
-## C1c — positive Weil-Gram closure
-The present candidate has
+For the fixed-horizon spectral candidate this is author-derived.
+
+## C1c — finite critical terminal gate
+
+The candidate has
 [
-q_a(u,v)=\langle T_au,T_av\rangle-\langle D_au,D_av\rangle.
+q_a(u,v)=\langle T_au,T_av\rangle-\langle D_au,D_av\rangle,
+\qquad R_a(T_au)=D_au.
 ]
-With (R_a(T_au)=D_au), positive closure requires an independent proof
+
+At `7998887`, the complete infinite High defect block is uniformly contractive and only 191 directions per parity can be critical:
 [
-\|R_a\|\le1.
+s_{192}(R_a^p)^2\le\frac{943}{945}<1.
 ]
-Only after contraction may a positive defect factorization be used.
+
+The exact remaining Schur matrix is
+[
+S_a^p=I-\alpha-\beta^*(I-K)^{-1}\beta,
+]
+with the complete High response retained. Moreover,
+[
+S_{phys}=G^{1/2}S_a^pG^{1/2},
+]
+so the physical Moving-191D core Schur form and the C1 defect Schur form have identical inertia.
+
+Because intrinsic defect singular values are nondecreasing with (a) on the fixed horizon, the primary C1c gate is now
+[
+S_1^{\mathrm{even}}\succeq0,
+\qquad
+S_1^{\mathrm{odd}}\succeq0.
+]
+
+This is the same fixed-horizon finite critical gate that controls the physical Moving-191D core.
 
 ## C1d — compatible positive completion
-A local factorization is not enough. The positive geometry must remain compatible with the directed system. Compression identities are not automatically operator intertwining.
+
+If terminal contraction is proved independently, one may use a single terminal positive operator on (H_1) to obtain a compatible positive readout on the fixed horizon. Local square roots of compressed operators are not assumed to intertwine.
 
 ## X — global object
-A full Objekt-X candidate must additionally provide a canonical global positive readout, the exact Weil-Gram identity, the correct global/cofinal Weil test class, compatibility beyond artificial fixed horizons, and no circular use of the desired positivity.
 
-## Strategic split
-- **Transport:** Moving-191D Low/Profile reserve and scalable continuation.
-- **C1:** compact-defect contraction and compatible positive completion.
+A full Objekt-X candidate must additionally provide a canonical global positive readout, the exact Weil-Gram identity, the correct global/cofinal Weil test class, compatibility beyond artificial fixed horizons, and no circular use of desired positivity.
 
-A future theorem may identify the critical Moving-191D geometry with the critical defect modes, but this is not assumed here.
+## Strategic convergence and remaining split
+
+The former fixed-horizon Transport core and C1 contraction problem now converge at one terminal 191D Schur gate.
+
+Still separate and open are the genuinely global tasks: Low/Profile continuation where required, scalable/non-summable extension, compatibility across arbitrarily larger horizons, and global test-class identification.
