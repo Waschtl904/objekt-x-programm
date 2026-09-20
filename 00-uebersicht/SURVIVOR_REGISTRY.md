@@ -519,3 +519,38 @@ Does not claim:
 - Objekt X im globalen Sinn, globale Weil-Positivität oder RH.
 
 Dokumentierte Reproduktion: [calibration_results.json](https://github.com/Waschtl904/objekt-x-programm/blob/0e725ae83d7217caf3e54315ddbce3d553f426a6/research/x-c1/terminal-191d-same-engine-B-calibration-2026-09-20/calibration_results.json), [TERMINAL_191D_SCHUR_FULL_REPLAY_2026-09-20.json](https://github.com/Waschtl904/objekt-x-programm/blob/2de6d199ad29182869e77b6785b962473250e813/audits/TERMINAL_191D_SCHUR_FULL_REPLAY_2026-09-20.json).
+
+## C1d-COMPATIBLE-POSITIVE-COMPLETION
+
+Kompatibler positiver terminaler C1-Abschluss
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Kandidatenspezifischer fester C1-Horizont B<=a<=1; eine einzige terminale Quadratwurzelkorrektur auf H_1, positive geschlossene Zielräume und exaktes Nullfortsetzungs-Intertwining.
+- Canonical commit: [a0c57dd](https://github.com/Waschtl904/objekt-x-programm/commit/a0c57ddd5c4b7dd2cf18c17b19f5af4069915387).
+- Canonical proof: [research/x-c1/c1d-terminal-square-root-completion-2026-09-20/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/a0c57ddd5c4b7dd2cf18c17b19f5af4069915387/research/x-c1/c1d-terminal-square-root-completion-2026-09-20/PROOF.md).
+- depends_on: `C1a-COUPLED-SPECTRAL-MEDIATOR`, `C1b-ZERO-EXTENSION-INTERTWINING`, `C1-COMPACT-DEFECT-IDENTITY`, `TERMINAL-191D-DEFECT-SCHUR-A1`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `CONSTRUCTION`.
+- Negative claim boundary: Geschlossen ist ausschließlich der kandidatenspezifische positive C1-Abschluss auf B<=a<=1. Keine Aussage über größere Horizonte, globale Testklassen oder RH.
+
+Aussage:
+
+- Mit eta=10^-26/(23/2+10^-26)>10^-28 gilt I-R_1^*R_1 >= eta I auf dem gesamten geschlossenen Terminalraum H_1.
+- Delta_1=(I-R_1^*R_1)^(1/2) ist wohldefiniert und beschränkt invertierbar; K_X,a=Delta_1 H_a ist für B<=a<=1 geschlossen und verschachtelt.
+- T_X,a=Delta_1 I_{a,1}T_a erfüllt q_a(u,v)=<T_X,a u,T_X,a v> exakt sesquilinear und T_X,b J_{a,b}=T_X,a für B<=a<=b<=1.
+- Die q_a-Norm ist der bereits vollständigen F_a-Norm äquivalent; T_X,a ist unitär von (F_a,q_a) auf K_X,a.
+
+Does not claim:
+
+- Eine C1-Erweiterung auf a>1.
+- Eine kofinale Familie kompatibler positiver Terminalabschlüsse.
+- Full C1-GEOM auf unbeschränktem Horizont.
+- Die vollständige globale Weil-Testklasse.
+- Globales Objekt X, globale Weil-Positivität oder RH.
+
+Dokumentierte Reproduktion: [C1D_TERMINAL_SQUARE_ROOT_PROMOTION_AUDIT_2026-09-20.md](https://github.com/Waschtl904/objekt-x-programm/blob/5f19065e28b9f2e09ae93bef0b4c752ab58997d4/audits/C1D_TERMINAL_SQUARE_ROOT_PROMOTION_AUDIT_2026-09-20.md), [c1d_checks.log](https://github.com/Waschtl904/objekt-x-programm/blob/5f19065e28b9f2e09ae93bef0b4c752ab58997d4/research/x-c1/c1d-terminal-square-root-completion-2026-09-20/c1d_checks.log).

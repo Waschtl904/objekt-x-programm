@@ -12,15 +12,15 @@ Mathematik: AUTHOR_DERIVED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 
 ## Verifizierter Forschungsstand
 
-Geprüft bis [2de6d19](https://github.com/Waschtl904/objekt-x-programm/commit/2de6d199ad29182869e77b6785b962473250e813) auf `research/x-c1-inherited-resonance-shell-schur-2026-09-18`.
-Dokumentarischer Branch-Head bei Registererzeugung: [2de6d19](https://github.com/Waschtl904/objekt-x-programm/commit/2de6d199ad29182869e77b6785b962473250e813).
+Geprüft bis [5f19065](https://github.com/Waschtl904/objekt-x-programm/commit/5f19065e28b9f2e09ae93bef0b4c752ab58997d4) auf `research/x-c1-inherited-resonance-shell-schur-2026-09-18`.
+Dokumentarischer Branch-Head bei Registererzeugung: [5f19065](https://github.com/Waschtl904/objekt-x-programm/commit/5f19065e28b9f2e09ae93bef0b4c752ab58997d4).
 **Dies ist ein geprüfter Snapshot, keine Behauptung über den dauerhaft aktuellen Branch-HEAD.**
 Integration: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 
 ## Zwei aktive Hauptfronten
 
-- **Fixed-Horizon C1d: kompatiblen positiven Defektabschluss explizit konstruieren** — `C1d-COMPATIBLE-POSITIVE-COMPLETION`, OPEN. Fester Horizont B<=a<=1 nach bewiesener strikter terminaler Defektkontraktion. Zu zeigen ist die eine terminale Quadratwurzelkorrektur auf H_1 und ihr exaktes Intertwining für alle eingebetteten H_a.
-- **Nachgelagerte globale Fortsetzung und Profilreserve** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Jenseits des nun geschlossenen festen Horizonts bleiben skalierbare Profil-/Transportmechanismen, Horizonte >1 und die globale Weil-Testklasse separat offen.
+- **Unbeschränkte Horizonterweiterung und kompatibler Transport** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Nach geschlossenem C1a-C1d auf B<=a<=1: neue Prime-Power-Horizonte a>1, erneuerbare Profilreserve, nicht summierbarer/kofinaler Transport und kompatible positive Terminalabschlüsse.
+- **Globale Weil-Testklasse und fensterunabhängiger Readout** — `FULL-WEIL-TEST-CLASS`, OPEN. Nach Aufbau einer kofinal kompatiblen C1-Geometrie: exakte Rückbindung an die vollständige geeignete Weil-Testklasse und einen globalen/fensterunabhängigen positiven Readout.
 
 ## Verwendbare Bausteine
 
@@ -42,6 +42,7 @@ Integration: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 | `C1-COMPLETE-HIGH-RESPONSE-BOUND` | AUTHOR_DERIVED | [7998887](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md) |
 | `C1-MOVING-SINGULAR-CONTINUITY` | AUTHOR_DERIVED | [7998887](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md) |
 | `TERMINAL-191D-DEFECT-SCHUR-A1` | AUTHOR_DERIVED | [2d361be](https://github.com/Waschtl904/objekt-x-programm/blob/2d361bed76248d0a966d6d6453ce0364eae9007d/research/x-c1/terminal-191d-schur-enclosure-2026-09-20/PROOF.md) |
+| `C1d-COMPATIBLE-POSITIVE-COMPLETION` | AUTHOR_DERIVED | [a0c57dd](https://github.com/Waschtl904/objekt-x-programm/blob/a0c57ddd5c4b7dd2cf18c17b19f5af4069915387/research/x-c1/c1d-terminal-square-root-completion-2026-09-20/PROOF.md) |
 
 Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGISTRY.md).
 
@@ -56,9 +57,5 @@ Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGI
 - `rh`: **OPEN**.
 
 Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getrennt. Diese Statusansicht führt die mathematischen Checker nicht erneut aus.
-
-## Noch nicht in den geprüften Stand übernommene Pakete
-
-- `C1D-TERMINAL-SQUARE-ROOT-COMPLETION`: PENDING_STATUS_REVIEW — `research/x-c1/c1d-terminal-square-root-completion-2026-09-20/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

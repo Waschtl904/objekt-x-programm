@@ -13,8 +13,8 @@
   },
   "live_frontier": {
     "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
-    "branch_head_at_generation": "2de6d199ad29182869e77b6785b962473250e813",
-    "verified_through": "2de6d199ad29182869e77b6785b962473250e813",
+    "branch_head_at_generation": "5f19065e28b9f2e09ae93bef0b4c752ab58997d4",
+    "verified_through": "5f19065e28b9f2e09ae93bef0b4c752ab58997d4",
     "integration_status": "RESEARCH_BRANCH_UNMERGED",
     "review_status": "EXTERNAL_REVIEW_OPEN",
     "head_policy": "VERIFIED_SNAPSHOT_NOT_CURRENT_HEAD"
@@ -33,63 +33,60 @@
     "proof_principle": "Dieses Register verwaltet operative Statusangaben. Die jeweils gepinnten Beweispakete begründen die mathematischen Aussagen; Definitionen und Auditregeln behalten ihre eigenen Rollen. Checker-PASS, CI und Merge ersetzen keinen unabhängigen analytischen Audit."
   },
   "fronts": {
-    "unified_terminal": {
-      "id": "C1d-COMPATIBLE-POSITIVE-COMPLETION",
-      "title": "Fixed-Horizon C1d: kompatiblen positiven Defektabschluss explizit konstruieren",
-      "mathematical_status": "OPEN",
-      "strategic_status": "ACTIVE_FRONT",
-      "target_scope": "Fester Horizont B<=a<=1 nach bewiesener strikter terminaler Defektkontraktion. Zu zeigen ist die eine terminale Quadratwurzelkorrektur auf H_1 und ihr exaktes Intertwining für alle eingebetteten H_a.",
-      "obligation_ids": [
-        "C1d-COMPATIBLE-POSITIVE-COMPLETION"
-      ],
-      "uses_results": [
-        "C1a-COUPLED-SPECTRAL-MEDIATOR",
-        "C1b-ZERO-EXTENSION-INTERTWINING",
-        "C1-COMPACT-DEFECT-IDENTITY",
-        "TERMINAL-191D-DEFECT-SCHUR-A1"
-      ],
-      "candidate": "C1a-COUPLED-SPECTRAL-MEDIATOR",
-      "accepted_progress": [
-        "Definiere Delta_1=(I-R_1^*R_1)^(1/2) auf H_1 intrinsisch.",
-        "Beweise T_X,a=Delta_1 I_{a,1} T_a und die exakte Gram-Identität q_a=<T_X,a .,T_X,a .>.",
-        "Beweise die Übergangskompatibilität aus der einzigen terminalen Korrektur, ohne lokale Quadratwurzeln von Kompressionen zu identifizieren."
-      ],
-      "insufficient": [
-        "Lokale Quadratwurzeln (I-C_a)^(1/2) ohne Intertwining-Nachweis.",
-        "Nur die bereits bewiesene Positivität oder Kontraktion erneut formulieren.",
-        "Eine globale Horizontbehauptung über a=1 hinaus."
-      ]
-    },
-    "global_continuation": {
+    "unrestricted_horizon": {
       "id": "UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION",
-      "title": "Nachgelagerte globale Fortsetzung und Profilreserve",
+      "title": "Unbeschränkte Horizonterweiterung und kompatibler Transport",
       "mathematical_status": "OPEN",
       "strategic_status": "ACTIVE_FRONT",
-      "target_scope": "Jenseits des nun geschlossenen festen Horizonts bleiben skalierbare Profil-/Transportmechanismen, Horizonte >1 und die globale Weil-Testklasse separat offen.",
+      "target_scope": "Nach geschlossenem C1a-C1d auf B<=a<=1: neue Prime-Power-Horizonte a>1, erneuerbare Profilreserve, nicht summierbarer/kofinaler Transport und kompatible positive Terminalabschlüsse.",
       "obligation_ids": [
         "MOVING-PROFILE-RESERVE-RENEWAL",
         "NON-SUMMABLE-TRANSPORT",
-        "UNBOUNDED-HORIZON-COMPATIBILITY",
-        "FULL-WEIL-TEST-CLASS"
+        "UNBOUNDED-HORIZON-COMPATIBILITY"
       ],
       "uses_results": [
         "C0-DIRECTED-FORM-SYSTEM",
         "C1a-COUPLED-SPECTRAL-MEDIATOR",
         "C1b-ZERO-EXTENSION-INTERTWINING",
-        "C1-MOVING-SINGULAR-CONTINUITY",
-        "TERMINAL-191D-DEFECT-SCHUR-A1"
+        "TERMINAL-191D-DEFECT-SCHUR-A1",
+        "C1d-COMPATIBLE-POSITIVE-COMPLETION"
       ],
-      "candidate": "C1a-COUPLED-SPECTRAL-MEDIATOR",
+      "candidate": "C1d-COMPATIBLE-POSITIVE-COMPLETION",
       "accepted_progress": [
-        "Erneuerbare Low/Profile-Reserve mit nicht kollabierendem Gesetz für größere Horizonte.",
-        "Nicht summierbarer oder uniformer Fortsetzungsmechanismus jenseits des festen Horizonts.",
-        "Kompatible C1-Geometrie über Horizonte größer als 1.",
-        "Exakte globale/cofinale Weil-Testklassen-Rückbindung."
+        "Konstruiere den Spektralkandidaten bei Eintritt weiterer Prime-Power-Kanäle für Horizonte >1.",
+        "Beweise kompatible Terminalräume und positive Abschlüsse für eine wachsende oder kofinale Horizontfamilie.",
+        "Ersetze endliche Schrittketten durch ein nicht summierbares oder uniformes Fortsetzungsgesetz.",
+        "Kontrolliere Low/Profile-Kopplungen mit erneuerbarer Reserve."
       ],
       "insufficient": [
-        "Den geschlossenen Fixed-Horizon-Satz automatisch auf neue Prime-Power-Horizonte extrapolieren.",
-        "Eine neue Horizontformel ohne Intertwining- und Testklassenkontrolle.",
-        "Mikroskopische Breitenverbesserungen ohne neues Skalierungsgesetz."
+        "Den festen Horizont 1 lediglich numerisch vergrößern ohne neues Kompatibilitätsgesetz.",
+        "Neue Terminalabschlüsse ohne Intertwining untereinander.",
+        "Mikroskopische Breitenfortsetzungen ohne kofinale Skalierungsstruktur."
+      ]
+    },
+    "global_test_class": {
+      "id": "FULL-WEIL-TEST-CLASS",
+      "title": "Globale Weil-Testklasse und fensterunabhängiger Readout",
+      "mathematical_status": "OPEN",
+      "strategic_status": "ACTIVE_FRONT",
+      "target_scope": "Nach Aufbau einer kofinal kompatiblen C1-Geometrie: exakte Rückbindung an die vollständige geeignete Weil-Testklasse und einen globalen/fensterunabhängigen positiven Readout.",
+      "obligation_ids": [
+        "FULL-WEIL-TEST-CLASS"
+      ],
+      "uses_results": [
+        "C0-DIRECTED-FORM-SYSTEM",
+        "C1d-COMPATIBLE-POSITIVE-COMPLETION"
+      ],
+      "candidate": "C1d-COMPATIBLE-POSITIVE-COMPLETION",
+      "accepted_progress": [
+        "Identifiziere eine präzise kofinale Testklassen-Erschöpfung und ihre Normalisierung.",
+        "Beweise, dass der künftige globale Readout auf dieser Klasse exakt die Weil-Form reproduziert.",
+        "Trenne Testklassen-Dichte, Readout-Kompatibilität und den eigentlichen globalen Positivitätsschritt."
+      ],
+      "insufficient": [
+        "Fixed-Horizon-Positivität als globale Weil-Positivität bezeichnen.",
+        "Eine dichte Teilklasse ohne Nachweis der für das Weil-Kriterium erforderlichen Abschluss-/Approximationseigenschaften.",
+        "Objekt X oder RH vor Abschluss der globalen Testklasse behaupten."
       ]
     }
   },
@@ -105,12 +102,6 @@
       "title": "Nicht summierbares oder uniformes Fortsetzungsgesetz beweisen",
       "mathematical_status": "OPEN",
       "scope": "Über das vorhandene endliche positive Band hinaus; quantitative Schrittweiten."
-    },
-    {
-      "id": "C1d-COMPATIBLE-POSITIVE-COMPLETION",
-      "title": "Intrinsischen positiven Defektabschluss mit Übergängen konstruieren",
-      "mathematical_status": "OPEN",
-      "scope": "Kompressionsidentität von R_a*R_a allein beweist kein Intertwining korrigierter Readouts."
     },
     {
       "id": "UNBOUNDED-HORIZON-COMPATIBILITY",
@@ -722,6 +713,54 @@
         "Nicht summierbarer globaler Transport oder die vollständige globale Weil-Testklasse.",
         "Objekt X im globalen Sinn, globale Weil-Positivität oder RH."
       ]
+    },
+    {
+      "id": "C1d-COMPATIBLE-POSITIVE-COMPLETION",
+      "title": "Kompatibler positiver terminaler C1-Abschluss",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "5f19065e28b9f2e09ae93bef0b4c752ab58997d4",
+          "path": "audits/C1D_TERMINAL_SQUARE_ROOT_PROMOTION_AUDIT_2026-09-20.md",
+          "sha256": "a7ce4a42f123b97ac8714c593bfd4395a012d8e125512c8a0df8df08113068e3"
+        },
+        {
+          "commit": "5f19065e28b9f2e09ae93bef0b4c752ab58997d4",
+          "path": "research/x-c1/c1d-terminal-square-root-completion-2026-09-20/c1d_checks.log",
+          "sha256": "851f34deec1de6a4bfff6c69b548a8f30198d0e209a483502439a6b5a81551e2"
+        }
+      ],
+      "claim_polarity": "CONSTRUCTION",
+      "scope": "Kandidatenspezifischer fester C1-Horizont B<=a<=1; eine einzige terminale Quadratwurzelkorrektur auf H_1, positive geschlossene Zielräume und exaktes Nullfortsetzungs-Intertwining.",
+      "claim": [
+        "Mit eta=10^-26/(23/2+10^-26)>10^-28 gilt I-R_1^*R_1 >= eta I auf dem gesamten geschlossenen Terminalraum H_1.",
+        "Delta_1=(I-R_1^*R_1)^(1/2) ist wohldefiniert und beschränkt invertierbar; K_X,a=Delta_1 H_a ist für B<=a<=1 geschlossen und verschachtelt.",
+        "T_X,a=Delta_1 I_{a,1}T_a erfüllt q_a(u,v)=<T_X,a u,T_X,a v> exakt sesquilinear und T_X,b J_{a,b}=T_X,a für B<=a<=b<=1.",
+        "Die q_a-Norm ist der bereits vollständigen F_a-Norm äquivalent; T_X,a ist unitär von (F_a,q_a) auf K_X,a."
+      ],
+      "depends_on": [
+        "C1a-COUPLED-SPECTRAL-MEDIATOR",
+        "C1b-ZERO-EXTENSION-INTERTWINING",
+        "C1-COMPACT-DEFECT-IDENTITY",
+        "TERMINAL-191D-DEFECT-SCHUR-A1"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "a0c57ddd5c4b7dd2cf18c17b19f5af4069915387",
+      "canonical_proof": "research/x-c1/c1d-terminal-square-root-completion-2026-09-20/PROOF.md",
+      "proof_sha256": "c15561467c8c30b6fdf75a5c5bbb001e6305d5489002358735ee6b0894e69f3c",
+      "negative_claim_boundary": "Geschlossen ist ausschließlich der kandidatenspezifische positive C1-Abschluss auf B<=a<=1. Keine Aussage über größere Horizonte, globale Testklassen oder RH.",
+      "does_not_claim": [
+        "Eine C1-Erweiterung auf a>1.",
+        "Eine kofinale Familie kompatibler positiver Terminalabschlüsse.",
+        "Full C1-GEOM auf unbeschränktem Horizont.",
+        "Die vollständige globale Weil-Testklasse.",
+        "Globales Objekt X, globale Weil-Positivität oder RH."
+      ]
     }
   ],
   "global_status": {
@@ -838,11 +877,5 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [
-    {
-      "id": "C1D-TERMINAL-SQUARE-ROOT-COMPLETION",
-      "meta_path": "research/x-c1/c1d-terminal-square-root-completion-2026-09-20/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    }
-  ]
+  "pending_packages": []
 }
