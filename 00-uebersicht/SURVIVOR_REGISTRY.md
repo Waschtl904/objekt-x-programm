@@ -42,7 +42,7 @@ Reduzierte Quellenkoordinaten und gekoppelte H1-Spuren
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Gerader Sektor, B<b<=B+10^-20; physisches L2(dx), abgeschlossene Formräume und ausdrücklich gekoppelte H1-Spuren.
@@ -75,7 +75,7 @@ Tatsächlicher All-Parity-Transport auf dem endlichen Band
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: B<=a<=B+10^-10; tatsächliche Zwei-Mellin-Quellen mit voller Shell- und Coreantwort.
@@ -107,7 +107,7 @@ Uniformer vollständiger beweglicher High-Tail
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: B<=a<=1; physischer beweglicher High-Raum mit geraden Indizes ab 384 und ungeraden ab 385; genau 191 Low-Koordinaten je Parität.
@@ -139,7 +139,7 @@ Kanonisches gerichtetes physisches Formsystem
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: B<=a<=b<1 im ursprünglichen C0-Interface; Zwei-Mellin-Quellen und abgeschlossene Formräume.
@@ -171,7 +171,7 @@ Hilbert-Direktlimes der verschobenen Formräume
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Dasselbe gerichtete C0-System B<=a<1; Graphnorm aus q_a+17 I.
@@ -202,7 +202,7 @@ No-Go für kurze physische Reichweite plus endlichen Rang
 
 - Mathematical status: `AUTHOR_DERIVED_NO_GO`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Jedes B<=a<=1; exakte positive Gram-Readouts T_a=L_a+K_a mit physisch definierter räumlicher Reichweite R_a<a für L_a und beliebigem endlichem Rang von K_a.
@@ -234,7 +234,7 @@ No-Go für einzelne Prime-Kanäle als positive Gram-Blöcke
 
 - Mathematical status: `AUTHOR_DERIVED_NO_GO`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Jeder strikt aktive einzelne signierte Prime-Power-Kanal, jeweils auf geraden und ungeraden ursprünglichen Zwei-Mellin-Quellen.
@@ -265,7 +265,7 @@ Intrinsischer gekoppelter spektraler Mediator
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Fester Horizont 1, B<=a<=1, gemeinsame Kanäle 2,3,4,5,7 und vollständiges Gamma-Symbol g; kein vorausgesetztes q>=0.
@@ -298,7 +298,7 @@ Exaktes Intertwining des benannten Kandidaten
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Kandidat C1a-COUPLED-SPECTRAL-MEDIATOR innerhalb des festen Horizonts 1, B<=a<=b<=1.
@@ -330,7 +330,7 @@ Exakte kompakte Gramabweichung und Kontraktionsäquivalenz
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Derselbe feste Horizont und dieselben geschlossenen Kandidatenräume H_a; B<=a<=1.
@@ -363,7 +363,7 @@ Uniforme hohe Defektkontraktion und endliche kritische Dimension
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: B<=a<=1; vollständiger hoher T-Bildraum, Kodimension 191 je Parität.
@@ -396,7 +396,7 @@ Exakte Kongruenz zwischen physischem und Defekt-Schurrest
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: B<=a<=1; kanonischer 191D-Core je Parität nach vollständiger hoher Elimination.
@@ -429,7 +429,7 @@ Vollständige rationale Schranke für die hohe Antwort
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: B<=a<=1; Neumann-Abbruch N des hohen Responses im exakten 191D-Schurrest.
@@ -461,7 +461,7 @@ Qualitative Endpunktkontrolle der geordneten Singularwerte
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Geschachtelte Kandidatenräume im festen Horizont 1, B<=a<=1 einschließlich des Eintritts von Kanal 7.
@@ -493,7 +493,7 @@ Strikte terminale 191D-Schurpositivität in beiden Paritäten
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Tatsächliche H1_0-Zwei-Mellin-Quellen auf dem festen Horizont 0<a<=1; terminale 191D-Schurmatrizen bei a=1, beide Paritäten, vollständige hohe Antwort.
@@ -526,7 +526,7 @@ Kompatibler positiver terminaler C1-Abschluss
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Kandidatenspezifischer fester C1-Horizont B<=a<=1; eine einzige terminale Quadratwurzelkorrektur auf H_1, positive geschlossene Zielräume und exaktes Nullfortsetzungs-Intertwining.
@@ -552,5 +552,366 @@ Does not claim:
 - Full C1-GEOM auf unbeschränktem Horizont.
 - Die vollständige globale Weil-Testklasse.
 - Globales Objekt X, globale Weil-Positivität oder RH.
+- Der historische P11-fixed-pair Strong-Terminal-Satz ersetzt die offene C1-Unbounded-Horizon-Kompatibilität.
 
 Dokumentierte Reproduktion: [C1D_TERMINAL_SQUARE_ROOT_PROMOTION_AUDIT_2026-09-20.md](https://github.com/Waschtl904/objekt-x-programm/blob/5f19065e28b9f2e09ae93bef0b4c752ab58997d4/audits/C1D_TERMINAL_SQUARE_ROOT_PROMOTION_AUDIT_2026-09-20.md), [c1d_checks.log](https://github.com/Waschtl904/objekt-x-programm/blob/5f19065e28b9f2e09ae93bef0b4c752ab58997d4/research/x-c1/c1d-terminal-square-root-completion-2026-09-20/c1d_checks.log).
+
+## P02-ADELIC-WEIL-AMPLITUDE-PORT
+
+Adelischer Paley-Wiener-Port und Hermitesche Weil-Normalisierung
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `ANALYTIC_ONLY`.
+- Scope: RH-freier Port-/Normalisierungssatz von P02 Patch 3.5 unter der dort fixierten Fourier- und Haar-Konvention.
+- Canonical commit: [2c23a4f](https://github.com/Waschtl904/objekt-x-programm/commit/2c23a4f11db16061c92e3dba2a921edd1f067cc8).
+- Canonical proof: [papers/P02_Adelic_Weil_Amplitude_Port.tex](https://github.com/Waschtl904/objekt-x-programm/blob/2c23a4f11db16061c92e3dba2a921edd1f067cc8/papers/P02_Adelic_Weil_Amplitude_Port.tex).
+- depends_on: [].
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `CONSTRUCTION`.
+- Negative claim boundary: Nur Port, Hermitesche Struktur und Normalisierung; keine Positivitäts- oder globale Hilbertraumbehauptung.
+
+Aussage:
+
+- R_PW bildet S_adel^amp surjektiv auf C_c^infty(R;C) ab.
+- Die sesquilineare Evenisierung erzeugt die kanonischen Paley-Wiener-Testkerne und die vollständige Hermitesche Weilform komponentenweise.
+- Hermitesche Symmetrie und die Literatur-Normalisierung der Weilform gelten in diesem Scope.
+
+Does not claim:
+
+- Globale Weil-Positivität.
+- Ein positives globales Objekt X.
+- Die Riemannsche Vermutung.
+
+## P09-CHARGED-HOCHSCHILD-ALGEBRA
+
+Enger algebraischer P09-Hochschildkern
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `ANALYTIC_ONLY`.
+- Scope: Algebraischer Bost-Connes/Hochschild-Scope von P09; nur die final auditierten neutralen und geladenen Klassen in den explizit angegebenen Koeffizientenmodulen.
+- Canonical commit: [2c23a4f](https://github.com/Waschtl904/objekt-x-programm/commit/2c23a4f11db16061c92e3dba2a921edd1f067cc8).
+- Canonical proof: [papers/P09_BC_Hochschild_and_Charged_Cohomology.tex](https://github.com/Waschtl904/objekt-x-programm/blob/2c23a4f11db16061c92e3dba2a921edd1f067cc8/papers/P09_BC_Hochschild_and_Charged_Cohomology.tex).
+- depends_on: [].
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Keine Hochstufung auf Selbstkoeffizienten, zyklische Klassen oder Weil-/Gram-Geometrie.
+
+Aussage:
+
+- Es existiert die auditiert nichttriviale neutrale algebraische Hochschild-4-Klasse.
+- Für g!=1 ist die korrigierte geladene Klasse [D_g^corr] im angegebenen HH^1-Koeffizientenmodul nichttrivial.
+- Der geladene Cup mit dem Grad-3-Partner ist im globalen logarithmischen Bimodul als HH^4-Klasse nichttrivial.
+
+Does not claim:
+
+- Eine allgemeine getwistet-zyklische Klasse.
+- Eine Weil-/Gamma- oder Objekt-X-Realisierung.
+- RH.
+
+## P11-FINITE-HORIZON-CANDIDATE-GEOMETRY-CORE
+
+Eingefrorener finite-horizon P11-Candidate-Geometry-Core
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `ANALYTIC_ONLY`.
+- Scope: Der im Freeze Record 2026-08-21 ausdrücklich eingefrorene finite-horizon/Candidate-Geometry-Core von P11; keine spätere globale Transportpromotion wird hineingelesen.
+- Canonical commit: [2c23a4f](https://github.com/Waschtl904/objekt-x-programm/commit/2c23a4f11db16061c92e3dba2a921edd1f067cc8).
+- Canonical proof: [audits/P11_FREEZE_RECORD_2026-08-21.md](https://github.com/Waschtl904/objekt-x-programm/blob/2c23a4f11db16061c92e3dba2a921edd1f067cc8/audits/P11_FREEZE_RECORD_2026-08-21.md).
+- depends_on: [].
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `CONSTRUCTION`.
+- Negative claim boundary: Pinned finite-horizon core only; spätere R42/R43-Transportresultate sind separate Survivors.
+
+Aussage:
+
+- Der eingefrorene P11-Core umfasst die auditierten Quellkonditionierungs-, Graphraum-, endlichen Feshbach/Schur- und exakten Pullback/Transition-Bausteine.
+- Positive Terminalmetriken und normierte same-terminal Isometrien sind im eingefrorenen P11-Scope Bestandteil der Konstruktion.
+- Die im Freeze Record festgehaltenen Kompaktheits-, Schatten- und Mosco-Firewalls bleiben Teil des Scopes.
+
+Does not claim:
+
+- P11-weite globale Objekt-X-Schließung.
+- C1-Kompatibilität unbeschränkter Horizonte.
+- RH.
+
+## P11-R27-CONSTRAINED-GAMMA-MOSCO
+
+R27 constrained Gamma-Mosco-, Resolventen- und Inverswurzel-Limes
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `ANALYTIC_ONLY`.
+- Scope: Feste P11-Quellgraphräume und der geschlossene Hard-Constraint-Hyperraum; genau die R27-A bis R27-D Aussagen.
+- Canonical commit: [2c23a4f](https://github.com/Waschtl904/objekt-x-programm/commit/2c23a4f11db16061c92e3dba2a921edd1f067cc8).
+- Canonical proof: [audits/P11_REFEREE_E2E_R27_CONSTRAINED_GAMMA_MOSCO_LIMIT_2026-08-15.md](https://github.com/Waschtl904/objekt-x-programm/blob/2c23a4f11db16061c92e3dba2a921edd1f067cc8/audits/P11_REFEREE_E2E_R27_CONSTRAINED_GAMMA_MOSCO_LIMIT_2026-08-15.md).
+- depends_on: `P11-FINITE-HORIZON-CANDIDATE-GEOMETRY-CORE`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Modulus/Inversfunktionalkalkül auf festen Quellräumen; keine Kontrolle der bewegten Polar-Faktoren.
+
+Aussage:
+
+- Die gezogenen Terminalformen besitzen den constrained Gamma-Mosco-Limes auf dem geschlossenen Hyperraum.
+- Die relativen Resolventen besitzen für jedes feste t>=0 starke constrained-Gamma-Limites.
+- Die konkreten inversen Quadratwurzeln besitzen die in R27 ausgewiesenen starken Limites.
+
+Does not claim:
+
+- Strong Terminal für sich allein.
+- Operatornormkonvergenz der Transporte.
+- Globales Objekt X oder RH.
+
+## P11-R42-TANGENTIAL-STRONG-TRANSPORT
+
+R42 tangentialer starker P11-Transport
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `ANALYTIC_ONLY`.
+- Scope: Für jedes feste 0<R<S<T0: tatsächlicher P11-Future-Transport auf dem unendlichdimensionalen abgeschlossenen Hard-Constraint-Hyperraum H_R^0.
+- Canonical commit: [2c23a4f](https://github.com/Waschtl904/objekt-x-programm/commit/2c23a4f11db16061c92e3dba2a921edd1f067cc8).
+- Canonical proof: [audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md](https://github.com/Waschtl904/objekt-x-programm/blob/2c23a4f11db16061c92e3dba2a921edd1f067cc8/audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md).
+- depends_on: `P11-FINITE-HORIZON-CANDIDATE-GEOMETRY-CORE`, `P11-R27-CONSTRAINED-GAMMA-MOSCO`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Nur tangentialer Hard-Constraint-Kanal mit festen Radien; der Normalorbit wird hier nicht geschlossen.
+
+Aussage:
+
+- R42.51 liefert starke Konvergenz des tatsächlichen Future-Transports auf H_R^0.
+- R42 reduziert das verbleibende fixed-pair Strong-Terminal-Problem exakt auf den einen Normalorbit.
+
+Does not claim:
+
+- Full-space Strong Terminal allein.
+- Uniformität in R,S.
+- Operatornormkonvergenz.
+- C1-Unbounded-Horizon-Kompatibilität.
+
+## P11-FIXED-PAIR-STRONG-TERMINAL
+
+P11 fixed-pair Strong Terminal auf den ursprünglichen ungeraden Graphräumen
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `ANALYTIC_ONLY`.
+- Scope: Für jedes feste 0<R<S<infinity auf den ursprünglichen ungeraden P11-Graph-Hilberträumen; Terminalparameter U->infinity.
+- Canonical commit: [2c23a4f](https://github.com/Waschtl904/objekt-x-programm/commit/2c23a4f11db16061c92e3dba2a921edd1f067cc8).
+- Canonical proof: [audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md](https://github.com/Waschtl904/objekt-x-programm/blob/2c23a4f11db16061c92e3dba2a921edd1f067cc8/audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md).
+- depends_on: `P11-R42-TANGENTIAL-STRONG-TRANSPORT`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Fixed-pair strong convergence only; der Name ist absichtlich nicht das unqualifizierte globale 'Strong Terminal'.
+
+Aussage:
+
+- Der kanonische Normalorbit erfüllt W_[R,S]^[U] epsilon_R -> epsilon_S stark.
+- Zusammen mit R42.51 konvergiert der tatsächliche Future-Transport für jedes feste Quellglied stark und schließt den fixed-pair C6/Strong-Terminal-Schritt im ausgewiesenen P11-Scope.
+- Der direkte No-escape-Schluss erfasst den ganzen reellen Terminaltail einschließlich Aktivierungspunkten.
+
+Does not claim:
+
+- Uniforme Konvergenz in R,S.
+- Operatornormkonvergenz.
+- Eine Konvergenzrate oder summierbare Gesamtvariation.
+- C1-Kompatibilität über unbeschränkte Terminalhorizonte und Prime-Power-Wände.
+- Globales Objekt X oder RH.
+
+## P11-AR1-WEIL-TAIL-ALGEBRA
+
+Exakte AR(1)- und Weil-Tail-Algebra
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `ANALYTIC_ONLY`.
+- Scope: Nur die explizit erhaltenen algebraischen Identitäten des AR(1)/Weil-Tail-Konsolidierungsdokuments; keine dort zurückgezogenen Interpretationen.
+- Canonical commit: [2c23a4f](https://github.com/Waschtl904/objekt-x-programm/commit/2c23a4f11db16061c92e3dba2a921edd1f067cc8).
+- Canonical proof: [audits/P11_OBJECT_X_AR1_OX_GRAM_CONSOLIDATION_2026-09-12.md](https://github.com/Waschtl904/objekt-x-programm/blob/2c23a4f11db16061c92e3dba2a921edd1f067cc8/audits/P11_OBJECT_X_AR1_OX_GRAM_CONSOLIDATION_2026-09-12.md).
+- depends_on: `P11-FINITE-HORIZON-CANDIDATE-GEOMETRY-CORE`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: Nur exakte Koeffizienten- und Tailidentitäten; verworfene Hub/Nichtunitaritätsdeutungen sind nicht Teil des Survivors.
+
+Aussage:
+
+- Der Prime-Power-Koeffizientenledger besitzt die exakte normalisierte AR(1)/Kac-Murdock-Szego-Struktur.
+- Der Tail-Transform erfüllt T_q^*T_q+uu^*=R_q und die angegebene Innovationsinversion.
+- Die P11-Restseite besitzt die ausgewiesene exakte Weil-Tail-Normalform.
+
+Does not claim:
+
+- Eine globale OX-GRAM-Schließung.
+- Positivität der vollständigen Weilform.
+- Objekt X oder RH.
+
+## P11-OX-GEN-R0-RANK2-GENERATOR
+
+OX-GEN rank-2 Translationgenerator und r0-Brücke
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `ANALYTIC_ONLY`.
+- Scope: Kompakt getragene bzw. nullfortgesetzte Testfunktionen; nur Suzukis r0-Teil und die zweidimensionale Exponentialmoment-Geometrie.
+- Canonical commit: [2c23a4f](https://github.com/Waschtl904/objekt-x-programm/commit/2c23a4f11db16061c92e3dba2a921edd1f067cc8).
+- Canonical proof: [audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md](https://github.com/Waschtl904/objekt-x-programm/blob/2c23a4f11db16061c92e3dba2a921edd1f067cc8/audits/P11_OX_GEN_A_COMMON_EXPONENTIAL_GENERATOR_2026-09-13.md).
+- depends_on: [].
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `CONSTRUCTION`.
+- Negative claim boundary: r0/rank-2-Generator-Ebene only; r1 und Skalarblock bleiben außerhalb.
+
+Aussage:
+
+- Die Exponentialmomentabbildung erfüllt E T_t = rho(t) E und E K_n = D_n E.
+- Der r0-Term ist die Charakterform derselben rank-2 Translationrepräsentation und erfüllt r0(log n)=-4 lambda_n^2.
+- Die polarisierte rank-2-Paritätsform und die Prime-Kanal-Antikovarianz gelten exakt.
+
+Does not claim:
+
+- Eine vollständige positive Weil-Realisierung.
+- Schließung von r1 oder c_a I.
+- Objekt X oder RH.
+
+## P11-POS-DIL1-PRIME-MOMENT-FEATURE
+
+POS-DIL-1 Prime-Moment-Featurekonstruktion
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `ANALYTIC_ONLY`.
+- Scope: Die vorab definierte rank-2 Prime-Moment-Companion-Klasse auf der OX-GEN-Ebene; r0-Block.
+- Canonical commit: [2c23a4f](https://github.com/Waschtl904/objekt-x-programm/commit/2c23a4f11db16061c92e3dba2a921edd1f067cc8).
+- Canonical proof: [audits/P11_POS_DIL_1_PRIME_MOMENT_HILBERTIZATION_2026-09-13.md](https://github.com/Waschtl904/objekt-x-programm/blob/2c23a4f11db16061c92e3dba2a921edd1f067cc8/audits/P11_POS_DIL_1_PRIME_MOMENT_HILBERTIZATION_2026-09-13.md).
+- depends_on: `P11-OX-GEN-R0-RANK2-GENERATOR`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `CONSTRUCTION`.
+- Negative claim boundary: Nur die enge vorab definierte rank-2 Companion-/Featureklasse.
+
+Aussage:
+
+- Spiegelung und normalisierter Prime-Generator erzwingen in der Companion-Klasse M=tI.
+- Die scharfe minimale positive Companion-Metrik ist M_min=I.
+- Die daraus gebaute Prime-Moment-Featureabbildung hat exakt die Norm |E_+|^2+|E_-|^2 und komprimiert den r0-Term durch dieselbe Abbildung.
+
+Does not claim:
+
+- Kontraktive Einbettung in die volle positive Featureform G_a^+.
+- Schließung von r1 oder c_a I.
+- Objekt X oder RH.
+
+## P11-POS-DIL1-NO-POSITIVE-RHO-INVARIANT-METRIC
+
+No-Go für positive rho-invariante rank-2 Hilbertmetrik
+
+- Mathematical status: `AUTHOR_DERIVED_NO_GO`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `ANALYTIC_ONLY`.
+- Scope: Dieselbe rank-2 OX-GEN-Ebene; exakte Invarianz rho(t)^* M rho(t)=M für alle reellen t.
+- Canonical commit: [2c23a4f](https://github.com/Waschtl904/objekt-x-programm/commit/2c23a4f11db16061c92e3dba2a921edd1f067cc8).
+- Canonical proof: [audits/P11_POS_DIL_1_PRIME_MOMENT_HILBERTIZATION_2026-09-13.md](https://github.com/Waschtl904/objekt-x-programm/blob/2c23a4f11db16061c92e3dba2a921edd1f067cc8/audits/P11_POS_DIL_1_PRIME_MOMENT_HILBERTIZATION_2026-09-13.md).
+- depends_on: `P11-OX-GEN-R0-RANK2-GENERATOR`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `NEGATIVE_FOR_CANDIDATE_CLASS`.
+- Negative claim boundary: Ausgeschlossen ist nur die exakte positive/unitäre rank-2 Invarianzklasse.
+
+Aussage:
+
+- Die einzige positive semidefinite Hermiteform auf C^2, die unter der vollen rho(t)-Translationrepräsentation invariant ist, ist M=0.
+- Daher gibt es in dieser Klasse keinen injektiven Hilbert-Intertwiner in eine unitäre Gruppe.
+
+Does not claim:
+
+- Ausschluss größerer Koligationen oder Kompressionen.
+- Ausschluss nichtunitärer positiver Zielaktionen.
+- Ausschluss des späteren C1-Mediators.
+
+## P11-POS-DIL2A-UNIT-GAIN-SHORTING-NOGO
+
+No-Go für unit-gain Feature-Shorting bei a=1/2
+
+- Mathematical status: `AUTHOR_DERIVED_NO_GO`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `ANALYTIC_ONLY`.
+- Scope: a=1/2, unaugmentierte lokale positive Featureform G_{1/2}^+ und die vorab definierte unit-gain kontraktive Target-Shorting-Klasse.
+- Canonical commit: [2c23a4f](https://github.com/Waschtl904/objekt-x-programm/commit/2c23a4f11db16061c92e3dba2a921edd1f067cc8).
+- Canonical proof: [audits/P11_POS_DIL_2_UNIT_GAIN_FEATURE_SHORTING_NOGO_2026-09-13.md](https://github.com/Waschtl904/objekt-x-programm/blob/2c23a4f11db16061c92e3dba2a921edd1f067cc8/audits/P11_POS_DIL_2_UNIT_GAIN_FEATURE_SHORTING_NOGO_2026-09-13.md).
+- depends_on: `P11-POS-DIL1-PRIME-MOMENT-FEATURE`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `NEGATIVE_FOR_CANDIDATE_CLASS`.
+- Negative claim boundary: Nur die unaugmentierte unit-gain Shorting-Klasse bei a=1/2.
+
+Aussage:
+
+- Es existieren zulässige Testfunktionen mit |R_0(v,v)|>G_{1/2}^+(v).
+- Damit existiert in dieser unaugmentierten unit-gain Klasse kein kontraktiver Targetoperator, der R0 aus einem Featureoperator mit Normquadrat G_{1/2}^+ realisiert.
+
+Does not claim:
+
+- Ausschluss augmentierter Prime-Shell-Geometrien.
+- Ausschluss von Gain>1.
+- Ausschluss des späteren gekoppelten C1-Mediators.
+
+## P11-POS-DIL2C-EXTERIOR-SHELL-R0-ABSORPTION
+
+Exakte Außenkanal-Gauge und positive r0-Absorption
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `ANALYTIC_ONLY`.
+- Scope: Lokalisierte Suzuki/Weilform auf 0<a<=1 und nullfortgesetzte H_0^1(-a,a)-Testklasse; nur Shell-Gauge und r0-Absorption.
+- Canonical commit: [2c23a4f](https://github.com/Waschtl904/objekt-x-programm/commit/2c23a4f11db16061c92e3dba2a921edd1f067cc8).
+- Canonical proof: [audits/P11_POS_DIL_2C_EXACT_SHELL_GAUGE_R0_ABSORPTION_2026-09-13.md](https://github.com/Waschtl904/objekt-x-programm/blob/2c23a4f11db16061c92e3dba2a921edd1f067cc8/audits/P11_POS_DIL_2C_EXACT_SHELL_GAUGE_R0_ABSORPTION_2026-09-13.md).
+- depends_on: `P11-OX-GEN-R0-RANK2-GENERATOR`, `P11-POS-DIL1-PRIME-MOMENT-FEATURE`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `CONSTRUCTION`.
+- Negative claim boundary: Exakte Shellbuchung und r0-Absorption; keine Schließung der restlichen negativen Blöcke.
+
+Aussage:
+
+- Jede endliche Menge echter Außenkanäle c_n>a erzeugt auf dem Fenster exakt eine skalare Prime-Masse und kann identisch in Feature- und Skalarledger gegengebucht werden.
+- Der geometrische erste Außenshell liefert A_a^out >= E^*E für 0<a<=1.
+- P_a^(0)=A_a^out-R0 ist positiv und die volle lokalisierte Weilform erhält die exakte umgebuchte Normalform mit weiterhin offenem Skalarblock und R1.
+
+Does not claim:
+
+- Positivität der vollständigen Weilform aus diesem Paket allein.
+- Schließung von R1 oder des skalaren Blocks.
+- Globales Objekt X oder RH.
