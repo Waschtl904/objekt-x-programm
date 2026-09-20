@@ -1,0 +1,444 @@
+PASS pinned rigorous arithmetic version
+PASS actual terminal dimensions and arithmetic parameters
+PASS analytic input anchor is the frozen Schur bridge
+PASS pinned input research/x-c1/active-set-segment-schur-2026-09-18/PROOF.md
+PASS pinned input research/x-c1/all-parity-window-and-restart-2026-09-19/PROOF.md
+PASS pinned input research/x-c1/block-adaptive-profile-transport-2026-09-19/PROOF.md
+PASS pinned input research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md
+PASS pinned input research/x-c1/c1-coupled-spectral-mediator-2026-09-20/README.md
+PASS pinned input research/x-c1/c1-coupled-spectral-mediator-2026-09-20/SHA256SUMS
+PASS pinned input research/x-c1/c1-coupled-spectral-mediator-2026-09-20/STATUS_DE.md
+PASS pinned input research/x-c1/c1-coupled-spectral-mediator-2026-09-20/check_mediator.py
+PASS pinned input research/x-c1/c1-coupled-spectral-mediator-2026-09-20/input_bindings.json
+PASS pinned input research/x-c1/c1-coupled-spectral-mediator-2026-09-20/mediator_checks.log
+PASS pinned input research/x-c1/c1-coupled-spectral-mediator-2026-09-20/mediator_results.json
+PASS pinned input research/x-c1/c1-readout-nonlocality-obstruction-2026-09-19/PROOF.md
+PASS pinned input research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md
+PASS pinned input research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/README.md
+PASS pinned input research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/SHA256SUMS
+PASS pinned input research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/STATUS_DE.md
+PASS pinned input research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/bridge_checks.log
+PASS pinned input research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/bridge_results.json
+PASS pinned input research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/check_bridge.py
+PASS pinned input research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/input_bindings.json
+PASS pinned input research/x-c1/moving-endpoint-harmonic-block-renewal-2026-09-19/PROOF.md
+PASS pinned input research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/PROOF.md
+PASS pinned input research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/README.md
+PASS pinned input research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/SHA256SUMS
+PASS pinned input research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/STATUS_DE.md
+PASS pinned input research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/check_tail.py
+PASS pinned input research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/input_bindings.json
+PASS pinned input research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/tail_checks.log
+PASS pinned input research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/tail_results.json
+PASS pinned input research/x-c1/prime-power-segment-4-2026-09-18/PROOF.md
+PASS pinned input research/x-c1/universal-prime-power-family-2026-09-18/PROOF.md
+PASS pinned input research/x-c1/x-interface-directed-system-2026-09-19/PROOF.md
+PASS 64 independent normalization identities
+PASS rational complete form error budget matches artifact
+PASS fixed terminal tail and certificate margin
+PASS full Gamma polynomial error bound
+PASS stored Gamma interval contains the exact residual bound
+PASS complete high Mellin correction is below 10^-100
+PASS Gamma and moment form errors fit the rational budget
+PASS five terminal channels and three-vertex prime2 chains
+PASS regular Gamma endpoint lies strictly between zero and one quarter
+PASS independent terminal raw high floor exceeds 73/100
+PASS actual moment-corrected terminal high floor exceeds 7/10
+PASS even dimension 191
+PASS even complete rational triangular preconditioner
+PASS even complete directed row 0 exceeds 9/10
+PASS even complete directed row 1 exceeds 9/10
+PASS even complete directed row 2 exceeds 9/10
+PASS even complete directed row 3 exceeds 9/10
+PASS even complete directed row 4 exceeds 9/10
+PASS even complete directed row 5 exceeds 9/10
+PASS even complete directed row 6 exceeds 9/10
+PASS even complete directed row 7 exceeds 9/10
+PASS even complete directed row 8 exceeds 9/10
+PASS even complete directed row 9 exceeds 9/10
+PASS even complete directed row 10 exceeds 9/10
+PASS even complete directed row 11 exceeds 9/10
+PASS even complete directed row 12 exceeds 9/10
+PASS even complete directed row 13 exceeds 9/10
+PASS even complete directed row 14 exceeds 9/10
+PASS even complete directed row 15 exceeds 9/10
+PASS even complete directed row 16 exceeds 9/10
+PASS even complete directed row 17 exceeds 9/10
+PASS even complete directed row 18 exceeds 9/10
+PASS even complete directed row 19 exceeds 9/10
+PASS even complete directed row 20 exceeds 9/10
+PASS even complete directed row 21 exceeds 9/10
+PASS even complete directed row 22 exceeds 9/10
+PASS even complete directed row 23 exceeds 9/10
+PASS even complete directed row 24 exceeds 9/10
+PASS even complete directed row 25 exceeds 9/10
+PASS even complete directed row 26 exceeds 9/10
+PASS even complete directed row 27 exceeds 9/10
+PASS even complete directed row 28 exceeds 9/10
+PASS even complete directed row 29 exceeds 9/10
+PASS even complete directed row 30 exceeds 9/10
+PASS even complete directed row 31 exceeds 9/10
+PASS even complete directed row 32 exceeds 9/10
+PASS even complete directed row 33 exceeds 9/10
+PASS even complete directed row 34 exceeds 9/10
+PASS even complete directed row 35 exceeds 9/10
+PASS even complete directed row 36 exceeds 9/10
+PASS even complete directed row 37 exceeds 9/10
+PASS even complete directed row 38 exceeds 9/10
+PASS even complete directed row 39 exceeds 9/10
+PASS even complete directed row 40 exceeds 9/10
+PASS even complete directed row 41 exceeds 9/10
+PASS even complete directed row 42 exceeds 9/10
+PASS even complete directed row 43 exceeds 9/10
+PASS even complete directed row 44 exceeds 9/10
+PASS even complete directed row 45 exceeds 9/10
+PASS even complete directed row 46 exceeds 9/10
+PASS even complete directed row 47 exceeds 9/10
+PASS even complete directed row 48 exceeds 9/10
+PASS even complete directed row 49 exceeds 9/10
+PASS even complete directed row 50 exceeds 9/10
+PASS even complete directed row 51 exceeds 9/10
+PASS even complete directed row 52 exceeds 9/10
+PASS even complete directed row 53 exceeds 9/10
+PASS even complete directed row 54 exceeds 9/10
+PASS even complete directed row 55 exceeds 9/10
+PASS even complete directed row 56 exceeds 9/10
+PASS even complete directed row 57 exceeds 9/10
+PASS even complete directed row 58 exceeds 9/10
+PASS even complete directed row 59 exceeds 9/10
+PASS even complete directed row 60 exceeds 9/10
+PASS even complete directed row 61 exceeds 9/10
+PASS even complete directed row 62 exceeds 9/10
+PASS even complete directed row 63 exceeds 9/10
+PASS even complete directed row 64 exceeds 9/10
+PASS even complete directed row 65 exceeds 9/10
+PASS even complete directed row 66 exceeds 9/10
+PASS even complete directed row 67 exceeds 9/10
+PASS even complete directed row 68 exceeds 9/10
+PASS even complete directed row 69 exceeds 9/10
+PASS even complete directed row 70 exceeds 9/10
+PASS even complete directed row 71 exceeds 9/10
+PASS even complete directed row 72 exceeds 9/10
+PASS even complete directed row 73 exceeds 9/10
+PASS even complete directed row 74 exceeds 9/10
+PASS even complete directed row 75 exceeds 9/10
+PASS even complete directed row 76 exceeds 9/10
+PASS even complete directed row 77 exceeds 9/10
+PASS even complete directed row 78 exceeds 9/10
+PASS even complete directed row 79 exceeds 9/10
+PASS even complete directed row 80 exceeds 9/10
+PASS even complete directed row 81 exceeds 9/10
+PASS even complete directed row 82 exceeds 9/10
+PASS even complete directed row 83 exceeds 9/10
+PASS even complete directed row 84 exceeds 9/10
+PASS even complete directed row 85 exceeds 9/10
+PASS even complete directed row 86 exceeds 9/10
+PASS even complete directed row 87 exceeds 9/10
+PASS even complete directed row 88 exceeds 9/10
+PASS even complete directed row 89 exceeds 9/10
+PASS even complete directed row 90 exceeds 9/10
+PASS even complete directed row 91 exceeds 9/10
+PASS even complete directed row 92 exceeds 9/10
+PASS even complete directed row 93 exceeds 9/10
+PASS even complete directed row 94 exceeds 9/10
+PASS even complete directed row 95 exceeds 9/10
+PASS even complete directed row 96 exceeds 9/10
+PASS even complete directed row 97 exceeds 9/10
+PASS even complete directed row 98 exceeds 9/10
+PASS even complete directed row 99 exceeds 9/10
+PASS even complete directed row 100 exceeds 9/10
+PASS even complete directed row 101 exceeds 9/10
+PASS even complete directed row 102 exceeds 9/10
+PASS even complete directed row 103 exceeds 9/10
+PASS even complete directed row 104 exceeds 9/10
+PASS even complete directed row 105 exceeds 9/10
+PASS even complete directed row 106 exceeds 9/10
+PASS even complete directed row 107 exceeds 9/10
+PASS even complete directed row 108 exceeds 9/10
+PASS even complete directed row 109 exceeds 9/10
+PASS even complete directed row 110 exceeds 9/10
+PASS even complete directed row 111 exceeds 9/10
+PASS even complete directed row 112 exceeds 9/10
+PASS even complete directed row 113 exceeds 9/10
+PASS even complete directed row 114 exceeds 9/10
+PASS even complete directed row 115 exceeds 9/10
+PASS even complete directed row 116 exceeds 9/10
+PASS even complete directed row 117 exceeds 9/10
+PASS even complete directed row 118 exceeds 9/10
+PASS even complete directed row 119 exceeds 9/10
+PASS even complete directed row 120 exceeds 9/10
+PASS even complete directed row 121 exceeds 9/10
+PASS even complete directed row 122 exceeds 9/10
+PASS even complete directed row 123 exceeds 9/10
+PASS even complete directed row 124 exceeds 9/10
+PASS even complete directed row 125 exceeds 9/10
+PASS even complete directed row 126 exceeds 9/10
+PASS even complete directed row 127 exceeds 9/10
+PASS even complete directed row 128 exceeds 9/10
+PASS even complete directed row 129 exceeds 9/10
+PASS even complete directed row 130 exceeds 9/10
+PASS even complete directed row 131 exceeds 9/10
+PASS even complete directed row 132 exceeds 9/10
+PASS even complete directed row 133 exceeds 9/10
+PASS even complete directed row 134 exceeds 9/10
+PASS even complete directed row 135 exceeds 9/10
+PASS even complete directed row 136 exceeds 9/10
+PASS even complete directed row 137 exceeds 9/10
+PASS even complete directed row 138 exceeds 9/10
+PASS even complete directed row 139 exceeds 9/10
+PASS even complete directed row 140 exceeds 9/10
+PASS even complete directed row 141 exceeds 9/10
+PASS even complete directed row 142 exceeds 9/10
+PASS even complete directed row 143 exceeds 9/10
+PASS even complete directed row 144 exceeds 9/10
+PASS even complete directed row 145 exceeds 9/10
+PASS even complete directed row 146 exceeds 9/10
+PASS even complete directed row 147 exceeds 9/10
+PASS even complete directed row 148 exceeds 9/10
+PASS even complete directed row 149 exceeds 9/10
+PASS even complete directed row 150 exceeds 9/10
+PASS even complete directed row 151 exceeds 9/10
+PASS even complete directed row 152 exceeds 9/10
+PASS even complete directed row 153 exceeds 9/10
+PASS even complete directed row 154 exceeds 9/10
+PASS even complete directed row 155 exceeds 9/10
+PASS even complete directed row 156 exceeds 9/10
+PASS even complete directed row 157 exceeds 9/10
+PASS even complete directed row 158 exceeds 9/10
+PASS even complete directed row 159 exceeds 9/10
+PASS even complete directed row 160 exceeds 9/10
+PASS even complete directed row 161 exceeds 9/10
+PASS even complete directed row 162 exceeds 9/10
+PASS even complete directed row 163 exceeds 9/10
+PASS even complete directed row 164 exceeds 9/10
+PASS even complete directed row 165 exceeds 9/10
+PASS even complete directed row 166 exceeds 9/10
+PASS even complete directed row 167 exceeds 9/10
+PASS even complete directed row 168 exceeds 9/10
+PASS even complete directed row 169 exceeds 9/10
+PASS even complete directed row 170 exceeds 9/10
+PASS even complete directed row 171 exceeds 9/10
+PASS even complete directed row 172 exceeds 9/10
+PASS even complete directed row 173 exceeds 9/10
+PASS even complete directed row 174 exceeds 9/10
+PASS even complete directed row 175 exceeds 9/10
+PASS even complete directed row 176 exceeds 9/10
+PASS even complete directed row 177 exceeds 9/10
+PASS even complete directed row 178 exceeds 9/10
+PASS even complete directed row 179 exceeds 9/10
+PASS even complete directed row 180 exceeds 9/10
+PASS even complete directed row 181 exceeds 9/10
+PASS even complete directed row 182 exceeds 9/10
+PASS even complete directed row 183 exceeds 9/10
+PASS even complete directed row 184 exceeds 9/10
+PASS even complete directed row 185 exceeds 9/10
+PASS even complete directed row 186 exceeds 9/10
+PASS even complete directed row 187 exceeds 9/10
+PASS even complete directed row 188 exceeds 9/10
+PASS even complete directed row 189 exceeds 9/10
+PASS even complete directed row 190 exceeds 9/10
+PASS even all 191 directed LDL pivots are positive
+PASS even certified Euclidean physical Schur reserve
+PASS even complete inverse shear squared below 169
+PASS even physical norm conversion and strict gap
+PASS odd dimension 191
+PASS odd complete rational triangular preconditioner
+PASS odd complete directed row 0 exceeds 9/10
+PASS odd complete directed row 1 exceeds 9/10
+PASS odd complete directed row 2 exceeds 9/10
+PASS odd complete directed row 3 exceeds 9/10
+PASS odd complete directed row 4 exceeds 9/10
+PASS odd complete directed row 5 exceeds 9/10
+PASS odd complete directed row 6 exceeds 9/10
+PASS odd complete directed row 7 exceeds 9/10
+PASS odd complete directed row 8 exceeds 9/10
+PASS odd complete directed row 9 exceeds 9/10
+PASS odd complete directed row 10 exceeds 9/10
+PASS odd complete directed row 11 exceeds 9/10
+PASS odd complete directed row 12 exceeds 9/10
+PASS odd complete directed row 13 exceeds 9/10
+PASS odd complete directed row 14 exceeds 9/10
+PASS odd complete directed row 15 exceeds 9/10
+PASS odd complete directed row 16 exceeds 9/10
+PASS odd complete directed row 17 exceeds 9/10
+PASS odd complete directed row 18 exceeds 9/10
+PASS odd complete directed row 19 exceeds 9/10
+PASS odd complete directed row 20 exceeds 9/10
+PASS odd complete directed row 21 exceeds 9/10
+PASS odd complete directed row 22 exceeds 9/10
+PASS odd complete directed row 23 exceeds 9/10
+PASS odd complete directed row 24 exceeds 9/10
+PASS odd complete directed row 25 exceeds 9/10
+PASS odd complete directed row 26 exceeds 9/10
+PASS odd complete directed row 27 exceeds 9/10
+PASS odd complete directed row 28 exceeds 9/10
+PASS odd complete directed row 29 exceeds 9/10
+PASS odd complete directed row 30 exceeds 9/10
+PASS odd complete directed row 31 exceeds 9/10
+PASS odd complete directed row 32 exceeds 9/10
+PASS odd complete directed row 33 exceeds 9/10
+PASS odd complete directed row 34 exceeds 9/10
+PASS odd complete directed row 35 exceeds 9/10
+PASS odd complete directed row 36 exceeds 9/10
+PASS odd complete directed row 37 exceeds 9/10
+PASS odd complete directed row 38 exceeds 9/10
+PASS odd complete directed row 39 exceeds 9/10
+PASS odd complete directed row 40 exceeds 9/10
+PASS odd complete directed row 41 exceeds 9/10
+PASS odd complete directed row 42 exceeds 9/10
+PASS odd complete directed row 43 exceeds 9/10
+PASS odd complete directed row 44 exceeds 9/10
+PASS odd complete directed row 45 exceeds 9/10
+PASS odd complete directed row 46 exceeds 9/10
+PASS odd complete directed row 47 exceeds 9/10
+PASS odd complete directed row 48 exceeds 9/10
+PASS odd complete directed row 49 exceeds 9/10
+PASS odd complete directed row 50 exceeds 9/10
+PASS odd complete directed row 51 exceeds 9/10
+PASS odd complete directed row 52 exceeds 9/10
+PASS odd complete directed row 53 exceeds 9/10
+PASS odd complete directed row 54 exceeds 9/10
+PASS odd complete directed row 55 exceeds 9/10
+PASS odd complete directed row 56 exceeds 9/10
+PASS odd complete directed row 57 exceeds 9/10
+PASS odd complete directed row 58 exceeds 9/10
+PASS odd complete directed row 59 exceeds 9/10
+PASS odd complete directed row 60 exceeds 9/10
+PASS odd complete directed row 61 exceeds 9/10
+PASS odd complete directed row 62 exceeds 9/10
+PASS odd complete directed row 63 exceeds 9/10
+PASS odd complete directed row 64 exceeds 9/10
+PASS odd complete directed row 65 exceeds 9/10
+PASS odd complete directed row 66 exceeds 9/10
+PASS odd complete directed row 67 exceeds 9/10
+PASS odd complete directed row 68 exceeds 9/10
+PASS odd complete directed row 69 exceeds 9/10
+PASS odd complete directed row 70 exceeds 9/10
+PASS odd complete directed row 71 exceeds 9/10
+PASS odd complete directed row 72 exceeds 9/10
+PASS odd complete directed row 73 exceeds 9/10
+PASS odd complete directed row 74 exceeds 9/10
+PASS odd complete directed row 75 exceeds 9/10
+PASS odd complete directed row 76 exceeds 9/10
+PASS odd complete directed row 77 exceeds 9/10
+PASS odd complete directed row 78 exceeds 9/10
+PASS odd complete directed row 79 exceeds 9/10
+PASS odd complete directed row 80 exceeds 9/10
+PASS odd complete directed row 81 exceeds 9/10
+PASS odd complete directed row 82 exceeds 9/10
+PASS odd complete directed row 83 exceeds 9/10
+PASS odd complete directed row 84 exceeds 9/10
+PASS odd complete directed row 85 exceeds 9/10
+PASS odd complete directed row 86 exceeds 9/10
+PASS odd complete directed row 87 exceeds 9/10
+PASS odd complete directed row 88 exceeds 9/10
+PASS odd complete directed row 89 exceeds 9/10
+PASS odd complete directed row 90 exceeds 9/10
+PASS odd complete directed row 91 exceeds 9/10
+PASS odd complete directed row 92 exceeds 9/10
+PASS odd complete directed row 93 exceeds 9/10
+PASS odd complete directed row 94 exceeds 9/10
+PASS odd complete directed row 95 exceeds 9/10
+PASS odd complete directed row 96 exceeds 9/10
+PASS odd complete directed row 97 exceeds 9/10
+PASS odd complete directed row 98 exceeds 9/10
+PASS odd complete directed row 99 exceeds 9/10
+PASS odd complete directed row 100 exceeds 9/10
+PASS odd complete directed row 101 exceeds 9/10
+PASS odd complete directed row 102 exceeds 9/10
+PASS odd complete directed row 103 exceeds 9/10
+PASS odd complete directed row 104 exceeds 9/10
+PASS odd complete directed row 105 exceeds 9/10
+PASS odd complete directed row 106 exceeds 9/10
+PASS odd complete directed row 107 exceeds 9/10
+PASS odd complete directed row 108 exceeds 9/10
+PASS odd complete directed row 109 exceeds 9/10
+PASS odd complete directed row 110 exceeds 9/10
+PASS odd complete directed row 111 exceeds 9/10
+PASS odd complete directed row 112 exceeds 9/10
+PASS odd complete directed row 113 exceeds 9/10
+PASS odd complete directed row 114 exceeds 9/10
+PASS odd complete directed row 115 exceeds 9/10
+PASS odd complete directed row 116 exceeds 9/10
+PASS odd complete directed row 117 exceeds 9/10
+PASS odd complete directed row 118 exceeds 9/10
+PASS odd complete directed row 119 exceeds 9/10
+PASS odd complete directed row 120 exceeds 9/10
+PASS odd complete directed row 121 exceeds 9/10
+PASS odd complete directed row 122 exceeds 9/10
+PASS odd complete directed row 123 exceeds 9/10
+PASS odd complete directed row 124 exceeds 9/10
+PASS odd complete directed row 125 exceeds 9/10
+PASS odd complete directed row 126 exceeds 9/10
+PASS odd complete directed row 127 exceeds 9/10
+PASS odd complete directed row 128 exceeds 9/10
+PASS odd complete directed row 129 exceeds 9/10
+PASS odd complete directed row 130 exceeds 9/10
+PASS odd complete directed row 131 exceeds 9/10
+PASS odd complete directed row 132 exceeds 9/10
+PASS odd complete directed row 133 exceeds 9/10
+PASS odd complete directed row 134 exceeds 9/10
+PASS odd complete directed row 135 exceeds 9/10
+PASS odd complete directed row 136 exceeds 9/10
+PASS odd complete directed row 137 exceeds 9/10
+PASS odd complete directed row 138 exceeds 9/10
+PASS odd complete directed row 139 exceeds 9/10
+PASS odd complete directed row 140 exceeds 9/10
+PASS odd complete directed row 141 exceeds 9/10
+PASS odd complete directed row 142 exceeds 9/10
+PASS odd complete directed row 143 exceeds 9/10
+PASS odd complete directed row 144 exceeds 9/10
+PASS odd complete directed row 145 exceeds 9/10
+PASS odd complete directed row 146 exceeds 9/10
+PASS odd complete directed row 147 exceeds 9/10
+PASS odd complete directed row 148 exceeds 9/10
+PASS odd complete directed row 149 exceeds 9/10
+PASS odd complete directed row 150 exceeds 9/10
+PASS odd complete directed row 151 exceeds 9/10
+PASS odd complete directed row 152 exceeds 9/10
+PASS odd complete directed row 153 exceeds 9/10
+PASS odd complete directed row 154 exceeds 9/10
+PASS odd complete directed row 155 exceeds 9/10
+PASS odd complete directed row 156 exceeds 9/10
+PASS odd complete directed row 157 exceeds 9/10
+PASS odd complete directed row 158 exceeds 9/10
+PASS odd complete directed row 159 exceeds 9/10
+PASS odd complete directed row 160 exceeds 9/10
+PASS odd complete directed row 161 exceeds 9/10
+PASS odd complete directed row 162 exceeds 9/10
+PASS odd complete directed row 163 exceeds 9/10
+PASS odd complete directed row 164 exceeds 9/10
+PASS odd complete directed row 165 exceeds 9/10
+PASS odd complete directed row 166 exceeds 9/10
+PASS odd complete directed row 167 exceeds 9/10
+PASS odd complete directed row 168 exceeds 9/10
+PASS odd complete directed row 169 exceeds 9/10
+PASS odd complete directed row 170 exceeds 9/10
+PASS odd complete directed row 171 exceeds 9/10
+PASS odd complete directed row 172 exceeds 9/10
+PASS odd complete directed row 173 exceeds 9/10
+PASS odd complete directed row 174 exceeds 9/10
+PASS odd complete directed row 175 exceeds 9/10
+PASS odd complete directed row 176 exceeds 9/10
+PASS odd complete directed row 177 exceeds 9/10
+PASS odd complete directed row 178 exceeds 9/10
+PASS odd complete directed row 179 exceeds 9/10
+PASS odd complete directed row 180 exceeds 9/10
+PASS odd complete directed row 181 exceeds 9/10
+PASS odd complete directed row 182 exceeds 9/10
+PASS odd complete directed row 183 exceeds 9/10
+PASS odd complete directed row 184 exceeds 9/10
+PASS odd complete directed row 185 exceeds 9/10
+PASS odd complete directed row 186 exceeds 9/10
+PASS odd complete directed row 187 exceeds 9/10
+PASS odd complete directed row 188 exceeds 9/10
+PASS odd complete directed row 189 exceeds 9/10
+PASS odd complete directed row 190 exceeds 9/10
+PASS odd all 191 directed LDL pivots are positive
+PASS odd certified Euclidean physical Schur reserve
+PASS odd complete inverse shear squared below 169
+PASS odd physical norm conversion and strict gap
+PASS uniform all-parity physical gap
+PASS terminal strict defect reserve
+TOTAL 442 terminal certificate checks PASS
+STATUS AUTHOR-DERIVED / EXTERNAL-REVIEW-OPEN

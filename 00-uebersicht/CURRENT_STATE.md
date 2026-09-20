@@ -1,26 +1,25 @@
 # Aktueller Forschungsstand
 
-> GENERATED FILE — DO NOT EDIT
+> GENERATED FILE � DO NOT EDIT
 > Quelle: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml). Navigation, keine Satzpromotion.
 
 Stand: 2026-09-20.
 
 ## Gemergte Basis
 
-`main@d455a66` — [d455a66](https://github.com/Waschtl904/objekt-x-programm/commit/d455a664c7885eeef9f0d07f246cffc75c1ad267). Eingefrorener gemergter PR-#137-Endpunktsatz bis B=log(5)/2.
-Mathematik: AUTHOR_DERIVED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
+`main@d455a66` � [d455a66](https://github.com/Waschtl904/objekt-x-programm/commit/d455a664c7885eeef9f0d07f246cffc75c1ad267). Eingefrorener gemergter PR-#137-Endpunktsatz bis B=log(5)/2.
+Mathematik: AUTHOR_DERIVED; externe Pr�fung: EXTERNAL_REVIEW_OPEN.
 
 ## Verifizierter Forschungsstand
 
-Geprüft bis [7998887](https://github.com/Waschtl904/objekt-x-programm/commit/79988874cceeb01f17e0cda67485838c0b7c4f63) auf `research/x-c1-inherited-resonance-shell-schur-2026-09-18`.
-Dokumentarischer Branch-Head bei Registererzeugung: [f1fa23f](https://github.com/Waschtl904/objekt-x-programm/commit/f1fa23f7e1b5de407f4179986cdfe76d2024812f).
-**Dies ist ein geprüfter Snapshot, keine Behauptung über den dauerhaft aktuellen Branch-HEAD.**
-Integration: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
+Gepr�ft bis [7998887](https://github.com/Waschtl904/objekt-x-programm/commit/79988874cceeb01f17e0cda67485838c0b7c4f63) auf `research/x-c1-inherited-resonance-shell-schur-2026-09-18`.
+**Dies ist ein gepr�fter Snapshot, keine Behauptung �ber den dauerhaft aktuellen Branch-HEAD.**
+Integration: RESEARCH_BRANCH_UNMERGED; externe Pr�fung: EXTERNAL_REVIEW_OPEN.
 
 ## Zwei aktive Hauptfronten
 
-- **Gemeinsamer Gate: terminaler 191D-Defekt-Schurtest bei a=1** — `TERMINAL-191D-DEFECT-SCHUR-A1`, OPEN. Fester Horizont B<=a<=1. Der vollständige High-Defekttail ist strikt kontraktiv; physischer Moving-191D-Core und C1-Defekt-Schurrest haben exakt dieselbe Inertie. Wegen monotoner intrinsischer Defekt-Singularwerte ist a=1 der terminale Prüfpunkt.
-- **Nachgelagerte globale Fortsetzung und Profilreserve** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Nach einem terminalen Fixed-Horizon-Abschluss bleiben Profilkopplungen der physischen Fortsetzung, nicht summierbare Skalierung, Horizonte >1 und die globale Weil-Testklasse separat offen.
+- **Gemeinsamer Gate: terminaler 191D-Defekt-Schurtest bei a=1** � `TERMINAL-191D-DEFECT-SCHUR-A1`, OPEN. Fester Horizont B<=a<=1. Der vollst�ndige High-Defekttail ist strikt kontraktiv; physischer Moving-191D-Core und C1-Defekt-Schurrest haben exakt dieselbe Inertie. Wegen monotoner intrinsischer Defekt-Singularwerte ist a=1 der terminale Pr�fpunkt.
+- **Nachgelagerte globale Fortsetzung und Profilreserve** � `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Nach einem terminalen Fixed-Horizon-Abschluss bleiben Profilkopplungen der physischen Fortsetzung, nicht summierbare Skalierung, Horizonte >1 und die globale Weil-Testklasse separat offen.
 
 ## Verwendbare Bausteine
 
@@ -42,7 +41,7 @@ Integration: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 | `C1-COMPLETE-HIGH-RESPONSE-BOUND` | AUTHOR_DERIVED | [7998887](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md) |
 | `C1-MOVING-SINGULAR-CONTINUITY` | AUTHOR_DERIVED | [7998887](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md) |
 
-Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGISTRY.md).
+Details zu Scope, Abh�ngigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGISTRY.md).
 
 ## Globale Grenzen
 
@@ -54,6 +53,10 @@ Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGI
 - `global_weil_positivity`: **OPEN**.
 - `rh`: **OPEN**.
 
-Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getrennt. Diese Statusansicht führt die mathematischen Checker nicht erneut aus.
+Dokumentierte Checkerl�ufe sind von externer Pr�fung und Git-Integration getrennt. Diese Statusansicht f�hrt die mathematischen Checker nicht erneut aus.
 
-Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).
+## Noch nicht in den gepr�ften Stand �bernommene Pakete
+
+- `TERMINAL-191D-SCHUR-ENCLOSURE-A1`: PENDING_STATUS_REVIEW � `research/x-c1/terminal-191d-schur-enclosure-2026-09-20/META.yaml`.
+
+Einstieg: [NEXT_GATES](NEXT_GATES.md) � [Architektur](OBJEKT_X_ARCHITECTURE.md) � [Pflege und Pr�fungen](RESEARCH_STATE_MAINTENANCE.md).
