@@ -60,6 +60,17 @@ jobs:
           PY
           )
           ./check_terminal_high_floor_ldl terminal_even_high_minus_1e-3.bin "$SHA" | tee terminal_even_high_ldl.log
+          cc -O3 -std=c11 -Wall -Wextra \
+            research/x-c1/terminal-191d-defect-schur-a1-2026-09-20/check_terminal_source_floor_ldl.c \
+            -o check_terminal_source_floor_ldl \
+            -lflint -lmpfr -lgmp -lcrypto -lm -lpthread
+          SOURCE_SHA=$(python - <<'PY'
+          import json
+          d=json.load(open("terminal_even_result.json"))
+          print(d["attempts"][0]["full_source_shifted_artifact_sha256"])
+          PY
+          )
+          ./check_terminal_source_floor_ldl terminal_even_source_minus_1e-34.bin "$SOURCE_SHA" | tee terminal_even_source_ldl.log
       - name: Upload even diagnostic
         if: always()
         uses: actions/upload-artifact@v4
@@ -71,6 +82,8 @@ jobs:
             terminal_even_*bit_schur.tsv
             terminal_even_high_minus_1e-3.bin
             terminal_even_high_ldl.log
+            terminal_even_source_minus_1e-34.bin
+            terminal_even_source_ldl.log
           if-no-files-found: warn
 
   odd:
@@ -119,6 +132,17 @@ jobs:
           PY
           )
           ./check_terminal_high_floor_ldl terminal_odd_high_minus_1e-3.bin "$SHA" | tee terminal_odd_high_ldl.log
+          cc -O3 -std=c11 -Wall -Wextra \
+            research/x-c1/terminal-191d-defect-schur-a1-2026-09-20/check_terminal_source_floor_ldl.c \
+            -o check_terminal_source_floor_ldl \
+            -lflint -lmpfr -lgmp -lcrypto -lm -lpthread
+          SOURCE_SHA=$(python - <<'PY'
+          import json
+          d=json.load(open("terminal_odd_result.json"))
+          print(d["attempts"][0]["full_source_shifted_artifact_sha256"])
+          PY
+          )
+          ./check_terminal_source_floor_ldl terminal_odd_source_minus_1e-34.bin "$SOURCE_SHA" | tee terminal_odd_source_ldl.log
       - name: Upload odd diagnostic
         if: always()
         uses: actions/upload-artifact@v4
@@ -130,4 +154,6 @@ jobs:
             terminal_odd_*bit_schur.tsv
             terminal_odd_high_minus_1e-3.bin
             terminal_odd_high_ldl.log
+            terminal_odd_source_minus_1e-34.bin
+            terminal_odd_source_ldl.log
           if-no-files-found: warn
