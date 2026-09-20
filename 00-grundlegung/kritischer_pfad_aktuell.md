@@ -1,3 +1,13 @@
+> [!WARNING]
+> **HISTORICAL SNAPSHOT — nur die operative Navigation ist ersetzt.**
+>
+> As of: 2026-07-28
+> Nicht zur Bestimmung der aktuellen Forschungsfront verwenden.
+> Kanonischer Status: [RESEARCH_STATE.yaml](../00-uebersicht/RESEARCH_STATE.yaml).
+> Lesbarer Einstieg: [CURRENT_STATE.md](../00-uebersicht/CURRENT_STATE.md).
+> Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten.
+> Mathematische Inhalte werden durch diesen Hinweis nicht pauschal verworfen.
+
 # Kritischer Pfad — historischer Gesamtstand (28. Juli 2026, NEU-249/NEU-250)
 
 > **Superseded als operative Navigation seit 30. August 2026.** Dieses Dokument bleibt als historische Provenienz des damaligen RH-Fragenkatalog-Pfads erhalten. Die heutige kritische Front steht in [`../CURRENT-FRONT.md`](../CURRENT-FRONT.md) und der [`../00-uebersicht/FORSCHUNGS_ROADMAP_2026-08-26.md`](../00-uebersicht/FORSCHUNGS_ROADMAP_2026-08-26.md): finite-level Cross-Gram-Nichtentartung \(\ker\Gamma_I=\{0\}\ ?[O]\).

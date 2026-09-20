@@ -1,3 +1,13 @@
+> [!WARNING]
+> **HISTORICAL SNAPSHOT — nur die operative Navigation ist ersetzt.**
+>
+> As of: 2026-09-03
+> Nicht zur Bestimmung der aktuellen Forschungsfront verwenden.
+> Kanonischer Status: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml).
+> Lesbarer Einstieg: [CURRENT_STATE.md](CURRENT_STATE.md).
+> Die Status- und Auditregeln bleiben fachlich relevant; ersetzt ist nur der Anspruch auf aktuelle Frontnavigation.
+> Mathematische Inhalte werden durch diesen Hinweis nicht pauschal verworfen.
+
 # Active Theorem Registry
 
 > **Stand:** 3. September 2026  

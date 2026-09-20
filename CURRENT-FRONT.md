@@ -1,3 +1,13 @@
+> [!WARNING]
+> **HISTORICAL SNAPSHOT — nur die operative Navigation ist ersetzt.**
+>
+> As of: 2026-09-14
+> Nicht zur Bestimmung der aktuellen Forschungsfront verwenden.
+> Kanonischer Status: [RESEARCH_STATE.yaml](00-uebersicht/RESEARCH_STATE.yaml).
+> Lesbarer Einstieg: [CURRENT_STATE.md](00-uebersicht/CURRENT_STATE.md).
+> Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten.
+> Mathematische Inhalte werden durch diesen Hinweis nicht pauschal verworfen.
+
 # CURRENT FRONT — Objekt X / A1-FINITE-CERT
 
 > **Stand:** 14. September 2026; Registry und Objekt-X-Arbeitsdefinition unverändert.  

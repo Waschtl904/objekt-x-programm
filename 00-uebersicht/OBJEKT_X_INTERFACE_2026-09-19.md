@@ -1,3 +1,13 @@
+> [!WARNING]
+> **HISTORICAL SNAPSHOT — nur die operative Navigation ist ersetzt.**
+>
+> As of: 2026-09-19
+> Nicht zur Bestimmung der aktuellen Forschungsfront verwenden.
+> Kanonischer Status: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml).
+> Lesbarer Einstieg: [CURRENT_STATE.md](CURRENT_STATE.md).
+> Die C0/C1-Definitionen und der bedingte Direktlimes bleiben relevant; die damalige Tabelle offener Gates ist historisch.
+> Mathematische Inhalte werden durch diesen Hinweis nicht pauschal verworfen.
+
 # Objekt X — lokales C0/C1-Interface nach Shell-Schur
 
 **Datum:** 19.09.2026  

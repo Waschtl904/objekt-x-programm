@@ -1,3 +1,13 @@
+> [!WARNING]
+> **HISTORICAL SNAPSHOT — nur die operative Navigation ist ersetzt.**
+>
+> As of: 2026-09-19
+> Nicht zur Bestimmung der aktuellen Forschungsfront verwenden.
+> Kanonischer Status: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml).
+> Lesbarer Einstieg: [CURRENT_STATE.md](CURRENT_STATE.md).
+> Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten.
+> Mathematische Inhalte werden durch diesen Hinweis nicht pauschal verworfen.
+
 # Objekt-X-Programm — Repository-Karte
 
 > **Operativer Hinweis (19. September 2026):** Für die aktuelle Shell-Schur-Fortsetzung und ihre genaue Stellung auf dem Weg zu Objekt X zuerst die

@@ -1,3 +1,13 @@
+> [!WARNING]
+> **HISTORICAL SNAPSHOT — nur die operative Navigation ist ersetzt.**
+>
+> As of: 2026-09-20
+> Nicht zur Bestimmung der aktuellen Forschungsfront verwenden.
+> Kanonischer Status: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml).
+> Lesbarer Einstieg: [CURRENT_STATE.md](CURRENT_STATE.md).
+> Die chronologischen Nachträge bleiben Forschungsprovenienz; maßgebliche aktuelle Navigation ist das neue Register.
+> Mathematische Inhalte werden durch diesen Hinweis nicht pauschal verworfen.
+
 # Transportleiter zu Objekt X
 
 > **Stand:** 19. September 2026  
