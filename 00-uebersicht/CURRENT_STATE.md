@@ -19,7 +19,7 @@ Integration: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 
 ## Zwei aktive Hauptfronten
 
-- **Gemeinsamer Gate: terminaler 191D-Defekt-Schurtest bei a=1** — `TERMINAL-191D-DEFECT-SCHUR-A1`, OPEN. Fester Horizont B<=a<=1. Der vollst�ndige High-Defekttail ist strikt kontraktiv; physischer Moving-191D-Core und C1-Defekt-Schurrest haben exakt dieselbe Inertie. Wegen monotoner intrinsischer Defekt-Singularwerte ist a=1 der terminale Pr�fpunkt.
+- **Gemeinsamer Gate: terminaler 191D-Defekt-Schurtest bei a=1** — `TERMINAL-191D-DEFECT-SCHUR-A1`, OPEN. Fester Horizont B<=a<=1. Der vollständige High-Defekttail ist strikt kontraktiv; physischer Moving-191D-Core und C1-Defekt-Schurrest haben exakt dieselbe Inertie. Wegen monotoner intrinsischer Defekt-Singularwerte ist a=1 der terminale Prüfpunkt.
 - **Nachgelagerte globale Fortsetzung und Profilreserve** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Nach einem terminalen Fixed-Horizon-Abschluss bleiben Profilkopplungen der physischen Fortsetzung, nicht summierbare Skalierung, Horizonte >1 und die globale Weil-Testklasse separat offen.
 
 ## Verwendbare Bausteine
