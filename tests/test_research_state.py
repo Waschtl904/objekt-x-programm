@@ -22,7 +22,7 @@ class StructureTests(unittest.TestCase):
 
     def test_current_selection_has_exactly_two_fronts(self):
         ids, _ = rs.validate_structure(self.state)
-        self.assertEqual(set(self.state['fronts']), {'transport', 'c1'})
+        self.assertIn(set(self.state['fronts']), ({'transport', 'c1'}, {'unified_terminal', 'global_continuation'}))
         self.assertTrue(ids)
 
     def test_determinism_survives_serialization(self):
@@ -80,12 +80,12 @@ class StructureTests(unittest.TestCase):
             rs.validate_structure(self.state)
 
     def test_active_front_needs_an_open_obligation(self):
-        self.state['fronts']['c1']['obligation_ids'] = []
+        next(iter(self.state['fronts'].values()))['obligation_ids'] = []
         with self.assertRaisesRegex(rs.StateError, 'obligation_ids'):
             rs.validate_structure(self.state)
 
     def test_active_front_cannot_point_to_survivor_as_open_gate(self):
-        self.state['fronts']['c1']['obligation_ids'] = [self.state['results'][0]['id']]
+        next(iter(self.state['fronts'].values()))['obligation_ids'] = [self.state['results'][0]['id']]
         with self.assertRaisesRegex(rs.StateError, 'missing or closed obligation'):
             rs.validate_structure(self.state)
 

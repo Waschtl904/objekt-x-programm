@@ -161,7 +161,7 @@ def validate_structure(s):
         require(o['mathematical_status'] == 'OPEN', 'Obligation must be OPEN')
         string(o['title'], 'obligation title')
         string(o['scope'], 'obligation scope')
-    require(isinstance(s['fronts'], dict) and set(s['fronts']) == {'transport', 'c1'}, 'Exactly the Transport and C1 primary fronts are required')
+    require(isinstance(s['fronts'], dict) and set(s['fronts']) in ({'transport', 'c1'}, {'unified_terminal', 'global_continuation'}), 'Exactly one supported two-front research layout is required')
     for f in s['fronts'].values():
         fields(f, ('id', 'title', 'mathematical_status', 'strategic_status', 'target_scope', 'obligation_ids', 'uses_results', 'accepted_progress', 'insufficient', 'candidate'), 'front')
         require(f['mathematical_status'] == 'OPEN' and f['strategic_status'] == 'ACTIVE_FRONT', 'Active front must be OPEN')
