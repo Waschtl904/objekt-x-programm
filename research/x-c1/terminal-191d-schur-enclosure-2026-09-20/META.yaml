@@ -16,9 +16,11 @@
     "C1-MOVING-191D-SCHUR-CONGRUENCE",
     "C1-COMPLETE-HIGH-RESPONSE-BOUND"
   ],
-  "closes": [],
-  "opens": [
+  "closes": [
     "TERMINAL-191D-DEFECT-SCHUR-A1"
+  ],
+  "opens": [
+    "C1d-COMPATIBLE-POSITIVE-COMPLETION"
   ],
   "supersedes": [],
   "does_not_claim": [

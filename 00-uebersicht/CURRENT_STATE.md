@@ -12,15 +12,15 @@ Mathematik: AUTHOR_DERIVED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 
 ## Verifizierter Forschungsstand
 
-Geprüft bis [7998887](https://github.com/Waschtl904/objekt-x-programm/commit/79988874cceeb01f17e0cda67485838c0b7c4f63) auf `research/x-c1-inherited-resonance-shell-schur-2026-09-18`.
-Dokumentarischer Branch-Head bei Registererzeugung: [f1fa23f](https://github.com/Waschtl904/objekt-x-programm/commit/f1fa23f7e1b5de407f4179986cdfe76d2024812f).
+Geprüft bis [2de6d19](https://github.com/Waschtl904/objekt-x-programm/commit/2de6d199ad29182869e77b6785b962473250e813) auf `research/x-c1-inherited-resonance-shell-schur-2026-09-18`.
+Dokumentarischer Branch-Head bei Registererzeugung: [2de6d19](https://github.com/Waschtl904/objekt-x-programm/commit/2de6d199ad29182869e77b6785b962473250e813).
 **Dies ist ein geprüfter Snapshot, keine Behauptung über den dauerhaft aktuellen Branch-HEAD.**
 Integration: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 
 ## Zwei aktive Hauptfronten
 
-- **Gemeinsamer Gate: terminaler 191D-Defekt-Schurtest bei a=1** — `TERMINAL-191D-DEFECT-SCHUR-A1`, OPEN. Fester Horizont B<=a<=1. Der vollständige High-Defekttail ist strikt kontraktiv; physischer Moving-191D-Core und C1-Defekt-Schurrest haben exakt dieselbe Inertie. Wegen monotoner intrinsischer Defekt-Singularwerte ist a=1 der terminale Prüfpunkt.
-- **Nachgelagerte globale Fortsetzung und Profilreserve** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Nach einem terminalen Fixed-Horizon-Abschluss bleiben Profilkopplungen der physischen Fortsetzung, nicht summierbare Skalierung, Horizonte >1 und die globale Weil-Testklasse separat offen.
+- **Fixed-Horizon C1d: kompatiblen positiven Defektabschluss explizit konstruieren** — `C1d-COMPATIBLE-POSITIVE-COMPLETION`, OPEN. Fester Horizont B<=a<=1 nach bewiesener strikter terminaler Defektkontraktion. Zu zeigen ist die eine terminale Quadratwurzelkorrektur auf H_1 und ihr exaktes Intertwining für alle eingebetteten H_a.
+- **Nachgelagerte globale Fortsetzung und Profilreserve** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Jenseits des nun geschlossenen festen Horizonts bleiben skalierbare Profil-/Transportmechanismen, Horizonte >1 und die globale Weil-Testklasse separat offen.
 
 ## Verwendbare Bausteine
 
@@ -41,12 +41,13 @@ Integration: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 | `C1-MOVING-191D-SCHUR-CONGRUENCE` | AUTHOR_DERIVED | [7998887](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md) |
 | `C1-COMPLETE-HIGH-RESPONSE-BOUND` | AUTHOR_DERIVED | [7998887](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md) |
 | `C1-MOVING-SINGULAR-CONTINUITY` | AUTHOR_DERIVED | [7998887](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md) |
+| `TERMINAL-191D-SCHUR-ENCLOSURE-A1` | AUTHOR_DERIVED | [2d361be](https://github.com/Waschtl904/objekt-x-programm/blob/2d361bed76248d0a966d6d6453ce0364eae9007d/research/x-c1/terminal-191d-schur-enclosure-2026-09-20/PROOF.md) |
 
 Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGISTRY.md).
 
 ## Globale Grenzen
 
-- `connected_unit_window_coercivity`: **OPEN**.
+- `connected_unit_window_coercivity`: **AUTHOR_DERIVED**.
 - `strong_terminal`: **OPEN**.
 - `full_c1_geom`: **OPEN**.
 - `object_x`: **NOT_CONSTRUCTED**.
@@ -55,9 +56,5 @@ Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGI
 - `rh`: **OPEN**.
 
 Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getrennt. Diese Statusansicht führt die mathematischen Checker nicht erneut aus.
-
-## Noch nicht in den geprüften Stand übernommene Pakete
-
-- `TERMINAL-191D-SCHUR-ENCLOSURE-A1`: PENDING_STATUS_REVIEW — `research/x-c1/terminal-191d-schur-enclosure-2026-09-20/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

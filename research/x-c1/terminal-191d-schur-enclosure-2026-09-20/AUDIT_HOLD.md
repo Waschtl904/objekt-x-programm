@@ -1,3 +1,37 @@
+# AUDIT HOLD — RELEASED FOR FIXED-HORIZON TERMINAL RESULT
+
+20.09.2026.
+
+The original audit hold is released for the narrow terminal fixed-horizon
+result by promotion audit
+`2de6d199ad29182869e77b6785b962473250e813`.
+
+Release conditions that have passed:
+
+- same-engine directed calibration at (B=log(5)/2), including entry-by-entry
+  overlap with the frozen Fraction A/G/lower matrices and physical gap
+  (>10^{-13}) in both parities;
+- fresh Ubuntu/Python 3.13.15/`python-flint==0.9.0` execution of
+  `check_terminal.py --verify --recompute`;
+- all 442 terminal certificate checks;
+- all 382 directed terminal LDL pivots;
+- complete regenerated A/G interval equality with the stored certificate;
+- byte-identical result/log and all twelve payload hashes;
+- analytic review of the terminal (7/10) High floor, complete High-response
+  enclosure direction, rational congruence witness and physical/defect norm
+  conversion.
+
+The promoted result remains **AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN**.
+
+This release applies only to strict terminal/fixed-horizon positivity and
+defect contraction through (a=1). It does not close the separate C1d
+compatible positive-readout construction, horizons beyond (1), the global
+Weil test class, Objekt X, global Weil positivity or RH.
+
+---
+
+## Historical hold text
+
 # AUDIT HOLD — terminal 191D Schur enclosure
 
 20.09.2026. **NO STATUS PROMOTION.**
@@ -116,3 +150,4 @@ The audit hold itself remains active. Still required before terminal promotion:
 
 The canonical terminal gate remains OPEN until these remaining items are
 closed.
+

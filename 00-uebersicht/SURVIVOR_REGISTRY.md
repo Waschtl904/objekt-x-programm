@@ -486,3 +486,36 @@ Does not claim:
 - Globale Weil-Positivität oder RH ist bewiesen.
 
 Dokumentierte Reproduktion: [bridge_checks.log](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/bridge_checks.log).
+
+## TERMINAL-191D-SCHUR-ENCLOSURE-A1
+
+Strikte terminale 191D-Schurpositivität in beiden Paritäten
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Tatsächliche H1_0-Zwei-Mellin-Quellen auf dem festen Horizont 0<a<=1; terminale 191D-Schurmatrizen bei a=1, beide Paritäten, vollständige hohe Antwort.
+- Canonical commit: [2d361be](https://github.com/Waschtl904/objekt-x-programm/commit/2d361bed76248d0a966d6d6453ce0364eae9007d).
+- Canonical proof: [research/x-c1/terminal-191d-schur-enclosure-2026-09-20/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/2d361bed76248d0a966d6d6453ce0364eae9007d/research/x-c1/terminal-191d-schur-enclosure-2026-09-20/PROOF.md).
+- depends_on: `C1-191D-HIGH-DEFECT-CONTRACTION`, `C1-MOVING-191D-SCHUR-CONGRUENCE`, `C1-COMPLETE-HIGH-RESPONSE-BOUND`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Positives Result ausschließlich auf dem festen Horizont bis a=1. Keine Aussage über unbeschränkte Horizonte, globale Testklassen oder RH.
+
+Aussage:
+
+- Die tatsächlichen terminalen Even- und Odd-Schurreste sind strikt positiv definit; je Parität bestehen 191 gerichtete positive LDL*-Pivots nach vollständiger High-Elimination.
+- Für jede nichtverschwindende zulässige Quelle gilt am Terminalpunkt q_1[u]>10^-26 ||u||_2^2; durch exakte Nullfortsetzungs-Naturality gilt dieselbe feste-Horizont-Positivität für 0<a<=1.
+- Über die bewiesene physisch/Defekt-Schur-Kongruenz gilt ||R_1^p||<1 in beiden Paritäten; ein strikter Defektreserveboden >10^-28 ist zertifiziert.
+
+Does not claim:
+
+- Die kompatible positive Quadratwurzel-Readout-Konstruktion C1d sei bereits als eigener Satz abgeschlossen.
+- Eine Fortsetzung über a=1 oder neue Prime-Power-Horizonte.
+- Nicht summierbarer globaler Transport oder die vollständige globale Weil-Testklasse.
+- Objekt X im globalen Sinn, globale Weil-Positivität oder RH.
+
+Dokumentierte Reproduktion: [calibration_results.json](https://github.com/Waschtl904/objekt-x-programm/blob/0e725ae83d7217caf3e54315ddbce3d553f426a6/research/x-c1/terminal-191d-same-engine-B-calibration-2026-09-20/calibration_results.json), [TERMINAL_191D_SCHUR_FULL_REPLAY_2026-09-20.json](https://github.com/Waschtl904/objekt-x-programm/blob/2de6d199ad29182869e77b6785b962473250e813/audits/TERMINAL_191D_SCHUR_FULL_REPLAY_2026-09-20.json).

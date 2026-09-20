@@ -13,8 +13,8 @@
   },
   "live_frontier": {
     "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
-    "branch_head_at_generation": "f1fa23f7e1b5de407f4179986cdfe76d2024812f",
-    "verified_through": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+    "branch_head_at_generation": "2de6d199ad29182869e77b6785b962473250e813",
+    "verified_through": "2de6d199ad29182869e77b6785b962473250e813",
     "integration_status": "RESEARCH_BRANCH_UNMERGED",
     "review_status": "EXTERNAL_REVIEW_OPEN",
     "head_policy": "VERIFIED_SNAPSHOT_NOT_CURRENT_HEAD"
@@ -34,34 +34,30 @@
   },
   "fronts": {
     "unified_terminal": {
-      "id": "TERMINAL-191D-DEFECT-SCHUR-A1",
-      "title": "Gemeinsamer Gate: terminaler 191D-Defekt-Schurtest bei a=1",
+      "id": "C1d-COMPATIBLE-POSITIVE-COMPLETION",
+      "title": "Fixed-Horizon C1d: kompatiblen positiven Defektabschluss explizit konstruieren",
       "mathematical_status": "OPEN",
       "strategic_status": "ACTIVE_FRONT",
-      "target_scope": "Fester Horizont B<=a<=1. Der vollständige High-Defekttail ist strikt kontraktiv; physischer Moving-191D-Core und C1-Defekt-Schurrest haben exakt dieselbe Inertie. Wegen monotoner intrinsischer Defekt-Singularwerte ist a=1 der terminale Prüfpunkt.",
+      "target_scope": "Fester Horizont B<=a<=1 nach bewiesener strikter terminaler Defektkontraktion. Zu zeigen ist die eine terminale Quadratwurzelkorrektur auf H_1 und ihr exaktes Intertwining für alle eingebetteten H_a.",
       "obligation_ids": [
-        "TERMINAL-191D-DEFECT-SCHUR-A1"
+        "C1d-COMPATIBLE-POSITIVE-COMPLETION"
       ],
       "uses_results": [
         "C1a-COUPLED-SPECTRAL-MEDIATOR",
         "C1b-ZERO-EXTENSION-INTERTWINING",
-        "C1-191D-HIGH-DEFECT-CONTRACTION",
-        "C1-MOVING-191D-SCHUR-CONGRUENCE",
-        "C1-COMPLETE-HIGH-RESPONSE-BOUND",
-        "C1-MOVING-SINGULAR-CONTINUITY"
+        "C1-COMPACT-DEFECT-IDENTITY",
+        "TERMINAL-191D-SCHUR-ENCLOSURE-A1"
       ],
       "candidate": "C1a-COUPLED-SPECTRAL-MEDIATOR",
       "accepted_progress": [
-        "Gerichtete Einschließung der tatsächlichen terminalen alpha-, beta- und vollständigen High-Response-Beiträge.",
-        "Rigorose 191x191-Schurmatrixeinschließung in Even und Odd.",
-        "Exakter rationaler oder Intervall-LDL*-Nachweis von S_1^even>=0 und S_1^odd>=0.",
-        "Bei striktem Erfolg eine explizite positive Reserve für den terminalen Defekt-Schurrest."
+        "Definiere Delta_1=(I-R_1^*R_1)^(1/2) auf H_1 intrinsisch.",
+        "Beweise T_X,a=Delta_1 I_{a,1} T_a und die exakte Gram-Identität q_a=<T_X,a .,T_X,a .>.",
+        "Beweise die Übergangskompatibilität aus der einzigen terminalen Korrektur, ohne lokale Quadratwurzeln von Kompressionen zu identifizieren."
       ],
       "insufficient": [
-        "Gewöhnliche Gleitkommaeigenwerte oder sampled high modes als Vorzeichennachweis.",
-        "Die bereits bekannte Weil-Positivität auf kleinen Fenstern rückwärts als Kontraktionsbeweis verwenden.",
-        "Den bereits geschlossenen High-Defekttail oder die Schur-Kongruenz erneut als offenen Gate ausgeben.",
-        "Die Legendre-Low-Vektoren ohne den vollständigen High-Graphlift mit Singularvektoren gleichsetzen."
+        "Lokale Quadratwurzeln (I-C_a)^(1/2) ohne Intertwining-Nachweis.",
+        "Nur die bereits bewiesene Positivität oder Kontraktion erneut formulieren.",
+        "Eine globale Horizontbehauptung über a=1 hinaus."
       ]
     },
     "global_continuation": {
@@ -69,44 +65,35 @@
       "title": "Nachgelagerte globale Fortsetzung und Profilreserve",
       "mathematical_status": "OPEN",
       "strategic_status": "ACTIVE_FRONT",
-      "target_scope": "Nach einem terminalen Fixed-Horizon-Abschluss bleiben Profilkopplungen der physischen Fortsetzung, nicht summierbare Skalierung, Horizonte >1 und die globale Weil-Testklasse separat offen.",
+      "target_scope": "Jenseits des nun geschlossenen festen Horizonts bleiben skalierbare Profil-/Transportmechanismen, Horizonte >1 und die globale Weil-Testklasse separat offen.",
       "obligation_ids": [
         "MOVING-PROFILE-RESERVE-RENEWAL",
         "NON-SUMMABLE-TRANSPORT",
-        "CHANNEL-7-FULL-POSITIVE-CONTROL",
-        "C1d-COMPATIBLE-POSITIVE-COMPLETION",
         "UNBOUNDED-HORIZON-COMPATIBILITY",
         "FULL-WEIL-TEST-CLASS"
       ],
       "uses_results": [
-        "ALL-PARITY-BAND-B-PLUS-1E-10",
-        "MOVING-HIGH-TAIL-1-OVER-41",
         "C0-DIRECTED-FORM-SYSTEM",
         "C1a-COUPLED-SPECTRAL-MEDIATOR",
         "C1b-ZERO-EXTENSION-INTERTWINING",
-        "C1-MOVING-SINGULAR-CONTINUITY"
+        "C1-MOVING-SINGULAR-CONTINUITY",
+        "TERMINAL-191D-SCHUR-ENCLOSURE-A1"
       ],
       "candidate": "C1a-COUPLED-SPECTRAL-MEDIATOR",
       "accepted_progress": [
-        "Erneuerbare Low/Profile-Reserve mit nicht kollabierendem Gesetz.",
-        "Nicht summierbarer oder uniformer Fortsetzungsmechanismus.",
-        "Vollständige positive Kontrolle der Profilkopplungen beim tatsächlichen Kanal-7-Eintritt.",
-        "Kompatible C1-Geometrie über Horizonte größer als 1 und exakte globale Testklassen-Rückbindung."
+        "Erneuerbare Low/Profile-Reserve mit nicht kollabierendem Gesetz für größere Horizonte.",
+        "Nicht summierbarer oder uniformer Fortsetzungsmechanismus jenseits des festen Horizonts.",
+        "Kompatible C1-Geometrie über Horizonte größer als 1.",
+        "Exakte globale/cofinale Weil-Testklassen-Rückbindung."
       ],
       "insufficient": [
-        "Den terminalen Core-Schurabschluss automatisch als Profil- oder Globalfortsetzung interpretieren.",
+        "Den geschlossenen Fixed-Horizon-Satz automatisch auf neue Prime-Power-Horizonte extrapolieren.",
         "Eine neue Horizontformel ohne Intertwining- und Testklassenkontrolle.",
         "Mikroskopische Breitenverbesserungen ohne neues Skalierungsgesetz."
       ]
     }
   },
   "obligations": [
-    {
-      "id": "TERMINAL-191D-DEFECT-SCHUR-A1",
-      "title": "Terminale 191D-Defekt-Schurmatrizen in beiden Paritäten rigoros zertifizieren",
-      "mathematical_status": "OPEN",
-      "scope": "Fester Horizont B<=a<=1; am Terminalpunkt a=1 die vollständigen 191x191-Schurreste S_1^even und S_1^odd einschließlich kompletter High-Antwort gerichtet einschließen und positiv semidefinit zertifizieren."
-    },
     {
       "id": "MOVING-PROFILE-RESERVE-RENEWAL",
       "title": "Erneuerbare Low/Profile-Reserve konstruieren",
@@ -118,12 +105,6 @@
       "title": "Nicht summierbares oder uniformes Fortsetzungsgesetz beweisen",
       "mathematical_status": "OPEN",
       "scope": "Über das vorhandene endliche positive Band hinaus; quantitative Schrittweiten."
-    },
-    {
-      "id": "CHANNEL-7-FULL-POSITIVE-CONTROL",
-      "title": "Tatsächlichen Kanal-7-Eintritt positiv kontrollieren",
-      "mathematical_status": "OPEN",
-      "scope": "Vollständige niedrige und hohe Quellen einschließlich Profilkopplungen; qualitative Stetigkeit und hoher Tail sind vorhanden."
     },
     {
       "id": "C1d-COMPATIBLE-POSITIVE-COMPLETION",
@@ -696,10 +677,55 @@
         "Objekt X ist konstruiert.",
         "Globale Weil-Positivität oder RH ist bewiesen."
       ]
+    },
+    {
+      "id": "TERMINAL-191D-SCHUR-ENCLOSURE-A1",
+      "title": "Strikte terminale 191D-Schurpositivität in beiden Paritäten",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "0e725ae83d7217caf3e54315ddbce3d553f426a6",
+          "path": "research/x-c1/terminal-191d-same-engine-B-calibration-2026-09-20/calibration_results.json",
+          "sha256": "790b9d1755f6da397a52ea7a94e7e8e71cc9c446ab1d8aa3f46d622d6f19fb03"
+        },
+        {
+          "commit": "2de6d199ad29182869e77b6785b962473250e813",
+          "path": "audits/TERMINAL_191D_SCHUR_FULL_REPLAY_2026-09-20.json",
+          "sha256": "fc588cfb6afa163fc59f2653ae3f9205b32f8fd8e564932f185c0d9862216858"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "Tatsächliche H1_0-Zwei-Mellin-Quellen auf dem festen Horizont 0<a<=1; terminale 191D-Schurmatrizen bei a=1, beide Paritäten, vollständige hohe Antwort.",
+      "claim": [
+        "Die tatsächlichen terminalen Even- und Odd-Schurreste sind strikt positiv definit; je Parität bestehen 191 gerichtete positive LDL*-Pivots nach vollständiger High-Elimination.",
+        "Für jede nichtverschwindende zulässige Quelle gilt am Terminalpunkt q_1[u]>10^-26 ||u||_2^2; durch exakte Nullfortsetzungs-Naturality gilt dieselbe feste-Horizont-Positivität für 0<a<=1.",
+        "Über die bewiesene physisch/Defekt-Schur-Kongruenz gilt ||R_1^p||<1 in beiden Paritäten; ein strikter Defektreserveboden >10^-28 ist zertifiziert."
+      ],
+      "depends_on": [
+        "C1-191D-HIGH-DEFECT-CONTRACTION",
+        "C1-MOVING-191D-SCHUR-CONGRUENCE",
+        "C1-COMPLETE-HIGH-RESPONSE-BOUND"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "2d361bed76248d0a966d6d6453ce0364eae9007d",
+      "canonical_proof": "research/x-c1/terminal-191d-schur-enclosure-2026-09-20/PROOF.md",
+      "proof_sha256": "14717ba224be7bbbb5ab17b83ab1896f967cde1b82452dcf599876a59098f2fb",
+      "negative_claim_boundary": "Positives Result ausschließlich auf dem festen Horizont bis a=1. Keine Aussage über unbeschränkte Horizonte, globale Testklassen oder RH.",
+      "does_not_claim": [
+        "Die kompatible positive Quadratwurzel-Readout-Konstruktion C1d sei bereits als eigener Satz abgeschlossen.",
+        "Eine Fortsetzung über a=1 oder neue Prime-Power-Horizonte.",
+        "Nicht summierbarer globaler Transport oder die vollständige globale Weil-Testklasse.",
+        "Objekt X im globalen Sinn, globale Weil-Positivität oder RH."
+      ]
     }
   ],
   "global_status": {
-    "connected_unit_window_coercivity": "OPEN",
+    "connected_unit_window_coercivity": "AUTHOR_DERIVED",
     "strong_terminal": "OPEN",
     "full_c1_geom": "OPEN",
     "object_x": "NOT_CONSTRUCTED",
@@ -812,11 +838,5 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [
-    {
-      "id": "TERMINAL-191D-SCHUR-ENCLOSURE-A1",
-      "meta_path": "research/x-c1/terminal-191d-schur-enclosure-2026-09-20/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    }
-  ]
+  "pending_packages": []
 }
