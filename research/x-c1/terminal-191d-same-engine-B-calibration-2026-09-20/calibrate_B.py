@@ -185,7 +185,7 @@ def compute_parities(precision=2048):
         shear=coupling/delta**2
         inverse=(1+shear.sqrt())**2
         z=a/2
-        beta=((z*z)/(2*(1-z*z/3)))**2 if parity==0 else ((z*z)/(6*(1-z*z/5)))**2
+        beta=((z*z)/(2*(1-z*z/12)))**2 if parity==0 else ((z*z)/(6*(1-z*z/20)))**2
         gap=min(sigma.lower(),delta.lower())/(inverse.upper()*(1+beta).upper())
         target=arb(1)/10**13
         out[label]={
@@ -198,12 +198,17 @@ def compute_parities(precision=2048):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--output',default='calibration_results.json');args=ap.parse_args()
     out=compute_parities()
+    passed=True
+    failures=[]
     for parity in ('even','odd'):
-        if out[parity]['positive_pivots']!=31:raise RuntimeError(parity+' wrong pivot count')
+        if out[parity]['positive_pivots']!=31:
+            passed=False; failures.append(parity+' wrong pivot count')
         if not out[parity]['gap_exceeds_1e_minus_13']:
-            raise RuntimeError(parity+' physical gap does not reproduce >1e-13: '+out[parity]['physical_gap_lower'])
-    report={'status':'SAME_ENGINE_B_CALIBRATION_PASS','endpoint':'log(5)/2','target_gap':'1/10^13',
-            'parities':out,'terminal_gate_promoted':False,'meaning':'audit calibration only'}
+            passed=False; failures.append(parity+' physical gap does not reproduce >1e-13: '+out[parity]['physical_gap_lower'])
+    report={'status':'SAME_ENGINE_B_CALIBRATION_PASS' if passed else 'SAME_ENGINE_B_CALIBRATION_UNDECIDED',
+            'endpoint':'log(5)/2','target_gap':'1/10^13','parities':out,
+            'failures':failures,'terminal_gate_promoted':False,'meaning':'audit calibration only'}
     Path(args.output).write_text(json.dumps(report,indent=2,sort_keys=True)+'\n',encoding='utf-8')
     print(json.dumps(report,indent=2,sort_keys=True))
+    if not passed: raise RuntimeError('; '.join(failures))
 if __name__=='__main__':main()
