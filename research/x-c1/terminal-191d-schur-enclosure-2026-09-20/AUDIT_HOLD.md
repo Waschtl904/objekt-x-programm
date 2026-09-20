@@ -82,3 +82,37 @@ Until promotion, none of the following is claimed by the canonical state:
 - Objekt X;
 - global Weil positivity;
 - RH.
+
+
+## Audit update — Same-Engine-B calibration PASSED
+
+Commit `2374340f1bad3888d56c0be7cc93a1c939d22a3e`, workflow run
+`35518951368`, executed the new Arb/Legendre assembly at
+(B=log(5)/2) in the pinned `python-flint==0.9.0` environment.
+
+The calibration passed in both parities. Entry-by-entry against the frozen
+Fraction endpoint engine:
+
+[
+A_{m nonoverlap}=0,qquad
+G_{m act,nonoverlap}=0,qquad
+delta	ext{-overlap}=mathrm{true},qquad
+L_{m nonoverlap}=0.
+]
+
+All 31 endpoint LDL pivots per parity were directed positive. The resulting
+physical lower gaps are (>1.0423892675	imes10^{-13}) (even) and
+(>2.3831654	imes10^{-11}) (odd).
+
+Therefore release gate **1 (same-engine B calibration)** is now CLOSED.
+
+The audit hold itself remains active. Still required before terminal promotion:
+
+- pinned full terminal `check_terminal.py --verify --recompute` replay;
+- independent analytic review of the terminal (7/10) High floor, enclosure
+  direction and Mellin/physical norm conversion;
+- explicit review that the stored rational preconditioners are only verified
+  congruence witnesses and introduce no sign assumption.
+
+The canonical terminal gate remains OPEN until these remaining items are
+closed.

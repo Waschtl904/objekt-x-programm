@@ -1,0 +1,58 @@
+{
+  "status": "SAME_ENGINE_B_CALIBRATION_PASS",
+  "date": "2026-09-20",
+  "endpoint": "log(5)/2",
+  "target_gap": "1/10^13",
+  "terminal_gate_promoted": false,
+  "environment": {
+    "runner": "ubuntu-latest",
+    "architecture": "x86_64",
+    "python": "3.13",
+    "python_flint": "0.9.0",
+    "precision_bits": 2048
+  },
+  "provenance": {
+    "commit": "2374340f1bad3888d56c0be7cc93a1c939d22a3e",
+    "workflow_run_id": 35518951368,
+    "workflow_job_id": 106099567779,
+    "artifact_id": 10607872401,
+    "artifact_zip_sha256": "143b7e556cddcb38f9d24155fac51bb337d80d1e71a515710e75f7e6e452b5f7"
+  },
+  "parities": {
+    "even": {
+      "dimension": 31,
+      "crosscheck_against_frozen_fraction_engine": {
+        "A_nonoverlap": 0,
+        "Gact_nonoverlap": 0,
+        "delta_overlap": true,
+        "lower_nonoverlap": 0
+      },
+      "delta": "[0.719448628450052179181039153223 +/- 3.62e-31]",
+      "sigma": "[2.57569812626397914241925742457e-12 +/- 3.76e-42]",
+      "shear": "[15.6358666861737798355861513071 +/- 2.75e-29]",
+      "moment_beta": "[0.00673278791484359269617882644918 +/- 4.58e-33]",
+      "min_pivot": "[0.00850419174236716151953349811644 +/- 4.44e-33]",
+      "positive_pivots": 31,
+      "physical_gap_lower": "[1.042389267568932761633812385144842838365e-13 +/- 4.08e-53]",
+      "gap_exceeds_1e_minus_13": true
+    },
+    "odd": {
+      "dimension": 31,
+      "crosscheck_against_frozen_fraction_engine": {
+        "A_nonoverlap": 0,
+        "Gact_nonoverlap": 0,
+        "delta_overlap": true,
+        "lower_nonoverlap": 0
+      },
+      "delta": "[0.734833243834667563796423768608 +/- 2.35e-32]",
+      "sigma": "[5.63052798223254070828314185923e-10 +/- 2.19e-40]",
+      "shear": "[14.8910128181032576734855071317 +/- 2.47e-29]",
+      "moment_beta": "[0.000739969782224899503368327188629 +/- 2.11e-34]",
+      "min_pivot": "[0.0227035908387552578624206139976 +/- 1.64e-32]",
+      "positive_pivots": 31,
+      "physical_gap_lower": "[2.383165404676489737716245156950670573075e-11 +/- 2.71e-51]",
+      "gap_exceeds_1e_minus_13": true
+    }
+  },
+  "meaning": "Audit calibration only. The terminal a=1 package remains PENDING_STATUS_REVIEW and the terminal gate remains OPEN."
+}
