@@ -28,7 +28,7 @@ Aussage:
 - Q_W[u]>10^-13 ||u||_2^2 für jede nichtverschwindende zulässige Quelle.
 - Kein A1-Import und keine zusätzliche Momentbedingung.
 
-Does not claim:
+Does not claim
 
 - Positivität bis zum Einheitsfenster.
 - Objekt X ist konstruiert.
@@ -60,7 +60,7 @@ Aussage:
 - Bijektion der abgeschlossenen Formräume; die tatsächliche H1-Urbildbedingung lautet w(B)+t=s(B), s(b)=0.
 - Die Trace-Redundanz wird entfernt, ohne eine physische Quelle zu streichen oder eine dritte Mellinbedingung einzuführen.
 
-Does not claim:
+Does not claim
 
 - Eine ungekoppelte H1_0-Produktzerlegung.
 - Ein neuer positiver Fortsetzungsbereich.
@@ -92,7 +92,7 @@ Aussage:
 - Q_W[u]>2*10^-15 ||u||_2^2 über beide Paritäten; im Odd-Sektor gilt die stärkere Schranke >10^-12.
 - Der 31-dimensionale weiche Block je Parität wird mit vollständigen unendlichen Antworten und Mischtermen kontrolliert.
 
-Does not claim:
+Does not claim
 
 - Ein nicht summierbares Fortsetzungsgesetz.
 - Eine positive Aussage am Kanal-7-Eintritt oder bei a=1.
@@ -124,7 +124,7 @@ Aussage:
 - Auf dem vollständigen hohen Quellenraum gilt q_a[u]>(1/41)||u||_2^2.
 - Alle unendlichen hohen Moden bleiben enthalten; dies kontrolliert auch den hohen Anteil beim Eintritt von Kanal 7.
 
-Does not claim:
+Does not claim
 
 - Positivität der 191 niedrigen Richtungen oder ihrer Low/Profile-Kopplung.
 - Volle Weil-Positivität bei a=1.
@@ -156,7 +156,7 @@ Aussage:
 - Nullfortsetzungen J_ab erfüllen exakte Komposition J_bc J_ab=J_ac und Formnaturality q_b(J_ab u,J_ab v)=q_a(u,v).
 - Parität, ursprüngliche Mellinbedingungen, Prime-Power-Observablen und Gamma-/Jump-Kanal sind kompatibel.
 
-Does not claim:
+Does not claim
 
 - Ein positiver unverschobener Weil-Gram-Readout.
 - Ein Abschluss der historischen Suzuki-Einbettungsfrage.
@@ -188,7 +188,7 @@ Aussage:
 - Der uniforme Semibound q_a>=-16 I macht q_a+17 I positiv.
 - Die Nullfortsetzungen sind in dieser Graphnorm isometrisch; der verschobene Hilbert-Direktlimes existiert.
 
-Does not claim:
+Does not claim
 
 - Der künstliche Shift sei eine positive Realisierung der unverschobenen Weil-Form.
 - Objekt X ist konstruiert.
@@ -219,7 +219,7 @@ Aussage:
 - Diese gesamte ausdrücklich benannte Kandidatenklasse ist ausgeschlossen, auch bei nichtorthogonalen Zielanteilen.
 - Der vollständige Gamma-Mischkern trägt zwischen getrennten Mellin-nulligen Quellenblöcken beliebig hohen Rang.
 
-Does not claim:
+Does not claim
 
 - Ein Ausschluss aller nichtlokalen oder Fourier-indizierten Readouts.
 - Eine negative Quelle der vollständigen Weil-Form.
@@ -250,7 +250,7 @@ Aussage:
 
 - Jeder solche Einzelkanal nimmt beide Vorzeichen an und kann weder in seinem ursprünglichen noch im umgekehrten Vorzeichen eine individuelle positive Gram-Komponente sein.
 
-Does not claim:
+Does not claim
 
 - Indefinite Prime-Observablen innerhalb eines gemeinsamen positiven Mediators seien ausgeschlossen.
 - Die vollständige Weil-Form sei negativ.
@@ -283,7 +283,7 @@ Aussage:
 - H_a=closure(T W_a) ist unendlichdimensional; geeignete glatte Quellen beider Paritäten haben tatsächlich nichtkompakten physischen Output.
 - Prime/Gamma- und Prime/Prime-Mischterme gehören zur selben Konstruktion.
 
-Does not claim:
+Does not claim
 
 - Die unberichtigte T-Gram-Form sei bereits die volle Weil-Form.
 - Ein unbeschränktes, kompatibles Horizontsystem.
@@ -315,7 +315,7 @@ Aussage:
 - Isometrische Inklusionen I_ab:H_a->H_b erfüllen I_bc I_ab=I_ac und T_b J_ab=I_ab T_a.
 - Der Defekttransfer erfüllt R_b I_ab=R_a; für C_a=R_a*R_a gilt die Kompressionsidentität I_ab* C_b I_ab=C_a.
 
-Does not claim:
+Does not claim
 
 - Das Intertwining von lokalen Quadratwurzelkorrekturen folge bereits aus der Kompressionsidentität.
 - C1c oder C1d sei geschlossen.
@@ -348,7 +348,7 @@ Aussage:
 - R_a(Tu)=Du ist kompakt, injektiv und von unendlichem Rang; q_a>=0 genau dann, wenn ||R_a||<=1.
 - Die unberichtigte Gramabweichung E_a[u]=-||Du||^2 ist für jede nichtverschwindende Quelle strikt negativ.
 
-Does not claim:
+Does not claim
 
 - Die volle Defektkontraktion sei bewiesen.
 - Ein negativer Defekt sei eine negative vollständige Weil-Energie.
@@ -381,7 +381,7 @@ Aussage:
 - s_192(R_a^p)^2<=943/945 und s_192(R_a^p)<999/1000 je Parität; entsprechend s_383 im gemeinsamen Raum.
 - Der vollständige hohe Rest von R_a Q_low ist eingeschlossen.
 
-Does not claim:
+Does not claim
 
 - Die ersten 191 Singularwerte je Parität lägen bereits unter eins.
 - Ein neues positives Fenster.
@@ -413,7 +413,7 @@ Aussage:
 - Mit C=R*R in Low/High-Blöcken alpha,beta,K ist S=I-alpha-beta* (I-K)^-1 beta; q_a>=0 genau dann, wenn S>=0.
 - Der physische bewegliche Core-Schurrest ist G^(1/2) S G^(1/2), G>0; beide Formen haben dieselbe Inertie.
 
-Does not claim:
+Does not claim
 
 - Identität der Legendre-Low-Basis mit führenden Singularvektoren.
 - Rigorose Einschließung aller tatsächlichen 191D-Einträge oder positiver Vorzeichennachweis.
@@ -446,7 +446,7 @@ Aussage:
 - 0<=S_N-S<=42525*(943/945)^(N+2) I; kein hoher Modus wird weggelassen.
 - Die rationale Schranke (943/945)^1024<1/8 liefert beliebig kleine Restschranken.
 
-Does not claim:
+Does not claim
 
 - Der vollständige Schurrest sei aufgrund dieser Restschranke bereits positiv.
 - Die tatsächlichen endlichen Matrixeinträge seien durch Modellmatrizen ersetzt.
@@ -478,7 +478,7 @@ Aussage:
 - Jeder geordnete Singularwert ist stetig und monoton nicht fallend in a.
 - Beim Kanal-7-Eintritt entsteht im festen spektralen Zielraum kein Sprung.
 
-Does not claim:
+Does not claim
 
 - Ein quantitativer Stetigkeitsmodul oder eine nicht summierbare Transportregel.
 - Positive Kontrolle der niedrigen Moden beim Kanal-7-Eintritt.
@@ -511,7 +511,7 @@ Aussage:
 - Für jede nichtverschwindende zulässige Quelle gilt am Terminalpunkt q_1[u]>10^-26 ||u||_2^2; durch exakte Nullfortsetzungs-Naturality gilt dieselbe feste-Horizont-Positivität für 0<a<=1.
 - Über die bewiesene physisch/Defekt-Schur-Kongruenz gilt ||R_1^p||<1 in beiden Paritäten; ein strikter Defektreserveboden >10^-28 ist zertifiziert.
 
-Does not claim:
+Does not claim
 
 - Die kompatible positive Quadratwurzel-Readout-Konstruktion C1d sei bereits als eigener Satz abgeschlossen.
 - Eine Fortsetzung über a=1 oder neue Prime-Power-Horizonte.
@@ -545,7 +545,7 @@ Aussage:
 - T_X,a=Delta_1 I_{a,1}T_a erfüllt q_a(u,v)=<T_X,a u,T_X,a v> exakt sesquilinear und T_X,b J_{a,b}=T_X,a für B<=a<=b<=1.
 - Die q_a-Norm ist der bereits vollständigen F_a-Norm äquivalent; T_X,a ist unitär von (F_a,q_a) auf K_X,a.
 
-Does not claim:
+Does not claim
 
 - Eine C1-Erweiterung auf a>1.
 - Eine kofinale Familie kompatibler positiver Terminalabschlüsse.
@@ -554,3 +554,162 @@ Does not claim:
 - Globales Objekt X, globale Weil-Positivität oder RH.
 
 Dokumentierte Reproduktion: [C1D_TERMINAL_SQUARE_ROOT_PROMOTION_AUDIT_2026-09-20.md](https://github.com/Waschtl904/objekt-x-programm/blob/5f19065e28b9f2e09ae93bef0b4c752ab58997d4/audits/C1D_TERMINAL_SQUARE_ROOT_PROMOTION_AUDIT_2026-09-20.md), [c1d_checks.log](https://github.com/Waschtl904/objekt-x-programm/blob/5f19065e28b9f2e09ae93bef0b4c752ab58997d4/research/x-c1/c1d-terminal-square-root-completion-2026-09-20/c1d_checks.log).
+
+## P02-ADELIC-WEIL-AMPLITUDE-PORT
+
+Adelic Weil amplitude port and Hermitian normalization
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Adelischer Amplitudenport im Manuskript P02: surjektiver Paley–Wiener-Port, sesquilineare Evenisierung, vollständige hermitesche Weil-Form und Normalisierungsübereinstimmung.
+- Canonical commit: [ecfac52](https://github.com/Waschtl904/objekt-x-programm/commit/ecfac52133582290ab3568bf33029b3ad5938360).
+- Canonical proof: [papers/P02_Adelic_Weil_Amplitude_Port.tex](https://github.com/Waschtl904/objekt-x-programm/blob/ecfac52133582290ab3568bf33029b3ad5938360/papers/P02_Adelic_Weil_Amplitude_Port.tex).
+- depends_on: [].
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: Der Port ist eine algebraisch/analytische Eingangsbrücke; daraus folgt keine Positivität der vollständigen Weil-Form.
+
+Aussage:
+
+- Der Port R_PW ist surjektiv auf den verwendeten Paley–Wiener-Testkern.
+- Die sesquilineare Evenisierung und die komponentenweise hermitesche Weil-Form sind mit der festgelegten Haar- und Fourier-Normalisierung kompatibel.
+
+Does not claim
+
+- Positivität der vollständigen Weil-Form.
+- Objekt X ist konstruiert.
+- Globale Weil-Positivität oder RH ist bewiesen.
+
+Dokumentierte Reproduktion: [P02_Adelic_Weil_Amplitude_Port.tex](https://github.com/Waschtl904/objekt-x-programm/blob/ecfac52133582290ab3568bf33029b3ad5938360/papers/P02_Adelic_Weil_Amplitude_Port.tex).
+
+## P03-HAAR-L2-FIREWALL
+
+Haar-L2 closability firewall
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Haar-L2-Firewall auf L2(R,du) mit expliziter Trennung zwischen RH-freien Strukturfolgen und RH-konditionalen Spektralaussagen.
+- Canonical commit: [ecfac52](https://github.com/Waschtl904/objekt-x-programm/commit/ecfac52133582290ab3568bf33029b3ad5938360).
+- Canonical proof: [papers/P03_Haar_L2_Firewall.tex](https://github.com/Waschtl904/objekt-x-programm/blob/ecfac52133582290ab3568bf33029b3ad5938360/papers/P03_Haar_L2_Firewall.tex).
+- depends_on: `P02-ADELIC-WEIL-AMPLITUDE-PORT`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: Die RH-konditionalen Sätze bleiben ausdrücklich konditional und liefern keine RH-freie positive Realisierung.
+
+Aussage:
+
+- Unconditional: Formulierung des Haar-L2 closability firewall und die strukturellen Folgerungen unter dem angegebenen Spektralmodell.
+- Conditional on RH: die im Manuskript ausgewiesene Semibeschränktheitsäquivalenz, die Nichtabschließbarkeitsfolge und die Nullspektrum-L2-Realisierung.
+
+Does not claim
+
+- Eine RH-freie positive Hilbert-Realisierung.
+- Objekt X ist konstruiert.
+- RH ist bewiesen.
+
+Dokumentierte Reproduktion: [P03_Haar_L2_Firewall.tex](https://github.com/Waschtl904/objekt-x-programm/blob/ecfac52133582290ab3568bf33029b3ad5938360/papers/P03_Haar_L2_Firewall.tex).
+
+## P11-R27-CONSTRAINED-GAMMA-MOSCO-INVERSE-ROOT
+
+P11 R27 constrained Gamma, Mosco and inverse-root limits
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Festgelegte eingeschränkte Gamma-Räume und der codimension-one Hard-Constraint für die historischen P11-Graphräume.
+- Canonical commit: [be58767](https://github.com/Waschtl904/objekt-x-programm/commit/be58767794eabb96e92152b493ee72a0a465a8ee).
+- Canonical proof: [audits/P11_REFEREE_E2E_R27_CONSTRAINED_GAMMA_MOSCO_LIMIT_2026-08-15.md](https://github.com/Waschtl904/objekt-x-programm/blob/be58767794eabb96e92152b493ee72a0a465a8ee/audits/P11_REFEREE_E2E_R27_CONSTRAINED_GAMMA_MOSCO_LIMIT_2026-08-15.md).
+- depends_on: [].
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: R27 liefert strukturelle Abhängigkeiten, aber keine bewegliche Polarfaktor-Konvergenz und keinen eigenständigen Strong-Terminal-Satz.
+
+Aussage:
+
+- Mosco-Konvergenz der festgelegten eingeschränkten Gamma-Räume.
+- Konkrete starke Resolventenkonvergenz und inverse-Quadratwurzel-Konvergenz im benannten constrained setting.
+
+Does not claim
+
+- Bewegliche Polarfaktor-Konvergenz.
+- Strong Terminal allein.
+- Ein neues C1-Wall-Crossing oder globaler Horizonttransport.
+
+Dokumentierte Reproduktion: [P11_REFEREE_E2E_R27_CONSTRAINED_GAMMA_MOSCO_LIMIT_2026-08-15.md](https://github.com/Waschtl904/objekt-x-programm/blob/be58767794eabb96e92152b493ee72a0a465a8ee/audits/P11_REFEREE_E2E_R27_CONSTRAINED_GAMMA_MOSCO_LIMIT_2026-08-15.md).
+
+## P11-TANGENTIAL-STRONG-TRANSPORT-HR0
+
+P11 tangential strong transport on H_R^0
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Für jedes feste 0<R<S<infinity starke Konvergenz des echten Zukunftstransports auf dem geschlossenen tangentialen Hyperraum H_R^0 der ursprünglichen P11-Graphräume.
+- Canonical commit: [f495ce6](https://github.com/Waschtl904/objekt-x-programm/commit/f495ce6d89dcb8facc8fa0d4e09dda279b24fb73).
+- Canonical proof: [audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md](https://github.com/Waschtl904/objekt-x-programm/blob/f495ce6d89dcb8facc8fa0d4e09dda279b24fb73/audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md).
+- depends_on: `P11-R27-CONSTRAINED-GAMMA-MOSCO-INVERSE-ROOT`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: R42 kontrolliert die tangentiale Teilrichtung und ihre Normalreduktion, nicht bereits den vollständigen fixed-pair Strong Terminal.
+
+Aussage:
+
+- R42.51: vectorweise starke Konvergenz auf H_R^0 für jedes feste Paar 0<R<S<infinity.
+- R42.60: Reduktion des vollständigen fixed-pair-C6-Problems auf die Bahn eines einzelnen Normalvektors.
+
+Does not claim
+
+- Volle Strong-Terminal-Konvergenz allein.
+- Uniformität in R,S.
+- Operatornormkonvergenz.
+- Die neue C1-Horizontkompatibilität.
+
+Dokumentierte Reproduktion: [P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md](https://github.com/Waschtl904/objekt-x-programm/blob/f495ce6d89dcb8facc8fa0d4e09dda279b24fb73/audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md).
+
+## P11-FIXED-PAIR-STRONG-TERMINAL
+
+P11 fixed-pair Strong Terminal
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Für jedes feste 0<R<S<infinity auf den ursprünglichen ungeraden P11-Graphräumen: starker fixed-pair-Transport aus R42.51 plus positivem Normalwurzelanker und Normsättigung aus R43.
+- Canonical commit: [084b8b7](https://github.com/Waschtl904/objekt-x-programm/commit/084b8b7855601c5fae87bf4e59a00648ffbb9116).
+- Canonical proof: [audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md](https://github.com/Waschtl904/objekt-x-programm/blob/084b8b7855601c5fae87bf4e59a00648ffbb9116/audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md).
+- depends_on: `P11-R27-CONSTRAINED-GAMMA-MOSCO-INVERSE-ROOT`, `P11-TANGENTIAL-STRONG-TRANSPORT-HR0`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Geschlossen ist nur die feste Paarstufe des ursprünglichen P11-Transportproblems; keine Aussage folgt für variable oder unbeschränkte Terminalhorizonte.
+
+Aussage:
+
+- Für jedes feste 0<R<S<infinity gilt W_R,S^[U] epsilon_R -> epsilon_S stark für U->infinity.
+- Zusammen mit der R42-Tangentialaussage gilt W_R,S^[U](v+a epsilon_R) -> W_R,S^(0)v+a epsilon_S für jedes v in H_R^0.
+- Der Satz schließt den fixed-pair-C6/Strong-Terminal-Schritt relativ zu den benannten P11/R27-Eingaben.
+
+Does not claim
+
+- Uniformität in R,S.
+- Operatornormkonvergenz.
+- Eine Konvergenzrate.
+- Neue C1-Horizontkompatibilität oder q=8-Wall-crossing.
+- Globales Objekt X oder RH.
+
+Dokumentierte Reproduktion: [P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md](https://github.com/Waschtl904/objekt-x-programm/blob/084b8b7855601c5fae87bf4e59a00648ffbb9116/audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md).

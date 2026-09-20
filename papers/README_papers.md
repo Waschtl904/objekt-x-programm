@@ -20,8 +20,8 @@
 | ID | Datei | Titel | Stufe | Status |
 |---|---|---|---|---|
 | P01 | `P01_BC_Prime_Power_Weights.tex` | BC Prime Power Weights | SYN | Entwurf |
-| P02 | `P02_Adelic_Weil_Amplitude_Port.tex` | Adelic Weil Amplitude Port | SYN | Entwurf |
-| P03 | `P03_Haar_L2_Firewall.tex` | Haar-$L^2$ Firewall | SYN | Entwurf |
+| P02 | `P02_Adelic_Weil_Amplitude_Port.tex` | Adelic Weil Amplitude Port | SYN | **FROZEN ✓[K/M]** |
+| P03 | `P03_Haar_L2_Firewall.tex` | Haar-$L^2$ Firewall | SYN | **FROZEN ✓[K/M]** |
 | P04 | `P04_Finite_Weil_Geometry.tex` | Finite Weil Geometry & Objekt-X-Schnittstelle | SYN | In Arbeit |
 | P05 | `P05_Relative_Prime_Channels_and_Arithmetic_Edge_Geometry.tex` | Relative Prime Channels and Arithmetic Edge Geometry | SYN | **FROZEN ✓[K/M]** |
 | P06 | `P06_Jacobi_Feshbach_and_Divisor_Graph.tex` | Jacobi–Feshbach and Divisor Graph | SYN | **FROZEN ✓[K/M]** |
