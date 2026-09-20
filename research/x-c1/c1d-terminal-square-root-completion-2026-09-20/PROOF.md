@@ -179,15 +179,31 @@ Therefore
 This is sesquilinear and holds on the closed source space \(F_a\), not merely
 for diagonal quadratic values.
 
+Moreover, since
+\[
+\eta\|T_au\|^2
+\le
+\|\Delta_1I_{a,1}T_au\|^2
+=
+q_a[u]
+\le
+\|T_au\|^2,
+\]
+the \(q_a\)-norm is equivalent to the \(H_a\)-norm transported by \(T_a\).
+The inherited mediator theorem already proves that
+\(T_a:F_a\to H_a\) is a bounded isomorphism for the original closed form
+norm. Hence the \(q_a\)-norm is equivalent to the inherited complete
+\(F_a\)-norm. In particular \((F_a,q_a)\) is complete.
+
 Consequently \(q_a\) is a genuine positive Hilbert inner product on \(F_a\),
 and
 \[
 T_{X,a}:(F_a,q_a)\longrightarrow K_{X,a}
 \]
-is unitary onto its closed range. No GNS completion is introduced: the
-ambient terminal space, the maps \(T_a\), the defect transfers \(R_a\), and
-the inclusions \(I_{a,b}\) were constructed before the sign of \(q_a\) was
-settled.
+is unitary onto its full closed range \(K_{X,a}\). No extra completion is
+being hidden here. No GNS completion is introduced: the ambient terminal
+space, the maps \(T_a\), the defect transfers \(R_a\), and the inclusions
+\(I_{a,b}\) were constructed before the sign of \(q_a\) was settled.
 
 ## 6. Exact transition compatibility
 
