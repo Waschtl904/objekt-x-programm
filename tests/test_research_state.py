@@ -155,6 +155,9 @@ class RepositoryTests(unittest.TestCase):
         put('research/frontier/PROOF.md', b'Frontier proof fixture.\n')
         frontier = commit('fixture frontier')
         state = rs.load(ROOT / rs.STATE)
+        # Repository-level pending packages are not part of this isolated fixture.
+        # Individual tests add their own pending package when exercising that lifecycle.
+        state['pending_packages'] = []
         state['published_baseline']['sha'] = baseline
         state['live_frontier']['verified_through'] = frontier
         state['live_frontier']['branch_head_at_generation'] = frontier
