@@ -1,6 +1,9 @@
 name: A1 Osipov N1102 Arb certificate
 on:
   pull_request:
+    paths:
+      - 'scripts/check_a1_osipov1102_arb.py'
+      - '.github/workflows/a1-osipov1102-arb.yml'
   workflow_dispatch:
 permissions:
   contents: read
