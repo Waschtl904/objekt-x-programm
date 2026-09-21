@@ -1,6 +1,9 @@
 name: NP-GAP short-window Arb certificate
 on:
   pull_request:
+    paths:
+      - 'scripts/check_np_gap_short_window_arb.py'
+      - '.github/workflows/np-gap-short-window-arb.yml'
   workflow_dispatch:
 permissions:
   contents: read
