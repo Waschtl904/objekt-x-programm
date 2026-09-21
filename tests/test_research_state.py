@@ -292,6 +292,10 @@ class RepositoryTests(unittest.TestCase):
             'path': original['path'], 'as_of': '2026-09-20',
             'content_commit': frontier, 'content_sha256': original['sha256'],
             'note': 'Fixture: only navigation is superseded.'}]
+        # Navigation roles belong to this isolated fixture, not the live repo.
+        state['navigation_exceptions'] = [{
+            'path': definition, 'role': 'MATHEMATICAL_DEFINITION',
+            'reason': 'Independent fixture definition.'}]
         put(rs.STATE, rs.encoded(state))
         for path, raw in rs.render(state).items():
             put(path, raw)
@@ -428,6 +432,20 @@ class RepositoryTests(unittest.TestCase):
     def test_historical_body_is_byte_preserved(self):
         path = self.root / 'CURRENT-FRONT.md'
         path.write_bytes(path.read_bytes().replace(b'Historical navigation.', b'Rewritten navigation.'))
+        with self.assertRaisesRegex(rs.StateError, 'Historical banner/original bytes changed'):
+            rs.validate(self.root)
+
+    def test_active_readme_is_editable_without_unfreezing_historical_navigation(self):
+        self.s['navigation_exceptions'].append({
+            'path': 'README.md', 'role': 'ACTIVE_REPOSITORY_ENTRY',
+            'reason': 'Editable entry; canonical research status is managed separately.'})
+        self.put('README.md', b'Active repository entry.\n')
+        self.save_state()
+        rs.validate(self.root)
+        self.put('README.md', b'Updated entry and neutral bibliographic wording.\n')
+        rs.validate(self.root)
+        historical = self.root / 'CURRENT-FRONT.md'
+        historical.write_bytes(historical.read_bytes() + b'Unauthorized historical rewrite.\n')
         with self.assertRaisesRegex(rs.StateError, 'Historical banner/original bytes changed'):
             rs.validate(self.root)
 

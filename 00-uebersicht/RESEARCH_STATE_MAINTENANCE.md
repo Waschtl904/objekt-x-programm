@@ -57,6 +57,14 @@ per SHA-256 und darf keinen Review- oder Integrationsstatus selbst promoten.
 Historische Navigationsdateien behalten ihren Originalkörper bytegleich hinter
 dem standardisierten Banner. Alte Beweisdateien werden nicht umgeschrieben.
 
+Die aktive Repository-`README.md` ist davon ausgenommen: Ihre Rolle
+`ACTIVE_REPOSITORY_ENTRY` steht ausdrücklich unter `navigation_exceptions`.
+Sie darf als Einstieg bearbeitet werden und verweist für aktuelle Statusangaben
+auf das Register und dessen generierte Ansichten. Die frühere README-Fassung
+bleibt über den in der Ausnahme dokumentierten Commit und SHA-256 erhalten.
+Diese Ausnahme lockert weder die übrigen historischen Bytebindungen noch
+Beweisanker, Review-Status oder mathematische Claims.
+
 ## Reichweite des Validators
 
 Geprüft werden Schema, IDs, Abhängigkeiten, erklärte Statuskonsistenz,

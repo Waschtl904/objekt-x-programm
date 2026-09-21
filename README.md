@@ -1,12 +1,10 @@
-> [!WARNING]
-> **HISTORICAL SNAPSHOT — nur die operative Navigation ist ersetzt.**
->
-> As of: 2026-09-14
-> Nicht zur Bestimmung der aktuellen Forschungsfront verwenden.
-> Kanonischer Status: [RESEARCH_STATE.yaml](00-uebersicht/RESEARCH_STATE.yaml).
-> Lesbarer Einstieg: [CURRENT_STATE.md](00-uebersicht/CURRENT_STATE.md).
-> Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten.
-> Mathematische Inhalte werden durch diesen Hinweis nicht pauschal verworfen.
+> [!NOTE]
+> **Aktiver Repository-Einstieg.**
+> Aktueller Forschungsstand: [CURRENT_STATE.md](00-uebersicht/CURRENT_STATE.md).
+> Nächste Beweisziele: [NEXT_GATES.md](00-uebersicht/NEXT_GATES.md).
+> Operative Statusquelle: [RESEARCH_STATE.yaml](00-uebersicht/RESEARCH_STATE.yaml).
+> Die unten ausdrücklich auf den 14. September 2026 datierten Abschnitte sind historische Einordnung.
+> Historische README-Fassung: [gepinntes Original](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/README.md).
 
 # Objekt-X-Programm
 

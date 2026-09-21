@@ -968,13 +968,6 @@
       "note": "Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten."
     },
     {
-      "path": "README.md",
-      "as_of": "2026-09-14",
-      "content_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
-      "content_sha256": "5540cfeb7ce66d27b9d791ce569b1fadbceda23fb83826e6e7424627e104961e",
-      "note": "Der folgende Originalinhalt bleibt als Provenienz unverändert erhalten."
-    },
-    {
       "path": "EINSTIEGSPROMPT.md",
       "as_of": "2026-09-14",
       "content_commit": "79988874cceeb01f17e0cda67485838c0b7c4f63",
@@ -1057,6 +1050,11 @@
       "path": "00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md",
       "role": "MATHEMATICAL_DEFINITION",
       "reason": "Eigenständige fachliche Definitionsautorität; keine operative Statusquelle. Genaue Fassung unter authority_roles.definition."
+    },
+    {
+      "path": "README.md",
+      "role": "ACTIVE_REPOSITORY_ENTRY",
+      "reason": "Aktiver, bearbeitbarer Repository-Einstieg; keine operative Status- oder mathematische Beweisautorität. Historische README-Fassung vom 2026-09-14: Commit 79988874cceeb01f17e0cda67485838c0b7c4f63, SHA-256 5540cfeb7ce66d27b9d791ce569b1fadbceda23fb83826e6e7424627e104961e. Dieser Provenienzanker bleibt unverändert; die Arbeitskopie ist nicht bytegefroren."
     }
   ],
   "metadata_policy": {
