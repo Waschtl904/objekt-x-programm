@@ -141,10 +141,12 @@ forward Object-X architecture                 ✓[M]_part
 full positive Object-X / RH                   ?[O]
 ```
 
-## Bibliographic note
+## Independence
 
-Current arXiv v2 metadata for arXiv:2608.24827 lists **Xuefeng Zhu** as author. Earlier project text temporarily attributing the preprint to Marcus Chuk is bibliographically superseded; the mathematical benchmark statements are unchanged.
+Objekt X is an independent research project. External publications are cited in the mathematical documents where their results or benchmarks are used. Such citations do not imply collaboration, affiliation, endorsement, or shared responsibility.
 
-Registry und Objekt-X-Arbeitsdefinition bleiben ohne separate Promotion unverändert.
+Bibliographic corrections concerning historical repository snapshots are preserved in the relevant audit and provenance records. They do not modify any mathematical claim, proof status, registry entry, or the working definition of Objekt X.
 
-Lizenz: [CC BY 4.0](LICENSE).
+## License
+
+Original repository content is licensed under [CC BY 4.0](LICENSE), unless otherwise stated. External publications and third-party material remain subject to their respective rights and licenses.
