@@ -3,17 +3,17 @@
 > GENERATED FILE — DO NOT EDIT
 > Quelle: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml). Navigation, keine Satzpromotion.
 
-Stand: 2026-09-20.
+Stand: 2026-09-21.
 
 ## Gemergte Basis
 
-`main@d455a66` — [d455a66](https://github.com/Waschtl904/objekt-x-programm/commit/d455a664c7885eeef9f0d07f246cffc75c1ad267). Eingefrorener gemergter PR-#137-Endpunktsatz bis B=log(5)/2.
+`main@f822859` — [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a). Gemergter kanonischer Stand nach PR #143 (Fixed-Horizon-C1 bis a=1) und PR #144 (scoped legacy survivors); unbeschränkte C1-Horizontkompatibilität bleibt OPEN.
 Mathematik: AUTHOR_DERIVED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 
 ## Verifizierter Forschungsstand
 
-Geprüft bis [5f19065](https://github.com/Waschtl904/objekt-x-programm/commit/5f19065e28b9f2e09ae93bef0b4c752ab58997d4) auf `research/x-c1-inherited-resonance-shell-schur-2026-09-18`.
-Dokumentarischer Branch-Head bei Registererzeugung: [5f19065](https://github.com/Waschtl904/objekt-x-programm/commit/5f19065e28b9f2e09ae93bef0b4c752ab58997d4).
+Geprüft bis [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a) auf `docs/post-pr144-research-state-sync-2026-09-21`.
+Dokumentarischer Branch-Head bei Registererzeugung: [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a).
 **Dies ist ein geprüfter Snapshot, keine Behauptung über den dauerhaft aktuellen Branch-HEAD.**
 Integration: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 
