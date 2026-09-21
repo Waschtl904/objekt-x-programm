@@ -368,7 +368,7 @@ def render(s):
                 'Integrierter beobachteter Research-Head: ' + commit_link(s, o['integrated_research_head']) + ' auf `' + o['integrated_research_branch'] + '`.',
                 'Reconciliation-Merge: ' + commit_link(s, o['reconciliation_merge']) + '.',
                 'Integrations-CI: [' + str(o['ci_run_id']) + '](' + o['ci_url'] + '), Versuch ' + str(o['ci_run_attempt']) + ', **' + o['ci_conclusion'] + '** auf ' + commit_link(s, o['ci_head_sha']) + '.',
-                '**Diese Provenienz belegt Integration/CI, nicht mathematische Neuverifikation.**', '']
+                '**Diese Provenienz belegt Integration/CI, keine mathematische Neuverifikation.**', '']
     current += ['## Registry-Sync-Kandidat', '',
                 'Branch `' + sync['branch'] + '` gegen Basis ' + commit_link(s, sync['base_sha']) + '.',
                 'Beobachteter Kandidat-Head bei Registererzeugung: ' + commit_link(s, sync['candidate_head_at_generation']) + '.',

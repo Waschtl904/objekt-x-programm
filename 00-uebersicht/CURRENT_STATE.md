@@ -23,7 +23,7 @@ Beobachtet am 2026-09-21: `main` bei [f822859](https://github.com/Waschtl904/obj
 Integrierter beobachteter Research-Head: [19e4630](https://github.com/Waschtl904/objekt-x-programm/commit/19e4630a7f0d4c8232f8ee81c4b483355ed2f505) auf `research/x-c1-inherited-resonance-shell-schur-2026-09-18`.
 Reconciliation-Merge: [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a).
 Integrations-CI: [35557056844](https://github.com/Waschtl904/objekt-x-programm/actions/runs/35557056844), Versuch 1, **success** auf [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a).
-**Diese Provenienz belegt Integration/CI, nicht mathematische Neuverifikation.**
+**Diese Provenienz belegt Integration/CI, keine mathematische Neuverifikation.**
 
 ## Registry-Sync-Kandidat
 
