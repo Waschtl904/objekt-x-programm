@@ -1,6 +1,12 @@
 name: A1 C-odd exact dyadic matrix build
 on:
   pull_request:
+    paths:
+      - 'scripts/check_a1_c_even_engine_preflight_arb.py'
+      - 'scripts/certify_a1_c_even_exact_dyadic_matrix.py'
+      - 'scripts/certify_a1_c_odd_exact_dyadic_matrix.py'
+      - 'scripts/a1_c_odd_matrix_artifact.py'
+      - '.github/workflows/a1-c-odd-exact-matrix-build.yml'
   workflow_dispatch:
 permissions:
   contents: read
