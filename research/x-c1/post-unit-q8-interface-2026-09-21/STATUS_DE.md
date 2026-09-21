@@ -4,67 +4,85 @@ Stand: 2026-09-21.
 
 ## Paketstatus
 
-POST-UNIT-Q8-HORIZON-INTERFACE
+`POST-UNIT-Q8-HORIZON-INTERFACE`
 
-- Mathematischer Status: OPEN
-- Review-Status: EXTERNAL_REVIEW_OPEN
-- Integrationsstatus: RESEARCH_BRANCH_UNMERGED
+- Mathematischer Status: `OPEN`
+- Review-Status: `EXTERNAL_REVIEW_OPEN`
+- Integrationsstatus: `RESEARCH_BRANCH_UNMERGED`
 - Typ: Interface-/Obligationspaket, kein neuer Satz
-- Positivitaet fuer A>1: nicht behauptet
-- q=8-Wall-Crossing: OPEN
+- Positivitaet fuer Terminalhorizonte >1: nicht behauptet
+- C1-Horizont-Cocycle: `OPEN`
+- erste geschlossene Kammer bis log(8)/2: `OPEN`
+- X4-Q8-Wall-Crossing: `OPEN`
 
-## Bewiesene Eingabe
+## Typisierung des naechsten Satzes
 
-Der gemergte Fixed-Horizon-C1-Block bis Terminalhorizont 1 bleibt
-AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN.
+Der erste neue Satz muss zwei rohe Transportfamilien unterscheiden:
 
-Verwendbar bleiben insbesondere
-\[
-I-R_1^*R_1\succeq\eta I,\qquad \eta>10^{-28},
-\]
-die eine terminale Quadratwurzel
-\[
-\Delta_1=(I-R_1^*R_1)^{1/2},
-\]
-sowie die exakte positive Gram-Realisierung und Kompatibilitaet auf dem
-bereits bewiesenen Band.
+[
+M^T_{A,B}:\mathcal H_A^T\to\mathcal H_B^T,
+\qquad
+M^D_{A,B}:\mathcal H_A^D\to\mathcal H_B^D.
+]
 
-Dieser Block wird hier weder erneut auditiert noch ueber 1 hinaus verlaengert.
+Mindestens zu beweisen sind
 
-## Neue offene Leiter
+[
+M^T_{A,B}T_A=T_BJ_{A,B},
+\qquad
+M^D_{A,B}D_A=D_BJ_{A,B},
+]
 
-1. TERMINAL-HORIZON-C1-COCYCLE - OPEN
-2. FIRST-GLOBAL-CHAMBER-1-TO-LOG8/2 - OPEN
-3. Q8-WALL-CROSSING - OPEN
-4. anschliessende kofinale Fortsetzung - OPEN
+sowie
 
-Die erste Schwelle ist
-\[
-A_8=\frac12\log8.
-\]
-Auf
-\[
-1\le a\le A_8
-\]
-bleibt die Kanalfamilie
-\[
-\{2,3,4,5,7\}.
-\]
-q=8 wird wegen log q<2a erst strikt rechts von A_8 aktiv.
+[
+M^T_{B,C}M^T_{A,B}=M^T_{A,C},
+\qquad
+M^D_{B,C}M^D_{A,B}=M^D_{A,C}.
+]
+
+Vor diesen Gleichungen stehen die Kernel-/Quotientenbedingungen,
+Wohldefiniertheit auf den Bildraeumen und Beschraenktheit der Erweiterungen.
+
+Falls spaeter `D_A=R_AT_A` und `D_B=R_BT_B` gelten, ist auch
+
+[
+R_BM^T_{A,B}=M^D_{A,B}R_A
+]
+
+ein eigener Beweisschritt und keine automatische Folgerung.
+
+## Forschungsreihenfolge
+
+1. `TERMINAL-HORIZON-C1-COCYCLE`
+2. `FIRST-GLOBAL-CHAMBER-1-TO-LOG8/2`
+3. `X4-Q8-WALL-CROSSING`
+4. erst danach positive korrigierte Terminaltransporte und kofinale Fortsetzung
+
+Am Endpunkt
+
+[
+A_8=\frac12\log8
+]
+
+ist `q=8` wegen `log q < 2A` noch nicht aktiv. Die geschlossene erste
+Kammer endet daher mit der alten Familie `{2,3,4,5,7}`. Der Kanal `8`
+gehoert erst in den Satz strikt rechts der Wand.
 
 ## Firewalls
 
-Nicht geschlossen und nicht behauptet:
-- Terminalpositivitaet fuer A>1;
-- Wiederverwendung der 191D-Reduktion auf neuen Horizonten;
+Nicht behauptet:
+
+- Positivitaet fuer A>1;
+- Uebernahme der Zahl 191 auf neue Horizonte;
+- Gleichheit der T- und D-Transporte;
 - lokale Quadratwurzel-Intertwinings;
 - positive Einzelkanalzerlegung von q=8;
-- unbeschraenkte C1-Horizontkompatibilitaet;
-- kofinale positive C1-Geometrie;
+- kompatible positive korrigierte Raeume ueber verschiedene Terminalhorizonte;
+- unbeschraenkte/kofinale C1-Geometrie;
 - vollstaendige globale Weil-Testklasse;
 - globales Objekt X;
 - globale Weil-Positivitaet;
 - RH.
 
-P11-FIXED-PAIR-STRONG-TERMINAL bleibt AUTHOR_DERIVED / SCOPED_GREEN, ist aber
-nicht die hier gesuchte C1-Horizontkompatibilitaet.
+`P11-FIXED-PAIR-STRONG-TERMINAL` bleibt davon strikt getrennt.
