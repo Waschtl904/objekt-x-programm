@@ -5,6 +5,8 @@
 
 Genau zwei Hauptfronten. Die vollständigen Beweise und Eingabebindungen stehen in den verlinkten Paketen.
 
+Die getrennten Integrations-/Registry-Metadaten in [CURRENT_STATE](CURRENT_STATE.md) ändern keine mathematischen Gates.
+
 ## Unbeschränkte Horizonterweiterung und kompatibler Transport
 
 `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION` — OPEN. Nach geschlossenem C1a-C1d auf B<=a<=1: neue Prime-Power-Horizonte a>1, erneuerbare Profilreserve, nicht summierbarer/kofinaler Transport und kompatible positive Terminalabschlüsse.

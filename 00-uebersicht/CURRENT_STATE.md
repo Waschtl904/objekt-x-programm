@@ -3,19 +3,35 @@
 > GENERATED FILE — DO NOT EDIT
 > Quelle: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml). Navigation, keine Satzpromotion.
 
-Stand: 2026-09-20.
+Stand: 2026-09-21.
 
-## Gemergte Basis
+## Gemergte kanonische Basis
 
-`main@d455a66` — [d455a66](https://github.com/Waschtl904/objekt-x-programm/commit/d455a664c7885eeef9f0d07f246cffc75c1ad267). Eingefrorener gemergter PR-#137-Endpunktsatz bis B=log(5)/2.
-Mathematik: AUTHOR_DERIVED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
+`main@f822859` — [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a). Aktueller gemergter kanonischer Main-Stand nach PR #143 (Fixed-Horizon-C1 bis a=1) und PR #144 (scoped legacy survivors); Integration ist von mathematischer Verifikation getrennt.
 
-## Verifizierter Forschungsstand
+## Mathematisch geprüfter Forschungssnapshot
 
 Geprüft bis [5f19065](https://github.com/Waschtl904/objekt-x-programm/commit/5f19065e28b9f2e09ae93bef0b4c752ab58997d4) auf `research/x-c1-inherited-resonance-shell-schur-2026-09-18`.
-Dokumentarischer Branch-Head bei Registererzeugung: [5f19065](https://github.com/Waschtl904/objekt-x-programm/commit/5f19065e28b9f2e09ae93bef0b4c752ab58997d4).
-**Dies ist ein geprüfter Snapshot, keine Behauptung über den dauerhaft aktuellen Branch-HEAD.**
-Integration: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
+Beobachteter späterer Forschungsbranch-Head: [19e4630](https://github.com/Waschtl904/objekt-x-programm/commit/19e4630a7f0d4c8232f8ee81c4b483355ed2f505).
+**Der beobachtete Branch-Head ist keine zusätzliche mathematische Verifikation.**
+Externe Prüfung des geprüften Snapshots: EXTERNAL_REVIEW_OPEN.
+Mathematisch geprüfter vollständiger Research-Snapshot; der spätere beobachtete Branch-Head ist nur Abstammungsinformation und keine zusätzliche mathematische Verifikation.
+
+## Gepinnte Integrations-/CI-Provenienz
+
+Beobachtet am 2026-09-21: `main` bei [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a).
+Integrierter beobachteter Research-Head: [19e4630](https://github.com/Waschtl904/objekt-x-programm/commit/19e4630a7f0d4c8232f8ee81c4b483355ed2f505) auf `research/x-c1-inherited-resonance-shell-schur-2026-09-18`.
+Reconciliation-Merge: [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a).
+Integrations-CI: [35557056844](https://github.com/Waschtl904/objekt-x-programm/actions/runs/35557056844), Versuch 1, **success** auf [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a).
+**Diese Provenienz belegt Integration/CI, keine mathematische Neuverifikation.**
+
+## Registry-Sync-Kandidat
+
+Branch `docs/post-pr144-research-state-sync-2026-09-21` gegen Basis [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a).
+Beobachteter Kandidat-Head bei Registererzeugung: [cd82bb6](https://github.com/Waschtl904/objekt-x-programm/commit/cd82bb64f6c841fae80f2c9e0d84a233c5a0c4e5).
+Integration: RESEARCH_BRANCH_UNMERGED; mathematische Review-Änderung: false.
+**Dieser Abschnitt beschreibt ausschließlich Registry-/Dokumentationsintegration und keinen mathematisch geprüften Snapshot.**
+Reiner Registry-/Dokumentations-Sync gegen die gemergte Basis; kein Satz- oder Review-Status wird dadurch erzeugt.
 
 ## Zwei aktive Hauptfronten
 
