@@ -1,6 +1,9 @@
 name: A1 C-even exact dyadic Gram benchmark
 on:
   pull_request:
+    paths:
+      - 'scripts/bench_a1_c_even_fmpz_gram.py'
+      - '.github/workflows/a1-c-even-fmpz-gram-bench.yml'
   workflow_dispatch:
 permissions:
   contents: read

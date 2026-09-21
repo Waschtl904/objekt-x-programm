@@ -1,6 +1,10 @@
 name: A1 C-even exact dyadic matrix smoke
 on:
   pull_request:
+    paths:
+      - 'scripts/check_a1_c_even_engine_preflight_arb.py'
+      - 'scripts/certify_a1_c_even_exact_dyadic_matrix.py'
+      - '.github/workflows/a1-c-even-exact-matrix-smoke.yml'
   workflow_dispatch:
 permissions:
   contents: read

@@ -1,6 +1,9 @@
 name: A1 Omega1551 reduced-band Arb certificate
 on:
   pull_request:
+    paths:
+      - 'scripts/check_a1_omega1551_arb.py'
+      - '.github/workflows/a1-omega1551-arb.yml'
   workflow_dispatch:
 permissions:
   contents: read

@@ -1,7 +1,6 @@
 name: A1 C-even hash-fixed artifact SPD LDL certificate
 
 on:
-  pull_request:
   workflow_dispatch:
 
 permissions:

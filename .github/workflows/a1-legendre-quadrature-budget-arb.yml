@@ -1,6 +1,9 @@
 name: A1 Legendre quadrature budget Arb certificate
 on:
   pull_request:
+    paths:
+      - 'scripts/check_a1_legendre_quadrature_budget_arb.py'
+      - '.github/workflows/a1-legendre-quadrature-budget-arb.yml'
   workflow_dispatch:
 permissions:
   contents: read
