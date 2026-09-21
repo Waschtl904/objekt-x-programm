@@ -3,6 +3,11 @@
 `RESEARCH_STATE.yaml` ist die einzige operative Statusquelle. Die generierten
 Ansichten sind Navigation, keine mathematische Promotion.
 
+Der [gemeinsame Abnahmeablauf](../CONTRIBUTING.md) trennt Mathematik,
+Infrastruktur und Dokumentation nach der tatsächlichen Auswirkung. Die
+folgenden Schritte gelten für Registry-Pflege; sie machen eine unveränderte
+README- oder Linkkorrektur nicht zu einem mathematischen Re-Audit.
+
 ## Rollen strikt getrennt halten
 
 1. `published_baseline`: aktueller gepinnter gemergter Main-Stand. Nur
@@ -43,6 +48,13 @@ python scripts/validate_active_front.py
 
 Die Remote-CI-Prüfung benötigt GitHub-Zugriff und bindet ausschließlich den
 aufgezeichneten Integrationslauf. Sie beweist keine Mathematik.
+
+Ein späterer Dokumentations- oder Infrastrukturmerge erzwingt für sich allein
+keinen neuen Registry-Snapshot. Der aktuelle Git-Head wird im Merge-Abgleich
+festgestellt; die gepinnten Registry-Felder dokumentieren weiterhin ihren
+jeweils ausdrücklich angegebenen Stand. Werden Integrationsangaben bewusst
+aktualisiert, gelten die obigen Schritte einschließlich Commitbindung und
+Regeneration. Ein bloßes Gleichziehen aller SHA-Felder ist keine Synchronisation.
 
 ## Neue Forschungspakete
 
