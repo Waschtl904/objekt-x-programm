@@ -26,6 +26,8 @@ gebunden. Diese Trennung wird durch die CI geprüft, nicht mathematisch bewiesen
 
 Python 3.10 oder neuer und Git mit vollständiger Historie genügen; keine
 zusätzlichen Python-Pakete und kein Netzwerkzugriff sind für die Checks nötig.
+Ausnahme ist die ausdrücklich gewählte Remote-CI-Prüfung
+`--check-integration-ci`; der Registry-Workflow führt sie zusätzlich aus.
 Die `.yaml`-Dateien verwenden **die JSON-Teilmenge von YAML 1.2**. Das ist eine
 bewusste Einschränkung: UTF-8, doppelte Anführungszeichen, keine Kommentare,
 keine doppelten Schlüssel und keine nichtendlichen Zahlen. Dadurch benötigt
@@ -37,6 +39,7 @@ Vom Repository-Stamm aus:
 python scripts/generate_research_state.py
 python scripts/generate_research_state.py --check
 python scripts/check_research_state.py
+python scripts/check_research_state.py --check-integration-ci
 python -m unittest discover -s tests -p test_research_state.py -v
 python scripts/validate_active_front.py
 ```
@@ -49,6 +52,38 @@ unverändert. Die neue CI verwendet bei PRs deren Basis, bei Pushes `before`.
 Der bisherige Frontvalidator bleibt unverändert und prüft weiterhin den
 historischen PR-Stack. Sein alter Ausgabetext ist kein Nachweis, dass die alte
 Front operativ aktuell ist. Der neue Workflow ergänzt diesen Check ausdrücklich.
+
+## Integration beobachten, historische Anker erhalten
+
+`published_baseline.sha`, `live_frontier.verified_through` und
+`live_frontier.branch_head_at_generation` haben unterschiedliche historische
+Bedeutungen. Weder ein Merge noch ein CI-PASS setzt diese Felder automatisch auf
+den späteren Main-Head. Auch die Resultat-Integrationseinträge bleiben relativ
+zur eingefrorenen publizierten Basis zu lesen.
+
+Für die zusätzliche Git-/CI-Ebene dient seit Schema 2
+`current_integration_observation`. Sie erfasst Beobachtungsdatum, Main-Commit,
+integrierten Forschungsbranch samt Head, Reconciliation-Merge sowie den
+Research-State-CI-Lauf mit Versuch, Commitbindung, URL und Ergebnis. Die Feldnamen
+und Prüfungen sind im [Schema](RESEARCH_STATE_SCHEMA.md) erklärt. Diese Beobachtung
+ist selbst ein datierter Snapshot und keine Behauptung, dass ein Remote-HEAD
+dauerhaft unverändert bleibt.
+
+Bei einem reinen Integrations-Sync:
+
+1. Main- und Forschungsbranch-Head sowie den erfolgreichen CI-Laufversuch lesen.
+2. Nur die Beobachtung und das Registerdatum aktualisieren; bei einer geänderten
+   Darstellung zusätzlich `render_version` erhöhen. Die eingefrorenen Anker,
+   fachlichen Status und Integrationseinträge unverändert lassen.
+3. Alle drei Ansichten generieren und die Offlineprüfungen ausführen.
+4. Den aufgezeichneten CI-Lauf mit `--check-integration-ci` gegen GitHub prüfen
+   und den vollständigen Registry-Workflow auf dem neuen Commit bestehen lassen.
+
+Der Onlinecheck benötigt GitHub-Zugriff, optional `GH_TOKEN`, im Workflow mit
+`contents: read` und `actions: read`. Er bindet den aufgezeichneten Laufversuch
+statt einen späteren Wiederholungslauf stillschweigend zu übernehmen. Ein
+Abfragefehler bleibt ein Prüfungsfehler. Die Offlineprüfungen benötigen weiterhin
+weder Zugangsdaten noch Netzwerk.
 
 ## Zukünftige Pakete und META.yaml
 

@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
 
 jobs:
   research-state:
@@ -35,5 +36,9 @@ jobs:
           fi
       - name: Exercise consistency failures and metadata lifecycle
         run: python -m unittest discover -s tests -p test_research_state.py -v
+      - name: Verify recorded integration CI commit and attempt
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/check_research_state.py --check-integration-ci
       - name: Preserve the historical front check
         run: python scripts/validate_active_front.py

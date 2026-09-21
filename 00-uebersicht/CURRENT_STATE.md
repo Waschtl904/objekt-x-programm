@@ -5,17 +5,26 @@
 
 Stand: 2026-09-21.
 
-## Gemergte Basis
+## Eingefrorene publizierte Basis
 
-`main@f822859` — [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a). Gemergter kanonischer Stand nach PR #143 (Fixed-Horizon-C1 bis a=1) und PR #144 (scoped legacy survivors); unbeschränkte C1-Horizontkompatibilität bleibt OPEN.
+`main@d455a66` — [d455a66](https://github.com/Waschtl904/objekt-x-programm/commit/d455a664c7885eeef9f0d07f246cffc75c1ad267). Eingefrorener gemergter PR-#137-Endpunktsatz bis B=log(5)/2.
 Mathematik: AUTHOR_DERIVED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 
 ## Verifizierter Forschungsstand
 
-Geprüft bis [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a) auf `docs/post-pr144-research-state-sync-2026-09-21`.
-Dokumentarischer Branch-Head bei Registererzeugung: [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a).
+Geprüft bis [5f19065](https://github.com/Waschtl904/objekt-x-programm/commit/5f19065e28b9f2e09ae93bef0b4c752ab58997d4) auf `research/x-c1-inherited-resonance-shell-schur-2026-09-18`.
+Dokumentarischer Branch-Head bei Registererzeugung: [5f19065](https://github.com/Waschtl904/objekt-x-programm/commit/5f19065e28b9f2e09ae93bef0b4c752ab58997d4).
 **Dies ist ein geprüfter Snapshot, keine Behauptung über den dauerhaft aktuellen Branch-HEAD.**
-Integration: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
+Integration relativ zur eingefrorenen Basis: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
+
+## Beobachteter Integrationsstand
+
+Beobachtet am 2026-09-21: `main` bei [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a).
+Beobachteter Head von `research/x-c1-inherited-resonance-shell-schur-2026-09-18`: [19e4630](https://github.com/Waschtl904/objekt-x-programm/commit/19e4630a7f0d4c8232f8ee81c4b483355ed2f505); in diesem Main-Snapshot enthalten.
+Reconciliation-Merge: [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a).
+Integrations-CI: [35557056844](https://github.com/Waschtl904/objekt-x-programm/actions/runs/35557056844), Versuch 1, **success** auf [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a).
+**Datierte Git-/CI-Beobachtung, keine dauerhafte HEAD-Aussage und keine mathematische Neuverifikation.**
+Die historische Baseline, der Verifikationsanker, der dokumentierte Branch-Head und die darauf bezogenen Integrationseinträge bleiben unverändert.
 
 ## Zwei aktive Hauptfronten
 

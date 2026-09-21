@@ -10,6 +10,7 @@ import shutil
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
@@ -117,6 +118,88 @@ class StructureTests(unittest.TestCase):
         with self.assertRaisesRegex(rs.StateError, 'Reproduction evidence/status'):
             rs.validate_structure(self.state)
 
+    def test_integration_observation_is_required_and_does_not_promote(self):
+        for field, value in [('mathematical_status_change', True),
+                             ('ci_run_id', True), ('ci_run_attempt', 0),
+                             ('main_sha', 'f822859'), ('observed_at', '2026-02-30')]:
+            with self.subTest(field=field):
+                changed = deepcopy(self.state)
+                changed['current_integration_observation'][field] = value
+                with self.assertRaises(rs.StateError):
+                    rs.validate_structure(changed)
+        del self.state['current_integration_observation']
+        with self.assertRaisesRegex(rs.StateError, 'missing fields'):
+            rs.validate_structure(self.state)
+
+    def test_observation_cannot_bind_a_different_ci_head_or_repository(self):
+        for field, value in [('ci_head_sha', '0' * 40),
+                             ('ci_url', 'https://github.com/other/repo/actions/runs/1'),
+                             ('ci_conclusion', 'failure')]:
+            with self.subTest(field=field):
+                changed = deepcopy(self.state)
+                changed['current_integration_observation'][field] = value
+                with self.assertRaises(rs.StateError):
+                    rs.validate_structure(changed)
+
+    def test_observation_rendering_preserves_frozen_anchors_and_statuses(self):
+        before = deepcopy(self.state)
+        current = rs.render(self.state)[rs.GENERATED[0]].decode()
+        self.assertEqual(before, self.state)
+        for sha in (self.state['published_baseline']['sha'],
+                    self.state['live_frontier']['verified_through'],
+                    self.state['live_frontier']['branch_head_at_generation'],
+                    self.state['current_integration_observation']['main_sha'],
+                    self.state['current_integration_observation']['integrated_research_head']):
+            self.assertIn(sha, current)
+        self.assertIn('Integration relativ zur eingefrorenen Basis', current)
+        self.assertIn('keine mathematische Neuverifikation', current)
+
+
+class IntegrationCITests(unittest.TestCase):
+    def setUp(self):
+        self.s = rs.load(ROOT / rs.STATE)
+        o = self.s['current_integration_observation']
+        self.run = {'id': o['ci_run_id'], 'run_attempt': o['ci_run_attempt'],
+                    'head_sha': o['main_sha'], 'head_branch': 'main', 'event': 'push',
+                    'path': rs.INTEGRATION_CI_WORKFLOW, 'status': 'completed',
+                    'conclusion': 'success', 'html_url': o['ci_url'],
+                    'updated_at': o['observed_at'] + 'T03:18:07Z'}
+
+    def test_exact_run_attempt_metadata_passes(self):
+        rs.validate_integration_ci_run(self.s, self.run)
+
+    def test_ci_identity_and_commit_mismatches_are_rejected(self):
+        for field, value in [('id', self.run['id'] + 1), ('run_attempt', 2),
+                             ('head_sha', '0' * 40), ('head_branch', 'research/other'),
+                             ('event', 'pull_request'), ('path', '.github/workflows/other.yml'),
+                             ('html_url', 'https://github.com/other/repo/actions/runs/1')]:
+            with self.subTest(field=field):
+                changed = dict(self.run, **{field: value})
+                with self.assertRaisesRegex(rs.StateError, 'metadata mismatch: ' + field):
+                    rs.validate_integration_ci_run(self.s, changed)
+
+    def test_incomplete_failed_and_future_ci_are_rejected(self):
+        for field, value in [('status', 'in_progress'), ('conclusion', 'cancelled'),
+                             ('updated_at', '2099-01-01T00:00:00Z'), ('updated_at', None)]:
+            with self.subTest(field=field, value=value):
+                with self.assertRaises(rs.StateError):
+                    rs.validate_integration_ci_run(self.s, dict(self.run, **{field: value}))
+
+    def test_online_check_requests_the_recorded_attempt(self):
+        from io import BytesIO
+        with patch.object(rs, 'urlopen', return_value=BytesIO(json.dumps(self.run).encode())) as fetch:
+            result = rs.check_integration_ci(ROOT)
+        o = self.s['current_integration_observation']
+        request = fetch.call_args.args[0]
+        self.assertEqual(request.full_url, 'https://api.github.com/repos/' + self.s['repository']
+                         + '/actions/runs/' + str(o['ci_run_id']) + '/attempts/' + str(o['ci_run_attempt']))
+        self.assertEqual(result['head_sha'], o['main_sha'])
+
+    def test_online_failure_is_not_treated_as_verified(self):
+        with patch.object(rs, 'urlopen', side_effect=rs.URLError('offline')):
+            with self.assertRaisesRegex(rs.StateError, 'Could not verify integration CI'):
+                rs.check_integration_ci(ROOT)
+
 
 class RepositoryTests(unittest.TestCase):
     @classmethod
@@ -154,6 +237,13 @@ class RepositoryTests(unittest.TestCase):
         baseline = commit('fixture baseline')
         put('research/frontier/PROOF.md', b'Frontier proof fixture.\n')
         frontier = commit('fixture frontier')
+        # Real divergent history and merge, separate from the frozen math snapshot.
+        rs.git(root, 'branch', 'fixture-research')
+        rs.git(root, 'checkout', '--quiet', '-b', 'fixture-main', baseline)
+        put('integration-note.md', b'Documentary main-side change.\n')
+        commit('fixture main-side documentation')
+        rs.git(root, 'merge', '--quiet', '--no-ff', '-m', 'fixture integration', 'fixture-research')
+        integrated = rs.git(root, 'rev-parse', 'HEAD').stdout.decode().strip()
         state = rs.load(ROOT / rs.STATE)
         # Repository-level pending packages are not part of this isolated fixture.
         # Individual tests add their own pending package when exercising that lifecycle.
@@ -161,6 +251,10 @@ class RepositoryTests(unittest.TestCase):
         state['published_baseline']['sha'] = baseline
         state['live_frontier']['verified_through'] = frontier
         state['live_frontier']['branch_head_at_generation'] = frontier
+        state['current_integration_observation'].update(
+            main_sha=integrated, integrated_research_branch='fixture-research',
+            integrated_research_head=frontier, reconciliation_merge=integrated,
+            ci_head_sha=integrated)
         state['metadata_policy']['enforced_after'] = frontier
         state['authority_roles']['definition'] = ref(baseline, definition)
         state['authority_roles']['review_rules'] = ref(baseline, definition)
@@ -243,6 +337,47 @@ class RepositoryTests(unittest.TestCase):
         result = rs.validate(self.root, self.initial_commit)
         self.assertEqual(result['results'], 2)
         self.assertNotEqual(result['verified_through'], self.initial_commit)
+
+    def test_observed_integration_does_not_reclassify_historical_results(self):
+        before = deepcopy(self.s)
+        rs.validate(self.root)
+        self.assertEqual(self.s, before)
+        self.assertEqual(self.s['results'][1]['integration_status'], 'RESEARCH_BRANCH_UNMERGED')
+        o = self.s['current_integration_observation']
+        self.assertNotEqual(o['main_sha'], self.initial_commit)
+        self.assertTrue(rs.ancestor(self.root, self.s['live_frontier']['verified_through'], o['main_sha']))
+
+    def test_unintegrated_research_head_is_rejected(self):
+        self.s['current_integration_observation']['integrated_research_head'] = self.initial_commit
+        self.save_state()
+        with self.assertRaisesRegex(rs.StateError, 'research head is not integrated'):
+            rs.validate(self.root)
+
+    def test_unintegrated_reconciliation_is_rejected(self):
+        self.s['current_integration_observation']['reconciliation_merge'] = self.initial_commit
+        self.save_state()
+        with self.assertRaisesRegex(rs.StateError, 'Reconciliation merge is not integrated'):
+            rs.validate(self.root)
+
+    def test_linear_commit_is_not_a_reconciliation_merge(self):
+        self.s['current_integration_observation']['reconciliation_merge'] = self.s['published_baseline']['sha']
+        self.save_state()
+        with self.assertRaisesRegex(rs.StateError, 'must identify a merge commit'):
+            rs.validate(self.root)
+
+    def test_unknown_observed_commit_is_rejected(self):
+        self.s['current_integration_observation']['integrated_research_head'] = '0' * 40
+        self.save_state()
+        with self.assertRaisesRegex(rs.StateError, 'Git check failed'):
+            rs.validate(self.root)
+
+    def test_unrelated_observed_main_is_rejected(self):
+        tree = rs.git(self.root, 'rev-parse', 'HEAD^{tree}').stdout.decode().strip()
+        unrelated = rs.git(self.root, 'commit-tree', tree, '-m', 'unrelated root').stdout.decode().strip()
+        self.s['current_integration_observation'].update(main_sha=unrelated, ci_head_sha=unrelated)
+        self.save_state()
+        with self.assertRaisesRegex(rs.StateError, 'outside checkout ancestry'):
+            rs.validate(self.root)
 
     def test_duplicate_state_anywhere_is_rejected(self):
         self.put('research/RESEARCH_STATE.yaml', rs.encoded(self.s))

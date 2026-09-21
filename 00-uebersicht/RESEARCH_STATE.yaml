@@ -1,20 +1,20 @@
 {
-  "schema_version": 1,
-  "render_version": 2,
+  "schema_version": 2,
+  "render_version": 3,
   "state_date": "2026-09-21",
   "repository": "Waschtl904/objekt-x-programm",
   "published_baseline": {
     "branch": "main",
-    "sha": "f8228597eb014d276ab6226fc78cd9cc7d3a414a",
+    "sha": "d455a664c7885eeef9f0d07f246cffc75c1ad267",
     "integration_status": "MERGED",
-    "meaning": "Gemergter kanonischer Stand nach PR #143 (Fixed-Horizon-C1 bis a=1) und PR #144 (scoped legacy survivors); unbeschränkte C1-Horizontkompatibilität bleibt OPEN.",
+    "meaning": "Eingefrorener gemergter PR-#137-Endpunktsatz bis B=log(5)/2.",
     "mathematical_status": "AUTHOR_DERIVED",
     "review_status": "EXTERNAL_REVIEW_OPEN"
   },
   "live_frontier": {
-    "branch": "docs/post-pr144-research-state-sync-2026-09-21",
-    "branch_head_at_generation": "f8228597eb014d276ab6226fc78cd9cc7d3a414a",
-    "verified_through": "f8228597eb014d276ab6226fc78cd9cc7d3a414a",
+    "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
+    "branch_head_at_generation": "5f19065e28b9f2e09ae93bef0b4c752ab58997d4",
+    "verified_through": "5f19065e28b9f2e09ae93bef0b4c752ab58997d4",
     "integration_status": "RESEARCH_BRANCH_UNMERGED",
     "review_status": "EXTERNAL_REVIEW_OPEN",
     "head_policy": "VERIFIED_SNAPSHOT_NOT_CURRENT_HEAD"
@@ -156,7 +156,7 @@
       "title": "Reduzierte Quellenkoordinaten und gekoppelte H1-Spuren",
       "mathematical_status": "AUTHOR_DERIVED",
       "review_status": "EXTERNAL_REVIEW_OPEN",
-      "integration_status": "MERGED",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
       "reproduction_evidence": [
@@ -194,7 +194,7 @@
       "title": "Tatsächlicher All-Parity-Transport auf dem endlichen Band",
       "mathematical_status": "AUTHOR_DERIVED",
       "review_status": "EXTERNAL_REVIEW_OPEN",
-      "integration_status": "MERGED",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
       "reproduction_evidence": [
@@ -232,7 +232,7 @@
       "title": "Uniformer vollständiger beweglicher High-Tail",
       "mathematical_status": "AUTHOR_DERIVED",
       "review_status": "EXTERNAL_REVIEW_OPEN",
-      "integration_status": "MERGED",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
       "reproduction_evidence": [
@@ -267,7 +267,7 @@
       "title": "Kanonisches gerichtetes physisches Formsystem",
       "mathematical_status": "AUTHOR_DERIVED",
       "review_status": "EXTERNAL_REVIEW_OPEN",
-      "integration_status": "MERGED",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
       "reproduction_evidence": [
@@ -304,7 +304,7 @@
       "title": "Hilbert-Direktlimes der verschobenen Formräume",
       "mathematical_status": "AUTHOR_DERIVED",
       "review_status": "EXTERNAL_REVIEW_OPEN",
-      "integration_status": "MERGED",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
       "reproduction_evidence": [
@@ -340,7 +340,7 @@
       "title": "No-Go für kurze physische Reichweite plus endlichen Rang",
       "mathematical_status": "AUTHOR_DERIVED_NO_GO",
       "review_status": "EXTERNAL_REVIEW_OPEN",
-      "integration_status": "MERGED",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
       "reproduction_evidence": [
@@ -375,7 +375,7 @@
       "title": "No-Go für einzelne Prime-Kanäle als positive Gram-Blöcke",
       "mathematical_status": "AUTHOR_DERIVED_NO_GO",
       "review_status": "EXTERNAL_REVIEW_OPEN",
-      "integration_status": "MERGED",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
       "reproduction_evidence": [
@@ -409,7 +409,7 @@
       "title": "Intrinsischer gekoppelter spektraler Mediator",
       "mathematical_status": "AUTHOR_DERIVED",
       "review_status": "EXTERNAL_REVIEW_OPEN",
-      "integration_status": "MERGED",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
       "reproduction_evidence": [
@@ -447,7 +447,7 @@
       "title": "Exaktes Intertwining des benannten Kandidaten",
       "mathematical_status": "AUTHOR_DERIVED",
       "review_status": "EXTERNAL_REVIEW_OPEN",
-      "integration_status": "MERGED",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
       "reproduction_evidence": [
@@ -484,7 +484,7 @@
       "title": "Exakte kompakte Gramabweichung und Kontraktionsäquivalenz",
       "mathematical_status": "AUTHOR_DERIVED",
       "review_status": "EXTERNAL_REVIEW_OPEN",
-      "integration_status": "MERGED",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
       "reproduction_evidence": [
@@ -522,7 +522,7 @@
       "title": "Uniforme hohe Defektkontraktion und endliche kritische Dimension",
       "mathematical_status": "AUTHOR_DERIVED",
       "review_status": "EXTERNAL_REVIEW_OPEN",
-      "integration_status": "MERGED",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
       "reproduction_evidence": [
@@ -561,7 +561,7 @@
       "title": "Exakte Kongruenz zwischen physischem und Defekt-Schurrest",
       "mathematical_status": "AUTHOR_DERIVED",
       "review_status": "EXTERNAL_REVIEW_OPEN",
-      "integration_status": "MERGED",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
       "reproduction_evidence": [
@@ -599,7 +599,7 @@
       "title": "Vollständige rationale Schranke für die hohe Antwort",
       "mathematical_status": "AUTHOR_DERIVED",
       "review_status": "EXTERNAL_REVIEW_OPEN",
-      "integration_status": "MERGED",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
       "reproduction_evidence": [
@@ -636,7 +636,7 @@
       "title": "Qualitative Endpunktkontrolle der geordneten Singularwerte",
       "mathematical_status": "AUTHOR_DERIVED",
       "review_status": "EXTERNAL_REVIEW_OPEN",
-      "integration_status": "MERGED",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
       "reproduction_evidence": [
@@ -674,7 +674,7 @@
       "title": "Strikte terminale 191D-Schurpositivität in beiden Paritäten",
       "mathematical_status": "AUTHOR_DERIVED",
       "review_status": "EXTERNAL_REVIEW_OPEN",
-      "integration_status": "MERGED",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
       "reproduction_evidence": [
@@ -719,7 +719,7 @@
       "title": "Kompatibler positiver terminaler C1-Abschluss",
       "mathematical_status": "AUTHOR_DERIVED",
       "review_status": "EXTERNAL_REVIEW_OPEN",
-      "integration_status": "MERGED",
+      "integration_status": "RESEARCH_BRANCH_UNMERGED",
       "strategic_status": "REUSABLE_COMPONENT",
       "reproduction_status": "RECORDED_PACKAGE_CHECKS",
       "reproduction_evidence": [
@@ -1072,5 +1072,18 @@
       "mathematical_status": "OPEN",
       "scope": "positive C1 compatibility across changing terminal horizons and prime-power walls"
     }
+  },
+  "current_integration_observation": {
+    "observed_at": "2026-09-21",
+    "main_sha": "f8228597eb014d276ab6226fc78cd9cc7d3a414a",
+    "integrated_research_branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
+    "integrated_research_head": "19e4630a7f0d4c8232f8ee81c4b483355ed2f505",
+    "reconciliation_merge": "f8228597eb014d276ab6226fc78cd9cc7d3a414a",
+    "ci_run_id": 35557056844,
+    "ci_run_attempt": 1,
+    "ci_head_sha": "f8228597eb014d276ab6226fc78cd9cc7d3a414a",
+    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/35557056844",
+    "ci_conclusion": "success",
+    "mathematical_status_change": false
   }
 }
