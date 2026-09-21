@@ -104,6 +104,14 @@ If O3 and strict terminal reserves hold at A<B, define only terminal roots
 \[
 \Delta_A=G_A^{1/2},\qquad \Delta_B=G_B^{1/2}.
 \]
+For every source window a\le A define conditionally
+\[
+T_{X,a}^{[A]}=\Delta_A I_{a,A}^{[A]}T_a^{[A]},
+\]
+so in particular
+\[
+T_{X,A}^{[A]}=\Delta_A T_A^{[A]}.
+\]
 Then define
 \[
 K_{X,A}=\Delta_AH_A^{[A]},

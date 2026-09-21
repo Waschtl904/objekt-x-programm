@@ -131,8 +131,16 @@ has been proved may the single terminal square root
 \]
 be defined. No local source-window square roots are introduced.
 
-If strict reserves and the raw congruence are proved at A<B, the intended
-positive transport is
+If strict reserves and the raw congruence are proved at A<B, define for each
+source window a\le A the conditional positive readout
+\[
+T_{X,a}^{[A]}=\Delta_A I_{a,A}^{[A]}T_a^{[A]}.
+\]
+In particular,
+\[
+T_{X,A}^{[A]}=\Delta_A T_A^{[A]}.
+\]
+The intended terminal positive transport is
 \[
 U^X_{A,B}(\Delta_Ah)=\Delta_BV_{A,B}h,
 \]
