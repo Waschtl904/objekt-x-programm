@@ -10,18 +10,25 @@ gebunden. Diese Trennung wird durch die CI geprüft, nicht mathematisch bewiesen
 
 1. Den tatsächlichen Branchstand lesen und die relevanten neuen Beweispakete
    samt Scope, Grenzen und dokumentierter Reproduktion prüfen.
-2. `verified_through` nur auf den tatsächlich geprüften vollständigen Commit
-   setzen. Er darf hinter HEAD liegen; ein späterer Dokumentationscommit macht
-   den geprüften mathematischen Snapshot nicht automatisch ungültig. `branch_head_at_generation`
-   hält zusätzlich den bei der Registererzeugung beobachteten Dokumentations-Branch-Head
-   fest. Dieses Feld beschreibt nur die Dokumentationsabstammung und darf niemals als
-   mathematische Verifikation oder Snapshot-Promotion gelesen werden.
-3. Wiederverwendbare Resultate, offene Obligationen und die beiden Fronten in
+2. `published_baseline` ausschließlich auf einen tatsächlich gemergten
+   `main`-Stand setzen. Dieses Objekt beschreibt Integration und trägt keinen
+   mathematischen Review-Status.
+3. `verified_research_snapshot.verified_through` nur auf einen tatsächlich
+   mathematisch geprüften vollständigen Commit anheben. Ein späterer Merge,
+   Dokumentationscommit oder Checker-PASS ändert dieses Feld nicht automatisch.
+   `observed_branch_head` darf einen später beobachteten Head dokumentieren,
+   ist aber ausdrücklich keine zusätzliche mathematische Verifikation.
+4. Reine Status-/Registry-Arbeit unter `registry_sync` erfassen:
+   `base_sha` ist die gemergte Basis, `candidate_head_at_generation` nur ein
+   beobachteter ungemergter Kandidat. `mathematical_review_changed` bleibt
+   zwingend `false`.
+5. Wiederverwendbare Resultate, offene Obligationen und die beiden Fronten in
    `RESEARCH_STATE.yaml` aktualisieren. Historische Zwischenzertifikate bleiben
    in ihren Paketen; ersetzte Resultate verlassen die kompakte Auswahl.
-4. Die Ansichten erzeugen und die Prüfungen unten ausführen. Bei einer gewollten
-   Änderung des Ausgabeformats `render_version` in der Statusdatei erhöhen.
-5. Fachliche Statusänderung und zugehörige generierte Ansichten gemeinsam
+6. Die Ansichten erzeugen und die Prüfungen unten ausführen. Bei einer gewollten
+   Änderung des Ausgabeformats `render_version` erhöhen; bei einer
+   Strukturänderung `schema_version` bewusst migrieren.
+7. Fachliche Statusänderung und zugehörige generierte Ansichten gemeinsam
    reviewen. Ein Checker-PASS oder Merge ändert keinen mathematischen Status.
 
 Python 3.10 oder neuer und Git mit vollständiger Historie genügen; keine
@@ -75,7 +82,7 @@ Deshalb bindet META den aktuellen `PROOF.md`-Inhalt per SHA-256. Der Ablauf ist:
    bekannte Ziel-IDs im Register deklarieren. Effekte und Abhängigkeiten dürfen
    nicht auf unbenannte IDs zeigen.
 2. Das Paket zunächst unter `pending_packages` mit `id`, `meta_path` und
-   `status: PENDING_STATUS_REVIEW` sichtbar machen. `verified_through` bleibt
+   `status: PENDING_STATUS_REVIEW` sichtbar machen. `verified_research_snapshot.verified_through` bleibt
    dabei der vorherige geprüfte Stand. Ein deklariertes `closes` ist in diesem
    Stadium eine Behauptung des Pakets, keine automatische Gate-Promotion.
 3. Nach Veröffentlichung und Statusprüfung das wiederverwendbare Resultat mit
@@ -112,9 +119,10 @@ nicht automatisch auf alle sprachlichen Aktualitätsansprüche geprüft.
 Der Validator prüft Schema, IDs, Abhängigkeiten, erklärte Statuskonsistenz,
 Belegpfade und Hashes, Git-Abstammung der Integrationsangaben, generierte Bytes,
 historische Originale und neue Paketmetadaten. Er beweist keine Mathematik und
-versteht nicht jede denkbare Bedeutungsinkonsistenz freier Texte. `MERGED`
-bezieht sich auf die erklärte gepinnte Main-Basis, nicht auf einen vom Check
-heimlich aus dem Netz abgefragten späteren Stand.
+versteht nicht jede denkbare Bedeutungsinkonsistenz freier Texte. `MERGED` bezieht sich auf die erklärte gepinnte Main-Basis. Der geprüfte
+Research-Snapshot und der Registry-Sync-Kandidat sind davon getrennte Rollen;
+der Validator leitet aus keinem Merge oder CI-PASS eine mathematische
+Neuverifikation ab.
 
 Die genaue Struktur ist in [RESEARCH_STATE_SCHEMA.md](RESEARCH_STATE_SCHEMA.md)
 beschrieben; der ausführbare Validator ist die normative Schemaimplementierung.

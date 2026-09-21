@@ -8,14 +8,22 @@ Stand: 2026-09-21.
 ## Gemergte Basis
 
 `main@f822859` — [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a). Gemergter kanonischer Stand nach PR #143 (Fixed-Horizon-C1 bis a=1) und PR #144 (scoped legacy survivors); unbeschränkte C1-Horizontkompatibilität bleibt OPEN.
-Mathematik: AUTHOR_DERIVED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 
-## Verifizierter Forschungsstand
+## Mathematisch geprüfter Forschungssnapshot
 
-Geprüft bis [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a) auf `docs/post-pr144-research-state-sync-2026-09-21`.
-Dokumentarischer Branch-Head bei Registererzeugung: [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a).
-**Dies ist ein geprüfter Snapshot, keine Behauptung über den dauerhaft aktuellen Branch-HEAD.**
-Integration: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
+Geprüft bis [5f19065](https://github.com/Waschtl904/objekt-x-programm/commit/5f19065e28b9f2e09ae93bef0b4c752ab58997d4) auf `research/x-c1-inherited-resonance-shell-schur-2026-09-18`.
+Beobachteter späterer Forschungsbranch-Head: [19e4630](https://github.com/Waschtl904/objekt-x-programm/commit/19e4630a7f0d4c8232f8ee81c4b483355ed2f505).
+**Der beobachtete Branch-Head ist keine zusätzliche mathematische Verifikation.**
+Externe Prüfung des geprüften Snapshots: EXTERNAL_REVIEW_OPEN.
+Mathematisch geprüfter vollständiger Research-Snapshot; der beobachtete spätere Branch-Head ist nur Dokumentations-/Abstammungsinformation und keine zusätzliche mathematische Verifikation.
+
+## Registry-Sync-Kandidat
+
+Branch `docs/post-pr144-research-state-sync-2026-09-21` gegen Basis [f822859](https://github.com/Waschtl904/objekt-x-programm/commit/f8228597eb014d276ab6226fc78cd9cc7d3a414a).
+Beobachteter Kandidat-Head bei Registererzeugung: [5680ebd](https://github.com/Waschtl904/objekt-x-programm/commit/5680ebd5340be241246f0758e55a578fe5aa8202).
+Integration: RESEARCH_BRANCH_UNMERGED; mathematische Review-Änderung: false.
+**Dieser Abschnitt beschreibt ausschließlich Registry-/Dokumentationsintegration und keinen mathematisch geprüften Snapshot.**
+Reiner Registry-/Dokumentations-Sync gegen die gemergte Basis; dieses Objekt trägt keinen mathematischen Verifikationsstatus.
 
 ## Zwei aktive Hauptfronten
 

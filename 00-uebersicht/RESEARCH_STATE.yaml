@@ -1,23 +1,30 @@
 {
-  "schema_version": 1,
-  "render_version": 2,
+  "schema_version": 2,
+  "render_version": 3,
   "state_date": "2026-09-21",
   "repository": "Waschtl904/objekt-x-programm",
   "published_baseline": {
     "branch": "main",
     "sha": "f8228597eb014d276ab6226fc78cd9cc7d3a414a",
     "integration_status": "MERGED",
-    "meaning": "Gemergter kanonischer Stand nach PR #143 (Fixed-Horizon-C1 bis a=1) und PR #144 (scoped legacy survivors); unbeschränkte C1-Horizontkompatibilität bleibt OPEN.",
-    "mathematical_status": "AUTHOR_DERIVED",
-    "review_status": "EXTERNAL_REVIEW_OPEN"
+    "meaning": "Gemergter kanonischer Stand nach PR #143 (Fixed-Horizon-C1 bis a=1) und PR #144 (scoped legacy survivors); unbeschränkte C1-Horizontkompatibilität bleibt OPEN."
   },
-  "live_frontier": {
-    "branch": "docs/post-pr144-research-state-sync-2026-09-21",
-    "branch_head_at_generation": "f8228597eb014d276ab6226fc78cd9cc7d3a414a",
-    "verified_through": "f8228597eb014d276ab6226fc78cd9cc7d3a414a",
-    "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "verified_research_snapshot": {
+    "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
+    "verified_through": "5f19065e28b9f2e09ae93bef0b4c752ab58997d4",
+    "observed_branch_head": "19e4630a7f0d4c8232f8ee81c4b483355ed2f505",
     "review_status": "EXTERNAL_REVIEW_OPEN",
-    "head_policy": "VERIFIED_SNAPSHOT_NOT_CURRENT_HEAD"
+    "head_policy": "VERIFIED_SNAPSHOT_NOT_CURRENT_HEAD",
+    "meaning": "Mathematisch geprüfter vollständiger Research-Snapshot; der beobachtete spätere Branch-Head ist nur Dokumentations-/Abstammungsinformation und keine zusätzliche mathematische Verifikation."
+  },
+  "registry_sync": {
+    "branch": "docs/post-pr144-research-state-sync-2026-09-21",
+    "base_sha": "f8228597eb014d276ab6226fc78cd9cc7d3a414a",
+    "candidate_head_at_generation": "5680ebd5340be241246f0758e55a578fe5aa8202",
+    "integration_status": "RESEARCH_BRANCH_UNMERGED",
+    "head_policy": "OBSERVED_CANDIDATE_NOT_CURRENT_HEAD",
+    "mathematical_review_changed": false,
+    "meaning": "Reiner Registry-/Dokumentations-Sync gegen die gemergte Basis; dieses Objekt trägt keinen mathematischen Verifikationsstatus."
   },
   "authority_roles": {
     "definition": {
