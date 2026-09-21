@@ -1,68 +1,372 @@
-name: A1 C-even exact dyadic full matrix build
+name: A1 C-even gated exact certificate
+
 on:
   pull_request:
   workflow_dispatch:
+    inputs:
+      audit:
+        description: "Manual audit route"
+        required: true
+        default: "ldl"
+        type: choice
+        options:
+          - ldl
+          - eigenvalues
+
 permissions:
   contents: read
+
+concurrency:
+  group: a1-c-even-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
+  classify:
+    name: a1-c-even-classify
+    runs-on: ubuntu-24.04
+    outputs:
+      a1_required: ${{ steps.classify.outputs.a1_required }}
+      reason: ${{ steps.classify.outputs.reason }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Classify changed paths fail-closed
+        id: classify
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          BASE_REF: ${{ github.event.pull_request.base.ref }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+          AUDIT_MODE: ${{ inputs.audit }}
+        run: |
+          set -u
+
+          emit_heavy() {
+            echo "a1_required=true" >> "$GITHUB_OUTPUT"
+            echo "reason=$1" >> "$GITHUB_OUTPUT"
+          }
+
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            emit_heavy "manual-${AUDIT_MODE:-unknown}"
+            exit 0
+          fi
+
+          if [[ "$EVENT_NAME" != "pull_request" ]]; then
+            emit_heavy "unknown-event-${EVENT_NAME}"
+            exit 0
+          fi
+
+          if [[ -z "${BASE_SHA:-}" || -z "${HEAD_SHA:-}" ]]; then
+            emit_heavy "missing-base-or-head"
+            exit 0
+          fi
+
+          if ! git cat-file -e "${BASE_SHA}^{commit}" 2>/dev/null; then
+            if [[ -z "${BASE_REF:-}" ]] || ! git fetch --no-tags origin "$BASE_REF"; then
+              emit_heavy "base-fetch-failed"
+              exit 0
+            fi
+            if ! git cat-file -e "${BASE_SHA}^{commit}" 2>/dev/null; then
+              emit_heavy "invalid-base-after-fetch"
+              exit 0
+            fi
+          fi
+          if ! git cat-file -e "${HEAD_SHA}^{commit}" 2>/dev/null; then
+            emit_heavy "invalid-head"
+            exit 0
+          fi
+
+          checked_out="$(git rev-parse HEAD 2>/dev/null || true)"
+          if [[ "$checked_out" != "$HEAD_SHA" ]]; then
+            emit_heavy "checkout-head-mismatch"
+            exit 0
+          fi
+
+          if ! git merge-base "$BASE_SHA" "$HEAD_SHA" >/dev/null 2>&1; then
+            emit_heavy "no-merge-base"
+            exit 0
+          fi
+
+          changed_file="$(mktemp)"
+          if ! git diff --name-only --diff-filter=ACMRD "${BASE_SHA}...${HEAD_SHA}" > "$changed_file"; then
+            emit_heavy "git-diff-failed"
+            exit 0
+          fi
+
+          mapfile -t changed < "$changed_file"
+          rm -f "$changed_file"
+
+          if (( ${#changed[@]} == 0 )); then
+            emit_heavy "empty-diff"
+            exit 0
+          fi
+
+          echo "Changed paths:"
+          printf ' - %s\n' "${changed[@]}"
+
+          # Fast route is intentionally narrow. Only documentation/text surfaces
+          # and the canonical research-state implementation are known-safe here.
+          # Everything else, including this workflow itself, is fail-closed to A1.
+          for path in "${changed[@]}"; do
+            case "$path" in
+              00-uebersicht/RESEARCH_STATE.yaml|\
+              scripts/research_state.py|\
+              scripts/check_research_state.py|\
+              tests/test_research_state.py|\
+              .github/workflows/validate-research-state.yml)
+                ;;
+              *.md|*.tex|*.cff)
+                ;;
+              *)
+                emit_heavy "a1-or-unknown-path:${path}"
+                exit 0
+                ;;
+            esac
+          done
+
+          echo "a1_required=false" >> "$GITHUB_OUTPUT"
+          echo "reason=known-safe-registry-or-docs-only" >> "$GITHUB_OUTPUT"
+
   exact-matrix-build:
-    runs-on: ubuntu-latest
-    timeout-minutes: 60
+    name: a1-c-even-fresh-matrix-build
+    needs: classify
+    if: ${{ always() && needs.classify.result == 'success' && needs.classify.outputs.a1_required == 'true' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
+
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: '3.13'
+
       - name: Install exact numerical dependency
         run: python -m pip install python-flint==0.9.0
-      - name: Build, serialize and round-trip the frozen exact C-even matrix
+
+      - name: Build, fingerprint and round-trip the exact matrix
         run: |
           set -euo pipefail
           git rev-parse HEAD
           git hash-object scripts/certify_a1_c_even_exact_dyadic_matrix.py
           git hash-object scripts/a1_c_even_matrix_artifact.py
-          python scripts/a1_c_even_matrix_artifact.py --build --path a1_c_even_exact_matrix.bin | tee a1_c_even_exact_matrix_build.log
-          grep -q '^MATRIX_SHA256=97b761e9f89517303f557d3c18061cc1b232c821e5804fcf9071298e17e60183$' a1_c_even_exact_matrix_build.log
-          grep -q 'CERTIFIED: exact C-even integer matrix artifact round-trip matches frozen fingerprint' a1_c_even_exact_matrix_build.log
+          python scripts/a1_c_even_matrix_artifact.py \
+            --build --path a1_c_even_exact_matrix.bin \
+            | tee a1_c_even_exact_matrix_build.log
+          grep -q '^MATRIX_SHA256=97b761e9f89517303f557d3c18061cc1b232c821e5804fcf9071298e17e60183$' \
+            a1_c_even_exact_matrix_build.log
+          grep -q 'CERTIFIED: exact C-even integer matrix artifact round-trip matches frozen fingerprint' \
+            a1_c_even_exact_matrix_build.log
+
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: a1-c-even-exact-matrix
+          name: a1-c-even-exact-matrix-${{ github.run_id }}
           path: |
             a1_c_even_exact_matrix.bin
             a1_c_even_exact_matrix_build.log
           compression-level: 6
+          retention-days: 7
 
-  exact-matrix-positivity:
-    needs: exact-matrix-build
-    runs-on: ubuntu-latest
-    timeout-minutes: 60
+  exact-artifact-spd-ldl:
+    name: a1-c-even-rigorous-ldl
+    needs:
+      - classify
+      - exact-matrix-build
+    if: ${{ always() && needs.classify.result == 'success' && needs.classify.outputs.a1_required == 'true' && (github.event_name == 'pull_request' || inputs.audit == 'ldl') }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
+
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: '3.13'
-      - name: Install exact numerical dependency
-        run: python -m pip install python-flint==0.9.0
+
+      - name: Install pinned checker dependencies
+        run: |
+          set -euo pipefail
+          python -m pip install python-flint==0.9.0
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libflint-dev libssl-dev
+
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
-          name: a1-c-even-exact-matrix
+          name: a1-c-even-exact-matrix-${{ github.run_id }}
           path: .
-      - name: Verify artifact fingerprint and certify positivity
+
+      - name: Reverify exact same-run artifact
+        run: |
+          set -euo pipefail
+          python scripts/a1_c_even_matrix_artifact.py \
+            --verify --path a1_c_even_exact_matrix.bin \
+            | tee a1_c_even_artifact_reverify.log
+          grep -q '^MATRIX_SHA256=97b761e9f89517303f557d3c18061cc1b232c821e5804fcf9071298e17e60183$' \
+            a1_c_even_artifact_reverify.log
+          grep -q 'CERTIFIED: loaded C-even integer matrix matches frozen fingerprint' \
+            a1_c_even_artifact_reverify.log
+
+      - name: Compile rigorous Arb LDL checker
+        run: |
+          set -euo pipefail
+          git rev-parse HEAD
+          git hash-object scripts/check_a1_c_even_artifact_spd_ldl.c
+          cc -O3 -std=c11 -Wall -Wextra \
+            scripts/check_a1_c_even_artifact_spd_ldl.c \
+            -o check_a1_c_even_artifact_spd_ldl \
+            -lflint -lmpfr -lgmp -lcrypto -lm -lpthread
+
+      - name: Certify positivity by Arb LDL
+        run: |
+          set -euo pipefail
+          ./check_a1_c_even_artifact_spd_ldl a1_c_even_exact_matrix.bin \
+            | tee a1_c_even_artifact_spd_ldl.log
+          grep -q '^MATRIX_SHA256=97b761e9f89517303f557d3c18061cc1b232c821e5804fcf9071298e17e60183$' \
+            a1_c_even_artifact_spd_ldl.log
+          grep -q 'CERTIFIED: exact hash-fixed 1075x1075 C-even integer matrix is positive definite by Arb LDL' \
+            a1_c_even_artifact_spd_ldl.log
+          grep -q 'CERTIFIED: A_e >= 1e-35 I_1075 after the frozen finite-model ledger' \
+            a1_c_even_artifact_spd_ldl.log
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: a1-c-even-ldl-${{ github.run_id }}
+          path: |
+            a1_c_even_artifact_reverify.log
+            a1_c_even_artifact_spd_ldl.log
+          if-no-files-found: warn
+          retention-days: 7
+
+  manual-eigenvalue-audit:
+    name: a1-c-even-manual-eigenvalue-audit
+    needs:
+      - classify
+      - exact-matrix-build
+    if: ${{ always() && github.event_name == 'workflow_dispatch' && inputs.audit == 'eigenvalues' && needs.classify.result == 'success' && needs.classify.outputs.a1_required == 'true' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+
+      - name: Install exact numerical dependency
+        run: python -m pip install python-flint==0.9.0
+
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: a1-c-even-exact-matrix-${{ github.run_id }}
+          path: .
+
+      - name: Run independent rigorous eigenvalue audit
         run: |
           set -euo pipefail
           git rev-parse HEAD
           git hash-object scripts/certify_a1_c_even_matrix_artifact_positive.py
-          python scripts/certify_a1_c_even_matrix_artifact_positive.py --path a1_c_even_exact_matrix.bin | tee a1_c_even_exact_matrix_positivity.log
-          grep -q '^MATRIX_SHA256=97b761e9f89517303f557d3c18061cc1b232c821e5804fcf9071298e17e60183$' a1_c_even_exact_matrix_positivity.log
-          grep -q 'CERTIFIED: exact dyadic shifted 1075x1075 C-even matrix is positive definite' a1_c_even_exact_matrix_positivity.log
-          grep -q 'CERTIFIED: A_e >= 1e-35 I_1075 after the frozen finite-model ledger' a1_c_even_exact_matrix_positivity.log
+          python scripts/certify_a1_c_even_matrix_artifact_positive.py \
+            --path a1_c_even_exact_matrix.bin \
+            | tee a1_c_even_exact_matrix_eigenvalue_audit.log
+          grep -q '^MATRIX_SHA256=97b761e9f89517303f557d3c18061cc1b232c821e5804fcf9071298e17e60183$' \
+            a1_c_even_exact_matrix_eigenvalue_audit.log
+          grep -q 'CERTIFIED: exact dyadic shifted 1075x1075 C-even matrix is positive definite' \
+            a1_c_even_exact_matrix_eigenvalue_audit.log
+          grep -q 'CERTIFIED: A_e >= 1e-35 I_1075 after the frozen finite-model ledger' \
+            a1_c_even_exact_matrix_eigenvalue_audit.log
+
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
         with:
-          name: a1-c-even-exact-matrix-positivity
-          path: a1_c_even_exact_matrix_positivity.log
+          name: a1-c-even-eigenvalue-audit-${{ github.run_id }}
+          path: a1_c_even_exact_matrix_eigenvalue_audit.log
+          if-no-files-found: warn
+          retention-days: 14
+
+  gate:
+    name: a1-c-even-gate
+    if: always()
+    needs:
+      - classify
+      - exact-matrix-build
+      - exact-artifact-spd-ldl
+      - manual-eigenvalue-audit
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Enforce route result
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          AUDIT_MODE: ${{ inputs.audit }}
+          CLASSIFY_RESULT: ${{ needs.classify.result }}
+          A1_REQUIRED: ${{ needs.classify.outputs.a1_required }}
+          CLASSIFY_REASON: ${{ needs.classify.outputs.reason }}
+          BUILD_RESULT: ${{ needs.exact-matrix-build.result }}
+          LDL_RESULT: ${{ needs.exact-artifact-spd-ldl.result }}
+          EIGEN_RESULT: ${{ needs.manual-eigenvalue-audit.result }}
+        run: |
+          set -euo pipefail
+
+          echo "event=$EVENT_NAME"
+          echo "audit=${AUDIT_MODE:-}"
+          echo "a1_required=$A1_REQUIRED"
+          echo "reason=$CLASSIFY_REASON"
+          echo "classify=$CLASSIFY_RESULT build=$BUILD_RESULT ldl=$LDL_RESULT eigen=$EIGEN_RESULT"
+
+          [[ "$CLASSIFY_RESULT" == "success" ]]
+          [[ "$A1_REQUIRED" == "true" || "$A1_REQUIRED" == "false" ]]
+
+          if [[ "$EVENT_NAME" == "pull_request" ]]; then
+            if [[ "$A1_REQUIRED" == "false" ]]; then
+              [[ "$BUILD_RESULT" == "skipped" ]]
+              [[ "$LDL_RESULT" == "skipped" ]]
+              [[ "$EIGEN_RESULT" == "skipped" ]]
+              echo "CERTIFIED: known-safe registry/docs-only PR; A1 recertification not required"
+              exit 0
+            fi
+
+            [[ "$BUILD_RESULT" == "success" ]]
+            [[ "$LDL_RESULT" == "success" ]]
+            [[ "$EIGEN_RESULT" == "skipped" ]]
+            echo "CERTIFIED: A1-relevant PR passed fresh build, fingerprint and rigorous LDL"
+            exit 0
+          fi
+
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            [[ "$A1_REQUIRED" == "true" ]]
+            [[ "$BUILD_RESULT" == "success" ]]
+
+            case "${AUDIT_MODE:-}" in
+              ldl)
+                [[ "$LDL_RESULT" == "success" ]]
+                [[ "$EIGEN_RESULT" == "skipped" ]]
+                echo "CERTIFIED: manual fresh-build LDL audit passed"
+                ;;
+              eigenvalues)
+                [[ "$LDL_RESULT" == "skipped" ]]
+                [[ "$EIGEN_RESULT" == "success" ]]
+                echo "CERTIFIED: manual fresh-build eigenvalue audit passed"
+                ;;
+              *)
+                echo "ERROR: unknown manual audit mode" >&2
+                exit 1
+                ;;
+            esac
+            exit 0
+          fi
+
+          echo "ERROR: unsupported event" >&2
+          exit 1
