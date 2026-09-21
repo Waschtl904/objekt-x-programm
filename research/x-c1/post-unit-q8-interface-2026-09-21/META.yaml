@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "POST-UNIT-Q8-HORIZON-INTERFACE",
+  "date": "2026-09-21",
+  "kind": "DIAGNOSTIC",
+  "strategic": false,
+  "local_only": true,
+  "mathematical_status": "OPEN",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Interface and proof-obligation package from the proved terminal 1 through the first q=8 threshold A_8=log(8)/2; A_9=log(9)/2 is only the next-wall sentinel. No positivity for A>1.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "No no-go. Abort criteria are proof rules only; any negative mathematical statement requires a separate proof with explicit scope.",
+  "depends_on": [
+    "C1a-COUPLED-SPECTRAL-MEDIATOR",
+    "C1b-ZERO-EXTENSION-INTERTWINING",
+    "C1-COMPACT-DEFECT-IDENTITY",
+    "C1d-COMPATIBLE-POSITIVE-COMPLETION",
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "closes": [],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Positivity of the Weil form for any terminal horizon A>1.",
+    "A positive independent-channel decomposition of the new q=8 contribution.",
+    "Intertwining of local defect square roots.",
+    "A new 191D reduction without a separate tail and codimension proof.",
+    "A cofinal C1 geometry, global Object X, global Weil positivity, or RH."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/post-unit-q8-interface-2026-09-21/PROOF.md",
+    "sha256": "5513836a99f55238239e0ea16f633df89e563e81a594150d4fa139d084336e31"
+  }
+}
