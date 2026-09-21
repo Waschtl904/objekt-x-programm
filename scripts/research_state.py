@@ -16,7 +16,7 @@ ID = re.compile('^[A-Za-z0-9][A-Za-z0-9_.-]*$')
 STATUSES = {'AUTHOR_DERIVED', 'AUTHOR_DERIVED_NO_GO', 'OPEN', 'NOT_CONSTRUCTED'}
 INTEGRATION = {'MERGED', 'RESEARCH_BRANCH_UNMERGED'}
 REPRO = {'RECORDED_PACKAGE_CHECKS', 'ANALYTIC_ONLY', 'NOT_APPLICABLE'}
-REVIEW = {'EXTERNAL_REVIEW_OPEN', 'EXTERNALLY_REVIEWED_WITH_PROVENANCE'}
+REVIEW = {'EXTERNAL_REVIEW_OPEN', 'EXTERNALLY_REVIEWED_WITH_PROVENANCE', 'SCOPED_GREEN'}
 POLARITY = {'POSITIVE_RESULT', 'CONSTRUCTION', 'EQUIVALENCE_OR_REDUCTION', 'NEGATIVE_FOR_CANDIDATE_CLASS'}
 
 class StateError(ValueError):
@@ -99,7 +99,7 @@ def commit_link(state, sha):
     return '[' + sha[:7] + '](https://github.com/' + state['repository'] + '/commit/' + sha + ')'
 
 def validate_structure(s):
-    fields(s, ('schema_version', 'render_version', 'state_date', 'repository', 'published_baseline', 'live_frontier', 'authority_roles', 'fronts', 'obligations', 'results', 'global_status', 'historical_navigation', 'navigation_exceptions', 'metadata_policy', 'pending_packages'), 'state')
+    fields(s, ('schema_version', 'render_version', 'state_date', 'repository', 'published_baseline', 'live_frontier', 'authority_roles', 'fronts', 'obligations', 'results', 'global_status', 'transport_status', 'historical_navigation', 'navigation_exceptions', 'metadata_policy', 'pending_packages'), 'state')
     require(type(s['schema_version']) is int and s['schema_version'] == 1, 'Unsupported schema_version')
     require(type(s['render_version']) is int and s['render_version'] >= 1, 'Invalid render_version')
     require(isinstance(s['state_date'], str) and re.fullmatch('\\d{4}-\\d{2}-\\d{2}', s['state_date']), 'state_date must be YYYY-MM-DD')
@@ -188,9 +188,23 @@ def validate_structure(s):
     for i in result_ids:
         visit(i, set(), done)
     gs = s['global_status']
-    fields(gs, ('connected_unit_window_coercivity', 'strong_terminal', 'full_c1_geom', 'object_x', 'global_weil_gram_identity', 'global_weil_positivity', 'rh'), 'global status')
+    fields(gs, ('connected_unit_window_coercivity', 'full_c1_geom', 'object_x', 'global_weil_gram_identity', 'global_weil_positivity', 'rh'), 'global status')
     require(all((v in STATUSES for v in gs.values())), 'Unknown global mathematical status')
     require(not (gs['object_x'] == 'NOT_CONSTRUCTED' and gs['global_weil_gram_identity'] == 'AUTHOR_DERIVED'), 'Global Gram closure contradicts the declared unconstructed Object X state')
+    ts = s['transport_status']
+    fields(ts, ('p11_fixed_pair_strong_terminal', 'c1_unbounded_horizon_compatibility'), 'transport status')
+    p11 = ts['p11_fixed_pair_strong_terminal']
+    fields(p11, ('mathematical_status', 'review_status', 'scope', 'topology', 'parity', 'uniform_in_R_S', 'operator_norm_convergence'), 'p11 fixed-pair transport')
+    require(p11['mathematical_status'] == 'AUTHOR_DERIVED' and p11['review_status'] == 'SCOPED_GREEN', 'Invalid fixed-pair transport status')
+    for name in ('scope', 'topology', 'parity'):
+        string(p11[name], 'p11 fixed-pair ' + name)
+    require(type(p11['uniform_in_R_S']) is bool and type(p11['operator_norm_convergence']) is bool, 'Fixed-pair transport flags must be boolean')
+    require(p11['topology'] == 'STRONG_VECTORWISE' and p11['parity'] == 'ODD_P11_GRAPH', 'Fixed-pair transport must declare topology and parity')
+    require(not p11['uniform_in_R_S'] and not p11['operator_norm_convergence'], 'Fixed-pair transport cannot claim uniform or operator-norm convergence')
+    c1 = ts['c1_unbounded_horizon_compatibility']
+    fields(c1, ('mathematical_status', 'scope'), 'unbounded-horizon compatibility')
+    require(c1['mathematical_status'] == 'OPEN', 'Unbounded-horizon compatibility must remain OPEN')
+    string(c1['scope'], 'unbounded-horizon compatibility scope')
     require(isinstance(s['historical_navigation'], list), 'historical_navigation must be a list')
     require(isinstance(s['navigation_exceptions'], list), 'navigation_exceptions must be a list')
     for h in s['historical_navigation']:
@@ -251,7 +265,11 @@ def render(s):
     current += ['', '## Verwendbare Bausteine', '', '| ID | Mathematischer Status | Beleg |', '|---|---|---|']
     for r in s['results']:
         current += ['| `' + r['id'] + '` | ' + r['mathematical_status'] + ' | ' + pinned_link(s, {'commit': r['canonical_commit'], 'path': r['canonical_proof']}, r['canonical_commit'][:7]) + ' |']
-    current += ['', 'Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGISTRY.md).', '', '## Globale Grenzen', '']
+    current += ['', 'Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGISTRY.md).', '', '## Transportstatus', '']
+    p11 = s['transport_status']['p11_fixed_pair_strong_terminal']
+    c1 = s['transport_status']['c1_unbounded_horizon_compatibility']
+    current += ['- `p11_fixed_pair_strong_terminal`: **' + p11['mathematical_status'] + ' / ' + p11['review_status'] + '**. Scope: ' + p11['scope'] + '. Topologie: ' + p11['topology'] + '; Parität: ' + p11['parity'] + '; uniform in R,S: ' + str(p11['uniform_in_R_S']).lower() + '; operator-norm convergence: ' + str(p11['operator_norm_convergence']).lower() + '.',
+                  '- `c1_unbounded_horizon_compatibility`: **' + c1['mathematical_status'] + '**. Scope: ' + c1['scope'] + '.', '', '## Globale Grenzen', '']
     current += ['- `' + k + '`: **' + v + '**.' for k, v in s['global_status'].items()]
     current += ['', 'Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getrennt. Diese Statusansicht führt die mathematischen Checker nicht erneut aus.']
     if s['pending_packages']:

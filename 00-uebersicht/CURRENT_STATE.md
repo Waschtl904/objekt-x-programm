@@ -43,13 +43,22 @@ Integration: RESEARCH_BRANCH_UNMERGED; externe Prüfung: EXTERNAL_REVIEW_OPEN.
 | `C1-MOVING-SINGULAR-CONTINUITY` | AUTHOR_DERIVED | [7998887](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md) |
 | `TERMINAL-191D-DEFECT-SCHUR-A1` | AUTHOR_DERIVED | [2d361be](https://github.com/Waschtl904/objekt-x-programm/blob/2d361bed76248d0a966d6d6453ce0364eae9007d/research/x-c1/terminal-191d-schur-enclosure-2026-09-20/PROOF.md) |
 | `C1d-COMPATIBLE-POSITIVE-COMPLETION` | AUTHOR_DERIVED | [a0c57dd](https://github.com/Waschtl904/objekt-x-programm/blob/a0c57ddd5c4b7dd2cf18c17b19f5af4069915387/research/x-c1/c1d-terminal-square-root-completion-2026-09-20/PROOF.md) |
+| `P02-ADELIC-WEIL-AMPLITUDE-PORT` | AUTHOR_DERIVED | [ecfac52](https://github.com/Waschtl904/objekt-x-programm/blob/ecfac52133582290ab3568bf33029b3ad5938360/papers/P02_Adelic_Weil_Amplitude_Port.tex) |
+| `P03-HAAR-L2-FIREWALL` | AUTHOR_DERIVED | [ecfac52](https://github.com/Waschtl904/objekt-x-programm/blob/ecfac52133582290ab3568bf33029b3ad5938360/papers/P03_Haar_L2_Firewall.tex) |
+| `P11-R27-CONSTRAINED-GAMMA-MOSCO-INVERSE-ROOT` | AUTHOR_DERIVED | [be58767](https://github.com/Waschtl904/objekt-x-programm/blob/be58767794eabb96e92152b493ee72a0a465a8ee/audits/P11_REFEREE_E2E_R27_CONSTRAINED_GAMMA_MOSCO_LIMIT_2026-08-15.md) |
+| `P11-TANGENTIAL-STRONG-TRANSPORT-HR0` | AUTHOR_DERIVED | [f495ce6](https://github.com/Waschtl904/objekt-x-programm/blob/f495ce6d89dcb8facc8fa0d4e09dda279b24fb73/audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md) |
+| `P11-FIXED-PAIR-STRONG-TERMINAL` | AUTHOR_DERIVED | [084b8b7](https://github.com/Waschtl904/objekt-x-programm/blob/084b8b7855601c5fae87bf4e59a00648ffbb9116/audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md) |
 
 Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGISTRY.md).
+
+## Transportstatus
+
+- `p11_fixed_pair_strong_terminal`: **AUTHOR_DERIVED / SCOPED_GREEN**. Scope: fixed 0 < R < S < infinity. Topologie: STRONG_VECTORWISE; Parität: ODD_P11_GRAPH; uniform in R,S: false; operator-norm convergence: false.
+- `c1_unbounded_horizon_compatibility`: **OPEN**. Scope: positive C1 compatibility across changing terminal horizons and prime-power walls.
 
 ## Globale Grenzen
 
 - `connected_unit_window_coercivity`: **AUTHOR_DERIVED**.
-- `strong_terminal`: **OPEN**.
 - `full_c1_geom`: **OPEN**.
 - `object_x`: **NOT_CONSTRUCTED**.
 - `global_weil_gram_identity`: **OPEN**.

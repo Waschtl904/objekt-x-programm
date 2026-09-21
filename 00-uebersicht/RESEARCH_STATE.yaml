@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "render_version": 1,
+  "render_version": 2,
   "state_date": "2026-09-20",
   "repository": "Waschtl904/objekt-x-programm",
   "published_baseline": {
@@ -761,11 +761,191 @@
         "Die vollständige globale Weil-Testklasse.",
         "Globales Objekt X, globale Weil-Positivität oder RH."
       ]
+    },
+    {
+      "id": "P02-ADELIC-WEIL-AMPLITUDE-PORT",
+      "title": "Adelic Weil amplitude port and Hermitian normalization",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "ecfac52133582290ab3568bf33029b3ad5938360",
+          "path": "papers/P02_Adelic_Weil_Amplitude_Port.tex",
+          "sha256": "4945e80a19dbe5796a56a8415362f9260a1a4ed9d31a376257a2d3fdae601baf"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "Adelischer Amplitudenport im Manuskript P02: surjektiver Paley–Wiener-Port, sesquilineare Evenisierung, vollständige hermitesche Weil-Form und Normalisierungsübereinstimmung.",
+      "claim": [
+        "Der Port R_PW ist surjektiv auf den verwendeten Paley–Wiener-Testkern.",
+        "Die sesquilineare Evenisierung und die komponentenweise hermitesche Weil-Form sind mit der festgelegten Haar- und Fourier-Normalisierung kompatibel."
+      ],
+      "depends_on": [],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "ecfac52133582290ab3568bf33029b3ad5938360",
+      "canonical_proof": "papers/P02_Adelic_Weil_Amplitude_Port.tex",
+      "proof_sha256": "4945e80a19dbe5796a56a8415362f9260a1a4ed9d31a376257a2d3fdae601baf",
+      "negative_claim_boundary": "Der Port ist eine algebraisch/analytische Eingangsbrücke; daraus folgt keine Positivität der vollständigen Weil-Form.",
+      "does_not_claim": [
+        "Positivität der vollständigen Weil-Form.",
+        "Objekt X ist konstruiert.",
+        "Globale Weil-Positivität oder RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "P03-HAAR-L2-FIREWALL",
+      "title": "Haar-L2 closability firewall",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "ecfac52133582290ab3568bf33029b3ad5938360",
+          "path": "papers/P03_Haar_L2_Firewall.tex",
+          "sha256": "de6c782b8fe6e86bf72a70f6e9a7859618a43b5bbc37a1b1f34819367d14d10e"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "Haar-L2-Firewall auf L2(R,du) mit expliziter Trennung zwischen RH-freien Strukturfolgen und RH-konditionalen Spektralaussagen.",
+      "claim": [
+        "Unconditional: Formulierung des Haar-L2 closability firewall und die strukturellen Folgerungen unter dem angegebenen Spektralmodell.",
+        "Conditional on RH: die im Manuskript ausgewiesene Semibeschränktheitsäquivalenz, die Nichtabschließbarkeitsfolge und die Nullspektrum-L2-Realisierung."
+      ],
+      "depends_on": [
+        "P02-ADELIC-WEIL-AMPLITUDE-PORT"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "ecfac52133582290ab3568bf33029b3ad5938360",
+      "canonical_proof": "papers/P03_Haar_L2_Firewall.tex",
+      "proof_sha256": "de6c782b8fe6e86bf72a70f6e9a7859618a43b5bbc37a1b1f34819367d14d10e",
+      "negative_claim_boundary": "Die RH-konditionalen Sätze bleiben ausdrücklich konditional und liefern keine RH-freie positive Realisierung.",
+      "does_not_claim": [
+        "Eine RH-freie positive Hilbert-Realisierung.",
+        "Objekt X ist konstruiert.",
+        "RH ist bewiesen."
+      ]
+    },
+    {
+      "id": "P11-R27-CONSTRAINED-GAMMA-MOSCO-INVERSE-ROOT",
+      "title": "P11 R27 constrained Gamma, Mosco and inverse-root limits",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "be58767794eabb96e92152b493ee72a0a465a8ee",
+          "path": "audits/P11_REFEREE_E2E_R27_CONSTRAINED_GAMMA_MOSCO_LIMIT_2026-08-15.md",
+          "sha256": "09a63ccee193c79a3c67b37b62a36be993e8e46be4b2b9f87c2cda89376b34b8"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "Festgelegte eingeschränkte Gamma-Räume und der codimension-one Hard-Constraint für die historischen P11-Graphräume.",
+      "claim": [
+        "Mosco-Konvergenz der festgelegten eingeschränkten Gamma-Räume.",
+        "Konkrete starke Resolventenkonvergenz und inverse-Quadratwurzel-Konvergenz im benannten constrained setting."
+      ],
+      "depends_on": [],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "be58767794eabb96e92152b493ee72a0a465a8ee",
+      "canonical_proof": "audits/P11_REFEREE_E2E_R27_CONSTRAINED_GAMMA_MOSCO_LIMIT_2026-08-15.md",
+      "proof_sha256": "09a63ccee193c79a3c67b37b62a36be993e8e46be4b2b9f87c2cda89376b34b8",
+      "negative_claim_boundary": "R27 liefert strukturelle Abhängigkeiten, aber keine bewegliche Polarfaktor-Konvergenz und keinen eigenständigen Strong-Terminal-Satz.",
+      "does_not_claim": [
+        "Bewegliche Polarfaktor-Konvergenz.",
+        "Strong Terminal allein.",
+        "Ein neues C1-Wall-Crossing oder globaler Horizonttransport."
+      ]
+    },
+    {
+      "id": "P11-TANGENTIAL-STRONG-TRANSPORT-HR0",
+      "title": "P11 tangential strong transport on H_R^0",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "f495ce6d89dcb8facc8fa0d4e09dda279b24fb73",
+          "path": "audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md",
+          "sha256": "c1d2bd92eb9c5372ef573f2a291f34447651dc4fb7f6d032f1d0ebe672d72c3c"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "Für jedes feste 0<R<S<infinity starke Konvergenz des echten Zukunftstransports auf dem geschlossenen tangentialen Hyperraum H_R^0 der ursprünglichen P11-Graphräume.",
+      "claim": [
+        "R42.51: vectorweise starke Konvergenz auf H_R^0 für jedes feste Paar 0<R<S<infinity.",
+        "R42.60: Reduktion des vollständigen fixed-pair-C6-Problems auf die Bahn eines einzelnen Normalvektors."
+      ],
+      "depends_on": [
+        "P11-R27-CONSTRAINED-GAMMA-MOSCO-INVERSE-ROOT"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "f495ce6d89dcb8facc8fa0d4e09dda279b24fb73",
+      "canonical_proof": "audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md",
+      "proof_sha256": "c1d2bd92eb9c5372ef573f2a291f34447651dc4fb7f6d032f1d0ebe672d72c3c",
+      "negative_claim_boundary": "R42 kontrolliert die tangentiale Teilrichtung und ihre Normalreduktion, nicht bereits den vollständigen fixed-pair Strong Terminal.",
+      "does_not_claim": [
+        "Volle Strong-Terminal-Konvergenz allein.",
+        "Uniformität in R,S.",
+        "Operatornormkonvergenz.",
+        "Die neue C1-Horizontkompatibilität."
+      ]
+    },
+    {
+      "id": "P11-FIXED-PAIR-STRONG-TERMINAL",
+      "title": "P11 fixed-pair Strong Terminal",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "SCOPED_GREEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "084b8b7855601c5fae87bf4e59a00648ffbb9116",
+          "path": "audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md",
+          "sha256": "9423dba35eee19075813100c6ebd558efef0122ee5c8869b0f07a3c7babd230c"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "Für jedes feste 0<R<S<infinity auf den ursprünglichen ungeraden P11-Graphräumen: starker fixed-pair-Transport aus R42.51 plus positivem Normalwurzelanker und Normsättigung aus R43.",
+      "claim": [
+        "Für jedes feste 0<R<S<infinity gilt W_R,S^[U] epsilon_R -> epsilon_S stark für U->infinity.",
+        "Zusammen mit der R42-Tangentialaussage gilt W_R,S^[U](v+a epsilon_R) -> W_R,S^(0)v+a epsilon_S für jedes v in H_R^0.",
+        "Der Satz schließt den fixed-pair-C6/Strong-Terminal-Schritt relativ zu den benannten P11/R27-Eingaben."
+      ],
+      "depends_on": [
+        "P11-R27-CONSTRAINED-GAMMA-MOSCO-INVERSE-ROOT",
+        "P11-TANGENTIAL-STRONG-TRANSPORT-HR0"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "084b8b7855601c5fae87bf4e59a00648ffbb9116",
+      "canonical_proof": "audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md",
+      "proof_sha256": "9423dba35eee19075813100c6ebd558efef0122ee5c8869b0f07a3c7babd230c",
+      "negative_claim_boundary": "Geschlossen ist nur die feste Paarstufe des ursprünglichen P11-Transportproblems; keine Aussage folgt für variable oder unbeschränkte Terminalhorizonte.",
+      "does_not_claim": [
+        "Uniformität in R,S.",
+        "Operatornormkonvergenz.",
+        "Eine Konvergenzrate.",
+        "Neue C1-Horizontkompatibilität oder q=8-Wall-crossing.",
+        "Globales Objekt X oder RH."
+      ]
     }
   ],
   "global_status": {
     "connected_unit_window_coercivity": "AUTHOR_DERIVED",
-    "strong_terminal": "OPEN",
     "full_c1_geom": "OPEN",
     "object_x": "NOT_CONSTRUCTED",
     "global_weil_gram_identity": "OPEN",
@@ -877,5 +1057,20 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": []
+  "pending_packages": [],
+  "transport_status": {
+    "p11_fixed_pair_strong_terminal": {
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "SCOPED_GREEN",
+      "scope": "fixed 0 < R < S < infinity",
+      "topology": "STRONG_VECTORWISE",
+      "parity": "ODD_P11_GRAPH",
+      "uniform_in_R_S": false,
+      "operator_norm_convergence": false
+    },
+    "c1_unbounded_horizon_compatibility": {
+      "mathematical_status": "OPEN",
+      "scope": "positive C1 compatibility across changing terminal horizons and prime-power walls"
+    }
+  }
 }
