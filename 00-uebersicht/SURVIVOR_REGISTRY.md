@@ -5,7 +5,7 @@
 
 Kompakte Auswahl heute verwendbarer Bausteine; kein Gesamtaudit aller historischen Resultate. Beziehungen nennen ausgewählte Register-Abhängigkeiten. Vollständige mathematische Inputs stehen in den Beweispaketen.
 
-Die Integrationseinträge beziehen sich auf die eingefrorene publizierte Basis. Die separate [Integrationsbeobachtung](CURRENT_STATE.md#beobachteter-integrationsstand) dokumentiert die spätere Aufnahme in main, ohne diese historischen Einträge oder mathematische Status umzudeuten.
+Integration status wird relativ zur aktuellen gepinnten published_baseline gelesen; mathematischer Status, Review-Status und Beweisanker bleiben davon getrennt.
 
 ## ENDPOINT-B
 
@@ -44,7 +44,7 @@ Reduzierte Quellenkoordinaten und gekoppelte H1-Spuren
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Gerader Sektor, B<b<=B+10^-20; physisches L2(dx), abgeschlossene Formräume und ausdrücklich gekoppelte H1-Spuren.
@@ -77,7 +77,7 @@ Tatsächlicher All-Parity-Transport auf dem endlichen Band
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: B<=a<=B+10^-10; tatsächliche Zwei-Mellin-Quellen mit voller Shell- und Coreantwort.
@@ -109,7 +109,7 @@ Uniformer vollständiger beweglicher High-Tail
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: B<=a<=1; physischer beweglicher High-Raum mit geraden Indizes ab 384 und ungeraden ab 385; genau 191 Low-Koordinaten je Parität.
@@ -141,7 +141,7 @@ Kanonisches gerichtetes physisches Formsystem
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: B<=a<=b<1 im ursprünglichen C0-Interface; Zwei-Mellin-Quellen und abgeschlossene Formräume.
@@ -173,7 +173,7 @@ Hilbert-Direktlimes der verschobenen Formräume
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Dasselbe gerichtete C0-System B<=a<1; Graphnorm aus q_a+17 I.
@@ -204,7 +204,7 @@ No-Go für kurze physische Reichweite plus endlichen Rang
 
 - Mathematical status: `AUTHOR_DERIVED_NO_GO`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Jedes B<=a<=1; exakte positive Gram-Readouts T_a=L_a+K_a mit physisch definierter räumlicher Reichweite R_a<a für L_a und beliebigem endlichem Rang von K_a.
@@ -236,7 +236,7 @@ No-Go für einzelne Prime-Kanäle als positive Gram-Blöcke
 
 - Mathematical status: `AUTHOR_DERIVED_NO_GO`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Jeder strikt aktive einzelne signierte Prime-Power-Kanal, jeweils auf geraden und ungeraden ursprünglichen Zwei-Mellin-Quellen.
@@ -267,7 +267,7 @@ Intrinsischer gekoppelter spektraler Mediator
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Fester Horizont 1, B<=a<=1, gemeinsame Kanäle 2,3,4,5,7 und vollständiges Gamma-Symbol g; kein vorausgesetztes q>=0.
@@ -300,7 +300,7 @@ Exaktes Intertwining des benannten Kandidaten
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Kandidat C1a-COUPLED-SPECTRAL-MEDIATOR innerhalb des festen Horizonts 1, B<=a<=b<=1.
@@ -332,7 +332,7 @@ Exakte kompakte Gramabweichung und Kontraktionsäquivalenz
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Derselbe feste Horizont und dieselben geschlossenen Kandidatenräume H_a; B<=a<=1.
@@ -365,7 +365,7 @@ Uniforme hohe Defektkontraktion und endliche kritische Dimension
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: B<=a<=1; vollständiger hoher T-Bildraum, Kodimension 191 je Parität.
@@ -398,7 +398,7 @@ Exakte Kongruenz zwischen physischem und Defekt-Schurrest
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: B<=a<=1; kanonischer 191D-Core je Parität nach vollständiger hoher Elimination.
@@ -431,7 +431,7 @@ Vollständige rationale Schranke für die hohe Antwort
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: B<=a<=1; Neumann-Abbruch N des hohen Responses im exakten 191D-Schurrest.
@@ -463,7 +463,7 @@ Qualitative Endpunktkontrolle der geordneten Singularwerte
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Geschachtelte Kandidatenräume im festen Horizont 1, B<=a<=1 einschließlich des Eintritts von Kanal 7.
@@ -495,7 +495,7 @@ Strikte terminale 191D-Schurpositivität in beiden Paritäten
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Tatsächliche H1_0-Zwei-Mellin-Quellen auf dem festen Horizont 0<a<=1; terminale 191D-Schurmatrizen bei a=1, beide Paritäten, vollständige hohe Antwort.
@@ -528,7 +528,7 @@ Kompatibler positiver terminaler C1-Abschluss
 
 - Mathematical status: `AUTHOR_DERIVED`.
 - Review status: `EXTERNAL_REVIEW_OPEN`.
-- Integration status: `RESEARCH_BRANCH_UNMERGED`.
+- Integration status: `MERGED`.
 - Strategic status: `REUSABLE_COMPONENT`.
 - Reproduction status: `RECORDED_PACKAGE_CHECKS`.
 - Scope: Kandidatenspezifischer fester C1-Horizont B<=a<=1; eine einzige terminale Quadratwurzelkorrektur auf H_1, positive geschlossene Zielräume und exaktes Nullfortsetzungs-Intertwining.

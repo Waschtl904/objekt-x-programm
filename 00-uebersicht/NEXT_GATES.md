@@ -5,7 +5,7 @@
 
 Genau zwei Hauptfronten. Die vollständigen Beweise und Eingabebindungen stehen in den verlinkten Paketen.
 
-Die separate [Integrationsbeobachtung](CURRENT_STATE.md#beobachteter-integrationsstand) ändert keine mathematischen Gates.
+Die getrennten Integrations-/Registry-Metadaten in [CURRENT_STATE](CURRENT_STATE.md) ändern keine mathematischen Gates.
 
 ## Unbeschränkte Horizonterweiterung und kompatibler Transport
 

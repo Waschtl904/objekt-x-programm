@@ -40,24 +40,34 @@ class StructureTests(unittest.TestCase):
                        object_pairs_hook=rs.unique_object)
 
     def test_short_commit_is_rejected(self):
-        self.state['live_frontier']['verified_through'] = '7998887'
+        self.state['verified_research_snapshot']['verified_through'] = '7998887'
         with self.assertRaisesRegex(rs.StateError, 'verified_through'):
             rs.validate_structure(self.state)
 
     def test_documentary_branch_head_has_snapshot_semantics(self):
-        front = self.state['live_frontier']
-        self.assertRegex(front['branch_head_at_generation'], rs.SHA)
+        front = self.state['verified_research_snapshot']
+        self.assertRegex(front['observed_branch_head'], rs.SHA)
         self.assertRegex(front['verified_through'], rs.SHA)
         self.assertEqual(front['head_policy'], 'VERIFIED_SNAPSHOT_NOT_CURRENT_HEAD')
 
     def test_short_documentary_branch_head_is_rejected(self):
-        self.state['live_frontier']['branch_head_at_generation'] = 'f1fa23f'
-        with self.assertRaisesRegex(rs.StateError, 'branch_head_at_generation'):
+        self.state['verified_research_snapshot']['observed_branch_head'] = 'f1fa23f'
+        with self.assertRaisesRegex(rs.StateError, 'observed_branch_head'):
             rs.validate_structure(self.state)
 
     def test_current_head_claim_is_rejected(self):
-        self.state['live_frontier']['head_policy'] = 'CURRENT_HEAD'
+        self.state['verified_research_snapshot']['head_policy'] = 'CURRENT_HEAD'
         with self.assertRaisesRegex(rs.StateError, 'current HEAD'):
+            rs.validate_structure(self.state)
+
+    def test_registry_sync_cannot_change_mathematical_review(self):
+        self.state['registry_sync']['mathematical_review_changed'] = True
+        with self.assertRaisesRegex(rs.StateError, 'cannot silently change'):
+            rs.validate_structure(self.state)
+
+    def test_registry_sync_base_must_match_published_baseline(self):
+        self.state['registry_sync']['base_sha'] = '0' * 40
+        with self.assertRaisesRegex(rs.StateError, 'must equal published baseline'):
             rs.validate_structure(self.state)
 
     def test_open_result_cannot_be_a_survivor(self):
@@ -146,12 +156,12 @@ class StructureTests(unittest.TestCase):
         current = rs.render(self.state)[rs.GENERATED[0]].decode()
         self.assertEqual(before, self.state)
         for sha in (self.state['published_baseline']['sha'],
-                    self.state['live_frontier']['verified_through'],
-                    self.state['live_frontier']['branch_head_at_generation'],
+                    self.state['verified_research_snapshot']['verified_through'],
+                    self.state['verified_research_snapshot']['observed_branch_head'],
                     self.state['current_integration_observation']['main_sha'],
                     self.state['current_integration_observation']['integrated_research_head']):
             self.assertIn(sha, current)
-        self.assertIn('Integration relativ zur eingefrorenen Basis', current)
+        self.assertIn('Registry-Sync-Kandidat', current)
         self.assertIn('keine mathematische Neuverifikation', current)
 
 
@@ -249,8 +259,12 @@ class RepositoryTests(unittest.TestCase):
         # Individual tests add their own pending package when exercising that lifecycle.
         state['pending_packages'] = []
         state['published_baseline']['sha'] = baseline
-        state['live_frontier']['verified_through'] = frontier
-        state['live_frontier']['branch_head_at_generation'] = frontier
+        state['verified_research_snapshot']['verified_through'] = frontier
+        state['verified_research_snapshot']['observed_branch_head'] = frontier
+        state['registry_sync']['branch'] = 'fixture/registry-sync'
+        state['registry_sync']['base_sha'] = baseline
+        state['registry_sync']['candidate_head_at_generation'] = integrated
+        state['registry_sync']['mathematical_review_changed'] = False
         state['current_integration_observation'].update(
             main_sha=integrated, integrated_research_branch='fixture-research',
             integrated_research_head=frontier, reconciliation_merge=integrated,
@@ -338,14 +352,14 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual(result['results'], 2)
         self.assertNotEqual(result['verified_through'], self.initial_commit)
 
-    def test_observed_integration_does_not_reclassify_historical_results(self):
+    def test_observed_integration_does_not_self_reclassify_fixture_results(self):
         before = deepcopy(self.s)
         rs.validate(self.root)
         self.assertEqual(self.s, before)
         self.assertEqual(self.s['results'][1]['integration_status'], 'RESEARCH_BRANCH_UNMERGED')
         o = self.s['current_integration_observation']
         self.assertNotEqual(o['main_sha'], self.initial_commit)
-        self.assertTrue(rs.ancestor(self.root, self.s['live_frontier']['verified_through'], o['main_sha']))
+        self.assertTrue(rs.ancestor(self.root, self.s['verified_research_snapshot']['verified_through'], o['main_sha']))
 
     def test_unintegrated_research_head_is_rejected(self):
         self.s['current_integration_observation']['integrated_research_head'] = self.initial_commit
@@ -440,7 +454,7 @@ class RepositoryTests(unittest.TestCase):
         self.package()
         result = rs.validate(self.root, self.initial_commit)
         self.assertEqual(result['new_metadata_packages'], 1)
-        self.assertEqual(result['verified_through'], self.state['live_frontier']['verified_through'])
+        self.assertEqual(result['verified_through'], self.state['verified_research_snapshot']['verified_through'])
         self.assertIn(b'PENDING_STATUS_REVIEW', (self.root / rs.GENERATED[0]).read_bytes())
 
     def test_published_pending_package_can_be_registered_at_its_actual_commit(self):
@@ -453,8 +467,8 @@ class RepositoryTests(unittest.TestCase):
                     reproduction_status='ANALYTIC_ONLY', reproduction_evidence=[])
         self.s['results'].append(item)
         self.s['pending_packages'] = []
-        self.s['live_frontier']['verified_through'] = package_commit
-        self.s['live_frontier']['branch_head_at_generation'] = package_commit
+        self.s['verified_research_snapshot']['verified_through'] = package_commit
+        self.s['verified_research_snapshot']['observed_branch_head'] = package_commit
         self.save_state()
         checked = rs.validate(self.root, self.initial_commit)
         self.assertEqual(checked['results'], 3)
@@ -503,8 +517,8 @@ class RepositoryTests(unittest.TestCase):
         self.put('research/new-package/PROOF.md', b'Undeclared new proof.\n')
         added = self.commit('fixture attempt to grandfather new package')
         self.s['metadata_policy']['enforced_after'] = added
-        self.s['live_frontier']['verified_through'] = added
-        self.s['live_frontier']['branch_head_at_generation'] = added
+        self.s['verified_research_snapshot']['verified_through'] = added
+        self.s['verified_research_snapshot']['observed_branch_head'] = added
         self.save_state()
         with self.assertRaisesRegex(rs.StateError, 'Cannot reset metadata enforcement'):
             rs.validate(self.root, self.initial_commit)

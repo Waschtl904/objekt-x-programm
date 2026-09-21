@@ -181,25 +181,35 @@ def validate_integration_ancestry(root, s):
     require(len(parents) >= 3, 'Reconciliation observation must identify a merge commit')
 
 def validate_structure(s):
-    fields(s, ('schema_version', 'render_version', 'state_date', 'repository', 'published_baseline', 'live_frontier', 'current_integration_observation', 'authority_roles', 'fronts', 'obligations', 'results', 'global_status', 'transport_status', 'historical_navigation', 'navigation_exceptions', 'metadata_policy', 'pending_packages'), 'state')
+    fields(s, ('schema_version', 'render_version', 'state_date', 'repository', 'published_baseline', 'verified_research_snapshot', 'registry_sync', 'current_integration_observation', 'authority_roles', 'fronts', 'obligations', 'results', 'global_status', 'transport_status', 'historical_navigation', 'navigation_exceptions', 'metadata_policy', 'pending_packages'), 'state')
     require(type(s['schema_version']) is int and s['schema_version'] == 2, 'Unsupported schema_version')
     require(type(s['render_version']) is int and s['render_version'] >= 1, 'Invalid render_version')
     require(isinstance(s['state_date'], str) and re.fullmatch('\\d{4}-\\d{2}-\\d{2}', s['state_date']), 'state_date must be YYYY-MM-DD')
     require(s['repository'] == 'Waschtl904/objekt-x-programm', 'Unexpected repository')
     validate_integration_observation_structure(s)
     base = s['published_baseline']
-    front = s['live_frontier']
-    fields(base, ('branch', 'sha', 'integration_status', 'meaning', 'mathematical_status', 'review_status'), 'baseline')
+    verified = s['verified_research_snapshot']
+    sync = s['registry_sync']
+    fields(base, ('branch', 'sha', 'integration_status', 'meaning'), 'baseline')
     require(base['branch'] == 'main' and base['integration_status'] == 'MERGED', 'Baseline must be a merged main snapshot')
     require(isinstance(base['sha'], str) and SHA.fullmatch(base['sha']), 'Invalid baseline SHA')
-    require(base['mathematical_status'] == 'AUTHOR_DERIVED' and base['review_status'] == 'EXTERNAL_REVIEW_OPEN', 'Invalid baseline epistemic status')
     string(base['meaning'], 'baseline meaning')
-    fields(front, ('branch', 'branch_head_at_generation', 'verified_through', 'integration_status', 'review_status', 'head_policy'), 'frontier')
-    string(front['branch'], 'frontier branch')
-    require(isinstance(front['branch_head_at_generation'], str) and SHA.fullmatch(front['branch_head_at_generation']), 'Invalid branch_head_at_generation SHA')
-    require(isinstance(front['verified_through'], str) and SHA.fullmatch(front['verified_through']), 'Invalid verified_through SHA')
-    require(front['integration_status'] == 'RESEARCH_BRANCH_UNMERGED' and front['review_status'] == 'EXTERNAL_REVIEW_OPEN', 'Invalid frontier status')
-    require(front['head_policy'] == 'VERIFIED_SNAPSHOT_NOT_CURRENT_HEAD', 'verified_through must not be presented as current HEAD')
+    fields(verified, ('branch', 'verified_through', 'observed_branch_head', 'review_status', 'head_policy', 'meaning'), 'verified research snapshot')
+    string(verified['branch'], 'verified research branch')
+    require(isinstance(verified['verified_through'], str) and SHA.fullmatch(verified['verified_through']), 'Invalid verified_through SHA')
+    require(isinstance(verified['observed_branch_head'], str) and SHA.fullmatch(verified['observed_branch_head']), 'Invalid observed_branch_head SHA')
+    require(verified['review_status'] == 'EXTERNAL_REVIEW_OPEN', 'Invalid verified research review status')
+    require(verified['head_policy'] == 'VERIFIED_SNAPSHOT_NOT_CURRENT_HEAD', 'verified_through must not be presented as current HEAD')
+    string(verified['meaning'], 'verified research meaning')
+    fields(sync, ('branch', 'base_sha', 'candidate_head_at_generation', 'integration_status', 'head_policy', 'mathematical_review_changed', 'meaning'), 'registry sync')
+    string(sync['branch'], 'registry sync branch')
+    require(isinstance(sync['base_sha'], str) and SHA.fullmatch(sync['base_sha']), 'Invalid registry sync base SHA')
+    require(isinstance(sync['candidate_head_at_generation'], str) and SHA.fullmatch(sync['candidate_head_at_generation']), 'Invalid registry sync candidate SHA')
+    require(sync['base_sha'] == base['sha'], 'Registry sync base must equal published baseline')
+    require(sync['integration_status'] == 'RESEARCH_BRANCH_UNMERGED', 'Registry sync must remain unmerged until integration')
+    require(sync['head_policy'] == 'OBSERVED_CANDIDATE_NOT_CURRENT_HEAD', 'Registry sync candidate must be an observed snapshot, not a current-HEAD claim')
+    require(sync['mathematical_review_changed'] is False, 'Registry sync cannot silently change mathematical review status')
+    string(sync['meaning'], 'registry sync meaning')
     require(isinstance(s['authority_roles'], dict) and set(s['authority_roles']) == {'definition', 'review_rules', 'proof_principle'}, 'Missing authority roles')
     for key in ('definition', 'review_rules'):
         ref_fields(s['authority_roles'][key], key)
@@ -341,25 +351,30 @@ def banner(s, h):
 def render(s):
     generated = '> GENERATED FILE — DO NOT EDIT\n> Quelle: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml). Navigation, keine Satzpromotion.\n'
     b = s['published_baseline']
-    f = s['live_frontier']
+    v = s['verified_research_snapshot']
+    sync = s['registry_sync']
     current = ['# Aktueller Forschungsstand', '', generated, 'Stand: ' + s['state_date'] + '.', '',
-               '## Eingefrorene publizierte Basis', '',
-               '`main@' + b['sha'][:7] + '` — ' + commit_link(s, b['sha']) + '. ' + b['meaning'],
-               'Mathematik: ' + b['mathematical_status'] + '; externe Prüfung: ' + b['review_status'] + '.', '',
-               '## Verifizierter Forschungsstand', '',
-               'Geprüft bis ' + commit_link(s, f['verified_through']) + ' auf `' + f['branch'] + '`.',
-               'Dokumentarischer Branch-Head bei Registererzeugung: ' + commit_link(s, f['branch_head_at_generation']) + '.',
-               '**Dies ist ein geprüfter Snapshot, keine Behauptung über den dauerhaft aktuellen Branch-HEAD.**',
-               'Integration relativ zur eingefrorenen Basis: ' + f['integration_status'] + '; externe Prüfung: ' + f['review_status'] + '.', '']
+               '## Gemergte kanonische Basis', '',
+               '`main@' + b['sha'][:7] + '` — ' + commit_link(s, b['sha']) + '. ' + b['meaning'], '',
+               '## Mathematisch geprüfter Forschungssnapshot', '',
+               'Geprüft bis ' + commit_link(s, v['verified_through']) + ' auf `' + v['branch'] + '`.',
+               'Beobachteter späterer Forschungsbranch-Head: ' + commit_link(s, v['observed_branch_head']) + '.',
+               '**Der beobachtete Branch-Head ist keine zusätzliche mathematische Verifikation.**',
+               'Externe Prüfung des geprüften Snapshots: ' + v['review_status'] + '.',
+               v['meaning'], '']
     o = s['current_integration_observation']
-    current += ['## Beobachteter Integrationsstand', '',
+    current += ['## Gepinnte Integrations-/CI-Provenienz', '',
                 'Beobachtet am ' + o['observed_at'] + ': `main` bei ' + commit_link(s, o['main_sha']) + '.',
-                'Beobachteter Head von `' + o['integrated_research_branch'] + '`: ' + commit_link(s, o['integrated_research_head']) + '; in diesem Main-Snapshot enthalten.',
+                'Integrierter beobachteter Research-Head: ' + commit_link(s, o['integrated_research_head']) + ' auf `' + o['integrated_research_branch'] + '`.',
                 'Reconciliation-Merge: ' + commit_link(s, o['reconciliation_merge']) + '.',
                 'Integrations-CI: [' + str(o['ci_run_id']) + '](' + o['ci_url'] + '), Versuch ' + str(o['ci_run_attempt']) + ', **' + o['ci_conclusion'] + '** auf ' + commit_link(s, o['ci_head_sha']) + '.',
-                '**Datierte Git-/CI-Beobachtung, keine dauerhafte HEAD-Aussage und keine mathematische Neuverifikation.**',
-                'Die historische Baseline, der Verifikationsanker, der dokumentierte Branch-Head und die darauf bezogenen Integrationseinträge bleiben unverändert.',
-                '', '## Zwei aktive Hauptfronten', '']
+                '**Diese Provenienz belegt Integration/CI, nicht mathematische Neuverifikation.**', '']
+    current += ['## Registry-Sync-Kandidat', '',
+                'Branch `' + sync['branch'] + '` gegen Basis ' + commit_link(s, sync['base_sha']) + '.',
+                'Beobachteter Kandidat-Head bei Registererzeugung: ' + commit_link(s, sync['candidate_head_at_generation']) + '.',
+                'Integration: ' + sync['integration_status'] + '; mathematische Review-Änderung: ' + str(sync['mathematical_review_changed']).lower() + '.',
+                '**Dieser Abschnitt beschreibt ausschließlich Registry-/Dokumentationsintegration und keinen mathematisch geprüften Snapshot.**',
+                sync['meaning'], '', '## Zwei aktive Hauptfronten', '']
     for key, front in s['fronts'].items():
         current += ['- **' + front['title'] + '** — `' + front['id'] + '`, OPEN. ' + front['target_scope']]
     current += ['', '## Verwendbare Bausteine', '', '| ID | Mathematischer Status | Beleg |', '|---|---|---|']
@@ -375,7 +390,7 @@ def render(s):
     if s['pending_packages']:
         current += ['', '## Noch nicht in den geprüften Stand übernommene Pakete', ''] + ['- `' + p['id'] + '`: ' + p['status'] + ' — `' + p['meta_path'] + '`.' for p in s['pending_packages']]
     current += ['', 'Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).']
-    gates = ['# Nächste Forschungsaufgaben', '', generated, 'Genau zwei Hauptfronten. Die vollständigen Beweise und Eingabebindungen stehen in den verlinkten Paketen.', '', 'Die separate [Integrationsbeobachtung](CURRENT_STATE.md#beobachteter-integrationsstand) ändert keine mathematischen Gates.', '']
+    gates = ['# Nächste Forschungsaufgaben', '', generated, 'Genau zwei Hauptfronten. Die vollständigen Beweise und Eingabebindungen stehen in den verlinkten Paketen.', '', 'Die getrennten Integrations-/Registry-Metadaten in [CURRENT_STATE](CURRENT_STATE.md) ändern keine mathematischen Gates.', '']
     by_ob = {o['id']: o for o in s['obligations']}
     for front in s['fronts'].values():
         gates += ['## ' + front['title'], '', '`' + front['id'] + '` — OPEN. ' + front['target_scope'], '', 'Offene Obligationen:', '']
@@ -384,7 +399,7 @@ def render(s):
         gates += ['', 'Nicht ausreichend:', ''] + ['- ' + x for x in front['insufficient']]
         gates += ['', 'Verwendbare Registereinträge: ' + ', '.join(('`' + x + '`' for x in front['uses_results'])) + '.', '']
     gates += ['Horizont und Testklasse sind gemäß dem jeweiligen Scope zu beachten. Ein lokaler Gate-Abschluss ist keine RH-Promotion.']
-    survivors = ['# Survivor Registry', '', generated, 'Kompakte Auswahl heute verwendbarer Bausteine; kein Gesamtaudit aller historischen Resultate. Beziehungen nennen ausgewählte Register-Abhängigkeiten. Vollständige mathematische Inputs stehen in den Beweispaketen.', '', 'Die Integrationseinträge beziehen sich auf die eingefrorene publizierte Basis. Die separate [Integrationsbeobachtung](CURRENT_STATE.md#beobachteter-integrationsstand) dokumentiert die spätere Aufnahme in main, ohne diese historischen Einträge oder mathematische Status umzudeuten.', '']
+    survivors = ['# Survivor Registry', '', generated, 'Kompakte Auswahl heute verwendbarer Bausteine; kein Gesamtaudit aller historischen Resultate. Beziehungen nennen ausgewählte Register-Abhängigkeiten. Vollständige mathematische Inputs stehen in den Beweispaketen.', '', 'Integration status wird relativ zur aktuellen gepinnten published_baseline gelesen; mathematischer Status, Review-Status und Beweisanker bleiben davon getrennt.', '']
     for r in s['results']:
         survivors += ['## ' + r['id'], '', r['title'], '', '- Mathematical status: `' + r['mathematical_status'] + '`.', '- Review status: `' + r['review_status'] + '`.', '- Integration status: `' + r['integration_status'] + '`.', '- Strategic status: `' + r['strategic_status'] + '`.', '- Reproduction status: `' + r['reproduction_status'] + '`.', '- Scope: ' + r['scope'], '- Canonical commit: ' + commit_link(s, r['canonical_commit']) + '.', '- Canonical proof: ' + pinned_link(s, {'commit': r['canonical_commit'], 'path': r['canonical_proof']}, r['canonical_proof']) + '.']
         for key in ('depends_on', 'supersedes', 'replaced_by'):
@@ -429,17 +444,18 @@ def validate(root, base_ref=None):
     s = load(root / STATE)
     result_ids, open_ids = validate_structure(s)
     validate_integration_ancestry(root, s)
-    for sha in (s['published_baseline']['sha'], s['live_frontier']['verified_through'], s['live_frontier']['branch_head_at_generation'], s['metadata_policy']['enforced_after']):
+    for sha in (s['published_baseline']['sha'], s['verified_research_snapshot']['verified_through'], s['verified_research_snapshot']['observed_branch_head'], s['registry_sync']['base_sha'], s['registry_sync']['candidate_head_at_generation'], s['metadata_policy']['enforced_after']):
         git(root, 'cat-file', '-e', sha + '^{commit}')
-    require(ancestor(root, s['metadata_policy']['enforced_after'], s['live_frontier']['verified_through']), 'Metadata enforcement anchor cannot move beyond verified_through')
-    require(ancestor(root, s['live_frontier']['verified_through'], s['live_frontier']['branch_head_at_generation']), 'branch_head_at_generation must descend from verified_through')
+    require(ancestor(root, s['metadata_policy']['enforced_after'], s['verified_research_snapshot']['verified_through']), 'Metadata enforcement anchor cannot move beyond verified_through')
+    require(ancestor(root, s['verified_research_snapshot']['verified_through'], s['verified_research_snapshot']['observed_branch_head']), 'observed_branch_head must descend from verified_through')
+    require(ancestor(root, s['registry_sync']['base_sha'], s['registry_sync']['candidate_head_at_generation']), 'Registry sync candidate must descend from its declared base')
     refs = [s['authority_roles'][key] for key in ('definition', 'review_rules')]
     for r in s['results']:
         refs.append({'commit': r['canonical_commit'], 'path': r['canonical_proof'], 'sha256': r['proof_sha256']})
         refs += r['reproduction_evidence']
         if r.get('external_review_evidence'):
             refs.append(r['external_review_evidence'])
-        target = s['published_baseline']['sha'] if r['integration_status'] == 'MERGED' else s['live_frontier']['verified_through']
+        target = s['published_baseline']['sha'] if r['integration_status'] == 'MERGED' else s['verified_research_snapshot']['verified_through']
         require(ancestor(root, r['canonical_commit'], target), 'Result commit outside declared integration scope: ' + r['id'])
         if r['integration_status'] == 'RESEARCH_BRANCH_UNMERGED':
             require(not ancestor(root, r['canonical_commit'], s['published_baseline']['sha']), 'Result already included in the declared merged baseline: ' + r['id'])
@@ -486,4 +502,4 @@ def validate(root, base_ref=None):
             require(old['metadata_policy']['enforced_after'] == s['metadata_policy']['enforced_after'], 'Cannot reset metadata enforcement to grandfather new packages')
         generated_changed = any((git_blob(root, base_ref, p, missing_ok=True) != (root / p).read_bytes() for p in GENERATED))
         require(not generated_changed or previous != (root / STATE).read_bytes(), 'Generated Markdown changed without a state change')
-    return {'results': len(s['results']), 'evidence_refs': len(refs), 'historical_banners': len(historical), 'new_metadata_packages': len(meta_ids), 'verified_through': s['live_frontier']['verified_through']}
+    return {'results': len(s['results']), 'evidence_refs': len(refs), 'historical_banners': len(historical), 'new_metadata_packages': len(meta_ids), 'verified_through': s['verified_research_snapshot']['verified_through']}
