@@ -165,6 +165,10 @@ class RepositoryTests(unittest.TestCase):
         state['authority_roles']['definition'] = ref(baseline, definition)
         state['authority_roles']['review_rules'] = ref(baseline, definition)
         state['results'] = state['results'][:2]
+        # Keep the isolated fixture's integration scopes explicit instead of
+        # inheriting the repository's current merged/unmerged selection.
+        state['results'][0]['integration_status'] = 'MERGED'
+        state['results'][1]['integration_status'] = 'RESEARCH_BRANCH_UNMERGED'
         for item, sha, path in zip(state['results'], [baseline, frontier],
                                   ['research/frozen/PROOF.md', 'research/frontier/PROOF.md']):
             evidence = ref(sha, path)
