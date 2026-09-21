@@ -1,6 +1,11 @@
 name: A1 C-odd evaluation shards Arb certificate
 on:
   pull_request:
+    paths:
+      - 'scripts/check_a1_c_even_engine_preflight_arb.py'
+      - 'scripts/check_a1_c_odd_eval_shard_arb.py'
+      - 'scripts/check_a1_c_odd_eval_budget_arb.py'
+      - '.github/workflows/a1-c-odd-eval-shards-arb.yml'
   workflow_dispatch:
 permissions:
   contents: read
