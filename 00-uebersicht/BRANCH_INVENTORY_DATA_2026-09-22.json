@@ -12921,10 +12921,47 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a8-lower-finite-components",
+        "status": "diverged",
+        "ahead_by": 82,
+        "behind_by": 570,
+        "total_commits": 82,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "b978ac426eb0c4e268237f90ada863086d030500",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/b978ac426eb0c4e268237f90ada863086d030500",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/b978ac426eb0c4e268237f90ada863086d030500"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_A8_LOWER_FINITE_COMPONENTS_CANDIDATE.md",
+            "status": "added",
+            "additions": 611,
+            "deletions": 0,
+            "changes": 611,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a8_lower_finite_components.py",
+            "status": "added",
+            "additions": 236,
+            "deletions": 0,
+            "changes": 236,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "82 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a8-midpoint-degeneracy-fix",
@@ -12938,10 +12975,55 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a8-midpoint-degeneracy-fix",
+        "status": "diverged",
+        "ahead_by": 7,
+        "behind_by": 565,
+        "total_commits": 7,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "e877834babf2fe551e4f13b2b6ce89bb917d743f",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/e877834babf2fe551e4f13b2b6ce89bb917d743f",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/e877834babf2fe551e4f13b2b6ce89bb917d743f"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_A8_LOWER_FINITE_COMPONENTS_CANDIDATE.md",
+            "status": "modified",
+            "additions": 240,
+            "deletions": 7,
+            "changes": 247,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a8_midpoint_degeneracy_fix.py",
+            "status": "added",
+            "additions": 99,
+            "deletions": 0,
+            "changes": 99,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_sheet_collision_quotient.py",
+            "status": "added",
+            "additions": 80,
+            "deletions": 0,
+            "changes": 80,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "7 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a9-knf-separator",
@@ -12955,10 +13037,111 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a9-knf-separator",
+        "status": "diverged",
+        "ahead_by": 113,
+        "behind_by": 564,
+        "total_commits": 113,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "cb2d8a4c766e53f49bf2ed590be2222672c606aa",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/cb2d8a4c766e53f49bf2ed590be2222672c606aa",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/cb2d8a4c766e53f49bf2ed590be2222672c606aa"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_A9_KNF_SEPARATOR_STABILITY_CANDIDATE.md",
+            "status": "added",
+            "additions": 2093,
+            "deletions": 0,
+            "changes": 2093,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a9_360_to_128_filter.py",
+            "status": "added",
+            "additions": 50,
+            "deletions": 0,
+            "changes": 50,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a9_full_finite_state_cocycle.py",
+            "status": "added",
+            "additions": 119,
+            "deletions": 0,
+            "changes": 119,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a9_j0_identity_gram.py",
+            "status": "added",
+            "additions": 88,
+            "deletions": 0,
+            "changes": 88,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a9_j1_full_local_6x6.py",
+            "status": "added",
+            "additions": 229,
+            "deletions": 0,
+            "changes": 229,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a9_j1a_new_channel_survival.py",
+            "status": "added",
+            "additions": 70,
+            "deletions": 0,
+            "changes": 70,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a9_new_knf_domains.py",
+            "status": "added",
+            "additions": 81,
+            "deletions": 0,
+            "changes": 81,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a9_regular_phase_bypass.py",
+            "status": "added",
+            "additions": 181,
+            "deletions": 0,
+            "changes": 181,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a9_staggered_separator.py",
+            "status": "added",
+            "additions": 269,
+            "deletions": 0,
+            "changes": 269,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a9_unmatched_middle_targets.py",
+            "status": "added",
+            "additions": 83,
+            "deletions": 0,
+            "changes": 83,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "113 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-awi",
@@ -12972,10 +13155,47 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-awi",
+        "status": "diverged",
+        "ahead_by": 8,
+        "behind_by": 582,
+        "total_commits": 8,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "6da2ed81ed0d513bc6b700b782afc6e4b4284657",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/6da2ed81ed0d513bc6b700b782afc6e4b4284657",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/6da2ed81ed0d513bc6b700b782afc6e4b4284657"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_AWI_CANDIDATE.md",
+            "status": "added",
+            "additions": 560,
+            "deletions": 0,
+            "changes": 560,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_awi.py",
+            "status": "added",
+            "additions": 129,
+            "deletions": 0,
+            "changes": 129,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "8 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-bl7",
@@ -12989,10 +13209,39 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-bl7",
+        "status": "diverged",
+        "ahead_by": 2,
+        "behind_by": 591,
+        "total_commits": 2,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "242f1c2684a982067d45633c2b559cd149557396",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/242f1c2684a982067d45633c2b559cd149557396",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/242f1c2684a982067d45633c2b559cd149557396"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_BL7_CANDIDATE.md",
+            "status": "added",
+            "additions": 128,
+            "deletions": 0,
+            "changes": 128,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "2 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-delta-descent",
@@ -13006,10 +13255,151 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-delta-descent",
+        "status": "diverged",
+        "ahead_by": 52,
+        "behind_by": 579,
+        "total_commits": 52,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "83f07adf9136d416181d6f38779cd452eb6a4472",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/83f07adf9136d416181d6f38779cd452eb6a4472",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/83f07adf9136d416181d6f38779cd452eb6a4472"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md",
+            "status": "added",
+            "additions": 4299,
+            "deletions": 0,
+            "changes": 4299,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_delta_descent_stage10a.py",
+            "status": "added",
+            "additions": 166,
+            "deletions": 0,
+            "changes": 166,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_delta_descent_stage10b.py",
+            "status": "added",
+            "additions": 35,
+            "deletions": 0,
+            "changes": 35,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_delta_descent_stage10c.py",
+            "status": "added",
+            "additions": 60,
+            "deletions": 0,
+            "changes": 60,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_delta_descent_stage11.py",
+            "status": "added",
+            "additions": 143,
+            "deletions": 0,
+            "changes": 143,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_delta_descent_stage12.py",
+            "status": "added",
+            "additions": 169,
+            "deletions": 0,
+            "changes": 169,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_delta_descent_stage12_inner.py",
+            "status": "added",
+            "additions": 188,
+            "deletions": 0,
+            "changes": 188,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_delta_descent_stage3.py",
+            "status": "added",
+            "additions": 126,
+            "deletions": 0,
+            "changes": 126,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_delta_descent_stage4.py",
+            "status": "added",
+            "additions": 219,
+            "deletions": 0,
+            "changes": 219,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_delta_descent_stage5.py",
+            "status": "added",
+            "additions": 146,
+            "deletions": 0,
+            "changes": 146,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_delta_descent_stage5b.py",
+            "status": "added",
+            "additions": 159,
+            "deletions": 0,
+            "changes": 159,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_delta_descent_stage6.py",
+            "status": "added",
+            "additions": 162,
+            "deletions": 0,
+            "changes": 162,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_delta_descent_stage7.py",
+            "status": "added",
+            "additions": 148,
+            "deletions": 0,
+            "changes": 148,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_delta_descent_stage8_pointwise.py",
+            "status": "added",
+            "additions": 115,
+            "deletions": 0,
+            "changes": 115,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_delta_descent_stage9.py",
+            "status": "added",
+            "additions": 179,
+            "deletions": 0,
+            "changes": 179,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "52 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-knf",
@@ -13023,10 +13413,39 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-knf",
+        "status": "diverged",
+        "ahead_by": 3,
+        "behind_by": 594,
+        "total_commits": 3,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "f2a5afcf98cef2ff2b73b2cf62cca329cc98ef33",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/f2a5afcf98cef2ff2b73b2cf62cca329cc98ef33",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/f2a5afcf98cef2ff2b73b2cf62cca329cc98ef33"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_KNF_CANDIDATE.md",
+            "status": "added",
+            "additions": 774,
+            "deletions": 0,
+            "changes": 774,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "3 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-m1-nd-image-space",
@@ -13040,10 +13459,55 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-m1-nd-image-space",
+        "status": "diverged",
+        "ahead_by": 6,
+        "behind_by": 552,
+        "total_commits": 6,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "383e42f0643ad7ba3f8bec42faa988807a66ac9d",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/383e42f0643ad7ba3f8bec42faa988807a66ac9d",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/383e42f0643ad7ba3f8bec42faa988807a66ac9d"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/sw1-m1-nd-img0-cert.yml",
+            "status": "added",
+            "additions": 34,
+            "deletions": 0,
+            "changes": 34,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_M1_ND_IMAGE_SPACE_CANDIDATE.md",
+            "status": "added",
+            "additions": 888,
+            "deletions": 0,
+            "changes": 888,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_image_space.py",
+            "status": "added",
+            "additions": 281,
+            "deletions": 0,
+            "changes": 281,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "6 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-m1-nd-img1",
@@ -13057,20 +13521,150 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-m1-nd-img1",
+        "status": "diverged",
+        "ahead_by": 20,
+        "behind_by": 549,
+        "total_commits": 20,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "a594c3c655f71932c033be06ebfdeee7a96f923a",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/a594c3c655f71932c033be06ebfdeee7a96f923a",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/a594c3c655f71932c033be06ebfdeee7a96f923a"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/sw1-m1-nd-img1-cert.yml",
+            "status": "added",
+            "additions": 48,
+            "deletions": 0,
+            "changes": 48,
+            "previous_filename": null
+          },
+          {
+            "filename": "00-uebersicht/ACTIVE_THEOREM_REGISTRY.md",
+            "status": "modified",
+            "additions": 2,
+            "deletions": 1,
+            "changes": 3,
+            "previous_filename": null
+          },
+          {
+            "filename": "CURRENT-FRONT.md",
+            "status": "modified",
+            "additions": 4,
+            "deletions": 4,
+            "changes": 8,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_M1_ND_IMG1_EFFECTIVE_LEDGER_CANDIDATE.md",
+            "status": "added",
+            "additions": 453,
+            "deletions": 0,
+            "changes": 453,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img1_direct_crosscheck.py",
+            "status": "added",
+            "additions": 217,
+            "deletions": 0,
+            "changes": 217,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img1_effective_ledger.py",
+            "status": "added",
+            "additions": 339,
+            "deletions": 0,
+            "changes": 339,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img1_species_crosscheck.py",
+            "status": "added",
+            "additions": 290,
+            "deletions": 0,
+            "changes": 290,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "20 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-m1-nd-img2-descriptor",
       "head_sha": "2e193c5b5726ea66cb8f06de1e2cddbf963b887e",
       "pr_links": [],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-m1-nd-img2-descriptor",
+        "status": "diverged",
+        "ahead_by": 7,
+        "behind_by": 548,
+        "total_commits": 7,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "b47be753bc74028441ecd41365082efd567d515a",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/b47be753bc74028441ecd41365082efd567d515a",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/b47be753bc74028441ecd41365082efd567d515a"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/sw1-m1-nd-img2-descriptor-cert.yml",
+            "status": "added",
+            "additions": 46,
+            "deletions": 0,
+            "changes": 46,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_M1_ND_IMG2_DESCRIPTOR_CANDIDATE.md",
+            "status": "added",
+            "additions": 602,
+            "deletions": 0,
+            "changes": 602,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img2_descriptor.py",
+            "status": "added",
+            "additions": 274,
+            "deletions": 0,
+            "changes": 274,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img2_identity_pivot.py",
+            "status": "added",
+            "additions": 224,
+            "deletions": 0,
+            "changes": 224,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "7 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-m1-nd-img3-eliminator",
@@ -13084,10 +13678,239 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-m1-nd-img3-eliminator",
+        "status": "diverged",
+        "ahead_by": 80,
+        "behind_by": 548,
+        "total_commits": 80,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "b47be753bc74028441ecd41365082efd567d515a",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/b47be753bc74028441ecd41365082efd567d515a",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/b47be753bc74028441ecd41365082efd567d515a"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/sw1-m1-nd-img2-descriptor-cert.yml",
+            "status": "added",
+            "additions": 46,
+            "deletions": 0,
+            "changes": 46,
+            "previous_filename": null
+          },
+          {
+            "filename": ".github/workflows/sw1-m1-nd-img3-eliminator-cert.yml",
+            "status": "added",
+            "additions": 126,
+            "deletions": 0,
+            "changes": 126,
+            "previous_filename": null
+          },
+          {
+            "filename": "00-uebersicht/ACTIVE_THEOREM_REGISTRY.md",
+            "status": "modified",
+            "additions": 18,
+            "deletions": 13,
+            "changes": 31,
+            "previous_filename": null
+          },
+          {
+            "filename": "CURRENT-FRONT.md",
+            "status": "modified",
+            "additions": 77,
+            "deletions": 58,
+            "changes": 135,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_M1_ND_IMG2_DESCRIPTOR_CANDIDATE.md",
+            "status": "added",
+            "additions": 602,
+            "deletions": 0,
+            "changes": 602,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_M1_ND_IMG3_ANALYTIC_HARDENING_CANDIDATE.md",
+            "status": "added",
+            "additions": 920,
+            "deletions": 0,
+            "changes": 920,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_M1_ND_IMG3_LOCAL_ELIMINATOR_CANDIDATE.md",
+            "status": "added",
+            "additions": 1307,
+            "deletions": 0,
+            "changes": 1307,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_M1_ND_IMG4_ANALYTIC_GATES_CANDIDATE.md",
+            "status": "added",
+            "additions": 1065,
+            "deletions": 0,
+            "changes": 1065,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_M1_ND_IMG4_EXTERNAL_REVIEW_PACKET.md",
+            "status": "added",
+            "additions": 359,
+            "deletions": 0,
+            "changes": 359,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_M1_ND_IMG4_GENERAL_SMALLR_NOGO_CANDIDATE.md",
+            "status": "added",
+            "additions": 462,
+            "deletions": 0,
+            "changes": 462,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_M1_ND_IMG4_SMALLR_KERNEL_NOGO_CANDIDATE.md",
+            "status": "added",
+            "additions": 931,
+            "deletions": 0,
+            "changes": 931,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_M1_ND_IMG4_SMALLR_NEG_PROMOTION.md",
+            "status": "added",
+            "additions": 549,
+            "deletions": 0,
+            "changes": 549,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img2_descriptor.py",
+            "status": "added",
+            "additions": 274,
+            "deletions": 0,
+            "changes": 274,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img2_identity_pivot.py",
+            "status": "added",
+            "additions": 224,
+            "deletions": 0,
+            "changes": 224,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img3_b96_mapstability_nogo.py",
+            "status": "added",
+            "additions": 69,
+            "deletions": 0,
+            "changes": 69,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img3_fixedN_uniform_nogo.py",
+            "status": "added",
+            "additions": 84,
+            "deletions": 0,
+            "changes": 84,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img3_horizon_contraction_coeffs.py",
+            "status": "added",
+            "additions": 242,
+            "deletions": 0,
+            "changes": 242,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img3_linear_visibility_bound.py",
+            "status": "added",
+            "additions": 133,
+            "deletions": 0,
+            "changes": 133,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img3_local_eliminator.py",
+            "status": "added",
+            "additions": 354,
+            "deletions": 0,
+            "changes": 354,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img3_n0_annulus_blindset.py",
+            "status": "added",
+            "additions": 113,
+            "deletions": 0,
+            "changes": 113,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img4_gate1_gate9_graph_p12.py",
+            "status": "added",
+            "additions": 201,
+            "deletions": 0,
+            "changes": 201,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img4_gateA_direct_words.py",
+            "status": "added",
+            "additions": 210,
+            "deletions": 0,
+            "changes": 210,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img4_gateB_pmp_graphing.py",
+            "status": "added",
+            "additions": 89,
+            "deletions": 0,
+            "changes": 89,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img4_gateD_domain_support.py",
+            "status": "added",
+            "additions": 130,
+            "deletions": 0,
+            "changes": 130,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_img4_smallR_separator_visibility.py",
+            "status": "added",
+            "additions": 224,
+            "deletions": 0,
+            "changes": 224,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/probe_sw1_m1_nd_img3_schur_contraction.py",
+            "status": "added",
+            "additions": 224,
+            "deletions": 0,
+            "changes": 224,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "80 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-m1-nd-salvage-phase-diagram",
@@ -13101,20 +13924,206 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-m1-nd-salvage-phase-diagram",
+        "status": "diverged",
+        "ahead_by": 20,
+        "behind_by": 545,
+        "total_commits": 20,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "cf3d39a2e7787bc1c5b938390b6cdeec7943b0c2",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/cf3d39a2e7787bc1c5b938390b6cdeec7943b0c2",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/cf3d39a2e7787bc1c5b938390b6cdeec7943b0c2"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/sw1-m1-nd-salvage-phase-diagram.yml",
+            "status": "added",
+            "additions": 63,
+            "deletions": 0,
+            "changes": 63,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_M1_ND_SALVAGE_A0_PHASE_DIAGRAM_FIREWALL.md",
+            "status": "added",
+            "additions": 468,
+            "deletions": 0,
+            "changes": 468,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_M1_ND_SALVAGE_A1_A2_ANALYTIC_HANDOFF_CANDIDATE.md",
+            "status": "added",
+            "additions": 311,
+            "deletions": 0,
+            "changes": 311,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_M1_ND_SALVAGE_A1_A2_REVIEW_PACKET.md",
+            "status": "added",
+            "additions": 182,
+            "deletions": 0,
+            "changes": 182,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_M1_ND_SALVAGE_A1_A2_UNIFORM_BLIND_WEDGE_CANDIDATE.md",
+            "status": "added",
+            "additions": 432,
+            "deletions": 0,
+            "changes": 432,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_salvage_a0_counting_firewall.py",
+            "status": "added",
+            "additions": 56,
+            "deletions": 0,
+            "changes": 56,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_salvage_a1_a2_uniform_blind_wedge.py",
+            "status": "added",
+            "additions": 312,
+            "deletions": 0,
+            "changes": 312,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_salvage_direct_complement_crosscheck.py",
+            "status": "added",
+            "additions": 176,
+            "deletions": 0,
+            "changes": 176,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_m1_nd_salvage_uniform_raw_word_graph.py",
+            "status": "added",
+            "additions": 237,
+            "deletions": 0,
+            "changes": 237,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/probe_sw1_m1_nd_salvage_phase_diagram.py",
+            "status": "added",
+            "additions": 199,
+            "deletions": 0,
+            "changes": 199,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "20 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/terminal-191d-schur-diagnostic-2026-09-20",
       "head_sha": "bfb267f7fc7aa6ec523441cbd56f6c2bed93bda2",
       "pr_links": [],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/terminal-191d-schur-diagnostic-2026-09-20",
+        "status": "diverged",
+        "ahead_by": 15,
+        "behind_by": 93,
+        "total_commits": 15,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "f1fa23f7e1b5de407f4179986cdfe76d2024812f",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/f1fa23f7e1b5de407f4179986cdfe76d2024812f",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/f1fa23f7e1b5de407f4179986cdfe76d2024812f"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/terminal-191d-schur-diagnostic.yml",
+            "status": "added",
+            "additions": 171,
+            "deletions": 0,
+            "changes": 171,
+            "previous_filename": null
+          },
+          {
+            "filename": "research/x-c1/terminal-191d-defect-schur-a1-2026-09-20/META.yaml",
+            "status": "added",
+            "additions": 29,
+            "deletions": 0,
+            "changes": 29,
+            "previous_filename": null
+          },
+          {
+            "filename": "research/x-c1/terminal-191d-defect-schur-a1-2026-09-20/PROOF.md",
+            "status": "added",
+            "additions": 81,
+            "deletions": 0,
+            "changes": 81,
+            "previous_filename": null
+          },
+          {
+            "filename": "research/x-c1/terminal-191d-defect-schur-a1-2026-09-20/README.md",
+            "status": "added",
+            "additions": 15,
+            "deletions": 0,
+            "changes": 15,
+            "previous_filename": null
+          },
+          {
+            "filename": "research/x-c1/terminal-191d-defect-schur-a1-2026-09-20/check_terminal_hardening_bounds.py",
+            "status": "added",
+            "additions": 110,
+            "deletions": 0,
+            "changes": 110,
+            "previous_filename": null
+          },
+          {
+            "filename": "research/x-c1/terminal-191d-defect-schur-a1-2026-09-20/check_terminal_high_floor_ldl.c",
+            "status": "added",
+            "additions": 138,
+            "deletions": 0,
+            "changes": 138,
+            "previous_filename": null
+          },
+          {
+            "filename": "research/x-c1/terminal-191d-defect-schur-a1-2026-09-20/check_terminal_schur_diagnostic.py",
+            "status": "added",
+            "additions": 340,
+            "deletions": 0,
+            "changes": 340,
+            "previous_filename": null
+          },
+          {
+            "filename": "research/x-c1/terminal-191d-defect-schur-a1-2026-09-20/check_terminal_source_floor_ldl.c",
+            "status": "added",
+            "additions": 139,
+            "deletions": 0,
+            "changes": 139,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "15 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/x-c0-common-memory-2026-09-16",
@@ -13128,10 +14137,30 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/x-c0-common-memory-2026-09-16",
+        "status": "behind",
+        "ahead_by": 0,
+        "behind_by": 120,
+        "total_commits": 0,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "72208f2cefdd76bcb6656d931f4b19aea07b25e6",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/72208f2cefdd76bcb6656d931f4b19aea07b25e6",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/72208f2cefdd76bcb6656d931f4b19aea07b25e6"
+        },
+        "files": []
+      },
+      "category": "RESEARCH_MERGED_HISTORY",
+      "recommendation": "DELETE_CANDIDATE_AFTER_APPROVAL",
+      "reason": "No commits unique versus baseline main and no literal reference in current canonical navigation."
     },
     {
       "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
@@ -13145,10 +14174,30 @@
         }
       ],
       "canonical_navigation_reference": true,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
+        "status": "behind",
+        "ahead_by": 0,
+        "behind_by": 57,
+        "total_commits": 0,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "19e4630a7f0d4c8232f8ee81c4b483355ed2f505",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/19e4630a7f0d4c8232f8ee81c4b483355ed2f505",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/19e4630a7f0d4c8232f8ee81c4b483355ed2f505"
+        },
+        "files": []
+      },
+      "category": "RESEARCH_MERGED_HISTORY",
+      "recommendation": "KEEP_PROVENANCE",
+      "reason": "Contained in main but referenced by current canonical navigation."
     },
     {
       "branch": "research/x-c1-moment-edge-compensation-2026-09-16",
