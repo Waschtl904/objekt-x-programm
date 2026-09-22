@@ -1,6 +1,6 @@
 Exakter roher T/D-Transport in der ersten geschlossenen Horizontkammer
 
-Stand: 2026-09-22. Zusammen mit dem [O5–O7-Nachtrag](Erste-Kammer-O5-O7-Nachtrag-2026-09-22.md): **FIRST-CHAMBER RAW T/D COCYCLE, O1–O7 — AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN** für die ausdrücklich definierte C1a-Fortführung. Dies beschreibt den lokalen Arbeitsbeweis, keine Änderung der kanonischen Registry.
+Stand: 2026-09-22. Zusammen mit dem [O5–O7-Nachtrag](FIRST_CHAMBER_O5_O7_ADDENDUM.md): **FIRST-CHAMBER RAW T/D COCYCLE, O1–O7 — AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN** für die ausdrücklich definierte C1a-Fortführung. Dies beschreibt den lokalen Arbeitsbeweis, keine Änderung der kanonischen Registry.
 
 ## Ergebnis und Geltungsbereich
 
@@ -317,7 +317,7 @@ Die hier verwendete Differenz der skalaren Gramsymbole ist keine signierte Opera
 
 ## 8. Gemeinsamer Ergebnisscope und offene Folgeaufgaben
 
-Dieses Dokument und der [O5–O7-Nachtrag](Erste-Kammer-O5-O7-Nachtrag-2026-09-22.md) liefern gemeinsam das rohe erste Kammerpaket O1–O7 für die hier ausdrücklich deklarierte C1a-Fortführung auf 1≤A≤B≤C≤A_8. Dazu gehören jetzt R-Intertwining auf den richtigen abgeschlossenen Trägern und Formnaturality auf F_A. Der lokale mathematische Status ist **AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN**. Ein vollständiges unbeschränktes TERMINAL-HORIZON-C1-COCYCLE wird damit nicht geschlossen; die weitergehenden Anforderungen beim Eintritt neuer Kanäle bleiben getrennt.
+Dieses Dokument und der [O5–O7-Nachtrag](FIRST_CHAMBER_O5_O7_ADDENDUM.md) liefern gemeinsam das rohe erste Kammerpaket O1–O7 für die hier ausdrücklich deklarierte C1a-Fortführung auf 1≤A≤B≤C≤A_8. Dazu gehören jetzt R-Intertwining auf den richtigen abgeschlossenen Trägern und Formnaturality auf F_A. Der lokale mathematische Status ist **AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN**. Ein vollständiges unbeschränktes TERMINAL-HORIZON-C1-COCYCLE wird damit nicht geschlossen; die weitergehenden Anforderungen beim Eintritt neuer Kanäle bleiben getrennt.
 
 Unbehandelt bleiben ein gemeinsames V, signierte Operatorkongruenz, neue terminale Positivität, korrigierte positive Transporte, Wall-Crossing rechts von A_8, wachsende Profile und kofinale/global fensterunabhängige Readouts. Die Schranke ||R_A||≤sqrt(90) beweist keine Kontraktion. Auch P11-Fixed-Pair bleibt eine getrennte Aussage.
 
