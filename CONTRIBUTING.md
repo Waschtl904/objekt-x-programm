@@ -23,6 +23,28 @@ wird. Änderungen dieser Governance und anderer Prüfregeln zählen zur
 Infrastruktur. Bei unklarer Auswirkung wird vor einer Erleichterung der Prüfung
 der betroffene Claim oder Prüfpfad geklärt.
 
+## Prüfbedarf vor dem Lauf festlegen
+
+Vor Beginn eines Abnahmelaufs wird festgehalten, welche Checks für die
+betroffene Änderung **verpflichtend** sind und welche nur als zusätzlicher
+Audit dienen. Ein nachträglich fehlgeschlagener Pflichtcheck wird nicht
+rückwirkend zum optionalen Audit erklärt. Ein konkreter mathematischer
+Zertifikatsfehler wird unabhängig vom Namen des Checks untersucht.
+
+Ein technischer Timeout oder Runner-Abbruch ist zunächst eine technische
+Diagnose, kein mathematischer Gegenbefund. Ein identischer Lauf wird nur dann
+wiederholt, wenn dadurch realistisch neue Information zu erwarten ist; bei
+reproduziertem Timeout wird stattdessen Ursache, Laufzeitgrenze oder
+CI-Routing korrigiert.
+
+## Zuständigkeit pro Branch
+
+Für jeden aktiven Branch gibt es eine federführende Sitzung bzw. einen
+federführenden Arbeitsstrang. Andere Sitzungen dürfen prüfen, kommentieren und
+Übergaben vorbereiten, verändern denselben Branch aber nicht parallel ohne
+ausdrückliche Koordination. Das verhindert konkurrierende Registry-Edits,
+widersprüchliche Fixes und unnötige CI-Neustarts.
+
 ## Ein Abnahmeablauf pro PR
 
 1. Scope und Änderungsklassen festhalten. Den betroffenen Diff und die dafür
@@ -34,16 +56,25 @@ der betroffene Claim oder Prüfpfad geklärt.
    übersprungen werden; vorgeschaltete Klassifikation und Abschluss-Gate
    müssen die gewählte Route bestätigen. Erwartete Checks dürfen nicht fehlen.
 3. Unmittelbar vor dem Merge Head, Base, aktuellen Main-Stand, Mergeability
-   und geltende GitHub-Anforderungen abgleichen. Neue Commits erfordern die
-   Prüfung ihrer tatsächlichen Auswirkungen; frühere CI-Ergebnisse gelten
-   weiterhin nur für ihren ursprünglichen Commit. Ein veränderter Main-Stand
-   wird auf Integrationsfolgen geprüft, ohne automatisch alte Mathematik
-   erneut vollständig zu auditieren.
+   und geltende GitHub-Anforderungen abgleichen. Neue Commits erfordern nur
+   die Prüfung ihrer **neuen tatsächlichen Auswirkungen**; unveränderte
+   Beweisblöcke werden nicht allein wegen eines späteren Dokumentations- oder
+   Infrastrukturcommits erneut vollständig auditiert. Frühere CI-Ergebnisse
+   bleiben an ihren ursprünglichen Commit gebunden, und dokumentierte
+   Beweisprüfungen behalten ihre eigenen Beweisanker, solange Voraussetzungen
+   und Abhängigkeiten unverändert bleiben. Ein veränderter Main-Stand wird auf
+   Integrationsfolgen geprüft, ohne daraus automatisch einen Mathematik-Replay
+   abzuleiten.
 4. Innerhalb einer bereits erteilten ausdrücklichen oder bedingten
    Mergefreigabe handeln. Ist deren Scope unverändert und sind ihre Bedingungen
    erfüllt, ist keine zweite identische Freigabe nötig. Eine Freigabe für einen
-   PR gilt nicht automatisch für weitere PRs. Vorbereitung, Veröffentlichung
-   eines Entwurfs und grüne CI erteilen selbst keine Mergefreigabe.
+   PR gilt nicht automatisch für weitere PRs. Eine eng begrenzte
+   **Routinefreigabe** für wiederkehrende reine Sprach-, Link- oder
+   Darstellungsänderungen darf nur gelten, wenn sie zuvor ausdrücklich mit
+   Scope und Grenzen vereinbart wurde; sie darf niemals neue Claims,
+   Statuspromotionen oder Infrastrukturänderungen umfassen. Vorbereitung,
+   Veröffentlichung eines Entwurfs und grüne CI erteilen selbst keine
+   Mergefreigabe.
 5. Nach dem Merge den tatsächlichen Integrationscommit und die anwendbare
    Integrations-CI bestätigen. Bei neuen Fehlern die Ursache untersuchen;
    identische Timeout-Läufe nicht ohne technischen Grund wiederholen.
@@ -51,6 +82,12 @@ der betroffene Claim oder Prüfpfad geklärt.
 Änderungen werden grundsätzlich über Branch und PR integriert. Direkte
 Main-Änderungen und Branchlöschungen benötigen einen dafür passenden Auftrag;
 ein Mergeauftrag umfasst keine pauschale Bereinigung historischer Branches.
+
+Für normale Änderungen genügt eine kurze PR-Beschreibung mit **Änderung,
+Prüfung und offenen Punkten**. Pro Forschungsfront soll möglichst nur ein
+aktiver Integrations-PR geführt werden. Überholte PRs werden nach dokumentiertem
+Nachfolger bzw. gesicherter Provenienz geschlossen; Branchlöschungen bleiben
+davon getrennt.
 
 ## Wissenschaftliche Bindungen erhalten
 
