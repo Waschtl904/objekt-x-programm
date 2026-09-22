@@ -2,9 +2,11 @@
 
 2026-09-21. OPEN / EXTERNAL_REVIEW_OPEN.
 
-This package fixes the type-correct interface for the next C1 phase. It is not
-a theorem and does not promote positivity beyond the already proved terminal
-horizon 1.
+This package fixes the type-correct interface for the next C1 phase and now
+contains one proved local subtheorem: FIRST-CHAMBER RAW T/D COCYCLE O1–O7 on
+(1\le A\le B\le C\le \frac12\log8), with status
+AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN. It does not promote positivity beyond
+the already proved terminal horizon 1.
 
 ## 1. Inherited input and firewall
 
@@ -153,10 +155,11 @@ has the unchanged terminal channel family
 At A=A_8 the q=8 channel is still absent.
 
 Within this closed chamber the raw spectral formulas have the same finite
-Prime family. This makes literal-inclusion candidates for M^T and M^D
-plausible, but nesting, quotient compatibility, boundedness, and the two
-cocycle laws still have to be proved. No terminal positivity for A>1 is
-included in the chamber theorem interface.
+Prime family. The companion proofs `FIRST_CHAMBER_RAW_TD_O1_O4.md` and
+`FIRST_CHAMBER_O5_O7_ADDENDUM.md` establish the literal-inclusion transports,
+quotient compatibility, boundedness, both cocycles, bounded defect maps,
+R-intertwining and source-form naturality throughout this closed chamber.
+No terminal positivity for A>1 is included.
 
 ## 6. X4-Q8-WALL-CROSSING
 
@@ -240,9 +243,8 @@ explicit candidate class and proof.
 ## 9. Scope firewall
 
 This package establishes types and proof obligations only. It does not prove:
-- terminal-horizon C1 compatibility;
+- unbounded terminal-horizon C1 compatibility;
 - positivity for any A>1;
-- the first chamber theorem;
 - q=8 wall crossing;
 - compatible positive corrections across terminals;
 - a cofinal C1 system;
