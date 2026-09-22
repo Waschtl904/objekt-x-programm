@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "POST-UNIT-Q8-HORIZON-INTERFACE",
+  "date": "2026-09-21",
+  "kind": "DIAGNOSTIC",
+  "strategic": false,
+  "local_only": true,
+  "mathematical_status": "OPEN",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Type-correct raw terminal-horizon T/D transport interface from terminal 1 through the closed pre-q8 chamber and the subsequent q=8 wall; no positivity for A>1.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "No no-go. The package specifies proof obligations for two raw transport families, quotient descent, boundedness, cocycles, and later separate positive-correction gates.",
+  "depends_on": [
+    "C1a-COUPLED-SPECTRAL-MEDIATOR",
+    "C1b-ZERO-EXTENSION-INTERTWINING",
+    "C1-COMPACT-DEFECT-IDENTITY",
+    "C1d-COMPATIBLE-POSITIVE-COMPLETION",
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "closes": [],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Existence of the raw terminal-horizon T/D cocycle beyond the already proved fixed terminal 1.",
+    "Positivity of the Weil form for any terminal horizon A>1.",
+    "Equality of the T- and D-transport families.",
+    "Intertwining of local defect square roots or existence of corrected-space transitions.",
+    "A new 191D reduction without a separate tail and codimension proof.",
+    "A positive independent-channel decomposition of q=8.",
+    "A cofinal C1 geometry, global Object X, global Weil positivity, or RH."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/post-unit-q8-interface-2026-09-21/PROOF.md",
+    "sha256": "31e8c10e97c75f8293fdd447a85d1b3fc87bcf3413ed8d3c3f95c338a38d5fc0"
+  }
+}
