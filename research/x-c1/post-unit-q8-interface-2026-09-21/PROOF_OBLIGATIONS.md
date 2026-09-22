@@ -1,8 +1,13 @@
 # PROOF_OBLIGATIONS - post-unit terminal cocycle
 
-Status: **OPEN**.
+Status: **O1–O7 FIRST CLOSED CHAMBER AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN; O8–O10 OPEN**.
 
-## O1 - Type the two raw carriers
+Canonical local proofs:
+- `FIRST_CHAMBER_RAW_TD_O1_O4.md`
+- `FIRST_CHAMBER_O5_O7_ADDENDUM.md`
+
+
+## O1 - Type the two raw carriers — CLOSED IN FIRST CHAMBER
 
 For every new terminal A, define the closed carriers
 \[
@@ -15,7 +20,7 @@ D_A:\mathcal F_A\to\mathcal H_A^D.
 \]
 Prove all domain and completion statements used later.
 
-## O2 - T-transport
+## O2 - T-transport — CLOSED IN FIRST CHAMBER
 
 On the source-linked image prove that
 \[
@@ -33,7 +38,7 @@ with
 \boxed{M^T_{A,B}T_A=T_BJ_{A,B}.}
 \]
 
-## O3 - D-transport
+## O3 - D-transport — CLOSED IN FIRST CHAMBER
 
 Independently prove that
 \[
@@ -50,7 +55,7 @@ with
 
 Do not identify M^D with M^T without a theorem.
 
-## O4 - Raw cocycles
+## O4 - Raw cocycles — CLOSED IN FIRST CHAMBER
 
 For all admissible A<B<C prove
 \[
@@ -66,7 +71,7 @@ M^D_{B,C}M^D_{A,B}=M^D_{A,C},
 These are the minimum closure conditions for
 TERMINAL-HORIZON-C1-COCYCLE.
 
-## O5 - Defect intertwining
+## O5 - Defect intertwining — CLOSED IN FIRST CHAMBER
 
 If D_A=R_AT_A and D_B=R_BT_B are established with bounded defect maps,
 prove on the correct carriers
@@ -77,7 +82,7 @@ prove on the correct carriers
 A source-core equality is not enough; density/domain and extension must be
 checked.
 
-## O6 - Source-form naturality
+## O6 - Source-form naturality — CLOSED IN FIRST CHAMBER
 
 Prove
 \[
@@ -89,7 +94,7 @@ the Gamma term.
 At a wall, explicitly prove why a newly activated translation contributes
 zero on the old source range where that assertion is used.
 
-## O7 - First closed chamber
+## O7 - First closed chamber — AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
 
 For
 \[
