@@ -8,7 +8,7 @@
   "mathematical_status": "OPEN",
   "review_status": "EXTERNAL_REVIEW_OPEN",
   "integration_status": "RESEARCH_BRANCH_UNMERGED",
-  "scope": "Type-correct raw terminal-horizon T/D transport interface from terminal 1 through the closed pre-q8 chamber and the subsequent q=8 wall; no positivity for A>1.",
+  "scope": "Type-correct raw terminal-horizon T/D transport interface. O1-O7 are author-derived on the explicit first closed chamber 1<=A<=B<=C<=log(8)/2; O8+ and q=8 wall remain open; no positivity for A>1.",
   "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
   "negative_claim_boundary": "No no-go. The package specifies proof obligations for two raw transport families, quotient descent, boundedness, cocycles, and later separate positive-correction gates.",
   "depends_on": [
@@ -22,7 +22,7 @@
   "opens": [],
   "supersedes": [],
   "does_not_claim": [
-    "Existence of the raw terminal-horizon T/D cocycle beyond the already proved fixed terminal 1.",
+    "Existence of an unbounded/cofinal raw terminal-horizon T/D cocycle beyond the proved first closed chamber.",
     "Positivity of the Weil form for any terminal horizon A>1.",
     "Equality of the T- and D-transport families.",
     "Intertwining of local defect square roots or existence of corrected-space transitions.",
