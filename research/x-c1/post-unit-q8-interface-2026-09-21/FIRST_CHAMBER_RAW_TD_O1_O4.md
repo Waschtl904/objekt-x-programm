@@ -1,6 +1,6 @@
 Exakter roher T/D-Transport in der ersten geschlossenen Horizontkammer
 
-Stand: 2026-09-22. Zusammen mit dem [O5–O7-Nachtrag](FIRST_CHAMBER_O5_O7_ADDENDUM.md): **FIRST-CHAMBER RAW T/D COCYCLE, O1–O7 — AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN** für die ausdrücklich definierte C1a-Fortführung. Dies beschreibt den lokalen Arbeitsbeweis, keine Änderung der kanonischen Registry.
+Stand: 2026-09-22. Zusammen mit dem [O5–O7-Nachtrag](FIRST_CHAMBER_O5_O7_ADDENDUM.md) (SHA-256 `62e83371a9484d805222854cbfc22e5fca0bd4c0a976242240033445091a0976`): **FIRST-CHAMBER RAW T/D COCYCLE, O1–O7 — AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN** für die ausdrücklich definierte C1a-Fortführung. Dies beschreibt den lokalen Arbeitsbeweis, keine Änderung der kanonischen Registry.
 
 ## Ergebnis und Geltungsbereich
 
