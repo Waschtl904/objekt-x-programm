@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7",
+  "date": "2026-09-22",
+  "kind": "THEOREM",
+  "strategic": false,
+  "local_only": true,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Explicit continuation of the C1a multiplier family only; 1 <= A <= B <= C <= (log 8)/2. O1-O7 of the first closed chamber, including separate T/D isometric transports, both cocycles, bounded defect transfers and source-form naturality.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "No no-go. The theorem is a scoped raw first-chamber transport result and does not establish contraction or positivity beyond terminal 1.",
+  "depends_on": [
+    "C0-DIRECTED-FORM-SYSTEM",
+    "C1a-COUPLED-SPECTRAL-MEDIATOR"
+  ],
+  "closes": [],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "||R_A|| <= 1 or positivity of I-R_A^*R_A for any new terminal A>1.",
+    "Positive corrected transports or square-root intertwining.",
+    "The unrestricted TERMINAL-HORIZON-C1-COCYCLE.",
+    "The q=8 wall crossing or any post-wall terminal theorem.",
+    "A cofinal C1 geometry, global Object X, global Weil positivity, or RH."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/first-chamber-raw-td-cocycle-o1-o7-2026-09-22/PROOF.md",
+    "sha256": "749191930a9d0e210127075eafe79890a59a5013a3a1eae6171f733a4f168d15"
+  }
+}
