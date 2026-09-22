@@ -11,9 +11,20 @@ Stand: 2026-09-21.
 - Integrationsstatus: `RESEARCH_BRANCH_UNMERGED`
 - Typ: Interface-/Obligationspaket, kein neuer Satz
 - Positivitaet fuer Terminalhorizonte >1: nicht behauptet
-- C1-Horizont-Cocycle: `OPEN`
-- erste geschlossene Kammer bis log(8)/2: `OPEN`
+- unbeschraenkter C1-Horizont-Cocycle: `OPEN`
+- erste geschlossene Kammer bis log(8)/2: `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN` (O1–O7)
 - X4-Q8-Wall-Crossing: `OPEN`
+
+## Geschlossener lokaler Untergate O1–O7
+
+Die Dateien `FIRST_CHAMBER_RAW_TD_O1_O4.md` und
+`FIRST_CHAMBER_O5_O7_ADDENDUM.md` beweisen fuer
+(1\le A\le B\le C\le \tfrac12\log8) die beiden rohen
+Transportfamilien, beide Cocycle-Gesetze, die Defektoperatoren mit
+(|R_A|\le\sqrt{90}), das typkorrekte R-Intertwining und die
+Formnaturality auf den vollstaendigen Quellen.
+
+Dies beweist keine neue Terminalpositivitaet. O8 bleibt offen.
 
 ## Typisierung des naechsten Satzes
 
