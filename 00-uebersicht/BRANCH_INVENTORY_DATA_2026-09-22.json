@@ -11831,10 +11831,47 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-2tp",
+        "status": "diverged",
+        "ahead_by": 7,
+        "behind_by": 588,
+        "total_commits": 7,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "152150284c31af50dedb9e2ee4ac820d4692776c",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/152150284c31af50dedb9e2ee4ac820d4692776c",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/152150284c31af50dedb9e2ee4ac820d4692776c"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_2TP_CANDIDATE.md",
+            "status": "added",
+            "additions": 566,
+            "deletions": 0,
+            "changes": 566,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_2tp_ledger.py",
+            "status": "added",
+            "additions": 285,
+            "deletions": 0,
+            "changes": 285,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "7 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a-fold-reconciliation",
@@ -11848,10 +11885,55 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a-fold-reconciliation",
+        "status": "diverged",
+        "ahead_by": 7,
+        "behind_by": 556,
+        "total_commits": 7,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "2b7c54edada3e00f4bc61e1ce67b30c0e05ba0f3",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/2b7c54edada3e00f4bc61e1ce67b30c0e05ba0f3",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/2b7c54edada3e00f4bc61e1ce67b30c0e05ba0f3"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/sw1-a-fold-cert.yml",
+            "status": "added",
+            "additions": 41,
+            "deletions": 0,
+            "changes": 41,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_A_FOLD_RECONCILIATION_AUDIT.md",
+            "status": "added",
+            "additions": 574,
+            "deletions": 0,
+            "changes": 574,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a_fold.py",
+            "status": "added",
+            "additions": 112,
+            "deletions": 0,
+            "changes": 112,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "7 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a0-coverage",
@@ -11865,10 +11947,47 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a0-coverage",
+        "status": "diverged",
+        "ahead_by": 57,
+        "behind_by": 578,
+        "total_commits": 57,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "3033a5062cfe799772b0faa564d078d5d6792337",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/3033a5062cfe799772b0faa564d078d5d6792337",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/3033a5062cfe799772b0faa564d078d5d6792337"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_A0_COVERAGE_CANDIDATE.md",
+            "status": "added",
+            "additions": 495,
+            "deletions": 0,
+            "changes": 495,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a0_coverage.py",
+            "status": "added",
+            "additions": 151,
+            "deletions": 0,
+            "changes": 151,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "57 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a1-finite-cell",
@@ -11882,10 +12001,47 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a1-finite-cell",
+        "status": "diverged",
+        "ahead_by": 60,
+        "behind_by": 577,
+        "total_commits": 60,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "db6251a2e9dd3dfa0d665c725b26c4aabe2de73c",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/db6251a2e9dd3dfa0d665c725b26c4aabe2de73c",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/db6251a2e9dd3dfa0d665c725b26c4aabe2de73c"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_A1_FINITE_CELL_RAW_OPERATOR_CANDIDATE.md",
+            "status": "added",
+            "additions": 692,
+            "deletions": 0,
+            "changes": 692,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a1_raw_archetypes.py",
+            "status": "added",
+            "additions": 173,
+            "deletions": 0,
+            "changes": 173,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "60 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a10-crossgram-cocycle",
@@ -11899,10 +12055,263 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a10-crossgram-cocycle",
+        "status": "diverged",
+        "ahead_by": 56,
+        "behind_by": 560,
+        "total_commits": 56,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "19da654f537868cd72757d2785071f8cf3f36c1b",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/19da654f537868cd72757d2785071f8cf3f36c1b",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/19da654f537868cd72757d2785071f8cf3f36c1b"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/sw1-a10-m1-full-cert.yml",
+            "status": "added",
+            "additions": 52,
+            "deletions": 0,
+            "changes": 52,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_A10_C1B2A_TRANSFER_REVIEW_PACKET.md",
+            "status": "added",
+            "additions": 569,
+            "deletions": 0,
+            "changes": 569,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_A10_C1C1_AN_REVIEW_PACKET.md",
+            "status": "added",
+            "additions": 324,
+            "deletions": 0,
+            "changes": 324,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_A10_CROSSGRAM_COCYCLE_CANDIDATE.md",
+            "status": "added",
+            "additions": 6966,
+            "deletions": 0,
+            "changes": 6966,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c1_protofiber_closure.py",
+            "status": "added",
+            "additions": 132,
+            "deletions": 0,
+            "changes": 132,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c1b1_collision_strata.py",
+            "status": "added",
+            "additions": 257,
+            "deletions": 0,
+            "changes": 257,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c1b2a_affine_chirotope.py",
+            "status": "added",
+            "additions": 122,
+            "deletions": 0,
+            "changes": 122,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c1b2a_arrangement.py",
+            "status": "added",
+            "additions": 127,
+            "deletions": 0,
+            "changes": 127,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c1b2a_chirotope.py",
+            "status": "added",
+            "additions": 119,
+            "deletions": 0,
+            "changes": 119,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c1b2b_chamber_orders.py",
+            "status": "added",
+            "additions": 179,
+            "deletions": 0,
+            "changes": 179,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c1b2c_collision_classes.py",
+            "status": "added",
+            "additions": 333,
+            "deletions": 0,
+            "changes": 333,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c1b_boundary_alphabet.py",
+            "status": "added",
+            "additions": 134,
+            "deletions": 0,
+            "changes": 134,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c1c0_formal_ambient_cover.py",
+            "status": "added",
+            "additions": 102,
+            "deletions": 0,
+            "changes": 102,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c1c1_multisheet_cover.py",
+            "status": "added",
+            "additions": 69,
+            "deletions": 0,
+            "changes": 69,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c1c1_parity_fold_normalization.py",
+            "status": "added",
+            "additions": 51,
+            "deletions": 0,
+            "changes": 51,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c2_free0_physical_closure.py",
+            "status": "added",
+            "additions": 94,
+            "deletions": 0,
+            "changes": 94,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c2_gate0_symmetric_boundary.py",
+            "status": "added",
+            "additions": 272,
+            "deletions": 0,
+            "changes": 272,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c2_gate0a_sheet_multiplicity.py",
+            "status": "added",
+            "additions": 84,
+            "deletions": 0,
+            "changes": 84,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c2_gate0r_operator_boundary.py",
+            "status": "added",
+            "additions": 209,
+            "deletions": 0,
+            "changes": 209,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c2_gate1_collision_hyperplanes.py",
+            "status": "added",
+            "additions": 189,
+            "deletions": 0,
+            "changes": 189,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c2_gate1r_96_collision_hyperplanes.py",
+            "status": "added",
+            "additions": 227,
+            "deletions": 0,
+            "changes": 227,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c2_hub0_physical_completeness.py",
+            "status": "added",
+            "additions": 88,
+            "deletions": 0,
+            "changes": 88,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c2_hub0_symmetric_cover.py",
+            "status": "added",
+            "additions": 110,
+            "deletions": 0,
+            "changes": 110,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c2_m0_free_lift.py",
+            "status": "added",
+            "additions": 200,
+            "deletions": 0,
+            "changes": 200,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c2_m0_hub_distribution.py",
+            "status": "added",
+            "additions": 103,
+            "deletions": 0,
+            "changes": 103,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c2_m0_hub_lift.py",
+            "status": "added",
+            "additions": 142,
+            "deletions": 0,
+            "changes": 142,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c2_m0_hub_species.py",
+            "status": "added",
+            "additions": 109,
+            "deletions": 0,
+            "changes": 109,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c2_m1_full_b96.py",
+            "status": "added",
+            "additions": 399,
+            "deletions": 0,
+            "changes": 399,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_c2_m1_raw_additive.py",
+            "status": "added",
+            "additions": 271,
+            "deletions": 0,
+            "changes": 271,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "56 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a10-finite-crossgram",
@@ -11916,10 +12325,111 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a10-finite-crossgram",
+        "status": "diverged",
+        "ahead_by": 124,
+        "behind_by": 563,
+        "total_commits": 124,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "70be6437332f094746962769f5ae00a3f5ac40ef",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/70be6437332f094746962769f5ae00a3f5ac40ef",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/70be6437332f094746962769f5ae00a3f5ac40ef"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_A10_FINITE_CROSSGRAM_FIBER_CANDIDATE.md",
+            "status": "added",
+            "additions": 1273,
+            "deletions": 0,
+            "changes": 1273,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_A10_H3_INF_REVIEW_PACKET.md",
+            "status": "added",
+            "additions": 142,
+            "deletions": 0,
+            "changes": 142,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_DELTA_OVER_L_IRRATIONALITY_LEMMA.md",
+            "status": "added",
+            "additions": 216,
+            "deletions": 0,
+            "changes": 216,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_complete_hub_incidence.py",
+            "status": "added",
+            "additions": 242,
+            "deletions": 0,
+            "changes": 242,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_h2_compact_ledger.py",
+            "status": "added",
+            "additions": 58,
+            "deletions": 0,
+            "changes": 58,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_h3_independent_review.py",
+            "status": "added",
+            "additions": 156,
+            "deletions": 0,
+            "changes": 156,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_h3_rotation_cover.py",
+            "status": "added",
+            "additions": 121,
+            "deletions": 0,
+            "changes": 121,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_hub_bridge.py",
+            "status": "added",
+            "additions": 107,
+            "deletions": 0,
+            "changes": 107,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a10_hub_phase_algebra.py",
+            "status": "added",
+            "additions": 100,
+            "deletions": 0,
+            "changes": 100,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_delta_over_L_irrationality.py",
+            "status": "added",
+            "additions": 51,
+            "deletions": 0,
+            "changes": 51,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "124 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a2-a10-reconciliation",
@@ -11933,10 +12443,55 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a2-a10-reconciliation",
+        "status": "diverged",
+        "ahead_by": 5,
+        "behind_by": 554,
+        "total_commits": 5,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "cf1cee4b9befc2b9c97b06cb58504485c8ad5e71",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/cf1cee4b9befc2b9c97b06cb58504485c8ad5e71",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/cf1cee4b9befc2b9c97b06cb58504485c8ad5e71"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/sw1-a2-a10-reconciliation-cert.yml",
+            "status": "added",
+            "additions": 41,
+            "deletions": 0,
+            "changes": 41,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_R32_SW1_A2_A10_RECONCILIATION_AUDIT.md",
+            "status": "added",
+            "additions": 925,
+            "deletions": 0,
+            "changes": 925,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a2_a10_kernel_bijections.py",
+            "status": "added",
+            "additions": 173,
+            "deletions": 0,
+            "changes": 173,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "5 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a2-annulus-projection",
@@ -11950,10 +12505,39 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a2-annulus-projection",
+        "status": "diverged",
+        "ahead_by": 64,
+        "behind_by": 576,
+        "total_commits": 64,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "1aa6942f0b5acbcd9cc9f898cf3f8102db00f956",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/1aa6942f0b5acbcd9cc9f898cf3f8102db00f956",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/1aa6942f0b5acbcd9cc9f898cf3f8102db00f956"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_A2_ANNULUS_PROJECTION_CANDIDATE.md",
+            "status": "added",
+            "additions": 884,
+            "deletions": 0,
+            "changes": 884,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "64 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a2-certificate",
@@ -11967,10 +12551,47 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a2-certificate",
+        "status": "diverged",
+        "ahead_by": 2,
+        "behind_by": 567,
+        "total_commits": 2,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "ef01735788dbc28d0aa0c8528a644c43cd32c934",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/ef01735788dbc28d0aa0c8528a644c43cd32c934",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/ef01735788dbc28d0aa0c8528a644c43cd32c934"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_A2_ANNULUS_PROJECTION_CANDIDATE.md",
+            "status": "modified",
+            "additions": 104,
+            "deletions": 1,
+            "changes": 105,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a2_annulus_projection.py",
+            "status": "added",
+            "additions": 134,
+            "deletions": 0,
+            "changes": 134,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "2 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a3-certificate",
@@ -11984,10 +12605,47 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a3-certificate",
+        "status": "diverged",
+        "ahead_by": 5,
+        "behind_by": 566,
+        "total_commits": 5,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "1b2fc769b00d5b0dfe3c4bd9b4e4ec53617158c9",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/1b2fc769b00d5b0dfe3c4bd9b4e4ec53617158c9",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/1b2fc769b00d5b0dfe3c4bd9b4e4ec53617158c9"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_A3_FREE_COORDINATE_GRAM_CANDIDATE.md",
+            "status": "modified",
+            "additions": 98,
+            "deletions": 1,
+            "changes": 99,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a3_free_gram.py",
+            "status": "added",
+            "additions": 152,
+            "deletions": 0,
+            "changes": 152,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "5 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a3-free-coordinate-gram",
@@ -12001,10 +12659,39 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a3-free-coordinate-gram",
+        "status": "diverged",
+        "ahead_by": 65,
+        "behind_by": 575,
+        "total_commits": 65,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "8e2d4eb7c5d78320e8ebc218c26c4fb1ae0e004d",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/8e2d4eb7c5d78320e8ebc218c26c4fb1ae0e004d",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/8e2d4eb7c5d78320e8ebc218c26c4fb1ae0e004d"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_A3_FREE_COORDINATE_GRAM_CANDIDATE.md",
+            "status": "added",
+            "additions": 466,
+            "deletions": 0,
+            "changes": 466,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "65 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a4-irrational-rotation-nogo",
@@ -12018,10 +12705,47 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a4-irrational-rotation-nogo",
+        "status": "diverged",
+        "ahead_by": 68,
+        "behind_by": 574,
+        "total_commits": 68,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "934c48a96ce52a4b9fd300a2d1ad7261112565dd",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/934c48a96ce52a4b9fd300a2d1ad7261112565dd",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/934c48a96ce52a4b9fd300a2d1ad7261112565dd"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_A4_IRRATIONAL_ROTATION_NOGO_CANDIDATE.md",
+            "status": "added",
+            "additions": 758,
+            "deletions": 0,
+            "changes": 758,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a4_irrational_rotation.py",
+            "status": "added",
+            "additions": 104,
+            "deletions": 0,
+            "changes": 104,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "68 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a5-two-sheet-transfer",
@@ -12035,10 +12759,47 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a5-two-sheet-transfer",
+        "status": "diverged",
+        "ahead_by": 72,
+        "behind_by": 573,
+        "total_commits": 72,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "637e63d23540bc4d7498fd5a7df30056be035eed",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/637e63d23540bc4d7498fd5a7df30056be035eed",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/637e63d23540bc4d7498fd5a7df30056be035eed"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_A5_TWO_SHEET_TRANSFER_CANDIDATE.md",
+            "status": "added",
+            "additions": 471,
+            "deletions": 0,
+            "changes": 471,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a5_two_sheet_transfer.py",
+            "status": "added",
+            "additions": 56,
+            "deletions": 0,
+            "changes": 56,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "72 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a6-rotation-hole",
@@ -12052,10 +12813,47 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a6-rotation-hole",
+        "status": "diverged",
+        "ahead_by": 75,
+        "behind_by": 572,
+        "total_commits": 75,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "99d853c211ec17e657ede78af791c6a600a875e5",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/99d853c211ec17e657ede78af791c6a600a875e5",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/99d853c211ec17e657ede78af791c6a600a875e5"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_A6_ROTATION_HOLE_CANDIDATE.md",
+            "status": "added",
+            "additions": 411,
+            "deletions": 0,
+            "changes": 411,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a6_rotation_hole.py",
+            "status": "added",
+            "additions": 50,
+            "deletions": 0,
+            "changes": 50,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "75 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a7-finite-state-cocycle",
@@ -12069,10 +12867,47 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "research/sw1-a7-finite-state-cocycle",
+        "status": "diverged",
+        "ahead_by": 79,
+        "behind_by": 571,
+        "total_commits": 79,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "f7bad5ad9945d9815251d027d694c5f4e4d0b564",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/f7bad5ad9945d9815251d027d694c5f4e4d0b564",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/f7bad5ad9945d9815251d027d694c5f4e4d0b564"
+        },
+        "files": [
+          {
+            "filename": "audits/P11_R32_SW1_A7_FINITE_STATE_COCYCLE_CANDIDATE.md",
+            "status": "added",
+            "additions": 493,
+            "deletions": 0,
+            "changes": 493,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/certify_sw1_a7_finite_state_cocycle.py",
+            "status": "added",
+            "additions": 87,
+            "deletions": 0,
+            "changes": 87,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "79 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "research/sw1-a8-lower-finite-components",
