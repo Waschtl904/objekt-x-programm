@@ -1,7 +1,7 @@
 {
   "generated": "2026-09-22",
   "baseline_main": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
-  "non_main_branch_count": 196,
+  "non_main_branch_count": 195,
   "prs_inspected": 152,
   "canonical_navigation_files_scanned": [
     "00-uebersicht/RESEARCH_STATE.yaml",
@@ -1424,61 +1424,6 @@
       "category": "UNIQUE_HISTORY",
       "recommendation": "REVIEW_UNIQUE",
       "reason": "1 unique commit(s); provenance/supersession review required."
-    },
-    {
-      "branch": "docs/branch-inventory-2026-09-22",
-      "head_sha": "f9d2f27396b3efe40e6d52fc828b14615f0c6a20",
-      "pr_links": [],
-      "canonical_navigation_reference": false,
-      "compare": {
-        "repository_full_name": "Waschtl904/objekt-x-programm",
-        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
-        "head": "docs/branch-inventory-2026-09-22",
-        "status": "ahead",
-        "ahead_by": 4,
-        "behind_by": 0,
-        "total_commits": 4,
-        "too_large": null,
-        "base_commit": {
-          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
-          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
-          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
-        },
-        "merge_base_commit": {
-          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
-          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
-          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
-        },
-        "files": [
-          {
-            "filename": "00-uebersicht/BRANCH_CONSOLIDATION_2026-09-22.md",
-            "status": "added",
-            "additions": 5,
-            "deletions": 0,
-            "changes": 5,
-            "previous_filename": null
-          },
-          {
-            "filename": "00-uebersicht/BRANCH_INVENTORY_2026-09-22.csv",
-            "status": "added",
-            "additions": 1,
-            "deletions": 0,
-            "changes": 1,
-            "previous_filename": null
-          },
-          {
-            "filename": "00-uebersicht/BRANCH_INVENTORY_DATA_2026-09-22.json",
-            "status": "added",
-            "additions": 3420,
-            "deletions": 0,
-            "changes": 3420,
-            "previous_filename": null
-          }
-        ]
-      },
-      "category": "UNIQUE_HISTORY",
-      "recommendation": "REVIEW_UNIQUE",
-      "reason": "4 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "docs/current-front-navigation",
@@ -15263,5 +15208,6 @@
       "recommendation": "DELETE_CANDIDATE_AFTER_APPROVAL",
       "reason": "No commits unique versus baseline main and no literal reference in current canonical navigation."
     }
-  ]
+  ],
+  "note": "Snapshot excludes main and the temporary inventory branch itself."
 }
