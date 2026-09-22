@@ -9753,7 +9753,7 @@
       "pr_links": [
         {
           "number": 151,
-          "state": "open",
+          "state": "closed",
           "merged_at": null,
           "title": "research(c1): close first-chamber raw T/D cocycle O1–O7"
         }
@@ -9853,9 +9853,9 @@
           }
         ]
       },
-      "category": "ACTIVE_PR",
-      "recommendation": "KEEP",
-      "reason": "Open PR #151."
+      "category": "RESEARCH_UNIQUE",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "Draft PR #151 closed as duplicate/superseded by merged #152 and #153; branch retains unique commits/provenance and requires explicit review before deletion."
     },
     {
       "branch": "research/np-common-jump-gram-2026-09-13",
