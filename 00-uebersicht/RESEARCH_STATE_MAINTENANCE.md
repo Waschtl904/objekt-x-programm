@@ -10,8 +10,9 @@ README- oder Linkkorrektur nicht zu einem mathematischen Re-Audit.
 
 ## Rollen strikt getrennt halten
 
-1. `published_baseline`: aktueller gepinnter gemergter Main-Stand. Nur
-   Integration.
+1. `published_baseline`: zuletzt ausdrücklich registrierter und gepinnter
+   gemergter Main-Stand. Nur Integration; nicht notwendigerweise identisch mit
+   dem aktuellen Git-Head.
 2. `verified_research_snapshot`: letzter tatsächlich mathematisch geprüfter
    vollständiger Research-Commit. Ein Merge, Dokumentationscommit oder CI-PASS
    hebt `verified_through` nicht automatisch an.
