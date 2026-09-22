@@ -1,6 +1,6 @@
 # THRESHOLD_LEDGER - post-unit C1 and the q=8 wall
 
-Status: **OPEN / interface only**. No positivity beyond terminal horizon 1.
+Status: **FIRST CLOSED CHAMBER O1–O7 AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN; O8+ OPEN**. No positivity beyond terminal horizon 1.
 
 ## Activation rule
 
