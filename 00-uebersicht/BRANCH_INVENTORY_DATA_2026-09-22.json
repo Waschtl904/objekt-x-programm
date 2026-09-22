@@ -2440,20 +2440,230 @@
       "head_sha": "27cb7fab980fd8d777b36cfd47554711efef4bbc",
       "pr_links": [],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "docs/readme-project-independence-2026-09-21",
+        "status": "diverged",
+        "ahead_by": 1,
+        "behind_by": 40,
+        "total_commits": 1,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "4b29aacc6eb75290586575b2870cc3b21587236c",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/4b29aacc6eb75290586575b2870cc3b21587236c",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/4b29aacc6eb75290586575b2870cc3b21587236c"
+        },
+        "files": [
+          {
+            "filename": "README.md",
+            "status": "modified",
+            "additions": 6,
+            "deletions": 4,
+            "changes": 10,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "UNIQUE_HISTORY",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "1 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "docs/research-state-registry-2026-09-20",
       "head_sha": "1ca26e1f059ca113bc2d794213b452aa21e399ab",
       "pr_links": [],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "docs/research-state-registry-2026-09-20",
+        "status": "diverged",
+        "ahead_by": 5,
+        "behind_by": 97,
+        "total_commits": 5,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "79988874cceeb01f17e0cda67485838c0b7c4f63",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/79988874cceeb01f17e0cda67485838c0b7c4f63",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/79988874cceeb01f17e0cda67485838c0b7c4f63"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/research-state-registry.yml",
+            "status": "added",
+            "additions": 43,
+            "deletions": 0,
+            "changes": 43,
+            "previous_filename": null
+          },
+          {
+            "filename": "00-uebersicht/ACTIVE_FRONT.yaml",
+            "status": "modified",
+            "additions": 7,
+            "deletions": 0,
+            "changes": 7,
+            "previous_filename": null
+          },
+          {
+            "filename": "00-uebersicht/ACTIVE_THEOREM_REGISTRY.md",
+            "status": "modified",
+            "additions": 9,
+            "deletions": 0,
+            "changes": 9,
+            "previous_filename": null
+          },
+          {
+            "filename": "00-uebersicht/AKTUELLER_STAND.md",
+            "status": "modified",
+            "additions": 9,
+            "deletions": 0,
+            "changes": 9,
+            "previous_filename": null
+          },
+          {
+            "filename": "00-uebersicht/CURRENT_STATE.md",
+            "status": "added",
+            "additions": 85,
+            "deletions": 0,
+            "changes": 85,
+            "previous_filename": null
+          },
+          {
+            "filename": "00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md",
+            "status": "modified",
+            "additions": 9,
+            "deletions": 0,
+            "changes": 9,
+            "previous_filename": null
+          },
+          {
+            "filename": "00-uebersicht/NEXT_GATES.md",
+            "status": "added",
+            "additions": 55,
+            "deletions": 0,
+            "changes": 55,
+            "previous_filename": null
+          },
+          {
+            "filename": "00-uebersicht/OBJEKT_X_ARCHITECTURE.md",
+            "status": "added",
+            "additions": 75,
+            "deletions": 0,
+            "changes": 75,
+            "previous_filename": null
+          },
+          {
+            "filename": "00-uebersicht/README.md",
+            "status": "modified",
+            "additions": 8,
+            "deletions": 0,
+            "changes": 8,
+            "previous_filename": null
+          },
+          {
+            "filename": "00-uebersicht/RESEARCH_STATE.yaml",
+            "status": "added",
+            "additions": 209,
+            "deletions": 0,
+            "changes": 209,
+            "previous_filename": null
+          },
+          {
+            "filename": "00-uebersicht/SURVIVOR_REGISTRY.md",
+            "status": "added",
+            "additions": 123,
+            "deletions": 0,
+            "changes": 123,
+            "previous_filename": null
+          },
+          {
+            "filename": "CURRENT-FRONT.md",
+            "status": "modified",
+            "additions": 9,
+            "deletions": 0,
+            "changes": 9,
+            "previous_filename": null
+          },
+          {
+            "filename": "RESEARCH_STATE_REGISTRY_BRANCH_STATUS.md",
+            "status": "added",
+            "additions": 14,
+            "deletions": 0,
+            "changes": 14,
+            "previous_filename": null
+          },
+          {
+            "filename": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/META.yaml",
+            "status": "added",
+            "additions": 31,
+            "deletions": 0,
+            "changes": 31,
+            "previous_filename": null
+          },
+          {
+            "filename": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/META.yaml",
+            "status": "added",
+            "additions": 38,
+            "deletions": 0,
+            "changes": 38,
+            "previous_filename": null
+          },
+          {
+            "filename": "schemas/research-package-meta.schema.json",
+            "status": "added",
+            "additions": 127,
+            "deletions": 0,
+            "changes": 127,
+            "previous_filename": null
+          },
+          {
+            "filename": "schemas/research-state.schema.json",
+            "status": "added",
+            "additions": 97,
+            "deletions": 0,
+            "changes": 97,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/generate_research_state.py",
+            "status": "added",
+            "additions": 134,
+            "deletions": 0,
+            "changes": 134,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/test_research_state_registry.py",
+            "status": "added",
+            "additions": 44,
+            "deletions": 0,
+            "changes": 44,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/validate_research_state.py",
+            "status": "added",
+            "additions": 148,
+            "deletions": 0,
+            "changes": 148,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "UNIQUE_HISTORY",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "5 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "docs/risk-based-governance-2026-09-21",
@@ -2467,10 +2677,30 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "docs/risk-based-governance-2026-09-21",
+        "status": "behind",
+        "ahead_by": 0,
+        "behind_by": 14,
+        "total_commits": 0,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "059a720131095730e3cbcd54e3a0e7b39c4096cc",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/059a720131095730e3cbcd54e3a0e7b39c4096cc",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/059a720131095730e3cbcd54e3a0e7b39c4096cc"
+        },
+        "files": []
+      },
+      "category": "MERGED_HISTORY",
+      "recommendation": "DELETE_CANDIDATE_AFTER_APPROVAL",
+      "reason": "No commits unique versus baseline main and no literal reference in current canonical navigation."
     },
     {
       "branch": "docs/sync-current-front-pr49-terminal",
@@ -2484,10 +2714,55 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "docs/sync-current-front-pr49-terminal",
+        "status": "diverged",
+        "ahead_by": 7,
+        "behind_by": 545,
+        "total_commits": 7,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "cf3d39a2e7787bc1c5b938390b6cdeec7943b0c2",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/cf3d39a2e7787bc1c5b938390b6cdeec7943b0c2",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/cf3d39a2e7787bc1c5b938390b6cdeec7943b0c2"
+        },
+        "files": [
+          {
+            "filename": "00-uebersicht/ACTIVE_THEOREM_REGISTRY.md",
+            "status": "modified",
+            "additions": 4,
+            "deletions": 2,
+            "changes": 6,
+            "previous_filename": null
+          },
+          {
+            "filename": "00-uebersicht/FORSCHUNGS_ROADMAP_2026-08-26.md",
+            "status": "modified",
+            "additions": 23,
+            "deletions": 0,
+            "changes": 23,
+            "previous_filename": null
+          },
+          {
+            "filename": "CURRENT-FRONT.md",
+            "status": "modified",
+            "additions": 49,
+            "deletions": 19,
+            "changes": 68,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "UNIQUE_HISTORY",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "7 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "feat/vor-iota-prime-7D-firewall",
@@ -2501,20 +2776,60 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "feat/vor-iota-prime-7D-firewall",
+        "status": "behind",
+        "ahead_by": 0,
+        "behind_by": 264,
+        "total_commits": 0,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "9f5b620d73ff91348f05e23e95ca8ce7a068cd65",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/9f5b620d73ff91348f05e23e95ca8ce7a068cd65",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/9f5b620d73ff91348f05e23e95ca8ce7a068cd65"
+        },
+        "files": []
+      },
+      "category": "MERGED_HISTORY",
+      "recommendation": "DELETE_CANDIDATE_AFTER_APPROVAL",
+      "reason": "No commits unique versus baseline main and no literal reference in current canonical navigation."
     },
     {
       "branch": "fix/arxiv-2608-24827-author-zhu-2026-09-13",
       "head_sha": "c03c1f3aa43416fe8f2951002614988e2aa03d59",
       "pr_links": [],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "fix/arxiv-2608-24827-author-zhu-2026-09-13",
+        "status": "behind",
+        "ahead_by": 0,
+        "behind_by": 246,
+        "total_commits": 0,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "c03c1f3aa43416fe8f2951002614988e2aa03d59",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/c03c1f3aa43416fe8f2951002614988e2aa03d59",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/c03c1f3aa43416fe8f2951002614988e2aa03d59"
+        },
+        "files": []
+      },
+      "category": "MERGED_HISTORY",
+      "recommendation": "DELETE_CANDIDATE_AFTER_APPROVAL",
+      "reason": "No commits unique versus baseline main and no literal reference in current canonical navigation."
     },
     {
       "branch": "fix/p12-stale-subwedge-reference",
@@ -2528,80 +2843,1648 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "fix/p12-stale-subwedge-reference",
+        "status": "diverged",
+        "ahead_by": 4,
+        "behind_by": 557,
+        "total_commits": 4,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "16489efe309978f4ec09457aa9e1e2709ca44c1b",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/16489efe309978f4ec09457aa9e1e2709ca44c1b",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/16489efe309978f4ec09457aa9e1e2709ca44c1b"
+        },
+        "files": [
+          {
+            "filename": "papers/P12_sections/P12_A15_1b2b_MixedSubWedgeA.tex",
+            "status": "modified",
+            "additions": 4,
+            "deletions": 3,
+            "changes": 7,
+            "previous_filename": null
+          },
+          {
+            "filename": "papers/P12_sections/P12_A15_1b2c_MixedStripDescentToDHalf.tex",
+            "status": "modified",
+            "additions": 6,
+            "deletions": 6,
+            "changes": 12,
+            "previous_filename": null
+          },
+          {
+            "filename": "papers/P12_sections/P12_A15_1b2d_MixedSubWedgeAFullTail.tex",
+            "status": "modified",
+            "additions": 9,
+            "deletions": 7,
+            "changes": 16,
+            "previous_filename": null
+          },
+          {
+            "filename": "papers/P12_sections/P12_A15_1b2d_ParameterWedge.tex",
+            "status": "modified",
+            "additions": 4,
+            "deletions": 3,
+            "changes": 7,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "UNIQUE_HISTORY",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "4 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "freeze/forward-dil-3dc1caa",
       "head_sha": "3dc1caa2870020b238c21a852328bab1c384deb7",
       "pr_links": [],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "freeze/forward-dil-3dc1caa",
+        "status": "diverged",
+        "ahead_by": 28,
+        "behind_by": 253,
+        "total_commits": 28,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "6e7b0c8229cc69a8d86d85a9db99d6646339ffda",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/6e7b0c8229cc69a8d86d85a9db99d6646339ffda",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/6e7b0c8229cc69a8d86d85a9db99d6646339ffda"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/np-prolate-1-arb.yml",
+            "status": "added",
+            "additions": 37,
+            "deletions": 0,
+            "changes": 37,
+            "previous_filename": null
+          },
+          {
+            "filename": "CURRENT-FRONT.md",
+            "status": "modified",
+            "additions": 355,
+            "deletions": 118,
+            "changes": 473,
+            "previous_filename": null
+          },
+          {
+            "filename": "OFFENE_PROBLEME.md",
+            "status": "modified",
+            "additions": 246,
+            "deletions": 74,
+            "changes": 320,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_COMMON_JUMP_DIAGONAL_FINITE_PART_2026-09-13.md",
+            "status": "added",
+            "additions": 413,
+            "deletions": 0,
+            "changes": 413,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_COMMON_JUMP_TYPED_TREE_BRIDGE_2026-09-15.md",
+            "status": "added",
+            "additions": 444,
+            "deletions": 0,
+            "changes": 444,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CONTINUOUS_OU_MOMENT_QUOTIENT_2026-09-13.md",
+            "status": "added",
+            "additions": 578,
+            "deletions": 0,
+            "changes": 578,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_GREEN_TREE_BRIDGE_2026-09-13.md",
+            "status": "added",
+            "additions": 766,
+            "deletions": 0,
+            "changes": 766,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_POLE_TRANSFER_2026-09-13.md",
+            "status": "added",
+            "additions": 428,
+            "deletions": 0,
+            "changes": 428,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_RIGIDITY_AND_SCHUR_GAP_2026-09-13.md",
+            "status": "added",
+            "additions": 549,
+            "deletions": 0,
+            "changes": 549,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRIT_HALF_COMPRESS1_BAD_CHANNEL_POSITIVITY_2026-09-13.md",
+            "status": "added",
+            "additions": 677,
+            "deletions": 0,
+            "changes": 677,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_EULER_GAMMA_SCATTERING_PHASE_2026-09-13.md",
+            "status": "added",
+            "additions": 481,
+            "deletions": 0,
+            "changes": 481,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FESHBACH_FORWARD_SCHUR_AND_FIRST_THRESHOLD_WITNESS_2026-09-15.md",
+            "status": "added",
+            "additions": 371,
+            "deletions": 0,
+            "changes": 371,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FESHBACH_PULLBACK_BLOCK_IDENTITY_2026-09-15.md",
+            "status": "added",
+            "additions": 423,
+            "deletions": 0,
+            "changes": 423,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FESHBACH_TO_TERMINAL_METRIC_BRIDGE_2026-09-15.md",
+            "status": "added",
+            "additions": 339,
+            "deletions": 0,
+            "changes": 339,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FORWARD_DILATION_NO_GO_AND_PROJECTION_GATE_2026-09-15.md",
+            "status": "added",
+            "additions": 349,
+            "deletions": 0,
+            "changes": 349,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_HARD_AUDIT_ERRATA_AND_PROLATE_BARRIER_2026-09-15.md",
+            "status": "added",
+            "additions": 370,
+            "deletions": 0,
+            "changes": 370,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_NP_GAP_PROLATE_COMPRESSION_2026-09-13.md",
+            "status": "added",
+            "additions": 578,
+            "deletions": 0,
+            "changes": 578,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_NP_PROLATE_TRACE_RITZ_CERTIFICATE_2026-09-13.md",
+            "status": "added",
+            "additions": 387,
+            "deletions": 0,
+            "changes": 387,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_PRIME_AR1_POISSON_GAMMA_HARMONIC_BRIDGE_2026-09-13.md",
+            "status": "added",
+            "additions": 468,
+            "deletions": 0,
+            "changes": 468,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_PRIME_THRESHOLD_BAD_CHANNEL_2026-09-13.md",
+            "status": "added",
+            "additions": 432,
+            "deletions": 0,
+            "changes": 432,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_REST_PULLBACK_MONOTONICITY_2026-09-15.md",
+            "status": "added",
+            "additions": 358,
+            "deletions": 0,
+            "changes": 358,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_SCATTERING_POINTWISE_POSITIVITY_NOGO_2026-09-13.md",
+            "status": "added",
+            "additions": 273,
+            "deletions": 0,
+            "changes": 273,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_SOURCE_CONDITIONING_LAYER_FILTRATION_2026-09-15.md",
+            "status": "added",
+            "additions": 399,
+            "deletions": 0,
+            "changes": 399,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_TREE_ROOT_LEVERAGE_2026-09-15.md",
+            "status": "added",
+            "additions": 409,
+            "deletions": 0,
+            "changes": 409,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/check_np_prolate_1_arb.py",
+            "status": "added",
+            "additions": 432,
+            "deletions": 0,
+            "changes": 432,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "UNIQUE_HISTORY",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "28 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "freeze/pr116-6b5956e",
       "head_sha": "6b5956e69dfcb8124e8e31083613fd89c5f35fb3",
       "pr_links": [],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "freeze/pr116-6b5956e",
+        "status": "diverged",
+        "ahead_by": 18,
+        "behind_by": 253,
+        "total_commits": 18,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "6e7b0c8229cc69a8d86d85a9db99d6646339ffda",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/6e7b0c8229cc69a8d86d85a9db99d6646339ffda",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/6e7b0c8229cc69a8d86d85a9db99d6646339ffda"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/np-prolate-1-arb.yml",
+            "status": "added",
+            "additions": 37,
+            "deletions": 0,
+            "changes": 37,
+            "previous_filename": null
+          },
+          {
+            "filename": "CURRENT-FRONT.md",
+            "status": "modified",
+            "additions": 355,
+            "deletions": 118,
+            "changes": 473,
+            "previous_filename": null
+          },
+          {
+            "filename": "OFFENE_PROBLEME.md",
+            "status": "modified",
+            "additions": 246,
+            "deletions": 74,
+            "changes": 320,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_COMMON_JUMP_DIAGONAL_FINITE_PART_2026-09-13.md",
+            "status": "added",
+            "additions": 413,
+            "deletions": 0,
+            "changes": 413,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CONTINUOUS_OU_MOMENT_QUOTIENT_2026-09-13.md",
+            "status": "added",
+            "additions": 578,
+            "deletions": 0,
+            "changes": 578,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_GREEN_TREE_BRIDGE_2026-09-13.md",
+            "status": "added",
+            "additions": 766,
+            "deletions": 0,
+            "changes": 766,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_POLE_TRANSFER_2026-09-13.md",
+            "status": "added",
+            "additions": 428,
+            "deletions": 0,
+            "changes": 428,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_RIGIDITY_AND_SCHUR_GAP_2026-09-13.md",
+            "status": "added",
+            "additions": 549,
+            "deletions": 0,
+            "changes": 549,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRIT_HALF_COMPRESS1_BAD_CHANNEL_POSITIVITY_2026-09-13.md",
+            "status": "added",
+            "additions": 677,
+            "deletions": 0,
+            "changes": 677,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_EULER_GAMMA_SCATTERING_PHASE_2026-09-13.md",
+            "status": "added",
+            "additions": 481,
+            "deletions": 0,
+            "changes": 481,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_NP_GAP_PROLATE_COMPRESSION_2026-09-13.md",
+            "status": "added",
+            "additions": 578,
+            "deletions": 0,
+            "changes": 578,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_NP_PROLATE_TRACE_RITZ_CERTIFICATE_2026-09-13.md",
+            "status": "added",
+            "additions": 387,
+            "deletions": 0,
+            "changes": 387,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_PRIME_AR1_POISSON_GAMMA_HARMONIC_BRIDGE_2026-09-13.md",
+            "status": "added",
+            "additions": 468,
+            "deletions": 0,
+            "changes": 468,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_PRIME_THRESHOLD_BAD_CHANNEL_2026-09-13.md",
+            "status": "added",
+            "additions": 432,
+            "deletions": 0,
+            "changes": 432,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_SCATTERING_POINTWISE_POSITIVITY_NOGO_2026-09-13.md",
+            "status": "added",
+            "additions": 273,
+            "deletions": 0,
+            "changes": 273,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/check_np_prolate_1_arb.py",
+            "status": "added",
+            "additions": 432,
+            "deletions": 0,
+            "changes": 432,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "UNIQUE_HISTORY",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "18 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "freeze/pr116-hard-audit-524bc5f",
       "head_sha": "524bc5f08b822eeae751196eb9f8acb989bd1122",
       "pr_links": [],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "freeze/pr116-hard-audit-524bc5f",
+        "status": "diverged",
+        "ahead_by": 19,
+        "behind_by": 253,
+        "total_commits": 19,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "6e7b0c8229cc69a8d86d85a9db99d6646339ffda",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/6e7b0c8229cc69a8d86d85a9db99d6646339ffda",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/6e7b0c8229cc69a8d86d85a9db99d6646339ffda"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/np-prolate-1-arb.yml",
+            "status": "added",
+            "additions": 37,
+            "deletions": 0,
+            "changes": 37,
+            "previous_filename": null
+          },
+          {
+            "filename": "CURRENT-FRONT.md",
+            "status": "modified",
+            "additions": 355,
+            "deletions": 118,
+            "changes": 473,
+            "previous_filename": null
+          },
+          {
+            "filename": "OFFENE_PROBLEME.md",
+            "status": "modified",
+            "additions": 246,
+            "deletions": 74,
+            "changes": 320,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_COMMON_JUMP_DIAGONAL_FINITE_PART_2026-09-13.md",
+            "status": "added",
+            "additions": 413,
+            "deletions": 0,
+            "changes": 413,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CONTINUOUS_OU_MOMENT_QUOTIENT_2026-09-13.md",
+            "status": "added",
+            "additions": 578,
+            "deletions": 0,
+            "changes": 578,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_GREEN_TREE_BRIDGE_2026-09-13.md",
+            "status": "added",
+            "additions": 766,
+            "deletions": 0,
+            "changes": 766,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_POLE_TRANSFER_2026-09-13.md",
+            "status": "added",
+            "additions": 428,
+            "deletions": 0,
+            "changes": 428,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_RIGIDITY_AND_SCHUR_GAP_2026-09-13.md",
+            "status": "added",
+            "additions": 549,
+            "deletions": 0,
+            "changes": 549,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRIT_HALF_COMPRESS1_BAD_CHANNEL_POSITIVITY_2026-09-13.md",
+            "status": "added",
+            "additions": 677,
+            "deletions": 0,
+            "changes": 677,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_EULER_GAMMA_SCATTERING_PHASE_2026-09-13.md",
+            "status": "added",
+            "additions": 481,
+            "deletions": 0,
+            "changes": 481,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_HARD_AUDIT_ERRATA_AND_PROLATE_BARRIER_2026-09-15.md",
+            "status": "added",
+            "additions": 370,
+            "deletions": 0,
+            "changes": 370,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_NP_GAP_PROLATE_COMPRESSION_2026-09-13.md",
+            "status": "added",
+            "additions": 578,
+            "deletions": 0,
+            "changes": 578,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_NP_PROLATE_TRACE_RITZ_CERTIFICATE_2026-09-13.md",
+            "status": "added",
+            "additions": 387,
+            "deletions": 0,
+            "changes": 387,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_PRIME_AR1_POISSON_GAMMA_HARMONIC_BRIDGE_2026-09-13.md",
+            "status": "added",
+            "additions": 468,
+            "deletions": 0,
+            "changes": 468,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_PRIME_THRESHOLD_BAD_CHANNEL_2026-09-13.md",
+            "status": "added",
+            "additions": 432,
+            "deletions": 0,
+            "changes": 432,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_SCATTERING_POINTWISE_POSITIVITY_NOGO_2026-09-13.md",
+            "status": "added",
+            "additions": 273,
+            "deletions": 0,
+            "changes": 273,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/check_np_prolate_1_arb.py",
+            "status": "added",
+            "additions": 432,
+            "deletions": 0,
+            "changes": 432,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "UNIQUE_HISTORY",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "19 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "freeze/prime-circle-weyl-04e2256",
       "head_sha": "04e2256919d2726c31db7febe7810a137a8ff77d",
       "pr_links": [],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "freeze/prime-circle-weyl-04e2256",
+        "status": "diverged",
+        "ahead_by": 33,
+        "behind_by": 253,
+        "total_commits": 33,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "6e7b0c8229cc69a8d86d85a9db99d6646339ffda",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/6e7b0c8229cc69a8d86d85a9db99d6646339ffda",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/6e7b0c8229cc69a8d86d85a9db99d6646339ffda"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/np-prolate-1-arb.yml",
+            "status": "added",
+            "additions": 37,
+            "deletions": 0,
+            "changes": 37,
+            "previous_filename": null
+          },
+          {
+            "filename": "CURRENT-FRONT.md",
+            "status": "modified",
+            "additions": 355,
+            "deletions": 118,
+            "changes": 473,
+            "previous_filename": null
+          },
+          {
+            "filename": "OFFENE_PROBLEME.md",
+            "status": "modified",
+            "additions": 246,
+            "deletions": 74,
+            "changes": 320,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_COMMON_JUMP_DIAGONAL_FINITE_PART_2026-09-13.md",
+            "status": "added",
+            "additions": 413,
+            "deletions": 0,
+            "changes": 413,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_COMMON_JUMP_TYPED_TREE_BRIDGE_2026-09-15.md",
+            "status": "added",
+            "additions": 444,
+            "deletions": 0,
+            "changes": 444,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CONTINUOUS_OU_MOMENT_QUOTIENT_2026-09-13.md",
+            "status": "added",
+            "additions": 578,
+            "deletions": 0,
+            "changes": 578,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_GREEN_TREE_BRIDGE_2026-09-13.md",
+            "status": "added",
+            "additions": 766,
+            "deletions": 0,
+            "changes": 766,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_POLE_TRANSFER_2026-09-13.md",
+            "status": "added",
+            "additions": 428,
+            "deletions": 0,
+            "changes": 428,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_RIGIDITY_AND_SCHUR_GAP_2026-09-13.md",
+            "status": "added",
+            "additions": 549,
+            "deletions": 0,
+            "changes": 549,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRIT_HALF_COMPRESS1_BAD_CHANNEL_POSITIVITY_2026-09-13.md",
+            "status": "added",
+            "additions": 677,
+            "deletions": 0,
+            "changes": 677,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_EULER_GAMMA_SCATTERING_PHASE_2026-09-13.md",
+            "status": "added",
+            "additions": 481,
+            "deletions": 0,
+            "changes": 481,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FESHBACH_FORWARD_SCHUR_AND_FIRST_THRESHOLD_WITNESS_2026-09-15.md",
+            "status": "added",
+            "additions": 371,
+            "deletions": 0,
+            "changes": 371,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FESHBACH_PULLBACK_BLOCK_IDENTITY_2026-09-15.md",
+            "status": "added",
+            "additions": 423,
+            "deletions": 0,
+            "changes": 423,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FESHBACH_TO_TERMINAL_METRIC_BRIDGE_2026-09-15.md",
+            "status": "added",
+            "additions": 339,
+            "deletions": 0,
+            "changes": 339,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FORWARD_DILATION_NO_GO_AND_PROJECTION_GATE_2026-09-15.md",
+            "status": "added",
+            "additions": 349,
+            "deletions": 0,
+            "changes": 349,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_HARD_AUDIT_ERRATA_AND_PROLATE_BARRIER_2026-09-15.md",
+            "status": "added",
+            "additions": 370,
+            "deletions": 0,
+            "changes": 370,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_NP_GAP_PROLATE_COMPRESSION_2026-09-13.md",
+            "status": "added",
+            "additions": 578,
+            "deletions": 0,
+            "changes": 578,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_NP_PROLATE_TRACE_RITZ_CERTIFICATE_2026-09-13.md",
+            "status": "added",
+            "additions": 387,
+            "deletions": 0,
+            "changes": 387,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_PRIME_AR1_POISSON_GAMMA_HARMONIC_BRIDGE_2026-09-13.md",
+            "status": "added",
+            "additions": 468,
+            "deletions": 0,
+            "changes": 468,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_PRIME_CIRCLE_WEYL_AND_COMMON_SELF_ENERGY_2026-09-15.md",
+            "status": "added",
+            "additions": 912,
+            "deletions": 0,
+            "changes": 912,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_PRIME_THRESHOLD_BAD_CHANNEL_2026-09-13.md",
+            "status": "added",
+            "additions": 432,
+            "deletions": 0,
+            "changes": 432,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_REST_PULLBACK_MONOTONICITY_2026-09-15.md",
+            "status": "added",
+            "additions": 358,
+            "deletions": 0,
+            "changes": 358,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_RP2_LINE_WEYL_BOUNDARY_BRIDGE_2026-09-15.md",
+            "status": "added",
+            "additions": 448,
+            "deletions": 0,
+            "changes": 448,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_RP2_POINT_WEYL_ZONAL_MIXER_2026-09-15.md",
+            "status": "added",
+            "additions": 550,
+            "deletions": 0,
+            "changes": 550,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_RP2_TRANSVERSE_KERNEL_GAMMA_P11_BRIDGE_2026-09-15.md",
+            "status": "added",
+            "additions": 754,
+            "deletions": 0,
+            "changes": 754,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_RP2_ZONAL_IRREDUCIBILITY_AND_SYMMETRY_AVERAGE_2026-09-15.md",
+            "status": "added",
+            "additions": 422,
+            "deletions": 0,
+            "changes": 422,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_SCATTERING_POINTWISE_POSITIVITY_NOGO_2026-09-13.md",
+            "status": "added",
+            "additions": 273,
+            "deletions": 0,
+            "changes": 273,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_SOURCE_CONDITIONING_LAYER_FILTRATION_2026-09-15.md",
+            "status": "added",
+            "additions": 399,
+            "deletions": 0,
+            "changes": 399,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_TREE_ROOT_LEVERAGE_2026-09-15.md",
+            "status": "added",
+            "additions": 409,
+            "deletions": 0,
+            "changes": 409,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/check_np_prolate_1_arb.py",
+            "status": "added",
+            "additions": 432,
+            "deletions": 0,
+            "changes": 432,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "UNIQUE_HISTORY",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "33 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "freeze/rp2-kernel-ac57408",
       "head_sha": "ac574089215767f3b353fd6d6af0649b4ded454c",
       "pr_links": [],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "freeze/rp2-kernel-ac57408",
+        "status": "diverged",
+        "ahead_by": 29,
+        "behind_by": 253,
+        "total_commits": 29,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "6e7b0c8229cc69a8d86d85a9db99d6646339ffda",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/6e7b0c8229cc69a8d86d85a9db99d6646339ffda",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/6e7b0c8229cc69a8d86d85a9db99d6646339ffda"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/np-prolate-1-arb.yml",
+            "status": "added",
+            "additions": 37,
+            "deletions": 0,
+            "changes": 37,
+            "previous_filename": null
+          },
+          {
+            "filename": "CURRENT-FRONT.md",
+            "status": "modified",
+            "additions": 355,
+            "deletions": 118,
+            "changes": 473,
+            "previous_filename": null
+          },
+          {
+            "filename": "OFFENE_PROBLEME.md",
+            "status": "modified",
+            "additions": 246,
+            "deletions": 74,
+            "changes": 320,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_COMMON_JUMP_DIAGONAL_FINITE_PART_2026-09-13.md",
+            "status": "added",
+            "additions": 413,
+            "deletions": 0,
+            "changes": 413,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_COMMON_JUMP_TYPED_TREE_BRIDGE_2026-09-15.md",
+            "status": "added",
+            "additions": 444,
+            "deletions": 0,
+            "changes": 444,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CONTINUOUS_OU_MOMENT_QUOTIENT_2026-09-13.md",
+            "status": "added",
+            "additions": 578,
+            "deletions": 0,
+            "changes": 578,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_GREEN_TREE_BRIDGE_2026-09-13.md",
+            "status": "added",
+            "additions": 766,
+            "deletions": 0,
+            "changes": 766,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_POLE_TRANSFER_2026-09-13.md",
+            "status": "added",
+            "additions": 428,
+            "deletions": 0,
+            "changes": 428,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_RIGIDITY_AND_SCHUR_GAP_2026-09-13.md",
+            "status": "added",
+            "additions": 549,
+            "deletions": 0,
+            "changes": 549,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRIT_HALF_COMPRESS1_BAD_CHANNEL_POSITIVITY_2026-09-13.md",
+            "status": "added",
+            "additions": 677,
+            "deletions": 0,
+            "changes": 677,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_EULER_GAMMA_SCATTERING_PHASE_2026-09-13.md",
+            "status": "added",
+            "additions": 481,
+            "deletions": 0,
+            "changes": 481,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FESHBACH_FORWARD_SCHUR_AND_FIRST_THRESHOLD_WITNESS_2026-09-15.md",
+            "status": "added",
+            "additions": 371,
+            "deletions": 0,
+            "changes": 371,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FESHBACH_PULLBACK_BLOCK_IDENTITY_2026-09-15.md",
+            "status": "added",
+            "additions": 423,
+            "deletions": 0,
+            "changes": 423,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FESHBACH_TO_TERMINAL_METRIC_BRIDGE_2026-09-15.md",
+            "status": "added",
+            "additions": 339,
+            "deletions": 0,
+            "changes": 339,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FORWARD_DILATION_NO_GO_AND_PROJECTION_GATE_2026-09-15.md",
+            "status": "added",
+            "additions": 349,
+            "deletions": 0,
+            "changes": 349,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_HARD_AUDIT_ERRATA_AND_PROLATE_BARRIER_2026-09-15.md",
+            "status": "added",
+            "additions": 370,
+            "deletions": 0,
+            "changes": 370,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_NP_GAP_PROLATE_COMPRESSION_2026-09-13.md",
+            "status": "added",
+            "additions": 578,
+            "deletions": 0,
+            "changes": 578,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_NP_PROLATE_TRACE_RITZ_CERTIFICATE_2026-09-13.md",
+            "status": "added",
+            "additions": 387,
+            "deletions": 0,
+            "changes": 387,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_PRIME_AR1_POISSON_GAMMA_HARMONIC_BRIDGE_2026-09-13.md",
+            "status": "added",
+            "additions": 468,
+            "deletions": 0,
+            "changes": 468,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_PRIME_THRESHOLD_BAD_CHANNEL_2026-09-13.md",
+            "status": "added",
+            "additions": 432,
+            "deletions": 0,
+            "changes": 432,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_REST_PULLBACK_MONOTONICITY_2026-09-15.md",
+            "status": "added",
+            "additions": 358,
+            "deletions": 0,
+            "changes": 358,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_RP2_TRANSVERSE_KERNEL_GAMMA_P11_BRIDGE_2026-09-15.md",
+            "status": "added",
+            "additions": 754,
+            "deletions": 0,
+            "changes": 754,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_SCATTERING_POINTWISE_POSITIVITY_NOGO_2026-09-13.md",
+            "status": "added",
+            "additions": 273,
+            "deletions": 0,
+            "changes": 273,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_SOURCE_CONDITIONING_LAYER_FILTRATION_2026-09-15.md",
+            "status": "added",
+            "additions": 399,
+            "deletions": 0,
+            "changes": 399,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_TREE_ROOT_LEVERAGE_2026-09-15.md",
+            "status": "added",
+            "additions": 409,
+            "deletions": 0,
+            "changes": 409,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/check_np_prolate_1_arb.py",
+            "status": "added",
+            "additions": 432,
+            "deletions": 0,
+            "changes": 432,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "UNIQUE_HISTORY",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "29 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "freeze/rp2-line-weyl-6206950",
       "head_sha": "620695070db6ce9693ed5a1848a2fa66145f41ec",
       "pr_links": [],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "freeze/rp2-line-weyl-6206950",
+        "status": "diverged",
+        "ahead_by": 32,
+        "behind_by": 253,
+        "total_commits": 32,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "6e7b0c8229cc69a8d86d85a9db99d6646339ffda",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/6e7b0c8229cc69a8d86d85a9db99d6646339ffda",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/6e7b0c8229cc69a8d86d85a9db99d6646339ffda"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/np-prolate-1-arb.yml",
+            "status": "added",
+            "additions": 37,
+            "deletions": 0,
+            "changes": 37,
+            "previous_filename": null
+          },
+          {
+            "filename": "CURRENT-FRONT.md",
+            "status": "modified",
+            "additions": 355,
+            "deletions": 118,
+            "changes": 473,
+            "previous_filename": null
+          },
+          {
+            "filename": "OFFENE_PROBLEME.md",
+            "status": "modified",
+            "additions": 246,
+            "deletions": 74,
+            "changes": 320,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_COMMON_JUMP_DIAGONAL_FINITE_PART_2026-09-13.md",
+            "status": "added",
+            "additions": 413,
+            "deletions": 0,
+            "changes": 413,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_COMMON_JUMP_TYPED_TREE_BRIDGE_2026-09-15.md",
+            "status": "added",
+            "additions": 444,
+            "deletions": 0,
+            "changes": 444,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CONTINUOUS_OU_MOMENT_QUOTIENT_2026-09-13.md",
+            "status": "added",
+            "additions": 578,
+            "deletions": 0,
+            "changes": 578,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_GREEN_TREE_BRIDGE_2026-09-13.md",
+            "status": "added",
+            "additions": 766,
+            "deletions": 0,
+            "changes": 766,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_POLE_TRANSFER_2026-09-13.md",
+            "status": "added",
+            "additions": 428,
+            "deletions": 0,
+            "changes": 428,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_RIGIDITY_AND_SCHUR_GAP_2026-09-13.md",
+            "status": "added",
+            "additions": 549,
+            "deletions": 0,
+            "changes": 549,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRIT_HALF_COMPRESS1_BAD_CHANNEL_POSITIVITY_2026-09-13.md",
+            "status": "added",
+            "additions": 677,
+            "deletions": 0,
+            "changes": 677,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_EULER_GAMMA_SCATTERING_PHASE_2026-09-13.md",
+            "status": "added",
+            "additions": 481,
+            "deletions": 0,
+            "changes": 481,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FESHBACH_FORWARD_SCHUR_AND_FIRST_THRESHOLD_WITNESS_2026-09-15.md",
+            "status": "added",
+            "additions": 371,
+            "deletions": 0,
+            "changes": 371,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FESHBACH_PULLBACK_BLOCK_IDENTITY_2026-09-15.md",
+            "status": "added",
+            "additions": 423,
+            "deletions": 0,
+            "changes": 423,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FESHBACH_TO_TERMINAL_METRIC_BRIDGE_2026-09-15.md",
+            "status": "added",
+            "additions": 339,
+            "deletions": 0,
+            "changes": 339,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FORWARD_DILATION_NO_GO_AND_PROJECTION_GATE_2026-09-15.md",
+            "status": "added",
+            "additions": 349,
+            "deletions": 0,
+            "changes": 349,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_HARD_AUDIT_ERRATA_AND_PROLATE_BARRIER_2026-09-15.md",
+            "status": "added",
+            "additions": 370,
+            "deletions": 0,
+            "changes": 370,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_NP_GAP_PROLATE_COMPRESSION_2026-09-13.md",
+            "status": "added",
+            "additions": 578,
+            "deletions": 0,
+            "changes": 578,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_NP_PROLATE_TRACE_RITZ_CERTIFICATE_2026-09-13.md",
+            "status": "added",
+            "additions": 387,
+            "deletions": 0,
+            "changes": 387,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_PRIME_AR1_POISSON_GAMMA_HARMONIC_BRIDGE_2026-09-13.md",
+            "status": "added",
+            "additions": 468,
+            "deletions": 0,
+            "changes": 468,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_PRIME_THRESHOLD_BAD_CHANNEL_2026-09-13.md",
+            "status": "added",
+            "additions": 432,
+            "deletions": 0,
+            "changes": 432,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_REST_PULLBACK_MONOTONICITY_2026-09-15.md",
+            "status": "added",
+            "additions": 358,
+            "deletions": 0,
+            "changes": 358,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_RP2_LINE_WEYL_BOUNDARY_BRIDGE_2026-09-15.md",
+            "status": "added",
+            "additions": 448,
+            "deletions": 0,
+            "changes": 448,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_RP2_POINT_WEYL_ZONAL_MIXER_2026-09-15.md",
+            "status": "added",
+            "additions": 550,
+            "deletions": 0,
+            "changes": 550,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_RP2_TRANSVERSE_KERNEL_GAMMA_P11_BRIDGE_2026-09-15.md",
+            "status": "added",
+            "additions": 754,
+            "deletions": 0,
+            "changes": 754,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_RP2_ZONAL_IRREDUCIBILITY_AND_SYMMETRY_AVERAGE_2026-09-15.md",
+            "status": "added",
+            "additions": 422,
+            "deletions": 0,
+            "changes": 422,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_SCATTERING_POINTWISE_POSITIVITY_NOGO_2026-09-13.md",
+            "status": "added",
+            "additions": 273,
+            "deletions": 0,
+            "changes": 273,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_SOURCE_CONDITIONING_LAYER_FILTRATION_2026-09-15.md",
+            "status": "added",
+            "additions": 399,
+            "deletions": 0,
+            "changes": 399,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_TREE_ROOT_LEVERAGE_2026-09-15.md",
+            "status": "added",
+            "additions": 409,
+            "deletions": 0,
+            "changes": 409,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/check_np_prolate_1_arb.py",
+            "status": "added",
+            "additions": 432,
+            "deletions": 0,
+            "changes": 432,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "UNIQUE_HISTORY",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "32 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "freeze/rp2-weyl-c06500b",
       "head_sha": "c06500b9f09571bc40536ebe81157fbb0e741ae9",
       "pr_links": [],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "freeze/rp2-weyl-c06500b",
+        "status": "diverged",
+        "ahead_by": 31,
+        "behind_by": 253,
+        "total_commits": 31,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "6e7b0c8229cc69a8d86d85a9db99d6646339ffda",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/6e7b0c8229cc69a8d86d85a9db99d6646339ffda",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/6e7b0c8229cc69a8d86d85a9db99d6646339ffda"
+        },
+        "files": [
+          {
+            "filename": ".github/workflows/np-prolate-1-arb.yml",
+            "status": "added",
+            "additions": 37,
+            "deletions": 0,
+            "changes": 37,
+            "previous_filename": null
+          },
+          {
+            "filename": "CURRENT-FRONT.md",
+            "status": "modified",
+            "additions": 355,
+            "deletions": 118,
+            "changes": 473,
+            "previous_filename": null
+          },
+          {
+            "filename": "OFFENE_PROBLEME.md",
+            "status": "modified",
+            "additions": 246,
+            "deletions": 74,
+            "changes": 320,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_COMMON_JUMP_DIAGONAL_FINITE_PART_2026-09-13.md",
+            "status": "added",
+            "additions": 413,
+            "deletions": 0,
+            "changes": 413,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_COMMON_JUMP_TYPED_TREE_BRIDGE_2026-09-15.md",
+            "status": "added",
+            "additions": 444,
+            "deletions": 0,
+            "changes": 444,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CONTINUOUS_OU_MOMENT_QUOTIENT_2026-09-13.md",
+            "status": "added",
+            "additions": 578,
+            "deletions": 0,
+            "changes": 578,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_GREEN_TREE_BRIDGE_2026-09-13.md",
+            "status": "added",
+            "additions": 766,
+            "deletions": 0,
+            "changes": 766,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_POLE_TRANSFER_2026-09-13.md",
+            "status": "added",
+            "additions": 428,
+            "deletions": 0,
+            "changes": 428,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRITICAL_HALF_RIGIDITY_AND_SCHUR_GAP_2026-09-13.md",
+            "status": "added",
+            "additions": 549,
+            "deletions": 0,
+            "changes": 549,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_CRIT_HALF_COMPRESS1_BAD_CHANNEL_POSITIVITY_2026-09-13.md",
+            "status": "added",
+            "additions": 677,
+            "deletions": 0,
+            "changes": 677,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_EULER_GAMMA_SCATTERING_PHASE_2026-09-13.md",
+            "status": "added",
+            "additions": 481,
+            "deletions": 0,
+            "changes": 481,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FESHBACH_FORWARD_SCHUR_AND_FIRST_THRESHOLD_WITNESS_2026-09-15.md",
+            "status": "added",
+            "additions": 371,
+            "deletions": 0,
+            "changes": 371,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FESHBACH_PULLBACK_BLOCK_IDENTITY_2026-09-15.md",
+            "status": "added",
+            "additions": 423,
+            "deletions": 0,
+            "changes": 423,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FESHBACH_TO_TERMINAL_METRIC_BRIDGE_2026-09-15.md",
+            "status": "added",
+            "additions": 339,
+            "deletions": 0,
+            "changes": 339,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_FORWARD_DILATION_NO_GO_AND_PROJECTION_GATE_2026-09-15.md",
+            "status": "added",
+            "additions": 349,
+            "deletions": 0,
+            "changes": 349,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_HARD_AUDIT_ERRATA_AND_PROLATE_BARRIER_2026-09-15.md",
+            "status": "added",
+            "additions": 370,
+            "deletions": 0,
+            "changes": 370,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_NP_GAP_PROLATE_COMPRESSION_2026-09-13.md",
+            "status": "added",
+            "additions": 578,
+            "deletions": 0,
+            "changes": 578,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_NP_PROLATE_TRACE_RITZ_CERTIFICATE_2026-09-13.md",
+            "status": "added",
+            "additions": 387,
+            "deletions": 0,
+            "changes": 387,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_PRIME_AR1_POISSON_GAMMA_HARMONIC_BRIDGE_2026-09-13.md",
+            "status": "added",
+            "additions": 468,
+            "deletions": 0,
+            "changes": 468,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_PRIME_THRESHOLD_BAD_CHANNEL_2026-09-13.md",
+            "status": "added",
+            "additions": 432,
+            "deletions": 0,
+            "changes": 432,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_REST_PULLBACK_MONOTONICITY_2026-09-15.md",
+            "status": "added",
+            "additions": 358,
+            "deletions": 0,
+            "changes": 358,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_RP2_POINT_WEYL_ZONAL_MIXER_2026-09-15.md",
+            "status": "added",
+            "additions": 550,
+            "deletions": 0,
+            "changes": 550,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_RP2_TRANSVERSE_KERNEL_GAMMA_P11_BRIDGE_2026-09-15.md",
+            "status": "added",
+            "additions": 754,
+            "deletions": 0,
+            "changes": 754,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_RP2_ZONAL_IRREDUCIBILITY_AND_SYMMETRY_AVERAGE_2026-09-15.md",
+            "status": "added",
+            "additions": 422,
+            "deletions": 0,
+            "changes": 422,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_SCATTERING_POINTWISE_POSITIVITY_NOGO_2026-09-13.md",
+            "status": "added",
+            "additions": 273,
+            "deletions": 0,
+            "changes": 273,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_SOURCE_CONDITIONING_LAYER_FILTRATION_2026-09-15.md",
+            "status": "added",
+            "additions": 399,
+            "deletions": 0,
+            "changes": 399,
+            "previous_filename": null
+          },
+          {
+            "filename": "audits/P11_TREE_ROOT_LEVERAGE_2026-09-15.md",
+            "status": "added",
+            "additions": 409,
+            "deletions": 0,
+            "changes": 409,
+            "previous_filename": null
+          },
+          {
+            "filename": "scripts/check_np_prolate_1_arb.py",
+            "status": "added",
+            "additions": 432,
+            "deletions": 0,
+            "changes": 432,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "UNIQUE_HISTORY",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "31 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "governance/active-front-pr61",
@@ -2615,10 +4498,39 @@
         }
       ],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "governance/active-front-pr61",
+        "status": "diverged",
+        "ahead_by": 1,
+        "behind_by": 349,
+        "total_commits": 1,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "0a8c47e180d84bca6c5d9594bd044b9e58929cff",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/0a8c47e180d84bca6c5d9594bd044b9e58929cff",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/0a8c47e180d84bca6c5d9594bd044b9e58929cff"
+        },
+        "files": [
+          {
+            "filename": "00-uebersicht/ACTIVE_FRONT.yaml",
+            "status": "modified",
+            "additions": 11,
+            "deletions": 0,
+            "changes": 11,
+            "previous_filename": null
+          }
+        ]
+      },
+      "category": "UNIQUE_HISTORY",
+      "recommendation": "REVIEW_UNIQUE",
+      "reason": "1 unique commit(s); provenance/supersession review required."
     },
     {
       "branch": "governance/active-front-pr61-head2",
