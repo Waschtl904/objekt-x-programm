@@ -15238,10 +15238,30 @@
       "head_sha": "18050e052ee053920357bdc60f6b380cd0dbe611",
       "pr_links": [],
       "canonical_navigation_reference": false,
-      "compare": null,
-      "category": null,
-      "recommendation": null,
-      "reason": null
+      "compare": {
+        "repository_full_name": "Waschtl904/objekt-x-programm",
+        "base": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+        "head": "tmp/ignore",
+        "status": "behind",
+        "ahead_by": 0,
+        "behind_by": 164,
+        "total_commits": 0,
+        "too_large": null,
+        "base_commit": {
+          "sha": "5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901"
+        },
+        "merge_base_commit": {
+          "sha": "18050e052ee053920357bdc60f6b380cd0dbe611",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/18050e052ee053920357bdc60f6b380cd0dbe611",
+          "html_url": "https://github.com/Waschtl904/objekt-x-programm/commit/18050e052ee053920357bdc60f6b380cd0dbe611"
+        },
+        "files": []
+      },
+      "category": "MERGED_HISTORY",
+      "recommendation": "DELETE_CANDIDATE_AFTER_APPROVAL",
+      "reason": "No commits unique versus baseline main and no literal reference in current canonical navigation."
     }
   ]
 }
