@@ -557,6 +557,44 @@ Does not claim:
 
 Dokumentierte Reproduktion: [C1D_TERMINAL_SQUARE_ROOT_PROMOTION_AUDIT_2026-09-20.md](https://github.com/Waschtl904/objekt-x-programm/blob/5f19065e28b9f2e09ae93bef0b4c752ab58997d4/audits/C1D_TERMINAL_SQUARE_ROOT_PROMOTION_AUDIT_2026-09-20.md), [c1d_checks.log](https://github.com/Waschtl904/objekt-x-programm/blob/5f19065e28b9f2e09ae93bef0b4c752ab58997d4/research/x-c1/c1d-terminal-square-root-completion-2026-09-20/c1d_checks.log).
 
+## FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7
+
+FIRST-CHAMBER RAW T/D COCYCLE, O1–O7
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `ANALYTIC_ONLY`.
+- Scope: Ausschließlich die im kanonischen Beweis definierte C1a-Fortführung auf 1<=A<=B<=C<=A_8=log(8)/2, mit physischer Nullfortsetzung, fester unitärer Fouriertransformation, genau den beiden ursprünglichen Mellinbedingungen, kammerweit aktiver Familie {2,3,4,5,7}, festen Gamma- und Prime-Gewichten, der expliziten C0-Quellenvervollständigung F_A und getrennten abgeschlossenen T-/D-Carriern; keine Aussage über andere Terminalrealisierungen.
+- Canonical commit: [6623047](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff).
+- Canonical proof: [research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_RAW_TD_O1_O4.md](https://github.com/Waschtl904/objekt-x-programm/blob/6623047361578b819ae44358fbbbf0b3fdeac9ff/research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_RAW_TD_O1_O4.md).
+- depends_on: `C0-DIRECTED-FORM-SYSTEM`, `C1a-COUPLED-SPECTRAL-MEDIATOR`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `CONSTRUCTION`.
+- Negative claim boundary: Kein No-Go. Der kanonische Basisbeweis bindet den vollständigen O5–O7-Nachtrag per SHA-256; geschlossen ist nur das rohe Kammerpaket für diese konkrete Operatorwahl. Die Defektschranke beweist keine Kontraktion.
+
+Aussage:
+
+- O1–O4: getrennte rohe T-/D-Transporte mit Quotientenabstieg, isometrischen Carrier-Inklusionen, Quellintertwinings und beiden Identitäts-/Cocycle-Gesetzen auf den abgeschlossenen Räumen.
+- O5: beschränkte Defektoperatoren R_A:H_A^T->H_A^D mit ||R_A||<=sqrt(90), D_A=R_A T_A auf F_A und R_B M^T_{A,B}=M^D_{A,B} R_A auf H_A^T.
+- O6: Formnaturality q_B(J_{A,B}u,J_{A,B}v)=q_A(u,v) für alle u,v in den vollständigen Quellen F_A.
+- O7 bedeutet First closed chamber: uniforme Kontrolle von O1–O6 auf der gesamten geschlossenen Kammer. Der beschränkte Isomorphismus T_A:F_A->H_A^T ist ein Hilfslemma, nicht die Bedeutung von O7.
+- Die aktive Familie ist kammerweit {2,3,4,5,7}; wegen log(q)<2A bleibt q=8 bei A=A_8 inaktiv.
+- Commitgepinnte Paketnavigation: Teilbeweise [FIRST_CHAMBER_RAW_TD_O1_O4.md](https://github.com/Waschtl904/objekt-x-programm/blob/6623047361578b819ae44358fbbbf0b3fdeac9ff/research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_RAW_TD_O1_O4.md) und [FIRST_CHAMBER_O5_O7_ADDENDUM.md](https://github.com/Waschtl904/objekt-x-programm/blob/6623047361578b819ae44358fbbbf0b3fdeac9ff/research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_O5_O7_ADDENDUM.md); übergeordneter Interface-/Obligationsanker [PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/6623047361578b819ae44358fbbbf0b3fdeac9ff/research/x-c1/post-unit-q8-interface-2026-09-21/PROOF.md); Beweisobligationen [PROOF_OBLIGATIONS.md](https://github.com/Waschtl904/objekt-x-programm/blob/6623047361578b819ae44358fbbbf0b3fdeac9ff/research/x-c1/post-unit-q8-interface-2026-09-21/PROOF_OBLIGATIONS.md); Paketstatus [STATUS_DE.md](https://github.com/Waschtl904/objekt-x-programm/blob/6623047361578b819ae44358fbbbf0b3fdeac9ff/research/x-c1/post-unit-q8-interface-2026-09-21/STATUS_DE.md); Schwellenledger [THRESHOLD_LEDGER.md](https://github.com/Waschtl904/objekt-x-programm/blob/6623047361578b819ae44358fbbbf0b3fdeac9ff/research/x-c1/post-unit-q8-interface-2026-09-21/THRESHOLD_LEDGER.md); Interface-Metadaten [META.yaml](https://github.com/Waschtl904/objekt-x-programm/blob/6623047361578b819ae44358fbbbf0b3fdeac9ff/research/x-c1/post-unit-q8-interface-2026-09-21/META.yaml). PROOF.md ist kein Ersatz für die beiden Teilbeweise.
+
+Does not claim:
+
+- Neue Terminalpositivität für A>1 oder O8-Abschluss.
+- ||R_A||<=1, Gleichheit der T-/D-Transporte, ein gemeinsames V oder signierte Operatorkongruenz.
+- Positive korrigierte Transporte, lokale Quadratwurzel-Intertwinings oder O9-Abschluss.
+- q=8-Wall-Crossing rechts von A_8 oder O10-Abschluss.
+- Übernahme der 191D-Reduktion auf neue Horizonte ohne separaten analytischen Tail-/Kodimensionsbeweis.
+- Ein unbeschränkter/kofinaler Terminal-Cocycle oder Full C1-GEOM.
+- Ein globaler fensterunabhängiger Readout, Objekt X, globale Weil-Positivität oder RH.
+- Eine Umdeutung von P11 fixed-pair Strong Terminal in unbeschränkte C1-Kompatibilität.
+
 ## P02-ADELIC-WEIL-AMPLITUDE-PORT
 
 Adelic Weil amplitude port and Hermitian normalization

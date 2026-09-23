@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "render_version": 5,
-  "state_date": "2026-09-21",
+  "state_date": "2026-09-23",
   "repository": "Waschtl904/objekt-x-programm",
   "published_baseline": {
     "branch": "main",
-    "sha": "f8228597eb014d276ab6226fc78cd9cc7d3a414a",
+    "sha": "c977848bea0651591a6373cae6485e380530f31a",
     "integration_status": "MERGED",
-    "meaning": "Aktueller gemergter kanonischer Main-Stand nach PR #143 (Fixed-Horizon-C1 bis a=1) und PR #144 (scoped legacy survivors); Integration ist von mathematischer Verifikation getrennt."
+    "meaning": "Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153 und dem historischen Legacy-Manifest PR #155; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
   },
   "verified_research_snapshot": {
     "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
@@ -18,13 +18,13 @@
     "meaning": "Mathematisch geprüfter vollständiger Research-Snapshot; der spätere beobachtete Branch-Head ist nur Abstammungsinformation und keine zusätzliche mathematische Verifikation."
   },
   "registry_sync": {
-    "branch": "docs/post-pr144-research-state-sync-2026-09-21",
-    "base_sha": "f8228597eb014d276ab6226fc78cd9cc7d3a414a",
-    "candidate_head_at_generation": "cd82bb64f6c841fae80f2c9e0d84a233c5a0c4e5",
+    "branch": "docs/first-chamber-registry-sync-2026-09-23",
+    "base_sha": "c977848bea0651591a6373cae6485e380530f31a",
+    "candidate_head_at_generation": "c977848bea0651591a6373cae6485e380530f31a",
     "integration_status": "RESEARCH_BRANCH_UNMERGED",
     "head_policy": "OBSERVED_CANDIDATE_NOT_CURRENT_HEAD",
     "mathematical_review_changed": false,
-    "meaning": "Reiner Registry-/Dokumentations-Sync gegen die gemergte Basis; kein Satz- oder Review-Status wird dadurch erzeugt."
+    "meaning": "Registry-/Navigations-Sync für das bereits integrierte O1–O7-Kammerpaket. Der beobachtete Kandidatanker bezeichnet die nach Integration von PR #155 auf main vorgezogene Branchbasis vor dem Sync-Commit; er ist weder der spätere Sync-Head noch ein neuer Verifikationssnapshot. AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN bleibt unverändert. Das lokale META des offenen POST-UNIT-Q8-HORIZON-INTERFACE bleibt ein Interface-/Obligationsanker; der integrierte O1–O7-Teilsatz erhält hier einen eigenen Ergebniseintrag."
   },
   "authority_roles": {
     "definition": {
@@ -45,8 +45,11 @@
       "title": "Unbeschränkte Horizonterweiterung und kompatibler Transport",
       "mathematical_status": "OPEN",
       "strategic_status": "ACTIVE_FRONT",
-      "target_scope": "Nach geschlossenem C1a-C1d auf B<=a<=1: neue Prime-Power-Horizonte a>1, erneuerbare Profilreserve, nicht summierbarer/kofinaler Transport und kompatible positive Terminalabschlüsse.",
+      "target_scope": "C1a–C1d ist auf dem festen Horizont B<=a<=1 geschlossen; das rohe O1–O7-Kammerpaket gilt ausschließlich für die explizite C1a-Fortführung auf 1<=A<=B<=C<=A_8=log(8)/2 (AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN). Nächster lokaler mathematischer Gate ist O8: neue Terminalpositivität für 1<A<=A_8. POSITIVE-CORRECTED-TRANSPORT (O9) und X4-Q8-WALL-CROSSING (O10) bleiben getrennte offene Gates; ihre relative Bearbeitungsreihenfolge wird durch diesen Registry-Sync nicht festgelegt. Die Nummerierung folgt PROOF_OBLIGATIONS.md und bezeichnet keine strategische Reihenfolge. Erneuerbare Profilreserve und unbeschränkte/kofinale Terminalkompatibilität bleiben offen.",
       "obligation_ids": [
+        "FIRST-CHAMBER-O8-TERMINAL-POSITIVITY",
+        "POSITIVE-CORRECTED-TRANSPORT",
+        "X4-Q8-WALL-CROSSING",
         "MOVING-PROFILE-RESERVE-RENEWAL",
         "NON-SUMMABLE-TRANSPORT",
         "UNBOUNDED-HORIZON-COMPATIBILITY"
@@ -56,16 +59,21 @@
         "C1a-COUPLED-SPECTRAL-MEDIATOR",
         "C1b-ZERO-EXTENSION-INTERTWINING",
         "TERMINAL-191D-DEFECT-SCHUR-A1",
-        "C1d-COMPATIBLE-POSITIVE-COMPLETION"
+        "C1d-COMPATIBLE-POSITIVE-COMPLETION",
+        "FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7"
       ],
-      "candidate": "C1d-COMPATIBLE-POSITIVE-COMPLETION",
+      "candidate": "FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7",
       "accepted_progress": [
-        "Konstruiere den Spektralkandidaten bei Eintritt weiterer Prime-Power-Kanäle für Horizonte >1.",
+        "O8: Beweise für einen ausdrücklich benannten neuen Terminal 1<A<=A_8 eine strikte Reserve G_A=I-R_A^*R_A >= eta_A I mit eta_A>0; eine neue endliche Reduktion benötigt einen eigenen analytischen Tail-/Kodimensionsbeweis.",
+        "O9: Beweise nach strikten Terminalreserven die korrigierten Räume, Quotientenkompatibilität, U^X-Transporte, deren Quellintertwining und Cocycle; lokale Quadratwurzel-Intertwinings werden nicht vorausgesetzt.",
+        "O10: Konstruiere strikt rechts von A_8 den gekoppelten q=8-Mediator und beide rohen Wandtransporte mit Quotientenabstieg, Beschränktheit und Kammerkompatibilität; am Endpunkt A_8 bleibt q=8 inaktiv.",
         "Beweise kompatible Terminalräume und positive Abschlüsse für eine wachsende oder kofinale Horizontfamilie.",
         "Ersetze endliche Schrittketten durch ein nicht summierbares oder uniformes Fortsetzungsgesetz.",
         "Kontrolliere Low/Profile-Kopplungen mit erneuerbarer Reserve."
       ],
       "insufficient": [
+        "O1–O7 oder die Schranke ||R_A||<=sqrt(90) als Kontraktion oder neue Terminalpositivität ausgeben.",
+        "Die alte 191D-Reduktion ohne neuen analytischen Tail-/Kodimensionsbeweis auf A>1 übertragen.",
         "Den festen Horizont 1 lediglich numerisch vergrößern ohne neues Kompatibilitätsgesetz.",
         "Neue Terminalabschlüsse ohne Intertwining untereinander.",
         "Mikroskopische Breitenfortsetzungen ohne kofinale Skalierungsstruktur."
@@ -99,6 +107,24 @@
   },
   "obligations": [
     {
+      "id": "FIRST-CHAMBER-O8-TERMINAL-POSITIVITY",
+      "title": "O8 — neue Terminalpositivität als nächsten lokalen Gate beweisen",
+      "mathematical_status": "OPEN",
+      "scope": "Für einen neuen Terminal 1<A<=A_8 der expliziten ersten Kammer: G_A=I-R_A^*R_A >= eta_A I, eta_A>0. Die bewiesene Schranke ||R_A||<=sqrt(90) liefert keine Kontraktion; keine Übernahme von 191 ohne neuen analytischen Tail-/Kodimensionsbeweis."
+    },
+    {
+      "id": "POSITIVE-CORRECTED-TRANSPORT",
+      "title": "O9 — positive korrigierte Transporte separat konstruieren",
+      "mathematical_status": "OPEN",
+      "scope": "Nach strikten Terminalreserven: korrekte Quadratwurzeln, korrigierte Räume und Quotientenkompatibilität, beschränkte/isometrische U^X-Transporte, U^X_{A,B}T_{X,A}=T_{X,B}J_{A,B} und U^X-Cocycle. Kein vorausgesetztes lokales Quadratwurzel-Intertwining."
+    },
+    {
+      "id": "X4-Q8-WALL-CROSSING",
+      "title": "O10 — q=8-Wall-Crossing separat beweisen",
+      "mathematical_status": "OPEN",
+      "scope": "Strikt rechts von A_8=log(8)/2 tritt q=8 mit Gewicht log(2)/sqrt(8) hinzu. Gekoppelte neue Rohoperatoren und beide Wandtransporte sind vor einer Post-Wall-Positivitätsaussage zu konstruieren. Wegen log(q)<2A bleibt q=8 am Endpunkt A_8 inaktiv."
+    },
+    {
       "id": "MOVING-PROFILE-RESERVE-RENEWAL",
       "title": "Erneuerbare Low/Profile-Reserve konstruieren",
       "mathematical_status": "OPEN",
@@ -114,7 +140,7 @@
       "id": "UNBOUNDED-HORIZON-COMPATIBILITY",
       "title": "Kompatible unbeschränkte Horizontfolge konstruieren",
       "mathematical_status": "OPEN",
-      "scope": "Der bisherige Spektralkandidat verwendet den festen Horizont 1."
+      "scope": "Der positive C1-Abschluss gilt weiterhin nur bis zum festen Horizont 1. O1–O7 liefert rohe T/D-Kompatibilität ausschließlich in der ersten geschlossenen Kammer bis A_8; ein unbeschränkter/kofinaler Terminal-Cocycle und kompatible positive Abschlüsse bleiben offen."
     },
     {
       "id": "FULL-WEIL-TEST-CLASS",
@@ -770,6 +796,46 @@
       ]
     },
     {
+      "id": "FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7",
+      "title": "FIRST-CHAMBER RAW T/D COCYCLE, O1–O7",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "ANALYTIC_ONLY",
+      "reproduction_evidence": [],
+      "claim_polarity": "CONSTRUCTION",
+      "scope": "Ausschließlich die im kanonischen Beweis definierte C1a-Fortführung auf 1<=A<=B<=C<=A_8=log(8)/2, mit physischer Nullfortsetzung, fester unitärer Fouriertransformation, genau den beiden ursprünglichen Mellinbedingungen, kammerweit aktiver Familie {2,3,4,5,7}, festen Gamma- und Prime-Gewichten, der expliziten C0-Quellenvervollständigung F_A und getrennten abgeschlossenen T-/D-Carriern; keine Aussage über andere Terminalrealisierungen.",
+      "claim": [
+        "O1–O4: getrennte rohe T-/D-Transporte mit Quotientenabstieg, isometrischen Carrier-Inklusionen, Quellintertwinings und beiden Identitäts-/Cocycle-Gesetzen auf den abgeschlossenen Räumen.",
+        "O5: beschränkte Defektoperatoren R_A:H_A^T->H_A^D mit ||R_A||<=sqrt(90), D_A=R_A T_A auf F_A und R_B M^T_{A,B}=M^D_{A,B} R_A auf H_A^T.",
+        "O6: Formnaturality q_B(J_{A,B}u,J_{A,B}v)=q_A(u,v) für alle u,v in den vollständigen Quellen F_A.",
+        "O7 bedeutet First closed chamber: uniforme Kontrolle von O1–O6 auf der gesamten geschlossenen Kammer. Der beschränkte Isomorphismus T_A:F_A->H_A^T ist ein Hilfslemma, nicht die Bedeutung von O7.",
+        "Die aktive Familie ist kammerweit {2,3,4,5,7}; wegen log(q)<2A bleibt q=8 bei A=A_8 inaktiv.",
+        "Commitgepinnte Paketnavigation: Teilbeweise [FIRST_CHAMBER_RAW_TD_O1_O4.md](https://github.com/Waschtl904/objekt-x-programm/blob/6623047361578b819ae44358fbbbf0b3fdeac9ff/research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_RAW_TD_O1_O4.md) und [FIRST_CHAMBER_O5_O7_ADDENDUM.md](https://github.com/Waschtl904/objekt-x-programm/blob/6623047361578b819ae44358fbbbf0b3fdeac9ff/research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_O5_O7_ADDENDUM.md); übergeordneter Interface-/Obligationsanker [PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/6623047361578b819ae44358fbbbf0b3fdeac9ff/research/x-c1/post-unit-q8-interface-2026-09-21/PROOF.md); Beweisobligationen [PROOF_OBLIGATIONS.md](https://github.com/Waschtl904/objekt-x-programm/blob/6623047361578b819ae44358fbbbf0b3fdeac9ff/research/x-c1/post-unit-q8-interface-2026-09-21/PROOF_OBLIGATIONS.md); Paketstatus [STATUS_DE.md](https://github.com/Waschtl904/objekt-x-programm/blob/6623047361578b819ae44358fbbbf0b3fdeac9ff/research/x-c1/post-unit-q8-interface-2026-09-21/STATUS_DE.md); Schwellenledger [THRESHOLD_LEDGER.md](https://github.com/Waschtl904/objekt-x-programm/blob/6623047361578b819ae44358fbbbf0b3fdeac9ff/research/x-c1/post-unit-q8-interface-2026-09-21/THRESHOLD_LEDGER.md); Interface-Metadaten [META.yaml](https://github.com/Waschtl904/objekt-x-programm/blob/6623047361578b819ae44358fbbbf0b3fdeac9ff/research/x-c1/post-unit-q8-interface-2026-09-21/META.yaml). PROOF.md ist kein Ersatz für die beiden Teilbeweise."
+      ],
+      "depends_on": [
+        "C0-DIRECTED-FORM-SYSTEM",
+        "C1a-COUPLED-SPECTRAL-MEDIATOR"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "6623047361578b819ae44358fbbbf0b3fdeac9ff",
+      "canonical_proof": "research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_RAW_TD_O1_O4.md",
+      "proof_sha256": "bead3bad0dc85a91013101328dbeaede4b263062752abda56319dde73b446af4",
+      "negative_claim_boundary": "Kein No-Go. Der kanonische Basisbeweis bindet den vollständigen O5–O7-Nachtrag per SHA-256; geschlossen ist nur das rohe Kammerpaket für diese konkrete Operatorwahl. Die Defektschranke beweist keine Kontraktion.",
+      "does_not_claim": [
+        "Neue Terminalpositivität für A>1 oder O8-Abschluss.",
+        "||R_A||<=1, Gleichheit der T-/D-Transporte, ein gemeinsames V oder signierte Operatorkongruenz.",
+        "Positive korrigierte Transporte, lokale Quadratwurzel-Intertwinings oder O9-Abschluss.",
+        "q=8-Wall-Crossing rechts von A_8 oder O10-Abschluss.",
+        "Übernahme der 191D-Reduktion auf neue Horizonte ohne separaten analytischen Tail-/Kodimensionsbeweis.",
+        "Ein unbeschränkter/kofinaler Terminal-Cocycle oder Full C1-GEOM.",
+        "Ein globaler fensterunabhängiger Readout, Objekt X, globale Weil-Positivität oder RH.",
+        "Eine Umdeutung von P11 fixed-pair Strong Terminal in unbeschränkte C1-Kompatibilität."
+      ]
+    },
+    {
       "id": "P02-ADELIC-WEIL-AMPLITUDE-PORT",
       "title": "Adelic Weil amplitude port and Hermitian normalization",
       "mathematical_status": "AUTHOR_DERIVED",
@@ -1079,15 +1145,15 @@
     }
   },
   "current_integration_observation": {
-    "observed_at": "2026-09-21",
-    "main_sha": "f8228597eb014d276ab6226fc78cd9cc7d3a414a",
-    "integrated_research_branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
-    "integrated_research_head": "19e4630a7f0d4c8232f8ee81c4b483355ed2f505",
-    "reconciliation_merge": "f8228597eb014d276ab6226fc78cd9cc7d3a414a",
-    "ci_run_id": 35557056844,
+    "observed_at": "2026-09-23",
+    "main_sha": "c977848bea0651591a6373cae6485e380530f31a",
+    "integrated_research_branch": "research/first-chamber-o1-o7-proof-reconciliation-2026-09-22",
+    "integrated_research_head": "6623047361578b819ae44358fbbbf0b3fdeac9ff",
+    "reconciliation_merge": "526d2c25c906f3656582e46ca723fd8d65df8957",
+    "ci_run_id": 35816661299,
     "ci_run_attempt": 1,
-    "ci_head_sha": "f8228597eb014d276ab6226fc78cd9cc7d3a414a",
-    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/35557056844",
+    "ci_head_sha": "c977848bea0651591a6373cae6485e380530f31a",
+    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/35816661299",
     "ci_conclusion": "success",
     "mathematical_status_change": false
   }
