@@ -18,8 +18,13 @@ README- oder Linkkorrektur nicht zu einem mathematischen Re-Audit.
    hebt `verified_through` nicht automatisch an.
 3. `verified_research_snapshot.observed_branch_head`: später beobachteter
    Branch-Head; nur Abstammungsinformation.
-4. `registry_sync`: ungemergter Registry-/Dokumentationskandidat gegen die
-   gepinnte Baseline. `mathematical_review_changed` bleibt zwingend `false`.
+4. `registry_sync`: Registry-/Dokumentationskandidat oder gepinnte Provenienz
+   eines bereits integrierten Syncs. Bei `RESEARCH_BRANCH_UNMERGED` entspricht
+   die Basis der veröffentlichten Baseline. Bei `MERGED` bleiben die damalige
+   Basis und der finale Kandidat-Head erhalten; der Validator verlangt dessen
+   Abstammung in veröffentlichter Baseline und beobachtetem Main-Stand.
+   `mathematical_review_changed` bleibt zwingend `false`. Ein historischer
+   Branchname bezeichnet dabei keine lebende Abhängigkeit.
 5. `current_integration_observation`: zusätzliche datierte Git-/CI-Provenienz;
    ebenfalls keine mathematische Verifikation.
 

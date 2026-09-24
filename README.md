@@ -7,6 +7,7 @@
 > - Lesbarer aktueller Stand: [`00-uebersicht/CURRENT_STATE.md`](00-uebersicht/CURRENT_STATE.md)
 > - Nächste mathematische Gates: [`00-uebersicht/NEXT_GATES.md`](00-uebersicht/NEXT_GATES.md)
 > - Konsolidierte Ergebnisübersicht: [`00-uebersicht/SURVIVOR_REGISTRY.md`](00-uebersicht/SURVIVOR_REGISTRY.md)
+> - Branch-Konsolidierung: [Familienprüfung der 58 Unique-Branches](00-uebersicht/archiv/UNIQUE_BRANCH_FAMILY_REVIEW_2026-09-24.md)
 >
 > Historische Status- und Navigationsfassungen bleiben als Provenienz erhalten und dürfen nicht mit der aktuellen Forschungsfront verwechselt werden.
 

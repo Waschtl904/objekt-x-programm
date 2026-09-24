@@ -66,8 +66,21 @@ class StructureTests(unittest.TestCase):
             rs.validate_structure(self.state)
 
     def test_registry_sync_base_must_match_published_baseline(self):
+        self.state['registry_sync']['integration_status'] = 'RESEARCH_BRANCH_UNMERGED'
         self.state['registry_sync']['base_sha'] = '0' * 40
         with self.assertRaisesRegex(rs.StateError, 'must equal published baseline'):
+            rs.validate_structure(self.state)
+
+    def test_merged_sync_is_rendered_as_provenance(self):
+        self.state['registry_sync']['integration_status'] = 'MERGED'
+        rs.validate_structure(self.state)
+        view = rs.render(self.state)[rs.GENERATED[0]].decode('utf-8')
+        self.assertIn('## Registry-Sync-Provenienz', view)
+        self.assertNotIn('## Registry-Sync-Kandidat', view)
+
+    def test_registry_sync_rejects_unknown_integration_status(self):
+        self.state['registry_sync']['integration_status'] = 'ASSUMED_MERGED'
+        with self.assertRaisesRegex(rs.StateError, 'Invalid registry sync integration'):
             rs.validate_structure(self.state)
 
     def test_open_result_cannot_be_a_survivor(self):
@@ -161,7 +174,9 @@ class StructureTests(unittest.TestCase):
                     self.state['current_integration_observation']['main_sha'],
                     self.state['current_integration_observation']['integrated_research_head']):
             self.assertIn(sha, current)
-        self.assertIn('Registry-Sync-Kandidat', current)
+        sync_title = ('Registry-Sync-Provenienz' if self.state['registry_sync']['integration_status'] == 'MERGED'
+                      else 'Registry-Sync-Kandidat')
+        self.assertIn(sync_title, current)
         self.assertIn('keine mathematische Neuverifikation', current)
 
 
@@ -265,6 +280,7 @@ class RepositoryTests(unittest.TestCase):
         state['registry_sync']['base_sha'] = baseline
         state['registry_sync']['candidate_head_at_generation'] = integrated
         state['registry_sync']['mathematical_review_changed'] = False
+        state['registry_sync']['integration_status'] = 'RESEARCH_BRANCH_UNMERGED'
         state['current_integration_observation'].update(
             main_sha=integrated, integrated_research_branch='fixture-research',
             integrated_research_head=frontier, reconciliation_merge=integrated,
@@ -453,6 +469,18 @@ class RepositoryTests(unittest.TestCase):
         self.put('00-uebersicht/NEW_CURRENT.md', b'Alternate current frontier.\n')
         with self.assertRaisesRegex(rs.StateError, 'Unclassified current/active'):
             rs.validate(self.root)
+
+    def test_merged_sync_cannot_point_outside_published_baseline(self):
+        self.s['registry_sync']['integration_status'] = 'MERGED'
+        self.save_state()
+        with self.assertRaisesRegex(rs.StateError, 'Merged registry sync must be included in published baseline'):
+            rs.validate(self.root)
+
+    def test_merged_sync_accepts_a_pinned_integrated_head(self):
+        self.s['registry_sync']['integration_status'] = 'MERGED'
+        self.s['registry_sync']['candidate_head_at_generation'] = self.s['published_baseline']['sha']
+        self.save_state()
+        rs.validate(self.root)
 
     def test_frozen_packages_need_no_meta(self):
         self.assertFalse((self.root / 'research/frozen/META.yaml').exists())

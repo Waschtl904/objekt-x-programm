@@ -205,8 +205,9 @@ def validate_structure(s):
     string(sync['branch'], 'registry sync branch')
     require(isinstance(sync['base_sha'], str) and SHA.fullmatch(sync['base_sha']), 'Invalid registry sync base SHA')
     require(isinstance(sync['candidate_head_at_generation'], str) and SHA.fullmatch(sync['candidate_head_at_generation']), 'Invalid registry sync candidate SHA')
-    require(sync['base_sha'] == base['sha'], 'Registry sync base must equal published baseline')
-    require(sync['integration_status'] == 'RESEARCH_BRANCH_UNMERGED', 'Registry sync must remain unmerged until integration')
+    require(sync['integration_status'] in INTEGRATION, 'Invalid registry sync integration status')
+    if sync['integration_status'] == 'RESEARCH_BRANCH_UNMERGED':
+        require(sync['base_sha'] == base['sha'], 'Registry sync base must equal published baseline')
     require(sync['head_policy'] == 'OBSERVED_CANDIDATE_NOT_CURRENT_HEAD', 'Registry sync candidate must be an observed snapshot, not a current-HEAD claim')
     require(sync['mathematical_review_changed'] is False, 'Registry sync cannot silently change mathematical review status')
     string(sync['meaning'], 'registry sync meaning')
@@ -369,7 +370,7 @@ def render(s):
                 'Reconciliation-Merge: ' + commit_link(s, o['reconciliation_merge']) + '.',
                 'Integrations-CI: [' + str(o['ci_run_id']) + '](' + o['ci_url'] + '), Versuch ' + str(o['ci_run_attempt']) + ', **' + o['ci_conclusion'] + '** auf ' + commit_link(s, o['ci_head_sha']) + '.',
                 '**Diese Provenienz belegt Integration/CI, keine mathematische Neuverifikation.**', '']
-    current += ['## Registry-Sync-Kandidat', '',
+    current += ['## Registry-Sync-Provenienz' if sync['integration_status'] == 'MERGED' else '## Registry-Sync-Kandidat', '',
                 'Branch `' + sync['branch'] + '` gegen Basis ' + commit_link(s, sync['base_sha']) + '.',
                 'Beobachteter Kandidat-Head bei Registererzeugung: ' + commit_link(s, sync['candidate_head_at_generation']) + '.',
                 'Integration: ' + sync['integration_status'] + '; mathematische Review-Änderung: ' + str(sync['mathematical_review_changed']).lower() + '.',
@@ -449,6 +450,9 @@ def validate(root, base_ref=None):
     require(ancestor(root, s['metadata_policy']['enforced_after'], s['verified_research_snapshot']['verified_through']), 'Metadata enforcement anchor cannot move beyond verified_through')
     require(ancestor(root, s['verified_research_snapshot']['verified_through'], s['verified_research_snapshot']['observed_branch_head']), 'observed_branch_head must descend from verified_through')
     require(ancestor(root, s['registry_sync']['base_sha'], s['registry_sync']['candidate_head_at_generation']), 'Registry sync candidate must descend from its declared base')
+    if s['registry_sync']['integration_status'] == 'MERGED':
+        require(ancestor(root, s['registry_sync']['candidate_head_at_generation'], s['published_baseline']['sha']), 'Merged registry sync must be included in published baseline')
+        require(ancestor(root, s['registry_sync']['candidate_head_at_generation'], s['current_integration_observation']['main_sha']), 'Merged registry sync must be included in observed main')
     refs = [s['authority_roles'][key] for key in ('definition', 'review_rules')]
     for r in s['results']:
         refs.append({'commit': r['canonical_commit'], 'path': r['canonical_proof'], 'sha256': r['proof_sha256']})
