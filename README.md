@@ -1,150 +1,282 @@
 > [!NOTE]
 > **Aktiver Repository-Einstieg.**
-> Aktueller Forschungsstand: [CURRENT_STATE.md](00-uebersicht/CURRENT_STATE.md).
-> Nächste Beweisziele: [NEXT_GATES.md](00-uebersicht/NEXT_GATES.md).
-> Operative Statusquelle: [RESEARCH_STATE.yaml](00-uebersicht/RESEARCH_STATE.yaml).
-> Die unten ausdrücklich auf den 14. September 2026 datierten Abschnitte sind historische Einordnung.
-> Historische README-Fassung: [gepinntes Original](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/README.md).
+>
+> Diese README dient der Orientierung. Sie ist **keine mathematische Beweis- oder Statusautorität**.
+>
+> - Kanonischer operativer Status: [`00-uebersicht/RESEARCH_STATE.yaml`](00-uebersicht/RESEARCH_STATE.yaml)
+> - Lesbarer aktueller Stand: [`00-uebersicht/CURRENT_STATE.md`](00-uebersicht/CURRENT_STATE.md)
+> - Nächste mathematische Gates: [`00-uebersicht/NEXT_GATES.md`](00-uebersicht/NEXT_GATES.md)
+> - Konsolidierte Ergebnisübersicht: [`00-uebersicht/SURVIVOR_REGISTRY.md`](00-uebersicht/SURVIVOR_REGISTRY.md)
+>
+> Historische Status- und Navigationsfassungen bleiben als Provenienz erhalten und dürfen nicht mit der aktuellen Forschungsfront verwechselt werden.
 
 # Objekt-X-Programm
 
-*Ein lakatosianisches Forschungsjournal zur Riemannschen Hypothese.*
+*Ein langfristiges mathematisches Forschungsprogramm zur Riemannschen Hypothese.*
 
-> **Stand: 14. September 2026.**  
-> COMMON-JUMP liefert die gemeinsame Prime-/archimedische Featurearchitektur. Für `a=1` reduzieren rigorose Fourier-, Prolate- und Schur-Schranken den offenen fixed-window Satz kanonisch auf höchstens `1104` Dimensionen. Zusätzlich existiert ein orthonormaler Legendre-Zertifikatsbackend mit bereits geschlossenem Tail/Cross- und Quadraturbudget. Objekt X und RH bleiben offen.
+Objekt X bezeichnet das Ziel einer kompatiblen positiven Geometrie für die relevante Weil-Form-Struktur.
+
+Das Programm arbeitet schrittweise über lokale positive Räume, gekoppelte Operatoren, Transportabbildungen und deren Kompatibilität. Der gegenwärtige Schwerpunkt liegt auf der Fortsetzung der bereits konstruierten Fixed-Horizon-Geometrie über den Horizont `a=1` hinaus.
+
+**Objekt X ist noch nicht vollständig konstruiert.  
+Globale Weil-Positivität ist nicht bewiesen.  
+Die Riemannsche Hypothese bleibt offen.**
+
+---
+
+## Aktueller Forschungsstand
+
+Für den festen Horizont ist die C1-Kette bis `a=1` konstruiert:
+
+```text
+C1a → C1b → kompakter Defekt → finite Schurreduktion
+    → Terminalpositivität bei a=1
+    → kompatibler positiver C1-Abschluss
+```
+
+Der aktuelle Status dieser Bausteine ist `AUTHOR_DERIVED`; ihre genauen Scopes, Beweisanker und Reviewgrenzen stehen in [`RESEARCH_STATE.yaml`](00-uebersicht/RESEARCH_STATE.yaml).
+
+Zusätzlich ist für die erste Kammer
+
+```math
+1 \le A \le B \le C \le A_8,
+\qquad
+A_8=\frac{\log 8}{2},
+```
+
+das rohe T/D-Transport- und Cocycle-Paket **O1–O7** konstruiert:
+
+```text
+FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7
+AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+```
+
+Dieses Resultat ist ausdrücklich auf die erste geschlossene Kammer beschränkt.
+
+Es beweist **keine** neue Terminalpositivität für `A>1`.
+
+---
+
+## Nächster lokaler Gate: O8
+
+Der nächste mathematische Hauptschritt ist
+
+```text
+FIRST-CHAMBER-O8-TERMINAL-POSITIVITY
+```
+
+Für einen neuen Terminal
+
+```math
+1<A\le A_8
+```
+
+ist eine echte positive Reserve zu beweisen:
+
+```math
+G_A = I-R_A^*R_A \ge \eta_A I,
+\qquad
+\eta_A>0.
+```
+
+Die bisherige Schranke
+
+```math
+\|R_A\|\le\sqrt{90}
+```
+
+ist **keine Kontraktionsaussage** und liefert O8 nicht.
+
+Insbesondere darf die frühere `191D`-Reduktion nicht ohne einen neuen analytischen Tail-/Kodimensionsbeweis auf `A>1` übertragen werden.
+
+Vollständige Obligationen:
+[`00-uebersicht/NEXT_GATES.md`](00-uebersicht/NEXT_GATES.md)
+
+---
+
+## Weitere offene Gates
+
+Nach beziehungsweise neben O8 bleiben insbesondere offen:
+
+### O9 — Positive corrected transport
+
+Konstruktion der korrigierten positiven Räume und Transporte einschließlich
+
+```text
+Quotientenkompatibilität
+isometrischer/beschränkter U^X-Transporte
+Quellintertwining
+Cocycle
+```
+
+ohne ein lokales Quadratwurzel-Intertwining vorauszusetzen.
+
+### O10 — q=8 wall crossing
+
+Strikt rechts von
+
+```math
+A_8=\frac{\log 8}{2}
+```
+
+wird `q=8` aktiv.
+
+Dafür müssen neue gekoppelte Rohoperatoren und beide Wandtransporte konstruiert werden.
+
+Am Endpunkt `A=A_8` bleibt `q=8` wegen der strikten Aktivierungsbedingung inaktiv.
+
+### Unbeschränkter Horizont
+
+Die bisherige positive C1-Geometrie ist ein **Fixed-Horizon-Resultat**.
+
+Eine kompatible unbeschränkte oder kofinale Horizontfamilie bleibt offen.
+
+### Globale Weil-Testklasse
+
+Auch nach einer künftigen unbeschränkten C1-Geometrie muss die exakte Rückbindung an die vollständige geeignete Weil-Testklasse und einen fensterunabhängigen globalen Readout noch bewiesen werden.
+
+---
+
+## Status-Firewall
+
+Folgende Schlussfolgerungen sind ausdrücklich **nicht zulässig**:
+
+```text
+CI grün
+    ≠ mathematisch unabhängig geprüft
+
+Merge
+    ≠ Satzpromotion
+
+O1–O7
+    ≠ O8-Terminalpositivität
+
+Fixed-Horizon-Positivität
+    ≠ unbeschränkte C1-Geometrie
+
+C1-Geometrie
+    ≠ globale Weil-Positivität
+
+lokale oder finite Zertifikate
+    ≠ Riemannsche Hypothese
+```
+
+Statusänderungen müssen über die dokumentierten mathematischen Beweis- und Auditregeln erfolgen.
+
+---
 
 ## Hier beginnen
 
-1. [CURRENT-FRONT](CURRENT-FRONT.md)
-2. [A1 Osipov N1102 reduction](audits/P11_A1_OSIPOV1102_REDUCTION_2026-09-14.md)
-3. [A1 Omega1551 reduction](audits/P11_A1_OMEGA1551_REDUCTION_2026-09-13.md)
-4. [A1 Legendre quadrature budget](audits/P11_A1_LEGENDRE_QUADRATURE_BUDGET_2026-09-13.md)
-5. [A1 Legendre finite backend](audits/P11_A1_LEGENDRE_FINITE_CERTIFICATE_2026-09-13.md)
-6. [Roadmap](00-uebersicht/FORSCHUNGS_ROADMAP_AKTUELL.md)
+Für den aktuellen Stand in dieser Reihenfolge lesen:
 
-## Kanonische `a=1`-Reduktion
+1. [`00-uebersicht/CURRENT_STATE.md`](00-uebersicht/CURRENT_STATE.md)  
+   Lesbare generierte Übersicht des registrierten Forschungsstands.
 
-Exakt gilt
+2. [`00-uebersicht/NEXT_GATES.md`](00-uebersicht/NEXT_GATES.md)  
+   Aktuelle offene mathematische Gates und ihre Firewalls.
 
-```math
-q_1(v)=\int_{\mathbb R}m_1(\xi)|\widehat v(\xi)|^2d\xi.
-```
+3. [`00-uebersicht/RESEARCH_STATE.yaml`](00-uebersicht/RESEARCH_STATE.yaml)  
+   Kanonische operative Statusquelle mit Scopes, Abhängigkeiten und Beweisankern.
 
-Exact-Head Arb zertifiziert
+4. [`00-uebersicht/SURVIVOR_REGISTRY.md`](00-uebersicht/SURVIVOR_REGISTRY.md)  
+   Konsolidierte Übersicht der weiterverwendbaren mathematischen Resultate.
 
-```math
-m_1(\xi)>0.1\quad(|\xi|\ge1551),
-\qquad
-\|r\|_\infty<12.
-```
+5. [`00-uebersicht/OBJEKT_X_ARCHITECTURE.md`](00-uebersicht/OBJEKT_X_ARCHITECTURE.md)  
+   Architektur und Stellung der lokalen Konstruktionen auf dem Weg zu Objekt X.
 
-Für die Prolate-Konzentration importieren wir Osipov Theorem 4:
+---
 
-```math
-|\lambda_n^F|\le
-\frac{\sqrt\pi\,c^n(n!)^2}{(2n)!\Gamma(n+3/2)},
-\qquad
-\mu_n=\frac{c}{2\pi}|\lambda_n^F|^2.
-```
+## Aktuelle Hauptfronten
 
-Mit den vorab festgelegten Werten
+Das Programm hat zwei getrennte langfristige Fronten.
+
+### 1. Unbeschränkte Horizonterweiterung und kompatibler Transport
 
 ```text
-c=1551,
-N=1102
+UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION
+OPEN
 ```
 
-zertifiziert der 256-bit-Arb-Gate
+Aktueller lokaler Einstieg: **O8**.
 
-```math
-\boxed{\mu_{1102}<10^{-43}},
-\qquad
-\boxed{\tau_{1102}>0.099},
-```
+Danach bleiben unter anderem O9, O10, erneuerbare Profilreserven und unbeschränkte Horizontkompatibilität zu schließen.
 
-und
-
-```math
-\boxed{\text{Schur penalty}<1.5\times10^{-40}.}
-```
-
-Der tatsächliche zertifizierte Penalty-Upper-Bound liegt bei etwa `1.22873e-40`.
-
-Damit genügt kanonisch nur noch
-
-```math
-\boxed{(L_1)_{RR}\succeq3\times10^{-39}I}
-```
-
-auf höchstens
+### 2. Globale Weil-Testklasse und Readout
 
 ```text
-1104 total = 552 even + 552 odd.
+FULL-WEIL-TEST-CLASS
+OPEN
 ```
 
-Dieser finite Satz ist noch offen.
+Diese Front setzt eine ausreichend kompatible globale beziehungsweise kofinale Geometrie voraus und ist von der lokalen Fixed-Horizon-Positivität zu unterscheiden.
 
-## Alternative orthonormale Legendre-Route
+---
 
-Für
+## Forschungs- und Reviewstatus
 
-```math
-T_n(x)=\sqrt{n+\frac12}P_n(x),
-\qquad n=0,\ldots,2149,
-```
-
-ist die Basis orthonormal. Die alternative Route reduziert auf
+Das Repository unterscheidet insbesondere zwischen:
 
 ```text
-1075 even + 1075 odd
+AUTHOR_DERIVED
+EXTERNAL_REVIEW_OPEN
+SCOPED_GREEN
+OPEN
+HISTORICAL_PROVENANCE
 ```
 
-mit predeclared target
+Die genaue Bedeutung und der jeweilige Scope stehen im kanonischen Register.
 
-```math
-10^{-35}I.
-```
+Historische Wörter wie `GREEN`, `CLOSED`, `PASS` oder ähnliche Statusangaben in älteren Dateien gelten ausschließlich im damaligen Kontext und werden nicht automatisch auf den heutigen Forschungsstand übertragen.
 
-Der Legendre-Tail/Cross ist zertifiziert. Zusätzlich beweist Exact-Head Arb für jeden Paritätsblock
+---
 
-```math
-\boxed{\|K-\widetilde K\|_{op}<4\times10^{-38}.}
-```
+## Historische Provenienz
 
-Diese Route ist größer als die kanonische PSWF-/Osipov-Reduktion, aber basisexplizit und besitzt Gram `I`.
+Frühere Arbeitsstände, alternative Beweisfassungen, Audits, No-Gos und technische Zwischenstufen werden bewusst erhalten.
 
-## Was nach Durchlauf A noch fehlt
+Historisches Inhaltsregister:
 
-Nur endliche Operatorpositivität:
+[`00-uebersicht/archiv/HISTORICAL_CONTENT_REGISTER_2026-09-23.md`](00-uebersicht/archiv/HISTORICAL_CONTENT_REGISTER_2026-09-23.md)
 
-- kanonisch: höchstens `552 x 552` pro Parität gegen den Shift `3e-39`;
-- alternativ: zwei orthonormale Legendre-Blöcke `1075 x 1075` gegen `1e-35`;
-- jeweils mit rigoroser Matrixassemblierung, Special-function/Rounding-Enclosures und verifizierter LDL/Cholesky-/Inertia-Prüfung.
+Entscheidungsmatrix der erfassten historischen Fassungen:
 
-Ein Pivotintervall mit `0` ist **undecided**, nicht positiv.
+[`00-uebersicht/archiv/HISTORICAL_CONTENT_DECISION_MATRIX_2026-09-23.md`](00-uebersicht/archiv/HISTORICAL_CONTENT_DECISION_MATRIX_2026-09-23.md)
 
-## Status
+Diese Dokumente dienen der Provenienz.
 
-```text
-COMMON-JUMP / completion / parity             ✓[M]
-Omega1551 multiplier / bounded remainder      ✓[K/M]
-Osipov N=1102 finite reduction                ✓[K/M]
-canonical <=1104-dimensional finite gate      ?[O]
-Legendre orthonormal backend M=2150           ✓[K/M]
-Legendre quadrature operator error <4e-38     ✓[K/M]
-Legendre final finite PSD                     ?[O]
-certified a=1 completion                      ?[O]
-all-a NP-GAP                                  ?[O]
-forward Object-X architecture                 ✓[M]_part
-full positive Object-X / RH                   ?[O]
-```
+Sie erzeugen **keinen neuen mathematischen Satzstatus**.
 
-## Independence
+Die frühere Root-README vom 14. September 2026 bleibt ebenfalls gepinnt erhalten:
 
-Objekt X is an independent research project. External publications are cited in the mathematical documents where their results or benchmarks are used. Such citations do not imply collaboration, affiliation, endorsement, or shared responsibility.
+[Historische README](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/README.md)
 
-Bibliographic corrections concerning historical repository snapshots are preserved in the relevant audit and provenance records. They do not modify any mathematical claim, proof status, registry entry, or the working definition of Objekt X.
+---
 
-## License
+## Arbeitsprinzip
 
-Original repository content is licensed under [CC BY 4.0](LICENSE), unless otherwise stated. External publications and third-party material remain subject to their respective rights and licenses.
+Das Projekt folgt einem fail-closed Forschungsstil:
+
+- Behauptungen werden auf ihren ausdrücklich bewiesenen Scope begrenzt.
+- Numerische und computerassistierte Zertifikate werden von analytischen Aussagen getrennt.
+- CI und Reproduzierbarkeit ersetzen keinen unabhängigen mathematischen Audit.
+- No-Gos, Gegenbeispiele und fehlgeschlagene Konstruktionen werden als Forschungswissen bewahrt.
+- Neue Resultate dürfen frühere Resultate ergänzen oder einschränken, aber nicht stillschweigend überschreiben.
+- Globale Aussagen werden nicht aus lokalen oder Fixed-Horizon-Resultaten extrapoliert.
+
+---
+
+## Unabhängigkeit
+
+Objekt X ist ein unabhängiges Forschungsprojekt.
+
+Externe Publikationen werden dort zitiert, wo ihre Resultate, Methoden oder Vergleichswerte verwendet werden. Solche Zitate bedeuten keine Zusammenarbeit, institutionelle Verbindung, Zustimmung oder gemeinsame Verantwortung.
+
+Bibliographische Korrekturen an historischen Repository-Ständen verändern keine mathematische Aussage und keinen Forschungsstatus, sofern dies nicht ausdrücklich in einem separaten mathematischen Audit begründet wird.
+
+---
+
+## Lizenz
+
+Originale Repository-Inhalte stehen, soweit nicht anders angegeben, unter [`CC BY 4.0`](LICENSE).
+
+Externe Publikationen und Drittmaterial unterliegen ihren jeweiligen Rechten und Lizenzen.
