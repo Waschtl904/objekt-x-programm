@@ -583,3 +583,7 @@ PR #151 bleibt eine alternative, nicht gemergte Darstellung. Seine Archivierung 
 - Abschlussprotokoll MERGED-03R SHA-256: `4eed6f7ef15a411398de7470334e74e8c6a517ab758abf4f7f36dc72406caa36`
 - Historischer Manifest-Merge (#155): `c977848bea0651591a6373cae6485e380530f31a`
 - Der konkrete Mergecommit dieses Live-Manifests entsteht erst bei Integration. Er wird anschließend in die unverändert geplanten Tag-Annotationen aufgenommen; das Manifest enthält dafür keinen erfundenen Selbst-Hash.
+
+## Historische Zwischenfassungen
+
+Das [historische Inhaltsregister](archiv/HISTORICAL_CONTENT_REGISTER_2026-09-23.md) erschließt 138 Zwischenfassungen aus 17 Branches über feste Commit-/Blobanker und dokumentierte Nachfolger. Die [Entscheidungsmatrix](archiv/HISTORICAL_CONTENT_DECISION_MATRIX_2026-09-23.md) ordnet sie als 58 A / 80 B / 0 C im Inhaltsvergleich ein. Beide Dokumente bewahren historische Fassungen als `NOT_CANONICAL / HISTORICAL_PROVENANCE`; sie erteilen keine Löschfreigabe und keine mathematische Statuspromotion.
