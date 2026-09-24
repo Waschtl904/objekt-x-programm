@@ -1,0 +1,198 @@
+# Historische Fassungen — inhaltlicher Audit und Entscheidungsmatrix
+
+**Historische Inhaltsentscheidungen — sämtliche weiteren Archivlöschungen bleiben gesperrt.**
+
+Die technische Erhaltung wurde im ersten Audit geprüft. Diese Triage ordnet alle 138 Fassungen aus 17 Branches anhand ihres Text-/Codeverlaufs und konkreter Nachfolger ein. Sie ist keine unabhängige mathematische Begutachtung und erzeugt keinen neuen Satzstatus.
+
+Ergebnis: **A 58 / B 80 / C 0**. A = Registerlink genügt; B = Register plus ausdrücklicher Nachfolger-/Korrekturhinweis; C = tatsächlicher Inhaltstransfer nötig. Es wurde kein zusätzlicher mathematischer Transferfall C belegt. Diese Aussage ist auf den beschriebenen Inhaltsvergleich begrenzt.
+
+**Technischer Integrationsblocker V060 behoben:** [PR #158](https://github.com/Waschtl904/objekt-x-programm/pull/158) ist im Main-Mergecommit `69bbdb86ca475cb375b3ec2163fade5398c1d23e` integriert. Der reparierte Blob ist `8787942e558de457d0ff1498b24e5f2250ed79fa`. Ausschließlich drei wörtliche `\n` zwischen `print`-Anweisungen wurden durch echte Zeilenumbrüche ersetzt; Syntaxprüfung und vollständiger Prüferlauf bestanden. Formeln, Zahlen, Prüfbedingungen und Ausgabetexte blieben unverändert. Der [V060-Nachfolger](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v060) zeigt auf diesen integrierten Commit/Blob; keine neue mathematische Aussage oder Statuspromotion.
+
+## Wichtige Registerkorrekturen
+
+- **Objekt-X-Reklassifizierung (V001): B.** Die aktuelle Arbeitsdefinition beschreibt die historische Fünfschichtarchitektur und die Route-Beschränkung von No-Gos bereits ausdrücklich. Der Registereintrag macht zusätzlich die zurückgenommene ausführliche Zwischenfassung sichtbar und nennt diesen Nachfolger.
+- **SW1 A2 (V079–V081): B.** Ein bloßer beschränkter Koordinatenisomorphismus erhält nicht automatisch die Positivität in der gewöhnlichen Produktnorm. Der aktuelle Text enthält diesen Vorbehalt; die Altformel darf nicht als gültige Alternative erscheinen.
+- **SW1 Stage 5B / Stage 11: B.** Die historischen Fassungen enthalten zu weite Gültigkeitsbereiche. Die Nachfolger unterscheiden die m=4-Wall bzw. äußere Zone und innere KNF-Samples. Diese Fassungen sind als SUPERSEDED markiert.
+- **NP-Dual-Completion (V039): B.** Der Nachfolger schreibt den strikten positiven Rand mu ausdrücklich in die Completion-Äquivalenz und behandelt den semidefiniten Fall separat.
+- **PR #151: separat B.** O5–O7 ist bytegleich übernommen; O1–O4 nach exakt zwei relativen Linkänderungen. Status-/Metadaten werden nicht kopiert; AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN und die Löschsperre bleiben bestehen.
+- **Historische Navigation bleibt historische Navigation.** Mehrere Nachfolger in main tragen selbst HISTORICAL SNAPSHOT. Sie sind Dokumentnachfolger, keine heutige Frontautorität; diese liegt bei RESEARCH_STATE.yaml.
+
+## Die 17 Branches
+
+| Familie | Branch | Fassungen | A | B | C |
+|---|---|---:|---:|---:|---:|
+| Objekt-X / Governance / Roadmap | `docs/object-x-consolidation-2026-08-26` | 7 | 2 | 5 | 0 |
+| Objekt-X / Governance / Roadmap | `docs/object-x-research-roadmap-2026-08-26` | 1 | 0 | 1 | 0 |
+| Objekt-X / Governance / Roadmap | `docs/sync-current-front-pr49-terminal` | 3 | 2 | 1 | 0 |
+| Objekt-X / Governance / Roadmap | `governance/active-front-pr61-head2` | 1 | 1 | 0 | 0 |
+| P11 / A1 / NP | `promotion/ht-a4b-sw1-m-record` | 8 | 5 | 3 | 0 |
+| P11 / A1 / NP | `research/a1-highfreq-prolate-tail-2026-09-13` | 5 | 0 | 5 | 0 |
+| P11 / A1 / NP | `research/a1-osipov1102-finite-reduction-2026-09-14` | 7 | 0 | 7 | 0 |
+| PR #151 — separat | `research/first-chamber-raw-td-cocycle-o1-o7-2026-09-22` | 5 | 0 | 5 | 0 |
+| P11 / A1 / NP | `research/np-dual-completion-screw-audit-2026-09-13` | 2 | 1 | 1 | 0 |
+| P11 / A1 / NP | `research/np-gap-review-corrections-prime-overlap-2026-09-13` | 7 | 0 | 7 | 0 |
+| SW1 | `research/sw1-2tp` | 5 | 1 | 4 | 0 |
+| SW1 | `research/sw1-a10-finite-crossgram` | 70 | 40 | 30 | 0 |
+| SW1 | `research/sw1-a8-midpoint-degeneracy-fix` | 3 | 0 | 3 | 0 |
+| SW1 | `research/sw1-awi` | 6 | 1 | 5 | 0 |
+| SW1 | `research/sw1-bl7` | 1 | 0 | 1 | 0 |
+| SW1 | `research/sw1-knf` | 2 | 0 | 2 | 0 |
+| Objekt-X / Governance / Roadmap | `roadmap/canonical-research-roadmap-v2` | 5 | 5 | 0 | 0 |
+
+## Entscheidung pro Fassung
+
+Die IDs entsprechen unverändert dem ersten Audit. Vollständige Commit-/Blob-/Taganker und die ausformulierten Hinweise stehen im auditierten Register. „SUPERSEDED“ bezeichnet eine dokumentierte Text-/Code-Nachfolge, keine pauschale unabhängige Widerlegung.
+
+| ID | Fassung | Historische Kennzeichnung | Entscheidung |
+|---|---|---|---|
+| [V001](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v001) | `ebene-XVI-objekt-x.md` | SCOPE_HISTORY | B |
+| [V002](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v002) | `OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md` | SCOPE_HISTORY | B |
+| [V003](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v003) | `P11_R32_STATUS_2026-08-25.md` | SCOPE_HISTORY | B |
+| [V004](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v004) | `AKTUELLER_STAND.md` | SCOPE_HISTORY | A |
+| [V005](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v005) | `STATUS.md` | SCOPE_HISTORY | B |
+| [V006](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v006) | `README.md` | SCOPE_HISTORY | A |
+| [V007](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v007) | `OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md` | SCOPE_HISTORY | B |
+| [V008](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v008) | `FORSCHUNGS_ROADMAP_2026-08-26.md` | SCOPE_HISTORY | B |
+| [V009](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v009) | `FORSCHUNGS_ROADMAP_2026-08-26.md` | SCOPE_HISTORY | A |
+| [V010](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v010) | `ACTIVE_THEOREM_REGISTRY.md` | SCOPE_HISTORY | B |
+| [V011](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v011) | `CURRENT-FRONT.md` | SCOPE_HISTORY | A |
+| [V012](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v012) | `ACTIVE_FRONT.yaml` | SCOPE_HISTORY | A |
+| [V013](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v013) | `CURRENT-FRONT.md` | HISTORICAL_DRAFT | A |
+| [V014](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v014) | `ACTIVE_THEOREM_REGISTRY.md` | HISTORICAL_DRAFT | A |
+| [V015](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v015) | `CURRENT-FRONT.md` | HISTORICAL_DRAFT | A |
+| [V016](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v016) | `CURRENT-FRONT.md` | SCOPE_HISTORY | A |
+| [V017](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v017) | `ACTIVE_THEOREM_REGISTRY.md` | SCOPE_HISTORY | B |
+| [V018](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v018) | `ACTIVE_THEOREM_REGISTRY.md` | SCOPE_HISTORY | B |
+| [V019](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v019) | `CURRENT-FRONT.md` | SCOPE_HISTORY | A |
+| [V020](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v020) | `P11_R32_HT_A4B_SW1_M_PROMOTION.md` | AUDIT_VARIANT | B |
+| [V021](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v021) | `a1-highfreq-multiplier-arb.yml` | TECHNICAL_VARIANT | B |
+| [V022](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v022) | `check_a1_highfreq_multiplier_arb.py` | TECHNICAL_VARIANT | B |
+| [V023](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v023) | `a1-highfreq-multiplier-arb.yml` | TECHNICAL_VARIANT | B |
+| [V024](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v024) | `a1-highfreq-multiplier-arb.yml` | TECHNICAL_VARIANT | B |
+| [V025](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v025) | `check_a1_highfreq_multiplier_arb.py` | TECHNICAL_VARIANT | B |
+| [V026](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v026) | `README.md` | SCOPE_HISTORY | B |
+| [V027](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v027) | `EINSTIEGSPROMPT.md` | SCOPE_HISTORY | B |
+| [V028](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v028) | `OFFENE_PROBLEME.md` | SCOPE_HISTORY | B |
+| [V029](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v029) | `DAG.md` | SCOPE_HISTORY | B |
+| [V030](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v030) | `FORSCHUNGS_ROADMAP_AKTUELL.md` | SCOPE_HISTORY | B |
+| [V031](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v031) | `AKTUELLER_STAND.md` | SCOPE_HISTORY | B |
+| [V032](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v032) | `CURRENT-FRONT.md` | SCOPE_HISTORY | B |
+| [V033](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v033) | `STATUS_DE.md` | SCOPE_HISTORY | B |
+| [V034](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v034) | `META.yaml` | SCOPE_HISTORY | B |
+| [V035](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v035) | `PROOF.md` | SUPERSEDED | B |
+| [V036](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v036) | `STATUS_DE.md` | SCOPE_HISTORY | B |
+| [V037](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v037) | `PROOF_OBLIGATIONS.md` | SCOPE_HISTORY | B |
+| [V038](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v038) | `.np-dual-placeholder` | HISTORICAL_DRAFT | A |
+| [V039](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v039) | `P11_NP_DUAL_COMPLETION_SCREW_AUDIT_2026-09-13.md` | SUPERSEDED | B |
+| [V040](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v040) | `README.md` | SCOPE_HISTORY | B |
+| [V041](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v041) | `EINSTIEGSPROMPT.md` | SCOPE_HISTORY | B |
+| [V042](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v042) | `OFFENE_PROBLEME.md` | SCOPE_HISTORY | B |
+| [V043](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v043) | `DAG.md` | SCOPE_HISTORY | B |
+| [V044](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v044) | `FORSCHUNGS_ROADMAP_AKTUELL.md` | SCOPE_HISTORY | B |
+| [V045](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v045) | `AKTUELLER_STAND.md` | SCOPE_HISTORY | B |
+| [V046](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v046) | `CURRENT-FRONT.md` | SCOPE_HISTORY | B |
+| [V047](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v047) | `P11_R32_SW1_2TP_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V048](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v048) | `P11_R32_SW1_2TP_CANDIDATE.md` | HISTORICAL_DRAFT | B |
+| [V049](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v049) | `certify_sw1_2tp_ledger.py` | TECHNICAL_VARIANT | B |
+| [V050](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v050) | `P11_R32_SW1_2TP_CANDIDATE.md` | HISTORICAL_DRAFT | B |
+| [V051](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v051) | `P11_R32_SW1_2TP_CANDIDATE.md` | HISTORICAL_DRAFT | B |
+| [V052](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v052) | `P11_R32_SW1_A10_FINITE_CROSSGRAM_FIBER_CANDIDATE.md` | AUDIT_VARIANT | B |
+| [V053](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v053) | `P11_R32_SW1_A10_FINITE_CROSSGRAM_FIBER_CANDIDATE.md` | AUDIT_VARIANT | B |
+| [V054](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v054) | `P11_R32_SW1_A10_FINITE_CROSSGRAM_FIBER_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V055](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v055) | `P11_R32_SW1_A10_FINITE_CROSSGRAM_FIBER_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V056](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v056) | `certify_sw1_a10_hub_bridge.py` | TECHNICAL_VARIANT | B |
+| [V057](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v057) | `P11_R32_SW1_A10_FINITE_CROSSGRAM_FIBER_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V058](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v058) | `P11_R32_SW1_A9_KNF_SEPARATOR_STABILITY_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V059](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v059) | `P11_R32_SW1_A9_KNF_SEPARATOR_STABILITY_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V060](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v060) | `certify_sw1_a9_staggered_separator.py` | TECHNICAL_VARIANT | B |
+| [V061](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v061) | `P11_R32_SW1_A9_KNF_SEPARATOR_STABILITY_CANDIDATE.md` | SUPERSEDED | B |
+| [V062](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v062) | `P11_R32_SW1_A9_KNF_SEPARATOR_STABILITY_CANDIDATE.md` | SUPERSEDED | B |
+| [V063](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v063) | `P11_R32_SW1_A9_KNF_SEPARATOR_STABILITY_CANDIDATE.md` | SUPERSEDED | B |
+| [V064](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v064) | `P11_R32_SW1_A9_KNF_SEPARATOR_STABILITY_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V065](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v065) | `P11_R32_SW1_A9_KNF_SEPARATOR_STABILITY_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V066](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v066) | `P11_R32_SW1_A9_KNF_SEPARATOR_STABILITY_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V067](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v067) | `certify_sw1_a9_j0_identity_gram.py` | TECHNICAL_VARIANT | B |
+| [V068](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v068) | `certify_sw1_a9_j0_identity_gram.py` | TECHNICAL_VARIANT | B |
+| [V069](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v069) | `certify_sw1_a9_j0_identity_gram.py` | TECHNICAL_VARIANT | B |
+| [V070](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v070) | `P11_R32_SW1_A9_KNF_SEPARATOR_STABILITY_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V071](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v071) | `P11_R32_SW1_A9_KNF_SEPARATOR_STABILITY_CANDIDATE.md` | HISTORICAL_DRAFT | B |
+| [V072](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v072) | `P11_R32_SW1_A8_LOWER_FINITE_COMPONENTS_CANDIDATE.md` | SUPERSEDED | B |
+| [V073](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v073) | `certify_sw1_a7_finite_state_cocycle.py` | SUPERSEDED | B |
+| [V074](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v074) | `P11_R32_SW1_A7_FINITE_STATE_COCYCLE_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V075](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v075) | `P11_R32_SW1_A6_ROTATION_HOLE_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V076](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v076) | `certify_sw1_a5_two_sheet_transfer.py` | TECHNICAL_VARIANT | B |
+| [V077](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v077) | `P11_R32_SW1_A5_TWO_SHEET_TRANSFER_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V078](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v078) | `P11_R32_SW1_A4_IRRATIONAL_ROTATION_NOGO_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V079](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v079) | `P11_R32_SW1_A2_ANNULUS_PROJECTION_CANDIDATE.md` | SUPERSEDED | B |
+| [V080](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v080) | `P11_R32_SW1_A2_ANNULUS_PROJECTION_CANDIDATE.md` | SUPERSEDED | B |
+| [V081](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v081) | `P11_R32_SW1_A2_ANNULUS_PROJECTION_CANDIDATE.md` | SUPERSEDED | B |
+| [V082](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v082) | `P11_R32_SW1_A1_FINITE_CELL_RAW_OPERATOR_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V083](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v083) | `certify_sw1_a0_coverage.py` | TECHNICAL_VARIANT | A |
+| [V084](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v084) | `P11_R32_SW1_A0_COVERAGE_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V085](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v085) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V086](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v086) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V087](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v087) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V088](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v088) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | SUPERSEDED | B |
+| [V089](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v089) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | SUPERSEDED | B |
+| [V090](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v090) | `certify_sw1_delta_descent_stage11.py` | SUPERSEDED | B |
+| [V091](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v091) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | SUPERSEDED | B |
+| [V092](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v092) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V093](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v093) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V094](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v094) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V095](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v095) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V096](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v096) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V097](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v097) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V098](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v098) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V099](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v099) | `certify_sw1_delta_descent_stage9.py` | TECHNICAL_VARIANT | B |
+| [V100](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v100) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V101](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v101) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V102](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v102) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V103](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v103) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V104](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v104) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V105](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v105) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V106](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v106) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V107](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v107) | `certify_sw1_delta_descent_stage5b.py` | SUPERSEDED | B |
+| [V108](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v108) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | SUPERSEDED | B |
+| [V109](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v109) | `certify_sw1_delta_descent_stage6.py` | SUPERSEDED | B |
+| [V110](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v110) | `certify_sw1_delta_descent_stage6.py` | SUPERSEDED | B |
+| [V111](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v111) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V112](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v112) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V113](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v113) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V114](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v114) | `certify_sw1_delta_descent_stage4.py` | TECHNICAL_VARIANT | B |
+| [V115](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v115) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V116](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v116) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V117](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v117) | `certify_sw1_delta_descent_stage3.py` | TECHNICAL_VARIANT | B |
+| [V118](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v118) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V119](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v119) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V120](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v120) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | B |
+| [V121](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v121) | `P11_R32_SW1_DELTA_DESCENT_CANDIDATE.md` | HISTORICAL_DRAFT | B |
+| [V122](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v122) | `certify_sw1_a8_midpoint_degeneracy_fix.py` | SUPERSEDED | B |
+| [V123](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v123) | `P11_R32_SW1_A8_LOWER_FINITE_COMPONENTS_CANDIDATE.md` | SUPERSEDED | B |
+| [V124](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v124) | `certify_sw1_a8_midpoint_degeneracy_fix.py` | SUPERSEDED | B |
+| [V125](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v125) | `P11_R32_SW1_AWI_CANDIDATE.md` | HISTORICAL_DRAFT | A |
+| [V126](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v126) | `P11_R32_SW1_AWI_CANDIDATE.md` | AUDIT_VARIANT | B |
+| [V127](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v127) | `P11_R32_SW1_AWI_CANDIDATE.md` | AUDIT_VARIANT | B |
+| [V128](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v128) | `P11_R32_SW1_AWI_CANDIDATE.md` | AUDIT_VARIANT | B |
+| [V129](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v129) | `certify_sw1_awi.py` | TECHNICAL_VARIANT | B |
+| [V130](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v130) | `P11_R32_SW1_AWI_CANDIDATE.md` | SUPERSEDED | B |
+| [V131](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v131) | `P11_R32_SW1_BL7_CANDIDATE.md` | HISTORICAL_DRAFT | B |
+| [V132](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v132) | `P11_R32_SW1_KNF_CANDIDATE.md` | HISTORICAL_DRAFT | B |
+| [V133](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v133) | `P11_R32_SW1_KNF_CANDIDATE.md` | HISTORICAL_DRAFT | B |
+| [V134](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v134) | `AKTUELLER_STAND.md` | SCOPE_HISTORY | A |
+| [V135](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v135) | `CURRENT-FRONT.md` | SCOPE_HISTORY | A |
+| [V136](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v136) | `DAG.md` | SCOPE_HISTORY | A |
+| [V137](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v137) | `FORSCHUNGS_ROADMAP_AKTUELL.md` | SCOPE_HISTORY | A |
+| [V138](HISTORICAL_CONTENT_REGISTER_2026-09-23.md#v138) | `ACTIVE_FRONT.yaml` | SCOPE_HISTORY | A |
+
+## Bezugsstand und Löschsperre
+
+Alle Nachfolgerbindungen beziehen sich auf `main@69bbdb86ca475cb375b3ec2163fade5398c1d23e`. Das Inhaltsaudit und die stabilen IDs V001–V138 stammen vom 23. September; die Anker wurden nach dem separaten SW1-Reparaturmerge erneut geprüft.
+
+Die 42 verbleibenden Archivbranches bleiben gesperrt. Auch die 89 `REVIEW_REQUIRED`, `KEEP_AUDIT` und operative Arbeitsbranches erhalten durch dieses Register keine Löschfreigabe. PR #151 bleibt vollständig separat; seine enge Textübernahme ist keine unabhängige mathematische Prüfung.
+
+Die 80 B-Hinweise sind direkt bei den jeweiligen Registereinträgen ausformuliert und an konkrete Nachfolger gebunden. Die 58 A-Fassungen bleiben über ihre historischen Commit-/Blob-/Taganker auffindbar. Es wurde im Inhaltsvergleich kein C-Fall belegt; neu erkannter übernahmebedürftiger Inhalt erfordert vor jeder Löschung eine eigene fachliche Entscheidung und Integration.
+
+Ein späterer Registermerge allein hebt keine Löschsperre auf. Vor einer neuen konkreten Freigabe sind die integrierten Registerlinks, historischen Anker, Nachfolger, geschützten Tags und lebenden Referenzen am dann aktuellen Main-Stand erneut zu prüfen.
+
+- [Historisches Register mit 138 Einzelentscheidungen](HISTORICAL_CONTENT_REGISTER_2026-09-23.md).
+- [Archivmanifest der historischen Spitzen](../ARCHIVE_MANIFEST_2026-09-23.md).
