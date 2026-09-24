@@ -3,11 +3,11 @@
 > GENERATED FILE — DO NOT EDIT
 > Quelle: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml). Navigation, keine Satzpromotion.
 
-Stand: 2026-09-23.
+Stand: 2026-09-24.
 
 ## Gemergte kanonische Basis
 
-`main@c977848` — [c977848](https://github.com/Waschtl904/objekt-x-programm/commit/c977848bea0651591a6373cae6485e380530f31a). Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153 und dem historischen Legacy-Manifest PR #155; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht.
+`main@5b5ac66` — [5b5ac66](https://github.com/Waschtl904/objekt-x-programm/commit/5b5ac66b1f30b58126c7a9d0d528d240f12a26fa). Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht.
 
 ## Mathematisch geprüfter Forschungssnapshot
 
@@ -19,19 +19,19 @@ Mathematisch geprüfter vollständiger Research-Snapshot; der spätere beobachte
 
 ## Gepinnte Integrations-/CI-Provenienz
 
-Beobachtet am 2026-09-23: `main` bei [c977848](https://github.com/Waschtl904/objekt-x-programm/commit/c977848bea0651591a6373cae6485e380530f31a).
+Beobachtet am 2026-09-24: `main` bei [5b5ac66](https://github.com/Waschtl904/objekt-x-programm/commit/5b5ac66b1f30b58126c7a9d0d528d240f12a26fa).
 Integrierter beobachteter Research-Head: [6623047](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff) auf `research/first-chamber-o1-o7-proof-reconciliation-2026-09-22`.
 Reconciliation-Merge: [526d2c2](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957).
-Integrations-CI: [35816661299](https://github.com/Waschtl904/objekt-x-programm/actions/runs/35816661299), Versuch 1, **success** auf [c977848](https://github.com/Waschtl904/objekt-x-programm/commit/c977848bea0651591a6373cae6485e380530f31a).
+Integrations-CI: [36017037945](https://github.com/Waschtl904/objekt-x-programm/actions/runs/36017037945), Versuch 1, **success** auf [5b5ac66](https://github.com/Waschtl904/objekt-x-programm/commit/5b5ac66b1f30b58126c7a9d0d528d240f12a26fa).
 **Diese Provenienz belegt Integration/CI, keine mathematische Neuverifikation.**
 
-## Registry-Sync-Kandidat
+## Registry-Sync-Provenienz
 
 Branch `docs/first-chamber-registry-sync-2026-09-23` gegen Basis [c977848](https://github.com/Waschtl904/objekt-x-programm/commit/c977848bea0651591a6373cae6485e380530f31a).
-Beobachteter Kandidat-Head bei Registererzeugung: [c977848](https://github.com/Waschtl904/objekt-x-programm/commit/c977848bea0651591a6373cae6485e380530f31a).
-Integration: RESEARCH_BRANCH_UNMERGED; mathematische Review-Änderung: false.
+Beobachteter Kandidat-Head bei Registererzeugung: [6902e61](https://github.com/Waschtl904/objekt-x-programm/commit/6902e61d14dc6d115e40ebd9dbbada33904b8a5f).
+Integration: MERGED; mathematische Review-Änderung: false.
 **Dieser Abschnitt beschreibt ausschließlich Registry-/Dokumentationsintegration und keinen mathematisch geprüften Snapshot.**
-Registry-/Navigations-Sync für das bereits integrierte O1–O7-Kammerpaket. Der beobachtete Kandidatanker bezeichnet die nach Integration von PR #155 auf main vorgezogene Branchbasis vor dem Sync-Commit; er ist weder der spätere Sync-Head noch ein neuer Verifikationssnapshot. AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN bleibt unverändert. Das lokale META des offenen POST-UNIT-Q8-HORIZON-INTERFACE bleibt ein Interface-/Obligationsanker; der integrierte O1–O7-Teilsatz erhält hier einen eigenen Ergebniseintrag.
+Historische Integrationsprovenienz des Registry-/Navigations-Syncs: PR #156 integrierte den finalen Head 6902e61d14dc6d115e40ebd9dbbada33904b8a5f bei a1b705a0bcc38b5b748fc6123806923bbbc3f6ea. Der damalige Branchname ist ein Herkunftsbezeichner und kein lebender Arbeitsbranch. Die damalige Basis bleibt gepinnt; der heutige Main-Abgleich ist separat angegeben. AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN und sämtliche Beweisanker bleiben unverändert.
 
 ## Zwei aktive Hauptfronten
 
