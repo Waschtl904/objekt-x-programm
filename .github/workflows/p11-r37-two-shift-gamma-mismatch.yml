@@ -3,7 +3,7 @@ name: P11 R37 two-shift Gamma mismatch
 on:
   push:
     branches:
-      - research/strong-terminal-r37-two-shift-mismatch
+      - main
     paths:
       - 'audits/P11_REFEREE_E2E_R37_TWO_SHIFT_GAMMA_PAIRING_MISMATCH_2026-09-01.md'
       - 'scripts/certify_p11_r37_two_shift_gamma_algebra.py'
