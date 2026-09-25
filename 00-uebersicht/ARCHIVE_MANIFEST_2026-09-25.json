@@ -1,0 +1,1980 @@
+{
+  "status": "READ_ONLY_PREPARATION_COMPLETE_ONE_CONSUMER_FOLLOWUP",
+  "snapshot": {
+    "checked_at": "2026-09-25 10:38:56 UTC",
+    "main": "c4c8d882d5ed69c5c507a65aba9463639b187631",
+    "branches": [
+      {
+        "name": "audit/a1-composition-2026-09-15",
+        "commit": {
+          "sha": "0a7c970fc5983c9c198915e2c7c1f6280834b13a",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/0a7c970fc5983c9c198915e2c7c1f6280834b13a"
+        },
+        "protected": false
+      },
+      {
+        "name": "audit/legacy-result-recovery-candidates-2026-09-20",
+        "commit": {
+          "sha": "21ae2c037dcb98c5b24c2be7619fcd7237d179f7",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/21ae2c037dcb98c5b24c2be7619fcd7237d179f7"
+        },
+        "protected": false
+      },
+      {
+        "name": "audit/x-c0-cancel-first-2026-09-16",
+        "commit": {
+          "sha": "c700d8a2b56d60bcaa84c64a772b4b581854b96d",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/c700d8a2b56d60bcaa84c64a772b4b581854b96d"
+        },
+        "protected": false
+      },
+      {
+        "name": "cert/np-prolate-1-root-bracket-repair-2026-09-15",
+        "commit": {
+          "sha": "5721efb401c4b8128d6be7513c559bc3f86f1581",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5721efb401c4b8128d6be7513c559bc3f86f1581"
+        },
+        "protected": false
+      },
+      {
+        "name": "chore/integrity-workflow-race-fix",
+        "commit": {
+          "sha": "ebaa488a17137c9a2d4eaf2576f7259cbf2bc913",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/ebaa488a17137c9a2d4eaf2576f7259cbf2bc913"
+        },
+        "protected": false
+      },
+      {
+        "name": "chore/root-archive-wave-a",
+        "commit": {
+          "sha": "fe8271657a587b0a8985c3d08791410b10115089",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/fe8271657a587b0a8985c3d08791410b10115089"
+        },
+        "protected": false
+      },
+      {
+        "name": "ci/integrity-publication-reviewed-2026-09-24",
+        "commit": {
+          "sha": "ecf89ebb7b26e55b4b34a0db7ef4461cfa310df5",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/ecf89ebb7b26e55b4b34a0db7ef4461cfa310df5"
+        },
+        "protected": false
+      },
+      {
+        "name": "ci/validate-a1-fast-route-2026-09-21",
+        "commit": {
+          "sha": "7f2b5722610cbdc1289960345fcbccf3395aa99a",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/7f2b5722610cbdc1289960345fcbccf3395aa99a"
+        },
+        "protected": false
+      },
+      {
+        "name": "ci/validate-legacy-workflow-fast-route-2026-09-21",
+        "commit": {
+          "sha": "07170515f10a96f9faea33869ac30a9cd80df1ac",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/07170515f10a96f9faea33869ac30a9cd80df1ac"
+        },
+        "protected": false
+      },
+      {
+        "name": "docs/branch-inventory-2026-09-22",
+        "commit": {
+          "sha": "30418f3f654dad00979328a17c8367db5e8456ed",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/30418f3f654dad00979328a17c8367db5e8456ed"
+        },
+        "protected": false
+      },
+      {
+        "name": "docs/current-front-navigation",
+        "commit": {
+          "sha": "9e11f9531ffd9a7dce5714f6e6749a5fea5b1bed",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/9e11f9531ffd9a7dce5714f6e6749a5fea5b1bed"
+        },
+        "protected": false
+      },
+      {
+        "name": "docs/integrity-companion-recovery-2026-09-25",
+        "commit": {
+          "sha": "e047530bf2ee7fee21c81972920d398596fe61ce",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/e047530bf2ee7fee21c81972920d398596fe61ce"
+        },
+        "protected": false
+      },
+      {
+        "name": "docs/research-state-registry-2026-09-20",
+        "commit": {
+          "sha": "1ca26e1f059ca113bc2d794213b452aa21e399ab",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/1ca26e1f059ca113bc2d794213b452aa21e399ab"
+        },
+        "protected": false
+      },
+      {
+        "name": "docs/unique-family-register-2026-09-24",
+        "commit": {
+          "sha": "146ccf8b7bc1fe7d72d5bf87865abd0a29280056",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/146ccf8b7bc1fe7d72d5bf87865abd0a29280056"
+        },
+        "protected": false
+      },
+      {
+        "name": "freeze/forward-dil-3dc1caa",
+        "commit": {
+          "sha": "3dc1caa2870020b238c21a852328bab1c384deb7",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/3dc1caa2870020b238c21a852328bab1c384deb7"
+        },
+        "protected": false
+      },
+      {
+        "name": "freeze/pr116-6b5956e",
+        "commit": {
+          "sha": "6b5956e69dfcb8124e8e31083613fd89c5f35fb3",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/6b5956e69dfcb8124e8e31083613fd89c5f35fb3"
+        },
+        "protected": false
+      },
+      {
+        "name": "freeze/pr116-hard-audit-524bc5f",
+        "commit": {
+          "sha": "524bc5f08b822eeae751196eb9f8acb989bd1122",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/524bc5f08b822eeae751196eb9f8acb989bd1122"
+        },
+        "protected": false
+      },
+      {
+        "name": "freeze/prime-circle-weyl-04e2256",
+        "commit": {
+          "sha": "04e2256919d2726c31db7febe7810a137a8ff77d",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/04e2256919d2726c31db7febe7810a137a8ff77d"
+        },
+        "protected": false
+      },
+      {
+        "name": "freeze/rp2-kernel-ac57408",
+        "commit": {
+          "sha": "ac574089215767f3b353fd6d6af0649b4ded454c",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/ac574089215767f3b353fd6d6af0649b4ded454c"
+        },
+        "protected": false
+      },
+      {
+        "name": "freeze/rp2-line-weyl-6206950",
+        "commit": {
+          "sha": "620695070db6ce9693ed5a1848a2fa66145f41ec",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/620695070db6ce9693ed5a1848a2fa66145f41ec"
+        },
+        "protected": false
+      },
+      {
+        "name": "freeze/rp2-weyl-c06500b",
+        "commit": {
+          "sha": "c06500b9f09571bc40536ebe81157fbb0e741ae9",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/c06500b9f09571bc40536ebe81157fbb0e741ae9"
+        },
+        "protected": false
+      },
+      {
+        "name": "main",
+        "commit": {
+          "sha": "c4c8d882d5ed69c5c507a65aba9463639b187631",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/c4c8d882d5ed69c5c507a65aba9463639b187631"
+        },
+        "protected": false
+      },
+      {
+        "name": "promotion/ht-a4b-sw1-m",
+        "commit": {
+          "sha": "bc8ae703ca6a309e9bf991c9194b631ae4bd8797",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/bc8ae703ca6a309e9bf991c9194b631ae4bd8797"
+        },
+        "protected": false
+      },
+      {
+        "name": "r43-full-rest-local-decay-cond-limit",
+        "commit": {
+          "sha": "112f611727dbd3386bff5e11b9a5d5d143cdee6b",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/112f611727dbd3386bff5e11b9a5d5d143cdee6b"
+        },
+        "protected": false
+      },
+      {
+        "name": "r43-post-c6-source-descent-weil-separation",
+        "commit": {
+          "sha": "1a6c8777c803bcf7ef34e74b9979578f05c5b40b",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/1a6c8777c803bcf7ef34e74b9979578f05c5b40b"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/a1-legendre-dlmf-tail-2026-09-13",
+        "commit": {
+          "sha": "5f6bb7af90a14091201b6811358f53c376886bce",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5f6bb7af90a14091201b6811358f53c376886bce"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/critical-half-forward-dilation-gate-2026-09-15",
+        "commit": {
+          "sha": "76d5c9671df3b84bd5a9b4257b4b9f07f9749490",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/76d5c9671df3b84bd5a9b4257b4b9f07f9749490"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/critical-half-green-tree-bridge-2026-09-13",
+        "commit": {
+          "sha": "1e1682f2c0bddee622c651418522b8f9391244a7",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/1e1682f2c0bddee622c651418522b8f9391244a7"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/critical-half-prime-circle-weyl-2026-09-15",
+        "commit": {
+          "sha": "04e2256919d2726c31db7febe7810a137a8ff77d",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/04e2256919d2726c31db7febe7810a137a8ff77d"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/critical-half-rp2-kernel-2026-09-15",
+        "commit": {
+          "sha": "ac574089215767f3b353fd6d6af0649b4ded454c",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/ac574089215767f3b353fd6d6af0649b4ded454c"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/critical-half-rp2-line-weyl-2026-09-15",
+        "commit": {
+          "sha": "620695070db6ce9693ed5a1848a2fa66145f41ec",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/620695070db6ce9693ed5a1848a2fa66145f41ec"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/critical-half-rp2-point-weyl-2026-09-15",
+        "commit": {
+          "sha": "1888a95841641ed3974602c17f8d6896c2ee015c",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/1888a95841641ed3974602c17f8d6896c2ee015c"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/critical-half-rp2-source-filtration-2026-09-15",
+        "commit": {
+          "sha": "23849b3dbd4345d771721c201d7214212fa93ccb",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/23849b3dbd4345d771721c201d7214212fa93ccb"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/critical-half-rp2-star-bulk-2026-09-15",
+        "commit": {
+          "sha": "385680bbc6f4f4d244f6fe2e433ac1b425938d22",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/385680bbc6f4f4d244f6fe2e433ac1b425938d22"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/critical-half-total-weyl-self-energy-2026-09-15",
+        "commit": {
+          "sha": "5b5f17a5afd45e8f7b15bc3121b8a869dceb28a1",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/5b5f17a5afd45e8f7b15bc3121b8a869dceb28a1"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/ox-gram-ar1-consolidation-2026-09-12",
+        "commit": {
+          "sha": "cc630d50741c4908db3bd8d2aba1049039d766e2",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/cc630d50741c4908db3bd8d2aba1049039d766e2"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/rp2-mixer-source-compat-2026-09-15",
+        "commit": {
+          "sha": "8f7b0f67844c245b9def75bcd477dcbe2d239451",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/8f7b0f67844c245b9def75bcd477dcbe2d239451"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-a0-coverage",
+        "commit": {
+          "sha": "0f2be5c7e1dd80bb0c85bbc52b5ce01679de7bd6",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/0f2be5c7e1dd80bb0c85bbc52b5ce01679de7bd6"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-a1-finite-cell",
+        "commit": {
+          "sha": "36f68c606b916a2830199826f698d21b14d508bb",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/36f68c606b916a2830199826f698d21b14d508bb"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-a2-a10-reconciliation",
+        "commit": {
+          "sha": "8e404a75a8a4f9e68bf87d3cc5556bd1da51a1d7",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/8e404a75a8a4f9e68bf87d3cc5556bd1da51a1d7"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-a2-annulus-projection",
+        "commit": {
+          "sha": "cfff116954607626f075d16f26c6617e4e9b97d0",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/cfff116954607626f075d16f26c6617e4e9b97d0"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-a3-free-coordinate-gram",
+        "commit": {
+          "sha": "073f6e277d3f7084fbac5d57dcb3ccdeefc94699",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/073f6e277d3f7084fbac5d57dcb3ccdeefc94699"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-a4-irrational-rotation-nogo",
+        "commit": {
+          "sha": "10d2b42266af7f8cd0801db5e8f32b21c6f57004",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/10d2b42266af7f8cd0801db5e8f32b21c6f57004"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-a5-two-sheet-transfer",
+        "commit": {
+          "sha": "dc462d3a1a8eeaeb1b304e51c034c8e721d9226c",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/dc462d3a1a8eeaeb1b304e51c034c8e721d9226c"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-a6-rotation-hole",
+        "commit": {
+          "sha": "0ac4dd943301ef7f78a509ad9418f7b3c74fc245",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/0ac4dd943301ef7f78a509ad9418f7b3c74fc245"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-a7-finite-state-cocycle",
+        "commit": {
+          "sha": "8f70d7277c52017761e44cf53e6e47bd2801f8f9",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/8f70d7277c52017761e44cf53e6e47bd2801f8f9"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-a8-lower-finite-components",
+        "commit": {
+          "sha": "92230af645ea2f0549051edb138b32629b0f56da",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/92230af645ea2f0549051edb138b32629b0f56da"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-a9-knf-separator",
+        "commit": {
+          "sha": "8ccf4795ab8280fb262a9f75ff2a104817bfa812",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/8ccf4795ab8280fb262a9f75ff2a104817bfa812"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-a10-crossgram-cocycle",
+        "commit": {
+          "sha": "591a376197d8e320e8f23a682755da7b8d4d639e",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/591a376197d8e320e8f23a682755da7b8d4d639e"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-a-fold-reconciliation",
+        "commit": {
+          "sha": "ba1cee8fd0507aebd88349daf90160f55755e357",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/ba1cee8fd0507aebd88349daf90160f55755e357"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-delta-descent",
+        "commit": {
+          "sha": "d73d3fdf4b1f919fc9526fc09ce206866b472704",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/d73d3fdf4b1f919fc9526fc09ce206866b472704"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-m1-nd-image-space",
+        "commit": {
+          "sha": "52ae23096d1965ba3eb9c7880471b20ff0c6a5b6",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/52ae23096d1965ba3eb9c7880471b20ff0c6a5b6"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-m1-nd-img1",
+        "commit": {
+          "sha": "28753fa150532bab839fc6f8f554bf3bc123d1da",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/28753fa150532bab839fc6f8f554bf3bc123d1da"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-m1-nd-img2-descriptor",
+        "commit": {
+          "sha": "2e193c5b5726ea66cb8f06de1e2cddbf963b887e",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/2e193c5b5726ea66cb8f06de1e2cddbf963b887e"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-m1-nd-img3-eliminator",
+        "commit": {
+          "sha": "dad038c8d72774cfa40d73ec751a9c61ff5e48c8",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/dad038c8d72774cfa40d73ec751a9c61ff5e48c8"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/sw1-m1-nd-salvage-phase-diagram",
+        "commit": {
+          "sha": "2ed1583f074574c2fdb5a48203d63d520a86b5f6",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/2ed1583f074574c2fdb5a48203d63d520a86b5f6"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/terminal-191d-schur-diagnostic-2026-09-20",
+        "commit": {
+          "sha": "bfb267f7fc7aa6ec523441cbd56f6c2bed93bda2",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/bfb267f7fc7aa6ec523441cbd56f6c2bed93bda2"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
+        "commit": {
+          "sha": "19e4630a7f0d4c8232f8ee81c4b483355ed2f505",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/19e4630a7f0d4c8232f8ee81c4b483355ed2f505"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/x-c1-moment-edge-compensation-2026-09-16",
+        "commit": {
+          "sha": "29f2e8535bcf0838610f598533f74e01f444bf01",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/29f2e8535bcf0838610f598533f74e01f444bf01"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/x-c1-moment-gamma-followup-2026-09-17",
+        "commit": {
+          "sha": "6e1a90aa32f109570337ca17b62d82087494a46d",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/6e1a90aa32f109570337ca17b62d82087494a46d"
+        },
+        "protected": false
+      },
+      {
+        "name": "research/x-c1-seam-energy-2026-09-17",
+        "commit": {
+          "sha": "a94b011880363e4abc99cc8838bd9371e16d526e",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/a94b011880363e4abc99cc8838bd9371e16d526e"
+        },
+        "protected": false
+      },
+      {
+        "name": "review/critical-half-116-6b5956e-2026-09-15",
+        "commit": {
+          "sha": "987eea510edb451aa6dfce38b6edb3b1accd0f11",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/987eea510edb451aa6dfce38b6edb3b1accd0f11"
+        },
+        "protected": false
+      },
+      {
+        "name": "status/legacy-scoped-survivor-reconciliation-2026-09-20",
+        "commit": {
+          "sha": "91c48b5cb974579762c817aa641fee497603db6c",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/commits/91c48b5cb974579762c817aa641fee497603db6c"
+        },
+        "protected": false
+      }
+    ],
+    "tags": [
+      {
+        "ref": "refs/tags/a1-comp-2026-09-16",
+        "node_id": "REF_kwDOTkNePrxyZWZzL3RhZ3MvYTEtY29tcC0yMDI2LTA5LTE2",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/a1-comp-2026-09-16",
+        "object": {
+          "sha": "0a7c970fc5983c9c198915e2c7c1f6280834b13a",
+          "type": "commit",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/commits/0a7c970fc5983c9c198915e2c7c1f6280834b13a"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/audit/research-first-chamber-raw-td-cocycle-o1-o7-2026-09-22",
+        "node_id": "REF_kwDOTkNePtoAWXJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvYXVkaXQvcmVzZWFyY2gtZmlyc3QtY2hhbWJlci1yYXctdGQtY29jeWNsZS1vMS1vNy0yMDI2LTA5LTIy",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/audit/research-first-chamber-raw-td-cocycle-o1-o7-2026-09-22",
+        "object": {
+          "sha": "94727c5c622faae4e464f08b159d7a269bd786f8",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/94727c5c622faae4e464f08b159d7a269bd786f8"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/audit-p11-r32-a-wall-reduction",
+        "node_id": "REF_kwDOTkNePtoARnJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9hdWRpdC1wMTEtcjMyLWEtd2FsbC1yZWR1Y3Rpb24",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/audit-p11-r32-a-wall-reduction",
+        "object": {
+          "sha": "7c96b12df6754c37fd119eadb652cd417c5ec9eb",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/7c96b12df6754c37fd119eadb652cd417c5ec9eb"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/audit-p11-r32-ht-a4b-single-chamber",
+        "node_id": "REF_kwDOTkNePtoAS3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9hdWRpdC1wMTEtcjMyLWh0LWE0Yi1zaW5nbGUtY2hhbWJlcg",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/audit-p11-r32-ht-a4b-single-chamber",
+        "object": {
+          "sha": "dda9d7d55f7083dfddb5152fe9f9371d3f210891",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/dda9d7d55f7083dfddb5152fe9f9371d3f210891"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/audit-p11-r32-sw1-self-contained-theorem",
+        "node_id": "REF_kwDOTkNePtoAUHJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9hdWRpdC1wMTEtcjMyLXN3MS1zZWxmLWNvbnRhaW5lZC10aGVvcmVt",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/audit-p11-r32-sw1-self-contained-theorem",
+        "object": {
+          "sha": "4520d1a909cf09b71b1b21d63bde2151add1da2c",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/4520d1a909cf09b71b1b21d63bde2151add1da2c"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/audit-p11-r32-tail-fg-pivot",
+        "node_id": "REF_kwDOTkNePtoAQ3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9hdWRpdC1wMTEtcjMyLXRhaWwtZmctcGl2b3Q",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/audit-p11-r32-tail-fg-pivot",
+        "object": {
+          "sha": "431ec309ed3f603988a0b355921f41d63216f839",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/431ec309ed3f603988a0b355921f41d63216f839"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/docs-current-front-post-pr35",
+        "node_id": "REF_kwDOTkNePtoARHJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9kb2NzLWN1cnJlbnQtZnJvbnQtcG9zdC1wcjM1",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/docs-current-front-post-pr35",
+        "object": {
+          "sha": "ea19e5d9e566b4af26120050c468191eea5ab2c1",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/ea19e5d9e566b4af26120050c468191eea5ab2c1"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/docs-object-x-consolidation-2026-08-26",
+        "node_id": "REF_kwDOTkNePtoATnJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9kb2NzLW9iamVjdC14LWNvbnNvbGlkYXRpb24tMjAyNi0wOC0yNg",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/docs-object-x-consolidation-2026-08-26",
+        "object": {
+          "sha": "f28caa3b403bf857ea595f6ebcd6911f90a9e614",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/f28caa3b403bf857ea595f6ebcd6911f90a9e614"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/docs-object-x-research-roadmap-2026-08-26",
+        "node_id": "REF_kwDOTkNePtoAUXJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9kb2NzLW9iamVjdC14LXJlc2VhcmNoLXJvYWRtYXAtMjAyNi0wOC0yNg",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/docs-object-x-research-roadmap-2026-08-26",
+        "object": {
+          "sha": "b72d14ec35e84beadbcd5671d3b449c956503e3b",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/b72d14ec35e84beadbcd5671d3b449c956503e3b"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/docs-ox-gen-session-handoff-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoATnJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9kb2NzLW94LWdlbi1zZXNzaW9uLWhhbmRvZmYtMjAyNi0wOS0xMw",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/docs-ox-gen-session-handoff-2026-09-13",
+        "object": {
+          "sha": "99709b5d81653f7cb88472fe7f275dc2c3a6b059",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/99709b5d81653f7cb88472fe7f275dc2c3a6b059"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/docs-post-img0-analytic-hardening",
+        "node_id": "REF_kwDOTkNePtoASXJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9kb2NzLXBvc3QtaW1nMC1hbmFseXRpYy1oYXJkZW5pbmc",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/docs-post-img0-analytic-hardening",
+        "object": {
+          "sha": "92ca11b9a33165c48cd8253c361feb2c250e821e",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/92ca11b9a33165c48cd8253c361feb2c250e821e"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/docs-post-pr10-front-sync",
+        "node_id": "REF_kwDOTkNePtoAQXJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9kb2NzLXBvc3QtcHIxMC1mcm9udC1zeW5j",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/docs-post-pr10-front-sync",
+        "object": {
+          "sha": "bc583987df9ef5707eca474d41a2f12eb0c1f746",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/bc583987df9ef5707eca474d41a2f12eb0c1f746"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/docs-post-pr34-c1b2a-sync",
+        "node_id": "REF_kwDOTkNePtoAQXJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9kb2NzLXBvc3QtcHIzNC1jMWIyYS1zeW5j",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/docs-post-pr34-c1b2a-sync",
+        "object": {
+          "sha": "d631047183b045eee5550d84fabcc6e2f1b520f8",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/d631047183b045eee5550d84fabcc6e2f1b520f8"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/docs-post-pr38-a-fold-sync",
+        "node_id": "REF_kwDOTkNePtoAQnJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9kb2NzLXBvc3QtcHIzOC1hLWZvbGQtc3luYw",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/docs-post-pr38-a-fold-sync",
+        "object": {
+          "sha": "349a8740abd4b7a67fe4d6565e953236e776df7c",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/349a8740abd4b7a67fe4d6565e953236e776df7c"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/docs-post-pr40-m1-nd-sync",
+        "node_id": "REF_kwDOTkNePtoAQXJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9kb2NzLXBvc3QtcHI0MC1tMS1uZC1zeW5j",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/docs-post-pr40-m1-nd-sync",
+        "object": {
+          "sha": "960a4b912678ee70e9277eff7e2c26d6c985598d",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/960a4b912678ee70e9277eff7e2c26d6c985598d"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/docs-post-pr42-img0-sync",
+        "node_id": "REF_kwDOTkNePtoAQHJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9kb2NzLXBvc3QtcHI0Mi1pbWcwLXN5bmM",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/docs-post-pr42-img0-sync",
+        "object": {
+          "sha": "bb2e795bb8d89c8efb54eddc7aa1a7bbc3e36845",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/bb2e795bb8d89c8efb54eddc7aa1a7bbc3e36845"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/docs-readme-project-independence-2026-09-21",
+        "node_id": "REF_kwDOTkNePtoAU3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9kb2NzLXJlYWRtZS1wcm9qZWN0LWluZGVwZW5kZW5jZS0yMDI2LTA5LTIx",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/docs-readme-project-independence-2026-09-21",
+        "object": {
+          "sha": "2be9ad48b31d908cba374d749a12f8f43b1bfa3d",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/2be9ad48b31d908cba374d749a12f8f43b1bfa3d"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/docs-sync-current-front-pr49-terminal",
+        "node_id": "REF_kwDOTkNePtoATXJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9kb2NzLXN5bmMtY3VycmVudC1mcm9udC1wcjQ5LXRlcm1pbmFs",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/docs-sync-current-front-pr49-terminal",
+        "object": {
+          "sha": "bbd00dfc127cab971859f14d987c5125e07be46d",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/bbd00dfc127cab971859f14d987c5125e07be46d"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/fix-p12-stale-subwedge-reference",
+        "node_id": "REF_kwDOTkNePtoASHJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9maXgtcDEyLXN0YWxlLXN1YndlZGdlLXJlZmVyZW5jZQ",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/fix-p12-stale-subwedge-reference",
+        "object": {
+          "sha": "09ed0e8900167c5c09523a31045bcb9b47c3748d",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/09ed0e8900167c5c09523a31045bcb9b47c3748d"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/governance-active-front-pr61",
+        "node_id": "REF_kwDOTkNePtoARHJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9nb3Zlcm5hbmNlLWFjdGl2ZS1mcm9udC1wcjYx",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/governance-active-front-pr61",
+        "object": {
+          "sha": "21b3569cf2af7e0e84db891516edc56f92b6e211",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/21b3569cf2af7e0e84db891516edc56f92b6e211"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/governance-active-front-pr61-head2",
+        "node_id": "REF_kwDOTkNePtoASnJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9nb3Zlcm5hbmNlLWFjdGl2ZS1mcm9udC1wcjYxLWhlYWQy",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/governance-active-front-pr61-head2",
+        "object": {
+          "sha": "38c84ea447e54dd69d0b9fb466106ea0e32d38ec",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/38c84ea447e54dd69d0b9fb466106ea0e32d38ec"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/promotion-ht-a4b-sw1-m-record",
+        "node_id": "REF_kwDOTkNePtoARXJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9wcm9tb3Rpb24taHQtYTRiLXN3MS1tLXJlY29yZA",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/promotion-ht-a4b-sw1-m-record",
+        "object": {
+          "sha": "e53d99ba3a7eeab195b67e8976db68eb54848cae",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/e53d99ba3a7eeab195b67e8976db68eb54848cae"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-a1-finite-gate-architecture-2026-09-14",
+        "node_id": "REF_kwDOTkNePtoAV3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1hMS1maW5pdGUtZ2F0ZS1hcmNoaXRlY3R1cmUtMjAyNi0wOS0xNA",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-a1-finite-gate-architecture-2026-09-14",
+        "object": {
+          "sha": "dde83bb3f50004ce9a5d4a5f775a327c477daec2",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/dde83bb3f50004ce9a5d4a5f775a327c477daec2"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-a1-highfreq-prolate-tail-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAVHJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1hMS1oaWdoZnJlcS1wcm9sYXRlLXRhaWwtMjAyNi0wOS0xMw",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-a1-highfreq-prolate-tail-2026-09-13",
+        "object": {
+          "sha": "4c8a3e426240d6248dfa0db1abc1cf7d75996423",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/4c8a3e426240d6248dfa0db1abc1cf7d75996423"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-a1-legendre-finite-certificate-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAWnJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1hMS1sZWdlbmRyZS1maW5pdGUtY2VydGlmaWNhdGUtMjAyNi0wOS0xMw",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-a1-legendre-finite-certificate-2026-09-13",
+        "object": {
+          "sha": "86541f5c2bdadfc5b94a3cad666e819367734d70",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/86541f5c2bdadfc5b94a3cad666e819367734d70"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-a1-legendre-quadrature-budget-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAWXJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1hMS1sZWdlbmRyZS1xdWFkcmF0dXJlLWJ1ZGdldC0yMDI2LTA5LTEz",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-a1-legendre-quadrature-budget-2026-09-13",
+        "object": {
+          "sha": "fc1731f611980f50d9061838016e7f4e0a18bb6d",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/fc1731f611980f50d9061838016e7f4e0a18bb6d"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-a1-omega1551-finite-reduction-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAWXJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1hMS1vbWVnYTE1NTEtZmluaXRlLXJlZHVjdGlvbi0yMDI2LTA5LTEz",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-a1-omega1551-finite-reduction-2026-09-13",
+        "object": {
+          "sha": "31553ff82231e76537d64dd3d36c9fca5a53ccc0",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/31553ff82231e76537d64dd3d36c9fca5a53ccc0"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-a1-osipov1102-finite-reduction-2026-09-14",
+        "node_id": "REF_kwDOTkNePtoAWnJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1hMS1vc2lwb3YxMTAyLWZpbml0ZS1yZWR1Y3Rpb24tMjAyNi0wOS0xNA",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-a1-osipov1102-finite-reduction-2026-09-14",
+        "object": {
+          "sha": "3162546f592d9121549dad37a641f4425a645d3b",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/3162546f592d9121549dad37a641f4425a645d3b"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-a1-schur-bounded-remainder-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAVnJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1hMS1zY2h1ci1ib3VuZGVkLXJlbWFpbmRlci0yMDI2LTA5LTEz",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-a1-schur-bounded-remainder-2026-09-13",
+        "object": {
+          "sha": "35d0cf7e74b4b0db79b46ef17b581b44fc6bd8fc",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/35d0cf7e74b4b0db79b46ef17b581b44fc6bd8fc"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-np-common-jump-gram-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAT3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1ucC1jb21tb24tanVtcC1ncmFtLTIwMjYtMDktMTM",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-np-common-jump-gram-2026-09-13",
+        "object": {
+          "sha": "a2f30db819e28ba2334e337e81848a48d8286621",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/a2f30db819e28ba2334e337e81848a48d8286621"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-np-discrepancy-pole-cleared-correlation-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAY3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1ucC1kaXNjcmVwYW5jeS1wb2xlLWNsZWFyZWQtY29ycmVsYXRpb24tMjAyNi0wOS0xMw",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-np-discrepancy-pole-cleared-correlation-2026-09-13",
+        "object": {
+          "sha": "5933c7987fc8b0269e21528342e4e7a8f1226d32",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/5933c7987fc8b0269e21528342e4e7a8f1226d32"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-np-dual-a1-morse-diagnostic-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAV3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1ucC1kdWFsLWExLW1vcnNlLWRpYWdub3N0aWMtMjAyNi0wOS0xMw",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-np-dual-a1-morse-diagnostic-2026-09-13",
+        "object": {
+          "sha": "a311223554926f2d0ccac4fbbeedf8d0708777c9",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/a311223554926f2d0ccac4fbbeedf8d0708777c9"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-np-dual-completion-screw-audit-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAWnJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1ucC1kdWFsLWNvbXBsZXRpb24tc2NyZXctYXVkaXQtMjAyNi0wOS0xMw",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-np-dual-completion-screw-audit-2026-09-13",
+        "object": {
+          "sha": "15c93aba1c3b548061e39c084ef526c0d7879813",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/15c93aba1c3b548061e39c084ef526c0d7879813"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-np-gap-q0-first-channel-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAU3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1ucC1nYXAtcTAtZmlyc3QtY2hhbm5lbC0yMDI2LTA5LTEz",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-np-gap-q0-first-channel-2026-09-13",
+        "object": {
+          "sha": "7b79214739dcc8c8239e689cb4747bd8eb9d136f",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/7b79214739dcc8c8239e689cb4747bd8eb9d136f"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-np-gap-review-corrections-prime-overlap-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAY3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1ucC1nYXAtcmV2aWV3LWNvcnJlY3Rpb25zLXByaW1lLW92ZXJsYXAtMjAyNi0wOS0xMw",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-np-gap-review-corrections-prime-overlap-2026-09-13",
+        "object": {
+          "sha": "e0185e2627eace831acdb1ec6e4ba09b40205ee1",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/e0185e2627eace831acdb1ec6e4ba09b40205ee1"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-nullpole-strategic-reclassification-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAX3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1udWxscG9sZS1zdHJhdGVnaWMtcmVjbGFzc2lmaWNhdGlvbi0yMDI2LTA5LTEz",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-nullpole-strategic-reclassification-2026-09-13",
+        "object": {
+          "sha": "e079f8473dd7079fa580c3567daa33b536676b97",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/e079f8473dd7079fa580c3567daa33b536676b97"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-ox-gen-a-generator-plane-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAVHJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1veC1nZW4tYS1nZW5lcmF0b3ItcGxhbmUtMjAyNi0wOS0xMw",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-ox-gen-a-generator-plane-2026-09-13",
+        "object": {
+          "sha": "d0178c053504c3e6c4e8605e40d75d9689268ecb",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/d0178c053504c3e6c4e8605e40d75d9689268ecb"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-pos-dil-1-prime-moment-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAUnJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1wb3MtZGlsLTEtcHJpbWUtbW9tZW50LTIwMjYtMDktMTM",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-pos-dil-1-prime-moment-2026-09-13",
+        "object": {
+          "sha": "b538847d66a113285d06f32d24834640d4e3d900",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/b538847d66a113285d06f32d24834640d4e3d900"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-pos-dil-2-feature-shorting-nogo-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAW3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1wb3MtZGlsLTItZmVhdHVyZS1zaG9ydGluZy1ub2dvLTIwMjYtMDktMTM",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-pos-dil-2-feature-shorting-nogo-2026-09-13",
+        "object": {
+          "sha": "ac74166541a5896e58d8a9f445d626a258c788c2",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/ac74166541a5896e58d8a9f445d626a258c788c2"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-pos-dil-2b-first-exterior-shell-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAW3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1wb3MtZGlsLTJiLWZpcnN0LWV4dGVyaW9yLXNoZWxsLTIwMjYtMDktMTM",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-pos-dil-2b-first-exterior-shell-2026-09-13",
+        "object": {
+          "sha": "e7ba7a443ca91195149c24beb4475f0f2c2f4e37",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/e7ba7a443ca91195149c24beb4475f0f2c2f4e37"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-pos-dil-2c-exact-shell-gauge-r0-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAW3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1wb3MtZGlsLTJjLWV4YWN0LXNoZWxsLWdhdWdlLXIwLTIwMjYtMDktMTM",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-pos-dil-2c-exact-shell-gauge-r0-2026-09-13",
+        "object": {
+          "sha": "49b07ba1902fd5c4e751c1ec681e33ad66e59119",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/49b07ba1902fd5c4e751c1ec681e33ad66e59119"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-pos-dil-2c-shell-radius-2026-09-13",
+        "node_id": "REF_kwDOTkNePtoAU3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1wb3MtZGlsLTJjLXNoZWxsLXJhZGl1cy0yMDI2LTA5LTEz",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-pos-dil-2c-shell-radius-2026-09-13",
+        "object": {
+          "sha": "1a885d02487c585d3f5f14d92a9940b60d688f15",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/1a885d02487c585d3f5f14d92a9940b60d688f15"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-sw1-2tp",
+        "node_id": "REF_kwDOTkNePtoAOHJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1zdzEtMnRw",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-sw1-2tp",
+        "object": {
+          "sha": "6f90d866f8ab121242c7c6a8258ab606d0def4ab",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/6f90d866f8ab121242c7c6a8258ab606d0def4ab"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-sw1-a10-finite-crossgram",
+        "node_id": "REF_kwDOTkNePtoASXJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1zdzEtYTEwLWZpbml0ZS1jcm9zc2dyYW0",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-sw1-a10-finite-crossgram",
+        "object": {
+          "sha": "8d0b36e26ecd49f1fe354269a972fc63a6c66962",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/8d0b36e26ecd49f1fe354269a972fc63a6c66962"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-sw1-a2-certificate",
+        "node_id": "REF_kwDOTkNePtoAQ3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1zdzEtYTItY2VydGlmaWNhdGU",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-sw1-a2-certificate",
+        "object": {
+          "sha": "86f90dc39a946970348aaa04cbee6f23b713ad9a",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/86f90dc39a946970348aaa04cbee6f23b713ad9a"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-sw1-a3-certificate",
+        "node_id": "REF_kwDOTkNePtoAQ3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1zdzEtYTMtY2VydGlmaWNhdGU",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-sw1-a3-certificate",
+        "object": {
+          "sha": "bbee903b44a1d69a45f61e9f67239b378473a21b",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/bbee903b44a1d69a45f61e9f67239b378473a21b"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-sw1-a8-midpoint-degeneracy-fix",
+        "node_id": "REF_kwDOTkNePtoAT3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1zdzEtYTgtbWlkcG9pbnQtZGVnZW5lcmFjeS1maXg",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-sw1-a8-midpoint-degeneracy-fix",
+        "object": {
+          "sha": "10a84652604cd58edfa3fe644279bf5057d2f17c",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/10a84652604cd58edfa3fe644279bf5057d2f17c"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-sw1-awi",
+        "node_id": "REF_kwDOTkNePtoAOHJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1zdzEtYXdp",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-sw1-awi",
+        "object": {
+          "sha": "7df6dafa0d24248bae3f683576e86303bd8f68c3",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/7df6dafa0d24248bae3f683576e86303bd8f68c3"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-sw1-bl7",
+        "node_id": "REF_kwDOTkNePtoAOHJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1zdzEtYmw3",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-sw1-bl7",
+        "object": {
+          "sha": "0880a249e6b71dfdc9e3c29009a369d6729ae378",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/0880a249e6b71dfdc9e3c29009a369d6729ae378"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-sw1-knf",
+        "node_id": "REF_kwDOTkNePtoAOHJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yZXNlYXJjaC1zdzEta25m",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/research-sw1-knf",
+        "object": {
+          "sha": "4743498e68822fb5b717900d49251bfe04616f6b",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/4743498e68822fb5b717900d49251bfe04616f6b"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/roadmap-canonical-research-roadmap-v2",
+        "node_id": "REF_kwDOTkNePtoATXJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yb2FkbWFwLWNhbm9uaWNhbC1yZXNlYXJjaC1yb2FkbWFwLXYy",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/roadmap-canonical-research-roadmap-v2",
+        "object": {
+          "sha": "8a1a0e2588421f1c8c7c0c90d6c095343f444954",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/8a1a0e2588421f1c8c7c0c90d6c095343f444954"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/roadmap-post-59-main-sync",
+        "node_id": "REF_kwDOTkNePtoAQXJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9yb2FkbWFwLXBvc3QtNTktbWFpbi1zeW5j",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/roadmap-post-59-main-sync",
+        "object": {
+          "sha": "a46dc4531463193d6747f8afbd3f90feca35046c",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/a46dc4531463193d6747f8afbd3f90feca35046c"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/status-ht-tail-components-promotion",
+        "node_id": "REF_kwDOTkNePtoAS3JlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9zdGF0dXMtaHQtdGFpbC1jb21wb25lbnRzLXByb21vdGlvbg",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/status-ht-tail-components-promotion",
+        "object": {
+          "sha": "22a92ad692a7df37b450bc97377fc3ffe3d4a7fe",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/22a92ad692a7df37b450bc97377fc3ffe3d4a7fe"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/status-neu-a-wall-1-promotion",
+        "node_id": "REF_kwDOTkNePtoARXJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9zdGF0dXMtbmV1LWEtd2FsbC0xLXByb21vdGlvbg",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/status-neu-a-wall-1-promotion",
+        "object": {
+          "sha": "3decca3c4443f7373e47d9c9d56c03f59b720405",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/3decca3c4443f7373e47d9c9d56c03f59b720405"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/sync-m1-nd-img4-postmerge",
+        "node_id": "REF_kwDOTkNePtoAQXJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9zeW5jLW0xLW5kLWltZzQtcG9zdG1lcmdl",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/sync-m1-nd-img4-postmerge",
+        "object": {
+          "sha": "67f3c38879540c2bbe89e5c2dd94f4c481b45999",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/67f3c38879540c2bbe89e5c2dd94f4c481b45999"
+        }
+      },
+      {
+        "ref": "refs/tags/archive/2026-09-23/superseded/sync-m1-nd-img4-registry-fix",
+        "node_id": "REF_kwDOTkNePtoARHJlZnMvdGFncy9hcmNoaXZlLzIwMjYtMDktMjMvc3VwZXJzZWRlZC9zeW5jLW0xLW5kLWltZzQtcmVnaXN0cnktZml4",
+        "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/refs/tags/archive/2026-09-23/superseded/sync-m1-nd-img4-registry-fix",
+        "object": {
+          "sha": "441abdc12abddf5fd9277a87d658a9e4ba71a75f",
+          "type": "tag",
+          "url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/git/tags/441abdc12abddf5fd9277a87d658a9e4ba71a75f"
+        }
+      }
+    ],
+    "ruleset": {
+      "id": 23888675,
+      "name": "Objekt X historical archive tags",
+      "target": "tag",
+      "source_type": "Repository",
+      "source": "Waschtl904/objekt-x-programm",
+      "enforcement": "active",
+      "conditions": {
+        "ref_name": {
+          "exclude": [],
+          "include": [
+            "refs/tags/archive/**/*"
+          ]
+        }
+      },
+      "rules": [
+        {
+          "type": "update"
+        },
+        {
+          "type": "deletion"
+        }
+      ],
+      "node_id": "RRS_lACqUmVwb3NpdG9yec5OQ14-zgFsgyM",
+      "created_at": "2026-09-23T17:56:26.448+02:00",
+      "updated_at": "2026-09-23T17:56:26.484+02:00",
+      "bypass_actors": [],
+      "current_user_can_bypass": "never",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/Waschtl904/objekt-x-programm/rulesets/23888675"
+        },
+        "html": {
+          "href": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      }
+    },
+    "open_prs": []
+  },
+  "source_proposal": "User naming decision: content-resolved with the original branch path. Earlier flattened-name proposals for these 18 new tags are superseded as proposals; no alias refs are allowed.",
+  "candidate_count": 21,
+  "candidate_heads_unchanged": true,
+  "branches_now": 63,
+  "target_after_exact_21_deletions": 42,
+  "new_tags_planned": 18,
+  "tags_now": 56,
+  "tags_after_proposed_creation": 74,
+  "manifest_target_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+  "manifest_integrated": false,
+  "manifest_merge_commit": null,
+  "candidates": [
+    {
+      "number": 1,
+      "branch": "ci/integrity-publication-reviewed-2026-09-24",
+      "expected_head": "ecf89ebb7b26e55b4b34a0db7ef4461cfa310df5",
+      "unique_commits_not_on_main": 0,
+      "content_decision_reused": "Vollständige Commit-Historie über main erhalten; integrierter PR-Arbeitsbranch.",
+      "preservation": {
+        "kind": "main_ancestry",
+        "commit": "c4c8d882d5ed69c5c507a65aba9463639b187631"
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 2,
+      "branch": "docs/unique-family-register-2026-09-24",
+      "expected_head": "146ccf8b7bc1fe7d72d5bf87865abd0a29280056",
+      "unique_commits_not_on_main": 0,
+      "content_decision_reused": "Vollständige Commit-Historie über main erhalten; integrierter PR-Arbeitsbranch.",
+      "preservation": {
+        "kind": "main_ancestry",
+        "commit": "c4c8d882d5ed69c5c507a65aba9463639b187631"
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 3,
+      "branch": "chore/root-archive-wave-a",
+      "expected_head": "fe8271657a587b0a8985c3d08791410b10115089",
+      "unique_commits_not_on_main": 3,
+      "content_decision_reused": "Alle sieben verschobenen Audit-/Agenda-Dateien sind bytegleich unter ihren ursprünglichen Root-Pfaden auf main vorhanden. Nur zwei Manifestfassungen und die historische Archiv-README fehlen dort; sie dokumentieren den verworfenen Navigationspilot, keine zusätzlichen Beweisfassungen.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/chore/root-archive-wave-a",
+        "target_commit": "fe8271657a587b0a8985c3d08791410b10115089",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "chore/root-archive-wave-a",
+          "historical_head": "fe8271657a587b0a8985c3d08791410b10115089",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/chore/root-archive-wave-a",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 4,
+      "branch": "ci/validate-a1-fast-route-2026-09-21",
+      "expected_head": "7f2b5722610cbdc1289960345fcbccf3395aa99a",
+      "unique_commits_not_on_main": 1,
+      "content_decision_reused": "Einzige zusätzliche Fassung ist ein ausdrücklich temporärer Dokumentations-Probe-Text für die CI-Pfadklassifikation; kein mathematischer Inhalt und kein zu integrierender Produktivcode.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/ci/validate-a1-fast-route-2026-09-21",
+        "target_commit": "7f2b5722610cbdc1289960345fcbccf3395aa99a",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "ci/validate-a1-fast-route-2026-09-21",
+          "historical_head": "7f2b5722610cbdc1289960345fcbccf3395aa99a",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/ci/validate-a1-fast-route-2026-09-21",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 5,
+      "branch": "ci/validate-legacy-workflow-fast-route-2026-09-21",
+      "expected_head": "07170515f10a96f9faea33869ac30a9cd80df1ac",
+      "unique_commits_not_on_main": 1,
+      "content_decision_reused": "Einzige zusätzliche Fassung ist ein ausdrücklich temporärer Dokumentations-Probe-Text für die CI-Pfadklassifikation; kein mathematischer Inhalt und kein zu integrierender Produktivcode.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/ci/validate-legacy-workflow-fast-route-2026-09-21",
+        "target_commit": "07170515f10a96f9faea33869ac30a9cd80df1ac",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "ci/validate-legacy-workflow-fast-route-2026-09-21",
+          "historical_head": "07170515f10a96f9faea33869ac30a9cd80df1ac",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/ci/validate-legacy-workflow-fast-route-2026-09-21",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 6,
+      "branch": "docs/current-front-navigation",
+      "expected_head": "9e11f9531ffd9a7dce5714f6e6749a5fea5b1bed",
+      "unique_commits_not_on_main": 3,
+      "content_decision_reused": "Endtree vollständig auf main. Die einzige dort byteweise fehlende Zwischenfassung unterscheidet sich vom integrierten Nachfolger ausschließlich durch zwei noch nicht präzisierte Quellenzellen für FG-1/FG-TR1. Der Nachfolger trennt Statusbuchung und Beweis-/Auditprovenienz; keine Aussage wird entfernt.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/docs/current-front-navigation",
+        "target_commit": "9e11f9531ffd9a7dce5714f6e6749a5fea5b1bed",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "docs/current-front-navigation",
+          "historical_head": "9e11f9531ffd9a7dce5714f6e6749a5fea5b1bed",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/docs/current-front-navigation",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 7,
+      "branch": "research/sw1-a-fold-reconciliation",
+      "expected_head": "ba1cee8fd0507aebd88349daf90160f55755e357",
+      "unique_commits_not_on_main": 7,
+      "content_decision_reused": "B: AF.5a–AF.5g und AF.27a im Main-Nachfolger explizieren beide inversen Odd-Extensions; AF.9 korrigiert den auf das innere Intervall eingeschränkten Operator. Die ältere implizite Bijektivitätsbegründung wird historisch eingeordnet. Der Checker-Nachfolger ergänzt die inversen Abbildungen; der abschließende Main-Syntaxfix ersetzt ein wörtliches Backslash-n zwischen print-Anweisungen. Keine neue mathematische Prüfung.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/research/sw1-a-fold-reconciliation",
+        "target_commit": "ba1cee8fd0507aebd88349daf90160f55755e357",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "research/sw1-a-fold-reconciliation",
+          "historical_head": "ba1cee8fd0507aebd88349daf90160f55755e357",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/research/sw1-a-fold-reconciliation",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 8,
+      "branch": "research/sw1-a0-coverage",
+      "expected_head": "0f2be5c7e1dd80bb0c85bbc52b5ce01679de7bd6",
+      "unique_commits_not_on_main": 57,
+      "content_decision_reused": "Endtree vollständig in Main-Historie; jede ältere Fassung entweder bytegleich auf main/in Main-Historie oder mit exakt gleichem Quellpfad und Blob im integrierten A/B-Register. Keine erneute mathematische Bewertung.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/research/sw1-a0-coverage",
+        "target_commit": "0f2be5c7e1dd80bb0c85bbc52b5ce01679de7bd6",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "research/sw1-a0-coverage",
+          "historical_head": "0f2be5c7e1dd80bb0c85bbc52b5ce01679de7bd6",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/research/sw1-a0-coverage",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 9,
+      "branch": "research/sw1-a1-finite-cell",
+      "expected_head": "36f68c606b916a2830199826f698d21b14d508bb",
+      "unique_commits_not_on_main": 60,
+      "content_decision_reused": "Endtree vollständig in Main-Historie; jede ältere Fassung entweder bytegleich auf main/in Main-Historie oder mit exakt gleichem Quellpfad und Blob im integrierten A/B-Register. Keine erneute mathematische Bewertung.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/research/sw1-a1-finite-cell",
+        "target_commit": "36f68c606b916a2830199826f698d21b14d508bb",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "research/sw1-a1-finite-cell",
+          "historical_head": "36f68c606b916a2830199826f698d21b14d508bb",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/research/sw1-a1-finite-cell",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 10,
+      "branch": "research/sw1-a2-a10-reconciliation",
+      "expected_head": "8e404a75a8a4f9e68bf87d3cc5556bd1da51a1d7",
+      "unique_commits_not_on_main": 5,
+      "content_decision_reused": "B: Der Main-Nachfolger ergänzt REC.17a–e und REC.20a–h mit expliziten Kernelbijektionen. W^{-1} bleibt auf Ran(W) beschränkt; auf dem Ambientraum lautet die Projektion WW*, nicht das typwidrige WW^{-1}. Die ältere stärkere/ungenau typisierte Form wird nicht wieder kanonisiert. Der endliche Checker bleibt vom analytischen Hilbertraumsatz getrennt.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/research/sw1-a2-a10-reconciliation",
+        "target_commit": "8e404a75a8a4f9e68bf87d3cc5556bd1da51a1d7",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "research/sw1-a2-a10-reconciliation",
+          "historical_head": "8e404a75a8a4f9e68bf87d3cc5556bd1da51a1d7",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/research/sw1-a2-a10-reconciliation",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 11,
+      "branch": "research/sw1-a2-annulus-projection",
+      "expected_head": "cfff116954607626f075d16f26c6617e4e9b97d0",
+      "unique_commits_not_on_main": 64,
+      "content_decision_reused": "Endtree vollständig in Main-Historie; jede ältere Fassung entweder bytegleich auf main/in Main-Historie oder mit exakt gleichem Quellpfad und Blob im integrierten A/B-Register. Keine erneute mathematische Bewertung.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/research/sw1-a2-annulus-projection",
+        "target_commit": "cfff116954607626f075d16f26c6617e4e9b97d0",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "research/sw1-a2-annulus-projection",
+          "historical_head": "cfff116954607626f075d16f26c6617e4e9b97d0",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/research/sw1-a2-annulus-projection",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 12,
+      "branch": "research/sw1-a3-free-coordinate-gram",
+      "expected_head": "073f6e277d3f7084fbac5d57dcb3ccdeefc94699",
+      "unique_commits_not_on_main": 65,
+      "content_decision_reused": "Endtree vollständig in Main-Historie; jede ältere Fassung entweder bytegleich auf main/in Main-Historie oder mit exakt gleichem Quellpfad und Blob im integrierten A/B-Register. Keine erneute mathematische Bewertung.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/research/sw1-a3-free-coordinate-gram",
+        "target_commit": "073f6e277d3f7084fbac5d57dcb3ccdeefc94699",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "research/sw1-a3-free-coordinate-gram",
+          "historical_head": "073f6e277d3f7084fbac5d57dcb3ccdeefc94699",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/research/sw1-a3-free-coordinate-gram",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 13,
+      "branch": "research/sw1-a4-irrational-rotation-nogo",
+      "expected_head": "10d2b42266af7f8cd0801db5e8f32b21c6f57004",
+      "unique_commits_not_on_main": 68,
+      "content_decision_reused": "Endtree vollständig in Main-Historie; jede ältere Fassung entweder bytegleich auf main/in Main-Historie oder mit exakt gleichem Quellpfad und Blob im integrierten A/B-Register. Keine erneute mathematische Bewertung.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/research/sw1-a4-irrational-rotation-nogo",
+        "target_commit": "10d2b42266af7f8cd0801db5e8f32b21c6f57004",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "research/sw1-a4-irrational-rotation-nogo",
+          "historical_head": "10d2b42266af7f8cd0801db5e8f32b21c6f57004",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/research/sw1-a4-irrational-rotation-nogo",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 14,
+      "branch": "research/sw1-a5-two-sheet-transfer",
+      "expected_head": "dc462d3a1a8eeaeb1b304e51c034c8e721d9226c",
+      "unique_commits_not_on_main": 72,
+      "content_decision_reused": "Endtree vollständig in Main-Historie; jede ältere Fassung entweder bytegleich auf main/in Main-Historie oder mit exakt gleichem Quellpfad und Blob im integrierten A/B-Register. Keine erneute mathematische Bewertung.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/research/sw1-a5-two-sheet-transfer",
+        "target_commit": "dc462d3a1a8eeaeb1b304e51c034c8e721d9226c",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "research/sw1-a5-two-sheet-transfer",
+          "historical_head": "dc462d3a1a8eeaeb1b304e51c034c8e721d9226c",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/research/sw1-a5-two-sheet-transfer",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 15,
+      "branch": "research/sw1-a6-rotation-hole",
+      "expected_head": "0ac4dd943301ef7f78a509ad9418f7b3c74fc245",
+      "unique_commits_not_on_main": 75,
+      "content_decision_reused": "Endtree vollständig in Main-Historie; jede ältere Fassung entweder bytegleich auf main/in Main-Historie oder mit exakt gleichem Quellpfad und Blob im integrierten A/B-Register. Keine erneute mathematische Bewertung.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/research/sw1-a6-rotation-hole",
+        "target_commit": "0ac4dd943301ef7f78a509ad9418f7b3c74fc245",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "research/sw1-a6-rotation-hole",
+          "historical_head": "0ac4dd943301ef7f78a509ad9418f7b3c74fc245",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/research/sw1-a6-rotation-hole",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 16,
+      "branch": "research/sw1-a7-finite-state-cocycle",
+      "expected_head": "8f70d7277c52017761e44cf53e6e47bd2801f8f9",
+      "unique_commits_not_on_main": 79,
+      "content_decision_reused": "Endtree vollständig in Main-Historie; jede ältere Fassung entweder bytegleich auf main/in Main-Historie oder mit exakt gleichem Quellpfad und Blob im integrierten A/B-Register. Keine erneute mathematische Bewertung.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/research/sw1-a7-finite-state-cocycle",
+        "target_commit": "8f70d7277c52017761e44cf53e6e47bd2801f8f9",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "research/sw1-a7-finite-state-cocycle",
+          "historical_head": "8f70d7277c52017761e44cf53e6e47bd2801f8f9",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/research/sw1-a7-finite-state-cocycle",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 17,
+      "branch": "research/sw1-a8-lower-finite-components",
+      "expected_head": "92230af645ea2f0549051edb138b32629b0f56da",
+      "unique_commits_not_on_main": 82,
+      "content_decision_reused": "Endtree vollständig in Main-Historie; jede ältere Fassung entweder bytegleich auf main/in Main-Historie oder mit exakt gleichem Quellpfad und Blob im integrierten A/B-Register. Keine erneute mathematische Bewertung.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/research/sw1-a8-lower-finite-components",
+        "target_commit": "92230af645ea2f0549051edb138b32629b0f56da",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "research/sw1-a8-lower-finite-components",
+          "historical_head": "92230af645ea2f0549051edb138b32629b0f56da",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/research/sw1-a8-lower-finite-components",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 18,
+      "branch": "research/sw1-a9-knf-separator",
+      "expected_head": "8ccf4795ab8280fb262a9f75ff2a104817bfa812",
+      "unique_commits_not_on_main": 113,
+      "content_decision_reused": "B: Die einzige neue Audit-Zwischenfassung ist vollständig im Main-Nachfolger enthalten; dieser ergänzt §15.4B zur Nichtexistenz der 78 unmatched-Ziele. Die bereits registrierten A/B-Fassungen werden ausschließlich über identischen Quellpfad und Blob wiederverwendet. Die Main-Historienfassung des staggered-separator-Checkers unterscheidet sich nur durch den inzwischen integrierten Backslash-n-Syntaxfix. A2/A3/A8-Nachfolger und deren Domänengrenzen bleiben maßgeblich.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/research/sw1-a9-knf-separator",
+        "target_commit": "8ccf4795ab8280fb262a9f75ff2a104817bfa812",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "research/sw1-a9-knf-separator",
+          "historical_head": "8ccf4795ab8280fb262a9f75ff2a104817bfa812",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/research/sw1-a9-knf-separator",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 19,
+      "branch": "research/sw1-delta-descent",
+      "expected_head": "d73d3fdf4b1f919fc9526fc09ce206866b472704",
+      "unique_commits_not_on_main": 52,
+      "content_decision_reused": "Endtree vollständig in Main-Historie; jede ältere Fassung entweder bytegleich auf main/in Main-Historie oder mit exakt gleichem Quellpfad und Blob im integrierten A/B-Register. Keine erneute mathematische Bewertung.",
+      "preservation": {
+        "kind": "existing_descendant_tag",
+        "ref": "refs/tags/archive/2026-09-23/superseded/research-sw1-a10-finite-crossgram",
+        "tag_object": "8d0b36e26ecd49f1fe354269a972fc63a6c66962",
+        "peeled_commit": "45b1f97d4ee167365e853577ca8f4592429fc1cf",
+        "commits_ahead_of_branch_head": 88
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 20,
+      "branch": "research/sw1-m1-nd-image-space",
+      "expected_head": "52ae23096d1965ba3eb9c7880471b20ff0c6a5b6",
+      "unique_commits_not_on_main": 6,
+      "content_decision_reused": "B: Der Main-Nachfolger ergänzt IMG.35a–d, IMG.42a–d und IMG.43a–d: P0-Injektivität des zulässigen Outputbilds, Faktorisierung durch U_H und beidseitige Kernelreduktion. Keine Ambient-G-Äquivarianz wird daraus abgeleitet. Historische GREEN-/Owner-Review-Wörter bleiben damalige scoped Angaben. Der Checker ergänzt den Outputtest und enthält den integrierten Syntaxfix.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/research/sw1-m1-nd-image-space",
+        "target_commit": "52ae23096d1965ba3eb9c7880471b20ff0c6a5b6",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "research/sw1-m1-nd-image-space",
+          "historical_head": "52ae23096d1965ba3eb9c7880471b20ff0c6a5b6",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/research/sw1-m1-nd-image-space",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "NO_BLOCKING_REPOSITORY_CONSUMER_FOUND",
+      "deletion_authorized": false
+    },
+    {
+      "number": 21,
+      "branch": "research/sw1-m1-nd-img2-descriptor",
+      "expected_head": "2e193c5b5726ea66cb8f06de1e2cddbf963b887e",
+      "unique_commits_not_on_main": 7,
+      "content_decision_reused": "B: Der Main-Nachfolger ersetzt den numerischen Reziprokentest durch exakte endliche Zeilentyp-Prüfungen, entfernt R4II aus den im M1-Simplex erreichbaren Zeilen und trennt den analytischen L2-Multiplikatorbeweis. Keine Erhaltung von B_K durch D_R^{-1} wird behauptet. Der Workflow-Nachfolger nimmt identity_pivot als Eingabe, Hash und Prüfschritt auf.",
+      "preservation": {
+        "kind": "planned_annotated_tag",
+        "ref": "refs/tags/archive/2026-09-25/content-resolved/research/sw1-m1-nd-img2-descriptor",
+        "target_commit": "2e193c5b5726ea66cb8f06de1e2cddbf963b887e",
+        "created": false,
+        "annotation_fields": {
+          "classification": "NOT_CANONICAL / HISTORICAL_PROVENANCE",
+          "original_branch": "research/sw1-m1-nd-img2-descriptor",
+          "historical_head": "2e193c5b5726ea66cb8f06de1e2cddbf963b887e",
+          "manifest_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+          "manifest_integration_commit": null,
+          "manifest_sha256": null,
+          "ruleset": 23888675,
+          "deletion_authorized": false,
+          "archive_tag": "archive/2026-09-25/content-resolved/research/sw1-m1-nd-img2-descriptor",
+          "reviewed_local_manifest_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+          "reviewed_local_manifest_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+          "ruleset_link": "https://github.com/Waschtl904/objekt-x-programm/rules/23888675"
+        }
+      },
+      "consumer_result": "MAIN_PUSH_TRANSFER_REQUIRED",
+      "deletion_authorized": false
+    }
+  ],
+  "consumer_check": {
+    "main_literal_hits": 899,
+    "main_hit_files": {
+      ".github/workflows/sw1-a-fold-cert.yml": 1,
+      ".github/workflows/sw1-a2-a10-reconciliation-cert.yml": 1,
+      ".github/workflows/sw1-m1-nd-img0-cert.yml": 1,
+      ".github/workflows/sw1-m1-nd-img2-descriptor-cert.yml": 1,
+      "00-uebersicht/BRANCH_CONSOLIDATION_MANIFEST_2026-09-22.md": 19,
+      "00-uebersicht/archiv/UNIQUE_BRANCH_CONTENT_MAP_2026-09-24.json": 839,
+      "00-uebersicht/archiv/UNIQUE_BRANCH_FAMILY_REVIEW_2026-09-24.md": 24,
+      "audits/P11_R32_SW1_A0_COVERAGE_CANDIDATE.md": 1,
+      "audits/P11_R32_SW1_A10_FINITE_CROSSGRAM_FIBER_CANDIDATE.md": 1,
+      "audits/P11_R32_SW1_A1_FINITE_CELL_RAW_OPERATOR_CANDIDATE.md": 1,
+      "audits/P11_R32_SW1_A2_ANNULUS_PROJECTION_CANDIDATE.md": 1,
+      "audits/P11_R32_SW1_A3_FREE_COORDINATE_GRAM_CANDIDATE.md": 1,
+      "audits/P11_R32_SW1_A4_IRRATIONAL_ROTATION_NOGO_CANDIDATE.md": 1,
+      "audits/P11_R32_SW1_A5_TWO_SHEET_TRANSFER_CANDIDATE.md": 1,
+      "audits/P11_R32_SW1_A6_ROTATION_HOLE_CANDIDATE.md": 1,
+      "audits/P11_R32_SW1_A7_FINITE_STATE_COCYCLE_CANDIDATE.md": 1,
+      "audits/P11_R32_SW1_A8_LOWER_FINITE_COMPONENTS_CANDIDATE.md": 1,
+      "audits/P11_R32_SW1_A9_KNF_SEPARATOR_STABILITY_CANDIDATE.md": 1,
+      "audits/P11_R32_SW1_M1_ND_IMG2_DESCRIPTOR_CANDIDATE.md": 1,
+      "audits/P11_R32_SW1_M1_ND_IMG3_LOCAL_ELIMINATOR_CANDIDATE.md": 1
+    },
+    "all_live_heads_scanned_for_executable_configuration_surfaces": 63,
+    "distinct_technical_blobs_scanned": 241,
+    "technical_hits": [
+      {
+        "branch": "research/sw1-a-fold-reconciliation",
+        "path": ".github/workflows/sw1-a-fold-cert.yml",
+        "line": 7,
+        "blob": "5e2d714df263e9f21d0b9b4e11c0c493b7c4edcb",
+        "main_push_already_enabled": true,
+        "workflow_dispatch_available": true,
+        "fixed_checkout_ref": false,
+        "result": "Additional legacy push filter; main remains enabled."
+      },
+      {
+        "branch": "research/sw1-a2-a10-reconciliation",
+        "path": ".github/workflows/sw1-a2-a10-reconciliation-cert.yml",
+        "line": 7,
+        "blob": "d1dd851d93c0f5fde5cf76e84def82668818e321",
+        "main_push_already_enabled": true,
+        "workflow_dispatch_available": true,
+        "fixed_checkout_ref": false,
+        "result": "Additional legacy push filter; main remains enabled."
+      },
+      {
+        "branch": "research/sw1-m1-nd-image-space",
+        "path": ".github/workflows/sw1-m1-nd-img0-cert.yml",
+        "line": 7,
+        "blob": "93818a17a16ece83ff5d008058c7995fee4f9388",
+        "main_push_already_enabled": true,
+        "workflow_dispatch_available": true,
+        "fixed_checkout_ref": false,
+        "result": "Additional legacy push filter; main remains enabled."
+      },
+      {
+        "branch": "research/sw1-m1-nd-img2-descriptor",
+        "path": ".github/workflows/sw1-m1-nd-img2-descriptor-cert.yml",
+        "line": 6,
+        "blob": "0081142aae6459ea26d73b46f8a1c1c88da6051e",
+        "main_push_already_enabled": false,
+        "workflow_dispatch_available": true,
+        "fixed_checkout_ref": false,
+        "result": "Only the candidate branch triggers pushes. Add main before deleting this branch; workflow_dispatch remains available."
+      }
+    ],
+    "historical_commit_references": [
+      {
+        "path": "audits/P11_R32_SW1_A0_COVERAGE_CANDIDATE.md",
+        "line": 4,
+        "historical_commit": "d73d3fdf4b1f919fc9526fc09ce206866b472704",
+        "reachable_from_named_candidate_heads": [
+          {
+            "branch": "research/sw1-delta-descent",
+            "head": "d73d3fdf4b1f919fc9526fc09ce206866b472704"
+          }
+        ],
+        "existing_protected_tags": [
+          "archive/2026-09-23/superseded/research-sw1-a10-finite-crossgram"
+        ]
+      },
+      {
+        "path": "audits/P11_R32_SW1_A10_FINITE_CROSSGRAM_FIBER_CANDIDATE.md",
+        "line": 4,
+        "historical_commit": "e727e067af228765219cbaaa1a717b80918b68c0",
+        "reachable_from_named_candidate_heads": [
+          {
+            "branch": "research/sw1-a9-knf-separator",
+            "head": "8ccf4795ab8280fb262a9f75ff2a104817bfa812"
+          }
+        ],
+        "existing_protected_tags": [
+          "archive/2026-09-23/superseded/research-sw1-a10-finite-crossgram"
+        ]
+      },
+      {
+        "path": "audits/P11_R32_SW1_A1_FINITE_CELL_RAW_OPERATOR_CANDIDATE.md",
+        "line": 4,
+        "historical_commit": "846b856b0e07a40ac24236b1a05b7b430e86e3e0",
+        "reachable_from_named_candidate_heads": [
+          {
+            "branch": "research/sw1-a0-coverage",
+            "head": "0f2be5c7e1dd80bb0c85bbc52b5ce01679de7bd6"
+          }
+        ],
+        "existing_protected_tags": [
+          "archive/2026-09-23/superseded/research-sw1-a10-finite-crossgram"
+        ]
+      },
+      {
+        "path": "audits/P11_R32_SW1_A2_ANNULUS_PROJECTION_CANDIDATE.md",
+        "line": 4,
+        "historical_commit": "bb4df3a29c787d4e6981a99781e5de1c86737a51",
+        "reachable_from_named_candidate_heads": [
+          {
+            "branch": "research/sw1-a1-finite-cell",
+            "head": "36f68c606b916a2830199826f698d21b14d508bb"
+          }
+        ],
+        "existing_protected_tags": [
+          "archive/2026-09-23/superseded/research-sw1-a10-finite-crossgram"
+        ]
+      },
+      {
+        "path": "audits/P11_R32_SW1_A3_FREE_COORDINATE_GRAM_CANDIDATE.md",
+        "line": 4,
+        "historical_commit": "8bf6a8acf1a25e66bba6edc460c08b3dac9918e7",
+        "reachable_from_named_candidate_heads": [
+          {
+            "branch": "research/sw1-a2-annulus-projection",
+            "head": "cfff116954607626f075d16f26c6617e4e9b97d0"
+          }
+        ],
+        "existing_protected_tags": [
+          "archive/2026-09-23/superseded/research-sw1-a10-finite-crossgram"
+        ]
+      },
+      {
+        "path": "audits/P11_R32_SW1_A4_IRRATIONAL_ROTATION_NOGO_CANDIDATE.md",
+        "line": 4,
+        "historical_commit": "82559ac41961c7c306ae564fa17d6b842838bc39",
+        "reachable_from_named_candidate_heads": [
+          {
+            "branch": "research/sw1-a3-free-coordinate-gram",
+            "head": "073f6e277d3f7084fbac5d57dcb3ccdeefc94699"
+          }
+        ],
+        "existing_protected_tags": [
+          "archive/2026-09-23/superseded/research-sw1-a10-finite-crossgram"
+        ]
+      },
+      {
+        "path": "audits/P11_R32_SW1_A5_TWO_SHEET_TRANSFER_CANDIDATE.md",
+        "line": 4,
+        "historical_commit": "8ccb35421ecb9a0c0976d85e5975ac8a97e21dd7",
+        "reachable_from_named_candidate_heads": [
+          {
+            "branch": "research/sw1-a4-irrational-rotation-nogo",
+            "head": "10d2b42266af7f8cd0801db5e8f32b21c6f57004"
+          }
+        ],
+        "existing_protected_tags": [
+          "archive/2026-09-23/superseded/research-sw1-a10-finite-crossgram"
+        ]
+      },
+      {
+        "path": "audits/P11_R32_SW1_A6_ROTATION_HOLE_CANDIDATE.md",
+        "line": 4,
+        "historical_commit": "86e9e2119cf4896d5bceb17881bd2dd7ea1caede",
+        "reachable_from_named_candidate_heads": [
+          {
+            "branch": "research/sw1-a5-two-sheet-transfer",
+            "head": "dc462d3a1a8eeaeb1b304e51c034c8e721d9226c"
+          }
+        ],
+        "existing_protected_tags": [
+          "archive/2026-09-23/superseded/research-sw1-a10-finite-crossgram"
+        ]
+      },
+      {
+        "path": "audits/P11_R32_SW1_A7_FINITE_STATE_COCYCLE_CANDIDATE.md",
+        "line": 4,
+        "historical_commit": "0b090ebb0c59c79529fb6d4e626f33876abbfcab",
+        "reachable_from_named_candidate_heads": [
+          {
+            "branch": "research/sw1-a6-rotation-hole",
+            "head": "0ac4dd943301ef7f78a509ad9418f7b3c74fc245"
+          }
+        ],
+        "existing_protected_tags": [
+          "archive/2026-09-23/superseded/research-sw1-a10-finite-crossgram"
+        ]
+      },
+      {
+        "path": "audits/P11_R32_SW1_A8_LOWER_FINITE_COMPONENTS_CANDIDATE.md",
+        "line": 4,
+        "historical_commit": "901134463449f16ab2a228135026f1ef8449dfbf",
+        "reachable_from_named_candidate_heads": [
+          {
+            "branch": "research/sw1-a7-finite-state-cocycle",
+            "head": "8f70d7277c52017761e44cf53e6e47bd2801f8f9"
+          }
+        ],
+        "existing_protected_tags": [
+          "archive/2026-09-23/superseded/research-sw1-a10-finite-crossgram"
+        ]
+      },
+      {
+        "path": "audits/P11_R32_SW1_A9_KNF_SEPARATOR_STABILITY_CANDIDATE.md",
+        "line": 4,
+        "historical_commit": "d99d4ef780dc47876ff0445e2bcd403f45679610",
+        "reachable_from_named_candidate_heads": [
+          {
+            "branch": "research/sw1-a8-lower-finite-components",
+            "head": "92230af645ea2f0549051edb138b32629b0f56da"
+          }
+        ],
+        "existing_protected_tags": [
+          "archive/2026-09-23/superseded/research-sw1-a10-finite-crossgram"
+        ]
+      },
+      {
+        "path": "audits/P11_R32_SW1_M1_ND_IMG3_LOCAL_ELIMINATOR_CANDIDATE.md",
+        "line": 4,
+        "historical_commit": "2e193c5b5726ea66cb8f06de1e2cddbf963b887e",
+        "reachable_from_named_candidate_heads": [
+          {
+            "branch": "research/sw1-m1-nd-img2-descriptor",
+            "head": "2e193c5b5726ea66cb8f06de1e2cddbf963b887e"
+          }
+        ],
+        "existing_protected_tags": []
+      }
+    ],
+    "external_consumers": "External services and untracked local automations were not inspected. The check covers the repository and current open GitHub PRs; no open PRs were found."
+  },
+  "required_followup": {
+    "branch": "research/sw1-m1-nd-img2-descriptor",
+    "path": ".github/workflows/sw1-m1-nd-img2-descriptor-cert.yml",
+    "change": "Add main to on.push.branches. Keep existing paths, scripts, certificate semantics and workflow_dispatch unchanged.",
+    "expected_diff_additions": [
+      "      - main"
+    ],
+    "acceptance": "Review routing and applicable PR checks; after merge confirm this workflow actually runs on a main push before deleting the IMG2 branch."
+  },
+  "publication_sequence": [
+    "Publish and review the archive manifest and the scoped IMG2 main-trigger fix through the regular PR process.",
+    "Merge only with PR-specific authorization and completed applicable checks; verify the actual main integration and IMG2 trigger run.",
+    "For each new tag, freshly verify branch head, no relevant open PR, absent tag name, active archive ruleset.",
+    "Create each annotated tag once at its pinned head; bind the actual manifest merge SHA and exact manifest hash in its annotation. Do not fill these with PR163 or the current pre-manifest main SHA.",
+    "Read back tag object, annotation, type and peeled target; preserve every existing tag.",
+    "Obtain a separate authorization for exactly the unchanged 21 branch pointers; one executing session, one expected-SHA-guarded deletion attempt per ref.",
+    "Compare final main, KEEP_AUDIT, remaining branch refs and tags."
+  ],
+  "remote_changes": 0,
+  "repository_changes": 0,
+  "new_tags_created": 0,
+  "deletions": 0,
+  "pr_created": false,
+  "research_front": "O8 unchanged",
+  "canonical_naming_decision": {
+    "checked_at": "2026-09-25 10:49:59 UTC",
+    "prefix": "archive/2026-09-25/content-resolved/",
+    "branch_path_preserved": true,
+    "aliases_allowed": false,
+    "applies_to_new_tags": 18,
+    "batch_candidates": 21,
+    "tag_creation_authorized": false,
+    "branch_deletion_authorized": false
+  },
+  "latest_name_and_head_check": "2026-09-25 10:49:59 UTC",
+  "manifest_binding": {
+    "repository_path": "00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md",
+    "status": "DRAFT_ONLY_NOT_INTEGRATED",
+    "observed_main": "c4c8d882d5ed69c5c507a65aba9463639b187631",
+    "manifest_integration_commit": null,
+    "integrated_manifest_blob": null,
+    "integrated_manifest_sha256": null,
+    "reviewed_local_draft_blob": "109dda0e9f2d2f22b1b326afeba586a9b923d428",
+    "reviewed_local_draft_sha256": "8e3863ed59021987d5ac608326fea9f7f75c020af742e0c88205a3f3636a8633",
+    "finalization_rule": "After the manifest PR is merged, record the actual merge commit and the blob/SHA-256 read from that commit. If it differs from this reviewed local draft, review the difference and refresh this approval template before requesting execution."
+  },
+  "record_semantics": "Frozen preparation snapshot at snapshot.checked_at, with naming finalized at canonical_naming_decision.checked_at. Execution/integration flags describe that preparation only; actual merge, integrated byte hashes and subsequent operations are recorded separately after server read-back. This document grants no tag creation or branch deletion.",
+  "publication_revision": {
+    "source_manifest_blob": "0bc450a62754bd1fd407cf24b0bd14950fcc4b5a",
+    "source_manifest_sha256": "83252af48d58c4c557803bb201d89d9f4ac45e225452d66debfac7f00894e57d",
+    "change": "Clarify dated snapshot semantics and link the companion JSON; all 21 candidate sections, 18 tag names/targets and existing delta anchor remain textually identical; Markdown line endings are normalized to LF as required by .gitattributes."
+  }
+}
