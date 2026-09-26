@@ -10,6 +10,7 @@
 > - Branch-Konsolidierung: [Familienprüfung der 58 Unique-Branches](00-uebersicht/archiv/UNIQUE_BRANCH_FAMILY_REVIEW_2026-09-24.md)
 > - Archivierungsvorbereitung: [Manifest für 21 Branchkandidaten](00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.md) · [JSON](00-uebersicht/ARCHIVE_MANIFEST_2026-09-25.json)
 > - R43-Quellenerhalt: [Zuordnung der drei historischen Fassungen](00-uebersicht/archiv/R43_CONTENT_RECONCILIATION_2026-09-26/README.md) — unabhängiger mathematischer Review weiterhin offen.
+> - Critical-Half-/RP2-Quellen: [89 historische Fassungen der 18er-Familie](00-uebersicht/archiv/CRITICAL_HALF_RP2_SOURCE_PRESERVATION_2026-09-26/README.md) — Quellenbewahrung ohne neue mathematische Abnahme.
 >
 > Historische Status- und Navigationsfassungen bleiben als Provenienz erhalten und dürfen nicht mit der aktuellen Forschungsfront verwechselt werden.
 
