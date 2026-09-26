@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - research/sw1-a10-crossgram-cocycle
+      - main
     paths:
       - scripts/certify_sw1_a10_c1b2a_affine_chirotope.py
       - scripts/certify_sw1_a10_c2_gate1r_96_collision_hyperplanes.py
