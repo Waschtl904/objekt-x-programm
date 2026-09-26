@@ -288,3 +288,5 @@ Externe Publikationen und Drittmaterial unterliegen ihren jeweiligen Rechten und
 - [A1-Audits: historische Originalfassungen, unveränderter Forschungsstatus](00-uebersicht/archiv/A1_AUDITS_SOURCE_PRESERVATION_2026-09-26/README.md)
 
 - [Governance und CI: historische Originalfassungen, unveränderter Forschungsstatus](00-uebersicht/archiv/GOVERNANCE_CI_SOURCE_PRESERVATION_2026-09-26/README.md)
+
+- [NP/OX: historische Originalfassungen, unveränderter Forschungsstatus](00-uebersicht/archiv/NP_OX_SOURCE_PRESERVATION_2026-09-26/README.md)
