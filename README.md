@@ -290,3 +290,5 @@ Externe Publikationen und Drittmaterial unterliegen ihren jeweiligen Rechten und
 - [Governance und CI: historische Originalfassungen, unveränderter Forschungsstatus](00-uebersicht/archiv/GOVERNANCE_CI_SOURCE_PRESERVATION_2026-09-26/README.md)
 
 - [NP/OX: historische Originalfassungen, unveränderter Forschungsstatus](00-uebersicht/archiv/NP_OX_SOURCE_PRESERVATION_2026-09-26/README.md)
+
+- [Terminal und C1: historische Originalfassungen, unveränderter Forschungsstatus](00-uebersicht/archiv/X_C0_C1_TERMINAL_SOURCE_PRESERVATION_2026-09-26/README.md)
