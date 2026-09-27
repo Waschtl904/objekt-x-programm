@@ -1,5 +1,7 @@
 # NEU-258 — Normierungsidentifikation der Repo-Weil-Form mit der Literatur-Weil-Distribution
 
+**Patch 2 (2026-09-27):** §2-Koordinatenwechsel korrigiert: aus $x=e^u$ folgt $g(u)=e^{u/2}h(e^u)$, nicht $h(e^{u/2})e^{u/2}$. Die korrigierte Substitution stellt $\widehat g(t)=H(\tfrac12+it)$ her; Masterform sowie Pol-, Gamma- und Primzahlpotenzblöcke in §§3–5 bleiben unverändert.
+
 **Katalog-ID:** NEU-258  
 **Ordner:** `07-weil-explizitformel`  
 **Datum:** 2026-08-07 (Patch 1: 2026-08-08)  
@@ -31,14 +33,23 @@ $$
 
 ## 2. Koordinate und kritische Linie
 
-Die Weil-Distribution wird über die Testfunktion
-$$
-g(u):=h(e^{u/2})e^{u/2}, \qquad h\in C_c^\infty(\mathbb{R}_{>0}) \qquad (2\text{-Change})
-$$
-von der multiplikativen Gruppe $\mathbb{R}_{>0}$ auf die additive Gruppe $\mathbb{R}$ gehoben. In der Koordinate $s=\frac{1}{2}+it$:
-$$
-\hat g(t)=\int_{\mathbb{R}}g(u)\,e^{itu}\,du=\hat h\left(\tfrac{1}{2}+it\right):=H\left(\tfrac{1}{2}+it\right). \qquad (2\text{-Coord})
-$$
+Setze für $h\in C_c^\infty(\mathbb R_{>0})$
+$
+H(s):=\int_0^\infty h(x)x^s\,\frac{dx}{x}.
+$
+Unter der logarithmischen Substitution $x=e^u$, $dx/x=du$, gilt
+$
+H(s)=\int_{\mathbb R}h(e^u)e^{su}\,du.
+$
+Definiere daher die additive Testfunktion
+$
+\boxed{g(u):=e^{u/2}h(e^u).} \qquad (2\text{-Change})
+$
+Für $s=\frac12+it$ folgt unmittelbar
+$
+\hat g(t)=\int_{\mathbb R}g(u)e^{itu}\,du
+=H\left(\tfrac12+it\right). \qquad (2\text{-Coord})
+$
 
 Suzuki (2011, (0.1)) und Weil (1952, §5) schreiben das Positivitätskriterium in der Form:
 $$

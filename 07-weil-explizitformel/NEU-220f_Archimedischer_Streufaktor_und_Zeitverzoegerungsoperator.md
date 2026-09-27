@@ -1,5 +1,7 @@
 # NEU-220f — PD-4c: Archimedischer Streufaktor und Zeitverzögerungsoperator
 
+**Patch 2026-09-27:** Die rohe PD-4b-Übergabe verwendet nach der PD-2c-Korrektur $-H_\infty$. Die symmetrisierte PD-4c3-Form bleibt unverändert, weil $\gamma_\infty^{\rm sym}$ und die dort zugelassenen reell-geraden Testfunktionen unter $t\mapsto -t$ invariant sind.
+
 **Knoten:** `[O-220-1-PD4c-intrinsic-relative-origin]`  
 **Stand:** 25. Juli 2026  
 **Vorgänger:** NEU-220e (PD-4b ✓[K/M], PD-4c ?[O])  
@@ -155,7 +157,7 @@ $$
 }
 $$
 
-**Beweis.** Aus PD-4c2: $Q_\infty = M_{\gamma_\infty^\mathrm{sym}}$. Also:
+**Beweis.** Aus PD-4c2: $Q_\infty = M_{\gamma_\infty^\mathrm{sym}}$. Nach der korrigierten PD-2c-Orientierung gilt zwar $H_\infty\leftrightarrow -M_t$, aber für das hier vorausgesetzte gerade $h$ ist $h(-t)=h(t)$ und damit $h(H_\infty)\leftrightarrow M_h$. Also:
 
 $$
 \tau_\infty\bigl(Q_\infty h(H_\infty)\bigr)
@@ -239,7 +241,7 @@ PD-5 muss nicht vollständig bis PD-4c4 gesperrt bleiben. Sinnvolle Aufspaltung:
 
 **PD-5a — Typisierter Anschluss der semifiniten Gammaform** (kann auf PD-4b aufbauen)
 
-Kann bereits beginnen. Zielfrage: Wie setzt sich die semifinite archimedische Spur $\tau_\infty(\gamma_\infty(H_\infty)h(H_\infty))$ in den vollständigen adelischen Operator ein?
+Kann bereits beginnen. Zielfrage: Wie setzt sich die semifinite archimedische Spur $\tau_\infty(\gamma_\infty(-H_\infty)h(-H_\infty))$ in den vollständigen adelischen Operator ein?
 
 **PD-5b — Intrinsischer archimedisch-adelischer Operatoranschluss** (gesperrt bis PD-4c4 ≥ ✓[M])
 

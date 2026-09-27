@@ -1,5 +1,7 @@
 # NEU-220a — Mellin-Normierung und Involutionskompatibilität
 
+**Patch 2026-09-27:** Vorzeichenfehler in PD-2c korrigiert. Bei der festgelegten Fourierkonvention $e^{+ity}$ und $H_\infty=-ix\partial_x$ gilt $\mathcal{M}_\infty H_\infty\mathcal{M}_\infty^{-1}=-M_t$. Wesentliche Selbstadjungiertheit, Spektrummenge $\mathbb R$ und gerade Weil-Formen bleiben unverändert; die Spektralorientierung ist $\lambda=-t$.
+
 **Datei:** `katalog/NEU-220a_Mellin-Normierung_und_Involutionskompatibilitaet.md`  
 **Datum:** 2026-07-25  
 **Repository:** Waschtl904/rh-fragenkatalog  
@@ -79,19 +81,29 @@ $$= \int_0^\infty \overline{f(u)}\, u^{-it}\, \frac{du}{u} = \overline{\int_0^\i
 $$H_\infty := -i\, x\frac{d}{dx}.$$
 
 **Satz PD-2c.**
-$$\boxed{\mathcal{M}_\infty \circ H_\infty = M_t \circ \mathcal{M}_\infty,}$$
+$\boxed{\mathcal{M}_\infty \circ H_\infty = -M_t \circ \mathcal{M}_\infty,}$
 wobei $M_t$ die Multiplikation mit der reellen Variablen $t$ bezeichnet.
 
-*Beweis.* Für $f \in \mathcal{S}_\infty$:
-$$\mathcal{M}_\infty(H_\infty f)(t) = \int_0^\infty (-i)\left(x\frac{d}{dx}f(x)\right) x^{it}\, \frac{dx}{x}.$$
-Partielle Integration bezüglich $dx/x$ (Randterme verschwinden wegen $f \in \mathcal{S}_\infty$):
-$$= \int_0^\infty f(x)\, (-i)\cdot(-it)\, x^{it}\, \frac{dx}{x} \cdot (-1) + \text{(Randterm = 0)}$$
-Direkte Rechnung: $x\frac{d}{dx}(x^{it}) = it\cdot x^{it}$, daher
-$$\mathcal{M}_\infty(-ix\tfrac{d}{dx}f)(t) = -i \int_0^\infty (x\tfrac{d}{dx}f)\, x^{it}\tfrac{dx}{x}.$$
-Integration durch Teile ($u = x^{it}$, $dv = x\frac{d}{dx}f\cdot\frac{dx}{x} = f'(x)dx$):
-$$= -i\left[-\int_0^\infty f(x)\cdot it\cdot x^{it}\tfrac{dx}{x}\right] = t\cdot \mathcal{M}_\infty f(t). \quad \square$$
+*Beweis.* Setze $F(y):=f(e^y)$. Dann entspricht $H_\infty f=-ixf'(x)$ unter $x=e^y$ dem Operator $-iF'(y)$. Mit der festgelegten Fourierkonvention $\widehat F(t)=\int_{\mathbb R}F(y)e^{ity}\,dy$ liefert partielle Integration
+$
+\int_{\mathbb R}F'(y)e^{ity}\,dy
+=-it\int_{\mathbb R}F(y)e^{ity}\,dy,
+$
+da die Randterme für $F\in\mathcal S(\mathbb R)$ verschwinden. Daher
+$
+\mathcal M_\infty(H_\infty f)(t)
+=(-i)(-it)\,\mathcal M_\infty f(t)
+=-t\,\mathcal M_\infty f(t).
+\quad\square
+$
 
-**Folgerung.** $H_\infty$ ist auf $L^2(\mathbb{R}_+^\times, dx/x)$ wesentlich selbstadjungiert; sein Spektrum ist $\mathbb{R}$; die Spektralmaß ist das Lebesgue-Maß $dt$ auf $\mathbb{R}$. Für PD-4 (Skalierungsgenerator und regulierte Spur) ist damit die Grundlage gelegt.
+**Folgerung.** $H_\infty$ ist auf $L^2(\mathbb{R}_+^\times,dx/x)$ wesentlich selbstadjungiert; unter $\mathcal M_\infty$ ist er zu $-M_t$ unitär äquivalent. Somit bleiben $\sigma(H_\infty)=\mathbb R$ und das Lebesgue-Spektralmaß erhalten; lediglich die Orientierung ist $t\mapsto -t$.
+
+**Funktionalkalkül-Folge.** Für jede geeignete Borel-Funktion $\varphi$ gilt
+$
+\mathcal M_\infty\,\varphi(-H_\infty)\,\mathcal M_\infty^{-1}=M_{\varphi(t)}.
+$
+Diese Form ist bei späteren operatorischen Realisierungen des Gamma-Symbols zu verwenden.
 
 ---
 
@@ -101,7 +113,7 @@ $$= -i\left[-\int_0^\infty f(x)\cdot it\cdot x^{it}\tfrac{dx}{x}\right] = t\cdot
 
 | Ebene | Variable | Bedeutung |
 |---|---|---|
-| Interne Hilbertraumkoordinate | $t \in \mathbb{R}$ | Spektrum von $H_\infty$, Argument von $\mathcal{M}_\infty f$ |
+| Mellin-/Fourierparameter | $t \in \mathbb{R}$ | Argument von $\mathcal{M}_\infty f$; entspricht unter PD-2c dem Generator-Spektralwert $\lambda=-t$ |
 | Arithmetische Spektralkoordinate | $s = \tfrac{1}{2} + it$ | Argument der Riemannschen $\zeta(s)$ und $\Gamma_{\mathbb{R}}(s)$ |
 
 **Satz PD-2d** (Weil-Symmetrie als einfache Spiegelung).
@@ -163,7 +175,7 @@ Diese Tabelle ist dauerhafter Bestandteil des DAG; spätere Knoten dürfen nicht
 | $\mathcal{S}_\infty \cong \mathcal{S}(\mathbb{R})$ über $f \mapsto [y \mapsto f(e^y)]$ | PD-1a | $\checkmark$ |
 | $\mathcal{M}_\infty: \mathcal{S}_\infty \overset{\sim}{\to} \mathcal{S}(\mathbb{R})$ | PD-2a | $\checkmark$ |
 | $\mathcal{M}_\infty(f^\sharp) = \overline{\mathcal{M}_\infty f}$ | PD-2b | $\checkmark$ |
-| $\mathcal{M}_\infty H_\infty \mathcal{M}_\infty^{-1} = M_t$ | PD-2c | $\checkmark$ |
+| $\mathcal{M}_\infty H_\infty \mathcal{M}_\infty^{-1} = -M_t$ | PD-2c | $\checkmark$ |
 | $s \leftrightarrow 1-s \Leftrightarrow t \leftrightarrow -t$ | PD-2d | $\checkmark$ |
 | $\gamma_\infty(t) = -\tfrac12\log\pi + \tfrac12\psi(\tfrac14 + \tfrac{it}{2})$ | §6 | $\checkmark$ (Vorfaktor für PD-3 reserviert) |
 | $\mathcal{M}_s$ mit $f^\#$ kompatibel, aber PD-1-Kollision | §7 | typisiert festgehalten |
