@@ -1,0 +1,5 @@
+even: checking complete sufficient lower matrix
+even: SUFFICIENT_LOWER_MATRIX_NOT_CERTIFIED; positive pivots 189
+odd: checking complete sufficient lower matrix
+odd: SUFFICIENT_LOWER_MATRIX_NOT_CERTIFIED; positive pivots 190
+RESULT reserve_results.json (local output path shortened)

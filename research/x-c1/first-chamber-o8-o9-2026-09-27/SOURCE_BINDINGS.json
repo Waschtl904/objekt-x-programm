@@ -1,0 +1,261 @@
+{
+  "date": "2026-09-27",
+  "repository_base": "12ccf274de2188fd226eec9cea4f27ccf631acba",
+  "source_archives": {
+    "O8_A8_Reproduktion_2026-09-27.zip": "009440c5b878269c5f50b2453e7dc07769fa672f9ec41fd1e47c277ab11649a6",
+    "O9_Positive_Transporte_2026-09-27.zip": "bee2d05227c1f2b213aef77593146ec5f46db9623505ae74d5ac21db0c770737"
+  },
+  "repository_inputs": [
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/post-unit-q8-interface-2026-09-21/PROOF.md",
+      "sha256": "94fd7ca59f08771d55f1e36c9aece771b77f5614ff2ac674e9f8e3d285a80681"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/post-unit-q8-interface-2026-09-21/PROOF_OBLIGATIONS.md",
+      "sha256": "bc8036d73395ab8dc17837beee417e50f82c1fe494e1bf68f135e4dd2efbcf5f"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_RAW_TD_O1_O4.md",
+      "sha256": "bead3bad0dc85a91013101328dbeaede4b263062752abda56319dde73b446af4"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_O5_O7_ADDENDUM.md",
+      "sha256": "62e83371a9484d805222854cbfc22e5fca0bd4c0a976242240033445091a0976"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/universal-prime-power-family-2026-09-18/PROOF.md",
+      "sha256": "639cfd30c71828ad56caf04447c7d174ec05071f250e19cb6be189d8c3e5f853"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md",
+      "sha256": "4ebc12a5a84593d4a2fa0e21fd7b0ca6b5cc3fb1cb29e1b4c4f68dbdaa95f1b5"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/PROOF.md",
+      "sha256": "db613db809a7be877340583aecafc0696ba5d5403c73deef1ba960d89d46d96d"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md",
+      "sha256": "aa3c6d5a28ee10caf69cf7dcee2222f48c991db32721356a30e703b6aedaba83"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/PROOF.md",
+      "sha256": "cd916ca46874d63cf663d9a611ec91b62d314456c500cc5f0a205cab237134df"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/terminal-191d-schur-enclosure-2026-09-20/PROOF.md",
+      "sha256": "14717ba224be7bbbb5ab17b83ab1896f967cde1b82452dcf599876a59098f2fb"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/terminal-191d-schur-enclosure-2026-09-20/generate_terminal_matrices.py",
+      "sha256": "82e1a2bf471fbb10bfe2d1841fd22a4f3d37831a18009d850125560d0c5242b7"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/terminal-191d-schur-enclosure-2026-09-20/check_terminal.py",
+      "sha256": "dbeea50cde0cc982e0d9a9c9c04006e51466253ea562d657ab35a75b8285759a"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/terminal-191d-same-engine-B-calibration-2026-09-20/calibrate_B.py",
+      "sha256": "a74f510a31d0a7bdefe8509380c4376c006a998b96604ab045e0e5c6626d60e8"
+    }
+  ],
+  "original_local_files": [
+    {
+      "path": "o8-vorbereitung/O8_ANALYSE.md",
+      "sha256": "26c757086a5b7d0ab165cef0dee481dd7ae71b607c80ee7fc368ebaa21de7282"
+    },
+    {
+      "path": "o8-vorbereitung/check_constants.py",
+      "sha256": "8e9ae5784a341ae3ba4f5db07c6c6ebbdee4fbc375a59a963b071f77c14b7d5c"
+    },
+    {
+      "path": "o8-vorbereitung/constants.json",
+      "sha256": "f2c025fd599ff9bd8a16a698bf42b442439cfd8f05f9cd7c02c6d93adfe421a5"
+    },
+    {
+      "path": "o8-rechenstand/PROOF.md",
+      "sha256": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661"
+    },
+    {
+      "path": "o8-rechenstand/README.md",
+      "sha256": "cd82298bbb12260c11dc47d15e6740241de91097f9ae95795c94128470537042"
+    },
+    {
+      "path": "o8-rechenstand/generate_a8.py",
+      "sha256": "49de5bdeb80dc618206b34c4db3adcb07c602758fcc343b26498b31b5cfc5213"
+    },
+    {
+      "path": "o8-rechenstand/rational_bounds.py",
+      "sha256": "8e9ae5784a341ae3ba4f5db07c6c6ebbdee4fbc375a59a963b071f77c14b7d5c"
+    },
+    {
+      "path": "o8-rechenstand/check_a8.py",
+      "sha256": "4a2e2330efe1e3dc6295effa36f49ea06f2bf0985d23c3d70d9396f8cabe8a5f"
+    },
+    {
+      "path": "o8-rechenstand/check_a8_half.py",
+      "sha256": "c570c9c4ccb4d8ee247f8c0a96521c05f7d5ac943c412515b5579e9f43eaf0ad"
+    },
+    {
+      "path": "o8-rechenstand/refine_tail.py",
+      "sha256": "a8ba14e84ea74d8c56bdac8942dc04fea8a32c117b2d6844ee18ace7f05128b4"
+    },
+    {
+      "path": "o8-rechenstand/refined_tail.json",
+      "sha256": "8be8b9f15c4b382d8ec7ad48aa51aa71d9bf8fa253a96a2f5cc7710c0912cc2f"
+    },
+    {
+      "path": "o8-rechenstand/check_common_reserve.py",
+      "sha256": "bc8a2a3b2a2b7aa4abf6105b69cf6586aacc3980ee7f40a0740115dd65ded5b1"
+    },
+    {
+      "path": "o8-rechenstand/common_reserve.json",
+      "sha256": "284bea1a0cf8f69b426fc8213be0c3f8b42d5f6bbf789249caf4eca81339ceed"
+    },
+    {
+      "path": "o8-rechenstand/check_normalization_a8.py",
+      "sha256": "39a462fb5d0a710e95b00316ab41e928492b2d3be675af8389e2d61b56c5bffa"
+    },
+    {
+      "path": "o8-rechenstand/normalization_results.json",
+      "sha256": "6d39836f68e0240957aeff4b0e6437a1ef1c46a226d486b052b252d99dead2ad"
+    },
+    {
+      "path": "o8-rechenstand/normalization_model.json.gz",
+      "sha256": "6a0001d5786c1c17dc093cd8a0191e13dbea105ff43392acbddc4d3c209db012"
+    },
+    {
+      "path": "o8-rechenstand/requirements.txt",
+      "sha256": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d"
+    },
+    {
+      "path": "o8-rechenstand/a8_model.json.gz",
+      "sha256": "5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b"
+    },
+    {
+      "path": "o8-rechenstand/reserve_refined_lower_matrices.json.gz",
+      "sha256": "b860797185a225b4254dea2d8627db83b3d3781c79f152cf6b2df21fddc0c3a3"
+    },
+    {
+      "path": "o8-rechenstand/reserve_refined.json",
+      "sha256": "c05d019f18e4ec4ed020c4fad034fd61eda476d82763561aa700b075731bb819"
+    },
+    {
+      "path": "o8-rechenstand/reserve_results_lower_matrices.json.gz",
+      "sha256": "32be196ebbf523d001e0ff537ad707433f05a53a184bd1d44c2df6f15967a551"
+    },
+    {
+      "path": "o8-rechenstand/reserve_results.json",
+      "sha256": "3eee46685c8f90e79acb5ec2b6af630507d85aec183279bf4b479944b2c9cd6c"
+    },
+    {
+      "path": "o8-rechenstand/build.log",
+      "sha256": "ae5ec7858106231d3face40f8fe2adde99308fff7db11fa32644dbf3e80d25b1"
+    },
+    {
+      "path": "o8-rechenstand/reserve_check.log",
+      "sha256": "1b3ff71226402ddad9a9791ef1357173ea4f741f42c81a1c38829ccb996bff77"
+    },
+    {
+      "path": "o8-rechenstand/reserve_refined.log",
+      "sha256": "f190ef7d9069a4b305509682c956c153010da461fc91c87f1d3885c126d174f7"
+    },
+    {
+      "path": "o8-schur-abgleich/GRAPH_SCHUR.md",
+      "sha256": "9fcf953793d8511433cbf79a1a1f1c88062eb429b693b0d81b6856754b49c636"
+    },
+    {
+      "path": "o8-schur-abgleich/check_graph_schur.py",
+      "sha256": "ec896624891d5936c543f642bc38212a49e4f19093225610c4156f6aa17a4df0"
+    },
+    {
+      "path": "o8-schur-abgleich/graph_check_results.json",
+      "sha256": "8fc0b74f2d56ab041c6046ef27adcd6cafd824128b406a844019c749766b92e9"
+    },
+    {
+      "path": "o8-schur-abgleich/graph_lower_matrices.json.gz",
+      "sha256": "b860797185a225b4254dea2d8627db83b3d3781c79f152cf6b2df21fddc0c3a3"
+    },
+    {
+      "path": "o8-reproduktion/verify_integer_intervals.py",
+      "sha256": "785390f0e67337d114f8438c6ab3ce102d2713b42ca104e74c5e96e0c7028ee9"
+    },
+    {
+      "path": "o8-reproduktion/integer_results.json",
+      "sha256": "5fdbf3d5a6da3e32ac84bbc1ee324fa7333a64e6e95bfbe3981951b59fcf30c9"
+    },
+    {
+      "path": "o8-reproduktion/integer_results.log",
+      "sha256": "17e86db7236c5dd500ae91a2590e123ecf465b13e1cdce508257e04648234c1f"
+    },
+    {
+      "path": "o8-reproduktion/REPRODUKTION.md",
+      "sha256": "7da893b29246289cc9899e47b71cd76b5fa0cb8ac68032eeb70116ca8b60927c"
+    },
+    {
+      "path": "o8-reproduktion/original_replay_results.json",
+      "sha256": "00c3241a8b513b2d5a2fb16f8899c57be5de2b8464c3a41d79633a8389f3cc48"
+    },
+    {
+      "path": "o8-reproduktion/replayed_refined_tail.json",
+      "sha256": "8be8b9f15c4b382d8ec7ad48aa51aa71d9bf8fa253a96a2f5cc7710c0912cc2f"
+    },
+    {
+      "path": "o8-reproduktion/replayed_reserve_refined.json",
+      "sha256": "4c0cedf905d500d9c7d747afe544860d6a1c03698879655d4e68324714b49d17"
+    },
+    {
+      "path": "o8-reproduktion/replayed_common_reserve.json",
+      "sha256": "76524052918aca72d0e98c3242c43277dbe58b8c3ddb7b0ded4aeda1e0edd0e7"
+    },
+    {
+      "path": "o8-reproduktion/refine_tail_replay.log",
+      "sha256": "8be8b9f15c4b382d8ec7ad48aa51aa71d9bf8fa253a96a2f5cc7710c0912cc2f"
+    },
+    {
+      "path": "o8-reproduktion/reserve_refined_replay.log",
+      "sha256": "73220d42fc30ac6b10d85b5c47c3c4f0f9b59164a64400d37bef28dbe6bee208"
+    },
+    {
+      "path": "o8-reproduktion/common_reserve_replay.log",
+      "sha256": "76524052918aca72d0e98c3242c43277dbe58b8c3ddb7b0ded4aeda1e0edd0e7"
+    },
+    {
+      "path": "o9-positive-transporte/PROOF.md",
+      "sha256": "b01f10848e75988f34853df3211741f51c6f25bc9d2f111e32c9172b35d2a517"
+    },
+    {
+      "path": "o9-positive-transporte/check_transport_algebra.py",
+      "sha256": "ed3b6031e73edc145c6c0c11909e320f45142b2296db3d74993bf3f141824abe"
+    },
+    {
+      "path": "o9-positive-transporte/transport_checks.json",
+      "sha256": "79bc57a1efb12bc204cee2c067950c9834c51d371b56648ded1025209ad73f0b"
+    },
+    {
+      "path": "o9-positive-transporte/audit_precision.json",
+      "sha256": "48ed03769e0cd56c6f9778a83315d3002f21fd6a9f1a6a04d1a6757c6c0c3aa2"
+    }
+  ],
+  "publication_edits": [
+    "O9 proof links resolve to canonical inputs and adjacent O8 package; mathematical text unchanged.",
+    "Historical README and reproduction report receive publication context; package manifest link updated.",
+    "User-specific absolute paths in one replay provenance field and one log line shortened; mathematical results unchanged.",
+    "User-specific absolute paths in one replay provenance field and one log line shortened; mathematical results unchanged."
+  ],
+  "external_review": "OPEN",
+  "model_recomputed_during_publication": false
+}

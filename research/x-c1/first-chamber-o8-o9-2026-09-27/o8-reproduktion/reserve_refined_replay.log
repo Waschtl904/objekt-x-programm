@@ -1,0 +1,7 @@
+even: checking complete sufficient lower matrix
+even: STRICT_POSITIVE_SUFFICIENT_LOWER_MATRIX; positive pivots 191
+physical [1.232563434853455262849492126891905912396e-29 +/- 3.36e-69]; defect [1.071794291176917619869123588600508572124e-30 +/- 6.50e-71]
+odd: checking complete sufficient lower matrix
+odd: STRICT_POSITIVE_SUFFICIENT_LOWER_MATRIX; positive pivots 191
+physical [8.610665260134892625721534245490583358006e-27 +/- 5.31e-68]; defect [7.487535008812950109323073251342015303968e-28 +/- 8.24e-69]
+RESULT reserve_refined.json

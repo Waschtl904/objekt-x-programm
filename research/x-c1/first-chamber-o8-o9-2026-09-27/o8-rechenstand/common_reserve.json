@@ -1,0 +1,26 @@
+{
+  "status": "LOCAL_ALL_PARITY_RESERVE_ROUNDING_PASS",
+  "physical_reserve_exact": "3/250000000000000000000000000000",
+  "physical_reserve_decimal": "1.2e-29",
+  "defect_reserve_from_common_physical_exact": "3/2875000000000000000000000000003",
+  "defect_reserve_rounded_exact": "1/1000000000000000000000000000000",
+  "defect_reserve_decimal": "1e-30",
+  "endpoint": "A8=log(8)/2",
+  "derived_chamber_scope": "1 <= A <= A8 via raw isometric compression",
+  "proof_status": "AUTHOR_DERIVED_LOCAL / EXTERNAL_REVIEW_OPEN",
+  "repository_status_promotion": false,
+  "reserve_results_sha256": "c05d019f18e4ec4ed020c4fad034fd61eda476d82763561aa700b075731bb819",
+  "checker_sha256": "bc8a2a3b2a2b7aa4abf6105b69cf6586aacc3980ee7f40a0740115dd65ded5b1",
+  "parities": {
+    "even": {
+      "all_191_saved_pivot_lower_endpoints_positive": true,
+      "physical_lower_endpoint_exceeds_common_rational": true,
+      "defect_lower_endpoint_exceeds_1e_minus_30": true
+    },
+    "odd": {
+      "all_191_saved_pivot_lower_endpoints_positive": true,
+      "physical_lower_endpoint_exceeds_common_rational": true,
+      "defect_lower_endpoint_exceeds_1e_minus_30": true
+    }
+  }
+}

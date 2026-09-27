@@ -1,0 +1,29 @@
+{
+  "status": "EXACT_CONSTANTS_PASS_ANALYTIC_REVIEW_OPEN",
+  "scope": "1 <= A <= A8",
+  "high_physical_floor": "2/3",
+  "high_T_defect_floor": "4/73",
+  "radius": "26/25",
+  "regular_kernel_floor": "59/500",
+  "q0_loss_upper": "491/200",
+  "shift_norm_upper": "313/100",
+  "raw_high_floor": "2092/3125",
+  "raw_high_floor_display": "0.66944",
+  "Gamma_high_loss": "858/3125",
+  "moment_error_bound_used": "1/1000000",
+  "checks": [
+    "A8 < 26/25",
+    "z/(1+z^2/6) increasing through radius",
+    "regular Gamma kernel >= 59/500",
+    "Euler gamma < 5773/10000",
+    "new q0 loss < 491/200",
+    "new full shift bound < 313/100",
+    "H384 > 6529/1000",
+    "moment-corrected whole high floor > 2/3",
+    "mixed factor still < 8",
+    "carrier factor still < 12",
+    "new high T reserve 4/73"
+  ],
+  "check_count": 11,
+  "source_sha256": "a8ba14e84ea74d8c56bdac8942dc04fea8a32c117b2d6844ee18ace7f05128b4"
+}

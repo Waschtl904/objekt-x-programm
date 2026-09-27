@@ -1,0 +1,70 @@
+{
+  "repository_inputs": [
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/post-unit-q8-interface-2026-09-21/PROOF.md",
+      "sha256": "94fd7ca59f08771d55f1e36c9aece771b77f5614ff2ac674e9f8e3d285a80681"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/post-unit-q8-interface-2026-09-21/PROOF_OBLIGATIONS.md",
+      "sha256": "bc8036d73395ab8dc17837beee417e50f82c1fe494e1bf68f135e4dd2efbcf5f"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_RAW_TD_O1_O4.md",
+      "sha256": "bead3bad0dc85a91013101328dbeaede4b263062752abda56319dde73b446af4"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_O5_O7_ADDENDUM.md",
+      "sha256": "62e83371a9484d805222854cbfc22e5fca0bd4c0a976242240033445091a0976"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/universal-prime-power-family-2026-09-18/PROOF.md",
+      "sha256": "639cfd30c71828ad56caf04447c7d174ec05071f250e19cb6be189d8c3e5f853"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md",
+      "sha256": "4ebc12a5a84593d4a2fa0e21fd7b0ca6b5cc3fb1cb29e1b4c4f68dbdaa95f1b5"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/moving-endpoint-uniform-high-tail-2026-09-19/PROOF.md",
+      "sha256": "db613db809a7be877340583aecafc0696ba5d5403c73deef1ba960d89d46d96d"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/compact-defect-moving-191d-schur-bridge-2026-09-20/PROOF.md",
+      "sha256": "aa3c6d5a28ee10caf69cf7dcee2222f48c991db32721356a30e703b6aedaba83"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/prime-power-segment-4-2026-09-18/PROOF.md",
+      "sha256": "cd916ca46874d63cf663d9a611ec91b62d314456c500cc5f0a205cab237134df"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/terminal-191d-schur-enclosure-2026-09-20/PROOF.md",
+      "sha256": "14717ba224be7bbbb5ab17b83ab1896f967cde1b82452dcf599876a59098f2fb"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/terminal-191d-schur-enclosure-2026-09-20/generate_terminal_matrices.py",
+      "sha256": "82e1a2bf471fbb10bfe2d1841fd22a4f3d37831a18009d850125560d0c5242b7"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/terminal-191d-schur-enclosure-2026-09-20/check_terminal.py",
+      "sha256": "dbeea50cde0cc982e0d9a9c9c04006e51466253ea562d657ab35a75b8285759a"
+    },
+    {
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/terminal-191d-same-engine-B-calibration-2026-09-20/calibrate_B.py",
+      "sha256": "a74f510a31d0a7bdefe8509380c4376c006a998b96604ab045e0e5c6626d60e8"
+    }
+  ],
+  "meaning": "Pinned source files are read from repository history; no duplicate source tree is shipped."
+}

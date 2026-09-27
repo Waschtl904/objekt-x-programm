@@ -1,0 +1,41 @@
+{
+  "status": "CLEAN_COPY_ORIGINAL_CHECKERS_PASS",
+  "archive": "O8_A8_mit_Schurabgleich_2026-09-27.zip",
+  "archive_sha256": "16bc2ea4d194b15f9240662286ac3ba38b46cafaf532890c77eb033e2ee62ea0",
+  "fresh_extraction": "work/o8-reproduktion-01 (local replay directory; user-specific prefix omitted)",
+  "manifest_checks": [
+    {
+      "manifest": "o8-rechenstand/SHA256SUMS",
+      "verified_files": 40
+    },
+    {
+      "manifest": "o8-schur-abgleich/SHA256SUMS",
+      "verified_files": 8
+    }
+  ],
+  "steps": [
+    {
+      "step": "refine_tail",
+      "returncode": 0,
+      "log": "refine_tail_replay.log"
+    },
+    {
+      "step": "reserve_refined",
+      "returncode": 0,
+      "log": "reserve_refined_replay.log"
+    },
+    {
+      "step": "common_reserve",
+      "returncode": 0,
+      "log": "common_reserve_replay.log"
+    }
+  ],
+  "high_tail_result_identical_bytes": true,
+  "reserve_result_identical_except_elapsed_seconds": true,
+  "lower_matrices_identical_bytes": true,
+  "common_result_identical_except_result_hash": true,
+  "positive_directed_pivots_each_parity": 191,
+  "independent_algorithm": false,
+  "github_writes": false,
+  "runner_sha256": "e89249ab24de58e19aa3c1a42442a6c34bb09cc59019a8b1b306709f727d2a77"
+}
