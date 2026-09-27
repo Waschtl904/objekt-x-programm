@@ -1,3 +1,18 @@
+> [!NOTE]
+> **Aktuelle Orientierung — Nachpflege vom 27. September 2026.**
+>
+> Die folgende Einführung bewahrt die Textbasis vom 7. August und den
+> Konsolidierungshinweis vom 3. September 2026 unverändert. Aussagen wie
+> „heute“, „aktiver Kern“ und „aktuelle Roadmap“ beziehen sich dort auf
+> diese historischen Stände, nicht auf die heutige Arbeitsanweisung.
+>
+> Für den aktuellen Einstieg: [README](README.md),
+> [CURRENT_STATE](00-uebersicht/CURRENT_STATE.md),
+> [NEXT_GATES](00-uebersicht/NEXT_GATES.md) und
+> [RESEARCH_STATE](00-uebersicht/RESEARCH_STATE.yaml).
+> Historische Quellen erschließt der [Archiveinstieg](00-uebersicht/ARCHIVE_INDEX.md).
+> Dieser Hinweis ändert keine mathematische Aussage und keinen Reviewstatus.
+
 # Das Objekt-X-Programm — Eine verständliche Einführung
 
 > **Textbasis:** 7. August 2026 — nach NEU-250k/l.  
