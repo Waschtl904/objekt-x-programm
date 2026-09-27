@@ -1,5 +1,7 @@
 # NEU-220g — PD-5a: Schwacher endlich-archimedischer Anschluss
 
+**Patch 2026-09-27:** Zwei frühe Typbehauptungen präzisiert. Koordinatenrestriktionen eines allgemeinen $F\in\mathcal S(\mathbb A)$ auf die beiden Nullschnitte sind als Restriktionen kanonisch definiert; sie sind jedoch keine Tensorfaktor-Projektionen und rekonstruieren $F$ nicht. Außerdem ist Punktauswertung auf dem additiven Schwartzraum $\mathcal S(\mathbb R)$ stetig; auf dem multiplikativen Raum $\mathcal S_\infty$ liegt $0$ dagegen nicht im Definitionsbereich. Der eigentliche offene Punkt ist daher Kanonizität/Kompatibilität der Augmentation, nicht bloße Stetigkeit.
+
 **Knoten:** `[O-220-1-PD5a-weak-connection]`  
 **Stand:** 25. Juli 2026  
 **Vorgänger:** NEU-220f (PD-4c1–c3 ✓[K/M]/✓[M]; PD-4c4 ?[O])  
@@ -228,19 +230,20 @@ $$
 \mathcal S(\mathbb A) \cong \mathcal S(\mathbb A_\mathrm{fin}) \widehat\otimes \mathcal S(\mathbb R).
 $$
 
-Die Projektion $(F_\mathrm{fin}, F_\infty) = (F|_{\mathbb A_\mathrm{fin}\times\{0\}}, F|_{\{0\}\times\mathbb R})$
-ist jedoch nur für Rang-1-Tensoren $F = f_\mathrm{fin}\otimes h$ kanonisch definiert.
+Die beiden Nullschnitt-Restriktionen
+$
+F\longmapsto F|_{\mathbb A_\mathrm{fin}\times\{0\}},
+\qquad
+F\longmapsto F|_{\{0\}\times\mathbb R}
+$
+sind für allgemeine $F\in\mathcal S(\mathbb A)$ als Restriktionsabbildungen kanonisch definiert; dafür ist keine Rang-1-Tensorzerlegung nötig. Sie sind jedoch **keine Projektionen auf Tensorfaktoren**: Aus ihnen lässt sich $F$ nicht rekonstruieren, und sie liefern nicht automatisch die für die Weil-Funktionale gewünschten lokalen Typen oder Normierungen.
 
-**Einschränkung (PD-5a4-Vorgriff):** Für allgemeine $F\in\mathcal S(\mathbb A)$ ist
-die Abbildung $F\mapsto(F_\mathrm{fin},F_\infty)$ eine Diagonaleinschränkung,
-keine freie Projektion. Die Definitheit eines skalaren Funktionals auf
-$\mathcal S(\mathbb A)$ erfordert dann kanonische Augmentationen (siehe PD-5a4).
+**Einschränkung (PD-5a4-Vorgriff):** Offen bleibt daher nicht die Existenz der Nullschnitt-Restriktionen, sondern ob aus ihnen oder aus anderen kanonischen linearen Funktionalen ein Weil-kompatibler globaler Anschluss entsteht. Für einen Tensorproduktansatz benötigt man insbesondere zusätzliche lineare Funktionale auf dem jeweils anderen Faktor (siehe PD-5a4).
 
 **Auditfrage aus dem Repository:** Die Dateien neu26–neu30 arbeiten mit einer globalen
 Mellinvariable $s$ und einer festen Spurform $\lambda_\mathrm{mod}(s)$, aber
 nicht mit einer explizit adelischen Testfunktion $F\in\mathcal S(\mathbb A)$.
-Eine globale Diagonalabbildung $\mathcal S_{\mathbb A}\to\mathcal S_\mathrm{fin}\oplus\mathcal S_{\infty,\mathrm{even}}^{\mathbb R}$
-ist in den Primärdateien nicht konstruiert.
+Die kanonischen Nullschnitt-Restriktionen existieren zwar, doch ein globaler **Weil-kompatibler Anschluss** $\mathcal S_{\mathbb A}\to\mathcal S_\mathrm{fin}\oplus\mathcal S_{\infty,\mathrm{even}}^{\mathbb R}$ mit den benötigten Zieltypen, Involutionen und Normierungen ist in den Primärdateien nicht konstruiert.
 
 $$
 \boxed{[O\text{-}220\text{-}1\text{-PD5a3-global-test-function}]\quad?[O].}
@@ -267,14 +270,12 @@ $$
 
 | Seite | Kandidat für $\varepsilon$ | Natürlichkeit |
 |---|---|---|
-| $\varepsilon_\infty(h)$ | $h(0)$ (Dirac-Auswertung) | Nicht stetig auf $\mathcal S$ ohne Zusatzbedingung |
+| $\varepsilon_\infty(h)$ | $h(0)$ (Dirac-Auswertung) | Auf $\mathcal S(\mathbb R)$ stetig; auf $\mathcal S_\infty$ ist $0$ nicht Teil des Definitionsbereichs, daher typabhängig und als Augmentation nicht automatisch geeignet |
 | $\varepsilon_\infty(h)$ | $\int_\mathbb R h\,dt/(2\pi)$ | Stetig, aber Normierung ungeklärt |
 | $\varepsilon_\mathrm{fin}(f)$ | $f(1)$ (Einheitswert) | Stetig auf $C_c^\infty(\mathbb A_\mathrm{fin})$ |
 | $\varepsilon_\mathrm{fin}(f)$ | $\hat f(1)$ (Fourier bei 1) | Nur sinnvoll nach Maßwahl |
 
-Ohne einen natürlichen Augmentationsmechanismus ist das Tensorprodukt
-kein ehrlicherer Typ als die direkte Summe. Der direkten-Summen-Anschluss
-(PD-5a2) ist daher der methodisch korrekte erste Schritt.
+Die bloße Existenz stetiger linearer Funktionale ist hier **nicht** das Problem. Offen ist vielmehr, welche Augmentation kanonisch ist und zugleich mit Involution, lokaler Normierung und gewünschter Weil-Struktur kompatibel bleibt. Ohne diese Zusatzstruktur ist das Tensorprodukt noch kein stärkerer Anschluss als die direkte Summe; PD-5a2 bleibt daher nur ein bewusst schwacher erster Schritt.
 
 $$
 \boxed{[O\text{-}220\text{-}1\text{-PD5a4-tensor-augmentation}]\quad?[O].}

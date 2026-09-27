@@ -1,5 +1,7 @@
 # NEU-220f — PD-4c: Archimedischer Streufaktor und Zeitverzögerungsoperator
 
+**Patch 2 (2026-09-27):** Vorzeichenkonvention der Streuinterpretation präzisiert. Die algebraische Identität $Q_\infty:=i\mathscr S_\infty^*\partial_t\mathscr S_\infty=M_{\gamma_\infty^{\rm sym}}$ bleibt richtig. Unter der üblichen Wigner-Smith/Eisenbud-Wigner-Konvention $Q_{\rm WS}:=-i\mathscr S_\infty^*\partial_t\mathscr S_\infty$ gilt jedoch $Q_{\rm WS}=-Q_\infty$. $Q_\infty$ ist daher das Negative des üblichen Zeitverzögerungsoperators; die späteren Spurformeln verwenden weiterhin die explizit definierte Größe $Q_\infty$.
+
 **Patch 2026-09-27:** Die rohe PD-4b-Übergabe verwendet nach der PD-2c-Korrektur $-H_\infty$. Die symmetrisierte PD-4c3-Form bleibt unverändert, weil $\gamma_\infty^{\rm sym}$ und die dort zugelassenen reell-geraden Testfunktionen unter $t\mapsto -t$ invariant sind.
 
 **Knoten:** `[O-220-1-PD4c-intrinsic-relative-origin]`  
@@ -139,7 +141,7 @@ Q_\infty
 }
 $$
 
-$Q_\infty$ ist der **archimedische Zeitverzögerungsoperator** im Sinne von Eisenbud-Wigner: Der Operator $-i\mathscr{S}^*\partial_t\mathscr{S}$ misst die durch das Streusystem induzierte Zeitverzögerung; hier liefert er genau das symmetrisierte Gamma-Symbol.
+Die algebraische Identität ist korrekt. Für die **Streuinterpretation** muss jedoch das Vorzeichen getrennt werden: In der üblichen Wigner-Smith/Eisenbud-Wigner-Konvention ist der Zeitverzögerungsoperator $Q_{\rm WS}:=-i\mathscr S_\infty^*\partial_t\mathscr S_\infty$. Daher gilt hier $Q_{\rm WS}=-M_{\gamma_\infty^{\rm sym}}=-Q_\infty$. Die in diesem Knoten definierte Größe $Q_\infty=i\mathscr S_\infty^*\partial_t\mathscr S_\infty$ ist der Gamma-Phasenoperator bzw. das Negative des üblichen Zeitverzögerungsoperators.
 
 $$
 \boxed{[O\text{-}220\text{-}1\text{-PD4c2-time-delay-identity}]\quad\checkmark[K/M].}
@@ -222,7 +224,7 @@ $$
 | PD-4a | Gewöhnliche Hilbertspur No-Go | ✓[M]_neg |
 | PD-4b | Semifinite Spur $\tau_\infty$: $\Lambda_\Gamma=\frac1{2\pi}\tau_\infty(M_{\gamma_\infty h})$ | ✓[K/M] |
 | PD-4c1 | Unitärer Streufaktor $S_\infty$, $|S_\infty|=1$ | ✓[K/M] |
-| PD-4c2 | Zeitverzögerungsoperator $Q_\infty=M_{\gamma_\infty^\mathrm{sym}}$ | ✓[K/M] |
+| PD-4c2 | Gamma-Phasenoperator $Q_\infty=M_{\gamma_\infty^\mathrm{sym}}$; üblicher Wigner-Smith-Operator $Q_{\rm WS}=-Q_\infty$ | ✓[K/M] |
 | PD-4c3 | Spurrückgewinnung $\Lambda_\Gamma=\frac1{4\pi}\tau_\infty(Q_\infty h(H_\infty))$ (reell-gerade $h$) | ✓[M] |
 | PD-4c4 | Intrinsisches Streusystem $(H_0,H_1)$ mit $S=\mathscr{S}_\infty$ | ?[O] |
 | Pol-Funktional | $\Lambda_\mathrm{pole}^\mathrm{raw}$ auf vollst. hermit. Testfunktionsraum | ?[O] |
