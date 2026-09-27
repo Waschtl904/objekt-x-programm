@@ -1,5 +1,7 @@
 # NEU-259 — Direktaudit des finite-Intervall-Grenzwertwegs als Objekt-X-Träger
 
+**Patch 3 (2026-09-27):** Drei Punkte des unabhängigen Gesamtaudits korrigiert/präzisiert: (i) für $\lambda_a:=\inf\sigma(A_a)$ gilt $A_a\ge\lambda_a I$ (nicht $-\lambda_a I$); (ii) nach NEU-258 ist die vollständige Repo-Weil-Form einschließlich Polterm mit der Literaturform identifiziert, daher gilt auf dem Testkern $B_W|_{C_c^\infty(-a,a)}=Q_W^a$ ohne offenen Polterm-Randaudit; (iii) die Positivität von $T_{a,\lambda}=A_a-\lambda I$ für $\lambda<\lambda_a$ ist eine Spektralverschiebung, nicht finite Weil-Positivität. Ein gemeinsamer, intervallunabhängiger Shift wäre bereits RH-relevant.
+
 **Katalog-ID:** NEU-259  
 **Ordner:** `07-weil-explizitformel`  
 **Datum:** 2026-08-07 (Patch 2: 2026-08-07)  
@@ -73,7 +75,7 @@ $$
 ### 1.1 Ebene 1 (Satz)
 
 $$
-\boxed{A_a=A_a^*\ge-\lambda_a I,\quad\lambda_a:=\inf\sigma(A_a)>-\infty,\quad\text{diskretes Spektrum.}\quad\checkmark\text{ (Satz)}} \qquad (1\text{-Aa})
+\boxed{A_a=A_a^*\ge\lambda_a I,\quad\lambda_a:=\inf\sigma(A_a)>-\infty,\quad\text{diskretes Spektrum.}\quad\checkmark\text{ (Satz)}} \qquad (1\text{-Aa})
 $$
 
 ### 1.2 $T_{a,\lambda}$ und $\mathcal{H}(T_{a,\lambda})$ (Satz)
@@ -84,6 +86,13 @@ $$
 $$
 
 **$\lambda$-Abhängigkeit:** Verschiedene $\lambda<\lambda_a$ liefern topologisch äquivalente, aber nicht isometrische Hilberträume. Ob die $\overline{\mathscr{D}}_{a,\theta}$-Spektren $\lambda$-unabhängig sind: $\to$ Frage A/NEU-260.
+
+**Positivitäts-Firewall der endlichen Stufe.** Die Aussage $T_{a,\lambda}>0$ folgt allein aus der Wahl $\lambda<\lambda_a$ und gilt für jeden semibeschränkten $A_a$. Sie ist daher **nicht** die Aussage $Q_W^a\ge0$. Das Vorzeichen des unverschobenen Spektralbodens $\lambda_a$ trägt weiterhin den RH-Inhalt: Nach Yoshida/Suzuki gilt
+$
+\mathrm{RH}\quad\Longleftrightarrow\quad \lambda_a\ge0\ \text{für alle }a>0.
+\qquad (1\text{-FiniteFire})
+$
+Die RH-freie positive Metrik auf $\mathcal H(T_{a,\lambda})$ entsteht somit durch Verschiebung, nicht durch eine neue finite Weil-Positivität.
 
 ### 1.3 Ebene 2: $\overline{\mathscr{D}}_{a,\theta}$ (Satz)
 
@@ -101,19 +110,22 @@ Suzuki bemerkt, dass $\phi(a,z)=0$ möglicherweise genügt, beweist es nicht.
 
 ---
 
-## Frage 2 — Identifikation $B_W|_{C_c^\infty(-a,a)}\stackrel{?}{=}Q_W^a$
+## Frage 2 — Identifikation $B_W|_{C_c^\infty(-a,a)}=Q_W^a$
 
+NEU-258 hat die **vollständige** Repo-Weil-Distribution, einschließlich Pol-, Gamma- und Primzahlpotenzblock, mit der kanonischen Literatur-Weil-Distribution identifiziert:
 $$
-(B_\Gamma+B_{\rm fin})|_{C_c^\infty(-a,a)}=Q_{W,\Gamma+\rm fin}^a.\quad\checkmark[K/M]\text{ (aus NEU-258)} \qquad (2\text{-GamFin})
+W_{\rm NEU-252}=W_{\rm Lit}.
+$$
+Suzukis $Q_W^a$ ist die Lokalisierung eben dieser Weil-Quadratik auf $(-a,a)$. Daher gilt auf dem gemeinsamen Testkern unmittelbar
+$$
+\boxed{
+B_W|_{C_c^\infty(-a,a)}=Q_W^a.
+\quad\checkmark[K/M]
+}
+\qquad (2\text{-Final})
 $$
 
-$$
-B_{\rm pole}|_{C_c^\infty(-a,a)}\stackrel{?}{=}Q_{W,\rm pole}^a\quad?[O]\text{ (Polterm-Randaudit)} \qquad (2\text{-Pole})
-$$
-
-$$
-B_W|_{C_c^\infty(-a,a)}=Q_W^a\quad?[O]\text{ (offen bis Polterm-Randaudit)} \qquad (2\text{-Final})
-$$
+Ein separater „Polterm-Randaudit“ ist für diese Testkernidentität nicht mehr offen; die Polnormierung wurde bereits in NEU-258 geschlossen. Die Frage nach den **abgeschlossenen Formdomänen** bleibt davon zu unterscheiden: Suzuki liefert die untere halbstetige/abgeschlossene Lokalisierung und den zugehörigen Operator $A_a$.
 
 ---
 
@@ -123,7 +135,8 @@ $$
 |---|---|
 | $Q_W^a$ semibeschränkt, abschließbar auf $L^2(-a,a)$ | $\checkmark$ **Satz** |
 | $A_a=A_a^*$, diskretes Spektrum | $\checkmark$ **Satz** |
-| $T_{a,\lambda}>0$, $\mathcal{H}(T_{a,\lambda})$ Hilbertraum | $\checkmark$ **Satz** |
+| $T_{a,\lambda}>0$, $\mathcal{H}(T_{a,\lambda})$ Hilbertraum | $\checkmark$ **Satz**; Positivität entsteht durch Shift $\lambda<\lambda_a$ |
+| $Q_W^a\ge0$ für alle $a>0$ | **äquivalent zu RH**; nicht Bestandteil der RH-freien endlichen Existenz |
 | $\overline{\mathscr{D}}_{a,\theta}=\overline{\mathscr{D}}_{a,\theta}^*$ auf $\mathcal{H}(T_{a,\lambda})$ | $\checkmark$ **Satz** |
 | $L^2(-a,a)\hookrightarrow L^2(-b,b)$ durch Nullfortsetzung | $\checkmark$ **Satz** (Suzuki) |
 | Spektrum von $W(a,\theta;z)$ $\lambda$-unabhängig | $?[O]$ (Suzuki-Behauptung, kein Beweis) |
@@ -136,6 +149,26 @@ $$
 ## Frage 4 — Kanonische Übergangsabbildungen
 
 $L^2$-Einbettung durch Nullfortsetzung: kanonisch $\checkmark$ (Suzuki, Satz). $(4\text{-L2Emb})$
+
+Auf dem Testkern ist die **unverschobene** Form unter Nullfortsetzung kompatibel. Für $0<a<b$ und $E_{a,b}v$ die Nullfortsetzung gilt wegen der Lokalisierungsidentität
+$
+Q_W^b(E_{a,b}v)=Q_W^a(v).
+\qquad (4\text{-FormCompat})
+$
+Für gewählte Shiftparameter $\lambda(a)<\lambda_a$ und $\lambda(b)<\lambda_b$ folgt jedoch
+$
+\|E_{a,b}v\|_{T_{b,\lambda(b)}}^2
+-
+\|v\|_{T_{a,\lambda(a)}}^2
+=
+\bigl(\lambda(a)-\lambda(b)\bigr)\|v\|_2^2.
+\qquad (4\text{-ShiftDefect})
+$
+Nullfortsetzung ist also nur dann isometrisch für die $T$-Normen, wenn derselbe Shift verwendet wird.
+
+**Uniform-Shift-Firewall.** Ein gemeinsamer endlicher Shift $\lambda_*<\lambda_a$ für **alle** $a>0$ existiert genau dann, wenn die lokalisierten Spektralböden eine uniforme endliche Untergrenze besitzen. Eine solche Untergrenze würde für jede kompakt getragene Testfunktion sofort eine globale Haar-$L^2$-Untergrenze von $B_W$ liefern und damit nach NEU-257 RH implizieren. Umgekehrt liefert RH $\lambda_a\ge0$ für alle $a$, sodass etwa jeder feste $\lambda_*<0$ zulässig ist.
+
+Damit ist die Existenz eines gemeinsamen Shifts, der die Nullfortsetzungen zu einem isometrischen gerichteten System macht, selbst **RH-äquivalent**. RH-frei bleiben nur $a$-abhängige Shifts; für sie ist zusätzliche Übergangsgeometrie nötig.
 
 Auf Formtopologie-Ebene:
 $$
@@ -178,7 +211,7 @@ $$
 
 ## 6. Offene Punkte
 
-$$B_W|_{C_c^\infty(-a,a)}=Q_W^a\text{ (Polterm-Randaudit)}\quad?[O]\qquad(6\text{-a})$$
+$B_W|_{C_c^\infty(-a,a)}=Q_W^a\quad\checkmark[K/M]\qquad(6\text{-a})$
 $$\lambda\text{-Invarianz von }\sigma(W(a,\theta;z))\quad?[O]\to\text{NEU-260-A}\qquad(6\text{-b})$$
 $$\theta(a)\text{ aus BC/KMS/Frobenius}\quad?[O]\to\text{NEU-260-B}\qquad(6\text{-c})$$
 $$\phi(a,z)\text{ aus Arithmetik; }\phi=0\text{?}\quad?[O]\to\text{NEU-260-C}\qquad(6\text{-d})$$
@@ -197,8 +230,8 @@ $$\overline{\mathscr{D}}_{a,\theta}\text{ sa. auf }\mathcal{H}(T_a)\quad\checkma
 $$A_a\neq\text{conjecturaler HP-Operator}\quad\times[M]\qquad(7\text{-e})$$
 $$\sigma(A_a)\to\{\gamma_n\}\quad\times[M]\text{ (falsche Ebene)}\qquad(7\text{-f})$$
 $$L^2(-a,a)\hookrightarrow L^2(-b,b)\text{ kanonisch}\quad\checkmark[K/M]\qquad(7\text{-g})$$
-$$(B_\Gamma+B_{\rm fin})|_{C_c^\infty(-a,a)}=Q_{W,\Gamma+\rm fin}^a\quad\checkmark[K/M]\qquad(7\text{-h})$$
-$$\lambda(a)\text{: Hilfsverschiebung, nicht primdr Selektionsdatum}\quad\checkmark[K/M]\qquad(7\text{-i})$$
+$B_W|_{C_c^\infty(-a,a)}=Q_W^a\quad\checkmark[K/M]\qquad(7\text{-h})$
+$\lambda(a)\text{: lokale Hilfsverschiebung; gemeinsame intervallunabhängige Verschiebung ist RH-relevant}\quad\checkmark[K/M]\qquad(7\text{-i})$
 $$\phi(a,z)\text{: echtes Grenzdatum (Suzuki-Vermutung, unbewiesen)}\quad\checkmark[K/M]\text{ (Statuskorrektur)}\qquad(7\text{-j})$$
 $$J_{a,b}\text{: originale Objekt-X-Hypothese, nicht in Suzukis analytischer Vermutung}\quad\checkmark[K/M]\qquad(7\text{-k})$$
 $$\text{NEU-260-Auftrag A–D: definiert}\quad\checkmark[K/M]\qquad(7\text{-l})$$
