@@ -1,5 +1,7 @@
 # NEU-220e — PD-4: Operatorischer Ursprung von Λ_Γ; gewöhnliche Spur, semifinite Spur, intrinsischer Gamma-Ursprung
 
+**Patch 2026-09-27:** Operatororientierung an die korrigierte PD-2c-Konvention angepasst. Unter $\mathcal M_\infty$ gilt $H_\infty\leftrightarrow -M_t$; die rohe Gammaform wird daher durch Funktionalkalkül in $-H_\infty$ realisiert. Das Hilbertspur-No-Go und die semifinite Realisierung bleiben inhaltlich unverändert.
+
 **Knoten:** `[O-220-1-PD4-operator-origin]`  
 **Stand:** 25. Juli 2026  
 **Vorgänger:** NEU-220d rev.2 (PD-3d ✓[K/M], PD-3 ✓[K/M])  
@@ -29,7 +31,7 @@ $$
 
 als autoritative Gamma-Rohform. PD-4 fragt: Als was für eine Spur eines Operators lässt sich $\Lambda_\Gamma$ realisieren?
 
-Der freie Skalierungsgenerator $H_\infty=-ix\frac{d}{dx}$ wird unter $\mathcal{M}_\infty$ zu $M_t$ (Multiplikation mit $t$) auf $L^2(\mathbb R,dt)$. Er erzeugt nicht von selbst das Symbol $\gamma_\infty(t)$. Daher ist ein zusätzlicher Funktionalkalkül oder eine relative Konstruktion nötig.
+Der freie Skalierungsgenerator $H_\infty=-ix\frac{d}{dx}$ wird unter $\mathcal{M}_\infty$ zu $-M_t$ auf $L^2(\mathbb R,dt)$. Folglich wird ein Multiplikatorsymbol $\varphi(t)$ durch $\varphi(-H_\infty)$ realisiert. Der Generator erzeugt nicht von selbst das Symbol $\gamma_\infty(t)$; dafür ist weiterhin ein zusätzlicher Funktionalkalkül oder eine relative Konstruktion nötig.
 
 ---
 
@@ -38,14 +40,14 @@ Der freie Skalierungsgenerator $H_\infty=-ix\frac{d}{dx}$ wird unter $\mathcal{M
 **Kandidat:**
 
 $$
-\Lambda_\Gamma(h) \stackrel{?}{=} \operatorname{Tr}_{B(L^2)}\bigl(\gamma_\infty(H_\infty)h(H_\infty)\bigr).
+\Lambda_\Gamma(h) \stackrel{?}{=} \operatorname{Tr}_{B(L^2)}\bigl(\gamma_\infty(-H_\infty)h(-H_\infty)\bigr).
 $$
 
 **Satz PD-4a (No-Go):**
 
 $$
 \boxed{
-\operatorname{Tr}_{B(L^2)}\bigl(\gamma_\infty(H_\infty)h(H_\infty)\bigr)
+\operatorname{Tr}_{B(L^2)}\bigl(\gamma_\infty(-H_\infty)h(-H_\infty)\bigr)
 \text{ existiert im Allgemeinen nicht.}
 }
 $$
@@ -53,7 +55,7 @@ $$
 **Beweis.** Unter $\mathcal{M}_\infty: L^2(\mathbb R^\times,\frac{dx}x)\to L^2(\mathbb R,dt)$ gilt:
 
 $$
-\gamma_\infty(H_\infty)h(H_\infty) = M_{\gamma_\infty h}.
+\gamma_\infty(-H_\infty)h(-H_\infty) = M_{\gamma_\infty h}.
 $$
 
 Für $h\in\mathcal{S}(\mathbb R)$ gilt $\gamma_\infty h\in L^1(\mathbb R)\cap L^\infty(\mathbb R)$ wegen des logarithmischen Wachstums von $\gamma_\infty$ und der Schwartz-Abnahme von $h$. Jedoch: $M_{\gamma_\infty h}$ ist ein Multiplikationsoperator auf dem nichtatomaren Maßraum $(\mathbb R,dt)$. Ein Multiplikationsoperator $M_a$ mit $a\not\equiv 0$ auf $L^2(\mathbb R,dt)$ ist nicht kompakt — insbesondere nicht spurklassig. Die gewöhnliche Hilbert-Spur
@@ -98,7 +100,7 @@ und $\tau_\infty$ setzt sich linear fort auf diesen Raum.
 
 $$
 \boxed{
-\gamma_\infty(H_\infty)h(H_\infty) = M_{\gamma_\infty h} \in L^1(\mathcal{N}_\infty,\tau_\infty)
+\gamma_\infty(-H_\infty)h(-H_\infty) = M_{\gamma_\infty h} \in L^1(\mathcal{N}_\infty,\tau_\infty)
 \quad\text{für }h\in\mathcal{S}_\mathrm{herm}(\mathbb R),
 }
 $$
@@ -107,7 +109,7 @@ und
 
 $$
 \boxed{
-\Lambda_\Gamma(h) = \frac1{2\pi}\,\tau_\infty\bigl(\gamma_\infty(H_\infty)h(H_\infty)\bigr).
+\Lambda_\Gamma(h) = \frac1{2\pi}\,\tau_\infty\bigl(\gamma_\infty(-H_\infty)h(-H_\infty)\bigr).
 }
 $$
 
@@ -159,7 +161,7 @@ als Spektralverschiebungs- oder Kreimer-Streuphase-Form entsteht.
 
 | Ansatz | Idee | Vorläufiger Status |
 |---|---|---|
-| $\gamma_\infty^\mathrm{sym}(H_\infty)$ via Funktionalkalkül | $\tau_\infty(\gamma_\infty^\mathrm{sym}(H_\infty)h(H_\infty))$ | ✓ als Tautologie; kein intrinsischer Ursprung |
+| $\gamma_\infty^\mathrm{sym}(-H_\infty)$ via Funktionalkalkül | $\tau_\infty(\gamma_\infty^\mathrm{sym}(-H_\infty)h(-H_\infty))$ | ✓ als Tautologie; kein intrinsischer Ursprung |
 | Relativer Resolventen-/Birman-Schwinger-Operator $K_\infty$ | $\partial_t\log\det(1+K_\infty(t))=\gamma_\infty^\mathrm{sym}(t)$ | ?[O] |
 | Streuphase $S_\infty$ eines archimedischen freien/gestörten Paars | $-i\partial_t\log S_\infty(t)=\gamma_\infty^\mathrm{sym}(t)$ | ?[O] |
 | Relative Spurformel aus $D_\mathrm{Arch}/D_\mathrm{free}$ | Direkter Quotient zweier Zeta-/Determinantenfunktionen | ?[O] |
@@ -174,7 +176,7 @@ $$
 
 | Knoten | Aussage | Status |
 |---|---|---|
-| PD-4a | $\operatorname{Tr}_{B(L^2)}(\gamma_\infty(H_\infty)h(H_\infty))$ existiert nicht | ✓[M]_neg |
+| PD-4a | $\operatorname{Tr}_{B(L^2)}(\gamma_\infty(-H_\infty)h(-H_\infty))$ existiert nicht | ✓[M]_neg |
 | PD-4b | $\Lambda_\Gamma(h)=\frac1{2\pi}\tau_\infty(M_{\gamma_\infty h})$, $\tau_\infty$ n.f.s. auf $L^\infty$ | ✓[K/M] |
 | PD-4c | Intrinsischer $\gamma_\infty$-Ursprung via relative/Streu-Konstruktion | ?[O] |
 | Pol-Funktional | $\Lambda_\mathrm{pole}^\mathrm{raw}$ in vollständiger Weil-Form | ?[O] (aus PD-3d4) |

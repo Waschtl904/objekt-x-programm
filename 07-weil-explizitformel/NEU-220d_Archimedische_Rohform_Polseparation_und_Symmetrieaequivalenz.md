@@ -1,5 +1,7 @@
 # NEU-220d — PD-3d: Archimedische Rohform, Polseparation und Symmetrieäquivalenz
 
+**Patch 2026-09-27:** Übergabe an PD-4 an die korrigierte PD-2c-Orientierung angepasst: unter $\mathcal M_\infty$ gilt $H_\infty\leftrightarrow -M_t$, daher wird ein Multiplikatorsymbol $\varphi(t)$ durch $\varphi(-H_\infty)$ realisiert.
+
 **Knoten:** `[O-220-1-PD3d-Weil-normalization]`  
 **Stand:** 25. Juli 2026 (rev.2)  
 **Vorgänger:** NEU-220c (PD-3d ✓[M]_part), NEU-47 (D_Arch-Designentscheidung)  
@@ -308,11 +310,11 @@ $$
 
 PD-4 hat zwei Zielfragen:
 
-1. **PD-4a (negativ):** Gewöhnliche Hilbertraumspur von $\gamma_\infty(H_\infty)h(H_\infty)$ existiert nicht.
+1. **PD-4a (negativ):** Gewöhnliche Hilbertraumspur von $\gamma_\infty(-H_\infty)h(-H_\infty)$ existiert nicht.
 2. **PD-4b (positiv):** Semifinite Spur $\tau_\infty$ auf $\mathcal{N}_\infty=L^\infty(\mathbb R)$ realisiert $\Lambda_\Gamma$.
 3. **PD-4c (offen):** Intrinsischer geometrischer/relativer Ursprung der Digammafunktion.
 
-Ferner: $H_\infty=M_t$ unter $\mathcal{M}_\infty$ erzeugt nicht von selbst $\gamma_\infty^\mathrm{sym}(t)$. PD-4 benötigt Funktionalkalkül oder relativen Operator.
+Ferner: $\mathcal M_\infty H_\infty\mathcal M_\infty^{-1}=-M_t$. Daher realisiert $\varphi(-H_\infty)$ das Multiplikatorsymbol $\varphi(t)$; auch diese korrigierte Orientierung erzeugt $\gamma_\infty^\mathrm{sym}(t)$ nicht von selbst. PD-4 benötigt Funktionalkalkül oder relativen Operator.
 
 ---
 
