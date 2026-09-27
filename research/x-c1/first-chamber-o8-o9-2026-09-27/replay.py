@@ -80,12 +80,18 @@ def main():
     same(copy / 'o8-vorbereitung/constants.json', HERE / 'o8-vorbereitung/constants.json')
     run('tail-refined', 'o8-rechenstand/refine_tail.py')
     same(calc / 'refined_tail.json', HERE / 'o8-rechenstand/refined_tail.json')
+    # write_text uses platform line endings. Preserve the newly computed report,
+    # then restore the semantically identical pinned bytes for downstream hashes.
+    shutil.copyfile(calc / 'refined_tail.json', output / 'refined_tail.json')
+    shutil.copyfile(HERE / 'o8-rechenstand/refined_tail.json', calc / 'refined_tail.json')
     run('arb-certificate', 'o8-rechenstand/check_a8.py', '--high-floor', '2/3', '--output', output / 'arb.json')
     require(read(output / 'arb.json')['both_parities_strictly_certified'] is True, 'Arb positivity failed')
     same(output / 'arb.json', calc / 'reserve_refined.json', ('check_seconds',))
     require(sha(output / 'arb_lower_matrices.json.gz') == sha(calc / 'reserve_refined_lower_matrices.json.gz'), 'Recomputed lower matrices changed')
     run('common-reserve', 'o8-rechenstand/check_common_reserve.py')
     same(calc / 'common_reserve.json', HERE / 'o8-rechenstand/common_reserve.json')
+    shutil.copyfile(calc / 'common_reserve.json', output / 'common_reserve.json')
+    shutil.copyfile(HERE / 'o8-rechenstand/common_reserve.json', calc / 'common_reserve.json')
     run('integer-certificate', 'o8-reproduktion/verify_integer_intervals.py', '--package', calc, '--output', output / 'integer.json')
     integer = read(output / 'integer.json')
     require(integer['both_parities_certified'] is True, 'Independent positivity failed')

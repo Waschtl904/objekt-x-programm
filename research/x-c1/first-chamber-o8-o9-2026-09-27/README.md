@@ -61,6 +61,9 @@ python research/x-c1/first-chamber-o8-o9-2026-09-27/replay.py --output /tmp/o8-o
 
 Der Replay liest die gebundenen Paketdateien und rechnet in einer frischen Kopie.
 Er schreibt Ergebnisse in das angegebene neue Ausgabeverzeichnis.
+Neu erzeugte Tail- und Rundungsprotokolle werden inhaltlich vollständig verglichen.
+Für nachfolgende Hashbindungen verwendet er danach die identischen Originalinhalte
+mit ihren gespeicherten Zeilenenden; die neuen Protokolle bleiben im Ausgabeordner.
 
 O10 rechts von A₈, erneuerbare Profilreserve, unbeschränkte/kofinale Fortsetzung,
 globale Weil-Positivität, Objekt X und RH werden dadurch nicht geschlossen.
