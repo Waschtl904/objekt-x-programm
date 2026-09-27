@@ -1,0 +1,12 @@
+Reconstructing the exact Gamma residual from the supplied polynomial
+even: checking all stored matrix intervals with independent LDL
+even: 64 positive integer-interval pivots
+even: 128 positive integer-interval pivots
+even: 191 positive integer-interval pivots
+even: lower bounds approximately 1.232563434853455262849E-29 physical; 1.071794291176917619869E-30 defect
+odd: checking all stored matrix intervals with independent LDL
+odd: 64 positive integer-interval pivots
+odd: 128 positive integer-interval pivots
+odd: 191 positive integer-interval pivots
+odd: lower bounds approximately 8.610665260134892625722E-27 physical; 7.487535008812950109323E-28 defect
+35 grouped checks PASS; both complete 191D certificates independently reproduced

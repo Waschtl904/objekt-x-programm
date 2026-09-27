@@ -1,0 +1,41 @@
+name: First chamber O8 O9 certificates
+
+on:
+  pull_request:
+    paths:
+      - "research/x-c1/first-chamber-o8-o9-2026-09-27/**"
+      - ".github/workflows/first-chamber-o8-o9.yml"
+  push:
+    branches: [main]
+    paths:
+      - "research/x-c1/first-chamber-o8-o9-2026-09-27/**"
+      - ".github/workflows/first-chamber-o8-o9.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  certificates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install pinned arithmetic
+        run: python -m pip install -r research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/requirements.txt
+      - name: Reproduce both parity certificates and O9 algebra
+        run: python research/x-c1/first-chamber-o8-o9-2026-09-27/replay.py --output "${{ runner.temp }}/o8-o9-replay"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: first-chamber-o8-o9-replay
+          path: |
+            ${{ runner.temp }}/o8-o9-replay/*.log
+            ${{ runner.temp }}/o8-o9-replay/*.json
+          if-no-files-found: warn

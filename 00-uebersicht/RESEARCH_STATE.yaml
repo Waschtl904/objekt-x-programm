@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "render_version": 6,
-  "state_date": "2026-09-24",
+  "state_date": "2026-09-27",
   "repository": "Waschtl904/objekt-x-programm",
   "published_baseline": {
     "branch": "main",
@@ -1128,7 +1128,18 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [],
+  "pending_packages": [
+    {
+      "id": "FIRST-CHAMBER-O8-TERMINAL-POSITIVITY",
+      "meta_path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "POSITIVE-CORRECTED-TRANSPORT",
+      "meta_path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o9-positive-transporte/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    }
+  ],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",

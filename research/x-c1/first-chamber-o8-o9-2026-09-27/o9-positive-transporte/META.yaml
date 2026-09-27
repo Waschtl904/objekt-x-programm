@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "POSITIVE-CORRECTED-TRANSPORT",
+  "date": "2026-09-27",
+  "kind": "CONSTRUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Konkrete C1a-Fortführung, 1 <= A <= B <= C <= A8=log(8)/2; Kanäle {2,3,4,5,7}; ursprüngliche zwei Mellinbedingungen.",
+  "claim_polarity": "CONSTRUCTION",
+  "negative_claim_boundary": "Kein No-Go und keine Aussage negativer vollständiger Weil-Energie.",
+  "depends_on": [
+    "FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7",
+    "FIRST-CHAMBER-O8-TERMINAL-POSITIVITY"
+  ],
+  "closes": [
+    "POSITIVE-CORRECTED-TRANSPORT"
+  ],
+  "opens": [
+    "X4-Q8-WALL-CROSSING"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "O10 oder Positivität rechts von A8.",
+    "Unbeschränkte/kofinale positive Fortsetzung.",
+    "Externe analytische Abnahme.",
+    "Objekt X, globale Weil-Positivität oder RH."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o9-positive-transporte/PROOF.md",
+    "sha256": "00ad925405fb2e2baaabd4b2ed6221b0485925181f8903ccda5166b7aaf1528e"
+  }
+}

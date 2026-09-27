@@ -1,0 +1,34 @@
+11:40:43 Terminal A8=3*log(2)/2, raw degrees 0..383, Gamma degree 160, 2048 bits
+11:40:44 Gamma uniform kernel error [1.6174421963337232182e-29 +/- 1.51e-49]
+11:40:44 Gamma column 0/383
+11:40:48 Gamma column 32/383
+11:40:51 Gamma column 64/383
+11:40:54 Gamma column 96/383
+11:40:58 Gamma column 128/383
+11:41:01 Gamma column 160/383
+11:41:04 Gamma column 192/383
+11:41:06 Gamma column 224/383
+11:41:09 Gamma column 256/383
+11:41:12 Gamma column 288/383
+11:41:15 Gamma column 320/383
+11:41:19 Gamma column 352/383
+11:41:23 Gamma matrix ready; exact polynomial Gauss rules
+11:41:34 Prime matrix channel 2
+11:41:46 Prime matrix channel 3
+11:41:57 Prime matrix channel 4
+11:42:09 Prime matrix channel 5
+11:42:19 Prime matrix channel 7
+11:42:26 Complete V squared matrix ready
+11:42:49 Complete shift/cross Gram cell 1/5
+11:43:15 Complete shift/cross Gram cell 2/5
+11:43:38 Complete shift/cross Gram cell 3/5
+11:44:03 Complete shift/cross Gram cell 4/5
+11:44:28 Complete shift/cross Gram cell 5/5
+11:44:44 Exact Gamma-support cross terms channel 2
+11:44:52 Exact Gamma-support cross terms channel 3
+11:44:59 Exact Gamma-support cross terms channel 4
+11:45:08 Exact Gamma-support cross terms channel 5
+11:45:17 Exact Gamma-support cross terms channel 7
+11:45:38 even actual low matrix and complete infinite coupling Gram enclosed
+11:45:51 odd actual low matrix and complete infinite coupling Gram enclosed
+11:45:53 Finished in 309.6803057193756 seconds

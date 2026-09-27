@@ -3,7 +3,7 @@
 > GENERATED FILE — DO NOT EDIT
 > Quelle: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml). Navigation, keine Satzpromotion.
 
-Stand: 2026-09-24.
+Stand: 2026-09-27.
 
 ## Gemergte kanonische Basis
 
@@ -83,5 +83,10 @@ Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGI
 - `rh`: **OPEN**.
 
 Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getrennt. Diese Statusansicht führt die mathematischen Checker nicht erneut aus.
+
+## Noch nicht in den geprüften Stand übernommene Pakete
+
+- `FIRST-CHAMBER-O8-TERMINAL-POSITIVITY`: PENDING_STATUS_REVIEW — `research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/META.yaml`.
+- `POSITIVE-CORRECTED-TRANSPORT`: PENDING_STATUS_REVIEW — `research/x-c1/first-chamber-o8-o9-2026-09-27/o9-positive-transporte/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).
