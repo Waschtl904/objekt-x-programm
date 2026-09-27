@@ -2,7 +2,7 @@
 
 **Beginn:** 24. September 2026  
 **Letzte Aktualisierung:** 27. September 2026  
-**Zuletzt integrierter Audit-Korrekturstand:** **main@5100f85191830bd599849d9db8f73a8208046a67**  
+**Zuletzt integrierter Audit-Korrekturstand:** **main@12df80da8af4a784c05f49f9940676bcb0ad53b9**  
 **Arbeitsweise:** Mathematische Aussagen werden unabhängig geprüft. Statusdateien, frühere Audits und Repository-Markierungen dienen als Wegweiser, nicht als Beweis.  
 **Ziel:** Eine verständliche, fortlaufend aktualisierte Landkarte des gesamten Objekt-X-Programms vom ursprünglichen Fragenkatalog bis zur aktuellen Forschungsfront.
 
@@ -432,6 +432,130 @@ Nach diesem Durchlauf lautet die eigentliche Objekt-X-Frage schärfer:
 
 Genau dort beginnt die nächste Prüfphase. Historisch entspricht dies dem Übergang zu M4 und den späteren Positivitäts-, Haar-$L^2$- und Transportkonstruktionen.
 
+---
+
+## 10. M4 und die Haar-$L^2$-Firewall
+
+Der M4-Strang (`NEU-253` bis `NEU-257`) fragt erstmals ausdrücklich nach einer **RH-unabhängigen positiven Hintergrundgeometrie** für die vollständige Weil-Form.
+
+### 10.1 Was tatsächlich konstruiert wird
+
+Über den adelischen Lift $S_{\rm PW}$ und seinen adjungierten Port erhält man eine Koisometrie
+
+```math
+\overline R_{\rm PW}:L^2(\mathbb A_\mathbb Q)\longrightarrow L^2(\mathbb R,du),
+\qquad
+\overline R_{\rm PW}S_{\rm PW}=I.
+```
+
+Damit ist
+
+```math
+L^2(\mathbb A_\mathbb Q)/\ker\overline R_{\rm PW}
+\cong
+L^2(\mathbb R,du).
+```
+
+Der daraus hervorgehende positive Hintergrundraum ist also schlicht
+
+```math
+H_0=L^2(\mathbb R,du).
+```
+
+Diese Konstruktion ist RH-unabhängig und mathematisch korrekt. Sie macht $B_W$ aber noch nicht positiv und kontrolliert die Form auch nicht in einer Majorantnorm.
+
+### 10.2 Die Weil-Form ist auf diesem Hintergrund unbeschränkt
+
+Für die Modulationsfolge $a_N(u)=e^{iNu}\varphi(u)$ mit $\|\varphi\|_2=1$ ergibt der korrigierte Gamma-Normierungsabgleich
+
+```math
+B_\Gamma(a_N,a_N)=\log N+O(1),
+```
+
+während Prim- und Polblock in diesem Regime nur $O(1)$ beziehungsweise $o(1)$ beitragen. Somit
+
+```math
+B_W(a_N,a_N)=\log N+O(1)\longrightarrow+\infty
+```
+
+bei $\|a_N\|_2=1$. Ein beschränkter Riesz-Operator auf Haar-$L^2$ scheidet daher aus.
+
+Beim Audit wurden hierzu drei lokale Fehler in `NEU-255/256` korrigiert: das Fourier-Shift-Vorzeichen, ein unzulässiger exponentieller Schwartz-Schwanz und ein verlorener Faktor $1/\pi$ im Gamma-Block. PR #178 enthält diese Reparaturen; der Unbeschränktheitsbefund bleibt bestehen.
+
+### 10.3 Semibeschränktheit ist bereits RH
+
+Der entscheidende Schritt aus `NEU-257` trägt unabhängig nach.
+
+Nimmt man eine untere $L^2$-Schranke an,
+
+```math
+B_W(a,a)\ge-\lambda\|a\|_2^2
+\qquad\forall a\in C_c^\infty(\mathbb R),
+```
+
+dann ist $W+\lambda\delta_0$ positiv-definit. Der Bochner-Schwartz-Satz macht diese positive Distribution temperiert; damit ist auch $W$ temperiert. Nach dem Benedetto-Joyner-Kriterium ist die Temperiertheit der Weil-Distribution äquivalent zu RH.
+
+Umgekehrt liefert RH durch das Weil-Kriterium sogar $B_W(a,a)\ge0$. Daher:
+
+```math
+B_W\text{ ist auf Haar-}L^2\text{ nach unten semibeschränkt}
+\quad\Longleftrightarrow\quad
+\mathrm{RH}.
+```
+
+Eine RH-freie Herleitung der Semibeschränktheit wäre also bereits ein RH-Beweis und kann nicht als bloß technischer Vorbereitungslemma betrachtet werden.
+
+### 10.4 Unter RH ist dieselbe Form auf Haar-$L^2$ nicht abschließbar
+
+Unter RH besitzt die Weil-Form die atomare Spektraldarstellung
+
+```math
+B_W(a,b)
+=
+\sum_{\gamma}m_\gamma\,\hat a(-\gamma)\,\overline{\hat b(-\gamma)}.
+```
+
+Das repräsentierende Maß ist rein atomar und daher singulär gegenüber dem Lebesgue-Maß des Haar-$L^2$-Raums.
+
+`NEU-257` gibt darüber hinaus einen direkten Nicht-Abschließbarkeitszeugen an: Es existiert eine Folge $a_n\to0$ in $L^2$, die bezüglich der Weil-Form Cauchy ist, deren Weil-Norm aber gegen einen strikt positiven Atomwert konvergiert. Damit ist $B_W$ unter RH auf $H_0=L^2(\mathbb R)$ nicht abschließbar.
+
+### 10.5 Konsequenz: Kato/KLMN auf Haar-$L^2$ ist strukturell ausgeschlossen
+
+Der ursprünglich in `NEU-256` erwogene relative Formansatz würde gleichzeitig Semibeschränktheit und Abschließbarkeit liefern. Das kann auf Haar-$L^2$ nicht eintreten:
+
+```math
+\text{Semibeschränktheit}
+\Longrightarrow
+\mathrm{RH}
+\Longrightarrow
+\text{Nicht-Abschließbarkeit auf Haar-}L^2.
+```
+
+Der Kato/KLMN-Pfad ist daher nicht nur noch unbewiesen, sondern **als Realisierungsweg für die vollständige Weil-Form auf diesem Hintergrund ausgeschlossen**.
+
+### 10.6 Wo die positive Geometrie unter RH tatsächlich lebt
+
+Unter RH ist die natürliche Vervollständigung nicht Haar-$L^2$, sondern der atomare Nullstellenraum
+
+```math
+\mathcal H_W
+\cong
+L^2(\tau)
+\cong
+\ell^2(\Gamma,m_\gamma).
+```
+
+Diese Identifikation ist mit Suzukis Konstruktion konsistent. Sie ist jedoch **konditional unter RH** und verwendet die Nullstellen selbst. Sie liefert deshalb noch keine RH-freie arithmetische Quelle für Objekt X.
+
+### 10.7 Bilanz von M4
+
+M4 liefert damit keinen neuen Positivitätsmechanismus. Es liefert vielmehr eine wichtige Firewall:
+
+- Der Haarraum ist ein natürlicher positiver **Referenzraum**, aber nicht der Abschlussraum der Weil-Form.
+- $L^2$-Semibeschränktheit der vollständigen Weil-Form ist bereits RH-äquivalent.
+- Unter RH ist die Form auf diesem Referenzraum nicht abschließbar.
+- Eine selbstadjungierte semibeschränkte Kato-Realisierung $A_X$ auf Haar-$L^2$ kann daher nicht die gesuchte Objekt-X-Geometrie sein.
+- Die eigentliche offene Aufgabe verschiebt sich auf eine andere, RH-frei konstruierte positive Geometrie, deren Beziehung zur Weil-Form erst anschließend bewiesen werden müsste.
 
 ---
 
@@ -466,6 +590,16 @@ Der spätere Port $R_{\rm PW}:\mathcal S_{\rm adel}^{\rm amp}\twoheadrightarrow\
 Zwei zusätzliche lokale Fehler in NEU-220f/g wurden über PR #177 korrigiert: Vorzeichen der Wigner-Smith-Zeitverzögerungsinterpretation sowie zwei zu starke Aussagen über adelische Restriktionen und Augmentationen.
 
 
+## Durchlauf 7
+
+M4 (`NEU-253` bis `NEU-257`) geprüft. Der adelische Haartransport erzeugt den RH-unabhängigen positiven Referenzraum $H_0=L^2(\mathbb R)$, aber keine Positivität der Weil-Form. Die vollständige Form ist dort unbeschränkt; nach Korrektur der Gamma-Normierung gilt für eine normierte Modulationsfolge $B_W(a_N,a_N)=\log N+O(1)$.
+
+Der zentrale Firewall-Satz trägt: $L^2$-Semibeschränktheit von $B_W$ ist äquivalent zu RH. Unter RH ist $B_W$ auf Haar-$L^2$ zugleich nicht abschließbar; `NEU-257` enthält dafür einen direkten Folgenbeweis. Damit ist der Kato/KLMN-Weg auf diesem Hintergrund strukturell ausgeschlossen.
+
+Die unter RH natürliche Weil-Vervollständigung ist stattdessen der atomare Raum $\mathcal H_W\cong\ell^2(\Gamma,m_\gamma)$; dies ist jedoch konditional und noch keine RH-freie Objekt-X-Konstruktion.
+
+Im Zuge des Audits wurden Fourier-Shift, Schwartz-Schwanz und Gamma-$1/\pi$-Normierung in `NEU-255/256` über PR #178 korrigiert.
+
 ## Korrekturblock – 27. September 2026
 
 Die beiden Fehler samt direkter operatorischer Folgestellen wurden über PR #176 korrigiert und in main gemergt.
@@ -478,6 +612,8 @@ Geprüfter Ausgangspunkt für die Fortsetzung:
 
 # III. Nächster Prüfpunkt
 
-Prüfung des **M4-Übergangs** ab NEU-253:
+Prüfung der Reaktion des Programms auf die Haar-$L^2$-Firewall ab `NEU-259/260` und anschließend der frühen Papers:
 
-> Wird dort erstmals eine RH-unabhängige positive Geometrie konstruiert, die mehr ist als ein Pullback der Weil-Form? Welche Positivitäts-, Abschließbarkeits- und Haar-$L^2$-Firewalls sind tatsächlich bewiesen, und an welcher Stelle beginnt die spätere Transport-/C1-Linie?
+> Wird nach dem M4-No-Go eine **andere RH-freie positive Geometrie** tatsächlich konstruiert, oder wird der bedingte Nullstellenraum nur durch finite Fenster, Screw-Function-Modelle oder neue Transportports approximiert?
+
+Besonders zu verfolgen sind der finite-Intervall-Grenzwertweg, die Kanonizitätsfragen und der Übergang zu P02/P03 beziehungsweise zur späteren Transportlinie.
