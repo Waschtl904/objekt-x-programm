@@ -30,7 +30,7 @@ $$
 \boxed{\iota_{\lambda_1,\lambda_2}: \mathcal{H}(T_{a,\lambda_1}) \xrightarrow{\;\cong\;} \mathcal{H}(T_{a,\lambda_2}).\quad\checkmark[K/M]\text{ (RH-frei)}} \qquad (1\text{-Iso})
 $$
 
-$$\lambda$ ist Gauge für Hilbertraumtopologie. $\checkmark[K/M]$$
+$\lambda$ ist Gauge für Hilbertraumtopologie. $\checkmark[K/M]$
 
 ---
 

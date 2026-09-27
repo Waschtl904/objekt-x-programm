@@ -148,7 +148,7 @@ Ein separater „Polterm-Randaudit“ ist für diese Testkernidentität nicht me
 
 ## Frage 4 — Kanonische Übergangsabbildungen
 
-$$L^2$-Einbettung durch Nullfortsetzung: kanonisch $\checkmark$ (Suzuki, Satz). $(4\text{-L2Emb})$$
+$L^2$-Einbettung durch Nullfortsetzung: kanonisch $\checkmark$ (Suzuki, Satz). $(4\text{-L2Emb})$
 
 Auf dem Testkern ist die **unverschobene** Form unter Nullfortsetzung kompatibel. Für $0<a<b$ und $E_{a,b}v$ die Nullfortsetzung gilt wegen der Lokalisierungsidentität
 $$
