@@ -1,5 +1,7 @@
 # NEU-255 — Haar-Koisometrie, kanonischer $L^2$-Hintergrundhilbertraum und $B_W$-Operatoraudit
 
+**Patch 3 (2026-09-27):** Gamma-Hochfrequenzaudit gegen die in NEU-258 fixierte Normierung korrigiert: bei der Fourierkonvention $\hat f(t)=\int f(u)e^{itu}du$ gilt für $a_N=e^{iNu}\varphi$ der Shift $\hat a_N(t)=\hat\varphi(t+N)$. Auf der Diagonale ist $B_\Gamma(a,a)=\pi^{-1}\int |\hat a(t)|^2\operatorname{Re}\gamma_\infty(t)dt$; für $\|\varphi\|_2=1$ folgt daher $B_\Gamma(a_N,a_N)=\log N+O(1)$. Außerdem wurde der unzulässige exponentielle Schwanzfehler für eine bloße Schwartz-Funktion durch polynomialen Schnellabfall ersetzt. Der Unbeschränktheitsbefund bleibt unverändert.
+
 **Katalog-ID:** NEU-255  
 **Ordner:** `07-weil-explizitformel`  
 **Datum:** 2026-08-07 (Patch 2: 2026-08-07)  
@@ -105,9 +107,9 @@ $$
 
 **Paley-Wiener-Hinweis:** $\varphi\in C_c^\infty\Rightarrow\hat\varphi\in\mathcal{S}(\mathbb{R})$, insbesondere $\hat\varphi\notin C_c(\mathbb{R})$. Der Support von $\hat\varphi$ ist nicht kompakt. Das Fourierbild ist
 $$
-\hat a_N(t)=\hat\varphi(t-N)\in\mathcal{S}(\mathbb{R}), \qquad (3\text{-Fourier})
+\hat a_N(t)=\hat\varphi(t+N)\in\mathcal{S}(\mathbb{R}), \qquad (3\text{-Fourier})
 $$
-mit Schwartz-Abfall in $t$, verschoben um $N$.
+mit Schwartz-Abfall in $t$, zentriert bei $t=-N$.
 
 ### 3.1 Primzahlpotenzblock $B_{\rm fin}$
 
@@ -123,77 +125,111 @@ $$
 \boxed{B_{\rm pole}(a_N,a_N)\to0\quad(N\to\infty).} \qquad (3\text{-Bpole})
 $$
 
-### 3.3 Gamma-Block $B_\Gamma$: zweibumpige Struktur und Kern/Schwanz
+### 3.3 Gamma-Block $B_\Gamma$: korrigierte Normalisierung und Hochfrequenzasymptotik
 
-**Evenisierung:** Die Korrelation auf der Diagonale ergibt:
-$$
-g_{a_N,a_N}(t)=\tfrac{1}{2}\bigl(e^{iNt}C_{\varphi,\varphi}(t)+e^{-iNt}C_{\varphi,\varphi}(-t)\bigr). \qquad (3\text{-Even})
-$$
+Nach dem vollständigen Normierungsabgleich in NEU-258 gilt auf der Diagonale
 
-Nach Fouriertransformation (Konvention $(0\text{-Four})$):
 $$
-h_{a_N,a_N}(s)=\widehat{g_{a_N,a_N}}(s)=\tfrac{1}{2}\bigl(\widehat{C_{\varphi,\varphi}}(s-N)+\widehat{C_{\varphi,\varphi}}(s+N)\bigr). \qquad (3\text{-TwoBump})
-$$
-
-Das Spektrum von $h_{a_N,a_N}$ besteht aus **zwei verschobenen Paketen** bei $+N$ und $-N$.
-
-**Gamma-Block** (NEU-252 §3):
-$$
-B_\Gamma(a_N,a_N)=2\Lambda_\Gamma(h_{a_N,a_N})=2\cdot\frac{1}{2\pi}\tau_\infty(M_{\gamma_\infty\cdot h_{a_N,a_N}})=\frac{1}{\pi}\int_{\mathbb{R}}\gamma_\infty(s)\,h_{a_N,a_N}(s)\,ds. \qquad (3\text{-BGam0})
+\boxed{
+B_\Gamma(a,a)
+=
+\frac{1}{\pi}
+\int_{\mathbb R}
+|\hat a(t)|^2\operatorname{Re}\gamma_\infty(t)\,dt.
+}
+\qquad (3\text{-BGam0})
 $$
 
-Da $h_{a_N,a_N}$ symmetrisch und beide Pakete gleichwertig beitragen, genügt es, das Paket bei $+N$ zu betrachten (das bei $-N$ trägt durch Symmetrie von $\gamma_\infty$ denselben Beitrag):
+Für $a_N(u)=e^{iNu}\varphi(u)$ und die hier fixierte Fourierkonvention ist
 $$
-B_\Gamma(a_N,a_N)=\frac{1}{\pi}\int_{\mathbb{R}}\gamma_\infty(s)\,\widehat{C_{\varphi,\varphi}}(s-N)\,ds+\frac{1}{\pi}\int_{\mathbb{R}}\gamma_\infty(s)\,\widehat{C_{\varphi,\varphi}}(s+N)\,ds. \qquad (3\text{-BGam1})
+\hat a_N(t)=\hat\varphi(t+N).
 $$
-
-Betrachte das Paket bei $+N$ (Substitution $s=N+r$):
+Daher
 $$
-I_+(N):=\int_{\mathbb{R}}\gamma_\infty(N+r)\,\widehat{C_{\varphi,\varphi}}(r)\,dr. \qquad (3\text{-BGam2})
+B_\Gamma(a_N,a_N)
+=
+\frac{1}{\pi}
+\int_{\mathbb R}
+|\hat\varphi(t+N)|^2\operatorname{Re}\gamma_\infty(t)\,dt.
 $$
-
-$\widehat{C_{\varphi,\varphi}}\in\mathcal{S}(\mathbb{R})$ (Schwartz-Abfall). **Kern/Schwanz-Zerlegung** bei $\delta=N/2$:
+Mit $r=t+N$:
 $$
-I_+(N)=\underbrace{\int_{|r|\le N/2}\gamma_\infty(N+r)\,\widehat{C_{\varphi,\varphi}}(r)\,dr}_{I_{\rm kern}}+\underbrace{\int_{|r|>N/2}\gamma_\infty(N+r)\,\widehat{C_{\varphi,\varphi}}(r)\,dr}_{I_{\rm Schwanz}}. \qquad (3\text{-Split})
-$$
-
-**Kernteil $I_{\rm kern}$:** Für $|r|\le N/2$: $\log|N+r|=\log N+\log|1+r/N|=\log N+O(|r|/N)$ gleichmäßig. Mit $\operatorname{Re}\gamma_\infty(t)=\frac{1}{2}\log|t|+O(1)$ (NEU-220b):
-$$
-I_{\rm kern}=\bigl(\tfrac{1}{2}\log N+O(1)\bigr)\int_{|r|\le N/2}\widehat{C_{\varphi,\varphi}}(r)\,dr+O\Bigl(\tfrac{1}{N}\int_{\mathbb{R}}|r|\,|\widehat{C_{\varphi,\varphi}}(r)|\,dr\Bigr). \qquad (3\text{-Kern})
-$$
-
-Der Fehlerterm ist $O(N^{-1})$ weil $\widehat{C_{\varphi,\varphi}}\in\mathcal{S}$. Mit $\int_{\mathbb{R}}\widehat{C_{\varphi,\varphi}}(r)\,dr=2\pi C_{\varphi,\varphi}(0)=2\pi\|\varphi\|_2^2=2\pi>0$:
-$$
-I_{\rm kern}=\bigl(\tfrac{1}{2}\log N+O(1)\bigr)\cdot(2\pi+O(e^{-cN}))+O(N^{-1})=\pi\log N+O(1). \qquad (3\text{-Kern2})
+B_\Gamma(a_N,a_N)
+=
+\frac{1}{\pi}
+\int_{\mathbb R}
+|\hat\varphi(r)|^2\operatorname{Re}\gamma_\infty(r-N)\,dr.
+\qquad (3\text{-BGam1})
 $$
 
-**Schwanzteil $I_{\rm Schwanz}$:** $|\gamma_\infty(N+r)|\le C(\log(N+|r|)+1)\le C(\log|r|+\log N+1)$ für großes $|r|$. Da $\widehat{C_{\varphi,\varphi}}$ Schwartz-Abfall hat:
+Aus Stirling folgt
 $$
-|I_{\rm Schwanz}|\le C\int_{|r|>N/2}(\log|r|+\log N)|\widehat{C_{\varphi,\varphi}}(r)|\,dr=O(e^{-cN})\cdot\text{poly}(N)=O(1). \qquad (3\text{-Tail})
+\operatorname{Re}\gamma_\infty(x)
+=
+\frac12\log|x|+O(1)
+\qquad (|x|\to\infty).
 $$
 
-**Paket bei $-N$ (Substitution $s=-N+r$):** Liefert $I_-(N)=I_+(N)+O(1)$ durch Symmetrie $\gamma_\infty(-t)=\overline{\gamma_\infty(t)}$ und $\operatorname{Re}\gamma_\infty$ gerade.
+Teile das Integral in $|r|\le N/2$ und $|r|>N/2$.
 
-**Gesamt:**
+**Kern.** Für $|r|\le N/2$ gilt gleichmäßig
 $$
-\boxed{B_\Gamma(a_N,a_N)=C_\Gamma\log N+O(1),\qquad C_\Gamma>0,} \qquad (3\text{-BGam3})
+\operatorname{Re}\gamma_\infty(r-N)
+=
+\frac12\log N+O(1)+O(|r|/N).
 $$
-mit $C_\Gamma=\frac{2}{\pi}\cdot\pi=2$ bis zum vollständigen Normierungsabgleich mit dem in NEU-220k fixierten $2\pi$-Vorfaktor. Der exakte Wert $C_\Gamma$ ist erst nach diesem Abgleich zu buchen; die Positivität $C_\Gamma>0$ ist durch $(3\text{-Kern2})$ und $\|\varphi\|_2=1>0$ gesichert.
+Da $\hat\varphi\in\mathcal S(\mathbb R)$ und nach Plancherel
+$$
+\int_{\mathbb R}|\hat\varphi(r)|^2\,dr
+=
+2\pi\|\varphi\|_2^2
+=
+2\pi,
+$$
+liefert der Kern
+$$
+\frac1\pi\int_{|r|\le N/2}
+|\hat\varphi(r)|^2\operatorname{Re}\gamma_\infty(r-N)\,dr
+=
+\log N+O(1).
+\qquad (3\text{-Core})
+$$
+
+**Schwanz.** Schwartz-Abfall impliziert für jedes $M>0$
+$$
+\int_{|r|>N/2}
+(1+\log(N+|r|))\,|\hat\varphi(r)|^2\,dr
+=
+O_M(N^{-M}).
+\qquad (3\text{-Tail})
+$$
+Insbesondere ist der Schwanz $o(1)$. Ein exponentieller Fehler $O(e^{-cN})$ folgt aus der Schwartz-Eigenschaft allein **nicht**.
+
+Somit:
+$$
+\boxed{
+B_\Gamma(a_N,a_N)=\log N+O(1)
+}
+\qquad(\|\varphi\|_2=1).
+\qquad (3\text{-BGam3})
+$$
+
+Die alternative zweibumpige Darstellung des evenisierten Kerns $h_{a_N,a_N}$ ist damit kompatibel; für den Diagonalwert ist die NEU-258-Formel oben jedoch direkter und vermeidet eine doppelte Zählung der beiden Pakete.
 
 ### 3.4 Gesamtbefund
 
 $$
-B_W(a_N,a_N)=\underbrace{B_{\rm fin}(a_N,a_N)}_{O(1)}+\underbrace{B_{\rm pole}(a_N,a_N)}_{o(1)}+\underbrace{B_\Gamma(a_N,a_N)}_{C_\Gamma\log N+O(1)}=C_\Gamma\log N+O(1)\longrightarrow+\infty. \qquad (3\text{-Sum})
+B_W(a_N,a_N)=\underbrace{B_{\rm fin}(a_N,a_N)}_{O(1)}+\underbrace{B_{\rm pole}(a_N,a_N)}_{o(1)}+\underbrace{B_\Gamma(a_N,a_N)}_{\log N+O(1)}=\log N+O(1)\longrightarrow+\infty. \qquad (3\text{-Sum})
 $$
 
 $$
-\boxed{B_W(a_N,a_N)=C_\Gamma\log N+O(1),\quad C_\Gamma>0,\quad\|a_N\|_2=1.\quad\checkmark[K/M]} \qquad (3\text{-Unbdd})
+\boxed{B_W(a_N,a_N)=\log N+O(1),\quad\|a_N\|_2=1.\quad\checkmark[K/M]} \qquad (3\text{-Unbdd})
 $$
 $$
 \boxed{B_W\text{ ist nicht beschränkt auf }H_0=L^2(\mathbb{R},du).\quad\checkmark[K/M]} \qquad (3\text{-Final})
 $$
 
-Fall 1 (Riesz direkt) scheidet aus. Exakter Vorfaktor $C_\Gamma$ nach NEU-220k-Normierungsabgleich.
+Fall 1 (Riesz direkt) scheidet aus. Der Leitkoeffizient $1$ folgt aus der NEU-258-Normierung und Plancherel.
 
 ---
 
@@ -262,11 +298,11 @@ $$P_{\rm fin}:L^2(\mathbb{A})\to L^2(\mathbb{R},dx);\;P_+:L^2(\mathbb{R})\to L^2
 $$\overline{R}_{\rm PW}=J_{1/2}P_+P_{\rm fin};\;\overline{R}_{\rm PW}=S_{\rm PW}^*\quad\checkmark[K/M] \qquad (7\text{-c})$$
 $$L^2(\mathbb{A})/\ker\overline{R}_{\rm PW}\cong L^2(\mathbb{R},du)\quad\checkmark[K/M] \qquad (7\text{-d})$$
 $$H_0=L^2(\mathbb{R},du)\text{ kanonischer positiver Hintergrundhilbertraum}\quad\checkmark[K/M] \qquad (7\text{-e})$$
-$$\hat a_N=\hat\varphi(\cdot-N)\in\mathcal{S},\text{ kein kompakter Support (Paley-Wiener)}\quad\checkmark[K/M] \qquad (7\text{-f})$$
+$\hat a_N=\hat\varphi(\cdot+N)\in\mathcal{S},\text{ kein kompakter Support (Paley-Wiener)}\quad\checkmark[K/M] \qquad (7\text{-f})$
 $$h_{a_N,a_N}\text{ zweibumpig bei }\pm N\text{ (Evenisierung)}\quad\checkmark[K/M] \qquad (7\text{-g})$$
 $$B_{\rm fin}(a_N,a_N)=O(1);\;B_{\rm pole}(a_N,a_N)\to0\quad\checkmark[K/M] \qquad (7\text{-h})$$
-$$B_\Gamma(a_N,a_N)=C_\Gamma\log N+O(1),\;C_\Gamma>0\quad\checkmark[K/M] \qquad (7\text{-i})$$
-$$\text{Exakter Wert }C_\Gamma\text{ (NEU-220k-Normierungsabgleich)}\quad?[O\to\text{NEU-220k}] \qquad (7\text{-j})$$
+$B_\Gamma(a_N,a_N)=\log N+O(1)\quad\checkmark[K/M] \qquad (7\text{-i})$
+$\text{Gamma-Leitkoeffizient }1\text{ durch NEU-258-Normierung geschlossen}\quad\checkmark[K/M] \qquad (7\text{-j})$
 $$B_W\text{ unbeschränkt auf }H_0\quad\checkmark[K/M] \qquad (7\text{-k})$$
 $$B_W\text{ dicht definierte hermitesche Form}\quad\checkmark[K/M] \qquad (7\text{-l})$$
 $$\text{Semibeschränktheit }B_W;\;\text{Formklasse}\quad?[O]\to\text{NEU-256} \qquad (7\text{-m})$$
@@ -283,7 +319,7 @@ $$A_X\text{ selbstadjungiert/Krein}\quad?[O] \qquad (7\text{-n})$$
 | NEU-252 (Patch) | 4ee78ed | $B_W$ hermitesch; Blöcke; $B_\Gamma=2\Lambda_\Gamma(h_{a,b})$ |
 | NEU-250r (Patch) | bd1c0ab | $S_{\rm PW}$; $R_{\rm PW}S_{\rm PW}=I$ |
 | NEU-220b | 3a7f2c1 | $\operatorname{Re}\gamma_\infty(t)=\tfrac12\log|t|+O(1)$ |
-| NEU-220k | 8d4e9b2 | Fixierte $2\pi$-Fourierkonvention; $C_\Gamma$-Normierung |
+| NEU-220k / NEU-258 | — | Fourierkonvention und abschließender Gamma-Normierungsabgleich |
 | NEU-221 | f678057 | Normierungs-Firewall; $\mu_k$ |
 | NEU-220l | 1dc07b3 | $B_W\ge0\Leftrightarrow$ RH |
 | NEU-220s/t | div. | Kreinraum; indefinite Realisierung |

@@ -1,5 +1,7 @@
 # NEU-256 — Semibeschränktheit und Abschließbarkeit der Weil-Form auf $L^2(\mathbb{R})$
 
+**Patch 2 (2026-09-27):** Gamma-Block an NEU-258 angeglichen. Korrekt ist $B_\Gamma(a,a)=\pi^{-1}\int |\hat a(t)|^2\operatorname{Re}\gamma_\infty(t)dt$. Daher folgt aus $\operatorname{Re}\gamma_\infty\ge-C_0$ die Schranke $B_\Gamma(a,a)\ge-2C_0\|a\|_2^2$, nicht $-2\pi C_0\|a\|_2^2$. Außerdem wird der Hochfrequenzbefund aus NEU-255 Patch 3 als $B_\Gamma(a_N,a_N)=\log N+O(1)$ geführt. Die Semibeschränktheits-/Closability-Firewall bleibt unverändert.
+
 **Katalog-ID:** NEU-256  
 **Ordner:** `07-weil-explizitformel`  
 **Datum:** 2026-08-07 (Patch: 2026-08-07)  
@@ -15,7 +17,7 @@
 Aus NEU-255 $\checkmark[K/M]$:
 - $H_0=L^2(\mathbb{R},du)$: kanonischer positiver Hintergrundhilbertraum.
 - $B_W=B_{\rm pole}+B_\Gamma+B_{\rm fin}$: dicht definierte hermitesche Form auf $\mathcal{A}_{\rm PW}=C_c^\infty(\mathbb{R})$.
-- $B_W$ nach oben unbeschränkt: $B_W(a_N,a_N)=C_\Gamma\log N+O(1)\to+\infty$ (Hochfrequenzregime).
+- $B_W$ nach oben unbeschränkt: $B_W(a_N,a_N)=\log N+O(1)\to+\infty$ (Hochfrequenzregime; NEU-255 Patch 3).
 
 **Fourierkonvention** (NEU-220k): $\hat f(t)=\int e^{itu}f(u)\,du$, $\|\hat f\|_2^2=2\pi\|f\|_2^2$.
 
@@ -67,7 +69,7 @@ Wenn $(\text{Leit-Rel})$ gilt, folgt durch klassische Formperturbationstheorie: 
 
 | Folge | Dominantes Regime | Dominant |
 |---|---|---|
-| $a_N=e^{iNu}\varphi(u)$ | Hochfrequenz ($N\to\infty$) | $B_\Gamma\sim C_\Gamma\log N$ |
+| $a_N=e^{iNu}\varphi(u)$ | Hochfrequenz ($N\to\infty$) | $B_\Gamma=\log N+O(1)$ |
 | $a_L=L^{-1/2}\varphi(u/L)$ | Dilatation/Gro\ss{}träger ($L\to\infty$) | $B_{\rm pole}+B_{\rm fin}$ (massiv) |
 
 ---
@@ -84,7 +86,7 @@ $$
 
 **Gamma-Block** (NEU-252 §3):
 $$
-B_\Gamma(a,a)=\int_{\mathbb{R}}|\hat a(t)|^2\operatorname{Re}\gamma_\infty(t)\,dt,\qquad\operatorname{Re}\gamma_\infty(t)=\tfrac{1}{2}\log|t|+O(1)\text{ (NEU-220b)}. \qquad (\text{A-Gamma})
+B_\Gamma(a,a)=\frac1\pi\int_{\mathbb{R}}|\hat a(t)|^2\operatorname{Re}\gamma_\infty(t)\,dt,\qquad\operatorname{Re}\gamma_\infty(t)=\tfrac{1}{2}\log|t|+O(1)\text{ (NEU-220b)}. \qquad (\text{A-Gamma})
 $$
 
 **Polblock** (NEU-252 §3):
@@ -102,7 +104,7 @@ $$
 **Gamma nach unten:**
 Aus $\operatorname{Re}\gamma_\infty(t)\ge-C_0$ (NEU-220b, $\gamma_\infty$ auf $|t|\le t_0$ explizit beschränkt; für $|t|>t_0$ folgt aus $\frac{1}{2}\log|t|\ge-C_0$):
 $$
-B_\Gamma(a,a)\ge-C_0\cdot2\pi\|a\|_2^2.\quad\checkmark[K/M] \qquad (\text{A-GammaLB})
+B_\Gamma(a,a)\ge-2C_0\|a\|_2^2.\quad\checkmark[K/M] \qquad (\text{A-GammaLB})
 $$
 
 **Primblock $\times[M]$ als $L^2$-beschränkt:**
@@ -145,7 +147,7 @@ $$
 ### A.4 Status
 
 $$
-B_\Gamma(a,a)\ge-2\pi C_0\|a\|_2^2\quad\checkmark[K/M] \qquad (\text{A-GamLBb})
+B_\Gamma(a,a)\ge-2C_0\|a\|_2^2\quad\checkmark[K/M] \qquad (\text{A-GamLBb})
 $$
 $$
 B_{\rm fin}\text{ nicht separat }L^2\text{-beschränkt}\quad\times[M] \qquad (\text{A-FinFail2})
@@ -262,7 +264,7 @@ $$
 
 ## 6. Statusbuchungen
 
-$$B_\Gamma(a,a)\ge-2\pi C_0\|a\|_2^2\quad\checkmark[K/M]\qquad(6\text{-a})$$
+$B_\Gamma(a,a)\ge-2C_0\|a\|_2^2\quad\checkmark[K/M]\qquad(6\text{-a})$
 $$\operatorname{Re}\gamma_\infty(t)\ge\tfrac12\log(1+|t|)-C\quad\checkmark[K/M]\qquad(6\text{-b})$$
 $$B_{\rm fin}(a,a)=-2\sum_{n\ge2}\Lambda(n)n^{-1/2}g_{a,a}(\log n)\text{ (M3-Form)}\quad\checkmark[K/M]\qquad(6\text{-c})$$
 $$B_{\rm fin}\text{ nicht separat }L^2\text{-beschränkt (Skalierungsfolge)}\quad\times[M]\qquad(6\text{-d})$$
@@ -280,7 +282,7 @@ $$\text{RH}\iff A_X\ge0\text{ (sobald }A_X\checkmark\text{, logisch aus NEU-220l
 
 | Referenz | SHA | Inhalt |
 |---|---|---|
-| NEU-255 (Patch 2) | bcc932d | $H_0$; Koisometrie; $B_W$ unbeschränkt; $C_\Gamma>0$ |
+| NEU-255 (Patch 3) | — | $H_0$; Koisometrie; $B_W$ unbeschränkt; Gamma-Leitkoeffizient normiert |
 | NEU-252 (Patch) | 4ee78ed | $B_W=B_{\rm pole}+B_\Gamma+B_{\rm fin}$ M3-Formeln |
 | NEU-253 (Patch) | a95d3b5 | M4 Rahmen; Signatur-Firewall |
 | NEU-220b | 3a7f2c1 | $\operatorname{Re}\gamma_\infty(t)=\tfrac12\log|t|+O(1)$ |
