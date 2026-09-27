@@ -2,7 +2,7 @@
 
 **Beginn:** 24. September 2026  
 **Letzte Aktualisierung:** 27. September 2026  
-**Kanonischer Repository-Stand vor Anlage dieser Datei:** `main@a77950be027dc1576b016c6a53bfad7ff65a04e4`  
+**Geprüfter Ausgangspunkt nach Korrektur-PR #176:** **main@a77950be027dc1576b016c6a53bfad7ff65a04e4**  
 **Arbeitsweise:** Mathematische Aussagen werden unabhängig geprüft. Statusdateien, frühere Audits und Repository-Markierungen dienen als Wegweiser, nicht als Beweis.  
 **Ziel:** Eine verständliche, fortlaufend aktualisierte Landkarte des gesamten Objekt-X-Programms vom ursprünglichen Fragenkatalog bis zur aktuellen Forschungsfront.
 
@@ -38,20 +38,20 @@ Der gegenwärtige Audit rekonstruiert deshalb die mathematische Entwicklung erne
 Die frühen elementaren Beobachtungen über Primzahlen modulo 30 tragen:
 
 - Jede Primzahl größer als 5 liegt in einer der acht Restklassen
-  [
-  1,7,11,13,17,19,23,29 pmod{30}.
-  ]
+  $$
+  1,7,11,13,17,19,23,29 \pmod{30}.
+  $$
 - Diese Klassen bilden die Einheitengruppe
-  [
-  (mathbb Z/30mathbb Z)^	imes
-  ]
+  $$
+  (\mathbb Z/30\mathbb Z)^\times
+  $$
   und sind multiplikativ abgeschlossen.
 - Für jede zu 30 teilerfremde Zahl gilt
-  [
-  a^4equiv1pmod{30}.
-  ]
+  $$
+  a^4\equiv1\pmod{30}.
+  $$
 
-Eine frühe lakatosianische Interpretation musste jedoch korrigiert werden: Dass auch zusammengesetzte Zahlen wie (49) das Viertpotenzgesetz erfüllen, widerlegt nicht die Aussage „Primzahlen größer als 5 erfüllen es“, sondern lediglich deren Umkehrung.
+Eine frühe lakatosianische Interpretation musste jedoch korrigiert werden: Dass auch zusammengesetzte Zahlen wie \(49\) das Viertpotenzgesetz erfüllen, widerlegt nicht die Aussage „Primzahlen größer als 5 erfüllen es“, sondern lediglich deren Umkehrung.
 
 Damit gehört das Viertpotenzgesetz zum modularen Gerüst und nicht zur Primheit selbst.
 
@@ -77,32 +77,32 @@ Die historischen Vergleiche mit Penrose-Parkettierungen, Quasikristallen und Ula
 
 Die funktionale Gleichung der vervollständigten Zetafunktion erklärt die Symmetrie um
 
-[
-operatorname{Re}s=rac12,
-]
+$$
+\operatorname{Re}s=\frac12,
+$$
 
 aber eine symmetrische Nullstellenmenge muss keineswegs vollständig auf dieser Geraden liegen. Symmetrie allein impliziert daher nicht RH.
 
 Das Bost–Connes-System besitzt dagegen eine konkrete Verbindung zur Zetafunktion: Für seinen Hamiltonoperator mit
 
-[
-He_n=(log n)e_n
-]
+$$
+H e_n=(\log n)e_n
+$$
 
 ist
 
-[
-operatorname{Tr}(e^{-eta H})
+$$
+\operatorname{Tr}(e^{-\beta H})
 =
-sum_{nge1}n^{-eta}
+\sum_{n\ge1} n^{-\beta}
 =
-zeta(eta),
-qquad eta>1.
-]
+\zeta(\beta),
+\qquad \beta>1.
+$$
 
-Diese Identität ist mathematisch wesentlich, liefert aber noch keine Spektralisierung der nichttrivialen Zeta-Nullstellen. Das Spektrum dieses Hamiltonoperators besteht aus (log n), nicht aus den Nullstellen.
+Diese Identität ist mathematisch wesentlich, liefert aber noch keine Spektralisierung der nichttrivialen Zeta-Nullstellen. Das Spektrum dieses Hamiltonoperators besteht aus \(\log n\), nicht aus den Nullstellen.
 
-Frühere Formulierungen, verschiedene (L)-Funktionen hätten „dieselbe Nullstellenstruktur“, sind deshalb zu grob und müssen jeweils präzisiert werden.
+Frühere Formulierungen, verschiedene \(L\)-Funktionen hätten „dieselbe Nullstellenstruktur“, sind deshalb zu grob und müssen jeweils präzisiert werden.
 
 ---
 
@@ -110,43 +110,43 @@ Frühere Formulierungen, verschiedene (L)-Funktionen hätten „dieselbe Nullste
 
 Die Weil-Quadratik ist der erste bislang überprüfte Punkt, an dem die Riemannsche Vermutung vollständig in eine Positivitätsfrage übersetzt wird.
 
-Für eine Amplitude (a) mit zentrierter Mellintransformierter (mathcal M_a) lautet die RH-freie Nullstellenform
+Für eine Amplitude \(a\) mit zentrierter Mellintransformierter \(\mathcal M_a\) lautet die RH-freie Nullstellenform
 
-[
-mathfrak W(a)
+$$
+\mathfrak W(a)
 =
-sum_ho
-m_ho,
-mathcal M_a(ho),
-overline{mathcal M_a(1-arho)}.
-]
+\sum_\rho
+m_\rho\,
+\mathcal M_a(\rho)\,
+\overline{\mathcal M_a(1-\bar\rho)}.
+$$
 
 Unter RH gilt
 
-[
-1-arho=ho,
-]
+$$
+1-\bar\rho=\rho,
+$$
 
 und daraus folgt
 
-[
-mathfrak W(a)
+$$
+\mathfrak W(a)
 =
-sum_ho m_ho|mathcal M_a(ho)|^2
-ge0.
-]
+\sum_\rho m_\rho|\mathcal M_a(\rho)|^2
+\ge0.
+$$
 
 Auch die Rückrichtung trägt: Falls eine Nullstelle außerhalb der kritischen Geraden liegt, lassen sich geeignete Mellin-Testfunktionen konstruieren, welche dieses Nullstellenpaar isolieren und eine negative Richtung der Weil-Quadratik erzeugen.
 
 Damit gilt tatsächlich
 
-[
-oxed{
-mathfrak W(a)ge0 	ext{für alle zulässigen }a
-quadLongleftrightarrowquad
-mathrm{RH}.
+$$
+\boxed{
+\mathfrak W(a)\ge0\ \text{für alle zulässigen }a
+\quad\Longleftrightarrow\quad
+\mathrm{RH}.
 }
-]
+$$
 
 Eine positive GNS- oder Hilbertraumrealisierung der Weil-Form darf daher nicht vorausgesetzt werden: Ihre Positivität enthält bereits den RH-Kern.
 
@@ -158,32 +158,32 @@ Die im Projekt verwendete Normalisierung der expliziten Formel wurde unabhängig
 
 Für den reell-geraden Testkern erhält man
 
-[
-sum_ho F_h(ho)
+$$
+\sum_\rho F_h(\rho)
 =
 h(i/2)+h(-i/2)
 +
-rac{1}{2pi}
-int_{mathbb R}
-left[
-operatorname{Re}psi!left(rac14+rac{it}{2}ight)
--logpi
-ight]h(t),dt
+\frac{1}{2\pi}
+\int_{\mathbb R}
+\left[
+\operatorname{Re}\psi\!\left(\frac14+\frac{it}{2}\right)
+-\log\pi
+\right]h(t)\,dt
 -
-2sum_{nge2}
-rac{Lambda(n)}{sqrt n},
-g(log n).
-]
+2\sum_{n\ge2}
+\frac{\Lambda(n)}{\sqrt n}\,
+g(\log n).
+$$
 
-Insbesondere ist für (n=p^k)
+Insbesondere ist für \(n=p^k\)
 
-[
-rac{Lambda(n)}{sqrt n}
+$$
+\frac{\Lambda(n)}{\sqrt n}
 =
-rac{log p}{p^{k/2}}.
-]
+\frac{\log p}{p^{k/2}}.
+$$
 
-Die späteren Korrekturen des Gamma-Vorfaktors und des Gewichts (p^{-k/2}) waren daher mathematisch notwendig und stimmen mit der klassischen Explizitformel überein.
+Die späteren Korrekturen des Gamma-Vorfaktors und des Gewichts \(p^{-k/2}\) waren daher mathematisch notwendig und stimmen mit der klassischen Explizitformel überein.
 
 ---
 
@@ -193,73 +193,73 @@ Die späteren Korrekturen des Gamma-Vorfaktors und des Gewichts (p^{-k/2}) waren
 
 Das Projekt verwendet
 
-[
-mathcal M_infty f(t)
+$$
+\mathcal M_\infty f(t)
 =
-int_0^infty f(x)x^{it}rac{dx}{x},
-qquad
-H_infty=-ixrac d{dx}.
-]
+\int_0^\infty f(x)x^{it}\frac{dx}{x},
+\qquad
+H_\infty=-ix\frac d{dx}.
+$$
 
-Bei der Fourierkonvention (e^{+ity}) gilt
+Bei der Fourierkonvention \(e^{+ity}\) gilt
 
-[
-oxed{
-mathcal M_infty H_inftymathcal M_infty^{-1}
+$$
+\boxed{
+\mathcal M_\infty H_\infty\mathcal M_\infty^{-1}
 =
 -M_t,
 }
-]
+$$
 
-nicht (+M_t).
+nicht \(+M_t\).
 
-Damit entspricht der Mellinparameter (t) dem Generator-Spektralwert (-t).
+Damit entspricht der Mellinparameter \(t\) dem Generator-Spektralwert \(-t\).
 
 Die wesentliche Selbstadjungiertheit, die Spektrummenge
 
-[
-sigma(H_infty)=mathbb R
-]
+$$
+\sigma(H_\infty)=\mathbb R
+$$
 
 und alle geraden bzw. symmetrisierten Weil-Ausdrücke bleiben davon unberührt.
 
-Orientierungsabhängige rohe Gamma-Realisierungen müssen dagegen mit (-H_infty) formuliert werden.
+Orientierungsabhängige rohe Gamma-Realisierungen müssen dagegen mit \(-H_\infty\) formuliert werden.
 
 ### 7.2 Logarithmischer Koordinatenwechsel
 
 Für
 
-[
+$$
 H(s)
 =
-int_0^infty h(x)x^srac{dx}{x}
-]
+\int_0^\infty h(x)x^s\frac{dx}{x}
+$$
 
-und (x=e^u) ist der richtige additive Test
+und \(x=e^u\) ist der richtige additive Test
 
-[
-oxed{
+$$
+\boxed{
 g(u)=e^{u/2}h(e^u).
 }
-]
+$$
 
 Dann gilt
 
-[
-widehat g(t)
+$$
+\widehat g(t)
 =
-H!left(rac12+itight).
-]
+H\!\left(\frac12+it\right).
+$$
 
 Die früher verwendete Formel
 
-[
+$$
 h(e^{u/2})e^{u/2}
-]
+$$
 
 war falsch.
 
-Beide Fehler wurden am 27. September 2026 über PR #176 korrigiert und nach erfolgreicher Validierung in `main` gemergt. Die Weil-Masterform, NEU-220l, die Hauptpapers P01–P12 sowie die O8/O9-Gates mussten durch diese Korrekturen nicht zurückgenommen werden.
+Beide Fehler wurden am 27. September 2026 über PR #176 korrigiert und nach erfolgreicher Validierung in main gemergt. Die Weil-Masterform, NEU-220l, die Hauptpapers P01–P12 sowie die O8/O9-Gates mussten durch diese Korrekturen nicht zurückgenommen werden.
 
 ---
 
@@ -267,25 +267,25 @@ Beide Fehler wurden am 27. September 2026 über PR #176 korrigiert und nach erfo
 
 Bis hierhin ist die folgende Kette unabhängig nachvollzogen:
 
-[
-	ext{elementare Primzahlarithmetik}
-longrightarrow
-	ext{Zeta-Symmetrie}
-longrightarrow
-	ext{Weil-Explizitformel}
-longrightarrow
-	ext{Weil-Quadratik}
-longrightarrow
-	ext{RH als Positivitätsproblem}.
-]
+$$
+\text{elementare Primzahlarithmetik}
+\longrightarrow
+\text{Zeta-Symmetrie}
+\longrightarrow
+\text{Weil-Explizitformel}
+\longrightarrow
+\text{Weil-Quadratik}
+\longrightarrow
+\text{RH als Positivitätsproblem}.
+$$
 
 Nicht hergeleitet ist bisher:
 
-[
-	ext{Bost--Connes / Adelen}
-Longrightarrow
-	ext{Positivität der vollständigen Weil-Form}.
-]
+$$
+\text{Bost--Connes / Adelen}
+\Longrightarrow
+\text{Positivität der vollständigen Weil-Form}.
+$$
 
 Genau an diesem Übergang beginnt nach jetzigem Audit die eigentliche mathematische Aufgabe des Objekt-X-Programms.
 
@@ -315,11 +315,11 @@ Normierung der expliziten Weil-Formel geprüft. Gamma- und Primzahlpotenzfaktore
 
 ## Korrekturblock – 27. September 2026
 
-Die beiden Fehler samt direkter operatorischer Folgestellen wurden über PR #176 korrigiert und in `main` gemergt.
+Die beiden Fehler samt direkter operatorischer Folgestellen wurden über PR #176 korrigiert und in main gemergt.
 
 Geprüfter Ausgangspunkt für die Fortsetzung:
 
-`main@a77950be027dc1576b016c6a53bfad7ff65a04e4`
+**main@a77950be027dc1576b016c6a53bfad7ff65a04e4**
 
 ---
 
