@@ -1,3 +1,17 @@
+> [!NOTE]
+> **Historisches Grundregister — aktueller Einstieg separat.**
+>
+> Die folgende Fassung einschließlich des P11-Addendums vom 2. September 2026
+> bleibt unverändert erhalten. „Aktuelles P11-Auditaddendum“ und „Operative
+> Front“ bezeichnen darin den damaligen Stand; die Zahl 332 ist keine
+> aktuelle Gesamtdateizahl. Historische Statusangaben werden nicht promotet.
+>
+> Für den heutigen Forschungsstand: [CURRENT_STATE](00-uebersicht/CURRENT_STATE.md),
+> für die nächsten Aufgaben: [NEXT_GATES](00-uebersicht/NEXT_GATES.md).
+> Maßgebliche operative Statusquelle: [RESEARCH_STATE](00-uebersicht/RESEARCH_STATE.yaml).
+> Der [Archiveinstieg](00-uebersicht/ARCHIVE_INDEX.md) erschließt auch die
+> späteren Quellenpakete; allgemeiner Einstieg: [README](README.md).
+
 # Gesamtindex
 
 Historisches Grundregister der **332** bis zum damaligen Journalstand indexierten Forschungsdokumente des Objekt-X-Programms, geordnet nach thematischen Straengen. Neuere P11-Auditblöcke werden im aktuellen Addendum unten separat geführt; die Zahl 332 ist daher **keine aktuelle Gesamtdateizahl des Repositorys**.
