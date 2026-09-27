@@ -7,7 +7,7 @@ Stand: 2026-09-27.
 
 ## Gemergte kanonische Basis
 
-`main@5b5ac66` — [5b5ac66](https://github.com/Waschtl904/objekt-x-programm/commit/5b5ac66b1f30b58126c7a9d0d528d240f12a26fa). Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht.
+`main@17c30ec` — [17c30ec](https://github.com/Waschtl904/objekt-x-programm/commit/17c30ec0b909ef06636471ef7dcf02185ba2369e). Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht.
 
 ## Mathematisch geprüfter Forschungssnapshot
 
@@ -19,10 +19,10 @@ Mathematisch geprüfter vollständiger Research-Snapshot; der spätere beobachte
 
 ## Gepinnte Integrations-/CI-Provenienz
 
-Beobachtet am 2026-09-24: `main` bei [5b5ac66](https://github.com/Waschtl904/objekt-x-programm/commit/5b5ac66b1f30b58126c7a9d0d528d240f12a26fa).
-Integrierter beobachteter Research-Head: [6623047](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff) auf `research/first-chamber-o1-o7-proof-reconciliation-2026-09-22`.
-Reconciliation-Merge: [526d2c2](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957).
-Integrations-CI: [36017037945](https://github.com/Waschtl904/objekt-x-programm/actions/runs/36017037945), Versuch 1, **success** auf [5b5ac66](https://github.com/Waschtl904/objekt-x-programm/commit/5b5ac66b1f30b58126c7a9d0d528d240f12a26fa).
+Beobachtet am 2026-09-27: `main` bei [17c30ec](https://github.com/Waschtl904/objekt-x-programm/commit/17c30ec0b909ef06636471ef7dcf02185ba2369e).
+Integrierter beobachteter Research-Head: [82a1f9d](https://github.com/Waschtl904/objekt-x-programm/commit/82a1f9d661b1668cc71eb0d5f8806c5cee73e471) auf `research/first-chamber-o8-o9-2026-09-27`.
+Reconciliation-Merge: [17c30ec](https://github.com/Waschtl904/objekt-x-programm/commit/17c30ec0b909ef06636471ef7dcf02185ba2369e).
+Integrations-CI: [36327607304](https://github.com/Waschtl904/objekt-x-programm/actions/runs/36327607304), Versuch 1, **success** auf [17c30ec](https://github.com/Waschtl904/objekt-x-programm/commit/17c30ec0b909ef06636471ef7dcf02185ba2369e).
 **Diese Provenienz belegt Integration/CI, keine mathematische Neuverifikation.**
 
 ## Registry-Sync-Provenienz
@@ -35,7 +35,7 @@ Historische Integrationsprovenienz des Registry-/Navigations-Syncs: PR #156 inte
 
 ## Zwei aktive Hauptfronten
 
-- **Unbeschränkte Horizonterweiterung und kompatibler Transport** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. C1a–C1d ist auf dem festen Horizont B<=a<=1 geschlossen; das rohe O1–O7-Kammerpaket gilt ausschließlich für die explizite C1a-Fortführung auf 1<=A<=B<=C<=A_8=log(8)/2 (AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN). Nächster lokaler mathematischer Gate ist O8: neue Terminalpositivität für 1<A<=A_8. POSITIVE-CORRECTED-TRANSPORT (O9) und X4-Q8-WALL-CROSSING (O10) bleiben getrennte offene Gates; ihre relative Bearbeitungsreihenfolge wird durch diesen Registry-Sync nicht festgelegt. Die Nummerierung folgt PROOF_OBLIGATIONS.md und bezeichnet keine strategische Reihenfolge. Erneuerbare Profilreserve und unbeschränkte/kofinale Terminalkompatibilität bleiben offen.
+- **Unbeschränkte Horizonterweiterung und kompatibler Transport** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. C1a–C1d ist auf dem festen Horizont B<=a<=1 geschlossen. Für die konkrete C1a-Fortführung auf 1<=A<=B<=C<=A8=log(8)/2 liegen nun O1–O7, die reproduzierte O8-Terminalreserve und die positiven korrigierten O9-Transporte als AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN vor. Nächster lokaler Gate ist O10: der q=8-Wandübergang strikt rechts von A8. Erneuerbare Profilreserve und unbeschränkte/kofinale positive Terminalkompatibilität bleiben offen.
 - **Globale Weil-Testklasse und fensterunabhängiger Readout** — `FULL-WEIL-TEST-CLASS`, OPEN. Nach Aufbau einer kofinal kompatiblen C1-Geometrie: exakte Rückbindung an die vollständige geeignete Weil-Testklasse und einen globalen/fensterunabhängigen positiven Readout.
 
 ## Verwendbare Bausteine
@@ -65,6 +65,8 @@ Historische Integrationsprovenienz des Registry-/Navigations-Syncs: PR #156 inte
 | `P11-R27-CONSTRAINED-GAMMA-MOSCO-INVERSE-ROOT` | AUTHOR_DERIVED | [be58767](https://github.com/Waschtl904/objekt-x-programm/blob/be58767794eabb96e92152b493ee72a0a465a8ee/audits/P11_REFEREE_E2E_R27_CONSTRAINED_GAMMA_MOSCO_LIMIT_2026-08-15.md) |
 | `P11-TANGENTIAL-STRONG-TRANSPORT-HR0` | AUTHOR_DERIVED | [f495ce6](https://github.com/Waschtl904/objekt-x-programm/blob/f495ce6d89dcb8facc8fa0d4e09dda279b24fb73/audits/P11_REFEREE_E2E_R42_DUAL_NORMAL_DIRECTION_AND_ETA_BLINDNESS_2026-09-02.md) |
 | `P11-FIXED-PAIR-STRONG-TERMINAL` | AUTHOR_DERIVED | [084b8b7](https://github.com/Waschtl904/objekt-x-programm/blob/084b8b7855601c5fae87bf4e59a00648ffbb9116/audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md) |
+| `FIRST-CHAMBER-O8-TERMINAL-POSITIVITY` | AUTHOR_DERIVED | [82a1f9d](https://github.com/Waschtl904/objekt-x-programm/blob/82a1f9d661b1668cc71eb0d5f8806c5cee73e471/research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/PROOF.md) |
+| `POSITIVE-CORRECTED-TRANSPORT` | AUTHOR_DERIVED | [82a1f9d](https://github.com/Waschtl904/objekt-x-programm/blob/82a1f9d661b1668cc71eb0d5f8806c5cee73e471/research/x-c1/first-chamber-o8-o9-2026-09-27/o9-positive-transporte/PROOF.md) |
 
 Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGISTRY.md).
 
@@ -83,10 +85,5 @@ Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGI
 - `rh`: **OPEN**.
 
 Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getrennt. Diese Statusansicht führt die mathematischen Checker nicht erneut aus.
-
-## Noch nicht in den geprüften Stand übernommene Pakete
-
-- `FIRST-CHAMBER-O8-TERMINAL-POSITIVITY`: PENDING_STATUS_REVIEW — `research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/META.yaml`.
-- `POSITIVE-CORRECTED-TRANSPORT`: PENDING_STATUS_REVIEW — `research/x-c1/first-chamber-o8-o9-2026-09-27/o9-positive-transporte/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).
