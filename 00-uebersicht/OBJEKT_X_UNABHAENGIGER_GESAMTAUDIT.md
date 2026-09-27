@@ -285,37 +285,37 @@ Der Audit von NEU-220e bis NEU-252 zeigt eine klare Grenze zwischen drei Ebenen,
 
 Die semifinite Darstellung
 
-\`\`\`math
+```math
 \Lambda_\Gamma(h)
 =
 \frac{1}{2\pi}\,
 \tau_\infty\!\left(
 \gamma_\infty(-H_\infty)\,h(-H_\infty)
 \right)
-\`\`\`
+```
 
 ist mathematisch korrekt. Sie ist jedoch noch **keine Herleitung des Gammafaktors aus einer neuen Geometrie**. Unter der Mellintransformation ist $-H_\infty$ gerade Multiplikation mit $t$; damit wird die Digammafunktion $\gamma_\infty(t)$ per Funktionalkalkül eingesetzt und anschließend integriert.
 
 Auch der unitäre Quotient
 
-\`\`\`math
+```math
 S_\infty(t)
 =
 \frac{\Gamma_{\mathbb R}(1/2-it)}
      {\Gamma_{\mathbb R}(1/2+it)}
-\`\`\`
+```
 
 und seine logarithmische Ableitung sind direkte Umformulierungen des bekannten archimedischen Faktors der Funktionalgleichung. Ein unabhängiges Operatorpaar $(H_0,H_1)$, dessen tatsächliche Streumatrix $S_\infty$ erzwingt, ist an dieser Stelle nicht konstruiert.
 
 Beim Audit wurde zusätzlich ein Vorzeichenfehler in der Interpretation korrigiert: Die im Projekt verwendete algebraische Größe
 
-\`\`\`math
+```math
 Q_\infty
 =
 i\,\mathscr S_\infty^*\,\partial_t\mathscr S_\infty
 =
 M_{\gamma_\infty^{\rm sym}}
-\`\`\`
+```
 
 ist das Negative des üblichen Wigner-Smith/Eisenbud-Wigner-Zeitverzögerungsoperators $-i\mathscr S_\infty^*\partial_t\mathscr S_\infty$. Die algebraische Gamma-Identität und die späteren Spurformeln bleiben davon unberührt.
 
@@ -323,13 +323,13 @@ ist das Negative des üblichen Wigner-Smith/Eisenbud-Wigner-Zeitverzögerungsope
 
 Die frühe Konstruktion
 
-\`\`\`math
+```math
 \Lambda_{\mathbb A}^{\rm weak}
 =
 \Lambda_{\rm fin}
 +
 \Lambda_\Gamma
-\`\`\`
+```
 
 ist eine direkte Summe zweier bereits getrennter Funktionale. Sie ist typisierbar, enthält aber ausdrücklich
 
@@ -345,7 +345,7 @@ Beim Audit wurden zwei frühe Typbehauptungen in NEU-220g korrigiert: Nullschnit
 
 Eine erste klar definierte eigene Konstruktion erscheint später mit dem adelischen Amplitudenraum
 
-\`\`\`math
+```math
 \mathcal S_{\rm adel}^{\rm amp}
 =
 \left\{
@@ -353,25 +353,25 @@ F\in\mathcal S(\mathbb A_\mathbb Q):
 (P_{\rm Haar}F)|_{(0,\infty)}
 \in C_c^\infty((0,\infty);\mathbb C)
 \right\}
-\`\`\`
+```
 
 und dem Port
 
-\`\`\`math
+```math
 R_{\rm PW}F(u)
 =
 e^{u/2}(P_{\rm Haar}F)(e^u).
-\`\`\`
+```
 
 Die Wohldefiniertheit lässt sich direkt prüfen. Noch wichtiger: Der Port ist tatsächlich surjektiv auf
 
-\`\`\`math
+```math
 \mathcal A_{\rm PW}=C_c^\infty(\mathbb R;\mathbb C).
-\`\`\`
+```
 
 Für beliebiges $a\in\mathcal A_{\rm PW}$ liefert
 
-\`\`\`math
+```math
 h_a(x)=
 \begin{cases}
 x^{-1/2}a(\log x), & x>0,\\
@@ -379,13 +379,13 @@ x^{-1/2}a(\log x), & x>0,\\
 \end{cases}
 \qquad
 E(a):=h_a\otimes\mathbf 1_{\widehat{\mathbb Z}}
-\`\`\`
+```
 
 einen expliziten Rechtsinversen:
 
-\`\`\`math
+```math
 R_{\rm PW}E(a)=a.
-\`\`\`
+```
 
 Damit ist $R_{\rm PW}$ sogar eine **gesplittete Surjektion**.
 
@@ -393,32 +393,32 @@ Damit ist $R_{\rm PW}$ sogar eine **gesplittete Surjektion**.
 
 NEU-252 definiert
 
-\`\`\`math
+```math
 B_W^{\rm adel}(F,G)
 :=
 B_W(R_{\rm PW}F,R_{\rm PW}G).
-\`\`\`
+```
 
 Diese Definition ist mathematisch korrekt. Sie erzeugt jedoch keine neue positive Form, sondern ist exakt der Pullback der bereits bekannten Weil-Form.
 
 Aus der Surjektivität von $R_{\rm PW}$ folgt sofort:
 
-\`\`\`math
+```math
 B_W^{\rm adel}(F,F)\ge0\ \ \forall F
 \qquad\Longleftrightarrow\qquad
 B_W(a,a)\ge0\ \ \forall a\in\mathcal A_{\rm PW}.
-\`\`\`
+```
 
 Die rechte Seite ist nach dem Weil-Kriterium äquivalent zu RH.
 
 Außerdem verschwindet $B_W^{\rm adel}$ auf dem Kern des Ports:
 
-\`\`\`math
+```math
 F\in\ker R_{\rm PW}
 \quad\Longrightarrow\quad
 B_W^{\rm adel}(F,G)=0
 \qquad\forall G.
-\`\`\`
+```
 
 Die dadurch entstehende adelische Form besitzt also zunächst keine zusätzliche Geometrie in den Richtungen, die vom Port vergessen werden. Nach Quotientierung durch $\ker R_{\rm PW}$ erhält man im Wesentlichen wieder die ursprüngliche Amplitudengeometrie.
 
