@@ -17,7 +17,7 @@
 
 Objekt X bezeichnet das Ziel einer kompatiblen positiven Geometrie für die relevante Weil-Form-Struktur.
 
-Das Programm arbeitet schrittweise über lokale positive Räume, gekoppelte Operatoren, Transportabbildungen und deren Kompatibilität. Der gegenwärtige Schwerpunkt liegt auf der Fortsetzung der bereits konstruierten Fixed-Horizon-Geometrie über den Horizont `a=1` hinaus.
+Das Programm arbeitet schrittweise über lokale positive Räume, gekoppelte Operatoren, Transportabbildungen und deren Kompatibilität. Der gegenwärtige Schwerpunkt liegt auf der Fortsetzung über die erste geschlossene Kammer bis `A₈=log(8)/2` hinaus, beginnend mit dem `q=8`-Wandübergang.
 
 **Objekt X ist noch nicht vollständig konstruiert.  
 Globale Weil-Positivität ist nicht bewiesen.  
@@ -58,59 +58,27 @@ Es beweist **keine** neue Terminalpositivität für `A>1`.
 
 ---
 
-## Nächster lokaler Gate: O8
+## O8 und O9: positiver Abschluss der ersten Kammer
 
-Der nächste mathematische Hauptschritt ist
+Das [O8/O9-Forschungspaket](research/x-c1/first-chamber-o8-o9-2026-09-27/README.md)
+ergänzt die rohen O1–O7-Transporte um zwei separat begründete Ergebnisse:
 
-```text
-FIRST-CHAMBER-O8-TERMINAL-POSITIVITY
-```
+- **O8:** Neue Formraum-, Tail- und Kodimensionsreduktion sowie reproduzierte
+  Zertifikate mit 191 strikt positiven Pivots je Parität. Kammerweit gilt
+  `q_A[u] >= (12/10^30)||u||²` und
+  `G_A >= [24/(23*10^30+24)] I > 10^-30 I`.
+- **O9:** Positive korrigierte Readouts und vollständige Zielräume, isometrische
+  Transporte, Quellintertwining und Cocycle für alle Paare und Tripel bis A₈.
 
-Für einen neuen Terminal
-
-```math
-1<A\le A_8
-```
-
-ist eine echte positive Reserve zu beweisen:
-
-```math
-G_A = I-R_A^*R_A \ge \eta_A I,
-\qquad
-\eta_A>0.
-```
-
-Die bisherige Schranke
-
-```math
-\|R_A\|\le\sqrt{90}
-```
-
-ist **keine Kontraktionsaussage** und liefert O8 nicht.
-
-Insbesondere darf die frühere `191D`-Reduktion nicht ohne einen neuen analytischen Tail-/Kodimensionsbeweis auf `A>1` übertragen werden.
-
-Vollständige Obligationen:
-[`00-uebersicht/NEXT_GATES.md`](00-uebersicht/NEXT_GATES.md)
+Beide Ergebnisse sind als `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN` registriert.
+Die eigenständige Ganzzahlprüfung bestätigt die O8-Zertifikatsarithmetik auf den
+gebundenen Modellintervallen; eine externe analytische Abnahme bleibt offen.
+Beweisanker, Reproduktionsbelege und Integrationsstand stehen in der
+[`Survivor Registry`](00-uebersicht/SURVIVOR_REGISTRY.md).
 
 ---
 
-## Weitere offene Gates
-
-Nach beziehungsweise neben O8 bleiben insbesondere offen:
-
-### O9 — Positive corrected transport
-
-Konstruktion der korrigierten positiven Räume und Transporte einschließlich
-
-```text
-Quotientenkompatibilität
-isometrischer/beschränkter U^X-Transporte
-Quellintertwining
-Cocycle
-```
-
-ohne ein lokales Quadratwurzel-Intertwining vorauszusetzen.
+## Nächster lokaler Gate und weitere offene Aufgaben
 
 ### O10 — q=8 wall crossing
 
@@ -198,9 +166,9 @@ UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION
 OPEN
 ```
 
-Aktueller lokaler Einstieg: **O8**.
+Aktueller lokaler Einstieg: **O10 — q=8-Wall-Crossing**.
 
-Danach bleiben unter anderem O9, O10, erneuerbare Profilreserven und unbeschränkte Horizontkompatibilität zu schließen.
+Erneuerbare Profilreserven, eine unbeschränkte/kofinale Horizontfamilie und ihre positive Kompatibilität bleiben offen.
 
 ### 2. Globale Weil-Testklasse und Readout
 

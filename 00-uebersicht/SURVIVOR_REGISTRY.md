@@ -753,3 +753,73 @@ Does not claim:
 - Globales Objekt X oder RH.
 
 Dokumentierte Reproduktion: [P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md](https://github.com/Waschtl904/objekt-x-programm/blob/084b8b7855601c5fae87bf4e59a00648ffbb9116/audits/P11_R43_POSITIVE_ROOT_ANCHOR_STRONG_TERMINAL_2026-09-07.md).
+
+## FIRST-CHAMBER-O8-TERMINAL-POSITIVITY
+
+O8 — reproduzierte Terminalreserve in der ersten geschlossenen Kammer
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Konkrete C1a-Fortführung auf 1 <= A <= B <= C <= A8=log(8)/2; beide Paritäten und vollständige Quellenformräume mit genau den ursprünglichen zwei Mellinbedingungen; aktive Kanäle {2,3,4,5,7}.
+- Canonical commit: [82a1f9d](https://github.com/Waschtl904/objekt-x-programm/commit/82a1f9d661b1668cc71eb0d5f8806c5cee73e471).
+- Canonical proof: [research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/82a1f9d661b1668cc71eb0d5f8806c5cee73e471/research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/PROOF.md).
+- depends_on: `FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Kein No-Go und keine Aussage negativer vollständiger Weil-Energie.
+
+Aussage:
+
+- Neue analytische Formraum-, Tail- und Kodimensionsreduktion: vollständiger hoher Raum mit physischem Boden 2/3 und genau 191 niedrigen Koordinaten je Parität.
+- Vollständige Low/High-Grams, bezahlte Gamma-/Mellinfehler und gerichtete LDL-Zertifikate am Endpunkt A8: 191 strikt positive Pivots in beiden Paritäten.
+- Kammerweit q_A[u] >= (12/10^30)||u||_2^2 und G_A >= eta_* I mit eta_*=24/(23*10^30+24)>10^-30; Übertragung durch die gebundene rohe isometrische Kompression.
+- Die Schuranbindung eliminiert den vollständigen hohen Formraum und begründet die positive-Gram-Kongruenz zum exakten Defekt-Schurrest.
+- Separate Ganzzahl-Intervallimplementierung bestätigt beide Matrixzertifikate. Vollständige Integralmodellintervalle und analytische Eingaben bleiben übernommen; keine externe organisatorische Prüfung.
+
+Does not claim:
+
+- O10 oder eine positive Fortsetzung strikt rechts von A8.
+- Eine unbeschränkte/kofinale kompatible Horizontfamilie.
+- Eine externe analytische Abnahme.
+- Objekt X, globale Weil-Positivität oder RH.
+
+Dokumentierte Reproduktion: [refined_tail.json](https://github.com/Waschtl904/objekt-x-programm/blob/82a1f9d661b1668cc71eb0d5f8806c5cee73e471/research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/refined_tail.json), [reserve_refined.json](https://github.com/Waschtl904/objekt-x-programm/blob/82a1f9d661b1668cc71eb0d5f8806c5cee73e471/research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/reserve_refined.json), [common_reserve.json](https://github.com/Waschtl904/objekt-x-programm/blob/82a1f9d661b1668cc71eb0d5f8806c5cee73e471/research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/common_reserve.json), [integer_results.json](https://github.com/Waschtl904/objekt-x-programm/blob/82a1f9d661b1668cc71eb0d5f8806c5cee73e471/research/x-c1/first-chamber-o8-o9-2026-09-27/o8-reproduktion/integer_results.json), [graph_check_results.json](https://github.com/Waschtl904/objekt-x-programm/blob/82a1f9d661b1668cc71eb0d5f8806c5cee73e471/research/x-c1/first-chamber-o8-o9-2026-09-27/o8-schur-abgleich/graph_check_results.json).
+
+## POSITIVE-CORRECTED-TRANSPORT
+
+O9 — kompatible positive korrigierte Transporte bis A8
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Konkrete C1a-Fortführung auf 1 <= A <= B <= C <= A8=log(8)/2; beide Paritäten und vollständige Quellenformräume mit genau den ursprünglichen zwei Mellinbedingungen; aktive Kanäle {2,3,4,5,7}.
+- Canonical commit: [82a1f9d](https://github.com/Waschtl904/objekt-x-programm/commit/82a1f9d661b1668cc71eb0d5f8806c5cee73e471).
+- Canonical proof: [research/x-c1/first-chamber-o8-o9-2026-09-27/o9-positive-transporte/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/82a1f9d661b1668cc71eb0d5f8806c5cee73e471/research/x-c1/first-chamber-o8-o9-2026-09-27/o9-positive-transporte/PROOF.md).
+- depends_on: `FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7`, `FIRST-CHAMBER-O8-TERMINAL-POSITIVITY`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `CONSTRUCTION`.
+- Negative claim boundary: Kein No-Go und keine Aussage negativer vollständiger Weil-Energie.
+
+Aussage:
+
+- Delta_A=G_A^(1/2) ist auf dem vollständigen T-Raum beschränkt invertierbar mit ||Delta_A^(-1)||<10^15; T_X,A=Delta_A T_A realisiert exakt die positive Form q_A.
+- Die korrigierten Quellenformnormen sind äquivalent zur bestehenden Formnorm; die Readouts sind unitär auf ihre vollständigen Zielräume und haben trivialen Kern.
+- U^X_(A,B)=Delta_B M^T_(A,B) Delta_A^(-1) ist isometrisch mit geschlossenem Bild, erfüllt Quellintertwining und den vollständigen Cocycle für alle Kammerpaare und -tripel.
+- Äquivalente verschachtelte Realisierung in jedem gemeinsamen Endterminal C<=A8; kein Intertwining der unveränderten Rohtransporte mit lokalen Quadratwurzeln vorausgesetzt.
+- 47 exakte rationale Algebraprüfungen ergänzen den Hilbertraumbeweis; sie ersetzen ihn nicht.
+
+Does not claim:
+
+- O10 oder eine positive Fortsetzung strikt rechts von A8.
+- Eine unbeschränkte/kofinale kompatible Horizontfamilie.
+- Eine externe analytische Abnahme.
+- Objekt X, globale Weil-Positivität oder RH.
+
+Dokumentierte Reproduktion: [transport_checks.json](https://github.com/Waschtl904/objekt-x-programm/blob/82a1f9d661b1668cc71eb0d5f8806c5cee73e471/research/x-c1/first-chamber-o8-o9-2026-09-27/o9-positive-transporte/transport_checks.json).
