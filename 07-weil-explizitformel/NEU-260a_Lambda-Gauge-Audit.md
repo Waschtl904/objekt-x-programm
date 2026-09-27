@@ -30,7 +30,7 @@ $$
 \boxed{\iota_{\lambda_1,\lambda_2}: \mathcal{H}(T_{a,\lambda_1}) \xrightarrow{\;\cong\;} \mathcal{H}(T_{a,\lambda_2}).\quad\checkmark[K/M]\text{ (RH-frei)}} \qquad (1\text{-Iso})
 $$
 
-$\lambda$ ist Gauge für Hilbertraumtopologie. $\checkmark[K/M]$
+$$\lambda$ ist Gauge für Hilbertraumtopologie. $\checkmark[K/M]$$
 
 ---
 
@@ -74,11 +74,11 @@ $$
 Die topologische Äquivalenz aus §1 gilt für **festes** Intervall $(-a,a)$. Für Übergänge $a<b$ muss zusätzlich die Normkompatibilität geprüft werden.
 
 Sei $E_{a,b}$ die Nullfortsetzung. Auf dem gemeinsamen Testkern gilt
-$
+$$
 Q_W^b(E_{a,b}v)=Q_W^a(v).
-$
+$$
 Für beliebige zulässige Shiftfunktionen $\lambda(a),\lambda(b)$ daher
-$
+$$
 \boxed{
 \|E_{a,b}v\|_{T_{b,\lambda(b)}}^2
 =
@@ -87,39 +87,39 @@ $
 \bigl(\lambda(a)-\lambda(b)\bigr)\|v\|_2^2.
 }
 \qquad (3\text{-ShiftDefect})
-$
+$$
 
 Damit ist die Nullfortsetzung genau dann isometrisch, wenn $\lambda(a)=\lambda(b)$.
 
 Für den RH-freien lokalen Gauge-Fix $\lambda_{a,c}=\lambda_a-c$ gilt wegen der Monotonie der Rayleigh-Infima bei wachsendem Intervall $\lambda_b\le\lambda_a$ für $a<b$:
-$
+$$
 \|E_{a,b}v\|_{T_{b,c}}^2
 =
 \|v\|_{T_{a,c}}^2
 +
 (\lambda_a-\lambda_b)\|v\|_2^2.
 \qquad (3\text{-VariableShift})
-$
+$$
 Die natürliche Nullfortsetzung ist also im Allgemeinen **nicht isometrisch**.
 
 Ein gemeinsamer Shift $\lambda_*$ mit $\lambda_*<\lambda_a$ für alle $a$ würde die Normen kompatibel machen. Seine Existenz ist jedoch äquivalent zu
-$
+$$
 \inf_{a>0}\lambda_a>-\infty.
-$
+$$
 Dann gilt für jede kompakt getragene Testfunktion $v$ eine globale Untergrenze
-$
+$$
 B_W(v,v)\ge \lambda_*\|v\|_2^2,
-$
+$$
 also Haar-$L^2$-Semibeschränktheit der Weil-Form. Nach NEU-257 ist dies äquivalent zu RH. Umgekehrt erlaubt RH wegen $\lambda_a\ge0$ für alle $a$ jeden festen $\lambda_*<0$.
 
-$
+$$
 \boxed{
 \text{gemeinsamer isometrischer Shift für alle Intervalle}
 \quad\Longleftrightarrow\quad
 \mathrm{RH}.
 }
 \qquad (3\text{-GlobalFirewall})
-$
+$$
 
 **Konsequenz:** $\lambda$ ist lokal ein Gauge der Hilberttopologie, global aber Teil der Übergangsgeometrie. Ein RH-freies gerichtetes System muss daher entweder nicht-isometrische Übergänge kontrollieren oder einen anderen Transportmechanismus konstruieren; die bloße lokale Gauge-Äquivalenz schließt $J_{a,b}$ nicht.
 
@@ -129,13 +129,13 @@ $
 
 $$\mathcal{H}(T_{a,\lambda_1})\cong\mathcal{H}(T_{a,\lambda_2})\quad\checkmark[K/M]\qquad(4\text{-a})$$
 $$C_{\lambda_1,\lambda_2,a}=(\lambda_a-\lambda_1)/(\lambda_a-\lambda_2)\quad\checkmark[K/M]\qquad(4\text{-b})$$
-$\lambda\text{ ist für festes }a\text{ Gauge der Hilbertraumtopologie}\quad\checkmark[K/M]\qquad(4\text{-c})$
+$$\lambda\text{ ist für festes }a\text{ Gauge der Hilbertraumtopologie}\quad\checkmark[K/M]\qquad(4\text{-c})$$
 $$\lambda=0\text{ ist RH-konditional}\quad\times[M]\text{ als RH-freie Konvention}\qquad(4\text{-d})$$
 $$\lambda_{a,c}=\lambda_a-c,\;T_{a,c}\ge cI\;(c>0)\quad\checkmark[K/M]\text{ (RH-frei)}\qquad(4\text{-e})$$
 $$\lambda_{\rm can}=\lambda_a-1\text{: bequeme Konvention, nicht einzig möglich}\quad\checkmark[M]\qquad(4\text{-f})$$
 $$\text{Verbindung }c=1\leftrightarrow\pm i\text{: Motivation}\quad\times[M]\text{ als Kanonizitätsargument}\qquad(4\text{-g})$$
-$\sigma(\overline{\mathscr{D}}_{a,\theta}^{(\lambda)})\text{ }\lambda\text{-unabhängig (Suzuki-Erwartung)}\quad?[O]\text{ (niedrige Prio)}\qquad(4\text{-h})$
-$\text{gemeinsamer Shift / isometrische Nullfortsetzung über alle }a\quad\Longleftrightarrow\quad\mathrm{RH}\qquad(4\text{-i})$
+$$\sigma(\overline{\mathscr{D}}_{a,\theta}^{(\lambda)})\text{ }\lambda\text{-unabhängig (Suzuki-Erwartung)}\quad?[O]\text{ (niedrige Prio)}\qquad(4\text{-h})$$
+$$\text{gemeinsamer Shift / isometrische Nullfortsetzung über alle }a\quad\Longleftrightarrow\quad\mathrm{RH}\qquad(4\text{-i})$$
 
 ---
 

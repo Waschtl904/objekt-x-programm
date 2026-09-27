@@ -88,10 +88,10 @@ $$
 **$\lambda$-Abhängigkeit:** Verschiedene $\lambda<\lambda_a$ liefern topologisch äquivalente, aber nicht isometrische Hilberträume. Ob die $\overline{\mathscr{D}}_{a,\theta}$-Spektren $\lambda$-unabhängig sind: $\to$ Frage A/NEU-260.
 
 **Positivitäts-Firewall der endlichen Stufe.** Die Aussage $T_{a,\lambda}>0$ folgt allein aus der Wahl $\lambda<\lambda_a$ und gilt für jeden semibeschränkten $A_a$. Sie ist daher **nicht** die Aussage $Q_W^a\ge0$. Das Vorzeichen des unverschobenen Spektralbodens $\lambda_a$ trägt weiterhin den RH-Inhalt: Nach Yoshida/Suzuki gilt
-$
+$$
 \mathrm{RH}\quad\Longleftrightarrow\quad \lambda_a\ge0\ \text{für alle }a>0.
 \qquad (1\text{-FiniteFire})
-$
+$$
 Die RH-freie positive Metrik auf $\mathcal H(T_{a,\lambda})$ entsteht somit durch Verschiebung, nicht durch eine neue finite Weil-Positivität.
 
 ### 1.3 Ebene 2: $\overline{\mathscr{D}}_{a,\theta}$ (Satz)
@@ -148,22 +148,22 @@ Ein separater „Polterm-Randaudit“ ist für diese Testkernidentität nicht me
 
 ## Frage 4 — Kanonische Übergangsabbildungen
 
-$L^2$-Einbettung durch Nullfortsetzung: kanonisch $\checkmark$ (Suzuki, Satz). $(4\text{-L2Emb})$
+$$L^2$-Einbettung durch Nullfortsetzung: kanonisch $\checkmark$ (Suzuki, Satz). $(4\text{-L2Emb})$$
 
 Auf dem Testkern ist die **unverschobene** Form unter Nullfortsetzung kompatibel. Für $0<a<b$ und $E_{a,b}v$ die Nullfortsetzung gilt wegen der Lokalisierungsidentität
-$
+$$
 Q_W^b(E_{a,b}v)=Q_W^a(v).
 \qquad (4\text{-FormCompat})
-$
+$$
 Für gewählte Shiftparameter $\lambda(a)<\lambda_a$ und $\lambda(b)<\lambda_b$ folgt jedoch
-$
+$$
 \|E_{a,b}v\|_{T_{b,\lambda(b)}}^2
 -
 \|v\|_{T_{a,\lambda(a)}}^2
 =
 \bigl(\lambda(a)-\lambda(b)\bigr)\|v\|_2^2.
 \qquad (4\text{-ShiftDefect})
-$
+$$
 Nullfortsetzung ist also nur dann isometrisch für die $T$-Normen, wenn derselbe Shift verwendet wird.
 
 **Uniform-Shift-Firewall.** Ein gemeinsamer endlicher Shift $\lambda_*<\lambda_a$ für **alle** $a>0$ existiert genau dann, wenn die lokalisierten Spektralböden eine uniforme endliche Untergrenze besitzen. Eine solche Untergrenze würde für jede kompakt getragene Testfunktion sofort eine globale Haar-$L^2$-Untergrenze von $B_W$ liefern und damit nach NEU-257 RH implizieren. Umgekehrt liefert RH $\lambda_a\ge0$ für alle $a$, sodass etwa jeder feste $\lambda_*<0$ zulässig ist.
@@ -211,7 +211,7 @@ $$
 
 ## 6. Offene Punkte
 
-$B_W|_{C_c^\infty(-a,a)}=Q_W^a\quad\checkmark[K/M]\qquad(6\text{-a})$
+$$B_W|_{C_c^\infty(-a,a)}=Q_W^a\quad\checkmark[K/M]\qquad(6\text{-a})$$
 $$\lambda\text{-Invarianz von }\sigma(W(a,\theta;z))\quad?[O]\to\text{NEU-260-A}\qquad(6\text{-b})$$
 $$\theta(a)\text{ aus BC/KMS/Frobenius}\quad?[O]\to\text{NEU-260-B}\qquad(6\text{-c})$$
 $$\phi(a,z)\text{ aus Arithmetik; }\phi=0\text{?}\quad?[O]\to\text{NEU-260-C}\qquad(6\text{-d})$$
@@ -230,8 +230,8 @@ $$\overline{\mathscr{D}}_{a,\theta}\text{ sa. auf }\mathcal{H}(T_a)\quad\checkma
 $$A_a\neq\text{conjecturaler HP-Operator}\quad\times[M]\qquad(7\text{-e})$$
 $$\sigma(A_a)\to\{\gamma_n\}\quad\times[M]\text{ (falsche Ebene)}\qquad(7\text{-f})$$
 $$L^2(-a,a)\hookrightarrow L^2(-b,b)\text{ kanonisch}\quad\checkmark[K/M]\qquad(7\text{-g})$$
-$B_W|_{C_c^\infty(-a,a)}=Q_W^a\quad\checkmark[K/M]\qquad(7\text{-h})$
-$\lambda(a)\text{: lokale Hilfsverschiebung; gemeinsame intervallunabhängige Verschiebung ist RH-relevant}\quad\checkmark[K/M]\qquad(7\text{-i})$
+$$B_W|_{C_c^\infty(-a,a)}=Q_W^a\quad\checkmark[K/M]\qquad(7\text{-h})$$
+$$\lambda(a)\text{: lokale Hilfsverschiebung; gemeinsame intervallunabhängige Verschiebung ist RH-relevant}\quad\checkmark[K/M]\qquad(7\text{-i})$$
 $$\phi(a,z)\text{: echtes Grenzdatum (Suzuki-Vermutung, unbewiesen)}\quad\checkmark[K/M]\text{ (Statuskorrektur)}\qquad(7\text{-j})$$
 $$J_{a,b}\text{: originale Objekt-X-Hypothese, nicht in Suzukis analytischer Vermutung}\quad\checkmark[K/M]\qquad(7\text{-k})$$
 $$\text{NEU-260-Auftrag A–D: definiert}\quad\checkmark[K/M]\qquad(7\text{-l})$$
