@@ -34,22 +34,22 @@ $$
 ## 2. Koordinate und kritische Linie
 
 Setze für $h\in C_c^\infty(\mathbb R_{>0})$
-$
+$$
 H(s):=\int_0^\infty h(x)x^s\,\frac{dx}{x}.
-$
+$$
 Unter der logarithmischen Substitution $x=e^u$, $dx/x=du$, gilt
-$
+$$
 H(s)=\int_{\mathbb R}h(e^u)e^{su}\,du.
-$
+$$
 Definiere daher die additive Testfunktion
-$
+$$
 \boxed{g(u):=e^{u/2}h(e^u).} \qquad (2\text{-Change})
-$
+$$
 Für $s=\frac12+it$ folgt unmittelbar
-$
+$$
 \hat g(t)=\int_{\mathbb R}g(u)e^{itu}\,du
 =H\left(\tfrac12+it\right). \qquad (2\text{-Coord})
-$
+$$
 
 Suzuki (2011, (0.1)) und Weil (1952, §5) schreiben das Positivitätskriterium in der Form:
 $$

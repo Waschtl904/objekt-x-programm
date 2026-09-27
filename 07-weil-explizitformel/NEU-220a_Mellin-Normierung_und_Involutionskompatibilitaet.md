@@ -81,28 +81,28 @@ $$= \int_0^\infty \overline{f(u)}\, u^{-it}\, \frac{du}{u} = \overline{\int_0^\i
 $$H_\infty := -i\, x\frac{d}{dx}.$$
 
 **Satz PD-2c.**
-$\boxed{\mathcal{M}_\infty \circ H_\infty = -M_t \circ \mathcal{M}_\infty,}$
+$$\boxed{\mathcal{M}_\infty \circ H_\infty = -M_t \circ \mathcal{M}_\infty,}$$
 wobei $M_t$ die Multiplikation mit der reellen Variablen $t$ bezeichnet.
 
 *Beweis.* Setze $F(y):=f(e^y)$. Dann entspricht $H_\infty f=-ixf'(x)$ unter $x=e^y$ dem Operator $-iF'(y)$. Mit der festgelegten Fourierkonvention $\widehat F(t)=\int_{\mathbb R}F(y)e^{ity}\,dy$ liefert partielle Integration
-$
+$$
 \int_{\mathbb R}F'(y)e^{ity}\,dy
 =-it\int_{\mathbb R}F(y)e^{ity}\,dy,
-$
+$$
 da die Randterme für $F\in\mathcal S(\mathbb R)$ verschwinden. Daher
-$
+$$
 \mathcal M_\infty(H_\infty f)(t)
 =(-i)(-it)\,\mathcal M_\infty f(t)
 =-t\,\mathcal M_\infty f(t).
 \quad\square
-$
+$$
 
 **Folgerung.** $H_\infty$ ist auf $L^2(\mathbb{R}_+^\times,dx/x)$ wesentlich selbstadjungiert; unter $\mathcal M_\infty$ ist er zu $-M_t$ unitär äquivalent. Somit bleiben $\sigma(H_\infty)=\mathbb R$ und das Lebesgue-Spektralmaß erhalten; lediglich die Orientierung ist $t\mapsto -t$.
 
 **Funktionalkalkül-Folge.** Für jede geeignete Borel-Funktion $\varphi$ gilt
-$
+$$
 \mathcal M_\infty\,\varphi(-H_\infty)\,\mathcal M_\infty^{-1}=M_{\varphi(t)}.
-$
+$$
 Diese Form ist bei späteren operatorischen Realisierungen des Gamma-Symbols zu verwenden.
 
 ---
