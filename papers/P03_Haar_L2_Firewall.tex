@@ -10,9 +10,9 @@
 \newtheorem{remark}[theorem]{Remark}
 
 \title{P03 --- Haar-$L^2$ Firewall: $B_W$ Cannot Close on $L^2(\mathbb{R},du)$\\
-\normalsize SYN-Re-Audit: 2026-08-08 (Sync Patch~3 --- FROZEN $\checkmark[K/M]$)}
+\normalsize SYN-Re-Audit: 2026-09-27 (Sync Patch~4 --- post-freeze $\checkmark[K/M]$)}
 \author{Objekt-X-Programm}
-\date{2026-08-08}
+\date{2026-08-08; post-freeze sync 2026-09-27}
 
 \begin{document}
 \maketitle
@@ -38,7 +38,7 @@ Normalisation: $B_{W,\mathrm{NEU}\text{-}252}=B_{W,\mathrm{Lit}}$
 % ---------------------------------------------------------------
 
 \begin{remark}[Conventions, from P02]\label{rem:conv}
-All definitions are canonical in P02 (Patch~3.5, FROZEN).
+All definitions are canonical in P02 (Patch~3.6, post-freeze audit).
 Fourier convention: P02 Definition~1.1 (NEU-220k, binding).
 On the core $\mathcal{A}_{\mathrm{PW}}:=C_c^\infty(\mathbb{R};\mathbb{C})
 \subset L^1(\mathbb{R})\cap L^2(\mathbb{R})$,
@@ -49,12 +49,22 @@ Normalisation $B_{W,\mathrm{NEU}\text{-}252}=B_{W,\mathrm{Lit}}$:
 P02 Theorem~\texttt{thm:lit-id} (NEU-258 Patch~1), $\checkmark[K/M]$.
 \end{remark}
 
+\begin{remark}[Role of the Haar-$L^2$ background]\label{rem:reference-only}
+The finite-vacuum pairing used in P02 Patch~3.6 is the test-function analogue
+of the $L^2$ pairing with $\mathbf 1_{\widehat{\mathbb Z}}$ in NEU-255.
+The resulting space $H_0=L^2(\mathbb R,du)$ is a positive RH-free
+\emph{reference space}; this paper proves that it is not the completion
+geometry of the full Weil form.  No positive Object-X operator is constructed
+in P03.
+\end{remark}
+
 \begin{definition}[Signed zero set, NEU-257 Patch~3]\label{def:gamma}
 \[
   \boxed{\Gamma := \{\gamma\in\mathbb{R} : \xi(1/2-i\gamma)=0\}}
 \]
-(without multiplicity). Under RH, $\Gamma\subset\mathbb{R}$ and
-$-\gamma\in\Gamma$ whenever $\gamma\in\Gamma$.
+(without multiplicity).  By definition $\Gamma\subset\mathbb R$ and
+$-\gamma\in\Gamma$ whenever $\gamma\in\Gamma$.  Under RH, the ordinates
+in $\Gamma$ parametrise \emph{all} nontrivial zeros of $\xi$.
 Write $m_\gamma>0$ for the multiplicity of $\gamma$.
 $N_\Gamma(T):=\sum_{|\gamma|\le T}m_\gamma=O(T\log T)$
 (Riemann--von Mangoldt; both halves: $N_\Gamma=2N+O(1)$).
@@ -183,10 +193,10 @@ RH-free construction of $\mathcal{H}_W$ from BC/adelic data: NEU-259 ($?[O]$).
 \section{Audit Status}
 % ---------------------------------------------------------------
 
-\textbf{FROZEN $\checkmark[K/M]$: 2026-08-08 (Sync Patch~3).}
+\textbf{Post-freeze sync $\checkmark[K/M]$: 2026-09-27 (Sync Patch~4).}
 
 \medskip
-\noindent Changes relative to Re-Audit Patch~1:
+\noindent Changes through Sync Patch~4:
 \begin{enumerate}
 \item[(a)] Fourier convention in \S1 cites P02 Definition~1.1 as canonical source;
   Plancherel noted locally for $C_c^\infty\subset L^1\cap L^2$ (Sync Patch~2).
@@ -194,10 +204,14 @@ RH-free construction of $\mathcal{H}_W$ from BC/adelic data: NEU-259 ($?[O]$).
   \texttt{thm:lit-id} (Sync Patch~2).
 \item[(c)] Abstract: cross-document \texttt{\textbackslash ref\{thm:lit-id\}} replaced
   by \texttt{\textbackslash texttt\{thm:lit-id\}} (Sync Patch~3). \textbf{[new]}
+\item[(d)] P02 source synchronized to Patch~3.6; Haar-$L^2$ explicitly marked
+  as reference geometry rather than a positive Weil completion (Sync Patch~4).
+\item[(e)] Signed-zero-set wording corrected: $\Gamma\subset\mathbb R$ by
+  definition; under RH it parametrises all nontrivial zeros (Sync Patch~4).
 \end{enumerate}
 
 \medskip
-\noindent Source nodes: NEU-253, 254, 255 (Patch~2), 256 (Patch),
+\noindent Source nodes: NEU-253, 254, 255 (Patch~3), 256 (Patch~2),
 257 (Patches 1--3), 258 (Patch~1).\\
 External: Alpay--Jorgensen 2012 Thm.~3.4;
 Bochner--Schwartz (Reed--Simon II, IX.10);
