@@ -54,8 +54,9 @@ For every $a>0$, unconditionally:
   $\lambda_a:=\inf\sigma(A_a)$ exists and is continuous in $a$.
 \item For $\lambda<\lambda_a$: $T_{a,\lambda}:=A_a-\lambda I>0$
   and $\mathcal{H}(T_{a,\lambda})$ is a Hilbert space.
-\item $\overline{\mathscr{D}}_{a,\theta}=(\overline{\mathscr{D}}_{a,\theta})^*$
-  on $\mathcal{H}(T_{a,\lambda})$, deficiency indices $(1,1)$.
+\item the underlying minimal symmetric operator $\mathscr{D}_a$ has deficiency
+  indices $(1,1)$ on $\mathcal{H}(T_{a,\lambda})$, and each
+  $\overline{\mathscr{D}}_{a,\theta}$ is a self-adjoint extension.
 \end{enumerate}
 \end{theorem}
 
@@ -75,7 +76,9 @@ as an RH-free convention.
 \section{Global shift firewall: local gauge does not canonise transport}
 
 For $0<a<b$, let $E_{a,b}$ denote zero extension from $(-a,a)$ to $(-b,b)$.
-On the common test core the localised Weil forms are compatible:
+By NEU-259 Patch~3 (using the full normalisation audit NEU-258),
+$Q_W^a=B_W|_{C_c^\infty(-a,a)}$ on the test core. Hence the localised Weil
+forms are compatible under zero extension:
 \[
   Q_W^b(E_{a,b}v,E_{a,b}v)=Q_W^a(v,v).
 \]
@@ -233,7 +236,7 @@ SYN-Re-Audit: 2026-09-27. Earlier corrections from the 2026-08-08 draft
 remain in force:
 (a) deficiency spaces corrected to $\mathcal{N}_{\pm}=\operatorname{span}\{v_\pm\}$;
 (b) parity $P$ is linear and the reflection statement is a theorem;
-(c) parity reduces $U(1)$ to $\mathbb Z_2$ but does not select a unique branch;
+(c) parity reduces $U(1)$ to $\mathbb{Z}_2$ but does not select a unique branch;
 (d) $\lambda_{\mathrm w}(a)=\lambda_a-1$ is only a fixed local working normalization;
 (e) the inductive limit $\mathcal K_X$ is conjectural.
 
