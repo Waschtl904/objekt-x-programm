@@ -2,7 +2,7 @@
 
 **Beginn:** 24. September 2026  
 **Letzte Aktualisierung:** 27. September 2026  
-**Geprüfter Ausgangspunkt nach Korrektur-PR #176:** **main@a77950be027dc1576b016c6a53bfad7ff65a04e4**  
+**Zuletzt integrierter Audit-Korrekturstand:** **main@5100f85191830bd599849d9db8f73a8208046a67**  
 **Arbeitsweise:** Mathematische Aussagen werden unabhängig geprüft. Statusdateien, frühere Audits und Repository-Markierungen dienen als Wegweiser, nicht als Beweis.  
 **Ziel:** Eine verständliche, fortlaufend aktualisierte Landkarte des gesamten Objekt-X-Programms vom ursprünglichen Fragenkatalog bis zur aktuellen Forschungsfront.
 
@@ -277,6 +277,164 @@ Genau an diesem Übergang beginnt nach jetzigem Audit die eigentliche mathematis
 
 ---
 
+## 9. Grenze zwischen klassischer Weil-Theorie und eigener Objekt-X-Konstruktion
+
+Der Audit von NEU-220e bis NEU-252 zeigt eine klare Grenze zwischen drei Ebenen, die im historischen Forschungsfluss teilweise ineinander übergingen.
+
+### 9.1 Operatorische Darstellung des Gammaterms
+
+Die semifinite Darstellung
+
+\`\`\`math
+\Lambda_\Gamma(h)
+=
+\frac{1}{2\pi}\,
+\tau_\infty\!\left(
+\gamma_\infty(-H_\infty)\,h(-H_\infty)
+\right)
+\`\`\`
+
+ist mathematisch korrekt. Sie ist jedoch noch **keine Herleitung des Gammafaktors aus einer neuen Geometrie**. Unter der Mellintransformation ist $-H_\infty$ gerade Multiplikation mit $t$; damit wird die Digammafunktion $\gamma_\infty(t)$ per Funktionalkalkül eingesetzt und anschließend integriert.
+
+Auch der unitäre Quotient
+
+\`\`\`math
+S_\infty(t)
+=
+\frac{\Gamma_{\mathbb R}(1/2-it)}
+     {\Gamma_{\mathbb R}(1/2+it)}
+\`\`\`
+
+und seine logarithmische Ableitung sind direkte Umformulierungen des bekannten archimedischen Faktors der Funktionalgleichung. Ein unabhängiges Operatorpaar $(H_0,H_1)$, dessen tatsächliche Streumatrix $S_\infty$ erzwingt, ist an dieser Stelle nicht konstruiert.
+
+Beim Audit wurde zusätzlich ein Vorzeichenfehler in der Interpretation korrigiert: Die im Projekt verwendete algebraische Größe
+
+\`\`\`math
+Q_\infty
+=
+i\,\mathscr S_\infty^*\,\partial_t\mathscr S_\infty
+=
+M_{\gamma_\infty^{\rm sym}}
+\`\`\`
+
+ist das Negative des üblichen Wigner-Smith/Eisenbud-Wigner-Zeitverzögerungsoperators $-i\mathscr S_\infty^*\partial_t\mathscr S_\infty$. Die algebraische Gamma-Identität und die späteren Spurformeln bleiben davon unberührt.
+
+### 9.2 Der schwache endlich-archimedische Anschluss
+
+Die frühe Konstruktion
+
+\`\`\`math
+\Lambda_{\mathbb A}^{\rm weak}
+=
+\Lambda_{\rm fin}
++
+\Lambda_\Gamma
+\`\`\`
+
+ist eine direkte Summe zweier bereits getrennter Funktionale. Sie ist typisierbar, enthält aber ausdrücklich
+
+- keine Kreuzterme,
+- keine adelische Wechselwirkung,
+- keine gemeinsame positive Geometrie.
+
+Sie ist daher Buchhaltung, noch keine eigentliche Kopplung.
+
+Beim Audit wurden zwei frühe Typbehauptungen in NEU-220g korrigiert: Nullschnitt-Restriktionen eines allgemeinen Schwartz-Bruhat-Elements sind als Restriktionen kanonisch definiert und nicht auf reine Tensoren beschränkt. Sie sind allerdings keine Tensorfaktor-Projektionen und rekonstruieren das ursprüngliche adelische Element nicht. Außerdem ist Punktauswertung auf dem additiven Schwartzraum $\mathcal S(\mathbb R)$ stetig; der eigentliche Augmentationsengpass betrifft Typ, Kanonizität und Kompatibilität.
+
+### 9.3 Erste echte projektinterne adelische Konstruktion
+
+Eine erste klar definierte eigene Konstruktion erscheint später mit dem adelischen Amplitudenraum
+
+\`\`\`math
+\mathcal S_{\rm adel}^{\rm amp}
+=
+\left\{
+F\in\mathcal S(\mathbb A_\mathbb Q):
+(P_{\rm Haar}F)|_{(0,\infty)}
+\in C_c^\infty((0,\infty);\mathbb C)
+\right\}
+\`\`\`
+
+und dem Port
+
+\`\`\`math
+R_{\rm PW}F(u)
+=
+e^{u/2}(P_{\rm Haar}F)(e^u).
+\`\`\`
+
+Die Wohldefiniertheit lässt sich direkt prüfen. Noch wichtiger: Der Port ist tatsächlich surjektiv auf
+
+\`\`\`math
+\mathcal A_{\rm PW}=C_c^\infty(\mathbb R;\mathbb C).
+\`\`\`
+
+Für beliebiges $a\in\mathcal A_{\rm PW}$ liefert
+
+\`\`\`math
+h_a(x)=
+\begin{cases}
+x^{-1/2}a(\log x), & x>0,\\
+0, & x\le0,
+\end{cases}
+\qquad
+E(a):=h_a\otimes\mathbf 1_{\widehat{\mathbb Z}}
+\`\`\`
+
+einen expliziten Rechtsinversen:
+
+\`\`\`math
+R_{\rm PW}E(a)=a.
+\`\`\`
+
+Damit ist $R_{\rm PW}$ sogar eine **gesplittete Surjektion**.
+
+### 9.4 Konsequenz für die „adelisch transportierte“ Weil-Form
+
+NEU-252 definiert
+
+\`\`\`math
+B_W^{\rm adel}(F,G)
+:=
+B_W(R_{\rm PW}F,R_{\rm PW}G).
+\`\`\`
+
+Diese Definition ist mathematisch korrekt. Sie erzeugt jedoch keine neue positive Form, sondern ist exakt der Pullback der bereits bekannten Weil-Form.
+
+Aus der Surjektivität von $R_{\rm PW}$ folgt sofort:
+
+\`\`\`math
+B_W^{\rm adel}(F,F)\ge0\ \ \forall F
+\qquad\Longleftrightarrow\qquad
+B_W(a,a)\ge0\ \ \forall a\in\mathcal A_{\rm PW}.
+\`\`\`
+
+Die rechte Seite ist nach dem Weil-Kriterium äquivalent zu RH.
+
+Außerdem verschwindet $B_W^{\rm adel}$ auf dem Kern des Ports:
+
+\`\`\`math
+F\in\ker R_{\rm PW}
+\quad\Longrightarrow\quad
+B_W^{\rm adel}(F,G)=0
+\qquad\forall G.
+\`\`\`
+
+Die dadurch entstehende adelische Form besitzt also zunächst keine zusätzliche Geometrie in den Richtungen, die vom Port vergessen werden. Nach Quotientierung durch $\ker R_{\rm PW}$ erhält man im Wesentlichen wieder die ursprüngliche Amplitudengeometrie.
+
+**Auditfolgerung:** Der adelische Amplitudenport ist eine echte, projektinterne und mathematisch korrekte Konstruktion. Er **transportiert** das Weil-Problem in einen adelischen Quellenraum, löst oder reduziert die Positivitätsfrage aber noch nicht. Die endliche adelische Komponente wird im expliziten Rechtsinversen sogar durch den festen Standardvektor $\mathbf 1_{\widehat{\mathbb Z}}$ eingefroren.
+
+### 9.5 Der nun präzise verbleibende mathematische Sprung
+
+Nach diesem Durchlauf lautet die eigentliche Objekt-X-Frage schärfer:
+
+> Gibt es auf der adelischen Quelle eine **RH-unabhängig erzeugte positive oder coercive Struktur**, die nicht bloß der Pullback der fertigen Weil-Form ist und deren Abstieg tatsächlich $B_W$ beziehungsweise seine Positivität erzwingt?
+
+Genau dort beginnt die nächste Prüfphase. Historisch entspricht dies dem Übergang zu M4 und den späteren Positivitäts-, Haar-$L^2$- und Transportkonstruktionen.
+
+
+---
+
 # II. Prüfprotokoll
 
 ## Durchlauf 1
@@ -299,6 +457,15 @@ Rückrichtung des Weil-Kriteriums geprüft. Separations-/Approximationselement b
 
 Normierung der expliziten Weil-Formel geprüft. Gamma- und Primzahlpotenzfaktoren bestätigt. Zwei mathematische Fehler entdeckt.
 
+## Durchlauf 6
+
+Übergang von der klassischen Weil-/Gamma-Seite zur ersten eigenen adelischen Konstruktion geprüft. Die semifinite Gamma-Realisierung und der lokale Faktor $S_\infty$ sind korrekte operatorische Umformulierungen bekannter Daten, aber noch keine intrinsische neue Spektralgeometrie. Der schwache endlich-archimedische Anschluss ist nur eine direkte Summe ohne Kopplung.
+
+Der spätere Port $R_{\rm PW}:\mathcal S_{\rm adel}^{\rm amp}\twoheadrightarrow\mathcal A_{\rm PW}$ ist dagegen eine echte projektinterne Konstruktion und besitzt einen expliziten Rechtsinversen. Dadurch ist die adelisch transportierte Form $B_W^{\rm adel}=R_{\rm PW}^*B_W$ jedoch lediglich ein Pullback: Ihre globale Positivität ist exakt wieder äquivalent zur Positivität von $B_W$ und damit zu RH.
+
+Zwei zusätzliche lokale Fehler in NEU-220f/g wurden über PR #177 korrigiert: Vorzeichen der Wigner-Smith-Zeitverzögerungsinterpretation sowie zwei zu starke Aussagen über adelische Restriktionen und Augmentationen.
+
+
 ## Korrekturblock – 27. September 2026
 
 Die beiden Fehler samt direkter operatorischer Folgestellen wurden über PR #176 korrigiert und in main gemergt.
@@ -311,6 +478,6 @@ Geprüfter Ausgangspunkt für die Fortsetzung:
 
 # III. Nächster Prüfpunkt
 
-Rekonstruktion des Übergangs von der klassischen Weil-Form zur ersten eigenständigen operatorisch-adelischen Objekt-X-Konstruktion:
+Prüfung des **M4-Übergangs** ab NEU-253:
 
-> Welche Teile sind klassische Mathematik, welche sind neue Konstruktion des Projekts, und an welcher ersten Stelle wird eine neue unbeweisene Annahme benötigt?
+> Wird dort erstmals eine RH-unabhängige positive Geometrie konstruiert, die mehr ist als ein Pullback der Weil-Form? Welche Positivitäts-, Abschließbarkeits- und Haar-$L^2$-Firewalls sind tatsächlich bewiesen, und an welcher Stelle beginnt die spätere Transport-/C1-Linie?
