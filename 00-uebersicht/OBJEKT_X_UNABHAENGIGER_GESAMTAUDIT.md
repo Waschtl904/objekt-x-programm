@@ -2,7 +2,7 @@
 
 **Beginn:** 24. September 2026  
 **Letzte Aktualisierung:** 27. September 2026  
-**Zuletzt integrierter Audit-Korrekturstand:** **main@6e03093b4c9cbb2c088757daeeb68df8b62af2b1**  
+**Zuletzt integrierter Audit-Korrekturstand:** **main@6fc6355c0c7f4d72cae6bd41476cc501385f94dd**  
 **Arbeitsweise:** Mathematische Aussagen werden unabhängig geprüft. Statusdateien, frühere Audits und Repository-Markierungen dienen als Wegweiser, nicht als Beweis.  
 **Ziel:** Eine verständliche, fortlaufend aktualisierte Landkarte des gesamten Objekt-X-Programms vom ursprünglichen Fragenkatalog bis zur aktuellen Forschungsfront.
 
@@ -838,6 +838,131 @@ Die historische Rolle von P02/P03 ist daher:
 ```
 
 Der spätere Defektoperator, starke Transport und die lokale C1-Positivität stammen nicht aus einem bereits in P02/P03 vorhandenen positiven Operator. Sie sind echte spätere Konstruktionen.
+---
+
+## 13. P04: korrekte finite Verdichtung, aber lokale Normalisierung ist kein globaler Transport
+
+P04 verdichtet die Suzuki-Fenster insgesamt vorsichtig: selbstadjungierte finite Operatoren, positive verschobene Hilberträume und die Paritätsreduktion werden als RH-freie finite Aussagen behandelt; der Direktgrenzraum und die Übergangskarten bleiben conjectural.
+
+### 13.1 Die lokale Arbeitsnormalisierung ist korrekt
+
+Für jedes feste $a>0$ ist
+
+```math
+\lambda_{\rm w}(a)=\lambda_a-1
+```
+
+zulässig und liefert
+
+```math
+T_a^{\rm w}
+=
+A_a-(\lambda_a-1)I
+\ge I.
+```
+
+Das ist eine saubere RH-freie Normalisierung jeder einzelnen endlichen Stufe relativ zu ihrem eigenen Spektralboden.
+
+Die Bezeichnung „canonical working normalization“ war jedoch zu stark. Die Zahl $1$ ist eine feste bequeme Wahl, nicht eine mathematisch erzwungene globale Kanonisierung.
+
+### 13.2 Der Shiftdefekt zwischen zwei Fenstern
+
+Für $0<a<b$ und Nullfortsetzung $E_{a,b}$ gilt auf dem gemeinsamen Testkern
+
+```math
+Q_W^b(E_{a,b}v,E_{a,b}v)=Q_W^a(v,v).
+```
+
+Bei beliebigen zulässigen Shifts folgt
+
+```math
+\|E_{a,b}v\|_{T_{b,\lambda(b)}}^2
+-
+\|v\|_{T_{a,\lambda(a)}}^2
+=
+(\lambda(a)-\lambda(b))\|v\|_2^2.
+```
+
+Für P04s Wahl $\lambda_{\rm w}(a)=\lambda_a-1$ wird daraus
+
+```math
+\|E_{a,b}v\|_{T_b^{\rm w}}^2
+-
+\|v\|_{T_a^{\rm w}}^2
+=
+(\lambda_a-\lambda_b)\|v\|_2^2.
+```
+
+Der gemeinsame Abstand $1$ vom jeweiligen lokalen Spektralboden normalisiert die Stufen also einzeln, macht die natürliche Nullfortsetzung aber im Allgemeinen **nicht isometrisch**.
+
+### 13.3 Ein gemeinsamer Shift wäre bereits RH
+
+Ein endlicher Shift $\lambda_*$ mit
+
+```math
+\lambda_*<\lambda_a
+\qquad\forall a>0
+```
+
+würde für jede kompakt getragene Testfunktion eine globale Haar-$L^2$-Untergrenze liefern. Nach P03/NEU-257 ist genau diese globale Semibeschränktheit RH-äquivalent.
+
+Umgekehrt erlaubt RH wegen $\lambda_a\ge0$ für alle $a$ jeden festen negativen Shift. Daher:
+
+```math
+\exists\lambda_*\in\mathbb R:
+\ \lambda_*<\lambda_a\ \forall a
+\quad\Longleftrightarrow\quad
+\mathrm{RH}.
+```
+
+Diese Firewall schließt nur den offensichtlichen gemeinsamen-Shift-/Nullfortsetzungsweg aus. Sie schließt **nicht** eine andere RH-freie Familie nichttrivialer Transporte $J_{a,b}$ aus. Deren Beschränktheit oder Isometrie, Cocycle-Eigenschaft und Operatorintertwining wären aber echte neue Sätze.
+
+### 13.4 Die Parität reduziert, selektiert aber nicht
+
+P04s Paritätssatz trägt:
+
+```math
+U(1)
+\longrightarrow
+\{+P,-P\}
+\cong
+\mathbb Z_2.
+```
+
+Die frühere Formulierung $\theta_{\rm can}(a)\in\{0,\pi\}$ konnte jedoch eine Kanonisierung suggerieren, die nicht bewiesen ist. Korrekt sind zwei **paritätsstabile** Zweige.
+
+`NEU-260b.1` zeigt, dass Stetigkeit eine bereits getroffene Vorzeichenwahl nur propagieren könnte. `NEU-260b.2` schließt den falschen Zweig lediglich konditional auf Suzukis conjecturalen Grenzmechanismus asymptotisch aus. Eine unabhängige RH-freie Phasenselektion liegt damit weiterhin nicht vor.
+
+### 13.5 P04 behauptet den globalen Raum nicht als Satz
+
+Positiv ist, dass P04 den entscheidenden globalen Schritt bereits ausdrücklich als offen formuliert:
+
+- $J_{a,b}$ sind nicht konstruiert;
+- der induktive Grenzraum $\mathcal K_X$ ist eine Hypothese;
+- die Suzuki-Grenzrelation ist eine Vermutung;
+- die $\phi$-Normalisierung bleibt offen.
+
+Im aktuellen Repository existieren zudem keine ausgearbeiteten Dateien `NEU-260c` oder `NEU-260d`; sie waren historische geplante Folgeknoten.
+
+Der Audit hat daher nicht P04s Grundarchitektur widerlegt, sondern seine **lokal/global-Grenze geschärft**.
+
+### 13.6 Typkorrektur
+
+Eine kleine Typpräzisierung wurde ebenfalls vorgenommen: Die Defizitindizes $(1,1)$ gehören zum zugrunde liegenden minimalen symmetrischen Operator $\mathscr D_a$. Die Operatoren $\overline{\mathscr D}_{a,\theta}$ sind dessen selbstadjungierte Erweiterungen und haben als solche keine nichttrivialen Defizitindizes mehr.
+
+### 13.7 Bilanz
+
+P04 ist nach Korrektur eine saubere finite Schnittstelle:
+
+```math
+\text{RH-freie finite selbstadjungierte Geometrie}
+\quad+\quad
+\text{lokale positive Shiftmetrik}
+\quad+\quad
+\text{offene globale Transportdaten}.
+```
+
+Es enthält noch keinen global kompatiblen Objekt-X-Raum. Genau die fehlenden $J_{a,b}$ markieren rückblickend den Punkt, an dem die spätere starke Transport- und C1-Linie tatsächlich neue Mathematik hinzufügen musste.
 
 ---
 
@@ -902,6 +1027,16 @@ Beim Re-Audit wurde P02s finite Projektion von der falschen Integration über ga
 
 Der spätere P11/C1-Kern verwendet P02/P03 vor allem als Schnittstelle beziehungsweise Firewall. Die konkrete source-first finite-window Geometrie mit Martingalprojektionen, Gamma-Graphen und Feshbach-Korrekturen ist eine spätere neue Konstruktion; die globale adelische Anbindung bleibt in P11 selbst als offene Verpflichtung stehen.
 
+## Durchlauf 10
+
+P04 vollständig gegen die finite Suzuki- und Uniform-Shift-Firewall geprüft. Die lokale Wahl $\lambda_{\rm w}(a)=\lambda_a-1$ ist RH-frei und liefert $T_a^{\rm w}\ge I$, kanonisiert aber nur die einzelne Stufe.
+
+Für Nullfortsetzung zwischen zwei Fenstern wurde der exakte Shiftdefekt eingetragen. Ein gemeinsamer Shift, der alle Stufen isometrisch kompatibel machen würde, ist RH-äquivalent. Alternative nichttriviale Transporte $J_{a,b}$ bleiben logisch möglich, müssen aber eigenständig konstruiert werden.
+
+Die Paritätsreduktion $U(1)\to\mathbb Z_2$ trägt, selektiert jedoch keinen eindeutigen Zweig. `NEU-260b.2` liefert nur eine konditionale asymptotische Auswahl unter Suzukis Grenzvermutung. Defizitindizes wurden korrekt dem minimalen symmetrischen Operator zugeordnet.
+
+P04 behauptet weder $J_{a,b}$ noch den induktiven Grenzraum als Satz; der globale Teil war bereits conjectural. PR #181 schärft diese lokal/global-Grenze und synchronisiert P04 mit den aktuellen NEU-Audits.
+
 ## Korrekturblock – 27. September 2026
 
 Die beiden Fehler samt direkter operatorischer Folgestellen wurden über PR #176 korrigiert und in main gemergt.
@@ -914,8 +1049,8 @@ Geprüfter Ausgangspunkt für die Fortsetzung:
 
 # III. Nächster Prüfpunkt
 
-Als nächstes **P04 – Finite Weil Geometry and the Objekt-X Interface** vollständig gegen Durchlauf 8 prüfen:
+Nun die Papers **P05 bis P10** als verdichtete Zwischenphase prüfen, möglichst in wenigen Durchläufen:
 
-> Ist P04 lediglich eine korrekte Verdichtung der RH-freien Suzuki-Fenster, oder behauptet das Paper an irgendeiner Stelle mehr globale Kanonizität, Shift-Kompatibilität oder Übergangsgeometrie, als die neue Uniform-Shift-Firewall erlaubt?
+> Welche dieser Papers enthalten heute noch eigenständige tragfähige Mathematik, welche sind hauptsächlich historische Suchpfade oder No-Go-Ergebnisse, und welche konkrete Struktur wird später tatsächlich von P11/C1 weiterverwendet?
 
-Danach kann der Audit durch P05–P10 weiterlaufen, bevor wir P11/P12 erneut aus der nun unabhängig rekonstruierten Vorgeschichte heraus lesen.
+Der Audit soll dabei nicht wieder jedes Detail der NEU-Knoten duplizieren, sondern pro Paper nur Satzkern, Positivitätsquelle, offene Firewall und Weiterverwendung herausarbeiten.
