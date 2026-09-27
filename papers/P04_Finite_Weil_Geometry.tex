@@ -11,9 +11,9 @@
 \newtheorem{remark}[theorem]{Remark}
 
 \title{P04 --- Finite Weil Geometry and the Objekt-X Interface\\
-\normalsize SYN-Audit: 2026-08-08}
+\normalsize SYN-Re-Audit: 2026-09-27 (Patch~1 --- global-shift firewall)}
 \author{Objekt-X-Programm}
-\date{2026-08-08 (in Arbeit)}
+\date{2026-08-08; re-audit 2026-09-27}
 
 \begin{document}
 \maketitle
@@ -27,14 +27,16 @@ parametrised by $\theta\in U(1)$.
 
 Main results (RH-free, unconditional):
 \begin{enumerate}
-\item Canonical working normalization:
+\item Fixed local working normalization:
   $\lambda_{\mathrm{w}}(a):=\lambda_a-1$, $T_a^{\mathrm{w}}\ge I$
-  (any $c>0$ works; $c=1$ is our fixed choice).
+  (any $c>0$ works; $c=1$ is our fixed choice). This fixes each finite stage
+  but does not canonise transports between different intervals.
 \item Gauge freedom: $\theta\mapsto\theta+\beta-\alpha$;
   intrinsic datum is $U_a:\mathcal{N}_{+,a}\to\mathcal{N}_{-,a}$.
 \item \textbf{Parity reduces $U(1)$ to $\mathbb{Z}_2$}:
   Suzuki's $PA_a=A_aP$ implies $Pv_+=v_-$, so
-  $U_a\in\{+P,-P\}$, i.e.\ $\theta_{\mathrm{can}}(a)\in\{0,\pi\}$.
+  $U_a\in\{+P,-P\}$, i.e.\ the parity-stable coordinates are
+  $\theta(a)\in\{0,\pi\}$. Parity does not select one branch uniquely.
 \end{enumerate}
 
 Open (Objekt-X interface):
@@ -57,17 +59,77 @@ For every $a>0$, unconditionally:
 \end{enumerate}
 \end{theorem}
 
-\section{Canonical working normalization (RH-free)}
+\section{Fixed local working normalization (RH-free)}
 
 \begin{proposition}[$\lambda=0$ is RH-conditional; fixed normalization, NEU-260a $\checkmark$]
 For any $c>0$, $\lambda_{a,c}:=\lambda_a-c$ gives $T_{a,c}\ge cI>0$
-unconditionally. We fix $c=1$ as canonical working normalization:
+unconditionally. We fix $c=1$ as a working normalization at each finite stage:
 \[
   \lambda_{\mathrm{w}}(a) := \lambda_a-1, \qquad T_a^{\mathrm{w}} \ge I.
 \]
-This is a convenient choice, not the mathematically unique one.
-$\lambda=0$ requires RH and is not used as a canonical convention.
+This is a convenient local choice, not a mathematically unique or globally
+transport-compatible one. The choice $\lambda=0$ requires RH and is not used
+as an RH-free convention.
 \end{proposition}
+
+\section{Global shift firewall: local gauge does not canonise transport}
+
+For $0<a<b$, let $E_{a,b}$ denote zero extension from $(-a,a)$ to $(-b,b)$.
+On the common test core the localised Weil forms are compatible:
+\[
+  Q_W^b(E_{a,b}v,E_{a,b}v)=Q_W^a(v,v).
+\]
+
+\begin{proposition}[Shift defect under zero extension]\label{prop:shift-defect}
+For any admissible shifts $\lambda(a)<\lambda_a$ and $\lambda(b)<\lambda_b$,
+\[
+  \boxed{
+  \|E_{a,b}v\|_{T_{b,\lambda(b)}}^2
+  -
+  \|v\|_{T_{a,\lambda(a)}}^2
+  =
+  \bigl(\lambda(a)-\lambda(b)\bigr)\|v\|_2^2.}
+\]
+Thus zero extension is isometric in the shifted Hilbert norms only when the
+same shift is used at the two stages.
+\end{proposition}
+
+For $\lambda_{\mathrm w}(a)=\lambda_a-1$ this becomes
+\[
+  \boxed{
+  \|E_{a,b}v\|_{T_b^{\mathrm w}}^2
+  -
+  \|v\|_{T_a^{\mathrm w}}^2
+  =
+  (\lambda_a-\lambda_b)\|v\|_2^2.}
+\]
+Hence the common distance~$1$ above the local spectral bottom normalises each
+finite stage separately, but does not produce an isometric directed system.
+
+\begin{proposition}[Uniform-shift firewall]\label{prop:uniform-shift}
+The following are equivalent:
+\begin{enumerate}
+\item there exists a finite $\lambda_*$ with $\lambda_*<\lambda_a$ for every $a>0$;
+\item the finite Weil forms admit one common Haar-$L^2$ lower bound on all compactly supported test functions;
+\item RH holds.
+\end{enumerate}
+\begin{proof}
+If (1) holds and $v$ is supported in $(-a,a)$, then
+$Q_W^a(v,v)\ge\lambda_a\|v\|_2^2>\lambda_*\|v\|_2^2$.
+Since $Q_W^a=B_W$ on that test function, this is global Haar-$L^2$
+semiboundedness. By P03/NEU-257, that is equivalent to RH.
+Conversely, RH gives $Q_W^a\ge0$ and hence $\lambda_a\ge0$ for every $a$,
+so any fixed $\lambda_*<0$ works.
+\end{proof}
+\end{proposition}
+
+\begin{remark}[Scope of the firewall]
+This excludes the obvious globally isometric zero-extension system obtained
+from one common shift unless RH is already true. It does not exclude a
+nontrivial RH-free family of transition maps $J_{a,b}$ with stage-dependent
+shifts. Proving boundedness or isometry, a cocycle law and operator
+compatibility for such maps is therefore genuine additional mathematics.
+\end{remark}
 
 \section{Gauge freedom and intrinsic datum $U_a$}
 
@@ -120,21 +182,27 @@ $-P$ corresponds to $\theta=\pi$.
 \section{Open problems (Objekt-X interface)}
 
 \begin{enumerate}
-\item \textbf{$\mathbb{Z}_2$-selection} (NEU-260b.1, $?[O]$): Does
-  continuity in $a$ force $\varepsilon(a)=\mathrm{const}$? Does
-  BC/KMS time-arrow or Frobenius orientation select
-  $\varepsilon(a)=+1$?
-\item \textbf{Boundary normalization} $\phi(a,z)$ (NEU-260c, $?[O]$):
-  arithmetic determination; Suzuki notes $\phi\equiv 0$ may suffice.
-\item \textbf{Transition maps} $J_{a,b}$ (NEU-260d, $?[O]$):
-  canonical construction with intertwining
-  $J_{a,b}\overline{\mathscr{D}}_{a,\theta(a)}\subset
-  \overline{\mathscr{D}}_{b,\theta(b)}J_{a,b}$.
+\item \textbf{$\mathbb{Z}_2$-selection.}
+  NEU-260b.1 shows that continuity can only propagate a prior choice; it
+  cannot distinguish $+P$ from $-P$. NEU-260b.2 proves conditionally that
+  Suzuki's conjectural limit relation excludes the $-P$ branch asymptotically.
+  This does not provide an independent RH-free selector.
+\item \textbf{Boundary normalization} $\phi(a,z)$ ($?[O]$):
+  arithmetic determination remains open. The historically planned node
+  ``NEU-260c'' is not a completed file on current main.
+\item \textbf{Transition maps} $J_{a,b}$ ($?[O]$):
+  construct maps between the stage-dependent Hilbert norms, prove boundedness
+  or isometry, the cocycle law, and intertwining
+  \[
+    J_{a,b}\overline{\mathscr{D}}_{a,\theta(a)}\subset
+    \overline{\mathscr{D}}_{b,\theta(b)}J_{a,b}.
+  \]
+  The historically planned node ``NEU-260d'' is likewise not a completed file
+  on current main.
 \end{enumerate}
+\section{Objekt-X candidate schema}
 
-\section{Objekt-X hypothesis}
-
-\begin{definition}[Objekt X, $?[O]$]
+\begin{definition}[Candidate schema, not yet constructed, $?[O]$]
 \[
   \text{Objekt X} := \left\{\mathcal{H}(T_a^{\mathrm{w}}),\;
   J_{a,b},\; \overline{\mathscr{D}}_{a,\theta(a)}\right\}_{0<a<b}.
@@ -155,21 +223,27 @@ The inductive limit
   \xrightarrow{\mathrm{RH}} \mathcal{H}_W \cong \ell^2(\Gamma,m_\gamma)
 \]
 exists and is isomorphic to the Weil Hilbert space.
-This is an open conjecture; $J_{a,b}$ are not yet constructed.
+This is an open conjecture; $J_{a,b}$ are not yet constructed and the local
+working normalization does not supply them automatically.
 \end{conjecture}
 
 \section{Audit status}
 
-SYN-Audit: 2026-08-08. Corrections from draft:
-(a) Deficiency spaces corrected: $\mathcal{N}_{\pm}=\operatorname{span}\{v_\pm\}$,
-  $T_av_\pm=e^{\pm x}$ (not $\operatorname{span}\{e^{\pm x}\}$);
-(b) Parity $P$ is linear (not antilinear); reflection symmetry
-  conjecture replaced by the parity theorem;
-(c) Main result: $U(1)\to\mathbb{Z}_2$, not $\theta_{\mathrm{can}}=0$;
-(d) $\lambda_{\mathrm{w}}(a)=\lambda_a-1$ marked as canonical
-  working normalization, not mathematically unique;
-(e) Inductive limit $\mathcal{K}_X$ marked as open conjecture.
-Source nodes: NEU-259 (Patch 2), NEU-260a (Patch 2),
-NEU-260b (Patch), NEU-260b.1 (active/).
+SYN-Re-Audit: 2026-09-27. Earlier corrections from the 2026-08-08 draft
+remain in force:
+(a) deficiency spaces corrected to $\mathcal{N}_{\pm}=\operatorname{span}\{v_\pm\}$;
+(b) parity $P$ is linear and the reflection statement is a theorem;
+(c) parity reduces $U(1)$ to $\mathbb Z_2$ but does not select a unique branch;
+(d) $\lambda_{\mathrm w}(a)=\lambda_a-1$ is only a fixed local working normalization;
+(e) the inductive limit $\mathcal K_X$ is conjectural.
 
+Post-audit Patch~1 adds:
+(f) the exact shift-defect formula under zero extension;
+(g) the uniform-shift firewall, showing that one common isometric shift across all intervals is RH-equivalent;
+(h) synchronization with NEU-260b.1/b.2: continuity is propagation only, while asymptotic $+P$ selection is conditional on the conjectural Suzuki limit;
+(i) ``NEU-260c'' and ``NEU-260d'' are historical planned nodes, not completed files on current main.
+
+Source nodes: NEU-259 (Patch 3), NEU-260a (Patch 3), NEU-260b,
+NEU-260b.1, NEU-260b.2; P03/NEU-257 for the global Haar-$L^2$
+semiboundedness firewall.
 \end{document}
