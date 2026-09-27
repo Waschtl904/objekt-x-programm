@@ -10,9 +10,9 @@
 \newtheorem{remark}[theorem]{Remark}
 
 \title{P02 --- Adelic Weil Amplitude Port and Complete Hermitian Weil Form\\
-\normalsize SYN-Re-Audit: 2026-08-08 (Patch~3.5 --- FROZEN $\checkmark[K/M]$)}
+\normalsize SYN-Re-Audit: 2026-09-27 (Patch~3.6 --- post-freeze correction $\checkmark[K/M]$)}
 \author{Objekt-X-Programm}
-\date{2026-08-08}
+\date{2026-08-08; post-freeze audit 2026-09-27}
 
 \begin{document}
 \maketitle
@@ -37,6 +37,14 @@ All results are RH-free.\\
 \textbf{Patch 3.5 (2026-08-08, FROZEN):}
 $C_{b,a}$-proof rewritten cleanly;
 ``$h_{a,b}\notin\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}$'' qualified to ``in general''.
+
+\textbf{Patch 3.6 (2026-09-27, post-freeze audit):}
+The finite-adelic port is corrected to the canonical vacuum pairing with
+$\mathbf{1}_{\widehat{\mathbb Z}}$ (equivalently integration over
+$\widehat{\mathbb Z}$), matching NEU-250o/255 and the later Haar-$L^2$
+coisometry. A harmless sign slip in the pole-term conjugation proof is corrected.
+Finally, the surjective-pullback firewall is stated explicitly: pulling $B_W$
+back through $R_{\mathrm{PW}}$ creates no new positivity.
 \end{abstract}
 
 % ---------------------------------------------------------------
@@ -64,16 +72,20 @@ No global absorption convention is used.
 \section{Adelic Amplitude Space (exact definition, NEU-250r)}
 % ---------------------------------------------------------------
 
-\begin{definition}[Haar projection, explicit]\label{def:haar}
+\begin{definition}[Finite-vacuum Haar projection, explicit]\label{def:haar}
 For $F\in\mathcal{S}(\mathbb{A}_{\mathbb{Q}})$:
 \[
   \boxed{
   (P_{\mathrm{Haar}}F)(x)
-  := \int_{\mathbb{A}_{\mathbb{Q},f}} F(x,y)\,dy,
-  \qquad x\in\mathbb{R},}
+  := \int_{\widehat{\mathbb Z}} F(x,y)\,dy
+  = \int_{\mathbb A_{\mathbb Q,f}}
+      F(x,y)\,\mathbf 1_{\widehat{\mathbb Z}}(y)\,dy,
+  \qquad x\in\mathbb{R}.}
 \]
-where $y$ is integrated over the finite adeles against Haar measure
-normalised by $\operatorname{vol}(\widehat{\mathbb{Z}})=1$.
+The finite Haar measure is normalised by
+$\operatorname{vol}(\widehat{\mathbb Z})=1$.
+Thus $P_{\mathrm{Haar}}$ is the Schwartz--Bruhat test-function version of the
+finite-vacuum pairing used in the later Haar-$L^2$ port.
 \end{definition}
 
 \begin{definition}[Adelic amplitude space, NEU-250r $\checkmark$]
@@ -283,11 +295,10 @@ Each component satisfies $B_\bullet(b,a)=\overline{B_\bullet(a,b)}$.
 \begin{proof}
 \textit{Pole term.}
 From Definition~\ref{def:hab}, $h_{b,a}(z)=\overline{h_{a,b}(-\bar{z})}$.
-At $z=i/2$: $\bar{z}=-i/2$, so
-$h_{b,a}(i/2)=\overline{h_{a,b}(-i/2)}=\overline{h_{a,b}(i/2)}$
-(using evenness $h_{a,b}(-i/2)=h_{a,b}(i/2)$).
-At $z=-i/2$: $\bar{z}=i/2$, so
-$h_{b,a}(-i/2)=\overline{h_{a,b}(i/2)}=\overline{h_{a,b}(-i/2)}$.
+At $z=i/2$: $\bar z=-i/2$, hence $-\bar z=i/2$ and
+$h_{b,a}(i/2)=\overline{h_{a,b}(i/2)}$.
+At $z=-i/2$: $\bar z=i/2$, hence $-\bar z=-i/2$ and
+$h_{b,a}(-i/2)=\overline{h_{a,b}(-i/2)}$.
 Hence
 $B_{\mathrm{pole}}(b,a)=h_{b,a}(i/2)+h_{b,a}(-i/2)
 =\overline{h_{a,b}(i/2)}+\overline{h_{a,b}(-i/2)}
@@ -370,10 +381,11 @@ Semiboundedness is RH-conditional (P03). $\square$
   $\checkmark[K/M]$]\label{thm:lit-id}
 $B_{W,\mathrm{NEU}\text{-}252} = B_{W,\mathrm{Lit}}$
 (Weil 1952, Bombieri 2000, Suzuki 2011/2025).
-All five components matched: Fourier convention,
+All normalisation blocks match: Fourier convention,
+the pole contribution $h_{a,b}(i/2)+h_{a,b}(-i/2)$,
 $\gamma_\infty$ (including $\frac{1}{2}$-factor),
 $\Lambda_\Gamma$ (including $\frac{1}{2\pi}$),
-$B_\Gamma$ diagonal (factor $\frac{1}{\pi}$),
+the diagonal Gamma block (factor $\frac{1}{\pi}$), and
 $B_{\mathrm{fin}}$ (evenness of $g_{a,b}$).
 \end{theorem}
 
@@ -392,13 +404,61 @@ $B_{\mathrm{fin}}$ (evenness of $g_{a,b}$).
 \]
 
 % ---------------------------------------------------------------
+\section{Surjective Pullback Firewall}
+% ---------------------------------------------------------------
+
+\begin{definition}[Adelic pullback form]\label{def:bwadel}
+For $F,G\in\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$ set
+\[
+  B_W^{\mathrm{adel}}(F,G)
+  := B_W(R_{\mathrm{PW}}F,R_{\mathrm{PW}}G).
+\]
+\end{definition}
+
+\begin{proposition}[Pullback firewall]\label{prop:pullback-firewall}
+The form $B_W^{\mathrm{adel}}$ is Hermitian sesquilinear and satisfies:
+\begin{enumerate}
+\item $\ker R_{\mathrm{PW}}\subset\operatorname{Rad}(B_W^{\mathrm{adel}})$;
+\item the induced map
+\[
+  \mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}/\ker R_{\mathrm{PW}}
+  \longrightarrow \mathcal{A}_{\mathrm{PW}}
+\]
+is a vector-space isomorphism;
+\item
+\[
+  B_W^{\mathrm{adel}}(F,F)\ge0\ \forall F
+  \quad\Longleftrightarrow\quad
+  B_W(a,a)\ge0\ \forall a\in\mathcal{A}_{\mathrm{PW}}.
+\]
+\end{enumerate}
+\begin{proof}
+Hermitian sesquilinearity is preserved by pullback. If
+$F\in\ker R_{\mathrm{PW}}$, then
+$B_W^{\mathrm{adel}}(F,G)=B_W(0,R_{\mathrm{PW}}G)=0$ for every $G$.
+Surjectivity of $R_{\mathrm{PW}}$ gives the quotient isomorphism.
+The forward implication in (3) follows by applying positivity to the explicit
+section $S_{\mathrm{PW}}a:=F_a$ from Proposition~\ref{prop:rpw-surjective};
+the reverse implication is immediate from the definition.
+\end{proof}
+\end{proposition}
+
+\begin{remark}[No new positivity from the port]
+Proposition~\ref{prop:pullback-firewall} is a structural limitation, not a
+negative statement about the usefulness of the adelic source. The port is a
+genuine RH-free construction, but it transports the complete Weil form without
+strengthening its sign. By the classical Weil criterion, global positivity of
+either $B_W$ or its adelic pullback is exactly the RH positivity problem.
+\end{remark}
+
+% ---------------------------------------------------------------
 \section{Audit Status}
 % ---------------------------------------------------------------
 
-\textbf{FROZEN $\checkmark[K/M]$: 2026-08-08 (Patch~3.5).}
+\textbf{Post-freeze correction $\checkmark[K/M]$: 2026-09-27 (Patch~3.6).}
 
 \medskip
-\noindent All patches from draft to Patch~3.5:
+\noindent All patches from draft to Patch~3.6:
 \begin{enumerate}
 \item[(a)] $\mathcal{S}_{\mathrm{adel}}^{\mathrm{amp}}$: exact NEU-250r definition.
 \item[(b)] $R_{\mathrm{PW}}$: exact formula; surjectivity with explicit right inverse.
@@ -424,6 +484,11 @@ $B_{\mathrm{fin}}$ (evenness of $g_{a,b}$).
 \item[(p)] $g_{a,b}$ proofs and counterexample fully in document (Patch~3.3).
 \item[(q)] Canonical compression: $\mathcal{G}_{\mathrm{ev}}^{\mathbb{C}}
   \to\mathcal{H}_{\mathrm{PW}}^{\mathbb{C}}$ (Patch~3.3).
+\item[(r)] $P_{\mathrm{Haar}}$ corrected to the finite-vacuum pairing
+  with $\mathbf{1}_{\widehat{\mathbb Z}}$, matching NEU-250o/255 (Patch~3.6).
+\item[(s)] Pole-term conjugation signs corrected at $z=\pm i/2$ (Patch~3.6).
+\item[(t)] Surjective-pullback firewall added:
+  $B_W^{\mathrm{adel}}\ge0\Longleftrightarrow B_W\ge0$ (Patch~3.6).
 \end{enumerate}
 
 \medskip
