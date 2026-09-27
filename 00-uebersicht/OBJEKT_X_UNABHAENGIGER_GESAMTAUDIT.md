@@ -2,7 +2,7 @@
 
 **Beginn:** 24. September 2026  
 **Letzte Aktualisierung:** 27. September 2026  
-**Zuletzt integrierter Audit-Korrekturstand:** **main@684cf4bec7355e071e7c6f4ac1adde7ce54fee48**  
+**Zuletzt integrierter Audit-Korrekturstand:** **main@6e03093b4c9cbb2c088757daeeb68df8b62af2b1**  
 **Arbeitsweise:** Mathematische Aussagen werden unabhängig geprüft. Statusdateien, frühere Audits und Repository-Markierungen dienen als Wegweiser, nicht als Beweis.  
 **Ziel:** Eine verständliche, fortlaufend aktualisierte Landkarte des gesamten Objekt-X-Programms vom ursprünglichen Fragenkatalog bis zur aktuellen Forschungsfront.
 
@@ -679,6 +679,165 @@ Was fehlt, ist genau das, was für Objekt X entscheidend wäre:
 - kein bewiesener Grenzübergang von den reellen finiten Spektren zu den Zeta-Ordinaten.
 
 Der Ansatz approximiert daher **nicht einfach nur den unter RH bekannten atomaren Raum**, ist aber auch noch keine RH-freie positive Objekt-X-Geometrie. Er komprimiert die globale Schwierigkeit sehr präzise in die Übergangs- und Grenzwertfrage.
+---
+
+## 12. P02/P03: Schnittstelle und Firewall, noch keine positive Objekt-X-Geometrie
+
+Die ersten verdichteten Papers P02 und P03 übernehmen die NEU-Ergebnisse insgesamt wesentlich sauberer als die historischen Zwischenknoten. Nach dem unabhängigen Re-Audit bleibt aber eine klare Rollenverteilung:
+
+- **P02** konstruiert eine echte adelische Testdaten-Schnittstelle und die vollständige hermitesche Weil-Form.
+- **P03** beweist einen strukturellen No-Go für den naheliegenden Haar-$L^2$-Abschluss.
+- Keines der beiden Papers erzeugt eine neue RH-unabhängige Positivität der vollständigen Weil-Form.
+
+### 12.1 Was P02 wirklich konstruiert
+
+Der kanonische finite-vacuum Port verwendet den Standardvektor $\mathbf 1_{\widehat{\mathbb Z}}$:
+
+```math
+(P_{\rm Haar}F)(x)
+=
+\int_{\widehat{\mathbb Z}}F(x,y)\,dy
+=
+\int_{\mathbb A_f}F(x,y)\mathbf 1_{\widehat{\mathbb Z}}(y)\,dy.
+```
+
+Darauf baut der Amplitudenport
+
+```math
+R_{\rm PW}F(u)
+=
+e^{u/2}(P_{\rm Haar}F)(e^u)
+```
+
+auf. Er ist surjektiv auf
+
+```math
+\mathcal A_{\rm PW}=C_c^\infty(\mathbb R;\mathbb C)
+```
+
+und besitzt den expliziten Rechtsinversen
+
+```math
+S_{\rm PW}a
+=
+h_a\otimes\mathbf 1_{\widehat{\mathbb Z}},
+\qquad
+h_a(x)=x^{-1/2}a(\log x)\ \ (x>0).
+```
+
+Diese Konstruktion ist eigenständig, RH-frei und nicht bloß Notation.
+
+### 12.2 Die RH-freie Positivität in P02 ist nur Autokorrelationspositivität
+
+Für $a\in\mathcal A_{\rm PW}$ entsteht durch Evenisierung der Autokorrelation ein Testkern mit
+
+```math
+h_{a,a}(t)
+=
+\frac12\bigl(|\hat a(t)|^2+|\hat a(-t)|^2\bigr)
+\ge0.
+```
+
+Das ist eine echte positive Fourier-/Gramstruktur. Sie ist jedoch **nicht** die Positivität der arithmetischen Weil-Form. Die vollständige Form wird anschließend komponentenweise als
+
+```math
+B_W
+=
+B_{\rm pole}+B_\Gamma+B_{\rm fin}
+```
+
+eingesetzt und mit der Literatur-Weil-Form identifiziert. Der Primzahlpotenzblock besitzt kein eigenes positives Vorzeichen; gerade seine Wechselwirkung mit den übrigen Blöcken enthält den RH-Inhalt.
+
+Entfernt man aus P02 alle Definitionen, die bereits $B_W$ enthalten, bleiben damit als positive RH-freie Struktur im Wesentlichen der Standard-Haarvektor, der surjektive Port und die gewöhnliche Autokorrelations-/Fourierpositivität. Es bleibt **kein positiver arithmetischer Operator**, dessen Abstieg $B_W\ge0$ erzwingen würde.
+
+### 12.3 Surjektivität verhindert einen Positivitätsgewinn durch Pullback
+
+Definiert man auf der adelischen Quelle
+
+```math
+B_W^{\rm adel}(F,G)
+:=
+B_W(R_{\rm PW}F,R_{\rm PW}G),
+```
+
+dann gilt wegen der Surjektivität
+
+```math
+B_W^{\rm adel}(F,F)\ge0\ \ \forall F
+\quad\Longleftrightarrow\quad
+B_W(a,a)\ge0\ \ \forall a\in\mathcal A_{\rm PW}.
+```
+
+Außerdem
+
+```math
+\ker R_{\rm PW}
+\subset
+\mathrm{Rad}(B_W^{\rm adel}),
+```
+
+und
+
+```math
+\mathcal S_{\rm adel}^{\rm amp}/\ker R_{\rm PW}
+\cong
+\mathcal A_{\rm PW}.
+```
+
+Die adelische Pullback-Geometrie reproduziert also exakt die ursprüngliche Amplitudengeometrie. Dies wurde im post-freeze Patch P02~3.6 ausdrücklich als **Pullback-Firewall** aufgenommen.
+
+### 12.4 P03 ist ein No-Go-Paper, kein Positivitätspapier
+
+P03 bestätigt und verdichtet die M4-Firewall:
+
+```math
+\exists\lambda\ge0:
+\quad
+B_W(a,a)\ge-\lambda\|a\|_2^2\ \forall a
+\quad\Longleftrightarrow\quad
+\mathrm{RH}.
+```
+
+Unter RH ist die Form auf dem positiven Referenzraum $H_0=L^2(\mathbb R,du)$ zugleich nicht abschließbar, weil ihr Spektralmaß rein atomar und gegenüber Lebesgue singulär ist. Die explizite Folgenkonstruktion bestätigt die Nicht-Abschließbarkeit direkt.
+
+Damit ist P03 mathematisch wertvoll gerade als **Architektur-Firewall**:
+
+- Haar-$L^2$ ist ein natürlicher RH-freier Referenzraum;
+- es ist nicht der Abschlussraum der vollständigen Weil-Form;
+- KLMN/Friedrichs auf diesem Hintergrund kann Objekt X nicht liefern;
+- der unter RH natürliche Weil-Raum $\ell^2(\Gamma,m_\gamma)$ bleibt konditional.
+
+### 12.5 Korrekturen beim Paper-Re-Audit
+
+Im ursprünglichen P02 Patch~3.5 war die als „exact NEU-250r definition“ bezeichnete Haarprojektion fälschlich als Integration über ganz $\mathbb A_f$ geschrieben. Das ist zwar als Schwartz-Bruhat-Funktional wohldefiniert, aber **nicht** der in NEU-250o/255 und im Haar-$L^2$-Transport verwendete finite-vacuum Port. P02 Patch~3.6 verwendet nun konsistent $\mathbf 1_{\widehat{\mathbb Z}}$.
+
+Zusätzlich wurde ein harmloser Zwischen-Vorzeichenfehler im Polterm-Hermitezitätsbeweis korrigiert und die vollständige Literaturidentifikation einschließlich Polblock explizit gemacht. P03 wurde auf diesen Port synchronisiert und die Definition des signed zero set sprachlich präzisiert.
+
+Diese Änderungen wurden über PR #180 integriert.
+
+### 12.6 Anschluss an die spätere C1-Linie
+
+Der konkrete finite-horizon Kern von P11 und der späteren C1-Linie verwendet P02/P03 **nicht als fertige globale Objekt-X-Geometrie**.
+
+P11 beginnt source-first mit
+
+```math
+\mathscr H_R=L^2(-R,R),
+```
+
+source-abhängigen p-adischen Martingalprojektionen, Gamma-Graphräumen und Feshbach-Korrekturen. Im selben Paper bleibt die Aufgabe, diese finite source-window Geometrie mit einer kanonischen globalen adelischen Quelle und dem Weil-Amplitudenport zu verbinden, ausdrücklich ein offenes globales Problem.
+
+Die historische Rolle von P02/P03 ist daher:
+
+```math
+\text{P02: adelische Schnittstelle}
+\quad+\quad
+\text{P03: globale Haar-}L^2\text{-Firewall}
+\quad\Longrightarrow\quad
+\text{spätere Suche nach neuer finiter source-first Geometrie}.
+```
+
+Der spätere Defektoperator, starke Transport und die lokale C1-Positivität stammen nicht aus einem bereits in P02/P03 vorhandenen positiven Operator. Sie sind echte spätere Konstruktionen.
 
 ---
 
@@ -733,6 +892,16 @@ Die vollständige Testkernidentität $B_W|_{C_c^\infty(-a,a)}=Q_W^a$ wurde gesch
 
 Parität reduziert die Erweiterungsfreiheit RH-frei auf zwei Zweige, selektiert aber keinen eindeutig. Die stärkste Zweigselektion in `NEU-260b.2` ist konditional auf Suzukis noch offene Grenzrelation. Ein RH-freier Direktgrenzraum, Mosco-/Resolventengrenzwert oder kanonischer $J_{a,b}$ ist in diesem historischen Strang nicht konstruiert.
 
+## Durchlauf 9
+
+P02 und P03 direkt geprüft. P02 enthält einen echten RH-freien surjektiven adelischen Port, die Autokorrelations-/Fourierpositivität und eine saubere komponentenweise Definition der vollständigen Weil-Form. Die arithmetische Positivität wird aber nicht aus dem Port hergeleitet. Wegen der Surjektivität ist Positivität des adelischen Pullbacks exakt äquivalent zur ursprünglichen Weil-Positivität.
+
+P03 ist dagegen ein konsistentes No-Go-Paper: Haar-$L^2$ ist nur positive Referenzgeometrie; Semibeschränktheit ist RH-äquivalent und unter RH ist die Form dort nicht abschließbar. Das Paper konstruiert keinen positiven Objekt-X-Operator.
+
+Beim Re-Audit wurde P02s finite Projektion von der falschen Integration über ganz $\mathbb A_f$ auf die tatsächlich verwendete Paarung mit $\mathbf 1_{\widehat{\mathbb Z}}$ korrigiert; außerdem wurden Polterm-Hermitezität und die Pullback-Firewall explizit bereinigt. P03 wurde synchronisiert. PR #180 enthält diese Korrekturen.
+
+Der spätere P11/C1-Kern verwendet P02/P03 vor allem als Schnittstelle beziehungsweise Firewall. Die konkrete source-first finite-window Geometrie mit Martingalprojektionen, Gamma-Graphen und Feshbach-Korrekturen ist eine spätere neue Konstruktion; die globale adelische Anbindung bleibt in P11 selbst als offene Verpflichtung stehen.
+
 ## Korrekturblock – 27. September 2026
 
 Die beiden Fehler samt direkter operatorischer Folgestellen wurden über PR #176 korrigiert und in main gemergt.
@@ -745,8 +914,8 @@ Geprüfter Ausgangspunkt für die Fortsetzung:
 
 # III. Nächster Prüfpunkt
 
-Übergang von der NEU-/Suzuki-Linie zu den frühen verdichteten Papers, zunächst **P02 und P03**:
+Als nächstes **P04 – Finite Weil Geometry and the Objekt-X Interface** vollständig gegen Durchlauf 8 prüfen:
 
-> Welche mathematische Essenz wurde dort aus dem Forschungsjournal übernommen, und entsteht in den Adelic-Weil-Amplitude- bzw. Haar-$L^2$-Papers eine neue RH-freie Struktur – oder werden die in Durchlauf 6–8 gefundenen Pullback-, Referenzraum- und Grenzwert-Firewalls nur in Paperform neu verpackt?
+> Ist P04 lediglich eine korrekte Verdichtung der RH-freien Suzuki-Fenster, oder behauptet das Paper an irgendeiner Stelle mehr globale Kanonizität, Shift-Kompatibilität oder Übergangsgeometrie, als die neue Uniform-Shift-Firewall erlaubt?
 
-Besonders zu prüfen sind die genauen Sätze, ihre Abhängigkeiten von der Weil-Masterform, der Haar-$L^2$-Firewall und die Frage, welcher Teil später tatsächlich in die starke Transport-/C1-Linie eingeht.
+Danach kann der Audit durch P05–P10 weiterlaufen, bevor wir P11/P12 erneut aus der nun unabhängig rekonstruierten Vorgeschichte heraus lesen.
