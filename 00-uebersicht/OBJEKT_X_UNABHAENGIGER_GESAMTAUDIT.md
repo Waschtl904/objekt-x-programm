@@ -2,7 +2,7 @@
 
 **Beginn:** 24. September 2026  
 **Letzte Aktualisierung:** 27. September 2026  
-**Zuletzt integrierter Audit-Korrekturstand:** **main@12df80da8af4a784c05f49f9940676bcb0ad53b9**  
+**Zuletzt integrierter Audit-Korrekturstand:** **main@684cf4bec7355e071e7c6f4ac1adde7ce54fee48**  
 **Arbeitsweise:** Mathematische Aussagen werden unabhängig geprüft. Statusdateien, frühere Audits und Repository-Markierungen dienen als Wegweiser, nicht als Beweis.  
 **Ziel:** Eine verständliche, fortlaufend aktualisierte Landkarte des gesamten Objekt-X-Programms vom ursprünglichen Fragenkatalog bis zur aktuellen Forschungsfront.
 
@@ -556,6 +556,129 @@ M4 liefert damit keinen neuen Positivitätsmechanismus. Es liefert vielmehr eine
 - Unter RH ist die Form auf diesem Referenzraum nicht abschließbar.
 - Eine selbstadjungierte semibeschränkte Kato-Realisierung $A_X$ auf Haar-$L^2$ kann daher nicht die gesuchte Objekt-X-Geometrie sein.
 - Die eigentliche offene Aufgabe verschiebt sich auf eine andere, RH-frei konstruierte positive Geometrie, deren Beziehung zur Weil-Form erst anschließend bewiesen werden müsste.
+---
+
+## 11. Finite Suzuki-Stufen: echte RH-freie Operatoren, aber keine RH-freie Grenzpositivität
+
+Der Strang `NEU-259/260` reagiert auf die Haar-$L^2$-Firewall, indem er die vollständige Weil-Form auf endliche Intervalle lokalisiert und dort selbstadjungierte Operatoren konstruiert. Dieser Weg ist mathematisch substanziell, verschiebt den RH-Kern aber in die globale Kompatibilität und den Grenzübergang.
+
+### 11.1 Die finite Weil-Form ist tatsächlich die lokalisierte vollständige Weil-Form
+
+Nach dem Normierungsabgleich in `NEU-258` ist die Repo-Form einschließlich Pol-, Gamma- und Primzahlpotenzblock mit der kanonischen Literatur-Weil-Form identifiziert. Suzukis $Q_W^a$ ist deren Lokalisierung auf $(-a,a)$. Auf dem gemeinsamen Testkern gilt daher
+
+```math
+B_W|_{C_c^\infty(-a,a)}=Q_W^a.
+```
+
+Der zuvor in `NEU-259` offene separate Polterm-Randaudit war für diese Testkernidentität nicht mehr nötig und wurde in PR #179 geschlossen.
+
+### 11.2 Was an jeder endlichen Stufe RH-frei positiv ist
+
+Für jedes feste $a>0$ besitzt die lokalisierte Form einen selbstadjungierten, nach unten beschränkten Operator
+
+```math
+A_a=A_a^*,
+\qquad
+\lambda_a:=\inf\sigma(A_a)>-\infty,
+\qquad
+A_a\ge\lambda_a I.
+```
+
+Für jeden Shift $\lambda<\lambda_a$ ist
+
+```math
+T_{a,\lambda}:=A_a-\lambda I>0
+```
+
+und definiert den Hilbertraum $\mathcal H(T_{a,\lambda})$. Diese Positivität ist jedoch **durch Spektralverschiebung erzeugt**. Sie ist nicht die Aussage $Q_W^a\ge0$.
+
+Das Vorzeichen des unverschobenen Spektralbodens enthält weiterhin den RH-Kern:
+
+```math
+\mathrm{RH}
+\quad\Longleftrightarrow\quad
+\lambda_a\ge0\ \text{für alle }a>0.
+```
+
+Die finite positive Metrik würde daher auch dann existieren, wenn RH falsch wäre: Man müsste den Shift lediglich unter den dann eventuell negativen Spektralboden legen.
+
+### 11.3 Reelle finite Spektren sind ebenfalls RH-frei
+
+Auf jedem $\mathcal H(T_{a,\lambda})$ besitzt der minimale Operator $i\,d/dx$ Defizitindizes $(1,1)$ und eine $S^1$-Familie selbstadjungierter Erweiterungen $\overline{\mathscr D}_{a,\theta}$. Deren Spektren sind die Nullstellen der endlichen charakteristischen Funktion $W(a,\theta;z)$ und deshalb reell.
+
+Dies ist ein echtes RH-freies Hilbert-Pólya-artiges **Finite-Intervall-Phänomen**. Es beweist jedoch noch keine Annäherung an die Zeta-Nullstellen.
+
+### 11.4 Der gesamte globale Spektralinhalt steckt im Grenzübergang
+
+Der gewünschte Schritt ist die von Suzuki formulierte kompakte Grenzrelation
+
+```math
+e^{\phi(a,z)}W(a,\theta(a);z)
+\longrightarrow
+z^2\frac{\xi(1/2-iz)}{\xi'(1/2-iz)}.
+```
+
+Sie ist kein Satz der finiten Theorie, sondern der offene Grenzschritt. Würde eine solche Relation mit der nötigen lokalen Gleichmäßigkeit bewiesen, würden die reellen finiten Spektren die RH-relevante Nullstellenstruktur im Grenzwert erzwingen.
+
+Damit liegt die Schwierigkeit nicht in der Existenz selbstadjungierter finiter Operatoren, sondern in ihrer **richtigen Auswahl und kontrollierten globalen Konvergenz**.
+
+### 11.5 Lokale $\lambda$-Gaugefreiheit wird global zur RH-Firewall
+
+Für festes $a$ sind verschiedene Shifts $\lambda<\lambda_a$ topologisch äquivalent. Für Intervalle $a<b$ ist die natürliche Nullfortsetzung $E_{a,b}$ jedoch nur für den unverschobenen Weil-Anteil exakt kompatibel:
+
+```math
+Q_W^b(E_{a,b}v)=Q_W^a(v).
+```
+
+Für die verschobenen Normen gilt
+
+```math
+\|E_{a,b}v\|_{T_{b,\lambda(b)}}^2
+-
+\|v\|_{T_{a,\lambda(a)}}^2
+=
+(\lambda(a)-\lambda(b))\|v\|_2^2.
+```
+
+Nullfortsetzung ist also nur bei einem gemeinsamen Shift isometrisch.
+
+Ein einziger endlicher Shift $\lambda_*$, der unter allen Spektralböden $\lambda_a$ liegt, existiert genau bei einer uniformen Untergrenze der finiten Weil-Formen. Eine solche Untergrenze würde sofort eine globale Haar-$L^2$-Untergrenze von $B_W$ liefern. Nach der Firewall aus Durchlauf 7 ist dies bereits RH-äquivalent.
+
+```math
+\text{gemeinsamer isometrischer Shift für alle Intervalle}
+\quad\Longleftrightarrow\quad
+\mathrm{RH}.
+```
+
+Der Parameter $\lambda$ ist daher nur **lokal** ein harmloser Gaugeparameter. Global gehört seine Kontrolle zur eigentlichen Übergangsgeometrie.
+
+### 11.6 Die übrigen Grenzdaten sind nicht RH-frei kanonisiert
+
+`NEU-260b` nutzt die Parität und reduziert die selbstadjungierte Erweiterungsfreiheit korrekt von $U(1)$ auf zwei Zweige $\{+P,-P\}$. Das Vorzeichen wird dadurch aber noch nicht gewählt.
+
+`NEU-260b.2` zeigt nur konditional: **falls** Suzukis Grenzrelation gilt, ist der falsche Paritätszweig asymptotisch ausgeschlossen. Diese Selektion benutzt damit gerade den noch offenen Grenzmechanismus, der RH implizieren würde; sie ist keine unabhängige arithmetische Auswahl.
+
+Die vorgeschlagenen BC/KMS- und Frobenius-Selektoren besitzen in diesem Strang keine konstruierte Abbildung auf die Defizienzlinien. Zudem existieren im aktuellen `main` keine ausgearbeiteten Dateien `NEU-260c` oder `NEU-260d`; die $\phi$-Normalisierung und die Übergangsoperatoren $J_{a,b}$ bleiben in diesem historischen Strang daher offen.
+
+### 11.7 Kein bewiesener Operatorgrenzwert
+
+Im geprüften Strang liegt weder eine RH-freie Mosco-Konvergenz der Formen noch eine starke Resolventenkonvergenz der ausgewählten selbstadjungierten Operatoren noch ein bereits konstruierter Hilbert-Direktgrenzraum $\mathcal K_X$ vor.
+
+Die kanonische $L^2$-Nullfortsetzung existiert, aber die $T$-Hilbertnormen sind bei RH-freien, $a$-abhängigen Shifts nicht isometrisch kompatibel. Der zusätzliche Transport $J_{a,b}$ ist deshalb echte neue Mathematik und nicht durch Suzukis finite Sätze geliefert.
+
+### 11.8 Bilanz von Durchlauf 8
+
+Der Suzuki-Weg ist der bislang klarste RH-freie finite Operatorrahmen des Programms. Er erfüllt den entscheidenden Zirkularitätstest auf jeder **festen** Stufe: selbstadjungierte Operatoren und reelle Spektren existieren auch dann, wenn RH falsch wäre.
+
+Was fehlt, ist genau das, was für Objekt X entscheidend wäre:
+
+- keine unverschobene positive Weil-Form auf allen finiten Stufen ohne RH;
+- keine uniforme RH-freie Untergrenze über $a$;
+- kein kanonisch kompatibles Hilbert-Direktsystem;
+- keine RH-freie Auswahl aller Grenzdaten;
+- kein bewiesener Grenzübergang von den reellen finiten Spektren zu den Zeta-Ordinaten.
+
+Der Ansatz approximiert daher **nicht einfach nur den unter RH bekannten atomaren Raum**, ist aber auch noch keine RH-freie positive Objekt-X-Geometrie. Er komprimiert die globale Schwierigkeit sehr präzise in die Übergangs- und Grenzwertfrage.
 
 ---
 
@@ -600,6 +723,16 @@ Die unter RH natürliche Weil-Vervollständigung ist stattdessen der atomare Rau
 
 Im Zuge des Audits wurden Fourier-Shift, Schwartz-Schwanz und Gamma-$1/\pi$-Normierung in `NEU-255/256` über PR #178 korrigiert.
 
+## Durchlauf 8
+
+`NEU-259/260` und Suzukis aktueller finite-Intervall-Rahmen geprüft. Die lokalisierten Formen $Q_W^a$ sind RH-frei semibeschränkt und erzeugen selbstadjungierte $A_a$; nach einem Shift $\lambda<\lambda_a$ entstehen positive Hilberträume und selbstadjungierte first-order Erweiterungen mit reellen Spektren.
+
+Diese Positivität ist jedoch Shift-Positivität, nicht Weil-Positivität. $Q_W^a\ge0$ für alle $a$ ist bereits RH-äquivalent. Ein gemeinsamer Shift, der die Nullfortsetzungen in allen $T$-Normen isometrisch machen würde, ist ebenfalls RH-äquivalent, weil er eine uniforme globale Haar-$L^2$-Untergrenze erzeugen würde.
+
+Die vollständige Testkernidentität $B_W|_{C_c^\infty(-a,a)}=Q_W^a$ wurde geschlossen; außerdem wurde der Vorzeichenfehler $A_a\ge-\lambda_aI$ zu $A_a\ge\lambda_aI$ korrigiert. Diese und die globale Gauge-Firewall wurden über PR #179 integriert.
+
+Parität reduziert die Erweiterungsfreiheit RH-frei auf zwei Zweige, selektiert aber keinen eindeutig. Die stärkste Zweigselektion in `NEU-260b.2` ist konditional auf Suzukis noch offene Grenzrelation. Ein RH-freier Direktgrenzraum, Mosco-/Resolventengrenzwert oder kanonischer $J_{a,b}$ ist in diesem historischen Strang nicht konstruiert.
+
 ## Korrekturblock – 27. September 2026
 
 Die beiden Fehler samt direkter operatorischer Folgestellen wurden über PR #176 korrigiert und in main gemergt.
@@ -612,8 +745,8 @@ Geprüfter Ausgangspunkt für die Fortsetzung:
 
 # III. Nächster Prüfpunkt
 
-Prüfung der Reaktion des Programms auf die Haar-$L^2$-Firewall ab `NEU-259/260` und anschließend der frühen Papers:
+Übergang von der NEU-/Suzuki-Linie zu den frühen verdichteten Papers, zunächst **P02 und P03**:
 
-> Wird nach dem M4-No-Go eine **andere RH-freie positive Geometrie** tatsächlich konstruiert, oder wird der bedingte Nullstellenraum nur durch finite Fenster, Screw-Function-Modelle oder neue Transportports approximiert?
+> Welche mathematische Essenz wurde dort aus dem Forschungsjournal übernommen, und entsteht in den Adelic-Weil-Amplitude- bzw. Haar-$L^2$-Papers eine neue RH-freie Struktur – oder werden die in Durchlauf 6–8 gefundenen Pullback-, Referenzraum- und Grenzwert-Firewalls nur in Paperform neu verpackt?
 
-Besonders zu verfolgen sind der finite-Intervall-Grenzwertweg, die Kanonizitätsfragen und der Übergang zu P02/P03 beziehungsweise zur späteren Transportlinie.
+Besonders zu prüfen sind die genauen Sätze, ihre Abhängigkeiten von der Weil-Masterform, der Haar-$L^2$-Firewall und die Frage, welcher Teil später tatsächlich in die starke Transport-/C1-Linie eingeht.
