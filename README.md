@@ -4,7 +4,8 @@
 > Diese README dient der Orientierung. Sie ist **keine mathematische Beweis- oder Statusautorität**.
 >
 > - Kanonischer operativer Status: [`00-uebersicht/RESEARCH_STATE.yaml`](00-uebersicht/RESEARCH_STATE.yaml)
-> - Lesbarer aktueller Stand: [`00-uebersicht/CURRENT_STATE.md`](00-uebersicht/CURRENT_STATE.md)
+> - Lesbarer Gesamtüberblick: [`00-uebersicht/OBJEKT_X_GESAMTUEBERBLICK.md`](00-uebersicht/OBJEKT_X_GESAMTUEBERBLICK.md)
+- Lesbarer aktueller Stand: [`00-uebersicht/CURRENT_STATE.md`](00-uebersicht/CURRENT_STATE.md)
 > - Nächste mathematische Gates: [`00-uebersicht/NEXT_GATES.md`](00-uebersicht/NEXT_GATES.md)
 > - Konsolidierte Ergebnisübersicht: [`00-uebersicht/SURVIVOR_REGISTRY.md`](00-uebersicht/SURVIVOR_REGISTRY.md)
 > - Historische Quellen und abgeschlossene Branch-Konsolidierung: [Archiveinstieg](00-uebersicht/ARCHIVE_INDEX.md)
@@ -161,19 +162,22 @@ Statusänderungen müssen über die dokumentierten mathematischen Beweis- und Au
 
 Für den aktuellen Stand in dieser Reihenfolge lesen:
 
-1. [`00-uebersicht/CURRENT_STATE.md`](00-uebersicht/CURRENT_STATE.md)  
+1. [`00-uebersicht/OBJEKT_X_GESAMTUEBERBLICK.md`](00-uebersicht/OBJEKT_X_GESAMTUEBERBLICK.md)  
+   Zusammenhängende mathematische Gesamterzählung: klassische Grundlagen, eigene Resultate, No-Gos, heutige C1-Geometrie und offene globale Schritte.
+
+2. [`00-uebersicht/CURRENT_STATE.md`](00-uebersicht/CURRENT_STATE.md)  
    Lesbare generierte Übersicht des registrierten Forschungsstands.
 
-2. [`00-uebersicht/NEXT_GATES.md`](00-uebersicht/NEXT_GATES.md)  
+3. [`00-uebersicht/NEXT_GATES.md`](00-uebersicht/NEXT_GATES.md)  
    Aktuelle offene mathematische Gates und ihre Firewalls.
 
-3. [`00-uebersicht/RESEARCH_STATE.yaml`](00-uebersicht/RESEARCH_STATE.yaml)  
+4. [`00-uebersicht/RESEARCH_STATE.yaml`](00-uebersicht/RESEARCH_STATE.yaml)  
    Kanonische operative Statusquelle mit Scopes, Abhängigkeiten und Beweisankern.
 
-4. [`00-uebersicht/SURVIVOR_REGISTRY.md`](00-uebersicht/SURVIVOR_REGISTRY.md)  
+5. [`00-uebersicht/SURVIVOR_REGISTRY.md`](00-uebersicht/SURVIVOR_REGISTRY.md)  
    Konsolidierte Übersicht der weiterverwendbaren mathematischen Resultate.
 
-5. [`00-uebersicht/OBJEKT_X_ARCHITECTURE.md`](00-uebersicht/OBJEKT_X_ARCHITECTURE.md)  
+6. [`00-uebersicht/OBJEKT_X_ARCHITECTURE.md`](00-uebersicht/OBJEKT_X_ARCHITECTURE.md)  
    Architektur und Stellung der lokalen Konstruktionen auf dem Weg zu Objekt X.
 
 ---
