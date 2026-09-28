@@ -2,7 +2,7 @@
 
 **Beginn:** 24. September 2026  
 **Letzte Aktualisierung:** 27. September 2026  
-**Zuletzt integrierter Audit-Korrekturstand:** **main@0aad2bda6a1cb7d4b28d6e3cc732ddde87b199d2**  
+**Zuletzt integrierter Audit-Korrekturstand:** **main@9a86fe7d40a44ba2ce5b1acb0f2672ee4b36dcb0**  
 **Arbeitsweise:** Mathematische Aussagen werden unabhängig geprüft. Statusdateien, frühere Audits und Repository-Markierungen dienen als Wegweiser, nicht als Beweis.  
 **Ziel:** Eine verständliche, fortlaufend aktualisierte Landkarte des gesamten Objekt-X-Programms vom ursprünglichen Fragenkatalog bis zur aktuellen Forschungsfront.
 
@@ -1167,6 +1167,391 @@ Die Zwischenpapers liefern damit nicht den gesuchten globalen positiven Operator
 führen zu einem stark eingeschränkten Suchraum. P11 beginnt anschließend tatsächlich mit einer neuen source-first finite-window Konstruktion, statt einen der alten globalen Kandidaten einfach fortzusetzen.
 
 Die stärkste direkte Kontinuität ist **P06 → P11** über die Feshbach-/Schur-Sprache. P05 wirkt vor allem über Primkanal-/Nichtorthogonalitäts-Firewalls. P07–P09 werden nicht zum konstruktiven C1-Kern. P10 bleibt als Negativ- und Typenkontrolle wirksam.
+---
+
+## 15. P11: die neue source-first Kandidatengeometrie und der spätere Beginn der heutigen C1-Linie
+
+P11 ist der erste große Block des Programms, der nach den P05–P10-Firewalls tatsächlich eine **neue positive finite-horizon Geometrie** konstruiert. Der unabhängige Audit zeigt aber zugleich eine entscheidende Trennung:
+
+> P11s positive Form $q_R^X$ ist eine neue RH-freie **Kandidatengeometrie**. Sie ist nicht die lokalisierte vollständige Weil-Form. Die heute relevante physische C1-Defektgeometrie $q_a,T_a,R_a,G_a$ entsteht erst in einer späteren Forschungsphase.
+
+Diese Trennung ist wichtig, weil P11 und die spätere C1-Linie teilweise ähnliche Buchstaben verwenden, aber nicht dieselben Operatoren meinen.
+
+### 15.1 RH-freie source-first Ausgangsdaten
+
+Für jedes feste Fenster $R>0$ setzt P11
+
+```math
+\mathscr H_R=L^2(-R,R)
+```
+
+und verwendet physische Nullfortsetzung auf die volle Linie. Die finite-adische Geometrie wird nicht aus einer bereits positiven Weil-Form gewonnen, sondern aus expliziten p-adischen Martingalkoordinaten.
+
+Für jede Primzahl $p$ werden die residualen Prime-Power-Marken
+
+```math
+\eta_{p,k}
+=
+\sqrt{p-1}\sum_{j=0}^{k-1}p^{(j-k)/2}\psi_{p,j}
+```
+
+und der source-abhängige Martingal-Cutoff $\mathsf Q_R(u)$ definiert. Der Cutoff hängt von der tatsächlichen Quellenposition $|u|$ ab und bricht damit bewusst Translationinvarianz.
+
+Die beiden zentralen endlichen Operatoren sind
+
+```math
+H_R
+=
+P_R\sum_{p^k\le e^{2R}}
+\sqrt{\log p}\,p^{-3k/4}D_{k\log p}E_R
+```
+
+und der konditionierte Restoperator $R_R$. Für festes $R$ sind nur endlich viele Prime-Power-Kanäle aktiv; beide Operatoren sind daher beschränkt.
+
+Diese Ebene ist vollständig RH-frei und wird **vor** jeder Positivitätsaussage über die Weil-Form aufgebaut.
+
+### 15.2 Der positive Gamma-Graphrraum ist bewusst nur der positive Gamma-Anteil
+
+Der archimedische positive Inzidenzmultiplikator ist
+
+```math
+g_\infty(\xi)
+=
+\sum_{j=0}^\infty
+\frac{\xi^2/4}
+{(j+\tfrac14)((j+\tfrac14)^2+\xi^2/4)}
+\ge0.
+```
+
+Er ist der zentrierte Anteil
+
+```math
+g_\infty(\xi)=A_\infty(\xi)-A_\infty(0),
+```
+
+nicht die vollständige archimedische Weil-Komponente. P11 fügt die feste Hintergrundnorm hinzu und setzt
+
+```math
+m_\Gamma=1+g_\infty.
+```
+
+Daraus entsteht eine geschlossene positive Form $\mathfrak c_{\Gamma,R}$ mit zugehörigem selbstadjungiertem Operator
+
+```math
+C_{\Gamma,R}\ge I.
+```
+
+Auf einem festen räumlichen Fenster ist die Gamma-Formeinbettung kompakt; deshalb ist $C_{\Gamma,R}^{-1}$ kompakt.
+
+Der negative skalare Gamma-Grundterm und der separate Polkanal werden hier **nicht** in die Positivität hineindefiniert. Diese Scope-Grenze wurde im Re-Audit über PR #184 nun auch ausdrücklich in P11 eingetragen.
+
+### 15.3 Feshbach liefert erstmals eine manifest positive neue Kandidatenform
+
+P11 übernimmt aus P06 die Feshbach-/Schur-**Methode**, aber nicht den historischen P06-Operator. Mit den neu konstruierten source-first Operatoren setzt es
+
+```math
+B_R=(I+R_R^*R_R)^{-1}.
+```
+
+Weil $I+R_R^*R_R\ge I$, ist $B_R$ positiv und beschränkt. Der Schurterm
+
+```math
+\Sigma_R
+=
+H_RB_RH_R^*
+\ge0
+```
+
+ist deshalb operatorisch manifest positiv und RH-frei.
+
+Die finite Kandidatenform lautet
+
+```math
+q_R^X
+=
+\mathfrak c_{\Gamma,R}+\Sigma_R.
+```
+
+Sie ist geschlossen und positiv; ihr Graphraum $\mathcal K_{X,R}$ ist ein echter Hilbertraum. Die Positivität stammt hier **nicht** aus Weil-Positivität, sondern aus einem positiven Gamma-Hintergrund und einem positiven Schurkomplement einer größeren positiven Blockgeometrie.
+
+Das ist der erste wirklich neue positive Operatorbau in P11.
+
+Entscheidend bleibt aber:
+
+```math
+q_R^X
+\ne
+\text{bereits bewiesene lokalisierte vollständige Weil-Form}.
+```
+
+P11 beweist keine Identität $q_R^X=B_W|_{(-R,R)}$. Die globale adelische/Weil-Anbindung bleibt ausdrücklich offen.
+
+### 15.4 Was der Feshbach-Schritt tatsächlich beweist
+
+Der zugrunde liegende positive Blockoperator besitzt einen invertierbaren Restblock $I+R_RR_R^*$; das Hub-Schurkomplement ist exakt
+
+```math
+F_R^{\rm hub}
+=
+C_{\Gamma,R}
++
+H_R(I+R_R^*R_R)^{-1}H_R^*.
+```
+
+Dies ist kein bloß formales Einsetzen einer Schurformel: Die benötigten finite-window Operatoren sind beschränkt, der Gamma-Block ist als geschlossene coercive Form kontrolliert und der eliminierte Restblock ist beschränkt invertierbar.
+
+Der normalisierte Schurterm ist kompakt, aber besitzt **keine endliche Schattenordnung**. Damit wird ein naiver finite-window $\mathcal S_4/\mathcal S_2$-Fredholmweg erneut gesperrt, ohne einen allgemeinen globalen Fredholm-No-Go zu behaupten.
+
+### 15.5 Der reine Gamma-Grenzwert ist bewiesen – aber nicht der Objekt-X-Grenzwert
+
+Für den positiven Gamma-Backbone beweist P11 echte Mosco-Konvergenz und starke Resolventenkonvergenz beim Wachsen des Fensters:
+
+```math
+E_RC_{\Gamma,R}^{-1}P_R
+\xrightarrow[s]{R\to\infty}
+C_\Gamma^{-1}.
+```
+
+Die finite Kompaktheit verschwindet dabei im Grenzwert. P11 sagt ausdrücklich, dass dieser Satz **nicht** die Prime/Rest-Feshbach-Geometrie und nicht Objekt X kontrolliert.
+
+### 15.6 Graphtransporte sind in P11 bereits wirklich konstruiert
+
+Hier unterscheidet sich P11 deutlich von P04. Für $0<R<S$ ist die Nullfortsetzung auf den neuen Graphräumen tatsächlich ein bewiesener beschränkter injektiver Operator
+
+```math
+J_{R,S}:\mathcal K_{X,R}\longrightarrow\mathcal K_{X,S}
+```
+
+mit Cocycle
+
+```math
+J_{S,T}J_{R,S}=J_{R,T}.
+```
+
+Die obere Schranke folgt aus der exakten Invarianz des Gamma-Anteils und der bounded Schur-Korrektur. Zusätzlich ist $J_{R,T}$ auf jedem festen Quellfenster nach unten beschränkt.
+
+Das ist ein echter Fortschritt gegenüber der Suzuki/P04-Linie: Die Übergangskarten sind hier **nicht nur postuliert**, sondern für P11s eigene positive Kandidatengeometrie konstruiert.
+
+### 15.7 Die terminalen Metriken sind positiv – aber ihre Positivität ist metrisch, nicht Weil-arithmetisch
+
+P11 definiert
+
+```math
+G_{R,T}:=J_{R,T}^*J_{R,T}.
+```
+
+Aus der unteren Graphnormschranke folgt
+
+```math
+G_{R,T}\succeq c_RI>0.
+```
+
+Diese Positivität ist vollständig RH-frei, aber strukturell wichtig richtig einzuordnen: Sie entsteht aus einem bereits bewiesenen, nach unten beschränkten Einbettungsoperator $J_{R,T}$. Sie ist daher eine **Pullbackmetrik der Kandidaten-Graphräume**, nicht ein Beweis der Positivität der vollständigen Weil-Form.
+
+Mit
+
+```math
+W_{R,S}^{[T]}
+=
+G_{S,T}^{1/2}J_{R,S}G_{R,T}^{-1/2}
+```
+
+erhält P11 für jedes feste Terminal $T$ exakt
+
+```math
+(W_{R,S}^{[T]})^*W_{R,S}^{[T]}=I
+```
+
+und ein exaktes Cocycle-Gesetz. Diese finite-terminalen Isometrien sind vollständig bewiesen.
+
+### 15.8 Der P11-Grenzübergang bleibt offen
+
+Die unnormalisierten Metriken $G_{R,T}$ besitzen keinen bounded terminal limit; auf dem glatten ungeraden Kern wachsen sie sogar stark. P11 analysiert diesen Effekt über Integraljets und beweist scharfe feste-Vektor-Asymptotiken.
+
+Für den diskreten Primzellenschritt des scharfen ungeraden Asymptotikbeweises wird ein unbedingter Primzahlsatz in kurzen Intervallen mit Exponent $\theta>17/30$ benutzt. Der externe Input von Guth–Maynard wurde im Audit unabhängig gegengeprüft; die 2026 in den *Annals of Mathematics* publizierte Arbeit liefert genau Short-Interval-Asymptotik auf der Skala $x^{17/30+o(1)}$, sodass P11s Wahl $\theta=3/5$ innerhalb des bewiesenen Bereichs liegt.
+
+P11 reduziert den starken ungeraden Terminaltransport auf einen exakten cross-terminal Cauchy-Kern und eine endliche Jet-/Square-Root-Geometrie. Es beweist jedoch weder
+
+```math
+W_{R,S,-}^{[T]}
+\xrightarrow[T\to\infty]{\rm strong}
+W_{R,S,-}^{[\infty]}
+```
+
+noch dessen Scheitern.
+
+Auch mehrere spätere O3-Diagnostiken bleiben ausdrücklich **route-spezifisch**: Ein gescheiterter Jensen-Produktweg ist kein Nichtkonvergenzsatz für den tatsächlichen Transport.
+
+### 15.9 P11s (R_R) ist nicht der spätere C1-Defekttransfer
+
+Hier liegt die wichtigste historische Notationsfalle.
+
+In P11 bezeichnet $R_R$ den **source-conditioned residual operator**, der im Nenner
+
+```math
+(I+R_R^*R_R)^{-1}
+```
+
+des positiven Feshbach-Schurterms erscheint. Es gibt in P11 keinen zentralen Defektoperator
+
+```math
+I-R_R^*R_R.
+```
+
+Die heute relevante C1-Defektstruktur entsteht erst später mit einem **anderen** Operator $R_a$.
+
+### 15.10 Der tatsächliche Start der heutigen physischen C1-Geometrie
+
+Der spätere `x-interface-directed-system`-Block konstruiert zunächst RH-frei ein gerichtetes System der tatsächlichen physischen Quellen und der **signed** lokalisierten Form $q_a$. Deren Positivität wird noch nicht angenommen.
+
+Der entscheidende neue Schritt folgt im `c1-coupled-spectral-mediator`-Paket. Dort werden auf einem festen positiven Spektralraum zwei Ausgänge konstruiert:
+
+```math
+Tu=\frac{m}{\sqrt A}\widehat u,
+\qquad
+Du=\frac{n}{\sqrt A}\widehat u,
+```
+
+mit der exakten Differenz-von-Gram-Identität
+
+```math
+q_a(u,v)
+=
+\langle Tu,Tv\rangle
+-
+\langle Du,Dv\rangle.
+```
+
+Diese Konstruktion benutzt **keine** Positivität von $q_a$.
+
+Nach Abschluss des Quellenraums wird der echte Defekttransfer definiert durch
+
+```math
+R_a(T_au)=Du.
+```
+
+Damit gilt
+
+```math
+q_a(u,v)
+=
+\langle T_au,(I-R_a^*R_a)T_av\rangle.
+```
+
+Setzt man
+
+```math
+C_a=R_a^*R_a,
+\qquad
+G_a=I-C_a,
+```
+
+dann ist
+
+```math
+q_a\ge0
+\quad\Longleftrightarrow\quad
+\|R_a\|\le1.
+```
+
+**Hier** beginnt die heute relevante C1-Defektgeometrie. Die Defektformel ist zunächst nur eine exakte signed reduction; ihre Positivität wird nicht durch die Schreibweise erzeugt.
+
+### 15.11 Wie die spätere C1-Linie die Positivität tatsächlich schließt
+
+Auf dem festen Horizont $B\le a\le1$ liefert die später bewiesene physische Koerzivität bei Terminal $1$ zusammen mit der Mediatorabschätzung
+
+```math
+I-C_1\succeq\eta I>0.
+```
+
+Erst jetzt folgt die strikte Kontraktion
+
+```math
+\|R_1\|<1
+```
+
+und die positive terminale Quadratwurzel
+
+```math
+\Delta_1=(I-C_1)^{1/2}.
+```
+
+Das C1d-Paket benutzt bewusst **eine einzige terminale Quadratwurzel** und erhält damit für alle $B\le a\le1$ die exakte positive Gramrealisierung
+
+```math
+\langle T_{X,a}u,T_{X,a}v\rangle=q_a(u,v)
+```
+
+samt kompatiblen Übergängen. Das ist eine tatsächliche positive Realisierung der physischen finiten Weil-Form auf diesem festen Horizont, nicht bloß eine positive Kandidatenform.
+
+Anschließend erweitern O1–O7 rechts von $1$ zunächst nur die **rohen** $T$- und $D$-Transporte und ihre Cocycles; Positivität jenseits von $1$ wird dabei ausdrücklich nicht importiert.
+
+O8 beweist in der ersten geschlossenen Kammer bis
+
+```math
+A_8=\frac12\log8
+```
+
+einen strikten positiven Defektreserveboden. O9 kann daraufhin auf jedem Kammerhorizont
+
+```math
+\Delta_A=(I-R_A^*R_A)^{1/2}
+```
+
+definieren und die korrigierten Transporte
+
+```math
+U^X_{A,B}
+=
+\Delta_BM^T_{A,B}\Delta_A^{-1}
+```
+
+als echte Isometrien mit Cocycle beweisen.
+
+Diese spätere C1/O-Geometrie ist also **nicht** die Fortsetzung der P11-Metrikformel $G_{R,T}=J_{R,T}^*J_{R,T}$; sie ist eine neue physische Defektgeometrie auf der tatsächlichen finiten Weil-Form.
+
+### 15.12 Abhängigkeitskette mit Beweisstatus
+
+| Übergang | Status | Einordnung |
+| --- | --- | --- |
+| source-first Fenster + Martingalcutoff → $H_R,R_R$ | **in P11 bewiesen** | neue RH-freie finite Quelle |
+| $g_\infty$ → positive Gamma-Graphräume | **in P11 bewiesen** | zentrierter positiver Gamma-Anteil, nicht volle Weil-Gammaform |
+| $(H_R,R_R)$ → $\Sigma_R$ → $q_R^X$ | **in P11 bewiesen** | manifest positive Feshbach-Kandidatengeometrie |
+| $q_R^X$ → vollständige lokalisierte Weil-Form | **nicht bewiesen / nicht behauptet** | globale Weil-/adelische Anbindung offen |
+| $q_R^X$ → $J_{R,S}$ | **in P11 bewiesen** | bounded injective zero-extension graph transports + cocycle |
+| $J_{R,T}$ → $G_{R,T}=J^*J$ → fixed-$T$ $W_{R,S}^{[T]}$ | **in P11 bewiesen** | positive Pullbackmetrik und exakte finite-terminal Isometrie |
+| fixed-$T$ Transport → $T\to\infty$ strong terminal transport | **P11 offen** | Jet-/Square-Root-Gate ungelöst |
+| physische signed Quellenform $q_a$ → C0 directed system | **später bewiesen** | neue Linie, nicht P11-$q_R^X$ |
+| $q_a$ → $T_a,D_a,R_a$ → $G_a=I-R_a^*R_a$ | **später im C1-Mediator bewiesen** | exakte signed Defektreduktion, Positivität noch offen |
+| Terminalgap bei $1$ → $G_1\succ0$ → $\Delta_1$ | **später C1d geschlossen** | positive Gramrealisierung auf $B\le a\le1$ |
+| $1\le A\le A_8$: rohe $T/D$-Cocycles | **O1–O7 lokal bewiesen** | Positivität noch separat |
+| erste Kammer: $G_A\succ0$ | **O8 lokal zertifiziert** | positiver Reserveboden bis $A_8$ |
+| $G_A^{1/2}$ → korrigierte positive Transporte | **O9 lokal bewiesen** | isometrische positive Cocycles auf erster Kammer |
+| rechts von $A_8$, cofinal/unbounded, global Weil | **offen** | O10/globaler Abschluss fehlt |
+
+### 15.13 Gesamturteil zu P11
+
+P11 ist weder bloße Zusammenfassung noch bereits der heutige C1-Beweis. Sein dauerhafter mathematischer Beitrag ist die erste robuste **source-first positive finite-horizon Kandidatenarchitektur** mit echten Graphtransporten und einer tiefen Terminalasymptotik.
+
+Der entscheidende spätere Fortschritt bestand darin, von dieser Kandidatenebene auf die **tatsächliche signed finite Weil-Form** zurückzugehen und eine neue gemeinsame Prime/Gamma-Spektralmediatorstruktur zu bauen, in der die fehlende Positivität exakt auf einen kontraktiven Defektoperator reduziert wird.
+
+Historisch ist die Entwicklung daher genauer:
+
+```math
+\text{P11 source-first Kandidatengeometrie}
+\longrightarrow
+\text{C0 physische signed Form}
+\longrightarrow
+\text{C1-Mediator }(T,D,R)
+\longrightarrow
+\text{Defekt }G=I-R^*R
+\longrightarrow
+\text{C1d / O8 Positivität}
+\longrightarrow
+\text{O9 positive Transporte}.
+```
+
+Der letzte Pfeil ist weiterhin nur lokal/finit: Eine unbeschränkte, kofinale positive Fortsetzung und globale Weil-Positivität sind dadurch nicht erreicht.
 
 ---
 
@@ -1251,6 +1636,18 @@ P08s belastbarer Kern sind Renormierungsdiagnosen und der korrekte Mangoldt-Mell
 
 P10 bleibt als No-Go-/Firewall-Sammlung architektonisch wichtig. Es sperrt die alten Abkürzungen, ohne die spätere nichtorthogonale source-first Objekt-X-Geometrie auszuschließen. Die Abhängigkeitsmatrix zeigt als stärkste konstruktive Kontinuität P06→P11; P05 liefert vor allem Typ-/Primkanalgrenzen, P07–P09 werden weitgehend nicht in C1 fortgeführt.
 
+## Durchlauf 12
+
+P11 schichtweise von der source-first Quelle bis zum Terminaltransport geprüft. Die Fenster-/Martingaloperatoren, der zentrierte positive Gamma-Graphrraum, der positive Feshbach-Schurterm $\Sigma_R$, die positive Kandidatenform $q_R^X$, die bounded graph transports $J_{R,S}$ sowie die festen Terminalmetriken $G_{R,T}=J_{R,T}^*J_{R,T}$ und normalisierten Isometrien $W_{R,S}^{[T]}$ sind RH-frei in P11 bewiesen.
+
+Entscheidend ist die neue Abgrenzung: $q_R^X$ ist **nicht** als lokalisierte vollständige Weil-Form identifiziert. Der positive Gamma-Backbone benutzt nur den zentrierten positiven Inzidenzanteil plus Hintergrundnorm; negativer Gamma-Grundterm und Polkanal sind nicht in die Positivität eingebaut. Diese Selbständigkeits-/Scope-Klarstellung wurde über PR #184 in P11 ergänzt.
+
+Der starke Terminalgrenzwert $T\to\infty$ bleibt in P11 offen. Das aktuelle C1-Defektobjekt ist außerdem nicht P11s residualer Operator $R_R$. Die spätere C1-Linie konstruiert auf der tatsächlichen signed finiten Weil-Form neue Operatoren $T_a,D_a,R_a$ mit $q_a=\langle T_a\cdot,(I-R_a^*R_a)T_a\cdot\rangle$. Erst dort entsteht $G_a=I-R_a^*R_a$.
+
+Die spätere physische Koerzivität bei Terminal $1$ schließt C1d auf $B\le a\le1$; O1–O7 bauen rechts davon zunächst rohe $T/D$-Cocycles, O8 liefert die positive Reserve bis $A_8=\log8/2$, und O9 daraus die korrigierten isometrischen positiven Transporte. Rechts von $A_8$ sowie global/cofinal bleibt die positive Weil-Geometrie offen.
+
+Der externe Guth–Maynard-Input im scharfen P11-Primezellenschritt wurde unabhängig gegengeprüft: die 2026 publizierte Short-Interval-Asymptotik erreicht den Exponenten $17/30+o(1)$; P11s feste Wahl $3/5$ liegt im zulässigen Bereich.
+
 ## Korrekturblock – 27. September 2026
 
 Die beiden Fehler samt direkter operatorischer Folgestellen wurden über PR #176 korrigiert und in main gemergt.
@@ -1263,8 +1660,8 @@ Geprüfter Ausgangspunkt für die Fortsetzung:
 
 # III. Nächster Prüfpunkt
 
-Nun **P11 selbst neu lesen**, aber erstmals aus der unabhängig rekonstruierten Vorgeschichte heraus:
+Als nächstes **P12 und die frühe C0→C1-Übergangsphase** prüfen:
 
-> Welche Teile von P11 sind wirklich neue source-first Mathematik, welche sind nur re-instantiierte endliche Feshbach-/Gamma-Bausteine, und an welchem exakten Punkt beginnt die heute relevante Defekt-/Transport-/C1-Linie?
+> Welche Teile von P12 sind noch ein eigenständiges adelisches Injectivity-Programm, welche wurden durch die spätere source-first C1-Mediatorlinie ersetzt, und wie genau führt die Kette vom C0-signed-directed-system zum heutigen C1d/O1–O9-Stand?
 
-Besonders zu trennen sind finite-horizon Positivität, Gamma-Graphraum, Martingal-Restgeometrie, Feshbach-Schur-Korrektur, Übergangsmetriken, starker Transport und die ausdrücklich weiterhin offenen globalen Gram-/adelischen/Fredholm-Schichten.
+Dabei soll insbesondere geklärt werden, ob P12 noch mathematische Voraussetzungen liefert, die in der aktuellen C1-Linie tatsächlich gebraucht werden, oder ob es überwiegend ein paralleler bzw. historisch überholter Globalisierungsversuch ist.
