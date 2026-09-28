@@ -11,7 +11,7 @@ neues Manifest erzeugen.
 
 | Datei | SHA-256 |
 |---|---|
-| `papers/P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex` | `6a6698a18a4643f190850ac9b2005d2ec3d26ded4cac06e91b076a6d49eccd7c` |
+| `papers/P11_Global_Coupling_and_Object_X_Candidate_Geometry.tex` | `bdeb74e0d25b8d36f6792555e5b0a1dce49dbba293973fa58a31b205f6979684` |
 | `papers/P11_sections/P11_O3af_Gamma_Symbol_Bridge.tex` | `19445e51ac26afb75dc4f76725c613570955fcefbaf3520c58c0fa5b856bdfc2` |
 | `00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md` | `77818aee8e1df25cf067ceb55ea205f35c520942895508f1bac09e75faffc6ce` |
 | `00-grundlegung/ebene-XVI-objekt-x.md` | `2dd5ae5565ec7a34a2a474bf01d8411b85a10777800349281428127f95c8ca9d` |
