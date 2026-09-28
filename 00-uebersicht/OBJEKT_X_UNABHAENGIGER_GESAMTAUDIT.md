@@ -2,7 +2,7 @@
 
 **Beginn:** 24. September 2026  
 **Letzte Aktualisierung:** 27. September 2026  
-**Zuletzt integrierter Audit-Korrekturstand:** **main@6fc6355c0c7f4d72cae6bd41476cc501385f94dd**  
+**Zuletzt integrierter Audit-Korrekturstand:** **main@0aad2bda6a1cb7d4b28d6e3cc732ddde87b199d2**  
 **Arbeitsweise:** Mathematische Aussagen werden unabhängig geprüft. Statusdateien, frühere Audits und Repository-Markierungen dienen als Wegweiser, nicht als Beweis.  
 **Ziel:** Eine verständliche, fortlaufend aktualisierte Landkarte des gesamten Objekt-X-Programms vom ursprünglichen Fragenkatalog bis zur aktuellen Forschungsfront.
 
@@ -963,6 +963,210 @@ P04 ist nach Korrektur eine saubere finite Schnittstelle:
 ```
 
 Es enthält noch keinen global kompatiblen Objekt-X-Raum. Genau die fehlenden $J_{a,b}$ markieren rückblickend den Punkt, an dem die spätere starke Transport- und C1-Linie tatsächlich neue Mathematik hinzufügen musste.
+---
+
+## 14. P05–P10: Zwischenphase aus lokalen Bausteinen, Diagnostik und Firewalls
+
+Dieser Block ist bewusst ein **Struktur- und Abhängigkeitsaudit**, kein erneutes vollständiges Re-Proving jedes einzelnen Lemmas der sechs Papers. Geprüft wurden die Satzkerne, ihre Positivitätsquelle, die ausdrücklich gesetzten Firewalls und die tatsächliche spätere Verwendung in P11/C1.
+
+### 14.1 P05 – Relative Prime Channels and Arithmetic Edge Geometry
+
+P05 besitzt einen tragfähigen lokalen Kern. In auditierten Primfasern wird der relative Generator als Transportoperator identifiziert:
+
+```math
+D_{\rm rel}|_{\mathcal H_{p,a}}
+\cong
+2i\kappa_p^{\rm tr}\frac{d}{dt}
+```
+
+mit rein absolutstetigem Spektrum. Damit wird gerade ausgeschlossen, dass dieser Generator bereits der diskrete Hilbert–Pólya-Endoperator ist.
+
+Gesichert sind außerdem projektionswertige Kreuzspektralmaße, mögliche Überlappung verschiedener Primkanalbilder, die Matrixkoeffizientenform
+
+```math
+g_a(\log p)=\mathrm{Re}\langle a,U_{\log p}a\rangle,
+```
+
+und die arithmetische Identität
+
+```math
+\frac{\Lambda(p^m)}{\sqrt{p^m}}
+=
+\frac{\log p}{p^{m/2}}.
+```
+
+Die Positivitätsquelle ist jedoch nur lokal/modellrelativ; insbesondere ist der Matrixkoeffizient **kein Normquadrat**. Exakt zulässige Nichtnull-Lifts, Nichtentartung $c_p\ne0$, Liftunabhängigkeit, vollständige Primzahlpotenzoperatorik und globale Gramkopplung bleiben offen.
+
+Für P11 überlebt daher vor allem die **Architekturfrage**: Prime-Power-Kanäle dürfen nicht vorschnell orthogonalisiert oder als fertige globale positive Blöcke behandelt werden. Die konkrete P11-Realisierung wird aber neu als source-first Martingalgeometrie aufgebaut; P05s alter $D_{\rm rel}$ wird nicht zum C1-Operator fortgesetzt.
+
+**Rolle:** tragfähiger lokaler Baustein + Schnittstelle; globale Realisierung später ersetzt.
+
+### 14.2 P06 – Jacobi, Feshbach and Divisor Graph
+
+P06s robuster Satzkern ist die endliche Schur-/Feshbach-Grammatik. Endliche Feshbach-Identitäten, Weyl-/Stieltjes-Resolventensprache und finite Divisorpfad-/Trace-Geometrie sind mathematisch sinnvoll im jeweils typisierten endlichen Modell.
+
+Gleichzeitig beweist P06 ein wichtiges historisches No-Go: Im konkreten NEU-088–90-Scaling kollabiert der symmetrisierte Resolventenblock in Hilbert–Schmidt-Norm und
+
+```math
+D_N(z)\longrightarrow1,
+```
+
+nicht zu einem nichttrivialen $C\xi(z)$-Grenzwert.
+
+Das ist ausdrücklich **kein allgemeiner Feshbach-No-Go**. Die eigentliche Firewall lautet vielmehr:
+
+```math
+\text{endliche Feshbachidentität}
+\ne
+\text{Schattennorm-kontrollierter globaler Grenzoperator}.
+```
+
+Genau diese finite Feshbach-Sprache überlebt später in P11 am stärksten. Dort wird sie jedoch auf **neuen** source-first Operatoren realisiert:
+
+```math
+\Sigma_R
+=
+H_R(I+R_R^*R_R)^{-1}H_R^*
+\ge0.
+```
+
+Die alte Determinantenskalierung, der alte diskrete Eigenbasisansatz und der historische $D_{\rm rel}$-Endoperator werden nicht übernommen.
+
+**Rolle:** tragfähiges algebraisches Werkzeug + modellbezogene No-Go-Diagnose; Feshbach-Struktur in P11 neu instanziiert.
+
+### 14.3 P07 – Weil Form Statistics
+
+P07 bündelt mehrere statistische und Herglotz-orientierte Suchpfade. Tragfähig sind unter anderem Skalentriage, verschiedene PSD-/Korrelationskonstruktionen, die einseitige LFF→Rampen-Implikation und das Herglotz-Kriterium.
+
+Beim unabhängigen Audit fiel jedoch ein echter RH-Typfehler auf. Die alte Fassung definierte zunächst das positive reelle Nullstellenmaß **unter RH** und behauptete anschließend
+
+```math
+m_{\rm arith}\text{ Herglotz}
+\Longleftrightarrow
+\mathrm{RH}.
+```
+
+Das war logisch zirkulär typisiert. Nach Patch 6 ist jetzt RH-frei
+
+```math
+m_{\rm arith}(z)
+:=
+-\frac{\Xi'(z)}{\Xi(z)}
+```
+
+als meromorphe Funktion definiert, und korrekt gilt
+
+```math
+m_{\rm arith}\text{ holomorph und Herglotz auf }\mathbb C^+
+\quad\Longleftrightarrow\quad
+\mathrm{RH}.
+```
+
+Erst unter RH existiert die positive reelle Nevanlinna-Maßdarstellung
+
+```math
+\mu_{\rm arith}
+=
+\sum_\gamma m_\gamma\delta_\gamma,
+```
+
+und erst dann wird die Weil-Auswertung einer Autokorrelation zur Summe von Absolutquadraten. Ohne RH bleibt die Nullstellenseite die gepaarte Weilform.
+
+Die Jacobi-/Herglotz-Grenzarchitektur bleibt konditional: Würden echte Herglotz-Approximanten lokal gleichmäßig gegen $-\Xi'/\Xi$ konvergieren, wäre RH bereits bewiesen. Selbstadjungierter Jacobi-Kandidat, kanonische Renormierung und der Grenzübergang fehlen.
+
+In P11/C1 wird dieser statistische/Herglotz-Pfad nicht als konstruktiver Kern weiterverwendet.
+
+**Rolle:** diagnostische/bedingte Schnittstelle und historischer Suchpfad; keine direkte C1-Geometrie.
+
+### 14.4 P08 – Renormalized Prime Operators and Finite-Part Structures
+
+P08 enthält zwei getrennte Stränge. Im Jacobi-Strang kollabiert die erste Lanczos-Kante; ein allgemeines skalares Renormierungs-No-Go ist aber nicht bewiesen, weil die entscheidende stärkere Quotientenasymptotik offen bleibt.
+
+Im arithmetischen Strang ist die wichtigste saubere Korrektur der exakte Mangoldt-Mellin-Kanal. Die geeignete geglättete Mangoldt-Summe besitzt die korrekte Mellin-Darstellung; Prime-only-Abkürzungen verwechseln dagegen $\vartheta$ und $\psi$.
+
+Viele operatorische Aussagen bleiben ausdrücklich konditional: feste-$\beta$-Spurklasse, intrinsisches T2, Nichtentartung der Primkanäle, primdiagonale Mangoldt-Observable, operatorieller Finite Part und Fredholm-Realisierung.
+
+Der Schutzsatz von P08 ist deshalb weiterhin gültig:
+
+```math
+\text{analytische Fortsetzung von }-\zeta'/\zeta
+\ne
+\text{konstruierter operatorieller Finite Part}
+\ne
+\text{Objekt-X-/Hilbert–Pólya-Operator}.
+```
+
+P11 verwendet diese konkrete Renormierungs-/Finite-Part-Architektur nicht als Kern. Ihre wichtigste Wirkung ist diagnostisch: alte skalare/Jacobi-/Prime-only-Abkürzungen werden nicht wieder geöffnet.
+
+**Rolle:** Renormierungsdiagnose + analytische Schnittstelle; überwiegend durch spätere source-first Architektur ersetzt.
+
+### 14.5 P09 – BC, Hochschild and Charged Cohomology
+
+P09 besitzt einen eigenständigen algebraischen Seitenbefund: eine nichttriviale neutrale Hochschildklasse sowie eine geladene äußere Derivation und ein nichttrivialer geladener Cup in einem erweiterten logarithmischen Koeffizientenmodul.
+
+Diese Nichttrivialität ist jedoch **kohomologisch**, nicht Hilbert-positiv. Die zyklische Verfeinerung folgt nicht automatisch; mehrere kanonische zyklische/Hopf-Reparaturen scheitern, und für den kanonischen skalaren Basislift gilt
+
+```math
+t\Phi_0\ne C\Phi_0
+\qquad\forall C\in\mathbb C.
+```
+
+P09 baut keine Weil-/Gamma-Paarung, keinen positiven Gramraum und keinen Hilbert–Pólya-Operator. Im aktuellen P11/C1-Kern findet sich keine direkte Verwendung dieser Hochschildklassen.
+
+**Rolle:** tragfähiger algebraischer Seitenzweig + zyklische Firewall; für die heutige C1-Linie historisch seitlich.
+
+### 14.6 P10 – No-Go Theorems for Canonical Global Coupling
+
+P10 ist bewusst keine Konstruktionsstufe, sondern die systematische Sammlung der bis dahin belastbaren Sperren. Besonders wichtig bleiben:
+
+- lokaler Rang-eins-/Primkanalbefund ist keine globale positive Gramgeometrie;
+- Transportgenerator ist kein diskreter HP-Endoperator;
+- finite Feshbach-Identität ist keine globale Schatten-/Fredholmtheorie;
+- die konkrete alte Determinantenskalierung kollabiert;
+- LFF/Rampe, Jacobi, Primeclock, Prime-only-Mellin, Finite-Part- und mehrere Hochschild/KMS-Reparaturen dürfen nicht überinterpretiert werden.
+
+P10 schließt Objekt X ausdrücklich **nicht** aus. Als offener Rest bleiben gerade die Strukturen, die P11 später neu angreift:
+
+```math
+\text{globale nichtorthogonale Gramkopplung}
++
+\text{Primzahlpotenzkanäle}
++
+\text{archimedischer Kanal}
++
+\text{positive globale Weil-Geometrie}.
+```
+
+P10 überlebt daher in P11/C1 nicht als Operator, sondern als **Architekturverfassung**: alte Abkürzungen sind gesperrt und spätere Konstruktionen müssen ihre Typ- und Grenz-Firewalls respektieren.
+
+**Rolle:** No-Go-/Firewall-Ergebnis; stark als Constraint übernommen.
+
+### 14.7 Abhängigkeitsmatrix P05–P10 → P11/C1
+
+| Paper | Satzkern | Positivitätsquelle | Haupt-Firewall | Tatsächliches Überleben in P11/C1 | Hauptrolle |
+| --- | --- | --- | --- | --- | --- |
+| **P05** | lokale Primkanäle, Transportnormalform, Kreuzspektralmaße, Mangoldt-Gewichte | lokal/modellrelativ; Matrixkoeffizienten, kein Normquadrat | Lift/Nichtentartung/globaler Gramraum offen | Motive und Typgrenzen; konkrete Quelle in P11 durch Martingalmodell neu gebaut | Baustein + Schnittstelle |
+| **P06** | finite Schur/Feshbach-Grammatik, Resolventen- und Divisorgraph-Sprache | keine globale Positivität; finite Algebra | kein Schattenlimes; alte Determinante $\to1$ | **Feshbach-Grammatik direkt strukturell übernommen**, aber mit neuen P11-Operatoren | Baustein + No-Go |
+| **P07** | Statistik, PSD-Testkegel, LFF/Rampe, RH-freies Herglotz-Kriterium | Testkegel-PSD; positive Nullstellenmaßform erst unter RH | Grenz-Jacobi/Herglotz würde bereits RH tragen | keine direkte C1-Konstruktion | diagnostische/konditionale Schnittstelle |
+| **P08** | Jacobi-Kollapsdiagnose, exakter Mangoldt-Mellin-Kanal | keine neue globale positive Form; positive Prä-Lanczos-Metrik offen | Finite Part/Spurklasse/Operatorbrücke offen | hauptsächlich Firewalls; konkrete Architektur nicht übernommen | Diagnose / ersetzte Vorstufe |
+| **P09** | nichttriviale geladene Hochschildstruktur | kohomologische Nichttrivialität, keine Hilbertpositivität | zyklische/Weil-/Gram-Brücke fehlt | keine direkte Verwendung im P11/C1-Kern | algebraischer Seitenzweig |
+| **P10** | konsolidierte No-Gos P05–P09 | keine neue Positivitätsquelle | schützt vor falschen Abkürzungen | stark als Design-Constraints/Provenienz | Firewall |
+
+### 14.8 Gesamtbild der Zwischenphase
+
+Die Zwischenpapers liefern damit nicht den gesuchten globalen positiven Operator. Ihre historische Leistung ist eine andere:
+
+```math
+\text{P05–P06: lokale/finite Mechanismen}
+\quad+\quad
+\text{P07–P09: Diagnostik und Seitenpfade}
+\quad+\quad
+\text{P10: konsolidierte Firewalls}
+```
+
+führen zu einem stark eingeschränkten Suchraum. P11 beginnt anschließend tatsächlich mit einer neuen source-first finite-window Konstruktion, statt einen der alten globalen Kandidaten einfach fortzusetzen.
+
+Die stärkste direkte Kontinuität ist **P06 → P11** über die Feshbach-/Schur-Sprache. P05 wirkt vor allem über Primkanal-/Nichtorthogonalitäts-Firewalls. P07–P09 werden nicht zum konstruktiven C1-Kern. P10 bleibt als Negativ- und Typenkontrolle wirksam.
 
 ---
 
@@ -1037,6 +1241,16 @@ Die Paritätsreduktion $U(1)\to\mathbb Z_2$ trägt, selektiert jedoch keinen ein
 
 P04 behauptet weder $J_{a,b}$ noch den induktiven Grenzraum als Satz; der globale Teil war bereits conjectural. PR #181 schärft diese lokal/global-Grenze und synchronisiert P04 mit den aktuellen NEU-Audits.
 
+## Durchlauf 11
+
+P05–P10 als gebündelte Zwischenphase geprüft. P05 enthält tragfähige lokale Primkanal-/Transport- und arithmetische Gewichtsaussagen, aber keine globale Grampositivität. P06 liefert die finite Feshbach-/Schur-Grammatik, die später strukturell in P11 wiederkehrt; die historische Determinantenskalierung kollabiert dagegen auf $D_N\to1$.
+
+P07/P08/P09 sind überwiegend diagnostische, konditionale oder seitliche Pfade. In P07 wurde ein echter RH-Typfehler korrigiert: $m_{\rm arith}=-\Xi'/\Xi$ ist nun RH-frei meromorph definiert; positive reelle Nevanlinna-Maßdarstellung und Summe-von-Quadraten-Weilbrücke sind explizit RH-konditional. PR #182 und die synchronisierte Markdown-Quelle enthalten die Korrektur.
+
+P08s belastbarer Kern sind Renormierungsdiagnosen und der korrekte Mangoldt-Mellin-Kanal; die operatorische Finite-Part-/Fredholm-Brücke bleibt offen. P09 liefert echte geladene Hochschildstruktur, aber keine positive Weil-/Gramgeometrie und wird im heutigen C1-Kern nicht direkt verwendet.
+
+P10 bleibt als No-Go-/Firewall-Sammlung architektonisch wichtig. Es sperrt die alten Abkürzungen, ohne die spätere nichtorthogonale source-first Objekt-X-Geometrie auszuschließen. Die Abhängigkeitsmatrix zeigt als stärkste konstruktive Kontinuität P06→P11; P05 liefert vor allem Typ-/Primkanalgrenzen, P07–P09 werden weitgehend nicht in C1 fortgeführt.
+
 ## Korrekturblock – 27. September 2026
 
 Die beiden Fehler samt direkter operatorischer Folgestellen wurden über PR #176 korrigiert und in main gemergt.
@@ -1049,8 +1263,8 @@ Geprüfter Ausgangspunkt für die Fortsetzung:
 
 # III. Nächster Prüfpunkt
 
-Nun die Papers **P05 bis P10** als verdichtete Zwischenphase prüfen, möglichst in wenigen Durchläufen:
+Nun **P11 selbst neu lesen**, aber erstmals aus der unabhängig rekonstruierten Vorgeschichte heraus:
 
-> Welche dieser Papers enthalten heute noch eigenständige tragfähige Mathematik, welche sind hauptsächlich historische Suchpfade oder No-Go-Ergebnisse, und welche konkrete Struktur wird später tatsächlich von P11/C1 weiterverwendet?
+> Welche Teile von P11 sind wirklich neue source-first Mathematik, welche sind nur re-instantiierte endliche Feshbach-/Gamma-Bausteine, und an welchem exakten Punkt beginnt die heute relevante Defekt-/Transport-/C1-Linie?
 
-Der Audit soll dabei nicht wieder jedes Detail der NEU-Knoten duplizieren, sondern pro Paper nur Satzkern, Positivitätsquelle, offene Firewall und Weiterverwendung herausarbeiten.
+Besonders zu trennen sind finite-horizon Positivität, Gamma-Graphraum, Martingal-Restgeometrie, Feshbach-Schur-Korrektur, Übergangsmetriken, starker Transport und die ausdrücklich weiterhin offenen globalen Gram-/adelischen/Fredholm-Schichten.
