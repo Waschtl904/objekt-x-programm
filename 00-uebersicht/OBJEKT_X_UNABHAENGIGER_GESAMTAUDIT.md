@@ -2,7 +2,7 @@
 
 **Beginn:** 24. September 2026  
 **Letzte Aktualisierung:** 27. September 2026  
-**Zuletzt integrierter Audit-Korrekturstand:** **main@9a86fe7d40a44ba2ce5b1acb0f2672ee4b36dcb0**  
+**Zuletzt integrierter Audit-Korrekturstand:** **main@6f902348f14bc8886ffa29ead1b1af27f0c8ae2e**  
 **Arbeitsweise:** Mathematische Aussagen werden unabhängig geprüft. Statusdateien, frühere Audits und Repository-Markierungen dienen als Wegweiser, nicht als Beweis.  
 **Ziel:** Eine verständliche, fortlaufend aktualisierte Landkarte des gesamten Objekt-X-Programms vom ursprünglichen Fragenkatalog bis zur aktuellen Forschungsfront.
 
@@ -1527,7 +1527,7 @@ Diese spätere C1/O-Geometrie ist also **nicht** die Fortsetzung der P11-Metrikf
 | $1\le A\le A_8$: rohe $T/D$-Cocycles | **O1–O7 lokal bewiesen** | Positivität noch separat |
 | erste Kammer: $G_A\succ0$ | **O8 lokal zertifiziert** | positiver Reserveboden bis $A_8$ |
 | $G_A^{1/2}$ → korrigierte positive Transporte | **O9 lokal bewiesen** | isometrische positive Cocycles auf erster Kammer |
-| rechts von $A_8$, cofinal/unbounded, global Weil | **offen** | O10/globaler Abschluss fehlt |
+| rechts von $A_8$ | **historischer, bis Durchlauf 12 geprüfter Stand:** offen; aktuelles `main` enthält inzwischen ein neues `chambers-through-a11`-Paket, das hier noch nicht unabhängig auditiert ist | keine rückwirkende Promotion aus dem neuen Paket |
 
 ### 15.13 Gesamturteil zu P11
 
@@ -1551,7 +1551,349 @@ Historisch ist die Entwicklung daher genauer:
 \text{O9 positive Transporte}.
 ```
 
-Der letzte Pfeil ist weiterhin nur lokal/finit: Eine unbeschränkte, kofinale positive Fortsetzung und globale Weil-Positivität sind dadurch nicht erreicht.
+Für die bis Durchlauf 12 unabhängig geprüfte Kette war der letzte Pfeil nur lokal/finit; eine unbeschränkte, kofinale positive Fortsetzung und globale Weil-Positivität waren daraus nicht erreicht. Seitdem wurde parallel ein neues `chambers-through-a11`-Paket auf `main` integriert. Dessen mathematische Reichweite wird erst in einem späteren Durchlauf unabhängig geprüft und hier nicht rückwirkend vorausgesetzt.
+---
+
+## 16. P12 und der C0→C1-Neustart: methodischer Hubzweig versus heutige Defektgeometrie
+
+Der gemeinsame Audit von P12 und der frühen C0→C1-Linie beantwortet die zentrale Herkunftsfrage eindeutig:
+
+```math
+\text{P12-Hubprogramm}
+\dashrightarrow
+\text{C0/C1-Mediator}
+```
+
+ist **kein bewiesener direkter Ableitungspfeil**. P12 ist ein methodischer und lokal-hubbezogener Vorläufer; die spätere physische C0/C1-Geometrie beginnt logisch mit einer neuen Konstruktion.
+
+### 16.1 Was P12 tatsächlich untersucht
+
+Trotz des Titels „Adelic Hub Injectivity“ arbeitet P12 selbst nicht auf einem globalen Schwartz–Bruhat- oder P02-Adelraum. Sein konkretes Objekt ist der gefaltete skalare Drei-Shift-Operator
+
+```math
+Lh(u)
+=
+p[h(u-a)-h(u+a)]
++r[h(u-b)-h(u+b)]
++q[h(u-T)-h(u+T)]
+```
+
+auf $L^2(R,S)$ mit
+
+```math
+a=\tfrac12\log2,
+\qquad
+b=\tfrac12\log3,
+\qquad
+T=\log2
+```
+
+und den Prime-Power-Gewichten der aktiven Kanäle $2,3,4$.
+
+Diese Gewichte und Shifts sind genau die entsprechende gefaltete lokale Hubstruktur aus der P11-Prime-Power-Geometrie. Das Wort „adelic“ beschreibt daher die finite-adische/Prime-Power-Provenienz, nicht einen in P12 konstruierten globalen adelischen Quellenraum.
+
+Diese Scope-Grenze wurde über PR #186 nun auch direkt in P12 dokumentiert.
+
+### 16.2 Satzkern von P12: Kerneltrivialität in arithmetischen Kammern
+
+P12 beweist für große Teile des Drei-Shift-Parameterraums
+
+```math
+\ker L_{R,S,T_0}^{\{a,b,2a\}}=\{0\}.
+```
+
+Global geschlossen sind unter anderem die reinen Tail-/Randstrata, der Mischstreifen ab der Schwelle
+
+```math
+\rho=\frac12\log\frac{10}{9},
+```
+
+sowie der all-radius restricted-tail Bereich $\sigma\le R$.
+
+Unterhalb $\rho$ besitzt P12 zahlreiche exakte lokale Zellen mit invertiblen endlichen Rohmatrizen – bis hin zu den 42-, 44-, 92-, 43- und 68-dimensionalen Zertifikaten. Der verbleibende Overlap unterhalb $\rho$ ist im Paper jedoch ausdrücklich nicht vollständig global geschlossen.
+
+Der frühere Titel des konsolidierten Korollars „global injectivity“ konnte deshalb überstark gelesen werden; PR #186 präzisiert ihn zu **injectivity on established strata**.
+
+### 16.3 Injektivität ist nicht die spätere C1-Koerzivität
+
+Die Aussage
+
+```math
+\ker L=\{0\}
+```
+
+ist funktionalanalytisch wesentlich schwächer als
+
+```math
+\|Lh\|\ge c\|h\|
+\qquad c>0.
+```
+
+P12 beweist aus seinen Kernelzertifikaten keine uniforme globale Untergrenze dieser Art auf dem gesamten deklarierten Parametergebiet. Damit folgen aus P12 allein weder geschlossene Reichweite noch beschränkte Invertierbarkeit auf der Reichweite, positive Pullbackmetrik oder ein isometrisches Transport-/Cocycle-System.
+
+Die lokalen invertiblen endlichen Matrizen beweisen genau ihre lokale algebraische Nichtentartung; sie werden nicht zu einer uniformen Kontinuums-Koerzivität hochgestuft.
+
+### 16.4 P12 ist ein methodischer P11-Hubvorläufer, kein C1-Defektvorläufer
+
+P12 vertieft die Frage, ob ein lokalisierter Prime-Power-Hub in neuen Aktivierungskammern einen Kern entwickeln kann. Das ist für die historische P11-Hub-/Terminaldiagnostik relevant.
+
+Es konstruiert aber nicht:
+
+- den physischen signed Formraum $F_a$ der späteren C0-Linie;
+- die Spektralfunktionen $A,m,n$;
+- die Readouts $T_a,D_a$;
+- den Defekttransfer $R_a$;
+- den Defektoperator $I-R_a^*R_a$;
+- oder die positive Quadratwurzelkorrektur.
+
+Auch die Provenienzdateien der späteren C0-/C1-Pakete bestätigen diese Trennung: P12 ist weder in den gebundenen Eingaben des `x-interface-directed-system` noch in den `input_bindings` des gekoppelten C1-Spektralmediators enthalten.
+
+Der Pfeil P12→C1 ist damit **methodisch**, nicht beweistheoretisch.
+
+### 16.5 C0 startet neu mit der tatsächlichen signed finiten Weil-Form
+
+Die spätere C0-Linie nimmt wieder die physischen Zwei-Mellin-Quellen
+
+```math
+W_a
+=
+H_0^1((-a,a))
+\cap\ker E_+
+\cap\ker E_-
+```
+
+und die tatsächliche finite signed Form $q_a$ als Ausgangspunkt.
+
+Physische Nullfortsetzung liefert auf dem aktuell behandelten Band die exakte Natürlichkeit
+
+```math
+q_b(J_{a,b}u,J_{a,b}v)
+=
+q_a(u,v).
+```
+
+Da $q_a$ zu diesem Zeitpunkt noch nicht positiv bekannt ist, wird für den reinen Hilbertträger zunächst die künstlich verschobene Form
+
+```math
+q_a+17\|\cdot\|_2^2
+```
+
+verwendet. Das erzeugt ein echtes gerichtetes Hilbertsystem, wird aber ausdrücklich **nicht** Objekt X genannt.
+
+Diese C0-Konstruktion ist damit die kanonische signed Quellen-/Formebene, auf der die spätere C1-Frage neu formuliert wird.
+
+### 16.6 Der gekoppelte C1-Spektralmediator wird ohne Weil-Positivität konstruiert
+
+Auf dem festen Horizont bis $1$ werden die reellen even Spektralfunktionen
+
+```math
+A=g+s,
+\qquad
+m=g+\omega-c,
+\qquad
+n=\kappa+\omega+c
+```
+
+gewählt. Sie erfüllen
+
+```math
+m+n=A,
+\qquad
+m-n=w,
+```
+
+wobei $w$ das physische signed Weil-Symbol des deklarierten endlichen Kanalsets ist.
+
+Auf dem festen positiven Hilbertraum $H=L^2(\mathbb R,d\xi)$ werden dann
+
+```math
+Tu=\frac{m}{\sqrt A}\widehat u,
+\qquad
+Du=\frac{n}{\sqrt A}\widehat u
+```
+
+definiert.
+
+Die einzige Quadratwurzel ist diejenige des **explizit positiven Envelopes** $A=g+s$. Sie ist keine Quadratwurzel der vorausgesetzten positiven Weil-Form.
+
+Algebraisch folgt exakt
+
+```math
+q_a(u,v)
+=
+\langle Tu,Tv\rangle
+-
+\langle Du,Dv\rangle.
+```
+
+Das ist zunächst eine signed Differenz zweier positiver Gramformen und gerade noch **keine** positive Realisierung.
+
+### 16.7 Der Quotienten-/Defektabstieg ist wirklich wohldefiniert
+
+Der Mediatorbeweis liefert unabhängig von der Signfrage die quantitative Untergrenze
+
+```math
+\|Tu\|^2
+>
+\frac{2}{15}\|u\|_2^2.
+```
+
+Somit ist $T$ auf den physischen Quellen injektiv. Nach Abschluss des C0-Formraums $F_a$ erweitert sich
+
+```math
+T_a:F_a\longrightarrow H_a
+```
+
+zu einem beschränkten Isomorphismus auf den geschlossenen Bildraum $H_a=\overline{T(W_a)}$.
+
+Daher existiert der beschränkte inverse Quelloperator
+
+```math
+S_a(T_au)=u.
+```
+
+Der Defekttransfer
+
+```math
+R_a(T_au)
+:=
+D_au
+=
+D\,S_a(T_au)
+```
+
+ist damit wohldefiniert und beschränkt; im Paket wird sogar eine explizite grobe Normschranke bewiesen.
+
+Ein separater problematischer Kerneinschluss wird nicht versteckt: Wegen der strikten unteren Schranke ist $\ker T_a=\{0\}$.
+
+### 16.8 Exakte Defektidentität – und die präzise Positivitätsgrenze
+
+Mit
+
+```math
+C_a=R_a^*R_a
+```
+
+ergibt sich auf $H_a$ exakt
+
+```math
+q_a(S_ah,S_ak)
+=
+\langle h,(I-C_a)k\rangle.
+```
+
+Insbesondere
+
+```math
+q_a[u]
+=
+\|T_au\|^2
+-
+\|R_aT_au\|^2.
+```
+
+Daraus folgt präzise
+
+```math
+q_a\ge0
+\quad\Longleftrightarrow\quad
+R_a^*R_a\preceq I
+\quad\Longleftrightarrow\quad
+\|R_a\|\le1.
+```
+
+Der Mediator reduziert also die Positivitätsfrage exakt auf eine Kontraktionsfrage. Er **beweist diese Kontraktion auf neuen Fenstern noch nicht**.
+
+Strikte physische Koerzivität verlangt entsprechend
+
+```math
+I-R_a^*R_a
+\succeq
+\eta_a I,
+\qquad
+\eta_a>0.
+```
+
+Erst dann folgt
+
+```math
+\|R_a\|^2\le1-\eta_a<1
+```
+
+und die beschränkt invertierbare positive Wurzel
+
+```math
+\Delta_a
+=
+(I-R_a^*R_a)^{1/2}.
+```
+
+Genau hier liegt die Grenze zwischen **C0/C1 signed geometry** und **positiver C1 geometry**.
+
+### 16.9 Von C1d zu den positiven Transporten
+
+Auf dem ursprünglich unabhängig zertifizierten terminalen Horizont $1$ ergibt die physische Koerzivität zusammen mit der Defektabschätzung
+
+```math
+I-R_1^*R_1\succeq\eta I>0.
+```
+
+C1d kann deshalb mit einer einzigen terminalen Quadratwurzel $\Delta_1$ für alle eingebetteten kleineren Quellen arbeiten und erhält eine exakte positive Gramidentität.
+
+Die späteren O1–O7-Pakete trennen anschließend sorgfältig Rohtransport der $T$- und $D$-Bilder. Die Defektkompatibilität wird als eigener Satz behandelt; ein falsches Quadratwurzelintertwining wird nicht vorausgesetzt.
+
+Der bis Durchlauf 12 unabhängig geprüfte Stand schloss mit O8/O9 die erste positive Kammer bis $A_8=\tfrac12\log8$.
+
+### 16.10 Parallel neuer Live-Front-Stand: noch nicht auditiert
+
+Nach Abschluss von Durchlauf 12 wurde `main` parallel erweitert. Der aktuelle Repository-Stand enthält inzwischen ein Paket
+
+`research/x-c1/chambers-through-a11-2026-09-28/`
+
+einschließlich neuer O10-, Wand-, $A_9$- und $A_{11}$-Materialien.
+
+Diese Dateien sind **noch nicht Bestandteil des unabhängigen historischen Audits**. Daher bedeutet die ältere Aussage „rechts von $A_8$ offen“ nur den bis Durchlauf 12 verifizierten Stand der O1–O9-Kette. Aus dem bloßen Vorhandensein oder Registry-Status des neuen Pakets wird hier keine mathematische Promotion abgeleitet.
+
+### 16.11 P12-Entscheidungsmatrix
+
+| P12-Komponente | Einordnung | Begründung |
+| --- | --- | --- |
+| Drei-Shift-Hub (L) mit Kanälen (2,3,4) | **methodischer Vorläufer** | lokaler/folded Ausschnitt der P11-Prime-Power-Hubidee |
+| Kerneltrivialität auf geschlossenen Strata | **tragfähiger lokaler Satzkern** | exakte Funktions-/Zellargumente; keine Positivität nötig |
+| lokale 42/44/92/43/68-Matrixzertifikate | **lokale Nichtentartungszertifikate** | beweisen lokale Algebra, keine uniforme Kontinuums-Koerzivität |
+| verbleibender Overlap unter (ho) | **offene Brücke** | P12 selbst lässt Restregionen offen |
+| globale P02-adelische Quelle/Port | **nicht in P12 konstruiert** | Titelprovenienz ≠ globaler Adelraum |
+| (T_a,D_a,R_a)-Mediator | **ersetzte/neue Architektur** | entsteht später unabhängig; P12 nicht in den input bindings |
+| positive Defektwurzel ( (I-R_a^*R_a)^{1/2}) | **nicht P12** | setzt spätere Koerzivität voraus |
+| globale/cofinale Objekt-X-Geometrie | **Fernziel** | weder P12 noch C1d/O1–O9 allein liefern sie |
+
+### 16.12 Belegte Herkunftskette
+
+Die historisch korrekte Kette ist deshalb
+
+```math
+\text{P12: lokaler Hub-Injektivitätszweig}
+\dashrightarrow
+\text{methodische Erfahrung}
+```
+
+und unabhängig davon
+
+```math
+\text{C0 signed source system}
+\longrightarrow
+\text{C1 spectral mediator }(T,D)
+\longrightarrow
+R_a
+\longrightarrow
+I-R_a^*R_a
+\longrightarrow
+\text{physische Koerzivität}
+\longrightarrow
+\text{positive Quadratwurzelgeometrie}.
+```
+
+Der gestrichelte Pfeil von P12 zur C1-Linie darf nach dem aktuellen Provenienzaudit **nicht** durch einen durchgezogenen Beweispfeil ersetzt werden.
 
 ---
 
@@ -1648,6 +1990,18 @@ Die spätere physische Koerzivität bei Terminal $1$ schließt C1d auf $B\le a\l
 
 Der externe Guth–Maynard-Input im scharfen P11-Primezellenschritt wurde unabhängig gegengeprüft: die 2026 publizierte Short-Interval-Asymptotik erreicht den Exponenten $17/30+o(1)$; P11s feste Wahl $3/5$ liegt im zulässigen Bereich.
 
+## Durchlauf 13
+
+P12 und die frühe C0→C1-Phase gemeinsam, aber quellenlogisch getrennt geprüft. P12 untersucht einen gefalteten Drei-Shift-Hubausschnitt der P11-Prime-Power-Geometrie und beweist Kerneltrivialität in großen arithmetischen Strata sowie zahlreiche lokale Nichtentartungszellen. Es konstruiert weder einen globalen P02-Adelraum noch den späteren C0/C1-Spektralmediator.
+
+Ein funktionalanalytischer Scope-Punkt wurde über PR #186 explizit gemacht: $\ker L=\{0\}$ ist Injektivität, keine uniforme Koerzivität. P12 liefert daraus nicht automatisch geschlossene Reichweite, bounded inverse, positive Pullbackmetrik oder Transportcocycle.
+
+Die Provenienz des C0-/C1-Neustarts bindet P12 nicht als Eingabe. C0 baut unabhängig die tatsächliche signed finite Weil-Form und ihr Nullfortsetzungs-Directed-System. Der spätere Spektralmediator definiert RH-frei $T,D$ mit $q=\langle T,T\rangle-\langle D,D\rangle$, beweist eine strikte untere Schranke für $T$, konstruiert dadurch den beschränkten Defekttransfer $R_a(T_au)=D_au$ und erhält exakt $q_a=\langle T_a\cdot,(I-R_a^*R_a)T_a\cdot\rangle$.
+
+Die Positivitätsgrenze ist damit exakt lokalisiert: $q_a\ge0\iff\|R_a\|\le1$; strikte Koerzivität entspricht $I-R_a^*R_a\succeq\eta_aI$. Erst spätere physische Gap-Sätze liefern diese strikte Reserve und erlauben die positive Quadratwurzelkorrektur.
+
+Seit Durchlauf 12 enthält `main` parallel ein neues `chambers-through-a11`-Paket. Dessen O10-/Wall-/A9-/A11-Reichweite wurde in diesem historischen Durchlauf bewusst nicht rückwirkend als bewiesen übernommen und muss separat auditiert werden.
+
 ## Korrekturblock – 27. September 2026
 
 Die beiden Fehler samt direkter operatorischer Folgestellen wurden über PR #176 korrigiert und in main gemergt.
@@ -1660,8 +2014,8 @@ Geprüfter Ausgangspunkt für die Fortsetzung:
 
 # III. Nächster Prüfpunkt
 
-Als nächstes **P12 und die frühe C0→C1-Übergangsphase** prüfen:
+Als nächstes den **aktuellen Live-Front-Sprung `chambers-through-a11-2026-09-28`** unabhängig prüfen, bevor die historische Rekonstruktion weitergeführt wird:
 
-> Welche Teile von P12 sind noch ein eigenständiges adelisches Injectivity-Programm, welche wurden durch die spätere source-first C1-Mediatorlinie ersetzt, und wie genau führt die Kette vom C0-signed-directed-system zum heutigen C1d/O1–O9-Stand?
+> Welche der neuen O10-/Wall-/A9-/A11-Aussagen sind analytische Sätze, welche benötigen Rechnerzertifikate, wie werden Prime-Power-Wände transportiert, und wie weit reicht die positive C1-Geometrie nun tatsächlich über die bisher geprüfte erste Kammer hinaus?
 
-Dabei soll insbesondere geklärt werden, ob P12 noch mathematische Voraussetzungen liefert, die in der aktuellen C1-Linie tatsächlich gebraucht werden, oder ob es überwiegend ein paralleler bzw. historisch überholter Globalisierungsversuch ist.
+Erst danach soll der Gesamtaudit wieder mit der weiteren historischen/globalen Linie fortgesetzt werden, damit die Synthese oben nicht hinter dem inzwischen veränderten `main`-Frontier zurückbleibt.
