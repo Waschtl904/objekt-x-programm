@@ -435,9 +435,11 @@ ist eine selbstadjungierte Realisierung nicht bewiesen.
 
 \begin{definition}[Nevanlinna-normalisierte Approximanten]
 \label{def:renorm-approximants}
-Da $\mu_{\Omega,N}(\mathbb R)=1$, während
-$\mu_{\rm arith}$ unendliche Gesamtmasse besitzt, ist für einen möglichen
-Grenzübergang eine positive Skalierung einzuführen:
+Da $\mu_{\Omega,N}(\mathbb R)=1$, ist für einen möglichen nichttrivialen
+Grenzübergang eine positive Skalierung einzuführen. Unter RH besitzt die
+positive Zielmaßdarstellung $\mu_{\rm arith}$ unendliche Gesamtmasse; RH-frei
+ist das primäre Zielobjekt dagegen die meromorphe Funktion
+$m_{\rm arith}=-\Xi'/\Xi$:
 \[
   \widetilde\mu_N:=c_N\mu_{\Omega,N},
   \qquad c_N>0.
@@ -463,7 +465,8 @@ also
 \[
   \Re\widetilde m_N^{\rm ren}(i)=a_N.
 \]
-Da $\Re m_{\rm arith}(i)=0$, folgt notwendig
+Direkt aus der reellen Symmetrie von $\xi$ gilt RH-frei
+$\Re m_{\rm arith}(i)=0$. Daher folgt notwendig
 \[
   \boxed{
   \widetilde m_N^{\rm ren}
@@ -504,15 +507,19 @@ Der Grenzübergang selbst bleibt offen. Insbesondere fehlen:
   \item eine kanonische Skalierung $c_N>0$ und Kontrolle der Konstanten
         $a_N\in\mathbb R$, wobei jede erfolgreiche Folge nach
         Theorem~\ref{thm:aN-zero} notwendig $a_N\to0$ erfüllen muss;
-  \item vague/lokale Maßkonvergenz
-        $\widetilde\mu_N\to\mu_{\rm arith}$;
+  \item die RH-frei formulierte Hauptkonvergenz
+        $\widetilde m_N^{\rm ren}\to m_{\rm arith}=-\Xi'/\Xi$
+        lokal gleichmäßig auf $\mathbb C^+$;
   \item Kontrolle der Nevanlinna-Gewichte, etwa von
         \[
           \int_{\mathbb R}
           \frac{d\widetilde\mu_N(t)}{1+t^2};
         \]
-  \item Tail-Kontrolle, die aus der Maßkonvergenz die benötigte lokal
-        gleichmäßige Konvergenz der Herglotzfunktionen ableiten lässt.
+  \item Tail-Kontrolle, die geeignete Maßkontrolle in lokal gleichmäßige
+        Konvergenz der Herglotzfunktionen überführt. Eine Konvergenz
+        $\widetilde\mu_N\to\mu_{\rm arith}$ zu einem positiven reellen
+        Nullstellenmaß ist erst unter der RH-Zieldarstellung sinnvoll und darf
+        nicht als RH-freie Voraussetzung verwendet werden.
 \end{enumerate}
 Vague Konvergenz allein wird ausdrücklich nicht als hinreichend behauptet.
 \end{openproblem}
@@ -589,19 +596,19 @@ $\sigma_{\rm loc}(Q_{\rm Weil})\stackrel?=|\alpha|$
 & OPEN & NEU-110\\
 $m_{\rm arith}$ Herglotz $\Leftrightarrow$ RH
 & PROVED & NEU-111\\
-$\mu_{\rm arith}=\sum m_\gamma\delta_\gamma$ (reines Nullstellenmaß)
-& PROVED & NEU-112/118\\
-$m_{\rm arith}$ in Nevanlinna-Form (symmetrische Konvergenz)
-& PROVED (Typisierung) & NEU-111/118\\
-$A=\Re m_{\rm arith}(i)=0$
-& PROVED & NEU-120.3\\
-Linearer Nevanlinna-Koeffizient $b=0$
-& PROVED & NEU-111/118\\
+$\mu_{\rm arith}=\sum m_\gamma\delta_\gamma$ als positives reelles Nullstellenmaß
+& CONDITIONAL (RH) & NEU-112/118; Patch 6\\
+$m_{\rm arith}$ in positiver Nevanlinna-Maßform
+& CONDITIONAL (RH); RH-frei meromorph $-\Xi'/\Xi$ & NEU-111/118; Patch 6\\
+$\Re m_{\rm arith}(i)=0$ für die RH-freie meromorphe Funktion; $A=0$ in der Maßdarstellung
+& PROVED / Maßdarstellung CONDITIONAL (RH) & NEU-120.3; Patch 6\\
+Linearer Nevanlinna-Koeffizient $b=0$ in der positiven Maßdarstellung
+& CONDITIONAL (RH) & NEU-111/118; Patch 6\\
 $W_\xi^{\rm norm}=W_{\rm zeros}$ (keine Doppelzählung)
 & PROVED & NEU-113/115\\
-Kanonische Positivierungsbrücke
+Positivierungsbrücke
 $Q_{\rm zeros}=\sum m_\gamma|\widehat\phi|^2$
-& PROVED & NEU-112/113\\
+& CONDITIONAL (RH); unbedingte Weilform ist gepaart & NEU-112/113; Patch 6\\
 Einzigkeit der Positivierungsbrücke
 & OPEN & ---\\
 $m_{\rm arith}=\Pi_\gamma(X)$
@@ -613,8 +620,8 @@ Nevanlinna-Renormierung $(c_N,a_N)$ und Tail-Kontrolle
 Lokale glm. Konvergenz $\widetilde m_N^{\rm ren}\to m_{\rm arith}$
 $\Rightarrow a_N\to0$
 & PROVED (notwendige Bedingung) & NEU-120.3\\
-Vague Konvergenz $\widetilde\mu_N\to\mu_{\rm arith}$
-& OPEN & NEU-120\\
+Vage Konvergenz zu positivem $\mu_{\rm arith}$
+& CONDITIONAL TARGET (erst unter RH); nicht RH-freie Voraussetzung & NEU-120; Patch 6\\
 $\widetilde m_N^{\rm ren}\to m_{\rm arith}\Rightarrow\RH$
 & CONDITIONAL & NEU-120\\
 $\mu_{\Omega,N}(\mathbb R)=1$ ohne $c_N$ genügt
@@ -650,11 +657,20 @@ P07-Aussagen importiert.
 Der ursprüngliche LaTeX-Transferaudit ist abgeschlossen. Patch 5 ist eine eng
 begrenzte P10-Reconciliation: Er ersetzt ausschließlich den durch P06 G-T4/G-T5
 supersedierten Determinantengrenzwert und korrigiert die logisch zu starke
-Biimplikationsklassifikation im LFF/Rampenkanal. Kein historischer
-Forschungsknoten wird dadurch zu einer RH-unabhängigen Konvergenzaussage
-hochgestuft. Damit bleibt der interne Status
+Biimplikationsklassifikation im LFF/Rampenkanal.
+
+Post-freeze Patch 6 (2026-09-28) korrigiert die RH-Typisierung des
+Herglotz-/Positivierungsblocks: $m_{\rm arith}=-\Xi'/\Xi$ ist RH-frei
+meromorph definiert; die positive reelle Nevanlinna-Maßdarstellung und die
+Summe-von-Quadraten-Positivierungsbrücke sind RH-konditional. Damit ist das
+Kriterium $m_{\rm arith}$ Herglotz $\Leftrightarrow$ RH nicht mehr
+zirkulär formuliert. Ebenso wird das positive Zielmaß $\mu_{\rm arith}$
+nicht mehr als RH-freie Eingabe einer Approximationsarchitektur verwendet.
+
+Kein historischer Forschungsknoten wird dadurch zu einer RH-unabhängigen
+Positivitäts- oder Konvergenzaussage hochgestuft. Der interne Status lautet
 \[
-  \boxed{\texttt{P07\_Weil\_Form\_Statistics.tex}\text{ --- SYN FROZEN }\checkmark[K/M]}.
+  \boxed{\texttt{P07\_Weil\_Form\_Statistics.tex}\text{ --- SYN FROZEN + Patch 6 }\checkmark[K/M]}.
 \]
 \end{remark}
 
