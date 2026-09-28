@@ -133,40 +133,42 @@ $$\sigma_{\rm loc}(Q_{\rm Weil}) \stackrel{?}{=} |\alpha|. \qquad ?[O]$$
 
 *Basis: NEU-111–115; kanonische Ebene: P02; Symmetriepräzisierung: NEU-120 Patch 2*
 
-**Def. 4.1 (Herglotz-Funktion — Nevanlinna-Form).**
+**Def. 4.1 (RH-freie arithmetische logarithmische Ableitung).**
+Ohne RH-Annahme setzen wir
+$$\Xi(z)=\xi\!\left(\tfrac12+iz\right),\qquad
+\boxed{m_{\rm arith}(z)=-\Xi'(z)/\Xi(z).}$$
+Dies ist meromorph; seine Pole sind genau die Nullstellen von $\Xi$, mit Residuen minus ihrer Vielfachheiten.
+
+**Satz 4.2 (Herglotz $\Leftrightarrow$ RH, RH-frei formuliert).**
+$$\boxed{m_{\rm arith}\text{ ist holomorph und Herglotz auf }\mathbb C^+
+\quad\Longleftrightarrow\quad\text{RH}.}$$
+Unter RH liegen alle Nullstellen von $\Xi$ auf der reellen $z$-Achse und die Hadamard-Darstellung liefert die positive Nevanlinna-Maßform. Umgekehrt würde jede off-axis Nullstelle über die funktionalen und reellen Symmetrien einen Pol von $-\Xi'/\Xi$ in $\mathbb C^+$ erzeugen, was mit Herglotz-Holomorphie unvereinbar ist.
+[NEU-111.1; Post-freeze Patch 6]
+
+**Prop. 4.3 (Positive Nevanlinna-Maßdarstellung unter RH).**
 Unter RH:
-$$m_{\rm arith}(z) = A + \int_{\mathbb R}\left(\frac1{t-z}-\frac{t}{1+t^2}\right)d\mu_{\rm arith}(t),$$
-wobei $\mu_{\rm arith}=\sum_{\gamma\in\Gamma}m_\gamma\delta_\gamma$ das **reine Nullstellenmaß** ist
-(keine Gamma-/Pol-/Primbeiträge). Für die kanonische Zentrierung
-$$\Xi(z)=\xi\!\left(\tfrac12+iz\right),\qquad m_{\rm arith}(z)=-\Xi'(z)/\Xi(z)$$
-gilt wegen $\Xi(-z)=\Xi(z)$ und der reellen Symmetrie
-$$\boxed{A=\Re\,m_{\rm arith}(i)=0.}$$
-Die Summe $\sum_\gamma m_\gamma/(\gamma-z)$ konvergiert im kanonisch symmetrischen Sinn.
-[NEU-111, NEU-112, NEU-118; NEU-120 Patch 2: ✓[M]]
+$$\Gamma:=\{\gamma\in\mathbb R:\xi(1/2-i\gamma)=0\},\qquad
+\mu_{\rm arith}:=\sum_{\gamma\in\Gamma}m_\gamma\delta_\gamma,$$
+und
+$$m_{\rm arith}(z)=A+\int_{\mathbb R}\left(\frac1{t-z}-\frac{t}{1+t^2}\right)d\mu_{\rm arith}(t),
+\qquad \boxed{A=\Re m_{\rm arith}(i)=0.}$$
+Das positive reelle Nullstellenmaß ist also eine **RH-konditionale Darstellung**, keine RH-freie Eingabe. Gamma-, Pol- und Primterme sind keine zusätzlichen Atome dieses Maßes.
 
-Die allgemeine Herglotz–Nevanlinna-Darstellung erlaubt zusätzlich einen Term $bz$ mit $b\geq 0$.
-Für unser spezielles $m_{\rm arith}=-\Xi'/\Xi$ gilt jedoch $b=0$:
-Wegen der symmetrischen $\pm\gamma$-Paarung der Nullstellen und der Hadamard-Darstellung von $\Xi$
-konvergiert $\sum_{\gamma>0} m_\gamma\bigl(\tfrac1{\gamma-z}+\tfrac1{-\gamma-z}\bigr)$
-dank $\sum_\gamma m_\gamma/\gamma^2<\infty$ ohne zusätzlichen linearen Anteil.
-Die obige Darstellung enthält daher keinen $bz$-Term.
-[NEU-111, NEU-118: ✓[M]]
+Unter RH gilt auch $b=0$ im allgemeinen Herglotz–Nevanlinna-Term $bz$: Die symmetrische $\pm\gamma$-Paarung und $\sum_\gamma m_\gamma/\gamma^2<\infty$ benötigen keinen zusätzlichen linearen Anteil.
+[NEU-111, NEU-112, NEU-118, NEU-120 Patch 2; Post-freeze Patch 6]
 
-**Satz 4.2 (Herglotz $\Leftrightarrow$ RH).**
-$$m_{\rm arith}\text{ ist Herglotz}\quad\Longleftrightarrow\quad\text{RH.}$$
-[NEU-111.1: ✓[M]]
-
-**Def. 4.3 (Normierte Weil-Distribution).**
-$$W_\xi^{\rm norm} = W_{\rm zeros} = W_{\rm pole/triv}+W_\Gamma+W_{\rm prime}.$$
-Nullstellenseite und arithmetische Seite: äquivalente Darstellungen, nicht addieren.
+**Def. 4.4 (Normierte Weil-Distribution).**
+$$W_\xi^{\rm norm}=W_{\rm zeros}=W_{\rm pole/triv}+W_\Gamma+W_{\rm prime}.$$
+Nullstellenseite und arithmetische Seite sind äquivalente Darstellungen, nicht zu addieren.
 [NEU-113, NEU-115: ✓[M]]
 
-**Satz 4.4 (Kanonische Positivierungsbrücke).**
+**Satz 4.4a (Positivierungsbrücke unter RH).**
+Unter RH:
 $$\Phi=\phi^**\phi\quad\Longrightarrow\quad
-W_\xi^{\rm norm}[\Phi] = Q_{\rm zeros}[\phi] = \sum_{\gamma\in\Gamma}m_\gamma|\widehat\phi(\gamma)|^2.$$
-Dies ist die **kanonische** Positivierungsbrücke (Einzigkeit nicht bewiesen).
-[NEU-112/113/115: ✓[M]; kanonisiert in P02]
-
+W_\xi^{\rm norm}[\Phi]=Q_{\rm zeros}[\phi]
+=\sum_{\gamma\in\Gamma}m_\gamma|\widehat\phi(\gamma)|^2\ge0.$$
+Ohne RH ist die unbedingte Nullstellenseite die gepaarte Weilform über alle nichttrivialen Nullstellen und **keine** Summe von Absolutquadraten. Diese Brücke ist daher kein RH-freier Positivitätsmechanismus.
+[NEU-112/113/115; Post-freeze Patch 6]
 **Satz 4.5 (Interface-Schutzsatz).**
 $$m_{\rm arith}\rightsquigarrow W_\xi^{\rm norm}
 \quad\text{und getrennt}\quad
@@ -191,8 +193,7 @@ $$m_{\Omega,N}(z) = \langle\Omega_N,(A_N^{\rm Jac,-}-z)^{-1}\Omega_N\rangle
 **Offen.** $A_N^{\rm Jac,-}=H_N+\beta_N J_N^-$ selbstadjungiert: ?[O] [NEU-119.2]
 
 **Def. 5.2 (Nevanlinna-normalisierte Approximanten).**
-Da $\mu_{\Omega,N}(\mathbb R)=1$ und $\mu_{\rm arith}$ unendliche Gesamtmasse hat,
-ist eine Renormierungsfolge $c_N>0$ erforderlich:
+Da $\mu_{\Omega,N}(\mathbb R)=1$, ist für einen möglichen nichttrivialen Grenzübergang eine Renormierungsfolge $c_N>0$ erforderlich. Unter RH besitzt die positive Zielmaßdarstellung $\mu_{\rm arith}$ unendliche Gesamtmasse; RH-frei ist das primäre Zielobjekt dagegen $m_{\rm arith}=-\Xi'/\Xi$:
 $$\widetilde\mu_N := c_N\,\mu_{\Omega,N}.$$
 Die zugehörigen Nevanlinna-normalisierten Approximanten:
 $$\widetilde m_N^{\rm ren}(z) := a_N + \int_{\mathbb R}\left(\frac1{t-z}-\frac{t}{1+t^2}\right)d\widetilde\mu_N(t),
@@ -205,7 +206,7 @@ Bei $z=i$ gilt exakt
 $$\frac1{t-i}-\frac{t}{1+t^2}=\frac{i}{1+t^2},$$
 also
 $$\Re\widetilde m_N^{\rm ren}(i)=a_N.$$
-Da für das Ziel $\Re m_{\rm arith}(i)=0$ gilt, folgt aus lokaler gleichmäßiger Konvergenz notwendig
+Da RH-frei direkt aus der reellen Symmetrie von $\xi$ die Identität $\Re m_{\rm arith}(i)=0$ folgt, ergibt lokale gleichmäßige Konvergenz notwendig
 $$\boxed{\widetilde m_N^{\rm ren}\xrightarrow{\rm loc.glm.}m_{\rm arith}\quad\Longrightarrow\quad a_N\to0.}$$
 Dies ist keine zusätzliche RH-Annahme, sondern ein notwendiger Test für jede erfolgreiche Approximation.
 [NEU-120.3 Patch 2: ✓[M]]
@@ -220,8 +221,7 @@ Offene Voraussetzungen:
 1. $A_N^{\rm Jac,-}$ selbstadjungiert [NEU-119: ?[O]]
 2. Renormierungsfolge $c_N>0$, Gewichtsfolge $a_N\in\mathbb R$ passend gewählt; jede erfolgreiche Folge muss zusätzlich $a_N\to0$ erfüllen [NEU-120.3: ✓[M] notwendige Bedingung]
 3. Kontrolle der Nevanlinna-Gewichte: $\int d\widetilde\mu_N(t)/(1+t^2)$ kontrolliert
-4. Vague Konvergenz $\widetilde\mu_N\to\mu_{\rm arith}$ allein impliziert **nicht** automatisch
-   lokale gleichmäßige Konvergenz von $\widetilde m_N^{\rm ren}$ — Tail-Kontrolle nötig
+4. RH-freies Hauptziel ist die lokale gleichmäßige Konvergenz $\widetilde m_N^{\rm ren}\to m_{\rm arith}=-\Xi'/\Xi$. Eine Konvergenz $\widetilde\mu_N\to\mu_{\rm arith}$ zu einem positiven reellen Nullstellenmaß ist erst in der RH-Zieldarstellung sinnvoll; Maßkonvergenz allein würde zudem weiterhin Tail-Kontrolle benötigen
 5. Kanonische Wahl von $\Omega_N$ [NEU-119: ?[O]]
 
 **Konditionale Architektur.**
@@ -256,18 +256,18 @@ $$A_N^{\rm Jac,-} \stackrel{?[O]}{\longrightarrow} m_{\Omega,N}
 | LFF allein identifiziert $Q_{\rm Weil}$ nicht | PROVED (Typisierungswarnung) | NEU-108 |
 | Symboltest $\sigma_{\rm loc}(Q_{\rm Weil})\stackrel?=|\alpha|$ | OPEN | NEU-110 |
 | $m_{\rm arith}$ Herglotz $\Leftrightarrow$ RH | PROVED | NEU-111 |
-| $\mu_{\rm arith}=\sum m_\gamma\delta_\gamma$ (reines Nullstellenmaß) | PROVED | NEU-112/118 |
-| $m_{\rm arith}$ in Nevanlinna-Form (symmetrische Konvergenz) | PROVED (Typisierung) | NEU-111/118 |
-| Zielkonstante $A=\Re m_{\rm arith}(i)=0$ | PROVED | NEU-120.3 |
-| Linearer Nevanlinna-Koeffizient $b=0$ (kein $bz$-Term) | PROVED | NEU-111/118 |
+| $\mu_{\rm arith}=\sum m_\gamma\delta_\gamma$ als positives reelles Nullstellenmaß | CONDITIONAL (RH) | NEU-112/118; Patch 6 |
+| $m_{\rm arith}$ in positiver Nevanlinna-Maßform | CONDITIONAL (RH); RH-frei meromorph $-\Xi'/\Xi$ | NEU-111/118; Patch 6 |
+| $\Re m_{\rm arith}(i)=0$ RH-frei; $A=0$ in positiver Maßdarstellung | PROVED / Maßdarstellung CONDITIONAL (RH) | NEU-120.3; Patch 6 |
+| Linearer Nevanlinna-Koeffizient $b=0$ in positiver Maßdarstellung | CONDITIONAL (RH) | NEU-111/118; Patch 6 |
 | $W_\xi^{\rm norm}=W_{\rm zeros}$ (keine Doppelzählung) | PROVED | NEU-113/115 |
-| Kanonische Positivierungsbrücke $Q_{\rm zeros}=\sum m_\gamma|\widehat\phi|^2$ | PROVED | NEU-112/113 |
+| Positivierungsbrücke $Q_{\rm zeros}=\sum m_\gamma|\widehat\phi|^2$ | CONDITIONAL (RH); unbedingte Weilform ist gepaart | NEU-112/113; Patch 6 |
 | Einzigkeit der Positivierungsbrücke | OPEN | — |
 | $m_{\rm arith}=\Pi_\gamma(X)$ | OPEN | NEU-114 |
 | $A_N^{\rm Jac,-}$ selbstadjungiert | OPEN | NEU-119 |
 | Nevanlinna-Renormierung $(c_N,a_N)$, Tail-Kontrolle | OPEN | NEU-120 |
 | lokale glm. Konvergenz $\widetilde m_N^{\rm ren}\to m_{\rm arith}$ erzwingt $a_N\to0$ | PROVED (notwendige Bedingung) | NEU-120.3 |
-| Vague Konvergenz $\widetilde\mu_N\to\mu_{\rm arith}$ | OPEN | NEU-120 |
+| Vage Konvergenz zu positivem $\mu_{\rm arith}$ | CONDITIONAL TARGET (erst unter RH); nicht RH-freie Voraussetzung | NEU-120; Patch 6 |
 | Konditionale Firewall $\widetilde m_N^{\rm ren}\to m_{\rm arith}\Rightarrow$ RH | CONDITIONAL | NEU-120 |
 | $\mu_{\Omega,N}(\mathbb R)=1$ ohne $c_N$ genügt | NO-GO (Massendiskrepanz) | NEU-120 |
 | Pole $\pm i/2$ in $m_{\rm arith}$ | NO-GO | NEU-120 |
@@ -288,3 +288,6 @@ $$A_N^{\rm Jac,-} \stackrel{?[O]}{\longrightarrow} m_{\Omega,N}
 
 *Fehlerhistorie, Patch-Notizen, Provenienz: PASS-A-PROTOKOLL.md + `03-weil-form-statistik/NEU-091–120` + P07 Targeted-Reaudits `57441d87`, `f0be54c5`.*
 *LaTeX-Fassung: `papers/P07_Weil_Form_Statistics.tex`.*
+
+
+*Post-freeze Patch 6 (2026-09-28): RH-freie Definition von $m_{\rm arith}=-\Xi'/\Xi$; positive Nevanlinna-Maßdarstellung und Summe-von-Quadraten-Positivierungsbrücke explizit RH-konditional; positiver Maßgrenzwert nicht mehr als RH-freie Eingabe geführt.*
