@@ -9,21 +9,19 @@ Die getrennten Integrations-/Registry-Metadaten in [CURRENT_STATE](CURRENT_STATE
 
 ## Unbeschränkte Horizonterweiterung und kompatibler Transport
 
-`UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION` — OPEN. C1a–C1d ist auf dem festen Horizont B<=a<=1 geschlossen. Für die konkrete C1a-Fortführung auf 1<=A<=B<=C<=A8=log(8)/2 liegen nun O1–O7, die reproduzierte O8-Terminalreserve und die positiven korrigierten O9-Transporte als AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN vor. Nächster lokaler Gate ist O10: der q=8-Wandübergang strikt rechts von A8. Erneuerbare Profilreserve und unbeschränkte/kofinale positive Terminalkompatibilität bleiben offen.
+`UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION` — OPEN. Die konkrete C1a-Familie besitzt Autorenherleitungen für drei positive Kammern bis A11=log(11)/2, gekoppelte rohe Wandtransporte auf jedem endlichen Horizont und eine allgemeine hohe Tail-Reduktion mit wachsender Kodimension. Nächster struktureller Gate ist die erneuerbare Positivität des niedrigen Schurrests. Unbeschränkte/kofinale positive Kompatibilität und externe analytische Gesamtprüfung bleiben offen.
 
 Offene Obligationen:
 
-- `X4-Q8-WALL-CROSSING`: O10 — q=8-Wall-Crossing separat beweisen — Strikt rechts von A_8=log(8)/2 tritt q=8 mit Gewicht log(2)/sqrt(8) hinzu. Gekoppelte neue Rohoperatoren und beide Wandtransporte sind vor einer Post-Wall-Positivitätsaussage zu konstruieren. Wegen log(q)<2A bleibt q=8 am Endpunkt A_8 inaktiv.
-- `MOVING-PROFILE-RESERVE-RENEWAL`: Erneuerbare Low/Profile-Reserve konstruieren — Zusätzliche Kopplungen bei der physischen Fortsetzung a->b; die Core-Kongruenz allein reicht nicht.
-- `NON-SUMMABLE-TRANSPORT`: Nicht summierbares oder uniformes Fortsetzungsgesetz beweisen — Über das vorhandene endliche positive Band hinaus; quantitative Schrittweiten.
-- `UNBOUNDED-HORIZON-COMPATIBILITY`: Kompatible unbeschränkte Horizontfolge konstruieren — O8/O9 liefert positive Terminalkompatibilität ausschließlich auf der ersten geschlossenen Kammer 1<=A<=A8. Ein unbeschränkter/kofinaler Terminal-Cocycle über weitere Prime-Power-Wände und kompatible positive Abschlüsse bleiben offen.
+- `MOVING-PROFILE-RESERVE-RENEWAL`: Erneuerbare Low/Profile-Reserve konstruieren — Der vollständige hohe Tail lässt sich auf jedem festen endlichen Horizont erneuern. Offen ist ein struktureller positiver Boden des verbleibenden niedrigen Schurrests samt vollständiger hoher Kopplung für folgende Kammern oder eine kofinale Horizontfamilie.
+- `NON-SUMMABLE-TRANSPORT`: Nicht summierbares oder uniformes Fortsetzungsgesetz beweisen — Das allgemeine rohe Wandgesetz benötigt keine Summierung kleiner Schritte. Offen bleibt eine unbeschränkte oder kofinale positive Fortsetzung mit erneuerbaren vollen Terminalreserven; der rohe Cocycle allein schließt diese Verpflichtung nicht.
+- `UNBOUNDED-HORIZON-COMPATIBILITY`: Kompatible unbeschränkte Horizontfolge konstruieren — Rohe T-/D-Cocycles sind auf jedem festen endlichen Horizont hergeleitet. Positive korrigierte Kompatibilität ist bis A11=log(11)/2 konstruiert. Eine unbeschränkte/kofinale positive Terminalfamilie und ihre vollständige Kompatibilität bleiben offen.
 
 Akzeptierter strategischer Fortschritt:
 
-- O10: Konstruiere strikt rechts von A_8 den gekoppelten q=8-Mediator und beide rohen Wandtransporte mit Quotientenabstieg, Beschränktheit und Kammerkompatibilität; am Endpunkt A_8 bleibt q=8 inaktiv.
-- Beweise kompatible Terminalräume und positive Abschlüsse für eine wachsende oder kofinale Horizontfamilie.
-- Ersetze endliche Schrittketten durch ein nicht summierbares oder uniformes Fortsetzungsgesetz.
-- Kontrolliere Low/Profile-Kopplungen mit erneuerbarer Reserve.
+- Beweise erneuerbare Positivität des vollständigen niedrigen Schurrests nach der allgemeinen hohen Tail-Reduktion.
+- Kontrolliere neue Terminalreserven und vollständige hohe Kopplungen über weitere Primzahlpotenzwände, beginnend strikt rechts von A11 mit q=11.
+- Konstruiere eine unbeschränkte oder kofinale positive Horizontfamilie und ihre kompatiblen korrigierten Transporte.
 
 Nicht ausreichend:
 
@@ -33,7 +31,7 @@ Nicht ausreichend:
 - Neue Terminalabschlüsse ohne Intertwining untereinander.
 - Mikroskopische Breitenfortsetzungen ohne kofinale Skalierungsstruktur.
 
-Verwendbare Registereinträge: `C0-DIRECTED-FORM-SYSTEM`, `C1a-COUPLED-SPECTRAL-MEDIATOR`, `C1b-ZERO-EXTENSION-INTERTWINING`, `TERMINAL-191D-DEFECT-SCHUR-A1`, `C1d-COMPATIBLE-POSITIVE-COMPLETION`, `FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7`, `FIRST-CHAMBER-O8-TERMINAL-POSITIVITY`, `POSITIVE-CORRECTED-TRANSPORT`.
+Verwendbare Registereinträge: `C0-DIRECTED-FORM-SYSTEM`, `C1a-COUPLED-SPECTRAL-MEDIATOR`, `C1b-ZERO-EXTENSION-INTERTWINING`, `TERMINAL-191D-DEFECT-SCHUR-A1`, `C1d-COMPATIBLE-POSITIVE-COMPLETION`, `FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7`, `FIRST-CHAMBER-O8-TERMINAL-POSITIVITY`, `POSITIVE-CORRECTED-TRANSPORT`, `X4-Q8-WALL-CROSSING`, `SECOND-CHAMBER-A9-TERMINAL-POSITIVITY`, `GENERAL-PRIME-POWER-WALL-COCYCLE`, `THIRD-CHAMBER-A11-TERMINAL-POSITIVITY`, `FINITE-HORIZON-HIGH-TAIL-REDUCTION`.
 
 ## Globale Weil-Testklasse und fensterunabhängiger Readout
 
