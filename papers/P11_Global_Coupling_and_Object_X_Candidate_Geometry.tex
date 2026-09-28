@@ -254,7 +254,19 @@ and $R_R$ are bounded finite-window operators.
 
 \subsection{Archimedean Gamma form}
 
-The archimedean source form is encoded by
+The archimedean source form uses the centred positive Gamma-incidence
+multiplier
+\[
+ \boxed{
+ g_\infty(\xi)
+ :=\sum_{j=0}^{\infty}
+ \frac{\xi^2/4}
+ {(j+\tfrac14)\bigl((j+\tfrac14)^2+\xi^2/4\bigr)}
+ \ge0.
+ }
+\]
+This is the RH-free positive part
+$A_\infty(\xi)-A_\infty(0)$ of the full archimedean multiplier.  Put
 \[
  m_\Gamma(\xi):=1+g_\infty(\xi),
  \qquad
@@ -277,6 +289,17 @@ $C_{\Gamma,R}\ge I$, and its form domain is a Hilbert space for the Gamma graph 
 The embedding of this finite-window graph space into $L^2(-R,R)$ is compact; equivalently
 $C_{\Gamma,R}^{-1}$ is compact.
 \end{proposition}
+
+\begin{remark}[Scope of the positive Gamma backbone]\label{rem:gamma-positive-scope}
+The form $\mathfrak c_{\Gamma,R}$ contains the centred positive Gamma-incidence
+energy plus the fixed background norm.  It is not the full archimedean
+component of the Weil form: the negative scalar ground term of the latter,
+and the separate pole contribution, are not absorbed into
+$\mathfrak c_{\Gamma,R}$.  Accordingly, the positive candidate form
+$q_R^X$ below is not asserted to equal the localized complete Weil form.
+Its relation to a global adelic/Weil realization remains one of the
+higher-level obligations stated in Section~\ref{sec:global}.
+\end{remark}
 
 \begin{remark}[Logarithmic, not Sobolev, regularity]\label{rem:log}
 Up to equivalent fixed-window norms,
