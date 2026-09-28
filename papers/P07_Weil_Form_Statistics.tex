@@ -22,7 +22,7 @@
 \title[P07 --- Weil-Form Statistics]{P07 --- Weil-Form Statistics:\\
 Correlation Channels, Form-Factor Limits and Herglotz Interfaces}
 \author{Objekt-X-Programm}
-\date{2026-08-09}
+\date{2026-08-09; post-freeze audit 2026-09-28}
 
 \begin{document}
 
@@ -276,60 +276,78 @@ $B_W$ werden daher nicht erneut dupliziert. P03 dient hier nur dem
 Stil- und Konventionsabgleich.
 \end{remark}
 
-\begin{definition}[Arithmetische Herglotzfunktion in Nevanlinna-Form]
+\begin{definition}[RH-freie arithmetische logarithmische Ableitung]
 \label{def:m-arith}
-Unter RH sei
+Setze ohne RH-Annahme
+\[
+  \Xi(z):=\xi\!\left(\frac12+iz\right),
+  \qquad
+  \boxed{m_{\rm arith}(z):=-\frac{\Xi'(z)}{\Xi(z)}.}
+\]
+Dies definiert eine meromorphe Funktion; ihre Pole sind genau die Nullstellen
+von $\Xi$, mit Residuen gleich minus ihrer Vielfachheiten.
+\end{definition}
+
+\begin{theorem}[Herglotz-Kriterium, RH-frei formuliert]
+\label{thm:herglotz-rh}
+Für die meromorphe Funktion aus Definition~\ref{def:m-arith} gilt
+\[
+  \boxed{
+  m_{\rm arith}\text{ ist holomorph und Herglotz auf }\mathbb C^+
+  \quad\Longleftrightarrow\quad
+  \RH.}
+\]
+\begin{proof}
+Unter RH liegen alle Nullstellen von $\Xi$ auf der reellen $z$-Achse.
+Die Hadamard-Darstellung und die symmetrische $\pm\gamma$-Paarung ergeben
+dann die Herglotz--Nevanlinna-Darstellung mit positivem reellem Nullstellenmaß.
+
+Umgekehrt ist eine Herglotzfunktion auf $\mathbb C^+$ holomorph. Eine
+nichtreelle Nullstelle von $\Xi$ in $\mathbb C^+$ würde einen Pol von
+$-\Xi'/\Xi$ in $\mathbb C^+$ erzeugen. Wegen der funktionalen und reellen
+Symmetrien der Zeta-Nullstellen würde jede Nullstelle außerhalb der kritischen
+Geraden zu einer solchen nichtreellen $z$-Nullstelle führen. Daher können
+keine off-axis Nullstellen existieren.
+\end{proof}
+\end{theorem}
+
+\begin{proposition}[Nevanlinna-Maßdarstellung unter RH]
+\label{prop:rh-nevanlinna}
+Angenommen RH. Setze
 \[
   \Gamma:=\{\gamma\in\mathbb R:\xi(1/2-i\gamma)=0\},
   \qquad
   \mu_{\rm arith}:=\sum_{\gamma\in\Gamma}m_\gamma\delta_\gamma.
 \]
-Das Maß $\mu_{\rm arith}$ ist das reine Nullstellenmaß; Gamma-, Pol- und
-Primterme sind keine zusätzlichen Bestandteile dieses Herglotz-Spektralmaßes.
-Die zugehörige arithmetische Funktion wird in der Form
+Dann ist $\mu_{\rm arith}$ das positive reelle Nullstellenmaß und
 \[
   m_{\rm arith}(z)
   =A+\int_{\mathbb R}
-  \left(\frac1{t-z}-\frac{t}{1+t^2}\right)\,d\mu_{\rm arith}(t)
+  \left(\frac1{t-z}-\frac{t}{1+t^2}\right)\,d\mu_{\rm arith}(t),
 \]
-geschrieben. Für die kanonische Zentrierung
-\[
-  \Xi(z)=\xi\!\left(\frac12+iz\right),
-  \qquad m_{\rm arith}(z)=-\frac{\Xi'(z)}{\Xi(z)},
-\]
-folgt aus $\Xi(-z)=\Xi(z)$ und der reellen Symmetrie
+mit
 \[
   \boxed{A=\Re m_{\rm arith}(i)=0.}
 \]
-Die äquivalente Nullstellensumme ist im kanonisch symmetrischen Sinn zu
-verstehen.
-\end{definition}
+Gamma-, Pol- und Primterme sind keine zusätzlichen Atome dieses Spektralmaßes;
+sie bilden die arithmetische Darstellung derselben Weil-Distribution.
+\end{proposition}
 
-\begin{proposition}[Verschwinden des linearen Nevanlinna-Terms]
+\begin{proposition}[Verschwinden des linearen Nevanlinna-Terms unter RH]
 \label{prop:b-zero}
-Die allgemeine Herglotz--Nevanlinna-Darstellung erlaubt einen zusätzlichen
-Term $bz$ mit $b\ge0$. Für das hier betrachtete spezielle
-$m_{\rm arith}=-\Xi'/\Xi$ gilt jedoch $b=0$. Wegen der symmetrischen
-$\pm\gamma$-Paarung und der Hadamard-Darstellung konvergiert
+Angenommen RH. Die allgemeine Herglotz--Nevanlinna-Darstellung erlaubt einen
+Term $bz$ mit $b\ge0$. Für $m_{\rm arith}=-\Xi'/\Xi$ gilt jedoch $b=0$.
+Die symmetrische $\pm\gamma$-Paarung und die Hadamard-Darstellung geben
 \[
   \sum_{\gamma>0}m_\gamma
-  \left(\frac1{\gamma-z}+\frac1{-\gamma-z}\right)
+  \left(\frac1{\gamma-z}+\frac1{-\gamma-z}\right),
 \]
-unter Verwendung von
+und wegen
 \[
   \sum_\gamma\frac{m_\gamma}{\gamma^2}<\infty
 \]
-ohne zusätzlichen linearen Anteil.
+ist kein zusätzlicher linearer Anteil erforderlich.
 \end{proposition}
-
-\begin{theorem}[Herglotz-Kriterium]\label{thm:herglotz-rh}
-Für die arithmetische Funktion gilt
-\[
-  m_{\rm arith}\text{ ist Herglotz}
-  \quad\Longleftrightarrow\quad
-  \RH.
-\]
-\end{theorem}
 
 \begin{definition}[Normierte Weil-Distribution]\label{def:weil-distribution}
 Nullstellenseite und arithmetische Seite sind zwei Darstellungen derselben
@@ -342,8 +360,9 @@ normierten Distribution:
 Sie sind nicht miteinander zu addieren.
 \end{definition}
 
-\begin{theorem}[Kanonische Positivierungsbrücke]\label{thm:positivity-bridge}
-Mit Involution und Faltungskonvention aus P02 liefert
+\begin{theorem}[Positivierungsbrücke unter RH]
+\label{thm:positivity-bridge}
+Angenommen RH. Mit Involution und Faltungskonvention aus P02 liefert
 \[
   \Phi=\phi^\ast *\phi
 \]
@@ -352,10 +371,12 @@ die Identität
   W_\xi^{\rm norm}[\Phi]
   =Q_{\rm zeros}[\phi]
   =\sum_{\gamma\in\Gamma}
-    m_\gamma\,|\widehat\phi(\gamma)|^2.
+    m_\gamma\,|\widehat\phi(\gamma)|^2\ge0.
 \]
-Dies ist die im Programm verwendete kanonische Positivierungsbrücke.
-Ihre Einzigkeit ist nicht bewiesen.
+Dies ist die positive Nullstellenmaß-Realisierung der Weilquadratik.
+Ohne RH ist die unbedingte Nullstellenseite die gepaarte Weilform über alle
+nichttrivialen Nullstellen und keine Summe von Absolutquadraten. Dieser Satz
+ist daher kein RH-freier Positivitätsmechanismus.
 \end{theorem}
 
 \begin{theorem}[Interface-Schutzsatz]\label{thm:interface-firewall}
