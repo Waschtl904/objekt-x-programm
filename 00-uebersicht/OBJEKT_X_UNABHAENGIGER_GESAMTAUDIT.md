@@ -2,7 +2,7 @@
 
 **Beginn:** 24. September 2026  
 **Letzte Aktualisierung:** 27. September 2026  
-**Zuletzt integrierter Audit-Korrekturstand:** **main@6f902348f14bc8886ffa29ead1b1af27f0c8ae2e**  
+**Zuletzt integrierter Audit-Korrekturstand:** **main@1919f4383aa0dbbd25734259673b4608f1dc19c2**  
 **Arbeitsweise:** Mathematische Aussagen werden unabhängig geprüft. Statusdateien, frühere Audits und Repository-Markierungen dienen als Wegweiser, nicht als Beweis.  
 **Ziel:** Eine verständliche, fortlaufend aktualisierte Landkarte des gesamten Objekt-X-Programms vom ursprünglichen Fragenkatalog bis zur aktuellen Forschungsfront.
 
@@ -1844,15 +1844,17 @@ Die späteren O1–O7-Pakete trennen anschließend sorgfältig Rohtransport der 
 
 Der bis Durchlauf 12 unabhängig geprüfte Stand schloss mit O8/O9 die erste positive Kammer bis $A_8=\tfrac12\log8$.
 
-### 16.10 Parallel neuer Live-Front-Stand: noch nicht auditiert
+### 16.10 Parallel hinzugekommener Live-Front-Stand: inzwischen in Durchlauf 14 auditiert
 
-Nach Abschluss von Durchlauf 12 wurde `main` parallel erweitert. Der aktuelle Repository-Stand enthält inzwischen ein Paket
+Nach Abschluss von Durchlauf 12 wurde `main` parallel um
 
 `research/x-c1/chambers-through-a11-2026-09-28/`
 
-einschließlich neuer O10-, Wand-, $A_9$- und $A_{11}$-Materialien.
+erweitert. Der damalige Hinweis „noch nicht auditiert“ war deshalb methodisch notwendig.
 
-Diese Dateien sind **noch nicht Bestandteil des unabhängigen historischen Audits**. Daher bedeutet die ältere Aussage „rechts von $A_8$ offen“ nur den bis Durchlauf 12 verifizierten Stand der O1–O9-Kette. Aus dem bloßen Vorhandensein oder Registry-Status des neuen Pakets wird hier keine mathematische Promotion abgeleitet.
+**Durchlauf 14 hat diese Lücke inzwischen geschlossen.** O10, das allgemeine Prime-Power-Wandlemma, die $A_9$- und $A_{11}$-Terminalreduktionen, die Zertifikatsarithmetik sowie das endliche High-Tail-Prinzip wurden unabhängig auf ihren jeweiligen Evidenzstufen geprüft. Die daraus resultierende aktuelle Frontier steht in Abschnitt 17.
+
+Die historische Aussage „rechts von $A_8$ offen“ bleibt nur als Beschreibung des bis Durchlauf 12 geprüften Zwischenstands erhalten und ist nicht mehr der aktuelle Auditfrontier.
 
 ### 16.11 P12-Entscheidungsmatrix
 
@@ -1894,6 +1896,362 @@ I-R_a^*R_a
 ```
 
 Der gestrichelte Pfeil von P12 zur C1-Linie darf nach dem aktuellen Provenienzaudit **nicht** durch einen durchgezogenen Beweispfeil ersetzt werden.
+---
+
+## 17. Live-Frontier bis $A_{11}$: allgemeine Wandtransporte und drei positive C1-Kammern
+
+Durchlauf 14 unterbricht bewusst die historische Leserichtung und auditiert den parallel integrierten Live-Frontier
+
+`research/x-c1/chambers-through-a11-2026-09-28/`.
+
+Das Ergebnis ist differenziert: Die mathematische Kette bis $A_{11}=\frac12\log11$ ist wesentlich stärker als der bis Durchlauf 13 bestätigte Stand, aber ihre Evidenz besteht aus **analytischer Reduktion plus rigoroser Zertifikatsarithmetik**. Eine zweite vollständige Erzeugung der großen Integralmatrizen wurde nicht ausgeführt, und die Paketkennzeichnung `EXTERNAL_REVIEW_OPEN` bleibt daher sachgerecht.
+
+### 17.1 Paketbindung und Integration
+
+Das veröffentlichte Paket bindet
+
+- **125** eigene Paketdateien über SHA-256;
+- **14** konkrete Repository-Eingaben über Pfad, Commit und SHA-256;
+- darunter den C1a-Spektralmediator, O1–O7, O8/Schur, die universelle Prime-Power-Formidentität und die exakten Hilfsskripte.
+
+Die Forschungskette wurde mit PR #183 integriert; PR #185 registrierte sie anschließend getrennt in den Status-/Navigationsdateien. Diese Trennung ist wichtig: Registry-Promotion ist Provenienz und Governance, nicht der mathematische Beweis.
+
+Der gebundene Linux-Zertifikatslauf reproduzierte 13 Schritte erfolgreich: O10, $A_9$-Tail, $A_9$-Arb, gemeinsame Reserve, Integerzertifikat, Normalisierung, allgemeine Wand/$q=9$, $A_{11}$-Tail, den bewusst unentschiedenen direkten $A_{11}$-Test, rationale Kongruenz, gemeinsame Reserve, Integerzertifikat und Normalisierung.
+
+Der Lauf protokolliert ausdrücklich:
+
+- `full_integral_models_recomputed: false`;
+- `external_analytic_review: OPEN`.
+
+Diese beiden Grenzen werden im unabhängigen Audit beibehalten.
+
+### 17.2 O10: der rohe Transport über die $q=8$-Wand trägt
+
+Setze
+
+```math
+A_8=\frac12\log8,
+\qquad
+A_9=\log3.
+```
+
+Die Aktivierung ist strikt. Daher ist $q=8$ bei $A=A_8$ noch inaktiv und für $A>A_8$ aktiv; $q=9$ ist bei $A=A_9$ noch inaktiv.
+
+Beim Eintritt von $q=8$ werden die gekoppelten Mediatorsymbole nicht um einen orthogonalen Einzelkanal ergänzt, sondern gemeinsam aktualisiert:
+
+```math
+m_+=m_-+v(1-z),
+\qquad
+n_+=n_-+v(1+z),
+\qquad
+h_+=h_-+2v,
+```
+
+mit $v=\log2/\sqrt8$ und $z=\cos((\log8)\xi)$.
+
+Die beiden **getrennten** Rohwandtransporte sind Multiplikatoren
+
+```math
+a_T=\frac{m_+}{m_-}\sqrt{\frac{h_-}{h_+}},
+\qquad
+a_D=\frac{n_+}{n_-}\sqrt{\frac{h_-}{h_+}}.
+```
+
+Die potentielle Nullstelle $m_-(0)=0$ wird nicht durch Frequenzsampling umgangen. Der Beweis kontrolliert sie global über
+
+```math
+0\le1-\cos((\log8)\xi)\le g_0(\xi)\le g(\xi).
+```
+
+Daraus folgen auf dem ganzen Frequenzraum
+
+```math
+\sqrt{20/21}\le a_T\le5/4,
+\qquad
+\sqrt{20/21}\le a_D\le11/10.
+```
+
+Auf den vollständigen Quellenformräumen sind damit Quotientenabstieg, Beschränktheit, Injektivität mit geschlossenem Bild, Quellintertwining, beide Cocycles und Defektintertwining bewiesen.
+
+Die Formnaturality über die Wand
+
+```math
+q_B(J_{A,B}u,J_{A,B}v)=q_A(u,v)
+```
+
+folgt aus physischer Trägertrennung: Für alte Quellen ist die neue Shiftlänge mindestens $2A$, sodass die neuen Translationpaarungen bis auf einen Nullmengenkontakt verschwinden.
+
+Aus diesen Daten folgt außerdem die Gramkompression
+
+```math
+(M^T_{A,B})^*G_BM^T_{A,B}=G_A.
+```
+
+**Firewall:** O10 beweist Rohtransport, nicht die Positivität des gesamten neuen Carriers rechts von $A_8$. Die alte positive Reserve wird nur auf das transportierte alte Bild übertragen.
+
+### 17.3 Allgemeines Ein-Wand-Lemma: keine Ansammlung von Spezialrechnungen
+
+Das Paket enthält tatsächlich ein **einmal bewiesenes allgemeines Prime-Power-Wandlemma**. Für einen neuen Kanal mit Gewicht $v>0$ und Shiftlänge $\ell$ gilt
+
+```math
+0\le1-\cos(\ell\xi)
+\le C_\ell g_0(\xi)
+\le C_\ell g(\xi),
+\qquad
+C_\ell=\max\{1,\ell^2/16\}.
+```
+
+Das liefert beidseitig beschränkte T-/D-Wandmultiplikatoren für jede einzelne endliche Prime-Power-Wand.
+
+Auf jedem **festen endlichen Maximalhorizont** werden außerdem der vollständige Zwei-Mellin-Quellenraum, die Äquivalenz einer verschobenen Hilfsnorm zur Gamma-Norm, der T-Isomorphismus, der Defekttransfer, Defektintertwining und Gramkompression bewiesen.
+
+Für endlich viele Wände werden die direkten Symbolverhältnisse verwendet. Dadurch kürzen sich die Zwischenfaktoren algebraisch exakt und die Roh-Cocycles gelten ohne ein unendliches Operatorprodukt.
+
+Der allgemeine Satz beweist somit:
+
+```math
+\text{rohe T/D-Cocycles auf jedem festen endlichen Horizont}.
+```
+
+Er beweist **nicht**:
+
+```math
+\text{eine kofinale positive C1-Familie}.
+```
+
+Für jede neue Kammer bleibt ein vollständiger positiver Terminalnachweis auf den neu hinzugekommenen Quellrichtungen erforderlich.
+
+### 17.4 Die $q=9$-Wand und warum $q=10$ keine Wand ist
+
+Für
+
+```math
+A_9=\log3,
+\qquad
+A_{11}=\frac12\log11
+```
+
+ist die zweite Wand die Aktivierung von $q=9=3^2$ mit
+
+```math
+v=\frac{\log3}{3},
+\qquad
+\ell=2\log3.
+```
+
+Sie ist eine direkte Instanz des allgemeinen Wandlemmas. Es gelten etwa
+
+```math
+\sqrt{150/161}\le a_T\le41/30,
+\qquad
+\sqrt{150/161}\le a_D\le86/75.
+```
+
+Die Aktivierungsfamilien sind exakt:
+
+```math
+A=A_8:\ \{2,3,4,5,7\},
+```
+
+```math
+A=A_9:\ \{2,3,4,5,7,8\},
+```
+
+```math
+A=A_{11}:\ \{2,3,4,5,7,8,9\}.
+```
+
+$q=10$ erzeugt keine Wand, weil $10$ keine Primzahlpotenz ist und daher $\Lambda(10)=0$. $q=11$ bleibt am Endpunkt $A_{11}$ wegen der **strikten** Aktivierungsbedingung $\log q<2A$ noch inaktiv.
+
+### 17.5 Zweite positive Kammer bis $A_9$
+
+Die neue analytische Tailrechnung berücksichtigt die geänderte Kettengeometrie rechts von $A_8$: Insbesondere besitzt der $q=2$-Shift nun Viererketten; die alte Dreierkettennorm darf nicht fortgeschrieben werden.
+
+Für die vollständigen hohen Quellenräume wird mit rohen Graden $594/595$ bewiesen:
+
+```math
+q_A[u]\ge\frac23\|u\|_2^2
+```
+
+auf $A_8\le A\le A_9$, bei exakter Kodimension **296 je Parität**. Das ergibt auf dem hohen T-Bild die Reserve $1/19$.
+
+Die hohe Antwort wird danach vollständig per Schur eliminiert. Entscheidend ist, dass die finite Matrix nicht einfach einen abgeschnittenen hohen Raum repräsentiert: Die analytische Reduktion erfasst den gesamten unendlichen High-Raum, während die gespeicherte Modell-Grammatrix die vollständigen $V^2$-, $S^2$-, $VS/SV$- und Gamma-Kreuzbeiträge mit Parseval-Abzug enthält.
+
+Die verbleibende hinreichende $296\times296$-Untermatrix wurde in beiden Paritäten direkt mit gerichteter Arb-LDL zertifiziert:
+
+```math
+296/296\ \text{positive Pivots je Parität}.
+```
+
+Eine zweite Implementierung ohne Arb/FLINT und ohne Import der Generator-/Checkerlogik reproduziert auf denselben gelieferten vollständigen Modellintervallen erneut alle 296 Pivots.
+
+Daraus wird bewusst nur der kleinere gemeinsame physische Boden gebucht:
+
+```math
+q_A[u]\ge10^{-35}\|u\|_2^2
+\qquad
+(1\le A\le A_9),
+```
+
+und damit
+
+```math
+G_A\succeq\frac1{12\cdot10^{35}+1}I.
+```
+
+Mit dem Wand-Kompressionsgesetz folgen die korrigierten positiven isometrischen Transporte samt Cocycle durch die $q=8$-Wand.
+
+**Evidenzgrenze:** Der Integerprüfer ist eine unabhängige Zertifikatsarithmetik, aber keine zweite vollständige Erzeugung der 296-dimensionalen Integralmatrizen. Ein separates kleines $N=15$, $M=16$-Modell prüft mit direkter Vollfunktionsintegration die Zusammensetzungslogik der Engine.
+
+### 17.6 Dritte positive Kammer bis $A_{11}$
+
+Am Terminal $A_{11}$ sind die sieben Kanäle $2,3,4,5,7,8,9$ aktiv. Die neue analytische Verbesserung koppelt das positive Randpotential $V$ direkt mit allen Shiftverlusten und beweist über acht exakte Zellen
+
+```math
+S_A-V\preceq\frac{59}{20}I.
+```
+
+Zusammen mit dem neuen Gamma-/Konstantenbudget ergibt sich der Gesamtverlust
+
+```math
+\frac{14811}{2500}.
+```
+
+Die hohen Grade $572/573$ liefern auf dem **vollständigen** hohen Raum
+
+```math
+q_A[u]\ge\|u\|_2^2,
+```
+
+bei Kodimension **285 je Parität** und hoher Defektreserve $1/14$.
+
+Der erste direkte Intervall-LDL-Versuch war korrekt **unentschieden**: nur 43 beziehungsweise 46 Pivots konnten positiv abgeschlossen werden; die nächsten Intervalle überdeckten Null. Daraus wurde kein negativer Formbefund abgeleitet.
+
+Die anschließende Reparatur verwendet eine exakt invertierbare rationale Basisänderung $P$. Auf den **unveränderten ursprünglichen vollständigen Intervallen** wird
+
+```math
+\widetilde F=P^*FP
+```
+
+gerichtet eingeschlossen. Positiver Gershgorin-Boden und 285 positive LDL-Pivots beweisen die Positivität in den transformierten Koordinaten. Der Verlust wird über die exakt berechnete Frobeniusnorm von $P$ in die ursprünglichen Koordinaten zurückgerechnet.
+
+Diese Kongruenz ist mathematisch legitim; sie verengt keine Eingangsinvervalle und entfernt keine hohen Kopplungen.
+
+Ein separat implementierter Integer-Intervallprüfer rekonstruiert die hinreichende Matrix aus den gelieferten Modellintervallen und Fehlertermen, rekonstruiert die rationale Kongruenz selbst und prüft Gershgorin, alle **285/285** Pivots und die Normrückrechnung erneut.
+
+Der gebuchte gemeinsame Boden ist
+
+```math
+q_A[u]\ge10^{-50}\|u\|_2^2
+\qquad
+(1\le A\le A_{11}),
+```
+
+mit
+
+```math
+G_A\succeq\frac1{13\cdot10^{50}+1}I.
+```
+
+Damit sind die korrigierten positiven Transporte und ihr Cocycle durch **beide** Wände für alle
+
+```math
+1\le A\le B\le C\le A_{11}
+```
+
+hergeleitet.
+
+Auch hier gilt die Evidenzgrenze: Die zweite Arithmetik ist unabhängig, die zugrunde liegende vollständige 285-dimensionale Integralmodellmatrix wurde jedoch nicht von einem zweiten Generator neu erzeugt. Die kleine direkte Normalisierungsrechnung umfasst 245 Vergleichstests und prüft die Struktur auf niedriger Dimension.
+
+### 17.7 Der Generator erfasst die vollständige modellierte hohe Antwort
+
+Die großen Generatoren wurden im Audit stichprobenartig auf ihre mathematische Zusammensetzung geprüft. Sie bilden nicht lediglich eine endliche High-Trunkierung:
+
+- $V^2$ wird über exakte Momentformeln behandelt;
+- $S^2$ und $VS/SV$ werden zellweise über die vollständige aktive Shiftfamilie integriert;
+- der ganze rohe niedrige Raum wird per Parseval abgezogen;
+- Gamma-High- und Gamma/Shift-Kreuzterme werden bis zum exakten endlichen Support des Gamma-Modellpolynoms ergänzt;
+- die Mellin-Momentkorrektur und der rigorose Gamma-Rest werden anschließend separat bezahlt.
+
+Die endliche Stütze des Gamma-**Modellpolynoms** darf daher nicht mit einer endlichen Stütze des wirklichen hohen Quellenraums verwechselt werden.
+
+Ein zweiter voller Integralgenerator wurde im Paket nicht ausgeführt. Die unabhängigen kleinen Normalisierungsprogramme vergleichen dagegen eine direkte vollständige Funktionsintegration mit der zerlegten Generatorrechnung und bestehen mit 239 ($A_9$) beziehungsweise 245 ($A_{11}$) Tests.
+
+### 17.8 Erneuerbarer High-Tail auf jedem festen endlichen Horizont
+
+Das allgemeine High-Tail-Prinzip ist analytisch nachvollziehbar und benötigt kein Terminalmatrixzertifikat.
+
+Für jedes feste $L<\infty$ sind nur endlich viele Prime-Power-Kanäle aktiv. Daher besitzen alle nichtdiagonalen Verluste eine endliche gemeinsame Schranke $C_L$. Gleichzeitig gilt
+
+```math
+H_N\longrightarrow\infty
+```
+
+für die harmonische Diagonale und die vollständige Mellinkorrektur erfüllt bei festem $L$
+
+```math
+\varepsilon_N(L)\longrightarrow0.
+```
+
+Somit existiert zu jedem gewünschten $\delta>0$ ein endlicher Schnitt $N(L,\delta)$, sodass auf dem gesamten hohen Quellenkern für alle $1\le A\le L$
+
+```math
+q_A[u]\ge\delta\|u\|_2^2.
+```
+
+Die erforderliche Kodimension darf mit $L$ wachsen.
+
+Dieser Satz reduziert die zukünftige Forschung wesentlich, löst sie aber nicht: Eine negative Richtung der vollständigen Form könnte weiterhin im verbleibenden **endlichen niedrigen Schurrest** liegen.
+
+Es folgt weder eine feste endliche Kodimension für alle Horizonte noch eine kofinale positive Familie.
+
+### 17.9 Evidenzstufen
+
+| Ergebnis | Analytischer Status im Audit | Zertifikatsstatus | Unabhängige zweite Vollmatrix? | Paket-/Reviewstatus |
+| --- | --- | --- | --- | --- |
+| O10 / $q=8$-Wand | **analytisch nachvollzogen** | 68 exakte Supporting Checks | nicht erforderlich | integriert; `EXTERNAL_REVIEW_OPEN` |
+| $A_9$ High-Tail | **analytisch nachvollzogen** | exakte Tailkontrollen | nicht erforderlich | integriert; `EXTERNAL_REVIEW_OPEN` |
+| $A_9$ voller Low-Schurrest | **analytisch auf Vollform reduziert** | Arb 296/296 + unabhängige Integerintervalle 296/296 | **nein**; kleiner direkter Normalisierungscheck | integriert; `EXTERNAL_REVIEW_OPEN` |
+| allgemeines Wandlemma / $q=9$ | **analytisch nachvollzogen** | 109 exakte Checks | nicht erforderlich | integriert; `EXTERNAL_REVIEW_OPEN` |
+| $A_{11}$ High-Tail | **analytisch nachvollzogen** | 187 Tailchecks | nicht erforderlich | integriert; `EXTERNAL_REVIEW_OPEN` |
+| $A_{11}$ direkter LDL | korrekt **unentschieden** | 43/285 bzw. 46/285 | — | Diagnose erhalten |
+| $A_{11}$ rational vorkonditionierter Low-Schurrest | **Kongruenzargument nachvollzogen** | 285/285 Arb + unabhängige Integerintervalle/Gershgorin | **nein**; kleiner direkter Normalisierungscheck | integriert; `EXTERNAL_REVIEW_OPEN` |
+| endlicher High-Tail allgemein | **analytischer Satz nachvollzogen** | keine große Terminalmatrix nötig | — | integriert; `EXTERNAL_REVIEW_OPEN` |
+| kofinale/unbeschränkte positive Familie | **offen** | — | — | offen |
+| globales Objekt X / globale Weil-Positivität / RH | **offen** | — | — | offen |
+
+### 17.10 Aktuelle Frontierkette
+
+| Pfeil | Mathematischer Satz | Voraussetzungen | Evidenz | Kleinster verbleibender Engpass |
+| --- | --- | --- | --- | --- |
+| O8/O9 bei $A_8$ → $q=8$-Wand | O10: beschränkte getrennte T/D-Wandtransporte, Cocycles, Defektintertwining, Gramkompression | C1a + vollständige Zwei-Mellin-Quellen | analytisch nachvollzogen + 68 Checks | voller neuer Terminalboden |
+| $q=8$-Wand → $A_9$ | vollständige Terminalpositivität bis $A_9$ | High-Floor $2/3$, vollständige High-Elimination, positiver 296D Low-Schurrest | Arb + Integerzertifikat; kein zweiter Vollgenerator | nächste Wand / neuer Terminalboden |
+| $A_9$ → $q=9$-Wand | Instanz des allgemeinen Ein-Wand-Lemmas | positiver $A_9$-Stand + rohe Symbolfamilie | analytisch nachvollzogen + allgemeine Checks | Positivität der neu hinzugekommenen Quellrichtungen |
+| $q=9$-Wand → $A_{11}$ | vollständige Terminalpositivität bis $A_{11}$ | High-Floor $1$, vollständige High-Elimination, positiv kongruenzzertifizierter 285D Low-Schurrest | rationale Kongruenz + Arb + unabhängige Integerarithmetik; kein zweiter Vollgenerator | nächste Wand $q=11$ und vierte Terminalreserve |
+
+Die aktuelle unabhängig nachvollzogene lokale Front ist damit
+
+```math
+A_8
+\longrightarrow
+q=8
+\longrightarrow
+A_9
+\longrightarrow
+q=9
+\longrightarrow
+A_{11}.
+```
+
+Am Endpunkt $A_{11}$ ist $q=11$ noch inaktiv. Das allgemeine Wandlemma liefert den **rohen** Mechanismus für den späteren $q=11$-Eintritt bereits abstrakt; eine neue volle positive Terminalreserve der vierten Kammer liefert es nicht.
+
+### 17.11 Neuer kleinster struktureller Engpass
+
+Nach dem allgemeinen Wandlemma und dem erneuerbaren High-Tail liegt der zentrale wiederkehrende Engpass nun sehr präzise im **niedrigen vollständigen Schurrest jeder neuen Kammer**.
+
+Für einen beliebigen festen nächsten Horizont kann der hohe Tail durch Erhöhung der endlichen Kodimension wieder positiv gemacht werden. Was jeweils neu bewiesen beziehungsweise zertifiziert werden muss, ist die Positivität des verbleibenden endlichen Low-Schurrests samt vollständig bezahlter hoher Antwort.
+
+Das nächste natürliche lokale Gate beginnt daher strikt rechts von $A_{11}$ mit der $q=11$-Wand und einer neuen vierten Terminalpositivität. Eine Iteration dieses Verfahrens für beliebig viele Wände ist bislang **kein** Satz einer kofinalen positiven Familie.
 
 ---
 
@@ -2002,6 +2360,20 @@ Die Positivitätsgrenze ist damit exakt lokalisiert: $q_a\ge0\iff\|R_a\|\le1$; s
 
 Seit Durchlauf 12 enthält `main` parallel ein neues `chambers-through-a11`-Paket. Dessen O10-/Wall-/A9-/A11-Reichweite wurde in diesem historischen Durchlauf bewusst nicht rückwirkend als bewiesen übernommen und muss separat auditiert werden.
 
+## Durchlauf 14
+
+Den parallel integrierten Frontier `chambers-through-a11-2026-09-28` unabhängig geprüft. O10 über die $q=8$-Wand und das allgemeine Prime-Power-Wandlemma tragen analytisch: getrennte T-/D-Rohtransporte, Quotientenabstieg, Formnaturality, Cocycles, Defektintertwining und Gramkompression sind auf jedem festen endlichen Horizont hergeleitet. Positivität des neuen gesamten Carriers folgt aus dem Wandlemma ausdrücklich nicht.
+
+Die zweite Kammer bis $A_9=\log3$ besitzt nach vollständiger High-Elimination und rigoroser Zertifikatsarithmetik einen gemeinsamen physischen Boden $10^{-35}$; der 296-dimensionale Low-Schurrest ist in beiden Paritäten durch direkte Arb-LDL und einen separat implementierten Integer-Intervallprüfer zertifiziert. Die zweite Implementierung erzeugt nicht unabhängig die vollständigen Integralmatrizen.
+
+Die $q=9$-Wand ist eine direkte Instanz des allgemeinen Lemmas. $q=10$ ist keine arithmetische Wand, da $10$ keine Primzahlpotenz ist; $q=11$ bleibt bei $A_{11}=\log11/2$ wegen strikter Aktivierung noch inaktiv.
+
+Am $A_{11}$-Terminal liefert der vollständige High-Raum den Boden $1$ bei Kodimension 285 je Parität. Der erste direkte Intervall-LDL blieb korrekt unentschieden. Eine exakt rationale Kongruenz der unveränderten vollständigen Intervallmatrix erzeugt anschließend positive Gershgorin-Böden und 285/285 positive Pivots; ein unabhängiger Integer-Intervallprüfer rekonstruiert Kongruenz, Pivots und Normrückrechnung. Der daraus konservativ gebuchte Boden ist $10^{-50}$ bis $A_{11}$.
+
+Der allgemeine High-Tail-Satz wurde ebenfalls analytisch nachvollzogen: Auf jedem festen endlichen Horizont kann der vollständige hohe Quellenkern mit endlicher, aber horizontabhängig wachsender Kodimension positiv gemacht werden. Damit verschiebt sich der wiederkehrende lokale Engpass auf die Positivität des vollständigen niedrigen Schurrests jeder neuen Kammer.
+
+Der Paket-Replay auf GitHub reproduziert 13 Zertifikatsschritte grün, deklariert aber selbst `full_integral_models_recomputed: false` und `external_analytic_review: OPEN`. Der Audit übernimmt diese Evidenzgrenze. Keine globale/kofinale positive Familie, kein finales Objekt X und keine globale Weil-Positivität folgen.
+
 ## Korrekturblock – 27. September 2026
 
 Die beiden Fehler samt direkter operatorischer Folgestellen wurden über PR #176 korrigiert und in main gemergt.
@@ -2014,8 +2386,8 @@ Geprüfter Ausgangspunkt für die Fortsetzung:
 
 # III. Nächster Prüfpunkt
 
-Als nächstes den **aktuellen Live-Front-Sprung `chambers-through-a11-2026-09-28`** unabhängig prüfen, bevor die historische Rekonstruktion weitergeführt wird:
+Nach der nun unabhängig nachvollzogenen Front bis $A_{11}$ gibt es zwei sinnvolle Richtungen. Für die mathematische Forschungsfront ist der nächste lokale Schritt klar:
 
-> Welche der neuen O10-/Wall-/A9-/A11-Aussagen sind analytische Sätze, welche benötigen Rechnerzertifikate, wie werden Prime-Power-Wände transportiert, und wie weit reicht die positive C1-Geometrie nun tatsächlich über die bisher geprüfte erste Kammer hinaus?
+> **Strikt rechts von $A_{11}$ die $q=11$-Wand anwenden und die vierte vollständige Terminalpositivität schließen.** Das rohe Wandgesetz und ein positiver hoher Tail stehen allgemein zur Verfügung; neu zu kontrollieren ist vor allem der vollständige niedrige Schurrest.
 
-Erst danach soll der Gesamtaudit wieder mit der weiteren historischen/globalen Linie fortgesetzt werden, damit die Synthese oben nicht hinter dem inzwischen veränderten `main`-Frontier zurückbleibt.
+Für den Gesamtaudit sollte parallel darauf geachtet werden, ob weitere `main`-Fortschritte bereits einen solchen nächsten Kammerblock integrieren. Eine kofinale positive Folge darf erst dann gebucht werden, wenn eine entsprechende allgemeine Low-Schur-Positivität bewiesen ist; der erneuerbare High-Tail allein genügt nicht.
