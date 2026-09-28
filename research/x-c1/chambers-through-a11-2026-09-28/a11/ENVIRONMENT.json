@@ -1,0 +1,8 @@
+{
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "Arb_dependency": "python-flint==0.9.0; enforced by the certificate checker",
+  "model_precision_bits": 3072,
+  "stored_decimal_digits": 100,
+  "independent_integer_grid_digits": 120
+}

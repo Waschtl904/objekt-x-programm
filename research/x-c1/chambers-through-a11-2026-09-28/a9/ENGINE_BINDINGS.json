@@ -1,0 +1,60 @@
+{
+  "scope": "Explicit local A9 adaptations of pinned O8 numerical components",
+  "sources_checked_against_git": true,
+  "records": [
+    {
+      "source_commit": "82a1f9d661b1668cc71eb0d5f8806c5cee73e471",
+      "source_path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/generate_a8.py",
+      "source_sha256": "49de5bdeb80dc618206b34c4db3adcb07c602758fcc343b26498b31b5cfc5213",
+      "local_path": "generate_a9.py",
+      "local_sha256": "9093505719aa2d85e167f17aed6fe4aab83b15424ac7590ad0d62cbf5ede2cb3"
+    },
+    {
+      "source_commit": "82a1f9d661b1668cc71eb0d5f8806c5cee73e471",
+      "source_path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/check_a8.py",
+      "source_sha256": "4a2e2330efe1e3dc6295effa36f49ea06f2bf0985d23c3d70d9396f8cabe8a5f",
+      "local_path": "check_a9.py",
+      "local_sha256": "99f16b855cc094783a3de0305d00b40f725646a5a5210088ab19dad8a6a26921"
+    },
+    {
+      "source_commit": "82a1f9d661b1668cc71eb0d5f8806c5cee73e471",
+      "source_path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/check_normalization_a8.py",
+      "source_sha256": "39a462fb5d0a710e95b00316ab41e928492b2d3be675af8389e2d61b56c5bffa",
+      "local_path": "check_normalization_a9.py",
+      "local_sha256": "cebd558e04f259dc4ace8948ae4850426dd4ba9747efb9f4741b283f8fe747b3"
+    },
+    {
+      "source_commit": "82a1f9d661b1668cc71eb0d5f8806c5cee73e471",
+      "source_path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-reproduktion/verify_integer_intervals.py",
+      "source_sha256": "785390f0e67337d114f8438c6ab3ce102d2713b42ca104e74c5e96e0c7028ee9",
+      "local_path": "verify_integer_a9.py",
+      "local_sha256": "2a91f73e562ac46dfeb3c7d5827772546a1bd8c30fd5b592737d619d9925d598"
+    }
+  ],
+  "analytical_background": {
+    "source_commit": "82a1f9d661b1668cc71eb0d5f8806c5cee73e471",
+    "source_path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-schur-abgleich/GRAPH_SCHUR.md",
+    "source_sha256": "9fcf953793d8511433cbf79a1a1f1c88062eb429b693b0d81b6856754b49c636",
+    "use": "Graph-metric elimination and congruence, rederived for the new A9 domain and constants in SCHUR_AND_TRANSPORT.md"
+  },
+  "normalization_inputs": {
+    "normalization_model.json.gz": "833116db14b0a59984b47c15064b11731ee6865e26816f07305c933165d8207a",
+    "normalization_results.json": "6d43f1d5be80ba4e7788177a41979e3fd329f4a501607d965e119a745f37b801",
+    "check_normalization_a9.py": "cebd558e04f259dc4ace8948ae4850426dd4ba9747efb9f4741b283f8fe747b3"
+  },
+  "changes": [
+    "endpoint log(3), six active channels, exact d3=1 and d4=2*d2,d8=3*d2",
+    "six new positive-half integration cells",
+    "newly proved high cutoff 594/595, 296 low coordinates per parity",
+    "Gamma degree 224 on radius 11/10, 3072-bit Arb construction",
+    "new full-form error payment and D norm squared bound 12",
+    "independent integer check reconstructs the new Gamma residual and high floor"
+  ],
+  "not_independent": [
+    "The full-size integral model uses an adaptation of the O8 engine.",
+    "The small-degree alternative assembly shares polynomial routines.",
+    "The integer verifier independently checks certificate arithmetic, not every full-size integral."
+  ],
+  "repository_files_modified": false,
+  "github_writes": false
+}

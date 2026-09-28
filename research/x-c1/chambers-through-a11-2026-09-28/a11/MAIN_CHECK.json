@@ -1,0 +1,25 @@
+{
+  "previous_main": "7f154559fef92d16b890d24e1ae86faa8f4f6d87",
+  "observed_main": "fab93ccb77508c1cf0b46ddcfead799549c48813",
+  "local_checkout": "69eb8773acd483978e2453019d1e2d5cf009a990",
+  "changed_files": [
+    "00-uebersicht/OBJEKT_X_UNABHAENGIGER_GESAMTAUDIT.md",
+    "07-weil-explizitformel/NEU-255_Haar-Koisometrie_L2-Majorante_BW-Operatoraudit.md",
+    "07-weil-explizitformel/NEU-256_Semibeschraenktheit_Abschliessbarkeit_Weil-Form_L2.md",
+    "07-weil-explizitformel/NEU-259_Finite-Intervall-Grenzwertweg_Objekt-X-Traeger.md",
+    "07-weil-explizitformel/NEU-260a_Lambda-Gauge-Audit.md"
+  ],
+  "pinned_mathematical_inputs_changed": false,
+  "reviewed_diff_sha256": "dc9d37b7d1fba9119110ec9d3ef005f4f9872d600634c0b9bfea0c3b68332d79",
+  "interpretation": "Explicit finite-horizon C1a kernel and unshifted positivity remain unchanged; no global Haar-L2 closure or all-horizon common shift assumed",
+  "github_writes": false,
+  "prior_observed_main": "684cf4bec7355e071e7c6f4ac1adde7ce54fee48",
+  "additional_audit_diff_sha256": "fe28253bd8a7732a03fd1e7b15049b6777120e3b7ba9d9f885d81fa6f8824d35",
+  "intermediate_observed_main": "26ed5597a487a585f2e06c38c7441a575d1687b1",
+  "final_reviewed_diff_sha256": "1c7b487bb4ab15fc44159c1ee6c30c5f1318c21cfecc87b7b18387d75397c251",
+  "final_changed_files": [
+    "00-uebersicht/OBJEKT_X_UNABHAENGIGER_GESAMTAUDIT.md",
+    "papers/P02_Adelic_Weil_Amplitude_Port.tex",
+    "papers/P03_Haar_L2_Firewall.tex"
+  ]
+}

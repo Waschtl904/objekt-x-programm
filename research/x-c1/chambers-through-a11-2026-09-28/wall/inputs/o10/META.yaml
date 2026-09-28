@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "A11-HISTORICAL-INPUT-O10",
+  "date": "2026-09-28",
+  "kind": "DIAGNOSTIC",
+  "strategic": false,
+  "local_only": true,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Bytegleiche historische Eingabe des allgemeinen Wandpakets; keine zusätzliche strategische Promotion.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Historische Beweiskopie, kein neuer No-Go.",
+  "depends_on": [
+    "X4-Q8-WALL-CROSSING"
+  ],
+  "closes": [],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Externe analytische Gesamtbegutachtung.",
+    "Unbeschränkte/kofinale positive Terminalkompatibilität.",
+    "Allgemeine Positivität des niedrigen Schurrests.",
+    "Globales Objekt X, globale Weil-Positivität oder RH."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/chambers-through-a11-2026-09-28/wall/inputs/o10/PROOF.md",
+    "sha256": "49d6d8ac4f4b34e0139949dc8008cdca9e8426d6dc597e57bd10ea7ce0b4fdbd"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "repository": "Waschtl904/objekt-x-programm",
+  "base_main": "69eb8773acd483978e2453019d1e2d5cf009a990",
+  "repository_inputs": [
+    {
+      "label": "Universal physical/reference form identity",
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/universal-prime-power-family-2026-09-18/PROOF.md",
+      "sha256": "639cfd30c71828ad56caf04447c7d174ec05071f250e19cb6be189d8c3e5f853"
+    },
+    {
+      "label": "C1a scalar ledger and coupled operators",
+      "commit": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
+      "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md",
+      "sha256": "4ebc12a5a84593d4a2fa0e21fd7b0ca6b5cc3fb1cb29e1b4c4f68dbdaa95f1b5"
+    },
+    {
+      "label": "O1-O4 original complete source model",
+      "commit": "6623047361578b819ae44358fbbbf0b3fdeac9ff",
+      "path": "research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_RAW_TD_O1_O4.md",
+      "sha256": "bead3bad0dc85a91013101328dbeaede4b263062752abda56319dde73b446af4"
+    },
+    {
+      "label": "O5-O7 method and old chamber scope",
+      "commit": "6623047361578b819ae44358fbbbf0b3fdeac9ff",
+      "path": "research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_O5_O7_ADDENDUM.md",
+      "sha256": "62e83371a9484d805222854cbfc22e5fca0bd4c0a976242240033445091a0976"
+    },
+    {
+      "label": "O8 form domain and complete Gram method",
+      "commit": "82a1f9d661b1668cc71eb0d5f8806c5cee73e471",
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/PROOF.md",
+      "sha256": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661"
+    },
+    {
+      "label": "Exact rational approximation helper",
+      "commit": "82a1f9d661b1668cc71eb0d5f8806c5cee73e471",
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/rational_bounds.py",
+      "sha256": "8e9ae5784a341ae3ba4f5db07c6c6ebbdee4fbc375a59a963b071f77c14b7d5c"
+    },
+    {
+      "label": "O8 refined kernel inequality method",
+      "commit": "82a1f9d661b1668cc71eb0d5f8806c5cee73e471",
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/refine_tail.py",
+      "sha256": "a8ba14e84ea74d8c56bdac8942dc04fea8a32c117b2d6844ee18ace7f05128b4"
+    }
+  ],
+  "copied_inputs": [
+    {
+      "package_path": "inputs/O10_PROOF.md",
+      "origin": "Previously checked local O10 proof, not a published repository result",
+      "sha256": "49d6d8ac4f4b34e0139949dc8008cdca9e8426d6dc597e57bd10ea7ce0b4fdbd"
+    },
+    {
+      "package_path": "rational_bounds.py",
+      "origin_commit": "82a1f9d661b1668cc71eb0d5f8806c5cee73e471",
+      "sha256": "8e9ae5784a341ae3ba4f5db07c6c6ebbdee4fbc375a59a963b071f77c14b7d5c"
+    }
+  ],
+  "scope": "New analytic high-tail reduction for A8<=A<=A9; full terminal positivity remains OPEN",
+  "local_O10_is_not_external_analytical_review": true,
+  "repository_files_modified": false
+}

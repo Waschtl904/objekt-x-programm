@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+  "date": "2026-09-28",
+  "kind": "THEOREM",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Ursprüngliche Zwei-Mellin-Quellen; vollständige Positivität und korrigierter Cocycle bis A11=log(11)/2; 285 Koordinaten je Parität.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "Kein No-Go und keine negative Richtung der vollständigen Weil-Form behauptet.",
+  "depends_on": [
+    "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY",
+    "GENERAL-PRIME-POWER-WALL-COCYCLE"
+  ],
+  "closes": [
+    "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Externe analytische Gesamtbegutachtung.",
+    "Unbeschränkte/kofinale positive Terminalkompatibilität.",
+    "Allgemeine Positivität des niedrigen Schurrests.",
+    "Globales Objekt X, globale Weil-Positivität oder RH."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/PROOF.md",
+    "sha256": "911a6ed3f5631958739ca6e527001e1fe4cb71258fa637d89971dc6b4b123c7b"
+  }
+}

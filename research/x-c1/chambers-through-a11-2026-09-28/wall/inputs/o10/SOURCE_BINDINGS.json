@@ -1,0 +1,50 @@
+{
+  "repository": "Waschtl904/objekt-x-programm",
+  "base_main": "69eb8773acd483978e2453019d1e2d5cf009a990",
+  "local_result": "O10 raw wall construction, external analytical review open",
+  "inputs": [
+    {
+      "label": "C1a scalar ledger and coupled symbols",
+      "commit": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
+      "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md",
+      "sha256": "4ebc12a5a84593d4a2fa0e21fd7b0ca6b5cc3fb1cb29e1b4c4f68dbdaa95f1b5"
+    },
+    {
+      "label": "O1-O4 source and raw carrier definitions",
+      "commit": "6623047361578b819ae44358fbbbf0b3fdeac9ff",
+      "path": "research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_RAW_TD_O1_O4.md",
+      "sha256": "bead3bad0dc85a91013101328dbeaede4b263062752abda56319dde73b446af4"
+    },
+    {
+      "label": "O5-O7 defect construction and first-chamber proof",
+      "commit": "6623047361578b819ae44358fbbbf0b3fdeac9ff",
+      "path": "research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_O5_O7_ADDENDUM.md",
+      "sha256": "62e83371a9484d805222854cbfc22e5fca0bd4c0a976242240033445091a0976"
+    },
+    {
+      "label": "O10 raw obligation",
+      "commit": "69eb8773acd483978e2453019d1e2d5cf009a990",
+      "path": "research/x-c1/post-unit-q8-interface-2026-09-21/PROOF_OBLIGATIONS.md",
+      "sha256": "bc8036d73395ab8dc17837beee417e50f82c1fe494e1bf68f135e4dd2efbcf5f"
+    },
+    {
+      "label": "Threshold ledger",
+      "commit": "69eb8773acd483978e2453019d1e2d5cf009a990",
+      "path": "research/x-c1/post-unit-q8-interface-2026-09-21/THRESHOLD_LEDGER.md",
+      "sha256": "de14e1fd52825c3b312fd5f995133ad2f16fcee951edc991822951da949a66e7"
+    },
+    {
+      "label": "O8 old-space positive reserve, used only in section 9",
+      "commit": "82a1f9d661b1668cc71eb0d5f8806c5cee73e471",
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/PROOF.md",
+      "sha256": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661"
+    },
+    {
+      "label": "O8 graph and exact defect binding, used only in section 9",
+      "commit": "82a1f9d661b1668cc71eb0d5f8806c5cee73e471",
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-schur-abgleich/GRAPH_SCHUR.md",
+      "sha256": "9fcf953793d8511433cbf79a1a1f1c88062eb429b693b0d81b6856754b49c636"
+    }
+  ],
+  "repository_files_modified": false
+}

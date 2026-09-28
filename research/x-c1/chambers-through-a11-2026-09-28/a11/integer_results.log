@@ -1,0 +1,18 @@
+Reconstructing the exact Gamma residual from the supplied polynomial
+even: independently rebuilding the rational congruence of all full intervals
+even: checking all independently rebuilt congruence intervals with LDL
+even: 64 positive integer-interval pivots
+even: 128 positive integer-interval pivots
+even: 192 positive integer-interval pivots
+even: 256 positive integer-interval pivots
+even: 285 positive integer-interval pivots
+even: lower bounds approximately 6.465650337132697300066E-50 physical; 4.973577182409767153897E-51 defect
+odd: independently rebuilding the rational congruence of all full intervals
+odd: checking all independently rebuilt congruence intervals with LDL
+odd: 64 positive integer-interval pivots
+odd: 128 positive integer-interval pivots
+odd: 192 positive integer-interval pivots
+odd: 256 positive integer-interval pivots
+odd: 285 positive integer-interval pivots
+odd: lower bounds approximately 2.661882688244636626738E-46 physical; 2.047602067880489712876E-47 defect
+47 grouped checks PASS; both complete 285D certificates independently reproduced

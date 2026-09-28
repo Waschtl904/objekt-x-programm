@@ -1,0 +1,43 @@
+{
+  "previous_observed_main": "a77950be027dc1576b016c6a53bfad7ff65a04e4",
+  "main_observed": "7f154559fef92d16b890d24e1ae86faa8f4f6d87",
+  "new_commits": [
+    {
+      "sha": "32448d720568dc9a819e537fc81a6931d0eadc3d",
+      "message": "docs: add independent Objekt X cumulative audit"
+    },
+    {
+      "sha": "88f9cf4ba0bdd4aacfb9ffb249105ded81923d67",
+      "message": "fix: repair LaTeX rendering in cumulative audit"
+    },
+    {
+      "sha": "74b753f52b1d1655507811d23790330250cf1b02",
+      "message": "fix: use GitHub-native math syntax in cumulative audit"
+    },
+    {
+      "sha": "ec54213e6b2b81e92d969db0916cfb5985cf567c",
+      "message": "fix: clarify scattering sign and early adelic type claims"
+    },
+    {
+      "sha": "5100f85191830bd599849d9db8f73a8208046a67",
+      "message": "Merge pull request #177 from Waschtl904/fix/early-adelic-audit-clarifications-2026-09-27\n\nClarify early adelic audit and scattering sign"
+    },
+    {
+      "sha": "bcc497270a244aa5729a69a81387f08621a6d6dd",
+      "message": "docs: extend cumulative audit through first adelic transport"
+    },
+    {
+      "sha": "7f154559fef92d16b890d24e1ae86faa8f4f6d87",
+      "message": "fix: render new audit section with GitHub math fences"
+    }
+  ],
+  "changed_files": [
+    "00-uebersicht/OBJEKT_X_UNABHAENGIGER_GESAMTAUDIT.md",
+    "07-weil-explizitformel/NEU-220f_Archimedischer_Streufaktor_und_Zeitverzoegerungsoperator.md",
+    "07-weil-explizitformel/NEU-220g_Schwacher_endlich-archimedischer_Anschluss.md"
+  ],
+  "bound_input_paths_unchanged": true,
+  "assessment": "The cumulative audit and PR177 clarify scattering-sign interpretation and early adelic restriction/augmentation claims. The explicit C1a Gamma series, physical source model and bound A9/O10 inputs are unchanged; none of those corrected interpretations is a hypothesis of this lemma.",
+  "repository_writes": false,
+  "reviewed_changes_sha256": "b2f9cd8c03715aa914b6eced93929da243052dc73a3e77ea5f6aa4f14149fd4e"
+}

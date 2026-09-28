@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "X4-Q8-WALL-CROSSING",
+  "date": "2026-09-28",
+  "kind": "CONSTRUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Konkrete C1a-Familie; q=8-Rohwand, beide Transporte, 1<=A<=B<=C<=log(3).",
+  "claim_polarity": "CONSTRUCTION",
+  "negative_claim_boundary": "Kein No-Go und keine negative Richtung der vollständigen Weil-Form behauptet.",
+  "depends_on": [
+    "FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7",
+    "FIRST-CHAMBER-O8-TERMINAL-POSITIVITY"
+  ],
+  "closes": [
+    "X4-Q8-WALL-CROSSING"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Externe analytische Gesamtbegutachtung.",
+    "Unbeschränkte/kofinale positive Terminalkompatibilität.",
+    "Allgemeine Positivität des niedrigen Schurrests.",
+    "Globales Objekt X, globale Weil-Positivität oder RH."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/chambers-through-a11-2026-09-28/o10/PROOF.md",
+    "sha256": "49d6d8ac4f4b34e0139949dc8008cdca9e8426d6dc597e57bd10ea7ce0b4fdbd"
+  }
+}

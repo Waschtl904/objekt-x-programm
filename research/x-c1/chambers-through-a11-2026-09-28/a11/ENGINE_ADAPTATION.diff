@@ -1,0 +1,450 @@
+--- A9/generate_a9.py
++++ A11/generate_a11.py
+@@ -1,7 +1,7 @@
+-"""A9 low forms and complete model coupling Grams, python-flint 0.9.0.
++"""A11 low forms and complete model coupling Grams, python-flint 0.9.0.
+ 
+ Derived locally from the pinned terminal-1 engine. No repository mutation.
+-The true two-sided moment/Gamma error lift is in PROOF.md and check_a9.py.
++The true two-sided moment/Gamma error lift is in PROOF.md and check_a11.py.
+ """
+ import sys,time,json,argparse,gzip,hashlib
+ from pathlib import Path
+@@ -72,7 +72,7 @@
+     return {n:v for n,v in out.items() if v}
+ 
+ def gamma_columns(N,M,pg,a):
+-    # Exact rational Legendre integrals with rigorously enclosed A9 scaling.
++    # Exact rational Legendre integrals with rigorously enclosed A11 scaling.
+     out=[]
+     for j in range(N+1):
+         previous=[{0:fmpq(1)} if j==0 else {}]
+@@ -106,15 +106,16 @@
+             low[j][i]=(a[j,i]-sum((low[j][k]*low[i][k]*piv[k] for k in range(i)),arb(0)))/d
+     return low,piv,None
+ 
+-def compute(N=593,M=224,precision=3072,output=None):
++def compute(N=571,M=416,precision=3072,output=None):
+     ctx.prec=precision;start=time.time();size=N+1
+     if N%2!=1 or M%2!=0:raise ValueError('Odd cutoff, even Gamma degree required')
+-    a=arb(3).log()
+-    progress(f'Terminal A9=log(3), raw degrees 0..{N}, Gamma degree {M}, {precision} bits')
++    a=arb(11).log()/2
++    progress(f'Terminal A11=log(11)/2, raw degrees 0..{N}, Gamma degree {M}, {precision} bits')
+     d2=arb(2).log()/a
+-    shifts={2:d2,3:arb(1),4:2*d2,5:arb(5).log()/a,7:arb(7).log()/a,8:3*d2}
+-    channels=[(q,arb(p).log()/arb(q).sqrt(),shifts[q]) for q,p in [(2,2),(3,3),(4,2),(5,5),(7,7),(8,2)]]
+-    assert 1<a<arb(11)/10 and channels[-1][2]<2 and channels[1][2]==1
++    d3=arb(3).log()/a
++    shifts={2:d2,3:d3,4:2*d2,5:arb(5).log()/a,7:arb(7).log()/a,8:3*d2,9:2*d3}
++    channels=[(q,arb(p).log()/arb(q).sqrt(),shifts[q]) for q,p in [(2,2),(3,3),(4,2),(5,5),(7,7),(8,2),(9,3)]]
++    assert 1<a<arb(6)/5 and channels[-1][2]<2 and shifts[3]<1
+     q0=-(2*arb.pi()*a).log()-arb.const_euler()
+     log2=arb(2).log();pi=arb.pi()
+     polys=leg_polynomials(N)
+@@ -127,7 +128,7 @@
+         return (arb(1)/(2*i+1)+2*(harm[2*i]-harm[i])-log2)/(2*i+1)
+     P=matrix([[potential(i,j) for j in range(size)] for i in range(size)])
+     pg,_unused_old_unit_radius_bound=gamma_polynomial(M)
+-    eps_fraction=gamma_bound(M,Fraction(11,10))
++    eps_fraction=gamma_bound(M,Fraction(6,5))
+     epsq=fmpq(eps_fraction.numerator,eps_fraction.denominator);eps=arb(epsq)
+     progress('Gamma uniform kernel error '+bounds_summary(eps))
+     kcols=gamma_columns(N,M,pg,a)
+@@ -159,8 +160,8 @@
+     H2=matrix([[lm2[(i+j)//2] if (i+j)%2==0 else arb(0) for j in range(size)] for i in range(size)])
+     P2=coefficients*H2*coefficients.transpose()
+     progress('Complete V squared matrix ready')
+-    # A9 has six positive cells. q3 has exact shift 1; q2/q4 no longer coalesce.
+-    breaks=[arb(0),shifts[4]-1,1-shifts[2],shifts[5]-1,shifts[7]-1,shifts[8]-1,arb(1)]
++    # A11 has eight positive cells. q3 has shift below 1; q9=2*q3.
++    breaks=[arb(0),1-shifts[3],shifts[4]-1,shifts[5]-1,1-shifts[2],shifts[7]-1,shifts[8]-1,shifts[9]-1,arb(1)]
+     assert all(breaks[i]<breaks[i+1] for i in range(len(breaks)-1))
+     actions=[]
+     for q,w,d in channels:
+@@ -247,13 +248,13 @@
+     moments=[moment(n) for n in range(size)]
+     assert moments[0].overlaps((a/2).sinh()/(a/2))
+     assert moments[1].overlaps(((a/2)*(a/2).cosh()-(a/2).sinh())/(a/2)**2)
+-    result={'endpoint':'log(3)','endpoint_interval':interval(a),
++    result={'endpoint':'log(11)/2','endpoint_interval':interval(a),
+       'cutoff':N,'Gamma_degree':M,'precision_bits':precision,
+       'arithmetic':'python-flint 0.9.0 Arb balls','scale_digits':100,
+       'Gamma_kernel_error_exact':str(epsq), 'Gamma_kernel_error':interval(eps),
+       'Gamma_polynomial_coefficients':[str(x) for x in pg],
+       'model_high_support_last_degree':extN,
+-      'active_prime_powers':[2,3,4,5,7,8], 'exact_shift_relations':{'d3':'1','d4':'2*d2','d8':'3*d2'},
++      'active_prime_powers':[2,3,4,5,7,8,9], 'exact_shift_relations':{'d4':'2*d2','d8':'3*d2','d9':'2*d3'},
+       'positive_half_cells':[[interval(l),interval(r)] for l,r in zip(breaks,breaks[1:])],
+       'raw_low_moments':[interval(x) for x in moments],
+       'generator_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+@@ -278,5 +279,5 @@
+     return result
+ 
+ if __name__=='__main__':
+-    ap=argparse.ArgumentParser();ap.add_argument('--degree',type=int,default=593);ap.add_argument('--gamma',type=int,default=224);ap.add_argument('--precision',type=int,default=3072);ap.add_argument('--output',default='a9_model.json.gz');a=ap.parse_args()
++    ap=argparse.ArgumentParser();ap.add_argument('--degree',type=int,default=571);ap.add_argument('--gamma',type=int,default=416);ap.add_argument('--precision',type=int,default=3072);ap.add_argument('--output',default='a11_model.json.gz');a=ap.parse_args()
+     compute(a.degree,a.gamma,a.precision,a.output)
+--- A9/check_a9.py
++++ A11/check_a11.py
+@@ -1,4 +1,4 @@
+-"""Directed check of the full physical sufficient lower matrix at A9.
++"""Directed check of the full physical sufficient lower matrix at A11.
+ 
+ This is conditional on the analytic domain/tail/error argument in PROOF.md.
+ It never updates a repository status. No sampled eigenvalue is a certificate.
+@@ -6,10 +6,11 @@
+ from pathlib import Path
+ from fractions import Fraction as F
+ from math import factorial
+-import argparse,gzip,hashlib,json,time
++import argparse,gzip,hashlib,json,time,sys
++if hasattr(sys,'set_int_max_str_digits'):sys.set_int_max_str_digits(100000)
+ import flint
+ from flint import arb,arb_mat,fmpq,ctx
+-from generate_a9 import ldl,interval
++from generate_a11 import ldl,interval
+ from rational_bounds import gamma_bound,cosh_upper
+ 
+ 
+@@ -25,9 +26,9 @@
+ 
+ def main():
+     ap=argparse.ArgumentParser()
+-    ap.add_argument('--model',type=Path,default=Path(__file__).parent/'a9_model.json.gz')
++    ap.add_argument('--model',type=Path,default=Path(__file__).parent/'a11_model.json.gz')
+     ap.add_argument('--output',type=Path,default=Path(__file__).parent/'reserve_results.json')
+-    ap.add_argument('--high-floor',choices=['2/3'],default='2/3')
++    ap.add_argument('--high-floor',choices=['1'],default='1')
+     args=ap.parse_args()
+     ctx.prec=3072
+     checks=[]
+@@ -38,10 +39,10 @@
+     delta=F(args.high_floor)
+     tail_file=Path(__file__).parent/'CHECK_RESULTS.json'
+     tail=json.loads(tail_file.read_bytes())
+-    check('new A9 tail is bound to the actual checker',
+-          tail['status']=='SECOND_CHAMBER_HIGH_TAIL_CHECKS_PASS'
+-          and tail['selected_dimension_per_parity']==296
+-          and tail['selected_high_even_degree']==594
++    check('new A11 tail is bound to the actual checker',
++          tail['status']=='THIRD_CHAMBER_HIGH_TAIL_CHECKS_PASS'
++          and tail['selected_dimension_per_parity']==285
++          and tail['selected_high_even_degree']==572
+           and tail['file_sha256']['check_tail.py']==hashlib.sha256((Path(__file__).parent/'check_tail.py').read_bytes()).hexdigest())
+     tail_binding=hashlib.sha256(tail_file.read_bytes()).hexdigest()
+     check('all analytic tail receipt files still match',all(
+@@ -49,28 +50,28 @@
+         for name,digest in tail['file_sha256'].items()))
+     raw=args.model.read_bytes()
+     data=json.loads(gzip.decompress(raw))
+-    check('new A9 endpoint and exact shift relations',data['endpoint']=='log(3)' and data['exact_shift_relations']=={'d3':'1','d4':'2*d2','d8':'3*d2'})
+-    check('raw cutoff 593 and both parity dimensions 296',data['cutoff']==593 and all(data['parities'][p]['dimension']==296 for p in ('even','odd')))
+-    check('new six-cell endpoint geometry',len(data['positive_half_cells'])==6)
+-    check('active family includes q8 and excludes q9',data['active_prime_powers']==[2,3,4,5,7,8])
+-    check('polynomial support includes all model Gamma response',data['model_high_support_last_degree']==593+data['Gamma_degree']+1)
+-    check('generator identity',hashlib.sha256((Path(__file__).parent/'generate_a9.py').read_bytes()).hexdigest()==data['generator_sha256'])
++    check('new A11 endpoint and exact shift relations',data['endpoint']=='log(11)/2' and data['exact_shift_relations']=={'d4':'2*d2','d8':'3*d2','d9':'2*d3'})
++    check('raw cutoff 571 and both parity dimensions 285',data['cutoff']==571 and all(data['parities'][p]['dimension']==285 for p in ('even','odd')))
++    check('new eight-cell endpoint geometry',len(data['positive_half_cells'])==8)
++    check('active family includes q9 and excludes q11',data['active_prime_powers']==[2,3,4,5,7,8,9])
++    check('polynomial support includes all model Gamma response',data['model_high_support_last_degree']==571+data['Gamma_degree']+1)
++    check('generator identity',hashlib.sha256((Path(__file__).parent/'generate_a11.py').read_bytes()).hexdigest()==data['generator_sha256'])
+     check('rational bound source identity',hashlib.sha256((Path(__file__).parent/'rational_bounds.py').read_bytes()).hexdigest()==data['bounds_source_sha256'])
+-    eps=gamma_bound(data['Gamma_degree'],F(11,10))
++    eps=gamma_bound(data['Gamma_degree'],F(6,5))
+     check('exact new Gamma residual reproduced',F(data['Gamma_kernel_error_exact'])==eps)
+     # Bound M on the entire carrier-orthogonal parity space, not just low.
+-    z=F(11,20)
++    z=F(3,5)
+     even_ratio=cosh_upper(z)-1
+     odd_ratio=z*z/(3*(1-z*z/20)) # sqrt(3) < 2, A >= 1 not needed here.
+     check('full Mellin map norm <= 2 in both parities',1+even_ratio**2<4 and 1+odd_ratio**2<4)
+-    kernel_operator=F(11,5)*eps
++    kernel_operator=F(12,5)*eps
+     low_error=4*kernel_operator
+     scale=10**data['scale_digits']
+     check('stored Gamma interval contains exact rational bound',ball(data['Gamma_kernel_error'],scale).contains(af(eps)))
+     matrices={}
+     report={
+         'status':'LOCAL_COMPUTATIONAL_RESULT_ANALYTIC_REVIEW_OPEN',
+-        'endpoint':'A9=log(3)','model_sha256':hashlib.sha256(raw).hexdigest(),
++        'endpoint':'A11=log(11)/2','model_sha256':hashlib.sha256(raw).hexdigest(),
+         'model_generator_sha256':data['generator_sha256'],
+         'checker_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+         'Gamma_degree':data['Gamma_degree'],'full_high_physical_floor':str(delta),
+@@ -83,10 +84,10 @@
+     }
+     for parity,label in enumerate(('even','odd')):
+         start=time.time();p=data['parities'][label];n=p['dimension']
+-        first=594+parity
++        first=572+parity
+         em=z**first/factorial(first)/(1-z*z/((first+1)*(first+2)))
+         if parity:em*=4
+-        coupling_error=2*kernel_operator+20*em
++        coupling_error=2*kernel_operator+22*em
+         L=arb_mat([[ball(v,scale) for v in row] for row in p['A']])
+         G=arb_mat([[ball(v,scale) for v in row] for row in p['complete_model_raw_high_Gram']])
+         check(label+' model matrices symmetric',all(L[i,j].overlaps(L[j,i]) and G[i,j].overlaps(G[j,i]) for i in range(n) for j in range(i)))
+@@ -122,7 +123,7 @@
+             check(label+' complete coupling norm upper positive',coupling_sq>0)
+             inv_shear=(1+coupling_sq.sqrt()/af(delta))**2
+             gap=min(sigma.lower(),af(delta))/(4*inv_shear)
+-            eta=gap/(gap+arb(12))
++            eta=gap/(gap+arb(13))
+             check(label+' strict full physical and defect reserves',gap>0 and eta>0)
+             row.update(verdict='STRICT_POSITIVE_SUFFICIENT_LOWER_MATRIX',
+                        min_pivot_display=min(piv).str(30),
+--- A9/check_normalization_a9.py
++++ A11/check_normalization_a11.py
+@@ -7,8 +7,8 @@
+ from math import factorial
+ import argparse,gzip,json
+ from flint import arb,arb_mat,arb_poly,fmpq,ctx
+-import generate_a9 as t
+-from check_a9 import ball
++import generate_a11 as t
++from check_a11 import ball
+ 
+ 
+ def main():
+@@ -19,7 +19,7 @@
+         if not condition:raise RuntimeError(name)
+         checks.append(name)
+     data=json.loads(gzip.decompress(args.model.read_bytes()))
+-    N=data['cutoff'];M=data['Gamma_degree'];a=arb(3).log()
++    N=data['cutoff'];M=data['Gamma_degree'];a=arb(11).log()/2
+     assert N==15 and M==16
+     scale=10**data['scale_digits'];log2=arb(2).log()
+     pg,_=t.gamma_polynomial(M);columns=t.gamma_columns(N,M,pg,a)
+@@ -34,7 +34,7 @@
+         return arb_poly(out)
+     def intpoly(p,l,r):
+         return sum((p[k]*(r**(k+1)-l**(k+1))/(k+1) for k in range(len(p))),arb(0))
+-    channels=[(q,arb(p).log()/arb(q).sqrt(),arb(1) if q==3 else arb(q).log()/a) for q,p in [(2,2),(3,3),(4,2),(5,5),(7,7),(8,2)]]
++    channels=[(q,arb(p).log()/arb(q).sqrt(),arb(q).log()/a) for q,p in [(2,2),(3,3),(4,2),(5,5),(7,7),(8,2),(9,3)]]
+     nodes=[arb.legendre_p_root(20,k,weight=True) for k in range(20)]
+     for q,w,d in channels:
+         for i,j in [(0,0),(0,2),(1,1),(1,5),(4,6),(7,9)]:
+@@ -64,8 +64,8 @@
+             value+=p[k]*((odd-log2)**2+odd2-arb.pi()**2/12)/(2*rr+1)
+         return value
+     kapp=[sum((arb(v)*pol[k] for k,v in col.items()),arb_poly([])) for col in columns]
+-    breaks=[arb(0),channels[2][2]-1,1-channels[0][2],channels[3][2]-1,channels[4][2]-1,channels[5][2]-1,arb(1)]
+-    check('exact six-cell A9 geometry ordered',all(x<y for x,y in zip(breaks,breaks[1:])))
++    breaks=[arb(0),1-channels[1][2],channels[2][2]-1,channels[3][2]-1,1-channels[0][2],channels[4][2]-1,channels[5][2]-1,channels[6][2]-1,arb(1)]
++    check('exact eight-cell A11 geometry ordered',all(x<y for x,y in zip(breaks,breaks[1:])))
+     size=N+1;C=arb_mat(size,size);full=arb_mat(size,size)
+     for i in range(size):
+         for j in range(size):
+--- A9/verify_integer_a9.py
++++ A11/verify_integer_a11.py
+@@ -1,4 +1,4 @@
+-"""Standalone A9 certificate verifier using only the Python standard library.
++"""Standalone A11 certificate verifier using only the Python standard library.
+ 
+ No imports from the supplied generator/checkers or from Arb/FLINT. All
+ matrix arithmetic uses integer endpoints on a fixed decimal grid, with
+@@ -9,7 +9,8 @@
+ from fractions import Fraction
+ from math import factorial,isqrt
+ from decimal import Decimal,localcontext
+-import argparse,gzip,hashlib,json,time
++import argparse,gzip,hashlib,json,time,sys
++if hasattr(sys,'set_int_max_str_digits'):sys.set_int_max_str_digits(100000)
+ 
+ 
+ class Intervals:
+@@ -55,13 +56,14 @@
+ def gamma_residual_from_supplied_polynomial(data):
+     """Validate the polynomial and its residual directly, without inversion code."""
+     coefficients=[Fraction(x) for x in data['Gamma_polynomial_coefficients']]
+-    assert len(coefficients)==225
++    M=416;D=436
++    assert len(coefficients)==M+1
+     # k_reg(2x)=(sech(x)+(1/(sinh(x)/x)-1)/x)/4.
+-    cosine_inverse=[4*coefficients[k] if k%2==0 else Fraction(0) for k in range(225)]
+-    sine_inverse=[Fraction(1)]+[4*coefficients[k-1] if k%2==0 else Fraction(0) for k in range(1,226)]
++    cosine_inverse=[4*coefficients[k] if k%2==0 else Fraction(0) for k in range(M+1)]
++    sine_inverse=[Fraction(1)]+[4*coefficients[k-1] if k%2==0 else Fraction(0) for k in range(1,M+2)]
+     denominators=[
+-        [Fraction(1,factorial(k)) if k%2==0 else Fraction(0) for k in range(257)],
+-        [Fraction(1,factorial(k+1)) if k%2==0 else Fraction(0) for k in range(257)]
++        [Fraction(1,factorial(k)) if k%2==0 else Fraction(0) for k in range(D+1)],
++        [Fraction(1,factorial(k+1)) if k%2==0 else Fraction(0) for k in range(D+1)]
+     ]
+     remainders=[]
+     for numerator,denominator in zip((cosine_inverse,sine_inverse),denominators):
+@@ -73,13 +75,13 @@
+         terms[0]-=1
+         assert all(terms.get(k,0)==0 for k in range(len(numerator)))
+         remainders.append({k:v for k,v in terms.items() if v})
+-    radius=Fraction(11,10)
++    radius=Fraction(6,5)
+     finite_cosine=sum((abs(v)*radius**k for k,v in remainders[0].items()),Fraction(0))
+     finite_sine=sum((abs(v)*radius**(k-1) for k,v in remainders[1].items()),Fraction(0))
+     cosine_size=sum((abs(v)*radius**k for k,v in enumerate(cosine_inverse)),Fraction(0))
+     sine_size=sum((abs(v)*radius**k for k,v in enumerate(sine_inverse)),Fraction(0))
+-    cosine_tail=radius**258/Fraction(factorial(258))/(1-radius**2/Fraction(259*260))
+-    sine_tail_div_x=radius**257/Fraction(factorial(259))/(1-radius**2/Fraction(260*261))
++    cosine_tail=radius**(D+2)/Fraction(factorial(D+2))/(1-radius**2/Fraction((D+3)*(D+4)))
++    sine_tail_div_x=radius**(D+1)/Fraction(factorial(D+3))/(1-radius**2/Fraction((D+4)*(D+5)))
+     return (finite_cosine+finite_sine+cosine_size*cosine_tail+sine_size*sine_tail_div_x)/4
+ 
+ 
+@@ -156,57 +158,62 @@
+ 
+     check_rounding_operators()
+     check('signed interval primitives checked against exact rational endpoint and interior values',True)
+-    data=json.loads(gzip.decompress((folder/'a9_model.json.gz').read_bytes()))
++    data=json.loads(gzip.decompress((folder/'a11_model.json.gz').read_bytes()))
+     saved=json.loads(gzip.decompress((folder/'reserve_results_lower_matrices.json.gz').read_bytes()))
+-    previous=json.loads((folder/'reserve_results.json').read_bytes())
++    previous=json.loads((folder/'preconditioned_results.json').read_bytes())
++    original=json.loads((folder/'reserve_results.json').read_bytes())
++    congruence=json.loads(gzip.decompress((folder/'preconditioned_matrices.json.gz').read_bytes()))
+     tail=json.loads((folder/'CHECK_RESULTS.json').read_bytes())
+     common=json.loads((folder/'common_reserve.json').read_bytes())
+     check('all analytic tail receipt files still match',all(sha(folder/name)==digest for name,digest in tail['file_sha256'].items()))
+-    check('matrix model identity',sha(folder/'a9_model.json.gz')==previous['model_sha256'])
+-    check('generator identity',sha(folder/'generate_a9.py')==data['generator_sha256'])
+-    check('bound and checker identities',sha(folder/'rational_bounds.py')==data['bounds_source_sha256'] and sha(folder/'check_a9.py')==previous['checker_sha256'])
+-    check('tail and common result bindings',sha(folder/'CHECK_RESULTS.json')==previous['refined_tail_binding_sha256'] and sha(folder/'check_tail.py')==tail['file_sha256']['check_tail.py'] and sha(folder/'reserve_results.json')==common['reserve_results_sha256'])
+-    check('endpoint and complete-model parameters',data['endpoint']=='log(3)' and data['exact_shift_relations']=={'d3':'1','d4':'2*d2','d8':'3*d2'} and data['Gamma_degree']==224 and data['cutoff']==593 and data['model_high_support_last_degree']==818)
+-    check('active family and integration cells',data['active_prime_powers']==[2,3,4,5,7,8] and len(data['positive_half_cells'])==6)
++    check('matrix model identity',sha(folder/'a11_model.json.gz')==previous['model_sha256'])
++    check('generator identity',sha(folder/'generate_a11.py')==data['generator_sha256'])
++    check('bound and checker identities',sha(folder/'rational_bounds.py')==data['bounds_source_sha256'] and sha(folder/'certify_preconditioned.py')==previous['checker_sha256'])
++    check('original checker and unmodified raw matrix bindings',sha(folder/'check_a11.py')==original['checker_sha256'] and sha(folder/'reserve_results.json')==previous['original_raw_check_sha256'] and sha(folder/'reserve_results_lower_matrices.json.gz')==previous['raw_lower_matrix_sha256'])
++    check('exact congruence data and argument bound',sha(folder/'preconditioned_matrices.json.gz')==previous['preconditioned_matrices_sha256'] and sha(folder/'PRECONDITIONING.md')==previous['proof_sha256'])
++    check('tail and common result bindings',sha(folder/'CHECK_RESULTS.json')==previous['refined_tail_binding_sha256'] and sha(folder/'check_tail.py')==tail['file_sha256']['check_tail.py'] and sha(folder/'preconditioned_results.json')==common['reserve_results_sha256'])
++    check('endpoint and complete-model parameters',data['endpoint']=='log(11)/2' and data['exact_shift_relations']=={'d4':'2*d2','d8':'3*d2','d9':'2*d3'} and data['Gamma_degree']==416 and data['cutoff']==571 and data['model_high_support_last_degree']==988)
++    check('active family and integration cells',data['active_prime_powers']==[2,3,4,5,7,8,9] and len(data['positive_half_cells'])==8)
+     check('100 decimal stored scales',data['scale_digits']==saved['scale_digits']==previous['scale_digits']==100)
+     progress('Reconstructing the exact Gamma residual from the supplied polynomial')
+     epsilon=gamma_residual_from_supplied_polynomial(data)
+     check('Gamma residual independently recovered from polynomial',epsilon==Fraction(data['Gamma_kernel_error_exact']))
+-    gamma=Fraction(11,5)*epsilon
++    gamma=Fraction(12,5)*epsilon
+     eL=4*gamma
+     check('low and Gamma operator errors reconstructed',gamma==Fraction(previous['Gamma_operator_error_exact']) and eL==Fraction(previous['low_form_error_exact']))
+-    harmonic=sum((Fraction(1,k) for k in range(1,595)),Fraction(0))
+-    check('H594 rational witness independently summed',harmonic>Fraction(69649,10000))
+-    raw=Fraction(69649,10000)-Fraction(31481,5000)
++    harmonic=sum((Fraction(1,k) for k in range(1,573)),Fraction(0))
++    check('H572 rational witness independently summed',harmonic>Fraction(6927,1000))
++    raw=Fraction(6927,1000)-Fraction(14811,2500)
+     em_coarse=Fraction(1,10**6)
+-    margin=raw-14*em_coarse-10*em_coarse**2-Fraction(2,3)*(1+em_coarse**2)
+-    check('high-floor rational margin independently checked',raw==Fraction(6687,10000) and margin>0)
+-    check('sharper physical and T high floors',tail['selected_high_even_degree']==594 and tail['selected_dimension_per_parity']==296 and Fraction(2,3)/(Fraction(2,3)+12)==Fraction(1,19))
+-    delta=Fraction(2,3)
+-    gram_coefficient=Fraction(3003,2000)
++    margin=raw-14*em_coarse-11*em_coarse**2-Fraction(1)*(1+em_coarse**2)
++    check('high-floor rational margin independently checked',raw==Fraction(5013,5000) and margin>0)
++    check('sharper physical and T high floors',tail['selected_high_even_degree']==572 and tail['selected_dimension_per_parity']==285 and Fraction(1)/(Fraction(1)+13)==Fraction(1,14))
++    delta=Fraction(1)
++    gram_coefficient=Fraction(1001,1000)
+     common_physical=Fraction(common['common_physical_floor_exact'])
+-    common_defect=common_physical/(common_physical+Fraction(12))
++    common_defect=common_physical/(common_physical+Fraction(13))
+     check('common reserve exact conversion',common_defect==Fraction(common['common_defect_floor_exact']) and common_defect>0)
+     results={
+         'status':'INDEPENDENT_INTEGER_INTERVAL_CERTIFICATE_PASS',
+         'arithmetic':'Python integers with exact outward rounding; standard library only',
+         'grid_decimal_digits':args.digits,'checker_sha256':sha(Path(__file__)),
+-        'input_hashes':{name:sha(folder/name) for name in ('a9_model.json.gz','reserve_results_lower_matrices.json.gz','reserve_results.json','CHECK_RESULTS.json','common_reserve.json')},
++        'input_hashes':{name:sha(folder/name) for name in ('a11_model.json.gz','reserve_results_lower_matrices.json.gz','reserve_results.json','preconditioned_results.json','preconditioned_matrices.json.gz','PRECONDITIONING.md','CHECK_RESULTS.json','common_reserve.json')},
+         'Gamma_residual_exact':str(epsilon),'high_floor_margin_exact':str(margin),
+         'scope':'Independent certificate arithmetic on the delivered complete-model intervals; no independent reconstruction of the integral model or external analytic review',
+         'imports_original_checker_or_generator':False,'uses_Arb_FLINT':False,
++        'pivot_basis':'exact rational congruence reconstructed with original full intervals; original-coordinate norm penalty paid',
+         'parities':{},'checks':checks,'github_writes':False
+     }
+     for parity,label in enumerate(('even','odd')):
+         start=time.time();p=data['parities'][label]
+         n=p['dimension']
+-        check(label+' dimension 296',n==296 and saved['parities'][label]['dimension']==296)
+-        first=594+parity;z=Fraction(11,20)
++        check(label+' dimension 285',n==285 and saved['parities'][label]['dimension']==285)
++        first=572+parity;z=Fraction(3,5)
+         em=z**first/factorial(first)/(1-z*z/Fraction((first+1)*(first+2)))
+         if parity:em*=4
+-        eB=2*gamma+20*em
++        eB=2*gamma+22*em
+         check(label+' Mellin and coupling errors reconstructed',em==Fraction(previous['parities'][label]['high_mellin_correction_exact']) and eB==Fraction(previous['parities'][label]['coupling_operator_error_exact']))
+-        loss=eL+Fraction(3003,2)*eB**2
++        loss=eL+Fraction(1001)*eB**2
+         loss_interval=arithmetic.fraction(loss)
+         model_low=[[arithmetic.decode(v,100) for v in row] for row in p['A']]
+         model_gram=[[arithmetic.decode(v,100) for v in row] for row in p['complete_model_raw_high_Gram']]
+@@ -220,12 +227,37 @@
+                 if i==j:formed=arithmetic.sub(formed,loss_interval)
+                 contained=contained and matrix[i][j][0]<=formed[0]<=formed[1]<=matrix[i][j][1]
+         check(label+' every stored lower-matrix interval encloses the independently rebuilt sufficient matrix',contained)
+-        progress(label+': checking all stored matrix intervals with independent LDL')
+-        pivots,inverse_trace=independent_ldl(matrix,arithmetic,lambda message:progress(label+': '+message))
+-        check(label+' all 296 independently computed pivot intervals strictly positive',len(pivots)==296 and min(x[0] for x in pivots)>0)
++        item=congruence['parities'][label]
++        grid=10**congruence['preconditioner_scale_digits']
++        candidate=[[int(x) for x in row] for row in item['preconditioner_integer_grid']]
++        check(label+' exact invertible unit upper triangular congruence',len(candidate)==n and all(len(row)==n for row in candidate) and all(candidate[i][i]==grid and all(candidate[i][j]==0 for j in range(i)) for i in range(n)))
++        P=[[arithmetic.fraction(Fraction(v,grid)) for v in row] for row in candidate]
++        progress(label+': independently rebuilding the rational congruence of all full intervals')
++        right=[[arithmetic.zero]*n for _ in range(n)]
++        for i in range(n):
++            for j in range(n):
++                acc=arithmetic.zero
++                for k in range(j+1):
++                    if candidate[k][j]:acc=arithmetic.add(acc,arithmetic.mul(matrix[i][k],P[k][j]))
++                right[i][j]=acc
++        changed=[[arithmetic.zero]*n for _ in range(n)]
++        for i in range(n):
++            for j in range(i,n):
++                acc=arithmetic.zero
++                for k in range(i+1):
++                    if candidate[k][i]:acc=arithmetic.add(acc,arithmetic.mul(P[k][i],right[k][j]))
++                changed[i][j]=changed[j][i]=acc
++        stored_changed=[[arithmetic.decode(x,100) for x in row] for row in item['transformed_matrix']]
++        check(label+' independently reconstructed congruence overlaps every Arb interval',all(a[0]<=b[1] and b[0]<=a[1] for ra,rb in zip(changed,stored_changed) for a,b in zip(ra,rb)))
++        margin=min(changed[i][i][0]-sum(max(abs(changed[i][j][0]),abs(changed[i][j][1])) for j in range(n) if i!=j) for i in range(n))
++        check(label+' own directed Gershgorin margin strictly positive',margin>0)
++        norm_squared=Fraction(sum(v*v for row in candidate for v in row),grid*grid)
++        check(label+' original-coordinate norm penalty recovered exactly',norm_squared==Fraction(previous['parities'][label]['preconditioner_frobenius_squared_exact']) and norm_squared>=n)
++        progress(label+': checking all independently rebuilt congruence intervals with LDL')
++        pivots,inverse_trace=independent_ldl(changed,arithmetic,lambda message:progress(label+': '+message))
++        check(label+' all 285 independently computed pivot intervals strictly positive',len(pivots)==285 and min(x[0] for x in pivots)>0)
+         check(label+' inverse trace interval strictly positive',inverse_trace[0]>0)
+-        sigma=arithmetic.div_positive(arithmetic.one,inverse_trace)
+-        sigma_lower=Fraction(sigma[0],arithmetic.scale)
++        sigma_lower=Fraction(margin,arithmetic.scale)/norm_squared
+         # Only an upper coupling-norm bound is needed for the norm conversion.
+         b2_upper=sum((Fraction(int(p['complete_model_raw_high_Gram'][i][i][1]),10**100) for i in range(n)),Fraction(0))*Fraction(1001,1000)+n*1001*eB**2
+         check(label+' upper squared coupling bound positive',b2_upper>0)
+@@ -236,13 +268,15 @@
+         check(label+' square root norm bound checked by exact squaring',b_upper*b_upper>=b2_upper)
+         denominator=4*(1+b_upper/delta)**2
+         physical=min(sigma_lower,delta)/denominator
+-        defect=physical/(physical+Fraction(12))
++        defect=physical/(physical+Fraction(13))
+         check(label+' independently recovered common physical reserve',physical>common_physical)
+         check(label+' independently recovered common defect reserve',defect>common_defect>0)
+         results['parities'][label]={
+             'dimension':n,'positive_directed_pivots':len(pivots),
+             'all_pivot_intervals_integer_grid':[[str(a),str(b)] for a,b in pivots],
+-            'inverse_trace_integer_grid':[str(x) for x in inverse_trace],
++            'preconditioned_inverse_trace_integer_grid':[str(x) for x in inverse_trace],
++            'preconditioned_gershgorin_lower_exact':str(Fraction(margin,arithmetic.scale)),
++            'preconditioner_frobenius_squared_exact':str(norm_squared),
+             'sigma_lower_exact':str(sigma_lower),'sigma_lower_display':display(sigma_lower),
+             'coupling_norm_upper_exact':str(b_upper),
+             'physical_lower_exact':str(physical),'physical_lower_display':display(physical),
+@@ -255,7 +289,7 @@
+     results['common_physical_floor_exact']=str(common_physical)
+     results['common_defect_floor_exact']=str(common_defect)
+     args.output.write_text(json.dumps(results,indent=2)+'\n',encoding='utf-8')
+-    progress(str(len(checks))+' grouped checks PASS; both complete 296D certificates independently reproduced')
++    progress(str(len(checks))+' grouped checks PASS; both complete 285D certificates independently reproduced')
+     args.output.with_suffix('.log').write_text('\n'.join(log)+'\n',encoding='utf-8')
+ 
+ 

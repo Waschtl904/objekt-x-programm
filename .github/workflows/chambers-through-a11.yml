@@ -1,0 +1,45 @@
+name: Chambers through A11 certificates
+
+on:
+  pull_request:
+    paths:
+      - "research/x-c1/chambers-through-a11-2026-09-28/**"
+      - ".github/workflows/chambers-through-a11.yml"
+  push:
+    branches: [main]
+    paths:
+      - "research/x-c1/chambers-through-a11-2026-09-28/**"
+      - ".github/workflows/chambers-through-a11.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  certificates:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Install pinned arithmetic
+        run: python -m pip install -r research/x-c1/chambers-through-a11-2026-09-28/a11/requirements.txt
+      - name: Reproduce O10, A9, general wall and A11 certificates
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+          PYTHONUTF8: '1'
+        run: python research/x-c1/chambers-through-a11-2026-09-28/replay.py --output "${{ runner.temp }}/chambers-replay"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: chambers-through-a11-replay
+          path: |
+            ${{ runner.temp }}/chambers-replay/*.log
+            ${{ runner.temp }}/chambers-replay/*.json
+            ${{ runner.temp }}/chambers-replay/*.json.gz
+          if-no-files-found: warn

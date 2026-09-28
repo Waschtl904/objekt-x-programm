@@ -1,0 +1,7 @@
+even: checking complete sufficient lower matrix
+even: STRICT_POSITIVE_SUFFICIENT_LOWER_MATRIX; positive pivots 296
+physical [6.970512911394874140646060938435411833961e-35 +/- 4.53e-75]; defect [5.808760759495728450538384115362843161226e-36 +/- 1.76e-76]
+odd: checking complete sufficient lower matrix
+odd: STRICT_POSITIVE_SUFFICIENT_LOWER_MATRIX; positive pivots 296
+physical [6.475113837453108915596838291094403016352e-32 +/- 1.66e-72]; defect [5.395928197877590762997365242578640064252e-33 +/- 3.55e-73]
+RESULT C:\Users\sebas\Documents\Codex\2026-09-27\files-pasted-by-the-user-du\outputs\second-chamber-a9-tail-2026-09-27\reserve_results.json

@@ -1,0 +1,16 @@
+{
+  "status": "GENERAL_WALL_LEMMA_AND_Q9_DERIVED_LOCAL",
+  "analytical_status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN",
+  "raw_general_scope": "Every finite horizon for the fixed C1a family",
+  "concrete_raw_scope": "1 <= A <= B <= C <= A11",
+  "positive_full_scope_preserved": "1 <= A <= log(3)",
+  "positive_new_scope": "Transported old images in the third chamber only",
+  "third_chamber_terminal_positivity": "OPEN",
+  "new_terminal_matrix_computation": false,
+  "checks_with_repository": 109,
+  "checks_without_repository": 102,
+  "main_observed": "7f154559fef92d16b890d24e1ae86faa8f4f6d87",
+  "repository_writes": false,
+  "entrypoint": "README.md",
+  "local_document_links_checked": 8
+}

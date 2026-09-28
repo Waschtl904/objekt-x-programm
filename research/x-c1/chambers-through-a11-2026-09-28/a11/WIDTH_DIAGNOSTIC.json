@@ -1,0 +1,22 @@
+{
+  "even_low_midpoint": {
+    "positive_pivots": 285,
+    "failure": null,
+    "minimum_positive_pivot": "[1.0444691604325360884484471556921870e-5 +/- 3.67e-40]"
+  },
+  "even_paid_schur_midpoint": {
+    "positive_pivots": 285,
+    "failure": null,
+    "minimum_positive_pivot": "[1.0208522918883669903387483850725816e-5 +/- 1.34e-40]"
+  },
+  "odd_low_midpoint": {
+    "positive_pivots": 285,
+    "failure": null,
+    "minimum_positive_pivot": "[3.4293460445377039546999759530089813e-5 +/- 2.52e-40]"
+  },
+  "odd_paid_schur_midpoint": {
+    "positive_pivots": 285,
+    "failure": null,
+    "minimum_positive_pivot": "[3.3204387519738357149677464067268090e-5 +/- 3.11e-41]"
+  }
+}

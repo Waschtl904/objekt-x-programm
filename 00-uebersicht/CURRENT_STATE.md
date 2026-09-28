@@ -86,4 +86,12 @@ Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGI
 
 Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getrennt. Diese Statusansicht führt die mathematischen Checker nicht erneut aus.
 
+## Noch nicht in den geprüften Stand übernommene Pakete
+
+- `X4-Q8-WALL-CROSSING`: PENDING_STATUS_REVIEW — `research/x-c1/chambers-through-a11-2026-09-28/o10/META.yaml`.
+- `SECOND-CHAMBER-A9-TERMINAL-POSITIVITY`: PENDING_STATUS_REVIEW — `research/x-c1/chambers-through-a11-2026-09-28/a9/META.yaml`.
+- `GENERAL-PRIME-POWER-WALL-COCYCLE`: PENDING_STATUS_REVIEW — `research/x-c1/chambers-through-a11-2026-09-28/wall/META.yaml`.
+- `THIRD-CHAMBER-A11-TERMINAL-POSITIVITY`: PENDING_STATUS_REVIEW — `research/x-c1/chambers-through-a11-2026-09-28/a11/META.yaml`.
+- `FINITE-HORIZON-HIGH-TAIL-REDUCTION`: PENDING_STATUS_REVIEW — `research/x-c1/chambers-through-a11-2026-09-28/high-tail/META.yaml`.
+
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).
