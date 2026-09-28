@@ -1,0 +1,19 @@
+{
+  "status": "PINNED_A9_FORM_COMPATIBLE_WITH_MAIN_CHANGE",
+  "local_basis": "69eb8773acd483978e2453019d1e2d5cf009a990",
+  "main_observed": "a77950be027dc1576b016c6a53bfad7ff65a04e4",
+  "intervening_pr": 176,
+  "changed_files": [
+    "07-weil-explizitformel/NEU-220a_Mellin-Normierung_und_Involutionskompatibilitaet.md",
+    "07-weil-explizitformel/NEU-220d_Archimedische_Rohform_Polseparation_und_Symmetrieaequivalenz.md",
+    "07-weil-explizitformel/NEU-220e_Operatorischer_Ursprung_Semifinite_Spur_und_Hilbertspur-NoGo.md",
+    "07-weil-explizitformel/NEU-220f_Archimedischer_Streufaktor_und_Zeitverzoegerungsoperator.md",
+    "07-weil-explizitformel/NEU-258_Normierungsidentifikation_Weil-Distribution.md"
+  ],
+  "all_bound_repository_paths_unchanged": true,
+  "reviewed_diff_sha256": "8ce2aafb8b80b726831dd239480288e8a2e46098b56c489627949451cfeea793",
+  "assessment": "The corrected positive Fourier orientation and logarithmic lift do not change the explicit even C1a symbols, additive source coordinate, two moments, physical kernel, or symmetric prime shifts used here.",
+  "scope": "Compatibility of the pinned local A9 calculation, not a full new audit of PR176",
+  "basis_ref_updated": false,
+  "repository_writes": false
+}

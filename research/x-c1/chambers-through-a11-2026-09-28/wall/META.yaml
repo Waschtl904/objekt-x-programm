@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "GENERAL-PRIME-POWER-WALL-COCYCLE",
+  "date": "2026-09-28",
+  "kind": "CONSTRUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Allgemeines Ein-Primzahlpotenz-Wandlemma und roher Cocycle auf jedem festen endlichen Horizont; q9-Instanz bis A11.",
+  "claim_polarity": "CONSTRUCTION",
+  "negative_claim_boundary": "Kein No-Go und keine negative Richtung der vollständigen Weil-Form behauptet.",
+  "depends_on": [
+    "X4-Q8-WALL-CROSSING",
+    "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY"
+  ],
+  "closes": [
+    "GENERAL-PRIME-POWER-WALL-COCYCLE"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Externe analytische Gesamtbegutachtung.",
+    "Unbeschränkte/kofinale positive Terminalkompatibilität.",
+    "Allgemeine Positivität des niedrigen Schurrests.",
+    "Globales Objekt X, globale Weil-Positivität oder RH."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/chambers-through-a11-2026-09-28/wall/PROOF.md",
+    "sha256": "9297444e2bc7c15e6c03f04bd7cd9579826e73564e1584a355a60ea23e4c6be1"
+  }
+}

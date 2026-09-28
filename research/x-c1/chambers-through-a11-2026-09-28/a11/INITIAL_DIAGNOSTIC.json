@@ -1,0 +1,36 @@
+{
+  "even": {
+    "model_low_only": {
+      "positive_pivots": 43,
+      "failure": "[+/- 3.49]",
+      "strict_negative": false
+    },
+    "model_schur_without_error": {
+      "positive_pivots": 43,
+      "failure": "[+/- 18.1]",
+      "strict_negative": false
+    },
+    "low_only_with_Gamma_error": {
+      "positive_pivots": 43,
+      "failure": "[+/- 3.49]",
+      "strict_negative": false
+    }
+  },
+  "odd": {
+    "model_low_only": {
+      "positive_pivots": 46,
+      "failure": "[+/- 0.989]",
+      "strict_negative": false
+    },
+    "model_schur_without_error": {
+      "positive_pivots": 46,
+      "failure": "[+/- 1.79]",
+      "strict_negative": false
+    },
+    "low_only_with_Gamma_error": {
+      "positive_pivots": 46,
+      "failure": "[+/- 0.989]",
+      "strict_negative": false
+    }
+  }
+}

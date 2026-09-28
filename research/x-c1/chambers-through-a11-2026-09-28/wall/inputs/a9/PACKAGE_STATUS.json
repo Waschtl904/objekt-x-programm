@@ -1,0 +1,29 @@
+{
+  "status": "SECOND_CHAMBER_TERMINAL_CERTIFICATE_REPRODUCED_LOCAL",
+  "mathematical_status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN",
+  "terminal": "A9=log(3)",
+  "transport_scope": "1 <= A <= B <= C <= A9",
+  "local_only": true,
+  "merged_to_main": false,
+  "main_observed": "a77950be027dc1576b016c6a53bfad7ff65a04e4",
+  "local_pinned_basis": "69eb8773acd483978e2453019d1e2d5cf009a990",
+  "low_dimension_per_parity": 296,
+  "high_physical_floor": "2/3",
+  "common_physical_floor_exact": "1/100000000000000000000000000000000000",
+  "common_defect_floor_exact": "1/1200000000000000000000000000000000001",
+  "checks": {
+    "analytic_tail": 72,
+    "normalization": 239,
+    "Arb": 21,
+    "independent_integer": 37,
+    "positive_pivots_per_parity": 296
+  },
+  "open": [
+    "external analytical review",
+    "q9 wall strictly beyond A9",
+    "unbounded positive continuation",
+    "global object X and RH"
+  ],
+  "entrypoint": "README.md",
+  "preparation_receipt": "PROOF.md and CHECK_RESULTS.json retain their earlier preparation status; README.md records the subsequent computation."
+}

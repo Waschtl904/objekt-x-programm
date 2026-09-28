@@ -133,6 +133,30 @@
       "title": "Vollständige geeignete Weil-Testklasse identifizieren",
       "mathematical_status": "OPEN",
       "scope": "Exakte Normalisierung, kanonischer globaler Readout und nichtzirkuläre Rückbindung an das Weil-Kriterium."
+    },
+    {
+      "id": "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY",
+      "title": "SECOND CHAMBER A9 TERMINAL POSITIVITY",
+      "mathematical_status": "OPEN",
+      "scope": "Ursprüngliche Zwei-Mellin-Quellen; vollständige Positivität bis A9=log(3); 296 Koordinaten je Parität. Vorgelegtes Autorenpaket; formale Übernahme im getrennten Sync."
+    },
+    {
+      "id": "GENERAL-PRIME-POWER-WALL-COCYCLE",
+      "title": "GENERAL PRIME POWER WALL COCYCLE",
+      "mathematical_status": "OPEN",
+      "scope": "Allgemeines Ein-Primzahlpotenz-Wandlemma und roher Cocycle auf jedem festen endlichen Horizont; q9-Instanz bis A11. Vorgelegtes Autorenpaket; formale Übernahme im getrennten Sync."
+    },
+    {
+      "id": "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+      "title": "THIRD CHAMBER A11 TERMINAL POSITIVITY",
+      "mathematical_status": "OPEN",
+      "scope": "Ursprüngliche Zwei-Mellin-Quellen; vollständige Positivität und korrigierter Cocycle bis A11=log(11)/2; 285 Koordinaten je Parität. Vorgelegtes Autorenpaket; formale Übernahme im getrennten Sync."
+    },
+    {
+      "id": "FINITE-HORIZON-HIGH-TAIL-REDUCTION",
+      "title": "FINITE HORIZON HIGH TAIL REDUCTION",
+      "mathematical_status": "OPEN",
+      "scope": "Für jedes feste endliche L>=1 und delta>0 ein vollständiger hoher Quellenraum mit Boden delta; endliche Kodimension darf mit L wachsen. Vorgelegtes Autorenpaket; formale Übernahme im getrennten Sync."
     }
   ],
   "results": [
@@ -1215,7 +1239,33 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [],
+  "pending_packages": [
+    {
+      "id": "X4-Q8-WALL-CROSSING",
+      "meta_path": "research/x-c1/chambers-through-a11-2026-09-28/o10/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY",
+      "meta_path": "research/x-c1/chambers-through-a11-2026-09-28/a9/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "GENERAL-PRIME-POWER-WALL-COCYCLE",
+      "meta_path": "research/x-c1/chambers-through-a11-2026-09-28/wall/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+      "meta_path": "research/x-c1/chambers-through-a11-2026-09-28/a11/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "FINITE-HORIZON-HIGH-TAIL-REDUCTION",
+      "meta_path": "research/x-c1/chambers-through-a11-2026-09-28/high-tail/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    }
+  ],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",

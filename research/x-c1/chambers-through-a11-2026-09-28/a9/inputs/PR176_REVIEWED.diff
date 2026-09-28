@@ -1,0 +1,249 @@
+diff --git a/07-weil-explizitformel/NEU-220a_Mellin-Normierung_und_Involutionskompatibilitaet.md b/07-weil-explizitformel/NEU-220a_Mellin-Normierung_und_Involutionskompatibilitaet.md
+index 653c8a95..6cbde9cc 100644
+--- a/07-weil-explizitformel/NEU-220a_Mellin-Normierung_und_Involutionskompatibilitaet.md
++++ b/07-weil-explizitformel/NEU-220a_Mellin-Normierung_und_Involutionskompatibilitaet.md
+@@ -1,5 +1,7 @@
+ # NEU-220a — Mellin-Normierung und Involutionskompatibilität
+ 
++**Patch 2026-09-27:** Vorzeichenfehler in PD-2c korrigiert. Bei der festgelegten Fourierkonvention $e^{+ity}$ und $H_\infty=-ix\partial_x$ gilt $\mathcal{M}_\infty H_\infty\mathcal{M}_\infty^{-1}=-M_t$. Wesentliche Selbstadjungiertheit, Spektrummenge $\mathbb R$ und gerade Weil-Formen bleiben unverändert; die Spektralorientierung ist $\lambda=-t$.
++
+ **Datei:** `katalog/NEU-220a_Mellin-Normierung_und_Involutionskompatibilitaet.md`  
+ **Datum:** 2026-07-25  
+ **Repository:** Waschtl904/rh-fragenkatalog  
+@@ -79,19 +81,29 @@ $$= \int_0^\infty \overline{f(u)}\, u^{-it}\, \frac{du}{u} = \overline{\int_0^\i
+ $$H_\infty := -i\, x\frac{d}{dx}.$$
+ 
+ **Satz PD-2c.**
+-$$\boxed{\mathcal{M}_\infty \circ H_\infty = M_t \circ \mathcal{M}_\infty,}$$
++$$\boxed{\mathcal{M}_\infty \circ H_\infty = -M_t \circ \mathcal{M}_\infty,}$$
+ wobei $M_t$ die Multiplikation mit der reellen Variablen $t$ bezeichnet.
+ 
+-*Beweis.* Für $f \in \mathcal{S}_\infty$:
+-$$\mathcal{M}_\infty(H_\infty f)(t) = \int_0^\infty (-i)\left(x\frac{d}{dx}f(x)\right) x^{it}\, \frac{dx}{x}.$$
+-Partielle Integration bezüglich $dx/x$ (Randterme verschwinden wegen $f \in \mathcal{S}_\infty$):
+-$$= \int_0^\infty f(x)\, (-i)\cdot(-it)\, x^{it}\, \frac{dx}{x} \cdot (-1) + \text{(Randterm = 0)}$$
+-Direkte Rechnung: $x\frac{d}{dx}(x^{it}) = it\cdot x^{it}$, daher
+-$$\mathcal{M}_\infty(-ix\tfrac{d}{dx}f)(t) = -i \int_0^\infty (x\tfrac{d}{dx}f)\, x^{it}\tfrac{dx}{x}.$$
+-Integration durch Teile ($u = x^{it}$, $dv = x\frac{d}{dx}f\cdot\frac{dx}{x} = f'(x)dx$):
+-$$= -i\left[-\int_0^\infty f(x)\cdot it\cdot x^{it}\tfrac{dx}{x}\right] = t\cdot \mathcal{M}_\infty f(t). \quad \square$$
+-
+-**Folgerung.** $H_\infty$ ist auf $L^2(\mathbb{R}_+^\times, dx/x)$ wesentlich selbstadjungiert; sein Spektrum ist $\mathbb{R}$; die Spektralmaß ist das Lebesgue-Maß $dt$ auf $\mathbb{R}$. Für PD-4 (Skalierungsgenerator und regulierte Spur) ist damit die Grundlage gelegt.
++*Beweis.* Setze $F(y):=f(e^y)$. Dann entspricht $H_\infty f=-ixf'(x)$ unter $x=e^y$ dem Operator $-iF'(y)$. Mit der festgelegten Fourierkonvention $\widehat F(t)=\int_{\mathbb R}F(y)e^{ity}\,dy$ liefert partielle Integration
++$$
++\int_{\mathbb R}F'(y)e^{ity}\,dy
++=-it\int_{\mathbb R}F(y)e^{ity}\,dy,
++$$
++da die Randterme für $F\in\mathcal S(\mathbb R)$ verschwinden. Daher
++$$
++\mathcal M_\infty(H_\infty f)(t)
++=(-i)(-it)\,\mathcal M_\infty f(t)
++=-t\,\mathcal M_\infty f(t).
++\quad\square
++$$
++
++**Folgerung.** $H_\infty$ ist auf $L^2(\mathbb{R}_+^\times,dx/x)$ wesentlich selbstadjungiert; unter $\mathcal M_\infty$ ist er zu $-M_t$ unitär äquivalent. Somit bleiben $\sigma(H_\infty)=\mathbb R$ und das Lebesgue-Spektralmaß erhalten; lediglich die Orientierung ist $t\mapsto -t$.
++
++**Funktionalkalkül-Folge.** Für jede geeignete Borel-Funktion $\varphi$ gilt
++$$
++\mathcal M_\infty\,\varphi(-H_\infty)\,\mathcal M_\infty^{-1}=M_{\varphi(t)}.
++$$
++Diese Form ist bei späteren operatorischen Realisierungen des Gamma-Symbols zu verwenden.
+ 
+ ---
+ 
+@@ -101,7 +113,7 @@ $$= -i\left[-\int_0^\infty f(x)\cdot it\cdot x^{it}\tfrac{dx}{x}\right] = t\cdot
+ 
+ | Ebene | Variable | Bedeutung |
+ |---|---|---|
+-| Interne Hilbertraumkoordinate | $t \in \mathbb{R}$ | Spektrum von $H_\infty$, Argument von $\mathcal{M}_\infty f$ |
++| Mellin-/Fourierparameter | $t \in \mathbb{R}$ | Argument von $\mathcal{M}_\infty f$; entspricht unter PD-2c dem Generator-Spektralwert $\lambda=-t$ |
+ | Arithmetische Spektralkoordinate | $s = \tfrac{1}{2} + it$ | Argument der Riemannschen $\zeta(s)$ und $\Gamma_{\mathbb{R}}(s)$ |
+ 
+ **Satz PD-2d** (Weil-Symmetrie als einfache Spiegelung).
+@@ -163,7 +175,7 @@ Diese Tabelle ist dauerhafter Bestandteil des DAG; spätere Knoten dürfen nicht
+ | $\mathcal{S}_\infty \cong \mathcal{S}(\mathbb{R})$ über $f \mapsto [y \mapsto f(e^y)]$ | PD-1a | $\checkmark$ |
+ | $\mathcal{M}_\infty: \mathcal{S}_\infty \overset{\sim}{\to} \mathcal{S}(\mathbb{R})$ | PD-2a | $\checkmark$ |
+ | $\mathcal{M}_\infty(f^\sharp) = \overline{\mathcal{M}_\infty f}$ | PD-2b | $\checkmark$ |
+-| $\mathcal{M}_\infty H_\infty \mathcal{M}_\infty^{-1} = M_t$ | PD-2c | $\checkmark$ |
++| $\mathcal{M}_\infty H_\infty \mathcal{M}_\infty^{-1} = -M_t$ | PD-2c | $\checkmark$ |
+ | $s \leftrightarrow 1-s \Leftrightarrow t \leftrightarrow -t$ | PD-2d | $\checkmark$ |
+ | $\gamma_\infty(t) = -\tfrac12\log\pi + \tfrac12\psi(\tfrac14 + \tfrac{it}{2})$ | §6 | $\checkmark$ (Vorfaktor für PD-3 reserviert) |
+ | $\mathcal{M}_s$ mit $f^\#$ kompatibel, aber PD-1-Kollision | §7 | typisiert festgehalten |
+diff --git a/07-weil-explizitformel/NEU-220d_Archimedische_Rohform_Polseparation_und_Symmetrieaequivalenz.md b/07-weil-explizitformel/NEU-220d_Archimedische_Rohform_Polseparation_und_Symmetrieaequivalenz.md
+index 7ff3afe1..cc54a60d 100644
+--- a/07-weil-explizitformel/NEU-220d_Archimedische_Rohform_Polseparation_und_Symmetrieaequivalenz.md
++++ b/07-weil-explizitformel/NEU-220d_Archimedische_Rohform_Polseparation_und_Symmetrieaequivalenz.md
+@@ -1,5 +1,7 @@
+ # NEU-220d — PD-3d: Archimedische Rohform, Polseparation und Symmetrieäquivalenz
+ 
++**Patch 2026-09-27:** Übergabe an PD-4 an die korrigierte PD-2c-Orientierung angepasst: unter $\mathcal M_\infty$ gilt $H_\infty\leftrightarrow -M_t$, daher wird ein Multiplikatorsymbol $\varphi(t)$ durch $\varphi(-H_\infty)$ realisiert.
++
+ **Knoten:** `[O-220-1-PD3d-Weil-normalization]`  
+ **Stand:** 25. Juli 2026 (rev.2)  
+ **Vorgänger:** NEU-220c (PD-3d ✓[M]_part), NEU-47 (D_Arch-Designentscheidung)  
+@@ -308,11 +310,11 @@ $$
+ 
+ PD-4 hat zwei Zielfragen:
+ 
+-1. **PD-4a (negativ):** Gewöhnliche Hilbertraumspur von $\gamma_\infty(H_\infty)h(H_\infty)$ existiert nicht.
++1. **PD-4a (negativ):** Gewöhnliche Hilbertraumspur von $\gamma_\infty(-H_\infty)h(-H_\infty)$ existiert nicht.
+ 2. **PD-4b (positiv):** Semifinite Spur $\tau_\infty$ auf $\mathcal{N}_\infty=L^\infty(\mathbb R)$ realisiert $\Lambda_\Gamma$.
+ 3. **PD-4c (offen):** Intrinsischer geometrischer/relativer Ursprung der Digammafunktion.
+ 
+-Ferner: $H_\infty=M_t$ unter $\mathcal{M}_\infty$ erzeugt nicht von selbst $\gamma_\infty^\mathrm{sym}(t)$. PD-4 benötigt Funktionalkalkül oder relativen Operator.
++Ferner: $\mathcal M_\infty H_\infty\mathcal M_\infty^{-1}=-M_t$. Daher realisiert $\varphi(-H_\infty)$ das Multiplikatorsymbol $\varphi(t)$; auch diese korrigierte Orientierung erzeugt $\gamma_\infty^\mathrm{sym}(t)$ nicht von selbst. PD-4 benötigt Funktionalkalkül oder relativen Operator.
+ 
+ ---
+ 
+diff --git a/07-weil-explizitformel/NEU-220e_Operatorischer_Ursprung_Semifinite_Spur_und_Hilbertspur-NoGo.md b/07-weil-explizitformel/NEU-220e_Operatorischer_Ursprung_Semifinite_Spur_und_Hilbertspur-NoGo.md
+index 223353d8..ad563b8b 100644
+--- a/07-weil-explizitformel/NEU-220e_Operatorischer_Ursprung_Semifinite_Spur_und_Hilbertspur-NoGo.md
++++ b/07-weil-explizitformel/NEU-220e_Operatorischer_Ursprung_Semifinite_Spur_und_Hilbertspur-NoGo.md
+@@ -1,5 +1,7 @@
+ # NEU-220e — PD-4: Operatorischer Ursprung von Λ_Γ; gewöhnliche Spur, semifinite Spur, intrinsischer Gamma-Ursprung
+ 
++**Patch 2026-09-27:** Operatororientierung an die korrigierte PD-2c-Konvention angepasst. Unter $\mathcal M_\infty$ gilt $H_\infty\leftrightarrow -M_t$; die rohe Gammaform wird daher durch Funktionalkalkül in $-H_\infty$ realisiert. Das Hilbertspur-No-Go und die semifinite Realisierung bleiben inhaltlich unverändert.
++
+ **Knoten:** `[O-220-1-PD4-operator-origin]`  
+ **Stand:** 25. Juli 2026  
+ **Vorgänger:** NEU-220d rev.2 (PD-3d ✓[K/M], PD-3 ✓[K/M])  
+@@ -29,7 +31,7 @@ $$
+ 
+ als autoritative Gamma-Rohform. PD-4 fragt: Als was für eine Spur eines Operators lässt sich $\Lambda_\Gamma$ realisieren?
+ 
+-Der freie Skalierungsgenerator $H_\infty=-ix\frac{d}{dx}$ wird unter $\mathcal{M}_\infty$ zu $M_t$ (Multiplikation mit $t$) auf $L^2(\mathbb R,dt)$. Er erzeugt nicht von selbst das Symbol $\gamma_\infty(t)$. Daher ist ein zusätzlicher Funktionalkalkül oder eine relative Konstruktion nötig.
++Der freie Skalierungsgenerator $H_\infty=-ix\frac{d}{dx}$ wird unter $\mathcal{M}_\infty$ zu $-M_t$ auf $L^2(\mathbb R,dt)$. Folglich wird ein Multiplikatorsymbol $\varphi(t)$ durch $\varphi(-H_\infty)$ realisiert. Der Generator erzeugt nicht von selbst das Symbol $\gamma_\infty(t)$; dafür ist weiterhin ein zusätzlicher Funktionalkalkül oder eine relative Konstruktion nötig.
+ 
+ ---
+ 
+@@ -38,14 +40,14 @@ Der freie Skalierungsgenerator $H_\infty=-ix\frac{d}{dx}$ wird unter $\mathcal{M
+ **Kandidat:**
+ 
+ $$
+-\Lambda_\Gamma(h) \stackrel{?}{=} \operatorname{Tr}_{B(L^2)}\bigl(\gamma_\infty(H_\infty)h(H_\infty)\bigr).
++\Lambda_\Gamma(h) \stackrel{?}{=} \operatorname{Tr}_{B(L^2)}\bigl(\gamma_\infty(-H_\infty)h(-H_\infty)\bigr).
+ $$
+ 
+ **Satz PD-4a (No-Go):**
+ 
+ $$
+ \boxed{
+-\operatorname{Tr}_{B(L^2)}\bigl(\gamma_\infty(H_\infty)h(H_\infty)\bigr)
++\operatorname{Tr}_{B(L^2)}\bigl(\gamma_\infty(-H_\infty)h(-H_\infty)\bigr)
+ \text{ existiert im Allgemeinen nicht.}
+ }
+ $$
+@@ -53,7 +55,7 @@ $$
+ **Beweis.** Unter $\mathcal{M}_\infty: L^2(\mathbb R^\times,\frac{dx}x)\to L^2(\mathbb R,dt)$ gilt:
+ 
+ $$
+-\gamma_\infty(H_\infty)h(H_\infty) = M_{\gamma_\infty h}.
++\gamma_\infty(-H_\infty)h(-H_\infty) = M_{\gamma_\infty h}.
+ $$
+ 
+ Für $h\in\mathcal{S}(\mathbb R)$ gilt $\gamma_\infty h\in L^1(\mathbb R)\cap L^\infty(\mathbb R)$ wegen des logarithmischen Wachstums von $\gamma_\infty$ und der Schwartz-Abnahme von $h$. Jedoch: $M_{\gamma_\infty h}$ ist ein Multiplikationsoperator auf dem nichtatomaren Maßraum $(\mathbb R,dt)$. Ein Multiplikationsoperator $M_a$ mit $a\not\equiv 0$ auf $L^2(\mathbb R,dt)$ ist nicht kompakt — insbesondere nicht spurklassig. Die gewöhnliche Hilbert-Spur
+@@ -98,7 +100,7 @@ und $\tau_\infty$ setzt sich linear fort auf diesen Raum.
+ 
+ $$
+ \boxed{
+-\gamma_\infty(H_\infty)h(H_\infty) = M_{\gamma_\infty h} \in L^1(\mathcal{N}_\infty,\tau_\infty)
++\gamma_\infty(-H_\infty)h(-H_\infty) = M_{\gamma_\infty h} \in L^1(\mathcal{N}_\infty,\tau_\infty)
+ \quad\text{für }h\in\mathcal{S}_\mathrm{herm}(\mathbb R),
+ }
+ $$
+@@ -107,7 +109,7 @@ und
+ 
+ $$
+ \boxed{
+-\Lambda_\Gamma(h) = \frac1{2\pi}\,\tau_\infty\bigl(\gamma_\infty(H_\infty)h(H_\infty)\bigr).
++\Lambda_\Gamma(h) = \frac1{2\pi}\,\tau_\infty\bigl(\gamma_\infty(-H_\infty)h(-H_\infty)\bigr).
+ }
+ $$
+ 
+@@ -159,7 +161,7 @@ als Spektralverschiebungs- oder Kreimer-Streuphase-Form entsteht.
+ 
+ | Ansatz | Idee | Vorläufiger Status |
+ |---|---|---|
+-| $\gamma_\infty^\mathrm{sym}(H_\infty)$ via Funktionalkalkül | $\tau_\infty(\gamma_\infty^\mathrm{sym}(H_\infty)h(H_\infty))$ | ✓ als Tautologie; kein intrinsischer Ursprung |
++| $\gamma_\infty^\mathrm{sym}(-H_\infty)$ via Funktionalkalkül | $\tau_\infty(\gamma_\infty^\mathrm{sym}(-H_\infty)h(-H_\infty))$ | ✓ als Tautologie; kein intrinsischer Ursprung |
+ | Relativer Resolventen-/Birman-Schwinger-Operator $K_\infty$ | $\partial_t\log\det(1+K_\infty(t))=\gamma_\infty^\mathrm{sym}(t)$ | ?[O] |
+ | Streuphase $S_\infty$ eines archimedischen freien/gestörten Paars | $-i\partial_t\log S_\infty(t)=\gamma_\infty^\mathrm{sym}(t)$ | ?[O] |
+ | Relative Spurformel aus $D_\mathrm{Arch}/D_\mathrm{free}$ | Direkter Quotient zweier Zeta-/Determinantenfunktionen | ?[O] |
+@@ -174,7 +176,7 @@ $$
+ 
+ | Knoten | Aussage | Status |
+ |---|---|---|
+-| PD-4a | $\operatorname{Tr}_{B(L^2)}(\gamma_\infty(H_\infty)h(H_\infty))$ existiert nicht | ✓[M]_neg |
++| PD-4a | $\operatorname{Tr}_{B(L^2)}(\gamma_\infty(-H_\infty)h(-H_\infty))$ existiert nicht | ✓[M]_neg |
+ | PD-4b | $\Lambda_\Gamma(h)=\frac1{2\pi}\tau_\infty(M_{\gamma_\infty h})$, $\tau_\infty$ n.f.s. auf $L^\infty$ | ✓[K/M] |
+ | PD-4c | Intrinsischer $\gamma_\infty$-Ursprung via relative/Streu-Konstruktion | ?[O] |
+ | Pol-Funktional | $\Lambda_\mathrm{pole}^\mathrm{raw}$ in vollständiger Weil-Form | ?[O] (aus PD-3d4) |
+diff --git a/07-weil-explizitformel/NEU-220f_Archimedischer_Streufaktor_und_Zeitverzoegerungsoperator.md b/07-weil-explizitformel/NEU-220f_Archimedischer_Streufaktor_und_Zeitverzoegerungsoperator.md
+index fa4c529b..238e0ed7 100644
+--- a/07-weil-explizitformel/NEU-220f_Archimedischer_Streufaktor_und_Zeitverzoegerungsoperator.md
++++ b/07-weil-explizitformel/NEU-220f_Archimedischer_Streufaktor_und_Zeitverzoegerungsoperator.md
+@@ -1,5 +1,7 @@
+ # NEU-220f — PD-4c: Archimedischer Streufaktor und Zeitverzögerungsoperator
+ 
++**Patch 2026-09-27:** Die rohe PD-4b-Übergabe verwendet nach der PD-2c-Korrektur $-H_\infty$. Die symmetrisierte PD-4c3-Form bleibt unverändert, weil $\gamma_\infty^{\rm sym}$ und die dort zugelassenen reell-geraden Testfunktionen unter $t\mapsto -t$ invariant sind.
++
+ **Knoten:** `[O-220-1-PD4c-intrinsic-relative-origin]`  
+ **Stand:** 25. Juli 2026  
+ **Vorgänger:** NEU-220e (PD-4b ✓[K/M], PD-4c ?[O])  
+@@ -155,7 +157,7 @@ $$
+ }
+ $$
+ 
+-**Beweis.** Aus PD-4c2: $Q_\infty = M_{\gamma_\infty^\mathrm{sym}}$. Also:
++**Beweis.** Aus PD-4c2: $Q_\infty = M_{\gamma_\infty^\mathrm{sym}}$. Nach der korrigierten PD-2c-Orientierung gilt zwar $H_\infty\leftrightarrow -M_t$, aber für das hier vorausgesetzte gerade $h$ ist $h(-t)=h(t)$ und damit $h(H_\infty)\leftrightarrow M_h$. Also:
+ 
+ $$
+ \tau_\infty\bigl(Q_\infty h(H_\infty)\bigr)
+@@ -239,7 +241,7 @@ PD-5 muss nicht vollständig bis PD-4c4 gesperrt bleiben. Sinnvolle Aufspaltung:
+ 
+ **PD-5a — Typisierter Anschluss der semifiniten Gammaform** (kann auf PD-4b aufbauen)
+ 
+-Kann bereits beginnen. Zielfrage: Wie setzt sich die semifinite archimedische Spur $\tau_\infty(\gamma_\infty(H_\infty)h(H_\infty))$ in den vollständigen adelischen Operator ein?
++Kann bereits beginnen. Zielfrage: Wie setzt sich die semifinite archimedische Spur $\tau_\infty(\gamma_\infty(-H_\infty)h(-H_\infty))$ in den vollständigen adelischen Operator ein?
+ 
+ **PD-5b — Intrinsischer archimedisch-adelischer Operatoranschluss** (gesperrt bis PD-4c4 ≥ ✓[M])
+ 
+diff --git a/07-weil-explizitformel/NEU-258_Normierungsidentifikation_Weil-Distribution.md b/07-weil-explizitformel/NEU-258_Normierungsidentifikation_Weil-Distribution.md
+index 07af7d76..784be99d 100644
+--- a/07-weil-explizitformel/NEU-258_Normierungsidentifikation_Weil-Distribution.md
++++ b/07-weil-explizitformel/NEU-258_Normierungsidentifikation_Weil-Distribution.md
+@@ -1,5 +1,7 @@
+ # NEU-258 — Normierungsidentifikation der Repo-Weil-Form mit der Literatur-Weil-Distribution
+ 
++**Patch 2 (2026-09-27):** §2-Koordinatenwechsel korrigiert: aus $x=e^u$ folgt $g(u)=e^{u/2}h(e^u)$, nicht $h(e^{u/2})e^{u/2}$. Die korrigierte Substitution stellt $\widehat g(t)=H(\tfrac12+it)$ her; Masterform sowie Pol-, Gamma- und Primzahlpotenzblöcke in §§3–5 bleiben unverändert.
++
+ **Katalog-ID:** NEU-258  
+ **Ordner:** `07-weil-explizitformel`  
+ **Datum:** 2026-08-07 (Patch 1: 2026-08-08)  
+@@ -31,13 +33,22 @@ $$
+ 
+ ## 2. Koordinate und kritische Linie
+ 
+-Die Weil-Distribution wird über die Testfunktion
++Setze für $h\in C_c^\infty(\mathbb R_{>0})$
++$$
++H(s):=\int_0^\infty h(x)x^s\,\frac{dx}{x}.
++$$
++Unter der logarithmischen Substitution $x=e^u$, $dx/x=du$, gilt
++$$
++H(s)=\int_{\mathbb R}h(e^u)e^{su}\,du.
++$$
++Definiere daher die additive Testfunktion
+ $$
+-g(u):=h(e^{u/2})e^{u/2}, \qquad h\in C_c^\infty(\mathbb{R}_{>0}) \qquad (2\text{-Change})
++\boxed{g(u):=e^{u/2}h(e^u).} \qquad (2\text{-Change})
+ $$
+-von der multiplikativen Gruppe $\mathbb{R}_{>0}$ auf die additive Gruppe $\mathbb{R}$ gehoben. In der Koordinate $s=\frac{1}{2}+it$:
++Für $s=\frac12+it$ folgt unmittelbar
+ $$
+-\hat g(t)=\int_{\mathbb{R}}g(u)\,e^{itu}\,du=\hat h\left(\tfrac{1}{2}+it\right):=H\left(\tfrac{1}{2}+it\right). \qquad (2\text{-Coord})
++\hat g(t)=\int_{\mathbb R}g(u)e^{itu}\,du
++=H\left(\tfrac12+it\right). \qquad (2\text{-Coord})
+ $$
+ 
+ Suzuki (2011, (0.1)) und Weil (1952, §5) schreiben das Positivitätskriterium in der Form:

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "FINITE-HORIZON-HIGH-TAIL-REDUCTION",
+  "date": "2026-09-28",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Für jedes feste endliche L>=1 und delta>0 ein vollständiger hoher Quellenraum mit Boden delta; endliche Kodimension darf mit L wachsen.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Kein No-Go und keine negative Richtung der vollständigen Weil-Form behauptet.",
+  "depends_on": [
+    "GENERAL-PRIME-POWER-WALL-COCYCLE",
+    "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY"
+  ],
+  "closes": [
+    "FINITE-HORIZON-HIGH-TAIL-REDUCTION"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Externe analytische Gesamtbegutachtung.",
+    "Unbeschränkte/kofinale positive Terminalkompatibilität.",
+    "Allgemeine Positivität des niedrigen Schurrests.",
+    "Globales Objekt X, globale Weil-Positivität oder RH."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/chambers-through-a11-2026-09-28/high-tail/PROOF.md",
+    "sha256": "97a5abea259afa5e42f2418c99ca58027e06b7cc271cdfad93c00ffdb5863217"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "status": "COMMON_RATIONAL_RESERVE_PASS",
+  "endpoint": "A11=log(11)/2",
+  "reserve_results_sha256": "4cd943b464721ef7d22c1901dbb64a11062d93b34c4a22d89c298f3fa2aefe83",
+  "checker_sha256": "db8370b54d43fa0d7698213d0b51bf7607d33df3aac3a8c5a8167d6527de7198",
+  "common_physical_floor_exact": "1/100000000000000000000000000000000000000000000000000",
+  "common_defect_floor_exact": "1/1300000000000000000000000000000000000000000000000001",
+  "claim": "Conditional on PROOF.md and the complete model, both parities exceed these rational floors.",
+  "external_review": "OPEN",
+  "repository_status_changed": false
+}

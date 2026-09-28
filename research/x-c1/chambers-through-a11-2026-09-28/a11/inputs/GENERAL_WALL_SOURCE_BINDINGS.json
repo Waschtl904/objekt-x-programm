@@ -1,0 +1,177 @@
+{
+  "repository": "Waschtl904/objekt-x-programm",
+  "repository_inputs": [
+    {
+      "label": "Universal physical/reference form identity",
+      "commit": "876f9c79d555019217c745923cae3bef5da8af17",
+      "path": "research/x-c1/universal-prime-power-family-2026-09-18/PROOF.md",
+      "sha256": "639cfd30c71828ad56caf04447c7d174ec05071f250e19cb6be189d8c3e5f853"
+    },
+    {
+      "label": "C1a scalar ledger and coupled operators",
+      "commit": "5557d94d048dc05e7c3b4534a5a2d1711bdc71dc",
+      "path": "research/x-c1/c1-coupled-spectral-mediator-2026-09-20/PROOF.md",
+      "sha256": "4ebc12a5a84593d4a2fa0e21fd7b0ca6b5cc3fb1cb29e1b4c4f68dbdaa95f1b5"
+    },
+    {
+      "label": "O1-O4 original complete source model",
+      "commit": "6623047361578b819ae44358fbbbf0b3fdeac9ff",
+      "path": "research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_RAW_TD_O1_O4.md",
+      "sha256": "bead3bad0dc85a91013101328dbeaede4b263062752abda56319dde73b446af4"
+    },
+    {
+      "label": "O5-O7 method and old chamber scope",
+      "commit": "6623047361578b819ae44358fbbbf0b3fdeac9ff",
+      "path": "research/x-c1/post-unit-q8-interface-2026-09-21/FIRST_CHAMBER_O5_O7_ADDENDUM.md",
+      "sha256": "62e83371a9484d805222854cbfc22e5fca0bd4c0a976242240033445091a0976"
+    },
+    {
+      "label": "O8 form domain and complete Gram method",
+      "commit": "82a1f9d661b1668cc71eb0d5f8806c5cee73e471",
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/PROOF.md",
+      "sha256": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661"
+    },
+    {
+      "label": "Exact rational approximation helper",
+      "commit": "82a1f9d661b1668cc71eb0d5f8806c5cee73e471",
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/rational_bounds.py",
+      "sha256": "8e9ae5784a341ae3ba4f5db07c6c6ebbdee4fbc375a59a963b071f77c14b7d5c"
+    },
+    {
+      "label": "O8 refined kernel inequality method",
+      "commit": "82a1f9d661b1668cc71eb0d5f8806c5cee73e471",
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/refine_tail.py",
+      "sha256": "a8ba14e84ea74d8c56bdac8942dc04fea8a32c117b2d6844ee18ace7f05128b4"
+    }
+  ],
+  "local_input_packages": [
+    {
+      "package": "o10",
+      "original_manifest_sha256": "5d5cad9e85e89a4e02adbb899a1410f6e787f44fe4da7154b46d6db11c8a92fc",
+      "all_original_files_verified": 6,
+      "source_scope": "Previously checked local result; no new numerical replay is claimed"
+    },
+    {
+      "package": "a9",
+      "original_manifest_sha256": "8e58d5e366987fd19bcaded05aab20b947d5302416a2ffe1fd8d543ecb7325fb",
+      "all_original_files_verified": 34,
+      "source_scope": "Previously checked local result; no new numerical replay is claimed"
+    }
+  ],
+  "copied_inputs": [
+    {
+      "path": "inputs/o10/PROOF.md",
+      "origin_package": "o10",
+      "origin_path": "PROOF.md",
+      "sha256": "49d6d8ac4f4b34e0139949dc8008cdca9e8426d6dc597e57bd10ea7ce0b4fdbd"
+    },
+    {
+      "path": "inputs/o10/SOURCE_BINDINGS.json",
+      "origin_package": "o10",
+      "origin_path": "SOURCE_BINDINGS.json",
+      "sha256": "7439c26f265bccd3a396a02071875d62553be8a2949cf5c296c557ada388dc97"
+    },
+    {
+      "path": "inputs/o10/CHECK_RESULTS.json",
+      "origin_package": "o10",
+      "origin_path": "CHECK_RESULTS.json",
+      "sha256": "11ae5aec4ed40e30932c57f21b15909a7eec20e965b155cb4f6f91acd545201d"
+    },
+    {
+      "path": "inputs/o10/SHA256SUMS",
+      "origin_package": "o10",
+      "origin_path": "SHA256SUMS",
+      "sha256": "5d5cad9e85e89a4e02adbb899a1410f6e787f44fe4da7154b46d6db11c8a92fc"
+    },
+    {
+      "path": "inputs/a9/PROOF.md",
+      "origin_package": "a9",
+      "origin_path": "PROOF.md",
+      "sha256": "58577c7f448287daf4b09f0b031b00080cede91b31ac81dab0f3df336fcab1d0"
+    },
+    {
+      "path": "inputs/a9/SOURCE_BINDINGS.json",
+      "origin_package": "a9",
+      "origin_path": "SOURCE_BINDINGS.json",
+      "sha256": "cae29b7a786d6a45eab418d4a5e75d634666f89ddb86c7a224ab48dc09b36d43"
+    },
+    {
+      "path": "inputs/a9/CHECK_RESULTS.json",
+      "origin_package": "a9",
+      "origin_path": "CHECK_RESULTS.json",
+      "sha256": "cfcd497304c0ceaac0f8640509e0d6fabc5d57c54b432700c79354621e2ae95a"
+    },
+    {
+      "path": "inputs/a9/check_tail.py",
+      "origin_package": "a9",
+      "origin_path": "check_tail.py",
+      "sha256": "f0adfb9716ed1f1dcf72da5e70398567670d92fdd1f2685fc52289e2e6a47ac3"
+    },
+    {
+      "path": "inputs/a9/rational_bounds.py",
+      "origin_package": "a9",
+      "origin_path": "rational_bounds.py",
+      "sha256": "8e9ae5784a341ae3ba4f5db07c6c6ebbdee4fbc375a59a963b071f77c14b7d5c"
+    },
+    {
+      "path": "inputs/a9/SCHUR_AND_TRANSPORT.md",
+      "origin_package": "a9",
+      "origin_path": "SCHUR_AND_TRANSPORT.md",
+      "sha256": "ea44a140ea5c6544f0259f7e6bc99f12ab6e3aedb2b0b866562caafcc5e4c7e3"
+    },
+    {
+      "path": "inputs/a9/common_reserve.json",
+      "origin_package": "a9",
+      "origin_path": "common_reserve.json",
+      "sha256": "281996b90ea57b7bb08f722859e71b0b4d26820b07991072beaef84fe5b0add4"
+    },
+    {
+      "path": "inputs/a9/common_reserve.py",
+      "origin_package": "a9",
+      "origin_path": "common_reserve.py",
+      "sha256": "4ee4733d10a94043442771df5a21fa18dee1e6d9fc477e56d845c4d8669f771a"
+    },
+    {
+      "path": "inputs/a9/reserve_results.json",
+      "origin_package": "a9",
+      "origin_path": "reserve_results.json",
+      "sha256": "d8ff8c1710cd9e60be489cd0eb5c9a4270e394904877b0d2ca9fe5b94da02b9f"
+    },
+    {
+      "path": "inputs/a9/integer_results.json",
+      "origin_package": "a9",
+      "origin_path": "integer_results.json",
+      "sha256": "e0b5af0f1c4db1bd968104adf6d53c20362215994b86059f9f5fb1c4570f1c1c"
+    },
+    {
+      "path": "inputs/a9/PACKAGE_STATUS.json",
+      "origin_package": "a9",
+      "origin_path": "PACKAGE_STATUS.json",
+      "sha256": "080144d84cceeaaea087bc6ee355bc5acd0a81f070eb1837fa2e4fa1519d71ee"
+    },
+    {
+      "path": "inputs/a9/inputs/O10_PROOF.md",
+      "origin_package": "a9",
+      "origin_path": "inputs/O10_PROOF.md",
+      "sha256": "49d6d8ac4f4b34e0139949dc8008cdca9e8426d6dc597e57bd10ea7ce0b4fdbd"
+    },
+    {
+      "path": "inputs/a9/SHA256SUMS",
+      "origin_package": "a9",
+      "origin_path": "SHA256SUMS",
+      "sha256": "8e58d5e366987fd19bcaded05aab20b947d5302416a2ffe1fd8d543ecb7325fb"
+    },
+    {
+      "path": "inputs/REPOSITORY_LICENSE.txt",
+      "origin_package": "repository",
+      "origin_path": "LICENSE",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    }
+  ],
+  "A9_original_archive_sha256": "c5428ff2ebf854a2688977b355841f7c1fb839dbde805940ef92ef88b8041935",
+  "full_A9_matrices_included": false,
+  "note": "The previous complete A9 matrix package remains the numerical input. This package derives a general raw wall theorem and instantiates q9.",
+  "user_audit_report": "User reports independent integer replay in both parities and65 standalone tail checks; no user Arb replay was claimed.",
+  "external_analytical_review": "OPEN",
+  "repository_files_modified": false
+}

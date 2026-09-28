@@ -1,0 +1,11 @@
+even: exact rational congruence applied to full interval matrix
+even: Gershgorin positive rows 285/285
+even: minimum exact Gershgorin margin 1.020852291888367e-05
+even: transformed LDL 285; failure None
+even: 285 positive pivots; physical [6.46565033713269730006648e-50 +/- 1.14e-74]; defect [4.97357718240976715389729e-51 +/- 1.44e-75]
+odd: exact rational congruence applied to full interval matrix
+odd: Gershgorin positive rows 285/285
+odd: minimum exact Gershgorin margin 3.3204387519738354e-05
+odd: transformed LDL 285; failure None
+odd: 285 positive pivots; physical [2.66188268824463662673843e-46 +/- 2.37e-70]; defect [2.04760206788048971287571e-47 +/- 3.57e-71]
+21 congruence certificate groups PASS
