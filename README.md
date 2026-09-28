@@ -17,7 +17,7 @@
 
 Objekt X bezeichnet das Ziel einer kompatiblen positiven Geometrie für die relevante Weil-Form-Struktur.
 
-Das Programm arbeitet schrittweise über lokale positive Räume, gekoppelte Operatoren, Transportabbildungen und deren Kompatibilität. Der gegenwärtige Schwerpunkt liegt auf der Fortsetzung über die erste geschlossene Kammer bis `A₈=log(8)/2` hinaus, beginnend mit dem `q=8`-Wandübergang.
+Das Programm arbeitet schrittweise über lokale positive Räume, gekoppelte Operatoren, Transportabbildungen und deren Kompatibilität. Drei lokale positive Kammern sind bis `A₁₁=log(11)/2` konstruiert. Der gegenwärtige Schwerpunkt liegt auf einer erneuerbaren positiven Reserve des niedrigen Schurrests für weitere Horizonte.
 
 **Objekt X ist noch nicht vollständig konstruiert.  
 Globale Weil-Positivität ist nicht bewiesen.  
@@ -78,21 +78,44 @@ Beweisanker, Reproduktionsbelege und Integrationsstand stehen in der
 
 ---
 
-## Nächster lokaler Gate und weitere offene Aufgaben
+## O10 bis A11: zwei weitere Kammern und allgemeines Wandgesetz
 
-### O10 — q=8 wall crossing
+Das [zusammenhängende Forschungspaket](research/x-c1/chambers-through-a11-2026-09-28/README.md)
+enthält die vollständige Abhängigkeitskette:
 
-Strikt rechts von
-
-```math
-A_8=\frac{\log 8}{2}
+```text
+O10: gekoppelte rohe q8-Wand
+  → A9: zweite vollständige Terminalpositivität
+  → allgemeines Ein-Wand-Lemma und q9
+  → A11: dritte vollständige Terminalpositivität
 ```
 
-wird `q=8` aktiv.
+- **A9:** `q_A[u] >= 10^-35 ||u||²`, mit 296 positiven Pivots je Parität.
+- **A11:** `q_A[u] >= 10^-50 ||u||²` und
+  `G_A >= 1/(13*10^50+1) I`, mit 285 positiven Pivots je Parität nach exakt
+  rationaler Basisänderung und vollständig bezahlter ursprünglicher Norm.
+- **Transport:** Positive korrigierte isometrische Transporte und Cocycle
+  für alle `1<=A<=B<=C<=A11` über die q8- und q9-Wand.
+- **Allgemeines Wandgesetz:** Rohe T-/D-Cocycles auf jedem festen endlichen
+  Horizont. Vollständige Positivität benötigt weiterhin eigene Terminalreserven.
+- **Allgemeiner hoher Tail:** Auf jedem festen endlichen Horizont wird der
+  vollständige hohe Quellenraum bei ausreichend großem Schnitt positiv.
+  Die dafür nötige Kodimension darf wachsen.
 
-Dafür müssen neue gekoppelte Rohoperatoren und beide Wandtransporte konstruiert werden.
+Die Ergebnisse sind `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`. Arb und getrennte
+Ganzzahlarithmetik reproduzieren die Zertifikate auf den gebundenen vollständigen
+Matrixintervallen. Die externe analytische Gesamtprüfung bleibt offen.
 
-Am Endpunkt `A=A_8` bleibt `q=8` wegen der strikten Aktivierungsbedingung inaktiv.
+---
+
+## Nächster lokaler Gate und weitere offene Aufgaben
+
+### Erneuerbare Positivität des niedrigen Schurrests
+
+Die hohe Tail-Reduktion steht auf jedem festen endlichen Horizont zur Verfügung.
+Offen ist ein allgemeiner positiver Boden für den verbleibenden niedrigen Rest
+einschließlich der gesamten hohen Kopplung. Die nächste Wand aktiviert `q=11`
+strikt rechts von A11; die vollständige nächste Kammer ist noch nicht zertifiziert.
 
 ### Unbeschränkter Horizont
 
@@ -166,7 +189,7 @@ UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION
 OPEN
 ```
 
-Aktueller lokaler Einstieg: **O10 — q=8-Wall-Crossing**.
+Aktueller lokaler Einstieg: **erneuerbare Positivität des niedrigen Schurrests**.
 
 Erneuerbare Profilreserven, eine unbeschränkte/kofinale Horizontfamilie und ihre positive Kompatibilität bleiben offen.
 

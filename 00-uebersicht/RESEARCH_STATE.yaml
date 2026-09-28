@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "render_version": 6,
-  "state_date": "2026-09-27",
+  "state_date": "2026-09-28",
   "repository": "Waschtl904/objekt-x-programm",
   "published_baseline": {
     "branch": "main",
-    "sha": "17c30ec0b909ef06636471ef7dcf02185ba2369e",
+    "sha": "881ef7df49cfa5a84a6a54fa4a7ac7f82685c3f3",
     "integration_status": "MERGED",
-    "meaning": "Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
+    "meaning": "Gepinnter integrierter Forschungsstand nach PR #183: zusammenhängende O10–A11-Kette, Beweis-/Paketcommit 0b7c707c4c95f56bd8079ea44019a2d3f4cfce60. Erfolgreiche Main-Reproduktion 36378212734, Versuch 1; Registry-CI separat gebunden. Der globale mathematische Verifikationssnapshot bleibt unverändert. Frühere Integrationsprovenienz: Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
   },
   "verified_research_snapshot": {
     "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
@@ -45,9 +45,8 @@
       "title": "Unbeschränkte Horizonterweiterung und kompatibler Transport",
       "mathematical_status": "OPEN",
       "strategic_status": "ACTIVE_FRONT",
-      "target_scope": "C1a–C1d ist auf dem festen Horizont B<=a<=1 geschlossen. Für die konkrete C1a-Fortführung auf 1<=A<=B<=C<=A8=log(8)/2 liegen nun O1–O7, die reproduzierte O8-Terminalreserve und die positiven korrigierten O9-Transporte als AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN vor. Nächster lokaler Gate ist O10: der q=8-Wandübergang strikt rechts von A8. Erneuerbare Profilreserve und unbeschränkte/kofinale positive Terminalkompatibilität bleiben offen.",
+      "target_scope": "Die konkrete C1a-Familie besitzt Autorenherleitungen für drei positive Kammern bis A11=log(11)/2, gekoppelte rohe Wandtransporte auf jedem endlichen Horizont und eine allgemeine hohe Tail-Reduktion mit wachsender Kodimension. Nächster struktureller Gate ist die erneuerbare Positivität des niedrigen Schurrests. Unbeschränkte/kofinale positive Kompatibilität und externe analytische Gesamtprüfung bleiben offen.",
       "obligation_ids": [
-        "X4-Q8-WALL-CROSSING",
         "MOVING-PROFILE-RESERVE-RENEWAL",
         "NON-SUMMABLE-TRANSPORT",
         "UNBOUNDED-HORIZON-COMPATIBILITY"
@@ -60,14 +59,18 @@
         "C1d-COMPATIBLE-POSITIVE-COMPLETION",
         "FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7",
         "FIRST-CHAMBER-O8-TERMINAL-POSITIVITY",
-        "POSITIVE-CORRECTED-TRANSPORT"
+        "POSITIVE-CORRECTED-TRANSPORT",
+        "X4-Q8-WALL-CROSSING",
+        "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY",
+        "GENERAL-PRIME-POWER-WALL-COCYCLE",
+        "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+        "FINITE-HORIZON-HIGH-TAIL-REDUCTION"
       ],
-      "candidate": "POSITIVE-CORRECTED-TRANSPORT",
+      "candidate": "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
       "accepted_progress": [
-        "O10: Konstruiere strikt rechts von A_8 den gekoppelten q=8-Mediator und beide rohen Wandtransporte mit Quotientenabstieg, Beschränktheit und Kammerkompatibilität; am Endpunkt A_8 bleibt q=8 inaktiv.",
-        "Beweise kompatible Terminalräume und positive Abschlüsse für eine wachsende oder kofinale Horizontfamilie.",
-        "Ersetze endliche Schrittketten durch ein nicht summierbares oder uniformes Fortsetzungsgesetz.",
-        "Kontrolliere Low/Profile-Kopplungen mit erneuerbarer Reserve."
+        "Beweise erneuerbare Positivität des vollständigen niedrigen Schurrests nach der allgemeinen hohen Tail-Reduktion.",
+        "Kontrolliere neue Terminalreserven und vollständige hohe Kopplungen über weitere Primzahlpotenzwände, beginnend strikt rechts von A11 mit q=11.",
+        "Konstruiere eine unbeschränkte oder kofinale positive Horizontfamilie und ihre kompatiblen korrigierten Transporte."
       ],
       "insufficient": [
         "O1–O7 oder die Schranke ||R_A||<=sqrt(90) als Kontraktion oder neue Terminalpositivität ausgeben.",
@@ -105,58 +108,28 @@
   },
   "obligations": [
     {
-      "id": "X4-Q8-WALL-CROSSING",
-      "title": "O10 — q=8-Wall-Crossing separat beweisen",
-      "mathematical_status": "OPEN",
-      "scope": "Strikt rechts von A_8=log(8)/2 tritt q=8 mit Gewicht log(2)/sqrt(8) hinzu. Gekoppelte neue Rohoperatoren und beide Wandtransporte sind vor einer Post-Wall-Positivitätsaussage zu konstruieren. Wegen log(q)<2A bleibt q=8 am Endpunkt A_8 inaktiv."
-    },
-    {
       "id": "MOVING-PROFILE-RESERVE-RENEWAL",
       "title": "Erneuerbare Low/Profile-Reserve konstruieren",
       "mathematical_status": "OPEN",
-      "scope": "Zusätzliche Kopplungen bei der physischen Fortsetzung a->b; die Core-Kongruenz allein reicht nicht."
+      "scope": "Der vollständige hohe Tail lässt sich auf jedem festen endlichen Horizont erneuern. Offen ist ein struktureller positiver Boden des verbleibenden niedrigen Schurrests samt vollständiger hoher Kopplung für folgende Kammern oder eine kofinale Horizontfamilie."
     },
     {
       "id": "NON-SUMMABLE-TRANSPORT",
       "title": "Nicht summierbares oder uniformes Fortsetzungsgesetz beweisen",
       "mathematical_status": "OPEN",
-      "scope": "Über das vorhandene endliche positive Band hinaus; quantitative Schrittweiten."
+      "scope": "Das allgemeine rohe Wandgesetz benötigt keine Summierung kleiner Schritte. Offen bleibt eine unbeschränkte oder kofinale positive Fortsetzung mit erneuerbaren vollen Terminalreserven; der rohe Cocycle allein schließt diese Verpflichtung nicht."
     },
     {
       "id": "UNBOUNDED-HORIZON-COMPATIBILITY",
       "title": "Kompatible unbeschränkte Horizontfolge konstruieren",
       "mathematical_status": "OPEN",
-      "scope": "O8/O9 liefert positive Terminalkompatibilität ausschließlich auf der ersten geschlossenen Kammer 1<=A<=A8. Ein unbeschränkter/kofinaler Terminal-Cocycle über weitere Prime-Power-Wände und kompatible positive Abschlüsse bleiben offen."
+      "scope": "Rohe T-/D-Cocycles sind auf jedem festen endlichen Horizont hergeleitet. Positive korrigierte Kompatibilität ist bis A11=log(11)/2 konstruiert. Eine unbeschränkte/kofinale positive Terminalfamilie und ihre vollständige Kompatibilität bleiben offen."
     },
     {
       "id": "FULL-WEIL-TEST-CLASS",
       "title": "Vollständige geeignete Weil-Testklasse identifizieren",
       "mathematical_status": "OPEN",
       "scope": "Exakte Normalisierung, kanonischer globaler Readout und nichtzirkuläre Rückbindung an das Weil-Kriterium."
-    },
-    {
-      "id": "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY",
-      "title": "SECOND CHAMBER A9 TERMINAL POSITIVITY",
-      "mathematical_status": "OPEN",
-      "scope": "Ursprüngliche Zwei-Mellin-Quellen; vollständige Positivität bis A9=log(3); 296 Koordinaten je Parität. Vorgelegtes Autorenpaket; formale Übernahme im getrennten Sync."
-    },
-    {
-      "id": "GENERAL-PRIME-POWER-WALL-COCYCLE",
-      "title": "GENERAL PRIME POWER WALL COCYCLE",
-      "mathematical_status": "OPEN",
-      "scope": "Allgemeines Ein-Primzahlpotenz-Wandlemma und roher Cocycle auf jedem festen endlichen Horizont; q9-Instanz bis A11. Vorgelegtes Autorenpaket; formale Übernahme im getrennten Sync."
-    },
-    {
-      "id": "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
-      "title": "THIRD CHAMBER A11 TERMINAL POSITIVITY",
-      "mathematical_status": "OPEN",
-      "scope": "Ursprüngliche Zwei-Mellin-Quellen; vollständige Positivität und korrigierter Cocycle bis A11=log(11)/2; 285 Koordinaten je Parität. Vorgelegtes Autorenpaket; formale Übernahme im getrennten Sync."
-    },
-    {
-      "id": "FINITE-HORIZON-HIGH-TAIL-REDUCTION",
-      "title": "FINITE HORIZON HIGH TAIL REDUCTION",
-      "mathematical_status": "OPEN",
-      "scope": "Für jedes feste endliche L>=1 und delta>0 ein vollständiger hoher Quellenraum mit Boden delta; endliche Kodimension darf mit L wachsen. Vorgelegtes Autorenpaket; formale Übernahme im getrennten Sync."
     }
   ],
   "results": [
@@ -1126,6 +1099,238 @@
         "Eine externe analytische Abnahme.",
         "Objekt X, globale Weil-Positivität oder RH."
       ]
+    },
+    {
+      "id": "X4-Q8-WALL-CROSSING",
+      "title": "O10 — gekoppelte rohe q8-Wandtransporte bis A9",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+          "path": "research/x-c1/chambers-through-a11-2026-09-28/o10/CHECK_RESULTS.json",
+          "sha256": "11ae5aec4ed40e30932c57f21b15909a7eec20e965b155cb4f6f91acd545201d"
+        }
+      ],
+      "claim_polarity": "CONSTRUCTION",
+      "scope": "Konkrete C1a-Familie; q=8-Rohwand, beide Transporte, 1<=A<=B<=C<=log(3).",
+      "claim": [
+        "Beide beschränkten rohen T-/D-Transporte über die q=8-Wand sind auf den vollständigen Quell- und Bildräumen konstruiert; Quotientenabstieg, Cocycle, Defektintertwining und Formnaturality sind hergeleitet.",
+        "Am Kontakt A8 bleibt q8 inaktiv; die alte positive Kompression allein liefert keine Positivität aller neuen Quellen."
+      ],
+      "depends_on": [
+        "FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7",
+        "FIRST-CHAMBER-O8-TERMINAL-POSITIVITY"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+      "canonical_proof": "research/x-c1/chambers-through-a11-2026-09-28/o10/PROOF.md",
+      "proof_sha256": "49d6d8ac4f4b34e0139949dc8008cdca9e8426d6dc597e57bd10ea7ce0b4fdbd",
+      "negative_claim_boundary": "Kein No-Go und keine negative Richtung der vollständigen Weil-Form behauptet.",
+      "does_not_claim": [
+        "Externe analytische Gesamtbegutachtung.",
+        "Unbeschränkte/kofinale positive Terminalkompatibilität.",
+        "Allgemeine Positivität des niedrigen Schurrests.",
+        "Globales Objekt X, globale Weil-Positivität oder RH."
+      ]
+    },
+    {
+      "id": "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY",
+      "title": "Zweite Kammer — vollständige Terminalreserve bis A9",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+          "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/CHECK_RESULTS.json",
+          "sha256": "cfcd497304c0ceaac0f8640509e0d6fabc5d57c54b432700c79354621e2ae95a"
+        },
+        {
+          "commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+          "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/reserve_results.json",
+          "sha256": "d8ff8c1710cd9e60be489cd0eb5c9a4270e394904877b0d2ca9fe5b94da02b9f"
+        },
+        {
+          "commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+          "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/common_reserve.json",
+          "sha256": "281996b90ea57b7bb08f722859e71b0b4d26820b07991072beaef84fe5b0add4"
+        },
+        {
+          "commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+          "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/integer_results.json",
+          "sha256": "e0b5af0f1c4db1bd968104adf6d53c20362215994b86059f9f5fb1c4570f1c1c"
+        },
+        {
+          "commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+          "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/normalization_results.json",
+          "sha256": "6d43f1d5be80ba4e7788177a41979e3fd329f4a501607d965e119a745f37b801"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "Ursprüngliche Zwei-Mellin-Quellen; vollständige Positivität bis A9=log(3); 296 Koordinaten je Parität.",
+      "claim": [
+        "Neue q2-Viererkettengeometrie, Verlust 31481/5000 und vollständiger hoher Quellenraum ab Graden 594/595 mit physischem Boden 2/3; Kodimension genau 296 je Parität.",
+        "Vollständige Low/High-Grams und bezahlte Gamma-/Mellinfehler; Arb und separate Ganzzahlintervalle zertifizieren je 296 positive Pivots.",
+        "Auf 1<=A<=A9=log(3) gilt q_A[u]>=10^-35||u||^2 und G_A>=1/(12*10^35+1) I; korrigierte positive Transporte über die q8-Wand.",
+        "Die unabhängige Arithmetik verwendet gelieferte vollständige Matrixintervalle; der große Integralaufbau wird nicht als zweite unabhängige Engine behauptet."
+      ],
+      "depends_on": [
+        "X4-Q8-WALL-CROSSING",
+        "POSITIVE-CORRECTED-TRANSPORT"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+      "canonical_proof": "research/x-c1/chambers-through-a11-2026-09-28/a9/PROOF.md",
+      "proof_sha256": "58577c7f448287daf4b09f0b031b00080cede91b31ac81dab0f3df336fcab1d0",
+      "negative_claim_boundary": "Kein No-Go und keine negative Richtung der vollständigen Weil-Form behauptet.",
+      "does_not_claim": [
+        "Externe analytische Gesamtbegutachtung.",
+        "Unbeschränkte/kofinale positive Terminalkompatibilität.",
+        "Allgemeine Positivität des niedrigen Schurrests.",
+        "Globales Objekt X, globale Weil-Positivität oder RH."
+      ]
+    },
+    {
+      "id": "GENERAL-PRIME-POWER-WALL-COCYCLE",
+      "title": "Allgemeines Ein-Wand-Lemma und roher Primzahlpotenz-Cocycle",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+          "path": "research/x-c1/chambers-through-a11-2026-09-28/wall/CHECK_RESULTS.json",
+          "sha256": "ba4afdc5115e12ced11b9b9b4edb28748d85cde077ab927aa9e8dc5826ad466e"
+        }
+      ],
+      "claim_polarity": "CONSTRUCTION",
+      "scope": "Allgemeines Ein-Primzahlpotenz-Wandlemma und roher Cocycle auf jedem festen endlichen Horizont; q9-Instanz bis A11.",
+      "claim": [
+        "Für jede einzelne neue Primzahlpotenz gilt 1-cos(ell*xi)<=max(1,ell^2/16)*g(xi), mit daraus folgenden endlichen beschränkten T-/D-Wandquotienten.",
+        "Direkte rohe Transporte teleskopieren exakt und erfüllen den Cocycle auf jedem festen endlichen Horizont; vollständige Quellenräume und Carrier werden dort definiert.",
+        "q9 ist eine konkrete Instanz bis A11; der positive Boden des transportierten alten A9-Bildes ersetzt keine Terminalpositivität auf sämtlichen neuen Quellen.",
+        "109 exakte Kontrollen einschließlich sieben Git-Quellenbindungen stützen die analytische Herleitung."
+      ],
+      "depends_on": [
+        "X4-Q8-WALL-CROSSING",
+        "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+      "canonical_proof": "research/x-c1/chambers-through-a11-2026-09-28/wall/PROOF.md",
+      "proof_sha256": "9297444e2bc7c15e6c03f04bd7cd9579826e73564e1584a355a60ea23e4c6be1",
+      "negative_claim_boundary": "Kein No-Go und keine negative Richtung der vollständigen Weil-Form behauptet.",
+      "does_not_claim": [
+        "Externe analytische Gesamtbegutachtung.",
+        "Unbeschränkte/kofinale positive Terminalkompatibilität.",
+        "Allgemeine Positivität des niedrigen Schurrests.",
+        "Globales Objekt X, globale Weil-Positivität oder RH."
+      ]
+    },
+    {
+      "id": "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+      "title": "Dritte Kammer — vollständige Terminalreserve bis A11",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+          "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/CHECK_RESULTS.json",
+          "sha256": "e117d93c69ac54d0acc38f385990bee0e064f153b3a35e312fda4fc5dd8868a2"
+        },
+        {
+          "commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+          "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/preconditioned_results.json",
+          "sha256": "4cd943b464721ef7d22c1901dbb64a11062d93b34c4a22d89c298f3fa2aefe83"
+        },
+        {
+          "commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+          "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/common_reserve.json",
+          "sha256": "6e089a0e87f95614e7128f2b9236b55291e5fc4ec38bbda378e0bbf396f0a0a7"
+        },
+        {
+          "commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+          "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/integer_results.json",
+          "sha256": "36f4cfb372df0c28cb49b9b815ff20636e638cf0f3a78806a0e16e5f54e15014"
+        },
+        {
+          "commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+          "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/normalization_results.json",
+          "sha256": "4ee3c0a9acddddbee2bf85c02c0316297a6f712dd7ca6361b3a5d9caf71ef8fe"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "Ursprüngliche Zwei-Mellin-Quellen; vollständige Positivität und korrigierter Cocycle bis A11=log(11)/2; 285 Koordinaten je Parität.",
+      "claim": [
+        "Gemeinsamer Shift-/Potentialbound S_A-V<=59/20 auf acht Zellen; Gesamtverlust 14811/2500, vollständiger hoher Boden 1 ab Graden 572/573 und Kodimension 285 je Parität.",
+        "Der neue 3072-Bit-Integralaufbau N571/M416 erfasst die vollständige hohe Modellantwort mit allen Kreuztermen; Gamma-, Mellin- und Schurfehler sind bezahlt.",
+        "Exakt rationale invertierbare Dreieckskongruenz der unveränderten vollständigen Intervallmatrix: je 285 positive Gershgorin-Zeilenmargen und LDL-Pivots in Arb und separater Ganzzahlarithmetik; ursprüngliche Norm über ||P||_F^2 zurückgerechnet.",
+        "Auf 1<=A<=A11=log(11)/2 gilt q_A[u]>=10^-50||u||^2 und G_A>=1/(13*10^50+1) I. Positive korrigierte isometrische Transporte und Cocycle gelten über beide Wände für alle 1<=A<=B<=C<=A11.",
+        "Die ursprüngliche direkte Intervall-LDL bleibt unentschieden, nicht negativ. Externe analytische Abnahme und eine eigenständige zweite vollständige Integralengine werden nicht behauptet."
+      ],
+      "depends_on": [
+        "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY",
+        "GENERAL-PRIME-POWER-WALL-COCYCLE"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+      "canonical_proof": "research/x-c1/chambers-through-a11-2026-09-28/a11/PROOF.md",
+      "proof_sha256": "911a6ed3f5631958739ca6e527001e1fe4cb71258fa637d89971dc6b4b123c7b",
+      "negative_claim_boundary": "Kein No-Go und keine negative Richtung der vollständigen Weil-Form behauptet.",
+      "does_not_claim": [
+        "Externe analytische Gesamtbegutachtung.",
+        "Unbeschränkte/kofinale positive Terminalkompatibilität.",
+        "Allgemeine Positivität des niedrigen Schurrests.",
+        "Globales Objekt X, globale Weil-Positivität oder RH."
+      ]
+    },
+    {
+      "id": "FINITE-HORIZON-HIGH-TAIL-REDUCTION",
+      "title": "Vollständige hohe Tail-Reduktion auf jedem endlichen Horizont",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "ANALYTIC_ONLY",
+      "reproduction_evidence": [],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "Für jedes feste endliche L>=1 und delta>0 ein vollständiger hoher Quellenraum mit Boden delta; endliche Kodimension darf mit L wachsen.",
+      "claim": [
+        "Für jeden festen endlichen L>=1 und delta>0 existiert ein endlicher gerader Schnitt N(L,delta), so dass der vollständige hohe Zwei-Mellin-Quellenraum für alle 1<=A<=L den Boden delta besitzt.",
+        "Die beschränkten negativen Verluste bleiben bei festem L endlich, H_N wächst unbeschränkt und die hohe Mellinkorrektur fällt faktoriell.",
+        "Die Kodimension darf mit L wachsen. Der Satz enthält keine allgemeine Positivität des verbleibenden niedrigen Schurrests und keinen gemeinsamen globalen unteren Boden."
+      ],
+      "depends_on": [
+        "GENERAL-PRIME-POWER-WALL-COCYCLE",
+        "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+      "canonical_proof": "research/x-c1/chambers-through-a11-2026-09-28/high-tail/PROOF.md",
+      "proof_sha256": "97a5abea259afa5e42f2418c99ca58027e06b7cc271cdfad93c00ffdb5863217",
+      "negative_claim_boundary": "Kein No-Go und keine negative Richtung der vollständigen Weil-Form behauptet.",
+      "does_not_claim": [
+        "Externe analytische Gesamtbegutachtung.",
+        "Unbeschränkte/kofinale positive Terminalkompatibilität.",
+        "Allgemeine Positivität des niedrigen Schurrests.",
+        "Globales Objekt X, globale Weil-Positivität oder RH."
+      ]
     }
   ],
   "global_status": {
@@ -1239,33 +1444,7 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [
-    {
-      "id": "X4-Q8-WALL-CROSSING",
-      "meta_path": "research/x-c1/chambers-through-a11-2026-09-28/o10/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    },
-    {
-      "id": "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY",
-      "meta_path": "research/x-c1/chambers-through-a11-2026-09-28/a9/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    },
-    {
-      "id": "GENERAL-PRIME-POWER-WALL-COCYCLE",
-      "meta_path": "research/x-c1/chambers-through-a11-2026-09-28/wall/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    },
-    {
-      "id": "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
-      "meta_path": "research/x-c1/chambers-through-a11-2026-09-28/a11/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    },
-    {
-      "id": "FINITE-HORIZON-HIGH-TAIL-REDUCTION",
-      "meta_path": "research/x-c1/chambers-through-a11-2026-09-28/high-tail/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    }
-  ],
+  "pending_packages": [],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",
@@ -1282,15 +1461,15 @@
     }
   },
   "current_integration_observation": {
-    "observed_at": "2026-09-27",
-    "main_sha": "17c30ec0b909ef06636471ef7dcf02185ba2369e",
+    "observed_at": "2026-09-28",
+    "main_sha": "881ef7df49cfa5a84a6a54fa4a7ac7f82685c3f3",
     "integrated_research_branch": "research/first-chamber-o8-o9-2026-09-27",
-    "integrated_research_head": "82a1f9d661b1668cc71eb0d5f8806c5cee73e471",
-    "reconciliation_merge": "17c30ec0b909ef06636471ef7dcf02185ba2369e",
-    "ci_run_id": 36327607304,
+    "integrated_research_head": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
+    "reconciliation_merge": "881ef7df49cfa5a84a6a54fa4a7ac7f82685c3f3",
+    "ci_run_id": 36378212756,
     "ci_run_attempt": 1,
-    "ci_head_sha": "17c30ec0b909ef06636471ef7dcf02185ba2369e",
-    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/36327607304",
+    "ci_head_sha": "881ef7df49cfa5a84a6a54fa4a7ac7f82685c3f3",
+    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/36378212756",
     "ci_conclusion": "success",
     "mathematical_status_change": false
   }
