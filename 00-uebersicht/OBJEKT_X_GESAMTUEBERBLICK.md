@@ -1,7 +1,7 @@
 # Objekt X – Gesamtüberblick
 
-**Stand:** 28. September 2026  
-**Basis:** `main@9608f8f8d3233eeae82d8e6784c481a6e054ee06`  
+**Stand:** 29. September 2026  
+**Basis:** `main@742694d3b307b8716172f6265cf8805b5e2b7011`  
 **Zweck:** Verständliche Gesamterzählung des Programms – klassische Grundlagen, eigene Resultate, rigorose No-Gos, aktuelle positive C1-Geometrie und offene globale Schritte.
 
 > **Kurzfassung:** Objekt X ist noch nicht vollständig konstruiert und RH ist nicht bewiesen. Das Programm hat aber eine eigenständige mathematische Kernarchitektur entwickelt: eine physische finite Weil-Form, einen gemeinsamen Prime-/Gamma-Spektralmediator, eine exakte Defektreduktion und mehrere streng positive endliche Kammern mit kompatiblen Transporten.
@@ -277,82 +277,43 @@ Das Projekt ist damit **weder bloßes Abschreiben noch bereits ein RH-Beweis**.
 
 ---
 
-## 13. Der A11-Nebenstrang: echter niedriger Spektralraum
+## 13. Kritische Spektralräume und kanonische Ergänzungen
 
-Ein paralleler A11-Diagnosestrang fragt, ob ein kleiner mitgeführter kritischer Unterraum einen robusten Komplement-Gap besitzt. Die bisher verwendeten F-Diagnoserichtungen zeigen extrem schwache Komplementreserven. Das ist ein Befund über diese konkrete Raumfamilie, kein universelles Rang-$r$-No-Go.
+Die [integrierte Forschungsfamilie](../research/x-c1/renewable-low-schur-spectral-2026-09-29/README.md)
+enthält sieben aufeinander aufbauende Durchläufe, einschließlich der rigorosen Außenmassenrechnung.
+Status: **AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN**.
 
-Die mathematisch natürlichere Wahl ist der **wahre niedrige Spektralraum der tatsächlichen Terminalform**.
+Die alten F-Diagnoseräume lieferten extrem schwache Komplementreserven. Dieser Befund
+betrifft die konkrete Raumwahl. Die echte physische Spektralzerlegung liefert bei
+`b=q+17||u||²` und Schwelle `q/b=10^-4` genau **5→6→8 kritische Richtungen je Parität**
+bei A8→A9→A11. Das vollständige unendliche Spektralkomplement besitzt den robusten
+Gap. Die 191/296/285 Zertifikatskoordinaten sind andere Dimensionen.
 
-Am positiven Terminal setze
+Physische Nullfortsetzung erhält q und b. Auf dem bereits positiven Horizont ist
+`T=P_B J|K_A` injektiv, mit kleinster b-Singularwertschranke
+`sqrt(1-alpha_A/beta_B)`. Daraus entstehen die kanonischen Ergänzungen
+`E=K_B ⊖_b TK_A` der Dimension 1 bzw. 2 je Parität. Eine Geburt an einer bestimmten
+Primzahlpotenzwand wird dadurch nicht lokalisiert.
 
-```math
-b_A(u,v)=q_A(u,v)+17\langle u,v\rangle.
-```
+| Übergang | Minimale Außenmasse gerade | Minimale Außenmasse ungerade |
+| --- | --- | --- |
+| A8→A9 | [0.9717 %, 2.5620 %] | [5.7863 %, 12.8947 %] |
+| A9→A11 | [0.1284 %, 1.2872 %] | [2.1727 %, 8.1344 %] |
 
-Für den physischen Formoperator $Q_A$ gilt relativ zu $b_A$
+Die Grenzen sind rigoros nach außen gerundet und betreffen die kleinste äußere
+L2-Masse bei L2-Norm eins. Beim zweidimensionalen E beschränkt die Obergrenze des
+Minimums nicht jede Richtung. Die schwächste äußere Richtung bleibt überwiegend im alten Intervall.
+Hilfsräume und echte Spektralräume werden durch gerichtete Projektor-/Polargrenzen verbunden.
 
-```math
-\mathcal A_A
-=
-Q_A(Q_A+17I)^{-1}.
-```
+In `TK_A ⊕ E ⊕ K_B^⊥` ist der robuste Rest q-entkoppelt. Innerhalb K_B gilt
+`q_B(Tx,e)=-17<Jx,e>_L2`. Eine absolute Schranke dieser Kopplung reicht wegen der
+winzigen q-Energien noch nicht für den relativen Renewal-κ-Test.
 
-Somit besitzen $Q_A$ und $\mathcal A_A$ dieselben Spektralunterräume.
-
-Der richtige nächste Schritt ist deshalb **nicht** ein weiterer Scan handgewählter Diagnoserichtungen, sondern eine zertifizierte Bestimmung des echten niedrigen Spektralraums.
-
-Für
-
-```math
-Q_A=
-\begin{pmatrix}
-L&B\\
-B^*&H
-\end{pmatrix},
-\qquad
-H\succeq\delta I,
-```
-
-und $\mu<\delta$ ist die Eigenwertfrage äquivalent zum endlichen Schur-Pencil
-
-```math
-S_A(\mu)
-=
-L-\mu I
--
-B(H-\mu I)^{-1}B^*.
-```
-
-Außerdem
-
-```math
-\frac{d}{d\mu}S_A(\mu)
-=
--I-B(H-\mu I)^{-2}B^*
-\prec0.
-```
-
-Diese strikte Monotonie ist ideal für gerichtete Eigenwertbrackets und Inertiezählung.
-
-### Empfohlene Reihenfolge
-
-1. Zuerst Anzahl und Intervalle der echten niedrigen Eigenwerte zertifizieren.
-2. Noch keine instabilen Einzel-Eigenvektoren als primäre Objekte verwenden.
-3. Danach Spektralprojektoren beziehungsweise invariant definierte niedrige Unterräume rekonstruieren.
-4. Renewal über diese Unterräume oder Projektoren formulieren.
-5. Erst anschließend robuste Restgaps und Transport über $A_8\to A_9\to A_{11}$ testen.
-
-Der $A_{11}$-High-Tail mit Boden $1$ liefert auf diesem hohen Raum
-
-```math
-\frac{q_A[u]}{q_A[u]+17\|u\|^2}
-\ge
-\frac1{18}.
-```
-
-Da der hohe Raum endliche Kodimension besitzt, können unterhalb von $1/18$ nur endlich viele echte spektrale Richtungen liegen. Das macht den vorgeschlagenen **CERTIFIED TRUE LOW SPECTRAL SUBSPACE** zu einer mathematisch plausiblen Renewal-Strategie.
-
-Dieser Nebenstrang ist im aktuellen `main` noch kein eigener Satz und wird hier deshalb als Forschungsstrategie eingeordnet.
+Der nächste strukturelle Schritt ist deshalb die energiegewichtete tatsächliche
+Überlappung von altem kritischem Raum und E. Allgemeine erneuerbare Low-Schur-
+Positivität und eine kofinale positive Familie bleiben offen; der globale
+Verifikationssnapshot wird nicht angehoben. Die separate q11/A13-Vorbereitung
+aus PR #187 wird durch diese Integration nicht übernommen.
 
 ---
 
