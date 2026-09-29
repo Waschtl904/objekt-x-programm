@@ -5,7 +5,7 @@
 >
 > - Kanonischer operativer Status: [`00-uebersicht/RESEARCH_STATE.yaml`](00-uebersicht/RESEARCH_STATE.yaml)
 > - Lesbarer Gesamtüberblick: [`00-uebersicht/OBJEKT_X_GESAMTUEBERBLICK.md`](00-uebersicht/OBJEKT_X_GESAMTUEBERBLICK.md)
-- Lesbarer aktueller Stand: [`00-uebersicht/CURRENT_STATE.md`](00-uebersicht/CURRENT_STATE.md)
+> - Lesbarer aktueller Stand: [`00-uebersicht/CURRENT_STATE.md`](00-uebersicht/CURRENT_STATE.md)
 > - Nächste mathematische Gates: [`00-uebersicht/NEXT_GATES.md`](00-uebersicht/NEXT_GATES.md)
 > - Konsolidierte Ergebnisübersicht: [`00-uebersicht/SURVIVOR_REGISTRY.md`](00-uebersicht/SURVIVOR_REGISTRY.md)
 > - Historische Quellen und abgeschlossene Branch-Konsolidierung: [Archiveinstieg](00-uebersicht/ARCHIVE_INDEX.md)
@@ -112,6 +112,14 @@ Matrixintervallen. Die externe analytische Gesamtprüfung bleibt offen.
 ## Nächster lokaler Gate und weitere offene Aufgaben
 
 ### Erneuerbare Positivität des niedrigen Schurrests
+
+Die [Spektral-/Renewal-Familie](research/x-c1/renewable-low-schur-spectral-2026-09-29/README.md)
+zertifiziert bei A8/A9/A11 echte kritische Ränge **5/6/8 je Parität**, injektiven
+Spektraltransport und kanonische Ergänzungen der Dimension **1/2** samt rigoroser
+äußerer L2-Masse. Der robuste Spektralrest ist q-entkoppelt. Nächster struktureller
+Schritt ist die relative energiegewichtete Kopplung zwischen transportiertem
+altem Raum und Ergänzung; allgemeine Renewal-Positivität bleibt offen.
+Status: `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`.
 
 Die hohe Tail-Reduktion steht auf jedem festen endlichen Horizont zur Verfügung.
 Offen ist ein allgemeiner positiver Boden für den verbleibenden niedrigen Rest

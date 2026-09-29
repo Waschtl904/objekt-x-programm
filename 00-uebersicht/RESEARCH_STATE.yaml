@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "render_version": 6,
-  "state_date": "2026-09-28",
+  "state_date": "2026-09-29",
   "repository": "Waschtl904/objekt-x-programm",
   "published_baseline": {
     "branch": "main",
-    "sha": "881ef7df49cfa5a84a6a54fa4a7ac7f82685c3f3",
+    "sha": "742694d3b307b8716172f6265cf8805b5e2b7011",
     "integration_status": "MERGED",
-    "meaning": "Gepinnter integrierter Forschungsstand nach PR #183: zusammenhängende O10–A11-Kette, Beweis-/Paketcommit 0b7c707c4c95f56bd8079ea44019a2d3f4cfce60. Erfolgreiche Main-Reproduktion 36378212734, Versuch 1; Registry-CI separat gebunden. Der globale mathematische Verifikationssnapshot bleibt unverändert. Frühere Integrationsprovenienz: Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
+    "meaning": "Integrierte siebenblöckige Spektral-/Renewal-Familie nach PR #189, Beweishead c19c655d79f9be59b7c18fb0042783f5e4a0ab49. Main-Replay 36525210364 erfolgreich; Registry-CI separat gebunden. Globaler Verifikationssnapshot unverändert. Frühere Provenienz: Gepinnter integrierter Forschungsstand nach PR #183: zusammenhängende O10–A11-Kette, Beweis-/Paketcommit 0b7c707c4c95f56bd8079ea44019a2d3f4cfce60. Erfolgreiche Main-Reproduktion 36378212734, Versuch 1; Registry-CI separat gebunden. Der globale mathematische Verifikationssnapshot bleibt unverändert. Frühere Integrationsprovenienz: Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
   },
   "verified_research_snapshot": {
     "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
@@ -45,7 +45,7 @@
       "title": "Unbeschränkte Horizonterweiterung und kompatibler Transport",
       "mathematical_status": "OPEN",
       "strategic_status": "ACTIVE_FRONT",
-      "target_scope": "Die konkrete C1a-Familie besitzt Autorenherleitungen für drei positive Kammern bis A11=log(11)/2, gekoppelte rohe Wandtransporte auf jedem endlichen Horizont und eine allgemeine hohe Tail-Reduktion mit wachsender Kodimension. Nächster struktureller Gate ist die erneuerbare Positivität des niedrigen Schurrests. Unbeschränkte/kofinale positive Kompatibilität und externe analytische Gesamtprüfung bleiben offen.",
+      "target_scope": "Drei positive Kammern bis A11 und allgemeiner hoher Tail sind vorhanden. Der niedrige echte Spektralraum hat bei q/b=10^-4 die Ränge 5/6/8 je Parität. Injektiver kritischer Transport, kanonische Ergänzungen und deren äußere Masse sind hergeleitet. Offen bleibt relative energiegewichtete Kopplungskontrolle als Schritt zur allgemeinen Low-Schur-Erneuerung; kofinale positive Kompatibilität bleibt offen.",
       "obligation_ids": [
         "MOVING-PROFILE-RESERVE-RENEWAL",
         "NON-SUMMABLE-TRANSPORT",
@@ -64,13 +64,17 @@
         "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY",
         "GENERAL-PRIME-POWER-WALL-COCYCLE",
         "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
-        "FINITE-HORIZON-HIGH-TAIL-REDUCTION"
+        "FINITE-HORIZON-HIGH-TAIL-REDUCTION",
+        "TRUE-LOW-SPECTRAL-SUBSPACE-A11",
+        "CANONICAL-LOW-SPECTRAL-RANKS-A8-A9-A11",
+        "CRITICAL-SPECTRAL-TRANSPORT",
+        "CANONICAL-EXTENSION-OUTER-MASS"
       ],
       "candidate": "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
       "accepted_progress": [
-        "Beweise erneuerbare Positivität des vollständigen niedrigen Schurrests nach der allgemeinen hohen Tail-Reduktion.",
-        "Kontrolliere neue Terminalreserven und vollständige hohe Kopplungen über weitere Primzahlpotenzwände, beginnend strikt rechts von A11 mit q=11.",
-        "Konstruiere eine unbeschränkte oder kofinale positive Horizontfamilie und ihre kompatiblen korrigierten Transporte."
+        "Kontrolliere die tatsächliche L2-Überlappung des alten kritischen Raums mit E relativ zu den winzigen q-Energien der beiden Blöcke.",
+        "Zertifiziere einen Renewal-kappa-Test in transportiertem altem Raum plus kanonischem E; der robuste vollständige Spektralrest ist q-entkoppelt.",
+        "Beweise eine über weitere Horizonte erneuerbare positive Low-Schur-Reserve und schließlich eine kofinale kompatible positive Terminalfamilie."
       ],
       "insufficient": [
         "O1–O7 oder die Schranke ||R_A||<=sqrt(90) als Kontraktion oder neue Terminalpositivität ausgeben.",
@@ -111,7 +115,7 @@
       "id": "MOVING-PROFILE-RESERVE-RENEWAL",
       "title": "Erneuerbare Low/Profile-Reserve konstruieren",
       "mathematical_status": "OPEN",
-      "scope": "Der vollständige hohe Tail lässt sich auf jedem festen endlichen Horizont erneuern. Offen ist ein struktureller positiver Boden des verbleibenden niedrigen Schurrests samt vollständiger hoher Kopplung für folgende Kammern oder eine kofinale Horizontfamilie."
+      "scope": "Echte kritische Ränge 5/6/8, injektiver Spektraltransport und kanonische Ergänzungen der Dimension 1/2 je Parität sind bis A11 hergeleitet; ihre äußere Masse ist rigoros eingeschlossen. Offen bleibt ein energiegewichteter relativer kappa-Test zwischen transportiertem altem Raum und E sowie eine allgemeine erneuerbare Low-Schur-Positivität."
     },
     {
       "id": "NON-SUMMABLE-TRANSPORT",
@@ -130,30 +134,6 @@
       "title": "Vollständige geeignete Weil-Testklasse identifizieren",
       "mathematical_status": "OPEN",
       "scope": "Exakte Normalisierung, kanonischer globaler Readout und nichtzirkuläre Rückbindung an das Weil-Kriterium."
-    },
-    {
-      "id": "TRUE-LOW-SPECTRAL-SUBSPACE-A11",
-      "title": "TRUE LOW SPECTRAL SUBSPACE A11",
-      "mathematical_status": "OPEN",
-      "scope": "Echter physischer A11-Spektralraum unter q/(q+17L2)=10^-4, acht Dimensionen je Parität und vollständiger positiver Spektralkomplement-Gap. Autorenpaket; Übernahme nach Integration im eigenen Sync."
-    },
-    {
-      "id": "CANONICAL-LOW-SPECTRAL-RANKS-A8-A9-A11",
-      "title": "CANONICAL LOW SPECTRAL RANKS A8 A9 A11",
-      "mathematical_status": "OPEN",
-      "scope": "Feste Terminals A8/A9/A11, Schwelle q/b=10^-4: genau 5/6/8 kritische Spektralrichtungen je Parität; keine Lokalisation der Rangwechsel an Wänden. Autorenpaket; Übernahme nach Integration im eigenen Sync."
-    },
-    {
-      "id": "CRITICAL-SPECTRAL-TRANSPORT",
-      "title": "CRITICAL SPECTRAL TRANSPORT",
-      "mathematical_status": "OPEN",
-      "scope": "Auf dem bereits positiven Horizont bis A11: injektiver kritischer Spektraltransport, kanonische Ergänzungen der Dimension 1 bzw. 2 je Parität und vollständige Komplement-Gaps. Autorenpaket; Übernahme nach Integration im eigenen Sync."
-    },
-    {
-      "id": "CANONICAL-EXTENSION-OUTER-MASS",
-      "title": "CANONICAL EXTENSION OUTER MASS",
-      "mathematical_status": "OPEN",
-      "scope": "Kanonische Ergänzungen A8->A9 und A9->A11: gerichtete äußere L2-Massenintervalle und absolute Kopplung; kein relativer Renewal-kappa-Test. Autorenpaket; Übernahme nach Integration im eigenen Sync."
     }
   ],
   "results": [
@@ -1355,6 +1335,173 @@
         "Allgemeine Positivität des niedrigen Schurrests.",
         "Globales Objekt X, globale Weil-Positivität oder RH."
       ]
+    },
+    {
+      "id": "TRUE-LOW-SPECTRAL-SUBSPACE-A11",
+      "title": "Echter niedriger Spektralraum und Komplement-Gap bei A11",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "c19c655d79f9be59b7c18fb0042783f5e4a0ab49",
+          "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/04-a11-true-spectral-space/verification.json",
+          "sha256": "eb95ed60539fa1f4345ca63b96b6e63ab93e08d0d378487279d441a569a9a2cf"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "Echter physischer A11-Spektralraum unter q/(q+17L2)=10^-4, acht Dimensionen je Parität und vollständiger positiver Spektralkomplement-Gap.",
+      "claim": [
+        "Bei A11 ist der echte physische Spektralraum unter q/(q+17||u||^2)=10^-4 acht-dimensional je Parität. Vollständige hohe Schur-Elimination und Massenmatrix werden berücksichtigt.",
+        "Rationale Rangzertifikate und gerichtete physische Tests liefern einen robust positiven vollständigen Spektralkomplement-Gap. F-Vergleichseigenwerte werden nicht zu physischen Eigenwerten erklärt."
+      ],
+      "depends_on": [
+        "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+        "FIRST-CHAMBER-O8-TERMINAL-POSITIVITY",
+        "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "c19c655d79f9be59b7c18fb0042783f5e4a0ab49",
+      "canonical_proof": "research/x-c1/renewable-low-schur-spectral-2026-09-29/04-a11-true-spectral-space/PROOF.md",
+      "proof_sha256": "6d890040e27e3db926c910423d8fe8159ce2d1c4b97c38470ccc73f3649fd829",
+      "negative_claim_boundary": "Keine negative volle Weil-Quelle und kein allgemeines No-Go behauptet.",
+      "does_not_claim": [
+        "Allgemeine erneuerbare Low-Schur-Positivität oder kofinale positive Terminalfamilie.",
+        "Positivität bei A13 oder Integration der separaten q11/A13-Vorbereitung.",
+        "Globales Objekt X, globale Weil-Positivität oder RH.",
+        "Externe analytische Gesamtbegutachtung, Geburt kritischer Richtungen an bestimmten Wänden oder Kanalzuordnung."
+      ]
+    },
+    {
+      "id": "CANONICAL-LOW-SPECTRAL-RANKS-A8-A9-A11",
+      "title": "Kanonische kritische Spektralränge bei A8, A9 und A11",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "c19c655d79f9be59b7c18fb0042783f5e4a0ab49",
+          "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/05-canonical-spectral-ranks/verification.json",
+          "sha256": "437bbf9990f453d4d3ff3db5d5a448381a63cb5af629e7621fc6ca60609cf314"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "Feste Terminals A8/A9/A11, Schwelle q/b=10^-4: genau 5/6/8 kritische Spektralrichtungen je Parität; keine Lokalisation der Rangwechsel an Wänden.",
+      "claim": [
+        "Bei A8, A9 und A11 sind die echten kritischen Spektralränge bei fester b-Schwelle 10^-4 genau 5, 6 und 8 je Parität; insgesamt 10, 12 und 16.",
+        "Die Ränge sind minimal für diese Komplementschwelle. Zertifikatsdimensionen 191/296/285, alte rationale Testräume und echte Spektralräume bleiben getrennt. Kein Rangwechsel wird einer bestimmten Wand zugeordnet."
+      ],
+      "depends_on": [
+        "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+        "FIRST-CHAMBER-O8-TERMINAL-POSITIVITY",
+        "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY",
+        "TRUE-LOW-SPECTRAL-SUBSPACE-A11"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "c19c655d79f9be59b7c18fb0042783f5e4a0ab49",
+      "canonical_proof": "research/x-c1/renewable-low-schur-spectral-2026-09-29/05-canonical-spectral-ranks/PROOF.md",
+      "proof_sha256": "41f9ca98d5f32a19dd3d61d3fb9ada3e256a5e67d513a56080d16c3e3695456f",
+      "negative_claim_boundary": "Keine negative volle Weil-Quelle und kein allgemeines No-Go behauptet.",
+      "does_not_claim": [
+        "Allgemeine erneuerbare Low-Schur-Positivität oder kofinale positive Terminalfamilie.",
+        "Positivität bei A13 oder Integration der separaten q11/A13-Vorbereitung.",
+        "Globales Objekt X, globale Weil-Positivität oder RH.",
+        "Externe analytische Gesamtbegutachtung, Geburt kritischer Richtungen an bestimmten Wänden oder Kanalzuordnung."
+      ]
+    },
+    {
+      "id": "CRITICAL-SPECTRAL-TRANSPORT",
+      "title": "Injektiver kritischer Spektraltransport und kanonische Ergänzungen",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "c19c655d79f9be59b7c18fb0042783f5e4a0ab49",
+          "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/06-critical-spectral-transport/verification.json",
+          "sha256": "cecf17c48945f0960f82150466d8e639576994968db3c7580a4351a3fe8d096b"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "Auf dem bereits positiven Horizont bis A11: injektiver kritischer Spektraltransport, kanonische Ergänzungen der Dimension 1 bzw. 2 je Parität und vollständige Komplement-Gaps.",
+      "claim": [
+        "Unter q- und b-erhaltender physischer Nullfortsetzung auf dem bereits positiven Horizont bis A11 ist T=P_B J|K_A injektiv, mit unterer b-Normschranke sqrt(1-alpha_A/beta_B).",
+        "Die kanonischen b-orthogonalen Ergänzungen in K_B haben Dimension 1 bei A8->A9 und 2 bei A9->A11 je Parität; das robuste vollständige Spektralkomplement ist q-entkoppelt.",
+        "Vier vollständige parameterabhängige Schur-Gap-Zertifikate verschärfen die Transportwinkel. Weder projizierter Cocycle noch relative q-Energiekontrolle oder neue Terminalpositivität folgen automatisch."
+      ],
+      "depends_on": [
+        "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+        "FIRST-CHAMBER-O8-TERMINAL-POSITIVITY",
+        "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY",
+        "CANONICAL-LOW-SPECTRAL-RANKS-A8-A9-A11"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "c19c655d79f9be59b7c18fb0042783f5e4a0ab49",
+      "canonical_proof": "research/x-c1/renewable-low-schur-spectral-2026-09-29/06-critical-spectral-transport/PROOF.md",
+      "proof_sha256": "19db15b3c55fa4f0ada1744b3f2bbda99cd7ca99c3e077e8fdd3a3cb1ce3afbe",
+      "negative_claim_boundary": "Keine negative volle Weil-Quelle und kein allgemeines No-Go behauptet.",
+      "does_not_claim": [
+        "Allgemeine erneuerbare Low-Schur-Positivität oder kofinale positive Terminalfamilie.",
+        "Positivität bei A13 oder Integration der separaten q11/A13-Vorbereitung.",
+        "Globales Objekt X, globale Weil-Positivität oder RH.",
+        "Externe analytische Gesamtbegutachtung, Geburt kritischer Richtungen an bestimmten Wänden oder Kanalzuordnung."
+      ]
+    },
+    {
+      "id": "CANONICAL-EXTENSION-OUTER-MASS",
+      "title": "Rigorose Außenmasse der kanonischen Ergänzungen und absolute Kopplung",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "c19c655d79f9be59b7c18fb0042783f5e4a0ab49",
+          "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/07-canonical-extension-outer-mass/verification.json",
+          "sha256": "8a04dd3fb2dea5c2812841c8c5ec1f1a9a62d1bc066e38bd868f280b5333843e"
+        },
+        {
+          "commit": "c19c655d79f9be59b7c18fb0042783f5e4a0ab49",
+          "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/07-canonical-extension-outer-mass/a8_gap_verification.json",
+          "sha256": "d1aecdceedddcb209193291452de6cd2f9386c2a4cf82413d8b87e6bb4c10656"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "Kanonische Ergänzungen A8->A9 und A9->A11: gerichtete äußere L2-Massenintervalle und absolute Kopplung; kein relativer Renewal-kappa-Test.",
+      "claim": [
+        "Rigorose Projektor-/Polarübertragung von gerichteten Hilfsraummatrizen schließt die äußere L2-Masse des echten kanonischen E ein.",
+        "Minimale Außenmasse bei L2-Norm eins: A8->A9 gerade [0.9717%,2.5620%], ungerade [5.7863%,12.8947%]; A9->A11 gerade [0.1284%,1.2872%], ungerade [2.1727%,8.1344%]. Alle Grenzen nach außen gerundet.",
+        "Bei dim E=2 beziehen sich diese Grenzen auf den kleinsten Masseneigenwert, nicht auf jede Richtung. Die schwächste äußere Richtung ist überwiegend im alten Intervall getragen.",
+        "Die Identität q_B(Tx,e)=-17<Jx,e>_L2 liefert eine absolute Kopplungsschranke. Ein energiegewichteter relativer Renewal-kappa-Test ist noch offen."
+      ],
+      "depends_on": [
+        "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+        "FIRST-CHAMBER-O8-TERMINAL-POSITIVITY",
+        "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY",
+        "CRITICAL-SPECTRAL-TRANSPORT"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "c19c655d79f9be59b7c18fb0042783f5e4a0ab49",
+      "canonical_proof": "research/x-c1/renewable-low-schur-spectral-2026-09-29/07-canonical-extension-outer-mass/PROOF.md",
+      "proof_sha256": "5a1020f4cd381ca1603e1d47c2721829db4161657d015f457f8e5133da2f74d3",
+      "negative_claim_boundary": "Keine negative volle Weil-Quelle und kein allgemeines No-Go behauptet.",
+      "does_not_claim": [
+        "Allgemeine erneuerbare Low-Schur-Positivität oder kofinale positive Terminalfamilie.",
+        "Positivität bei A13 oder Integration der separaten q11/A13-Vorbereitung.",
+        "Globales Objekt X, globale Weil-Positivität oder RH.",
+        "Externe analytische Gesamtbegutachtung, Geburt kritischer Richtungen an bestimmten Wänden oder Kanalzuordnung."
+      ]
     }
   ],
   "global_status": {
@@ -1468,28 +1615,7 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [
-    {
-      "id": "TRUE-LOW-SPECTRAL-SUBSPACE-A11",
-      "meta_path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/04-a11-true-spectral-space/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    },
-    {
-      "id": "CANONICAL-LOW-SPECTRAL-RANKS-A8-A9-A11",
-      "meta_path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/05-canonical-spectral-ranks/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    },
-    {
-      "id": "CRITICAL-SPECTRAL-TRANSPORT",
-      "meta_path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/06-critical-spectral-transport/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    },
-    {
-      "id": "CANONICAL-EXTENSION-OUTER-MASS",
-      "meta_path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/07-canonical-extension-outer-mass/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    }
-  ],
+  "pending_packages": [],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",
@@ -1506,15 +1632,15 @@
     }
   },
   "current_integration_observation": {
-    "observed_at": "2026-09-28",
-    "main_sha": "881ef7df49cfa5a84a6a54fa4a7ac7f82685c3f3",
+    "observed_at": "2026-09-29",
+    "main_sha": "742694d3b307b8716172f6265cf8805b5e2b7011",
     "integrated_research_branch": "research/first-chamber-o8-o9-2026-09-27",
-    "integrated_research_head": "0b7c707c4c95f56bd8079ea44019a2d3f4cfce60",
-    "reconciliation_merge": "881ef7df49cfa5a84a6a54fa4a7ac7f82685c3f3",
-    "ci_run_id": 36378212756,
+    "integrated_research_head": "c19c655d79f9be59b7c18fb0042783f5e4a0ab49",
+    "reconciliation_merge": "742694d3b307b8716172f6265cf8805b5e2b7011",
+    "ci_run_id": 36525210546,
     "ci_run_attempt": 1,
-    "ci_head_sha": "881ef7df49cfa5a84a6a54fa4a7ac7f82685c3f3",
-    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/36378212756",
+    "ci_head_sha": "742694d3b307b8716172f6265cf8805b5e2b7011",
+    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/36525210546",
     "ci_conclusion": "success",
     "mathematical_status_change": false
   }

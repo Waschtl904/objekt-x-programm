@@ -989,3 +989,134 @@ Does not claim:
 - Unbeschränkte/kofinale positive Terminalkompatibilität.
 - Allgemeine Positivität des niedrigen Schurrests.
 - Globales Objekt X, globale Weil-Positivität oder RH.
+
+## TRUE-LOW-SPECTRAL-SUBSPACE-A11
+
+Echter niedriger Spektralraum und Komplement-Gap bei A11
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Echter physischer A11-Spektralraum unter q/(q+17L2)=10^-4, acht Dimensionen je Parität und vollständiger positiver Spektralkomplement-Gap.
+- Canonical commit: [c19c655](https://github.com/Waschtl904/objekt-x-programm/commit/c19c655d79f9be59b7c18fb0042783f5e4a0ab49).
+- Canonical proof: [research/x-c1/renewable-low-schur-spectral-2026-09-29/04-a11-true-spectral-space/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/c19c655d79f9be59b7c18fb0042783f5e4a0ab49/research/x-c1/renewable-low-schur-spectral-2026-09-29/04-a11-true-spectral-space/PROOF.md).
+- depends_on: `THIRD-CHAMBER-A11-TERMINAL-POSITIVITY`, `FIRST-CHAMBER-O8-TERMINAL-POSITIVITY`, `SECOND-CHAMBER-A9-TERMINAL-POSITIVITY`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Keine negative volle Weil-Quelle und kein allgemeines No-Go behauptet.
+
+Aussage:
+
+- Bei A11 ist der echte physische Spektralraum unter q/(q+17||u||^2)=10^-4 acht-dimensional je Parität. Vollständige hohe Schur-Elimination und Massenmatrix werden berücksichtigt.
+- Rationale Rangzertifikate und gerichtete physische Tests liefern einen robust positiven vollständigen Spektralkomplement-Gap. F-Vergleichseigenwerte werden nicht zu physischen Eigenwerten erklärt.
+
+Does not claim:
+
+- Allgemeine erneuerbare Low-Schur-Positivität oder kofinale positive Terminalfamilie.
+- Positivität bei A13 oder Integration der separaten q11/A13-Vorbereitung.
+- Globales Objekt X, globale Weil-Positivität oder RH.
+- Externe analytische Gesamtbegutachtung, Geburt kritischer Richtungen an bestimmten Wänden oder Kanalzuordnung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/c19c655d79f9be59b7c18fb0042783f5e4a0ab49/research/x-c1/renewable-low-schur-spectral-2026-09-29/04-a11-true-spectral-space/verification.json).
+
+## CANONICAL-LOW-SPECTRAL-RANKS-A8-A9-A11
+
+Kanonische kritische Spektralränge bei A8, A9 und A11
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Feste Terminals A8/A9/A11, Schwelle q/b=10^-4: genau 5/6/8 kritische Spektralrichtungen je Parität; keine Lokalisation der Rangwechsel an Wänden.
+- Canonical commit: [c19c655](https://github.com/Waschtl904/objekt-x-programm/commit/c19c655d79f9be59b7c18fb0042783f5e4a0ab49).
+- Canonical proof: [research/x-c1/renewable-low-schur-spectral-2026-09-29/05-canonical-spectral-ranks/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/c19c655d79f9be59b7c18fb0042783f5e4a0ab49/research/x-c1/renewable-low-schur-spectral-2026-09-29/05-canonical-spectral-ranks/PROOF.md).
+- depends_on: `THIRD-CHAMBER-A11-TERMINAL-POSITIVITY`, `FIRST-CHAMBER-O8-TERMINAL-POSITIVITY`, `SECOND-CHAMBER-A9-TERMINAL-POSITIVITY`, `TRUE-LOW-SPECTRAL-SUBSPACE-A11`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Keine negative volle Weil-Quelle und kein allgemeines No-Go behauptet.
+
+Aussage:
+
+- Bei A8, A9 und A11 sind die echten kritischen Spektralränge bei fester b-Schwelle 10^-4 genau 5, 6 und 8 je Parität; insgesamt 10, 12 und 16.
+- Die Ränge sind minimal für diese Komplementschwelle. Zertifikatsdimensionen 191/296/285, alte rationale Testräume und echte Spektralräume bleiben getrennt. Kein Rangwechsel wird einer bestimmten Wand zugeordnet.
+
+Does not claim:
+
+- Allgemeine erneuerbare Low-Schur-Positivität oder kofinale positive Terminalfamilie.
+- Positivität bei A13 oder Integration der separaten q11/A13-Vorbereitung.
+- Globales Objekt X, globale Weil-Positivität oder RH.
+- Externe analytische Gesamtbegutachtung, Geburt kritischer Richtungen an bestimmten Wänden oder Kanalzuordnung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/c19c655d79f9be59b7c18fb0042783f5e4a0ab49/research/x-c1/renewable-low-schur-spectral-2026-09-29/05-canonical-spectral-ranks/verification.json).
+
+## CRITICAL-SPECTRAL-TRANSPORT
+
+Injektiver kritischer Spektraltransport und kanonische Ergänzungen
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Auf dem bereits positiven Horizont bis A11: injektiver kritischer Spektraltransport, kanonische Ergänzungen der Dimension 1 bzw. 2 je Parität und vollständige Komplement-Gaps.
+- Canonical commit: [c19c655](https://github.com/Waschtl904/objekt-x-programm/commit/c19c655d79f9be59b7c18fb0042783f5e4a0ab49).
+- Canonical proof: [research/x-c1/renewable-low-schur-spectral-2026-09-29/06-critical-spectral-transport/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/c19c655d79f9be59b7c18fb0042783f5e4a0ab49/research/x-c1/renewable-low-schur-spectral-2026-09-29/06-critical-spectral-transport/PROOF.md).
+- depends_on: `THIRD-CHAMBER-A11-TERMINAL-POSITIVITY`, `FIRST-CHAMBER-O8-TERMINAL-POSITIVITY`, `SECOND-CHAMBER-A9-TERMINAL-POSITIVITY`, `CANONICAL-LOW-SPECTRAL-RANKS-A8-A9-A11`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Keine negative volle Weil-Quelle und kein allgemeines No-Go behauptet.
+
+Aussage:
+
+- Unter q- und b-erhaltender physischer Nullfortsetzung auf dem bereits positiven Horizont bis A11 ist T=P_B J|K_A injektiv, mit unterer b-Normschranke sqrt(1-alpha_A/beta_B).
+- Die kanonischen b-orthogonalen Ergänzungen in K_B haben Dimension 1 bei A8->A9 und 2 bei A9->A11 je Parität; das robuste vollständige Spektralkomplement ist q-entkoppelt.
+- Vier vollständige parameterabhängige Schur-Gap-Zertifikate verschärfen die Transportwinkel. Weder projizierter Cocycle noch relative q-Energiekontrolle oder neue Terminalpositivität folgen automatisch.
+
+Does not claim:
+
+- Allgemeine erneuerbare Low-Schur-Positivität oder kofinale positive Terminalfamilie.
+- Positivität bei A13 oder Integration der separaten q11/A13-Vorbereitung.
+- Globales Objekt X, globale Weil-Positivität oder RH.
+- Externe analytische Gesamtbegutachtung, Geburt kritischer Richtungen an bestimmten Wänden oder Kanalzuordnung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/c19c655d79f9be59b7c18fb0042783f5e4a0ab49/research/x-c1/renewable-low-schur-spectral-2026-09-29/06-critical-spectral-transport/verification.json).
+
+## CANONICAL-EXTENSION-OUTER-MASS
+
+Rigorose Außenmasse der kanonischen Ergänzungen und absolute Kopplung
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Kanonische Ergänzungen A8->A9 und A9->A11: gerichtete äußere L2-Massenintervalle und absolute Kopplung; kein relativer Renewal-kappa-Test.
+- Canonical commit: [c19c655](https://github.com/Waschtl904/objekt-x-programm/commit/c19c655d79f9be59b7c18fb0042783f5e4a0ab49).
+- Canonical proof: [research/x-c1/renewable-low-schur-spectral-2026-09-29/07-canonical-extension-outer-mass/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/c19c655d79f9be59b7c18fb0042783f5e4a0ab49/research/x-c1/renewable-low-schur-spectral-2026-09-29/07-canonical-extension-outer-mass/PROOF.md).
+- depends_on: `THIRD-CHAMBER-A11-TERMINAL-POSITIVITY`, `FIRST-CHAMBER-O8-TERMINAL-POSITIVITY`, `SECOND-CHAMBER-A9-TERMINAL-POSITIVITY`, `CRITICAL-SPECTRAL-TRANSPORT`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Keine negative volle Weil-Quelle und kein allgemeines No-Go behauptet.
+
+Aussage:
+
+- Rigorose Projektor-/Polarübertragung von gerichteten Hilfsraummatrizen schließt die äußere L2-Masse des echten kanonischen E ein.
+- Minimale Außenmasse bei L2-Norm eins: A8->A9 gerade [0.9717%,2.5620%], ungerade [5.7863%,12.8947%]; A9->A11 gerade [0.1284%,1.2872%], ungerade [2.1727%,8.1344%]. Alle Grenzen nach außen gerundet.
+- Bei dim E=2 beziehen sich diese Grenzen auf den kleinsten Masseneigenwert, nicht auf jede Richtung. Die schwächste äußere Richtung ist überwiegend im alten Intervall getragen.
+- Die Identität q_B(Tx,e)=-17<Jx,e>_L2 liefert eine absolute Kopplungsschranke. Ein energiegewichteter relativer Renewal-kappa-Test ist noch offen.
+
+Does not claim:
+
+- Allgemeine erneuerbare Low-Schur-Positivität oder kofinale positive Terminalfamilie.
+- Positivität bei A13 oder Integration der separaten q11/A13-Vorbereitung.
+- Globales Objekt X, globale Weil-Positivität oder RH.
+- Externe analytische Gesamtbegutachtung, Geburt kritischer Richtungen an bestimmten Wänden oder Kanalzuordnung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/c19c655d79f9be59b7c18fb0042783f5e4a0ab49/research/x-c1/renewable-low-schur-spectral-2026-09-29/07-canonical-extension-outer-mass/verification.json), [a8_gap_verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/c19c655d79f9be59b7c18fb0042783f5e4a0ab49/research/x-c1/renewable-low-schur-spectral-2026-09-29/07-canonical-extension-outer-mass/a8_gap_verification.json).
