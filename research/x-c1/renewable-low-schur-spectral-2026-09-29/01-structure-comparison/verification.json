@@ -1,0 +1,97 @@
+{
+  "status": "DIAGNOSTIC_VERIFICATION_PASS",
+  "source_commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+  "source_input_hashes_verified": 10,
+  "physical_direction_evaluations": {
+    "A8-even": {
+      "direction": "explicit rational decimal coefficient vector in critical_vectors.json",
+      "status": "DIRECTED_EVALUATION_CONDITIONAL_ON_PUBLISHED_MODEL_ERROR_BOUND",
+      "physical_form_rayleigh_interval": "[1.6e-26 +/- 1.75e-28]",
+      "physical_form_rayleigh_upper_exact": "10060638763557823609434386546865456179232644071195722917933/625000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "low_model_rayleigh_interval": "[1.596210607628490579857023e-26 +/- 2.50e-51]",
+      "source_norm_squared_interval": "[1.000058971383965671645234 +/- 1.38e-25]"
+    },
+    "A8-odd": {
+      "direction": "explicit rational decimal coefficient vector in critical_vectors.json",
+      "status": "DIRECTED_EVALUATION_CONDITIONAL_ON_PUBLISHED_MODEL_ERROR_BOUND",
+      "physical_form_rayleigh_interval": "[8.929e-24 +/- 6.10e-28]",
+      "physical_form_rayleigh_upper_exact": "89296094393731210966590960674152765869115468133632163016955019/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "low_model_rayleigh_interval": "[8.929502146528017706260277e-24 +/- 3.06e-49]",
+      "source_norm_squared_interval": "[1.000003204379296329318878 +/- 8.60e-26]"
+    },
+    "A9-even": {
+      "direction": "explicit rational decimal coefficient vector in critical_vectors.json",
+      "status": "DIRECTED_EVALUATION_CONDITIONAL_ON_PUBLISHED_MODEL_ERROR_BOUND",
+      "physical_form_rayleigh_interval": "[1.512e-31 +/- 4.39e-35]",
+      "physical_form_rayleigh_upper_exact": "302487793612047931201037309525179808875656955241207997/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "low_model_rayleigh_interval": "[1.512188730376512431204079e-31 +/- 3.55e-56]",
+      "source_norm_squared_interval": "[1.000057568955627053329941 +/- 3.39e-25]"
+    },
+    "A9-odd": {
+      "direction": "explicit rational decimal coefficient vector in critical_vectors.json",
+      "status": "DIRECTED_EVALUATION_CONDITIONAL_ON_PUBLISHED_MODEL_ERROR_BOUND",
+      "physical_form_rayleigh_interval": "[1.123442e-28 +/- 5.10e-35]",
+      "physical_form_rayleigh_upper_exact": "35107567646105778898193822127653349821702058936289910787/312500000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "low_model_rayleigh_interval": "[1.123445015090275610309546e-28 +/- 4.58e-53]",
+      "source_norm_squared_interval": "[1.000002837458687255236071 +/- 4.19e-25]"
+    },
+    "A11-even": {
+      "direction": "explicit rational decimal coefficient vector in critical_vectors.json",
+      "status": "DIRECTED_EVALUATION_CONDITIONAL_ON_PUBLISHED_MODEL_ERROR_BOUND",
+      "physical_form_rayleigh_interval": "[1.0805594e-41 +/- 5.56e-49]",
+      "physical_form_rayleigh_upper_exact": "108055945556923168847613152907812047020444847/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "low_model_rayleigh_interval": "[1.080618990151670118934440e-41 +/- 1.67e-66]",
+      "source_norm_squared_interval": "[1.000055138663940202346459 +/- 3.65e-25]"
+    },
+    "A11-odd": {
+      "direction": "explicit rational decimal coefficient vector in critical_vectors.json",
+      "status": "DIRECTED_EVALUATION_CONDITIONAL_ON_PUBLISHED_MODEL_ERROR_BOUND",
+      "physical_form_rayleigh_interval": "[1.5566278889e-38 +/- 7.15e-49]",
+      "physical_form_rayleigh_upper_exact": "155662788892062967689085551274237233901827402287/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "low_model_rayleigh_interval": "[1.556631499271672570204906e-38 +/- 9.4e-66]",
+      "source_norm_squared_interval": "[1.000002319370667093938846 +/- 1.06e-25]"
+    }
+  },
+  "exact_interval_sign_checks": {
+    "A8-even->A9-even": {
+      "conclusion": "INDEFINITE_DIFFERENCE_IN_REFERENCE_COEFFICIENTS",
+      "negative_degree": 22,
+      "positive_degree": 382
+    },
+    "A8-odd->A9-odd": {
+      "conclusion": "INDEFINITE_DIFFERENCE_IN_REFERENCE_COEFFICIENTS",
+      "negative_degree": 11,
+      "positive_degree": 383
+    },
+    "A9-even->A11-even": {
+      "conclusion": "INDEFINITE_DIFFERENCE_IN_REFERENCE_COEFFICIENTS",
+      "negative_degree": 20,
+      "positive_degree": 22
+    },
+    "A9-odd->A11-odd": {
+      "conclusion": "INDEFINITE_DIFFERENCE_IN_REFERENCE_COEFFICIENTS",
+      "negative_degree": 13,
+      "positive_degree": 17
+    },
+    "A8-even->A11-even": {
+      "conclusion": "INDEFINITE_DIFFERENCE_IN_REFERENCE_COEFFICIENTS",
+      "negative_degree": 12,
+      "positive_degree": 382
+    },
+    "A8-odd->A11-odd": {
+      "conclusion": "INDEFINITE_DIFFERENCE_IN_REFERENCE_COEFFICIENTS",
+      "negative_degree": 19,
+      "positive_degree": 383
+    }
+  },
+  "768_vs_1024_bit_A11_even_relative_differences": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "does_not_prove": [
+    "General renewable low positivity",
+    "Physical-transport Loewner monotonicity",
+    "New global status"
+  ]
+}

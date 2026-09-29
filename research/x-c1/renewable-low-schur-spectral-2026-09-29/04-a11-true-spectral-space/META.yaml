@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "TRUE-LOW-SPECTRAL-SUBSPACE-A11",
+  "date": "2026-09-29",
+  "kind": "THEOREM",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Echter physischer A11-Spektralraum unter q/(q+17L2)=10^-4, acht Dimensionen je Parität und vollständiger positiver Spektralkomplement-Gap.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "Keine negative volle Weil-Quelle und kein allgemeines No-Go behauptet.",
+  "depends_on": [
+    "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+    "FIRST-CHAMBER-O8-TERMINAL-POSITIVITY",
+    "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY"
+  ],
+  "closes": [
+    "TRUE-LOW-SPECTRAL-SUBSPACE-A11"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Allgemeine erneuerbare Low-Schur-Positivität oder kofinale positive Terminalfamilie.",
+    "Positivität bei A13 oder Integration der separaten q11/A13-Vorbereitung.",
+    "Globales Objekt X, globale Weil-Positivität oder RH.",
+    "Externe analytische Gesamtbegutachtung, Geburt kritischer Richtungen an bestimmten Wänden oder Kanalzuordnung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/04-a11-true-spectral-space/PROOF.md",
+    "sha256": "6d890040e27e3db926c910423d8fe8159ce2d1c4b97c38470ccc73f3649fd829"
+  }
+}

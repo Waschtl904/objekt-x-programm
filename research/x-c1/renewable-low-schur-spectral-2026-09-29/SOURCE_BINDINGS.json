@@ -1,0 +1,511 @@
+{
+  "source_commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+  "publication_base": "023e8e27f82510bf2cdeb010b82a51cab80ead37",
+  "original_files": [
+    {
+      "path": "01-structure-comparison/critical_vectors.json",
+      "sha256": "a0a21b4dea4e4047a4db3176b70c08b00c595944f8b34df606620aa557cf8250"
+    },
+    {
+      "path": "01-structure-comparison/diagnostics.json",
+      "sha256": "d682aa11fc1def6011c601d32fe43e02f378d4ad7b27fd1814546edde3793577"
+    },
+    {
+      "path": "01-structure-comparison/low_schur_compare.py",
+      "sha256": "4ce67fea03fefcf1d25755af3158af86751b9c9611995e6d86e4628728010246"
+    },
+    {
+      "path": "01-structure-comparison/low_schur_physical_angles.py",
+      "sha256": "6b9c339f0ce88efd00c71c9e1e20f70a1b336145894614bceb854a90cb8bda3b"
+    },
+    {
+      "path": "01-structure-comparison/low_schur_verify_diagnostics.py",
+      "sha256": "2854bfbd4569ff5bc2272ca2847d7f91e63a977c8bae2ba8665aa32eae263c0c"
+    },
+    {
+      "path": "01-structure-comparison/physical_angles.json",
+      "sha256": "66e68368b0a2197fd3ac4f4ce07a90b864aab1a8fabba482f446d194f82b8a8d"
+    },
+    {
+      "path": "01-structure-comparison/precision-check.json",
+      "sha256": "6e2faa422460ad79b0d2eeddc4406ee72d3c611202b8a1885fb31c96737e76fb"
+    },
+    {
+      "path": "01-structure-comparison/REPRODUKTION.md",
+      "sha256": "17531550741ca574283ed4aaa08e1e99d9e13c921df421047951631f01a80376"
+    },
+    {
+      "path": "01-structure-comparison/SHA256SUMS",
+      "sha256": "13a4157732e8f3db53ba5ba981fdd9a9a75d56733e9968f9dbbe1d9f3c5202ca"
+    },
+    {
+      "path": "01-structure-comparison/STRUKTURVERGLEICH.md",
+      "sha256": "f7d82a6998366429f28c28db6abf81b1d3f0a85dede316c3cbe2589b93de87d9"
+    },
+    {
+      "path": "01-structure-comparison/verification.json",
+      "sha256": "9f29f66f49fa03fa4237684c4d1214cdfc3f67cda2ed5f5ce5cc47439666bcc7"
+    },
+    {
+      "path": "02-critical-subspace-coupling/coupling_bounds.json",
+      "sha256": "bbdd36f654bf8fda0bcc6d894aeaafcb633ecbef38e2a367fb4d97852a07413d"
+    },
+    {
+      "path": "02-critical-subspace-coupling/coupling_bounds_crosscheck.json",
+      "sha256": "2cd1453802b66f012b5d21a262d07853c98126f40ed94e7745484cf738185581"
+    },
+    {
+      "path": "02-critical-subspace-coupling/critical_subspace_coupling.py",
+      "sha256": "293ad89460ac94fea0a02a4f4431b1d576e5598033a4b1a46e0e69a3d477bbbc"
+    },
+    {
+      "path": "02-critical-subspace-coupling/critical_vectors.json",
+      "sha256": "a0a21b4dea4e4047a4db3176b70c08b00c595944f8b34df606620aa557cf8250"
+    },
+    {
+      "path": "02-critical-subspace-coupling/KRITISCHER_UNTERRAUM.md",
+      "sha256": "6b0bd053b96d35966f63590e64468b40a9a96ce3c03d2b439311771116e90a6d"
+    },
+    {
+      "path": "02-critical-subspace-coupling/REPRODUKTION.md",
+      "sha256": "ef147de65675391ede34129585c9bbe8bef37ddf6edb45d2002631872dcf3d0c"
+    },
+    {
+      "path": "02-critical-subspace-coupling/SHA256SUMS",
+      "sha256": "60d7736da9b4e2f275d7ca8061bfb4c007214f06e6941c49e22e5507b8cf8ac9"
+    },
+    {
+      "path": "02-critical-subspace-coupling/verification.json",
+      "sha256": "d38effbfe506ab201cd2eca1293e0a5fca98edc80c8c28f016d7d02e6cc67ac4"
+    },
+    {
+      "path": "02-critical-subspace-coupling/verify_critical_subspace_coupling.py",
+      "sha256": "a6edace11929f69332a680c8b87d36b0ae2c5618d7385b8b3d93b015ca53448c"
+    },
+    {
+      "path": "03-old-complement-gap/ALLE_RAENGE.md",
+      "sha256": "dc81453767441c44137d8c84400b2e22ca85f5c54a7191c1077b7bef18dee2f3"
+    },
+    {
+      "path": "03-old-complement-gap/fixed_vectors.json",
+      "sha256": "4cfeaf15e12e7785c72836adf8f3cdd58b13627fdb9ea8e9c88a91b6c140b28d"
+    },
+    {
+      "path": "03-old-complement-gap/gap_bounds.json",
+      "sha256": "9d2768bacae0c326908a798de02359e8b04df7dc0be2aaada24ef41c3078b4b8"
+    },
+    {
+      "path": "03-old-complement-gap/gap_bounds_crosscheck.json",
+      "sha256": "b9a90c50d8a6c020e8a4c3c20285f8a2f1af23dfb467784d488f81298ca29e58"
+    },
+    {
+      "path": "03-old-complement-gap/KOMPLEMENT_GAP.md",
+      "sha256": "f7a67510ae6834f611166ae7086c0f5fa4bbe6e3173b812fe3db99377a33da00"
+    },
+    {
+      "path": "03-old-complement-gap/old_complement_gap.py",
+      "sha256": "1383501a77a44689f5a4aa6b661d54b6f4f72193055cebb6527ecf1f2631d14b"
+    },
+    {
+      "path": "03-old-complement-gap/old_vectors.json",
+      "sha256": "a0a21b4dea4e4047a4db3176b70c08b00c595944f8b34df606620aa557cf8250"
+    },
+    {
+      "path": "03-old-complement-gap/REPRODUKTION.md",
+      "sha256": "1426f068b32885332ab32abbf7a40155ff47598a4d67bbddbbe163f0f59e538a"
+    },
+    {
+      "path": "03-old-complement-gap/SHA256SUMS",
+      "sha256": "98896edecdf1065658a65a7d0c842da0d02c35ffefd00e34122dd7d0ca95e5cf"
+    },
+    {
+      "path": "03-old-complement-gap/verification.json",
+      "sha256": "1565e915592331e78bd914c38652c775a97092147d2042ddaee5a54c16b62e31"
+    },
+    {
+      "path": "03-old-complement-gap/verify_old_complement_gap.py",
+      "sha256": "e60ca6ed9274a1f59170b0e231e509aee97058e66e9d7ecb1a0fe79d32360341"
+    },
+    {
+      "path": "04-a11-true-spectral-space/cut_preconditioners.json.gz",
+      "sha256": "0758fc200d86a1bc6ebbba1f6ccad305701358cfa8fa10882efbf04a17834f6b"
+    },
+    {
+      "path": "04-a11-true-spectral-space/fixed_vectors.json",
+      "sha256": "4cfeaf15e12e7785c72836adf8f3cdd58b13627fdb9ea8e9c88a91b6c140b28d"
+    },
+    {
+      "path": "04-a11-true-spectral-space/old_projection.json",
+      "sha256": "b9a90c50d8a6c020e8a4c3c20285f8a2f1af23dfb467784d488f81298ca29e58"
+    },
+    {
+      "path": "04-a11-true-spectral-space/propose_a11_cut.py",
+      "sha256": "21f4f2a62b67ee847bbecb02a617225e9cf8e90b22d0361b9d3d3313eb2f132e"
+    },
+    {
+      "path": "04-a11-true-spectral-space/REPRODUKTION.md",
+      "sha256": "d8d8740928100e9549e3ece33949665e570c8a4e3a06c7c339a57f9f4d2c72e8"
+    },
+    {
+      "path": "04-a11-true-spectral-space/SHA256SUMS",
+      "sha256": "816064f14cf18b77d5bae7762bbb44ee6eb60ed50e1b79fdebde59109dd8a0c5"
+    },
+    {
+      "path": "04-a11-true-spectral-space/spectral_bounds.json",
+      "sha256": "43fa94e6e5acea4f63751c953dc81a9698f5cdcc2d69449b31cc76f0ebb9d5a8"
+    },
+    {
+      "path": "04-a11-true-spectral-space/spectral_bounds_crosscheck.json",
+      "sha256": "5ce4d0d529da2d969712f9c42d7a088333750be19d5b6ff8a730d2bb1a301ad7"
+    },
+    {
+      "path": "04-a11-true-spectral-space/SPEKTRALRAUM_A11.md",
+      "sha256": "6d890040e27e3db926c910423d8fe8159ce2d1c4b97c38470ccc73f3649fd829"
+    },
+    {
+      "path": "04-a11-true-spectral-space/true_spectrum_a11.py",
+      "sha256": "df63cb0139708c63ff377db11bcc3df0d6185d2734ec082e3ac8c39646afbbcd"
+    },
+    {
+      "path": "04-a11-true-spectral-space/verification.json",
+      "sha256": "eb95ed60539fa1f4345ca63b96b6e63ab93e08d0d378487279d441a569a9a2cf"
+    },
+    {
+      "path": "04-a11-true-spectral-space/verify_a11_spectral_cut.py",
+      "sha256": "266791359c6455642de9d997b56321b350008478781706815bc6bdf6b4d4ef01"
+    },
+    {
+      "path": "05-canonical-spectral-ranks/A11_reference.zip",
+      "sha256": "04477a487781cf288d049b6f89ee72b8bfa0da843c92bfaf49fb67ff2fd55b73"
+    },
+    {
+      "path": "05-canonical-spectral-ranks/comparison.json",
+      "sha256": "78236d2ed35367d8eae7d1d6628d9b2c4c155d59ded07b34eb40d04c972650f6"
+    },
+    {
+      "path": "05-canonical-spectral-ranks/fixed_vectors.json",
+      "sha256": "4cfeaf15e12e7785c72836adf8f3cdd58b13627fdb9ea8e9c88a91b6c140b28d"
+    },
+    {
+      "path": "05-canonical-spectral-ranks/inputs512.json",
+      "sha256": "25674e3e28c92104204dd5970b07457fd8f02d7e2795570c3630b8185348dd90"
+    },
+    {
+      "path": "05-canonical-spectral-ranks/inputs768.json",
+      "sha256": "9de6cf810f0cb2b973704a188760c27b757a12f67822a15d2b96502a00b18aaa"
+    },
+    {
+      "path": "05-canonical-spectral-ranks/integer_replay.log",
+      "sha256": "184776cc5a6b3dbbb1e69b772fb255bca0cc233a2afaa84316f71d28322e1a64"
+    },
+    {
+      "path": "05-canonical-spectral-ranks/proposals.json.gz",
+      "sha256": "014f7e27c3b7410eaf30df64d03f0f2a79bd67cf8247b82220bee99312f7f9dd"
+    },
+    {
+      "path": "05-canonical-spectral-ranks/propose_spectral_ranks.py",
+      "sha256": "db6ae09e3ea0b32ea9b09fcd5b05b5305474746742f9d24c2d1bdc4b67a55340"
+    },
+    {
+      "path": "05-canonical-spectral-ranks/REPRODUKTION.md",
+      "sha256": "edbb5f1e40090cb51b7be2519ce4cbd977fb069011abf514b92548d5bd6b7047"
+    },
+    {
+      "path": "05-canonical-spectral-ranks/SHA256SUMS",
+      "sha256": "13710f7bf3f746afa53a59e9ded69a34febd2457645ce342eaa4da0b713d37f8"
+    },
+    {
+      "path": "05-canonical-spectral-ranks/spectral_rank_inputs.py",
+      "sha256": "a3cf0bcd27624b02240f27a5ac8422070f37731de569c18d88b6d880f322f5c0"
+    },
+    {
+      "path": "05-canonical-spectral-ranks/SPEKTRALRAENGE.md",
+      "sha256": "41f9ca98d5f32a19dd3d61d3fb9ada3e256a5e67d513a56080d16c3e3695456f"
+    },
+    {
+      "path": "05-canonical-spectral-ranks/verification.json",
+      "sha256": "437bbf9990f453d4d3ff3db5d5a448381a63cb5af629e7621fc6ca60609cf314"
+    },
+    {
+      "path": "05-canonical-spectral-ranks/verify_spectral_ranks.py",
+      "sha256": "ba3e8e8a6096701c1cf4f50be2554d4e29603ddd1a2c4a59833a08dd8d5e79e5"
+    },
+    {
+      "path": "06-critical-spectral-transport/CRITICAL_SPECTRAL_TRANSPORT.md",
+      "sha256": "19db15b3c55fa4f0ada1744b3f2bbda99cd7ca99c3e077e8fdd3a3cb1ce3afbe"
+    },
+    {
+      "path": "06-critical-spectral-transport/gap_proposals.json.gz",
+      "sha256": "7555d73cc6d0fee1ff12bab74e4699d99ee55a22537618cf01a01b01a56528b8"
+    },
+    {
+      "path": "06-critical-spectral-transport/integer_replay.log",
+      "sha256": "d13812ed202d0f6d38e7072937c6b1597bc743ffbdaba79852abbbc177e7f6c3"
+    },
+    {
+      "path": "06-critical-spectral-transport/PACKAGE_AUDIT.json",
+      "sha256": "b2e74972559d7ff5ce28ffee21fe8d47e8dc5a3eb56e9aed43083a66a96d5e54"
+    },
+    {
+      "path": "06-critical-spectral-transport/propose_transport_gaps.py",
+      "sha256": "23e836adcd4309347b2db9a7b319f9c9f3e84dba4c0c36e7897b88e025d08878"
+    },
+    {
+      "path": "06-critical-spectral-transport/rank_reference.zip",
+      "sha256": "02dd77fef1df201918d5effdd9cd08500a1c319ce6c2b82661e93332804ec792"
+    },
+    {
+      "path": "06-critical-spectral-transport/REPRODUKTION.md",
+      "sha256": "d90f667f4fb212ad3aeb0434c51a12197282d0141fa0f3e4712470e36614ebf0"
+    },
+    {
+      "path": "06-critical-spectral-transport/SHA256SUMS",
+      "sha256": "2c249b298874ee27bf216ca05b03b16fed56b7da1a82ae2482405fb579f29fd1"
+    },
+    {
+      "path": "06-critical-spectral-transport/transport_integer_arithmetic.py",
+      "sha256": "d08759f4d184967c52e19984a94cb7ecccf2cd0360bb813077cc0389bd2fe8e4"
+    },
+    {
+      "path": "06-critical-spectral-transport/verification.json",
+      "sha256": "cecf17c48945f0960f82150466d8e639576994968db3c7580a4351a3fe8d096b"
+    },
+    {
+      "path": "06-critical-spectral-transport/verify_spectral_transport.py",
+      "sha256": "129f1876ac08cd816623473404ac9f14ce8ce47737d0a1e9ad3aa72babecc723"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/a8_gap_proposals.json.gz",
+      "sha256": "db9df06853575bfd20e2a77e1663d2882fb669fab5ff1a1b788a8a2a2f7f3a66"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/a8_gap_replay.log",
+      "sha256": "4a496df2c61ec6f9650605b5527bb681da3767f41eb2f78f4f9e534738a78616"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/a8_gap_verification.json",
+      "sha256": "d1aecdceedddcb209193291452de6cd2f9386c2a4cf82413d8b87e6bb4c10656"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/crosscheck.json",
+      "sha256": "4dac369ed9c7e983affce5761e9aa14739df7c2261c27c6c73912b50cc00332a"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/crosscheck.log",
+      "sha256": "ae05b7dda4414b9e9d641080edc2521c5517de3bdf9648c54ede8d17002e377c"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/OUTER_MASS_AND_COUPLING.md",
+      "sha256": "5a1020f4cd381ca1603e1d47c2721829db4161657d015f457f8e5133da2f74d3"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/outer_mass_bounds.py",
+      "sha256": "2f87171327f8f72b41065e0f015cee8516bb35a02f3983a738343ccfeaa02c49"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/PACKAGE_AUDIT.json",
+      "sha256": "2034ec696ed5a9c667c803eb4f8be35574dd6e952fa0b4e3ba52dde62b2ce798"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/prepare_outer_inputs.py",
+      "sha256": "056028d50d92bfb0c9c62c039028bf424f17951d362a6ff6a947e227b2defe4d"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/primary.json",
+      "sha256": "67140aada68ed5904c5d7f54b9fbaf6148648b554b15e0a0900b2814c35c61d4"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/primary.log",
+      "sha256": "0536896cc5b94613b77fb60244e458c86cfa7fe41635606ef33259504abdcc15"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/propose_a8_outer_gap.py",
+      "sha256": "37801c96a76c5bd3d0694e304aebf8eb1949192488c3235a626c9f81f4933375"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/rational_replay.log",
+      "sha256": "3942fcdcd168214e951073ecab1728d52133e318112d9023e03158253ce06d19"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/REPRODUKTION.md",
+      "sha256": "6cdc8a737fdf9dd43d248ffadf377f11557379eee82ae21291cc7547ef670879"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/SHA256SUMS",
+      "sha256": "c8f60306e5e5d071bc3d70a2738fbb74f2fe14e3c78e33234e43d96afc08a047"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/transport_integer_arithmetic.py",
+      "sha256": "d08759f4d184967c52e19984a94cb7ecccf2cd0360bb813077cc0389bd2fe8e4"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/transport_reference.zip",
+      "sha256": "b5c8f81630711dbde81c3a2622507aa56ee835f19cae4691b3547dbb58db8cc4"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/verification.json",
+      "sha256": "8a04dd3fb2dea5c2812841c8c5ec1f1a9a62d1bc066e38bd868f280b5333843e"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/verify_a8_outer_gap.py",
+      "sha256": "dc8e95b2760a142ccd4302fb2d4c1ba4621d632630bc25bc1b09d8c439b9d398"
+    },
+    {
+      "path": "07-canonical-extension-outer-mass/verify_outer_mass.py",
+      "sha256": "776390ac9e991516a77e7b36583496d20a7946b32bbdbfbb04db98271114ff14"
+    }
+  ],
+  "repository_inputs": [
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/GENERAL_TAIL_PRINCIPLE.md",
+      "sha256": "97a5abea259afa5e42f2418c99ca58027e06b7cc271cdfad93c00ffdb5863217"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/PROOF.md",
+      "sha256": "911a6ed3f5631958739ca6e527001e1fe4cb71258fa637d89971dc6b4b123c7b"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/a11_model.json.gz",
+      "sha256": "f7b49efedc655136118a1b134ddd547e118af66bbe8e258ac9b4a529a8823c38"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/common_reserve.json",
+      "sha256": "6e089a0e87f95614e7128f2b9236b55291e5fc4ec38bbda378e0bbf396f0a0a7"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/preconditioned_results.json",
+      "sha256": "4cd943b464721ef7d22c1901dbb64a11062d93b34c4a22d89c298f3fa2aefe83"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/reserve_results.json",
+      "sha256": "5dea2f83c57137c860ac3283dbfd1d1b7effdeded170ac63d19dcdcf0cb18e45"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/reserve_results_lower_matrices.json.gz",
+      "sha256": "fa86033d9cbf0dc8611713d8cd607d447e4fe5716619b6b1c2bc345ef16fc6cb"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/CHECK_RESULTS.json",
+      "sha256": "cfcd497304c0ceaac0f8640509e0d6fabc5d57c54b432700c79354621e2ae95a"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/PROOF.md",
+      "sha256": "58577c7f448287daf4b09f0b031b00080cede91b31ac81dab0f3df336fcab1d0"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/a9_model.json.gz",
+      "sha256": "a1cb251d5563cffb01eec3fbbf11c891851b677bd4f4ec7f5fba37164d14ab72"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/common_reserve.json",
+      "sha256": "281996b90ea57b7bb08f722859e71b0b4d26820b07991072beaef84fe5b0add4"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/reserve_results.json",
+      "sha256": "d8ff8c1710cd9e60be489cd0eb5c9a4270e394904877b0d2ca9fe5b94da02b9f"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/reserve_results_lower_matrices.json.gz",
+      "sha256": "e173efb90e57d9fa7a3447f29254dffd1cfafc4f4b8f441a288be11c962acffb"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/o10/PROOF.md",
+      "sha256": "49d6d8ac4f4b34e0139949dc8008cdca9e8426d6dc597e57bd10ea7ce0b4fdbd"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/wall/PROOF.md",
+      "sha256": "9297444e2bc7c15e6c03f04bd7cd9579826e73564e1584a355a60ea23e4c6be1"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/wall/Q9.md",
+      "sha256": "a4298d3161eeaf359d62604dfaab85de7e3fcb24cf0ddf219a9c42c8746d4f6a"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/PROOF.md",
+      "sha256": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/a8_model.json.gz",
+      "sha256": "5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/refined_tail.json",
+      "sha256": "8be8b9f15c4b382d8ec7ad48aa51aa71d9bf8fa253a96a2f5cc7710c0912cc2f"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/reserve_refined.json",
+      "sha256": "c05d019f18e4ec4ed020c4fad034fd61eda476d82763561aa700b075731bb819"
+    },
+    {
+      "commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/reserve_refined_lower_matrices.json.gz",
+      "sha256": "b860797185a225b4254dea2d8627db83b3d3781c79f152cf6b2df21fddc0c3a3"
+    }
+  ],
+  "packages": [
+    {
+      "folder": "01-structure-comparison",
+      "original_folder": "renewable-low-schur-2026-09-28",
+      "original_proof": "STRUKTURVERGLEICH.md",
+      "id": "LOW-SCHUR-STRUCTURE-DIAGNOSTIC"
+    },
+    {
+      "folder": "02-critical-subspace-coupling",
+      "original_folder": "critical-subspace-coupling-2026-09-28",
+      "original_proof": "KRITISCHER_UNTERRAUM.md",
+      "id": "OLD-DIAGNOSTIC-SUBSPACE-COUPLING"
+    },
+    {
+      "folder": "03-old-complement-gap",
+      "original_folder": "old-complement-gap-2026-09-28",
+      "original_proof": "KOMPLEMENT_GAP.md",
+      "id": "OLD-DIAGNOSTIC-COMPLEMENT-GAP"
+    },
+    {
+      "folder": "04-a11-true-spectral-space",
+      "original_folder": "true-low-spectral-space-a11-2026-09-28",
+      "original_proof": "SPEKTRALRAUM_A11.md",
+      "id": "TRUE-LOW-SPECTRAL-SUBSPACE-A11"
+    },
+    {
+      "folder": "05-canonical-spectral-ranks",
+      "original_folder": "canonical-spectral-ranks-a8-a9-a11-2026-09-28",
+      "original_proof": "SPEKTRALRAENGE.md",
+      "id": "CANONICAL-LOW-SPECTRAL-RANKS-A8-A9-A11"
+    },
+    {
+      "folder": "06-critical-spectral-transport",
+      "original_folder": "critical-spectral-transport-2026-09-28",
+      "original_proof": "CRITICAL_SPECTRAL_TRANSPORT.md",
+      "id": "CRITICAL-SPECTRAL-TRANSPORT"
+    },
+    {
+      "folder": "07-canonical-extension-outer-mass",
+      "original_folder": "canonical-extension-outer-mass-2026-09-29",
+      "original_proof": "OUTER_MASS_AND_COUPLING.md",
+      "id": "CANONICAL-EXTENSION-OUTER-MASS"
+    }
+  ],
+  "pr187_included": false,
+  "global_verification_snapshot_changed": false
+}

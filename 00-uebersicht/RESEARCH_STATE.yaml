@@ -130,6 +130,30 @@
       "title": "Vollständige geeignete Weil-Testklasse identifizieren",
       "mathematical_status": "OPEN",
       "scope": "Exakte Normalisierung, kanonischer globaler Readout und nichtzirkuläre Rückbindung an das Weil-Kriterium."
+    },
+    {
+      "id": "TRUE-LOW-SPECTRAL-SUBSPACE-A11",
+      "title": "TRUE LOW SPECTRAL SUBSPACE A11",
+      "mathematical_status": "OPEN",
+      "scope": "Echter physischer A11-Spektralraum unter q/(q+17L2)=10^-4, acht Dimensionen je Parität und vollständiger positiver Spektralkomplement-Gap. Autorenpaket; Übernahme nach Integration im eigenen Sync."
+    },
+    {
+      "id": "CANONICAL-LOW-SPECTRAL-RANKS-A8-A9-A11",
+      "title": "CANONICAL LOW SPECTRAL RANKS A8 A9 A11",
+      "mathematical_status": "OPEN",
+      "scope": "Feste Terminals A8/A9/A11, Schwelle q/b=10^-4: genau 5/6/8 kritische Spektralrichtungen je Parität; keine Lokalisation der Rangwechsel an Wänden. Autorenpaket; Übernahme nach Integration im eigenen Sync."
+    },
+    {
+      "id": "CRITICAL-SPECTRAL-TRANSPORT",
+      "title": "CRITICAL SPECTRAL TRANSPORT",
+      "mathematical_status": "OPEN",
+      "scope": "Auf dem bereits positiven Horizont bis A11: injektiver kritischer Spektraltransport, kanonische Ergänzungen der Dimension 1 bzw. 2 je Parität und vollständige Komplement-Gaps. Autorenpaket; Übernahme nach Integration im eigenen Sync."
+    },
+    {
+      "id": "CANONICAL-EXTENSION-OUTER-MASS",
+      "title": "CANONICAL EXTENSION OUTER MASS",
+      "mathematical_status": "OPEN",
+      "scope": "Kanonische Ergänzungen A8->A9 und A9->A11: gerichtete äußere L2-Massenintervalle und absolute Kopplung; kein relativer Renewal-kappa-Test. Autorenpaket; Übernahme nach Integration im eigenen Sync."
     }
   ],
   "results": [
@@ -1444,7 +1468,28 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [],
+  "pending_packages": [
+    {
+      "id": "TRUE-LOW-SPECTRAL-SUBSPACE-A11",
+      "meta_path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/04-a11-true-spectral-space/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "CANONICAL-LOW-SPECTRAL-RANKS-A8-A9-A11",
+      "meta_path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/05-canonical-spectral-ranks/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "CRITICAL-SPECTRAL-TRANSPORT",
+      "meta_path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/06-critical-spectral-transport/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "CANONICAL-EXTENSION-OUTER-MASS",
+      "meta_path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/07-canonical-extension-outer-mass/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    }
+  ],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",
