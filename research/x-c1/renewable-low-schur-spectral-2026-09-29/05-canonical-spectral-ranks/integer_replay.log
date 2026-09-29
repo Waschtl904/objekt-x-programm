@@ -1,0 +1,9 @@
+A8-even integer reconstruction of repaired matrix
+A8-even PASS: exact physical rank 5 below q/b = 1/10000
+A8-odd integer reconstruction of repaired matrix
+A8-odd PASS: exact physical rank 5 below q/b = 1/10000
+A9-even integer reconstruction of repaired matrix
+A9-even PASS: exact physical rank 6 below q/b = 1/10000
+A9-odd integer reconstruction of repaired matrix
+A9-odd PASS: exact physical rank 6 below q/b = 1/10000
+ALL SPECTRAL RANK CHECKS PASS

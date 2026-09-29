@@ -1,0 +1,225 @@
+{
+  "status": "EXPLORATORY_NOT_A_GENERAL_PROOF",
+  "source_commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+  "precision_bits": 1024,
+  "input_sha256": {
+    "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/a8_model.json.gz": "5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b",
+    "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/reserve_refined_lower_matrices.json.gz": "b860797185a225b4254dea2d8627db83b3d3781c79f152cf6b2df21fddc0c3a3",
+    "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/reserve_refined.json": "c05d019f18e4ec4ed020c4fad034fd61eda476d82763561aa700b075731bb819",
+    "research/x-c1/chambers-through-a11-2026-09-28/a9/a9_model.json.gz": "a1cb251d5563cffb01eec3fbbf11c891851b677bd4f4ec7f5fba37164d14ab72",
+    "research/x-c1/chambers-through-a11-2026-09-28/a9/reserve_results_lower_matrices.json.gz": "e173efb90e57d9fa7a3447f29254dffd1cfafc4f4b8f441a288be11c962acffb",
+    "research/x-c1/chambers-through-a11-2026-09-28/a9/reserve_results.json": "d8ff8c1710cd9e60be489cd0eb5c9a4270e394904877b0d2ca9fe5b94da02b9f",
+    "research/x-c1/chambers-through-a11-2026-09-28/a11/a11_model.json.gz": "f7b49efedc655136118a1b134ddd547e118af66bbe8e258ac9b4a529a8823c38",
+    "research/x-c1/chambers-through-a11-2026-09-28/a11/reserve_results_lower_matrices.json.gz": "fa86033d9cbf0dc8611713d8cd607d447e4fe5716619b6b1c2bc345ef16fc6cb",
+    "research/x-c1/chambers-through-a11-2026-09-28/a11/preconditioned_results.json": "4cd943b464721ef7d22c1901dbb64a11062d93b34c4a22d89c298f3fa2aefe83",
+    "research/x-c1/chambers-through-a11-2026-09-28/a11/reserve_results.json": "5dea2f83c57137c860ac3283dbfd1d1b7effdeded170ac63d19dcdcf0cb18e45"
+  },
+  "cases": {
+    "A11-even": {
+      "dimension": 285,
+      "endpoint": "log(11)/2",
+      "gamma_degree": 416,
+      "active_prime_powers": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "high_floor": "1",
+      "published_physical_reserve": "[6.465650337132697300066478864902171922356e-50 +/- 2.60e-90]",
+      "midpoint_inverse_trace_floor": "9.480607641379748496248496639264433227736836994984589539445545899498310e-42",
+      "modes": [
+        {
+          "mode": 1,
+          "midpoint_eigenvalue_approx": "9.480609429492800926906800950559961065531696715974545774318313591455772e-42",
+          "relative_residual": 1.4401305907039372e-47,
+          "rayleigh_interval": "[9.48060942949280092690680095056e-42 +/- 4.1e-74]",
+          "low_model_rayleigh": "1.080618990151670118934440166379476565669612519798179609114083516931196e-41",
+          "coupling_penalty_rayleigh": "1.325580011808429914109294366068485783434627441898545810823222273793983e-42",
+          "low_model_error": "4.602154703483283063471663188077298010401087045059992964556591861862699e-49",
+          "coupling_penalty_over_low_model": 0.1226685838291976,
+          "degree_energy_quantiles": {
+            "0.5": 8,
+            "0.9": 10,
+            "0.99": 14,
+            "0.999": 14
+          },
+          "top_degrees": [
+            {
+              "degree": 8,
+              "coefficient": -0.5488173332095299
+            },
+            {
+              "degree": 6,
+              "coefficient": 0.5399466991769348
+            },
+            {
+              "degree": 10,
+              "coefficient": 0.4201800094109213
+            },
+            {
+              "degree": 4,
+              "coefficient": -0.37495750511121473
+            },
+            {
+              "degree": 12,
+              "coefficient": -0.24232612212949659
+            },
+            {
+              "degree": 2,
+              "coefficient": 0.14617653585647658
+            },
+            {
+              "degree": 14,
+              "coefficient": 0.09729984244047649
+            },
+            {
+              "degree": 16,
+              "coefficient": -0.01713048033779649
+            },
+            {
+              "degree": 20,
+              "coefficient": 0.011129534509730952
+            },
+            {
+              "degree": 18,
+              "coefficient": -0.010107884004037258
+            }
+          ],
+          "physical_norm_squared_reference": "1.000055138663940202346458635910258033091330329817076894628811999538364"
+        },
+        {
+          "mode": 2,
+          "midpoint_eigenvalue_approx": "5.026641130545301955076356395717108399736215410759673033646676672715218e-35",
+          "relative_residual": 1.9530235672994584e-42,
+          "rayleigh_interval": "[5.02664113054530195507635639572e-35 +/- 2.90e-65]",
+          "low_model_rayleigh": "6.036470403471717689211475112408380011874616158401862486105497402143160e-35",
+          "coupling_penalty_rayleigh": "1.009829272926369712588083883860636895506519974662085441588370129496386e-35",
+          "low_model_error": "4.602154703483283063471663188077298010401087045059992964556591861862699e-49",
+          "coupling_penalty_over_low_model": 0.16728803513152204,
+          "degree_energy_quantiles": {
+            "0.5": 10,
+            "0.9": 12,
+            "0.99": 20,
+            "0.999": 22
+          },
+          "top_degrees": [
+            {
+              "degree": 12,
+              "coefficient": 0.5054302144882558
+            },
+            {
+              "degree": 4,
+              "coefficient": -0.4803757187870343
+            },
+            {
+              "degree": 10,
+              "coefficient": -0.4731617279403207
+            },
+            {
+              "degree": 6,
+              "coefficient": 0.3472867450146116
+            },
+            {
+              "degree": 14,
+              "coefficient": -0.26650754468059107
+            },
+            {
+              "degree": 2,
+              "coefficient": 0.247953931624869
+            },
+            {
+              "degree": 18,
+              "coefficient": 0.1136891917646296
+            },
+            {
+              "degree": 20,
+              "coefficient": -0.10530235302197107
+            },
+            {
+              "degree": 8,
+              "coefficient": 0.09818705466952564
+            },
+            {
+              "degree": 22,
+              "coefficient": 0.05323136451744771
+            }
+          ],
+          "physical_norm_squared_reference": "1.000160177929724861426389333509486789778752774877916761596636310237054"
+        },
+        {
+          "mode": 3,
+          "midpoint_eigenvalue_approx": "5.136968267360405593977422655249194345962523048513600212318522309177147e-29",
+          "relative_residual": 1.2904900627298946e-37,
+          "rayleigh_interval": "[5.13696826736040559397742265525e-29 +/- 8.08e-60]",
+          "low_model_rayleigh": "6.271667978274573277150548256339472693570557334279276640031678294435225e-29",
+          "coupling_penalty_rayleigh": "1.134699710914167683127104054055445516973317653884903447609145114807478e-29",
+          "low_model_error": "4.602154703483283063471663188077298010401087045059992964556591861862699e-49",
+          "coupling_penalty_over_low_model": 0.18092471011616595,
+          "degree_energy_quantiles": {
+            "0.5": 14,
+            "0.9": 20,
+            "0.99": 22,
+            "0.999": 24
+          },
+          "top_degrees": [
+            {
+              "degree": 18,
+              "coefficient": -0.4508272813128286
+            },
+            {
+              "degree": 20,
+              "coefficient": 0.43501975588142683
+            },
+            {
+              "degree": 8,
+              "coefficient": 0.37319938089538995
+            },
+            {
+              "degree": 4,
+              "coefficient": -0.36387013983205646
+            },
+            {
+              "degree": 14,
+              "coefficient": 0.2988420062367209
+            },
+            {
+              "degree": 12,
+              "coefficient": -0.2902488874365514
+            },
+            {
+              "degree": 2,
+              "coefficient": 0.2798158508726197
+            },
+            {
+              "degree": 22,
+              "coefficient": -0.21679700898058368
+            },
+            {
+              "degree": 10,
+              "coefficient": -0.14253747209379303
+            },
+            {
+              "degree": 16,
+              "coefficient": 0.11330407916085866
+            }
+          ],
+          "physical_norm_squared_reference": "1.000205978366620863998831353925725448221945559864351320842586264830824"
+        }
+      ],
+      "basis": {
+        "kind": "midpoint L^-T, diagnostic only",
+        "frobenius_squared": "210065713217940412566573281330726381004291.4815832025051919869855344079",
+        "minimum_pivot": "1.020852291888366990338748385072581586614631727672591219942406910685294e-5",
+        "maximum_pivot": "3.866977299585717396424809233873619864551778822046660130003306503436712",
+        "max_column_norm_squared": "33587188108208778046079792557199791373462.92176467035741956861025001364",
+        "max_column_degree": 136
+      },
+      "seconds": 26.265904903411865
+    }
+  },
+  "reference_comparisons": {}
+}

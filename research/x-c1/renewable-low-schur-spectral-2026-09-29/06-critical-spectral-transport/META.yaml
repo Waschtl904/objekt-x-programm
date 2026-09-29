@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "CRITICAL-SPECTRAL-TRANSPORT",
+  "date": "2026-09-29",
+  "kind": "THEOREM",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Auf dem bereits positiven Horizont bis A11: injektiver kritischer Spektraltransport, kanonische Ergänzungen der Dimension 1 bzw. 2 je Parität und vollständige Komplement-Gaps.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "Keine negative volle Weil-Quelle und kein allgemeines No-Go behauptet.",
+  "depends_on": [
+    "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+    "FIRST-CHAMBER-O8-TERMINAL-POSITIVITY",
+    "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY",
+    "CANONICAL-LOW-SPECTRAL-RANKS-A8-A9-A11"
+  ],
+  "closes": [
+    "CRITICAL-SPECTRAL-TRANSPORT"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Allgemeine erneuerbare Low-Schur-Positivität oder kofinale positive Terminalfamilie.",
+    "Positivität bei A13 oder Integration der separaten q11/A13-Vorbereitung.",
+    "Globales Objekt X, globale Weil-Positivität oder RH.",
+    "Externe analytische Gesamtbegutachtung, Geburt kritischer Richtungen an bestimmten Wänden oder Kanalzuordnung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/06-critical-spectral-transport/PROOF.md",
+    "sha256": "19db15b3c55fa4f0ada1744b3f2bbda99cd7ca99c3e077e8fdd3a3cb1ce3afbe"
+  }
+}

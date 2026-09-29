@@ -1,0 +1,55 @@
+{
+  "status": "CANONICAL_SPECTRAL_RANK_COMPARISON_COMPLETE",
+  "source_commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+  "b_spectral_cut_exact": "1/10000",
+  "physical_spectral_cut_exact": "17/9999",
+  "rows": [
+    {
+      "terminal": "A8",
+      "even_rank": 5,
+      "odd_rank": 5,
+      "total_rank": 10,
+      "verification": "NEW_DIRECTED_AND_INTEGER_REPLAY"
+    },
+    {
+      "terminal": "A9",
+      "even_rank": 6,
+      "odd_rank": 6,
+      "total_rank": 12,
+      "verification": "NEW_DIRECTED_AND_INTEGER_REPLAY"
+    },
+    {
+      "terminal": "A11",
+      "even_rank": 8,
+      "odd_rank": 8,
+      "total_rank": 16,
+      "verification": "EXISTING_CERTIFICATE_REUSED_HASH_AND_SOURCE_BINDINGS_RECHECKED"
+    }
+  ],
+  "new_verification_sha256": "437bbf9990f453d4d3ff3db5d5a448381a63cb5af629e7621fc6ca60609cf314",
+  "A11_reference_archive_sha256": "04477a487781cf288d049b6f89ee72b8bfa0da843c92bfaf49fb67ff2fd55b73",
+  "A11_reference_verification_sha256": "eb95ed60539fa1f4345ca63b96b6e63ab93e08d0d378487279d441a569a9a2cf",
+  "A11_reference_manifest_files_checked": 11,
+  "all_bound_sources_rechecked_against_git": {
+    "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/a8_model.json.gz": "5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b",
+    "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/reserve_refined.json": "c05d019f18e4ec4ed020c4fad034fd61eda476d82763561aa700b075731bb819",
+    "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/reserve_refined_lower_matrices.json.gz": "b860797185a225b4254dea2d8627db83b3d3781c79f152cf6b2df21fddc0c3a3",
+    "research/x-c1/chambers-through-a11-2026-09-28/a9/a9_model.json.gz": "a1cb251d5563cffb01eec3fbbf11c891851b677bd4f4ec7f5fba37164d14ab72",
+    "research/x-c1/chambers-through-a11-2026-09-28/a9/reserve_results.json": "d8ff8c1710cd9e60be489cd0eb5c9a4270e394904877b0d2ca9fe5b94da02b9f",
+    "research/x-c1/chambers-through-a11-2026-09-28/a9/reserve_results_lower_matrices.json.gz": "e173efb90e57d9fa7a3447f29254dffd1cfafc4f4b8f441a288be11c962acffb",
+    "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/PROOF.md": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661",
+    "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/refined_tail.json": "8be8b9f15c4b382d8ec7ad48aa51aa71d9bf8fa253a96a2f5cc7710c0912cc2f",
+    "research/x-c1/chambers-through-a11-2026-09-28/a9/PROOF.md": "58577c7f448287daf4b09f0b031b00080cede91b31ac81dab0f3df336fcab1d0",
+    "research/x-c1/chambers-through-a11-2026-09-28/a9/CHECK_RESULTS.json": "cfcd497304c0ceaac0f8640509e0d6fabc5d57c54b432700c79354621e2ae95a",
+    "research/x-c1/chambers-through-a11-2026-09-28/a11/a11_model.json.gz": "f7b49efedc655136118a1b134ddd547e118af66bbe8e258ac9b4a529a8823c38",
+    "research/x-c1/chambers-through-a11-2026-09-28/a11/reserve_results_lower_matrices.json.gz": "fa86033d9cbf0dc8611713d8cd607d447e4fe5716619b6b1c2bc345ef16fc6cb",
+    "research/x-c1/chambers-through-a11-2026-09-28/a11/reserve_results.json": "5dea2f83c57137c860ac3283dbfd1d1b7effdeded170ac63d19dcdcf0cb18e45",
+    "research/x-c1/chambers-through-a11-2026-09-28/a11/PROOF.md": "911a6ed3f5631958739ca6e527001e1fe4cb71258fa637d89971dc6b4b123c7b",
+    "research/x-c1/chambers-through-a11-2026-09-28/a11/GENERAL_TAIL_PRINCIPLE.md": "97a5abea259afa5e42f2418c99ca58027e06b7cc271cdfad93c00ffdb5863217"
+  },
+  "outward_report_bounds_checked": true,
+  "new_eigenvectors_computed": false,
+  "projector_transport_computed": false,
+  "repository_changed": false,
+  "interpretation": "Ranks increase at fixed cut between terminals. This does not localize a change at a wall or prove inclusion under transport."
+}

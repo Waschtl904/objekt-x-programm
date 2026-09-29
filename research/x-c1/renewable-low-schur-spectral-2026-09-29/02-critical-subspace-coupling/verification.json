@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "scope": "Exact finite rational identities, recorded bound consistency, optional input bindings; not terminal-model rebuild",
+  "exact_rational_tests": [
+    {
+      "test": "nonorthogonal_source_schur_and_graph",
+      "rho": "0",
+      "rank": 1
+    },
+    {
+      "test": "nonorthogonal_source_schur_and_graph",
+      "rho": "0",
+      "rank": 2
+    },
+    {
+      "test": "nonorthogonal_source_schur_and_graph",
+      "rho": "1/2",
+      "rank": 1
+    },
+    {
+      "test": "nonorthogonal_source_schur_and_graph",
+      "rho": "1/2",
+      "rank": 2
+    },
+    {
+      "test": "nonorthogonal_source_schur_and_graph",
+      "rho": "17",
+      "rank": 1
+    },
+    {
+      "test": "nonorthogonal_source_schur_and_graph",
+      "rho": "17",
+      "rank": 2
+    },
+    {
+      "test": "complete_mellin_dual_gram_with_high_tail"
+    },
+    {
+      "test": "full_resolvent_lower_and_upper_bounds"
+    }
+  ],
+  "comparison_cases": [
+    {
+      "case": "A8->A9-even",
+      "rank": 1,
+      "intervals_overlap": true,
+      "relative_endpoint_change": 0.0
+    },
+    {
+      "case": "A8->A9-even",
+      "rank": 2,
+      "intervals_overlap": true,
+      "relative_endpoint_change": 0.0
+    },
+    {
+      "case": "A8->A9-even",
+      "rank": 3,
+      "intervals_overlap": true,
+      "relative_endpoint_change": 0.0
+    },
+    {
+      "case": "A8->A9-odd",
+      "rank": 1,
+      "intervals_overlap": true,
+      "relative_endpoint_change": 5.2071802318749735e-103
+    },
+    {
+      "case": "A8->A9-odd",
+      "rank": 2,
+      "intervals_overlap": true,
+      "relative_endpoint_change": 3.01758296770567e-93
+    },
+    {
+      "case": "A8->A9-odd",
+      "rank": 3,
+      "intervals_overlap": true,
+      "relative_endpoint_change": 0.0
+    },
+    {
+      "case": "A9->A11-even",
+      "rank": 1,
+      "intervals_overlap": true,
+      "relative_endpoint_change": 1.8216229971908066e-97
+    },
+    {
+      "case": "A9->A11-even",
+      "rank": 2,
+      "intervals_overlap": true,
+      "relative_endpoint_change": 2.21747955814202e-87
+    },
+    {
+      "case": "A9->A11-even",
+      "rank": 3,
+      "intervals_overlap": true,
+      "relative_endpoint_change": 0.0
+    },
+    {
+      "case": "A9->A11-odd",
+      "rank": 1,
+      "intervals_overlap": true,
+      "relative_endpoint_change": 6.1811209715151e-98
+    },
+    {
+      "case": "A9->A11-odd",
+      "rank": 2,
+      "intervals_overlap": true,
+      "relative_endpoint_change": 4.741810187629345e-88
+    },
+    {
+      "case": "A9->A11-odd",
+      "rank": 3,
+      "intervals_overlap": true,
+      "relative_endpoint_change": 0.0
+    }
+  ],
+  "repository_sources_rechecked": [
+    "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/a8_model.json.gz",
+    "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/reserve_refined.json",
+    "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/reserve_refined_lower_matrices.json.gz",
+    "research/x-c1/chambers-through-a11-2026-09-28/a9/a9_model.json.gz",
+    "research/x-c1/chambers-through-a11-2026-09-28/a9/reserve_results.json",
+    "research/x-c1/chambers-through-a11-2026-09-28/a9/reserve_results_lower_matrices.json.gz",
+    "research/x-c1/chambers-through-a11-2026-09-28/a9/common_reserve.json",
+    "research/x-c1/chambers-through-a11-2026-09-28/a11/a11_model.json.gz",
+    "research/x-c1/chambers-through-a11-2026-09-28/a11/reserve_results.json",
+    "research/x-c1/chambers-through-a11-2026-09-28/a11/reserve_results_lower_matrices.json.gz",
+    "research/x-c1/chambers-through-a11-2026-09-28/a11/common_reserve.json"
+  ],
+  "source_commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+  "old_vectors_sha256": "a0a21b4dea4e4047a4db3176b70c08b00c595944f8b34df606620aa557cf8250"
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "OLD-DIAGNOSTIC-SUBSPACE-COUPLING",
+  "date": "2026-09-29",
+  "kind": "DIAGNOSTIC",
+  "strategic": false,
+  "local_only": true,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Retrospektive Kopplung alter rationaler Diagnoseräume bei A8->A9 und A9->A11, Rang 1 bis 3; bekannte neue Terminalpositivität ist Voraussetzung.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Keine negative volle Weil-Quelle und kein allgemeines No-Go behauptet.",
+  "depends_on": [
+    "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+    "FIRST-CHAMBER-O8-TERMINAL-POSITIVITY",
+    "SECOND-CHAMBER-A9-TERMINAL-POSITIVITY"
+  ],
+  "closes": [],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Allgemeine erneuerbare Low-Schur-Positivität oder kofinale positive Terminalfamilie.",
+    "Positivität bei A13 oder Integration der separaten q11/A13-Vorbereitung.",
+    "Globales Objekt X, globale Weil-Positivität oder RH.",
+    "Externe analytische Gesamtbegutachtung, Geburt kritischer Richtungen an bestimmten Wänden oder Kanalzuordnung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/02-critical-subspace-coupling/PROOF.md",
+    "sha256": "6b0bd053b96d35966f63590e64468b40a9a96ce3c03d2b439311771116e90a6d"
+  }
+}

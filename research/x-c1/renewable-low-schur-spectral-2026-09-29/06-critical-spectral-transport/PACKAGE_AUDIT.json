@@ -1,0 +1,15 @@
+{
+  "status": "PACKAGE_AND_OUTWARD_BOUNDS_VERIFIED",
+  "source_commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+  "source_blobs_checked": 18,
+  "new_complete_high_gap_certificates": 4,
+  "new_transport_bounds": 4,
+  "outward_gap_table": "PASS",
+  "outward_norm_alpha_and_singular_value_table": "PASS",
+  "analytic_proofs": "Included in report; not a formal proof-assistant verification",
+  "inputs": "Original terminal and spectral rank certificates reused with complete reference manifests checked by replay",
+  "new_spatial_mass_profile": false,
+  "new_prime_channel_attribution": false,
+  "new_kappa_test": false,
+  "verification_sha256": "cecf17c48945f0960f82150466d8e639576994968db3c7580a4351a3fe8d096b"
+}

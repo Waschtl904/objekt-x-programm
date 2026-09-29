@@ -1,0 +1,13 @@
+A9-even integer reconstruction of full Schur comparison at mu 3761/1000000
+A9-even PASS: full physical complement above 0.003761 b gap above 0.00022118635988826237
+A9-odd integer reconstruction of full Schur comparison at mu 65841/1000000
+A9-odd PASS: full physical complement above 0.065841 b gap above 0.0038580577423638247
+A11-even integer reconstruction of full Schur comparison at mu 751/200000
+A11-even PASS: full physical complement above 0.003755 b gap above 0.00022083357470158797
+A11-odd integer reconstruction of full Schur comparison at mu 70769/1000000
+A11-odd PASS: full physical complement above 0.070769 b gap above 0.004145624605429316
+A8->A9-even leakage <= 0.019453 projected norm >= 0.99981 new dimensions 1
+A8->A9-odd leakage <= 0.036057 projected norm >= 0.999349 new dimensions 1
+A9->A11-even leakage <= 0.024468 projected norm >= 0.9997 new dimensions 2
+A9->A11-odd leakage <= 0.045712 projected norm >= 0.998954 new dimensions 2
+ALL TRANSPORT AND GAP CHECKS PASS

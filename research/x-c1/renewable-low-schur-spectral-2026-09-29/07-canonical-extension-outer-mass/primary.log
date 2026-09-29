@@ -1,0 +1,22 @@
+A8-even physical trial space and complete spectral residual
+A8-even eta <= 0.018442085760002443 energy 0.018442085760002443 residual 0.10673114427626806
+A8-odd physical trial space and complete spectral residual
+A8-odd eta <= 0.03490128149515724 energy 0.03490128149515724 residual 0.09551389874913453
+A9-even physical trial space and complete spectral residual
+A9-even eta <= 0.02442840686057814 energy 0.02442840686057814 residual 0.13865166915218935
+A9-odd physical trial space and complete spectral residual
+A9-odd eta <= 0.047290763475119624 energy 0.047290763475119624 residual 0.14992432489646884
+A11-even physical trial space and complete spectral residual
+A11-even eta <= 0.03001997929481782 energy 0.03001997929481782 residual 0.21444171759717426
+A11-odd physical trial space and complete spectral residual
+A11-odd eta <= 0.049330318483466466 energy 0.049330318483466466 residual 0.12179094646758466
+A8->A9-even Gauss nodes 594
+A8->A9-even outer-mass polynomial integration
+A8->A9-even m_out in [0.009717422186183353, 0.025619222179122464] E distance <= 0.030741535975017824
+A8->A9-odd outer-mass polynomial integration
+A8->A9-odd m_out in [0.057863460582521425, 0.1289462464956898] E distance <= 0.05927130552458444
+A9->A11-even outer-mass polynomial integration
+A9->A11-even m_out in [0.0012843313753577183, 0.012871709303457915] E distance <= 0.03880799319134648
+A9->A11-odd outer-mass polynomial integration
+A9->A11-odd m_out in [0.021727116637869456, 0.08134357144190572] E distance <= 0.06890336722766521
+ALL CANONICAL OUTER MASS ENCLOSURES COMPLETE

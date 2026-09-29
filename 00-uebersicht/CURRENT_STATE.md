@@ -91,4 +91,11 @@ Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGI
 
 Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getrennt. Diese Statusansicht führt die mathematischen Checker nicht erneut aus.
 
+## Noch nicht in den geprüften Stand übernommene Pakete
+
+- `TRUE-LOW-SPECTRAL-SUBSPACE-A11`: PENDING_STATUS_REVIEW — `research/x-c1/renewable-low-schur-spectral-2026-09-29/04-a11-true-spectral-space/META.yaml`.
+- `CANONICAL-LOW-SPECTRAL-RANKS-A8-A9-A11`: PENDING_STATUS_REVIEW — `research/x-c1/renewable-low-schur-spectral-2026-09-29/05-canonical-spectral-ranks/META.yaml`.
+- `CRITICAL-SPECTRAL-TRANSPORT`: PENDING_STATUS_REVIEW — `research/x-c1/renewable-low-schur-spectral-2026-09-29/06-critical-spectral-transport/META.yaml`.
+- `CANONICAL-EXTENSION-OUTER-MASS`: PENDING_STATUS_REVIEW — `research/x-c1/renewable-low-schur-spectral-2026-09-29/07-canonical-extension-outer-mass/META.yaml`.
+
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

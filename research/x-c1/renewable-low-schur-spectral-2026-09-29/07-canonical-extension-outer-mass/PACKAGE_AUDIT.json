@@ -1,0 +1,21 @@
+{
+  "status": "PACKAGE_BINDINGS_AND_OUTWARD_TABLES_PASS",
+  "source_commit": "d16ba43ebb20f2c61f43379fc65d7a9b9dba76de",
+  "source_blobs_checked": 18,
+  "new_a8_integer_gap_cases": 2,
+  "directed_precision_bits": [
+    1024,
+    1280
+  ],
+  "quadrature_nodes": [
+    594,
+    602
+  ],
+  "canonical_extension_mass_cases": 4,
+  "all_minimum_outer_mass_lower_bounds_strictly_positive": true,
+  "mass_eigenvalue_percent_tables": "PASS",
+  "coupling_and_distance_tables": "PASS",
+  "projector_error_table": "PASS",
+  "relative_kappa_computed": false,
+  "verification_sha256": "8a04dd3fb2dea5c2812841c8c5ec1f1a9a62d1bc066e38bd868f280b5333843e"
+}
