@@ -107,6 +107,11 @@ Windows-Git-Pfad durch das verfügbare Git; mathematischer Code bleibt gleich.
 Alle frischen Ergebnisse und Logs bleiben erhalten. Originale Terminalintegrale
 werden nicht neu aufgebaut; zwei Arb-Läufe sind keine zweite unabhängige Engine.
 Der separate Ganzzahl-Replay prüft die darauf aufbauende Zertifikatsarithmetik.
+Block 03 schreibt seine fixierten Vektoren erneut und bindet diese neue Datei.
+Der gemeinsame Replay prüft zuerst sämtliche Koeffizienten gegen das Original
+und die Bytegleichheit beider neuen Präzisionsläufe; anschließend verwendet er
+deren tatsächlich gebundene Datei. So bleiben plattformabhängige Zeilenenden
+mit der vollständigen Hashprüfung vereinbar.
 
 ## Offen
 

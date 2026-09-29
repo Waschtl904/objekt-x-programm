@@ -81,6 +81,16 @@ def main():
             for name,bits in [('primary',1024),('cross',1280)]:
                 q=['--quadrature-extra',8] if case==2 and name=='cross' else []
                 call(name,script,'--repo',source,*arbextra,'--out',w/name,'--bits',bits,*q)
+            if case==3:
+                # The producer binds its own serialization (LF on Linux, CRLF
+                # on Windows). Check all coefficients before using those bytes.
+                primary_vectors=w/'primary/fixed_vectors.json'
+                cross_vectors=w/'cross/fixed_vectors.json'
+                require(read(primary_vectors)==read(cross_vectors)==read(d/'fixed_vectors.json'),
+                        'Regenerated fixed coefficients differ from delivered vectors')
+                require(primary_vectors.read_bytes()==cross_vectors.read_bytes(),
+                        'The two generated vector serializations differ')
+                extra=['--vectors',primary_vectors,'--old-vectors',d/'old_vectors.json']
             verify_receipts('fresh',ver,w/('primary/'+stem+'_bounds.json'),w/('cross/'+stem+'_bounds.json'),*extra)
         elif case==4:
             extra=['--vectors',d/'fixed_vectors.json','--proposal',d/'cut_preconditioners.json.gz','--projection',d/'old_projection.json']
