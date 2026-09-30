@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "CANONICAL-RELATIVE-KAPPA-REDUCTION",
+  "date": "2026-09-30",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Exakte relative Schur-kappa-Reduktion auf Energie und inverse Energie des echten kanonischen E; konservative geerbte Restuntergrenzen auf dem bereits positiven Horizont bis A11.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Die Alternativen betreffen nur die definierte endliche Zertifikatsrelaxation; kein No-Go für den ursprünglichen Operator oder allgemeines Renewal.",
+  "depends_on": [
+    "CANONICAL-EXTENSION-OUTER-MASS",
+    "CRITICAL-SPECTRAL-TRANSPORT",
+    "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY"
+  ],
+  "closes": [
+    "CANONICAL-RELATIVE-KAPPA-REDUCTION"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Vorwärts gerichteter allgemeiner Renewal-Satz oder kofinale positive Terminalfamilie.",
+    "Isolation des tatsächlichen schlechtesten Schurmodus oder Entartung des ursprünglichen Operators.",
+    "Realisierbarkeit der endlichen Zertifikatsalternativen durch die vollständigen ursprünglichen Operatoren und Projektoren.",
+    "A13-Positivität, globales Objekt X, globale Weil-Positivität oder RH.",
+    "Abgeschlossene externe analytische Gesamtprüfung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/canonical-schur-coupling-2026-09-30/01-relative-kappa/PROOF.md",
+    "sha256": "454e7690df5ed75d015cdb80333f2d43e41cbee5c8b1f9f24f617ee5bc518361"
+  }
+}

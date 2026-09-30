@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "CANONICAL-RESOLVENT-COUPLING-BOUNDS",
+  "date": "2026-09-30",
+  "kind": "THEOREM",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Rigorose beidseitige Resolventenmomente und relative kappa-Grenzen auf den echten kanonischen Ergänzungen A8->A9 und A9->A11, beide Paritäten; vollständige Low-/High-Antwort.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "Die Alternativen betreffen nur die definierte endliche Zertifikatsrelaxation; kein No-Go für den ursprünglichen Operator oder allgemeines Renewal.",
+  "depends_on": [
+    "CANONICAL-EXTENSION-OUTER-MASS",
+    "CRITICAL-SPECTRAL-TRANSPORT",
+    "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+    "CANONICAL-RELATIVE-KAPPA-REDUCTION"
+  ],
+  "closes": [
+    "CANONICAL-RESOLVENT-COUPLING-BOUNDS"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Vorwärts gerichteter allgemeiner Renewal-Satz oder kofinale positive Terminalfamilie.",
+    "Isolation des tatsächlichen schlechtesten Schurmodus oder Entartung des ursprünglichen Operators.",
+    "Realisierbarkeit der endlichen Zertifikatsalternativen durch die vollständigen ursprünglichen Operatoren und Projektoren.",
+    "A13-Positivität, globales Objekt X, globale Weil-Positivität oder RH.",
+    "Abgeschlossene externe analytische Gesamtprüfung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/canonical-schur-coupling-2026-09-30/02-resolvent-moments/PROOF.md",
+    "sha256": "f457b07997c70e92fbc2e6e96b2358fde9ab91b67b3f899338b8211b708be77e"
+  }
+}

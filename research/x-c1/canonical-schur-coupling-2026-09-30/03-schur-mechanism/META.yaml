@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "CANONICAL-SCHUR-MIXING-MECHANISM",
+  "date": "2026-09-30",
+  "kind": "THEOREM",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Zertifizierte kanonische Zeugen: kleiner Überlapp mit schwacher Quelle, großes inverses Moment und starke relative Schurkopplung sowie getrennte gewöhnliche und inverse spektrale Energieanteile.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "Die Alternativen betreffen nur die definierte endliche Zertifikatsrelaxation; kein No-Go für den ursprünglichen Operator oder allgemeines Renewal.",
+  "depends_on": [
+    "CANONICAL-EXTENSION-OUTER-MASS",
+    "CRITICAL-SPECTRAL-TRANSPORT",
+    "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+    "CANONICAL-RESOLVENT-COUPLING-BOUNDS"
+  ],
+  "closes": [
+    "CANONICAL-SCHUR-MIXING-MECHANISM"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Vorwärts gerichteter allgemeiner Renewal-Satz oder kofinale positive Terminalfamilie.",
+    "Isolation des tatsächlichen schlechtesten Schurmodus oder Entartung des ursprünglichen Operators.",
+    "Realisierbarkeit der endlichen Zertifikatsalternativen durch die vollständigen ursprünglichen Operatoren und Projektoren.",
+    "A13-Positivität, globales Objekt X, globale Weil-Positivität oder RH.",
+    "Abgeschlossene externe analytische Gesamtprüfung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/canonical-schur-coupling-2026-09-30/03-schur-mechanism/PROOF.md",
+    "sha256": "6fc8f63b88bdd26ae925521c8c33ff83d142cb73321547ed4e514f43b11f0891"
+  }
+}
