@@ -5,9 +5,9 @@
   "repository": "Waschtl904/objekt-x-programm",
   "published_baseline": {
     "branch": "main",
-    "sha": "fc4ff51a3fd884596bb60e0ed0e783693a31954d",
+    "sha": "b882c9e74f8bb8ca4594aefb77534dd92573bcd1",
     "integration_status": "MERGED",
-    "meaning": "Integrierte vierblöckige kanonische Schurkopplungsfamilie nach PR #191, Beweishead b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d. Main-Zertifikatreplay 36671245348 erfolgreich mit geprüftem Artefakt; abgeschlossene große Arb-Läufe bleiben gebundene Eingaben. Registry-CI separat gebunden; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte siebenblöckige Spektral-/Renewal-Familie nach PR #189, Beweishead c19c655d79f9be59b7c18fb0042783f5e4a0ab49. Main-Replay 36525210364 erfolgreich; Registry-CI separat gebunden. Globaler Verifikationssnapshot unverändert. Frühere Provenienz: Gepinnter integrierter Forschungsstand nach PR #183: zusammenhängende O10–A11-Kette, Beweis-/Paketcommit 0b7c707c4c95f56bd8079ea44019a2d3f4cfce60. Erfolgreiche Main-Reproduktion 36378212734, Versuch 1; Registry-CI separat gebunden. Der globale mathematische Verifikationssnapshot bleibt unverändert. Frühere Integrationsprovenienz: Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
+    "meaning": "Integrierte drei Pakete zu gemeinsamen kanonischen Maximierern nach PR #193, Beweishead 2172de38d0def2c4b42c255e6c1290a720e3e94e: Projektor-/Spektralmomente, generalisierter Diskriminant und Schurdefekt-Korollar. Main-Replay 36738813027 erfolgreich, alle drei Ergebnisquittungen im CI-Artefakt bytegleich geprüft. Ursprüngliche Integrale und Operatorlösungen bleiben gebundene Eingaben; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte vierblöckige kanonische Schurkopplungsfamilie nach PR #191, Beweishead b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d. Main-Zertifikatreplay 36671245348 erfolgreich mit geprüftem Artefakt; abgeschlossene große Arb-Läufe bleiben gebundene Eingaben. Registry-CI separat gebunden; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte siebenblöckige Spektral-/Renewal-Familie nach PR #189, Beweishead c19c655d79f9be59b7c18fb0042783f5e4a0ab49. Main-Replay 36525210364 erfolgreich; Registry-CI separat gebunden. Globaler Verifikationssnapshot unverändert. Frühere Provenienz: Gepinnter integrierter Forschungsstand nach PR #183: zusammenhängende O10–A11-Kette, Beweis-/Paketcommit 0b7c707c4c95f56bd8079ea44019a2d3f4cfce60. Erfolgreiche Main-Reproduktion 36378212734, Versuch 1; Registry-CI separat gebunden. Der globale mathematische Verifikationssnapshot bleibt unverändert. Frühere Integrationsprovenienz: Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
   },
   "verified_research_snapshot": {
     "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
@@ -45,9 +45,10 @@
       "title": "Unbeschränkte Horizonterweiterung und kompatibler Transport",
       "mathematical_status": "OPEN",
       "strategic_status": "ACTIVE_FRONT",
-      "target_scope": "Drei positive Kammern bis A11, kritische Ränge 5/6/8 und kanonischer Spektraltransport sind vorhanden. Die echte relative Kopplung ist rigoros nahe eins; ein kanonischer Zeuge zeigt Mischung weit getrennter spektraler Energieskalen. Tatsächliche Maximierer-Isolation, vorwärts gerichtetes Renewal und kofinale positive Kompatibilität bleiben offen.",
+      "target_scope": "Drei positive Kammern bis A11, kritische Ränge 5/6/8 und kanonischer Spektraltransport sind vorhanden. Für A9->A11 erzwingen gemeinsame Projektor-/Momentbedingungen einen uniform positiven tatsächlichen Schur-Extremalgap in beiden Paritäten; die größte Eigenwertgerade ist jeweils eindeutig. Gerade ist die physische inverse Antwortrichtung lokalisiert. Ungerade Lokalisierung, bandweise Momente des tatsächlichen Maximierers, allgemeines Renewal und kofinale positive Kompatibilität bleiben offen.",
       "obligation_ids": [
         "CANONICAL-SCHUR-MAXIMIZER-ISOLATION",
+        "CANONICAL-MAXIMIZER-BAND-MOMENTS",
         "MOVING-PROFILE-RESERVE-RENEWAL",
         "NON-SUMMABLE-TRANSPORT",
         "UNBOUNDED-HORIZON-COMPATIBILITY"
@@ -73,12 +74,15 @@
         "CANONICAL-RELATIVE-KAPPA-REDUCTION",
         "CANONICAL-RESOLVENT-COUPLING-BOUNDS",
         "CANONICAL-SCHUR-MIXING-MECHANISM",
-        "CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE"
+        "CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE",
+        "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS",
+        "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+        "CANONICAL-SCHUR-DEFECT-NONPROPORTIONALITY"
       ],
-      "candidate": "CANONICAL-SCHUR-MIXING-MECHANISM",
+      "candidate": "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
       "accepted_progress": [
-        "Nutze zusätzliche gemeinsame Projektor-/Überlappbeziehungen zwischen Annihilator Y, Koordinaten N und Momenten, um die endlichen Zertifikatsalternativen auszuschließen.",
-        "Zertifiziere im symmetrisch-definiten 2x2-Problem den tatsächlichen Eigenwertabstand und die Maximiererrichtung; untersuche anschließend deren bandweise Projektormomente.",
+        "Lokalisiere die ungerade physische inverse Antwortrichtung innerhalb derselben gemeinsamen Zertifikatsfamilie; positiver Gap und Eindeutigkeit sind bereits in beiden Paritäten zertifiziert.",
+        "Zertifiziere anschließend bandweise Spektralmomente des tatsächlichen Maximierers, mit gemeinsamer Kontrolle von Masse, Energie und inverser Energie.",
         "Leite aus der lokalen Struktur einen unabhängigen vorwärts gerichteten Renewal-Satz und erneuerbare Low-Schur-Reserven ab; konstruiere schließlich eine kofinale kompatible positive Familie."
       ],
       "insufficient": [
@@ -120,7 +124,7 @@
       "id": "MOVING-PROFILE-RESERVE-RENEWAL",
       "title": "Erneuerbare Low/Profile-Reserve konstruieren",
       "mathematical_status": "OPEN",
-      "scope": "Echte kanonische Resolventenmomente und starke relative Kopplung bis A11 sowie ein zertifizierter Spektralmischungsmechanismus sind hergeleitet. Die Rechnung setzt neue Terminalpositivität voraus. Offen bleiben ein unabhängiger vorwärts gerichteter Renewal-Satz und über weitere Horizonte erneuerbare positive Low-Schur-Reserven."
+      "scope": "Bis A11 sind starke kanonische Schurkopplung, ein Spektralmischungszeuge und eindeutige tatsächliche Maximierer in beiden Paritäten hergeleitet. Die Rechnung setzt die neue Terminalpositivität voraus. Offen bleiben ein unabhängiger vorwärts gerichteter Renewal-Satz und über weitere Horizonte erneuerbare positive Low-Schur-Reserven."
     },
     {
       "id": "NON-SUMMABLE-TRANSPORT",
@@ -142,27 +146,15 @@
     },
     {
       "id": "CANONICAL-SCHUR-MAXIMIZER-ISOLATION",
-      "title": "Tatsächlichen schlechtesten Schurmodus isolieren",
+      "title": "Ungerade physische Maximiererrichtung lokalisieren",
       "mathematical_status": "OPEN",
-      "scope": "Zusätzliche gekoppelte Projektor-/Überlappbeziehungen zwischen Y, N und den Momenten müssen die exakten Alternativen der definierten endlichen Relaxation ausschließen. Danach tatsächlichen Eigenwertabstand und Maximiererrichtung bei A9->A11 zertifizieren und deren bandweise Projektormomente untersuchen."
+      "scope": "A9->A11: der tatsächliche generalisierte Extremalgap ist in beiden Paritäten uniform positiv und die größte Eigenwertgerade jeweils eindeutig. Gerade ist die inverse Antwortrichtung samt physischem L2-Winkel lokalisiert. Offen bleibt die quantitative ungerade Richtungslokalisierung auf Grundlage derselben gemeinsam zulässigen Daten."
     },
     {
-      "id": "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS",
-      "title": "CANONICAL PROJECTED OVERLAP JOINT MOMENTS",
+      "id": "CANONICAL-MAXIMIZER-BAND-MOMENTS",
+      "title": "Bandweise Momente der tatsächlichen Maximierer zertifizieren",
       "mathematical_status": "OPEN",
-      "scope": "Gemeinsame Projektor-, Massen-, Energie- und inverse Energiemomente auf kanonischen Räumen; Ausschluss der beiden axis_one-Alternativen und der ungeraden double-Alternative der früheren endlichen Relaxation. Registry-Übernahme nach Integration; diese Paketobligation ist ein Integrationsschritt."
-    },
-    {
-      "id": "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
-      "title": "CANONICAL JOINT GENERALIZED DISCRIMINANT",
-      "mathematical_status": "OPEN",
-      "scope": "A9->A11 auf dem bereits positiven Horizont: uniform positiver tatsächlicher generalisierter Eigenwertabstand und eindeutige größte Eigenwertgerade in beiden Paritäten; gerade physische inverse Antwortrichtung lokalisiert. Registry-Übernahme nach Integration; diese Paketobligation ist ein Integrationsschritt."
-    },
-    {
-      "id": "CANONICAL-SCHUR-DEFECT-NONPROPORTIONALITY",
-      "title": "CANONICAL SCHUR DEFECT NONPROPORTIONALITY",
-      "mathematical_status": "OPEN",
-      "scope": "A9->A11: exakte Schurdefekt-Reduktion R0=M0+289 W0 mit W0 positiv semidefinit; Nichtproportionalität in beiden Paritäten als Korollar des gemeinsamen Gaps sowie direkter F1-Ausschluss gerade. Registry-Übernahme nach Integration; diese Paketobligation ist ein Integrationsschritt."
+      "scope": "Nach Richtungslokalisierung gemeinsame bandweise Masse-, Energie- und inverse Energiemomente der tatsächlichen kanonischen Maximierer von A9->A11 zertifizieren. Die bisher bekannten Momentzeugen dürfen ohne Nachweis nicht als tatsächliche Maximierer eingesetzt werden."
     }
   ],
   "results": [
@@ -1697,6 +1689,126 @@
         "A13-Positivität, globales Objekt X, globale Weil-Positivität oder RH.",
         "Abgeschlossene externe analytische Gesamtprüfung."
       ]
+    },
+    {
+      "id": "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS",
+      "title": "Gemeinsame kanonische Projektor- und Spektralmomente",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "2172de38d0def2c4b42c255e6c1290a720e3e94e",
+          "path": "research/x-c1/canonical-joint-maximizers-2026-09-30/01-projected-overlap/verification.json",
+          "sha256": "95ce886b03f23030b013a7b14a220cb37e7846f2e9ff5e3eb036b6a819cb01c8"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "Gemeinsame Projektor-, Massen-, Energie- und inverse Energiemomente auf kanonischen Räumen; Ausschluss der beiden axis_one-Alternativen und der ungeraden double-Alternative der früheren endlichen Relaxation.",
+      "claim": [
+        "Gemeinsam kontrollierte hohe Masse, Energie und inverse Energie sowie positive Blockmomentmatrizen desselben Spektralmaßes verschärfen Y, N und die kanonischen Kompressionen.",
+        "Die beiden axis_one-Alternativen der früheren endlichen Relaxation verletzen die neuen Y68-Untergrenzen; die ungerade double-Alternative verletzt drei weitere Einträge. Dieser Block allein beweist noch keinen positiven Extremalgap."
+      ],
+      "depends_on": [
+        "CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE",
+        "CANONICAL-RESOLVENT-COUPLING-BOUNDS"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "2172de38d0def2c4b42c255e6c1290a720e3e94e",
+      "canonical_proof": "research/x-c1/canonical-joint-maximizers-2026-09-30/01-projected-overlap/PROOF.md",
+      "proof_sha256": "d0499f8cc9af34fc5c233b99ad861b217d28ee5e5178478c4cc01e7abd60fae7",
+      "negative_claim_boundary": "Ausschlüsse gelten für die ausdrücklich angegebenen gemeinsamen Bedingungen. Der Schurdefekt-Gap folgt aus dem Diskriminantenblock; keine zweite unabhängige Gap-Zertifizierung und kein globaler No-Go-Satz.",
+      "does_not_claim": [
+        "Lokalisierung der ungeraden physischen Maximiererrichtung oder bandweise Momente des tatsächlichen Maximierers.",
+        "Allgemeiner vorwärts gerichteter Renewal-Satz, vierte Kammer oder A13-Positivität.",
+        "Kofinale positive Familie, globales Objekt X, globale Weil-Positivität oder RH.",
+        "Abgeschlossene externe analytische Gesamtprüfung."
+      ]
+    },
+    {
+      "id": "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+      "title": "Uniform positiver tatsächlicher Schur-Extremalgap und eindeutige Maximierer",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "2172de38d0def2c4b42c255e6c1290a720e3e94e",
+          "path": "research/x-c1/canonical-joint-maximizers-2026-09-30/02-joint-discriminant/verification.json",
+          "sha256": "935e85f5be0b403d66efa8f387f7ec254cfe6acad064764b2478f7856c0bf28a"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "A9->A11 auf dem bereits positiven Horizont: uniform positiver tatsächlicher generalisierter Eigenwertabstand und eindeutige größte Eigenwertgerade in beiden Paritäten; gerade physische inverse Antwortrichtung lokalisiert.",
+      "claim": [
+        "Für A9->A11 gilt uniform in der zertifizierten gemeinsamen Familie beta_+-beta_- >= 2.2718906e14 gerade und >= 4.2806927e11 ungerade. Damit ist die größte generalisierte Eigenwertgerade für jeden tatsächlichen Operatorfall eindeutig; verschiedene zulässige Matrizen müssen nicht dieselbe Gerade maximieren.",
+        "Die positive Trennung folgt aus einer gemeinsamen Spuruntergrenze und einer Minimax-Obergrenze für beta_-, unter Erhaltung von YN=0 und der gemeinsamen Faktorprodukte mit N. Der rohe Diskriminant ist in der festgelegten Basis ebenfalls uniform positiv; sein durch det(M)^2 normierter Wert ist basisunabhängig.",
+        "Gerade gilt x1/x2 in [-0.0058383588,0.011976753] und ein physischer L2-Winkel in [-0.850296,0.381324] Grad in der dokumentierten orthonormalen Basis, orientiert mit x2>0. Dies betrifft die inverse Antwort V0 x; der Winkel der Schurverschiebung wird damit nicht gleichgesetzt.",
+        "Neue nach außen gerundete Intervalle für 1-kappa: [2.2405890e-16,4.3944218e-15] gerade und [9.4820969e-17,1.1090276e-12] ungerade. Ungerade Richtungslokalisierung und bandweise Momente des tatsächlichen Maximierers bleiben offen."
+      ],
+      "depends_on": [
+        "CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE",
+        "CANONICAL-RESOLVENT-COUPLING-BOUNDS",
+        "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "2172de38d0def2c4b42c255e6c1290a720e3e94e",
+      "canonical_proof": "research/x-c1/canonical-joint-maximizers-2026-09-30/02-joint-discriminant/PROOF.md",
+      "proof_sha256": "bb0c9a8167db45e62b273fb2a3f17e77277986687c871b0ba9365ec4558b31a4",
+      "negative_claim_boundary": "Ausschlüsse gelten für die ausdrücklich angegebenen gemeinsamen Bedingungen. Der Schurdefekt-Gap folgt aus dem Diskriminantenblock; keine zweite unabhängige Gap-Zertifizierung und kein globaler No-Go-Satz.",
+      "does_not_claim": [
+        "Lokalisierung der ungeraden physischen Maximiererrichtung oder bandweise Momente des tatsächlichen Maximierers.",
+        "Allgemeiner vorwärts gerichteter Renewal-Satz, vierte Kammer oder A13-Positivität.",
+        "Kofinale positive Familie, globales Objekt X, globale Weil-Positivität oder RH.",
+        "Abgeschlossene externe analytische Gesamtprüfung."
+      ]
+    },
+    {
+      "id": "CANONICAL-SCHUR-DEFECT-NONPROPORTIONALITY",
+      "title": "Schurdefekt-Korollar: gemeinsame Nichtproportionalität in beiden Paritäten",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "2172de38d0def2c4b42c255e6c1290a720e3e94e",
+          "path": "research/x-c1/canonical-joint-maximizers-2026-09-30/03-schur-defect/verification.json",
+          "sha256": "edef594b447ae699432fb4125eca8b18734a6bcf69fac671404e693ba7a4013e"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "A9->A11: exakte Schurdefekt-Reduktion R0=M0+289 W0 mit W0 positiv semidefinit; Nichtproportionalität in beiden Paritäten als Korollar des gemeinsamen Gaps sowie direkter F1-Ausschluss gerade.",
+      "claim": [
+        "Exakt W0=Z0-G0 L0^-1 G0 >= 0 und R0=M0+289 W0, somit beta=1+289 gamma mit unveränderter Maximierergerade.",
+        "Als Korollar des gemeinsamen Diskriminantenblocks gilt gamma_+-gamma_- >= 7.8612134e11 gerade und >= 1.4812085e9 ungerade. W0=gamma M0 und das gleichzeitige Verschwinden von F1 und F2 sind in beiden Paritäten ausgeschlossen.",
+        "Gerade liefert F1 <= -2.2666232e32 zusätzlich einen direkten Ausschluss und die eigene schwächere Gamma-Gap-Untergrenze 1.2635714e11. Ungerade enthalten die getrennten F1/F2-Hüllen null; der gemeinsame Gap schließt deren gleichzeitiges Verschwinden aus.",
+        "Die Summe-von-Quadraten-Identität ist exakt in sechs Variablen geprüft. Die starken Gamma-Gaps sind kein zweiter unabhängiger Erstbeweis und keine Spektrallücken des ursprünglichen Energieoperators Q."
+      ],
+      "depends_on": [
+        "CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE",
+        "CANONICAL-RESOLVENT-COUPLING-BOUNDS",
+        "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "2172de38d0def2c4b42c255e6c1290a720e3e94e",
+      "canonical_proof": "research/x-c1/canonical-joint-maximizers-2026-09-30/03-schur-defect/PROOF.md",
+      "proof_sha256": "1d4fcde2f7eea1c38cd69c1837081dd0d707b36781b14d75eeabb1ae4e7003da",
+      "negative_claim_boundary": "Ausschlüsse gelten für die ausdrücklich angegebenen gemeinsamen Bedingungen. Der Schurdefekt-Gap folgt aus dem Diskriminantenblock; keine zweite unabhängige Gap-Zertifizierung und kein globaler No-Go-Satz.",
+      "does_not_claim": [
+        "Lokalisierung der ungeraden physischen Maximiererrichtung oder bandweise Momente des tatsächlichen Maximierers.",
+        "Allgemeiner vorwärts gerichteter Renewal-Satz, vierte Kammer oder A13-Positivität.",
+        "Kofinale positive Familie, globales Objekt X, globale Weil-Positivität oder RH.",
+        "Abgeschlossene externe analytische Gesamtprüfung."
+      ]
     }
   ],
   "global_status": {
@@ -1810,23 +1922,7 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [
-    {
-      "id": "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS",
-      "meta_path": "research/x-c1/canonical-joint-maximizers-2026-09-30/01-projected-overlap/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    },
-    {
-      "id": "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
-      "meta_path": "research/x-c1/canonical-joint-maximizers-2026-09-30/02-joint-discriminant/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    },
-    {
-      "id": "CANONICAL-SCHUR-DEFECT-NONPROPORTIONALITY",
-      "meta_path": "research/x-c1/canonical-joint-maximizers-2026-09-30/03-schur-defect/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    }
-  ],
+  "pending_packages": [],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",
@@ -1844,14 +1940,14 @@
   },
   "current_integration_observation": {
     "observed_at": "2026-09-30",
-    "main_sha": "fc4ff51a3fd884596bb60e0ed0e783693a31954d",
-    "integrated_research_branch": "research/first-chamber-o8-o9-2026-09-27",
-    "integrated_research_head": "b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d",
-    "reconciliation_merge": "fc4ff51a3fd884596bb60e0ed0e783693a31954d",
-    "ci_run_id": 36671245368,
+    "main_sha": "b882c9e74f8bb8ca4594aefb77534dd92573bcd1",
+    "integrated_research_branch": "research/canonical-joint-maximizers-2026-09-30",
+    "integrated_research_head": "2172de38d0def2c4b42c255e6c1290a720e3e94e",
+    "reconciliation_merge": "b882c9e74f8bb8ca4594aefb77534dd92573bcd1",
+    "ci_run_id": 36738813116,
     "ci_run_attempt": 1,
-    "ci_head_sha": "fc4ff51a3fd884596bb60e0ed0e783693a31954d",
-    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/36671245368",
+    "ci_head_sha": "b882c9e74f8bb8ca4594aefb77534dd92573bcd1",
+    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/36738813116",
     "ci_conclusion": "success",
     "mathematical_status_change": false
   }

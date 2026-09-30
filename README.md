@@ -117,20 +117,24 @@ Die [Spektral-/Renewal-Familie](research/x-c1/renewable-low-schur-spectral-2026-
 liefert die echten kritischen Ränge **5/6/8 je Parität**, injektiven Transport
 und kanonische Ergänzungen der Dimension **1/2** samt äußerer L2-Masse.
 Die [kanonische Schurkopplungsfamilie](research/x-c1/canonical-schur-coupling-2026-09-30/README.md)
-zertifiziert jetzt die tatsächlich starke relative Kopplung und einen
-Spektralmischungsmechanismus auf einem echten kanonischen Zeugen. Die
-Korollargrenzen für 1−κ betragen beim zweiten Übergang strikt weniger als
-**1.371e-12 gerade** und **8.005e-12 ungerade**.
+zertifiziert starke relative Kopplung und spektrale Energiemischung.
 
-Die Einleitung der Paketübersicht beschreibt den historischen Veröffentlichungsstand
-vor dem Registry-Sync. Die vier Ergebnisgruppen sind inzwischen im
-[Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml) übernommen.
+Die neue [gemeinsame Maximiererfamilie](research/x-c1/canonical-joint-maximizers-2026-09-30/README.md)
+verschärft die Projektor-/Momentbedingungen und beweist für **A9→A11 einen
+uniform positiven tatsächlichen Schur-Extremalgap in beiden Paritäten**.
+Die größte Eigenwertgerade ist jeweils eindeutig. Die gerade physische
+inverse Antwortrichtung ist bereits lokalisiert; ihr Winkel liegt im
+dokumentierten orthonormalen Koordinatensystem zwischen **−0.850296° und
+0.381324°**. Das Schurdefekt-Korollar schließt `W0=gamma M0` in beiden
+Paritäten aus.
 
-Der nächste lokale Schritt ist die **Isolation der tatsächlichen Maximiererrichtung**
-durch zusätzliche gekoppelte Projektor-/Überlappbeziehungen. Die vorhandene
-endliche Zertifikatsrelaxation lässt mehrere Richtungen und ungerade sogar
-einen doppelten Eigenwert zu; daraus folgt keine Entartung des ursprünglichen
-Operators. Allgemeines vorwärts gerichtetes Renewal bleibt offen.
+Die Paketberichte bewahren ihren damaligen Veröffentlichungsstand. Für den
+aktuellen Integrationsstatus gilt das [Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml).
+
+Die nächsten lokalen Schritte sind die **ungerade Richtungslokalisierung**
+und anschließend **bandweise Momente des tatsächlichen Maximierers**.
+Allgemeines Renewal, A13-Positivität, eine kofinale positive Familie,
+globales Objekt X und RH bleiben offen. PR #187 bleibt ein separater Strang.
 Status: `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`.
 
 Die hohe Tail-Reduktion steht auf jedem festen endlichen Horizont zur Verfügung.
