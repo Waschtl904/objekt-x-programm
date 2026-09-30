@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+  "date": "2026-09-30",
+  "kind": "THEOREM",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "A9->A11 auf dem bereits positiven Horizont: uniform positiver tatsächlicher generalisierter Eigenwertabstand und eindeutige größte Eigenwertgerade in beiden Paritäten; gerade physische inverse Antwortrichtung lokalisiert.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "Ausschlüsse gelten für die ausdrücklich angegebenen gemeinsamen Bedingungen. Der Schurdefekt-Gap folgt aus dem Diskriminantenblock; keine zweite unabhängige Gap-Zertifizierung und kein globaler No-Go-Satz.",
+  "depends_on": [
+    "CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE",
+    "CANONICAL-RESOLVENT-COUPLING-BOUNDS",
+    "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS"
+  ],
+  "closes": [
+    "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Lokalisierung der ungeraden physischen Maximiererrichtung oder bandweise Momente des tatsächlichen Maximierers.",
+    "Allgemeiner vorwärts gerichteter Renewal-Satz, vierte Kammer oder A13-Positivität.",
+    "Kofinale positive Familie, globales Objekt X, globale Weil-Positivität oder RH.",
+    "Abgeschlossene externe analytische Gesamtprüfung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/canonical-joint-maximizers-2026-09-30/02-joint-discriminant/PROOF.md",
+    "sha256": "bb0c9a8167db45e62b273fb2a3f17e77277986687c871b0ba9365ec4558b31a4"
+  }
+}

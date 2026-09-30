@@ -1,0 +1,200 @@
+{
+  "publication_base": "c53856b453564621a06124b7ec4f85a27acfa727",
+  "source_commit": "8a82b7a972172c45cc4d3bc0297cc7fc0bbb2c7b",
+  "published_package_anchor": "b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d",
+  "original_files": [
+    {
+      "path": "01-projected-overlap/PROJECTED_OVERLAP.md",
+      "sha256": "d0499f8cc9af34fc5c233b99ad861b217d28ee5e5178478c4cc01e7abd60fae7"
+    },
+    {
+      "path": "01-projected-overlap/REPRODUKTION.md",
+      "sha256": "33eb0ab74d91b9c356f1a761918797eca6afc1f6f47fe618e7c3332bdade12e8"
+    },
+    {
+      "path": "01-projected-overlap/SHA256SUMS",
+      "sha256": "4e7256e97746fa3f0b637ef485d9254f3619982c5cf9e9d4687c1445e4390c1f"
+    },
+    {
+      "path": "01-projected-overlap/audit_sources.py",
+      "sha256": "9d08c1a2d8c43f30366bd3c2072a170a77aeca8c5c96e3a318746f9f9cf26671"
+    },
+    {
+      "path": "01-projected-overlap/check_projected_overlap.py",
+      "sha256": "17446be7a434fc321a974080bd43e28d447933986717d8a8b2f585917fe0e262"
+    },
+    {
+      "path": "01-projected-overlap/input_bindings.json",
+      "sha256": "e6e8328413f878bc556efa18d0f5c9bdd956c54e1f589f30003a7a80347fdc69"
+    },
+    {
+      "path": "01-projected-overlap/inputs/candidate_proposals.json",
+      "sha256": "68c6aba21c15c97094c1b88bdea1fe5795ac64f9e8955e03c2fc50db7724b1cc"
+    },
+    {
+      "path": "01-projected-overlap/inputs/crosscheck.json",
+      "sha256": "b5d3887b5f94653eabf148140faed0f646f8dacc30f38ebe16e551f9ad0c9d0d"
+    },
+    {
+      "path": "01-projected-overlap/inputs/extremal_verification.json",
+      "sha256": "99a20a0d4eaad87e44fed6878db5f55b849bf4b750694d14c582578147998281"
+    },
+    {
+      "path": "01-projected-overlap/inputs/outer_primary.json",
+      "sha256": "67140aada68ed5904c5d7f54b9fbaf6148648b554b15e0a0900b2814c35c61d4"
+    },
+    {
+      "path": "01-projected-overlap/inputs/primary.json",
+      "sha256": "d0e40cc46987efc6076a64f4b5823d2038219af688a4760cc02bb7ecb6b6920d"
+    },
+    {
+      "path": "01-projected-overlap/source_audit.json",
+      "sha256": "19e3fd41689aaf1fe652d731df4ee4966005b6281008559852ce9d6eb3b32e00"
+    },
+    {
+      "path": "01-projected-overlap/verification.json",
+      "sha256": "95ce886b03f23030b013a7b14a220cb37e7846f2e9ff5e3eb036b6a819cb01c8"
+    },
+    {
+      "path": "01-projected-overlap/verification.log",
+      "sha256": "ccc43714b69eb5556c0fc2b7d838e15e4013674d26ffa76585df6d16d07497f3"
+    },
+    {
+      "path": "01-projected-overlap/verify_projected_overlap.py",
+      "sha256": "05ee9daec17ebb91542b2e49e11b188550bb93cf9ed9c81516e7c1aaa9360df4"
+    },
+    {
+      "path": "02-joint-discriminant/JOINT_DISCRIMINANT.md",
+      "sha256": "bb0c9a8167db45e62b273fb2a3f17e77277986687c871b0ba9365ec4558b31a4"
+    },
+    {
+      "path": "02-joint-discriminant/REPRODUKTION.md",
+      "sha256": "0df0111ae140ac0ca375a3b07f3f6c9adc5b877f180decdc521d1f96d5c1d6a3"
+    },
+    {
+      "path": "02-joint-discriminant/SHA256SUMS",
+      "sha256": "efa6f22db266bd68e8cf660d2799036f8eff8cfe62e3956e816a3cc599e20795"
+    },
+    {
+      "path": "02-joint-discriminant/audit_sources.py",
+      "sha256": "a89fec75eedce2dae4843723eab4a0f3fc410c716081dfa3ec5ebf6360a1b03e"
+    },
+    {
+      "path": "02-joint-discriminant/check_joint_discriminant.py",
+      "sha256": "692adbb3b177986e583601262455b6decc31efdd4b55b4c386a76e41fec19c53"
+    },
+    {
+      "path": "02-joint-discriminant/input_bindings.json",
+      "sha256": "a243857bfe54c46d776ccdcb3032455293f11da49aef4ed1acbee87a4ec73b6c"
+    },
+    {
+      "path": "02-joint-discriminant/inputs/crosscheck.json",
+      "sha256": "b5d3887b5f94653eabf148140faed0f646f8dacc30f38ebe16e551f9ad0c9d0d"
+    },
+    {
+      "path": "02-joint-discriminant/inputs/outer_primary.json",
+      "sha256": "67140aada68ed5904c5d7f54b9fbaf6148648b554b15e0a0900b2814c35c61d4"
+    },
+    {
+      "path": "02-joint-discriminant/inputs/primary.json",
+      "sha256": "d0e40cc46987efc6076a64f4b5823d2038219af688a4760cc02bb7ecb6b6920d"
+    },
+    {
+      "path": "02-joint-discriminant/inputs/projected_source_audit.json",
+      "sha256": "19e3fd41689aaf1fe652d731df4ee4966005b6281008559852ce9d6eb3b32e00"
+    },
+    {
+      "path": "02-joint-discriminant/inputs/projected_verification.json",
+      "sha256": "95ce886b03f23030b013a7b14a220cb37e7846f2e9ff5e3eb036b6a819cb01c8"
+    },
+    {
+      "path": "02-joint-discriminant/inputs/resolvent_verification.json",
+      "sha256": "9bc3317cad17b4c5a9db4a2eb765daf789f222d5bda37079bde8a4e943eacebd"
+    },
+    {
+      "path": "02-joint-discriminant/interval_tools.py",
+      "sha256": "60bbd4eae4e87301ec8e95f930c26d882d701c9e0af39e199bfe8871e2027192"
+    },
+    {
+      "path": "02-joint-discriminant/rank_one_parameters.json",
+      "sha256": "6245bdfce18150c0000a3b6ff6dbcb1aa2661dbbb863976fbb0cecfe161b4519"
+    },
+    {
+      "path": "02-joint-discriminant/source_audit.json",
+      "sha256": "9237ee363a597ed16ebb9fbb30317402f3c90a317e652fd506af9886eea7c130"
+    },
+    {
+      "path": "02-joint-discriminant/verification.json",
+      "sha256": "935e85f5be0b403d66efa8f387f7ec254cfe6acad064764b2478f7856c0bf28a"
+    },
+    {
+      "path": "02-joint-discriminant/verification.log",
+      "sha256": "8949c1aa0af18441e314da9a0d15cba73479658434b51daab2a1b1a7a35676a0"
+    },
+    {
+      "path": "02-joint-discriminant/verify_joint_discriminant.py",
+      "sha256": "bd5d19fc02ba2989b99661cf5c1ed45871b3d3c72cc5dba58b43aedb28b8e52a"
+    },
+    {
+      "path": "03-schur-defect/REPRODUKTION.md",
+      "sha256": "213690d2531a84217bb86ae716fd37b0d5da1daa022f8d7ce201d40673778545"
+    },
+    {
+      "path": "03-schur-defect/SCHUR_DEFECT.md",
+      "sha256": "1d4fcde2f7eea1c38cd69c1837081dd0d707b36781b14d75eeabb1ae4e7003da"
+    },
+    {
+      "path": "03-schur-defect/SHA256SUMS",
+      "sha256": "43e80face6782398639b25325bdb7d77cf1a191600caf1867821e461bf73b178"
+    },
+    {
+      "path": "03-schur-defect/check_schur_defect.py",
+      "sha256": "6665fd9ce0a315b0389d9fd48c748e00b6aecf490f2c22c5122fb52162b588bd"
+    },
+    {
+      "path": "03-schur-defect/inputs/Gemeinsamer-generalisierter-Diskriminant-2026-09-30.zip",
+      "sha256": "c9760daa202b4eda079d1d2b9cdbd792a1579ba56e573d79f7c8140d75889844"
+    },
+    {
+      "path": "03-schur-defect/verification.json",
+      "sha256": "edef594b447ae699432fb4125eca8b18734a6bcf69fac671404e693ba7a4013e"
+    },
+    {
+      "path": "03-schur-defect/verification.log",
+      "sha256": "259c0791d20a1bbf09a54a1220f08aa608fb886b5b12d0a33ab4203eb75cbda8"
+    },
+    {
+      "path": "03-schur-defect/verify_schur_defect.py",
+      "sha256": "f93c2f78e457a5b4515f3c57895e51cc667dd44cc4d3229c6e276f5375123b62"
+    }
+  ],
+  "packages": [
+    {
+      "folder": "01-projected-overlap",
+      "original_folder": "canonical-projected-overlap-2026-09-30",
+      "original_proof": "PROJECTED_OVERLAP.md",
+      "id": "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS",
+      "archive": "archives/Gemeinsame-Projektorueberlappungen-2026-09-30.zip",
+      "archive_sha256": "6fda15548fe850146806604ec1272f68ea5db62684b76d440f9e62aa26fa882b"
+    },
+    {
+      "folder": "02-joint-discriminant",
+      "original_folder": "canonical-joint-discriminant-2026-09-30",
+      "original_proof": "JOINT_DISCRIMINANT.md",
+      "id": "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+      "archive": "archives/Gemeinsamer-generalisierter-Diskriminant-2026-09-30.zip",
+      "archive_sha256": "c9760daa202b4eda079d1d2b9cdbd792a1579ba56e573d79f7c8140d75889844"
+    },
+    {
+      "folder": "03-schur-defect",
+      "original_folder": "canonical-schur-defect-2026-09-30",
+      "original_proof": "SCHUR_DEFECT.md",
+      "id": "CANONICAL-SCHUR-DEFECT-NONPROPORTIONALITY",
+      "archive": "archives/Gemeinsames-Schurdefekt-Proportionalitaetsgate-2026-09-30.zip",
+      "archive_sha256": "4ed89ec928ba1573c6f295bf4038588568c1e5b9f4fdff69ee8e318eb4733c5b"
+    }
+  ],
+  "pr187_included": false,
+  "odd_projector_package_included": false,
+  "global_verification_snapshot_changed": false
+}

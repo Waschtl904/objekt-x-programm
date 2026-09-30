@@ -1,0 +1,32 @@
+Noncommuting determinant polynomial and congruence invariance: PASS
+Exact double pencil retained as a negative control: PASS
+Independent joint trace, kernel minimax and discriminant certificate: PASS
+Joint functional identity and failed contraction rejection: PASS
+Physical-angle orientation and zero-divisor guard: PASS
+ALL JOINT DISCRIMINANT CHECKS PASS
+
+primary.json A9->A11-even gap >= 2.2718906e+14 discriminant >= 7.0392785e+67
+beta- ['1.0000000e+0', '3.7215526e+11'] beta+ ['2.2756122e+14', '4.4631121e+15'] direction ['-5.8383588e-3', '1.1976753e-2']
+primary.json A9->A11-odd gap >= 4.2806927e+11 discriminant >= 2.0884369e+55
+beta- ['1.0000000e+0', '4.7362158e+11'] beta+ ['9.0169084e+11', '1.0546191e+16'] direction chart unresolved
+crosscheck.json A9->A11-even gap >= 2.2718906e+14 discriminant >= 7.0392785e+67
+beta- ['1.0000000e+0', '3.7215526e+11'] beta+ ['2.2756122e+14', '4.4631121e+15'] direction ['-5.8383588e-3', '1.1976753e-2']
+crosscheck.json A9->A11-odd gap >= 4.2806927e+11 discriminant >= 2.0884369e+55
+beta- ['1.0000000e+0', '4.7362158e+11'] beta+ ['9.0169084e+11', '1.0546191e+16'] direction chart unresolved
+BOTH JOINT GENERALIZED DISCRIMINANTS STRICTLY POSITIVE: PASS
+
+primary.json A9->A11-even gap >= 2.2718906e+14 discriminant >= 7.0392785e+67
+beta- ['1.0000000e+0', '3.7215526e+11'] beta+ ['2.2756122e+14', '4.4631121e+15'] direction ['-5.8383588e-3', '1.1976753e-2']
+primary.json A9->A11-odd gap >= 4.2806927e+11 discriminant >= 2.0884369e+55
+beta- ['1.0000000e+0', '4.7362158e+11'] beta+ ['9.0169084e+11', '1.0546191e+16'] direction chart unresolved
+crosscheck.json A9->A11-even gap >= 2.2718906e+14 discriminant >= 7.0392785e+67
+beta- ['1.0000000e+0', '3.7215526e+11'] beta+ ['2.2756122e+14', '4.4631121e+15'] direction ['-5.8383588e-3', '1.1976753e-2']
+crosscheck.json A9->A11-odd gap >= 4.2806927e+11 discriminant >= 2.0884369e+55
+beta- ['1.0000000e+0', '4.7362158e+11'] beta+ ['9.0169084e+11', '1.0546191e+16'] direction chart unresolved
+BOTH JOINT GENERALIZED DISCRIMINANTS STRICTLY POSITIVE: PASS
+
+All report tables, exact normalized gap identity bounds and physical-angle scope on both runs: PASS
+Repeated JSON and LF bytes identical: PASS
+
+Altered input rejected before computation: PASS
+Unsuccessful rank-one parameters rejected at the gap gate: PASS

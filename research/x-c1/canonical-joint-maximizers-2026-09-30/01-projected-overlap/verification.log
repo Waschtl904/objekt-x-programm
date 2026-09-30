@@ -1,0 +1,37 @@
+Exact non-diagonal inverse: PASS
+Zero divisor, negative root, reversed interval, singular matrix rejected: PASS
+Noncommuting joint spectral measure: all projected moments and leakage bounds PASS
+Missing spectral separation rejected: PASS
+ALL PROJECTED OVERLAP CHECKS PASS
+
+primary.json A9-even eta <= 6.0977804e-3
+primary.json A9-odd eta <= 2.2291085e-2
+primary.json A11-even eta <= 8.4182831e-3
+primary.json A11-odd eta <= 1.9123978e-2
+primary.json A9->A11-even Y68 ['2.6756918e-2', '3.9360043e-2'] all fixed candidates excluded
+primary.json A9->A11-odd Y68 ['3.2289945e-2', '7.8619397e-2'] all fixed candidates excluded
+crosscheck.json A9-even eta <= 6.0977804e-3
+crosscheck.json A9-odd eta <= 2.2291085e-2
+crosscheck.json A11-even eta <= 8.4182831e-3
+crosscheck.json A11-odd eta <= 1.9123978e-2
+crosscheck.json A9->A11-even Y68 ['2.6756918e-2', '3.9360043e-2'] all fixed candidates excluded
+crosscheck.json A9->A11-odd Y68 ['3.2289945e-2', '7.8619397e-2'] all fixed candidates excluded
+JOINT MOMENT PROJECTOR BOUNDS AND THREE FIXED EXCLUSIONS PASS
+
+primary.json A9-even eta <= 6.0977804e-3
+primary.json A9-odd eta <= 2.2291085e-2
+primary.json A11-even eta <= 8.4182831e-3
+primary.json A11-odd eta <= 1.9123978e-2
+primary.json A9->A11-even Y68 ['2.6756918e-2', '3.9360043e-2'] all fixed candidates excluded
+primary.json A9->A11-odd Y68 ['3.2289945e-2', '7.8619397e-2'] all fixed candidates excluded
+crosscheck.json A9-even eta <= 6.0977804e-3
+crosscheck.json A9-odd eta <= 2.2291085e-2
+crosscheck.json A11-even eta <= 8.4182831e-3
+crosscheck.json A11-odd eta <= 1.9123978e-2
+crosscheck.json A9->A11-even Y68 ['2.6756918e-2', '3.9360043e-2'] all fixed candidates excluded
+crosscheck.json A9->A11-odd Y68 ['3.2289945e-2', '7.8619397e-2'] all fixed candidates excluded
+JOINT MOMENT PROJECTOR BOUNDS AND THREE FIXED EXCLUSIONS PASS
+
+Report tables on both precision inputs: PASS
+Deterministic replay, exact JSON and bytes with explicit LF: PASS
+Corrupted input rejected before computation: PASS

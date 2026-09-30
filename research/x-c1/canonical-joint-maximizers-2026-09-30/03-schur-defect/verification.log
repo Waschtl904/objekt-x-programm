@@ -1,0 +1,33 @@
+Exact polynomial identity, noncommuting Schur algebra, proportional zero, F1-only control, archive tampering rejection: PASS
+
+primary.json A9->A11-even gap >= 2.2718906e+14 discriminant >= 7.0392785e+67
+beta- ['1.0000000e+0', '3.7215526e+11'] beta+ ['2.2756122e+14', '4.4631121e+15'] direction ['-5.8383588e-3', '1.1976753e-2']
+primary.json A9->A11-odd gap >= 4.2806927e+11 discriminant >= 2.0884369e+55
+beta- ['1.0000000e+0', '4.7362158e+11'] beta+ ['9.0169084e+11', '1.0546191e+16'] direction chart unresolved
+crosscheck.json A9->A11-even gap >= 2.2718906e+14 discriminant >= 7.0392785e+67
+beta- ['1.0000000e+0', '3.7215526e+11'] beta+ ['2.2756122e+14', '4.4631121e+15'] direction ['-5.8383588e-3', '1.1976753e-2']
+crosscheck.json A9->A11-odd gap >= 4.2806927e+11 discriminant >= 2.0884369e+55
+beta- ['1.0000000e+0', '4.7362158e+11'] beta+ ['9.0169084e+11', '1.0546191e+16'] direction chart unresolved
+BOTH JOINT GENERALIZED DISCRIMINANTS STRICTLY POSITIVE: PASS
+primary.json A9->A11-even gamma gap >= 7.8612134e+11 F1 ['-1.8473127e+33', '-2.2666232e+32'] F1-only gap >= 1.2635714e+11
+primary.json A9->A11-odd gamma gap >= 1.4812085e+9 F1 ['-9.6234705e+29', '1.1254237e+29'] F1-only gap >= 0
+crosscheck.json A9->A11-even gamma gap >= 7.8612134e+11 F1 ['-1.8473127e+33', '-2.2666232e+32'] F1-only gap >= 1.2635714e+11
+crosscheck.json A9->A11-odd gamma gap >= 1.4812085e+9 F1 ['-9.6234705e+29', '1.1254237e+29'] F1-only gap >= 0
+BOTH JOINT SCHUR-DEFECT PROPORTIONALITY GATES: NO COMPLETION; PASS
+
+primary.json A9->A11-even gap >= 2.2718906e+14 discriminant >= 7.0392785e+67
+beta- ['1.0000000e+0', '3.7215526e+11'] beta+ ['2.2756122e+14', '4.4631121e+15'] direction ['-5.8383588e-3', '1.1976753e-2']
+primary.json A9->A11-odd gap >= 4.2806927e+11 discriminant >= 2.0884369e+55
+beta- ['1.0000000e+0', '4.7362158e+11'] beta+ ['9.0169084e+11', '1.0546191e+16'] direction chart unresolved
+crosscheck.json A9->A11-even gap >= 2.2718906e+14 discriminant >= 7.0392785e+67
+beta- ['1.0000000e+0', '3.7215526e+11'] beta+ ['2.2756122e+14', '4.4631121e+15'] direction ['-5.8383588e-3', '1.1976753e-2']
+crosscheck.json A9->A11-odd gap >= 4.2806927e+11 discriminant >= 2.0884369e+55
+beta- ['1.0000000e+0', '4.7362158e+11'] beta+ ['9.0169084e+11', '1.0546191e+16'] direction chart unresolved
+BOTH JOINT GENERALIZED DISCRIMINANTS STRICTLY POSITIVE: PASS
+primary.json A9->A11-even gamma gap >= 7.8612134e+11 F1 ['-1.8473127e+33', '-2.2666232e+32'] F1-only gap >= 1.2635714e+11
+primary.json A9->A11-odd gamma gap >= 1.4812085e+9 F1 ['-9.6234705e+29', '1.1254237e+29'] F1-only gap >= 0
+crosscheck.json A9->A11-even gamma gap >= 7.8612134e+11 F1 ['-1.8473127e+33', '-2.2666232e+32'] F1-only gap >= 1.2635714e+11
+crosscheck.json A9->A11-odd gamma gap >= 1.4812085e+9 F1 ['-9.6234705e+29', '1.1254237e+29'] F1-only gap >= 0
+BOTH JOINT SCHUR-DEFECT PROPORTIONALITY GATES: NO COMPLETION; PASS
+
+Both input receipts satisfy every report bound. New JSON replay byte-identical. Joint nonexistence is distinct from individual interval tests: PASS

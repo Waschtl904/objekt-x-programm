@@ -145,6 +145,24 @@
       "title": "Tatsächlichen schlechtesten Schurmodus isolieren",
       "mathematical_status": "OPEN",
       "scope": "Zusätzliche gekoppelte Projektor-/Überlappbeziehungen zwischen Y, N und den Momenten müssen die exakten Alternativen der definierten endlichen Relaxation ausschließen. Danach tatsächlichen Eigenwertabstand und Maximiererrichtung bei A9->A11 zertifizieren und deren bandweise Projektormomente untersuchen."
+    },
+    {
+      "id": "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS",
+      "title": "CANONICAL PROJECTED OVERLAP JOINT MOMENTS",
+      "mathematical_status": "OPEN",
+      "scope": "Gemeinsame Projektor-, Massen-, Energie- und inverse Energiemomente auf kanonischen Räumen; Ausschluss der beiden axis_one-Alternativen und der ungeraden double-Alternative der früheren endlichen Relaxation. Registry-Übernahme nach Integration; diese Paketobligation ist ein Integrationsschritt."
+    },
+    {
+      "id": "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+      "title": "CANONICAL JOINT GENERALIZED DISCRIMINANT",
+      "mathematical_status": "OPEN",
+      "scope": "A9->A11 auf dem bereits positiven Horizont: uniform positiver tatsächlicher generalisierter Eigenwertabstand und eindeutige größte Eigenwertgerade in beiden Paritäten; gerade physische inverse Antwortrichtung lokalisiert. Registry-Übernahme nach Integration; diese Paketobligation ist ein Integrationsschritt."
+    },
+    {
+      "id": "CANONICAL-SCHUR-DEFECT-NONPROPORTIONALITY",
+      "title": "CANONICAL SCHUR DEFECT NONPROPORTIONALITY",
+      "mathematical_status": "OPEN",
+      "scope": "A9->A11: exakte Schurdefekt-Reduktion R0=M0+289 W0 mit W0 positiv semidefinit; Nichtproportionalität in beiden Paritäten als Korollar des gemeinsamen Gaps sowie direkter F1-Ausschluss gerade. Registry-Übernahme nach Integration; diese Paketobligation ist ein Integrationsschritt."
     }
   ],
   "results": [
@@ -1792,7 +1810,23 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [],
+  "pending_packages": [
+    {
+      "id": "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS",
+      "meta_path": "research/x-c1/canonical-joint-maximizers-2026-09-30/01-projected-overlap/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+      "meta_path": "research/x-c1/canonical-joint-maximizers-2026-09-30/02-joint-discriminant/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "CANONICAL-SCHUR-DEFECT-NONPROPORTIONALITY",
+      "meta_path": "research/x-c1/canonical-joint-maximizers-2026-09-30/03-schur-defect/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    }
+  ],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",

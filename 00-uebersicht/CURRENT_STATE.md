@@ -99,4 +99,10 @@ Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGI
 
 Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getrennt. Diese Statusansicht führt die mathematischen Checker nicht erneut aus.
 
+## Noch nicht in den geprüften Stand übernommene Pakete
+
+- `CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-joint-maximizers-2026-09-30/01-projected-overlap/META.yaml`.
+- `CANONICAL-JOINT-GENERALIZED-DISCRIMINANT`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-joint-maximizers-2026-09-30/02-joint-discriminant/META.yaml`.
+- `CANONICAL-SCHUR-DEFECT-NONPROPORTIONALITY`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-joint-maximizers-2026-09-30/03-schur-defect/META.yaml`.
+
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

@@ -1,0 +1,12 @@
+{
+  "source_commit": "8a82b7a972172c45cc4d3bc0297cc7fc0bbb2c7b",
+  "integration_base": "c53856b453564621a06124b7ec4f85a27acfa727",
+  "prior_extremal_archive_sha256": "9eeedb0092bef77c5bcb5a75fc378acb1f935fcc85e448670dea5134315cf258",
+  "sha256": {
+    "primary.json": "d0e40cc46987efc6076a64f4b5823d2038219af688a4760cc02bb7ecb6b6920d",
+    "crosscheck.json": "b5d3887b5f94653eabf148140faed0f646f8dacc30f38ebe16e551f9ad0c9d0d",
+    "outer_primary.json": "67140aada68ed5904c5d7f54b9fbaf6148648b554b15e0a0900b2814c35c61d4",
+    "candidate_proposals.json": "68c6aba21c15c97094c1b88bdea1fe5795ac64f9e8955e03c2fc50db7724b1cc",
+    "extremal_verification.json": "99a20a0d4eaad87e44fed6878db5f55b849bf4b750694d14c582578147998281"
+  }
+}
