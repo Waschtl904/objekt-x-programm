@@ -122,6 +122,10 @@ Spektralmischungsmechanismus auf einem echten kanonischen Zeugen. Die
 Korollargrenzen für 1−κ betragen beim zweiten Übergang strikt weniger als
 **1.371e-12 gerade** und **8.005e-12 ungerade**.
 
+Die Einleitung der Paketübersicht beschreibt den historischen Veröffentlichungsstand
+vor dem Registry-Sync. Die vier Ergebnisgruppen sind inzwischen im
+[Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml) übernommen.
+
 Der nächste lokale Schritt ist die **Isolation der tatsächlichen Maximiererrichtung**
 durch zusätzliche gekoppelte Projektor-/Überlappbeziehungen. Die vorhandene
 endliche Zertifikatsrelaxation lässt mehrere Richtungen und ungerade sogar

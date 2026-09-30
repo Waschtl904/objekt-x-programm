@@ -313,6 +313,10 @@ In `TK_A ⊕ E ⊕ K_B^⊥` ist der robuste Rest q-entkoppelt. Innerhalb K_B gil
 reduziert die relative Kopplung exakt auf Energie und inverse Energie des echten E
 und schließt diese Momente mit vollständiger Low-/High-Antwort rigoros ein.
 
+Die Einleitung der verlinkten Paketübersicht bewahrt den historischen Stand vor
+der Registry-Übernahme. Die vier Ergebnisgruppen sind inzwischen im
+[Forschungsregister](RESEARCH_STATE.yaml) übernommen; dessen Statusangaben sind maßgeblich.
+
 | Übergang | Parität | Restintervall 1−κ | Strenge Korollarobergrenze |
 | --- | --- | --- | --- |
 | A8→A9 | gerade | [3.2619e-9, 2.1432e-7] | <1.996e-7 |
