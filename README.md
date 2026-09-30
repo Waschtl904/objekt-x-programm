@@ -114,11 +114,23 @@ Matrixintervallen. Die externe analytische Gesamtprüfung bleibt offen.
 ### Erneuerbare Positivität des niedrigen Schurrests
 
 Die [Spektral-/Renewal-Familie](research/x-c1/renewable-low-schur-spectral-2026-09-29/README.md)
-zertifiziert bei A8/A9/A11 echte kritische Ränge **5/6/8 je Parität**, injektiven
-Spektraltransport und kanonische Ergänzungen der Dimension **1/2** samt rigoroser
-äußerer L2-Masse. Der robuste Spektralrest ist q-entkoppelt. Nächster struktureller
-Schritt ist die relative energiegewichtete Kopplung zwischen transportiertem
-altem Raum und Ergänzung; allgemeine Renewal-Positivität bleibt offen.
+liefert die echten kritischen Ränge **5/6/8 je Parität**, injektiven Transport
+und kanonische Ergänzungen der Dimension **1/2** samt äußerer L2-Masse.
+Die [kanonische Schurkopplungsfamilie](research/x-c1/canonical-schur-coupling-2026-09-30/README.md)
+zertifiziert jetzt die tatsächlich starke relative Kopplung und einen
+Spektralmischungsmechanismus auf einem echten kanonischen Zeugen. Die
+Korollargrenzen für 1−κ betragen beim zweiten Übergang strikt weniger als
+**1.371e-12 gerade** und **8.005e-12 ungerade**.
+
+Die Einleitung der Paketübersicht beschreibt den historischen Veröffentlichungsstand
+vor dem Registry-Sync. Die vier Ergebnisgruppen sind inzwischen im
+[Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml) übernommen.
+
+Der nächste lokale Schritt ist die **Isolation der tatsächlichen Maximiererrichtung**
+durch zusätzliche gekoppelte Projektor-/Überlappbeziehungen. Die vorhandene
+endliche Zertifikatsrelaxation lässt mehrere Richtungen und ungerade sogar
+einen doppelten Eigenwert zu; daraus folgt keine Entartung des ursprünglichen
+Operators. Allgemeines vorwärts gerichtetes Renewal bleibt offen.
 Status: `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`.
 
 Die hohe Tail-Reduktion steht auf jedem festen endlichen Horizont zur Verfügung.

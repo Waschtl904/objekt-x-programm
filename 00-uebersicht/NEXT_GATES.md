@@ -9,19 +9,20 @@ Die getrennten Integrations-/Registry-Metadaten in [CURRENT_STATE](CURRENT_STATE
 
 ## Unbeschränkte Horizonterweiterung und kompatibler Transport
 
-`UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION` — OPEN. Drei positive Kammern bis A11 und allgemeiner hoher Tail sind vorhanden. Der niedrige echte Spektralraum hat bei q/b=10^-4 die Ränge 5/6/8 je Parität. Injektiver kritischer Transport, kanonische Ergänzungen und deren äußere Masse sind hergeleitet. Offen bleibt relative energiegewichtete Kopplungskontrolle als Schritt zur allgemeinen Low-Schur-Erneuerung; kofinale positive Kompatibilität bleibt offen.
+`UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION` — OPEN. Drei positive Kammern bis A11, kritische Ränge 5/6/8 und kanonischer Spektraltransport sind vorhanden. Die echte relative Kopplung ist rigoros nahe eins; ein kanonischer Zeuge zeigt Mischung weit getrennter spektraler Energieskalen. Tatsächliche Maximierer-Isolation, vorwärts gerichtetes Renewal und kofinale positive Kompatibilität bleiben offen.
 
 Offene Obligationen:
 
-- `MOVING-PROFILE-RESERVE-RENEWAL`: Erneuerbare Low/Profile-Reserve konstruieren — Echte kritische Ränge 5/6/8, injektiver Spektraltransport und kanonische Ergänzungen der Dimension 1/2 je Parität sind bis A11 hergeleitet; ihre äußere Masse ist rigoros eingeschlossen. Offen bleibt ein energiegewichteter relativer kappa-Test zwischen transportiertem altem Raum und E sowie eine allgemeine erneuerbare Low-Schur-Positivität.
+- `CANONICAL-SCHUR-MAXIMIZER-ISOLATION`: Tatsächlichen schlechtesten Schurmodus isolieren — Zusätzliche gekoppelte Projektor-/Überlappbeziehungen zwischen Y, N und den Momenten müssen die exakten Alternativen der definierten endlichen Relaxation ausschließen. Danach tatsächlichen Eigenwertabstand und Maximiererrichtung bei A9->A11 zertifizieren und deren bandweise Projektormomente untersuchen.
+- `MOVING-PROFILE-RESERVE-RENEWAL`: Erneuerbare Low/Profile-Reserve konstruieren — Echte kanonische Resolventenmomente und starke relative Kopplung bis A11 sowie ein zertifizierter Spektralmischungsmechanismus sind hergeleitet. Die Rechnung setzt neue Terminalpositivität voraus. Offen bleiben ein unabhängiger vorwärts gerichteter Renewal-Satz und über weitere Horizonte erneuerbare positive Low-Schur-Reserven.
 - `NON-SUMMABLE-TRANSPORT`: Nicht summierbares oder uniformes Fortsetzungsgesetz beweisen — Das allgemeine rohe Wandgesetz benötigt keine Summierung kleiner Schritte. Offen bleibt eine unbeschränkte oder kofinale positive Fortsetzung mit erneuerbaren vollen Terminalreserven; der rohe Cocycle allein schließt diese Verpflichtung nicht.
 - `UNBOUNDED-HORIZON-COMPATIBILITY`: Kompatible unbeschränkte Horizontfolge konstruieren — Rohe T-/D-Cocycles sind auf jedem festen endlichen Horizont hergeleitet. Positive korrigierte Kompatibilität ist bis A11=log(11)/2 konstruiert. Eine unbeschränkte/kofinale positive Terminalfamilie und ihre vollständige Kompatibilität bleiben offen.
 
 Akzeptierter strategischer Fortschritt:
 
-- Kontrolliere die tatsächliche L2-Überlappung des alten kritischen Raums mit E relativ zu den winzigen q-Energien der beiden Blöcke.
-- Zertifiziere einen Renewal-kappa-Test in transportiertem altem Raum plus kanonischem E; der robuste vollständige Spektralrest ist q-entkoppelt.
-- Beweise eine über weitere Horizonte erneuerbare positive Low-Schur-Reserve und schließlich eine kofinale kompatible positive Terminalfamilie.
+- Nutze zusätzliche gemeinsame Projektor-/Überlappbeziehungen zwischen Annihilator Y, Koordinaten N und Momenten, um die endlichen Zertifikatsalternativen auszuschließen.
+- Zertifiziere im symmetrisch-definiten 2x2-Problem den tatsächlichen Eigenwertabstand und die Maximiererrichtung; untersuche anschließend deren bandweise Projektormomente.
+- Leite aus der lokalen Struktur einen unabhängigen vorwärts gerichteten Renewal-Satz und erneuerbare Low-Schur-Reserven ab; konstruiere schließlich eine kofinale kompatible positive Familie.
 
 Nicht ausreichend:
 
@@ -31,7 +32,7 @@ Nicht ausreichend:
 - Neue Terminalabschlüsse ohne Intertwining untereinander.
 - Mikroskopische Breitenfortsetzungen ohne kofinale Skalierungsstruktur.
 
-Verwendbare Registereinträge: `C0-DIRECTED-FORM-SYSTEM`, `C1a-COUPLED-SPECTRAL-MEDIATOR`, `C1b-ZERO-EXTENSION-INTERTWINING`, `TERMINAL-191D-DEFECT-SCHUR-A1`, `C1d-COMPATIBLE-POSITIVE-COMPLETION`, `FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7`, `FIRST-CHAMBER-O8-TERMINAL-POSITIVITY`, `POSITIVE-CORRECTED-TRANSPORT`, `X4-Q8-WALL-CROSSING`, `SECOND-CHAMBER-A9-TERMINAL-POSITIVITY`, `GENERAL-PRIME-POWER-WALL-COCYCLE`, `THIRD-CHAMBER-A11-TERMINAL-POSITIVITY`, `FINITE-HORIZON-HIGH-TAIL-REDUCTION`, `TRUE-LOW-SPECTRAL-SUBSPACE-A11`, `CANONICAL-LOW-SPECTRAL-RANKS-A8-A9-A11`, `CRITICAL-SPECTRAL-TRANSPORT`, `CANONICAL-EXTENSION-OUTER-MASS`.
+Verwendbare Registereinträge: `C0-DIRECTED-FORM-SYSTEM`, `C1a-COUPLED-SPECTRAL-MEDIATOR`, `C1b-ZERO-EXTENSION-INTERTWINING`, `TERMINAL-191D-DEFECT-SCHUR-A1`, `C1d-COMPATIBLE-POSITIVE-COMPLETION`, `FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7`, `FIRST-CHAMBER-O8-TERMINAL-POSITIVITY`, `POSITIVE-CORRECTED-TRANSPORT`, `X4-Q8-WALL-CROSSING`, `SECOND-CHAMBER-A9-TERMINAL-POSITIVITY`, `GENERAL-PRIME-POWER-WALL-COCYCLE`, `THIRD-CHAMBER-A11-TERMINAL-POSITIVITY`, `FINITE-HORIZON-HIGH-TAIL-REDUCTION`, `TRUE-LOW-SPECTRAL-SUBSPACE-A11`, `CANONICAL-LOW-SPECTRAL-RANKS-A8-A9-A11`, `CRITICAL-SPECTRAL-TRANSPORT`, `CANONICAL-EXTENSION-OUTER-MASS`, `CANONICAL-RELATIVE-KAPPA-REDUCTION`, `CANONICAL-RESOLVENT-COUPLING-BOUNDS`, `CANONICAL-SCHUR-MIXING-MECHANISM`, `CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE`.
 
 ## Globale Weil-Testklasse und fensterunabhängiger Readout
 

@@ -1120,3 +1120,138 @@ Does not claim:
 - Externe analytische Gesamtbegutachtung, Geburt kritischer Richtungen an bestimmten Wänden oder Kanalzuordnung.
 
 Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/c19c655d79f9be59b7c18fb0042783f5e4a0ab49/research/x-c1/renewable-low-schur-spectral-2026-09-29/07-canonical-extension-outer-mass/verification.json), [a8_gap_verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/c19c655d79f9be59b7c18fb0042783f5e4a0ab49/research/x-c1/renewable-low-schur-spectral-2026-09-29/07-canonical-extension-outer-mass/a8_gap_verification.json).
+
+## CANONICAL-RELATIVE-KAPPA-REDUCTION
+
+Exakte relative Schurkopplung auf kanonischen Ergänzungsräumen
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Exakte relative Schur-kappa-Reduktion auf Energie und inverse Energie des echten kanonischen E; konservative geerbte Restuntergrenzen auf dem bereits positiven Horizont bis A11.
+- Canonical commit: [b5dc05f](https://github.com/Waschtl904/objekt-x-programm/commit/b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d).
+- Canonical proof: [research/x-c1/canonical-schur-coupling-2026-09-30/01-relative-kappa/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d/research/x-c1/canonical-schur-coupling-2026-09-30/01-relative-kappa/PROOF.md).
+- depends_on: `CANONICAL-EXTENSION-OUTER-MASS`, `CRITICAL-SPECTRAL-TRANSPORT`, `THIRD-CHAMBER-A11-TERMINAL-POSITIVITY`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: Die Alternativen betreffen nur die definierte endliche Zertifikatsrelaxation; kein No-Go für den ursprünglichen Operator oder allgemeines Renewal.
+
+Aussage:
+
+- Für die quadrierte Kopplungsnorm gilt exakt 1-kappa=1/lambda_max(D^(1/2) H D^(1/2)), wobei H die Kompression der Inversen ist und im Allgemeinen nicht D^-1.
+- Die Auswertung reduziert sich auf Energie und inverse Energie des echten kanonischen E der Dimension 1 bzw. 2. Geerbte Terminalböden liefern konservative positive Restuntergrenzen, ohne die tatsächliche Größenordnung zu bestimmen.
+
+Does not claim:
+
+- Vorwärts gerichteter allgemeiner Renewal-Satz oder kofinale positive Terminalfamilie.
+- Isolation des tatsächlichen schlechtesten Schurmodus oder Entartung des ursprünglichen Operators.
+- Realisierbarkeit der endlichen Zertifikatsalternativen durch die vollständigen ursprünglichen Operatoren und Projektoren.
+- A13-Positivität, globales Objekt X, globale Weil-Positivität oder RH.
+- Abgeschlossene externe analytische Gesamtprüfung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d/research/x-c1/canonical-schur-coupling-2026-09-30/01-relative-kappa/verification.json).
+
+## CANONICAL-RESOLVENT-COUPLING-BOUNDS
+
+Echte kanonische Resolventenmomente und starke relative Kopplung
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Rigorose beidseitige Resolventenmomente und relative kappa-Grenzen auf den echten kanonischen Ergänzungen A8->A9 und A9->A11, beide Paritäten; vollständige Low-/High-Antwort.
+- Canonical commit: [b5dc05f](https://github.com/Waschtl904/objekt-x-programm/commit/b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d).
+- Canonical proof: [research/x-c1/canonical-schur-coupling-2026-09-30/02-resolvent-moments/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d/research/x-c1/canonical-schur-coupling-2026-09-30/02-resolvent-moments/PROOF.md).
+- depends_on: `CANONICAL-EXTENSION-OUTER-MASS`, `CRITICAL-SPECTRAL-TRANSPORT`, `THIRD-CHAMBER-A11-TERMINAL-POSITIVITY`, `CANONICAL-RELATIVE-KAPPA-REDUCTION`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Die Alternativen betreffen nur die definierte endliche Zertifikatsrelaxation; kein No-Go für den ursprünglichen Operator oder allgemeines Renewal.
+
+Aussage:
+
+- Vier rigorose Intervalle für 1-kappa: A8->A9 gerade [3.2619e-9,2.1432e-7], ungerade [2.0081e-9,3.1340e-5]; A9->A11 gerade [5.2319e-17,3.0103e-12], ungerade [3.1660e-17,3.5804e-11]. Alle Grenzen nach außen gerundet.
+- Die starke Kopplung besteht auf den echten kanonischen Räumen und verwendet keine grobe globale Q^-1-Schranke. Der zweite relative Rest ist mindestens um Faktor 1000 gerade und 50 ungerade kleiner als der erste.
+- Richtungsweiser Annihilator, physische Gram-Matrix und vollständige Low-/High-Resolventenantwort werden mitgeführt. Bereits bekannte neue Terminalpositivität ist Voraussetzung; kein unabhängiger vorwärts gerichteter Renewal-Satz.
+
+Does not claim:
+
+- Vorwärts gerichteter allgemeiner Renewal-Satz oder kofinale positive Terminalfamilie.
+- Isolation des tatsächlichen schlechtesten Schurmodus oder Entartung des ursprünglichen Operators.
+- Realisierbarkeit der endlichen Zertifikatsalternativen durch die vollständigen ursprünglichen Operatoren und Projektoren.
+- A13-Positivität, globales Objekt X, globale Weil-Positivität oder RH.
+- Abgeschlossene externe analytische Gesamtprüfung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d/research/x-c1/canonical-schur-coupling-2026-09-30/02-resolvent-moments/verification.json).
+
+## CANONICAL-SCHUR-MIXING-MECHANISM
+
+Zertifizierter Schur-Mechanismus durch spektrale Energiemischung
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Zertifizierte kanonische Zeugen: kleiner Überlapp mit schwacher Quelle, großes inverses Moment und starke relative Schurkopplung sowie getrennte gewöhnliche und inverse spektrale Energieanteile.
+- Canonical commit: [b5dc05f](https://github.com/Waschtl904/objekt-x-programm/commit/b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d).
+- Canonical proof: [research/x-c1/canonical-schur-coupling-2026-09-30/03-schur-mechanism/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d/research/x-c1/canonical-schur-coupling-2026-09-30/03-schur-mechanism/PROOF.md).
+- depends_on: `CANONICAL-EXTENSION-OUTER-MASS`, `CRITICAL-SPECTRAL-TRANSPORT`, `THIRD-CHAMBER-A11-TERMINAL-POSITIVITY`, `CANONICAL-RESOLVENT-COUPLING-BOUNDS`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Die Alternativen betreffen nur die definierte endliche Zertifikatsrelaxation; kein No-Go für den ursprünglichen Operator oder allgemeines Renewal.
+
+Aussage:
+
+- Ein zertifizierter Überlapp alpha mit einer Hilfsquelle der Energie höchstens q_j erzwingt für denselben echten kanonischen Zeugen das inverse Moment mindestens alpha^2/q_j und einen großen generalisierten Schurquotienten.
+- Für A9->A11 liegen mindestens drei Viertel der inversen Energie bei lambda<=3.35274e-21 gerade bzw. 1.29126e-18 ungerade, und mindestens die Hälfte der gewöhnlichen Energie bei lambda>=3.05815e-10 bzw. 2.01648e-8.
+- Dies sind Energieanteile, keine L2-Massenanteile; die Hilfsquellen sind keine identifizierten Eigenvektoren. Der tatsächliche Maximierer bleibt offen.
+
+Does not claim:
+
+- Vorwärts gerichteter allgemeiner Renewal-Satz oder kofinale positive Terminalfamilie.
+- Isolation des tatsächlichen schlechtesten Schurmodus oder Entartung des ursprünglichen Operators.
+- Realisierbarkeit der endlichen Zertifikatsalternativen durch die vollständigen ursprünglichen Operatoren und Projektoren.
+- A13-Positivität, globales Objekt X, globale Weil-Positivität oder RH.
+- Abgeschlossene externe analytische Gesamtprüfung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d/research/x-c1/canonical-schur-coupling-2026-09-30/03-schur-mechanism/verification.json).
+
+## CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE
+
+Restkorollar und Grenzen der endlichen Extremalzertifikate
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Vier verbesserte Restobergrenzen als Korollar; symmetrisches Extremalproblem und exakte Alternativen in der ausdrücklich definierten gemeinsamen endlichen Zertifikatsrelaxation. Tatsächliche Maximierer und tatsächlicher Eigenwertabstand bleiben offen.
+- Canonical commit: [b5dc05f](https://github.com/Waschtl904/objekt-x-programm/commit/b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d).
+- Canonical proof: [research/x-c1/canonical-schur-coupling-2026-09-30/04-extremal-gate/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d/research/x-c1/canonical-schur-coupling-2026-09-30/04-extremal-gate/PROOF.md).
+- depends_on: `CANONICAL-EXTENSION-OUTER-MASS`, `CRITICAL-SPECTRAL-TRANSPORT`, `THIRD-CHAMBER-A11-TERMINAL-POSITIVITY`, `CANONICAL-SCHUR-MIXING-MECHANISM`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: Die Alternativen betreffen nur die definierte endliche Zertifikatsrelaxation; kein No-Go für den ursprünglichen Operator oder allgemeines Renewal.
+
+Aussage:
+
+- Strenge Korollargrenzen: 1-kappa<1.996e-7 und 2.477e-5 für A8->A9, <1.371e-12 und 8.005e-12 für A9->A11, jeweils gerade/ungerade.
+- Das symmetrisch-definite Problem R0 x=beta M0 x mit M0=B0 L0^-1 B0 erlaubt positive Cholesky-Nennergrenzen; die gespeicherten Intervalle erzwingen in keiner Parität einen positiven Eigenwertabstand.
+- Exakte Alternativen innerhalb der ausdrücklich definierten gemeinsamen endlichen Zertifikatsrelaxation erlauben unterschiedliche Maximierer und ungerade auch R0=beta M0. Keine Realisierungsbehauptung über vollständige ursprüngliche Operatoren und Projektoren, kein Entartungsbeweis für den echten Operator.
+
+Does not claim:
+
+- Vorwärts gerichteter allgemeiner Renewal-Satz oder kofinale positive Terminalfamilie.
+- Isolation des tatsächlichen schlechtesten Schurmodus oder Entartung des ursprünglichen Operators.
+- Realisierbarkeit der endlichen Zertifikatsalternativen durch die vollständigen ursprünglichen Operatoren und Projektoren.
+- A13-Positivität, globales Objekt X, globale Weil-Positivität oder RH.
+- Abgeschlossene externe analytische Gesamtprüfung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d/research/x-c1/canonical-schur-coupling-2026-09-30/04-extremal-gate/verification.json).
