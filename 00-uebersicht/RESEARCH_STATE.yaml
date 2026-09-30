@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "render_version": 6,
-  "state_date": "2026-09-29",
+  "state_date": "2026-09-30",
   "repository": "Waschtl904/objekt-x-programm",
   "published_baseline": {
     "branch": "main",
-    "sha": "742694d3b307b8716172f6265cf8805b5e2b7011",
+    "sha": "fc4ff51a3fd884596bb60e0ed0e783693a31954d",
     "integration_status": "MERGED",
-    "meaning": "Integrierte siebenblöckige Spektral-/Renewal-Familie nach PR #189, Beweishead c19c655d79f9be59b7c18fb0042783f5e4a0ab49. Main-Replay 36525210364 erfolgreich; Registry-CI separat gebunden. Globaler Verifikationssnapshot unverändert. Frühere Provenienz: Gepinnter integrierter Forschungsstand nach PR #183: zusammenhängende O10–A11-Kette, Beweis-/Paketcommit 0b7c707c4c95f56bd8079ea44019a2d3f4cfce60. Erfolgreiche Main-Reproduktion 36378212734, Versuch 1; Registry-CI separat gebunden. Der globale mathematische Verifikationssnapshot bleibt unverändert. Frühere Integrationsprovenienz: Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
+    "meaning": "Integrierte vierblöckige kanonische Schurkopplungsfamilie nach PR #191, Beweishead b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d. Main-Zertifikatreplay 36671245348 erfolgreich mit geprüftem Artefakt; abgeschlossene große Arb-Läufe bleiben gebundene Eingaben. Registry-CI separat gebunden; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte siebenblöckige Spektral-/Renewal-Familie nach PR #189, Beweishead c19c655d79f9be59b7c18fb0042783f5e4a0ab49. Main-Replay 36525210364 erfolgreich; Registry-CI separat gebunden. Globaler Verifikationssnapshot unverändert. Frühere Provenienz: Gepinnter integrierter Forschungsstand nach PR #183: zusammenhängende O10–A11-Kette, Beweis-/Paketcommit 0b7c707c4c95f56bd8079ea44019a2d3f4cfce60. Erfolgreiche Main-Reproduktion 36378212734, Versuch 1; Registry-CI separat gebunden. Der globale mathematische Verifikationssnapshot bleibt unverändert. Frühere Integrationsprovenienz: Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
   },
   "verified_research_snapshot": {
     "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
@@ -45,8 +45,9 @@
       "title": "Unbeschränkte Horizonterweiterung und kompatibler Transport",
       "mathematical_status": "OPEN",
       "strategic_status": "ACTIVE_FRONT",
-      "target_scope": "Drei positive Kammern bis A11 und allgemeiner hoher Tail sind vorhanden. Der niedrige echte Spektralraum hat bei q/b=10^-4 die Ränge 5/6/8 je Parität. Injektiver kritischer Transport, kanonische Ergänzungen und deren äußere Masse sind hergeleitet. Offen bleibt relative energiegewichtete Kopplungskontrolle als Schritt zur allgemeinen Low-Schur-Erneuerung; kofinale positive Kompatibilität bleibt offen.",
+      "target_scope": "Drei positive Kammern bis A11, kritische Ränge 5/6/8 und kanonischer Spektraltransport sind vorhanden. Die echte relative Kopplung ist rigoros nahe eins; ein kanonischer Zeuge zeigt Mischung weit getrennter spektraler Energieskalen. Tatsächliche Maximierer-Isolation, vorwärts gerichtetes Renewal und kofinale positive Kompatibilität bleiben offen.",
       "obligation_ids": [
+        "CANONICAL-SCHUR-MAXIMIZER-ISOLATION",
         "MOVING-PROFILE-RESERVE-RENEWAL",
         "NON-SUMMABLE-TRANSPORT",
         "UNBOUNDED-HORIZON-COMPATIBILITY"
@@ -68,13 +69,17 @@
         "TRUE-LOW-SPECTRAL-SUBSPACE-A11",
         "CANONICAL-LOW-SPECTRAL-RANKS-A8-A9-A11",
         "CRITICAL-SPECTRAL-TRANSPORT",
-        "CANONICAL-EXTENSION-OUTER-MASS"
+        "CANONICAL-EXTENSION-OUTER-MASS",
+        "CANONICAL-RELATIVE-KAPPA-REDUCTION",
+        "CANONICAL-RESOLVENT-COUPLING-BOUNDS",
+        "CANONICAL-SCHUR-MIXING-MECHANISM",
+        "CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE"
       ],
-      "candidate": "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+      "candidate": "CANONICAL-SCHUR-MIXING-MECHANISM",
       "accepted_progress": [
-        "Kontrolliere die tatsächliche L2-Überlappung des alten kritischen Raums mit E relativ zu den winzigen q-Energien der beiden Blöcke.",
-        "Zertifiziere einen Renewal-kappa-Test in transportiertem altem Raum plus kanonischem E; der robuste vollständige Spektralrest ist q-entkoppelt.",
-        "Beweise eine über weitere Horizonte erneuerbare positive Low-Schur-Reserve und schließlich eine kofinale kompatible positive Terminalfamilie."
+        "Nutze zusätzliche gemeinsame Projektor-/Überlappbeziehungen zwischen Annihilator Y, Koordinaten N und Momenten, um die endlichen Zertifikatsalternativen auszuschließen.",
+        "Zertifiziere im symmetrisch-definiten 2x2-Problem den tatsächlichen Eigenwertabstand und die Maximiererrichtung; untersuche anschließend deren bandweise Projektormomente.",
+        "Leite aus der lokalen Struktur einen unabhängigen vorwärts gerichteten Renewal-Satz und erneuerbare Low-Schur-Reserven ab; konstruiere schließlich eine kofinale kompatible positive Familie."
       ],
       "insufficient": [
         "O1–O7 oder die Schranke ||R_A||<=sqrt(90) als Kontraktion oder neue Terminalpositivität ausgeben.",
@@ -115,7 +120,7 @@
       "id": "MOVING-PROFILE-RESERVE-RENEWAL",
       "title": "Erneuerbare Low/Profile-Reserve konstruieren",
       "mathematical_status": "OPEN",
-      "scope": "Echte kritische Ränge 5/6/8, injektiver Spektraltransport und kanonische Ergänzungen der Dimension 1/2 je Parität sind bis A11 hergeleitet; ihre äußere Masse ist rigoros eingeschlossen. Offen bleibt ein energiegewichteter relativer kappa-Test zwischen transportiertem altem Raum und E sowie eine allgemeine erneuerbare Low-Schur-Positivität."
+      "scope": "Echte kanonische Resolventenmomente und starke relative Kopplung bis A11 sowie ein zertifizierter Spektralmischungsmechanismus sind hergeleitet. Die Rechnung setzt neue Terminalpositivität voraus. Offen bleiben ein unabhängiger vorwärts gerichteter Renewal-Satz und über weitere Horizonte erneuerbare positive Low-Schur-Reserven."
     },
     {
       "id": "NON-SUMMABLE-TRANSPORT",
@@ -136,28 +141,10 @@
       "scope": "Exakte Normalisierung, kanonischer globaler Readout und nichtzirkuläre Rückbindung an das Weil-Kriterium."
     },
     {
-      "id": "CANONICAL-RELATIVE-KAPPA-REDUCTION",
-      "title": "CANONICAL RELATIVE KAPPA REDUCTION",
+      "id": "CANONICAL-SCHUR-MAXIMIZER-ISOLATION",
+      "title": "Tatsächlichen schlechtesten Schurmodus isolieren",
       "mathematical_status": "OPEN",
-      "scope": "Exakte relative Schur-kappa-Reduktion auf Energie und inverse Energie des echten kanonischen E; konservative geerbte Restuntergrenzen auf dem bereits positiven Horizont bis A11. Registry-Übernahme nach Integration; diese Paketobligation ist keine Maximierer-Isolation."
-    },
-    {
-      "id": "CANONICAL-RESOLVENT-COUPLING-BOUNDS",
-      "title": "CANONICAL RESOLVENT COUPLING BOUNDS",
-      "mathematical_status": "OPEN",
-      "scope": "Rigorose beidseitige Resolventenmomente und relative kappa-Grenzen auf den echten kanonischen Ergänzungen A8->A9 und A9->A11, beide Paritäten; vollständige Low-/High-Antwort. Registry-Übernahme nach Integration; diese Paketobligation ist keine Maximierer-Isolation."
-    },
-    {
-      "id": "CANONICAL-SCHUR-MIXING-MECHANISM",
-      "title": "CANONICAL SCHUR MIXING MECHANISM",
-      "mathematical_status": "OPEN",
-      "scope": "Zertifizierte kanonische Zeugen: kleiner Überlapp mit schwacher Quelle, großes inverses Moment und starke relative Schurkopplung sowie getrennte gewöhnliche und inverse spektrale Energieanteile. Registry-Übernahme nach Integration; diese Paketobligation ist keine Maximierer-Isolation."
-    },
-    {
-      "id": "CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE",
-      "title": "CANONICAL SCHUR EXTREMAL CERTIFICATE GATE",
-      "mathematical_status": "OPEN",
-      "scope": "Vier verbesserte Restobergrenzen als Korollar; symmetrisches Extremalproblem und exakte Alternativen in der ausdrücklich definierten gemeinsamen endlichen Zertifikatsrelaxation. Tatsächliche Maximierer und tatsächlicher Eigenwertabstand bleiben offen. Registry-Übernahme nach Integration; diese Paketobligation ist keine Maximierer-Isolation."
+      "scope": "Zusätzliche gekoppelte Projektor-/Überlappbeziehungen zwischen Y, N und den Momenten müssen die exakten Alternativen der definierten endlichen Relaxation ausschließen. Danach tatsächlichen Eigenwertabstand und Maximiererrichtung bei A9->A11 zertifizieren und deren bandweise Projektormomente untersuchen."
     }
   ],
   "results": [
@@ -1526,6 +1513,172 @@
         "Globales Objekt X, globale Weil-Positivität oder RH.",
         "Externe analytische Gesamtbegutachtung, Geburt kritischer Richtungen an bestimmten Wänden oder Kanalzuordnung."
       ]
+    },
+    {
+      "id": "CANONICAL-RELATIVE-KAPPA-REDUCTION",
+      "title": "Exakte relative Schurkopplung auf kanonischen Ergänzungsräumen",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d",
+          "path": "research/x-c1/canonical-schur-coupling-2026-09-30/01-relative-kappa/verification.json",
+          "sha256": "1cd6b6eba78c1d01cb857ffebf118c0d57e3ff8fe0e685624060ec40a223643d"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "Exakte relative Schur-kappa-Reduktion auf Energie und inverse Energie des echten kanonischen E; konservative geerbte Restuntergrenzen auf dem bereits positiven Horizont bis A11.",
+      "claim": [
+        "Für die quadrierte Kopplungsnorm gilt exakt 1-kappa=1/lambda_max(D^(1/2) H D^(1/2)), wobei H die Kompression der Inversen ist und im Allgemeinen nicht D^-1.",
+        "Die Auswertung reduziert sich auf Energie und inverse Energie des echten kanonischen E der Dimension 1 bzw. 2. Geerbte Terminalböden liefern konservative positive Restuntergrenzen, ohne die tatsächliche Größenordnung zu bestimmen."
+      ],
+      "depends_on": [
+        "CANONICAL-EXTENSION-OUTER-MASS",
+        "CRITICAL-SPECTRAL-TRANSPORT",
+        "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d",
+      "canonical_proof": "research/x-c1/canonical-schur-coupling-2026-09-30/01-relative-kappa/PROOF.md",
+      "proof_sha256": "454e7690df5ed75d015cdb80333f2d43e41cbee5c8b1f9f24f617ee5bc518361",
+      "negative_claim_boundary": "Die Alternativen betreffen nur die definierte endliche Zertifikatsrelaxation; kein No-Go für den ursprünglichen Operator oder allgemeines Renewal.",
+      "does_not_claim": [
+        "Vorwärts gerichteter allgemeiner Renewal-Satz oder kofinale positive Terminalfamilie.",
+        "Isolation des tatsächlichen schlechtesten Schurmodus oder Entartung des ursprünglichen Operators.",
+        "Realisierbarkeit der endlichen Zertifikatsalternativen durch die vollständigen ursprünglichen Operatoren und Projektoren.",
+        "A13-Positivität, globales Objekt X, globale Weil-Positivität oder RH.",
+        "Abgeschlossene externe analytische Gesamtprüfung."
+      ]
+    },
+    {
+      "id": "CANONICAL-RESOLVENT-COUPLING-BOUNDS",
+      "title": "Echte kanonische Resolventenmomente und starke relative Kopplung",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d",
+          "path": "research/x-c1/canonical-schur-coupling-2026-09-30/02-resolvent-moments/verification.json",
+          "sha256": "9bc3317cad17b4c5a9db4a2eb765daf789f222d5bda37079bde8a4e943eacebd"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "Rigorose beidseitige Resolventenmomente und relative kappa-Grenzen auf den echten kanonischen Ergänzungen A8->A9 und A9->A11, beide Paritäten; vollständige Low-/High-Antwort.",
+      "claim": [
+        "Vier rigorose Intervalle für 1-kappa: A8->A9 gerade [3.2619e-9,2.1432e-7], ungerade [2.0081e-9,3.1340e-5]; A9->A11 gerade [5.2319e-17,3.0103e-12], ungerade [3.1660e-17,3.5804e-11]. Alle Grenzen nach außen gerundet.",
+        "Die starke Kopplung besteht auf den echten kanonischen Räumen und verwendet keine grobe globale Q^-1-Schranke. Der zweite relative Rest ist mindestens um Faktor 1000 gerade und 50 ungerade kleiner als der erste.",
+        "Richtungsweiser Annihilator, physische Gram-Matrix und vollständige Low-/High-Resolventenantwort werden mitgeführt. Bereits bekannte neue Terminalpositivität ist Voraussetzung; kein unabhängiger vorwärts gerichteter Renewal-Satz."
+      ],
+      "depends_on": [
+        "CANONICAL-EXTENSION-OUTER-MASS",
+        "CRITICAL-SPECTRAL-TRANSPORT",
+        "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+        "CANONICAL-RELATIVE-KAPPA-REDUCTION"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d",
+      "canonical_proof": "research/x-c1/canonical-schur-coupling-2026-09-30/02-resolvent-moments/PROOF.md",
+      "proof_sha256": "f457b07997c70e92fbc2e6e96b2358fde9ab91b67b3f899338b8211b708be77e",
+      "negative_claim_boundary": "Die Alternativen betreffen nur die definierte endliche Zertifikatsrelaxation; kein No-Go für den ursprünglichen Operator oder allgemeines Renewal.",
+      "does_not_claim": [
+        "Vorwärts gerichteter allgemeiner Renewal-Satz oder kofinale positive Terminalfamilie.",
+        "Isolation des tatsächlichen schlechtesten Schurmodus oder Entartung des ursprünglichen Operators.",
+        "Realisierbarkeit der endlichen Zertifikatsalternativen durch die vollständigen ursprünglichen Operatoren und Projektoren.",
+        "A13-Positivität, globales Objekt X, globale Weil-Positivität oder RH.",
+        "Abgeschlossene externe analytische Gesamtprüfung."
+      ]
+    },
+    {
+      "id": "CANONICAL-SCHUR-MIXING-MECHANISM",
+      "title": "Zertifizierter Schur-Mechanismus durch spektrale Energiemischung",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d",
+          "path": "research/x-c1/canonical-schur-coupling-2026-09-30/03-schur-mechanism/verification.json",
+          "sha256": "d5a56bd597d58f6ce6579718833121fe243e625eb31963f63e66b0d1401e998d"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "Zertifizierte kanonische Zeugen: kleiner Überlapp mit schwacher Quelle, großes inverses Moment und starke relative Schurkopplung sowie getrennte gewöhnliche und inverse spektrale Energieanteile.",
+      "claim": [
+        "Ein zertifizierter Überlapp alpha mit einer Hilfsquelle der Energie höchstens q_j erzwingt für denselben echten kanonischen Zeugen das inverse Moment mindestens alpha^2/q_j und einen großen generalisierten Schurquotienten.",
+        "Für A9->A11 liegen mindestens drei Viertel der inversen Energie bei lambda<=3.35274e-21 gerade bzw. 1.29126e-18 ungerade, und mindestens die Hälfte der gewöhnlichen Energie bei lambda>=3.05815e-10 bzw. 2.01648e-8.",
+        "Dies sind Energieanteile, keine L2-Massenanteile; die Hilfsquellen sind keine identifizierten Eigenvektoren. Der tatsächliche Maximierer bleibt offen."
+      ],
+      "depends_on": [
+        "CANONICAL-EXTENSION-OUTER-MASS",
+        "CRITICAL-SPECTRAL-TRANSPORT",
+        "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+        "CANONICAL-RESOLVENT-COUPLING-BOUNDS"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d",
+      "canonical_proof": "research/x-c1/canonical-schur-coupling-2026-09-30/03-schur-mechanism/PROOF.md",
+      "proof_sha256": "6fc8f63b88bdd26ae925521c8c33ff83d142cb73321547ed4e514f43b11f0891",
+      "negative_claim_boundary": "Die Alternativen betreffen nur die definierte endliche Zertifikatsrelaxation; kein No-Go für den ursprünglichen Operator oder allgemeines Renewal.",
+      "does_not_claim": [
+        "Vorwärts gerichteter allgemeiner Renewal-Satz oder kofinale positive Terminalfamilie.",
+        "Isolation des tatsächlichen schlechtesten Schurmodus oder Entartung des ursprünglichen Operators.",
+        "Realisierbarkeit der endlichen Zertifikatsalternativen durch die vollständigen ursprünglichen Operatoren und Projektoren.",
+        "A13-Positivität, globales Objekt X, globale Weil-Positivität oder RH.",
+        "Abgeschlossene externe analytische Gesamtprüfung."
+      ]
+    },
+    {
+      "id": "CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE",
+      "title": "Restkorollar und Grenzen der endlichen Extremalzertifikate",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d",
+          "path": "research/x-c1/canonical-schur-coupling-2026-09-30/04-extremal-gate/verification.json",
+          "sha256": "99a20a0d4eaad87e44fed6878db5f55b849bf4b750694d14c582578147998281"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "Vier verbesserte Restobergrenzen als Korollar; symmetrisches Extremalproblem und exakte Alternativen in der ausdrücklich definierten gemeinsamen endlichen Zertifikatsrelaxation. Tatsächliche Maximierer und tatsächlicher Eigenwertabstand bleiben offen.",
+      "claim": [
+        "Strenge Korollargrenzen: 1-kappa<1.996e-7 und 2.477e-5 für A8->A9, <1.371e-12 und 8.005e-12 für A9->A11, jeweils gerade/ungerade.",
+        "Das symmetrisch-definite Problem R0 x=beta M0 x mit M0=B0 L0^-1 B0 erlaubt positive Cholesky-Nennergrenzen; die gespeicherten Intervalle erzwingen in keiner Parität einen positiven Eigenwertabstand.",
+        "Exakte Alternativen innerhalb der ausdrücklich definierten gemeinsamen endlichen Zertifikatsrelaxation erlauben unterschiedliche Maximierer und ungerade auch R0=beta M0. Keine Realisierungsbehauptung über vollständige ursprüngliche Operatoren und Projektoren, kein Entartungsbeweis für den echten Operator."
+      ],
+      "depends_on": [
+        "CANONICAL-EXTENSION-OUTER-MASS",
+        "CRITICAL-SPECTRAL-TRANSPORT",
+        "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY",
+        "CANONICAL-SCHUR-MIXING-MECHANISM"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d",
+      "canonical_proof": "research/x-c1/canonical-schur-coupling-2026-09-30/04-extremal-gate/PROOF.md",
+      "proof_sha256": "eb8602cc64a839241a166f9405f4f373031d3431960f97d168773c0401be3d99",
+      "negative_claim_boundary": "Die Alternativen betreffen nur die definierte endliche Zertifikatsrelaxation; kein No-Go für den ursprünglichen Operator oder allgemeines Renewal.",
+      "does_not_claim": [
+        "Vorwärts gerichteter allgemeiner Renewal-Satz oder kofinale positive Terminalfamilie.",
+        "Isolation des tatsächlichen schlechtesten Schurmodus oder Entartung des ursprünglichen Operators.",
+        "Realisierbarkeit der endlichen Zertifikatsalternativen durch die vollständigen ursprünglichen Operatoren und Projektoren.",
+        "A13-Positivität, globales Objekt X, globale Weil-Positivität oder RH.",
+        "Abgeschlossene externe analytische Gesamtprüfung."
+      ]
     }
   ],
   "global_status": {
@@ -1639,28 +1792,7 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [
-    {
-      "id": "CANONICAL-RELATIVE-KAPPA-REDUCTION",
-      "meta_path": "research/x-c1/canonical-schur-coupling-2026-09-30/01-relative-kappa/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    },
-    {
-      "id": "CANONICAL-RESOLVENT-COUPLING-BOUNDS",
-      "meta_path": "research/x-c1/canonical-schur-coupling-2026-09-30/02-resolvent-moments/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    },
-    {
-      "id": "CANONICAL-SCHUR-MIXING-MECHANISM",
-      "meta_path": "research/x-c1/canonical-schur-coupling-2026-09-30/03-schur-mechanism/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    },
-    {
-      "id": "CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE",
-      "meta_path": "research/x-c1/canonical-schur-coupling-2026-09-30/04-extremal-gate/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    }
-  ],
+  "pending_packages": [],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",
@@ -1677,15 +1809,15 @@
     }
   },
   "current_integration_observation": {
-    "observed_at": "2026-09-29",
-    "main_sha": "742694d3b307b8716172f6265cf8805b5e2b7011",
+    "observed_at": "2026-09-30",
+    "main_sha": "fc4ff51a3fd884596bb60e0ed0e783693a31954d",
     "integrated_research_branch": "research/first-chamber-o8-o9-2026-09-27",
-    "integrated_research_head": "c19c655d79f9be59b7c18fb0042783f5e4a0ab49",
-    "reconciliation_merge": "742694d3b307b8716172f6265cf8805b5e2b7011",
-    "ci_run_id": 36525210546,
+    "integrated_research_head": "b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d",
+    "reconciliation_merge": "fc4ff51a3fd884596bb60e0ed0e783693a31954d",
+    "ci_run_id": 36671245368,
     "ci_run_attempt": 1,
-    "ci_head_sha": "742694d3b307b8716172f6265cf8805b5e2b7011",
-    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/36525210546",
+    "ci_head_sha": "fc4ff51a3fd884596bb60e0ed0e783693a31954d",
+    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/36671245368",
     "ci_conclusion": "success",
     "mathematical_status_change": false
   }
