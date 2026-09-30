@@ -1,0 +1,13 @@
+{
+  "source_commit": "8a82b7a972172c45cc4d3bc0297cc7fc0bbb2c7b",
+  "integration_base": "c53856b453564621a06124b7ec4f85a27acfa727",
+  "projected_archive_sha256": "6fda15548fe850146806604ec1272f68ea5db62684b76d440f9e62aa26fa882b",
+  "sha256": {
+    "primary.json": "d0e40cc46987efc6076a64f4b5823d2038219af688a4760cc02bb7ecb6b6920d",
+    "crosscheck.json": "b5d3887b5f94653eabf148140faed0f646f8dacc30f38ebe16e551f9ad0c9d0d",
+    "outer_primary.json": "67140aada68ed5904c5d7f54b9fbaf6148648b554b15e0a0900b2814c35c61d4",
+    "projected_verification.json": "95ce886b03f23030b013a7b14a220cb37e7846f2e9ff5e3eb036b6a819cb01c8",
+    "projected_source_audit.json": "19e3fd41689aaf1fe652d731df4ee4966005b6281008559852ce9d6eb3b32e00",
+    "resolvent_verification.json": "9bc3317cad17b4c5a9db4a2eb765daf789f222d5bda37079bde8a4e943eacebd"
+  }
+}

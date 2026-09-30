@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS",
+  "date": "2026-09-30",
+  "kind": "THEOREM",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Gemeinsame Projektor-, Massen-, Energie- und inverse Energiemomente auf kanonischen Räumen; Ausschluss der beiden axis_one-Alternativen und der ungeraden double-Alternative der früheren endlichen Relaxation.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "Ausschlüsse gelten für die ausdrücklich angegebenen gemeinsamen Bedingungen. Der Schurdefekt-Gap folgt aus dem Diskriminantenblock; keine zweite unabhängige Gap-Zertifizierung und kein globaler No-Go-Satz.",
+  "depends_on": [
+    "CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE",
+    "CANONICAL-RESOLVENT-COUPLING-BOUNDS"
+  ],
+  "closes": [
+    "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Lokalisierung der ungeraden physischen Maximiererrichtung oder bandweise Momente des tatsächlichen Maximierers.",
+    "Allgemeiner vorwärts gerichteter Renewal-Satz, vierte Kammer oder A13-Positivität.",
+    "Kofinale positive Familie, globales Objekt X, globale Weil-Positivität oder RH.",
+    "Abgeschlossene externe analytische Gesamtprüfung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/canonical-joint-maximizers-2026-09-30/01-projected-overlap/PROOF.md",
+    "sha256": "d0499f8cc9af34fc5c233b99ad861b217d28ee5e5178478c4cc01e7abd60fae7"
+  }
+}

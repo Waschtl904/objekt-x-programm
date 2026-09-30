@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "CANONICAL-SCHUR-DEFECT-NONPROPORTIONALITY",
+  "date": "2026-09-30",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "A9->A11: exakte Schurdefekt-Reduktion R0=M0+289 W0 mit W0 positiv semidefinit; Nichtproportionalität in beiden Paritäten als Korollar des gemeinsamen Gaps sowie direkter F1-Ausschluss gerade.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Ausschlüsse gelten für die ausdrücklich angegebenen gemeinsamen Bedingungen. Der Schurdefekt-Gap folgt aus dem Diskriminantenblock; keine zweite unabhängige Gap-Zertifizierung und kein globaler No-Go-Satz.",
+  "depends_on": [
+    "CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE",
+    "CANONICAL-RESOLVENT-COUPLING-BOUNDS",
+    "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT"
+  ],
+  "closes": [
+    "CANONICAL-SCHUR-DEFECT-NONPROPORTIONALITY"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Lokalisierung der ungeraden physischen Maximiererrichtung oder bandweise Momente des tatsächlichen Maximierers.",
+    "Allgemeiner vorwärts gerichteter Renewal-Satz, vierte Kammer oder A13-Positivität.",
+    "Kofinale positive Familie, globales Objekt X, globale Weil-Positivität oder RH.",
+    "Abgeschlossene externe analytische Gesamtprüfung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/canonical-joint-maximizers-2026-09-30/03-schur-defect/PROOF.md",
+    "sha256": "1d4fcde2f7eea1c38cd69c1837081dd0d707b36781b14d75eeabb1ae4e7003da"
+  }
+}
