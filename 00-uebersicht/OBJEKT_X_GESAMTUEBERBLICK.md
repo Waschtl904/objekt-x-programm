@@ -2,7 +2,7 @@
 
 **Stand:** 30. September 2026
 
-**Basis:** `main@fc4ff51a3fd884596bb60e0ed0e783693a31954d`
+**Basis:** `main@b882c9e74f8bb8ca4594aefb77534dd92573bcd1`
 
 **Zweck:** Verständliche Gesamterzählung des Programms – klassische Grundlagen, eigene Resultate, rigorose No-Gos, aktuelle positive C1-Geometrie und offene globale Schritte.
 
@@ -308,42 +308,52 @@ Minimums nicht jede Richtung. Die schwächste äußere Richtung bleibt überwieg
 Hilfsräume und echte Spektralräume werden durch gerichtete Projektor-/Polargrenzen verbunden.
 
 In `TK_A ⊕ E ⊕ K_B^⊥` ist der robuste Rest q-entkoppelt. Innerhalb K_B gilt
-`q_B(Tx,e)=-17<Jx,e>_L2`. Die jüngere
+`q_B(Tx,e)=-17<Jx,e>_L2`. Die
 [kanonische Schurkopplungsfamilie](../research/x-c1/canonical-schur-coupling-2026-09-30/README.md)
-reduziert die relative Kopplung exakt auf Energie und inverse Energie des echten E
-und schließt diese Momente mit vollständiger Low-/High-Antwort rigoros ein.
+reduziert die relative Kopplung auf Energie und inverse Energie des echten E.
+Die neue [gemeinsame Maximiererfamilie](../research/x-c1/canonical-joint-maximizers-2026-09-30/README.md)
+verschärft Projektor- und Spektralmomente und schließt damit die beiden
+früheren `axis_one`-Alternativen und die ungerade `double`-Alternative aus.
 
-Die Einleitung der verlinkten Paketübersicht bewahrt den historischen Stand vor
-der Registry-Übernahme. Die vier Ergebnisgruppen sind inzwischen im
-[Forschungsregister](RESEARCH_STATE.yaml) übernommen; dessen Statusangaben sind maßgeblich.
+Die Paketberichte bewahren ihren damaligen Veröffentlichungsstand. Für den
+aktuellen Integrationsstatus gilt das [Forschungsregister](RESEARCH_STATE.yaml).
 
-| Übergang | Parität | Restintervall 1−κ | Strenge Korollarobergrenze |
-| --- | --- | --- | --- |
-| A8→A9 | gerade | [3.2619e-9, 2.1432e-7] | <1.996e-7 |
-| A8→A9 | ungerade | [2.0081e-9, 3.1340e-5] | <2.477e-5 |
-| A9→A11 | gerade | [5.2319e-17, 3.0103e-12] | <1.371e-12 |
-| A9→A11 | ungerade | [3.1660e-17, 3.5804e-11] | <8.005e-12 |
+Für **A9→A11** ist der tatsächliche größte generalisierte Eigenwert in
+beiden Paritäten einfach. Der Gap ist uniform positiv in der zertifizierten
+gemeinsamen Familie:
 
-κ ist die quadrierte Kopplungsnorm; die Intervalle sind nach außen gerundet.
-Die starke Kopplung liegt auf den echten kanonischen Räumen vor. Derselbe
-festgelegte kanonische Zeuge verbindet einen kleinen Überlapp mit einer sehr
-energiearmen Hilfsquelle, ein großes inverses Moment und einen großen
-generalisierten Schurquotienten. Bandweise gewöhnliche und inverse Energieanteile
-erzwingen die Mischung weit getrennter Spektralskalen. Das sind Energieanteile,
-keine L2-Massenanteile und keine Identifikation einzelner Eigenmoden.
+| Parität | β-Gap mindestens | γ-Gap mindestens | Neues Intervall für 1−κ |
+| --- | ---: | ---: | --- |
+| gerade | 2.2718906e14 | 7.8612134e11 | [2.2405890e-16, 4.3944218e-15] |
+| ungerade | 4.2806927e11 | 1.4812085e9 | [9.4820969e-17, 1.1090276e-12] |
 
-Die **tatsächliche Maximiererrichtung bleibt offen**. Im symmetrisch-definiten
-2x2-Problem liefern die vorhandenen Intervalle keinen positiven unteren
-Eigenwertabstand. Exakte Alternativen in der ausdrücklich definierten gemeinsamen
-endlichen Zertifikatsrelaxation erlauben verschiedene Maximierer und ungerade
-sogar eine doppelte Eigenzahl. Diese Alternativen sind keine bewiesenen
-Realisierungen der vollständigen ursprünglichen Operator- und Projektorgeometrie.
-Zusätzliche gekoppelte Projektor-/Überlappbeziehungen sind der nächste lokale Gate.
+Alle Grenzen sind nach außen gerundet. κ bezeichnet die quadrierte
+Kopplungsnorm. Exakt gilt `W0=Z0−G0 L0^-1 G0>=0`, `R0=M0+289 W0`
+und `β=1+289 γ`. Die γ-Gaps sind ein Korollar des gemeinsamen β-Gaps.
+`W0=γ M0` ist in beiden Paritäten ausgeschlossen; gerade liefert auch
+`F1<0` einen direkten Ausschluss. Diese Gaps betreffen den generalisierten
+Schur-Pencil, nicht das Spektrum des ursprünglichen Energieoperators Q.
 
-Die Rechnung verwendet bereits positive neue Terminals. Allgemeines vorwärts
-gerichtetes Renewal, eine kofinale positive Familie, globales Objekt X und RH
-bleiben offen. Status bleibt **AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN**;
-der globale Verifikationssnapshot wird nicht angehoben. PR #187 bleibt separat.
+Die maximierende Gerade ist für jeden zulässigen Operatorfall eindeutig.
+Das bedeutet nicht, dass alle zulässigen Matrizen dieselbe Gerade maximieren.
+Gerade gilt `x1/x2` in `[−0.0058383588,0.011976753]` und ein physischer
+L2-Winkel in `[−0.850296°,0.381324°]` in der im Beweis definierten
+orthonormalen Basis, orientiert mit `x2>0`. Der Winkel gehört zur inversen
+Antwort `V0 x`; der Winkel der Schurverschiebung ist damit nicht bestimmt.
+
+**Offen bleiben die ungerade Richtungslokalisierung und anschließend die
+bandweisen Spektralmomente des tatsächlichen Maximierers.** Die zuvor
+untersuchten Momentzeugen dürfen damit weiterhin nicht gleichgesetzt werden.
+Die älteren Gegenmodelle und offenen Gap-Aussagen beziehen sich auf die
+damalige schwächere endliche Relaxation; die neue gemeinsame Familie hat
+einen rigoros positiven Gap.
+
+Die Rechnung verwendet bereits positive neue Terminals bis A11. Allgemeines
+Renewal, vierte Kammer/A13-Positivität, eine kofinale positive Familie,
+globales Objekt X und RH bleiben offen. Status bleibt
+**AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN**; der globale Verifikationssnapshot
+wird nicht angehoben. PR #187 und der jüngere lokale ungerade Projektorblock
+bleiben außerhalb dieses Integrationsschnitts.
 
 ---
 

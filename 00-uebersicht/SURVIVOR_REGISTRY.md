@@ -1255,3 +1255,103 @@ Does not claim:
 - Abgeschlossene externe analytische Gesamtprüfung.
 
 Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d/research/x-c1/canonical-schur-coupling-2026-09-30/04-extremal-gate/verification.json).
+
+## CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS
+
+Gemeinsame kanonische Projektor- und Spektralmomente
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Gemeinsame Projektor-, Massen-, Energie- und inverse Energiemomente auf kanonischen Räumen; Ausschluss der beiden axis_one-Alternativen und der ungeraden double-Alternative der früheren endlichen Relaxation.
+- Canonical commit: [2172de3](https://github.com/Waschtl904/objekt-x-programm/commit/2172de38d0def2c4b42c255e6c1290a720e3e94e).
+- Canonical proof: [research/x-c1/canonical-joint-maximizers-2026-09-30/01-projected-overlap/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/2172de38d0def2c4b42c255e6c1290a720e3e94e/research/x-c1/canonical-joint-maximizers-2026-09-30/01-projected-overlap/PROOF.md).
+- depends_on: `CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE`, `CANONICAL-RESOLVENT-COUPLING-BOUNDS`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Ausschlüsse gelten für die ausdrücklich angegebenen gemeinsamen Bedingungen. Der Schurdefekt-Gap folgt aus dem Diskriminantenblock; keine zweite unabhängige Gap-Zertifizierung und kein globaler No-Go-Satz.
+
+Aussage:
+
+- Gemeinsam kontrollierte hohe Masse, Energie und inverse Energie sowie positive Blockmomentmatrizen desselben Spektralmaßes verschärfen Y, N und die kanonischen Kompressionen.
+- Die beiden axis_one-Alternativen der früheren endlichen Relaxation verletzen die neuen Y68-Untergrenzen; die ungerade double-Alternative verletzt drei weitere Einträge. Dieser Block allein beweist noch keinen positiven Extremalgap.
+
+Does not claim:
+
+- Lokalisierung der ungeraden physischen Maximiererrichtung oder bandweise Momente des tatsächlichen Maximierers.
+- Allgemeiner vorwärts gerichteter Renewal-Satz, vierte Kammer oder A13-Positivität.
+- Kofinale positive Familie, globales Objekt X, globale Weil-Positivität oder RH.
+- Abgeschlossene externe analytische Gesamtprüfung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/2172de38d0def2c4b42c255e6c1290a720e3e94e/research/x-c1/canonical-joint-maximizers-2026-09-30/01-projected-overlap/verification.json).
+
+## CANONICAL-JOINT-GENERALIZED-DISCRIMINANT
+
+Uniform positiver tatsächlicher Schur-Extremalgap und eindeutige Maximierer
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: A9->A11 auf dem bereits positiven Horizont: uniform positiver tatsächlicher generalisierter Eigenwertabstand und eindeutige größte Eigenwertgerade in beiden Paritäten; gerade physische inverse Antwortrichtung lokalisiert.
+- Canonical commit: [2172de3](https://github.com/Waschtl904/objekt-x-programm/commit/2172de38d0def2c4b42c255e6c1290a720e3e94e).
+- Canonical proof: [research/x-c1/canonical-joint-maximizers-2026-09-30/02-joint-discriminant/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/2172de38d0def2c4b42c255e6c1290a720e3e94e/research/x-c1/canonical-joint-maximizers-2026-09-30/02-joint-discriminant/PROOF.md).
+- depends_on: `CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE`, `CANONICAL-RESOLVENT-COUPLING-BOUNDS`, `CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Ausschlüsse gelten für die ausdrücklich angegebenen gemeinsamen Bedingungen. Der Schurdefekt-Gap folgt aus dem Diskriminantenblock; keine zweite unabhängige Gap-Zertifizierung und kein globaler No-Go-Satz.
+
+Aussage:
+
+- Für A9->A11 gilt uniform in der zertifizierten gemeinsamen Familie beta_+-beta_- >= 2.2718906e14 gerade und >= 4.2806927e11 ungerade. Damit ist die größte generalisierte Eigenwertgerade für jeden tatsächlichen Operatorfall eindeutig; verschiedene zulässige Matrizen müssen nicht dieselbe Gerade maximieren.
+- Die positive Trennung folgt aus einer gemeinsamen Spuruntergrenze und einer Minimax-Obergrenze für beta_-, unter Erhaltung von YN=0 und der gemeinsamen Faktorprodukte mit N. Der rohe Diskriminant ist in der festgelegten Basis ebenfalls uniform positiv; sein durch det(M)^2 normierter Wert ist basisunabhängig.
+- Gerade gilt x1/x2 in [-0.0058383588,0.011976753] und ein physischer L2-Winkel in [-0.850296,0.381324] Grad in der dokumentierten orthonormalen Basis, orientiert mit x2>0. Dies betrifft die inverse Antwort V0 x; der Winkel der Schurverschiebung wird damit nicht gleichgesetzt.
+- Neue nach außen gerundete Intervalle für 1-kappa: [2.2405890e-16,4.3944218e-15] gerade und [9.4820969e-17,1.1090276e-12] ungerade. Ungerade Richtungslokalisierung und bandweise Momente des tatsächlichen Maximierers bleiben offen.
+
+Does not claim:
+
+- Lokalisierung der ungeraden physischen Maximiererrichtung oder bandweise Momente des tatsächlichen Maximierers.
+- Allgemeiner vorwärts gerichteter Renewal-Satz, vierte Kammer oder A13-Positivität.
+- Kofinale positive Familie, globales Objekt X, globale Weil-Positivität oder RH.
+- Abgeschlossene externe analytische Gesamtprüfung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/2172de38d0def2c4b42c255e6c1290a720e3e94e/research/x-c1/canonical-joint-maximizers-2026-09-30/02-joint-discriminant/verification.json).
+
+## CANONICAL-SCHUR-DEFECT-NONPROPORTIONALITY
+
+Schurdefekt-Korollar: gemeinsame Nichtproportionalität in beiden Paritäten
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: A9->A11: exakte Schurdefekt-Reduktion R0=M0+289 W0 mit W0 positiv semidefinit; Nichtproportionalität in beiden Paritäten als Korollar des gemeinsamen Gaps sowie direkter F1-Ausschluss gerade.
+- Canonical commit: [2172de3](https://github.com/Waschtl904/objekt-x-programm/commit/2172de38d0def2c4b42c255e6c1290a720e3e94e).
+- Canonical proof: [research/x-c1/canonical-joint-maximizers-2026-09-30/03-schur-defect/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/2172de38d0def2c4b42c255e6c1290a720e3e94e/research/x-c1/canonical-joint-maximizers-2026-09-30/03-schur-defect/PROOF.md).
+- depends_on: `CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE`, `CANONICAL-RESOLVENT-COUPLING-BOUNDS`, `CANONICAL-JOINT-GENERALIZED-DISCRIMINANT`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: Ausschlüsse gelten für die ausdrücklich angegebenen gemeinsamen Bedingungen. Der Schurdefekt-Gap folgt aus dem Diskriminantenblock; keine zweite unabhängige Gap-Zertifizierung und kein globaler No-Go-Satz.
+
+Aussage:
+
+- Exakt W0=Z0-G0 L0^-1 G0 >= 0 und R0=M0+289 W0, somit beta=1+289 gamma mit unveränderter Maximierergerade.
+- Als Korollar des gemeinsamen Diskriminantenblocks gilt gamma_+-gamma_- >= 7.8612134e11 gerade und >= 1.4812085e9 ungerade. W0=gamma M0 und das gleichzeitige Verschwinden von F1 und F2 sind in beiden Paritäten ausgeschlossen.
+- Gerade liefert F1 <= -2.2666232e32 zusätzlich einen direkten Ausschluss und die eigene schwächere Gamma-Gap-Untergrenze 1.2635714e11. Ungerade enthalten die getrennten F1/F2-Hüllen null; der gemeinsame Gap schließt deren gleichzeitiges Verschwinden aus.
+- Die Summe-von-Quadraten-Identität ist exakt in sechs Variablen geprüft. Die starken Gamma-Gaps sind kein zweiter unabhängiger Erstbeweis und keine Spektrallücken des ursprünglichen Energieoperators Q.
+
+Does not claim:
+
+- Lokalisierung der ungeraden physischen Maximiererrichtung oder bandweise Momente des tatsächlichen Maximierers.
+- Allgemeiner vorwärts gerichteter Renewal-Satz, vierte Kammer oder A13-Positivität.
+- Kofinale positive Familie, globales Objekt X, globale Weil-Positivität oder RH.
+- Abgeschlossene externe analytische Gesamtprüfung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/2172de38d0def2c4b42c255e6c1290a720e3e94e/research/x-c1/canonical-joint-maximizers-2026-09-30/03-schur-defect/verification.json).
