@@ -95,4 +95,11 @@ Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGI
 
 Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getrennt. Diese Statusansicht führt die mathematischen Checker nicht erneut aus.
 
+## Noch nicht in den geprüften Stand übernommene Pakete
+
+- `CANONICAL-RELATIVE-KAPPA-REDUCTION`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-schur-coupling-2026-09-30/01-relative-kappa/META.yaml`.
+- `CANONICAL-RESOLVENT-COUPLING-BOUNDS`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-schur-coupling-2026-09-30/02-resolvent-moments/META.yaml`.
+- `CANONICAL-SCHUR-MIXING-MECHANISM`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-schur-coupling-2026-09-30/03-schur-mechanism/META.yaml`.
+- `CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-schur-coupling-2026-09-30/04-extremal-gate/META.yaml`.
+
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

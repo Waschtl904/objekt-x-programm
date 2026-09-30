@@ -1,0 +1,5 @@
+A8->A9-even 1-kappa >= 1.78224e-29 (inherited spectral-band bound)
+A8->A9-odd 1-kappa >= 2.71653e-31 (inherited spectral-band bound)
+A9->A11-even 1-kappa >= 1.18203e-44 (inherited spectral-band bound)
+A9->A11-odd 1-kappa >= 2.32270e-46 (inherited spectral-band bound)
+26 commit-bound files; 9 exact formula checks; PASS

@@ -1,0 +1,316 @@
+{
+  "source_commit": "8a82b7a972172c45cc4d3bc0297cc7fc0bbb2c7b",
+  "publication_base": "8a82b7a972172c45cc4d3bc0297cc7fc0bbb2c7b",
+  "original_files": [
+    {
+      "path": "01-relative-kappa/RELATIVE_KAPPA.md",
+      "sha256": "454e7690df5ed75d015cdb80333f2d43e41cbee5c8b1f9f24f617ee5bc518361"
+    },
+    {
+      "path": "01-relative-kappa/REPRODUKTION.md",
+      "sha256": "cfe8ad68f95a5487275fd9230232db28c63619602293d6e00e76141e0fb2ff9f"
+    },
+    {
+      "path": "01-relative-kappa/SHA256SUMS",
+      "sha256": "8a5301865af1df6eab0f6bcd78a2359e5065330563cbba115c1edf8449af5d56"
+    },
+    {
+      "path": "01-relative-kappa/verification.json",
+      "sha256": "1cd6b6eba78c1d01cb857ffebf118c0d57e3ff8fe0e685624060ec40a223643d"
+    },
+    {
+      "path": "01-relative-kappa/verification.log",
+      "sha256": "404f8a39b1a740b528152344e39344471f9b321525d61f3c2428459ac6a42bc8"
+    },
+    {
+      "path": "01-relative-kappa/verify_relative_kappa.py",
+      "sha256": "619c3b277db29e20e937fac71ee9d46aa42d27d2c36e1b97c49f3d5d8444c0f9"
+    },
+    {
+      "path": "02-resolvent-moments/CANONICAL_RESOLVENT_MOMENTS.md",
+      "sha256": "f457b07997c70e92fbc2e6e96b2358fde9ab91b67b3f899338b8211b708be77e"
+    },
+    {
+      "path": "02-resolvent-moments/REPRODUKTION.md",
+      "sha256": "344ca767222aba33752f98aea9eb9f9fc1c51634eb30e53c71266be8197ebc61"
+    },
+    {
+      "path": "02-resolvent-moments/SHA256SUMS",
+      "sha256": "e68380297f51849ecee86340850abf9690f845c0d305cae02ace2a5185e46236"
+    },
+    {
+      "path": "02-resolvent-moments/check_interval_guards.py",
+      "sha256": "8ff047e34637d00113e28bf5b4c4ba8c5a34135357f9c39a70802d5ab4be667d"
+    },
+    {
+      "path": "02-resolvent-moments/crosscheck.json",
+      "sha256": "b5d3887b5f94653eabf148140faed0f646f8dacc30f38ebe16e551f9ad0c9d0d"
+    },
+    {
+      "path": "02-resolvent-moments/primary.json",
+      "sha256": "d0e40cc46987efc6076a64f4b5823d2038219af688a4760cc02bb7ecb6b6920d"
+    },
+    {
+      "path": "02-resolvent-moments/resolvent_moments.py",
+      "sha256": "54204331131ba729078d2b42960d93fc64f448cc1490110a85dd99bf6e35cdcd"
+    },
+    {
+      "path": "02-resolvent-moments/verification.json",
+      "sha256": "9bc3317cad17b4c5a9db4a2eb765daf789f222d5bda37079bde8a4e943eacebd"
+    },
+    {
+      "path": "02-resolvent-moments/verification.log",
+      "sha256": "ec8b9154e34b38cfecda7775fc64ae0b77dafeb22346165fad675f0829954c9b"
+    },
+    {
+      "path": "02-resolvent-moments/verify_resolvent_moments.py",
+      "sha256": "fcb16ca18eebe54b5fba1dc3ef24b248de997efa08995d975b25f89ead5e4af4"
+    },
+    {
+      "path": "03-schur-mechanism/MECHANISM.md",
+      "sha256": "6fc8f63b88bdd26ae925521c8c33ff83d142cb73321547ed4e514f43b11f0891"
+    },
+    {
+      "path": "03-schur-mechanism/REPRODUKTION.md",
+      "sha256": "4b9dd7abe4eb4b1d483d1ff0fedcbf7d74ffc9d1ef6d345c87efbeed5f7c9fd4"
+    },
+    {
+      "path": "03-schur-mechanism/SHA256SUMS",
+      "sha256": "52361e7afc59fbcc7159e5cd3346f9a72987964e2aba325bb4013ef71b217e7a"
+    },
+    {
+      "path": "03-schur-mechanism/input_bindings.json",
+      "sha256": "7d0409837c19e25148c2ff6427bf78540639f85d269051f74ecc369e287f1ce3"
+    },
+    {
+      "path": "03-schur-mechanism/inputs/crosscheck.json",
+      "sha256": "b5d3887b5f94653eabf148140faed0f646f8dacc30f38ebe16e551f9ad0c9d0d"
+    },
+    {
+      "path": "03-schur-mechanism/inputs/outer_primary.json",
+      "sha256": "67140aada68ed5904c5d7f54b9fbaf6148648b554b15e0a0900b2814c35c61d4"
+    },
+    {
+      "path": "03-schur-mechanism/inputs/primary.json",
+      "sha256": "d0e40cc46987efc6076a64f4b5823d2038219af688a4760cc02bb7ecb6b6920d"
+    },
+    {
+      "path": "03-schur-mechanism/inputs/prior_verification.json",
+      "sha256": "9bc3317cad17b4c5a9db4a2eb765daf789f222d5bda37079bde8a4e943eacebd"
+    },
+    {
+      "path": "03-schur-mechanism/verification.json",
+      "sha256": "d5a56bd597d58f6ce6579718833121fe243e625eb31963f63e66b0d1401e998d"
+    },
+    {
+      "path": "03-schur-mechanism/verification.log",
+      "sha256": "b3dd5be46d63b25c4719033a90e1446cda0109687c0ff616c403b193d1bf3148"
+    },
+    {
+      "path": "03-schur-mechanism/verify_mechanism.py",
+      "sha256": "851bd03906c04946d14ca221f3c6d6a94523d956d0beb11ebceb06afd5ec4019"
+    },
+    {
+      "path": "04-extremal-gate/EXTREMAL_GATE.md",
+      "sha256": "eb8602cc64a839241a166f9405f4f373031d3431960f97d168773c0401be3d99"
+    },
+    {
+      "path": "04-extremal-gate/REPRODUKTION.md",
+      "sha256": "3375f0d54cbab1b7cf25ff9a0ed9332fcaa570b63dc592d87c804127a353ddfe"
+    },
+    {
+      "path": "04-extremal-gate/SHA256SUMS",
+      "sha256": "83593a8460e9e299d06365f7cff4b380f094ac580128d98a597f8053054e82db"
+    },
+    {
+      "path": "04-extremal-gate/candidate_proposals.json",
+      "sha256": "68c6aba21c15c97094c1b88bdea1fe5795ac64f9e8955e03c2fc50db7724b1cc"
+    },
+    {
+      "path": "04-extremal-gate/input_bindings.json",
+      "sha256": "fb07093482fa699af7da67b8b8d18666e34feba6d21140d2fbb51e28c8bd4509"
+    },
+    {
+      "path": "04-extremal-gate/inputs/crosscheck.json",
+      "sha256": "b5d3887b5f94653eabf148140faed0f646f8dacc30f38ebe16e551f9ad0c9d0d"
+    },
+    {
+      "path": "04-extremal-gate/inputs/mechanism_verification.json",
+      "sha256": "d5a56bd597d58f6ce6579718833121fe243e625eb31963f63e66b0d1401e998d"
+    },
+    {
+      "path": "04-extremal-gate/inputs/outer_primary.json",
+      "sha256": "67140aada68ed5904c5d7f54b9fbaf6148648b554b15e0a0900b2814c35c61d4"
+    },
+    {
+      "path": "04-extremal-gate/inputs/primary.json",
+      "sha256": "d0e40cc46987efc6076a64f4b5823d2038219af688a4760cc02bb7ecb6b6920d"
+    },
+    {
+      "path": "04-extremal-gate/inputs/resolvent_verification.json",
+      "sha256": "9bc3317cad17b4c5a9db4a2eb765daf789f222d5bda37079bde8a4e943eacebd"
+    },
+    {
+      "path": "04-extremal-gate/rational_tools.py",
+      "sha256": "3a9b7ae17de2bc3e798a61b1eb98da99e7011f2cd25630ac0480409319aa7064"
+    },
+    {
+      "path": "04-extremal-gate/verification.json",
+      "sha256": "99a20a0d4eaad87e44fed6878db5f55b849bf4b750694d14c582578147998281"
+    },
+    {
+      "path": "04-extremal-gate/verification.log",
+      "sha256": "28f945ab93b1549a64b12245bf626df6388ea1e4d3b38e70deeea3c11275d94d"
+    },
+    {
+      "path": "04-extremal-gate/verify_extremal_gate.py",
+      "sha256": "5ea5f45a78aec72e761d0c7ee68dc528cc069c22cc37f47ed82e2a6326aa8a75"
+    }
+  ],
+  "repository_inputs": [
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/GENERAL_TAIL_PRINCIPLE.md",
+      "sha256": "97a5abea259afa5e42f2418c99ca58027e06b7cc271cdfad93c00ffdb5863217"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/PROOF.md",
+      "sha256": "911a6ed3f5631958739ca6e527001e1fe4cb71258fa637d89971dc6b4b123c7b"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/a11_model.json.gz",
+      "sha256": "f7b49efedc655136118a1b134ddd547e118af66bbe8e258ac9b4a529a8823c38"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/common_reserve.json",
+      "sha256": "6e089a0e87f95614e7128f2b9236b55291e5fc4ec38bbda378e0bbf396f0a0a7"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/reserve_results.json",
+      "sha256": "5dea2f83c57137c860ac3283dbfd1d1b7effdeded170ac63d19dcdcf0cb18e45"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/reserve_results_lower_matrices.json.gz",
+      "sha256": "fa86033d9cbf0dc8611713d8cd607d447e4fe5716619b6b1c2bc345ef16fc6cb"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/CHECK_RESULTS.json",
+      "sha256": "cfcd497304c0ceaac0f8640509e0d6fabc5d57c54b432700c79354621e2ae95a"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/PROOF.md",
+      "sha256": "58577c7f448287daf4b09f0b031b00080cede91b31ac81dab0f3df336fcab1d0"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/a9_model.json.gz",
+      "sha256": "a1cb251d5563cffb01eec3fbbf11c891851b677bd4f4ec7f5fba37164d14ab72"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/common_reserve.json",
+      "sha256": "281996b90ea57b7bb08f722859e71b0b4d26820b07991072beaef84fe5b0add4"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/reserve_results.json",
+      "sha256": "d8ff8c1710cd9e60be489cd0eb5c9a4270e394904877b0d2ca9fe5b94da02b9f"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a9/reserve_results_lower_matrices.json.gz",
+      "sha256": "e173efb90e57d9fa7a3447f29254dffd1cfafc4f4b8f441a288be11c962acffb"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/o10/PROOF.md",
+      "sha256": "49d6d8ac4f4b34e0139949dc8008cdca9e8426d6dc597e57bd10ea7ce0b4fdbd"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/wall/PROOF.md",
+      "sha256": "9297444e2bc7c15e6c03f04bd7cd9579826e73564e1584a355a60ea23e4c6be1"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/wall/Q9.md",
+      "sha256": "a4298d3161eeaf359d62604dfaab85de7e3fcb24cf0ddf219a9c42c8746d4f6a"
+    },
+    {
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/PROOF.md",
+      "sha256": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661"
+    },
+    {
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/a8_model.json.gz",
+      "sha256": "5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b"
+    },
+    {
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/refined_tail.json",
+      "sha256": "8be8b9f15c4b382d8ec7ad48aa51aa71d9bf8fa253a96a2f5cc7710c0912cc2f"
+    },
+    {
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/reserve_refined.json",
+      "sha256": "c05d019f18e4ec4ed020c4fad034fd61eda476d82763561aa700b075731bb819"
+    },
+    {
+      "path": "research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/reserve_refined_lower_matrices.json.gz",
+      "sha256": "b860797185a225b4254dea2d8627db83b3d3781c79f152cf6b2df21fddc0c3a3"
+    },
+    {
+      "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/05-canonical-spectral-ranks/fixed_vectors.json",
+      "sha256": "4cfeaf15e12e7785c72836adf8f3cdd58b13627fdb9ea8e9c88a91b6c140b28d"
+    },
+    {
+      "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/05-canonical-spectral-ranks/verification.json",
+      "sha256": "437bbf9990f453d4d3ff3db5d5a448381a63cb5af629e7621fc6ca60609cf314"
+    },
+    {
+      "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/06-critical-spectral-transport/PROOF.md",
+      "sha256": "19db15b3c55fa4f0ada1744b3f2bbda99cd7ca99c3e077e8fdd3a3cb1ce3afbe"
+    },
+    {
+      "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/07-canonical-extension-outer-mass/PROOF.md",
+      "sha256": "5a1020f4cd381ca1603e1d47c2721829db4161657d015f457f8e5133da2f74d3"
+    },
+    {
+      "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/07-canonical-extension-outer-mass/crosscheck.json",
+      "sha256": "4dac369ed9c7e983affce5761e9aa14739df7c2261c27c6c73912b50cc00332a"
+    },
+    {
+      "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/07-canonical-extension-outer-mass/primary.json",
+      "sha256": "67140aada68ed5904c5d7f54b9fbaf6148648b554b15e0a0900b2814c35c61d4"
+    },
+    {
+      "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/07-canonical-extension-outer-mass/verification.json",
+      "sha256": "8a04dd3fb2dea5c2812841c8c5ec1f1a9a62d1bc066e38bd868f280b5333843e"
+    }
+  ],
+  "packages": [
+    {
+      "folder": "01-relative-kappa",
+      "original_folder": "canonical-relative-kappa-2026-09-29",
+      "original_proof": "RELATIVE_KAPPA.md",
+      "id": "CANONICAL-RELATIVE-KAPPA-REDUCTION",
+      "archive": "archives/Kanonischer-relativer-Kappa-Block-2026-09-29.zip",
+      "archive_sha256": "6cad0494783d75ac7588665d25898975794a1f1020202464b41cf0d1f2f0bc3a"
+    },
+    {
+      "folder": "02-resolvent-moments",
+      "original_folder": "canonical-extension-resolvent-2026-09-29",
+      "original_proof": "CANONICAL_RESOLVENT_MOMENTS.md",
+      "id": "CANONICAL-RESOLVENT-COUPLING-BOUNDS",
+      "archive": "archives/Kanonische-Ergaenzungen-Resolventenmomente-2026-09-29.zip",
+      "archive_sha256": "056677ab0ce73c56b977288187bfe123b0ac1a2eeb10c99c0a72c82280a30d63"
+    },
+    {
+      "folder": "03-schur-mechanism",
+      "original_folder": "canonical-schur-mechanism-2026-09-29",
+      "original_proof": "MECHANISM.md",
+      "id": "CANONICAL-SCHUR-MIXING-MECHANISM",
+      "archive": "archives/Kanonischer-Schur-Mechanismus-2026-09-29.zip",
+      "archive_sha256": "32dbbdc62dd040d9a6b5ce1b4485bb86d62d1fca5aefc93fbdfd214763bc0db5"
+    },
+    {
+      "folder": "04-extremal-gate",
+      "original_folder": "canonical-extremal-gate-2026-09-30",
+      "original_proof": "EXTREMAL_GATE.md",
+      "id": "CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE",
+      "archive": "archives/Kanonisches-Extremalgate-2026-09-30.zip",
+      "archive_sha256": "9eeedb0092bef77c5bcb5a75fc378acb1f935fcc85e448670dea5134315cf258"
+    }
+  ],
+  "pr187_included": false,
+  "global_verification_snapshot_changed": false
+}

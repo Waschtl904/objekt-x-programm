@@ -134,6 +134,30 @@
       "title": "Vollständige geeignete Weil-Testklasse identifizieren",
       "mathematical_status": "OPEN",
       "scope": "Exakte Normalisierung, kanonischer globaler Readout und nichtzirkuläre Rückbindung an das Weil-Kriterium."
+    },
+    {
+      "id": "CANONICAL-RELATIVE-KAPPA-REDUCTION",
+      "title": "CANONICAL RELATIVE KAPPA REDUCTION",
+      "mathematical_status": "OPEN",
+      "scope": "Exakte relative Schur-kappa-Reduktion auf Energie und inverse Energie des echten kanonischen E; konservative geerbte Restuntergrenzen auf dem bereits positiven Horizont bis A11. Registry-Übernahme nach Integration; diese Paketobligation ist keine Maximierer-Isolation."
+    },
+    {
+      "id": "CANONICAL-RESOLVENT-COUPLING-BOUNDS",
+      "title": "CANONICAL RESOLVENT COUPLING BOUNDS",
+      "mathematical_status": "OPEN",
+      "scope": "Rigorose beidseitige Resolventenmomente und relative kappa-Grenzen auf den echten kanonischen Ergänzungen A8->A9 und A9->A11, beide Paritäten; vollständige Low-/High-Antwort. Registry-Übernahme nach Integration; diese Paketobligation ist keine Maximierer-Isolation."
+    },
+    {
+      "id": "CANONICAL-SCHUR-MIXING-MECHANISM",
+      "title": "CANONICAL SCHUR MIXING MECHANISM",
+      "mathematical_status": "OPEN",
+      "scope": "Zertifizierte kanonische Zeugen: kleiner Überlapp mit schwacher Quelle, großes inverses Moment und starke relative Schurkopplung sowie getrennte gewöhnliche und inverse spektrale Energieanteile. Registry-Übernahme nach Integration; diese Paketobligation ist keine Maximierer-Isolation."
+    },
+    {
+      "id": "CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE",
+      "title": "CANONICAL SCHUR EXTREMAL CERTIFICATE GATE",
+      "mathematical_status": "OPEN",
+      "scope": "Vier verbesserte Restobergrenzen als Korollar; symmetrisches Extremalproblem und exakte Alternativen in der ausdrücklich definierten gemeinsamen endlichen Zertifikatsrelaxation. Tatsächliche Maximierer und tatsächlicher Eigenwertabstand bleiben offen. Registry-Übernahme nach Integration; diese Paketobligation ist keine Maximierer-Isolation."
     }
   ],
   "results": [
@@ -1615,7 +1639,28 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [],
+  "pending_packages": [
+    {
+      "id": "CANONICAL-RELATIVE-KAPPA-REDUCTION",
+      "meta_path": "research/x-c1/canonical-schur-coupling-2026-09-30/01-relative-kappa/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "CANONICAL-RESOLVENT-COUPLING-BOUNDS",
+      "meta_path": "research/x-c1/canonical-schur-coupling-2026-09-30/02-resolvent-moments/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "CANONICAL-SCHUR-MIXING-MECHANISM",
+      "meta_path": "research/x-c1/canonical-schur-coupling-2026-09-30/03-schur-mechanism/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE",
+      "meta_path": "research/x-c1/canonical-schur-coupling-2026-09-30/04-extremal-gate/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    }
+  ],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",

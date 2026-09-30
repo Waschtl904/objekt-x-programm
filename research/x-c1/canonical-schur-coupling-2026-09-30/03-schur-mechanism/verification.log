@@ -1,0 +1,6 @@
+A8->A9-even probe 1 beta >= 5.01063e+6 bands <= 1.64871e-12 and >= 1.03263e-6
+A8->A9-odd probe 2 beta >= 4.03721e+4 bands <= 1.09310e-8 and >= 5.51641e-5
+A9->A11-even probe 1 beta >= 7.29709e+11 bands <= 3.35274e-21 and >= 3.05815e-10
+A9->A11-odd probe 1 beta >= 1.24931e+11 bands <= 1.29126e-18 and >= 2.01648e-8
+ALL FOUR DIRECTIONAL MECHANISM CHECKS PASS
+DETERMINISTIC REPLAY BYTE-IDENTICAL

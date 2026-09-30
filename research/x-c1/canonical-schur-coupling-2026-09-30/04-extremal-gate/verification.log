@@ -1,0 +1,9 @@
+checking A9->A11-even
+central {'beta_plus': ['1.64074e+15', '1.64075e+15'], 'gap': ['1.64074e+15', '1.64075e+15'], 'maximizer_x1_over_x2': ['7.57458e-3', '7.57459e-3'], 'absolute_slope_below_one_fiftieth': True}
+axis_one {'beta_plus': ['4.90123e+12', '4.90124e+12'], 'gap': ['4.72889e+12', '4.72890e+12'], 'unique_maximizer_ray': '(1,0)', 'double_eigenvalue_exact': False}
+checking A9->A11-odd
+central {'beta_plus': ['1.94191e+15', '1.94192e+15'], 'gap': ['1.94191e+15', '1.94192e+15'], 'maximizer_x1_over_x2': ['1.77852e-2', '1.77853e-2'], 'absolute_slope_below_one_fiftieth': True}
+axis_one {'beta_plus': ['4.96825e+12', '4.96826e+12'], 'gap': ['4.83866e+12', '4.83867e+12'], 'unique_maximizer_ray': '(1,0)', 'double_eigenvalue_exact': False}
+double {'beta_plus': ['4.95691e+11', '4.95692e+11'], 'gap': ['0', '0'], 'double_eigenvalue_exact': True, 'every_direction_maximizes': True}
+SYMMETRIC GATE AND RELAXATION WITNESSES PASS
+DETERMINISTIC REPLAY BYTE-IDENTICAL

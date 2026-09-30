@@ -1,0 +1,6 @@
+A8->A9-even CERTIFIED 1-kappa in 3.2619e-9 2.1432e-7
+A8->A9-odd CERTIFIED 1-kappa in 2.0081e-9 3.1340e-5
+A9->A11-even CERTIFIED 1-kappa in 5.2319e-17 3.0103e-12
+A9->A11-odd CERTIFIED 1-kappa in 3.1660e-17 3.5804e-11
+ALL FOUR TRUE CANONICAL EXTENSIONS PASS
+Five interval edge-case checks PASS
