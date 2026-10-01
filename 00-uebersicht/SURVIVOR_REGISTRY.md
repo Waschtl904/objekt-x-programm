@@ -1355,3 +1355,133 @@ Does not claim:
 - Abgeschlossene externe analytische Gesamtprüfung.
 
 Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/2172de38d0def2c4b42c255e6c1290a720e3e94e/research/x-c1/canonical-joint-maximizers-2026-09-30/03-schur-defect/verification.json).
+
+## CANONICAL-ODD-OUTER-PROJECTOR-OBSTRUCTION
+
+Äußere ungerade Projektorobstruktion und fehlende gemeinsame b-Grammatrix
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: A9->A11 ungerade: zwei rationale Alternativen der damaligen äußeren Momentfamilie haben einfache obere Eigenwerte und stark verschiedene physische inverse Antwortrichtungen; der gedrehte Zeuge verletzt die notwendige volle gemeinsame b-Grammatrix.
+- Canonical commit: [ed94c19](https://github.com/Waschtl904/objekt-x-programm/commit/ed94c19f824c947f63e4867fb3c202f71e36e631).
+- Canonical proof: [research/x-c1/canonical-odd-structural-open-2026-10-01/01-outer-projector/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/ed94c19f824c947f63e4867fb3c202f71e36e631/research/x-c1/canonical-odd-structural-open-2026-10-01/01-outer-projector/PROOF.md).
+- depends_on: `CANONICAL-JOINT-GENERALIZED-DISCRIMINANT`, `CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS`, `CRITICAL-SPECTRAL-TRANSPORT`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: Informationsgrenze ausschließlich der jeweils ausdrücklich definierten endlichen Zertifikatsfamilie; kein No-Go für das tatsächliche Operatorpaar, allgemeines Renewal oder Objekt X. Einfachheit je Operatorfall bedeutet keine gemeinsame Richtung über alle Vervollständigungen.
+
+Aussage:
+
+- Zwei explizite rationale Alternativen der damaligen äußeren Momentfamilie haben einfache obere Eigenwerte und mindestens 89.93632 Grad getrennte physische inverse Antwortrichtungen.
+- Der gedrehte äußere Zeuge verletzt die notwendige volle gemeinsame b-Grammatrix. Diese erste Konstruktion wird nicht als zulässiger Zeuge der später verschärften Familie ausgegeben.
+
+Does not claim:
+
+- Lokalisierung oder freie Wählbarkeit des tatsächlichen ungeraden Maximierers; bandweise Momente tatsächlicher Maximierer.
+- Vollständige gemeinsame physische Realisierung aller ursprünglichen Trial-, Überlappungs- und Operatordaten durch die endlichen Gegenzeugen.
+- Allgemeiner vorwärts gerichteter Renewal-Satz, A13-Positivität oder eine kofinale positive Familie.
+- Globales Objekt X, globale Weil-Positivität, RH oder abgeschlossene externe analytische Gesamtprüfung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/ed94c19f824c947f63e4867fb3c202f71e36e631/research/x-c1/canonical-odd-structural-open-2026-10-01/01-outer-projector/verification.json).
+
+## CANONICAL-TRANSPORT-MOMENT-EXCLUSION
+
+Gemeinsame Transportmomentordnung und Ausschluss zweier äußerer Beispiele
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Notwendige gemeinsame Ordnung H1>=nuB H0>=0 des übertragenen hohen Restes; zwei neue Beispiele mit voller b-Grammatrix und getrennt positiver Masse/Energie verletzen diese Ordnung in gemischten Richtungen.
+- Canonical commit: [ed94c19](https://github.com/Waschtl904/objekt-x-programm/commit/ed94c19f824c947f63e4867fb3c202f71e36e631).
+- Canonical proof: [research/x-c1/canonical-odd-structural-open-2026-10-01/02-transport-moments/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/ed94c19f824c947f63e4867fb3c202f71e36e631/research/x-c1/canonical-odd-structural-open-2026-10-01/02-transport-moments/PROOF.md).
+- depends_on: `CANONICAL-JOINT-GENERALIZED-DISCRIMINANT`, `CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS`, `CRITICAL-SPECTRAL-TRANSPORT`, `CANONICAL-ODD-OUTER-PROJECTOR-OBSTRUCTION`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: Informationsgrenze ausschließlich der jeweils ausdrücklich definierten endlichen Zertifikatsfamilie; kein No-Go für das tatsächliche Operatorpaar, allgemeines Renewal oder Objekt X. Einfachheit je Operatorfall bedeutet keine gemeinsame Richtung über alle Vervollständigungen.
+
+Aussage:
+
+- Aus Formnaturality, vollständiger kritischer B-Basis und hohem Spektralschnitt folgt H1>=nuB H0>=0 für die gemeinsam transportierte Restmasse und Restenergie, mit nuB=0.070769.
+- Zwei neue rationale Beispiele mit positiver gemeinsamer b-Grammatrix und getrennt positiver Masse und Energie verletzen H1-nuB H0 in gemischten Richtungen. Positive Diagonaleinträge reichen zur Prüfung der Matrixordnung nicht aus.
+
+Does not claim:
+
+- Lokalisierung oder freie Wählbarkeit des tatsächlichen ungeraden Maximierers; bandweise Momente tatsächlicher Maximierer.
+- Vollständige gemeinsame physische Realisierung aller ursprünglichen Trial-, Überlappungs- und Operatordaten durch die endlichen Gegenzeugen.
+- Allgemeiner vorwärts gerichteter Renewal-Satz, A13-Positivität oder eine kofinale positive Familie.
+- Globales Objekt X, globale Weil-Positivität, RH oder abgeschlossene externe analytische Gesamtprüfung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/ed94c19f824c947f63e4867fb3c202f71e36e631/research/x-c1/canonical-odd-structural-open-2026-10-01/02-transport-moments/verification.json).
+
+## CANONICAL-TRANSPORT-PROJECTOR-OBSTRUCTION
+
+Korrigierte rationale Projektorobstruktion trotz gemeinsamer Transportordnung
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Zwei korrigierte rationale Vervollständigungen erfüllen sämtliche ausdrücklich geprüften Momentbedingungen einschließlich voller gemeinsamer Transportordnung und haben bei unverändert einfachen oberen Eigenwerten mindestens 89.987266 Grad getrennte physische inverse Antwortrichtungen.
+- Canonical commit: [ed94c19](https://github.com/Waschtl904/objekt-x-programm/commit/ed94c19f824c947f63e4867fb3c202f71e36e631).
+- Canonical proof: [research/x-c1/canonical-odd-structural-open-2026-10-01/03-corrected-projector/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/ed94c19f824c947f63e4867fb3c202f71e36e631/research/x-c1/canonical-odd-structural-open-2026-10-01/03-corrected-projector/PROOF.md).
+- depends_on: `CANONICAL-JOINT-GENERALIZED-DISCRIMINANT`, `CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS`, `CRITICAL-SPECTRAL-TRANSPORT`, `CANONICAL-TRANSPORT-MOMENT-EXCLUSION`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: Informationsgrenze ausschließlich der jeweils ausdrücklich definierten endlichen Zertifikatsfamilie; kein No-Go für das tatsächliche Operatorpaar, allgemeines Renewal oder Objekt X. Einfachheit je Operatorfall bedeutet keine gemeinsame Richtung über alle Vervollständigungen.
+
+Aussage:
+
+- Die exakte linke Korrektur C=I+(1/4) H GA^-1 und Y_neu=C Y erhält den Kern von Y, die komprimierten Zweiermatrizen und den jeweiligen maximalen Eigenprojektor.
+- Beide korrigierten rationalen Vervollständigungen erfüllen die ausdrücklich geprüften Kammermomente, vollen Kreuzblockhüllen und die volle gemeinsame Transportordnung H1>=nuB H0>=0. Sie bestehen dieselben geerbten Gap- und Einfachheitsprüfungen.
+- Ihre physischen inversen Antwortrichtungen im selben vollständigen A11-Gramraum sind mindestens 89.987266 Grad getrennt. Eine vollständige gemeinsame Realisierung sämtlicher ursprünglicher Trial-, Überlappungs- und Operatordaten wird nicht behauptet.
+
+Does not claim:
+
+- Lokalisierung oder freie Wählbarkeit des tatsächlichen ungeraden Maximierers; bandweise Momente tatsächlicher Maximierer.
+- Vollständige gemeinsame physische Realisierung aller ursprünglichen Trial-, Überlappungs- und Operatordaten durch die endlichen Gegenzeugen.
+- Allgemeiner vorwärts gerichteter Renewal-Satz, A13-Positivität oder eine kofinale positive Familie.
+- Globales Objekt X, globale Weil-Positivität, RH oder abgeschlossene externe analytische Gesamtprüfung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/ed94c19f824c947f63e4867fb3c202f71e36e631/research/x-c1/canonical-odd-structural-open-2026-10-01/03-corrected-projector/verification.json).
+
+## CANONICAL-ODD-BOX-STRUCTURAL-OPEN
+
+Rationaler Vier-Variablen-Boxtest: STRUCTURAL OPEN der endlichen Relaxation
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Rationaler Vier-Variablen-Boxtest in Y57,Y58,Y67,Y68 mit vollen übrigen Eintragshüllen: sieben Knoten, vier Blätter, zwei zertifizierte zulässige Punktzeugen in verschiedenen Blättern; STRUCTURAL OPEN der angegebenen endlichen Relaxation.
+- Canonical commit: [ed94c19](https://github.com/Waschtl904/objekt-x-programm/commit/ed94c19f824c947f63e4867fb3c202f71e36e631).
+- Canonical proof: [research/x-c1/canonical-odd-structural-open-2026-10-01/04-rational-box-gate/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/ed94c19f824c947f63e4867fb3c202f71e36e631/research/x-c1/canonical-odd-structural-open-2026-10-01/04-rational-box-gate/PROOF.md).
+- depends_on: `CANONICAL-JOINT-GENERALIZED-DISCRIMINANT`, `CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS`, `CRITICAL-SPECTRAL-TRANSPORT`, `CANONICAL-TRANSPORT-PROJECTOR-OBSTRUCTION`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: Informationsgrenze ausschließlich der jeweils ausdrücklich definierten endlichen Zertifikatsfamilie; kein No-Go für das tatsächliche Operatorpaar, allgemeines Renewal oder Objekt X. Einfachheit je Operatorfall bedeutet keine gemeinsame Richtung über alle Vervollständigungen.
+
+Aussage:
+
+- Der rationale Boxtest in Y57,Y58,Y67,Y68 erzeugt sieben Knoten und vier Blätter. Zwei verschiedene Blätter enthalten die bereits exakt konstruierten und erneut zertifizierten Punktzeugen.
+- Damit ist die enge gemeinsame Richtungslokalisierung durch diese endliche Moment-/Transportrelaxation ausgeschlossen: STRUCTURAL OPEN. Die Existenz folgt aus den gekoppelten Punktzeugen, nicht aus dem Überleben einer Intervallbox.
+- Der tatsächliche ungerade Maximierer bleibt eindeutig, aber quantitativ nicht lokalisiert. Direkte gemeinsame Kreuzprojektor-/Residualinformation ist der nächste Gate; weitere Bisektion derselben Relaxation entfernt die zulässigen Punktzeugen nicht.
+
+Does not claim:
+
+- Lokalisierung oder freie Wählbarkeit des tatsächlichen ungeraden Maximierers; bandweise Momente tatsächlicher Maximierer.
+- Vollständige gemeinsame physische Realisierung aller ursprünglichen Trial-, Überlappungs- und Operatordaten durch die endlichen Gegenzeugen.
+- Allgemeiner vorwärts gerichteter Renewal-Satz, A13-Positivität oder eine kofinale positive Familie.
+- Globales Objekt X, globale Weil-Positivität, RH oder abgeschlossene externe analytische Gesamtprüfung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/ed94c19f824c947f63e4867fb3c202f71e36e631/research/x-c1/canonical-odd-structural-open-2026-10-01/04-rational-box-gate/verification.json).

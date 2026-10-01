@@ -131,10 +131,22 @@ Paritäten aus.
 Die Paketberichte bewahren ihren damaligen Veröffentlichungsstand. Für den
 aktuellen Integrationsstatus gilt das [Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml).
 
-Die nächsten lokalen Schritte sind die **ungerade Richtungslokalisierung**
-und anschließend **bandweise Momente des tatsächlichen Maximierers**.
+Die [ungerade Projektor-/Transportfamilie](research/x-c1/canonical-odd-structural-open-2026-10-01/README.md)
+zeigt jetzt die Grenze der endlichen Momentrelaxation: Auch mit voller
+gemeinsamer Masse-/Energietransportordnung erlaubt sie zwei zertifizierte
+physische inverse Antwortrichtungen mit mindestens **89.987266° Abstand**.
+Der rationale Boxtest endet deshalb mit **STRUCTURAL OPEN**.
+Dies betrifft die endliche Relaxation; eine vollständige Realisierung
+beider Gegenzeugen durch das ursprüngliche Operatorproblem wird nicht behauptet.
+
+**Ungerade: eindeutig, aber noch nicht lokalisiert.** Der nächste Gate
+bestimmt direkte gemeinsame Kreuzprojektor-/Residualdaten, besonders für
+Y58 und Y68; Ziel ist ein tatsächlicher physischer Winkelkorridor unter
+10° Gesamtbreite. Anschließend folgen bandweise Momente tatsächlicher
+Maximierer und ein vorwärts gerichteter Renewal-Kandidat.
 Allgemeines Renewal, A13-Positivität, eine kofinale positive Familie,
-globales Objekt X und RH bleiben offen. PR #187 bleibt ein separater Strang.
+globales Objekt X und RH bleiben offen. PR #187 bleibt separat; vor einem
+zusätzlichen A13-Test werden Renewal-Aussage, Konstanten und Abnahme fixiert.
 Status: `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`.
 
 Die hohe Tail-Reduktion steht auf jedem festen endlichen Horizont zur Verfügung.
