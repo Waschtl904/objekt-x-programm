@@ -1,0 +1,11 @@
+Exact noncommuting common operator, projection identities, separate-Gram negative control, off-diagonal witness and tamper rejection: PASS
+
+Upstream odd, Schur-defect and discriminant replays: byte-identical PASS
+central full b-Gram, mass and energy: positive; transport witness ['-8.3432193e-10', '-8.3432192e-10']
+rotated full b-Gram, mass and energy: positive; transport witness ['-2.2492497e-9', '-2.2492496e-9']
+primary.json both fixed joint Gram completions satisfy all inherited outer constraints: PASS
+crosscheck.json both fixed joint Gram completions satisfy all inherited outer constraints: PASS
+Same-space physical angle >= 8.9987266e+1 degrees
+TRANSPORT MOMENT EXCLUSIONS CERTIFIED; ACTUAL ODD LOCALIZATION REMAINS OPEN.
+
+Fresh source audit PASS; report bounds and explicit scope checked; two new certifier outputs byte-identical.

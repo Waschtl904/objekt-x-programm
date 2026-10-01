@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "CANONICAL-TRANSPORT-PROJECTOR-OBSTRUCTION",
+  "date": "2026-10-01",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Zwei korrigierte rationale Vervollständigungen erfüllen sämtliche ausdrücklich geprüften Momentbedingungen einschließlich voller gemeinsamer Transportordnung und haben bei unverändert einfachen oberen Eigenwerten mindestens 89.987266 Grad getrennte physische inverse Antwortrichtungen.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Informationsgrenze ausschließlich der jeweils ausdrücklich definierten endlichen Zertifikatsfamilie; kein No-Go für das tatsächliche Operatorpaar, allgemeines Renewal oder Objekt X. Einfachheit je Operatorfall bedeutet keine gemeinsame Richtung über alle Vervollständigungen.",
+  "depends_on": [
+    "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+    "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS",
+    "CRITICAL-SPECTRAL-TRANSPORT",
+    "CANONICAL-TRANSPORT-MOMENT-EXCLUSION"
+  ],
+  "closes": [
+    "CANONICAL-TRANSPORT-PROJECTOR-OBSTRUCTION"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Lokalisierung oder freie Wählbarkeit des tatsächlichen ungeraden Maximierers; bandweise Momente tatsächlicher Maximierer.",
+    "Vollständige gemeinsame physische Realisierung aller ursprünglichen Trial-, Überlappungs- und Operatordaten durch die endlichen Gegenzeugen.",
+    "Allgemeiner vorwärts gerichteter Renewal-Satz, A13-Positivität oder eine kofinale positive Familie.",
+    "Globales Objekt X, globale Weil-Positivität, RH oder abgeschlossene externe analytische Gesamtprüfung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/canonical-odd-structural-open-2026-10-01/03-corrected-projector/PROOF.md",
+    "sha256": "2d1527e10f55db801e7ae15308b7ac2e8fddcd4ef5afc0aa478ef0413560ad2e"
+  }
+}

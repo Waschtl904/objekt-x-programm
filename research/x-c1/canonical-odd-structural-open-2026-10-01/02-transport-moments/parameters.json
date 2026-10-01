@@ -1,0 +1,12 @@
+{
+  "root_parameter": "92709707500416459487/100000000000000000000",
+  "row_weights": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "3/10000",
+    "-23/1000"
+  ],
+  "cayley_basis": "exact midpoint trial overlap and its second raw annihilator column"
+}

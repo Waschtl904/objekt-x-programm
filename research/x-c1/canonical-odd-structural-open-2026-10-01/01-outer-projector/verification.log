@@ -1,0 +1,23 @@
+Noncommuting single measure, upper spectral projector, physical normalization, residual upper-mode guard and archive rejection: PASS
+
+Both upstream rational certifiers replay byte-identically: PASS
+Exact common moment measures constructed for A9 and A11.
+primary.json all explicitly listed outer-family constraints: PASS
+crosscheck.json all explicitly listed outer-family constraints: PASS
+central P11 ['5.8538626e-8', '5.8538627e-8'] P22 ['9.9999994e-1', '9.9999995e-1']
+rotated P11 ['9.9999999e-1', '10.0000000e-1'] P22 ['4.6895606e-37', '4.6895607e-37']
+Physical angle between the two upper modes >= 8.9936320e+1 degrees.
+Rotated example violates necessary cross b-Gram: diagonal 6 ['-2.0494309e-2', '-2.0494308e-2']
+OUTER PROJECTOR OBSTRUCTION CERTIFIED; ACTUAL ODD LOCALIZATION REMAINS OPEN.
+
+Both upstream rational certifiers replay byte-identically: PASS
+Exact common moment measures constructed for A9 and A11.
+primary.json all explicitly listed outer-family constraints: PASS
+crosscheck.json all explicitly listed outer-family constraints: PASS
+central P11 ['5.8538626e-8', '5.8538627e-8'] P22 ['9.9999994e-1', '9.9999995e-1']
+rotated P11 ['9.9999999e-1', '10.0000000e-1'] P22 ['4.6895606e-37', '4.6895607e-37']
+Physical angle between the two upper modes >= 8.9936320e+1 degrees.
+Rotated example violates necessary cross b-Gram: diagonal 6 ['-2.0494309e-2', '-2.0494308e-2']
+OUTER PROJECTOR OBSTRUCTION CERTIFIED; ACTUAL ODD LOCALIZATION REMAINS OPEN.
+
+Report bounds on both receipts, explicit physical-realizability limitation, negative cross-Gram witness and byte-identical new replay: PASS

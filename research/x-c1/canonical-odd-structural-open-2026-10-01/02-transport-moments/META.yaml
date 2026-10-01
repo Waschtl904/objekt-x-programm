@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "CANONICAL-TRANSPORT-MOMENT-EXCLUSION",
+  "date": "2026-10-01",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Notwendige gemeinsame Ordnung H1>=nuB H0>=0 des übertragenen hohen Restes; zwei neue Beispiele mit voller b-Grammatrix und getrennt positiver Masse/Energie verletzen diese Ordnung in gemischten Richtungen.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Informationsgrenze ausschließlich der jeweils ausdrücklich definierten endlichen Zertifikatsfamilie; kein No-Go für das tatsächliche Operatorpaar, allgemeines Renewal oder Objekt X. Einfachheit je Operatorfall bedeutet keine gemeinsame Richtung über alle Vervollständigungen.",
+  "depends_on": [
+    "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+    "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS",
+    "CRITICAL-SPECTRAL-TRANSPORT",
+    "CANONICAL-ODD-OUTER-PROJECTOR-OBSTRUCTION"
+  ],
+  "closes": [
+    "CANONICAL-TRANSPORT-MOMENT-EXCLUSION"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Lokalisierung oder freie Wählbarkeit des tatsächlichen ungeraden Maximierers; bandweise Momente tatsächlicher Maximierer.",
+    "Vollständige gemeinsame physische Realisierung aller ursprünglichen Trial-, Überlappungs- und Operatordaten durch die endlichen Gegenzeugen.",
+    "Allgemeiner vorwärts gerichteter Renewal-Satz, A13-Positivität oder eine kofinale positive Familie.",
+    "Globales Objekt X, globale Weil-Positivität, RH oder abgeschlossene externe analytische Gesamtprüfung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/canonical-odd-structural-open-2026-10-01/02-transport-moments/PROOF.md",
+    "sha256": "08608a19c6078dc46d7e1d6246e76f4e9636bd02b75c1d7e2af841a0735036ba"
+  }
+}

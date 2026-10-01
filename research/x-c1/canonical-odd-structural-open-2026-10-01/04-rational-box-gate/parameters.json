@@ -1,0 +1,23 @@
+{
+  "integration_base": "689ff6266b5e4d58700f82eae3016951a023e353",
+  "variables": [
+    "Y57",
+    "Y58",
+    "Y67",
+    "Y68"
+  ],
+  "split_cycle": [
+    "Y58",
+    "Y68",
+    "Y57",
+    "Y67"
+  ],
+  "initial_priority_depth": 2,
+  "max_depth": 12,
+  "max_nodes": 255,
+  "target_sine_squared_upper": "1/100",
+  "reference": "rational midpoint of the second central trial-annihilator column in the bound primary input",
+  "structural_stop": "two certified feasible witnesses in distinct surviving leaves with physical separation greater than twice the target corridor half-angle",
+  "full_other_entry_uncertainties_retained": true,
+  "A13_inputs_allowed": false
+}

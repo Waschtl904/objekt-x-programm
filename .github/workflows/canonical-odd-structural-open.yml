@@ -1,0 +1,44 @@
+name: Canonical odd structural-open certificates
+
+on:
+  pull_request:
+    paths:
+      - "research/x-c1/**"
+      - ".github/workflows/canonical-odd-structural-open.yml"
+  push:
+    branches: [main]
+    paths:
+      - "research/x-c1/**"
+      - ".github/workflows/canonical-odd-structural-open.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Replay immutable packages and audit shared inputs
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python -B research/x-c1/canonical-odd-structural-open-2026-10-01/replay.py --output "${{ runner.temp }}/odd-structural-open-replay"
+      - name: Preserve exact replay receipts and logs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: odd-structural-open-replay-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/odd-structural-open-replay/*.json
+            ${{ runner.temp }}/odd-structural-open-replay/*.log
+          if-no-files-found: error
+          retention-days: 30

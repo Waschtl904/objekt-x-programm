@@ -1,0 +1,18 @@
+{
+  "integration_base": "689ff6266b5e4d58700f82eae3016951a023e353",
+  "repository_inputs": [
+    {
+      "commit": "689ff6266b5e4d58700f82eae3016951a023e353",
+      "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/06-critical-spectral-transport/PROOF.md",
+      "input": "TRANSPORT_LEMMA.md",
+      "sha256": "19db15b3c55fa4f0ada1744b3f2bbda99cd7ca99c3e077e8fdd3a3cb1ce3afbe"
+    },
+    {
+      "commit": "689ff6266b5e4d58700f82eae3016951a023e353",
+      "path": "research/x-c1/renewable-low-schur-spectral-2026-09-29/05-canonical-spectral-ranks/PROOF.md",
+      "input": "SPECTRAL_RANKS.md",
+      "sha256": "41f9ca98d5f32a19dd3d61d3fb9ada3e256a5e67d513a56080d16c3e3695456f"
+    }
+  ],
+  "upstream_archive_sha256": "0c7c99b21f3b77b31862cdc9cae952a7ecd76abe8bc7a2e73df3bbe14980573b"
+}

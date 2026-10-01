@@ -155,6 +155,30 @@
       "title": "Bandweise Momente der tatsächlichen Maximierer zertifizieren",
       "mathematical_status": "OPEN",
       "scope": "Nach Richtungslokalisierung gemeinsame bandweise Masse-, Energie- und inverse Energiemomente der tatsächlichen kanonischen Maximierer von A9->A11 zertifizieren. Die bisher bekannten Momentzeugen dürfen ohne Nachweis nicht als tatsächliche Maximierer eingesetzt werden."
+    },
+    {
+      "id": "CANONICAL-ODD-OUTER-PROJECTOR-OBSTRUCTION",
+      "title": "CANONICAL ODD OUTER PROJECTOR OBSTRUCTION",
+      "mathematical_status": "OPEN",
+      "scope": "A9->A11 ungerade: zwei rationale Alternativen der damaligen äußeren Momentfamilie haben einfache obere Eigenwerte und stark verschiedene physische inverse Antwortrichtungen; der gedrehte Zeuge verletzt die notwendige volle gemeinsame b-Grammatrix. Registry-Übernahme nach Integration; diese Paketobligation ist ein Integrationsschritt."
+    },
+    {
+      "id": "CANONICAL-TRANSPORT-MOMENT-EXCLUSION",
+      "title": "CANONICAL TRANSPORT MOMENT EXCLUSION",
+      "mathematical_status": "OPEN",
+      "scope": "Notwendige gemeinsame Ordnung H1>=nuB H0>=0 des übertragenen hohen Restes; zwei neue Beispiele mit voller b-Grammatrix und getrennt positiver Masse/Energie verletzen diese Ordnung in gemischten Richtungen. Registry-Übernahme nach Integration; diese Paketobligation ist ein Integrationsschritt."
+    },
+    {
+      "id": "CANONICAL-TRANSPORT-PROJECTOR-OBSTRUCTION",
+      "title": "CANONICAL TRANSPORT PROJECTOR OBSTRUCTION",
+      "mathematical_status": "OPEN",
+      "scope": "Zwei korrigierte rationale Vervollständigungen erfüllen sämtliche ausdrücklich geprüften Momentbedingungen einschließlich voller gemeinsamer Transportordnung und haben bei unverändert einfachen oberen Eigenwerten mindestens 89.987266 Grad getrennte physische inverse Antwortrichtungen. Registry-Übernahme nach Integration; diese Paketobligation ist ein Integrationsschritt."
+    },
+    {
+      "id": "CANONICAL-ODD-BOX-STRUCTURAL-OPEN",
+      "title": "CANONICAL ODD BOX STRUCTURAL OPEN",
+      "mathematical_status": "OPEN",
+      "scope": "Rationaler Vier-Variablen-Boxtest in Y57,Y58,Y67,Y68 mit vollen übrigen Eintragshüllen: sieben Knoten, vier Blätter, zwei zertifizierte zulässige Punktzeugen in verschiedenen Blättern; STRUCTURAL OPEN der angegebenen endlichen Relaxation. Registry-Übernahme nach Integration; diese Paketobligation ist ein Integrationsschritt."
     }
   ],
   "results": [
@@ -1922,7 +1946,28 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [],
+  "pending_packages": [
+    {
+      "id": "CANONICAL-ODD-OUTER-PROJECTOR-OBSTRUCTION",
+      "meta_path": "research/x-c1/canonical-odd-structural-open-2026-10-01/01-outer-projector/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "CANONICAL-TRANSPORT-MOMENT-EXCLUSION",
+      "meta_path": "research/x-c1/canonical-odd-structural-open-2026-10-01/02-transport-moments/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "CANONICAL-TRANSPORT-PROJECTOR-OBSTRUCTION",
+      "meta_path": "research/x-c1/canonical-odd-structural-open-2026-10-01/03-corrected-projector/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "CANONICAL-ODD-BOX-STRUCTURAL-OPEN",
+      "meta_path": "research/x-c1/canonical-odd-structural-open-2026-10-01/04-rational-box-gate/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    }
+  ],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",
