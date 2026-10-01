@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED",
+  "date": "2026-10-01",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "A9->A11 ungerade: endliche Korrekturräume aus 128 hohen Antwortmoden verbessern drei Projektorspaltenfehler; vollständige Residuen und Diagnose am ersten Pol lokalisieren den dominierenden Rest im Shift-Tail. Y58/Y68 bleiben unverändert breit; UNRESOLVED.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "UNRESOLVED bezeichnet unzureichende Schärfe der hier ausgeführten Rechnung. Überleben alter skalarer Zielwerte beweist keine vollständige gemeinsame Zulässigkeit; weder STRUCTURAL OPEN 2 noch ein No-Go für den vollen Shiftbildansatz ist bewiesen.",
+  "depends_on": [
+    "CANONICAL-ODD-BOX-STRUCTURAL-OPEN",
+    "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+    "CRITICAL-SPECTRAL-TRANSPORT",
+    "CANONICAL-CROSS-PROJECTOR-RESIDUAL-UNRESOLVED"
+  ],
+  "closes": [
+    "CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Ausschluss des gedrehten Gegenzeugen, neue gemeinsame Realisierbarkeit der alten Gegenzeugen oder Lokalisierung des tatsächlichen ungeraden Maximierers.",
+    "Bandweise Momente tatsächlicher Maximierer oder ein zertifiziertes asymptotisches 1/N-Tailgesetz.",
+    "Allgemeiner Renewal-Satz, A13-Positivität, kofinale positive Familie, globales Objekt X oder RH.",
+    "Unabhängige Neuimplementierung der großen Operatorintegrale oder abgeschlossene externe analytische Gesamtprüfung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/canonical-cross-high-response-2026-10-01/02-high-response/PROOF.md",
+    "sha256": "7677af5c5e6dae1eec56211e87b324ec5d3e96dca67bdc24349b104fe2fae7c4"
+  }
+}

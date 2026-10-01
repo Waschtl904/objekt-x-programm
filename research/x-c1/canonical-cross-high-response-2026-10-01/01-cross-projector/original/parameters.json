@@ -1,0 +1,19 @@
+{
+  "name": "CROSS-PROJECTOR RESIDUAL GATE",
+  "frozen_before_A9_A11_runs": true,
+  "scope": "A9->A11 odd physical inverse-response maximizing ray",
+  "input_boundary": "Published canonical A9/A11 inputs only; no A13 data or PR187 content",
+  "stage_A": "Check whether existing common moments provide signed cross-residual data; preserve joint operator/Gram correlations",
+  "stage_B": "If needed, rational spectral filter on existing trial columns; validate complete physical residuals of every shifted solve and operator spectral separation",
+  "GREEN": {
+    "exclude_at_least_one_previous_counterfamily": true,
+    "certified_actual_odd_physical_corridor_total_width_degrees_strictly_less_than": 10,
+    "positive_gap_is_existing_input": true
+  },
+  "STRUCTURAL_OPEN_2": "Two strongly separated explicitly certified completions satisfying every new joint cross-projector/residual datum; surviving interval boxes alone do not establish existence",
+  "UNRESOLVED": "Correct direct enclosures too broad; state which cross term or complete operator residual dominates. Do not claim a new information-theoretic obstruction from broad arithmetic.",
+  "normalization": "Y=K GB^-1 BB, BB=GB+LB/17",
+  "identity": "K=O-RA*J*UB-UA*J*RB+RA*J*RB",
+  "review": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN",
+  "execution_order": "Both negative-block research and registry integrations complete before new operator runs"
+}

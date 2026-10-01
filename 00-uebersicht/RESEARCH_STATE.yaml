@@ -167,6 +167,18 @@
       "title": "Direkte gemeinsame Kreuzprojektor- und Residualdaten zertifizieren",
       "mathematical_status": "OPEN",
       "scope": "A9->A11 ungerade: K=(PA UA)*J*(PB UB) direkt einschließen, Y=K GB^-1(GB+LB/17). Zuerst gerichtete gemeinsame Kreuzresiduen, besonders die Funktionale für Y58 und Y68; bei unzureichender Schärfe rationale verschobene Projektorfilter. GREEN erfordert Ausschluss mindestens einer bisherigen Gegenfamilie und einen rigorosen tatsächlichen physischen Winkelkorridor unter 10 Grad Gesamtbreite. STRUCTURAL OPEN 2 erfordert neue stark verschiedene zulässige Vervollständigungen einschließlich der neuen Daten. Sonst UNRESOLVED mit benanntem begrenzendem Kreuzterm."
+    },
+    {
+      "id": "CANONICAL-CROSS-PROJECTOR-RESIDUAL-UNRESOLVED",
+      "title": "CANONICAL CROSS PROJECTOR RESIDUAL UNRESOLVED",
+      "mathematical_status": "OPEN",
+      "scope": "A9->A11 ungerade: gemeinsame Kreuzresiduen verengen 48 Y-Eintragshüllen; rationale Projektorfilter mit vollständigem hohem Residuum erreichen weder Gegenzeugenausschluss noch Richtungslokalisierung. UNRESOLVED. Übernahme dieses abgeschlossenen Pakets nach Integration."
+    },
+    {
+      "id": "CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED",
+      "title": "CANONICAL HIGH RESPONSE CORRECTED UNRESOLVED",
+      "mathematical_status": "OPEN",
+      "scope": "A9->A11 ungerade: endliche Korrekturräume aus 128 hohen Antwortmoden verbessern drei Projektorspaltenfehler; vollständige Residuen und Diagnose am ersten Pol lokalisieren den dominierenden Rest im Shift-Tail. Y58/Y68 bleiben unverändert breit; UNRESOLVED. Übernahme dieses abgeschlossenen Pakets nach Integration."
     }
   ],
   "results": [
@@ -2095,7 +2107,18 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [],
+  "pending_packages": [
+    {
+      "id": "CANONICAL-CROSS-PROJECTOR-RESIDUAL-UNRESOLVED",
+      "meta_path": "research/x-c1/canonical-cross-high-response-2026-10-01/01-cross-projector/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED",
+      "meta_path": "research/x-c1/canonical-cross-high-response-2026-10-01/02-high-response/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    }
+  ],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",

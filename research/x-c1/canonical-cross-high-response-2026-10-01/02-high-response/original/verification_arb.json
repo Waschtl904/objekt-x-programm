@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "gate_status": "UNRESOLVED",
+  "main": "6302a47cab2132f0d87dec29bbf21d7ce98e8f75",
+  "source_files_checked": 27,
+  "capture_rows_checked": 12,
+  "complete_residual_budgets_checked": 12,
+  "joint_direction_replay_byte_identical": true,
+  "small_Arb_controls_rerun": true,
+  "large_operator_integrals_replayed": false,
+  "steps": [
+    "evaluate_high_response.py",
+    "check_high_capture.py",
+    "check_full_residual.py"
+  ],
+  "scope": "Receipt/source/interval-budget audit and joint-direction replay. The full large operator integrals are only repeated with --full; this is not an independent implementation of the large solves.",
+  "A13_inputs_used": false,
+  "review": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN"
+}

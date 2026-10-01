@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "CANONICAL-CROSS-PROJECTOR-RESIDUAL-UNRESOLVED",
+  "date": "2026-10-01",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "A9->A11 ungerade: gemeinsame Kreuzresiduen verengen 48 Y-Eintragshüllen; rationale Projektorfilter mit vollständigem hohem Residuum erreichen weder Gegenzeugenausschluss noch Richtungslokalisierung. UNRESOLVED.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "UNRESOLVED bezeichnet unzureichende Schärfe der hier ausgeführten Rechnung. Überleben alter skalarer Zielwerte beweist keine vollständige gemeinsame Zulässigkeit; weder STRUCTURAL OPEN 2 noch ein No-Go für den vollen Shiftbildansatz ist bewiesen.",
+  "depends_on": [
+    "CANONICAL-ODD-BOX-STRUCTURAL-OPEN",
+    "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+    "CRITICAL-SPECTRAL-TRANSPORT"
+  ],
+  "closes": [
+    "CANONICAL-CROSS-PROJECTOR-RESIDUAL-UNRESOLVED"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Ausschluss des gedrehten Gegenzeugen, neue gemeinsame Realisierbarkeit der alten Gegenzeugen oder Lokalisierung des tatsächlichen ungeraden Maximierers.",
+    "Bandweise Momente tatsächlicher Maximierer oder ein zertifiziertes asymptotisches 1/N-Tailgesetz.",
+    "Allgemeiner Renewal-Satz, A13-Positivität, kofinale positive Familie, globales Objekt X oder RH.",
+    "Unabhängige Neuimplementierung der großen Operatorintegrale oder abgeschlossene externe analytische Gesamtprüfung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/canonical-cross-high-response-2026-10-01/01-cross-projector/PROOF.md",
+    "sha256": "2d0658ee42ebea0c47e6f9b11d3e4b510fa1c3bb13597df21dc41a638e4434eb"
+  }
+}

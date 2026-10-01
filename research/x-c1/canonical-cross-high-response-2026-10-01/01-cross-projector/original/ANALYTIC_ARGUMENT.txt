@@ -1,0 +1,153 @@
+Prepared analytic argument for the post-integration experiment
+===========================================================
+
+Scope. Q is the already positive physical operator at A9 or A11. P is its
+canonical critical spectral projector. Existing certificates place its
+spectrum in (0,theta] union [nu,infinity), where theta < nu. The original
+trial columns U are exactly L2 orthonormal by their defined Cholesky
+normalization. All uses of positivity and spectral separation are
+retrospective; they do not supply a forward Renewal theorem.
+
+0. Cheap common projector geometry before shifted solves
+
+Define VA=PA UA and EA=VA-UA GA, with GA=UA*PA UA. Then UA*EA=0 and
+EA*EA=GA-GA^2. The same holds at B. With O=UA*J*UB,
+
+  K=GA O GB + GA UA*J*EB + EA*J*UB GB + EA*J*EB.
+
+For entry i,j the three correction radii are bounded by
+
+  sqrt((GA-GA^2)_ii [GB(I-O*O)GB]_jj),
+  sqrt((GB-GB^2)_jj [GA(I-OO*)GA]_ii),
+  sqrt((GA-GA^2)_ii (GB-GB^2)_jj).
+
+Every product uses the same projected Gram matrices. In the diagonal
+covariances one may also intersect with G_ii and (I-G)_ii, since
+0<=G<=I. These identities do not provide separately signed actual high
+cross products, but they retain known signed portions of their sum.
+
+A second, forward estimate gives a useful intersection. Since
+
+  K_ij=(GA O)_ij + <J EA_i,UB_j>
+       - <(I-PB)J VA_i,(I-PB)UB_j>,
+
+its radius around (GA O)_ij is at most
+
+  sqrt((GA-GA^2)_ii (I-O*O)_jj)
+       + sqrt(SA_ii/nu_B * (I-GB)_jj).
+
+The second summand uses forward formnaturality qB(JVA)=qA(VA), the actual
+B-complement floor nu_B, and qA(PA UA_i)<=SA_ii. No backward form identity
+for restriction and no inverse intertwining is used. Adding the energy
+radius sqrt(SA_ii SB_jj)/17 converts each K bound to a Y bound.
+
+1. Coordinate residuals
+
+The full Mellin coordinate map M satisfies G=M* M=I+t t* >= I. Split its
+raw coordinates into the published finite low block and the COMPLETE high
+space. The operator form has blocks [L B; B* H]. Published data give
+||L-L0|| <= eL, B B* <= Hup, and ||t_high|| <= epsilon_t.
+
+For a trial column u=M[v;0] and a fixed complex low candidate w=M[x;0],
+the residual of (Q-z)w=u, pulled back by M*, has the exact two components
+
+  r_low  = G_low v - (L-z G_low)x,
+  r_high = t_high t_low* (v+z x) - B* x.
+
+Thus
+
+  ||r_low|| <= ||G_low v-(L0-z G_low)x|| + eL ||x|| = rho_low,
+  ||r_high|| <= sqrt(x* Hup x)
+                 + epsilon_t |t_low*(v+z x)| = rho_high.
+
+Since ||M^{-*}|| <= 1, the PHYSICAL residual norm is at most
+sqrt(rho_low^2+rho_high^2). This includes the entire high response, not a
+finite truncation of it. For complex x, x*Hup x equals the sum of the real
+and imaginary quadratic forms because Hup is real symmetric.
+
+For a certified d_z <= dist(z,spectrum(Q)), the spectral theorem gives
+
+  ||(Q-z)^-1 u - w|| <= sqrt(rho_low^2+rho_high^2)/d_z.
+
+An approximate solution need not be an interval-certified exact solve:
+the computed dyadic midpoint x is an exact candidate, and the full
+residual above certifies it independently of the solver's accuracy.
+
+2. Rational filter
+
+Choose t=1/300 and m=8, with theta<t<nu checked from the source bounds.
+For f(lambda)=1/(1+(lambda/t)^m),
+
+  ||P-f(Q)|| <= delta,
+  delta=max((theta/t)^m/(1+(theta/t)^m),
+            1/(1+(nu/t)^m)).
+
+The simple poles are z_k=t exp(i(2k+1)pi/m). Since z_k^m=-t^m, the
+residue of f at z_k is -z_k/m. Therefore
+
+  f(Q)=sum_k (-z_k/m)(Q-z_k)^-1.
+
+Real inputs allow four conjugate pairs to be evaluated as twice the real
+part. Their poles lie away from both certified spectral intervals. Their
+real parts can be positive; the proof uses their full complex distance to
+the spectrum, not an unjustified positive-real-shift coercivity bound.
+
+Let Vtilde be the sum of the low candidates with these same coefficients.
+For each original unit-norm trial column,
+
+  ||P u - Vtilde|| <= delta
+       + sum_upper_poles (2 |z_k|/m)
+          sqrt(rho_low,k^2+rho_high,k^2)/d_zk = eta.
+
+All poles, residuals, norms, distances and polynomial overlaps will be
+evaluated with outward interval arithmetic. Candidate midpoints are fixed
+dyadic values; input interval uncertainty remains in every residual.
+
+3. Joint signed cross terms
+
+Write RAtilde=UA-VAtilde and RBtilde=UB-VBtilde. Directed polynomial
+integration computes their joint products with the same physical embedding
+J. In particular, with the same approximate columns throughout,
+
+  Ktilde=O-RAtilde*J*UB-UA*J*RBtilde+RAtilde*J*RBtilde.
+
+For entries i,j, the two mixed residual radii are eta_A,i and eta_B,j.
+The cross-residual radius is bounded by
+
+  eta_A,i ||RBtilde_j|| + eta_B,j ||RAtilde_i||
+       + eta_A,i eta_B,j.
+
+The sharper direct K radius is the minimum of
+
+  eta_A,i ||VBtilde_j|| + eta_B,j,
+  eta_A,i + eta_B,j ||VAtilde_i||,
+
+using ||PA UA_i||, ||PB UB_j|| <= 1. These follow from two exact product
+decompositions; no independence of the three cross terms is assumed.
+
+The normalization remains BB=GB+LB/17 and Y=K GB^-1 BB. Equivalently,
+
+  Y_ij=K_ij+q_B(J PA UA_i,PB UB_j)/17.
+
+Formnaturality, spectral energy monotonicity and Cauchy-Schwarz for the
+already positive forms give
+
+  |Y_ij-K_ij| <= sqrt(SA_ii SB_jj)/17,
+
+where SA=UA*QA UA and SB=UB*QB UB are the published trial energy matrices.
+This preserves the factor 17 and uses the physical inverse-response
+maximizer convention of the preceding certificates.
+
+4. Acceptance boundaries
+
+These formulas provide actual-operator enclosures, conditional on the
+published operator, Gram, spectral and transport certificates. They do not
+guarantee a useful width. A very accurate scalar filter may coexist with a
+large complete-solve residual, particularly the sqrt(x*Hup x) term.
+
+Only a certified angle corridor under 10 degrees total width together with
+exclusion of a previous counterfamily qualifies as GREEN. Wide correct
+enclosures qualify as UNRESOLVED, not STRUCTURAL OPEN 2. The latter requires
+new explicitly feasible jointly coupled completions satisfying the new
+data. No numerical direction or surviving interval box is substituted for
+these obligations.
