@@ -1,8 +1,8 @@
 # Objekt X – Gesamtüberblick
 
-**Stand:** 30. September 2026
+**Stand:** 1. Oktober 2026
 
-**Basis:** `main@b882c9e74f8bb8ca4594aefb77534dd92573bcd1`
+**Basis:** `main@eb4bd1b78b130a44987c4ee171ded8034c0948cc`
 
 **Zweck:** Verständliche Gesamterzählung des Programms – klassische Grundlagen, eigene Resultate, rigorose No-Gos, aktuelle positive C1-Geometrie und offene globale Schritte.
 
@@ -341,19 +341,46 @@ L2-Winkel in `[−0.850296°,0.381324°]` in der im Beweis definierten
 orthonormalen Basis, orientiert mit `x2>0`. Der Winkel gehört zur inversen
 Antwort `V0 x`; der Winkel der Schurverschiebung ist damit nicht bestimmt.
 
-**Offen bleiben die ungerade Richtungslokalisierung und anschließend die
-bandweisen Spektralmomente des tatsächlichen Maximierers.** Die zuvor
-untersuchten Momentzeugen dürfen damit weiterhin nicht gleichgesetzt werden.
-Die älteren Gegenmodelle und offenen Gap-Aussagen beziehen sich auf die
-damalige schwächere endliche Relaxation; die neue gemeinsame Familie hat
-einen rigoros positiven Gap.
+**Die tatsächliche ungerade Richtung bleibt quantitativ offen.** Die neue
+[Projektor-/Transportfamilie](../research/x-c1/canonical-odd-structural-open-2026-10-01/README.md)
+bestimmt die Informationsgrenze der bisher verwendeten endlichen Relaxation:
 
-Die Rechnung verwendet bereits positive neue Terminals bis A11. Allgemeines
-Renewal, vierte Kammer/A13-Positivität, eine kofinale positive Familie,
+1. Die volle gemeinsame b-Grammatrix schließt einen ersten äußeren Zeugen aus.
+2. Die notwendige Ordnung `H1>=nuB H0>=0` schließt zwei weitere Beispiele
+   durch gemischte negative Richtungen aus.
+3. Eine exakte rationale linke Korrektur erhält den jeweiligen Kern von Y
+   und erfüllt nun auch die volle gemeinsame Transportordnung.
+4. Der rationale Boxtest hat sieben Knoten und vier Blätter. Zwei Blätter
+   enthalten explizit zertifizierte Punktzeugen mit mindestens
+   **89.987266°** getrennten physischen inversen Antwortrichtungen.
+
+Damit gilt **STRUCTURAL OPEN für diese endliche Relaxation**. Das ist ein
+Existenznachweis aus konkreten gekoppelten Punktzeugen. Das bloße Überleben
+einer Intervallbox würde dafür nicht genügen. Eine vollständige gemeinsame
+Realisierung sämtlicher ursprünglicher Trial-, Überlappungs- und
+Operatordaten durch die beiden Gegenzeugen wird nicht behauptet.
+
+Der nächste Gate kontrolliert direkt `K=(PA UA)*J*(PB UB)` mit
+`Y=K GB^-1(GB+LB/17)`. Gemeinsame gerichtete Kreuzresiduen sollen zunächst
+die Funktionale für Y58 und Y68 bestimmen. Bei unzureichender Schärfe folgen
+verschobene rationale Projektorfilter auf den vorhandenen Trialspalten.
+GREEN verlangt den Ausschluss mindestens einer bisherigen Gegenfamilie
+und einen rigorosen tatsächlichen ungeraden physischen Winkelkorridor
+unter **10° Gesamtbreite**. Neue stark verschiedene zertifizierte
+Vervollständigungen einschließlich dieser Daten würden STRUCTURAL OPEN 2
+begründen; eine zu breite korrekte Rechnung bleibt UNRESOLVED.
+
+Danach folgen bandweise Momente der tatsächlichen Maximierer und ein
+vorwärts gerichteter Renewal-Kandidat. Die bisher bekannten Momentzeugen
+dürfen mit tatsächlichen Maximierern nicht gleichgesetzt werden. Vor einem
+zusätzlichen A11→A13-Test sind Aussage, Konstanten und Abnahme festzuhalten.
+PR #187 bleibt separat.
+
+Die Rechnungen verwenden bereits positive neue Terminals bis A11.
+Allgemeines Renewal, A13-Positivität, eine kofinale positive Familie,
 globales Objekt X und RH bleiben offen. Status bleibt
 **AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN**; der globale Verifikationssnapshot
-wird nicht angehoben. PR #187 und der jüngere lokale ungerade Projektorblock
-bleiben außerhalb dieses Integrationsschnitts.
+wird nicht angehoben.
 
 ---
 

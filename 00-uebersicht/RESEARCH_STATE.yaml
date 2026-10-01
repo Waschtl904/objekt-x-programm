@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "render_version": 6,
-  "state_date": "2026-09-30",
+  "state_date": "2026-10-01",
   "repository": "Waschtl904/objekt-x-programm",
   "published_baseline": {
     "branch": "main",
-    "sha": "b882c9e74f8bb8ca4594aefb77534dd92573bcd1",
+    "sha": "eb4bd1b78b130a44987c4ee171ded8034c0948cc",
     "integration_status": "MERGED",
-    "meaning": "Integrierte drei Pakete zu gemeinsamen kanonischen Maximierern nach PR #193, Beweishead 2172de38d0def2c4b42c255e6c1290a720e3e94e: Projektor-/Spektralmomente, generalisierter Diskriminant und Schurdefekt-Korollar. Main-Replay 36738813027 erfolgreich, alle drei Ergebnisquittungen im CI-Artefakt bytegleich geprüft. Ursprüngliche Integrale und Operatorlösungen bleiben gebundene Eingaben; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte vierblöckige kanonische Schurkopplungsfamilie nach PR #191, Beweishead b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d. Main-Zertifikatreplay 36671245348 erfolgreich mit geprüftem Artefakt; abgeschlossene große Arb-Läufe bleiben gebundene Eingaben. Registry-CI separat gebunden; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte siebenblöckige Spektral-/Renewal-Familie nach PR #189, Beweishead c19c655d79f9be59b7c18fb0042783f5e4a0ab49. Main-Replay 36525210364 erfolgreich; Registry-CI separat gebunden. Globaler Verifikationssnapshot unverändert. Frühere Provenienz: Gepinnter integrierter Forschungsstand nach PR #183: zusammenhängende O10–A11-Kette, Beweis-/Paketcommit 0b7c707c4c95f56bd8079ea44019a2d3f4cfce60. Erfolgreiche Main-Reproduktion 36378212734, Versuch 1; Registry-CI separat gebunden. Der globale mathematische Verifikationssnapshot bleibt unverändert. Frühere Integrationsprovenienz: Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
+    "meaning": "Integrierte vier ungerade Projektor-/Transportpakete nach PR #195, Beweishead ed94c19f824c947f63e4867fb3c202f71e36e631; Abschluss STRUCTURAL OPEN der angegebenen endlichen Relaxation. Main-Replay 36816858969 erfolgreich, vier Ergebnisquittungen im CI-Artefakt bytegleich geprüft. Globale Verifikationsaussagen unverändert. Frühere Provenienz: Integrierte drei Pakete zu gemeinsamen kanonischen Maximierern nach PR #193, Beweishead 2172de38d0def2c4b42c255e6c1290a720e3e94e: Projektor-/Spektralmomente, generalisierter Diskriminant und Schurdefekt-Korollar. Main-Replay 36738813027 erfolgreich, alle drei Ergebnisquittungen im CI-Artefakt bytegleich geprüft. Ursprüngliche Integrale und Operatorlösungen bleiben gebundene Eingaben; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte vierblöckige kanonische Schurkopplungsfamilie nach PR #191, Beweishead b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d. Main-Zertifikatreplay 36671245348 erfolgreich mit geprüftem Artefakt; abgeschlossene große Arb-Läufe bleiben gebundene Eingaben. Registry-CI separat gebunden; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte siebenblöckige Spektral-/Renewal-Familie nach PR #189, Beweishead c19c655d79f9be59b7c18fb0042783f5e4a0ab49. Main-Replay 36525210364 erfolgreich; Registry-CI separat gebunden. Globaler Verifikationssnapshot unverändert. Frühere Provenienz: Gepinnter integrierter Forschungsstand nach PR #183: zusammenhängende O10–A11-Kette, Beweis-/Paketcommit 0b7c707c4c95f56bd8079ea44019a2d3f4cfce60. Erfolgreiche Main-Reproduktion 36378212734, Versuch 1; Registry-CI separat gebunden. Der globale mathematische Verifikationssnapshot bleibt unverändert. Frühere Integrationsprovenienz: Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
   },
   "verified_research_snapshot": {
     "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
@@ -45,8 +45,9 @@
       "title": "Unbeschränkte Horizonterweiterung und kompatibler Transport",
       "mathematical_status": "OPEN",
       "strategic_status": "ACTIVE_FRONT",
-      "target_scope": "Drei positive Kammern bis A11, kritische Ränge 5/6/8 und kanonischer Spektraltransport sind vorhanden. Für A9->A11 erzwingen gemeinsame Projektor-/Momentbedingungen einen uniform positiven tatsächlichen Schur-Extremalgap in beiden Paritäten; die größte Eigenwertgerade ist jeweils eindeutig. Gerade ist die physische inverse Antwortrichtung lokalisiert. Ungerade Lokalisierung, bandweise Momente des tatsächlichen Maximierers, allgemeines Renewal und kofinale positive Kompatibilität bleiben offen.",
+      "target_scope": "Drei positive Kammern bis A11, kritische Ränge 5/6/8 und kanonischer Spektraltransport sind vorhanden. A9->A11 hat einen uniform positiven tatsächlichen Schur-Extremalgap und eine eindeutige größte Eigenwertgerade in beiden Paritäten; gerade ist die physische inverse Antwortrichtung lokalisiert. Die ungerade Richtung bleibt offen: die endliche Momentrelaxation samt gemeinsamer Masse-/Energietransportordnung enthält nahezu rechtwinklige Maximierer. Direkte gemeinsame Kreuzprojektorinformation ist der nächste Gate. Bandmomente tatsächlicher Maximierer, allgemeines Renewal und kofinale positive Kompatibilität bleiben offen.",
       "obligation_ids": [
+        "CANONICAL-CROSS-PROJECTOR-RESIDUAL-GATE",
         "CANONICAL-SCHUR-MAXIMIZER-ISOLATION",
         "CANONICAL-MAXIMIZER-BAND-MOMENTS",
         "MOVING-PROFILE-RESERVE-RENEWAL",
@@ -77,20 +78,25 @@
         "CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE",
         "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS",
         "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
-        "CANONICAL-SCHUR-DEFECT-NONPROPORTIONALITY"
+        "CANONICAL-SCHUR-DEFECT-NONPROPORTIONALITY",
+        "CANONICAL-ODD-OUTER-PROJECTOR-OBSTRUCTION",
+        "CANONICAL-TRANSPORT-MOMENT-EXCLUSION",
+        "CANONICAL-TRANSPORT-PROJECTOR-OBSTRUCTION",
+        "CANONICAL-ODD-BOX-STRUCTURAL-OPEN"
       ],
-      "candidate": "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+      "candidate": "CANONICAL-ODD-BOX-STRUCTURAL-OPEN",
       "accepted_progress": [
-        "Lokalisiere die ungerade physische inverse Antwortrichtung innerhalb derselben gemeinsamen Zertifikatsfamilie; positiver Gap und Eindeutigkeit sind bereits in beiden Paritäten zertifiziert.",
-        "Zertifiziere anschließend bandweise Spektralmomente des tatsächlichen Maximierers, mit gemeinsamer Kontrolle von Masse, Energie und inverser Energie.",
-        "Leite aus der lokalen Struktur einen unabhängigen vorwärts gerichteten Renewal-Satz und erneuerbare Low-Schur-Reserven ab; konstruiere schließlich eine kofinale kompatible positive Familie."
+        "Zertifiziere direkte gemeinsame Kreuzprojektor-/Residualdaten für K und die relevanten Y58-/Y68-Funktionale; Ziel ist ein tatsächlicher ungerader physischer Winkelkorridor unter 10 Grad Gesamtbreite.",
+        "Zertifiziere anschließend bandweise Masse-, Energie- und inverse Energiemomente tatsächlicher Maximierer; unterscheide inverse Antwort und Schurverschiebung.",
+        "Formuliere aus A8->A9 und A9->A11 einen unabhängigen vorwärts gerichteten Renewal-Kandidaten. Halte Aussage, Konstanten und Abnahme vor einem zusätzlichen A11->A13-Test fest. Allgemeines Renewal und eine kofinale positive Familie bleiben offen."
       ],
       "insufficient": [
         "O1–O7 oder die Schranke ||R_A||<=sqrt(90) als Kontraktion oder neue Terminalpositivität ausgeben.",
         "Die alte 191D-Reduktion ohne neuen analytischen Tail-/Kodimensionsbeweis auf A>1 übertragen.",
         "Den festen Horizont 1 lediglich numerisch vergrößern ohne neues Kompatibilitätsgesetz.",
         "Neue Terminalabschlüsse ohne Intertwining untereinander.",
-        "Mikroskopische Breitenfortsetzungen ohne kofinale Skalierungsstruktur."
+        "Mikroskopische Breitenfortsetzungen ohne kofinale Skalierungsstruktur.",
+        "Weitere Bisektion derselben endlichen Momentrelaxation ohne neue Kreuzprojektorinformation: zwei exakt zulässige, nahezu rechtwinklige Punktzeugen bleiben erhalten."
       ]
     },
     "global_continuation": {
@@ -124,7 +130,7 @@
       "id": "MOVING-PROFILE-RESERVE-RENEWAL",
       "title": "Erneuerbare Low/Profile-Reserve konstruieren",
       "mathematical_status": "OPEN",
-      "scope": "Bis A11 sind starke kanonische Schurkopplung, ein Spektralmischungszeuge und eindeutige tatsächliche Maximierer in beiden Paritäten hergeleitet. Die Rechnung setzt die neue Terminalpositivität voraus. Offen bleiben ein unabhängiger vorwärts gerichteter Renewal-Satz und über weitere Horizonte erneuerbare positive Low-Schur-Reserven."
+      "scope": "Bis A11 sind starke kanonische Schurkopplung, ein Spektralmischungszeuge und eindeutige tatsächliche Maximierer hergeleitet; die neue Terminalpositivität wird vorausgesetzt. Ein vorwärts gerichteter Renewal-Satz bleibt offen. Sein Kandidat soll aus A8->A9 und A9->A11 entstehen. Vor Verwendung zusätzlicher A11->A13-Daten sind Aussage, Konstanten und Abnahmekriterien festzuhalten; PR #187 bleibt separat."
     },
     {
       "id": "NON-SUMMABLE-TRANSPORT",
@@ -148,7 +154,7 @@
       "id": "CANONICAL-SCHUR-MAXIMIZER-ISOLATION",
       "title": "Ungerade physische Maximiererrichtung lokalisieren",
       "mathematical_status": "OPEN",
-      "scope": "A9->A11: der tatsächliche generalisierte Extremalgap ist in beiden Paritäten uniform positiv und die größte Eigenwertgerade jeweils eindeutig. Gerade ist die inverse Antwortrichtung samt physischem L2-Winkel lokalisiert. Offen bleibt die quantitative ungerade Richtungslokalisierung auf Grundlage derselben gemeinsam zulässigen Daten."
+      "scope": "A9->A11: positiver tatsächlicher generalisierter Extremalgap und eindeutige größte Eigenwertgerade in beiden Paritäten; gerade inverse Antwortrichtung lokalisiert. Ungerade Lokalisierung bleibt offen. Die bisher zertifizierte endliche Momentfamilie samt voller gemeinsamer Masse-/Energietransportordnung enthält nahezu rechtwinklige Maximierer und reicht für einen engen gemeinsamen Winkelkorridor nicht aus."
     },
     {
       "id": "CANONICAL-MAXIMIZER-BAND-MOMENTS",
@@ -157,28 +163,10 @@
       "scope": "Nach Richtungslokalisierung gemeinsame bandweise Masse-, Energie- und inverse Energiemomente der tatsächlichen kanonischen Maximierer von A9->A11 zertifizieren. Die bisher bekannten Momentzeugen dürfen ohne Nachweis nicht als tatsächliche Maximierer eingesetzt werden."
     },
     {
-      "id": "CANONICAL-ODD-OUTER-PROJECTOR-OBSTRUCTION",
-      "title": "CANONICAL ODD OUTER PROJECTOR OBSTRUCTION",
+      "id": "CANONICAL-CROSS-PROJECTOR-RESIDUAL-GATE",
+      "title": "Direkte gemeinsame Kreuzprojektor- und Residualdaten zertifizieren",
       "mathematical_status": "OPEN",
-      "scope": "A9->A11 ungerade: zwei rationale Alternativen der damaligen äußeren Momentfamilie haben einfache obere Eigenwerte und stark verschiedene physische inverse Antwortrichtungen; der gedrehte Zeuge verletzt die notwendige volle gemeinsame b-Grammatrix. Registry-Übernahme nach Integration; diese Paketobligation ist ein Integrationsschritt."
-    },
-    {
-      "id": "CANONICAL-TRANSPORT-MOMENT-EXCLUSION",
-      "title": "CANONICAL TRANSPORT MOMENT EXCLUSION",
-      "mathematical_status": "OPEN",
-      "scope": "Notwendige gemeinsame Ordnung H1>=nuB H0>=0 des übertragenen hohen Restes; zwei neue Beispiele mit voller b-Grammatrix und getrennt positiver Masse/Energie verletzen diese Ordnung in gemischten Richtungen. Registry-Übernahme nach Integration; diese Paketobligation ist ein Integrationsschritt."
-    },
-    {
-      "id": "CANONICAL-TRANSPORT-PROJECTOR-OBSTRUCTION",
-      "title": "CANONICAL TRANSPORT PROJECTOR OBSTRUCTION",
-      "mathematical_status": "OPEN",
-      "scope": "Zwei korrigierte rationale Vervollständigungen erfüllen sämtliche ausdrücklich geprüften Momentbedingungen einschließlich voller gemeinsamer Transportordnung und haben bei unverändert einfachen oberen Eigenwerten mindestens 89.987266 Grad getrennte physische inverse Antwortrichtungen. Registry-Übernahme nach Integration; diese Paketobligation ist ein Integrationsschritt."
-    },
-    {
-      "id": "CANONICAL-ODD-BOX-STRUCTURAL-OPEN",
-      "title": "CANONICAL ODD BOX STRUCTURAL OPEN",
-      "mathematical_status": "OPEN",
-      "scope": "Rationaler Vier-Variablen-Boxtest in Y57,Y58,Y67,Y68 mit vollen übrigen Eintragshüllen: sieben Knoten, vier Blätter, zwei zertifizierte zulässige Punktzeugen in verschiedenen Blättern; STRUCTURAL OPEN der angegebenen endlichen Relaxation. Registry-Übernahme nach Integration; diese Paketobligation ist ein Integrationsschritt."
+      "scope": "A9->A11 ungerade: K=(PA UA)*J*(PB UB) direkt einschließen, Y=K GB^-1(GB+LB/17). Zuerst gerichtete gemeinsame Kreuzresiduen, besonders die Funktionale für Y58 und Y68; bei unzureichender Schärfe rationale verschobene Projektorfilter. GREEN erfordert Ausschluss mindestens einer bisherigen Gegenfamilie und einen rigorosen tatsächlichen physischen Winkelkorridor unter 10 Grad Gesamtbreite. STRUCTURAL OPEN 2 erfordert neue stark verschiedene zulässige Vervollständigungen einschließlich der neuen Daten. Sonst UNRESOLVED mit benanntem begrenzendem Kreuzterm."
     }
   ],
   "results": [
@@ -1833,6 +1821,167 @@
         "Kofinale positive Familie, globales Objekt X, globale Weil-Positivität oder RH.",
         "Abgeschlossene externe analytische Gesamtprüfung."
       ]
+    },
+    {
+      "id": "CANONICAL-ODD-OUTER-PROJECTOR-OBSTRUCTION",
+      "title": "Äußere ungerade Projektorobstruktion und fehlende gemeinsame b-Grammatrix",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "ed94c19f824c947f63e4867fb3c202f71e36e631",
+          "path": "research/x-c1/canonical-odd-structural-open-2026-10-01/01-outer-projector/verification.json",
+          "sha256": "3515795e7a58c72d723d42bac744c8779381d64e93e7b507b5ec647f3771dbe4"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "A9->A11 ungerade: zwei rationale Alternativen der damaligen äußeren Momentfamilie haben einfache obere Eigenwerte und stark verschiedene physische inverse Antwortrichtungen; der gedrehte Zeuge verletzt die notwendige volle gemeinsame b-Grammatrix.",
+      "claim": [
+        "Zwei explizite rationale Alternativen der damaligen äußeren Momentfamilie haben einfache obere Eigenwerte und mindestens 89.93632 Grad getrennte physische inverse Antwortrichtungen.",
+        "Der gedrehte äußere Zeuge verletzt die notwendige volle gemeinsame b-Grammatrix. Diese erste Konstruktion wird nicht als zulässiger Zeuge der später verschärften Familie ausgegeben."
+      ],
+      "depends_on": [
+        "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+        "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS",
+        "CRITICAL-SPECTRAL-TRANSPORT"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "ed94c19f824c947f63e4867fb3c202f71e36e631",
+      "canonical_proof": "research/x-c1/canonical-odd-structural-open-2026-10-01/01-outer-projector/PROOF.md",
+      "proof_sha256": "0e396bf23c3546978b08faf2544f5b010a253f5eafca6f388104adf041c7af5f",
+      "negative_claim_boundary": "Informationsgrenze ausschließlich der jeweils ausdrücklich definierten endlichen Zertifikatsfamilie; kein No-Go für das tatsächliche Operatorpaar, allgemeines Renewal oder Objekt X. Einfachheit je Operatorfall bedeutet keine gemeinsame Richtung über alle Vervollständigungen.",
+      "does_not_claim": [
+        "Lokalisierung oder freie Wählbarkeit des tatsächlichen ungeraden Maximierers; bandweise Momente tatsächlicher Maximierer.",
+        "Vollständige gemeinsame physische Realisierung aller ursprünglichen Trial-, Überlappungs- und Operatordaten durch die endlichen Gegenzeugen.",
+        "Allgemeiner vorwärts gerichteter Renewal-Satz, A13-Positivität oder eine kofinale positive Familie.",
+        "Globales Objekt X, globale Weil-Positivität, RH oder abgeschlossene externe analytische Gesamtprüfung."
+      ]
+    },
+    {
+      "id": "CANONICAL-TRANSPORT-MOMENT-EXCLUSION",
+      "title": "Gemeinsame Transportmomentordnung und Ausschluss zweier äußerer Beispiele",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "ed94c19f824c947f63e4867fb3c202f71e36e631",
+          "path": "research/x-c1/canonical-odd-structural-open-2026-10-01/02-transport-moments/verification.json",
+          "sha256": "70004f2303ec4b203f26a60a31420df671f4e0dd2cb8ee4d873d898e577d9e30"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "Notwendige gemeinsame Ordnung H1>=nuB H0>=0 des übertragenen hohen Restes; zwei neue Beispiele mit voller b-Grammatrix und getrennt positiver Masse/Energie verletzen diese Ordnung in gemischten Richtungen.",
+      "claim": [
+        "Aus Formnaturality, vollständiger kritischer B-Basis und hohem Spektralschnitt folgt H1>=nuB H0>=0 für die gemeinsam transportierte Restmasse und Restenergie, mit nuB=0.070769.",
+        "Zwei neue rationale Beispiele mit positiver gemeinsamer b-Grammatrix und getrennt positiver Masse und Energie verletzen H1-nuB H0 in gemischten Richtungen. Positive Diagonaleinträge reichen zur Prüfung der Matrixordnung nicht aus."
+      ],
+      "depends_on": [
+        "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+        "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS",
+        "CRITICAL-SPECTRAL-TRANSPORT",
+        "CANONICAL-ODD-OUTER-PROJECTOR-OBSTRUCTION"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "ed94c19f824c947f63e4867fb3c202f71e36e631",
+      "canonical_proof": "research/x-c1/canonical-odd-structural-open-2026-10-01/02-transport-moments/PROOF.md",
+      "proof_sha256": "08608a19c6078dc46d7e1d6246e76f4e9636bd02b75c1d7e2af841a0735036ba",
+      "negative_claim_boundary": "Informationsgrenze ausschließlich der jeweils ausdrücklich definierten endlichen Zertifikatsfamilie; kein No-Go für das tatsächliche Operatorpaar, allgemeines Renewal oder Objekt X. Einfachheit je Operatorfall bedeutet keine gemeinsame Richtung über alle Vervollständigungen.",
+      "does_not_claim": [
+        "Lokalisierung oder freie Wählbarkeit des tatsächlichen ungeraden Maximierers; bandweise Momente tatsächlicher Maximierer.",
+        "Vollständige gemeinsame physische Realisierung aller ursprünglichen Trial-, Überlappungs- und Operatordaten durch die endlichen Gegenzeugen.",
+        "Allgemeiner vorwärts gerichteter Renewal-Satz, A13-Positivität oder eine kofinale positive Familie.",
+        "Globales Objekt X, globale Weil-Positivität, RH oder abgeschlossene externe analytische Gesamtprüfung."
+      ]
+    },
+    {
+      "id": "CANONICAL-TRANSPORT-PROJECTOR-OBSTRUCTION",
+      "title": "Korrigierte rationale Projektorobstruktion trotz gemeinsamer Transportordnung",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "ed94c19f824c947f63e4867fb3c202f71e36e631",
+          "path": "research/x-c1/canonical-odd-structural-open-2026-10-01/03-corrected-projector/verification.json",
+          "sha256": "3f8e060b6c714099a1b848ca5574615e22998d78b8b99f606df5ab9a6cd46418"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "Zwei korrigierte rationale Vervollständigungen erfüllen sämtliche ausdrücklich geprüften Momentbedingungen einschließlich voller gemeinsamer Transportordnung und haben bei unverändert einfachen oberen Eigenwerten mindestens 89.987266 Grad getrennte physische inverse Antwortrichtungen.",
+      "claim": [
+        "Die exakte linke Korrektur C=I+(1/4) H GA^-1 und Y_neu=C Y erhält den Kern von Y, die komprimierten Zweiermatrizen und den jeweiligen maximalen Eigenprojektor.",
+        "Beide korrigierten rationalen Vervollständigungen erfüllen die ausdrücklich geprüften Kammermomente, vollen Kreuzblockhüllen und die volle gemeinsame Transportordnung H1>=nuB H0>=0. Sie bestehen dieselben geerbten Gap- und Einfachheitsprüfungen.",
+        "Ihre physischen inversen Antwortrichtungen im selben vollständigen A11-Gramraum sind mindestens 89.987266 Grad getrennt. Eine vollständige gemeinsame Realisierung sämtlicher ursprünglicher Trial-, Überlappungs- und Operatordaten wird nicht behauptet."
+      ],
+      "depends_on": [
+        "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+        "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS",
+        "CRITICAL-SPECTRAL-TRANSPORT",
+        "CANONICAL-TRANSPORT-MOMENT-EXCLUSION"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "ed94c19f824c947f63e4867fb3c202f71e36e631",
+      "canonical_proof": "research/x-c1/canonical-odd-structural-open-2026-10-01/03-corrected-projector/PROOF.md",
+      "proof_sha256": "2d1527e10f55db801e7ae15308b7ac2e8fddcd4ef5afc0aa478ef0413560ad2e",
+      "negative_claim_boundary": "Informationsgrenze ausschließlich der jeweils ausdrücklich definierten endlichen Zertifikatsfamilie; kein No-Go für das tatsächliche Operatorpaar, allgemeines Renewal oder Objekt X. Einfachheit je Operatorfall bedeutet keine gemeinsame Richtung über alle Vervollständigungen.",
+      "does_not_claim": [
+        "Lokalisierung oder freie Wählbarkeit des tatsächlichen ungeraden Maximierers; bandweise Momente tatsächlicher Maximierer.",
+        "Vollständige gemeinsame physische Realisierung aller ursprünglichen Trial-, Überlappungs- und Operatordaten durch die endlichen Gegenzeugen.",
+        "Allgemeiner vorwärts gerichteter Renewal-Satz, A13-Positivität oder eine kofinale positive Familie.",
+        "Globales Objekt X, globale Weil-Positivität, RH oder abgeschlossene externe analytische Gesamtprüfung."
+      ]
+    },
+    {
+      "id": "CANONICAL-ODD-BOX-STRUCTURAL-OPEN",
+      "title": "Rationaler Vier-Variablen-Boxtest: STRUCTURAL OPEN der endlichen Relaxation",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "ed94c19f824c947f63e4867fb3c202f71e36e631",
+          "path": "research/x-c1/canonical-odd-structural-open-2026-10-01/04-rational-box-gate/verification.json",
+          "sha256": "b282375e86fe47a1645a7f70644580f81f9d1748a47dd8b77532450e9bc28877"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "Rationaler Vier-Variablen-Boxtest in Y57,Y58,Y67,Y68 mit vollen übrigen Eintragshüllen: sieben Knoten, vier Blätter, zwei zertifizierte zulässige Punktzeugen in verschiedenen Blättern; STRUCTURAL OPEN der angegebenen endlichen Relaxation.",
+      "claim": [
+        "Der rationale Boxtest in Y57,Y58,Y67,Y68 erzeugt sieben Knoten und vier Blätter. Zwei verschiedene Blätter enthalten die bereits exakt konstruierten und erneut zertifizierten Punktzeugen.",
+        "Damit ist die enge gemeinsame Richtungslokalisierung durch diese endliche Moment-/Transportrelaxation ausgeschlossen: STRUCTURAL OPEN. Die Existenz folgt aus den gekoppelten Punktzeugen, nicht aus dem Überleben einer Intervallbox.",
+        "Der tatsächliche ungerade Maximierer bleibt eindeutig, aber quantitativ nicht lokalisiert. Direkte gemeinsame Kreuzprojektor-/Residualinformation ist der nächste Gate; weitere Bisektion derselben Relaxation entfernt die zulässigen Punktzeugen nicht."
+      ],
+      "depends_on": [
+        "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+        "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS",
+        "CRITICAL-SPECTRAL-TRANSPORT",
+        "CANONICAL-TRANSPORT-PROJECTOR-OBSTRUCTION"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "ed94c19f824c947f63e4867fb3c202f71e36e631",
+      "canonical_proof": "research/x-c1/canonical-odd-structural-open-2026-10-01/04-rational-box-gate/PROOF.md",
+      "proof_sha256": "b90a545b35e6f07bccc2307133230a04f754fb930d736180cc5574c901246cf2",
+      "negative_claim_boundary": "Informationsgrenze ausschließlich der jeweils ausdrücklich definierten endlichen Zertifikatsfamilie; kein No-Go für das tatsächliche Operatorpaar, allgemeines Renewal oder Objekt X. Einfachheit je Operatorfall bedeutet keine gemeinsame Richtung über alle Vervollständigungen.",
+      "does_not_claim": [
+        "Lokalisierung oder freie Wählbarkeit des tatsächlichen ungeraden Maximierers; bandweise Momente tatsächlicher Maximierer.",
+        "Vollständige gemeinsame physische Realisierung aller ursprünglichen Trial-, Überlappungs- und Operatordaten durch die endlichen Gegenzeugen.",
+        "Allgemeiner vorwärts gerichteter Renewal-Satz, A13-Positivität oder eine kofinale positive Familie.",
+        "Globales Objekt X, globale Weil-Positivität, RH oder abgeschlossene externe analytische Gesamtprüfung."
+      ]
     }
   ],
   "global_status": {
@@ -1946,28 +2095,7 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [
-    {
-      "id": "CANONICAL-ODD-OUTER-PROJECTOR-OBSTRUCTION",
-      "meta_path": "research/x-c1/canonical-odd-structural-open-2026-10-01/01-outer-projector/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    },
-    {
-      "id": "CANONICAL-TRANSPORT-MOMENT-EXCLUSION",
-      "meta_path": "research/x-c1/canonical-odd-structural-open-2026-10-01/02-transport-moments/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    },
-    {
-      "id": "CANONICAL-TRANSPORT-PROJECTOR-OBSTRUCTION",
-      "meta_path": "research/x-c1/canonical-odd-structural-open-2026-10-01/03-corrected-projector/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    },
-    {
-      "id": "CANONICAL-ODD-BOX-STRUCTURAL-OPEN",
-      "meta_path": "research/x-c1/canonical-odd-structural-open-2026-10-01/04-rational-box-gate/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    }
-  ],
+  "pending_packages": [],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",
@@ -1984,15 +2112,15 @@
     }
   },
   "current_integration_observation": {
-    "observed_at": "2026-09-30",
-    "main_sha": "b882c9e74f8bb8ca4594aefb77534dd92573bcd1",
-    "integrated_research_branch": "research/canonical-joint-maximizers-2026-09-30",
-    "integrated_research_head": "2172de38d0def2c4b42c255e6c1290a720e3e94e",
-    "reconciliation_merge": "b882c9e74f8bb8ca4594aefb77534dd92573bcd1",
-    "ci_run_id": 36738813116,
+    "observed_at": "2026-10-01",
+    "main_sha": "eb4bd1b78b130a44987c4ee171ded8034c0948cc",
+    "integrated_research_branch": "research/canonical-odd-structural-open-2026-10-01",
+    "integrated_research_head": "ed94c19f824c947f63e4867fb3c202f71e36e631",
+    "reconciliation_merge": "eb4bd1b78b130a44987c4ee171ded8034c0948cc",
+    "ci_run_id": 36816859003,
     "ci_run_attempt": 1,
-    "ci_head_sha": "b882c9e74f8bb8ca4594aefb77534dd92573bcd1",
-    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/36738813116",
+    "ci_head_sha": "eb4bd1b78b130a44987c4ee171ded8034c0948cc",
+    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/36816859003",
     "ci_conclusion": "success",
     "mathematical_status_change": false
   }
