@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "final_main": "6302a47cab2132f0d87dec29bbf21d7ce98e8f75",
+  "research_pr": {
+    "number": 195,
+    "url": "https://github.com/Waschtl904/objekt-x-programm/pull/195",
+    "head": "ed94c19f824c947f63e4867fb3c202f71e36e631",
+    "merge": "eb4bd1b78b130a44987c4ee171ded8034c0948cc"
+  },
+  "registry_pr": {
+    "number": 196,
+    "url": "https://github.com/Waschtl904/objekt-x-programm/pull/196",
+    "head": "ef10c9b012100c48a1c6894f8b782130a6fd5ae8",
+    "merge": "6302a47cab2132f0d87dec29bbf21d7ce98e8f75"
+  },
+  "ci": {
+    "research_main_replay": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/36816858969",
+    "research_main_registry": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/36816859003",
+    "final_main_registry": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/36817745054",
+    "final_main_run": 36817745054,
+    "conclusion": "success"
+  },
+  "package_count": 4,
+  "original_files_byte_preserved": 49,
+  "original_archives_byte_preserved": 4,
+  "result_count": 45,
+  "previous_results_preserved": 41,
+  "pending_packages": 0,
+  "status_unchanged": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN",
+  "frontier": "A9->A11: odd maximizer unique but not localized; finite joint mass/energy transport constraints insufficient; direct cross-projector information is the next gate",
+  "next_gates": [
+    "Direct cross-projector/residual gate; target odd physical corridor below 10 degrees total width",
+    "Bandwise moments of the actual maximizer"
+  ],
+  "does_not_claim": [
+    "General renewal theorem",
+    "A13 positivity",
+    "Cofinal positive family",
+    "Global object X",
+    "RH"
+  ],
+  "global_verified_snapshot": "5f19065e28b9f2e09ae93bef0b4c752ab58997d4",
+  "pr187": {
+    "state": "open",
+    "head": "18d752f492fde5f0a9a6dec8cf8ff42583f8b064"
+  },
+  "local_status": "## HEAD (no branch)\n",
+  "unpushed_branch_commits": false
+}

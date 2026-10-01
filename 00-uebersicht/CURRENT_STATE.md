@@ -106,4 +106,9 @@ Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGI
 
 Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getrennt. Diese Statusansicht führt die mathematischen Checker nicht erneut aus.
 
+## Noch nicht in den geprüften Stand übernommene Pakete
+
+- `CANONICAL-CROSS-PROJECTOR-RESIDUAL-UNRESOLVED`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-cross-high-response-2026-10-01/01-cross-projector/META.yaml`.
+- `CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-cross-high-response-2026-10-01/02-high-response/META.yaml`.
+
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

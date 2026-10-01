@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "gate_status": "UNRESOLVED",
+  "main": "6302a47cab2132f0d87dec29bbf21d7ce98e8f75",
+  "source_files_checked": 23,
+  "filter_precisions": [
+    1024,
+    1536
+  ],
+  "small_replays_byte_identical": true,
+  "filter_enclosures_overlap": true,
+  "full_operator_runs_replayed": false,
+  "operator_evidence": "Directed Arb generator at two precisions; the small replay checks bindings and analytic guards, not an independent implementation of the full operator solves.",
+  "input_sha256": {
+    "stage_a.json": "fba9ebf9948bdf3fdbfbdbeb3b561799eed0320cf0bc5d954ddd680fd30669f3",
+    "stage_a_gate.json": "ec7979690f37c035390956cd87faf21368af1736d5c5288e94cd29120931ec8a",
+    "filter_1024.json": "24fa045103e26a38a323ce21f3cf6c2dc6b4b65946b08ef12c61dada9db322c6",
+    "filter_1536.json": "3c20abd31e3980a74d8dddd0b1622231353c890db90a9d18f956212059978fd9",
+    "combined.json": "16292a80e61f78f68a63bb2601741ee8d52116f654c20b9c9e026afcdc64255b",
+    "combined_gate.json": "52a6f18abbf9e53a8343c49195850001e16ae07cd5ddfe8b7f2c7e222a4a3c2e"
+  },
+  "steps": [
+    "check_cross_filter_math.py",
+    "cross_projector_stage_a.py",
+    "evaluate_cross_projector.py",
+    "evaluate_cross_projector.py"
+  ],
+  "global_mathematical_status_change": false,
+  "A13_inputs_used": false
+}

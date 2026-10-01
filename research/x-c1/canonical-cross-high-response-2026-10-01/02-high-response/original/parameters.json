@@ -1,0 +1,18 @@
+{
+  "name": "HIGH-RESPONSE ORIENTATION / CORRECTED RESOLVENT",
+  "main": "6302a47cab2132f0d87dec29bbf21d7ce98e8f75",
+  "frozen_before_runs": true,
+  "scope": "A9->A11 odd; A9 trial columns 5,6 and A11 trial column 8",
+  "filter_degree": 8,
+  "filter_scale": "1/300",
+  "arithmetic_bits": 1024,
+  "capture_counts": [8, 16, 32, 64, 128],
+  "capture_definition": "Full model raw-high coupling energy captured by the first K odd high Legendre modes; original cutoffs A9=593, A11=571",
+  "candidate_rule": "Finite Galerkin candidates only; certify residuals against the complete operator including the omitted high space",
+  "target_functionals": ["Y58", "Y68"],
+  "PARTIAL_GREEN": "Strict directed exclusion of the rotated old witness using either Y58 upper < witness lower or Y68 lower > witness upper",
+  "GREEN": "PARTIAL_GREEN and certified actual odd physical angle corridor of total width <10 degrees",
+  "UNRESOLVED": "Full residual or directed target enclosures remain too wide; identify limiting channel without claiming an operator no-go",
+  "A13_inputs_allowed": false,
+  "review": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN"
+}

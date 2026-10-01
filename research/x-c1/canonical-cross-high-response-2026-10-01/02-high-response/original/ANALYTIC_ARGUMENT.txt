@@ -1,0 +1,176 @@
+HIGH-RESPONSE ORIENTATION / CORRECTED RESOLVENT
+============================================
+
+Scope and prerequisites
+-----------------------
+The already certified positive physical operators at A9 and A11 are used
+retrospectively. No positivity renewal, A13 statement or global assertion
+is inferred. The fixed filter is f(lambda)=1/(1+(300 lambda)^8). Its eight
+complex poles and the 1024-bit candidate arithmetic are unchanged.
+
+Raw coordinates use H=L2((-1,1),dx/2) with e_n=sqrt(2n+1)P_n.
+In odd parity the physical carrier is m^perp, m(x)=sinh(Ax/2).
+The Mellin map M sends e_n to e_n-t_n e_1, where
+t_n=<m,e_n>/<m,e_1>. The physical operator is the compression of
+Qraw=D_H+V+q0-K-S to this carrier. Finite corrected polynomials are in
+the operator domain; the raw operator applied to them is L2. Consequently
+Qphysical w=P_mperp Qraw w. All facts are the same domain and moment
+conventions as the terminal PROOF.md files.
+
+Stage 0: directional capture
+----------------------------
+The old low shifted candidates x_z are exact dyadic midpoint vectors.
+The polynomial q=M[x_z;0] is reconstructed using directed Mellin moments.
+The signed raw-high model coefficients are
+
+ h_k=<e_k,(V-K_model-S)q>,  k>N, k odd.
+
+The diagonal harmonic and constant operators have no raw-high contribution.
+Potential entries are the existing analytic Legendre formula. Shift entries
+are exact polynomial Gauss integrals, with sufficient degree for both
+factors. The polynomial Gamma action is reconstructed directionally:
+
+ F_j(x)=integral |x-y|^j q(y) dy/2,
+ F_1''=q, F_j''=j(j-1)F_(j-2),
+ K_model q=2A sum_j p_j (A/2)^j F_j.
+
+The boundary values at x=1 are exact beta-integral formulas. This is checked
+against the original basis-column engine at small degrees. The signed
+shift integrals are checked by separate polynomial antiderivatives.
+Long Legendre value recurrences restart every 64 degrees from independent
+Arb special-function enclosures, at the same 1024-bit precision.
+
+The published full model Gram G0, including the complete Parseval rest,
+gives E=x_z*G0 x_z. For each finite initial high segment,
+
+ rho_K=sum_(N<k<=K,odd) |h_k|^2/E.
+
+This is a model-response capture ratio, not a lower bound on the amount
+of the true resolvent solution that the same modes capture. The actual
+coupling differs by the published tiny operator error. Orthogonal
+capture fractions must lie in [0,1]; excessive interval widths are
+rejected. Both A9's cutoff 593 and A11's cutoff 571 are respected.
+
+Stage 1: response-image correction space
+----------------------------------------
+Use real and imaginary parts of the finite captured responses as proposals
+for W. Two-pass Gram-Schmidt supplies exact dyadic candidate basis vectors;
+directions smaller than 1e-8 relative to a unit proposal are omitted.
+The resulting finite Gram is explicitly checked. This selection concerns
+only a candidate space and does not discard any true operator residual.
+These are the response images projected to the first 128 odd high modes.
+They are not represented as the complete infinite response-image space.
+
+For the corrected assembly the Gamma endpoint recurrence uses the exact
+identities (I^2 p)'(1)=p_0 and (I^2 p)(1)=-p_1/3 for the stated Legendre
+antiderivative. Thus alpha=der-p_0 and beta=val+p_1/3-alpha. This avoids
+summing a large number of cancelling high coefficients. The frozen capture
+implementation and this algebraically equivalent implementation are both
+included, and are compared with the original small basis-column engine.
+
+The finite low+W form and physical mass are assembled with the existing
+low block and newly signed full-model cross/high entries. Every shifted
+solve supplies a dyadic midpoint candidate. Its truth is certified by
+the subsequent full residual, not by the finite solve or the apparent
+Galerkin cancellation. In block notation the exact residual is
+
+ r_L=G_L v-(L-zG_L)x-(C-z t_L t_H*)y,
+ r_H=t_H t_L*(v+zx)-C*x-(H-zG_H)y.
+
+Stage 2: complete physical residual by direct integration
+--------------------------------------------------------
+For finite odd polynomials u,w, let
+
+ r_model=u-(Qraw_model-z)w=b_cell-Vw,
+ b_cell=u-(D_H+q0-z)w+K_model w+S w.
+
+On every exact shift cell, b_cell is a polynomial. Thus the ENTIRE raw
+norm is evaluated analytically from
+
+ integral (|b_cell|^2 - 2 V Re(conj(w)b_cell) + V^2 |w|^2) dx/2.
+
+Polynomial antiderivatives, exact logarithmic primitives for V, and the
+existing exact V^2 moments account for all high degrees. No finite tail
+of Legendre coefficients replaces this integral. By oddness the norm
+is the corresponding integral over the positive half interval.
+The polynomial/logarithmic cross terms are evaluated in each cell's local
+coordinate s=(x-l)/(r-l), keeping affine arguments inside the original
+interval. The local logarithmic moments use
+
+ T_n(c)=integral_0^1 s^n/(1-c s) ds,
+ T_(n-1)=1/n+c T_n,
+ integral_0^1 s^n log(1-c s) ds=[log(1-c)+c T_(n+1)]/(n+1).
+
+The top T moment is initialized by 2048 power-series terms plus the
+geometric remainder |c|^2048/(1-|c|); the backward recurrence is stable.
+At the singular endpoint c=1 the exact harmonic-number log moments are
+used. These are directed analytic identities, not sampled quadrature.
+
+Remove the irrelevant Mellin normal before bounding the physical norm.
+Let r1=<e_1,r_model> and n=m/<e_1,m>. Then P_mperp(r_model-r1 n)=P_mperp r_model.
+Let n81 be its odd Taylor polynomial through degree 81. With c=A/2,
+
+ ||n-n81|| <= [c^83/(83! (1-c^2/(84*85)))]/<e_1,m> = epsilon_n.
+
+Since projection contracts,
+
+ ||P_mperp r_model|| <= ||r_model-r1 n81||+|r1| epsilon_n.
+
+The first norm is integrated exactly in the same complete manner above.
+The remaining model-to-true error is gamma_K ||w||, where gamma_K is
+the published uniform Gamma operator error. The source basis is rounded
+only for polynomial evaluation; its difference is paid by
+||M(v-v0)||<=2||v-v0||. Therefore a full physical residual bound is
+
+ rho_z=complete_model_residual + gamma_K ||w|| + 2||v-v0||.
+
+The old low candidate precision remains 1024 bits. New polynomial squared
+norms use the original terminal engine's 3072-bit integral precision;
+this is not a claim that more bits improve the old norm-only residual.
+An explicit width guard rejects inconclusive cancellation in the new
+analytic integral. A small independent test subtracts the finite response
+coefficients from the complete norm and reproduces the original full-high
+Gram, including its strictly positive omitted tail.
+The Mellin moment series uses 128 terms for the 1024-bit candidates and
+256 terms for the 3072-bit integrals, with its factorial remainder retained.
+This prevents the old moment truncation remainder from being amplified
+by the new high-degree polynomial transformations. No scalar filter
+degree, pole, or candidate-precision increase is used.
+
+For a separate diagnostic at the first upper pole, complete V and S norms
+are reduced by their finite Parseval sums through the candidate's last
+degree. The Gamma image has its exactly known polynomial support. The
+joint omitted residual norm is computed by subtracting all represented
+raw coefficients from the separately integrated full raw residual norm.
+Above this last degree the polynomial source and D_H+q0-z terms vanish:
+the omitted channel is the signed sum K_model w+S w-Vw. This diagnostic
+retains the full omitted space and does not make a claim about other poles.
+
+Stage 3: projector and target functionals
+-----------------------------------------
+If d_z is a lower bound on distance from the pole to the entire certified
+spectrum, the spectral theorem gives resolvent error <=rho_z/d_z.
+Combining all four conjugate pairs and the unchanged scalar filter error
+delta gives projected-column error
+
+ eta=delta+sum_(upper poles) 2 |z| rho_z/(8 d_z).
+
+For each requested pair A9_i,A11_8, integrate the signed physical overlap
+of the corrected polynomial approximations. With their norms vA,vB,
+
+ |K_ij-Ktilde_ij|<=min(eta_A vB+eta_B, eta_A+eta_B vA).
+
+The exact normalization remains Y=K G_B^-1(G_B+L_B/17). The existing
+energy estimate pays |Y_ij-K_ij|<=sqrt(SA_ii SB_jj)/17.
+Only Y58 and Y68 are updated and intersected with the preceding common
+enclosures. An old witness is excluded only by a strict directed interval
+separation. Actual angular localization still requires the joint certifier.
+
+Outcome boundaries
+------------------
+GREEN requires exclusion of the rotated witness and a certified physical
+odd angular corridor of total width <10 degrees. Exclusion alone is
+PARTIAL GREEN. Broad residuals/target enclosures give UNRESOLVED. This
+does not prove a new pair of feasible completions or an obstruction to
+the actual operator. All conclusions remain AUTHOR_DERIVED /
+EXTERNAL_REVIEW_OPEN. No A13 inputs are used.
