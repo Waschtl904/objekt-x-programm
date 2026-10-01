@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "CANONICAL-ODD-OUTER-PROJECTOR-OBSTRUCTION",
+  "date": "2026-10-01",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "A9->A11 ungerade: zwei rationale Alternativen der damaligen äußeren Momentfamilie haben einfache obere Eigenwerte und stark verschiedene physische inverse Antwortrichtungen; der gedrehte Zeuge verletzt die notwendige volle gemeinsame b-Grammatrix.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Informationsgrenze ausschließlich der jeweils ausdrücklich definierten endlichen Zertifikatsfamilie; kein No-Go für das tatsächliche Operatorpaar, allgemeines Renewal oder Objekt X. Einfachheit je Operatorfall bedeutet keine gemeinsame Richtung über alle Vervollständigungen.",
+  "depends_on": [
+    "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+    "CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS",
+    "CRITICAL-SPECTRAL-TRANSPORT"
+  ],
+  "closes": [
+    "CANONICAL-ODD-OUTER-PROJECTOR-OBSTRUCTION"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Lokalisierung oder freie Wählbarkeit des tatsächlichen ungeraden Maximierers; bandweise Momente tatsächlicher Maximierer.",
+    "Vollständige gemeinsame physische Realisierung aller ursprünglichen Trial-, Überlappungs- und Operatordaten durch die endlichen Gegenzeugen.",
+    "Allgemeiner vorwärts gerichteter Renewal-Satz, A13-Positivität oder eine kofinale positive Familie.",
+    "Globales Objekt X, globale Weil-Positivität, RH oder abgeschlossene externe analytische Gesamtprüfung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/canonical-odd-structural-open-2026-10-01/01-outer-projector/PROOF.md",
+    "sha256": "0e396bf23c3546978b08faf2544f5b010a253f5eafca6f388104adf041c7af5f"
+  }
+}

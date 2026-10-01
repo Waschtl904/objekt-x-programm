@@ -1,0 +1,26 @@
+{
+  "research_timebox_minutes": 25,
+  "started_utc": "2026-09-30 17:59:02 UTC",
+  "integration_base": "689ff6266b5e4d58700f82eae3016951a023e353",
+  "correction_coefficient": "1/4",
+  "coefficient_formula": "C=I+(1/4) H0 GA^-1; Ynew=C Yold",
+  "required": [
+    "upstream archive and manifests verified",
+    "byte-identical upstream replay",
+    "both examples against both inherited precision receipts",
+    "strict transported mass and energy support positivity",
+    "invertible left correction preserves exact kernel and generalized projector",
+    "same-space physical angle inherited and independently recomputed",
+    "source audit",
+    "independent noncommuting algebra test",
+    "tamper rejection",
+    "deterministic replay"
+  ],
+  "not_claimed": [
+    "actual odd localization",
+    "actual maximizer band moments",
+    "full physical realization of all input data",
+    "forward renewal theorem",
+    "A13 test"
+  ]
+}

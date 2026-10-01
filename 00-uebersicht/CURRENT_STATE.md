@@ -102,4 +102,11 @@ Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGI
 
 Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getrennt. Diese Statusansicht führt die mathematischen Checker nicht erneut aus.
 
+## Noch nicht in den geprüften Stand übernommene Pakete
+
+- `CANONICAL-ODD-OUTER-PROJECTOR-OBSTRUCTION`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-odd-structural-open-2026-10-01/01-outer-projector/META.yaml`.
+- `CANONICAL-TRANSPORT-MOMENT-EXCLUSION`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-odd-structural-open-2026-10-01/02-transport-moments/META.yaml`.
+- `CANONICAL-TRANSPORT-PROJECTOR-OBSTRUCTION`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-odd-structural-open-2026-10-01/03-corrected-projector/META.yaml`.
+- `CANONICAL-ODD-BOX-STRUCTURAL-OPEN`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-odd-structural-open-2026-10-01/04-rational-box-gate/META.yaml`.
+
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

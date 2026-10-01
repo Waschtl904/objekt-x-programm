@@ -1,0 +1,244 @@
+{
+  "publication_base": "689ff6266b5e4d58700f82eae3016951a023e353",
+  "source_commit": "8a82b7a972172c45cc4d3bc0297cc7fc0bbb2c7b",
+  "published_package_anchor": "b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d",
+  "original_files": [
+    {
+      "path": "01-outer-projector/ODD_PROJECTOR.md",
+      "sha256": "0e396bf23c3546978b08faf2544f5b010a253f5eafca6f388104adf041c7af5f"
+    },
+    {
+      "path": "01-outer-projector/REPRODUKTION.md",
+      "sha256": "c46b19d58307e0bd07036ac27d0b3a8d521b252c7b08e84cc3abe388ef3da825"
+    },
+    {
+      "path": "01-outer-projector/SHA256SUMS",
+      "sha256": "8dc459a925277e6b7e4fe64bc76e5c4c3e4ca0f4918a3309949b82e93cee9414"
+    },
+    {
+      "path": "01-outer-projector/check_odd_projector.py",
+      "sha256": "e4faf51e9cd8399ac999cdd888cfe80b11a5ca03acfc927a840cdcde42054e4c"
+    },
+    {
+      "path": "01-outer-projector/completion_math.py",
+      "sha256": "5ed65692a76db43b7d983a31606869a8779d453389824ee5ba547d8c22e26b04"
+    },
+    {
+      "path": "01-outer-projector/inputs/Gemeinsames-Schurdefekt-Proportionalitaetsgate-2026-09-30.zip",
+      "sha256": "4ed89ec928ba1573c6f295bf4038588568c1e5b9f4fdff69ee8e318eb4733c5b"
+    },
+    {
+      "path": "01-outer-projector/parameters.json",
+      "sha256": "bfde22b3acaadcc9e7c6ee49993acb11015e4b573cb837e06d3bdb601653889a"
+    },
+    {
+      "path": "01-outer-projector/verification.json",
+      "sha256": "3515795e7a58c72d723d42bac744c8779381d64e93e7b507b5ec647f3771dbe4"
+    },
+    {
+      "path": "01-outer-projector/verification.log",
+      "sha256": "caa75cc28c3ce545693c2d06839e86d8d0be4c94e5f954d6cbaac7c4e58fbf7a"
+    },
+    {
+      "path": "01-outer-projector/verify_odd_projector.py",
+      "sha256": "fdb9b2eb92f6414a6b39ec23635f16190784d95af9037e150ffe74813a040440"
+    },
+    {
+      "path": "02-transport-moments/REPRODUKTION.md",
+      "sha256": "1ff57eb17bcd7fd0e29bcfb1163fb95d21410a4ce38f2e363e5cfa704e7a0669"
+    },
+    {
+      "path": "02-transport-moments/SHA256SUMS",
+      "sha256": "7502202a1ce59b4d3ad38b5ee5fdb90414cdc480d4701df2929cb0f1d6c32aa0"
+    },
+    {
+      "path": "02-transport-moments/TRANSPORT_MOMENT_GATE.md",
+      "sha256": "08608a19c6078dc46d7e1d6246e76f4e9636bd02b75c1d7e2af841a0735036ba"
+    },
+    {
+      "path": "02-transport-moments/audit_sources.py",
+      "sha256": "56ff03712da862fb49dea9598cffe1e03146b44835c94f227a7dbbb02be25d07"
+    },
+    {
+      "path": "02-transport-moments/check_transport_gate.py",
+      "sha256": "b52e4535fa5584724507b4b3476763e894a7372b37c56b7f32ed3f824a10e23d"
+    },
+    {
+      "path": "02-transport-moments/completion_math.py",
+      "sha256": "5ed65692a76db43b7d983a31606869a8779d453389824ee5ba547d8c22e26b04"
+    },
+    {
+      "path": "02-transport-moments/inputs/SPECTRAL_RANKS.md",
+      "sha256": "41f9ca98d5f32a19dd3d61d3fb9ada3e256a5e67d513a56080d16c3e3695456f"
+    },
+    {
+      "path": "02-transport-moments/inputs/TRANSPORT_LEMMA.md",
+      "sha256": "19db15b3c55fa4f0ada1744b3f2bbda99cd7ca99c3e077e8fdd3a3cb1ce3afbe"
+    },
+    {
+      "path": "02-transport-moments/inputs/Ungerade-Extremalprojektoren-2026-09-30.zip",
+      "sha256": "0c7c99b21f3b77b31862cdc9cae952a7ecd76abe8bc7a2e73df3bbe14980573b"
+    },
+    {
+      "path": "02-transport-moments/parameters.json",
+      "sha256": "83dc5a3d831e56f0f618b0e88897026a3f3f85042e4e9eca7af864ae23bd19a6"
+    },
+    {
+      "path": "02-transport-moments/source_audit.json",
+      "sha256": "cd507b64a7d7add46c189d324cb6f903bde65bf35cfeaf9e1a8379ed0a8f29fb"
+    },
+    {
+      "path": "02-transport-moments/source_bindings.json",
+      "sha256": "aebcac87fe3aec74ea5cb092425b12aa0ece19d8a6cad05ef75e32beaa40636f"
+    },
+    {
+      "path": "02-transport-moments/transport_math.py",
+      "sha256": "29cbba9c9b8efb65a520a885abea6b6f83e77ad909fab766e74915bc561831a0"
+    },
+    {
+      "path": "02-transport-moments/verification.json",
+      "sha256": "70004f2303ec4b203f26a60a31420df671f4e0dd2cb8ee4d873d898e577d9e30"
+    },
+    {
+      "path": "02-transport-moments/verification.log",
+      "sha256": "5999a1f40d7e88d9b943b727df1ae9d40f0c1dba5adcab1fa395745650ebb948"
+    },
+    {
+      "path": "02-transport-moments/verify_transport_gate.py",
+      "sha256": "f0556611581064ff8227a0076b8b87fdd2ad35582305843fcb059946a582fb16"
+    },
+    {
+      "path": "03-corrected-projector/PROJECTOR_TRANSPORT_OBSTRUCTION.md",
+      "sha256": "2d1527e10f55db801e7ae15308b7ac2e8fddcd4ef5afc0aa478ef0413560ad2e"
+    },
+    {
+      "path": "03-corrected-projector/REPRODUKTION.md",
+      "sha256": "4c0dc19da6f0aa4b1cb611383c4241046060bd9707bc256d39461928b8b6c4e1"
+    },
+    {
+      "path": "03-corrected-projector/SHA256SUMS",
+      "sha256": "486649a2ab20f97989213f9232864b56d65b3146a54f51805bb2d79fa7471af8"
+    },
+    {
+      "path": "03-corrected-projector/audit_sources.py",
+      "sha256": "87aa739c4dbda12c1523fd98caa7ba008a5b22391115dbf3382e2621b7bab9ce"
+    },
+    {
+      "path": "03-corrected-projector/check_projector_transport.py",
+      "sha256": "b29c4bb904fdca426fbb5bcdf7974f2abe00591e2bac4aecf09eb10179009d98"
+    },
+    {
+      "path": "03-corrected-projector/inputs/Gemeinsame-Transportmomente-2026-09-30.zip",
+      "sha256": "446df19299f27532c90e7aeed6759e55978546afd3e4ea0d0716742358f1cf33"
+    },
+    {
+      "path": "03-corrected-projector/parameters.json",
+      "sha256": "f6abde438258a37aa90a06a47e28ccf3b7252b3cb2745e89d8d1774d962e6be9"
+    },
+    {
+      "path": "03-corrected-projector/source_audit.json",
+      "sha256": "49b4cda60e07a046009d2f89893061e111a2ce20e967f27953f67e6e8562fd57"
+    },
+    {
+      "path": "03-corrected-projector/verification.json",
+      "sha256": "3f8e060b6c714099a1b848ca5574615e22998d78b8b99f606df5ab9a6cd46418"
+    },
+    {
+      "path": "03-corrected-projector/verification.log",
+      "sha256": "26304f0144900e7c5e0fa5e245c87d8a46c930984c5afb6c46c29354e6c75afb"
+    },
+    {
+      "path": "03-corrected-projector/verify_projector_transport.py",
+      "sha256": "073837704378b159b160280746b9d72862e6c6aa52d2a1616a7c4ed00300ad86"
+    },
+    {
+      "path": "04-rational-box-gate/ODD_BOX_GATE.md",
+      "sha256": "b90a545b35e6f07bccc2307133230a04f754fb930d736180cc5574c901246cf2"
+    },
+    {
+      "path": "04-rational-box-gate/REPRODUKTION.md",
+      "sha256": "f56553d0babc3ac2a49a6fccc67ca953f81a88708a8f02b55119fd820672204e"
+    },
+    {
+      "path": "04-rational-box-gate/SHA256SUMS",
+      "sha256": "6e946a5d0b2ffbc2b7d3efbb5a961e5a658ffed6e2e5ee38e876e775abdfff04"
+    },
+    {
+      "path": "04-rational-box-gate/audit_sources.py",
+      "sha256": "1fc1577aa86c60955b76d3a5d0e1a9f155586c86dd4c1837fea85ac8fec8592b"
+    },
+    {
+      "path": "04-rational-box-gate/box_math.py",
+      "sha256": "6d0c2319987e67027ce97fa002416c7f1f08e3d52d76ab947f82a58e30be415c"
+    },
+    {
+      "path": "04-rational-box-gate/check_box_gate.py",
+      "sha256": "fc6d40c3777185d67028cfdad0771714b0cf53366a0f3c18aaa3e706ec482b80"
+    },
+    {
+      "path": "04-rational-box-gate/inputs/Projektorgrenze-trotz-Transportmomenten-2026-09-30.zip",
+      "sha256": "5c5922ed739695d3baa7578c0e1bca05a4b758c969ea8768858c40207dd4904f"
+    },
+    {
+      "path": "04-rational-box-gate/parameters.json",
+      "sha256": "41a5844cd6698b97a91bf8a090ece919d5cd398f9d94281f361af3a3992f70db"
+    },
+    {
+      "path": "04-rational-box-gate/source_audit.json",
+      "sha256": "39f9c3419f08ef9daee390b195525037956dc79a0aa2dc6cb96846753a018723"
+    },
+    {
+      "path": "04-rational-box-gate/verification.json",
+      "sha256": "b282375e86fe47a1645a7f70644580f81f9d1748a47dd8b77532450e9bc28877"
+    },
+    {
+      "path": "04-rational-box-gate/verification.log",
+      "sha256": "20299425c6f3b4bf594506ecce789546443dfc9670880eec33f80270afcfd3c3"
+    },
+    {
+      "path": "04-rational-box-gate/verify_box_gate.py",
+      "sha256": "c123c6774c71c6b46c809c3e8dbeb5409ae397aa256463f0b9037e8a5215dd75"
+    }
+  ],
+  "packages": [
+    {
+      "folder": "01-outer-projector",
+      "original_folder": "canonical-odd-projector-2026-09-30",
+      "original_proof": "ODD_PROJECTOR.md",
+      "id": "CANONICAL-ODD-OUTER-PROJECTOR-OBSTRUCTION",
+      "stem": "odd_projector",
+      "archive": "archives/Ungerade-Extremalprojektoren-2026-09-30.zip",
+      "archive_sha256": "0c7c99b21f3b77b31862cdc9cae952a7ecd76abe8bc7a2e73df3bbe14980573b"
+    },
+    {
+      "folder": "02-transport-moments",
+      "original_folder": "canonical-transport-moment-gate-2026-09-30",
+      "original_proof": "TRANSPORT_MOMENT_GATE.md",
+      "id": "CANONICAL-TRANSPORT-MOMENT-EXCLUSION",
+      "stem": "transport_gate",
+      "archive": "archives/Gemeinsame-Transportmomente-2026-09-30.zip",
+      "archive_sha256": "446df19299f27532c90e7aeed6759e55978546afd3e4ea0d0716742358f1cf33"
+    },
+    {
+      "folder": "03-corrected-projector",
+      "original_folder": "canonical-projector-transport-obstruction-2026-09-30",
+      "original_proof": "PROJECTOR_TRANSPORT_OBSTRUCTION.md",
+      "id": "CANONICAL-TRANSPORT-PROJECTOR-OBSTRUCTION",
+      "stem": "projector_transport",
+      "archive": "archives/Projektorgrenze-trotz-Transportmomenten-2026-09-30.zip",
+      "archive_sha256": "5c5922ed739695d3baa7578c0e1bca05a4b758c969ea8768858c40207dd4904f"
+    },
+    {
+      "folder": "04-rational-box-gate",
+      "original_folder": "canonical-odd-box-certifier-2026-09-30",
+      "original_proof": "ODD_BOX_GATE.md",
+      "id": "CANONICAL-ODD-BOX-STRUCTURAL-OPEN",
+      "stem": "box_gate",
+      "archive": "archives/Rationaler-Odd-Box-Test-2026-09-30.zip",
+      "archive_sha256": "99ae5d12cca5fb0c4ead32ce44931b263641d45197c31043274d68d2820800e2"
+    }
+  ],
+  "pr187_included": false,
+  "A13_inputs_used": false,
+  "global_verification_snapshot_changed": false
+}

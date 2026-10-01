@@ -1,0 +1,8 @@
+PASS: independent exact noncommuting algebra, kernel invariance, negative support control and archive tamper rejection.
+PASS: inherited finite common-operator and off-diagonal controls.
+PASS: fresh canonical source audit, 25 inherited operator source files.
+PASS: two fresh standalone verifier runs byte-identical; all embedded upstream replays byte-identical.
+PASS: both fixed corrected examples satisfy both precision receipts, full b-Gram and strict transported high support.
+PASS: report numerical bounds checked against rational receipt; actual odd localization remains open.
+PASS: previous local artifacts preserved; repository unchanged at 689ff6266b5e4d58700f82eae3016951a023e353
+Verification SHA256: 3f8e060b6c714099a1b848ca5574615e22998d78b8b99f606df5ab9a6cd46418

@@ -1,0 +1,10 @@
+PASS: independent PSD exclusion controls, including 57 boxes with known positive definite members.
+PASS: exact four-variable partition, non-vacuous status rules and physical Gram-angle control.
+PASS: exact normalized/unscaled b-Gram factor 17 and archive tamper rejection.
+PASS: fresh canonical source audit, 25 inherited operator source files.
+PASS: two standalone certifier outputs byte-identical, with all upstream witness replays byte-identical.
+PASS: seven nodes cover the root through four terminal boxes; both certified feasible points preserved.
+PASS: report coordinates, physical angles and status checked against rational receipt.
+PASS: previous local artifacts unchanged; repository unchanged at 689ff6266b5e4d58700f82eae3016951a023e353
+Result: STRUCTURAL_OPEN. Actual odd maximizer localization remains open.
+Verification SHA256: b282375e86fe47a1645a7f70644580f81f9d1748a47dd8b77532450e9bc28877
