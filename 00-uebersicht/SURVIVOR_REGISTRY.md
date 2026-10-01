@@ -1485,3 +1485,69 @@ Does not claim:
 - Globales Objekt X, globale Weil-Positivität, RH oder abgeschlossene externe analytische Gesamtprüfung.
 
 Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/ed94c19f824c947f63e4867fb3c202f71e36e631/research/x-c1/canonical-odd-structural-open-2026-10-01/04-rational-box-gate/verification.json).
+
+## CANONICAL-CROSS-PROJECTOR-RESIDUAL-UNRESOLVED
+
+Kreuzprojektor-Residualgate: engere Hüllen, Richtung weiterhin offen
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: A9->A11 ungerade: gemeinsame Kreuzresiduen verengen 48 Y-Eintragshüllen; rationale Projektorfilter mit vollständigem hohem Residuum erreichen weder Gegenzeugenausschluss noch Richtungslokalisierung. UNRESOLVED.
+- Canonical commit: [b915899](https://github.com/Waschtl904/objekt-x-programm/commit/b91589923f5738148c9c9702155fb3dc02f7b1a1).
+- Canonical proof: [research/x-c1/canonical-cross-high-response-2026-10-01/01-cross-projector/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/b91589923f5738148c9c9702155fb3dc02f7b1a1/research/x-c1/canonical-cross-high-response-2026-10-01/01-cross-projector/PROOF.md).
+- depends_on: `CANONICAL-ODD-BOX-STRUCTURAL-OPEN`, `CANONICAL-JOINT-GENERALIZED-DISCRIMINANT`, `CRITICAL-SPECTRAL-TRANSPORT`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: UNRESOLVED bezeichnet unzureichende Schärfe der hier ausgeführten Rechnung. Überleben alter skalarer Zielwerte beweist keine vollständige gemeinsame Zulässigkeit; weder STRUCTURAL OPEN 2 noch ein No-Go für den vollen Shiftbildansatz ist bewiesen.
+
+Aussage:
+
+- Gemeinsame Kreuzresiduen und Formnaturality verengen 48 Y-Eintragshüllen. Die Y58- und Y68-Intervalle enthalten weiterhin die beiden alten skalar geprüften Zielwerte; daraus folgt keine vollständige neue gemeinsame Zulässigkeit der Gegenzeugen.
+- Der feste rationale Filter mit Grad 8 und t=1/300 wird bei 1024 und 1536 Bit mit vollständigem hohem Residuum eingeschlossen. Die skalare Filterapproximation ist klein; der hohe Kopplungsrest begrenzt die Vektorfehler. Kein Ausschluss und keine enge ungerade Lokalisierung: UNRESOLVED.
+
+Does not claim:
+
+- Ausschluss des gedrehten Gegenzeugen, neue gemeinsame Realisierbarkeit der alten Gegenzeugen oder Lokalisierung des tatsächlichen ungeraden Maximierers.
+- Bandweise Momente tatsächlicher Maximierer oder ein zertifiziertes asymptotisches 1/N-Tailgesetz.
+- Allgemeiner Renewal-Satz, A13-Positivität, kofinale positive Familie, globales Objekt X oder RH.
+- Unabhängige Neuimplementierung der großen Operatorintegrale oder abgeschlossene externe analytische Gesamtprüfung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/b91589923f5738148c9c9702155fb3dc02f7b1a1/research/x-c1/canonical-cross-high-response-2026-10-01/01-cross-projector/original/verification.json).
+
+## CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED
+
+Hohe Resolventenantwort: endliche Korrektur und dominierender Shift-Tail
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: A9->A11 ungerade: endliche Korrekturräume aus 128 hohen Antwortmoden verbessern drei Projektorspaltenfehler; vollständige Residuen und Diagnose am ersten Pol lokalisieren den dominierenden Rest im Shift-Tail. Y58/Y68 bleiben unverändert breit; UNRESOLVED.
+- Canonical commit: [b915899](https://github.com/Waschtl904/objekt-x-programm/commit/b91589923f5738148c9c9702155fb3dc02f7b1a1).
+- Canonical proof: [research/x-c1/canonical-cross-high-response-2026-10-01/02-high-response/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/b91589923f5738148c9c9702155fb3dc02f7b1a1/research/x-c1/canonical-cross-high-response-2026-10-01/02-high-response/PROOF.md).
+- depends_on: `CANONICAL-ODD-BOX-STRUCTURAL-OPEN`, `CANONICAL-JOINT-GENERALIZED-DISCRIMINANT`, `CRITICAL-SPECTRAL-TRANSPORT`, `CANONICAL-CROSS-PROJECTOR-RESIDUAL-UNRESOLVED`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: UNRESOLVED bezeichnet unzureichende Schärfe der hier ausgeführten Rechnung. Überleben alter skalarer Zielwerte beweist keine vollständige gemeinsame Zulässigkeit; weder STRUCTURAL OPEN 2 noch ein No-Go für den vollen Shiftbildansatz ist bewiesen.
+
+Aussage:
+
+- Die ersten 128 hohen ungeraden Moden erfassen über alle vier oberen Pole 32.4499615–32.5150489 Prozent (A9/5), 34.7364649–34.8145839 Prozent (A9/6) und 37.3849193–37.4447490 Prozent (A11/8) der ursprünglichen Modellantwort; die Dezimalgrenzen sind nach außen gerundet und der Nenner stammt aus dem vollständigen Gramoperator.
+- Endliche Korrekturräume der Dimension 7 (A9) und 5 (A11) verbessern die Projektorspaltenfehlerobergrenzen auf 0.007134993422, 0.518099274839 und 0.683998774716. Die vollständigen physischen Residuen einschließlich aller hohen Moden werden bezahlt.
+- Am ersten oberen Pol liegen 98.45345998–99.08910368 Prozent der normalbereinigten Modellresiduenenergie oberhalb des endlichen Korrekturfensters. Die Kanaldiagnose zeigt dort dominierende Shift-Tails; sie ist kein allpoliger oder tatsächlicher Lösungsfehlerbefund.
+- Die direkten korrigierten Y58/Y68-Hüllen bleiben zu breit und verschärfen die bisherigen Schnittintervalle nicht. Kein Gegenzeugenausschluss, kein neuer Winkelkorridor: UNRESOLVED. Ein 1/N-Tailgesetz ist nicht zertifiziert.
+
+Does not claim:
+
+- Ausschluss des gedrehten Gegenzeugen, neue gemeinsame Realisierbarkeit der alten Gegenzeugen oder Lokalisierung des tatsächlichen ungeraden Maximierers.
+- Bandweise Momente tatsächlicher Maximierer oder ein zertifiziertes asymptotisches 1/N-Tailgesetz.
+- Allgemeiner Renewal-Satz, A13-Positivität, kofinale positive Familie, globales Objekt X oder RH.
+- Unabhängige Neuimplementierung der großen Operatorintegrale oder abgeschlossene externe analytische Gesamtprüfung.
+
+Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/b91589923f5738148c9c9702155fb3dc02f7b1a1/research/x-c1/canonical-cross-high-response-2026-10-01/02-high-response/original/verification.json), [verification_arb.json](https://github.com/Waschtl904/objekt-x-programm/blob/b91589923f5738148c9c9702155fb3dc02f7b1a1/research/x-c1/canonical-cross-high-response-2026-10-01/02-high-response/original/verification_arb.json).

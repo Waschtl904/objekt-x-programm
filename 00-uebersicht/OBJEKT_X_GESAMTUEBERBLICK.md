@@ -2,7 +2,7 @@
 
 **Stand:** 1. Oktober 2026
 
-**Basis:** `main@eb4bd1b78b130a44987c4ee171ded8034c0948cc`
+**Basis:** `main@dd490671d2a2c36933cb397a71abc0302b759735`
 
 **Zweck:** Verständliche Gesamterzählung des Programms – klassische Grundlagen, eigene Resultate, rigorose No-Gos, aktuelle positive C1-Geometrie und offene globale Schritte.
 
@@ -360,27 +360,30 @@ einer Intervallbox würde dafür nicht genügen. Eine vollständige gemeinsame
 Realisierung sämtlicher ursprünglicher Trial-, Überlappungs- und
 Operatordaten durch die beiden Gegenzeugen wird nicht behauptet.
 
-Der nächste Gate kontrolliert direkt `K=(PA UA)*J*(PB UB)` mit
-`Y=K GB^-1(GB+LB/17)`. Gemeinsame gerichtete Kreuzresiduen sollen zunächst
-die Funktionale für Y58 und Y68 bestimmen. Bei unzureichender Schärfe folgen
-verschobene rationale Projektorfilter auf den vorhandenen Trialspalten.
-GREEN verlangt den Ausschluss mindestens einer bisherigen Gegenfamilie
-und einen rigorosen tatsächlichen ungeraden physischen Winkelkorridor
-unter **10° Gesamtbreite**. Neue stark verschiedene zertifizierte
-Vervollständigungen einschließlich dieser Daten würden STRUCTURAL OPEN 2
-begründen; eine zu breite korrekte Rechnung bleibt UNRESOLVED.
+**Ungerade: eindeutig, aber noch nicht lokalisiert.** Die neue
+[Kreuzprojektor-/Antwortfamilie](../research/x-c1/canonical-cross-high-response-2026-10-01/README.md)
+endet in zwei nachvollziehbaren **UNRESOLVED**-Ergebnissen: Gemeinsame
+Kreuzresiduen verengen 48 Y-Hüllen; endliche hohe Korrekturen verbessern
+Vektorfehler, aber Y58/Y68 nicht weiter. Am ersten oberen Pol dominiert
+der Rest der vollständigen Shiftantwort oberhalb des Korrekturfensters.
 
-Danach folgen bandweise Momente der tatsächlichen Maximierer und ein
-vorwärts gerichteter Renewal-Kandidat. Die bisher bekannten Momentzeugen
-dürfen mit tatsächlichen Maximierern nicht gleichgesetzt werden. Vor einem
-zusätzlichen A11→A13-Test sind Aussage, Konstanten und Abnahme festzuhalten.
-PR #187 bleibt separat.
+Der nächste Gate verwendet **vollständige Shiftbilder** mit ihrem gesamten
+hohen Anteil, gegebenenfalls diagonal vorconditioniert. Zuerst muss Y58
+oder Y68 den gedrehten Gegenzeugen strikt ausschließen. Erst danach folgt
+der gemeinsame Test auf einen physischen Gesamtwinkelkorridor unter 10°.
+Filter und Präzision bleiben fest; ein 1/N-Tailgesetz bleibt Heuristik.
+Anschließend folgen bandweise Momente tatsächlicher Maximierer und ein
+vorwärts gerichteter Renewal-Kandidat. Allgemeines Renewal, A13-Positivität,
+kofinale positive Familie, globales Objekt X und RH bleiben offen.
+PR #187 bleibt separat. Status: `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`.
 
-Die Rechnungen verwenden bereits positive neue Terminals bis A11.
-Allgemeines Renewal, A13-Positivität, eine kofinale positive Familie,
-globales Objekt X und RH bleiben offen. Status bleibt
-**AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN**; der globale Verifikationssnapshot
-wird nicht angehoben.
+Die großen Operatorintegrale sind gebundene Paketvoraussetzungen;
+die reguläre CI prüft Quittungen, Quellen und kleine Arb-Kontrollen.
+Zusätzlich wurden beide vollständigen lokalen Paket-Replays bei der
+Integration erfolgreich ausgeführt. Die großen Rechnungen sind damit
+reproduziert, aber weiterhin nicht unabhängig neu implementiert.
+Die Rechnungen setzen die bereits positiven Terminals bis A11 voraus.
+Der globale Verifikationssnapshot wird nicht angehoben.
 
 ---
 
