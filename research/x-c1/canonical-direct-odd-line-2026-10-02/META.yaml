@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "CANONICAL-DIRECT-ODD-LINE-UNRESOLVED",
+  "date": "2026-10-02",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "A9->A11 ungerade nach Y68: direkte, zentrierte und gemeinsame affine Linienrechnung auf denselben 19 Fällen. Bedingte Gesamtwinkelhüllen central <=3.405363 Grad und quarter <=3.765366 Grad; fünf bekannte Punkte auf dem maximalen Eigenwertast. Ausgangsbox und acht Diagnoseblätter bleiben UNRESOLVED. Kein uniformer Winkelkorridor.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Die Verbesserungen gelten nur auf zwei bedingten Vier-Y-Schnitten. Sie belegen dort Einschliessungsverlust der früheren Darstellung, aber keine uniforme Lokalisierung. UNRESOLVED für Root und acht Diagnoseboxen beweist weder strukturelle Offenheit noch das Scheitern höherer gemeinsamer Modelle oder feinerer Unterteilungen.",
+  "depends_on": [
+    "CANONICAL-ADAPTIVE-ODD-ANGLE-UNRESOLVED",
+    "CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION"
+  ],
+  "closes": [
+    "CANONICAL-DIRECT-ODD-LINE-UNRESOLVED"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Keine uniforme ungerade Lokalisierung unter zehn Grad und kein neuer zulässiger Gegenzeuge.",
+    "Keine strukturelle Offenheit der verstärkten Familie, kein universelles Scheitern gemeinsamer Verfahren.",
+    "Keine neuen Operatorintegrale, Y58-Dualdaten, L_B-Daten oder adaptive Bäume.",
+    "Kein allgemeines Renewal, keine A13-Positivität, keine kofinale positive Familie, kein globales Objekt X und keine RH.",
+    "Kein abgeschlossener externer Gesamtaudit."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/canonical-direct-odd-line-2026-10-02/PROOF.md",
+    "sha256": "47d3973fae95f86ef3918ec31d29d3797429f70a5683dfc869ab23cff7b614ee"
+  }
+}

@@ -191,6 +191,12 @@
       "title": "Direkte gemeinsame 2x2-Eigenlinie ohne Projektor-Wrapping zertifizieren",
       "mathematical_status": "OPEN",
       "scope": "Mit vorhandenen Daten D=det(L)>0 und M_tilde=D(L+34G)+289 G adj(L) G verwenden. Die quadratische Liniengleichung rational lösen, den maximalen Eigenwertast ausdrücklich nachweisen und den physischen Winkel von N(s,1) direkt einschließen. Zuerst Ausgangsbox, zentrales Modell, fünf bekannte zulässige Punkte und acht terminale Diagnoseboxen vergleichen. Bei breiten Hüllen zentrierte bzw. affine gemeinsame Auswertung von Y,N,G,L,Z. Eine neue große Unterteilung nur nach belegtem Nutzen; zunächst keine neuen Operatorintegrale, Y58-Dualdaten oder L_B-Rechnung."
+    },
+    {
+      "id": "CANONICAL-DIRECT-ODD-LINE-UNRESOLVED",
+      "title": "Abgeschlossenen direkten Odd-Linientest registrieren",
+      "mathematical_status": "OPEN",
+      "scope": "A9->A11 ungerade nach Y68: direkte, zentrierte und gemeinsame affine Linienrechnung auf denselben 19 Fällen. Bedingte Gesamtwinkelhüllen central <=3.405363 Grad und quarter <=3.765366 Grad; fünf bekannte Punkte auf dem maximalen Eigenwertast. Ausgangsbox und acht Diagnoseblätter bleiben UNRESOLVED. Kein uniformer Winkelkorridor. Übernahme nach Integration."
     }
   ],
   "results": [
@@ -2382,7 +2388,13 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [],
+  "pending_packages": [
+    {
+      "id": "CANONICAL-DIRECT-ODD-LINE-UNRESOLVED",
+      "meta_path": "research/x-c1/canonical-direct-odd-line-2026-10-02/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    }
+  ],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",
