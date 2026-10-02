@@ -5,9 +5,9 @@
   "repository": "Waschtl904/objekt-x-programm",
   "published_baseline": {
     "branch": "main",
-    "sha": "165ade402c94a7a75074f9a06aa220f37b0d39fa",
+    "sha": "83c00ddfe161563f35b31b4ae570faede0834b82",
     "integration_status": "MERGED",
-    "meaning": "Abgeschlossenes adaptives Odd-Winkelpaket integriert durch PR #201, Beweishead cb73f0ef223f4f3f0d51002f7d8127fac90a954f. Main-Replay 37032720198 erhält das Originalarchiv und 41 Originaldateien, bindet acht Quellen und rechnet alle 1121 Boxquittungen sowie bedingte Diagnosen bytegleich nach. Ergebnis UNRESOLVED; nächste Obligation direkte gemeinsame 2x2-Eigenlinienauswertung. Keine uniforme Winkelpromotion und kein neuer Gegenzeugennachweis. Globaler Verifikationssnapshot und externer Reviewstatus unverändert. Frühere Provenienz: Full-Shift- und Primal-Dual-Y68-Pakete integriert durch PR #199, Beweishead 219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff. Main-Replay 37001095949 prüft beide unveränderten Archive, 109 Originaldateien, kleine unabhängige Kontrollen, rationale Fehlerrechnung sowie bytegleiche Y68-, Winkel- und Familienquittungen. Je ein vollständiger primaler und dualer Polreplay ist dokumentiert; alle großen Polrechnungen wurden erzeugt, aber nicht nochmals vollständig wiederholt oder unabhängig neu implementiert. Y68 schließt den alten Gegenzeugen aus; der uniforme ungerade Winkel bleibt offen. Globaler Verifikationssnapshot und externer Reviewstatus unverändert. Frühere Provenienz: Zwei integrierte UNRESOLVED-Pakete nach PR #197, Beweishead b91589923f5738148c9c9702155fb3dc02f7b1a1; Main-Replay 36902746547 mit drei bytegleichen Quittungen und kleinen Arb-Kontrollen. Die reguläre CI wiederholt keine großen Operatorintegrale. Zusätzlich waren beide vollständigen lokalen Paket-Replays bei der Integration erfolgreich; dies ist keine unabhängige große Operatorimplementierung. Globale Verifikationsaussagen unverändert. Frühere Provenienz: Integrierte vier ungerade Projektor-/Transportpakete nach PR #195, Beweishead ed94c19f824c947f63e4867fb3c202f71e36e631; Abschluss STRUCTURAL OPEN der angegebenen endlichen Relaxation. Main-Replay 36816858969 erfolgreich, vier Ergebnisquittungen im CI-Artefakt bytegleich geprüft. Globale Verifikationsaussagen unverändert. Frühere Provenienz: Integrierte drei Pakete zu gemeinsamen kanonischen Maximierern nach PR #193, Beweishead 2172de38d0def2c4b42c255e6c1290a720e3e94e: Projektor-/Spektralmomente, generalisierter Diskriminant und Schurdefekt-Korollar. Main-Replay 36738813027 erfolgreich, alle drei Ergebnisquittungen im CI-Artefakt bytegleich geprüft. Ursprüngliche Integrale und Operatorlösungen bleiben gebundene Eingaben; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte vierblöckige kanonische Schurkopplungsfamilie nach PR #191, Beweishead b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d. Main-Zertifikatreplay 36671245348 erfolgreich mit geprüftem Artefakt; abgeschlossene große Arb-Läufe bleiben gebundene Eingaben. Registry-CI separat gebunden; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte siebenblöckige Spektral-/Renewal-Familie nach PR #189, Beweishead c19c655d79f9be59b7c18fb0042783f5e4a0ab49. Main-Replay 36525210364 erfolgreich; Registry-CI separat gebunden. Globaler Verifikationssnapshot unverändert. Frühere Provenienz: Gepinnter integrierter Forschungsstand nach PR #183: zusammenhängende O10–A11-Kette, Beweis-/Paketcommit 0b7c707c4c95f56bd8079ea44019a2d3f4cfce60. Erfolgreiche Main-Reproduktion 36378212734, Versuch 1; Registry-CI separat gebunden. Der globale mathematische Verifikationssnapshot bleibt unverändert. Frühere Integrationsprovenienz: Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
+    "meaning": "Direct-Line-Paket integriert durch PR #204, Beweishead c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33. Main-Replay 37051235497 erhält das ZIP und 59 Originaldateien mit 41 Vorgängerdateien; alle 57 Fälle und fünf Ergebnisquittungen bytegleich. Bedingte Verbesserungen central <=3.405363 und quarter <=3.765366 Grad; Root und acht Diagnoseboxen UNRESOLVED. Nächster Gate gemeinsamer Y-Kernel mit zweiter Ordnung. Globaler Verifikationssnapshot und externer Reviewstatus unverändert. Frühere Provenienz: Abgeschlossenes adaptives Odd-Winkelpaket integriert durch PR #201, Beweishead cb73f0ef223f4f3f0d51002f7d8127fac90a954f. Main-Replay 37032720198 erhält das Originalarchiv und 41 Originaldateien, bindet acht Quellen und rechnet alle 1121 Boxquittungen sowie bedingte Diagnosen bytegleich nach. Ergebnis UNRESOLVED; nächste Obligation direkte gemeinsame 2x2-Eigenlinienauswertung. Keine uniforme Winkelpromotion und kein neuer Gegenzeugennachweis. Globaler Verifikationssnapshot und externer Reviewstatus unverändert. Frühere Provenienz: Full-Shift- und Primal-Dual-Y68-Pakete integriert durch PR #199, Beweishead 219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff. Main-Replay 37001095949 prüft beide unveränderten Archive, 109 Originaldateien, kleine unabhängige Kontrollen, rationale Fehlerrechnung sowie bytegleiche Y68-, Winkel- und Familienquittungen. Je ein vollständiger primaler und dualer Polreplay ist dokumentiert; alle großen Polrechnungen wurden erzeugt, aber nicht nochmals vollständig wiederholt oder unabhängig neu implementiert. Y68 schließt den alten Gegenzeugen aus; der uniforme ungerade Winkel bleibt offen. Globaler Verifikationssnapshot und externer Reviewstatus unverändert. Frühere Provenienz: Zwei integrierte UNRESOLVED-Pakete nach PR #197, Beweishead b91589923f5738148c9c9702155fb3dc02f7b1a1; Main-Replay 36902746547 mit drei bytegleichen Quittungen und kleinen Arb-Kontrollen. Die reguläre CI wiederholt keine großen Operatorintegrale. Zusätzlich waren beide vollständigen lokalen Paket-Replays bei der Integration erfolgreich; dies ist keine unabhängige große Operatorimplementierung. Globale Verifikationsaussagen unverändert. Frühere Provenienz: Integrierte vier ungerade Projektor-/Transportpakete nach PR #195, Beweishead ed94c19f824c947f63e4867fb3c202f71e36e631; Abschluss STRUCTURAL OPEN der angegebenen endlichen Relaxation. Main-Replay 36816858969 erfolgreich, vier Ergebnisquittungen im CI-Artefakt bytegleich geprüft. Globale Verifikationsaussagen unverändert. Frühere Provenienz: Integrierte drei Pakete zu gemeinsamen kanonischen Maximierern nach PR #193, Beweishead 2172de38d0def2c4b42c255e6c1290a720e3e94e: Projektor-/Spektralmomente, generalisierter Diskriminant und Schurdefekt-Korollar. Main-Replay 36738813027 erfolgreich, alle drei Ergebnisquittungen im CI-Artefakt bytegleich geprüft. Ursprüngliche Integrale und Operatorlösungen bleiben gebundene Eingaben; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte vierblöckige kanonische Schurkopplungsfamilie nach PR #191, Beweishead b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d. Main-Zertifikatreplay 36671245348 erfolgreich mit geprüftem Artefakt; abgeschlossene große Arb-Läufe bleiben gebundene Eingaben. Registry-CI separat gebunden; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte siebenblöckige Spektral-/Renewal-Familie nach PR #189, Beweishead c19c655d79f9be59b7c18fb0042783f5e4a0ab49. Main-Replay 36525210364 erfolgreich; Registry-CI separat gebunden. Globaler Verifikationssnapshot unverändert. Frühere Provenienz: Gepinnter integrierter Forschungsstand nach PR #183: zusammenhängende O10–A11-Kette, Beweis-/Paketcommit 0b7c707c4c95f56bd8079ea44019a2d3f4cfce60. Erfolgreiche Main-Reproduktion 36378212734, Versuch 1; Registry-CI separat gebunden. Der globale mathematische Verifikationssnapshot bleibt unverändert. Frühere Integrationsprovenienz: Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
   },
   "verified_research_snapshot": {
     "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
@@ -45,9 +45,9 @@
       "title": "Unbeschränkte Horizonterweiterung und kompatibler Transport",
       "mathematical_status": "OPEN",
       "strategic_status": "ACTIVE_FRONT",
-      "target_scope": "Drei positive Kammern bis A11 und kanonischer Spektraltransport sind vorhanden. A9->A11 hat einen positiven tatsächlichen Schur-Extremalgap in beiden Paritäten; gerade ist die physische inverse Antwortrichtung lokalisiert. Y68 schließt den alten gedrehten ungeraden Gegenzeugen aus. Der anschließende adaptive Vier-Y-Test bleibt mit 255 Knoten und 128 Blättern UNRESOLVED. Die zentralen bedingten Diagnosen motivieren eine direkte gemeinsame Eigenlinienrechnung; sie liefern keine uniforme Lokalisierung. Bandmomente tatsächlicher Maximierer, allgemeines Renewal und kofinale positive Kompatibilität bleiben offen.",
+      "target_scope": "Drei positive Kammern bis A11, kanonischer Spektraltransport und positiver tatsächlicher Schur-Extremalgap in beiden Paritäten; gerade physische inverse Antwortrichtung lokalisiert. Y68 schließt den alten gedrehten Gegenzeugen aus. Die direkte affine Linienrechnung verbessert die bedingten Vier-Y-Schnitte central auf <=3.405363 Grad und quarter auf <=3.765366 Grad. Root und acht Diagnoseblätter bleiben UNRESOLVED. Nächster Gate: gemeinsame Y-Kernel-Gleichung mit zweiter Ordnung auf denselben 19 Fällen. Uniforme ungerade Lokalisierung, Bandmomente tatsächlicher Maximierer, allgemeines Renewal und kofinale positive Kompatibilität bleiben offen.",
       "obligation_ids": [
-        "CANONICAL-DEPENDENCY-PRESERVING-ODD-LINE",
+        "CANONICAL-Y-KERNEL-SECOND-ORDER-ODD-LINE",
         "CANONICAL-JOINT-ODD-ANGLE-AFTER-Y68",
         "CANONICAL-CROSS-PROJECTOR-RESIDUAL-GATE",
         "CANONICAL-SCHUR-MAXIMIZER-ISOLATION",
@@ -89,11 +89,12 @@
         "CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED",
         "CANONICAL-FULL-SHIFT-RESOLVENT-UNRESOLVED",
         "CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION",
-        "CANONICAL-ADAPTIVE-ODD-ANGLE-UNRESOLVED"
+        "CANONICAL-ADAPTIVE-ODD-ANGLE-UNRESOLVED",
+        "CANONICAL-DIRECT-ODD-LINE-UNRESOLVED"
       ],
-      "candidate": "CANONICAL-ADAPTIVE-ODD-ANGLE-UNRESOLVED",
+      "candidate": "CANONICAL-DIRECT-ODD-LINE-UNRESOLVED",
       "accepted_progress": [
-        "Zertifiziere mit vorhandenen Daten die direkte 2x2-Liniengleichung, ihren maximalen Eigenwertast und den physischen Winkel; vergleiche zuerst die festen kleinen Fälle. Gemeinsame zentrierte oder affine Auswertung bei verbleibenden breiten Hüllen. Ziel bleibt ein uniformer Gesamtwinkel unter 10 Grad oder ein neues vollständig zulässiges getrenntes Gegenpaar.",
+        "Erhalte Y_L X+Y_R=0 und gemeinsame zweite Ordnung mit rigorosem Tail. Vergleiche dieselben 19 Fälle, erhalte die fünf maximalen Punktäste und die beiden engen bedingten Schnitte. Prüfe Root und bisher offene Schnitte/Diagnoseboxen. Uniformer Abschluss nur bei gemeinsamer Root-Gesamtwinkelhülle <10 Grad; neuen Baum erst nach belegtem Nutzen der verbesserten Engine.",
         "Zertifiziere anschließend bandweise Masse-, Energie- und inverse Energiemomente tatsächlicher Maximierer; unterscheide inverse Antwort und Schurverschiebung.",
         "Formuliere aus A8->A9 und A9->A11 einen unabhängigen vorwärts gerichteten Renewal-Kandidaten. Halte Aussage, Konstanten und Abnahme vor einem zusätzlichen A11->A13-Test fest. Allgemeines Renewal und eine kofinale positive Familie bleiben offen."
       ],
@@ -108,7 +109,10 @@
         "Residualschwellen ohne die gerichtete primal-duale Korrektur als sichere GREEN-Schwelle verwenden.",
         "Das begrenzte adaptive UNRESOLVED als Beweis gegen jede feinere Boxzerlegung ausgeben.",
         "Die bedingte zentrale Hülle von 1.903 Grad oder zufällige Punktstichproben zu einem uniformen Winkelzertifikat aufwerten.",
-        "Eine Nullstelle der direkten Liniengleichung ohne Nachweis des maximalen Eigenwertasts akzeptieren."
+        "Eine Nullstelle der direkten Liniengleichung ohne Nachweis des maximalen Eigenwertasts akzeptieren.",
+        "Die bedingten Winkelhüllen 3.405363 bzw. 3.765366 Grad als uniforme Root-Lokalisierung ausgeben.",
+        "Eine angenäherte Y-left-Inverse ohne gebundenes Residuum als exakte gemeinsame Lösung verwenden oder höhere Taylor-Terme ohne rigorosen Rest verwerfen.",
+        "Die Isolation von acht repräsentativen Diagnoseblättern als vollständige Überdeckung der Root-Familie behandeln."
       ]
     },
     "global_continuation": {
@@ -166,7 +170,7 @@
       "id": "CANONICAL-SCHUR-MAXIMIZER-ISOLATION",
       "title": "Ungerade physische Maximiererrichtung lokalisieren",
       "mathematical_status": "OPEN",
-      "scope": "A9->A11: positiver tatsächlicher Extremalgap und eindeutige größte Eigenwertgerade in beiden Paritäten; gerade inverse Antwortrichtung lokalisiert. Die neue primal-duale Y68-Schranke schließt den alten gedrehten Gegenzeugen aus. Der alte Nachweis nahezu rechtwinkliger Alternativen gilt nur für seine schwächere Relaxation. Für die verschärfte gemeinsame Familie bleibt ein ungerader physischer Gesamtwinkelkorridor unter 10 Grad offen; Ausgangsbox-Auswertung und sieben geprüfte Stichproben entscheiden ihn nicht."
+      "scope": "A9->A11: positiver tatsächlicher Extremalgap und eindeutige größte Eigenwertgerade in beiden Paritäten; gerade inverse Antwortrichtung lokalisiert. Y68 schließt den alten gedrehten Gegenzeugen aus. Die direkte affine Linienrechnung verbessert zwei bedingte Vier-Y-Schnitte deutlich; Root und acht Diagnoseblätter bleiben offen. Der uniforme ungerade Gesamtwinkelkorridor unter zehn Grad ist weiterhin zu beweisen."
     },
     {
       "id": "CANONICAL-MAXIMIZER-BAND-MOMENTS",
@@ -184,19 +188,13 @@
       "id": "CANONICAL-JOINT-ODD-ANGLE-AFTER-Y68",
       "title": "Gemeinsamen ungeraden Winkel nach Y68-Trennung zertifizieren",
       "mathematical_status": "OPEN",
-      "scope": "Die verstärkte Familie nach Y68-Trennung quantitativ lokalisieren: gemeinsamer physischer Gesamtwinkel <10 Grad oder neues vollständig geprüftes Gegenpaar mit >10 Grad Trennung. Der integrierte adaptive Test mit 255 Knoten, 128 Blättern und 1121 Quittungen bleibt UNRESOLVED. Nächster Test: direkte 2x2-Eigenlinienauswertung mit Erhalt gemeinsamer Abhängigkeiten; keine Folgerung, dass jede feinere Partition scheitern muss."
+      "scope": "Die verstärkte Familie nach Y68 quantitativ lokalisieren: gemeinsamer physischer Gesamtwinkel <10 Grad oder vollständig geprüftes Gegenpaar mit >10 Grad Trennung. Adaptive und direkte Linienrechnung bleiben auf Root UNRESOLVED. central <=3.405363 Grad und quarter <=3.765366 Grad sind bedingte Schnitte. Nächster Versuch: gemeinsame Gleichung Y_L X+Y_R=0 und zweite Ordnung auf den gleichen 19 Fällen; Diagnoseblätter ersetzen keine vollständige Überdeckung."
     },
     {
-      "id": "CANONICAL-DEPENDENCY-PRESERVING-ODD-LINE",
-      "title": "Direkte gemeinsame 2x2-Eigenlinie ohne Projektor-Wrapping zertifizieren",
+      "id": "CANONICAL-Y-KERNEL-SECOND-ORDER-ODD-LINE",
+      "title": "Gemeinsamen Y-Kernel und Odd-Eigenlinie zweiter Ordnung zertifizieren",
       "mathematical_status": "OPEN",
-      "scope": "Mit vorhandenen Daten D=det(L)>0 und M_tilde=D(L+34G)+289 G adj(L) G verwenden. Die quadratische Liniengleichung rational lösen, den maximalen Eigenwertast ausdrücklich nachweisen und den physischen Winkel von N(s,1) direkt einschließen. Zuerst Ausgangsbox, zentrales Modell, fünf bekannte zulässige Punkte und acht terminale Diagnoseboxen vergleichen. Bei breiten Hüllen zentrierte bzw. affine gemeinsame Auswertung von Y,N,G,L,Z. Eine neue große Unterteilung nur nach belegtem Nutzen; zunächst keine neuen Operatorintegrale, Y58-Dualdaten oder L_B-Rechnung."
-    },
-    {
-      "id": "CANONICAL-DIRECT-ODD-LINE-UNRESOLVED",
-      "title": "Abgeschlossenen direkten Odd-Linientest registrieren",
-      "mathematical_status": "OPEN",
-      "scope": "A9->A11 ungerade nach Y68: direkte, zentrierte und gemeinsame affine Linienrechnung auf denselben 19 Fällen. Bedingte Gesamtwinkelhüllen central <=3.405363 Grad und quarter <=3.765366 Grad; fünf bekannte Punkte auf dem maximalen Eigenwertast. Ausgangsbox und acht Diagnoseblätter bleiben UNRESOLVED. Kein uniformer Winkelkorridor. Übernahme nach Integration."
+      "scope": "Y_L X+Y_R=0 gemeinsam lösen: rationale Zentren mit exaktem X0=-A0^{-1}B0, H=A0^{-1}DeltaA und q=-A0^{-1}(DeltaB+DeltaA X0). DeltaX=q-Hq+H^2(I+H)^{-1}q; gemeinsame lineare/quadratische Terme durch N, Momentkompressionen und Pencil tragen, höheren Tail rigoros begrenzen (etwa ||H||<=h<1). Dieselben 19 Fälle: fünf bekannte Punkte auf maximalem Ast erhalten, central/quarter mindestens so gut wie 3.405363/3.765366 Grad, offene Schnitte und acht Diagnoseboxen prüfen. Root mit gemeinsamem Gesamtwinkel <10 Grad wäre uniformer Abschluss. Ein neuer Baum erst nach belegtem Nutzen der verbesserten Engine, insbesondere erfolgreicher Isolation aller acht Diagnoseboxen; diese sind keine vollständige Überdeckung. Keine neuen Operatorintegrale, Y58- oder L_B-Daten. Verbindlicher Plan: 00-uebersicht/Y_KERNEL_SECOND_ORDER_GATE_2026-10-02.md."
     }
   ],
   "results": [
@@ -2275,6 +2273,62 @@
         "Kein allgemeines Renewal, keine A13-Positivität, keine kofinale positive Familie, kein globales Objekt X und keine RH.",
         "Keine unabhängige Neuimplementierung der großen Operatorrechnung und kein abgeschlossener externer Gesamtaudit."
       ]
+    },
+    {
+      "id": "CANONICAL-DIRECT-ODD-LINE-UNRESOLVED",
+      "title": "Direkte gemeinsame Odd-Eigenlinie: bedingte Verbesserung, volle Familie UNRESOLVED",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33",
+          "path": "research/x-c1/canonical-direct-odd-line-2026-10-02/ACCEPTANCE.json",
+          "sha256": "352c14c66f3d156d9b8378c23a285e1f1a9711562f9aafc7cdd38b3adefec3e8"
+        },
+        {
+          "commit": "c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33",
+          "path": "research/x-c1/canonical-direct-odd-line-2026-10-02/audit.json",
+          "sha256": "c828d424ed1ead1d5ff2a7d65b86400f38c392c71f52a6cdbbf7837bd54d5c02"
+        },
+        {
+          "commit": "c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33",
+          "path": "research/x-c1/canonical-direct-odd-line-2026-10-02/summary.json",
+          "sha256": "7657d0b3e7bc6f6c5c95339b398e30bb45f5f50de52f3d61583c4408ea52b3ac"
+        },
+        {
+          "commit": "c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33",
+          "path": "research/x-c1/canonical-direct-odd-line-2026-10-02/controls.json",
+          "sha256": "6c28227c97852cd842fa3729efc37e76276eee1ca33589df361527cea24bc176"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "A9->A11 ungerade nach Y68: direkte, zentrierte und gemeinsame affine Linienrechnung auf denselben 19 Fällen. Bedingte Gesamtwinkelhüllen central <=3.405363 Grad und quarter <=3.765366 Grad; fünf bekannte Punkte auf dem maximalen Eigenwertast. Ausgangsbox und acht Diagnoseblätter bleiben UNRESOLVED. Kein uniformer Winkelkorridor.",
+      "claim": [
+        "Direkte, zentrierte und gemeinsame affine Rechnung verwenden dieselben 19 Fälle. Alle 57 Vergleiche sowie Kontroll- und Auditquittungen sind bytegleich reproduziert. Fünf bekannte zulässige Punkte werden in jeder Variante auf dem maximalen Eigenwertast zertifiziert; es werden keine neuen zulässigen Punkte konstruiert.",
+        "Auf dem bedingten zentralen Vier-Y-Schnitt sinkt die Gesamtwinkelobergrenze von 163.162463 auf höchstens 3.405363 Grad, auf quarter von 165.457773 auf höchstens 3.765366 Grad. Die übrigen Y- und Momentintervalle bleiben auf diesen Schnitten erhalten. Das belegt dort verlorene Einschliessungspräzision; die tatsächliche volle Winkelstreuung wird dadurch nicht bestimmt.",
+        "Der separate rationale Audit bestätigt 19 akzeptierte maximale Wurzelhüllen und 124 Newton-Schritte; Arb mit 768 Bit kontrolliert elf Winkelobergrenzen. Die positive Skalierung M_tilde=det(L)M und die Endpunkt-/Ableitungsvorzeichen zertifizieren den maximalen Ast.",
+        "Root und alle acht terminalen Diagnoseboxen bleiben UNRESOLVED. Die bisherige affine Engine behandelt die Y-left-Inversenhülle unabhängig und bezahlt höhere Produkte als Restintervalle. Der nächste offene Versuch erhält die gemeinsame Y-Kernel-Gleichung und explizite zweite Ordnung auf denselben 19 Fällen; hier wird kein höhergeordnetes Resultat behauptet."
+      ],
+      "depends_on": [
+        "CANONICAL-ADAPTIVE-ODD-ANGLE-UNRESOLVED",
+        "CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33",
+      "canonical_proof": "research/x-c1/canonical-direct-odd-line-2026-10-02/PROOF.md",
+      "proof_sha256": "47d3973fae95f86ef3918ec31d29d3797429f70a5683dfc869ab23cff7b614ee",
+      "negative_claim_boundary": "Die Verbesserungen gelten nur auf zwei bedingten Vier-Y-Schnitten. Sie belegen dort Einschliessungsverlust der früheren Darstellung, aber keine uniforme Lokalisierung. UNRESOLVED für Root und acht Diagnoseboxen beweist weder strukturelle Offenheit noch das Scheitern höherer gemeinsamer Modelle oder feinerer Unterteilungen.",
+      "does_not_claim": [
+        "Keine uniforme ungerade Lokalisierung unter zehn Grad und kein neuer zulässiger Gegenzeuge.",
+        "Keine strukturelle Offenheit der verstärkten Familie, kein universelles Scheitern gemeinsamer Verfahren.",
+        "Keine neuen Operatorintegrale, Y58-Dualdaten, L_B-Daten oder adaptive Bäume.",
+        "Kein allgemeines Renewal, keine A13-Positivität, keine kofinale positive Familie, kein globales Objekt X und keine RH.",
+        "Kein abgeschlossener externer Gesamtaudit."
+      ]
     }
   ],
   "global_status": {
@@ -2388,13 +2442,7 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [
-    {
-      "id": "CANONICAL-DIRECT-ODD-LINE-UNRESOLVED",
-      "meta_path": "research/x-c1/canonical-direct-odd-line-2026-10-02/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    }
-  ],
+  "pending_packages": [],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",
@@ -2412,14 +2460,14 @@
   },
   "current_integration_observation": {
     "observed_at": "2026-10-02",
-    "main_sha": "165ade402c94a7a75074f9a06aa220f37b0d39fa",
-    "integrated_research_branch": "research/canonical-adaptive-odd-angle-2026-10-02",
-    "integrated_research_head": "cb73f0ef223f4f3f0d51002f7d8127fac90a954f",
-    "reconciliation_merge": "165ade402c94a7a75074f9a06aa220f37b0d39fa",
-    "ci_run_id": 37032720224,
+    "main_sha": "83c00ddfe161563f35b31b4ae570faede0834b82",
+    "integrated_research_branch": "research/canonical-direct-odd-line-2026-10-02",
+    "integrated_research_head": "c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33",
+    "reconciliation_merge": "83c00ddfe161563f35b31b4ae570faede0834b82",
+    "ci_run_id": 37051235492,
     "ci_run_attempt": 1,
-    "ci_head_sha": "165ade402c94a7a75074f9a06aa220f37b0d39fa",
-    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/37032720224",
+    "ci_head_sha": "83c00ddfe161563f35b31b4ae570faede0834b82",
+    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/37051235492",
     "ci_conclusion": "success",
     "mathematical_status_change": false
   }
