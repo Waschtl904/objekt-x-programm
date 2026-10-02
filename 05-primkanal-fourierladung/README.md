@@ -1,3 +1,13 @@
+> [!NOTE]
+> **Dokumentationspflege vom 2. Oktober 2026: historisches Themenregister**
+>
+> Die Tabellen erschließen den damaligen Journalbestand. Ihre Dokumentzahlen,
+> Statusmarken und damaligen „nächsten Schritte“ sind keine aktuelle Gesamtbilanz.
+> Heutiger Einstieg: [CURRENT_STATE](../00-uebersicht/CURRENT_STATE.md) und
+> [NEXT_GATES](../00-uebersicht/NEXT_GATES.md). Die fachliche Arbeitsdefinition
+> steht [hier](../00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
+> Weitere Dateien sind im [Verzeichnis](./) erreichbar.
+
 # Primkanalgewichte und Fourierladung
 
 NEU-151 – NEU-173. Nichtentartung und Hebungsunabhaengigkeit der Primkanalgewichte, Rohkopplungsquotient, Zeugenroute fuer die nichttriviale Fourierladung von L3-Kreis und das Typfundament der L3-Klasse.

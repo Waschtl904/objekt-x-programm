@@ -1,3 +1,13 @@
+> [!NOTE]
+> **Dokumentationspflege vom 2. Oktober 2026: historisches Themenregister**
+>
+> Die Tabellen erschließen den damaligen Journalbestand. Ihre Dokumentzahlen,
+> Statusmarken und damaligen „nächsten Schritte“ sind keine aktuelle Gesamtbilanz.
+> Heutiger Einstieg: [CURRENT_STATE](../00-uebersicht/CURRENT_STATE.md) und
+> [NEXT_GATES](../00-uebersicht/NEXT_GATES.md). Die fachliche Arbeitsdefinition
+> steht [hier](../00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
+> Weitere Dateien sind im [Verzeichnis](./) erreichbar.
+
 # Weil-Quadratform und Nullstellenstatistik
 
 NEU-91 – NEU-120. Quadratischer Pivot zur Weil-Form, Bochner-Tor, Goldston–Montgomery-Transfer, GUE-/Poisson-Formfaktortest, Herglotz-Weil-Bruecke und Bombieri-Normalisierung.

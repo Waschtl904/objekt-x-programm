@@ -1,3 +1,13 @@
+> [!NOTE]
+> **Dokumentationspflege vom 2. Oktober 2026: historisches Themenregister**
+>
+> Die Tabellen erschließen den damaligen Journalbestand. Ihre Dokumentzahlen,
+> Statusmarken und damaligen „nächsten Schritte“ sind keine aktuelle Gesamtbilanz.
+> Heutiger Einstieg: [CURRENT_STATE](../00-uebersicht/CURRENT_STATE.md) und
+> [NEXT_GATES](../00-uebersicht/NEXT_GATES.md). Die fachliche Arbeitsdefinition
+> steht [hier](../00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
+> Weitere Dateien sind im [Verzeichnis](./) erreichbar.
+
 # Weil-Explizitformel, Krein-Raum und Hankelpositivitaet
 
 NEU-220 – NEU-250a. Gammafaktor und Mellin-Normierung, Konturtransport zur Explizitformel, Nullstellenpaar-Kreinraum, Spektraldeterminante, RH-äquivalente Hankel-Hierarchie, relativer Wres-Strang und BC-Typbrücke.
@@ -44,12 +54,12 @@ NEU-220 – NEU-250a. Gammafaktor und Mellin-Normierung, Konturtransport zur Exp
 | `NEU-245d` | [Direktaudit O245c/1: Kanonisierung, Nullmodus und Basismoment](NEU-245d_Direktaudit_O245c-1_Kanonisierung_Nullmodus_und_Basismoment.md) | ✓M |
 | `NEU-245e` | Wres-Direktaudit I | ✓M |
 | `NEU-245f` | Wres-Direktaudit II | ✓M |
-| `NEU-246` | [Typ-Grad-Kerninvarianzaudit: Koszul-Kandidat](NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md) | ✓M |
-| `NEU-247` | [Tensor-Lift-Bewertungsableitungen: Typbrücke](NEU-247_Tensor-Lift-Bewertungsableitungen_Typbruecke.md) | ✓M |
-| `NEU-247a` | [Präzisierungen Typbrücke](NEU-247a_Praezisierungen_Typbruecke.md) | ✓M |
-| `NEU-247b` | [Domänenpräzisierung P5 und Auditplan c2b2a](NEU-247b_Domaenenpraezisierung_P5_und_Auditplan_c2b2a.md) | ✓M |
-| `NEU-248` | [c2b2a: Wohldefiniertheit Tensoroperator](NEU-248_c2b2a_Wohldefiniertheit_Tensoroperator.md) | ✓M |
-| `NEU-249` | [Präzisierungen Notation, Konstruktion, Stabilität](NEU-249_Praezisierungen_Notation_Konstruktion_Stabilitaet.md) | ✓M |
+| `NEU-246` | [Typ-Grad-Kerninvarianzaudit: Koszul-Kandidat](../01-primkanten-werkzeuge/NEU-246_Typ-Grad-Kerninvarianzaudit_Koszul-Kandidat.md) | ✓M |
+| `NEU-247` | [Tensor-Lift-Bewertungsableitungen: Typbrücke](../01-primkanten-werkzeuge/NEU-247_Tensor-Lift-Bewertungsableitungen_Typbruecke.md) | ✓M |
+| `NEU-247a` | [Präzisierungen Typbrücke](../01-primkanten-werkzeuge/NEU-247a_Praezisierungen_Typbruecke.md) | ✓M |
+| `NEU-247b` | [Domänenpräzisierung P5 und Auditplan c2b2a](../01-primkanten-werkzeuge/NEU-247b_Domaenenpraezisierung_P5_und_Auditplan_c2b2a.md) | ✓M |
+| `NEU-248` | [c2b2a: Wohldefiniertheit Tensoroperator](../01-primkanten-werkzeuge/NEU-248_c2b2a_Wohldefiniertheit_Tensoroperator.md) | ✓M |
+| `NEU-249` | [Präzisierungen Notation, Konstruktion, Stabilität](../01-primkanten-werkzeuge/NEU-249_Praezisierungen_Notation_Konstruktion_Stabilitaet.md) | ✓M |
 | `NEU-250` | Wres-Minimalblock Kleinfallprüfung | ✓M → **Ausgang E** |
 | `NEU-250a` | [Typisierung Dirichletresiduumsform, relativer Primkantenraum](NEU-250a_O221-1c1a0-B_Typisierung_Dirichletresiduumsform_relativer_Primkantenraum.md) | ✓M_part → **Ausgang B** |
 

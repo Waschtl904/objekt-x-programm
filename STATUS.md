@@ -1,3 +1,12 @@
+> [!NOTE]
+> **Dokumentationspflege vom 2. Oktober 2026: historischer Stand**
+>
+> Die folgenden Statusangaben und Aufgaben beschreiben den damaligen Journalstand.
+> Den heutigen Stand zeigt [CURRENT_STATE](00-uebersicht/CURRENT_STATE.md),
+> die offenen Aufgaben [NEXT_GATES](00-uebersicht/NEXT_GATES.md).
+> Maßgebliche Quelle ist [RESEARCH_STATE](00-uebersicht/RESEARCH_STATE.yaml).
+> Der Originaltext bleibt als Provenienz erhalten.
+
 # Statusregister
 
 Verdichtete Gesamtbilanz des Programms ohne Zwischenschritte. Für die vollständige

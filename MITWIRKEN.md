@@ -1,11 +1,16 @@
 # Mitwirken und Herkunft
 
+Aktuelle Aufgaben: [NEXT_GATES](00-uebersicht/NEXT_GATES.md).
+Für Beiträge gelten der [Abnahmeablauf](CONTRIBUTING.md) und die
+[Registry-Pflege](00-uebersicht/RESEARCH_STATE_MAINTENANCE.md).
+
 ## Herkunft dieses Repositories
 
 Dieses Repository ist die kuratierte öffentliche Fassung eines privaten Forschungsjournals
 (`rh-fragenkatalog`), das zwischen 2025 und Juli 2026 entstanden ist.
 
-**Was übernommen wurde:** alle 324 Forschungsdokumente, inhaltlich unverändert.
+**Beim ursprünglichen Import übernommen:** 324 Forschungsdokumente, inhaltlich unverändert.
+Diese Zahl beschreibt den damaligen Import, nicht den heutigen Gesamtbestand.
 
 **Was neu ist:**
 
@@ -41,7 +46,7 @@ Zustimmung. Besonders willkommen sind
 - **Quellenhinweise** auf bereits bekannte Resultate, die einen offenen Knoten schließen
   oder ein No-Go verschärfen,
 - **Verschärfungen** bestehender No-Gos,
-- **Konstruktionen** für einen der offenen Knoten aus [OFFENE_PROBLEME.md](OFFENE_PROBLEME.md).
+- **Konstruktionen** für eine der aktuellen Aufgaben aus [NEXT_GATES](00-uebersicht/NEXT_GATES.md).
 
 ### Vorgehen
 
@@ -57,7 +62,12 @@ als **neuer Revisionsabschnitt oder neuer Eintrag** geführt, nicht durch stille
 Überschreiben — nachvollziehbare Fehlerkorrektur ist der Kern der Methode. Bestehende
 Aussagen werden also markiert und widerlegt, nicht gelöscht.
 
-### Statusmarken korrekt setzen
+### Historische Journalmarken
+
+Die folgende Tabelle erklärt die Notation der Journaltexte. Heutige Resultate
+werden mit Scope, Beweisanker sowie getrenntem mathematischem und externem
+Reviewstatus im [Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml) geführt.
+Eine Journalmarke ist keine eigenständige aktuelle Statuspromotion.
 
 | Marke | Wann |
 |---|---|

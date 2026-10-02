@@ -2,7 +2,9 @@
 
 **Stand:** 2. Oktober 2026
 
-**Basis:** `main@165ade402c94a7a75074f9a06aa220f37b0d39fa`
+**Forschungsbasis:** `165ade402c94a7a75074f9a06aa220f37b0d39fa` (PR #201);
+Registry synchronisiert durch [PR #202](https://github.com/Waschtl904/objekt-x-programm/pull/202).
+Diese Anker dokumentieren die Integration; der aktuelle Main-Head wird live gelesen.
 
 **Zweck:** Verständliche Gesamterzählung des Programms – klassische Grundlagen, eigene Resultate, rigorose No-Gos, aktuelle positive C1-Geometrie und offene globale Schritte.
 
@@ -379,12 +381,15 @@ festgelegter gemeinsamer Information: 163.16° bei eingeschränkten vier
 Y-Koordinaten, 116.72° mit zusätzlich zentralem L_B und 1.903° beim gesamten
 zentralen Y samt Momentdaten. Der letzte Wert gilt nur für diesen Spezialfall.
 
-Als Nächstes wird die **direkte 2×2-Eigenlinie mit gemeinsamen Abhängigkeiten**
-geprüft: Nennerfreie skalierte Momentmatrix, rationale Wurzelisolation,
+Die nächste offene Registry-Aufgabe ist die **direkte 2×2-Eigenlinie mit gemeinsamen Abhängigkeiten**: Nennerfreie skalierte Momentmatrix, rationale Wurzelisolation,
 Nachweis des maximalen Eigenwertasts und direkter physischer Winkel.
 Zuerst werden die festen kleinen Vergleichsfälle ausgewertet; bei Bedarf
 folgt eine zentrierte oder affine Rechnung. Neue Operatorintegrale,
 Y58-Dualdaten und eine neue L_B-Rechnung sind dafür zunächst nicht vorgesehen.
+
+Ein lokales Folgepaket dazu liegt vor. Sein Stand und die noch ausstehende
+Forschungsintegration sind im [Dokumentationswegweiser](DOKUMENTATIONSWEGWEISER.md#lokale-folgepakete)
+ausgewiesen.
 
 Danach folgen bandweise Momente tatsächlicher Maximierer und der vorwärts
 gerichtete Renewal-Test. Allgemeines Renewal, A13-Positivität, kofinale

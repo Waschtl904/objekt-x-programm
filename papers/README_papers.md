@@ -1,3 +1,13 @@
+> [!NOTE]
+> **Dokumentationspflege vom 2. Oktober 2026: datierter Manuskriptindex**
+>
+> Die Liste und der P11-Sonderstatus geben die ausdrücklich genannten Auguststände
+> wieder. Spätere Scope-Korrekturen und Forschungspakete stehen im
+> [Forschungsregister](../00-uebersicht/RESEARCH_STATE.yaml). Für den heutigen
+> Stand gelten [CURRENT_STATE](../00-uebersicht/CURRENT_STATE.md) und
+> [NEXT_GATES](../00-uebersicht/NEXT_GATES.md). Die historischen SYN-/PUB-Angaben
+> werden durch diesen Navigationshinweis nicht geändert.
+
 # Synthese-Manuskripte — Index
 
 **Stand:** 2026-08-09; P11-Sonderupdate 2026-08-21  
