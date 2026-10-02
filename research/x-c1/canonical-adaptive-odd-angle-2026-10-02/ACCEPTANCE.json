@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "package": "C:\\Users\\sebas\\Documents\\Codex\\2026-09-29\\files-pasted-by-the-user-du\\outputs\\canonical-adaptive-odd-angle-2026-10-02",
+  "archive": "C:\\Users\\sebas\\Documents\\Codex\\2026-09-29\\files-pasted-by-the-user-du\\outputs\\Adaptiver-Odd-Winkel-nach-Y68-2026-10-02.zip",
+  "archive_sha256": "2db209b3154f85eeee75205919d76c1b80b56fad26056e020cad135fae934015",
+  "archive_bytes": 2630026,
+  "archive_members": 41,
+  "manifest_bindings": 40,
+  "all_archive_members_byte_equal": true,
+  "numerical_replay": {
+    "status": "PASS",
+    "certificate_sha256": "92493b61c67698f78d271c0c178dd8be8a63eaa111fa62ca197e3747cad17cba",
+    "exact_cover_checked": true,
+    "all_split_scores_checked": true,
+    "strict_ten_degree_acceptance_checked": true,
+    "tamper_controls_passed": true,
+    "unique_numerical_evaluations_replayed": 1121,
+    "expected_evaluations": 1121,
+    "all_numeric_receipts_identical": true,
+    "independent_search_tree_audit": true,
+    "independent_large_operator_implementation": false
+  },
+  "independent_angle_check": {
+    "status": "PASS",
+    "independent_engine": "python-flint 0.9.0 / Arb at 768 bits",
+    "distinct_upper_bounds_checked": 210,
+    "strict_five_degree_sine_squared_bracket": [
+      "0.00759612349",
+      "0.00759612350"
+    ],
+    "old_one_percent_threshold_is_not_ten_degree_green": true,
+    "operator_integrals_computed": false
+  },
+  "source_check": {
+    "status": "PASS",
+    "commit": "65e7614683b5cf59db93d8a687d815cbff677612",
+    "source_files_checked": 8,
+    "source_bindings_sha256": "8f8ddeb05370899dcad9a615cedbeb97801f6175d71a03355c3bd4c35e186aa7",
+    "all_files_match_git_blobs": true
+  },
+  "mathematical_outcome": "UNRESOLVED",
+  "research_status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN",
+  "canonical_main_unchanged": "65e7614683b5cf59db93d8a687d815cbff677612",
+  "local_repository_clean": true,
+  "new_package_integration_status": "LOCAL_UNMERGED",
+  "postsealing_archive_replay": {
+    "status": "PASS",
+    "mode": "QUICK_CONTROLS",
+    "manifest_bindings": 40,
+    "unique_box_evaluations_replayed": 0,
+    "all_box_receipts_recomputed": false,
+    "known_point_slices_byte_replayed": true,
+    "uncertainty_groups_byte_replayed": true,
+    "angle_controls_byte_replayed": true,
+    "independent_structure_audit": true,
+    "large_operator_integrals_repeated": false
+  },
+  "presealing_all_1121_numerical_receipts_replayed": true,
+  "postsealing_all_1121_numerical_receipts_replayed_again": false,
+  "tree_nodes": 255,
+  "leaves": 128,
+  "excluded_leaves": 0,
+  "within_target_leaves": 0,
+  "new_operator_integrals": false,
+  "new_Y58_dual_data": false,
+  "new_structural_open_claim": false,
+  "diagnostic_conclusion": "Y58 dominance is not demonstrated; inspect common Y/N/energy/moment enclosure before isolated new dual data.",
+  "diagnostic_limits": "Conditional central-model restrictions are not a uniform angle proof or a necessity theorem.",
+  "pr187_last_live_check": {
+    "state": "OPEN",
+    "head": "18d752f492fde5f0a9a6dec8cf8ff42583f8b064"
+  }
+}

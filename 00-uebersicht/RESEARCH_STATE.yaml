@@ -180,6 +180,12 @@
       "title": "Gemeinsamen ungeraden Winkel nach Y68-Trennung zertifizieren",
       "mathematical_status": "OPEN",
       "scope": "Alle vorhandenen Stage-A-Einträge und die neue Y68-Korrelation gemeinsam nutzen. Ziel: rigoroser physischer Gesamtwinkelkorridor <10 Grad oder ein neues vollständig geprüftes Gegenpaar mit >10 Grad Trennung innerhalb der verschärften endlichen Familie. Die bisherige Auswertung der Ausgangsbox und sieben Cayley-Stichproben sind UNRESOLVED. Eine gezieltere gemeinsame Auswertung bzw. Unterteilung ist der nächste Test; Y58-Dualdaten nur bei konkretem zusätzlichem Bedarf."
+    },
+    {
+      "id": "CANONICAL-ADAPTIVE-ODD-ANGLE-UNRESOLVED",
+      "title": "Abgeschlossenen adaptiven Odd-Winkeltest registrieren",
+      "mathematical_status": "OPEN",
+      "scope": "A9->A11 ungerade nach Y68-Trennung: adaptive Zerlegung mit 255 Knoten, 128 unentschiedenen Blättern und vollständiger Nachrechnung von 1121 Boxauswertungen. Bedingte Diagnosen untersuchen Y- und Momentunsicherheiten. Kein uniformer Winkelkorridor und kein neuer Gegenzeugennachweis. Übernahme nach Integration."
     }
   ],
   "results": [
@@ -2306,7 +2312,13 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [],
+  "pending_packages": [
+    {
+      "id": "CANONICAL-ADAPTIVE-ODD-ANGLE-UNRESOLVED",
+      "meta_path": "research/x-c1/canonical-adaptive-odd-angle-2026-10-02/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    }
+  ],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",

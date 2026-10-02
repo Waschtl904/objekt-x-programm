@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "independent_engine": "python-flint 0.9.0 / Arb at 768 bits",
+  "distinct_upper_bounds_checked": 210,
+  "strict_five_degree_sine_squared_bracket": [
+    "0.00759612349",
+    "0.00759612350"
+  ],
+  "old_one_percent_threshold_is_not_ten_degree_green": true,
+  "operator_integrals_computed": false
+}
