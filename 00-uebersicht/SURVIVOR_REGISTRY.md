@@ -1652,3 +1652,38 @@ Does not claim:
 - Keine unabhängige Neuimplementierung der großen Operatorrechnung und kein abgeschlossener externer Gesamtaudit.
 
 Dokumentierte Reproduktion: [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/cb73f0ef223f4f3f0d51002f7d8127fac90a954f/research/x-c1/canonical-adaptive-odd-angle-2026-10-02/ACCEPTANCE.json), [audit.json](https://github.com/Waschtl904/objekt-x-programm/blob/cb73f0ef223f4f3f0d51002f7d8127fac90a954f/research/x-c1/canonical-adaptive-odd-angle-2026-10-02/audit.json), [summary.json](https://github.com/Waschtl904/objekt-x-programm/blob/cb73f0ef223f4f3f0d51002f7d8127fac90a954f/research/x-c1/canonical-adaptive-odd-angle-2026-10-02/summary.json), [known_point_slices.json](https://github.com/Waschtl904/objekt-x-programm/blob/cb73f0ef223f4f3f0d51002f7d8127fac90a954f/research/x-c1/canonical-adaptive-odd-angle-2026-10-02/known_point_slices.json), [uncertainty_groups.json](https://github.com/Waschtl904/objekt-x-programm/blob/cb73f0ef223f4f3f0d51002f7d8127fac90a954f/research/x-c1/canonical-adaptive-odd-angle-2026-10-02/uncertainty_groups.json), [angle_controls.json](https://github.com/Waschtl904/objekt-x-programm/blob/cb73f0ef223f4f3f0d51002f7d8127fac90a954f/research/x-c1/canonical-adaptive-odd-angle-2026-10-02/angle_controls.json).
+
+## CANONICAL-DIRECT-ODD-LINE-UNRESOLVED
+
+Direkte gemeinsame Odd-Eigenlinie: bedingte Verbesserung, volle Familie UNRESOLVED
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: A9->A11 ungerade nach Y68: direkte, zentrierte und gemeinsame affine Linienrechnung auf denselben 19 Fällen. Bedingte Gesamtwinkelhüllen central <=3.405363 Grad und quarter <=3.765366 Grad; fünf bekannte Punkte auf dem maximalen Eigenwertast. Ausgangsbox und acht Diagnoseblätter bleiben UNRESOLVED. Kein uniformer Winkelkorridor.
+- Canonical commit: [c519a1a](https://github.com/Waschtl904/objekt-x-programm/commit/c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33).
+- Canonical proof: [research/x-c1/canonical-direct-odd-line-2026-10-02/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33/research/x-c1/canonical-direct-odd-line-2026-10-02/PROOF.md).
+- depends_on: `CANONICAL-ADAPTIVE-ODD-ANGLE-UNRESOLVED`, `CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: Die Verbesserungen gelten nur auf zwei bedingten Vier-Y-Schnitten. Sie belegen dort Einschliessungsverlust der früheren Darstellung, aber keine uniforme Lokalisierung. UNRESOLVED für Root und acht Diagnoseboxen beweist weder strukturelle Offenheit noch das Scheitern höherer gemeinsamer Modelle oder feinerer Unterteilungen.
+
+Aussage:
+
+- Direkte, zentrierte und gemeinsame affine Rechnung verwenden dieselben 19 Fälle. Alle 57 Vergleiche sowie Kontroll- und Auditquittungen sind bytegleich reproduziert. Fünf bekannte zulässige Punkte werden in jeder Variante auf dem maximalen Eigenwertast zertifiziert; es werden keine neuen zulässigen Punkte konstruiert.
+- Auf dem bedingten zentralen Vier-Y-Schnitt sinkt die Gesamtwinkelobergrenze von 163.162463 auf höchstens 3.405363 Grad, auf quarter von 165.457773 auf höchstens 3.765366 Grad. Die übrigen Y- und Momentintervalle bleiben auf diesen Schnitten erhalten. Das belegt dort verlorene Einschliessungspräzision; die tatsächliche volle Winkelstreuung wird dadurch nicht bestimmt.
+- Der separate rationale Audit bestätigt 19 akzeptierte maximale Wurzelhüllen und 124 Newton-Schritte; Arb mit 768 Bit kontrolliert elf Winkelobergrenzen. Die positive Skalierung M_tilde=det(L)M und die Endpunkt-/Ableitungsvorzeichen zertifizieren den maximalen Ast.
+- Root und alle acht terminalen Diagnoseboxen bleiben UNRESOLVED. Die bisherige affine Engine behandelt die Y-left-Inversenhülle unabhängig und bezahlt höhere Produkte als Restintervalle. Der nächste offene Versuch erhält die gemeinsame Y-Kernel-Gleichung und explizite zweite Ordnung auf denselben 19 Fällen; hier wird kein höhergeordnetes Resultat behauptet.
+
+Does not claim:
+
+- Keine uniforme ungerade Lokalisierung unter zehn Grad und kein neuer zulässiger Gegenzeuge.
+- Keine strukturelle Offenheit der verstärkten Familie, kein universelles Scheitern gemeinsamer Verfahren.
+- Keine neuen Operatorintegrale, Y58-Dualdaten, L_B-Daten oder adaptive Bäume.
+- Kein allgemeines Renewal, keine A13-Positivität, keine kofinale positive Familie, kein globales Objekt X und keine RH.
+- Kein abgeschlossener externer Gesamtaudit.
+
+Dokumentierte Reproduktion: [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33/research/x-c1/canonical-direct-odd-line-2026-10-02/ACCEPTANCE.json), [audit.json](https://github.com/Waschtl904/objekt-x-programm/blob/c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33/research/x-c1/canonical-direct-odd-line-2026-10-02/audit.json), [summary.json](https://github.com/Waschtl904/objekt-x-programm/blob/c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33/research/x-c1/canonical-direct-odd-line-2026-10-02/summary.json), [controls.json](https://github.com/Waschtl904/objekt-x-programm/blob/c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33/research/x-c1/canonical-direct-odd-line-2026-10-02/controls.json).

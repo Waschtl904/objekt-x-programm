@@ -2,9 +2,9 @@
 
 **Stand:** 2. Oktober 2026
 
-**Forschungsbasis:** `165ade402c94a7a75074f9a06aa220f37b0d39fa` (PR #201);
-Registry synchronisiert durch [PR #202](https://github.com/Waschtl904/objekt-x-programm/pull/202).
-Diese Anker dokumentieren die Integration; der aktuelle Main-Head wird live gelesen.
+**Forschungsbasis:** `83c00ddfe161563f35b31b4ae570faede0834b82` ([PR #204](https://github.com/Waschtl904/objekt-x-programm/pull/204)).
+Registry- und Reviewstatus stehen in [CURRENT_STATE](CURRENT_STATE.md).
+Der Beweisanker des Direct-Line-Blocks bleibt der Research-Head `c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33`; der aktuelle Main-Head wird live gelesen.
 
 **Zweck:** Verständliche Gesamterzählung des Programms – klassische Grundlagen, eigene Resultate, rigorose No-Gos, aktuelle positive C1-Geometrie und offene globale Schritte.
 
@@ -364,35 +364,33 @@ einer Intervallbox würde dafür nicht genügen. Eine vollständige gemeinsame
 Realisierung sämtlicher ursprünglicher Trial-, Überlappungs- und
 Operatordaten durch die beiden Gegenzeugen wird nicht behauptet.
 
-**Ungerade nach Y68: adaptiver Winkeltest abgeschlossen, Lokalisierung offen.**
+**Ungerade nach Y68: direkte Eigenlinie verbessert bedingte Schnitte.**
 Die [Full-Shift-/Primal-Dual-Familie](../research/x-c1/canonical-full-shift-primal-dual-2026-10-02/README.md)
-liefert **Y68 in [0.0410706614, 0.0725344674]** und schließt den alten
-gedrehten Gegenzeugen strikt aus. Der alte STRUCTURAL-OPEN-Nachweis gilt
-weiterhin nur für seine ursprüngliche, schwächere Relaxation.
+liefert Y68 in [0.0410706614, 0.0725344674] und schließt den alten gedrehten
+Gegenzeugen aus. Der frühere STRUCTURAL-OPEN-Nachweis gilt nur für seine
+schwächere Relaxation. Der
+[adaptive Test](../research/x-c1/canonical-adaptive-odd-angle-2026-10-02/README.md)
+mit 255 Knoten bleibt UNRESOLVED. Das nun integrierte
+[Direct-Line-Paket](../research/x-c1/canonical-direct-odd-line-2026-10-02/README.md)
+erhält gemeinsame Abhängigkeiten in der direkten, zentrierten und affinen
+Rechnung. Alle 57 Vergleiche auf denselben 19 Fällen sind reproduziert.
 
-Der [anschließende adaptive Test](../research/x-c1/canonical-adaptive-odd-angle-2026-10-02/README.md)
-endet mit **UNRESOLVED**: 255 Knoten, 128 unentschiedene Blätter,
-1121 vollständig nachgerechnete Boxquittungen. Die breiten oberen Winkelhüllen
-sind keine tatsächlich nachgewiesenen Winkel. Der Lauf beweist auch kein
-Scheitern jeder feineren Unterteilung.
+Auf dem **bedingten** zentralen Vier-Y-Schnitt sinkt die Gesamtwinkelobergrenze
+von 163.162463° auf **3.405363°**, auf quarter von 165.457773° auf **3.765366°**.
+Das belegt dort verlorene Einschließungspräzision der früheren Darstellung.
+Alle fünf bekannten zulässigen Punkte bleiben auf dem maximalen Eigenwertast.
+Die volle Ausgangsbox und alle acht Diagnoseblätter bleiben **UNRESOLVED**;
+die zwei engen Schnitte liefern keinen uniformen Winkelbeweis.
 
-Die bedingten zentralen Diagnosen unterscheiden stark zwischen freier und
-festgelegter gemeinsamer Information: 163.16° bei eingeschränkten vier
-Y-Koordinaten, 116.72° mit zusätzlich zentralem L_B und 1.903° beim gesamten
-zentralen Y samt Momentdaten. Der letzte Wert gilt nur für diesen Spezialfall.
+Der [nächste Gate](Y_KERNEL_SECOND_ORDER_GATE_2026-10-02.md)
+erhält die gemeinsame Gleichung **Y_L X + Y_R = 0** und explizite zweite
+Ordnung mit rigorosem Rest. Zuerst werden dieselben 19 Fälle verglichen.
+Ein gemeinsamer Root-Gesamtwinkel unter 10° wäre der uniforme Abschluss.
+Neue Operatorintegrale, Y58-/L_B-Daten und ein neuer großer Baum sind für
+diesen ersten Versuch nicht vorgesehen.
 
-Die nächste offene Registry-Aufgabe ist die **direkte 2×2-Eigenlinie mit gemeinsamen Abhängigkeiten**: Nennerfreie skalierte Momentmatrix, rationale Wurzelisolation,
-Nachweis des maximalen Eigenwertasts und direkter physischer Winkel.
-Zuerst werden die festen kleinen Vergleichsfälle ausgewertet; bei Bedarf
-folgt eine zentrierte oder affine Rechnung. Neue Operatorintegrale,
-Y58-Dualdaten und eine neue L_B-Rechnung sind dafür zunächst nicht vorgesehen.
-
-Ein lokales Folgepaket dazu liegt vor. Sein Stand und die noch ausstehende
-Forschungsintegration sind im [Dokumentationswegweiser](DOKUMENTATIONSWEGWEISER.md#lokale-folgepakete)
-ausgewiesen.
-
-Danach folgen bandweise Momente tatsächlicher Maximierer und der vorwärts
-gerichtete Renewal-Test. Allgemeines Renewal, A13-Positivität, kofinale
+Danach folgen bandweise Momente tatsächlicher Maximierer und ein vorwärts
+gerichteter Renewal-Test. Allgemeines Renewal, A13-Positivität, kofinale
 positive Familie, globales Objekt X und RH bleiben offen. PR #187 bleibt
 separat. Status: `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`.
 

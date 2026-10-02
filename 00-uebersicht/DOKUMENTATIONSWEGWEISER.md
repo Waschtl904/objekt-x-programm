@@ -19,19 +19,18 @@ mathematischen Reviewstatus.
 
 ## Lokale Folgepakete
 
-Beim Dokumentationsaudit vom 2. Oktober 2026 liegt zusätzlich das lokale
-Paket **DEPENDENCY-PRESERVING 2x2 ODD-LINE GATE** vor. Es wurde im Arbeitslauf
-abgeschlossen und versiegelt; es ist noch nicht als Forschungspaket im
-Repository integriert und nicht Bestandteil der 50 registrierten Resultate.
+**Integrationsnachtrag vom 2. Oktober 2026:** Das beim Dokumentationsaudit noch
+lokale [Direct-Line-Paket](../research/x-c1/canonical-direct-odd-line-2026-10-02/README.md) ist durch
+[PR #204](https://github.com/Waschtl904/objekt-x-programm/pull/204) integriert.
+Die Registry führt jetzt 51 Resultate. Die Originaldateien behalten ihre
+damalige lokale Statusangabe; die spätere Integration steht im Register.
 
 Archivname: `Direkte-gemeinsame-Odd-Eigenlinie-2026-10-02.zip`.
 SHA-256: `b7a37a9d6cb8ef49233b77af5c536759cf208ced362f7cdb608f97c3f5847019`.
 
-Das Archiv liegt im lokalen Übergabepaket der Arbeitssitzung. Seine separate
-Forschungsintegration muss die Inhalte, Replays und anschließende
-Registry-Pflege übernehmen. Der vorliegende Dokumentationsnachtrag führt
-keine lokalen Zahlen als neue kanonische Resultate ein. Die offene
-Registry-Aufgabe zur ungeraden Richtung bleibt bestehen.
+Die ganze ungerade Familie bleibt UNRESOLVED. Der
+[Y-Kernel-Gate mit zweiter Ordnung](Y_KERNEL_SECOND_ORDER_GATE_2026-10-02.md)
+ist die nächste offene Aufgabe; seine Planung ist noch kein neues Resultat.
 
 ## Historische Unterlagen
 
