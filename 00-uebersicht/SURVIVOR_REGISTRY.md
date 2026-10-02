@@ -1551,3 +1551,70 @@ Does not claim:
 - Unabhängige Neuimplementierung der großen Operatorintegrale oder abgeschlossene externe analytische Gesamtprüfung.
 
 Dokumentierte Reproduktion: [verification.json](https://github.com/Waschtl904/objekt-x-programm/blob/b91589923f5738148c9c9702155fb3dc02f7b1a1/research/x-c1/canonical-cross-high-response-2026-10-01/02-high-response/original/verification.json), [verification_arb.json](https://github.com/Waschtl904/objekt-x-programm/blob/b91589923f5738148c9c9702155fb3dc02f7b1a1/research/x-c1/canonical-cross-high-response-2026-10-01/02-high-response/original/verification_arb.json).
+
+## CANONICAL-FULL-SHIFT-RESOLVENT-UNRESOLVED
+
+Vollständige Shiftbild-Resolventen und exakte primal-duale Restbudgets
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: A9->A11 ungerade: vollständige Shiftbild-Korrekturen bei festem Filter und gleicher Präzision; direkte Y58/Y68-Abnahme UNRESOLVED, genaue primal-duale Restbudgets isoliert.
+- Canonical commit: [219ab40](https://github.com/Waschtl904/objekt-x-programm/commit/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff).
+- Canonical proof: [research/x-c1/canonical-full-shift-primal-dual-2026-10-02/01-full-shift/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff/research/x-c1/canonical-full-shift-primal-dual-2026-10-02/01-full-shift/PROOF.md).
+- depends_on: `CANONICAL-CROSS-PROJECTOR-RESIDUAL-UNRESOLVED`, `CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED`, `CANONICAL-JOINT-GENERALIZED-DISCRIMINANT`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: UNRESOLVED bezeichnet die Schärfe dieser direkten Full-Shift-Auswertung; kein No-Go für die Architektur. Die nachfolgende primal-duale Y68-Abnahme ist ein eigenes Paket.
+
+Aussage:
+
+- Vollständige nullfortgesetzte Shiftbilder behalten den gesamten hohen Anteil und alle Sprunglogarithmen. Vierpolige Aggregate für A9/5, A9/6 und A11/8 werden bei unverändertem Filter und unveränderter Präzision zertifiziert; zusätzliche begrenzte Varianten werden getrennt ausgewiesen.
+- Die direkte Y58/Y68-Abnahme bleibt UNRESOLVED. Der Block isoliert die Restbudgets für den anschließenden primal-dualen Test; alle 14 großen Polrechnungen wurden erzeugt und ein vollständiger primaler Pol bytegleich wiederholt.
+
+Does not claim:
+
+- Kein uniformer ungerader physischer Winkelkorridor unter 10 Grad und kein STRUCTURAL-OPEN-Nachweis für die durch Y68 verschärfte Relaxation.
+- Keine neue duale Y58-Familie, keine bandweisen Momente tatsächlicher Maximierer und keine vollständige physische Realisierung aller Relaxationsdaten.
+- Kein allgemeiner Renewal-Satz, keine A13-Positivität, keine kofinale positive Familie, kein globales Objekt X und keine RH.
+- Keine unabhängige Neuimplementierung der großen Operatorintegrale und keine abgeschlossene externe Gesamtprüfung.
+
+Dokumentierte Reproduktion: [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff/research/x-c1/canonical-full-shift-primal-dual-2026-10-02/01-full-shift/ACCEPTANCE.json), [aggregate_targets.json](https://github.com/Waschtl904/objekt-x-programm/blob/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff/research/x-c1/canonical-full-shift-primal-dual-2026-10-02/01-full-shift/aggregate_targets.json), [primal_dual_budget.json](https://github.com/Waschtl904/objekt-x-programm/blob/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff/research/x-c1/canonical-full-shift-primal-dual-2026-10-02/01-full-shift/primal_dual_budget.json).
+
+## CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION
+
+Primal-duale Y68-Trennung: alter Gegenzeuge ausgeschlossen, Winkel offen
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: A9->A11 ungerade: acht adjungierte Full-Shift-Resolventen liefern Y68 in [0.0410706614,0.0725344674] und schließen den alten gedrehten Gegenzeugen strikt aus. Gemeinsamer Winkeltest und begrenzte neue Gegenmodellsuche bleiben UNRESOLVED.
+- Canonical commit: [219ab40](https://github.com/Waschtl904/objekt-x-programm/commit/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff).
+- Canonical proof: [research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff/research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/PROOF.md).
+- depends_on: `CANONICAL-CROSS-PROJECTOR-RESIDUAL-UNRESOLVED`, `CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED`, `CANONICAL-JOINT-GENERALIZED-DISCRIMINANT`, `CANONICAL-FULL-SHIFT-RESOLVENT-UNRESOLVED`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: Die strikte Y68-Trennung schließt genau den bisherigen gedrehten Gegenzeugen aus. Die gemeinsame Winkelhülle bleibt uninformativ; wenige zulässige nahe Stichproben sind weder ein uniformer Winkelbeweis noch ein struktureller Gegenbefund.
+
+Aussage:
+
+- Acht adjungierte Resolventenkandidaten zu den festen Full-Shift-Aggregaten a6 und b8 liefern L_A+L_B in [-0.0130180923,0.0130174044] und eine strikt positive signierte Gate-Reserve größer als 0.0069620524. Produktreste, gerichtete Korrekturen, Filter-, Quellen-, Träger-, bilineare und Energiefehler werden gemeinsam bezahlt.
+- Y68 liegt in [0.0410706614,0.0725344674]. Der bisherige gedrehte Gegenzeuge ist strikt ausgeschlossen. Residualschwellen allein sind ohne Kontrolle des signierten Korrekturterms kein hinreichendes GREEN-Kriterium.
+- Die gemeinsame Ausgangsbox mit allen bisherigen Stage-A-Einträgen und dem neuen Y68-Intervall liefert nur eine triviale obere Gesamtwinkelhülle von 180 Grad. Das ist kein nachgewiesener tatsächlicher Winkel. Es wurde keine neue Boxunterteilung gerechnet; der einheitliche Korridor unter 10 Grad bleibt UNRESOLVED.
+- Sieben feste Parameterwerte der bisherigen gemeinsamen Familie werden geprüft. Fünf erfüllen die endlichen gemeinsamen Bedingungen; zwei scheitern an Y68. Die vier nichtzentralen zulässigen Stichproben liegen jeweils weniger als 0.822 Grad von der zentralen Referenz entfernt. Daraus folgt kein uniformer Winkelbereich und kein neues Gegenpaar mit mehr als 10 Grad Abstand: BOUNDED_SEARCH_UNRESOLVED.
+- Alle acht dualen Polrechnungen wurden vollständig erzeugt; ein kompletter dualer Residuen- und Korrekturreplay ist bytegleich. Der alte STRUCTURAL-OPEN-Nachweis über sein Gegenpaar trägt nicht auf die neue Y68-Relaxation über. Neue duale Y58-Daten wurden nicht berechnet.
+
+Does not claim:
+
+- Kein uniformer ungerader physischer Winkelkorridor unter 10 Grad und kein STRUCTURAL-OPEN-Nachweis für die durch Y68 verschärfte Relaxation.
+- Keine neue duale Y58-Familie, keine bandweisen Momente tatsächlicher Maximierer und keine vollständige physische Realisierung aller Relaxationsdaten.
+- Kein allgemeiner Renewal-Satz, keine A13-Positivität, keine kofinale positive Familie, kein globales Objekt X und keine RH.
+- Keine unabhängige Neuimplementierung der großen Operatorintegrale und keine abgeschlossene externe Gesamtprüfung.
+
+Dokumentierte Reproduktion: [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff/research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/ACCEPTANCE.json), [gate.json](https://github.com/Waschtl904/objekt-x-programm/blob/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff/research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/gate.json), [angle.json](https://github.com/Waschtl904/objekt-x-programm/blob/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff/research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/angle.json), [counterfamily.json](https://github.com/Waschtl904/objekt-x-programm/blob/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff/research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/counterfamily.json), [full_spot_replay.json](https://github.com/Waschtl904/objekt-x-programm/blob/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff/research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/full_spot_replay.json).
