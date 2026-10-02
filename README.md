@@ -26,6 +26,22 @@ Die Riemannsche Hypothese bleibt offen.**
 
 ---
 
+## Kurzüberblick zum veröffentlichten Stand
+
+- Drei positive Kammern reichen bis A11; die größte Schur-Eigenwertgerade
+  für A9→A11 ist in beiden Paritäten eindeutig.
+- Die gerade Richtung ist lokalisiert. Ungerade schließt Y68 den früheren
+  Gegenzeugen aus; der adaptive Test mit 255 Knoten bleibt **UNRESOLVED**.
+- Die nächste offene Registry-Aufgabe ist die gemeinsame direkte
+  2×2-Eigenlinienrechnung, danach die bandweisen Momente der tatsächlichen
+  Maximierer und ein vorwärts gerichteter Renewal-Schritt.
+- PR #187/A13 bleibt ein separater, unintegrierter Forschungsstrang.
+
+Die [Dokumentationsübersicht](00-uebersicht/DOKUMENTATIONSWEGWEISER.md) trennt
+aktuellen Status, lokale Folgepakete und historische Quellen. Branches und
+Archivtags sind im [Bereinigungsnachweis](00-uebersicht/BRANCH_HYGIENE_2026-10-02.md)
+erklärt. Der geschützte Auditanker bleibt erhalten.
+
 ## Aktueller Forschungsstand
 
 Für den festen Horizont ist die C1-Kette bis `a=1` konstruiert:
@@ -158,12 +174,15 @@ festgelegter gemeinsamer Information: 163.16° bei eingeschränkten vier
 Y-Koordinaten, 116.72° mit zusätzlich zentralem L_B und 1.903° beim gesamten
 zentralen Y samt Momentdaten. Der letzte Wert gilt nur für diesen Spezialfall.
 
-Als Nächstes wird die **direkte 2×2-Eigenlinie mit gemeinsamen Abhängigkeiten**
-geprüft: Nennerfreie skalierte Momentmatrix, rationale Wurzelisolation,
+Die nächste offene Registry-Aufgabe ist die **direkte 2×2-Eigenlinie mit gemeinsamen Abhängigkeiten**: Nennerfreie skalierte Momentmatrix, rationale Wurzelisolation,
 Nachweis des maximalen Eigenwertasts und direkter physischer Winkel.
 Zuerst werden die festen kleinen Vergleichsfälle ausgewertet; bei Bedarf
 folgt eine zentrierte oder affine Rechnung. Neue Operatorintegrale,
 Y58-Dualdaten und eine neue L_B-Rechnung sind dafür zunächst nicht vorgesehen.
+
+Ein lokales Folgepaket zur direkten Linie ist bereits vorhanden; seine
+[gesonderte Integrationsgrenze](00-uebersicht/DOKUMENTATIONSWEGWEISER.md#lokale-folgepakete)
+bleibt bis zur eigenen Forschungsintegration bestehen.
 
 Danach folgen bandweise Momente tatsächlicher Maximierer und der vorwärts
 gerichtete Renewal-Test. Allgemeines Renewal, A13-Positivität, kofinale

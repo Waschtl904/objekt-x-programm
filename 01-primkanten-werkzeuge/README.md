@@ -1,3 +1,13 @@
+> [!NOTE]
+> **Dokumentationspflege vom 2. Oktober 2026: historisches Themenregister**
+>
+> Die Tabellen erschließen den damaligen Journalbestand. Ihre Dokumentzahlen,
+> Statusmarken und damaligen „nächsten Schritte“ sind keine aktuelle Gesamtbilanz.
+> Heutiger Einstieg: [CURRENT_STATE](../00-uebersicht/CURRENT_STATE.md) und
+> [NEXT_GATES](../00-uebersicht/NEXT_GATES.md). Die fachliche Arbeitsdefinition
+> steht [hier](../00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md).
+> Weitere Dateien sind im [Verzeichnis](./) erreichbar.
+
 # Primkanten-Algebra und Werkzeuge
 
 NEU-3 – NEU-57. Aufbau der relativen Primkanten-Algebra, Wodzicki-Residuum, Feshbach-Reduktion, Fourier-Hebung mit Mangoldt-Faktor und Nelson-Selbstadjungiertheit.

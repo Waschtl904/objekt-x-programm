@@ -5,11 +5,15 @@ Notation und Begriffe des Objekt-X-Programms. Verbindliche Rechenregeln stehen i
 
 ---
 
+Die ältere BC- und Journalnotation bleibt für ihre Quellen gültig. Aktuelle
+Resultate und Reviewstatus stehen in [CURRENT_STATE](00-uebersicht/CURRENT_STATE.md).
+
 ## Zentrale Objekte
 
 | Symbol | Bedeutung | Quelle |
 |---|---|---|
-| **Objekt X** | $\bigl(A_{2D}^r, [\tilde\omega_2], [L_3], \mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}}, m\xrightarrow{p} pm\bigr)$ — das zentrale zusammengesetzte Operatorobjekt mit fünf Schichten | Ebene XVI |
+| **Objekt X (aktuelle Arbeitsdefinition)** | Gesuchte intrinsische gemeinsame Hilbert-/Gram-/Mediator-Geometrie, die die vollständige normalisierte Weil-Form auf einer geeigneten Testklasse als Gram-Form erzeugt. Noch nicht konstruiert. | [Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) |
+| **Historischer Fünfer-Tupel-Kandidat** | $\bigl(A_{2D}^r, [\tilde\omega_2], [L_3], \mathrm{Wres}^{\mathrm{top}}_{\mathrm{BC}}, m\xrightarrow{p} pm\bigr)$ — damalige Kandidatenarchitektur mit fünf Schichten | [Ebene XVI](00-grundlegung/ebene-XVI-objekt-x.md) |
 | $A_{C^*}$, $A_{\mathbb Q}^{\mathrm{alg}}$ | Bost–Connes-Algebra, C\*-Version bzw. algebraische Version | KONVENTIONEN §1 |
 | $\mathcal H_{\mathrm{rel},N}$ | relativer Primkantenraum $\bigoplus_{p\le N}\bigoplus_m \mathcal H_{m\to pm}$ | NEU-44 |
 | $\mathrm{Wres}_{\mathrm{rel}}$ | kantendiagonale Hebung der Wodzicki-Residuum-Spurform | NEU-44 |

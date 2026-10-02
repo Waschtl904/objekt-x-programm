@@ -2,7 +2,15 @@
 
 Dieser Einstieg dient der Navigation. Der aktuelle Forschungsstand steht in [CURRENT_STATE.md](CURRENT_STATE.md), die nächsten mathematischen Aufgaben in [NEXT_GATES.md](NEXT_GATES.md). Maßgebliche Statusquelle bleibt [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml).
 
-## Abgeschlossener Verwaltungsstand
+## Letzte Branch-Pflege: 2. Oktober 2026
+
+Die [neue Bereinigungscharge](BRANCH_HYGIENE_2026-10-02.md) entfernt 23 vollständig
+integrierte Arbeitsbranches. Erhalten bleiben Main, der offene q11/A13-Branch
+von PR #187 und der geschützte `KEEP_AUDIT`-Anker. Alle 102 Tags bleiben
+unverändert. Neu hinzukommende Arbeitsbranches sind in diesen datierten Zahlen
+nicht enthalten.
+
+## Abgeschlossener Archivierungsstand vom 26. September 2026
 
 Die Branch-Konsolidierung vom 26. September 2026 ist abgeschlossen. Am Abschlussstand blieben zwei Remote-Branches erhalten: `main` und der als `KEEP_AUDIT` bezeichnete Branch `research/x-c1-inherited-resonance-shell-schur-2026-09-18`. Der Tagbestand betrug 102. Diese Angaben beschreiben den datierten Abschlussstand, keine automatisch aktualisierte Bestandsanzeige.
 

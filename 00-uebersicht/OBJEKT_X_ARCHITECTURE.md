@@ -44,10 +44,10 @@ physikalischen Freiheitsgrade oder neuen Mellinbedingungen.
 
 Für einen Defektkandidaten ist die strukturelle Identität
 
-\[
+```math
 q_a(u,v)=\langle T_a u,T_a v\rangle-\langle D_a u,D_a v\rangle,
 \qquad R_a(T_a u)=D_a u.
-\]
+```
 
 Auf seinem abgeschlossenen Bildraum lautet der Positivitätsgate
 \(I-R_a^*R_a\succeq0\), äquivalent \(\|R_a\|\le1\). Ein positiver
@@ -66,9 +66,9 @@ getrennte Beweisaufgaben.
 Das Ziel ist ein kanonischer globaler Readout auf der vollständigen geeigneten
 Testklasse mit der exakt normalisierten Identität
 
-\[
+```math
 Q_W(f,g)=\langle T_X f,T_X g\rangle_{\mathcal K_X}.
-\]
+```
 
 Dazu gehören kompatible, gegebenenfalls unbeschränkte Horizonte und die genaue
 Rückbindung an das Weil-Kriterium. Die Konstruktion darf die gewünschte
@@ -84,30 +84,35 @@ Statustabelle dieser Architekturdatei: dafür gilt
 
 ## Terminaler 191D-Zusammenschluss
 
-Seit `7998887` ist der feste-Horizont-Kern der früher getrennten Transport- und C1-Kontraktionsfronten ein und derselbe endliche Schurtest.
+Dieser Abschnitt erklärt die Reduktion. Ihr aktueller Abschlussstatus steht in
+[CURRENT_STATE](CURRENT_STATE.md); die Formeln sind keine neue offene Aufgabenliste.
 
-Für jede Parität gilt auf (B\le a\le1):
-[
+Der historische Beweisanker `7998887` dokumentiert den gemeinsamen endlichen
+Schurtest der früher getrennten Transport- und C1-Kontraktionsfronten auf dem
+festen Horizont.
+
+Für jede Parität gilt auf $B\le a\le1$:
+```math
 s_{192}(R_a^p)^2\le\frac{943}{945}<1,
-]
+```
 also ist der vollständige unendliche High-Defekttail strikt kontraktiv. Der verbleibende kritische Rest ist
-[
+```math
 S_a^p=I-\alpha-\beta^*(I-K)^{-1}\beta,
-]
+```
 wobei die komplette High-Antwort in der Schurkorrektur erhalten bleibt.
 
 Die physische Moving-191D-Core-Schurform ist positiv-Gram-kongruent dazu:
-[
+```math
 S_{\mathrm{phys}}=G^{1/2}S_a^pG^{1/2},
 \qquad G>0.
-]
+```
 Damit haben beide exakt dieselbe Inertie.
 
 Wegen der bewiesenen Monotonie der intrinsischen Defekt-Singularwerte ist der kanonische feste-Horizont-Gate
-[
+```math
 S_1^{\mathrm{even}}\succeq0,
 \qquad
 S_1^{\mathrm{odd}}\succeq0.
-]
+```
 
-Dieser Zusammenschluss schließt **nicht** automatisch die zusätzlichen Low/Profile-Kopplungen einer physischen Fortsetzung, nicht summierbare Skalierung, Horizonte größer als (1) oder die globale Weil-Testklasse.
+Dieser Zusammenschluss schließt **nicht** automatisch die zusätzlichen Low/Profile-Kopplungen einer physischen Fortsetzung, nicht summierbare Skalierung, Horizonte größer als 1 oder die globale Weil-Testklasse.
