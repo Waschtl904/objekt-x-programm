@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "pole": "dual_A9_p1.json.gz",
+  "original_sha256": "3f66148f8c1441e431b16726f94a997a54081aff24c35471f27a311472c9a684",
+  "replay_sha256": "3f66148f8c1441e431b16726f94a997a54081aff24c35471f27a311472c9a684",
+  "byte_identical": true,
+  "complete_dual_residual_recomputed": true,
+  "complete_signed_correction_recomputed": true,
+  "fixed_point_candidate_reused": true,
+  "operator_producer_sha256": {
+    "run_dual.py": "e2e62996aca86cfa4ca04bb62a3e0baa4bdfc4604a4552be53773171301daa2f",
+    "dual_common.py": "e92edd03ad0e3fd077090578c4b5188e31237130388320290c72770b31453eb5",
+    "piecewise_operator.py": "e5285031cda6f71fcc5aa3bf3814b77aa1cba61769dc41d886e6438d30e65264",
+    "high_common.py": "7a8e05d17532bb1239c1b6b8408b731ca5db7b01a61052dcc9930859b4f6aff3",
+    "gamma_direct.py": "ce564240736226aef768ac963c2934f7635d8732df73a6d83dd63b6f701f9687",
+    "full_shift_resolvent.py": "bfcf13ff582b55d63bd8a783924d18c09fb286dd39c2ee1b04c0171b800ec091",
+    "setup_shift_images.py": "bbdc73a81b316859039780f42dde3f7f7ea0952beb3a7da65f4ec0cfb6d8d093",
+    "finite_residual_reference.py": "8b6b34a0a864d64be775716d3d287aea2b800e8abc29e34fc6012c375f28198e"
+  },
+  "independent_large_integral_implementation": false,
+  "timing": "Executed before package sealing; unchanged producer bytes checked"
+}

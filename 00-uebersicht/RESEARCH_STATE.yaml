@@ -177,6 +177,18 @@
       "title": "Vollständige Shiftbild-Korrektur für Y58 und Y68",
       "mathematical_status": "OPEN",
       "scope": "Verwende vollständige nullfortgesetzte Shiftbilder und deren gesamten hohen Anteil, gegebenenfalls diagonal vorconditioniert durch (D_H+q0-z)^-1, bei festem Filter und gleicher Präzision. Alle unendlichen Operatorreste sind zu bezahlen. Erste Abnahme: Y58_max<Y58_rotated_min oder Y68_min>Y68_rotated_max. Erst danach gemeinsamer Richtungstest mit physischem Gesamtwinkelkorridor <10 Grad. Falls Skalarfehler zu breit bleiben, prüfe primal-duale Residuenprodukte. Eine bloße Erweiterung des Legendre-Fensters erfüllt den Gate nicht."
+    },
+    {
+      "id": "CANONICAL-FULL-SHIFT-RESOLVENT-UNRESOLVED",
+      "title": "CANONICAL FULL SHIFT RESOLVENT UNRESOLVED",
+      "mathematical_status": "OPEN",
+      "scope": "A9->A11 ungerade: vollständige Shiftbild-Korrekturen bei festem Filter und gleicher Präzision; direkte Y58/Y68-Abnahme UNRESOLVED, genaue primal-duale Restbudgets isoliert. Übernahme dieses abgeschlossenen Pakets nach Integration."
+    },
+    {
+      "id": "CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION",
+      "title": "CANONICAL PRIMAL DUAL Y68 EXCLUSION",
+      "mathematical_status": "OPEN",
+      "scope": "A9->A11 ungerade: acht adjungierte Full-Shift-Resolventen liefern Y68 in [0.0410706614,0.0725344674] und schließen den alten gedrehten Gegenzeugen strikt aus. Gemeinsamer Winkeltest und begrenzte neue Gegenmodellsuche bleiben UNRESOLVED. Übernahme dieses abgeschlossenen Pakets nach Integration."
     }
   ],
   "results": [
@@ -2191,7 +2203,18 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [],
+  "pending_packages": [
+    {
+      "id": "CANONICAL-FULL-SHIFT-RESOLVENT-UNRESOLVED",
+      "meta_path": "research/x-c1/canonical-full-shift-primal-dual-2026-10-02/01-full-shift/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION",
+      "meta_path": "research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    }
+  ],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",
