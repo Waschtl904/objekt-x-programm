@@ -1,0 +1,16 @@
+{
+  "gate": "CANONICAL-JOINT-ODD-ANGLE-AFTER-Y68",
+  "main": "65e7614683b5cf59db93d8a687d815cbff677612",
+  "max_tree_nodes": 255,
+  "max_depth": 16,
+  "max_tree_evaluations": 1017,
+  "terminal_diagnostic_boxes": 8,
+  "variables": ["Y57", "Y58", "Y67", "Y68"],
+  "strict_common_total_width_degrees": 10,
+  "split_score": ["excluded_children", "within_target_children", "negative_max_live_width", "negative_mean_live_width", "relative_parent_side_width", "negative_variable_index"],
+  "leaf_priority": ["largest_angle_bound", "largest_relative_volume", "lexicographic_id"],
+  "shared_reference": "unchanged midpoint of central_N second column",
+  "all_nuisance_uncertainties_retained": true,
+  "new_operator_integrals": false,
+  "new_Y58_dual_data": false
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "certificate_sha256": "92493b61c67698f78d271c0c178dd8be8a63eaa111fa62ca197e3747cad17cba",
+  "exact_cover_checked": true,
+  "all_split_scores_checked": true,
+  "strict_ten_degree_acceptance_checked": true,
+  "tamper_controls_passed": true,
+  "unique_numerical_evaluations_replayed": 1121,
+  "expected_evaluations": 1121,
+  "all_numeric_receipts_identical": true,
+  "independent_search_tree_audit": true,
+  "independent_large_operator_implementation": false
+}
