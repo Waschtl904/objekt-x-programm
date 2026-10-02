@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "exact_stationarity_and_rayleigh_identities": 160,
+  "scaled_pencil_cases": 40,
+  "maximal_minimal_and_degenerate_controls": 3,
+  "affine_point_and_rounding_controls": 486,
+  "centered_quadratic_controls": 16,
+  "controls_are_not_a_proof_of_uniform_family_localization": true
+}

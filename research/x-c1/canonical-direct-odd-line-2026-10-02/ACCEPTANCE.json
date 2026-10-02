@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "gate": "DEPENDENCY-PRESERVING 2x2 ODD-LINE GATE",
+  "outcome": "UNRESOLVED",
+  "integration_status": "LOCAL_UNMERGED",
+  "research_status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN",
+  "archive": "Direkte-gemeinsame-Odd-Eigenlinie-2026-10-02.zip",
+  "archive_sha256": "b7a37a9d6cb8ef49233b77af5c536759cf208ced362f7cdb608f97c3f5847019",
+  "archive_bytes": 4305081,
+  "archive_files": 59,
+  "manifest_bindings": 58,
+  "baseline_files_unchanged": 41,
+  "engines": 3,
+  "comparison_cases_per_engine": 19,
+  "full_case_replays": 57,
+  "byte_identical_receipts": 5,
+  "audit": {
+    "status": "PASS",
+    "comparison_case_counts": {
+      "comparison.json": 19,
+      "centered_comparison.json": 19,
+      "affine_comparison.json": 19
+    },
+    "uniform_root_status": {
+      "comparison.json": "UNRESOLVED",
+      "centered_comparison.json": "UNRESOLVED",
+      "affine_comparison.json": "UNRESOLVED"
+    },
+    "independent_rational_maximal_root_certificates": 19,
+    "independent_newton_steps": 124,
+    "independent_Arb_768bit_angle_bounds": 11,
+    "no_uniform_angle_promotion": true
+  },
+  "central_four_coordinate_total_angle_upper_outward": "3.405363",
+  "quarter_four_coordinate_total_angle_upper_outward": "3.765366",
+  "conditional_claims_only": true,
+  "root_and_eight_terminal_boxes": "UNRESOLVED",
+  "uniform_localization": false,
+  "new_operator_integrals": false,
+  "new_Y58_or_LB_inputs": false,
+  "new_adaptive_tree": false,
+  "new_feasible_counterexample": false,
+  "initial_replay_packaging_fix": "A missing metadata flag, platform line endings and nondeterministic JSON key order were normalized before the successful complete replay. Parsed receipts and all mathematical values matched before normalization.",
+  "full_replay_receipt": {
+    "status": "PASS",
+    "manifest_sha256": "9055c286e5b63d723c3063ee89a3f29b115f2bb74aec43c13699f2f21fd2a82a",
+    "receipts": [
+      {
+        "file": "comparison.json",
+        "sha256": "3677bcaa1a0f974487c8b9df9c75054fdb31dda13dc9e25f0a8eacc9e368ce97",
+        "byte_identical": true
+      },
+      {
+        "file": "centered_comparison.json",
+        "sha256": "5431eb578094560d5a0f683e739fd6cae8519b08a5b115f880231b615fa0ba57",
+        "byte_identical": true
+      },
+      {
+        "file": "affine_comparison.json",
+        "sha256": "944426b2b37944e094a7b9999152d114fe2384f80b055d73b736085b5120734e",
+        "byte_identical": true
+      },
+      {
+        "file": "controls.json",
+        "sha256": "6c28227c97852cd842fa3729efc37e76276eee1ca33589df361527cea24bc176",
+        "byte_identical": true
+      },
+      {
+        "file": "audit.json",
+        "sha256": "c828d424ed1ead1d5ff2a7d65b86400f38c392c71f52a6cdbbf7837bd54d5c02",
+        "byte_identical": true
+      }
+    ],
+    "full_case_replays": 57,
+    "new_operator_integrals": false,
+    "uniform_gate": "UNRESOLVED",
+    "baseline_files_unchanged": 41
+  },
+  "does_not_claim": [
+    "Failure of all dependency-preserving methods",
+    "Structural openness of the strengthened family",
+    "General renewal",
+    "A13 positivity",
+    "Cofinal positivity",
+    "Global object X",
+    "RH"
+  ]
+}

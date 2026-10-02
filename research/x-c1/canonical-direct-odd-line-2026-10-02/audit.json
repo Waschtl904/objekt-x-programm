@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "comparison_case_counts": {
+    "comparison.json": 19,
+    "centered_comparison.json": 19,
+    "affine_comparison.json": 19
+  },
+  "uniform_root_status": {
+    "comparison.json": "UNRESOLVED",
+    "centered_comparison.json": "UNRESOLVED",
+    "affine_comparison.json": "UNRESOLVED"
+  },
+  "independent_rational_maximal_root_certificates": 19,
+  "independent_newton_steps": 124,
+  "independent_Arb_768bit_angle_bounds": 11,
+  "no_uniform_angle_promotion": true
+}
