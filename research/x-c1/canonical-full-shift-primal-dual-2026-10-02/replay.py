@@ -1,6 +1,6 @@
 """Replay immutable archive contents against their historical source commit."""
 from pathlib import Path,PurePosixPath
-import argparse,hashlib,json,os,subprocess,sys,zipfile
+import argparse,hashlib,json,os,re,subprocess,sys,zipfile
 HERE=Path(__file__).resolve().parent;REPO=HERE.parents[2]
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 def checked_path(root,name):
@@ -16,7 +16,7 @@ def manifest(root):
  assert actual==set(rows)|{'SHA256SUMS'},(actual-set(rows),set(rows)-actual);return rows
 def extract_package(pkg,out):
  archive=checked_path(HERE,pkg['archive']);assert sha(archive.read_bytes())==pkg['archive_sha256']
- root=out/pkg['original_folder'];assert not root.exists()
+ root=checked_path(out,pkg['original_folder']);assert not root.exists()
  with zipfile.ZipFile(archive) as z:
   prefix=pkg['original_folder']+'/'
   expected={prefix+n for n in pkg['original_sha256']}
@@ -34,22 +34,25 @@ def main():
  p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);p.add_argument('--full',action='store_true');a=p.parse_args()
  out=a.output.resolve();assert not out.is_relative_to(REPO.resolve()) and not out.exists()
  family=manifest(HERE);data=json.loads((HERE/'SOURCE_BINDINGS.json').read_bytes());out.mkdir(parents=True)
- git=['git','-c','safe.directory='+REPO.as_posix(),'-c','core.longpaths=true','-C',str(REPO)]
- head=subprocess.check_output(git+['rev-parse','HEAD']).decode().strip();pin=data['publication_base'];source=out/'source'
- subprocess.run(['git','-c','safe.directory='+REPO.as_posix(),'clone','--shared','--no-checkout',str(REPO),str(source)],check=True,capture_output=True)
- sg=['git','-c','safe.directory='+source.as_posix(),'-c','core.longpaths=true','-c','core.autocrlf=false','-C',str(source)]
- subprocess.run(sg+['config','core.longpaths','true'],check=True,capture_output=True)
- subprocess.run(sg+['checkout','--detach',pin],check=True,capture_output=True)
+ head=subprocess.check_output(['git','-c','safe.directory='+REPO.as_posix(),'-C',str(REPO),'rev-parse','HEAD'],shell=False).decode().strip()
+ pin=data['publication_base'];assert re.fullmatch('[0-9a-f]{40}',pin);source=out/'source'
+ # Literal programs and separate arguments; paths never become shell code.
+ subprocess.run(['git','-c','safe.directory='+REPO.as_posix(),'clone','--shared','--no-checkout',str(REPO),str(source)],shell=False,check=True,capture_output=True)
+ subprocess.run(['git','-c','safe.directory='+source.as_posix(),'-C',str(source),'config','core.longpaths','true'],shell=False,check=True,capture_output=True)
+ subprocess.run(['git','-c','safe.directory='+source.as_posix(),'-c','core.longpaths=true','-c','core.autocrlf=false','-C',str(source),'checkout','--detach',pin],shell=False,check=True,capture_output=True)
  for name,h in data['source_sha256'].items():
   assert sha(checked_path(source,name).read_bytes())==h,name
   assert sha(checked_path(REPO,name).read_bytes())==h,name
  steps=[]
  def run(label,args):
+  script=Path(args[0]).resolve();assert script in allowed_scripts
   with (out/(label+'.log')).open('wb') as log:
-   proc=subprocess.run([sys.executable,'-B',*map(str,args)],env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1'),stdout=log,stderr=subprocess.STDOUT)
+   # executable pins the already running interpreter; argv[0] is just its label.
+   proc=subprocess.run(['python','-B',str(script),*map(str,args[1:])],executable=sys.executable,shell=False,env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1'),stdout=log,stderr=subprocess.STDOUT)
   assert proc.returncode==0,label+' failed; see '+str(out/(label+'.log'))
   steps.append(label);print(label+': PASS',flush=True)
  roots=[extract_package(pkg,out) for pkg in data['packages']]
+ allowed_scripts={(root/'replay.py').resolve() for root in roots}|{HERE/'check_replay.py'}
  extra=['--full'] if a.full else []
  run('full_shift',[roots[0]/'replay.py','--repo',source,'--work-dir',out/'full-shift',*extra])
  reuse=['--expanded-primal',out/'full-shift'] if a.full else []
