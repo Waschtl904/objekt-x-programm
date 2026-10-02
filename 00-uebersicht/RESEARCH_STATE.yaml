@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "render_version": 6,
-  "state_date": "2026-10-01",
+  "state_date": "2026-10-02",
   "repository": "Waschtl904/objekt-x-programm",
   "published_baseline": {
     "branch": "main",
-    "sha": "dd490671d2a2c36933cb397a71abc0302b759735",
+    "sha": "872f1282c18476e1ea5a19cb67515e098432bf90",
     "integration_status": "MERGED",
-    "meaning": "Zwei integrierte UNRESOLVED-Pakete nach PR #197, Beweishead b91589923f5738148c9c9702155fb3dc02f7b1a1; Main-Replay 36902746547 mit drei bytegleichen Quittungen und kleinen Arb-Kontrollen. Die reguläre CI wiederholt keine großen Operatorintegrale. Zusätzlich waren beide vollständigen lokalen Paket-Replays bei der Integration erfolgreich; dies ist keine unabhängige große Operatorimplementierung. Globale Verifikationsaussagen unverändert. Frühere Provenienz: Integrierte vier ungerade Projektor-/Transportpakete nach PR #195, Beweishead ed94c19f824c947f63e4867fb3c202f71e36e631; Abschluss STRUCTURAL OPEN der angegebenen endlichen Relaxation. Main-Replay 36816858969 erfolgreich, vier Ergebnisquittungen im CI-Artefakt bytegleich geprüft. Globale Verifikationsaussagen unverändert. Frühere Provenienz: Integrierte drei Pakete zu gemeinsamen kanonischen Maximierern nach PR #193, Beweishead 2172de38d0def2c4b42c255e6c1290a720e3e94e: Projektor-/Spektralmomente, generalisierter Diskriminant und Schurdefekt-Korollar. Main-Replay 36738813027 erfolgreich, alle drei Ergebnisquittungen im CI-Artefakt bytegleich geprüft. Ursprüngliche Integrale und Operatorlösungen bleiben gebundene Eingaben; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte vierblöckige kanonische Schurkopplungsfamilie nach PR #191, Beweishead b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d. Main-Zertifikatreplay 36671245348 erfolgreich mit geprüftem Artefakt; abgeschlossene große Arb-Läufe bleiben gebundene Eingaben. Registry-CI separat gebunden; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte siebenblöckige Spektral-/Renewal-Familie nach PR #189, Beweishead c19c655d79f9be59b7c18fb0042783f5e4a0ab49. Main-Replay 36525210364 erfolgreich; Registry-CI separat gebunden. Globaler Verifikationssnapshot unverändert. Frühere Provenienz: Gepinnter integrierter Forschungsstand nach PR #183: zusammenhängende O10–A11-Kette, Beweis-/Paketcommit 0b7c707c4c95f56bd8079ea44019a2d3f4cfce60. Erfolgreiche Main-Reproduktion 36378212734, Versuch 1; Registry-CI separat gebunden. Der globale mathematische Verifikationssnapshot bleibt unverändert. Frühere Integrationsprovenienz: Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
+    "meaning": "Full-Shift- und Primal-Dual-Y68-Pakete integriert durch PR #199, Beweishead 219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff. Main-Replay 37001095949 prüft beide unveränderten Archive, 109 Originaldateien, kleine unabhängige Kontrollen, rationale Fehlerrechnung sowie bytegleiche Y68-, Winkel- und Familienquittungen. Je ein vollständiger primaler und dualer Polreplay ist dokumentiert; alle großen Polrechnungen wurden erzeugt, aber nicht nochmals vollständig wiederholt oder unabhängig neu implementiert. Y68 schließt den alten Gegenzeugen aus; der uniforme ungerade Winkel bleibt offen. Globaler Verifikationssnapshot und externer Reviewstatus unverändert. Frühere Provenienz: Zwei integrierte UNRESOLVED-Pakete nach PR #197, Beweishead b91589923f5738148c9c9702155fb3dc02f7b1a1; Main-Replay 36902746547 mit drei bytegleichen Quittungen und kleinen Arb-Kontrollen. Die reguläre CI wiederholt keine großen Operatorintegrale. Zusätzlich waren beide vollständigen lokalen Paket-Replays bei der Integration erfolgreich; dies ist keine unabhängige große Operatorimplementierung. Globale Verifikationsaussagen unverändert. Frühere Provenienz: Integrierte vier ungerade Projektor-/Transportpakete nach PR #195, Beweishead ed94c19f824c947f63e4867fb3c202f71e36e631; Abschluss STRUCTURAL OPEN der angegebenen endlichen Relaxation. Main-Replay 36816858969 erfolgreich, vier Ergebnisquittungen im CI-Artefakt bytegleich geprüft. Globale Verifikationsaussagen unverändert. Frühere Provenienz: Integrierte drei Pakete zu gemeinsamen kanonischen Maximierern nach PR #193, Beweishead 2172de38d0def2c4b42c255e6c1290a720e3e94e: Projektor-/Spektralmomente, generalisierter Diskriminant und Schurdefekt-Korollar. Main-Replay 36738813027 erfolgreich, alle drei Ergebnisquittungen im CI-Artefakt bytegleich geprüft. Ursprüngliche Integrale und Operatorlösungen bleiben gebundene Eingaben; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte vierblöckige kanonische Schurkopplungsfamilie nach PR #191, Beweishead b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d. Main-Zertifikatreplay 36671245348 erfolgreich mit geprüftem Artefakt; abgeschlossene große Arb-Läufe bleiben gebundene Eingaben. Registry-CI separat gebunden; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte siebenblöckige Spektral-/Renewal-Familie nach PR #189, Beweishead c19c655d79f9be59b7c18fb0042783f5e4a0ab49. Main-Replay 36525210364 erfolgreich; Registry-CI separat gebunden. Globaler Verifikationssnapshot unverändert. Frühere Provenienz: Gepinnter integrierter Forschungsstand nach PR #183: zusammenhängende O10–A11-Kette, Beweis-/Paketcommit 0b7c707c4c95f56bd8079ea44019a2d3f4cfce60. Erfolgreiche Main-Reproduktion 36378212734, Versuch 1; Registry-CI separat gebunden. Der globale mathematische Verifikationssnapshot bleibt unverändert. Frühere Integrationsprovenienz: Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
   },
   "verified_research_snapshot": {
     "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
@@ -45,9 +45,9 @@
       "title": "Unbeschränkte Horizonterweiterung und kompatibler Transport",
       "mathematical_status": "OPEN",
       "strategic_status": "ACTIVE_FRONT",
-      "target_scope": "Drei positive Kammern bis A11 und kanonischer Spektraltransport sind vorhanden. A9->A11 hat einen positiven tatsächlichen Schur-Extremalgap in beiden Paritäten; gerade ist die physische inverse Antwortrichtung lokalisiert. Ungerade bleibt die Lokalisierung offen. Direkte Kreuzresiduen und endliche hohe Antwortkorrekturen enden UNRESOLVED; die Diagnose am ersten Pol identifiziert den vollen Shift-Tail als dominierenden Rest. Vollständige Shiftbild-Korrekturen für Y58/Y68 sind der nächste Gate. Bandmomente tatsächlicher Maximierer, allgemeines Renewal und kofinale positive Kompatibilität bleiben offen.",
+      "target_scope": "Drei positive Kammern bis A11 und kanonischer Spektraltransport sind vorhanden. A9->A11 hat einen positiven tatsächlichen Schur-Extremalgap in beiden Paritäten; gerade ist die physische inverse Antwortrichtung lokalisiert. Die primal-duale Y68-Schranke schließt den alten gedrehten ungeraden Gegenzeugen aus. Ein uniformer ungerader Winkelkorridor unter 10 Grad bleibt nach gemeinsamem Ausgangsbox-Test und begrenzter Familiensuche offen; der alte STRUCTURAL-OPEN-Nachweis trägt auf die verstärkte Relaxation nicht über. Bandmomente tatsächlicher Maximierer, allgemeines Renewal und kofinale positive Kompatibilität bleiben offen.",
       "obligation_ids": [
-        "CANONICAL-FULL-SHIFT-IMAGE-CORRECTED-RESOLVENT",
+        "CANONICAL-JOINT-ODD-ANGLE-AFTER-Y68",
         "CANONICAL-CROSS-PROJECTOR-RESIDUAL-GATE",
         "CANONICAL-SCHUR-MAXIMIZER-ISOLATION",
         "CANONICAL-MAXIMIZER-BAND-MOMENTS",
@@ -85,11 +85,13 @@
         "CANONICAL-TRANSPORT-PROJECTOR-OBSTRUCTION",
         "CANONICAL-ODD-BOX-STRUCTURAL-OPEN",
         "CANONICAL-CROSS-PROJECTOR-RESIDUAL-UNRESOLVED",
-        "CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED"
+        "CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED",
+        "CANONICAL-FULL-SHIFT-RESOLVENT-UNRESOLVED",
+        "CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION"
       ],
-      "candidate": "CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED",
+      "candidate": "CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION",
       "accepted_progress": [
-        "Zertifiziere vollständige Shiftbild-Korrekturen für Y58/Y68. Schließe zunächst den gedrehten Gegenzeugen durch eine strikte skalare Trennung aus; erst danach prüfe einen tatsächlichen ungeraden physischen Winkelkorridor unter 10 Grad Gesamtbreite.",
+        "Zertifiziere mit allen bisherigen Kreuzprojektordaten und dem neuen Y68-Intervall einen gemeinsamen ungeraden physischen Gesamtwinkelkorridor unter 10 Grad, oder konstruiere ein neues zulässiges Gegenpaar innerhalb genau dieser verstärkten Familie. Y58-Dualdaten nur bei konkret belegtem Bedarf.",
         "Zertifiziere anschließend bandweise Masse-, Energie- und inverse Energiemomente tatsächlicher Maximierer; unterscheide inverse Antwort und Schurverschiebung.",
         "Formuliere aus A8->A9 und A9->A11 einen unabhängigen vorwärts gerichteten Renewal-Kandidaten. Halte Aussage, Konstanten und Abnahme vor einem zusätzlichen A11->A13-Test fest. Allgemeines Renewal und eine kofinale positive Familie bleiben offen."
       ],
@@ -99,8 +101,9 @@
         "Den festen Horizont 1 lediglich numerisch vergrößern ohne neues Kompatibilitätsgesetz.",
         "Neue Terminalabschlüsse ohne Intertwining untereinander.",
         "Mikroskopische Breitenfortsetzungen ohne kofinale Skalierungsstruktur.",
-        "Weitere Bisektion derselben endlichen Momentrelaxation ohne neue Kreuzprojektorinformation: zwei exakt zulässige, nahezu rechtwinklige Punktzeugen bleiben erhalten.",
-        "Bloß höhere Präzision, geänderter Filter oder vergrößertes Legendre-Korrekturfenster ohne zertifizierte vollständige Shiftantwort; verbesserte Vektorfehler ohne strikte Y58-/Y68-Trennung."
+        "Den ausgeschlossenen alten gedrehten Gegenzeugen als weiterhin zulässig für die neue Y68-Relaxation behandeln.",
+        "Die triviale 180-Grad-Intervallhülle als tatsächlichen Winkel oder wenige nahe zulässige Stichproben als uniformen Winkelbeweis ausgeben.",
+        "Residualschwellen ohne die gerichtete primal-duale Korrektur als sichere GREEN-Schwelle verwenden."
       ]
     },
     "global_continuation": {
@@ -158,7 +161,7 @@
       "id": "CANONICAL-SCHUR-MAXIMIZER-ISOLATION",
       "title": "Ungerade physische Maximiererrichtung lokalisieren",
       "mathematical_status": "OPEN",
-      "scope": "A9->A11: positiver tatsächlicher generalisierter Extremalgap und eindeutige größte Eigenwertgerade in beiden Paritäten; gerade inverse Antwortrichtung lokalisiert. Ungerade Lokalisierung bleibt offen. Die bisher zertifizierte endliche Momentfamilie samt voller gemeinsamer Masse-/Energietransportordnung enthält nahezu rechtwinklige Maximierer und reicht für einen engen gemeinsamen Winkelkorridor nicht aus."
+      "scope": "A9->A11: positiver tatsächlicher Extremalgap und eindeutige größte Eigenwertgerade in beiden Paritäten; gerade inverse Antwortrichtung lokalisiert. Die neue primal-duale Y68-Schranke schließt den alten gedrehten Gegenzeugen aus. Der alte Nachweis nahezu rechtwinkliger Alternativen gilt nur für seine schwächere Relaxation. Für die verschärfte gemeinsame Familie bleibt ein ungerader physischer Gesamtwinkelkorridor unter 10 Grad offen; Ausgangsbox-Auswertung und sieben geprüfte Stichproben entscheiden ihn nicht."
     },
     {
       "id": "CANONICAL-MAXIMIZER-BAND-MOMENTS",
@@ -170,25 +173,13 @@
       "id": "CANONICAL-CROSS-PROJECTOR-RESIDUAL-GATE",
       "title": "Direkte gemeinsame Kreuzprojektor- und Residualdaten zertifizieren",
       "mathematical_status": "OPEN",
-      "scope": "Die ersten direkten Kreuzresiduen und die endliche hohe Antwortkorrektur sind abgeschlossen mit UNRESOLVED. Y58/Y68 bleiben für Gegenzeugenausschluss und ungerade Richtungslokalisierung zu breit. Fortsetzung durch vollständige Shiftbilder; die Lokalisierungsobligation bleibt offen."
+      "scope": "Der direkte skalare Ausschluss des alten gedrehten Gegenzeugen ist durch Y68 erreicht. Vollständige gemeinsame Kreuzprojektorkorrelationen für den uniformen Winkeltest weiter auswerten; der breite Ausgangsbox-Test beweist keine strukturelle Unmöglichkeit. Neue duale Y58-Daten nur bei konkret nachgewiesenem Bedarf; bislang nicht gerechnet."
     },
     {
-      "id": "CANONICAL-FULL-SHIFT-IMAGE-CORRECTED-RESOLVENT",
-      "title": "Vollständige Shiftbild-Korrektur für Y58 und Y68",
+      "id": "CANONICAL-JOINT-ODD-ANGLE-AFTER-Y68",
+      "title": "Gemeinsamen ungeraden Winkel nach Y68-Trennung zertifizieren",
       "mathematical_status": "OPEN",
-      "scope": "Verwende vollständige nullfortgesetzte Shiftbilder und deren gesamten hohen Anteil, gegebenenfalls diagonal vorconditioniert durch (D_H+q0-z)^-1, bei festem Filter und gleicher Präzision. Alle unendlichen Operatorreste sind zu bezahlen. Erste Abnahme: Y58_max<Y58_rotated_min oder Y68_min>Y68_rotated_max. Erst danach gemeinsamer Richtungstest mit physischem Gesamtwinkelkorridor <10 Grad. Falls Skalarfehler zu breit bleiben, prüfe primal-duale Residuenprodukte. Eine bloße Erweiterung des Legendre-Fensters erfüllt den Gate nicht."
-    },
-    {
-      "id": "CANONICAL-FULL-SHIFT-RESOLVENT-UNRESOLVED",
-      "title": "CANONICAL FULL SHIFT RESOLVENT UNRESOLVED",
-      "mathematical_status": "OPEN",
-      "scope": "A9->A11 ungerade: vollständige Shiftbild-Korrekturen bei festem Filter und gleicher Präzision; direkte Y58/Y68-Abnahme UNRESOLVED, genaue primal-duale Restbudgets isoliert. Übernahme dieses abgeschlossenen Pakets nach Integration."
-    },
-    {
-      "id": "CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION",
-      "title": "CANONICAL PRIMAL DUAL Y68 EXCLUSION",
-      "mathematical_status": "OPEN",
-      "scope": "A9->A11 ungerade: acht adjungierte Full-Shift-Resolventen liefern Y68 in [0.0410706614,0.0725344674] und schließen den alten gedrehten Gegenzeugen strikt aus. Gemeinsamer Winkeltest und begrenzte neue Gegenmodellsuche bleiben UNRESOLVED. Übernahme dieses abgeschlossenen Pakets nach Integration."
+      "scope": "Alle vorhandenen Stage-A-Einträge und die neue Y68-Korrelation gemeinsam nutzen. Ziel: rigoroser physischer Gesamtwinkelkorridor <10 Grad oder ein neues vollständig geprüftes Gegenpaar mit >10 Grad Trennung innerhalb der verschärften endlichen Familie. Die bisherige Auswertung der Ausgangsbox und sieben Cayley-Stichproben sind UNRESOLVED. Eine gezieltere gemeinsame Auswertung bzw. Unterteilung ist der nächste Test; Y58-Dualdaten nur bei konkretem zusätzlichem Bedarf."
     }
   ],
   "results": [
@@ -2090,6 +2081,118 @@
         "Allgemeiner Renewal-Satz, A13-Positivität, kofinale positive Familie, globales Objekt X oder RH.",
         "Unabhängige Neuimplementierung der großen Operatorintegrale oder abgeschlossene externe analytische Gesamtprüfung."
       ]
+    },
+    {
+      "id": "CANONICAL-FULL-SHIFT-RESOLVENT-UNRESOLVED",
+      "title": "Vollständige Shiftbild-Resolventen und exakte primal-duale Restbudgets",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff",
+          "path": "research/x-c1/canonical-full-shift-primal-dual-2026-10-02/01-full-shift/ACCEPTANCE.json",
+          "sha256": "c7fe8fec575f0e36f7e2df92478213b0c70c27da30907b6e1000b78449276b0e"
+        },
+        {
+          "commit": "219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff",
+          "path": "research/x-c1/canonical-full-shift-primal-dual-2026-10-02/01-full-shift/aggregate_targets.json",
+          "sha256": "8c9849c0855889bf4f589add1ef35d07811ce1d3cf62b845b4bf9532b383c00f"
+        },
+        {
+          "commit": "219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff",
+          "path": "research/x-c1/canonical-full-shift-primal-dual-2026-10-02/01-full-shift/primal_dual_budget.json",
+          "sha256": "c171f490f1f55aa09b1745599a1f4debf1d9144dfac39045d799fb93637c3b96"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "A9->A11 ungerade: vollständige Shiftbild-Korrekturen bei festem Filter und gleicher Präzision; direkte Y58/Y68-Abnahme UNRESOLVED, genaue primal-duale Restbudgets isoliert.",
+      "claim": [
+        "Vollständige nullfortgesetzte Shiftbilder behalten den gesamten hohen Anteil und alle Sprunglogarithmen. Vierpolige Aggregate für A9/5, A9/6 und A11/8 werden bei unverändertem Filter und unveränderter Präzision zertifiziert; zusätzliche begrenzte Varianten werden getrennt ausgewiesen.",
+        "Die direkte Y58/Y68-Abnahme bleibt UNRESOLVED. Der Block isoliert die Restbudgets für den anschließenden primal-dualen Test; alle 14 großen Polrechnungen wurden erzeugt und ein vollständiger primaler Pol bytegleich wiederholt."
+      ],
+      "depends_on": [
+        "CANONICAL-CROSS-PROJECTOR-RESIDUAL-UNRESOLVED",
+        "CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED",
+        "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff",
+      "canonical_proof": "research/x-c1/canonical-full-shift-primal-dual-2026-10-02/01-full-shift/PROOF.md",
+      "proof_sha256": "4578942652894991c2a0bfbd8d4ea27554f914291301f01dec103c4eabce52cd",
+      "negative_claim_boundary": "UNRESOLVED bezeichnet die Schärfe dieser direkten Full-Shift-Auswertung; kein No-Go für die Architektur. Die nachfolgende primal-duale Y68-Abnahme ist ein eigenes Paket.",
+      "does_not_claim": [
+        "Kein uniformer ungerader physischer Winkelkorridor unter 10 Grad und kein STRUCTURAL-OPEN-Nachweis für die durch Y68 verschärfte Relaxation.",
+        "Keine neue duale Y58-Familie, keine bandweisen Momente tatsächlicher Maximierer und keine vollständige physische Realisierung aller Relaxationsdaten.",
+        "Kein allgemeiner Renewal-Satz, keine A13-Positivität, keine kofinale positive Familie, kein globales Objekt X und keine RH.",
+        "Keine unabhängige Neuimplementierung der großen Operatorintegrale und keine abgeschlossene externe Gesamtprüfung."
+      ]
+    },
+    {
+      "id": "CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION",
+      "title": "Primal-duale Y68-Trennung: alter Gegenzeuge ausgeschlossen, Winkel offen",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff",
+          "path": "research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/ACCEPTANCE.json",
+          "sha256": "3b82c6ef13436c1fbaacc2d222f1718ac7a56f1d37fe7e254637e57f30fc65fa"
+        },
+        {
+          "commit": "219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff",
+          "path": "research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/gate.json",
+          "sha256": "cac1358ae965cf884d319f457e512b56950e05440e37d561b7ae1afac05405dd"
+        },
+        {
+          "commit": "219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff",
+          "path": "research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/angle.json",
+          "sha256": "d904671f903c63488f5d1de67b4baa22b24212e0033c13a29dc1aece41eae9eb"
+        },
+        {
+          "commit": "219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff",
+          "path": "research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/counterfamily.json",
+          "sha256": "2d6cc959d9b21c4c0c046714f738e729c823d1d660fa443c052ffabc6ce1cdfb"
+        },
+        {
+          "commit": "219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff",
+          "path": "research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/full_spot_replay.json",
+          "sha256": "314c57c650044d9b290b2b273d21656c7433049576a701e77dcc8de741497d17"
+        }
+      ],
+      "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+      "scope": "A9->A11 ungerade: acht adjungierte Full-Shift-Resolventen liefern Y68 in [0.0410706614,0.0725344674] und schließen den alten gedrehten Gegenzeugen strikt aus. Gemeinsamer Winkeltest und begrenzte neue Gegenmodellsuche bleiben UNRESOLVED.",
+      "claim": [
+        "Acht adjungierte Resolventenkandidaten zu den festen Full-Shift-Aggregaten a6 und b8 liefern L_A+L_B in [-0.0130180923,0.0130174044] und eine strikt positive signierte Gate-Reserve größer als 0.0069620524. Produktreste, gerichtete Korrekturen, Filter-, Quellen-, Träger-, bilineare und Energiefehler werden gemeinsam bezahlt.",
+        "Y68 liegt in [0.0410706614,0.0725344674]. Der bisherige gedrehte Gegenzeuge ist strikt ausgeschlossen. Residualschwellen allein sind ohne Kontrolle des signierten Korrekturterms kein hinreichendes GREEN-Kriterium.",
+        "Die gemeinsame Ausgangsbox mit allen bisherigen Stage-A-Einträgen und dem neuen Y68-Intervall liefert nur eine triviale obere Gesamtwinkelhülle von 180 Grad. Das ist kein nachgewiesener tatsächlicher Winkel. Es wurde keine neue Boxunterteilung gerechnet; der einheitliche Korridor unter 10 Grad bleibt UNRESOLVED.",
+        "Sieben feste Parameterwerte der bisherigen gemeinsamen Familie werden geprüft. Fünf erfüllen die endlichen gemeinsamen Bedingungen; zwei scheitern an Y68. Die vier nichtzentralen zulässigen Stichproben liegen jeweils weniger als 0.822 Grad von der zentralen Referenz entfernt. Daraus folgt kein uniformer Winkelbereich und kein neues Gegenpaar mit mehr als 10 Grad Abstand: BOUNDED_SEARCH_UNRESOLVED.",
+        "Alle acht dualen Polrechnungen wurden vollständig erzeugt; ein kompletter dualer Residuen- und Korrekturreplay ist bytegleich. Der alte STRUCTURAL-OPEN-Nachweis über sein Gegenpaar trägt nicht auf die neue Y68-Relaxation über. Neue duale Y58-Daten wurden nicht berechnet."
+      ],
+      "depends_on": [
+        "CANONICAL-CROSS-PROJECTOR-RESIDUAL-UNRESOLVED",
+        "CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED",
+        "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+        "CANONICAL-FULL-SHIFT-RESOLVENT-UNRESOLVED"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff",
+      "canonical_proof": "research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/PROOF.md",
+      "proof_sha256": "b3dcb8016721d3cd064e1a1c441df84edaffd8a4a127b9e92d597d01c687f486",
+      "negative_claim_boundary": "Die strikte Y68-Trennung schließt genau den bisherigen gedrehten Gegenzeugen aus. Die gemeinsame Winkelhülle bleibt uninformativ; wenige zulässige nahe Stichproben sind weder ein uniformer Winkelbeweis noch ein struktureller Gegenbefund.",
+      "does_not_claim": [
+        "Kein uniformer ungerader physischer Winkelkorridor unter 10 Grad und kein STRUCTURAL-OPEN-Nachweis für die durch Y68 verschärfte Relaxation.",
+        "Keine neue duale Y58-Familie, keine bandweisen Momente tatsächlicher Maximierer und keine vollständige physische Realisierung aller Relaxationsdaten.",
+        "Kein allgemeiner Renewal-Satz, keine A13-Positivität, keine kofinale positive Familie, kein globales Objekt X und keine RH.",
+        "Keine unabhängige Neuimplementierung der großen Operatorintegrale und keine abgeschlossene externe Gesamtprüfung."
+      ]
     }
   ],
   "global_status": {
@@ -2203,18 +2306,7 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [
-    {
-      "id": "CANONICAL-FULL-SHIFT-RESOLVENT-UNRESOLVED",
-      "meta_path": "research/x-c1/canonical-full-shift-primal-dual-2026-10-02/01-full-shift/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    },
-    {
-      "id": "CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION",
-      "meta_path": "research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    }
-  ],
+  "pending_packages": [],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",
@@ -2231,15 +2323,15 @@
     }
   },
   "current_integration_observation": {
-    "observed_at": "2026-10-01",
-    "main_sha": "dd490671d2a2c36933cb397a71abc0302b759735",
-    "integrated_research_branch": "research/canonical-cross-high-response-2026-10-01",
-    "integrated_research_head": "b91589923f5738148c9c9702155fb3dc02f7b1a1",
-    "reconciliation_merge": "dd490671d2a2c36933cb397a71abc0302b759735",
-    "ci_run_id": 36902746432,
+    "observed_at": "2026-10-02",
+    "main_sha": "872f1282c18476e1ea5a19cb67515e098432bf90",
+    "integrated_research_branch": "research/canonical-full-shift-primal-dual-2026-10-02",
+    "integrated_research_head": "219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff",
+    "reconciliation_merge": "872f1282c18476e1ea5a19cb67515e098432bf90",
+    "ci_run_id": 37001096268,
     "ci_run_attempt": 1,
-    "ci_head_sha": "dd490671d2a2c36933cb397a71abc0302b759735",
-    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/36902746432",
+    "ci_head_sha": "872f1282c18476e1ea5a19cb67515e098432bf90",
+    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/37001096268",
     "ci_conclusion": "success",
     "mathematical_status_change": false
   }

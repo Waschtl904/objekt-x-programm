@@ -132,29 +132,37 @@ Die Paketberichte bewahren ihren damaligen Veröffentlichungsstand. Für den
 aktuellen Integrationsstatus gilt das [Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml).
 
 Die [ungerade Projektor-/Transportfamilie](research/x-c1/canonical-odd-structural-open-2026-10-01/README.md)
-zeigt jetzt die Grenze der endlichen Momentrelaxation: Auch mit voller
+zeigte vor der neuen Y68-Schranke die Grenze ihrer endlichen Momentrelaxation: Auch mit voller
 gemeinsamer Masse-/Energietransportordnung erlaubt sie zwei zertifizierte
 physische inverse Antwortrichtungen mit mindestens **89.987266° Abstand**.
-Der rationale Boxtest endet deshalb mit **STRUCTURAL OPEN**.
+Der damalige rationale Boxtest endet deshalb mit **STRUCTURAL OPEN**.
+Dieser Befund gilt für die ursprüngliche Relaxation; die neue Y68-Schranke
+schließt einen der beiden Zeugen aus.
 Dies betrifft die endliche Relaxation; eine vollständige Realisierung
 beider Gegenzeugen durch das ursprüngliche Operatorproblem wird nicht behauptet.
 
-**Ungerade: eindeutig, aber noch nicht lokalisiert.** Die neue
-[Kreuzprojektor-/Antwortfamilie](research/x-c1/canonical-cross-high-response-2026-10-01/README.md)
-endet in zwei nachvollziehbaren **UNRESOLVED**-Ergebnissen: Gemeinsame
-Kreuzresiduen verengen 48 Y-Hüllen; endliche hohe Korrekturen verbessern
-Vektorfehler, aber Y58/Y68 nicht weiter. Am ersten oberen Pol dominiert
-der Rest der vollständigen Shiftantwort oberhalb des Korrekturfensters.
+**Ungerade: alter Gegenzeuge ausgeschlossen, Winkel weiterhin offen.**
+Die [Full-Shift-/Primal-Dual-Familie](research/x-c1/canonical-full-shift-primal-dual-2026-10-02/README.md)
+liefert rigoros **Y68 in [0.0410706614, 0.0725344674]**. Acht adjungierte
+Resolventen schließen damit den bisherigen gedrehten Gegenzeugen strikt aus.
+Die signierte Gate-Reserve ist größer als 0.0069620524.
 
-Der nächste Gate verwendet **vollständige Shiftbilder** mit ihrem gesamten
-hohen Anteil, gegebenenfalls diagonal vorconditioniert. Zuerst muss Y58
-oder Y68 den gedrehten Gegenzeugen strikt ausschließen. Erst danach folgt
-der gemeinsame Test auf einen physischen Gesamtwinkelkorridor unter 10°.
-Filter und Präzision bleiben fest; ein 1/N-Tailgesetz bleibt Heuristik.
-Anschließend folgen bandweise Momente tatsächlicher Maximierer und ein
-vorwärts gerichteter Renewal-Kandidat. Allgemeines Renewal, A13-Positivität,
-kofinale positive Familie, globales Objekt X und RH bleiben offen.
-PR #187 bleibt separat. Status: `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`.
+Der gemeinsame Test aller vorhandenen Einträge liefert weiterhin keinen
+uniformen physischen Winkelkorridor unter 10°. Er wertet die Ausgangsbox
+ohne neue Unterteilung aus. Sieben geprüfte Parameterwerte der bisherigen
+Familie ergeben kein neues Gegenpaar mit mehr als 10° Abstand; die zulässigen
+nahen Stichproben beweisen aber keinen uniformen Winkelbereich.
+
+Der alte STRUCTURAL-OPEN-Nachweis gilt für seine ursprüngliche Relaxation;
+sein Gegenpaar trägt nicht auf die neue Y68-Relaxation über. Deren Winkelstatus
+ist **UNRESOLVED**. Als Nächstes folgt eine gezieltere gemeinsame Auswertung
+mit der neuen Y68-Korrelation. Neue duale Y58-Daten werden erst bei konkretem
+Bedarf benötigt und sind bisher nicht berechnet. Danach folgen bandweise
+Momente tatsächlicher Maximierer und der vorwärts gerichtete Renewal-Test.
+
+Allgemeines Renewal, A13-Positivität, kofinale positive Familie, globales
+Objekt X und RH bleiben offen. PR #187 bleibt separat.
+Status: `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`.
 
 Die hohe Tail-Reduktion steht auf jedem festen endlichen Horizont zur Verfügung.
 Offen ist ein allgemeiner positiver Boden für den verbleibenden niedrigen Rest
