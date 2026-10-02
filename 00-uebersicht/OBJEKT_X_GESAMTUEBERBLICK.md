@@ -2,7 +2,7 @@
 
 **Stand:** 2. Oktober 2026
 
-**Basis:** `main@872f1282c18476e1ea5a19cb67515e098432bf90`
+**Basis:** `main@165ade402c94a7a75074f9a06aa220f37b0d39fa`
 
 **Zweck:** Verständliche Gesamterzählung des Programms – klassische Grundlagen, eigene Resultate, rigorose No-Gos, aktuelle positive C1-Geometrie und offene globale Schritte.
 
@@ -362,35 +362,37 @@ einer Intervallbox würde dafür nicht genügen. Eine vollständige gemeinsame
 Realisierung sämtlicher ursprünglicher Trial-, Überlappungs- und
 Operatordaten durch die beiden Gegenzeugen wird nicht behauptet.
 
-**Ungerade: alter Gegenzeuge ausgeschlossen, Winkel weiterhin offen.**
+**Ungerade nach Y68: adaptiver Winkeltest abgeschlossen, Lokalisierung offen.**
 Die [Full-Shift-/Primal-Dual-Familie](../research/x-c1/canonical-full-shift-primal-dual-2026-10-02/README.md)
-liefert rigoros **Y68 in [0.0410706614, 0.0725344674]**. Acht adjungierte
-Resolventen schließen damit den bisherigen gedrehten Gegenzeugen strikt aus.
-Die signierte Gate-Reserve ist größer als 0.0069620524.
+liefert **Y68 in [0.0410706614, 0.0725344674]** und schließt den alten
+gedrehten Gegenzeugen strikt aus. Der alte STRUCTURAL-OPEN-Nachweis gilt
+weiterhin nur für seine ursprüngliche, schwächere Relaxation.
 
-Der gemeinsame Test aller vorhandenen Einträge liefert weiterhin keinen
-uniformen physischen Winkelkorridor unter 10°. Er wertet die Ausgangsbox
-ohne neue Unterteilung aus. Sieben geprüfte Parameterwerte der bisherigen
-Familie ergeben kein neues Gegenpaar mit mehr als 10° Abstand; die zulässigen
-nahen Stichproben beweisen aber keinen uniformen Winkelbereich.
+Der [anschließende adaptive Test](../research/x-c1/canonical-adaptive-odd-angle-2026-10-02/README.md)
+endet mit **UNRESOLVED**: 255 Knoten, 128 unentschiedene Blätter,
+1121 vollständig nachgerechnete Boxquittungen. Die breiten oberen Winkelhüllen
+sind keine tatsächlich nachgewiesenen Winkel. Der Lauf beweist auch kein
+Scheitern jeder feineren Unterteilung.
 
-Der alte STRUCTURAL-OPEN-Nachweis gilt für seine ursprüngliche Relaxation;
-sein Gegenpaar trägt nicht auf die neue Y68-Relaxation über. Deren Winkelstatus
-ist **UNRESOLVED**. Als Nächstes folgt eine gezieltere gemeinsame Auswertung
-mit der neuen Y68-Korrelation. Neue duale Y58-Daten werden erst bei konkretem
-Bedarf benötigt und sind bisher nicht berechnet. Danach folgen bandweise
-Momente tatsächlicher Maximierer und der vorwärts gerichtete Renewal-Test.
+Die bedingten zentralen Diagnosen unterscheiden stark zwischen freier und
+festgelegter gemeinsamer Information: 163.16° bei eingeschränkten vier
+Y-Koordinaten, 116.72° mit zusätzlich zentralem L_B und 1.903° beim gesamten
+zentralen Y samt Momentdaten. Der letzte Wert gilt nur für diesen Spezialfall.
 
-Allgemeines Renewal, A13-Positivität, kofinale positive Familie, globales
-Objekt X und RH bleiben offen. PR #187 bleibt separat.
-Status: `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`.
+Als Nächstes wird die **direkte 2×2-Eigenlinie mit gemeinsamen Abhängigkeiten**
+geprüft: Nennerfreie skalierte Momentmatrix, rationale Wurzelisolation,
+Nachweis des maximalen Eigenwertasts und direkter physischer Winkel.
+Zuerst werden die festen kleinen Vergleichsfälle ausgewertet; bei Bedarf
+folgt eine zentrierte oder affine Rechnung. Neue Operatorintegrale,
+Y58-Dualdaten und eine neue L_B-Rechnung sind dafür zunächst nicht vorgesehen.
 
-Die reguläre CI prüft Quellen, Archive, kleine unabhängige Kontrollen und
-die rationale Abnahme und reproduziert Winkel- und Familienquittungen
-bytegleich. Je ein vollständiger primaler und dualer Pol wurde zusätzlich
-bytegleich wiederholt. Die großen Operatorrechnungen wurden nicht unabhängig
-neu implementiert. Die bereits positiven Terminals bis A11 sind weiterhin
-Voraussetzung; der globale Verifikationssnapshot bleibt unverändert.
+Danach folgen bandweise Momente tatsächlicher Maximierer und der vorwärts
+gerichtete Renewal-Test. Allgemeines Renewal, A13-Positivität, kofinale
+positive Familie, globales Objekt X und RH bleiben offen. PR #187 bleibt
+separat. Status: `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`.
+
+Die bereits positiven Terminals bis A11 bleiben Voraussetzung. Der globale
+Verifikationssnapshot ist unverändert; CI-Erfolg ersetzt keinen externen Audit.
 
 ---
 

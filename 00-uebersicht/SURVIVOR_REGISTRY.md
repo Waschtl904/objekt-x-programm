@@ -1618,3 +1618,37 @@ Does not claim:
 - Keine unabhängige Neuimplementierung der großen Operatorintegrale und keine abgeschlossene externe Gesamtprüfung.
 
 Dokumentierte Reproduktion: [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff/research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/ACCEPTANCE.json), [gate.json](https://github.com/Waschtl904/objekt-x-programm/blob/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff/research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/gate.json), [angle.json](https://github.com/Waschtl904/objekt-x-programm/blob/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff/research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/angle.json), [counterfamily.json](https://github.com/Waschtl904/objekt-x-programm/blob/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff/research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/counterfamily.json), [full_spot_replay.json](https://github.com/Waschtl904/objekt-x-programm/blob/219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff/research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/full_spot_replay.json).
+
+## CANONICAL-ADAPTIVE-ODD-ANGLE-UNRESOLVED
+
+Adaptiver ungerader Winkeltest nach Y68: begrenzt UNRESOLVED
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: A9->A11 ungerade nach Y68-Trennung: adaptive Zerlegung mit 255 Knoten, 128 unentschiedenen Blättern und vollständiger Nachrechnung von 1121 Boxauswertungen. Bedingte Diagnosen untersuchen Y- und Momentunsicherheiten. Kein uniformer Winkelkorridor und kein neuer Gegenzeugennachweis.
+- Canonical commit: [cb73f0e](https://github.com/Waschtl904/objekt-x-programm/commit/cb73f0ef223f4f3f0d51002f7d8127fac90a954f).
+- Canonical proof: [research/x-c1/canonical-adaptive-odd-angle-2026-10-02/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/cb73f0ef223f4f3f0d51002f7d8127fac90a954f/research/x-c1/canonical-adaptive-odd-angle-2026-10-02/PROOF.md).
+- depends_on: `CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION`, `CANONICAL-ODD-BOX-STRUCTURAL-OPEN`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: Das begrenzte UNRESOLVED und die bedingten zentralen Diagnosen beweisen weder ein Scheitern jeder feineren Boxzerlegung noch die Notwendigkeit oder Nutzlosigkeit neuer Y58-Daten. Die schmale zentrale Spezialfallhülle ist keine uniforme Lokalisierung.
+
+Aussage:
+
+- Der adaptive rationale Test umfasst 255 Knoten und 128 unentschiedene Blätter. Keine Box wird ausgeschlossen und keine Blatthülle unterschreitet den strikten gemeinsamen Gesamtwinkel von 10 Grad. Die 1017 Baum-/Vorausschauauswertungen und 104 terminalen Diagnosen ergeben 1121 vollständig nachgerechnete eindeutige Quittungen.
+- Die oberen Blatthüllen liegen zwischen 177.914891426 und 180 Grad. Das sind Intervallobergrenzen, keine nachgewiesenen tatsächlichen Winkel und kein neues getrenntes zulässiges Gegenpaar.
+- Im Schnitt um die vier zentralen Y-Koordinaten bleibt die obere Hülle bei 163.162462924 Grad. Einschränkung zusätzlich auf die zentralen L_B-Daten ergibt 116.720692435 Grad. Erst der hier untersuchte zentrale Spezialfall mit vollständigem Y und vollständigen Momentdaten liefert 1.903076700 Grad; daraus folgt keine uniforme Lokalisierung.
+- Die begrenzte Aufteilung und die bedingten Diagnosen motivieren die direkte 2x2-Eigenlinienauswertung mit Erhalt gemeinsamer Abhängigkeiten. Sie beweisen weder ein Scheitern aller feineren Aufteilungen noch die Notwendigkeit oder Nutzlosigkeit zusätzlicher Operatorinformationen.
+
+Does not claim:
+
+- Keine uniforme ungerade Lokalisierung und kein STRUCTURAL OPEN für die verschärfte Familie.
+- Keine neuen Operatorintegrale, keine neuen Y58- oder L_B-Daten und keine neuen zulässigen Punktkonstruktionen.
+- Kein allgemeines Renewal, keine A13-Positivität, keine kofinale positive Familie, kein globales Objekt X und keine RH.
+- Keine unabhängige Neuimplementierung der großen Operatorrechnung und kein abgeschlossener externer Gesamtaudit.
+
+Dokumentierte Reproduktion: [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/cb73f0ef223f4f3f0d51002f7d8127fac90a954f/research/x-c1/canonical-adaptive-odd-angle-2026-10-02/ACCEPTANCE.json), [audit.json](https://github.com/Waschtl904/objekt-x-programm/blob/cb73f0ef223f4f3f0d51002f7d8127fac90a954f/research/x-c1/canonical-adaptive-odd-angle-2026-10-02/audit.json), [summary.json](https://github.com/Waschtl904/objekt-x-programm/blob/cb73f0ef223f4f3f0d51002f7d8127fac90a954f/research/x-c1/canonical-adaptive-odd-angle-2026-10-02/summary.json), [known_point_slices.json](https://github.com/Waschtl904/objekt-x-programm/blob/cb73f0ef223f4f3f0d51002f7d8127fac90a954f/research/x-c1/canonical-adaptive-odd-angle-2026-10-02/known_point_slices.json), [uncertainty_groups.json](https://github.com/Waschtl904/objekt-x-programm/blob/cb73f0ef223f4f3f0d51002f7d8127fac90a954f/research/x-c1/canonical-adaptive-odd-angle-2026-10-02/uncertainty_groups.json), [angle_controls.json](https://github.com/Waschtl904/objekt-x-programm/blob/cb73f0ef223f4f3f0d51002f7d8127fac90a954f/research/x-c1/canonical-adaptive-odd-angle-2026-10-02/angle_controls.json).
