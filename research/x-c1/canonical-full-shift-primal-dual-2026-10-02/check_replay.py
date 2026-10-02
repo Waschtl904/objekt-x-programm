@@ -30,5 +30,6 @@ def main():
     assert 'pull_request:' in workflow and 'branches: [main]' in workflow
     assert 'github.event.pull_request.head.sha || github.sha' in workflow and 'fetch-depth: 0' in workflow
     assert 'runs-on: windows-latest' in workflow
+    assert workflow.index('git config --global core.autocrlf false') < workflow.index('uses: actions/checkout@')
     print('Corruption, missing/unbound files, unsafe paths and relevant/irrelevant CI routing: PASS')
 if __name__=='__main__':main()
