@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION",
+  "date": "2026-10-02",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "A9->A11 ungerade: acht adjungierte Full-Shift-Resolventen liefern Y68 in [0.0410706614,0.0725344674] und schließen den alten gedrehten Gegenzeugen strikt aus. Gemeinsamer Winkeltest und begrenzte neue Gegenmodellsuche bleiben UNRESOLVED.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Die strikte Y68-Trennung schließt genau den bisherigen gedrehten Gegenzeugen aus. Die gemeinsame Winkelhülle bleibt uninformativ; wenige zulässige nahe Stichproben sind weder ein uniformer Winkelbeweis noch ein struktureller Gegenbefund.",
+  "depends_on": [
+    "CANONICAL-CROSS-PROJECTOR-RESIDUAL-UNRESOLVED",
+    "CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED",
+    "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT",
+    "CANONICAL-FULL-SHIFT-RESOLVENT-UNRESOLVED"
+  ],
+  "closes": [
+    "CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Kein uniformer ungerader physischer Winkelkorridor unter 10 Grad und kein STRUCTURAL-OPEN-Nachweis für die durch Y68 verschärfte Relaxation.",
+    "Keine neue duale Y58-Familie, keine bandweisen Momente tatsächlicher Maximierer und keine vollständige physische Realisierung aller Relaxationsdaten.",
+    "Kein allgemeiner Renewal-Satz, keine A13-Positivität, keine kofinale positive Familie, kein globales Objekt X und keine RH.",
+    "Keine unabhängige Neuimplementierung der großen Operatorintegrale und keine abgeschlossene externe Gesamtprüfung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/PROOF.md",
+    "sha256": "b3dcb8016721d3cd064e1a1c441df84edaffd8a4a127b9e92d597d01c687f486"
+  }
+}

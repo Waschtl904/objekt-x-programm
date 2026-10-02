@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-01T20:14:10.006031+00:00",
+  "main": "b27a18c32058a9a2a4e4c1611a18a67caa586c15",
+  "package": "canonical-full-shift-corrected-2026-10-01",
+  "package_status": "UNRESOLVED",
+  "research_status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN",
+  "manifest_bindings": 63,
+  "manifest_sha256": "db8c0f5916a68e26d0098aaa31e16bfd4529e7c07d061482c4a519d5ed37bd17",
+  "archive": "Vollstaendige-Shiftkorrektur-2026-10-01.zip",
+  "archive_sha256": "ba1c05b9c029dfb898db2bb8f629587efad650404486d40d0d14d9415be7ac34",
+  "archive_bytes": 35293802,
+  "archive_members": 64,
+  "zip_crc_check": "PASS",
+  "all_archive_bytes_equal_package": true,
+  "final_quick_replay": {
+    "status": "PASS",
+    "pole_receipts_checked": 14,
+    "full_poles_replayed": 0,
+    "full_target_integrals_replayed": false,
+    "status_boundary": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN"
+  },
+  "final_quick_replay_log_sha256": "cfdd9412d98c999cee7d64a832c87b54143f290c4cf204a9cdb27edfaadc79e9",
+  "large_spot_replay": {
+    "record": "aggregate_A9_c6_p0.json.gz",
+    "expanded_output_sha256": "d16b13f7a00edbc0c2a86fda0997a956a73eca97e083ad037bc5cff8f92881aa",
+    "byte_identical": true,
+    "scope": {
+      "status": "PASS",
+      "pole_receipts_checked": 14,
+      "full_poles_replayed": 1,
+      "full_target_integrals_replayed": false,
+      "status_boundary": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN"
+    },
+    "log_sha256": "ae59c0de7fdc0feceffbcc56e42f06128feb0c1966d64438030aa1faea2ce7c3"
+  },
+  "all_14_large_poles_freshly_computed": true,
+  "all_14_large_poles_repeated_after_packaging": false,
+  "large_image_tables_repeated_after_packaging": false,
+  "large_target_integrals_repeated_after_packaging": false,
+  "independent_large_operator_implementation": false,
+  "two_first_pole_full_domain_vs_odd_domain_checks": true,
+  "strict_rotated_witness_exclusion": false,
+  "odd_angle_evaluator_invoked": false,
+  "A13_inputs_used": false,
+  "PR187_untouched": true,
+  "new_research_merged": false,
+  "previous_two_packages_integrated": {
+    "research_pr": 197,
+    "registry_pr": 198,
+    "final_main_ci": 36904222676,
+    "main_ci_conclusion": "success"
+  }
+}

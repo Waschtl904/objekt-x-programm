@@ -108,4 +108,9 @@ Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGI
 
 Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getrennt. Diese Statusansicht führt die mathematischen Checker nicht erneut aus.
 
+## Noch nicht in den geprüften Stand übernommene Pakete
+
+- `CANONICAL-FULL-SHIFT-RESOLVENT-UNRESOLVED`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-full-shift-primal-dual-2026-10-02/01-full-shift/META.yaml`.
+- `CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-full-shift-primal-dual-2026-10-02/02-primal-dual/META.yaml`.
+
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

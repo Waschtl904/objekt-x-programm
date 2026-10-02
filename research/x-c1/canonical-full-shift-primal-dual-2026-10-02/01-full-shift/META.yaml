@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "CANONICAL-FULL-SHIFT-RESOLVENT-UNRESOLVED",
+  "date": "2026-10-02",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "A9->A11 ungerade: vollständige Shiftbild-Korrekturen bei festem Filter und gleicher Präzision; direkte Y58/Y68-Abnahme UNRESOLVED, genaue primal-duale Restbudgets isoliert.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "UNRESOLVED bezeichnet die Schärfe dieser direkten Full-Shift-Auswertung; kein No-Go für die Architektur. Die nachfolgende primal-duale Y68-Abnahme ist ein eigenes Paket.",
+  "depends_on": [
+    "CANONICAL-CROSS-PROJECTOR-RESIDUAL-UNRESOLVED",
+    "CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED",
+    "CANONICAL-JOINT-GENERALIZED-DISCRIMINANT"
+  ],
+  "closes": [
+    "CANONICAL-FULL-SHIFT-RESOLVENT-UNRESOLVED"
+  ],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Kein uniformer ungerader physischer Winkelkorridor unter 10 Grad und kein STRUCTURAL-OPEN-Nachweis für die durch Y68 verschärfte Relaxation.",
+    "Keine neue duale Y58-Familie, keine bandweisen Momente tatsächlicher Maximierer und keine vollständige physische Realisierung aller Relaxationsdaten.",
+    "Kein allgemeiner Renewal-Satz, keine A13-Positivität, keine kofinale positive Familie, kein globales Objekt X und keine RH.",
+    "Keine unabhängige Neuimplementierung der großen Operatorintegrale und keine abgeschlossene externe Gesamtprüfung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/canonical-full-shift-primal-dual-2026-10-02/01-full-shift/PROOF.md",
+    "sha256": "4578942652894991c2a0bfbd8d4ea27554f914291301f01dec103c4eabce52cd"
+  }
+}
