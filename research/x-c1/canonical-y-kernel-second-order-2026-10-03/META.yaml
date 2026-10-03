@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "CANONICAL-Y-KERNEL-SECOND-ORDER-UNRESOLVED",
+  "date": "2026-10-03",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "A9->A11 ungerade nach Y68: gemeinsame Y-Kernel-Gleichung und zweite Ordnung auf denselben 19 Fällen. Bedingte Gesamtwinkel central <=2.933357, quarter <=3.070163 Grad; half erstmals maximal isoliert mit <=3.642693 Grad. Fünf bekannte Punkte erhalten. Root und acht Diagnoseboxen UNRESOLVED.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Bedingte Schnitte, keine uniforme Root-Lokalisierung. UNRESOLVED ist kein Beweis struktureller Offenheit oder des Scheiterns aller höheren Modelle.",
+  "depends_on": [
+    "CANONICAL-DIRECT-ODD-LINE-UNRESOLVED",
+    "CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION"
+  ],
+  "closes": [],
+  "opens": [
+    "CANONICAL-Y-KERNEL-SECOND-ORDER-ODD-LINE"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "Keine uniforme ungerade Lokalisierung unter zehn Grad.",
+    "Keine neuen Operator-, Y58- oder L_B-Daten und kein neuer adaptiver Baum.",
+    "Kein allgemeines Renewal, keine A13-Positivität, keine kofinale positive Familie, kein globales Objekt X, keine RH.",
+    "Kein abgeschlossener externer Audit."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/canonical-y-kernel-second-order-2026-10-03/PROOF.md",
+    "sha256": "803e6fb1d0bd089a22cf8a518b5971eaa1bb4dcd681fc54c472920f90783a44b"
+  }
+}

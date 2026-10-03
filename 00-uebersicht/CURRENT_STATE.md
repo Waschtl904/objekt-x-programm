@@ -3,7 +3,7 @@
 > GENERATED FILE — DO NOT EDIT
 > Quelle: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml). Navigation, keine Satzpromotion.
 
-Stand: 2026-10-02.
+Stand: 2026-10-03.
 
 ## Gemergte kanonische Basis
 
@@ -35,8 +35,8 @@ Historische Integrationsprovenienz des Registry-/Navigations-Syncs: PR #156 inte
 
 ## Zwei aktive Hauptfronten
 
-- **Unbeschränkte Horizonterweiterung und kompatibler Transport** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Drei positive Kammern bis A11, kanonischer Spektraltransport und positiver tatsächlicher Schur-Extremalgap in beiden Paritäten; gerade physische inverse Antwortrichtung lokalisiert. Y68 schließt den alten gedrehten Gegenzeugen aus. Die direkte affine Linienrechnung verbessert die bedingten Vier-Y-Schnitte central auf <=3.405363 Grad und quarter auf <=3.765366 Grad. Root und acht Diagnoseblätter bleiben UNRESOLVED. Nächster Gate: gemeinsame Y-Kernel-Gleichung mit zweiter Ordnung auf denselben 19 Fällen. Uniforme ungerade Lokalisierung, Bandmomente tatsächlicher Maximierer, allgemeines Renewal und kofinale positive Kompatibilität bleiben offen.
-- **Globale Weil-Testklasse und fensterunabhängiger Readout** — `FULL-WEIL-TEST-CLASS`, OPEN. Nach Aufbau einer kofinal kompatiblen C1-Geometrie: exakte Rückbindung an die vollständige geeignete Weil-Testklasse und einen globalen/fensterunabhängigen positiven Readout.
+- **Konstruktive Fortsetzung der gemeinsamen Objekt-X-Geometrie** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Primäres Ziel ist die Konstruktion von Objekt X gemäß Arbeitsdefinition; der mögliche RH-Anschluss folgt danach. Ausgangspunkt sind positive Kammern bis A11 und rohe kompatible Transporte. Die Hauptaufgabe ist eine vollständige vorwärts gerichtete Schurfortsetzung ohne vorausgesetzte neue Terminalpositivität. Die Y-Kernel- und H0-Folgepakete dokumentieren bedingte Winkelverbesserungen und Grenzen skalarer Relaxationen; Root bleibt UNRESOLVED. Die Definition, globale Testklasse, kofinale Fortsetzung und externe Prüfung bleiben unverändert offen.
+- **Globale Weil-Testklasse und fensterunabhängiger Readout** — `FULL-WEIL-TEST-CLASS`, OPEN. Testklasse, Normierung und exakte vollständige Gram-Identität gehören bereits zur Konstruktion von Objekt X. Zusammen mit einer kofinal kompatiblen positiven Geometrie ist ein globaler Readout zu begründen. Der mögliche Anschluss an RH wird erst nach erfolgreicher Konstruktion verfolgt.
 
 ## Verwendbare Bausteine
 
@@ -111,5 +111,10 @@ Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGI
 - `rh`: **OPEN**.
 
 Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getrennt. Diese Statusansicht führt die mathematischen Checker nicht erneut aus.
+
+## Noch nicht in den geprüften Stand übernommene Pakete
+
+- `CANONICAL-Y-KERNEL-SECOND-ORDER-UNRESOLVED`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-y-kernel-second-order-2026-10-03/META.yaml`.
+- `CANONICAL-H0-FOLLOWUP-RELAXATION-BOUNDARY`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-h0-followups-2026-10-03/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

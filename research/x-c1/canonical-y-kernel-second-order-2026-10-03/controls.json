@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "exact_polynomial_and_rounding_controls": 1530,
+  "precisions_tested": [
+    70,
+    3
+  ],
+  "exact_kernel_point_controls": 60,
+  "shared_square_and_cancellation_controls": 4,
+  "invalid_input_and_tail_controls": 4,
+  "maximal_minimal_degenerate_controls": 3,
+  "finite_controls_supplement_the_whole_box_proof": true
+}
