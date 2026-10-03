@@ -1,21 +1,28 @@
 > [!NOTE]
+> **Navigation nach dem Umzug vom 3. Oktober 2026.**
+>
+> Originalpfad: `STATUS.md`. In dieser Lesefassung wurden ausschließlich relative
+> Linkziele an die neue Ablage angepasst. Text, Formeln und damalige Statusangaben
+> bleiben erhalten. [Unverändertes Original](originale/STATUS.md).
+
+> [!NOTE]
 > **Dokumentationspflege vom 2. Oktober 2026: historischer Stand**
 >
 > Die folgenden Statusangaben und Aufgaben beschreiben den damaligen Journalstand.
-> Den heutigen Stand zeigt [CURRENT_STATE](00-uebersicht/CURRENT_STATE.md),
-> die offenen Aufgaben [NEXT_GATES](00-uebersicht/NEXT_GATES.md).
-> Maßgebliche Quelle ist [RESEARCH_STATE](00-uebersicht/RESEARCH_STATE.yaml).
+> Den heutigen Stand zeigt [CURRENT_STATE](../../CURRENT_STATE.md),
+> die offenen Aufgaben [NEXT_GATES](../../NEXT_GATES.md).
+> Maßgebliche Quelle ist [RESEARCH_STATE](../../RESEARCH_STATE.yaml).
 > Der Originaltext bleibt als Provenienz erhalten.
 
 # Statusregister
 
 Verdichtete Gesamtbilanz des Programms ohne Zwischenschritte. Für die vollständige
-Dokumentliste siehe [INDEX.md](INDEX.md), für die Verzweigungsbedingungen der offenen
+Dokumentliste siehe [INDEX.md](../../../INDEX.md), für die Verzweigungsbedingungen der offenen
 Knoten [OFFENE_PROBLEME.md](OFFENE_PROBLEME.md).
 
 > Stand: 3. August 2026 · letzter Eintrag NEU-228 · Direktaudits NEU-210/211 verbucht
 
-> **Konsolidierungsnotiz, aktualisiert 2. September 2026:** Dieses Statusregister bleibt die Bilanz des NEU-Journalkerns und ist **nicht** die operative Frontdatei. Aktuell maßgeblich sind [CURRENT-FRONT.md](CURRENT-FRONT.md), [ACTIVE_THEOREM_REGISTRY.md](00-uebersicht/ACTIVE_THEOREM_REGISTRY.md) und die aktuelle P11-Strong-Terminal-Auditfolge R38--R43. R38--R42 sind frozen als independently verified AI-GREEN ohne kanonische \(\checkmark[M]\)-Promotion; R43 ist offen. Strong Terminal/C6 ist auf einen fixed-pair Normal-Kernel-Koeffizienten reduziert; R37/G4c bleibt separat offen.
+> **Konsolidierungsnotiz, aktualisiert 2. September 2026:** Dieses Statusregister bleibt die Bilanz des NEU-Journalkerns und ist **nicht** die operative Frontdatei. Aktuell maßgeblich sind [CURRENT-FRONT.md](../../../CURRENT-FRONT.md), [ACTIVE_THEOREM_REGISTRY.md](../../ACTIVE_THEOREM_REGISTRY.md) und die aktuelle P11-Strong-Terminal-Auditfolge R38--R43. R38--R42 sind frozen als independently verified AI-GREEN ohne kanonische \(\checkmark[M]\)-Promotion; R43 ist offen. Strong Terminal/C6 ist auf einen fixed-pair Normal-Kernel-Koeffizienten reduziert; R37/G4c bleibt separat offen.
 >
 > Die in diesem Dokument referenzierten früheren Objekt-X-Architekturen — insbesondere
 > Ebene XVI Revision 2 und die P04/Suzuki-Hypothese — sind seit 26. August 2026 als
@@ -25,7 +32,7 @@ Knoten [OFFENE_PROBLEME.md](OFFENE_PROBLEME.md).
 
 Historisch reklassifizierte Karte der bis 26. Juli 2026 gebuchten Bedingungen, Brücken,
 Realisierungsprofile und No-Gos:
-[Ebene XVI — Kontrollblatt](00-grundlegung/ebene-XVI-objekt-x.md).
+[Ebene XVI — Kontrollblatt](../../../00-grundlegung/ebene-XVI-objekt-x.md).
 Sie ist weiterhin ein wichtiges Constraint-/Provenienzregister, aber **nicht** die aktuelle
 Single Source of Truth für die Identität von Objekt X.
 

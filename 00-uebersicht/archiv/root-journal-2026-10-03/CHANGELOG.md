@@ -1,3 +1,10 @@
+> [!NOTE]
+> **Navigation nach dem Umzug vom 3. Oktober 2026.**
+>
+> Originalpfad: `CHANGELOG.md`. In dieser Lesefassung wurden ausschließlich relative
+> Linkziele an die neue Ablage angepasst. Text, Formeln und damalige Statusangaben
+> bleiben erhalten. [Unverändertes Original](originale/CHANGELOG.md).
+
 # Changelog
 
 Sitzungsprotokoll des Objekt-X-Programms, neueste Einträge zuerst.
@@ -8,7 +15,7 @@ Sitzungsprotokoll des Objekt-X-Programms, neueste Einträge zuerst.
 
 Die Einträge ab NEU-162 sind aus der Commit-Historie des Arbeitsjournals rekonstruiert und
 zu thematischen Blöcken zusammengefasst. Für Details siehe die jeweiligen Dokumente über
-den [Gesamtindex](INDEX.md).
+den [Gesamtindex](../../../INDEX.md).
 
 
 ---
@@ -384,7 +391,7 @@ Nächster atomarer Knoten: `[O-221-1c1a0-admissible-difference-locus-and-raw-rel
 
 Parallel: **Ebene XVI Revision 2** — das Axiomenregister wurde von Stand NEU-114 auf NEU-221e
 nachgezogen und in ein Kontrollblatt mit drei logischen Ebenen umgebaut.
-Siehe [`00-grundlegung/ebene-XVI-objekt-x.md`](00-grundlegung/ebene-XVI-objekt-x.md).
+Siehe [`00-grundlegung/ebene-XVI-objekt-x.md`](../../../00-grundlegung/ebene-XVI-objekt-x.md).
 
 ---
 

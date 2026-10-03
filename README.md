@@ -79,7 +79,9 @@ Testklasse und eine Konstruktion ohne vorausgesetzte Weil-Positivität.
 - **Geschichte:** Das [Archiv](00-uebersicht/ARCHIVE_INDEX.md) bewahrt frühere
   Kandidaten, Fehler, Korrekturen und verworfene Ansätze. Datierte Statusangaben
   beschreiben den damaligen Stand. Historische Originale behalten ihre Pfade
-  und ihren Wortlaut, damit Belege nachvollziehbar bleiben.
+  und ihren Wortlaut am jeweiligen Quellcommit. Für die
+  [verlegten Root-Dateien](00-uebersicht/archiv/root-journal-2026-10-03/README.md)
+  sind Originalbytes sowie alte und neue Pfade dokumentiert.
 
 Diese README dient der Orientierung. Die lesbaren Statusansichten werden aus
 `RESEARCH_STATE.yaml` erzeugt; mathematische Aussagen beruhen auf den dort
