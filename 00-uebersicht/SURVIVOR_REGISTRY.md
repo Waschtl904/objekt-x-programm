@@ -1687,3 +1687,71 @@ Does not claim:
 - Kein abgeschlossener externer Gesamtaudit.
 
 Dokumentierte Reproduktion: [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33/research/x-c1/canonical-direct-odd-line-2026-10-02/ACCEPTANCE.json), [audit.json](https://github.com/Waschtl904/objekt-x-programm/blob/c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33/research/x-c1/canonical-direct-odd-line-2026-10-02/audit.json), [summary.json](https://github.com/Waschtl904/objekt-x-programm/blob/c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33/research/x-c1/canonical-direct-odd-line-2026-10-02/summary.json), [controls.json](https://github.com/Waschtl904/objekt-x-programm/blob/c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33/research/x-c1/canonical-direct-odd-line-2026-10-02/controls.json).
+
+## CANONICAL-Y-KERNEL-SECOND-ORDER-UNRESOLVED
+
+Gemeinsamer Y-Kernel zweiter Ordnung mit bedingten Winkeln; Root offen
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: A9->A11 ungerade nach Y68: identische 19 Fälle, gemeinsames rationales Zentrum und zweite Ordnung mit vollständigem Rest. Bedingte Gesamtwinkel central <=2.933357, quarter <=3.070163, half <=3.642693 Grad. Root und acht Diagnoseboxen UNRESOLVED.
+- Canonical commit: [c5c779d](https://github.com/Waschtl904/objekt-x-programm/commit/c5c779d42a866db0b21ef02b18d3585e1a7450ec).
+- Canonical proof: [research/x-c1/canonical-y-kernel-second-order-2026-10-03/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/c5c779d42a866db0b21ef02b18d3585e1a7450ec/research/x-c1/canonical-y-kernel-second-order-2026-10-03/PROOF.md).
+- depends_on: `CANONICAL-DIRECT-ODD-LINE-UNRESOLVED`, `CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: Bedingte Schnitte, keine Root-Überdeckung. UNRESOLVED ist weder struktureller Gegenbeweis noch Nachweis tatsächlicher großer Winkelstreuung.
+
+Aussage:
+
+- Die exakte Gleichung Y_L X+Y_R=0 wird mit gemeinsamem linearem und quadratischem Modell sowie komponentenweiser Neumann-Schranke geführt. Alle 19 Fälle sind reproduziert; fünf vollständige Punkte bleiben enthalten und maximal.
+- Die bedingten Schnitte central, quarter und half werden auf dem maximalen Eigenwertast mit den genannten Gesamtwinkeln eingeschlossen. Die Originalquittungen, 81 versiegelten Dateien und 59 geerbten Dateien bleiben gebunden.
+- Separate rationale Zentrum-, Rest- und Newtonprüfungen, 768-Bit-Arb-Winkelkontrollen und Positiv-/Negativkontrollen bestehen im ausgewiesenen Umfang. Keine uniforme Root-Promotion.
+
+Does not claim:
+
+- Keine uniforme ungerade Lokalisierung unter zehn Grad.
+- Keine neuen Operator-, Y58-, L_B- oder A13-Eingaben und kein neuer adaptiver Baum.
+- Kein allgemeiner Fortsetzungssatz, kein vollständiges Objekt X und keine RH.
+- Keine externe fachliche Begutachtung.
+
+Dokumentierte Reproduktion: [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/c5c779d42a866db0b21ef02b18d3585e1a7450ec/research/x-c1/canonical-y-kernel-second-order-2026-10-03/ACCEPTANCE.json), [audit.json](https://github.com/Waschtl904/objekt-x-programm/blob/c5c779d42a866db0b21ef02b18d3585e1a7450ec/research/x-c1/canonical-y-kernel-second-order-2026-10-03/audit.json), [summary.json](https://github.com/Waschtl904/objekt-x-programm/blob/c5c779d42a866db0b21ef02b18d3585e1a7450ec/research/x-c1/canonical-y-kernel-second-order-2026-10-03/summary.json), [controls.json](https://github.com/Waschtl904/objekt-x-programm/blob/c5c779d42a866db0b21ef02b18d3585e1a7450ec/research/x-c1/canonical-y-kernel-second-order-2026-10-03/controls.json), [PR206_2026-10-03.md](https://github.com/Waschtl904/objekt-x-programm/blob/c5dc6f33e04efbbaef28573c5659ba1434046c5f/00-uebersicht/integrationsnachweise/PR206_2026-10-03.md).
+
+## CANONICAL-H0-FOLLOWUP-RELAXATION-BOUNDARY
+
+H0-Rücktest, bedingter five_eighths-Winkel und Grenze der Drei-Cut-Relaxation
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Gebundene Folgeuntersuchung der unveränderten Y-Kernel-Modelle: neun maximale Linien einschließlich five_eighths <=4.933780 Grad, exakte Prüfung von 783 gespeicherten Zielen und eng begrenzter Drei-Cut-Grenznachweis. Root UNRESOLVED.
+- Canonical commit: [20789d6](https://github.com/Waschtl904/objekt-x-programm/commit/20789d6930299063238733ca9e2f391d66d1acf6).
+- Canonical proof: [research/x-c1/canonical-h0-followups-2026-10-03/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/20789d6930299063238733ca9e2f391d66d1acf6/research/x-c1/canonical-h0-followups-2026-10-03/PROOF.md).
+- depends_on: `CANONICAL-Y-KERNEL-SECOND-ORDER-UNRESOLVED`, `CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `EQUIVALENCE_OR_REDUCTION`.
+- Negative claim boundary: Nur die explizite letzte Drei-Cut-Relaxation ist unzureichend. Vollständiges H0 und ursprüngliche Root-Familie bleiben offen. Der zusätzliche GPT1-Block-45-Bericht ist übermittelt, nicht hier reproduziert.
+
+Aussage:
+
+- Der rekonstruierte Rücktestzeuge ist für alle freien A-Vervollständigungen ausgeschlossen; seine ganze Vier-Y-Faser ist damit nicht ausgeschlossen. Die Endpunktfolge isoliert neun maximale Linien; five_eighths besitzt bedingt den physischen Gesamtwinkel <=4.933780 Grad.
+- Alle 783 gespeicherten Multiplikatorzertifikate sind exakt auditiert. 271 Untergrenzen verbessern sich nach geerbten Koeffizientenschnitten; kein positiver Root-Rand. Dieser endliche Suchbefund ist kein allgemeiner Unmöglichkeitsnachweis.
+- Die im Originalbericht genau festgelegte letzte Drei-Cut-Koeffizientenrelaxation enthält einen Punkt mit drei strikt erfüllten Cuts und überall negativem F-Surrogat bei erlaubtem Rest null. Damit können nichtnegative Cut-Multiplikatoren keine benötigte positive Untergrenze beweisen. Der Punkt ist durch eine andere gemischte H0-Richtung ausgeschlossen und kein ursprünglicher Operatorgegenzeuge.
+- Drei geschlossene Archive, 56 Originaldateien, vier Rücktestquittungen, die Endpunkt-/Cut-/Multiplikatorprüfungen und acht Drei-Cut-Ergebnisquittungen sind gebunden und reproduziert. Die vollständige H0-Bedingung ist unentschieden.
+
+Does not claim:
+
+- Kein ursprünglicher Operatorgegenzeuge oder uniformer Root-Abschluss.
+- Keine neue Rekonstruktion aller Operatorintegrale oder Koeffizientenmodelle.
+- Keine reproduzierte Bestätigung des zusätzlichen H0-Block-45-Berichts.
+- Kein allgemeines Renewal, keine kofinale positive Familie, kein vollständiges Objekt X und keine RH.
+- Keine externe fachliche Begutachtung.
+
+Dokumentierte Reproduktion: [SOURCE_BINDINGS.json](https://github.com/Waschtl904/objekt-x-programm/blob/20789d6930299063238733ca9e2f391d66d1acf6/research/x-c1/canonical-h0-followups-2026-10-03/SOURCE_BINDINGS.json), [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/20789d6930299063238733ca9e2f391d66d1acf6/research/x-c1/canonical-h0-followups-2026-10-03/reports/pullback/ACCEPTANCE.json), [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/20789d6930299063238733ca9e2f391d66d1acf6/research/x-c1/canonical-h0-followups-2026-10-03/reports/root/ACCEPTANCE.json), [SUMMARY.json](https://github.com/Waschtl904/objekt-x-programm/blob/20789d6930299063238733ca9e2f391d66d1acf6/research/x-c1/canonical-h0-followups-2026-10-03/reports/three_cut/SUMMARY.json), [PR206_2026-10-03.md](https://github.com/Waschtl904/objekt-x-programm/blob/c5dc6f33e04efbbaef28573c5659ba1434046c5f/00-uebersicht/integrationsnachweise/PR206_2026-10-03.md).

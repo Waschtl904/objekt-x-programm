@@ -97,7 +97,11 @@ Prüfung getrennt zu bewerten.
 6. **Originalität und Nutzen:** Welche Teile sind bekannte Theorie, welche
    konkrete projektinterne Ableitungen? Gibt es einschlägige Vorarbeiten oder
    einfachere bekannte Wege? Haben Teilresultate auch ohne das globale Ziel Wert?
-7. **Forschungsentscheidung:** Welcher konkrete Einwand, Gegenversuch oder
+7. **Konstruktive Strategie:** Ist die vorgeschlagene vollständige Blockdarstellung
+   gerechtfertigt? Welche konkrete Prim-/Gamma-Ungleichung könnte den neuen
+   Schurrest kontrollieren, ohne seine Positivität vorauszusetzen? Welche
+   Diagnose würde genau diese fehlende Schranke liefern?
+8. **Forschungsentscheidung:** Welcher konkrete Einwand, Gegenversuch oder
    nächste Beweis würde die Einschätzung des Programms am stärksten verändern?
 
 ## Ein hilfreicher Reviewbericht

@@ -452,9 +452,9 @@ A8 → q8 → A9 → q9 → A11
         ↓
 [offen] globaler Readout T_X
         ↓
-[offen] vollständige Weil-Gramidentität
+[offen] vollständiges Objekt X mit exakter Weil-Gramidentität
         ↓
-RH
+danach: möglicher Anschluss an RH
 ```
 
 ---
