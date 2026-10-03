@@ -95,8 +95,8 @@ ersetzen keine unabhängige fachliche Begutachtung. Eine Neuheitsbewertung
 erfordert einen Vergleich mit der einschlägigen Literatur.
 
 Für konkrete Einwände bitte Satz, Datei, Commit und Begründung nennen.
-[MITWIRKEN](MITWIRKEN.md) beschreibt geeignete Beiträge;
-[CONTRIBUTING](CONTRIBUTING.md) regelt Änderungen und ihre Prüfung.
+[CONTRIBUTING](CONTRIBUTING.md) beschreibt geeignete Beiträge und regelt ihre Prüfung.
+Die [Herkunft des Journals](00-uebersicht/HERKUNFT.md) ist separat dokumentiert.
 
 Zitation und Herkunft: [CITATION.cff](CITATION.cff) · [ATTRIBUTION](ATTRIBUTION.md).
 Bei Verwendung einen konkreten Commit angeben. Originale Repository-Inhalte

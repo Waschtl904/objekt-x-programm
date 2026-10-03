@@ -42,7 +42,7 @@ konkrete Beweis sind gemeinsam zu lesen.
 | [`00-grundlegung/`](../00-grundlegung/) und Themenstränge `01`–`07` | Grundlagen und gewachsene Forschungsnotizen; Zugang über den [Archivindex](ARCHIVE_INDEX.md) |
 | [`audits/`](../audits/) und [`consolidation/`](../consolidation/) | Datierte Prüf-, Korrektur- und Konsolidierungsunterlagen |
 | [`scripts/`](../scripts/), [`tests/`](../tests/), [`.github/workflows/`](../.github/workflows/) | Rechenwerkzeuge, Prüfungen und automatisierte Abläufe; mathematische Certifier sind Teil ihrer Beweispakete |
-| Dateien im Stammverzeichnis | Einstieg, Mitarbeit, Zitation, Lizenz und Integrität sowie wenige erhaltene historische Einstiege |
+| Dateien im Stammverzeichnis | Einstieg, Mitarbeit, Zitation, Lizenz und Integrität sowie zwei durch Prüfskripte gebundene historische Einstiege |
 | [Frühere Root-Dateien](archiv/root-journal-2026-10-03/README.md) | Verlegte Journal-Audits, Zwischenbilanzen, Protokolle und historische Übersichten mit alten und neuen Pfaden |
 
 Die [Registry-Pflege](RESEARCH_STATE_MAINTENANCE.md) beschreibt, wie neue
@@ -64,10 +64,12 @@ Integration ist im Register verzeichnet. Beispiel: Das
 wurde durch [PR #204](https://github.com/Waschtl904/objekt-x-programm/pull/204)
 integriert, während seine Originalberichte ihre damaligen Angaben behalten.
 
-Die [Zuordnung der früheren Root-Dateien](archiv/root-journal-2026-10-03/MIGRATION.md)
-führt von alten Dateinamen zu ihrer heutigen Ablage. Die Originalfassungen
-bleiben erhalten; bei sechs Lesefassungen wurden ausschließlich Linkziele
-angepasst und Herkunftshinweise ergänzt.
+Die Pfadnachweise des [ersten](archiv/root-journal-2026-10-03/MIGRATION.md) und
+[zweiten Umzugs](archiv/root-navigation-2026-10-03/MIGRATION.md) führen von alten
+Dateinamen zu ihrer heutigen Ablage. Originalfassungen bleiben erhalten;
+Lesefassungen haben angepasste Links und ausdrücklich getrennte heutige Hinweise.
+Der [historische Journalindex](archiv/root-navigation-2026-10-03/INDEX.md)
+erschließt den früheren Bestand. Die [Importgeschichte](HERKUNFT.md) erklärt seine Herkunft.
 
 Das [Glossar](GLOSSAR.md) unterscheidet die heutige Arbeitsdefinition von
 älteren Kandidatenbegriffen. Der

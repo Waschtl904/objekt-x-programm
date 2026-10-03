@@ -1,3 +1,17 @@
+# Originalfassung: 07-weil-explizitformel/README.md
+
+Historische Quelle; Aussagen und relative Pfade gehören zum angegebenen Quellstand.
+
+- Originalpfad: `07-weil-explizitformel/README.md`
+- Quellcommit: `a0937fcd26705dbce53181fc78ea48b4108b3bc2`
+- Originalblob: `24bc592a90ff2ca74d2459ff35321e7bead18734`
+- SHA-256: `1f12cc45d2ff80092c85ee200e630ac2fc0bb28efb59c62552303b7ee0804994`
+- Originallänge: 8692 Bytes; abschließendes LF: true.
+
+Der Inhalt zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 > [!NOTE]
 > **Dokumentationspflege vom 2. Oktober 2026: historisches Themenregister**
 >
@@ -12,7 +26,7 @@
 
 NEU-220 – NEU-250a. Gammafaktor und Mellin-Normierung, Konturtransport zur Explizitformel, Nullstellenpaar-Kreinraum, Spektraldeterminante, RH-äquivalente Hankel-Hierarchie, relativer Wres-Strang und BC-Typbrücke.
 
-**42 Dokumente.** Zurück zum [Gesamtindex](../00-uebersicht/archiv/root-navigation-2026-10-03/INDEX.md) · [Repository-Start](../README.md)
+**42 Dokumente.** Zurück zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
 
 | ID | Dokument | Status |
 |---|---|---|
@@ -81,7 +95,4 @@ Aktiver Tiefenknoten:
 
 Statuslegende: `✓M` gesichert · `✓K` konstruktiv/typgeprüft · `✓R` Reduktion · `⚠M` konditional · `✗M` No-Go · `?O` offen. Die Zahl hinter dem Punkt zählt die Vorkommen im Dokument.
 
----
-
-Navigation vom 3. Oktober 2026: Ein relatives Linkziel wurde angepasst.
-[Vorherige Originalfassung](../00-uebersicht/archiv/root-navigation-2026-10-03/originale/07-weil-explizitformel/README.md).
+````````

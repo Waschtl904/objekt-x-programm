@@ -4,13 +4,18 @@ Dieser Einstieg dient der Navigation. Der aktuelle Forschungsstand steht in [CUR
 
 ## Root-Archivierung: 3. Oktober 2026
 
-Der [Einstieg zu den früheren Root-Dateien](archiv/root-journal-2026-10-03/README.md)
-ordnet 33 verlegte Dateien nach Audit, Journal und Orientierung. Der
-Repository-Stamm enthält dadurch 15 statt 48 Dateien. 27 Umzüge sind
-bytegleich; sechs Lesefassungen erhalten angepasste Links und separat
-gesicherte vollständige Originale. Der
-[Pfadnachweis](archiv/root-journal-2026-10-03/MIGRATION.md) bindet alte und neue
-Pfade sowie Originalbytes. Forschungsregister und Beweisanker bleiben unverändert.
+Der [erste Umzug](archiv/root-journal-2026-10-03/README.md) ordnete 33 Dateien
+ein und reduzierte den Root von 48 auf 15 Dateien. Sein
+[Pfadnachweis](archiv/root-journal-2026-10-03/MIGRATION.md) hält diesen Stand fest.
+
+Der [zweite Schritt](archiv/root-navigation-2026-10-03/README.md) reduzierte
+den Root auf elf Dateien: historischer Index und Bestandsaufnahme liegen im
+Archiv, die C0-Spezifikation beim Forschungszweig und die Mitarbeitshinweise
+in CONTRIBUTING. Die [Importgeschichte](HERKUNFT.md) steht in der Übersicht.
+Originalfassungen und Linkanpassungen sind im
+[zweiten Pfadnachweis](archiv/root-navigation-2026-10-03/MIGRATION.md) gebunden.
+
+Forschungsregister, mathematische Aussagen und Beweisanker bleiben unverändert.
 
 ## Branch-Pflege vom 2. Oktober 2026
 

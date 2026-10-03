@@ -108,5 +108,5 @@ Ansatzes, konkret geprüfte Stärken und Schwächen, entscheidende offene
 Übergänge, Literaturbezug und eine begründete Empfehlung für den nächsten
 Schritt. Eine Gesamtbestätigung ohne Prüfung der Belegkette wäre nicht gedeckt.
 
-Rückmeldungen können über [MITWIRKEN](../MITWIRKEN.md) eingebracht werden.
+Rückmeldungen können über [CONTRIBUTING](../CONTRIBUTING.md) eingebracht werden.
 Weitere Orientierung bietet der [Dokumentationswegweiser](DOKUMENTATIONSWEGWEISER.md).

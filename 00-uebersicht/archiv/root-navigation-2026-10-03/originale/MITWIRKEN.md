@@ -1,3 +1,17 @@
+# Originalfassung: MITWIRKEN.md
+
+Historische Quelle; Aussagen und relative Pfade gehören zum angegebenen Quellstand.
+
+- Originalpfad: `MITWIRKEN.md`
+- Quellcommit: `a0937fcd26705dbce53181fc78ea48b4108b3bc2`
+- Originalblob: `6b4fd9a2238b6dc0d0395b5a0044a598f7608452`
+- SHA-256: `88471a49a5ccb362e2d27bf78fe4fd98f2e879cd36f6bd4f7d08f4ea6aa45e97`
+- Originallänge: 4816 Bytes; abschließendes LF: true.
+
+Der Inhalt zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 # Mitwirken und Herkunft
 
 Aktuelle Aufgaben: [NEXT_GATES](00-uebersicht/NEXT_GATES.md).
@@ -90,3 +104,5 @@ Hypothese**. Einige als gesichert markierte Aussagen wurden im Laufe des Program
 spätere Audits korrigiert oder zurückgerollt; solche Fälle sind im
 [CHANGELOG](00-uebersicht/archiv/root-journal-2026-10-03/CHANGELOG.md) und in den Auditdateien nachvollziehbar. Wer Resultate von hier
 weiterverwendet, sollte den zugehörigen Beweis eigenständig prüfen.
+
+````````

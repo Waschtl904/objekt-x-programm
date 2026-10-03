@@ -1,3 +1,17 @@
+# Originalfassung: 00-uebersicht/archiv/root-journal-2026-10-03/CHANGELOG.md
+
+Historische Quelle; Aussagen und relative Pfade gehören zum angegebenen Quellstand.
+
+- Originalpfad: `00-uebersicht/archiv/root-journal-2026-10-03/CHANGELOG.md`
+- Quellcommit: `a0937fcd26705dbce53181fc78ea48b4108b3bc2`
+- Originalblob: `9521d5aa1f52efca4be290a706dd1ed0997e5bfa`
+- SHA-256: `18d20f89b38850d5dd8a7c9c583adb6ea0872c8b0a338c5cae2e30e9b31dadc2`
+- Originallänge: 36096 Bytes; abschließendes LF: true.
+
+Der Inhalt zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 > [!NOTE]
 > **Navigation nach dem Umzug vom 3. Oktober 2026.**
 >
@@ -15,7 +29,7 @@ Sitzungsprotokoll des Objekt-X-Programms, neueste Einträge zuerst.
 
 Die Einträge ab NEU-162 sind aus der Commit-Historie des Arbeitsjournals rekonstruiert und
 zu thematischen Blöcken zusammengefasst. Für Details siehe die jeweiligen Dokumente über
-den [Gesamtindex](../root-navigation-2026-10-03/INDEX.md).
+den [Gesamtindex](../../../INDEX.md).
 
 
 ---
@@ -549,7 +563,4 @@ ein negativer, aber präziser Befund, der den Übergang zur kohomologischen Rout
 Das ursprüngliche Sitzungsprotokoll bis zum 15. Juli 2026 ist unverändert erhalten:
 [CHANGELOG_alt.md](CHANGELOG_alt.md).
 
----
-
-Navigation vom 3. Oktober 2026: Ein relatives Linkziel wurde angepasst.
-[Vorherige Originalfassung](../root-navigation-2026-10-03/originale/00-uebersicht/archiv/root-journal-2026-10-03/CHANGELOG.md).
+````````

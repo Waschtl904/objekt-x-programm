@@ -1,3 +1,17 @@
+# Originalfassung: 03-weil-form-statistik/README.md
+
+Historische Quelle; Aussagen und relative Pfade gehören zum angegebenen Quellstand.
+
+- Originalpfad: `03-weil-form-statistik/README.md`
+- Quellcommit: `a0937fcd26705dbce53181fc78ea48b4108b3bc2`
+- Originalblob: `a27043eb2e95e6bba382d4c66dabf77802ef8b61`
+- SHA-256: `1292cf8cd6cb617ef0d34d7e10513d00ecfd574bc99c92aaf43b05deb4913fa6`
+- Originallänge: 5208 Bytes; abschließendes LF: true.
+
+Der Inhalt zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 > [!NOTE]
 > **Dokumentationspflege vom 2. Oktober 2026: historisches Themenregister**
 >
@@ -12,7 +26,7 @@
 
 NEU-91 – NEU-120. Quadratischer Pivot zur Weil-Form, Bochner-Tor, Goldston–Montgomery-Transfer, GUE-/Poisson-Formfaktortest, Herglotz-Weil-Bruecke und Bombieri-Normalisierung.
 
-**31 Dokumente.** Zurueck zum [Gesamtindex](../00-uebersicht/archiv/root-navigation-2026-10-03/INDEX.md) · [Repository-Start](../README.md)
+**31 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
 
 | ID | Dokument | Status |
 |---|---|---|
@@ -52,7 +66,4 @@ NEU-91 – NEU-120. Quadratischer Pivot zur Weil-Form, Bochner-Tor, Goldston–M
 
 Statuslegende: `✓M` gesichert · `✓K` konstruktiv/typgeprueft · `✓R` Reduktion · `⚠M` konditional · `✗M` No-Go · `?O` offen. Die Zahl hinter dem Punkt zaehlt die Vorkommen im Dokument.
 
----
-
-Navigation vom 3. Oktober 2026: Ein relatives Linkziel wurde angepasst.
-[Vorherige Originalfassung](../00-uebersicht/archiv/root-navigation-2026-10-03/originale/03-weil-form-statistik/README.md).
+````````

@@ -1,3 +1,17 @@
+# Originalfassung: research/x-c0/A1_COMP_STATUS_CAPSULE.md
+
+Historische Quelle; Aussagen und relative Pfade gehören zum angegebenen Quellstand.
+
+- Originalpfad: `research/x-c0/A1_COMP_STATUS_CAPSULE.md`
+- Quellcommit: `a0937fcd26705dbce53181fc78ea48b4108b3bc2`
+- Originalblob: `33f1f82699cbd31744d74c3ad63a7ac769d3322c`
+- SHA-256: `9fc46a462b8a1c9d15f6c98770c4ad8ed839ccee165c5fc2b4a015fcb7fc237d`
+- Originallänge: 4131 Bytes; abschließendes LF: true.
+
+Der Inhalt zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 # A1-COMP — eingefrorene Statuskapsel
 
 **Stand:** 16. September 2026. **Zweck:** konditionaler Import für neue Forschung, kein weiterer Audit.
@@ -71,9 +85,6 @@ Bestandteil dieses Imports ausgegeben.
 PR #131 bleibt unverändert und extern review-offen. X-C0 arbeitet auf einem
 separaten Branch von `main`, ohne Cherry-pick/Merge von #131 oder #116/#127.
 Registry und main werden durch diese Statuskapsel nicht promoviert.
-Der erste Kandidateneinstieg ist [`../../X_CANDIDATE_C0_SPEC.md`](X_CANDIDATE_C0_SPEC.md).
+Der erste Kandidateneinstieg ist [`../../X_CANDIDATE_C0_SPEC.md`](../../X_CANDIDATE_C0_SPEC.md).
 
----
-
-Navigation vom 3. Oktober 2026: Ein relatives Linkziel wurde angepasst.
-[Vorherige Originalfassung](../../00-uebersicht/archiv/root-navigation-2026-10-03/originale/research/x-c0/A1_COMP_STATUS_CAPSULE.md).
+````````
