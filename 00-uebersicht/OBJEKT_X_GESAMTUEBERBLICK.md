@@ -1,14 +1,14 @@
 # Objekt X – Gesamtüberblick
 
-**Stand:** 2. Oktober 2026
+**Forschungsstand:** 2. Oktober 2026 · **Redaktion:** 3. Oktober 2026
 
 **Forschungsbasis:** `83c00ddfe161563f35b31b4ae570faede0834b82` ([PR #204](https://github.com/Waschtl904/objekt-x-programm/pull/204)).
 Registry- und Reviewstatus stehen in [CURRENT_STATE](CURRENT_STATE.md).
 Der Beweisanker des Direct-Line-Blocks bleibt der Research-Head `c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33`; der aktuelle Main-Head wird live gelesen.
 
-**Zweck:** Verständliche Gesamterzählung des Programms – klassische Grundlagen, eigene Resultate, rigorose No-Gos, aktuelle positive C1-Geometrie und offene globale Schritte.
+**Zweck:** Überblick über klassische Grundlagen, projektinterne Herleitungen, Ausschlüsse, endliche positive C1-Geometrie und offene globale Schritte. Für eine Prüfung der Belege siehe den [Leitfaden zur externen Begutachtung](EXTERNE_BEGUTACHTUNG.md).
 
-> **Kurzfassung:** Objekt X ist noch nicht vollständig konstruiert und RH ist nicht bewiesen. Das Programm hat aber eine eigenständige mathematische Kernarchitektur entwickelt: eine physische finite Weil-Form, einen gemeinsamen Prime-/Gamma-Spektralmediator, eine exakte Defektreduktion und mehrere streng positive endliche Kammern mit kompatiblen Transporten.
+> **Kurzfassung:** Objekt X ist noch nicht vollständig konstruiert und RH ist nicht bewiesen. Der dokumentierte Ansatz verbindet eine physische finite Weil-Form, einen gemeinsamen Prime-/Gamma-Spektralmediator, eine exakte Defektreduktion und mehrere streng positive endliche Kammern mit kompatiblen Transporten. Die projektinternen Ergebnisse sind zur externen Prüfung offen.
 
 ---
 
@@ -39,11 +39,13 @@ Diese Sätze und Methoden werden **nicht** als projektinterne Originalleistung b
 
 ---
 
-## 3. Haben wir nur andere Mathematiker kopiert?
+## 3. Klassische Grundlagen und projektinterne Ableitungen
 
-Nein. Die faire Einordnung lautet:
-
-> **Klassische Sätze sind die Infrastruktur. Projektintern neu sind konkrete Kandidatenarchitekturen, Ausschlüsse, Defektreduktionen, Transportgesetze und finite Positivitätsbeweise.**
+Die klassischen Sätze tragen die Untersuchung. Das Repository entwickelt
+darauf aufbauend konkrete Kandidatenarchitekturen, Ausschlüsse,
+Defektreduktionen, Transportgesetze und finite Positivitätsbeweise.
+Ihre Einordnung als projektinterne Herleitung ist von einer durch
+Literaturvergleich und externen Review bestätigten Neuheit zu unterscheiden.
 
 Ein klassischer Ausgangspunkt ist etwa
 
@@ -53,7 +55,7 @@ B_W\ge0
 \mathrm{RH}.
 ```
 
-Projektintern ist dagegen die konkrete Konstruktion
+Im Projekt wird die konkrete Konstruktion untersucht:
 
 ```math
 q_A(u,v)
@@ -79,13 +81,16 @@ q_A(u,v)
 }
 ```
 
-Diese spezifische Prime-/Gamma-Mediator- und Defektarchitektur ist nicht aus einem klassischen Satz abgeschrieben.
+Zu prüfen sind die konkrete Konstruktion des gemeinsamen Mediators, die
+Wohldefiniertheit des Defekttransfers und die Voraussetzungen dieser Identität.
+Die gebundenen Beweispakete enthalten die entsprechenden Herleitungen.
 
 ---
 
-## 4. Was der unabhängige Audit geleistet hat
+## 4. Dokumentierter Audit und Korrekturen
 
-Der unabhängige Gesamtaudit hat nicht nur Statusdateien nacherzählt. Er hat zentrale Beweislinien nachgerechnet und mehrere echte Fehler gefunden und korrigiert, darunter:
+Der im Repository geführte [Gesamtaudit](OBJEKT_X_UNABHAENGIGER_GESAMTAUDIT.md)
+dokumentiert Prüfungen und Korrekturen zentraler Beweislinien. Dazu gehören:
 
 - Vorzeichen des archimedischen Skalierungsgenerators;
 - logarithmischer Koordinatenwechsel;
@@ -97,11 +102,14 @@ Der unabhängige Gesamtaudit hat nicht nur Statusdateien nacherzählt. Er hat ze
 - das Vorzeichen des Suzuki-Spektralbodens;
 - überstarke Kanonizitätsbehauptungen bei lokalen Shifts und Phasen.
 
-Das Programm wurde dadurch mehrfach **mathematisch enger und sauberer**, nicht nur schöner dokumentiert.
+Diese Korrekturen sind bei der Lektüre älterer Kandidaten zu berücksichtigen.
+Der Audit hat einen eigenen datierten Prüfumfang. Sein Titel ist keine
+Bestätigung einer abgeschlossenen externen Gesamtbegutachtung;
+`EXTERNAL_REVIEW_OPEN` bleibt maßgeblich.
 
 ---
 
-## 5. Echte rigorose No-Gos
+## 5. Ausschlüsse benannter Kandidatenklassen
 
 Im aktuellen Survivor-Register stehen zwei explizit als projektinterne No-Gos klassifizierte Resultate.
 
@@ -125,7 +133,7 @@ Die mathematische Konsequenz ist konstruktiv wichtig: Die Prime-Kanäle müssen 
 
 ---
 
-## 6. Weitere rigorose Firewalls
+## 6. Weitere Grenzen verwendeter Ansätze
 
 ### Haar-$L^2$
 
@@ -149,9 +157,11 @@ Jede finite Suzuki-Stufe lässt sich durch Verschiebung unter ihren Spektralbode
 
 ---
 
-## 7. Wo die heutige Objekt-X-Mathematik wirklich beginnt
+## 7. Physische Weil-Form und gemeinsame Defektgeometrie
 
-Die heutige Kernlinie beginnt bei der **tatsächlichen physischen signed Form** und nicht bei P02, Haar-$L^2$, Suzuki oder P11s positiver Kandidatenform.
+Die heutige Kernlinie beginnt bei der **physischen signierten Weil-Form**.
+Frühere Kandidaten in P02, Haar-$L^2$, Suzuki oder P11 haben ihre jeweils
+eigenen, begrenzten Geltungsbereiche.
 
 Für die physischen Zwei-Mellin-Quellen wird ein gemeinsamer Prime-/Gamma-Mediator konstruiert:
 
@@ -185,13 +195,13 @@ Erst dann entsteht die invertierbare positive Wurzel
 \Delta_A=(I-R_A^*R_A)^{1/2}.
 ```
 
-Diese Defektgeometrie ist heute der mathematisch schärfste Kern des Objekt-X-Programms.
+Diese Defektgeometrie bildet den Ausgangspunkt der aktuellen C1-Untersuchung.
 
 ---
 
 ## 8. Projektinterne positive Sätze
 
-Der operative Registerstand enthält mehrere eigenständige positive Resultate. Dazu gehören insbesondere:
+Der operative Registerstand enthält mehrere projektintern hergeleitete positive Resultate. Dazu gehören insbesondere:
 
 - Positivität auf frühen endlichen Bändern;
 - ein vollständiger beweglicher High-Tail;
@@ -211,7 +221,9 @@ q_A[u]\ge10^{-50}\|u\|_2^2,
 1\le A\le A_{11}.
 ```
 
-Die Ergebnisse sind `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`: deutlich stärker als numerische Experimente, aber nicht mit einer vollständig unabhängigen externen Publikationsprüfung gleichzusetzen.
+Die Ergebnisse sind `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`. Analytische
+Herleitungen und zertifizierte Rechnungen sind in den Beweispaketen
+ausgewiesen; die unabhängige externe fachliche Prüfung bleibt offen.
 
 ---
 
@@ -268,7 +280,7 @@ Kein Merge, kein grüner CI-Lauf und kein lokales Matrixzertifikat darf mit dies
 
 ---
 
-## 12. Originalität in vier Ebenen
+## 12. Herkunft der Bausteine und Neuheitsprüfung
 
 | Ebene | Einordnung |
 | --- | --- |
@@ -277,7 +289,10 @@ Kein Merge, kein grüner CI-Lauf und kein lokales Matrixzertifikat darf mit dies
 | Projektinterne Konstruktion | C0-Directed-System, C1-Mediator, Defekttransfer, vollständige High-Response-Schurtechnik, Quadratwurzelkorrektur, Wandcocycle |
 | Projektinterne Sätze/No-Gos | endliche Terminal-/Kammerpositivität; No-Go für kurze Reichweite + endlichen Rang; No-Go für isolierte positive Primeblöcke |
 
-Das Projekt ist damit **weder bloßes Abschreiben noch bereits ein RH-Beweis**.
+Die Tabelle ordnet die Herkunft der dokumentierten Bausteine ein. Ob und
+in welchem Umfang die projektinternen Ableitungen über bekannte Resultate
+hinausgehen, ist anhand konkreter Aussagen und einschlägiger Literatur
+extern zu prüfen.
 
 ---
 
@@ -435,24 +450,27 @@ RH
 
 ## 15. Schluss
 
-Der heutige Stand lässt sich so zusammenfassen:
+Dokumentiert sind Ausschlüsse benannter Kandidatenklassen, eine gemeinsame
+Prime-/Gamma-Defektgeometrie, vollständige Schurreduktionen und positive
+endliche Kammern bis A11. Diese projektinternen Ergebnisse haben jeweils
+eigene Voraussetzungen und Belegketten; ihre externe Prüfung bleibt offen.
 
-> **Objekt X ist noch nicht gefunden, aber die RH-Positivitätsfrage wurde im Programm auf eine konkrete, nichtzirkuläre Defekt- und Schurgeometrie reduziert und auf mehreren vollständigen endlichen Horizonten streng positiv geschlossen.**
-
-Die stärkste Leistung des Projekts liegt derzeit in der Kombination aus rigorosen Ausschlüssen falscher Kandidatenklassen, gemeinsamer Prime-/Gamma-Geometrie, exakter Defektreduktion, vollständiger High-Response-Technik, kammerweiser positiver Gramrealisierung und iterierbarer Prime-Power-Wandgeometrie.
-
-Ob daraus eine kofinale positive Geometrie und schließlich globale Weil-Positivität hervorgeht, bleibt die zentrale offene Frage.
+Der Übergang zu einer kofinalen positiven Familie und zur vollständigen
+globalen Weil-Gramidentität ist weiterhin unbewiesen. Davon hängt ab, ob
+die endlichen Konstruktionen das globale Ziel des Programms erreichen.
 
 ---
 
 ## 16. Status- und Leseregel
 
-Für mathematischen Status gelten weiterhin die kanonischen Quellen:
+Die Quellen erfüllen unterschiedliche Rollen:
 
-1. [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml)
-2. [CURRENT_STATE.md](CURRENT_STATE.md)
-3. [SURVIVOR_REGISTRY.md](SURVIVOR_REGISTRY.md)
-4. [OBJEKT_X_UNABHAENGIGER_GESAMTAUDIT.md](OBJEKT_X_UNABHAENGIGER_GESAMTAUDIT.md)
-5. die jeweiligen Beweispakete.
+1. [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml) verwaltet den operativen Status
+   und die Bindung an Belege.
+2. [CURRENT_STATE.md](CURRENT_STATE.md) und
+   [SURVIVOR_REGISTRY.md](SURVIVOR_REGISTRY.md) sind daraus erzeugte Ansichten.
+3. Die jeweils gepinnten Beweispakete begründen die mathematischen Aussagen.
+4. Der [Gesamtaudit](OBJEKT_X_UNABHAENGIGER_GESAMTAUDIT.md) dokumentiert seine
+   datierten Prüfungen und Korrekturen.
 
 Dieser Gesamtüberblick ist eine **Synthese**, keine zusätzliche Beweisautorität.

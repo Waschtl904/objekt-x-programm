@@ -19,7 +19,7 @@ neues Manifest erzeugen.
 | `.canary` | `e6c1afe34a565abf999843248c4fadaf1e55ae1ecd3bb1e8b009b872dfc00ba5` |
 | `ATTRIBUTION.md` | `34b1bece2cb3f3f413b4895556cad53ff05764e759915b2b93db082324966a4e` |
 | `SECURITY.md` | `1b3726621bc6a9de6e9db0887d5f3a855e38d26f0ac7f5a854cd6f6431db8833` |
-| `CITATION.cff` | `67e04f14734e1128a2bc99ef322dbfb751c343389a6b360372ce063f049e67fe` |
+| `CITATION.cff` | `2285d4127fbc37337ba4b1b11381d06fbc1c9b9c75caccc45a52f5a759139ee1` |
 | `LICENSE` | `9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411` |
 | `tests/fixtures/dummy_credentials.json` | `bd5ef63aacbb09bf5578c68d9b2d64f3ac3d0dd14b2c572808f6122c529486a2` |
 
