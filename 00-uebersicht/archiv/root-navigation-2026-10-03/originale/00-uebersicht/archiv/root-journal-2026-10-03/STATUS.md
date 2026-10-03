@@ -1,3 +1,17 @@
+# Originalfassung: 00-uebersicht/archiv/root-journal-2026-10-03/STATUS.md
+
+Historische Quelle; Aussagen und relative Pfade gehören zum angegebenen Quellstand.
+
+- Originalpfad: `00-uebersicht/archiv/root-journal-2026-10-03/STATUS.md`
+- Quellcommit: `a0937fcd26705dbce53181fc78ea48b4108b3bc2`
+- Originalblob: `4be45fa7b6537412a7553aa2273be11c58c6dd06`
+- SHA-256: `46d1d07f5dbda7d679cb91bdd99e7f4e782543d896ceb36227c55d369ea87f7b`
+- Originallänge: 15614 Bytes; abschließendes LF: false.
+
+Der Inhalt zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 > [!NOTE]
 > **Navigation nach dem Umzug vom 3. Oktober 2026.**
 >
@@ -17,7 +31,7 @@
 # Statusregister
 
 Verdichtete Gesamtbilanz des Programms ohne Zwischenschritte. Für die vollständige
-Dokumentliste siehe [INDEX.md](../root-navigation-2026-10-03/INDEX.md), für die Verzweigungsbedingungen der offenen
+Dokumentliste siehe [INDEX.md](../../../INDEX.md), für die Verzweigungsbedingungen der offenen
 Knoten [OFFENE_PROBLEME.md](OFFENE_PROBLEME.md).
 
 > Stand: 3. August 2026 · letzter Eintrag NEU-228 · Direktaudits NEU-210/211 verbucht
@@ -253,7 +267,5 @@ Dokumente sind erhalten und über den Index unterscheidbar.
 | NEU-219u | No-Go-Theorem / Abschlussaudit |
 | NEU-219y | Zieltypbrücke $D_g$ / Unit-Slot-Zeuge |
 | NEU-220k | Konturtransport-Konvergenz / Xi-Masterkontur |
----
 
-Navigation vom 3. Oktober 2026: Ein relatives Linkziel wurde angepasst.
-[Vorherige Originalfassung](../root-navigation-2026-10-03/originale/00-uebersicht/archiv/root-journal-2026-10-03/STATUS.md).
+````````

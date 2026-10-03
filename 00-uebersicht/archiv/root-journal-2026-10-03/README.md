@@ -75,16 +75,16 @@ Alle folgenden Dateinamen lagen zuvor direkt im Root:
 | `GLOSSAR.md` | [Glossar in der Übersicht](../../GLOSSAR.md) |
 | `KONVENTIONEN.md` | [Rechenkonventionen in den Grundlagen](../../../00-grundlegung/KONVENTIONEN.md) |
 
-## Warum bleiben 15 Dateien im Root?
+## Weitere Ordnung der Root-Dateien
 
-Zehn Dateien dienen Einstieg, Mitarbeit, Lizenz, Zitation und Integrität.
-`CURRENT-FRONT.md` und `EINSTIEGSPROMPT.md` behalten ihre durch die Registry
-geprüften Originalpfade. Auch `INDEX.md`, `X_CANDIDATE_C0_SPEC.md` und
-`OBJEKT-X-BESTANDSAUFNAHME.md` bleiben zunächst erhalten: Der Index bündelt
-viele relative Verweise, die C0-Spezifikation ist aus Forschungsquellen
-verlinkt, und die Bestandsaufnahme bleibt als zusätzlicher historischer
-Einstieg erreichbar. Der Umzug benötigt keine Änderung dieser Quellen,
-der Prüfskripte oder des mathematischen Registers.
+Dieser erste Umzug reduzierte den Root von 48 auf 15 Dateien. Im
+[zweiten Schritt](../root-navigation-2026-10-03/README.md) wurden Index,
+Bestandsaufnahme und C0-Spezifikation eingeordnet sowie die Mitarbeitshinweise
+zusammengeführt; seit diesem Schritt bleiben elf Root-Dateien.
+
+Die oben genannten Zahlen und Hashes im ersten Pfadnachweis beziehen sich
+auf dessen Abschlussstand. Die späteren Linkanpassungen in CHANGELOG und
+STATUS sind im zweiten Pfadnachweis mit ihren Quellenfassungen dokumentiert.
 
 Zurück zum [Archiveinstieg](../../ARCHIVE_INDEX.md) oder zum
 [Dokumentationswegweiser](../../DOKUMENTATIONSWEGWEISER.md).

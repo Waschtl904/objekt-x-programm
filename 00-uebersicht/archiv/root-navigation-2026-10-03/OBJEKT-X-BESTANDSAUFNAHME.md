@@ -1,12 +1,13 @@
+> [!NOTE]
+> **Einordnung und Navigation vom 3. Oktober 2026.**
+>
+> Bestandsaufnahme vom 5. August 2026; spätere Navigationshinweise sind ebenfalls historisch.
+> Heutige [Arbeitsdefinition](../../OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) und [Forschungsstand](../../CURRENT_STATE.md).
+> Der frühere Navigationshinweis ist hier ersetzt; der übrige Text bleibt erhalten.
+> [Originalfassung mit Herkunftsnachweis](originale/OBJEKT-X-BESTANDSAUFNAHME.md).
+
 # Objekt X — Bestandsaufnahme und Steckbrief
 
-> **HISTORISCHER BESTANDSAUFNAHME-SNAPSHOT — Stand 5. August 2026.**
-> Dieses Dokument bleibt als damalige Inventur erhalten und wird nicht fortlaufend
-> nachgeführt. Für die heutige Definition und Forschungsfront gelten
-> [00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md),
-> [CURRENT-FRONT.md](CURRENT-FRONT.md) und
-> [00-uebersicht/FORSCHUNGS_ROADMAP_2026-09-03.md](00-uebersicht/FORSCHUNGS_ROADMAP_2026-09-03.md).
->
 **Stand: 5. August 2026 (nach NEU-219-Finalaudit, NEU-220c und Abgleich mit NEU-223/225/227)**
 
 Eine Inventur nach 324+ Dokumenten: Was wissen wir über Objekt X, was ist ausgeschlossen,
@@ -67,9 +68,9 @@ bleibt als **Transfer-/Streuungsunterpfad** erhalten, ist aber noch kein Abguss 
 
 ### 1.1 Das Axiomenregister ist weiter veraltet, aber der Steckbrief ist schärfer
 
-Die einzige systematische Beschreibung von Objekt X — [`ebene-XVI-objekt-x.md`](00-grundlegung/ebene-XVI-objekt-x.md)
+Die einzige systematische Beschreibung von Objekt X — [`ebene-XVI-objekt-x.md`](../../../00-grundlegung/ebene-XVI-objekt-x.md)
 mit den Positivbedingungen X.1–X.10 und den Ausschlussbedingungen X.neg.1–X.neg.7 — trägt
-den Stand NEU-114. Das zweite Axiomensystem, [`objekt_x_minimalaxiome.md`](00-grundlegung/objekt_x_minimalaxiome.md),
+den Stand NEU-114. Das zweite Axiomensystem, [`objekt_x_minimalaxiome.md`](../../../00-grundlegung/objekt_x_minimalaxiome.md),
 steht weiterhin auf `✗[H]`. Beide Register sind veraltet.
 
 **Neu ist aber:** Der Steckbrief von X ist inzwischen wesentlich schärfer. Neben den 22 No-Go-

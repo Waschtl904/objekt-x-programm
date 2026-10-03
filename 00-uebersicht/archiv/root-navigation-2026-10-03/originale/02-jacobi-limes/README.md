@@ -1,3 +1,17 @@
+# Originalfassung: 02-jacobi-limes/README.md
+
+Historische Quelle; Aussagen und relative Pfade gehören zum angegebenen Quellstand.
+
+- Originalpfad: `02-jacobi-limes/README.md`
+- Quellcommit: `a0937fcd26705dbce53181fc78ea48b4108b3bc2`
+- Originalblob: `159d05d5d7895145136667be1aa24f558a9a9a37`
+- SHA-256: `6db9f1a30593bda92bd30e4cb1c039ba9dcc6b6dd243afab9d25859fbbb0766d`
+- Originallänge: 5877 Bytes; abschließendes LF: true.
+
+Der Inhalt zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 > [!NOTE]
 > **Dokumentationspflege vom 2. Oktober 2026: historisches Themenregister**
 >
@@ -12,7 +26,7 @@
 
 NEU-58 – NEU-90. Jacobi-Grenzwert der Feshbach-Kette, arithmetische Identifikation der Weyl-/Stieltjes-Funktion, Divisorpfade, Ihara-Reduktion, BC-Vergleich und Schleifeninvarianten.
 
-**33 Dokumente.** Zurueck zum [Gesamtindex](../00-uebersicht/archiv/root-navigation-2026-10-03/INDEX.md) · [Repository-Start](../README.md)
+**33 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
 
 | ID | Dokument | Status |
 |---|---|---|
@@ -54,7 +68,4 @@ NEU-58 – NEU-90. Jacobi-Grenzwert der Feshbach-Kette, arithmetische Identifika
 
 Statuslegende: `✓M` gesichert · `✓K` konstruktiv/typgeprueft · `✓R` Reduktion · `⚠M` konditional · `✗M` No-Go · `?O` offen. Die Zahl hinter dem Punkt zaehlt die Vorkommen im Dokument.
 
----
-
-Navigation vom 3. Oktober 2026: Ein relatives Linkziel wurde angepasst.
-[Vorherige Originalfassung](../00-uebersicht/archiv/root-navigation-2026-10-03/originale/02-jacobi-limes/README.md).
+````````

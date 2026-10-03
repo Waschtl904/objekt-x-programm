@@ -1,3 +1,17 @@
+# Originalfassung: 05-primkanal-fourierladung/README.md
+
+Historische Quelle; Aussagen und relative Pfade gehören zum angegebenen Quellstand.
+
+- Originalpfad: `05-primkanal-fourierladung/README.md`
+- Quellcommit: `a0937fcd26705dbce53181fc78ea48b4108b3bc2`
+- Originalblob: `e40a0755d13994c3de6b5b42fc31db380eeb5b59`
+- SHA-256: `caf80b64fe2fde4b091123cea854c7b2b687b08cd811d1c936b122987bb91d76`
+- Originallänge: 5847 Bytes; abschließendes LF: true.
+
+Der Inhalt zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 > [!NOTE]
 > **Dokumentationspflege vom 2. Oktober 2026: historisches Themenregister**
 >
@@ -12,7 +26,7 @@
 
 NEU-151 – NEU-173. Nichtentartung und Hebungsunabhaengigkeit der Primkanalgewichte, Rohkopplungsquotient, Zeugenroute fuer die nichttriviale Fourierladung von L3-Kreis und das Typfundament der L3-Klasse.
 
-**33 Dokumente.** Zurueck zum [Gesamtindex](../00-uebersicht/archiv/root-navigation-2026-10-03/INDEX.md) · [Repository-Start](../README.md)
+**33 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
 
 | ID | Dokument | Status |
 |---|---|---|
@@ -54,7 +68,4 @@ NEU-151 – NEU-173. Nichtentartung und Hebungsunabhaengigkeit der Primkanalgewi
 
 Statuslegende: `✓M` gesichert · `✓K` konstruktiv/typgeprueft · `✓R` Reduktion · `⚠M` konditional · `✗M` No-Go · `?O` offen. Die Zahl hinter dem Punkt zaehlt die Vorkommen im Dokument.
 
----
-
-Navigation vom 3. Oktober 2026: Ein relatives Linkziel wurde angepasst.
-[Vorherige Originalfassung](../00-uebersicht/archiv/root-navigation-2026-10-03/originale/05-primkanal-fourierladung/README.md).
+````````

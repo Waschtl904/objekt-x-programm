@@ -1,3 +1,17 @@
+# Originalfassung: 06-hochschild-bc-algebra/README.md
+
+Historische Quelle; Aussagen und relative Pfade gehören zum angegebenen Quellstand.
+
+- Originalpfad: `06-hochschild-bc-algebra/README.md`
+- Quellcommit: `a0937fcd26705dbce53181fc78ea48b4108b3bc2`
+- Originalblob: `f781ff56b47497b604c9edea7cfe17209d323696`
+- SHA-256: `f82298a668372f190d601ae6dcc6084073f471ab07fe7913372d69c06e58fe78`
+- Originallänge: 13038 Bytes; abschließendes LF: true.
+
+Der Inhalt zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 > [!NOTE]
 > **Dokumentationspflege vom 2. Oktober 2026: historisches Themenregister**
 >
@@ -12,7 +26,7 @@
 
 NEU-174 – NEU-219z. Minimaler Hochschild-Komplex, geladene HH4-Klassen, Zentrums- und Nullkozykeltests, singulaere aeussere Derivationen, logarithmischer Koeffiziententyp und der O-219-Rotationsstrang.
 
-**79 Dokumente.** Zurueck zum [Gesamtindex](../00-uebersicht/archiv/root-navigation-2026-10-03/INDEX.md) · [Repository-Start](../README.md)
+**79 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
 
 | ID | Dokument | Status |
 |---|---|---|
@@ -100,7 +114,4 @@ NEU-174 – NEU-219z. Minimaler Hochschild-Komplex, geladene HH4-Klassen, Zentru
 
 Statuslegende: `✓M` gesichert · `✓K` konstruktiv/typgeprueft · `✓R` Reduktion · `⚠M` konditional · `✗M` No-Go · `?O` offen. Die Zahl hinter dem Punkt zaehlt die Vorkommen im Dokument.
 
----
-
-Navigation vom 3. Oktober 2026: Ein relatives Linkziel wurde angepasst.
-[Vorherige Originalfassung](../00-uebersicht/archiv/root-navigation-2026-10-03/originale/06-hochschild-bc-algebra/README.md).
+````````
