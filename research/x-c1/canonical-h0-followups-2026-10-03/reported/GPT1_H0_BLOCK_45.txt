@@ -1,0 +1,250 @@
+Objekt X — Auch der gesamte H₀-Block (4,5) reicht nicht
+
+3. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+Root: UNRESOLVED. Nur lokale Rechnungen, keine GitHub-Schreibaktion.
+
+1. Ergebnis und Scope
+
+Das übermittelte Drei-Cut-Paket wurde mit seinem unveränderten Reproduktionswrapper ausgeführt. Alle acht Ergebnisdateien sind bytegleich mit seinen versiegelten Erwartungsdateien. Die Quittung liegt als SOURCE_REPRODUCTION.json bei. Dieser Quellreplay wiederholt nicht die ursprünglichen Operatorintegrale, den früheren 783-Ziel-Test oder die Winkelrechnungen.
+
+Die neue Folgerechnung geht über das bloße Hinzufügen der entgegengesetzten Richtung hinaus:
+
+Es gibt einen exakten Symbolpunkt, der alle drei bisherigen Cuts strikt erfüllt und den gesamten exakten H₀-Hauptblock (4,5) für jede freie A-seitige Gram-Vervollständigung positiv definit macht. Trotzdem ist sein gespeichertes quadratisches F-Surrogat auf der ganzen reellen s-Achse strikt negativ.
+
+Damit reicht selbst die vollständige H₀-Bedingung auf diesem zweidimensionalen Unterraum nicht, um die letzte Koeffizientenrelaxation zu schließen. Beliebig viele zusätzliche notwendige Richtungscuts, die ausschließlich aus diesem Block abgeleitet sind, können diesen Punkt nicht ausschließen.
+
+Der Punkt ist kein Operator-Gegenzeuge. Eine H₀-Richtung im Unterraum (3,4) schließt ihn für alle freien A-seitigen Vervollständigungen aus. Das Hindernis betrifft nur die unten exakt definierte Relaxation, nicht Root als tatsächliche zulässige Familie.
+
+2. Neuer Symbolpunkt
+
+Die Belegung verwendet die ursprünglichen, nicht fortlaufenden Kennungen:
+
+\varepsilon_{27}=-1,\qquad
+\varepsilon_{38}=\varepsilon_{39}=1,\qquad
+\varepsilon_{47}=-1,
+
+alle anderen dargestellten Symbole null. Die Quelle enthält diesen Punkt bereits in ihrer Kandidatenliste; hier wird er gezielt gegen den gesamten Block (4,5) geprüft. Es wird keine größere Punktsuche ausgeführt.
+
+Eingabe, Indizes ab 1
+
+Wert
+
+Y₄₄, Symbol 27
+
+Unterer Root-Intervallrand
+
+Y₅₇, Symbol 38
+
+Oberer Root-Intervallrand
+
+Y₅₈, Symbol 39
+
+Oberer Root-Intervallrand
+
+Y₆₇, Symbol 46
+
+Mittelpunkt
+
+Y₆₈, Symbol 47
+
+Unterer Root-Intervallrand
+
+Y₄₄ ist nicht Y₅₄. Der bisherige Drei-Cut-Zeuge setzte stattdessen Symbol 35 auf −1. Im neuen Punkt ist Symbol 35 wieder null. Alle anderen dargestellten Y-/B-Eingaben stehen an ihren tatsächlichen Mitten. Nicht dargestellte A-seitige Größen bleiben frei in ihren geerbten Einschlüssen.
+
+Die strikten Cut-Reserven sind:
+
+Bedingung
+
+Exakt geprüfte vereinfachte Untergrenze
+
+Ψ₅
+
+> 9,14 · 10⁻⁶
+
+Ψ₆
+
+> 0,00256
+
+Ψ_z₊
+
+> 7,03 · 10⁻⁹
+
+Alle drei Surrogatkoeffizienten liegen in ihren geerbten individuellen Koeffizientenintersektionen.
+
+3. Global negatives Surrogat
+
+Nach positiver Normierung durch 10²⁰ besitzt P(s)=As²+Bs+C ungefähr die Koeffizienten
+
+A = −1,3648692483592157
+B = +0,1259404820102958
+C = −0,006882674426163755
+
+Die Dezimalwerte dienen nur der Darstellung. Mit den vollständigen rationalen Zahlen bestätigen Erzeuger und separater Audit:
+
+A<0,\qquad B^2-4AC<-0{,}0217,
+
+\max_{s\in\mathbb R}P(s)=C-\frac{B^2}{4A}
+<-0{,}00397.
+
+Der genaue Maximalwert liegt ungefähr bei −0,003977450166028028. Der Ausgangsrestvektor null wird von den individuellen symmetrischen Reststreifen erlaubt. Er wird nicht als exakte höhere Korrektur des Stifts behauptet.
+
+4. Vollständiger Block (4,5), nicht nur zwei Richtungen
+
+Mit dem exakten Transport
+
+C_T=(G_B+L_B/17)^{-1}Y^\top,\qquad
+H_0=G_A-C_T^\top G_BC_T
+
+wird jeder H₀-Eintrag durch seine vollständigen freien A-Grenzen eingeschlossen. Für den Hauptblock
+
+H_{45}=\begin{pmatrix}a&b\\b&d\end{pmatrix}
+
+werden exakt nachgewiesen:
+
+a\ge a_->9{,}52\cdot10^{-9},\qquad
+d\ge d_->8{,}75\cdot10^{-6},
+
+ad-b^2\ge a_-d_--\max(|b_-|,|b_+|)^2
+>6{,}08\cdot10^{-14}.
+
+Zur Orientierung:
+
+Größe
+
+Intervall oder Untergrenze, ungefähr
+
+(H₀)₄₄
+
+[9,520953427557006 · 10⁻⁹; 9,529534108014259 · 10⁻⁹]
+
+(H₀)₅₅
+
+[8,754635719870183 · 10⁻⁶; 8,837696701781294 · 10⁻⁶]
+
+(H₀)₄₅
+
+[−1,5012527662738454 · 10⁻⁷; −1,4843682201532654 · 10⁻⁷]
+
+det(H₄₅)
+
+≥ 6,081488028166227 · 10⁻¹⁴
+
+Positive erste Diagonale und positive Determinante beweisen die positive Definitheit des gesamten symmetrischen 2×2-Blocks. Die Schranken gelten auf dem ganzen A-Eintragskasten, also insbesondere für jede Vervollständigung, die weitere geerbte Bedingungen erfüllt.
+
+Folglich ist zᵀH₀z>0 für jede nichtverschwindende Richtung z∈span(e₄,e₅). Dies ist kein endliches Richtungsraster.
+
+5. Präziser Grenznachweis
+
+Die verstärkte letzte Relaxation umfasst:
+
+die ursprüngliche Root-Symbolbox;
+
+die drei bisherigen Cuts;
+
+die exakte positive Semidefinitheit des gesamten H₀-Hauptblocks (4,5), bei freien A-Einträgen in ihren bisherigen Intervallen;
+
+die individuellen symmetrischen Koeffizienten-Reststreifen;
+
+die geerbten individuellen Koeffizientenintersektionen.
+
+Sie umfasst nicht die vollständige H₀-Matrix, zusätzliche gemeinsame Momentbedingungen oder die Kopplung der tatsächlichen höheren Korrekturen.
+
+Der neue Punkt mit Ausgangsrest null ist in dieser Relaxation erlaubt. Für jedes reelle s gilt dort F(s)<0. Daher kann kein korrektes globales Minimierungsverfahren auf genau dieser Relaxation eine strikt positive Untergrenze für F(s) liefern. Zusätzliche nichtnegative Lagrange-Multiplikatoren auf Bedingungen, die am Punkt erfüllt sind, ändern diese Tatsache nicht.
+
+Insbesondere ist ein weiterer gespiegelter Richtungscut innerhalb von (4,5) keine ausreichende Reparatur. Der Aussageumfang ist stärker als ein erfolgloser Suchlauf, aber ausdrücklich enger als ein Unmöglichkeitsnachweis für Root.
+
+6. Vollständiges H₀ schließt den Punkt aus
+
+Alle sechs H₀-Diagonaluntergrenzen sind positiv. Trotzdem besitzen acht Zweier-Hauptminoren negative obere Schranken:
+
+(1,4), (1,5), (2,4), (2,5), (2,6), (3,4), (3,5), (3,6).
+
+Der Hauptblock (4,5) gehört gerade nicht dazu.
+
+Für die feste rationale Richtung
+
+z=e_3+\frac{27}{1000}e_4
+
+liefern die freien A-Eintragshüllen
+
+z^\top H_0z\le U
+\approx-6{,}8995229383267595\cdot10^{-12}
+<-6{,}89\cdot10^{-12}<0.
+
+Damit ist der vollständige neue Punkt für sämtliche freien A-Vervollständigungen CERTIFIED_INFEASIBLE. Die wenigen aufgezählten Y-Werte bei sonst variablen Y-/B-Daten werden dadurch nicht ausgeschlossen.
+
+Die ungekürzte Stiftdiskriminante ist wieder positiv, normiert ungefähr 0,00930077289740075. Alle drei Koeffizientenkorrekturen liegen innerhalb ihrer gespeicherten Fehlerradien. Es gibt keinen nachgewiesenen unbezahlten Koeffizientenfehler. Der unzulässige Punkt entscheidet keine dominante Fehlerursache auf ganz Root.
+
+7. Eine exakte Darstellung für den nächsten gemeinsamen H₀-Test
+
+Statt weitere kleine Unterräume nacheinander zu bearbeiten, lässt sich die vollständige H₀-Bedingung durch zusätzliche Matrixvariablen ohne variable Inversen darstellen. Unter den geerbten Voraussetzungen G_B>0 und B=G_B+L_B/17 invertierbar setze
+
+BC_T=Y^\top,\qquad D=G_BC_T.
+
+Dann ist exakt äquivalent:
+
+H_0\succeq0
+\quad\Longleftrightarrow\quad
+\mathcal S=
+\begin{pmatrix}
+G_A&D^\top\\
+D&G_B
+\end{pmatrix}\succeq0.
+
+Die Matrix S hat Größe 14×14. Mit
+
+T=\begin{pmatrix}I_6&0\\-C_T&I_8\end{pmatrix}
+
+folgt direkt
+
+T^\top\mathcal S T
+=\operatorname{diag}(G_A-C_T^\top G_BC_T,\;G_B).
+
+Dies ist eine Schur-Komplement-Darstellung, keine neue Positivitätsannahme. Für den neuen Punkt wurden D, beide Transportgleichungen und der explizite negative 14-dimensionale Vektor (z,−C_Tz) rational geprüft. Seine universelle obere quadratische Schranke stimmt exakt mit U überein. Diese Daten liegen in FULL_H0_LIFT.json.
+
+Komplexitätsgrenze: Obwohl die Blockmatrix in den gehobenen Variablen affin ist, sind BC_T=Yᵀ und D=G_BC_T bilinear. Das Gesamtproblem ist damit nicht automatisch ein konvexes semidefinites Programm. Werden diese Gleichungen relaxiert, braucht ihre weitere Verwendung wieder rigorose, quellengebundene Zertifikate. Der Vorteil ist, dass keine der Richtungsbedingungen von H₀ per Definition weggelassen wird.
+
+Der nächste gezielte Versuch wäre, F mit denselben Eingabesymbolen und dieser vollständigen Transport-/H₀-Struktur zu koppeln. Vor einer großen Dualsuche sollte nach einem exakt prüfbaren negativen Surrogatpunkt gesucht werden, der auch die stärkere Familie überlebt. Wird ein solcher Punkt gefunden, muss die Kopplung der höheren Reste oder eine weitere geerbte gemeinsame Bedingung verschärft werden; bloß weitere H₀-Richtungen wären dann keine Lösung.
+
+Eine Optimierung von F unter dieser vollständigen Darstellung wurde hier nicht ausgeführt. Auch die Existenz eines entsprechenden stärker zulässigen Relaxationszeugen wird nicht behauptet. Dies ist der nächste abgegrenzte Prüfauftrag, kein erzielter Root-Abschluss.
+
+8. Prüfungen und Reproduktion
+
+Die neue Folgestufe umfasst:
+
+einen exakt zurückgeführten neuen Symbolpunkt;
+
+drei strikt erfüllte vorhandene Cuts und Prüfung der gemeinsamen Symbolzuordnung;
+
+unabhängige Neuberechnung der 349 Koeffizienten des geerbten gemischten Cuts im separaten Prüfer;
+
+den globalen Negativitätsnachweis des Surrogats;
+
+die vollständige positive Definitheit des Blocks (4,5) für alle freien A-Einträge;
+
+den universellen vollständigen H₀-Ausschluss;
+
+beide linearen Systemresiduen, die komprimierten Momente, den ungekürzten Stift und die bezahlten Koeffizientenkorrekturen;
+
+die explizite negative Richtung der 14×14-Darstellung;
+
+sieben zurückgewiesene beschädigte Zertifikate: Symbol, Surrogat, Fehlerradius, Transport, Blockdeterminante, gehobener Vektor und Cut-Koeffizient.
+
+Erzeuger und separater Prüfer verwenden verschiedene Matrix-/Polynomprüfroutinen. Der Prüfer wurde aus dem gelieferten separaten Audit an die neue Belegung und die neue Ausschlussrichtung angepasst. Archiv-/JSON-Zugriff, rationaler Zahlentyp und ursprüngliche Eingaben bleiben gemeinsam. Das ist eine zusätzliche rechnerische Kontrolle, keine externe Begutachtung.
+
+Python 3.11 oder neuer, nur Standardbibliothek:
+
+python -B reproduce.py --source-package "../Objekt-X-Drei-Cut-Grenznachweis-2026-10-03.zip" --out "../fullblock-replay"
+
+Der Standardlauf rekonstruiert die beiden neuen Datenquittungen und führt den separaten Audit aus. Alle drei Dateien müssen bytegleich sein. Mit --replay-source wird zusätzlich der unveränderte vollständige Acht-Dateien-Replay des Eingabepakets ausgeführt. Die Ausgabeverzeichnisse müssen neu und außerhalb des Folgepakets liegen. Python mit deaktivierten Assertions wird abgewiesen.
+
+Der fertig zusammengestellte Standard-Replay wurde zweimal ausgeführt und reproduziert alle drei neuen Ergebnisquittungen bytegleich.
+
+9. Unveränderte Grenzen
+
+Es wird kein neuer 19-Fall-Linienlauf und keine neue Winkelumrechnung behauptet. Die neun bisher berichteten bedingten Linien-/Winkelabschlüsse, einschließlich five_eighths ≤4,933780°, werden unverändert übernommen. Root, two_thirds und die acht Diagnoseboxen bleiben UNRESOLVED.
+
+Keine GitHub-Änderung, keine neue Operatorrechnung, keine A13-Rechnung, kein neuer adaptiver Baum und keine Änderung des globalen Verifikationssnapshots. Kein aktueller Live-Stand von GitHub wird behauptet. Globale Weil-Positivität, Objekt X und RH bleiben offen.
+
+Gebundener PR-Head: c5c779d42a866db0b21ef02b18d3585e1a7450ec.
+Quell-ZIP SHA-256: d2b5418dd3643150b6d4d4f31a24745cf93bd01205b4f47da0c6618a6743a248.

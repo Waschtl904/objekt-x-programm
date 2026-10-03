@@ -1,0 +1,28 @@
+{
+  "adaptive_input_tree": false,
+  "byte_identical_receipts": {
+    "CUT_DOMAINS.json": "8d5e338858cd8d292f1cc82609765da8f09255e20336e608af9327adc36f1a11",
+    "FACTOR_COMPARISON.json": "63af2b9ef7871da1ca5f389cb66790867a4afc54cd31e4963cc09110784c0bd3",
+    "H0_CUTS.json": "5ff2fde6b8f5afe008ec9fd3ba72056efcbbf92c874f6024657029b01212831e",
+    "PULLBACK.json": "7cf8b10307591e2e29efd6cff8d8e0045214885cc728bdc6c2ec448519d94249"
+  },
+  "constrained_F_optimization_performed": true,
+  "cut_generation_runs": 2,
+  "endpoint_runs": 2,
+  "five_eighths_physical_total_angle_upper_outward": "4.933780",
+  "github_changed": false,
+  "maximal_lines": 9,
+  "numerical_search_global_optimality_claimed": false,
+  "operator_inputs_changed": false,
+  "original_pullback_byte_identical": true,
+  "research_status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN",
+  "root_coordinate_count": 261,
+  "root_objectives_exactly_audited": 783,
+  "root_status": "UNRESOLVED",
+  "scope": "Finite source-bound follow-up; reused coefficient and physical model construction; no new operator reconstruction or external review.",
+  "selected_multiplier_candidates_verified": true,
+  "source_head": "c5c779d42a866db0b21ef02b18d3585e1a7450ec",
+  "source_package_sha256": "3cc4c4989ec0fe0f10b8451ee064374fa6252d83f47239d79a95b6b59b2a1e74",
+  "status": "PASS",
+  "zero_multiplier_support_certificates": 75
+}

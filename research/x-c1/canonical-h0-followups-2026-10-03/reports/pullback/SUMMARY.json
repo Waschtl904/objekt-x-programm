@@ -1,0 +1,34 @@
+{
+  "all_19_original_domains_survive_whole_box_H0_Hnu_filter": true,
+  "conditional_slices": {
+    "slice/central": {
+      "line_status": "UNIQUE_MAXIMAL_ROOT",
+      "physical_total_width_upper_degrees": "2.933357"
+    },
+    "slice/five_eighths": {
+      "line_status": "UNRESOLVED",
+      "physical_total_width_upper_degrees": null
+    },
+    "slice/half": {
+      "line_status": "UNIQUE_MAXIMAL_ROOT",
+      "physical_total_width_upper_degrees": "3.642652"
+    },
+    "slice/quarter": {
+      "line_status": "UNIQUE_MAXIMAL_ROOT",
+      "physical_total_width_upper_degrees": "3.070163"
+    },
+    "slice/two_thirds": {
+      "line_status": "UNRESOLVED",
+      "physical_total_width_upper_degrees": null
+    }
+  },
+  "diagnostic_boxes_remaining_open": 8,
+  "diagnostic_outcome": "CERTIFIED_INFEASIBLE",
+  "known_complete_points_retained": 5,
+  "root_status": "UNRESOLVED",
+  "strict_H0_upper_bounds": {
+    "5": "-11/1000000",
+    "6": "-43/4000"
+  },
+  "stronger_joint_symbol_constraint_optimization_implemented": false
+}

@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-03",
+  "kind": "USER_SUPPLIED_REPORT",
+  "sha256": "d7853ba0c91b91b9eae02dd66f25e8d5739664f57ff3b6a9fc52975a261bd3e9",
+  "source_files_supplied": false,
+  "numeric_replay_performed": false,
+  "mathematical_status": "REPORTED_NOT_REPRODUCED",
+  "scope": "Full H0 principal block (4,5) insufficiency and another excluded witness; no full-H0 counterexample."
+}

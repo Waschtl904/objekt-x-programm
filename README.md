@@ -1,11 +1,15 @@
 # Objekt-X-Programm
 
-Ein offenes, KI-gestütztes mathematisches Forschungsjournal zur Riemannschen Hypothese.
+Ein offenes, KI-gestütztes mathematisches Forschungsjournal zur Konstruktion von Objekt X.
 
 **Objekt X ist das Ziel einer noch unvollständigen Konstruktion:** Gesucht wird
 eine kompatible positive Geometrie, welche die relevante Weil-Form exakt
 darstellt. Das Programm untersucht dazu gemeinsame Prim-/Gamma-Operatoren,
 endliche positive Kammern und deren Fortsetzung.
+
+**Objekt X hat Vorrang.** Erst nach seiner erfolgreichen Konstruktion wird der
+mögliche Anschluss an die Riemannsche Vermutung verfolgt. Die Anforderungen
+an X, einschließlich der vollständigen geeigneten Testklasse, bleiben erhalten.
 
 **Ein Beweis der Riemannschen Hypothese liegt nicht vor.** Globale
 Weil-Positivität und die vollständige Konstruktion von Objekt X bleiben offen.
@@ -16,6 +20,7 @@ Die projektintern hergeleiteten Ergebnisse sind zur externen Prüfung offen.
 | Ich möchte … | Einstieg |
 | --- | --- |
 | Idee, Entwicklung und Grenzen verstehen | [Gesamtüberblick](00-uebersicht/OBJEKT_X_GESAMTUEBERBLICK.md) |
+| Die weitere Forschungsrichtung verstehen | [Strategie für Objekt X](00-uebersicht/OBJEKT_X_FORSCHUNGSSTRATEGIE.md) |
 | Das Projekt kritisch begutachten | [Leitfaden für externe Begutachtung](00-uebersicht/EXTERNE_BEGUTACHTUNG.md) |
 | Den integrierten Stand und offene Aufgaben prüfen | [Aktueller Stand](00-uebersicht/CURRENT_STATE.md) · [Nächste Aufgaben](00-uebersicht/NEXT_GATES.md) |
 | Einen konkreten Satz und seine Belege finden | [Ergebnisregister](00-uebersicht/SURVIVOR_REGISTRY.md) |
@@ -24,7 +29,7 @@ Die projektintern hergeleiteten Ergebnisse sind zur externen Prüfung offen.
 ## Forschungsstand in Kürze
 
 Die folgende Zusammenfassung bezieht sich auf den integrierten Forschungsstand
-vom **2. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
+und die Folgepakete vom **3. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
 die gepinnten Beweisanker verwaltet das
 [Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml).
 
@@ -33,7 +38,8 @@ die gepinnten Beweisanker verwaltet das
 | Endliche positive Geometrie | Drei positive Kammern bis $A_{11}=\log(11)/2$, mit kompatiblen Transporten | Kein Positivitätssatz für beliebig große Horizonte |
 | Hoher und niedriger Schuranteil | Vollständige Reduktion auf einen endlichen kritischen Rest für jeden festen endlichen Horizont | Die Positivität dieses Rests muss jeweils begründet werden |
 | Kanonische Richtung für A9→A11 | Maximaler Schur-Eigenwert in beiden Paritäten einfach; gerade Richtung lokalisiert | Ungerade ist die gesamte Ausgangsfamilie weiterhin `UNRESOLVED` |
-| Ungerade Winkeldiagnose | Direct-Line verbessert zwei bedingte Schnitte auf höchstens 3.405363° und 3.765366° | Diese Schnitte decken die Ausgangsfamilie nicht ab |
+| Ungerade Winkeldiagnose | Gemeinsamer Y-Kernel: central ≤2.933357°, quarter ≤3.070163°, half ≤3.642693°; Endpunktfolge: five_eighths ≤4.933780° | Bedingte Schnitte; Root bleibt `UNRESOLVED` |
+| H₀-Folgeuntersuchung | Exaktes Hindernis für die benannte letzte Drei-Cut-Relaxation | Kein ursprünglicher Operatorgegenzeuge; vollständiges H₀ unentschieden |
 | Globales Ziel | Arbeitsdefinition und erforderliche Übergänge sind formuliert | Kofinale positive Familie, globaler Readout, vollständige Weil-Gramidentität und RH bleiben offen |
 
 Die hier zusammengefassten projektinternen Ergebnisse tragen den Status
@@ -59,8 +65,14 @@ Reserve fehlt noch.
 Finite Weil-Form → gemeinsamer Mediator → Defekt- und Schurreduktion
                 → positive Kammern bis A11
                 → [offen] positive Fortsetzung auf unbeschränkte Horizonte
-                → [offen] globale Weil-Gramidentität → RH
+                → [offen] vollständiges Objekt X mit exakter Weil-Gramidentität
+                → danach: möglicher Anschluss an RH
 ```
+
+Die [Arbeitsstrategie](00-uebersicht/OBJEKT_X_FORSCHUNGSSTRATEGIE.md) setzt beim
+vollständigen neuen Schurrest an. Neue Terminalpositivität darf in seiner
+Begründung nicht vorausgesetzt werden. Winkel- und Momentdiagnosen dienen
+konkret benannten Abschätzungen dieser Fortsetzung.
 
 Die [Architektur](00-uebersicht/OBJEKT_X_ARCHITECTURE.md) erklärt die Rollen
 dieser Übergänge. Die [Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)
@@ -73,8 +85,9 @@ Testklasse und eine Konstruktion ohne vorausgesetzte Weil-Positivität.
   führt zu den jeweiligen Beweispaketen. Deren Voraussetzungen und
   Geltungsbereiche sind für die Aussagen entscheidend.
 - **Reproduktion:** Paket-READMEs beschreiben Eingaben, Software und konkrete
-  Prüfläufe; etwa die [Kammerkette bis A11](research/x-c1/chambers-through-a11-2026-09-28/README.md)
-  und die [direkte ungerade Eigenlinie](research/x-c1/canonical-direct-odd-line-2026-10-02/README.md).
+  Prüfläufe; etwa die [Kammerkette bis A11](research/x-c1/chambers-through-a11-2026-09-28/README.md),
+  der [gemeinsame Y-Kernel](research/x-c1/canonical-y-kernel-second-order-2026-10-03/README.md)
+  und die [H₀-Folgeuntersuchungen](research/x-c1/canonical-h0-followups-2026-10-03/README.md).
   Analytischer Beweis, Zertifikatsreplay und unabhängiger Review sind getrennt ausgewiesen.
 - **Geschichte:** Das [Archiv](00-uebersicht/ARCHIVE_INDEX.md) bewahrt frühere
   Kandidaten, Fehler, Korrekturen und verworfene Ansätze. Datierte Statusangaben

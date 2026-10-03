@@ -1,5 +1,10 @@
 # Leitfaden für externe Begutachtung
 
+**Projektpriorität:** Zuerst Objekt X gemäß seiner vollständigen Arbeitsdefinition
+konstruieren, danach den möglichen RH-Anschluss verfolgen. Die
+[Forschungsstrategie](OBJEKT_X_FORSCHUNGSSTRATEGIE.md) begründet die konstruktive
+Fortsetzung als Hauptaufgabe; [NEXT_GATES](NEXT_GATES.md) enthält die operative Reihenfolge.
+
 Dieser Leitfaden erschließt das Objekt-X-Programm für eine fachliche
 Erstbeurteilung. Er ist auch als Einstieg für einen KI-gestützten Review
 geeignet. Die Bewertung darf ausdrücklich kritisch oder negativ ausfallen;
@@ -13,7 +18,7 @@ relevanten Weil-Form. **Objekt X ist noch nicht vollständig konstruiert; RH
 bleibt offen.** Das Repository enthält sowohl aktuelle Beweispakete als auch
 ältere Kandidaten, Fehler, Korrekturen und aufgegebene Ansätze.
 
-Der integrierte Forschungsstand vom 2. Oktober 2026 umfasst projektintern
+Der integrierte Forschungsstand mit Folgepaketen vom 3. Oktober 2026 umfasst projektintern
 hergeleitete positive Kammern bis $A_{11}=\log(11)/2$. Die Fortsetzung zu
 einer kofinalen positiven Familie und die globale Weil-Gramidentität sind
 offen. Die untersuchte Winkellokalisierung ist eine Teilaufgabe dieser Fortsetzung.
@@ -48,8 +53,8 @@ Belegstrecken an:
   insbesondere [A11-Beweis](../research/x-c1/chambers-through-a11-2026-09-28/a11/PROOF.md),
   [allgemeiner hoher Tail](../research/x-c1/chambers-through-a11-2026-09-28/high-tail/PROOF.md)
   und [ausgewiesener Prüfumfang](../research/x-c1/chambers-through-a11-2026-09-28/REVIEW_SCOPE.md).
-- **Grenzen der jüngsten Winkeldiagnose:** [Direct-Line-Paket](../research/x-c1/canonical-direct-odd-line-2026-10-02/README.md)
-  und sein [Beweis](../research/x-c1/canonical-direct-odd-line-2026-10-02/PROOF.md).
+- **Grenzen der jüngsten Winkeldiagnose:** [Gemeinsamer Y-Kernel](../research/x-c1/canonical-y-kernel-second-order-2026-10-03/README.md)
+  und [H₀-Folgeuntersuchungen](../research/x-c1/canonical-h0-followups-2026-10-03/README.md).
   Zentral sind die Unterscheidung zwischen eingeschränkten Schnitten und
   vollständiger Ausgangsfamilie sowie die erhaltenen gemeinsamen Abhängigkeiten.
 

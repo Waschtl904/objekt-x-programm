@@ -1,8 +1,13 @@
 # Objekt X – Gesamtüberblick
 
-**Forschungsstand:** 2. Oktober 2026 · **Redaktion:** 3. Oktober 2026
+**Projektpriorität:** Zuerst Objekt X gemäß seiner vollständigen Arbeitsdefinition
+konstruieren, danach den möglichen RH-Anschluss verfolgen. Die
+[Forschungsstrategie](OBJEKT_X_FORSCHUNGSSTRATEGIE.md) begründet die konstruktive
+Fortsetzung als Hauptaufgabe; [NEXT_GATES](NEXT_GATES.md) enthält die operative Reihenfolge.
 
-**Forschungsbasis:** `83c00ddfe161563f35b31b4ae570faede0834b82` ([PR #204](https://github.com/Waschtl904/objekt-x-programm/pull/204)).
+**Forschungsstand und Folgeuntersuchungen:** 3. Oktober 2026
+
+**Frühere integrierte Forschungsbasis:** `83c00ddfe161563f35b31b4ae570faede0834b82` ([PR #204](https://github.com/Waschtl904/objekt-x-programm/pull/204)); ergänzt durch die unten ausgewiesenen Y-Kernel- und H₀-Pakete.
 Registry- und Reviewstatus stehen in [CURRENT_STATE](CURRENT_STATE.md).
 Der Beweisanker des Direct-Line-Blocks bleibt der Research-Head `c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33`; der aktuelle Main-Head wird live gelesen.
 
@@ -397,17 +402,23 @@ Alle fünf bekannten zulässigen Punkte bleiben auf dem maximalen Eigenwertast.
 Die volle Ausgangsbox und alle acht Diagnoseblätter bleiben **UNRESOLVED**;
 die zwei engen Schnitte liefern keinen uniformen Winkelbeweis.
 
-Der [nächste Gate](Y_KERNEL_SECOND_ORDER_GATE_2026-10-02.md)
-erhält die gemeinsame Gleichung **Y_L X + Y_R = 0** und explizite zweite
-Ordnung mit rigorosem Rest. Zuerst werden dieselben 19 Fälle verglichen.
-Ein gemeinsamer Root-Gesamtwinkel unter 10° wäre der uniforme Abschluss.
-Neue Operatorintegrale, Y58-/L_B-Daten und ein neuer großer Baum sind für
-diesen ersten Versuch nicht vorgesehen.
+Der anschließende [gemeinsame Y-Kernel](../research/x-c1/canonical-y-kernel-second-order-2026-10-03/README.md)
+erhält **Y_L X + Y_R = 0** bis zur zweiten Ordnung mit rigorosem Rest.
+Auf denselben 19 Fällen verbessert er central auf ≤2.933357°, quarter auf
+≤3.070163° und half auf ≤3.642693°. Die
+[Endpunktfolge und H₀-Diagnosen](../research/x-c1/canonical-h0-followups-2026-10-03/README.md)
+liefern zusätzlich five_eighths ≤4.933780° und ein exaktes Hindernis für
+die ausdrücklich benannte letzte Drei-Cut-Relaxation. Root und die acht
+Diagnoseboxen bleiben UNRESOLVED. Der spätere übermittelte Bericht zum
+gesamten H₀-Hauptblock (4,5) ist hier noch nicht numerisch reproduziert.
 
-Danach folgen bandweise Momente tatsächlicher Maximierer und ein vorwärts
-gerichteter Renewal-Test. Allgemeines Renewal, A13-Positivität, kofinale
-positive Familie, globales Objekt X und RH bleiben offen. PR #187 bleibt
-separat. Status: `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`.
+Die [Arbeitsstrategie](OBJEKT_X_FORSCHUNGSSTRATEGIE.md) priorisiert jetzt die
+vorwärts gerichtete Schurfortsetzung ohne vorausgesetzte neue
+Terminalpositivität. Winkel- und Momentdiagnosen werden für konkret
+benannte Schranken eingesetzt. Allgemeine Fortsetzung, A13-Positivität,
+kofinale positive Familie und vollständiges Objekt X bleiben offen.
+Der mögliche RH-Anschluss folgt erst danach. PR #187 bleibt separat.
+Status der reproduzierten Forschungsbefunde: `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`.
 
 Die bereits positiven Terminals bis A11 bleiben Voraussetzung. Der globale
 Verifikationssnapshot ist unverändert; CI-Erfolg ersetzt keinen externen Audit.

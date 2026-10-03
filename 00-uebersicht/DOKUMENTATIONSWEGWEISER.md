@@ -1,5 +1,10 @@
 # Dokumentation lesen und einordnen
 
+**Projektpriorität:** Zuerst Objekt X gemäß seiner vollständigen Arbeitsdefinition
+konstruieren, danach den möglichen RH-Anschluss verfolgen. Die
+[Forschungsstrategie](OBJEKT_X_FORSCHUNGSSTRATEGIE.md) begründet die konstruktive
+Fortsetzung als Hauptaufgabe; [NEXT_GATES](NEXT_GATES.md) enthält die operative Reihenfolge.
+
 Das Repository enthält eine laufende mathematische Untersuchung und ihre
 Entstehungsgeschichte. Für den Einstieg genügt eine kurze Lesestrecke; die
 historischen Dateien werden erst für konkrete Herkunftsfragen benötigt.

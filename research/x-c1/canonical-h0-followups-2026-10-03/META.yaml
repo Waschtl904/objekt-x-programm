@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "CANONICAL-H0-FOLLOWUP-RELAXATION-BOUNDARY",
+  "date": "2026-10-03",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Gebundener Rücktest, neun bedingte maximale Linien einschließlich five_eighths <=4.933780 Grad, exakter Audit von 783 gespeicherten Zielen und eng begrenztes Hindernis der letzten Drei-Cut-Relaxation. Root UNRESOLVED.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Nur die explizite letzte Drei-Cut-Koeffizientenrelaxation ist unzureichend. Kein Operatorgegenbeispiel; vollständiges H0 unentschieden; zusätzlicher Block-45-Bericht nicht reproduziert.",
+  "depends_on": [
+    "CANONICAL-DIRECT-ODD-LINE-UNRESOLVED",
+    "CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION"
+  ],
+  "closes": [],
+  "opens": [
+    "CANONICAL-SCHUR-MAXIMIZER-ISOLATION"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "Keine uniforme Root-Lokalisierung.",
+    "Keine neue Operatorrekonstruktion oder externe Prüfung.",
+    "Kein allgemeiner Fortsetzungssatz, kein vollständiges Objekt X."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/canonical-h0-followups-2026-10-03/PROOF.md",
+    "sha256": "d81c897266fb400485a5c516c293e5a0b0640a0c85d3de7baa8e4fe0f5fe9796"
+  }
+}
