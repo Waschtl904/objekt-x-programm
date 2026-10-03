@@ -1,3 +1,17 @@
+# Originalfassung: audits/README.md
+
+Historische Quelle; Aussagen und relative Pfade gehören zum angegebenen Quellstand.
+
+- Originalpfad: `audits/README.md`
+- Quellcommit: `a0937fcd26705dbce53181fc78ea48b4108b3bc2`
+- Originalblob: `3c7d4a97406cf3517b6bb54c9013e82da8887160`
+- SHA-256: `c961dfbce030ee56b39f2798e18e323f552847257e6ee7aec49ea2a2d5e3dc1b`
+- Originallänge: 1544 Bytes; abschließendes LF: true.
+
+Der Inhalt zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 > [!NOTE]
 > **Dokumentationspflege vom 2. Oktober 2026: historisches Themenregister**
 >
@@ -12,7 +26,7 @@
 
 Straenge-uebergreifende Korrekturaudits und methodische Strukturdiagnosen.
 
-**4 Dokumente.** Zurueck zum [Gesamtindex](../00-uebersicht/archiv/root-navigation-2026-10-03/INDEX.md) · [Repository-Start](../README.md)
+**4 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
 
 | ID | Dokument | Status |
 |---|---|---|
@@ -25,7 +39,4 @@ Straenge-uebergreifende Korrekturaudits und methodische Strukturdiagnosen.
 
 Statuslegende: `✓M` gesichert · `✓K` konstruktiv/typgeprueft · `✓R` Reduktion · `⚠M` konditional · `✗M` No-Go · `?O` offen. Die Zahl hinter dem Punkt zaehlt die Vorkommen im Dokument.
 
----
-
-Navigation vom 3. Oktober 2026: Ein relatives Linkziel wurde angepasst.
-[Vorherige Originalfassung](../00-uebersicht/archiv/root-navigation-2026-10-03/originale/audits/README.md).
+````````

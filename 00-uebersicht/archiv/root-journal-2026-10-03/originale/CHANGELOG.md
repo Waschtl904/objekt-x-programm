@@ -1,3 +1,17 @@
+# Originalfassung: CHANGELOG.md
+
+Historische Quelle; alle Aussagen im folgenden Original behalten ihren damaligen Stand.
+
+- Originalpfad: `CHANGELOG.md`
+- Quellcommit: `ca34e3b249fa5fffccf6a6732659448d24f25efc`
+- Originalblob: `8169f32d37a901964cb2fd7cdf5ddb0bef5c2942`
+- SHA-256: `461c40702a5239136f92ef35a6bcde931c4f2680eaba95b584bc8a2e71a0cedf`
+- Originallänge: 35772 Bytes; abschließendes LF: true.
+
+Der Text zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein gegebenenfalls zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 # Changelog
 
 Sitzungsprotokoll des Objekt-X-Programms, neueste Einträge zuerst.
@@ -541,3 +555,5 @@ ein negativer, aber präziser Befund, der den Übergang zur kohomologischen Rout
 
 Das ursprüngliche Sitzungsprotokoll bis zum 15. Juli 2026 ist unverändert erhalten:
 [CHANGELOG_alt.md](CHANGELOG_alt.md).
+
+````````

@@ -1,3 +1,17 @@
+# Originalfassung: MITWIRKEN.md
+
+Historische Quelle; Aussagen und relative Pfade gehören zum angegebenen Quellstand.
+
+- Originalpfad: `MITWIRKEN.md`
+- Quellcommit: `a0937fcd26705dbce53181fc78ea48b4108b3bc2`
+- Originalblob: `6b4fd9a2238b6dc0d0395b5a0044a598f7608452`
+- SHA-256: `88471a49a5ccb362e2d27bf78fe4fd98f2e879cd36f6bd4f7d08f4ea6aa45e97`
+- Originallänge: 4816 Bytes; abschließendes LF: true.
+
+Der Inhalt zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 # Mitwirken und Herkunft
 
 Aktuelle Aufgaben: [NEXT_GATES](00-uebersicht/NEXT_GATES.md).
@@ -24,14 +38,14 @@ Diese Zahl beschreibt den damaligen Import, nicht den heutigen Gesamtbestand.
 - **ASCII-Dateinamen.** Umlaute und ein fehlerhaft kodiertes kyrillisches Zeichen in sechs
   Dateinamen wurden bereinigt (`ä` → `ae` usw.). Der Dateiinhalt ist davon nicht betroffen.
 - **Navigationsebene.** [README](README.md), [Gesamtindex](INDEX.md),
-  [Statusregister](STATUS.md), [Glossar](GLOSSAR.md) und eine Übersicht je Strang.
+  [Statusregister](00-uebersicht/archiv/root-journal-2026-10-03/STATUS.md), [Glossar](00-uebersicht/GLOSSAR.md) und eine Übersicht je Strang.
 - **Reparierte Querverweise.** Relative Links zwischen Dokumenten wurden auf die neue
   Struktur umgeschrieben.
 - **Lizenz und Zitierangaben.** [CC BY 4.0](LICENSE), [CITATION.cff](CITATION.cff).
 
 Was **nicht** verändert wurde: der Text der Forschungsdokumente, ihre Statusmarken, ihre
 Beweise und ihre Fehler. Nummernkollisionen und bewusste Kataloglücken wurden nicht
-"aufgeräumt", sondern in [STATUS.md](STATUS.md) dokumentiert — sie gehören zur
+"aufgeräumt", sondern in [STATUS.md](00-uebersicht/archiv/root-journal-2026-10-03/STATUS.md) dokumentiert — sie gehören zur
 Prozessgeschichte.
 
 ---
@@ -77,7 +91,7 @@ Eine Journalmarke ist keine eigenständige aktuelle Statuspromotion.
 | `✗ [M]` | Route gesichert ausgeschlossen; das Hindernis ist benannt |
 | `❓ [O]` | offen; die Frage ist präzise formuliert und mit Knoten-ID versehen |
 
-Rechenregeln für die BC-Algebra sind in [KONVENTIONEN.md](KONVENTIONEN.md) verbindlich
+Rechenregeln für die BC-Algebra sind in [KONVENTIONEN.md](00-grundlegung/KONVENTIONEN.md) verbindlich
 festgelegt. Bei Widersprüchen zwischen einem Katalogeintrag und den Konventionen hat die
 Konventionsdatei Vorrang.
 
@@ -88,5 +102,7 @@ Konventionsdatei Vorrang.
 Die Dokumente sind **nicht peer-reviewed** und enthalten **keinen Beweis der Riemannschen
 Hypothese**. Einige als gesichert markierte Aussagen wurden im Laufe des Programms durch
 spätere Audits korrigiert oder zurückgerollt; solche Fälle sind im
-[CHANGELOG](CHANGELOG.md) und in den Auditdateien nachvollziehbar. Wer Resultate von hier
+[CHANGELOG](00-uebersicht/archiv/root-journal-2026-10-03/CHANGELOG.md) und in den Auditdateien nachvollziehbar. Wer Resultate von hier
 weiterverwendet, sollte den zugehörigen Beweis eigenständig prüfen.
+
+````````

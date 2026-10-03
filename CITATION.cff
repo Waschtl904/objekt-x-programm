@@ -1,21 +1,21 @@
 cff-version: 1.2.0
 title: "Objekt-X-Programm — Ein lakatosianisches Forschungsjournal zur Riemannschen Hypothese"
-message: "Wenn Sie dieses Material verwenden, zitieren Sie es bitte wie unten angegeben."
+message: "Bitte zitieren Sie das Forschungsjournal mit Autor, Titel, Repository-URL und dem konkret verwendeten Commit."
 type: dataset
 authors:
   - family-names: Schmalnauer
     given-names: Sebastian
     country: AT
 abstract: >-
-  Offengelegtes Forschungsjournal zu spektralen, nichtkommutativen und
-  arithmetischen Zugängen zur Riemannschen Hypothese. Zentral ist "Objekt X",
-  ein aus relativer Primkanten-Algebra, Hochschild-Klassen und der
-  Wodzicki-Residuum-Spurform auf der Bost-Connes-Algebra zusammengesetztes
-  Operatorobjekt. 324 Dokumente in neun thematischen Strängen, jeweils mit
-  expliziter epistemischer Statusmarke nach lakatosianischer Methodik.
-  Negative Resultate und No-Go-Theoreme sind gleichrangig dokumentiert.
-  Das Repository enthält keinen Beweis der Riemannschen Hypothese und ist
-  nicht peer-reviewed.
+  Offenes, KI-gestütztes mathematisches Forschungsjournal zur Riemannschen
+  Hypothese. Objekt X bezeichnet das Ziel einer noch unvollständigen positiven
+  Geometrie für die relevante Weil-Form. Der aktuelle Ansatz untersucht
+  gemeinsame Prim-/Gamma-Mediatoren, Defekt- und Schurreduktionen sowie
+  endliche positive Kammern und kompatible Transporte. Beweispakete,
+  Reproduktionsanleitungen, offene Fragen, Korrekturen und verworfene Ansätze
+  dokumentieren die Entwicklung. Geltungsbereiche und Reviewstatus stehen
+  im Forschungsregister. Globale Weil-Positivität und RH sind nicht bewiesen;
+  die unabhängige externe Prüfung der projektinternen Ergebnisse ist offen.
 keywords:
   - Riemannsche Hypothese
   - Riemann hypothesis
@@ -24,12 +24,13 @@ keywords:
   - Hochschild-Kohomologie
   - Weil-Explizitformel
   - Spektraltheorie
+  - Schurkomplement
+  - zertifizierte Numerik
   - Hankel-Positivität
   - prolate sphäroidale Wellenfunktionen
   - Lakatos
 license: CC-BY-4.0
 repository-code: "https://github.com/Waschtl904/objekt-x-programm"
-version: "NEU-221d"
 date-released: "2026-07-26"
 url: "https://github.com/Waschtl904/objekt-x-programm"
 identifiers:

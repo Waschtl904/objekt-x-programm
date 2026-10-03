@@ -1,4 +1,11 @@
 > [!NOTE]
+> **Navigation nach dem Umzug vom 3. Oktober 2026.**
+>
+> Originalpfad: `EINFUEHRUNG.md`. In dieser Lesefassung wurden ausschließlich relative
+> Linkziele an die neue Ablage angepasst. Text, Formeln und damalige Statusangaben
+> bleiben erhalten. [Unverändertes Original](originale/EINFUEHRUNG.md).
+
+> [!NOTE]
 > **Aktuelle Orientierung — Nachpflege vom 27. September 2026.**
 >
 > Die folgende Einführung bewahrt die Textbasis vom 7. August und den
@@ -6,17 +13,17 @@
 > „heute“, „aktiver Kern“ und „aktuelle Roadmap“ beziehen sich dort auf
 > diese historischen Stände, nicht auf die heutige Arbeitsanweisung.
 >
-> Für den aktuellen Einstieg: [README](README.md),
-> [CURRENT_STATE](00-uebersicht/CURRENT_STATE.md),
-> [NEXT_GATES](00-uebersicht/NEXT_GATES.md) und
-> [RESEARCH_STATE](00-uebersicht/RESEARCH_STATE.yaml).
-> Historische Quellen erschließt der [Archiveinstieg](00-uebersicht/ARCHIVE_INDEX.md).
+> Für den aktuellen Einstieg: [README](../../../README.md),
+> [CURRENT_STATE](../../CURRENT_STATE.md),
+> [NEXT_GATES](../../NEXT_GATES.md) und
+> [RESEARCH_STATE](../../RESEARCH_STATE.yaml).
+> Historische Quellen erschließt der [Archiveinstieg](../../ARCHIVE_INDEX.md).
 > Dieser Hinweis ändert keine mathematische Aussage und keinen Reviewstatus.
 
 # Das Objekt-X-Programm — Eine verständliche Einführung
 
 > **Textbasis:** 7. August 2026 — nach NEU-250k/l.  
-> **Konsolidierung 3. September 2026:** Die allgemeine Motivation bleibt als Einführung nützlich; route-spezifische Aussagen des August-7-Texts sind historisch. Die operative Front steht in [`CURRENT-FRONT.md`](CURRENT-FRONT.md), die aktuelle Roadmap in [`00-uebersicht/FORSCHUNGS_ROADMAP_2026-09-03.md`](00-uebersicht/FORSCHUNGS_ROADMAP_2026-09-03.md), die Objekt-X-Definition in [`00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md). Aktiver Kern ist jetzt **B / Strong Terminal / R43**; A ist im universellen SW1-Sinn negativ entschieden.
+> **Konsolidierung 3. September 2026:** Die allgemeine Motivation bleibt als Einführung nützlich; route-spezifische Aussagen des August-7-Texts sind historisch. Die operative Front steht in [`CURRENT-FRONT.md`](../../../CURRENT-FRONT.md), die aktuelle Roadmap in [`00-uebersicht/FORSCHUNGS_ROADMAP_2026-09-03.md`](../../FORSCHUNGS_ROADMAP_2026-09-03.md), die Objekt-X-Definition in [`00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md`](../../OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md). Aktiver Kern ist jetzt **B / Strong Terminal / R43**; A ist im universellen SW1-Sinn negativ entschieden.
 
 ---
 

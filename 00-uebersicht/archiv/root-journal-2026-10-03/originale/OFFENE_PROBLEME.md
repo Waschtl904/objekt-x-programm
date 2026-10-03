@@ -1,3 +1,17 @@
+# Originalfassung: OFFENE_PROBLEME.md
+
+Historische Quelle; alle Aussagen im folgenden Original behalten ihren damaligen Stand.
+
+- Originalpfad: `OFFENE_PROBLEME.md`
+- Quellcommit: `ca34e3b249fa5fffccf6a6732659448d24f25efc`
+- Originalblob: `3e3b7a5fc09f0d06cb72e2d52e6bc94ba9038f87`
+- SHA-256: `203bacc845a2b5ac9693641588d3224beee9ef0f05a52027f48dbf560f7323d9`
+- Originallänge: 3523 Bytes; abschließendes LF: true.
+
+Der Text zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein gegebenenfalls zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 > [!NOTE]
 > **Dokumentationspflege vom 2. Oktober 2026: historischer Stand**
 >
@@ -126,3 +140,5 @@ A future direct PSWF finite certificate remains an independent alternate closure
 - Only precision may increase along the fixed ladder.
 - Float eigenvalues/preconditioners are proposals only.
 - Fixed-window `a=1`, all-a NP-GAP, Object X and RH remain open.
+
+````````

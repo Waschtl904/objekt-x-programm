@@ -17,9 +17,9 @@ neues Manifest erzeugen.
 | `00-grundlegung/ebene-XVI-objekt-x.md` | `2dd5ae5565ec7a34a2a474bf01d8411b85a10777800349281428127f95c8ca9d` |
 | `00-uebersicht/ACTIVE_THEOREM_REGISTRY.md` | `713331f59eccb7516bfb9403bb835f052a68f043aa1eb06fd8030ccef6c1cc71` |
 | `.canary` | `e6c1afe34a565abf999843248c4fadaf1e55ae1ecd3bb1e8b009b872dfc00ba5` |
-| `ATTRIBUTION.md` | `34b1bece2cb3f3f413b4895556cad53ff05764e759915b2b93db082324966a4e` |
-| `SECURITY.md` | `1b3726621bc6a9de6e9db0887d5f3a855e38d26f0ac7f5a854cd6f6431db8833` |
-| `CITATION.cff` | `67e04f14734e1128a2bc99ef322dbfb751c343389a6b360372ce063f049e67fe` |
+| `ATTRIBUTION.md` | `0c91e33942bb170a1f5a1ad0d58d11d080854881e9c55d38605b6689a19a4bfa` |
+| `SECURITY.md` | `9fe60c1979524e4a54a1d39e3c4421ad037dd8a7469d747bdcc24ba86f031ef7` |
+| `CITATION.cff` | `2285d4127fbc37337ba4b1b11381d06fbc1c9b9c75caccc45a52f5a759139ee1` |
 | `LICENSE` | `9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411` |
 | `tests/fixtures/dummy_credentials.json` | `bd5ef63aacbb09bf5578c68d9b2d64f3ac3d0dd14b2c572808f6122c529486a2` |
 

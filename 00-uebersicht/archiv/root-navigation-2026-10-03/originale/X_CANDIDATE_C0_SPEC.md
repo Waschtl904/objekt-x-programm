@@ -1,3 +1,17 @@
+# Originalfassung: X_CANDIDATE_C0_SPEC.md
+
+Historische Quelle; Aussagen und relative Pfade gehören zum angegebenen Quellstand.
+
+- Originalpfad: `X_CANDIDATE_C0_SPEC.md`
+- Quellcommit: `a0937fcd26705dbce53181fc78ea48b4108b3bc2`
+- Originalblob: `28c726277a73dba6f49ac351518fb07ef8489341`
+- SHA-256: `ca2d42ce5375ce2785f8835ba160dbd0af75fe4975cdef3659edf12011ed70f8`
+- Originallänge: 15567 Bytes; abschließendes LF: true.
+
+Der Inhalt zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 # X-C0 — Common-memory mediator / Kandidatenspezifikation
 
 **Datum:** 16. September 2026. **Status:** aktive Konstruktion; kein fertiges Objekt X.
@@ -385,3 +399,5 @@ hergeleitet; die bekannte Digammareihe ist separat oben belegt.
 Begleitend: `scripts/check_x_c0_memory_identities.py` prüft nur kleine exakte
 C0-Identitäten und den algebraischen Mischtest. Es importiert KEINE A1-Daten,
 startet KEINE CI-/Matrix-/LDL-Läufe und zertifiziert weder C1 noch RH.
+
+````````

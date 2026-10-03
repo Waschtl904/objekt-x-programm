@@ -1,3 +1,17 @@
+# Originalfassung: INDEX.md
+
+Historische Quelle; Aussagen und relative Pfade gehören zum angegebenen Quellstand.
+
+- Originalpfad: `INDEX.md`
+- Quellcommit: `a0937fcd26705dbce53181fc78ea48b4108b3bc2`
+- Originalblob: `67ccede9d8028f0eae09e7097de36462f688c310`
+- SHA-256: `dd35beaf51bdfab97bc34aac2de2b4975b3da8561cd664a5ff1399423eab4c16`
+- Originallänge: 60938 Bytes; abschließendes LF: true.
+
+Der Inhalt zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 > [!NOTE]
 > **Historisches Grundregister — aktueller Einstieg separat.**
 >
@@ -443,3 +457,5 @@ Operative Front: [CURRENT-FRONT.md](CURRENT-FRONT.md). Governance-/Abhängigkeit
 | `—` | [AUDIT 2026-07-19 — Direktaudit NEU-176: L_{3,λ} als auswertbare Abbildung](audits/AUDIT-2026-07-19_NEU176_Direktaudit_L3lambda.md) | ✓M·3 ✓K·1 ?O·13 |
 | `—` | [Methodische Notiz — Strukturdiagnose O-219](audits/METHODIK_O219_Strukturdiagnose.md) | ✓M·4 |
 | `—` | [Typaudit NEU-16a/b und NEU-17 — ∂Φ₃=L₃ nicht typologisch geschlossen](audits/audit_170c_typaudit_neu16_neu17.md) | ✓M·3 ?O·2 |
+
+````````

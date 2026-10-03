@@ -1,3 +1,17 @@
+# Originalfassung: KARTE.md
+
+Historische Quelle; alle Aussagen im folgenden Original behalten ihren damaligen Stand.
+
+- Originalpfad: `KARTE.md`
+- Quellcommit: `ca34e3b249fa5fffccf6a6732659448d24f25efc`
+- Originalblob: `6b12b961f7a0fbae2e4d91f865deaf8eacc68c3b`
+- SHA-256: `459b3cb8688da0fa952b0cf5ab44e7ecf58e73a719a8c5d9b46c8f701803f640`
+- Originallänge: 18074 Bytes; abschließendes LF: true.
+
+Der Text zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein gegebenenfalls zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 # KARTE — Vollständige Verzeichnisstruktur des Repositorys `objekt-x-programm`
 
 > **Historische Struktur-/Forschungskarte.** Die Verzeichnisauflistung und der darunter
@@ -386,3 +400,5 @@ Gesamt: 84 Inhaltsdateien + README.md = 85 Dateien
 - **Aktiver Pfad:** NEU-250 →E→ NEU-250a →B→ [O-221-1c1a0-C]
 - **Aktiver Tiefenknoten:** j_{2,N}(E^rel_{R;1→2}) als explizites residuenfähiges BC-Element konstruieren
 - NEU-246 auch in `01-primkanten-werkzeuge/` vorhanden — Doppelung, Klärung ausstehend.
+
+````````

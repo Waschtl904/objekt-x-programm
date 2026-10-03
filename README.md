@@ -1,349 +1,104 @@
-> [!NOTE]
-> **Aktiver Repository-Einstieg.**
->
-> Diese README dient der Orientierung. Sie ist **keine mathematische Beweis- oder Statusautorität**.
->
-> - Kanonischer operativer Status: [`00-uebersicht/RESEARCH_STATE.yaml`](00-uebersicht/RESEARCH_STATE.yaml)
-> - Lesbarer Gesamtüberblick: [`00-uebersicht/OBJEKT_X_GESAMTUEBERBLICK.md`](00-uebersicht/OBJEKT_X_GESAMTUEBERBLICK.md)
-> - Lesbarer aktueller Stand: [`00-uebersicht/CURRENT_STATE.md`](00-uebersicht/CURRENT_STATE.md)
-> - Nächste mathematische Gates: [`00-uebersicht/NEXT_GATES.md`](00-uebersicht/NEXT_GATES.md)
-> - Konsolidierte Ergebnisübersicht: [`00-uebersicht/SURVIVOR_REGISTRY.md`](00-uebersicht/SURVIVOR_REGISTRY.md)
-> - Historische Quellen und abgeschlossene Branch-Konsolidierung: [Archiveinstieg](00-uebersicht/ARCHIVE_INDEX.md)
->
-> Historische Status- und Navigationsfassungen bleiben als Provenienz erhalten und dürfen nicht mit der aktuellen Forschungsfront verwechselt werden.
-
 # Objekt-X-Programm
 
-*Ein langfristiges mathematisches Forschungsprogramm zur Riemannschen Hypothese.*
+Ein offenes, KI-gestütztes mathematisches Forschungsjournal zur Riemannschen Hypothese.
 
-Objekt X bezeichnet das Ziel einer kompatiblen positiven Geometrie für die relevante Weil-Form-Struktur.
+**Objekt X ist das Ziel einer noch unvollständigen Konstruktion:** Gesucht wird
+eine kompatible positive Geometrie, welche die relevante Weil-Form exakt
+darstellt. Das Programm untersucht dazu gemeinsame Prim-/Gamma-Operatoren,
+endliche positive Kammern und deren Fortsetzung.
 
-Das Programm arbeitet schrittweise über lokale positive Räume, gekoppelte Operatoren, Transportabbildungen und deren Kompatibilität. Drei lokale positive Kammern sind bis `A₁₁=log(11)/2` konstruiert. Der gegenwärtige Schwerpunkt liegt auf einer erneuerbaren positiven Reserve des niedrigen Schurrests für weitere Horizonte.
+**Ein Beweis der Riemannschen Hypothese liegt nicht vor.** Globale
+Weil-Positivität und die vollständige Konstruktion von Objekt X bleiben offen.
+Die projektintern hergeleiteten Ergebnisse sind zur externen Prüfung offen.
 
-**Objekt X ist noch nicht vollständig konstruiert.  
-Globale Weil-Positivität ist nicht bewiesen.  
-Die Riemannsche Hypothese bleibt offen.**
+## Einstieg
 
----
+| Ich möchte … | Einstieg |
+| --- | --- |
+| Idee, Entwicklung und Grenzen verstehen | [Gesamtüberblick](00-uebersicht/OBJEKT_X_GESAMTUEBERBLICK.md) |
+| Das Projekt kritisch begutachten | [Leitfaden für externe Begutachtung](00-uebersicht/EXTERNE_BEGUTACHTUNG.md) |
+| Den integrierten Stand und offene Aufgaben prüfen | [Aktueller Stand](00-uebersicht/CURRENT_STATE.md) · [Nächste Aufgaben](00-uebersicht/NEXT_GATES.md) |
+| Einen konkreten Satz und seine Belege finden | [Ergebnisregister](00-uebersicht/SURVIVOR_REGISTRY.md) |
+| Dateien, Manuskripte oder ältere Ansätze einordnen | [Dokumentationswegweiser](00-uebersicht/DOKUMENTATIONSWEGWEISER.md) |
 
-## Kurzüberblick zum veröffentlichten Stand
+## Forschungsstand in Kürze
 
-- Drei positive Kammern reichen bis A11; die größte Schur-Eigenwertgerade
-  für A9→A11 ist in beiden Paritäten eindeutig.
-- Die gerade Richtung ist lokalisiert. Ungerade liefert die direkte affine
-  Linie bedingte Hüllen von 3.405363° und 3.765366°; Root bleibt **UNRESOLVED**.
-- Offen bleiben der gemeinsame Y-Kernel-Gate, bandweise Momente tatsächlicher
-  Maximierer und ein vorwärts gerichteter Renewal-Schritt.
-- PR #187/A13 bleibt ein separater, unintegrierter Forschungsstrang.
+Die folgende Zusammenfassung bezieht sich auf den integrierten Forschungsstand
+vom **2. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
+die gepinnten Beweisanker verwaltet das
+[Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml).
 
-Die [Dokumentationsübersicht](00-uebersicht/DOKUMENTATIONSWEGWEISER.md) trennt
-aktuellen Status, lokale Folgepakete und historische Quellen. Branches und
-Archivtags sind im [Bereinigungsnachweis](00-uebersicht/BRANCH_HYGIENE_2026-10-02.md)
-erklärt. Der geschützte Auditanker bleibt erhalten.
+| Bereich | Dokumentierter Stand | Aussagegrenze |
+| --- | --- | --- |
+| Endliche positive Geometrie | Drei positive Kammern bis $A_{11}=\log(11)/2$, mit kompatiblen Transporten | Kein Positivitätssatz für beliebig große Horizonte |
+| Hoher und niedriger Schuranteil | Vollständige Reduktion auf einen endlichen kritischen Rest für jeden festen endlichen Horizont | Die Positivität dieses Rests muss jeweils begründet werden |
+| Kanonische Richtung für A9→A11 | Maximaler Schur-Eigenwert in beiden Paritäten einfach; gerade Richtung lokalisiert | Ungerade ist die gesamte Ausgangsfamilie weiterhin `UNRESOLVED` |
+| Ungerade Winkeldiagnose | Direct-Line verbessert zwei bedingte Schnitte auf höchstens 3.405363° und 3.765366° | Diese Schnitte decken die Ausgangsfamilie nicht ab |
+| Globales Ziel | Arbeitsdefinition und erforderliche Übergänge sind formuliert | Kofinale positive Familie, globaler Readout, vollständige Weil-Gramidentität und RH bleiben offen |
 
-## Neues Folgepaket in Statusprüfung
+Die hier zusammengefassten projektinternen Ergebnisse tragen den Status
+`AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`. Das bedeutet: projektintern hergeleitet,
+mit angegebenen Beweisen und Zertifikaten; die unabhängige externe Prüfung ist
+offen. Ein erfolgreicher Rechenlauf bestätigt seinen ausgewiesenen Prüfumfang.
 
-Das [Y-Kernel-Paket zweiter Ordnung](research/x-c1/canonical-y-kernel-second-order-2026-10-03/README.md)
-ist als `PENDING_STATUS_REVIEW` erfasst: bedingte Hüllen central <=2.933357°,
-quarter <=3.070163° und erstmals half <=3.642693°, jeweils auf dem maximalen
-Ast. Root und alle acht Diagnoseboxen bleiben UNRESOLVED. Der veröffentlichte
-Ergebnisbestand und der globale Verifikationssnapshot bleiben unverändert.
+Aktuelle Arbeit außerhalb von `main` ist in den
+[offenen Pull Requests](https://github.com/Waschtl904/objekt-x-programm/pulls)
+sichtbar. Für ein Urteil über einen solchen Vorschlag sind dessen eigener
+Commit, Belegumfang und Integrationsstatus anzugeben.
 
-## Aktueller Forschungsstand
+## Mathematischer Ansatz
 
-Für den festen Horizont ist die C1-Kette bis `a=1` konstruiert:
-
-```text
-C1a → C1b → kompakter Defekt → finite Schurreduktion
-    → Terminalpositivität bei a=1
-    → kompatibler positiver C1-Abschluss
-```
-
-Der aktuelle Status dieser Bausteine ist `AUTHOR_DERIVED`; ihre genauen Scopes, Beweisanker und Reviewgrenzen stehen in [`RESEARCH_STATE.yaml`](00-uebersicht/RESEARCH_STATE.yaml).
-
-Zusätzlich ist für die erste Kammer
-
-```math
-1 \le A \le B \le C \le A_8,
-\qquad
-A_8=\frac{\log 8}{2},
-```
-
-das rohe T/D-Transport- und Cocycle-Paket **O1–O7** konstruiert:
+Ausgangspunkt ist die physische finite Weil-Form. Ein gemeinsamer
+Prim-/Gamma-Mediator trennt sie in einen positiven Anteil und einen Defekt.
+Eine vollständige Schurreduktion macht den niedrigen Rest zum entscheidenden
+Positivitätsproblem. Bisherige endliche Kammern liefern Bausteine für eine
+Fortsetzung; ein allgemeiner Mechanismus zur Erneuerung ihrer positiven
+Reserve fehlt noch.
 
 ```text
-FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7
-AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+Finite Weil-Form → gemeinsamer Mediator → Defekt- und Schurreduktion
+                → positive Kammern bis A11
+                → [offen] positive Fortsetzung auf unbeschränkte Horizonte
+                → [offen] globale Weil-Gramidentität → RH
 ```
 
-Dieses Resultat ist ausdrücklich auf die erste geschlossene Kammer beschränkt.
-
-Es beweist **keine** neue Terminalpositivität für `A>1`.
-
----
-
-## O8 und O9: positiver Abschluss der ersten Kammer
-
-Das [O8/O9-Forschungspaket](research/x-c1/first-chamber-o8-o9-2026-09-27/README.md)
-ergänzt die rohen O1–O7-Transporte um zwei separat begründete Ergebnisse:
-
-- **O8:** Neue Formraum-, Tail- und Kodimensionsreduktion sowie reproduzierte
-  Zertifikate mit 191 strikt positiven Pivots je Parität. Kammerweit gilt
-  `q_A[u] >= (12/10^30)||u||²` und
-  `G_A >= [24/(23*10^30+24)] I > 10^-30 I`.
-- **O9:** Positive korrigierte Readouts und vollständige Zielräume, isometrische
-  Transporte, Quellintertwining und Cocycle für alle Paare und Tripel bis A₈.
-
-Beide Ergebnisse sind als `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN` registriert.
-Die eigenständige Ganzzahlprüfung bestätigt die O8-Zertifikatsarithmetik auf den
-gebundenen Modellintervallen; eine externe analytische Abnahme bleibt offen.
-Beweisanker, Reproduktionsbelege und Integrationsstand stehen in der
-[`Survivor Registry`](00-uebersicht/SURVIVOR_REGISTRY.md).
-
----
-
-## O10 bis A11: zwei weitere Kammern und allgemeines Wandgesetz
-
-Das [zusammenhängende Forschungspaket](research/x-c1/chambers-through-a11-2026-09-28/README.md)
-enthält die vollständige Abhängigkeitskette:
-
-```text
-O10: gekoppelte rohe q8-Wand
-  → A9: zweite vollständige Terminalpositivität
-  → allgemeines Ein-Wand-Lemma und q9
-  → A11: dritte vollständige Terminalpositivität
-```
-
-- **A9:** `q_A[u] >= 10^-35 ||u||²`, mit 296 positiven Pivots je Parität.
-- **A11:** `q_A[u] >= 10^-50 ||u||²` und
-  `G_A >= 1/(13*10^50+1) I`, mit 285 positiven Pivots je Parität nach exakt
-  rationaler Basisänderung und vollständig bezahlter ursprünglicher Norm.
-- **Transport:** Positive korrigierte isometrische Transporte und Cocycle
-  für alle `1<=A<=B<=C<=A11` über die q8- und q9-Wand.
-- **Allgemeines Wandgesetz:** Rohe T-/D-Cocycles auf jedem festen endlichen
-  Horizont. Vollständige Positivität benötigt weiterhin eigene Terminalreserven.
-- **Allgemeiner hoher Tail:** Auf jedem festen endlichen Horizont wird der
-  vollständige hohe Quellenraum bei ausreichend großem Schnitt positiv.
-  Die dafür nötige Kodimension darf wachsen.
-
-Die Ergebnisse sind `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`. Arb und getrennte
-Ganzzahlarithmetik reproduzieren die Zertifikate auf den gebundenen vollständigen
-Matrixintervallen. Die externe analytische Gesamtprüfung bleibt offen.
-
----
-
-## Nächster lokaler Gate und weitere offene Aufgaben
-
-### Erneuerbare Positivität des niedrigen Schurrests
-
-Die [Spektral-/Renewal-Familie](research/x-c1/renewable-low-schur-spectral-2026-09-29/README.md)
-liefert die echten kritischen Ränge **5/6/8 je Parität**, injektiven Transport
-und kanonische Ergänzungen der Dimension **1/2** samt äußerer L2-Masse.
-Die [kanonische Schurkopplungsfamilie](research/x-c1/canonical-schur-coupling-2026-09-30/README.md)
-zertifiziert starke relative Kopplung und spektrale Energiemischung.
-
-Die neue [gemeinsame Maximiererfamilie](research/x-c1/canonical-joint-maximizers-2026-09-30/README.md)
-verschärft die Projektor-/Momentbedingungen und beweist für **A9→A11 einen
-uniform positiven tatsächlichen Schur-Extremalgap in beiden Paritäten**.
-Die größte Eigenwertgerade ist jeweils eindeutig. Die gerade physische
-inverse Antwortrichtung ist bereits lokalisiert; ihr Winkel liegt im
-dokumentierten orthonormalen Koordinatensystem zwischen **−0.850296° und
-0.381324°**. Das Schurdefekt-Korollar schließt `W0=gamma M0` in beiden
-Paritäten aus.
-
-Die Paketberichte bewahren ihren damaligen Veröffentlichungsstand. Für den
-aktuellen Integrationsstatus gilt das [Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml).
-
-Die [ungerade Projektor-/Transportfamilie](research/x-c1/canonical-odd-structural-open-2026-10-01/README.md)
-zeigte vor der neuen Y68-Schranke die Grenze ihrer endlichen Momentrelaxation: Auch mit voller
-gemeinsamer Masse-/Energietransportordnung erlaubt sie zwei zertifizierte
-physische inverse Antwortrichtungen mit mindestens **89.987266° Abstand**.
-Der damalige rationale Boxtest endet deshalb mit **STRUCTURAL OPEN**.
-Dieser Befund gilt für die ursprüngliche Relaxation; die neue Y68-Schranke
-schließt einen der beiden Zeugen aus.
-Dies betrifft die endliche Relaxation; eine vollständige Realisierung
-beider Gegenzeugen durch das ursprüngliche Operatorproblem wird nicht behauptet.
-
-**Ungerade nach Y68: direkte Eigenlinie verbessert bedingte Schnitte.**
-Die [Full-Shift-/Primal-Dual-Familie](research/x-c1/canonical-full-shift-primal-dual-2026-10-02/README.md)
-liefert Y68 in [0.0410706614, 0.0725344674] und schließt den alten gedrehten
-Gegenzeugen aus. Der frühere STRUCTURAL-OPEN-Nachweis gilt nur für seine
-schwächere Relaxation. Der
-[adaptive Test](research/x-c1/canonical-adaptive-odd-angle-2026-10-02/README.md)
-mit 255 Knoten bleibt UNRESOLVED. Das nun integrierte
-[Direct-Line-Paket](research/x-c1/canonical-direct-odd-line-2026-10-02/README.md)
-erhält gemeinsame Abhängigkeiten in der direkten, zentrierten und affinen
-Rechnung. Alle 57 Vergleiche auf denselben 19 Fällen sind reproduziert.
-
-Auf dem **bedingten** zentralen Vier-Y-Schnitt sinkt die Gesamtwinkelobergrenze
-von 163.162463° auf **3.405363°**, auf quarter von 165.457773° auf **3.765366°**.
-Das belegt dort verlorene Einschließungspräzision der früheren Darstellung.
-Alle fünf bekannten zulässigen Punkte bleiben auf dem maximalen Eigenwertast.
-Die volle Ausgangsbox und alle acht Diagnoseblätter bleiben **UNRESOLVED**;
-die zwei engen Schnitte liefern keinen uniformen Winkelbeweis.
-
-Der [nächste Gate](00-uebersicht/Y_KERNEL_SECOND_ORDER_GATE_2026-10-02.md)
-erhält die gemeinsame Gleichung **Y_L X + Y_R = 0** und explizite zweite
-Ordnung mit rigorosem Rest. Zuerst werden dieselben 19 Fälle verglichen.
-Ein gemeinsamer Root-Gesamtwinkel unter 10° wäre der uniforme Abschluss.
-Neue Operatorintegrale, Y58-/L_B-Daten und ein neuer großer Baum sind für
-diesen ersten Versuch nicht vorgesehen.
-
-Danach folgen bandweise Momente tatsächlicher Maximierer und ein vorwärts
-gerichteter Renewal-Test. Allgemeines Renewal, A13-Positivität, kofinale
-positive Familie, globales Objekt X und RH bleiben offen. PR #187 bleibt
-separat. Status: `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`.
-
-Die hohe Tail-Reduktion steht auf jedem festen endlichen Horizont zur Verfügung.
-Offen ist ein allgemeiner positiver Boden für den verbleibenden niedrigen Rest
-einschließlich der gesamten hohen Kopplung. Die nächste Wand aktiviert `q=11`
-strikt rechts von A11; die vollständige nächste Kammer ist noch nicht zertifiziert.
-
-### Unbeschränkter Horizont
-
-Die bisherige positive C1-Geometrie ist ein **Fixed-Horizon-Resultat**.
-
-Eine kompatible unbeschränkte oder kofinale Horizontfamilie bleibt offen.
-
-### Globale Weil-Testklasse
-
-Auch nach einer künftigen unbeschränkten C1-Geometrie muss die exakte Rückbindung an die vollständige geeignete Weil-Testklasse und einen fensterunabhängigen globalen Readout noch bewiesen werden.
-
----
-
-## Status-Firewall
-
-Folgende Schlussfolgerungen sind ausdrücklich **nicht zulässig**:
-
-```text
-CI grün
-    ≠ mathematisch unabhängig geprüft
-
-Merge
-    ≠ Satzpromotion
-
-O1–O7
-    ≠ O8-Terminalpositivität
-
-Fixed-Horizon-Positivität
-    ≠ unbeschränkte C1-Geometrie
-
-C1-Geometrie
-    ≠ globale Weil-Positivität
-
-lokale oder finite Zertifikate
-    ≠ Riemannsche Hypothese
-```
-
-Statusänderungen müssen über die dokumentierten mathematischen Beweis- und Auditregeln erfolgen.
-
----
-
-## Hier beginnen
-
-Für den aktuellen Stand in dieser Reihenfolge lesen:
-
-1. [`00-uebersicht/OBJEKT_X_GESAMTUEBERBLICK.md`](00-uebersicht/OBJEKT_X_GESAMTUEBERBLICK.md)  
-   Zusammenhängende mathematische Gesamterzählung: klassische Grundlagen, eigene Resultate, No-Gos, heutige C1-Geometrie und offene globale Schritte.
-
-2. [`00-uebersicht/CURRENT_STATE.md`](00-uebersicht/CURRENT_STATE.md)  
-   Lesbare generierte Übersicht des registrierten Forschungsstands.
-
-3. [`00-uebersicht/NEXT_GATES.md`](00-uebersicht/NEXT_GATES.md)  
-   Aktuelle offene mathematische Gates und ihre Firewalls.
-
-4. [`00-uebersicht/RESEARCH_STATE.yaml`](00-uebersicht/RESEARCH_STATE.yaml)  
-   Kanonische operative Statusquelle mit Scopes, Abhängigkeiten und Beweisankern.
-
-5. [`00-uebersicht/SURVIVOR_REGISTRY.md`](00-uebersicht/SURVIVOR_REGISTRY.md)  
-   Konsolidierte Übersicht der weiterverwendbaren mathematischen Resultate.
-
-6. [`00-uebersicht/OBJEKT_X_ARCHITECTURE.md`](00-uebersicht/OBJEKT_X_ARCHITECTURE.md)  
-   Architektur und Stellung der lokalen Konstruktionen auf dem Weg zu Objekt X.
-
----
-
-## Aktuelle Hauptfronten
-
-Das Programm hat zwei getrennte langfristige Fronten.
-
-### 1. Unbeschränkte Horizonterweiterung und kompatibler Transport
-
-```text
-UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION
-OPEN
-```
-
-Aktueller lokaler Einstieg: **erneuerbare Positivität des niedrigen Schurrests**.
-
-Erneuerbare Profilreserven, eine unbeschränkte/kofinale Horizontfamilie und ihre positive Kompatibilität bleiben offen.
-
-### 2. Globale Weil-Testklasse und Readout
-
-```text
-FULL-WEIL-TEST-CLASS
-OPEN
-```
-
-Diese Front setzt eine ausreichend kompatible globale beziehungsweise kofinale Geometrie voraus und ist von der lokalen Fixed-Horizon-Positivität zu unterscheiden.
-
----
-
-## Forschungs- und Reviewstatus
-
-Das Repository unterscheidet insbesondere zwischen:
-
-```text
-AUTHOR_DERIVED
-EXTERNAL_REVIEW_OPEN
-SCOPED_GREEN
-OPEN
-HISTORICAL_PROVENANCE
-```
-
-Die genaue Bedeutung und der jeweilige Scope stehen im kanonischen Register.
-
-Historische Wörter wie `GREEN`, `CLOSED`, `PASS` oder ähnliche Statusangaben in älteren Dateien gelten ausschließlich im damaligen Kontext und werden nicht automatisch auf den heutigen Forschungsstand übertragen.
-
----
-
-## Historische Provenienz
-
-Frühere Arbeitsstände, alternative Beweisfassungen, Audits, No-Gos und technische Zwischenstufen werden bewusst erhalten.
-
-Der [Archiveinstieg](00-uebersicht/ARCHIVE_INDEX.md) bündelt die erhaltenen Originalfassungen, Inhaltsregister und datierten Konsolidierungsbelege. Er unterscheidet den abgeschlossenen Verwaltungsstand von weiterhin offenen mathematischen Prüfungen.
-
-Die frühere Root-README vom 14. September 2026 bleibt ebenfalls gepinnt erhalten:
-
-[Historische README](https://github.com/Waschtl904/objekt-x-programm/blob/79988874cceeb01f17e0cda67485838c0b7c4f63/README.md)
-
----
-
-## Arbeitsprinzip
-
-Das Projekt folgt einem fail-closed Forschungsstil:
-
-- Behauptungen werden auf ihren ausdrücklich bewiesenen Scope begrenzt.
-- Numerische und computerassistierte Zertifikate werden von analytischen Aussagen getrennt.
-- CI und Reproduzierbarkeit ersetzen keinen unabhängigen mathematischen Audit.
-- No-Gos, Gegenbeispiele und fehlgeschlagene Konstruktionen werden als Forschungswissen bewahrt.
-- Neue Resultate dürfen frühere Resultate ergänzen oder einschränken, aber nicht stillschweigend überschreiben.
-- Globale Aussagen werden nicht aus lokalen oder Fixed-Horizon-Resultaten extrapoliert.
-
----
-
-## Unabhängigkeit
-
-Objekt X ist ein unabhängiges Forschungsprojekt.
-
-Externe Publikationen werden dort zitiert, wo ihre Resultate, Methoden oder Vergleichswerte verwendet werden. Solche Zitate bedeuten keine Zusammenarbeit, institutionelle Verbindung, Zustimmung oder gemeinsame Verantwortung.
-
-Bibliographische Korrekturen an historischen Repository-Ständen verändern keine mathematische Aussage und keinen Forschungsstatus, sofern dies nicht ausdrücklich in einem separaten mathematischen Audit begründet wird.
-
----
-
-## Lizenz
-
-Originale Repository-Inhalte stehen, soweit nicht anders angegeben, unter [`CC BY 4.0`](LICENSE).
-
-Externe Publikationen und Drittmaterial unterliegen ihren jeweiligen Rechten und Lizenzen.
+Die [Architektur](00-uebersicht/OBJEKT_X_ARCHITECTURE.md) erklärt die Rollen
+dieser Übergänge. Die [Arbeitsdefinition](00-uebersicht/OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md)
+legt die Anforderungen an Objekt X fest, insbesondere die vollständige
+Testklasse und eine Konstruktion ohne vorausgesetzte Weil-Positivität.
+
+## Belege, Reproduktion und Geschichte
+
+- **Beweise:** Das [Ergebnisregister](00-uebersicht/SURVIVOR_REGISTRY.md)
+  führt zu den jeweiligen Beweispaketen. Deren Voraussetzungen und
+  Geltungsbereiche sind für die Aussagen entscheidend.
+- **Reproduktion:** Paket-READMEs beschreiben Eingaben, Software und konkrete
+  Prüfläufe; etwa die [Kammerkette bis A11](research/x-c1/chambers-through-a11-2026-09-28/README.md)
+  und die [direkte ungerade Eigenlinie](research/x-c1/canonical-direct-odd-line-2026-10-02/README.md).
+  Analytischer Beweis, Zertifikatsreplay und unabhängiger Review sind getrennt ausgewiesen.
+- **Geschichte:** Das [Archiv](00-uebersicht/ARCHIVE_INDEX.md) bewahrt frühere
+  Kandidaten, Fehler, Korrekturen und verworfene Ansätze. Datierte Statusangaben
+  beschreiben den damaligen Stand. Historische Originale behalten ihre Pfade
+  und ihren Wortlaut am jeweiligen Quellcommit. Für die
+  [verlegten Root-Dateien](00-uebersicht/archiv/root-journal-2026-10-03/README.md)
+  sind Originalbytes sowie alte und neue Pfade dokumentiert.
+
+Diese README dient der Orientierung. Die lesbaren Statusansichten werden aus
+`RESEARCH_STATE.yaml` erzeugt; mathematische Aussagen beruhen auf den dort
+gebundenen Quellen.
+
+## Autor, Mitarbeit und Zitation
+
+Das Projekt wird von **Sebastian Schmalnauer** geführt und mit Unterstützung
+verschiedener KI-Agenten entwickelt. Diese Mitwirkung und interne Kontrollen
+ersetzen keine unabhängige fachliche Begutachtung. Eine Neuheitsbewertung
+erfordert einen Vergleich mit der einschlägigen Literatur.
+
+Für konkrete Einwände bitte Satz, Datei, Commit und Begründung nennen.
+[CONTRIBUTING](CONTRIBUTING.md) beschreibt geeignete Beiträge und regelt ihre Prüfung.
+Die [Herkunft des Journals](00-uebersicht/HERKUNFT.md) ist separat dokumentiert.
+
+Zitation und Herkunft: [CITATION.cff](CITATION.cff) · [ATTRIBUTION](ATTRIBUTION.md).
+Bei Verwendung einen konkreten Commit angeben. Originale Repository-Inhalte
+stehen, soweit nicht anders angegeben, unter [CC BY 4.0](LICENSE).
+Für Drittmaterial gelten die jeweiligen Rechte und Lizenzen.

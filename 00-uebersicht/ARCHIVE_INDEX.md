@@ -2,7 +2,22 @@
 
 Dieser Einstieg dient der Navigation. Der aktuelle Forschungsstand steht in [CURRENT_STATE.md](CURRENT_STATE.md), die nächsten mathematischen Aufgaben in [NEXT_GATES.md](NEXT_GATES.md). Maßgebliche Statusquelle bleibt [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml).
 
-## Letzte Branch-Pflege: 2. Oktober 2026
+## Root-Archivierung: 3. Oktober 2026
+
+Der [erste Umzug](archiv/root-journal-2026-10-03/README.md) ordnete 33 Dateien
+ein und reduzierte den Root von 48 auf 15 Dateien. Sein
+[Pfadnachweis](archiv/root-journal-2026-10-03/MIGRATION.md) hält diesen Stand fest.
+
+Der [zweite Schritt](archiv/root-navigation-2026-10-03/README.md) reduzierte
+den Root auf elf Dateien: historischer Index und Bestandsaufnahme liegen im
+Archiv, die C0-Spezifikation beim Forschungszweig und die Mitarbeitshinweise
+in CONTRIBUTING. Die [Importgeschichte](HERKUNFT.md) steht in der Übersicht.
+Originalfassungen und Linkanpassungen sind im
+[zweiten Pfadnachweis](archiv/root-navigation-2026-10-03/MIGRATION.md) gebunden.
+
+Forschungsregister, mathematische Aussagen und Beweisanker bleiben unverändert.
+
+## Branch-Pflege vom 2. Oktober 2026
 
 Die [neue Bereinigungscharge](BRANCH_HYGIENE_2026-10-02.md) entfernt 23 vollständig
 integrierte Arbeitsbranches. Erhalten bleiben Main, der offene q11/A13-Branch

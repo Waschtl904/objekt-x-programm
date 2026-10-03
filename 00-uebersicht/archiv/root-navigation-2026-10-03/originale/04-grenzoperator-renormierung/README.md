@@ -1,3 +1,17 @@
+# Originalfassung: 04-grenzoperator-renormierung/README.md
+
+Historische Quelle; Aussagen und relative Pfade gehören zum angegebenen Quellstand.
+
+- Originalpfad: `04-grenzoperator-renormierung/README.md`
+- Quellcommit: `a0937fcd26705dbce53181fc78ea48b4108b3bc2`
+- Originalblob: `1699f5b2587a41be90c0f7942c8bb6b6d07aead6`
+- SHA-256: `57d9981083b100bde6fac27d86befd307e12a970022930be6171260e8065675d`
+- Originallänge: 6275 Bytes; abschließendes LF: true.
+
+Der Inhalt zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 > [!NOTE]
 > **Dokumentationspflege vom 2. Oktober 2026: historisches Themenregister**
 >
@@ -12,7 +26,7 @@
 
 NEU-121 – NEU-150. Jacobi-Grenzoperator und Spektralmass, Renormierungsbarrieren der Dreifachsumme, PSWF-Bruecke, renormalisierte Selbstenergie, Mangoldt-Spur und Mellin-Finite-Part.
 
-**41 Dokumente.** Zurueck zum [Gesamtindex](../00-uebersicht/archiv/root-navigation-2026-10-03/INDEX.md) · [Repository-Start](../README.md)
+**41 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
 
 | ID | Dokument | Status |
 |---|---|---|
@@ -62,7 +76,4 @@ NEU-121 – NEU-150. Jacobi-Grenzoperator und Spektralmass, Renormierungsbarrier
 
 Statuslegende: `✓M` gesichert · `✓K` konstruktiv/typgeprueft · `✓R` Reduktion · `⚠M` konditional · `✗M` No-Go · `?O` offen. Die Zahl hinter dem Punkt zaehlt die Vorkommen im Dokument.
 
----
-
-Navigation vom 3. Oktober 2026: Ein relatives Linkziel wurde angepasst.
-[Vorherige Originalfassung](../00-uebersicht/archiv/root-navigation-2026-10-03/originale/04-grenzoperator-renormierung/README.md).
+````````

@@ -1,3 +1,17 @@
+# Originalfassung: 01-primkanten-werkzeuge/README.md
+
+Historische Quelle; Aussagen und relative Pfade gehören zum angegebenen Quellstand.
+
+- Originalpfad: `01-primkanten-werkzeuge/README.md`
+- Quellcommit: `a0937fcd26705dbce53181fc78ea48b4108b3bc2`
+- Originalblob: `d19820743ace0a94c22c39efa066f4c9a65da92a`
+- SHA-256: `8b51d0f15ab5f6ca6e424fd50b97592d546e72e3fab044094339632ac2881125`
+- Originallänge: 10344 Bytes; abschließendes LF: true.
+
+Der Inhalt zwischen den langen Zaunmarken enthält die unveränderten Originalbytes.
+Ein zusätzliches Trenn-LF gehört nicht zum Original.
+
+````````text
 > [!NOTE]
 > **Dokumentationspflege vom 2. Oktober 2026: historisches Themenregister**
 >
@@ -12,7 +26,7 @@
 
 NEU-3 – NEU-57. Aufbau der relativen Primkanten-Algebra, Wodzicki-Residuum, Feshbach-Reduktion, Fourier-Hebung mit Mangoldt-Faktor und Nelson-Selbstadjungiertheit.
 
-**63 Dokumente.** Zurueck zum [Gesamtindex](../00-uebersicht/archiv/root-navigation-2026-10-03/INDEX.md) · [Repository-Start](../README.md)
+**63 Dokumente.** Zurueck zum [Gesamtindex](../INDEX.md) · [Repository-Start](../README.md)
 
 | ID | Dokument | Status |
 |---|---|---|
@@ -84,7 +98,4 @@ NEU-3 – NEU-57. Aufbau der relativen Primkanten-Algebra, Wodzicki-Residuum, Fe
 
 Statuslegende: `✓M` gesichert · `✓K` konstruktiv/typgeprueft · `✓R` Reduktion · `⚠M` konditional · `✗M` No-Go · `?O` offen. Die Zahl hinter dem Punkt zaehlt die Vorkommen im Dokument.
 
----
-
-Navigation vom 3. Oktober 2026: Ein relatives Linkziel wurde angepasst.
-[Vorherige Originalfassung](../00-uebersicht/archiv/root-navigation-2026-10-03/originale/01-primkanten-werkzeuge/README.md).
+````````
