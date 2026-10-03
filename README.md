@@ -96,6 +96,12 @@ Testklasse und eine Konstruktion ohne vorausgesetzte Weil-Positivität.
   [verlegten Root-Dateien](00-uebersicht/archiv/root-journal-2026-10-03/README.md)
   sind Originalbytes sowie alte und neue Pfade dokumentiert.
 
+Die versiegelten Originalpakete behalten auch ihre damaligen Integrationsangaben.
+Ein dortiges `PENDING_STATUS_REVIEW` oder `RESEARCH_BRANCH_UNMERGED` beschreibt
+den ursprünglichen Paketstand. Die heutige Aufnahme ist im
+[Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml) und im
+[Integrationsnachweis](00-uebersicht/integrationsnachweise/PR206_2026-10-03.md) dokumentiert.
+
 Diese README dient der Orientierung. Die lesbaren Statusansichten werden aus
 `RESEARCH_STATE.yaml` erzeugt; mathematische Aussagen beruhen auf den dort
 gebundenen Quellen.

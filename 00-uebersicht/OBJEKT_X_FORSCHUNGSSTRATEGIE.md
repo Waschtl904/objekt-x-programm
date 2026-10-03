@@ -152,7 +152,7 @@ Nach einer gerechtfertigten Blockdarstellung sei
 
 A steht hier für einen bereits positiv kontrollierten Block, nicht für den Horizontparameter. Die vollständige hohe Antwort muss in dieser Darstellung entweder erhalten oder mit einer bewiesenen Schranke eingeschlossen sein. Insbesondere darf eine vorherige Elimination nicht stillschweigend den alten positiven Block verändern, ohne diese Veränderung zu bezahlen.
 
-Für eine beliebige, unabhängig gewählte Näherung P an die Lösung von `AP=C` definiere
+In der vollständigen Operatorfassung sei P ein beschränkter Operator vom neuen in den alten Hilbertraum. Für eine solche unabhängig gewählte Näherung an die Lösung von `AP=C` definiere
 
 \[
 E=C-AP,\qquad
@@ -175,7 +175,7 @@ E^*A^{-1}E\preceq\Gamma,
 \qquad W\succ0,\quad\eta>0
 \]
 
-herzuleiten. Dann ist der vollständige neue Schurrest positiv. Die Größe η darf vom Schritt abhängen und klein sein. W muss unabhängig spezifiziert sein; `W=neuer Schurrest` wäre keine hilfreiche Konstruktion.
+herzuleiten. Auf einem unendlichen vollständigen Hilbertraum muss W dabei ein beschränkter koerziver Vergleichsoperator sein, also W≽wI mit w>0, wenn eine beschränkt invertierbare neue Terminalreserve benötigt wird. Nach einer begründeten endlichen Reduktion genügt eine positiv definite Vergleichsmatrix. Dann ist der vollständige neue Schurrest im jeweiligen Sinn positiv. Die Größe η darf vom Schritt abhängen und klein sein. W muss unabhängig spezifiziert sein; `W=neuer Schurrest` wäre keine hilfreiche Konstruktion.
 
 Die Standardalgebra ist bereits eindeutig. **Die neue mathematische Arbeit besteht in der gemeinsamen Prim-/Gamma-Abschätzung für K und Γ sowie in ihrer erneuerbaren Form.** Bloßes Einsetzen einer bereits bewiesenen Zielpositivität würde diese Arbeit nicht leisten.
 
