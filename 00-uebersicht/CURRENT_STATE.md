@@ -3,7 +3,7 @@
 > GENERATED FILE — DO NOT EDIT
 > Quelle: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml). Navigation, keine Satzpromotion.
 
-Stand: 2026-10-02.
+Stand: 2026-10-03.
 
 ## Gemergte kanonische Basis
 
@@ -111,5 +111,9 @@ Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGI
 - `rh`: **OPEN**.
 
 Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getrennt. Diese Statusansicht führt die mathematischen Checker nicht erneut aus.
+
+## Noch nicht in den geprüften Stand übernommene Pakete
+
+- `CANONICAL-Y-KERNEL-SECOND-ORDER-UNRESOLVED`: PENDING_STATUS_REVIEW — `research/x-c1/canonical-y-kernel-second-order-2026-10-03/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

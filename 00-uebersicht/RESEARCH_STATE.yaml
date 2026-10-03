@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "render_version": 6,
-  "state_date": "2026-10-02",
+  "state_date": "2026-10-03",
   "repository": "Waschtl904/objekt-x-programm",
   "published_baseline": {
     "branch": "main",
@@ -2442,7 +2442,13 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [],
+  "pending_packages": [
+    {
+      "id": "CANONICAL-Y-KERNEL-SECOND-ORDER-UNRESOLVED",
+      "meta_path": "research/x-c1/canonical-y-kernel-second-order-2026-10-03/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    }
+  ],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",

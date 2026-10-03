@@ -1,0 +1,24 @@
+{
+  "gate": "CANONICAL-Y-KERNEL-SECOND-ORDER-ODD-LINE",
+  "base": "b8924422effe809d8ba51590cf50ca23f3c117b1",
+  "change_class": "MATHEMATICS",
+  "mandatory": [
+    "Exact rational center inverse and zero center residual; common linear and quadratic Y terms; certified Neumann tail on each whole case",
+    "All 19 inherited cases, identical four-coordinate boxes and physical reference, no new operator inputs or adaptive tree",
+    "Five complete points contained and certified on maximal eigenvalue branch",
+    "central and quarter bounds no worse than the exact inherited affine bounds",
+    "Explicit root and eight diagnostic outcomes; twice the angle to the same reference; no uniform promotion unless full root width is strictly below ten degrees",
+    "Exact algebra, adverse branch, polynomial rounding and truncation, Neumann tail and input preservation controls",
+    "Separate rational endpoint and Newton audit plus directed 768-bit Arb angle audit",
+    "Closed manifest, unchanged inherited bytes, source bindings, complete deterministic 19-case replay and byte-identical receipts"
+  ],
+  "integration_if_published": [
+    "Applicable repository CI on final head, dedicated full replay and source/manifest controls",
+    "Research result remains AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN",
+    "Any merge requires the concrete release required by CONTRIBUTING.md; confirm main CI afterwards"
+  ],
+  "not_required": [
+    "Repeat unchanged large operator integrals or the completed adaptive tree",
+    "New A13, Y58 dual, L_B or operator inputs"
+  ]
+}

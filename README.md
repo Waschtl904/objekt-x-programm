@@ -32,15 +32,22 @@ Die Riemannsche Hypothese bleibt offen.**
   für A9→A11 ist in beiden Paritäten eindeutig.
 - Die gerade Richtung ist lokalisiert. Ungerade liefert die direkte affine
   Linie bedingte Hüllen von 3.405363° und 3.765366°; Root bleibt **UNRESOLVED**.
-- Als Nächstes folgt die gemeinsame Y-Kernel-Gleichung mit zweiter Ordnung,
-  danach bandweise Momente tatsächlicher Maximierer und ein vorwärts
-  gerichteter Renewal-Schritt.
+- Offen bleiben der gemeinsame Y-Kernel-Gate, bandweise Momente tatsächlicher
+  Maximierer und ein vorwärts gerichteter Renewal-Schritt.
 - PR #187/A13 bleibt ein separater, unintegrierter Forschungsstrang.
 
 Die [Dokumentationsübersicht](00-uebersicht/DOKUMENTATIONSWEGWEISER.md) trennt
 aktuellen Status, lokale Folgepakete und historische Quellen. Branches und
 Archivtags sind im [Bereinigungsnachweis](00-uebersicht/BRANCH_HYGIENE_2026-10-02.md)
 erklärt. Der geschützte Auditanker bleibt erhalten.
+
+## Neues Folgepaket in Statusprüfung
+
+Das [Y-Kernel-Paket zweiter Ordnung](research/x-c1/canonical-y-kernel-second-order-2026-10-03/README.md)
+ist als `PENDING_STATUS_REVIEW` erfasst: bedingte Hüllen central <=2.933357°,
+quarter <=3.070163° und erstmals half <=3.642693°, jeweils auf dem maximalen
+Ast. Root und alle acht Diagnoseboxen bleiben UNRESOLVED. Der veröffentlichte
+Ergebnisbestand und der globale Verifikationssnapshot bleiben unverändert.
 
 ## Aktueller Forschungsstand
 

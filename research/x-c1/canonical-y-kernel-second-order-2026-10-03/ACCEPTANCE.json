@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "gate": "CANONICAL-Y-KERNEL-SECOND-ORDER-ODD-LINE",
+  "outcome": "UNRESOLVED",
+  "research_status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN",
+  "integration_status": "LOCAL_UNMERGED",
+  "canonical_base": "b8924422effe809d8ba51590cf50ca23f3c117b1",
+  "archive": "Gemeinsamer-Y-Kernel-zweite-Ordnung-2026-10-03.zip",
+  "archive_sha256": "b6f6078172ac97f5dcd61fb0ed76acd44e0b0a2c53a82ac554c831cd6732a663",
+  "archive_bytes": 26364303,
+  "archive_files": 81,
+  "manifest_bindings": 80,
+  "manifest_sha256": "3823159d70229d9c51aba14f310e5b7dc962b0c807bc080940ddd5d079b413b8",
+  "inherited_files_unchanged": 59,
+  "inherited_adaptive_files_unchanged": 41,
+  "complete_case_replay": 19,
+  "byte_identical_receipts": 5,
+  "central_total_angle_upper_outward": "2.933357",
+  "quarter_total_angle_upper_outward": "3.070163",
+  "newly_isolated_half_total_angle_upper_outward": "3.642693",
+  "known_maximal_points_retained": 5,
+  "root_and_eight_diagnostic_boxes": "UNRESOLVED",
+  "uniform_localization": false,
+  "audit": {
+    "status": "PASS",
+    "case_count": 19,
+    "independent_exact_center_and_tail_checks": 19,
+    "h_infinity_max": "19298026614457250208958068834378057139947917826999016235272517223707/2500000000000000000000000000000000000000000000000000000000000000000000",
+    "independent_maximal_root_certificates": 8,
+    "independent_newton_steps": 41,
+    "independent_Arb_768bit_angle_bounds": 11,
+    "newly_isolated_cases": [
+      "slice/half"
+    ],
+    "known_maximal_points_retained": 5,
+    "central_and_quarter_no_worse_than_exact_previous_bounds": true,
+    "root_status": "UNRESOLVED",
+    "uniform_localization": false,
+    "diagnostic_boxes_are_not_a_root_cover": true
+  },
+  "full_replay": {
+    "status": "PASS",
+    "manifest_sha256": "3823159d70229d9c51aba14f310e5b7dc962b0c807bc080940ddd5d079b413b8",
+    "full_case_replays": 19,
+    "inherited_files_unchanged": 59,
+    "receipts": [
+      {
+        "file": "comparison.json",
+        "sha256": "15ff4034f358bfdfea4eb9f61899c4be65794d0e079b28e6534a55bf38fcd0d8",
+        "byte_identical": true
+      },
+      {
+        "file": "controls.json",
+        "sha256": "5e2039f037ac297f2a64447af0e58c586feb29592216c6554208eee4e2e2efb9",
+        "byte_identical": true
+      },
+      {
+        "file": "inherited_controls.json",
+        "sha256": "6c28227c97852cd842fa3729efc37e76276eee1ca33589df361527cea24bc176",
+        "byte_identical": true
+      },
+      {
+        "file": "audit.json",
+        "sha256": "be87d26900cc7a24aa308e7118c37c433d3681b104acc3db75f2e655baa2fc54",
+        "byte_identical": true
+      },
+      {
+        "file": "summary.json",
+        "sha256": "776a122cb9db1c17131bf5b75eebc3f0306952cb4be13f6fb7af36159c1b2fee",
+        "byte_identical": true
+      }
+    ],
+    "steps": [
+      "git_sources",
+      "manifest_controls",
+      "controls",
+      "inherited_controls",
+      "all_19_cases",
+      "independent_audit",
+      "summary"
+    ],
+    "outcome": "UNRESOLVED",
+    "new_operator_integrals": false,
+    "A13_inputs_used": false,
+    "global_verification_snapshot_changed": false
+  },
+  "new_operator_integrals": false,
+  "new_Y58_or_LB_inputs": false,
+  "new_adaptive_tree": false,
+  "A13_inputs_used": false,
+  "external_review_status_changed": false,
+  "global_verification_snapshot_changed": false,
+  "technical_preflight_note": "A first replay stopped before numerical work because the Windows execution user differed from the checkout owner. The final wrapper applies a command-local safe.directory to the explicitly selected repository; the subsequent complete replay passed.",
+  "does_not_claim": [
+    "Structural openness",
+    "Failure of all higher models",
+    "General renewal",
+    "A13 positivity",
+    "Cofinal positive family",
+    "Global Object X",
+    "RH"
+  ]
+}

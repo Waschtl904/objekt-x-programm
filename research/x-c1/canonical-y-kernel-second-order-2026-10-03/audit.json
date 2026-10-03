@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "case_count": 19,
+  "independent_exact_center_and_tail_checks": 19,
+  "h_infinity_max": "19298026614457250208958068834378057139947917826999016235272517223707/2500000000000000000000000000000000000000000000000000000000000000000000",
+  "independent_maximal_root_certificates": 8,
+  "independent_newton_steps": 41,
+  "independent_Arb_768bit_angle_bounds": 11,
+  "newly_isolated_cases": [
+    "slice/half"
+  ],
+  "known_maximal_points_retained": 5,
+  "central_and_quarter_no_worse_than_exact_previous_bounds": true,
+  "root_status": "UNRESOLVED",
+  "uniform_localization": false,
+  "diagnostic_boxes_are_not_a_root_cover": true
+}
