@@ -9,7 +9,7 @@ Die getrennten Integrations-/Registry-Metadaten in [CURRENT_STATE](CURRENT_STATE
 
 ## Konstruktive Fortsetzung der gemeinsamen Objekt-X-Geometrie
 
-`UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION` — OPEN. Primäres Ziel ist die Konstruktion von Objekt X gemäß Arbeitsdefinition; der mögliche RH-Anschluss folgt danach. Ausgangspunkt sind positive Kammern bis A11 und rohe kompatible Transporte. Die Hauptaufgabe ist eine vollständige vorwärts gerichtete Schurfortsetzung ohne vorausgesetzte neue Terminalpositivität. Die Y-Kernel- und H0-Folgepakete dokumentieren bedingte Winkelverbesserungen und Grenzen skalarer Relaxationen; Root bleibt UNRESOLVED. Die Definition, globale Testklasse, kofinale Fortsetzung und externe Prüfung bleiben unverändert offen.
+`UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION` — OPEN. Primäres Ziel ist die Konstruktion von Objekt X gemäß Arbeitsdefinition; der mögliche RH-Anschluss folgt danach. Ausgangspunkt sind positive Kammern bis A11 und rohe kompatible Transporte. Die Hauptaufgabe ist eine vollständige vorwärts gerichtete Schurfortsetzung ohne vorausgesetzte neue Terminalpositivität. Die Y-Kernel- und H0-Folgepakete dokumentieren bedingte Winkelverbesserungen und Grenzen skalarer Relaxationen; Root bleibt UNRESOLVED. Die Definition, globale Testklasse, kofinale Fortsetzung und externe Prüfung bleiben unverändert offen. Der neue Vier-Quellen-Test A8->A9 weist einen positiven Anschluss nach vollständiger alter Elimination aus (Böden 1/100000 und 33/1000000); die neue gesamte Quotientenabdeckung bleibt offen. Das Paket wird mit eigener Beweisbindung integriert.
 
 Offene Obligationen:
 
@@ -24,6 +24,7 @@ Offene Obligationen:
 
 Akzeptierter strategischer Fortschritt:
 
+- Baue auf dem [positiven Vier-Quellen-Anschluss A8->A9](../research/x-c1/a8-four-source-inverse-energy-2026-10-04/README.md) auf: größere klar festgelegte neue Quellfamilien mit gemeinsamen inversen Energiebudgets prüfen und anschließend den vollständigen neuen Quotienten samt Rest abdecken.
 - Bestimme für A8->A9 und A9->A11 in beiden Paritäten zulässige Eingaben ohne direkte oder indirekte Verwendung der neuen Terminalpositivität. Begründung und bedingte Algebra: [Forschungsstrategie](OBJEKT_X_FORSCHUNGSSTRATEGIE.md).
 - Konstruiere eine vollständige Blockdarstellung in einer unabhängig positiven Hilbertnorm. Erhalte den alten positiven Quellenraum und bezahle den unendlichen neuen Anteil; eine endliche Quotientendarstellung braucht einen eigenen Reduktionsbeweis.
 - Kontrolliere den neuen Schurrest über E=C-AP, K=D-C*P-P*C+P*AP und S=K-E*A^-1*E. Werte korrigierte gemeinsame Prim-/Gamma-Quellen aus und begründe K_- - Gamma >= eta W mit unabhängig festgelegtem W.
@@ -49,6 +50,7 @@ Nicht ausreichend:
 - Die Positivität des neuen Terminals direkt oder über inverse Gesamtform, positive Spektralprojektoren oder Cauchy-Schwarz voraussetzen, um genau diese Positivität herzuleiten.
 - Eine kleine Residualnorm allein als positive Schurreserve ausgeben; der exakte Schurrest hängt nicht von der Wahl des Näherungslösers P ab.
 - Den zusätzlich übermittelten H0-Block-45-Bericht als hier reproduziertes Zertifikat behandeln.
+- Den positiven Anschluss der vier ausgewählten Quellen als vollständige neue Quotientenabdeckung oder allgemeinen Fortsetzungssatz ausgeben.
 
 Verwendbare Registereinträge: `C0-DIRECTED-FORM-SYSTEM`, `C1a-COUPLED-SPECTRAL-MEDIATOR`, `C1b-ZERO-EXTENSION-INTERTWINING`, `TERMINAL-191D-DEFECT-SCHUR-A1`, `C1d-COMPATIBLE-POSITIVE-COMPLETION`, `FIRST-CHAMBER-RAW-TD-COCYCLE-O1-O7`, `FIRST-CHAMBER-O8-TERMINAL-POSITIVITY`, `POSITIVE-CORRECTED-TRANSPORT`, `X4-Q8-WALL-CROSSING`, `SECOND-CHAMBER-A9-TERMINAL-POSITIVITY`, `GENERAL-PRIME-POWER-WALL-COCYCLE`, `THIRD-CHAMBER-A11-TERMINAL-POSITIVITY`, `FINITE-HORIZON-HIGH-TAIL-REDUCTION`, `TRUE-LOW-SPECTRAL-SUBSPACE-A11`, `CANONICAL-LOW-SPECTRAL-RANKS-A8-A9-A11`, `CRITICAL-SPECTRAL-TRANSPORT`, `CANONICAL-EXTENSION-OUTER-MASS`, `CANONICAL-RELATIVE-KAPPA-REDUCTION`, `CANONICAL-RESOLVENT-COUPLING-BOUNDS`, `CANONICAL-SCHUR-MIXING-MECHANISM`, `CANONICAL-SCHUR-EXTREMAL-CERTIFICATE-GATE`, `CANONICAL-PROJECTED-OVERLAP-JOINT-MOMENTS`, `CANONICAL-JOINT-GENERALIZED-DISCRIMINANT`, `CANONICAL-SCHUR-DEFECT-NONPROPORTIONALITY`, `CANONICAL-ODD-OUTER-PROJECTOR-OBSTRUCTION`, `CANONICAL-TRANSPORT-MOMENT-EXCLUSION`, `CANONICAL-TRANSPORT-PROJECTOR-OBSTRUCTION`, `CANONICAL-ODD-BOX-STRUCTURAL-OPEN`, `CANONICAL-CROSS-PROJECTOR-RESIDUAL-UNRESOLVED`, `CANONICAL-HIGH-RESPONSE-CORRECTED-UNRESOLVED`, `CANONICAL-FULL-SHIFT-RESOLVENT-UNRESOLVED`, `CANONICAL-PRIMAL-DUAL-Y68-EXCLUSION`, `CANONICAL-ADAPTIVE-ODD-ANGLE-UNRESOLVED`, `CANONICAL-DIRECT-ODD-LINE-UNRESOLVED`, `CANONICAL-Y-KERNEL-SECOND-ORDER-UNRESOLVED`, `CANONICAL-H0-FOLLOWUP-RELAXATION-BOUNDARY`.
 
