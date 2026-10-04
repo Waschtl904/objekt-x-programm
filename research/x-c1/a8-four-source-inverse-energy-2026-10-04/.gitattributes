@@ -1,0 +1,5 @@
+# Preserve hash-bound original bytes, including historical CRLF files.
+reports/** -text whitespace=cr-at-eol
+code/** -text
+vendor/** -text
+inputs/** -text

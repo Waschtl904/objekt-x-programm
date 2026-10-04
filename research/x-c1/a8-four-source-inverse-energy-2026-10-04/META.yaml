@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "A8-A9-FOUR-SOURCE-POSITIVE-EXTENSION",
+  "date": "2026-10-04",
+  "kind": "CONSTRUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Vier feste Quellen A8->A9, Grade 2/4 und 3/5; vollständiger alter Raum. Schur-Koeffizientenböden 1/100000 bzw. 33/1000000 unter gebundenen Form-/Operatoridentitäten.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "Kein negativer Befund; keine Behauptung über den gesamten neuen Quotienten.",
+  "depends_on": [
+    "FIRST-CHAMBER-O8-TERMINAL-POSITIVITY",
+    "X4-Q8-WALL-CROSSING"
+  ],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "Keine vorausgesetzte neue Terminalpositivität.",
+    "Keine vollständige neue Quotientenabdeckung oder kofinale Fortsetzung.",
+    "Keine externe analytische Abnahme; Objekt X bleibt offen."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/a8-four-source-inverse-energy-2026-10-04/PROOF.md",
+    "sha256": "a4529dd78d309bb7a5817de391fcd461364734847a0afaf5a1568e574fdfb0fa"
+  }
+}

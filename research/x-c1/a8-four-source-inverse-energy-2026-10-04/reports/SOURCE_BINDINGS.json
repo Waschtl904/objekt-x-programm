@@ -1,0 +1,167 @@
+{
+  "source_head": "8e6944406511d8e28dff7c977cb62d641eb45c41",
+  "a9_git_blob": "29c436e8c504ce26186c1203819282a96b4d13f1",
+  "original_residual_package_sha256": "2287538ae928d08dd459baa1d43586c0f47bd17a21ba05bdea98a7291a857754",
+  "calculation": "Four fixed new sources; complete old inverse energy upper bounds",
+  "files": [
+    {
+      "file": "inputs/a8_model.json.gz",
+      "sha256": "5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b",
+      "bytes": 8243618,
+      "origin": "A8 source model"
+    },
+    {
+      "file": "inputs/a9_model.json.gz",
+      "sha256": "a1cb251d5563cffb01eec3fbbf11c891851b677bd4f4ec7f5fba37164d14ab72",
+      "bytes": 19770236,
+      "origin": "Pinned A9 model; only selected form entries and Gamma budget used"
+    },
+    {
+      "file": "inputs/SOLUTIONS.json",
+      "sha256": "0ee0c0c4daed17ad3d68f3a340d236504b370fc72879363315884082c75120b5",
+      "bytes": 575483,
+      "origin": "Four fixed rational old proposals"
+    },
+    {
+      "file": "inputs/RHS_ERROR_BUDGET.json",
+      "sha256": "20f09dfa786708a34a3853daed87f659a495f16637bc0cef98a1b7d5cf2f1cdb",
+      "bytes": 239761,
+      "origin": "Replayed 764 cross-form budget"
+    },
+    {
+      "file": "inputs/INDEPENDENT_INTEGER_AUDIT.json",
+      "sha256": "1129c1bc632ff88c80830c67feacb45f2557752a2de6de4cfe79f9b07c693268",
+      "bytes": 51225,
+      "origin": "Prior separate exact finite audit"
+    },
+    {
+      "file": "inputs/AUDIT_COMPLETE.json",
+      "sha256": "45684589f5de197acac3aeae57020b7b349fdbd1ae035060190e6ce0041fa3fc",
+      "bytes": 111554,
+      "origin": "Replayed original full residual audit"
+    },
+    {
+      "file": "inputs/FUNCTIONS.json",
+      "sha256": "fccfff9abcd99afa1c9cdfaf9ae7fdcdbe6d1b7afc799180da3ec5c34f8f134d",
+      "bytes": 114064138,
+      "origin": "Replayed full residual functions"
+    },
+    {
+      "file": "inputs/FULL_GRAM.json",
+      "sha256": "d242cd05cbe06d6929c02f1067ca9115ea66e3511fa22c898d541e822859e89f",
+      "bytes": 21268,
+      "origin": "Replayed full Gram enclosures"
+    },
+    {
+      "file": "vendor/source_core.py",
+      "sha256": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772",
+      "bytes": 13584,
+      "origin": "Unchanged original full residual package"
+    },
+    {
+      "file": "vendor/full_gram.py",
+      "sha256": "6eb057dddef1a9a83f2b1cb264f569dcee466266946a01cff68df620f371d19f",
+      "bytes": 17803,
+      "origin": "Unchanged original full residual package"
+    },
+    {
+      "file": "code/compute_inverse_energy_gate.py",
+      "sha256": "0c0f288d24710bf8e0a37b625825670ce508835a17e7755909557064535da519",
+      "bytes": 16602,
+      "origin": "New calculation or exact control in this work block"
+    },
+    {
+      "file": "code/compute_source_mixed.py",
+      "sha256": "2d24184788ad846f6216dcef5a11a761ca4c3f4d4cd56cea3268b67cdbf48df9",
+      "bytes": 13765,
+      "origin": "New calculation or exact control in this work block"
+    },
+    {
+      "file": "code/check_inverse_energy_exact.py",
+      "sha256": "32d968fbb3bdca3b4e871c97b9e22cf9de5ff5b4277de72a7e0a739232c3ab6b",
+      "bytes": 6770,
+      "origin": "New calculation or exact control in this work block"
+    },
+    {
+      "file": "reproduce.py",
+      "sha256": "2ab5251be87b56bbf2f66c3b1687276ea635cb63b93d0395015b269b9b43198b",
+      "bytes": 4735,
+      "origin": "New self-contained wrapper"
+    },
+    {
+      "file": "expected/FINAL_GATE.json",
+      "sha256": "f13e740bb7061dea528d0262a5c7c76fa75d0792873e735b639630477a6bd27a",
+      "bytes": 454088,
+      "origin": "Executed new calculation"
+    },
+    {
+      "file": "expected/SOURCE_MIXED_3072.json",
+      "sha256": "fa06b33cf6089a784753de7a8bb2b925ee8016ab9628b1345c76e4f3b2d32fa5",
+      "bytes": 354570,
+      "origin": "Executed new calculation"
+    },
+    {
+      "file": "expected/SOURCE_MIXED_4096.json",
+      "sha256": "ab3dd775c0133464c1943b149df71db232569f0078220010781f0f0ffc1787a2",
+      "bytes": 354570,
+      "origin": "Executed new calculation"
+    },
+    {
+      "file": "expected/INDEPENDENT_ENERGY_CHECK.json",
+      "sha256": "724db6eb7c2dc3ba2d97ce75a81cebae40d959155a493df96f69d7a1657a4717",
+      "bytes": 11084,
+      "origin": "Executed new calculation"
+    },
+    {
+      "file": "provenance/A8_PROOF.md",
+      "sha256": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661",
+      "bytes": 17081,
+      "origin": "https://github.com/Waschtl904/objekt-x-programm/blob/8e6944406511d8e28dff7c977cb62d641eb45c41/research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/PROOF.md"
+    },
+    {
+      "file": "provenance/GRAPH_SCHUR.md",
+      "sha256": "9fcf953793d8511433cbf79a1a1f1c88062eb429b693b0d81b6856754b49c636",
+      "bytes": 10285,
+      "origin": "https://github.com/Waschtl904/objekt-x-programm/blob/8e6944406511d8e28dff7c977cb62d641eb45c41/research/x-c1/first-chamber-o8-o9-2026-09-27/o8-schur-abgleich/GRAPH_SCHUR.md"
+    },
+    {
+      "file": "provenance/A8_REFINED_TAIL.json",
+      "sha256": "8be8b9f15c4b382d8ec7ad48aa51aa71d9bf8fa253a96a2f5cc7710c0912cc2f",
+      "bytes": 939,
+      "origin": "https://github.com/Waschtl904/objekt-x-programm/blob/8e6944406511d8e28dff7c977cb62d641eb45c41/research/x-c1/first-chamber-o8-o9-2026-09-27/o8-rechenstand/refined_tail.json"
+    },
+    {
+      "file": "provenance/A9_PROOF.md",
+      "sha256": "58577c7f448287daf4b09f0b031b00080cede91b31ac81dab0f3df336fcab1d0",
+      "bytes": 19319,
+      "origin": "https://github.com/Waschtl904/objekt-x-programm/blob/8e6944406511d8e28dff7c977cb62d641eb45c41/research/x-c1/chambers-through-a11-2026-09-28/a9/PROOF.md"
+    },
+    {
+      "file": "provenance/FULL_RESIDUAL_PROOF.md",
+      "sha256": "c44d2c36bdca30c9ec8e4773bdef0117463b7be3e451ac603e2b4dd4957a44aa",
+      "bytes": 10055,
+      "origin": "Original residual ZIP; unchanged"
+    },
+    {
+      "file": "provenance/ORIGINAL_RESIDUAL_SHA256SUMS",
+      "sha256": "f12dd434f15e065bcc6090bb677aacb538ad0caa024c3402eb9eea369274f9b3",
+      "bytes": 1872,
+      "origin": "Original residual ZIP; unchanged"
+    },
+    {
+      "file": "provenance/ORIGINAL_RESIDUAL_BINDINGS.json",
+      "sha256": "0d3d584e00c8a011278712dad7c6dd5abb64624bb785f0c0b5b92ca882cae410",
+      "bytes": 605,
+      "origin": "Original residual ZIP; unchanged"
+    },
+    {
+      "file": "provenance/PREVIOUS_RESIDUAL_REVIEW.md",
+      "sha256": "8c971d1ea7aeeb4a09d591905ff8124ff21de3f6c4dcf4964046808be2ab45f3",
+      "bytes": 8872,
+      "origin": "Previous source-bound review; its formerly open energy test is advanced by the present report"
+    }
+  ],
+  "original_models_regenerated": false,
+  "github_changed": false,
+  "status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN"
+}

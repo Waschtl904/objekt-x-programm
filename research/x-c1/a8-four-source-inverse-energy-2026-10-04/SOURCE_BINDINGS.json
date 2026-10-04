@@ -1,0 +1,127 @@
+{
+  "source_head": "8e6944406511d8e28dff7c977cb62d641eb45c41",
+  "archive": "inputs/ObjektX_A8_Inverse_Energie_2026-10-04.zip",
+  "archive_sha256": "068d2cbf63732d318836dadb5bd86a61e81f74358398d9f4cdba3095f5353536",
+  "folder": "Objekt-X-A8-Inverse-Energie-2026-10-04",
+  "files": {
+    "code/check_inverse_energy_exact.py": "32d968fbb3bdca3b4e871c97b9e22cf9de5ff5b4277de72a7e0a739232c3ab6b",
+    "code/compute_inverse_energy_gate.py": "0c0f288d24710bf8e0a37b625825670ce508835a17e7755909557064535da519",
+    "code/compute_source_mixed.py": "2d24184788ad846f6216dcef5a11a761ca4c3f4d4cd56cea3268b67cdbf48df9",
+    "ERGEBNIS.md": "6680c7b23ace45e3b187035fd25cffd70a037ff20228e8f1edb0f1fa01f65762",
+    "expected/FINAL_GATE.json": "f13e740bb7061dea528d0262a5c7c76fa75d0792873e735b639630477a6bd27a",
+    "expected/INDEPENDENT_ENERGY_CHECK.json": "724db6eb7c2dc3ba2d97ce75a81cebae40d959155a493df96f69d7a1657a4717",
+    "expected/SOURCE_MIXED_3072.json": "fa06b33cf6089a784753de7a8bb2b925ee8016ab9628b1345c76e4f3b2d32fa5",
+    "expected/SOURCE_MIXED_4096.json": "ab3dd775c0133464c1943b149df71db232569f0078220010781f0f0ffc1787a2",
+    "inputs/a8_model.json.gz": "5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b",
+    "inputs/a9_model.json.gz": "a1cb251d5563cffb01eec3fbbf11c891851b677bd4f4ec7f5fba37164d14ab72",
+    "inputs/AUDIT_COMPLETE.json": "45684589f5de197acac3aeae57020b7b349fdbd1ae035060190e6ce0041fa3fc",
+    "inputs/FULL_GRAM.json": "d242cd05cbe06d6929c02f1067ca9115ea66e3511fa22c898d541e822859e89f",
+    "inputs/FUNCTIONS.json": "fccfff9abcd99afa1c9cdfaf9ae7fdcdbe6d1b7afc799180da3ec5c34f8f134d",
+    "inputs/INDEPENDENT_INTEGER_AUDIT.json": "1129c1bc632ff88c80830c67feacb45f2557752a2de6de4cfe79f9b07c693268",
+    "inputs/RHS_ERROR_BUDGET.json": "20f09dfa786708a34a3853daed87f659a495f16637bc0cef98a1b7d5cf2f1cdb",
+    "inputs/SOLUTIONS.json": "0ee0c0c4daed17ad3d68f3a340d236504b370fc72879363315884082c75120b5",
+    "NACHWEIS.md": "fe1027ac168a7274d3842cf4456d4cd6dd7ebf56506bfaead39a1d01c14a5757",
+    "provenance/A8_PROOF.md": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661",
+    "provenance/A8_REFINED_TAIL.json": "8be8b9f15c4b382d8ec7ad48aa51aa71d9bf8fa253a96a2f5cc7710c0912cc2f",
+    "provenance/A9_PROOF.md": "58577c7f448287daf4b09f0b031b00080cede91b31ac81dab0f3df336fcab1d0",
+    "provenance/FULL_RESIDUAL_PROOF.md": "c44d2c36bdca30c9ec8e4773bdef0117463b7be3e451ac603e2b4dd4957a44aa",
+    "provenance/GRAPH_SCHUR.md": "9fcf953793d8511433cbf79a1a1f1c88062eb429b693b0d81b6856754b49c636",
+    "provenance/ORIGINAL_RESIDUAL_BINDINGS.json": "0d3d584e00c8a011278712dad7c6dd5abb64624bb785f0c0b5b92ca882cae410",
+    "provenance/ORIGINAL_RESIDUAL_SHA256SUMS": "f12dd434f15e065bcc6090bb677aacb538ad0caa024c3402eb9eea369274f9b3",
+    "provenance/PREVIOUS_RESIDUAL_REVIEW.md": "8c971d1ea7aeeb4a09d591905ff8124ff21de3f6c4dcf4964046808be2ab45f3",
+    "README.md": "1e8693af9e3bfbdf30e2c42a3a40bec3fd26f0f4cf66ebb0f56c1feffaac00bd",
+    "reproduce.py": "2ab5251be87b56bbf2f66c3b1687276ea635cb63b93d0395015b269b9b43198b",
+    "requirements.txt": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+    "SHA256SUMS": "6fd07be0e10e821a151bb75ac2e57b6aea9e58b979121b7d561a00f1f455d9aa",
+    "SOURCE_BINDINGS.json": "c316e05bf5c71f3b7aa053b84d390a8b7495c96764a94bdd1b97d9df557e9f6a",
+    "vendor/full_gram.py": "6eb057dddef1a9a83f2b1cb264f569dcee466266946a01cff68df620f371d19f",
+    "vendor/source_core.py": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772"
+  },
+  "visible_copies": {
+    "code/check_inverse_energy_exact.py": {
+      "source": "code/check_inverse_energy_exact.py",
+      "sha256": "32d968fbb3bdca3b4e871c97b9e22cf9de5ff5b4277de72a7e0a739232c3ab6b"
+    },
+    "code/compute_inverse_energy_gate.py": {
+      "source": "code/compute_inverse_energy_gate.py",
+      "sha256": "0c0f288d24710bf8e0a37b625825670ce508835a17e7755909557064535da519"
+    },
+    "code/compute_source_mixed.py": {
+      "source": "code/compute_source_mixed.py",
+      "sha256": "2d24184788ad846f6216dcef5a11a761ca4c3f4d4cd56cea3268b67cdbf48df9"
+    },
+    "reports/ERGEBNIS.md": {
+      "source": "ERGEBNIS.md",
+      "sha256": "6680c7b23ace45e3b187035fd25cffd70a037ff20228e8f1edb0f1fa01f65762"
+    },
+    "reports/expected/FINAL_GATE.json": {
+      "source": "expected/FINAL_GATE.json",
+      "sha256": "f13e740bb7061dea528d0262a5c7c76fa75d0792873e735b639630477a6bd27a"
+    },
+    "reports/expected/INDEPENDENT_ENERGY_CHECK.json": {
+      "source": "expected/INDEPENDENT_ENERGY_CHECK.json",
+      "sha256": "724db6eb7c2dc3ba2d97ce75a81cebae40d959155a493df96f69d7a1657a4717"
+    },
+    "reports/expected/SOURCE_MIXED_3072.json": {
+      "source": "expected/SOURCE_MIXED_3072.json",
+      "sha256": "fa06b33cf6089a784753de7a8bb2b925ee8016ab9628b1345c76e4f3b2d32fa5"
+    },
+    "reports/expected/SOURCE_MIXED_4096.json": {
+      "source": "expected/SOURCE_MIXED_4096.json",
+      "sha256": "ab3dd775c0133464c1943b149df71db232569f0078220010781f0f0ffc1787a2"
+    },
+    "reports/NACHWEIS.md": {
+      "source": "NACHWEIS.md",
+      "sha256": "fe1027ac168a7274d3842cf4456d4cd6dd7ebf56506bfaead39a1d01c14a5757"
+    },
+    "reports/provenance/A8_PROOF.md": {
+      "source": "provenance/A8_PROOF.md",
+      "sha256": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661"
+    },
+    "reports/provenance/A8_REFINED_TAIL.json": {
+      "source": "provenance/A8_REFINED_TAIL.json",
+      "sha256": "8be8b9f15c4b382d8ec7ad48aa51aa71d9bf8fa253a96a2f5cc7710c0912cc2f"
+    },
+    "reports/provenance/A9_PROOF.md": {
+      "source": "provenance/A9_PROOF.md",
+      "sha256": "58577c7f448287daf4b09f0b031b00080cede91b31ac81dab0f3df336fcab1d0"
+    },
+    "reports/provenance/FULL_RESIDUAL_PROOF.md": {
+      "source": "provenance/FULL_RESIDUAL_PROOF.md",
+      "sha256": "c44d2c36bdca30c9ec8e4773bdef0117463b7be3e451ac603e2b4dd4957a44aa"
+    },
+    "reports/provenance/GRAPH_SCHUR.md": {
+      "source": "provenance/GRAPH_SCHUR.md",
+      "sha256": "9fcf953793d8511433cbf79a1a1f1c88062eb429b693b0d81b6856754b49c636"
+    },
+    "reports/provenance/ORIGINAL_RESIDUAL_BINDINGS.json": {
+      "source": "provenance/ORIGINAL_RESIDUAL_BINDINGS.json",
+      "sha256": "0d3d584e00c8a011278712dad7c6dd5abb64624bb785f0c0b5b92ca882cae410"
+    },
+    "reports/provenance/ORIGINAL_RESIDUAL_SHA256SUMS": {
+      "source": "provenance/ORIGINAL_RESIDUAL_SHA256SUMS",
+      "sha256": "f12dd434f15e065bcc6090bb677aacb538ad0caa024c3402eb9eea369274f9b3"
+    },
+    "reports/provenance/PREVIOUS_RESIDUAL_REVIEW.md": {
+      "source": "provenance/PREVIOUS_RESIDUAL_REVIEW.md",
+      "sha256": "8c971d1ea7aeeb4a09d591905ff8124ff21de3f6c4dcf4964046808be2ab45f3"
+    },
+    "reports/README.md": {
+      "source": "README.md",
+      "sha256": "1e8693af9e3bfbdf30e2c42a3a40bec3fd26f0f4cf66ebb0f56c1feffaac00bd"
+    },
+    "reports/SOURCE_BINDINGS.json": {
+      "source": "SOURCE_BINDINGS.json",
+      "sha256": "c316e05bf5c71f3b7aa053b84d390a8b7495c96764a94bdd1b97d9df557e9f6a"
+    },
+    "vendor/full_gram.py": {
+      "source": "vendor/full_gram.py",
+      "sha256": "6eb057dddef1a9a83f2b1cb264f569dcee466266946a01cff68df620f371d19f"
+    },
+    "vendor/source_core.py": {
+      "source": "vendor/source_core.py",
+      "sha256": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772"
+    }
+  },
+  "scope": "Positive Schur attachment of four fixed A9 source classes to the complete old A8 space; no target positivity and no full quotient coverage."
+}
