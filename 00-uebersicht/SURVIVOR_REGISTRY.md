@@ -1755,3 +1755,38 @@ Does not claim:
 - Keine externe fachliche Begutachtung.
 
 Dokumentierte Reproduktion: [SOURCE_BINDINGS.json](https://github.com/Waschtl904/objekt-x-programm/blob/20789d6930299063238733ca9e2f391d66d1acf6/research/x-c1/canonical-h0-followups-2026-10-03/SOURCE_BINDINGS.json), [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/20789d6930299063238733ca9e2f391d66d1acf6/research/x-c1/canonical-h0-followups-2026-10-03/reports/pullback/ACCEPTANCE.json), [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/20789d6930299063238733ca9e2f391d66d1acf6/research/x-c1/canonical-h0-followups-2026-10-03/reports/root/ACCEPTANCE.json), [SUMMARY.json](https://github.com/Waschtl904/objekt-x-programm/blob/20789d6930299063238733ca9e2f391d66d1acf6/research/x-c1/canonical-h0-followups-2026-10-03/reports/three_cut/SUMMARY.json), [PR206_2026-10-03.md](https://github.com/Waschtl904/objekt-x-programm/blob/c5dc6f33e04efbbaef28573c5659ba1434046c5f/00-uebersicht/integrationsnachweise/PR206_2026-10-03.md).
+
+## A8-A9-FOUR-SOURCE-POSITIVE-EXTENSION
+
+Vier feste A9-Quellen nach vollständiger alter A8-Elimination positiv angeschlossen
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: A8->A9, gerade Quellgrade 2/4 und ungerade 3/5. Vollständiger alter A8-Formraum einschließlich aller hohen Richtungen; feste neue Quellkoeffizienten. Alte analytische Form-/Operatoridentitäten und Modellbudgets bleiben gebundene Voraussetzungen.
+- Canonical commit: [2d257f6](https://github.com/Waschtl904/objekt-x-programm/commit/2d257f6d94c5547f17c745a02abdec4ac8ee2fb8).
+- Canonical proof: [research/x-c1/a8-four-source-inverse-energy-2026-10-04/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/2d257f6d94c5547f17c745a02abdec4ac8ee2fb8/research/x-c1/a8-four-source-inverse-energy-2026-10-04/PROOF.md).
+- depends_on: `FIRST-CHAMBER-O8-TERMINAL-POSITIVITY`, `X4-Q8-WALL-CROSSING`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Kein negativer Befund; der positive Anschluss gilt ausschließlich für die vier festgelegten neuen Quellklassen.
+
+Aussage:
+
+- Für die gewählten Zweierfamilien gilt inf_u q_b[Ju+Z alpha] >= kappa_p ||alpha||^2 mit kappa_even=1/100000 und kappa_odd=33/1000000.
+- Die vollständige alte inverse Energie wird mit erhaltener Niedrig-/Hoch-Kopplung nach oben eingeschlossen. 764 neue gemischte Paarungen berücksichtigen die vollständige Logarithmus- und Shiftwirkung; Gamma-, Potential-, Mellin-, Quell- und Inversenfehler sind bezahlt.
+- Die getrennten Schranken K_minus und W_plus ergeben positive Schurreserven. Alle gespeicherten numerischen Paarungsblöcke stimmen bei 3072 und 4096 Bit überein; ein separater rationaler Prüfer bestätigt die Schlussminoren und 36 Gamma-Polynomidentitäten.
+- Das unveränderte Archiv und 31 manifestgebundene Dateien plus Manifest sind erhalten. Lokaler, PR- und Main-Replay berechnen die neuen Paarungen und Energiebudgets erneut; ursprüngliche vollständige Operatormodelle und analytische Grundlagen werden übernommen.
+
+Does not claim:
+
+- Keine Verwendung oder neue Herleitung der gesamten A9-Terminalpositivität durch diesen Vier-Quellen-Test.
+- Keine Abdeckung des ganzen neuen Quotienten und keine vollständige hohe Antwort als Funktion.
+- Kein allgemeines Erneuerungsgesetz und keine kofinale positive Familie.
+- Keine unabhängige Rekonstruktion aller ursprünglichen Operatorintegrale und keine externe analytische Abnahme.
+- Keine vollständige Konstruktion von Objekt X oder globale Weil-/RH-Promotion.
+
+Dokumentierte Reproduktion: [SOURCE_BINDINGS.json](https://github.com/Waschtl904/objekt-x-programm/blob/2d257f6d94c5547f17c745a02abdec4ac8ee2fb8/research/x-c1/a8-four-source-inverse-energy-2026-10-04/SOURCE_BINDINGS.json), [INDEPENDENT_ENERGY_CHECK.json](https://github.com/Waschtl904/objekt-x-programm/blob/2d257f6d94c5547f17c745a02abdec4ac8ee2fb8/research/x-c1/a8-four-source-inverse-energy-2026-10-04/reports/expected/INDEPENDENT_ENERGY_CHECK.json), [FINAL_GATE.json](https://github.com/Waschtl904/objekt-x-programm/blob/2d257f6d94c5547f17c745a02abdec4ac8ee2fb8/research/x-c1/a8-four-source-inverse-energy-2026-10-04/reports/expected/FINAL_GATE.json).
