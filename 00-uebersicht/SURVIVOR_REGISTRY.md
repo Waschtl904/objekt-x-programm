@@ -1790,3 +1790,41 @@ Does not claim:
 - Keine vollständige Konstruktion von Objekt X oder globale Weil-/RH-Promotion.
 
 Dokumentierte Reproduktion: [SOURCE_BINDINGS.json](https://github.com/Waschtl904/objekt-x-programm/blob/2d257f6d94c5547f17c745a02abdec4ac8ee2fb8/research/x-c1/a8-four-source-inverse-energy-2026-10-04/SOURCE_BINDINGS.json), [INDEPENDENT_ENERGY_CHECK.json](https://github.com/Waschtl904/objekt-x-programm/blob/2d257f6d94c5547f17c745a02abdec4ac8ee2fb8/research/x-c1/a8-four-source-inverse-energy-2026-10-04/reports/expected/INDEPENDENT_ENERGY_CHECK.json), [FINAL_GATE.json](https://github.com/Waschtl904/objekt-x-programm/blob/2d257f6d94c5547f17c745a02abdec4ac8ee2fb8/research/x-c1/a8-four-source-inverse-energy-2026-10-04/reports/expected/FINAL_GATE.json).
+
+## A8-A9-REMAINDER-PARTIAL-OPERATOR-CERTIFICATES
+
+A8->A9: acht feste Quellen positiv und partielle Operatorzertifikate des vollständigen Restes
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: A8->A9: vier feste Quellen je Parität, kompletter alter A8-Raum; vollständige neue Restkoordinaten und partielle Bausteine des eingefrorenen acht-dimensionalen Restpiloten. Geerbte Form-/Operatoridentitäten, analytische Integralmajoranten und alter hoher Boden bleiben Voraussetzungen.
+- Canonical commit: [71d9120](https://github.com/Waschtl904/objekt-x-programm/commit/71d9120335e28de3b9687d6151fed53c01d8c622).
+- Canonical proof: [research/x-c1/a8-a9-remainder-progress-2026-10-07/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/71d9120335e28de3b9687d6151fed53c01d8c622/research/x-c1/a8-a9-remainder-progress-2026-10-07/PROOF.md).
+- depends_on: `A8-A9-FOUR-SOURCE-POSITIVE-EXTENSION`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Kein negativer Befund über vollständige Fortsetzung; die positiven partiellen Zertifikate schließen den gesamten neuen Rest nicht.
+
+Aussage:
+
+- Acht feste Quellen (gerade Grade 2/4/6/8, ungerade 3/5/7/9) besitzen nach vollständiger alter Elimination die Böden 4e-12 bzw. 3e-11 relativ zur vorab festgelegten gewöhnlichen L2-Grammatrix W der Vertreter. Beide gespeicherten Präzisionsläufe bestehen die exakten Schlussprüfungen.
+- Die vollständige Quotienten-/Restdarstellung und der positive kompakte Defekt B_R sind analytisch hergeleitet. P_R^(-1/2) und B_R sind kompakt; die Operatoren zu S und U_minus besitzen kompakte Resolvente. Externe analytische Prüfung offen.
+- Für die acht eingefrorenen Richtungen je Parität gelten P_R >= 20 I und gemeinsame Halbinversenfehler <= 0.000303687347 bzw. 0.000307046420. Der isolierte 19I-Anteil ist eingeschlossen; der vollständige B00-Block ist noch nicht berechnet.
+- Die alte 191x191-Inversmetrik besitzt die rationale Oberform T0* H T0 + kappa P_J mit sechs korrigierten Kräften, voller H-Matrix und kappa=37.657962 bzw. 10.570239. Große ganzzahlige Kongruenzen und kleine exakte LDL-Prüfungen bestätigen die endliche Faktorform.
+- Die gemeinsamen Fehlergrame des alten hohen Anteils und des alten 185D-Komplements summieren sich zu <=0.001038889677 I8 bzw. <=0.000265710312 I8. Empfindliche sechs Kraftfehler, vier C-Kopplungen und Zentren/Kreuzterme fehlen weiterhin.
+- Sechs Originalarchive bleiben bytegleich. Lokaler, PR- und Main-Lauf prüfen gespeicherte Zertifikate und Quellenbindungen erneut; sie wiederholen keine langen Operatorintegrationen und liefern keinen maschinellen Beweis der analytischen Domänenlemmata.
+
+Does not claim:
+
+- Keine volle Restpositivität, keine Schranke ||B_R||<1 und kein FULL_REMAINDER_CERTIFIED.
+- U00, G01, gamma01, beta_tail, eta und alpha bleiben unberechnet.
+- Das alte 185-dimensionale Komplement ist nicht der neue unendliche B11-Rest; Fehlergrame sind keine vollständigen inversen Energien.
+- Keine neue Operatorintegration in der Integrationsprüfung und keine unabhängige Rekonstruktion aller ursprünglichen Modelle.
+- Keine externe fachmathematische Abnahme; begrenzte KI-Gegenprüfungen ändern diesen Status nicht.
+- Kein A9->A11-Rücktest derselben Regel, keine kofinale Fortsetzung, vollständige Testklasse oder Konstruktion von Objekt X.
+
+Dokumentierte Reproduktion: [SOURCE_BINDINGS.json](https://github.com/Waschtl904/objekt-x-programm/blob/71d9120335e28de3b9687d6151fed53c01d8c622/research/x-c1/a8-a9-remainder-progress-2026-10-07/SOURCE_BINDINGS.json), [EXACT_CHECK.json](https://github.com/Waschtl904/objekt-x-programm/blob/71d9120335e28de3b9687d6151fed53c01d8c622/research/x-c1/a8-a9-remainder-progress-2026-10-07/packages/eight-source/EXACT_CHECK.json), [EXACT_CHECK.json](https://github.com/Waschtl904/objekt-x-programm/blob/71d9120335e28de3b9687d6151fed53c01d8c622/research/x-c1/a8-a9-remainder-progress-2026-10-07/packages/half-inverse/EXACT_CHECK.json), [EXACT_CHECK.json](https://github.com/Waschtl904/objekt-x-programm/blob/71d9120335e28de3b9687d6151fed53c01d8c622/research/x-c1/a8-a9-remainder-progress-2026-10-07/packages/weighted-response/EXACT_CHECK.json), [RATIONAL_MAJORANT.json](https://github.com/Waschtl904/objekt-x-programm/blob/71d9120335e28de3b9687d6151fed53c01d8c622/research/x-c1/a8-a9-remainder-progress-2026-10-07/packages/weighted-response/RATIONAL_MAJORANT.json), [PILOT_STATE.json](https://github.com/Waschtl904/objekt-x-programm/blob/71d9120335e28de3b9687d6151fed53c01d8c622/research/x-c1/a8-a9-remainder-progress-2026-10-07/packages/weighted-response/PILOT_STATE.json).
