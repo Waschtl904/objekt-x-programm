@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "A8-A9-REMAINDER-PARTIAL-OPERATOR-CERTIFICATES",
+  "date": "2026-10-07",
+  "kind": "CONSTRUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "A8->A9: acht feste Quellen positiv; vollständige Restdarstellung, kompakter Defekt, eingefrorene Geometrie, Halbinversen und partielle gewichtete alte Fehlergrame. Voller B_R-Gate offen.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "Kein negativer Befund über die vollständige Fortsetzung; partielle Zertifikate schließen den Rest nicht.",
+  "depends_on": [
+    "A8-A9-FOUR-SOURCE-POSITIVE-EXTENSION"
+  ],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "Keine volle Restpositivität oder Schranke ||B_R||<1.",
+    "Keine neuen Werte für U00, G01, gamma01, beta_tail, eta oder alpha.",
+    "Keine neue Horizonterweiterung, externe analytische Abnahme oder Konstruktion von Objekt X."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/a8-a9-remainder-progress-2026-10-07/PROOF.md",
+    "sha256": "f0494c4e28f2ee8f381be131a2500f6eae3054fcd39ec0e6d57a221d6db9c180"
+  }
+}

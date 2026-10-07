@@ -1,0 +1,337 @@
+Objekt X — Operatordomäne und Kompaktheit des vollständigen Restes
+6. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Analytischer Nachtrag zum Paket vom 5. Oktober 2026 mit SHA256
+a0609df80f20f57a95c5f787642b4078eedb5f44bb4383ecddc5a78e6d53c0ce.
+
+Zweck: die beiden in der begrenzten Gegenprüfung benannten analytischen
+Stellen als eigene Lemmata ausführen. Keine neue Operatorintegration,
+keine neue Horizontrechnung und kein Beweis von ||B_R||<1.
+
+0. Konventionen und Eingaben
+
+Das L2-Skalarprodukt ist antilinear im ersten Argument. Funktionen werden
+auf die ganze reelle Gerade durch null fortgesetzt. Die unitäre
+Fouriertransformation verwendet exp(-i xi x)/sqrt(2 pi).
+
+Die im Ursprungspaket übernommene Gamma-Form lautet
+
+ E[u,v]=integral_0^infty k(t)<tau_t u-u,tau_t v-v> dt,
+ k(t)=exp(-t/2)/(1-exp(-2t)).                             (0.1)
+
+Ihre Domäne ist G={u in L2: E[u]<infinity}. Sie ist geschlossen: der
+Differenzoperator u -> (sqrt(k(t))(tau_t u-u))_t ist ein abgeschlossener
+Operator von L2 in den entsprechenden L2-Produktraum. Alternativ ergibt
+die Fourierdarstellung in Abschnitt 3 eine nichtnegative Multiplikatorform.
+
+Die Nichtpolform q^np entsteht durch Abzug von kappa I und endlich vielen
+gewichteten partiellen Verschiebungen. Diese Störung ist beschränkt und
+selbstadjungiert. Auf dem ursprünglichen Mellin-Momentkern stimmt q^np
+mit der untersuchten vollständigen Form überein. Diese arithmetische
+Identifikation wird hier nicht erneut hergeleitet.
+
+Die Unterstützung, Paritäten, ursprünglichen Momente, Schalenliftung
+Lambda, alte positive Form A und Räume R,D_R haben die Bedeutung des
+gebundenen Vorgängerpakets. Insbesondere bleibt der alte Boden
+A>=12/10^30 I eine Eingabe. Neue Gesamtpositivität wird nicht benutzt.
+
+1. L2-Operatorwirkung auf kompakten stückweise Lipschitz-Funktionen
+
+LEMMA 1. Sei u auf [-R_0,R_0] unterstützt, R_0>0, und außerhalb einer
+endlichen Menge F={c_1,...,c_J} stückweise Lipschitz. Die Menge F enthält
+die beiden äußeren Trägergrenzen und alle inneren Sprungstellen. Es gebe
+gemeinsame Schranken |u|<=M und Lipschitzkonstante L auf jedem offenen
+Stück, einschließlich der äußeren Nullstücke. Sprünge sind erlaubt.
+
+Dann liegt u in der Operatordomäne des zu E gehörenden selbstadjungierten
+Operators H_Gamma. Für fast alle x ist seine Wirkung
+
+ (H_Gamma u)(x)
+ =integral_0^infty k(t)[2u(x)-u(x+t)-u(x-t)] dt.           (1.1)
+
+Das Integral ist für x außerhalb F absolut konvergent. Sein Ergebnis
+liegt in L2. Insbesondere gilt die explizite, grobe Normschranke
+
+ ||H_Gamma u||_2
+ <= (2L+20M)sqrt(2R_0+2)+4M sqrt(J)
+                         +2sqrt(2)||u||_1.              (1.2)
+
+Die Aussage gilt ebenso für komplexe u.
+
+BEWEIS.
+
+(a) Elementare Kernelmajoranten. Aus exp(2t)-1>=2t folgt
+
+ 1/(1-exp(-2t))=1+1/(exp(2t)-1)<=1+1/(2t).
+
+Somit k(t)<=1+1/(2t). Für t>=1 gilt zusätzlich
+k(t)<=2 exp(-t/2), da 1-exp(-2)>1/2. Folglich
+integral_1^infty k(t)dt<4.
+
+(b) Zunächst u in G. Für 0<t<=1 liegen die Stellen, an denen ein
+Translationssegment eine der J Schnittstellen überquert, in einer Menge
+vom Maß höchstens Jt. Dort ist die Differenz höchstens 2M. Außerhalb
+dieser Menge ist sie höchstens Lt. Ihre mögliche Unterstützung hat Länge
+höchstens 2R_0+2. Daher
+
+ ||tau_t u-u||_2^2 <= (2R_0+2)L^2 t^2+4J M^2 t.          (1.3)
+
+Multiplikation mit k(t)<=1+1/(2t) ergibt ein integrierbares Majorant auf
+(0,1). Für t>=1 genügt ||tau_t u-u||^2<=4||u||^2 und der exponentielle
+Kernabfall. Damit ist E[u]<infinity.
+
+(c) Punktweise und L2-Kontrolle der Operatorwirkung. Setze
+d(x)=min(1,dist(x,F)). Für x außerhalb F und t<d(x) liegen x,x+t,x-t
+auf demselben Lipschitz-Stück. Die zweite Differenz in (1.1) ist im Betrag
+höchstens 2Lt. Für t>=d(x) genügt 4M. Deshalb gilt auf
+[-R_0-1,R_0+1], gleichmäßig auch für unten bei epsilon abgeschnittene
+Integrale,
+
+ |H_Gamma,epsilon u(x)|
+ <= 2L+20M+2M log(1/d(x)).                               (1.4)
+
+Die Beiträge sind: höchstens 2L von (0,d), höchstens
+2M log(1/d)+4M von (d,1) und höchstens 16M von (1,infinity).
+
+Für die logarithmischen Spitzen gilt
+
+ log(1/d(x)) = max_j log_+(1/|x-c_j|),
+ integral_R log_+^2(1/|x-c_j|)dx = 4.
+
+Damit ist deren gemeinsamer L2-Betrag höchstens 2sqrt(J).
+Auf |x|>R_0+1 ist u(x)=0, und (1.1) wird
+
+ -integral_(-R_0)^R_0 k(|x-y|)u(y)dy.
+
+Sein Betrag ist höchstens
+2 exp(-(|x|-R_0)/2)||u||_1. Die L2-Norm beider äußeren Teile ist
+höchstens sqrt(8/e)||u||_1<2sqrt(2)||u||_1. Zusammen mit (1.4) folgt
+(1.2). Dieselben Majoranten gelten für jedes epsilon>0.
+
+(d) Identifikation mit der Operatordomäne. Definiere den beschränkten
+selbstadjungierten Operator
+
+ H_Gamma,epsilon
+ =integral_epsilon^infty k(t)(2I-tau_t-tau_-t)dt.
+
+Nach (c) konvergiert H_Gamma,epsilon u in L2 gegen die Funktion aus (1.1).
+Für beliebiges v in G gilt
+
+ <H_Gamma,epsilon u,v>
+ =integral_epsilon^infty k(t)<tau_t u-u,tau_t v-v>dt.
+
+Die ausgelassene gemischte Form auf (0,epsilon) geht durch
+Cauchy-Schwarz gegen null, da u,v endliche Gamma-Energie haben. Daher
+
+ E[u,v]=<H_Gamma u,v> für jedes v in G.
+
+Dies ist genau das Kriterium für u in Dom(H_Gamma). Es wurde nicht nur
+die Formdomäne oder eine punktweise formale Integralwirkung nachgewiesen.
+QED.
+
+KOROLLAR 1. Ein beschränkter selbstadjungierter Zusatz ändert diese
+Operatordomäneninklusion nicht. Insbesondere liegen die Funktionen aus
+Lemma 1 in Dom(Q^np) für den hier verwendeten endlichen aktiven Primblock.
+
+KOROLLAR 2. Sei H eine abgeschlossene L2-Untermenge, etwa ein Trägerraum
+mit festgelegter Parität und gegebenenfalls Momentbedingungen. Betrachte
+die geschlossene Formrestriktion auf G intersect H, sofern diese in H
+dicht ist. Für u aus Lemma 1 mit u in H gilt
+
+ u in Dom(Q_H^np),  Q_H^np u=Pi_H Q^np u.                (1.5)
+
+Denn die Identität in (d) gilt für alle Testvektoren der eingeschränkten
+Formdomäne, und die orthogonale L2-Projektion der rechten Seite liegt in H.
+Eine Invarianz der ursprünglichen Operatordomäne unter beliebigen
+Projektionen wird hierfür weder behauptet noch benötigt.
+
+2. Anwendung auf die im Restbeweis tatsächlich verwendeten Funktionen
+
+Für m=cosh(x/2) oder sinh(x/2) hat m_core=m 1_(-a,a) genau zwei äußere
+Sprungstellen und ist auf den übrigen Stücken glatt mit beschränkter
+Ableitung. Lemma 1 und Korollar 2 liefern
+
+ Q_a^np m_core in L2(-a,a).                              (2.1)
+
+Hier ist Q_a^np die NICHT auf den Momentkern eingeschränkte alte
+Nichtpolform. m_core selbst liegt nicht im alten Momentkern. Das ist für
+die Verwendung als Korrekturfunktion zulässig.
+
+Die vier festen sigma_j sind die äußeren Restriktionen der bereits
+gewählten momentkorrigierten Polynome. Die Funktion Lambda sigma_j ist
+auf den beiden äußeren Schalen polynomial, auf dem Kern ein festes
+Vielfaches von m und außerhalb [-b,b] null. Sie ist stückweise glatt,
+mit höchstens den vier Schnittstellen -b,-a,a,b. Also gilt ebenso
+
+ Q_b^np Lambda sigma_j in L2(-b,b), j=1,...,4.            (2.2)
+
+Ihre Nullmomente sind bereits algebraisch bewiesen. Damit sind auch die
+zugehörigen komprimierten Operatorwirkungen auf dem neuen Momentkern
+L2-wertig.
+
+Diese Aussagen rechtfertigen genau die beiden bisher knapp behandelten
+Operatoranwendungen. Es ist nicht erforderlich und wird nicht behauptet,
+dass Lambda r für JEDES r in der Formdomäne bereits in der Operatordomäne
+liegt.
+
+Der vollständige alte Quelloperator bleibt
+
+ g_s=Pi_a(Gs-lambda(s)Q_a^np m_core/mu),                  (2.3)
+
+mit dem L2-beschränkten Kern-Schalen-Operator G aus dem Vorgängerpaket.
+Die neue Ergänzung (2.1) macht den Rang-eins-Term ausdrücklich L2-wertig.
+Da lambda L2-stetig ist, ist g:X->K_a beschränkt.
+
+Für die vier Test-Rest-Funktionale ergibt sich jetzt eine nützliche
+Darstellung durch feste L2-Repräsentanten. Mit allen Adjunktionen in der
+jeweils festgelegten L2- bzw. W_X-Norm setze
+
+ f_j = Pi_R [Lambda* Q_b^np Lambda sigma_j
+                       -g* A^-1 g_sigma_j].             (2.4)
+
+Dann gilt auf der GESAMTEN Restformdomäne
+
+ (Cr)_j=S[sigma_j,r]=<f_j,r>_(W_X).                     (2.5)
+
+Die erste Gleichheit benutzt die Operatorwirkung nur auf dem festen
+sigma_j, nicht auf dem beliebigen Restvektor r. Für den alten Term sind
+g beschränkt und A^-1 aufgrund der geerbten A8-Koerzivität beschränkt.
+Damit ist C:R->C^4 als beschränkter Operator begründet. Die Formeln
+(2.4)-(2.5) sind keine numerische Berechnung dieser vier Funktionen.
+
+3. Kompaktheit direkt aus der Gamma-Form
+
+LEMMA 2. Für jeden endlichen R_0 ist der Raum
+
+ G_(R_0)={u in G: supp(u) subset [-R_0,R_0]}
+
+mit Norm (||u||^2+E[u])^(1/2) kompakt in L2 eingebettet.
+
+BEWEIS. Plancherel und Tonelli geben auf der gesamten Formdomäne
+
+ E[u]=integral_R psi(xi)|u_hat(xi)|^2 dxi,
+ psi(xi)=2 integral_0^infty k(t)(1-cos(xi t))dt.           (3.1)
+
+Für 0<t<=1 gilt k(t)>=exp(-1/2)/(2t). Setze rho=|xi|>=1.
+Dann
+
+ psi(xi)>=exp(-1/2) integral_0^rho (1-cos v)/v dv.
+
+Der Teil von 0 bis 1 ist nichtnegativ. Durch partielle Integration ist
+
+ |integral_1^rho cos(v)/v dv|
+ <= |sin(rho)|/rho+|sin1|+integral_1^rho 1/v^2 dv
+ <= 2.
+
+Weil exp(-1/2)>1/2, folgt für rho>e^2
+
+ psi(xi) >= (log|xi|-2)/2.                              (3.2)
+
+Insbesondere gilt für jeden Frequenzradius L>e^2
+
+ integral_(|xi|>L) |u_hat(xi)|^2 dxi
+ <= 2 E[u]/(log L-2).                                  (3.3)
+
+Diese Abschätzung ist uniform auf beschränkten Gamma-Graphnormmengen.
+Der auf |xi|<=L eingeschränkte Fourieroperator von L2([-R_0,R_0]) nach
+L2([-L,L]) besitzt einen quadratintegrierbaren Kernel
+exp(-i xi x)/sqrt(2 pi) und ist daher kompakt. Für jedes feste L hat eine
+Graphnorm-beschränkte Folge somit eine Teilfolge, deren niederfrequenter
+Anteil in L2 konvergiert. Die gleichmäßig kleinen Außenanteile aus (3.3)
+ergeben über eine Diagonalwahl eine in ganz L2 konvergente Teilfolge.
+Das beweist die kompakte Einbettung. QED.
+
+Dieser Beweis benötigt weder eine lokale Legendre-Diagonalisierung noch
+einen neuen positiven Endpunktboden. Er verwendet nur den expliziten
+Gamma-Kern und die feste endliche Trägerlänge. Die Identifikation dieses
+Kerns mit der arithmetischen Ausgangsform bleibt wie bisher eine Eingabe.
+
+4. Anwendung auf P_R, S und B_R
+
+Auf der Restdomäne gilt aus der Nichtpolidentität
+
+ P_R[r]=q_b^np[Lambda r]+19||Lambda r||^2
+       =E[Lambda r]+(19-kappa)||Lambda r||^2
+                          -<Lambda r,S_prime Lambda r>.
+
+Die im Vorgänger gebundenen einfachen Schranken kappa<6,
+sum_(q in {2,3,4,5,7,8}) 2w_q<12 liefern sogar
+
+ P_R[r] >= E[Lambda r]+W_X[r].                           (4.1)
+
+Umgekehrt wird P_R durch E[Lambda r]+c W_X[r] für eine feste endliche
+Konstante c beschränkt. Dies zeigt die Äquivalenz der Graphnormen, nicht
+nur eine untere Normschranke.
+
+Die bereits bewiesene vollständige Formraumzerlegung und die
+W_X-orthogonale Projektion auf R machen P_R zu einer dicht definierten
+geschlossenen positiven Form auf (R,W_X). Die Liftung Lambda ist dort
+eine L2-Isometrie auf ihr Bild. Nach (4.1) und Lemma 2 ist die Einbettung
+der P_R-Formdomäne in R kompakt. Damit ist P_R^(-1/2) kompakt und P_R
+besitzt kompakte Resolvente.
+
+Die vollständige alte Schurform S ist eine beschränkte L2-Störung der
+entsprechenden positiven Schalengraphform: der Zusatz besteht aus einem
+festen Skalar und g* A^-1 g. Also besitzt auch S kompakte Resolvente.
+Die weitere Subtraktion C*M_-^-1 C ist beschränkt und endlichdimensional
+im Bild. Daher gilt dasselbe für U_- auf R.
+
+Sei
+
+ D_R^bound=19I+g_R* A^-1 g_R+C*M_-^-1 C.
+
+Dieser Ausdruck ist ein BESCHRÄNKTER positiver Operator im Hilbertraum
+(R,W_X); die Bezeichnung unterscheidet ihn von einer Formdomäne.
+Aus der Kompaktheit von P_R^(-1/2) folgt jetzt ohne weitere
+Kompaktheitsannahme
+
+ B_R=P_R^(-1/2) D_R^bound P_R^(-1/2)
+
+ist beschränkt, positiv, selbstadjungiert und kompakt. Für jedes
+r in D_R gilt die bereits verwendete Identität
+
+ U_-[r]=<P_R^(1/2)r,(I-B_R)P_R^(1/2)r>_(W_X).           (4.2)
+
+Das rechtfertigt die vollständige kompakte Operatorprüfung. Es beweist
+weiterhin NICHT, dass die größte Eigenzahl von B_R kleiner als eins ist.
+
+5. Eine explizite, aber noch grobe Approximationsschranke
+
+Mit Pi_L als gewöhnlicher Fourierprojektion auf |xi|<=L liefert (3.3)
+zusammen mit (4.1) die konkrete Operatornormabschätzung
+
+ ||(I-Pi_L) Lambda P_R^(-1/2)||
+ <= sqrt(2/(log L-2)),  L>e^2.                           (5.1)
+
+Dies ist eine echte gleichmäßige Abschätzung für den hochfrequenten
+Anteil des normierten Schaleneinbettungsoperators. Sie ist KEINE
+Restschranke desselben Werts für B_R. Dafür müssten zusätzlich der
+mittlere Operator D_R^bound und die gewählte endliche Approximation des
+niederfrequenten Anteils kontrolliert werden. Pi_L hat selbst noch
+unendlichen Rang.
+
+Die langsame logarithmische Schranke erklärt, warum dieses allgemeine
+Kompaktheitsargument allein keine wirtschaftliche Zertifizierung liefert.
+Für die konkrete Berechnung bleiben die gemeinsame alte inverse Energie,
+die 191 korrigierten alten Kräfte und die vier Funktionen aus (2.4)
+entscheidend. Ihre numerischen Normen oder Korrelationen wurden in diesem
+Nachtrag nicht neu berechnet.
+
+6. Status nach diesem Nachtrag
+
+Ausgeführt: eigenständiges Operatordomänenlemma mit L2-Majorante; Anwendung
+auf die fünf tatsächlich benutzten Funktionstypen pro Parität; explizite
+L2-Repräsentanten der vier Kopplungen; eigenständiger Fourierbeweis der
+kompakten Einbettung und seine Anwendung auf P_R, S und B_R.
+
+Diese neuen analytischen Beweise stehen zur Gegenprüfung. Sie sind keine
+maschinell verifizierten Theoreme. Die arithmetische Formidentität, die
+alte positive A8-Form und die bereits gebundene Vierermatrix M_- bleiben
+Eingaben. Die geerbte lokale Legendre-Formidentität wird für den neuen
+Kompaktheitsbeweis nicht mehr benötigt.
+
+Unverändert offen: ||B_R||<1 mit einem vollständigen Operatornormrest,
+Positivität des ganzen neuen Restes, erneuerbare Fortsetzung, vollständige
+globale Testklasse und Objekt X. Ein möglicher Kern wird nicht durch eine
+verschärfte Objekt-X-Definition ausgeschlossen. Der RH-Anschluss bleibt
+nachgeordnet. GitHub und versiegelte Vorgängerarchive bleiben unverändert.

@@ -1,0 +1,17 @@
+{
+  "source_head": "040c1c2f75753d0daa680c55b14b88524955f851",
+  "prior_archive_sha256": "068d2cbf63732d318836dadb5bd86a61e81f74358398d9f4cdba3095f5353536",
+  "program_sha256": "baac27c2684d7683cdc586032a681a84d1b3f044750b9e2e80378fae7f204501",
+  "actual_runs": {
+    "3072": {
+      "result_sha256": "fe37fa8b1664361a8115b7e4e1dadd9c20838a86abd7332281b7626a8683e920",
+      "program_binding_matches": true
+    },
+    "4096": {
+      "result_sha256": "a28ddf3ab79d0e7de4bffc2386f492bb3b2a5f5cc37d06e36151737e484bc9ad",
+      "program_binding_matches": true
+    }
+  },
+  "external_review": "OPEN",
+  "github_changed": false
+}

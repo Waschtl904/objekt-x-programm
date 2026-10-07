@@ -3,7 +3,7 @@
 > GENERATED FILE — DO NOT EDIT
 > Quelle: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml). Navigation, keine Satzpromotion.
 
-Stand: 2026-10-04.
+Stand: 2026-10-07.
 
 ## Gemergte kanonische Basis
 
@@ -35,7 +35,7 @@ Historische Integrationsprovenienz des Registry-/Navigations-Syncs: PR #156 inte
 
 ## Zwei aktive Hauptfronten
 
-- **Konstruktive Fortsetzung der gemeinsamen Objekt-X-Geometrie** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Primäres Ziel ist die Konstruktion von Objekt X gemäß Arbeitsdefinition; der mögliche RH-Anschluss folgt danach. Ausgangspunkt sind positive Kammern bis A11 und rohe kompatible Transporte. Die Hauptaufgabe ist eine vollständige vorwärts gerichtete Schurfortsetzung ohne vorausgesetzte neue Terminalpositivität. Die Y-Kernel- und H0-Folgepakete dokumentieren bedingte Winkelverbesserungen und Grenzen skalarer Relaxationen; Root bleibt UNRESOLVED. Die Definition, globale Testklasse, kofinale Fortsetzung und externe Prüfung bleiben unverändert offen. Der neue Vier-Quellen-Test A8->A9 weist einen positiven Anschluss nach vollständiger alter Elimination aus (Böden 1/100000 und 33/1000000); die neue gesamte Quotientenabdeckung bleibt offen. Der Einzelbefund ist mit eigenem Beweisanker und erfolgreichen PR-/Main-Replays registriert.
+- **Konstruktive Fortsetzung der gemeinsamen Objekt-X-Geometrie** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Primäres Ziel ist die Konstruktion von Objekt X gemäß Arbeitsdefinition; der mögliche RH-Anschluss folgt danach. Ausgangspunkt sind positive Kammern bis A11 und rohe kompatible Transporte. Die Hauptaufgabe ist eine vollständige vorwärts gerichtete Schurfortsetzung ohne vorausgesetzte neue Terminalpositivität. Die Y-Kernel- und H0-Folgepakete dokumentieren bedingte Winkelverbesserungen und Grenzen skalarer Relaxationen; Root bleibt UNRESOLVED. Die Definition, globale Testklasse, kofinale Fortsetzung und externe Prüfung bleiben unverändert offen. Der neue Vier-Quellen-Test A8->A9 weist einen positiven Anschluss nach vollständiger alter Elimination aus (Böden 1/100000 und 33/1000000); die neue gesamte Quotientenabdeckung bleibt offen. Der Einzelbefund ist mit eigenem Beweisanker und erfolgreichen PR-/Main-Replays registriert. Der Folgeblock vom 5.–7. Oktober erweitert auf acht feste Quellen und liefert die vollständige Restdarstellung, Halbinversen sowie partielle gewichtete Fehlergrame. Der gesamte neue Rest bleibt offen; U00, G01, gamma01, beta_tail, eta und alpha sind unberechnet.
 - **Globale Weil-Testklasse und fensterunabhängiger Readout** — `FULL-WEIL-TEST-CLASS`, OPEN. Testklasse, Normierung und exakte vollständige Gram-Identität gehören bereits zur Konstruktion von Objekt X. Zusammen mit einer kofinal kompatiblen positiven Geometrie ist ein globaler Readout zu begründen. Der mögliche Anschluss an RH wird erst nach erfolgreicher Konstruktion verfolgt.
 
 ## Verwendbare Bausteine
@@ -114,5 +114,9 @@ Details zu Scope, Abhängigkeiten und Grenzen: [SURVIVOR_REGISTRY](SURVIVOR_REGI
 - `rh`: **OPEN**.
 
 Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getrennt. Diese Statusansicht führt die mathematischen Checker nicht erneut aus.
+
+## Noch nicht in den geprüften Stand übernommene Pakete
+
+- `A8-A9-REMAINDER-PARTIAL-OPERATOR-CERTIFICATES`: PENDING_STATUS_REVIEW — `research/x-c1/a8-a9-remainder-progress-2026-10-07/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

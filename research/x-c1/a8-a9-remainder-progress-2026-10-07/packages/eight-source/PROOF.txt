@@ -1,0 +1,129 @@
+Gemeinsamer Acht-Quellen-Nachweis: neue Schritte und übernommene Annahmen
+5. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Der vollständige Vier-Quellen-Nachweis im unveränderten Eingabearchiv ist
+die analytische Grundlage. Seine Blockformeln gelten für beliebig viele
+feste Spalten; hier werden vier Spalten je Parität eingesetzt. Die exakte
+Formraumidentifikation, Naturality der Nullfortsetzung und die alten
+Operatoridentitäten bleiben übernommene Voraussetzungen.
+
+Notation: Q_a ist die vollständige alte Form in den Koordinaten
+(x,y) in C^191 × Y. Ihr Kopplungsblock B hat niedrige Zeilen. Die
+alte Form erfüllt q_a >= [A B; B* delta I], delta=2/3. Aus den alten
+Modellen wird H_B>=BB* und F<=A-delta^-1 BB* mit F>0 eingeschlossen.
+Die Positivität von F wird in jedem Lauf über 191 Intervall-LDL-Pivots
+bestätigt. Dies setzt nur die alte, nicht die neue Positivität ein.
+
+Für die vier neuen Quellen einer Parität sei ell=(C,h) ihr alter dualer
+Quellblock. Exakte quadratische Ergänzung und Formordnung geben
+
+  ell* Q_a^-1 ell
+  <= delta^-1 h*h + (C-delta^-1 Bh)* F^-1 (C-delta^-1 Bh).
+
+Alle neuen Modellfunktionen, ihre niedrigen Momente und die vollständigen
+Paarungen D_mix=B0 h0 werden direkt integriert. Der reguläre Gamma-Anteil
+der neuen Quellen hat in der Schlussrechnung Grad 224; die glatte neue
+Potentialreihe hat 640 Terme samt vollständigem Uniformrest. Der alte
+Gamma-Modellgrad bleibt 160. Die alte logarithmische und Shiftwirkung
+wird in den gemischten Paarungen nicht hoch abgeschnitten. Der endliche
+Gamma-Support wird wie zuvor mit exakten Legendre-Primitiven behandelt.
+
+Für W=Z*Z=I+cc* und die gemeinsame Operatorfehlergröße
+d_g=2b eps_Gamma224 + potential_tail gilt
+
+  (C-C0)*(C-C0) <= B_C
+  = (1+s) ||Phi||^2 d_g^2 W_upper + (1+1/s) e_mid^2 I,
+
+s=10^-20. C0 ist der rationale Modellmittelpunkt und e_mid ist die
+vollständige Frobenius-Obergrenze seines Rundungsfehlers. ||Phi||^2 wird
+aus den alten Mellin-Trägerkoeffizienten eingeschlossen und ist <1,002.
+Der neue Gamma-Operatorfehler und der Potentialrest wirken gemeinsam
+auf Z; sie werden nicht 191-mal unabhängig bezahlt.
+
+Der Unterschied h-h0 enthält außerdem die vollständige hohe alte
+Mellinkorrektur. Je Spalte wird ||h_j-h0_j||<7·10^-21 rückgeprüft.
+Für vier Spalten gilt folglich (h-h0)*(h-h0)<=4(7·10^-21)^2 I.
+Dieser Faktor ist gegenüber dem früheren Zweispaltenfall angepasst.
+Ein gemeinsamer Young-Schritt mit Parameter 10^-16 liefert H_h>=h*h.
+
+Setze v0=C0-delta^-1 D_mix. Mit e_B>=||B-B0||, t>=tr(F^-1)
+und beta>=tr(F^-1 H_B) folgt wie im ursprünglichen Nachweis
+
+  (v-v0)*F^-1(v-v0)
+  <= E_v = 3[t B_C + delta^-2 beta B_h
+                + delta^-2 t e_B^2 H_h].
+
+Die symmetrische dyadische Näherungsinverse J_F wird am vollständigen
+Intervall-F rückgeprüft. Aus rho=||I-J_F F||_infty<1 folgt
+||F^-1-J_F||_2 <= ||J_F||_infty rho/(1-rho), wie im Originalnachweis.
+Damit wird V_upper>=v0*F^-1 v0 einschließlich des Inversenfehlers
+eingeschlossen. Für epsilon=10^-12 lautet der gemeinsame Majorant
+
+  T_upper = delta^-1 H_h + (1+epsilon)V_upper
+                         + (1+epsilon^-1)E_v.
+
+Die rationalen alten Vorschläge P bleiben für die ersten zwei Spalten
+je Parität identisch; die zusätzlichen Spalten stammen aus demselben
+alten 191-dimensionalen Galerkin-System und sind auf einem rationalen
+100-Dezimalstellen-Gitter festgelegt. Mit E0=C0-A0P wird die Restform
+stabil über
+
+  K0 = D_model - sym(C0*P) - sym(P*E0)
+
+berechnet. Die komplette alte Matrixabweichung hat die Normobergrenze
+alpha = ||A_model-A0||_2_upper + gamma_a ||Phi||^2.
+Für tau=10^-32 gerade bzw. 10^-31 ungerade gilt
+
+  -E_K <= K-K0 <= E_K,
+  E_K = (alpha+tau)P*P + tau^-1 B_C + 4 gamma_b I.
+
+Der letzte Term benutzt ausschließlich den signunabhängigen Fehler des
+A9-Formmodells. Er benötigt kein A9-Positivitätszertifikat. Alle
+Intervallradien werden zusätzlich durch symmetrische Zeilensummen in
+Loewner-Ober-/Untermatrizen umgewandelt.
+
+Für R=ell-Q_a P gilt exakt
+
+  Gamma = R* Q_a^-1 R = ell*Q_a^-1 ell + K-D,
+  S = K-Gamma = D-ell*Q_a^-1 ell.
+
+Daher ist Gamma_upper=T_upper+K_upper-D_lower eine obere Schranke und
+S>=K_lower-Gamma_upper. Der separate rationale Prüfer konstruiert aus
+den gespeicherten rationalen Intervallendpunkten erneut diese Differenz
+und prüft
+
+  K_lower-Gamma_upper-eta W_upper > 0
+
+mit eta=4·10^-12 gerade bzw. 3·10^-11 ungerade. Vier exakte positive
+LDL-Pivots werden für beide Präzisionsläufe einzeln bestätigt. Da
+W<=W_upper, folgt die behauptete tatsächliche Matrixungleichung S>=eta W.
+Die Aussage gilt ebenso für komplexe Koeffizienten.
+
+Die separaten vollständigen Funktionsresidualgramme sind Kontrollen der
+Operator- und Paarungsrechnung. Der Schluss ersetzt ihre Norm nicht
+durch eine grobe globale inverse A8-Reserve. Die ursprünglichen
+analytischen Annahmen werden dadurch nicht unabhängig neu bewiesen.
+
+Die vier Quotientenklassen je Parität sind unabhängig, weil ihre
+Polynomrestriktionen auf der offenen äußeren Schale unabhängig sind.
+Eine Abdeckung aller neuen Quellen oder ein Fortsetzungssatz folgt aus
+der endlichen Familienaussage nicht. Die Restobligation ist im separaten
+REMAINDER_CANDIDATE.txt formuliert und bleibt unbewiesen.
+
+Zusätzliche L2-Normdiagnose: Im neuen Einheitsintervall sei r=a/b,
+m(x)=cosh(bx/2) gerade bzw. sinh(bx/2) ungerade. Auf dem positiven
+Halbintervall ist mu_inner=integral_0^r m(x)^2 dx. Mit den äußeren
+Momenten beta_j=integral_r^1 z_j(x)m(x) dx ergibt orthogonale Projektion
+im gewöhnlichen L2-Raum exakt
+
+  W_Quotient = W_shell + beta beta*/mu_inner.
+
+Da die Quellen den vollen Moment null haben, ist das innere Moment
+das Negative des äußeren. Die minimale innere L2-Korrektur liegt in
+der Richtung m und hat Normquadrat |beta*alpha|^2/mu_inner. Das ist
+eine Hilbertraum-Projektionsidentität, keine Verwendung neuer q-Positivität.
+Der alte Formraum ist im alten momentbeschränkten L2-Raum dicht; seine
+L2-Distanz hat daher denselben Wert. Die Integrale und der Exponentialrest
+werden eingeschlossen. QUOTIENT_NORM_CHECK.json bestätigt zusätzlich
+S>=2·10^-6 W_Quotient für beide endgültigen Präzisionsläufe exakt.
+Die primäre Bezugsnorm W und ihre Hauptzertifikate bleiben unverändert.

@@ -1,0 +1,191 @@
+Objekt X — feste Abnahme des vollständigen Restpiloten A8 -> A9
+6. Oktober 2026. AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN.
+
+Dieses Protokoll wird vor der Berechnung von B00, Kreuzblock und Tailnorm
+festgelegt. Die nachfolgende kleine Geometrieprüfung verwendet nur L2-
+Momente und Polynome. Sie berechnet keine neuen Operatorenergien und
+entscheidet nicht über die Restpositivität.
+
+1. Unveränderte Eingaben und Hilbertstruktur
+
+a=3 log2/2, b=log3, h=b-a. Je Parität gelten die vollständige Schalenliftung
+Lambda, W_X[s]=||Lambda s||_L2^2, der getestete Viererraum V und
+R=V^(perp W_X) aus dem gebundenen Restpaket. P_R ist der positive Operator
+der Form q_b[Lambda r]+19 W_X[r]; B_R=P_R^(-1/2) D P_R^(-1/2), mit
+
+ D=19I+g_R* A^-1 g_R+C* M_-^-1 C.
+
+Adjunkte von Abbildungen aus R und die Projektionen auf R bzw. den
+Pilotraum verwenden W_X. A und seine Norm verwenden den alten physischen
+L2-Raum. Die zu S und U_- gehörenden Operatoren haben kompakte Resolvente;
+P_R^(-1/2) und B_R sind kompakte Operatoren.
+
+M_-, delta=2/3, die alten 191 gemeinsamen Kraftfunktionale und die vier
+Kopplungsfunktionen f_j werden nicht durch neue Gesamtpositivität ersetzt.
+
+2. Expliziter acht-dimensionaler Raum in jeder Parität
+
+Auf der rechten Schale definiere
+
+ t(x)=(2x-a-b)/h,
+ ell_n(x)=sqrt((2n+1)/(2h)) P_n(t(x)), n=0,...,11.
+
+P_n sind die gewöhnlichen Legendrepolynome. Die ell_n sind orthonormal
+für X=L2((a,b),2dx). In der vollständigen W_X-Norm kommt der bekannte
+Rang-eins-Momentterm hinzu. Sie sind keine globale Paritätsbasis; die
+Parität entsteht durch Spiegelung der rechten Schale und die Liftung.
+
+Die bereits getesteten Quellen sind physisch
+
+ z_d(x)=[sqrt(2d+1)P_d(x/b)-c_d sqrt(2p+1)P_p(x/b)]/sqrt(2b),
+ c_d=sqrt((2d+1)/(2p+1)) * M_d(b)/M_p(b),
+ M_n(b)=integral_0^1 P_n(y)m_p(by)dy,
+ m_0(x)=cosh(x/2), m_1(x)=sinh(x/2).
+
+Die vier Grade sind d=2,4,6,8 gerade und d=3,5,7,9 ungerade.
+sigma_j=z_d|_(a,b). Mit Pi_V als exakter W_X-orthogonaler Projektion auf
+deren Spannraum werden vorab festgelegt
+
+ v_k=(I-Pi_V)ell_k, k=4,5,...,11,
+ V8=span{v_4,...,v_11} subset R.                         (2.1)
+
+Alle v_k liegen in der vollständigen Restformdomäne. Die kleine
+Geometrieprüfung muss in jeder Parität bestätigen:
+
+ - die ersten vier ell-Koeffizienten der vier sigma_j bilden eine
+   invertierbare 4x4-Matrix;
+ - die W_X-Grammatrix der acht v_k ist strikt positiv;
+ - ihre Paarungen mit allen vier sigma_j sind exakt null nach der
+   definierenden Projektionsidentität und numerisch eng eingeschlossen.
+
+Die erste Bedingung beweist dim(V8)=8: Eine Linearkombination aus
+ell_4,...,ell_11 kann nur dann im Viererraum V liegen, wenn deren erste
+vier Koeffizienten null sind, also alle vier V-Koeffizienten null sind.
+Scheitert diese Geometrieprüfung, wird gestoppt. Es erfolgt keine
+ergebnisabhängige Basiswahl während einer Energieprüfung.
+
+Sei H8 die tatsächliche W_X-Grammatrix der v_k und H8=L L* ihre eindeutig
+bestimmte Choleskyzerlegung mit positiver Diagonale. Die geordnete Basis
+
+ (e_1,...,e_8)=(v_4,...,v_11)L^(-*)
+
+ist damit exakt W_X-orthonormal. Intervallkoeffizienten beschreiben diese
+exakten Funktionen; ihre gerundeten Mittelpunkte dürfen nicht still als
+exakt orthonormal behandelt werden.
+
+Der volle Projektor ist
+P8 r=sum_j e_j <e_j,r>_(W_X).
+Diese Definition gilt für den ganzen unendlichen Rest. Eine gespeicherte
+12x12-Koeffizientenmatrix beschreibt nur seine Einschränkung auf den
+Polynomraum und ersetzt diese volle Definition nicht.
+
+3. Welcher Operatorblock tatsächlich berechnet werden muss
+
+Die Blockzerlegung verwendet R=V8 direct-sum V8^(perp W_X).
+B00=P8 B_R P8, B01=P8 B_R (I-P8), B10=B01*,
+B11=(I-P8) B_R (I-P8).
+
+Insbesondere gilt mit r_j=P_R^(-1/2)e_j
+
+ (B00)_ij = 19<r_i,r_j>_(W_X)
+            +<g r_i,A^-1 g r_j>+<C r_i,M_-^-1 C r_j>.     (3.1)
+
+Die endliche Matrix der Formen direkt auf e_j ist NICHT automatisch
+B00. Die vollständige Halbinverse P_R^(-1/2) muss berücksichtigt werden.
+Sie darf auch nicht durch die Halbinverse einer endlichen Kompression
+ersetzt werden, ohne deren Fehler einzuschließen.
+
+Eine zulässige, nichtzirkuläre Darstellung hierfür ist
+
+ P_R^(-1/2)=(2/pi) integral_0^infty (P_R+t^2 I)^(-1) dt.
+
+P_R>=I ist unabhängig von neuer Gesamtpositivität bewiesen. Eine spätere
+Implementierung dieser Darstellung muss alte/neue Lösungsreste,
+Quadraturfehler und den unendlichen Integrationsrest ausweisen.
+Dieses Protokoll behauptet noch keine berechnete Halbinverse.
+
+4. Vier verpflichtende Ausgaben des eigentlichen Piloten
+
+A. Eine symmetrische rationale 8x8-Obermatrix U00>=B00, die alle Terme
+   aus (3.1) einschließlich gemeinsamer Fehler und Off-Diagonalen enthält.
+
+B. Eine rationale positive 8x8-Matrix G01>=B01 B01* und zusätzlich eine
+   Normobergrenze gamma01>=||B01||. Ist nur gamma01 verfügbar, ist
+   G01=gamma01^2 I8 erlaubt, aber ausdrücklich als grobe Variante zu markieren.
+
+C. Eine begründete Operatornormobergrenze beta_tail>=||B11|| auf dem
+   vollständig definierten unendlichen Komplement. Die Fourierabschätzung
+   für Lambda P_R^(-1/2) allein ist keine solche B11-Schranke.
+
+D. Ein exakter rationaler Schurtest und, bei Erfolg, eine positive
+   UNIFORME Reserve für I-B_R auf dem ganzen R.
+
+Für den rechteckigen Kreuzblock B01 gibt es keine gewöhnliche
+Loewner-Obermatrix B01+. Aus unabhängig vergrößerten Einträgen folgt
+keine Obermatrix für B01 B01*. G01 muss als gemeinsame Gram-Obermatrix
+oder aus einem begründeten Operatorfehler abgeleitet werden.
+
+5. Verbindlicher Schurtest und vollständige Normkonsequenz
+
+Zuerst muss beta_tail<1 gelten. Dann wird exakt geprüft
+
+ G=I8-U00-G01/(1-beta_tail) >= eta I8, eta>0.             (5.1)
+
+Der Test gilt, weil I-B11>=(1-beta_tail)I und somit
+
+ B01(I-B11)^(-1)B10 <= B01 B01*/(1-beta_tail)
+                         <= G01/(1-beta_tail).
+
+Die zuerst vom Nutzer angegebene inverse Blockform ist deshalb mit dem
+tatsächlichen B01 korrekt. Eine frei interpretierte rechteckige
+Obermatrix an dessen Stelle ist nicht Teil der Abnahme.
+
+Die positive 8x8-Schurreserve allein darf nicht ohne Normumrechnung als
+volle Restreserve ausgegeben werden. Mit r=gamma01/(1-beta_tail) liefert
+die vollständige quadratische Ergänzung die sichere Konstante
+
+ alpha=min(eta,1-beta_tail)/(1+r)^2 >0,
+ I-B_R>=alpha I,   ||B_R||<=1-alpha<1.                   (5.2)
+
+Die Normschranke 1+r bezahlt die inverse Dreiecksabbildung beim
+Zurückwechseln vom Schurquadrat auf die ursprünglichen Blockkoordinaten.
+Wenn nur G>0 mit exakten LDL-Pivots vorliegt, kann etwa
+eta=1/tr(G^-1) verwendet werden; die Spur wird rational berechnet.
+
+Ein Erfolg bestätigt die vollständige konservative Restbedingung U_->=0
+und damit den ganzen lokalen A8->A9-Anschluss unter den gebundenen Eingaben.
+Er ist noch keine kofinale Fortsetzung oder Konstruktion von Objekt X.
+
+6. Fehlerbuch und eindeutige Ergebniszustände
+
+Jeder Lauf berichtet getrennt, mit verwendeter Norm und Quelle:
+
+ - Gamma-Grenzanteil und sein vollständiger Approximationrest;
+ - alte inverse Antwort, unter Erhalt der 191 gemeinsamen Kräfte;
+ - gemeinsame vier f_j-Kopplungen samt M_-^-1;
+ - Halbinversen-/Projektionsfehler der P_R-Normierung;
+ - Pilot-Tail-Kreuzgramm und gamma01;
+ - reine Tailnorm beta_tail;
+ - Intervall-/Rundungsfehler und Rest des jeweiligen Integrationsverfahrens.
+
+Die mathematischen Energieterme und die sie einschließenden Rechenfehler
+müssen getrennt erkennbar sein. Eine kleinere Majorante oder ein negativer
+unterer Matrixwert wird nicht als tatsächlicher Formwert ausgegeben.
+
+Mögliche Ausgaben:
+ - FULL_REMAINDER_CERTIFIED: alle A-D vorhanden, (5.1) und (5.2) bestehen;
+ - INSUFFICIENT_TAIL_BOUND: beta_tail fehlt oder ist nicht <1;
+ - INSUFFICIENT_CROSS_BOUND: Tail <1, aber Kreuz-/gemeinsamer Schurtest offen;
+ - FINITE_BOUND_INCONCLUSIVE: die 8x8-Majorante schließt schon endlich nicht;
+ - MISSING_OPERATOR_INPUT: erforderliche Halbinverse/Funktional-/Resthülle fehlt.
+
+Die Diagnose benennt den dominierenden bezahlten Verlust, seine Größenordnung
+und die konkrete fehlende Schranke. Keiner der letzten vier Zustände ist
+ein negativer Zeuge für die echte Form. Ein echter Gegenzeuge benötigt
+eine zulässige vollständige Quelle und einen entsprechenden oberen
+Formwertnachweis; dies wäre ein eigener Befund.
+
+Die Pilotdimension wird im Erstlauf nicht verändert. Kein A9->A11-, A13-
+oder neuer Gesamtoperatorlauf gehört zu dieser Abnahme. Änderungen an
+Basis, Normierung oder Restverfahren werden als neue Protokollrevision
+mit Begründung kenntlich gemacht. Versiegelte Vorgänger bleiben erhalten.

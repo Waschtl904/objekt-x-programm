@@ -1,0 +1,57 @@
+{
+  "status": "PASS_EXACT_OLD_METRIC_REDUCTION_AND_PARTIAL_WEIGHTED_ERROR_GRAMS",
+  "arithmetic": "Python integer and Fraction; no numerical library used by this checker",
+  "scope": "Inherited finite Schur metric and two harmless error contributions. No new sensitive force values, no full B00.",
+  "precision_interval_pairs_overlap": 2442,
+  "blocks": [
+    {
+      "parity": "even",
+      "source_Loewner_lower_verified": true,
+      "full_positive_certificate": {
+        "dimension": 191,
+        "congruence_gershgorin_lower": "999/1000",
+        "positive": true
+      },
+      "tail_gap_certificate": {
+        "dimension": 185,
+        "congruence_gershgorin_lower": "999/1000",
+        "positive": true
+      },
+      "retained_rank": 6,
+      "complement_dimension": 185,
+      "kappa_final": "18828981/500000",
+      "small_schur_exact_positive_pivots": 6,
+      "joint_high_error_gram_scalar": "1416613/1000000000000",
+      "joint_complement_error_gram_scalar": "129684133/125000000000",
+      "joint_high_plus_complement_error_gram_scalar": "1038889677/1000000000000"
+    },
+    {
+      "parity": "odd",
+      "source_Loewner_lower_verified": true,
+      "full_positive_certificate": {
+        "dimension": 191,
+        "congruence_gershgorin_lower": "999/1000",
+        "positive": true
+      },
+      "tail_gap_certificate": {
+        "dimension": 185,
+        "congruence_gershgorin_lower": "999/1000",
+        "positive": true
+      },
+      "retained_rank": 6,
+      "complement_dimension": 185,
+      "kappa_final": "10570239/1000000",
+      "small_schur_exact_positive_pivots": 6,
+      "joint_high_error_gram_scalar": "1448457/1000000000000",
+      "joint_complement_error_gram_scalar": "52852371/200000000000",
+      "joint_high_plus_complement_error_gram_scalar": "33213789/125000000000"
+    }
+  ],
+  "full_remainder_certified": false,
+  "U00": null,
+  "G01": null,
+  "gamma01": null,
+  "beta_tail": null,
+  "external_review": "OPEN",
+  "github_changed": false
+}

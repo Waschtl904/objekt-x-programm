@@ -1,0 +1,48 @@
+{
+  "status": "PASS_BOUNDED_HALF_INVERSE_AUDIT",
+  "scope": "Source hashes, rational error sums and partial 19I matrices; analytic derivation and Arb kernels remain separate inputs.",
+  "precision_runs": 2,
+  "interval_pairs_overlap": 106054,
+  "half_inverse_images": 16,
+  "full_B00_computed": false,
+  "full_remainder_certified": false,
+  "external_review": "OPEN",
+  "blocks": [
+    {
+      "bits": 1024,
+      "parity": "even",
+      "P_R_lower": 20,
+      "joint_half_inverse_error_upper": "303687347/1000000000000",
+      "partial_19I_upper_norm_below": "0.866",
+      "partial_19I_upper_norm_exact": "61647645038808301953678083155931572177055857797066700818908575339229320411722406066798772825173863690379464568117063885428681343583/71263575450000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "minimum_pivot_I_minus_partial_upper_positive": true
+    },
+    {
+      "bits": 1024,
+      "parity": "odd",
+      "P_R_lower": 20,
+      "joint_half_inverse_error_upper": "15352321/50000000000",
+      "partial_19I_upper_norm_below": "0.866",
+      "partial_19I_upper_norm_exact": "6235450490991581141628736972152481171138243680887756852865319243209035573430494892403758896466449563938666003209409367403764845023/7202514735000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "minimum_pivot_I_minus_partial_upper_positive": true
+    },
+    {
+      "bits": 1536,
+      "parity": "even",
+      "P_R_lower": 20,
+      "joint_half_inverse_error_upper": "303687347/1000000000000",
+      "partial_19I_upper_norm_below": "0.866",
+      "partial_19I_upper_norm_exact": "61647645038808301953678083155931572177055857797066700818908575339229320411722406066798772825173863690379464568117063885428681343583/71263575450000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "minimum_pivot_I_minus_partial_upper_positive": true
+    },
+    {
+      "bits": 1536,
+      "parity": "odd",
+      "P_R_lower": 20,
+      "joint_half_inverse_error_upper": "15352321/50000000000",
+      "partial_19I_upper_norm_below": "0.866",
+      "partial_19I_upper_norm_exact": "6235450490991581141628736972152481171138243680887756852865319243209035573430494892403758896466449563938666003209409367403764845023/7202514735000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "minimum_pivot_I_minus_partial_upper_positive": true
+    }
+  ]
+}

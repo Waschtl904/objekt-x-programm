@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-06",
+  "protocol_sha256": "7572ce23726101c4c82c06a5381f2544d2c84c882b564046ff20b10c4b30407a",
+  "inputs": [
+    {
+      "file": "inputs/QUOTIENT_NORM.json",
+      "sha256": "d4fcc188ce1dd8e1a22a7b73085a1c8bed9e5a1f52491683704e0e2ea8aede87",
+      "role": "fixed four-source quotient geometry per parity"
+    },
+    {
+      "file": "inputs/Objekt-X-Rest-Domaene-Kompaktheit-2026-10-06.zip",
+      "sha256": "b090214efc386ec32806afb4bca4beb248964230a36bd8aa684914fff9c0cfd7",
+      "role": "analytic domain and compactness proof chain"
+    }
+  ],
+  "full_eight_source_archive_sha256": "d1dbad67da8bfe13289fd33d35d821c4fa3a723b6083c1f89abd70d6dfb82cbe",
+  "python": "3.13.7",
+  "python_flint": "0.9.0",
+  "source_operator_integrals_rebuilt": false,
+  "new_operator_energies_computed": false,
+  "external_review": "OPEN"
+}

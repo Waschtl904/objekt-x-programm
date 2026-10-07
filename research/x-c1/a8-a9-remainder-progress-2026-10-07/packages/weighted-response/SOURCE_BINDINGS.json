@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-07",
+  "included_files": {
+    "inputs/a8_model.json.gz": "5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b",
+    "inputs/A8_PROOF.md": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661",
+    "inputs/FULL_REMAINDER_PROOF.txt": "80aceab1efff664a073d255d3f13377af45bcdd111b01898451ab872ef60c212",
+    "inputs/GRAPH_SCHUR.md": "9fcf953793d8511433cbf79a1a1f1c88062eb429b693b0d81b6856754b49c636",
+    "inputs/HALF_1536.json": "185b501de8f218f8b62812631fe52301a47a288f11b9b4e8205229da7f89da82",
+    "inputs/HALF_INVERSE_DERIVATION.txt": "cd13e95a5ce2f50159a90e3df80a79e16950389a6804161db4ebffa475293035"
+  },
+  "previous_half_inverse_zip_sha256": "d5f5a0ab51652c41f9242e22aba3b9262ce76c660fda6460ac91f8b418176072",
+  "review_original_sha256": "791c3092a3482583bb257becf3db621bd72ddd66e8bf2c8045cc22f955f0eaf1",
+  "external_professional_review": false
+}

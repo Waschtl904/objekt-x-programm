@@ -1,0 +1,49 @@
+name: A8 A9 remainder bounded certificates
+
+on:
+  pull_request:
+    paths:
+      - "research/x-c1/a8-a9-remainder-progress-2026-10-07/**"
+      - ".github/workflows/a8-a9-remainder-progress.yml"
+  push:
+    branches: [main]
+    paths:
+      - "research/x-c1/a8-a9-remainder-progress-2026-10-07/**"
+      - ".github/workflows/a8-a9-remainder-progress.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bounded-replay:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - name: Preserve bound bytes and long paths
+        run: |
+          git config --global core.autocrlf false
+          git config --global core.longpaths true
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Check sealed packages and exact certificates
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+          PYTHONIOENCODING: utf-8
+        run: python -B research/x-c1/a8-a9-remainder-progress-2026-10-07/replay.py --output "${{ runner.temp }}/a8-a9-remainder-check"
+      - name: Preserve commit-bound bounded replay evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: a8-a9-remainder-check-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/a8-a9-remainder-check/*.json
+            ${{ runner.temp }}/a8-a9-remainder-check/*.log
+          if-no-files-found: error
+          retention-days: 30

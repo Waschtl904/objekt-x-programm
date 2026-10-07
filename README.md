@@ -29,7 +29,7 @@ Die projektintern hergeleiteten Ergebnisse sind zur externen Prüfung offen.
 ## Forschungsstand in Kürze
 
 Die folgende Zusammenfassung bezieht sich auf den integrierten Forschungsstand
-und die Folgepakete vom **4. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
+und die Folgepakete bis **7. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
 die gepinnten Beweisanker verwaltet das
 [Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml).
 
@@ -40,7 +40,7 @@ die gepinnten Beweisanker verwaltet das
 | Kanonische Richtung für A9→A11 | Maximaler Schur-Eigenwert in beiden Paritäten einfach; gerade Richtung lokalisiert | Ungerade ist die gesamte Ausgangsfamilie weiterhin `UNRESOLVED` |
 | Ungerade Winkeldiagnose | Gemeinsamer Y-Kernel: central ≤2.933357°, quarter ≤3.070163°, half ≤3.642693°; Endpunktfolge: five_eighths ≤4.933780° | Bedingte Schnitte; Root bleibt `UNRESOLVED` |
 | H₀-Folgeuntersuchung | Exaktes Hindernis für die benannte letzte Drei-Cut-Relaxation | Kein ursprünglicher Operatorgegenzeuge; vollständiges H₀ unentschieden |
-| Konstruktiver Anschluss A8→A9 | [Vier gewählte Quellen](research/x-c1/a8-four-source-inverse-energy-2026-10-04/README.md) behalten nach vollständigem alten Energieabzug positive Koeffizientenreserven von 10⁻⁵ bzw. 3,3·10⁻⁵ | Gesamter neuer Quotient und allgemeine Fortsetzung offen; analytische Grundlagen übernommen |
+| Konstruktiver Anschluss A8→A9 | [Acht feste Quellen und Restpilot](research/x-c1/a8-a9-remainder-progress-2026-10-07/README.md): positiver endlicher Anschluss, vollständige Restdarstellung, Halbinversen und erste gewichtete Fehlergrame | Voller neuer Rest, Kreuzkopplung und allgemeine Fortsetzung offen; analytische Grundlagen übernommen |
 | Globales Ziel | Arbeitsdefinition und erforderliche Übergänge sind formuliert | Kofinale positive Familie, globaler Readout, vollständige Weil-Gramidentität und RH bleiben offen |
 
 Die hier zusammengefassten projektinternen Ergebnisse tragen den Status

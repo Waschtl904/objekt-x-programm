@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-05",
+  "source_head": "040c1c2f75753d0daa680c55b14b88524955f851",
+  "status": "FROZEN_BEFORE_NEW_NUMERICAL_RESULTS",
+  "transition": "A8 -> A9",
+  "degrees": {"even": [2,4,6,8], "odd": [3,5,7,9]},
+  "reference_gram": "W_ij = <z_i,z_j> in the ordinary physical L2 norm, equivalently L2((-1,1),dx/2) after the fixed unitary U_b. W = I + c c*, with c the new Mellin-carrier coefficients. This is independent of q_b positivity and is fixed before solving.",
+  "old_space": "Complete A8 form space, including the infinite old high subspace; inherited old high floor 2/3 and full low/high coupling.",
+  "rule": "S = D - ell* Q_a^-1 ell = K - Gamma; retain B h in the existing inverse-energy majorant. Certify K_minus - Gamma_plus >= eta W_upper by exact rational LDL; every cross term is retained.",
+  "proposal": "Keep the two original proposals in each parity as regression controls; solve the same old 191-dimensional midpoint Galerkin system for the added columns, rounded to a rational decimal grid. All four proposal residuals receive a common error budget.",
+  "required_outputs": ["1528 complete mixed B0 h0 pairings", "191x4 new source pairings per parity", "eight rational old proposals", "complete function-residual Gram per parity including logarithmic and shift terms", "K and inverse residual-energy enclosure", "fixed L2 reference Gram", "rational relative floor or explicit failure classification", "diagnostic weak direction with exact directional checks", "separate candidate for the untested new quotient remainder"],
+  "checks": ["old two-source subblocks against bound receipts", "independent complete mixed-Gram contractions", "3072 and 4096 bit runs", "exact rational final matrix checks", "reference Gram positivity", "no target terminal positivity, inverse, projector or target Cauchy-Schwarz"],
+  "interpretation": "A nonpositive lower bound does not prove a negative actual direction. Coordinate changes preserve inertia. An actual semidefinite direction is not by itself an obstruction to the definition of Object X.",
+  "stopping_rule": "Evaluate the stated eight sources and the fixed inherited inverse-energy rule. If its lower matrix fails, identify the dominating directional losses before deciding on another computation. No unbounded source expansion.",
+  "full_new_quotient_covered": false,
+  "target_positivity_used": false,
+  "external_review": "OPEN",
+  "github_changed": false
+}

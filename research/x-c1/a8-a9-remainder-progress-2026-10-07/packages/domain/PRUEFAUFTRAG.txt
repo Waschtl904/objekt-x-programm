@@ -1,0 +1,20 @@
+Bitte prüfe nur die neuen analytischen Lemmata in LEMMATA.txt.
+Keine neue Operatorintegration und kein weiterer Horizont.
+
+1. Lemma 1: Reichen die stückweisen Lipschitz-Annahmen für die angegebenen
+   Translations-, Logarithmus- und Fernfeldmajoranten? Rechtfertigt der
+   L2-Grenzübergang der abgeschnittenen Operatoren die volle Operatordomäne?
+2. Anwendung: Sind die Operatorrestriktionen korrekt behandelt, insbesondere
+   m_core außerhalb des Momentkerns und die Wirkung auf feste Lambda sigma_j
+   statt auf beliebige Formvektoren? Stimmen die L2-Repräsentanten (2.4)?
+3. Lemma 2: Stimmen Fouriernormierung, Faktor 2, logarithmische Untergrenze
+   des Gamma-Multiplikators und der Kompaktheitsbeweis bei festem Träger?
+4. Anwendung: Folgt P_R>=E[Lambda r]+W_X[r] aus den gebundenen Konstanten,
+   und begründet dies die beanspruchte Kompaktheit von S, P_R und B_R?
+
+Die letzte Normobergrenze <1 wird nicht behauptet. Insbesondere darf (5.1)
+nicht als Restschranke gleichen Werts für B_R interpretiert werden.
+
+Bitte bestätigte Schritte, konkrete Einwände und weiterhin übernommene
+Voraussetzungen getrennt ausweisen. Die alten Rechenläufe müssen für
+diesen begrenzten analytischen Nachtrag nicht erneut gestartet werden.

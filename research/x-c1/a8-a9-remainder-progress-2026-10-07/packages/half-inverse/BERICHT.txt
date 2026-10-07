@@ -1,0 +1,86 @@
+Objekt X — erste Rechnung des eingefrorenen Restpiloten
+6. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Alle acht vollständigen Halbinversenbilder P_R^(-1/2)e_j je Parität sind
+jetzt mit einem gemeinsamen Fehler eingeschlossen. Die Näherungen
+benutzen 92 Hilfsrichtungen in R. Der Fehler umfasst den gesamten
+unendlichen Operatorrest; er wird nicht durch weitere endlich viele
+Prüfrichtungen ersetzt. Die eingefrorenen acht Richtungen bleiben gleich.
+
+                              gerade                 ungerade
+Gemeinsamer Fehler <=         0.000303687347          0.000307046420
+Typische Bildnorm              ca. 0.205 bis 0.210     ca. 0.205 bis 0.210
+Voller Boden P_R >=           20 I                   20 I
+19I-Anteil von B00 <=          0.865066 I             0.865733 I
+
+Die Fehlerschranke gilt als Operatornorm von C^8 in den vollständigen
+Rest mit W_X-Norm. Damit gilt zugleich die gemeinsame Gram-Obermatrix
+epsilon^2 I_8. Sie behauptet keine Unabhängigkeit der acht Fehler.
+
+Was neu gerechnet wurde
+
+- Vollständige log- und log^2-Grams der Operatorresiduen; alle
+  ausgelassenen lokalen Legendre-Koeffizienten sind darin enthalten.
+- Resolventenintegral der Halbinversen mit 1024 Teilintervallen,
+  gesonderter Variationsschranke und unendlichem Integrationsrest.
+- Exakte Restprojektion in der Norm der konstanten Gamma-Kernanteile.
+- Rationale gemeinsame 8x8-Obermatrizen für den 19I-Beitrag zu B00.
+- Zwei separate Läufe mit 1024 und 1536 Bit, danach ein Fraction-Check
+  der Quellbindungen, Fehlerbudgets und rationalen Teilmatrizen.
+
+Der Fortschritt gegenüber dem reinen Protokoll ist damit eine echte
+vollständige Operator-Einschließung. Es ist noch kein Zertifikat für B_R.
+
+Die jetzt sichtbare Grenze
+
+Die alte inverse Antwort und die vier C-Kopplungen fehlen noch in U00.
+Eine pauschale L2-Fehlerkugel kann nicht unverändert durch die äußerst
+empfindliche alte Inverse getragen werden. Die verfügbaren Spuren von
+F^(-1) liegen bei etwa 8.99e25 und 1.28e23. Als globale Normmajoranten
+wären sie für die jetzigen Fehlerhüllen unbrauchbar; das ist keine
+gemessene tatsächliche Fehlerverstärkung.
+
+Der nächste Rechenschritt muss die Fehler deshalb in den tatsächlichen
+alten korrigierten Kräften v, im hohen Anteil h und in den vier
+C-Kopplungen einschließen. Benötigt sind ihre gemeinsamen Grams in
+F^(-1), delta^(-1) und M_-^(-1). Die Herleitung enthält die vollständige
+Resolventenfehlerdarstellung, an der diese Rechnung ansetzen kann.
+
+Der größte verbleibende Halbinversenfehler stammt aus den logarithmischen
+Randanteilen. Höhere Rechenpräzision allein beseitigt ihn nicht. Eine
+weitere Vergrößerung der Hilfsmatrix ist deshalb noch kein Ersatz für
+die gewichtete gemeinsame Fehlerrechnung.
+
+Aussagegrenzen
+
+U00, G01, gamma01, beta_tail, eta und alpha für den GESAMTEN B_R bleiben
+null. FULL_REMAINDER_CERTIFIED bleibt false. Das Paket enthält weder
+einen negativen Zeugen noch einen Beweis der vollständigen Restpositivität.
+Der Test wurde nicht als gescheitert gegen das mathematische Ziel gewertet;
+die vollständige Abnahme ist noch nicht auswertbar.
+
+Die vollständige Objekt-X-Konstruktion bleibt offen. Eine externe
+fachmathematische Begutachtung liegt nicht vor. Die zugrunde liegenden
+arithmetischen Identitäten bleiben gebundene Voraussetzungen.
+
+Dateien
+
+HERLEITUNG.txt             Analytische Ableitung und Fehlerrechnung.
+half_inverse.py            Tatsächlich ausgeführte Intervallrechnung.
+expected/1024.json         Erster Präzisionslauf.
+expected/1536.json         Zweiter Präzisionslauf.
+check_half_inverse.py      Kleiner rationaler Schlussprüfer.
+EXACT_CHECK.json           Ergebnis dieses begrenzten Prüfers.
+PILOT_STATE.json           Klare Trennung berechnet/offen.
+inputs/                   Unveränderte gebundene Ausgangstexte/Geometrie.
+SOURCE_BINDINGS.json       Quellen und historische Archivbindungen.
+REPRODUCE.txt              Aufrufe zum Nachrechnen.
+
+Die zwei Präzisionsläufe benutzen denselben Algorithmus. Ihr Abgleich
+ist keine unabhängige Begutachtung. Der kleine Prüfer bestätigt nicht
+alle analytischen Voraussetzungen der Herleitung aus sich selbst.
+
+GitHub/main wurde in diesem Schritt nicht verändert. Die bisherigen
+versiegelten Pakete wurden nicht verändert.

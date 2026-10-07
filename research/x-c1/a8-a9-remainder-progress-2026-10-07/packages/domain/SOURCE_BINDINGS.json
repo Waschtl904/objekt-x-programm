@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-06",
+  "status": "ANALYTIC_PROOF_ADDENDUM_FOR_REVIEW",
+  "inputs": [
+    {
+      "file": "inputs/Objekt-X-A8-A9-Vollstaendiger-Rest-2026-10-05.zip",
+      "sha256": "a0609df80f20f57a95c5f787642b4078eedb5f44bb4383ecddc5a78e6d53c0ce",
+      "role": "unchanged_parent_archive"
+    },
+    {
+      "file": "inputs/UEBERMITTELTER_AUDIT.txt",
+      "sha256": "d63414ea3a0d63d971399186570417b7604d7e1135a8423a3298b14d1626478b",
+      "role": "user_supplied_bounded_review"
+    }
+  ],
+  "new_operator_integration": false,
+  "old_numerical_runs_repeated": false,
+  "new_horizon": false,
+  "full_remainder_positive": false,
+  "B_R_norm_below_one_proved": false,
+  "analytic_lemmas_machine_verified": false,
+  "new_lemmas_external_review": "OPEN",
+  "github_changed": false
+}

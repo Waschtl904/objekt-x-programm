@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-05",
+  "status": "FROZEN_AFTER_128_DEGREE_DIAGNOSTIC_BEFORE_224_DEGREE_RESULTS",
+  "reason": "In the rational diagnostic weak even direction, the fixed Gamma-128 RHS error contributes about 3.6233e-9 to the K budget, compared with K_model about 8.7109e-12. The same source error dominates the weighted inverse-force budget. This is not a negative actual-form witness.",
+  "changes": {"new_source_gamma_degree": [128,224], "inverse_force_young_parameter": ["1e-7","1e-12"]},
+  "unchanged": ["eight prescribed source degrees", "physical L2 reference Gram", "old high floor 2/3", "complete old low/high coupling", "same inverse-energy majorant formula", "old Gamma degree 160", "new potential series 640 terms", "first two old proposals per parity", "no target positivity", "full new quotient remains open"],
+  "regressions": "The prior Gamma-128 mixed and finite source blocks are compared under the explicit difference bound 2b*(eps128+eps224); literal model equality is not expected. Complete true-residual Gram intervals must overlap the old two-source receipts.",
+  "required_precision_runs": [3072,4096],
+  "external_review": "OPEN",
+  "github_changed": false
+}

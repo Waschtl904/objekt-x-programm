@@ -1,0 +1,27 @@
+Reproduktion des Halbinversen-Zwischenstands
+
+Python 3.13 und python-flint 0.9.0 wurden benutzt. Fuer den kleinen
+Fraction-Pruefer genuegt die Python-Standardbibliothek.
+
+Im entpackten Paketverzeichnis:
+
+  python -B check_half_inverse.py
+
+Die Ausgabe muss mit EXACT_CHECK.json uebereinstimmen. Der Pruefer
+kontrolliert auch SHA256SUMS. Fuer eine vollstaendige Wiederholung
+die numerische Bibliothek bereitstellen und ihre Position als PATH_TO_DEPS
+einsetzen. Alternativ kann python-flint normal in Python installiert sein.
+
+  python -B half_inverse.py --bits 1024 --size 96 --panels 1024 --input-dir inputs --deps PATH_TO_DEPS --out replay-1024.json
+  python -B half_inverse.py --bits 1536 --size 96 --panels 1024 --input-dir inputs --deps PATH_TO_DEPS --out replay-1536.json
+
+Die Zieldateien duerfen noch nicht existieren. Laufzeiten sind variabel;
+die gespeicherten Laufzeitfelder sind keine mathematischen Daten.
+Die Programmausgaben enthalten Intervalle und rationale Zentren. Ein
+erneuter Lauf muss die Intervalle vergleichen, nicht seine Laufzeit oder
+blosse Bytegleichheit als mathematisches Kriterium verwenden.
+
+Das eingefrorene Protokoll wird vor jeder Rechnung gegen seinen
+bekannten Hash geprueft. Die gespeicherten Hilfsbasis-Koeffizienten sind
+Intervalle um eine exakt definierte Basis, keine exakt orthonormale
+Liste gerundeter Dezimalzahlen.

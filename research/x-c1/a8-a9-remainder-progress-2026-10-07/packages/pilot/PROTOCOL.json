@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-06",
+  "status": "FROZEN_BEFORE_OPERATOR_PILOT",
+  "goal": "certify norm(B_R)<1 on the full A8-to-A9 remainder in each parity",
+  "old_parity_degrees": {"even": [2,4,6,8], "odd": [3,5,7,9]},
+  "right_shell_legendre_seed_degrees": [4,5,6,7,8,9,10,11],
+  "pilot_dimension_per_parity": 8,
+  "projection_geometry": "W_X",
+  "pilot_space": "span((I-Pi_V_WX) ell_k, k=4,...,11)",
+  "basis_normalization": "exact W_X Gram, unique Cholesky with positive diagonal",
+  "geometry_failure_action": "stop without changing the basis",
+  "required_outputs": ["U00>=B00", "G01>=B01 B01* and gamma01>=norm(B01)", "beta_tail>=norm(B11)", "exact Schur margin and full operator norm consequence"],
+  "schur_gate": "beta_tail<1 and I8-U00-G01/(1-beta_tail)>=eta I8 with eta>0",
+  "uniform_margin": "alpha=min(eta,1-beta_tail)/(1+gamma01/(1-beta_tail))^2",
+  "B00_compression_requires_full_P_R_half_inverse": true,
+  "rectangular_Loewner_upper_matrix_permitted": false,
+  "full_remainder_certified": false,
+  "operator_blocks_computed": false,
+  "new_horizon": false,
+  "target_positivity_used": false,
+  "external_review": "OPEN",
+  "github_changed": false
+}
