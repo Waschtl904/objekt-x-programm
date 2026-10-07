@@ -29,6 +29,8 @@ komprimiert rund 1,6 MB. Die Katalogeinträge unterscheiden:
 - `RECOVERED_BYTES`: Originalbytes unter `files/<SHA-256>` im Nachtragsarchiv.
 - `CONTAINER_CATALOG`: ursprünglicher ZIP-Hash und Verzeichnisinhalt; die
   enthaltenen Dateien sind über die beiden vorigen Arten erreichbar.
+  `member_path` erhält den ursprünglichen Mitgliedsnamen; `path` bezeichnet
+  gegebenenfalls die separate Ablage im Nachtragsarchiv.
 
 [CATALOG.json](CATALOG.json) bindet alle 73 Ausgangsfassungen, 43 zusätzliche
 verschachtelte oder äußere Container und alle ergänzten Dateiinhalte.
@@ -105,9 +107,29 @@ python -B 00-uebersicht/archiv/LOCAL_HANDOFF_RECOVERY_2026-10-07/verify_recovery
 ```
 
 Der [Prüfer](verify_recovery.py) liest die gepinnte Main-Basis aus der
-Git-Historie, prüft die erhaltenen Bytes und die vollständige Zuordnung.
-Er führt keine archivierten Programme aus. Ein `PASS_SOURCE_BYTES` bestätigt
-Herkunft und Verfügbarkeit, keine mathematische Aussage. Historische
+Git-Historie und prüft die erhaltenen Bytes gegen den fest eingefrorenen
+Katalog-Hash. Änderungen der Mitgliedsliste werden damit zurückgewiesen.
+Er führt keine archivierten Programme aus. Im Standardlauf bleibt
+`original_container_bytes_verified: false`: Die ursprünglichen ZIPs sind
+für diesen Lauf keine Eingaben, ihre historische Vollständigkeit ist eine
+übernommene Katalogbindung.
+
+Mit den lokal erhaltenen Originalen lässt sich zusätzlich die vollständige
+Containerzuordnung einschließlich aller Mitgliedsnamen, Größen und Hashes
+direkt prüfen:
+
+```text
+python -B 00-uebersicht/archiv/LOCAL_HANDOFF_RECOVERY_2026-10-07/verify_recovery.py --originals ORIGINAL_ZIP_LOCATIONS.json
+```
+
+Diese lokale JSON-Datei ordnet jedem ursprünglichen äußeren ZIP-Hash seinen
+Dateipfad zu. Sie enthält keine Beglaubigung: Der Prüfer liest und hasht die
+Originalbytes und öffnet auch die verschachtelten Container. Lokale Pfade
+werden nicht veröffentlicht. Die [Ausführungsquittung](SOURCE_CHECK.json)
+dokumentiert den tatsächlichen Lauf mit allen 43 katalogisierten Originalcontainern.
+
+Ein `PASS_SOURCE_BYTES` bestätigt jeweils den ausgewiesenen Byteprüfumfang,
+keine mathematische Aussage. Historische
 Manifestausnahmen oder früher dokumentierte Fehler werden dadurch nicht
 rückwirkend aufgehoben.
 

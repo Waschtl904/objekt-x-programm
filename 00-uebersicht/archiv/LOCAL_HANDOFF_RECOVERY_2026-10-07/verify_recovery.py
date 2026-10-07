@@ -1,6 +1,7 @@
 """Verify historical source bytes. Does not execute or validate research code."""
 from pathlib import Path
 from functools import lru_cache
+import argparse
 import hashlib
 import io
 import json
@@ -10,14 +11,18 @@ import zipfile
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
+EXPECTED_CATALOG_SHA256 = 'c425c9bc37523b253e6ecaa7d8af762645d674fd9a9e03212beb45b45a135296'
 
 
 def sha256(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def verify():
-    catalog = json.loads((HERE / 'CATALOG.json').read_text(encoding='utf-8'))
+def verify(originals=None):
+    catalog_bytes = (HERE / 'CATALOG.json').read_bytes()
+    if sha256(catalog_bytes) != EXPECTED_CATALOG_SHA256:
+        raise ValueError('Frozen catalog binding mismatch')
+    catalog = json.loads(catalog_bytes)
     commit = catalog['base_main']
     if not re.fullmatch('[0-9a-f]{40}', commit):
         raise ValueError('Invalid baseline commit')
@@ -93,9 +98,47 @@ def verify():
     }
     if used != set(recovered) or visited != set(catalog['containers']) or counts != catalog['counts']:
         raise ValueError('Coverage or count mismatch')
+
+    checked_containers = set()
+    if originals is not None:
+        # The local map contains original outer ZIP digest -> filename.
+        # It is an input locator, not trusted evidence: every ZIP is hashed.
+        paths = json.loads(Path(originals).read_text(encoding='utf-8'))
+
+        def check_original(data, expected_sha):
+            if sha256(data) != expected_sha:
+                raise ValueError('Original ZIP digest mismatch')
+            if expected_sha not in catalog['containers'] or expected_sha in checked_containers:
+                return
+            container = catalog['containers'][expected_sha]
+            if len(data) != container['original_zip_bytes']:
+                raise ValueError('Original ZIP size mismatch')
+            with zipfile.ZipFile(io.BytesIO(data)) as z:
+                members = [i for i in z.infolist() if not i.is_dir()]
+                expected = container['files']
+                if [i.filename for i in members] != [e['member_path'] for e in expected]:
+                    raise ValueError('Original ZIP complete member list mismatch')
+                for info, entry in zip(members, expected):
+                    member = z.read(info)
+                    if sha256(member) != entry['sha256'] or len(member) != entry['bytes']:
+                        raise ValueError('Original ZIP member binding mismatch')
+                    if entry['storage'] == 'CONTAINER_CATALOG':
+                        check_original(member, entry['sha256'])
+            checked_containers.add(expected_sha)
+
+        for source in catalog['sources']:
+            if source['storage'] == 'CONTAINER_CATALOG':
+                check_original(Path(paths[source['sha256']]).read_bytes(), source['sha256'])
+        if checked_containers != set(catalog['containers']):
+            raise ValueError('Original ZIP coverage mismatch')
     print(json.dumps({'status': 'PASS_SOURCE_BYTES', 'base_main': commit,
-                      **counts, 'mathematical_replay_performed': False}, indent=2))
+                      **counts, 'catalog_sha256': EXPECTED_CATALOG_SHA256,
+                      'original_containers_verified': len(checked_containers),
+                      'original_container_bytes_verified': originals is not None,
+                      'mathematical_replay_performed': False}, indent=2))
 
 
 if __name__ == '__main__':
-    verify()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--originals', type=Path, help='JSON map: original outer ZIP SHA-256 to local filename')
+    verify(parser.parse_args().originals)
