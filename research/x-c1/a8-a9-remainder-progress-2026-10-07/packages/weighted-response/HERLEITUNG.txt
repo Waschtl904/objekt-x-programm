@@ -1,0 +1,254 @@
+Objekt X — sechs alte Kraftkombinationen und erste gewichtete Fehlergrame
+7. Oktober 2026 · begonnen am 6. Oktober
+AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Aufgabe und tatsächlicher Umfang
+
+Die bereits eingeschlossenen acht Halbinversenbilder je Parität bleiben
+unverändert. Schreibe Delta=R_half-Y. Es gilt gemeinsam
+
+ Delta*Delta <= epsilon^2 I_8,
+ epsilon_even=0.000303687347, epsilon_odd=0.000307046420.
+
+Die alte inverse Energie besitzt die geerbte gemeinsame Schranke
+
+ g(r)* A_old^(-1)g(r)
+ <= delta^(-1)||h(r)||^2+v(r)*F^(-1)v(r),
+ v=c-delta^(-1)B h, delta=2/3.
+
+Hier ist F die vollständige geerbte 191x191-Schuruntermatrix. Der ganze
+unendliche alte hohe Raum ist bereits in dieser Eingabe berücksichtigt.
+Die Quellen c, h und B sowie ihre Normierungen sind die des gebundenen
+alten Pakets. Eine positive neue Gesamtform wird nicht verwendet.
+
+Neu wird der empfindliche Faktor F^(-1) in sechs explizite Kombinationen
+und ein beschränktes 185-dimensionales Komplement zerlegt. Für das
+Komplement und den alten hohen Anteil werden die Fehlergrame von Delta
+berechnet. Die sechs empfindlichen Fehlerkräfte selbst und die vier
+C-Kopplungen sind noch nicht ausgewertet.
+
+2. Unveränderte alte Eingabe und rationale Untermatrix
+
+Das ursprüngliche a8_model.json.gz bleibt an SHA256
+5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b
+gebunden. Es enthält die niedrige Formmatrix L und den vollständigen
+rohen hohen Kopplungsgram G. Mit den dortigen Fehlerparametern gilt
+
+ gamma=(21/10) Gamma_kernel_error_exact,
+ e_m=(21/40)^(384+p)/(384+p)! /
+       [1-(21/40)^2/((385+p)(386+p))] * (4 falls p=1, sonst 1),
+ e_B=2 gamma+24 e_m,
+ H_B=(1001/1000)G+1001 e_B^2 I,
+ F=L-4 gamma I-(3/2)H_B.
+
+H_B ist die geerbte Loewner-Obermatrix für BB*. Das hohe Mellinmodell
+hat die Synthesenorm höchstens sqrt(1+e_m^2).
+
+Aus der Intervallmatrix F wird eine symmetrische rationale Matrix Fbar
+mit Nenner 10^90 konstruiert: symmetrische gerundete Mittelpunkte, danach
+Abzug einer gemeinsamen Diagonalkorrektur, welche jede Zeilensumme der
+Eintragsfehler bezahlt. Es gilt
+
+ 0 < Fbar <= F,   daher   F^(-1) <= Fbar^(-1).
+
+Der separate Prüfer kontrolliert Fbar<=F direkt gegen die ursprünglichen
+ganzzahligen Intervallendpunkte und die rationalen Gamma-/Mellinfehler.
+Es wird kein gedruckter Dezimalwert als exakte Ausgangsmatrix benutzt.
+
+3. Warum gerade sechs alte Kombinationen?
+
+Eine vorläufige Rechnung untersuchte die jeweils ersten 1,...,7 alten
+Koordinaten. Die inverse Spur des verbleibenden Hauptblocks fiel bei
+sechs behaltenen Koordinaten auf ungefähr 108.54 bzw. 81.13. Bei fünf
+waren es noch etwa 14660.21 bzw. 720.72.
+
+Danach wurden sechs alte Koordinaten für diese Zerlegung gewählt. Die
+Auswahl ist eine dokumentierte Folge dieser Diagnose, keine angeblich
+vorab eingefrorene Wahl. Sie ändert weder den acht-dimensionalen neuen
+Pilotraum noch seine Abnahme.
+
+Die sechs führenden Grade sind gerade 2,4,6,8,10,12 und ungerade
+3,5,7,9,11,13. Die wirksamen Kräfte sind jedoch Kombinationen ALLER
+191 alten Koordinaten. Die ersten sechs rohen Kräfte allein genügen nicht.
+Es wird keine Identität mit sechs kanonischen Eigenrichtungen behauptet.
+
+4. Exakte Blockidentität
+
+Zerlege die rationale Matrix als
+
+ Fbar = [ A6  K ; K*  D ],     D ist 185x185.
+
+Aus Fbar>0 folgt D>0 und S6=A6-K D^(-1)K*>0. Für beliebige alte
+Kraftvektoren v=(v_I,v_J) gilt exakt
+
+ v*Fbar^(-1)v
+ = (v_I-K D^(-1)v_J)* S6^(-1)(v_I-K D^(-1)v_J)
+   +v_J*D^(-1)v_J.
+
+Definiere T=[I_6,-K D^(-1)]. Alle sechs Kräfte Tv enthalten damit die
+vollständige Rückwirkung des Komplements. Auch ihre Off-Diagonalen in
+S6^(-1) bleiben erhalten.
+
+Die Rechnung beweist
+
+ D^(-1) <= 37.657961 I  (gerade),
+ D^(-1) <= 10.570238 I  (ungerade).
+
+Diese besseren Schranken stammen aus gewichteten Zeilensummen einer
+Inversen-Einschließung; sie werden anschließend unabhängig als
+D-(1/kappa)I>0 mit Ganzzahlarithmetik nachgewiesen.
+
+5. Unabhängige große Positivitätszertifikate
+
+Ein numerischer Hilfsschritt liefert rationale untere Dreiecksmatrizen X
+mit gemeinsamem Nenner 10^60. Der eigentliche Prüfer vertraut diesen
+Matrizen nicht. Er bildet X Fbar X* bzw. X(D-kappa^(-1)I)X* exakt mit
+Ganzzahlen und prüft die strikte diagonale Dominanz:
+
+ G_ii-sum_(j!=i)|G_ij| > 999/1000.
+
+Das beweist G>0. Daraus folgt bereits Rang X=n, also die Positivität der
+ursprünglichen Matrix durch Kongruenz. Die Zahl 999/1000 ist ein Boden
+der transformierten Zertifikatsmatrix, kein Boden von Fbar selbst.
+
+Auf diese Weise werden beide 191x191-Positivitätsaussagen und beide
+185x185-Komplement-Gaps ohne Intervallbibliothek erneut bestätigt.
+
+6. Vollständig rationale, direkt verwendbare obere Faktorform
+
+Damit spätere Rechnungen keine numerische 191x191-Inverse übernehmen
+müssen, erstellt der Fraction-Prüfer eine rationale Oberform.
+
+Sei T0=[I_6,T0_J] die rationale Mitte der berechneten T-Einschließung.
+Berechne exakt Res=T0_J D+K. Dann gilt
+
+ ||T0_J+K D^(-1)|| <= kappa ||Res||_F
+                          <= kappa sum_ij |Res_ij| = e_T.
+
+Setze S0=A6+sym(T0_J K*) und e_S=e_T sum_ij|K_ij|. Dann
+
+ Sminus=S0-e_S I <= S6.
+
+Sminus wird mit sechs exakten rationalen LDL-Pivots positiv geprüft;
+H0=Sminus^(-1) wird mit Fraction exakt berechnet. Für theta=10^-20
+gilt die gemeinsame Operatoroberform
+
+ F^(-1) <= T0* H T0 + kappa_final P_J,
+ H=(1+theta)H0,
+ kappa_final >= kappa+(1+1/theta)e_T^2 trace(H0).
+
+P_J ist die gewöhnliche Koordinatenprojektion auf die 185 alten
+Komplementkräfte. Die Korrektur stammt aus Young auf Tv=T0v+(T-T0)v
+und bezahlt die vollständige Transformationsrundung. Nach rationaler
+Außenrundung lautet das Ergebnis
+
+ kappa_final_even = 37.657962,
+ kappa_final_odd  = 10.570239.
+
+RATIONAL_MAJORANT.json enthält T0 und die volle rationale 6x6-Matrix H.
+Die Ableitung gilt für alle v und deshalb auch gleichzeitig für jede
+Anzahl von Quellspalten. Kein komponentenweiser Matrixvergleich wird
+als Loewner-Aussage ausgegeben.
+
+7. Zwei bereits abgeschlossene gemeinsame Fehlergram-Beiträge
+
+Seien l_R=||lambda|_R||_(W_X-dual) und q_core ein sicherer oberer Wert
+von ||Q_a^np m_core||. Aus dem gebundenen vollständigen Quelloperator
+
+ g_R r=Pi_a[G r-lambda(r)Q_a^np m_core/mu]
+
+folgt
+
+ g0=16/5+l_R q_core/mu >= ||g_R||,
+ h0=sqrt(1+e_m^2)g0 >= ||h_R||.
+
+Für q_core wird die konkrete Produktmajorante des Halbinversenpakets
+benutzt: Dort ist core_form_absolute_bound ausdrücklich als
+sqrt(2mu)[HG+18sqrt(2mu)] berechnet, wobei HG den L2-Operatorwert
+H_Gamma m_core begrenzt. Die Division dieser definierten Produktmajorante
+durch sqrt(2mu) liefert deshalb den benötigten Operatornormbound.
+Aus einer beliebigen bloßen Schranke für |q[m_core]| würde dieser
+Schluss nicht folgen.
+
+Für die 185 Komplementkräfte sei rho_J der Normquadratschätzer der
+alten niedrigen Synthese, aus den vollständigen Mellinkoeffizienten,
+
+ rho_J=1+sum_(n in J)|c_n|^2,
+ b_J^2 >= ||(H_B)_JJ|| >= ||B_J||^2.
+
+Die neue Rechnung verwendet sowohl Spur als auch sichere Zeilensummen
+von (H_B)_JJ und nimmt das kleinere gültige obere Ergebnis. Damit
+
+ v0_J=sqrt(rho_J)g0+(3/2)b_J h0 >= ||v_J||.
+
+Für die gemeinsame achtspaltige Fehlerabbildung Delta erhält man
+
+ (delta^(-1/2)h Delta)*(delta^(-1/2)h Delta)
+ <= (3/2)h0^2 epsilon^2 I_8,
+
+ kappa_final (v_J Delta)*(v_J Delta)
+ <= kappa_final v0_J^2 epsilon^2 I_8.
+
+Nach vollständiger rationaler Außenrundung:
+
+                                  gerade          ungerade
+alter hoher Fehlergram             0.000001416613  0.000001448457
+alter Komplement-Fehlergram         0.001037473064  0.000264261855
+gemeinsame Summe                    0.001038889677  0.000265710312
+
+Jede Tabellenzahl multipliziert I_8. Die gemeinsame Schrankenaussage
+gilt für jede Linearkombination der acht Spalten. Sie setzt weder
+Unabhängigkeit der Spaltenfehler noch Unabhängigkeit von h und v_J voraus.
+
+Dies sind ausschließlich FEHLERgram-Beiträge. Sie sind keine Schranke
+für die vollständigen Antworten an R_half oder Y. Insbesondere dürfen
+sie nicht ohne Kontrolle der Mittelpunkte und Kreuzterme zum schon
+berechneten 19I-Anteil addiert werden.
+
+8. Präzise verbleibende Aufgabe
+
+Der noch empfindliche alte Fehlerterm lautet jetzt explizit
+
+ (T0 v Delta)* H (T0 v Delta).
+
+Er betrifft sechs vollständig festgelegte Kraftfunktionale pro Parität;
+die anderen 185 alten Koordinaten sind für die Fehlerabschätzung bezahlt.
+Zusätzlich fehlen weiterhin
+
+ (C Delta)*M_-^(-1)(C Delta)
+
+für die vier Kopplungen sowie die entsprechenden Antwortwerte an den
+Mittelpunkten Y. Keine dieser fehlenden Größen wird hier mit null
+gleichgesetzt oder durch ein Ersatzexperiment als erledigt gewertet.
+
+Die nächsten eigentlichen Operatorintegrationen können nun unmittelbar
+an den sechs Zeilen von T0 v und den vier C-Funktionalen ansetzen. Die
+hohe alte Inversenspur muss dabei nicht auf den gesamten Fehlerraum
+angewandt werden. Die sechs gewichteten Kräfte können weiterhin sehr
+empfindlich sein; ihre tatsächliche Kleinheit ist nicht bewiesen.
+
+U00, G01, gamma01, beta_tail, eta und alpha bleiben offen.
+FULL_REMAINDER_CERTIFIED bleibt false.
+
+9. Provenienz und Grenzen
+
+Die neue endliche Rechnung wurde bei 1024 und 1536 Bit separat ausgeführt.
+Der zusätzliche Integer-/Fraction-Prüfer bestätigt die rationale
+Untermatrix, vier große Positivitätszertifikate, die rationale Oberform
+und die beiden gemeinsamen Fehlerbeiträge ohne python-flint.
+
+Die ursprünglichen Operator-/Formidentitäten, die Bedeutung der alten
+Low-/High-Koordinaten und die gebundenen Quellnorm-Majoranten bleiben
+analytische Eingaben. Es gab hier keine neue Operatorintegration und
+keine neue Horizontrechnung.
+
+Die übergebene Gegenprüfung von GPT 1 wurde unverändert aufbewahrt und
+als begrenzte KI-Gegenprüfung erfasst. Sie ist keine externe
+fachmathematische Begutachtung. Ihre fünf Archivbindungen wurden lokal
+erneut gegengeprüft. Verlorene Adjungiertzeichen in der Textdarstellung
+ihres Abschnitts 6 werden als Schreibfehler erläutert; der Originaltext
+wurde dafür nicht verändert.
+
+Die vollständige Objekt-X-Konstruktion bleibt das primäre offene Ziel.
+Ein möglicher RH-Anschluss bleibt nachgeordnet. GitHub/main und alle
+bisher versiegelten Archive bleiben unverändert.

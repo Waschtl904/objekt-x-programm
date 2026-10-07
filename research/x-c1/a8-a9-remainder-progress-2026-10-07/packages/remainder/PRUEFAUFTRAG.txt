@@ -1,0 +1,28 @@
+Bitte prüfe dieses begrenzte neue Paket ohne weitere Operatorintegration.
+
+Prüfe zuerst die SHA256SUMS-Datei und führe check_remainder.py aus.
+Unterscheide das Bestehen der endlichen Arithmetik von der Prüfung der
+analytischen Herleitung in BEWEIS.txt.
+
+Die wichtigsten neuen Fragen:
+1. Erfasst die explizite L2-minimale Schalenliftung Lambda in beiden
+   Paritäten den gesamten Quotienten der tatsächlichen Formabschlüsse?
+   Insbesondere: Ist die Kern-Schalen-Zerlegung in der Gamma-Graphnorm
+   durch den Carleman-Kreuzbound und das angegebene Dichteargument gedeckt?
+2. Sind die zwölf Bildintervalle wirklich disjunkt und ist daraus die
+   genaue Normidentität der sechs Primverschiebungen korrekt abgeleitet?
+3. Sind der alte Quelloperator g, der vollständige Schurrest S und die
+   vier Kopplungsfunktionale C auf den angegebenen Domänen wohldefiniert?
+4. Ist die positive kompakte Normprüfung (22)-(24) korrekt und frei von
+   einer vorausgesetzten neuen Gesamtpositivität? Wird klar unterschieden
+   zwischen der echten M-Inversen und der hinreichenden M_--Inversen?
+5. Stimmen Faktoren und Normen im zusätzlichen groben Tail-Lemma, besonders
+   die Spiegelung, die Momentkorrektur und die 200 Nebenbedingungen?
+
+Die vollständige Restnorm ist NICHT als <1 zertifiziert. Der sehr große
+Hilfsschnitt ist keine vorgeschlagene Millionenmatrix. Die bisherige
+Acht-Quellen-Aussage und deren geerbte Voraussetzungen bleiben bestehen.
+
+Bitte liefere bestätigte neue Aussagen, konkrete Einwände und ungeprüfte
+Eingaben getrennt. Eine weitere numerische Quellenfamilie oder ein neuer
+Horizont gehört nicht zu diesem Prüfauftrag.

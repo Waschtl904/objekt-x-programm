@@ -1,0 +1,28 @@
+Technische Kontrollen und Korrekturen
+
+Die erste Funktions-Gram-Auswertung verwendete für den Mellin-Träger
+kürzere, aus dem Matrixmodell stammende Intervalle. Die Einschließungen
+wurden dadurch unbrauchbar breit. Der endgültige Rechner baut diese
+Funktionskoeffizienten mit den analytischen hochpräzisen Momenten auf
+und verlangt eine maximale rohe Gram-Intervallbreite unter 1e-25.
+Die breiten vorläufigen Ergebnisse wurden nicht als Zertifikat benutzt.
+
+Bei Gamma-Ordnung 224 reichten die vorherigen Zwischenkoeffizienten
+für die mehrfachen Polynomumrechnungen nicht aus. Die gemischten
+Paarungen wurden von der Breitenkontrolle angehalten. Die endgültige
+Fassung berechnet neue Mellinmomente und Profile in der jeweiligen
+Arb-Präzision mit rigoroser Serientail-Einschließung und vergleicht
+die Koeffizienten zusätzlich mit der ursprünglichen Implementation.
+Die maximale gemischte Intervallbreite muss weiterhin unter 1e-40 liegen.
+
+Höhere Präzision erzeugt geringfügig andere nach außen gerundete
+Majoranten. Die Vergleichsprüfung unterscheidet deshalb tatsächliche
+Modellintegrale (Intervallüberlappung erforderlich) von solchen
+abgeleiteten Schranken (Abstand unter 1e-32 und separate exakte
+Schlussprüfung in beiden Läufen). Der größte beobachtete Abstand ist
+kleiner als 1,81e-38. Keine fehlgeschlagene Positivitätsprüfung wurde
+zu einer optionalen Prüfung erklärt.
+
+Die initialen Fehlversuche betreffen Darstellungsgenauigkeit und
+Schrankenstärke. Die akzeptierten Läufe enthalten vollständige
+Breiten-, Überlappungs-, Herkunfts- und Schlusskontrollen.

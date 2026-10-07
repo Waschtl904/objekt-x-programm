@@ -1,0 +1,15 @@
+{
+  "review_author_reported": "GPT 1",
+  "review_attachment_sha256": "791c3092a3482583bb257becf3db621bd72ddd66e8bf2c8045cc22f955f0eaf1",
+  "review_scope": "Bounded AI cross-check; no full integration replay and no external professional mathematical review.",
+  "archive_hashes_locally_rechecked": {
+    "Objekt-X-Restpilot-Halbinverse-2026-10-06.zip": "d5f5a0ab51652c41f9242e22aba3b9262ce76c660fda6460ac91f8b418176072",
+    "Objekt-X-Restpilot-Protokoll-2026-10-06.zip": "e0bd59bb06b35073c0b9fc0fcaf73570ddd5da6d5ab06140eb6573893433961d",
+    "Objekt-X-Rest-Domaene-Kompaktheit-2026-10-06.zip": "b090214efc386ec32806afb4bca4beb248964230a36bd8aa684914fff9c0cfd7",
+    "Objekt-X-A8-A9-Vollstaendiger-Rest-2026-10-05.zip": "a0609df80f20f57a95c5f787642b4078eedb5f44bb4383ecddc5a78e6d53c0ce",
+    "Objekt-X-A8-Acht-Quellen-2026-10-05.zip": "d1dbad67da8bfe13289fd33d35d821c4fa3a723b6083c1f89abd70d6dfb82cbe"
+  },
+  "typographical_note": "Section 6 loses adjoint markers in plain text; the dimensionally correct expressions are R_half*R_half and Y*Y, as in the source derivation.",
+  "original_review_preserved_verbatim": true,
+  "full_remainder_certified": false
+}

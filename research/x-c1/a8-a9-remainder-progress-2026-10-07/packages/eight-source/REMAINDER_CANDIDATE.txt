@@ -1,0 +1,76 @@
+Objekt X: Restfrage nach dem festen Acht-Quellen-Test
+5. Oktober 2026. Analytischer Arbeitskandidat, kein Restzertifikat.
+
+1. Was die vier Klassen je Parität tatsächlich aufspannen
+
+Die Quellen z_m sind die festgelegten momentkorrigierten Legendreprofile
+am neuen Horizont b. Ihre Klassen modulo dem nullfortgesetzten alten Raum
+J F_a sind linear unabhängig: Eine Linearkombination, die zu J F_a gehört,
+müsste auf dem offenen äußeren Intervall (a,b) verschwinden. Dort ist sie
+ein Polynom. Sie verschwindet deshalb identisch; die verschiedenen höchsten
+Grade 2,4,6,8 bzw. 3,5,7,9 erzwingen nacheinander alle Koeffizienten null.
+Diese Aussage benötigt keine Positivität der neuen Form.
+
+Der gesamte Quotient F_b / J F_a ist unendlichdimensional. Die vier Klassen
+erschöpfen ihn nicht. Die festgelegte Bezugsgrammatrix W=<z_i,z_j> misst
+die L2-Norm der gewählten Vertreter, nicht die minimale L2-Norm ihrer
+Quotientenklassen. Eine kleine relative Reserve bezüglich W kann deshalb
+auch mit einer fast vollständigen Kompensation im alten Raum zusammenhängen.
+
+2. Der nächste Rest muss mitsamt seinen Kreuztermen bezahlt werden
+
+Nach vollständiger alter Elimination bezeichne S die neue Schurform.
+Wähle im Quotienten den getesteten Raum V und einen Rest R. Die Wahl des
+Komplements, seine vollständige Erfassung und die Formdomänen müssen
+ausdrücklich begründet werden. Eine unabhängig positive Formraumnorm kann
+dazu benutzt werden; Positivität der zu untersuchenden Gesamtform ist
+keine zulässige Voraussetzung.
+
+In diesen Koordinaten lautet die Restform
+
+  S[(alpha,r)] = alpha* M alpha + 2 Re(alpha* C r) + T[r].
+
+M ist die tatsächliche 4x4-Schurmatrix des festen Tests. Für seine
+zertifizierte positive Untermatrix M_- genügt ein Nachweis
+
+  T[r] - (C r)* M_-^{-1} (C r) >= delta_R ||r||_R^2,  delta_R>0,
+
+für sämtliche r in der vollständigen Restdomäne. Denn M>=M_->0
+impliziert M^{-1}<=M_-^{-1}; die zweite quadratische Ergänzung schließt
+dann alle Kreuzkopplungen zwischen Test und Rest ein.
+
+Äquivalent kann man getrennt herleiten
+
+  T >= d W_R,
+  C* M_-^{-1} C <= theta d W_R,  0<=theta<1.
+
+Hier sind W_R und seine Norm unabhängig festzulegen. Ein bloßer positiver
+Tailboden ohne den Kreuzterm C genügt nicht. Wegen der kleinen Reserven
+sollte man die volle gemeinsame Matrix M_- benutzen; die Ersetzung durch
+eine einzige kleinste Eigenwertschranke kann unnötig viel verlieren.
+
+3. Welche Rechnung dieser Kandidat rechtfertigen würde
+
+Erst die vollständige Quotienten-/Restdarstellung legt die nötigen Daten
+fest: signunabhängige neue Restenergie, gemeinsame alte inverse Energie
+der Restquellen und ihre Korrelation mit den vier getesteten Klassen.
+Die Acht-Quellen-Rechnung liefert M_- und diagnostische Richtungen. Sie
+liefert weder T noch C auf dem unendlichen Rest.
+
+Eine Wiederholung an A9->A11 ist ein Test derselben lokalen Regel.
+Ein allgemeiner Fortsetzungssatz benötigt zusätzlich nachweisbare
+Voraussetzungen an weiteren Horizonten, eine tatsächlich unbeschränkte
+Horizontfolge, kompatible Readouts und die vollständige geeignete
+Testklasse mit exakter gemeinsamer Prim-/Gamma-Gramidentität.
+
+4. Grenzen der Interpretation
+
+Eine negative Untergrenze einer positiven Form ist kein negativer Zeuge.
+Ein wirklicher negativer Formwert auf einer zulässigen Quelle bleibt
+unter invertierbaren Koordinatenwechseln negativ. Das Entfernen dieser
+Quelle würde die Testklasse ändern und ist keine erlaubte Reparatur.
+Ein exakt semidefiniter Befund ist allein kein Widerspruch zur Objekt-X-
+Definition, die einen Kern zulässt; die derzeitige invertierbare
+Fortsetzungsformel müsste dann entsprechend erweitert werden.
+
+Externe analytische Prüfung offen. Keine neue Restkontrolle behauptet.

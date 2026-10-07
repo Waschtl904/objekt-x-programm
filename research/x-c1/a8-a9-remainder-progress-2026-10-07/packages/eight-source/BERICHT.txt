@@ -1,0 +1,134 @@
+Objekt X — Acht Quellen bei A8→A9 gemeinsam positiv angeschlossen
+5. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+ERGEBNIS
+
+Der feste Acht-Quellen-Test ist abgeschlossen. Gerade Grade 2,4,6,8 und
+ungerade Grade 3,5,7,9 besitzen nach vollständiger alter A8-Elimination
+gemeinsame positive 4×4-Schurreserven. Bezogen auf die vor der Rechnung
+festgelegte gewöhnliche L2-Grammatrix W der neuen Quellen gilt
+
+  S_even >= (4 / 10^12) W_even,
+  S_odd  >= (3 / 10^11) W_odd.
+
+Hier bedeutet S die tatsächliche Schurform nach Minimierung über den
+vollständigen alten A8-Formraum, einschließlich seiner unendlich vielen
+hohen Richtungen. Die Quellenfamilien bleiben genau die vorher benannten
+momentkorrigierten Legendreprofile. Alle Kreuzterme werden berücksichtigt.
+Die neue A9-Gesamtpositivität wird nicht vorausgesetzt.
+
+W ist die L2-Grammatrix der festen Vertreter, nicht die q-Grammatrix und
+nicht die L2-Quotientennorm nach alter Kompensation. In den normierten
+Legendrekoordinaten ist W = I + c c*, mit den neuen Mellin-Trägerkoeffizienten
+c. Diese Norm ist unabhängig von der Positivitätsfrage definiert.
+
+WAS GERECHNET UND GEPRÜFT WURDE
+
+- 191×4 neue Quellpaarungen je Parität, insgesamt 1.528 Einträge.
+- 191×4 vollständige gemischte B0 h0-Paarungen je Parität, nochmals
+  1.528 Einträge; keine hohe Abschneidung der Logarithmus- oder Shiftwirkung.
+- Acht rationale alte Galerkin-Näherungsantworten; 1.528 Koeffizienten
+  auf dem 100-Dezimalstellen-Gitter stimmen bei 3072 und 4096 Bit überein.
+- Vollständige Funktionsresiduen samt gemeinsamen 4×4-Grammen,
+  Mellinprojektion, logarithmischen Termen, partiellen Translationen
+  und bezahltem Gamma-/Potentialrest.
+- Je Parität 16 Gegenprüfungen der gemischten Paarungen über vollständige
+  alte/neue Funktionsgramme; zwei vollständige Gramaufbauten überlappen.
+- Die alten 191 positiven Schurpivots und die rückgeprüfte Näherungsinverse
+  werden mit dem vollständigen alten Kopplungsbudget verwendet.
+- Getrennte Untermatrix K_minus und Obermatrix Gamma_plus; der rationale
+  Prüfer bildet K_minus - Gamma_plus - eta W_upper selbst und bestätigt
+  in beiden Präzisionsläufen vier strikt positive LDL-Pivots je Parität.
+
+Die Integraleinschließungen beider Präzisionen überlappen. Die daraus
+abgeleiteten, separat gerundeten Schranken sind nicht alle bytegleich:
+ihr größter erfasster Abstand beträgt weniger als 1,81·10^-38. Beide
+Schlusszertifikate wurden deshalb zusätzlich einzeln exakt geprüft.
+Es handelt sich um einen separaten rationalen Prüfer innerhalb derselben
+Arbeit, nicht um eine externe mathematische Begutachtung.
+
+WARUM DER ERSTE VERSUCH OFFEN BLIEB
+
+Die zunächst unverändert übernommene Gamma-Ordnung 128 und Fehleraufteilung
+ergaben in beiden Paritäten keine positive 4×4-Untermatrix. Dies war kein
+negativer Richtungszeuge der tatsächlichen Form.
+
+Für die schwächste diagnostische gerade Richtung lag die zentrale
+Restform etwa bei 8,71·10^-12. Allein der betreffende gemeinsame
+Quellfehlerabzug lag bei 3,62·10^-9. Der Flaschenhals war damit konkret
+benannt. Auf derselben Familie wurde der neue Gamma-Anteil auf Ordnung
+224 erhöht; der Young-Parameter für die korrigierte Kraft wurde von
+10^-7 auf 10^-12 geändert. Die Formeln der alten Elimination, der hohe
+alte Boden 2/3, die Bezugsnorm und die Quellen blieben erhalten.
+
+Diese Nachschärfung wurde nach der ersten Diagnose, vor ihren neuen
+Ergebnissen, separat festgehalten. Es war kein von Anfang an erfolgreicher
+Lauf mit unveränderten numerischen Parametern. Der offene Ausgangslauf
+bleibt im Paket als baseline erhalten.
+
+INTERPRETATION
+
+Der Erfolg umfasst jetzt sämtliche Linearkombinationen der vier neuen
+Klassen je Parität, gemeinsam mit dem vollständigen alten Raum. Damit
+trägt die vorwärts gerichtete inverse Energieabschätzung eine größere
+Familie. Die kleinen normierten Reserven erlauben noch keine Aussage
+über eine stabile Fortsetzung auf beliebig viele Richtungen.
+
+Diagnostisch liegen die kleinsten verallgemeinerten Eigenwerte der
+zertifizierten Untermatrizen bei ungefähr 4,956·10^-12 und 3,095·10^-11.
+Diese Anzeigen sind keine Einschließungen der kleinsten Eigenwerte der
+tatsächlichen unbekannten Schurmatrix. Die rationalen Böden oben sind
+die verbindlichen Aussagen. Suchrichtungen werden rationalisiert und
+anschließend exakt in den gespeicherten Matrizen ausgewertet; eine
+rigorose Eigenvektorisolation wird nicht behauptet.
+
+Zusätzlich ist die gewöhnliche L2-Quotientennorm berechnet. Sie misst den
+nach beliebiger alter L2-Kompensation verbleibenden Quellenanteil. Diese
+Diagnose bestätigt eine starke Nähe gewisser Kombinationen zum alten
+Raum. Sie ersetzt weder die vorher festgelegte Bezugsnorm noch den
+fehlenden Formraum-/Restnachweis. Als zusätzliche, getrennt exakt geprüfte
+Aussage gilt auf derselben Acht-Quellen-Familie in beiden Paritäten
+
+  S >= 2·10^-6 W_Quotient.
+
+W_Quotient misst die gewöhnliche L2-Distanz zum alten momentbeschränkten
+Raum. Diese Zahl verwendet eine andere ausdrücklich benannte Norm und
+darf nicht mit den vorab festgelegten Böden vermischt werden. Sie wurde
+an beiden Präzisionsläufen mit exakten Brüchen bestätigt.
+
+NÄCHSTER KONKRETER SCHRITT
+
+Die lokale Abschätzungsregel ist jetzt explizit und auf der Acht-Quellen-
+Familie geprüft. Ein Rücktest bei A9→A11 kann dieselbe Regel verwenden,
+mit vorab gebundenen eigenen Eingaben und Fehlerschranken.
+
+Für die vollständige Fortsetzung ist die wichtigere analytische Aufgabe
+die Abdeckung des unendlichen neuen Quotientenrestes einschließlich
+seiner Kreuzkopplung mit dem getesteten Raum. Ein möglicher präziser Gate
+steht in REMAINDER_CANDIDATE.txt: T - C* M_minus^-1 C muss auf der ganzen
+Restdomäne kontrolliert werden. T, C, eine vollständige Restdarstellung
+und die nötigen Domänenaussagen sind durch dieses Paket nicht bewiesen.
+
+AUSSAGEGRENZEN UND HERKUNFT
+
+Übernommen werden die ursprünglichen analytischen Form-/Operatoridentitäten,
+die alte A8-Positivität, der alte hohe Boden 2/3 und die A8/A9-Modellbudgets.
+Die ursprünglichen großen Operatormatrizen werden nicht neu aufgebaut.
+Vom A9-Modell werden nur benötigte Formeinträge und vorzeichenunabhängige
+Restbudgets verwendet. Neue A9-Inversen, positive Projektoren oder auf
+neuer Positivität beruhende Cauchy-Schwarz-Schätzungen werden nicht benutzt.
+
+Die rationalen Vorschläge sind endliche Näherungsantworten. Ihre vollständigen
+Funktionsreste und inverse Energie sind eingeschlossen; die exakten
+unendlichen Variationsantworten werden nicht als Funktionen konstruiert.
+
+Die gesamte neue Quotientenfamilie, ein allgemeines Erneuerungsgesetz,
+kofinale Horizonte, die vollständige Testklasse und Objekt X bleiben offen.
+Das primäre Ziel bleibt die Konstruktion von Objekt X. Der mögliche
+RH-Anschluss ist eine nachgelagerte Frage.
+
+Ausgangspunkt: Main 040c1c2f75753d0daa680c55b14b88524955f851.
+Das ursprüngliche Vier-Quellen-Archiv bleibt bytegleich erhalten:
+SHA256 068d2cbf63732d318836dadb5bd86a61e81f74358398d9f4cdba3095f5353536.
+GitHub und der mathematische Registerstatus wurden durch diese neue
+lokale Untersuchung nicht geändert. Externe analytische Prüfung offen.

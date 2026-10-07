@@ -1,0 +1,68 @@
+Objekt X — eingefrorene Restpilot-Abnahme und geprüfte Raumgeometrie
+6. Oktober 2026
+
+Die Abnahme ist festgelegt. Der vollständige Operatorpilot wurde noch
+nicht ausgeführt. Berechnet ist die kleine Geometrieprüfung, die den
+acht-dimensionalen Raum pro Parität eindeutig und reproduzierbar festlegt.
+
+RAUM UND PROJEKTION
+
+Wir verwenden die lokalen Legendregrade 4 bis 11 auf der rechten Schale
+und projizieren sie W_X-orthogonal zum bisherigen Viererraum. Die acht
+Restfunktionen werden über ihre W_X-Grammatrix normiert. Dieselbe
+Definitionsregel gilt in beiden Paritäten; ihre Koeffizienten sind getrennt.
+
+Gerichtete Rechnungen mit 768 und 1024 Bit bestätigen:
+ - acht unabhängige Restfunktionen in beiden Paritäten;
+ - positive Gram-Untermatrizen;
+ - die definierenden Orthogonalitäts- und Projektionsidentitäten;
+ - Übereinstimmung der ursprünglichen Vierer-Quotientengrammatrix mit
+   dem bereits gebundenen Acht-Quellen-Paket.
+
+Ein eigener Prüfer mit exakten Brüchen kontrolliert die gespeicherten
+positiven Gram-Untermatrizen und den Vergleich beider Präzisionsläufe.
+Diese Prüfung betrifft die Geometrie. Sie zertifiziert noch keine
+Operatorenergie oder Restpositivität.
+
+ZWEI WICHTIGE PRÄZISIERUNGEN AN DER ABNAHME
+
+Erstens: Für den rechteckigen Kreuzblock B01 gibt es keine gewöhnliche
+Loewner-Obermatrix. Der Pilot liefert deshalb eine gemeinsame positive
+8x8-Matrix G01 >= B01 B01* und zusätzlich gamma01 >= ||B01||.
+Mit beta_tail >= ||B11|| ist die verbindliche Prüfung
+
+ beta_tail<1,
+ I8-U00-G01/(1-beta_tail) >= eta I8, eta>0.
+
+Zweitens: Der Operator B_R enthält P_R^(-1/2). Eine bloße Formmatrix auf
+den acht gewählten Polynomen wäre nicht der geforderte B00-Block.
+Die vollständige Halbinversenwirkung einschließlich ihrer Fehler gehört
+ausdrücklich zur Abnahme. P_R>=I macht dies nichtzirkulär, aber nicht
+automatisch numerisch erledigt.
+
+VOLLSTÄNDIGER SCHLUSS BEI ERFOLG
+
+Auch der Rückwechsel aus den Schurkoordinaten wird bezahlt. Eine sichere
+volle Reserve ist
+
+ alpha=min(eta,1-beta_tail)/(1+gamma01/(1-beta_tail))^2.
+
+Dann folgt ||B_R||<=1-alpha<1 auf dem ganzen Rest. Der Pilot muss diese
+Konsequenz und die dafür tatsächlich verwendeten Eingabehüllen ausweisen.
+
+WAS ALS NÄCHSTES ZU BERECHNEN IST
+
+Die acht normierten Halbinversenbilder P_R^(-1/2)e_j, die gemeinsame
+endliche Matrix U00, das Kreuzgramm G01 und die vollständige Tailnorm
+beta_tail fehlen noch. Das Protokoll enthält die genaue Definition und
+das Fehlerbuch, einschließlich der alten 191 Kräfte und aller vier f_j.
+Aus den vorhandenen Geometriematrizen darf kein Wert für diese Größen
+abgeleitet werden, ohne die angegebenen Operatorrechnungen auszuführen.
+
+Die große Operatorrechnung hat noch nicht begonnen. Die Raumgeometrie
+wurde erst nach Festlegung ihrer Definitionsregel geprüft. Die lokale
+Datei-/Hashbindung dokumentiert die verwendete Protokollfassung; sie
+ersetzt keinen unabhängigen historischen Zeitnachweis.
+
+Alle Vorgängerarchive bleiben unverändert. GitHub wurde nicht geändert.
+Die vollständige Restpositivität und Objekt X bleiben offen.

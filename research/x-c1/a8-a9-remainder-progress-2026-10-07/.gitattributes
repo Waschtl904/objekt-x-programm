@@ -1,0 +1,3 @@
+archives/** -text
+packages/** -text whitespace=cr-at-eol
+packages/**/*.json linguist-generated=true

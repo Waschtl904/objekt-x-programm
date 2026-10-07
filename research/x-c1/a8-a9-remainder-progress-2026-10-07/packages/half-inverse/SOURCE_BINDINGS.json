@@ -1,0 +1,16 @@
+{
+  "included_files": {
+    "inputs/DOMAIN_LEMMATA.txt": "844a6c9cc105632779c76c3f9dc336efa0558c7995565e3fa214dc4fcb9acf11",
+    "inputs/GEOMETRY_1024.json": "185b5b540e182dc58372199dc4d94ab26f5da6817145e991ca6b1acedf355373",
+    "inputs/PROTOCOL.json": "7572ce23726101c4c82c06a5381f2544d2c84c882b564046ff20b10c4b30407a",
+    "inputs/PROTOKOLL.txt": "cd5317cfc09039e3078d777e049d8f2e02a2bef116c6679656f30d80ef8ee440",
+    "inputs/REMAINDER_PROOF.txt": "80aceab1efff664a073d255d3f13377af45bcdd111b01898451ab872ef60c212"
+  },
+  "sealed_ancestor_archives": {
+    "Objekt-X-Restpilot-Protokoll-2026-10-06.zip": "e0bd59bb06b35073c0b9fc0fcaf73570ddd5da6d5ab06140eb6573893433961d",
+    "Objekt-X-Rest-Domaene-Kompaktheit-2026-10-06.zip": "b090214efc386ec32806afb4bca4beb248964230a36bd8aa684914fff9c0cfd7",
+    "Objekt-X-A8-A9-Vollstaendiger-Rest-2026-10-05.zip": "a0609df80f20f57a95c5f787642b4078eedb5f44bb4383ecddc5a78e6d53c0ce",
+    "Objekt-X-A8-Acht-Quellen-2026-10-05.zip": "d1dbad67da8bfe13289fd33d35d821c4fa3a723b6083c1f89abd70d6dfb82cbe"
+  },
+  "unchanged_frozen_protocol_sha256": "7572ce23726101c4c82c06a5381f2544d2c84c882b564046ff20b10c4b30407a"
+}

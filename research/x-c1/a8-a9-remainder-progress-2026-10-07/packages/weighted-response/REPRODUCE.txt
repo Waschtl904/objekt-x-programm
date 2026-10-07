@@ -1,0 +1,30 @@
+Reproduktion
+
+Der separate Prüfer benötigt nur Python 3.13/Standardbibliothek.
+Im entpackten Paketverzeichnis:
+
+  python -B check_weighted_response.py
+
+Er kontrolliert SHA256SUMS, Quellenbindungen, große Positivitäts-
+Kongruenzen, rationale Faktorform und gewichtete Fehlergrame. Seine
+beiden Ergebnisse müssen mit EXACT_CHECK.json und RATIONAL_MAJORANT.json
+übereinstimmen. Die großen Matrixprodukte werden exakt ausgeführt.
+
+Für neue numerische Läufe wurde python-flint 0.9.0 benutzt. PATH_TO_DEPS
+ist das Verzeichnis mit dieser Bibliothek; eine regulär installierte
+Bibliothek ist ebenfalls möglich.
+
+  python -B factor_old_response.py --bits 1024 --model inputs/a8_model.json.gz --half inputs/HALF_1536.json --deps PATH_TO_DEPS --out replay-1024.json
+  python -B factor_old_response.py --bits 1536 --model inputs/a8_model.json.gz --half inputs/HALF_1536.json --deps PATH_TO_DEPS --out replay-1536.json
+
+Optional neue rationale Hilfskongruenzen erzeugen:
+
+  python -B make_integer_certificates.py --source replay-1024.json --deps PATH_TO_DEPS --out replay-positive.json
+
+Ausgabedateien dürfen noch nicht existieren. Die numerischen Laufzeiten
+sind keine mathematischen Daten. Die Hilfskongruenzen werden erst durch
+die exakten ganzzahligen Produkte zu geprüften Zertifikaten.
+
+Der Prüfer überprüft die endliche rationale Rechnung unabhängig von
+python-flint. Er ersetzt keine fachmathematische Prüfung der geerbten
+analytischen Form-/Operatoridentitäten.

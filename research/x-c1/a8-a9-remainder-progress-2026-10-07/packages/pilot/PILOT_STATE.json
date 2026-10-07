@@ -1,0 +1,22 @@
+{
+  "status": "PROTOCOL_FROZEN_GEOMETRY_VERIFIED_OPERATOR_INPUTS_NOT_COMPUTED",
+  "protocol_sha256": "7572ce23726101c4c82c06a5381f2544d2c84c882b564046ff20b10c4b30407a",
+  "pilot_dimension_per_parity": 8,
+  "geometry_precisions": [
+    768,
+    1024
+  ],
+  "geometry_status": "PASS_EXACT_GEOMETRY_ONLY",
+  "operator_outputs": {
+    "U00": null,
+    "G01": null,
+    "gamma01": null,
+    "beta_tail": null,
+    "eta": null,
+    "alpha": null
+  },
+  "remaining_first_operator_obligation": "rigorous P_R^(-1/2) actions on the fixed W_X-orthonormal basis",
+  "operator_pilot_started": false,
+  "full_remainder_certified": false,
+  "github_changed": false
+}

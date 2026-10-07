@@ -1,0 +1,144 @@
+Objekt X — begrenzte Gegenprüfung der Halbinversenstufe
+
+Oktober 2026 · Gegenprüfung durch GPT 1 · keine externe fachmathematische Begutachtung.
+
+Ergebnis
+
+Die Halbinversenstufe des eingefrorenen A8→A9-Restpiloten ist innerhalb der gebundenen Voraussetzungen konsistent. Es wurde kein neuer Operatorintegrationslauf durchgeführt. Der kleine exakte Prüfer wurde erneut ausgeführt; Manifest, Quellenbindungen und die vier in SOURCE_BINDINGS genannten Vorgängerarchive wurden gegen die im Gespräch vorhandenen Originaldateien geprüft.
+
+Bestätigt sind insbesondere:
+
+16 eingeschlossene Halbinversenbilder, acht je Parität;
+
+der gemeinsame Operatorfehler von C^8 in den vollständigen Rest mit W_X-Norm;
+
+der stärkere vollständige Boden P_R >= 20 I;
+
+die rationale Loewner-Obermatrix des 19I-Anteils von B00;
+
+die Konsistenz der 1024- und 1536-Bit-Läufe in den vom Prüfer verlangten Intervallfeldern;
+
+die korrekte Trennung von berechneten und weiterhin offenen Operatorblöcken.
+
+Nicht bestätigt wird dadurch der vollständige B00-Block oder ||B_R||<1.
+
+Quellen- und Hashprüfung
+
+Neues Paket:
+
+d5f5a0ab51652c41f9242e22aba3b9262ce76c660fda6460ac91f8b418176072
+
+Die vier in SOURCE_BINDINGS genannten Vorgängerarchive stimmen mit den im Gespräch vorhandenen Originaldateien überein:
+
+Restpilot-Protokoll: e0bd59bb06b35073c0b9fc0fcaf73570ddd5da6d5ab06140eb6573893433961d
+
+Domäne/Kompaktheit: b090214efc386ec32806afb4bca4beb248964230a36bd8aa684914fff9c0cfd7
+
+vollständiger Rest: a0609df80f20f57a95c5f787642b4078eedb5f44bb4383ecddc5a78e6d53c0ce
+
+Acht-Quellen-Paket: d1dbad67da8bfe13289fd33d35d821c4fa3a723b6083c1f89abd70d6dfb82cbe
+
+sha256sum -c SHA256SUMS besteht vollständig. python -B check_half_inverse.py reproduziert den gespeicherten rationalen Audit.
+
+Analytische Prüfung
+
+1. Hilfsraum und Normierung
+
+Die lokale Legendrebasis ist für X=L2((a,b),2dx) richtig normiert. Die W_X-Matrix ist ein positiver Rang-eins-Zusatz. Zuerst wird der alte Viererraum W_X-orthonormalisiert und danach dessen W_X-orthogonales Komplement der Grade 4,...,95. Die resultierende Q-Spalte ist eine W_X-Isometrie; die ersten acht Spalten stimmen mit dem eingefrorenen Pilotraum überein.
+
+2. Vollständiger Boden P_R >= 20 I
+
+Die neue Unterabschätzung behält D_H und V_log nur positiv bei bzw. lässt sie fallen und bezahlt separat die beiden regulären Gamma-Kerne sowie die Momentkorrektur. Der positive 19-W_X-Rang-eins-Anteil wird in der unteren Schranke nicht unnötig als Fehler abgezogen. Die daraus gespeicherten unteren Werte sind
+
+gerade: ungefähr 20.109368970300316,
+
+ungerade: ungefähr 20.109355567079362.
+
+Damit ist der verwendete exakte Boden 20 in beiden Paritäten sicher.
+
+Diese Prüfung setzt die gebundene lokale Nichtpolformel T0=D_H+V_log+c0I und die angegebenen Kernel-/Core-Majoranten voraus; diese arithmetisch-analytische Ausgangsidentität wurde nicht von Grund auf neu aufgebaut.
+
+3. Vollständiges Operatorresiduum
+
+Die Identität für P_R Q-QA ist korrekt. Weil Z=(J,Q) W_X-orthonormal ist und der Q-Block von Z^*_{X}T0Q gleich A ist, kann der zusätzliche J-Anteil durch die W_X-Orthogonalität entfernt werden; der verbleibende Unterschied zwischen X- und W_X-Paarung wird durch den expliziten lambda-Metrikterm bezahlt.
+
+Der Gram G_F verwendet exakte vollständige V_log- und V_log^2-Momente. Die verwendeten Formeln wurden separat gegen direkte hochpräzise Integrale kontrolliert. Dadurch werden die ausgelassenen Legendregrade der logarithmischen Wirkung nicht abgeschnitten.
+
+4. Resolventenintegral
+
+Für P>=mI und A>=a0I gilt die verwendete Resolventenidentität
+
+(P+t^2)^(-1)QE-Q(A+t^2)^(-1)E
+= -(P+t^2)^(-1)(PQ-QA)(A+t^2)^(-1)E.
+
+Die Panelvariation wird in Operatornorm mit der Resolventenidentität bezahlt. Das Gewicht int dt/(m+t^2) wird exakt durch arctan eingeschlossen. Der Rest ab T=128 wird durch die sichere t^-4-Majorante zu (2/pi) r0/(3T^3) begrenzt. Der beschränkte Restoperator wird analytisch über das exakte Integral von 1/[(m+t^2)(a0+t^2)] bezahlt.
+
+Die endliche Mitte QA^(-1/2)E wird durch eine normkonvergente Binomialreihe erzeugt; der Serienrest und die rationale Koeffizientenrundung werden additiv in Operator/Frobeniusnorm eingeschlossen.
+
+5. Gemeinsamer Acht-Spalten-Fehler
+
+Die resultierende Schranke ist eine echte Operatornormschranke
+
+||R_half-Y||_{C^8 -> (R,W_X)} <= epsilon,
+
+also gemeinsam für alle Linearkombinationen der acht Spalten. Es wird nicht angenommen, die Spaltenfehler seien unabhängig.
+
+Rational nach außen:
+
+gerade epsilon <= 0.000303687347,
+
+ungerade epsilon <= 0.000307046420.
+
+Der Fehler wird zu etwa 94 Prozent durch den eigentlichen logarithmischen Residualintegralterm bestimmt. Mehr Rechenpräzision allein kann diesen Anteil daher nicht wesentlich verkleinern.
+
+6. 19I-Anteil von B00
+
+Aus R_half=Y+Delta und Delta*Delta <= epsilon^2 I folgt per Young korrekt
+
+19 R_halfR_half <= 19[(1+t)YY+(1+1/t)epsilon^2 I].
+
+Der separate Fraction-Prüfer rekonstruiert diese 8x8-Matrizen exakt. Sichere Operatornormobergrenzen sind
+
+gerade: 0.8650652826430463...,
+
+ungerade: 0.8657324171363296....
+
+I-U_19 ist in beiden Fällen strikt positiv.
+
+Diese Zahlen sind Obergrenzen des 19I-Anteils, keine gemessene tatsächliche Auslastung des Gesamtbudgets.
+
+Konkrete Einwände und Grenzen
+
+Es wurde kein Fehler gefunden, der die Halbinversen-Einschließung entkräftet. Die folgenden Punkte bleiben jedoch ausdrücklich offen:
+
+Die alte inverse Antwort g_R^*A^-1g_R ist noch nicht in U00 eingeschlossen.
+
+Die vier C-Kopplungen C^*M_-^-1C sind noch nicht in U00 eingeschlossen.
+
+Die gemeinsame W_X-Fehlerkugel epsilon darf für diese beiden empfindlichen Terme nicht pauschal mit trace(F^-1) oder einer ähnlich globalen Inversennorm multipliziert werden. Das wäre korrekt, aber praktisch unbrauchbar und würde die Reserve zerstören.
+
+G01, gamma01 und beta_tail sind weiterhin unberechnet.
+
+Die ursprüngliche lokale Nichtpolformidentität, die Core/Shell-Kernelmajoranten und die bereits gebundenen alten Operatorabschätzungen bleiben Voraussetzungen; sie wurden in diesem Durchgang nicht neu integriert.
+
+Die beiden Präzisionsläufe verwenden denselben Algorithmus. Ihre Übereinstimmung ist eine Reproduktions-/Stabilitätskontrolle, keine unabhängige analytische Neuimplementierung.
+
+Nächster mathematisch richtige Schritt
+
+Für Delta=R_half-Y sind nicht nur ||Delta||, sondern die drei gewichteten gemeinsamen Fehlergrame zu bestimmen:
+
+delta^(-1/2) h Delta,
+
+F^(-1/2) v Delta,
+
+M_-^(-1/2) C Delta.
+
+Dabei müssen ihre Off-Diagonalen und gemeinsame Abhängigkeiten erhalten bleiben. Erst daraus kann der vollständige U00-Block rigoros und ausreichend scharf gebaut werden. Ein bloß kleineres ungewichtetes epsilon oder eine größere Hilfsdimension ersetzt diese Rechnung nicht.
+
+Erst wenn U00 steht, ist es sinnvoll, den eingefrorenen Gate mit G01 und beta_tail weiterzuführen.
+
+Status
+
+HALF_INVERSE_STAGE_CONFIRMED_WITHIN_BOUND_INPUTS
+
+Nicht behauptet werden FULL_REMAINDER_CERTIFIED, ||B_R||<1, A9-Gesamtpositivität, allgemeines Renewal oder Objekt X.

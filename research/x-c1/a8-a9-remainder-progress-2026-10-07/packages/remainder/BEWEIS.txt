@@ -1,0 +1,423 @@
+Objekt X: vollständige Schalenkoordinaten und Restprüfung A8 -> A9
+5. Oktober 2026. AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN.
+
+Ergebnisart: analytische Herleitung mit exakt geprüften geometrischen
+Konstanten. Kein Zertifikat für die Positivität des ganzen Restes.
+Die ursprünglichen arithmetischen Formidentitäten werden übernommen.
+
+0. Eingaben, Konventionen und Aussagegrenzen
+
+Es seien a=3 log(2)/2, b=log(3), h=b-a. Der bereits gebundene vollständige
+alte Formraum trägt q_a >= c_a I mit c_a=12/10^30. Dieser winzige Boden
+wird unten für Existenz, Stetigkeit und Kompaktheit verwendet, nicht als
+brauchbare numerische Abschätzung der inversen Energie.
+
+Die alte 191-plus-hoch-Darstellung besitzt den hohen Boden delta=2/3
+und eine positive endliche Schuruntermatrix F. Das abgeschlossene
+Acht-Quellen-Paket liefert je Parität eine positive 4x4-Untermatrix
+M_- <= M für den nach alter Elimination verbleibenden Quellenblock.
+M_- ist die aus K_lower und Gamma_upper rational gebildete Untermatrix.
+Es wird keine positive neue Gesamtform oder neue Gesamtinverse benutzt.
+
+Alle physikalischen Skalarprodukte sind gewöhnliche L2(dx)-Produkte,
+antilinear im ersten Argument. Für Parität p ist m(x)=cosh(x/2) bei p=0
+und m(x)=sinh(x/2) bei p=1. Die beiden Mellinbedingungen reduzieren sich
+dann auf genau <m,u>=0. Auf einem festen kompakten Träger sind die
+Momente L2-stetig.
+
+Die übernommene Nichtpolform auf nullfortgesetzten Funktionen ist
+
+ q[f] = E[f] - kappa ||f||^2 - <f, S_prime f>,
+ E[f] = integral_0^infty k(t)||tau_t f-f||^2 dt,
+ k(t)=exp(-t/2)/(1-exp(-2t)),
+ kappa=log(8 pi)+gamma+pi/2.
+
+Auf dem Momentkern ist dies die untersuchte vollständige Form. Auf
+Einzelstücken ohne Nullmoment wird ausdrücklich die Nichtpolform benutzt.
+Es wird nicht behauptet, diese Einzelstücke seien zulässige Weilquellen.
+
+Die aktive Primmenge bei b ist {2,3,4,5,7,8}. Für q=p^j ist
+w_q=log(p)/sqrt(q). Das Symbol p für Parität und die Primzahl in dieser
+Gewichtsformel sind getrennt zu lesen. Kanal 9 hat nur Randkontakt und
+keinen L2-Beitrag. Aus den gebundenen A9-Identitäten gilt
+0 < k(t)-1/(2t) <= 1/4 für 0<t<=2b, gamma<5773/10000.
+
+Quellen der übernommenen Aussagen und unveränderte Texte liegen unter
+inputs/ und sind in SOURCE_BINDINGS.json sowie SHA256SUMS gebunden.
+Historische Konstanten, die nur nahe log(5)/2 galten, werden nicht auf
+diesen größeren Schritt übertragen.
+
+1. Der gesamte Quotient hat eindeutige Schalenkoordinaten
+
+Schreibe X=L2((a,b),2 dx). Für s in X sei Sigma_p s die Funktion s auf
+der rechten Schale, (-1)^p s(-x) auf der linken Schale und null im Kern.
+Setze
+
+ mu = integral_0^a m(x)^2 dx > 0,
+ lambda(s) = integral_a^b m(x)s(x) dx,
+ Lambda s = Sigma_p s - lambda(s)/mu * m 1_{(-a,a)}.
+                                                        (1)
+
+Lambda s hat genau das verlangte Nullmoment. Für K_a, den vollständigen
+alten L2-Momentkern in dieser Parität, und J=physische Nullfortsetzung ist
+
+ Phi: K_a direct-sum X -> K_b,  Phi(w,s)=Jw+Lambda s        (2)
+
+eine Bijektion. Der inverse Ausdruck ist explizit:
+
+ s=u|_(a,b),   w=u|_(-a,a)+lambda(s)m/mu.                  (3)
+
+Denn das Kernmoment von u ist wegen des globalen Nullmoments das Negative
+des Schalenmoments. Daher liegt w in K_a. Umgekehrt bestimmen die äußere
+Restriktion und danach der Kern jedes Paar eindeutig. Es gibt keine
+doppelte Randkoordinate und keinen zusätzlichen Momentzwang.
+
+Die beiden Summanden in (2) sind L2-orthogonal. Exakt gilt
+
+ ||Phi(w,s)||^2 = ||w||^2 + W_X[s],
+ W_X[s] := ||Lambda s||^2
+         = 2 integral_a^b |s|^2 + 2|lambda(s)|^2/mu.       (4)
+
+W_X ist eine unabhängig positive Norm. Mit
+nu=integral_a^b m(x)^2 dx folgt
+
+ ||s||_X^2 <= W_X[s] <= (1+nu/mu)||s||_X^2.              (5)
+
+Damit ist (2) auch eine Hilbertraumisomorphie. Insbesondere ist
+
+ dist_L2(u,J K_a)^2 = W_X[s].                            (6)
+
+Diese Norm ist genau die bereits separat berechnete L2-Quotientennorm.
+Sie ersetzt nicht die im Acht-Quellen-Versuch vorab festgelegte Norm
+der vollständigen Quellenvertreter.
+
+2. Warum die Koordinaten die vollständige Formdomäne erfassen
+
+Sei G die geschlossene Gamma-Formdomäne E+||.||^2 auf der Geraden.
+Der Abschluss der tatsächlichen H1_0-Momentquellen auf [-t,t] ist
+
+ F_t={u in G: supp(u) subset [-t,t], <m,u>=0}.             (7)
+
+Die im A8-Beweis ausgeführte Dichteargumentation gilt auch bei t=b:
+leicht nach innen dilatieren, den kleinen Momentfehler mit einer festen
+glatten inneren Funktion korrigieren, anschließend mit einem kleinen
+geraden Mollifier falten. Die Fourier-Gamma-Norm kontrolliert nahe
+Identitätsdilatationen gleichmäßig; Faltung erhält die Nullmomente.
+Hier wird nur ein anderer endlicher Träger gewählt. Kein positives q_b
+und kein numerischer A9-Endpunktboden geht in diese Dichteaussage ein.
+
+Definiere die volle Schalendomäne durch
+
+ D_X={s in X: Sigma_p s in G}.                            (8)
+
+Das ist keine H1-Domäne. Insbesondere sind Sprünge an a und b zulässig,
+soweit ihre Gamma-Energie endlich ist. Sie sind bei stückweise glatten
+Funktionen endlich. Randrampen approximieren solche Stücke in der
+Formnorm: für den Rampenfehler r_eta gilt
+||tau_t r_eta-r_eta||^2 <= C min(t,eta), also
+E[r_eta]=O(eta(1+|log eta|)) -> 0.
+
+Der Kern-Schalen-Kreuzoperator der Gamma-Form ist L2-beschränkt. Auf den
+positiven Halbintervallen hat sein Kern bis auf das Vorzeichen die Form
+
+ k(y-x)+(-1)^p k(y+x),  0<x<a<y<b.
+
+Der singuläre Teil 1/(2(y-x)) ist nach u=a-x,v=y-a ein abgeschnittener
+Carleman-Kern 1/(2(u+v)). Sein gewichteter Schurtest mit Gewicht u^(-1/2)
+hat Konstante pi/2, denn
+integral_0^infty v^(-1/2)/(u+v) dv = pi u^(-1/2).
+Der Rest ist beschränkt; alle Primverschiebungen sind ebenfalls
+L2-beschränkt. Der Kern-Schalen-Kreuzterm ist daher durch C||f||||s||
+kontrolliert.
+
+Dies begründet die Zerlegung der vollständigen Formdomäne, nicht nur die
+Zerlegung glatter Testfunktionen: Auf separaten Kern-/Schalenstücken
+unterscheiden sich die Summe der positiven Gamma-Graphnormen und die
+Graphnorm ihrer Summe nur um diesen L2-beschränkten Kreuzterm. Nach einem
+genügend großen positiven L2-Zuschlag sind die Normen äquivalent. Das Bild
+des Produktes der abgeschlossenen Stückdomänen ist deshalb formabgeschlossen.
+Es enthält jede glatte Gesamtquelle: ihre eingeschränkten Stücke sind
+stückweise glatt und durch die eben beschriebenen Randrampen approximierbar.
+Da diese Gesamtquellen formdicht sind, ist das Bild die gesamte Domäne.
+
+Das feste Kernstück m 1_{(-a,a)} hat endliche Formenergie. Die Momentkorrektur
+in (1) ist ein formbeschränkter Rang-eins-Operator. Also gilt exakt
+
+ Phi: F_a direct-sum D_X -> F_b                          (9)
+
+als topologische Isomorphie der Formräume, mit geeigneten positiven
+Graphnormen. Diese Aussage enthält beide Paritäten und den ganzen neuen
+Quotienten. Für ursprüngliche H1_0-Quellen gelten zusätzlich die üblichen
+gekoppelten Randspuren; diese werden nicht als Bedingungen an alle
+Vektoren des Formabschlusses eingeführt.
+
+3. Exakte Geometrie der sechs Primverschiebungen
+
+Für eine reine Schalenfunktion Sigma_p s ist jede nach außen gerichtete
+Primverschiebung außerhalb [-b,b], weil h<log2. Die nach innen verschobene
+rechte Schale liegt auf
+
+ I_q=(a-log q,b-log q), q=2,3,4,5,7,8,                   (10)
+
+die linke auf -I_q. Alle zwölf offenen Intervalle liegen in (-a,a).
+Sie sind paarweise disjunkt. Drei mögliche Endpunktkontakte sind harmlos:
+q=2 und q=4 treffen wegen 2a=3log2; die beiden q=3-Stücke treffen bei 0,
+weil b=log3. check_remainder.py prüft alle anderen Abstände durch nach
+außen eingeschlossene Logarithmen; identische symbolische Endpunkte
+werden exakt, nicht numerisch, als Kontakte erkannt.
+
+Die Bilder sind deshalb L2-orthogonal. Für den auf den Kern projizierten
+Primoperator gilt auf der gesamten Schalenfamilie exakt
+
+ ||1_core S_prime Sigma_p s||^2
+   = omega_2 ||Sigma_p s||^2,
+ omega_2=(log2)^2(1/2+1/4+1/8)+(log3)^2/3
+          +(log5)^2/5+(log7)^2/7
+   in [1.881708830273401272695514,
+       1.881708830273401272695515].                       (11)
+
+Insbesondere ist seine Norm <11/8. Auch
+<Sigma_p s,S_prime Sigma_p s>=0. Dies gilt wegen der besonderen
+Endpunktgeometrie bei A8 -> A9, nicht automatisch an späteren Horizonten.
+Für Lambda s enthält die Kernkorrektur weitere Rang-eins-Terme; (11)
+darf nicht unverändert als Aussage über Lambda eingesetzt werden.
+
+4. Quantitative, vorzeichenunabhängige Kern-Schalen-Schranke
+
+Aus 0<k_reg<=1/4 und y+x>=a folgt für den Gamma-Kreuzoperator G_Gamma
+
+ ||G_Gamma|| <= pi/2+(1/(2a)+1/2)sqrt(a h) <73/40.        (12)
+
+Beide Halbintervallnormen besitzen denselben Faktor 2, daher entsteht
+keine weitere Paritäts- oder Spiegelungskonstante. Für die letzte strenge
+Ungleichung genügen a>1, a<21/20, h<3/50, pi<22/7 und
+sqrt(63/1000)<251/1000. Zusammen mit (11) erhält man für den gesamten
+Nichtpol-Kreuzoperator G von der reinen Schale in den Kern
+
+ ||G|| < 73/40+11/8 = 16/5.                              (13)
+
+Der Skalarterm -kappa I trägt bei disjunkten Trägern nicht bei.
+
+Das feste m_core=m 1_core gehört auch zur Operatordomäne der unbeschränkten
+Nichtpolform auf dem Kern. Auf den einzelnen glatten Stücken ist der
+singuläre Differenzenquotient integrierbar; die endlichen Sprünge erzeugen
+nur logarithmische Randsingularitäten. Diese sind L2-integrierbar. Die
+regulären Kerne und Verschiebungen sind beschränkt.
+
+Mit Pi_a als gewöhnlicher L2-Projektion auf K_a ist damit der vollständige
+alte Quelloperator für beliebige s explizit
+
+ g_s = Pi_a(Gs-lambda(s) Q_a^np m_core/mu),
+ q_b(Jw,Lambda s)=<w,g_s>.                               (14)
+
+Er ist L2-beschränkt. Die Schranke 16/5 gilt für G; für g kommt der in (14)
+ausgeschriebene Rang-eins-Term hinzu. Keine kleine Norm dieses Zusatzes
+wird behauptet oder stillschweigend weggelassen.
+
+5. Die vollständige alte Elimination existiert auf jedem Quotientenvektor
+
+Sei A der positive selbstadjungierte Operator der alten geschlossenen
+Form auf K_a. Aus dem geerbten c_a>0 folgt A^-1 beschränkt. Für jedes
+s in D_X existiert die eindeutige alte Variationsantwort -A^-1 g_s.
+Quadratische Ergänzung ergibt
+
+ S[s,t]=q_b(Lambda s,Lambda t)-<g_s,A^-1 g_t>,             (15)
+ inf_(w in F_a) q_b(Jw+Lambda s)=S[s].                    (16)
+
+Der zweite Term ist ein beschränkter nichtnegativer Operator auf (X,W_X).
+S ist somit eine geschlossene unterbeschränkte Form auf D_X. Diese
+Existenzbehauptung verwendet alte Positivität; sie enthält keine neue.
+
+Die Form S hat kompakte Resolvente. Zur Begründung reicht die lokale
+Legendre-Diagonale auf dem rechten Intervall: ihre Eigengewichte H_n gehen
+gegen unendlich. Der nichtnegative Randpotentialanteil kann erhalten
+werden; die regulären Kernel- und gegenüberliegenden Schalenkopplungen
+sind beschränkt. Die Momentkorrektur ist endlichdimensional. Somit ist
+die Schalendomäne mit ihrer positiven Graphnorm kompakt in X eingebettet.
+L2-beschränkte Störungen, insbesondere der alte Inversenabzug, ändern
+diese Eigenschaft nicht. Es gibt folglich nur endlich viele nichtpositive
+Eigenwerte, aber hieraus folgt weder ihre Anzahl noch ihr Vorzeichen.
+
+6. Die vier geprüften Klassen und ihr vollständiger Rest
+
+Seien z_j die vier bisher festgelegten physikalisch normierten Quellen
+einer Parität und sigma_j=z_j|_(a,b). Sie sind linear unabhängig: eine
+auf der offenen Schale verschwindende entsprechende Polynomkombination
+verschwindet identisch; ihre verschiedenen höchsten Grade erzwingen
+verschwindende Koeffizienten. Setze V=span{sigma_1,...,sigma_4}.
+
+Definiere den Rest ohne Bezug auf q_b-Positivität durch
+
+ R=V^(perp W_X),    D_R=R intersect D_X.                 (17)
+
+Ist W_Q=(<Lambda sigma_i,Lambda sigma_j>), so lautet die Projektion
+alpha=W_Q^-1(<Lambda sigma_i,Lambda s>)_i, r=s-sum alpha_j sigma_j.
+Sie ist L2- und formbeschränkt, denn alle vier sigma_j liegen in D_X.
+Damit gilt topologisch und ohne Quellenverlust
+
+ D_X=V direct-sum D_R.                                  (18)
+
+Die bereits geprüfte Matrix M ist genau S auf V: ein Wechsel eines
+Quellenvertreters um eine alte Formquelle ändert die minimierte Energie
+nicht. Deshalb gilt die vorhandene volle Untermatrix M_- auch hier.
+Die im früheren Experiment festgelegte primäre Gramnorm bleibt dabei
+unverändert; W_Q wird nur für die explizite Wahl des Komplements benutzt.
+
+Setze
+
+ T[r]=S[r],   (C r)_j=S[sigma_j,r].
+
+Dann ist auf sämtlichen Quellen exakt
+
+ S[V alpha+r]=alpha* M alpha+2 Re(alpha* C r)+T[r].        (19)
+
+C:R->C^4 ist L2-beschränkt. Denn Q_b^np Lambda sigma_j hat nur
+logarithmische Randsingularitäten und liegt in L2; der zweite Term in
+(15) ist L2-beschränkt. Somit ist die Form
+
+ U_-[r]=T[r]-(Cr)*M_-^-1(Cr)                             (20)
+
+geschlossen, unterbeschränkt und hat kompakte Resolvente. Ihre
+Nichtnegativität ist hinreichend für die gesamte neue Positivität.
+Mit der tatsächlichen Matrix M statt M_- wäre sie äquivalent. Eine
+negative Unterabschätzung U_- wäre kein negativer Zeuge der echten Form.
+
+7. Ein vollständiges, nichtzirkuläres Operatorziel für die Restprüfung
+
+Es gilt kappa<6 und alle sechs Gewichte w_q<1. Da ||T_d||<=2,
+q_b^np >= -18 I. Definiere auf R die positive geschlossene Form
+
+ P_R[r]=q_b(Lambda r)+19 W_X[r] >= W_X[r].                (21)
+
+Sie hat kompakte Resolvente und benötigt keine neue Gesamtpositivität.
+Bezeichne auch den zugehörigen Operator im Hilbertraum (R,W_X) mit P_R.
+Schreibe g_R für (14) eingeschränkt auf R. Die kompakte positive Matrix-
+bzw. Operatorprüfung lautet nun
+
+ B_R=P_R^(-1/2) [19 I+g_R* A^-1 g_R+C* M_-^-1 C]
+                  P_R^(-1/2).                           (22)
+
+Die eckige Klammer ist ein beschränkter positiver Operator. Die
+Halbinverse von P_R ist kompakt, also auch B_R. Exakt gilt
+
+ U_-[r]=||P_R^(1/2)r||^2
+        -<P_R^(1/2)r,B_R P_R^(1/2)r>.                    (23)
+
+Daher genügt
+
+ ||B_R|| <= theta < 1; dann U_- >= (1-theta) W_X.         (24)
+
+Der Grenzfall ||B_R||<=1 erlaubt einen Kern und darf nicht durch die
+Objekt-X-Definition ausgeschlossen werden. Ein Scheitern der Schranke
+mit M_- entscheidet nicht automatisch das Vorzeichen beim echten M.
+
+(22) ist ein vollständig bestimmter Operator auf einem vollständig
+bestimmten Raum. Seine Norm ist hier noch nicht numerisch eingeschlossen.
+Kompaktheit rechtfertigt endliche Approximationen mit verschwindendem
+Operatornormrest, liefert aber allein keine nutzbare Restkonstante.
+
+Der alte Inversenanteil soll dabei in seiner gemeinsamen Struktur bleiben.
+In den alten 191-plus-hoch-Koordinaten schreibe die Quelle als (c(r),h(r)),
+und setze v(r)=c(r)-delta^-1 B h(r), delta=2/3. Die gebundene alte
+Inversenergieabschätzung gilt als Operatorungleichung für alle r:
+
+ g_R* A^-1 g_R <= delta^-1 h* h+v* F^-1 v.               (25)
+
+Der gefährliche niedrige Anteil ist damit eine gemeinsame Rang-höchstens-
+191-Form, kein unbekannter skalarer Verlust auf jeder neuen Richtung.
+Ein endlicher Teilraumcheck von (25) ersetzt keine Normschranke auf R.
+Ebenso muss C aus (15) samt altem Antwortterm behandelt werden.
+
+8. Was die verfügbaren groben Konstanten tatsächlich leisten
+
+Eine reine Schalenfunktion besitzt keinen Prim-Selbstterm (Abschnitt 3).
+Auf dem rechten Intervall mit Halbbreite h/2 gibt die Nichtpolidentität
+die harmonische Diagonale und den Skalarterm -log(pi h)-gamma. Der
+reguläre Selbstkernel kostet höchstens h/4. Die gegenüberliegende Schale
+kostet höchstens h k(2a) <= h(1/(4a)+1/4).
+
+Falls s auf (a,b) zu den ersten N lokalen Legendrepolynomen orthogonal ist,
+folgt auf der ganzen Formdomäne
+
+ q_b[Sigma_p s] >= [H_N-log(pi h)-gamma-h(1/2+1/(4a))]
+                      ||Sigma_p s||^2
+                 > (H_N+1)||Sigma_p s||^2.              (26)
+
+Für N=0 ist H_0=0. Die rationale Prüfung benutzt
+pi h<33/175, exp(5/3)<175/33 und
+5/3-5773/10000-9/200=31331/30000>1.
+
+Um (26) mit einer ganz groben alten Antwort zu verbinden, betrachten wir
+nur für dieses Hilfslemma zusätzlich lambda(s)=0 und v(s)=0. Dann
+Lambda s=Sigma_p s. Die alte hohe Momentkorrektur hat Normquadrat
+höchstens 1+10^-12 (geerbter Momentrest <10^-6), also folgt aus (13),(25)
+
+ <g_s,A^-1 g_s> <= L ||Sigma_p s||^2,
+ L=(3/2)(16/5)^2(1+10^-12)=15.36000000001536.             (27)
+
+Schon im günstigeren Hilfsraum ohne den niedrigen Kraftterm liefert der
+N=0-Vergleich nur 1-L<0. Dies ist ein unzureichender Majorant, kein
+negativer physikalischer Zeuge. Die allgemeine Restprüfung, die v nicht
+weglassen darf, ist damit erst recht nicht geschlossen.
+
+Als rein analytische Größenkontrolle genügt N=2^21=2,097,152:
+H_N>log N=21log2, und 21log2+1-L>1/10. Auf dem Unterraum Y_N mit
+
+ - N verschwindenden lokalen Legendrekoeffizienten,
+ - lambda(s)=0,
+ - allen 191 Komponenten v(s)=0,
+ - den vier Bedingungen s in R,
+ - den vier Bedingungen C s=0
+
+gilt folglich U_-[s]>=W_X[s]/10. Seine Kodimension in X ist höchstens
+N+200. Alle Nebenbedingungen sind stetige lineare Funktionale. Ihre
+Schnittdomäne ist formdicht im entsprechenden Hilbert-Unterraum: auf
+einer dichten Formdomäne kann man endlich viele Momentfehler mit fest
+gewählten Formvektoren ausgleichen; redundante Bedingungen werden entfernt.
+
+Das ist ein vollständiges fernes Tail-Lemma unter den geerbten Annahmen.
+Es ist keine Kontrolle von ganz R. Die ausgelassenen endlichen Richtungen
+und ihre Kopplung müssen erhalten bleiben. Die Funktionen v und C sind
+analytisch definiert, aber hier nicht als numerische Rechenbasis erzeugt.
+Es wurde keine Matrix mit Millionen Zeilen aufgebaut. Dieser viel zu
+große Schnitt dient ausschließlich der Diagnose des groben Verfahrens.
+Er verbessert nicht die bereits bekannte globale A9-Low/High-Reduktion.
+
+9. Präzisierung einer früheren Formulierung
+
+Im unveränderten REMAINDER_CANDIDATE.txt stand vor den beiden Bedingungen
+T>=d W_R und C*M_-^-1 C<=theta d W_R das Wort "Äquivalent".
+Diese beiden skalaren Bedingungen sind HINREICHEND, im Allgemeinen
+nicht äquivalent zu T-C*M_-^-1 C>=delta_R W_R.
+
+Ein Gegenbeispiel ist T=diag(1,100), C*M_-^-1 C=diag(0,99).
+Die Differenz ist I. Trotzdem verlangt die erste skalare Bedingung d<=1,
+die zweite theta d>=99 und kann für theta<1 nicht gelten.
+Das alte versiegelte Archiv bleibt unverändert; diese Nachtragspräzisierung
+ändert weder seinen Acht-Quellen-Schluss noch die dortige Restoffenheit.
+
+10. Folgerung für den nächsten konkreten Forschungsblock
+
+Die Wahl und Vollständigkeit der Restdomäne sind in dieser Herleitung
+ausgeführt. Die neue Norm (22) ist weiterhin offen. Die noch benötigten
+Daten sind nun bestimmt:
+
+ - Der vollständige Kern-Schalen-Operator (14), einschließlich der
+   Momentkorrektur und der singulären Gamma-Grenzkopplung.
+ - Die 191 gemeinsamen korrigierten alten Kraftfunktionale v und ihre
+   gemeinsame F^-1-Energie in der durch P_R gewichteten Schalendomäne.
+ - Die vier vollständigen Test-Rest-Funktionale C aus (15).
+ - Ein analytischer Operatornormrest für eine endliche Approximation von
+   (22), einschließlich aller niedrigen/hohen Kreuzterme.
+
+Eine nächste numerische Stichprobe sollte daher den Fehler einer solchen
+Operatorapproximation messen, bevor weitere Quellen als Erfolge gezählt
+werden. Die diagonale pauschale 16/5-Abschätzung aus (27) ist zu grob,
+um ein wirtschaftliches Fortsetzungsgesetz zu tragen. Welcher Anteil von
+Gamma, Verschiebungen und alter Antwort die tatsächliche kritische
+Restenergie bestimmt, ist durch diese Normmajorante noch nicht entschieden.
+
+Die Prim-/Gamma-Identität wird in diesem Paket verwendet und nicht von
+Grund auf neu bewiesen. Die ganze Restpositivität, wiederverwendbare
+Fortsetzung an weiteren Horizonten, globale Testklasse und Objekt X
+bleiben offen. Der mögliche RH-Anschluss bleibt nachgeordnet.

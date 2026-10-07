@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-05",
+  "source_main_snapshot": "040c1c2f75753d0daa680c55b14b88524955f851",
+  "full_eight_source_archive_sha256": "d1dbad67da8bfe13289fd33d35d821c4fa3a723b6083c1f89abd70d6dfb82cbe",
+  "large_archive_included": false,
+  "inputs": [
+    {
+      "copy": "inputs/MATRICES.json",
+      "sha256": "3b7a9724112e074bb822abae562e21ddba2f376b86628f0f2aab9ce1e1ce97fd",
+      "source_relative_to_workspace": "outputs/Objekt-X-Acht-Quellen-Kurzpruefung-2026-10-05/MATRICES.json"
+    },
+    {
+      "copy": "inputs/EIGHT_SOURCE_PROOF.txt",
+      "sha256": "5a7c0bfbb53669a9731645b4b36c16148c1d519e80850d2dd4ce3a3dd4497a5b",
+      "source_relative_to_workspace": "outputs/Objekt-X-Acht-Quellen-Kurzpruefung-2026-10-05/PROOF.txt"
+    },
+    {
+      "copy": "inputs/EIGHT_SOURCE_SOURCE_BINDINGS.json",
+      "sha256": "33be1736b8300dad00560897ab92eb36a4e3616067c8ae1c17f7906117a7582c",
+      "source_relative_to_workspace": "outputs/Objekt-X-Acht-Quellen-Kurzpruefung-2026-10-05/SOURCE_BINDINGS.json"
+    },
+    {
+      "copy": "inputs/EIGHT_SOURCE_REMAINDER_CANDIDATE.txt",
+      "sha256": "eb7a6688f12c64549b7040c1dacf5fa80da783d950c41db1c572219e3f1f05aa",
+      "source_relative_to_workspace": "outputs/Objekt-X-Acht-Quellen-Kurzpruefung-2026-10-05/REMAINDER_CANDIDATE.txt"
+    },
+    {
+      "copy": "inputs/check_matrices.py",
+      "sha256": "c23f1379ab6729934da3542f2716879bb443ebbf3b89c0d5a803575ce471ab16",
+      "source_relative_to_workspace": "outputs/Objekt-X-Acht-Quellen-Kurzpruefung-2026-10-05/check.py"
+    },
+    {
+      "copy": "inputs/A8_PROOF.md",
+      "sha256": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661",
+      "source_relative_to_workspace": "outputs/Objekt-X-A8-Inverse-Energie-2026-10-04/provenance/A8_PROOF.md"
+    },
+    {
+      "copy": "inputs/A9_PROOF.md",
+      "sha256": "58577c7f448287daf4b09f0b031b00080cede91b31ac81dab0f3df336fcab1d0",
+      "source_relative_to_workspace": "outputs/Objekt-X-A8-Inverse-Energie-2026-10-04/provenance/A9_PROOF.md"
+    },
+    {
+      "copy": "inputs/UNIVERSAL_FORM_PROOF.md",
+      "sha256": "639cfd30c71828ad56caf04447c7d174ec05071f250e19cb6be189d8c3e5f853",
+      "source_relative_to_workspace": "work/inverse-energy-integration/research/x-c1/universal-prime-power-family-2026-09-18/PROOF.md"
+    },
+    {
+      "copy": "inputs/EARLIER_COORDINATE_PROOF.md",
+      "sha256": "a13c5487bde6a7c3372988364b4b1b82cd50b7be892267de638732b87fabf10c",
+      "source_relative_to_workspace": "work/inverse-energy-integration/research/x-c1/reduced-shell-coordinate-theorem-2026-09-19/PROOF.md"
+    },
+    {
+      "copy": "inputs/EARLIER_DOMAIN_PROOF.md",
+      "sha256": "413577cb24d00b7af971333193c987e2021c6985ecf06e0c702f60c5999720c8",
+      "source_relative_to_workspace": "work/inverse-energy-integration/research/x-c1/full-shell-pivot-trace-quotient-2026-09-18/PROOF.md"
+    }
+  ],
+  "inherited_assumptions": [
+    "nonpole arithmetic/Gamma form identity",
+    "old A8 full form gap 12/10^30",
+    "old 191-plus-high inverse-energy bound with delta=2/3",
+    "A9 sign-independent Gamma kernel bounds and Euler gamma enclosure",
+    "fixed eight-source Schur lower matrices"
+  ],
+  "new_analytic_claims_external_review": "OPEN",
+  "full_remainder_positivity": "OPEN",
+  "target_positivity_used": false,
+  "github_changed": false
+}

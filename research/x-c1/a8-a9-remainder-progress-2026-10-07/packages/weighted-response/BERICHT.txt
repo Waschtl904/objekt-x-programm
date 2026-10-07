@@ -1,0 +1,103 @@
+Objekt X — gewichtete alte Antwort: erster Rechenschritt
+7. Oktober 2026 · begonnen am 6. Oktober
+AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Die alte 191-dimensionale Inversenmetrik ist jetzt rigoros auf sechs
+explizite empfindliche Kraftkombinationen je Parität reduziert. Die
+anderen 185 alten niedrigen Koordinaten besitzen eine bezahlbare
+Komplementschranke. Die sechs Kombinationen enthalten dabei alle
+191 Koordinaten und ihre Rückkopplung; es werden keine alten Kräfte
+ersatzlos weggelassen.
+
+Die direkt verwendbare rationale Oberform lautet
+
+ F^(-1) <= T0* H T0 + kappa P_J,
+
+mit einer vollständigen rationalen 6x6-Matrix H und einer rationalen
+6x191-Matrix T0. Die Konstanten einschließlich aller Rundungen sind
+
+ gerade:    kappa = 37.657962,
+ ungerade:  kappa = 10.570239.
+
+Die frühere globale Inversenspur um 10^25 bzw. 10^23 muss damit nicht
+mehr auf alle Fehlerrichtungen angewandt werden. Ihre empfindlichen
+Anteile bleiben ausdrücklich in der kleinen Matrix H enthalten.
+
+Erste gewichtete gemeinsame Fehlergrame
+
+Für Delta=R_half-Y konnten bereits zwei Beiträge gemeinsam für alle
+acht Spalten eingeschlossen werden:
+
+                                      gerade          ungerade
+alter unendlicher hoher Anteil        0.000001416613  0.000001448457
+altes 185D-Komplement                 0.001037473064  0.000264261855
+Summe dieser Fehlergrame              0.001038889677  0.000265710312
+
+Jede Zahl multipliziert I_8. Die Aussagen behandeln beliebige gemeinsame
+Linearkombinationen der acht Fehler; keine Unabhängigkeitsannahme.
+
+Die Tabelle betrifft Fehlerenergien. Sie ist keine Obergrenze für die
+gesamte alte Antwort. Die Antworten an den Mittelpunkten Y und ihre
+Kreuzterme mit den Fehlern sind dadurch nicht bereits kontrolliert.
+
+Was noch fehlt
+
+1. Der gemeinsame gewichtete Fehlergram der sechs festgelegten Kräfte
+   T0 v Delta, mit der vollen Matrix H.
+2. Der gewichtete Fehlergram der vier Kopplungen C Delta in M_-^(-1).
+3. Die entsprechenden Kraftwerte an den acht Mittelpunkten Y.
+4. Daraus erst U00; danach Kreuzgramm G01 und der ganze neue Rest B11.
+
+Das hier kontrollierte alte 185D-Komplement ist NICHT der unendliche
+neue B11-Block des eingefrorenen Piloten. beta_tail bleibt unberechnet.
+U00, G01, gamma01, beta_tail, eta und alpha bleiben null.
+FULL_REMAINDER_CERTIFIED bleibt false.
+
+Prüfung und Quellen
+
+Die endliche Zerlegung wurde bei 1024 und 1536 Bit ausgeführt. Ein
+zusätzlicher Prüfer kommt ohne Intervallbibliothek aus: Er bestätigt
+mit Ganzzahlarithmetik beide 191x191-Positivitätsaussagen und beide
+185x185-Komplement-Gaps. Mit Fraction rekonstruiert er anschließend
+die direkt verwendbare rationale Oberform und die Fehlergram-Beiträge.
+2442 geprüfte Intervalle der beiden Präzisionsläufe überlappen.
+
+Die Rangwahl sechs erfolgte nach einer dokumentierten Untersuchung
+der alten Matrix. Der eingefrorene neue Pilotraum mit acht Richtungen
+je Parität und seine Abnahme blieben unverändert.
+
+GPT 1s Gegenprüfung ist im Original enthalten. Ihre fünf Archivbindungen
+wurden lokal erneut geprüft. Sie bleibt eine begrenzte KI-Gegenprüfung;
+eine externe fachmathematische Begutachtung wird nicht behauptet.
+
+Es wurden hier keine neuen Operatorintegrale gerechnet. Die neue
+Leistung ist die alte Inversenzerlegung samt zwei gewichteten
+Fehlergram-Beiträgen. Die Operator- und Formidentitäten der Ursprungspakete
+bleiben Voraussetzungen. Objekt X bleibt offen; der mögliche RH-Anschluss
+ist nachgeordnet. GitHub/main und frühere Archive wurden nicht verändert.
+
+Für die weitere Rechnung
+
+RATIONAL_MAJORANT.json enthält die konkret verwendbaren T0-, H- und
+kappa-Werte. Die nächsten Integrationen müssen die sechs zugehörigen
+alten Kraftfunktionale sowie die vier C-Funktionale auf den bereits
+gegebenen Halbinversenfehlern und Mittelpunkten behandeln. Eine erneute
+globale Inversennorm-Multiplikation ist dafür nicht nötig.
+
+Dateien
+
+HERLEITUNG.txt                  Beweis der Zerlegung und Fehlergrame.
+RATIONAL_MAJORANT.json          Vollständige rationale T0/H/kappa-Daten.
+check_weighted_response.py      Separater Integer-/Fraction-Prüfer.
+EXACT_CHECK.json                Ergebnis des separaten Prüfers.
+factor_old_response.py          Numerische Faktorberechnung.
+expected/                      Beide Präzisionsläufe.
+POSITIVE_CERTIFICATES.json      Rationale Kongruenzzertifikate.
+make_integer_certificates.py    Erzeugung dieser Hilfszertifikate.
+PILOT_STATE.json                Berechnete und offene Größen.
+inputs/                        Gebundene Daten und Ursprungstexte.
+GPT1_REVIEW_ORIGINAL.txt        Unveränderter übergebener Prüfbericht.
+REVIEW_RECEIPT.json             Erfasster Prüfumfang und Archivabgleich.
+REPRODUCE.txt                  Hinweise zum Nachrechnen.

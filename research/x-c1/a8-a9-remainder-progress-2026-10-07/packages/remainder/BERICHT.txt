@@ -1,0 +1,119 @@
+Objekt X — der vollständige neue Rest bei A8 -> A9
+5. Oktober 2026 · lokale Herleitung · externe analytische Prüfung offen
+
+ERGEBNIS
+
+Die vollständigen Koordinaten und die mathematische Restprüfung sind jetzt
+ausgearbeitet. Eine positive Schranke für den gesamten Rest liegt weiterhin
+nicht vor. Der Acht-Quellen-Befund wird dadurch weder abgeschwächt noch auf
+die unendlich vielen übrigen Richtungen ausgeweitet.
+
+1. WAS NEU HERGELEITET IST
+
+Jede neue Quelle lässt sich eindeutig in eine alte Quelle und ihre Werte
+auf den beiden äußeren Intervallen zerlegen. Eine explizite Korrektur im
+alten Kern erhält genau die ursprünglichen Mellinbedingungen. Sie ist
+bezüglich der gewöhnlichen L2-Norm die kleinste mögliche Kernkorrektur.
+
+Die Darstellung gilt auf der vollständigen abgeschlossenen Formdomäne,
+für beide Paritäten. Sie verlangt keine zusätzlichen Randbedingungen
+und keine neue Positivität. Insbesondere wird beim Übergang von glatten
+Quellen zur Formdomäne keine versteckte Randrichtung entfernt.
+
+Die vier bereits geprüften Klassen pro Parität haben darin ein eindeutig
+festgelegtes L2-Quotientenkomplement. Dieser Rest enthält sämtliche
+verbleibenden Richtungen. Die gemeinsame Energie und alle Kreuzterme
+sind als Formen bzw. beschränkte Quelloperatoren ausdrücklich definiert.
+
+2. EIN KONKRETER GEOMETRISCHER GEWINN
+
+Die sechs Primverschiebungen der äußeren Schalen landen in zwölf
+paarweise disjunkten offenen Teilintervallen des alten Kerns. Deshalb
+gilt für den vollständigen reinen Schalen-Primoperator exakt
+
+ ||1_core S_prime Sigma s||^2 = 1.881708830273401... ||Sigma s||^2.
+
+Der Dezimalwert ist nach außen eingeschlossen; die genaue Konstante ist
+die Summe der sechs quadrierten Primgewichte. Als rationale Normobergrenze
+genügt 11/8. Es wurde die ganze Schalenfamilie behandelt, keine Stichprobe
+von Polynomen. Für die zusätzliche Momentkorrektur muss ihr Rang-eins-Term
+weiterhin separat mitgeführt werden.
+
+Die Gamma-Grenzkopplung lässt sich durch einen Carleman-Kern und einen
+beschränkten Rest behandeln. Gemeinsam ergibt sich die sichere Schranke
+16/5 für die Kopplung der reinen Schale an den alten Kern.
+
+3. DIE VOLLSTÄNDIGE RESTFRAGE IST JETZT EIN BESTIMMTER OPERATOR
+
+Auf dem Rest R ist die Form P_R = q_b[Lambda r] + 19 ||Lambda r||^2
+ohne neue Positivitätsannahme positiv. Die ganze Restprüfung lässt sich
+auf einen ausdrücklich definierten positiven kompakten Operator B_R
+zurückführen. Er enthält gemeinsam:
+
+ - die signunabhängige neue Form,
+ - die vollständige alte inverse Antwort,
+ - die Kopplung an den zertifizierten Viererblock.
+
+Die hinreichende Zielschranke lautet ||B_R||<1. Ein normierter endlicher
+Test allein beweist sie nicht; erforderlich ist zusätzlich ein rigoroser
+Rest in Operatornorm. Die genaue Formel und die Domänen stehen im Beweis.
+
+4. WAS DIE GROBEN KONSTANTEN NOCH NICHT SCHAFFEN
+
+Die reine Schale besitzt einen nachgewiesenen Boden >1 in ihrer L2-Norm.
+Mit dem alten hohen Boden 2/3 und der pauschalen Kopplungsnorm 16/5 kostet
+die grobe alte hohe Antwort aber bis zu 15.36000000001536. Selbst wenn
+man den niedrigen alten Kraftterm auf einem Hilfsraum ausschaltet, bleibt
+damit keine positive untere Restschranke.
+
+Das ist KEIN negativer Zeuge für die tatsächliche Form. Es zeigt, dass
+diese konkrete Majorante zu grob ist. Die 191 gemeinsamen korrigierten
+alten Kraftfunktionale und die vier Test-Rest-Kopplungen müssen in der
+weiteren Abschätzung erhalten bleiben.
+
+Ein zusätzliches analytisches Hilfslemma kontrolliert einen fernen hohen
+Unterraum nach mehr als zwei Millionen lokalen Legendrebedingungen und
+höchstens 200 weiteren Bedingungen. Es wurde keine solche Matrix gerechnet.
+Dieser absichtlich grobe Vergleich zeigt die schlechten Kosten des
+pauschalen Verfahrens. Er ersetzt weder den vollständigen Restnachweis
+noch verbessert er die schon bekannte globale A9-Low/High-Reduktion.
+
+5. EINE KLEINE KORREKTUR AM BISHERIGEN RESTENTWURF
+
+Die getrennten Bedingungen T>=d W und C*M_-^-1 C<=theta d W mit theta<1
+sind hinreichend. Im alten Entwurf waren sie versehentlich als äquivalent
+zur gemeinsamen positiven Restdifferenz bezeichnet. Ein exaktes
+zweidimensionales Gegenbeispiel im Nachtrag korrigiert diese Aussage.
+Der Acht-Quellen-Beweis benutzt diese Äquivalenz nicht. Das ursprüngliche
+versiegelte Paket bleibt unverändert.
+
+6. WAS GEPRÜFT WURDE — UND WAS NICHT
+
+Mit exakten rationalen Reihen und Brüchen geprüft wurden die zwölf
+Bildintervalle einschließlich identischer Randkontakte, die gemeinsame
+Primnorm, sämtliche neuen skalaren Konstanten und das Gegenbeispiel.
+Die vier gebundenen Acht-Quellen-Schlussmatrizen bestehen erneut ihren
+mitgelieferten exakten Prüfer. Die benötigten Quelltexte sind hashgebunden.
+
+Die Formdomänenbeweise und Kompaktheitsaussagen sind neue analytische
+Herleitungen zur externen Prüfung. Sie werden durch die endlichen
+Arithmetiktests nicht maschinell bewiesen. Die ursprünglichen arithmetischen
+Identitäten, alten Operatorhüllen und A8-Positivität bleiben Eingaben.
+
+7. DER NÄCHSTE SINNVOLLE TEST
+
+Eine kleine gemeinsame Approximation des Operators B_R aufbauen und von
+Anfang an den fehlenden Operatornormrest ausweisen. Dabei zuerst die
+191 alten korrigierten Kräfte und vier Kopplungsfunktionale als gemeinsame
+Funktionen auf der Schale behandeln. Die Gamma-Grenzsingularität benötigt
+eine analytische Restbehandlung; bloße Punktauswertung genügt nicht.
+
+Eine größere Liste positiver Einzelquellen beantwortet diese Frage nicht.
+Ein weiterer Horizont ist für diesen nächsten Schritt nicht erforderlich.
+Die Arbeitsdefinition von Objekt X bleibt unverändert: gemeinsame
+intrinsische Prim-/Gamma-Geometrie, vollständige exakte Gram-Identität,
+geeignete gesamte Testklasse und keine vorausgesetzte Gesamtpositivität.
+
+GitHub wurde in diesem Forschungsblock nicht geändert. Ein neues
+Gesamtpositivitätszertifikat, eine kofinale Fortsetzung und Objekt X
+werden nicht behauptet.

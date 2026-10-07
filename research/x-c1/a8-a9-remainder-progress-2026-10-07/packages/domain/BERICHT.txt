@@ -1,0 +1,57 @@
+Objekt X — Nachtrag zur Gegenprüfung des vollständigen Restes
+6. Oktober 2026 · neue analytische Herleitung zur Gegenprüfung
+
+Die übermittelte Gegenprüfung findet keinen konkreten Fehler in der
+Restdarstellung, benennt aber zwei Stellen für eine ausführlichere
+Beweisfassung. Beide werden im beigefügten LEMMATA.txt ausgearbeitet.
+
+1. Die verwendeten Sprungfunktionen besitzen eine echte L2-Operatorwirkung.
+
+Für jede kompakt unterstützte, stückweise Lipschitz-Funktion mit endlich
+vielen Sprüngen wird die Gamma-Operatorwirkung ausdrücklich eingeschlossen.
+Nahe den Sprungstellen entstehen höchstens logarithmische Spitzen; im
+Unendlichen fällt die Wirkung exponentiell ab. Eine konkrete L2-Majorante
+und der Grenzübergang der abgeschnittenen Operatoren zeigen die Zugehörigkeit
+zur Operatordomäne, über die bloße endliche Formenergie hinaus.
+
+Dies trifft genau auf m 1_core und die vier festen Lambda sigma_j je
+Parität zu. Damit sind der alte Quelloperator g und die vier Test-Rest-
+Kopplungsfunktionale C ausdrücklich als L2-wertig bzw. beschränkt begründet.
+Die vier C-Funktionale erhalten zudem eine Formel durch feste L2-Funktionen.
+Diese Funktionen wurden hier noch nicht numerisch berechnet.
+
+2. Die Kompaktheit folgt direkt aus dem Gamma-Kern.
+
+Ein eigener Fourierbeweis zeigt, dass auf festem kompaktem Träger beschränkte
+Gamma-Graphnormmengen in L2 relativ kompakt sind. Die entsprechende
+hochfrequente Masse ist für L>e^2 durch
+
+  integral_(|xi|>L) |u_hat(xi)|^2 <= 2 E[u]/(log L-2)
+
+kontrolliert. Zusammen mit P_R>=E[Lambda r]+W_X[r] begründet dies die
+kompakte Resolvente von P_R und die Kompaktheit des positiven Operators B_R.
+Der neue Beweis benötigt dafür keine lokale Legendre-Diagonalisierung.
+
+3. Was sich am Status ändert
+
+Die beiden bislang knappen Begründungsstellen liegen nun als eigenständige
+analytische Lemmata vor. Sie stehen selbst noch zur Gegenprüfung.
+Es wurde kein mathematischer Status allein durch das Bestehen eines
+Dateiprüfers aufgewertet.
+
+Unverändert offen bleiben die Operatornormobergrenze ||B_R||<1, die
+Positivität des ganzen Restes, die wiederverwendbare Fortsetzung und
+Objekt X. Die Fourierabschätzung ist eine Restschranke für den normierten
+Schaleneinbettungsoperator, noch keine entsprechende Restschranke für B_R.
+Ihre logarithmische Abnahme ist für sich genommen sehr grob.
+
+Die ursprüngliche arithmetische Formidentität und die alte A8-Koerzivität
+bleiben geerbte Voraussetzungen. Die numerische Aussage des Acht-Quellen-
+Pakets bleibt unverändert. Auch die Klarstellung aus der Gegenprüfung gilt:
+omega_2=1.881708830273401... ist das Quadrat der Primoperatornorm;
+sqrt(omega_2)<11/8 ist die zugehörige Normobergrenze.
+
+Nächste Rechenaufgabe bleibt die gemeinsame Approximation der alten
+Antwortfunktionale und der vier C-Funktionen samt rigorosem Operatorrest.
+Es gab in diesem Nachtrag keine neue Operatorintegration, keinen neuen
+Horizont, keine GitHub-Änderung und keinen vollständigen Restabschluss.
