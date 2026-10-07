@@ -1,0 +1,18 @@
+{
+  "negative_controls": {
+    "archive_corruption": "Recovery archive binding mismatch",
+    "catalog_member_omission": "Frozen catalog binding mismatch",
+    "catalog_member_rename_with_new_seal": "Original ZIP complete member list mismatch",
+    "original_zip_mismatch": "Original ZIP digest mismatch"
+  },
+  "navigation": {
+    "links": 117,
+    "errors": [],
+    "unchanged_results": 55
+  },
+  "registry_tests": {
+    "passed": 60,
+    "mathematical_review": false
+  },
+  "review_note": "The PR211 and PR213 integration records exist at the baseline and PR head; verified via Git tree and GitHub contents API."
+}

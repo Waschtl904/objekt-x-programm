@@ -1,5 +1,15 @@
 # Gemeinsamer Y-Kernel und ungerade Eigenlinie zweiter Ordnung
 
+> **Nachtrag vom 7. Oktober 2026:** Der unten festgelegte Versuch wurde
+> inzwischen ausgeführt und durch [PR #206](https://github.com/Waschtl904/objekt-x-programm/pull/206)
+> integriert. [Y-Kernel-Ergebnis](../research/x-c1/canonical-y-kernel-second-order-2026-10-03/README.md)
+> und [Folgeuntersuchungen](../research/x-c1/canonical-h0-followups-2026-10-03/README.md)
+> dokumentieren die bedingten Verbesserungen; Root bleibt `UNRESOLVED`.
+> Der ursprüngliche Plantext darunter bleibt erhalten. Er ist kein Auftrag,
+> denselben Test erneut zu beginnen. Die heutige Priorität steht in [NEXT_GATES](NEXT_GATES.md).
+
+## Ursprünglicher Plan vom 2. Oktober 2026
+
 **Planstatus: OPEN.** Dieser Text legt den nächsten Versuch und seine Abnahme
 fest. Er enthält kein neues numerisches Zertifikat.
 

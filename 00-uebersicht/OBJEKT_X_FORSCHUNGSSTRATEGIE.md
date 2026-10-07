@@ -4,6 +4,22 @@ Stand 3. Oktober 2026. Arbeitsstrategie auf Grundlage der gelesenen Beweispakete
 
 Fortgeschrieben nach GPT 1s Rückmeldung vom selben Tag. Neu präzisiert sind die vollständige Blockdarstellung in einer unabhängig positiven Hilbertnorm, die gemeinsame Auswertung korrigierter Quellen und eine obere Schranke für die inverse alte Residualenergie. Der zuvor vorgeschlagene isolierte Test des H₀-Blocks (4,5) entfällt aufgrund des übermittelten Grenzberichts; dessen neue Zahlenzertifikate wurden hier nicht erneut reproduziert.
 
+## Umsetzung seit dem 3. Oktober
+
+Stand 7. Oktober 2026: Die unten empfohlene Eingabeklassifikation und der
+Aufbau des ersten Anschlusses sind inzwischen bearbeitet. Der
+[Vier-Quellen-Anschluss](../research/x-c1/a8-four-source-inverse-energy-2026-10-04/README.md)
+und das [Acht-Quellen-/Restpaket](../research/x-c1/a8-a9-remainder-progress-2026-10-07/README.md)
+führen zu vollständigen Restkoordinaten, einem eingefrorenen Pilotraum,
+Halbinverseneinschließungen und partiellen gewichteten Fehlergramen.
+
+Der nächste Schritt ist die gemeinsame Kontrolle der sechs empfindlichen
+alten Kraftkombinationen und der vier C-Kopplungen. Danach fehlen weiterhin
+U00, Kreuzgramm und die vollständige komprimierte Tailnorm. Der volle
+B_R-Gate und eine wiederverwendbare Fortsetzungsregel bleiben offen.
+Die operative Reihenfolge steht in [NEXT_GATES](NEXT_GATES.md). Die folgenden
+Herleitungen und Vorschläge behalten ihren ursprünglichen Stand.
+
 ## Ziel und Entscheidung
 
 **Das primäre Ziel ist Objekt X. Erst nach seiner Konstruktion wird der mögliche Anschluss an die Riemannsche Vermutung verfolgt.** Diese vom Nutzer festgelegte Reihenfolge bestimmt die folgenden Prioritäten. Die mathematischen Anforderungen an X bleiben dabei vollständig erhalten.
@@ -443,7 +459,7 @@ Die Residual- und Kongruenzformeln wurden zusätzlich in sechs nichttrivialen ra
 
 Die allgemeinen Begründungen stehen oben; endliche Beispiele ersetzen sie nicht. Es wurden in dieser Strategiearbeit keine neuen Operatorintegrale, keine neuen Root-Zertifikate und keine A13-Rechnung ausgeführt. Die damalige lokale Erarbeitung änderte weder GitHub noch das mathematische Register. Die anschließende Integration dokumentiert die Projektpriorität in `AGENTS.md` und die operative Reihenfolge in [NEXT_GATES](NEXT_GATES.md). Die mathematischen Aussagegrenzen bleiben bestehen.
 
-## Empfehlung für den unmittelbar nächsten Forschungsblock
+## Ursprüngliche Empfehlung vom 3. Oktober 2026
 
 **Vorwärts gerichtete Schurfortsetzung aus alten positiven Quellen und neuen gemeinsamen Prim-/Gamma-Daten.**
 

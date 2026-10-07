@@ -1,0 +1,15 @@
+{
+  "status": "PASS_SOURCE_BYTES",
+  "base_main": "11d433da421c913e649d71742b7bf9b8028ceb1a",
+  "source_archives": 73,
+  "local_commit_files": 5,
+  "standalone_notes": 23,
+  "exact_archive_instances_in_main": 31,
+  "catalogued_unique_containers": 43,
+  "recovered_unique_files": 231,
+  "recovered_file_bytes": 6636413,
+  "catalog_sha256": "c425c9bc37523b253e6ecaa7d8af762645d674fd9a9e03212beb45b45a135296",
+  "original_containers_verified": 43,
+  "original_container_bytes_verified": true,
+  "mathematical_replay_performed": false
+}

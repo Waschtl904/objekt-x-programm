@@ -100,8 +100,11 @@ Testklasse und eine Konstruktion ohne vorausgesetzte Weil-Positivität.
 Die versiegelten Originalpakete behalten auch ihre damaligen Integrationsangaben.
 Ein dortiges `PENDING_STATUS_REVIEW` oder `RESEARCH_BRANCH_UNMERGED` beschreibt
 den ursprünglichen Paketstand. Die heutige Aufnahme ist im
-[Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml) und im
-[Integrationsnachweis](00-uebersicht/integrationsnachweise/PR206_2026-10-03.md) dokumentiert.
+[Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml) und
+in den jeweiligen Integrationsnachweisen dokumentiert:
+[#206](00-uebersicht/integrationsnachweise/PR206_2026-10-03.md),
+[#211](00-uebersicht/integrationsnachweise/PR211_2026-10-04.md) und
+[#213](00-uebersicht/integrationsnachweise/PR213_2026-10-07.md).
 
 Diese README dient der Orientierung. Die lesbaren Statusansichten werden aus
 `RESEARCH_STATE.yaml` erzeugt; mathematische Aussagen beruhen auf den dort
