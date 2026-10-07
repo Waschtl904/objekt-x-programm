@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "Q11-WALL-A13-PREPARATION",
+  "date": "2026-09-28",
+  "kind": "CONSTRUCTION",
+  "strategic": false,
+  "local_only": true,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Direkte q=11-Instanz des allgemeinen Prime-Power-Wandlemmas: rohe T/D-Transporte und Defektkompatibilität bis A13=log(13)/2; vollständige A13-Terminalpositivität bleibt offen.",
+  "claim_polarity": "CONSTRUCTION",
+  "negative_claim_boundary": "Kein No-Go und keine negative Richtung der vollständigen Weil-Form behauptet.",
+  "depends_on": [
+    "GENERAL-PRIME-POWER-WALL-COCYCLE",
+    "THIRD-CHAMBER-A11-TERMINAL-POSITIVITY"
+  ],
+  "closes": [],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Vollständige Terminalpositivität bei A13.",
+    "Positive korrigierte Transporte auf dem gesamten vierten Carrier.",
+    "Unbeschränkte oder kofinale positive Fortsetzung.",
+    "Globales Objekt X, globale Weil-Positivität oder RH."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/fourth-chamber-a13-2026-09-28/q11/PROOF.md",
+    "sha256": "7e5333e8be27bffacb6ccaf292330262898f7470a92de42ffb3496b09f052484"
+  }
+}
