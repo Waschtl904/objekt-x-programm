@@ -133,6 +133,9 @@ keine mathematische Aussage. Historische
 Manifestausnahmen oder früher dokumentierte Fehler werden dadurch nicht
 rückwirkend aufgehoben.
 
+Die [Prüfquittung](CHECKS.json) hält die vier gezielten Negativkontrollen,
+die Linkprüfung und die Registry-Tests fest.
+
 Pflichtprüfungen für diesen Nachtrag: Bytezuordnung einschließlich
 beschädigter Quell-/Katalogkontrollen, Links der geänderten Einstiege,
 unveränderte Ergebnis- und Verifikationsfelder, deterministische
