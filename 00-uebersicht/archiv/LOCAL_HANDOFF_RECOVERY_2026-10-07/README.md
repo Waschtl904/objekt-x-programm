@@ -20,9 +20,9 @@ als vollständige identische Archive auf Main. Weitere Inhalte sind dort als
 Einzeldateien oder in Folgepaketen enthalten. Der Katalog berücksichtigt auch
 verschachtelte Archive und unterschiedliche Dateinamen.
 
-**211 zusätzliche unterschiedliche Dateien** sind mit ihren Originalbytes
-im [Nachtragsarchiv](recovered-sources.zip) erhalten: zusammen 6.253.473 Bytes,
-komprimiert rund 1,4 MB. Die Katalogeinträge unterscheiden:
+**231 zusätzliche unterschiedliche Dateien** sind mit ihren Originalbytes
+im [Nachtragsarchiv](recovered-sources.zip) erhalten: zusammen 6.636.413 Bytes,
+komprimiert rund 1,6 MB. Die Katalogeinträge unterscheiden:
 
 - `BASE_MAIN`: Originalbytes am angegebenen Pfad des oben genannten Commits;
   ein `!` trennt einen ZIP-Pfad vom enthaltenen Mitglied.
@@ -32,7 +32,10 @@ komprimiert rund 1,4 MB. Die Katalogeinträge unterscheiden:
 
 [CATALOG.json](CATALOG.json) bindet alle 73 Ausgangsfassungen, 43 zusätzliche
 verschachtelte oder äußere Container und alle ergänzten Dateiinhalte.
-Außerdem sind die fünf Dateien eines früheren lokalen Vorbereitungscommits
+Zusätzlich sind 23 einzelne Projekttexte aus dem Downloadverzeichnis
+katalogisiert, darunter Council-Analysen und R2-Gegenprüfungen aus August
+und September sowie zwei doppelt benannte Fassungen. Die fünf Dateien
+eines früheren lokalen Vorbereitungscommits sind ebenfalls
 zugeordnet; zwei davon sind zusätzliche ursprüngliche Text-/Codefassungen.
 Mehrere Dateinamen dürfen dasselbe Archiv oder dieselben Dateien bezeichnen.
 
@@ -46,6 +49,7 @@ werden dafür nicht nochmals kopiert.
 
 | Frühere Arbeit | Heutige Einordnung und Bezug |
 | --- | --- |
+| Einzelne Council-, R2- und NEU-250-Texte aus August/September | Historische Strategie- und Reviewbeiträge einschließlich ihrer Korrekturen. Im Original verwendete Bezeichnungen wie „externer Reviewer“ oder „unabhängig“ werden hier nicht als fachliche externe Abnahme bestätigt. Referenzierte zusätzliche Skripte, Zertifikate oder Sandbox-Dateien sind nur insoweit verfügbar, wie sie tatsächlich im Katalog enthalten sind. |
 | Sechs Objekt-X-Kandidatenfassungen aus September, bis „diff-4 Reconciliation“ | Frühere nichtkanonische Vorschläge und Fehlerkorrekturen. Der spätere [Vor-ι′-Audit](../../../audits/P11_VOR_IOTA_PRIME_FESHBACH_FIREWALL_2026-09-11/README.md) behandelt die lokale Firewall. Die ursprünglichen Entwürfe werden historisch erhalten; ihre damaligen Arbeitsaufträge gelten nicht als heutige Freigabe. |
 | PR-137-Konsolidierungs- und mathematisches Prüfpaket vom 18. September | Der [positive Meilenstein](../../../research/x-c1/pr137-consolidated-milestone-2026-09-18/README.md) ist integriert. Zusätzliche damalige Autorenreviews und ihre Quittungen fehlten als vollständige lokale Fassungen. Ihre Einwände und Prüfgrenzen bleiben erhalten; keine externe Begutachtung wird daraus abgeleitet. |
 | CI-Reparatur und Critical-Half-Archivierungsentwurf | Historische Vorbereitungen; Nachfolger sind [PR #146](https://github.com/Waschtl904/objekt-x-programm/pull/146), [#148](https://github.com/Waschtl904/objekt-x-programm/pull/148) und die [Quellenerhaltung](../CRITICAL_HALF_RP2_SOURCE_PRESERVATION_2026-09-26/README.md). Alte Workflowtexte werden ausschließlich archiviert und nicht aktiviert. |
@@ -59,7 +63,8 @@ werden dafür nicht nochmals kopiert.
 
 Der Abgleich umfasst zugängliche lokale Objekt-X-Ausgaben aus den
 Arbeitsverzeichnissen vom 17. September bis 7. Oktober, die ausgewählten
-Objekt-X-Archive im Downloadverzeichnis sowie die einschlägigen jüngsten
+Objekt-X-Archive und 23 einzelne Projekttexte im Downloadverzeichnis sowie
+die einschlägigen jüngsten
 Gesprächsübergaben. Ältere GitHub-Arbeit ist über PR-Historie und die bereits
 integrierten [Archivfamilien](../../ARCHIVE_INDEX.md) eingeordnet.
 

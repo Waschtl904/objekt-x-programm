@@ -80,11 +80,12 @@ def verify():
         if sha256(data) != sha or len(data) != entry['bytes']:
             raise ValueError('Source member binding mismatch')
 
-    for source in catalog['sources'] + catalog['local_commit_sources']:
+    for source in catalog['sources'] + catalog['local_commit_sources'] + catalog['standalone_notes']:
         check(source)
     counts = {
         'source_archives': len(catalog['sources']),
         'local_commit_files': len(catalog['local_commit_sources']),
+        'standalone_notes': len(catalog['standalone_notes']),
         'exact_archive_instances_in_main': sum(s['storage'] == 'BASE_MAIN' for s in catalog['sources']),
         'catalogued_unique_containers': len(visited),
         'recovered_unique_files': len(recovered),

@@ -7,16 +7,17 @@
   "base_locations": "Repository paths at base_main; ! separates nested ZIP members.",
   "recovery_archive": {
     "file": "recovered-sources.zip",
-    "sha256": "f77bb0d8aa3cc1de5f4517115ed9218d95d073e230f78b88a85e0767330dd5e2",
-    "bytes": 1401165
+    "sha256": "6de8aded2caf14c2047f8ec2a9e475b77b1b721ab642b62be76862b4008224fd",
+    "bytes": 1568050
   },
   "counts": {
     "source_archives": 73,
     "local_commit_files": 5,
+    "standalone_notes": 23,
     "exact_archive_instances_in_main": 31,
     "catalogued_unique_containers": 43,
-    "recovered_unique_files": 211,
-    "recovered_file_bytes": 6253473
+    "recovered_unique_files": 231,
+    "recovered_file_bytes": 6636413
   },
   "sources": [
     {
@@ -732,6 +733,192 @@
       "locations": [
         "research/x-c1/full-residual-schur-3930110-2026-09-17/full_residual_results.json"
       ]
+    }
+  ],
+  "standalone_notes": [
+    {
+      "name": "Council  Claude Opus 5 — Bulk-AR(1), Whitening-Masse, Objekt-X-Frage.md",
+      "source_group": "downloads",
+      "sha256": "135b6f9df67640aec624357d0403030eff6970ff2bb2b38b57eba4c2f55e54c6",
+      "bytes": 36724,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/135b6f9df67640aec624357d0403030eff6970ff2bb2b38b57eba4c2f55e54c6"
+    },
+    {
+      "name": "Council  Gemini 3.1 Pro — Krein–Langer, Zhu, Falsifikationsschritt.md",
+      "source_group": "downloads",
+      "sha256": "5215b77dbd8b71b459c12c021769930677ad0212e43cd0032d18d4dc34edbb45",
+      "bytes": 8805,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/5215b77dbd8b71b459c12c021769930677ad0212e43cd0032d18d4dc34edbb45"
+    },
+    {
+      "name": "Council  GPT-5.6 Sol — Bulk-AR(1), Testklasse, 2I-Firewall.md",
+      "source_group": "downloads",
+      "sha256": "219d30c76d8af3718665f0aff8bd8fc3f020c991869a4e12abc9225a9558945f",
+      "bytes": 15757,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/219d30c76d8af3718665f0aff8bd8fc3f020c991869a4e12abc9225a9558945f"
+    },
+    {
+      "name": "Council Report — Claude Fable 5.md",
+      "source_group": "downloads",
+      "sha256": "839c828d47512c44542df2c2eba17331d6a503e52644a88593f8fa6aa4225d6a",
+      "bytes": 24958,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/839c828d47512c44542df2c2eba17331d6a503e52644a88593f8fa6aa4225d6a"
+    },
+    {
+      "name": "Council Report — Claude Opus 5.md",
+      "source_group": "downloads",
+      "sha256": "213c94379d779edddd1127820c736ac9d9c7ae1d89c7868ef4007567be65242d",
+      "bytes": 23461,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/213c94379d779edddd1127820c736ac9d9c7ae1d89c7868ef4007567be65242d"
+    },
+    {
+      "name": "Council Report — Claude Sonnet 5.0.md",
+      "source_group": "downloads",
+      "sha256": "01aa9347d66a8d9d29e2cf63cc1ea8f42ee1157790f105cb4546b4c39584434c",
+      "bytes": 31544,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/01aa9347d66a8d9d29e2cf63cc1ea8f42ee1157790f105cb4546b4c39584434c"
+    },
+    {
+      "name": "Council Report — Gemini 3.1 Pro.md",
+      "source_group": "downloads",
+      "sha256": "4ddf48ae35175045026893ed14aa235f430913ee834ac6a62f0894a98578bda2",
+      "bytes": 14930,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/4ddf48ae35175045026893ed14aa235f430913ee834ac6a62f0894a98578bda2"
+    },
+    {
+      "name": "Council Report — GPT-5.6 Sol.md",
+      "source_group": "downloads",
+      "sha256": "44a1d4545cc5ce3a4c8af6f3981d2d12d54c3c1b1096ac8c74dca7766372a123",
+      "bytes": 20049,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/44a1d4545cc5ce3a4c8af6f3981d2d12d54c3c1b1096ac8c74dca7766372a123"
+    },
+    {
+      "name": "Council-Synthese  Bulk-AR(1), Whitening-Firewall, neue Objekt-X-Frage.md",
+      "source_group": "downloads",
+      "sha256": "572fcc885e35fa8abedb9686172b6e1bce5c1225d10726f2ae2f43c8d8b5638f",
+      "bytes": 15326,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/572fcc885e35fa8abedb9686172b6e1bce5c1225d10726f2ae2f43c8d8b5638f"
+    },
+    {
+      "name": "Model Council Analyse – Astra.md",
+      "source_group": "downloads",
+      "sha256": "7d15bdc6a181e9c96a835b9d6df8389f11c20c7e7b1bf52a37ce4f89c0480296",
+      "bytes": 35532,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/7d15bdc6a181e9c96a835b9d6df8389f11c20c7e7b1bf52a37ce4f89c0480296"
+    },
+    {
+      "name": "Model Council Analyse – Claude Fable 5.1.md",
+      "source_group": "downloads",
+      "sha256": "624508269ad8ef7e2b0a970f90a46417b515098aa2da099d16d6202f881b4db6",
+      "bytes": 36185,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/624508269ad8ef7e2b0a970f90a46417b515098aa2da099d16d6202f881b4db6"
+    },
+    {
+      "name": "Model Council Analyse – Gemini 3.1 Pro.md",
+      "source_group": "downloads",
+      "sha256": "5c1e5ec8bdd2f9228e9a458cdece7bc6478e6dbea57b27fccf35c56c57096006",
+      "bytes": 5860,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/5c1e5ec8bdd2f9228e9a458cdece7bc6478e6dbea57b27fccf35c56c57096006"
+    },
+    {
+      "name": "Model Council Synthese – Strategie & Objekt X.md",
+      "source_group": "downloads",
+      "sha256": "4e1cc87068398b27000da0737ff62ea27dd8a36f14234165037bf914e48ccc48",
+      "bytes": 15213,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/4e1cc87068398b27000da0737ff62ea27dd8a36f14234165037bf914e48ccc48"
+    },
+    {
+      "name": "Model Council Synthese — P12 Strategy für das Objekt-X-Programm.md",
+      "source_group": "downloads",
+      "sha256": "fe31aed97cabd6b3121d49162c7ab53e3fae6d4ef66e7c6799528831b060dbf6",
+      "bytes": 19794,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/fe31aed97cabd6b3121d49162c7ab53e3fae6d4ef66e7c6799528831b060dbf6"
+    },
+    {
+      "name": "NEU-250_O221-1c1a0-B_Typisierung_Dirichletresiduumsform_relativer_Primkantenraum (1).md",
+      "source_group": "downloads",
+      "sha256": "3d757263b83a2e00bab17c4d94d6c2418d1c25dbb07f310be5cc4c6cd8b2b3ba",
+      "bytes": 15967,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/3d757263b83a2e00bab17c4d94d6c2418d1c25dbb07f310be5cc4c6cd8b2b3ba"
+    },
+    {
+      "name": "NEU-250_O221-1c1a0-B_Typisierung_Dirichletresiduumsform_relativer_Primkantenraum.md",
+      "source_group": "downloads",
+      "sha256": "3d757263b83a2e00bab17c4d94d6c2418d1c25dbb07f310be5cc4c6cd8b2b3ba",
+      "bytes": 15967,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/3d757263b83a2e00bab17c4d94d6c2418d1c25dbb07f310be5cc4c6cd8b2b3ba"
+    },
+    {
+      "name": "Objekt X  Ausführungsprotokoll der Mergefreigaben.md",
+      "source_group": "downloads",
+      "sha256": "dee878ee697ed373749b71b8c1416924baa74e02ee5c32e5899d847e07fd1e03",
+      "bytes": 5247,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/dee878ee697ed373749b71b8c1416924baa74e02ee5c32e5899d847e07fd1e03"
+    },
+    {
+      "name": "Objekt X  GitHub-Wahrheitsstand und nächste C1-Phase.md",
+      "source_group": "downloads",
+      "sha256": "16b0943f16b0168c999c70a9b0516cb978c34ba749cab83a04ee2569c2cb3d3e",
+      "bytes": 12763,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/16b0943f16b0168c999c70a9b0516cb978c34ba749cab83a04ee2569c2cb3d3e"
+    },
+    {
+      "name": "Objekt X  R2-Schurreview und geprüfte Bandinversenkontrolle.md",
+      "source_group": "downloads",
+      "sha256": "bec254d4ca59e36c200fd69f1b45c8651cce4de5511b1347cefe196315f85432",
+      "bytes": 13991,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/bec254d4ca59e36c200fd69f1b45c8651cce4de5511b1347cefe196315f85432"
+    },
+    {
+      "name": "Objekt X R2  Gegencheck zu Gesamtkopplung und korrigiertem Fernblock (1).md",
+      "source_group": "downloads",
+      "sha256": "a60468afdaa8e2f3d6ef327aa2c0afe7fe50f2286994c8dc6157747ae2d643a2",
+      "bytes": 7241,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/a60468afdaa8e2f3d6ef327aa2c0afe7fe50f2286994c8dc6157747ae2d643a2"
+    },
+    {
+      "name": "Objekt X R2  Gegencheck zu Gesamtkopplung und korrigiertem Fernblock.md",
+      "source_group": "downloads",
+      "sha256": "a60468afdaa8e2f3d6ef327aa2c0afe7fe50f2286994c8dc6157747ae2d643a2",
+      "bytes": 7241,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/a60468afdaa8e2f3d6ef327aa2c0afe7fe50f2286994c8dc6157747ae2d643a2"
+    },
+    {
+      "name": "Objekt X — Strategischer Rahmen (verbindlich ab 11.09.2026).md",
+      "source_group": "downloads",
+      "sha256": "3c729823f59cb61adcc3b8585123d2c5f88d4a4ee693a1e0ec50d09dd6a31179",
+      "bytes": 4020,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/3c729823f59cb61adcc3b8585123d2c5f88d4a4ee693a1e0ec50d09dd6a31179"
+    },
+    {
+      "name": "R2_v4_Reviewkorrektur_und_Zwischen_Fern_Residualtest_2026-09-10.md",
+      "source_group": "downloads",
+      "sha256": "a840b4f5f425c769af91db207baa536d7f4accef7a8e182ad7e895d8fd830bd7",
+      "bytes": 23593,
+      "storage": "RECOVERED_BYTES",
+      "path": "files/a840b4f5f425c769af91db207baa536d7f4accef7a8e182ad7e895d8fd830bd7"
     }
   ],
   "containers": {

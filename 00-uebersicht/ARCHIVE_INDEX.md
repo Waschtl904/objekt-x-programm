@@ -6,8 +6,8 @@ Dieser Einstieg dient der Navigation. Der aktuelle Forschungsstand steht in [CUR
 
 Der [Abgleich älterer Arbeitsstände](archiv/LOCAL_HANDOFF_RECOVERY_2026-10-07/README.md)
 ordnet 73 lokale Archivfassungen ihren vorhandenen Main-Belegen zu.
-211 zuvor dort nicht bytegleich gefundene Dateien sind zusätzlich als
-historische Quellen gesichert, darunter frühe Kandidatenentwürfe,
+231 zuvor dort nicht bytegleich gefundene Dateien sind zusätzlich als
+historische Quellen gesichert, darunter ältere Council-/Reviewtexte, Kandidatenentwürfe,
 PR-137-Gegenprüfungen und die Kreuzform-/Residuen-Vorstufen vom 4. Oktober.
 Katalog und Byteprüfer trennen vorhandene Belege von nachgetragenen Originalen.
 Dieser Herkunftsnachtrag verleiht den Texten keinen neuen mathematischen Status.
