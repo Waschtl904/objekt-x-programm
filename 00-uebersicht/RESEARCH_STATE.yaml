@@ -202,7 +202,7 @@
       "id": "CANONICAL-JOINT-ODD-ANGLE-AFTER-Y68",
       "title": "Gemeinsamen ungeraden Winkel nach Y68-Trennung zertifizieren",
       "mathematical_status": "OPEN",
-      "scope": "Die verstärkte Familie nach Y68 quantitativ lokalisieren: gemeinsamer physischer Gesamtwinkel <10 Grad oder vollständig geprüftes Gegenpaar mit >10 Grad Trennung. Adaptive und direkte Linienrechnung bleiben auf Root UNRESOLVED. central <=3.405363 Grad und quarter <=3.765366 Grad sind bedingte Schnitte. Nächster Versuch: gemeinsame Gleichung Y_L X+Y_R=0 und zweite Ordnung auf den gleichen 19 Fällen; Diagnoseblätter ersetzen keine vollständige Überdeckung."
+      "scope": "Die verstärkte Familie nach Y68 quantitativ lokalisieren: gemeinsamer physischer Gesamtwinkel <10 Grad oder vollständig geprüftes Gegenpaar mit >10 Grad Trennung. Der gemeinsame Y-Kernel zweiter Ordnung auf den 19 Fällen ist bereits ausgeführt und registriert; seine Endpunktfolge schließt weitere bedingte Schnitte. Root und die acht Diagnoseboxen bleiben UNRESOLVED. Die Teilbefunde stehen in CANONICAL-Y-KERNEL-SECOND-ORDER-UNRESOLVED und CANONICAL-H0-FOLLOWUP-RELAXATION-BOUNDARY. Weitere Winkeldiagnose nur bei konkret benannter Verwendung für die konstruktive Fortsetzung; Diagnoseblätter ersetzen keine vollständige Überdeckung."
     },
     {
       "id": "CANONICAL-Y-KERNEL-SECOND-ORDER-ODD-LINE",

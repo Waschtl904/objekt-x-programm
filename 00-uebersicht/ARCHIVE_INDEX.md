@@ -2,6 +2,16 @@
 
 Dieser Einstieg dient der Navigation. Der aktuelle Forschungsstand steht in [CURRENT_STATE.md](CURRENT_STATE.md), die nächsten mathematischen Aufgaben in [NEXT_GATES.md](NEXT_GATES.md). Maßgebliche Statusquelle bleibt [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml).
 
+## Nachgetragene lokale Übergaben: 7. Oktober 2026
+
+Der [Abgleich älterer Arbeitsstände](archiv/LOCAL_HANDOFF_RECOVERY_2026-10-07/README.md)
+ordnet 73 lokale Archivfassungen ihren vorhandenen Main-Belegen zu.
+211 zuvor dort nicht bytegleich gefundene Dateien sind zusätzlich als
+historische Quellen gesichert, darunter frühe Kandidatenentwürfe,
+PR-137-Gegenprüfungen und die Kreuzform-/Residuen-Vorstufen vom 4. Oktober.
+Katalog und Byteprüfer trennen vorhandene Belege von nachgetragenen Originalen.
+Dieser Herkunftsnachtrag verleiht den Texten keinen neuen mathematischen Status.
+
 ## Root-Archivierung: 3. Oktober 2026
 
 Der [erste Umzug](archiv/root-journal-2026-10-03/README.md) ordnete 33 Dateien

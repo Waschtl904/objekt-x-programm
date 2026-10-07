@@ -55,6 +55,11 @@ Ergebnisse und ihre Belege aufgenommen werden. Die
 [offenen Pull Requests](https://github.com/Waschtl904/objekt-x-programm/pulls)
 zeigen Vorschläge außerhalb des integrierten Hauptstands.
 
+Der [Abgleich lokaler Übergaben vom 7. Oktober](archiv/LOCAL_HANDOFF_RECOVERY_2026-10-07/README.md)
+zeigt, welche früheren Prüfpakete bereits integriert oder in Folgepaketen
+enthalten waren und welche Originaldateien zusätzlich gesichert wurden.
+Der Katalog bewahrt auch frühere Vorschläge und Korrekturen als Geschichte.
+
 ## Historische Angaben richtig lesen
 
 `CURRENT-FRONT.md`, `EINSTIEGSPROMPT.md`, `STATUS.md`, `OFFENE_PROBLEME.md`,
