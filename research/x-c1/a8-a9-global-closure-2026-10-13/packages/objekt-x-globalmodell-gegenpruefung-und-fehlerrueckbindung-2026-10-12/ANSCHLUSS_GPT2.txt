@@ -1,0 +1,52 @@
+Für GPT 2 — fester Zielgram, Kraftfehler rückgebunden, Integral bleibt offen
+12. Oktober 2026
+
+Dein Paket besteht auch im frischen 4096-Bit-Neuaufbau. E_dir bleibt
+unverändert. Bitte zuerst PROOF_REVIEW.txt Abschnitte 2 bis 5 lesen.
+
+Konkreter neuer Anschluss:
+
+R0^f ist die TATSÄCHLICHE rohe Residualfunktion, in der allein low_F
+durch deinen festen Mittelpunkt low_F0 ersetzt wird. Setze
+
+ d0 >= ||(I-P_<104)(R0^f-Rhat0) D^-1/2||.
+
+Der große Verstärkungsfaktor für low_F-low_F0 lässt sich vermeiden.
+Aus R0_L=K V*-S0 J X_L folgt die Absorptionsungleichung
+
+ dphys <= [d0+e(m+400 x)]/(1-e),
+ e_even<4.351e-13, e_odd<8.373e-15,
+ x>=||Xresp D^-1/2||_HS.
+
+Unter dem noch offenen Gramtest Uhat<=(999/1000)E_dir/10920 darf m=20
+verwendet werden. BOOTSTRAP_AUDIT.json gibt dafür alle rationalen Preise.
+Für d0 genügen 6.76676334020e-7 bzw. 1.628857838363e-6. Dies ist kein
+Nachweis, dass das tatsächliche d0 bereits so klein ist. Die vollständigen
+übrigen Fehler sind noch zu binden; low_F darf nicht doppelt bezahlt werden.
+
+Die exakte Projektion P_<104 ist kein zwingender erster Schritt:
+Für jeden festen Polynomvorschlag p (Grad <=103) gilt
+ Uhat <= Gram_X(Rhat0-B C0-p).
+data/POLYNOMIAL_CANDIDATES.json fixiert Vorschläge aus der neuen 256er-
+Quadratur durch exakte rationale Koeffizienten in D-normalisierten
+Legendrekoordinaten. Die genaue Rücktransformation steht in PROOF_REVIEW.
+Diese Vorschläge haben noch KEIN zertifiziertes Approximationsintervall.
+
+Wichtige Integrationsdiagnose:
+128 -> 256 Knoten erhöht die größten Werte relativ zu H=E_dir/10920
+von ca. 5.7074e-5 -> 1.9377e-4 (gerade) und
+von ca. 3.9635e-5 -> 1.2757e-4 (ungerade).
+Das sind nur Quadraturwerte. Beide vollständigen Randintegrale und der
+Quadraturrest fehlen. Keine Konvergenz und kein oberer Gram sind damit
+bewiesen. Insbesondere dürfen die Prozente nicht in die bestehende
+Verlustbilanz als bezahlter globaler Anteil übernommen werden.
+
+Der konkrete nächste Beweisschritt ist ein vollständiges Integral-
+zertifikat für Rhat0-B C0-p, vorzugsweise mit getrennten analytischen
+Randentwicklungen und gerichteten Integralen auf den inneren Zellen.
+Parallel ist d0 einschließlich aller verbliebenen Modellfehler zu binden.
+Der alte Gamma160-Anteil bei identischem Projektor ist isoliert klein;
+die übrigen Projektions-/Quellen-/äußeren Kernelpreise bleiben erforderlich.
+
+Kein weiterer skalarer Budgetwechsel ist nötig. Keine Abschlussflags
+wurden gesetzt. A8->A9 und der Tailboden 1/20 bleiben offen.

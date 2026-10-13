@@ -1,0 +1,366 @@
+Objekt X — Galerkin84 und gemeinsame Verlustschranke
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Unveränderte Gegenstände
+
+Es gelten die gebundenen ursprünglichen Funktionen und Operatoren.
+a=3 log(2)/2, b=log(3), X=L²((a,b),2dx), m=cosh(x/2) bzw. sinh(x/2),
+mu=integral_0^a m², lambda(s)=integral_a^b m s und
+WX[s]=||s||X²+2|lambda(s)|²/mu. Lambda ist die momentkorrigierte
+Liftung. Die vier z sind die ursprünglichen physischen Funktionen;
+Y=QS sind die acht festgelegten tatsächlichen Polynome.
+T=(V+ran(Y))^(perp WX). Der Rest wird nicht durch bloßes Weglassen
+der ersten zwölf Legendre-Koordinaten ersetzt.
+
+Die Basis bleibt exakt J=QZ, Z=[D;I84], D=-(S_top*)^-1 S_bottom*.
+Aus S*Z=0 folgt ran(J)subset T, und J*WXJ=I+D*D.
+Die Intervalle für Q definieren keine neue Funktion: Q bleibt die
+ursprünglich definierte exakte WX-Isometrie. Für die Integration wird
+ein Mittelpunkt ihrer lokalen Koeffizienten verwendet und dessen
+vollständige X-Normabweichung gesondert bezahlt.
+
+L ell_n=(H_n+11/10)ell_n. Der übergebene vollständige Energiegram
+E84=L[J,J] wird mit seiner rationalen Mittelpunktmatrix und seinem
+Löwner-Radius 10^-58 übernommen und unabhängig erneut erzeugt.
+Es gelten I<=J*WXJ<1.000502 I, E84>=4.2 J*WXJ und L>=4.2 WX auf T.
+
+2. Exakt derselbe gemeinsame Verlustoperator
+
+delta=91/50, X_old=Ac Ac*/(1-rho),
+v(r)=c(r)-B_old h(r)/delta und H[r]=||h(r)||²/delta.
+X_old ist die gebundene Majorante des alten endlichen Schur-Inversen,
+nicht die vollständige alte Inverse. Die hohe Antwort h ist vollständig.
+
+Für die zwölf gebundenen Quellmodelle Phi_F0 sei
+C0(r)=q_b[F,Lambda r]-Phi_F0*Phi(r).
+Die ersten vier Zeilen verwenden die physischen z, die letzten acht
+die Liftungen der festgelegten Y. Die gemeinsame alte Kreuzantwort
+enthält hohe und niedrige Koordinaten im selben Merkmalsraum:
+
+ U0(F,r)=h_F0* h(r)/delta+(Ac*v_F0)*(Ac*v(r))/(1-rho).
+
+Mit der unveränderten rationalen Brücke N,P,Q8 setzen wir
+
+ A0(r)=(Ac*v(r), C0_z(r), C0_Y(r)-P*C0_z(r)),
+ D0=diag((1-rho)I191,N/2,Q8), R0=A0*D0^-1 A0,
+ S_eta=(1-eta)L-H, eta=10^-10.
+
+Insbesondere wird die signierte Residualisierung vor der Grambildung
+ausgeführt. Die 203 Zeilen von A0 sind NICHT die 203 verbleibenden
+Zeilen des anderen Abdeckungskriteriums. Es wird kein Kraftdatensatz
+zwischen diesen Kriterien ausgetauscht.
+
+3. Vollständige Integrale und Bündelung
+
+Für die 84 J-Spalten und zusätzlich acht feste Quellmodelle werden
+die vollständigen Kernquellen als Polynome, exakte logarithmische
+Terme und stückweise Primverschiebungen auf zehn Zellen dargestellt.
+Der reguläre Gamma-Kernel wird wie im gebundenen Vorgänger bis Grad
+224, der Momentträger bis Grad 160 dargestellt; ihre vollen analytischen
+Reste werden in Abschnitt 5 bezahlt.
+
+Sei g_j diese vollständige Modellfunktion und P_low die orthogonale
+Projektion auf ALLE 192 alten niedrigen Roh-Legendre-Koordinaten der
+jeweiligen Parität. Dann gilt exakt für die Modellfunktionen
+
+ h0_j=(I-P_low)g_j,
+ <h0_i,h0_j>=<g_i,g_j>-sum_(n<384, n=p mod 2) raw_n(i) raw_n(j).
+
+Der erste Gram rechts ist das vollständige Funktionsintegral; es wird
+keine endliche hohe Legendre-Liste verwendet. Alle Polynom-/Logarithmus-
+Produkte werden über vollständige Stammfunktionen integriert. Für die
+schnellere Auswertung werden Koeffizienten zu Matrizen zusammengefasst:
+die Integralmatrix einer Paarung t^i log_a(t), t^j log_b(t) hat den Eintrag
+integral t^(i+j) log_a(t) log_b(t). Fehlende Logarithmen bedeuten den
+Faktor 1. Die Primzellen werden einschließlich beider Kreuzterme addiert.
+
+Die 191 Koordinaten von B0 h0 verwenden die vollständigen logarithmischen
+Mischmomente, sämtliche alten aktiven Primverschiebungen und den alten
+Gamma-160-Kernel. Dessen endliche Legendre-Kopplungsbreite ist eine
+algebraische Eigenschaft dieses Polynommodells; der tatsächliche
+Operatorrest wird zusätzlich bezahlt. Das ist kein Abbruch von h.
+
+Die separate Einzelintegration verwendet genau die rationale
+Linearkombination der Arbeitsmittelpunkte der Matrixrechnung. Die
+Mittelpunktbildung ist bei Ballarithmetik nicht exakt linear; unabhängiges
+Bilden eines neuen Mittelpunktes nach der Linearkombination kann daher
+verschiedene, jeweils zulässige Modelle liefern. MODEL_RAY_*.json friert
+die exakten dyadischen Matrixmittelpunkte und ihre rationale Kombination
+ein. Der Fehler zur tatsächlichen Funktion Jw wird auch im separaten Lauf
+neu eingeschlossen. 96 rationale Gleichungen prüfen diese Modellbindung.
+Ein erster Lauf mit separat gebildeten Mittelpunkten bestätigte die
+Verletzung ebenfalls, wurde aber für den strengen Modellintervallvergleich
+durch diesen exakt gebundenen Lauf ersetzt.
+
+Fünf hohe Gram-Einträge werden anders ausgewertet: unmittelbar aus den
+vollen Funktionen h0_i und h0_j einschließlich sämtlicher Zellen.
+Die mitgerechneten acht festen Quellen prüfen zusätzlich 1528 c-Einträge,
+1528 Bh-Einträge und 64 hohe Gram-Einträge gegen die gebundenen Daten.
+
+4. Direkte Kreuzformen
+
+Die direkten z-Kreuzformen verwenden die volle logarithmische Wirkung
+von Q_b z, einschließlich aller aktiven Primverschiebungen, und die
+gesamte Liftung von J. Die vier z werden nicht durch reine Schalen-
+Liftungen ersetzt. Ihre hohen Quellmodell-Kreuzprodukte werden vollständig
+gegen die h0_j integriert.
+
+Für die acht Y werden harmonische Diagonale, exaktes logarithmisches
+Schalenpotential, Gamma-Selbstkernel Grad 32 und 32 Spiegelränge benutzt.
+Die vollständigen gebundenen Selbst-/Spiegelreste sind bezahlt. Auf den
+schmalen Schalen gibt es keine zusätzlichen Schale-Schale-Primstücke.
+Mit M_s=<m_core,Q_b Lambda s> und Q_mm=<m_core,Q_a m_core> gilt
+
+ q_b[Lambda Y,Lambda r]=q_b[Y_shell,r_shell]
+     -lambda(r)M_Y/mu-lambda(Y)M_r/mu
+     -lambda(r)lambda(Y)Q_mm/mu².
+
+Diese Vorzeichen sind unverändert aus der bilinearen Liftungsentwicklung.
+Es folgen H84=H[J,J], C84=A0 J, R84=C84*D0^-1 C84 und
+B84=(1-eta)E84-H84. Die tatsächlichen Matrixeinschlüsse werden in den
+Ergebnisdateien als gerichtete Modellintervalle plus analytische Fehler
+angegeben. Die Modellintervalle allein sind keine Zertifikate der
+unapproximierten Operatoren.
+
+5. Vollständige Fehler für das 84-Spalten-Bündel
+
+Alle Normen in diesem Abschnitt sind obere Schranken. Die Summe der
+quadratischen Spaltenfehler wird als Hilbert-Schmidt-Norm verwendet;
+sie kontrolliert zugleich die Operatornorm auf dem gesamten Bündel.
+
+eps_f bezahlt den gesamten Gamma-224-Rest, den Momentträgerrest und
+die lokale Koeffizientenrundung vor der Umrechnung in Monome. eps_h
+bezahlt zusätzlich die volle hohe Momentkorrektur. Mit dem gebundenen
+e_m und dem alten Gamma-Rest gamma_a gilt e_B=2 gamma_a+24 e_m.
+Die genauen Ausdrücke und rational einschließenden Werte stehen im
+Rechenprogramm und in den Ergebnisdateien.
+
+Für G_m=I+cn cn*, den gebundenen H_B>=B_old B_old* und den vollständigen
+Modellgram G_h folgt der gemeinsame niedrige Fehler
+
+ e_low²=3[tr(X_old G_m) eps_f²
+          +tr(X_old H_B) eps_h²/delta²
+          +tr(X_old) e_B² tr(G_h)/delta²].
+
+Die Faktoren 3 bezahlen die Summe der drei Fehleroperatoren gemeinsam.
+Für den hohen Gram ist damit
+
+ ||H84-H84_model|| <= e_H
+    =(2 sqrt(tr(G_h)) eps_h+eps_h²)/delta.
+
+Für jede der 12*84 direkten Paarungen wird 10^-25 bezahlt. Der Beweis
+aus dem Vorgänger gilt spaltenweise unverändert: jede J-Spalte hat lokale
+Koeffizientennorm <2, ebenso die festen Y; die lokalen Rundungen sind
+<10^-60. Die Domänen-/Polynombeschränkung liefert ||Q Lambda s||<10^10
+mal Koeffizientennorm. Es gelten ferner Gamma-224-Rest <10^-34,
+voller Schalenkernelrest <10^-50 und Momentträger-/Ableitungsrest
+<10^-320. Insgesamt bleibt die direkte Paarungsabweichung <10^-25.
+Dies ist ein analytischer Restpreis, kein aus Präzisionsübereinstimmung
+geschätzter Fehler.
+
+Setze K12=T_P*diag(N/2,Q8)T_P und
+tau_F=tr(K12^-1 Phi_F0*Phi_F0). Dann gilt
+
+ ||D0^-1/2(C84-C84_model)|| <= e_C
+  =e_low+sqrt[tau_F(e_low²+eps_h²/delta)]
+          +sqrt[12*84*tr(K12^-1)]*10^-25.
+
+Die hohe/niedrige alte Antwort wird dabei gemeinsam gepaart. Die
+Quellen Phi_F0 bleiben die festen Quellmodelle der Definition von A0.
+Für R84 genügt folglich der volle Löwner-Fehler
+
+ ||R84-R84_model|| <= 2 sqrt(tr(R84_model)) e_C+e_C².
+
+Der Energiefehler e_E=10^-58 gibt e_B84=(1-eta)e_E+e_H.
+Zusätzliche numerische Intervalle sind in allen Dateien erhalten und
+werden im rationalen Prüfer ebenfalls bezahlt.
+
+6. Rationale Näherungsantworten und Grenzen des endlichen Residuals
+
+Aus dem positiven Hilfsblock B84 wird eine Näherung für B84^-1 C84*
+erzeugt und danach jede Koordinate auf das feste rationale Raster 10^-60
+gesetzt. Diese 84*203 rationale Matrix X definiert exakt Z=JX.
+Es wird nicht vorausgesetzt, dass X die exakte Galerkinlösung ist.
+
+Das Modell von M=C84 X+X*C84*-X*B84 X wird angegeben. Mit
+dmax>=||D0|| und x>=||X|| genügt für die ganze 203*203-Matrix
+
+ ||M-M_model|| <= 2 x sqrt(dmax) e_C+x² e_B84.
+
+Der gespeicherte kleine Ausdruck C84_model*-B84_model X beschreibt
+nur das endliche Modellresiduum. Er ist NICHT der vollständige
+Formdual-Residualgram Q_R. Insbesondere sagt er nichts Unbezahltes über
+Richtungen außerhalb ran(J) aus.
+
+Für den vollen Formoperator auf T gilt R=A0*-S_eta Z. Ausmultiplizieren
+im Formdualraum ergibt ohne Galerkinvoraussetzung
+
+ R* S_eta^-1 R=A0 S_eta^-1 A0*-A0 Z-Z*A0*+Z*S_eta Z,
+ G_eta=M+R* S_eta^-1 R.
+
+Die geerbte Koerzivität S_eta>=(0.11-eta)L erlaubt die Inversordnung
+S_eta^-1<=(0.11-eta)^-1 R_L auf dem eingeschränkten Formdualraum.
+Folglich G_eta<=M+[10000000000/1099999999] Q_R mit
+Q_R=R*R_L R. Die Identität wird hier unmittelbar hergeleitet und
+setzt kein zusätzliches, nicht beigefügtes Residualpaket voraus.
+
+7. Notwendiger Test und rationaler Gegenzeuge
+
+Die hinreichende gemeinsame Zielschranke lautet
+
+ H+R0<=(1-eta)L auf ganz T,
+ äquivalent A0 S_eta^-1 A0*<=D0.
+
+Ihre notwendige Einschränkung auf ran(J) ist R84<=B84. Eine numerische
+verallgemeinerte Eigenrechnung dient nur zum Vorschlag eines Testvektors.
+Danach werden seine 84 Koordinaten auf ein festes rationales Raster
+10^-12 gesetzt. Der Zeuge r=Jw ist damit exakt bestimmt und liegt in T.
+
+Der unabhängige Prüfer benutzt ausschließlich rationale Arithmetik und
+gerichtete Quadratwurzelschranken. Für c=C84_model,mid w und
+rho_C als vollständigem Fehler einschließlich numerischer Intervalle
+berechnet er
+
+ R0[Jw] >= (sqrt_lower(c*D0^-1 c)-rho_C sqrt_upper(w*w))²,
+ H[Jw] >= w*H84_mid w-(e_H+numerischer Zeilenradius)w*w,
+ L[Jw] <= w*E84_mid w+10^-58 w*w.
+
+Ein strikt positiver Abstand R0[Jw]-S_eta[Jw] widerlegt genau diese
+gemeinsame hinreichende Verlustschranke für die festgelegten Daten.
+Ein vollständiger Residualnachweis kann eine solche Verletzung nicht
+reparieren: die Zieloperatorungleichung wäre bereits auf ran(J) falsch.
+
+Das ist KEIN negativer Zeuge der tatsächlichen Schurform. In der
+Verluststrategie sind sowohl der untere direkte Vergleich L als auch
+die alten Inversmajoranten und die finite Brücke Abschätzungen.
+Ebenso folgt daraus keine Widerlegung des anders definierten
+Abdeckungskriteriums. Ob eine Verletzung tatsächlich festgestellt wurde,
+steht im geprüften Ergebnisbericht und in AUDIT.json.
+
+8. Reproduzierbarkeit und offener Status
+
+Die Originalpakete, ihre Bindungen, die vollständigen neuen Matrixdaten,
+die rationalen Näherungsantworten, die Rechenprogramme und die Kontrollen
+werden zusammen ausgeliefert. Der normale Replay prüft rationale
+Zertifikate und Bindungen; die Integrationswiederholung ist ausdrücklich
+als zusätzlicher Rechenschritt gekennzeichnet.
+
+Keine behauptete tatsächliche Tailkoerzivität wird zur Inversion benutzt:
+S_eta>=(0.11-eta)L>0 folgt bereits aus der geerbten hohen Schranke.
+Der Tailboden 1/20 und der vollständige A8->A9-Anschluss werden durch
+die endlichen Rechnungen nicht bewiesen. FULL_REMAINDER_CERTIFIED=false.
+
+
+9. Zusätzliche volle Formdual-Obergrenze und benötigtes Budget
+
+Die folgenden groben Normschranken kontrollieren den vollständigen
+Residualoperator, ausdrücklich einschließlich des unendlichen Außenrests.
+Seien Mv und MU die geerbten vollen WX-Normschranken für die alte
+niedrige Antwort und die gesamte alte Antwort. Für die festen
+Modellquellen sei tau0=tr(K12^-1 Phi_F0*Phi_F0). Die Domänenschranke
+||Q_b F_j||<2*10^10 für jede der zwölf festen Quellen liefert
+
+ R0[r] <= B0 WX[r],
+ B0=Mv+96*10^20 tr(K12^-1)+2 tau0 MU.
+
+Hier werden die direkten Kreuze und die gesamte alte Kreuzantwort
+durch ||u+v||²<=2||u||²+2||v||² gemeinsam bezahlt. Der Faktor 96 ist
+2*12*2². Die niedrige Antwort wird separat addiert. Wegen L>=4.2 WX
+folgt ||L^-1/2 A0* D0^-1/2||²<=beta=B0/4.2.
+
+Für die festgelegte rationale Matrix X sei
+z²=tr(D0^-1 X* E84 X). Aus 0<S_eta<=(1-eta)L folgt auf dem vollständigen
+Formraum ||L^-1/2 S_eta Z D0^-1/2||<=(1-eta)z. Daher ist
+
+ Q_R <= [sqrt(beta)+(1-eta)z]² D0.
+
+Es wird nichts außerhalb ran(J) weggelassen. Die Dreiecksungleichung
+macht die Schranke allerdings sehr grob. RESIDUAL_BUDGET.json enthält
+die gerichteten Werte und kennzeichnet ihr Scheitern am Budget.
+
+Für den endlichen Modellteil wird R84_model<=ell B84_model durch
+gerichtete LDL-Prüfung zertifiziert. Das Modell-M der festgelegten
+Antworten ist wegen quadratischer Ergänzung höchstens
+C84_model B84_model^-1 C84_model*, also <=ell D0.
+Mit x=||X D0^-1/2|| gilt für den vollen Fehler von M in D0-Metrik
+eM<=2x e_C+x² e_B84. Somit genügt als tatsächliche Residualanforderung
+
+ Q_R <= (1-ell-eM)(0.11-eta) D0.
+
+Ein negativer Wert rechts bedeutet, dass diese M-Obergrenze kein
+positives Residualbudget lässt. Eine zusätzlich separat nachgewiesene
+notwendige Gateverletzung ist der stärkere, richtungsbezogene Befund.
+Die Normen hier sind L-formdual; der frühere L²-Faktor 20 wird nirgends
+eingesetzt.
+
+10. Getrennte Alternative: das positive logarithmische Potential behalten
+
+Aus den gebundenen direkten Formabschätzungen folgt auf der tatsächlichen
+Formdomäne in T
+q_b[Lambda r]>=(D_H+V_log+c)[r]-(beta_reg+beta_mom)WX[r],
+mit V_log(t)=-log(1-t²)/2>=0. Die bereits geprüften Schranken
+beta_reg+beta_mom<1/1000 und
+c-11/10-(1/1000)(1+nu/mu)>0 sowie WX<=(1+nu/mu)X ergeben unmittelbar
+
+ q_b[Lambda r]>=L[r]+V_log[r]=:L_plus[r].
+
+Hier wurde keine weitere negative Formkomponente weggelassen. Der frühere
+diagonale Vergleich hat lediglich das nichtnegative V_log verworfen.
+Sein Beibehalten ist daher eine getrennte stärkere ausreichende Route.
+
+V84=V_log[J,J] wird mit den exakten logarithmischen Stammfunktionen
+integriert. Für lokale Polynome bis Grad 95 folgt aus
+sup |r(t)|<=96/sqrt(2h) ||r||X und
+integral_(-1)^1 V_log(t)dt=2-2log2 die Schranke
+||V_log auf P95||<=9216. Damit bezahlt
+eV=9216(2||J_model||_HS eps_J+eps_J²) den ganzen Koeffizientenfehler.
+Die gerichteten Integrationsintervalle kommen hinzu.
+
+Für den separaten Test ist Bplus84=B84+(1-eta)V84. Die obere Schranke
+des größten verallgemeinerten Eigenwerts von (R84,Bplus84) wird durch
+gerichtete LDL-Prüfung nach Bezahlung von eR und e_Bplus bestätigt.
+Die Daten stehen unter optional_positive_potential_comparison. Dort
+stehen zusätzlich die separat auf das rationale Raster 10^-60 gesetzten
+Antworten Xplus und Mplus. Ihre Fehler werden wie in Abschnitt 6 mit
+Bplus anstelle von B84 bezahlt. Mit xplus=||Xplus D0^-1/2|| folgt
+Mplus<=[ellplus+2 xplus e_C+xplus² e_Bplus]D0. Das daraus resultierende
+hinreichende Budget für Rplus*R_L Rplus wird in RESIDUAL_BUDGET.json
+separat angegeben; ein erfüllender voller Restnachweis fehlt weiterhin.
+
+H,C,D0 und die ursprünglichen X,M werden dadurch NICHT umdefiniert.
+Für eine Fortsetzung auf ganz T wäre der Hilfsoperator
+Splus=(1-eta)L_plus-H auf dem zugehörigen vollständigen Formraum zu
+verwenden. Wegen H<=0.89L<=0.89L_plus bleibt Splus>=(0.11-eta)L_plus>0.
+Die einfache alte Formel für die eingeschränkte diagonale Inverse R_L
+ist keine Formel für R_Lplus. Man braucht R_Lplus aber nicht zwingend:
+Aus Splus>=S_eta>=(0.11-eta)L folgt ausdrücklich
+Splus^-1<=(0.11-eta)^-1 R_L. Für NEUE Näherungsantworten Zplus und das
+NEUE Residuum Rplus=A0*-Splus Zplus gilt damit
+
+ Gplus=Mplus+Rplus*Splus^-1 Rplus
+       <=Mplus+[10000000000/1099999999] Rplus*R_L Rplus.
+
+Das ist eine bezahlte Inversmajorante im alten L-Formdualraum, kein
+stillschweigender Austausch der Formnorm. Auf polynomialen Antworten
+liegt V_log Zplus in X, weil die logarithmischen Randterme quadratisch
+integrierbar sind. Der neue Residualterm ist somit wohldefiniert; die
+bisherigen Residualdaten dürfen dafür nicht übernommen werden.
+Ein scharfer vollständiger neuer Dualrest wurde hier nicht integriert.
+
+
+11. Bedingte Diagnose einer stärkeren Achterbrücke
+
+BRIDGE_DIAGNOSTIC.json ändert allein Q8 zu kappa Q8 mit kappa>=1.
+N,P,A0,H und Lplus bleiben gleich. Für R8=Ce*Q8^-1 Ce gilt auf J
+Rneu=R84+(1/kappa-1)R8. Weil Dneu>=D0, bleibt die alte Fehlerschranke
+e_C in der neuen inversen Metrik gültig. Auch der alte Löwner-Fehler
+e_R ist ausreichend: der Modellgram und seine Spur werden kleiner.
+Die beiden bedingten endlichen Ungleichungen Rneu<=Bplus und
+Rneu<=ell Bplus werden nach Bezahlung der vollständigen Fehler mit
+Arb und zusätzlich mit gerichteter rationaler LDL-Arithmetik geprüft.
+
+Die erforderliche neue mathematische Voraussetzung wäre eine wirkliche
+Untergrenze T_P*diag(N/2,kappa Q8)T_P für den tatsächlichen endlichen
+Schurblock. Sie ist durch diesen Test NICHT bewiesen. Die bisherige
+Brücke bleibt unverändert gültig; die Diagnose zeigt nur konkrete
+Zielgrößen für eine mögliche Verbesserung und keinen globalen Abschluss.

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "ANSCHLUSS_GPT1.txt": "b6e3050cc02f300aef9fe72dadd255bca11261e38800a5a5813e18ff09e42d70",
+    "audit_global_budget.py": "875bf988cb0a443c77744398c3e80cfcc1f7707a74bafb7c5bbe2d3abc21e724",
+    "GLOBAL_BUDGET.json": "dccdbfc982594655a56d4397bc6fc7af4f0d95c5145427c492a0a48f21bc4b66",
+    "GLOBALER_ANSCHLUSS.txt": "a9073f1d2ac2e1e7d9b1a1b75afe0d4adaeface78f3f8d89a4f9349089b6915d",
+    "interval_helpers.py": "4bc0fc7c7691ff0c98d91b6edde9dd3d9a9a22a924bd00d09c33a95e98d812d0",
+    "rational_ldl.py": "4bcbdb972117edf0af7b098c2dc00c1c9f921f020e1311ad31495bf1d4b66700",
+    "README.txt": "a8e598357de4650e445168c48eacc5ea3af614081ec16a5e87ec5a64df26db64",
+    "reproduce.py": "9cfc4fed174ad60f53fb0c8bc01f45cdf19113fb267677b89ffbababafacd7aa"
+  },
+  "full_remainder_certified": false
+}

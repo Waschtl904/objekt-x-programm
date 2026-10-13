@@ -1,0 +1,29 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "BERICHT.txt": "beb60dd113910e22ecd531daff72abb20a0cff3a2e6911136997322c8a4f7e17",
+    "expected/AUDIT.json": "a2ba42f76c6f9c3407761f25789b2b6991d9ebecac3e5a1fff4a8ca472ce47fd",
+    "HERLEITUNG.txt": "36c138a508448beb290d24e5e820122d1e77965dc1f450278b7adab332d5ff88",
+    "INPUT_STATUS.json": "8810b7d27415261b4cb2353a2b04b7271bbcf42ac54c27fbb49ebc8b27e9133b",
+    "inputs/Objekt-X-Basisabdeckung-und-Fehlerbudget-2026-10-10.zip": "0c54178047cabfe7afb688338b508b4201ae2e0e39e1e20ee025919f561b4c0b",
+    "inputs/Objekt-X-Gemeinsame-Verlustbilanz-2026-10-10.zip": "aa1077fc6772c4dc5d440e6c823e87c8e080c0b8c92711a69f31a6cce2a212a4",
+    "README.txt": "bf33f486f2aae2ca3cd7d6aca8394732a92ed726b19f7371944557d3476193c3",
+    "reproduce.py": "501413b9a4bea976e82c79d9bbbee8faa0ef3cb0af72885a2b75381e0a949bcb",
+    "work/basis-coverage-2026-10-10/AUDIT.json": "a2ba42f76c6f9c3407761f25789b2b6991d9ebecac3e5a1fff4a8ca472ce47fd",
+    "work/basis-coverage-2026-10-10/audit_basis.py": "5a01f517dbe908a9d160fb6223178c08c597d1e492e9f1136ee0dbfafc2efbe4",
+    "work/basis-coverage-2026-10-10/BASIS_EVEN.json": "21c7982e4c2f1a4e41a7864f8560ec40a9253cfccd770a98416fc4ceb675318d",
+    "work/basis-coverage-2026-10-10/BASIS_ODD.json": "e8f4b99a04a5e55916c77becd89434483a11dd809cd95bfcb505cf72a1ec4f88",
+    "work/basis-coverage-2026-10-10/build_package.py": "052f02776d4bf80bba6bbd15725cdad0348f193256989659384d916c57070773",
+    "work/basis-coverage-2026-10-10/compute_basis_coverage.py": "42f53bdadac3b715e91dc99b6742996340a73e29dfa5bb76addbccd2c0437ed7",
+    "work/basis-coverage-2026-10-10/GATE_EVEN.json": "63b34fd72e3345fd3590af4752694121f3fd46aa78d598fde74a364c73e82d27",
+    "work/basis-coverage-2026-10-10/GATE_ODD.json": "35f9f6cb502d35fa6d408df35147f0ac64610a66aec017fb8e5239479af0f3d9",
+    "work/basis-coverage-2026-10-10/package_reproduce.py": "501413b9a4bea976e82c79d9bbbee8faa0ef3cb0af72885a2b75381e0a949bcb",
+    "work/basis-coverage-2026-10-10/RESULT.json": "0d9c74c71937f20627c7512588480f54f8a0188f7f140ae7bae77e66fcadfc0b",
+    "work/tail-probe-2026-10-10/vendor/compute_inverse_energy_gate.py": "0c0f288d24710bf8e0a37b625825670ce508835a17e7755909557064535da519",
+    "work/tail-probe-2026-10-10/vendor/compute_source_mixed.py": "2d24184788ad846f6216dcef5a11a761ca4c3f4d4cd56cea3268b67cdbf48df9",
+    "work/tail-probe-2026-10-10/vendor/eight_source_refined.py": "baac27c2684d7683cdc586032a681a84d1b3f044750b9e2e80378fae7f204501",
+    "work/tail-probe-2026-10-10/vendor/log_integrals.py": "de20f48cc0858a9d7468f32b2f7f69471762618f2b392c71d62c487660bd9811",
+    "work/tail-probe-2026-10-10/vendor/prime_geometry.py": "7a436dc543fd2069cbd8715bc157e8df18a044a75ff294f5581387329f2e6177",
+    "work/tail-probe-2026-10-10/vendor/source_core.py": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772"
+  }
+}

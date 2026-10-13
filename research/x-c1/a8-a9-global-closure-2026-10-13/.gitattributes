@@ -1,0 +1,5 @@
+archive-chunks/** -text
+packages/** -text
+standalone/** -text
+SOURCE_BINDINGS.json -text
+SOURCE_BINDINGS.sha256 -text

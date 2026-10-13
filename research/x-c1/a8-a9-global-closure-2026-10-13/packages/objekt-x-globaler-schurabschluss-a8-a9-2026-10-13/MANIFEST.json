@@ -1,0 +1,27 @@
+{
+  "files": {
+    "ANSCHLUSS_GPT2.txt": "52cf09e4b0635596277f567503ed480845f87d8033e6de736c3507aa58cdbbe5",
+    "ASSEMBLY_AUDIT.json": "29534f1b3ac86874e7d89df6837bf88a5328721af99ea9920b93809a00d0624e",
+    "BERICHT.txt": "ce1268d6245c1170759fb6dc8e87b94e3e36a5ea42aff0be287c1d4c7d634409",
+    "FULL_CHAIN_REPLAY.json": "ff1ec1cd506d3c97857d2552b829ee752ff5633b3026fb4f2e3202d797d9ed6f",
+    "HERLEITUNG.txt": "9860ffca22a64140509fcce2876935473c74f08d8cd587a0b7fcf8e56c1cd167",
+    "INPUT_BINDINGS.json": "9597df2ee9feaade29c484989a14a0ef2946e5e9ac5ff84059185494699de1d8",
+    "README.txt": "b865162f135efbdf039b0e16bea319a1e40f0fe94c685378ee263b725df0bc4c",
+    "TESTED_CODE_EQUIVALENCE.json": "52f702a0ecbb0ec16641733347aa0121771a3ad5603cfa41423c2ec9f1f302fc",
+    "assemble.py": "8153e7140fb829179265939f9501a872c2f0991097c56610ba1cfcb8a07313d1",
+    "inputs/Objekt-X-Direkte-Restform-und-Positiver-96er-Block-2026-10-11.zip": "06b4cc975b8e6bd8f6088a151ea1dcaebd38862f7a50e3f2f2b22ebb05afef51",
+    "inputs/Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13.zip": "2ca3c682de8a529b12a0d628c2b606fd04df332d1299ccd36dff71ac3e53d80c",
+    "inputs/Objekt-X-Logrest-Gegenpruefung-und-groesseres-Ableitungsbudget-2026-10-12.zip": "6febe3404fc9fe040e925653a545b7b516554305cd1f148be19b79bb3d46f273",
+    "inputs/Objekt-X-Neue-Antworten84-und-Residualbudget-2026-10-11.zip": "5b41695ea53cd620210654af0a0389219631484e5f2584404fddd0f5af206fd3",
+    "logs/EXTERIOR_GEOMETRY.log": "0e975a995e600e54cde29ca26848e71f3f07034cc39fe10e7d7bc6764b636df6",
+    "logs/FULL_CHAIN_REPLAY.log": "d9afe2bbedd87d1765ab2923df3dc2798cad2df0b97d433b1e01e3e13d726e03",
+    "logs/GLOBAL_GRAM.log": "9061abedf2da9ed86d140401bfddff414e9dc568aabfcf5d20628bb435943ff4",
+    "logs/LOGS_AND_TARGET.log": "df48ad37adecb29e5a8d2ef8b4d8eac3428323098068cdf69e9a5cd315ee0821",
+    "logs/RESPONSES_AND_COMMON.log": "52df5b0050349c5ce5d3b51c2a80f8d388607797acab2f83f3cc1244232db282",
+    "logs/assembly.log": "b3e4f69752dbc41c3d7f526346d2cd165ba04a1f622d91144393777f76d2a8ba",
+    "logs/geometry-radius-checks.log": "57664f903643a6d128944c89ab5909d5a5ff17f52d206a5f3e702af04e55625e",
+    "logs/primitive-replay.log": "86b30ee5b12693409275b1dce853baa8572a3a56aff04aca11fc5a6e4af1e78e",
+    "replay_responses_portably.py": "132485e216db1a407f51aaca3249d51f11b763727cbe54327a9e43fbcbd5a218",
+    "reproduce.py": "32ac4c6d65bc716d7f4ef3af12c6ef7894816764621b8a41826e1109e8f9921d"
+  }
+}

@@ -1,0 +1,234 @@
+Objekt X — globale Fehlergegenprüfung und ein skalarer Integralanschluss
+13. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Geltung
+
+Die Aussagen über tatsächliche Operatoren stehen weiterhin unter den
+geerbten analytischen Kern-, Domänen-, Projektions- und Quellenannahmen.
+Dieses Paket schließt das globale Residualintegral NICHT ein. Es bestätigt
+den rationalen Replay der neuen Fehlerrechnung und liefert einen weiteren,
+vollständig festgelegten hinreichenden Prüfauftrag für dieses Integral.
+
+1. Gegenprüfung des vollständigen Modellfehlers
+
+Eingang: Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12-v2.zip
+SHA256 c323db96ea92b01ec887e83f4171b124150e3d81fa6bb61450bf66cccaf5cd8b.
+
+Der unveränderte rationale Replay besteht. Seine beiden 3072-Bit-
+Eingangsdatensätze liefern die vollständigen D-dualen Modellnormfehler
+
+ gerade:   delta_R < 1.155615796817e-11 < 1.2e-11,
+ ungerade: delta_R < 2.229208181542e-13 < 2.3e-13.
+
+Der rationale Replay prüft auch die andere Intervallaufteilung bei 4096
+Bit. Diese liefert wegen der gröberen Aufteilung etwas größere, weiterhin
+zulässige Obergrenzen; sie muss nicht dieselbe numerische Obergrenze liefern.
+98 gemeinsame Intervallfelder überlappen, sechs gebundene Legendre-Q-
+Kontrollen und vier Lücken-Gegenkontrollen bestehen.
+
+Der Parameteraufbau wurde hier frisch ausgeführt und stimmt exakt mit
+PARAMETERS.json überein. Die beiden vollständigen äußeren Integrations-
+läufe wurden in dieser Gegenprüfung NICHT erneut ausgeführt. Deren
+Koeffizienteneinschließungen und die gebundene Neuaufbauquittung wurden
+rational nachgespielt. Das ist von einem eigenen frischen 4096-Bit-
+Integralaufbau zu unterscheiden.
+
+Zehn neue Auszüge wurden gegen verfügbare vollständige Originaldateien
+verglichen: alle behaltenen JSON-Felder und die behaupteten Original-
+Dateihashes stimmen. Beim elften Auszug (Schalengamma) wurden die gemeinsam
+verfügbaren Felder verglichen; dessen zusätzlicher voller Selbstkernel-
+Restpreis bleibt eine gebundene geerbte Eingabe. Die vollständigen M_upper-
+und K12-Matrizen für den neuen Anschluss wurden gegen die Originalantworten
+gebunden. CURRENT_SNAPSHOT_AUDIT.json macht diese Unterschiede sichtbar.
+
+2. Prüfung der neuen analytischen Fehlerrechnung
+
+Für den äußeren Block auf Phi AC gilt mit der physikalischen Normierung
+genau die Cauchy-Darstellung aus PROOF.txt des Eingangs. Die Norm des
+Paritätspolynoms auf [-1,1] beträgt sqrt(2) I_f. Daher ist seine L1-Norm
+höchstens 2 I_f. Die geometrische Identität für 1/(s-t) liefert auf jeder
+inneren Teilzelle den dort angegebenen vollständigen Rest
+
+ 2 I_f (d/(s0-1))^N/(s0-1-d).
+
+Die Multiplikation mit 1/(2 sqrt(2a)) ergibt genau den in (6) verwendeten
+Faktor sqrt(a/2)/(h l); er ist kleiner als 15/l. Der Taylorrest wird
+also für das gesamte Cauchyintegral kontrolliert, nicht nur aus der
+beobachteten Abnahme seiner berechneten Koeffizienten extrapoliert.
+
+Auf der ersten Teilzelle wird die komplette Funktion als A(z)+L(z)log z
+behandelt. Die Dreiecksungleichung in L2(0,1) mit ||log z||=sqrt(2)
+rechtfertigt den vollständigen Randpreis. Der rationale Prüfer verlangt
+lückenlose Abdeckung bis 1. Damit sind die äußeren Normgrenzen weder
+Punktstichproben noch ein Integral mit abgeschnittenem Rand.
+
+Die Verwendung der scharfen äußeren Wirkung K Phi AC vor der Normbildung
+ist für den niedrigen Koeffizientenfehler entscheidend. Für
+V*=Phi AC-delta^-1 T_h* B* AC folgt aus den geerbten Normannahmen
+
+ ||K V*|| <= ||K Phi AC|| + 2 ||K|| sqrt(tr(AC AC* HB/(1-rho)))/delta.
+
+Das im Spurpreis zusätzliche 1/(1-rho) ist konservativ. Anschließend wird
+der vollständige low_F-Fehler in der K12-dualen Norm bezahlt. Die Quelle-
+und Projektionspreise betreffen ganze Funktionen; die nachfolgende äußere
+Gamma-Abweichung wird auf die gesamte Modell-Kernnorm angewendet. Der
+gesonderte glatte Preis 10^-300 wird am Ende addiert.
+
+Diese Prüfung übernimmt weiterhin die in der Eingangsherleitung
+ausdrücklich benannten Operator-, Graphnorm- und Quellenvoraussetzungen.
+Sie ist keine neue unabhängige Herleitung sämtlicher älterer Kernelreste.
+
+3. Unverändertes Ziel und feste Polynomapproximation
+
+Setze H=E_dir/10920, X=L2((a,b),2 dx), h=b-a und u=(x-a)/h.
+P=P_<104 ist die X-orthogonale Projektion auf Polynome bis Grad 103.
+Die drei Logfunktionen sind B(u)=(log u,log^2 u,log(1-u)); C0 ist der
+unveränderte feste rationale Logkoeffizientenblock. Setze
+
+ fhat=Rhat0-B C0,     Uhat=fhat*(I-P)fhat.
+
+Für jede feste 203-spaltige Polynomfunktion p vom Grad <=103 gilt
+
+ Uhat <= (fhat-p)*(fhat-p).                                  (A)
+
+Denn fhat-p=(I-P)fhat+(P fhat-p) ist eine orthogonale Zerlegung im
+Ausgaberaum. Das gilt gleichzeitig für alle 203 Eingaberichtungen.
+Die genaue niedrige Projektion ist daher keine logische Voraussetzung
+für einen hinreichenden oberen Gramnachweis.
+
+Das neue Paket fixiert solche p für beide Paritäten durch 104x203
+rationale Koeffizienten in der gewöhnlichen verschobenen Legendrebasis:
+
+ p(a+h u)=sum_(n=0)^103 P_n(2u-1) p_n.
+
+Die p_n sind in PHYSISCHEN Kraftkoordinaten gespeichert. Sie sind nicht
+die früheren D-normierten Koeffizienten und nicht als orthonormale
+Basis definiert. Ihr Vorschlag entstand aus der bisherigen 256er-
+Quadratur; das anschließende rationale Fixieren behauptet keine Güte.
+Jede andere feste Polynomwahl desselben Grads wäre ebenfalls zulässig.
+
+4. Neu: eine rational zertifizierte skalare Gewichtung
+
+SCALAR_GATE.json enthält je Parität eine invertierbare, untere rationale
+203x203-Dreiecksmatrix W (Dateifeld C_lower_triangular_rational).
+Der von der Konstruktion getrennte Standardbibliothek-Prüfer baut H
+aus dem vollständigen M_upper, D und den drei Logzeilen erneut auf.
+Mit gerichteter rationaler 100-Dezimalstellen-Arithmetik prüft er alle
+41209 Einträge der Kongruenz und beweist per Zeilensummenabschätzung
+
+ I < W H W* < (1001/1000) I.                               (B)
+
+Beide Spektraleinschließungen liegen tatsächlich sehr nahe bei
+1.00020001. Die exakten gerichteten Grenzen stehen im Audit.
+Die Dreiecksform und alle positiven Diagonaleinträge werden ebenfalls
+geprüft. Somit ist die Invertierbarkeit von W rational gesichert.
+
+Aus (B) folgt durch Kongruenz und Inversion
+
+ W^-1 W^-* < H,      H^-1 < W*W < (1001/1000) H^-1.        (C)
+
+Die skalare Größe
+
+ I_scalar = 2h integral_0^1
+       ||[Rhat0(a+h u)-B(u)C0-p(a+h u)] W*||_2^2 du        (D)
+
+ist damit ein konkretes hinreichendes Ziel. Es genügt, auf dem GANZEN
+Intervall einschließlich beider Randstücke zu beweisen
+
+                 I_scalar <= 999/1000.                   (E)
+
+Beweis: Für e=fhat-p gilt
+ e*e <= ||e W*||_HS^2 W^-1 W^-* <= I_scalar H.
+Zusammen mit (A) ergibt (E) genau Uhat <= (999/1000)H.
+Äquivalent kann man die elementare PSD-Ungleichung A<=tr(A)I auf
+W e*e W* anwenden. Diese Bedingung ist hinreichend, nicht notwendig;
+ein großer skalarer Wert wäre keine Widerlegung des Matrixtests.
+
+Es wird KEINE Summe getrennter ursprünglicher Kraftnormen verlangt.
+Rhat0, Logabzug und p müssen zuerst vollständig zusammengesetzt werden;
+danach folgt W*, erst dann die Summe der 203 Quadrate. So bleiben die
+für die Modellfunktion entscheidenden Auslöschungen erhalten.
+
+5. Anschluss des jetzt bezahlten Modellfehlers
+
+Der bisherige Anschluss liefert H>=u0 D mit
+u0=0.000001832433 (gerade), 0.000010613269 (ungerade).
+Der gerundete Logabzug hat den getrennten vollen Preis delta_C<10^-10.
+Der neue rationale Prüfer bestätigt mit den tatsächlichen delta_R aus
+dem Eingang erneut
+
+       4(delta_R+delta_C)^2 < (1/1000)^2 u0.               (F)
+
+Für g=R_X-B C_exact gilt daher
+
+ ||(I-P)g alpha||
+ <= [sqrt(999/1000)+(delta_R+delta_C)/sqrt(u0)]
+       sqrt(alpha* H alpha)
+ < sqrt(alpha* H alpha),
+
+SOBALD (E) bewiesen ist. Somit wäre der vollständige Gram des tatsächlich
+regularisierten Tails durch H kontrolliert. Sein alter Restanschluss
+verwendet anschließend den bereits gebundenen Young- und Logpreis.
+Ein eigener Tailboden 1/20 folgt nicht allein aus der endlichen
+96er-Reserve oder der neuen Gewichtung. Hier bleibt (E) offen.
+
+6. Ein möglicher validierter Integrationsweg
+
+Für innere Intervalle [l,r] kann die bereits erfolgreiche Idee des
+Eingangspakets auf die vollständig zusammengesetzte vektorwertige
+Funktion e W* angewendet werden: lokale Taylorpolynome plus vollständige
+analytische Reste. Für v(z)=sum_j v_j z^j auf -1<=z<=1 gilt exakt
+
+ integral_-1^1 ||v(z)||^2 dz
+   =sum_(j+k gerade) 2 <v_j,v_k>/(j+k+1).
+
+Mit einem vollständigen L2-Restpreis r_I und einer oberen Grenze E_I
+für die Polynomenergie kostet die ganze Teilzelle höchstens
+(sqrt(E_I)+r_I)^2. Die gemeinsame Quadratform ist vor groben
+Koeffizientennormen zu bevorzugen.
+
+An beiden Rändern muss eine Darstellung mit allen auftretenden
+Logarithmuspotenzen verwendet werden. Für nichtnegative ganze m,k gilt
+
+ integral_0^1 z^m (log z)^k dz = (-1)^k k!/(m+1)^(k+1).
+
+Dies erlaubt exakte endliche Modellgramanteile auch für Logprodukte.
+Der noch fehlende analytische Serien-/Darstellungsrest muss zusätzlich
+bezahlt werden. Insbesondere darf eine kleine Differenz zwischen dem
+modellierten und dem fest gerundeten Logkoeffizienten nicht als exakt
+null gesetzt werden. Kein Randintervall darf ausgelassen werden.
+Diese Beschreibung ist ein Anschlussweg, noch kein ausgeführter
+validierter Integrator für die gesamte Funktion.
+
+7. Numerische Diagnose und ausgeführte Kontrollen
+
+Die bisherigen 128er- und 256er-Punktwerte wurden für das NEUE feste p
+und W wiederverwendet. Es wurden keine neuen Funktionspunkte berechnet.
+Die so erhaltenen skalaren Quadraturwerte sind ungefähr
+
+                128 Knoten         256 Knoten
+ gerade         0.0000714371        0.0001962303
+ ungerade       0.0000496904        0.0001303885.
+
+Sie deuten lediglich darauf hin, dass der skalar hinreichende Test
+nicht offensichtlich zu teuer ist. Die Zunahme und die weiterhin
+fehlenden Rand-/Quadraturfehler verbieten eine obere Integralbehauptung.
+Diese Zahlen werden NICHT als bezahltes Budget verbucht.
+
+Die Gewichtungskonstruktion und die rationale Prüfung sind getrennte
+Programme. Zusätzlich verwirft der Prüfer die halbierte Gewichtung,
+die die erforderliche Inversmajorisierung verletzen würde. Das frisch
+entpackte Rückgabepaket prüft Eingangsmanifest, Eingangsreplay, alle
+neuen Ziel- und Kongruenzeinträge und den Fehleranschluss erneut.
+
+GLOBAL_MODEL_ERROR_REPLAY_PASSED=true
+RATIONAL_SCALAR_METRIC_CERTIFIED=true
+FIXED_POLYNOMIALS_AVAILABLE=true
+GLOBAL_SCALAR_INTEGRAL_UPPER_CERTIFIED=false
+GLOBAL_RESIDUAL_GRAM_CERTIFIED=false
+TAIL_FLOOR_1_OVER_20_CERTIFIED=false
+FULL_REMAINDER_CERTIFIED=false
+
+A8->A9 und der Tailboden 1/20 bleiben offen. Es wurde kein negativer
+tatsächlicher Schurzeuge gefunden. GitHub und Originalarchive wurden
+nicht verändert. Unabhängige externe mathematische Prüfung bleibt offen.

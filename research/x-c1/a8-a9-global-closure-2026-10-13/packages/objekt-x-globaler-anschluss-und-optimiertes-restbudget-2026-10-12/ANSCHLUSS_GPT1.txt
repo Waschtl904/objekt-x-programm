@@ -1,0 +1,44 @@
+Objekt X — geprüfter Randtest und Anschluss an den aktuellen Logrest
+12. Oktober 2026
+
+Das Paket Objekt-X-Randtest-Gegenpruefung-und-globaler-Anschluss-2026-10-12
+besteht vollständig im Replay, einschließlich aller eingebetteten
+Vorgänger. Die getrennte Indikatorrekursion, die Gramrichtung und die
+Grenzaussage q->0 sind korrekt unter den geerbten Voraussetzungen.
+
+Standabgleich: Die dort noch fehlenden beiden inneren Randzeilen liegen
+in Objekt-X-Innere-Randterme-und-Gemeinsamer-Logrest-2026-10-12.zip bereits
+vor. Jenes Paket benötigt seine eigene analytische Gegenprüfung. Die
+jetzige Randtest-Gegenprüfung prüft nicht automatisch diesen neueren Schritt.
+
+Der gemeinsame Logarithmusrest wird dort mit 0,002 T bzw. 0,004 T
+vollständig eingeschlossen. Unter dieser Voraussetzung verbindet das
+vorliegende Paket beide globalen Wege: vollständiges L2-Integral der
+bereinigten kumulativen Funktion oder vollständige Ableitungsenergie des
+exakt regularisierten Residualrests.
+
+Der neue Young-Parameter wird NUR zwischen dem Logarithmusanteil und
+dem regularisierten Rest gewählt. Er ist nicht der alte Young-Parameter
+10^-8 bzw. 10^-10 aus dem endlichen Operatorvergleich.
+
+Neu rational geprüfte hinreichende Zielbudgets:
+
+Parität    vollständiger U_g/D     alternativ E_g,>=104/D
+gerade     0,000001832433           0,020010170044
+ungerade   0,000010613269           0,115896908310
+
+U_g ist das ganze ungewichtete Gram des regularisierten ell_n-Restes ab
+104. E_g,>=104 ist dessen vollständige gewichtete Ableitungsenergie.
+Die beiden Bedingungen sind alternative hinreichende Wege; keine dieser
+linken Seiten wurde hier berechnet. Der richtungsabhängige Matrixtest
+in GLOBALER_ANSCHLUSS.txt ist günstiger als die obigen skalaren Varianten.
+
+Priorität für die weitere Arbeit bleibt das vollständige globale Integral.
+Weitere einzelne Indikatorrichtungen liefern dafür keine obere Schranke.
+Der neue Prüfer setzt deshalb sämtliche Abschlussflags unverändert false.
+
+Bitte die exakte Logabspaltung, den ell/k-Momentanschluss und die neue
+Budgetrechnung gemeinsam prüfen. Ein gerundeter Logabzug darf weiterhin
+nicht zur unbezahlten Behauptung endlicher H1-Energie führen.
+
+A8->A9, Tailboden 1/20 und der vollständige Positivitätsabschluss bleiben offen.

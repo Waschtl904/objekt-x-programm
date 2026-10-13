@@ -1,0 +1,123 @@
+Objekt X — der U00-Block ist gerechnet, der positive Schluss bleibt offen
+7. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Es liegen erstmals gemeinsame rationale 8x8-Obermatrizen für den
+Pilotblock B00 vor, mit ausdrücklich ausgewiesener Rückfallhülle für den
+alten Inversenrest in C. Die exakte Prüfung von I8-U00 schließt in keiner
+Parität. Es gibt keinen negativen Zeugen zur tatsächlichen Form.
+
+In den rational festgehaltenen diagnostischen Richtungen ist
+
+  y*U00 y / (y*y)  = ca. 1.408450043030   gerade,
+                  = ca. 1.681310570774   ungerade.
+
+Diese Zahlen beschreiben die berechneten Obermatrizen in den angegebenen
+Richtungen. Sie sind weder tatsächliche BR-Normen noch negative
+Formwerte. Alle vier Fälle (zwei Paritäten, zwei Präzisionen) bestätigen
+das Scheitern dieser Hülle mit exakter rationaler Arithmetik.
+
+Was neu berechnet wurde
+
+1. Alle 191 alten Mittelpunktkräfte auf den acht bisherigen Y-Spalten
+   je Parität, einschließlich vollständiger hoher logarithmischer und
+   Prim-Kopplungen. Daraus folgen die sechs gemeinsamen Kräfte T0 vY.
+
+2. Die vollständigen gemeinsamen Darstellungsfunktions-Grame der sechs
+   niedrigen Kraftkombinationen auf dem gesamten Rest R. Damit gelingt
+   eine gewichtete Delta-Fehlerhülle ohne globale alte Inversenspur:
+
+   (T0 vDelta)* H (T0 vDelta)
+      <= 0.000005023172 I8    gerade,
+      <= 0.000005251783 I8    ungerade.
+
+   Die Dezimalzahlen sind nach außen gerundet. Alle acht Spalten werden
+   gemeinsam behandelt; ihre Unabhängigkeit wird nicht vorausgesetzt.
+
+3. Die 185D-Mittelpunktenergie wird mit der vollständigen endlichen
+   Inversen D^-1 plus Transformationskorrektur ausgewertet. Beim geraden
+   Block fällt ihre Diagonallast dadurch von ca. 2.5–3.1 mit kappa I auf
+   ca. 0.023–0.037. Für die Delta-Fehler bleibt kappa weiterhin gültig.
+
+4. Die vier vollständigen C0-Funktionale, ihre Werte an Y und ihre
+   gemeinsamen W_X-Dualgrame auf R. C0 benutzt die bisherigen rationalen
+   alten Näherungsantworten. Für das tatsächliche C gilt weiterhin
+
+       C = C0 - rho* A^-1 g.
+
+   Die gemeinsamen alten Residuen sind bezahlt durch die neu exakt
+   geprüften Schranken
+
+       Gamma_rho <= 0.502920701482 M_minus    gerade,
+       Gamma_rho <= 1.439537542625 M_minus    ungerade.
+
+   Daraus folgen gültige gemeinsame C-Mittelpunkt- und Delta-Hüllen.
+   Der vorzeichenabhängige Ausdruck rho* A^-1 gY wurde jedoch noch nicht
+   direkt berechnet. Seine Hülle bleibt die ausdrücklich markierte
+   Rückfallstelle dieses U00-Versuchs.
+
+Budget in den diagnostischen Richtungen
+
+Beitrag                     gerade          ungerade
+19-Anteil                   0.808016        0.804549
+Alter hoher Anteil          0.066980        0.067849
+Sechs empfindliche Kräfte   0.008525        0.033982
+185D-Komplement             0.038872        0.022673
+C-Kopplungen                0.486056        0.752257
+Gesamt                      1.408450        1.681311
+
+Jede Zeile enthält ihren Mittelpunkt, ihre gemeinsame Kreuzmajorante
+und ihren reinen Fehler. Die vollständige exakte Zerlegung steht in
+U00_FINAL_3072.json und U00_FINAL_4096.json.
+
+Besonders aufschlussreich ist der C-Mittelpunkt:
+
+                                      gerade       ungerade
+C0-Mittelpunktgram                   0.200102      0.188226
+Alter inverser Residualgram          0.051142      0.170453
+Ungeklärter Kreuzterm, Majorante     0.202324      0.358239
+C-Mittelpunktobergram insgesamt      0.453569      0.716918
+
+Hier fehlt vor allem die gerichtete gemeinsame Information über C0_Y
+und rho* A^-1 gY. Die positive Kreuzmajorante darf nicht als gemessene
+physikalische Energie ausgegeben werden. Auch die anderen alten
+Antwortbeiträge bleiben Oberabschätzungen.
+
+Prüfungen
+
+- Vollständige neue Integrale bei 3072 und 4096 Bit.
+- 10.520 verglichene Intervalleinträge mit Überlappung.
+- Je Parität 48 niedrige Kraftwerte in beiden Integrationsrichtungen.
+- Zusätzlich 80 ausgewählte alte Kopplungen durch direkte Integration
+  der vollständigen alten Operatorwirkung gegengeprüft.
+- 179 geschlossene Integralwerte und vertauschte Integrationsreihenfolgen
+  prüfen die neue Logarithmus-Momentrechnung.
+- 70 Dateien der verwendeten drei Vorgängerpakete gegen ihre Manifeste.
+- Separater Python-Fraction-Prüfer: rationale U00-Rekonstruktion,
+  LDL-Abnahme, C-Residualschranken und vollständige Budgetgleichheit.
+
+Die winzige Rundung der Rechenpolynome wird auf dem ganzen Schalenraum
+bezahlt; diese Polynome werden nicht stillschweigend als Elemente von R
+behandelt. Originalarchive und geerbte Beweise wurden nicht geändert.
+
+Nächster sinnvoller Auftrag
+
+Eine gemeinsame alte Inversenrechnung für die vier Residuen rho und die
+acht Quellen gY je Parität: insbesondere den 4x8-Kreuzblock
+rho* A^-1 gY einschließen und zusammen mit C0_Y auswerten. Keine
+Eintragsobergrenze einer inversen Majorante darf als tatsächlicher Wert
+dieses Kreuzblocks eingesetzt werden. Die alte Antwort selbst verdient
+zusätzlich eine eigene Richtungsprüfung, weil ihre gegenwärtige Hülle
+einschließlich 19-Anteil bereits knapp über 1 liegen kann.
+
+Ein vergrößerter Pilotraum, eine höhere Halbintervallauflösung oder eine
+Tailrechnung sind durch dieses Ergebnis noch nicht begründet. G01,
+gamma01, beta_tail und der vollständige BR-Gate bleiben unberechnet.
+FULL_REMAINDER_CERTIFIED bleibt false. Objekt X bleibt das primäre Ziel.
+
+Stand der Veröffentlichung
+
+Dieses Paket ist lokal geprüft und für die Gegenprüfung vorbereitet.
+Es ist noch nicht auf GitHub/main übernommen. Gebundener Ausgangsstand:
+da50f0a21691e6fd253163e612a2af2898606581.

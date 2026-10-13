@@ -1,0 +1,42 @@
+Ergänzung zum laufenden neuen 203-Antworten-Paket
+
+Bitte INFINITE_REDUCTION.txt prüfen. Die neue Aussage benutzt genau die
+neue Majorante und die vollständige direkte Form; alte A0-Daten und
+Abdeckungszeilen werden nicht eingesetzt.
+
+1. Für die gewählte neue Zwölfer-Untergrenze rational prüfen:
+     K12_neu >= epsilon_parity K12_alt.
+   Für die festgelegte 84x203-Antwortmatrix prüfen:
+     ||X_response||_F <= 10^20.
+   Diese zwei Gates sind mangels deiner neuen Dateien hier noch offen.
+
+2. Für das kanonisch im X-Raum repräsentierte tatsächliche Residuum
+     R=A_neu* - S_neu,eta J X_response
+   setze R_J=J^*R. Dann gilt mit den geerbten Voraussetzungen und den
+   hier geprüften Quellgrenzen für jedes N>=96:
+
+   R^*R_LR <= (5/21) R_J^* R_J
+       +sum_(96<=n<N) R_n*R_n/(H_n+1.1)
+       +U_N/(H_N+1.1)+10^-250 D203_neu,
+
+   sofern U_N den VOLLEN Gram R^*(I-P_<N)R einschließt. Die Sterne
+   bezeichnen Adjunkte.
+
+3. R_n und U_N erst NACH Zusammensetzung der Residualfunktionen berechnen,
+   damit die Auslöschungen erhalten bleiben. Ein Modellresiduum oder ein
+   endlicher Legendreabbruch liefert U_N nicht.
+
+4. Die rechte Seite mit deinem neuen M_upper und beta^-1 in der gemeinsamen
+   Matrixbedingung prüfen. Richtungsabhängigen Slack D203_neu-M_upper
+   möglichst erhalten; ein uniformes Skalarbudget kann zu grob sein.
+
+Die exakte eingeschränkte Inversgeometrie samt ganzem Momentrest steht in
+Formeln (1)-(8). Insbesondere wird R_L nicht durch eine ungeprüfte
+unbeschränkte Diagonalinverse ersetzt. Der Momentpreis ist vollständig
+bezahlt. Der eigentliche Residualtail U_N bleibt der fehlende Nachweis.
+
+Zusatzbefund: Je eine feste kritische 96er-Richtung zusammen mit k96,...,
+k103 bildet einen nach vollständiger Integration positiv zertifizierten
+Neunerraum. Das ist kein Zertifikat für den ganzen 104er-Raum oder Tail.
+
+FULL_REMAINDER_CERTIFIED=false; TAIL_COERCIVITY_CERTIFIED=false.

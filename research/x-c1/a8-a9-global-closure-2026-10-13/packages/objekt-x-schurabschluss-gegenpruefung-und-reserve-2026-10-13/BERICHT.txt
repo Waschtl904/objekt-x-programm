@@ -1,0 +1,91 @@
+Objekt X — Schurabschluss gegengeprüft und Restreserve leicht verbessert
+13. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Die neue Schlussbilanz besteht in unserer Gegenprüfung. A8->A9 ist unter
+den gebundenen Operator-, Domänen- und vollständigen Raumzerlegungs-
+voraussetzungen positiv abgeschlossen. Die vollständige rationale
+Vorgängerkette und die neue Schlussrechnung wurden frisch nachgespielt.
+
+Die ursprünglichen Gesamtgrenzen von 0.4 Prozent (gerade) und 0.71 Prozent
+(ungerade) sind bestätigt. Eine getrennte exakte rationale Rechnung
+verschärft dieselbe vollständige Formdualmajorante zusätzlich leicht:
+
+                     Gesamtpreis relativ zu T_budget
+ Gerade              < 0.3954 Prozent
+ Ungerade            < 0.6967 Prozent
+
+Es handelt sich um den gesamten Formdualrest auf allen 203 Kraftkoordinaten,
+mit Basis84, acht Außenzeilen, vollständigem Momentrest, allen Logarithmen,
+Log/Rest-Kreuztermen und den übernommenen Fehlern. Die früheren 0.030 Prozent
+bezogen sich nur auf den regularisierten hohen Gram relativ zu H.
+
+Wie die zusätzliche Verbesserung entsteht
+
+Die vollständige Zielmatrix H wird vor der skalaren Abschätzung in die
+Schlussbilanz eingesetzt. Dadurch bleiben ihre negativen D- und Loggram-
+Terme berücksichtigt. Die verbleibenden drei Matrixkoeffizienten sind
+positiv. Die daraus folgende rationale Obergrenze ist strenger, ohne
+Antwortfunktionen, Geometrie, Operatoren oder Beweisziel zu verändern.
+
+Dies ist ein separater algebraischer Nachweis aus den gebundenen globalen
+Matrixungleichungen. Der zusätzliche Prüfer importiert weder assemble.py
+noch dessen Matrixarithmetik und verwendet keine Gleitkomma-Eigenwerte.
+Ein weiterer großer 203er-Matrixtest ist für diese Verschärfung nicht nötig.
+
+Für den genau definierten Schurvergleich auf T nach Eliminierung der zwölf
+physischen Quellen folgen zudem die konservativen unteren Grenzen
+
+ Gerade              > 1.3285e-6 W_X
+ Ungerade            > 7.9795e-6 W_X.
+
+Die tatsächliche entsprechend reduzierte Form dominiert diesen Vergleich.
+Diese Werte sind keine Aussage über die gesonderte Tailmetrik.
+
+Ausgeführte Prüfungen
+
+- Frischer vollständiger rationaler Replay: globaler Gram samt physischem
+  Modellfehler, Antworten samt Common96, Außenrest-/Momentgeometrie,
+  gemeinsamer Logrest und unveränderte Zielmatrix.
+- Frische rationale Schlussrechnung: je Parität 203 positive Pivots für
+  den vollständigen Residualvergleich und weitere 203 für die M-Unterreserve.
+- Aus dem gebundenen Grampaket erneut ausgeführt: 90 Cauchy- und 741
+  Integral-/Projektionskontrollen, sechs vollständige Primzellprüfungen,
+  80-zu-35-Loggruppierung und vollständiger nichtorthogonaler Radiuspreis.
+  Alle vier neuen Kontrollquittungen stimmen mit den gebundenen Daten überein.
+- Getrennte exakte Rekonstruktion aller drei Koeffizienten der Zielidentität,
+  der bisherigen Gesamtpreise und der verbesserten positiven Linearkombination.
+- Analytische Prüfung der Formdualidentität, des inversen beta-Faktors,
+  der Operatornorm-Übertragung auf den ganzen Rest, der inversen K-Ordnung
+  und beider quadratischer Ergänzungen bis zum tatsächlichen neuen Raum.
+- Rationale Gegenkontrollen verwerfen die umgekehrte inverse K-Ordnung,
+  einen fehlenden inversen beta-Faktor und fehlende Log/Rest-Kreuzterme.
+
+Die großen globalen Integrationen wurden hier nicht erneut erzeugt.
+Ihre vollständigen gerichteten Einschließungen und analytischen Restbeweise
+bleiben gebundene Eingaben. Die ausgeführten Replays und Kontrollen ersetzen
+keine unabhängige externe mathematische Prüfung der gesamten analytischen Kette.
+
+Reichweite
+
+CONDITIONAL_A8_TO_A9_POSITIVITY_CONFIRMED = true
+COMPLETE_FORMDUAL_RESIDUAL_COMPARISON_CONFIRMED = true
+INDEPENDENT_TIGHTER_SCALAR_COMPARISON_PROVED = true
+TAIL_FLOOR_1_OVER_20_CERTIFIED = false
+ALL_HORIZONS_CERTIFIED = false
+OBJECT_X_CONSTRUCTED = false
+RH_PROVED = false
+EXTERNAL_MATHEMATICAL_REVIEW_OPEN = true
+
+Die Raumzerlegung und die geerbten Operator- und Domänenaussagen werden
+ausdrücklich vorausgesetzt. Es werden keine endlichen Teilraumtests zu
+einer Aussage über einen ungeprüften Gesamtraum erklärt. Der gesonderte
+Tailboden 1/20 ist weder benötigt noch bewiesen noch widerlegt.
+
+Das kompakte Gegenprüfpaket enthält Herleitung, unabhängigen Prüfer und
+Quittungen. Das 169-MB-Eingangsarchiv wird durch seinen vollständigen Hash
+gebunden und für eine erneute Prüfung zusätzlich benötigt.
+
+Eingang: Objekt-X-Globaler-Schurabschluss-A8-A9-2026-10-13.zip
+SHA256: 65085974657257bd447d93342c5001d29e797b2fa70d876d53d36b587b16c2ba

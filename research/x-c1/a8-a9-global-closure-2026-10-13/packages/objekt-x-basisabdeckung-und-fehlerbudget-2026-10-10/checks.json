@@ -1,0 +1,36 @@
+{
+  "scope": "SYNTHETIC_ALGEBRA_ONLY",
+  "cases": {
+    "nonorthogonal_basis_and_full_joint_gram": "PASS",
+    "positive_schur_residual_and_norm_return": {
+      "status": "PASS_CONDITIONAL_SCHUR",
+      "basis_dimension": 2,
+      "functional_rows": 2,
+      "alpha": "1/10",
+      "leakage_budget": "1/20",
+      "conditional_tail_floor": "1/20",
+      "assumptions": "True full operator enclosures and domain/membership claims must be proved separately.",
+      "operator_input_verified": false,
+      "full_remainder_certified": false,
+      "synthetic_input": true,
+      "eta": "1/10",
+      "residual_charge_factor": "20",
+      "conditional_R12_floor": "5/961",
+      "shear_bound": "21/10",
+      "physical_A9_floor_asserted": false
+    },
+    "positive_tail_with_negative_finite_schur": "REJECTED_AS_REQUIRED",
+    "redundant_functional_rows_need_no_inverse": "PASS",
+    "rank_two_functionals_with_one_trial_direction": "PASS_WITH_PAID_NONZERO_LEAKAGE",
+    "hidden_direction_full_gram_rejected": "PASS",
+    "truncated_false_enclosure_can_pass_algebra_only": {
+      "demonstrated": true,
+      "lesson": "Full-operator enclosure must be established separately; the numerical checker cannot infer it."
+    },
+    "coherent_errors_need_cross_terms_or_young_charge": "PASS",
+    "singular_basis_rejected_and_psd_boundary_handled": "PASS",
+    "floating_input_rejected": "PASS"
+  },
+  "actual_operator_data_evaluated": false,
+  "full_remainder_certified": false
+}

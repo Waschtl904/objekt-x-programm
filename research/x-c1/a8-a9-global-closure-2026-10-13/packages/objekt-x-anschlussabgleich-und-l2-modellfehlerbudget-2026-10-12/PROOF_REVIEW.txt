@@ -1,0 +1,142 @@
+Objekt X — Anschlussabgleich und vollständige L2-Fehlerbedingung
+12. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Alle operatorbezogenen Aussagen bleiben unter den gebundenen analytischen
+Voraussetzungen. Es wird kein bisher unbekanntes globales Residualintegral
+ausgewertet. Die folgenden Matrix- und Fehlerrechnungen ändern keine
+tatsächliche Form und keine Antwortmatrix.
+
+1. Neues Zusatzpaket bestätigt
+
+SHA256 des unveränderten Eingangs:
+7a51fbebb8587ed2c61af9c933c8f3ae86f1412c94edb09eb17ce64f533a8a4f.
+
+Der rationale Replay bestätigt die vier 203er-LDL-Tests und die Ziele
+ U_g <=1.832433e-6 D bzw. <=1.0613269e-5 D,
+ E_g,>=104 <=0.020010170044 D bzw. <=0.115896908310 D.
+Die Parameter sind 427/20 und 74/5.
+
+Die kumulativen Formeln sind konsistent: Die Ableitung von
+sqrt(2h) integral_0^q Z_N(a+hu)du ist sqrt(2h) Z_N(a+hq), also ist
+das vollständige Ableitungsintegral genau der ungewichtete X-Gram
+von Z_N. Die drei angegebenen Log-Stammfunktionen und die vollständige
+endliche Projektion passen zu dieser Normierung. Der explizite
+m_N*kappa-Term unterscheidet die k_n-Familie korrekt von den rohen
+ell_n-Koeffizienten. Der Schluss verwendet die bereits gebundene
+ell_n-Verlustbilanz, nicht einen unbezahlten Wechsel der Geometrie.
+
+Die im Zusatzpaket gespeicherten OBEREN Optimalitätslücken liegen bei
+ungefähr 6.38e-9 und 9.89e-9. Unsere zusätzliche rationale Prüfung testet
+ausdrücklich diese oberen Intervallenden gegen 10^-7. Damit ist die
+Nähe zum Optimum der angegebenen SKALAREN Reduktion bestätigt.
+
+Gegenüber den bereits in unserem letzten Review gewonnenen skalaren
+Zielen beträgt die Verbesserung nur rund 0.00127952 Prozent bzw.
+0.00106912 Prozent. Dies ist keine neue globale Energieberechnung.
+
+2. Die bereits vorhandene richtungsabhängige Matrix bleibt günstiger
+
+Aus dem letzten eigenen Review ist die vollständige rationale Darstellung
+
+ E_dir=alpha T-b D-gamma C0*G C0
+
+gebunden, einschließlich der Modellradien und sämtlicher ausgewiesener
+Logkoeffizientenfehler. Das neue optimierte Ziel sei E_opt=A T-B D.
+
+Der neue Prüfer bestätigt in BEIDEN Paritäten streng
+
+                  E_dir-E_opt>0.                       (C1)
+
+Dazu wird der 206x206-Schurblock
+
+ [ ((alpha-A)T-(b-B)D)/gamma, C0* ; C0, G^-1 ]
+
+mit gerichteter rationaler Arithmetik geprüft. Je 206 positive Pivots
+stehen in CONSOLIDATION_AUDIT.json. Alle 203 Kraftrichtungen und alle
+Kreuzterme der drei Logarithmen bleiben dabei enthalten.
+
+Somit ist das bestehende E_dir weiterhin ein günstigeres hinreichendes
+Ziel als die neuen optimierten E_opt-Matrizen. Ein Wechsel des globalen
+Beweisziels ist durch die neuen skalaren Konstanten nicht erforderlich.
+Die vorhandene Matrix H=E_dir/10920 kann auch für den L2-Weg dienen.
+Aus (C1) und den neuen Tests folgt
+
+ H>=uD, u=1.832433e-6 bzw. 1.0613269e-5.               (C2)
+
+3. Ein gerundeter Logabzug ist im L2-Weg zulässig, mit Fehlerpreis
+
+Für den H1-Weg ist g=R_X-B C_exact mit den EXAKTEN führenden Zeilen nötig.
+Ein verbliebener Logarithmus darf nicht als H1-Rest behandelt werden.
+Der L2-Weg erlaubt dagegen einen festen rationalen Abzug C0.
+
+Sei P=P_<104 und
+ Z=(I-P)(R_X-B C_exact),
+ Zhat=(I-P)(Rhat_X-B C0).
+
+Rhat_X ist eine noch herzustellende vollständige Modellfunktion, nicht
+eine bloße endliche Liste von Residualwerten. Für die tatsächlichen
+Modellfehler seien nachgewiesen
+
+ ||(I-P)(R_X-Rhat_X)D^-1/2||_(C203 -> X) <=delta_R,
+ ||(I-P)B(C_exact-C0)D^-1/2|| <=delta_C.              (C3)
+
+Die zweite Schranke folgt bereits aus den gebundenen Logdaten. Mit G
+als voller Obermatrix von B*(I-P)B und den vollen Zeilenfehlern e_i
+(analytische Fehler PLUS Radien der Modellintervalle) gilt
+
+ delta_C <=sum_(i=1)^3 sqrt(G_ii)e_i <10^-10.          (C4)
+
+Diese Rechnung wurde unabhängig rational nachgerechnet; der engere
+Wert steht in der neuen Auditdatei. Eine Aussage über delta_R folgt
+daraus NICHT. Die globale Modellabweichung des vollständigen R_X
+muss zusätzlich und außerhalb aller endlichen Abbrüche gebunden werden.
+
+Es gilt ||(Z-Zhat)D^-1/2||<=delta_R+delta_C. Wähle epsilon=1/1000.
+Folgende zwei VOLLSTÄNDIGE Bedingungen genügen gemeinsam:
+
+ Uhat=Zhat*Zhat <= (999/1000) H,
+ 4(delta_R+delta_C)^2 <= epsilon^2 u.                 (C5)
+
+Beweis: Aus (C2) ist die Fehlernorm in H-Metrik höchstens
+(delta_R+delta_C)/sqrt(u)<=epsilon/2. Die Modellnorm in dieser Metrik
+ist höchstens sqrt(1-epsilon). Wegen
+sqrt(1-epsilon)<=1-epsilon/2 ist die tatsächliche Norm höchstens eins.
+Also ist U_g=Z*Z<=H. Das ist der vollständige hinreichende Anschluss;
+keine unendliche Koeffizientenfolge wird durch einen Abbruch ersetzt.
+
+Nach Bezahlung des bekannten delta_C würden etwa folgende zusätzliche
+GLOBALE Modellfehlergrenzen für delta_R genügen; die Werte sind rational
+nach unten gerundet:
+
+ gerade:   delta_R <=0.000000676796364171,
+ ungerade: delta_R <=0.000001628860045447.              (C6)
+
+Diese Zahlen sind Norm-Fehlerbudgets in (C3), KEINE gemessenen oder bereits
+bewiesenen Modellabweichungen. Sie sind auch keine Form- oder Tailböden.
+Der Faktor 999/1000 in (C5) reserviert 0.1 Prozent der Gram-Zielmatrix
+für die Kombination des Modellgrams mit dem vollständigen Funktionsfehler.
+
+4. Der jetzt konkret fehlende Input
+
+Die nächsten benötigten Daten sind eine vollständige obere Einschließung
+von Uhat und ein tatsächlicher Nachweis für delta_R. Bei der Modellbildung
+sollen die zusammengesetzten Residualfunktionen vor der Gramrechnung
+gebildet werden, damit ihre Auslöschungen erhalten bleiben.
+
+Ein mögliches Integrationszertifikat muss die gesamte Schale und die
+Randreste enthalten. Fehler der numerischen Gram-Integration gehören
+in Uhat_upper; fehlende Operator-/Funktionsanteile gehören in delta_R
+oder in einen stärkeren vollständigen Fehlergram. Einzelne Punktwerte,
+endlich viele hohe Koeffizienten oder bloße Präzisionsübereinstimmung
+liefern diese Nachweise nicht.
+
+Die neue Prüfung hat weder Rhat_X global aufgebaut noch Uhat oder
+delta_R für ein solches Modell bestimmt. Der Nachweis bleibt daher offen.
+
+INPUT_OPTIMIZED_BUDGET_CONFIRMED=true.
+PREVIOUS_DIRECTIONAL_TARGET_DOMINATES_NEW_OPTIMIZED_TARGET=true.
+ROUNDED_LOG_SUBTRACTION_L2_ERROR_BOUNDED=true.
+GLOBAL_MODEL_GRAM_COMPUTED=false.
+GLOBAL_MODEL_ERROR_CERTIFIED=false.
+FULL_REMAINDER_CERTIFIED=false.
+TAIL_FLOOR_1_OVER_20_CERTIFIED=false.

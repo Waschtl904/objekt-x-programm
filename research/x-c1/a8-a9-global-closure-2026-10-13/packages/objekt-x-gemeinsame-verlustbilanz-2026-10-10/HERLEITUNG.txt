@@ -1,0 +1,249 @@
+Objekt X — Herleitung der gemeinsamen Verlustbilanz
+10. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Geometrie und konkrete Restfunktionen
+
+Alle Räume, Paritäten, physischen Quellen und Archimedes-/Primformen sind
+die des gebundenen Vorgängerpakets. a=3log(2)/2, b=log(3), h=b-a,
+X=L²((a,b),2dx), m=cosh(x/2) beziehungsweise sinh(x/2),
+mu=integral_0^a m² und lambda(s)=integral_a^b m s.
+W_X[s]=||s||_X²+2|lambda(s)|²/mu. Die Liftung ist
+Lambda s = s auf der positiven Schale und -lambda(s)m/mu auf dem
+positiven Kern, mit der jeweiligen Paritätsfortsetzung.
+
+ell_n ist die orthonormale verschobene Legendre-Basis in X.
+J enthält die vier unveränderten W_X-orthonormalen V-Spalten; Y=QS
+enthält die acht festgelegten tatsächlichen Polynome. V und ran(Y)
+sind W_X-orthogonal, und W_Y=S*S. Die neue Prüffunktion ist exakt
+
+  r = ell_12 - J J* W_X ell_12
+             - Y (S*S)^-1 Y* W_X ell_12.                 (1)
+
+Damit liegt r im unveränderten T=(V+ran(Y))^(perp W_X).
+Die Intervalle aller zwölf Orthogonalitätsreste enthalten zusätzlich null.
+Dies allein ersetzt nicht die algebraische Projektionsidentität (1).
+Für die Integration werden die 96 lokalen Legendre-Koeffizienten durch
+binäre Mittelpunkte ersetzt. Der volle X-Normfehler wird VOR der schlecht
+konditionierten Umrechnung in Monome gemessen und danach bezahlt.
+Er ist kleiner als 10^-60. Die exakte Funktion ist (1), nicht ihr Mittelpunkt.
+
+L ell_n=(H_n+11/10)ell_n. Die beiden Werte L[r] liegen bei
+4,202560219208637 (gerade) und 4,202560223899697 (ungerade).
+Die vollständige Formdomäne ist durch die übernommenen Domänenlemmata
+abgedeckt: Diese Liftungen sind kompakt getragen und stückweise glatt.
+
+2. Vollständige alte Antwort
+
+Verwendet werden delta=91/50 und die gebundene endliche Inversmajorante
+X_old=A_c A_c*/(1-rho). Das ist NICHT die volle alte Inverse.
+Die alte Antwort ist
+
+  U[r] = delta^-1 ||h(r)||² + v(r)*X_old v(r),
+  v(r) = c(r)-delta^-1 B_old h(r).                       (2)
+
+Die Kernwirkung des Schalenpolynoms wird als Polynom plus exakte
+Logarithmen und stückweise Primverschiebungen dargestellt. Der reguläre
+Gamma-Kernel wird bis Grad 224, der Momentträger bis Grad 160 berechnet;
+die vollen analytischen Reste werden bezahlt. Alle 191 c-Koordinaten werden
+integriert. h0 ist die vollständige Modellfunktion minus ihrer vollständigen
+niedrigen Projektion. Ihre Norm und alle benötigten Kreuzprodukte werden
+direkt über Polynom-/Logarithmusprodukte integriert. Es gibt keinen
+Abbruch der hohen Legendre-Reihe.
+
+B0 h0 umfasst die exakten logarithmischen Mischmomente, alle alten aktiven
+Primverschiebungen und die geerbte Gamma-160-Näherung. Deren Rest und der
+hohe Momentfehler sind die gebundenen e_B- und e_m-Schranken. Fünf
+Mischkoordinaten werden zusätzlich aus der vollen alten Operatorwirkung
+auf der jeweiligen niedrigen Testfunktion errechnet.
+
+Mit eps_f für die vollständige Kernquellenabweichung, eps_h für die hohe
+Abweichung, G_m für den Gram der niedrigen Momentbasis und H_B für die
+gebundene Majorante B_old B_old* gilt für den niedrigen Fehler
+
+  e_low² = 3[tr(X_old G_m) eps_f²
+           +delta^-2 tr(X_old H_B) eps_h²
+           +delta^-2 tr(X_old) e_B² ||h0||²].             (3)
+
+Die Zahlen stehen in PROBE_*.json. Die Faktoren 3 bezahlen die drei
+Summanden vor Anwendung der empfindlichen Inversmajorante gemeinsam.
+Hoch- und Niedrigenergien werden mittels Normdreieck eingeschlossen.
+
+3. Zwölf direkte Kopplungen und gemeinsame alte Kreuzantwort
+
+F=(z_1,...,z_4,Lambda Y_1,...,Lambda Y_8) bleibt unverändert.
+Die endlichen Quellmodelle sind genau die im Vorgänger gebundenen Modelle.
+Ihre komplette hohe Kreuzantwort gegen h0 wird integriert. Insbesondere
+werden z_j nicht durch Liftungen ihrer Schalenrestriktionen ersetzt.
+Die alte Kreuzantwort wird gemeinsam gebildet:
+
+  U0(F,r) = h_F0* h_r0/delta
+            +(A_c* v_F0)*(A_c* v_r0)/(1-rho).             (4)
+
+Für z_j wird q_b^np z_j direkt mit seiner vollen logarithmischen
+Randpotentialwirkung berechnet und gegen die gesamte Liftung gepaart.
+Für Y_j wird zuerst die Schale-Schale-Form berechnet: harmonische
+Legendre-Diagonale, exaktes logarithmisches Randpotential, regulärer
+Selbstkernel Grad 32, 32 exponentielle Spiegelränge und volle Restschranke.
+Auf diesen schmalen Schalen gibt es keine zusätzlichen aktiven
+Schale-Schale-Primverschiebungen; die aktiven Verschiebungen verbinden
+Schale und Kern und sind in der Kernwirkung enthalten.
+
+Die Momentkorrektur ist exakt, einschließlich ihres Vorzeichens.
+Bezeichne M_s=<m_core,Q_b Lambda s> und Q_mm=<m_core,Q_a m_core>.
+Dann gilt
+
+ q_b[Lambda Y,Lambda r] = q_b[Y_shell,r_shell]
+    -lambda(r) M_Y/mu -lambda(Y) M_r/mu
+    -lambda(r)lambda(Y) Q_mm/mu².                        (5)
+
+Denn M_s=<m_core,Q_b s_shell>-lambda(s)Q_mm/mu. Einsetzen in
+die bilineare Entwicklung der beiden Liftungen ergibt (5).
+Die inneren Produkte berücksichtigen die volle Paritätsnorm 2dx.
+
+4. Absolute direkte Paarungsfehler
+
+Für jeden der zwölf direkten Einträge wird großzügig 10^-25 bezahlt.
+Dies ist keine aus Präzisionsübereinstimmung geschätzte Fehlerschranke.
+Sie folgt aus den folgenden analytischen Schranken.
+
+Es gelten 1/20<h<1/16, b<2, mu>9/100, nu=integral_a^b m²<1/10.
+Alle verwendeten lokalen Koeffizientennormen sind kleiner als 2; die
+Koeffizientenrundungen für r und Y sind kleiner als 10^-60. Aus
+sum_(n=0)^95(2n+1)=96², |P_n|<=1 und |P_n'|<=n(n+1)/2 folgt für ein
+Schalenpolynom mit Koeffizientennorm alpha die Schranke
+M<400 alpha und stückweise Ableitung <10^8 alpha, auch nach Hinzufügen
+des Momentträgers. Die Liftungsnorm ist kleiner als 3 für alpha<2.
+Die physischen z_j haben Grad höchstens 9 und Norm kleiner als 2;
+für sie gelten die nachfolgenden gröberen Schranken ebenfalls.
+
+Mit R0<2 und höchstens vier Sprungstellen liefert Lemma 1 des gebundenen
+DOMAIN_LEMMATA.txt
+
+ ||H_Gamma u|| <= (2 Lip(u)+20M)sqrt(2R0+2)
+                  +4M sqrt(J)+2sqrt(2)||u||_1.
+
+Der beschränkte skalare und endliche Primzusatz kann absorbiert werden.
+Somit genügt ||Q^np Lambda s||<10^10 alpha. Die direkte bilineare
+Änderung durch beide Koeffizientenrundungen ist zusammen <10^-48.
+Dies verwendet einen Operatornormwert auf der festen Polynomfamilie,
+keine behauptete beschränkte Norm des unbeschränkten Gesamtoperators.
+
+Der Gamma-224-Rest ist uniform <10^-34. Die Formänderung ist höchstens
+2b eps_Gamma ||u|| ||v||, hier <36*10^-34. Der vollständige Selbst- und
+Spiegelrest auf den Schalen ist geerbt <10^-50 in X-Operatornorm;
+ein Zuschlag von 10*10^-50 reicht für diese Paarungen.
+
+Für die Grad-160-Momentträgernäherung liegen sowohl der Funktionsrest
+als auch der Ableitungsrest unter 10^-320. Dies wird rational aus
+2(21/40)^161/161!/(1-(21/40)/162) und
+2(21/40)^160/160!/(1-(21/40)/161) geprüft. Das Domänenlemma und die
+obigen Normschranken geben einschließlich der Momentfaktoren einen
+Beitrag <10^-300. Insgesamt
+
+ 10^-48+36*10^-34+10*10^-50+10^-300 < 10^-25.             (6)
+
+Alle weiteren numerischen Rundungen der Integralformeln sind gerichtete
+Arb-Intervalle. Die Gradbeschränkung des Cache in efficient_moments.py
+beschränkt nur die benötigten Polynom-Stammfunktionen; sie schneidet
+keine analytische Reihe oder hohe Antwort ab.
+
+5. Verlustbilanz und Fehlerübertragung
+
+Die geerbte Brücke ist K12=T_P* diag(N/2,Q8) T_P,
+T_P(x,y)=(x+Py,y), Q8>=W_Y/25000. Setze C0=D_direct-U0 und
+E0=C0_Y-P*C0_z, VOR Bildung eines Grams. Der berechnete Modellwert ist
+
+ R_model = ||A_c* v_r0||²/(1-rho)
+           +2 C0_z* N^-1 C0_z + E0* Q8^-1 E0.            (7)
+
+Der letzte Teil wird zusätzlich gegen C0* K12^-1 C0 geprüft.
+Die alten hohen Kreuzprodukte sind in (4) vollständig enthalten.
+Setze tau_F=tr(K12^-1 Phi_F0*Phi_F0). Für den Übergang von der
+berechneten Restantwort zur exakten Restantwort genügt
+
+ e_rem = e_low + sqrt[tau_F(e_low²+eps_h²/delta)]
+                  +sqrt[12 tr(K12^-1)]*10^-25.          (8)
+
+Die wahre Modellquellen-Verlustnorm liegt zwischen
+sqrt(R_model)-e_rem und sqrt(R_model)+e_rem. Für den weiteren Übergang
+von den endlichen Quellmodellen zu den tatsächlichen Quellen gilt das
+bereits bewiesene epsilon_source<3*10^-25. Der zusätzliche Normfehler
+ist höchstens sqrt(epsilon_source U[r]). U[r] wird hier direkt über (2)
+eingeschlossen; es wird dafür keine 11-%-Voraussetzung angenommen.
+Zusammen mit der separat eingeschlossenen hohen Energie folgen die
+im Bericht angegebenen Intervalle für den tatsächlichen Loss_T.
+
+Dies widerlegt R0<=0,11 L auf ganz T in beiden Paritäten. Es widerlegt
+weder Loss_T<L auf ganz T noch die physische Schurpositivität.
+Das Bestehen zweier Tests beweist seinerseits keine dieser Aussagen.
+
+6. Neue gemeinsame Bedingung auf GANZ T
+
+Die folgende Umformulierung ist analytisch und konditional. Ihr Gram
+ist noch nicht integriert. Sie ersetzt die widerlegte starre Aufteilung.
+
+Schreibe H[r]=delta^-1||h(r)||². A0 sind die 203 Zeilen
+(A_c*v, C0_z, C0_Y-P*C0_z), mit exakten Restkräften, und
+D0=diag((1-rho)I_191,N/2,Q8). Es gilt R0=A0*D0^-1 A0.
+Setze eta=10^-10 und S_eta=(1-eta)L-H als Form auf dem exakten T.
+Die geerbte hohe Schranke gibt S_eta>=(0,11-eta)L>0.
+
+Der inverse Operator R_Seta ist der zu dieser Form auf T gehörige
+eingeschränkte Inverse. Es handelt sich nicht um eine unbeschränkte
+Inverse auf dem unprojizierten X. Der bekannte R_L ist entsprechend
+die eingeschränkte Inverse der L-Form, mit allen Momentbedingungen.
+Dann gilt die übliche positive Gram-Äquivalenz
+
+ H + R0 <= (1-eta)L
+       genau dann, wenn A0 R_Seta A0* <= D0.             (9)
+
+Sie folgt durch Normierung mit der S_eta-Energie und Gleichheit der
+Normen F*F und FF*. Die Kraftfunktionale werden auf der L-Energie-
+Vervollständigung von T verstanden; für die angegebenen stückweisen
+Quellen sind sie nach den übernommenen Domänen-/Stetigkeitslemmata
+definiert. Die tatsächliche globale Gramschranke bleibt offen.
+
+Eine explizite endliche Einschließung behält den hohen Anteil bei.
+In L-Energiekoordinaten setze B=R_L^(1/2) H R_L^(1/2),
+0<=B<=0,89 I, K_eta=B/(1-eta), kappa=0,89/(1-eta)<1 und
+F=A0 R_L^(1/2), G0=F F*. Für jeden N>=0 definiere
+
+ G_N = (1-eta)^-1 sum_(j=0)^N F K_eta^j F*.
+
+Aus der normkonvergenten positiven Neumann-Reihe folgt auf der
+vollständigen Restgeometrie
+
+ G_N <= A0 R_Seta A0*
+     <= G_N + kappa^(N+1)/(0,11-eta) G0.                 (10)
+
+Das ist eine volle Restschranke, keine hohe Modenabschneidung.
+Eine hinreichende neue endliche Grambedingung ist daher die obere
+rechte Seite von (10) <= D0. Ihre Einträge wurden noch nicht berechnet.
+Auch G0 aus dem Vorgänger ist bislang nicht vollständig integriert.
+
+7. Quellfehlerpreis für die neue gemeinsame Bedingung
+
+Wenn Loss0=H+R0<=(1-eta)L gilt, dann U<=Loss0<=L und auch die
+Modellkopplungsenergie <=L. Der endliche Quellfehler erhöht die
+Verlustform um höchstens
+
+ (2sqrt(epsilon_source)+epsilon_source)L < 2*10^-12 L.  (11)
+
+Diese Ungleichung wird rational durch Quadrieren geprüft. Somit
+würde (9) für eta=10^-10 nach Bezahlung dieses Fehlers noch mindestens
+(10^-10-2*10^-12)L=9,8*10^-11 L Reserve lassen. (11) ist auf ganz T
+gültig unter der genannten Vorbedingung; sie behauptet nicht, dass
+(9) bereits erfüllt oder überhaupt numerisch erreichbar sei.
+
+8. Reproduzierbarkeit und Grenzen
+
+Die neuen vollständigen Integrationen wurden lokal ausgeführt. Gespeichert
+sind die Programme, unveränderte Hilfsquellen, exakte Eingabebindungen,
+gerichtete Intervalle und Kalibrierungsdaten. Der normale Paket-Replay
+prüft die Hashbindungen, den Präzisionsvergleich und die endliche Algebra.
+Die Option --integrate startet die vollständigen neuen Integrationen
+erneut in einem eigenen Verzeichnis. Sie braucht Python und python-flint.
+Die geerbten ursprünglichen Integrationen werden dabei nicht neu gerechnet.
+
+Keine unabhängige externe mathematische Begutachtung ist erfolgt.
+FULL_REMAINDER_CERTIFIED=false; FULL_203_TAIL_GRAM_COMPUTED=false.

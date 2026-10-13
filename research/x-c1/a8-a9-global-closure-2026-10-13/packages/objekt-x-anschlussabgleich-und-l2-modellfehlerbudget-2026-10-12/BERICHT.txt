@@ -1,0 +1,33 @@
+Objekt X — optimierte Budgets bestätigt; gemeinsames Beweisziel beibehalten
+12. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Das Zusatzpaket besteht im rationalen Replay. Die neuen skalaren
+Energieziele 0.020010170044 D und 0.115896908310 D sind bestätigt,
+unter den gebundenen analytischen Voraussetzungen. Die vier 203er-Tests
+und die Nähe zum Optimum der verwendeten skalaren Reduktion stimmen.
+
+Zwei zusätzliche gerichtete rationale 206er-Schurtests zeigen:
+Die bereits im letzten eigenen Review gespeicherte richtungsabhängige
+Zielmatrix E_dir ist in beiden Paritäten strikt größer als die neuen
+optimierten Zielmatrizen. E_dir kann damit das gemeinsame Ziel bleiben.
+
+Die zusätzlichen skalaren Verbesserungen gegenüber unserem letzten
+Review betragen nur rund 0.0013 bzw. 0.0011 Prozent. Für den eigentlichen
+Abschluss fehlen weiterhin die Werte der globalen Integrale.
+
+Neu konkretisiert ist der L2-Weg mit einem festen rationalen Logabzug:
+Sein vollständiger Koeffizientenfehler ist eingeschlossen. Die Herleitung
+gibt einen gültigen gemeinsamen Test für einen vollständigen Modellgram
+und einen zusätzlichen globalen Funktionsfehler. Dabei wird keine
+endliche Ableitungsenergie eines fehlerhaft regularisierten Restes
+vorausgesetzt. Die Modellgram- und globalen Modellfehlergrenzen selbst
+sind noch nicht berechnet.
+
+Die aktuelle Prüfung enthält keine neuen Rand- oder Residualintegrationen.
+Die früheren analytischen Grenzen und geprüften Daten bleiben Eingaben.
+Die Originalarchive und GitHub bleiben unverändert.
+
+GLOBAL_MODEL_GRAM_COMPUTED=false.
+GLOBAL_MODEL_ERROR_CERTIFIED=false.
+FULL_REMAINDER_CERTIFIED=false.
+A8->A9 und der Tailboden 1/20 bleiben offen.

@@ -1,0 +1,35 @@
+Bitte zunächst reproduce.py ausführen; danach besonders HERLEITUNG.txt
+Abschnitte 3 bis 6 prüfen. Das neue Resultat ist ein positiver endlicher
+gemeinsamer 96er-Block in beiden Paritäten, kein unendlicher Abschluss.
+
+Die direkte Restform ist vollständig eingeschlossen. Mit der alten
+Majorante bleiben rationale obere Gegenwerte negativ. Der neue positive
+Test verwendet zwei Änderungen der Majorante konsistent auf allen Quellen:
+
+1. delta_alt=91/50 wird durch delta_neu=18219/10000 ersetzt. Der bereits
+   geerbte Hochraumbeweis erlaubt diese weniger grobe Schlussabrundung.
+2. In der alten Kopplungsmajorante wird der Young-Parameter 10^-3 durch
+   10^-10 ersetzt; der gesamte neue eB²-Preis wird bezahlt. Dies ist
+   nicht der alte Young-Schritt im Achterblock.
+
+Bitte insbesondere prüfen:
+- Ableitung F_neu<=A_low-H_B,neu/delta_neu aus den gebundenen alten
+  rationalen Matrizen, ohne eine unbelegte Monotonieannahme;
+- vollständige neue 191er-Inverskongruenz und alle 96-Quellen-Kreuzenergien;
+- E_total=2 diag(E_F,E_J I84) und dessen Fehlerpreis in G=diag(K12,alt,I84);
+- direkte untere 96er-Matrix einschließlich physischer z und z-Y-Fehler;
+- die rationalen Reserven 2547/10^9 beziehungsweise 17441/10^9 in G.
+
+Der unabhängige Rationalprüfer rekonstruiert diese Matrizen aus den
+Ausgangsdaten; er prüft nicht lediglich den gespeicherten fertigen Endblock.
+Alte vollständige Quellintegrationen bleiben gebundene Eingaben.
+
+Anschluss für GPT 2 nach Prüfung:
+Neue Näherungsantworten und vollständigen Formdual-Residualgram für die
+neue Majorante und tatsächliche direkte Restform aufbauen. Die neuen
+203 Kraftzeilen bestehen aus 191 neuen niedrigen Features plus zwölf
+physischen Kreuzzeilen ohne alte P-Residualisierung. Der Abdeckungstest
+besitzt weiterhin seine eigenen 203 Zeilen. Alte Residuen sind ungültig.
+
+Eine positive endliche Reserve ist nachgewiesen; der Tailboden 1/20,
+A8->A9 und der gesamte unendliche Rest bleiben offen.

@@ -1,0 +1,47 @@
+{
+  "status": "PASS_REBUILT_CONDITIONAL_FINITE_GATES",
+  "bits": 512,
+  "cases": [
+    {
+      "parity": "even",
+      "galerkin_sha256": "c23b9c161f62a40beaf6382692d89fa46b9c699639b841f45441d46641c04a8e",
+      "proposed_multiplier": "111/100",
+      "conditional_eigenvalue_upper": "246529/250000",
+      "checks": {
+        "R84_entries_rebuilt": 7056,
+        "B84_entries_rebuilt": 7056,
+        "conditional_R84_entries_rebuilt": 7056,
+        "conditional_gate": {
+          "positive_pivots": 84
+        },
+        "conditional_eigenvalue_upper": {
+          "positive_pivots": 84
+        }
+      },
+      "stronger_bridge_proved": false,
+      "full_remainder_certified": false
+    },
+    {
+      "parity": "odd",
+      "galerkin_sha256": "10344016dbb68dd7895ea10b8550b05043059c52f2214c3840d5d338192c6a79",
+      "proposed_multiplier": "129/100",
+      "conditional_eigenvalue_upper": "986367/1000000",
+      "checks": {
+        "R84_entries_rebuilt": 7056,
+        "B84_entries_rebuilt": 7056,
+        "conditional_R84_entries_rebuilt": 7056,
+        "conditional_gate": {
+          "positive_pivots": 84
+        },
+        "conditional_eigenvalue_upper": {
+          "positive_pivots": 84
+        }
+      },
+      "stronger_bridge_proved": false,
+      "full_remainder_certified": false
+    }
+  ],
+  "new_operator_integrations": false,
+  "conditional_gate_does_not_prove_bridge": true,
+  "full_remainder_certified": false
+}

@@ -1,0 +1,106 @@
+Objekt X — residualgeführter alter Variationsversuch
+8. Oktober 2026. AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN.
+
+Notation: X^* bezeichnet das Adjungierte. 2 Re X bedeutet X+X^*.
+Die Implementierung verwendet reelle Matrizen und deren Transponierte.
+Die korrigierte Herleitung des Vorgängers liegt zusätzlich bei; sein
+ursprüngliches Archiv und seine numerischen Dateien bleiben unverändert.
+
+1. Festgelegter Ausgangspunkt
+
+Der alte positive Operator A, die zwölf Quellen Z, die acht Y-Bilder,
+der signierte C-Eingang und der Horizont A8->A9 bleiben dieselben.
+Aus dem vorigen Versuch ist Q=P+H_alt V_alt rational in den alten
+momentkorrigierten Legendrekoordinaten festgelegt. Die vorherige Untergrenze
+L_alt liegt unter F(Q)=Z^*Q+Q^*Z-Q^*AQ. Die alte obere Energiematrix U bleibt
+fest. Es gilt weiterhin L_alt <= E=Z^* A^(-1) Z <= U.
+
+2. Endlicher Scan und Auswahl
+
+Je Parität werden die 320 alten hohen Grade von 384 bis 1022 bzw. von
+385 bis 1023 betrachtet, jeweils mit der ursprünglichen Mellinkorrektur.
+Die vollständigen Modellpaarungen der aktuellen Residuen R=Z-AQ werden
+auf diesen Funktionen integriert. Dieser endliche Scan ist keine Aussage
+über den ausgelassenen unendlichen Rest.
+
+Die rationalen aktuellen U00- und Relaxationsrichtungen haben acht
+Y-Koordinaten. Sie werden jeweils als (0,y) in den zwölfdimensionalen
+Quellraum eingebettet. Zusätzlich wird (M^(-1) C_L y,0) berücksichtigt,
+mit C_L=B-L_alt,zY. Diese vier z-Anteile erfassen die zugehörige C-Kopplung.
+Im ungeraden Sektor kommt eine rationale diagnostische Richtung zum
+kleinsten Wert von M-(U-L_alt)_zz hinzu. Rundung und Normierung dieser
+Auswahlrichtungen entscheiden nur über den gewählten Trial.
+
+Für die Auswahl dient w_n=1+H_n mit H_n=sum_{k=1}^n 1/k als positiver
+Hauptteil-Präkonditionierer. Er ist keine bewiesene Ersatzmatrix für A
+oder dessen Inverse. Residualkoeffizienten werden durch w_n geteilt und
+auf vier vorab festgelegte Bänder begrenzt:
+384..543, 544..703, 704..863, 864..1023, jeweils mit passender Parität.
+
+Die Kandidaten werden pro Quellrichtung in der rohen L2-Koeffizientennorm
+ausgeglichen. Pivotiertes Gram-Schmidt wählt daraus zwölf Funktionen.
+Ihre vollständigen 320x12-Koeffizienten sind rational auf 100 Dezimalstellen
+festgelegt. FROZEN_BASIS.json bindet diesen Schritt vor der Rechnung der
+vollen neuen Formmatrix. Die Chronologie ist durch den Arbeitsablauf und
+Hashbindungen dokumentiert; aus einem fertigen Archiv allein ergibt sich
+kein unabhängiger historischer Zeitnachweis.
+
+3. Volle Formrechnung und Variationsschritt
+
+Für die so festgelegte Synthese Psi werden berechnet:
+
+ K=Psi^*(Z-AQ),       T=Psi^* A Psi.
+
+Die Quellenpaarungen entstehen durch die exakte rationale Kontraktion
+des Scans mit den festgelegten Koeffizienten. T enthält die vollständigen
+logarithmischen Anteile, alten Primverschiebungen und den regulären alten
+Gamma-Modellkern. Dessen vollständiger Rest wird separat bezahlt.
+Vier Formeinträge je Lauf werden zusätzlich direkt als Produktintegrale
+berechnet. Alle ursprünglichen Formidentitäten bleiben Voraussetzungen.
+
+Eine rationale Matrix V wird aus T_mod V=K_mod vorgeschlagen. Für W=Psi V
+gilt die exakte Variationsidentität
+
+ F(Q+W)-F(Q) = K^* V + V^* K - V^* T V.
+
+Es wird keine unendliche Inverse durch die endliche Inverse von T ersetzt.
+Auch ein ungenau gelöstes endliches System gibt einen gültigen Trial.
+
+4. Gemeinsames vollständiges Fehlerbudget
+
+Mit gamma=2.1 epsilon_Gamma_alt, Q_G=Q^*Q, W_G=W^*W und der gemeinsamen
+Quellenfehlermajorante
+
+ E_Z=diag(2 epsilon_z^2 W_z, 2 epsilon_Y^2 I_8)
+
+begrenzt für positive rationale tau_s,tau_a die Matrix
+
+ E_err=tau_s W_G+E_Z/tau_s
+       +gamma [tau_a Q_G+(1+1/tau_a)W_G]
+
+den gesamten Verlust durch Quell- und Operatormodellfehler. Insbesondere
+werden die zwölf Spalten gemeinsam behandelt; Q_G enthält auch die zwölf
+Funktionen des vorigen Variationsversuchs einschließlich Mellinkorrektur.
+
+Eine rationale Löwner-Untermatrix J wird unter
+K_mod^* V+V^* K_mod-V^* T_mod V-E_err gelegt. Zusätzlich wird die offen
+ausgewiesene Reserve 10^(-40) I_12 abgezogen. Ein separater Fraction-Prüfer
+rekonstruiert alle Matrixprodukte mit rationaler Intervallarithmetik und
+bestätigt die Unterordnung von J. Damit gilt E>=L_neu=L_alt+J.
+
+5. Schlussprüfung und Grenzen
+
+In beiden Paritäten und beiden Präzisionsläufen sind J und U-L_neu exakt
+positiv. Die aktuelle alte Untergrenze steigt daher streng. Mit L_neu
+wird dieselbe gemeinsame Energie/C-Quadrat-Majorante erneut ausgewertet.
+Alle übrigen Delta-, Modell- und 19-Anteile bleiben bestehen.
+
+U00<I schließt nicht. Auch die neue endliche Matrixrelaxation gestattet
+ungünstige Belegungen E=L_neu, Delta=0. Diese Belegungen werden nicht als
+Realisierungen des ursprünglichen Operators behauptet.
+
+Der endliche Scan und SELECTION_DIAGNOSTIC.json enthalten keine Schranke
+für die Grade oberhalb 1023. Die dortige harmonische Vergleichsenergie
+dient nur der Diagnose der Wahl. Maßgeblich für den bewiesenen Gewinn
+sind die vollständige Formmatrix und die gemeinsame Fehlerhülle.
+G01, gamma01, beta_tail, der vollständige BR-Gate und Objekt X bleiben offen.

@@ -1,0 +1,294 @@
+Objekt X — vollständiger globaler L2-Modellfehler
+12. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis und Grenzen
+
+Unter den bereits gebundenen Operator- und Domänenvoraussetzungen wird
+jetzt der VOLLSTÄNDIGE tatsächliche Modellfehler des zuvor implementierten
+globalen Funktionsmodells eingeschlossen. Mit P=P_<104 und der bisherigen
+Metrik D gilt in der Hilbert-Schmidt-Norm nach D-dualer Skalierung:
+
+ ||(I-P)(R_X-Rhat0) D^(-1/2)||_HS
+   < 1.2*10^-11  (gerade),   < 2.3*10^-13  (ungerade).       (E)
+
+Hier ist Rhat0 genau die globale Funktionsdefinition des Pakets
+Objekt-X-Globale-Funktionsdarstellung-und-glatte-Korrektur-2026-10-12,
+SHA256 86e510b6d68f5b70345f7ce710491fd09e7d8818cff3be6565fd8254d16581e3.
+Es ist keine Interpolation seiner drei gespeicherten Kontrollpunkte.
+Der neue Beweis gilt auf dem GANZEN offenen Schalenintervall einschließlich
+der vollständigen logarithmischen Randenergie. Kein Modenabbruch wird
+als unendlicher Rest ausgegeben.
+
+Das gemeinsame Ziel E_dir bleibt unverändert. Der globale Modellgram
+Uhat und die Projektion P_<104(Rhat0-B C0) sind weiterhin unberechnet.
+A8->A9 und der Tailboden 1/20 bleiben unbewiesen.
+
+1. Definitionen und gebundene Eingaben
+
+a=3 log(2)/2, b=log(3), h=b-a, X=L2((a,b),2 dx). Der Kernraum besitzt
+entsprechend das Skalarprodukt 2 integral_0^a. K bezeichnet hier den
+vollständigen Nichtpol-Kern-Schalen-Operator, NICHT die 12x12-Metrik K12.
+Die ursprüngliche REMAINDER_PROOF.txt, Abschnitt 4, beweist ||K||<16/5.
+Wir verwenden die großzügigere vollständige Schranke k=4.
+
+Xresp ist die feste rationale 84x203-Antwort, D=diag((1-rho)I191,K12),
+delta=18219/10000, eta=10^-10. Alle weiteren Koordinaten und Modelle
+werden aus denselben gebundenen Dateien übernommen wie Rhat0.
+Insbesondere bleibt die physische Reihenfolge der letzten zwölf Kräfte
+z4,Y8. Alte P-residualisierte Kraftdaten werden nicht eingesetzt.
+
+Setze z=J Xresp alpha, G=Fv-(1-eta)Lambda z, t=xi-low_F v/(1-rho).
+Aus der bereits hergeleiteten exakten Darstellung folgt
+
+ R0 = (Q_b G)|shell + K W,
+ W  = V* t + delta^-1 P_high(Q_b Lambda z-Q_b Fv)|core,
+ V* = Phi_phys AC - delta^-1 T_h* B* AC.                    (1)
+
+Es gelten BB*<=HB, ||T_h||<2, ||Phi||^2<2. HB enthält die vollständige
+alte hohe Kopplung. P_high ist die im Vorgänger präzisierte echte hohe
+Projektion. Ihre Differenz zur rohen Legendreprojektion wird unten bezahlt.
+Die bereits bewiesene glatte Korrektur erfüllt
+
+ ||(I-P)(R_X-R0)D^(-1/2)||_HS <10^-300.                     (2)
+
+Die neue Aufgabe besteht also darin, R0-Rhat0 vollständig zu begrenzen.
+
+2. Neuer globaler Baustein: K Phi_phys AC
+
+Die isolierte Schranke ||K|| ||Phi AC|| ist hier unbrauchbar. Stattdessen
+wird die vollständige äußere Wirkung auf die zusammengesetzten 191
+Polynome Phi AC DIREKT eingeschlossen.
+
+In t=x/a ist f(t)=Phi_norm(t) AC, wobei
+Phi_norm,j=sqrt(2n+1)P_n(t)-cn_j sqrt(2p+1)P_p(t), n=p+2,...,383.
+Die physische Normierung ist Phi_phys=Phi_norm/sqrt(2a).
+f hat die feste Parität p. Definiere
+
+ C_f(s)=integral_-1^1 f(t)/(s-t)dt, s>1.
+
+Für jedes Polynom gilt exakt
+
+ C_f(s)=f(s) log((s+1)/(s-1))-Q_f(s),
+ Q_f(s)=sum_(n>=1) f_n sum_(0<=j<n, n-j odd) 2s^j/(n-j).   (3)
+
+Die äußere Wirkung lautet
+
+ (K_model Phi_phys AC)(as)=-C_f(s)/(2sqrt(2a))+B_f(s).       (4)
+
+B_f ist ein vollständig integriertes Polynom: der reguläre Gamma-Kern
+Grad 224 plus ALLE sechs Primadjunkte q=2,3,4,5,7,8. Der q=8-Beitrag
+wird ausdrücklich beibehalten. Alle Primargumente liegen für a<x<b im
+Kern; das feste Paritätspolynom gilt auf beiden Vorzeichenhälften.
+Der gesamte Gamma-Modellfehler kostet höchstens 4 eps224 ||f||.
+
+Die positive-Kern-Norm von f ist ohne große Monomnormen eingeschlossen:
+
+ I_f^2=||AC||_F^2+||cn^T AC||_F^2,                         (5)
+
+denn Phi_norm*Phi_norm=I+cn cn^T. Die Rechnung benutzt (5), nicht eine
+Konditionsschätzung der Monomkoeffizienten.
+
+3. Alle inneren Teilintervalle, mit vollständigem Taylorrest
+
+Für ein rationales u-Intervall [l,r] mit l>0 setze
+s0=1+(h/a)(l+r)/2 und d=(h/a)(r-l)/2. In s=s0+d z, |z|<=1,
+werden die ersten N=80 Taylor-Koeffizienten der GESAMTEN Cauchywirkung
+mit den exakten Polynomkoeffizienten von B_f zusammengesetzt. Erst
+danach werden Normen und Beträge genommen.
+
+Die geometrische Identität für 1/(s-t) liefert für den ganzen,
+nicht abgeschnittenen Cauchytransformationsrest
+
+ ||Rest_C|| <= 2 I_f (d/(s0-1))^N/(s0-1-d).
+
+Nach dem Faktor in (4) wird daraus
+
+ tail <= I_f sqrt(a/2)/(h l) [(r-l)/(r+l)]^N
+       < 15 I_f/l [(r-l)/(r+l)]^N.                        (6)
+
+Die letzte Grenze benutzt a<21/20 und h>1/20. Sie wird im unabhängigen
+rationalen Prüfer frisch berechnet. Sie ist keine beobachtete Abnahme
+von Taylor- oder Legendrekoeffizienten.
+
+Seien d_j die fertig zusammengesetzten Taylor-/Polynomzeilen. Dann gilt
+auf dem GANZEN Intervall ||(4)||<=sum_j ||d_j||_2+tail. Mit 2h<3/25
+ist dessen vollständige Energie höchstens
+
+ (3/25)(r-l)(sum_j ||d_j||_2+tail)^2.                     (7)
+
+4. Vollständiger logarithmischer Rand, ohne ausgespartes Restintervall
+
+Das erste Intervall ist 0<u<=q0=2^-20. Schreibe u=q0 z und w=hq0/a.
+Aus (3) folgt genau die Darstellung
+
+ (4)=A(z)+L(z) log z,
+ L(z)=f(1+wz)/(2sqrt(2a)).
+
+Der analytische Anteil enthält log(w)-log(2)-log(1+wz/2). Für den
+letzten Logarithmus werden 80 Terme und der vollständige Rest
+(w/2)^80/[80(1-w/2)] verwendet. Die Polynome werden vorher vollständig
+zusammengesetzt. Sei a_sum die Summe der Zeilenkoeffizientennormen von
+A, l_sum die entsprechende Summe für L und r_sum der analytische Rest.
+Da integral_0^1 log(z)^2 dz=2, gilt auf dem GANZEN Randintervall
+
+ Energie <= (3/25) q0 (a_sum+sqrt(2)l_sum+r_sum)^2.          (8)
+
+Damit ist insbesondere kein positives Intervall nahe u=0 ausgelassen.
+Der Prüfer kontrolliert lückenlose Überdeckung von [0,1]. Gegenkontrollen
+mit weggelassenem Randintervall und mit einem inneren Loch werden verworfen.
+
+Die 3072-Bit-Rechnung verwendet 78 Intervalle pro Parität einschließlich
+des Randintervalls. Die zweite Rechnung verwendet 4096 Bit und eine andere
+Aufteilung. Eine zusätzliche Legendre-Q-Rekursion prüft (3) unabhängig.
+Die globale Aussage beruht auf (6)-(8), nicht auf diesen Punktkontrollen.
+
+Der erste gerichtete Neuaufbau ergibt ||K Phi_phys AC||_HS<6.118 bzw.
+<5.974. Die unabhängige rationale Zusammenfassung benutzt absichtlich
+größere geometrische Konstanten. Ihre Werte stehen in EXTERIOR_AUDIT.
+
+5. Globale Fehler der vollständigen Quellfunktionen
+
+Die folgende Abschätzung gilt in L2 auf dem gesamten Kern bzw. der
+gesamten Schale, nicht nur für Randspuren. Für jede der festen J-, Y-
+und vier z-Quellen genügt der Fehlerpreis e_src=10^-28.
+
+Herleitung: eps224<10^-34. Ein Kernel mit uniformem Fehler eps auf
+[-b,b]^2 hat Operatornorm höchstens 2b eps<3 eps. Aus ||[J,Y]||_HS<12,
+den vier z-Normen <6, mu>9/100, nu<1/10 und ||m_core||<2 deckt
+1000 eps224 sämtliche Quell-/Liftungsfaktoren großzügig ab.
+
+Der direkte Schalen-Selbstkernel hat Fehler <10^-50. Der ganze
+Spiegelrest ab Term 32 ist durch
+
+ exp(-129a)/(1-exp(-4a)) <10^-50
+
+begrenzt, einschließlich seiner Wirkung auf die endlichen Quellen.
+Beide erhalten den zusätzlichen Faktor 100 im Parameterprüfer.
+
+Die lokale Koordinatenrundung von J und Y ist <10^-60. Auf Polynomen
+Grad <=95 gilt ||f||_infty<=96/sqrt(2h)||f||_X und die Markov-Grenze
+||f'||_infty<=2*95^2/h ||f||_infty. Mit der glatten Kernliftung folgt
+aus dem gebundenen Domänenlemma eine vollständige Q-Graphnormkonstante
+<10^10; wir dürfen daher sogar 10^20 als grobe Rundungsverstärkung nehmen.
+Die Momentpolynome Grad 160 besitzen vollständige Funktions- UND
+Ableitungsreste <10^-300. Ihr Graphnormfehler ist ebenfalls mitbezahlt.
+Alle diese Beiträge zusammen liegen weit unter dem Zusatz 10^-40.
+
+check_parameters.py kontrolliert eps224, beide Schalenkernelreste,
+die Moment-Funktions-/Ableitungsreste und die lokalen Rundungen. Somit
+
+ 1000 eps224 +10^-40+100 eps_self+100 eps_mirror <10^-28.    (9)
+
+Sei xd=||Xresp D^-1/2||_HS, tK=tr(K12^-1) und
+ s=sqrt(84) xd+sqrt(12 tK).
+Dann ist der volle direkte Schalenfehler höchstens e_src s.
+
+6. Vollständiger hoher Projektionsfehler der Quellen
+
+Für eine Quelle wird die rohe niedrige Projektion aus dem Träger und
+den c-Koordinaten rekonstruiert: raw_0=carrier und
+raw_(j+1)=c_j+cn_j carrier. Der Träger des neuen Modells wird frisch
+aus der GANZEN neuen Quellfunktion integriert; er wird nicht weggelassen.
+
+Aus (9), ||cn||<1 und den gebundenen c-Fehlern folgt für die gemeinsam
+skalierte Quellprojektion die großzügige Grenze
+
+ e_high,src <=5 e_src s+2(e_cF+e_cJ),
+ e_cF=sqrt(tr(K12^-1 EcF)),
+ e_cJ=epsilon_J xd.                                       (10)
+
+EcF ist die vollständige geerbte gemeinsame niedrige Fehlergrammatrix.
+epsilon_J ist der vollständige 84-Spalten-Quellfehler; ||Phi||<sqrt(2)
+wird durch den Faktor 2 abgedeckt. Die Unterschiede der gefrorenen
+Mittelpunkte zu ihren Intervallmodellen werden zusätzlich bezahlt.
+
+Für die alte Q_a Phi-Wirkung benutzt Rhat0 Gamma-Grad 160. Auf den
+ganzen Funktionen beträgt der Operatorfehler <4 eps160. Projektion
+kann die Norm nicht erhöhen. Mit q0=AC(I,-low_F0/(1-rho)) und
+ qnorm=||Phi q0 D^-1/2||_HS
+genügt deshalb der Preis 8 eps160 qnorm für den alten hohen Block.
+Die zusätzliche Reserve berücksichtigt die äquivalenten rohen Koordinaten.
+
+Die Mittelpunktrundungen alter A-/c-/Trägerkoordinaten werden im
+Parameterprüfer gebunden. Es gelten qnorm<10^16, s<10^8 und alle alten
+A-/cF-Breiten <10^-69, die cJ-/Trägerbreiten <10^-79. Selbst mit den
+vollen endlichen Dimensionsfaktoren bleiben sie weit unter 10^-40.
+
+Schließlich gilt die schon gebundene Identität
+ P_high-(I-P_raw)=P_span(m_lo)-P_span(m).
+Ihr vollständiger Momentrest liegt unter 10^-800. Die groben Graphnormen
+der festen Polynome und die obigen q-/Quellnormen lassen hierfür ebenfalls
+mehr als ausreichend Reserve in 10^-40. Es wird keine echte Projektion
+stillschweigend durch einen Modenabbruch ersetzt.
+
+Der gesamte feste Fehler des Kernmodells W bei FESTEM t0 ist somit
+
+ e_W0=[8 eps160 qnorm+5 e_src s+2(e_cF+e_cJ)]/delta+10^-40. (11)
+
+7. Empfindlicher niedriger Koeffizientenfehler, jetzt global bezahlt
+
+Sei e_low=sqrt(tr(K12^-1 EF))+10^-40. EF ist der vollständige neue
+Featurefehler; er majorisiert insbesondere den niedrigen Anteil.
+Der Zusatz deckt die Wahl des gespeicherten low_F-Mittelpunkts ab.
+Sei r_ij die HALBE Breite seines gespeicherten Intervalls. Der Prüfer
+berechnet frisch sqrt(tr(K12^-1) sum_ij r_ij^2). Die Werte sind kleiner
+als 6.73e-50 bzw. 1.27e-51 und damit ausdrücklich kleiner als 10^-40.
+Dieser Schritt korrigiert die zu knappe pauschale 10^-50-Zuordnung einer
+vorläufigen Paketfassung; die Ergebnisgrenzen (E) bleiben unverändert.
+
+Aus (1), ||T_h||<2, BB*<=HB und dem NEUEN vollständigen Ergebnis (4)-(8)
+folgt mit hb=sqrt(tr(AC AC* HB/(1-rho)))
+
+ ||K V*||_HS <= exterior + 2 k hb/delta =:KVcap.            (12)
+
+Die rationale Zusammenfassung ergibt KVcap<26.455 bzw. <26.326.
+Anders als eine getrennte Abschätzung durch ||K|| ||V*|| bewahrt (12)
+die vollständige äußere Wirkung der sehr empfindlichen alten Antworten.
+Der niedrige Koeffizientenfehler kostet daher nur
+
+ e_Klow=KVcap e_low/(1-rho).                               (13)
+
+Diese Aussage betrifft alle 191 Antworten und alle äußeren Richtungen.
+
+8. Äußerer Kernelmodellfehler und Gesamtrechnung
+
+Die vollständige alte Kernnorm Wcap aus dem Vorgänger bleibt gültig.
+Um den äußeren Kernelmodellfehler anzuwenden, wird zusätzlich geprüft
+
+ ||W-What|| <=Vcorecap e_low/(1-rho)+e_W0 < Wcap,
+ Vcorecap=sqrt(2 inverse_trace)+2 hb/delta.
+
+Damit ||What D^-1/2||_HS<=2 Wcap. Der äußere Gamma-Modellfehler kostet
+höchstens 8*10^-34 Wcap. Alle Primadjunkte sind exakt im Modell vorhanden.
+Die vollständige rohe Differenz ist daher höchstens
+
+ delta_phys=e_src s+e_Klow+k e_W0+8*10^-34 Wcap.            (14)
+
+Die unabhängige rationale Rechnung ergibt
+
+ delta_phys <1.155615796817*10^-11  (gerade),
+ delta_phys <2.229208181542*10^-13  (ungerade).
+
+Addition des vollständigen glatten Preises (2) beweist (E). Es handelt
+sich um eine obere Grenze für die tatsächliche globale Modellabweichung,
+nicht um ein lediglich vorgeschlagenes Budget. Alle Summanden und die
+Eingangsbindungen stehen in MODEL_ERROR.json.
+
+9. Was dadurch geschlossen ist und was noch fehlt
+
+Die erlaubten bisherigen Modellfehler sind 6.76796364171*10^-7 bzw.
+1.628860045447*10^-6. (E) erfüllt beide mit großer Reserve. Der gerundete
+Logabzug besitzt seinen bereits getrennt bewiesenen vollständigen Preis
+delta_C<10^-10. Dieser wird nicht doppelt in delta_phys gezählt.
+
+Für Zhat=(I-P_<104)(Rhat0-B C0) bleibt der tatsächliche Rechenauftrag
+
+ Uhat=Zhat*Zhat <= (999/1000) E_dir/10920.                  (15)
+
+Das globale Integral in (15), einschließlich der niedrigen Projektion,
+ist NICHT Bestandteil dieses Ergebnisses. Der vollständige L2-Modellfehler
+ist nun geschlossen; die positive globale Restform ist weiterhin offen.
+
+COMPLETE_GLOBAL_MODEL_ERROR_CERTIFIED=true
+GLOBAL_MODEL_GRAM_COMPUTED=false
+FULL_REMAINDER_CERTIFIED=false

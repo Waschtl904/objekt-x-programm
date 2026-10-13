@@ -1,0 +1,31 @@
+Bitte zunächst reproduce.py ausführen, dann HERLEITUNG.txt prüfen.
+
+Neu zu begutachten sind:
+
+1. Die vorzeichenbehaftete vollständige Momentkorrektur der acht Y-Spalten,
+   insbesondere die Verwendung von M_i=<m_core,Q_b Lambda Y_i> und das
+   daraus folgende negative Vorzeichen des lambda_i lambda_j Qmm-Terms.
+   Es gilt die im Vorgänger bereits für Kreuzterme verwendete Formel.
+2. Der analytische Fehler 10^-25 je Eintrag, entsprechend 8*10^-25 I8,
+   zusätzlich zu den gerichteten Integralradien.
+3. Die kompatible Brücke mit Delta=D_Y,new,lower-D_Y,old,lower>0 sowie
+   die Variante theta=1-10^-10. P, U_op und A0 bleiben unverändert.
+4. Die obere gemeinsame F12-Einschließung: Modell-Featurefehler in der
+   K12-Metrik, vollständiger Kreuzfehler, obere direkte Y-Matrix.
+5. Die erweiterte rationale Gegenrichtung (u,t,w), einschließlich des
+   zusätzlichen Modellquellenwechsels 2 sqrt(eF² U_op[Jw] K12[t]).
+
+Alle Aussagen betreffen den konservativen gemeinsamen Vergleich. Der
+optimistische Gegenzeuge schließt eine Rettung allein durch einen besseren
+endlichen Block bei diesen U_op und L_+ aus. Keine Negativität der
+tatsächlichen Schurform wird behauptet.
+
+Als nächster Rechenschritt erscheint die vollständige direkte Restform
+auf Basis84 sinnvoll, mit dem tatsächlichen Konstantenterm, regulärem
+Schalenkernel und vorzeichenbehafteter Momentkorrektur. Alternativ muss
+die alte Inversmajorante verbessert werden; dann sind die Kreuzzeilen
+konsistent neu aufzubauen. Erst nach positivem endlichem Test folgt ein
+neuer vollständiger Formdual-Residualgram.
+
+Die 203 Zeilen des separaten Abdeckungstests bleiben von diesen 203
+gemeinsamen Verlustzeilen zu unterscheiden. Tailboden und A8->A9 offen.

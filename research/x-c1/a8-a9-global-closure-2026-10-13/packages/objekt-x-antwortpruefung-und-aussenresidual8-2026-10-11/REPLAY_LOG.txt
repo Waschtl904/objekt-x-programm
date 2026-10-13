@@ -1,0 +1,78 @@
+Review manifest: 22 files
+EVEN 44068 new cross-integration interval comparisons PASS
+ODD 44068 new cross-integration interval comparisons PASS
+responses manifest: 19 files
+parent manifest: 24 files
+dual manifest: 27 files
+EVEN PASS 4752 interval comparisons; 9 positive rational pivots; reserve 593/200000000
+ODD PASS 4752 interval comparisons; 9 positive rational pivots; reserve 4363/250000000
+{
+  "status": "PASS_GLOBAL_GEOMETRY_REDUCTION_AND_RESTRICTED9",
+  "files_bound": 27,
+  "moment_tail_squared_upper": "1e-704",
+  "conditional_geometry_price": "1e-250 D203_new",
+  "new_answer_admissibility_conditions_checked": false,
+  "cases": [
+    {
+      "parity": "even",
+      "precision_interval_comparisons": 4752,
+      "restricted9_reserve": "593/200000000",
+      "rational_LDL": {
+        "positive_pivots": 9,
+        "smallest_pivot_lower": "2373056156979951878359217408316495171/1000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "parity": "odd",
+      "precision_interval_comparisons": 4752,
+      "restricted9_reserve": "4363/250000000",
+      "rational_LDL": {
+        "positive_pivots": 9,
+        "smallest_pivot_lower": "1072358557444020540253389801643763419/500000000000000000000000000000000000000000000"
+      }
+    }
+  ],
+  "full_residual_tail_computed": false,
+  "tail_coercivity_certified": false,
+  "full_remainder_certified": false
+}
+EVEN K12, B84 and new joint loss bound rationally verified
+EVEN all 41209 M entries and 17052 response entries checked
+EVEN PASS new finite budget; complete coarse upper is insufficient
+ODD K12, B84 and new joint loss bound rationally verified
+ODD all 41209 M entries and 17052 response entries checked
+ODD PASS new finite budget; complete coarse upper is insufficient
+PASS_NEW_RESPONSES_AND_RATIONAL_BUDGET_FULL_COARSE_BOUND_INCONCLUSIVE
+{
+  "status": "PASS_768_AND_1024_BIT_RESPONSE_BUILDS",
+  "cases": [
+    {
+      "parity": "even",
+      "interval_comparisons": 72391,
+      "K_X_metrics_and_scalar_budgets_identical": true,
+      "M_upper_max_entry_difference": "131126233/100000000000000000000000000000000000000000000000000000000000000000000000000",
+      "other_non_interval_data_identical": true
+    },
+    {
+      "parity": "odd",
+      "interval_comparisons": 72391,
+      "K_X_metrics_and_scalar_budgets_identical": true,
+      "M_upper_max_entry_difference": "43050699/1000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "other_non_interval_data_identical": true
+    }
+  ],
+  "directed_bound_constructions_compared_by_common_caps": [
+    "finite model residual <1e-50",
+    "M-upper rounding price <1e-30"
+  ],
+  "analytic_remainders_not_inferred_from_precision_agreement": true
+}
+Upstream precision check: JSON equality PASS; CRLF/LF difference only
+EVEN gates PASS; ||X||F < 0.32453527933606685 ; true finite dual Gram/D < 9.187035345747155e-17 ; outside budget 3.1746938197003407e-07
+ODD gates PASS; ||X||F < 0.3206330168693509 ; true finite dual Gram/D < 1.4949814751930388e-19 ; outside budget 1.9131192645357004e-06
+EVEN 211 rational pivots: finite model Gram fits directional budget
+EVEN PASS: all computed contributions < 0.02 % of T_budget
+ODD 211 rational pivots: finite model Gram fits directional budget
+ODD PASS: all computed contributions < 0.065 % of T_budget
+PASS_NEW_RESPONSES_GLOBAL_DUAL_CONNECTION_AND_EIGHT_EXTERIOR_TERMS
+FULL_WEIGHTED_RESIDUAL_TAIL_FROM_104_OPEN=true; FULL_REMAINDER_CERTIFIED=false

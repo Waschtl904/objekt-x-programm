@@ -1,0 +1,29 @@
+{
+  "status": "AUTHOR_DERIVED_EXTERNAL_REVIEW_OPEN",
+  "files": {
+    "BERICHT.txt": "a3028548d7ec2f3f80fecbf8bebbff57be4ab56ef78d1632e9a6e090d14c76d2",
+    "HERLEITUNG.txt": "5df232ec730deb01ba5b81cdcba21563f746e6bc2cd8473666b22c6d5990130c",
+    "README.txt": "3afc51b253ea7dd716add07f24f8623ddcba5ea4d1c86e0d4c5b0ecf87dd5aac",
+    "ANSCHLUSS_GPT1.txt": "cd660c916a46ad13fc1a5dc8926564d782528197fc3a222440d07ee6a403ab4a",
+    "AUDIT_INPUT.json": "926170a326a356315fde8cdeaa49569e5346c27b846f24dee59ad643783d49de",
+    "AUDIT.json": "9a1e592ea62c65ba3867b908f57976eb8a943141e10e5127eb19f55781b1eff8",
+    "DIRECTIONAL_GATE.json": "dda9874edad927b05306ec601162b993af96106f3064a112752b731d32658958",
+    "OPTIMISTIC_OBSTRUCTION.json": "7961fb09f058b8501d7ad3db0bae4d7e45c4d1ce7a514a22cb6b1e654cfcf80f",
+    "compute_direct_y.py": "9be73cc156bd91a9e46b2dde06aae4acf4b9fa37b67141ef6d88e5c92d1a19ee",
+    "directional_gate.py": "504ac5a8d058f2eca4bebf2aeaf2e18ff3069445a79ebd70a2315fcf869b2296",
+    "optimistic_test.py": "e036ab106c1092ae43c4a8243f9e7dc30a70ed60aac6f88b8b43708b9d4c2bed",
+    "build_audit_input.py": "88429f0a7f785fd628cc2895ab0d9d40ef777e22c76397d27be8efa812b62777",
+    "audit_directional.py": "b209bee416c9875a96f37381bd84a7d421b3615b89a4f7cb39266006a082a063",
+    "rational_ldl.py": "4bcbdb972117edf0af7b098c2dc00c1c9f921f020e1311ad31495bf1d4b66700",
+    "reproduce.py": "1760aefab4b625655a2737156f5abf560cba395c77916301d894e556dfcc44a7",
+    "rebuild_from_parent.py": "8392d0aa580628f59f986cff5a35993357e1e810e9ba24dba671e0428490907a",
+    "review-rebuild/BRIDGE_OBSTRUCTION_INPUT.json": "69598e76aae41c3192f0b067fb28af08f761e939af3d7d1abd91ebc406b913f2",
+    "review-rebuild/BRIDGE_OBSTRUCTION.json": "fa710bae54ac5be208119a91c2eddc0e904db96a09ad0dedffd931b0022dceec",
+    "DIRECT_Y_EVEN_3072.json": "ea45717e635e465ee6f603c54bfbae2c3b68f7a0b18ea58eecfa857bed1ecbcd",
+    "DIRECT_Y_EVEN_4096.json": "0cf88d6b73d26d86c1bb1dc58d1f182ec86f45653b5d3c8a763b74ad7bca4e40",
+    "DIRECT_Y_ODD_3072.json": "a4a21be18cc590bbdbb573d4d7fd7c2aa5d33e54eb2036de7ea386233a635ace",
+    "DIRECT_Y_ODD_4096.json": "6789237244ef5743c2ba05291eeab565d62ba70b38dbc0d5e2437f3d8d700293",
+    "FRESH_REBUILD.json": "a1e206b2e5855dfe3a0ace131aea88b0e03b9413b15ea6536da7e547bc924edb"
+  },
+  "full_remainder_certified": false
+}

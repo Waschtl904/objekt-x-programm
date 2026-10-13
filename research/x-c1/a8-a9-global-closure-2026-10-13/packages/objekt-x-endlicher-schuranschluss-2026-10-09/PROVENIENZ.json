@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-09",
+  "status": "AUTHOR_DERIVED_EXTERNAL_REVIEW_OPEN",
+  "inherited_files": [
+    {
+      "path": "work/remainder-integration-check-v2/originals/weighted-response/inputs/a8_model.json.gz",
+      "sha256": "5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b",
+      "byte_identical": true
+    },
+    {
+      "path": "work/remainder-integration-check-v2/originals/weighted-response/inputs/A8_PROOF.md",
+      "sha256": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661",
+      "byte_identical": true
+    },
+    {
+      "path": "work/remainder-integration-check-v2/originals/eight-source/expected/4096/RESULT.json",
+      "sha256": "a28ddf3ab79d0e7de4bffc2386f492bb3b2a5f5cc37d06e36151737e484bc9ad",
+      "byte_identical": true
+    },
+    {
+      "path": "work/remainder-integration-check-v2/originals/eight-source/PROOF.txt",
+      "sha256": "5a7c0bfbb53669a9731645b4b36c16148c1d519e80850d2dd4ce3a3dd4497a5b",
+      "byte_identical": true
+    },
+    {
+      "path": "work/remainder-integration-check-v2/originals/eight-source/code/compute_inverse_energy_gate.py",
+      "sha256": "0c0f288d24710bf8e0a37b625825670ce508835a17e7755909557064535da519",
+      "byte_identical": true
+    },
+    {
+      "path": "work/remainder-integration-check-v2/originals/half-inverse/expected/1536.json",
+      "sha256": "185b501de8f218f8b62812631fe52301a47a288f11b9b4e8205229da7f89da82",
+      "byte_identical": true
+    },
+    {
+      "path": "work/remainder-integration-check-v2/originals/half-inverse/HERLEITUNG.txt",
+      "sha256": "cd13e95a5ce2f50159a90e3df80a79e16950389a6804161db4ebffa475293035",
+      "byte_identical": true
+    },
+    {
+      "path": "work/u00-2026-10-07/CENTRES_EVEN_4096.json",
+      "sha256": "5e0da4cac58f0d043824e8de8277d3f69216f1c8bea97bfda831596961f55a92",
+      "byte_identical": true
+    },
+    {
+      "path": "work/u00-2026-10-07/CENTRES_ODD_4096.json",
+      "sha256": "7bf5d682006c2241ba68a91837c7c16ac48f9e5aa54915fa915bdf03dc71efa1",
+      "byte_identical": true
+    },
+    {
+      "path": "work/signed-c-2026-10-07/CROSS_EVEN_4096.json",
+      "sha256": "46c86079a782e07ee4f07a39de4291f377dfca282f9a73340f79f9c5168b8da2",
+      "byte_identical": true
+    },
+    {
+      "path": "work/signed-c-2026-10-07/CROSS_ODD_4096.json",
+      "sha256": "091079b92ba65e3e02f0dec87ec7cc7be4f3126bb8cce67d50bec30f213cf612",
+      "byte_identical": true
+    },
+    {
+      "path": "work/signed-c-2026-10-07/exact_helpers.py",
+      "sha256": "ce5be0e33875bd1b01ac4ff1a848bb426f82f6cf0f4b0047bd5b597fca84cc44",
+      "byte_identical": true
+    },
+    {
+      "path": "work/continued-research-2026-10-08/check_gate.py",
+      "sha256": "61bf7f60a0b957bf8bb3ff50bd5d4721288f672d4ee1ec05833a29b7b8cf58d4",
+      "byte_identical": true
+    },
+    {
+      "path": "work/residual-schur-2026-10-08/compute.py",
+      "sha256": "c6153c978ebc6e3b8f90c248508e7d37f2080db06cae808f23cc0ea03fa14771",
+      "byte_identical": true
+    },
+    {
+      "path": "work/high-floor-2026-10-08/check_floor.py",
+      "sha256": "20a16066550a7dd4741abc80d08e2d06b264ea444f144253950e74a458167408",
+      "byte_identical": true
+    },
+    {
+      "path": "work/high-floor-2026-10-08/FLOOR_CHECK.json",
+      "sha256": "e2852df009688d9e6eb2676f6184180c3799c2eb227e154115265533f25eb955",
+      "byte_identical": true
+    },
+    {
+      "path": "work/high-floor-2026-10-08/RESPONSE_AUDITED_1536.json",
+      "sha256": "85ec632bea3220aaedb074f744917ca8bc4e63873bd30d238cbbf37d20913c53",
+      "byte_identical": true
+    },
+    {
+      "path": "work/high-floor-2026-10-08/HERLEITUNG.txt",
+      "sha256": "a160913e88e32b9eedd7543010441a0c919295d4ee2c152f8c74fc939b303e59",
+      "byte_identical": true
+    }
+  ],
+  "previous_package": {
+    "file": "Objekt-X-Alte-Hohe-Reserve-2026-10-08.zip",
+    "sha256": "3793af139974ac2a011b551af12539d6810012abba995d7ca57ceb0ba341825a",
+    "embedded": false
+  },
+  "original_archives_preserved": true,
+  "user_supplied_review": "The two verbatim review texts concern ONLY the predecessor high-floor package, not the new calculations.",
+  "new_calculations": [
+    "full old low Gamma160->224 correction",
+    "same-Y direct shell Gamma",
+    "complete 191D old inverse majorants",
+    "finite common Schur form"
+  ],
+  "full_remainder_certified": false,
+  "github_changed": false
+}

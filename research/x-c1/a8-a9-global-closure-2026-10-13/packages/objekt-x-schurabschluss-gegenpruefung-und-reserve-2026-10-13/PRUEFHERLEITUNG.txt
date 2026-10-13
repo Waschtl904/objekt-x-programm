@@ -1,0 +1,160 @@
+Objekt X — unabhängige Prüfung des bedingten Schurabschlusses
+13. Oktober 2026
+
+1. Reichweite und Bindung
+
+Geprüft wird genau das Eingangspaket Globaler-Schurabschluss-A8-A9,
+SHA256 65085974657257bd447d93342c5001d29e797b2fa70d876d53d36b587b16c2ba.
+Die Operator-, Formdomänen- und vollständigen Zerlegungsvoraussetzungen
+(A)-(D) aus dessen HERLEITUNG bleiben ausdrücklich Voraussetzungen.
+Insbesondere wird die vollständige Raumzerlegung nicht aus Common96
+oder aus einem endlichen Rangtest abgeleitet.
+
+Die vorherigen gerichteten Integrale und ihre analytischen Restbeweise
+bleiben gebundene Eingaben. Die vollständige rationale Vorgängerkette
+wird frisch nachgespielt. Die 90 Cauchy- und 741 Integral-/Projektions-
+kontrollen sowie Geometrie, Loggruppierung und Radiuspreis werden aus
+dem unveränderten Grampaket erneut ausgeführt. Die großen globalen
+Integrationen werden in dieser Gegenprüfung nicht nochmals erzeugt.
+
+2. Gewichtung und unabhängige Kontrolle der gesamten Residualbilanz
+
+X=L2((a,b),2dx); P=P_<104; g=R_X-B C_exact; U_g=g*(I-P)g.
+H=E_dir/10920 und U_g<q0 H mit q0=3/10000 sind gebunden.
+Der Faktor 10920=104*105 gehört zur Definition der unveränderten
+Zielmatrix. Er wird beim direkten L2-Übergang nicht ein zweites Mal
+eingesetzt. Für d_n=H_n+11/10 gilt d_n>=d104 auf n>=104, also
+
+ sum_(n>=104) g_n* g_n/d_n <= U_g/d104 < q0 H/d104.
+
+Dies erfasst die ganze unendliche Summe. Eine Ableitungsnorm von g
+oder eine Invarianz der Basis84 wird dabei nicht vorausgesetzt.
+
+Abgekürzt seien T_b=beta(D-M_upper), e=j+10^-300 und Q=Qlog_bar.
+Aus den gebundenen Vorgängern folgen T_b>=sigma D, Q<=c_log T_b und
+
+ H=d104*theta/(1+theta)*[(1-c8)T_b-eD-(1+theta)Q].
+
+Die neue unabhängige Rechnung vergleicht alle drei Koeffizienten dieser
+Identität exakt mit dem unveränderten Ziel: den T_b-, D- und C0*G*C0-
+Koeffizienten. Sie liest Antwort-, Moment-, Log- und Gramdaten direkt
+aus den versiegelten Eingangsarchiven und importiert assemble.py nicht.
+
+Die vollständige globale Formdualmajorante ist
+
+ Q_final=eD+c8 T_b+(1+s)Q+(1+1/s)q0 H/d104.
+
+Setze f=(1+1/s)q0 theta/(1+theta). Durch EINSETZEN der ganzen Zielmatrix
+folgt die exakte Identität
+
+ Q_final=(1-f)eD+[c8+f(1-c8)]T_b+[1+s-f(1+theta)]Q.
+
+Es werden keine Matrizen miteinander vertauscht. Diese Identität gilt
+koeffizientenweise auch für nichtkommutierende Matrizen. Alle drei
+neuen Koeffizienten sind in beiden Paritäten positiv. Somit gilt
+
+ Q_final <= c_sharp T_b,
+ c_sharp=(1-f)e/sigma+c8+f(1-c8)+[1+s-f(1+theta)]c_log.
+
+Gegenüber dem ursprünglichen skalaren Preis c_old ist exakt
+
+ c_old-c_sharp=f e/sigma+f(1+theta)c_log>0.
+
+Mit den unveränderten s_even=3/8 und s_odd=4/15 liefert reine rationale
+Arithmetik ohne Eigenwertrechnung:
+
+ gerade:   c_sharp < 1977/500000 = 0.003954 = 0.3954 Prozent,
+ ungerade: c_sharp < 6967/1000000 = 0.006967 = 0.6967 Prozent.
+
+Die vorherigen Grenzen 0.4 bzw. 0.71 Prozent werden damit bestätigt.
+Basis84, k96..k103, der vollständige geometrische Momentrest, sämtliche
+Logarithmen und alle Log/Rest-Kreuzterme gehören zu dieser Gesamtgröße.
+Die 0.030 Prozent relativ zu H aus dem Grampaket sind eine andere Größe.
+
+3. Residualidentität auf Formdomänen
+
+Sei Z=JX die feste Antwortspalte und R=A*-SZ. Die Produkte SZ und die
+Adjunkten dürfen hier im Formdualraum gelesen werden; eine zusätzliche
+Annahme Z_j in der starken Operatordomäne von S ist nicht nötig.
+Das Ausmultiplizieren der Formpaarungen ergibt exakt
+
+ R*S^-1R=A S^-1 A* -AZ-Z*A*+Z*SZ=A S^-1 A*-M.
+
+Aus S>=beta L folgt der inverse Vergleich für diese Funktionale auch
+variational: Das Supremum 2 Re<R,r>-S[r] über D(S) ist höchstens das
+entsprechende Supremum für beta L über D(L). Es genügt D(S) subset D(L);
+eine Gleichheit der beiden Formdomänen wird hier nicht eingeschmuggelt.
+Damit R*S^-1R<=beta^-1 R*R_L R.
+
+Für jeden der oben bewiesenen einfachen Gesamtpreise c<1 folgt
+
+ A S^-1 A* <= M_upper+c(D-M_upper)
+             <= [c+(1-c)u]D=(1-kappa)D,
+ kappa=(1-c)(1-u)>0,
+
+wobei M_upper<uD vollständig rational geprüft ist. Der Faktor beta^-1
+hebt sich mit T_b=beta(D-M_upper) korrekt auf.
+
+4. Vom endlichen Kräfteraum zum ganzen Rest
+
+S>=beta L>=21 beta/5 W_X>0 ist eine geschlossene positive Hilfsform.
+Der Operator C=D^-1/2 A S^-1/2 ist auf dem vollständigen Hilbertraum
+beschränkt. Aus C C*<= (1-kappa)I folgt über die Operatornorm
+C* C<=(1-kappa)I. Für jedes r in D(S) ergibt dies
+
+ A*D^-1 A[r]<= (1-kappa)S[r].
+
+Dies ist keine Schlussfolgerung aus endlich vielen Eigenvektoren im
+Resträum. Die endliche 203er-Matrix kontrolliert hier den ganzen Operator
+über die vollständige Residualmajorante und die Forminversenidentität.
+
+5. Beide Schurergänzungen und ihre Vorzeichen
+
+Schreibe B=D_direct-U_neu auf F+Lambda T. Es gilt K_actual=B[F,F]>=K>0,
+daher K_actual^-1<=K^-1. Mit dem tatsächlichen gemischten Block a_fin:
+
+ Schur_F(B)[r]
+ >= q[r]-H_neu[r]-A*D^-1 A[r]
+ = eta q[r]+S[r]-A*D^-1 A[r]
+ >= eta q[r]+kappa S[r]
+ >= (eta+kappa beta)L[r]
+ >= (21/5)(eta+kappa beta)W_X[r]>0 für r!=0.
+
+Die vollständige quadratische Ergänzung lautet
+
+ B[Fz+Lambda r]
+ = (z+K_actual^-1 a_fin(r))*K_actual
+     (z+K_actual^-1 a_fin(r)) + Schur_F(B)[r].
+
+Die tatsächliche alte-eliminierte Form C_actual ist >=B, weil U_neu
+die vollständige alte Inversenergie majorisiert. Auch nach Eliminierung
+von F bleibt die Ordnung erhalten:
+ Schur_F(C_actual)[r]=inf_z C_actual[Fz+Lambda r]
+                   >=inf_z B[Fz+Lambda r]=Schur_F(B)[r].
+Zusammen mit dem positiven alten A8-Block und der vollständigen gebundenen
+Zerlegung folgt die bedingte Positivität des ganzen A9-Raums.
+
+Mit den leicht verbesserten Gesamtpreisen aus Abschnitt 2 werden sogar
+folgende konservative Grenzen für genau diesen reduzierten Vergleich
+und seinen tatsächlichen Dominanten rational bestätigt:
+
+ gerade:   Schur_F(B)>1.3285e-6 W_X,
+ ungerade: Schur_F(B)>7.9795e-6 W_X.
+
+Die ursprünglichen Grenzen 1.328e-6 und 7.978e-6 sind damit bestätigt.
+Keine dieser Zahlen wird als Grenze in der gesonderten Tailmetrik
+oder als uniforme Normschranke des ganzen A9-Raums ausgegeben.
+
+6. Gegenkontrollen und verbleibende Grenzen
+
+Der unabhängige Prüfer verwirft an exakten rationalen Beispielen eine
+verkehrte inverse K-Ungleichung, beta statt beta^-1 beim Forminversen-
+vergleich und das Weglassen der Log/Rest-Kreuzterme. Die quadratische
+Ergänzung wird zusätzlich exakt gegengeprüft. Diese Gegenkontrollen
+ergänzen die allgemeine Herleitung; sie ersetzen sie nicht.
+
+Der gesonderte Tailboden 1/20 wurde weder benutzt noch bewiesen noch
+widerlegt. A8->A9 ist unter den angegebenen Voraussetzungen geschlossen.
+Die externe mathematische Prüfung der analytischen Gesamtkette, weitere
+Horizontübergänge, die Konstruktion von Objekt X insgesamt und RH bleiben
+offen. Historische false-Felder der Vorpakete werden nicht umgeschrieben.

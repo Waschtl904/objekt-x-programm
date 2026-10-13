@@ -1,0 +1,30 @@
+{
+  "files": {
+    "ANSCHLUSS_GPT2.txt": "aaa13725f91c3e03e9450be215df531c74c1c4a0e20ad8d57cda8b901f9a5f08",
+    "BERICHT.txt": "0758e881a2b46613cdaeaa626b61ac3c3e8f8dd61e7e4326779d2c964788aff9",
+    "HERLEITUNG.txt": "a4df4e296c0ba66619be0cbe40d17d0e132e52d6cd159a6b7b3b05ebb929f133",
+    "README.txt": "f9127a5d14a635c70b81da0f95d2736e684c1cd90601c537c91c4c2fc41d75f6",
+    "audit_scalar_gate.py": "97b6eee0501e87627e46f1527f7b63768ca99da48a1b2ae58f86f2677abbdea5",
+    "build_scalar_gate.py": "2326502a7b73b7c07cf087b1373465f6a2362666e41ef74c3744d087a66d0f92",
+    "data/CURRENT_SNAPSHOT_AUDIT.json": "884f79d4e9c2ed66ebd81743b6beb7ee0d3e5d2a8b7d940fbc799a4c691f712c",
+    "data/DIRECTIONAL_DERIVATIVE_TARGET.json": "1dd781339291553d1a13d18b9f15d5df0dea972eb5c5da19c9bc7377f2b08b34",
+    "data/FINITE_TARGET_INPUT.json": "6c48f681603a183285482f67fd7c185ce9a42cbca0c007cd15e7b6e9930054ee",
+    "data/FRESH_PARAMETERS.json": "035bc766ad68ee398cd005a826c558b869cee568b6b5343e8fcced50009868ab",
+    "data/MODEL_ERROR_REPLAY_RECEIPT.json": "b8759b27dec71e9df29ee904d12108c32b8ddda667eeafe428c882ecc4e3269b",
+    "data/POLYNOMIAL_CANDIDATES.json": "ae044125d63648ede7ce389e5541fbf955ccaabedf1dd5f9810436e59361e8e1",
+    "data/SCALAR_DIAGNOSTIC.json": "9718b05c374b9beae7ac77bc1a47b0b9a8588fe2add2fce535658c8d45c0c89f",
+    "data/SCALAR_GATE.json": "01e5e03684076deafb55f51f4328dbabf688d97832707489271953bc87463ae6",
+    "data/SCALAR_GATE_AUDIT.json": "af23e098de87db36e4beead304e8751f738694168720dad07cf9bd92065cfe85",
+    "data/samples/EXPLORATORY_EVEN_128.npz": "2a0acb540af5796b351c65825c2fcbb3582becfa0719210ebcd3680fc2fc3cb6",
+    "data/samples/EXPLORATORY_EVEN_256.npz": "d76cf4e44ae892ccad4cae6820e3b989675304767ced330278ba673825c44cd2",
+    "data/samples/EXPLORATORY_ODD_128.npz": "d4ecaf72952c6383513ae1f99a40ea6e743d18901293bdcba9fbfe162af49a24",
+    "data/samples/EXPLORATORY_ODD_256.npz": "a82c46975b9484430618576a6bd1a5c998c34aae9ec545814269c14353f03d14",
+    "diagnose_scalar_gate.py": "37840245b75395d3d2029a28c48c2ce1605d94ccfbda1d51d678a470240dbc86",
+    "helpers/interval_helpers.py": "4bc0fc7c7691ff0c98d91b6edde9dd3d9a9a22a924bd00d09c33a95e98d812d0",
+    "helpers/rational_ldl.py": "4bcbdb972117edf0af7b098c2dc00c1c9f921f020e1311ad31495bf1d4b66700",
+    "inputs/Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12-v2.zip": "c323db96ea92b01ec887e83f4171b124150e3d81fa6bb61450bf66cccaf5cd8b",
+    "inputs/RESPONSES_EVEN.json": "f94e8f0ede6f79de7f62b6c59725a6170a68c0053a39232a86d23579fa0ad0a6",
+    "inputs/RESPONSES_ODD.json": "9092843c0d4e3bb00c4c9c860c15dabe64d6b90cab534a5ba958f30a037dd8f5",
+    "reproduce.py": "b7e143b811b96c1b5ca8045d85d30e87bf75697f17da35c9433528acdd1d5102"
+  }
+}

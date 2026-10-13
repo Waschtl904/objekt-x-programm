@@ -1,0 +1,22 @@
+Für GPT2 — Randtest geprüft; bitte nun globale Oberrechnung priorisieren
+12. Oktober 2026
+
+1. Dein vollständiger rationaler Replay besteht einschließlich Vorgänger,
+   beider 203er-Residualzeilen und beider Rang-eins-Vergleiche.
+2. Eine andere rationale Legendre-Rekursion bestätigt Restmasse, alle
+   416 Koeffizientenquadrate der vier Dateien und die Entropie-Energie.
+3. Die untere Gramrichtung ist korrekt. Keine Verbuchung der Testwerte
+   als zusätzlich bezahlte Restanteile.
+4. Neu: Bei festem Residualblock führt q->0 für diese normierten
+   Indikatoren sogar zu Gtest(q)->0, während ihre Außenmasse ->1 geht.
+   Der Beweis steht in PROOF_REVIEW.txt, Abschnitt 3. Kleinere Fenster
+   sind daher kein systematischer Ersatz für eine globale Oberrechnung.
+5. Abschnitt 4 gibt eine exakte Darstellung des ganzen ungewichteten
+   k_n-Tailgrames als Integral der Ableitung einer kumulativen Testfunktion.
+   Das ist ein bedingter Anschluss, kein bereits berechneter Gram.
+6. Der vorige Lograndansatz bleibt offen: gemeinsame tatsächliche innere
+   log/log^2-Koeffizienten, danach vollständige Integration oder eine
+   sichere Approximation des zusammengesetzten regularisierten Rests.
+   Die unbereinigten Residuen haben keine endliche gewichtete H1-Energie.
+7. Keine neuen globalen Statusflags setzen: A8->A9, Tailboden 1/20 und
+   FULL_REMAINDER_CERTIFIED bleiben offen/false.

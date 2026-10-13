@@ -1,0 +1,177 @@
+Objekt X — vollständige Indikatorfamilie, Logabspaltung und Restbudget
+12. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Geprüfte Eingangsaussagen
+
+Der vollständige rationale Replay des neuen Randtest-Gegenprüfungspakets
+besteht. Insbesondere sind die Restmasse 0,522048329798... und die
+Energieschranke 3,712320032766... des Indikators q=2^-14 bestätigt.
+Die 416 Koeffizientenquadrate der vier gebundenen Integrationen werden
+über eine andere Legendre-Rekursion geprüft. Die tatsächlichen
+Quellintegrationen dieses Indikatortests wurden in diesem Schritt nicht
+nochmals ausgeführt.
+
+Die neue Grenzaussage ist gültig: Für einen festen endlichspaltigen
+L2-Residualblock verschwindet das normierte Indikator-Rang-eins-Gram
+bei q->0. Die Außenmasse geht gleichzeitig gegen eins. Die Normierung
+allein liefert daher keine Empfindlichkeit gegen den gesamten Rest.
+
+Die exakte Identität int_0^1 b'(q)^*b'(q)dq=U_N für die vollständige
+k_n-Testfamilie ist korrekt. Sie setzt nur L2 voraus. Sie berechnet
+jedoch keinen bisher unbekannten Integralwert. Für die Auswertung muss
+die vollständige Funktion b' samt Fehlern beherrscht werden.
+
+2. Aktueller Stand der Randabspaltung
+
+Im gebundenen neueren Logpaket stehen bereits die beiden inneren Zeilen
+C_left,1 und C_left,2 einschließlich des Prim-8-Terms sowie C_right,1.
+Setze B(u)=(log u,log^2 u,log(1-u)), u=(x-a)/h, N=104, und verwende
+die EXAKTEN Operatorzeilen C aus jenem Paket. Für den gewählten
+kanonischen X-Repräsentanten R_X des Residualblocks definiere
+
+ L_N=(I-P_<N) B C,
+ g=R_X-B C,
+ Z_N=(I-P_<N)g.
+
+Alle Funktionen sind 203-spaltige Funktionen, das X-Maß ist 2dx.
+Das vollständige gewichtete Gram von L_N erfüllt
+
+ Q_log<=c_log T, c_log=1/500 (gerade), 1/250 (ungerade),
+ T=beta(D-M_upper).
+
+Diese gebundenen Schranken enthalten bereits die Kreuzterme zwischen
+allen drei Logarithmen und die vollständigen ausgewiesenen
+Koeffizientenfehler. Ihre Herleitung bleibt eine eigene analytische
+Voraussetzung, die von der Gegenprüfung des älteren Indikatortests
+nicht automatisch mitgeprüft wird.
+
+3. Die global bereinigte kumulative Funktion
+
+Definiere
+
+ b_reg(q)=sqrt(2h) int_0^q Z_N(a+hu)du.
+
+Dann ist b_reg absolut stetig und es gilt exakt
+
+ U_g=int_0^1 b_reg'(q)^*b_reg'(q)dq
+    =sum_(n>=N) g_n^*g_n,
+ Q_g<=U_g/d_N.                                                   (1)
+
+Die bekannte kumulative Logkomponente ist explizit. Die Stammfunktionen
+der drei Logarithmen, jeweils mit Wert 0 bei q=0, sind
+
+ I_1(q)=q(log q-1),
+ I_2(q)=q(log^2 q-2log q+2),
+ I_3(q)=-q-(1-q)log(1-q).
+
+Mit m_ni=int_0^1 B_i(u)P_n(2u-1)du und
+ J_n(q)=int_0^q P_n(2u-1)du folgt die ganze bekannte Zeile
+
+ b_log(q)=sqrt(2h)[I(q)-sum_(n<N)(2n+1)J_n(q)m_n] C.              (2)
+
+Die m_n sind die exakten rationalen Logmomente aus dem Logpaket. (2)
+verwendet alle N bekannten Projektionskoeffizienten; ihre Subtraktion
+ist kein Abbruch der unbekannten hohen Summe. Der vollständige Gram
+der Ableitung in (2) ist C^*G_N C, mit dem bereits gebundenen 3x3-Gram.
+
+4. Der genaue Unterschied zwischen ell_n und k_n
+
+Der neue Eingangsbeweis verwendet die k_n-Testfamilie. (1) und (2)
+verwenden die kanonischen ell_n-Koeffizienten. Mit den unveränderten
+Definitionen des Vorpakets
+
+ k_n=ell_n-alpha l_n v_0, v_0=sum_(i<96)l_i ell_i,
+ alpha=2/(mu+2||l_0||^2), l_i=lambda(ell_i),
+ kappa=alpha <v_0,R_X>_X, m_N=sum_(n>=N)l_n ell_n
+
+ist für denselben gewählten X-Repräsentanten exakt
+
+ g_N^k=L_N+Z_N-m_N kappa.
+
+Folglich ist das ursprüngliche b aus dem Indikatorbeweis
+
+ b=b_log+b_reg-sqrt(2h) int_0^q m_N(a+hu)du kappa.                 (3)
+
+Die kleine letzte Funktion wird nicht als null behandelt. Für den
+folgenden Abschluss verwenden wir gerade die bereits gebundene
+ell_n-Verlustbilanz: Basispreis jD, acht ell-Außenzeilen c8 T und
+vollständiger geometrischer Momentpreis 10^-300 D. Die Werte sind
+dieselben wie im neueren Logpaket. Damit muss der k_n-Integraltest des
+älteren Eingangsbeweises nicht stillschweigend umgedeutet werden.
+
+5. Ein gemeinsamer Young-Schritt und sein genauer Zielgram
+
+Für jedes theta>0 gilt auf der ganzen unendlichen Summe
+
+ Q_ell,>=N <=(1+theta)c_log T+(1+1/theta)U_g/d_N.
+
+Hier sind alle Kreuzterme zwischen Loganteil und regularisiertem Rest
+enthalten. Es genügt daher der vollständige Matrixtest
+
+ U_g <= H_theta,
+ H_theta=d_N theta/(1+theta)
+          [(1-c8-(1+theta)c_log)T-(j+10^-300)D].                  (4)
+
+c8=1/5000 für gerade und 13/20000 für ungerade Parität. j ist die
+vollständige, bereits geprüfte Basisgrenze aus ATTACHMENT_GATES.
+(4) ist ein bedingter Abschluss: U_g wurde hier NICHT eingeschlossen.
+
+Für die Alternative mit der exakt regularisierten Ableitungsenergie
+E_g,>=N gilt U_g<=E_g,>=N/[N(N+1)]. Folglich genügt
+
+ E_g,>=104 <=10920 H_theta.                                     (5)
+
+E_g,>=104 ist der vollständige Gram von sqrt(2(x-a)(b-x)) g'(x)
+nach Abzug seines bekannten endlichen Legendre-Anteils. Auch die
+größere volle Energie E_g kann verwendet werden, falls sie bereits
+in das Ziel passt. Eine numerische endliche Koeffizientenliste ersetzt
+keine dieser vollständigen Integralabschätzungen.
+
+6. Rationale Parameterwahl und geprüfte Zielbudgets
+
+Aus dem Antwortpaket ist T>=sigma D bekannt. Setze eps=j+10^-300
+und r=1-c8-eps/sigma. In dieser skalaren Reduktion ist das optimale
+Young-Budget r+c_log-2 sqrt(r c_log), erreicht bei
+theta=sqrt(r/c_log)-1. Dies betrifft ausschließlich den neuen
+Log/Rest-Aufteilungsschritt, nicht den alten Operatorvergleich.
+
+Wir verwenden die festen rationalen Werte
+ theta_even=427/20=21,35, theta_odd=74/5=14,8.
+Der Prüfer bestätigt über rationale Quadratwurzelintervalle, dass
+das normalisierte skalare Ziel weniger als 10^-7 vom Optimum dieser
+Reduktion entfernt liegt.
+
+Je Parität werden H_theta-uD und 10920H_theta-eD direkt mit 203
+rational positiven Intervall-LDL-Pivots nachgewiesen. Alle Werte in
+der folgenden Tabelle sind nach UNTEN gerundete zulässige Budgets:
+
+            u für U_g<=uD           e für E_g,>=104<=eD
+gerade      0,000001832433           0,020010170044
+ungerade    0,000010613269           0,115896908310
+
+Gegenüber dem früheren symmetrischen Young-Schritt theta=1 wächst
+das skalare Ableitungsziel um Faktoren 1,8324... bzw. 1,7691... .
+Die Form von R, die Näherungsantworten X und die Logkomponenten
+werden dabei nicht verändert. Es wird ausschließlich das noch
+verfügbare globale Fehlerbudget schärfer verteilt.
+
+7. Globale Anforderung und Gegenkontrolle
+
+Für b(q)=q(q-1/2)(q-1) sind die drei Werte bei 0,1/2,1 exakt null,
+aber int_0^1 |b'(q)|^2dq=1/20. Durch Multiplikation mit einer
+Konstante wird das Integral beliebig groß, ohne diese Werte zu ändern.
+Der Prüfer kontrolliert dieses Beispiel rein rational. Die positive
+Zielmatrix in (4) kann deshalb niemals durch bestandene Einzelwerte
+der kumulativen Testfamilie als erfüllt betrachtet werden.
+
+Die verbleibende Arbeit ist die volle gerichtete Integration bzw.
+globale Approximation von Z_N einschließlich eines vollständigen
+Fehlergrames oder die vollständige Integration seiner regulären
+Ableitungsenergie. Bei einer gerundeten Logabspaltung muss jeder
+verbliebene Logfehler im L2-Gram bezahlt werden; für eine H1-Aussage
+müssen die tatsächlich exakten führenden Koeffizienten verschwinden.
+
+NEW_GLOBAL_RESIDUAL_INTEGRAL_COMPUTED=false.
+FULL_REMAINDER_CERTIFIED=false.
+TAIL_FLOOR_1_OVER_20_CERTIFIED=false.
+A8->A9 bleibt offen.

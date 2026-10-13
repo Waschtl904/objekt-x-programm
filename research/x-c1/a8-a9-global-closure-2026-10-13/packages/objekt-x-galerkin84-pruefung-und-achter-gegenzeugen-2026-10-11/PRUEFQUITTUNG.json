@@ -1,0 +1,24 @@
+{
+  "status": "PASS_GALERKIN84_REVIEW_WITH_NEW_BRIDGE_OBSTRUCTION",
+  "date": "2026-10-11",
+  "input_archive_sha256": "461eee1352a82cadf9c9a8ec6540f782ad9ceb0490c0fa28afa93392dccd7c28",
+  "original_replay_passed": true,
+  "targeted_finite_4096_reconstruction_passed": true,
+  "stored_independent_witness_interval_comparisons": 848,
+  "fresh_operator_integrations": false,
+  "conditional_gates_rebuilt_from_C84_and_metric": true,
+  "conditional_gates_certified_at_bits": 512,
+  "proposed_uniform_Q8_bridges_refuted": true,
+  "new_obstruction_rays": {
+    "even": "(-P e5,e5)",
+    "odd": "(-P e2,e2)"
+  },
+  "new_obstruction_method": "Exact rational actual finite Schur upper bound including full inherited errors",
+  "negative_actual_schur_witness": false,
+  "tail_coercivity_certified": false,
+  "full_remainder_certified": false,
+  "inherited_analytic_operator_bounds_assumed": true,
+  "external_mathematical_review": false,
+  "github_read": false,
+  "github_changed": false
+}

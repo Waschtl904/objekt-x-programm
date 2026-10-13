@@ -1,0 +1,29 @@
+{
+  "status": "JOINT_ENERGY_IMPROVED_U00_UNRESOLVED_185D_ONLY_BUDGET_EXCLUDED",
+  "date": "2026-10-08",
+  "signed_C_inputs_changed": false,
+  "new_185D_cross_gram_computed": false,
+  "expensive_185D_only_run_skipped_after_exact_feasibility_obstruction": true,
+  "common_old_energy_and_C_bound_improved": true,
+  "matrix_interval_relaxation_admits_nonclosing_completions": true,
+  "completion_realizable_by_physical_operator_asserted": false,
+  "physical_negative_witness": false,
+  "new_operator_integrations": false,
+  "source_integral_precisions": [
+    3072,
+    4096
+  ],
+  "new_joint_algebra_source_integral_precision": 4096,
+  "new_joint_algebra_precisions": [
+    1024,
+    1536
+  ],
+  "full_remainder_certified": false,
+  "G01": null,
+  "gamma01": null,
+  "beta_tail": null,
+  "pilot_geometry_changed": false,
+  "new_horizon": false,
+  "github_changed_by_this_stage": false,
+  "external_review": "OPEN"
+}

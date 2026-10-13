@@ -1,0 +1,165 @@
+Objekt X — Randtest und Anschluss an den ganzen Residualrest
+12. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Alle operatorbezogenen Aussagen setzen die geerbten tatsächlichen Kern-,
+Domänen-, Quellen- und Fehlergrenzen voraus. Hier wird keine globale
+Restpositivität oder unabhängige externe mathematische Begutachtung behauptet.
+
+1. Unabhängige Geometrieprüfung
+
+Im Raum X=L2((a,b),2dx) sei h=b-a, q=2^-14 und
+s_q=1_[a,a+qh]/sqrt(2qh). Die Koeffizienten in der orthonormalen
+lokalen Legendrebasis sind
+
+ s_n=sqrt((2n+1)/(4q)) I_n,
+ I_0=2q,
+ I_n=[P_(n+1)(2q-1)-P_(n-1)(2q-1)]/(2n+1), n>=1.
+
+check_geometry.py verwendet die Drei-Term-Rekursion an EINEM rationalen
+Punkt und diese Stammfunktionsidentität. Dies ist eine andere Berechnung
+als die Monomdarstellung mit termweiser Integration im Eingangsprüfer.
+Alle 104 Koeffizientenquadrate werden in allen vier Integraldateien geprüft.
+
+Für die harmonische Form gilt mit dem Maß 2dx
+
+ H[u]=1/2 integral integral |u(x)-u(y)|^2/|x-y| dxdy.
+
+Beim Indikator tragen die zwei Rechtecke links/rechts des Sprungs bei.
+Ihre Summe, der Vorfaktor 1/2 und die Amplitude 1/(2qh) ergeben
+
+ H[s_q]=-[q log(q)+(1-q)log(1-q)]/(2q).
+
+Insbesondere ist der Faktor 1/2 in der eingesandten Energieformel richtig.
+Die Kreuzform mit einem Polynom ist integrierbar; seine Differenz hebt
+den Kernelpol auf. Die Eigenwerte auf ell_n sind H_n. Energie-Bessel
+liefert ohne zusätzlich unterstellte Spektralgleichheit
+
+ sum_(n>=104) (H_n+11/10)|s_n|^2 <= Eplus,
+ Eplus=11/10+H[s_q]-sum_(n<104)(H_n+11/10)|s_n|^2.
+
+Die getrennte rationale Rechnung benutzt für log(2) und -log(1-q)
+die positive atanh-Reihe samt geometrischer Restobergrenze. Ergebnis:
+
+ 0.522048329797 < 1-sum_(n<104)|s_n|^2 < 0.522048329799,
+ 3.71232003276 < Eplus < 3.71232003278.
+
+Es wird kein hoher Legendreabbruch verwendet, um Eplus zu rechtfertigen.
+
+2. Was der Rang-eins-Test besagt
+
+Mit den EXAKTEN k_n des Vorgängers, d_n=H_n+11/10 und
+
+ f_q=sum_(n>=104)s_n k_n,
+ r(q)=R(f_q),
+ Qtail=sum_(n>=104)R(k_n)*R(k_n)/d_n
+
+gilt durch gewichtetes Cauchy-Schwarz
+
+ Gtest=r(q)*r(q)/Eplus <= Qtail.
+
+Der volle rationale Replay rekonstruiert beide 203er-Residualzeilen,
+bezahlt die übernommenen analytischen Fehler und prüft die angegebenen
+Unter-/Obergrenzen für DIESEN Rang-eins-Gram in T_budget-Metrik:
+
+ gerade:   0.0004828 < Norm < 0.000484,
+ ungerade: 0.0013323 < Norm < 0.001334.
+
+Die Prozentwerte sind damit 0.04828 bis 0.04840 Prozent beziehungsweise
+0.13323 bis 0.13340 Prozent. Diese Beträge dürfen nicht als bezahlte
+disjunkte Teilgrame zum Achtergram addiert werden. Der Test bündelt eine
+Richtung innerhalb derselben noch offenen unendlichen Summe.
+
+Der zusätzliche Fehlerpreis 10^-50 verwendet eine Normgrenze für die
+unprojizierte Funktion auf der ganzen Schale. Die erforderliche Bindung
+ist in Abschnitt 6 des Antwortpakets angelegt: Die Schranken für Q_b F,
+Q_b Lambda J und g entstehen vor der abschließenden Restprojektion.
+Es genügt NICHT, lediglich eine bereits projizierte T-Norm heranzuziehen.
+Die Gültigkeit dieser globalen Operatorgrenzen bleibt geerbte Voraussetzung.
+
+3. Neue analytische Grenze dieser Testfamilie
+
+Dass die Masse jenseits von Grad 103 groß ist, macht einen normierten
+Randindikator nicht zu einem globalen Normtest. Das lässt sich für die
+ganze Familie q->0 beweisen.
+
+Setze die 203-spaltige X-Funktion
+
+ g_N=sum_(n>=N) ell_n R(k_n), N=104.
+
+Sie liegt in X: R ist X-stetig und die k_n sind eine beschränkte
+Rang-eins-Störung der ell_n. Für alle Kraftvektoren gilt
+
+ r(q)=<s_q,g_N>_X,
+ r(q)*r(q) <= integral_a^(a+qh) 2 g_N(x)*g_N(x) dx.
+
+Der rechte Matrixgram geht für q->0 in Operatornorm gegen null
+(absolute Stetigkeit des Integrals; nur 203 Spalten). Gleichzeitig gilt
+wegen |P_n|<=1
+
+ sum_(n<N)|s_n|^2 <= N^2 q,
+ ||(I-P_<N)s_q||^2 ->1,
+ Eplus(q)=1/2 log(1/q)+8/5+o(1) -> unendlich.
+
+Also geht Gtest(q) in jeder FESTEN positiven Budgetmetrik gegen null,
+obwohl die Außenmasse gegen eins geht. Bei logarithmischen Randprofilen
+von höchstens Ordnung log^2(u) folgt sogar Gtest(q)=O(q log^3(1/q));
+dies ist eine asymptotische Strukturangabe, KEINE numerisch bezahlte
+Restobergrenze bei q=2^-14.
+
+Die zusätzlich exakt gerechneten Geometrien illustrieren nur diesen Punkt:
+ q=2^-18: Außenmasse ungefähr 0.959581657279, Eplus ungefähr 7.603233845368;
+ q=2^-22: Außenmasse ungefähr 0.997424586899, Eplus ungefähr 9.209626734948;
+ q=2^-26: Außenmasse ungefähr 0.999838842027, Eplus ungefähr 10.609975149727.
+Für diese drei Breiten wurden KEINE neuen tatsächlichen Residuen integriert.
+
+4. Exakte Verbindung zu einer möglichen globalen Oberrechnung
+
+Die gleiche Testfamilie lässt sich theoretisch vollständig verwenden,
+wenn statt einzelner Werte eine ganze Funktion kontrolliert wird. Setze
+
+ b(q)=sqrt(q) r(q)=sqrt(2h) integral_0^q g_N(a+hu) du.
+
+b ist absolut stetig, b'(q)=sqrt(2h)g_N(a+hq) fast überall. Somit gilt exakt
+
+ U_N=sum_(n>=N)R(k_n)*R(k_n)
+    =integral_0^1 b'(q)*b'(q) dq,
+ Qtail <= U_N/d_N.
+
+Hier sind ausdrücklich die k_n-Koordinaten gemeint. Ein raw-ell_n-Gram
+darf nicht ohne den gebundenen Momentpreis eingesetzt werden.
+Der bereits geprüfte Vorgänger zahlt Q_J, die acht Außenzeilen und die
+gesamte Momentkorrektur mit c*T_budget, c=1/5000 bzw. 13/20000.
+Deshalb wäre hinreichend
+
+ integral_0^1 b'(q)*b'(q)dq <= d104*(1-c)*T_budget.
+
+Dies ist ein bedingter, vollständiger Anschluss. Das linke Integral wurde
+hier NICHT berechnet. Einzelwerte b(q_j) kontrollieren es nicht von oben.
+Die Darstellung verlangt nur L2-Integrierbarkeit von g_N; sie setzt nicht
+die falsche endliche gewichtete Ableitungsenergie der unbereinigten
+logarithmischen Residuen voraus.
+
+Der bereits entwickelte andere Anschluss bleibt ebenfalls bedingt:
+gemeinsame tatsächliche Randterme log(u), log^2(u), log(1-u) abziehen,
+ihren vollständigen 3x3-Gram verwenden und den regularisierten Rest mit
+vollständiger Ableitungsenergie einschließen. Die zwei inneren
+Randkoeffizienten und dieser globale Gram fehlen weiterhin. Das kleine
+isolierte äußere Logbudget und der bestandene Indikatortest dürfen dabei
+nicht ohne Kontrolle ihrer Kreuzterme kombiniert werden.
+
+5. Umfang und Status
+
+Neu ausgeführt: vollständiger rationaler Eingangs-/Vorgänger-Replay;
+getrennte rationale Rekursion für die Indikatorgeometrie; analytische
+Kontrolle der Gramrichtung, der Energie-Normierung und der obigen
+Grenzaussage zur Testfamilie.
+
+NICHT neu ausgeführt: die vier vollständigen Quellenintegrationen des
+Eingangspakets. Ihre gebundenen Daten und Präzisionsvergleiche wurden
+nachgeprüft; dies ersetzt keinen neuen Integrationslauf.
+
+FULL_TAIL_UPPER_COMPUTED=false.
+FULL_REMAINDER_CERTIFIED=false.
+TAIL_FLOOR_1_OVER_20_CERTIFIED=false.
+NEGATIVE_ACTUAL_SCHUR_WITNESS=false.
+A8->A9 und Objekt X bleiben offen.

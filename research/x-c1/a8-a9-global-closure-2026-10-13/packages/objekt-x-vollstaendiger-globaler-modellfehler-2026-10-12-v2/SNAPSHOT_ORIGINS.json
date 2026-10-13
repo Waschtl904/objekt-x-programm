@@ -1,0 +1,57 @@
+{
+  "work/direct-rest84-2026-10-11/REFINED_COMMON96.json": {
+    "original_sha256": "18a71ae90f69dc28ecc1a42b7ed865057cdd2a28986abc3a1ac06bb558e23097",
+    "snapshot_sha256": "b12c751cbb65dd3e728878797d5edd80a829f9c49cab878024823d442b2a5e53",
+    "unchanged_fields": true
+  },
+  "work/direct-rest84-2026-10-11/REFINED_INPUT.json": {
+    "original_sha256": "7c2a93adb187cc51f03f8083ffd82d4437d155d032da698e138787f90379614b",
+    "snapshot_sha256": "7beb100354f6b1223a138426c678c3dc006517d4754717bd7dedd910ddadadfe",
+    "unchanged_fields": true
+  },
+  "work/inner-log-2026-10-12/INNER_LOG_1536.json": {
+    "original_sha256": "3df1aefeb3f47d284153a76e3c423c9ce4d236cf242d5e24a1186454f9a58f97",
+    "snapshot_sha256": "e211935bfe70bc830b1b36bc1040c64cd0dfaca32455c6436af6da07f2336be3",
+    "unchanged_fields": true
+  },
+  "work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/remainder-integration-check-v2/originals/weighted-response/inputs/a8_model.json.gz": {
+    "original_sha256": "5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b",
+    "snapshot_sha256": "16fd429eedd48c566de323428de77f3167f0e119b5ecae5e2b04aafa04e74c23",
+    "unchanged_fields": true
+  },
+  "work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/gamma-low-2026-10-09/SHELL_GAMMA_4096.json": {
+    "original_sha256": "626b4da94d4a9120b4866a1362245a9638e4596f0306b013cbe7d874bfa658d1",
+    "snapshot_sha256": "0b5eec9a08cd3d48cc901c41f861f3122dd94624db9c4af70da2e447bf03e3a5",
+    "unchanged_fields": true
+  },
+  "work/new-responses84-2026-10-11/RESPONSES_EVEN.json": {
+    "original_sha256": "f94e8f0ede6f79de7f62b6c59725a6170a68c0053a39232a86d23579fa0ad0a6",
+    "snapshot_sha256": "c0f63d614ed19b89cc0d55459b9df68e0a48b5787ed0fd146523fa81eded6f75",
+    "unchanged_fields": true
+  },
+  "work/inner-log-2026-10-12/COMPOSED_EVEN_3072.json": {
+    "original_sha256": "0f0504e371eb3a7989e75fca12e5fb1571c0d3009299389dc00a3e30a2736aa8",
+    "snapshot_sha256": "84e73b42fde7c7ee6b6d345622ed9a53e3fa10d9b0b0b91892227cbf309fc370",
+    "unchanged_fields": true
+  },
+  "work/inner-log-2026-10-12/TRACES_EVEN_3072.json": {
+    "original_sha256": "9a6e5af5bcb07b8d3599e8557a4b3950be548bac194ba34157f4024196870454",
+    "snapshot_sha256": "7189343c24d6d0a68a20c2d21f54188bfd5fec245a615c0528e320db2f014e4e",
+    "unchanged_fields": true
+  },
+  "work/new-responses84-2026-10-11/RESPONSES_ODD.json": {
+    "original_sha256": "9092843c0d4e3bb00c4c9c860c15dabe64d6b90cab534a5ba958f30a037dd8f5",
+    "snapshot_sha256": "44c6d09a73538d18eaf0a8b81c455684e93a1bad783a721e5e42f365de680110",
+    "unchanged_fields": true
+  },
+  "work/inner-log-2026-10-12/COMPOSED_ODD_3072.json": {
+    "original_sha256": "c491517d7687f0a6b99aa0062e7d338f1437fee444e8f1cb4eb4be68c9687edd",
+    "snapshot_sha256": "bb64d5afa5fb0686eaac1c4bb9fa08e3361dc06b3df6b838a706bd45c45900a8",
+    "unchanged_fields": true
+  },
+  "work/inner-log-2026-10-12/TRACES_ODD_3072.json": {
+    "original_sha256": "249c57331d94a88a8f26576ed3d3b216a033c5cba7ab5f757387c4b2826d3a44",
+    "snapshot_sha256": "774f4be067b9a015d94aa99c7deb89460589c5e23cedd199ce9a9316a0fa60de",
+    "unchanged_fields": true
+  }
+}

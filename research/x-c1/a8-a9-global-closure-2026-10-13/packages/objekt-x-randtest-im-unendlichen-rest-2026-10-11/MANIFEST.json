@@ -1,0 +1,26 @@
+{
+  "files": {
+    "ANALYSIS_EVEN_14_3072.json": "cd440f8eb3ddccfd07766acbae06f60d01b0266d2aaccc38b489ef2084977963",
+    "ANALYSIS_ODD_14_3072.json": "c16debb8d7d54ecf6abd3df1fd87243a608329c1756a9663ad5d5d78f5c7d658",
+    "analyze_endpoint.py": "8537761b6bd352eeec0c145834e7848509cf61a81ff0d4ca7550b346f0607ca8",
+    "ANSCHLUSS_GPT1.txt": "cfbdfd16c3726df8c5546cf1cabc31523cfeb6adfee85e1b24eefcc357e74828",
+    "AUDIT_ENDPOINT.json": "34774a8b0cd9bf15fd4cc15b1c4f87c1bd14db7dcaa130ed7252a38536dc846f",
+    "audit_endpoint.py": "c9eface8dc89875cc18bed63c6e8e9f6d2c1433b0f0b6ae238693942de29a1e3",
+    "BERICHT.txt": "fcef3001808d1a5a4b6507f1d6689b1e210a3ef4600c5d99a5344a6997ae5319",
+    "build_endpoint_engine.py": "ee38d620fb4b028c826c80b634e33a1bf08d1db5e8fae193d59497c764fb6f2b",
+    "compute_endpoint.py": "6c00ceaa8b4aa32de4194218f61c772d92f3fa636598ddab0db8a3d2ebda7dac",
+    "ENDPOINT_EVEN_14_3072.json": "2c394b4ee3dcf717434a6c29738301f5f8a83eddf2546d559a51cc84532b077d",
+    "ENDPOINT_EVEN_14_4096.json": "67b2a3b125dc5990f5023d1aa3508673e4ccff3d358a53291d3c4e3e5dade25e",
+    "ENDPOINT_ODD_14_3072.json": "74e7b30f8a2ff1f7b3f8abcd9067607bd2b30ac87215c5f728c4ca57bda95883",
+    "ENDPOINT_ODD_14_4096.json": "ae9a28e6839acbeac6cd1438a2ce91fc7f5123fcb2b022b739a19689c4f54099",
+    "endpoint_tail.py": "4a81040eb8fbd7f48f3506b61b4b7be3290180c715265ef2b5e95fcfe1498e43",
+    "HERLEITUNG.txt": "817b005a9119e780d6d8fc1052ca8674c7750ee2be40db499956b10202dae719",
+    "inputs/Objekt-X-Antwortpruefung-und-Aussenresidual8-2026-10-11.zip": "57b8731ee450b3d1c96701ba1fac341a8b50286f5953b1124c39d8d0b42bdc0b",
+    "inputs/Objekt-X-Unendlicher-Dualrest-und-Aussenrichtungen-2026-10-11.zip": "2ac05dceb88e2b485c155f800840182e300f8899e2093f295400bc59fd530399",
+    "interval_helpers.py": "4bc0fc7c7691ff0c98d91b6edde9dd3d9a9a22a924bd00d09c33a95e98d812d0",
+    "rational_ldl.py": "4bcbdb972117edf0af7b098c2dc00c1c9f921f020e1311ad31495bf1d4b66700",
+    "README.txt": "c5478c24f3a4a2d6eebbb959f15a1c5c634af719b5295f23b013fce99f573a69",
+    "reproduce.py": "f86195713420757740b07c7a6b0215997ac3d25d1ef84c4abacb7b99792a7f22"
+  },
+  "full_remainder_certified": false
+}

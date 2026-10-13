@@ -1,0 +1,21 @@
+{
+  "files": {
+    "BERICHT.txt": "1a11e9b31b7494f2f819b60edad89e673d715f7045106c08fbf83f92426622d8",
+    "CHECKS.json": "388262698569d4f03afe5307c68358680fc0e1a289e8ad4e86ab83ea48c543bc",
+    "FINITE_REPLAY.json": "b191c75a19dccbe2b0db003b79dc4eb5d6c684944ad5df6d9938ee488cc4d50f",
+    "FINITE_REPLAY.log": "6eb737e0953af05cae9507260aae883276515f16eaba39f6255fd610c16fea29",
+    "HERLEITUNG.txt": "644bb670536edaea1bd88ac129a44446f0f4161fee66e414067e2c9efd2bcb3b",
+    "README.txt": "eed2615592d2d0d3c0551727bda7b908e40c26c5ae4f714c2e91c596c9a606e5",
+    "SOURCE_BINDINGS.json": "e0f3a727878ee3d0a3ccfff1bc7f8f18caa9b85b26a7fde1c028b0a36d589db8",
+    "check_tail.py": "98c6346c4907a6b5991cb61b998ece66f256e2293b963c52eb65afb7753641dc",
+    "sources/FINITE_HERLEITUNG.txt": "576df411415483425b0ff001a9b12ad4a2e59baf714d7050086df742f7c6eb27",
+    "sources/HALF_INVERSE_HERLEITUNG.txt": "cd13e95a5ce2f50159a90e3df80a79e16950389a6804161db4ebffa475293035",
+    "sources/HIGH_FLOOR_HERLEITUNG.txt": "a160913e88e32b9eedd7543010441a0c919295d4ee2c152f8c74fc939b303e59",
+    "sources/github_DOMAIN_LEMMATA.txt": "865b8403bd00d390603eb0a856ee843beea723b194fa488fc78c9422c666d9e1",
+    "sources/github_MAIN_README.md": "8cd81a134ae40a4269ed38789bcf4cee12dbbd9378502414a52cbeddabcc2dde",
+    "sources/github_PILOT_PROTOCOL.txt": "fec422ec89aed14ef87c0195ff000e620afad71e5dcd5135e19f05362ce261f4",
+    "sources/github_REMAINDER_BEWEIS.txt": "1ef4dabd030d86d8883a5eaf07a60a4b72a047bec502d2092df08e89d7dc2dcf",
+    "sources/github_REMAINDER_README.md": "7d1f6100e613f150f26eefb282ea93a8e6afaf6c7b16886f0e6abafed202fc79"
+  },
+  "purpose": "Local byte integrity; not external authentication or a mathematical proof."
+}

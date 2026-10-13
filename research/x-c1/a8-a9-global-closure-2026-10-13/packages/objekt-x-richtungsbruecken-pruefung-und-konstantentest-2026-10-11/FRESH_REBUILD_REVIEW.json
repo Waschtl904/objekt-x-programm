@@ -1,0 +1,33 @@
+{
+  "status": "PASS_LOCAL_FRESH_REBUILD",
+  "integrations": [
+    {
+      "file": "DIRECT_Y_EVEN_3072.json",
+      "all_fields_except_seconds_identical": true,
+      "fresh_seconds": 6.996740106998914,
+      "fresh_sha256": "f5ed5a6052d72d2c49eb796cd8a3e95b289e11f9a2ecdc92af76ab995c5d0be0"
+    },
+    {
+      "file": "DIRECT_Y_EVEN_4096.json",
+      "all_fields_except_seconds_identical": true,
+      "fresh_seconds": 9.029329436001717,
+      "fresh_sha256": "fd28a5022ede55f60b40da739c9319c33a195424f001b3495977d6987140c5b7"
+    },
+    {
+      "file": "DIRECT_Y_ODD_3072.json",
+      "all_fields_except_seconds_identical": true,
+      "fresh_seconds": 6.531889013000182,
+      "fresh_sha256": "c8ef7384a7a10331003b89f6df671044bedb9809a5da6a97f441fc084314aa26"
+    },
+    {
+      "file": "DIRECT_Y_ODD_4096.json",
+      "all_fields_except_seconds_identical": true,
+      "fresh_seconds": 8.769409591001022,
+      "fresh_sha256": "2f0bf5b25d43523e9c469f4aab322a0117569ae88e2a87cabebeeaabc30f9fb2"
+    }
+  ],
+  "audit_equal": true,
+  "audit_input_rebuilt_equal": true,
+  "full_remainder_certified": false,
+  "directional_and_upper_matrices_equal_except_fresh_source_hashes": true
+}

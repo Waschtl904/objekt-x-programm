@@ -1,0 +1,13 @@
+{
+  "original_zip": {
+    "name": "Objekt-X-Gemeinsame-Verlustbilanz-2026-10-10.zip",
+    "sha256": "aa1077fc6772c4dc5d440e6c823e87c8e080c0b8c92711a69f31a6cce2a212a4",
+    "root_directory": "Objekt-X-Gemeinsame-Verlustbilanz-2026-10-10"
+  },
+  "previous_coverage_package": {
+    "name": "Objekt-X-Basisabdeckung-und-Fehlerbudget-2026-10-10.zip",
+    "sha256": "0c54178047cabfe7afb688338b508b4201ae2e0e39e1e20ee025919f561b4c0b"
+  },
+  "inherited_analytic_assumptions_reproved": false,
+  "github_live_state_checked": false
+}

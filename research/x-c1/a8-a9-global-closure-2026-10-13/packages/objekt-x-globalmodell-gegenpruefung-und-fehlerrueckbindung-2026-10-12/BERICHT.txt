@@ -1,0 +1,77 @@
+Objekt X — Globalmodell, Fehleranschluss und erste Integraldiagnose
+12. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Der eingegangene Replay und der frische Aufbau beider globalen Modelle
+bei 4096 Bit bestehen. E_dir bleibt unverändert. Die glatte Korrektur
+10^-300 ist unter den geerbten Voraussetzungen bestätigt.
+
+Neu hergeleitet und rational geprüft ist ein Anschluss, der den Fehler
+der eingefrorenen zwölf Kraftspalten an den gesuchten Rest zurückbindet.
+Der dabei vor dem unbekannten Rest stehende Faktor ist kleiner als
+4.351*10^-13 bzw. 8.373*10^-15. Er kann vollständig auf die linke Seite
+gebracht werden. Die große pauschale Norm des alten inversen Blocks
+ist für DIESEN Fehleranteil nicht mehr erforderlich.
+
+Die Herleitung liefert außerdem vollständige Normgrenzen für den rohen
+Kern-Schalen-Block (<10), die 84 direkten Schalenwirkungen (<300) und
+den festen rohen S-Antwortblock (<400). Dies sind Hilfsnormgrenzen,
+keine Tailböden. Der rationale Prüfer kontrolliert die zugehörigen
+Datenpreise einschließlich des geerbten vollen Quellfehlers.
+
+Wenn der noch offene Modellgramtest Uhat<=(999/1000)E_dir/10920 besteht,
+genügt für die davon unabhängige verbleibende Modellabweichung d0:
+
+ gerade:   d0 <=6.76676334020*10^-7,
+ ungerade: d0 <=1.628857838363*10^-6.
+
+Diese sind ZIELBUDGETS. Der tatsächliche Wert d0 wurde nicht gebunden.
+Auch der isoliert bezahlte alte Gamma160-Anteil (<5.327*10^-14 bzw.
+<2.664*10^-15, bei identischem rohem Projektor) ersetzt diesen Nachweis
+nicht. Die übrigen Quellen-/Projektions-/Kernelmodellfehler bleiben offen.
+
+Eine weitere Vereinfachung ist exakt: Für jeden festen polynomialen
+Vorschlag p vom Grad <=103 ist der volle Gram von Rhat0-B C0-p eine
+obere Schranke des projizierten Modellrests. Die exakte Projektion muss
+deshalb nicht zwingend zuerst integriert werden. Feste rationale
+Grad-103-Vorschläge sind für beide Paritäten beigefügt.
+
+Erste tatsächlich ausgeführte globale Quadraturen
+
+Für alle 203 zusammengesetzten Modellfunktionen wurden Gauß-Legendre-
+Quadraturen mit 128 und 256 Knoten gerechnet. Die 155904 neuen skalierten
+Punktwertkomponenten werden mit Arb eingeschlossen. Die Quadraturfehler
+und beide vollständigen Randstücke sind damit noch NICHT eingeschlossen.
+
+Numerische größte Eigenwerte der Quadraturmatrizen relativ zu
+H=E_dir/10920, als Prozentangaben:
+
+                 128 Knoten       256 Knoten
+ gerade          0.00570745 %      0.01937707 %
+ ungerade        0.00396349 %      0.01275738 %
+
+Diese Zahlen sind KEINE oberen Grenzen des globalen Grams. Die Werte
+wachsen beim Verdoppeln der Knotenzahl um mehr als Faktor drei; stabile
+numerische Integration ist daher nicht belegt. Die scheinbare Reserve
+darf nicht als bereits bewiesene Reserve verwendet werden.
+
+Prüfumfang
+
+- Unveränderter Eingangs-Replay und beide frischen 4096-Bit-Neuaufbauten.
+- 1218 Intervallvergleiche und 376 Cauchy-Kontrollen des Eingangs.
+- Zehn vollständige Vorgängerdateien gegen alle behaltenen Auszugsfelder.
+- Reine rationale Rückbindung mit vollständigen M-, D-, Log- und Fehlerdaten.
+- Neue vollständige Funktionsauswertungen für vier Quadraturen.
+- Getrennter schneller Replay der rationalen Aussagen und der numerischen
+  Quadraturdiagnose; keine Behauptung einer analytischen Quadraturkontrolle.
+
+Der frische ZIP-Replay wird in der beigefügten Prüfquittung dokumentiert.
+Die geerbten Operatorvoraussetzungen sind weiterhin externe Eingaben;
+eine unabhängige mathematische Begutachtung bleibt offen.
+
+GLOBAL_MODEL_GRAM_UPPER_CERTIFIED=false
+REMAINING_INDEPENDENT_MODEL_DEFECT_CERTIFIED=false
+FULL_GLOBAL_MODEL_ERROR_CERTIFIED=false
+FULL_REMAINDER_CERTIFIED=false
+TAIL_FLOOR_1_OVER_20_CERTIFIED=false
+
+A8->A9 bleibt offen. Originalarchive und GitHub wurden nicht verändert.

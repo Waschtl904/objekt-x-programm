@@ -1,0 +1,163 @@
+Objekt X — Randstruktur und vollständiger äußerer Logarithmusrest
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Diese Herleitung benutzt die geerbte tatsächliche Kernformel für Q_b,
+die physische Realisierung des alten Kernraums mit Maß 2dx sowie die
+gebundenen Operator- und Domänenvoraussetzungen. Die neue Endpunkt-
+identifikation ist eine analytische Herleitung; der Zahlenprüfer allein
+beweist diese Voraussetzungen nicht. Ein vollständiger Residualabschluss
+wird weiterhin nicht behauptet.
+
+1. Die zusammengesetzte Funktion und ihr äußerer Rand
+
+Setze a=3log(2)/2, b=log(3), h=b-a, u=(x-a)/h.
+Der kanonische lokale Raum hat Skalarprodukt 2 integral_a^b.
+Für alpha=(xi,v) in R191 x R12, z=J X alpha, sei
+
+ G_alpha=Fv-(1-eta)Lambda z,
+ W_alpha=V* [xi-a_low(F)v/(1-rho)]
+           +delta^-1 T_h* [h(z)-h(F)v].
+
+W_alpha wird hier als tatsächliche physische alte Kernfunktion auf
+(-a,a) verstanden, nicht als unnormierter Koordinatenvektor. Dies ist
+genau die Klammer in der geerbten vollständigen Residualformel (R2).
+
+Der kanonische X-Repräsentant von R ist, bis auf die analytischen
+Moment- und endlichen Projektionskorrekturen, die Einschränkung von
+
+             Q_b(G_alpha + W_alpha,core)
+
+auf die Schale (a,b). Damit bleiben die Auslöschungen der alten und
+neuen Beiträge Bestandteil EINER tatsächlichen Funktion.
+
+Nahe x=b kommt ein äußerer Logarithmus nur von G_alpha. Die geerbte
+Q_b-Wirkung auf ein dort glattes Quellenstück enthält genau
+
+             -1/2 G_alpha(x) log(b-x).
+
+Die alte Kernfunktion erzeugt dort keinen Logarithmus: Ihr Carleman-
+Integral ist wegen b-a>0 vom Kernträger getrennt. Ihre eigenen möglichen
+logarithmischen Stellen liegen an den Kernrändern +/-a. Unter den alten
+Primverschiebungen q=2,3,4,5,7,8 wird bei x=b keine davon getroffen,
+denn exp(b-a)=3/(2sqrt(2)) und exp(b+a)=6sqrt(2) sind keine dieser
+ganzen Zahlen. Innere Zellschnittstellen sind stückweise analytisch
+und einseitig beschränkt; sie erzeugen keinen Logarithmus bei b.
+Der reguläre Gamma-Kern ist dort analytisch. Liftungs-, W_X- und
+endliche Projektionskorrekturen addieren polynomiale oder analytische
+Momentfunktionen und ändern den logarithmischen Koeffizienten nicht.
+
+Somit ist der EXAKTE äußere Koeffizientenvektor der 203 Residuen
+
+ C_out = 1/2 [(1-eta) J(b) X - (0_191,F(b))].          (1)
+
+Gemeint ist der Koeffizient von log(1-u). Der Unterschied zwischen
+log(b-x) und log(1-u) ist die konstante Größe log(h).
+
+J(b) und F(b) werden aus den gebundenen Basisintervallen und rationalen
+Matrizen neu ausgewertet. Für die vier z-Quellen benutzt man exakt
+
+ z_n(b)=sqrt((2n+1)/(2b)) [1-M_n(b)/M_p(b)],
+ n=p+2,p+4,p+6,p+8,
+
+wobei M_n die bereits geerbte positive Mellinreihe ist. Die acht anderen
+F-Spalten sind Y=QS. Kein Operatorfehler aus einem gemessenen Kreuzblock
+wird zum Bestimmen von (1) als null vorausgesetzt.
+
+2. Warum die einfache Ableitungsschätzung nicht direkt gilt
+
+Rational eingeschlossen sind unter anderem die folgenden NICHT null
+enthaltenden Intervalle für niedrige Kraftspalten (Nummerierung ab 1):
+
+ gerade, Spalte 175: C_out ungefähr -0.10380693759035;
+ ungerade, Spalte 188: C_out ungefähr -0.098518843041961.
+
+Die genauen Intervalle stehen in ENDPOINT_AUDIT.json. In einer solchen
+Spalte hat R_X nahe b die Struktur C_out log(1-u) plus einen Rest,
+dessen Ableitung höchstens logarithmisch wächst. Folglich divergiert
+
+ integral_a^b 2(x-a)(b-x) |R_X'(x)|^2 dx
+
+logarithmisch. Die unbereinigten Residuen gehören nicht alle zum
+gewichteten H1-Formraum. Eine Abschätzung des GANZEN Residualtails
+mit dieser angeblich endlichen Ableitungsenergie wäre daher unzulässig.
+Das steht nicht im Widerspruch zur bewiesenen L2-/Formdualzugehörigkeit.
+
+3. Vollständiger unendlicher Schwanz der äußeren Komponente
+
+Für die lokal orthonormierten Legendre-Funktionen ell_n und n>=1 gilt
+
+ <ell_n,log(1-u)>_X = -sqrt(2h(2n+1))/(n(n+1)).
+
+Daher teleskopiert die GANZE ungewichtete Summe exakt:
+
+ sum_(n>=N) |<ell_n,log(1-u)>|^2 = 2h/N^2.            (2)
+
+Für d_n=H_n+11/10 und N=104 folgt insbesondere
+
+ Q_out = sum_(n>=104) (C_out log(1-u))_n*
+                         (C_out log(1-u))_n/d_n
+        <= [2h/(104^2 d104)] C_out* C_out.            (3)
+
+Es werden in (2)-(3) keine Koeffizienten hinter einem endlichen Index
+weggelassen. Mit der neuen T_budget=beta(D-M_upper) beweist der
+unabhängige Rationalprüfer durch jeweils 204 positive Intervall-LDL-
+Pivots des Schurblocks
+
+ [c T_budget, C_out* ; C_out, 104^2 d104/(2h_upper)]
+
+die folgenden vollständigen Komponentenabschätzungen:
+
+  gerade:   Q_out < (7/10000) T_budget,
+  ungerade: Q_out < (8/10000) T_budget.               (4)
+
+Das sind 0.070 % und 0.080 % für die ISOLIERTE äußere Komponente.
+Die Kreuzterme mit den anderen Residualteilen gehören nicht zu (4).
+(4) ist weder eine obere noch eine untere Schranke für den gesamten
+tatsächlichen Residualtail. Bei einer Zerlegung müssen diese Kreuzterme
+gemeinsam integriert oder durch ein gültiges Young-Budget bezahlt werden.
+
+4. Struktur eines auslöschungserhaltenden weiteren Anschlusses
+
+Die vollständige alte Kernfunktion W_alpha ist auf ihren Zellen
+analytisch mit höchstens einfachen logarithmischen Kernrandtermen.
+Ein Carleman-Integral davon erzeugt bei x=a höchstens log^2(u) und log(u).
+Innere logarithmische Stellen entstehen auf dieser Schale nicht:
+Kombinationen der endlich vielen Primverschiebungen führen zu Produkten
+oder Quotienten der ganzen Zahlen 2,3,4,5,7,8. Ein neuer Schnitt im
+offenen Intervall (a,b) würde ein ganzzahliges Produkt strikt zwischen
+8 und 9 oder einen nichttrivialen solchen Quotienten zwischen
+1 und exp(h)=3/(2sqrt(2)) erfordern. Beides ist ausgeschlossen.
+Die Stelle 0 des Kernraums wird nur bei log(3)=b erreicht. Die Randfälle
+2*4=8 bzw. 3*3=9 bleiben ausdrücklich Randfälle.
+
+Präziser seien für die PHYSISCHE Kernfunktion die zwei Randvektoren
+
+ W_alpha(a-s)=A_log alpha log(s/h)+A_fin alpha
+                         +O(s log(s)), s->0+.
+
+Mit Delta G=G(a+)-G(a-) folgt aus den vollständigen Kernformeln
+
+ C_left,2 = (1/4) A_log,
+ C_left,1 = -(1/2) Delta G+(1/2) A_fin
+                -(-1)^p log(2)/sqrt(8) A_log,
+ C_right,1=C_out.                                    (5)
+
+Der letzte Term in C_left,1 ist die Primverschiebung 8, welche beim
+inneren Schalenrand den gegenüberliegenden Kernrand -a trifft. Der
+Faktor (-1)^p ist die physische Parität. Andere Primverschiebungen
+treffen dort keinen Kernrand. Für das Carleman-Stück benutzt (5)
+
+ integral_0^a log(s/h)/(s+epsilon) ds
+       = -1/2 log^2(epsilon/h)+O(1),
+ integral_0^a 1/(s+epsilon) ds = -log(epsilon/h)+O(1).
+
+Die in (5) benötigten A_log und A_fin wurden in diesem Paket NICHT
+berechnet oder numerisch als bereits bekannt behandelt. Ihre genaue
+Normierung muss die physische Kernnorm 2dx beibehalten.
+
+Nach Abzug dieser drei tatsächlichen Randterme bleibt, unter den
+genannten Kernvoraussetzungen, eine Funktion g im gewichteten H1-Raum.
+Ein expliziter globaler oberer Gram für ihre Ableitung ist noch offen.
+Die verbleibende Berechnung ist in LOG_TAIL_METHOD.txt präzisiert.
+
+FULL_REMAINDER_CERTIFIED=false.

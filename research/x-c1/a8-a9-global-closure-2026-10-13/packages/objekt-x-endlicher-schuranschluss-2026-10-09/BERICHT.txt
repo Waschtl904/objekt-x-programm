@@ -1,0 +1,90 @@
+Objekt X — der endliche gemeinsame 4+8-Schurblock schließt
+9. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Unter den gebundenen Voraussetzungen ist der endliche gemeinsame Anschluss
+der vier bisherigen Quellen und der acht vorhandenen tatsächlichen
+Y-Funktionen jetzt in beiden Paritäten positiv zertifiziert.
+
+Nach Eliminierung des vollständigen alten Raums und des Viererblocks gilt
+für den verbleibenden achtspaltigen Schurblock
+
+                       Sigma_Y >= 0.00004 WY.
+
+Das wurde für alle Richtungen mit rationalen Löwner-Untermatrizen und
+exakten LDL-Pivots bewiesen, in beiden Präzisionsläufen 3072/4096 Bit.
+Der Boden bezieht sich auf diesen Schurblock; er ist kein behaupteter
+einheitlicher Boden der ursprünglichen zwölf Koordinaten vor der Elimination.
+
+Welche Änderungen waren nötig?
+
+1. Die alte niedrige Gamma-Matrix wurde von Grad 160 auf 224 korrigiert.
+   Die Korrektur wurde tatsächlich eingeschlossen und der neue Rest von
+   ungefähr 1.03103e-40 vollständig bezahlt. Allein reichte das noch nicht.
+
+2. Die Gamma-Form auf den acht bestehenden Schalenfunktionen wurde direkt
+   eingeschlossen. Eine pauschale Hülle von ungefähr 0.000741 wurde durch
+   die gemeinsame 8x8-Formmatrix ersetzt. Der unendliche Spiegelrest und
+   der Polynomrest sind bezahlt; die alte Momentkorrektur bleibt erhalten.
+
+3. Die 0.1-Prozent-Zugabe im alten Kopplungsgram wurde durch die gültige
+   gemeinsame Operatorabschätzung mit t=10^-8 ersetzt. Ihr vergrößerter
+   Gegenfehler wurde vollständig mitgerechnet. Dafür waren keine neuen
+   Kopplungsintegrale nötig.
+
+Die gemeinsame alte 12x12-Inversenergie und der signierte C-Block wurden
+zusammen fortgeschrieben. Die gleichen Quellen und Y-Funktionen blieben
+erhalten. Es wurde keine neue Testfamilie gesucht.
+
+Zwischenstände
+
+Diagnostische Rayleighwerte der sicheren Schur-Untermatrizen, relativ zu WY:
+
+                                gerade             ungerade
+Vorgänger, hoher Boden 91/50      -0.001881351854      -0.000959536882
+Nur alte Gamma-224-Korrektur     -0.000942118398      -0.000959083540
+Zusätzlich direkte Schalenform  -0.000201623920      -0.000218719876
+Zusätzlich Kopplungsgram        +0.000045201781      +0.000044915878
+
+Diese Tabellenwerte sind diagnostische Richtungswerte, keine eingeschlossenen
+kleinsten Eigenwerte. Der positive Satz benutzt stattdessen den exakten
+Matrixnachweis des etwas kleineren gemeinsamen Bodens 0.00004.
+Die negativen Zwischenwerte bleiben als solche erhalten; sie waren keine
+negativen Zeugen der tatsächlichen Form.
+
+Wie wurde geprüft?
+
+- Acht vollständige 191D-Inversenzertifikate: zwei Einstellungen des
+  Kopplungsgrams, zwei Paritäten, zwei Präzisionen.
+- Zwölf genaue Schurrekonstruktionen über die drei Rechenstufen; vier
+  positive Endfälle mit dem rationalen Boden 1/25000.
+- 72962 Vergleiche der niedrigen Gamma-Korrektur und 384 Schalenvergleiche.
+- Zehn alternative Gamma-Paarungen durch eine eigenständige exakte
+  Dreiecks-/Betaformel, auch mit Python-Standardbibliothek nachgerechnet.
+- Quellbindungen und abschließender Replay aus einem frisch entpackten ZIP.
+
+Der schnelle Replay wiederholt nicht alle gerichteten Gamma-Matrixrechnungen.
+Die entsprechenden Programme und gebundenen Eingaben liegen bei.
+
+Bedeutung und nächster Schritt
+
+Wir haben jetzt einen positiven endlichen Anschluss auf denselben Funktionen,
+an denen zuvor unsere Majoranten scheiterten. Drei konkret lokalisierte
+Informationsverluste konnten rigoros reduziert werden.
+
+Der ganze neue Quotientenrest ist damit weiterhin nicht kontrolliert.
+Der nächste Hauptgate ist seine vollständige Kontrolle einschließlich der
+Kreuzkopplung mit dem jetzt zertifizierten endlichen 4+8-Block. Dabei muss
+die gemeinsame alte Inversenergie erhalten bleiben. Der vorher widerlegte
+konservative feste M_--Normgate ist keine wieder offene Abkürzung.
+
+Aussagegrenzen
+
+Die ursprünglichen Formidentitäten, Domänen, alte Positivität und geerbten
+Integralmajoranten bleiben gebundene Voraussetzungen. Keine externe
+fachmathematische Begutachtung. Die aktuelle Gegenprüfung des Nutzers
+bestätigt das Vorgängerpaket 91/50, nicht schon dieses neue Ergebnis.
+
+Objekt X, der vollständige unendliche neue Rest und weitere Horizonte bleiben
+offen. GitHub wurde in diesem Forschungsblock nicht verändert.

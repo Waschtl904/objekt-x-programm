@@ -1,0 +1,16 @@
+{
+  "input_package_sha256": "86e510b6d68f5b70345f7ce710491fd09e7d8818cff3be6565fd8254d16581e3",
+  "responses_package_sha256": "5b41695ea53cd620210654af0a0389219631484e5f2584404fddd0f5af206fd3",
+  "common96_package_sha256": "06b4cc975b8e6bd8f6088a151ea1dcaebd38862f7a50e3f2f2b22ebb05afef51",
+  "inner_log_package_sha256": "96b8367c5f49ab8b99f63aade251942221a3fcad50ba09c6acb3a662e0dd8016",
+  "bootstrap_inputs": {
+    "rho_beta_delta_K_Mupper_eF_x2": "Unchanged fields of RESPONSES_EVEN/ODD.json; complete source hashes are stored per case.",
+    "H84_new_model_diagonal": "Diagonal of the new H84_new_model in the full bound REFINED_COMMON96.json.",
+    "high_source_error_norm": "galerkin.high_source_error_norm in the full bound REFINED_INPUT.json.",
+    "qmodel_HS_norm": "old_q_polynomial_D_HS_norm in COMPOSED_EVEN/ODD_3072.json; hashes stored per case."
+  },
+  "older_operator_integrations_repeated": false,
+  "input_function_models_freshly_rebuilt_at_4096": true,
+  "new_quadrature_point_components": 155904,
+  "global_quadrature_remainder_proved": false
+}

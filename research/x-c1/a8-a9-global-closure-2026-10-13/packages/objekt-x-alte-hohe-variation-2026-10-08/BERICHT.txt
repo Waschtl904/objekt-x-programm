@@ -1,0 +1,76 @@
+Objekt X — Ergebnis des festgelegten kleinen Variationsversuchs
+8. Oktober 2026. AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN.
+
+Ergebnis
+
+Die zwölf zusätzlichen alten hohen Testfunktionen je Parität sind jetzt
+vollständig gerechnet. Der Versuch verbessert die gemeinsame alte
+Inversenergie-Untergrenze streng in allen zwölf Quellrichtungen. Die
+bisher zugelassene Belegung E=L_alt ist damit ausgeschlossen.
+
+Der Gewinn reicht noch nicht für den U00-Abschluss:
+
+                    vorher          nach dem Variationsversuch
+ gerade             1.109010652     1.108282303
+ ungerade           1.155973884     1.153962435
+
+Die Tabelle zeigt die größten Eigenwerte der berechneten Obermatrizen,
+gerundet. Die exakten rationalen Grenzen stehen in EXACT_CHECK.json.
+Insbesondere gelten für beide Integrationsläufe:
+
+ gerade:   1.10828230291448 < lambda_max(U00) < 1.108282303015
+ ungerade: 1.15396243520799 < lambda_max(U00) < 1.153962435308
+
+Es fehlt weiterhin eine Obermatrix unter I. Kein physischer Gegenzeuge
+und keine negative Aussage über den tatsächlichen Operator folgen daraus.
+
+Informationsgewinn und verbleibende Lücke
+
+Die relative Breite D_zz <= lambda M verbessert sich
+
+ gerade:   0.504155592 -> 0.501262369
+ ungerade: 1.439544592 -> 1.427927760.
+
+Die direkte Schur-Bedingung M-D_zz>0 gilt weiter im geraden Sektor und
+bleibt im ungeraden Sektor offen. Auch die neue Matrixrelaxation lässt
+E=L_neu, Delta=0 als Belegung zu. Sie liefert rationale Modell-Rayleigh-
+werte über 1.06252064 gerade bzw. 1.08222925 ungerade. Diese Belegungen
+sind ausdrücklich keine nachgewiesenen Realisierungen des Operators.
+
+Die neuen Funktionen liefern also zusätzliche Operatorinformation,
+schließen die verbleibende Informationslücke aber nur zu einem kleinen
+Teil. Die Fehlerrundung der neuen Integrale erklärt diesen kleinen Gewinn
+nicht: beide Präzisionsläufe stimmen in 2016 Eintragsvergleichen überein.
+
+Prüfungen
+
+- Vier vollständige Integrationsläufe: zwei Paritäten, 3072/4096 Bit.
+- Je Lauf 144 Quellenpaarungen und je 144 alte Kreuz-/Formpaarungen.
+- Symmetrie der Formmatrix und vier zusätzliche direkte Produktintegrale.
+- 2016 Überlappungsvergleiche aller sieben gespeicherten 12x12-Eingänge.
+- Unabhängige Fraction-Intervallrekonstruktion des Variationsgewinns.
+- Exakte positive LDL-Pivots von J und U-L_neu in allen vier Fällen.
+- Exakte rationale Eigenwertgrenzen der vier neuen U00-Matrizen.
+- Quellen und Protokoll sind durch SHA-256 gebunden.
+
+Nächste strategische Frage
+
+Welche Form der alten hohen Antwort fehlt in den kritischen gemeinsamen
+Quellrichtungen? Der kleine Versuch mit den unmittelbar folgenden zwölf
+Legendregraden beantwortet diese Frage noch nicht. Vor einer größeren
+Testfamilie sollte der verbleibende alte Residualverlauf in diesen
+Richtungen ausgewertet werden. Daraus lassen sich gezielte neue
+Variationsfunktionen vorschlagen und ihr erwartbarer Energiegewinn prüfen.
+Eine solche neue Familie ist in diesem Paket weder festgelegt noch
+gerechnet. Der Prüfmaßstab bleibt eine engere gemeinsame Inversenergie
+und anschließend U00<I. G01 und beta_tail folgen erst nach diesem Schritt.
+
+Grenzen und Provenienz
+
+Die alte obere Energiematrix, ursprünglichen signierten C-Daten, Y und
+der Horizont A8->A9 bleiben erhalten. Es gibt keine neue externe
+fachmathematische Begutachtung. Die mitgelieferte Gegenprüfung des
+Vorgängerpakets ist ein vom Nutzer übermittelter begrenzter KI-Bericht;
+ihre Linux-Reproduktion wird als dessen Befund dokumentiert.
+
+Dieser Stand ist lokal erstellt und noch nicht auf GitHub/main übernommen.

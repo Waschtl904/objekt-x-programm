@@ -1,0 +1,177 @@
+Objekt X — Grenze des 185D-Einzelschritts und gemeinsame inverse Energie
+8. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Warum die Reihenfolge geändert wurde
+
+Die vorausgehende Gegenprüfung bestätigte einen notwendigen Nicht-C-
+Verbesserungspunkt. Daraus folgt nicht, dass die Verbesserung allein des
+185D-Beitrags bei unverändertem C-Budget bereits zum Schluss führen kann.
+Das wurde hier vor einer neuen Operatorintegration exakt geprüft.
+
+Für eine normierte rationale Richtung y schreibe a_i=y*G_i y für die
+drei verbleibenden Nicht-C-Mittelpunktgrame (19I, hoher alter Anteil,
+sechs Kräfte), e_i für ihre Fehlernormen. Für jedes t_i>0 gilt
+
+ (1+t_i)a_i+(1+1/t_i)e_i^2 >= (sqrt(a_i)+e_i)^2.
+
+Der bisherige signierte C-Beitrag verwendet den Mittelpunktgram G_C,
+den gemeinsamen inversen Unsicherheitsgram E_C und den skalaren
+Zusatzfehler e_C. Für beliebige s,t>0 gilt in derselben Richtung
+
+ (1+t)g+(1+1/t)[(1+s)h+(1+1/s)e_C^2]
+ >= (sqrt(g)+sqrt(h)+e_C)^2,
+
+g=y*G_C y, h=y*E_C y. Dies folgt durch zweimaliges quadratisches
+Ergänzen bzw. Minimieren einer skalaren Young-Ungleichung.
+
+Der GESAMTE 185D-Beitrag wird dabei optimistisch auf null gesetzt.
+Jede tatsächliche 185D-Energie in ihrer positiven Metrik, einschließlich
+Mittelpunkt, Delta und Kreuzterm zusammen, ist positiv semidefinit.
+Eine Löwner-Obermatrix dieser Energie ist ebenfalls positiv semidefinit.
+
+Die Summe der obigen unteren Majorantenwerte bleibt in ausgegebenen
+rationalen Richtungen >1.1255084227 bzw. >1.1944007542. Rationale untere
+Quadratwurzeln beweisen dies für beide gebundenen Integraleingaben und
+ALLE positiven Young-Parameter der angegebenen Familie.
+
+Es handelt sich um ein Hindernis für diese konkrete Summe von Hüllen.
+Es ist KEINE Untergrenze für den tatsächlichen Operator. Es schließt
+insbesondere eine gemeinsame Neuabschätzung mehrerer Beiträge nicht aus.
+Der lange isolierte 185D-Lauf wurde deshalb nicht gestartet.
+
+2. Gemeinsame alte Energie und C-Quadrat
+
+Die bestehenden 12x12-Matrizen werden unverändert übernommen:
+
+ L <= E=Z* A^(-1) Z <= U,
+ Z=(g_z1,...,g_z4,gY1,...,gY8).
+
+Setze H=U-L und X=E-L, also 0<=X<=H. H ist in diesem Text die
+12x12-Intervallbreite; sie ist NICHT der alte 185D-Block D.
+Die vier ersten Indizes heißen z, die acht letzten Y. Für die bestehende
+rationale M-Metrik ist bereits exakt bewiesen
+
+ H_zz <= lambda M.
+
+Der tatsächliche C-Mittelpunkt lautet C=B-E_zY. Dabei ist
+B=C0_Y+P_z*cY. Sein gespeicherter Modellmittelpunkt wird aus den
+unveränderten Daten rekonstruiert. Alle zusätzlichen Modellfehler bleiben
+mit ihrer gemeinsamen M-gewichteten Norm bezahlt.
+
+Mit C_L=B-L_zY gilt zunächst
+
+ E_YY+C*M^(-1)C
+ = L_YY+C_L*M^(-1)C_L+X_YY
+   -sym(C_L*M^(-1)X_zY)+X_Yz M^(-1)X_zY.
+
+Weil 0<=X_zz<=H_zz<=lambda M, folgt auf dem gesamten Zwölf-Quellen-Raum
+
+ X Pi_z* M^(-1) Pi_z X <= lambda X.
+
+Beweis: Die Norm von M^(-1/2)Pi_z X^(1/2) ist höchstens sqrt(lambda).
+Einsetzen der entsprechenden Gram-Ungleichung zwischen zwei Faktoren
+X^(1/2) ergibt die Behauptung. Kompression auf Y liefert
+
+ X_Yz M^(-1)X_zY <= lambda X_YY.
+
+Der quadratische C-Fehler und die alte Energie werden damit mit DEMSELBEN
+X kontrolliert. Ihr unabhängiges Maximieren entfällt.
+
+3. Vollständiges gemeinsames Quadrat
+
+Für jedes rationale alpha>=1+lambda setze
+
+ T_alpha = [ -M^(-1)C_L/alpha ; I_8 ].
+
+Dann gilt
+
+ (1+lambda)X_YY-sym(C_L*M^(-1)X_zY)
+ <= alpha T_alpha* X T_alpha
+ <= alpha T_alpha* H T_alpha.
+
+Die erste Differenz besteht aus den zwei positiven Matrizen
+(alpha-1-lambda)X_YY und
+C_L*M^(-1)X_zz M^(-1)C_L/alpha. Daher erhält man die gemeinsame Obermatrix
+
+ J_alpha = L_YY+C_L*M^(-1)C_L
+           +alpha H_YY-sym(C_L*M^(-1)H_zY)
+           +C_L*M^(-1)H_zz M^(-1)C_L/alpha.
+
+Alle 8x8-Off-Diagonalen und der gemeinsame signierte 4x8-Block bleiben
+erhalten. Es werden keine neuen Operatorintegrale benutzt. Eine kurze
+Auswahl positiver rationaler alpha ist nur eine Suche nach brauchbaren
+Parametern; Optimalität wird nicht behauptet.
+
+4. Halbinversenfehler und Schlussmatrix
+
+Für die gemeinsame Abbildung
+
+ W(r)=(A^(-1/2)g(r), M^(-1/2)C(r))
+
+folgt aus den bereits gebundenen Delta-Gramen
+
+ ||W Delta||^2 <= e_high^2+e_six^2+e_185^2+e_CDelta^2.
+
+Die winzige gemeinsame Unsicherheit im rekonstruierten B-Modell wird
+zur Normwurzel addiert. Die bisherige Metrikübertragung ist bereits in
+den unveränderten C-Normen enthalten. Eine sichere rationale Norm e
+wird nach oben gerundet und exakt durch Quadrieren geprüft.
+
+Für t>0 gilt dann gemeinsam
+
+ W(R_half)*W(R_half) <= (1+t)J_alpha+(1+1/t)e^2 I_8.
+
+Der 19I-Beitrag benutzt unverändert seinen rationalen Mittelpunktgram
+und seine gemeinsame Fehlernorm. Die so gebildete U00-Matrix wird mit
+Fraction neu aufgebaut. Ihre größten Eigenwerte liegen ungefähr bei
+1.1090106517214 gerade und 1.1559738837756 ungerade. Exakte untere
+Rayleighwerte und obere LDL-Schranken stehen in EXACT_CHECK.json.
+
+Die neue algebraische Rechnung wurde tatsächlich bei 1024 UND 1536 Bit
+ausgeführt. Sie verwendet dieselben gebundenen 4096-Bit-Integraleingaben.
+128 Eintragsintervalle der gemeinsamen neuen Mittelpunktgrame überlappen.
+Es sind keine neuen 1024-/1536-Bit-Operatorintegrationen.
+
+Der separate Prüfer bestätigt die Matrixvoraussetzungen, die symbolische
+Identität am exakten rationalen Mittelpunkt, die rationalen oberen
+Endpunktmatrizen, die Fehlernormen und den Schluss. Die Gültigkeit der
+gerichteten Eingabeintervalle bleibt Teil der numerischen Beweiskette.
+
+5. Informationsgrenze der bestehenden Matrixeinschließung
+
+Zusätzlich wird eine explizite zulässige Belegung des vereinfachten
+Matrixmodells ausgegeben:
+
+ E=L, Delta=0, zusätzlicher Modellfehler=0.
+
+Exakte LDL-Prüfungen bestätigen L>0 und U-L>0. Damit erfüllt diese
+Belegung alle hier verwendeten E-Intervallbedingungen. Die gewählten
+C-Mittelpunkte sind rationale Punkte der gespeicherten Intervalle.
+Für die zugehörige Matrix
+
+ 19Y*Y+L_YY+C_L*M^(-1)C_L
+
+liegen exakte rationale Rayleighwerte über 1.0632143700 bzw.
+1.0836091743 vor. Die Existenz dieser Belegungen zeigt, dass die
+Intervallbedingungen allein keinen uniformen Schluss unter eins tragen.
+
+Es wird NICHT behauptet, dass E=L vom tatsächlichen ursprünglichen
+Operator, seinen Integralformeln oder dem vollständigen Koeffizienten-
+modell realisiert wird. Ebenso wird Delta=0 nicht als tatsächlicher
+Halbinversenfehler behauptet. Das sind zulässige Belegungen der hier
+verwendeten RELAXATION, keine physischen Gegenzeugen und kein Beweis
+gegen Objekt X. Andere noch ungenutzte Operatorinformationen können
+diese Belegungen ausschließen.
+
+6. Folgerung für die nächste Rechnung
+
+Eine engere volle 185D-Wirkung bleibt nützlich, genügt im bisher
+festgehaltenen Budget aber nicht. Der nächste gezielte Informations-
+gewinn muss die alte gemeinsame inverse Antwort enger lokalisieren oder
+eine andere bisher ausgelassene Abhängigkeit mit dem Halbinversenfehler
+rigoros verwenden. Der beigefügte Arbeitsvorschlag untersucht dafür
+zusätzliche alte hohe Testfunktionen in einem Variationsunterbeweis.
+
+Dieser Vorschlag ändert weder den neuen Pilotraum noch den Horizont.
+Er ist noch kein ausgeführter Operatorlauf und kein registrierter Repo-Gate.
+G01, gamma01, beta_tail, die volle Restpositivität und Objekt X bleiben offen.

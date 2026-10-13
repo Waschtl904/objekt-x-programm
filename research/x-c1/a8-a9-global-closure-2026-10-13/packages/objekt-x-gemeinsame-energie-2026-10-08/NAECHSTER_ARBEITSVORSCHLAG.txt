@@ -1,0 +1,63 @@
+Objekt X — stärkerer alter Variationsunterbeweis auf zwölf Quellen
+Arbeitsvorschlag vom 8. Oktober 2026. Noch nicht gerechnet oder im Repo registriert.
+
+Ziel
+
+Die jetzige gemeinsame Untergrenze L der alten inversen Energie
+E=Z* A^(-1)Z stärken. Z umfasst dieselben vier g_z- und acht gY-Quellen.
+Der tatsächliche alte Operator A, die neue Pilotgeometrie, Y, die
+signierten C-Eingaben und der Horizont A8->A9 bleiben erhalten.
+
+Kleine zusätzliche alte Testfamilie
+
+Auf dem alten Intervall [-a,a] zunächst genau zwölf rohe hohe Legendre-
+grade je Parität verwenden:
+
+ gerade:   384,386,...,406;
+ ungerade: 385,387,...,407.
+
+Jede Funktion wird mit der bereits definierten alten Mellinkorrektur M
+in den alten Momentkern gehoben. Diese Funktionen erweitern nur den
+Variationsversuch für A^(-1). Sie ändern weder den neuen acht-dimensionalen
+Pilotraum noch die eigentliche Testklasse des Forschungsprogramms.
+
+Rechenobjekte
+
+P sind die vorhandenen zwölf niedrigen alten Vorschläge. H bezeichnet
+die zwölf neuen hohen Testfunktionen. Gemeinsam einschließen:
+
+ K=H*(Z-A P),    T=H*A H.
+
+Für jede rationale Koeffizientenmatrix V liefert P+HV die Untergrenze
+
+ E >= 2 Re[Z*(P+HV)]-(P+HV)*A(P+HV).
+
+Äquivalent entstehen zum bisherigen Variationswert die Beiträge
+
+ K*V+V*K-V*T V.
+
+Ein rationaler Vorschlag V kann aus dem endlichen System T V=K gewonnen
+werden. Seine Gültigkeit als Variationsversuch hängt nicht von einer
+exakten Lösung ab. Gamma-, Moment- und Rundungsfehler sind gemeinsam
+vor und nach dieser Kontraktion zu bezahlen. Eine rohe globale inverse
+Spur oder voneinander unabhängige Spaltenfehler sind dafür ungeeignet.
+
+Abnahme des begrenzten Versuchs
+
+1. Vollständige Integrale auf dem alten Intervall und vollständige
+   Modellresthüllen; keine behauptete Ersetzung von A^(-1) durch eine
+   endliche Matrixinverse.
+2. Neue gemeinsame rationale Untergrenze L_neu<=E und exakte Prüfung
+   U-L_neu>=0 gegen die unveränderte obere Energie-Matrix.
+3. Prüfen, ob die bisherigen Belegungen E=L durch die zusätzliche
+   Untergrenze tatsächlich ausgeschlossen werden. Das ist zunächst ein
+   Informationsgewinn, noch kein Positivitätsbeweis.
+4. Die neue gemeinsame Breite und ihren Einfluss auf die C-Korrelationen
+   ausweisen; anschließend U00 unter denselben physikalischen Definitionen
+   erneut prüfen. Ursprüngliche C-Ergebnisse und Archive erhalten.
+5. Vor jeder Vergrößerung der alten Testfamilie die Beiträge und den
+   verbleibenden Engpass beziffern. Erst bei positiver U00-Reserve folgen
+   G01 und beta_tail.
+
+Die Wahl dieser zwölf Grade ist ein kleiner erster Versuch, keine
+Behauptung ihrer Optimalität oder einer garantierten Verbesserung.

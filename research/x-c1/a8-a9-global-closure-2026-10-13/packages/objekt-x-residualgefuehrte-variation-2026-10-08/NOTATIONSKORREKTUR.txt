@@ -1,0 +1,1 @@
+Die Adjungierten des vorigen Berichts sind in der beigefügten korrigierten Herleitung ausdrücklich als ^* geschrieben. Der Rechencode und sämtliche bisherigen Ergebnisdateien bleiben unverändert. Das ursprüngliche ZIP bleibt als Provenienz erhalten.

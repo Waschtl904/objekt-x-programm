@@ -1,0 +1,237 @@
+Objekt X — globale Funktionsdarstellung und glatte Korrektur
+12. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Status und Reichweite
+
+Der neue Eingangs-Replay besteht: E_dir bleibt das gemeinsame Ziel;
+H=E_dir/10920 und die dortigen L2-Fehlerbudgets werden unverändert benutzt.
+Die neue Arbeit stellt die rohe Residualfunktion als vollständig
+auswertbares Polynom-/Logarithmus-/Dilogarithmusmodell mit endlichen
+Exponentialsummen her. Keine unendliche
+Legendre-Summe wird dabei durch endlich viele Koeffizienten ersetzt.
+
+Zusätzlich wird der gemeinsame Fehler durch den glatten Momentadjunkten
+und die kanonische T-Projektion oberhalb Grad 103 mit weniger als 10^-300
+in der D-dualen X-Norm eingeschlossen. Dies ist ein vollständiger, aber
+nur EINER der benötigten Fehlernachweise.
+
+Der Modellgram, die endliche Projektion des regularisierten Modells und
+die übrige tatsächliche globale Modellabweichung sind weiterhin offen.
+Insbesondere sind Punktwerte und Präzisionsübereinstimmung kein Ersatz
+für diese Nachweise. A8->A9 und der Tailboden 1/20 bleiben unbewiesen.
+
+1. Exakte physische Darstellung
+
+X=L2((a,b),2 dx), a=3 log(2)/2, b=log(3), h=b-a. Die Parität ist p.
+lambda(s)=integral_a^b m(x)s(x)dx, mu=integral_0^a m(x)^2 dx,
+nu=integral_a^b m(x)^2 dx; m=cosh(x/2) oder sinh(x/2).
+Es gelten mu>9/100, mu<2, nu<1/10 und h<1/16.
+
+Die Antwortmatrix X84x203 wird in diesem Text mit Xresp bezeichnet;
+D=diag((1-rho)I191,K12_neu). Für alpha=(xi,v) sei
+
+ z=J Xresp alpha,
+ G=Fv-(1-eta)Lambda z,
+ t=xi-low_F v/(1-rho),
+ W=Phi_phys AC t
+   +(1/delta) P_high[Q_b Lambda z|core-Q_b Fv|core
+                     -Q_a Phi_phys AC t].                    (1)
+
+Dies ist die bereits hergeleitete gemeinsame Kernfunktion, äquivalent
+zu V* t+T_h*(hJ Xresp alpha-hFv)/delta. Sie wird vor der äußeren
+Operatoranwendung zusammengesetzt. Der rohe physische Repräsentant ist
+
+ R0(alpha)=(Q_b G+Q_b(1_core W))|shell.                       (2)
+
+Der tatsächliche Repräsentant vor der T-Projektion ist
+
+ rfull=R0-m chi,
+ chi=(1/mu)[integral_0^a m Q_b G dx+integral_0^a (Q_a m)W dx].
+ R_X=P_T^X rfull.                                           (3)
+
+Hier ist P_T^X die orthogonale Projektion im X-Skalarprodukt, nicht das
+Weglassen der ersten zwölf Legendrekoeffizienten. (3) folgt unmittelbar
+aus Lambda s=s auf der Schale und -lambda(s)m/mu auf dem Kern. Der
+Faktor 2 im X-Skalarprodukt ist in der Definition von chi berücksichtigt.
+Die äußere Wirkung Q_b(1_core W)|shell in (2) bezeichnet den beschränkten
+Kern-Schalen-Block. Die zweite Kernpaarung in (3) ist die schwache
+Adjunktenpaarung mit Q_a m. Es wird NICHT zusätzlich vorausgesetzt, dass
+das logarithmische W zur gesamten Operatordomäne von Q_b gehört.
+
+2. Das implementierte, vollständig definierte Modell
+
+compute_global_model.py verwendet folgende feste Daten und Regeln:
+
+ - dieselbe rationale Antwortmatrix, dasselbe AC, delta, rho und eta;
+ - die eingefrorenen rationalen J- und Y-Koeffizienten;
+ - rationale Mittelpunkte der alten A-, c- und neuen low_F-Intervalle;
+ - den alten Gamma-Grad 160 und den Quell-/Außenkernel-Grad 224;
+ - den vollständig integrierten Modell-Selbstkernel Grad 32 und die
+   32 exponentiellen Spiegelkernelterme;
+ - das Momentpolynom Grad 160, exakt integrierte Logarithmen und alle
+   zehn Kernzellen der Primverschiebungen.
+
+Die 96 Quellfunktionen bestehen aus J84, Y8 und den vier physischen z.
+Die 191 alten Q_a Phi-Funktionen werden ebenfalls vollständig gebildet.
+Für den niedrigen Abzug wird der rohe 192er-Legendreblock rekonstruiert:
+
+ raw_0=carrier,
+ raw_(i+1)=c_i+cn_i carrier.
+
+Insbesondere wird der Carrier nicht ausgelassen. In der Modellfunktion
+wird dieser festgelegte niedrige Polynomabzug verwendet. Seine mögliche
+Abweichung von der tatsächlichen P_high-Projektion ist Teil des noch
+offenen Gesamtmodellfehlers; sie wird nicht durch Punktchecks bewiesen.
+
+Das Kernmodell in normierter Koordinate t=x/a ist
+
+ What_norm = source_high * Msource + (Phi-high_QPhi/delta) * q,
+ q=AC(I191,-ell_F0/(1-rho)),
+ Msource=(Xresp/delta; -I_Y/delta; -I_z/delta),
+
+wobei die Einbettung der letzten zwölf Spalten der Ordnung z4,Y8 folgt.
+ell_F0 bezeichnet den rationalen Mittelpunkt von low_F.
+Das Programm schreibt die Einbettung
+eintragsweise aus. Jeder ausgewertete Funktionswert ist eine fertige
+1x203-Zeile; erst diese Zeile dürfte später quadriert werden.
+
+Diese Darstellung definiert das Modell auf der ganzen offenen Schale,
+nicht nur an den gespeicherten Kontrollpunkten. Die tatsächlichen
+führenden Logkoeffizienten dürfen im H1-Weg weiterhin nicht durch diese
+gerundeten Modellkoeffizienten ersetzt werden. Hier wird der L2-Weg benutzt.
+
+3. Vollständige Cauchy-Transformation ohne Modenabbruch
+
+Für einen außerhalb [l,u] liegenden Pol s definiere
+
+ I_n(s;r)=integral_l^u t^n log|t-r|/(s-t)dt.
+
+Eine reelle Stammfunktion für n=0 ist
+
+ F(t)=-log|s-r| log|s-t|+Re Li_2((s-t)/(s-r)).                (4)
+
+Direktes Differenzieren ergibt log|t-r|/(s-t). Am EXAKTEN Randpunkt t=r
+ist F(r)=-log^2|s-r|+pi^2/6. Das Programm setzt diese Identität explizit
+ein: Eine Intervall-Division (s-r)/(s-r) würde den Verzweigungspunkt
+unnötig überdecken und kann einen nichtendlichen Wert ergeben.
+
+Für n>=1 gilt ohne unendlichen Rest
+
+ I_n=s I_(n-1)-integral_l^u t^(n-1) log|t-r|dt.              (5)
+
+Die letzten Integrale werden durch vollständige Stammfunktionen
+berechnet. Ohne Logarithmus beginnt die gleiche Rekursion bei
+I_0=log|(s-l)/(s-u)|. Die Kontrollrechnung verwendet unabhängig davon
+die geometrische Kernelreihe mit einem rational eingeschlossenen
+UNENDLICHEN Rest, außerdem Zellenadditivität und Li_2-Spezialwerte.
+
+Für w=What_norm ergibt der singuläre äußere Kernbeitrag
+
+ -[C_w(x/a)-(-1)^p C_w(-x/a)]/(2 sqrt(2a)).                 (6)
+
+Der reguläre Grad-224-Kernel wird aus den vollständigen Monom-Momenten
+bis 224 integriert. Diese endliche Momentzahl ist hier exakt ausreichend,
+weil der MODELLKERNEL ein Polynom ist; der tatsächliche Kernelrest ist
+noch gesondert zu bezahlen. Die Primadjunkte w((x-log q)/a) für
+q=2,3,4,5,7,8 sind ausdrücklich enthalten, einschließlich q=8.
+
+Die direkte Schalenwirkung auf G enthält Diagonale, logarithmisches
+Randpotential, Selbst- und signierten Spiegelkernel sowie den
+Kernmomentanteil von Lambda. Nur der aus (3) resultierende glatte
+MomentADJUNKT und die kanonische Projektion fehlen in Rhat0; deren
+gemeinsamer hoher Fehler wird im nächsten Abschnitt vollständig bezahlt.
+
+4. Vollständiger Fehler der beiden glatten Korrekturen
+
+Sei P=P_<104 die X-Projektion auf Polynome bis Grad 103 und mH=(I-P)m.
+Taylorentwicklung um c=(a+b)/2 mit |(x-c)/2|<=h/4<1/64 ergibt
+
+ ||mH||_X <= epsilon_m=4/(64^104 104!) <10^-353.             (7)
+
+Die Schranke gilt für die GANZE Summe oberhalb Grad 103. Sie verwendet
+sqrt(2h)<1, exp(b/2)<2 und die geometrische Abschätzung des Taylorrests.
+
+Sei F0 ein beliebiger voller Polynomkoordinatenblock des bekannten
+Zwölferraums V4+Y8 (Grad<=95). Dessen X-Normalen für T sind
+
+ N=W_X F0=F0+m lambda_F0/mu.
+
+Wegen W_X>=I gilt N*N>=F0*F0. Außerdem ist lambda_F0=F0*m/2 und damit
+
+ lambda_F0 (N*N)^-1 lambda_F0* <= ||m||_X^2/4=nu/2.
+
+Folglich, für jeden ganzen Schalenrepräsentanten r,
+
+ ||(I-P) P_(T-perp)^X r|| <= ||mH|| sqrt(nu/2)/mu ||r||
+                          <3 epsilon_m ||r||.               (8)
+
+Dieser Schluss benutzt keine spekulative Konditionszahl der zwölf
+Normalen. Die kleine hohe Komponente ihrer analytischen Momentfunktion
+wird ausdrücklich mitgeführt.
+
+Nun sei tau die gespeicherte tatsächliche Feature-Spur von F und MV die
+gespeicherte vollständige niedrige Kraftmajorante. Der bestehende
+Operatornachweis liefert
+
+ ||V*||/sqrt(1-rho) <=sqrt(MV)/1000,
+ ||low_F K^-1/2||/sqrt(1-rho)<=sqrt(tau),
+ ||h_F K^-1/2||<=sqrt(delta tau), ||T_h||<2,
+ ||g||<1000, ||J||_WX<sqrt(2).
+
+Mit xd=||Xresp D^-1/2||_HS folgt aus (1)/(R2)
+
+ ||W D^-1/2|| <= Wcap
+ =sqrt(MV)/1000 (1+sqrt(tau))
+   +(2/delta)[2000 sqrt(2) xd+sqrt(delta tau)].               (9)
+
+Die geerbten Domänenabschätzungen geben ||Q_b F_i||<2*10^10 und
+||Q_b Lambda J||<10^10, auf den vollständigen festen Funktionen.
+Daher ist ||Q_b G D^-1/2||<=qGcap mit
+
+ qGcap=2*10^10 sqrt(12 tr(K^-1))+10^10 xd.
+
+Für das auf den Kern beschränkte m liefert dasselbe Domänenlemma
+||Q_a m||<10^4: Es genügen M<2, L<1, R0<2 und zwei äußere Sprungstellen;
+der geerbte beschränkte Nichtpolzusatz kostet weniger als 18||m||.
+Durch Selbstadjungiertheit und Cauchy-Schwarz folgt aus (3)
+
+ ||chi D^-1/2|| <=12 qGcap+(500000/9)Wcap=:chicap <10^30.     (10)
+
+Die Faktoren berücksichtigen mu>9/100 und sqrt(2mu)<2. Die alte grobe
+Residualschranke gilt bereits auf der ganzen Schale vor der endgültigen
+T-Projektion; der jüngste Randtest-Review hat diese Bindung bestätigt.
+Es gilt ||rfull D^-1/2||<10^25. Der rationale Prüfer kontrolliert
+zusätzlich (63/5)(qcoarse+1)<10^50.
+
+Aus (3), (7), (8), (10) folgt schließlich
+
+ ||(I-P)(R_X-R0)D^-1/2||
+ <=epsilon_m(chicap+3*10^25)<10^-300.                       (11)
+
+audit_smooth_correction.py berechnet alle skalaren Preise in (9)-(11)
+mit rationaler nach außen gerichteter Arithmetik für beide Paritäten.
+Diese Behauptung ist wie die Vorgänger bedingt durch die gebundenen
+Operator- und Domänenlemmata. Sie folgt nicht allein aus Matrixzahlen.
+Der neue Preis (11) ist ein zusätzlicher NORMfehler für delta_R. Er ist
+nicht der frühere geometrische Gram-Preis für die ell/k-Umrechnung.
+
+5. Der verbliebene genaue Auftrag
+
+Das neue berechenbare Modell ist Rhat0. Noch benötigt werden
+
+ delta_phys >= ||(I-P)(R0-Rhat0)D^-1/2||,
+ Zhat=(I-P)(Rhat0-B C0),
+ Uhat=Zhat*Zhat <=(999/1000) E_dir/10920.
+
+Dann ist delta_R<=delta_phys+10^-300. Der bekannte Fehler des gerundeten
+Logabzugs delta_C bleibt separat bezahlt. Für den Anschluss genügt die
+bereits gebundene Bedingung
+4(delta_R+delta_C)^2 <=(1/1000)^2 u.
+
+Offen bleiben insbesondere die vollständigen Gamma-/Kernelmodellfehler,
+die Fehler der eingefrorenen niedrigen Kräfte und Projektionen nach
+Zusammensetzung mit den inversen Faktoren, die gesamte endliche
+P_<104-Projektion von Rhat0-B C0 und dessen globales Integral einschließlich
+beider Randstücke. Die neue Darstellung enthält diese Funktionen,
+zertifiziert aber noch nicht ihre gesamte Abweichung vom tatsächlichen
+Operator. Kein Abschlussflag wird geändert.

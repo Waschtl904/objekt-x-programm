@@ -1,0 +1,45 @@
+Gegenprüfung und neuer Schluss — 13. Oktober 2026
+
+Bitte BERICHT.txt, HERLEITUNG.txt und ASSEMBLY_AUDIT.json lesen.
+
+Das neue Grampaket besteht. Zusätzlich schließt die jetzt vollständig
+zusammengestellte Bilanz den gemeinsamen Formdualvergleich auf ganz T:
+
+ Q_final=(j+10^-300)D+c8*T+(1+s)Qlog_bar
+                      +(1+1/s)*(3/10000)*H/d104,
+ s_even=3/8, s_odd=4/15,
+ Q_final<(1/250)T bzw. <(71/10000)T.
+
+Die vollständigen neuen 203er-LDL-Vergleiche bestehen. Die Zielidentität
+für H wird exakt aus den drei Koeffizienten von E_dir rekonstruiert.
+Die Kraftmetrik bleibt unverändert D203_neu, der Logabzug C_exact und die
+Restgeometrie werden nicht ausgetauscht.
+
+Damit A S^-1 A* <=(1-kappa)D, kappa=(1-cap)(1-u), und auf T
+ Schur_F(D_direct-U_neu) >= eta*q+kappa*S
+                       >= (eta+kappa*beta)L>0.
+Der positive endliche K_actual>=K12_neu-Block und die Majorisierung
+der tatsächlichen alten Inversenergie liefern unter den geerbten
+Voraussetzungen den Positivitätsabschluss A8->A9. HERLEITUNG Abschnitt 4
+stellt den Übergang zur tatsächlichen Form über quadratische Ergänzung
+und die vollständige Raumzerlegung ausdrücklich dar.
+
+Bitte diesen neuen Schluss unabhängig prüfen, besonders:
+1. Normierung d104, H=E_dir/10920 und Richtung des inversen K-Vergleichs.
+2. Die vollständige Moment-/Restgeometrie und Übereinstimmung von R_X.
+3. Die gebundene vollständige Zerlegung in alten Block, zwölf physische
+   Quellen und Lambda T; keine endliche Abdeckung ersetzt diese Aussage.
+4. Die anschließende Operatoräquivalenz zwischen AS^-1A* und A*D^-1A.
+
+Der Tailboden 1/20 wird NICHT behauptet und nicht für diesen Schluss
+verwendet. Für einen weiteren Angriff darauf bitte zuerst seine genaue
+Zielform, sein Komplement und seine Metrik ausdrücklich fixieren. Die
+vorhandene globale W_X-Untergrenze ist kleiner und keine Widerlegung
+dieses stärkeren Ziels. Objekt X und der unbeschränkte Horizont bleiben offen.
+
+Vollständiger rationaler Replay ohne Zusatzbibliotheken:
+ python -B reproduce.py --receipt EIGENE_PRUEFQUITTUNG.json
+
+Die neue Prüfung wiederholt die großen globalen Integrationen nicht.
+Sie enthält die neuen rationalen Schlussmatrizen, die ausgeführten
+Bausteinkontrollen und die vollständige gebundene Vorgängerkette.

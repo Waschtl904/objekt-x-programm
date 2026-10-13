@@ -1,0 +1,33 @@
+{
+  "status": "PASS_FRESH_INTEGRATIONS_AND_REBUILD",
+  "direct_integrations": [
+    {
+      "file": "DIRECT_Y_EVEN_3072.json",
+      "all_fields_except_seconds_identical": true,
+      "original_sha256": "ea45717e635e465ee6f603c54bfbae2c3b68f7a0b18ea58eecfa857bed1ecbcd",
+      "fresh_sha256": "6e5c562ce21be9308db9c186aa4fb19c2443606b0e2d344af02fba75ff84115c"
+    },
+    {
+      "file": "DIRECT_Y_EVEN_4096.json",
+      "all_fields_except_seconds_identical": true,
+      "original_sha256": "0cf88d6b73d26d86c1bb1dc58d1f182ec86f45653b5d3c8a763b74ad7bca4e40",
+      "fresh_sha256": "f2bad90a3ec1398d1bd8f5ada3e3eb1463fad66279501a2feae6a69943b4ac46"
+    },
+    {
+      "file": "DIRECT_Y_ODD_3072.json",
+      "all_fields_except_seconds_identical": true,
+      "original_sha256": "a4a21be18cc590bbdbb573d4d7fd7c2aa5d33e54eb2036de7ea386233a635ace",
+      "fresh_sha256": "6f97cd1bcfda87642a12980a748c1cc1abdab5d1b68720755da0babaac976c4c"
+    },
+    {
+      "file": "DIRECT_Y_ODD_4096.json",
+      "all_fields_except_seconds_identical": true,
+      "original_sha256": "6789237244ef5743c2ba05291eeab565d62ba70b38dbc0d5e2437f3d8d700293",
+      "fresh_sha256": "fa1b63689c89d6785cd18059013beb92ce465ee2a064beff7eeb3b5cc4555989"
+    }
+  ],
+  "audit_exactly_equal": true,
+  "new_integrations": 4,
+  "external_independent_review": false,
+  "full_remainder_certified": false
+}

@@ -1,0 +1,110 @@
+Objekt X — was nach dem positiven 4+8-Anschluss tatsächlich folgt
+9. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Live-Abgleich und abgeschlossene Prüfung
+
+Der gelesene Main steht auf da50f0a21691e6fd253163e612a2af2898606581
+(Merge von PR #215). PR #213 integrierte sechs Pakete vom 5.–7. Oktober;
+PR #214 registrierte sie. Die pauschale Angabe im Übergabeprompt, alle
+Arbeiten nach dem Vier-Quellen-Paket seien noch lokal, ist damit überholt.
+Das positive 4+8-Paket vom 9. Oktober wurde separat aus dem genannten
+Originalarchiv gelesen und geprüft; es ist nicht Inhalt dieses Main-Stands.
+
+Der gesamte mitgelieferte begrenzte Standardbibliotheks-Replay besteht:
+72 Dateibindungen, acht vollständige 191D-Inversenzertifikate, zwölf
+Schurrekonstruktionen, vier positive Schlussfälle, 72.962 niedrige
+Gamma-Präzisionsvergleiche, 384 Schalenvergleiche und zehn alternative
+exakte Gamma-Paarungen. Die gespeicherte Schlussquittung wurde reproduziert.
+
+Bestätigter Scope bleibt: Sigma_Y >= (1/25000) W_Y nach vollständiger
+alter Elimination und anschließend der Viererelimination, beide Paritäten.
+Das ist kein Boden 1/25000 auf den ursprünglichen zwölf Koordinaten.
+Die großen Gamma-Integrationen wurden nicht erneut ausgeführt. Die
+ursprünglichen Form-, Domänen- und Modellidentitäten bleiben Voraussetzungen.
+
+2. Neuer analytischer Anschluss
+
+Die zwölf Funktionen sind die vier Schalenklassen sigma_j und die acht
+tatsächlichen rational definierten Y-Spalten Q S. Insbesondere werden Y
+weder mit den ursprünglichen acht e_j noch mit den exakten Halbinversenbildern
+gleichgesetzt. Ihr W_X-orthogonales Komplement wird auf der gesamten
+Gamma-Formdomäne definiert. Es geht keine neue Richtung verloren.
+
+Für diesen vollständigen Rest lautet die exakte verbleibende Form
+
+  tau = T - C_12* S_12^(-1) C_12.
+
+Alle drei Blöcke enthalten Einschränkungen derselben alten Inversenergie
+g* A^(-1) g. Die Herleitung schreibt diese gemeinsame Abhängigkeit aus und
+gibt eine Residualformel für beliebige vorab gewählte Antwortvorschläge P.
+Dabei wird die alte Kraft stets als eine gemeinsame Differenz
+g_r - g_F P r geführt. Das verhindert den bekannten Verlust durch
+separat maximierte abhängige Energieblöcke.
+
+3. Konkrete neue Schranke auf einem unendlichen Teilraum
+
+Der stärkere alte Hochboden delta=91/50 verbessert das bisherige ferne
+Tail-Lemma erheblich. Für N=64 gilt exakt
+
+  H_64 + 1 - (512/91)(1+10^(-12)) > 1175/10000 > 1/10.
+
+Auf dem Teilraum mit
+- ersten 64 lokalen Legendrekoeffizienten gleich null,
+- Schalenmoment lambda gleich null,
+- allen 191 Komponenten der NEUEN Kraft v_delta=c-delta^(-1)Bh gleich null,
+- W_X-Orthogonalität zu den tatsächlichen zwölf Funktionen,
+- sämtlichen zwölf tatsächlichen Schurkopplungen C_12 gleich null
+
+folgt tau[r] >= W_X[r]/10 in beiden Paritäten. Dieser Raum ist unendlich-
+dimensional; die Aussage ist kein bloßer Test an endlich vielen Funktionen.
+
+Die Wahl 64 ist eine bequeme feste Schwelle, kein Optimalitätsanspruch.
+Im selben groben skalaren Vergleich reicht bereits N=63, N=62 noch nicht.
+Das alte Dokument benutzte mit delta=2/3 die ausreichende Schwelle 2^21.
+Keine dieser Schwellen zählt sämtliche ausgelassenen Richtungen oder ist
+ein Positivitätsnachweis auf dem ganzen Tail.
+
+4. Was dieser Gewinn bedeutet und was er nicht bedeutet
+
+Die zusätzlichen 191 Kraftbedingungen und zwölf Kopplungsbedingungen dürfen
+nicht wegfallen. Ihre Repräsentanten sind analytisch definiert, noch nicht
+als numerische vollständige Basis eingeschlossen.
+
+Die vier sigma_j sind Polynome von Grad höchstens neun. Ihre Orthogonalität
+folgt schon aus den ersten 64 Legendrebedingungen und lambda=0. Daher hat
+der sichere Teilraum in der gesamten Schale Kodimension höchstens 276;
+im Rest nach dem zwölfdimensionalen Block höchstens 264, jeweils pro Parität.
+Das ist eine obere Dimensionsschranke, keine berechnete Rangzahl und keine
+neu zertifizierte 264-dimensionale Matrix.
+
+Damit kann man die verbleibende Positivitätsfrage prinzipiell auf einen
+endlichen Schurblock mit höchstens 264 Koordinaten zurückführen, indem man
+den jetzt koerziven unendlichen Teilraum vollständig eliminiert. Dessen
+inverse Antwort und Kreuzkopplung müssen aber weiterhin berechnet und
+rigoros bezahlt werden. Die Reduktion ist keine Abkürzung um diesen Schritt
+und garantiert weder gute Kondition noch eine wirtschaftliche Rechnung.
+
+Die Herleitung enthält außerdem eine volle Fehlerform
+tau[r]>=W_X[r]/10-||L_64 r||^2 auf dem gesamten Rest. L_64 fasst die
+benannten Nebenbedingungen mit expliziten Gewichten zusammen. Damit
+können spätere numerische Abweichungen von ihren exakten Kernen bezahlt
+werden. Die Norm von L_64 auf dem gesamten Rest ist hier nicht klein
+zertifiziert; die Fehlerform allein schließt den Rest nicht.
+
+5. Nächster gezielter Rechenblock
+
+Zuerst die kontinuierlichen Restfunktionale lambda, v_delta und C_12 auf
+dem exakten Restraum gemeinsam als Funktionen bzw. gemeinsame Grame
+einschließen, einschließlich aller unendlichen Wirkungsteile. Ihre
+tatsächlichen linearen Abhängigkeiten entscheiden über die benötigten
+ergänzenden Richtungen. Erst anschließend eine Basis aus der Formdomäne
+festlegen und die gekoppelte Variationsantwort des sicheren Tails rechnen.
+
+Alternativ kann die in HERLEITUNG.txt angegebene gemeinsame Residualform
+direkt auf dem ganzen Rest zertifiziert werden. Ein 12x12-Energiezertifikat
+allein definiert dabei noch keine Energieoberform auf dem unendlichen Raum.
+
+Der widerlegte feste M_--Normgate bleibt CERTIFIED_FALSE. Der ganze
+A8->A9-Neurest bleibt OPEN. Objekt X, Renewal und globale Aussagen werden
+nicht promotet. Dieses Paket ist ein neuer analytischer Autorenbefund mit
+genau benannten übernommenen Voraussetzungen; externer Review bleibt offen.

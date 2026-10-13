@@ -1,0 +1,11 @@
+{
+  "status": "PASS_TESTED_PRIMITIVES_EQUAL_ACTUAL_CENTERED_INTEGRATOR_FUNCTIONS",
+  "functions": [
+    "cjet",
+    "left_cjet",
+    "logseries",
+    "integrate_panel"
+  ],
+  "comparison": "Python AST, excluding line numbers",
+  "panel_model_difference": "Only the diagnostic point-enclosure check changes; the analytic tail formulas do not change. The radius conversion is separately tested."
+}

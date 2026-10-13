@@ -1,0 +1,152 @@
+Objekt X — voller Formdual-Residualtest für die gemeinsame Verlustbilanz
+10. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+0. Status
+
+Dies ist eine neue konditionale Herleitung, keine ausgeführte Integration
+der 203 Kraftvertreter. Alle Bezeichnungen A0,D0,H,L,T,eta entsprechen
+dem gelieferten Verlustbilanzpaket. Insbesondere werden keine physischen
+Quellen, Y-Funktionen oder alten Majoranten ausgetauscht.
+
+1. Formraum und typgerechte Operatoren
+
+Sei V die vollständige L-Formdomäne im EXAKTEN T, mit dem Energieskalar-
+produkt l(u,v). Wegen des geerbten positiven L-Bodens ist dies ein
+Hilbertraum. Sei V' sein stetiger Antidualraum. Die Rieszabbildung
+mathcal L:V->V' gehört zu l; R_L=mathcal L^-1:V'->V ist die vollständige
+eingeschränkte Inverse, einschließlich aller Momentbedingungen.
+
+Die Form s(u,v)=(1-eta)l(u,v)-H(u,v) erfüllt
+
+  c l <= s <= (1-eta)l,  c=11/100-eta>0.
+
+Sie definiert mathcal S:V->V'. Dann ist R_S=mathcal S^-1:V'->V
+beschränkt in den zugehörigen Energienormen. In der dualen Formordnung
+gilt R_S <= c^-1 R_L. Dieser Satz folgt durch Normierung mit der
+L-Rieszabbildung und Inversion eines beschränkten Operators >=cI.
+
+A=A0:V->C^203 ist nach den geerbten Stetigkeitslemmata beschränkt.
+A*:C^203->V' ist das zugehörige duale Adjungierte, nicht stillschweigend
+ein unprojizierter X-L2-Vektor. Gesucht ist G=A R_S A* <=D0.
+
+2. Vollständige Residualidentität
+
+Wähle beliebige FEST DEFINIERTE Näherungslösungen Z:C^203->V. Ihre
+Spalten liegen exakt in T. Ein gemeinsamer Galerkinraum ist erlaubt;
+lineare Unabhängigkeit der 203 Antworten ist nicht erforderlich.
+
+Definiere den vollen Formdual-Residualoperator und die Variationsmatrix
+
+  R = A* - mathcal S Z : C^203 -> V',
+  M_Z = A Z + (A Z)* - Z* mathcal S Z.
+
+Aus Z_exakt=R_S A* und R=mathcal S(Z_exakt-Z) folgt exakt
+
+  G = M_Z + R* R_S R.                                  (R1)
+
+BEWEIS. Setze A*=mathcal S Z+R in A R_S A* ein. Die Entwicklung ergibt
+Z*mathcal S Z+Z*R+R*Z+R*R_S R. Die ersten drei Summanden sind M_Z.
+Alle Paarungen sind V'/V-Paarungen; ein L2-Operatordomänennachweis
+für Z ist für diese Identität nicht erforderlich. QED.
+
+Der vollständige duale L-Residualgram ist
+
+  Q_R = R* R_L R.
+
+Die inverse Formordnung liefert
+
+  M_Z <= G <= M_Z + c^-1 Q_R.                          (R2)
+
+Damit reicht für vollständige hermitesche Einschließungen
+
+  M_Z <= U_M, Q_R <= U_R,
+  D0-U_M-c^-1 U_R >=0.                                (R3)
+
+Der letzte Test ist endlich und rational ausführbar, sobald die Eingaben
+sachlich als volle Obermatrizen zertifiziert wurden. Positive
+Semidefinitheit einer eingegebenen Matrix allein zertifiziert dies nicht.
+Bei unsicherer D0-Metrik ist eine bewiesene Untermatrix D_-<=D0 zu nutzen.
+Bei zusätzlichem gewünschtem Abstand kann vorab D0-U_M>=mD0 und
+U_R<=c m D0 mit rationalem m>0 verlangt werden; die direkte gemeinsame
+Matrixprüfung (R3) ist im Allgemeinen weniger konservativ.
+
+3. Was R2 konkret einschließt
+
+Die 203 Spalten von R müssen den GESAMTEN Formdualfehler enthalten:
+vollständige hohe alte Antwort H, alte niedrige Kräfte, direkte Quellen-
+kopplungen, signierte Residualisierung C_Y-P*C_z, exakte T-Projektion,
+alle analytischen Kernel-/Momentreste und numerische Rundungen.
+
+Der Gram nur endlich gelisteter Residualkoeffizienten ist kein Q_R-Oberwert.
+Kleine Galerkinresiduen innerhalb des gewählten Ansatzraums reichen nicht.
+Die Kreuzterme dürfen vor der Grambildung nicht getrennt verworfen werden.
+Unsicherheiten von A,S und Z wirken sowohl auf M_Z als auch auf R; sie
+sind mit ihren tatsächlichen Multiplikatoren gemeinsam einzuschließen.
+Zweckmäßig wird der korrigierte Ausdruck vor einer groben Rundung gebildet.
+
+Hat man nur einen L2-Repräsentanten des Residuals, ist dessen Gram erst
+durch eine gesondert begründete R_L-Majorante in Q_R zu überführen. Der
+Wert c^-1 darf nicht unmittelbar an einen beliebigen L2-Fehler angehängt
+werden. Umgekehrt genügt ein tatsächlich eingeschlossener Formdualgram
+ohne die stärkere Operatordomänenanforderung des früheren L2-Protokolls.
+
+4. Sinnvoller Rechenablauf
+
+a) Exakte Restgeometrie festhalten; geeignete Kandidaten exakt nach T
+   projizieren. W_X-Orthogonalität zu V+ran(Y) ist nicht gleichbedeutend
+   mit bloßem Weglassen der ersten zwölf Legendregrade.
+b) Die 203 Kraftfunktionale gemeinsam darstellen. Rangreduktionen nur
+   mit exakten Relationen oder vollständig bezahltem Restfehler vornehmen.
+c) In einem endlichen Ansatzraum Näherungslösungen für S Z=A* berechnen.
+   Die Approximation kann numerisch gewählt werden; ihre anschließend
+   festgelegten Funktionen und Koeffizienten bilden die Zertifikatsdaten.
+d) M_Z und den vollen Q_R einschließen, ohne die gemeinsame alte Antwort
+   oder die Signatur der Kreuzkräfte aufzubrechen.
+e) R3 in der empfindlichen D0-Metrik rational prüfen. Erst dann darf die
+   Quellfehlerrechnung des Originalpakets auf GANZ T angewandt werden.
+
+Das ist eine Alternative zur direkten Auswertung vieler Neumann-Potenzen.
+Sie beweist nicht, dass der gewählte Ansatzraum ausreichend oder R3
+numerisch erreichbar ist. Ein fehlgeschlagener Obertest ist INCONCLUSIVE.
+Eine Unterabschätzung von G mit einem Vektor oberhalb D0 könnte dagegen
+die neue hinreichende Bedingung widerlegen; die ursprüngliche Schurform
+wäre damit noch nicht widerlegt.
+
+5. Optional: richtungsabhängig schärferer Neumann-Rest
+
+Im L-Energieraum seien B der normierte hohe Operator, 0<=B<=0,89 I,
+K=B/(1-eta), kappa=0,89/(1-eta), F der normierte Kraftoperator A.
+Mit denselben G_N wie im Original gilt zusätzlich
+
+  G_N <= G <= G_N + c^-1 F K^(N+1) F*
+               <= G_N + c^-1 kappa^(N+1) G0.           (N1)
+
+BEWEIS. Der exakte Rest ist
+(1-eta)^-1 F K^(N+1)(I-K)^-1 F*.
+K und seine Resolvente kommutieren. Im Spektralkalkül gilt
+0<=(I-K)^-1 <=(1-kappa)^-1 I. Daraus folgt die erste Obergrenze;
+0<=K^(N+1)<=kappa^(N+1)I liefert die zweite. QED.
+
+Der erste Oberwert erhält mehr Richtungsinformation, benötigt aber den
+zusätzlichen vollständigen Momentgram F K^(N+1) F*. Er ist keine gratis
+verfügbare Zahl. Unabhängige Eintragsmaxima müssen auch hier durch eine
+gültige Löwner-Einschließung ersetzt werden.
+
+Die groben Koeffizienten kappa^(N+1)/c betragen zur Orientierung:
+N=64:  4,66614e-3
+N=128: 2,69103e-6
+N=192: 1,55196e-9
+N=256: 8,95033e-13
+Sie multiplizieren G0, nicht automatisch D0. Ohne einen bewiesenen
+Vergleich G0<=gamma D0 bestimmen diese Zahlen noch kein zulässiges
+Fehlerbudget und keine ausreichende Wahl von N.
+
+6. Anschluss an den wirklichen Verlust
+
+Wenn R3 oder der vollständige Neumann-Obertest G<=D0 beweist, folgt
+Loss0=H+R0<=(1-eta)L. Unter dieser Voraussetzung kostet der geerbte
+endliche Quellenmodellfehler weniger als 2*10^-12 L. Dann blieben
+mindestens 9,8*10^-11 L Reserve im hinreichenden Restvergleich.
+
+Weder M_Z noch Q_R für die tatsächlichen 203 Zeilen wurden hier berechnet.
+FULL_203_TAIL_GRAM_COMPUTED=false; FULL_REMAINDER_CERTIFIED=false.

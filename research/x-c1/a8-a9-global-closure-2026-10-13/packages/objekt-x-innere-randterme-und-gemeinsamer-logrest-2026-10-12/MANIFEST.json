@@ -1,0 +1,29 @@
+{
+  "package": "Objekt-X-Innere-Randterme-und-Gemeinsamer-Logrest-2026-10-12",
+  "files": {
+    "ANSCHLUSS_GPT1.txt": "49ecf99f0bf5373a38b3c7d32c2916668e8fe36b1da9af943f106c802d71b9e1",
+    "AUDIT.json": "3f85d97582d4f71fbac1b605126d995cbd56597d61f9ebab701dbd2092cb91ab",
+    "audit.py": "368f6cd4a7820edec5a63ec49e7cac94aba1ff593efe6ff0615fbb275dabfd25",
+    "BERICHT.txt": "1726a34a7c22a6ff8bb7efa193e4b2785519d399146e7ac2ee6e888c0258dccd",
+    "build_endpoint_engine.py": "aae80ec16a0f43b4bb464321b56629cfe158adf01925018f6076476da677b7e3",
+    "compose.py": "0b29a3932d869d92cf63dda1f268a16c4962bc390d0c39b304124938a95ff0ba",
+    "COMPOSED_EVEN_3072.json": "0f0504e371eb3a7989e75fca12e5fb1571c0d3009299389dc00a3e30a2736aa8",
+    "COMPOSED_ODD_3072.json": "c491517d7687f0a6b99aa0062e7d338f1437fee444e8f1cb4eb4be68c9687edd",
+    "compute_endpoint_traces.py": "b32d6acd153092c0583d06b6403f39f5dbaa95b1f9dfb3248a31794b49f48466",
+    "compute_inner_log.py": "e711e4fc5d07a10ecd21a91da40527846c206224f4af6a5254449aef1cebbae5",
+    "endpoint_tail.py": "08d9c46fd53d0ef235d394beb59e8aee8f2d8277083bbd2f2b91152f86b69c96",
+    "INNER_LOG_1536.json": "3df1aefeb3f47d284153a76e3c423c9ce4d236cf242d5e24a1186454f9a58f97",
+    "inputs/a8_model.json.gz": "5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b",
+    "inputs/Objekt-X-Aussenresidualpruefung-und-Logarithmischer-Randtail-2026-10-11.zip": "d4394c74d224cda1fcab44bc7e945a608f2228ff3cc91fcbe75da59de3572e3e",
+    "interval_helpers.py": "4bc0fc7c7691ff0c98d91b6edde9dd3d9a9a22a924bd00d09c33a95e98d812d0",
+    "PROOF.txt": "5d3e03cab5ae2c0a1a603d9417bd59348506021844d687d117bafc744cb15bc1",
+    "rational_ldl.py": "4bcbdb972117edf0af7b098c2dc00c1c9f921f020e1311ad31495bf1d4b66700",
+    "README.txt": "2a24307688f412f632ecc7d25cd61a29da0a3ec409d4b99771b76245d532a28d",
+    "reproduce.py": "7e44ce13ad2ba5495e13a2e8f845a8ac9a1e547a4a52ef55a15506d1bd513c95",
+    "TRACES_EVEN_3072.json": "9a6e5af5bcb07b8d3599e8557a4b3950be548bac194ba34157f4024196870454",
+    "TRACES_EVEN_4096.json": "786cb781b879b4238166a51ac027ec25b1d6f5ae1787e91afecdf9bc21bccc60",
+    "TRACES_ODD_3072.json": "249c57331d94a88a8f26576ed3d3b216a033c5cba7ab5f757387c4b2826d3a44",
+    "TRACES_ODD_4096.json": "3b01376742c4048ab4a73861c92d0eb33bdaa834ecf159be3c9087cb604e8357"
+  },
+  "full_remainder_certified": false
+}

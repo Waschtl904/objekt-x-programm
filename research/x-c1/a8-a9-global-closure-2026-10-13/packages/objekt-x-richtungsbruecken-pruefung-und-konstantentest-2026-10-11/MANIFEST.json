@@ -1,0 +1,12 @@
+{
+  "files": {
+    "BERICHT.txt": "b54c856aeeb914344361a1c68d1e22263cedbf711097fa62eb791da072eb745c",
+    "FRESH_REBUILD_REVIEW.json": "6bbff35243fff531015b4cc753aec461edb1eb63b0452b7731474edd71ac540e",
+    "INDEPENDENT_CONTROL.json": "4421565989b1023e83272b4537b2707bc2e1ec3351c209cb820b7afa015a36dd",
+    "PRUEFQUITTUNG.json": "807a4e81f51fdebba7fbadef90f192a0e89a208fdf8a1c3364bcf6b0078001b1",
+    "README.txt": "72040667ca1097548584081f701f73e0b154ffb89e54696d60b93d889b7c1b70",
+    "independent_control.py": "8e0e73a61a2db8070c6021adeac2f33ce604cf8635900337db8dc8035e38518a",
+    "inputs/Objekt-X-Richtungsbruecke-und-Vergleichsgrenze-2026-10-11.zip": "4faa7004a0622b7434ad0baa35c15f53a165db8d758091bd1f1aa682bb20275d",
+    "reproduce.py": "62bce5e33ceb08d0b87e0894eb91e0cc756972cbc19e20a326378d48df78c12b"
+  }
+}

@@ -1,0 +1,46 @@
+Objekt X — Anschluss für GPT2, 13. Oktober 2026
+
+1. Dein v2-Paket besteht im rationalen Replay. Die Gesamtgrenzen
+   <1.2e-11 und <2.3e-13 werden unter den geerbten Voraussetzungen
+   bestätigt. Die Fehlerparameter wurden hier frisch aufgebaut.
+   Keine erneute vollständige äußere Integration wird behauptet.
+
+2. E_dir bleibt unverändert; H=E_dir/10920. Neu liegen pro Parität
+   eine feste rationale 203x203-Matrix W und ein festes Grad-103-
+   Polynom p mit 203 Komponenten vor. SCALAR_GATE.json speichert W
+   im Feld C_lower_triangular_rational. Alle Koordinaten sind die
+   aktuellen physischen 191+12-Kraftkoordinaten (z4,Y8).
+
+3. Der unabhängige rationale Prüfer bestätigt
+        I < W H W* < 1.001 I.
+   Damit genügt jetzt EIN vollständiger skalarer Integralnachweis:
+        2h integral_0^1
+        ||[Rhat0(a+h u)-B(u)C0-p(a+h u)] W*||^2 du <= 0.999.
+   p(a+h u)=sum_(n=0)^103 P_n(2u-1) p_n,
+   p_n sind rationale PHYSISCHE gewöhnliche Legendrekoeffizienten.
+   Nicht mit den früheren normierten Koeffizienten verwechseln.
+
+4. Die Projektion muss dazu nicht exakt integriert werden:
+   Uhat <= (fhat-p)*(fhat-p), fhat=Rhat0-B C0.
+   Der skalare Test ist nur hinreichend. Er darf bei Bedarf durch
+   den schärferen ursprünglichen Matrixtest ersetzt werden.
+
+5. Nächster Rechenauftrag: (3) auf der GANZEN Schale einschließlich
+   beider Ränder einschließen. Erst komplette Residualfunktion,
+   Logabzug und p zusammensetzen, dann W*, dann Quadrate bilden.
+   Lokale Taylor-/Logarithmusdarstellungen mit analytischen Resten
+   sind ein möglicher Weg; HERLEITUNG.txt Abschnitt 6 gibt die
+   exakten lokalen Integralformeln. Noch kein solcher vollständiger
+   Integrationsrest liegt in diesem Paket vor.
+
+6. Frühere Punktwerte ergeben auch für diesen festen Skalarauftrag
+   kleine, aber weiterhin nicht zertifizierte Quadraturwerte.
+   Diagnose ist ausdrücklich kein Obergram. Bitte nicht als bezahlte
+   Restenergie übernehmen.
+
+Start: python -B reproduce.py
+Keine Fremdpakete für den rationalen Replay erforderlich.
+Optionaler Neubau der festen Vorschläge benötigt python-flint;
+er ist nicht Voraussetzung für ihren rationalen Nachweis.
+
+FULL_REMAINDER_CERTIFIED=false; TAIL_FLOOR_1_OVER_20_CERTIFIED=false.

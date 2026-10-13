@@ -1,0 +1,92 @@
+Objekt X — globaler Residualvergleich und bedingter Abschluss A8->A9
+13. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Der neue globale Gram-Baustein ist in der Gegenprüfung bestätigt. Die
+anschließende vollständige Formdual- und Schurbilanz ist jetzt ebenfalls
+zusammengestellt und rational geprüft, unter den gebundenen analytischen
+Operator-, Domänen- und vollständigen Zerlegungsvoraussetzungen.
+
+Für ALLE 203 Kraftkoordinaten gleichzeitig gilt mit
+T_budget=beta(D203_neu-M_upper):
+
+ gerade:   R*R_LR <= Q_final < (1/250) T_budget,
+ ungerade: R*R_LR <= Q_final < (71/10000) T_budget.
+
+Der GESAMTE Formdualrest benötigt damit weniger als 0,4 Prozent bzw.
+0,71 Prozent seiner Budgetmatrix. Basis84, acht Außenzeilen, vollständiger
+Momentrest, alle drei Logarithmen, deren Kreuzterme mit dem regularisierten
+Rest und sämtliche übernommenen Fehler sind enthalten. Die 0,030 Prozent
+des Eingangspakets betreffen dagegen nur den regularisierten hohen Gram
+relativ zu H; diese beiden Prozentangaben dürfen nicht verwechselt werden.
+
+Folgerung
+
+Die genaue Residualidentität liefert A S^-1 A* < D203_neu. Der anschließende
+Schurvergleich ist auf dem ganzen unendlichen Rest positiv. Zusammen mit
+der positiven neuen Zwölfermetrik und dem alten positiven Block schließt
+dies unter denselben gebundenen Voraussetzungen den Positivitätsübergang
+A8->A9 bei a=3log(2)/2 nach b=log(3).
+
+Es werden dabei keine zwei erfolgreichen Teilraumtests zu einem
+Gesamtraumtest erklärt: Die globale Residualmajorante kontrolliert den
+ganzen Rest. Die vollständige quadratische Ergänzung steht in HERLEITUNG.
+
+Als konservative weitere Folgerung gilt für den genau dort definierten
+Schurvergleich auf T nach Abspaltung der zwölf physischen Quellen:
+
+ gerade:   unterer Boden > 1.328e-6 W_X,
+ ungerade: unterer Boden > 7.978e-6 W_X.
+
+Diese Aussage ersetzt den gesonderten Tailboden 1/20 nicht. Dieser bleibt
+offen; ein inverser Faktor 20 wird in unserem Abschluss nirgends benutzt.
+Auch die globale Konstruktion von Objekt X und RH bleiben offen. Der
+Abschluss betrifft genau den festgelegten Übergang A8->A9.
+
+Tatsächlich ausgeführte Gegenprüfungen
+
+- Frischer rationaler Replay des globalen Grampakets einschließlich seines
+  eingebetteten vollständigen physischen Modellfehlers.
+- Erneute 90 Cauchybaustein- und 741 Integral-/Projektionskontrollen mit Arb.
+- Erneute vollständige Geometrieprüfung aller sechs äußeren Primadjunkte,
+  exakte Zusammenfassung von 80 Logausdrücken zu 35 Logwurzeln und
+  Radiusfehlerprüfung einschließlich der zwölf endlichen Koordinaten.
+- Frischer rationaler Replay des Antwortpakets einschließlich Common96,
+  des Außenrest-/Momentpakets und des gemeinsamen Log-/Zielpakets.
+- Direkter Abgleich aller benutzten Antwort-, Log- und Common96-Felder
+  mit den vollständigen Vorgängern samt Herkunfts-Prüfsummen.
+- Neue rationale Nachrechnung der vollständigen Zielmatrixidentität,
+  der gesamten Residualmajorante und des endgültigen Schuranschlusses.
+  Je Parität bestehen 203 positive LDL-Pivots für den vollständigen
+  Residualvergleich sowie weitere 203 für die verwendete M-Unterreserve.
+
+Die großen globalen Integrationen wurden in dieser Gegenprüfung nicht
+nochmals erzeugt. Ihre gerichteten vollständigen Einschließungen und
+analytischen Restbeweise sind gebundene Eingaben; die Formeln und ihre
+Zusammensetzung wurden gelesen und die genannten Kontrollen ausgeführt.
+Der vollständige optionale Integrations-Neuaufbau bleibt im unveränderten
+Eingangspaket verfügbar. Eine unabhängige externe mathematische Prüfung
+der gesamten analytischen Kette bleibt ausdrücklich offen.
+
+Im alten Antwort-Replay trat nur der bekannte Windows/Linux-Zeilenenden-
+unterschied auf. Der separate Wrapper normalisiert ausschließlich CRLF
+zu LF beim Vergleich einer generierten Prüfdatei. Originalarchive und
+mathematische Daten bleiben unverändert.
+
+Status
+
+COMPLETE_GLOBAL_GRAM_REPLAY_CONFIRMED = true
+COMPLETE_NEW_FORMDUAL_RESIDUAL_COMPARISON_CERTIFIED = true
+A8_TO_A9_POSITIVITY_UNDER_INHERITED_HYPOTHESES = true
+TAIL_FLOOR_1_OVER_20_CERTIFIED = false
+ALL_HORIZONS_CERTIFIED = false
+OBJECT_X_CONSTRUCTED = false
+RH_PROVED = false
+EXTERNAL_REVIEW_OPEN = true
+
+GitHub wurde nicht verändert. Historische false-Statusfelder in den
+versiegelten Vorpaketen bleiben als Herkunftsdaten unverändert erhalten.
+
+Eingangspaket SHA256:
+2ca3c682de8a529b12a0d628c2b606fd04df332d1299ccd36dff71ac3e53d80c

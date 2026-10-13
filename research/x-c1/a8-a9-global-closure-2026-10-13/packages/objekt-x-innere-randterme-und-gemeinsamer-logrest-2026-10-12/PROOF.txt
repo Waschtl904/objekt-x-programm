@@ -1,0 +1,244 @@
+Objekt X — beide inneren Randkoeffizienten und gemeinsamer Logarithmusrest
+12. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Geltungsbereich
+
+Die tatsächlichen Kern-, Form-, Projektions- und Domänenidentitäten werden
+aus den gebundenen Vorpaketen übernommen. Die nachstehende Randidentifikation
+und ihre Fehlerabschätzungen sind neue analytische Herleitungen. Ein
+rationaler Matrixtest beweist diese Identitäten nicht von selbst.
+Das Ergebnis betrifft den vollständigen unendlichen Rest der DREI
+logarithmischen Komponenten gemeinsam. Der vollständige Residualrest,
+A8->A9 und der Tailboden 1/20 bleiben offen.
+
+1. Normierung und exakte zusammengesetzte Kernfunktion
+
+a=3 log(2)/2, b=log(3), h=b-a, u=(x-a)/h. Der physische positive
+Kernraum trägt das Maß 2dx. Seine normierte t-Darstellung ist
+w_hat(t)=sqrt(2a) w(at), 0<t<1. Alle neuen TRACES-Dateien verwenden
+diese normierte Darstellung. Erst NACH den vollständigen Subtraktionen
+wird durch sqrt(2a) geteilt.
+
+Phi bezeichnet die 191 alten, exakt momentorthogonalen Polynome:
+phi_i(t)=sqrt(2n_i+1) P_n_i(t)-cn_i sqrt(2p+1) P_p(t),
+n_i=p+2,...,p+382. AC ist die gebundene obere Dreiecksmatrix des
+neuen gemeinsamen Inversvergleichs. Mit alpha=(xi,v), z=JX alpha,
+lF=AC^T(cF-BhF/delta), t=xi-lF v/(1-rho), q=AC t gilt exakt
+
+ W=Phi_phys q + delta^-1 P_high [ Q_b Lambda z |_core
+                     -Q_b Fv |_core -Q_a Phi_phys q ].             (1)
+
+P_high ist die echte alte hohe orthogonale Projektion innerhalb des
+momentorthogonalen Kernraums. (1) folgt aus V=AC^T(Phi^*-B T_h/delta)
+und B^*q=T_h Q_a Phi q. Die frühere vollständige Residualformel bleibt
+unverändert. Der neue niedrigdimensionale Kraftvektor ist NICHT der
+alte P-residualisierte Vektor.
+
+2. Die zwei inneren Randzeilen
+
+Schreibe W(a-s)=A_log log(s/h)+A_fin+O(s log(s)). Mit
+jJ=J(a)+m(a)lambda(J)/mu und jF=(0_4, Y(a)+m(a)lambda(Y)/mu)
+ist der genaue Sprung von Lambda J bzw. F angegeben. Die vier globalen
+z-Funktionen springen bei a nicht. Projektionen auf Polynome und die
+Momentfunktion ändern keinen Logarithmuskoeffizienten. Somit
+
+ A_log=[jJ X -(0_191,jF)+Phi_phys(a) AC (I,-lF/(1-rho))]/(2 delta).  (2)
+
+Diese Formel wurde unabhängig rational aus Q,D,S, den Mellinreihen,
+AC und den neuen Antworten rekonstruiert. Zusätzlich stimmen die
+direkt integrierten Quellkoeffizienten mit jJ/2 und -Phi_phys(a)/2
+überein. Insbesondere wird keine physische Zeile mit einem unnormierten
+Koordinatenvektor verwechselt.
+
+Für A_fin benötigt man den vollständigen endlichen Anteil jeder Quelle.
+Der neue Integrator enthält exakt die polynomialen/logarithmischen
+Carlemanstücke, sämtliche zehn Primzellen, die Momenthebung und die
+jeweilige gebundene Gamma-Approximation. Die vier z-Quellen werden mit
+ihren echten äußeren Logarithmen ausgewertet, ohne neue Reihenabschneidung.
+
+Ist f eine normierte rohe Kernquelle, dann gilt für die ROHE Projektion
+auf die 192 Legendre-Richtungen bis Grad 383:
+
+ (P_raw f)(1)=sum_i sqrt(2n_i+1) c_i(f)+kappa c_p_raw(f),
+ kappa=sqrt(2p+1)+sum_i sqrt(2n_i+1) cn_i.                         (3)
+
+Hier ist c_i(f)=<phi_i,f> und c_p_raw(f)=<sqrt(2p+1)P_p,f>.
+Der zweite Term darf nicht entfallen. Alle 96 Quellträger werden neu
+integriert. Die 191 Träger von Q_a phi_i folgen durch Selbstadjungiertheit
+aus EINER vollständig integrierten Quelle Q_a ell_p. Für Q_a Phi wird
+genau dasselbe Gamma-Polynom vom Grad 160 wie in der alten Matrix A
+benutzt. Vier unabhängig aufgebaute vollständige Polynomaktionen prüfen
+zusätzlich die direkt aus Endpunktmomenten berechneten endlichen Anteile.
+
+Seien fJ,fF,fP die endlichen physikalischen Randanteile nach Subtraktion
+von (3). Dann lautet das zusammengesetzte Modell
+
+ A_fin,0=[Phi_phys(a)-fP/delta] AC (I,-lF,0/(1-rho))
+                                      +(fJ X-(0_191,fF))/delta.   (4)
+
+Alle Auslöschungen in (2) und (4) bleiben vor der Normbildung erhalten.
+Es wird kein endlicher Quell-Gram als Ersatz einer Randspur verwendet.
+
+3. Echte hohe Projektion statt roher Legendre-Projektion
+
+Mit m=m_lo+m_hi, m_lo=P_raw m, ist exakt
+ P_high-(I-P_raw)=P_span(m_lo)-P_span(m).
+Die positive Mellinreihe liefert sowohl für die Norm als auch die
+Endpunktspur des Momentrestes die konservative Schranke
+
+ 4*385*(21/40)^384/[384! (1-(21/40)/385)] < 10^-800.
+
+Der rationale Prüfer kontrolliert diese Ungleichung. mu>9/100,
+a<11/10, ||m_lo||>1/4 und eine Quellnorm unter 10^30 ergeben für
+die gesamte zusammengesetzte Spurkorrektur weniger als 10^-700 in
+der D^-1-Metrik. Die Quellnorm folgt aus dem geprüften q-Normwert
+unter 10^20 und ||Q_a P_383||<10^6: die Harmonikwerte sind kleiner
+als 8, die logarithmische Multiplikation wird mit der polynomialen
+Supremumsnorm <384 bezahlt, und Gamma- sowie Primteile sind beschränkt.
+In (4) wird großzügig 10^-100 bezahlt. Die Spurkorrektur wird somit
+ausdrücklich erhalten und nicht aus einer bloßen L2-Aussage erschlossen.
+
+4. Vollständige Modellfehler der Randzeilen
+
+Die Gamma-Abweichung auf einer normierten alten Polynomquelle hat
+Punktfehler höchstens 2a eps160 ||f||. Die rohe Projektionsspur hat
+Norm sqrt(sum_(k=0)^191 (4k+2p+1))<273. Nach physikalischer
+Rücknormierung gilt sicher
+
+ |FP[(I-P_raw)(Q_a-Q_a,160)f](a)| <=600 eps160 ||f||.               (5)
+
+eps160 ist der gebundene exakte rationale Gamma-Kernfehler. Wegen
+Phi^*Phi=I+cn cn^T und ||cn||^2<1 kann der Prüfer die vollständige
+D^-1-Hilbert-Schmidt-Norm von Phi AC(I,-lF,0/(1-rho)) mit dem
+gemeinsam gebildeten AC lF,0 begrenzen. AC und lF werden vor der
+Normbildung multipliziert; ihre getrennten groben Normen würden hier
+unnötig viel Reserve verlieren.
+
+Für die 96 neuen Quellspuren einschließlich ihres rohen Trägers genügt
+pro Quelle die Grenze 10^-28. Zur Herleitung: gamma224<10^-34,
+||[J,Y]||_HS<12, mu>9/100, nu<1/10 und die vier z-Normen unter 6
+liefern für die Gamma- und Trägerfehler zusammen <1000 gamma224.
+Die Abweichung der eingefrorenen lokalen Koeffizienten ist <10^-60.
+Auf P95 wird die endliche Randspur durch Polynom-Supremum und Markov
+begrenzt: ||f||_infty<=96/sqrt(2h)||f||_X und
+||f'||_infty<=2*95^2/h ||f||_infty. Für das desingularisierte
+Carlemanstück gilt |int_a^b(f(y)-f(a))/(y-a)dy|<=h||f'||_infty.
+Zusammen mit den endlichen Primstücken, mu>9/100 und h>1/20 genügt
+die sehr großzügige Spurkonstante 10^20. Rundung und die analytischen
+Momentreihen kosten damit <10^-40. Also ist 1000 gamma224+10^-40
+weit kleiner als 10^-28. Diese Aussage betrifft die endliche Randspur;
+eine zurückbleibende winzige Logarithmusabweichung wird separat in
+den Koeffizienten bezahlt und niemals in eine H1-Norm versteckt.
+
+Die bekannten Fehler der 191 c-Koordinaten werden zusätzlich bezahlt:
+400 epsilon_J pro Basisblock bzw. 400 sqrt(tr(K^-1 EcF)) für F.
+Für lF wird der vollständige geerbte Featurefehler
+epsilon_l=sqrt(tr(K^-1 EF)) benutzt, der insbesondere seinen niedrigen
+Teil majorisiert. Mit k0=Phi_phys(a)-fP/delta gilt für (4)
+
+ e_fin <=(||k0 AC||+600 eps160 ||Phi AC||/delta) epsilon_l/(1-rho)
+       +(600 eps160 ||Phi AC t0||_(D^-1,HS)+e_J+e_F)/delta+10^-100.
+
+Für (2)/4 ist der Koeffizientenfehler höchstens
+ ||Phi_phys(a)AC|| epsilon_l/[8 delta(1-rho)]+10^-100.
+Alle e-Werte werden unabhängig rational nachgerechnet. Die einfachen,
+im abschließenden Matrixtest verwendeten Grenzen sind:
+
+ ||Delta C_left,1||_(D^-1) <10^-8,
+ ||Delta C_left,2||_(D^-1) <10^-10,
+ ||Delta C_right,1||_(D^-1) <10^-60.
+
+Die letzte äußere Zeile liegt bereits vollständig eingeschlossen vor;
+der letzte Zusatz ist nur eine großzügige zusätzliche Reserve.
+
+5. Normierung des inneren Carleman- und Primbeitrags
+
+Setze G=Fv-(1-eta)Lambda JX alpha und DeltaG=jF v-(1-eta)jJ X alpha.
+Die tatsächliche positive Schalenwirkung des singulären Kernteils ist
+-1/2 int W(a-s)/(s+epsilon) ds. Aus den exakten Asymptotiken
+
+ int_0^a log(s/h)/(s+epsilon)ds=-1/2 log^2(epsilon/h)+O(1),
+ int_0^a 1/(s+epsilon)ds=-log(epsilon/h)+O(1)
+
+folgt die Bestätigung der vorgeschlagenen Formeln:
+
+ C_left,2=A_log/4,
+ C_left,1=-DeltaG/2+A_fin/2-(-1)^p log(2)/sqrt(8) A_log,
+ C_right,1=C_out.                                                (6)
+
+Bei x=a+epsilon bildet die Primverschiebung 8 auf -a+epsilon ab.
+Der letzte Term in (6) ist deshalb zwingend. Der Prüfer verwirft eine
+Rekonstruktion mit weggelassenem Prim-8-Term ebenso wie eine ohne den
+rohen Trägerterm in (3).
+
+Weitere innere Schnittstellen auf (a,b) entstehen nicht: Die möglichen
+zusammengesetzten Primstellen sind Produkte oder Quotienten von
+2,3,4,5,7,8. Kein Produkt liegt strikt zwischen 8 und 9; der kleinste
+Quotient größer als 1 ist 8/7>sqrt(9/8)=exp(h). Die Stelle 0 wird
+unter einer einfachen Verschiebung nur am Schalenrand b=log(3) getroffen.
+Die rationale Prüfung enthält die vollständigen endlichen Produkt- und
+Quotiententests. Einseitige Randwerte werden beibehalten.
+
+6. Gemeinsamer vollständiger Logarithmusrest
+
+B=(log u,log^2 u,log(1-u)), C besteht aus den drei Zeilen (6).
+G104=B^*(I-P_<104)B ist der bereits unabhängig rekonstruierte
+vollständige 3x3-Gram. Seine vollständigen Integrale, Mellinableitungen,
+zeta-Einschließungen und rationale Obermatrix sind im geprüften
+Eingangspaket enthalten. Es wird KEIN Summenende angenommen.
+
+Für die drei tatsächlichen Randzeilen gilt
+
+ Q_log=sum_(n>=104) (BC)_n^*(BC)_n/d_n
+       <= C^*G104_upper C/d104 < c_log T_budget,
+
+ c_log=1/500 (gerade), 1/250 (ungerade).                           (7)
+
+Zum Bezahlen der Koeffizientenunsicherheiten nutzt der Prüfer
+e_log=sum_i sqrt(G104_upper[i,i]) e_i und theta=10^-6. Er beweist
+mit 206 strikt positiven rationalen Intervall-LDL-Pivots den Schurblock
+
+ [ (c_log d104 T-(1+1/theta)e_log^2 D)/(1+theta), C0^* ;
+   C0, G104_upper^-1 ].                                          (8)
+
+(8) enthält alle Kreuzterme zwischen den DREI Logarithmen sowie
+zwischen Modell und Koeffizientenfehler. Die großen Einzelpreise des
+inneren log^2-Terms werden nicht separat addiert. Zur Größenordnung:
+allein dieser Modellterm beansprucht in der T-Metrik etwa 15,16 % bzw.
+17,65 %; (7) für die gemeinsame tatsächliche Logkomponente liegt
+dank der erhaltenen Auslöschung unter 0,2 % bzw. 0,4 %.
+
+7. Offener regularisierter Rest und gültiger Anschluss
+
+Definiere g=R_X-B C_exact mit den EXAKTEN, durch (1),(2),(6)
+festgelegten Operatorzeilen. Unter den Kernvoraussetzungen besitzt g
+endliche gewichtete Ableitungsenergie; ihr vollständiger oberer Gram
+wurde hier jedoch NICHT berechnet. Ein Abzug nur gerundeter Zeilen
+rechtfertigt keine H1-Aussage. Die verbleibenden winzigen Logkoeffizienten
+müssen ausdrücklich im L2-Fehler oder in der exakten Abspaltung bleiben.
+
+Mit E_g,>=104=2 int_a^b (x-a)(b-x) g'^*g' dx
+                    -sum_(n<104)n(n+1)g_n^*g_n
+gilt Q_g,>=104<=E_g,>=104/(10920 d104). Ein gemeinsamer Young-Schritt
+mit Parameter 1 genügt für den ganzen Tail, falls
+
+ E_g,>=104 <= (10920 d104/2)
+                [(1-c8-2c_log)T_budget-(j+10^-300)D].              (9)
+
+c8=1/5000 bzw. 13/20000; j stammt aus ATTACHMENT_GATES des gebundenen
+Vorpakets. Die Faktoren vor T in der eckigen Klammer sind 4979/5000
+und 19827/20000. Der vollständige Basisanteil, die acht Außenrichtungen
+und die Momentkorrektur sind dadurch berücksichtigt. Für (9) ist ein
+VOLLSTÄNDIGER Ableitungsgram oder eine andere vollständige obere
+Residualabschätzung erforderlich. Endliche zusätzliche Koeffizienten
+allein reichen weiterhin nicht.
+
+Als stärkere, einfachere Alternative zu (9) genügt bereits die jeweils
+vollständig rational geprüfte skalare Bedingung
+ E_g,>=104 <=0,010920026909 D       (gerade),
+ E_g,>=104 <=0,065511688934 D       (ungerade).
+Diese Werte sind nach unten gerundete Zielbudgets, keine berechneten
+oberen Schranken für E_g,>=104. Auch die größere volle Energie E_g
+darf verwendet werden, falls sie schon in dieses Budget passt.
+
+FULL_REMAINDER_CERTIFIED=false.

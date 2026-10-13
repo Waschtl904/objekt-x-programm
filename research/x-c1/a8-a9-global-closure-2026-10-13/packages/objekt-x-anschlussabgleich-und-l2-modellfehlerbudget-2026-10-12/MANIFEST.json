@@ -1,0 +1,15 @@
+{
+  "files": {
+    "ANSCHLUSS_GPT2.txt": "532b69dee463e8fd3c81d0fcbde63001d1c820d1fa0aabf6b33b5c556a4a3159",
+    "BERICHT.txt": "3539ecbd810fc3d9983bdbf6b934bcbc6f307f9b247e2a40e034946806e0b7e8",
+    "PROOF_REVIEW.txt": "26e04a934bab33b48fee8e2dc07fbe745ff763e515357cbf20e573b39857ee02",
+    "README.txt": "5825c0ec8310c8576c0836ec503d231bfc8eb57eabe08a49851ca8c75f1fe136",
+    "audit_consolidation.py": "f6e03bd9a19d7308b418c8df2bef6c3184a9bd1c60740bcb2214b0f51ac40320",
+    "data/CONSOLIDATION_AUDIT.json": "7e7406d183b5c583c9db4103b3d4ac5a5c7fda1740c91cfd535bbd5e317b4554",
+    "data/INPUT_REPLAY.log": "284ea67aa24fa2d3a2653f6ba777fe766c8dee73a384adfad170d3d3b9115f05",
+    "inputs/Objekt-X-Globaler-Anschluss-und-Optimiertes-Restbudget-2026-10-12.zip": "7a51fbebb8587ed2c61af9c933c8f3ae86f1412c94edb09eb17ce64f533a8a4f",
+    "inputs/Objekt-X-Logrest-Gegenpruefung-und-groesseres-Ableitungsbudget-2026-10-12.zip": "6febe3404fc9fe040e925653a545b7b516554305cd1f148be19b79bb3d46f273",
+    "reproduce_review.py": "63d4a219aa91cdc47d16c969d5840281d6dd69c970491d4229971ce60f2be59b"
+  },
+  "full_remainder_certified": false
+}

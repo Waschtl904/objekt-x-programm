@@ -1,0 +1,124 @@
+Objekt X — konkreter Formdual-Residualanschluss nach dem positiven 96er-Test
+11. Oktober 2026 · bedingt auf die geerbten analytischen Voraussetzungen
+
+1. Geometrie und tatsächlich zu verwendende Größen
+
+T bleibt der exakte Rest mit den ursprünglichen Orthogonalitätsbedingungen.
+J bezeichnet die exakt definierte, nicht als orthonormal behandelte Basis84.
+q[r,s]=q_b[Lambda r,Lambda s]. Alle nachfolgenden Formen/Funktionale sind
+die tatsächlichen Größen auf T, nicht bloß die gespeicherten Modellmatrizen.
+
+Sei C_inv die neue rationale 191x191-Kongruenzmatrix mit
+rho<1 und Inversmajorante X_inv=C_inv C_inv*/(1-rho). Für die tatsächlichen
+alten niedrigen und hohen Quellen setze
+
+  v_neu(r)=c(r)-B h(r)/delta_neu,
+  a_low(r)=C_inv* v_neu(r),
+  H_neu[r]=||h(r)||^2/delta_neu,
+  U_neu[r]=H_neu[r]+||a_low(r)||^2/(1-rho).
+
+Der Stern bezeichnet den zur jeweiligen Paarung gehörigen Adjunkten.
+Die neue Majorante muss auch in allen endlichen und gemischten Blöcken
+mit derselben Definition verwendet werden.
+
+Für die zwölf physischen Quellen F=(z1,...,z4,Lambda Y1,...,Lambda Y8) sei
+
+  K_actual=(D-U_neu)[F,F],
+  a_fin(r)=(D-U_neu)[F,Lambda r].
+
+Zunächst eine feste rationale Matrix K12_neu>0 mit K12_neu<=K_actual
+zertifizieren. Der positive gemeinsame 96er-Test liefert dafür endliche
+Daten und Fehlerkontrollen. Die bisherige G-Metrik K12_alt ist nicht ohne
+weiteren Vergleich als scharfe Untergrenze für K_actual einzusetzen.
+Die aus epsilon G allein folgende schwache Untergrenze kann für den
+anschließenden Schurtest zu teuer sein.
+
+Definiere die 203 Funktionale und ihre neue Metrik durch
+
+  A_neu r=(a_low(r),a_fin(r)),
+  D203_neu=diag((1-rho) I191,K12_neu).
+
+Damit majorisiert A_neu* D203_neu^-1 A_neu gemeinsam den niedrigen alten
+Verlust und die anschließende Zwölferkopplung. Es erfolgt keine ungeprüfte
+Übernahme der alten P-Residualisierung.
+
+2. Eine globale Hilfsform, kein fertiger Tailboden
+
+eta=1/10^10, delta_alt=91/50, delta_neu=18219/10000.
+Aus den geerbten Aussagen H_alt <= 89/100 L und q >= L folgt
+
+  H_neu=(delta_alt/delta_neu)H_alt <= (16198/18219)L,
+  S=(1-eta)q-H_neu >= beta L,
+  beta=(1-eta)-16198/18219
+       =20209999981781/182190000000000 >0.
+
+Sei R_L der Forminversenoperator von L auf dem EXAKTEN Rest T. Dann gilt
+im Formdual-Sinn S^-1 <= beta^-1 R_L. Eine unbeschränkte oder falsch
+projizierte Diagonalinverse ist kein Ersatz für diesen Operator.
+
+Die Formdomänen, abgeschlossenen Realisierungen und Stetigkeit der
+Funktionale müssen zu dieser Aussage passen. Insbesondere muss gezeigt
+werden, dass die neuen Residualspalten im L-Formdualraum liegen. Die
+Mitgliedschaft von J in einer Operatordomäne allein ersetzt diese
+Stetigkeits- und Identifikationsprüfung nicht.
+
+3. Neue rationale Antworten und die exakte Restidentität
+
+Auf J ist die neue Galerkinmatrix
+
+  B84=(1-eta)D84_direct-H84_neu.
+
+Sie und die neuen 203x84-Kraftwerte sind unter Bezahlung ihrer Fehler zu
+verwenden. Eine numerische Galerkinlösung kann eine feste rationale Matrix
+X mit 84 Zeilen und 203 Spalten vorschlagen. Setze Z=JX und danach
+
+  R=A_neu* - S Z,
+  M=A_neu Z + Z* A_neu* - Z* S Z.
+
+Dann gilt exakt
+
+  A_neu S^-1 A_neu* = M + R* S^-1 R.
+
+Für einen vollständigen, positiv semidefiniten Fehlergram Q_R mit
+
+  R* R_L R <= Q_R
+
+und eine zertifizierte obere Einschließung M_upper>=M genügt daher
+
+  M_upper + (182190000000000/20209999981781) Q_R <= D203_neu.
+
+Die Modellabweichungen von A_neu, S, M und R sind hierbei vollständig zu
+bezahlen. Ein kleines 84-dimensionales Galerkinresiduum ist kein Ersatz
+für Q_R. Vollständige Kraftfunktionen, alle Momentreste und alle Richtungen
+außerhalb span(J) gehören zum Formdualgram.
+
+Diese Bedingung ist eine hinreichende gemeinsame Verlustbedingung. Sie
+beweist nicht automatisch den gesondert geforderten normierten Tailboden
+1/20. Dessen Form, Metrik und Skalierung müssen separat geprüft werden.
+
+4. Der kleine eta-Abzug ist endlich verträglich
+
+Aus den gelieferten D84-Intervallen und dem analytischen Operatorfehler
+folgt mit einer rationalen Zeilensummenschranke D84_direct<=11 I84.
+Schreibe A96=(D-U_neu)|E. Dann gilt
+
+  A96-eta diag(0_12,D84_direct)
+    >= (epsilon-11 eta) diag(K12_alt,I84).
+
+Beide rechte Reserven sind positiv: 25459/10^10 und 174399/10^10.
+Dies belegt nur, dass dieser vorbereitende Abzug den gemeinsamen endlichen
+Test nicht zerstört. Es ersetzt weder K12_neu, die Antworten X noch Q_R.
+
+5. Verbindlicher Ergebnisumfang des nächsten Laufs
+
+- Exakte Definition und rationale Festlegung von K12_neu, D203_neu und X.
+- Nachvollziehbare Bindung an die neue gemeinsame Majorante und Geometrie.
+- Vollständige neue Residualfunktionen und analytische Formdual-Restgrenzen.
+- Gerichtete Einschließung von M und Q_R sowie rationale Entscheidung der
+  obigen Matrixungleichung; bei Scheitern ein klar begrenzter Befund.
+- Weiterhin FULL_REMAINDER_CERTIFIED=false, solange dieser globale Schritt
+  und sein Anschluss an die eigentliche Zielform nicht abgeschlossen sind.
+
+Die gegenwärtige Prüfung liefert die skalare Vorbereitung und bestätigt
+den endlichen 96er-Test. Sie liefert keine neuen Näherungsantworten und
+keinen vollständigen Residualgram.

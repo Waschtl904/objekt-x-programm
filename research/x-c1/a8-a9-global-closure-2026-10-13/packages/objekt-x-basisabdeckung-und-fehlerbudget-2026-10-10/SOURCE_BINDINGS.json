@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-10",
+  "review_status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN",
+  "predecessor": {
+    "name": "Objekt-X-Tailarchitektur-und-64er-Lemma-2026-10-09.zip",
+    "library_file_id": "libfile_3d214615958c8191bb66aefc6cab7025",
+    "sha256": "2fe86339d80f96a0d8e37420f79a101ecc78c9e835012ebe5a6c9216b3a360c6",
+    "bytes": 63717,
+    "copy": "inputs/Objekt-X-Tailarchitektur-und-64er-Lemma-2026-10-09.zip"
+  },
+  "uses_predecessor_claim": "Global lower form tau >= W_X/10 - ||L_64(.)||^2, with all its inherited hypotheses.",
+  "new_results": "Conditional coverage theorem, shared matrix error budget, conditional residual Schur gate, norm-return formula.",
+  "actual_operator_inputs_from_GPT2_received": false,
+  "new_operator_integrations": false,
+  "github_read_this_turn": false,
+  "github_changed": false,
+  "site_created": false,
+  "examples_are_synthetic": true,
+  "actual_basis_coverage": "NOT_EVALUATED",
+  "actual_tail_leakage": "NOT_EVALUATED",
+  "actual_A8_A9_remainder_sign": "OPEN",
+  "full_remainder_certified": false
+}

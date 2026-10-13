@@ -1,0 +1,86 @@
+Prüfauftrag für GPT 2 — vollständige Basisabdeckung und Tail-Fehlerbudget
+10. Oktober 2026 · Vorschlag für den nächsten Anschluss, kein Rechenresultat
+
+Ausgangspunkt bleibt das 64er-Paket vom 9. Oktober und seine globale Form
+ tau[r]>=W_X[r]/10-||L_64 r||^2 auf H=(R_12,W_X).
+Die gemeinsame alte inverse Energie muss in sämtlichen Blöcken erhalten
+bleiben. Der widerlegte feste M_--Normgate bleibt widerlegt.
+
+A. Basis festlegen und vollständig einbetten
+
+1. Gib die tatsächlichen Funktionen J=(j_1,...,j_d) an, nicht nur eine
+   gerundete Koeffizientenmatrix. Definiere gegebenenfalls j_i=(I-Pi_F)j0_i
+   mit dem exakten alten 12D-Projektor. Y=Q S aus dem Vorgänger ist nicht
+   mit den ursprünglichen e_j oder den exakten Halbinversenbildern identisch.
+2. Beweise J in der vollen Formdomäne und J subset R_12. Für den späteren
+   L2-Residualtest wird zusätzlich J in Dom(T_tau) benötigt.
+3. Schließe den vollen Gram ein: 0<W_-<=W=J*J<=W_+.
+   Keine Behandlung gerundeter Mittelpunkte als exakt orthonormal.
+
+B. Abdeckung durch volle gewichtete Repräsentantenfehler prüfen
+
+4. Wähle eine feste rationale Fitmatrix P (d x 268; exakt entfernte
+   Funktionalrelationen dürfen die Zahl reduzieren). Berechne eine sichere
+   gemeinsame Gramobergrenze U_E fuer E=L_64* - J P.
+5. Erforderlich ist der Gram der vollständigen Funktionen. Alle hohen
+   Operator-/Legendreanteile, alten Antwortfehler und Projektionsfehler
+   müssen enthalten sein. Ein Test nur auf dem Scanraum reicht nicht.
+6. Bevorzugte gemeinsame Form:
+     H_joint=[L_64*,J]*[L_64*,J], V=[I;-P], U_E>=V*H_joint V.
+   Alternativ den vollen Residualgram direkt bilden. Nicht getrennte
+   Worst-Case-Endpunkte korrelierter alter Energien einsetzen.
+7. Abnahme: U_E<=I/20, mit exakter rationaler PSD-Prüfung.
+   Dann besitzt der GESAMTE Tail Z=ran(J)^(perp W_X) den Boden 1/20.
+   Bei U_E<=epsilon I mit epsilon<=1/20 gilt sogar delta=1/10-epsilon.
+
+Dieser Weg benötigt keinen Nachweis rank(L_64)=d und keine exakten
+Nullsetzungen kleiner Funktionalwerte. Er behauptet auch nicht Z=ker L_64.
+Die Dimension 264 bleibt eine theoretische Rangobergrenze, kein Gütesiegel
+für eine beliebig ausgewählte Basis. Das ganze H zerfällt stets in J plus
+seinen vollständigen orthogonalen Tail; positiv wird der Tail erst durch 7.
+
+Ein zulässiges einfaches Fehlerbudget ist E=E_model+Delta mit
+  E_model*E_model<=G_model, Delta*Delta<=G_data,
+  2(G_model+G_data)<=I/20.
+Zum Beispiel reichen je I/80. Alle Datenfehler sind zuerst gemeinsam
+in Delta zu bündeln oder mit bezahlten Young-Faktoren zu kombinieren.
+
+C. Vollständige Tailantwort und endlichen Schurblock prüfen
+
+8. Erst nach bestandenem B den Tailoperator A_Z>=delta I verwenden.
+   Für B_Z=Pi_Z T_tau J wähle Y in Dom(A_Z), exakt in Z. Bilde gemeinsam
+     R=B_Z-A_ZY,
+     K_Y=tau[J-Y,J-Y].
+9. Liefere volle Einschließungen R*R<=G_R und K_lower<=K_Y.
+   Der L2-Residualgram verlangt einen L2-Operatorwirkungsnachweis.
+   Ein unbezahlter Formdualfehler ist kein L2-Residualgram.
+10. Prüfe fuer ein ausdrücklich angegebenes rationales eta>0:
+     K_lower-delta^(-1)G_R-eta W_+ >=0.
+    Beim einfachen Boden 1/20 lautet der Faktor 20.
+11. Für eine uniforme R_12-Reserve zusätzlich Y*Y<=y^2 W und G_R<=r^2 W
+    einschließen. Dann beta_H=min(eta,delta)/(1+y+r/delta)^2.
+    beta_H ist noch kein physischer A9-Gesamtboden vor allen Eliminationen.
+
+D. Bitte als Ergebnis liefern
+
+- Funktions-/Norm-/Domänendefinitionen und alle gebundenen Eingaben;
+- W_-, W_+, P, volle gemeinsame Gramobergrenzen und deren Herleitung;
+- Tailbudget und, falls bestanden, delta;
+- K_lower, G_R, eta und optional y,r,beta_H;
+- Ursprung und Größenordnung jedes vollständig bezahlten Fehleranteils;
+- explizite Trennung: tatsächliche Operatorbelege, rationale Folgeprüfung,
+  numerische Diagnose und weiterhin fehlende Eingaben.
+
+Mögliche sachliche Zwischenstände:
+ MISSING_FULL_GRAM_INPUT       — vollständiger Restgram fehlt;
+ BASIS_GRAM_NOT_CERTIFIED      — Unabhängigkeit/Geometrie nicht belegt;
+ COVERAGE_BOUND_INCONCLUSIVE   — das hinreichende I/20-Budget schließt nicht;
+ TAIL_COERCIVITY_CERTIFIED     — nur mit geprüften tatsächlichen B-Eingaben;
+ MISSING_L2_RESIDUAL_INPUT     — L2-Wirkung oder voller Residualgram fehlt;
+ FINITE_SCHUR_INCONCLUSIVE     — positiver Tail, endlicher Schurtest offen;
+ FULL_R12_CERTIFIED            — nur mit sämtlichen geprüften Operatorbelegen.
+
+Der beigefügte Zahlenprüfer kann allein nur bedingte Matrixprüfungen
+bestätigen. Seine Beispiele sind synthetisch. Kein Erfolg dieser Beispiele
+ändert den tatsächlichen A8->A9-Status. Kein Scheitern einer Untermatrix
+ist ein negativer Zeuge der tatsächlichen Form.

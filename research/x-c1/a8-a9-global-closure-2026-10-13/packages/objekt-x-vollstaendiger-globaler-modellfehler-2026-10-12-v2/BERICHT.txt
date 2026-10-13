@@ -1,0 +1,27 @@
+Objekt X — ein wesentlicher globaler Schritt ist geschlossen
+12. Oktober 2026
+
+Unter den gebundenen Operatorvoraussetzungen ist nun der vollständige
+tatsächliche Fehler des globalen Residualmodells bewiesen:
+
+                Bewiesene Fehlergrenze    Bisher erlaubtes Budget
+Gerade          <1.2e-11                  6.76796364171e-7
+Ungerade        <2.3e-13                  1.628860045447e-6
+
+Die engere rationale Rechnung ergibt etwa 1.15562e-11 bzw. 2.22921e-13.
+Die Preise betreffen die vollständige D-duale L2-Norm oberhalb Grad 103,
+einschließlich des glatten Momentadjunkten und der kanonischen Projektion.
+
+Der entscheidende Fortschritt: Die äußere Wirkung der empfindlichen
+alten Antworten wurde vor dem Abschätzen vollständig zusammengesetzt.
+Alle Teilintervalle und der gesamte logarithmische Rand wurden erfasst.
+Damit wird eine bisher viel zu grobe Fehlerverstärkung vermieden.
+
+Die rationale Gesamtprüfung umfasst auch den bisherigen Fehler des
+gerundeten Logabzugs. Das gemeinsame Ziel E_dir bleibt unverändert.
+
+Weiterhin offen ist die vollständige Integration des globalen Modellgrams
+samt niedriger Projektion. A8->A9 und der Tailboden 1/20 sind nicht bewiesen.
+
+Herleitung, sämtliche Fehlerpreise und ausführbare Gegenprüfungen liegen
+im Paket. Die mathematische externe Gegenprüfung bleibt wie bisher offen.

@@ -1,0 +1,14 @@
+{
+  "status": "GALERKIN84_COMPUTED",
+  "necessary_gate_refuted_parities": [
+    "even",
+    "odd"
+  ],
+  "stronger_gate_refuted_parities": [
+    "even",
+    "odd"
+  ],
+  "full_remainder_certified": false,
+  "github_changed": false,
+  "review_status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN"
+}

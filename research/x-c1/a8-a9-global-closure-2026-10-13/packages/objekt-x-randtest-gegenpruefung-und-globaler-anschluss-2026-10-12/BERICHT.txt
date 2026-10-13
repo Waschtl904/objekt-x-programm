@@ -1,0 +1,42 @@
+Objekt X — Randtest gegengeprüft; globale Obergrenze weiterhin offen
+12. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Das Paket Randtest-im-unendlichen-Rest besteht den vollständigen rationalen
+Replay unter den geerbten Operatorvoraussetzungen. Beide 203er-Zeilen,
+ihre Fehlerpreise und beide Rang-eins-Budgetvergleiche sind bestätigt.
+Der Windows/Linux-Unterschied im Vorgänger betrifft nur die Zeilenenden;
+der Vergleich der JSON-Werte besteht.
+
+Eine getrennte rationale Berechnung über Legendre-Endpunktwerte bestätigt
+416 Koeffizientenquadrate in den vier gespeicherten Integraldateien sowie
+die Restmasse 0.522048329798... und die Energieobergrenze 3.712320032766...
+Der Faktor 1/2 in der Energieformel ist richtig.
+
+Die bestätigten Rang-eins-Werte in der Budgetmetrik liegen zwischen
+0.04828 und 0.04840 Prozent (gerade) beziehungsweise zwischen
+0.13323 und 0.13340 Prozent (ungerade). Es sind weiterhin UNTERGRAME
+des vollständigen Rests. Ihr Bestehen ist keine globale Obergrenze und
+kein zusätzlich bezahlter Anteil des offenen Restbudgets.
+
+Zusätzlich hergeleitet: Immer schmalere normierte Randindikatoren werden
+für jeden festen L2-Residualblock asymptotisch unempfindlich. Ihre
+Außenmasse geht gegen eins, der Rang-eins-Testwert hingegen gegen null.
+Weitere Tests allein durch Verengen des Randintervalls liefern deshalb
+keinen Ersatz für die gemeinsame globale Gramrechnung.
+
+PROOF_REVIEW.txt enthält einen exakten bedingten Anschluss der ganzen
+Testfamilie: Der ungewichtete k104-Tailgram ist das vollständige Integral
+von b'(q)*b'(q), mit b(q)=sqrt(q)R(f_q). Eine passende obere Einschließung
+dieses Integrals würde den verbleibenden gewichteten Rest bezahlen.
+Dieses Integral ist hier NICHT berechnet. Auch der frühere Ansatz mit
+abgezogenen logarithmischen Randtermen benötigt weiterhin seine fehlenden
+inneren Koeffizienten und einen vollständigen regularisierten Gram.
+
+Die vier Quellenintegrationen wurden in dieser Gegenprüfung nicht neu
+ausgeführt. Der Replay benutzt ihre gebundenen Daten samt analytischen
+Fehlerpreisen. Originalarchive und GitHub bleiben unverändert.
+
+Keine negative tatsächliche Schurform nachgewiesen.
+Kein vollständiger oberer Residualgram gewonnen.
+A8->A9 und der Tailboden 1/20 bleiben unbewiesen.
+FULL_REMAINDER_CERTIFIED=false.

@@ -1,0 +1,285 @@
+Objekt X — exakte Basis, voller lokaler Fehler und sichere Gesamtobergrenze
+10. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+0. Scope und ausdrücklich gewählte Operatoren
+
+H=(R_12,W_X), tau, L_64 und die 268 Zeilen haben die Definition des
+übergebenen Basisabdeckungspakets und seines gebundenen 64er-Vorgängers.
+Es gilt unter dessen übernommenen analytischen Voraussetzungen
+
+  tau[r] >= W_X[r]/10 - ||L_64 r||².                    (0)
+
+Als positive alte 191D-Schuruntermatrix F in diesem L_64 wird ausdrücklich
+die rationale F_integer_matrix/F_denominator aus dem jeweiligen finalen
+CERTIFICATE_*_gamma224_tight_4096.json gewählt. Diese erfüllt H4 des
+64er-Lemmas mit delta=91/50 und der tatsächlichen alten Kopplung B_old.
+Ihre vollständige Inversmajorante ist X=A_c A_c*/(1-rho)>=F^-1.
+F^-1/2 im Funktional ist die tatsächliche positive Matrixwurzel. Sie wird
+für die vorliegenden Nullfits der entsprechenden 191 Zeilen nicht durch
+eine willkürliche gerundete Wurzel ersetzt. Die Obergrenze benutzt X.
+
+Die zwölf anderen Zeilen bleiben S_12^-1/2 C_12 mit dem TATSÄCHLICHEN
+S_12 und C_12. Die zuvor integrierte Kreuzantwort mit U_op ist nicht
+unbemerkt an die Stelle dieser tatsächlichen Schurkopplung getreten.
+
+Die lokalen 65 Zeilen heißen L_loc; die übrigen 203 Zeilen L_rem.
+Die symbolischen Konstanten K0, q0 und B_lambda werden exakt so wie in
+Abschnitt 6a des 64er-Lemmas gewählt. Die groben rationalen Hüllen unten
+werden nur für ihre Abschätzung benutzt, nicht als geänderte Fitdefinition.
+
+1. Exakte Basis des vollständigen polynomialen Restes
+
+Sei P_95=span(ell_0,...,ell_95) in X. Der unveränderte Viererraum V liegt
+in P_95. Die exakt definierte Basis Q aus dem Halbinversenpaket ist eine
+W_X-Isometrie von C^92 auf P_95 intersect V^(perp W_X). Ihre exakte
+Definition ist W_X-Gram-Schmidt mit positivem Cholesky-Vorzeichen; die
+gespeicherten Intervalle sind Einschließungen dieser festgelegten Funktionen.
+
+Y=Q S mit derselben rationalen 92x8-Matrix S wie im Vorgänger. Schreibe
+S=[S_top;S_bottom] mit 8 beziehungsweise 84 Zeilen. Beide S_top sind
+rational invertierbar. Definiere die EXAKTEN rationalen Matrizen
+
+  D=-(S_top*)^-1 S_bottom*,  Z=[D;I_84].
+
+S*Z=0 gilt rational exakt. Wegen des unteren Identitätsblocks hat Z
+vollen Spaltenrang 84. Null(S*) hat ebenfalls Dimension 84, denn S_top
+ist invertierbar. Daher gilt für J=Q Z
+
+  ran(J)=K=P_95 intersect R_12,
+  W_J=J*J=Z*Z=I_84+D*D.                              (1)
+
+Die rationale Rechnung zeigt tr(D*D)<1, je Parität. Somit
+
+  I_84 <= W_J <= (1+tr(D*D))I_84 < 2I_84.             (2)
+
+Diese Identitäten betreffen ganze Funktionen im W_X-Hilbertraum. Das
+Auflisten von 96 Koeffizienten ist hier exakt, weil J tatsächlich polynomial
+ist. Es gibt keine unbezahlten höheren Koeffizienten der Basisfunktionen.
+Es wird nicht behauptet, dass andere Repräsentanten polynomial seien.
+
+2. Form- und Operatordomäne
+
+J besteht aus endlichen Linearkombinationen lokaler Polynome. Die volle
+Liftung Lambda J ist stückweise glatt, kompakt getragen und enthält die
+unveränderte analytische Kernmomentkorrektur. Das gebundene Domänenlemma
+liefert Q_b^np Lambda j in L² für jede Spalte j.
+Die Funktionale r -> q_b^np[Lambda j,Lambda r] sind folglich in der
+W_X-Norm beschränkt, weil ||Lambda r||²=W_X[r].
+
+Die Schurform tau entsteht durch Kompression auf R_12 und Abzug von
+g* A^-1 g sowie C_12* S_12^-1 C_12. Diese sind beschränkte Hilbertoperatoren
+unter H2 und H3 des 64er-Pakets. Daher bleibt tau(j,.) ein L²-
+repräsentiertes Funktional auf R_12. Das Definitionskriterium für den
+selbstadjungierten Operator der geschlossenen Form ergibt
+
+  J subset Dom(T_tau) subset D(tau).                  (3)
+
+Dieser Schluss belegt die L²-Wirkung auf J, aber nicht den noch fehlenden
+Residualgram für eine künftige Variationsantwort Y.
+
+3. Der gesamte orthogonale Rest zur neuen Basis
+
+F_geo=V+ran(Y) liegt in P_95 und ist W_X-orthogonal zu K. Die Dimensionen
+12+84=96 und (1) liefern P_95=F_geo direct-sum K. Deshalb gilt exakt
+
+  Z_rest=K^(perp H)=P_95^(perp W_X)                   (4)
+
+als Teilraum von X; die Zugehörigkeit zu R_12 ist rechts bereits enthalten.
+Z_rest ist unendlichdimensional. Er ist NICHT als Raum ausschließlich
+hoher X-Legendrekoeffizienten definiert.
+
+Schreibe l_n=lambda(ell_n), r_n=<ell_n,r>_X. Für r in Z_rest gilt
+
+  r_n=-2 lambda(r) l_n/mu,  0<=n<96.                  (5)
+
+Mit t96²=sum_(n>=96)|l_n|² folgt aus der vollständigen Momententwicklung
+
+ lambda(r)(1+2 sum_(n<96)|l_n|²/mu)
+                =sum_(n>=96) l_n r_n,
+ |lambda(r)|² <= t96² ||r||_X² <= t96² W_X[r].        (6)
+
+Damit sind die kleinen niedrigen Komponenten des vollen Rests bezahlt.
+
+4. Analytischer unendlicher Momentrest
+
+Setze c=(a+b)/2 und d=(b-a)/2. Auf x=c+d t, |t|<=1, hat m(x) die
+Taylorreihe um c/2 mit Parameter d/2=h/4<1/64. Die Ableitungskoeffizienten
+von cosh und sinh sind durch exp(c/2)<3 beschränkt. Nach Grad 95 genügt
+die rationale uniforme Restschranke
+
+  e_m = 3(1/64)^96/96! /(1-(1/64)/97).                 (7)
+
+Der X-Rieszvertreter von lambda ist m/2. Orthogonale X-Projektion auf
+P_95 ist mindestens so gut wie dieses Taylorpolynom, daher
+
+  t96² <= (h/2)e_m² < e_m²/32.                       (8)
+
+Diese Rechnung schließt ALLE Grade ab 96 ein. Eine endliche Abtastung
+hoher Koeffizienten oder eine numerische Differenz zweier fast gleicher
+Momentnormen wird nicht als Tailbeweis benutzt.
+
+5. Abdeckung der ersten 65 tatsächlichen Funktionale
+
+Für L_loc des 64er-Pakets folgt aus (5)
+
+ ||L_loc r||² = |lambda(r)|² [B_lambda+1/(5mu)
+                  +(4/mu²)sum_(n<64)(H_64-H_n)|l_n|²]
+ <= |lambda(r)|² [B_lambda+1/(5mu)+2 H_64 nu/mu²].     (9)
+
+Hier wurde sum_n |l_n|²=nu/2 benutzt. Die gebundenen Parameter erfüllen
+mu>9/100, mu<8, nu<1/10, h<1/16. Für das Domänenlemma genügen
+M<2, Lip(m)<1, a<2 und sqrt(2a+2)<3. Damit HG<174, K0<250, q0<1000.
+Einsetzen in den unveränderten Ausdruck für B_lambda liefert B_lambda<10^10
+und die eckige Klammer in (9) ist kleiner als 2*10^10.
+
+Aus (8)-(9) folgt die volle Operatornormschranke
+
+ ||L_loc|Z_rest||² <= (2*10^10/32)e_m² < 10^-600.     (10)
+
+Die letzte Ungleichung wird rational exakt geprüft. Da Pi_J der vollständige
+W_X-Projektor auf K ist, ist dies zugleich eine Schranke für den Gram
+des vollen Repräsentantenfehlers (I-Pi_J)L_loc*.
+
+6. Tatsächlicher rationaler Fit, keine ideale irrationale Matrix
+
+Die ideale Matrix P_star=W_J^-1 (L_loc J)* wird mit gerichteten Intervallen
+eingeschlossen. Die konkrete feste rationale Matrix P_65 entsteht durch
+Rundung jedes Mittelpunkts nach unten auf das Gitter 10^-40.
+Die Dateien speichern diese rationalen Zahlen vollständig.
+
+Die beiden Fehlerteile in
+
+ L_loc* - J P_65 = (I-Pi_J)L_loc* + J(P_star-P_65)
+
+sind in H orthogonal. Deshalb addieren sich ihre Grame exakt ohne
+unbezahlte Kreuzterme. Mit W_J<=2I gilt
+
+ (P_star-P_65)*W_J(P_star-P_65)
+       <=2 ||P_star-P_65||_F² I_65.                  (11)
+
+Die Intervalle bezahlen dabei die ursprünglichen Q-Koeffizienteneinschließungen,
+alle Momente und Gewichte, die Gram-Inversion und die rationale Fitabweichung.
+Der obere Wert in (11) beträgt ungefähr 3,6169*10^-77 bzw. 3,6794*10^-77.
+Zusammen mit (10) gilt für die VOLLEN tatsächlichen Funktionen
+
+ E_65*E_65 <= 10^-70 I_65.                            (12)
+
+Die rationale Nachprüfung berechnet (11) erneut direkt aus den gespeicherten
+Intervallen und der rationalen P_65. Sie behandelt die Mittelpunkte nicht
+als die exakten ursprünglichen Funktionen.
+
+7. Eine ausdrücklich grobe volle Obergrenze für die übrigen 203 Zeilen
+
+Für diese Zeilen wird im vorliegenden Kandidaten P_rem=0 gewählt. Das ist
+ein zulässiger fester Fit, aber keine erfolgreiche Approximation. Die volle
+Matrix P=[P_65,0] hat 84x268 Einträge. Im Folgenden wird trotzdem eine
+tatsächliche vollständige Obergrenze für den ganzen Repräsentantenfehler
+geliefert. Sie ist numerisch unbrauchbar für den Zielboden und wird nicht
+als genaue Fehlergröße ausgegeben.
+
+Aus der gebundenen Kern-/Schalenabbildung und K0<250 folgt für alle r in H
+
+ ||g_r|| <= [16/5+sqrt(nu/2)K0/mu]||r||_H <1000||r||_H.
+
+Setze beta=1+10^-12. Der hohe Momentlift gibt ||h_old(r)||²<=beta||g_r||².
+Für die 191 alte Momentbasis phi_i ist ihr voller Gram I+c c*; die
+eingeschlossene Mellinrechnung zeigt ||c||²<1. Also ist dieser Gram <=2I.
+H_B ist die gebundene vollständige Majorante B_old B_old*.
+Mit X>=F^-1 und v=c(r)-delta^-1 B_old h_old(r) liefert ein bezahlter
+Young-Faktor 2 die auf ganz H gültige Schranke
+
+ ||F^-1/2 v(r)||² <= M_v ||r||_H²,
+ M_v=2*10^6 [2 tr(X)+beta delta^-2 tr(X H_B)].           (13)
+
+Für die gemeinsame tatsächliche alte Energie E[r] folgt somit
+
+ E[r]<=U[r]<=M_U ||r||_H²,
+ M_U=beta*10^6/delta+M_v.                             (14)
+
+Für die zwölf Kopplungen verwenden wir die ursprünglichen physischen
+Vertreter Psi=(z,Lambda Y). Ihre erste Vierergruppe unterscheidet sich
+von den reinen Liftungen ihrer Schalenrestriktionen um Vektoren im alten
+Momentkern. Der alte Anteil ist z_core+lambda(sigma)m_core/mu und liegt
+nach dem Domänenlemma in Dom(A). Bei diesem Wechsel ändern sich direkte
+und inverse alte Kreuzenergie um denselben Term; S_12 und C_12 bleiben
+unverändert. Das ist genau der gebundene Repräsentantenwechsel des
+64er-Pakets, keine Ersetzung einer physischen Quelle durch eine Liftung.
+
+Die positiven Matrixeingaben sind S_12>=K12>0 und E_Psi<=U_F, wobei U_F
+die gemeinsame rationale obere 12-Quellenenergie des finalen Zertifikats ist.
+Setze K_i=K12^-1. Für die zwölf direkten Kräfte D_Psi gilt
+
+ ||Q_b^np Psi_i||_2 <10^10.
+
+Begründung: Für Lambda Y reichen Koeffizientennorm <2, Grad <=95,
+h>1/20, |P_n|<=1 und |P_n'|<=n(n+1)/2. Sie liefern nach Hinzufügen der
+Kernmomentkorrektur |Psi_i|<1000 und stückweise Ableitung <2*10^8,
+bei Träger in [-2,2] und höchstens vier Sprungstellen. Das gebundene
+Domänenlemma plus die beschränkte Nichtpolstörung mit Norm <=18 liefert
+die angegebene Schranke. Die ursprünglichen z_j haben Grad höchstens 9,
+Norm <2 und erfüllen dieselbe deutlich großzügigere Schranke.
+Weil ||Lambda r||=||r||_H, ist folglich
+
+ ||K_i^(1/2)D_Psi||² <=12*10^20 tr(K_i).               (15)
+
+Die tatsächliche alte Kreuzenergie wird EINMAL als gemeinsames Merkmal
+A^-1/2 g behandelt. Cauchy-Schwarz im alten Energieraum ergibt
+
+ ||K_i^(1/2) E_Psi,T r||²
+    <=tr(K_i E_Psi) E[r]
+    <=tr(K_i U_F) M_U ||r||_H².                       (16)
+
+Hier wurden keine separat frei wählbaren Endpunkte korrelierter alter
+Energien eingesetzt. Alle Größen in (16) beziehen sich auf dieselbe alte
+Inverse. Erst danach wird C_12=D_Psi-E_Psi,T mit bezahltem Young-Faktor
+2 abgeschätzt. Aus S_12^-1<=K_i folgt
+
+ ||S_12^-1/2 C_12 r||² <=M_C ||r||_H²,
+ M_C=24*10^20 tr(K_i)+2 tr(K_i U_F) M_U.               (17)
+
+Die beiden restlichen Zeilengruppen liegen in orthogonalen euklidischen
+Koordinaten, also ||L_rem||²<=M_v+M_C. Die nach oben gerundeten rationalen
+Werte M_rem sind in BASIS_*.json gespeichert. Sie betragen ungefähr
+6,60058*10^43 bzw. 1,34438*10^41. Dies sind volle Operatorobergrenzen,
+keine abgeschnittenen Grame und keine tatsächlichen gemessenen Verluste.
+
+8. Vollständiges Gate und seine korrekte Ablehnung
+
+Für E=L_64*-JP=[E_65,L_rem*] und u=(u_65,u_rem) gilt
+
+ ||E u||² <=2||E_65 u_65||²+2||L_rem* u_rem||².
+
+Damit ist die konkrete volle Gramobergrenze
+
+ U_E=2 diag(10^-70 I_65, M_rem I_203) >=E*E.           (18)
+
+Die Dateien GATE_EVEN.json und GATE_ODD.json verwenden (18), W_-=I,
+W_+=2I und unverändert epsilon=1/20. Der mitgelieferte rationale Prüfer
+weist beide mit COVERAGE_BOUND_INCONCLUSIVE zurück. Das ist erwartet:
+Die sichere Obergrenze (18) ist viel größer als das verlangte I/20.
+Aus diesem Scheitern folgt weder ||E||²>1/20 noch tatsächliche Negativität.
+
+Insbesondere wäre es falsch, nur die erfolgreichen ersten 65 Zeilen an
+den Gesamtprüfer zu übergeben und daraus einen Tailboden abzuleiten.
+Die übrigen 203 sind in (18) ausdrücklich mit enthalten.
+
+9. Nächste tatsächlich fehlende Abschätzung
+
+Die neue Basis ist ein Startkandidat. Für ein erfolgreiches vollständiges
+Budget müssen nun auch die 191 alten Kräfte und zwölf tatsächlichen
+Schurkopplungen funktional approximiert werden. Benötigt wird ein scharfer
+voller gemeinsamer Gram von L_rem* - J P_rem, einschließlich aller hohen
+Anteile, der tatsächlichen alten Inversenergie und der Basisprojektion.
+Die vorliegenden zwei Testvektoren aus dem Verlustbilanzpaket liefern
+diesen Gram nicht. Dessen konkrete Integration/Approximation bleibt offen.
+
+Die erfolgreiche lokale Abdeckung (12) muss nicht neu aufgebaut werden.
+Eine Basisvergrößerung kann sie erhalten; ob sie für den übrigen Block
+erforderlich ist, wurde hier nicht bewiesen. Die theoretische Rangobergrenze
+264 wird nicht als tatsächlicher Rang oder automatische Abdeckung benutzt.
+
+Erst nach erfolgreicher vollständiger Abdeckung darf A_Z>=1/20 verwendet
+und der L²-Schurresidualtest mit Faktor 20 ausgeführt werden. Ein solcher
+Residualgram R*R, K_lower und eta>0 liegen in diesem Paket nicht vor.
+
+FULL_REMAINDER_CERTIFIED=false. EXTERNAL_REVIEW_OPEN.

@@ -1,0 +1,274 @@
+Objekt X — positiver endlicher gemeinsamer 4+8-Schuranschluss
+9. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Aussage und Voraussetzungen
+
+In jeder Parität werden dieselben vier bisherigen neuen Quellen z und die
+acht tatsächlichen Funktionen Y=Q S verwendet. Q ist die gebundene exakte
+WX-isometrische Basis, S die gespeicherte rationale Koeffizientenmatrix.
+Es gilt exakt WY=S* S>0. Y liegt im WX-orthogonalen Rest R zum Viererraum.
+
+Nach Eliminierung des vollständigen alten A8-Raums und anschließend des
+Viererblocks besitzt die tatsächliche auf Y eingeschränkte Schurform den Boden
+
+                    Sigma_Y >= (1/25000) WY.                 (1)
+
+Die Aussage gilt in beiden Paritäten. Die ursprünglichen Formidentitäten,
+Domänen, alte Positivität, Momentgeometrie und gebundenen Quellenintegrale
+bleiben Voraussetzungen. Die vier Quellen bilden einen positiven Block;
+(1) zertifiziert damit den gemeinsamen endlichen 4+8-Anschluss je Parität.
+
+Der Faktor 1/25000 ist ein Boden des ACHTSPALTIGEN SCHURBLOCKS relativ zu WY.
+Er wird nicht als gemeinsamer Boden der unveränderten zwölf Koordinaten
+vor der Schurelimination ausgegeben. Ebenso ist (1) kein Satz auf dem
+vollständigen unendlichen neuen Rest und kein B_R-Normzertifikat.
+
+2. Alte niedrige Gamma-Matrix wirklich korrigieren
+
+Setze a=3 log(2)/2. Für z=t/2 gilt
+
+ k_reg(t)=[sech(z)+(z/sinh(z)-1)/z]/4.
+
+Die gebundene Gamma-160-Matrix wird um die tatsächlich berechnete Differenz
+K224-K160 korrigiert. In der niedrigen FORM ist das Vorzeichen negativ:
+
+ A224 = A160 - E_low* M* (K224-K160) M E_low.
+
+Alle ersten 161 rationalen Polynomkoeffizienten stimmen exakt überein.
+Die Korrektur benutzt daher ausschließlich die Koeffizienten 161..224.
+Die momentkorrigierten Vertreter sind exakt dieselben wie im Ursprung:
+
+ phi_n=sqrt(2n+1)[P_n-m_n(a)/m_p(a) P_p],  p=0 oder1,
+ m_n(a)=(1/2) integral_-1^1 exp(a x/2)P_n(x)dx.
+
+Die positiven Mellinreihen werden mit vollständigem Rest eingeschlossen;
+ihre Intervalle überlappen die ursprünglichen Momentintervalle.
+
+Für den uniformen neuen Kernelrest bei Radius r=21/20 werden die rationalen
+Reiheninversen Pc der cosh-Reihe und Ps der sinh(z)/z-Reihe verwendet.
+Ihre endlichen Residuen verschwinden bis zum geforderten Grad exakt.
+Die restlichen Koeffizienten werden mit Absolutbeträgen und r^k bezahlt,
+dazu die expliziten factorialen Reste der beiden Nennerreihen. Beim Ps-Teil
+wird vor der Majorisierung durch z dividiert. Beide tatsächlichen Nenner
+sind auf dem reellen Intervall >=1. Dies liefert
+
+ epsilon224 = 1.0310311331... * 10^-40,
+ gamma224=(21/10)epsilon224,
+ ||A_true,low-A224|| <= 4 gamma224.
+
+Der Faktor 21/10 majorisiert 2a. Der Faktor 4 stammt aus dem geerbten
+||M||<=2. Weder die alte Kopplung B0 noch ihre Gamma-160-Fehlergrenze
+werden aufgrund dieser niedrigen Korrektur ausgetauscht.
+
+3. Zwei Wege zu den Gamma-Paarungen
+
+Die gerichtete Hauptrechnung verwendet exakte rationale Legendre-
+Antiderivationen. Für
+
+ r_(j,k)(x)=(1/2) integral_-1^1 |x-y|^k P_j(y)dy
+
+gilt r_(j,1)''=P_j und für k>=2 die Rekursion
+r_(j,k)''=k(k-1)r_(j,k-2). Wert und erste Ableitung bei x=1 sind exakte
+Beta-Momente. Sie bestimmen die beiden Integrationskonstanten. Die
+vollständigen endlichen Polynombilder werden erhalten, nicht abgeschnitten.
+Legendre-Orthogonalität gibt alle 191x191-Paarungen in jeder Parität.
+
+Eine unabhängige Stichprobe benutzt Dreieckszerlegung und die verschobenen
+Legendre-Koeffizienten d_(n,j)=(-1)^(n+j) binom(n,j)binom(n+j,j):
+
+ T_(m,n,k)=sum_(j=max(0,m-k-1))^n
+  d_(n,j) j! k! (j+k+1)! / [(j+k+1-m)! (j+k+m+2)!],
+
+ (1/4) integral integral P_m(x)P_n(y)|x-y|^k dxdy
+     =2^k[T_(m,n,k)+T_(n,m,k)].
+
+Beweis: auf x=2u-1, y=2v-1, 0<=v<=u<=1 expandiert man P_n(2v-1).
+Das v-Integral ist ein Betaintegral. Das verbleibende u-Moment von P_m
+ist l!^2/[(l-m)!(l+m+1)!] für l>=m und sonst 0. Die zweite Hälfte des
+Quadrats vertauscht m und n. Diese Formel verwendet keine Antiderivations-
+Rekursion der Hauptrechnung. Zehn ausgewählte Paarungen einschließlich
+der hohen Diagonalen382/382 und383/383 werden so erneut geprüft, auch
+mit Python-Fraction und gerichteter ganzzahliger Festkommaarithmetik.
+Die Stichprobe ersetzt keine unabhängige Neuintegration aller Matrixeinträge.
+
+4. Vollständige alte Inversenergie und Kopplungsgram
+
+Der vorher bewiesene vollständige hohe Boden bleibt delta=91/50. Das
+gebundene vollständige Kopplungsgram G0=B0 B0* bleibt unverändert. Mit
+
+ eB=2 gamma160+24*10^-100
+
+gilt für jedes t>0 die gemeinsame Operatorabschätzung
+
+ BB* <= (1+t)G0+(1+1/t)eB^2 I = H_B(t).                      (2)
+
+Dies folgt durch Ausmultiplizieren B=B0+dB und die Operator-Young-Ungleichung;
+||dB||<=eB. Im ersten Lauf bleibt t=1/1000. Nach dessen offener Diagnose
+wird t=1/100000000 gewählt, für beide Paritäten identisch. Der Gegenfehler
+(1+1/t)eB^2 I wird vollständig mitgerechnet. Die Zwischenstände bleiben
+erhalten; die Wahl wird nicht als vor allen Diagnosen eingefroren behauptet.
+
+Eine rationale Untermatrix F wird so konstruiert, dass
+
+ F <= A224-4 gamma224 I-H_B(t)/delta.
+
+Eine rationale invertierbare obere Dreiecksmatrix C erfüllt exakt geprüft
+
+ ||C* F C-I|| <= rho < 3.3e-78,
+ F^-1 <= C C*/(1-rho).
+
+Der separate Prüfer rekonstruiert die Kongruenz mit ganzen Zahlen. Jede
+der vier Kombinationen aus Parität und Präzision trägt ihr eigenes Zertifikat.
+Die ersten vier Zertifikate mit t=1/1000 werden ebenfalls erhalten.
+
+Für die gemeinsamen zwölf Quellen (c,h) bleibt
+
+ E <= h*h/delta + v* F^-1 v,  v=c-Bh/delta.
+
+Alle Modellfehler werden wie zuvor gemeinsam bezahlt. Mit X=C C*/(1-rho)
+und den gemeinsamen Quellenfehlergramen Ec, Eh ist der zusätzliche Fehler
+
+ Eerr = Eh/delta +3[tr(X)Ec+tr(X H_B)Eh/delta^2
+                     +tr(X)eB^2 H_h/delta^2].
+
+Die abschließende gemeinsame Young-Konstante ist weiterhin 10^-12, die
+rationale zusätzliche Diagonalzugabe weiterhin 10^-35. Die Grammatrizen
+enthalten sämtliche Off-Diagonalen; zwölf unabhängige skalare Hüllen werden
+nicht an ihre Stelle gesetzt. Exakte LDL-Prüfungen bestätigen die neuen
+oberen Energien und ihre strikte Verbesserung gegenüber den Vorgängern.
+
+Der signierte C-Mittelpunkt wird um (U_alt-U_neu)_zY/2 verschoben. Somit
+bleibt B=C_centre+(U+L)_zY/2 dieselbe direkte Paarung. Die gemeinsame
+Abhängigkeit derselben alten Inversenergie bleibt erhalten.
+
+5. Tatsächliche Gamma-Form auf denselben acht Schalenfunktionen
+
+Der erste Gamma-224-Lauf bleibt im endlichen Schurtest offen. Die verbleibende
+direkte Hülle kommt fast vollständig von der früheren skalaren Schalen-Gamma-
+Schranke von rund0.000741. Es werden deshalb ausschließlich ihre Werte auf
+den bestehenden Y-Spalten neu eingeschlossen. Die Halbinversenbilder oder
+ihre bereits bewiesenen Fehler werden nicht neu definiert oder verkleinert.
+
+Setze b=log3, h=b-a, c=(a+b)/2, x=c+(h/2)t. Die X-orthonormalen lokalen
+Legendrepolynome sind ell_n=sqrt((2n+1)/(2h))P_n(t), X=L2((a,b),2dx).
+Die gespeicherten Koeffizienten von Y in dieser Basis werden vollständig
+verwendet, einschließlich aller Grade bis 95.
+
+Die reine Schalenform enthält die negativen Gamma-Terme
+
+ K_self: k_reg(|x-y|),     (-1)^p K_mirror: (-1)^p k(x+y).
+
+Der zugehörige Operator integriert bezüglich dy; die Form lautet 2 mal
+das Doppelintegral bezüglich dxdy. Diese Faktoren sind in der Rechnung
+enthalten. Beispielsweise hat ein konstanter Kernel k0 auf ell_0 den
+Matrixeintrag h k0.
+
+Selbstterm: h/2<1/32. Die exakte Gamma-Polynomrechnung mit Grad 32 und
+Radius 1/32 liefert die gesamte 96x96-Modellmatrix. Sie wird auf Y kontrahiert.
+Der vollständige Operatorrest ist höchstens h epsilon32.
+
+Spiegelterm: für x+y>=2a gilt die positive Reihenidentität
+
+ k(x+y)=sum_(r>=0) exp[-(2r+1/2)x] exp[-(2r+1/2)y].
+
+Die ersten 32 Rang-eins-Grame werden durch vollständige Mellinmomente exakt
+integriert. Der Rest hat Operatornorm höchstens
+
+ h exp(-129a)/(1-exp(-4a))
+ < 1/(63*2^191),
+
+denn h<1/16, exp(-4a)=1/64 und exp(-129a)=2^(-193.5)<2^-193.
+Zusammen mit dem Selbstrest bestätigt der rationale Prüfer
+
+ epsilon32/16+1/(63*2^191)<10^-50.                            (3)
+
+WX>=X, daher ist auf Y die Restform betragsmäßig durch 10^-50 WY beschränkt.
+Der gemeinsame signierte 8x8-Gamma-Block lautet
+
+ GY=Y* Kself,model Y+(-1)^p Y* Kmirror,32 Y.
+
+Die gebundene vollständige Momentkorrektur wird unverändert zusätzlich
+bezahlt: gerade ungefähr 2.640725e-6, ungerade 1.604394e-5 relativ zu WY.
+Insbesondere werden Core-/Shell-Kopplungen nicht durch diese Gamma-Rechnung
+weggelassen. Nur der reine Schalen-Gamma-Term wird präzisiert.
+
+Sei DY0 die bereits eingeschlossene direkte Modellform Y*T0Y-19WY. Dann
+werden sichere Löwner-Matrizen aus den Intervallendpunkten konstruiert:
+
+ DYlower=DY0,lower-GY,upper-(delta_mom+10^-50)WY,
+ DYupper=DY0,upper-GY,lower+(delta_mom+10^-50)WY.               (4)
+
+Die Unsicherheit der endlichen T0-Matrix bleibt in DY0 bezahlt.
+
+6. Gemeinsamer tatsächlicher Schurtest
+
+Schreibe die direkte Zwölferform D=[Dz B;B* DY] und die gemeinsame alte
+Inversenergie E=[Ezz EzY;EYz EYY]. Der tatsächliche neue Schurblock nach
+den alten Richtungen ist D-E. Da E<=U, gilt D-E>=D-U gemeinsam.
+
+Setze N=Dz,lower-Uzz>0, C_U=B-UzY und T_U=DYlower-UYY. Für festes y gilt
+
+ y*Sigma(E)y=inf_x (x,y)*(D-E)(x,y)
+             >= y*[T_U-C_U* N^-1 C_U]y.
+
+Das ist eine gemeinsame Monotonieabschätzung; die Unbekannte E wird nicht
+in drei unabhängigen Termen separat maximiert. Die Intervalle für C_U
+und ihre volle Modellfehlernorm werden zusätzlich bezahlt.
+
+Mit rational festgelegtem P, dem C-Mittelpunkt C0 und R0=C0-NP gilt exakt
+
+ K0=T_U-C0*P-P*C0+P*NP,
+ K0-R0* N^-1 R0=T_U-C0* N^-1 C0.
+
+Ist ||M_-^-1/2 (C_U-C0)||<=epsilon, so benutzen wir die sicheren gemeinsamen
+Schranken epsilon_N=epsilon sqrt(tr(N^-1 M_-)) und
+kappa=2epsilon sqrt(tr(P* M_- P)). Die verbleibende Verwendung von M_- ist
+nur eine GEWICHTSNORM für den bereits gebundenen C-Fehler. Es wird nicht
+der widerlegte konservative M_--Normgate wiederverwendet.
+
+Dann ist
+
+ Sigma_lower=K0-kappa I-[2R0* N^-1 R0+2epsilon_N^2 I]
+
+eine Untermatrix für die tatsächliche Schurform auf allen acht Spalten.
+Die komplette Gleichung wird mit Fraction erneut aufgebaut.
+
+7. Rationale positive Reserve
+
+Eine rational gerundete 8x8-Matrix Qlower liegt durch exakt geprüfte
+diagonale Dominanz unter Sigma_lower. Anschließend prüft der unabhängige
+Prüfer die acht LDL-Pivots von
+
+ Qlower-(1/25000)WY.
+
+Alle Pivots sind in beiden Paritäten und beiden Präzisionsläufen strikt
+positiv. Ebenso werden die vier positiven N-Pivots geprüft. Damit folgt
+(1) für ALLE Koeffizienten der acht Spalten. Es handelt sich nicht bloß
+um einen positiven numerischen Eigenwert oder einzelne positive Richtungen.
+
+8. Rechenstand, Reproduktion und Grenzen
+
+Die neuen niedrigen und Schalen-Gamma-Rechnungen sowie die beiden alten
+Inversenrechnungen wurden mit 3072 und4096 Bit ausgeführt. Ein zunächst
+parallel gestarteter3072-Bit-Inversenlauf brach wegen Speichermangels ab;
+sein anschließender einzelner Wiederholungslauf ist vollständig abgeschlossen.
+Ergebnisse des abgebrochenen Laufs werden nicht als Zertifikat verwendet.
+
+Der Standardbibliotheks-Replay prüft die Quellbindungen, die rationalen
+Gamma-Reste, zehn alternative exakte Gamma-Paarungen, 72962 Vergleiche
+der niedrigen Gamma-Matrixeinträge,384 Schalen-Gamma-Vergleiche, acht
+vollständige 191D-Inversenzertifikate und zwölf endliche Schurrekonstruktionen.
+Vier dieser Schurrekonstruktionen enthalten den positiven Endsatz (1).
+Die vollständigen gerichteten Gamma-Matrixrechnungen werden im schnellen
+Replay nicht erneut ausgeführt; dafür liegen die Programme bei.
+
+Die ungeprüften ursprünglichen analytischen Annahmen werden nicht durch
+Hashprüfungen oder Präzisionsvergleiche bewiesen. Eine externe mathematische
+Begutachtung steht aus. Die beigefügte Nutzer-Gegenprüfung betrifft das
+Vorgängerpaket mit hohem Boden91/50, nicht die neuen Gamma-/Schurresultate.
+
+Offen bleiben die tatsächliche Schurform auf dem gesamten unendlichen
+neuen Rest einschließlich seiner Kopplung zum jetzt positiven endlichen
+Block, eine wiederverwendbare Fortsetzungsregel und Objekt X. Der vorher
+widerlegte konservative feste M_--B_R-Normgate bleibt widerlegt. Kein
+FULL_REMAINDER_CERTIFIED, keine neue A9->A11-Rechnung, kein RH-Ergebnis.

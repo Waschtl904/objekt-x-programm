@@ -1,0 +1,16 @@
+{
+  "files": {
+    "ANSCHLUSS_GPT2.txt": "20ae623016109358e465043d923887bde84185f7fb344a946d5e3e0bdb5f231d",
+    "PRUEFVERMERK.txt": "20e62136ae49fd75942ce12d00243230b41c32cfbb74e9ceffdb6138f561c422",
+    "README.txt": "4b9eb1ac86f924d206f6f61f755ddb72efdb67a5d1403b97ad08c728b0106de2",
+    "SOURCE_BINDINGS.json": "bda03eaad7f9ed62f79bccf70d3f9a75b5332e1ff9a01b6c28345ba114236b4a",
+    "check_basis_and_build_L.py": "50d5474c2842628f194a5d4ae4a1e16713fe0b71738b838dfbf308ba0ae6def1",
+    "expected/INDEPENDENT_CHECKS.json": "d82600813daedd011c455ce4bc93b4fc46c7ae254af51100611df730b6710e50",
+    "expected/L_ENERGY_84_EVEN.json": "923a7cd3e57fb16e8608d5f14aecf6c9836f72b73fd64000d3bb11d74c2a8d92",
+    "expected/L_ENERGY_84_ODD.json": "77f3a969311694e3373d49babe291f058996336b916654cfd76105b86ad235c1",
+    "expected/ORIGINAL_AUDIT.json": "a2ba42f76c6f9c3407761f25789b2b6991d9ebecac3e5a1fff4a8ca472ce47fd",
+    "expected/ORIGINAL_REPLAY.json": "99fb1ef127f1605d8b4732c450d58d838f238e5c58068d37b6b462ad782e141f",
+    "expected/REPRODUCTION_COMPARISON.json": "db2c78e6c4b37868a4f62872eeec2c02d912efc008610c308a3590ec0b01596c",
+    "reproduce_review.py": "4f7780fc15c2cd7d08fa64900ce09dd28ecedddc44241d8d07089b816664e8ad"
+  }
+}

@@ -1,0 +1,75 @@
+Objekt X — Außenresidualpaket bestätigt; globalen Randtail weitergeführt
+11. Oktober 2026
+
+Dein Paket besteht. Je Parität überlappen alle 1344 Kreuzintegrale mit
+unserer unabhängig entstandenen Rechnung. Der Momentpreis 10^-300 D
+und deine beiden restlichen Zielmatrizen sind bestätigt.
+
+Bitte nun ENDPOINT_PROOF.txt und LOG_TAIL_METHOD.txt prüfen.
+
+Neu ist die exakte äußere Randzeile der 203 tatsächlichen Residuen:
+
+ C_out = 1/2 [(1-eta) J(b) X - (0_191,F(b))].
+
+Die alte Kernadjungierte ist am äußeren Rand einseitig regulär; sie
+erzeugt dort keinen weiteren Logarithmus. Moment- und endliche
+Projektionskorrekturen ändern C_out nicht. Alle 203 Koeffizienten
+liegen gerichtet vor und wurden rein rational neu aufgebaut.
+
+Eine niedrige Spalte ist schon sicher nicht null:
+gerade Spalte 175 etwa -0.10380693759035,
+ungerade Spalte 188 etwa -0.098518843041961.
+Deshalb ist die gewichtete Ableitungsenergie der unbereinigten Residuen
+unendlich. Keinen endlichen H1-Tailpreis für diese Funktionen annehmen.
+
+Für den ISOLIERTEN äußeren Term ist dagegen der GANZE gewichtete Tail
+ab 104 bezahlt:
+
+  Q_out <= [2h/(104^2 d104)] C_out* C_out,
+  Q_out <7/10000 T_budget gerade,
+  Q_out <8/10000 T_budget ungerade.
+
+Je 204 positive rationale Pivots, keine endliche Tailtrunkierung.
+Diese Komponentenpreise nicht ohne Kreuztermkontrolle zum vollen
+Residualpreis addieren.
+
+Für die Weiterrechnung schreibe die geerbte Formel R2 als eine gemeinsam
+gebildete physische Quelle G+W_core, mit
+
+ G=Fv-(1-eta)Lambda JX alpha,
+ W=V*[xi-a_low(F)v/(1-rho)]
+       +delta^-1 T_h*[h(JX alpha)-h(F)v].
+
+Prüfe die beiden physischen Kernrandvektoren
+
+ W(a-s)=A_log log(s/h)+A_fin+O(s log(s)).
+
+Die vorgeschlagene analytische Identifikation des verbleibenden
+Singularteils lautet
+
+ C_left,2=A_log/4,
+ C_left,1=-Delta G/2+A_fin/2
+                 -(-1)^p log(2)/sqrt(8) A_log,
+ C_right,1=C_out.
+
+Die Primverschiebung 8 beim inneren Rand muss erhalten bleiben.
+Die beiden inneren Vektoren wurden hier noch NICHT berechnet.
+Die analytische Randidentifikation bitte unabhängig gegen die volle
+physische Operatornormierung prüfen, bevor sie als geerbte Eingabe gilt.
+
+Für B=(log(u),log^2(u),log(1-u)) ist der GANZE Gram
+G104=B*(I-P_<104)B rational eingeschlossen; siehe LOG_TAIL_104.json.
+Nach gemeinsamer Abspaltung R_X=BC+g kann ein vollständiger gerichteter
+Ableitungsgram E_g,>=104 den Rest schließen. Ein hinreichender Test ist
+
+ (1+theta) C* G104_upper C
+ +(1+1/theta) E_g,>=104_upper/10920
+   <= d104[(1-c8)T_budget-(j+10^-300)D].
+
+Alle Operator-/Quellenfehler und insbesondere Fehler der Randkoeffizienten
+müssen zusätzlich bezahlt werden. Eine noch so kleine unbezahlt verbliebene
+Logsingularität macht einen behaupteten endlichen Ableitungsgram ungültig.
+Der reguläre vollständige Gram ist weiterhin offen. Ein finiter Ersatz
+oder eine abgebrochene Legendreliste genügt hier nicht.
+
+FULL_REMAINDER_CERTIFIED=false. Der Faktor 20 bleibt unbenutzt.

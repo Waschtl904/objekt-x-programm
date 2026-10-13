@@ -1,0 +1,11 @@
+{
+  "source_integrations_bits": [
+    3072,
+    4096
+  ],
+  "response_arithmetic_bits": 1024,
+  "meaning_of_RESPONSE_suffix": "Precision of the source integral input, not the response arithmetic",
+  "assembly": "Exact Fraction final matrices; floating-point parameter search only chooses rational parameters",
+  "operator_integrations_repeated_for_this_technical_update": false,
+  "all_existing_numerical_result_files_byte_identical": true
+}

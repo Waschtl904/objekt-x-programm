@@ -1,0 +1,87 @@
+Objekt X — geprüfter Dualrest-Anschluss und acht tatsächliche Außenresiduen
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Die neuen rationalen Antworten und ihre positive Budgetmatrix sind
+gegengeprüft. Zusätzlich liegt erstmals für diese NEUEN Antworten eine
+gemeinsame tatsächliche Residualrechnung auf acht Außenrichtungen vor.
+
+Die Verbindung zur globalen L-Dualform ist präzisiert. Mit
+B=beta(D203-M_upper) beanspruchen der vollständige endliche J-Residualpreis,
+die acht Beiträge k96,...,k103 und die vollständige Momentgeometriekorrektur
+zusammen weniger als
+
+  gerade:   0.020 % von B,
+  ungerade: 0.065 % von B.
+
+Das sind gerichtete Matrixabschätzungen unter den geerbten analytischen
+Voraussetzungen. Die Zahlen sind weder Tailböden noch Beweisfortschritt
+in Prozent. Für den ganzen Rest ist weiterhin ein globaler Nachweis nötig.
+
+Was konkret neu hinzukommt
+
+- Die beiden zuvor offenen endlichen Geometriebedingungen bestehen:
+  K12_neu>epsilon K12_alt und ||X||_F<0.325 in beiden Paritäten.
+- Der tatsächliche endliche J-Dualgram kostet unter 9.19e-17 D203 bzw.
+  1.50e-19 D203; alle übernommenen Fehler sind dabei bezahlt.
+- Alle J84-k96,...,k103-Kreuzintegrale der direkten Form und der vollständigen
+  hohen Antwort wurden frisch bei 3072 und 4096 Bit berechnet.
+- Je Parität bestehen 44068 Präzisions-Intervallvergleiche sowie 15768
+  Anschlussvergleiche zu gebundenen Basis- und Außenquellenwerten.
+- Der neue Residualvektor wird vor der Normbildung vollständig zusammengesetzt.
+  Die Auslöschungen zwischen Kraft und Operatorwirkung bleiben erhalten.
+- Der getrennte Rationalprüfer baut je 1624 Residualwerte erneut auf und
+  bestätigt die Budgetabschätzung mit je 211 positiven LDL-Pivots.
+
+Konkreter offener Anschluss
+
+Für k_n wie in PROOF.txt, d_n=H_n+11/10, definiere die GANZE Summe
+
+  Q_>=104=sum_(n>=104) R(k_n)*R(k_n)/d_n.
+
+Dann würden folgende vollständige Nachweise genügen:
+
+  gerade:   Q_>=104 <=0.99980 B,
+  ungerade: Q_>=104 <=0.99935 B.
+
+Die Matrix B bleibt die neue positive, richtungsabhängige Budgetmatrix.
+Die Summe ab 104 ist noch nicht scharf eingeschlossen. Die acht erfolgreich
+geprüften Richtungen ersetzen sie nicht. Die alte grobe volle Norm wird
+nur für den extrem kleinen geometrischen Momentpreis benutzt.
+
+Gegenprüfung des Eingangspakets
+
+Alle vier neuen Antwortdatensätze wurden bei 768/1024 Bit frisch aufgebaut;
+ihre sämtlichen JSON-Felder stimmen mit der Übergabe überein. Der rationale
+Audit und der inhaltliche Präzisionsvergleich bestehen.
+
+Eine technische Portabilitätsabweichung wurde gefunden: Das ursprüngliche
+reproduce.py vergleicht PRECISION_CHECK.json byteweise. Die ZIP-Datei hat
+Windows-Zeilenenden (CRLF), ein Linux-Lauf schreibt LF. Deshalb bricht der
+unveränderte Originalprüfer am letzten Bytevergleich ab, obwohl sämtliche
+JSON-Werte identisch sind. Der hiesige Replay vergleicht die JSON-Werte,
+nach vorheriger Kontrolle aller Originalprüfsummen. Er verändert keines
+der Originalarchive. Dieser Unterschied ist ausdrücklich dokumentiert.
+
+Die ursprünglichen 96er- und alten Quellenintegrationen bleiben gebundene,
+vorher geprüfte Eingaben. Die vier neuen J/K-Kreuzintegrationen wurden in
+diesem Schritt tatsächlich ausgeführt. Präzisionsübereinstimmung wird nicht
+als Ersatz für den analytischen Fehlerpreis verwendet.
+
+Status
+
+NEW_RESPONSE_REBUILD_IDENTICAL = true
+NEW_RESPONSE_RATIONAL_AUDIT_PASSED = true
+ORIGINAL_REPLAY_BYTE_CHECK_PORTABILITY_ISSUE = true
+NEW_GEOMETRY_CONNECTION_GATES_PASSED = true
+TRUE_FINITE_J_RESIDUAL_BOUND_AVAILABLE = true
+FIRST_EIGHT_NEW_EXTERNAL_RESIDUAL_CONTRIBUTIONS_ENCLOSED = true
+FULL_WEIGHTED_RESIDUAL_TAIL_FROM_104_CERTIFIED = false
+NEGATIVE_ACTUAL_SCHUR_WITNESS = false
+TAIL_FLOOR_1_OVER_20_CERTIFIED = false
+FULL_REMAINDER_CERTIFIED = false
+
+A8->A9, der gesonderte Tailboden 1/20 und die Konstruktion von Objekt X
+bleiben offen. Eine externe mathematische Begutachtung steht aus.
+GitHub wurde nicht verändert.

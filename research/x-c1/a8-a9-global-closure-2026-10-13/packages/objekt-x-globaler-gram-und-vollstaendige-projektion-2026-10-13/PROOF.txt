@@ -1,0 +1,261 @@
+Objekt X — vollständige globale Gram-Integration
+13. Oktober 2026
+Beide globalen Matrixbedingungen bestanden; externe Gegenprüfung offen.
+
+1. Gegenstand und gebundene Definition
+
+Es wird genau die vollständige Funktion Rhat0 des Pakets
+Objekt-X-Globale-Funktionsdarstellung-und-glatte-Korrektur-2026-10-12
+verwendet. Sie ist keine Interpolation gespeicherter Kontrollpunkte.
+Der tatsächliche Modellfehler ist im nachfolgenden Paket
+Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12-v2
+bereits vollständig bezahlt, weiterhin unter den geerbten Operator-
+und Domänenvoraussetzungen.
+
+Die vorliegende Rechnung betrifft
+ f(u)=Rhat0(a+hu)-B(u) C0,  0<u<1,
+ B(u)=(log u, log^2 u, log(1-u)),
+ a=3 log(2)/2, b=log(3), h=b-a.
+C0 sind genau die rationalen Zeilen aus
+DIRECTIONAL_DERIVATIVE_TARGET.json. X hat das Maß 2h du.
+P104 ist die orthogonale Projektion auf die ersten 104 normierten
+Schalen-Legendrepolynome, einschließlich Grad null.
+
+2. Algebraische Zusammenführung vor der Integration
+
+compile_model.py führt die 203 Kräfte zusammen, bevor Normen gebildet
+werden. Die zusätzliche direkte Kern-Momentwirkung wird in dieselbe
+Kernfunktion aufgenommen. Alle zehn Kernzellen, alle sechs äußeren
+Primadjunkte q=2,3,4,5,7,8 und alle alten inneren Primverschiebungen
+werden beibehalten. Die äußeren Primargumente liegen je in einer
+einzigen offenen Kernzelle. check_geometry.py beweist die vollständige
+Zellzugehörigkeit: Gleichheiten werden als rationale Vektoren in der
+Basis log(2),log(3),log(5),log(7) geprüft, übrige Vergleiche mit
+gerichteter Arithmetik. Aus der Affinität folgt die Aussage auf dem
+gesamten Intervall. Die exakten Randidentitäten
+log(8)=2a und b=a+h werden ausdrücklich eingesetzt.
+
+Für ein Polynom g(t)=sum g_n t^n und einen logarithmischen Faktor gilt
+auf jeder vollständigen Kernzelle [l,r]:
+
+ integral g(t) w(t)/(s-t) dt = g(s) C_w(s)-Q(s),
+ Q_k=sum_(n>k) g_n mu_(n-1-k),
+ mu_j=integral_l^r t^j w(t) dt.
+
+Dabei ist w=1 oder log|t-r0|. Sämtliche mu_j werden vollständig,
+analytisch integriert. Kein Legendre-Abbruch ersetzt diese Integrale.
+Nach der Division besteht f aus einem Polynom, Polynomen mal
+Logarithmen affiner Funktionen, acht Polynomen mal Cauchybausteinen
+und 32 exponentiellen Termen. Die drei rationalen Logabzüge gehören
+zur selben Darstellung.
+
+3. Vollständige Cauchybausteine und ihre Taylorreste
+
+ C(s;r0)=integral_0^1 log|t-r0|/(s-t) dt,
+ r0 in {1,-1,b/a,-b/a}, s außerhalb [0,1].
+
+Die Werte folgen aus der reellen Dilogarithmus-Stammfunktion. Für die
+Taylorkoeffizienten wird die durch partielle Integration bewiesene
+Identität verwendet:
+
+ C'(s;r0)=[log|s|-log|s-1|-L1/(s-1)+L0/s]/(s-r0),
+ L1=(1-r0)log|1-r0|, L0=-r0 log|r0|, 0log0=0.
+
+Bei s=r0 außerhalb [0,1] ist die Singularität hebbar. Dort gilt
+ C(r0;r0)=(log^2|r0|-log^2|r0-1|)/2.
+Der Zähler der Ableitungsformel verschwindet exakt. Für s=r0+qz
+ist deshalb der Koeffizient von z^n gleich N_n/n, n>=1, wobei N
+den Zähler bezeichnet. Es wird kein Intervall durch ein Nullintervall
+dividiert.
+
+Für s=s0+qz, |z|<=1, d=dist(s0,[0,1])>|q|, folgt unmittelbar aus
+der vollständigen geometrischen Kernelreihe nach N Koeffizienten:
+
+ |C(s;r0)-Taylor_(N-1)(s)|
+ <=4 (|q|/d)^N/(d-|q|).
+
+Hier wird integral_0^1 |log|t-r0|| dt<4 verwendet. Für die vier
+gebundenen Wurzeln folgt dies durch Aufteilung der Logdistanz bei 1
+aus integral_0^1 |log t|dt=1 und log 3<2.
+
+4. Vollständiger linker Rand, einschließlich Logarithmusquadraten
+
+Schreibe s=1+v. Für r0=1 gilt exakt
+ C(1+v;1)=-pi^2/6-(log v)^2/2-Li2(-v).
+Der vollständige Rest der Li2-Reihe ab N wird mit
+ v^N/[N^2(1-v)] bezahlt.
+
+Für r0 ungleich 1, d0=1-r0, gilt
+ C(1+v;r0)=A(v)-log|d0+v| log v,
+ A(0)=-Li2(1/d0),
+ A'(v)=[log(1+v)+L0/(1+v)+log|d0|]/(d0+v)
+       +log(1+v/d0)/v.
+Der letzte Quotient ist bei null analytisch.
+
+Auf |v|<=R<min(1,|d0|) ist
+ |A'| <= [R/(1-R)+|L0|/(1-R)+|log|d0||+1]/(|d0|-R).
+Also ist |A|<=|A(0)|+R sup|A'|=:M.
+Für v=qz, |z|<=1, q<R, ist der gesamte Taylorrest ab N durch
+ M(q/R)^N/(1-q/R) beschränkt. Verwendet wird
+ R=min(1,|d0|)/2.
+
+Damit wird auf dem ganzen linken Randintervall einschließlich u=0
+in der L2-Bedeutung eine Darstellung
+ p0(z)+p1(z)log z+p2(z)log^2 z
+mit vollständig bezahlten Resten berechnet. Es wird kein kleiner
+Randstreifen verworfen. Am rechten Rand ist nur log z nötig; die
+übrigen Cauchybausteine sind dort analytisch, auch in den hebbaren
+Fällen s=+/-b/a.
+
+5. Weitere skalare Reste und endliche Kürzung
+
+Für log|d+ez|, |e/d|=q<1, ist der gesamte Reihenrest ab N höchstens
+ q^N/[N(1-q)]. Für exp(d+ez) wird
+ exp(d) exp(|e|) |e|^N/N! verwendet.
+Ein Polynomvektor sum v_k z^k hat auf |z|<=1 Norm höchstens
+sum ||v_k||_2, weiter vergrößert zu sum_(k,j)|v_kj|. Die gerichtete
+128-Bit-Summe dieser Beträge multipliziert jeden skalaren Rest.
+
+Erst nach der Zusammenführung aller Beiträge wird das erhaltene
+endliche Polynom gekürzt. Jeder gestrichene Koeffizient wird bezahlt.
+Auf dem Randpanel wird für log^j z der vollständige L2-Faktor
+sqrt((2j)!) benutzt. Die Zahl der behaltenen Koeffizienten ist deshalb
+adaptiv; sie definiert keine unbezahlte unendliche Abschneidung.
+
+Mit D=diag((1-rho)I191,K12) wird die euklidische Fehlernorm durch
+ sqrt(191/(1-rho)+tr(K12^-1))
+in die D-duale Hilbert-Schmidt-Norm überführt. Die Fehlerenergien der
+disjunkten Panels werden addiert. Die orthogonale Projektion I-P104
+vergrößert diesen Fehler nicht.
+
+5a. Bezahlung der erhaltenen Koeffizientenradien
+
+Große negative Cauchy-Auswertungspole können Zwischenterme bis ungefähr
+10^285 erzeugen. Deshalb wird keine enge Punktdifferenz als Ersatz für
+ein Rundungsbudget verwendet. Die endgültige stückweise Näherung benutzt
+die EXAKTEN DYADISCHEN MITTELPUNKTE sämtlicher behaltenen Koeffizienten.
+Alle Radien dieser Koeffizienten werden zusätzlich global bezahlt.
+
+Ist r=(r_1,...,r_203) der Radiusvektor einer Koeffizientenzeile und
+K=K12, so gilt für jeden von ihr eingeschlossenen Fehlervektor e:
+
+ e D^-1 e* <= sum_(i<=191) r_i^2/(1-rho)
+              +sum_(i,j<=12) |(K^-1)_ij| r_(191+i)r_(191+j) =:q.
+
+Die gerichtete Rechnung schließt q nach oben ein. Die vollständigen
+Monomnormen sind auf einem Randpanel
+ ||z^k log^j z||_L2(0,1)^2=(2j)!/(2k+1)^(2j+1),
+und auf einem Innenpanel ||z^k||_L2(-1,1)^2=2/(2k+1).
+Die Summe sqrt(q) mal diese Normen ist eine vollständige obere Norm des
+behaltenen Koeffizientenfehlers. Der Maßfaktor wird großzügig mit
+sqrt((3/25)|radius|) bezahlt, denn 2h<3/25.
+Der rationale Prüfer bestätigt dies ohne Gleitkommalogarithmen:
+(707/500)^2<2 und
+(707/250)(1+3/50+(3/50)^2/2)>3. Die positive Exponentialreihe liefert
+also 2sqrt(2) exp(3/50)>3 und damit h<3/50.
+
+Die q-Obergrenzen jeder Koeffizientenzeile werden mit ausgegeben. Der
+rationale Replay berechnet die Normsumme und den Maßfaktor selbständig
+neu, einschließlich der Ausgaberundung. Dies kommt zum vollständigen
+analytischen Reihenrest und der bezahlten endlichen Kürzung hinzu.
+Es wird keine Rundungsreserve aus niedrigen Moden zurückgewonnen.
+
+Punktkontrollen testen zusätzlich, ob die gerichteten Auswertungen nach
+Bezahlung des vollständigen gleichmäßigen Reihenrestes kompatibel sind.
+Sie ersetzen weder dieses Koeffizientenbudget noch die globalen Integrale.
+
+6. Exakte Integration der stückweisen Näherung
+
+Die Panels überdecken [0,1] lückenlos. Für Randpanels werden sämtliche
+Kreuzterme der Logarithmen über die exakten Momente
+ integral_0^1 z^k log^j z dz=(-1)^j j!/(k+1)^(j+1)
+integriert, bis j=4. Für Innenpanels wird auf [-1,1] integriert:
+ integral_-1^1 z^k dz=0 bei ungeradem k, sonst 2/(k+1).
+
+Sei ftilde die zusammengesetzte stückweise Näherung. Berechnet werden
+ G=integral ftilde* ftilde 2h du,
+ V_n=integral ell_n ftilde 2h du, 0<=n<104,
+ U=G-V*V.
+Alle 104 normierten Legendrepolynome werden auf jedem Panel vollständig
+umgerechnet und integriert. U ist daher der vollständige hohe Gram
+der Näherung, einschließlich sämtlicher Kreuzterme. Der separat
+zertifizierte volle Funktionsfehler schließt den Übergang zu f.
+
+7. Abschlussstatus
+
+Die algebraische Zusammenführung wird mit 3072 Bit berechnet. Erst
+danach werden die vollständigen Koeffizienten mit gerichteter Rundung
+in 1024-Bit-Intervalle überführt. cache_io.py speichert deren exakte
+dyadische Mittelpunkte UND Radien. Damit wird keine neue Mittelpunkt-
+funktion ohne Fehlerpreis definiert: Die ursprünglichen exakten
+Koeffizienten bleiben eingeschlossen, und Abschnitt 5a bezahlt den
+späteren Übergang zur festen Näherung vollständig. Die folgende
+Integration verwendet 1024 Bit. Änderungen
+an den gebundenen Eingaben oder dem Rechencode machen einen gespeicherten
+Zwischenstand ungültig. Jede fertige Paneldarstellung wird gesichert.
+
+Die stückweise Näherung besitzt selbst eine unendliche Legendrefolge.
+Der Ausdruck G-V*V enthält deren GANZEN hohen Gram. Weder Glattheit an
+Panelgrenzen noch ein Abbruch dieser Folge wird vorausgesetzt.
+
+Die alternative, speichersparende Erzeugung fasst gleiche Logarithmen
+vor der Integration zusammen. Jede affine Logfunktion wird zu
+log|d1|+log|u-u0| normalisiert. Der physische Randpunkt a+h*u0 wird als
+rationaler Vektor in log(2),log(3),log(5),log(7) angegeben. Ausschließlich
+IDENTISCHE Vektoren werden zusammengefasst; eine numerische Nähe der
+Randpunkte genügt nicht. Die konstante log|d1|-Gutschrift verbleibt
+vollständig im Polynom. Alle acht echten Cauchybausteine bleiben bestehen.
+Die algebraische Gleichheit wird zusätzlich gegen die ursprüngliche
+globale Funktion kontrolliert. Die gestreamte Zwischenspeicherung ändert
+die eingeschlossenen Zahlen nicht.
+
+8. Rationaler Abschluss der globalen Bedingung
+
+Sei U_tilde der vollständig integrierte hohe Gram aus Abschnitt 6,
+H=E_dir/10920 und e der vollständige D-duale L2-Näherungsfehler aus
+Abschnitten 5 und 5a. Der rationale Prüfer baut G-V*V unabhängig neu
+auf und bestätigt in BEIDEN Paritäten
+
+ U_tilde <= (1/4000) H,   H>=uD>0.
+
+Beide Vergleiche haben je 203 positive rationale Intervall-LDL-Pivots.
+Die verwendete Zahl u wird aus dem fest gebundenen Ziel übernommen,
+aber ihre Löwner-Untergrenze wird hier vollständig neu geprüft.
+
+Für jeden Kraftvektor und epsilon=1/4000 liefert Young zusammen mit der
+Kontraktivität von I-P104:
+
+ U_hat <= [(1+epsilon)/4000+(1+1/epsilon)e^2/u] H
+       < (3/10000)H < (999/1000)H.
+
+Die letzte Ungleichung wird anhand der exakten rationalen Fehlerwerte
+in beiden Fällen geprüft. Alle 16 Panel-Fehlerenergien gehen ein.
+
+Aus den vollständigen gebundenen Zeilenfehlern und dem vollen Loggram
+berechnet der Prüfer zudem delta_C<=sum sqrt(G_ii)e_i<10^-10 neu.
+Das eingebettete Modellfehlerpaket v2 liefert delta_R<1.2e-11 (gerade)
+bzw. <2.3e-13 (ungerade), einschließlich der glatten kanonischen Korrektur.
+Sein rationaler Replay wird vom Paket-Replay erneut ausgeführt.
+In beiden Fällen wird exakt geprüft:
+
+ 4(delta_R+delta_C)^2 < (1/1000)^2 u.
+
+Die Fehlernorm in H-Metrik ist damit kleiner als 1/2000. Wegen
+sqrt(999/1000)<=1-1/2000 folgt für die tatsächliche regularisierte
+Funktion Z=(I-P104)(R_X-B C_exact) die volle globale Schranke Z*Z<=H.
+Dies schließt beide Bedingungen (C5) des vorherigen Prüfauftrags.
+
+Die gespeicherte engere Zahl q für U_hat liefert außerdem mit
+theta=1/1000 und d=delta_R+delta_C den direkten Fehlerübergang
+
+ Z*Z <= [(1+theta)q+(1+1/theta)d^2/u] H < (3/10000)H.
+
+Auch diese letzte Ungleichung ist Teil der rationalen Rechnung. Somit
+sind weniger als 0,030 Prozent von H für diesen gesamten tatsächlichen
+regularisierten Gram erforderlich. Alle übrigen Formdualanteile sind
+von dieser Prozentangabe getrennt zu behandeln.
+
+Die operatorbezogenen Aussagen bleiben unter den geerbten Operator-
+und Domänenvoraussetzungen. Die anschließende gewichtete Restbilanz,
+der vollständige Formdualvergleich und der endgültige Schurabschluss
+sind hier nicht zusammengestellt. A8->A9 und 1/20 werden nicht behauptet.

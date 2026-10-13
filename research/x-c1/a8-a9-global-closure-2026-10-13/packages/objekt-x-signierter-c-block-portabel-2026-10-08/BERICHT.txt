@@ -1,0 +1,124 @@
+Objekt X — signierter Inversenblock und ein zweiter notwendiger Engpass
+7. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Der nächste Rechenblock ist ausgeführt: rho* A^(-1)gY liegt für beide
+Paritäten als gemeinsame 4x8-Einschließung vor. Die Vorzeichen und die
+Korrelation mit C0_Y werden verwendet. Die tatsächliche inverse Antwort
+liegt zwischen zwei vollständigen Energiematrizen; ihr Mittelpunkt ist
+kein exakter inverser Wert. Ihre verbleibende Unsicherheit wird als
+gemeinsamer Fehlergram bezahlt.
+
+Die daraus neu gebildeten rationalen U00-Obermatrizen sind deutlich
+besser, schließen I-U00>0 aber noch nicht:
+
+                          bisher              jetzt
+ gerade                   1.4084500430         1.1625836966
+ ungerade                 1.6813105708         1.2188029396
+
+Die Zahlen kennzeichnen die größten Eigenwerte der jeweiligen
+Obermatrizen bis auf die angegebenen Rundungen. Für die neuen Matrizen
+liegen exakte rationale Einschließungen in EXACT_CHECK.json vor. Sie
+sind KEINE Werte von ||B_R|| und KEINE negativen Zeugen der Form.
+
+Wichtigster neuer Befund
+
+Der C-Block ist nicht der einzige noch notwendige Verbesserungspunkt.
+Die vier bisherigen Nicht-C-Hüllen scheitern bereits für sich. Selbst
+wenn der C-Beitrag künstlich auf null gesetzt wird, liegen die besten
+möglichen Richtungswerte dieser skalaren Young-Hüllen mindestens bei
+
+ gerade       1.0164633803,
+ ungerade     1.0080151661.
+
+Das ist mit rationalen Richtungen und rationalen unteren Quadratwurzeln
+für ALLE positiven Young-Parameter dieser Familie bewiesen. Eine bloße
+Neuwahl der Parameter kann es nicht beheben. Der Befund betrifft die
+bisherigen Hüllen; er beweist keine negative tatsächliche Richtung.
+
+Damit muss zusätzlich die gemeinsame Behandlung von Mittelpunkt und
+Delta verbessert werden. Der bereits genannte 185D-Komplementfehler
+ist dafür der nächste konkrete Ansatz. Seine volle gewichtete Wirkung
+und seine Kreuzkorrelation mit dem Mittelpunkt sind entscheidend.
+
+Einordnung der vorgeschlagenen C-Zielwerte
+
+Die bisherigen Diagnosewerte sind nachgerechnet:
+ C_centre < ca. 0.06496201056 gerade,
+ C_centre < ca. 0.06038811138 ungerade.
+Sie gelten nur für die bisherigen Richtungen und die dort festgehaltenen
+übrigen Hüllen; sie sind kein Test der ganzen 8x8-Matrix.
+
+Die neue gemeinsame Einschließung begrenzt die tatsächliche
+C-Mittelpunktenergie in diesen Richtungen, einschließlich des bezahlten
+Modellfehlers, ungefähr durch
+
+ gerade        0.07430513 <= C_centre <= 0.20825229,
+ ungerade      0.04085646 <= C_centre <= 0.22995193.
+
+Die minimal veränderte rationale M-Metrik wird explizit umgerechnet.
+Die untere gerade Grenze bleibt auch in der bisherigen M-Metrik über
+dem vorgeschlagenen Ziel. Bei unveränderten übrigen Hüllen reicht die
+C-Mittelpunktverbesserung in dieser Richtung daher nicht aus. Daraus
+folgt weiterhin kein Vorzeichen der vollständigen tatsächlichen Form:
+Die Nicht-C-Terme und die Mittelpunkt/Delta-Kreuzterme sind bisher
+konservative Majoranten.
+
+Zur Korrelationsdiagnose: Die 92.1 Prozent sind im geraden Fall auch
+bei kleinerer tatsächlicher Residualenergie eine notwendige diagnostische
+Schwelle. Die ungeraden 83.3 Prozent setzen dagegen die Sättigung der
+bisherigen Residualobergrenze voraus. Minimiert man über alle kleineren
+zulässigen Residualnormen, liegt die entsprechende Schwelle bei etwa
+82.4 Prozent. Keine dieser Zahlen ist eine gemessene Korrelation.
+
+Prüfung und Material
+
+- 64 neue vollständige gemischte Integrale, jeweils bei 3072 und 4096 Bit;
+  alle 64 Präzisionsvergleiche überlappen.
+- 6112 erneut berechnete alte Y-Kraftwerte stimmen mit den gebundenen
+  Intervallen überein.
+- Gemeinsame 12x12-Energieintervalle und rationale 4x4-Fehlervergleiche.
+- Vier unabhängig mit Fraction rekonstruierte U00-Fälle.
+- Exakter Nachweis des beschriebenen Hindernisses für die jetzige
+  Nicht-C-Majorantenfamilie in beiden Paritäten und Präzisionsläufen.
+
+Das Paket enthält Rechenprogramme, Ergebnisse, Herleitung, einen
+schnellen Prüfer und alle hierfür benötigten gebundenen Vorgängerdaten.
+Die ursprüngliche U00-Paketfassung bleibt unverändert erhalten.
+
+Nächster sinnvoller Rechenauftrag
+
+Die gemeinsame gewichtete 185D-Wirkung auf Delta einschließlich der
+Mittelpunkt/Delta-Kreuzgram-Matrix einschließen. Den neuen signierten
+C-Block samt seinem Unsicherheitsgram dabei beibehalten. Erst nach
+einem positiven vollständigen I8-U00-Test folgen G01 und beta_tail.
+
+Der bisherige Skalarnormfehler des Komplements ist dafür keine fertige
+Lösung. Eine weitere Verbesserung der alten inversen Einschließung kann
+zusätzlich helfen; sie ersetzt den nun belegten Nicht-C-Engpass nicht.
+
+Status
+
+U00: gemeinsame signierte Einschließung vorhanden, positiver Gate offen.
+G01, gamma01, beta_tail: unberechnet.
+Vollständiger A8->A9-Rest: offen.
+Objekt X: offen; weiterhin primäres Forschungsziel.
+Keine neue Horizontrechnung, keine externe Begutachtung.
+Dieser neue Stand ist lokal; GitHub wurde nicht verändert.
+
+
+Technischer Nachtrag vom 8. Oktober 2026
+
+Der schnelle Pr�fer normalisiert eingebettete Windows-Pfade beim Lesen.
+Alle bestehenden numerischen Ergebnisdateien bleiben bytegleich. K�nftige
+Response-Ausgaben schreiben portable Pfade mit /.
+
+compute_cross.py berechnet seine Integrale tats�chlich mit 3072 bzw.
+4096 Bit. enclose_response.py rechnet anschlie�end mit 1024 Bit. Die
+Dateinamen RESPONSE_3072/4096 kennzeichnen die Eingabeintegrale. Es sind
+keine zwei vollst�ndigen Response-Arithmetiken mit diesen Pr�zisionen.
+Die rationale Schlusspr�fung ben�tigt keine Flie�kommaarithmetik.
+
+Mathematische Aussagen und gebundene Eingaben sind unver�ndert.
+Die urspr�ngliche Paketdatei vom 7. Oktober wird nicht �berschrieben.

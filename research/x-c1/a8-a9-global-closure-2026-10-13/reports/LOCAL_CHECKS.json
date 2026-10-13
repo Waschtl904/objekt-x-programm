@@ -1,0 +1,43 @@
+{
+  "status": "PASS_LOCAL_INTEGRATION_CHECKS",
+  "baseline": "da50f0a21691e6fd253163e612a2af2898606581",
+  "source_catalog_sha256": "d82a6eee89ebc87cdef4588e8b490a05fd895bc9bd1e694023949e4af0327fc2",
+  "full_rational_replay_receipt_sha256": "28ab9e30cf851ce47c12df5e379272a707c9a323d6b1d225d4f2c3b9e0a3594e",
+  "archive_imports": 39,
+  "unique_import_archives": 38,
+  "recursive_archives": 41,
+  "members": 1275,
+  "standalone_files": 3,
+  "readable_copies": 411,
+  "integration_countertests": 12,
+  "new_or_updated_document_link_targets_checked": 85,
+  "registry_validator": "PASS",
+  "registry_tests": 60,
+  "deterministic_generator": "PASS",
+  "historical_front": "PASS",
+  "original_55_results_unchanged": true,
+  "global_verified_snapshot_unchanged": true,
+  "global_claim_statuses_unchanged": true,
+  "large_global_integrations_repeated": false,
+  "external_mathematical_review_open": true,
+  "remote_final_head_ci": "REQUIRED_NOT_YET_OBSERVED",
+  "recorded_integration_ci_verified": {
+    "run_id": 37572060869,
+    "head_sha": "e71de841bc38cbf24b5a1371f322c65356a3c30c",
+    "run_attempt": 1
+  },
+  "original_whitespace_findings": {
+    "count": 115190,
+    "files": 137,
+    "all_confined_to_byte_identical_original_copies": true
+  },
+  "authored_diff_check": "PASS",
+  "storage_repacking": {
+    "old_catalog_sha256": "2152fa508101aef3597de72b5ace96d244c5a587d512c5f3672586f7050e75c8",
+    "new_catalog_sha256": "d82a6eee89ebc87cdef4588e8b490a05fd895bc9bd1e694023949e4af0327fc2",
+    "max_chunk_bytes": 8388608,
+    "all_original_archives_and_members_reverified": true,
+    "mathematical_archive_bytes_unchanged": true,
+    "reason": "Connected GitHub API request size limit; archive decomposition only."
+  }
+}

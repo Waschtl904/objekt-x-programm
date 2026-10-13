@@ -1,0 +1,16 @@
+{
+  "status": "PASS_INCOMING_REPLAY_INDEPENDENT_CROSSES_AND_FULL_OUTER_LOG_TAIL",
+  "freshly_unpacked_inputs": true,
+  "incoming_archive_sha256": "70faaa1a9f8c2904320f69188624de225655ba3c6de5c2577c4e69d6706c6799",
+  "independent_cross_intervals_compared": 2688,
+  "all_cross_intervals_overlap": true,
+  "actual_outer_log_coefficients_rebuilt": 406,
+  "outer_tail_positive_rational_pivots_per_parity": 204,
+  "full_log_template_Gram_dimension": 3,
+  "independent_rational_polynomial_log_moment_checks": 208,
+  "analytic_endpoint_lemma_status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN",
+  "inner_endpoint_coefficients_computed": false,
+  "regularized_global_derivative_Gram_computed": false,
+  "full_remainder_certified": false,
+  "replay_log_sha256": "4920a3abac352a83778d5c228f838ebee55f8688fbba3735920a0df5ef9b1c1d"
+}

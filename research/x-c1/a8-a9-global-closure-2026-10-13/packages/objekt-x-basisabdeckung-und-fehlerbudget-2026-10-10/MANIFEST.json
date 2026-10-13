@@ -1,0 +1,19 @@
+{
+  "files": {
+    "HERLEITUNG.txt": "d950a2c7c2acebb72ac2d6302d5baa258dfaa7a69420415c996038279b35d344",
+    "INPUT_CONTRACT.txt": "b8be8207c8118944f3a80dc1ad18e44e44b7f76cc6e436a52877e7ffa88a9004",
+    "PRUEFAUFTRAG_GPT2.txt": "389dcb2dae9897db74d27b2a0ab85fe5a48be55f29f6e6cac69c4d4adbbfafa2",
+    "README.txt": "19802ae59a2c1446fa27078726572c3f6b88232c27e8b3873873381e88d75fe2",
+    "SOURCE_BINDINGS.json": "6cafbdd8a7963c6c56f5598b7f2f8d2d3fee119662a938249f38173fea1ecd35",
+    "check_certificate.py": "6c9fa4372e62e1bbd3fb58838542825f5c4c7a587e0637509efbc50a8d40566f",
+    "checks.json": "308e817c747d1673c96575aabe1a0741be4e2e3f65527a494d4896424db0c146",
+    "examples/synthetic_hidden_tail.json": "230d9fc78e512e5ee667194dd7d366a8fcae07a4661783eefbdfe5098c15c054",
+    "examples/synthetic_near_rank.json": "78b4fcb07f5af9b88ad357e4ed6e67d9765a609d35ab3879ed8801e90f9dc4a5",
+    "examples/synthetic_negative_schur.json": "d2d3239607d19cd6640a181b8a993af351fc902303a2d7af4912dbf3e2d3c1ba",
+    "examples/synthetic_pass.json": "cd71b130f1e7c38e84429a15edfc47accc509db4be604f7074ee2b5ccaa20f5d",
+    "inputs/Objekt-X-Tailarchitektur-und-64er-Lemma-2026-10-09.zip": "2fe86339d80f96a0d8e37420f79a101ecc78c9e835012ebe5a6c9216b3a360c6",
+    "test_protocol.py": "7e0b455b2a9b1092c3c94fb1de374dd1639fcedbe4c86b419968fd0026e4502e",
+    "verify_package.py": "911599822799dfa0a6022b0b58858d38b6b79ecb9fd7117eb6b6867d0c593b52"
+  },
+  "purpose": "Local byte integrity, not independent authentication or mathematical proof."
+}

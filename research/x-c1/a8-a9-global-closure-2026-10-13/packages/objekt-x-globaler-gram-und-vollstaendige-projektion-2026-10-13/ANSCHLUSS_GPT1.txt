@@ -1,0 +1,43 @@
+ANSCHLUSS FÜR GPT 1 — 13. Oktober 2026
+
+Bitte mit BERICHT.txt und PROOF.txt beginnen.
+
+Neuer, konkret abgeschlossener Baustein unter den geerbten Voraussetzungen:
+In BEIDEN Paritäten gilt U_hat<(3/10000)H für den vollständigen hohen
+Modellgram; die bereits zertifizierten physischen Modellfehler erfüllen
+die zweite Bedingung (C5). Daher gilt U_g<=H=E_dir/10920 für den ganzen
+tatsächlichen regularisierten Rest ab Grad 104. Zusätzlich ist sogar
+U_g<(3/10000)H rational nachgewiesen. E_dir bleibt unverändert.
+
+1. Entpacken und aus dem Paketverzeichnis ausführen:
+   python reproduce.py --receipt EIGENE_PRUEFQUITTUNG.json
+   Das prüft zuerst das eingebettete physische Modellfehlerpaket v2 und
+   danach beide neuen globalen Matrixzertifikate mit rationaler Arithmetik.
+
+2. Die analytische Vollständigkeit prüfen: algebraische Zusammenführung,
+   linke log/log^2-Cauchyzerlegung, rechte hebbare Cauchysingularitäten,
+   sämtliche skalaren Reihenreste, Radien aller behaltenen Koeffizienten
+   in der vollständigen D-Metrik und Integration aller 104 niedrigen Moden.
+   Punktkontrollen ersetzen keinen dieser Schritte.
+
+3. Bei Bedarf vollständiger Neuaufbau mit python-flint 0.9.0:
+   python reproduce.py --rebuild --python MATHEMATIK_PYTHON
+                       --deps ABHAENGIGKEITEN --receipt NEUAUFBAU.json
+   Dies erstellt beide Integrationen neu mit 4096 Bit Ausgangspräzision;
+   die Zwischen- und Integrationsarithmetik verwendet gerichtete 1024 Bit.
+   Der Vergleich berücksichtigt die vollständig bezahlten Funktionsfehler.
+
+4. Nach Gegenprüfung dieses Bausteins die Schlussbilanz konkret aufbauen:
+   U_g<=E_dir/10920 in die vorhandene gewichtete Verlustbilanz einsetzen;
+   Basis84, k96..k103, vollständige Momentkorrektur und alle geerbten
+   Modell-/Operatorpreise nur in ihrer jeweils gebundenen Geometrie
+   zusammenführen. Daraus den vollständigen Formdual-Residualgram und
+   anschließend den tatsächlichen Schurvergleich ableiten und prüfen.
+   Kraftdaten aus Basisabdeckung und gemeinsamer Verlustbilanz weiterhin
+   nicht austauschen. Die zusätzlichen Bedingungen dürfen nicht nur aus
+   einer Dateibezeichnung oder einem früheren Statusflag gefolgert werden.
+
+A8->A9 und der Tailboden 1/20 sind in diesem Paket NICHT abgeschlossen.
+Historische Eingabedateien können weiterhin alte false-Statusfelder
+enthalten; sie werden als unveränderte Herkunftsdaten mitgeliefert.
+Aktueller neuer Abschluss: data/AUDIT_*.json und Prüfquittung, Bedingung C5.
