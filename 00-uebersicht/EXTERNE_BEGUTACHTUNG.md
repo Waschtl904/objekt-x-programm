@@ -18,7 +18,7 @@ relevanten Weil-Form. **Objekt X ist noch nicht vollständig konstruiert; RH
 bleibt offen.** Das Repository enthält sowohl aktuelle Beweispakete als auch
 ältere Kandidaten, Fehler, Korrekturen und aufgegebene Ansätze.
 
-Der integrierte Forschungsstand mit Folgepaketen vom 3. Oktober 2026 umfasst projektintern
+Der integrierte Forschungsstand mit Folgepaketen bis zum 13. Oktober 2026 umfasst projektintern
 hergeleitete positive Kammern bis $A_{11}=\log(11)/2$. Die Fortsetzung zu
 einer kofinalen positiven Familie und die globale Weil-Gramidentität sind
 offen. Die untersuchte Winkellokalisierung ist eine Teilaufgabe dieser Fortsetzung.
@@ -40,7 +40,7 @@ verschieden sein.
 | 4. Belege | Die im Register gebundenen Beweispakete | Stimmen Voraussetzungen, Übergänge und ausgewiesene Geltungsbereiche? |
 | 5. Entwicklung | [Gesamtüberblick](OBJEKT_X_GESAMTUEBERBLICK.md), [Archiveinstieg](ARCHIVE_INDEX.md) | Welche Ansätze wurden korrigiert oder aufgegeben, und warum? |
 
-Für einen begrenzten ersten Review bieten sich drei zusammenhängende
+Für einen begrenzten ersten Review bieten sich vier zusammenhängende
 Belegstrecken an:
 
 - **Analytische Konstruktion:** Vom [C0/C1-Interface](OBJEKT_X_INTERFACE_2026-09-19.md)
@@ -53,6 +53,12 @@ Belegstrecken an:
   insbesondere [A11-Beweis](../research/x-c1/chambers-through-a11-2026-09-28/a11/PROOF.md),
   [allgemeiner hoher Tail](../research/x-c1/chambers-through-a11-2026-09-28/high-tail/PROOF.md)
   und [ausgewiesener Prüfumfang](../research/x-c1/chambers-through-a11-2026-09-28/REVIEW_SCOPE.md).
+- **Konstruktiver A8→A9-Abschluss:** [Beweis mit Voraussetzungen (A)–(D)](../research/x-c1/a8-a9-global-closure-2026-10-13/PROOF.md),
+  [Quellenkette und Replay](../research/x-c1/a8-a9-global-closure-2026-10-13/README.md)
+  und [Integrationsnachweis](integrationsnachweise/PR216_2026-10-13.md).
+  Vorrangig zu prüfen sind die tatsächliche Raumzerlegung, die Formdomänen,
+  die vollständigen Integralmajoranten, Inversordnungen und beide Schurergänzungen.
+  Der rationale Replay ersetzt die analytische Prüfung dieser Voraussetzungen nicht.
 - **Grenzen der jüngsten Winkeldiagnose:** [Gemeinsamer Y-Kernel](../research/x-c1/canonical-y-kernel-second-order-2026-10-03/README.md)
   und [H₀-Folgeuntersuchungen](../research/x-c1/canonical-h0-followups-2026-10-03/README.md).
   Zentral sind die Unterscheidung zwischen eingeschränkten Schnitten und

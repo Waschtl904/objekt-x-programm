@@ -29,7 +29,7 @@ Die projektintern hergeleiteten Ergebnisse sind zur externen Prüfung offen.
 ## Forschungsstand in Kürze
 
 Die folgende Zusammenfassung bezieht sich auf den integrierten Forschungsstand
-und die Folgepakete bis **7. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
+und die Folgepakete bis **13. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
 die gepinnten Beweisanker verwaltet das
 [Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml).
 
@@ -40,7 +40,7 @@ die gepinnten Beweisanker verwaltet das
 | Kanonische Richtung für A9→A11 | Maximaler Schur-Eigenwert in beiden Paritäten einfach; gerade Richtung lokalisiert | Ungerade ist die gesamte Ausgangsfamilie weiterhin `UNRESOLVED` |
 | Ungerade Winkeldiagnose | Gemeinsamer Y-Kernel: central ≤2.933357°, quarter ≤3.070163°, half ≤3.642693°; Endpunktfolge: five_eighths ≤4.933780° | Bedingte Schnitte; Root bleibt `UNRESOLVED` |
 | H₀-Folgeuntersuchung | Exaktes Hindernis für die benannte letzte Drei-Cut-Relaxation | Kein ursprünglicher Operatorgegenzeuge; vollständiges H₀ unentschieden |
-| Konstruktiver Anschluss A8→A9 | [Acht feste Quellen und Restpilot](research/x-c1/a8-a9-remainder-progress-2026-10-07/README.md): positiver endlicher Anschluss, vollständige Restdarstellung, Halbinversen und erste gewichtete Fehlergrame | Voller neuer Rest, Kreuzkopplung und allgemeine Fortsetzung offen; analytische Grundlagen übernommen |
+| Konstruktiver Anschluss A8→A9 | [Bedingter globaler Schurabschluss](research/x-c1/a8-a9-global-closure-2026-10-13/README.md): vollständiger Formdualrest und positiver Anschluss auf dem ganzen neuen Raum | Gebundene Operator-, Domänen- und Raumzerlegungsvoraussetzungen; Tailboden 1/20, weitere konstruktive Übergänge und allgemeine Fortsetzung offen |
 | Globales Ziel | Arbeitsdefinition und erforderliche Übergänge sind formuliert | Kofinale positive Familie, globaler Readout, vollständige Weil-Gramidentität und RH bleiben offen |
 
 Die hier zusammengefassten projektinternen Ergebnisse tragen den Status
@@ -61,9 +61,9 @@ Gegenprüfungen und verworfenen Hilfsschranken zusammen. Unter den gebundenen
 Operator-, Domänen- und vollständigen Raumzerlegungsvoraussetzungen ist der
 Positivitätsübergang geschlossen. Der gesamte Formdualrest kostet weniger als
 0,3954 % bzw. 0,6967 % seines Matrixbudgets. Der Tailboden 1/20, weitere Horizonte
-und Objekt X bleiben offen. Die Registrierung mit tatsächlichem Mergecommit
-und bestätigter Main-CI erfolgt nach der Integration; bis dahin ist das Paket
-als `PENDING_STATUS_REVIEW` sichtbar. Externe Begutachtung bleibt offen.
+und Objekt X bleiben offen. [PR #216 und seine Prüfbelege](00-uebersicht/integrationsnachweise/PR216_2026-10-13.md)
+binden den tatsächlichen Forschungshead, Mergecommit und die erfolgreiche Main-CI.
+Externe Begutachtung bleibt offen.
 
 ## Mathematischer Ansatz
 
@@ -115,8 +115,9 @@ den ursprünglichen Paketstand. Die heutige Aufnahme ist im
 [Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml) und
 in den jeweiligen Integrationsnachweisen dokumentiert:
 [#206](00-uebersicht/integrationsnachweise/PR206_2026-10-03.md),
-[#211](00-uebersicht/integrationsnachweise/PR211_2026-10-04.md) und
-[#213](00-uebersicht/integrationsnachweise/PR213_2026-10-07.md).
+[#211](00-uebersicht/integrationsnachweise/PR211_2026-10-04.md),
+[#213](00-uebersicht/integrationsnachweise/PR213_2026-10-07.md) und
+[#216](00-uebersicht/integrationsnachweise/PR216_2026-10-13.md).
 
 Diese README dient der Orientierung. Die lesbaren Statusansichten werden aus
 `RESEARCH_STATE.yaml` erzeugt; mathematische Aussagen beruhen auf den dort

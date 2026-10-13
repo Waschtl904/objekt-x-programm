@@ -1,5 +1,12 @@
 # Objekt X – Gesamtüberblick
 
+**Fortschreibung vom 13. Oktober 2026:** Der [konstruktive globale A8→A9-Anschluss](../research/x-c1/a8-a9-global-closure-2026-10-13/README.md)
+ist unter den gebundenen Operator-, Domänen- und Raumzerlegungsvoraussetzungen
+mit vollständigem Formdualrest geschlossen. Der gesonderte Tailboden 1/20,
+weitere konstruktive Horizontübergänge und Objekt X bleiben offen.
+Die folgenden datierten Darstellungen bleiben Entwicklungsgeschichte;
+[CURRENT_STATE](CURRENT_STATE.md) führt den aktuellen Scope und seine Belege.
+
 **Projektpriorität:** Zuerst Objekt X gemäß seiner vollständigen Arbeitsdefinition
 konstruieren, danach den möglichen RH-Anschluss verfolgen. Die
 [Forschungsstrategie](OBJEKT_X_FORSCHUNGSSTRATEGIE.md) begründet die konstruktive
