@@ -1828,3 +1828,41 @@ Does not claim:
 - Kein A9->A11-Rücktest derselben Regel, keine kofinale Fortsetzung, vollständige Testklasse oder Konstruktion von Objekt X.
 
 Dokumentierte Reproduktion: [SOURCE_BINDINGS.json](https://github.com/Waschtl904/objekt-x-programm/blob/71d9120335e28de3b9687d6151fed53c01d8c622/research/x-c1/a8-a9-remainder-progress-2026-10-07/SOURCE_BINDINGS.json), [EXACT_CHECK.json](https://github.com/Waschtl904/objekt-x-programm/blob/71d9120335e28de3b9687d6151fed53c01d8c622/research/x-c1/a8-a9-remainder-progress-2026-10-07/packages/eight-source/EXACT_CHECK.json), [EXACT_CHECK.json](https://github.com/Waschtl904/objekt-x-programm/blob/71d9120335e28de3b9687d6151fed53c01d8c622/research/x-c1/a8-a9-remainder-progress-2026-10-07/packages/half-inverse/EXACT_CHECK.json), [EXACT_CHECK.json](https://github.com/Waschtl904/objekt-x-programm/blob/71d9120335e28de3b9687d6151fed53c01d8c622/research/x-c1/a8-a9-remainder-progress-2026-10-07/packages/weighted-response/EXACT_CHECK.json), [RATIONAL_MAJORANT.json](https://github.com/Waschtl904/objekt-x-programm/blob/71d9120335e28de3b9687d6151fed53c01d8c622/research/x-c1/a8-a9-remainder-progress-2026-10-07/packages/weighted-response/RATIONAL_MAJORANT.json), [PILOT_STATE.json](https://github.com/Waschtl904/objekt-x-programm/blob/71d9120335e28de3b9687d6151fed53c01d8c622/research/x-c1/a8-a9-remainder-progress-2026-10-07/packages/weighted-response/PILOT_STATE.json).
+
+## A8-A9-CONDITIONAL-GLOBAL-SCHUR-CLOSURE
+
+A8→A9: bedingter globaler Schurabschluss mit vollständigem Formdualrest
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Konstruktiver Positivitätsübergang A8->A9 auf dem gesamten neuen Formraum, beide Paritäten, unter den gebundenen Operator-, Formdomänen- und vollständigen Raumzerlegungsvoraussetzungen; vollständiger gemeinsamer 203-Kräfte-Formdualrest.
+- Canonical commit: [79fefcb](https://github.com/Waschtl904/objekt-x-programm/commit/79fefcb5ddefb6c016e2c7fd049500215b4a1d10).
+- Canonical proof: [research/x-c1/a8-a9-global-closure-2026-10-13/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/79fefcb5ddefb6c016e2c7fd049500215b4a1d10/research/x-c1/a8-a9-global-closure-2026-10-13/PROOF.md).
+- depends_on: `A8-A9-REMAINDER-PARTIAL-OPERATOR-CERTIFICATES`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Die archivierten Gegenzeugen betreffen ausdrücklich benannte Hilfsschranken und Vergleichsformen, keine negative tatsächliche Schurform.
+
+Aussage:
+
+- Unter den ausdrücklich gebundenen Operator-, Formdomänen- und vollständigen Raumzerlegungsvoraussetzungen (A)–(D) ist der Positivitätsübergang A8→A9 in beiden Paritäten auf dem gesamten neuen Formraum geschlossen. Die neue Terminalpositivität wird im ausgewiesenen Schuranschluss nicht vorausgesetzt.
+- Der vollständige gemeinsame Formdualrest aller 203 Kraftkoordinaten ist kleiner als 1977/500000 T_budget (gerade) beziehungsweise 6967/1000000 T_budget (ungerade), also 0,3954 % beziehungsweise 0,6967 %. Basis84, acht Außenzeilen, Momentrest, alle Logarithmen, Log/Rest-Kreuzterme und gebundene Fehler sind eingeschlossen.
+- Nach Eliminierung der zwölf physischen Quellen besitzt der präzise reduzierte Schurvergleich auf T die konservativen unteren Grenzen >1,3285e-6 W_X beziehungsweise >7,9795e-6 W_X. Die tatsächliche entsprechend reduzierte Form dominiert diesen Vergleich. Diese Werte sind keine Böden der gesonderten Tailmetrik.
+- 39 Archiv-Einträge mit 38 verschiedenen Originalarchiven, 41 rekursiven Containern und 1275 Archivmitgliedern sowie drei Einzeldateien sind vollständig bytegebunden. Die Chronologie erhält auch widerlegte Hilfsbedingungen; deren Scheitern wird nicht als negative tatsächliche Schurform ausgegeben.
+- Lokaler, PR- und Main-Replay rekonstruieren sämtliche Quellen und prüfen die vollständige rationale Vorgängerkette sowie die separate Reserveverbesserung. Die großen globalen Integrationen werden dabei nicht neu erzeugt; ihre gerichteten Einschließungen und analytischen Restbeweise bleiben gebundene Eingaben.
+
+Does not claim:
+
+- Keine externe fachmathematische Begutachtung der übernommenen Voraussetzungen.
+- Kein gesonderter Tailboden 1/20, kein Abschluss beliebiger weiterer Horizonte.
+- Keine neue Ausführung der großen globalen Integrationen im Integrationsreplay.
+- Keine Konstruktion von Objekt X, globale Weil-Gramidentität oder RH.
+- Die geerbten Operator-, Domänen- und Raumzerlegungsannahmen sind durch den rationalen Replay nicht unabhängig analytisch bewiesen.
+- Kein Rücktest derselben konstruktiven Regel an A9→A11, kein allgemeiner Renewal-Satz und keine kofinale positive Horizontfolge.
+- Die 0,030 % des regularisierten hohen Grams beziehen sich auf dessen eigene Metrik H; sie sind nicht der Prozentwert des gesamten Formdualrests.
+
+Dokumentierte Reproduktion: [SOURCE_BINDINGS.json](https://github.com/Waschtl904/objekt-x-programm/blob/79fefcb5ddefb6c016e2c7fd049500215b4a1d10/research/x-c1/a8-a9-global-closure-2026-10-13/SOURCE_BINDINGS.json), [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/79fefcb5ddefb6c016e2c7fd049500215b4a1d10/research/x-c1/a8-a9-global-closure-2026-10-13/reports/ACCEPTANCE.json), [FULL_CHAIN.json](https://github.com/Waschtl904/objekt-x-programm/blob/79fefcb5ddefb6c016e2c7fd049500215b4a1d10/research/x-c1/a8-a9-global-closure-2026-10-13/reports/FULL_CHAIN.json), [RESERVE_REVIEW.json](https://github.com/Waschtl904/objekt-x-programm/blob/79fefcb5ddefb6c016e2c7fd049500215b4a1d10/research/x-c1/a8-a9-global-closure-2026-10-13/reports/RESERVE_REVIEW.json), [LOCAL_CHECKS.json](https://github.com/Waschtl904/objekt-x-programm/blob/79fefcb5ddefb6c016e2c7fd049500215b4a1d10/research/x-c1/a8-a9-global-closure-2026-10-13/reports/LOCAL_CHECKS.json).

@@ -4,7 +4,28 @@ Stand 3. Oktober 2026. Arbeitsstrategie auf Grundlage der gelesenen Beweispakete
 
 Fortgeschrieben nach GPT 1s Rückmeldung vom selben Tag. Neu präzisiert sind die vollständige Blockdarstellung in einer unabhängig positiven Hilbertnorm, die gemeinsame Auswertung korrigierter Quellen und eine obere Schranke für die inverse alte Residualenergie. Der zuvor vorgeschlagene isolierte Test des H₀-Blocks (4,5) entfällt aufgrund des übermittelten Grenzberichts; dessen neue Zahlenzertifikate wurden hier nicht erneut reproduziert.
 
-## Umsetzung seit dem 3. Oktober
+## Fortschreibung vom 13. Oktober
+
+Der [bedingte globale A8→A9-Schurabschluss](../research/x-c1/a8-a9-global-closure-2026-10-13/README.md)
+schließt den ersten konstruktiven Anschluss einschließlich des unendlichen
+Formdualrests, unter den gebundenen Operator-, Domänen- und Raumzerlegungsannahmen.
+Die im Zwischenstand vom 7. Oktober noch fehlende globale Restbilanz ist damit
+auf diesem Beweisweg hergestellt. Die Chronologie dokumentiert auch die
+widerlegten Zwischenbedingungen; deren alte Ziele werden nicht weiterverfolgt.
+
+Nächste Aufgaben sind die externe Prüfung der benannten analytischen
+Voraussetzungen und die Formulierung derselben konstruktiven Regel für A9→A11.
+Dessen bereits bekannte Terminalpositivität darf in diesem Rücktest nicht
+vorausgesetzt werden. Erst eine übertragbare, quantitativ präzise Regel
+rechtfertigt den prospektiven nächsten Horizonttest. Der gesonderte Tailboden
+1/20 bleibt offen; der A8→A9-Schluss benötigt ihn nicht.
+
+Der [Integrationsnachweis](integrationsnachweise/PR216_2026-10-13.md) trennt
+Replay und übernommene Integrationen. Die folgenden datierten Abschnitte
+bleiben als Entwicklungsgeschichte erhalten; die aktuelle Reihenfolge steht
+in [NEXT_GATES](NEXT_GATES.md).
+
+## Historischer Zwischenstand: Umsetzung bis zum 7. Oktober
 
 Stand 7. Oktober 2026: Die unten empfohlene Eingabeklassifikation und der
 Aufbau des ersten Anschlusses sind inzwischen bearbeitet. Der

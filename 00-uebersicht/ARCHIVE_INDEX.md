@@ -2,6 +2,18 @@
 
 Dieser Einstieg dient der Navigation. Der aktuelle Forschungsstand steht in [CURRENT_STATE.md](CURRENT_STATE.md), die nächsten mathematischen Aufgaben in [NEXT_GATES.md](NEXT_GATES.md). Maßgebliche Statusquelle bleibt [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml).
 
+## A8→A9-Paketkette: 7.–13. Oktober 2026
+
+Der [Quellenindex](../research/x-c1/a8-a9-global-closure-2026-10-13/SOURCE_INDEX.md)
+erschließt 39 Archiv-Einträge (38 verschiedene Originalarchive), einschließlich
+eingebetteter Vorgänger 41 Container und 1275 Mitglieder, sowie drei Einzeldateien.
+Alle Originalbytes sind vollständig rekonstruierbar; 411 Dateien sind zusätzlich
+direkt lesbar. Die [Chronologie](../research/x-c1/a8-a9-global-closure-2026-10-13/CHRONOLOGY.md)
+trennt verworfene Hilfsbedingungen, erfolgreiche Teilrechnungen und den
+bedingten globalen Abschluss. Alte Offenheitsangaben behalten ihren datierten
+Sinn. Der aktuelle Scope steht im Register; die Integration belegt
+[PR #216](integrationsnachweise/PR216_2026-10-13.md).
+
 ## Nachgetragene lokale Übergaben: 7. Oktober 2026
 
 Der [Abgleich älterer Arbeitsstände](archiv/LOCAL_HANDOFF_RECOVERY_2026-10-07/README.md)

@@ -60,6 +60,14 @@ zeigt, welche früheren Prüfpakete bereits integriert oder in Folgepaketen
 enthalten waren und welche Originaldateien zusätzlich gesichert wurden.
 Der Katalog bewahrt auch frühere Vorschläge und Korrekturen als Geschichte.
 
+Die [Paketkette vom 7.–13. Oktober](../research/x-c1/a8-a9-global-closure-2026-10-13/SOURCE_INDEX.md)
+ergänzt diese Herkunftssicherung bis zum bedingten globalen A8→A9-Abschluss.
+[Chronologie](../research/x-c1/a8-a9-global-closure-2026-10-13/CHRONOLOGY.md),
+[Beweis](../research/x-c1/a8-a9-global-closure-2026-10-13/PROOF.md) und
+[Replay](../research/x-c1/a8-a9-global-closure-2026-10-13/README.md) haben
+getrennte Rollen. Der Archivbestand dokumentiert die aufgefundenen Übergaben;
+er behauptet keine vollständige Sicherung sämtlicher Gespräche.
+
 ## Historische Angaben richtig lesen
 
 `CURRENT-FRONT.md`, `EINSTIEGSPROMPT.md`, `STATUS.md`, `OFFENE_PROBLEME.md`,
