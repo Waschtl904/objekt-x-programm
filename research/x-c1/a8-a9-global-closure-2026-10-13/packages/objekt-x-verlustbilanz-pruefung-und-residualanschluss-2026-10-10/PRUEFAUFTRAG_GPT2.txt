@@ -1,0 +1,43 @@
+Objekt X — nächster Auftrag nach der gemeinsamen Verlustbilanz
+
+1. Die starre Teilbedingung R0<=0,11L nicht weiter als offenes Ziel führen.
+   Ihre Widerlegung und die zwei positiven Verlustproben wurden im
+   beigefügten Prüfvermerk reproduziert. Der volle Rest bleibt offen.
+
+2. Unverändert verwenden:
+   - die tatsächliche WX-Restgeometrie T;
+   - dieselben vier physischen Quellen und acht Y-Funktionen;
+   - dieselbe gemeinsame alte Antwort und signierte Residualisierung;
+   - A0 mit 203 Zeilen, D0, eta=10^-10;
+   - S_eta=(1-eta)L-H >= (0,11-eta)L.
+
+3. Ziel bleibt A0 S_eta^-1 A0*<=D0 auf GANZ T.
+   Als numerischen Weg den Formdual-Residualtest aus RESIDUALANSCHLUSS.txt
+   prüfen: Näherungslösungen Z zu S_eta Z=A0* erzeugen, die vollständigen
+   Matrizen M_Z und Q_R=R*R_LR mit R=A0*-S_eta Z einschließen und
+
+       D0-U_M-[10000000000/1099999999] U_R >=0
+
+   rational zertifizieren. Z muss genau in T liegen. Nur der volle
+   Formdual-Residualgram rechtfertigt diesen Faktor.
+
+4. Vor einem teuren Abschluss zuerst einen kleinen explorativen Ansatz
+   rechnen. Dessen Mittelwerte sind Diagnose, keine Zertifikate. Danach
+   den konkreten verbleibenden Fehler in D0-Metrik ausweisen und die
+   analytischen vollständigen Restschranken genau dafür entwickeln.
+   Weder eine Liste zusätzlicher Probegrade noch ein numerischer Rang
+   ersetzt diese Restabschätzung.
+
+5. Falls stattdessen Neumann gewählt wird: gemeinsame Momentgrame und
+   analytischen Rest behalten. Die verschärfte Obergrenze (N1) ist möglich,
+   sofern ihr zusätzlicher voller Momentgram bezahlt wird. Eine kleine
+   Zahl vor G0 ist ohne G0/D0-Vergleich noch kein Fehlerzertifikat.
+
+6. Auszugeben sind feste Funktionsdefinitionen, vollständige Gram-
+   Einschließungen mit Herkunft, Fehlerbilanz, rationaler Matrixtest und
+   klare Trennung von geerbten Voraussetzungen und neu bewiesenen Daten.
+   Bis dahin FULL_REMAINDER_CERTIFIED=false.
+
+Hinweis: Das frühere 1/20-Basisbudget gehört zur tatsächlichen Schurform
+in WX-Norm und L_64. Es ist nicht das neue S_eta-Budget. Den früheren
+L2-Residualfaktor 20 hier nicht ohne passende Normübersetzung einsetzen.

@@ -1,0 +1,16 @@
+{
+  "status": "PORTABILITY_AND_PRECISION_METADATA_CORRECTED",
+  "package": "Objekt-X-Signierter-C-Block-portabel-2026-10-08.zip",
+  "sha256": "b97f7274acdfc7d67a881fb2dd9fbcf57bada73faa089768cad60f1b9785b26e",
+  "manifest_files": 81,
+  "existing_json_files_byte_identical": 44,
+  "original_package_sha256": "11d3c5594963d6de15d1cb0c310958b944b6730eb90fe9bc9524f2218275e18b",
+  "new_operator_integrations": false,
+  "external_review": "OPEN",
+  "fresh_archive_replay": "PASS",
+  "exact_check_semantically_unchanged": true,
+  "POSIX_path_grammar_source_lookups_checked": 36,
+  "legacy_backslash_lookups_that_failed_POSIX_index": 36,
+  "native_Linux_process_run": false,
+  "native_Linux_limitation": "No running Linux Python environment was available; POSIX path grammar and source lookup were tested explicitly."
+}

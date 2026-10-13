@@ -1,0 +1,32 @@
+PRÜFAUFTRAG GPT 1 — vollständiger globaler Modellfehler
+
+Die bisher unberechnete tatsächliche globale Modellabweichung wird hier
+geschlossen, bedingt durch dieselben gebundenen Operatorvoraussetzungen.
+
+1. reproduce.py ausführen; optional --rebuild für den frischen vollständigen
+   Neuaufbau aus den mitgelieferten kompakten Eingaben.
+2. PROOF.txt Abschnitte 2-4 prüfen: vollständiger Kern-Schalen-Block auf
+   Phi AC, Cauchy-Taylorrest auf allen inneren Intervallen und vollständiger
+   logarithmischer Rand ohne ausgespartes Intervall.
+3. Abschnitte 5-8 prüfen: GANZE Quellfunktion statt bloßer Randspur,
+   rohe Trägerkoordinate, alter Gamma-160-Fehler, tatsächlicher niedriger
+   Koeffizientenfehler, äußerer Kernel-224-Fehler und kanonische Korrektur.
+
+Neue Schlussfolgerung:
+ ||(I-P_<104)(R_X-Rhat0)D^-1/2||_HS
+       <1.2e-11 gerade und <2.3e-13 ungerade.
+
+Dies sind berechnete tatsächliche obere Fehlergrenzen. Die alten Budgets
+6.76796364171e-7 bzw. 1.628860045447e-6 werden damit erfüllt. Der bereits
+bewiesene Preis des gerundeten Logabzugs delta_C<1e-10 ist zusätzlich in
+der abschließenden L2-Fehlerbudgetprüfung enthalten.
+
+E_dir bleibt das gemeinsame Ziel. Es ist kein neuer Zielwechsel nötig.
+
+Der verbleibende Auftrag ist nun ausschließlich die vollständige
+Modellintegration einschließlich P_<104:
+ Zhat=(I-P_<104)(Rhat0-B C0),
+ Uhat=Zhat*Zhat <=(999/1000) E_dir/10920.
+
+Dieser Gram wurde hier NICHT berechnet. Keine Gesamtpositivität, kein
+Tailboden 1/20 und kein A8->A9-Abschluss werden beansprucht.

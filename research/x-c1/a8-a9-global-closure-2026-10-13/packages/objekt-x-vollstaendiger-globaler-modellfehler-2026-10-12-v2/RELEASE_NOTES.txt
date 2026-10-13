@@ -1,0 +1,20 @@
+Dies ist die maßgebliche Fassung v2.
+
+Bei der Schlusskontrolle wurde der niedrige low_F-Mittelpunktradius
+zusätzlich direkt in der D-dualen Metrik ausgerechnet. Gerade genügte
+die zuerst notierte Pauschale 1e-50 dafür nicht; die tatsächliche obere
+Radiusgrenze liegt bei 6.73e-50. Die neue Rechnung prüft beide Radien
+aus den vollständigen Eingangsintervallen und bezahlt sie mit 1e-40.
+Diese Korrektur ändert keine der ausgewiesenen Gesamtergebnisgrenzen.
+
+Der globale Kern-Schalen-Neuaufbau ist unverändert. Sein erneuter Lauf
+aus dem zuerst frisch entpackten Paket kann deshalb über die identischen
+Programm- und Eingabehashes auch für diese Fassung verwendet werden.
+FRESH_KERNEL_REBUILD.json dokumentiert gegebenenfalls ausschließlich
+diese gemeinsame Funktionsrechnung. Die korrigierte Gesamtfehlerrechnung
+wird mit dem v2-Prüfer und den zusätzlichen low_F-Intervallen neu geprüft.
+
+Die vorläufige Fassung ohne v2 soll für die Gegenprüfung nicht verwendet
+werden. Alle bisherigen, schon übergebenen Vorgängerpakete bleiben
+unverändert. Die externe mathematische Gegenprüfung dieses neuen
+Modellfehlernachweises bleibt offen.

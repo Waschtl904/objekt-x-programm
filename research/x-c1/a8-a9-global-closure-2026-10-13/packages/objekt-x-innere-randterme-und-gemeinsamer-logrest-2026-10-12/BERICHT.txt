@@ -1,0 +1,42 @@
+Objekt X — vollständiger gemeinsamer Logarithmusrest
+12. Oktober 2026
+
+Das Eingangspaket Objekt-X-Aussenresidualpruefung-und-Logarithmischer-
+Randtail-2026-10-11.zip besteht im rationalen Replay. Die 2688
+Kreuzintegralvergleiche, alle 406 äußeren Randkoeffizienten und beide
+isolierten äußeren Logarithmusgrenzen werden dabei geprüft.
+
+Neu sind beide inneren Randzeilen der tatsächlich zusammengesetzten
+Residuen, unter den geerbten Operatorvoraussetzungen. Die physische
+Normierung, der rohe Legendre-Träger, die echte Momentprojektion und
+der Prim-8-Beitrag bleiben erhalten. Vier vollständige gerichtete
+Randrechnungen (beide Paritäten mit 3072 und 4096 Bit) liefern 2488
+übereinstimmende primitive Intervalle sowie 16 zusätzliche Kontrollen
+vollständiger alter Polynomaktionen. Der unabhängige rationale Prüfer
+rekonstruiert 1218 zusammengesetzte Logarithmuskoeffizienten.
+
+Ergebnis für die GANZE gewichtete Summe ab Grad 104 der drei
+logarithmischen Randkomponenten gemeinsam:
+
+  gerade:   Q_log < 1/500 T_budget = 0,2 % T_budget,
+  ungerade: Q_log < 1/250 T_budget = 0,4 % T_budget.
+
+Beide Vergleiche bestehen mit 206 rational positiven Pivots und
+einschließlich der Koeffizientenfehler. Die Kreuzterme zwischen den
+Randkomponenten werden gemeinsam erfasst. Gegenkontrollen verwerfen
+das Weglassen der Primverschiebung 8 und des rohen Trägerterms.
+
+Diese Aussage ersetzt die bisherige isolierte äußere Logschranke durch
+eine gemeinsame Schranke für alle drei führenden logarithmischen Terme.
+Sie ist KEINE obere Schranke des gesamten Residualtails. Dessen
+Kreuzterme mit dem regularisierten Rest bleiben zu bezahlen.
+
+Der nächste hinreichende Test ist konkret: Für die exakt regularisierte
+Funktion g genügt der vollständige Ableitungsrestgram aus PROOF.txt (9).
+Die dort verbleibenden Faktoren sind 0,9958 bzw. 0,99135 vor T_budget,
+bevor die Ableitungsschranke und der gemeinsame Young-Schritt angewendet
+werden. Eine bloße endliche Koeffizientenliste erfüllt diesen Test nicht.
+
+A8->A9, der Tailboden 1/20 und der vollständige Positivitätsabschluss
+bleiben unbewiesen. Es liegt kein negativer tatsächlicher Schurzeuge vor.
+Die neue analytische Herleitung ist zur externen Prüfung offengelegt.

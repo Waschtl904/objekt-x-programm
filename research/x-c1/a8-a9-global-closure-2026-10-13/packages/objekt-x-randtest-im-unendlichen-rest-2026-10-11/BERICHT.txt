@@ -1,0 +1,50 @@
+Objekt X — Eingangsprüfung und nichtpolynomialer Randtest
+11. Oktober 2026
+
+Das eingesandte Antwort-/Außenresidualpaket besteht im vollständigen
+rationalen Replay. Die beiden neuen Antwortrechnungen, der globale
+Geometrieanschluss und die 211er-Prüfungen der acht Außenbeiträge sind
+damit unter den geerbten Operatorvoraussetzungen bestätigt. Der gemeldete
+Windows/Linux-Zeilenendenfehler betrifft ausschließlich den Bytevergleich;
+die JSON-Werte stimmen überein. Versiegelte Vorgänger bleiben unverändert.
+
+Der volle obere Residualnachweis ab Grad 104 ist auch in dieser Runde
+NICHT gelungen. Stattdessen wurde eine neue notwendige Kontrolle direkt
+im unendlichen Außenraum ausgeführt: Ein normierter Indikator auf dem
+inneren 1/16384 der Schale wird um seine komplette Projektion bis Grad 103
+und die vollständige Momentkorrektur bereinigt.
+
+Diese Testfunktion enthält unendlich viele höhere Legendreanteile.
+Mehr als 52.2 Prozent der ursprünglichen L2-Masse bleiben außerhalb des
+abgezogenen Polynomraums. Ihre vollständige gewichtete Energie ist durch
+eine geschlossene Entropieformel nach oben eingeschlossen; ein endlicher
+hoher Koeffizientenabbruch wird dafür nicht verwendet.
+
+Alle 203 tatsächlichen Residualwerte auf dieser Funktion wurden gemeinsam
+gebildet. Die vollständigen hohen und direkten Integrale wurden in beiden
+Paritäten bei 3072 und 4096 Bit neu gerechnet; 16 statt der bisherigen zehn
+Primzellen erfassen die zusätzlichen Sprungstellen der Randfunktion.
+
+Der zugehörige Rang-eins-Untergram liegt in der Budgetmetrik zwischen:
+ gerade:   0.04828 Prozent und 0.04840 Prozent,
+ ungerade: 0.13323 Prozent und 0.13340 Prozent.
+Die oberen Angaben gelten nur für diesen Rang-eins-Test. Weil er ein
+UNTERGRAM des vollständigen Rests ist, kann sein Bestehen diesen Rest
+nicht von oben kontrollieren. Er ergibt hier keine Widerlegung des
+bisherigen Ansatzes. Diese Zahlen dürfen auch nicht als neu bezahlter
+Anteil des gesamten unendlichen Grams verbucht werden.
+
+Der unabhängige rationale Prüfer rekonstruiert die 104 niedrigen
+Projektionskoeffizienten, die vollständige Energieschranke sowie alle
+406 neuen Residualeinträge. Er zahlt die tatsächlichen Quellen-,
+Operator-, Moment- und Rundungsfehler und prüft zweimal 203 positive
+Pivots für die Rang-eins-Vergleiche. Genauere Daten stehen im Audit.
+
+Die unveränderte offene Hauptaufgabe ist eine obere Matrixschranke für
+die GANZE gewichtete Summe ab k104 innerhalb des verbleibenden Budgets.
+A8->A9 und der Tailboden 1/20 bleiben unbewiesen. Keine negative
+tatsächliche Schurform ist nachgewiesen.
+
+HERLEITUNG.txt erklärt insbesondere die Richtung der Gram-Ungleichung;
+README.txt enthält den reproduzierbaren rationalen Prüflauf.
+FULL_REMAINDER_CERTIFIED=false; FULL_TAIL_UPPER_COMPUTED=false.

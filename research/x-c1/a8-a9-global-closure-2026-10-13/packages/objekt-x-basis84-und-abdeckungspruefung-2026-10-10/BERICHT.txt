@@ -1,0 +1,92 @@
+Objekt X — tatsächliche Basis und erste vollständige Abdeckungsgrenzen
+10. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis des Prüfauftrags
+
+Das übergebene Paket und sein 64er-Vorgänger wurden gelesen und ihre
+gebundenen rationalen/synthetischen Prüfungen wiederholt. Diese Prüfungen
+belegen für sich keine tatsächliche Operatorabdeckung.
+
+Neu liegen tatsächliche Eingaben für beide Paritäten vor:
+
+1. Eine exakt definierte Basis J mit 84 Spalten für
+   K = R_12 intersect P_95, wobei P_95 alle lokalen Polynome bis Grad 95
+   bezeichnet. Die Funktionen liegen in der vollständigen Formdomäne
+   und in der Operatordomäne der tatsächlichen Schurform tau.
+2. Ihr vollständiger Gram erfüllt exakt I_84 <= J*J <= 2 I_84.
+   Keine gerundete Matrix wird als exakt orthonormal behandelt.
+3. Eine feste rationale Fitmatrix P mit 84 Zeilen und 268 Spalten.
+   Die ersten 65 Funktionale sind gefittet; die übrigen 203 Fitspalten
+   sind ausdrücklich null und damit noch nicht approximiert.
+4. Für die ersten 65 Spalten des vollständigen Repräsentantenfehlers gilt
+      E_65* E_65 <= 10^-70 I_65.
+   Darin ist der gesamte unendliche Momentrest enthalten. Dessen eigener
+   Beitrag liegt unter 10^-600; die rationale Fitabweichung liegt bei
+   ungefähr 3,62*10^-77 beziehungsweise 3,68*10^-77.
+5. Für den ganzen 268-spaltigen Fehler liegt eine analytisch begründete,
+   aber sehr grobe volle Gramobergrenze vor. Sie fällt beim verlangten
+   I/20-Test durch. Dies ist keine negative Richtung der tatsächlichen Form
+   und auch kein Beweis, dass die gewählte Basis die Abdeckung nicht schafft.
+
+Der gemeinsame Status lautet deshalb:
+
+  BASIS_GRAM_CERTIFIED = true
+  FIRST_65_FULL_REPRESENTATIVE_ERROR <= 10^-70 I
+  COVERAGE_BOUND_INCONCLUSIVE
+  TAIL_COERCIVITY_CERTIFIED = false
+  FULL_REMAINDER_CERTIFIED = false
+
+Was die 84 Funktionen sind
+
+Q ist die unveränderte exakte W_X-isometrische Basis des polynomialen
+V-Komplements aus dem Halbinversenpaket. S ist dieselbe rationale Matrix
+wie bisher, und Y=Q S bleibt unverändert. Zerlege S in die ersten acht
+und die folgenden 84 Zeilen. Setze
+
+  D=-(S_top*)^-1 S_bottom*,  Z=[D;I_84],  J=Q Z.
+
+S*Z=0 wurde rational exakt geprüft. Damit ist J orthogonal zu V und Y.
+J*J=I+D*D ist ein vollständiger Hilbertgram und keine abgeschnittene
+Näherung daran. Die Zahl 84 ist die Dimension dieses polynomialen Raums,
+nicht ein behaupteter Rang der 268 Funktionale.
+
+Wo der nächste Rechenengpass liegt
+
+Es fehlen scharfe gemeinsame volle Fitfehler für die 191 alten korrigierten
+Kräfte und die zwölf tatsächlichen Schurkopplungen. Der derzeitige sichere
+Normersatz für deren gemeinsamen Gram liegt nur bei etwa
+
+  gerade:   6,60058*10^43 I_203
+  ungerade: 1,34438*10^41 I_203.
+
+Diese riesigen Zahlen sind grobe Obergrenzen, keine gemessenen Fehler.
+Sie entstehen durch globale Normabschätzungen und Nullfits. Sie ersetzen
+keine gezielte gemeinsame Integration/Funktionsapproximation dieser Kräfte.
+Die endgültige Basis kann dafür zusätzliche an die Operatorwirkung
+angepasste Funktionen benötigen; ihre Notwendigkeit ist noch nicht bewiesen.
+
+Solange dieser Block das Gesamtbudget nicht erfüllt, darf weder der
+Tailboden 1/20 noch der anschließende Schur-Residualfaktor 20 als erreicht
+verwendet werden. K_lower, G_R und ein positiver endlicher Schurabschluss
+wurden in diesem Schritt nicht behauptet oder durch synthetische Daten ersetzt.
+
+Einordnung zum bisherigen Stand
+
+Die frühere 89/11-Aufteilung bleibt widerlegt. Die zwei zuletzt berechneten
+Prüfrichtungen mit Gesamtverlust ungefähr 53,71 % und 59,64 % bleiben
+gültige Einzeltests. Sie ersetzen nicht den jetzt geforderten vollen
+Abdeckungsnachweis. Der neue Prüfweg und die gemeinsame Verlustbilanz
+beziehen sich auf denselben tatsächlichen A8->A9-Rest, aber verwenden
+unterschiedliche ausreichende Kriterien.
+
+Bindungen
+
+Eingangspaket SHA256:
+0c54178047cabfe7afb688338b508b4201ae2e0e39e1e20ee025919f561b4c0b
+64er-Vorgänger SHA256:
+2fe86339d80f96a0d8e37420f79a101ecc78c9e835012ebe5a6c9216b3a360c6
+Letztes tatsächliches Rechenpaket SHA256:
+aa1077fc6772c4dc5d440e6c823e87c8e080c0b8c92711a69f31a6cce2a212a4
+
+Alle Originalarchive bleiben unverändert. GitHub wurde nicht verändert.
+Eine unabhängige externe mathematische Begutachtung steht aus.

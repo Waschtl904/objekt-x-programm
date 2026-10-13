@@ -1,0 +1,63 @@
+Eingaben des rationalen Prüfers
+10. Oktober 2026
+
+check_certificate.py akzeptiert reelle symmetrische rationale Matrizen.
+Die mathematischen Sätze gelten auch komplex; der Referenzprüfer prüft
+keine komplexen Hermiteschen Daten. JSON-Gleitkommazahlen werden verworfen.
+Einträge sind Ganzzahlen oder Strings wie "123/1000"; exakte endliche
+Dezimalstrings sind ebenfalls rational, aber keine Intervallarithmetik.
+
+Pflichtfelder für die bedingte Abdeckung:
+ schema                 = "objekt-x-coverage/1"
+ kind                   = "SYNTHETIC_ONLY" für die beiliegenden Beispiele
+ alpha                  = "1/10" (an den vorausgesetzten Satz gebunden)
+ leakage_budget         = epsilon, 0<=epsilon<=1/20
+ basis_gram_lower       = W_- (d x d, strikt positiv)
+ basis_gram_upper       = W_+ (d x d)
+ leakage_gram_upper     = U_E (m x m, positiv semidefinit)
+
+Der Prüfer bestätigt:
+ W_->0, W_+-W_->=0, U_E>=0, epsilon I-U_E>=0.
+delta=1/10-epsilon ist der BEDINGTE Tailboden. Der Prüfer kann aus
+diesen Zahlen allein nicht W_-<=J*J<=W_+ oder E*E<=U_E beweisen.
+
+Zusätzliche optionale Felder im Objekt schur:
+ K_lower                = gemeinsame Untermatrix für tau[J-Y,J-Y]
+ residual_gram_upper    = G_R>=R*R (d x d)
+ eta                    = streng positive rationale Zielreserve
+
+Der Prüfer bestätigt G_R>=0 sowie
+ K_lower-delta^(-1)G_R-eta W_+>=0.
+
+Optionale Normrückführung im Objekt schur.normalization:
+ response_gram_upper    = Y_+>=Y*Y (d x d)
+ response_norm_bound    = y>=0
+ residual_norm_bound    = r>=0
+
+Der Prüfer bestätigt Y_+>=0, Y_+<=y^2 W_-, G_R<=r^2 W_- und gibt
+beta_H=min(eta,delta)/(1+y+r/delta)^2 zurück. beta_H gilt bedingt auf R_12.
+
+Die tatsächlichen Funktionsdefinitionen, Projektoren, Skalarprodukte,
+Domänennachweise und vollständigen gemeinsamen Operatorgram-Herleitungen
+sind in einem separaten gebundenen Quellenpaket zu liefern und zu prüfen.
+Dies betrifft besonders die hohen/unendlichen Anteile und die gemeinsame
+alte inverse Energie. Ein Metadatenfeld kann diese Belege nicht ersetzen.
+
+Erfolgsstatus:
+ PASS_CONDITIONAL_COVERAGE — nur die angegebenen Abdeckungsmatrixtests;
+ PASS_CONDITIONAL_SCHUR    — zusätzlich die angegebenen Schurmatrixtests.
+
+operator_input_verified und full_remainder_certified bleiben im Prüfer
+IMMER false. Erst ein gesonderter vollständiger Eingabeaudit könnte einen
+sachlichen Operatorabschluss begründen; dieses Programm behauptet ihn nie.
+
+Abgelehnte hinreichende Matrixtests heißen INCONCLUSIVE. Ein tatsächlicher
+Operatorgegenzeuge würde einen separat eingeschlossenen oberen Formwert
+auf einer tatsächlich zulässigen vollständigen Funktion erfordern.
+
+Die Datei examples/synthetic_pass.json zeigt das vollständige Format.
+examples/synthetic_hidden_tail.json muss am Abdeckungstest scheitern.
+examples/synthetic_negative_schur.json besitzt einen sicheren Tail, aber
+scheitert am endlichen Schurtest. examples/synthetic_near_rank.json zeigt,
+dass eine kleine zusätzliche Funktionalrichtung bezahlt werden kann,
+ohne sie zu null zu erklären oder den exakten Rang zu behaupten.

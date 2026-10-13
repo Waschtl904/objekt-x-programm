@@ -1,0 +1,92 @@
+Objekt X — vollständigen alten hohen Boden verstärkt
+8. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Neuer mathematischer Befund
+
+Unter den gebundenen ursprünglichen Form- und Momentvoraussetzungen gilt
+auf dem gesamten alten hohen Raum nun der physische Boden
+
+                         delta = 91/50 = 1.82
+
+statt 2/3. Der Raum und der Horizont bleiben dieselben. Der Beweis erfasst
+sämtliche hohen Richtungen. Dafür wurde keine neue Operatorintegration
+gestartet.
+
+Zwei analytische Verbesserungen tragen den Gewinn:
+- Der reguläre Gamma-Kern wird über seine schwache Ableitung und die
+  Legendre-Eigenwerte auf dem gesamten hohen Raum eingeschlossen. Der
+  bisherige Verlust 0.27456 sinkt auf höchstens 0.002.
+- Randpotential und tatsächlich aktive Primverschiebungen werden gemeinsam
+  abgeschätzt. Ihr Verlust ist höchstens 2.25.
+
+Nach der ursprünglichen Momentkorrektur bleibt der sichere Boden 1.82.
+HERLEITUNG.txt enthält den vollständigen neuen Argumentationsschritt.
+Die ursprüngliche Formidentität wird dabei vorausgesetzt.
+
+2. Wirkung auf die alte Inversenergie
+
+Mit diesem Boden wird der vollständige alte 191D-Schurblock neu behandelt.
+Eine rationale Kongruenz mit exakt ganzzahlig nachgeprüftem Rest zertifiziert
+die Inversenobergrenze. Alle zwölf Quellen und ihre gemeinsamen Fehlergrame
+bleiben gekoppelt. Für beide Paritäten und beide Rechenpräzisionen gilt exakt
+
+                         L < U_neu < U_alt.
+
+Die niedrigere Obermatrix ist also ein nachgewiesener Informationsgewinn.
+Der signierte C-Block wird gleichzeitig so verschoben, dass die ursprüngliche
+direkte Paarung unverändert bleibt.
+
+3. Endlicher A8->A9-Test bleibt offen
+
+Diagnostische Rayleighwerte der sicheren Schur-Untermatrix, bezogen auf W_Y:
+
+                vorher                  jetzt
+gerade          -0.003545822889          -0.001881351854
+ungerade        -0.001652147199          -0.000959536882
+
+Diese Richtungen werden diagnostisch gewählt; die zugehörigen rationalen
+Rayleighwerte werden exakt nachgerechnet. Sie sind keine Eigenwertintervalle.
+Die negativen Werte der Untermatrix sind keine negativen Zeugen der
+tatsächlichen Form. Der endliche positive Abschluss ist nicht bewiesen.
+
+Im geraden Sektor bleibt am zulässigen Matrixendpunkt E=U_neu selbst eine
+optimistische Schur-Oberhülle negativ in einer rationalen Richtung:
+ungefähr -0.000394762159. Das beweist ein Hindernis der verbleibenden
+Matrixrelaxation. Im ungeraden Sektor wird dieser konkrete negative
+Endpunktbefund nicht mehr gefunden; daraus folgt kein positiver Satz.
+
+Der frühere negative Zeuge gegen den konservativen festen M_--Normgate
+bleibt gültig. Dieser widerlegte Hilfsgate wird nicht wieder als offen geführt.
+
+4. Nächster gezielter Ansatz
+
+Die lokale Budgetdiagnose zeigt im geraden kritischen Modellstrahl eine
+Empfindlichkeit von etwa 0.00453548 gegenüber der bisherigen niedrigen
+Gamma-Modellfehlerhülle. Ungerade beträgt sie nur etwa 4.64e-7. Die
+0.1-Prozent-Zugabe im alten Kopplungsgram trägt lokal etwa 0.00037051
+bzw. 0.00036870 bei.
+
+Diese Zahlen messen eine lokale Reaktion der Majorante. Sie sind keine
+bewiesenen Verbesserungen, die man durch Streichen von Fehlern erhalten darf.
+Der nächste konkrete Rechenblock sollte die alte niedrige Gamma-Modellmatrix
+gezielt verfeinern: das Gamma-160-Modell durch eine rigoros eingeschlossene
+Korrektur, beispielsweise bis Grad 224, ersetzen und den neuen Rest bezahlen.
+Diese Verfeinerung ist in diesem Paket noch nicht ausgeführt.
+
+5. Reproduktion und Grenzen
+
+Beide gerichteten Algebraläufe verwenden 1024 bzw. 1536 Bit. Ihre vier
+191D-Zertifikate und vier gemeinsamen oberen Energiehüllen werden durch
+einen separaten Prüfer mit Python-Ganzzahlen und Fraction bestätigt.
+Die vier endlichen Schurmatrizen werden rational neu aufgebaut. Die
+288 verglichenen Einträge der abgeleiteten Obermatrizen unterscheiden sich
+maximal um weniger als 6e-54. Jeder Lauf trägt seine Aussage eigenständig.
+
+Der abschließende Paket-Replay prüft außerdem alle Manifestbindungen.
+Eine separate Prüfquittung dokumentiert den Lauf aus einem frisch entpackten
+Archiv. Die langen ursprünglichen Integrationen werden dabei nicht wiederholt.
+
+Offen bleiben die tatsächliche neue Schurform, der gesamte unendliche neue
+Quotientenrest, ein wiederverwendbarer Anschluss A9->A11 und Objekt X.
+Eine externe fachmathematische Begutachtung steht aus. GitHub wurde in
+diesem Forschungsblock nicht verändert.

@@ -1,0 +1,31 @@
+Gegenprüfung des globalen Schurabschlusses — 13. Oktober 2026
+
+Dein vollständiger rationaler Replay und die neue Schlussrechnung
+bestehen. Der bedingte Abschluss A8->A9 ist bestätigt. Die 90 Cauchy-
+und 741 Integral-/Projektionskontrollen sowie Geometrie, Loggruppierung
+und Radiuspreis wurden aus dem gebundenen Grampaket erneut ausgeführt.
+
+Zusätzlich folgt aus DEINER unveränderten Zielidentität durch Einsetzen:
+
+ f=(1+1/s)*(3/10000)*theta/(1+theta),
+ Q_final=(1-f)eD+[c8+f(1-c8)]T_budget
+                    +[1+s-f(1+theta)]Qlog_bar.
+
+Alle Koeffizienten sind positiv. Mit T_budget>=sigma D und
+Qlog_bar<=c_log T_budget ergibt sich die strengere rationale Obergrenze
+
+ gerade:   Q_final < (1977/500000) T_budget = 0.3954 Prozent,
+ ungerade: Q_final < (6967/1000000) T_budget = 0.6967 Prozent.
+
+Das ist eine unabhängige skalare Folgerung aus den vollständig gebundenen
+Matrixungleichungen, keine neue 203er-Eigenwertdiagnose. Alle drei
+Koeffizienten der H-Identität werden exakt gegen den Eingang geprüft.
+
+Die konservativen W_X-Untergrenzen desselben reduzierten Schurvergleichs
+lassen sich auf 1.3285e-6 bzw. 7.9795e-6 verbessern. Bitte die exakte
+Umformung und den präzisen Formdomänen-/Operatoranschluss in
+PRUEFHERLEITUNG.txt gegenlesen; reproduce_review.py prüft die Arithmetik.
+
+Der Tailboden 1/20 bleibt eine gesonderte offene Aussage und wurde hier
+nicht benutzt. Weitere Horizonte und Objekt X insgesamt bleiben offen.
+Die alten Statusfelder der versiegelten Vorpakete bleiben unverändert.

@@ -1,0 +1,27 @@
+{
+  "original_engine_sha256": "84d4405e9a9fe91d717babf20b8355c379dcdf6493fc4a80043cf0c8e150f5cd",
+  "python_version_used": "3.12",
+  "python_flint_version_used": "0.9.0",
+  "files": {
+    "audit_results.py": "2c02397fc3b3ef024d98e6993c883d1d4f24bb8f3a55639d61e219ed85c9917c",
+    "build_direct_calibration.py": "0fcb2f10999a75d4b7d317776188524d6f5be2afb5c54b93e8a4a548a8dc2c8a",
+    "build_joint_probe.py": "3bb302c16a5ee343ad688ffa5cfb7abc3c73a4911644027e089918a981a3c885",
+    "build_package.py": "ca570bfe47d2568a652e57940e758a0be70d31a69f64d2d50b006243c83a8093",
+    "build_probe_engine.py": "41db4508c399460a479b59c2686a12afd38a82d14013f388dd2f856693920f73",
+    "compute_direct_calibration.py": "ab797f42a0e5a6742105b83cd730733f8a9df1306c59daa947cbe9d051f14a8f",
+    "compute_joint_probe.py": "730871fa8e782c6dab9c8d9f7ec1f6e2844b38edba58352048f7f8373b23bb9a",
+    "compute_tail_probe.py": "dc0747fe81a13c547c53868fbdcfb1643a1fb1f47c618dd56db13770c7716776",
+    "efficient_moments.py": "46721606d73b943fb5e3caa730589cf2cc241c0177b94362a78df9601f48f768",
+    "joint_probe_tail.py": "98daee5f01e76be1765824977bc6b143212c46a9a837189113ef16dac7b711c3",
+    "original_compute_centres.py": "84d4405e9a9fe91d717babf20b8355c379dcdf6493fc4a80043cf0c8e150f5cd",
+    "package_reproduce.py": "195a75f140db855c2a4c5a04b4b124da99ea73d850c026e6b68af84af9eb92c9",
+    "vendor/compute_inverse_energy_gate.py": "0c0f288d24710bf8e0a37b625825670ce508835a17e7755909557064535da519",
+    "vendor/compute_source_mixed.py": "2d24184788ad846f6216dcef5a11a761ca4c3f4d4cd56cea3268b67cdbf48df9",
+    "vendor/eight_source_refined.py": "baac27c2684d7683cdc586032a681a84d1b3f044750b9e2e80378fae7f204501",
+    "vendor/log_integrals.py": "de20f48cc0858a9d7468f32b2f7f69471762618f2b392c71d62c487660bd9811",
+    "vendor/prime_geometry.py": "7a436dc543fd2069cbd8715bc157e8df18a044a75ff294f5581387329f2e6177",
+    "vendor/source_core.py": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772"
+  },
+  "analytic_primitives": "Inherited complete polynomial/logarithm integrals, including real dilogarithms.",
+  "finite_mode_replacement_of_high_response": false
+}

@@ -1,0 +1,40 @@
+Objekt X — Prüfauftrag zum gemeinsamen Logarithmusrest
+12. Oktober 2026
+
+Bitte zuerst reproduce.py mit den beiden gebundenen Antwort- und
+Common96-ZIP-Dateien ausführen, dann PROOF.txt lesen.
+
+Neue Aussage, unter den geerbten Operatorvoraussetzungen:
+Q_log,>=104 < 0,002 T_budget (gerade) bzw. 0,004 T_budget (ungerade).
+Hier sind log(u), log^2(u) und log(1-u) GEMEINSAM enthalten, einschließlich
+ihrer Kreuzterme und sämtlicher ausgewiesenen Randkoeffizientenfehler.
+Der restliche tatsächliche Residualtail ist nicht geschlossen.
+
+Besonders zu prüfen:
+1. Physische Normierung von W und die Identität PROOF.txt (1).
+2. Beide inneren Koeffizienten (2),(4),(6), einschließlich Primverschiebung 8.
+3. Der nichtverschwindende rohe Träger in (3) und die echte hohe Projektion.
+4. Die Punkt-/Spurfehler in Abschnitt 4. Ein bloßer L2-Fehler wäre als
+   Kontrolle einer unbeschränkten Randspur nicht ausreichend. Hier werden
+   die Gamma-Punktfehler, die endliche Projektionsnorm, die Polynomspur
+   sowie die analytische Momentrestspur separat benutzt.
+5. Die gemeinsame 206x206-Schurprüfung einschließlich Koeffizientenfehlern.
+
+Unmittelbarer weiterer Arbeitsauftrag:
+Den vollständigen oberen Gram E_g,>=104 der EXAKT regularisierten
+Residualfunktion bestimmen. Der konkrete hinreichende Vergleich steht
+in PROOF.txt (9). Er verwendet dieselbe physische Kraftreihenfolge wie
+die neuen Antworten, nicht die alten Abdeckungs- oder P-Kraftdaten.
+Eine strengere skalare Alternative ist E_g,>=104 <=0,010920026909 D
+für gerade bzw. <=0,065511688934 D für ungerade Parität. Dies sind
+verfügbare Zielbudgets, keine bereits nachgewiesenen Energiebounds.
+
+Die drei Zeilen in COMPOSED_* sind Modellintervalle; die zusätzlichen
+vollständigen Fehler stehen in AUDIT.json. Sie dürfen nicht als exakte
+rationale Abzugspolynome behandelt werden. Selbst ein winziger nicht
+abgespaltener Logarithmus verhindert die behauptete endliche H1-Energie.
+Entweder die exakt durch Operatoren definierten Zeilen symbolisch abziehen
+oder verbleibende Logarithmusfehler ausdrücklich im vollständigen L2-Budget
+führen. Keine endliche Stichprobe ersetzt die unendliche Restkontrolle.
+
+A8->A9 und der Tailboden 1/20 bleiben offen.

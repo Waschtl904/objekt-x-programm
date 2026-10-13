@@ -1,0 +1,197 @@
+Objekt X — gemeinsame Einschließung des signierten alten Inversenblocks
+7. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Umfang
+
+Unverändert bleiben A8->A9, der eingefrorene W_X-Pilotraum, die acht
+Halbinversenbilder je Parität, ihre Mittelpunkte Y und die geerbten
+vollständigen alten Form- und Schurabschätzungen. Neu sind 32 gemischte
+Quellenintegrale je Parität und eine gemeinsame Einschließung der alten
+inversen Antwort. Es werden keine G01- oder Tail-Ergebnisse behauptet.
+
+A bezeichnet den vollständigen positiven alten Operator. A_low ist seine
+191-dimensionale Formmatrix. Die geerbte Matrix Fbar ist eine rationale
+positive Untermatrix des vollständigen alten Schurblocks. Insbesondere
+ist Fbar^(-1) NICHT gleich A^(-1).
+
+2. Zwölf Quellen und vollständiger hoher Gram
+
+Setze Z=(g_z1,...,g_z4,gY1,...,gY8). Die ersten vier Quellen sind die alten
+Kräfte der bisherigen globalen Quellen z_j. P_z sind deren unveränderte
+rationale alte Galerkinvorschläge. Es gilt
+
+ rho=g_z-A P_z,
+ R=rho* A^(-1)gY=E_zY-P_z* cY,
+ E=Z* A^(-1)Z.
+
+Die acht vollständigen Quellen gY und ihre rohen hohen Projektionen hY
+werden mit derselben bereits geprüften Polynom-/Logarithmusdarstellung
+neu aufgebaut. Die 1528 alten niedrigen Y-Paarungen je Lauf müssen mit
+den gebundenen Ergebnissen überlappen. Für g_z wird exakt dasselbe Modell
+wie im Acht-Quellen-Paket benutzt, einschließlich des dort gebundenen
+Gamma- und Potentialrestes.
+
+Neu integriert werden <h_z_i,hY_j>. Weil hY orthogonal zu allen rohen
+alten niedrigen Legendrekomponenten ist, kann man dafür <g_z_i,hY_j>
+integrieren. Die gemeinsamen Primzellen, ihre Normierung und alle
+logarithmischen Momente bleiben vollständig enthalten. Es gibt keinen
+Abbruch hoher logarithmischer Koeffizienten. Der gemeinsame 12x12-Gram
+benutzt die vorhandenen 4x4- und 8x8-Diagonalblöcke und den neuen 4x8-
+Kreuzblock. Seine gerichtete Untermatrix ist positiv.
+
+3. Gemeinsame obere inverse Energie
+
+Mit c=Z_low, h=Z_high, v=c-(3/2)Bh gilt auf dem ganzen alten Raum
+
+ E <= (3/2)h*h+v* Fbar^(-1)v.
+
+Aus den Modellquellen entstehen H0=h0*h0, v0 und
+
+ U_model=(3/2)H0+v0*Fbar^(-1)v0.
+
+Die Fehlergram-Matrizen Ec und Eh bezahlen c-c0 bzw. h-h0. Beim
+Zusammenfügen der beiden Quellgruppen wird die sichere Blockabschätzung
+2 diag(E_z,E_Y) benutzt, ohne Unabhängigkeit anzunehmen. Für z bleibt
+die volle Referenz-Grammatrix W_z erhalten. Die Mellinkorrektur wird mit
+dem geerbten e_m und dem vollständigen rohen Quellen-Gram bezahlt.
+
+Setze tF=trace(Fbar^(-1)), beta=trace(Fbar^(-1)H_B) und
+eB>=||B-B0||. Aus
+
+ v-v0=(c-c0)-(3/2)B(h-h0)-(3/2)(B-B0)h0
+
+folgt die gemeinsame obere Fehlergram-Matrix
+
+ Ev=3[tF Ec+(9/4)beta Eh+(9/4)tF eB^2 H0_upper].
+
+Insbesondere wird im letzten Term H0_upper NICHT durch seine Spur mal
+Identität ersetzt. Eine solche vorläufige skalare Hülle wurde getestet;
+sie ist zu grob und wird nicht für die Schlussaussage verwendet.
+
+Für Eerr=(3/2)Eh+Ev und theta=10^(-12) gilt
+
+ U=(1+theta)U_model+(1+1/theta)Eerr >= E.
+
+Die Ausgabe ist eine gemeinsame rationale Löwner-Obermatrix, gebildet
+aus symmetrisierten Intervallendpunkten mit Zeilensummen-Korrektur.
+
+4. Gemeinsame untere inverse Energie
+
+Für jede endliche alte Vorschlagsabbildung P gilt aus A>0 exakt
+
+ E >= Z*P+P*Z-P*AP.
+
+Hier wird P=(P_z,X_Y) benutzt. X_Y ist eine rationale Mitte der Lösung
+des alten niedrigen Modells mit den acht Y-Kräften. Sie ist nur ein
+Variationsvorschlag, keine Behauptung einer vollständigen inversen Lösung.
+
+Die Modellrechnung liefert
+
+ L_model=c0*P+P*c0-P*A_low_model*P.
+
+Der geerbte alte Matrixfehler wird als 4 gamma_a P*P bezahlt. Alle
+Vorschlagskorrelationen bleiben erhalten. Nur der winzige Quellenfehler
+erhält die gemeinsame Zusatzlast 2||P||_F ||c-c0|| I_12. Danach wird
+nach unten zu einer rationalen Matrix L gerundet. Somit gilt
+
+ L <= E <= U,    D=U-L >= 0.
+
+Der separate Fraction-Prüfer bildet D exakt und bestätigt zwölf positive
+LDL-Pivots. Der verwendete numerische Lösungsweg ist für die Gültigkeit
+der Variationsungleichung unerheblich.
+
+5. Signierter Kreuzblock und gemeinsamer Unsicherheitsgram
+
+Aus 0<=E-L<=D folgt für einen selbstadjungierten Kontraktor K
+
+ E=(U+L)/2+(1/2)D^(1/2) K D^(1/2),   ||K||<=1.
+
+Die Mittelpunktmatrix für R lautet deshalb
+
+ R_c=((U+L)/2)_zY-P_z*c0Y.
+
+Es werden sämtliche 32 Vorzeichen und Korrelationen dieses Mittelpunkts
+je Parität benutzt. R_c wird ausdrücklich NICHT als exakter Wert von R
+bezeichnet. Schreibe Dzz für den 4x4- und DYY für den 8x8-Diagonalblock
+von D. Eine rationale Zahl lambda wird durch vier exakte LDL-Pivots in
+
+ Dzz <= lambda M
+
+bestätigt. M ist die rational nach unten eingeschlossene bisherige
+Vier-Quellen-Schurmatrix. Dann gilt gemeinsam
+
+ (R-R_c)* M^(-1)(R-R_c) <= (lambda/4)DYY
+
+bis auf den separat bezahlten winzigen Fehler in P_z*c0Y. Der Beweis
+folgt aus
+
+ ||M^(-1/2) Pi_z D^(1/2)||^2 <= lambda
+
+und ||K||<=1. Es werden keine unabhängigen Eintragsintervalle oder acht
+unabhängigen Spaltenfehler als gemeinsame Matrixordnung ausgegeben.
+
+Der Subtraktionsfehler besitzt die sichere gewichtete Normschranke
+
+ sqrt(trace(M^(-1)P_z*P_z) gold) epsilon_fY.
+
+Damit ist der vollständige alte inverse Kreuzblock gemeinsam
+eingeschlossen. Die Breite der Einschließung bleibt ein realer offener
+Genauigkeitsverlust; sie wird nicht als gemessene Auslöschung interpretiert.
+
+6. Normübertragung und erneuter U00-Test
+
+Die Rationalisierung von M ändert die Metrik minimal. Die Rechnung
+bestätigt zusätzlich exakt
+
+ k^2 M >= M_input_upper,   k=1+10^(-12).
+
+Daher dürfen die bisherigen C0-Modell- und C-Delta-Normen, multipliziert
+mit k, in der neuen M-Metrik benutzt werden. Diese Umrechnung ist auch
+bei sehr kleiner Änderung explizit im Zertifikat enthalten.
+
+Setze C_c=C0_model-R_c, G=C_c*M^(-1)C_c und
+E_R=(lambda/4)DYY. Der zusätzliche Modellfehler und der bisherige
+C-Delta-Fehler werden in der gemeinsamen skalaren Norm e zusammengefasst.
+Für positive gemeinsame Parameter s,t gilt
+
+ U_C=(1+t)G+(1+1/t)[(1+s)E_R+(1+1/s)e^2 I_8].
+
+Die vier vorhandenen Nicht-C-Mittelpunktgrame und Fehlernormen werden
+beibehalten. Die gemeinsamen Young-Parameter werden numerisch gesucht
+und anschließend rational fixiert. Ihre Optimalität ist nicht nötig.
+Der Fraction-Prüfer baut die komplette 8x8-Matrix erneut auf, prüft ihre
+LDL-Pivots sowie eine rationale obere und untere Grenze ihres größten
+Eigenwerts. Alle Aussagen betreffen eine Obermatrix von B00.
+
+7. Exaktes Hindernis für die jetzige Nicht-C-Majorantenfamilie
+
+Für die vier unveränderten Nicht-C-Mittelpunktgrame G_i und Fehlernormen
+e_i ist in jeder normierten Richtung y und für beliebige t_i>0
+
+ sum_i [(1+t_i)y*G_i y+(1+1/t_i)e_i^2]
+ >= sum_i (sqrt(y*G_i y)+e_i)^2.
+
+Die Rechnung gibt je Parität eine rationale Richtung aus. Für jeden
+Quadratwurzelterm wird eine rationale Untergrenze r_i mit
+r_i^2<=y*G_i y gespeichert und exakt geprüft. Bereits sum_i(r_i+e_i)^2
+liegt strikt über eins. Damit kann diese konkrete Familie von vier
+skalaren gemeinsamen Young-Hüllen nicht schließen, selbst wenn ihr
+C-Beitrag auf null gesetzt wird.
+
+Dies ist KEIN negativer Vektor für B00 oder die tatsächliche Form. Es ist
+ein exakter Nachweis, dass mindestens eine dieser Fehlerhüllen oder ihre
+Korrelationsbehandlung verbessert werden muss. Andere gemeinsame
+Matrixabschätzungen werden dadurch nicht ausgeschlossen.
+
+8. Aussagegrenzen
+
+Die ursprünglichen Formidentitäten, die alte vollständige Positivität,
+der hohe Boden 2/3, Fbar, die Gamma- und Mellinmajoranten sowie die
+Halbinversen- und Delta-Einschließungen bleiben gebundene Voraussetzungen.
+Die neuen Integrale wurden bei 3072 und 4096 Bit gerechnet. Der schnelle
+Prüfer kontrolliert Hashes, rationale Matrixalgebra und Präzisions-
+überlappungen; er ersetzt keine unabhängige analytische Operatorprüfung.
+
+Der volle neue Rest, G01, gamma01, beta_tail, spätere Horizonte und die
+Konstruktion von Objekt X bleiben offen. Es liegt keine externe
+fachmathematische Begutachtung vor. GitHub wurde nicht verändert.

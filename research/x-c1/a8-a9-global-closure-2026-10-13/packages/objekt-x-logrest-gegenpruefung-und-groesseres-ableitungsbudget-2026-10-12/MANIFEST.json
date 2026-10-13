@@ -1,0 +1,17 @@
+{
+  "files": {
+    "ANSCHLUSS_GPT2.txt": "aee3e58c4962d8c97298379025613296208ab9bf42e86abd070a5eb39149446b",
+    "BERICHT.txt": "4fe409f9c7df42237bcd3a23c131d897363d817705d38f6b410976716cef6009",
+    "PROOF_REVIEW.txt": "78134d12925dddf00b826f131f14606b3ed255e24258fcb0964403b9672c3873",
+    "README.txt": "10902ca2fc276a70d111b0b412019ec53a8f4bf597246e8b08b48f4bfabfa8c7",
+    "audit_directional_target.py": "a6fc15c0461a700dfaa9b030ea09ea9182db98f2c86aab4fee5f0e9e89295fac",
+    "audit_young_budget.py": "8e36209aca951b01b24257c2f7fef8fa405661790372c89301554188779d420a",
+    "data/DIRECTIONAL_DERIVATIVE_TARGET.json": "1dd781339291553d1a13d18b9f15d5df0dea972eb5c5da19c9bc7377f2b08b34",
+    "data/INPUT_REPLAY.log": "a3280c83df901622f6d8f540ba6d7a00ed305fb8401109856f6b2657895ec5f4",
+    "data/YOUNG_BUDGET_AUDIT.json": "1d1bfa95de61127e0e637734091925e6ae388aa72789374bef23b00c19b44309",
+    "inputs/Objekt-X-Innere-Randterme-und-Gemeinsamer-Logrest-2026-10-12.zip": "96b8367c5f49ab8b99f63aade251942221a3fcad50ba09c6acb3a662e0dd8016",
+    "reproduce_review.py": "5ffeec4d6ba9043f273197e408ab8ca49b41f093e8987716542f1c8a4817e381"
+  },
+  "actual_derivative_Gram_computed": false,
+  "full_remainder_certified": false
+}

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "ANSCHLUSS_GPT2.txt": "629200234b1505c6f09dcc5136149714d1f1c2b416a0142255f0321c90959d2f",
+    "BERICHT.txt": "b3dbdca45aba735cf6fb613356fd2393c7783701618fa4ebc59c94babc8a2b02",
+    "PROOF_REVIEW.txt": "b7283ce747a0f5421f58d0690209b1e7fb6d1502668a13ebce327aa0411ea6cd",
+    "README.txt": "f66e46b0543f05d90d5d402cbbdc00bffe895df0b694baed52644215a4dee391",
+    "check_geometry.py": "e921252cd4fcf9288f1e71f74ed1084480c41999727f428f2264cfe348daf785",
+    "data/INDEPENDENT_GEOMETRY.json": "77f325a160a552736664b52cb232b45d4877b975852ada24ad59ac97b89a73e0",
+    "data/INPUT_REPLAY.log": "1f853902c2c338bedbb6798c78aa04ce5f1cd84fa9460879f42ced98a6860e06",
+    "inputs/Objekt-X-Aussenresidualpruefung-und-Logarithmischer-Randtail-2026-10-11.zip": "d4394c74d224cda1fcab44bc7e945a608f2228ff3cc91fcbe75da59de3572e3e",
+    "inputs/Objekt-X-Randtest-im-unendlichen-Rest-2026-10-11.zip": "a7126347b62078edf0025bba5450dbbef8b0af9c754a4c289b34eb4bca93b49a",
+    "reproduce_review.py": "667a4d674a7da1dd4d53c65c0254d6b88ea80bbe7704267b54a679b03e139b5f"
+  },
+  "full_remainder_certified": false
+}

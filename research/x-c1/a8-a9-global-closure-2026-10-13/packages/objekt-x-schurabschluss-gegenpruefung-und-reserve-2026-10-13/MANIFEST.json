@@ -1,0 +1,26 @@
+{
+  "title": "Objekt-X-Schurabschluss-Gegenpruefung-und-Reserve-2026-10-13",
+  "files": {
+    "ANSCHLUSS_GPT1.txt": "7e4e55b13add56de24fa8cc9878d24fc8796f3f8f0c6c461d8a4b9e7f5964b54",
+    "BERICHT.txt": "557feb05d4a585ce27d8b219975723ffcb5836c9c52330b96c277e55341e2dfa",
+    "CONTROLS_REPLAY.json": "f5da0d6158a84c54529e27f0853f418c1b089f6b73db619b8eaae7cd9bef4016",
+    "INDEPENDENT_REVIEW.json": "8e5885312ac760712e6dd5885c764965cb68ab067d5b55176248bf71f4dadebe",
+    "independent_review.py": "9256b7baedbb118c45239fa22f268d66bba267bb7e55601449b3af25aaebd5ba",
+    "logs/EXTERIOR_GEOMETRY.log": "d95ebb5896e459a22283c08bcc3e4e8d4311ae7aa3ccd3ab6ec8215ecf633c87",
+    "logs/GLOBAL_GRAM.log": "f229b56874a0b024c455e20e29feb11abdb09d543f38d267154e04c2086a4035",
+    "logs/LOGS_AND_TARGET.log": "89680b35586360ce6044e0c6344cd751d6f3dbdb2a3b99cbb133f3156d3fd62d",
+    "logs/RESPONSES_AND_COMMON.log": "1fc6ae565b049bedecfe940f63ba831e1c5d14ee65648efff60eeeaf471dec2c",
+    "OUR_FULL_CHAIN_REPLAY.json": "d8f9986b50d5a3661e5617b65b3522b09752455c1b25ed8b0bbdd0bf24584e64",
+    "PACKAGE_REPLAY.json": "93744919ece8c6708ab4983e0368950aa89c45145894d3784505b262c050f37d",
+    "PRUEFHERLEITUNG.txt": "d40ce94b6ecc0a744be02c41a786167ec8802ada0bb6b40a904e7c2c93cd4361",
+    "README.txt": "c6b8a333f9d5e9d5479d641db7d99f9997d2c689a02cb5aca616c93a4ddb8e57",
+    "reproduce_review.py": "2386bf03b1d351bd3307d8d2cf352df8677d8ea46f06c69717181b1654774929"
+  },
+  "input_zip_sha256": "65085974657257bd447d93342c5001d29e797b2fa70d876d53d36b587b16c2ba",
+  "conditional_A8_to_A9_positivity_confirmed": true,
+  "tail_floor_1_over_20_certified": false,
+  "all_horizons_certified": false,
+  "object_X_constructed": false,
+  "RH_proved": false,
+  "external_mathematical_review_open": true
+}

@@ -1,0 +1,221 @@
+Objekt X — exakter Anschluss des L-Formduals an den unendlichen Außenraum
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnisumfang
+
+Die folgende Identität gilt auf dem vollständigen unendlichen Rest. Sie
+ersetzt den noch fehlenden Residualgram nicht durch eine endliche Matrix.
+Sie macht ihn zu einer gewichteten Legendre-Summe, einem bekannten
+84-dimensionalen Anteil und einer expliziten Momentkorrektur. Die Wirkung
+der Momentkorrektur lässt sich unter zwei genannten endlichen Anschluss-
+bedingungen durch 10^-250 D203_neu bezahlen. Die eigentliche gewichtete
+Residualsumme ist weiterhin offen.
+
+1. Unveränderte Geometrie
+
+X=L2((a,b),2dx), a=3 log(2)/2, b=log(3), h=b-a, c=(a+b)/2.
+ell_n ist die X-orthonormale lokale Legendrebasis. Setze
+
+  l_n=lambda(ell_n),   d_n=H_n+11/10,
+  W_X=I+(2/mu) l l*,   L=diag(d_n).
+
+Die zwölf Orthogonalitätsbedingungen definieren unverändert T. Ihre
+polynomialen Vertreter liegen in P95. Es gilt
+
+  J=J84,   ran(J)=T intersect P95,   dim ran(J)=84,
+  P95=span(Phi12) + ran(J),   J*W_X J>=I.
+
+Diese Aussagen, die genauen J-Funktionen und die Operator-/Formdomänen
+sind gebundene Voraussetzungen aus den geprüften Paketen. J ist nicht
+als X-orthonormal vorausgesetzt. R_L ist der Inverse der L-Form auf T.
+
+2. Exakte parametrische Basis des ganzen Außenraums
+
+Schreibe l0=(l_0,...,l_95), lH=(l_96,l_97,...),
+D0=diag(d_0,...,d_95), DH=diag(d_96,d_97,...), und J0 für die 96x84
+lokale Koeffizientenmatrix von J. Definiere
+
+  alpha=2/(mu+2||l0||^2),
+  k_n=ell_n-alpha l_n sum_(i<96) l_i ell_i, n>=96.       (1)
+
+Für jedes p in P95 gilt W_X(p,k_n)=0, denn
+lambda(k_n)=l_n mu/(mu+2||l0||^2). Daher liegen sämtliche k_n in T.
+Die Abbildung K:y -> sum_(n>=96)y_n k_n parametrisiert vollständig
+P95^(perp W_X). Ihr vollständiger Hilbertgram ist
+
+  K*W_X K=I+alpha lH lH*.                               (2)
+
+Es wird kein Momentrest weggelassen. T=ran(J) + ran(K) ist eine
+topologische direkte Summe; dieselbe Zerlegung gilt in der L-Formdomäne.
+
+Für den L-Inversen ist die folgende L-orthogonale Variante günstiger:
+
+  E_L=J0*D0 J0,
+  v=-alpha [l0-J0 E_L^-1 J0*D0 l0],
+  p_n=ell_n+l_n sum_(i<96)v_i ell_i.                    (3)
+
+Es gilt p_n=k_n-J E_L^-1 J*L k_n. Somit liegen p_n in T und erfüllen
+J*L p_n=0. Mit P:y -> sum y_n p_n und cL=v*D0 v>=0 folgt exakt
+
+  P*L P=DH+cL lH lH*,
+  [J,P]*L[J,P]=diag(E_L,DH+cL lH lH*).                (4)
+
+Die Koeffizienten v und cL wurden für beide tatsächlichen Paritäten
+aus den gebundenen J-Daten berechnet. Die Intervallprüfungen von
+J0*D0 v=0 bestehen; die Identität selbst folgt algebraisch aus (3).
+
+3. Exakte vollständige Dualgramformel
+
+R bezeichnet die 203 neuen Residualfunktionale
+
+  R=A_neu* - S_neu,eta J X_response,
+  S_neu,eta=(1-eta)q-H_neu, eta=10^-10.
+
+Hier wird die kanonische X-Repräsentation der tatsächlichen Funktionen
+verwendet, einschließlich der gesamten Operatorwirkung. Ihre Existenz
+und X-Stetigkeit folgen aus den geerbten Domänen-/Quellenannahmen und
+den festen polynomialen Antworten. Diese Repräsentation ist nicht mit
+einer beliebig abgeschnittenen oder anders projizierten Kraft zu ersetzen.
+
+Setze R0=(R_0,...,R_95)^T, R_n=<ell_n,R>_X als 1x203-Zeile und
+
+  RJ=J*R,   bR=v*R0,   B_n=R_n+l_n bR,
+  sigma=sum_(n>=96) |l_n|^2/d_n,
+  z=sum_(n>=96) l_n B_n/d_n.
+
+Aus (4) und der Rang-eins-Inversformel folgt
+
+  R*R_L R
+    =RJ*E_L^-1 RJ
+     +sum_(n>=96) B_n*B_n/d_n
+     -[cL/(1+cL sigma)] z*z.                          (5)
+
+Alle Summen in (5) sind vollständige unendliche Summen. Für X-beschränkte
+R konvergieren sie; DH>=d_96 I. Die Schlusskorrektur ist positiv
+semidefinit und wird abgezogen. Die Formel setzt kein verschwindendes
+Galerkinresiduum voraus. RJ muss aus den tatsächlichen neuen Matrizen
+mit allen Fehlern eingeschlossen werden.
+
+4. Vollständiger Momentrest und seine Wirkung
+
+Für z0=h/4<1/64 liefert die positive Mellinreihe
+
+ |l_n|^2 <= (h/2)(2n+1) exp(c) exp(z0^2/(2N+3))
+                  z0^(2n)/[(2n+1)!!]^2, n>=N.
+
+Hier h<1/16, exp(c)<3, exp(z0^2/(2N+3))<2. Der Quotient der
+auf der rechten Seite verwendeten n-Terme ist höchstens
+1/[64^2(2N+1)(2N+3)]<1/2. Daher gilt ohne Trunkierung für N=96
+
+  ||lH||^2 < 3(193)/[8*64^192*(193!!)^2] <10^-704.     (6)
+
+Mit mu>9/100, nu<1/10, ||l0||^2<=nu/2 und d_95<7 folgt aus der
+L-orthogonalen Projektion in (3)
+
+  cL <= (2/mu)^2 d_95 ||l0||^2 <1000,
+  ||v||<20,   d_96>6.                                 (7)
+
+Diese großzügigen Grenzen werden rein rational geprüft. Für jede
+positive Metrik D und M_R^2>=||R D^-1/2||_(C203->X)^2 ergibt (5)-(7)
+
+ || D^-1/2 [R*R_L R - RJ*E_L^-1 RJ
+                -sum_(n>=96)R_n*R_n/d_n] D^-1/2 ||
+       <=10^-350 M_R^2.                               (8)
+
+Beweis der Fehlergröße: Mit t=10^-352 und Q0=sum R_n*R_n/d_n ist die
+Summe der Preise für die zwei linearen Momentkreuze, deren Quadrat und
+die abgezogene Rang-eins-Korrektur höchstens
+
+  M_R^2 [(40t+400t^2)/6
+             +1000 t^2(1+20t)^2/36] <10^-350 M_R^2.
+
+Die Negativkorrektur wird also nicht stillschweigend ignoriert; ihre
+gesamte mögliche Wirkung wird in (8) eingeschlossen.
+
+5. Sehr grobe, aber ausreichende globale Norm für (8)
+
+Für D=D203_neu=diag((1-rho)I191,K12_neu) genügen folgende zwei neue,
+rein endliche Anschlussprüfungen:
+
+  K12_neu >= epsilon_parity K12_alt,                    (9)
+  ||X_response||_F <=10^20.                            (10)
+
+Die neuen Antworten von GPT 2 lagen hier noch nicht als Datei vor.
+(9)-(10) wurden für dieses nicht vorliegende Paket NICHT behauptet.
+Der positive gemeinsame 96er-Block erlaubt eine Wahl von K12_neu, die
+(9) erfüllt. Beide epsilon_parity sind größer als 10^-6.
+
+Die tatsächlichen gebundenen Daten wurden auf die folgenden groben
+Obergrenzen geprüft:
+
+ tr(X_inv)<10^30, tr(HB_neu)<10^10, tr(K12_alt^-1)<10^20,
+ rho<1/2, tr(U_neu[F,F])<10^20, ||g||_(X->old)<1000,
+ ||G_m||<2, ||h J||^2<10^4.
+
+Aus den geerbten vollständigen Quell-/Domänenschranken folgen für die
+X-Repräsentanten ||q[F,Lambda .]||<10^12 und ||q[J,.]||<10^12.
+Der Faktor der Liftungsadjungierten und die gemeinsamen 12 bzw. 84
+Spalten sind hier enthalten; jede J-Spalte hat lokale Norm kleiner 2.
+
+Dann gelten nacheinander die sicheren Schätzungen
+
+ ||h||<2000, ||c||<2000, ||B||<10^5, ||v_delta||<3*10^8,
+ ||U_neu||_(X->X)<10^48,
+ ||A_neu* D^-1/2||^2<10^95,
+ ||S_neu,eta J||<2*10^12,
+ ||D^-1||<10^26,
+ ||S_neu,eta J X_response D^-1/2||^2<4*10^90,
+ ||R D^-1/2||^2<10^100.                               (11)
+
+Für den endlichen Kreuzblock wird dabei die gemeinsame positive
+Energie verwendet: ||U_FT||^2<=tr(U_FF)||U_TT||. Es werden keine
+unabhängig gewählten Kreuzblöcke eingesetzt.
+
+Diese riesige Norm ist NUR zum Bezahlen der bereits extrem kleinen
+geometrischen Momentkorrektur geeignet. Sie ist KEINE brauchbare
+Schranke für den eigentlichen Residualrest.
+
+Mit (9)-(11) ist der Fehler in (8) kleiner als 10^-250 D.
+
+6. Konkreter vollständiger Abschluss-Test
+
+Da E_L>=4.2 I, gilt E_L^-1<=5/21 I. Für N>=96 sei
+
+  Q_N=sum_(96<=n<N) R_n*R_n/d_n,
+  U_N >= R*(I-P_<N)R,                                 (12)
+
+wobei P_<N der X-orthogonale Projektor auf ell_0,...,ell_(N-1) ist.
+U_N muss den GANZEN restlichen X-Gram einschließen. Er muss nach
+Zusammensetzung und Auslöschung der Residualfunktionen berechnet werden.
+Die bisherige Dreiecksabschätzung der getrennten Summanden reicht nicht.
+
+Wegen der Monotonie der d_n folgt aus (5)-(12) auf dem unendlichen Raum
+
+  R*R_L R <= (5/21) RJ*RJ + Q_N + U_N/d_N +10^-250 D. (13)
+
+Mit beta=20209999981781/182190000000000 und dem neuen M_upper genügt
+daher die vollständig endliche Matrixprüfung
+
+ M_upper + beta^-1[(5/21) RJ*RJ + Q_N + U_N/d_N
+                              +10^-250 D] <= D.       (14)
+
+Endlich ist die Prüfung in (14), nicht der Gegenstand des notwendigen
+Nachweises (12). Ein endlicher Koeffizientenabbruch liefert U_N nicht.
+Einschließungsfehler aller R_n, RJ und U_N gehören in (14).
+
+Der Screenshot nennt vorläufige skalare Budgets von ungefähr 3.17e-7 D
+und 1.91e-6 D. Bei N=128 ist d_N ungefähr 6.533. Falls die bereits
+erfassten Residualanteile vernachlässigbar wären, entspräche dies in
+diesem hinreichenden Test grob U_128<=2.07e-6 D beziehungsweise
+U_128<=1.25e-5 D. Maßgeblich sind erst GPT 2s gerichtete rationale
+Budgets, und die Beiträge RJ und Q_N müssen davon abgezogen werden.
+
+7. Aussagegrenzen
+
+(5) und (13) sind globale Formdual-Aussagen unter den genannten
+Voraussetzungen. Sie beweisen für sich keine ausreichende Größe von U_N.
+Der neue vollständige Residualgram ist noch nicht zertifiziert. Der
+Tailboden 1/20, A8->A9, Objekt X und RH bleiben offen. Eine erfolgreiche
+Prüfung von (14) würde zunächst die festgelegte gemeinsame Verlust-
+bedingung auf T schließen; die genaue Zielmetrik bleibt gesondert zu
+beachten. Der Faktor 20 wird hier nirgends vorausgesetzt.

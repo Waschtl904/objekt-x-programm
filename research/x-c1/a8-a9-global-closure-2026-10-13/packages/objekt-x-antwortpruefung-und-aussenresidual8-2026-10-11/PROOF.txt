@@ -1,0 +1,227 @@
+Objekt X — Anschluss der neuen Antworten an den vollen L-Dualraum
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Alle Aussagen bleiben unter den geerbten analytischen Operator-, Quellen-
+und Domänenvoraussetzungen. Diese Voraussetzungen wurden nicht neu bewiesen.
+Der vollständige Residualrest wird hier nicht geschlossen.
+
+1. Bindung an die neuen Antworten
+
+Verwendet werden ausschließlich die neuen 191 niedrigen Features und zwölf
+physischen Kreuzzeilen, die neue rationale Inverskongruenz, delta=18219/10000,
+rho, K12_neu, D=diag((1-rho)I191,K12_neu), X84x203 und M_upper aus dem
+Paket Neue-Antworten84-und-Residualbudget. Die alten P-residualisierten
+Zeilen werden nicht übernommen. Setze
+
+  S=(1-eta)q-H_neu, eta=10^-10,
+  Z=JX, R=A*-SZ,
+  beta=20209999981781/182190000000000,
+  T_budget=beta(D-M_upper)>0.
+
+S>=beta L ist ein geerbter globaler Hilfsformvergleich. Exakt gilt
+
+  A S^-1 A*=M+R*S^-1R <= M_upper+beta^-1 R*R_L R.
+
+R_L ist die L-Forminverse auf dem exakten unendlichen Rest T.
+Die neue hinreichende Aufgabe bleibt R*R_LR<=T_budget.
+
+Die neuen K12_neu erfüllen zusätzlich rational
+K12_neu>epsilon_parity K12_alt. Die beiden X-Frobeniusnormen sind kleiner
+0.325. Somit bestehen die zwei zuvor noch offenen endlichen Bedingungen
+des eigenen Pakets Unendlicher-Dualrest-und-Aussenrichtungen.
+
+2. Tatsächlicher endlicher Residualanteil
+
+Setze E_L=J*LJ. Wegen E_L>=21/5 I gilt E_L^-1<=5/21 I.
+Der Modellrest C0*-B0X wird nicht als tatsächlicher Rest ausgegeben.
+Mit den vollständig bezahlten Fehlern epsilon_C, epsilon_B gilt vielmehr
+
+ ||J*R D^-1/2|| <= epsilon_C
+                    +epsilon_B sqrt(tr(X D^-1 X*))
+                    +||C0*-B0X||_F sqrt(tr(D^-1)).
+
+Alle drei Summanden werden rational neu berechnet oder aus dem vollständig
+rational geprüften Antwort-Audit gebunden. Daraus folgt auf dem ganzen
+203-dimensionalen Kräfteraum
+
+  (J*R)* E_L^-1(J*R) <= f_parity D,
+
+  gerade:   f_parity <9.19*10^-17,
+  ungerade: f_parity <1.50*10^-19.
+
+Hier handelt es sich um einen echten Fehlerpreis einschließlich der
+Quellen- und direkten Matrixfehler, nicht nur um das endliche Modellresiduum.
+
+3. Exakte unendliche Zerlegung in den k_n-Koordinaten
+
+Die vollständige Herleitung der Geometrie steht in PRIOR_INFINITE_REDUCTION.txt.
+Xloc=L2((a,b),2dx), ell_n ist dort orthonormal, l_n=lambda(ell_n),
+d_n=H_n+11/10. Schreibe l0=(l_0,...,l_95) und lH=(l_96,l_97,...).
+Dann ist W_X=I+(2/mu) l l*, und
+
+ alpha=2/(mu+2||l0||^2),
+ k_n=ell_n-alpha l_n sum_(i<96) l_i ell_i, n>=96.
+
+Diese k_n liegen genau in P95^(perp W_X), also in T. Sie sind nicht als
+gewöhnliche orthonormale Legendrebasis zu behandeln. Es gilt vollständig
+
+ T=ran(J)+ran(K), K:y -> sum_(n>=96)y_n k_n,
+ K*W_X K=I+alpha lH lH*.
+
+Mit D0=diag(d_0,...,d_95), J0 den lokalen J-Koeffizienten und
+
+ v=-alpha(l0-J0 E_L^-1 J0*D0 l0),
+ p_n=ell_n+l_n sum_(i<96)v_i ell_i,
+ cL=v*D0v,
+
+sind J und die p_n L-orthogonal. Für B_n=R(p_n),
+sigma=sum_(n>=96)|l_n|^2/d_n und z=sum_(n>=96)l_n B_n/d_n gilt exakt
+
+ R*R_LR=(J*R)*E_L^-1(J*R)
+          +sum_(n>=96) B_n*B_n/d_n
+          -cL/(1+cL sigma) z*z.                       (1)
+
+Die Darstellung umfasst den gesamten unendlichen Raum, nicht nur die
+acht in diesem Paket ausgewerteten Außenrichtungen.
+
+Die bereits rational geprüften globalen Momentgrenzen lauten
+
+ ||lH||<t=10^-352, ||v||<20, alpha||l0||<5,
+ cL<1000, d_96>6.
+
+Nun benutzen wir die tatsächlich integrierbaren Zeilen R(k_n).
+Es ist p_n-k_n=l_n(v+alpha l0), also ||v+alpha l0||<25.
+Für den kanonischen Xloc-Repräsentanten und
+M_R^2>=||R D^-1/2||_(C203->Xloc)^2 ist der Preis für das Ersetzen der
+vollständigen B_n-Summe und ihrer Rang-eins-Korrektur durch die
+vollständige k_n-Summe höchstens M_R^2 mal
+
+ [50t(1+5t)+625t^2]/6 +1000t^2(1+30t)^2/36 <10^-350. (2)
+
+Das folgt aus ||K||<=1+5t, dem Preis für zwei Gramkreuzterme und das
+Fehlerquadrat; die letzte Größe bezahlt auch die abgezogene Korrektur.
+Diese Rechnung behandelt den GANZEN Momentrest.
+
+Für M_R gibt es nun sogar einen unmittelbaren Anschluss an die neue grobe
+Majorante. Deren Herleitung beweist vor Division durch 21/5 bereits eine
+Schranke für die W_X-duale Residualnorm. Da
+
+ ||W_X||=1+nu/mu<3,
+
+gilt für den kanonischen Xloc-Repräsentanten
+
+ M_R^2 <=(63/5) qcoarse.
+
+Die geprüften neuen qcoarse liefern damit M_R^2<10^45 beziehungsweise
+M_R^2<10^42. Schon die alte großzügige Größe 10^100 genügt für den
+einheitlichen Preis 10^-250 D in (2). Die riesige grobe Norm wird NUR
+zum Bezahlen dieser winzigen geometrischen Korrektur verwendet.
+
+Aus (1)-(2) folgt daher global
+
+ R*R_LR <= Q_J +sum_(n>=96) R(k_n)*R(k_n)/d_n+10^-250 D. (3)
+
+4. Neue tatsächliche Außenresiduen
+
+Für K8=(k96,...,k103) wurde der zuvor fehlende Kreuzblock mit ALLEN
+84 J-Spalten integriert. Gespeichert sind vollständige hohe Funktionsgrame
+und direkte Formgrame für J84,K8; die hohen Quellen sind nicht durch
+endlich viele alte hohe Moden ersetzt. Alle logarithmischen Beiträge,
+zehn Primzellen, direkten Kernel- und Momentanteile sind enthalten.
+
+Die bereits gebundenen vollständigen c(K8), Bh(K8), h_F*h_K und direkten
+F-K8-Kreuze stammen aus dem eigenen vorigen Dualrestpaket. Daraus wird
+mit der NEUEN Inverskongruenz C_inv neu gebildet
+
+ lK=C_inv^*(cK-BhK/delta), lF=C_inv^*(cF-BhF/delta),
+ U_FK=h_F*h_K/delta+lF*lK/(1-rho),
+ C_K=(lK ; q_FK-U_FK),
+ S_JK=(1-eta)q_JK-h_J*h_K/delta,
+ R_K=C_K* -S_JK* X.                                  (4)
+
+Hier bezeichnet * den Adjunkten der gespeicherten rationalen
+Inverskongruenz; in den Prüfern steht ausdrücklich C_inv.transpose().
+R_K hat acht Zeilen und 203 Spalten. Erst die vollständig zusammengesetzte
+Differenz in (4) wird quadriert; die relevanten Auslöschungen bleiben erhalten.
+
+5. Vollständige Fehlerpreise der acht Zeilen
+
+Die Quellfehler werden mit der neuen Metrik XI=C_inv C_inv*/(1-rho) und
+der neuen Kopplungsmajorante HB bezahlt. Aus den gebundenen Fehlern ef,eh,eB
+und Gm folgt sicher ein gemeinsamer Featurepreis
+
+ e_k=eh^2/delta+3[tr(XI Gm)ef^2
+                +tr(XI HB)eh^2/delta^2
+                +tr(XI)eB^2 tr(H_probe)/delta^2],
+ eK=8 e_k.
+
+H_probe ist der gebundene vollständige Neunergram; dessen Spur darf für
+den Achter-Unterblock als größere Schranke benutzt werden. Mit
+eF=tr(K12_neu^-1 E_F), tauF=tr(K12_neu^-1 U_FF) und tauK=tr(U_KK) ist
+
+ epsilon_CK =sqrt(eK)+sqrt(eF tauK)+sqrt(tauF eK)+sqrt(eF eK)
+                +sqrt(12*8 tr(K12_neu^-1))*10^-20.
+
+Dieser Preis umfasst die Abweichungen BEIDER Quellengruppen.
+Für den frisch integrierten hohen J/K-Gram wird sein vollständiger
+gemeinsamer Quellfehler eh_cross benutzt. Er begrenzt jeden Teilblock.
+
+ epsilon_HJK =[sqrt(tr(H_JJ)) eh_cross
+                +eh_cross sqrt(tr(H_KK))+eh_cross^2]/delta,
+ epsilon_SJK =(1-eta)sqrt(84*8)*10^-20+epsilon_HJK,
+ epsilon_RK  =epsilon_CK+epsilon_SJK sqrt(tr(X D^-1 X*)).
+
+Die erweiterten polynomialen Funktionen haben Grad höchstens 103 und
+lokale Koeffizientennorm kleiner 2. Der konservative direkte Eintragsfehler
+10^-20 ist in PRIOR_EXTERNAL_PROBES.txt aus den geerbten vollen Kernel-
+und Domänenschranken erklärt; die präzise Intervallrechnung kommt hinzu.
+
+6. Gerichteter rationaler Budgetvergleich
+
+Setze D8=diag(d96,...,d103), W=D8^-1/2 R_K_model und
+B=T_budget. Für den Modellgram W*W wird ein Wert a vorgeschlagen.
+Der unabhängige Rationalprüfer integriert nichts neu, baut aber alle
+1624 R_K-Einträge aus den gebundenen Kreuzintegralen erneut auf und prüft
+
+ [a B, R_K_model* ; R_K_model, D8]>0                 (5)
+
+mit 211 positiven rationalen Intervall-LDL-Pivots. Das ist ein
+Schurkomplementtest für R_K_model*D8^-1 R_K_model<aB. Er setzt keine
+gerundete Inverse und keinen Gleitkomma-Eigenwert als Zertifikat ein.
+
+Weil B>=b_parity D, b_parity das neue skalare Residualbudget, gilt für
+den echten Fehler in der gewichteten B-Metrik
+
+ e=epsilon_RK/sqrt(d96 b_parity),
+ Q8_actual<= [a+2 sqrt(a)e+e^2] B.
+
+Alle Preise werden nochmals rein rational nach oben gerechnet. Nach
+Hinzunahme von Q_J und der vollständigen geometrischen Korrektur ergeben
+sich die einfachen sicheren Aussagen
+
+ gerade:   Q_J+Q8_actual+10^-250 D < (1/5000) B,
+ ungerade: Q_J+Q8_actual+10^-250 D < (13/20000) B.     (6)
+
+Das sind 0.020 % und 0.065 % der RICHTUNGSABHÄNGIGEN Budgetmatrix,
+keine Prozente des Beweisfortschritts und keine Hilbert-/Tailböden.
+
+7. Konkreter verbleibender unendlicher Prüfauftrag
+
+Definiere den vollständigen noch offenen positiven Gram
+
+ Q_>=104=sum_(n>=104) R(k_n)*R(k_n)/d_n.
+
+Zusammen mit (3) und (6) würden folgende Nachweise genügen:
+
+ gerade:   Q_>=104 <= (4999/5000) T_budget,
+ ungerade: Q_>=104 <= (19987/20000) T_budget.          (7)
+
+In (7) ist die ganze unendliche Summe gemeint. Eine weitere endliche Liste
+von Richtungen oder das Weglassen aller Koeffizienten hinter einem
+Abbruchindex beweist (7) nicht. Die gemeinsame Funktionsintegration,
+eine auslöschungserhaltende Approximation mit vollständigem Rest oder
+eine andere gültige globale Schranke muss diesen Anteil noch bezahlen.
+
+Die hier integrierten acht Beiträge können keinen negativen Zeugen für
+die tatsächliche Schurform liefern. A8->A9 und der gesonderte normierte
+Tailboden 1/20 bleiben unbewiesen. FULL_REMAINDER_CERTIFIED=false.

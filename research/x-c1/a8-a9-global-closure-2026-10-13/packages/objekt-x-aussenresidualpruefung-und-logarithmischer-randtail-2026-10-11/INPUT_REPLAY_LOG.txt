@@ -1,0 +1,38 @@
+New manifest: 23 files
+Predecessor manifests: 19 24 27
+EVEN PASS 4752 interval comparisons; 9 positive rational pivots; reserve 593/200000000
+ODD PASS 4752 interval comparisons; 9 positive rational pivots; reserve 4363/250000000
+{
+  "status": "PASS_GLOBAL_GEOMETRY_REDUCTION_AND_RESTRICTED9",
+  "files_bound": 27,
+  "moment_tail_squared_upper": "1e-704",
+  "conditional_geometry_price": "1e-250 D203_new",
+  "new_answer_admissibility_conditions_checked": false,
+  "cases": [
+    {
+      "parity": "even",
+      "precision_interval_comparisons": 4752,
+      "restricted9_reserve": "593/200000000",
+      "rational_LDL": {
+        "positive_pivots": 9,
+        "smallest_pivot_lower": "2373056156979951878359217408316495171/1000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "parity": "odd",
+      "precision_interval_comparisons": 4752,
+      "restricted9_reserve": "4363/250000000",
+      "rational_LDL": {
+        "positive_pivots": 9,
+        "smallest_pivot_lower": "1072358557444020540253389801643763419/500000000000000000000000000000000000000000000"
+      }
+    }
+  ],
+  "full_residual_tail_computed": false,
+  "tail_coercivity_certified": false,
+  "full_remainder_certified": false
+}
+EVEN PASS all 1624 composed entries; 203 positive pivots; weighted first eight < 1/5000 * T
+ODD PASS all 1624 composed entries; 203 positive pivots; weighted first eight < 13/20000 * T
+PASS_COMPOSED_RESIDUAL_PACKAGE_FRESH_REPLAY
+MOMENT_GATES_PASSED=true; FIRST_EIGHT_COMPOSED_ROWS_VERIFIED=true; FULL_REMAINDER_CERTIFIED=false

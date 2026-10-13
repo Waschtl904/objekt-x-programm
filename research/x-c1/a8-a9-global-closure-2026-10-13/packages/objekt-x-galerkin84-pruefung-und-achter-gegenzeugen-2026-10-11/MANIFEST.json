@@ -1,0 +1,15 @@
+{
+  "files": {
+    "BERICHT.txt": "237fc32c04adfc15fff8a65f4e9a532601cf8a8d7f5a8caa9b911aae2ea15631",
+    "BRIDGE_OBSTRUCTION.json": "0ecfeff47a53e7353d341db05cdae4afcefcace23dea7b8de2219293ed328638",
+    "BRIDGE_OBSTRUCTION_INPUT.json": "cede0cc8595055e838222dd6eb94a7b07bc33c49abd75bb47afa52c83f2dcb96",
+    "CONDITIONAL_GATE_REBUILD.json": "0c1d4f5aa743e50c63f2653f71f528f7e75bffc16a4689003c3f1cf1c52068c4",
+    "FINITE_SCHUR_REPLAY.json": "176ed903cbc4818e86f70e388c0d74c3e5e4823520be8307f490d0d3ccd2c661",
+    "PRUEFQUITTUNG.json": "cdce36a2e201b66084704d00b29bf3e7c55f6845ff08ebf2fbf4ede27d0b5cdd",
+    "README.txt": "24400bacd287920213683a7ab83e772fbeb936fdfb75ee2c2812e988dfc3af66",
+    "REPLAY_ORIGINAL.json": "861257e32a6bd34e4a12647d714099c22d1989631b45fce929150625882fd423",
+    "check_bridge_obstruction.py": "c0baaa1ea155c292567e4fa3f3706a09dd1323bc42044825785973eb36492d7f",
+    "rebuild_conditional_gates.py": "cdd73d5ad069951848b35838a7e308b45bb9c1ff8e0ca907e2b7288d24f5f1a7",
+    "reproduce.py": "34c5a9f3e155141a1e46ffeeae4b0ab3d4b2db00714c4d559ff73c00fa69d508"
+  }
+}

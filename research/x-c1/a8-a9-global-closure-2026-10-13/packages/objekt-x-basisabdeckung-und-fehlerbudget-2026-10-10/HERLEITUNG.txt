@@ -1,0 +1,268 @@
+Objekt X — vollständige Basisabdeckung durch einen gewichteten Restgram
+10. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+0. Ausgangspunkt und Geltungsbereich
+
+Je Parität sei H=(R_12,W_X) der gesamte Rest nach dem tatsächlich positiven
+endlichen 4+8-Block, D seine dichte vollständige Formdomäne und tau die
+geschlossene unterbeschränkte tatsächliche Schurform auf D. Aus dem
+64er-Paket werden genau die dortigen analytischen Voraussetzungen und
+die daraus hergeleitete globale Fehlerform übernommen:
+
+ tau[r] >= alpha ||r||_H^2 - ||L r||_C^m^2,
+ alpha=1/10, L=L_64:H->C^m beschränkt, m=268.           (1)
+
+L bündelt die 64 lokalen niedrigen Koeffizienten, das Schalenmoment,
+191 korrigierte alte Kräfte und zwölf tatsächliche Schurkopplungen, mit
+genau den dort angegebenen Gewichten. Die 268 Zeilen dürfen redundant
+sein. In H gilt rank(L)<=264 nach den dort bewiesenen exakten Relationen.
+Diese Rangobergrenze wird im nachfolgenden Abnahmetest nicht als tatsäch-
+licher Rang eingesetzt. Alle Adjunkte verwenden H beziehungsweise das
+gewöhnliche euklidische Skalarprodukt; antilinear im ersten Argument.
+
+Die alte gemeinsame inverse Energie und der tatsächliche positive
+Zwölferblock bleiben Bestandteile von L und tau. Dieses Paket ersetzt
+sie nicht durch getrennte frei wählbare Störungen. (1) bleibt ein
+bedingter analytischer Autorenbefund, kein hier erneut bewiesener
+vollständiger ursprünglicher Prim-/Gamma-Formnachweis.
+
+1. Die berechnete Basis muss exakte Funktionen bezeichnen
+
+Sei J:C^d->D eine Spalte fest definierter Funktionen mit positivem
+vollständigem Gram W=J*J>0. Eine rationale Untermatrix 0<W_-<=W
+genügt als Nachweis ihrer linearen Unabhängigkeit. Es wird
+weder W=I noch ein exakter Rang aus kleinen numerischen Eigenwerten
+angenommen. Intervallkoeffizienten beschreiben die fest definierten
+Funktionen, nicht automatisch exakt orthonormale gerundete Mittelpunkte.
+
+Alle J-Spalten müssen in H liegen. Für neue Kandidaten j0 lässt sich dies
+mit dem tatsächlichen vorigen endlichen Block Phi sicher definieren durch
+
+ j=(I-Pi_F)j0,
+ Pi_F=Phi (Phi*W_X Phi)^(-1)Phi*W_X.                   (2)
+
+Die Projektionsidentität ist exakt; ihre numerische Auswertung und
+W_X-Grame sind einzuschließen. Eine ausschließlich näherungsweise
+Orthogonalität zu Phi darf nicht als (2) verwendet werden. Alternativ
+müsste die gesamte erweiterte Blockzerlegung neu definiert werden.
+
+Setze K=ran(J), Pi=J W^(-1)J*, Z=K^(perp H), D_Z=D intersect Z.
+Weil J endlich viele Formvektoren enthält, ist Pi graphnormstetig und
+
+ H=K direct-sum Z orthogonal,
+ D=K direct-sum D_Z topologisch.                      (3)
+
+D_Z ist dicht in Z: (I-Pi) projiziert eine formdichte approximierende
+Folge wieder in D. Die Formrestriktion auf D_Z ist geschlossen.
+Damit ist (3) eine vollständige Zerlegung. Es bleiben keine nur numerisch
+nicht gesehenen Richtungen außerhalb ihrer beiden Summanden zurück.
+
+2. Abdeckungssatz mit einem vollen Repräsentantenfehler
+
+Wähle irgendeine festgelegte endliche Matrix P:C^m->C^d und definiere
+
+ E=L* - J P : C^m -> H.                               (4)
+
+E ist ein Operator mit m Spalten, deren Werte volle Hilbertfunktionen
+sind. L* muss nicht in der Formdomäne liegen; an E wird kein unbeschränkter
+Formoperator angewendet. Das unterscheidet die Repräsentantenapproximation
+von den später benötigten Variationsantworten.
+
+SATZ A. Liegt eine rationale Hermitesche Matrix U_E vor mit
+
+ E*E <= U_E <= epsilon I_m, 0<=epsilon<=1/20,           (5)
+
+so gilt auf dem GESAMTEN D_Z
+
+ tau[z] >= delta ||z||_H^2,
+ delta=alpha-epsilon >=1/20.                          (6)
+
+BEWEIS. Für z orthogonal zu J gilt P*J*z=0 und deshalb Lz=E*z.
+Aus (5) folgt ||E||^2<=epsilon, also ||Lz||^2<=epsilon||z||^2.
+Einsetzen in (1) ergibt (6). Die Form ist auf D_Z geschlossen und
+koerziv, somit besitzt ihr positiver selbstadjungierter Operator A_Z
+eine beschränkte vollständige Inverse mit ||A_Z^(-1)||<=1/delta. QED.
+
+Dieser Satz zeigt keine exakte Gleichheit Z=ker(L). Er benötigt sie nicht.
+Er zeigt einen quantitativ sicheren vollständigen Ergänzungsraum.
+Unentdeckte kleine zusätzliche Funktionalrichtungen sind zulässig, sobald
+ihre GESAMTE gewichtete Wirkung durch (5) bezahlt ist.
+
+Auch d=rank(L) wird nicht vorausgesetzt. Die Wahl von d ist ein praktischer
+Approximationsschritt; die alte Obergrenze 264 ist kein Beweis, dass jede
+beliebige Liste von 264 Funktionen (5) erfüllen würde. Ein größerer
+Rechenraum wäre gesondert zu begründen, nicht durch diesen Satz verlangt.
+
+3. Welche Grame die Unendlichkeit wirklich einschließen
+
+Mit G=L L*, B=L J, W=J*J gilt exakt
+
+ E*E=G-BP-P*B*+P*W P.                                (7)
+
+Der optimale Projektionsfit wäre P=W^(-1)B*. Er ist für Satz A nicht
+erforderlich. Eine rational festgelegte Näherung P ist zulässig; ihr
+vollständiger Fitfehler verbleibt automatisch in (7).
+
+G ist der Gram der vollständigen L2-Repräsentanten aller gewichteten
+Funktionale. Ein Gram ihrer endlich abgeschnittenen Koeffizienten ist
+allein KEINE Obergrenze für G. Dass der letzte Test endlich groß ist,
+beseitigt die Pflicht zur Einschließung aller hohen Wirkungsteile nicht.
+
+Eine korrelationserhaltende gemeinsame Darstellung ist
+
+ H_joint=[ G  B ; B*  W ]=[L*,J]*[L*,J],
+ V=[I_m ; -P], E*E=V* H_joint V.                      (8)
+
+Aus EINER Loewner-Obermatrix U_joint>=H_joint folgt
+U_E=V*U_joint V>=E*E. Vorzeichen und Kreuzterme werden dabei gemeinsam
+erhalten. Zweckmäßig wird die Kongruenz schon auf den gemeinsamen
+Modell-/Integralblöcken ausgeführt, bevor grobe Rundungsfehler addiert
+werden. Eine direkt berechnete volle Restgram-Obermatrix ist ebenso gültig.
+
+Ein rechteckiger Eintragsoberwert für B besitzt keine Loewner-Bedeutung.
+Für Eintragsintervalle sind entweder gemeinsame Blockeinschließungen oder
+zusätzlich bewiesene Operatorfehler erforderlich. Positive Semidefinitheit
+von U_E allein beweist nicht, dass es den tatsächlichen Gram einschließt.
+
+4. Festes Fehlerbudget und gemeinsame Datenfehler
+
+Primäres Abnahmebudget ist (5) mit epsilon<=1/20. Dadurch bleibt die
+verbindliche Tailreserve mindestens 1/20; der Kehrwert kostet höchstens 20.
+Die Grenze wird nicht nach einem fehlgeschlagenen Lauf still erhöht.
+
+Ist der volle Repräsentantenfehler als E=E_model+Delta zerlegt, dann muss
+Delta gemeinsam ALLE noch nicht in E_model enthaltenen Fehler umfassen:
+alte inverse Antwort, Funktional-/Gewichtsfehler, hohe Anteile, exakte
+Projektions-/Gramgeometrie, Integral- und Rundungsfehler. Fehler von J und
+P sind mit ihren tatsächlichen Multiplikatoren zu bezahlen. Die benannten
+Kategorien sind keine unabhängigen Zufallsfehler.
+
+Ein einfacher vorab festgelegter Ersatztest ist
+
+ E_model*E_model<=G_model, Delta*Delta<=G_data,
+ 2(G_model+G_data)<=I/20.                             (9)
+
+Er folgt aus ||x+y||^2<=2||x||^2+2||y||^2. Beispielsweise reichen
+G_model<=I/80 und G_data<=I/80. Diese Werte sind Zielbudgets, keine
+bereits erreichten Messwerte. Der direkte gemeinsame Test (8) kann
+schärfer sein und bleibt die bevorzugte Variante.
+
+Liegen mehrere Fehleroperatoren R_j vor, darf man ihre Gramobergrenzen
+nicht ohne Kreuzterme addieren. Zulässig sind ein gemeinsamer Blockgram
+und Summenkongruenz oder fuer positive theta_j mit sum theta_j=1:
+
+ (sum R_j)*(sum R_j)<=sum theta_j^(-1)G_j,
+ wenn R_j*R_j<=G_j.                                  (10)
+
+Das Gegenbeispiel zweier gleicher skalarer Fehler 1/8 zeigt den Unterschied:
+Die falsche Quadratsumme ist 1/32<1/20, der echte Summenfehler hat Quadrat
+1/16>1/20. Der mitgelieferte Test erfasst genau diesen Fall.
+
+5. Nachfolgender endlicher Schurtest mit voller Tailantwort
+
+Erst NACH (5) sei A_Z der tatsächliche Tailoperator aus (6). Für den
+folgenden L2-Residualtest wird zusätzlich J subset Dom(T_tau) verlangt,
+wobei T_tau der selbstadjungierte Operator zu tau auf H ist. Diese
+stärkere Annahme darf nicht aus bloßer Formzugehörigkeit gefolgert werden.
+Für die hier vorgesehenen stückweise glatten Polynomkandidaten kann das
+gebundene Operatordomänenlemma eingesetzt werden; die endlichen
+Projektionen müssen seine Voraussetzungen erhalten.
+
+Setze
+ A_K=J*T_tau J, B_Z=Pi_Z T_tau J:C^d->Z,
+ S_K=A_K-B_Z*A_Z^(-1)B_Z.                             (11)
+
+Wähle eine fest definierte volle Näherungsantwort Y:C^d->Dom(A_Z).
+Insbesondere muss Y exakt in Z liegen; zum Beispiel Y=(I-Pi)Y0 mit
+Y0 in Dom(T_tau) und den obigen J-Domänenannahmen. Der komprimierte
+Operator wirkt dort als A_ZY=Pi_Z T_tau Y.
+
+Mit R=B_Z-A_ZY und
+
+ K_Y=A_K-B_Z*Y-Y*B_Z+Y*A_ZY
+    =tau[J-Y,J-Y]
+
+gilt exakt
+
+ S_K=K_Y-R*A_Z^(-1)R.                                (12)
+
+Gleichzeitige Loewner-Einschließungen K_lower<=K_Y und R*R<=G_R liefern
+
+ S_K >= K_lower-delta^(-1)G_R.                        (13)
+
+Insbesondere reicht bei delta>=1/20
+
+ K_lower-20G_R >= eta W, eta>0.                       (14)
+
+Mit einem rationalen W_+>=W ist der ausschließlich rationale Test
+K_lower-delta^(-1)G_R-eta W_+>=0 hinreichend. W_-<=W<=W_+ und W_->0
+sind gesondert zu zertifizieren. Eine LDL-Zerlegung muss semidefinite
+Grenzfälle korrekt behandeln; kleine negative Pivots sind keine Nullen.
+
+Die gemeinsame alte inverse Energie wird in tau[J-Y,J-Y] auf den
+gemeinsam korrigierten Kräften ausgewertet. A_K, B_Z und Tailenergie
+dürfen nicht als unabhängig optimierbare Endpunkte ihrer alten Energie
+behandelt werden. Der Boden delta allein ersetzt keinen Nachweis der
+vollständigen Grame K_Y und R*R.
+
+Falls nur J,Y in der Formdomäne nachgewiesen sind, bleibt eine variationale
+Schurformulierung möglich. Der hier verwendete Faktor delta^(-1) fuer
+einen L2-Residualgram ist dann aber ohne zusätzlichen L2-Repräsentanten-
+nachweis nicht gerechtfertigt. Ein Fehler im Formdual benötigt eine
+passende bewiesene Dualnormschranke; dieser Ersatz ist nicht automatisiert.
+
+6. Uniforme Reserve auf dem ganzen R_12
+
+Eine erfolgreiche Matrixprüfung (14) liefert erst eine Reserve in den
+Schurkoordinaten. Fuer eine Reserve in der ursprünglichen H-Norm sind
+Antwort- und Basisnormen zu kontrollieren.
+
+Angenommen Y*Y<=y^2 W und G_R<=r^2 W mit rationalen y,r>=0.
+Da A_Z^(-1)B_Z=Y+A_Z^(-1)R, gilt
+
+ ||A_Z^(-1)B_Z beta|| <=q ||J beta||,
+ q=y+r/delta.                                       (15)
+
+Quadratische Ergänzung und die inverse Dreiecksabbildung liefern
+
+ tau >= beta_H I_H,
+ beta_H=min(eta,delta)/(1+q)^2 >0.                    (16)
+
+Beweis: Für u=J beta und z in Z gilt
+tau[u+z]=beta*S_K beta+||A_Z^(1/2)(z+A_Z^(-1)B_Z beta)||^2.
+Der Wechsel (u,z)->(u,z+A_Z^(-1)B_Z beta) besitzt eine inverse Norm
+höchstens 1+q; K und Z sind in H orthogonal. (16) folgt.
+
+Für eine rein rationale Prüfung reichen obere Grame Y_+>=Y*Y und G_R
+sowie Y_+<=y^2 W_- und G_R<=r^2 W_-. Die Verwendung von W_- in diesen
+beiden Tests ist konservativ in der richtigen Richtung.
+
+beta_H gilt auf dem Rest NACH dem alten Raum und dem 4+8-Block. Ein
+uniformer physischer A9-Gesamtboden benötigt zusätzlich die entsprechenden
+Rückwechsel für die früheren Eliminationen. Nichtnegativität der gesamten
+Form folgt dagegen bereits aus den positiven alten/endlichen Blöcken
+und der vollständigen Restpositivität, unter deren gebundenen Identitäten.
+
+7. Abnahme und Aussagegrenzen
+
+Erforderliche tatsächliche Operatorbelege sind:
+- exakte Funktionsdefinitionen und Normen, Form-/Operatordomänenbelege;
+- volle Basisgram-Einschließungen W_-, W_+;
+- vollständiger Repräsentantenfehlergram, inklusive unendlicher Anteile;
+- nach Tailabschluss volle K_Y- und Residualgram-Einschließungen;
+- alle gemeinsamen Fehler und Quellenbindungen.
+
+Ein JSON-Feld namens 'full_operator' oder ein Hash beweist keinen dieser
+analytischen Sätze. Der mitgelieferte rationale Prüfer bestätigt nur die
+angegebenen Matrixungleichungen aus solchen Eingaben. Sein Erfolgsstatus
+lautet deshalb ausdrücklich PASS_CONDITIONAL_COVERAGE beziehungsweise
+PASS_CONDITIONAL_SCHUR. Eine gesonderte sachliche Prüfung der Eingaben
+ist erforderlich, bevor daraus ein tatsächlicher Operatorbefund wird.
+
+Alle mitgelieferten Rechenbeispiele sind synthetisch. Es wurden keine
+aktuellen Daten von GPT 2 übernommen und keine neuen Prim-/Gamma-
+Operatorintegrale ausgeführt. Der tatsächliche volle Rest bleibt OPEN.
+Ein fehlgeschlagener hinreichender Test bedeutet INCONCLUSIVE, keine
+Negativität der wirklichen Form. Ein möglicher Nullraum bei nichtnegativer
+Form wird durch die strikte Zielschranke dieses Protokolls nicht prinzipiell
+ausgeschlossen; er würde einen anderen, gesonderten Abschluss benötigen.

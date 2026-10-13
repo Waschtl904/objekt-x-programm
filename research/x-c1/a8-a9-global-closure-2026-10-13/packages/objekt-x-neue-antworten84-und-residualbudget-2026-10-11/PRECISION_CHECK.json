@@ -1,0 +1,24 @@
+{
+  "status": "PASS_768_AND_1024_BIT_RESPONSE_BUILDS",
+  "cases": [
+    {
+      "parity": "even",
+      "interval_comparisons": 72391,
+      "K_X_metrics_and_scalar_budgets_identical": true,
+      "M_upper_max_entry_difference": "131126233/100000000000000000000000000000000000000000000000000000000000000000000000000",
+      "other_non_interval_data_identical": true
+    },
+    {
+      "parity": "odd",
+      "interval_comparisons": 72391,
+      "K_X_metrics_and_scalar_budgets_identical": true,
+      "M_upper_max_entry_difference": "43050699/1000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "other_non_interval_data_identical": true
+    }
+  ],
+  "directed_bound_constructions_compared_by_common_caps": [
+    "finite model residual <1e-50",
+    "M-upper rounding price <1e-30"
+  ],
+  "analytic_remainders_not_inferred_from_precision_agreement": true
+}

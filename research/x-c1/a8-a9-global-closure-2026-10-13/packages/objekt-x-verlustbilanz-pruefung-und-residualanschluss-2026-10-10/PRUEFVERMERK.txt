@@ -1,0 +1,149 @@
+Objekt X — Prüfung der gemeinsamen Verlustbilanz und Anschluss an den Residualtest
+10. Oktober 2026
+Status: AUTOMATISIERTER REPLAY BESTANDEN / ANALYTISCHE VORAUSSETZUNGEN GEERBT
+Neue Anschlussherleitung: AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Befund
+
+Die vorgelegten Intervalle bestätigen die Widerlegung der Teilbedingung
+R0 <= 0,11 L in beiden Paritäten. Die vollständig mit Fehlern eingeschlossenen
+Gesamtverluste auf den zwei vorgelegten Funktionen liegen unter L.
+In den geprüften Umformungen der neuen gemeinsamen Bedingung wurde kein
+mathematischer Fehler gefunden. Das ist keine vollständige externe Prüfung
+aller geerbten Formidentitäten und kein Vollraumabschluss.
+
+Unabhängig mit rationaler Intervallarithmetik aus den gespeicherten
+Integral-/Fehlerdaten rekonstruierte, nach außen gerundete Aussagen:
+
+gerade:
+  0,3460219647 < R0[r]/L[r]     < 0,3460219652
+  0,5370508072 < Loss_T[r]/L[r] < 0,5370508077
+ungerade:
+  0,4084886817 < R0[r]/L[r]     < 0,4084886819
+  0,5964190046 < Loss_T[r]/L[r] < 0,5964190048
+
+Die separate Rechnung benutzt Fraction und nach außen gerundete
+Ganzzahl-Quadratwurzeln, nicht die Arb-Routinen des Original-Replays.
+Sie setzt jedoch dieselben gespeicherten Integrale und analytischen
+Fehlerschranken voraus. Sie ist keine unabhängige Neuintegration der
+beiden vollständigen Prüffunktionen.
+
+2. Durchgeführte Kontrollen
+
+- Original-Replay in frischer Entpackung: PASS_SEALED_PACKAGE_REPLAY.
+  37 neue Dateibindungen, vier verschachtelte Archivbindungen und
+  16+14+22+72=124 geerbte Manifestbindungen bestanden.
+- Alle 499 Intervallvergleiche des gelieferten Replays bestanden.
+- Die endliche Verlustalgebra wurde aus den gespeicherten Kräften und
+  Integralen erneut berechnet; AUDIT.json stimmt mit expected/AUDIT.json
+  überein.
+- Die separate rationale Rechnung bestätigt alle acht Dezimalendpunkte
+  der vier obigen Einschließungen. Insbesondere werden auch die unteren
+  Grenzen des tatsächlichen Gesamtverlustes rekonstruiert.
+- 383 gespeicherte Kalibrierungswerte (191 c, 191 Bh, ein voller hoher Gram)
+  wurden separat mit den geerbten Intervallen verglichen.
+- Die 20 gespeicherten Residualintervalle der direkten alten Low/High-
+  Gegenrechnungen wurden separat auf Nulleinschluss und Größe geprüft.
+  Diese 20 Integrationen wurden in dieser Prüfung nicht neu ausgeführt.
+- Gezielte NEUINTEGRATION beider direkten Kalibrierungen mit 3072 Bit:
+  je 16 Gamma-Kopplungen, vier physische Kreuzkopplungen und ein
+  Diagonalvergleich bestanden. Die unveränderten Originalprogramme
+  liefen in einem separaten Arbeitsverzeichnis mit python-flint 0.9.0.
+  Dies sind Wiederholungen der Implementierung, keine neue unabhängige
+  mathematische Implementierung der Integrale.
+- Neue Residualidentität, ihre Oberabschätzung und eine geschärfte
+  Neumann-Restschranke wurden zusätzlich an exakten rationalen
+  synthetischen Matrizen geprüft. Diese Tests enthalten keine neuen
+  Objekt-X-Operatorwerte.
+
+Nicht erneut ausgeführt wurden alle vollständigen alten Antwortläufe
+PROBE_*, die vollständigen gemeinsamen JOINT_* Integrationen und die
+geerbten ursprünglichen Integrationen. Die tatsächliche 203x203-Matrix
+auf ganz T wurde weder integriert noch positiv zertifiziert.
+
+3. Die neue gemeinsame Bedingung
+
+Mit eta=10^-10 und H[r]=delta^-1||h(r)||² lautet die positive Grundform
+
+  S_eta=(1-eta)L-H >= c L,  c=11/100-eta>0.
+
+Die 203 Kraftzeilen A0 und D0 aus dem Original bleiben unverändert.
+In der vollständigen, exakt eingeschränkten Restgeometrie gilt
+
+  H + A0*D0^-1 A0 <= (1-eta)L
+  genau dann, wenn G_eta=A0 S_eta^-1 A0* <= D0.
+
+Hier ist die Inverse als Inverse der eingeschränkten Form auf T zu lesen.
+Die normierte Operatorrechnung und die im Original angegebene positive
+Neumann-Reihe liefern genau diese Äquivalenz und deren Restabschätzung.
+Die bekannte globale 89-%-Schranke sichert die Invertierbarkeit; sie
+erzwingt in dieser Rechnung keinen konstanten 11-%-Preis für R0.
+
+Auf den beiden Prüffunktionen ergeben sich zusätzlich die Quotienten
+
+  R0[r]/S_eta[r] etwa 0,427730905 (gerade),
+                    0,503021715 (ungerade).
+
+Die exakten Intervalle stehen in INDEPENDENT_CHECKS.json. Dies sind Werte
+in zwei Richtungen. Sie liefern insbesondere keine obere Schranke für
+den maximalen Quotienten auf ganz T. Ein globales Scheitern der neuen
+hinreichenden Bedingung ist damit weiterhin möglich.
+
+4. Anschluss an unser früheres Paket
+
+Das Paket Basisabdeckung-und-Fehlerbudget verwendet eine andere
+Ausgangsungleichung: die tatsächliche Schurform tau auf (R12,W_X), eine
+endliche Abbildung L_64 und den Boden 1/10. Sein Repräsentantenfehler
+<=1/20 erzeugt konditional einen Ergänzungsraum mit WX-Boden 1/20.
+Daraus stammt dort der L2-Residualfaktor 20.
+
+Diese Aussage wird durch das Scheitern von R0<=0,11L nicht widerlegt.
+Sie hat diese 11-%-Voraussetzung nicht benutzt. Sie ist aber auch kein
+Nachweis der jetzt fehlenden 203x203-Grambedingung. Das damalige L_64
+ist nicht der hier verwendete diagonale Operator L.
+
+Für die neue Bedingung ist S_eta bereits auf GANZ T positiv bekannt.
+Es ist deshalb zweckmäßig, Näherungslösungen für die 203 rechten Seiten
+A0* unmittelbar gegen S_eta zu zertifizieren. Das vollständige Residuum
+wird in der dualen L-Energienorm bezahlt. Der passende Faktor ist
+
+  1/c = 10000000000/1099999999, etwa 9,0909090992.
+
+Er gilt nicht für einen unqualifizierten L2-Residualgram. Es handelt sich
+um eine andere Norm als beim Faktor 20; die Zahlen sind kein direkter
+Effizienzvergleich. Der neue Test benötigt nur Formzugehörigkeit der
+Näherungslösungen, sofern ihr vollständiger Formdual-Residualgram wirklich
+nachgewiesen wird. Siehe RESIDUALANSCHLUSS.txt.
+
+5. Genauigkeit des vorhandenen Präzisionsvergleichs
+
+Der Original-Replay vergleicht überlappende Intervalle, keine bitgleichen
+Integrationen. Das genügt als Konsistenzkontrolle, ersetzt aber keine
+analytische Restabschätzung.
+
+compute_joint_probe.py bindet PROBE_*_12_3072.json auch im 4096-Bit-Lauf.
+Die alte Bh-Eingabe dieses Joint-Laufs wird daher aus dem 3072-Bit-Datensatz
+übernommen. Daneben existiert ein separat gerechneter 4096-Bit-PROBE-Lauf.
+Das entwertet die gerichteten Einschließungen nicht; der Joint-Vergleich
+ist jedoch keine vollständig unabhängige Neuberechnung aller Eingaben
+mit 4096 Bit. Für einen solchen künftigen End-to-End-Vergleich wäre die
+Präzisionsbindung ausdrücklich umzustellen und erneut zu prüfen.
+
+6. Ergebnisgrenze
+
+Die starre Teilbedingung R0<=0,11L ist als widerlegt abzulegen.
+Die globale hohe 89-%-Schranke bleibt eine gültige übernommene Eingabe.
+Das neue Ziel G_eta<=D0 bleibt OPEN.
+Der Quellenfehlerpreis <2*10^-12 L ist unter Loss0<=(1-eta)L korrekt;
+die verbleibende Reserve von 9,8*10^-11 L ist ausschließlich konditional.
+Ein fehlgeschlagener hinreichender Obermatrixtest beweist keine negative
+ursprüngliche Form. Selbst ein Gegenzeuge gegen die neue hinreichende
+Verlustbedingung wäre zunächst nur ein Gegenzeuge gegen diese Majorante.
+
+FULL_203_TAIL_GRAM_COMPUTED=false
+FULL_REMAINDER_CERTIFIED=false
+OBJECT_X_CONSTRUCTED=false
+
+Die Originalarchive wurden nicht verändert. Es gab keinen neuen
+GitHub-Abruf und keine GitHub-Änderung. Der im Original genannte Main-Hash
+wird hier nur als historische Quellenangabe übernommen.

@@ -1,0 +1,31 @@
+{
+  "status": "AUTHOR_DERIVED_EXTERNAL_REVIEW_OPEN",
+  "files": {
+    "BERICHT.txt": "92b93aece679f48231cc4e089a8461d204551d3c5b17396b94826f54ee3d1feb",
+    "HERLEITUNG.txt": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd",
+    "README.txt": "9cdf43bd2304b87ddbf57add0e9267c132c097eb43cfb6286850a1a88b6ee35b",
+    "ANSCHLUSS_GPT1.txt": "2b5c788230673e66e05f2316efd1f9a044fbcd9753a1c740c09330f01c0a88e6",
+    "REFINED_INPUT.json": "7c2a93adb187cc51f03f8083ffd82d4437d155d032da698e138787f90379614b",
+    "AUDIT.json": "9d9af6ab760a0377ddbf2fd995c6a6df8fc62151fec9e259033b8f9a52ce3769",
+    "FULL_DIRECT_TEST.json": "02dda68530aea516c771f31402a49760a5c42f01cd10b03288bd668d294fafad",
+    "REFINED_COMMON96.json": "18a71ae90f69dc28ecc1a42b7ed865057cdd2a28986abc3a1ac06bb558e23097",
+    "REFINED_HIGH_FLOOR.json": "23a33fa2afc580c3f9d90710e99ef0228d2f4b38d54d375c07447e4a2123e191",
+    "compute_direct_rest.py": "d520189ee7ae1fe9654aa7c19497484037d84aa43a0780329d1a7ee30c95b870",
+    "test_full_direct.py": "d784cfb532e30849b78360836bcefb2f1bd2f1e9f75669a2c7402210d1d8ece7",
+    "refine_old_majorant.py": "9afeec7892426041858a524de3f9e3e9d2b46578876de0e9f1540edfd6012730",
+    "build_audit_input.py": "c6f76eff1a5b0978214303efd92ebab099bb002bc154265aab199646725a74fc",
+    "audit_full.py": "f87c34e4710e1f4ea8bd5c9b48afb1d2317611dbacc4f8e5dd824b111666b2a4",
+    "rational_helpers.py": "b209bee416c9875a96f37381bd84a7d421b3615b89a4f7cb39266006a082a063",
+    "rational_ldl.py": "4bcbdb972117edf0af7b098c2dc00c1c9f921f020e1311ad31495bf1d4b66700",
+    "inherited_floor.py": "20a16066550a7dd4741abc80d08e2d06b264ea444f144253950e74a458167408",
+    "reproduce.py": "abbcb1806af82563296f6942561e65d0fb2b0108d928083020445c0f8cd03e0f",
+    "rebuild_from_parent.py": "3cf757dcd097ad8dc7a5a48115009548055f3479d0b4aff2905b751f86c770e6",
+    "DIRECT_REST_EVEN_3072.json": "b8985179549851bb910c3c423c3649f7f89c97201fd11a5ad86bbc39e565c155",
+    "DIRECT_REST_EVEN_4096.json": "f633c56527e0b02268db4e03d05e583a10fbb1b090c35336ec760560e33fae6e",
+    "DIRECT_REST_ODD_3072.json": "d6a744a15135937fc2cb1d7538047d621573c52479426149888660996a020b53",
+    "DIRECT_REST_ODD_4096.json": "cb7cf0a9198b38da6d82d16a1dfcc4c0460791660db37169b063d27afecca00f",
+    "inputs/Objekt-X-Richtungsbruecken-Pruefung-und-Konstantentest-2026-10-11.zip": "ec6b5398a8ac3ddb1038e7e4cb3ceaee5b2eebccf534137a3d7b14be0993e511"
+  },
+  "new_common96_positive": true,
+  "full_remainder_certified": false
+}

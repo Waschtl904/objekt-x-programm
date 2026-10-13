@@ -1,0 +1,93 @@
+Objekt X — der vollständige globale L2-Anschluss ist geschlossen
+13. Oktober 2026
+
+ERGEBNIS, weiterhin unter den geerbten Operator- und Domänenvoraussetzungen:
+
+Für beide Paritäten ist die bislang fehlende vollständige globale
+Modell-Gram-Bedingung bewiesen. Zusammen mit dem bereits zertifizierten
+vollständigen Modellfehler erfüllt sie beide Bedingungen (C5) des
+Prüfpakets vom 12. Oktober. Damit gilt für die tatsächliche regularisierte
+Restfunktion
+
+ Z=(I-P_<104)(R_X-B C_exact),   H=E_dir/10920,
+ U_g=Z*Z < (3/10000) H <= H.
+
+Das bisherige richtungsabhängige Ziel E_dir wurde nicht vergrößert.
+Der tatsächliche regularisierte Gram benötigt weniger als 0,030 Prozent
+seines vorgesehenen Budgets H, in jeder der 203 Kraftrichtungen zugleich.
+Dies ist keine Prozentangabe über die übrigen Teile des Formdualgrams.
+
+Was neu vollständig berechnet wurde
+---------------------------------
+Je Parität: der ganze 203x203-Integralgram, sämtliche 104x203 niedrigen
+Projektionskoeffizienten und deren vollständige Subtraktion. Die 16
+Teilintervalle überdecken die gesamte Schale. Beide logarithmischen
+Ränder, alle zehn Kernzellen, die sechs äußeren Primadjunkte und alle
+Kreuzterme bleiben enthalten. Alle unendlichen analytischen Reihenreste,
+endlichen Kürzungen und Radien der erhaltenen Koeffizienten sind bezahlt.
+
+Die stückweise Näherung besitzt selbst unendlich viele Legendre-Moden.
+Ihr hoher Gram wird durch das vollständige Integral minus die ersten
+104 Projektionszeilen gewonnen. Es wird keine hohe Folge abgeschnitten.
+
+Nachgewiesene Schranken
+----------------------
+                                      Gerade           Ungerade
+Voller L2-Näherungsfehler in D-Metrik   <= 2.08E-14         <= 2.74E-15
+Physischer Modellfehler                < 1.2e-11        < 2.3e-13
+Fehler des gerundeten Logabzugs         < 1e-10          < 1e-10
+
+Die erste Zeile ist nach oben gerundet; die exakten rationalen Grenzen
+stehen in data/AUDIT_*.json. Sie ist vom physischen Modellfehler zu
+unterscheiden: Beide werden separat und vollständig bezahlt.
+
+In beiden Paritäten bestätigt eine unabhängige rationale 203x203-LDL-
+Rechnung für den hohen Gram U_tilde der festen Näherung
+
+ U_tilde <= (1/4000) H.
+
+Mit Young-Parameter 1/4000 und dem vollen Näherungsfehler folgt
+
+ U_hat < (3/10000) H < (999/1000) H.
+
+Zusätzlich werden H>=uD und der gerundete Logfehler rational neu geprüft.
+Die gebundenen physischen Modellfehler erfüllen
+
+ 4(delta_R+delta_C)^2 < (1/1000)^2 u.
+
+Dies sind die beiden hinreichenden Bedingungen (C5), mit strengerer
+erster Schranke. Ein zweiter Young-Schritt mit Parameter 1/1000 bezahlt
+den vollständigen physischen Modellfehler und den gerundeten Logabzug
+direkt in H-Metrik. Die rationale Rechnung bestätigt sogar U_g<(3/10000)H
+für die tatsächliche Funktion, einschließlich aller Grade ab 104.
+
+Prüfungen und ihre Reichweite
+----------------------------
+- Gerichtete vollständige Integration und gerichteter Matrixvergleich.
+- Unabhängiger rationaler Neuaufbau von G-V*V mit allen 104 Zeilen.
+- Je 203 positive Pivots für den Gram-Vergleich und für H-uD;
+  je 12 positive Pivots für die nichtorthogonale Restmetrik.
+- 90 Kontrollen vollständiger Cauchybausteine und ihrer Reihenreste;
+  741 exakte Integral- und Projektionsvergleiche.
+- Vollständige Primzell-Geometrie und exakte Zusammenfassung von
+  80 affinen Logausdrücken zu 35 identischen Logwurzeln.
+- Synthetische Gegenkontrollen für fehlende Kreuzterme und fehlende
+  letzte zwölf Kraftkoordinaten im Rundungsbudget.
+
+Der Standard-Replay prüft auch das eingebettete Modellfehlerpaket v2
+rational erneut. Er benötigt nur die Python-Standardbibliothek.
+Die beigefügten Prüfquittungen unterscheiden einen rationalen Replay
+aus frischem Entpacken ausdrücklich von einem optionalen vollständigen
+Neuaufbau sämtlicher Integrationen. Letzterer ist mit --rebuild verfügbar.
+Eine gespeicherte Integrationsdatei wird durch den rationalen Replay
+nicht noch einmal analytisch integriert; dafür liegt der vollständige
+Erzeugungscode samt Eingabesnapshot und Herleitung bei.
+
+Was noch offen bleibt
+---------------------
+Dieses Paket schließt den globalen L2-Anschluss (C5), nicht die gesamte
+Schlusskette A8->A9. Die abschließende Zusammenführung mit der gewichteten
+Restbilanz, dem Formdualgram und dem endgültigen Schurvergleich ist hier
+nicht durchgeführt. Der Tailboden 1/20 und A8->A9 werden weiterhin nicht
+behauptet. Auch die geerbten Operatorvoraussetzungen bleiben erforderlich.
+Die externe Gegenprüfung dieses neuen Pakets steht noch aus.

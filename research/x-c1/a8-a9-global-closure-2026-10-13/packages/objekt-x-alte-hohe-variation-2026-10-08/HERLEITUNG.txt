@@ -1,0 +1,99 @@
+Objekt X — zwölf alte hohe Variationsfunktionen
+8. Oktober 2026. AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN.
+
+1. Gegenstand und Voraussetzungen
+
+A ist weiterhin der wirkliche alte positive Operator auf dem gebundenen
+alten Momentkern. E=Z* A^(-1) Z ist die gemeinsame Energie derselben zwölf
+Quellen: vier g_z und acht gY. Die vorhandenen rationalen niedrigen
+Vorschläge P und die obere Matrix U bleiben fest. Die alte Untergrenze
+L_alt liegt bereits unter dem vollständigen Variationswert F(P).
+
+Es werden genau die zuvor vorgeschlagenen zwölf zusätzlichen Funktionen
+H verwendet: alte rohe Legendregrade 384,386,...,406 gerade bzw.
+385,387,...,407 ungerade, jeweils mit der ursprünglichen Mellinkorrektur
+M x = x - e <m,x>/<m,e>. Alle Funktionen gehören zur geerbten Formdomäne.
+H bezeichnet hier die Synthese dieser Testfunktionen, nicht die frühere
+Breitenmatrix U-L. Für letztere schreiben wir D.
+
+2. Vollständige neue Modellintegrale
+
+K_mod=H*(Z_mod-A_mod P), T_mod=H*A_mod H.
+Die Quellen behalten den regulären Gamma-Grad 224; der alte Operator
+behalt den gebundenen Grad 160. Alle logarithmischen Endpunktanteile
+werden durch exakte Stammfunktionen integriert. Alle aktiven alten
+Primverschiebungen 2,3,4,5,7 und alle Quellenverschiebungen einschließlich
+8 werden auf der vollständigen Zellzerlegung behandelt. Es gibt keinen
+Abbruch des logarithmischen hohen Restes.
+
+Die Modellreste werden anschließend als Operatorfehler bezahlt.
+Die beiden Integrationsläufe verwenden tatsächlich 3072 und 4096 Bit.
+Die acht lokalen Y-Koeffizientenvektoren sind in beiden Läufen dieselben
+gespeicherten rationalen Mittelpunkte des bisherigen 4096-Bit-Quellmodells.
+Die vorhandene Quellenfehlerhülle bezahlt deren Abstand zum festen Y.
+
+3. Gemeinsamer Variationsgewinn
+
+Für jede rationale Matrix V und W=HV gilt exakt
+
+ F(P+W)-F(P) = K*V+V*K - V*T V,
+
+wobei K und T hier die wirklichen, vollständigen Paarungen sind.
+V wird aus dem Mittelpunkt von T_mod V=K_mod gewonnen und auf 60
+Dezimalstellen rational festgelegt. Eine exakte Lösung ist nicht nötig.
+Die ursprüngliche unendliche Inverse wird nicht durch diese Matrix ersetzt.
+
+Sei ||A-A_mod||<=gamma=2.1 epsilon_Gamma_alt. Diese Schranke folgt aus
+2a<2.1 und der geerbten vollständigen Gamma-Kernmajorante. Setze
+P_G=P*P und W_G=W*W. Die Mellinkorrekturen bleiben in beiden Gramen.
+
+Die gemeinsame Quellenfehlerabbildung delta_Z erfüllt
+
+ delta_Z* delta_Z <= E_Z
+ E_Z=diag(2 epsilon_z^2 W_z, 2 epsilon_Y^2 I_8).
+
+Der Faktor 2 bezahlt die gemeinsame Wirkung der beiden Quellgruppen;
+keine Unabhängigkeit ihrer Spalten wird vorausgesetzt.
+
+Für beliebige positive rationale tau_s,tau_a majorisiert
+
+ E_err = tau_s W_G + E_Z/tau_s
+       + gamma [tau_a P_G + (1+1/tau_a) W_G]
+
+den gesamten möglichen Verlust des Variationsinkrements. Der erste Teil
+bezahlt 2 Re W*delta_Z. Der zweite bezahlt sowohl
+2 Re W*(A-A_mod)P als auch W*(A-A_mod)W. Die vollständigen Grame P_G und
+W_G bleiben erhalten. tau_a und tau_s werden aus deren Spuren vorgeschlagen
+und rational nach oben gerundet; die Gültigkeit gilt für jede positive Wahl.
+
+Aus den gespeicherten Intervallen wird eine rationale Löwner-Untergrenze
+J <= K_mod*V+V*K_mod - V*T_mod V - E_err gewonnen. Zusätzlich wird
+10^(-40) I_12 abgezogen. Diese offen ausgewiesene Rundungsreserve erlaubt
+eine unabhängige genaue Fraction-Intervallrekonstruktion aller Produkte.
+Der separate Prüfer beweist, dass J unter seiner eigenen Intervall-
+Untergrenze liegt. Damit gilt E >= L_neu=L_alt+J.
+
+4. Exakte Abnahme
+
+In beiden Paritäten und beiden Integrationsläufen hat J zwölf strikt
+positive rationale LDL-Pivots. Daher ist L_neu strikt stärker als L_alt,
+und E=L_alt ist durch die neue Information ausgeschlossen. Auch
+U-L_neu ist exakt positiv. U selbst wird nicht verändert.
+
+Der signierte C-Eingang B bleibt fest. Der Hilfsmittelpunkt der Darstellung
+C=B-E_zY wird konsistent an die neue Energiespanne angepasst. Dies ist
+keine Änderung der zugrunde liegenden C-Integrale oder ihrer Archivdateien.
+Mit L_neu und D_neu=U-L_neu wird dieselbe gemeinsame Energie/C-Abschätzung
+erneut ausgewertet. Alle übrigen Delta- und 19-Anteile bleiben erhalten.
+
+5. Aussagegrenze
+
+Die neue U00-Obermatrix bleibt größer als I in einer rational zertifizierten
+Richtung. Das ist kein negativer Zeuge für den tatsächlichen Operator.
+Auch E=L_neu, Delta=0 liefert noch eine ungünstige Belegung der verwendeten
+endlichen Matrixrelaxation. Eine physische Realisierung dieser Belegung
+wird weder bewiesen noch vorausgesetzt.
+
+Die ursprünglichen Formidentitäten, A8-Positivität, Quellengeometrie und
+gebundenen Modellresthüllen bleiben Voraussetzungen. Der vollständige
+Rest, G01, gamma01 und beta_tail werden in diesem Versuch nicht berechnet.

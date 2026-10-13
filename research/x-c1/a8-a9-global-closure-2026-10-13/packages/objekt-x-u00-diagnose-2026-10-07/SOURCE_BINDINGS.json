@@ -1,0 +1,101 @@
+{
+  "source_main": "da50f0a21691e6fd253163e612a2af2898606581",
+  "inputs": [
+    {
+      "copy": "work/remainder-integration-check-v2/originals/weighted-response/RATIONAL_MAJORANT.json",
+      "sha256": "7b270ed33660be9fb68375d71da82b66cbf816a47ec605fd1932aa24a918ea47",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/weighted-response/expected/FACTOR_1536.json",
+      "sha256": "326e39414425be2266d7ae44ba77be2e865d45b7ac664eea99c0ed5fc481762b",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/weighted-response/inputs/a8_model.json.gz",
+      "sha256": "5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/weighted-response/HERLEITUNG.txt",
+      "sha256": "0760278c91fd3017f515781c251c47b4f92e81cbd18075e281ea17791be4e7fd",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/weighted-response/SOURCE_BINDINGS.json",
+      "sha256": "cffca8464a3e54f1780040625d8c42d1106c97cf00641694bf2bad93b06453b4",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/weighted-response/SHA256SUMS",
+      "sha256": "b662b60a235bcbc0a9b7e787d6a9ccae364266ca01f2d46c0e63ca9c70457322",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/half-inverse/expected/1536.json",
+      "sha256": "185b501de8f218f8b62812631fe52301a47a288f11b9b4e8205229da7f89da82",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/half-inverse/HERLEITUNG.txt",
+      "sha256": "cd13e95a5ce2f50159a90e3df80a79e16950389a6804161db4ebffa475293035",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/half-inverse/SOURCE_BINDINGS.json",
+      "sha256": "23d308ac084bb3cffc4a10e5010a2fd3ab184af650c8cce14c12421eefd36fbb",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/half-inverse/SHA256SUMS",
+      "sha256": "7229c0b58d2af5ca4cdee5f7741499ca1f55bb2d35ee56590080865260fcb3db",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/eight-source/expected/4096/RESULT.json",
+      "sha256": "a28ddf3ab79d0e7de4bffc2386f492bb3b2a5f5cc37d06e36151737e484bc9ad",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/eight-source/RATIONAL_PROPOSALS.json",
+      "sha256": "cbdf1dca03feb7accf5c5fd64661600dce38222c1563eefc07cae73b1349d29c",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/eight-source/PROOF.txt",
+      "sha256": "5a7c0bfbb53669a9731645b4b36c16148c1d519e80850d2dd4ce3a3dd4497a5b",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/eight-source/SOURCE_BINDINGS.json",
+      "sha256": "14eb6fae91b15045fd4fd2a6040d836703482eb9500871e59e77a41263e451a8",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/eight-source/SHA256SUMS",
+      "sha256": "b1c30c155d68d269b2012d8a734c8407d164cf2b4c479285cd0a427027bb4062",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/eight-source/code/compute_inverse_energy_gate.py",
+      "sha256": "0c0f288d24710bf8e0a37b625825670ce508835a17e7755909557064535da519",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/eight-source/code/compute_source_mixed.py",
+      "sha256": "2d24184788ad846f6216dcef5a11a761ca4c3f4d4cd56cea3268b67cdbf48df9",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/eight-source/code/eight_source_refined.py",
+      "sha256": "baac27c2684d7683cdc586032a681a84d1b3f044750b9e2e80378fae7f204501",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    },
+    {
+      "copy": "work/remainder-integration-check-v2/originals/remainder/BEWEIS.txt",
+      "sha256": "80aceab1efff664a073d255d3f13377af45bcdd111b01898451ab872ef60c212",
+      "source": "Locally verified original package, bound to the canonical repository input chain."
+    }
+  ],
+  "new_claim_status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN"
+}

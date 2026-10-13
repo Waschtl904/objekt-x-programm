@@ -1,0 +1,63 @@
+Objekt X — neue Antworten geprüft; erster tatsächlicher Außenresidualgram
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Bitte zuerst BERICHT.txt und PROOF.txt lesen. Maßgeblich sind die neuen
+K12_neu, X, D203 und M_upper aus deinem Antworten84-Paket.
+
+1. Die neue Antwortrechnung wurde bei 768 UND 1024 Bit frisch ausgeführt.
+   Alle vier JSON-Datensätze sind in sämtlichen Feldern identisch.
+   Der rein rationale Audit besteht. reproduce.py des Eingangspakets
+   bricht unter Linux nur beim abschließenden BYTE-Vergleich ab:
+   PRECISION_CHECK.json im ZIP hat CRLF, der Replay schreibt LF.
+   Die JSON-Werte sind identisch. Der hiesige Prüfer berücksichtigt genau
+   diesen Formatunterschied; Originalarchive wurden nicht verändert.
+
+2. K12_neu>epsilon K12_alt und ||X||_F<0.325 sind rational bestätigt.
+   Damit sind die beiden endlichen Bedingungen des vorigen eigenen
+   Dualrest-Anschlusses erfüllt. Der tatsächliche J-Residualanteil samt
+   allen Fehlern kostet höchstens 9.19e-17 D bzw. 1.50e-19 D.
+
+3. NEU: Alle hohen und direkten J84-k96,...,k103-Kreuzintegrale liegen vor.
+   Vier volle Integrationen, 3072/4096 Bit beider Paritäten; je 44068
+   Intervallvergleiche bestanden. Keine hohe Modenliste ersetzt die
+   vollständigen hohen Funktionen. Je Parität 15768 Anschlusskontrollen.
+
+4. Aus deinen festen Antworten wurde tatsächlich
+
+     R_K=C_K* -[(1-eta)q_JK-H_JK]* X
+
+   mit der NEUEN Majorante gebildet. data/RESIDUAL_*_3072.json enthält
+   alle acht x 203 Residualwerte und ihre vollständigen Fehlerpreise.
+   audit_exterior.py baut diese 1624 Werte rational erneut auf und prüft
+   den Budgetvergleich mit 211 positiven rationalen LDL-Pivots.
+
+5. Sei B=beta(D203-M_upper). Für Q8=sum_(n=96)^103 R(k_n)*R(k_n)/d_n
+   gelten einschließlich tatsächlichem J-Residual und ganzer Momentgeometrie
+
+     gerade:   Q_J+Q8+Geometriepreis <0.00020 B,
+     ungerade: Q_J+Q8+Geometriepreis <0.00065 B.
+
+   Die genauen Brüche und engeren Werte stehen in EXTERIOR_AUDIT.json.
+   Das ist eine Loewner-Aussage gegen die RICHTUNGSABHÄNGIGE Budgetmatrix.
+
+6. Die globale Formel in PROOF.txt reduziert den verbleibenden Auftrag auf
+
+     Q_>=104=sum_(n>=104) R(k_n)*R(k_n)/d_n,
+
+     gerade:   Q_>=104 <=4999/5000 B,
+     ungerade: Q_>=104 <=19987/20000 B.
+
+   Die ganze Summe muss nachgewiesen werden. Weitere endlich viele
+   Koeffizienten allein liefern keinen vollständigen Restpreis.
+   k_n ist exakt W_X-orthogonal zu P95; nicht mit rohen ell_n vertauschen.
+   Die Überführung beider Geometrien ist ausdrücklich hergeleitet.
+
+7. Diese Daten schließen A8->A9 und den Tailboden 1/20 noch NICHT.
+   FULL_REMAINDER_CERTIFIED=false. Der Faktor 20 wurde nicht vorausgesetzt.
+   Die gemeinsame Verlustbedingung und die eigentliche Zielmetrik bleiben
+   bei einem späteren vollständigen Abschluss getrennt zu prüfen.
+
+Die neue Integrationsdatei braucht für einen frischen Lauf den bisherigen
+entpackten Galerkin-Arbeitsbaum samt direct-rest84-Daten; genaue Befehle
+stehen in README.txt. Die Standard-Python-Nachprüfung braucht nur die drei
+gebundenen ZIPs und führt keine neuen Funktionsintegrationen aus.

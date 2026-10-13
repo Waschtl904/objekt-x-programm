@@ -1,0 +1,140 @@
+Objekt X — Galerkin84 und gemeinsamer Verlusttest
+11. Oktober 2026
+AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Die festgelegte gemeinsame Verlustschranke scheitert bereits auf der Basis84: gerade, ungerade.
+
+Die beiden vollständigen H84-Matrizen (84x84), die C84-Matrizen der
+gemeinsamen Verlustbilanz (203x84), feste rationale Näherungsantworten
+X (84x203) und die zugehörigen M-Matrizen sind berechnet. Die vollständigen
+hohen Quellanteile wurden als Funktionen integriert. Sie wurden nicht
+durch eine endliche Liste hoher Moden ersetzt.
+
+Die neuen L-Energiegrame wurden unabhängig wiederholt. Alle numerischen
+Felder stimmen exakt mit der Übergabe überein; die beiden abweichenden
+Basis-Dateiprüfsummen sind in INPUT_AUDIT.json dokumentiert.
+
+Konkrete Ergebnisse
+
+Die Residualbudget- und Beitragsangaben sind gerundete Orientierungswerte;
+die gerichteten rationalen Grenzen stehen in den JSON-Dateien.
+
+gerade:
+  Zertifizierte Konditionszahl des Hilfsblocks B84 < 1.57105924
+  R0[Jw] / S_eta[Jw] > 1.9525101668
+  (H+R0)[Jw] / L[Jw] > 1.7450178928
+  Erforderliches hinreichendes volles Residualbudget in D0-Metrik: -0.1047764304
+  Bewiesene grobe volle Residualobergrenze in derselben Metrik: 1.571566e+43
+
+  Modellbeiträge auf dem rationalen Prüfray, jeweils geteilt durch L:
+    alte hohe Antwort: 0.2178373324
+    alte niedrige Antwort: 0.0050314918
+    Viererkopplung: 0.0122532267
+    signierte Achterkopplung: 1.5098958447
+
+ungerade:
+  Zertifizierte Konditionszahl des Hilfsblocks B84 < 1.56876556
+  R0[Jw] / S_eta[Jw] > 2.2643362978
+  (H+R0)[Jw] / L[Jw] > 1.9865280044
+  Erforderliches hinreichendes volles Residualbudget in D0-Metrik: -0.1390772899
+  Bewiesene grobe volle Residualobergrenze in derselben Metrik: 3.2009027e+40
+
+  Modellbeiträge auf dem rationalen Prüfray, jeweils geteilt durch L:
+    alte hohe Antwort: 0.2197265820
+    alte niedrige Antwort: 0.0089513367
+    Viererkopplung: 0.0122402346
+    signierte Achterkopplung: 1.7456098513
+
+
+Bedeutung und Grenzen
+
+Der Prüfray r=Jw ist exakt durch 84 rationale Koordinaten bestimmt und
+liegt in T. Der entscheidende Test bezahlt alle analytischen und
+numerischen Fehler. Die scharfe Richtung wird lediglich numerisch
+vorgeschlagen; der abschließende Test verwendet rationale Arithmetik.
+Ein separates vollständiges Einzelintegrationsverfahren bei 4096 Bit
+prüft diese Richtung gegen die gebündelte Matrixrechnung bei 3072 Bit.
+
+Eine nachgewiesene Verletzung R0[Jw]>S_eta[Jw] kann durch einen kleineren
+Galerkinresidualfehler oder eine Basisvergrößerung nicht aufgehoben
+werden: die festgelegte Zielungleichung wäre auf einer bereits erfassten
+Funktion falsch. Der vollständige Formdual-Residualgram wurde nicht
+scharf integriert. Seine zusätzlich hergeleitete grobe volle Obergrenze
+umfasst auch alle Richtungen außerhalb der Basis, reicht aber nicht zum
+Abschluss. Sie darf nicht mit dem kleinen endlichen Residuum verwechselt
+werden.
+
+Dies ist kein negativer Zeuge der tatsächlichen Schurform. Die alten
+Inversmajoranten, der untere direkte Vergleich L und die finite Brücke
+sind Abschätzungen. Ebenso ist damit das anders definierte
+Abdeckungskriterium nicht widerlegt. Dessen 203 verbleibende Kraftzeilen
+wurden nicht durch die hier berechneten A0-Zeilen ersetzt.
+
+Geprüft
+
+- Vollständige hohe Funktionsintegrale einschließlich aller Primzellen.
+- Je Parität 3120 Übereinstimmungen mit den acht gebundenen Quellen.
+- Je Parität fünf zusätzliche direkte hohe Gram-Paarungen.
+- Separate vollständige Integration der rationalen Prüfrichtung bei
+  höherer Präzision, einschließlich fünf direkter alter Operatorprüfungen.
+- Rationale Auswertung des notwendigen Gates mit vollständigen Fehlern.
+- Rationale gerichtete LDL-Prüfung der positiven endlichen Hilfsblöcke
+  und der stärkeren endlichen Potentialabschätzung.
+- Die schärfere Basisgrenze und die beiden übergebenen Energiegrame.
+
+Die beigefügte Prüfquittung unterscheidet die lokal ausgeführten
+Integrationen vom schnellen rationalen Replay. Externe unabhängige
+Begutachtung bleibt offen. GitHub wurde nicht verändert.
+
+Der tatsächliche Tailboden 1/20 und A8->A9 bleiben unbewiesen.
+FULL_REMAINDER_CERTIFIED=false.
+
+
+Zusätzlicher Vergleich mit erhaltenem positivem Randpotential
+
+Die geerbten direkten Fehlerabschätzungen erlauben auch L_plus=L+V_log,
+V_log(t)=-log(1-t²)/2. Die vollständige Potentialmatrix auf J ist berechnet.
+Dieser getrennt gekennzeichnete Versuch ändert weder H,C,D0 noch die
+ursprünglichen Näherungsantworten. Er ergibt die folgenden zertifizierten
+oberen Werte für den endlichen verallgemeinerten Eigenwert:
+
+  gerade: < 1.09303800; endlicher Test bestanden: False
+
+  Separater rationaler Prüfray: R0/Splus > 1.0930351295; stärkere Bedingung widerlegt: True
+
+  Neue rationale Antworten Xplus sind beigefügt; hinreichendes neues volles Residualbudget: -0.01023418033 in D0-Metrik.
+
+  ungerade: < 1.26734600; endlicher Test bestanden: False
+
+  Separater rationaler Prüfray: R0/Splus > 1.2673436012; stärkere Bedingung widerlegt: True
+
+  Neue rationale Antworten Xplus sind beigefügt; hinreichendes neues volles Residualbudget: -0.02940805999 in D0-Metrik.
+
+Eine positive Entscheidung dieses zusätzlichen endlichen Tests wäre noch
+kein globaler Abschluss. Für die beigefügten neuen Antworten Zplus muss das neue volle
+Residuum Rplus=A0*-Splus Zplus berechnet werden. Wegen Splus>=(0.11-eta)L
+darf der bekannte R_L ausdrücklich als Inversmajorante dienen; derselbe
+Faktor 10000000000/1099999999 gilt für Rplus*R_L Rplus. Das alte Residuum
+selbst darf dabei nicht übernommen werden. Bei einer rational belegten
+Verletzung auch der stärkeren Bedingung genügt das Beibehalten des
+Randpotentials allein nicht; dann ist zuvor eine weitere Verschärfung
+des Vergleichs erforderlich.
+
+
+Bedingtes Ziel für die nächste Verbesserung
+
+
+gerade: Bei unverändertem N,P,A0,H und Lplus würde
+Q8_neu=111/100 Q8 den endlichen Test bestehen lassen;
+die zertifizierte bedingte Eigenwertobergrenze ist 246529/250000.
+
+ungerade: Bei unverändertem N,P,A0,H und Lplus würde
+Q8_neu=129/100 Q8 den endlichen Test bestehen lassen;
+die zertifizierte bedingte Eigenwertobergrenze ist 986367/1000000.
+
+Dies ist ein bedingter endlicher Test. Die stärkere tatsächliche
+Zwölfer-Untergrenze ist NICHT bewiesen. Die Faktoren dürfen nicht einfach
+als neue Daten eingesetzt werden. Auch nach ihrem Nachweis wäre noch
+der vollständige Residualanschluss erforderlich.

@@ -1,0 +1,21 @@
+{
+  "status": "PASS_DIRECTIONAL_BRIDGE_REVIEW_AND_NEW_CONSTANT_OBSTRUCTION",
+  "input_sha256": "4faa7004a0622b7434ad0baa35c15f53a165db8d758091bd1f1aa682bb20275d",
+  "inherited_operator_assumptions_retained": true,
+  "rational_input_replay_passed": true,
+  "original_manifest_bindings": 23,
+  "source_bindings_verified": 10,
+  "input_extract_rebuilt_identically": true,
+  "fresh_direct_integrations": 4,
+  "precision_interval_comparisons": 640,
+  "independent_signed_moment_formula_comparisons": 128,
+  "full_comparison_upper_rays_confirmed": 2,
+  "without_eta_rays_still_negative": true,
+  "full_optimistic_constant_bonus_rays_still_negative": true,
+  "rational_constant_bound_proved": true,
+  "negative_actual_schur_witness": false,
+  "tail_coercivity_certified": false,
+  "full_remainder_certified": false,
+  "external_mathematical_review": false,
+  "github_changed": false
+}

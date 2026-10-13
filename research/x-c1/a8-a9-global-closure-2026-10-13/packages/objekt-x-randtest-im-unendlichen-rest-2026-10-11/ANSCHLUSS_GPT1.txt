@@ -1,0 +1,33 @@
+Objekt X — neue notwendige Kontrolle im unendlichen Außenraum
+
+Der gesamte Replay deines Antwort-/Außenresidualpakets besteht. Die
+Zeilenendenkorrektur wird übernommen, ohne Originalarchive zu verändern.
+
+Die wichtigste Aussagegrenze dieser Rückgabe zuerst: Es gibt weiterhin
+KEINE obere Einschließung des vollständigen Qtail ab k104. Der neue
+Randtest darf nicht mit einem solchen Nachweis verwechselt werden.
+
+Neu: s=1_[a,a+h/16384]/sqrt(2h/16384), dann die komplette X-Projektion
+bis Grad 103 und die volle W_X-Momentkorrektur abziehen. Die entstehende
+Funktion ist eine unendliche Linearkombination ausschließlich der k_n
+mit n>=104. Ihre komplette gewichtete Energie hat eine geschlossene
+obere Formel. Alle 203 Residualwerte wurden mit den NEUEN Antworten
+und vollständigen hohen Quellen integriert.
+
+Bitte insbesondere HERLEITUNG Abschnitte 2, 3 und 6 gegenprüfen:
+ - exakte k_n-Darstellung des projizierten Indikators;
+ - Faktor 1/2 im harmonischen Integral und die Entropieformel;
+ - Energie-Bessel genügt, eine ungeprüfte Formkern-Gleichheit ist unnötig;
+ - Gtest=r_f*r_f/Eplus ist ein UNTERGRAM von Qtail;
+ - die 0.0483 bzw. 0.1333 Prozent sind nur ein notwendiger Richtungstest.
+
+Der aktuelle Test zeigt keine Überschreitung des verbleibenden Budgets.
+Weitere Richtungen allein schließen die offene obere Restschranke nicht.
+Als Rechenbaustein steht jetzt die vollständige Quelle eines schmalen
+nichtpolynomialen Intervalls einschließlich aller zusätzlichen Primzellen
+zur Verfügung. Sie kann bei einer auslöschungserhaltenden vollständigen
+Integration/Approximation der Residualfunktionen helfen; ein dafür nötiger
+globaler Fehlernachweis ist hier nicht vorhanden.
+
+Keine negative tatsächliche Schurform, kein A8->A9-Abschluss, kein
+Tailboden 1/20. Diese Grenzen in jeder weiteren Zusammenfassung erhalten.

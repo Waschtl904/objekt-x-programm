@@ -53,6 +53,18 @@ Aktuelle Arbeit außerhalb von `main` ist in den
 sichtbar. Für ein Urteil über einen solchen Vorschlag sind dessen eigener
 Commit, Belegumfang und Integrationsstatus anzugeben.
 
+## Neuer Integrationsstand vom 13. Oktober
+
+Der [bedingte globale Schurabschluss A8→A9](research/x-c1/a8-a9-global-closure-2026-10-13/README.md)
+führt die Arbeiten seit dem 7. Oktober einschließlich aller Originalpakete,
+Gegenprüfungen und verworfenen Hilfsschranken zusammen. Unter den gebundenen
+Operator-, Domänen- und vollständigen Raumzerlegungsvoraussetzungen ist der
+Positivitätsübergang geschlossen. Der gesamte Formdualrest kostet weniger als
+0,3954 % bzw. 0,6967 % seines Matrixbudgets. Der Tailboden 1/20, weitere Horizonte
+und Objekt X bleiben offen. Die Registrierung mit tatsächlichem Mergecommit
+und bestätigter Main-CI erfolgt nach der Integration; bis dahin ist das Paket
+als `PENDING_STATUS_REVIEW` sichtbar. Externe Begutachtung bleibt offen.
+
 ## Mathematischer Ansatz
 
 Ausgangspunkt ist die physische finite Weil-Form. Ein gemeinsamer

@@ -1,0 +1,46 @@
+Objekt X — Logrest bestätigt, zulässiges Ableitungsbudget vergrößert
+12. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Das eingegangene Paket besteht im vollständigen rationalen Replay unter
+den geerbten Operatorvoraussetzungen. Die beiden inneren Randterme samt
+physischer Normierung, rohem Legendre-Träger, echter hoher Projektion und
+Primverschiebung 8 sind in der geprüften Rechnung erhalten.
+
+Bestätigt: Die GANZE gewichtete Summe ab Grad 104 der drei gemeinsamen
+logarithmischen Komponenten benötigt weniger als 0.2 Prozent (gerade)
+beziehungsweise 0.4 Prozent (ungerade) der Budgetmatrix. Der Replay
+rekonstruiert 1218 zusammengesetzte Randkoeffizienten, kontrolliert 2488
+primitive Intervalle und besteht beide 206er-Schurtests.
+
+Neu: Der verbleibende Young-Schritt lässt sich ohne Änderung der
+tatsächlichen Residualfunktion verbessern. Mit den rationalen Parametern
+21 und 15 genügen nun folgende SKALARE Ziele für den vollständigen
+Ableitungsrestgram, jeweils relativ zur unveränderten neuen Metrik D:
+
+                 bisher                jetzt
+ gerade          0.010920026909 D      0.020009914013 D
+ ungerade        0.065511688934 D      0.115895669248 D
+
+Alle Fehlerpreise sind enthalten; die neuen Zahlen sind nach unten
+gerundete zulässige Budgets. Die entsprechenden richtungsabhängigen
+Zielmatrizen sind sogar auf dem gesamten Kräfteraum um mehr als 83 bzw.
+76.9 Prozent größer als die bisherigen Zielmatrizen.
+
+Zusätzlich liegt eine noch größere feste rationale Zielmatrix vor, die
+den vollständigen gemeinsamen Loggram statt seiner skalaren Obergrenze
+beibehält. Zwei weitere 206er-Schurprüfungen bestehen, einschließlich
+aller Modellintervallradien und analytischen Koeffizientenfehler.
+Die exakte Matrixdarstellung steht in DIRECTIONAL_DERIVATIVE_TARGET.json.
+
+Das sind Verbesserungen der ZULÄSSIGEN rechten Seite. Die tatsächliche
+vollständige Ableitungsenergie des exakt regularisierten Restes wurde
+nicht berechnet oder als kleiner als diese Budgets nachgewiesen.
+
+Die vier Randintegrationen des Eingangspakets wurden hier nicht erneut
+ausgeführt. Ihre gebundenen Daten und Fehler wurden rational nachgespielt.
+Die Originalarchive und GitHub bleiben unverändert. Eine unabhängige
+externe mathematische Begutachtung wird nicht beansprucht.
+
+A8->A9 und der Tailboden 1/20 bleiben unbewiesen.
+ACTUAL_REGULARIZED_DERIVATIVE_GRAM_COMPUTED=false.
+FULL_REMAINDER_CERTIFIED=false.

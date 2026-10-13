@@ -1,0 +1,36 @@
+{
+  "status": "PASS_FULL_RATIONAL_REPLAY_WITH_FRESHLY_UNPACKED_INPUTS",
+  "original_input_archive_hashes_checked": true,
+  "new_responses_rational_audit_passed": true,
+  "upstream_precision_comparison": "JSON equality; documented CRLF/LF byte difference",
+  "original_archives_changed": false,
+  "fresh_response_builds": [
+    768,
+    1024
+  ],
+  "all_four_response_records_identical": true,
+  "new_full_cross_integrations": [
+    {
+      "parity": "even",
+      "bits": 3072
+    },
+    {
+      "parity": "even",
+      "bits": 4096
+    },
+    {
+      "parity": "odd",
+      "bits": 3072
+    },
+    {
+      "parity": "odd",
+      "bits": 4096
+    }
+  ],
+  "interval_comparisons_per_parity": 44068,
+  "rational_exterior_pivots_per_parity": 211,
+  "complete_tail_from_104_computed": false,
+  "tail_floor_1_over_20_certified": false,
+  "full_remainder_certified": false,
+  "replay_log_sha256": "83a7858340564b6c2e114399ce3fb54285e240048501a93285c6937388fdb8a2"
+}

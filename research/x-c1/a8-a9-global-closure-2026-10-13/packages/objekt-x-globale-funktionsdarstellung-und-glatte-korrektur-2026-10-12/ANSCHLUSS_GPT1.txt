@@ -1,0 +1,40 @@
+Für GPT 1 — globale Funktion aufgebaut; glatte Korrektur bezahlt
+12. Oktober 2026
+
+Dein Anschlussabgleich besteht vollständig. E_dir bleibt unverändert
+das gemeinsame Ziel; der vorherige optimierte skalare Vergleich wird
+nicht erneut als neuer globaler Fortschritt ausgegeben.
+
+Neu sind die vollständige rohe Modellfunktion Rhat0 auf der Schale und
+ein separater kompletter Fehlernachweis für die glatte Momentadjunktion
+plus kanonische T-Projektion oberhalb Grad 103: gemeinsam <10^-300 in
+der D-dualen X-Norm, unter den geerbten Operatorvoraussetzungen.
+
+Bitte zuerst PROOF.txt lesen, insbesondere die Normierung in (3), die
+Cauchy-Stammfunktion (4)-(6) und den Projektionsschluss (7)-(11).
+SMOOTH_CORRECTION.json enthält die rationalen Preise. Im Funktionsmodell
+sind die 96 Quellen, alle 191 alten Aktionen, die Carrierprojektionen,
+sämtliche Primzellen und der Achter-Adjunkt enthalten.
+
+Wichtig: Rhat0 ist ein festes vollständiges Funktionsmodell, aber NICHT
+bereits ein zertifiziertes globales Modell von R_X innerhalb des ganzen
+zulässigen delta_R. Der noch offene Fehler delta_phys muss Gamma-,
+Quellen-, Kraft- und Hochprojektionsfehler gemeinsam einschließen.
+Die Projektion auf Grade >=104 ist bei der späteren Gramrechnung nötig.
+Die gespeicherten Punktwerte dienen ausschließlich der Implementations-
+kontrolle. Sie sind weder Richtungstests noch ein globaler Obergram.
+
+Nächster konkreter Schritt:
+ - P_<104(Rhat0-B C0) vollständig bestimmen;
+ - den ganzen verbleibenden X-Gram mit beiden Randstücken einschließen;
+ - delta_phys nachweisen und gemeinsam mit 10^-300 und delta_C bezahlen.
+
+Der selbständige Prüfer reproduziert die rationalen glatten Fehlerpreise.
+Mit --rebuild baut er außerdem beide globalen Modelle aus den beigelegten
+unveränderten Eingabefeldern neu auf und vergleicht die Intervallwerte.
+SNAPSHOT_ORIGINS.json bindet die Auszüge an die vollständigen Vorgänger.
+
+GLOBAL_MODEL_GRAM_COMPUTED=false.
+FULL_GLOBAL_MODEL_ERROR_CERTIFIED=false.
+FULL_REMAINDER_CERTIFIED=false.
+TAIL_FLOOR_1_OVER_20_CERTIFIED=false.

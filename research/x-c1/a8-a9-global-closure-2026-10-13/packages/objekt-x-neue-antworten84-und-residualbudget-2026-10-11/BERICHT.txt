@@ -1,0 +1,88 @@
+Objekt X — neue rationale Antworten84 und positives Residualbudget
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Die neuen Näherungsantworten sind berechnet und rational geprüft.
+Der scharfe vollständige Residualnachweis ist weiterhin offen.
+
+Unter den geerbten Operatorvoraussetzungen wurden für beide Paritäten
+eine passende rationale Zwölfer-Untergrenze K12_neu, die neue Metrik
+D203=diag((1-rho)I191,K12_neu), die neuen 203 Kraftzeilen und jeweils
+eine rationale 84x203-Antwortmatrix X festgelegt. Verwendet werden die
+191 neuen niedrigen Features und zwölf physische Kreuzzeilen.
+
+Für die exakte Größe M=A Z+Z*A*-Z*S Z, Z=JX, liegen vollständige rationale
+203x203-Obermatrizen M_upper vor. Nach Bezahlung aller übernommenen
+Quellen-, direkten Matrix- und Rundungsfehler gilt
+
+ gerade:   M<=M_upper <0.999997138063 D203,
+ ungerade: M<=M_upper <0.999982753528 D203.
+
+Die 84er-Hilfsblöcke haben jeweils eine zertifizierte Konditionszahl <2.35.
+Dies ist eine Aussage über diese endlichen Hilfsmatrizen, kein Tailboden.
+
+Das nächste hinreichende Kriterium lautet konkret
+
+ Q_R <= beta (D203-M_upper),
+ R*R_L R<=Q_R, beta=20209999981781/182190000000000.
+
+Die rechte Seite ist jetzt eine feste positive rationale Matrix.
+Als schwächere, einfach mitzuteilende SKALARE Bedingung genügt
+
+ gerade:   Q_R <= 3.17469...*10^-7 D203,
+ ungerade: Q_R <= 1.913119...*10^-6 D203.
+
+Die exakten Brüche stehen in SUMMARY.json und AUDIT.json. Diese Zahlen
+sind zulässige Fehlerbudgets; sie sind keine bereits bewiesenen kleinen
+Residualnormen. Die richtungsabhängige Matrixbedingung ist vorzuziehen.
+
+Was beim unendlichen Rest erreicht wurde
+
+PROOF.txt gibt die vollständigen neuen Residualfunktionen als Operator-
+ausdrücke auf dem exakten T an und begründet ihre Formdualzugehörigkeit.
+Zusätzlich wurde eine vollständige, aber grobe PSD-Majorante berechnet:
+
+ gerade:   Q_R <= 13544686094667197569744891832833489423554835 D203,
+ ungerade: Q_R <= 22078947213343092358861294660247725797734 D203.
+
+Diese Abschätzung enthält auch alle Richtungen außerhalb span(J).
+Sie ist für den Positivitätsschluss viel zu groß. Daraus folgt weder,
+dass das tatsächliche Residuum groß ist, noch eine negative Schurform.
+Die vollständige scharfe Gram-Integration wurde nicht ausgeführt.
+Getrennte Normschranken reichen nicht; die gemeinsame Auswertung muss
+die Auslöschungen in den expliziten Residualfunktionen erhalten.
+
+Tatsächlich ausgeführte Kontrollen
+
+- Eingangspaket: Manifest, neuer skalarer Residualanschluss und vollständiger
+  rationaler Replay des gebundenen positiven 96er-Vorgängers bestanden.
+- Neue Antwortrechnung mit 768 und 1024 Bit. K12_neu, X, Metriken und
+  skalare Budgets sind identisch; die Modellintervalle überlappen.
+  Die gerichteten M_upper-Rundungen dürfen geringfügig verschieden sein;
+  der genaue Unterschied steht in PRECISION_CHECK.json. Zwei abgeleitete
+  Rundungsobergrenzen werden gegen gemeinsame Schranken verglichen.
+- Rein rationaler Prüfer mit 100 Dezimalstellen nach außen: neue 12er-
+  und 84er-Blöcke, alle 41209 M-Einträge je Parität, alle Antwortwerte,
+  die feste obere M-Matrix und ihre skalare Obergrenze mit 203 positiven
+  LDL-Pivots geprüft. Auch die grobe vollständige Majorante neu berechnet.
+- Synthetische Gegenkontrollen: indefinite Matrix verworfen; verschwindendes
+  endliches Residuum bei nichtverschwindender Außenrichtung erkannt;
+  nichtorthonormale Basis mit korrekter Grammatrix behandelt.
+- Frischer Paket-Replay: siehe separate Pruefquittung.json neben dem ZIP.
+
+Die vier direkten Integrationen und die älteren vollständigen Quell-
+integrationen wurden hier nicht nochmals ausgeführt; sie sind gebundene,
+bereits geprüfte Eingaben. Zwei Rechenpräzisionen ersetzen keine analytische
+Restkontrolle. Die globalen Operator- und Domänenannahmen bleiben geerbt.
+
+Dokumentationskorrektur übernommen: unmittelbar 10^-8 -> 10^-10 beim alten
+Kopplungs-Young-Parameter. Die versiegelten Vorgänger wurden nicht geändert.
+
+NEW_RATIONAL_RESPONSES_COMPUTED = true
+NEW_DIRECTIONAL_RESIDUAL_BUDGET_POSITIVE = true
+COMPLETE_COARSE_RESIDUAL_MAJORANT_AVAILABLE = true
+SHARP_FULL_FORMDUAL_RESIDUAL_GRAM_COMPUTED = false
+NEGATIVE_ACTUAL_SCHUR_WITNESS = false
+TAIL_FLOOR_1_OVER_20_CERTIFIED = false
+FULL_REMAINDER_CERTIFIED = false
+
+A8->A9 bleibt offen. GitHub wurde nicht verändert.

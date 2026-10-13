@@ -1,0 +1,158 @@
+Objekt X — nichtpolynomialer Randtest im unendlichen Rest ab Grad 104
+11. Oktober 2026. AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN.
+
+Alle Aussagen gelten unter den geerbten Operator-, Quellen- und
+Domänenvoraussetzungen. Dieses Paket liefert einen notwendigen Test und
+einen Rang-eins-Untergram für den unendlichen Rest. Es liefert KEINE
+obere Einschließung seines vollständigen Grams.
+
+1. Geprüfter Ausgangspunkt
+
+Das Paket Antwortpruefung-und-Aussenresidual8 wurde vollständig rational
+nachgespielt: beide Antwort-Audits, beide endlichen Anschlussbedingungen,
+der alte unendliche Geometrieanschluss und beide 211er-LDL-Prüfungen bestehen.
+Der dort beschriebene CRLF/LF-Unterschied ist rein syntaktisch; der Vergleich
+der JSON-Werte besteht. Die alten versiegelten Archive bleiben unverändert.
+
+Wir übernehmen ausschließlich die NEUEN 203 Kraftkoordinaten, K12_neu,
+X_response, D203, M_upper, beta=20209999981781/182190000000000,
+delta=18219/10000 und eta=10^-10. T_budget=beta(D203-M_upper)>0.
+Der offene Rest bleibt
+ Qtail=sum_(n>=104) R(k_n)*R(k_n)/(H_n+11/10),
+ R=A_neu* - S_neu,eta J X_response.
+
+2. Eine festgelegte Funktion mit unendlich vielen Außenkoeffizienten
+
+Setze h=b-a, q=1/16384, e=q h und
+ s(x)=1_[a,a+e](x)/sqrt(2e),  x in (a,b).
+Die globale Parität wird wie bisher fortgesetzt. In Xloc=L2((a,b),2dx)
+ist ||s||=1. Für die lokale orthonormale Legendrebasis gilt exakt
+ s_n=sqrt((2n+1)/(4q)) integral_(-1)^(-1+2q) P_n(t)dt.
+Insbesondere ist s_n^2 rational. Der Prüfer erzeugt die Polynome bis 103
+erneut und kontrolliert alle 104 Koeffizienten sowie die Restmasse.
+
+Mit f0=s-sum_(n<104)s_n ell_n und den bereits definierten
+ k_n=ell_n-alpha95 l_n sum_(i<96)l_i ell_i
+ist die tatsächliche Testfunktion
+ f=sum_(n>=104)s_n k_n
+  =f0-alpha95 lambda(f0) sum_(i<96)l_i ell_i.             (1)
+Sie liegt exakt im W_X-orthogonalen Außenraum zu P95 und damit in T.
+Ihre Koeffizienten in den k_n-Koordinaten verschwinden für 96<=n<104.
+Die Korrektur von f0 zu f kostet im Xloc-Betrag weniger als 10^-350.
+Das folgt aus alpha95||l0||<5 und dem GANZEN Momentrest <10^-352.
+
+Die Restmasse von f0 ist exakt 1-sum_(n<104)s_n^2 und liegt zwischen
+0.522048329797 und 0.522048329799. Mehr als die Hälfte der Einheitsmasse
+liegt also jenseits des bisherigen Abbruchs. Diese Funktion wird nirgends
+durch endlich viele hohe Legendrepolynome ersetzt.
+
+3. Vollständige Energieschranke ohne hohen Koeffizientenabbruch
+
+Für den harmonischen Legendreoperator gilt auf Polynomen
+ (H u)(x)=1/2 integral_a^b (u(x)-u(y))/|x-y| dy,
+ H ell_n=H_n ell_n.
+Kurzer Nachweis der Eigenwerte: Das Integral erhält jeden Polynomraum,
+ist symmetrisch und hat auf x^n den führenden Koeffizienten H_n. Daher
+diagonalisiert die orthogonale Legendrebasis diesen Operator.
+
+Seine nichtnegative quadratische Integralform ist
+ H[u]=1/2 integral_a^b integral_a^b |u(x)-u(y)|^2/|x-y| dx dy.
+Für den normierten Indikator ergibt direktes Integrieren
+ H[s]=-[q log(q)+(1-q)log(1-q)]/(2q).
+Die Kreuzpaarung mit jedem Polynom ist durch Fubini zulässig, da dessen
+Differenz den Kernelpol beseitigt. Energie-Bessel liefert deshalb schon
+ohne einen Abschluss-/Formkern-Satz die vollständig ausreichende Schranke
+ E=sum_(n>=104)(H_n+11/10)|s_n|^2
+ <= Eplus=11/10-[q log(q)+(1-q)log(1-q)]/(2q)
+           -sum_(n<104)(H_n+11/10)s_n^2.                 (2)
+Es genügt diese obere Grenze; keine Gleichheit wird für das Zertifikat
+vorausgesetzt. Eplus liegt zwischen 3.71232003276 und 3.71232003278.
+Die log-Werte in (2) werden unabhängig durch rationale Reihen mit
+vollständigem positivem Rest eingeschlossen. Die Schalenbreite kürzt sich.
+
+4. Vollständige neue Funktionsintegrale
+
+Die Quellenrechnung verwendet die Funktion f0 als Indikator MINUS den
+vollständigen niedrigen Projektionspolynomanteil. Der Indikator erzeugt
+zusätzliche exakte Logarithmen mit Wurzeln +/- (a+e)/a und zusätzliche
+Prim-Schnittstellen. Alle 16 Kernzellen werden integriert. Die hohen
+Quellen entstehen aus der ganzen Funktion durch Abziehen der alten
+niedrigen Projektion, nicht durch eine endliche hohe Koeffizientenliste.
+
+Neu sind c(f), Bh(f), h(f)*h(f), alle 84 J-Kreuze, alle zwölf physischen
+F-Kreuze und die direkten q-Kreuze. Die direkte Form enthält sowohl
+Selbst- und signierten Spiegelkernel als auch die gesamte Momentkorrektur.
+Die vier Berechnungen verwenden 3072/4096 Bit in beiden Paritäten.
+
+Mit C_inv als neuer rationaler Inverskongruenz werden gebildet
+ l_f=C_inv*(c_f-Bh_f/delta), l_F=C_inv*(c_F-Bh_F/delta),
+ U_Ff=h_F*h_f/delta+l_F*l_f/(1-rho),
+ A_f=(l_f; q_Ff-U_Ff), S_Jf=(1-eta)q_Jf-h_J*h_f/delta,
+ r_f=A_f* - S_Jf* X_response.                           (3)
+Sterne bezeichnen Adjunkte; in der Implementierung wird C_inv.transpose()
+angewendet. Alle 203 Residualwerte werden vor jeder Quadrierung gemeinsam
+zusammengesetzt. Der rationale Prüfer baut (3) selbst neu auf.
+
+5. Fehlerpreise und tatsächliche Funktion
+
+Die Fehlerrechnung folgt demselben gemeinsamen Feature-Nachweis wie der
+geprüfte Achteranschluss, jetzt mit einer einzigen neuen Quellspalte.
+Mit XI=C_inv C_inv*/(1-rho), Gm=I+cn cn* gilt
+ eK=eh^2/delta+3[tr(XI Gm)ef^2+tr(XI HB)eh^2/delta^2
+                  +tr(XI)eB^2 H_ff/delta^2].
+eF und tauF stammen aus den gebundenen neuen Quellen; tau_f ist die
+neue Modellenergie. Es werden bezahlt
+ errC=sqrt(eK)+sqrt(eF tau_f)+sqrt(tauF eK)+sqrt(eF eK)
+      +sqrt(12 tr(K12_neu^-1))*10^-20,
+ errH=[sqrt(tr H_JJ)eh+sqrt(H_ff)ehJ+ehJ eh]/delta,
+ errS=(1-eta)sqrt(84)*10^-20+errH,
+ errR=errC+errS sqrt(tr(X_response D^-1 X_response*))+10^-50.
+
+Der zusätzliche Preis 10^-50 deckt die Projektion auf das tatsächlich
+verwendete rationale Arbeitsmodell und die GANZE Änderung (1). Deren
+gespeicherte Normeinschließung ist höchstens 10^-80. Der frühere grobe
+Residualnormbeweis gilt bereits vor der abschließenden Projektion auf T:
+seine Einzelabschätzungen für qJ, qF und g sind auf dem ganzen Schalenraum
+gültig. Seine kanonische X-Norm ist kleiner als 10^25. Somit kostet die
+Arbeitsmodelländerung weniger als 10^-55, die Momentänderung noch weniger.
+Es wird keine Normschranke auf T unzulässig auf einen fremden Raum erweitert.
+
+Der konservative direkte Eintragsfehler 10^-20 bezahlt die bekannten
+Kernel-, Taylor- und Koeffizientenreste. Die große Höhe des Indikators
+vergrößert diese L2-Kreuzfehler nicht: ||s||=1, ||f0||<1; das feste qJ/qF
+steht jeweils auf der Operatorseite. Beide Quellenfehler gehen ein.
+
+6. Was der neue Test tatsächlich beweist
+
+Gewichtetes Cauchy-Schwarz auf der vollständigen Koeffizientenfolge liefert
+  r_f* r_f <= E Qtail <= Eplus Qtail.
+Damit ist der Rang-eins-Gram
+  Gtest=r_f* r_f/Eplus <= Qtail                         (4)
+ein bewiesener UNTERGRAM. Eine Überschreitung des verbleibenden Budgets
+durch (4) würde den gewählten hinreichenden Abschluss ausschließen.
+Ein kleiner Wert von (4) ist KEINE obere Schranke für Qtail.
+
+Die rationale Intervallrechnung bestätigt einfache Schranken für
+||T_budget^-1/2 Gtest T_budget^-1/2||:
+ gerade:   4828/10^7 < Norm < 484/10^6,
+ ungerade: 13323/10^7 < Norm < 1334/10^6.
+Die Untergrenzen werden auf festgelegten rationalen 203er-Kraftvektoren
+geprüft. Für die Obergrenzen des Rang-eins-Grams werden 203 positive
+Pivots von modelcap*T_budget-r_model*r_model/E_lower nachgewiesen,
+danach sämtliche tatsächlichen Fehler bezahlt. Es wird keine numerische
+Matrixinverse als Positivitätszertifikat eingesetzt.
+
+Das sind ungefähr 0.0483 % bzw. 0.1333 % des richtungsabhängigen Budgets
+für diesen EINEN notwendigen Test. Die Zahl ist weder ein Beweisfortschritt
+noch ein bezahlter vollständiger Rest. Sie darf nicht als obere Schranke
+des gesamten unendlichen Grams ausgegeben werden.
+
+7. Verbleibende Aufgabe
+
+Es gibt weiterhin keine scharfe obere Einschließung von Qtail. Der neue
+Randtest widerlegt den bisherigen Ansatz nicht. Insbesondere folgt weder
+A8->A9 noch der Tailboden 1/20. Keine negative tatsächliche Schurform ist
+nachgewiesen. Die nächste Arbeit muss eine obere Grenze über ALLE übrigen
+Residuenrichtungen liefern, beispielsweise durch vollständige Integration
+der zusammengesetzten Residualfunktionen mit bezahltem Randrest. Eine
+Sammlung weiterer bestandener Richtungsprüfungen ersetzt das nicht.

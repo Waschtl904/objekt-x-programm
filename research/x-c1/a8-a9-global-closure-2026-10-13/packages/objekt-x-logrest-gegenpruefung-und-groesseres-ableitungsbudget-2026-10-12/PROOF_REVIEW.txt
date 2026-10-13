@@ -1,0 +1,184 @@
+Objekt X — geprüfter gemeinsamer Logrest und größeres Ableitungsbudget
+12. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Geltungsbereich
+
+Die geerbten analytischen Kern-, Operator-, Domänen- und Quellengrenzen
+bleiben Voraussetzungen. Die neuen rationalen Zielmatrizen sind bedingte
+hinreichende Budgets. Ein tatsächlicher vollständiger Ableitungsgram wird
+hier nicht berechnet. A8->A9 und der Tailboden 1/20 bleiben offen.
+
+1. Gegenprüfung des eingegangenen Randnachweises
+
+Das Originalarchiv hat SHA256
+96b8367c5f49ab8b99f63aade251942221a3fcad50ba09c6acb3a662e0dd8016.
+Sein vollständiger rationaler Replay besteht einschließlich des darin
+aufgerufenen Logrand-Vorgängers. Für beide Paritäten werden je 609
+zusammengesetzte Koeffizienten und je 1244 primitive Intervallvergleiche
+rekonstruiert; die 206x206-Schurprüfungen bestehen.
+
+Die besonders kritischen analytischen Identitäten sind konsistent:
+
+- Die normierte Kernfunktion ist w_hat(t)=sqrt(2a)w(at). Die Rückkehr
+  zum physikalischen Maß 2dx erfolgt nach Bildung der vollständigen
+  endlichen Randteile durch Division durch sqrt(2a).
+- Mit e_n=sqrt(2n+1)P_n und phi_i=e_ni-cn_i e_p gilt
+  <e_ni,f>=<phi_i,f>+cn_i<e_p,f>. Daher benötigt die rohe Projektion
+  am Rand zwingend den Träger
+  [sqrt(2p+1)+sum_i sqrt(2n_i+1)cn_i]<e_p,f>.
+- Für m_lo=P_raw m ist P_high-(I-P_raw)=P_span(m_lo)-P_span(m).
+  Der tatsächlich hohe Raum ist nicht mit der rohen Legendreprojektion
+  gleichzusetzen. Norm UND Randspur der Momentkorrektur sind gebunden.
+- Der Carlemanterm -1/2 integral W(a-s)/(s+epsilon)ds liefert
+  A_log/4 vor log^2(epsilon/h) und A_fin/2 vor log(epsilon/h).
+  Die Verschiebung log(8)=2a trifft -a+epsilon. Sie liefert zusätzlich
+  -(-1)^p log(2)/sqrt(8)*A_log zum einfachen inneren Logarithmus.
+- Die Spurfehler werden durch Punktfehler, endliche Projektionsnormen
+  und Polynom-/Momentgrenzen bezahlt. Eine bloße L2-Fehlergrenze wird
+  nicht als Randspurabschätzung verwendet.
+
+Damit bestätigt der Replay unter diesen Voraussetzungen
+
+ Q_log <= c_log T,
+ c_log=1/500 (gerade), c_log=1/250 (ungerade),
+ T=beta(D-M_upper), D=D203_neu.
+
+Das ist die gesamte gewichtete Summe ab Grad 104 der drei logarithmischen
+Komponenten GEMEINSAM, einschließlich ihrer Kreuzterme. Es ist kein Gram
+des noch unbekannten regularisierten Restes.
+
+Die vier vollständigen Randintegrationen des Autors wurden in dieser
+Gegenprüfung NICHT erneut ausgeführt. Ihre gebundenen Ergebnisdaten,
+Präzisionsvergleiche und ausgewiesenen Fehler wurden rational nachgespielt.
+
+2. Ein freier Young-Parameter vergrößert den zulässigen Rest
+
+Bezeichne C_exact die tatsächlichen drei Operatorzeilen und
+
+ B=(log u, log^2 u, log(1-u)), g=R_X-B C_exact,
+ E=2 integral_a^b (x-a)(b-x) g'(x)*g'(x)dx
+       -sum_(n<104)n(n+1)g_n*g_n,
+ k=10920*d104, d104=H104+11/10.
+
+Unter den angegebenen Regularitätsvoraussetzungen gilt für die GANZE
+gewichtete hohe Summe Q_g<=E/k. Für jedes rationale theta>0 gilt
+
+ Q_tail <= (1+theta)Q_log+(1+1/theta)Q_g.
+
+Der vollständige Basis- und Momentpreis sei eD=(j+10^-300)D; die acht
+Außenzeilen sind durch c8 T bezahlt, mit c8=1/5000 bzw. 13/20000.
+Damit genügt die KONKRETE Matrixbedingung
+
+ E <= E_theta,
+ E_theta=k*theta/(1+theta)*
+           [(1-c8-(1+theta)c_log)T-eD].                 (R1)
+
+Das eingesandte Kriterium ist genau theta=1. Wähle stattdessen
+
+ gerade: theta=21,
+ ungerade: theta=15.
+
+Die tatsächliche Restfunktion g, ihre Normierung und ihre Energie E
+bleiben dabei unverändert. Nur die Abschätzung ihrer Kreuzterme mit
+dem bereits gebundenen Logrest wird besser auf dessen Größe abgestimmt.
+
+Mit der gebundenen rationalen Schranke T>=sigma D folgt aus (R1)
+die stärkere, einfachere skalare Alternative
+
+ gerade:   E <= 0.020009914013 D,
+ ungerade: E <= 0.115895669248 D.                       (R2)
+
+Beide Zahlen sind NACH UNTEN gerundete zulässige Zielwerte. Zuvor waren
+es 0.010920026909 D und 0.065511688934 D. Auch der größere vollständige
+Ableitungsgram ohne Abzug der ersten 104 Beiträge darf verwendet werden,
+falls er schon die Zielschranke einhält.
+
+Die Verbesserung gilt nicht nur für skalare Untergrenzen. Der rein
+rationale Prüfer zeigt im Loewner-Sinn
+
+ E_21 > (183/100) E_1       (gerade),
+ E_15 > (1769/1000) E_1     (ungerade).                 (R3)
+
+Zum Nachweis schreibe E_theta=a_theta T-b_theta D. Für den Faktor gamma
+prüft der Code b_theta-gamma*b_1>0 und
+ a_theta-gamma*a_1-(b_theta-gamma*b_1)/sigma>0.
+Wegen D<=T/sigma beweist dies (R3) auf dem gesamten 203er-Kräfteraum.
+Alle Werte einschließlich j und des Momentpreises bleiben rational.
+
+Eine Orientierung für die Parameterwahl: Schreibe
+ B0=1-c8-e/sigma und l=c_log. Das skalare Budget ist
+ k*sigma*[B0*theta/(1+theta)-l*theta]. Sein Maximum liegt bei
+ theta=sqrt(B0/l)-1 und hat Wert k*sigma*(sqrt(B0)-sqrt(l))^2.
+Keine irrationale Optimierungsgröße wird im Zertifikat verwendet;
+die einfachen festen Parameter 21 und 15 genügen für (R2)-(R3).
+
+3. Zusätzlich eine feste rationale Obermatrix für den gemeinsamen Logrest
+
+Die neue Datei DIRECTIONAL_DERIVATIVE_TARGET.json enthält eine konkrete
+stärkere Zielmatrix. Dafür werden die Mitten ALLER Modellintervalle in
+COMPOSED_* als feste rationale 3x203-Matrix C0 gewählt. Deren Radien
+werden zusätzlich zu den analytischen Koeffizientenfehlern bezahlt.
+
+Sei G die gebundene rationale 3x3-Obermatrix für B*(I-P_<104)B.
+Ist e_i die volle D-duale Fehlernorm der i-ten Koeffizientenzeile,
+so gilt mit ell=sum_i sqrt(G_ii)e_i und tau=10^-6
+
+ Q_log <= Qbar,
+ Qbar=(1+tau)/d104*C0*G C0
+                 +(1+1/tau)/d104*ell^2 D.             (R4)
+
+In (R4) steht C0* für den Transponierten/Adjungierten. Die drei
+logarithmischen Komponenten und ihre Kreuzterme bleiben in C0*G C0
+vollständig erhalten. Die Koeffizientenfehler werden im L2-Gram bezahlt.
+
+Die zusätzliche Mittelpunktabweichung wird unabhängig exakt aus den
+gespeicherten Intervallradien r_i abgeschätzt. Für eine Zeile genügt
+
+ ||Delta c D^-1/2||^2
+ <= sum_(i<191)r_i^2/(1-rho)
+       +sum_(i,j<12)r_(191+i)*|K12_neu^-1[i,j]|*r_(191+j).
+
+Die Quadratwurzeln werden rational nach oben eingeschlossen. Zwei neue
+206x206-Schurprüfungen zertifizieren Qbar<c_log T. Es wird keine
+numerische Matrixinverse als Positivitätszertifikat benutzt.
+
+Damit ist die noch günstigere vollständige Zielmatrix
+
+ E_dir=k*theta/(1+theta)*[(1-c8)T-eD-(1+theta)Qbar]     (R5)
+
+positiv und erfüllt exakt
+
+ E_dir-E_theta=k*theta*(c_log T-Qbar)>0.
+
+Die JSON-Datei speichert (R5) exakt in der platzsparenden Form
+
+ E_dir=alpha T-b D-gamma C0*G C0.
+
+Enthalten sind alle drei rationalen Koeffizienten alpha,b,gamma, die
+vollständige rationale Matrix C0, G und die Herkunftsbindung. T und D
+bleiben die festgelegten Antwortmatrizen des Vorgängers. Diese Darstellung
+definiert jeden der 41209 Einträge ohne eine gerundete Matrix zu ersetzen.
+
+4. Was für den tatsächlichen Abschluss noch fehlen darf und was nicht
+
+Die neuen Matrizen sind RECHTE Seiten eines hinreichenden Tests. Es ist
+weiterhin eine obere Einschließung des vollständigen tatsächlichen E
+oder eine andere ausreichende globale Residualschranke erforderlich.
+
+Die rationale Matrix C0 aus Abschnitt 3 darf NICHT anstelle von C_exact
+in g=R_X-B C_exact eingesetzt und der resultierende Rest anschließend
+ohne weiteres als H1-Funktion behandelt werden. Bereits ein kleiner
+verbliebener Logarithmus besitzt unendliche gewichtete Ableitungsenergie.
+Die Koeffizientennäherung in (R4) dient ausschließlich dem Loggramvergleich.
+
+Der nächste vollständige Prüfauftrag lautet vorzugsweise E_upper<=E_dir;
+die einfacheren Alternativen sind E_upper<=E_theta oder (R2). Der Gram
+muss die gesamte Schale und alle Grade ab 104 umfassen. Zusätzliche
+endliche Koeffizienten liefern für sich noch keine solche Obermatrix.
+
+REGULARIZED_DERIVATIVE_TARGET_ENLARGED=true.
+FIXED_DIRECTIONAL_DERIVATIVE_TARGET_POSITIVE=true.
+ACTUAL_REGULARIZED_DERIVATIVE_GRAM_COMPUTED=false.
+FULL_REMAINDER_CERTIFIED=false.
+TAIL_FLOOR_1_OVER_20_CERTIFIED=false.
+NEGATIVE_ACTUAL_SCHUR_WITNESS=false.

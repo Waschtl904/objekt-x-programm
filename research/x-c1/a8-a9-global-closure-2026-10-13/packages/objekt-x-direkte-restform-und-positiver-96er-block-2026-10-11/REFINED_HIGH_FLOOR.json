@@ -1,0 +1,34 @@
+{
+  "inherited_floor_proof_sha256": "20a16066550a7dd4741abc80d08e2d06b264ea444f144253950e74a458167408",
+  "inherited": {
+    "status": "RATIONAL_CONSTANTS_PASS_FOR_COMBINED_HIGH_FLOOR",
+    "r": "26/25",
+    "cosh_r_upper": "1131027965132432655350479791534577317568050085303799588382777796991555686829622858639103831760917/710741209307657763518061026314211504779495204939135464400346009483655507210642099380493164062500",
+    "regular_kernel_derivative_upper": "3/8",
+    "weighted_derivative_HS_squared_upper": "171366/390625",
+    "high_Gamma_norm_squared_upper": "28561/9625000000",
+    "high_Gamma_norm_simple_upper": "1/500",
+    "prime_weight_upper": {
+      "2": "491/1000",
+      "3": "127/200",
+      "4": "347/1000",
+      "5": "18/25",
+      "7": "92/125"
+    },
+    "potential_threshold_exp_upper": "104154932862839304860085275912884839709261624272094157/25684290223518027524414062500000000000000000000000000",
+    "row_loss_upper_bounds": [
+      "1617/1000",
+      "2193/1000",
+      "2229/1000"
+    ],
+    "joint_potential_prime_loss": "9/4",
+    "raw_high_floor": "911/500",
+    "moment_corrected_floor_over_raw_norm": "455495999997/250000000000",
+    "physical_high_floor": "91/50",
+    "previous_physical_high_floor": "2/3",
+    "scope": "Full high space, conditional on inherited old form decomposition and scalar q0/prime/moment bounds; analytic derivative/Legendre argument in accompanying proof."
+  },
+  "new_physical_high_floor": "18219/10000",
+  "exact_positive_margin": "839999861781/10000000000000000",
+  "same_high_space_and_operator_hypotheses": true
+}

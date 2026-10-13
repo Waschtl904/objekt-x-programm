@@ -1,0 +1,137 @@
+Objekt X — Prüfung der Basis84 und vorbereiteter L-Energiegram
+10. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Die vorgelegte Basis- und Fehlerrechnung ist im angegebenen Scope bestätigt.
+Die vollständige gerichtete Neuberechnung mit 768 Bit und python-flint 0.9.0
+besteht. Die sechs Dateien BASIS_EVEN/ODD, GATE_EVEN/ODD, RESULT und AUDIT
+haben anschließend exakt denselben JSON-Inhalt wie im Originalarchiv.
+Die Bytes unterscheiden sich ausschließlich durch die Zeilenenden.
+
+Die Basis umfasst je Parität exakt den 84-dimensionalen Raum
+K=P_95 intersect R_12. Die Abdeckung der ersten 65 Funktionale ist unter
+den geerbten Definitionen und analytischen Voraussetzungen bestätigt.
+Die übrigen 203 Funktionale sind weiterhin nicht gefittet. Deshalb bleiben
+der vollständige Abdeckungstest und der A8->A9-Abschluss offen.
+
+Was geprüft wurde
+
+- 24 neue Manifestbindungen sowie die sieben eingebundenen Vorgänger mit
+  14,16,37,16,14,22,72 Dateibindungen; alle Archivhashes stimmen.
+- Die gebundenen rationalen und synthetischen Vorgängerprüfungen bestanden.
+- Die neue gerichtete Funktions-/Normrechnung wurde vollständig wiederholt.
+  Frühere große Prim-/Gamma-Quellintegrationen wurden dabei nicht wiederholt.
+- Eine separate Implementierung kontrolliert je Parität die 672 exakten
+  Gleichungen S*Z=0, den invertierbaren oberen S-Block und die Gramspur.
+- Der volle unendliche Momentrest wird neu aus der rationalen Taylorformel
+  berechnet; sein Beitrag liegt unter 9,354*10^-638 und damit unter 10^-600.
+- Die konkrete rationale Fitabweichung wird aus den gespeicherten
+  einschließenden Intervallen erneut bezahlt. Der volle 65er-Fehlergram
+  bleibt <=10^-70 I, ohne eine numerische Null als exakte Null zu behandeln.
+- Die beiden riesigen Obergrenzen des übrigen Blocks wurden separat
+  vollständig rational aus X,H_B,K12 und U_F rekonstruiert. Die gespeicherten
+  ganzzahligen Aufrundungen sind korrekt.
+- Die Originalprogramme weisen den vollständigen Gate erwartungsgemäß
+  als COVERAGE_BOUND_INCONCLUSIVE zurück.
+
+Die Isometrie und exakte Definition von Q, die zugrundeliegenden
+Domänenlemmata, die alte Positivität und die analytische Bedeutung der
+geerbten Matrixmajoranten bleiben übernommene Voraussetzungen. Ein Replay
+ersetzt keine unabhängige Neubegutachtung dieser Voraussetzungen.
+
+Schärfere Basisgrenze
+
+Die exakt rationale Spur von D*D beträgt zur Anzeige
+
+  gerade:   0,00050152283835315907576...
+  ungerade: 0,00050151863442727859159...
+
+Weil W_J=I+D*D und D*D>=0, folgt in beiden Paritäten streng
+
+  I <= W_J < (500251/500000) I = 1,000502 I.
+
+Die Basis ist damit nahezu orthonormal. Die großen verbleibenden
+Obergrenzen sind keine Folge eines schlecht konditionierten Basisgrams.
+Sie entstehen aus Nullfits und groben globalen Operatornormen. Daraus
+folgt weder, dass die Basis zu klein ist, noch, dass sie für alle
+benötigten Funktionale bereits ausreicht.
+
+Neu berechnete tatsächliche Daten
+
+Für jede Parität wurde aus den einschließenden Koeffizienten der EXAKTEN
+Basis J der vollständige endliche L-Energiegram berechnet:
+
+  E84 = L[J,J],  L ell_n=(H_n+11/10)ell_n.
+
+J ist exakt polynomial bis Grad 95. Daher enthält die Summe über diese
+96 Koeffizienten die ganze L-Energie von J; es gibt hier keinen
+unbezahlten höheren Basisanteil. Das sagt nichts über die noch offenen
+hohen Anteile anderer Operatorbilder aus.
+
+Die Dateien L_ENERGY_84_EVEN/ODD.json enthalten je eine rationale
+symmetrische Matrix M mit der vollen Löwner-Einschließung
+
+  M-10^-58 I <= E84 <= M+10^-58 I.
+
+Die maximale Zeilensumme der absoluten Eintragsfehler liegt unter
+2,3810*10^-59 beziehungsweise 2,4777*10^-59. Die symmetrische Normschranke
+aus diesen Zeilensummen rechtfertigt die Löwner-Einschließung.
+
+Zusätzlich besteht eine gerichtete LDL-Zerlegung von
+M-10^-58 I-(21/5)W_J mit strikt positiven Pivotintervallen. Somit ist
+
+  E84 >= (21/5)W_J
+
+auf der neuen Basis direkt numerisch eingeschlossen. Der im Vorgänger
+bewiesene globale L-Boden auf R_12 ist dafür nicht die alleinige Kontrolle.
+Eine harmonische Diagonalabschätzung liefert außerdem analytisch
+
+  E84 <= (H_95+11/10)W_J.
+
+Anschluss an die gemeinsame Verlustbilanz
+
+Auf demselben Rest T=R_12 sei weiterhin eta=10^-10 und
+S_eta=(1-eta)L-H mit dem geerbten Satz H<=0,89L auf GANZ T.
+Für seinen Galerkinblock B84=S_eta[J,J] folgt deshalb
+
+  (11/100-eta)E84 <= B84 <= (1-eta)E84,
+
+und in den tatsächlichen 84 Koeffizienten
+
+  0,46199999958 I <= B84 < 6,23947712620 I,
+  cond_2(B84) < 13,51.
+
+Diese Aussagen benötigen keine Positivität des noch offenen tau-Tails.
+Sie betreffen den bereits positiven HILFSOPERATOR S_eta, nicht die
+tatsächliche Schurform tau. Sie beweisen auch noch keine Gramschranke
+gegen die empfindliche 203-dimensionale Metrik D0.
+
+B84 selbst wurde nicht integriert: Dafür fehlt noch H[J,J]. Ebenso
+fehlen A0 J und der vollständige Formdual-Residualgram. E84 ist der
+konkrete jetzt vorbereitete Teil der Galerkinrechnung. Der nächste Auftrag
+steht in ANSCHLUSS_GPT2.txt.
+
+Wichtige Unterscheidung der zwei 203er-Blöcke
+
+Im Abdeckungsweg stehen F^-1/2 v und S12^-1/2 C12 mit der tatsächlichen
+Schurkopplung C12. In der gemeinsamen Verlustbilanz steht A0 mit A_c*v,
+modellierten endlichen Quellfeatures und der Metrik D0. Die Blöcke haben
+dieselbe Zeilenzahl, sind jedoch nicht identisch. Die neue Basis J kann
+für beide Wege benutzt werden; ihre Kraftdaten und Fehlergrame dürfen
+nicht ohne einen bewiesenen Zusammenhang ausgetauscht werden.
+
+Gesamtstatus
+
+BASIS84_VERIFIED=true
+FIRST_65_FULL_ERROR_BOUND_VERIFIED=true
+L_ENERGY_84_ENCLOSURES_COMPUTED=true
+H84_COMPUTED=false
+A0J_COMPUTED=false
+S84_ACTUAL_MATRIX_COMPUTED=false
+FULL_203_RESIDUAL_GRAM_COMPUTED=false
+TAIL_FLOOR_1_OVER_20_CERTIFIED=false
+FULL_REMAINDER_CERTIFIED=false
+OBJECT_X_CONSTRUCTED=false
+
+Keine Originalarchive verändert; kein GitHub-Abruf und keine GitHub-Änderung.

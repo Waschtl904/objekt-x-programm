@@ -1,0 +1,141 @@
+Objekt X — vollständiger Logmodell-Gram und bedingter globaler Resttest
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Dieser Hilfsgram ist tatsächlich vollständig, aber er ist NICHT der
+noch fehlende vollständige Residualgram. Die Anbindung aller drei
+Randkoeffizienten und des regularisierten Ableitungsgrames bleibt offen.
+
+1. Drei feste Singularfunktionen
+
+Für u=(x-a)/h setze B(u)=(log(u),log^2(u),log(1-u)).
+Der lokale Hilbertraum hat Maß 2h du. Der vollständige 3x3-Gram des
+Legendre-Restes ab N=104 ist
+
+ G104 = B*(I-P_<104)B.
+
+build_log_tail.py berechnet ihn durch exakte vollständige Integrale
+minus alle 104 bekannten Projektionsbeiträge. Die vollständigen Integrale,
+geteilt durch 2h, lauten
+
+ [ 2,             -6,                    2-zeta(2)             ;
+  -6,             24,                   -6+2zeta(2)+2zeta(3)   ;
+   2-zeta(2),     -6+2zeta(2)+2zeta(3),  2                     ].
+
+Dies folgt aus integral_0^1 log^k(u)du=(-1)^k k! und der absolut
+integrierbaren Reihe log(1-u)=-sum_(m>=1)u^m/m. Die beiden gemischten
+Integrale reduzieren sich durch Partialbruchzerlegung auf zeta(2),zeta(3).
+
+Für P_n(2u-1) sind die Logmomente n>=1 exakt
+
+ log(u):       (-1)^(n+1)/(n(n+1)),
+ log^2(u):     2(-1)^n [H_(n-1)+H_(n+1)]/(n(n+1)),
+ log(1-u):     -1/(n(n+1)).
+
+Bei n=0 sind es -1,2,-1. Man erhält die Formeln durch zweimalige
+Ableitung der Rodrigues-Identität
+
+ integral_0^1 u^s P_n(2u-1)du
+       = s(s-1)...(s-n+1)/[(s+1)...(s+n+1)]
+
+bei s=0. Zusätzlich prüft das Programm sämtliche ersten 104 Momente
+für log(u) und log^2(u) durch eine getrennte exakte Polynomrekursion
+und termweise Integration. Das sind 208 rationale Identitätskontrollen.
+
+Die Normierung liefert den abzuziehenden Beitrag
+2h (2n+1) m_n* m_n. Damit ist jeder unendliche Logmodellrest enthalten.
+
+2. Keine numerisch vermuteten Transzendentengrenzen
+
+log(2),log(3) werden über die positive atanh-Reihe und einen expliziten
+geometrischen Rest nach außen eingeschlossen. Für zeta(2),zeta(3) wird
+die Euler-Transformation der alternierenden eta-Reihe verwendet.
+Ihre positiven Differenzen sind für n>=1
+
+ Delta^(n-1)(1/k^2)|k=1 = H_n/n,
+ Delta^(n-1)(1/k^3)|k=1 = (H_n^2+H_n^(2))/(2n).
+
+Die Differenzen sind positive Integrale und höchstens 1. Nach 400 Termen
+ist der verbleibende eta-Rest deshalb höchstens 2^-400. Die Umrechnung
+zeta(s)=eta(s)/(1-2^(1-s)) wird rational bezahlt.
+
+LOG_TAIL_104.json enthält gerichtete rationale Eintragsintervalle und
+eine feste rationale Obermatrix. Die Aufrundung bezahlt pro Diagonale
+alle Eintragsunsicherheiten ihrer Zeile. Ein separater Prüfer bestätigt
+die Obermatrix und die Positivität des vollständigen eingeschlossenen Grams.
+
+3. Vollständiger weiterer Matrixtest
+
+Sei die TATSÄCHLICHE kanonische Residualfunktion zerlegt als
+
+ R_X(u)=B(u) C+g(u),
+
+mit C in R^(3x203), dessen letzte Zeile C_out schon eingeschlossen ist.
+Die ersten beiden Zeilen müssen gemäß ENDPOINT_PROOF.txt noch aus den
+gemeinsam gebildeten Kernfunktionen bestimmt werden. Setze
+
+ E_g = integral_a^b 2(x-a)(b-x) g'(x)*g'(x) dx.
+
+Eine sichere vollständige Obermatrix für E_g genügt. Aus der
+Legendre-Sturmform folgt auf dem gesamten unendlichen Raum
+
+ sum_(n>=104) g_n*g_n <= E_g/[104*105].                (1)
+
+Schärfer kann der vollständige Ableitungsgram nach Abzug seines
+bekannten endlichen Anteils verwendet werden:
+
+ E_g,>=104=E_g-sum_(n<104)n(n+1)g_n*g_n >=0.          (2)
+
+Auch (2) muss vollständig mit allen Fehlern eingeschlossen sein;
+eine endliche Koeffizientenliste allein liefert E_g oder (2) nicht.
+
+Für jedes theta>0 folgt aus einem einzigen gemeinsamen Young-Schritt
+
+ U104 <= (1+theta) C* G104 C
+            +(1+1/theta) E_g,>=104/[104*105].         (3)
+
+Der 3x3-Gram in (3) bleibt als GEMEINSAME Matrix erhalten; die drei
+logarithmischen Teile werden nicht einzeln mit verlorenen Kreuztermen
+majorisiert. Alle tatsächlichen 203 Residuen werden bereits vor Bildung
+von C und g gemeinsam zusammengesetzt.
+
+Mit T_budget, c8, j und d104 aus dem gerade geprüften Paket lautet der
+konkrete hinreichende Abschluss-Test daher
+
+ (1+theta) C* G104_upper C
+  +(1+1/theta) E_g,>=104_upper/10920
+     <= d104[(1-c8)T_budget-(j+10^-300)D].             (4)
+
+Ist eine Modellabweichung e mit vollständigem X-Gram E_e hinzuzunehmen,
+muss sie zusätzlich bezahlt werden. Zum Beispiel gibt jedes tau>0
+
+ U104 <=(1+tau)[rechte Seite der Abschätzung (3)]
+                     +(1+1/tau)E_e.
+
+Eine rationale Näherung der Randkoeffizienten darf nicht kommentarlos
+von R_X abgezogen und der Rest als H1-Funktion behandelt werden:
+ein beliebig kleiner verbliebener Logkoeffizient hat noch immer eine
+unendliche gewichtete Ableitungsenergie. Seine Abweichung gehört in
+den expliziten X-Fehler e oder in die eingeschlossenen exakten Koeffizienten.
+
+4. Verwendung der vorhandenen endlichen Informationen
+
+Der neue Basisrest R_J=J*R ist bereits vollständig mit Fehlern gebunden.
+Der kanonische X-Repräsentant ist X-orthogonal zu den zwölf polynomialen
+W_X-Normalvektoren Phi12 von T. Da [Phi12,J] den ganzen P95 aufspannt,
+kann sein vollständiger Koeffizientenblock unter Grad 96 aus
+
+ [Phi12,J]* R_<96 = (0_12,R_J)
+
+rekonstruiert werden. Die Nichtorthonormalität dieses Blocks und alle
+Fehler von R_J müssen erhalten bleiben. Für die Grade 96 bis 103 liegen
+die neuen Residualzeilen mit ihrer Momentumrechnung bereits vor.
+Damit ist der in (2) abzuziehende endliche Anteil grundsätzlich zugänglich;
+er ist nicht als null vorauszusetzen.
+
+Offen sind die zwei inneren Randvektoren mit ihren vollständigen Fehlern
+und eine brauchbare vollständige Obermatrix E_g,>=104_upper. Es wurde
+keine endliche Matrix als Ersatz dafür eingesetzt. Die positive Zielmatrix
+in (4) ist bereits konkret, ihre linke Seite für den ganzen tatsächlichen
+regularisierten Rest ist hier noch NICHT berechnet.
+
+A8->A9 und der gesonderte Tailboden 1/20 bleiben offen.

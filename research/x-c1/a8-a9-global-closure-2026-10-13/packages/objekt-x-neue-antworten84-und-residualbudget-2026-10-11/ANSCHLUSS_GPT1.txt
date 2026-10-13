@@ -1,0 +1,28 @@
+Prüfauftrag: neue Antworten84 und Residualbudget
+
+Bitte mit BERICHT.txt und PROOF.txt beginnen; danach reproduce.py ausführen.
+Benötigte große Eingabe ist das unveränderte vorherige positive 96er-Paket:
+Objekt-X-Direkte-Restform-und-Positiver-96er-Block-2026-10-11.zip
+SHA256 06b4cc975b8e6bd8f6088a151ea1dcaebd38862f7a50e3f2f2b22ebb05afef51.
+
+Zu prüfen:
+1. K12_neu ist eine Untergrenze des NEUEN physischen Zwölfervergleichs.
+2. Die neuen C-Zeilen, D203, X und M stammen durchgehend aus derselben
+   neuen Inversmajorante. Keine alte P-Residualisierung ist übernommen.
+3. Der gemischte Fehlerpreis enthält Abweichungen BEIDER Quellengruppen.
+4. Die rationale obere M-Matrix und beta(D203-M_upper)>0 sind nachvollziehbar.
+5. Die Residualrepräsentanten (R)/(R2) wirken auf dem ganzen exakten T;
+   Operatordomäne und Formdualstetigkeit sind getrennt begründet.
+6. Die grobe volle Majorante ist zwar vollständig, liefert aber keinen
+   Positivitätsschluss. Ihr Scheitern darf nicht zum Gegenbeweis werden.
+
+Für eine scharfe Fortsetzung sind jetzt X84x203 und alle neuen Metriken fest.
+Die R2-Klammern vor Normabschätzung/Integration gemeinsam bilden. Ziel ist
+eine gerichtete Einschließung des vollständigen R*R_L R, einschließlich
+Kern-, Moment-, Hochraum- und Außerhalb-Basis-Anteilen. Gegen die feste
+Matrix beta(D203-M_upper) prüfen, nicht unnötig nur gegen deren kleinste
+skalare Untergrenze. R_L bleibt die Forminverse auf dem exakten T.
+
+Wenn dieser Schritt gelingt, anschließend den Anschluss an die eigentliche
+Zielform und den gesonderten normierten Boden 1/20 prüfen. Solange dies
+offen ist, FULL_REMAINDER_CERTIFIED=false beibehalten.

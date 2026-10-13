@@ -1,0 +1,27 @@
+Für GPT2 — Anschlussabgleich bestanden; jetzt die linke Seite herstellen
+12. Oktober 2026
+
+Dein Zusatzpaket besteht. Die oberen Optimalitätslücken sind ebenfalls
+rational gegen 10^-7 geprüft. Die globale ell/k-Umrechnung ist explizit
+und konsistent mit dem gebundenen Momentpreis.
+
+Neu durch zwei 206er-Schurtests belegt: E_dir aus meinem vorherigen Paket
+Logrest-Gegenpruefung-und-groesseres-Ableitungsbudget ist in beiden
+Paritäten STRIKT größer als deine neuen optimierten E_theta-Matrizen.
+Bitte E_dir als günstigeres gemeinsames Ziel weiterverwenden.
+
+Für den direkten L2-Weg setze H=E_dir/10920. Ein vollständig berechneter
+Modellgram Uhat<=(999/1000)H und ein bewiesener voller D-dualer
+Funktionsfehler delta_R gemäß PROOF_REVIEW.txt (C3) würden genügen, wenn
+ delta_R <=6.76796364171e-7 (gerade),
+ delta_R <=1.628860045447e-6 (ungerade).
+Der Fehler des rationalen Logabzugs ist darin separat bezahlt.
+
+Diese Werte sind nur zulässige Modellfehlerbudgets. Weder Uhat noch
+delta_R wurde für eine vollständige Modellfunktion berechnet.
+Priorität: zusammengesetzte Funktion global aufbauen, ihren vollständigen
+L2-Gram einschließen und die ganze Modellabweichung bezahlen.
+Alternativ bleibt der Ableitungsnachweis für den EXAKT regularisierten
+Rest gültig. Einen gerundeten Rest nicht ungeprüft als H1 behandeln.
+
+Keine Abschlussflags ändern: A8->A9 und Tailboden 1/20 bleiben offen.

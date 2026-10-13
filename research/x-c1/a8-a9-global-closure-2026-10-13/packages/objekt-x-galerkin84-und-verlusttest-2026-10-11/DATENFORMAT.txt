@@ -1,0 +1,44 @@
+Objekt X — Bedeutung der neuen Matrixdaten
+
+Die Zeilen von C84 gehören zur GEMEINSAMEN VERLUSTBILANZ.
+Sie sind keine Ersatzdaten für die 203 Zeilen des Abdeckungstests.
+
+Alle nachfolgenden Zeilennummern zählen ab 1:
+
+  1–191    Ac* (c(r)-B_old h(r)/delta).
+           Ac* bezeichnet hier die adjungierte Matrix Ac, nicht eine
+           Multiplikation mit einem unbenannten Faktor. Wegen dieser
+           Matrixmischung ist eine Zeile keine einzelne Legendre-Mode.
+  192–195  C0_z(r), die vier ursprünglichen physischen z-Funktionen.
+  196–203  C0_Y(r)-P* C0_z(r), die acht signierten Restkopplungen.
+
+Die zugehörige inverse Metrik ist fest durch
+  D0=diag((1-rho) I191, N/2, Q8)
+bestimmt. Es gilt C84=A0 J, mit 203 Zeilen und 84 Spalten.
+
+H84 ist 84x84 und enthält die vollständige alte hohe Antwort auf J,
+einschließlich ihres Faktors 1/delta. Die Modellmatrix wird durch den
+gesonderten skalaren Operatorfehler zu einem tatsächlichen Einschluss.
+E84=L[J,J] ist der übergebene Energiegram mit Radius 10^-58.
+B84=(1-eta)E84-H84; R84=C84* D0^-1 C84, eta=10^-10.
+
+Die rationale Antwortmatrix X hat 84 Zeilen und 203 Spalten und definiert
+die exakten Funktionen Z=JX. X_rational enthält einzelne rationale Zahlen.
+Bei Modellmatrizen bedeuten Paare [a,b] dagegen gerichtete Intervalle.
+Zusätzliche analytische Fehler sind NICHT in diesen Zahlenintervallen
+versteckt; sie stehen in den ausdrücklich benannten Fehlerfeldern.
+
+Die Felder finite_Galerkin_residual_model_norm und M_model betreffen
+den endlichen Modellteil. Ein kleines endliches Residuum beweist keine
+kleine Abweichung in allen Richtungen außerhalb der Basis84.
+complete_formdual_residual_gram bleibt daher null.
+
+Die getrennte Variante unter optional_positive_potential_comparison
+behält das positive Potential V_log(t)=-log(1-t²)/2:
+  Lplus=L+V_log, Splus=(1-eta)Lplus-H.
+Xplus_rational und Mplus_model gehören ausschließlich zu dieser Variante.
+Ihre Residualanforderung steht separat in RESIDUAL_BUDGET.json.
+Das alte X und M werden dadurch weder ersetzt noch umbenannt.
+
+Sämtliche Aussagen verwenden die gebundenen mathematischen Vorleistungen.
+AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN. FULL_REMAINDER_CERTIFIED=false.

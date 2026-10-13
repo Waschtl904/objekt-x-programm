@@ -1,0 +1,60 @@
+Objekt X — neue Residualzeilen außerhalb der Basis84
+11. Oktober 2026
+
+Der globale Anschluss des eingesandten Pakets lässt sich auf unsere neuen
+Antworten anwenden. Beide zuvor offenen endlichen Voraussetzungen sind
+erfüllt. Außerdem sind die acht Außenrichtungen jetzt für ALLE 203
+zusammengesetzten Residualfunktionen gemeinsam berechnet. Ihre gewichtete
+Gram-Matrix passt einschließlich aller gebundenen Fehler deutlich in das
+richtungsabhängige Budget. Der unendliche Rest ab Grad 104 bleibt offen.
+
+Die Frobeniusnormen der neuen Antwortmatrizen liegen unter 0.325 bzw.
+0.321. K12_neu>=epsilon K12_alt gilt rational für beide Paritäten. Der
+vollständige geometrische Momentrest ist mit 10^-300 D_neu bezahlt.
+Der tatsächliche Basis84-Residualanteil kostet höchstens 9.19e-17 D_neu
+(gerade) bzw. 1.50e-19 D_neu (ungerade). Diese Aussagen verwenden die
+Operatorfehler zusätzlich zum kleinen endlichen Modellresiduum.
+
+Für die festgelegten k96,...,k103 wurden H[J,K] und q[J,K] vollständig
+integriert. Aus diesen neuen 84x8-Kreuzblöcken und den eingesandten
+Kraftdaten entstehen die vollständigen acht Residualzeilen
+  R_K=A_neu[K]* - S_neu,eta[J,K]* X_response.
+Erst nach dieser Zusammensetzung wird die gemeinsame Gram-Matrix gebildet.
+Die Rechnung verwendet genau die neuen 203 Kraftkoordinaten.
+
+Mit T_budget=beta(D_neu-M_upper) gilt rational einschließlich der
+Umrechnung von k_n auf ell_n:
+  sum_(96<=n<104) R_n*R_n/(H_n+1.1) <= c8 T_budget,
+  c8_gerade=1/5000, c8_ungerade=13/20000.
+Der achtgliedrige Beitrag benötigt also weniger als 0.020 Prozent bzw.
+0.065 Prozent dieses Matrixbudgets. Das ist stärker als ein Test auf der
+einzigen kritischen Richtung des eingesandten Neunerraums.
+
+Nach Basis-, Moment- und Acht-Zeilen-Preis bleibt für die GEWICHTETE
+unendliche Summe ab Grad 104 ein uniformes hinreichendes Budget von etwa
+3.1740588809362e-7 D_neu (gerade) bzw. 1.9118757370138e-6 D_neu (ungerade).
+Die exakten rationalen Werte sind im Audit gespeichert. Bevorzugt bleibt
+die schärfere richtungsabhängige Matrixbedingung
+  U104 <= d104[(1-c8)T_budget-(j+10^-300)D_neu],
+  U104 >= R_X*(I-P_<104)R_X, d104=H104+1.1.
+Gerade die zweite Ungleichung muss den GESAMTEN Rest einschließen.
+Ein endlicher Legendreabbruch liefert sie nicht.
+
+Validierung: Der rationale Prüfer des Eingangs besteht. Die globale
+Geometrie wurde zusätzlich mit unseren lokalen gebundenen Daten neu
+aufgebaut; alle mathematischen Felder sind exakt gleich. Die abweichenden
+Dateihashes von REFINE_COMMON/INPUT wurden so ausdrücklich behandelt.
+Vier neue vollständige Kreuzintegrationen bei 3072 und 4096 Bit werden
+über 4160 Eintragsintervalle verglichen. Jeder Lauf gleicht 17572 niedrige
+Kraftwerte ab und prüft drei unabhängige vollständige hohe Paarungen.
+Der unabhängige rationale Prüfer rekonstruiert 3248 Residualeinträge und
+bestätigt zweimal 203 positive Pivots für den gemeinsamen Gramvergleich.
+
+Alle Positivitätsaussagen bleiben an die geerbten analytischen Operator-
+voraussetzungen gebunden. Die geschärfte globale Restgrenze U104 ist noch
+nicht hergestellt. Keine negative tatsächliche Schurform ist nachgewiesen;
+auch ein positiver vollständiger 104er-Raum wird hier nicht behauptet.
+A8->A9 und der Tailboden 1/20 bleiben unbewiesen.
+
+Für die externe Prüfung: ANSCHLUSS_GPT1.txt, HERLEITUNG.txt und README.txt.
+FULL_REMAINDER_CERTIFIED=false; TAIL_COERCIVITY_CERTIFIED=false.

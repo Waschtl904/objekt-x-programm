@@ -1,0 +1,13 @@
+{
+  "original_zip": {
+    "name": "Objekt-X-Basis84-und-Abdeckungspruefung-2026-10-10.zip",
+    "sha256": "dd0e30a27d66f38503b217fa3279f62173ee1360eeca06eb5fdb698c7deeaec5",
+    "root_directory": "Objekt-X-Basis84-und-Abdeckungspruefung-2026-10-10"
+  },
+  "previous_residual_derivation_package": {
+    "name": "Objekt-X-Verlustbilanz-Pruefung-und-Residualanschluss-2026-10-10.zip",
+    "sha256": "2d610ebf2f7917b59774bdef8a0e77ab56cdde7467a0152fac8d73d6036f9b3f"
+  },
+  "basis_json_bindings_note": "BASIS JSON files are bound after the repeated calculation with LF line endings; source contents are otherwise identical.",
+  "inherited_analytic_inputs_reproved": false
+}

@@ -1,0 +1,48 @@
+Objekt X — Rückgabe zu unendlichem Dualrest und Außenrichtungen
+11. Oktober 2026
+
+Bitte mit BERICHT.txt und HERLEITUNG.txt beginnen, dann den rationalen
+Replay aus README.txt ausführen. Der unendliche Abschluss wird weiterhin
+ausdrücklich NICHT behauptet.
+
+Die zwei endlichen Gates an die NEUEN Antworten sind erfüllt. Die volle
+Momentkorrektur kann mit 10^-300 D bezahlt werden. Der tatsächliche
+Basis84-Residualanteil kostet <9.19e-17 D bzw. <1.50e-19 D.
+
+Neu sind die vollständigen J84/k96..103-Kreuzintegrale und daraus die
+acht Zeilen für ALLE 203 zusammengesetzten Residualfunktionen. Die
+geerbten Außenfunktionen und die neuen Antworten bleiben fest.
+Die gemeinsame gewichtete Acht-Zeilen-Summe ist kleiner als
+  (1/5000) T_budget gerade,
+  (13/20000) T_budget ungerade,
+mit T_budget=beta(D-M_upper). Das sind Matrixaussagen einschließlich
+Quellen-, Operator-, Moment- und Rechenfehlern.
+
+Bitte insbesondere prüfen:
+1. Die Normumrechnung vom vollständigen WX-Residual zum kanonischen
+   X-Repräsentanten und den verschärften geometrischen Preis.
+2. Formel (1): Reihenfolge/Adjunkte der neuen Kraftzeilen, vollständiges
+   H_JK und direkte Kreuzform einschließlich beider Momentterme.
+3. Die gemeinsamen Fehlerpreise eK, errC, errH und errR. Die 8 bzw. 96
+   Faktoren sind bewusst konservativ; keine fehlerfreie Quelle voraussetzen.
+4. Den rationalen 203x203-Vergleich für die volle Acht-Zeilen-Matrix.
+
+Der nächste echte Nachweis ist jetzt:
+  U104 >= R_X*(I-P_<104)R_X vollständig,
+  U104 <= d104[(1-c8) beta(D-M_upper)-(j+10^-300)D].
+Nicht einzelne Summanden getrennt grob majorisieren: die neuen Residuen
+müssen als Funktionen zuerst zusammengesetzt werden. Die vorhandene
+grobe vollständige Residualnorm reicht für diesen Test nicht aus.
+
+Die neuen Kreuzintegrale integrieren die gesamten hohen Quellen. Das
+beseitigt jedoch nicht den separat offenen unendlichen Schalenrest U104.
+Insbesondere kein Austausch mit den 203 Zeilen des alten Abdeckungstests.
+
+Prüfhinweis zur Datenbindung: REFINE_COMMON/INPUT des eingesandten Pakets
+hatten andere Bytes als unsere gebundenen Vorgängerdateien. Die globale
+Reduktion wurde mit unseren Dateien neu aufgebaut. Alle mathematischen
+Felder stimmen exakt überein; nur die bindings unterscheiden sich.
+INFINITE_REDUCTION_LOCAL.json dokumentiert diese konkrete Neuverbindung.
+
+FULL_REMAINDER_CERTIFIED=false; TAIL_COERCIVITY_CERTIFIED=false;
+A8_TO_A9_PROVED=false; NEGATIVE_ACTUAL_SCHUR_WITNESS=false.

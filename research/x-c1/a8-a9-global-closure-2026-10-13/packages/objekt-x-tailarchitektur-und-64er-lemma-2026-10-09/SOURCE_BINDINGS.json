@@ -1,0 +1,80 @@
+{
+  "observed_at_utc": "2026-10-09T11:54:40.260932+00:00",
+  "repo": "Waschtl904/objekt-x-programm",
+  "observed_main": "da50f0a21691e6fd253163e612a2af2898606581",
+  "main_observation_note": "Read through GitHub connector before analysis; timestamp here records package assembly, not a second remote read.",
+  "merged_prs_read": [
+    213,
+    214,
+    215
+  ],
+  "github_sources": [
+    {
+      "path": "sources/github_REMAINDER_BEWEIS.txt",
+      "git_blob_sha": "4db1471a1379af4ea8a81c273d0d1ddf9c967e8b",
+      "source_url": "https://github.com/Waschtl904/objekt-x-programm/blob/da50f0a21691e6fd253163e612a2af2898606581/research/x-c1/a8-a9-remainder-progress-2026-10-07/packages/remainder/BEWEIS.txt",
+      "copy_note": "UTF-8 text as returned by GitHub; source blob SHA and local byte SHA are distinct bindings.",
+      "local_copy_sha256": "1ef4dabd030d86d8883a5eaf07a60a4b72a047bec502d2092df08e89d7dc2dcf"
+    },
+    {
+      "path": "sources/github_DOMAIN_LEMMATA.txt",
+      "git_blob_sha": "c338f983b374c9be3dca49859fd256464f5834bd",
+      "source_url": "https://github.com/Waschtl904/objekt-x-programm/blob/da50f0a21691e6fd253163e612a2af2898606581/research/x-c1/a8-a9-remainder-progress-2026-10-07/packages/domain/LEMMATA.txt",
+      "copy_note": "UTF-8 text as returned by GitHub; source blob SHA and local byte SHA are distinct bindings.",
+      "local_copy_sha256": "865b8403bd00d390603eb0a856ee843beea723b194fa488fc78c9422c666d9e1"
+    },
+    {
+      "path": "sources/github_PILOT_PROTOCOL.txt",
+      "git_blob_sha": "fa7fc20b48757e9ebfe41b1882c159c609a7a686",
+      "source_url": "https://github.com/Waschtl904/objekt-x-programm/blob/da50f0a21691e6fd253163e612a2af2898606581/research/x-c1/a8-a9-remainder-progress-2026-10-07/packages/pilot/PROTOKOLL.txt",
+      "copy_note": "UTF-8 text as returned by GitHub; source blob SHA and local byte SHA are distinct bindings.",
+      "local_copy_sha256": "fec422ec89aed14ef87c0195ff000e620afad71e5dcd5135e19f05362ce261f4"
+    },
+    {
+      "path": "sources/github_REMAINDER_README.md",
+      "git_blob_sha": "f92a8b092d70d16a25aee0d1d58015f2d5d788ba",
+      "source_url": "https://github.com/Waschtl904/objekt-x-programm/blob/da50f0a21691e6fd253163e612a2af2898606581/research/x-c1/a8-a9-remainder-progress-2026-10-07/README.md",
+      "copy_note": "UTF-8 text as returned by GitHub; source blob SHA and local byte SHA are distinct bindings.",
+      "local_copy_sha256": "7d1f6100e613f150f26eefb282ea93a8e6afaf6c7b16886f0e6abafed202fc79"
+    },
+    {
+      "path": "sources/github_MAIN_README.md",
+      "git_blob_sha": "b219d935b9395eaa5da3d61c10018125f75331ae",
+      "source_url": "https://github.com/Waschtl904/objekt-x-programm/blob/main/README.md",
+      "copy_note": "UTF-8 text as returned by GitHub; source blob SHA and local byte SHA are distinct bindings.",
+      "local_copy_sha256": "8cd81a134ae40a4269ed38789bcf4cee12dbbd9378502414a52cbeddabcc2dde"
+    }
+  ],
+  "finite_archive": {
+    "filename": "Objekt-X-Endlicher-Schuranschluss-2026-10-09.zip",
+    "library_file_id": "libfile_b5b630d24f14819196c0efdcb5de5c5e",
+    "bytes": 50800393,
+    "sha256": "884cf43ebb157187e5a54039cdc7be352eda4d8369f24d36196724d7981c6b71"
+  },
+  "copied_original_members": [
+    {
+      "original_member": "HERLEITUNG.txt",
+      "local_copy": "sources/FINITE_HERLEITUNG.txt",
+      "sha256": "576df411415483425b0ff001a9b12ad4a2e59baf714d7050086df742f7c6eb27",
+      "byte_equal": true
+    },
+    {
+      "original_member": "work/high-floor-2026-10-08/HERLEITUNG.txt",
+      "local_copy": "sources/HIGH_FLOOR_HERLEITUNG.txt",
+      "sha256": "a160913e88e32b9eedd7543010441a0c919295d4ee2c152f8c74fc939b303e59",
+      "byte_equal": true
+    },
+    {
+      "original_member": "work/remainder-integration-check-v2/originals/half-inverse/HERLEITUNG.txt",
+      "local_copy": "sources/HALF_INVERSE_HERLEITUNG.txt",
+      "sha256": "cd13e95a5ce2f50159a90e3df80a79e16950389a6804161db4ebffa475293035",
+      "byte_equal": true
+    }
+  ],
+  "replay_command": "python3 -B reproduce.py --out finite_replay.json",
+  "replay_scope": "Full bundled bounded replay; original Gamma matrix integrations not rerun.",
+  "github_changed": false,
+  "site_created": false,
+  "full_remainder_certified": false,
+  "review_status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN"
+}

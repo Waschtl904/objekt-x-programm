@@ -1,0 +1,30 @@
+{
+  "status": "SIGNED_COMMON_C_INVERSE_RESPONSE_ENCLOSED_U00_UNRESOLVED",
+  "date": "2026-10-07",
+  "source_main": "da50f0a21691e6fd253163e612a2af2898606581",
+  "source_main_is_bound_prior_input_not_a_fresh_remote_query": true,
+  "signed_4_by_8_inverse_block_enclosed": true,
+  "exact_infinite_inverse_computed": false,
+  "infinite_old_space_included_under_inherited_assumptions": true,
+  "new_mixed_integrals": 64,
+  "integration_precisions": [
+    3072,
+    4096
+  ],
+  "U00_majorants_available": true,
+  "U00_positive_reserve_certified": false,
+  "current_non_C_scalar_Young_family_cannot_close": true,
+  "physical_negative_witness": false,
+  "full_remainder_certified": false,
+  "G01": null,
+  "gamma01": null,
+  "beta_tail": null,
+  "eta": null,
+  "alpha": null,
+  "new_horizon": false,
+  "pilot_geometry_changed": false,
+  "target_positivity_used": false,
+  "github_changed_by_this_stage": false,
+  "external_review": "OPEN",
+  "next_bounded_question": "Sharpen the common weighted 185D midpoint/Delta error and cross Gram while retaining the signed C enclosure; re-test the whole U00 matrix before cross/tail work."
+}

@@ -1,0 +1,90 @@
+Objekt X — gemeinsame Verlustbilanz auf zwei exakten Restfunktionen
+10. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Die am 9. Oktober vorgeschlagene ausreichende Teilbedingung R0 <= 0,11 L
+ist widerlegt. Auf der exakten Restfunktion r = Pi_T ell_12 benötigt R0
+im geraden Sektor rund 34,6022 % und im ungeraden Sektor rund 40,8489 %
+von L. Damit kann auch die stärkere Teilbedingung R0 <= (0,11-10^-12)L
+nicht auf ganz T gelten. Dies ist ein Befund über diese Beweisstrategie,
+kein negativer Zeuge für die ursprüngliche Form.
+
+Der vollständige ausreichende Verlust Loss_T liegt auf denselben beiden
+Funktionen dagegen unter L: rund 53,7051 % beziehungsweise 59,6419 %.
+Die allgemeine 89-%-Schranke des hohen Anteils ist auf diesen Funktionen
+sehr großzügig: Dort werden nur rund 19,1029 % beziehungsweise 18,7930 %
+benötigt. Daher muss der nächste Beweis die gemeinsame Bilanz erfassen.
+
+Beiträge, jeweils als Prozent von L[r]
+
+                                      gerade             ungerade
+Alter hoher Anteil                    19,102884           18,793032
+Alter niedriger Anteil                 4,004223            4,265010
+Kopplung an vier Quellen                0,329317            0,391637
+Kopplung an acht Restquellen           30,268657           36,192221
+Übrige Beiträge R0                    34,602196           40,848868
+Gesamter ausreichender Verlust        53,705081           59,641900
+
+Die Beitragszeilen sind gerundete Modellwerte. Für die Schlussfolgerungen
+werden alle unten beschriebenen Fehler eingerechnet. R0 verwendet die
+exakten Restkräfte und die bereits gebundenen endlichen Quellmodelle.
+Loss_T verwendet zusätzlich die tatsächlichen endlichen Quellen.
+
+Nach außen gerundete Einschließungen einschließlich Fehlern:
+
+  gerade:   0,3460219647 < R0[r]/L[r] < 0,3460219652
+            0,5370508072 < Loss_T[r]/L[r] < 0,5370508077
+  ungerade: 0,4084886817 < R0[r]/L[r] < 0,4084886819
+            0,5964190046 < Loss_T[r]/L[r] < 0,5964190048
+
+Was neu gerechnet wurde
+
+Je Parität wurde eine echte Funktion im unveränderten Rest T gewählt.
+Es wurden alle 191 alten niedrigen Kräfte, die vollständige hohe Antwort,
+die vollständige alte Low/High-Kopplung sowie alle zwölf neuen Kopplungen
+analytisch integriert. Die logarithmischen Beiträge wurden über vollständige
+Stammfunktionen behandelt. Die hohe Antwort wurde nicht durch eine endliche
+Liste hoher Legendre-Moden ersetzt. Die vier ursprünglichen physischen
+Quellen und die acht festgelegten Y-Funktionen bleiben unverändert.
+
+Kontrollen
+
+Der gerade Fall wurde mit 3072 und 4096 Bit erneut berechnet. Die neuen
+Formeln wurden an vorhandenen Daten geprüft: 383 alte Quellenwerte im
+geraden Sektor, je 16 Gamma-Kopplungen und vier physische Kreuzkopplungen
+in beiden Paritäten. In jedem vollständigen alten Antwortlauf wurden fünf
+ausgewählte Low/High-Paarungen zusätzlich über die direkte alte
+Operatorwirkung geprüft. Ein gesonderter Replay setzt die endliche
+Verlustbilanz erneut aus den gespeicherten Integralen zusammen.
+
+Neue präzise offene Aufgabe
+
+Setze H[r] = delta^-1 ||h(r)||², eta = 10^-10 und
+
+  S_eta = (1-eta)L - H.
+
+Aus H <= 0,89 L folgt S_eta >= (0,11-eta)L > 0. Die 203 gemeinsamen
+Kraftzeilen A0 und ihre Metrik D0 bleiben bestehen. Zu beweisen ist nun
+
+  A0 S_eta^-1 A0* <= D0
+
+auf der richtigen Restgeometrie. Diese Bedingung behält die tatsächliche
+richtungsabhängige Reserve des hohen Anteils. Eine vollständige endliche
+Neumann-Einschließung mit explizitem Rest steht in der Herleitung.
+Der zugehörige Gram ist noch nicht integriert oder positiv zertifiziert.
+
+Status und Bindung
+
+FULL_REMAINDER_CERTIFIED = false.
+Objekt X ist durch diese Rechnung noch nicht konstruiert.
+Der gesamte unendliche Rest ist weiterhin offen; zwei erfolgreiche
+Prüfrichtungen sind kein Ersatz für eine Normschranke auf ganz T.
+Die widerlegte 11-%-Teilaufgabe wird nicht als offenes Beweisziel fortgeführt.
+Der bisherige allgemeine 89-%-Satz bleibt gültige übernommene Eingabe.
+
+Die Originalarchive bleiben unverändert. Das Vorgängerpaket
+Objekt-X-Gemeinsame-Restantwort-2026-10-09.zip wird vollständig eingebunden:
+SHA256 12ca23c1fb5a098d47075809303c17210560f42fdd382f125bb43495eec0a008.
+Der im Verlauf erneut gelesene GitHub-Main-Stand war
+da50f0a21691e6fd253163e612a2af2898606581. GitHub wurde nicht verändert.

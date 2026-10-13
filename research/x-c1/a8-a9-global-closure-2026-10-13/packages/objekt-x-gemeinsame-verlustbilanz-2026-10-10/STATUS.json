@@ -1,0 +1,22 @@
+{
+  "status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN",
+  "new_result": "The fixed 89/11 sufficient split is refuted by two exact T probes; full sufficient loss is below one on those probes.",
+  "new_operator_integrations": true,
+  "exact_T_probes": 2,
+  "same_physical_z": true,
+  "same_Y": true,
+  "remaining_R0_lower_relative_L": {
+    "even": "34/100",
+    "odd": "40/100"
+  },
+  "full_Loss_T_upper_on_probes_relative_L": {
+    "even": "54/100",
+    "odd": "60/100"
+  },
+  "new_whole_T_target": "A0 [((1-eta)L-H)|T]^-1 A0* <= D0, eta=1e-10",
+  "new_whole_T_target_certified": false,
+  "full_203_tail_gram_computed": false,
+  "full_remainder_certified": false,
+  "object_X_constructed": false,
+  "github_changed": false
+}

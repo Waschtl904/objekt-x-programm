@@ -1,0 +1,9 @@
+{
+  "status": "PASS_RATIONAL_MODEL_REVIEW_AND_CONDITIONAL_ERROR_ABSORPTION",
+  "fresh_global_models_rebuilt": false,
+  "numerical_diagnostic_replayed": true,
+  "global_model_Gram_upper_certified": false,
+  "remaining_independent_model_defect_certified": false,
+  "full_remainder_certified": false,
+  "tail_floor_1_over_20_certified": false
+}

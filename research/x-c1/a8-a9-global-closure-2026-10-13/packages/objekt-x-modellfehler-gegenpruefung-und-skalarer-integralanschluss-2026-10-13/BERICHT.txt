@@ -1,0 +1,27 @@
+Objekt X — Modellfehler bestätigt, skalarer Integraltest festgelegt
+13. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Der rationale Replay des vollständigen globalen Modellfehlers besteht.
+Unter den geerbten analytischen Voraussetzungen bestätigt er
+<1.2e-11 (gerade) und <2.3e-13 (ungerade). Der Parameteraufbau wurde
+frisch wiederholt. Die vollständigen äußeren Integrationen wurden
+hier nicht erneut gerechnet.
+
+Neu ist ein konkreter skalarer Anschluss für den noch offenen Gram:
+Je Parität sind eine rationale 203x203-Gewichtung und eine feste
+203-spaltige Polynomapproximation vom Grad 103 berechnet. Die
+Gewichtung wurde unabhängig rational anhand sämtlicher Einträge der
+unveränderten Budgetmatrix geprüft.
+
+Mit dieser Gewichtung genügt ein vollständiges skalares Integral
+<=0.999, um den bisherigen Modellgramtest zu erfüllen. Die genaue
+niedrige Projektion ist für diesen hinreichenden Weg nicht nötig.
+Herleitung, vollständige rationale Daten und Prüfer liegen bei.
+
+Dieses Integral ist weiterhin NICHT von oben eingeschlossen.
+Die Wiederverwendung älterer Punktwerte liefert nur eine numerische
+Diagnose; kein Quadratur- oder Randrest wurde daraus abgeleitet.
+
+Der frische Paket-Replay besteht. A8->A9, der Tailboden 1/20 und
+der vollständige Restabschluss bleiben offen. Externe mathematische
+Begutachtung steht aus. GitHub wurde nicht verändert.

@@ -1,0 +1,21 @@
+{
+  "status": "PASS_CONDITIONAL_FINITE_4_PLUS_8_SCHUR_CERTIFICATE",
+  "manifest_files_verified": 72,
+  "old_high_floor": "91/50",
+  "exact_191D_inverse_cases": 8,
+  "exact_schur_reconstructions": 12,
+  "positive_final_schur_cases": 4,
+  "schur_reserve_relative_WY": "1/25000",
+  "reserve_scope": "Eight-source Schur block after eliminating the full old space and the four-source block, both parities.",
+  "low_Gamma_precision_comparisons": 72962,
+  "shell_Gamma_precision_comparisons": 384,
+  "derived_upper_entries_compared": 576,
+  "independent_Fraction_Gamma_samples": 10,
+  "semantic_receipt_equal": true,
+  "new_Gamma_matrix_integrations_rerun_by_quick_replay": false,
+  "full_remainder_certified": false,
+  "object_X_constructed": false,
+  "conservative_fixed_M_minus_gate": "PREVIOUSLY_CERTIFIED_FALSE_CONDITIONAL_ON_BOUND_INPUTS",
+  "external_mathematical_review": false,
+  "github_changed": false
+}

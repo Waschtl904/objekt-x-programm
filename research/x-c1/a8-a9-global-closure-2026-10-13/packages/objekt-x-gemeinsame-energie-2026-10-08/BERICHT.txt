@@ -1,0 +1,85 @@
+Objekt X — der 185D-Einzelschritt reicht nicht; gemeinsame Energie hilft
+8. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Was erledigt wurde
+
+1. Das signierte C-Paket ist technisch korrigiert. Alte Windows-Pfade
+   werden beim Prüfen portabel normalisiert. Die 44 bestehenden JSON-
+   Dateien, darunter sämtliche numerischen Ergebnisse, bleiben bytegleich.
+   Die Präzisionen sind ausdrücklich dokumentiert: Integrale 3072/4096 Bit,
+   bisherige Response-Arithmetik 1024 Bit. Das Originalarchiv bleibt erhalten.
+
+2. Vor dem langen 185D-Lauf wurde geprüft, ob dieser allein den geplanten
+   Schluss überhaupt ermöglichen könnte. Das Ergebnis ist eindeutig:
+   Selbst bei künstlich auf null gesetztem GESAMTEM 185D-Beitrag bleiben
+   die übrigen bisherigen Hüllen in festen rationalen Richtungen größer als
+
+       1.1255084227 gerade,
+       1.1944007542 ungerade.
+
+   Das gilt für alle positiven Young-Parameter der angegebenen bisherigen
+   Familie. Der isolierte lange 185D-Operatorlauf wurde deshalb nicht
+   gestartet. Ihn als alleinigen nächsten Weg zum Schluss einzuordnen war
+   zu früh. Das frühere Nicht-C-Hindernis bewies eine notwendige weitere
+   Verbesserung, aber noch keine ausreichende Reserve nach dieser Verbesserung.
+
+3. Die vorhandene gemeinsame Zwölf-Quellen-Einschließung wurde enger
+   ausgewertet. Alte inverse Energie und C-Quadrat verwenden jetzt dieselbe
+   unbekannte Matrix innerhalb ihres bewiesenen Intervalls. Die gebundenen
+   signierten C-Eingabematrizen bleiben unverändert.
+
+   Dadurch sinken die größten Eigenwerte der U00-Obermatrizen weiter:
+
+                      signierter Vorblock       neue gemeinsame Auswertung
+       gerade         1.1625836966              1.1090106517
+       ungerade       1.2188029396              1.1559738838
+
+   Der Test I-U00>0 schließt weiterhin nicht. Die Zahlen betreffen
+   Obermatrizen; sie sind keine BR-Normen und keine negativen Formzeugen.
+
+4. Eine weitere exakte Prüfung zeigt die Grenze der momentanen
+   Matrixinformation. Das Intervall L<=E<=U lässt positive Belegungen
+   mit E=L zu, deren Modell-Rayleighwerte bereits über 1.0632143700 bzw.
+   1.0836091743 liegen. Diese Belegungen sind keine nachgewiesenen Antworten
+   des tatsächlichen Operators. Sie zeigen aber: Die verwendeten
+   Intervallbedingungen allein reichen für einen uniformen Schluss nicht.
+
+Was das strategisch bedeutet
+
+Wir müssen die gemeinsame alte inverse Antwort enger eingrenzen oder
+eine bislang nicht verwendete Abhängigkeit rigoros hinzufügen. Weitere
+Young-Parameter oder eine isolierte Verbesserung des 185D-Terms können
+die dokumentierten Informationsverluste allein nicht beheben.
+
+Der nächste begrenzte Ansatz ist ein stärkerer Variationsunterbeweis
+für die zwölf alten Quellen, mit einer kleinen ausdrücklich festgelegten
+Familie alter hoher Testfunktionen. Damit lässt sich prüfen, wie weit die
+tatsächliche Antwort oberhalb der bisherigen niedrigen Variationsschranke
+liegt. Ein Arbeitsvorschlag mit zwölf alten hohen Funktionen je Parität
+liegt bei. Die Rechnung ist noch nicht ausgeführt.
+
+Der 185D-Fehler bleibt ein Verbesserungspunkt. Seine teure vollständige
+Auswertung sollte in ein Budget eingebettet werden, das danach überhaupt
+schließen kann. Die neue Pilotgeometrie, A8->A9 und das Ziel Objekt X
+bleiben unverändert.
+
+Prüfung
+
+- Vier exakte Fälle des optimistischen Tests ohne jeden 185D-Beitrag.
+- Vier neue U00-Fälle aus tatsächlich 1024-/1536-Bit-Matrixarithmetik.
+- 128 überlappende Präzisionsvergleiche der neuen Mittelpunktgrame.
+- Zwei exakte Belegungen der beschriebenen Matrix-Relaxation.
+- Frische Entpackung und erfolgreicher schneller Lauf des korrigierten
+  C-Pakets; 81 Manifest-Dateien und semantisch unveränderte alte Prüfquittung.
+- POSIX-Pfadgrammatik und Quellzuordnung gesondert geprüft. Ein nativer
+  Linux-Prozess wurde hier mangels laufender Linux-Python-Umgebung nicht
+  ausgeführt. Die Plattformkorrektur ist entsprechend begrenzt getestet.
+
+Grenzen
+
+Keine neuen Operatorintegrale, kein vollständiger neuer 185D-Kreuzgram,
+kein physischer negativer Zeuge. Die ursprünglichen Formidentitäten,
+Operator- und Intervallmajoranten bleiben gebundene Voraussetzungen.
+Keine externe fachmathematische Begutachtung. G01, gamma01, beta_tail
+und der volle Restgate bleiben offen. GitHub wurde durch diese Arbeit
+nicht verändert; die neuen Pakete sind lokale Ergebnisse.

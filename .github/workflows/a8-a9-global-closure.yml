@@ -1,0 +1,48 @@
+name: A8 A9 conditional global Schur closure
+
+on:
+  pull_request:
+    paths:
+      - "research/x-c1/a8-a9-global-closure-2026-10-13/**"
+      - ".github/workflows/a8-a9-global-closure.yml"
+  push:
+    branches: [main]
+    paths:
+      - "research/x-c1/a8-a9-global-closure-2026-10-13/**"
+      - ".github/workflows/a8-a9-global-closure.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  complete-rational-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 1
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Reject damaged source bindings and failed subprocesses
+        run: python -B -m unittest discover -s research/x-c1/a8-a9-global-closure-2026-10-13 -p test_integration.py -v
+      - name: Reconstruct originals and repeat the full rational Schur chain
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+          PYTHONIOENCODING: utf-8
+        run: python -u -B research/x-c1/a8-a9-global-closure-2026-10-13/replay.py --output "${{ runner.temp }}/a8-a9-global-check"
+      - name: Preserve commit-bound integration evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: a8-a9-global-check-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/a8-a9-global-check/*.json
+            ${{ runner.temp }}/a8-a9-global-check/*.log
+            ${{ runner.temp }}/a8-a9-global-check/FULL_CHAIN-logs/*.log
+          if-no-files-found: error
+          retention-days: 90

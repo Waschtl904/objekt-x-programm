@@ -1,0 +1,17 @@
+{
+  "review_status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN",
+  "A1_exact_functions": "J=Q[D;I84], D=-(S_top^T)^-1 S_bottom^T",
+  "A2_domain_and_membership": "PROVED_UNDER_BOUND_INHERITED_DOMAIN_LEMMATA",
+  "A3_full_basis_gram": "I84 <= W <= 2 I84, rational identity",
+  "B4_rational_fit": "84 x 268; first 65 fitted, last 203 zero",
+  "B5_full_gram_upper": "Analytic conservative bound includes all infinite parts; not a truncated coefficient Gram.",
+  "B6_shared_old_energy": "Actual common A^-1 feature with paid Cauchy-Schwarz and Young bounds",
+  "B7_coverage_gate": "COVERAGE_BOUND_INCONCLUSIVE",
+  "C8_tail_inverse_used": false,
+  "C9_full_L2_residual_gram": null,
+  "C10_finite_Schur_test": null,
+  "C11_uniform_R12_floor": null,
+  "missing_sharp_input": "Full joint fit-error Gram for the 191 corrected old forces and 12 actual Schur crosses",
+  "full_remainder_certified": false,
+  "github_changed": false
+}

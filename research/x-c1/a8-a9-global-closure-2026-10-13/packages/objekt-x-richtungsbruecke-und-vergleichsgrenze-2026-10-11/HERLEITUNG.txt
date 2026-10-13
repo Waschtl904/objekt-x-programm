@@ -1,0 +1,166 @@
+Objekt X — Vollständige Momentkorrektur und obere Vergleichsgegenzeugen
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Unveränderte Daten und Voraussetzungen
+
+Es gelten die gebundenen Domänen-, Kern- und Operatorabschätzungen der
+Vorgängerpakete. Insbesondere sind delta=91/50, X_old=A_c A_c*/(1-rho),
+die tatsächlichen zwölf Funktionen F=(z_1,...,z_4,Lambda Y_1,...,Lambda Y_8),
+die Basis J, P sowie die volle hohe Antwort h unverändert.
+
+U_op[s,t]=<h(s),h(t)>/delta+<A_c*v(s),A_c*v(t)>/(1-rho)
+ist die gemeinsame alte Inversmajorante, mit v=c-B_old h/delta.
+U_op ist nicht die tatsächliche alte Inversenergie. Auf den zwölf Quellen
+ist F12=D_FF-U_op,FF der gemeinsame Vergleichsblock, während
+S12=D_FF-E_old,FF die tatsächliche endliche Schurform bezeichnet.
+F12 <= S12. Alle neuen Brücken binden F12.
+
+Der Restvergleich bleibt L_+=L+Vlog mit Vlog=-log(1-t²)/2 und
+L ell_n=(H_n+1,1)ell_n. eta=10^-10 und
+Bplus=(1-eta)(L_+)[J,J]-H[J,J], H=||h||²/delta.
+
+2. Direkte Y-Matrix mit voller Momentkorrektur
+
+a=3log(2)/2, b=log(3), h=b-a, mu=integral_0^a m²,
+lambda_i=integral_a^b m Y_i,
+M_i=<m_core,Q_b Lambda Y_i>, Qmm=<m_core,Q_a m_core>.
+Alle inneren Produkte berücksichtigen die Paritätsnorm 2dx.
+
+D_Y(i,j)=D_shell(i,j)
+ -(lambda_i M_j+M_i lambda_j)/mu-lambda_i lambda_j Qmm/mu².
+
+Die Korrektur hat Bild in span(lambda,M), also Rang höchstens zwei.
+Ihr Vorzeichen wird behalten. Die vorherige skalare Normabschätzung
+wird durch diese vollständige Matrix ersetzt.
+
+D_shell enthält die harmonische Diagonale mit
+c_direct=-log(pi h)-EulerGamma, das vollständige logarithmische Potential
+und die geerbte eingeschlossene reguläre Schalenkernelmatrix. M und Qmm
+werden über die vollständigen Kernwirkungen integriert: Polynom- und
+Logarithmusanteile, sämtliche aktiven Primverschiebungen, Gamma-224-Modell
+und Grad-160-Momentträger. Die analytischen Reste werden zusätzlich bezahlt.
+Die Schalenkernelmatrix bei 4096 Bit wird unverändert weiterverwendet;
+die übrigen neuen Integrale werden mit 3072 und 4096 Bit berechnet.
+
+Die geerbte Domänenabschätzung ||Q^np Lambda s||<10^10 alpha auf der
+festen Polynomfamilie Grad <=95, Koeffizientennorm alpha<2, sowie
+Koeffizientenrundung <10^-60, voller Gamma-Rest <10^-34, Schalenrest
+<10^-50 und Momentträger-Funktions-/Ableitungsreste <10^-320 ergeben
+pro direktem Paarungswert einen Fehler kleiner als
+
+  10^-48 + 36*10^-34 + 10*10^-50 + 10^-300 < 10^-25.
+
+Dies ist ein analytischer Zuschlag, keine Schätzung aus Präzisionsvergleich.
+Für acht Spalten genügt somit die volle Loewnerabweichung 8*10^-25 I8.
+Zusätzlich werden die Radien sämtlicher gespeicherten Integralintervalle
+durch symmetrische Zeilensummenschranken bezahlt. So entstehen rationale
+D_Y,new,lower und D_Y,new,upper. Beide liegen strikt innerhalb der alten
+unteren/oberen Matrixeinschließungen; dies wird durch rationale LDL geprüft.
+
+3. Kompatible gemeinsame endliche Brücken
+
+Delta=D_Y,new,lower-D_Y,old,lower >0 ist rational zertifiziert.
+Die alten N, P, K_lower und Gamma_R werden beibehalten. In den festen
+Koordinaten T_P(x,y)=(x+Py,y) gibt die ursprüngliche Herleitung für jedes
+0<theta<1 die gemeinsame Untergrenze
+
+F12 >= T_P* diag(theta N,
+                   K_lower+Delta-Gamma_R/(1-theta)) T_P.
+
+Grund: N ist der untere Viererblock, K_lower enthält bereits den Fehler
+der Y-Y-Kreuzverschiebung mit P. Der verbliebene transformierte Kreuzblock
+R erfüllt R*N^-1 R <= Gamma_R. Gewichtetes Young liefert die Formel.
+
+Zuerst wird die noch konservativere Brücke diag(N/2,Q8+Delta) benutzt;
+die geerbte Abrundung Q8<=K_lower-2 Gamma_R bleibt gültig. Danach wird
+theta=9999999999/10^10 eingesetzt. Diese zweite Wahl gewinnt fast die
+andere Hälfte von N zurück; sie behauptet keinen relevanten alten
+Young-Spielraum im Achterblock. Dort ist der zusätzliche Gamma-Preis klein.
+
+Beide neuen Diagonalmetriken sind >=diag(N/2,Q8), rational nachgewiesen.
+Deshalb sind die bisherigen C84- und R84-Fehler in der inversen Metrik
+weiterhin konservativ. Es ändern sich weder P noch die Kreuzzeilen A0.
+Für beide neuen Brücken wird R84 aus C84 und den neuen Inversen aufgebaut,
+mit rationalen Gegenrichtungen nach unten und rationalem Intervall-LDL
+nach oben zertifiziert. Alle vier größten Eigenwerte bleiben >1.
+
+4. Obere Einschließung des vollständigen gemeinsamen Blocks
+
+Die folgenden Schritte sind stärker als das Scheitern der zwei gewählten
+Untergrenzen. Sie testen eine obere Grenze von F12 vor jeder P-Zerlegung.
+
+K=K12,old>0. Sei Phi_F0 der gebundene finite Quellenmodell-Featureoperator,
+U0=Phi_F0*Phi_F0, und Eeps die geerbte vollständige Feature-Fehlergram-
+Majorante aus energy_model_error_gram. Dann
+
+eF²=tr(K^-1 Eeps), tau=tr(K^-1 U0),
+gamma=2 sqrt(eF² tau)+eF²,
+
+-gamma K <= U_op,FF-U0 <= gamma K.
+
+Der Prüfer umschließt die beiden Spuren rational mit allen Intervallradien.
+Er bestätigt 0<eF²<3*10^-25; die kleine Quellenabweichung wird also vor
+der empfindlichen endlichen Inversmetrik bezahlt, nicht in rohen Koordinaten.
+
+Aus dem eingegangenen Prüfpaket stammen
+Dzz<=Dz_upper, Bdirect=Bcentre+E,
+Bcentre=C_U,centre+U_zY, ||M^-1/2 E||<=epsilon.
+Mit der neuen oberen D_Y-Grenze folgt
+
+D_FF <= [[Dz_upper+epsilon M, Bcentre],
+          [Bcentre*, D_Y,new,upper+epsilon I8]] = D_upper,
+
+denn 2|x*Ey|<=epsilon(x*Mx+||y||²). Somit
+
+F12 <= F_upper := D_upper-U0+gamma K.
+
+Hier wird keine untere Matrix als obere benutzt und U_op nicht mit seinem
+Modell gleichgesetzt. Es wird auch E_old=U_op nicht angenommen.
+
+5. Rationale Gegenrichtungen einschließlich der Quellenfehler
+
+Setze C0=D_FT-Phi_F0*Phi_T, wo Phi_T die exakten Restfeatures bezeichnet.
+Die 203 Zeilen sind (A_c*v, C0_z, C0_Y-P*C0_z), genau wie bisher.
+Für rationale u in R191, t=(x,y) in R12 und r=Jw betrachten wir
+
+Q_upper(u,t,w)=(1-rho)||u||²+2<u,A_c*v(r)>
+                +F_upper[t]+2<t,C0 r>+(1-eta)L_+[r]-H[r].
+
+Die gespeicherten u,t,w werden nur vorgeschlagen durch eine numerische
+Suche; die Vorzeichenprüfung benutzt ausschließlich rationale Intervalle.
+Weil F_upper eine obere Grenze ist, ist ein negativer oberer Wert bereits
+ein Gegenzeuge zum bestmöglichen gemeinsamen Vergleich bei diesen U_op
+und L_+. Für die tatsächlichen endlichen Quellen wird zusätzlich der
+Wechsel C0->C_common bezahlt.
+
+Die C84-Fehlerladung ist
+  2 eC ||w|| sqrt((1-rho)||u||²+K[t]),
+hinzu kommt eBplus ||w||². Der zusätzliche endliche Quellenpreis ist
+  2 sqrt(eF² U_op[r] K[t]).
+U_op[r] wird aus H und der niedrigen Antwort mit deren vollständigen
+analytischen Fehlern nach oben eingeschlossen. Alle Integralradien werden
+ebenfalls vor dem Vorzeichentest berücksichtigt. Die exakten Beziehungen
+S* [D;I]w=0 bestätigen die Zugehörigkeit von Jw zum unveränderten Rest T.
+
+Nach ALLEN diesen Preisen sind die rationalen oberen Werte negativ in
+beiden Paritäten. Dies ist eine Widerlegung des FESTGELEGTEN gemeinsamen
+Vergleichs mit U_op und L_+, unabhängig von einer weiteren Verbesserung
+seiner endlichen Untergrenze oder deren Koordinatenwahl.
+
+Es ist keine Widerlegung der tatsächlichen Schurpositivität: Dort steht
+die vollständige direkte Restform anstelle von (1-eta)L_+ und die
+tatsächliche alte Inversenergie anstelle der konservativen Majorante.
+Über diese Unterschiede wird hier keine Gleichheit behauptet.
+
+6. Reproduktion und Grenzen
+
+audit_directional.py arbeitet ausschließlich mit Python-Standardbibliothek
+und dem beigefügten rational_ldl.py. Die Integrale selbst können mit
+compute_direct_y.py und python-flint erneut berechnet werden. Die große
+gebundene Vorgängerlieferung wird im neuen Archiv nicht dupliziert.
+AUDIT_INPUT.json ist ein deterministisch erzeugter Auszug ihrer Daten;
+der Auszug kann mit build_audit_input.py vollständig neu aufgebaut werden.
+
+Keine neue Näherungsantwort und kein neuer vollständiger Formdual-
+Residualgram werden behauptet. A8->A9, der Tailboden 1/20 und der
+unendliche Rest bleiben offen.

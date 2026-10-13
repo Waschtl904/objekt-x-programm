@@ -1,0 +1,99 @@
+Objekt X — Richtungsabhängige Brücke und Grenze des gemeinsamen Vergleichs
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Die im eingegangenen Paket ausgeschlossenen pauschalen Verstärkungen
+1,11 Q8 und 1,29 Q8 werden nicht weiterverwendet. Beide Gegenzeugen wurden
+hier rational nachgerechnet und aus dem gebundenen Vorgänger neu aufgebaut.
+
+Stattdessen wurde die vollständige, vorzeichenbehaftete Momentkorrektur
+auf den acht festgelegten Y-Funktionen integriert. Daraus folgt eine
+konkrete richtungsabhängige Verbesserung des gemeinsamen endlichen Blocks.
+P, die Funktionen, die alte Inversmajorante und die Kreuzzeilen bleiben
+dabei dieselben. Die neue Untergrenze gilt unter den geerbten analytischen
+Operatorvoraussetzungen; sie ist keine nur hypothetisch eingesetzte Matrix.
+
+Der notwendige Basis84-Test verbessert sich erheblich, besteht aber nicht:
+
+                                           gerade                 ungerade
+  Bisheriger Vergleich mit L_+          >1,0930351295           >1,2673436012
+  Volle Momentkorrektur              (1,035137; 1,035142]    (1,011999; 1,012004]
+  Zusätzlich fast volles N           (1,030538; 1,030543]    (1,008785; 1,008790]
+
+Die Intervalle binden jeweils den größten verallgemeinerten Eigenwert
+R84 gegenüber Bplus84. Die unteren Grenzen folgen aus rationalen
+Prüfrichtungen, die oberen aus gerichteten rationalen LDL-Prüfungen.
+Erforderlich wäre ein Wert höchstens 1 mit positiver Fehlerreserve.
+
+Eine zusätzliche Prüfung geht über diese zwei konkreten Brücken hinaus:
+Selbst eine obere Einschließung des vollständigen gemeinsamen endlichen
+Blocks liefert rationale Gegenrichtungen für den unveränderten Vergleich
+mit U_op und L_+. Einschließlich sämtlicher angesetzter Fehler gilt für
+die in OPTIMISTIC_OBSTRUCTION.json festgelegten erweiterten Richtungen:
+
+  gerade:   Vergleichsform <= -0,010191398;
+  ungerade: Vergleichsform <= -0,010124921.
+
+Diese Werte sind unnormierte quadratische Formwerte auf genau diesen
+gespeicherten Richtungen; sie sind keine Eigenwerte oder Tailböden.
+Sie widerlegen die Positivität dieses konservativen Vergleichs. Damit
+kann eine weitere Verbesserung allein seiner endlichen Brücke bei
+unverändertem U_op und L_+ den Vergleich nicht zum Bestehen bringen.
+Das gilt auch für eine andere endliche Koordinatisierung: Der letzte
+Test behandelt den vollständigen Zwölferblock vor der Dreieckszerlegung.
+
+KEINE negative tatsächliche Schurform ist damit nachgewiesen. Die echte
+Restform kann größer als L_+ sein; die tatsächliche alte Inversenergie
+kann kleiner als U_op sein. Gerade diese beiden Unterschiede bleiben
+als nächste mögliche Verbesserungen erhalten.
+
+Was neu gerechnet und geprüft wurde
+
+1. Vollständige acht direkte Y-Paarungen in beiden Paritäten, jeweils
+   als 8x8-Matrix, bei 3072 und erneut bei 4096 Bit. Die Kernintegrale
+   enthalten die logarithmischen Anteile und alle aktiven Primzellen.
+   Die bereits gebundene reguläre Schalenkernelmatrix wird weiterbenutzt.
+   Kein hoher Antwortrest wird durch endlich viele Moden ersetzt.
+2. 320 Intervallvergleiche je Parität zwischen den beiden neuen Rechnungen.
+   Höhere Präzision ersetzt nicht die gesonderten analytischen Fehler.
+3. Rationale positive Matrixverbesserung D_Y,neu,lower-D_Y,alt,lower > 0.
+   Die neue obere Grenze liegt zugleich unter der bisherigen oberen.
+4. Zwei kompatible volle Zwölfer-Untergrenzen bei unverändertem P und U_op.
+   Beide respektieren die beiden eingegangenen tatsächlichen Schur-Obertests.
+5. Neue 84x84-Verlustmatrizen mit den vorhandenen C84-Daten. Da die neuen
+   inversen Metriken kleiner werden, bleiben die alten Fehlerzuschläge
+   konservativ gültig. Vier Eigenwert-Obertests mit je 84 positiven Pivots.
+6. Zwei rationale Gegenrichtungen zur vollständigen oberen gemeinsamen
+   Vergleichsform. Ihr Quellenwechsel vom Modell zur tatsächlichen
+   endlichen Quelle wird zusätzlich bezahlt.
+
+Nicht neu gerechnet: vollständige alte Antworten, neue Näherungsantworten
+oder ein neuer vollständiger Formdual-Residualgram. Letzterer wird erst
+sinnvoll, wenn der notwendige endliche Test des gewählten Vergleichs besteht.
+
+Nächster konkreter Ansatz
+
+Die direkte Restform q_b[Lambda r] auf J genauer einschließen, einschließlich
+des tatsächlichen Konstantenterms, des regulären Schalenkernels und der
+vollständigen Momentkorrektur. L_+ lässt davon positive Information fallen.
+Parallel dazu ist eine stärkere alte Inversmajorante ein anderer möglicher
+Ansatz, würde aber alle zugehörigen Kreuzzeilen und Fehler neu erfordern.
+
+Zuerst ist der konsistente endliche gemeinsame Test mit diesen verbesserten
+Daten zu rechnen. Es wird weder ein positiver Ausgang vorausgesagt noch
+aus der hier erreichten Verbesserung auf den unendlichen Rest geschlossen.
+
+Status
+
+PROPOSED_UNIFORM_Q8_BRIDGES_REFUTED = true
+DIRECTION_DEPENDENT_COMMON_BRIDGE_IMPROVED = true
+IMPROVED_FINITE_LOSS_TEST_PASSES = false
+FIXED_UOP_LPLUS_COMPARISON_REFUTED = true
+NEGATIVE_ACTUAL_SCHUR_WITNESS = false
+TAIL_COERCIVITY_CERTIFIED = false
+FULL_REMAINDER_CERTIFIED = false
+
+A8->A9 und der Tailboden 1/20 bleiben offen. Alle neuen mathematischen
+Ableitungen sind autorenseitig geprüft; externe mathematische Begutachtung
+bleibt offen. GitHub wurde nicht verändert.

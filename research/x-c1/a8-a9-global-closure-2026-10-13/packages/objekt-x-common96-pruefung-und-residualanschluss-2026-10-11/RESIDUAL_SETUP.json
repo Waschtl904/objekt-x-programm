@@ -1,0 +1,49 @@
+{
+  "status": "PASS_NEW_RESIDUAL_FORM_SCALAR_SETUP",
+  "delta_old": "91/50",
+  "delta_new": "18219/10000",
+  "exact_high_floor_margin": "839999861781/10000000000000000",
+  "eta": "1/10000000000",
+  "H_new_over_H_old": "18200/18219",
+  "S_eta_new_lower_relative_L": "20209999981781/182190000000000",
+  "new_R_L_inverse_majorant_factor": "182190000000000/20209999981781",
+  "inherited_global_hypotheses": [
+    "H_old <= 89/100 L on exact T",
+    "q_b[Lambda r] >= L[r] on exact T"
+  ],
+  "auxiliary_form_only_not_final_tail_floor": true,
+  "cases": [
+    {
+      "parity": "even",
+      "high_model_scaling_interval_comparisons": 7056,
+      "direct84_norm_upper": "202765211137125820955123971820455231233443086560271039663806249415495620741926807/20000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "direct84_integer_norm_upper": "11",
+      "common96_reserve": "2547/1000000000",
+      "eta_direct84_price_upper": "11/10000000000",
+      "common96_reserve_after_optional_eta_on_tail": "25459/10000000000",
+      "finite_reserve_metric": "diag(K12_old,I84)",
+      "full_remainder_certified": false
+    },
+    {
+      "parity": "odd",
+      "high_model_scaling_interval_comparisons": 7056,
+      "direct84_norm_upper": "1013826454469119157155734928174396011626571461174182244207275869037267980102309989/100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "direct84_integer_norm_upper": "11",
+      "common96_reserve": "17441/1000000000",
+      "eta_direct84_price_upper": "11/10000000000",
+      "common96_reserve_after_optional_eta_on_tail": "174399/10000000000",
+      "finite_reserve_metric": "diag(K12_old,I84)",
+      "full_remainder_certified": false
+    }
+  ],
+  "sources": {
+    "REFINED_INPUT.json": "7c2a93adb187cc51f03f8083ffd82d4437d155d032da698e138787f90379614b",
+    "REFINED_COMMON96.json": "18a71ae90f69dc28ecc1a42b7ed865057cdd2a28986abc3a1ac06bb558e23097",
+    "AUDIT.json": "9d9af6ab760a0377ddbf2fd995c6a6df8fc62151fec9e259033b8f9a52ce3769",
+    "REFINED_HIGH_FLOOR.json": "23a33fa2afc580c3f9d90710e99ef0228d2f4b38d54d375c07447e4a2123e191",
+    "DIRECT_REST_EVEN_3072.json": "b8985179549851bb910c3c423c3649f7f89c97201fd11a5ad86bbc39e565c155",
+    "DIRECT_REST_ODD_3072.json": "d6a744a15135937fc2cb1d7538047d621573c52479426149888660996a020b53"
+  },
+  "new_full_formdual_residual_certified": false,
+  "full_remainder_certified": false
+}

@@ -1,0 +1,73 @@
+Objekt X — zusätzliche tatsächliche Prüfrichtungen außerhalb P95
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Unabhängig von den laufenden 203 Antworten wurden acht exakt definierte
+Funktionen k96,...,k103 gemäß (1) in INFINITE_REDUCTION.txt konstruiert.
+Sie liegen im vollen W_X-orthogonalen Komplement von P95, also in T.
+Ihre Definition verwendet die vollständigen Mellinkoeffizienten l_n.
+
+Je Parität wurde zusätzlich eine rationale Richtung w im schon geprüften
+96er-Raum festgelegt. Eine Eigenrechnung nach hochpräzisem Metrikwechsel
+schlug diese Richtung vor; anschließend wurden alle 96 Koordinaten auf
+ein rationales Raster gesetzt. Die gespeicherten Koordinaten definieren
+die Funktion exakt. Gleitkomma-Eigenwerte sind kein Zertifikat.
+
+Der neue Prüfraum ist
+
+ span(F w_F + Lambda J w_J, Lambda k96,...,Lambda k103).
+
+Er hat neun Dimensionen. Er ist ausdrücklich NICHT der ganze bisherige
+96er-Raum plus acht neue Funktionen. Positivität dieses Raums zusammen
+mit dem alten 96er-Zertifikat beweist daher keine 104er-Positivität.
+
+Neu gerechnet wurden je Parität und bei 3072/4096 Bit:
+
+- vollständige Kernquellen mit allen logarithmischen Termen und zehn
+  Primzellen; die alten hohen Antworten sind vollständige Funktionen;
+- alle 191 niedrigen Kräfte und alten Low/High-Kopplungen dieser Quellen;
+- vollständige hohe Grame und zwölf physische Kreuzzeilen;
+- vollständige direkte Form einschließlich Randpotential, vorzeichen-
+  behaftetem Kernel und Momentkorrektur;
+- 3120 Abgleiche mit den acht unveränderten gebundenen Y-Quellen;
+- fünf zusätzliche direkte vollständige hohe Gram-Paarungen.
+
+Die 4752 neuen Modell- und Koeffizientenintervalle je Parität überlappen
+zwischen beiden Präzisionen. Der analytische Fehler wird daneben bezahlt.
+
+Die neue Majorante wird konsistent aus delta=18219/10000, der rationalen
+191er-Inverskongruenz und der Kopplungsmajorante mit p=10^-10 aufgebaut.
+Alle alten Kreuzzeilen werden hierfür neu kombiniert. Es wird weder die
+alte P-Residualisierung noch eine Liste endlich vieler hoher Moden benutzt.
+
+Die neuen polynomialen Spalten haben Grad höchstens 103 und lokale
+Koeffizientennorm kleiner 2. Die geerbten Restpreise sind wie folgt
+übertragbar: Der Gamma-224-Rest und die Schalenkernelreste sind volle
+Operatornormschranken; die Momentträgerreste sind vollständig enthalten.
+Für N<=127 ist die lokale Auswertungsnorm höchstens (N+1)/sqrt(2h),
+und das logarithmische Potential besitzt endliche quadratische Integrale.
+Zusammen mit H_N<6, dem beschränkten regulären Kernel, den gebundenen
+Primverschiebungen und der Momentkorrektur bleibt die alte großzügige
+Domänenschranke 10^10 pro lokaler Koeffizientennorm gültig. Die tatsächliche
+Rundung wird vor der Monomumrechnung bezahlt. Für neue direkte Paarungen
+wird sogar 10^-20 statt des alten Preises 10^-25 verwendet.
+
+Der alte direkte F-F-Unterblock enthält bereits seine ursprünglichen
+Fehlerpreise. Die restlichen direkten Eintragsfehler werden gemeinsam
+als Operatorfehler auf dem Neunerraum abgezogen. Die Quellenabweichung
+verwendet die neue Inversmetrik und den vollständigen hohen Gram. Aus
+der gemeinsamen Fehlerquadratsumme e² und der Modellenergiespur t wird
+2 sqrt(t e²)+e² für die ganze Neunermatrix bezahlt.
+
+Danach besteht rationale Intervall-LDL-Positivität mit Reserven
+
+  gerade:   593/200000000   = 0.000002965,
+  ungerade: 4363/250000000  = 0.000017452.
+
+Die Metrik ist die euklidische Koordinatenmetrik in der oben definierten
+Neunerbasis. Diese Zahlen dürfen nicht als Verbesserung der alten
+96er-Reserve in G oder als Hilbert-/Tailböden ausgegeben werden.
+
+Dieser ergänzende Test zeigt keinen lokalen Zusammenbruch beim Anschluss
+der acht untersuchten Außenrichtungen an die festgelegte kritische
+Richtung. Er kontrolliert keine weiteren unendlich vielen Richtungen.
+FULL_REMAINDER_CERTIFIED=false.

@@ -1,0 +1,28 @@
+{
+  "files": {
+    "analyze_exterior.py": "9aff96454305f87cd0f8a916ee446604840d5eeb6258cff5a923f8726483581d",
+    "ANSCHLUSS_GPT1.txt": "3e898226582fb42700f80575289783c47263ffb2f5301db59c7256d59a156b36",
+    "attach_gates.py": "18765094e8df4f5bd740d1d2b64b11511bcff1808e362149e51479edba01ffea",
+    "ATTACHMENT_GATES.json": "750fe1b190db931ab4fd59c3ddbd4045aa1e525fe030e0b4ce8fd1d7925ca4ee",
+    "AUDIT_EXTERIOR.json": "fcf88d657906f7b2612d925aae5359e58986b070424f46e566e95c960a2ff68c",
+    "audit_exterior.py": "090b13393e7d416aa5afb10617573ffa7953d60c481da575e2d5f0a617848766",
+    "BERICHT.txt": "76daf5ddc1ba0ff0fde5a11e3efd23cb4a90e2d6f1167de1a8dba1ced23274b8",
+    "build_cross_engine.py": "f4b5473c48e7108d496eda6de7d5d500e82f2a26a9d421c088f4be0d10f1de05",
+    "compute_cross.py": "def07df8f30de05bd7d15edf8c7f7ebcf1bf70ad83feca3ea4be1904750306c6",
+    "CROSS_EVEN_3072.json": "3ecee0a961cfb6f782dc2747dbcbdff273c9497ea462fabb6d0b97bf55a10e2a",
+    "CROSS_EVEN_4096.json": "799497c5e629c39fd1a556d3e1013f26e1eaa98623c08867c54426fa021ff232",
+    "CROSS_ODD_3072.json": "5d6ba98a8f5b0a5beffb26179fd8e22537429a63783ef24dc322411536ea51fe",
+    "CROSS_ODD_4096.json": "1b01beff64ef06f7e44855bbd9fe967103d4364652c0f86944fcdf1ae4f75599",
+    "cross_tail.py": "fc10c53bcfe058cdbfde9203b050bf9d41e2145f349a650bb7369a7bcf3aada0",
+    "EXTERIOR_EVEN_3072.json": "b977e866c3afaba2d4c0d4f7595316d94d59609ff441586af55c78c90628258d",
+    "EXTERIOR_ODD_3072.json": "2b364520a1fe3587284f06e073a401b9c378d023e66c79205c4a973bbae05c75",
+    "HERLEITUNG.txt": "3e12959df0cea48e904d9d4f183da82e65677b89a167e78bae8dd7a06ccbe6bd",
+    "INFINITE_REDUCTION_LOCAL.json": "a52039774db1a1e8bb3cb36f4cd28e1e855bb18341303116d7fa9f259ba433b3",
+    "inputs/Objekt-X-Unendlicher-Dualrest-und-Aussenrichtungen-2026-10-11.zip": "2ac05dceb88e2b485c155f800840182e300f8899e2093f295400bc59fd530399",
+    "interval_helpers.py": "4bc0fc7c7691ff0c98d91b6edde9dd3d9a9a22a924bd00d09c33a95e98d812d0",
+    "rational_ldl.py": "4bcbdb972117edf0af7b098c2dc00c1c9f921f020e1311ad31495bf1d4b66700",
+    "README.txt": "ecc75922a6808f5bae98977dd604162d9c58b107da69ee1e07d57cd7ec107fe0",
+    "reproduce.py": "c106fea4b061fcdd130f85d9e4f4fa6aa62eeefe106ac58a596d8a391e1e96a2"
+  },
+  "full_remainder_certified": false
+}

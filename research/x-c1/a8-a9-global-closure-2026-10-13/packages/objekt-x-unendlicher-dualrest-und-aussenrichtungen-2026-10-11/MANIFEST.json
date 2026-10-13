@@ -1,0 +1,32 @@
+{
+  "input_common96_zip_sha256": "06b4cc975b8e6bd8f6088a151ea1dcaebd38862f7a50e3f2f2b22ebb05afef51",
+  "files": {
+    "ANSCHLUSS_GPT2.txt": "930ea38587996d2113a1bdc27e633a166698c1b842916f974d10dd5805180e6b",
+    "BERICHT.txt": "0f432a31adbc3fd8043b90fe14b771f4be36a0ac251d1174121e894899e6e13f",
+    "EXTERNAL_PROBES.txt": "2751b80f13afb7f7d6e002909d240a465e7002fa5c226db2ef3019c882775115",
+    "INFINITE_REDUCTION.txt": "dba13d3735fc55ac6631872af295d6f18c8d3f405b4052888a3ec5de574215f5",
+    "README.txt": "fbf1c953e071d6f10bb9c098ff2c70ed8a60ee9f765ada63a7760c07785d3764",
+    "code/analyze_probe.py": "993a50d43eda8e68ff9d81133d84b79ac8df8ae085fbcee6393cf9b7af48f969",
+    "code/build_infinite_reduction.py": "adab65945e21153f707f98d4f7a3b571c2817b1f35c44192b59c4ce416cae3b9",
+    "code/compute_external_probe.py": "4c8a6595e12bbdc0dac91bc82c9e57d1baf9cbbc0b5510752b7d818a3740876f",
+    "data/INFINITE_REDUCTION.json": "3c707006819505a7281d3a4a55be41d479969feda804db368f180ed6820cbe40",
+    "data/INTEGRATOR_BINDINGS.json": "dc7ef8828e9a673c2f725df976da4d5f3d6361a08c0e8fff8e83968497d25731",
+    "data/PROBE_EVEN_3072.json": "4107227480985ce8b650f9b6d5b6714880ac85c40769b4fdfc5a71451e64fb0a",
+    "data/PROBE_EVEN_4096.json": "8de3870f036e8143c8d4bec3049bf7ab2498aa548a7bf5fb2ff9e62336696df0",
+    "data/PROBE_ODD_3072.json": "2262c462d222938e54cb6147addad50cb8923c526debfc08401b507fc73224ab",
+    "data/PROBE_ODD_4096.json": "ec11d20edc8c2f92245e99a6b163b4a6b83b485f0bf549978a9c0876293d8086",
+    "data/PROBE_PRECISION_CHECK.json": "987e3872221525105356eaaf117f4922336fb088c3573d67346fcb448cdb6b87",
+    "data/RESULT_EVEN_3072.json": "ee3886c1abd2e835f3cf4e785df6893f2275d335812420293cf75fd0c7b3b8ae",
+    "data/RESULT_ODD_3072.json": "29b189751b3ccfed7245ab84ab4310ade5bb0a59d8b451ec0348fef31c5fc486",
+    "data/even_proposal.json": "e1f48843f485ceb8507d753d3f7bc52adce662b83a6e40a268333246e78b4fa7",
+    "data/odd_proposal.json": "c428625ebb3ab7cdc6f4316a2bb7752e6249a50445e029c16ffe1422db5e1010",
+    "logs/analyze-even.log": "1c3a6478648cbd324b6c5055e80211b4adfc7109b46432b69abc699a7c985482",
+    "logs/analyze-odd.log": "ca9a7dad03b65d137fc14f3a759c463a9ca0f92e3b85ad3734c900fe4cc66766",
+    "logs/probe-even-4096.log": "41ac995ef4a11be676bb33641f730095566fea06eace866c2bec7b7f413fb327",
+    "logs/probe-even.log": "45d5448aa45009f2540e2d3749f6cac943524457f365ae7a221aaabc26ecd993",
+    "logs/probe-odd-4096.log": "bdb058b0db0d4b75a35b229a5eccbd0965b082b970c7c0879d9d7596e451bb0b",
+    "logs/probe-odd.log": "7c213cccd12f5f7617c18dc9eba8193912cf95187ede81081c4b486e0e9e384f",
+    "rational_interval_ldl.py": "652fc59798f85a2f4194137f7f1f6da758d274d0262520b4fb5a2e422eee5c60",
+    "reproduce.py": "47f96d885e75c876600abe1b3a26155912f33c3f68470ce2038e7bde95acd072"
+  }
+}

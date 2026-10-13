@@ -1,0 +1,44 @@
+{
+  "status": "PASS_EXACT_SCALAR_AND_SYNTHETIC_ALGEBRA",
+  "conditional_analytic_claim": "tau >= W_X/10 on Z_64 as defined in HERLEITUNG.txt",
+  "delta_old_high": "91/50",
+  "N": 64,
+  "harmonic_H64_exact": "623171679694215690971693339/131362987122535807501262400",
+  "loss_exact": "1000000000001/177734375000",
+  "margin_N64_exact": "150756060430845968297764113534443/1282841671118513745129515625000000",
+  "certified_floor": "1/10",
+  "margin_N64_gt_1175_over_10000": true,
+  "first_N_passing_one_tenth_with_this_scalar_majorant": 63,
+  "old_floor_N64_margin_exact": "-308398636569193418024569549561332859/32071041777962843628237890625000000",
+  "leakage_aware_high_margin_exact": "4445483506703936302145543863572049/40088802222453554535297363281250000",
+  "leakage_aware_high_margin_gt_one_tenth": true,
+  "codimension_full_shell_upper": 276,
+  "codimension_R12_upper": 264,
+  "codimension_is_actual_computed_rank": false,
+  "synthetic_checks": [
+    {
+      "negative_actual_tail": false,
+      "old_and_finite_positive": true,
+      "one_step_equals_sequential": true,
+      "residual_identity_exact": true,
+      "common_corrected_old_force_exact": true,
+      "deleted_cross_energy_detected": true,
+      "synthetic_only": true
+    },
+    {
+      "negative_actual_tail": true,
+      "old_and_finite_positive": true,
+      "one_step_equals_sequential": true,
+      "residual_identity_exact": true,
+      "common_corrected_old_force_exact": true,
+      "deleted_cross_energy_detected": true,
+      "synthetic_only": true
+    }
+  ],
+  "operator_domains_machine_proved": false,
+  "actual_functional_kernels_numerically_constructed": false,
+  "new_operator_integrations": false,
+  "full_remainder_certified": false,
+  "object_X_constructed": false,
+  "review_status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN"
+}

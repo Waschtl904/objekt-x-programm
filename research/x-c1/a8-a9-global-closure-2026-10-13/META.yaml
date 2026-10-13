@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "A8-A9-CONDITIONAL-GLOBAL-SCHUR-CLOSURE",
+  "date": "2026-10-13",
+  "kind": "CONSTRUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Konstruktiver Positivitätsübergang A8->A9 auf dem gesamten neuen Formraum, beide Paritäten, unter den gebundenen Operator-, Formdomänen- und vollständigen Raumzerlegungsvoraussetzungen; vollständiger gemeinsamer 203-Kräfte-Formdualrest.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "Die archivierten Gegenzeugen betreffen ausdrücklich benannte Hilfsschranken und Vergleichsformen, keine negative tatsächliche Schurform.",
+  "depends_on": [
+    "A8-A9-REMAINDER-PARTIAL-OPERATOR-CERTIFICATES"
+  ],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "Keine externe fachmathematische Begutachtung der übernommenen Voraussetzungen.",
+    "Kein gesonderter Tailboden 1/20, kein Abschluss beliebiger weiterer Horizonte.",
+    "Keine neue Ausführung der großen globalen Integrationen im Integrationsreplay.",
+    "Keine Konstruktion von Objekt X, globale Weil-Gramidentität oder RH."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/a8-a9-global-closure-2026-10-13/PROOF.md",
+    "sha256": "9cafdeeaf182488c0ed12b7d0ec90ed8cf22adc95cbcb98c8ff3bef6cee2a9e6"
+  }
+}

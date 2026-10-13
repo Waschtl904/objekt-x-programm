@@ -1,0 +1,14 @@
+Technischer Nachtrag vom 8. Oktober 2026
+
+Der schnelle Prüfer normalisiert eingebettete Windows-Pfade beim Lesen.
+Alle bestehenden numerischen Ergebnisdateien bleiben bytegleich. Künftige
+Response-Ausgaben schreiben portable Pfade mit /.
+
+compute_cross.py berechnet seine Integrale tatsächlich mit 3072 bzw.
+4096 Bit. enclose_response.py rechnet anschließend mit 1024 Bit. Die
+Dateinamen RESPONSE_3072/4096 kennzeichnen die Eingabeintegrale. Es sind
+keine zwei vollständigen Response-Arithmetiken mit diesen Präzisionen.
+Die rationale Schlussprüfung benötigt keine Fließkommaarithmetik.
+
+Mathematische Aussagen und gebundene Eingaben sind unverändert.
+Die ursprüngliche Paketdatei vom 7. Oktober wird nicht überschrieben.

@@ -1,0 +1,177 @@
+Objekt X — Direkte Restmatrix und erneuerter gemeinsamer Vergleich
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Räume, Modelle und volle direkte Form
+
+Alle alten Räume, Paritäten und tatsächlichen Funktionen bleiben fest.
+J=Q[D;I84], D=-(S_top*)^-1 S_bottom*, Y=QS. J liegt in
+T=(V+ran Y)^(perp WX). Der endliche Vergleichsraum hat die geordnete Basis
+(z1,...,z4,Lambda Y1,...,Lambda Y8,Lambda J1,...,Lambda J84).
+Die vier z sind die tatsächlichen physischen Funktionen, nicht Liftungen
+ihrer Schalenrestriktionen. Die J-Mittelpunktmodelle werden durch die
+bereits gebundenen exakten rationalen Arbeitskoeffizienten fixiert.
+
+Für alle 92 Schalenfunktionen Z=(J,Y), lambda_i=integral_a^b m Z_i,
+M_i=<m_core,Q_b Lambda Z_i> und Qmm=<m_core,Q_a m_core> gilt
+
+q_b[Lambda Z_i,Lambda Z_j]
+ = D_shell,ij -(lambda_i M_j+M_i lambda_j)/mu
+              -lambda_i lambda_j Qmm/mu².
+
+D_shell ist die harmonische Legendre-Diagonale mit
+c_direct=-log(pi h)-EulerGamma, plus volles logarithmisches Randpotential,
+minus regulärer Selbstkernel und minus (-1)^Parität mal Spiegelkernel.
+Die reguläre Schalenkernelmatrix wird hier auf ALLEN 92 Spalten neu
+integriert: Selbstpolynom Grad32 und 32 exponentielle Spiegelränge mit
+den geerbten vollständigen Restschranken. M_i und Qmm enthalten die
+volle Kernwirkung mit exakten Logarithmen und sämtlichen aktiven Primzellen.
+Gamma224 und Momentträger Grad160 werden mit analytischen Resten benutzt.
+
+Der Koeffizientenfehler wird in der orthonormalen lokalen Basis vor der
+Monomumrechnung bezahlt. Die feste Polynomfamilie Grad<=95 hat pro Spalte
+Koeffizientennorm <2. Wie im bestätigten Vorgänger ergibt die Domänen-
+abschätzung pro direktem Eintrag einen analytischen Fehler <10^-25.
+Die 92er-Matrix hat somit zusätzlich zu sämtlichen Integralradien einen
+Fehler <=92*10^-25 I. Auf den ersten 84 Spalten genügen 84*10^-25 I.
+Die expliziten Kernrestgrenzen decken die ganzen analytischen Reihen ab.
+
+2. Widerlegung des bisherigen gemeinsamen Vergleichs
+
+Die bereits hergeleitete obere vollständige Zwölfergrenze F_upper sowie
+die alten vollständigen Quellenfehler bleiben gültig. Im erweiterten
+Vergleich mit Hilfsvariable u wird lediglich der Restblock durch
+D84_direct-H84 ersetzt. Es gibt hier weder eta-Abzug noch L_+-Ersatz.
+Für fest rationalisierte (u,t,w) werden Quellenwechsel, C84-Fehler,
+D84-Fehler und H84-Fehler sowie alle Intervallradien nach oben bezahlt.
+Der unabhängige Prüfer verwendet auch für den YY-Block die NEU integrierte
+Matrix mit eigenem analytischem Zuschlag. Beide oberen Werte sind negativ.
+Das beweist eine negative Richtung von D-U_alt auf dem festen Raum E,
+nicht von D-E_old. Die tatsächliche Inversenergie E_old ist <=U_alt.
+
+3. Neue hohe Schranke auf dem alten Raum
+
+Die geerbte vollständige Hochraum-Herleitung liefert vor Normkorrektur
+r=6529/1000-491/200-9/4-1/500=1,822. Mit eps=10^-6 gilt
+q_high >=(r-16 eps-12 eps²)||h_raw||² und
+||h_phys||² <=(1+eps²)||h_raw||².
+
+Für delta=18219/10000 wird exakt geprüft:
+  r-16 eps-12 eps² > delta(1+eps²).
+Das betrifft den gleichen vollständigen alten hohen Raum. Die geerbten
+analytischen Voraussetzungen zur Gamma-Ableitung, Legendre-Abschätzung,
+Prim-/Potentialaufteilung und Momentkorrektur ändern sich nicht.
+inherited_floor.py wiederholt die vollständigen rationalen Konstantentests.
+
+4. Neue Kopplungsmajorante und 191er-Inverse
+
+Für die alte niedrige/hohe Kopplung gilt ||B-B0||<=eB. Der gebundene Gram
+G0=B0 B0* enthält die vollständigen hohen Antworten, keinen endlichen
+Abbruch. Für p=10^-10 folgt aus Young
+
+  BB* <= (1+p)G0+(1+1/p)eB² I <= H_B,neu,
+
+wobei H_B,neu rational nach oben eingeschlossen wird. Der bisherige
+p-Wert war 10^-3. Der gesamte neue Fehlerterm wird beibehalten.
+
+Seien F_alt und H_B,alt die rationalen geerbten Matrizen mit
+F_alt <= A_low-H_B,alt/delta_alt. Dann ist
+
+ F_neu := untere rationale Rundung von
+          F_alt+H_B,alt/delta_alt-H_B,neu/delta_neu
+       <= A_low-H_B,neu/delta_neu.
+
+Es wird nicht vorausgesetzt, dass H_B,neu<=H_B,alt oder F_neu>=F_alt.
+Stattdessen wird F_neu selbst durch eine neue exakte Kongruenz zertifiziert.
+Mit rationalem oberen Dreieck A_c und exakt berechnetem Zeilensummenfehler
+rho=||A_c*F_neu A_c-I||_infty<10^-40 gilt
+
+  F_neu>0,  F_neu^-1 <= X_neu=A_c A_c*/(1-rho).
+
+Der neue gemeinsame alte Antwortoperator lautet für ALLE Quellen zugleich
+
+  U_neu[s,t]=<h(s),h(t)>/delta_neu
+       +<A_c*(c(s)-B h(s)/delta_neu),
+          A_c*(c(t)-B h(t)/delta_neu)>/(1-rho).
+
+Die vollständigen Modelle von c, Bh und h-Gramen werden aus den gebundenen
+Integrationen übernommen. Ihr Modell und ihr Fehler sind getrennt. Aus
+den neuen Faktoren werden alle 96x96-Einträge von U_neu neu gebildet,
+einschließlich der alten/Rest-Kreuzblöcke.
+
+5. Gemeinsamer Fehler der 96 Quellen
+
+G=diag(K12,alt,I84)>0 dient nur als endliche Koordinatenmetrik. Phi0 sind
+die vollständigen neuen Modellfeatures, U0=Phi0*Phi0. Für den Fehler der
+ersten zwölf Featurequellen wird aus den geerbten E_c,E_h,H_gram,upper
+erneut gebildet:
+
+ E_F=E_h/delta+3[ tr(X)E_c
+             +tr(X H_B)E_h/delta²
+             +tr(X)eB² H_gram,upper/delta² ].
+
+Für den gemeinsamen Fehler der 84 Restspalten gilt
+
+ E_J=eps_h²/delta+3[tr(X G_m)eps_f²
+                  +tr(X H_B)eps_h²/delta²
+                  +tr(X)eB,J² tr(H_gram,J)/delta²].
+
+E_J ist eine skalare Operatorfehlermajorante, also E_J I84 zulässig.
+Der Rationalprüfer benutzt konservativ
+tr(X G_m)<=tr(X)(1+||c_m||²), wobei ||c_m||² aus den rational eingeschlossenen
+alten Momenten ohne Quadratwurzeln nach oben berechnet wird. Die stärkere
+Rundung des unabhängigen Prüfers wird im finalen Positivitätstest bezahlt.
+
+Für die zusammengefügten Quellen genügt
+  E_total=2 diag(E_F,E_J I84),
+  e²=tr(G^-1 E_total), tau=tr(G^-1 U0),
+  gamma=2 sqrt(e² tau)+e².
+
+Damit gilt die vollständige gemeinsame Formschranke
+  -gamma G <= U_neu-U0 <= gamma G.
+Sie folgt aus dem Normdreieck für die G-normalisierten Features und
+enthält ALLE endlichen und Rest-Kreuzfehler gleichzeitig. Sie ist keine
+Normabschätzung in schlecht konditionierten rohen Monomkoordinaten.
+
+6. Direkte untere 96er-Matrix
+
+D_zz,lower wird aus der gebundenen physischen Viererform übernommen.
+Der direkte z-Y-Kreuzmittelpunkt Bcentre wird aus C_U+U_alt,zY rekonstruiert.
+Sein vollständiger Fehler erfüllt ||M^-1/2 E||<=epsilon. Deshalb genügt
+der Abzug epsilon diag(M,I8,0_84). Der Rest des direkten Blocks benutzt
+die neue D92-Matrix in der umgeordneten Reihenfolge Y8,J84 und die bereits
+gebundenen physischen z-J-Direktkreuze. Für deren vollständige gemeinsame
+Eintragsfehler wird zusätzlich 96*10^-25 I96 abgezogen. Das ist konservativ,
+auch auf den schon separat eingeschlossenen vier Diagonaleinträgen.
+
+Alle numerischen Intervallradien bleiben enthalten. Somit ist D_lower
+eine echte untere Grenze der vollen direkten Form D auf E.
+
+Der schließlich geprüfte gemeinsame untere Block ist
+
+  A96_lower=D_lower-U0-gamma G <= (D-U_neu)|E.
+
+Der Standardbibliothek-Prüfer baut U0, gamma und D_lower selbst erneut
+rational auf, nicht nur aus dem gespeicherten Endblock. Er bestätigt mit
+gerichtetem rationalem LDL
+
+  A96_lower-epsilon_parity G >0,
+  epsilon_even=2547/10^9, epsilon_odd=17441/10^9.
+
+Da U_neu die tatsächliche alte Inversenergie majorisiert, gilt die
+endliche Positivität auch für die tatsächliche alte-eliminierte Schurform
+auf E. Dies sagt weiterhin nichts über Richtungen außerhalb von E.
+
+7. Grenzen und weiterer Anschluss
+
+Die neue volle direkte Restmatrix ist eine 84-dimensionale Einschränkung
+der tatsächlichen Form. Die gemeinsame untere 96er-Matrix enthält alle
+Quellenfehler und bindet nur diesen endlichen Raum. Weder eta-Tricks noch
+Konstantengeschenke werden für das positive Resultat benötigt.
+
+Ein vollständiger Formdual-Residualnachweis auf ganz T fehlt weiterhin.
+Die neuen 191 niedrigen Featurezeilen und zwölf physischen Kreuzzeilen
+bilden neue 203 Kraftdaten. Alte A0-Zeilen, alte P-Residualisierung,
+alte Näherungsantworten und alte Residuen sind nicht übertragbar.
+Der separate Abdeckungstest besitzt weiterhin seine eigenen Kraftzeilen.
+
+A8->A9, der Tailboden 1/20 und der vollständige unendliche Rest sind offen.

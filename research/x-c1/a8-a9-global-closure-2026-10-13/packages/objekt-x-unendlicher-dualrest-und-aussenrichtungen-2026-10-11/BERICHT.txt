@@ -1,0 +1,116 @@
+Objekt X — globaler Dualrest-Anschluss und zusätzliche Außenrichtungen
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Der Anschluss ist weiter präzisiert, aber NICHT geschlossen. Neu liegen
+eine exakte Formel für den vollständigen eingeschränkten L-Dualgram,
+eine volle Schranke für die geometrische Momentkorrektur und zwei
+positive zusätzliche Neuner-Tests vor. Der entscheidende Gram der
+vollständigen Residualfunktionen wurde weiterhin nicht eingeschlossen.
+
+Abgrenzung zur laufenden Arbeit von GPT 2
+
+Der Screenshot zeigt den Aufbau der neuen Zwölfer-Untergrenze, 203
+rationaler Antworten und M_upper. Die dort genannten Residualbudgets
+von ungefähr 3.17e-7 bzw. 1.91e-6 sind Angaben aus diesem Zwischenstand.
+Die neuen Antwortdateien lagen hier nicht vor und wurden nicht als
+eigene zertifizierte Eingaben benutzt. Es wurde keine Nachricht an
+GPT 2 gesendet und kein GitHub-Inhalt verändert.
+
+1. Vollständiger globaler Geometrieanschluss
+
+Die Basis84 ist genau der Schnitt des Restes T mit P95. Ihr unendlicher
+Außenraum lässt sich explizit durch korrigierte Legendre-Funktionen ab
+Grad 96 parametrisieren. Nach einer endlichen L-Orthogonalisierung
+hat der ganze Außenblock die Form
+
+  diag(H_n+1.1)_(n>=96) + c l_tail l_tail*.
+
+Die Rang-eins-Korrektur kommt von der tatsächlichen W_X-Momentgeometrie.
+Sie wird nicht weggelassen. Die Koeffizienten dieser Parametrisierung
+wurden für beide Paritäten aus den tatsächlichen Basisdaten berechnet.
+
+Neu ist damit die exakte Identität (5) in INFINITE_REDUCTION.txt für
+R*R_L R: ein endlicher Basis84-Beitrag, eine vollständige gewichtete
+Legendre-Summe und eine ausdrückliche Rang-eins-Korrektur.
+
+Der ganze Momentrest erfüllt rational ||l_tail||^2<10^-704. Seine
+Wirkung auf den Dualgram ist höchstens 10^-350 mal der vollständigen
+quadratischen X-Norm des Residualoperators. Die eigentliche Stärke
+dieser Aussage ist, dass diese geometrische Restkorrektur mit einer
+sehr groben Quellnorm bezahlt werden darf.
+
+Für die neuen Antworten genügen zusätzlich die leicht prüfbaren Gates
+K12_neu>=epsilon K12_alt und ||X_response||_F<=10^20. Unter diesen und
+den geerbten Domänen-/Quellenvoraussetzungen folgt ein geometrischer
+Fehlerpreis kleiner als 10^-250 D203_neu. Die neuen Antwortdateien
+fehlen hier noch; diese zwei Gates werden daher nicht als ausgeführt
+ausgegeben. Alle übrigen im groben Normbeweis verwendeten numerischen
+Quellgrenzen wurden an den vorhandenen tatsächlichen Daten kontrolliert.
+
+2. Konkreter Test für den noch offenen vollständigen Residualrest
+
+Bezeichne RJ=J*R und R_n=<ell_n,R>_X. Für jedes N>=96 und einen
+nachgewiesenen vollen Restgram U_N>=R*(I-P_<N)R gilt
+
+ R*R_L R <= (5/21) RJ*RJ
+          +sum_(96<=n<N) R_n*R_n/(H_n+1.1)
+          +U_N/(H_N+1.1) +10^-250 D203_neu.
+
+Dies ist eine echte Aussage über den unendlichen Rest, unter den oben
+genannten Gates. Die fehlende Eingabe ist U_N: Sie muss aus den
+ZUSAMMENGESETZTEN Residualfunktionen mit ihren Auslöschungen gewonnen
+werden. Eine endliche Koeffizientenliste oder die grobe Norm der
+einzelnen Summanden beweist diese Eingabe nicht.
+
+Diese rechte Seite kann mit dem bereits vorbereiteten Faktor beta^-1
+in M_upper+beta^-1 Q_R<=D203_neu eingesetzt werden. Im detaillierten
+Anschluss stehen alle Definitionen, Normen und Aussagegrenzen.
+
+3. Zusätzliche tatsächliche Richtungen außerhalb der bisherigen Basis
+
+Acht neue Funktionen k96,...,k103 liegen exakt W_X-orthogonal zu P95
+und damit in T. Sie wurden mit je einer festgelegten kritischen
+rationalen Richtung des bisherigen 96er-Raums gemeinsam untersucht.
+
+Vier neue vollständige Funktionsintegrationen, bei 3072 und 4096 Bit,
+bezahlen die hohen alten Antworten, alle niedrigen Kräfte, physische
+Kreuze, logarithmische Beiträge, Primzellen und Momentkorrekturen.
+Es bestehen 4752 neue Intervallvergleiche je Parität. Analytische
+Restpreise kommen unabhängig davon hinzu.
+
+Die ganze jeweilige Neunermatrix ist nach Fehlerabzug rational positiv:
+
+  gerade:   Reserve 593/200000000,
+  ungerade: Reserve 4363/250000000.
+
+Diese Reserven gelten nur in der euklidischen Koordinatenmetrik der
+festgelegten Neunerbasis. Sie sind weder globale Böden noch neue
+96er-Reserven. Die Tests beweisen auch keine Positivität des gesamten
+104-dimensionalen Vereinigungsraums.
+
+4. Was jetzt noch fehlt
+
+GPT 2s konkrete neue Antworten und M_upper müssen eingebunden werden.
+Danach sind die tatsächlichen Residualfunktionen zu bilden, RJ und
+die ersten Außenkoeffizienten einzuschließen und ein scharfer voller
+Restgram U_N zu beweisen. Genau dieser letzte analytische/integrale
+Schritt ist durch das vorliegende Paket nicht ersetzt.
+
+Status
+
+EXACT_INFINITE_L_DUAL_REDUCTION_DERIVED = true
+FULL_GEOMETRIC_MOMENT_TAIL_BOUND_CHECKED = true
+EXTERNAL_RESTRICTED9_POSITIVE = true
+NEW_ANSWER_ADMISSIBILITY_GATES_CHECKED = false
+NEW_FULL_FORMDUAL_RESIDUAL_CERTIFIED = false
+TAIL_COERCIVITY_CERTIFIED = false
+FULL_REMAINDER_CERTIFIED = false
+
+Keine negative tatsächliche Schurform nachgewiesen. A8->A9 und der
+Tailboden 1/20 bleiben offen. Externe Begutachtung bleibt offen.
+
+Gebundenes bisheriges Eingangspaket:
+Objekt-X-Direkte-Restform-und-Positiver-96er-Block-2026-10-11.zip
+SHA256 06b4cc975b8e6bd8f6088a151ea1dcaebd38862f7a50e3f2f2b22ebb05afef51

@@ -1,0 +1,293 @@
+Objekt X — gemeinsame U00-Rechnung und lokalisierter Restverlust
+7. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Aussage und Abnahme
+
+Diese Rechnung behält A8->A9, beide Paritäten, den eingefrorenen
+W_X-Pilotraum, die acht exakten Halbinversenbilder und ihre bisherigen
+Mittelpunkte Y bei. Das Ziel ist eine gemeinsame rationale Obermatrix für
+B00 und die exakte Prüfung von I-U00. Es gibt keine neue Horizontrechnung.
+
+Die ausgegebenen U00-Matrizen sind gemeinsame Rückfallmajoranten. Sie
+benutzen für die C-Kopplung eine explizite Schranke des alten inversen
+Residualterms. Dessen tatsächliche vorzeichenabhängige Werte werden nicht
+als berechnet ausgegeben. Die Majoranten schließen I-U00>0 nicht.
+Die rationalen Diagnosevektoren beweisen nur das Scheitern dieser
+Majoranten, keinen negativen Vektor der tatsächlichen Form.
+
+Die geerbte Formidentität, alte Positivität, Low/High-Darstellung, Bedeutung
+von F, B und delta=2/3 sowie die Acht-Quellen-Residualidentität bleiben
+Voraussetzungen. Die neuen Integrale und ihre Verwendung sind hier
+ausgeführt. Eine externe mathematische Begutachtung liegt nicht vor.
+
+2. Vollständige neue Quellen an den Mittelpunkten
+
+Setze a=3 log(2)/2, b=log(3), h=b-a, x=a u. Alle Kernintegrale laufen über
+0<u<1 mit der aus der Parität folgenden vollständigen L2-Normierung.
+Die Mittelpunktspalten sind die bereits festgelegten rationalen
+Q-Koeffizienten. Nur für die Rechenpolynome werden ihre lokalen
+Legendrekoeffizienten durch dyadische Mittelpunkte ersetzt. Der gemeinsame
+Fehler wird VOR dem Wechsel in Monomkoeffizienten in der orthonormalen
+lokalen Basis eingeschlossen. Er liegt unter 10^-60.
+Das gerundete Rechenpolynom wird nicht als Element von R vorausgesetzt.
+Sein Rundungsfehler wird mit dem vollständigen Schalenoperator G und der
+vollen Momentfunktionalnorm sqrt(nu/2) bezahlt. Ebenso benutzt die
+C-Mittelpunktkorrektur den vollständigen X-Dualgram. Nur Delta selbst,
+das tatsächlich in R liegt, verwendet die kleineren Restnormen.
+
+Für jede Spalte wird die vollständige Kernquelle
+
+ f_Y = G Y - lambda(Y) Q_a^np m_core/mu
+
+berechnet. Die alte Momentprojektion muss in den niedrigen Paarungen nicht
+noch einmal ausgeführt werden: Die alten Testfunktionen haben Moment null.
+Beim hohen Anteil wird die vollständige Mellinkorrektur separat bezahlt.
+
+Für ein Schalenpolynom f gilt exakt
+
+ integral_a^b f(y)/(y-x) dy
+ = f(x) log((b-x)/(a-x))
+   + sum_{k>=1} f_k sum_{l=0}^{k-1}
+                     x^l (b^(k-l)-a^(k-l))/(k-l).
+
+Zusammen mit dem gespiegelten Term bei -x ergibt dies den vollständigen
+singulären Gamma-Anteil. Der reguläre Gamma-Kern wird mit Grad 224 und
+seinem gebundenen Uniformrest benutzt. Alle sechs neuen Primkanäle werden
+auf ihren tatsächlichen Intervallen integriert. Primgrenzen werden nur
+dann identifiziert, wenn ihre rationalen Koeffizienten vor
+log(2), log(3), log(5), log(7) exakt übereinstimmen.
+
+Q_a^np m_core wird aus harmonischer Legendrewirkung, vollständigem
+logarithmischem Potential, regulärem Gamma-Kern und allen alten
+Primverschiebungen gebildet. Die Exponentialfunktion wird durch ihren
+Taylorgrad 160 dargestellt. Der positive geometrische Rest der
+Exponentialreihe und der entsprechende Ableitungsrest sind enthalten.
+
+Zur Größenkontrolle des winzigen Taylorfehlers: Auf [-b,b] sind seine
+Uniform- und Ableitungsreste durch
+
+ exp(b/2)(b/2)^161/161!,
+ exp(b/2)(b/2)^160/(2*160!)
+
+begrenzt. Für ein Polynom vom Grad <=383 gilt
+||f||_infty <=384 ||f||_L2/sqrt(2a) und
+||f'||_infty <=383^2 ||f||_infty/a.
+Die logarithmische Operatorwirkung eines nullfortgesetzten Lipschitzstücks
+wird durch den Differenzenquotienten plus seine L2-integrierbaren
+Randlogarithmen begrenzt; die regulären Kerne und Primverschiebungen sind
+beschränkt. Die daraus benötigten Produkte einschließlich 1/mu sind hier
+kleiner als 10^16 mal die obigen Taylorreste mal die jeweilige Profilnorm.
+Dies liegt weit unter der verwendeten Zusatzhülle 10^-290 mal Profilnorm.
+Diese winzige Hülle ersetzt nicht den Grad-224-Gamma-Rest.
+
+3. Logarithmen werden nicht hoch abgeschnitten
+
+Jede Kernfunktion hat die Form
+
+ p0(u)+sum_j p_j(u) log|u-r_j|,
+
+zuzüglich stückweiser Prim-Polynome. Die Wurzeln sind +/-1 und +/-b/a.
+Produkte werden mit vollständigen Momenten integriert, einschließlich
+log^2 und gemischter Logarithmusprodukte. Es gibt keinen zusätzlichen
+Abbruch hoher logarithmischer Legendrekoeffizienten.
+
+Die Primitive folgt aus partieller Integration und Polynomdivision.
+Insbesondere sei L_n(c;x) die Primitive von x^n log|x-c|. Dann
+
+ L_n(c;x) = ((x^(n+1)-c^(n+1)) log|x-c|
+            -sum_{k=0}^n c^k x^(n-k+1)/(n-k+1))/(n+1).
+
+Am Punkt x=c wird der Grenzwert verwendet. Für verschiedene c,d ergibt
+die zweite partielle Integration eine Primitive von
+x^n log|x-c| log|x-d| mit den reellen Dilogarithmen
+Re Li_2((x-c)/(d-c)) und Re Li_2((x-d)/(c-d)). Die Implementierung setzt
+auch dort die endlichen Grenzwerte analytisch ein. Ein Endpunkt wird
+durch seinen symbolischen Namen identifiziert, nicht durch numerische
+Nähe zu einer Wurzel. Geschlossene Elementarintegrale prüfen die Formeln.
+
+4. Vollständige alte Mittelpunkte
+
+Aus den Quellen entstehen alle 191 niedrigen Kräfte c_Y. Der rohe hohe
+Quellenanteil h0_Y entsteht durch Abzug ALLER alten rohen
+Legendrekoeffizienten bis Grad 383. Sein Gram wird vollständig integriert.
+Der Unterschied zum tatsächlichen hohen Mellinmodell wird bezahlt.
+
+B0 h0_Y wird mit drei vollständigen Anteilen berechnet:
+
+ - logarithmische Momente des ganzen hohen Quellenanteils;
+ - alte Primverschiebungen auf der vollständigen gemeinsamen Zellteilung;
+ - regulärer alter Gamma-Anteil über die endliche Legendre-Primitivenregel.
+
+Damit entstehen v0_Y=c0_Y-(3/2) B0 h0_Y und A0_Y=T0 v0_Y. Die volle
+6x6-Metrik H bleibt in A0_Y^* H A0_Y erhalten. Es wird nicht nur auf die
+ersten sechs alten Koordinaten projiziert.
+
+Zusätzliche Kontrollen integrieren ausgewählte Paarungen direkt gegen die
+vollständige alte Operatorwirkung, einschließlich ihrer niedrigen
+Diagonale. Diese zweite Implementierung stimmt mit der produktiven
+Moment-/Primitivenrechnung überein. Die 48 Werte T0 c_Y pro Parität werden
+außerdem mit einer Integration in umgekehrter Richtung verglichen.
+
+Für den 185D-Mittelpunkt ist kappa ||vJ_Y||^2 unnötig grob. Aus derselben
+bereits bewiesenen rationalen Blockidentität folgt schärfer
+
+ F^-1 <= T0^* H T0 + P_J^*(D^-1 + nu_T I)P_J.
+
+Hier ist D der unveränderte rationale 185x185-Hauptblock und nu_T genau die
+im Vorgänger bewiesene Transformations-Rundungslast. Der Mittelpunkt wird
+mit D^-1+nu_T I gerechnet; für den Fehler bleibt dessen bereits geprüfte
+Obergrenze kappa_final I gültig. Weder T0 noch H noch die alte Form werden
+hierfür geändert. Die Verbesserung ist eine schärfere Auswertung der
+gleichen alten Antwort, keine neue Abnahme.
+
+5. Gemeinsame gewichtete Fehler der sechs Kräfte
+
+Für eine alte Testfunktion phi ist der gesamte niedrige Kraftfunktional
+
+ c_phi(r)=q_b(J phi,Lambda r).
+
+Sein darstellender Schalenvektor ist explizit
+
+ k_phi(x)=(Q_b^np J phi)(x)
+    -m(x)/mu * integral_0^a m(t)(Q_a^np phi)(t) dt.
+
+Der äußere singuläre Gamma-Anteil von Q_b J phi besitzt wiederum eine
+exakte Polynom-plus-Logarithmusdarstellung. Regulärer Gamma, Primstücke
+und Momentkorrektur werden vollständig einbezogen. Die sechs Zeilen T0
+werden vor der gewichteten Gramkontraktion gebildet.
+
+Für beliebige darstellende Schalenfunktionen k_i gilt zunächst
+
+ G_W = (<k_i,k_j>_X)
+       - (<k_i,m>_X <m,k_j>_X)/(2(mu+nu)).
+
+Das ist die exakte duale W_X-Grammatrix. Mit
+L_ij=<k_i,sigma_j>_X und der vollen W_X-Matrix W_Q der vier Quellen gilt
+auf dem GANZEN Rest R, nicht nur dem Pilotraum,
+
+ G_R=G_W-L W_Q^-1 L^*.
+
+Die gemeinsame gewichtete Normquadratschätzung tau_c folgt aus
+trace(H G_R) samt Modellfehler. Alle sechs Funktionale und alle ihre
+Korrelationen gehen vor dieser Spur gemeinsam ein. Verwendet wird keine
+globale inverse alte Spur.
+
+Mit beta >= trace(H T0 H_B T0^*), h0 >= ||h_R|| und
+||Delta||<=epsilon folgt
+
+ ||H^(1/2) T0 v Delta||
+ <= (sqrt(tau_c)+(3/2)sqrt(beta) h0) epsilon.
+
+Dies ist eine gemeinsame Operatornorm für C^8, keine Unabhängigkeitsannahme
+über acht Spalten. Die Dreiecksabschätzung zwischen niedrigem und hohem
+Quellanteil ist eine ausdrücklich konservative Hülle. Sie hält die
+vollständige alte Metrik fest. Der bereits berechnete alte hohe Fehlergram
+und der 185D-Fehlergram bleiben getrennte Beiträge.
+
+6. Vier C-Funktionale und die verbleibende Inversenunsicherheit
+
+Seien z_j die ursprünglichen vier neuen Quellen und P_j ihre unveränderten
+rationalen alten Näherungsantworten. Setze
+
+ rho_j=g_{z_j}-A P_j,
+ C0_j(r)=q_b(z_j-J P_j,Lambda r).
+
+Der Wechsel von z_j zum kanonischen Lift Lambda sigma_j wird durch die alte
+Antwort exakt kompensiert. Daher gilt auf dem gesamten Rest
+
+ C(r)=C0(r)-rho^* A^-1 g_r.
+
+C0 ist hier durch vollständige Darstellungsfunktionen berechnet: neue
+Quellwirkung minus alte Vorschlagswirkung, jeweils einschließlich ihrer
+Momentkorrektur. Die volle 4x4-Metrik M_-^-1 und die exakte W_X-Projektion
+auf R werden beibehalten. So entstehen C0_Y und eine gemeinsame Norm von
+M_-^-1/2 C0|_R.
+
+Das Acht-Quellen-Paket liefert
+
+ rho^* A^-1 rho <= Gamma_upper.
+
+Neu geprüft wird Gamma_upper <= lambda_C M_-. Die sicheren rationalen
+Werte sind 0.502920701482 gerade und 1.439537542625 ungerade. Vier exakte
+LDL-Pivots prüfen jeweils lambda_C M_- - Gamma_upper >0.
+
+Daraus folgt für jede gemeinsame Spaltenabbildung Z
+
+ (rho^* A^-1 g Z)^* M_-^-1 (rho^* A^-1 g Z)
+ <= lambda_C (g Z)^* A^-1 (g Z).
+
+Beweis: Mit V=A^-1/2 rho gilt V^*V<=lambda_C M_-, also
+V M_-^-1 V^*<=lambda_C I. Die letzte Ungleichung wird links und rechts
+mit A^-1/2 gZ kontrahiert. Weder Unabhängigkeit noch eine separate
+skalare Hülle pro Quellspalte ist nötig.
+
+Diese Schranke erhält eine gemeinsame 8x8-Grammatrix, ermittelt aber NICHT
+das Vorzeichen des Terms rho^*A^-1gY relativ zu C0_Y. Genau diese fehlende
+gemeinsame Information ist die ausdrücklich bezeichnete Rückfallstelle.
+
+7. Rationale U00-Majorante und Budget
+
+Für jede gemeinsame Abbildung L und jedes t>0 wird
+
+ (L_Y+L_Delta)^*(L_Y+L_Delta)
+ <= (1+t)L_Y^*L_Y+(1+1/t)L_Delta^*L_Delta
+
+als Matrixungleichung benutzt. Der Kreuzterm ist dabei die SUMME
+L_Y^*L_Delta+L_Delta^*L_Y. Seine Majorante lautet
+t L_Y^*L_Y+t^-1 L_Delta^*L_Delta. Alle 8x8-Off-Diagonalen der
+Mittelpunktgrame bleiben erhalten. Es gibt keinen achtfach unabhängigen
+skalaren Young-Schritt.
+
+Die Modellfehler der Mittelpunktintegrale werden vorab mit ihren eigenen
+gemeinsamen Gramen bezahlt. Für den alten Antwort-Mittelpunkt entsteht
+E_Y>=gY^*A^-1gY. Aus C0_Y und lambda_C E_Y wird dann eine gemeinsame
+Obermatrix für C_Y^* M_-^-1 C_Y gebildet. Ihr eigener Mittelpunktverlust
+wird zusätzlich aufgeschlüsselt in C0, inversen Residualgram und ihren
+ungeklärten Kreuzterm.
+
+Für Delta gilt separat
+
+ ||M_-^-1/2 C Delta||
+ <= ||M_-^-1/2 C0|| epsilon
+    +sqrt(lambda_C E_old_Delta),
+
+mit dem gemeinsamen alten Fehlergram-Skalar E_old_Delta aus hohem Anteil,
+sechs Kräften und 185D-Komplement. Anschließend wird auch der C-Beitrag in
+Mittelpunktobergram, Kreuzmajorante und reinen Delta-Fehler zerlegt.
+
+Zusammen mit dem 19-Anteil entstehen die fünf im Protokoll verlangten
+Beiträge. Symmetrische Eintragsintervalle werden durch Mittelpunktmatrix
+plus eine volle Zeilensummen-Diagonalkorrektur in rationale
+Loewner-Obermatrizen umgewandelt. Eintragsweise obere Endpunkte werden
+nicht als Matrixordnung behandelt.
+
+Die gemeinsamen Young-Parameter werden numerisch ausgewählt und danach
+als rationale Zahlen festgehalten. Ihre Optimalität wird nicht behauptet
+und für den Nachweis nicht benötigt. Der separate Fraction-Prüfer baut
+die Schlussmatrix und jedes Richtungsbudget exakt neu auf.
+
+8. Urteil und nächste konkrete Obligation
+
+Der Test mit diesen U00-Majoranten schließt in keiner Parität. Die exakten
+Richtungsquittungen und die detaillierten Budgets stehen in den
+Ergebnisdateien. Alle späteren Operatorgrößen G01, gamma01 und beta_tail
+bleiben unberechnet; FULL_REMAINDER_CERTIFIED bleibt false.
+
+Die sechs empfindlichen alten Kräfte sind nun tatsächlich an Y integriert
+und ihr gemeinsamer gewichteter Delta-Fehler ist beschränkt. Die pauschale
+185D-Mittelpunktlast ist als künstlicher Verlust identifiziert und durch
+die vollständige endliche inverse Energie ersetzt. Die Werte C0_Y und
+vollständigen dualen C0-Grame sind ebenfalls berechnet.
+
+Für einen schärferen nächsten Versuch fehlen vor allem die gemeinsamen
+gerichteten Werte rho^*A^-1gY und ihre Korrelation mit C0_Y. Eine gemeinsame
+alte Quellenrechnung mit den vier Residuen rho und den acht gY-Spalten
+ist die konkrete nächste Aufgabe. Sie sollte zunächst feststellen, wie
+viel der C-Mittelpunktmajorante aus tatsächlicher Energie und wie viel
+aus der vorzeichenlosen Residualhülle stammt. Zusätzlich verdient die
+knapp nicht schließende alte Antwort einschließlich ihres Delta-Fehlers
+eine eigene Richtungsdiagnose. Aus dem jetzigen Obermatrixbefund folgt
+keine untere Schranke für eine tatsächliche negative Antwort.
+
+Primäres Ziel bleibt Objekt X. Vollständiger Rest, spätere Horizonte,
+kofinale Fortsetzung und vollständige Objekt-X-Konstruktion bleiben offen.

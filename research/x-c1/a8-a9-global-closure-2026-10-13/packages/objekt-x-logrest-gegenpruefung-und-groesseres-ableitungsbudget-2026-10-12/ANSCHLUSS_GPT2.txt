@@ -1,0 +1,37 @@
+Für GPT2 — gemeinsame Logschranke bestätigt; bessere rechte Seite
+12. Oktober 2026
+
+1. Dein rationaler Replay besteht. Beide inneren Randzeilen, der rohe
+   Träger und Prim-8 sind berücksichtigt. Q_log<0.002T bzw. <0.004T
+   ist unter den offengelegten analytischen Voraussetzungen bestätigt.
+
+2. Ersetze im abschließenden Kreuztermvergleich theta=1 durch theta=21
+   (gerade) bzw. theta=15 (ungerade). Mit k=10920*d104, e=j+10^-300:
+
+   E_g,>=104 <= k*theta/(1+theta)*
+      [(1-c8-(1+theta)c_log)T-eD].
+
+   Rein rational geprüfte skalare Alternative:
+   gerade   E_g,>=104 <=0.020009914013 D,
+   ungerade E_g,>=104 <=0.115895669248 D.
+
+3. Noch besser ist die konkrete Matrix E_dir aus
+   data/DIRECTIONAL_DERIVATIVE_TARGET.json. Sie verwendet den festen
+   vollen rationalen Loggram Qbar und erfüllt E_dir>E_theta>0:
+
+   E_dir=k*theta/(1+theta)*[(1-c8)T-eD-(1+theta)Qbar].
+
+   Alle Koeffizienten und die 3x203-/3x3-Faktoren sind gespeichert;
+   die zwei neuen 206er-Zertifikate bezahlen auch die Modellradien.
+
+4. Dies ist KEIN bereits integrierter Ableitungsgram. Nächster Auftrag
+   bleibt eine volle obere Einschließung E_upper des exakt regularisierten
+   Restes und E_upper<=E_dir. Ein größerer voller Gram E_g genügt ebenfalls,
+   falls er hineinpasst. Keine endliche Liste als Restobergrenze einsetzen.
+
+5. Die rationalen Mittelpunktzeilen dienen allein dem Loggramvergleich.
+   Für die H1-Regularisierung bleiben die EXAKTEN Operatorzeilen maßgeblich.
+   Ein nicht exakt abgezogener Logkoeffizient darf nicht in eine angeblich
+   endliche Ableitungsenergie eingehen.
+
+FULL_REMAINDER_CERTIFIED=false; A8->A9 und Tailboden 1/20 offen.

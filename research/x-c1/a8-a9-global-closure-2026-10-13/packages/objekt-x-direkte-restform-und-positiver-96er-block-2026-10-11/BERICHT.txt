@@ -1,0 +1,133 @@
+Objekt X — Vollständige direkte Restform und positiver gemeinsamer 96er-Block
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Der notwendige endliche gemeinsame Vergleich besteht erstmals in diesem
+Rechenzweig in beiden Paritäten, unter den geerbten Operatorvoraussetzungen.
+Hierfür wurden die direkte Restform vollständig integriert und die alte
+Inversmajorante konsistent verbessert. Es wurde kein unendlicher Rest
+durch endlich viele Moden ersetzt.
+
+Für F=(z1,...,z4,Lambda Y1,...,Lambda Y8) und J84 gilt auf dem festen
+96-dimensionalen Raum E=span(F,Lambda J):
+
+  (D-U_neu)|E >= epsilon G,
+  G=diag(K12,alt,I84),
+
+  gerade:   epsilon = 2547/10^9  = 0,000002547;
+  ungerade: epsilon = 17441/10^9 = 0,000017441.
+
+K12,alt ist die gebundene alte positive Zwölfermetrik. G ist eine
+Koordinatenmetrik für diesen endlichen Test. Die beiden Zahlen sind
+KEINE Tailböden, keine Untergrenzen von 1/20 und keine globalen L2-Schranken.
+
+Die unabhängige rationale Nachrechnung besteht: Sie rekonstruiert die
+neue alte Inversmajorante, alle 9216 gemeinsamen Energieeinträge je Parität
+und die vollständige untere 96x96-Vergleichsmatrix einschließlich aller
+Fehler. Danach bestehen je 96 positive rationale Intervall-LDL-Pivots
+auch nach Abzug der angegebenen Reserve epsilon G.
+
+1. Bestätigung des eingegangenen Konstantentests
+
+Das unveränderte Rückgabepaket wurde vollständig rational nachgespielt.
+Die negativen Vergleichswerte einschließlich eta-Rückgabe und großzügiger
+Konstantengutschrift sind bestätigt. Eine reine Konstantenkorrektur wird
+hier nicht weiter als Lösung verfolgt.
+
+2. Vollständige direkte Restform
+
+D84_direct=q_b[Lambda J,Lambda J] wurde neu berechnet, mit dem tatsächlichen
+Konstantenterm, dem logarithmischen Potential, dem vorzeichenbehafteten
+regulären Selbst-/Spiegelkernel und der vollständigen Momentkorrektur.
+Die acht festen Y-Spalten wurden mitgerechnet; gespeichert ist die ganze
+92x92-Matrix in der Reihenfolge J84,Y8.
+
+Vier Integrationen wurden ausgeführt: gerade/ungerade bei 3072 und 4096 Bit.
+Je Parität bestehen 74768 Intervallvergleiche zwischen den Präzisionen,
+8464 rationale Kontrollen der Momentformel und 672 Anschlussvergleiche
+mit den bereits gebundenen Y-J-Kreuzwerten. Der analytische Eintragsfehler
+10^-25 wird gesondert bezahlt; Präzisionsübereinstimmung ersetzt ihn nicht.
+
+Auch MIT dieser vollständigen direkten Form scheitert die bisherige
+Inversmajorante auf rationalen Richtungen des endlichen Raums:
+
+  gerade:   obere gemeinsame Form < -0,0000773625;
+  ungerade: obere gemeinsame Form < -0,0000108754.
+
+Es handelt sich um unnormierte Formwerte auf den gespeicherten Richtungen.
+Damit liegt das Hindernis für diesen Vergleich nicht mehr in einer
+Vereinfachung der direkten Restform. Eine negative tatsächliche Schurform
+folgt daraus nicht: Die alte Inversmajorante ist konservativ.
+
+3. Zwei konsistente Verbesserungen der alten Inversmajorante
+
+Die geerbte hohe Abschätzung hat vor ihrer letzten Abrundung den Wert
+1,822-16*10^-6-12*10^-12. Sie erlaubt daher bereits auf demselben vollständigen
+alten hohen Raum die physische Schranke delta_neu=18219/10000=1,8219
+anstelle von delta_alt=91/50=1,82. Der genaue positive Rest wird rational
+geprüft. Neue analytische High-Tail-Integrale sind dafür nicht erforderlich.
+
+Zusätzlich wird der bisherige pauschale Young-Zuschlag in der alten
+Kopplungsmajorante verkleinert. Mit B0 als gebundenem vollständigem
+Kopplungsmodell, G0=B0 B0* und ||B-B0||<=eB gilt für jedes p>0:
+
+  B B* <= (1+p)G0+(1+1/p)eB² I.
+
+Statt p=10^-3 wird p=10^-10 eingesetzt. Der dadurch größere Preis für
+eB² wird vollständig bezahlt. Wegen des sehr kleinen gebundenen eB ist
+dies zulässig und im vorliegenden Test wirksam. Das ist eine andere
+Young-Abschätzung als der bereits ausgeschöpfte Achter-Brückenschritt.
+
+Die Verbesserung von delta allein bestand den verwendeten unteren
+96er-Test noch nicht. Mit dem kleineren Kopplungszuschlag besteht er.
+Aus einem gescheiterten unteren Test allein wird keine Unmöglichkeit
+dieser Zwischenvariante abgeleitet.
+
+Die 191x191-Inverszertifizierung, die niedrigen Features, der hohe Anteil,
+alle endlichen Kreuzenergien und die vollständigen Quellenfehler wurden
+mit delta_neu und der neuen Kopplungsmajorante neu aufgebaut. Es wurden
+keine alten Kreuzzeilen mit einer neuen Inversmetrik vermischt.
+
+4. Welche Reproduktionsaussagen vorliegen
+
+- Vier frische neue direkte Matrixintegrationen, nicht bloß Vergleiche
+  bereits gespeicherter alter Integraldateien.
+- Getrennter reiner Rationalprüfer: vollständige neue ganzzahlige
+  Inverskongruenz, neue Kopplungs-/Schur-Untergrenzen, vollständige
+  96-Quellen-Energien, Fehlerpreise und 96er-Positivität.
+- Gegenkontrolle: eine absichtlich indefinite Matrix wird verworfen.
+- Die älteren vollständigen Kernkräfte und Kopplungsgrame bleiben
+  gebundene Eingaben; ihre Integrationen wurden hier nicht neu ausgeführt.
+
+Die analytischen Domänen-, Kernrest- und alten Operatorvoraussetzungen
+bleiben geerbt. Externe mathematische Begutachtung ist weiterhin offen.
+
+5. Nächster Anschluss
+
+Die neuen H84- und Kraftdaten stehen in REFINED_COMMON96.json:
+H84_new_model, low_feature_J84_model und finite_cross_C84_new_model.
+Die 203 Kraftzeilen sind jetzt 191 neue niedrige Features plus zwölf
+physische finite Kreuzzeilen, ohne die alte P-Residualisierung. Sie dürfen
+weder als alte A0-Zeilen noch als die 203 Zeilen des Abdeckungstests
+weiterverwendet werden.
+
+Als nächstes sind die neuen Näherungsantworten für den konsistenten
+Vergleich zu fixieren und ihr vollständiger Formdual-Residualgram auf
+dem gesamten unendlichen Rest zu binden. Alte Näherungsantworten und
+alte Residuen sind hierfür nicht übernommen worden.
+
+Status
+
+FULL_DIRECT_REST84_ENCLOSED = true
+OLD_MAJORANT_WITH_FULL_DIRECT_FORM_REFUTED = true
+NEW_OLD_HIGH_FLOOR = 1,8219
+NEW_COUPLING_MAJORANT_CERTIFIED = true
+NEW_COMMON96_COMPARISON_POSITIVE = true
+NEW_FULL_FORMDUAL_RESIDUAL_CERTIFIED = false
+NEGATIVE_ACTUAL_SCHUR_WITNESS = false
+TAIL_COERCIVITY_CERTIFIED = false
+FULL_REMAINDER_CERTIFIED = false
+
+A8->A9 und der Tailboden 1/20 bleiben offen. Alle Originalarchive bleiben
+unverändert. GitHub wurde nicht verändert.

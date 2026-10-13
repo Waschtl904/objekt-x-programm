@@ -1,0 +1,90 @@
+Objekt X — Ergebnis des residualgeführten alten Variationsversuchs
+8. Oktober 2026. AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN.
+
+Ergebnis
+
+Der vorgeschlagene nächste Versuch ist ausgeführt. Aus den aktuellen alten
+Residuen wurden je Parität zwölf Funktionen ausgewählt, ihre rationalen
+Koeffizienten eingefroren und danach ihre vollständige gemeinsame Formmatrix
+rigoros integriert. Es werden alle zwölf alten Quellspalten gemeinsam
+weitergegeben. Der neue Variationsgewinn ist exakt positiv definit.
+
+Die größten Eigenwerte der U00-Obermatrizen verbessern sich:
+
+                       vor diesem Schritt      jetzt
+ gerade                1.108282303             1.101199779
+ ungerade              1.153962435             1.135225303
+
+Exakte rationale Schlussgrenzen aus beiden Integrationsläufen:
+
+ gerade:   1.10119977928159 < lambda_max(U00) < 1.101199779382
+ ungerade: 1.13522530327454 < lambda_max(U00) < 1.135225303375
+
+Das benötigte U00<I ist weiterhin offen. Die Werte sind Eigenwerte unserer
+Obermatrix, keine BR-Normen und keine negativen Zeugen des Operators.
+
+Vergleich mit dem vorigen kleinen Versuch
+
+Der Rückgang in diesem Schritt beträgt etwa 0.00708 bzw. 0.01874.
+Er ist damit ungefähr 9.7- bzw. 9.3-mal so groß wie der Rückgang durch die
+zwölf unmittelbar folgenden Legendregrade. Das ist ein Vergleich der
+beobachteten U00-Verbesserungen; daraus folgt kein lineares Fortschrittsgesetz.
+
+Die neue Untergrenze ist in allen zwölf Quellrichtungen strikt stärker.
+Die relative z-Breite D_zz<=lambda M sinkt
+
+ gerade:   0.501262369 -> 0.465996267
+ ungerade: 1.427927760 -> 1.329009666.
+
+Die direkte Schur-Bedingung bleibt gerade positiv und ungerade offen.
+Die neue endliche Matrixrelaxation erlaubt weiter E=L_neu, Delta=0 mit
+Modell-Rayleighwerten über 1.05607863 bzw. 1.07376702. Eine Realisierung
+dieser Matrixbelegungen durch den ursprünglichen Operator wird nicht behauptet.
+
+Wie die Funktionen gewählt wurden
+
+Je Parität wurden 320 hohe alte Grade bis 1022/1023 auf die vollständigen
+aktuellen Modellresiduen geprüft. Die Auswahl berücksichtigt die aktuelle
+U00-Richtung, die Relaxationsrichtung, ihre C-Kopplungsanteile und ungerade
+zusätzlich eine verletzte Schur-Richtung. Vier Frequenzbänder ergeben einen
+kleinen Kandidatenpool. Daraus wurden zwölf gemeinsame Funktionen eingefroren.
+
+Die erste Gewichtung verwendet den harmonischen Hauptteil w_n=1+H_n.
+Sie ist eine Auswahlheuristik und kein Ersatz für T^(-1). Nach der Auswahl
+wurden die wirkliche gemeinsame Modellmatrix T sowie sämtliche geerbten
+Quellen- und Operatorrestfehler bezahlt. Der rigorose Gewinn hängt daher
+nicht von einer Gleichsetzung des Hauptteils mit dem vollständigen Operator ab.
+
+Weitere Diagnose und nächster sinnvoller Schritt
+
+Die ausgewählten Funktionen erfassen in den festgelegten Quellrichtungen
+mehr als 99.8 Prozent des endlichen harmonischen Vergleichsmodells im
+gescannten Bereich. Dies ist keine Aussage über die gesamte physische
+alte Energie und insbesondere keine Schranke für Grade oberhalb 1023.
+
+Der nächste begrenzte Block sollte die ausgelassene alte Residualantwort
+behandeln: ihre Quellen aus Logarithmen, Endpunkten und Primverschiebungen
+zerlegen, deren hohe Koeffizienten bzw. Energie rigoros majorisieren und
+daraus weitere Variationsfunktionen oder eine kontrollierte größere
+Scanreichweite begründen. Diese Rechnung wurde hier noch nicht durchgeführt.
+Es geht um das alte Variationsresiduum; der neue BR-Tail-Gate bleibt bis
+zu einem positiven U00-Schluss zurückgestellt.
+
+Prüfungen und Grenzen
+
+- Vier Scanläufe und vier volle Formläufe mit tatsächlichen 4096/6144 Bit.
+- 8832 Präzisionsvergleiche der gespeicherten Residual- und Formeingänge.
+- 144 K-T V-Rückprüfungen je Scan gegen den vorigen Zwölf-Grade-Versuch.
+- Vier zusätzliche direkte Produktintegrale je Formlauf.
+- Exakte Unabhängigkeit der eingefrorenen Funktionen und K-Kontraktion.
+- Rationale Intervallrekonstruktion und LDL-Prüfungen des Variationsgewinns.
+- Vier rationale U00-Schlussfälle einschließlich Eigenwertgrenzen.
+
+Die Inkrementauswertung verwendet 1536 Bit, die U00-Algebra 1536/2048 Bit.
+Die Adjungierten der vorigen Textfassung sind in einer beigefügten Kopie
+präzisiert. Das ursprüngliche Vorgängerarchiv bleibt unverändert.
+Die ursprünglichen Formidentitäten und Modellrestmajoranten bleiben
+Voraussetzungen. Externe fachmathematische Begutachtung ist offen.
+G01, gamma01, beta_tail, der vollständige Rest und Objekt X bleiben offen.
+
+Dieser Stand liegt lokal vor und wurde noch nicht auf GitHub/main übernommen.

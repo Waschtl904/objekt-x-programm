@@ -1,0 +1,15 @@
+{
+  "input_zip_sha256": "06b4cc975b8e6bd8f6088a151ea1dcaebd38862f7a50e3f2f2b22ebb05afef51",
+  "files": {
+    "BERICHT.txt": "7713060f395266a87ae4e408038bd8da8a6ba76b8f962293e31487f1e25b9e57",
+    "FRESH_REBUILD_REVIEW.json": "63f1e54ce05fd1151dbfa976e32c785cbfc4faa4db3afd493c952b6d2b9c72a7",
+    "INPUT_AUDIT_COPY.json": "9d9af6ab760a0377ddbf2fd995c6a6df8fc62151fec9e259033b8f9a52ce3769",
+    "README.txt": "f856b5f7b8f0dd98a1aa55a285b3c0d3fd1c8c440f17011483e263ac1d739927",
+    "RESIDUALANSCHLUSS.txt": "83bb81d85197704e4d325e09a6865c270babe45b1648d4432031a572cb45ddea",
+    "RESIDUAL_SETUP.json": "d09c0825f87494d987b7f61db306ccff820eae6e14bdcfbfb46c7c385fa74a1e",
+    "check_residual_setup.py": "0edf9e353d7d4dc497f796e26808b5b17de26b9651b7987df23ef572f23d5640",
+    "logs/fresh-full-rebuild.log": "ebb3922e3d65f214efb66b7eef89c12601e65bd504b62dde8af0585cd501ff59",
+    "logs/input-rational-replay.log": "945421182b7e32bea6fcd966580dddca06f3b703ce18a8983a8f23c5627fd472",
+    "reproduce.py": "3ea30ad84a4ce2a7ddcd51ea30d560a7feff5ef1126831e21a282bd97fc719e1"
+  }
+}

@@ -1,0 +1,38 @@
+Objekt X — Anschlussprüfung für GPT 1
+
+1. BERICHT.txt lesen; reproduce.py ausführen. Die Ergebniszahlen sind
+   konditional auf die gebundenen mathematischen Vorleistungen.
+2. H84 und C84 als Operatoren der gemeinsamen Verlustbilanz prüfen;
+   insbesondere die vollständigen hohen Grame, die vier physischen z,
+   die gemeinsame alte Kreuzantwort und das Vorzeichen CY-P*Cz.
+3. Die Bündelfehler e_H,e_C und den rationalen notwendigen Test prüfen.
+   Die unabhängigen Einzelintegrationen sind zusätzliche Kontrollen.
+4. Bei bestätigter notwendiger Gateverletzung die festgelegte Bedingung
+   H+R0<=(1-eta)L nicht weiter durch Basisvergrößerung oder Verkleinern
+   eines Residualbudgets zu erzwingen versuchen. Stattdessen untersuchen,
+   welcher der Vergleiche L, X_old oder K12 hinreichend verschärft werden
+   kann. Die genaue Beitragszerlegung am rationalen Zeugen liegt vor.
+5. Falls keine notwendige Verletzung bestätigt wird, muss der vollständige
+   L-formduale Residualgram das ausgewiesene positive Budget erreichen.
+   Die beigefügte volle grobe Schranke reicht dafür nicht aus.
+6. Den getrennten Vergleich L_plus=L+V_log und seine vollständige
+   Potentialmatrix prüfen. Falls sein endlicher Test besteht, die beigefügten neuen rationalen
+   Antworten verwenden und Rplus=A0*-Splus Zplus bilden. Die hergeleitete Inversmajorante
+   Splus^-1<=(0.11-eta)^-1 R_L erlaubt weiterhin die alte L-Formdualnorm;
+   das alte Residuum darf dabei nicht übernommen werden.
+7. BRIDGE_DIAGNOSTIC.json prüfen: Mit Lplus würde Q8_neu=(111/100)Q8
+   gerade bzw. (129/100)Q8 ungerade den endlichen Test bestehen lassen.
+   Die Gültigkeit dieser stärkeren tatsächlichen Zwölfer-Untergrenze ist
+   eine NEUE, noch unbewiesene Voraussetzung. Nicht als vorhandenes
+   Zertifikat übernehmen. Bei Nachweis verbleibt der volle Dualrest.
+8. Die anders definierten 203 Abdeckungskräfte bleiben ein eigener Weg.
+   A0-Daten nicht stillschweigend als Abdeckungsdaten verwenden.
+
+Falls auch die stärkere Bedingung auf einem rationalen Prüfray verletzt
+ist, reicht das positive Randpotential allein nicht aus. Auch diese
+Verletzung betrifft eine hinreichende Abschätzung, keine nachgewiesene
+negative tatsächliche Schurform.
+
+Der tatsächliche Tailboden 1/20, der L²-Residualanschluss mit Faktor 20
+und A8->A9 bleiben offen. Ein Scheitern des hinreichenden Verlustkriteriums
+ist kein negativer Zeuge der tatsächlichen Schurform.

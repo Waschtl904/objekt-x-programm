@@ -1,0 +1,8 @@
+{
+  "prior_package": "Objekt-X-U00-Diagnose-2026-10-07.zip",
+  "prior_package_sha256": "751db194618e0748abd7c28818c27219cdb7d8a1e0d14306877a107a7248819e",
+  "prior_package_preserved_byte_identical": true,
+  "source_main": "da50f0a21691e6fd253163e612a2af2898606581",
+  "new_inputs": "Per-parity source hashes are embedded in work/signed-c-2026-10-07/RESPONSE_*.json",
+  "scope": "New computations and bounded rational audit; no external mathematical review."
+}

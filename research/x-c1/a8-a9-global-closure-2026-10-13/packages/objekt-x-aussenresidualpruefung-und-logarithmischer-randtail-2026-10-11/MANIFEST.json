@@ -1,0 +1,22 @@
+{
+  "files": {
+    "ANSCHLUSS_GPT2.txt": "762031cf6344fc64b825c6b05f43faa776fc315a259e70d1be310fda58eabe76",
+    "BERICHT.txt": "55953247e8b9b4b95c948e311489c8412b6eef1f307402204fcee18795604716",
+    "ENDPOINT_PROOF.txt": "f232ed30c8d8376c76cc3e5442b673c9085f9caf77db4fcdf695bca378c95636",
+    "FULL_REPLAY_LOG.txt": "4920a3abac352a83778d5c228f838ebee55f8688fbba3735920a0df5ef9b1c1d",
+    "INPUT_REPLAY_LOG.txt": "0e975a995e600e54cde29ca26848e71f3f07034cc39fe10e7d7bc6764b636df6",
+    "LOG_TAIL_METHOD.txt": "6c18c99345136cd635e5388d68b4358494e9a17948aa8b3a50217cc234cfd0ad",
+    "Pruefquittung.json": "0bea7e69c0d2baf2eda0ded7d26f76638048f9edaf7517d838166500dfcd0235",
+    "README.txt": "20b767f280d14bfc523b2ec55803845eb2221971f6d79585b62ec05e7a5ae8da",
+    "audit_outer_endpoint.py": "e935467aa4cad66b6174a11a4d9db385020ddb629bb1576c4667c0818f22d566",
+    "build_log_tail.py": "3e77762ea1223af72c7e5775b2609ece960c31b2a69aa83f00d6693d84da4ce3",
+    "compute_outer_endpoint.py": "89f828eeb2f473184e741df01a614d3777e7e5ff784b9cca34837c68f8e161e0",
+    "data/ENDPOINT_AUDIT.json": "b07510dab7ca5b7d21e16ec88a4aff586c3c8b85fe8a8a426206b9a050096733",
+    "data/ENDPOINT_BASIS_INPUT.json": "d2939e43bd6b0b4230ecdb9a4f0c18a7116f2a08679e6d29b740a60e0de1ca58",
+    "data/INDEPENDENT_COMPARISON.json": "5336ca4cd6cbeaf286840f5f44143a27123bba0dfc546c453e77ecdc916ed3af",
+    "data/LOG_TAIL_104.json": "3198237110674b34d067e99406877eb11a8924e98f1e9275222352e70c718d62",
+    "data/OUTER_ENDPOINT.json": "ec92610ced3f688e5ece45634c3c72297bc03583d0e457709147ac5b4e09d1e4",
+    "inputs/Objekt-X-Zusammengesetzte-Aussenresiduen-und-Momentanschluss-2026-10-11.zip": "70faaa1a9f8c2904320f69188624de225655ba3c6de5c2577c4e69d6706c6799",
+    "reproduce.py": "77d3efca1a4460f66591fe6249602123f670873d5743e3bbb3eabb99fadf1599"
+  }
+}

@@ -1,0 +1,129 @@
+Objekt X — Prüfung des positiven 96er-Blocks und neuer Residualanschluss
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Der positive gemeinsame 96er-Vergleich ist unter den geerbten analytischen
+Operatorvoraussetzungen bestätigt. Die übergebenen Prüfer wurden ausgeführt,
+die entscheidenden Abschätzungen gelesen und der neue Rechenzweig aus dem
+gebundenen Vorgänger frisch aufgebaut. Das ist eine weitere rechnerische und
+mathematische Kontrolle, keine abgeschlossene externe Begutachtung.
+
+Auf E=span(z1,...,z4,Lambda Y1,...,Lambda Y8,Lambda J84) gilt
+
+  (D-U_neu)|E >= epsilon G,   G=diag(K12,alt,I84),
+  gerade:   epsilon=2547/10^9,
+  ungerade: epsilon=17441/10^9.
+
+Diese Reserven beziehen sich auf die endliche Koordinatenmetrik G. Sie sind
+keine Tailböden, keine globalen L2-Untergrenzen und kein Nachweis von 1/20.
+
+Was tatsächlich erneut ausgeführt wurde
+
+- Der versiegelte rationale Replay einschließlich Vorgängerbindungen.
+- Vier neue vollständige direkte 92x92-Integrationen: beide Paritäten bei
+  3072 und 4096 Bit. Alle gespeicherten Felder stimmen mit der Übergabe
+  überein, abgesehen von der Laufzeit.
+- Neuer Aufbau der alten Inversmajorante, der 191-dimensionalen rationalen
+  Inverskongruenzen, sämtlicher 9216 gemeinsamer Energieeinträge je Parität
+  und der vollständigen unteren 96er-Matrizen mit Fehlerpreisen.
+- Rationale Intervall-LDL-Prüfung nach Abzug beider angegebener Reserven.
+- Neuer Aufbau und Prüfung der Gegenrichtungen für die alte Majorante mit
+  vollständiger direkter Form. Die rationalen Ergebnisse sind identisch.
+- Vergleich der sechs extrahierten Eingabequellen mit den vorhandenen,
+  durch SHA256 gebundenen Vorgängerdateien.
+
+Die früheren vollständigen alten Quell- und Kopplungsintegrationen wurden
+nicht nochmals ausgeführt. Sie bleiben gebundene Eingaben. Die analytischen
+Domänen-, Kernrest- und Operatorannahmen bleiben geerbt. Die bloße Überein-
+stimmung zweier Präzisionen wird nicht als analytischer Fehlerbeweis benutzt.
+
+Alle zertifizierenden Zahlen des frischen Neuaufbaus stimmen exakt mit der
+Übergabe überein. Hashbindungen an neue Integraldateien ändern sich wegen
+deren Laufzeitfeldern. Nur ein nicht zertifizierender, explorativer Float
+ändert sich in der letzten Stelle: 1.0000125400525939 zu 1.0000125400525937.
+Dies berührt keine rationale Richtung, Einschließung oder Positivitätsprüfung.
+
+Kontrollierte mathematische Übergänge
+
+Die geerbte Hochraumrechnung erlaubt delta_neu=18219/10000. Nach Bezahlung
+der Moment- und Normkorrektur bleibt die exakte positive Differenz
+839999861781/10^16. Die neue Kopplungsmajorante bezahlt beide Terme der
+Young-Ungleichung, einschließlich des vergrößerten eB^2-Preises.
+
+Die Schur-Untergrenze wird aus Fold+HBalt/delta_alt-HBneu/delta_neu nach
+unten gerundet. Dafür ist keine unbelegte Monotonie von HBalt und HBneu
+nötig. Neue Inversmetrik, niedrige Features und alle Kreuzenergien werden
+konsistent gemeinsam verwendet. Der gemeinsame Quellenfehler wird in G
+bezahlt; die Unsicherheiten der direkten z- und z-Y-Blöcke bleiben enthalten.
+
+Eine Dokumentationskorrektur
+
+Die unmittelbar verwendeten alten gamma224_tight_4096-Zertifikate besitzen
+coupling_gram_padding=10^-8, nicht 10^-3. Der tatsächlich geprüfte Schritt
+lautet daher hier 10^-8 -> 10^-10. Der Code liest die richtigen gebundenen
+alten Matrizen; der Schreibfehler in Bericht/Herleitung/Übergabe entwertet
+das positive Zertifikat nicht. Die Originaldateien wurden nicht verändert.
+
+Zusätzlicher überprüfter Anschluss
+
+Für die unveränderte hohe Antwort h, eta=10^-10 und q[r]=q_b[Lambda r]
+setzen wir
+
+  S_neu,eta=(1-eta)q-H_neu.
+
+Aus den geerbten globalen Aussagen H_alt <= (89/100)L und q >= L folgt
+
+  H_neu=(18200/18219)H_alt,
+  S_neu,eta >= beta L,
+  beta=20209999981781/182190000000000 > 0.
+
+Also darf für den NEUEN vollständigen Formdual-Residualgram der Faktor
+
+  beta^-1=182190000000000/20209999981781, ungefähr 9,014844145,
+
+vor dem richtigen, auf T eingeschränkten L-Inversen verwendet werden.
+Dies ist eine Hilfsform vor Abzug der 191 niedrigen und zwölf endlichen
+Kopplungsverluste. Ihre Untergrenze ist ausdrücklich kein Tailboden der
+vollständigen Schurform. Der neue Residualgram wurde hier nicht berechnet.
+
+Der optionale eta-Abzug auf dem direkten J84-Block verbraucht die endliche
+Reserve nicht. Einschließlich aller Matrixradien und des analytischen
+Fehlers ist D84_direct <= 11 I84 in den J-Koordinaten. Daher bleiben
+
+  gerade:   25459/10^10 = 0,0000025459,
+  ungerade: 174399/10^10 = 0,0000174399
+
+als untere Reserven in G. Auch dies sind ausschließlich endliche Aussagen.
+Der zugehörige rationale Prüfer und seine Ausgabe liegen bei.
+
+Nächster Auftrag
+
+Eine zur neuen Majorante passende Zwölfer-Untergrenze und neue rationale
+Näherungsantworten fixieren. Danach den vollständigen Formdual-Residualgram
+auf dem tatsächlichen unendlichen Rest T einschließen. Die genaue Identität,
+Metrik und ausreichende Bedingung stehen in RESIDUALANSCHLUSS.txt.
+
+Die 203 neuen Zeilen sind 191 neue niedrige Features und zwölf physische
+Kreuzzeilen. Sie sind weder die früheren residualisierten A0-Zeilen noch die
+anderen 203 Zeilen des Abdeckungstests. Alte Antworten und Residuen dürfen
+nicht übernommen werden. Der Schur-Residualfaktor 20 setzt weiterhin den
+gesonderten, noch offenen Tailboden 1/20 voraus.
+
+Status
+
+NEW_COMMON96_COMPARISON_POSITIVE = true
+NEW_RESIDUAL_FORM_SCALAR_SETUP_CHECKED = true
+NEW_FULL_FORMDUAL_RESIDUAL_CERTIFIED = false
+NEGATIVE_ACTUAL_SCHUR_WITNESS = false
+TAIL_COERCIVITY_CERTIFIED = false
+FULL_REMAINDER_CERTIFIED = false
+
+A8->A9 bleibt offen. GitHub wurde nicht verändert.
+
+Eingangspaket:
+Objekt-X-Direkte-Restform-und-Positiver-96er-Block-2026-10-11.zip
+SHA256 06b4cc975b8e6bd8f6088a151ea1dcaebd38862f7a50e3f2f2b22ebb05afef51
+
+Das Eingangspaket ist wegen seiner Größe nicht erneut eingebettet. Der
+beigefügte Replay erwartet genau dieses unveränderte Archiv als Argument.

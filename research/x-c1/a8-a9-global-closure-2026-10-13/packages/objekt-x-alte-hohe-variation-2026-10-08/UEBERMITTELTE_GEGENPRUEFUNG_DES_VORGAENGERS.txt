@@ -1,0 +1,167 @@
+Begrenzte Gegenprüfung — gemeinsame alte Energie und C-Quadrat
+
+Datum: 8. Oktober 2026
+Scope: Objekt-X-Gemeinsame-Energie-2026-10-08.zip sowie technische Portabilitätskorrektur des signierten C-Pakets. Keine neue Operatorintegration, keine neue Horizontrechnung.
+
+Ergebnis
+
+Der neue gemeinsame Matrixschritt ist algebraisch korrekt und die angegebenen rationalen Schlussbefunde werden durch den Standardbibliotheks-Prüfer reproduziert.
+
+Aus
+[
+L\preceq E\preceq U,\qquad X=E-L,\qquad H=U-L
+]
+folgt (0\preceq X\preceq H). Mit der z/Y-Blockzerlegung und
+[
+H_{zz}\preceq\lambda M
+]
+gilt
+[
+X_{Yz}M^{-1}X_{zY}\preceq\lambda X_{YY}.
+]
+Dies folgt aus
+[
+M^{-1/2}X_{zz}M^{-1/2}\preceq\lambda I
+]
+und der positiven Gramdarstellung von (X).
+
+Für
+[
+C_L=B-L_{zY}
+]
+wird daher die gemeinsame Größe
+[
+E_{YY}+C^*M^{-1}C,\qquad C=B-E_{zY},
+]
+nicht mehr durch zwei unabhängig maximierte Obergrenzen ersetzt.
+
+Für jedes (\alpha\ge1+\lambda) und
+[
+T_\alpha=
+\begin{pmatrix}
+-\alpha^{-1}M^{-1}C_L\
+I_8
+\end{pmatrix}
+]
+gilt
+[
+(1+\lambda)X_{YY}
+-\operatorname{sym}(C_L^*M^{-1}X_{zY})
+\preceq
+\alpha T_\alpha^*XT_\alpha
+\preceq
+\alpha T_\alpha^*HT_\alpha.
+]
+Die daraus im Paket verwendete Matrix (J_\alpha) ist damit eine gültige gemeinsame Obermatrix.
+
+Reproduzierte Schlusswerte
+
+Der schnelle Replay bestätigt 29 Paketdatei-Hashes und reproduziert semantisch exakt den gebundenen rationalen Audit:
+
+4 Fälle des optimistischen Tests mit vollständig entferntem 185D-Beitrag,
+
+4 gemeinsame U00-Fälle,
+
+128 Präzisionsvergleiche,
+
+2 Matrixrelaxations-Belegungen.
+
+Rigorose Einschließungen der größten Eigenwerte der neuen U00-Obermatrizen:
+
+gerade: (1.1090106517213856 < \lambda_{\max}(U_{00}) < 1.109010651822),
+
+ungerade: (1.1559738837755578 < \lambda_{\max}(U_{00}) < 1.155973883876).
+
+Der positive Gate (I-U_{00}\succ0) bleibt damit offen.
+
+Isolierter 185D-Schritt
+
+Die Behauptung, dass eine Verbesserung ausschließlich des gesamten positiven 185D-Beitrags in der bisherigen getrennten Majorantenfamilie nicht zum Abschluss reichen kann, ist korrekt begrenzt formuliert.
+
+Selbst bei optimistischer Ersetzung dieses gesamten Beitrags durch Null besitzt die beibehaltene Familie für alle positiven Young-Parameter feste rationale Richtungen mit Untergrenzen
+
+gerade: (>1.12550842275517),
+
+ungerade: (>1.19440075420725).
+
+Dies ist ausschließlich ein Hindernis für diese Majorantenarchitektur und keine Untergrenze für den tatsächlichen Operator.
+
+Informationsgrenze der jetzigen Matrixdaten
+
+Die expliziten Belegungen
+[
+E=L,\qquad \Delta=0
+]
+erfüllen die in diesem Schritt verwendeten Matrixbedingungen. In rationalen Richtungen liefern sie Modell-Rayleighwerte
+
+gerade (>1.06321437008422),
+
+ungerade (>1.08360917437709).
+
+Daraus folgt korrekt: Die aktuellen Bedingungen (L\preceq E\preceq U) allein können keinen uniformen U00-Abschluss unter 1 erzwingen.
+
+Diese Belegungen sind keine nachgewiesenen Realisierungen des ursprünglichen Operators und keine physischen Gegenzeugen.
+
+Technische Portabilitätskorrektur des C-Pakets
+
+Das korrigierte C-Paket besteht unter POSIX/Linux im schnellen Replay:
+
+81 Manifest-Hashes bestanden,
+
+4 rationale Schlussfälle,
+
+64 neue Präzisionsvergleiche.
+
+Die 44 als numerisch unverändert deklarierten Dateien sind byteidentisch zu den entsprechenden Dateien des ursprünglichen C-Pakets.
+
+Die Präzisionsdokumentation ist nun eindeutig: Quellintegrale 3072/4096 Bit; nachgelagerte Response-Arithmetik 1024 Bit.
+
+Nicht erneut ausgeführt
+
+Der vollständige algebraische 1024-/1536-Bit-Neulauf des gemeinsamen Energiepakets wurde in dieser Umgebung nicht erneut ausgeführt, weil python-flint==0.9.0 hier nicht installiert ist. Die gespeicherten gerichteten Ergebnisse wurden jedoch durch den unabhängigen Standardbibliotheks-/Fraction-Schlussprüfer geprüft.
+
+Die ursprünglichen A8/A9-Operatorintegrale, Formidentitäten und geerbten Majoranten wurden nicht von Null neu hergeleitet.
+
+Bewertung des nächsten Arbeitsvorschlags
+
+Der vorgeschlagene Variationsunterbeweis mit zwölf zusätzlichen alten hohen Testfunktionen je Parität ist mathematisch zielgerichtet.
+
+Für einen beliebigen Trial (Q=P+HV) gilt wegen (A\succ0)
+[
+2Z^*Q-Q^*AQ\preceq Z^A^{-1}Z=E.
+]
+Mit
+[
+K=H^(Z-AP),\qquad T=H^*AH
+]
+verbessert der Trial die bisherige Variationsuntergrenze um
+[
+K^*V+V^*K-V^*TV.
+]
+Eine exakte Lösung von (TV=K) ist dafür nicht erforderlich; ein rational festgelegtes (V) mit vollständig bezahlten Integrations- und Rundungsfehlern genügt.
+
+Dieser Versuch adressiert genau die nun bewiesene Informationslücke: Er kann (L) anheben, (H=U-L) verkleinern und damit die gemeinsam verwendete alte inverse Energie enger festlegen. Ein positiver U00-Abschluss ist dadurch jedoch nicht garantiert.
+
+Zusätzliche strukturelle Beobachtung
+
+Im gespeicherten gemeinsamen Rechenweg ist die stärkere Bedingung
+[
+M-H_{zz}\succ0
+]
+im geraden Sektor bereits exakt erfüllt (vier positive rationale LDL-Pivots); im ungeraden Sektor scheitert sie an einer kleinen negativen Richtung.
+
+Unter dieser Bedingung lässt sich die gemeinsame Zentrumgröße alternativ direkt durch einen Block-Schur-Bound der Form
+[
+U_{YY}+C_U^*(M-H_{zz})^{-1}C_U
+]
+kontrollieren. Diese Variante schließt den vollen geraden U00-Gate mit den jetzigen übrigen Fehlerhüllen noch nicht, zeigt aber, dass eine stärkere Variationsuntergrenze zusätzlich die direkte Schurstruktur verbessern kann. Für den ungeraden Fall könnte eine Verkleinerung von (H_{zz}) diese Bedingung überhaupt erst verfügbar machen.
+
+Diese Beobachtung ist ein Hinweis für die nächste Diagnose; sie ist noch kein neuer Zertifikatsweg des Pakets.
+
+Urteil
+
+Kein konkreter mathematischer Fehler im neuen gemeinsamen Energieblock gefunden.
+
+Der nächste begrenzte Versuch sollte tatsächlich zusätzliche alte Variationsinformation gewinnen, statt den isolierten 185D-Term teuer zu verfeinern. Die zwölf vorgeschlagenen hohen Testfunktionen sind hierfür ein sinnvoller erster, klar begrenzter Kandidat.
+
+U00, G01, gamma01, beta_tail, der vollständige Rest und Objekt X bleiben offen.

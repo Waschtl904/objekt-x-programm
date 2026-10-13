@@ -1,0 +1,111 @@
+{
+  "status": "PASS_FRESH_DIRECT96_REBUILD_REVIEW",
+  "source_zip_sha256": "06b4cc975b8e6bd8f6088a151ea1dcaebd38862f7a50e3f2f2b22ebb05afef51",
+  "four_direct_integrations_rerun": true,
+  "old_source_integrations_rerun": false,
+  "rational_reconstruction_rerun": true,
+  "six_external_source_hashes_match": true,
+  "file_comparisons": [
+    {
+      "file": "DIRECT_REST_EVEN_3072.json",
+      "comparison": "all fields equal except elapsed seconds",
+      "original_sha256": "b8985179549851bb910c3c423c3649f7f89c97201fd11a5ad86bbc39e565c155",
+      "fresh_sha256": "cbe7fd7983ea24282650856a34393a008aac878ad0bb469017218423c14f0e47",
+      "elapsed_seconds_original_fresh": [
+        144.5470000000205,
+        52.06227834099991
+      ]
+    },
+    {
+      "file": "DIRECT_REST_EVEN_4096.json",
+      "comparison": "all fields equal except elapsed seconds",
+      "original_sha256": "f633c56527e0b02268db4e03d05e583a10fbb1b090c35336ec760560e33fae6e",
+      "fresh_sha256": "94495ed024e33a52324e3846c3047292f4aa9f896cdc7c771bb4c2eb44d85803",
+      "elapsed_seconds_original_fresh": [
+        168.07800000021234,
+        73.89845528099977
+      ]
+    },
+    {
+      "file": "DIRECT_REST_ODD_3072.json",
+      "comparison": "all fields equal except elapsed seconds",
+      "original_sha256": "d6a744a15135937fc2cb1d7538047d621573c52479426149888660996a020b53",
+      "fresh_sha256": "b473a2b5e8e46ba76041e940bd54634f7714801e50366f1783ae60af70ffb022",
+      "elapsed_seconds_original_fresh": [
+        144.04699999978766,
+        50.26485016800143
+      ]
+    },
+    {
+      "file": "DIRECT_REST_ODD_4096.json",
+      "comparison": "all fields equal except elapsed seconds",
+      "original_sha256": "cb7cf0a9198b38da6d82d16a1dfcc4c0460791660db37169b063d27afecca00f",
+      "fresh_sha256": "6298b47505ad9c3e473a7aaed7db89ba8a6d469a32feaab3d4332239a6d1e556",
+      "elapsed_seconds_original_fresh": [
+        166.7960000000894,
+        73.75502347500151
+      ]
+    },
+    {
+      "file": "AUDIT.json",
+      "comparison": "all JSON fields equal",
+      "original_sha256": "9d9af6ab760a0377ddbf2fd995c6a6df8fc62151fec9e259033b8f9a52ce3769",
+      "fresh_sha256": "13b8473bff44ca45dd3fbadada162bf5c59e2304006018bdd1698818e791bb91"
+    },
+    {
+      "file": "REFINED_INPUT.json",
+      "comparison": "all JSON fields equal",
+      "original_sha256": "7c2a93adb187cc51f03f8083ffd82d4437d155d032da698e138787f90379614b",
+      "fresh_sha256": "d7e9de4e241d475eedf95f10400e246e1a075054fddd48943b48c22ed4ecaf96"
+    },
+    {
+      "file": "REFINED_HIGH_FLOOR.json",
+      "comparison": "all JSON fields equal",
+      "original_sha256": "23a33fa2afc580c3f9d90710e99ef0228d2f4b38d54d375c07447e4a2123e191",
+      "fresh_sha256": "23c0d8361ba07ffc8a585b8e64980f0bd6d7da2e4d08cde686d2b8edf3cbacd4"
+    },
+    {
+      "file": "REFINED_COMMON96.json",
+      "comparison": "all certified fields equal; runtime-dependent bindings excluded",
+      "original_sha256": "18a71ae90f69dc28ecc1a42b7ed865057cdd2a28986abc3a1ac06bb558e23097",
+      "fresh_sha256": "ad333333c353cc6fe51dfe5f386548fcc651f471b6b78af577a0fcec2e91505c",
+      "exploratory_float_values": []
+    },
+    {
+      "file": "FULL_DIRECT_TEST.json",
+      "comparison": "all certified fields equal; runtime-dependent bindings excluded",
+      "original_sha256": "02dda68530aea516c771f31402a49760a5c42f01cd10b03288bd668d294fafad",
+      "fresh_sha256": "8f4ea179d2420555e1159168654c51955c72999fc659879d5ec0ef480adb9f6a",
+      "exploratory_float_values": [
+        {
+          "parity": "even",
+          "original": 1.0000125400525939,
+          "fresh": 1.0000125400525937,
+          "used_in_rational_certificate": false
+        },
+        {
+          "parity": "odd",
+          "original": 1.0000017583310603,
+          "fresh": 1.0000017583310603,
+          "used_in_rational_certificate": false
+        }
+      ]
+    }
+  ],
+  "documentation_correction_old_young_parameter": {
+    "inverse_EVEN": {
+      "source_sha256": "75fff4846678bc52829279b4ff1403cd224e3325aa1f70b79111a56fe8adb4cd",
+      "field": "coupling_gram_padding",
+      "value": "1/100000000"
+    },
+    "inverse_ODD": {
+      "source_sha256": "7ca00651d2dd41df2632a72bd26c8ed0f29ec6d3fd75209b35e6ff278981f35c",
+      "field": "coupling_gram_padding",
+      "value": "1/100000000"
+    }
+  },
+  "new_young_parameter": "1/10000000000",
+  "new_full_formdual_residual_certified": false,
+  "tail_coercivity_certified": false,
+  "full_remainder_certified": false
+}

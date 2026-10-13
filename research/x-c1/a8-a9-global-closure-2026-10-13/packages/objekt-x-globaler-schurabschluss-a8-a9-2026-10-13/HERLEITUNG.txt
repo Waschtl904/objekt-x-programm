@@ -1,0 +1,238 @@
+Objekt X — vollständige Residualbilanz und bedingter Schurabschluss
+13. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Geltungsbereich und Voraussetzungen
+
+Diese Gegenprüfung verbindet die vorhandenen Zertifikate. Sie wiederholt
+die rationalen Prüfungen und prüft die analytische Zusammensetzung. Sie
+ist keine unabhängige externe mathematische Begutachtung aller Vorgänger.
+Die neuen großen Integralgrame werden hier nicht nochmals integriert.
+
+Unverändert vorausgesetzt werden die gebundenen tatsächlichen Formen,
+Domänen, Quellen, Fehlerabschätzungen und vollständigen Raumzerlegungen:
+
+(A) Der alte A8-Block ist positiv und invertierbar; U_neu majorisiert seine
+    vollständige Inversenergie, gemeinsam auf sämtlichen neuen Quellen.
+(B) Nach Abspaltung des alten Raums wird der ganze neue Anteil durch die
+    zwölf physischen Funktionen F=(z1,...,z4,Lambda Y1,...,Lambda Y8)
+    und Lambda T parametrisiert. Die Liftung und die Restbedingungen sind
+    diejenigen der gebundenen Vorgänger, keine neue endliche Projektion.
+(C) q[r]=q_b[Lambda r], q>=L>=21/5 W_X auf T. Mit eta=10^-10 und der
+    unveränderten neuen hohen Energie H_neu gilt
+      S=(1-eta)q-H_neu >= beta L,
+      beta=20209999981781/182190000000000.
+    Die Formen sind abgeschlossen auf ihren angegebenen Formdomänen;
+    alle 203 Residualfunktionale sind dort stetig.
+(D) K=K12_neu>0 ist eine Untergrenze von (D_direct-U_neu)[F,F].
+    A=(a_low,a_fin), a_fin=(D_direct-U_neu)[F,Lambda .],
+    D=diag((1-rho)I191,K). M, M_upper und die neuen Antworten sind exakt
+    dieselben wie im Antwortpaket. Die Datenbindungen werden verglichen.
+
+Die Aussagen (A)-(D) sind die bereits verwendeten Operator-, Domänen-
+und Geometrievoraussetzungen dieses Rechenzweigs. Hier wird keine von
+ihnen aus einer bloßen Dateibezeichnung oder einem true-Status abgeleitet.
+Ihre analytischen Begründungen bleiben Teil der extern zu prüfenden Kette.
+Die konkreten endlichen Zertifikate und übernommenen Fehlerpreise werden
+im vollständigen Replay nochmals rational geprüft.
+
+2. Der neue vollständige hohe Gram
+
+Bezeichne P=P_<104 die orthogonale Projektion im Schalenraum
+X=L2((a,b),2dx), a=3log(2)/2, b=log(3), und
+
+ B=(log u,log^2 u,log(1-u)), g=R_X-B C_exact,
+ U_g=g*(I-P)g, H=E_dir/10920.
+
+Der Eingangs-Replay rekonstruiert den vollständigen hohen Modellgram als
+G-V*V mit allen 104 niedrigen Projektionszeilen. Der vollständige Fehler
+der stückweisen Näherung, die erhaltenen Koeffizientenradien, der globale
+physische Modellfehler und der gerundete Logabzug werden separat bezahlt.
+Unter den gebundenen analytischen Einschließungen ergibt sich in beiden
+Paritäten
+
+                  U_g < q0 H, q0=3/10000.                 (1)
+
+Die 16 Panels überdecken das ganze Intervall. Insbesondere steht (1) für
+alle unendlich vielen Grade ab 104. Die stückweise Näherung ist keine
+endliche hohe Legendrefolge. Für den Anschluss ist nur L2 erforderlich;
+eine endliche Ableitungsenergie von g wird hier nicht vorausgesetzt.
+
+Zusätzlich wurden in dieser Gegenprüfung die 90 Cauchybausteinkontrollen,
+741 Integral-/Projektionskontrollen, die vollständige Primzellgeometrie,
+die exakte Loggruppierung und die nichtorthogonalen Radiuspreise erneut
+ausgeführt. Diese Kontrollen unterstützen die Formelprüfung; sie ersetzen
+nicht die in PROOF.txt des Eingangs hergeleiteten vollständigen Reste.
+
+3. Gewichtung und sämtliche Kreuzterme
+
+T_budget=beta(D-M_upper)>0; zur Abkürzung schreiben wir hier T_b.
+Qlog_bar ist die bereits rational geprüfte gemeinsame Obermatrix des
+gewichteten Logtails, einschließlich aller drei Logarithmen, ihrer
+Kreuzterme und ihrer Koeffizientenfehler. Es gilt
+
+ Q_log <= Qlog_bar <= c_log T_b,
+ c_log=1/500 (gerade), 1/250 (ungerade).
+
+Setze d=HarmonicNumber(104)+11/10. Wegen d_n>=d auf n>=104 gilt
+für den GANZEN gewichteten regularisierten Rest
+
+                      Q_g <= U_g/d < q0 H/d.             (2)
+
+Die vom Logreview festgelegte Zielmatrix lautet exakt
+
+ H=d theta/(1+theta)*[(1-c8)T_b-eD-(1+theta)Qlog_bar],      (3)
+ theta=21 bzw.15, c8=1/5000 bzw.13/20000,
+ e=j+10^-300.
+
+j ist der volle tatsächliche Basis84-Residualpreis. 10^-300 bezahlt
+die gesamte geometrische Momentkorrektur. c8 T_b bezahlt die acht
+Außenzeilen nach dem geprüften Wechsel von k_n zu ell_n. Der Prüfer
+rekonstruiert (3) aus ALLEN drei gespeicherten rationalen Koeffizienten;
+die Definition der Zielmatrix wird nicht stillschweigend verändert.
+
+Für jedes s>0 bezahlt Young sämtliche Log/Rest-Kreuzterme:
+
+ Q_ell,>=104 <= (1+s)Qlog_bar+(1+1/s)q0 H/d.
+
+Der vollständige globale Formdualanschluss des Außenpakets ergibt daher
+
+ R*R_L R <= Q_final,
+ Q_final=eD+c8 T_b+(1+s)Qlog_bar+(1+1/s)q0 H/d.            (4)
+
+R_L ist der Inverse der L-Form auf dem exakten T. Insbesondere wird er
+nicht durch die ungeprüfte inverse rohe Legendre-Diagonale ersetzt.
+Die vollständige Rang-eins-/Momentkorrektur steckt in dem bezahlten eD.
+
+Wir wählen s=3/8 (gerade), s=4/15 (ungerade). Aus (3), Qlog_bar>=0
+und T_b>=sigma D folgt bereits die sichere skalare Abschätzung
+
+ Q_final <= c_full T_b,
+ c_full=e/sigma+c8+(1+s)c_log
+             +(1+1/s)q0 theta/(1+theta)(1-c8).
+
+Die rationale Rechnung bestätigt
+
+ gerade:   c_full < 1/250 = 0.004,
+ ungerade: c_full < 71/10000 = 0.0071.                   (5)
+
+Zusätzlich wird die vollständige Matrix in (4) aufgebaut. Der Vergleich
+cap*T_b-Q_final besteht je Parität mit 203 positiven rationalen
+Intervall-LDL-Pivots, cap wie in (5). Das ist eine neue Matrixprüfung
+der gesamten hinreichenden Formdualmajorante. Sie betrifft alle 203
+Kraftkoordinaten gleichzeitig und enthält auch die zwölf endlichen
+physischen Kreuzkoordinaten.
+
+4. Vollständiger Invers- und Schuranschluss
+
+Für die festgelegten Antworten Z_app=JX und R=A*-S Z_app gilt exakt
+
+ A S^-1 A*=M+R*S^-1R,
+ R*S^-1R<=beta^-1 R*R_LR.
+
+Mit (4)-(5) folgt auf dem ganzen unendlichen Rest
+
+ A S^-1 A* <= M_upper+cap(D-M_upper).
+
+Der gebundene und hier nochmals direkt rational geprüfte Matrixtest
+M_upper<uD mit
+
+ u_even=999997138063/10^12,
+ u_odd =999982753528/10^12
+
+ergibt
+
+ A S^-1 A* <= (1-kappa)D,
+ kappa=(1-cap)(1-u)>0.                                  (6)
+
+Da S positiv und die Funktionale formstetig sind, ist
+D^-1/2 A S^-1/2 beschränkt. (6) ist äquivalent zu
+
+                A*D^-1 A <= (1-kappa) S                 (7)
+
+als Formungleichung. Dieser Schritt kontrolliert den vollständigen
+Operator; er beruht nicht auf einem endlichen Spektrumstest.
+
+Schreibe mathcal B=D_direct-U_neu auf F+Lambda T. Ihr endlicher Block
+ist K_actual>=K>0. Ihr Restblock ist q-H_neu-a_low*a_low/(1-rho),
+ihr gemischter Block a_fin. Der Schurrest nach Abspaltung von F erfüllt
+
+ Schur_F(mathcal B)
+   >= q-H_neu-A*D^-1 A
+   = eta q+S-A*D^-1 A
+   >= eta q+kappa S
+   >= (eta+kappa beta)L
+   >= (21/5)(eta+kappa beta) W_X >0.                    (8)
+
+Die Richtung K_actual^-1<=K^-1 ist hier wesentlich. K12_alt wird
+nicht als neue tatsächliche Zwölfer-Untergrenze eingesetzt.
+
+Damit ist mathcal B auf dem GANZEN F+Lambda T positiv. Explizit gilt
+die quadratische Ergänzung
+
+ mathcal B[Fz+Lambda r]
+  =(z+K_actual^-1 a_fin(r))*K_actual
+     (z+K_actual^-1 a_fin(r)) + Schur_F(mathcal B)[r].
+
+Die tatsächliche alte-eliminierte Form ist >=mathcal B, weil U_neu
+die vollständige alte Inversenergie gemeinsam majorisiert. Zusammen
+mit dem positiven alten Block und der vollständigen Zerlegung (B)
+folgt die Positivität auf dem gesamten neuen A9-Raum. Unter (A)-(D)
+ist damit der Positivitätsübergang A8->A9 geschlossen.
+
+Als einfache, nach unten gerundete Folgen von (8) erhalten wir auf T
+
+ gerade:   Schur_F(mathcal B) > 1.328*10^-6 W_X,
+ ungerade: Schur_F(mathcal B) > 7.978*10^-6 W_X.           (9)
+
+Dies sind globale Untergrenzen des hier genau definierten reduzierten
+Vergleichs, keine bloßen 96er-Koordinatenreserven. Die tatsächliche
+entsprechend reduzierte Form dominiert diesen Vergleich. Die Zahlen
+sind konservative Folgen der vorhandenen skalaren M-Schranken und
+behaupten keine optimalen Eigenwerte oder optimale Koerzivitätskonstante.
+
+5. Warum der gesonderte Tailboden 1/20 weiterhin offen bleibt
+
+Der Beweis verwendet S>=beta L vor Abzug der 203 Verluste und danach
+die positive Lücke (6). Er verwendet an keiner Stelle eine inverse
+Schranke mit Faktor 20. Weder die endliche 96er-Metrik noch T_b noch H
+ist die Zielmetrik des früheren Abdeckungs-/Tailtests.
+
+(9) liefert einen positiven Boden in W_X für den angegebenen Schurrest.
+Es liefert den verlangten gesonderten Boden 1/20 nicht. Daraus folgt
+auch keine Widerlegung von 1/20. Für diese stärkere Aussage müssen
+die ursprüngliche Tailform, ihr Komplement und ihre Normierung wieder
+explizit gebunden und die entsprechende verschobene Form geprüft werden.
+Die anderen 203 Abdeckungsfunktionale dürfen hierfür nicht durch A
+ersetzt werden. Eine Prüfung auf einem neu gewählten S-orthogonalen
+Komplement würde ebenfalls nicht ohne Vergleich den alten Tailtest lösen.
+
+Der hier geschlossene direkte Positivitätsweg benötigt diesen gesonderten
+Zwischenschritt nicht. Auch nach (8) bleiben sämtliche unbeschränkten
+Horizon-Übergänge, die vollständige Konstruktion von Objekt X und RH offen.
+
+6. Nachrechnung, Portabilität und Bindung
+
+reproduce.py entpackt vier unveränderte Eingangsarchive frisch. Es führt
+den globalen Gram-Replay, den Antwort-Replay einschließlich des positiven
+Common96-Vorgängers, die vollständige Außenrest-Geometrie und das gemeinsame
+Log-/Zielpaket aus. Danach baut assemble.py (3)-(8) rational neu auf.
+
+Der ältere Antwort-Replay vergleicht eine neu geschriebene JSON-Datei
+byteweise mit einer Windows-Datei. Die separate Ausführung passt genau
+diesen Vergleich im Arbeitsspeicher an: CRLF wird zu LF normalisiert.
+Alle anderen Bytes und sämtliche mathematischen Felder müssen identisch
+sein. Manifest, Originalcode und Originalarchive bleiben unverändert.
+Die ursprünglichen Bytes der temporären Prüfdatei werden wiederhergestellt.
+
+Die im neuen Grampaket verwendeten Antwort-/Log-/Common96-Feldauszüge
+werden mit den vollständigen gebundenen Vorgängern rekursiv verglichen.
+Die Herkunfts-SHA256-Werte werden zusätzlich geprüft. Unterschiedliche
+Feldauswahl verschiedener Snapshots wird nicht mit einer Datenänderung
+verwechselt.
+
+Es werden keine neuen vollständigen globalen Integrationen behauptet.
+Die mathematische Prüfung verwendet deren gerichtete Einschließungen
+und die gelesenen vollständigen analytischen Fehlerherleitungen. Ein
+optionaler unabhängiger Neuaufbau ist weiterhin im unveränderten
+Grampaket enthalten. Eine externe Prüfung dieser gesamten Beweiskette
+bleibt offen; GitHub wurde nicht verändert.

@@ -1,0 +1,124 @@
+Objekt X — Basis84 als konkreter Ansatz für den gemeinsamen Resttest
+10. Oktober 2026 · konditionaler Anschluss / EXTERNAL_REVIEW_OPEN
+
+1. Ausgangspunkt
+
+Die vorgelegte Basis J wird unverändert übernommen. Sie liegt exakt in
+T=R_12. Die 65 lokalen Funktionale sind bereits hinreichend genau bezahlt.
+Die übrigen Kraftabbildungen bleiben offen. Eine automatische
+Basisvergrößerung ist aus den bisherigen Obergrenzen nicht begründet.
+
+Der vorbereitete Energiegram E84=L[J,J] steht in den zwei beigefügten
+L_ENERGY_84-Dateien als rationale Mittelpunktmatrix plus voller
+Löwner-Radius 10^-58. Die Basis selbst und ihre exakten Definitionen
+stehen im gebundenen Originalpaket.
+
+2. Nächster gemeinsamer Rechenlauf
+
+Für die gemeinsame Verlustbilanz verwenden wir ausdrücklich deren
+A=A0, D0, H und S=S_eta=(1-eta)L-H; eta=10^-10.
+Zuerst werden benötigt:
+
+  H84 = H[J,J]                         (84x84),
+  C84 = A0 J                           (203x84).
+
+Dann ist B84=(1-eta)E84-H84. Die geerbte globale hohe Schranke sichert
+B84 >=(0,11-eta)E84>0. Damit darf dieser Hilfsblock invertiert werden,
+ohne einen noch nicht bewiesenen Boden für den tatsächlichen tau-Tail
+zu verwenden. Unter diesen Voraussetzungen ist cond_2(B84)<13,51.
+
+Die Integration muss die vollständige hohe alte Antwort und dieselben
+gemeinsamen Quellfeatures sowie die signierte Residualisierung erhalten.
+Eine endliche Liste hoher Moden ersetzt H84 nicht.
+
+Berechne einen numerischen Galerkinvorschlag B84 X=C84* und lege danach
+eine feste rationale 84x203-Matrix X fest. Die exakten Näherungsantworten
+heißen Z=J X. Eine gerundete numerische Lösung muss nicht die exakte
+Galerkinlösung sein; ihr Fehler wird im folgenden vollständigen Residuum
+mitbezahlt.
+
+3. Zertifikat, das anschließend tatsächlich benötigt wird
+
+Im vollständigen L-Formraum V auf T sei mathcal S:V->V' der Formoperator
+von S, R_L:V'->V die eingeschränkte L-Inverse mit allen Momentbedingungen.
+Setze
+
+  R = A0* - mathcal S J X,
+  M = C84 X + X* C84* - X* B84 X,
+  Q_R = R* R_L R.
+
+Die Identität aus dem vorigen Residualanschluss lautet
+
+  G_eta=A0 S^-1 A0* = M + R* S^-1 R
+       <= M + [10000000000/1099999999] Q_R.
+
+Für sachlich bewiesene volle Löwner-Obermatrizen U_M>=M und U_R>=Q_R
+ist deshalb der rationale Test
+
+  D0-U_M-[10000000000/1099999999]U_R >=0
+
+ausreichend. Die Quellenmodellfehler der gemeinsamen Verlustbilanz
+werden anschließend mit ihrem eigenen geerbten Budget bezahlt.
+
+M und Q_R sind gemeinsam aus denselben tatsächlichen Kraftdaten zu
+bilden. Ein innerhalb der 84 Galerkinrichtungen kleines Residuum ist
+kein vollständiger Fehlernachweis. Alle außerhalb des Ansatzraums
+liegenden Operatoranteile müssen in Q_R enthalten sein.
+
+Der Faktor etwa 9,09 bezieht sich auf den dualen L-Residualgram. Er ist
+nicht der frühere Faktor 20 für einen WX-L2-Residualgram des tatsächlichen
+tau-Tails. Keine dieser Normen darf stillschweigend durch die andere
+ersetzt werden.
+
+Ein sinnvoller Ablauf ist zunächst ein explorativer endlicher Lauf von
+H84,C84,X und M. Danach ist zu bestimmen, welche volle Fehlerobergrenze
+in D0-Metrik für den Abschluss benötigt wird. Ein solcher Mittelpunktlauf
+ist noch kein Zertifikat. Scheitert bereits eine bewiesene notwendige
+Untergrenze, ist das ein Befund über die ausreichende Verluststrategie;
+die ursprüngliche Form ist damit noch nicht widerlegt.
+
+4. Präziser Restauftrag, falls der Abdeckungsweg weiterverfolgt wird
+
+Hier steht ein ANDERER Operator L_rem mit den tatsächlichen
+F^-1/2-v- und S12^-1/2-C12-Zeilen. Setze
+
+  G_rem=L_rem L_rem*, B_rem=L_rem J, W=J*J.
+
+Der vollständige Gram des optimalen orthogonalen Repräsentantenrests ist
+
+  G_perp=G_rem-B_rem W^-1 B_rem*
+        =L_rem(I-Pi_J)L_rem*.
+
+Dieser gemeinsame Ausdruck ist das passende Ziel für die Frage, ob die
+84 Funktionen genügen. Der bisherige Nullfit mit einer globalen Norm
+von L_rem unterscheidet zwischen erfasstem Anteil und Rest überhaupt
+nicht. Ein großer solcher Oberwert entscheidet die Abdeckungsfrage nicht.
+
+Es ist eine volle Löwner-Obermatrix für G_perp oder für einen konkreten
+bezahlten rationalen Fit erforderlich. Insbesondere darf man keine
+unabhängig aufgerundeten Matrizen einfach mit negativem Vorzeichen
+voneinander abziehen und das Ergebnis als Obergrenze ausgeben.
+
+Für E=[E_65,E_rem], mit E_65*E_65<=aI und E_rem*E_rem<=bI, gilt übrigens
+auch ohne verschwindende Kreuzterme
+
+  ||E||² <= a+b,
+
+denn EE*=E_65 E_65*+E_rem E_rem* <=(a+b)I im Funktionsraum. Daher reicht
+a+b<=1/20; bei a=10^-70 kann fast das ganze Budget dem verbleibenden
+Block zugeteilt werden. Das ist keine neue Abschätzung für b. Die bisherige
+Obermatrix 2 diag(aI,bI) bleibt korrekt, ist lediglich konservativer.
+
+Die punktweise Addition dieser Grenzen nutzt horizontal getrennte
+Spaltengruppen. Sie rechtfertigt NICHT die unbezahlte Addition von
+Fehlerquadraten bei einer Summe von Fehleroperatoren auf derselben
+Spaltengruppe.
+
+5. Status bis zur vollständigen Prüfung
+
+Die zwei Wege sind alternative ausreichende Kriterien auf demselben T.
+Die jetzige Basis kann in beiden dienen. Ihre 203 Kraftzeilen sind nicht
+identisch. E84 ist vorbereitet; H84,C84 und die vollen Fehlergrame fehlen.
+
+FULL_REMAINDER_CERTIFIED=false. Der anschließende tatsächliche
+Schurtest mit Faktor 20 bleibt bis zu seinem eigenen Tailboden gesperrt.

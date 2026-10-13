@@ -1,0 +1,233 @@
+Objekt X — Gegenprüfung des globalen Modells und Rückbindung des Kraftfehlers
+12. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Geltung
+
+Alle Aussagen über die tatsächlichen Operatoren verwenden weiterhin die
+gebundenen analytischen Kern-, Domänen- und Quellenvoraussetzungen. Die
+neuen algebraischen Anschlüsse werden hier hergeleitet. Ein abgeschlossener
+globaler Integralnachweis wird NICHT behauptet.
+
+1. Was tatsächlich reproduziert wurde
+
+Das Eingangspaket mit SHA256
+86e510b6d68f5b70345f7ce710491fd09e7d8818cff3be6565fd8254d16581e3
+wurde unverändert entpackt. Sein rationaler Replay besteht. Zusätzlich
+wurden beide vollständigen Funktionsmodelle hier bei 4096 Bit frisch
+aufgebaut. Alle 1218 gespeicherten Punktwertintervalle überlappen; die
+376 Cauchy-Kontrollen und die Logkoeffizientenanschlüsse bestehen.
+
+Zehn verfügbare vollständige Vorgängerdateien wurden gegen die verwendeten
+Auszüge verglichen. Sämtliche behaltenen JSON-Felder sind identisch.
+SNAPSHOT_AUDIT.json unterscheidet diesen Feldvergleich vom Bytehashvergleich.
+Nicht vorhandene ältere Integrationen wurden dabei nicht neu ausgeführt.
+
+Die glatte Moment- und T-Projektionskorrektur ist bedingt weiterhin durch
+10^-300 in der D-dualen X-Norm bezahlt. Sie ist kein Fehlerpreis für die
+übrigen physikalischen Modellierungen.
+
+2. Die exakte endliche Projektion ist kein zwingender erster Rechenschritt
+
+P bezeichnet die X-orthogonale Projektion auf alle Polynome bis Grad 103.
+Setze fhat=Rhat0-B C0. Für JEDE feste polynomiale 203-spaltige Funktion
+p mit Grad <=103 gilt als vollständige Operator-Gram-Ungleichung
+
+ Uhat=fhat*(I-P)fhat <= (fhat-p)*(fhat-p).                 (A)
+
+Denn fhat-p=(I-P)fhat+(P fhat-p) ist eine orthogonale Zerlegung im
+Ausgaberaum X. Dies gilt für alle Eingaberichtungen gleichzeitig. Man darf
+p daher numerisch vorschlagen und danach als rationale Funktion fixieren.
+Eine genaue Projektion kann weiterhin die schärfste Wahl sein; sie ist
+aber keine logische Voraussetzung für einen oberen Gramnachweis.
+
+Auch bei (A) muss das Integral auf der GANZEN Schale einschließlich der
+beiden Randstücke eingeschlossen werden. Aus Quadraturwerten allein folgt
+(A) mit einer numerisch eingesetzten rechten Matrix noch nicht.
+
+3. Zwei einfache volle Operatorgrenzen für den Fehleranschluss
+
+K sei der rohe physische Kern-Schalen-Block Q_b(1_core .)|shell. Alle
+L2-Normen benutzen dieselbe Paritätsnorm 2 dx. Es gilt ||K||<10.
+
+Beweis: Der singuläre Selbstanteil ist nach s=x-a, t=a-y der Carleman-
+Kernel 1/[2(s+t)]. Der Schurtest mit Gewicht s^-1/2 ergibt pi/2<2,
+weil integral_0^infty dt/[(s+t)sqrt(t)]=pi/sqrt(s).
+Der Spiegelanteil 1/[2(x+y)] kostet höchstens sqrt(a h)/(2a)<1/8.
+Für den regulären Gamma-Kern bestätigt der rationale Prüfer
+
+ sum_k |gamma160_k| (11/10)^k + eps160 <1.
+
+Beide regulären Kernanteile kosten deshalb zusammen höchstens
+2 sqrt(a h)<1. Die sechs verschobenen Teilisometrien kosten zusammen
+sum_(q=2,3,4,5,7,8) log(p(q))/sqrt(q)<4. Dies ergibt bereits <8;
+die großzügigere Grenze 10 wird festgehalten. Es gibt im offenen
+Kern-Schalen-Block keine weiteren Primverschiebungen. Die Identitäten
+und Normierungen des tatsächlichen Kerns bleiben geerbte Eingaben.
+
+Ferner gilt für die vollständige direkte Schalenwirkung
+
+ ||(Q_b Lambda J)|shell||_(ell2^84 -> X) <300.            (B)
+
+Für ||w||=1 ist ||Jw||_X<sqrt(2), der Grad ist <=95 und
+||Jw||_infty <=96/sqrt(h). Im lokalen t=(2x-a-b)/h ist der harmonische
+Diagonalanteil höchstens H95 sqrt(2)<9, der konstante Anteil höchstens
+3 sqrt(2)<5. Aus
+
+ |log(1-t^2)| <= -log(u)-log(1-u), u=(t+1)/2,
+ ||-log(u)-log(1-u)||_L2(0,1) <=2 sqrt(2)
+
+folgt für den Potentialanteil -(1/2)log(1-t^2)Jw die volle Normgrenze
+192. Der geerbte beschränkte Nichtpolzusatz und der glatte singuläre
+Spiegelanteil kosten zusammen <27. Die Kernmomentkorrektur hat Kernnorm
+<=sqrt(2 nu/mu)<3/2 und kostet über K daher <15. Insgesamt ist die
+Summe <248<300. Kein hoher Legendreabbruch tritt in (B) auf.
+
+Der tatsächliche hohe Quellblock hJ hat HS-Norm <13. Der Prüfer zahlt
+hier die komplette übernommene Quellabweichung zusätzlich zur Spur der
+neuen H84-Matrix. Für die rohe Schalenwirkung S0 J folgt daraus
+
+ S0 J=(1-eta)(Q_b Lambda J)|shell - K hJ/delta,
+ ||S0 J|| <=300+10 ||hJ||/delta <400.                    (C)
+
+S0 ist hier die rohe Darstellung von S vor dem glatten Momentadjunkten
+und der T-Projektion. Es wird keine Normschranke für das ganze unbeschränkte
+S auf X behauptet, sondern nur für dessen 84 feste Antwortspalten.
+
+4. Rückbindung des Fehlers der eingefrorenen zwölf Kraftspalten
+
+Schreibe ell für den tatsächlichen 191x12-Block low_F und ell0 für den
+festen rationalen Mittelpunktblock des neuen Modells. V* ist der
+tatsächliche alte niedrige Antwortblock. Setze A_L=K V* und X_L gleich
+den ersten 191 Spalten von Xresp. Die rohe Residualidentität lautet
+
+ R0_L = A_L-S0 J X_L.                                   (D)
+
+R0^f entsteht aus dem tatsächlichen R0 allein durch Ersetzen von ell
+durch ell0. Alle übrigen Operatoren und Funktionen bleiben in R0^f
+tatsächlich. Damit
+
+ R0-R0^f = -A_L (0,(ell-ell0)/(1-rho)).                  (E)
+
+Die neue Größe d0 ist der noch zu beweisende unabhängige Fehler
+
+ d0 >= ||(I-P)(R0^f-Rhat0) D^-1/2||.                     (F)
+
+Er umfasst also weiterhin Gamma-/Quellen-/Projektionsmodellfehler und
+die übrigen Rundungen. Er umfasst nicht nochmals den in (E) isolierten
+Kraftfehler. Weder (F) noch der globale Modellgram werden hier als
+erfüllt deklariert.
+
+Der bestehende tatsächliche Featurefehler und die zusätzlichen Radien
+beim Einfrieren der Intervalle liefern
+
+ e >= ||(ell-ell0) K12_new^-1/2||/sqrt(1-rho),
+
+ e_even <4.351e-13, e_odd <8.373e-15.
+
+Für x>=||Xresp D^-1/2||_HS, m>=||(I-P)Rhat0 D^-1/2|| und
+dphys=||(I-P)(R0-Rhat0)D^-1/2|| ergibt (D)-(E)
+
+ dphys <= d0+e(m+dphys+400 x).
+
+Da e<1, folgt die vollständige bedingte Schranke
+
+ dphys <= [d0+e(m+400 x)]/(1-e).                         (G)
+
+Die Faktoren sqrt(1-rho) sind entscheidend: Der erste 191er-Block von D
+ist (1-rho)I. Deshalb wird der erste Term genau mit e bezahlt, nicht
+mit einer zusätzlichen großen Norm des alten inversen Blocks.
+
+5. Konkrete rationale Konstanten für (G)
+
+Das gemeinsame Ziel bleibt H=E_dir/10920 und Uhat <=(999/1000)H.
+Unter DIESEM noch offenen Gramtest gilt
+
+ m <= sqrt((999/1000) tr(D^-1 H))
+       +sqrt(tr(D^-1 C0* G104_upper C0)) <20.             (H)
+
+Die positiven Zielmatrizen sind die unveränderten zuvor zertifizierten
+Matrizen. Der neue Prüfer berechnet die beiden Spuren aus ihren festen
+Faktoren erneut. Die numerischen Zwischenwerte sind ungefähr
+
+                  gerade        ungerade
+ tr(D^-1 H)       134.337745     132.034958
+ Logmodellspur      0.00237635     0.00348459
+ rechte Seite (H)  11.633368      11.543931.
+
+Die vollständigen rationalen Werte stehen in BOOTSTRAP_AUDIT.json.
+Mit m=20, der Schranke 400 aus (C), dem vollen X-Normpreis und der
+zusätzlichen glatten Korrektur 10^-300 genügen in (F)
+
+ gerade:   d0 <=0.000000676676334020,
+ ungerade: d0 <=0.000001628857838363.                     (I)
+
+Dann liegen die gesamten Modellfehler innerhalb der bereits gebundenen
+L2-Fehlerbudgets 0.000000676796364171 bzw. 0.000001628860045447. Der
+Fehler des gerundeten Logabzugs bleibt im bisherigen Anschluss bezahlt.
+(I) ist ein konkretes Ziel für einen noch fehlenden Fehlernachweis, kein
+bereits gemessener kleiner Modellfehler.
+
+6. Ein isolierter Gamma-Anteil
+
+Unter dem identischen rohen niedrigen Projektor ist der Ersatz Q_a durch
+das alte Gamma160-Modell auf Phi q ein beschränkter Fehler. Für die
+bereits gebundene Norm ||Phi q D^-1/2|| <=qcap gilt
+
+ ||K(I-Praw)(Q_a-Q_a,Gamma160)Phi q D^-1/2||/delta
+ <=30 eps160 qcap/delta.
+
+Mit qcap=2*10^14 bzw. 10^13 sind dies <5.327e-14 bzw. <2.664e-15.
+Dies ist NUR der isolierte Gammaanteil bei identischem Projektor. Die
+Differenz zwischen tatsächlicher Hochprojektion und gespeichertem rohem
+Abzug, weitere Quellenfehler und der äußere Kernelmodellfehler sind damit
+nicht automatisch bezahlt. Diese Grenze wird nicht als Beweis von (F)
+ausgegeben.
+
+7. Numerische Integrationsdiagnose und ihre klare Grenze
+
+probe_global_gram.py setzt vor der Auswertung die Polynommatrizen mit den
+203 Kraftkoordinaten zusammen und integriert die regularisierte rohe
+Modellfunktion mit Gauß-Legendre-Quadraturen der Ordnungen 128 und 256.
+Die Auswertung erfolgt mit Arb; 1024 Bit wurden wegen zu breiter Intervalle
+verworfen, 2048 Bit werden für die neue Punktrechnung benutzt. Der Aufbau
+der Funktionsmatrizen bleibt bei 3072 Bit. Die schnellere algebraische
+Auswertung wird an den vorhandenen drei Punkten je Parität abgeglichen.
+
+Alle Werte werden zuerst mit einer bei hoher Präzision berechneten
+D-Choleskytransformation normiert. Die Gramrechnung verwendet die
+Differenz zur vorgeschlagenen Grad-103-Approximation und bildet erst dann
+die Quadrate. Das vermeidet eine große numerische Gramdifferenz. Es ersetzt
+keine analytische Einschließung der Quadraturfehler oder der Randstücke.
+
+Die gesonderte DIAGNOSTIC_SUMMARY.json enthält ausschließlich numerische
+Orientierungswerte. Sie ist kein oberer Residualgram, kein neuer Tailboden
+und kein Positivitätszertifikat. Selbst übereinstimmende Quadraturordnungen
+dürften dafür nicht genügen.
+
+Tatsächlich liegen die größten numerischen Eigenwerte relativ zu H bei
+
+                128 Knoten        256 Knoten
+ gerade         0.00005707446      0.00019377068
+ ungerade       0.00003963488      0.00012757385.
+
+Die Zunahme um mehr als Faktor drei zeigt, dass diese beiden Läufe keine
+stabile numerische Integration belegen. Insbesondere darf die scheinbar
+große Reserve nicht als bezahltes Restbudget verbucht werden.
+
+data/POLYNOMIAL_CANDIDATES.json fixiert die 256er-Vorschläge durch exakte
+dyadische rationale Koeffizienten. Ihre genaue Bedeutung ist:
+
+ W=diag((1-rho)^(-1/2)I191, L12^(-T)), K12_new=L12 L12^T,
+ ftilde(u)=sqrt(2h) [Rhat0(a+h u)-B(a+h u) C0] W,
+ ptilde(u)=sum_(n=0)^103 sqrt(2n+1) P_n(2u-1) a_n.
+
+Die gespeicherten a_n sind feste rationale 1x203-Zeilen. Die dazugehörige
+physische Funktion p ist polynomial vom Grad <=103. Ihr vollständiger
+Fehlergram in den normierten Koordinaten ist gegen W* H W zu prüfen.
+Das Fixieren der Vorschläge behauptet keine Approximationsgüte. Die
+endgültige rationale Zertifizierung kann diese Vorschläge unmittelbar
+verwenden oder durch bessere ersetzen.
+
+Offen bleiben ein vollständiger Obergram für (A) bzw. Uhat und die
+unabhängige Modellabweichung (F). A8->A9 und der Tailboden 1/20 bleiben
+unbewiesen; E_dir wurde nicht geändert. GitHub wurde nicht verändert.

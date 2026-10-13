@@ -1,0 +1,80 @@
+Objekt X — unabhängige Außenresidualprüfung und erster voller Randtail
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Das eingesandte Paket ist rational reproduziert. Seine 1344 hohen und
+direkten J84-K8-Kreuze je Parität stimmen mit der getrennten eigenen
+Rechnung überein: alle 2688 verglichenen Intervalle überlappen.
+Der vollständige Momentpreis 10^-300 D, die Basispreise und die
+Acht-Zeilen-Budgets sind unter den geerbten Voraussetzungen bestätigt.
+
+Ein zusätzlicher Befund betrifft den tatsächlichen unendlichen Rest:
+Die neuen Residuen besitzen am äußeren Schalenrand einen explizit
+berechenbaren, nichtverschwindenden logarithmischen Koeffizienten.
+Alle 203 Koeffizienten wurden neu ausgewertet und rational gegengeprüft.
+
+Dieser Befund hat zwei Folgen:
+
+1. Die unbereinigten Residuen haben keine endliche gewichtete
+   Ableitungsenergie. Eine darauf gestützte direkte Abschätzung für
+   alle Grade ab 104 wäre ohne Abspaltung der Randterme falsch.
+
+2. Die vollständige unendliche Legendre-Summe des ISOLIERTEN äußeren
+   Logarithmusterms kann dagegen analytisch eingeschlossen werden.
+   Ihre gewichtete Gram-Matrix liegt unter
+
+      gerade:   0.070 % der richtungsabhängigen Budgetmatrix,
+      ungerade: 0.080 % der richtungsabhängigen Budgetmatrix.
+
+   Diese Aussage umfasst alle Grade ab 104. Sie wird durch je 204
+   positive rationale LDL-Pivots bestätigt. Sie ist KEINE obere
+   Schranke für den ganzen Residualtail; dessen übrige Anteile und
+   die Kreuzterme sind weiterhin zu bezahlen.
+
+Für einen konkreten weiteren globalen Ansatz ist außerdem der vollständige
+3x3-Tailgram der Funktionen log(u), log^2(u), log(1-u) ab Grad 104
+eingeschlossen. Er entsteht aus vollständigen Integralen mit bewiesenen
+Restgrenzen, nicht aus einem Abbruch der unendlichen Koeffizientenfolge.
+208 zusätzliche rationale Polynom-/Logmomentidentitäten bestehen.
+
+ENDPOINT_PROOF.txt leitet die Randstruktur aus der tatsächlichen
+Residuenformel her. LOG_TAIL_METHOD.txt gibt einen hinreichenden
+Matrixtest nach gemeinsamer Abspaltung der Randterme. Dabei bleiben
+noch zwei innere Randvektoren und der vollständige gewichtete
+Ableitungsgram des regularisierten Restes zu berechnen und einzuschließen.
+Die Existenz eines solchen regulären Anteils liefert noch keine
+ausreichende quantitative Normschranke für ihn.
+
+Was tatsächlich ausgeführt wurde
+
+- Portabler rationaler Replay des eingesandten Außenresidualpakets.
+- Vergleich mit den unabhängig entstandenen eigenen hohen und direkten
+  Kreuzintegralen: 2688 überlappende Eintragsintervalle.
+- Neue Auswertung aller 406 äußeren Logkoeffizienten beider Paritäten
+  aus den exakten Antworten und gebundenen Basisintervallen.
+- Getrennter rein rationaler Neuaufbau dieser Koeffizienten, einschließlich
+  der Mellin- und Endpunktnormierungen; je 204 positive Budgetpivots.
+- Vollständiger rationaler Logmodell-Tailgram, positive Gramprüfung,
+  208 unabhängige exakte Polynom-/Logmomentkontrollen.
+
+Die vier Kreuzintegrationen des Eingangs wurden nicht erneut ausgeführt;
+sie wurden gegen die bereits unabhängig ausgeführten eigenen Integrationen
+verglichen. Die geerbten analytischen Operator- und Domänenvoraussetzungen
+bleiben Voraussetzungen. Die neuen Randformeln sind AUTHOR_DERIVED;
+eine externe mathematische Begutachtung steht weiterhin aus.
+
+Status
+
+INCOMING_COMPOSED_RESIDUAL_REPLAY_PASSED = true
+INDEPENDENT_CROSS_INTEGRALS_AGREE = true
+FULL_MOMENT_PRICE_1E_MINUS_300_CONFIRMED = true
+ACTUAL_OUTER_LOG_COEFFICIENTS_ENCLOSED = true
+ISOLATED_OUTER_LOG_INFINITE_TAIL_ENCLOSED = true
+FULL_THREE_LOG_TEMPLATE_TAIL_GRAM_ENCLOSED = true
+INNER_LOG_COEFFICIENTS_COMPUTED = false
+FULL_REGULARIZED_DERIVATIVE_GRAM_COMPUTED = false
+FULL_RESIDUAL_TAIL_FROM_104_CERTIFIED = false
+TAIL_COERCIVITY_CERTIFIED = false
+FULL_REMAINDER_CERTIFIED = false
+
+A8->A9 und der Tailboden 1/20 bleiben unbewiesen. Keine negative
+tatsächliche Schurform wurde nachgewiesen. GitHub wurde nicht verändert.

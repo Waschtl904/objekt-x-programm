@@ -1,0 +1,208 @@
+Objekt X — Prüfung der Richtungsbrücke und zusätzlicher Konstantentest
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Die neue richtungsabhängige Brücke ist unter den gebundenen analytischen
+Voraussetzungen bestätigt. Bestätigt ist auch der stärkere Ausschluss:
+Eine Verbesserung allein des endlichen Zwölferblocks kann den festgelegten
+gemeinsamen Vergleich mit unverändertem U_op und L_+ nicht positiv machen.
+
+Neu wurde geprüft: Die Gegenzeugen bleiben sogar dann negativ, wenn
+der gesamte eta-Abzug entfällt und der vollständige fallengelassene
+Konstantenunterschied optimistisch zusätzlich gutgeschrieben wird.
+Damit reichen weder die eta-Reserve noch eine reine Konstantenkorrektur.
+
+1. Tatsächlich ausgeführte Reproduktion
+
+Das eingegangene Paket wurde aus der gespeicherten Kopie geladen.
+SHA256:
+  4faa7004a0622b7434ad0baa35c15f53a165db8d758091bd1f1aa682bb20275d
+
+Der unveränderte rationale Paket-Replay besteht mit allen 23
+Manifestbindungen. Seine AUDIT.json wird inhaltlich identisch reproduziert.
+
+Alle zehn gebundenen Datenquellen des Auszugs wurden gegen ihre Dateien
+im Vorgänger geprüft. AUDIT_INPUT.json wurde aus diesen Quellen neu
+erzeugt und stimmt vollständig mit der Übergabe überein.
+
+Alle vier neuen Integrationen wurden hier ausgeführt:
+  gerade und ungerade, jeweils 3072 und 4096 Bit.
+Sämtliche Felder außer seconds stimmen mit der Übergabe überein.
+Die Kernelmatrix auf Y bleibt dabei, wie im Eingang beschrieben, eine
+geerbte gebundene Eingabe. Ihre Integration wurde nicht erneut durchgeführt.
+
+Beide Matrixrechnungen wurden erneut ausgeführt. Alle Felder der Dateien
+DIRECTIONAL_GATE.json und OPTIMISTIC_OBSTRUCTION.json stimmen überein,
+abgesehen von den Dateiprüfsummen der frischen Integrationen, deren
+Laufzeitfelder sich geändert haben. Die anschließende rationale Prüfung
+liefert identisch dieselben Auditwerte.
+
+Dies reproduziert den eingegangenen Algorithmus. Zusätzlich wurde ein
+eigener, ausschließlich rationaler Prüfer für die Gegenrichtungen und
+die unten beschriebenen Erweiterungen geschrieben. Eine externe
+mathematische Begutachtung wird damit nicht beansprucht.
+
+2. Verbesserte Brücke und weiterhin negatives notwendiges Gate
+
+Mit vollständiger vorzeichenbehafteter Momentkorrektur und fast vollem
+Viererblock sind die größten verallgemeinerten Eigenwerte eingeschlossen:
+
+  gerade:   1,030538 < lambda_max <= 1,030543;
+  ungerade: 1,008785 < lambda_max <= 1,008790.
+
+Damit bleibt die erforderliche Schranke lambda_max<=1 verletzt.
+
+Das Vorzeichen der Momentkorrektur folgt direkt aus der Liftung.
+Schreibe Lambda Y_i=Y_i,shell-lambda_i m_core/mu und
+M_i=q_b(m_core,Lambda Y_i). Dann ist
+
+  q_b(m_core,Y_i,shell)=M_i+lambda_i Qmm/mu.
+
+Einsetzen in die bilineare Entwicklung ergibt
+
+  D_Y,ij = D_shell,ij
+           -(lambda_i M_j+M_i lambda_j)/mu
+           -lambda_i lambda_j Qmm/mu^2.
+
+Das negative letzte Vorzeichen ist somit korrekt. Der eigene Prüfer
+bestätigt die Formel zusätzlich in 64 rationalen Intervallvergleichen
+je Parität. Der analytische Eintragsfehler 10^-25 wird zusätzlich bezahlt;
+er stammt nicht aus der Präzisionsübereinstimmung.
+
+Die neue Brücke bindet die richtige gemeinsame Form
+F12=(D-U_op)_FF, nicht bloß die größere tatsächliche Schurform S12.
+Mit Delta=D_Y,new,lower-D_Y,old,lower und theta=1-10^-10 gilt
+
+  F12 >= T_P* diag(theta N,
+                  K_lower+Delta-Gamma_R/(1-theta)) T_P.
+
+Die neuen Metriken dominieren die alten. Deshalb bleiben die alten
+Kreuzzeilenfehler in der inversen Metrik konservativ. Die Rückgewinnung
+fast der anderen Hälfte von N widerspricht nicht dem früheren Befund,
+dass im Achterblock selbst praktisch kein Young-Verlust vorhanden war.
+
+3. Ausschluss weiterer endlicher Brückenverbesserungen
+
+Die obere Einschließung F12<=F_upper wird im unveränderten Zwölferraum
+vor einer Dreieckszerlegung gebildet. Die Modell-Featureabweichung wird
+in der K12-Metrik bezahlt. Für die festen rationalen Richtungen (u,t,w)
+werden außerdem die C84-Fehler und der Übergang von Modellquellen zu
+tatsächlichen endlichen Quellen bezahlt.
+
+Die unabhängige rationale Auswertung bestätigt die oberen Werte:
+
+  gerade:   Q_eta(u,t,w) <= -0,010191398097;
+  ungerade: Q_eta(u,t,w) <= -0,010124921082.
+
+Es handelt sich um unnormierte Formwerte auf den gespeicherten Richtungen.
+Sie sind keine Eigenwerte und keine Tailböden.
+
+Warum das den ganzen Vergleich trifft: Durch Minimieren über die
+Hilfsvariable u erhält man den niedrigen Anteil der alten Inversmajorante
+als negativen Schurterm. Jeder andere u-Wert enthält nur ein zusätzliches positives
+Quadrat. Ein negativer oberer Wert der erweiterten Form ist deshalb auch
+ein Gegenzeuge gegen die zugrunde liegende Vergleichsform. Da F_upper
+oberhalb des vollständigen F12 liegt, hilft keine bessere Untergrenze
+von F12. Eine andere Koordinatisierung dieses Zwölferraums hilft ebenfalls
+nicht. Änderungen der Restform oder der Inversmajorante liegen außerhalb
+dieses Ausschlusses.
+
+4. Neuer Test: eta vollständig zurückgeben
+
+Der Eingang testet den Restblock (1-eta)L_+-H, eta=10^-10.
+Aus dessen vollständiger oberer Schranke B_upper und H_upper folgt
+
+  L_+[Jw] <= (B_upper+H_upper)/(1-eta).
+
+Der eigene Prüfer addiert eta mal diese obere Grenze zu Q_eta.
+Die beiden oberen Zusatzpreise sind kleiner als 7,18*10^-10.
+Beide Gegenzeugen bleiben negativ. Der Ausschluss hängt damit auch
+nicht an dem kleinen Sicherheitsabzug eta.
+
+5. Neuer Test: voller optimistischer Konstantenbonus
+
+Der direkte Schalenkonstantenterm ist
+
+  c_direct=-log(pi h)-EulerGamma,
+  h=log(3)-3log(2)/2.
+
+Der bisherige Vergleich verwendet 1,1. Setze alpha=c_direct-1,1.
+Eine neue rein rationale Herleitung liefert
+
+  alpha < 0,010112740985515 < 10113/10^6 = 0,010113.
+
+Die erste Zahl ist eine konservative obere Grenze, nicht der tatsächliche
+Wert von alpha. Verwendet werden:
+
+  - Machins Identität pi=16 atan(1/5)-4 atan(1/239), mit alternierenden
+    rationalen Reihenresten und einer exakten Tangens-Identitätskontrolle;
+  - log(q)=2 sum z^(2k+1)/(2k+1), z=(q-1)/(q+1), mit geometrischer
+    Restmajorante;
+  - EulerGamma>=H_1000-log(1000)-1/2000. Diese letzte Ungleichung folgt
+    durch Summation der Trapezregel-Obergrenzen für die konvexe Funktion
+    1/x und anschließenden Grenzübergang.
+
+Somit benötigt auch diese Konstantenkontrolle keine numerische Bibliothek.
+
+Für die exakte Basis ist J*J=I+D*D in der WX-Geometrie. Daher
+
+  ||Jw||_X^2 <= ||Jw||_WX^2 = ||w||^2+||Dw||^2.
+
+Der Prüfer gibt dem Vergleich zusätzlich den vollen optimistischen Bonus
+(10113/10^6)||Jw||_WX^2. Das ist mindestens so viel wie die Rückgewinnung
+des reinen Konstantenunterschieds auf der Schale. Zusätzlich wird eta
+vollständig zurückgegeben. Trotzdem gilt weiterhin:
+
+  gerade:   Q_optimistisch <= -0,000076091220;
+  ungerade: Q_optimistisch <= -0,000009614777.
+
+Diese Zusatzgutschrift wird ausdrücklich nicht als neue bewiesene
+Untergrenze der tatsächlichen direkten Form ausgegeben. Sie ist ein
+großzügiger Machbarkeitstest: Selbst wenn der volle Konstantenbonus
+kostenlos verfügbar wäre, würde er die Gegenrichtungen nicht beseitigen.
+
+6. Nächster sinnvoller Rechenauftrag
+
+Zuerst die tatsächliche direkte Restmatrix
+
+  D84_direct = q_b[Lambda J, Lambda J]
+
+auf der unveränderten Basis84 einschließlich des tatsächlichen
+Konstantenterms, der vollständigen regulären Schalenkernelmatrix und
+der vorzeichenbehafteten Momentkorrektur einschließen. Die Momentkorrektur
+besitzt weiterhin eine Darstellung über zwei Vektoren; ihr Vorzeichen
+und ihre Richtungen müssen erhalten bleiben.
+
+Danach den gemeinsamen endlichen Block mit dem bisherigen U_op erneut
+testen, unter konsistenter Mitführung der tatsächlichen endlichen Quellen
+und aller Kreuzfehler. Alternativ kann U_op verbessert werden; dann
+müssen dessen Features, Kreuzzeilen und Fehler entsprechend neu entstehen.
+
+Ein positiver endlicher Ausgang wird hier weder vorausgesetzt noch
+behauptet. Erst nach einem bestandenen endlichen Test mit positiver
+Fehlerreserve lohnt der neue vollständige Formdual-Residualanschluss.
+
+Eine Erweiterung oder andere Aufteilung des endlichen Raums kann die
+Vergleichsform selbst verändern; das wäre ein neuer Ansatz und keine
+Widerlegung des hier präzisierten Ausschlusses bei festen Daten.
+
+7. Status
+
+  DIRECTIONAL_COMMON_BRIDGE_CONFIRMED = true
+  FRESH_DIRECT_INTEGRATIONS_REPRODUCED = 4
+  IMPROVED_FINITE_LOSS_TEST_PASSES = false
+  FIXED_UOP_LPLUS_COMPARISON_REFUTED = true
+  ETA_RESERVE_ALONE_INSUFFICIENT = true
+  FULL_CONSTANT_BONUS_ALONE_INSUFFICIENT = true
+  NEGATIVE_ACTUAL_SCHUR_WITNESS = false
+  TAIL_COERCIVITY_CERTIFIED = false
+  FULL_REMAINDER_CERTIFIED = false
+
+Keine negative tatsächliche Schurform wurde nachgewiesen. A8->A9 und
+der Tailboden 1/20 bleiben offen. Die getrennten 203 Kraftzeilen des
+Abdeckungstests wurden nicht durch A0 ersetzt.
+
+Das Rückgabepaket enthält den unveränderten Eingang, den eigenen rationalen
+Prüfer, dessen exakte Ergebnisse und die Quittung der frischen Integrationen.
+Alle Originalarchive bleiben unverändert. GitHub wurde nicht verändert.

@@ -1,0 +1,199 @@
+Objekt X — Prüfung der Galerkin84-Verluste und Gegenzeugen zur pauschalen Achterverstärkung
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Die rationalen Gegenzeugen zur bisherigen gemeinsamen Verlustschranke
+werden bestätigt. Auch das beibehaltene positive Randpotential allein
+genügt nicht. Eine neue Prüfung korrigiert jedoch den vorgeschlagenen
+nächsten Ansatz: Die pauschalen Verstärkungen Q8_neu=1,11 Q8 (gerade)
+und Q8_neu=1,29 Q8 (ungerade) sind bei unverändertem P mit den bereits
+gebundenen oberen Grenzen der tatsächlichen endlichen Schurform
+unvereinbar. Sie sind damit unter diesen Voraussetzungen ausgeschlossen,
+nicht lediglich noch unbewiesen.
+
+Die hypothetischen Galerkin-Rechenwerte unter diesen Verstärkungen sind
+algebraisch korrekt. Die hierfür verlangte endliche Untergrenze kann
+aber nicht gelten. Eine richtungsabhängige Verbesserung wird durch diese
+Gegenzeugen nicht ausgeschlossen.
+
+1. Bestätigung der eingegangenen Ergebnisse
+
+Das Paket-Replay besteht; alle vier erzeugten Prüfdateien stimmen mit
+den beigefügten Erwartungsdaten überein. Die manifestegebundenen Quellen
+in acht Paketständen wurden geprüft: zusammen 261 Dateibindungen.
+
+Die rationalen Prüfrichtungen bestätigen:
+
+                                         gerade           ungerade
+  R0 / S_eta                         >1,9525101668      >2,2643362978
+  (H+R0) / L                         >1,7450178928      >1,9865280044
+  R0 / S_plus                        >1,0930351295      >1,2673436012
+
+Die gespeicherten gesonderten 4096-Bit-Einzelintegrationen sind mit den
+3072-Bit-Matrixdaten konsistent: 424 Intervallvergleiche je Parität und
+96 exakte Modellbeziehungen je Parität. Dies ist ein erneut ausgeführter
+Vergleich gespeicherter Integraldaten, keine hier neu ausgeführte
+Operatorintegration.
+
+Zusätzlich wurden R84 und die hypothetisch verbesserten Verlustmatrizen
+direkt aus C84 und den gebundenen inversen Metriken neu aufgebaut.
+Auch B84 wurde aus E84 und H84 neu aufgebaut. Je Parität stimmen jeweils
+7056 Intervalleinträge mit jeder dieser drei gespeicherten Matrizen
+überein. Die gerichteten LDL-Prüfungen der hypothetischen endlichen Gates
+und Eigenwertgrenzen bestehen bei 512 Bit:
+
+  gerade:   kappa=111/100, obere Eigenwertgrenze 246529/250000;
+  ungerade: kappa=129/100, obere Eigenwertgrenze 986367/1000000.
+
+Diese Nachrechnung bestätigt die konditionale Algebra, nicht deren
+zusätzliche Brückenvoraussetzung.
+
+2. Neue rationale Gegenzeugen zur vorgeschlagenen stärkeren Brücke
+
+Bezeichne die tatsächliche endliche Zwölfer-Schurform nach Eliminierung
+des vollständigen alten Raums mit S12=D12-E_old. Die vorgeschlagene
+Untergrenze würde verlangen
+
+  S12 >= T_P* diag(N/2, kappa Q8) T_P,
+  T_P(x,y)=(x+Py,y).
+
+Verwende die bereits festgelegte rationale Matrix P und die folgenden
+exakten Koordinatenvektoren, mit einsbasierter Indizierung:
+
+  gerade:   y=e5 in R^8, x=-P e5;
+  ungerade: y=e2 in R^8, x=-P e2.
+
+Dann ist x+Py=0 exakt. Die geforderte Untergrenze auf diesen Richtungen
+ist somit kappa Q8[y]. Die vorhandenen tatsächlichen oberen Grenzen,
+einschließlich der vollständigen Kreuzfehler, liefern dagegen rational:
+
+                     obere Grenze S12[(-Py,y)] / Q8[y]     verlangt
+  gerade                 <=1,071906463                      >=1,11
+  ungerade               <=1,059323185                      >=1,29
+
+Die Widerspruchslücken in den unnormierten Formen sind größer als
+0,00578147 beziehungsweise 0,00032198. Diese Werte dienen nur zur
+Orientierung; der Prüfer benutzt ausschließlich exakte rationale Werte.
+
+Die neuen Richtungen sind Richtungen im endlichen Zwölferraum. Sie sind
+nicht mit den Basis84-Restgegenzeugen des eingegangenen Pakets identisch.
+Sie zeigen keine Negativität von S12; eine positive Form kann eine zu
+große positive Untergrenze verletzen.
+
+3. Herleitung der verwendeten oberen Grenze
+
+Die gebundenen endlichen Daten liefern
+
+  L_old <= E_old <= U,
+  D_zz <= Dz_upper,  D_YY <= DY_upper,
+  B_direct = C_U + U_zY + Delta,
+  ||M^(-1/2) Delta|| <= epsilon.
+
+L_old bezeichnet hier die alte variationale Inversenergie-Untergrenze;
+es ist nicht die Form L auf dem unendlichen Rest. M ist die geerbte
+positive Vierermetrik für den bereits gebundenen Kreuzfehler.
+
+Für t=(x,y), x=-Py, folgt daher
+
+  S12[t] <= x*Dz_upper x + 2 Re(x*(C_U+U_zY)y)
+            + y*DY_upper y - t*L_old t
+            + 2 epsilon sqrt(x*M x) ||y||.
+
+Alle Matrizen und Koordinaten auf der rechten Seite sind rational.
+Die einzige Quadratwurzel wird durch eine nach oben gerichtete rationale
+Wurzelgrenze ersetzt. Das direkte Kreuzzentrum sowie sein vollständiger
+Fehlerzuschlag werden aus den gebundenen Daten rekonstruiert.
+Eine zweite exakte Auswertung über den Endpunkt D-U und die Addition
+von U-L_old liefert identisch denselben rationalen Wert.
+
+Es wird dabei weder E_old=U angenommen noch eine untere Matrix als obere
+verwendet. Die bislang größere Unsicherheit U-L_old wird vollständig
+mitbezahlt. Gerade dies macht die Gegenzeugen zu einer Aussage über die
+tatsächliche endliche Schurform, bedingt auf die geerbten Operatorgrenzen.
+
+Der zugrunde liegende endliche Schurdatensatz bei 4096 Bit wurde zusätzlich
+mit seinem rationalen Rekonstruktionsprüfer in beiden Paritäten erneut
+ausgewertet; alle rekonstruierten Felder stimmen exakt überein.
+
+4. Kein relevanter Gewinn im alten Young-Schritt
+
+Aus den gespeicherten rationalen Matrizen folgt zusätzlich exakt
+
+  0 <= K_lower - Q8 < 10^(-35) Q8
+
+in beiden Paritäten. Bezahlt sind sowohl 2 Gamma als auch die gerichtete
+Abrundung von K_lower-2 Gamma zu Q8. Die obere Matrixungleichung wurde
+mit acht positiven rationalen LDL-Pivots je Parität geprüft.
+
+Die Auswahl der alten Young-Konstante ist daher keine Quelle eines
+Gewinns von elf oder neunundzwanzig Prozent. Eine relevante Verbesserung
+muss die zugrunde liegenden direkten Formgrenzen beziehungsweise die
+alte Inversenergie-Abschätzung verändern.
+
+5. Präzisierung des nächsten Beweisziels
+
+Für die bisherige gemeinsame Verlustrechnung reicht eine stärkere Grenze
+der tatsächlichen S12 allein grundsätzlich nicht: Die Kreuzzeilen A0
+gehören zur konservativen gemeinsamen Form D-U_op. Eine neue Brücke muss
+auch deren endlichen Block F12=(D-U_op)_FF nach unten binden, oder die
+Kreuzzeilen und Fehlerrechnung müssen konsistent neu hergeleitet werden.
+Aus S12>=K folgt im Allgemeinen nicht F12>=K, denn F12<=S12.
+
+Die hier gefundenen oberen Gegenzeugen schließen die vorgeschlagene
+pauschale Brücke schon für S12 aus, also erst recht für F12.
+
+Konkreter nächster Auftrag:
+
+  a) Eine richtungsabhängige Verbesserung des endlichen gemeinsamen
+     Vergleichsblocks F12 anstreben. Die bisherige skalare Abschätzung
+     der Momentkorrektur auf Y und die alte Inversmajorante sind mögliche
+     zu untersuchende Stellen; ihre Verbesserung wird hier nicht behauptet.
+
+  b) Eine konkrete neue Matrix Qhat8 mit derselben Geometrie zunächst
+     gegen notwendige endliche Obergrenzen prüfen. Bei unverändertem P
+     muss für alle y insbesondere Qhat8[y] <= S12[(-Py,y)] gelten.
+     Die beiden beigefügten Richtungen sind sofort ausführbare notwendige
+     Tests. Ihr Bestehen allein wäre noch kein Untergrenzennachweis.
+
+  c) Die kompatible volle Zwölfer-Untergrenze rational zertifizieren.
+     Falls P, die alte Inversmajorante oder andere Vergleichsdaten geändert
+     werden, auch die davon abhängigen Kreuzzeilen und Fehler neu berechnen.
+
+  d) Den tatsächlichen endlichen Galerkin-Test erneut ausführen. Erst nach
+     dessen Bestehen mit positivem Budget die neuen Näherungsantworten
+     und den vollständigen Formdual-Residualgram berechnen. Ein altes
+     Residuum darf bei verändertem Vergleich nicht übernommen werden.
+
+Das gesonderte Abdeckungskriterium für den Tailboden 1/20 ist durch diese
+Prüfung weder bewiesen noch widerlegt. Seine 203 tatsächlichen Kraftzeilen
+dürfen weiterhin nicht durch die hier verwendeten A0-Zeilen ersetzt werden.
+
+6. Reproduzierbarkeit und Status
+
+check_bridge_obstruction.py benutzt ausschließlich die Python-
+Standardbibliothek. Mit BRIDGE_OBSTRUCTION_INPUT.json ist die neue
+rationale Widerlegung eigenständig reproduzierbar. Die Eingabedatei
+enthält die verwendeten rationalen Matrizen und ihre Herkunftsbindungen.
+Die übernommenen analytischen Operatorgrenzen bleiben Voraussetzungen.
+
+rebuild_conditional_gates.py rekonstruiert die hypothetischen endlichen
+Matrizen aus dem Originalpaket; es benötigt python-flint 0.9.0.
+REPLAY_ORIGINAL.json dokumentiert das hier ausgeführte Paket-Replay.
+Es wurden in dieser Prüfung keine neuen Quellenintegrale ausgewertet.
+
+Eingangspaket:
+  Objekt-X-Galerkin84-und-Verlusttest-2026-10-11.zip
+  SHA256 461eee1352a82cadf9c9a8ec6540f782ad9ceb0490c0fa28afa93392dccd7c28
+
+  ORIGINAL_COMMON_LOSS_BOUND_REFUTED = true
+  POSITIVE_POTENTIAL_ALONE_INSUFFICIENT = true
+  PROPOSED_UNIFORM_Q8_BRIDGES_REFUTED = true
+  DIRECTION_DEPENDENT_BRIDGE_IMPROVEMENT = open
+  NEGATIVE_ACTUAL_SCHUR_WITNESS = false
+  TAIL_COERCIVITY_CERTIFIED = false
+  FULL_REMAINDER_CERTIFIED = false
+
+Objekt X und A8->A9 bleiben offen. Keine externe unabhängige mathematische
+Begutachtung wird beansprucht. Die Originalarchive bleiben unverändert;
+GitHub wurde weder gelesen noch verändert.

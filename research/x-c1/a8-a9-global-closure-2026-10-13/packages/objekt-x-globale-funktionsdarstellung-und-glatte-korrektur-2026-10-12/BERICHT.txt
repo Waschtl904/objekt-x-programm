@@ -1,0 +1,33 @@
+Objekt X — globale Funktionsdarstellung und glatte Korrektur
+12. Oktober 2026
+
+Das eingesandte Paket ist bestätigt. Sein rationaler Replay einschließlich
+beider Vergleiche mit E_dir besteht. E_dir bleibt das gemeinsame Beweisziel.
+
+Neu wurde ein vollständiger Auswerter des rohen Residualmodells auf der
+ganzen offenen Schale aufgebaut. Er setzt alle 203 Komponenten aus den
+96 Quellen und den 191 alten Aktionen zusammen. Die logarithmischen
+Kernanteile werden durch vollständige Cauchy-Stammfunktionen mit
+Dilogarithmen berechnet; sämtliche Primverschiebungen bleiben enthalten.
+
+Eine getrennte rationale Rechnung bezahlt außerdem die vollständige
+glatte Momentadjunktion und die kanonische T-Projektion oberhalb Grad 103.
+Ihr gemeinsamer Fehler liegt in beiden Paritäten unter 10^-300 in der
+benötigten D-dualen L2-Norm, unter den geerbten Operatorvoraussetzungen.
+Diese Normschranke wird zusätzlich im Modellfehler berücksichtigt.
+
+Das Modell wurde bei 3072 und 4096 Bit aus den gebundenen Eingaben neu
+aufgebaut. Die Gegenprüfung umfasst 1218 Punktwertintervalle, alle 609
+führenden Logkoeffizienten je Parität und 376 Kontrollen der Kernprimitiven
+und Intervallarithmetik. Der rationale Replay besteht auch aus dem ZIP.
+Die Punktwerte prüfen die Implementierung, nicht die globale Positivität.
+
+Noch offen sind die vollständige niedrige Projektion des regularisierten
+Modells, sein globaler Integralgram sowie die übrige tatsächliche globale
+Modellabweichung. Der Nachweis <10^-300 für die glatten Korrekturen deckt
+diese anderen Fehler NICHT ab. Der nächste Schritt ist daher weiterhin
+Uhat <=(999/1000) E_dir/10920 mit einem vollständigen delta_phys-Nachweis.
+
+A8->A9 und der Tailboden 1/20 bleiben unbewiesen.
+
+Zum Prüfen: ANSCHLUSS_GPT1.txt, PROOF.txt und reproduce.py.

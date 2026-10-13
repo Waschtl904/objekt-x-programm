@@ -1,0 +1,21 @@
+{
+  "cases": [
+    {
+      "parity": "even",
+      "M_actual_normalized_upper_scalar": "999997138063/1000000000000",
+      "sufficient_complete_QR_normalized_budget": "19279915572619456599/60730000000000000000000000",
+      "complete_coarse_QR_normalized_upper": "13544686094667197569744891832833489423554835",
+      "model_loss_generalized_eigenvalue_upper": "99999711293/100000000000",
+      "B84_condition_number_upper": "873107098/372751309"
+    },
+    {
+      "parity": "odd",
+      "M_actual_normalized_upper_scalar": "124997844191/125000000000",
+      "sufficient_complete_QR_normalized_budget": "14522966616907771943/7591250000000000000000000",
+      "complete_coarse_QR_normalized_upper": "22078947213343092358861294660247725797734",
+      "model_loss_generalized_eigenvalue_upper": "499991376281/500000000000",
+      "B84_condition_number_upper": "291067328/124524929"
+    }
+  ],
+  "full_remainder_certified": false
+}

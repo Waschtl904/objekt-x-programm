@@ -1,0 +1,247 @@
+Objekt X — neue Antworten und vollständige Residualdarstellung
+11. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Alle Aussagen sind bedingt auf die gebundenen analytischen Voraussetzungen.
+Die rationale Rechnung ist kein Ersatz für deren externe Begutachtung.
+
+1. Räume und feste Größen
+
+H=(T,W_X) ist der EXAKTE unendliche Rest mit den bisherigen Bedingungen.
+J=Q[D;I84] ist die vorhandene exakte Basis. Ihre W_X-Grammatrix erfüllt
+I<=J*J<1.000502 I. Sie wird nirgends als orthonormal eingesetzt.
+F=(z1,...,z4,Lambda Y1,...,Lambda Y8) sind die zwölf physischen Quellen.
+q[r,s]=q_b[Lambda r,Lambda s]. delta=18219/10000, eta=10^-10.
+
+Der vollständige alte Quelloperator g:H->H_old ist beschränkt. Schreibe
+h=T_h g für die geerbte hohe Antwort und c=Phi* g für die niedrigen
+Kraftkoordinaten. Die gebundene Kopplung ist B:H_high->R^191. Für die neue
+rationale Kongruenz C_inv und deren rho setze
+
+ V=C_inv* (Phi* - B T_h/delta),
+ W_H=T_h* T_h/delta,
+ W_U=W_H+V* V/(1-rho).
+
+Damit a_low=Vg, H_neu=g*W_H g, U_neu=g*W_U g. Auch für F werden dieselben
+alten Kraftvektoren g_F und dieselben Operatoren verwendet. Insbesondere
+ist dies keine Wiederverwendung des alten, P-residualisierten A0.
+
+S=(1-eta)q-H_neu >= beta L,
+beta=20209999981781/182190000000000.
+
+Diese Hilfsform ist positiv und geschlossen auf der q-Formdomäne, weil
+H_neu eine beschränkte Störung ist. L>=21/5 W_X auf T wird geerbt.
+Die Hilfsformschranke gilt VOR den übrigen niedrigen und endlichen Verlusten.
+
+2. Neue rationale Zwölfermetrik
+
+Das positive Vorgängerzertifikat gibt die gerichteten Matrizen D96_lower,
+U96_model, G=diag(K12_alt,I84) und die vollständige Energiefehlergrenze
+gamma_audit aus dessen unabhängigem rationalem Prüfer. Wir setzen
+
+ Kraw=(D96_lower-U96_model-gamma_audit G)[1:12,1:12].
+
+K12_neu ist die auf 60 Dezimalstellen nach unten gerundete Matrix Kraw.
+Die Rundung erfolgt symmetrisch; jede Diagonale zahlt die Summe der
+absoluten Eintragsunsicherheiten ihrer Zeile. Daher
+
+ 0<K12_neu<=Kraw<=(D-U_neu)[F,F].
+
+Positivität und die Rundungsungleichung werden rational geprüft.
+D203=diag((1-rho)I191,K12_neu) ist damit eine feste rationale Matrix.
+Die frühere K12_alt dient hier nur als Fehlermetrik des Vorgängerbeweises.
+
+3. Kräfte, neue Antworten und Fehlerpreise
+
+A r=(a_low(r), a_fin(r)),
+a_fin(r)=(D-U_neu)[F,Lambda r].
+
+B0=(1-eta)D84_direct_model-H84_new_model,
+C0=(low_feature_J84_model; finite_cross_C84_new_model).
+
+Die 84x203-Matrix X entsteht durch Abrunden einer eingeschlossenen Lösung
+B0^-1 C0* auf das feste Gitter 10^-60. Danach ist X exakt rational und
+Z=JX ein festgelegter Funktionsvektor. Keine berechnete Inverse definiert
+nachträglich ein anderes J oder andere Kraftzeilen.
+
+Für die gemeinsame Energiefeatureschreibweise sei Psi_F der endliche und
+Psi_J der Basisblock. Der Vorgänger liefert
+
+ deltaPsi_F* deltaPsi_F <= E_F,
+ deltaPsi_J* deltaPsi_J <= E_J I84.
+
+Wir benutzen bewusst die sichere Spurabschätzung 84 E_J, selbst wenn ein
+schärferer gemeinsamer Frobeniusnachweis weniger kosten könnte. Setze
+
+ eF=tr(K12_neu^-1 E_F), eJ=84 E_J,
+ tauF=tr(K12_neu^-1 U_model,FF), tauJ=tr(U_model,JJ).
+
+Für den vollständigen gemischten Energiefehler gilt in der normierten
+Kraftmetrik die Schranke
+
+ sqrt(eF tauJ)+sqrt(tauF eJ)+sqrt(eF eJ).
+
+Dies folgt durch Ausmultiplizieren von Psi_F* Psi_J und die drei
+Frobenius-/Operatornormprodukte. Es bezahlt beide Quellenabweichungen.
+Die erste 191er-Zeilengruppe kostet zusätzlich höchstens sqrt(eJ).
+Jeder direkte gemischte Eintrag hat den geerbten vollständigen Fehler
+10^-25. Wir bezahlen großzügig sqrt(12*84 tr(K12_neu^-1))*10^-25.
+Ihre Summe ist epsilon_C, so dass
+
+ ||D203^-1/2 (A J-C0)|| <= epsilon_C.
+
+Mit epsilon_h als vollständigem hohen Quellfehler auf J und
+tau_h=delta tr(H84_new_model) gilt
+
+ epsilon_H=(2 sqrt(tau_h) epsilon_h+epsilon_h^2)/delta,
+ epsilon_B=(1-eta)*84*10^-25+epsilon_H,
+ ||S[J,J]-B0||<=epsilon_B.
+
+Alle numerischen Matrixradien kommen hinzu und bleiben in den gespeicherten
+Intervallen. Die hohen Quellen umfassen die volle alte Hochprojektion;
+hier wird kein endlicher alter Modenausschnitt zur Gesamtquelle erklärt.
+
+4. M, eine feste rationale obere Matrix und positives Residualbudget
+
+M=A Z+Z* A* -Z* S Z,
+M0=C0 X+X* C0* -X* B0 X.
+
+Mit x2=tr(X D203^-1 X*) folgt
+
+ -epsilon_M D203 <= M-M0 <= epsilon_M D203,
+ epsilon_M=2 sqrt(x2) epsilon_C+x2 epsilon_B.
+
+Die neue Rechnung speichert M0 als Intervallmatrix. Sie rundet diese
+symmetrisch nach oben, bezahlt jede Zeilenradius-Summe und zusätzlich
+10^-55 I203. Der nach oben auf 40 Dezimalstellen gerundete epsilon_M-
+Koeffizient wird mit D203 multipliziert. Die resultierende feste rationale
+Matrix steht vollständig in M_upper_rational.
+
+Der rationale Prüfer baut C0, B0, R0=C0*D203^-1 C0, alle 41209 Einträge
+von M0 und alle 17052 Einträge der Antwortmatrix erneut auf. Er prüft
+M<=M_upper und darüber hinaus M_upper<u D203 durch 203 gerichtete LDL-
+Pivots. Die zwei rationalen u stehen in SUMMARY.json. Somit ist auch
+
+ T_budget=beta (D203-M_upper)>0
+
+eine KONKRETE RATIONALE, richtungsabhängige Budgetmatrix. Sie muss nicht
+durch die schwächere skalare Untergrenze beta(1-u)D203 ersetzt werden.
+Der endliche Galerkinfehler allein begründet keine dieser Aussagen über
+den vollständigen unendlichen Residualgram.
+
+5. Exakte vollständige Residualfunktionen und ihre Stetigkeit
+
+Für alpha=(u,v) in R^191 x R^12 sei z_alpha=J X alpha. Die gesamte
+Residualspalte hat als W_X-Rieszrepräsentanten auf T
+
+ r_alpha = Pi_T Lambda* Q_b [F v-(1-eta)Lambda z_alpha]
+           + g* [V* u-W_U g_F v+W_H g z_alpha].          (R)
+
+Hier ist g* bereits der Adjunkt in H=(T,W_X). Pi_T beim ersten Term
+bezeichnet die W_X-Projektion auf den exakten Rest; sie darf nicht durch
+das Weglassen der ersten zwölf gewöhnlichen Legendrekoeffizienten ersetzt
+werden. Q_b wird nur auf die angegebenen festen stückweise glatten
+Funktionen angewandt. Die Formel ist eine vollständige Funktionsdefinition,
+keine numerische Auswertung dieser Funktionen oder ihres scharfen Grams.
+
+Für jeden Testvektor s der S-Formdomäne ergibt die Paarung mit (R)
+
+ <r_alpha,s>_W = alpha* A s - S[z_alpha,s].
+
+Die erste Zeile benutzt die geerbte Operatordomänenidentifikation für die
+96 festen Funktionen. Die zweite benutzt die beschränkten Operatoren g,
+T_h, B und die endlichen Matrizen. Somit sind die Residuen W_X-stetig,
+also wegen L>=21/5 W_X auch L-formdualstetig. Damit ist die Identifikation
+von R=A*-SZ im gesamten Formdualraum begründet, nicht nur auf span(J).
+
+Nützlich ist die exakt gleiche, auslöschungserhaltende Schreibweise
+
+ r_alpha = Pi_T Lambda* Q_b [F v-(1-eta)Lambda z_alpha]
+           + g* V* [u-a_low(F)v/(1-rho)]
+           + (1/delta) g* T_h* [h(z_alpha)-h(F)v].       (R2)
+
+Vor einer scharfen Integration sollen die Klammern in (R2) gemeinsam
+gebildet werden. Getrennte Normmajoranten verlieren ihre Auslöschungen.
+Die tatsächlichen Q-, Kern-, Moment- und Hochraumanteile bleiben enthalten.
+
+Mit R_L als Forminverser von L AUF T gilt exakt
+
+ A S^-1 A* = M+R* S^-1 R,
+ R* S^-1 R <= beta^-1 R* R_L R.
+
+Deshalb genügt ein vollständiger Gram Q_R>=R* R_L R mit
+Q_R<=T_budget. Dies ist eine hinreichende gemeinsame Verlustbedingung.
+Der gesonderte normierte Tailboden 1/20 folgt daraus nicht automatisch.
+
+6. Eine tatsächlich vollständige, aber zu grobe obere Einschließung
+
+Die geerbten globalen Schranken sind ||g||<1000, ||Phi||^2<2,
+||T_h||^2<=1+10^-12, BB*<=HB. Für XI=C_inv C_inv*/(1-rho) setze
+
+ MV=2*10^6 [2 tr(XI)+(1+10^-12) tr(XI HB)/delta^2],
+ MH=(1+10^-12)*10^6/delta, MU=MV+MH.
+
+Dies liefert eine HS-Obergrenze MV für den normierten niedrigen Kraftblock
+und Operatorgrenzen MH, MU für H_neu, U_neu in W_X. Alle Werte werden mit
+der NEUEN Matrix XI und dem NEUEN HB berechnet.
+
+Die zwölf ursprünglichen physischen Funktionen erfüllen gemäß dem
+geerbten Domänennachweis ||Q_b F_i||<10^10; hier wird die noch großzügigere
+Schranke 2*10^10 benutzt. Folglich, mit
+tauActual=(sqrt(tauF)+sqrt(eF))^2,
+
+ ||A* D203^-1/2||^2 <= A2,
+ A2=MV+96*10^20 tr(K12_neu^-1)+2 tauActual MU.
+
+Für ||w||_2=1 hat Jw Legendrekoeffizientennorm <sqrt(2), Grad <=95 und
+Schalenbreite h>1/20. Aus |P_n|<=1 und |P_n'|<=n(n+1)/2 folgt
+|Lambda Jw|<1000 und stückweise |(Lambda Jw)'|<2*10^8. Die Kernkorrektur
+ist bezahlt durch mu>9/100, nu<1/10 und m,m'<2 auf dem Träger. Es gibt
+höchstens vier Schnittstellen, der Träger liegt in [-2,2]. Das gebundene
+Domänenlemma liefert
+
+ ||H_Gamma Lambda Jw|| <= (4*10^8+20000)sqrt(6)
+                         +8000+2sqrt(2)||Lambda Jw||_1.
+
+||Lambda Jw||_1<=2sqrt(2), und der beschränkte Nichtpolzusatz kostet
+höchstens 18sqrt(2). Daher ||q J||_(ell2 -> W_X-dual)<10^10.
+Die Einschränkung/Projektion auf T kann diese Norm nicht erhöhen.
+
+Damit, mit SJ=(1-eta)*10^10+2 MH,
+
+ ||SZ D203^-1/2|| <= SJ sqrt(x2),
+ ||R D203^-1/2|| <= sqrt(A2)+SJ sqrt(x2).
+
+Weil L>=21/5 W_X, ist also wirklich auf dem GESAMTEN Rest
+
+ R* R_L R <= qcoarse D203,
+ qcoarse=(sqrt(A2)+SJ sqrt(x2))^2/(21/5).               (C)
+
+Ein aufgerundeter rationaler qcoarse steht im Datensatz; der rein rationale
+Prüfer berechnet ihn erneut. Seine eigene gerichtete Quadratwurzelrundung
+darf höchstens eine zusätzliche Ganzzahleinheit kosten. Für einen Replay
+ist der Wert full_coarse_QR_normalized_upper_audited aus AUDIT.json gültig.
+Es handelt sich um eine vollständige PSD-Majorante, nicht um einen scharfen
+berechneten Gram. Die Größenordnung 10^43 bzw. 10^40 verfehlt das Budget.
+Das beweist NUR die Unbrauchbarkeit dieser groben Majorante. Es beweist
+weder eine große tatsächliche Residualnorm noch eine negative Schurform.
+
+7. Was neu geprüft ist und was offen bleibt
+
+Neu: K12_neu, D203, zwei rationale X84x203, C203x84, B84, M203,
+eine vollständige rationale gerichtete M_upper-Matrix und ihre positive
+Budgetmatrix; vollständige Residualdarstellung und Formdualzugehörigkeit;
+eine vollständige grobe obere PSD-Einschließung, die den Test verfehlt.
+
+Die Gegenkontrolle mit S=diag(2,3), A=(1,1), J=(2,0)^T zeigt:
+das endliche Residuum ist null, M=1/2, aber A S^-1 A*=5/6. Eine Schwelle
+3/4 würde durch Weglassen der Außenrichtung falsch akzeptiert. Der Prüfer
+verwirft diesen Fehler und prüft zugleich den nichtorthonormalen J-Gram.
+
+Offen: die scharfe gemeinsame Integration der Funktionen (R2) mit allen
+analytischen Resten und die Matrixentscheidung Q_R<=T_budget. Alte
+P-residualisierte Kraftdaten oder alte Residualgrame dürfen dabei nicht
+eingesetzt werden. A8->A9 und der Tailboden 1/20 bleiben unbewiesen.
+
+Dokumentationskorrektur übernommen: Der unmittelbar verwendete alte
+Young-Parameter war 10^-8. Der geprüfte Übergang lautete 10^-8 -> 10^-10.
+Versiegelte Vorgänger wurden nicht verändert.

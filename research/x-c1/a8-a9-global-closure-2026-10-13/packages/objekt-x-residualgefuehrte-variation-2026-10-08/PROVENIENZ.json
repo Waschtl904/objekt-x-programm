@@ -1,0 +1,12 @@
+{
+  "predecessor_archives_sha256": {
+    "Objekt-X-Alte-Hohe-Variation-2026-10-08.zip": "36e7de8c69444da48bce9919d57ad50f0a259e09f44450baf9968541f295a18f",
+    "Objekt-X-Gemeinsame-Energie-2026-10-08.zip": "60f2f8bb79d32dd9188d2efd0185c9e968995672b5fd3eac99ffef3be33c36b4",
+    "Objekt-X-Signierter-C-Block-portabel-2026-10-08.zip": "b97f7274acdfc7d67a881fb2dd9fbcf57bada73faa089768cad60f1b9785b26e"
+  },
+  "previous_review": "User-supplied bounded AI review: 51 hashes, 4 exact cases, 2016 comparisons; original integrations not rerun by reviewer.",
+  "previous_review_recommendation": "Select old trial functions from current residuals and clarify adjoint notation.",
+  "external_review_of_this_new_stage": "OPEN",
+  "github_changed": false,
+  "source_head_inherited": "da50f0a21691e6fd253163e612a2af2898606581"
+}
