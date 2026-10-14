@@ -1,0 +1,112 @@
+{
+  "schur_package": {
+    "filename": "Objekt-X-Globaler-Schurabschluss-A8-A9-2026-10-13.zip",
+    "sha256": "65085974657257bd447d93342c5001d29e797b2fa70d876d53d36b587b16c2ba"
+  },
+  "domain_package": {
+    "filename": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+    "sha256": "f96cd225cd9b894f5a6e132086255699e31efa68a575322b6ae1c053ddfc8efd"
+  },
+  "source_copies": [
+    {
+      "copied_to": "sources/SCHUR_HERLEITUNG.txt",
+      "source_workspace_path": "work/schur-review-2026-10-13/Objekt-X-Globaler-Schurabschluss-A8-A9-2026-10-13/HERLEITUNG.txt",
+      "sha256": "9860ffca22a64140509fcce2876935473c74f08d8cd587a0b7fcf8e56c1cd167",
+      "bytes": 10678,
+      "unchanged_historical_source": true
+    },
+    {
+      "copied_to": "sources/SCHUR_ASSEMBLY_AUDIT.json",
+      "source_workspace_path": "work/schur-review-2026-10-13/Objekt-X-Globaler-Schurabschluss-A8-A9-2026-10-13/ASSEMBLY_AUDIT.json",
+      "sha256": "29534f1b3ac86874e7d89df6837bf88a5328721af99ea9920b93809a00d0624e",
+      "bytes": 9285,
+      "unchanged_historical_source": true
+    },
+    {
+      "copied_to": "sources/SCHUR_INPUT_BINDINGS.json",
+      "source_workspace_path": "work/schur-review-2026-10-13/Objekt-X-Globaler-Schurabschluss-A8-A9-2026-10-13/INPUT_BINDINGS.json",
+      "sha256": "9597df2ee9feaade29c484989a14a0ef2946e5e9ac5ff84059185494699de1d8",
+      "bytes": 846,
+      "unchanged_historical_source": true
+    },
+    {
+      "copied_to": "sources/PREVIOUS_FULL_CHAIN_REPLAY.json",
+      "source_workspace_path": "work/schur-review-2026-10-13/OUR_FULL_CHAIN_REPLAY.json",
+      "sha256": "d8f9986b50d5a3661e5617b65b3522b09752455c1b25ed8b0bbdd0bf24584e64",
+      "bytes": 10077,
+      "unchanged_historical_source": true
+    },
+    {
+      "copied_to": "sources/RESPONSES_PROOF.txt",
+      "source_workspace_path": "work/new-responses84-2026-10-11/PROOF.txt",
+      "sha256": "122fabae61dad7d6d6916d899ea8ae8c44a1ead451ac68919e6ce9304f002e61",
+      "bytes": 10731,
+      "unchanged_historical_source": true
+    },
+    {
+      "copied_to": "sources/COMMON96_HERLEITUNG.txt",
+      "source_workspace_path": "work/direct-rest84-2026-10-11/HERLEITUNG.txt",
+      "sha256": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd",
+      "bytes": 8234,
+      "unchanged_historical_source": true
+    },
+    {
+      "copied_to": "sources/FULL_DUAL_GEOMETRY.txt",
+      "source_workspace_path": "work/dual-residual-2026-10-11/HERLEITUNG.txt",
+      "sha256": "3e12959df0cea48e904d9d4f183da82e65677b89a167e78bae8dd7a06ccbe6bd",
+      "bytes": 7729,
+      "unchanged_historical_source": true
+    },
+    {
+      "copied_to": "sources/BASIS84_ENERGY_REVIEW.txt",
+      "source_workspace_path": "work/basis84-energy-input-2026-10-10/Objekt-X-Basis84-Pruefung-und-L-Energie-2026-10-10/PRUEFVERMERK.txt",
+      "sha256": "20e62136ae49fd75942ce12d00243230b41c32cfbb74e9ceffdb6138f561c422",
+      "bytes": 5913,
+      "unchanged_historical_source": true
+    },
+    {
+      "copied_to": "sources/DOMAIN_HERLEITUNG.txt",
+      "source_workspace_path": "work/domain-continuation-2026-10-13/HERLEITUNG.txt",
+      "sha256": "e6075606f6a26c354f1eb756b568f91cbb7a0b035022b44ef60a0120ae4ea819",
+      "bytes": 23771,
+      "unchanged_historical_source": true
+    },
+    {
+      "copied_to": "sources/DOMAIN_BOUND_INPUTS.json",
+      "source_workspace_path": "work/domain-continuation-2026-10-13/BOUND_INPUTS.json",
+      "sha256": "13c099bc28dcacc012338da953db04669ddb23f8d7861be90fcaf6e8c1737409",
+      "bytes": 223164,
+      "unchanged_historical_source": true
+    },
+    {
+      "copied_to": "sources/DOMAIN_CHECK.json",
+      "source_workspace_path": "work/domain-continuation-2026-10-13/CHECK.json",
+      "sha256": "ebdf8da2840d2ab77fa01fcdc78c3aabeff23ad8fc59937b1d54da88006dc9b6",
+      "bytes": 2675,
+      "unchanged_historical_source": true
+    },
+    {
+      "copied_to": "sources/DOMAIN_LEMMATA_2026-10-06.txt",
+      "source_workspace_path": "work/domain-continuation-2026-10-13/sources/DOMAIN_LEMMATA_2026-10-06.txt",
+      "sha256": "865b8403bd00d390603eb0a856ee843beea723b194fa488fc78c9422c666d9e1",
+      "bytes": 14174,
+      "unchanged_historical_source": true
+    },
+    {
+      "copied_to": "sources/A8_PROOF_original.txt",
+      "source_workspace_path": "work/domain-continuation-2026-10-13/sources/A8_PROOF_original.txt",
+      "sha256": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661",
+      "bytes": 17081,
+      "unchanged_historical_source": true
+    },
+    {
+      "copied_to": "sources/REMAINDER_BEWEIS_2026-10-05.txt",
+      "source_workspace_path": "work/domain-continuation-2026-10-13/sources/REMAINDER_BEWEIS_2026-10-05.txt",
+      "sha256": "1ef4dabd030d86d8883a5eaf07a60a4b72a047bec502d2092df08e89d7dc2dcf",
+      "bytes": 19748,
+      "unchanged_historical_source": true
+    }
+  ],
+  "historical_status_fields_preserved": true,
+  "copied_sources_do_not_claim_new_independent_analytic_review": true
+}

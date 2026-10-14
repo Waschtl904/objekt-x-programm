@@ -1,0 +1,160 @@
+Objekt X — zusammengesetzter Dualrest bis Grad 103
+11. Oktober 2026. AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN.
+
+Alle folgenden Aussagen gelten unter den gebundenen analytischen
+Operator- und Domänenvoraussetzungen. Der rationale Replay kontrolliert
+die endliche Arithmetik und die gebundenen Fehlerpreise. Er beweist diese
+analytischen Voraussetzungen nicht allein aus den Zahlen.
+
+1. Unveränderte neue Antwortdaten
+
+J bezeichnet die exakte Basis84 im unendlichen Rest T. F bezeichnet die
+zwölf physischen Quellen, nicht die alten P-residualisierten Kraftzeilen.
+X ist die feste rationale 84x203-Antwortmatrix des Vorgängerpakets.
+Z=JX, S=(1-eta)q-H_neu, R=A_neu* - S Z,
+D=diag((1-rho) I191,K12_neu),
+eta=10^-10, delta=18219/10000,
+beta=20209999981781/182190000000000, S>=beta L.
+M=A Z+Z* A* - Z* S Z <= M_upper.
+
+Die vorhandene rationale Matrix
+  T_budget = beta (D-M_upper)
+ist positiv. Aus dem Vorgänger stammen zusätzlich T_budget>=sigma D,
+sigma_even=19279915572619456599/60730000000000000000000000,
+sigma_odd =14522966616907771943/7591250000000000000000000.
+T_budget ist eine Matrix auf 203 Kraftkoordinaten, nicht der Funktionsraum T.
+
+2. Anschluss an die vollständige Inversgeometrie
+
+Die eingesandte exakte Zerlegung mit d_n=H_n+11/10 lautet
+  Q_R = R_J* E_L^-1 R_J + sum_(n>=96) B_n*B_n/d_n
+        - c/(1+c sigma_m) z* z.
+Hier B_n=R_n+l_n v*R_<96; E_L=J*LJ; sigma_m=sum l_n^2/d_n.
+Insbesondere bleiben die Rang-eins-Korrektur und der gesamte Momentrest
+Bestandteile des unendlichen Nachweises. Wir verwenden die dort bewiesene
+Folgeabschätzung mit einer bezahlten geometrischen Korrektur.
+
+Die zwei zuvor offenen endlichen Voraussetzungen sind jetzt nachgerechnet:
+  K12_neu >= epsilon K12_alt,
+  ||X||_F < 0.325,
+mit epsilon_even=2547/10^9, epsilon_odd=17441/10^9.
+Die exakten quadratischen Normen und zwölf positiven rationalen Pivots
+stehen in ATTACHMENT_GATES.json bzw. AUDIT_EXTERIOR.json.
+
+Für das T-Residual gilt tatsächlich
+  ||R_J D^-1/2|| <= r_J
+   = ||C0* - B0 X||_F sqrt(tr D^-1) + epsilon_C
+     + epsilon_B sqrt(tr(X D^-1 X*)).
+Dies bezahlt die Modellabweichung beider Operatoren. Aus E_L>=21/5 I
+folgt der Basispreis j=(5/21)r_J^2:
+  j_even < 9.19e-17, j_odd < 1.50e-19.
+Ein winziges Modellresiduum wird nicht als verschwindendes tatsächliches
+Residual behandelt.
+
+Der alte vollständige, grobe WX-Residualnormnachweis erlaubt weiterhin
+  ||R_X D^-1/2||^2 <= (63/5) q_coarse_audited.
+Hier ist R_X der kanonische X-Repräsentant. Die Umrechnung benutzt
+W_X<=19/9 I<3 I und die frühere vollständige Normschranke, nicht etwa
+eine Umkehrung der Ungleichung Q_R<=L^-1-Normmajorante.
+Multipliziert mit dem exakten geometrischen Preis des Eingangs ergibt
+sich weniger als 10^-300 D. Dieser volle Betrag wird bezahlt. Die grobe
+Normschranke bleibt für den eigentlichen unendlichen Residualrest zu groß.
+
+3. Neue vollständige Kreuzintegrale
+
+K=(k96,...,k103) sind genau die acht momentkorrigierten Außenfunktionen
+des Eingangs. Die festen Arbeitskoeffizienten für J und K bleiben bei
+3072 und 4096 Bit dieselben rationalen Zahlen. Die exakten Funktionen
+werden durch die vorhandenen, vollständigen Quellenfehler eingeschlossen.
+
+Neu berechnet werden
+  H_JK = <h J,h K>, q_JK=q[J,K], L_KK, L_JK.
+Für H_JK werden die vollständigen Logarithmus-/Polynomquellen auf allen
+zehn Primzellen integriert und anschließend die niedrige Projektion
+abgezogen. Die hohe Quelle wird nicht endlich abgeschnitten. Je Lauf
+prüfen drei unabhängig gebildete vollständige Funktionspaarungen die
+rechteckige Gramrechnung; 17572 niedrige Kraftwerte werden abgeglichen.
+
+Die direkte Kreuzform enthält Diagonale, Randpotential, Selbstkernel,
+den paritätsabhängig signierten Spiegelkernel sowie
+  -(lambda_J M_K + M_J lambda_K)/mu
+  -lambda_J lambda_K Q_mm/mu^2.
+Die vollständigen Source- und Kernelreste werden wie in der gebundenen
+direkten Rechnung eingeschlossen. Verwendet wird der großzügigere
+Eintragsfehler 10^-20 statt 10^-25: lokale Grade höchstens 103,
+Spaltennormen kleiner 2, h>1/20, mu>9/100, Gammafehler<10^-34,
+Kernelrest<10^-50 und Koeffizientenrundung<10^-60. Die Fehler durch
+M_source/Q_mm, Momententwicklung und Rundung gehören dazu. Es gibt keine
+neue quadraturabhängige Fehlerannahme. Vier neue Läufe werden verglichen.
+
+4. Alle 203 Residuen zuerst zusammensetzen
+
+Schreibe C_inv für die gebundene neue Inverskongruenz. Mit den vollständigen
+alten Kraftkoordinaten c und Bh ist
+  l_F=C_inv* (c_F-Bh_F/delta), l_K=C_inv* (c_K-Bh_K/delta),
+  U_FK=H_FK/delta+l_F*l_K/(1-rho),
+  A_K=(l_K; q_FK-U_FK),
+  S_JK=(1-eta)q_JK-H_JK/delta,
+  R_K=A_K* - S_JK* X.                                      (1)
+Erst die fertig zusammengesetzte 8x203-Matrix wird quadriert.
+Insbesondere gehen die 191 neuen niedrigen Zeilen und die zwölf neuen
+endlichen Zeilen in derselben D-Metrik ein.
+
+Für die Quellenfeatures des K-Blocks wird konservativ eK=8 Ebase bezahlt,
+auch wenn die Eingangsgrenze bereits einen gemeinsamen Normanteil enthält.
+Mit XI=C_inv C_inv*/(1-rho) und Gm=I+cn cn* gilt
+  Ebase=ehK^2/delta+3[tr(XI Gm) efK^2
+       +tr(XI HB) ehK^2/delta^2+tr(XI) eB^2 tr(H_KK)/delta^2].
+Die restlichen Fehlergrößen sind
+  eF=tr(K12_neu^-1 EF), tauF=tr(K12_neu^-1 U_FF), tauK=tr(U_KK),
+  errC=sqrt(eK)+sqrt(eF tauK)+sqrt(tauF eK)+sqrt(eF eK)
+       +sqrt(96 tr(K12_neu^-1))*10^-20,
+  errH=[sqrt(tr H_JJ) ehK+sqrt(tr H_KK) ehJ+ehJ ehK]/delta,
+  errS=(1-eta)sqrt(84*8)*10^-20+errH,
+  errR=errC+errS sqrt(tr(X D^-1 X*)).
+Somit ||(R_K,actual-R_K,model)D^-1/2||<=errR.
+Für die Umstellung von k_n auf ell_n genügt zusätzlich
+20*10^-352*||R_X D^-1/2||<10^-300. Dies wird in errEll bezahlt.
+
+5. Rationaler gemeinsamer Vergleich
+
+Der unabhängige Standardbibliotheksprüfer rekonstruiert (1) mit nach außen
+gerundeten rationalen Intervallen auf dem Gitter 10^-100. Er prüft die
+203 positiven LDL-Pivots von
+  modelcap T_budget - R_K,model* diag(1/d96,...,1/d103) R_K,model,
+modelcap_even=192/10^6, modelcap_odd=643/10^6.
+Numerische Eigenwerte werden hierfür nicht verwendet.
+
+Wegen d96>6 und T_budget>=sigma D folgt einschließlich aller Fehler
+  Q_96:104 = sum_(96<=n<104) R_n*R_n/d_n <= c8 T_budget,
+  c8 >= [sqrt(modelcap)+errEll/sqrt(6 sigma)]^2.
+Rational bestätigt werden die einfachen Schranken
+  c8_even=1/5000 = 0.0002,
+  c8_odd=13/20000 = 0.00065.                               (2)
+Dies betrifft alle 203 Koordinaten gleichzeitig, nicht nur die im
+eingesandten Neunerraum gewählte kritische Richtung.
+
+6. Präziser offener Rest
+
+Für U104>=R_X*(I-P_<104)R_X, mit dem VOLLSTÄNDIGEN restlichen X-Gram,
+liefert die globale Zerlegung nun
+  Q_R <= (j+10^-300)D+c8 T_budget+U104/d104.
+Es genügt deshalb die richtungsabhängige Matrixbedingung
+  U104 <= d104[(1-c8)T_budget-(j+10^-300)D].                (3)
+Die Matrix rechts ist positiv. Ihre rationale uniforme Untergrenze ist
+  d104 [(1-c8)sigma-j-10^-300] D.
+Die exakten Koeffizienten stehen in AUDIT_EXTERIOR.json. Der uniforme
+Ansatz ist nur eine hinreichende Alternative; die vollständige Matrix
+rechts in (3) lässt mehr Spielraum.
+
+U104 ist NICHT berechnet. (2) ist kein globaler oberer Residualgram und
+beweist auch nicht den ganzen 104er-Vergleichsraum. Noch mehr endliche
+Richtungen können beim Finden von U_N helfen, ersetzen dessen unendlichen
+Nachweis aber nicht. Ein Abschluss von (3) würde zunächst den festgelegten
+gemeinsamen hinreichenden Verlusttest schließen; die Zielmetrik für den
+Tailboden muss weiter ausdrücklich beachtet werden.
+
+Die diagnostischen rationalen Strahlen in EXTERIOR_*.json sind nicht der
+Zertifikatsgegenstand des Replays. Sie ergeben hier keine Widerlegung.
+Keine negative tatsächliche Schurform ist nachgewiesen. A8->A9 und der
+Tailboden 1/20 bleiben offen. FULL_REMAINDER_CERTIFIED=false.

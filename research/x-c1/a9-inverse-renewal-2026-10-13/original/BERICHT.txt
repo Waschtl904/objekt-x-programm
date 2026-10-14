@@ -1,0 +1,97 @@
+Objekt X — A9-Inverserneuerung und vollständiger hoher Schurrest
+13. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Aus dem vollständigen A8->A9-Residualabschluss lässt sich mehr gewinnen
+als Positivität: eine neue gemeinsame Inversabschätzung für A9 und eine
+starke Reserve für den gesamten neuen unendlichen Schurrest.
+
+Nimmt man die vorhandenen 84 Antwortfunktionen zu den zwölf endlichen
+Schalenrichtungen hinzu, gilt in beiden Paritäten
+
+        Schur_(ganzer alter A8-Raum, F12, Basis84)(q_b)
+                             >= (2/3) W_X
+
+auf dem vollständig definierten neuen Rest K_L. Dieser Rest ist das
+L-orthogonale Komplement der Basis84 innerhalb des bisherigen T.
+Alle Kopplungen mit dem alten Raum und den 96 Schalenrichtungen sind
+durch Schurminimierung berücksichtigt. Der Nachweis enthält sämtliche
+unendlich vielen Richtungen und ist kein weiterer endlicher Richtungstest.
+
+Daneben wurde die A9-Inverse konstruktiv erneuert: Für den bisherigen
+reduzierten Vergleich H_* gilt
+
+ H_*^-1 <= (11/10)[beta^-1 R_L + J P_upper J*]
+          < 10 R_L + (11/10)J P_upper J*.
+
+P_upper ist eine neue, explizite rationale 84x84-Matrix je Parität.
+R_L ist die vollständige Forminverse der Hilfsform auf dem exakten T.
+Die schwierige endliche Verstärkung bleibt in P_upper; die unendlich
+vielen übrigen Richtungen werden nicht mit der schlechtesten globalen
+Inverskonstante belastet.
+
+Die Herleitung verbindet dies mit der alten A8-Inversmajorante und dem
+Zwölferblock zu einem vollständig bestimmten positiven Operator W9 mit
+
+                         A9^-1 <= W9.
+
+Dieser gemeinsame Operator enthält die richtigen Kreuzterme und kann
+bei der Berechnung der Kräfte für den nächsten konstruktiven Übergang
+eingesetzt werden. Seine neuen Quellenintegrale sind noch nicht berechnet.
+
+Eine zusätzliche Verbesserung auf dem unveränderten bisherigen T:
+
+ Parität    Boden des reduzierten Schurvergleichs auf ganz T
+ gerade     > (1/65000) W_X
+ ungerade   > (1/11000) W_X
+
+Diese Böden betreffen den bisherigen Rest nach A8 und F12. Der wesentlich
+größere Boden 2/3 betrifft den neuen Rest nach zusätzlicher Elimination
+der 84 Antwortfunktionen. Die beiden Aussagen dürfen nicht vermischt werden.
+
+Warum dies ein struktureller Fortschritt ist
+
+Der globale Residualnachweis liefert jetzt eine explizite Erneuerungsregel:
+Ein kleiner vollständiger Residualgram relativ zur richtungsabhängigen
+Budgetlücke kontrolliert zugleich die Inverse und den ganzen hohen
+Schurrest nach Aufnahme der Antwortfunktionen. Der nächste Schritt muss
+somit nicht von einer extrem schlechten skalaren A9-Inversschranke starten.
+Die Inversenergie kann weiterhin als gemeinsame Matrixrechnung geführt
+werden. Ob ihre konkreten nächsten Kräfte klein genug bleiben, ist offen.
+
+Tatsächlich neu ausgeführt
+
+- Zwei gerichtete Inversrechnungen für die 203er-Budgetlücken mit Arb.
+- Zwei davon getrennte vollständige rationale 287x287-Blockprüfungen:
+  insgesamt 574 positive LDL-Pivots bestätigen P_upper > X E^-1 X*.
+- Direkter Abgleich aller 41.209 Budgetlücken- und 17.052 Antwortfelder
+  je Parität mit dem ursprünglichen, per SHA256 gebundenen Schurpaket.
+- Eine vollständige analytische Taylorabschätzung der ganzen Momentreihe
+  ab Grad 96, deren rationale Schlusskonstanten der Prüfer nachrechnet.
+- Gegenkontrollen für falsche Residualnormierung, fehlende Außenreste,
+  fehlende endliche Inverskorrekturen und nichtorthonormale Basen.
+- Kontrolle, dass W_X-Orthogonalität die benötigte L-Orthogonalität
+  nicht ersetzen darf.
+- Exakte Kontrollen der vollständigen zweistufigen Inversformel an einem
+  nichtkommutierenden rationalen Blockmodell, einschließlich aller Vorzeichen.
+
+Die großen globalen Integrationen wurden nicht wiederholt. Ihre früher
+geprüften vollständigen Einschließungen und die gebundene analytische
+Operator-, Domänen- und Raumzerlegungskette bleiben Voraussetzungen.
+Die neue Herleitung wurde lokal ausgearbeitet und geprüft; eine externe
+unabhängige mathematische Begutachtung ist weiterhin offen.
+
+Grenzen
+
+Der separat formulierte alte Tailboden 1/20 bleibt offen, da er sich auf
+einen anderen Rest bezieht. Der hier gezeigte Boden 2/3 entsteht durch eine
+geänderte vollständige Raumaufteilung und zusätzliche Schurelimination.
+
+Ein neuer makroskopischer Horizont und eine unbeschränkte Folge erfolgreicher
+Übergänge werden nicht behauptet. Im älteren Forschungszweig existieren
+bereits separate Endpunktzertifikate bis A11; deren Wiederholung wäre kein
+neuer Fortschritt. Objekt X insgesamt und die Riemannsche Vermutung bleiben
+offen. GitHub wurde nur gelesen und nicht verändert.
+
+Prüfreihenfolge: ANSCHLUSS_GPT1.txt, HERLEITUNG.txt, reproduce.py.

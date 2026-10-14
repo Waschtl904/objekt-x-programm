@@ -1,0 +1,12 @@
+{
+  "status": "PASS_SEALED_A9_FOLLOWUP",
+  "archive_sha256": "a1fa41958d79ab16a7c42b12375c3373f5a86a99993ae2d23c984ff6b3b2e8ae",
+  "all_original_archives_verified": 1,
+  "all_original_members_verified": 27,
+  "byte_identical_visible_copies": 24,
+  "predecessor_schur_sha256": "65085974657257bd447d93342c5001d29e797b2fa70d876d53d36b587b16c2ba",
+  "sealed_replay_receipt_matches": true,
+  "large_integrations_rerun": false,
+  "analytic_proof_machine_verified": false,
+  "external_review_open": true
+}

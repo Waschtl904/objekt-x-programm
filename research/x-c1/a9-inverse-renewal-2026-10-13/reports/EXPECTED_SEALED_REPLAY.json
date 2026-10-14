@@ -1,0 +1,9 @@
+{
+  "status": "PASS_FRESH_PACKAGE_REPLAY",
+  "sealed_files_verified": 26,
+  "all_mathematical_audit_fields_identical": true,
+  "original_Schur_source_fields_verified": true,
+  "new_complete_positive_LDL_pivots": 574,
+  "large_integrations_rerun": false,
+  "external_review_open": true
+}
