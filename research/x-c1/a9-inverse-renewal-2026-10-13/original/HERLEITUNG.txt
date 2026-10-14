@@ -1,0 +1,497 @@
+Objekt X — erneuerte Inversgeometrie und vollständiger hoher Schurrest
+13. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+0. Neuer Anschluss und Abgrenzung
+
+Dieses Paket verwendet den vollständigen globalen A8->A9-Residualnachweis,
+um daraus eine wiederverwendbare Inversmajorante zu konstruieren. Es
+benutzt weder den groben physischen A9-Boden 10^(-207) noch eine vorab
+angenommene neue Terminalpositivität. Die älteren, separaten Terminal-
+zertifikate bis A11 werden nicht als neuer Fortschritt ausgegeben.
+
+Hauptergebnisse, je Parität und unter den gebundenen Voraussetzungen:
+
+ (i) Für den vollständigen reduzierten Vergleich H_* auf T gilt
+
+       H_*^-1 <= (11/10)[ beta^-1 R_L + J P_upper J* ]
+                < 10 R_L+(11/10)J P_upper J*.            (0.1)
+
+     P_upper ist eine neue explizite rationale84x84-Matrix. R_L ist
+     die vollständige Forminverse von L auf dem exakten T, kein
+     abgeschnittener Diagonalinverser. J ist die unveränderte Basis84.
+
+ (ii) Die tatsächliche A9-Schurform nach Eliminierung des GESAMTEN
+      alten A8-Raums, der zwölf physischen Quellen F und der84 Richtungen
+      Lambda J hat auf dem unten exakt definierten neuen Rest K_L
+
+                 Schur_(A8,F,J)(q_b)[v] >= (2/3) W_X[v]. (0.2)
+
+      Dies gilt auf dem ganzen unendlichen Formrest, einschließlich
+      aller Kopplungen. F und J bilden zusammen96 endliche Schalen-
+      richtungen. K_L ist kein roher Legendre-Tail und nicht der alte T.
+
+ (iii) Eine vollständige gemeinsame obere A9-Inversenergie W9 wird in
+       Abschnitt6 explizit aus der alten A8-Inversmajorante, K12_neu,
+       den tatsächlichen Kopplungsoperatoren, R_L und P_upper gebildet.
+       Alle Kreuzterme bleiben durch gemeinsame lineare Quellen erhalten.
+       Der alte Vergleich muss künftig nicht durch10^207 I ersetzt werden.
+
+Als zusätzliche Konsequenz von (0.1) verbessert sich auch der Boden des
+bisherigen reduzierten Vergleichs auf GANZ T: >1/65000 W_X gerade und
+>1/11000 W_X ungerade. Dies wird nicht mit (0.2) verwechselt.
+
+Die neue Aufteilung schließt den separat formulierten alten Tailboden1/20
+nicht: Sie nimmt84 weitere Richtungen in den endlichen Block auf und
+verwendet ein neues Komplement. Ein neuer makroskopischer Horizont oder
+Kofinalität wird in diesem Paket nicht bewiesen. Der Fortschritt ist die
+Erneuerung der ganzen hohen Reserve und einer gerichteten gemeinsamen
+Inversabschätzung aus dem konstruktiven A8->A9-Abschluss.
+
+1. Gebundene Eingaben und Formen
+
+Die konkrete Prim-/Gamma-Form, ihre arithmetische Identifikation, der alte
+A8-Nachweis sowie die vollständigen gerichteten Integrations- und
+Residualzertifikate bleiben Herkunftseingaben. Die Domänen und die
+vollständige Raumzerlegung sind im vorangehenden Domänenpaket ausgeführt.
+Die externe mathematische Prüfung der analytischen Gesamtkette bleibt
+offen. Die neuen Rechnungen ersetzen sie nicht.
+
+Wir benutzen a=3log2/2, b=log3, X=L2((a,b),2dx),
+mu=int_0^a m^2, lambda(s)=int_a^b m s,
+W_X[s]=||s||_X^2+2|lambda(s)|^2/mu,
+mit m=cosh(x/2) bzw.sinh(x/2). Lambda ist die exakte Momentliftung.
+F=(z1,...,z4,Lambda Y1,...,Lambda Y8) sind die physischen zwölf Quellen.
+V ist der Viererraum ihrer ersten Schalenrestriktionen, und
+T=(V+ran Y)^(perp W_X). J ist die feste84-Spalte mit
+
+                  I <= J*W_X J < 1.000502 I.             (1.1)
+
+Adjunkte auf T benutzen W_X. Die Vergleichsform L ist die Restriktion
+der gewichteten lokalen Legendreform mit d_n=H_n+11/10. Auf T gilt
+L>=21/5 W_X. Die Funktionen J sind Polynome bis Grad95 und gehören
+zur Formdomäne aller hier verwendeten Formen.
+
+Der feste gemeinsame alte Inversvergleich liefert die Operatoren
+H_neu, U_neu und die191 niedrigen Kraftzeilen a_low. Die tatsächlichen
+Zwölfer-Kreuzzeilen des Vergleichs D_direct-U_neu heißen a_fin. Es gilt
+
+ S=(1-eta)q-H_neu >= beta L,
+ eta=10^(-10), beta=20209999981781/182190000000000,
+ A_force=(a_low,a_fin), D=diag((1-rho)I191,K12_neu).
+
+K12_neu>0 ist eine Untergrenze des Zwölferblocks von D_direct-U_neu.
+Setze
+
+ H_*=S-A_force* D^-1 A_force,
+ Z=J X_ans,
+ R=A_force* - S Z,
+ M=A_force Z+Z* A_force* - Z* S Z,
+ E=D-M_upper.
+
+X_ans ist die feste rationale84x203-Antwortmatrix. Alle Produkte mit
+S sind zunächst Formpaarungen. Die vollständigen Zertifikate geben
+
+ E>0, M<=M_upper,
+ R* R_L R <= c beta E,
+ c_even=1/250, c_odd=71/10000.                            (1.2)
+
+Hier sind die ursprünglichen etwas großzügigeren Gesamtpreise benutzt;
+die später verbesserten Preise sind für dieses Paket nicht erforderlich.
+Basis84, alle Außenrichtungen, Momentkorrekturen, Logarithmen, Kreuzterme
+und Modellfehler sind in (1.2) enthalten. Eine neue globale Integration
+wird nicht behauptet. R_L bezeichnet ausdrücklich die Forminverse von
+L AUF T mit den exakten Nebenbedingungen.
+
+Da S>=beta L und D(S) subset D(L), folgt variational
+
+                    R*S^-1 R <= c E.                    (1.3)
+
+Die exakte Residualidentität A_force S^-1 A_force*=M+R*S^-1R liefert
+
+ Delta:=D-A_force S^-1 A_force* >=(1-c)E>0.               (1.4)
+
+Damit ist H_* eine positive geschlossene Form. Beispielsweise ist
+E>=epsilon D mit einem positiven endlichen epsilon; aus (1.4) folgt
+H_*>=epsilon(1-c)S durch den vollständigen normierten Kopplungsoperator.
+Dies begründet die benutzten Inversen, ohne ein endliches Spektralbild
+als Ersatz für den gesamten Rest zu verwenden.
+
+2. Allgemeines Residuallemma zur Erneuerung der Inversen
+
+Die folgenden Argumente gelten allgemein für eine positive geschlossene
+S-Form, endlich viele Kraftzeilen, eine feste Antwortspalte Z und
+Annahmen (1.2),(1.3). Für jedes zulässige Funktional f gilt die vollständige
+Woodbury-Identität
+
+ <f,H_*^-1 f>
+ =<f,S^-1 f>+(A_force S^-1 f)* Delta^-1(A_force S^-1 f).  (2.1)
+
+Zur Rechtfertigung auf Formdomänen setze C=S^-1/2 A_force* D^-1/2.
+Dies ist ein beschränkter Operator, und (1.4) impliziert ||C||<1.
+Die Identität
+(I-CC*)^-1=I+C(I-C*C)^-1C*
+zwischen beschränkten Operatoren liefert (2.1). Die Produkte verlangen
+keine Anwendung eines unbeschränkten S auf beliebige Hilbertvektoren.
+Für L-formdualstetige f erfolgt dieselbe Rechnung nach der Riesz-
+Identifikation im S-Formraum. Die benötigte stetige Einbettung folgt
+aus S>=beta L.
+
+Aus A_force=Z*S+R* folgt
+
+       A_force S^-1 f=Z*f+R*S^-1 f.                     (2.2)
+
+Setze x^2=<f,S^-1 f> und z^2=(Z*f)*E^-1(Z*f). (1.3) impliziert
+||E^-1/2 R*S^-1 f||<=sqrt(c)x. Mit (1.4) folgt aus (2.1)
+
+ <f,H_*^-1 f> <=x^2+(z+sqrt(c)x)^2/(1-c)
+               =(x^2+z^2+2sqrt(c)xz)/(1-c)
+               <=(x^2+z^2)/(1-sqrt(c)).                 (2.3)
+
+Dies ist eine Matrix-/Operatoraussage. Es werden keine nichtkommutierenden
+Matrizen vertauscht. Insbesondere wird E nicht durch eine schlechte
+skalare Untergrenze ersetzt. Weil in beiden Paritäten c<1/121,
+
+         1/(1-sqrt(c))<11/10,
+         x^2<=beta^-1 <f,R_L f>.
+
+Mit Z=J X_ans und P=X_ans E^-1 X_ans* ergibt sich
+
+       H_*^-1 <=(11/10)[beta^-1 R_L+J P J*].             (2.4)
+
+Die kritische Verstärkung bleibt in einer Matrix von höchstens84
+Richtungen. Sie belastet nicht sämtliche unendlich vielen hohen
+Richtungen mit dem schlechtesten endlichen Eigenwert.
+
+Für f mit J*f=0 gilt stärker Z*f=0. Dann darf in (2.3) bereits vor
+Young z=0 eingesetzt werden. Es folgt
+
+ <f,H_*^-1 f> <=[(1-c)beta]^-1 <f,R_L f>.                (2.5)
+
+Gerade diese Variante ist der erneuerte hohe Schurboden. Ein endliches
+Galerkinresiduum allein könnte (1.3) und somit (2.5) nicht liefern.
+
+3. Neue gerichtete endliche Inversmatrizen
+
+build.py bildet E aus den exakten ursprünglichen D- und M_upper-Daten
+und berechnet mit gerichteter Arb-Arithmetik bei1024Bit P=X_ans E^-1X_ans*.
+Danach wird eine rationale symmetrische Obermatrix P_upper gebildet:
+Eintragsrundungen werden über absolute Zeilenradien diagonal bezahlt,
+zusätzlich wird10^(-40)I addiert. Das ist zunächst nur ein Kandidat.
+
+Der davon getrennte Standardbibliotheksprüfer audit.py überprüft mit
+gerichteter ganzzahliger Festkommaarithmetik auf120 Dezimalstellen
+die GESAMTE rationale287x287-Matrix
+
+                     [ E       X_ans* ]
+                     [ X_ans   P_upper ] >0.            (3.1)
+
+In beiden Paritäten bestehen287 positive LDL-Pivots. Der Schur-
+komplementsatz ergibt daraus E>0 und
+
+                  P_upper > X_ans E^-1X_ans*.           (3.2)
+
+Der Nachweis von (3.2) benötigt weder Vertrauen in eine numerische
+Inverse noch einen Eigenwertschätzer. Die Arb-Rechnung erzeugt den
+rational nachprüfbaren Kandidaten. Alle41.209 E-Einträge und17.052
+X_ans-Einträge je Parität werden zusätzlich mit dem unveränderten
+Schurarchiv und dessen per SHA256 gebundenem Antwortarchiv verglichen.
+
+Da (11/10)/beta<10, folgt (0.1). Für praktische Anwendungen werden die
+vollen richtungsabhängigen P_upper-Matrizen mitgeliefert. Die bloßen
+Spurobergrenzen sind, zur Einordnung, ungefähr56.622 gerade und9.373
+ungerade. Sie werden nur im folgenden zusätzlichen Skalarvergleich
+benutzt, nicht als Ersatz für die gespeicherten Matrizen.
+
+Aus (1.1), R_L<=5/21 I und ||P_upper||<=tr(P_upper) folgt
+
+ ||H_*^-1|| <=(11/10)[5/(21 beta)+1.000502 tr(P_upper)]
+          <65000 gerade, <11000 ungerade.                (3.3)
+
+Damit ist H_*>W_X/65000 bzw.W_X/11000 auf GANZ T. Dieselben Böden
+gelten für die tatsächliche Schurform nach A8 und F, die H_* majorisiert.
+Diese Aussagen sind stärker als die zuvor publizierten konservativen
+1.3285e-6 bzw.7.9795e-6 auf demselben T, aber der strukturelle Nutzen
+liegt in (2.4),(2.5), nicht in dieser bloßen Zahlenverbesserung.
+
+4. Der exakte neue hohe Raum und der vollständige Schurboden
+
+Setze E_J=L[J,J]>0 und definiere die L-orthogonale Projektion
+
+ P_J^L r=J E_J^-1 L[J,r],
+ K_L={v in T: L[J,v]=0}.                                (4.1)
+
+Weil J Polynome bis Grad95 sind, sind die84 Funktionale L[J,.]
+auch W_X-stetig: in lokalen Koeffizienten enthalten sie nur96 endliche
+Gewichte. Die Projektion ist deshalb ein beschränkter Hilbertprojektor
+und auch auf der S-Formdomäne beschränkt. Es gilt vollständig
+
+       T=ran J direct-sum K_L,
+       D(S)=ran J direct-sum (K_L intersect D(S)).        (4.2)
+
+Die Summe ist L-orthogonal, im Allgemeinen NICHT W_X-orthogonal.
+
+Sei H_high[v]=inf_j H_*[v+Jj] für v in K_L intersect D(S).
+Dieser Schurkomplement ist eine geschlossene positive Form. Für ein
+Funktional ell auf K_L setze f(r)=ell((I-P_J^L)r). Dann f(J)=0 und
+
+ <ell,H_high^-1 ell>=<f,H_*^-1 f>,
+ <ell,(L|K_L)^-1 ell>=<f,R_L f>.                         (4.3)
+
+Die zweite Gleichheit verwendet gerade die L-orthogonale Zerlegung.
+Die erste ist die variationale Schuridentität, also eine Aussage über
+die GANZE Raumzerlegung. (2.5),(4.3) und inverse Formordnung liefern
+
+                  H_high >=(1-c)beta L|K_L.             (4.4)
+
+Der allgemeine Boden L>=21/5 W_X gäbe schon >.462 W_X. Mit der exakten
+Geometrie des neuen hohen Raums lässt sich jedoch >2/3 W_X begründen.
+
+4a. Vollständige Basis des neuen Raums; kein hoher Abbruch
+
+Seien ell_n die X-orthonormalen lokalen Legendrepolynome,
+l_n=int_a^b m ell_n, l0=(l_0,...,l_95), lH=(l_n)_(n>=96).
+Schreibe J0 für die96x84-Legendrekoeffizienten von J und
+D0=diag(d_0,...,d_95). Setze
+
+ alpha=2/(mu+2||l0||^2),
+ v0=-alpha[l0-J0 E_J^-1 J0* D0 l0],
+ p_n=ell_n+l_n sum_(i<96)(v0)_i ell_i, n>=96.            (4.5)
+
+Zum Vollständigkeitsbeweis: k_n=ell_n-alpha l_n sum_(i<96)l_i ell_i
+ist W_X-orthogonal zum gesamten Polynomraum P95. Daher zerfällt jedes
+r in T eindeutig als Jj+sum_(n>=96)y_n k_n. Die Summe ist vollständig
+im Hilbertraum; ihre inverse y-Koordinate besteht einfach aus den
+gewöhnlichen hohen Legendrekoeffizienten. Subtraktion von P_J^L
+verwandelt k_n exakt in p_n. Somit beschreibt sum y_n p_n den ganzen
+K_L und nicht nur getestete Außenrichtungen.
+
+Direktes Ausmultiplizieren, zunächst für endliche y und dann durch
+Abschluss, ergibt
+
+ W_X[sum y_n p_n]=||y||^2+C_W |sum l_n y_n|^2,
+ C_W=||v0||^2+(2/mu)|1+l0* v0|^2 >=0,
+ L[sum y_n p_n]=sum d_n|y_n|^2+(v0*D0v0)|sum l_n y_n|^2. (4.6)
+
+Es werden ALLE n>=96 behalten. Für Formvektoren gilt die zweite
+Identität in der natürlichen gewichteten Reihe, mit nichtnegativem
+Rang-eins-Zusatz.
+
+4b. Eigenständiger vollständiger Momentrest
+
+Aus den gebundenen elementaren Endpunktgrenzen gelten
+h=b-a<3/50, mu>9/100, nu=int_a^b m^2<1/10.
+Parseval gibt ||l0||^2<=nu/2<1/20, also ||l0||<1/4.
+Aus (1.1) und E_J>=21/5 I folgt
+
+ alpha<23, ||J0||^2<2, ||E_J^-1||<=5/21, ||D0||<7,
+ ||v0||<23[1+2*(5/21)*7]/4<30,
+ C_W<30^2+23*9^2<3000.                                 (4.7)
+
+Für die GANZE Reihe lH genügt hier ein neuer einfacher Taylorbeweis.
+Mit Mittelpunkt c0=(a+b)/2 und lokaler Variable t in[-1,1] ist
+m(c0+(h/2)t) eine Linearkombination von exp(±ht/4); die Summe der
+absoluten Vorfaktoren ist <2. Ihre Taylorpolynome bis Grad95 haben
+bei h/4<3/200 einen gemeinsamen uniformen Rest
+
+              e_m < 4(3/200)^96/96!.
+
+Die geometrische Majorante des Exponentialrestes liefert den Faktor2;
+der andere Faktor2 bezahlt beide Vorfaktoren. Orthogonale Projektion
+auf P95 ist mindestens so gut wie dieses konkrete Polynom. Weil die
+X-Koeffizienten von m gleich2l_n sind, folgt durch Parseval
+
+ ||lH||^2 <=(h/2)e_m^2
+          < (3/100)[4(3/200)^96/96!]^2 <10^(-600).        (4.8)
+
+audit.py prüft den letzten Vergleich exakt als rationale Zahl, ebenso
+d95<7 und d96=H_96+11/10>31/5. Aus (4.6)–(4.8) folgt auf GANZ K_L
+
+ L >= [d96/(1+3000||lH||^2)] W_X > (61/10) W_X.         (4.9)
+
+Beide übernommenen Residualpreise erfüllen (1-c)beta>11/100. Deshalb
+
+ H_high > (11/100)(61/10) W_X
+        =671/1000 W_X >2/3 W_X.                         (4.10)
+
+Die mit den ungerundeten rationalen Zahlen berechneten unteren Werte
+liegen bei .69017 gerade und .68802 ungerade. Veröffentlicht wird der
+einfache gemeinsame Boden2/3. Die neue Momentabschätzung (4.8) ist viel
+gröber als frühere Momentdaten, aber vollständig und für (4.10) reichlich.
+
+5. Rückbindung an die tatsächliche physische A9-Form
+
+Sei C_actual die Form nach Elimination des ganzen alten A8-Raums und
+B=D_direct-U_neu ihr gemeinsamer unterer Vergleich auf F+Lambda T.
+Sein tatsächlicher Zwölferblock K_B ist >=K=K12_neu. Daher gilt
+
+ Schur_F(C_actual) >= Schur_F(B)
+ >=q-H_neu-a_low*((1-rho)I)^-1 a_low-a_fin*K^-1a_fin
+ =eta q+H_* >=H_*                                      (5.1)
+
+auf T; q>=L>0 ist eine gebundene volle Formschranke. Minimierung über
+die zusätzlichen84 J-Koordinaten erhält die Ordnung. Mit (4.10) folgt
+für jedes v in K_L intersect D(q)
+
+ inf_(w,z,j) q_b[J_old w+Fz+Lambda(Jj+v)]
+                   >=H_high[v] >=(2/3)W_X[v].           (5.2)
+
+Das infimum reicht über den VOLLSTÄNDIGEN alten Formraum und alle96
+endlichen Schalenkoordinaten. Die endlichen Richtungen oder ihre
+Kopplungen sind also nicht still weggelassen. (5.2) ist der behauptete
+erneuerte volle hohe Schurboden, nicht nur die Einschränkung von q
+auf einen positiven Teilraum.
+
+6. Explizite gemeinsame Inversmajorante für den ganzen A9-Raum
+
+6a. Die alte Majorante ist für beliebige alte Quellen gültig
+
+Im alten Moment-/Legendrekoordinatensystem seien Phi die191 niedrigen
+physischen Vertreter, T_h der duale hohe Koordinatenoperator und B8 die
+wirkliche vollständige alte Low/High-Kopplung. Der alte hohe Block ist
+>=delta I, delta=18219/10000. Der neue gebundene endliche Vergleich
+F8 liegt unter A_low-B8 B8*/delta. Seine rationale Kongruenz C_inv
+erfüllt F8^-1<=C_inv C_inv*/(1-rho).
+
+Für JEDE alte Hilbertquelle f8, nicht nur die bisher eingesetzten
+g(r), folgt durch die vollständige alte Quadratergänzung
+
+ <f8,A8^-1 f8> <= <f8,U8 f8>,
+ U8=T_h*T_h/delta+V8*V8/(1-rho),
+ V8=C_inv*(Phi* -B8 T_h/delta).                          (6.1)
+
+Dies ist genau die bisher als W_U benutzte gemeinsame Majorante.
+Der universelle Geltungsbereich folgt aus der alten Blockungleichung;
+er wird nicht aus endlich vielen erfolgreichen Krafttests extrapoliert.
+Alle Operatoren beziehen sich auf die alten vollständigen Räume. Die
+wirkliche Kopplung B8 bleibt in (6.1); ihre numerischen Modelle benötigen
+bei neuen Quellen weiterhin die gebundenen Fehlerpreise.
+
+6b. Vergleichsform mit festgelegter vollständiger Ergänzung
+
+Für die A9-Koordinaten u=J_old w+Fz+Lambda r setze
+G(z,r)=g_F z+g r. Dabei sind g_F und g die tatsächlichen alten
+Quelloperatoren. Definiere
+
+ a_fin=(D_direct-G*U8G)[F,Lambda .],
+ a_low=V8 g,
+ K=K12_neu.
+
+Diese a_fin sind exakt die gebundenen neuen Kraftzeilen. Alte
+P-residualisierte Kräfte oder die Kreuzzeilen der wahren A8-Inverse
+dürfen nicht unbesehen an ihre Stelle treten.
+
+Die folgende Vergleichsform ist ein Untervergleich der tatsächlichen
+vollen A9-Form:
+
+ Q_lower[w,z,r]
+ =||U8^-1/2(w+U8G(z,r))||^2
+  +||K^1/2(z+K^-1a_fin r)||^2+H_*[r].                  (6.2)
+
+Hier ist U8^-1 als positive inverse FORM zu verstehen. Aus A8^-1<=U8
+folgt inverse Formordnung A8>=U8^-1. Da A8^-1 injektiv ist, ist U8
+injektiv; ein gesonderter gleichmäßiger unterer Boden für U8 wird nicht
+benötigt. Die Domäne der A8-Form liegt in D(U8^-1/2), und U8G(z,r)
+liegt ebenfalls in D(U8^-1/2). Damit sind die Ergänzungen in (6.2)
+legitim; eine Zugehörigkeit von U8G(z,r) zur alten A8-Formdomäne wird
+dabei nicht vorausgesetzt.
+
+Die exakte vollständige A9-Koordinatenabbildung ist ein beschränkter
+Isomorphismus, aber keine vorausgesetzte Isometrie. Die beiden in (6.2)
+auftretenden Dreieckstransformationen sind auf dem Produkthilbertraum
+beschränkt und invertierbar. Die Diagonalform mit U8^-1, K und H_* ist
+geschlossen und koerziv. Damit definiert Q_lower eine geschlossene
+koerzive Form auf der entsprechend transformierten Domäne; diese
+enthält die tatsächliche q_b-Domäne. Die in Abschnitt 6c verwendeten
+physischen Adjunkte berücksichtigen die nichtorthogonalen Koordinaten.
+
+Beim Ausmultiplizieren von (6.2) sind sämtliche alten und neuen Kreuz-
+terme genau diejenigen von q_b. Die Differenz q_b-Q_lower besteht nur
+aus (A8-U8^-1)[w], (K_B-K)[z] und eta q[r], also aus drei nichtnegativen
+Formen. Dadurch ist Q_lower<=q_b auf dem vollen Formraum begründet.
+Ihre Positivität benutzt H_* aus dem globalen Residualnachweis.
+
+6c. Die Inversformel für beliebige neue Quellen
+
+Für eine beliebige physische Hilbertquelle f auf dem A9-Momentraum seien
+die dualen Koordinaten f8=J_old*f, f12=F*f, fT=Lambda_T*f. Setze
+
+ v12=f12-g_F* U8 f8,
+ vT =fT -g* U8 f8,
+ nu =vT-a_fin* K^-1 v12.                               (6.3)
+
+Dies sind GEMEINSAME lineare Ausdrücke in f. Aus (6.2) folgt exakt
+
+ <f,Q_lower^-1 f>
+ =<f8,U8 f8>+v12*K^-1v12+<nu,H_*^-1nu>.
+
+Mit (0.1) ergibt sich der vollständig bestimmte positive Operator W9
+durch seine quadratische Form
+
+ <f,W9 f>
+ := <f8,U8 f8>+v12*K^-1v12
+    +(11/10)[ beta^-1 <nu,R_L nu>
+                        +(J*nu)*P_upper(J*nu) ].        (6.4)
+
+Dann gilt auf dem GANZEN physischen A9-Hilbertraum
+
+                         A9^-1 <= W9.                  (6.5)
+
+Die Hilbertquelle f benötigt keine Operatordomänenzugehörigkeit.
+Alle adjungierten Kopplungen in (6.3) sind durch die vorherigen
+Domänenlemmata L2-beschränkt, R_L ist vollständig und beschränkt,
+und sämtliche endlichen Matrizen sind positiv. W9 ist damit ein
+beschränkter positiver Operator, nicht nur eine Liste endlicher Werte.
+
+Für jede neue endliche oder unendliche Quellenabbildung G_next folgt
+gemeinsam G_next* A9^-1 G_next<=G_next*W9 G_next. Dies ist die benötigte
+Form einer alten Inversenergie beim nächsten konstruktiven Übergang.
+Die notwendigen neuen Quellenintegrale sind dadurch nicht schon
+berechnet; ihr Operator und ihre richtige gemeinsame Metrik sind jedoch
+festgelegt. Die endlichen Energiespalten haben191+12+84=287 Koordinaten
+je Parität. Daneben stehen die alte vollständige Hochenergie und der
+vollständige L-Dualterm. Diese Zahl ist kein behaupteter Roh-Legendre-
+Schnitt und keine finite Approximation der beiden unendlichen Anteile.
+
+7. Warum dies mehr als eine weitere Richtungskontrolle ist
+
+Das neue allgemeine Anschlussprinzip lautet: Ein voller Residualpreis
+c<1 relativ zum DIREKTIONALEN Gap E liefert nicht nur Positivität.
+Er liefert die gemeinsame Inversmajorante (2.4) und nach Aufnahme der
+Antwortfunktionen in den endlichen Block den vollen erneuerten Boden
+(1-c)beta L. Auf unserem konkreten neuen hohen Raum ist dieser Boden
+sogar physisch mindestens2/3. Die bisher schwierigen Richtungen sind
+in P_upper konzentriert; der unendliche Rest erhält eine feste Reserve.
+
+Die neue matrixwertige Inversmajorante kann in zukünftige Schur-
+vergleiche eingesetzt werden. Dafür müssen die neuen Quellen gegen
+diese gemeinsame Majorante gerechnet werden, statt die gesamte A9-
+Inverse durch den schlechtesten skalaren Eigenwert zu ersetzen.
+
+Dies ist keine Garantie, dass bei jedem weiteren Horizont wieder c<1
+zertifiziert werden kann, dass die Zahl kritischer Richtungen klein
+bleibt oder dass die Schritte eine unbeschränkte Horizontfolge bilden.
+Diese Erneuerung im Allgemeinen bleibt offen. Die konkrete A9-
+Erneuerung selbst ist durch die vorstehenden Identitäten geschlossen,
+unter genau den gebundenen analytischen und Integrationsvoraussetzungen.
+
+8. Prüfumfang und Gegenkontrollen
+
+Neu ausgeführt: zwei gerichtete203er-Inversrechnungen; zwei vollständige
+287er-Rationalprüfungen der Obermatrizen; exakte Quellenfeldbindungen;
+vollständige rationale Taylor-Restabschätzung für alle Momente ab96;
+alle neuen hohen und global reduzierten Skalarkonstanten.
+
+Gegenkontrollen verwerfen: ein ungewichtetes statt E-normalisiertes
+Residualbudget; Weglassen der endlichen Inverskorrektur; Behandlung
+einer nichtorthonormalen Basis als Isometrie; Weglassen eines großen
+Außenresiduums; Ersetzen der L-Orthogonalität durch W_X-Orthogonalität;
+einen indefiniten rationalen Block. Die vollständige Inversidentität
+wird an exakten Beispielen mit nichtverschwindendem Residual geprüft.
+Zusätzlich wird die vollständige zweistufige Inversformel an einem
+nichtkommutierenden rationalen 2+2+2-Blockmodell gegengeprüft: sieben
+Quellen, beide Subtraktionsvorzeichen und die volle Inversordnung.
+Diese Kontrollen ergänzen die allgemeinen Beweise und ersetzen sie nicht.
+
+Die großen globalen Integrationen wurden nicht wiederholt. Die externe
+mathematische Prüfung bleibt offen. Historische Quelldateien bleiben
+unverändert. GitHub wurde nur gelesen, nicht verändert.

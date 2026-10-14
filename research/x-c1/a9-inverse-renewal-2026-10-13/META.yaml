@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR",
+  "date": "2026-10-13",
+  "kind": "CONSTRUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Nach zusätzlicher Elimination der Basis84 gilt für den ganzen neuen L-orthogonalen Schurrest mindestens 2/3 W_X; explizite gemeinsame A9-Inversmajorante aus dem vollständigen globalen Residualvergleich.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "Der Boden 2/3 bezieht sich auf den neuen Rest nach A8, F12 und Basis84; er beweist nicht den alten gesonderten Tailboden 1/20.",
+  "depends_on": [
+    "A8-A9-CONDITIONAL-GLOBAL-SCHUR-CLOSURE"
+  ],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "Kein alter gesonderter Tailboden 1/20.",
+    "Keine erneute große Integration oder externe analytische Begutachtung.",
+    "Kein neuer makroskopischer Horizont, keine Kofinalität, kein fertiges Objekt X oder RH-Beweis."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/a9-inverse-renewal-2026-10-13/PROOF.md",
+    "sha256": "3f1f85227b7e157cc9dadb6fbc880bc49842a25eec559998f73423609cd2df28"
+  }
+}

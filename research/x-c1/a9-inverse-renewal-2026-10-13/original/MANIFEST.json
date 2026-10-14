@@ -1,0 +1,109 @@
+{
+  "scope": "New inverse-renewal certificate and unchanged source references",
+  "files": {
+    "BERICHT.txt": {
+      "bytes": 4747,
+      "sha256": "16a861cdde4009ade51a3769148bf5ffe53aa831ffb2c9984a3b643a7123bde2"
+    },
+    "HERLEITUNG.txt": {
+      "bytes": 22261,
+      "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7"
+    },
+    "README.txt": {
+      "bytes": 2530,
+      "sha256": "cc5e99e07d43cdc71c33ba835589b1e683eb6ef6a080fa5b473122ddf9801b2d"
+    },
+    "ANSCHLUSS_GPT1.txt": {
+      "bytes": 3316,
+      "sha256": "56341f87706e20d3949e8bebb0fa63b85c8a9ace7dfb3207f62aa002fe60cb4c"
+    },
+    "audit.py": {
+      "bytes": 11529,
+      "sha256": "fb63ed8c9dd33c522f949a6931686860d96bbd8d596facc1a6743b21418348eb"
+    },
+    "build.py": {
+      "bytes": 3978,
+      "sha256": "a22dec466a71768e17b928b21d25b662b1d2637c38d18b3719c1baa80999e1ee"
+    },
+    "safe_serial.py": {
+      "bytes": 922,
+      "sha256": "85ed2ce2abbcaf51f358a3ebac6bb6102a5b63c4a061415abf8abf1d213107b1"
+    },
+    "reproduce.py": {
+      "bytes": 1661,
+      "sha256": "9819c3f9f41ade7ccea79f775aea6a9eef9005bd38cbad30ed9be65c73f7a9fc"
+    },
+    "INVERSE_EVEN.json": {
+      "bytes": 9794290,
+      "sha256": "56d1fbbf7b985debba2bc9e92d404f29adf7985c2779ecf058c841fcc7aded50"
+    },
+    "INVERSE_ODD.json": {
+      "bytes": 9786816,
+      "sha256": "5cd91520b6f3c6170d09eee6b0b9aa10d2e707fc13219970d6ebc4b57befb772"
+    },
+    "AUDIT.json": {
+      "bytes": 8538,
+      "sha256": "33456af98d0ba6151639c66729d12ef3f12bc695f14a9e0985c2115ba0e61783"
+    },
+    "SOURCE_BINDINGS.json": {
+      "bytes": 5070,
+      "sha256": "ac26b6c95b4d35ec67c42596898feb92617a92b5fcf9d3bb4952fb8fbb1a892a"
+    },
+    "sources/SCHUR_HERLEITUNG.txt": {
+      "bytes": 10678,
+      "sha256": "9860ffca22a64140509fcce2876935473c74f08d8cd587a0b7fcf8e56c1cd167"
+    },
+    "sources/SCHUR_ASSEMBLY_AUDIT.json": {
+      "bytes": 9285,
+      "sha256": "29534f1b3ac86874e7d89df6837bf88a5328721af99ea9920b93809a00d0624e"
+    },
+    "sources/SCHUR_INPUT_BINDINGS.json": {
+      "bytes": 846,
+      "sha256": "9597df2ee9feaade29c484989a14a0ef2946e5e9ac5ff84059185494699de1d8"
+    },
+    "sources/PREVIOUS_FULL_CHAIN_REPLAY.json": {
+      "bytes": 10077,
+      "sha256": "d8f9986b50d5a3661e5617b65b3522b09752455c1b25ed8b0bbdd0bf24584e64"
+    },
+    "sources/RESPONSES_PROOF.txt": {
+      "bytes": 10731,
+      "sha256": "122fabae61dad7d6d6916d899ea8ae8c44a1ead451ac68919e6ce9304f002e61"
+    },
+    "sources/COMMON96_HERLEITUNG.txt": {
+      "bytes": 8234,
+      "sha256": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd"
+    },
+    "sources/FULL_DUAL_GEOMETRY.txt": {
+      "bytes": 7729,
+      "sha256": "3e12959df0cea48e904d9d4f183da82e65677b89a167e78bae8dd7a06ccbe6bd"
+    },
+    "sources/BASIS84_ENERGY_REVIEW.txt": {
+      "bytes": 5913,
+      "sha256": "20e62136ae49fd75942ce12d00243230b41c32cfbb74e9ceffdb6138f561c422"
+    },
+    "sources/DOMAIN_HERLEITUNG.txt": {
+      "bytes": 23771,
+      "sha256": "e6075606f6a26c354f1eb756b568f91cbb7a0b035022b44ef60a0120ae4ea819"
+    },
+    "sources/DOMAIN_BOUND_INPUTS.json": {
+      "bytes": 223164,
+      "sha256": "13c099bc28dcacc012338da953db04669ddb23f8d7861be90fcaf6e8c1737409"
+    },
+    "sources/DOMAIN_CHECK.json": {
+      "bytes": 2675,
+      "sha256": "ebdf8da2840d2ab77fa01fcdc78c3aabeff23ad8fc59937b1d54da88006dc9b6"
+    },
+    "sources/DOMAIN_LEMMATA_2026-10-06.txt": {
+      "bytes": 14174,
+      "sha256": "865b8403bd00d390603eb0a856ee843beea723b194fa488fc78c9422c666d9e1"
+    },
+    "sources/A8_PROOF_original.txt": {
+      "bytes": 17081,
+      "sha256": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661"
+    },
+    "sources/REMAINDER_BEWEIS_2026-10-05.txt": {
+      "bytes": 19748,
+      "sha256": "1ef4dabd030d86d8883a5eaf07a60a4b72a047bec502d2092df08e89d7dc2dcf"
+    }
+  }
+}

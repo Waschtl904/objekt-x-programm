@@ -120,5 +120,6 @@ Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getre
 ## Noch nicht in den geprüften Stand übernommene Pakete
 
 - `A9-DOMAIN-FLOOR-LOCAL-CONTINUATION`: PENDING_STATUS_REVIEW — `research/x-c1/a9-domain-continuation-2026-10-13/META.yaml`.
+- `A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR`: PENDING_STATUS_REVIEW — `research/x-c1/a9-inverse-renewal-2026-10-13/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

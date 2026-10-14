@@ -1,0 +1,64 @@
+Gegenprüfung: neue A9-Inverse und ganzer hoher Schurrest
+13. Oktober 2026
+
+Bitte zuerst die analytischen Identitäten prüfen, dann den rationalen
+Replay. Ein bestandener Matrixtest allein beweist die Formdomänenaussagen
+nicht. Dieses Dokument ist ein vorgeschlagener Prüfauftrag, kein Nachweis
+einer bereits erfolgten externen Gegenprüfung.
+
+1. HERLEITUNG Abschnitte 1–2:
+   E=D-M_upper>0, vollständiges R*R_L R<=c beta E, daraus
+   Delta=D-A S^-1 A* >=(1-c)E. Die Woodbury-Identität wird auf dem
+   vollständigen Formraum geführt. Bitte den E-normalisierten Schritt
+   und den Faktor 1/(1-sqrt(c)) unabhängig prüfen.
+
+2. Abschnitt 3 und beide INVERSE-Dateien:
+   [E,X*;X,P_upper]>0 hat Dimension 287. Der vollständige gerichtete
+   rationale LDL-Prüfer bestätigt 287 Pivots je Parität. Die Matrizen
+   sind nicht bloß Ergebnisse eines Eigenwertschätzers. J ist nicht
+   orthonormal; die Normgrenze 1.000502 wird ausdrücklich verwendet.
+
+3. Abschnitte 4–4b:
+   K_L ist L-orthogonal zu J, nicht W_X-orthogonal. Bitte die beiden
+   vollständigen variationalen Inversidentitäten (4.3) prüfen und die
+   daraus folgende untere Formordnung (4.4). Die p_n, n>=96, beschreiben
+   den GANZEN neuen Rest. Der neue Momenttail wird über den Fehler eines
+   konkreten Grad95-Taylorpolynoms und Parseval eingeschlossen; insbesondere
+   die Faktoren 2 aus dem Maß und aus den Momentkoeffizienten prüfen.
+
+4. Abschnitt 5:
+   Schurmonotonie zuerst über alle alten A8-Richtungen und F12, danach J.
+   Keine endlichen oder unendlichen Kopplungen dürfen entfallen. Das
+   Ergebnis ist der neue hohe Boden 2/3 W_X, kein Beweis des alten 1/20.
+
+5. Abschnitt 6:
+   Der alte Inversvergleich U8 muss für ALLE alten Quellen gelten; dies
+   folgt aus der alten vollständigen Blockungleichung. Die inverse Form
+   U8^-1 benötigt keinen zusätzlichen unteren Operatorboden für U8.
+   Bitte Q_lower vollständig ausmultiplizieren: q_b-Q_lower muss genau
+   (A8-U8^-1)[w]+(K_B-K)[z]+eta q[r] sein.
+   Danach die zwei gemeinsamen Quellsubtraktionen in (6.3) und W9 in
+   (6.4) prüfen. Die ursprünglichen physischen Koordinaten sind nicht
+   als orthonormal vorausgesetzt. Die verwendeten a_fin sind die neuen
+   gemeinsamen Vergleichskräfte, keine alten P-residualisierten Kräfte.
+
+6. Rechnen:
+   python reproduce.py --schur-package "PFAD/ZUM/Objekt-X-Globaler-Schurabschluss-A8-A9-2026-10-13.zip"
+
+   Ohne dieses Archiv prüft python reproduce.py ebenfalls sämtliche neuen
+   rationalen Matrizen und Konstanten. Der zusätzliche erneute Feldabgleich
+   mit dem Ursprung wird dann ausdrücklich als nicht ausgeführt markiert.
+
+   SHA256 des unveränderten Schurarchivs:
+   65085974657257bd447d93342c5001d29e797b2fa70d876d53d36b587b16c2ba
+
+7. Nächster konstruktiver Auftrag nach Bestätigung:
+   Eine neue Quellenfamilie gegen W9 rechnen. Dafür müssen gemeinsam
+   f8*U8 f8, v12*K^-1 v12, der VOLLSTÄNDIGE L-Dualgram der nu-Quellen
+   und die 84 Koordinaten J*nu eingeschlossen werden. Bloße endliche
+   Projektionen oder separate skalare Obergrenzen ohne gemeinsame
+   Kreuzfehler ersetzen diese Aufgabe nicht.
+
+   Die resultierende Inversenergie ist dann mit einem neuen direkten
+   Schalenblock zu vergleichen. Noch kein weiterer Horizont und keine
+   Kofinalität sind hieraus bereits zertifiziert.
