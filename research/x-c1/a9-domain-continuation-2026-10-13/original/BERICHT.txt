@@ -1,0 +1,90 @@
+Objekt X — ein voller A9-Boden und eine ausdrückliche lokale Fortsetzung
+13. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Aus der bestehenden vollständigen Schurkette ist jetzt ein zusätzlicher,
+klar abgegrenzter Anschluss hergeleitet. In beiden Paritäten gilt unter
+den unten genannten gebundenen Eingaben
+
+                 q_A9[u] >= 10^(-207) ||u||_L2(dx)^2.
+
+Das ist ein Boden für den GANZEN physischen A9-Formraum. Der bisherige
+Boden von etwa 1.3e-6 bzw.8.0e-6 galt dagegen nach den Eliminationen auf
+dem Rest. Die Rückrechnung bezahlt jetzt ausdrücklich beide vollständigen
+Ergänzungsantworten. Die kleine Zahl ist eine grobe garantierte Grenze,
+keine Schätzung der tatsächlichen kleinsten Eigenzahl.
+
+Zusätzlich folgt für jeden Horizont
+
+          log3 <= t <= log3+exp(-10^215)
+
+die vollständige Positivität mit dem physischen Boden
+
+                 q_t[u] >= 10^(-421) ||u||_L2(dx)^2.
+
+Der neu aktive Kanal9 ist vollständig bezahlt. Dieser Fortsetzungsschritt
+ist mathematisch ausdrücklich positiv, aber praktisch extrem klein.
+Er erreicht weder A10 noch A11 und liefert keine kofinale Folge.
+
+Was dafür neu geprüft und bewiesen wurde
+
+- Die benötigte Formdichte, Schnittverträglichkeit, Momentliftung und
+  vollständige Zwölfer-/Restzerlegung sind für die konkrete Gamma-Form
+  eigenständig ausgeführt. Ein direkter Beweis mit abgeschnittenen
+  positiven Formen vermeidet einen Dichtezirkel beim Kern-/Schalenschnitt.
+- Die starken Operatoranwendungen auf den tatsächlich verwendeten
+  stückweise glatten Quellen besitzen vollständige L2-Majoranten.
+  Beliebige Restvektoren bleiben in der Formdomäne; eine zusätzliche
+  starke Operatordomänenannahme wird ihnen nicht auferlegt.
+- Beide rationalen Zwölfermatrizen erfüllen K12_neu>10^(-16) I.
+  Je Parität bestehen 12 exakte Bruch-LDL-Pivots und unabhängig davon
+  12 ganzzahlige Sylvesterprüfungen. Auch beide Achtspaltengrame bestehen.
+- Die tatsächliche alte Inverse und alle gemischten Kopplungen sind bei
+  der Umrechnung in die ursprüngliche L2-Norm enthalten.
+- Auf der zusätzlichen schmalen Schale wächst die positive Gamma-
+  Selbstenergie mindestens wie (1/2)log(1/h). Eine vollständige,
+  h-unabhängige Kopplungsschranke reicht deshalb für den neuen Anschluss.
+  Die Rechnung behauptet nicht, dass die Kopplungsnorm selbst klein wird.
+
+Die rationale Gesamtrechnung und ihre Gegenkontrollen bestehen.
+Alle benutzten Zwölferfelder wurden direkt mit dem versiegelten
+globalen Schurpaket verglichen; sämtliche S-Koeffizienten stimmen mit
+der ursprünglichen, per SHA256 gebundenen Datei überein.
+
+Verbleibende Voraussetzungen und Grenzen
+
+Die arithmetische Identifikation der Nichtpolform mit der beabsichtigten
+Weil-Form, der alte vollständige A8-Boden und die bereits gebundenen
+gerichteten Integrationen/Fehlerzertifikate werden übernommen.
+Die großen Integrationen wurden in diesem Durchlauf nicht neu erzeugt.
+Der neue rationale Prüfer bestätigt die ausgewiesenen endlichen und
+skalaren Rechnungen; er ersetzt keine externe Prüfung der analytischen
+Beweise. Diese bleibt offen.
+
+Die Domänen- und vollständigen Zerlegungsaussagen sind nun im konkreten
+Modell begründet und an den Anschluss gebunden. Damit werden diese
+Voraussetzungen auf explizite nachprüfbare Lemmata zurückgeführt;
+der Gesamtabschluss wird nicht als voraussetzungslos ausgegeben.
+
+Die neue lokale Schurreserve auf der zusätzlich eingeführten Schale
+beweist NICHT den gesonderten alten Tailboden1/20. Dieser bleibt offen.
+Eine endlos wiederholbare Fortsetzung zu beliebig großen Horizonten,
+Objekt X insgesamt und RH bleiben ebenfalls offen. Die lokalen
+Schrittweiten können sich aufsummieren; ein Ausschluss eines endlichen
+Grenzhorizonts fehlt. GitHub wurde nicht verändert.
+
+Nächster mathematisch sinnvoller Prüfpunkt
+
+Die Gegenprüfung sollte die neue analytische Herleitung und die zwei
+Normumrechnungen prüfen, insbesondere die Behandlung von Kanal9 und
+die Faktoren im Gamma-Außenintegral. Für einen praktisch brauchbaren
+nächsten Horizont wird anschließend eine deutlich schärfere gemeinsame
+A9-Inversenergie benötigt. Mehr bloße Richtungstests helfen hier nicht.
+
+Dateien
+
+HERLEITUNG.txt: vollständige Definitionen, Beweise und Herkunftsgrenzen.
+CHECK.json: exakte neue Prüfergebnisse und Statusgrenzen.
+reproduce.py: schneller reproduzierbarer Prüflauf, nur Python-Standardbibliothek.
+ANSCHLUSS_GPT1.txt: konkreter Gegenprüfauftrag.

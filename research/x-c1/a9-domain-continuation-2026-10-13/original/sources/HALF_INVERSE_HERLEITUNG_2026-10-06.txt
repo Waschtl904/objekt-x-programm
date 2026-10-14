@@ -1,0 +1,275 @@
+Objekt X — erste vollständige Halbinversen-Einschließungen des Restpiloten
+6. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Dies ist eine Rechnung am eingefrorenen P_R und an den eingefrorenen
+acht Richtungen je Parität. Sie schließt den vollständigen Fehler der
+Halbinversenbilder ein. Die alte inverse Antwort, die vier C-Kopplungen
+und der Schurtest des vollständigen B_R sind damit noch nicht berechnet.
+
+1. Gebundene Voraussetzungen und unveränderte Definitionen
+
+Die Nichtpolform, Shell-/Core-Zerlegung, Formdomäne und Operatordomäne
+werden aus den mitgelieferten Vorgängertexten übernommen. Insbesondere:
+
+ a=3 log(2)/2, b=log(3), h=b-a, X=L2((a,b),2 dx),
+ m=cosh(x/2) bzw. sinh(x/2), mu=int_0^a m^2, nu=int_a^b m^2,
+ lambda(s)=int_a^b m s, W_X[s]=||s||_X^2+2|lambda(s)|^2/mu.
+
+V ist genau der bisherige Viererraum. R=V^(perp W_X). P_R ist der
+Operator zu q_b[Lambda r]+19 W_X[r]. Die acht e_j und P_8 bleiben
+unverändert. Keine positive neue Gesamtform und keine A9-Gesamtinverse
+werden angenommen. Der alte Inversenboden wird in dieser neuen
+Halbinversenrechnung nicht benötigt.
+
+P_R^(-1/2) ist kompakt; die Operatoren der Formen S und U_- haben
+kompakte Resolvente. Diese Begriffe werden nicht gleichgesetzt.
+
+2. Modell des lokalen unbeschränkten Operators
+
+In der X-orthonormalen lokalen Legendrebasis ell_n lautet der reine
+Schalenoperator, einschließlich des Zuschlags 19, vor den beiden
+regulären Gamma-Kernen:
+
+ T0 = D_H + V_log + c0 I,
+ V_log(t)=-log(1-t^2)/2, t=(2x-a-b)/h,
+ c0=19-log(pi h)-gamma.
+
+D_H hat die Eigenwerte H_n. Primverschiebungen besitzen auf der reinen
+Schale keinen Selbstterm. Ihre Beiträge zur Momentkorrektur werden
+unten mit dem vollständigen Core-/Shell-Operator eingeschlossen.
+
+Die ausgelassenen Gamma-Operatoren haben die Kerne
+
+ k_reg(|x-y|),  und  (-1)^p k(x+y),
+ k(u)=exp(-u/2)/(1-exp(-2u)), k_reg(u)=k(u)-1/(2u).
+
+Ihre Kompression auf R wird direkt eingeschlossen. Sei tau(s)=int s
+und seien l_R=||lambda|_R||_(W_X-dual), t_R=||tau|_R||_(W_X-dual).
+Mit W_V=C* W_X C und den vier V-Koeffizienten C gilt exakt:
+
+ l_R^2=mu nu/[2(mu+nu)]-(lambda C) W_V^(-1) (lambda C)*,
+ t_R^2=h/2-(int m)^2/[2(mu+nu)]-(tau C) W_V^(-1)(tau C)*.
+
+Das sind Normen auf dem gesamten R, keine Normen einer endlichen
+Restmatrix. Die Formeln folgen aus der Rang-eins-Inverse von W_X und
+der exakten W_X-Projektion auf V.
+
+Schreibe c=(a+b)/2. Aus
+
+ k_reg(u)=[sech(u/2)+csch(u/2)-2/u]/4
+
+und den Taylor-Majoranten für sinh/cosh folgt für 0<u<=h:
+
+ |k_reg(u)-1/4| <= cosh(h/2)(h^2/32+h/48)=e_self.
+
+Auf [2a,2b] ist |k'| durch
+
+ d_mirror=k(2a)[1/2+2 exp(-4a)/(1-exp(-4a))]
+
+beschränkt. Daher ist |k(x+y)-k(2c)|<=h d_mirror. Die konstante
+Kernwirkung hat auf R die Norm höchstens 2|constant| t_R^2. Der
+Schurtest der verbleibenden beschränkten Kerne ergibt insgesamt
+
+ delta_reg=2(1/4+k(2c))t_R^2+h(e_self+h d_mirror).
+
+Diese Abschätzung kontrolliert die vollständige Kompression auf R.
+Sie behauptet keine Invarianz eines endlichen Legendre-Raums.
+
+3. Momentkorrektur und stärkerer vollständiger Boden
+
+Sei d(s)=q^np(m_core,Sigma s). Die geerbte Core-/Shell-Schranke gibt
+
+ ||d||_(X-dual) <= (16/5)sqrt(2mu)=d0.
+
+Aus dem Operatordomänen-Lemma für m_core, mit R0=a, J=2,
+M=cosh(a/2), L=M/2, folgt
+
+ HG=(2L+20M)sqrt(2a+2)+4M sqrt(2)+2sqrt(2)(2aM),
+ |q^np[m_core]| <= sqrt(2mu)[HG+18sqrt(2mu)]=q_core_abs.
+
+Die vollständige Momentkorrektur einschließlich des Zuschlags 19 W_X
+hat auf R gegenüber T0 die Norm höchstens
+
+ delta_mom=2 l_R d0/mu+q_core_abs l_R^2/mu^2+38 l_R^2/mu.
+
+Da ||r||_X^2>= (1-2 l_R^2/mu) W_X[r], V_log>=0 und D_H>=0,
+gilt außerdem, mit Beibehaltung des positiven Momentzuschlags:
+
+ P_R >= [c0(1-2l_R^2/mu)-delta_reg
+         -2l_R d0/mu-q_core_abs l_R^2/mu^2] I.
+
+Die Intervallrechnung liefert in beiden Paritäten einen Wert >20.
+Deshalb wird im weiteren Beweis der einfache exakte Boden m0=20 benutzt.
+Dies ist ein Boden von P_R, kein Positivitätsbeweis für S oder U_-.
+
+4. Hilfsraum und vollständige Operatorresiduen
+
+N=96 ist nur die Größe der Hilfsdarstellung. Normalisiere zuerst V mit
+der positiven Choleskyzerlegung seines W_X-Grams. Die so erhaltene
+Viererspalte heißt J. Anschließend normalisiere
+
+ (I-Pi_V^W_X)ell_4,...,(I-Pi_V^W_X)ell_(N-1)
+
+ebenfalls durch die eindeutig bestimmte positive Choleskyzerlegung.
+Die resultierende isometrische Spalte Q hat N-4=92 Spalten. Ihre ersten
+acht Spalten sind exakt die eingefrorenen e_j. Z=(J,Q) erfüllt Z*W_X Z=I.
+Alle diese Basisvektoren sind vollständige physische Funktionen.
+
+Setze A=Q*T0 Q, D=Z*T0 Q, E=(I_8,0)^T. A ist eine endliche
+Modellmatrix, nicht die Kompression des vollständigen P_R. Ihr
+zertifiziertes Spektralintervall ist [20,30].
+
+Definiere die vollständige L2-Funktionsspalte
+
+ F0=T0 Q-ZD=F_poly+V_log Q,
+ F_poly=(D_H+c0 I)Q-ZD.
+
+Ihr Gram G_F=F0*F0 wird ohne Abschneiden der Wirkung von V_log berechnet:
+
+ G_F=F_poly*F_poly+F_poly*V_N Q+Q*V_N F_poly+Q*V2_N Q.
+
+V_N und V2_N sind die vollständigen Integrale von V_log und V_log^2.
+Für k gerade, o_k=sum_(j=0,k step2)1/(j+1) und
+o2_k=sum_(j=0,k step2)1/(j+1)^2 gelten:
+
+ int_-1^1 t^k V_log dt=2(o_k-log 2)/(k+1),
+ int_-1^1 t^k V_log^2 dt
+   =2[(o_k-log 2)^2+o2_k-pi^2/12]/(k+1).
+
+Für k ungerade verschwinden beide Integrale. Diese Identitäten folgen
+durch zweimaliges Differenzieren des Betaintegrals in seinem Exponenten.
+Insbesondere erfasst G_F ALLE ausgelassenen Legendre-Koeffizienten.
+Die kleinsten Eigenwerte dieses Gram können sehr klein sein; eine
+strikte Positivität aller Eigenwerte ist für die Abschätzung unnötig.
+
+Für r in R ergibt die W_X-Orthogonalität zu J:
+
+ <r,(P_R Q-QA)z>_W_X
+  = <r,F0 z>_X -(2/mu)conj(lambda r)lambda(ZD z)
+    + die beschränkten Gamma-/Momentfehler.
+
+Also gilt für beliebige endliche Spalten z:
+
+ ||(P_R Q-QA)z||_W_X
+ <= ||F0 z||_X + delta0 ||z||,
+ delta0=delta_reg+delta_mom+(2l_R/mu)||lambda ZD||.
+
+Das ist eine Schranke für das vollständige Operatorresiduum im
+Hilbertraum R. Der Komplementraum wird weder abgeschnitten noch ersetzt.
+
+5. Einschließung der acht vollen Halbinversenbilder
+
+Für jeden positiven selbstadjungierten P>=m0 I gilt in Operatornorm
+
+ P^(-1/2)=(2/pi)int_0^infinity (P+t^2)^(-1)dt.
+
+Die Resolventengleichung mit Q ergibt
+
+ (P_R+t^2)^(-1)QE-Q(A+t^2)^(-1)E
+ =-(P_R+t^2)^(-1)(P_R Q-QA)(A+t^2)^(-1)E.
+
+Damit ist der vollständige achtspaltige Fehler durch
+
+ (2/pi)int ||F0(A+t^2)^(-1)E||/(m0+t^2) dt
+ + delta0/[sqrt(m0)sqrt(a0)(sqrt(m0)+sqrt(a0))]
+
+beschränkt, wobei a0=20. Die zweite Zeile wird analytisch integriert.
+Für die erste Zeile sind 1024 logarithmisch verteilte Teilintervalle
+von 0 bis T=128 benutzt. Für jedes [l,u] mit Mittelpunkt c_t:
+
+ Z_t=(A+c_t^2 I)^(-1)E,
+ H_t=Z_t* G_F Z_t,
+ p_t=min(sqrt(trace H_t), sqrt(max_i sum_j |(H_t)_ij|)).
+
+Bei der Implementierung werden jeweils sichere Intervall-Oberwerte
+benutzt. Mit r0=sqrt(trace G_F) folgt auf dem ganzen Teilintervall:
+
+ ||F0(A+t^2)^(-1)E||
+ <= p_t+r0 max(u^2-c_t^2,c_t^2-l^2)/[(a0+l^2)(a0+c_t^2)].
+
+Das Gewicht int_l^u dt/(m0+t^2) wird durch arctan exakt eingeschlossen.
+Der vollständig unendliche Integralrest wird durch
+
+ (2/pi) r0/(3T^3)
+
+bezahlt. Die Variation wird separat ausgegeben; die Mittelpunktwerte
+allein werden ausdrücklich nicht als rigorose Quadratur benutzt.
+
+Der endliche Mittelpunkt Q A^(-1/2)E wird durch die Binomialreihe um
+Amax=30 berechnet. Nach K Termen ist ihr Operatorfehler höchstens
+
+ rho^(K+1)/[(1-rho)sqrt(Amax)], rho=1-a0/Amax.
+
+Die Spaltenkoeffizienten werden rational gerundet. Der vollständige
+Frobeniusfehler dieser Rundung wird ebenfalls hinzugefügt. Die so
+definierte Mitte Y=Q S_rational liegt exakt in R. Ihre Definition
+verwendet die exakte Q-Basis; die gespeicherten Intervallkoeffizienten
+werden nicht als exakt orthonormale Zahlen ausgegeben.
+
+Schließlich gilt auf allen acht Spalten gemeinsam:
+
+ R_half=(P_R^(-1/2)e_1,...,P_R^(-1/2)e_8),
+ ||R_half-Y||_(C^8 -> R,W_X)<=epsilon,
+ (R_half-Y)*(R_half-Y)<=epsilon^2 I_8.
+
+Hier wird nicht behauptet, dass die Fehler der acht Spalten unabhängig
+sind. Die gemeinsame Operator-/Gram-Schranke berücksichtigt jede
+gleichzeitige Linearkombination.
+
+6. Bereits berechenbarer erster Anteil von B00
+
+Für rational nach oben gerundetes epsilon und rationales t>0 gilt
+
+ 19 R_half*R_half
+ <= 19[(1+t)S_rational*S_rational+(1+1/t)epsilon^2 I_8].
+
+Diese volle rationale 8x8-Obermatrix wird gespeichert und separat mit
+Python-Fraction geprüft. Sie betrifft nur den Zuschlag 19I in B_R.
+Die alte inverse Energie und C*M_-^(-1)C sind zusätzliche positive
+Terme. Aus diesem Teilergebnis folgt keine Obermatrix für das ganze B00.
+
+7. Konkrete Grenze der jetzigen Rechnung
+
+Eine gemeinsame L2-Fehlerhülle ersetzt keine ausreichend scharfe
+Fehlerhülle nach Anwendung der alten Inversenergie. Die gespeicherten
+alten Werte trace(F^(-1)) liegen etwa bei 8.99e25 bzw. 1.28e23. Diese
+Spuren sind keine Behauptung über eine tatsächlich realisierte
+Fehlerverstärkung. Sie zeigen, dass ihre pauschale Verwendung als
+Inversennorm-Obergrenze hier keine brauchbare Reserve liefert.
+
+Für den nächsten Schritt müssen die Fehler der korrigierten alten
+Kräfte v und des hohen Anteils h gemeinsam erhalten werden:
+
+ old_energy(r)<=delta^(-1)||h(r)||^2+v(r)*F^(-1)v(r),
+ delta=2/3.
+
+Zusätzlich braucht man die gemeinsame Fehlerenergie von C(r) in
+M_-^(-1). Für die Differenz Delta=R_half-Y sind also die Grams von
+
+ delta^(-1/2)h Delta,  F^(-1/2)v Delta,  M_-^(-1/2)C Delta
+
+zu kontrollieren. Die Resolventenfehler oben bleiben dafür als
+vollständige Funktionen erhalten. Ein bloßer Austausch epsilon ->
+kleineres epsilon bei immer größeren Polynomialmatrizen löst diese
+Richtungsabhängigkeit nicht wirtschaftlich.
+
+In diesem Paket bleiben U00, G01, gamma01, beta_tail, eta und alpha
+für den GESAMTEN Operator unberechnet. Der Pilot ist nicht bestanden.
+Weder ein negativer Zeuge noch ein Beweis der Restpositivität liegt vor.
+Die nächste nötige Rechnung ist die gewichtete alte Kraft-/C-Fehlergram
+dieser Halbinversenbilder. Es wird keine neue Abnahme und kein anderer
+Pilotraum vorgeschlagen.
+
+8. Umfang der Prüfung
+
+Die neue numerische Rechnung wird mit 1024 und 1536 Bit separat
+ausgeführt. Das sind zwei Präzisionsläufe desselben Verfahrens, keine
+unabhängige mathematische Begutachtung. Ein kleiner Fraction-Prüfer
+prüft Quellbindungen, Summen der Fehlerbudgets und die rationalen
+gemeinsamen 19I-Obermatrizen erneut. Er beweist nicht selbst die
+analytischen Integral- und Operatoridentitäten dieses Textes.
+
+Die geerbte arithmetische Identität, externe fachmathematische Prüfung,
+vollständiges B00, Kreuzgramm, Tail, weitere Horizonte, vollständige
+Objekt-X-Konstruktion und erst danach ein möglicher RH-Anschluss
+bleiben offen.

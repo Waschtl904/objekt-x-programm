@@ -1,0 +1,54 @@
+{
+  "status": "PASS_EXACT_FULL_A9_FLOOR_AND_LOCAL_EXTENSION_CONSTANTS",
+  "cases": [
+    {
+      "parity": "even",
+      "K_minus_1e_minus_16_I_positive_pivots": 12,
+      "independent_integer_Sylvester_minors": 12,
+      "K_positive_pivot_digest": "d6ea4c4b4b4b2c86caa6f0471ab260513866582f613f7ea00d8940850ea8f3ba",
+      "Y_gram_positive_pivots": 8,
+      "each_Y_WX_norm_squared_below_4": true,
+      "reduced_actual_Schur_floor_used": "1/1000000",
+      "certified_reduced_floor_from_bound_residual": "100846561779227138556171/75912500000000000000000000000"
+    },
+    {
+      "parity": "odd",
+      "K_minus_1e_minus_16_I_positive_pivots": 12,
+      "independent_integer_Sylvester_minors": 12,
+      "K_positive_pivot_digest": "03abb521e268658823342ed32240aee76be415d41ab2ca63b6e17672fe018fb2",
+      "Y_gram_positive_pivots": 8,
+      "each_Y_WX_norm_squared_below_4": true,
+      "reduced_actual_Schur_floor_used": "1/1000000",
+      "certified_reduced_floor_from_bound_residual": "3028328662574822620062987/379562500000000000000000000000"
+    }
+  ],
+  "old_A8_L2_floor_input": "3/250000000000000000000000000000",
+  "full_A9_inverse_norm_price": "2700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000000000250000000000000000000000000000/3",
+  "full_A9_physical_L2_floor": "1e-207",
+  "extension_radius_exact_expression": "exp(-10^215)",
+  "radius_evaluated_as_floating_point": false,
+  "extension_uniform_physical_L2_floor": "1e-421",
+  "new_shell_reduced_floor_relative_WX": "1/2",
+  "new_prime_channel_9_included_in_full_norm_bound": true,
+  "all_seven_prime_weights_below_one": true,
+  "countercontrols": {
+    "positive_diagonals_without_cross_control_rejected": true,
+    "Schur_floor_as_full_L2_floor_rejected": true,
+    "raw_coordinate_deletion_as_moment_projection_rejected": true,
+    "omitting_new_channel_not_justified_by_old_positivity": true,
+    "shrinking_shell_does_not_make_Carleman_L2_coupling_small": true
+  },
+  "analytic_proofs_machine_verified": false,
+  "large_global_integrations_rerun": false,
+  "inherited_arithmetic_identity_and_prior_certificates_still_required": true,
+  "old_separate_tail_floor_1_over_20_certified": false,
+  "A10_or_A11_transition_certified_here": false,
+  "cofinal_horizons_certified": false,
+  "OBJECT_X_CONSTRUCTED": false,
+  "RH_PROVED": false,
+  "EXTERNAL_REVIEW_OPEN": true,
+  "source_verifications_this_run": {
+    "original_Schur_package_hash_and_response_fields": true,
+    "original_half_source_hash_and_all_Y_coefficients": true
+  }
+}
