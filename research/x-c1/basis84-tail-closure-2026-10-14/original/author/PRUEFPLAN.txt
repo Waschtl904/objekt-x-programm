@@ -1,0 +1,24 @@
+Prüfumfang vor dem neuen Abnahmelauf — 14. Oktober 2026
+
+Pflichtprüfungen:
+1. Den Zielraum und die tatsächliche Form aus den Originalherleitungen
+   Tail64/Basisabdeckung/Basis84 identifizieren, nicht aus Statusfeldern.
+2. Allgemeines Komplementwechsellemma mit voller Formdomäne beweisen;
+   tatsächliche Schurform und Quellenrepräsentanten abgleichen.
+3. Beide originalen Basisdateien bytegleich rückbinden; ihre 1344 rationalen
+   S*Z=0-Relationen gegen die S-Daten des neuen Domänen-/Inverspakets prüfen.
+4. Neue Inversdaten E und X direkt mit dem vollständigen per SHA256
+   gebundenen Schurarchiv abgleichen. beta und die vollständigen
+   Residualpreise müssen übereinstimmen.
+5. Den neuen 574-Pivot-Replay aus unverändertem Inversarchiv ausführen.
+6. Die skalaren Böden und den vollständigen Taylor-Momentrest eigenständig
+   mit Fraction rechnen; exakte Kontrollen für den Komplementwechsel,
+   Nichtorthonormalität und fehlerhafte Übertragungen ausführen.
+7. Das neue kompakte Paket frisch entpacken und seinen Prüfer ausführen.
+   Der schon ausgeführte 574-Pivot-Lauf muss dafür nicht erneut laufen.
+
+Übernommene, ausdrücklich nicht neu erzeugte Eingaben:
+Arithmetische Formidentität, alte Positivität, analytische Kernschranken,
+vollständige globale Integrationen und ihre Fehlerzertifikate. Der neue
+Satz ist ein analytischer Schluss aus diesen gebundenen Voraussetzungen.
+Kein GitHub-Schreibvorgang, keine externe fachliche Gesamtbegutachtung.

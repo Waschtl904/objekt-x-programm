@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "BASIS84-ORIGINAL-TAIL-COMPLEMENT-CLOSURE",
+  "date": "2026-10-14",
+  "kind": "CONSTRUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Bedingter Abschluss des ursprünglichen W_X-orthogonalen Basis84-Tails: tau|Z84 >= (2/3) W_X, somit der bisher offene Boden 1/20, A_Z^-1 <= (3/2) I und zusätzliche gerichtete Inversmajorante.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "Die Schranke gilt für den ursprünglichen Basis84-Tail und seine Restriktionsinverse; kein Boden 2/3 auf ganz R12 oder dem ganzen physischen A9-Raum, kein neuer Horizont.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR",
+    "A9-DOMAIN-FLOOR-LOCAL-CONTINUATION",
+    "A8-A9-CONDITIONAL-GLOBAL-SCHUR-CLOSURE"
+  ],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "Kein Nachweis des alten hinreichenden 268-Funktional-Fittests oder eines neuen vollständigen Residualgrams.",
+    "Keine erneute große Integration oder externe mathematische Gesamtbegutachtung.",
+    "Keine weiteren konstruktiven Horizonte, Kofinalität, Konstruktion von Objekt X oder RH."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/basis84-tail-closure-2026-10-14/PROOF.md",
+    "sha256": "ce2aa4ea734b35af39f5ec3ae57d4791b8feecccf1b414b11907cea68d4ab045"
+  }
+}

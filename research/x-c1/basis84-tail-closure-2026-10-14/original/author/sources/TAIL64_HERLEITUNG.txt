@@ -1,0 +1,390 @@
+Objekt X — vollständiger Tail nach dem endlichen 4+8-Block
+9. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+0. Voraussetzungen und Konvention
+
+Je Parität wird separat gearbeitet. Alle Skalarprodukte sind antilinear
+im ersten Argument. a=3 log(2)/2, b=log(3), h=b-a, X=L2((a,b),2 dx).
+Für m=cosh(x/2) bzw. sinh(x/2) setze
+
+ mu=int_0^a m(x)^2 dx, lambda(s)=int_a^b m(x)s(x) dx,
+ Lambda s=Sigma_p s-lambda(s)m_core/mu,
+ W_X(s,t)=<s,t>_X+2 conj(lambda(s))lambda(t)/mu.
+
+Gamma-Energie, Nullfortsetzung, alter Momentkern K_a und alter positiver
+Operator A sind die gebundenen Originalobjekte. Die analytischen
+Formraum-/Operatordomänenidentitäten der Quellen werden übernommen; sie
+werden hier nicht durch den arithmetischen Replay bewiesen. Benötigt werden:
+
+(H1) D_X={s in X: Sigma_p s liegt in der vollständigen Gamma-Formdomäne}.
+     Der alte Formraum plus D_X parametrisiert die gesamte neue Formdomäne.
+(H2) A ist selbstadjungiert und koerziv, g:X->K_a ist beschränkt und
+     q_b(Jw,Lambda s)=<w,g_s>. Der positive alte Boden ist eine Eingabe.
+(H3) Der endliche 4+8-Anschluss ist im oben berichteten Scope positiv.
+(H4) Der vollständige alte Hochboden ist delta=91/50. In den gebundenen
+     alten 191-plus-hoch-Koordinaten gilt für eine feste positive Matrix F
+     und ALLE Quellen (c,h_old):
+       <g_s,A^(-1)g_s> <= delta^(-1)||h_old(s)||^2
+                       +v_delta(s)*F^(-1)v_delta(s),
+       v_delta=c-delta^(-1)B h_old.
+     B ist die tatsächliche alte Kopplung, kein unbezahlter Modellmittelpunkt.
+(H5) Für lambda(s)=0 gilt ||g_s|| <=(16/5)||s||_X und
+     ||h_old(s)||^2 <=(1+10^(-12))||g_s||^2.
+     Die zweite Abschätzung folgt aus dem gebundenen hohen Momentlift.
+(H6) Bei verschwindenden lokalen Legendrekoeffizienten 0,...,N-1 gilt
+     q_b^np[Sigma_p s] >=(H_N+1)||s||_X^2 auf der ganzen Formdomäne.
+
+H1,H2,H5,H6 stehen im Restbeweis und Domänennachtrag; H4 verwendet dessen
+alte inverse Energieformel mit dem inzwischen verbesserten vollständigen
+Hochboden und einer dafür gültigen positiven Schuruntermatrix. Ein noch
+mit delta=2/3 definiertes v darf NICHT als v_delta verwendet werden.
+
+1. Der exakte Rest nach den zwölf Funktionen
+
+Seien Phi=(sigma_1,...,sigma_4,Y_1,...,Y_8) die vollständigen Schalen-
+funktionen. Hier Y=Q S_rational wie im Halbinversenpaket. Die exakten
+Q-Spalten bestehen aus lokalen Polynomen von Grad höchstens 95. Daher
+sind Lambda Y_j und Lambda sigma_j stückweise glatt und liegen nach dem
+Domänenlemma in der komprimierten Operatordomäne von q_b^np.
+
+W_F=Phi*W_X Phi=diag(W_V,W_Y)>0, W_Y=S_rational* S_rational.
+Die Blockdiagonalität folgt aus Y in V^(perp W_X). Definiere
+
+ Pi_F=Phi W_F^(-1) Phi*W_X,
+ R_12=ker(Phi*W_X), D_12=R_12 intersect D_X.              (1)
+
+Pi_F ist der volle Hilbertprojektor, nicht eine endliche Matrixtrunkierung.
+Weil sein Bild aus endlich vielen Formvektoren besteht, ist er auch in der
+positiv verschobenen Gamma-Graphnorm beschränkt. Folglich
+
+ D_X=ran(Phi) direct-sum D_12                            (2)
+
+topologisch und ohne Quellenverlust. D_12 ist dicht in R_12: Projektion
+einer formdichten Folge mit I-Pi_F erhält die Formdomäne.
+Es werden weder neue Randwerte noch zusätzliche Mellinbedingungen
+an den gesamten Rest eingeführt. Die Zusatzbedingungen in Abschnitt 6
+definieren nur einen besonderen sicheren Teilraum.
+
+2. Direkte Form und eine einzige alte inverse Energie
+
+Setze d(s,t)=q_b^np(Lambda s,Lambda t) und
+E(s,t)=<g_s,A^(-1)g_t>. Dann ist
+
+ S=d-E,
+ S[s]=inf_(w in F_a) q_b(Jw+Lambda s).                   (3)
+
+Auf ran(Phi) plus R_12 hat dieselbe positive beschränkte Energie E die
+Blöcke E_FF, E_FT, E_TT. Mit D_FF=d(Phi,Phi) und
+(D_FT r)_i=d(phi_i,r) lautet die gesamte Blockdarstellung
+
+ S_12=D_FF-E_FF,
+ C_12=D_FT-E_FT,
+ T=d|_(D_12)-E_TT.                                    (4)
+
+S_12>0 folgt aus H3, nicht aus vorausgesetzter neuer Terminalpositivität.
+Die Zahl 1/25000 ist KEIN hier eingesetzter Boden S_12>=I/25000.
+C_12 ist L2-beschränkt: d(phi_i,r) wird durch den festen L2-Vektor
+(Lambda* Q_b^np Lambda phi_i) repräsentiert; der alte Term durch
+g* A^(-1)g_phi_i. Alle Adjunkte verwenden die ausgewiesenen Hilbertmetriken.
+
+Damit ist die vollständige nach zwölf Richtungen verbleibende Form
+
+ tau[r]=T[r]-(C_12 r)*S_12^(-1)(C_12 r), r in D_12.     (5)
+
+Quadratische Ergänzung in den endlichen Koeffizienten beta ergibt
+
+ S[Phi beta+r]
+  =(beta+S_12^(-1)C_12 r)*S_12(beta+S_12^(-1)C_12 r)
+    +tau[r].                                          (6)
+
+Insgesamt gilt die exakte Identität
+
+ q_b[Jw+Lambda(Phi beta+r)]
+  =||A^(1/2)(w+A^(-1)g_(Phi beta+r))||^2
+    +(beta+S_12^(-1)C_12r)*S_12(beta+S_12^(-1)C_12r)
+    +tau[r].                                          (7)
+
+Somit ist Nichtnegativität von tau auf D_12 äquivalent zur Nichtnegativität
+der vollständigen neuen Form, unter den bereits positiven alten/endlichen
+Blöcken. (7) behauptet nicht, dass tau schon nichtnegativ ist.
+
+Insbesondere lautet (5) ausgeschrieben
+
+ tau=d_TT-E_TT
+     -(D_FT-E_FT)*(D_FF-E_FF)^(-1)(D_FT-E_FT).           (8)
+
+E_FF,E_FT,E_TT sind keine unabhängig wählbaren Störparameter.
+
+3. Residualform mit gemeinsam korrigierter alter Kraft
+
+Sei P:R_12->C^12 irgendein festgelegter beschränkter Antwortvorschlag.
+Er kann später rational parametrisiert werden; hier wird er nicht als
+exakte Inverse oder als schon berechneter Operator vorausgesetzt. Setze
+
+ R_P=C_12-S_12 P,
+ K_P=T-C_12*P-P*C_12+P*S_12 P.
+
+Dann folgt durch Ausmultiplizieren exakt
+
+ tau=K_P-R_P*S_12^(-1)R_P.                             (9)
+
+Für l_P r=r-Phi P r und G_F=g Phi ist zugleich
+
+ K_P[r]=d[l_P r]-<g_r-G_F P r,A^(-1)(g_r-G_F P r)>,
+ R_P r=(D_FT-D_FF P)r-G_F*A^(-1)(g_r-G_F P r).         (10)
+
+Die alte Inversenergie wirkt also auf EINEN korrigierten Quellenoperator.
+Die Kreuzterme seiner Energie werden nicht verworfen. (10) ist auf der
+ganzen Restformdomäne gültig, denn l_P verändert r um einen Formvektor.
+
+Ein hinreichendes rigoroses Rechengate ist eine unabhängig positive
+Vergleichsform W_tail mit gleichzeitigen Einschließungen
+
+ K_P >= K_lower,
+ R_P*S_12^(-1)R_P <= G_upper,
+ K_lower-G_upper >= eta W_tail, eta>0.                 (11)
+
+W_tail kann W_X oder eine stärkere unabhängig positive Form sein. Die
+Einschließungen müssen für den vollständigen Operator gelten. Eine endliche
+Gramprüfung oder ein punktweises Residuum reicht nicht.
+
+4. Zulässige globale Oberenergie, und die Grenze des vorhandenen U
+
+Ist eine einzige beschränkte Form U>=E auf ran(Phi) plus R_12 sowie
+eine gemeinsame direkte Untermatrix/-form D_lower<=d bewiesen und der
+endliche Block von H=D_lower-U positiv, dann gilt
+
+ Schur_F(S)>=Schur_F(H).                               (12)
+
+Beweis: Für jedes feste r gilt S[Phi beta+r]>=H[Phi beta+r] für alle beta.
+Infima über beta erhalten die Ungleichung. Damit muss die Oberenergie
+VOR der Schurelimination als eine gemeinsame Form eingesetzt werden.
+
+Die bereits gespeicherte 12x12-Matrix U ist eine Oberenergie auf zwölf
+Quellen. Sie definiert allein KEINE Oberenergie auf dem ganzen Raum.
+Insbesondere darf man ihr nicht unabhängig geschätzte Tail- und Kreuzblöcke
+anhängen, ohne die gemeinsame globale Ungleichung neu nachzuweisen.
+
+Hinweis zu Quellenrepräsentanten: Manche Rechendaten verwenden um alte
+Näherungsantworten korrigierte Quellen, nicht unmittelbar Lambda phi_i.
+S ist unter solchen Änderungen invariant; d und E einzeln sind es nicht.
+Soll ein gespeichertes gemeinsames U weiterverwendet werden, müssen die
+Repräsentanten ausdrücklich abgeglichen werden. Sind die gewählten
+endlichen Repräsentanten Lambda phi_i+J w_i, kann man mit W beta=sum w_i beta_i
+die Liftung auf dem ganzen Raum festlegen als
+
+ Lambda_tilde s=Lambda s+J W W_F^(-1)Phi*W_X s.          (13)
+
+Sie trifft diese endlichen Repräsentanten und stimmt auf R_12 mit Lambda
+überein. Bei w_i in Dom(A) gilt g_tilde=g+A W W_F^(-1)Phi*W_X.
+Die entsprechende Änderung von d hebt sich in d-g*A^(-1)g exakt auf.
+Liegen w_i nur in der Formdomäne, ist derselbe Wechsel im Formdual zu
+formulieren; eine unbegründete L2-Operatorwirkung A w_i wäre unzulässig.
+
+5. Ein normiertes exaktes Ziel, ohne den widerlegten festen M_--Gate
+
+Auf R_12 sei P_T der Operator der positiven geschlossenen Form
+P_T[r]=d[r]+19 W_X[r]. Aus den signunabhängigen Prim-/Gamma-Schranken
+gilt P_T>=I; seine Halbinverse ist kompakt. Setze exakt
+
+ B_12=P_T^(-1/2)[19I+g_T*A^(-1)g_T
+                       +C_12*S_12^(-1)C_12]P_T^(-1/2). (14)
+
+Dies ist ein positiver kompakter Operator, und
+
+ tau[r]=<P_T^(1/2)r,(I-B_12)P_T^(1/2)r>_W_X.           (15)
+
+Ein echter voller Nachweis ||B_12||<=1-alpha<1 wäre ausreichend.
+Er liegt hier NICHT vor. (14) ist die Darstellung mit dem tatsächlichen
+gekoppelten S_12. Sie ist keine Wiederbelebung des widerlegten Gates mit
+festem M_-. Ein Austausch durch eine unabhängige pauschale Untergrenze
+für S_12 könnte denselben Informationsverlust erneut erzeugen. Für die
+praktische Zertifizierung werden deshalb (9)-(12) bevorzugt.
+
+6. Neues fernes Tail-Lemma mit N=64
+
+ell_n sei die vollständige X-orthonormale lokale Legendrebasis. Definiere
+den geschlossenen Unterraum
+
+ Z_N={r in R_12:
+       <ell_n,r>_X=0 fuer 0<=n<N,
+       lambda(r)=0, v_delta(r)=0, C_12 r=0},
+ D_Z=Z_N intersect D_X.                                (16)
+
+Alle Bedingungen sind stetige lineare Funktionale im Hilbertraum X.
+Die Definition benutzt die tatsächliche alte Kopplung B und die tatsächliche
+Schurkopplung C_12. Ein Modellkern oder ein numerisch fast verschwindender
+Wert darf nicht als exakter Kern in (16) eingesetzt werden.
+
+SATZ. Unter H1-H6 gilt für N=64 auf dem GESAMTEN D_Z
+
+ tau[r] >= W_X[r]/10.                                  (17)
+
+Beweis. Wegen lambda(r)=0 gilt Lambda r=Sigma_p r und W_X[r]=||r||_X^2.
+Aus v_delta(r)=0, H4 und H5 folgt
+
+ <g_r,A^(-1)g_r>
+ <=delta^(-1)||h_old(r)||^2
+ <=(50/91)(1+10^(-12))(16/5)^2 W_X[r]
+ =(512/91)(1+10^(-12))W_X[r].                          (18)
+
+H6 und die N verschwindenden lokalen Koeffizienten ergeben
+
+ S[r]>= [H_N+1-(512/91)(1+10^(-12))]W_X[r].             (19)
+
+Da C_12 r=0, ist tau[r]=S[r]. Für N=64 bestätigt rationale Arithmetik
+
+ H_64+1-(512/91)(1+10^(-12))
+ =0.117517277326516... >1175/10000 >1/10.               (20)
+
+Die Dezimalzahl dient nur der Orientierung; check_tail.py prüft die exakte
+Bruchungleichung. Das beweist (17). Keine Positivität des neuen Terminals
+und keine weitere Endlichkeitsannahme an r wurden benutzt. QED.
+
+Die analytischen Kerne in (16) sind weiterhin nicht numerisch konstruiert.
+Das ist die Aussagegrenze dieses Satzes, kein fehlender endlicher Modus
+in seinem Beweis. N=63 ist innerhalb derselben skalaren Majorante bereits
+ausreichend; die feste Wahl 64 lässt etwas mehr rationale Reserve.
+
+6a. Bezahlbare Abweichungen von den exakten Kernbedingungen
+
+Der Kernraum aus (16) soll numerisch nicht durch ungeprüfte Nullsetzungen
+ersetzt werden. Eine globale endlichrangige Fehlerform macht diese Grenze
+quantitativ. Die reine Schalenidentität liefert auf der GANZEN Formdomäne
+
+ q_b^np[Sigma_p s]>=sum_n (H_n+1)|<ell_n,s>_X|^2.       (20a)
+
+Dies folgt nicht allein aus getrennten Hochraumböden H6: Man verwendet
+die vollständige Identität D_H+V_log-log(pi h)-gamma-K_reg-K_mirror,
+V_log>=0 und die gemeinsamen Normverluste der beiden Gamma-Kerne.
+Die bereits gebundene rationale Abschätzung des verbleibenden Skalars
+ist >1 (Restbeweis Abschnitt 8; Halbinversenherleitung Abschnitt 2).
+
+Setze k0=Pi_a Q_a^np m_core. Das Operatordomänenlemma liefert zum Beispiel
+die vollständig ausgeschriebenen endlichen Konstanten
+ M=cosh(a/2), L_m=M/2,
+ HG=(2L_m+20M)sqrt(2a+2)+4M sqrt(2)+4 sqrt(2)aM,
+ K0=HG+18sqrt(2mu), q0=sqrt(2mu)K0.
+Damit K0>=||k0|| und q0>=|q_a^np[m_core]|. Die 18 bezahlt die beschränkte
+Nichtpolstörung; für beide Paritäten gelten dieselben groben M,L_m.
+Mit d0=(16/5)sqrt(2mu) gilt
+|q_b^np(m_core,Sigma_p s)|<=d0||s||_X.
+
+Für eps=theta=1/1000 folgt durch Young, unter Beibehaltung der
+gemeinsamen niedrigen Kraft v_delta,
+
+ tau[r]>=sum_n(H_n+1)|r_n|^2
+          -[eps+(1+theta)L]||r||_X^2
+          -B_lambda |lambda(r)|^2
+          -v_delta(r)*F^(-1)v_delta(r)
+          -(C_12 r)*S_12^(-1)(C_12 r),                 (20b)
+
+ L=(512/91)(1+10^(-12)),
+ B_lambda=d0^2/(eps mu^2)+q0/mu^2
+          +(1+10^(-12))(1+1/theta)K0^2/(delta mu^2).
+
+Für den ersten Momentmischterm wird 2 d0 |lambda| ||r||/mu mit Young
+bezahlt. Für die hohe alte Kraft wird
+g_r=Pi_a G r-lambda(r)k0/mu und ||G||<16/5 verwendet.
+Die alte niedrige Inversenergie bleibt die volle F^(-1)-Form, die
+endliche Kopplung bleibt die tatsächliche S_12^(-1)-Form.
+
+Die rein rationale verbleibende Hochkonstante erfüllt
+
+ H_64+1-(1+1/1000)L-1/1000 >1/10.                     (20c)
+
+Definiere den gemeinsamen endlichrangigen Operator
+
+ L_64 r=(
+   (sqrt(H_64-H_n) r_n)_(0<=n<64),
+   sqrt(B_lambda+1/(5mu)) lambda(r),
+   F^(-1/2) v_delta(r),
+   S_12^(-1/2) C_12 r).
+
+Aus (20b)-(20c) und W_X=||.||_X^2+2|lambda|^2/mu folgt auf ALLEN D_12
+
+                 tau[r]>=W_X[r]/10-||L_64 r||^2.       (20d)
+
+Insbesondere ker(L_64|R_12)=Z_64. Für einen tatsächlich konstruierten
+Teilraum mit ||L_64 r||^2<=epsilon_leak W_X[r], epsilon_leak<1/10,
+gilt dort der bezahlte Boden (1/10-epsilon_leak) W_X.
+
+Diese Variante ist eine sichere analytische Hülle, kein scharfer positiver
+Gesamttest. B_lambda kann groß sein; eine kleine Norm von L_64 auf ganz
+R_12 wird weder erwartet noch behauptet. Sie dient zur Kontrolle von
+Kern-/Projektionsfehlern, nicht zur Wiederaufnahme eines pauschalen
+M_--Normgates. Numerische Werte für K0,q0 oder die vollständigen Grame
+von L_64 wurden in diesem Arbeitsblock nicht neu berechnet.
+
+7. Vollständigkeit, Kodimension und endliche verbleibende Obligation
+
+D_Z ist dicht in Z_N. Allgemeiner: Ist D in H dicht und L:H->C^k stetig,
+so ist L(D)=L(H), weil L(D) ein dichter linearer Teilraum eines endlich-
+dimensionalen Raums und daher abgeschlossen ist. Man wählt endlich viele
+Vektoren aus D, deren Bilder eine Basis von L(H) sind, und korrigiert mit
+ihnen die gegen null gehenden Momentfehler einer approximierenden Folge.
+Die Einschränkung einer geschlossenen unterbeschränkten Form auf einen
+geschlossenen Hilbertunterraum mit dichter Schnittdomäne ist geschlossen.
+Zusammen mit (17) besitzt tau|Z_N daher eine koerzive vollständige Inverse.
+
+Eine erste sichere Kodimensionsschranke im R_12 ist N+1+191+12=N+204.
+Hier kann man vier Bedingungen einsparen: sigma_j sind Polynome von Grad
+höchstens neun. Für N>=10 und lambda(r)=0 folgt aus den Legendrebedingungen
+bereits W_X(sigma_j,r)=0. Nur die acht Y-Orthogonalitäten müssen zusätzlich
+gezählt werden. Somit
+
+ codim_X Z_64 <=64+1+191+12+8=276,
+ codim_(R_12) Z_64 <=276-12=264.                       (21)
+
+Diese Zahlen sind obere Schranken. Weder voller Rang noch Unabhängigkeit
+der 191 Kräfte oder zwölf Kopplungen wird behauptet. Z_64 ist jedenfalls
+unendlichdimensional.
+
+Man darf nicht ungeprüft den W_X-orthogonalen Komplementraum Z_64^perp
+als neue Formbasis benutzen: Die L2-Repräsentanten der Bedingungen müssen
+nicht alle in der Formdomäne liegen. Stattdessen wählt man einen endlichen
+Raum K subset D_12, dessen Bilder eine Basis des Quotienten R_12/Z_64 sind.
+Der Dichtebeweis liefert seine Existenz, aber keine numerisch gute Wahl.
+Dann D_12=K direct-sum D_Z als Formräume, mit dim K<=264.
+
+Für eine Basis k_i von K seien L_i(z)=tau(k_i,z). Diese Funktionale sind
+stetig in der Energie von tau|Z: Die ursprüngliche verschobene positive
+Graphnorm und tau|Z sind wegen (17) und der beschränkten Störterme
+äquivalent. Die Kreuzantwort wird daher variational im Formdual gelöst.
+Ein L2-Repräsentant der Kopplung ist für diesen Existenzschritt nicht nötig.
+
+Es gibt eindeutige t_i in D_Z mit
+ tau(t_i,z)=tau(k_i,z) für alle z in D_Z. Dann ist die endliche Restmatrix
+
+ M_K,ij=tau(k_i,k_j)-tau(t_i,t_j).                     (22)
+
+Quadratische Ergänzung beweist: tau>=0 auf D_12 genau dann, wenn M_K>=0.
+Eine negative Richtung von M_K würde durch k-t eine wirkliche zulässige
+negative Richtung von tau liefern, nicht bloß eine negative Majorante.
+Hier wurden weder t_i noch M_K berechnet. (22) ist ein präziser nächster
+Schurauftrag, KEIN positiver Abschluss dieser Matrix.
+
+Ein uniformer positiver Boden für die ursprünglichen Koordinaten folgt
+auch aus einem positiven M_K erst nach Kontrolle der Antwort- und
+Koordinatenabbildungen. Die Zahl 1/10 aus (17) darf dafür nicht übernommen
+werden. Entsprechend bleibt der gesamte A8->A9-Rest OPEN.
+
+8. Vorab benannte nächste Prüfungen
+
+(a) Quellvertreter und adjungierte Metriken der vorhandenen Daten auf (1),
+    (4) und gegebenenfalls (13) abgleichen.
+(b) Vollständige gemeinsame Funktions-/Gramdarstellung der Nebenbedingungen
+    in (16), einschließlich hoher Wirkungsteile, einschließen. Kein nur
+    endlicher Rangbefund wird auf den vollständigen Operator übertragen.
+(c) Nur aus nachgewiesener Quotientenabdeckung eine Basis K in der
+    Formdomäne wählen. Bei numerisch kleinen statt exakt nullen Bedingungen
+    müssen deren Fehler vollständig als Energieverluste bezahlt werden.
+(d) Variationsantworten t_i mit gemeinsamen Residuen und dem bewiesenen
+    Tailboden kontrollieren; gemeinsame Kreuzgrame erhalten.
+(e) M_K mit vollständigem Fehlerbudget rational einschließen. Ein negatives
+    unteres Zertifikat bedeutet INCONCLUSIVE, nicht tatsächliche Negativität.
+
+Dieser Arbeitsblock hat keine neuen Operatorintegrale ausgeführt. Sein
+Fortschritt ist die vollständige korrelierte Darstellung und das bedingte
+Tail-Lemma (17). Allgemeine Fortsetzung, A9->A11, Objekt X und RH bleiben
+unverändert offen; eine externe mathematische Begutachtung steht aus.

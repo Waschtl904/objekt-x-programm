@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-14",
+  "archives": {
+    "archives/Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14.zip": {
+      "role": "author",
+      "sha256": "aaa21cb4cbab92f10c128b7709b011ca51b68cb0b53f2738b2eb64597701d818",
+      "bytes": 6230733,
+      "members": {
+        "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/ANSCHLUSS_GPT2.txt": {
+          "bytes": 2540,
+          "sha256": "e73186ce65ea5622977a11523644b6af864bbee3147f15f093ac0eb4e3f2496d"
+        },
+        "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/BERICHT.txt": {
+          "bytes": 2815,
+          "sha256": "7d682149dd99b3cb9b46cf1c5ed6746269cfe18bdbeb4b6f85e9e2ec0016236c"
+        },
+        "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/HERLEITUNG.txt": {
+          "bytes": 13456,
+          "sha256": "cdd29d63789b22f9fad885cbbc6723e2a1b760e3a1f70643964280ef64baec95"
+        },
+        "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/MANIFEST.json": {
+          "bytes": 2050,
+          "sha256": "b3105af7b60af16ff196c940f4960060d5f4456f630d5e5f19ea72333c7edab9"
+        },
+        "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/PRUEFPLAN.txt": {
+          "bytes": 1490,
+          "sha256": "ab952b0987b9ec18815853eb0bd127a0c027d052763e40dd43c2c8e1dc67d5b9"
+        },
+        "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/README.txt": {
+          "bytes": 1765,
+          "sha256": "203b3dabf2070948b0d2024d4bf565ec38350781fc1c3945f48f6c657c5779a4"
+        },
+        "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/SOURCE_BINDINGS.json": {
+          "bytes": 1484,
+          "sha256": "61751fac2927ba976eb71d4aaace142e6d5ae924604f80e6d01eeca1e7cc6a98"
+        },
+        "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/check.py": {
+          "bytes": 11279,
+          "sha256": "953c6e90eef6377d9ca92642cc76f414da727844c349b56d3a08dc0a12346a72"
+        },
+        "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/inputs/Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13.zip": {
+          "bytes": 4884860,
+          "sha256": "a1fa41958d79ab16a7c42b12375c3373f5a86a99993ae2d23c984ff6b3b2e8ae"
+        },
+        "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/reports/ACCEPTANCE.json": {
+          "bytes": 2800,
+          "sha256": "438e78014b12b2afa04081e277d32a650f97d73b312c09730e4165cf2b88bcdc"
+        },
+        "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/sources/BASIS84_HERLEITUNG.txt": {
+          "bytes": 13166,
+          "sha256": "36c138a508448beb290d24e5e820122d1e77965dc1f450278b7adab332d5ff88"
+        },
+        "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/sources/BASIS_EVEN.json": {
+          "bytes": 3981780,
+          "sha256": "21c7982e4c2f1a4e41a7864f8560ec40a9253cfccd770a98416fc4ceb675318d"
+        },
+        "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/sources/BASIS_ODD.json": {
+          "bytes": 3983379,
+          "sha256": "e8f4b99a04a5e55916c77becd89434483a11dd809cd95bfcb505cf72a1ec4f88"
+        },
+        "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/sources/COVERAGE_HERLEITUNG.txt": {
+          "bytes": 12534,
+          "sha256": "d950a2c7c2acebb72ac2d6302d5baa258dfaa7a69420415c996038279b35d344"
+        },
+        "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/sources/TAIL64_HERLEITUNG.txt": {
+          "bytes": 17695,
+          "sha256": "644bb670536edaea1bd88ac129a44446f0f4161fee66e414067e2c9efd2bcb3b"
+        }
+      }
+    },
+    "archives/Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14.zip": {
+      "role": "countercheck",
+      "sha256": "ab90bab116e16cbf4206c7be0dcba52628d4ea7d4b1dd00b0bb77acfcf0dcbac",
+      "bytes": 6240885,
+      "members": {
+        "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/BERICHT.txt": {
+          "bytes": 3346,
+          "sha256": "a55fc15cf7557ebb4c1524e6762669f1b2a1ca4e8ce4325592d5b4ef04c659ac"
+        },
+        "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/HERLEITUNG_GPT2.txt": {
+          "bytes": 9672,
+          "sha256": "d269e1f60e26fd11e10fc041ac31b18390f0aa75f1ff944bd2b6e8a20afaa2ad"
+        },
+        "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/inputs/Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14.zip": {
+          "bytes": 6230733,
+          "sha256": "aaa21cb4cbab92f10c128b7709b011ca51b68cb0b53f2738b2eb64597701d818"
+        },
+        "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/MANIFEST.json": {
+          "bytes": 1225,
+          "sha256": "a00a6b55bf7b668954602b4a34608fe29b3a7322189aac197f49a43045a5227f"
+        },
+        "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/PRUEFPLAN_GPT2.txt": {
+          "bytes": 1671,
+          "sha256": "308cba1803165a34d7486e82a81f62818375a5fa44400ddb08d65c8de1809648"
+        },
+        "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/README.txt": {
+          "bytes": 1746,
+          "sha256": "826fd09a8771f3ec155ddee350ca5ffe449334ffe2275a142e3f20b047567620"
+        },
+        "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/reports/FULL_SOURCE_REPLAY.json": {
+          "bytes": 2868,
+          "sha256": "60f3f9104337d6da77c51bc0e5a3b41e359f9116ea6ff8c668ebbd3e4ddf6cab"
+        },
+        "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/reports/INDEPENDENT_AUDIT.json": {
+          "bytes": 5230,
+          "sha256": "1214322e57bc7cde2babdd7389b031433eca9b6e0adcf6bf6f7cdf9fe705a327"
+        },
+        "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/verify.py": {
+          "bytes": 11347,
+          "sha256": "e2e28bd2e771ae55fece05dbbea039796e8a303741533688e57f501469c2b225"
+        }
+      }
+    }
+  },
+  "visible_copies": {
+    "original/author/ANSCHLUSS_GPT2.txt": {
+      "archive": "archives/Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/ANSCHLUSS_GPT2.txt"
+    },
+    "original/author/BERICHT.txt": {
+      "archive": "archives/Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/BERICHT.txt"
+    },
+    "original/author/HERLEITUNG.txt": {
+      "archive": "archives/Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/HERLEITUNG.txt"
+    },
+    "original/author/MANIFEST.json": {
+      "archive": "archives/Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/MANIFEST.json"
+    },
+    "original/author/PRUEFPLAN.txt": {
+      "archive": "archives/Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/PRUEFPLAN.txt"
+    },
+    "original/author/README.txt": {
+      "archive": "archives/Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/README.txt"
+    },
+    "original/author/SOURCE_BINDINGS.json": {
+      "archive": "archives/Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/SOURCE_BINDINGS.json"
+    },
+    "original/author/check.py": {
+      "archive": "archives/Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/check.py"
+    },
+    "original/author/reports/ACCEPTANCE.json": {
+      "archive": "archives/Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/reports/ACCEPTANCE.json"
+    },
+    "original/author/sources/BASIS84_HERLEITUNG.txt": {
+      "archive": "archives/Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/sources/BASIS84_HERLEITUNG.txt"
+    },
+    "original/author/sources/COVERAGE_HERLEITUNG.txt": {
+      "archive": "archives/Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/sources/COVERAGE_HERLEITUNG.txt"
+    },
+    "original/author/sources/TAIL64_HERLEITUNG.txt": {
+      "archive": "archives/Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14/sources/TAIL64_HERLEITUNG.txt"
+    },
+    "original/countercheck/BERICHT.txt": {
+      "archive": "archives/Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/BERICHT.txt"
+    },
+    "original/countercheck/HERLEITUNG_GPT2.txt": {
+      "archive": "archives/Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/HERLEITUNG_GPT2.txt"
+    },
+    "original/countercheck/MANIFEST.json": {
+      "archive": "archives/Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/MANIFEST.json"
+    },
+    "original/countercheck/PRUEFPLAN_GPT2.txt": {
+      "archive": "archives/Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/PRUEFPLAN_GPT2.txt"
+    },
+    "original/countercheck/README.txt": {
+      "archive": "archives/Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/README.txt"
+    },
+    "original/countercheck/reports/FULL_SOURCE_REPLAY.json": {
+      "archive": "archives/Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/reports/FULL_SOURCE_REPLAY.json"
+    },
+    "original/countercheck/reports/INDEPENDENT_AUDIT.json": {
+      "archive": "archives/Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/reports/INDEPENDENT_AUDIT.json"
+    },
+    "original/countercheck/verify.py": {
+      "archive": "archives/Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14.zip",
+      "member": "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14/verify.py"
+    }
+  },
+  "replay_archive": "archives/Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14.zip",
+  "package_root": "Objekt-X-Tailboden-Gegenpruefung-und-Inversanschluss-2026-10-14"
+}

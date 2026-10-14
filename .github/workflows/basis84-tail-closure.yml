@@ -1,0 +1,56 @@
+name: Basis84 original tail closure and countercheck
+
+on:
+  pull_request:
+    paths:
+      - "research/x-c1/basis84-tail-closure-2026-10-14/**"
+      - "scripts/replay_basis84_tail.py"
+      - "scripts/replay_a9_sealed.py"
+      - "tests/test_basis84_tail_replay.py"
+      - "tests/test_a9_sealed_replay.py"
+      - "research/x-c1/a8-a9-global-closure-2026-10-13/**"
+      - ".github/workflows/basis84-tail-closure.yml"
+  push:
+    branches: [main]
+    paths:
+      - "research/x-c1/basis84-tail-closure-2026-10-14/**"
+      - "scripts/replay_basis84_tail.py"
+      - "scripts/replay_a9_sealed.py"
+      - "tests/test_basis84_tail_replay.py"
+      - "tests/test_a9_sealed_replay.py"
+      - "research/x-c1/a8-a9-global-closure-2026-10-13/**"
+      - ".github/workflows/basis84-tail-closure.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  full-tail-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 1
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Check archival failures, replay scope and CI routing
+        run: |
+          python -B -m unittest discover -s tests -p test_a9_sealed_replay.py -v
+          python -B -m unittest discover -s tests -p test_basis84_tail_replay.py -v
+      - name: Replay both originals with historical sources and all 574 pivots
+        run: python -u -B scripts/replay_basis84_tail.py --output "${{ runner.temp }}/basis84-tail-check"
+      - name: Preserve commit-bound evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: basis84-tail-check-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/basis84-tail-check/*.json
+            ${{ runner.temp }}/basis84-tail-check/*.log
+          if-no-files-found: error
+          retention-days: 90

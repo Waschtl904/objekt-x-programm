@@ -1,0 +1,199 @@
+Objekt X — Gegenprüfung des alten Tailbodens und gerichteter Inversanschluss
+14. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Ergebnis und verbleibende Voraussetzungen
+
+Unter denselben gebundenen Voraussetzungen wie im Eingangs- und Inverspaket
+ist der ursprüngliche Basis84-Tailboden bestätigt. Für beide Paritäten gilt
+
+  tau[z] >= (2/3) W_X[z] >= (1/20) W_X[z],
+  z in D(tau) intersect Z84,
+  Z84=(ran J)^(perp W_X) innerhalb H=R12=T.
+
+Für den Operator A_Z der ursprünglichen geschlossenen Formrestriktion folgt
+  0 < A_Z^(-1) <= (3/2) I_Z.
+Die untere strikte Ungleichung bedeutet Positivität auf jedem von null
+verschiedenen Vektor; sie behauptet keine positive uniforme Untergrenze
+für A_Z^(-1).
+
+Die Formidentität des arithmetischen Problems, die alten A8-Abschätzungen,
+die vollständigen Operator- und Domänenaussagen sowie die gerichteten
+globalen Integrationszertifikate bleiben gebundene Voraussetzungen. Der
+vorliegende Schritt ist eine Gegenprüfung des daraus folgenden Anschlusses.
+Eine externe mathematische Gesamtbegutachtung wird damit nicht ersetzt.
+
+2. Abgleich der tatsächlich gemeinten Räume und Formen
+
+Die ursprüngliche Form tau ist die vollständige Schurminimierung nach dem
+ganzen alten Formraum und den zwölf Quellen. Tail64, Gleichungen (3)-(8),
+und dessen Abschnitt 4 geben
+
+  tau[r]=inf_(w,b) q_b[J_old w+Lambda(Phi b+r)]
+        =inf_(w,b) q_b[J_old w+F b+Lambda r].
+
+Für festes b unterscheiden sich die beiden Quellenrepräsentanten um einen
+alten Formvektor. Die Translation von w ist eine Bijektion des gesamten
+alten Formraums. Daher sind die Infima gleich. Die Kreuzterme bleiben in
+dieser Identität vollständig enthalten.
+
+Das Basis84-Paket, Abschnitte 2-3, legt fest:
+  J=Q[D;I84], D=-(S_top*)^(-1)S_bottom*, Y=QS,
+  K=ran J=P95 intersect T,
+  Z84=K^(perp H)=P95^(perp W_X) in X.
+Q ist die gebundene exakte W_X-Isometrie. Der originale Rest enthält die
+niedrigen Momentkomponenten; er ist kein ungewichteter Legendre-Tail.
+
+Die direkte Quellenkette wurde zusätzlich zum gelieferten Prüfer verfolgt:
+Schurarchiv -> Antwortarchiv -> Common96-Daten -> direkte Restformdaten ->
+ursprüngliche BASIS_EVEN/ODD.json. Alle vier Bindungen jeder Antwortdatei
+stimmen mit dem gebundenen Common96-Archiv überein. Die dortigen direkten
+Restformdaten binden exakt die ursprünglichen Basisdateien, deren Bytes
+auch mit dem historischen Basis84-Archiv verglichen wurden.
+
+Die 1344 rationalen Beziehungen S*[D;I84]=0, die Invertierbarkeit beider
+S_top und I<=J*J<500251/500000 I wurden durch den gelieferten Prüfer frisch
+kontrolliert. Insbesondere wird nicht nur die gemeinsame Herkunft der
+Halbinversendaten als Ersatz für die Identität der Basis verwendet.
+
+J liegt in D(tau). Der H-orthogonale Projektor auf K ist beschränkt und
+bildet in einen endlichen Raum fester Formvektoren ab. Deshalb ist er auch
+in der Formnorm stetig und erhält die Formdomäne. Folglich ist D(tau)
+intersect Z84 dicht in Z84 und unter der Formnorm abgeschlossen. Genau
+diese Restriktionsform definiert den ursprünglichen A_Z.
+
+3. Eigenständiger Beweis des Komplementwechsels
+
+Sei t eine hermitesche Form auf einer linearen Domäne D in H, K ein
+endlichdimensionaler Teilraum von D und P ein Projektor mit Bild K,
+der D erhält. Setze C=ker P und s(u)=inf_(k in K)t[u+k].
+Angenommen, auf C intersect D gilt s(v)>=delta ||v||_H^2, delta>0.
+
+Für z in K^perp intersect D setze j=Pz und v=z-j. Dann v in C intersect D
+und z+K=v+K. Also
+  s(z)=s(v)>=delta ||v||_H^2
+                =delta (||z||_H^2+||j||_H^2)
+                >=delta ||z||_H^2.
+Die mittlere Gleichheit folgt aus z orthogonal K. Wegen t[z]>=s(z) gilt
+die Schranke sowohl für die ursprüngliche Restriktion als auch für das
+Schurkomplement auf dem ursprünglichen orthogonalen Rest. Der Beweis
+arbeitet direkt auf der ganzen Formdomäne; er verwendet keinen Grenzwert
+endlicher Tests und setzt P nicht als H-orthogonal voraus.
+
+Anwendung: P=P_J^L=J L[J,J]^(-1)L[J,.]. Die 84 Funktionale L[J,.] sind
+H-stetig, weil J nur die ersten 96 lokalen Koeffizienten benutzt. Da
+L[J,J]>0 und J aus Formvektoren besteht, ist P wohldefiniert und erhält
+die benötigte Formdomäne. Das Inverspaket, Gleichung (5.2), liefert
+  inf_j tau[v+Jj] >= (2/3) W_X[v]
+auf ker P. Das ist bereits die volle Schurung, einschließlich aller alten
+und endlichen Richtungen. Somit folgt für das ursprüngliche Z84 sogar
+  tau[z] >= (2/3)(W_X[z]+W_X[P_J^L z]).
+
+Eine bloße Schranke der Restriktion tau|ker P hätte diesen Schluss nicht
+erlaubt. Genau diese Verwechslung ist hier ausgeschlossen.
+
+4. Zusätzlicher Inversanschluss ohne Gleichsetzung von Kompression
+   und Inverse der Restriktion
+
+Sei i:Z84->H die isometrische Einbettung und T_tau der Operator der
+vollständigen Form tau auf H. Schreibe
+  a_p=(1-c_p) beta,
+  beta=20209999981781/182190000000000,
+  c_even=1/250, c_odd=71/10000.
+
+Die Inverserneuerung, (2.5), liefert für jedes f mit J*f=0:
+  <f,H_*^(-1)f> <= a_p^(-1)<f,R_L f>.
+H_* ist der vollständige positive Vergleich, tau>=H_*, und R_L ist die
+tatsächliche Forminverse auf T mit sämtlichen Nebenbedingungen.
+
+Für jedes g in Z84 gilt nun die gerichtete Operatorabschätzung
+
+  A_Z^(-1) <= i* T_tau^(-1) i
+           <= i* H_*^(-1) i
+           <= a_p^(-1) i* R_L i.                         (I)
+
+Die erste Ungleichung lässt sich ohne formalen Blockinversen beweisen:
+
+  <g,A_Z^(-1)g>
+    = sup_(z in D(tau) intersect Z84)
+         (2 Re<g,z> - tau[z])
+    <= sup_(r in D(tau)) (2 Re<i g,r> - tau[r])
+    = <i g,T_tau^(-1)i g>.
+
+Die zweite Ungleichung ist dieselbe Variationsformel mit der unteren
+Vergleichsform H_* und, falls nötig, größerer Formdomäne. Für die dritte
+gilt J*i g=0 aufgrund der ursprünglichen W_X-Orthogonalität. Alle Produkte
+und Adjunkte verwenden diese Hilbertmetrik. Keine unbeschränkte Form wird
+auf einen beliebigen Hilbertvektor angewandt.
+
+Die Kompression der vollen Inverse ist im Allgemeinen größer als die
+Inverse der Restriktion. Der unabhängige rationale Kontrollfall in
+verify.py prüft diese Ordnung mit fünf Dimensionen, zwei eliminierten
+Richtungen, nichttrivialer Metrik und nichtkommutierenden Matrizen. Er prüft
+auch die exakte Identität mit der Inverse des Schurkomplements. Das ist
+eine Fehlerkontrolle; der allgemeine Beweis ist die obige Supremumsformel.
+
+Da R_L<=5/21 I_H, ergibt (I) unmittelbar
+  A_Z^(-1) <= 5/(21 a_p) I_Z,
+  tau|Z84 >= (21/5) a_p W_X.
+Die beiden exakt berechneten Böden lauten
+  gerade:   35226029968244283/75912500000000000,
+  ungerade: 1404655628733724843/3036500000000000000.
+Beide sind größer als 231/500 und damit größer als 1/20. Dieser zweite
+Weg benötigt weder die besondere hohe Momentgeometrie noch P_upper.
+
+Die gewichtete Schranke (I) bleibt als eigenständige gerichtete Majorante
+erhalten. Sie darf parallel zur stärkeren skalaren Schranke 3/2 I_Z
+verwendet werden; ein gemeinsames operatorwertiges Minimum wird nicht
+behauptet. Für jede beschränkte vollständige Quellenspalte R:F->Z84 gilt
+
+  R* A_Z^(-1) R <= (3/2) R*R,
+  R* A_Z^(-1) R <= a_p^(-1) R* i* R_L i R.
+
+Damit steht für spätere vollständige Hilbertresiduen eine zusätzliche
+gewichtete Abschätzung zur Verfügung. Neue Residuen oder einen neuen
+Horizont haben wir damit noch nicht berechnet.
+
+5. Tatsächlich ausgeführte Prüfung und Statusgrenzen
+
+Der gelieferte check.py wurde nach Codeinspektion mit beiden historischen
+Originalarchiven und --replay-inverse ausgeführt. Seine gesamte Quittung
+stimmt als JSON in allen Feldern mit reports/ACCEPTANCE.json überein:
+1344 Basisrelationen, 574 positive Pivots, 82418 E-Einträge und 34104
+Antwortmatrix-Einträge sind bestätigt. Das Inversarchiv wurde dafür frisch
+entpackt. Historische Originaldateien wurden nicht verändert.
+
+verify.py enthält getrennte Fraction-Arithmetik für beide skalaren Wege,
+den hohen Momentpreis und die zusätzliche Inverskontrolle. Es importiert
+keine arithmetischen Hilfsfunktionen des gelieferten Prüfers. Sein eigener
+Rechenteil, die Quellenkette und die Ausführung des Originalprüfers werden
+getrennt in der Quittung ausgewiesen. Ein Standard-Replay führt keinen
+neuen 574-Pivot-Lauf aus; --full-source-replay tut dies ausdrücklich.
+
+Die großen globalen Integrationen wurden in dieser Gegenprüfung nicht
+erneut erzeugt. Die geschlossenen analytischen Aussagen werden anhand
+der gebundenen Herleitungen beurteilt, nicht aus den JSON-Statusfeldern
+oder endlichen Kontrollbeispielen abgeleitet.
+
+Der alte 268-Funktional-Abdeckungstest bleibt als konkreter Test ungeklärt.
+Er war nur ein hinreichendes Verfahren für den jetzt anders bewiesenen
+Boden. Seine Kraftdaten werden nicht durch die neueren 203 Kraftdaten
+ersetzt. Der vollständige globale Residualabschluss war ohne Faktor 20
+bewiesen worden; der jetzige Anschluss benutzt den Boden daher nicht
+zirkulär. Frühere versiegelte false-Felder bleiben historische Befunde.
+
+CONDITIONAL_ORIGINAL_BASIS84_TAIL_FLOOR_1_OVER_20 = true
+CONDITIONAL_ORIGINAL_BASIS84_TAIL_FLOOR_2_OVER_3 = true
+CONDITIONAL_WEIGHTED_RESTRICTION_INVERSE_BOUND = true
+OLD_268_FUNCTIONAL_COVERAGE_GATE_PROVED = false
+NEW_COMPLETE_L2_RESIDUAL_COMPUTED = false
+NEW_HORIZON_TRANSITION_PROVED = false
+OBJECT_X_CONSTRUCTED = false
+RH_PROVED = false
+EXTERNAL_MATHEMATICAL_REVIEW_OPEN = true
+GITHUB_MODIFIED_IN_THIS_REVIEW = false
+
+Literaturkontext: Corach, Maestripieri, Stojanoff, "Oblique projections
+and Schur complements", https://arxiv.org/abs/math/0006120 behandelt den
+Zusammenhang für beschränkte Operatoren. Die hier nötige Aussage auf der
+unbeschränkten Formdomäne ist in Abschnitt 3 direkt bewiesen; sie wird
+nicht allein aus dieser Literaturreferenz übernommen.

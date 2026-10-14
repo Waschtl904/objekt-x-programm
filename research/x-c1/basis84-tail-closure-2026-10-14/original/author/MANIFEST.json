@@ -1,0 +1,60 @@
+{
+  "files": {
+    "ANSCHLUSS_GPT2.txt": {
+      "bytes": 2540,
+      "sha256": "e73186ce65ea5622977a11523644b6af864bbee3147f15f093ac0eb4e3f2496d"
+    },
+    "BERICHT.txt": {
+      "bytes": 2815,
+      "sha256": "7d682149dd99b3cb9b46cf1c5ed6746269cfe18bdbeb4b6f85e9e2ec0016236c"
+    },
+    "HERLEITUNG.txt": {
+      "bytes": 13456,
+      "sha256": "cdd29d63789b22f9fad885cbbc6723e2a1b760e3a1f70643964280ef64baec95"
+    },
+    "PRUEFPLAN.txt": {
+      "bytes": 1490,
+      "sha256": "ab952b0987b9ec18815853eb0bd127a0c027d052763e40dd43c2c8e1dc67d5b9"
+    },
+    "README.txt": {
+      "bytes": 1765,
+      "sha256": "203b3dabf2070948b0d2024d4bf565ec38350781fc1c3945f48f6c657c5779a4"
+    },
+    "SOURCE_BINDINGS.json": {
+      "bytes": 1484,
+      "sha256": "61751fac2927ba976eb71d4aaace142e6d5ae924604f80e6d01eeca1e7cc6a98"
+    },
+    "check.py": {
+      "bytes": 11279,
+      "sha256": "953c6e90eef6377d9ca92642cc76f414da727844c349b56d3a08dc0a12346a72"
+    },
+    "inputs/Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13.zip": {
+      "bytes": 4884860,
+      "sha256": "a1fa41958d79ab16a7c42b12375c3373f5a86a99993ae2d23c984ff6b3b2e8ae"
+    },
+    "reports/ACCEPTANCE.json": {
+      "bytes": 2800,
+      "sha256": "438e78014b12b2afa04081e277d32a650f97d73b312c09730e4165cf2b88bcdc"
+    },
+    "sources/BASIS84_HERLEITUNG.txt": {
+      "bytes": 13166,
+      "sha256": "36c138a508448beb290d24e5e820122d1e77965dc1f450278b7adab332d5ff88"
+    },
+    "sources/BASIS_EVEN.json": {
+      "bytes": 3981780,
+      "sha256": "21c7982e4c2f1a4e41a7864f8560ec40a9253cfccd770a98416fc4ceb675318d"
+    },
+    "sources/BASIS_ODD.json": {
+      "bytes": 3983379,
+      "sha256": "e8f4b99a04a5e55916c77becd89434483a11dd809cd95bfcb505cf72a1ec4f88"
+    },
+    "sources/COVERAGE_HERLEITUNG.txt": {
+      "bytes": 12534,
+      "sha256": "d950a2c7c2acebb72ac2d6302d5baa258dfaa7a69420415c996038279b35d344"
+    },
+    "sources/TAIL64_HERLEITUNG.txt": {
+      "bytes": 17695,
+      "sha256": "644bb670536edaea1bd88ac129a44446f0f4161fee66e414067e2c9efd2bcb3b"
+    }
+  }
+}

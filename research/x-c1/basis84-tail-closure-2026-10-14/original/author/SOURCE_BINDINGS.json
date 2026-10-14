@@ -1,0 +1,39 @@
+{
+  "read_only_github_snapshot": "65c8c9b78d44c155eaee667d512ace240789ad08",
+  "sources": {
+    "sources/BASIS84_HERLEITUNG.txt": {
+      "sha256": "36c138a508448beb290d24e5e820122d1e77965dc1f450278b7adab332d5ff88",
+      "bytes": 13166
+    },
+    "sources/BASIS_EVEN.json": {
+      "sha256": "21c7982e4c2f1a4e41a7864f8560ec40a9253cfccd770a98416fc4ceb675318d",
+      "bytes": 3981780
+    },
+    "sources/BASIS_ODD.json": {
+      "sha256": "e8f4b99a04a5e55916c77becd89434483a11dd809cd95bfcb505cf72a1ec4f88",
+      "bytes": 3983379
+    },
+    "sources/COVERAGE_HERLEITUNG.txt": {
+      "sha256": "d950a2c7c2acebb72ac2d6302d5baa258dfaa7a69420415c996038279b35d344",
+      "bytes": 12534
+    },
+    "sources/TAIL64_HERLEITUNG.txt": {
+      "sha256": "644bb670536edaea1bd88ac129a44446f0f4161fee66e414067e2c9efd2bcb3b",
+      "bytes": 17695
+    },
+    "inputs/Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13.zip": {
+      "sha256": "a1fa41958d79ab16a7c42b12375c3373f5a86a99993ae2d23c984ff6b3b2e8ae",
+      "bytes": 4884860
+    }
+  },
+  "original_basis_package": {
+    "filename": "Objekt-X-Basis84-und-Abdeckungspruefung-2026-10-10.zip",
+    "sha256": "dd0e30a27d66f38503b217fa3279f62173ee1360eeca06eb5fdb698c7deeaec5"
+  },
+  "original_schur_package": {
+    "filename": "Objekt-X-Globaler-Schurabschluss-A8-A9-2026-10-13.zip",
+    "sha256": "65085974657257bd447d93342c5001d29e797b2fa70d876d53d36b587b16c2ba"
+  },
+  "large_integrations_rerun": false,
+  "github_modified": false
+}

@@ -1,0 +1,299 @@
+Objekt X — der ursprüngliche Basis84-Tailboden durch Komplementwechsel
+14. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis und genauer Geltungsbereich
+==================================
+
+Für beide Paritäten folgt unter den gebundenen Operator-, Domänen- und
+vollständigen Integrationsvoraussetzungen:
+
+  tau[z] >= (2/3) W_X[z] >= (1/20) W_X[z]
+  für alle z in D(tau) intersect Z84,
+  Z84=(ran J84)^(perp W_X) innerhalb R12.                 (A)
+
+Dies ist genau der Tailoperator A_Z des Basisabdeckungspakets vom
+10. Oktober, mit der im anschließenden Basis84-Paket festgelegten Basis.
+Insbesondere gilt für seine vollständige Hilbertrauminverse
+
+               0 < A_Z^(-1) <= (3/2) I_Z <= 20 I_Z.      (B)
+
+Der neue Schluss betrifft den alten W_X-orthogonalen Rest, nicht nur das
+neue L-orthogonale Komplement. Die Formen, die Basis J, die zwölf Quellen
+und die Metrik W_X werden nicht geändert. Der alte 268-Funktional-
+Abdeckungstest wird dadurch weder ausgeführt noch als bestanden erklärt.
+Er war ein hinreichender Weg zum Tailboden, keine notwendige Bedingung.
+
+Die Zahl 2/3 gilt nicht auf ganz R12 und nicht auf dem ganzen physischen
+A9-Raum. Weitere Horizonte, die Konstruktion von Objekt X und der
+Anschluss an RH sind keine Folgerungen dieses Pakets.
+
+1. Identität des alten Zielraums und der tatsächlichen Form
+========================================================
+
+Es gelten unverändert a=3 log(2)/2, b=log(3),
+X=L2((a,b),2 dx), m=cosh(x/2) beziehungsweise sinh(x/2),
+mu=int_0^a m^2, lambda(r)=int_a^b m r und
+
+  W_X[r]=||r||_X^2+2|lambda(r)|^2/mu.
+
+Phi=(sigma_1,...,sigma_4,Y_1,...,Y_8) sind die Schalenfunktionen,
+F=(z_1,...,z_4,Lambda Y_1,...,Lambda Y_8) ihre ursprünglichen physischen
+Vertreter. Die Räume des alten und neuen Pakets stimmen überein:
+
+  H=(R12,W_X), R12=T=(V+ran Y)^(perp W_X).
+
+Die tatsächliche alte Schurform ist nach Tail64, Gleichungen (3)-(8),
+
+  tau[r]=inf_(w,beta) q_b[J_old w+Lambda(Phi beta+r)].    (1.1)
+
+Das Infimum reicht über den gesamten alten Formraum und C^12. Die
+physischen Quellen F_i unterscheiden sich von Lambda phi_i nur um alte
+Formvektoren. Bei festem beta ist die entsprechende Translation von w
+eine Bijektion des alten Formraums. Daher gilt ebenso exakt
+
+  tau[r]=inf_(w,beta) q_b[J_old w+F beta+Lambda r].       (1.2)
+
+Das ist die Form Schur_F(C_actual) aus der Inverserneuerung, nicht der
+Untervergleich H_* und nicht eine Form mit unabhängig ersetzten
+Kreuzenergien. Die Vertreterinvarianz steht schon in Tail64, Abschnitt 4.
+Die vollständigen Zerlegungs- und Domänenbegründungen stehen im neuen
+Domänentext, Abschnitte 2-5, der im Inversarchiv unverändert enthalten ist.
+
+Die feste Basis ist in beiden Rechenwegen dieselbe:
+
+  Y=Q S, D=-(S_top*)^(-1) S_bottom*, J=Q [D;I84],
+  K=ran J=P95 intersect R12, W_J=J*J=I84+D*D.
+
+Adjunkte verwenden H, sofern nichts anderes angegeben ist. Q ist die
+gebundene exakte W_X-Isometrie mit 92 Spalten; die erste S-Gruppe hat
+acht Zeilen. Die neuen Domänendaten und die ursprünglichen Basisdaten
+binden denselben Halbinversenquellhash. Der neue Prüfer kontrolliert die
+Invertierbarkeit beider S_top, je 672 exakte Gleichungen S* [D;I84]=0
+und die unveränderten Grame rational. Es gilt
+
+             I84 <= W_J < (500251/500000) I84.
+
+Nach Basis84, Abschnitt 3, ist der damalige Rest ausdrücklich
+
+       Z84=K^(perp H)=P95^(perp W_X) in X.              (1.3)
+
+Er ist kein roher Legendre-Tail: kleine niedrige Momentkomponenten sind
+Teil dieses exakten Raums. Keine dieser Komponenten wird hier verworfen.
+Die 64 in der älteren Lemma-Bezeichnung zählt lokale Funktionale; sie
+bezeichnet nicht eine fest vorgeschriebene 64-spaltige Antwortbasis.
+
+J liegt in D(tau), sogar in der dort begründeten Operatordomäne. Der
+W_X-Projektor auf K ist in der Formnorm stetig. Deshalb gilt vollständig
+
+  D(tau)=K direct-sum (D(tau) intersect Z84),
+
+mit dichtem Formteil in Z84. Die geschlossene Formrestriktion auf diesem
+Raum definiert genau den alten A_Z.
+
+2. Allgemeines Übertragungslemma
+===============================
+
+Sei H ein Hilbertraum mit Norm ||.||_H, t eine Form mit Domäne D, und
+K ein endlichdimensionaler Teilraum von D. Sei P ein Projektor mit Bild K,
+der D erhält. Setze C=ker P, Z=K^perp und
+
+                  s(v)=inf_(k in K) t[v+k].            (2.1)
+
+Angenommen, für jedes v in C intersect D gilt die vollständige Schranke
+s(v)>=delta ||v||_H^2 mit delta>0. Dann gilt
+
+                  t[z]>=delta ||z||_H^2
+                  für jedes z in Z intersect D.        (2.2)
+
+Beweis. Setze j=Pz in K und v=z-j in C intersect D. Da z=v+j,
+
+  t[z]>=inf_(k in K)t[v+k]=s(v)>=delta ||v||_H^2.
+
+Wegen z orthogonal zu K ist <z,j>_H=0, also
+
+               ||v||_H^2=||z-j||_H^2
+                        =||z||_H^2+||j||_H^2
+                        >=||z||_H^2.                  (2.3)
+
+Damit folgt (2.2). Der Beweis gilt für jeden Formvektor im gesamten
+unendlichen Raum. Eine endliche Approximation ist nicht beteiligt. QED.
+
+Stärker ist auch der Schurrest auf dem alten orthogonalen Komplement
+mindestens delta: Weil z und v dieselbe Klasse modulo K bezeichnen,
+gilt inf_k t[z+k]=inf_k t[v+k]. Diese Invarianz ist wesentlich. Eine
+bloße positive Einschränkung t|C wäre als Voraussetzung nicht ausreichend.
+
+3. Anwendung auf den neuen hohen Schurrest
+========================================
+
+In der Inverserneuerung ist L die vollständige gewichtete lokale
+Legendreform auf T, R_L ihre tatsächliche Forminverse auf T. Es gilt
+L>=(21/5) W_X. Die neue Projektion ist
+
+  E_J=L[J,J], P_J^L r=J E_J^(-1)L[J,r],
+  K_L=ker P_J^L={v in T: L[J,v]=0}.                    (3.1)
+
+J ist polynomial bis Grad 95. Deshalb sind die 84 Funktionale L[J,.]
+W_X-stetig. P_J^L ist ein beschränkter Hilbertprojektor, hat Bild K und
+erhält die gesamte Formdomäne: Er subtrahiert nur Linearkombinationen
+der festen Formvektoren J. E_J>0 ist aus L und W_J>0 gesichert.
+Somit ist P=P_J^L in Abschnitt 2 zulässig.
+
+Die bereits gebundene Inverserneuerung liefert in Gleichung (5.2)
+
+  inf_(w,beta,j) q_b[J_old w+F beta+Lambda(Jj+v)]
+                 >= (2/3) W_X[v]                      (3.2)
+
+für jedes v in K_L intersect D(tau). Alle alten Richtungen und alle
+96 endlichen Schalenkoordinaten sind im Infimum enthalten. Nach (1.2)
+ist die linke Seite genau inf_j tau[v+Jj].
+
+Das Übertragungslemma gibt nun für jedes z im ALTEN Z84:
+
+  v=(I-P_J^L)z,
+  tau[z] >= inf_j tau[v+Jj]
+         >= (2/3) W_X[v]
+          = (2/3)(W_X[z]+W_X[P_J^L z])
+         >= (2/3) W_X[z].                              (3.3)
+
+Das beweist (A), ohne P_J^L mit dem W_X-Projektor gleichzusetzen.
+Die Nichtorthogonalität der neuen Zerlegung kostet hier keine Reserve:
+Der alte W_X-orthogonale Vertreter hat in jeder Klasse modulo K die
+kleinste W_X-Norm. Darum steht die Normungleichung in der benötigten
+Richtung. Es werden keine numerisch approximierten Projektionen eingesetzt.
+
+Aus Geschlossenheit und Dichte der alten Restriktionsform sowie (3.3)
+folgt ihr positiver selbstadjungierter Operator und die Inversordnung (B).
+Für vollständige Hilbertquellen R mit Werten in Z84 ist somit
+
+             R* A_Z^(-1) R <= (3/2)R*R <=20 R*R.       (3.4)
+
+Das erfüllt die Boden-Voraussetzung des früheren Residualtests. Dessen
+neue Antwortfunktionen, Operatordomänenbedingungen und vollständiger
+L2-Residualgram wären bei einer erneuten Verwendung weiter gesondert
+zu prüfen; sie werden in diesem Schritt nicht berechnet.
+
+4. Unabhängiger kürzerer Weg zum verlangten 1/20
+=============================================
+
+Schon die allgemeine Inversabschätzung vor der besonderen hohen
+Momentgeometrie reicht für das ursprüngliche Ziel. Setze wie im
+Inverspaket
+
+  S=(1-eta)q-H_neu >= beta L,
+  H_*=S-A_force* D203^(-1) A_force,
+  Z_app=J X_ans, R=A_force* - S Z_app,
+  E=D203-M_upper>0,
+  beta=20209999981781/182190000000000.
+
+Die vollständige globale Residualschranke lautet
+
+  R* R_L R <= c beta E,
+  c_even=1/250, c_odd=71/10000.                         (4.1)
+
+Es handelt sich um den gesamten Formdualrest einschließlich aller
+unendlichen Komponenten, nicht um ein Galerkinresiduum. Für jedes
+Hilbertfunktional f, das auf K verschwindet, folgt aus der vollständigen
+Woodbury-/Residualidentität (Inverserneuerung, Gleichungen (2.1)-(2.5))
+
+  <f,H_*^(-1)f>
+          <=[(1-c)beta]^(-1)<f,R_L f>
+          <=5/[21(1-c)beta] ||f||_H^2.                 (4.2)
+
+Die endliche Antwort fällt hier weg, weil J*f=0. Dies setzt keine
+Orthogonalität von J bezüglich S voraus. Die positive Form H_* und
+ihre volle Inverse sind durch (4.1) und E>0 bereits gesichert.
+
+Identifiziere f auf dem alten Z84 mit seiner Fortsetzung durch null
+auf K. Da H=K direct-sum Z84 W_X-orthogonal ist, bleibt die Norm dabei
+erhalten. Die Kompression H_*^(-1) auf diese Funktionale ist die Inverse
+des Schurkomplements von H_* nach K. Sie ist im Allgemeinen NICHT die
+Inverse der bloßen Restriktion H_*|Z84. Inverse Formordnung und die
+variationale Schuridentität liefern aus (4.2)
+
+  Schur_K(H_*)|Z84 >= (21/5)(1-c)beta W_X.              (4.3)
+
+Die tatsächliche Form tau dominiert H_* auf ihrer vollen Domäne; diese
+Ordnung stammt aus dem gemeinsamen alten Inversvergleich und der
+korrekten inversen Zwölferordnung. Deshalb gilt ebenfalls
+
+  tau|Z84 >= (21/5)(1-c)beta W_X
+           > (231/500)W_X > (1/20)W_X.                 (4.4)
+
+Die exakten beiden Koeffizienten sind:
+  gerade:   35226029968244283 / 75912500000000000,
+  ungerade: 1404655628733724843 / 3036500000000000000.
+
+Dieser zweite Beweis benötigt weder die neu berechneten P_upper-Matrizen
+noch die schärfere Momentabschätzung auf K_L. Er bestätigt das verlangte
+1/20 allein aus dem vollständigen Residualanschluss, beta, dem globalen
+L-Boden und derselben endlichen Antwortbasis. Die 2/3-Version in Abschnitt
+3 verwendet zusätzlich die bereits gebundene vollständige hohe Geometrie.
+
+5. Rational nachgeprüfte Eingaben und Grenzen der Prüfung
+=======================================================
+
+Der Standardprüfer check.py verwendet eigene Fraction-Arithmetik für:
+  - Quellenhashes und das ganze Manifest des neuen Inversarchivs;
+  - Identität der Halbinversenherkunft, beide S_top-Inversen, 1344 exakte
+    Basisgleichungen und die vollständige rationale Zusatzgramspur;
+  - beide beta-/c-Koeffizienten in (4.4);
+  - den vollständigen Momentrest
+      (3/100)[4(3/200)^96/96!]^2 <10^(-600),
+    die Hilfsgrenzen C_W<3000 und d96>31/5 sowie
+      (1-c)beta d96/(1+3000 moment_tail)>671/1000>2/3;
+  - exakte Beispiele mit nichttrivialer W-Metrik, nichtnormierter Basis,
+    verschiedenen L-/W-Komplementen, Schur-Invarianz und Pythagoras;
+  - Gegenbeispiele gegen das Verwechseln von Restriktion und Schurform,
+    das Übertragen auf beliebig schiefe Zielräume und die Ausdehnung
+    des Tailbodens auf ganz T.
+
+Mit den optional angegebenen Originalarchiven prüft er zusätzlich
+bytegleich die ursprünglichen BASIS-Dateien sowie alle 82418 E-Einträge,
+34104 X-Einträge, beta und die gesamten Residualpreise aus dem vollen
+Schurarchiv. Diese Felder werden nicht nur untereinander im neuen Paket
+verglichen. Der optionale --replay-inverse führt den unveränderten
+287x287-Rationalprüfer je Parität aus einem frischen temporären Entpacken
+aus; insgesamt sind das 574 positive Pivots. Sein Quellenabgleich ist
+bei Übergabe des Schurarchivs ebenfalls aktiv.
+
+Die allgemeinen Form- und Komplementwechselbeweise sind analytisch.
+Kein endlicher synthetischer Test und kein JSON-Status beweist sie.
+Die numerischen Zertifikate belegen die benannten rationalen Eingaben;
+die arithmetische Formidentität, alte Operatorabschätzungen und globalen
+Integralzertifikate bleiben gebunden. Große Integrationen wurden hier
+nicht wiederholt, und eine externe mathematische Gesamtprüfung bleibt offen.
+
+6. Statuskorrektur ohne Veränderung historischer Quellen
+======================================================
+
+Die alte Aussage, der neue hohe Boden beweise den alten Tailboden nicht,
+war als Warnung vor dem bloßen Gleichsetzen der Resträume richtig. Als
+weiterhin offenes Beweisziel ist der Basis84-Tail nach dem jetzigen
+Komplementwechselargument jedoch erledigt. Der fehlende Übertragungssatz
+steht in Abschnitt 2 und wird auf exakt denselben K angewendet.
+
+Nicht erforderlich ist ein Nachweis des alten hinreichenden Gates
+||L_64* - J P||^2<=1/20. Seine 268 ursprünglichen Funktionale, insbesondere
+die 203 anderen Kraftkoordinaten, werden nirgends mit A_force identifiziert.
+Sein historischer Status COVERAGE_BOUND_INCONCLUSIVE bleibt als Befund
+dieser Rechnung erhalten. Der Tailboden folgt durch einen anderen Satz.
+
+Auch liegt keine zirkuläre Verwendung des Tailbodens vor:
+vollständiger globaler Formdualrest -> A8/A9-Schurvergleich und
+Inversabschätzung -> Komplementwechsel -> alter Basis84-Tailboden.
+Der ursprüngliche globale Residualabschluss hatte den Faktor 20
+ausdrücklich nicht benutzt.
+
+CONDITIONAL_ORIGINAL_BASIS84_TAIL_FLOOR_1_OVER_20 = true
+CONDITIONAL_ORIGINAL_BASIS84_TAIL_FLOOR_2_OVER_3 = true
+OLD_268_FUNCTIONAL_COVERAGE_GATE_PROVED = false
+NEW_L2_SCHUR_RESIDUAL_WITH_FACTOR20_COMPUTED = false
+ALL_HORIZONS_CERTIFIED = false
+OBJECT_X_CONSTRUCTED = false
+RH_PROVED = false
+EXTERNAL_MATHEMATICAL_REVIEW_OPEN = true
+
+Originalarchive bleiben unverändert. GitHub wurde nur gelesen. Das neue
+Ergebnis ist eine getrennte Herleitung; es korrigiert keine versiegelten
+historischen Dateien und beansprucht keinen externen Reviewstatus.

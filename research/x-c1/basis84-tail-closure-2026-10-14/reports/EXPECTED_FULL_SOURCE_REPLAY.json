@@ -1,0 +1,68 @@
+{
+  "status": "PASS_CONDITIONAL_ORIGINAL_BASIS84_TAIL_FLOOR",
+  "cases": [
+    {
+      "parity": "even",
+      "exact_basis_null_relations": 672,
+      "same_half_inverse_source_hash": "185b501de8f218f8b62812631fe52301a47a288f11b9b4e8205229da7f89da82",
+      "basis_gram_upper": "500251/500000",
+      "original_tail": "Z84=(ran J84)^(perp W_X) in R12",
+      "generic_tail_floor_relative_WX": "35226029968244283/75912500000000000",
+      "generic_simple_floor": "231/500",
+      "transferred_simple_floor_relative_WX": "2/3",
+      "tail_inverse_norm_upper": "3/2",
+      "tail_floor_1_over_20_proved_under_bound_hypotheses": true
+    },
+    {
+      "parity": "odd",
+      "exact_basis_null_relations": 672,
+      "same_half_inverse_source_hash": "185b501de8f218f8b62812631fe52301a47a288f11b9b4e8205229da7f89da82",
+      "basis_gram_upper": "500251/500000",
+      "original_tail": "Z84=(ran J84)^(perp W_X) in R12",
+      "generic_tail_floor_relative_WX": "1404655628733724843/3036500000000000000",
+      "generic_simple_floor": "231/500",
+      "transferred_simple_floor_relative_WX": "2/3",
+      "tail_inverse_norm_upper": "3/2",
+      "tail_floor_1_over_20_proved_under_bound_hypotheses": true
+    }
+  ],
+  "exact_controls": {
+    "nonidentity_W_and_nonorthonormal_J": true,
+    "different_L_and_W_complements": true,
+    "exact_Schur_coset_invariance": true,
+    "exact_Pythagoras_identity": true,
+    "restriction_minus_Schur_is_positive_square": true,
+    "inverse_restriction_not_inverse_compression": true,
+    "restriction_only_without_Schur_coupling_rejected": true,
+    "tilted_target_without_W_orthogonality_rejected": true,
+    "promotion_of_tail_floor_to_whole_T_rejected": true
+  },
+  "embedded_source_file_bindings_verified": 6,
+  "inverse_archive_manifest_files_verified": 26,
+  "original_basis_archive_byte_comparison": true,
+  "original_Schur_data_binding": {
+    "source_archive_hash_verified": true,
+    "exact_E_entries": 82418,
+    "exact_X_entries": 34104,
+    "beta_and_complete_residual_caps_verified": true
+  },
+  "fresh_inverse_replay": {
+    "status": "PASS_FRESH_PACKAGE_REPLAY",
+    "sealed_files_verified": 26,
+    "all_mathematical_audit_fields_identical": true,
+    "original_Schur_source_fields_verified": true,
+    "new_complete_positive_LDL_pivots": 574,
+    "large_integrations_rerun": false,
+    "external_review_open": true
+  },
+  "proof_of_infinite_space_transfer": "HERLEITUNG.txt sections 2-5",
+  "old_268_functional_coverage_gate_proved": false,
+  "new_large_integrations_rerun": false,
+  "new_L2_Schur_residual_with_factor20_computed": false,
+  "floor_2_over_3_on_all_R12_claimed": false,
+  "all_horizons_certified": false,
+  "object_X_constructed": false,
+  "RH_proved": false,
+  "external_mathematical_review_open": true,
+  "github_modified": false
+}

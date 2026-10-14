@@ -1,0 +1,68 @@
+Objekt X — Gegenprüfung bestätigt den ursprünglichen Basis84-Tailboden
+14. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis
+
+Die Gegenprüfung besteht. Unter den gebundenen Operator-, Domänen- und
+Integrationsvoraussetzungen gilt für beide Paritäten auf dem ursprünglichen
+W_X-orthogonalen Tail Z84:
+
+                 tau[z] >= (2/3) W_X[z].
+
+Damit ist auch das frühere Ziel 1/20 für genau diesen Rest geschlossen.
+Es handelt sich um die ursprüngliche tatsächliche Schurform und dieselbe
+Basis84. Die niedrigen Momentkomponenten und sämtliche Kopplungen sind
+berücksichtigt. Der neue Komplementwechsel ist analytisch schlüssig:
+Die Schurminimierung hängt nur von der Klasse modulo Basis84 ab, und der
+ursprüngliche orthogonale Vertreter hat in dieser Klasse die kleinste Norm.
+
+Zusätzlicher Anschluss aus dieser Gegenprüfung
+
+Für den ursprünglichen Tailoperator gilt A_Z^(-1)<=(3/2)I. Zusätzlich
+haben wir direkt über die Variationsformel der Inverse hergeleitet:
+
+  A_Z^(-1) <= [(1-c)beta]^(-1) i* R_L i,
+
+wobei i den alten Tail isometrisch in R12 einbettet und R_L die vollständige
+gebundene Forminverse ist. Diese gerichtete Abschätzung kann für spätere
+vollständige Residuen genutzt werden. Bereits ihr gröberer Skalarvergleich
+liefert für beide Paritäten einen Boden >231/500 und beweist 1/20 auf einem
+zweiten Weg, ohne die besondere hohe Momentgeometrie. Eine neue Residual-
+rechnung oder ein weiterer Horizontübergang wird dadurch nicht behauptet.
+
+Tatsächlich geprüft
+
+- Originalprüfer mit beiden historischen Quellenarchiven und vollständig
+  neu ausgeführtem Inversreplay: bestanden.
+- 1344 exakte Basisrelationen und 574 positive Pivots: bestätigt.
+- 82418 E-Einträge und 34104 Antwortmatrix-Einträge: mit der gebundenen
+  ursprünglichen Schurkette abgeglichen.
+- Sämtliche Felder der vollständigen Ergebnisquittung: stimmen mit dem
+  Eingangspaket überein.
+- Zusätzlicher direkter Herkunftsabgleich der Antwortdateien über Common96
+  bis zu beiden ursprünglichen Basisdateien: bestanden.
+- Eigene exakte Bruchrechnung für beide Skalarwege und ein unabhängiger
+  Kontrollfall zur inversen Kompression mit nichttrivialer Metrik: bestanden.
+- Schneller Replay des frisch entpackten Rückgabepakets: bestanden.
+
+Die großen globalen Integrationen wurden nicht erneut erzeugt. Ein
+synthetischer Kontrollfall ersetzt keinen Beweis auf dem unendlichen Raum;
+die beiden allgemeinen Argumente stehen vollständig in HERLEITUNG_GPT2.txt.
+
+Status
+
+Der ursprüngliche Basis84-Tailboden 1/20 ist bedingt geschlossen; sogar
+2/3 gilt. Der alte 268-Funktional-Fittest bleibt als eigener Test ungeklärt
+und wird für diesen Schluss nicht benötigt. Auf ganz R12 oder dem gesamten
+physischen A9-Raum wird kein Boden 2/3 behauptet. Weitere Horizonte,
+Objekt X insgesamt und die externe mathematische Gesamtprüfung bleiben offen.
+
+In diesem Gegenprüfungslauf wurde GitHub nicht verändert. Historische
+Originalarchive und ihre früheren Statusfelder bleiben unverändert.
+
+Eingangspaket SHA256:
+aaa21cb4cbab92f10c128b7709b011ca51b68cb0b53f2738b2eb64597701d818
+
+Reproduktion: README.txt und verify.py. Im schnellen Lauf wird die bereits
+ausgeführte vollständige 574-Pivot-Quittung geprüft, nicht dieser große
+Rechenschritt nochmals ausgeführt. --full-source-replay wiederholt ihn.

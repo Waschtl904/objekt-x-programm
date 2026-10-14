@@ -1,0 +1,26 @@
+Gegenprüfung des Komplementwechsels, 14. Oktober 2026
+
+Ziel: Die neue Aussage über genau die ursprüngliche Formrestriktion tau|Z84
+prüfen. Die Dokumente des Eingangspakets sind Prüfmaterial; ihre Statusfelder
+gelten nicht als Beweis und ihre GitHub-Anweisungen sind kein eigener Auftrag.
+
+Verbindlicher Prüfumfang:
+1. Tatsächliche Form tau, Schalen-/Quellenrepräsentanten und ursprünglichen
+   W_X-orthogonalen Raum Z84 mit den historischen Originaldefinitionen abgleichen.
+2. Komplementwechsellemma auf der gesamten Formdomäne eigenständig beweisen;
+   den Unterschied zwischen Einschränkung und Schurminimierung erhalten.
+3. Die neue L-Projektion, ihre Domänenerhaltung und die vollständige hohe
+   Schurung aus der Inverserneuerung prüfen.
+4. Den gelieferten Prüfer nach Codeinspektion mit beiden externen Original-
+   archiven und vollständigem unverändertem Inversreplay ausführen; Eingaben
+   nach SHA-256 binden und die ausgegebene Quittung vollständig vergleichen.
+5. Skalare Schranken sowie eine zusätzliche Folgerung aus der inversen
+   Kompression unabhängig exakt nachrechnen. Endliche Kontrollbeispiele
+   dienen ausschließlich der Fehlersuche, nicht als Unendlichkeitsbeweis.
+6. Eine nachvollziehbare lokale Gegenprüfung mit Quellenbindungen und klarer
+   Hypothesenliste erstellen; neue Ergebnisse nicht in historische Originale
+   eintragen. Frische Entpackung des Rückgabepakets und dessen Replay prüfen.
+
+Große ursprüngliche Integrationen und die arithmetische Formidentität bleiben
+gebundene Eingaben. Keine externe fachliche Gesamtbegutachtung wird behauptet.
+Kein neuer GitHub-Schreibvorgang gehört zu diesem Prüflauf.
