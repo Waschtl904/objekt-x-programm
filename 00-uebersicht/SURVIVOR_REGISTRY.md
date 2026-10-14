@@ -1933,3 +1933,37 @@ Does not claim:
 - Kein neuer makroskopischer Horizont, keine Kofinalität, kein fertiges Objekt X oder RH-Beweis.
 
 Dokumentierte Reproduktion: [SOURCE_BINDINGS.json](https://github.com/Waschtl904/objekt-x-programm/blob/65c8c9b78d44c155eaee667d512ace240789ad08/research/x-c1/a9-inverse-renewal-2026-10-13/SOURCE_BINDINGS.json), [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/65c8c9b78d44c155eaee667d512ace240789ad08/research/x-c1/a9-inverse-renewal-2026-10-13/reports/ACCEPTANCE.json), [EXPECTED_SEALED_REPLAY.json](https://github.com/Waschtl904/objekt-x-programm/blob/65c8c9b78d44c155eaee667d512ace240789ad08/research/x-c1/a9-inverse-renewal-2026-10-13/reports/EXPECTED_SEALED_REPLAY.json).
+
+## BASIS84-ORIGINAL-TAIL-COMPLEMENT-CLOSURE
+
+Ursprünglicher Basis84-Tail: bedingter Boden 2/3 und Inverse höchstens 3/2
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Bedingter Abschluss des ursprünglichen W_X-orthogonalen Basis84-Tails: tau|Z84 >= (2/3) W_X, somit der bisher offene Boden 1/20, A_Z^-1 <= (3/2) I und zusätzliche gerichtete Inversmajorante.
+- Canonical commit: [f4442b1](https://github.com/Waschtl904/objekt-x-programm/commit/f4442b12dbd869c496c81a6f05642fcbcee1836f).
+- Canonical proof: [research/x-c1/basis84-tail-closure-2026-10-14/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/f4442b12dbd869c496c81a6f05642fcbcee1836f/research/x-c1/basis84-tail-closure-2026-10-14/PROOF.md).
+- depends_on: `A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR`, `A9-DOMAIN-FLOOR-LOCAL-CONTINUATION`, `A8-A9-CONDITIONAL-GLOBAL-SCHUR-CLOSURE`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Die Schranke gilt für den ursprünglichen Basis84-Tail und seine Restriktionsinverse; kein Boden 2/3 auf ganz R12 oder dem ganzen physischen A9-Raum, kein neuer Horizont.
+
+Aussage:
+
+- Für beide Paritäten gilt auf dem ursprünglichen W_X-orthogonalen Z84 unter den gebundenen Operator-, Domänen- und Integrationsvoraussetzungen tau >= (2/3) W_X. Damit ist das bisher offene Ziel 1/20 für genau diesen Rest geschlossen.
+- Die vollständige Schurminimierung ist auf Klassen modulo Basis84 invariant. Der alte W_X-orthogonale Vertreter hat dort die kleinste Norm; P_J^L erhält die ganze Formdomäne. Keine Kopplung oder niedrige Momentkomponente wird weggelassen.
+- Für die ursprüngliche Restriktionsinverse gilt A_Z^-1 <= (3/2) I. Zusätzlich gilt A_Z^-1 <= [(1-c)beta]^-1 i* R_L i. Die erste Inversordnung folgt aus der Variationsformel und setzt Restriktion und komprimierte volle Inverse nicht gleich.
+- Für vollständige Hilbertresiduen mit Werten in Z84 ist hier der Faktor 3/2 statt 20 verfügbar. Neue Antwortdomänen und der ganze Residualgram einer Anwendung müssen weiterhin geprüft werden.
+- Beide unveränderten Tailarchive, 1344 Basisrelationen und alle 574 Pivots sind lokal sowie am PR-Head und Main-Merge frisch geprüft; die Antwort/Common96/Basis-Kette ist direkt gebunden. Die großen Integrationen wurden übernommen.
+
+Does not claim:
+
+- Kein Nachweis des alten hinreichenden 268-Funktional-Fittests oder eines neuen vollständigen Residualgrams.
+- Keine erneute große Integration oder externe mathematische Gesamtbegutachtung.
+- Keine weiteren konstruktiven Horizonte, Kofinalität, Konstruktion von Objekt X oder RH.
+
+Dokumentierte Reproduktion: [SOURCE_BINDINGS.json](https://github.com/Waschtl904/objekt-x-programm/blob/f4442b12dbd869c496c81a6f05642fcbcee1836f/research/x-c1/basis84-tail-closure-2026-10-14/SOURCE_BINDINGS.json), [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/f4442b12dbd869c496c81a6f05642fcbcee1836f/research/x-c1/basis84-tail-closure-2026-10-14/reports/ACCEPTANCE.json), [EXPECTED_FULL_SOURCE_REPLAY.json](https://github.com/Waschtl904/objekt-x-programm/blob/f4442b12dbd869c496c81a6f05642fcbcee1836f/research/x-c1/basis84-tail-closure-2026-10-14/reports/EXPECTED_FULL_SOURCE_REPLAY.json), [EXPECTED_INDEPENDENT_AUDIT.json](https://github.com/Waschtl904/objekt-x-programm/blob/f4442b12dbd869c496c81a6f05642fcbcee1836f/research/x-c1/basis84-tail-closure-2026-10-14/reports/EXPECTED_INDEPENDENT_AUDIT.json).

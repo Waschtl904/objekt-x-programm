@@ -4,7 +4,25 @@ Stand 3. Oktober 2026. Arbeitsstrategie auf Grundlage der gelesenen Beweispakete
 
 Fortgeschrieben nach GPT 1s Rückmeldung vom selben Tag. Neu präzisiert sind die vollständige Blockdarstellung in einer unabhängig positiven Hilbertnorm, die gemeinsame Auswertung korrigierter Quellen und eine obere Schranke für die inverse alte Residualenergie. Der zuvor vorgeschlagene isolierte Test des H₀-Blocks (4,5) entfällt aufgrund des übermittelten Grenzberichts; dessen neue Zahlenzertifikate wurden hier nicht erneut reproduziert.
 
-## Fortschreibung vom 14. Oktober
+## Fortschreibung vom 14. Oktober: ursprünglicher Tail geschlossen
+
+Der [gemeinsame Tail-Nachtrag](../research/x-c1/basis84-tail-closure-2026-10-14/README.md) schließt den ursprünglichen
+W_X-orthogonalen Basis84-Tail unter den gebundenen Voraussetzungen:
+tau|Z84 >= (2/3) W_X und A_Z^-1 <= (3/2) I. Der neue Komplementwechsel
+begründet die Übertragung vom zuvor behandelten L-orthogonalen Schurrest.
+Die frühere offene Forderung 1/20 ist damit erledigt; der alte hinreichende
+268-Funktional-Fittest muss dafür nicht abgeschlossen werden.
+
+Für neue vollständige Hilbertresiduen auf Z84 kann hier 3/2 statt 20 benutzt
+werden. Die gerichtete Inversmajorante bleibt zusätzlich verfügbar. Nächste
+Forschungsaufgabe sind die vollständigen gemeinsamen Quellenenergien und
+Residuen für A9→A11 sowie die externe Prüfung der analytischen Gesamtkette.
+Weitere konstruktive Horizonte, Wiederholbarkeit und Objekt X bleiben offen.
+
+Die folgenden datierten Zwischenstände bleiben Entwicklungsgeschichte.
+Ihre damaligen offenen Tailstatus werden durch diesen Abschnitt überholt.
+
+## Vorangehende Fortschreibung vom 14. Oktober
 
 Die [konkrete A9-Inverserneuerung](../research/x-c1/a9-inverse-renewal-2026-10-13/README.md)
 liefert nun eine gemeinsame Majorante für beliebige neue Quellen. Nach

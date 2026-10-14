@@ -30,6 +30,14 @@ gelesenen **Commit** und gegebenenfalls separat untersuchte Pull Requests
 nennen. Ein Branch-Head und ein mathematisch geprüfter Snapshot können
 verschieden sein.
 
+Der [Nachtrag vom 14. Oktober](../research/x-c1/basis84-tail-closure-2026-10-14/PROOF.md) ergänzt den bedingten
+Abschluss des ursprünglichen Basis84-Tails mit Boden 2/3 W_X und Inverse
+höchstens 3/2 I. Ein gezielter Review prüft hier die Identität der alten Form
+und Basis, die Domänenerhaltung des Komplementwechsels und die Variationsordnung
+zwischen Restriktionsinverse und komprimierter voller Inverse. Die großen
+Integrationen bleiben gebundene Eingaben; vollständige Replays und ihre
+gespeicherten Quittungen sind im Integrationsbericht getrennt ausgewiesen.
+
 ## Empfohlene Lesereihenfolge
 
 | Schritt | Quelle | Zu klärende Frage |
