@@ -1,0 +1,42 @@
+Gegenprüfung und Anschluss — 14. Oktober 2026
+
+Neues Ergebnis: Der alte Basis84-Tailboden folgt bereits aus eurer neuen
+Inverserneuerung. Das Komplementwechsellemma überträgt sogar 2/3 W_X
+auf Z84=(ran J84)^(perp W_X) innerhalb R12. Der vorige Open-Status kann
+für diesen genau bezeichneten Tail nach Gegenprüfung korrigiert werden.
+
+Bitte analytisch prüfen:
+1. HERLEITUNG 1: tau ist genau die ursprüngliche tatsächliche Schurform,
+   einschließlich Vertreterinvarianz modulo dem ganzen alten Formraum.
+   K ist unverändert P95 intersect R12, nicht ein vergrößerter Raum.
+2. HERLEITUNG 2-3: P_J^L erhält die Formdomäne. Für z orthogonal_W K gilt
+   v=z-P_J^Lz in K_L und W[v]=W[z]+W[P_J^Lz]. Die Schurform ist auf
+   den Klassen modulo K invariant. Alle Ungleichungen haben damit die
+   benötigte Richtung, ohne L- und W-Orthogonalität gleichzusetzen.
+3. HERLEITUNG 4: Auf Funktionalen mit J*f=0 fällt die Antwortkorrektur
+   aus der Woodbury-Residualabschätzung. Die Inverskompression ist die
+   Inverse des Schurkomplements, nicht der Restriktion. Schon daraus
+   folgt >231/500 W_X auf Z84 und damit das geforderte 1/20.
+4. Scope: Keine 2/3-Schranke auf ganz T; der alte 268-Zeilen-Fit bleibt
+   ungeprüft. Er ist nur ein hinreichendes früheres Kriterium. Es werden
+   keine alten Kraftzeilen durch neue ersetzt. Kein Zirkelschluss über
+   den Faktor 20: Der volle globale Residualabschluss benutzte ihn nicht.
+
+Rechenprüfung:
+  python check.py
+
+Vollständiger neuer Inversreplay und direkter Quellenabgleich:
+  python check.py --replay-inverse --schur-package PFAD/ZUM/Objekt-X-Globaler-Schurabschluss-A8-A9-2026-10-13.zip --basis-package PFAD/ZUM/Objekt-X-Basis84-und-Abdeckungspruefung-2026-10-10.zip
+
+Die beiden großen Quellenarchive sind durch SOURCE_BINDINGS.json gebunden.
+Das neue Inversarchiv liegt unverändert eingebettet vor. Die ursprünglichen
+Matrixtests wurden in diesem Arbeitsgang frisch ausgeführt; die großen
+Integrationen wurden nicht wiederholt. reports/ACCEPTANCE.json hält den
+tatsächlich ausgeführten Prüfumfang fest. Ohne externe Archive werden
+deren optionale Byte-/Feldabgleiche korrekt als nicht ausgeführt markiert.
+
+Für GitHub nach eurer Gegenprüfung einen eigenen neuen Forschungseintrag
+vorsehen. Die versiegelten Quellen und bisherigen Statusquittungen bleiben
+unverändert; der neue Eintrag begründet die Statusänderung. Diese Sitzung
+hat keine GitHub-Änderung vorgenommen. Objekt X und weitere Horizonte
+bleiben offen. Externer mathematischer Review bleibt OPEN.

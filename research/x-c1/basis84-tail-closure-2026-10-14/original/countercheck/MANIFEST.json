@@ -1,0 +1,36 @@
+{
+  "files": {
+    "BERICHT.txt": {
+      "sha256": "a55fc15cf7557ebb4c1524e6762669f1b2a1ca4e8ce4325592d5b4ef04c659ac",
+      "bytes": 3346
+    },
+    "HERLEITUNG_GPT2.txt": {
+      "sha256": "d269e1f60e26fd11e10fc041ac31b18390f0aa75f1ff944bd2b6e8a20afaa2ad",
+      "bytes": 9672
+    },
+    "inputs/Objekt-X-Tailboden-1-20-durch-Komplementwechsel-2026-10-14.zip": {
+      "sha256": "aaa21cb4cbab92f10c128b7709b011ca51b68cb0b53f2738b2eb64597701d818",
+      "bytes": 6230733
+    },
+    "PRUEFPLAN_GPT2.txt": {
+      "sha256": "308cba1803165a34d7486e82a81f62818375a5fa44400ddb08d65c8de1809648",
+      "bytes": 1671
+    },
+    "README.txt": {
+      "sha256": "826fd09a8771f3ec155ddee350ca5ffe449334ffe2275a142e3f20b047567620",
+      "bytes": 1746
+    },
+    "reports/FULL_SOURCE_REPLAY.json": {
+      "sha256": "60f3f9104337d6da77c51bc0e5a3b41e359f9116ea6ff8c668ebbd3e4ddf6cab",
+      "bytes": 2868
+    },
+    "reports/INDEPENDENT_AUDIT.json": {
+      "sha256": "1214322e57bc7cde2babdd7389b031433eca9b6e0adcf6bf6f7cdf9fe705a327",
+      "bytes": 5230
+    },
+    "verify.py": {
+      "sha256": "e2e28bd2e771ae55fece05dbbea039796e8a303741533688e57f501469c2b225",
+      "bytes": 11347
+    }
+  }
+}

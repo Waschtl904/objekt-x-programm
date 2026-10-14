@@ -1,0 +1,55 @@
+Objekt X — ursprünglicher Tailboden 1/20 geschlossen
+14. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Für beide Paritäten ist der ursprüngliche Basis84-Tailboden unter den
+gebundenen Operator-, Domänen- und Integrationsvoraussetzungen bewiesen.
+Auf genau dem alten Rest
+
+  Z84=(ran J84)^(perp W_X) innerhalb R12
+
+gilt für die tatsächliche, nach A8 und den zwölf Quellen reduzierte Form
+
+              tau[z] >= (2/3) W_X[z] >= (1/20) W_X[z].
+
+Die vollständige Tailinverse ist daher <=(3/2)I, insbesondere <=20I.
+Der Boden gilt nicht auf ganz R12 oder dem gesamten physischen A9-Raum.
+
+Der neue Schritt ist eine analytische Übertragung. Der starke Schurboden
+war bereits auf dem L-orthogonalen Komplement derselben Basis84 bekannt.
+Für z im alten W_X-orthogonalen Rest setze v=z-P_J^L z. Die vollständige
+Schurminimierung liefert tau[z]>=Schur_J(tau)[v]. Weil z orthogonal
+zu J ist, gilt zugleich W_X[v]=W_X[z]+W_X[P_J^L z]>=W_X[z]. Damit
+überträgt sich der bereits gebundene 2/3-Boden auf den alten Tail.
+
+Ein zweiter Beweis benutzt nur die vollständige Residual-Inversidentität,
+den globalen L-Boden und die Antwortbasis. Er liefert bereits
+tau[z]>(231/500)W_X[z]>(1/20)W_X[z], ohne die besondere hohe Momentgeometrie.
+
+Die frühere Warnung, beide Resträume nicht gleichzusetzen, bleibt richtig.
+Die nun ausgeschriebene Übertragung schließt jedoch das damalige
+Beweisziel. Der historische 268-Funktional-Abdeckungstest bleibt
+COVERAGE_BOUND_INCONCLUSIVE; er ist für diesen Schluss nicht erforderlich.
+Die unterschiedlichen 203er-Kraftblöcke werden nicht miteinander verwechselt.
+
+Ausgeführt:
+- Abgleich der alten Zieldefinition mit der tatsächlichen neuen Schurform.
+- 1344 rationale Basisrelationen, beide S_top-Inversen und Gramspuren.
+- Direkter Quellenabgleich mit dem vollständigen Schurarchiv: 82418
+  E-Einträge und 34104 Antwortwerte, beta und vollständige Residualpreise.
+- Neuer Replay des unveränderten Inversarchivs aus frischem Entpacken:
+  574 positive rationale Pivots, alle mathematischen Quittungsfelder gleich.
+- Eigenständige rationale Konstantenrechnung und exakte Gegenkontrollen
+  zu Schurkopplung, Nichtorthonormalität und falschem Komplementwechsel.
+
+Große globale Integrationen wurden nicht erneut erzeugt. Ihre vollständigen
+Fehlereinschließungen sowie die arithmetische Formidentität und bisherigen
+Operatorvoraussetzungen bleiben gebundene Eingaben. Das neue kompakte
+Paket enthält den vollständigen Übertragungsbeweis und den Prüfcode.
+
+TAIL_FLOOR_1_OVER_20_ON_ORIGINAL_Z84_CONDITIONALLY_CERTIFIED=true
+TAIL_FLOOR_2_OVER_3_ON_ORIGINAL_Z84_CONDITIONALLY_CERTIFIED=true
+OLD_COVERAGE_GATE_PROVED=false
+OBJECT_X_CONSTRUCTED=false
+EXTERNAL_MATHEMATICAL_REVIEW_OPEN=true
+
+GitHub wurde nicht verändert. Zur Gegenprüfung: ANSCHLUSS_GPT2.txt.
