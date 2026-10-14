@@ -40,8 +40,9 @@ die gepinnten Beweisanker verwaltet das
 | Kanonische Richtung für A9→A11 | Maximaler Schur-Eigenwert in beiden Paritäten einfach; gerade Richtung lokalisiert | Ungerade ist die gesamte Ausgangsfamilie weiterhin `UNRESOLVED` |
 | Ungerade Winkeldiagnose | Gemeinsamer Y-Kernel: central ≤2.933357°, quarter ≤3.070163°, half ≤3.642693°; Endpunktfolge: five_eighths ≤4.933780° | Bedingte Schnitte; Root bleibt `UNRESOLVED` |
 | H₀-Folgeuntersuchung | Exaktes Hindernis für die benannte letzte Drei-Cut-Relaxation | Kein ursprünglicher Operatorgegenzeuge; vollständiges H₀ unentschieden |
-| Konstruktiver Anschluss A8→A9 | [Bedingter globaler Schurabschluss](research/x-c1/a8-a9-global-closure-2026-10-13/README.md): vollständiger Formdualrest und positiver Anschluss auf dem ganzen neuen Raum | Gebundene Operator-, Domänen- und Raumzerlegungsvoraussetzungen; Tailboden 1/20, weitere konstruktive Übergänge und allgemeine Fortsetzung offen |
-| A9-Inverserneuerung | [Gemeinsame A9-Inversmajorante und Boden 2/3 W_X](research/x-c1/a9-inverse-renewal-2026-10-13/README.md) auf dem ganzen neuen hohen Schurrest nach Basis84-Elimination | Neuer Rest; kein alter Tailboden 1/20, keine bereits berechneten nächsten Quellenintegrale |
+| Konstruktiver Anschluss A8→A9 | [Bedingter globaler Schurabschluss](research/x-c1/a8-a9-global-closure-2026-10-13/README.md): vollständiger Formdualrest und positiver Anschluss auf dem ganzen neuen Raum | Gebundene Operator-, Domänen- und Raumzerlegungsvoraussetzungen; weitere konstruktive Übergänge und allgemeine Fortsetzung offen; der ursprüngliche Tail ist inzwischen bedingt geschlossen |
+| A9-Inverserneuerung | [Gemeinsame A9-Inversmajorante und Boden 2/3 W_X](research/x-c1/a9-inverse-renewal-2026-10-13/README.md) auf dem ganzen neuen hohen Schurrest nach Basis84-Elimination | Neuer L-orthogonaler Rest; der Anschluss zum ursprünglichen Tail steht im gesonderten Komplementwechsel, nächste Quellenintegrale offen |
+| Ursprünglicher Basis84-Tail | [Komplementwechsel und Gegenprüfung](research/x-c1/basis84-tail-closure-2026-10-14/README.md): tau auf Z84 mindestens 2/3 W_X; Restriktionsinverse höchstens 3/2 I; Ziel 1/20 geschlossen | Bedingt auf die gebundenen Voraussetzungen; kein Boden 2/3 auf ganz A9, kein neuer Residualgram |
 | Globales Ziel | Arbeitsdefinition und erforderliche Übergänge sind formuliert | Kofinale positive Familie, globaler Readout, vollständige Weil-Gramidentität und RH bleiben offen |
 
 Die hier zusammengefassten projektinternen Ergebnisse tragen den Status
@@ -54,7 +55,20 @@ Aktuelle Arbeit außerhalb von `main` ist in den
 sichtbar. Für ein Urteil über einen solchen Vorschlag sind dessen eigener
 Commit, Belegumfang und Integrationsstatus anzugeben.
 
-## Neuer Integrationsstand vom 14. Oktober
+## Tailabschluss vom 14. Oktober
+
+Die [beiden Tailpakete](research/x-c1/basis84-tail-closure-2026-10-14/README.md) sind gemeinsam integriert und auf GitHub
+mit vollständigem rationalem Paket-Replay nachgeprüft. Die großen globalen
+Integrationen wurden übernommen. Unter den gebundenen Voraussetzungen schließt
+der Komplementwechsel den ursprünglichen Basis84-Tail mit Boden 2/3 W_X;
+für seine Restriktionsinverse gilt höchstens 3/2 I.
+Für spätere vollständige Hilbertresiduen auf diesem Rest ist damit der Faktor
+3/2 statt 20 verfügbar. Der frühere offene Tailstatus ist durch diesen neuen
+Beweisanschluss überholt. Neue Residualgrame, weitere Horizonte und externe
+Gesamtbegutachtung bleiben offen.
+[Integrations- und Prüfbelege](00-uebersicht/integrationsnachweise/PR221_2026-10-14.md).
+
+## Vorangehender Integrationsstand vom 14. Oktober
 
 Die [Domänen- und Fortsetzungsherleitung](research/x-c1/a9-domain-continuation-2026-10-13/README.md)
 und die [A9-Inverserneuerung](research/x-c1/a9-inverse-renewal-2026-10-13/README.md)
@@ -65,7 +79,8 @@ Ausgangsbasis für neue Kräfte; deren vollständige Integrale bleiben zu berech
 Die gesonderte lokale Fortsetzungsbreite ist praktisch unbrauchbar klein und
 kein A9→A11-Schritt. Externe Begutachtung und die globalen Aufgaben bleiben offen.
 [Paketinventar und Integrationsbelege](00-uebersicht/integrationsnachweise/A9_PAKETABGLEICH_2026-10-14.md)
-zeigen, wo sämtliche 18 lokal versiegelten Ausgangspakete erhalten sind.
+zeigen, wo die damals 18 lokal versiegelten Ausgangspakete erhalten sind.
+Die beiden neuen Tailarchive sind im obigen Nachtrag zusätzlich gebunden.
 
 ## Integrationsstand vom 13. Oktober
 
@@ -74,7 +89,8 @@ führt die Arbeiten seit dem 7. Oktober einschließlich aller Originalpakete,
 Gegenprüfungen und verworfenen Hilfsschranken zusammen. Unter den gebundenen
 Operator-, Domänen- und vollständigen Raumzerlegungsvoraussetzungen ist der
 Positivitätsübergang geschlossen. Der gesamte Formdualrest kostet weniger als
-0,3954 % bzw. 0,6967 % seines Matrixbudgets. Der Tailboden 1/20, weitere Horizonte
+0,3954 % bzw. 0,6967 % seines Matrixbudgets. Der damals noch offene Tailboden
+1/20 ist durch den Nachtrag vom 14. Oktober bedingt geschlossen. Weitere Horizonte
 und Objekt X bleiben offen. [PR #216 und seine Prüfbelege](00-uebersicht/integrationsnachweise/PR216_2026-10-13.md)
 binden den tatsächlichen Forschungshead, Mergecommit und die erfolgreiche Main-CI.
 Externe Begutachtung bleibt offen.

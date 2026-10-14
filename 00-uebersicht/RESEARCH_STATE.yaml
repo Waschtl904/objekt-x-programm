@@ -5,9 +5,9 @@
   "repository": "Waschtl904/objekt-x-programm",
   "published_baseline": {
     "branch": "main",
-    "sha": "18b070f6ec920bd847be070c72819bfb757db122",
+    "sha": "6cf12db7b24b6f4c8d6a811258eac331a5a17952",
     "integration_status": "MERGED",
-    "meaning": "PR #218 und #219 integrieren die konkrete A9-Domänenherleitung und die gemeinsame A9-Inverserneuerung. Der ganze neue hohe Schurrest nach zusätzlichen 84 Antwortfunktionen hat den bedingten Boden 2/3 W_X; die beiden vollen rationalen 287er-Inversprüfungen bestehen. Die getrennte mikroskopische lokale Fortsetzung ist kein makroskopischer Horizontschritt. Lokale, PR- und Main-Replays mit Originalbindung erfolgreich; große Integrationen nicht neu erzeugt. Externe mathematische Begutachtung, alter Tailboden 1/20, weitere konstruktive Horizonte und Objekt X bleiben offen. Frühere Provenienz: PR #216 integriert den bedingten globalen A8→A9-Schurabschluss und die vollständige Paketkette vom 7.–13. Oktober. Beweishead 79fefcb5ddefb6c016e2c7fd049500215b4a1d10. Alle anwendbaren PR- und Main-Prüfungen erfolgreich; vollständiger rationaler Quellen-/Schurreplay und separate Reserveprüfung, keine neue große globale Integration. Gesamter Formdualrest <0,3954 % beziehungsweise <0,6967 % T_budget. Geerbte Operator-, Domänen- und Raumzerlegungsannahmen sowie externer Review bleiben ausdrücklich offen zur Prüfung. Tailboden 1/20, weitere konstruktive Horizontübergänge, Objekt X und globale Verifikationsaussagen bleiben unverändert offen. Frühere Provenienz: PR #213 integriert den gebundenen Forschungsstand vom 5.–7. Oktober: acht feste Quellen, vollständige Restdarstellung, Domäne/Kompaktheit, eingefrorener Pilot, Halbinversen und partielle gewichtete alte Fehlergrame. Beweishead 71d9120335e28de3b9687d6151fed53c01d8c622. Alle anwendbaren PR-/Main-Prüfungen erfolgreich; fünf exakte Prüfer erneut ausgeführt, keine erneute lange Operatorintegration. Voller B_R-Gate und externer Review bleiben offen; globaler Verifikationssnapshot unverändert. Frühere Provenienz: PR #211 integriert den positiven Anschluss vier fester A9-Quellen an den vollständigen alten A8-Raum. Rationale Schur-Koeffizientenböden 1/100000 und 33/1000000; keine vorausgesetzte neue Terminalpositivität, keine vollständige neue Quotientenabdeckung. Alle anwendbaren PR- und Main-Läufe erfolgreich, einschließlich beider neuer Präzisionen und exakter Schlusskontrollen. Beweishead 2d257f6d94c5547f17c745a02abdec4ac8ee2fb8. Globaler Verifikationssnapshot und externer Reviewstatus unverändert. Frühere Provenienz: PR #206 integriert den gemeinsamen Y-Kernel, die gebundenen H0-Folgepakete und die konstruktive Objekt-X-Strategie. Bedingte Winkel bis five_eighths <=4.933780 Grad und exaktes Hindernis der benannten letzten Drei-Cut-Relaxation; Root UNRESOLVED. Alle anwendbaren PR- und Main-Läufe erfolgreich. Originalbeweise, globaler Verifikationssnapshot und externer Reviewstatus unverändert. Frühere Provenienz: Direct-Line-Paket integriert durch PR #204, Beweishead c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33. Main-Replay 37051235497 erhält das ZIP und 59 Originaldateien mit 41 Vorgängerdateien; alle 57 Fälle und fünf Ergebnisquittungen bytegleich. Bedingte Verbesserungen central <=3.405363 und quarter <=3.765366 Grad; Root und acht Diagnoseboxen UNRESOLVED. Nächster Gate gemeinsamer Y-Kernel mit zweiter Ordnung. Globaler Verifikationssnapshot und externer Reviewstatus unverändert. Frühere Provenienz: Abgeschlossenes adaptives Odd-Winkelpaket integriert durch PR #201, Beweishead cb73f0ef223f4f3f0d51002f7d8127fac90a954f. Main-Replay 37032720198 erhält das Originalarchiv und 41 Originaldateien, bindet acht Quellen und rechnet alle 1121 Boxquittungen sowie bedingte Diagnosen bytegleich nach. Ergebnis UNRESOLVED; nächste Obligation direkte gemeinsame 2x2-Eigenlinienauswertung. Keine uniforme Winkelpromotion und kein neuer Gegenzeugennachweis. Globaler Verifikationssnapshot und externer Reviewstatus unverändert. Frühere Provenienz: Full-Shift- und Primal-Dual-Y68-Pakete integriert durch PR #199, Beweishead 219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff. Main-Replay 37001095949 prüft beide unveränderten Archive, 109 Originaldateien, kleine unabhängige Kontrollen, rationale Fehlerrechnung sowie bytegleiche Y68-, Winkel- und Familienquittungen. Je ein vollständiger primaler und dualer Polreplay ist dokumentiert; alle großen Polrechnungen wurden erzeugt, aber nicht nochmals vollständig wiederholt oder unabhängig neu implementiert. Y68 schließt den alten Gegenzeugen aus; der uniforme ungerade Winkel bleibt offen. Globaler Verifikationssnapshot und externer Reviewstatus unverändert. Frühere Provenienz: Zwei integrierte UNRESOLVED-Pakete nach PR #197, Beweishead b91589923f5738148c9c9702155fb3dc02f7b1a1; Main-Replay 36902746547 mit drei bytegleichen Quittungen und kleinen Arb-Kontrollen. Die reguläre CI wiederholt keine großen Operatorintegrale. Zusätzlich waren beide vollständigen lokalen Paket-Replays bei der Integration erfolgreich; dies ist keine unabhängige große Operatorimplementierung. Globale Verifikationsaussagen unverändert. Frühere Provenienz: Integrierte vier ungerade Projektor-/Transportpakete nach PR #195, Beweishead ed94c19f824c947f63e4867fb3c202f71e36e631; Abschluss STRUCTURAL OPEN der angegebenen endlichen Relaxation. Main-Replay 36816858969 erfolgreich, vier Ergebnisquittungen im CI-Artefakt bytegleich geprüft. Globale Verifikationsaussagen unverändert. Frühere Provenienz: Integrierte drei Pakete zu gemeinsamen kanonischen Maximierern nach PR #193, Beweishead 2172de38d0def2c4b42c255e6c1290a720e3e94e: Projektor-/Spektralmomente, generalisierter Diskriminant und Schurdefekt-Korollar. Main-Replay 36738813027 erfolgreich, alle drei Ergebnisquittungen im CI-Artefakt bytegleich geprüft. Ursprüngliche Integrale und Operatorlösungen bleiben gebundene Eingaben; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte vierblöckige kanonische Schurkopplungsfamilie nach PR #191, Beweishead b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d. Main-Zertifikatreplay 36671245348 erfolgreich mit geprüftem Artefakt; abgeschlossene große Arb-Läufe bleiben gebundene Eingaben. Registry-CI separat gebunden; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte siebenblöckige Spektral-/Renewal-Familie nach PR #189, Beweishead c19c655d79f9be59b7c18fb0042783f5e4a0ab49. Main-Replay 36525210364 erfolgreich; Registry-CI separat gebunden. Globaler Verifikationssnapshot unverändert. Frühere Provenienz: Gepinnter integrierter Forschungsstand nach PR #183: zusammenhängende O10–A11-Kette, Beweis-/Paketcommit 0b7c707c4c95f56bd8079ea44019a2d3f4cfce60. Erfolgreiche Main-Reproduktion 36378212734, Versuch 1; Registry-CI separat gebunden. Der globale mathematische Verifikationssnapshot bleibt unverändert. Frühere Integrationsprovenienz: Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
+    "meaning": "PR #221 integriert beide Tailpakete gemeinsam: Der ursprüngliche Basis84-Tail ist unter den gebundenen Voraussetzungen mit Boden 2/3 W_X geschlossen, die Restriktionsinverse ist höchstens 3/2 I. Der frühere offene Tailboden 1/20 ist dadurch erledigt. Vollständige lokale, PR- und Main-Replays einschließlich 574 Pivots und Originalquellenabgleich bestehen. Große Integrationen wurden übernommen; externe Gesamtbegutachtung, weitere konstruktive Horizonte und Objekt X bleiben offen. Historische Provenienz (damalige offene Tailstatus werden durch den neuen Beweisanschluss überholt): PR #218 und #219 integrieren die konkrete A9-Domänenherleitung und die gemeinsame A9-Inverserneuerung. Der ganze neue hohe Schurrest nach zusätzlichen 84 Antwortfunktionen hat den bedingten Boden 2/3 W_X; die beiden vollen rationalen 287er-Inversprüfungen bestehen. Die getrennte mikroskopische lokale Fortsetzung ist kein makroskopischer Horizontschritt. Lokale, PR- und Main-Replays mit Originalbindung erfolgreich; große Integrationen nicht neu erzeugt. Externe mathematische Begutachtung, alter Tailboden 1/20, weitere konstruktive Horizonte und Objekt X bleiben offen. Frühere Provenienz: PR #216 integriert den bedingten globalen A8→A9-Schurabschluss und die vollständige Paketkette vom 7.–13. Oktober. Beweishead 79fefcb5ddefb6c016e2c7fd049500215b4a1d10. Alle anwendbaren PR- und Main-Prüfungen erfolgreich; vollständiger rationaler Quellen-/Schurreplay und separate Reserveprüfung, keine neue große globale Integration. Gesamter Formdualrest <0,3954 % beziehungsweise <0,6967 % T_budget. Geerbte Operator-, Domänen- und Raumzerlegungsannahmen sowie externer Review bleiben ausdrücklich offen zur Prüfung. Tailboden 1/20, weitere konstruktive Horizontübergänge, Objekt X und globale Verifikationsaussagen bleiben unverändert offen. Frühere Provenienz: PR #213 integriert den gebundenen Forschungsstand vom 5.–7. Oktober: acht feste Quellen, vollständige Restdarstellung, Domäne/Kompaktheit, eingefrorener Pilot, Halbinversen und partielle gewichtete alte Fehlergrame. Beweishead 71d9120335e28de3b9687d6151fed53c01d8c622. Alle anwendbaren PR-/Main-Prüfungen erfolgreich; fünf exakte Prüfer erneut ausgeführt, keine erneute lange Operatorintegration. Voller B_R-Gate und externer Review bleiben offen; globaler Verifikationssnapshot unverändert. Frühere Provenienz: PR #211 integriert den positiven Anschluss vier fester A9-Quellen an den vollständigen alten A8-Raum. Rationale Schur-Koeffizientenböden 1/100000 und 33/1000000; keine vorausgesetzte neue Terminalpositivität, keine vollständige neue Quotientenabdeckung. Alle anwendbaren PR- und Main-Läufe erfolgreich, einschließlich beider neuer Präzisionen und exakter Schlusskontrollen. Beweishead 2d257f6d94c5547f17c745a02abdec4ac8ee2fb8. Globaler Verifikationssnapshot und externer Reviewstatus unverändert. Frühere Provenienz: PR #206 integriert den gemeinsamen Y-Kernel, die gebundenen H0-Folgepakete und die konstruktive Objekt-X-Strategie. Bedingte Winkel bis five_eighths <=4.933780 Grad und exaktes Hindernis der benannten letzten Drei-Cut-Relaxation; Root UNRESOLVED. Alle anwendbaren PR- und Main-Läufe erfolgreich. Originalbeweise, globaler Verifikationssnapshot und externer Reviewstatus unverändert. Frühere Provenienz: Direct-Line-Paket integriert durch PR #204, Beweishead c519a1aa58a61d2abe7d5670a2bb5bb642aa2a33. Main-Replay 37051235497 erhält das ZIP und 59 Originaldateien mit 41 Vorgängerdateien; alle 57 Fälle und fünf Ergebnisquittungen bytegleich. Bedingte Verbesserungen central <=3.405363 und quarter <=3.765366 Grad; Root und acht Diagnoseboxen UNRESOLVED. Nächster Gate gemeinsamer Y-Kernel mit zweiter Ordnung. Globaler Verifikationssnapshot und externer Reviewstatus unverändert. Frühere Provenienz: Abgeschlossenes adaptives Odd-Winkelpaket integriert durch PR #201, Beweishead cb73f0ef223f4f3f0d51002f7d8127fac90a954f. Main-Replay 37032720198 erhält das Originalarchiv und 41 Originaldateien, bindet acht Quellen und rechnet alle 1121 Boxquittungen sowie bedingte Diagnosen bytegleich nach. Ergebnis UNRESOLVED; nächste Obligation direkte gemeinsame 2x2-Eigenlinienauswertung. Keine uniforme Winkelpromotion und kein neuer Gegenzeugennachweis. Globaler Verifikationssnapshot und externer Reviewstatus unverändert. Frühere Provenienz: Full-Shift- und Primal-Dual-Y68-Pakete integriert durch PR #199, Beweishead 219ab401013d2d4d8f5d8d6e4807ef6407e4b5ff. Main-Replay 37001095949 prüft beide unveränderten Archive, 109 Originaldateien, kleine unabhängige Kontrollen, rationale Fehlerrechnung sowie bytegleiche Y68-, Winkel- und Familienquittungen. Je ein vollständiger primaler und dualer Polreplay ist dokumentiert; alle großen Polrechnungen wurden erzeugt, aber nicht nochmals vollständig wiederholt oder unabhängig neu implementiert. Y68 schließt den alten Gegenzeugen aus; der uniforme ungerade Winkel bleibt offen. Globaler Verifikationssnapshot und externer Reviewstatus unverändert. Frühere Provenienz: Zwei integrierte UNRESOLVED-Pakete nach PR #197, Beweishead b91589923f5738148c9c9702155fb3dc02f7b1a1; Main-Replay 36902746547 mit drei bytegleichen Quittungen und kleinen Arb-Kontrollen. Die reguläre CI wiederholt keine großen Operatorintegrale. Zusätzlich waren beide vollständigen lokalen Paket-Replays bei der Integration erfolgreich; dies ist keine unabhängige große Operatorimplementierung. Globale Verifikationsaussagen unverändert. Frühere Provenienz: Integrierte vier ungerade Projektor-/Transportpakete nach PR #195, Beweishead ed94c19f824c947f63e4867fb3c202f71e36e631; Abschluss STRUCTURAL OPEN der angegebenen endlichen Relaxation. Main-Replay 36816858969 erfolgreich, vier Ergebnisquittungen im CI-Artefakt bytegleich geprüft. Globale Verifikationsaussagen unverändert. Frühere Provenienz: Integrierte drei Pakete zu gemeinsamen kanonischen Maximierern nach PR #193, Beweishead 2172de38d0def2c4b42c255e6c1290a720e3e94e: Projektor-/Spektralmomente, generalisierter Diskriminant und Schurdefekt-Korollar. Main-Replay 36738813027 erfolgreich, alle drei Ergebnisquittungen im CI-Artefakt bytegleich geprüft. Ursprüngliche Integrale und Operatorlösungen bleiben gebundene Eingaben; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte vierblöckige kanonische Schurkopplungsfamilie nach PR #191, Beweishead b5dc05f7fcc133ab2aeb3132d4bce0fa74f55a5d. Main-Zertifikatreplay 36671245348 erfolgreich mit geprüftem Artefakt; abgeschlossene große Arb-Läufe bleiben gebundene Eingaben. Registry-CI separat gebunden; globaler Verifikationssnapshot unverändert. Frühere Provenienz: Integrierte siebenblöckige Spektral-/Renewal-Familie nach PR #189, Beweishead c19c655d79f9be59b7c18fb0042783f5e4a0ab49. Main-Replay 36525210364 erfolgreich; Registry-CI separat gebunden. Globaler Verifikationssnapshot unverändert. Frühere Provenienz: Gepinnter integrierter Forschungsstand nach PR #183: zusammenhängende O10–A11-Kette, Beweis-/Paketcommit 0b7c707c4c95f56bd8079ea44019a2d3f4cfce60. Erfolgreiche Main-Reproduktion 36378212734, Versuch 1; Registry-CI separat gebunden. Der globale mathematische Verifikationssnapshot bleibt unverändert. Frühere Integrationsprovenienz: Gepinnter integrierter Forschungsstand nach PR #174: O8-Terminalreserve und O9-Transporte der ersten geschlossenen Kammer, Beweis-/Paketcommit 82a1f9d661b1668cc71eb0d5f8806c5cee73e471. Die gesonderte Main-CI-Beobachtung bestätigt die Integration; der frühere globale Verifikationssnapshot wird nicht erweitert. Frühere Integrationsprovenienz: Ausdrücklich registrierter, gepinnter gemergter Integrationsstand nach PR #152/#153, dem Registry-Sync #156, dem historischen Inhaltsregister #159 und dem R37-Workflowfilter #160; kein automatisch nachgeführter Git-Head und keine mathematische Neuverifikation. O1–O7-Provenienz: vollständiger Paketstand vor den abschließenden Linkkorrekturen (aktualisierter META-Hash-Anker) [`08b552f2db9802b9f0d79b3da183ecc83950acf8`](https://github.com/Waschtl904/objekt-x-programm/commit/08b552f2db9802b9f0d79b3da183ecc83950acf8); finaler PR-#152-Head nach zwei Linkkorrekturen [`9ab580c0e6014b5e8f185c2b77101506579e0a77`](https://github.com/Waschtl904/objekt-x-programm/commit/9ab580c0e6014b5e8f185c2b77101506579e0a77); tatsächliche Paketintegration durch PR #152 bei [`5dcf96e2d3fe977051d7d65febb1ed7b7ef03901`](https://github.com/Waschtl904/objekt-x-programm/commit/5dcf96e2d3fe977051d7d65febb1ed7b7ef03901); spätere vollständige O5–O7-Beweisrekonsiliation samt SHA-256-Bindung bei [`6623047361578b819ae44358fbbbf0b3fdeac9ff`](https://github.com/Waschtl904/objekt-x-programm/commit/6623047361578b819ae44358fbbbf0b3fdeac9ff), integriert durch PR #153 bei [`526d2c25c906f3656582e46ca723fd8d65df8957`](https://github.com/Waschtl904/objekt-x-programm/commit/526d2c25c906f3656582e46ca723fd8d65df8957). PR #151 bleibt geschlossen und ungemergt als separate Provenienz erhalten. Der Verifikationssnapshot 5f19065e28b9f2e09ae93bef0b4c752ab58997d4 auditiert diese späteren Resultate nicht."
   },
   "verified_research_snapshot": {
     "branch": "research/x-c1-inherited-resonance-shell-schur-2026-09-18",
@@ -45,7 +45,7 @@
       "title": "Konstruktive Fortsetzung der gemeinsamen Objekt-X-Geometrie",
       "mathematical_status": "OPEN",
       "strategic_status": "ACTIVE_FRONT",
-      "target_scope": "Primäres Ziel ist die Konstruktion von Objekt X gemäß Arbeitsdefinition. Der konstruktive Übergang A8→A9 ist unter gebundenen Voraussetzungen mit vollständigem Formdualrest abgeschlossen. Eine konkrete Domänenherleitung und eine gemeinsame A9-Inversmajorante liegen als Autorenresultate vor; nach Aufnahme der Basis84 besitzt der gesamte neue hohe Schurrest mindestens 2/3 W_X. Als Nächstes sind die analytischen Beweise extern zu prüfen und die neuen gemeinsamen Kräfte für A9→A11 gegen diese Inversmajorante zu berechnen, ohne neue Terminalpositivität vorauszusetzen. Die Y-Kernel-/H0-Diagnose bleibt auf Root UNRESOLVED. Allgemeine Wiederholbarkeit, kofinale Horizonte, kompatibler Readout, vollständige Testklasse und Objekt X bleiben offen.",
+      "target_scope": "Primäres Ziel ist die Konstruktion von Objekt X gemäß Arbeitsdefinition. A8→A9, die konkrete Domänenherleitung und die gemeinsame A9-Inversmajorante liegen unter gebundenen Voraussetzungen als Autorenresultate vor. Der ursprüngliche W_X-orthogonale Basis84-Tail ist jetzt mit Boden 2/3 W_X und Restriktionsinverse höchstens 3/2 I geschlossen; der bisher offene Boden 1/20 ist damit erledigt. Als Nächstes sind die analytischen Beweise extern zu prüfen und neue gemeinsame A9→A11-Kräfte sowie deren vollständige Residualgrame zu berechnen. Die Y-Kernel-/H0-Diagnose bleibt auf Root UNRESOLVED. Weitere konstruktive Horizonte, allgemeine Wiederholbarkeit, Kofinalität, kompatibler Readout und Objekt X bleiben offen.",
       "obligation_ids": [
         "MOVING-PROFILE-RESERVE-RENEWAL",
         "NON-SUMMABLE-TRANSPORT",
@@ -97,16 +97,17 @@
         "A8-A9-REMAINDER-PARTIAL-OPERATOR-CERTIFICATES",
         "A8-A9-CONDITIONAL-GLOBAL-SCHUR-CLOSURE",
         "A9-DOMAIN-FLOOR-LOCAL-CONTINUATION",
-        "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+        "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR",
+        "BASIS84-ORIGINAL-TAIL-COMPLEMENT-CLOSURE"
       ],
       "candidate": "C1a-COUPLED-SPECTRAL-MEDIATOR",
       "accepted_progress": [
         "Nutze den [bedingten globalen A8→A9-Schurabschluss](../research/x-c1/a8-a9-global-closure-2026-10-13/README.md) als abgeschlossenen einzelnen Anschluss unter den Voraussetzungen (A)–(D). Die vollständige Restbilanz und alle Originale sind gebunden; verworfene 89/11- und alte Verlustziele werden nicht weiter als offene Ziele geführt.",
         "Prüfe die konkrete Domänenherleitung sowie die übernommenen arithmetischen und analytischen Eingaben gezielt extern. Rationale Replays bestätigen nur ihren angegebenen Prüfumfang.",
-        "Nutze den bedingten Boden 2/3 W_X auf dem exakt definierten neuen L-orthogonalen Rest nach A8, F12 und Basis84. Halte ihn vom alten Tailboden 1/20 und vom Boden auf dem bisherigen T getrennt.",
+        "Nutze den [bedingten Abschluss des ursprünglichen Basis84-Tails](../research/x-c1/basis84-tail-closure-2026-10-14/README.md): tau|Z84 >= (2/3) W_X und A_Z^-1 <= (3/2) I. Der Komplementwechsel verbindet den neuen L-orthogonalen Schurrest mit dem ursprünglichen W_X-orthogonalen Z84; diese Räume werden nicht gleichgesetzt.",
         "Verwende die [erneuerte A9-Inversmajorante](../research/x-c1/a9-inverse-renewal-2026-10-13/README.md) für neue gemeinsame A9→A11-Kräfte. Bestimme Quellen, vollständige Restdarstellung und Fehlerbudget vor dem Rechenlauf, ohne die neue Terminalpositivität vorauszusetzen. Berechne die vollständigen alten Inversenergien, Zwölferanteile, L-Dualgramme und 84 Antwortkoordinaten einschließlich Kreuzfehlern. Der nächste Horizont ist dadurch noch nicht geschlossen.",
         "Behalte den gesamten unendlichen Formdualrest, gemeinsame Kreuzterme, Inversordnungen und die unabhängige Vergleichsmetrik bei. Eine endliche positive Matrix oder ein erfolgreicher Richtungstest ersetzt den globalen Restnachweis nicht.",
-        "Der gesonderte Tailboden 1/20 bleibt eine getrennte offene Aussage. Verfolge ihn nur mit benannter Verwendung; die kleinen W_X-Schurgrenzen und die endliche G-Reserve dürfen nicht in diesen Boden umgedeutet werden.",
+        "Der alte Boden 1/20 ist bedingt geschlossen. Für spätere vollständige Hilbertresiduen mit Werten in Z84 steht hier der Faktor 3/2 statt 20 bereit; neue Antwortfunktionen, Domänen und der gesamte Residualgram bleiben zu prüfen. Der frühere hinreichende 268-Funktional-Fittest wird für diesen Schluss nicht benötigt.",
         "Formuliere Aussage, Konstanten und Abnahme des Kandidaten vor einem zusätzlichen A11→A13-Test. PR #187 bleibt separat. Anschließend bleiben kofinale Horizonte, Readout-Kompatibilität und vollständige Testklasse zu beweisen."
       ],
       "insufficient": [
@@ -134,7 +135,7 @@
         "Den bedingten einzelnen A8→A9-Abschluss als Fortsetzungssatz für alle Horizonte, als fertiges Objekt X oder als RH-Beweis ausgeben.",
         "Eine erfolgreiche rationale Kette als unabhängige externe Prüfung ihrer geerbten analytischen Voraussetzungen bezeichnen.",
         "Die 0,030 % des regularisierten hohen Grams mit den 0,3954 % beziehungsweise 0,6967 % des gesamten Formdualrests in dessen anderer Budgetmetrik verwechseln.",
-        "Den neuen Boden 2/3 W_X nach zusätzlicher Elimination der Basis84 als Beweis des alten Tailbodens 1/20 oder als Boden auf dem gesamten A9-Raum ausgeben."
+        "Den Komplementwechsel ohne vollständige Schurminimierung oder ohne Domänenerhaltung verwenden, die L- und W_X-Komplemente gleichsetzen oder den Tailboden 2/3 auf ganz R12 bzw. den ganzen A9-Raum ausdehnen."
       ]
     },
     "global_continuation": {
@@ -168,7 +169,7 @@
       "id": "MOVING-PROFILE-RESERVE-RENEWAL",
       "title": "Erneuerbare Low/Profile-Reserve konstruieren",
       "mathematical_status": "OPEN",
-      "scope": "A8→A9 und die konkrete A9-Inverserneuerung sind unter den gebundenen Voraussetzungen als Autorenresultate geschlossen. Nach zusätzlicher Basis84-Elimination besitzt der vollständige neue hohe Rest mindestens 2/3 W_X. Offen bleiben die neuen gemeinsamen Quellenintegrale und der konstruktive A9→A11-Test ohne vorausgesetzte neue Terminalpositivität sowie die allgemeine Wiederholbarkeit und Kofinalität. Der alte Tailboden 1/20 bleibt getrennt offen. Vor weiteren A11→A13-Daten sind Aussage, Konstanten und Abnahme festzulegen; PR #187 bleibt separat."
+      "scope": "A8→A9, die konkrete A9-Inverserneuerung und der ursprüngliche Basis84-Tail sind unter den gebundenen Voraussetzungen als Autorenresultate geschlossen. Auf Z84 gilt tau >= (2/3) W_X und A_Z^-1 <= (3/2) I. Offen bleiben neue gemeinsame Quellenintegrale und der konstruktive A9→A11-Test ohne vorausgesetzte neue Terminalpositivität, vollständige neue Residualgrame sowie allgemeine Wiederholbarkeit und Kofinalität. Vor weiteren A11→A13-Daten sind Aussage, Konstanten und Abnahme festzulegen; PR #187 bleibt separat."
     },
     {
       "id": "NON-SUMMABLE-TRANSPORT",
@@ -2751,6 +2752,62 @@
         "Keine erneute große Integration oder externe analytische Begutachtung.",
         "Kein neuer makroskopischer Horizont, keine Kofinalität, kein fertiges Objekt X oder RH-Beweis."
       ]
+    },
+    {
+      "id": "BASIS84-ORIGINAL-TAIL-COMPLEMENT-CLOSURE",
+      "title": "Ursprünglicher Basis84-Tail: bedingter Boden 2/3 und Inverse höchstens 3/2",
+      "mathematical_status": "AUTHOR_DERIVED",
+      "review_status": "EXTERNAL_REVIEW_OPEN",
+      "integration_status": "MERGED",
+      "strategic_status": "REUSABLE_COMPONENT",
+      "reproduction_status": "RECORDED_PACKAGE_CHECKS",
+      "reproduction_evidence": [
+        {
+          "commit": "f4442b12dbd869c496c81a6f05642fcbcee1836f",
+          "path": "research/x-c1/basis84-tail-closure-2026-10-14/SOURCE_BINDINGS.json",
+          "sha256": "8c3a2dfe4f5d6dcf862fdf287a8b75bae8fd6b384beaf5e802e3b66ff90de823"
+        },
+        {
+          "commit": "f4442b12dbd869c496c81a6f05642fcbcee1836f",
+          "path": "research/x-c1/basis84-tail-closure-2026-10-14/reports/ACCEPTANCE.json",
+          "sha256": "4d865c562adc9088cf21c65bea8b27fff85ca5e9de241c22c2e31924741fe8b3"
+        },
+        {
+          "commit": "f4442b12dbd869c496c81a6f05642fcbcee1836f",
+          "path": "research/x-c1/basis84-tail-closure-2026-10-14/reports/EXPECTED_FULL_SOURCE_REPLAY.json",
+          "sha256": "438e78014b12b2afa04081e277d32a650f97d73b312c09730e4165cf2b88bcdc"
+        },
+        {
+          "commit": "f4442b12dbd869c496c81a6f05642fcbcee1836f",
+          "path": "research/x-c1/basis84-tail-closure-2026-10-14/reports/EXPECTED_INDEPENDENT_AUDIT.json",
+          "sha256": "e017adb991220a51ffd967a4138ffc73cce5840beb094589c86ed35526544f7b"
+        }
+      ],
+      "claim_polarity": "POSITIVE_RESULT",
+      "scope": "Bedingter Abschluss des ursprünglichen W_X-orthogonalen Basis84-Tails: tau|Z84 >= (2/3) W_X, somit der bisher offene Boden 1/20, A_Z^-1 <= (3/2) I und zusätzliche gerichtete Inversmajorante.",
+      "claim": [
+        "Für beide Paritäten gilt auf dem ursprünglichen W_X-orthogonalen Z84 unter den gebundenen Operator-, Domänen- und Integrationsvoraussetzungen tau >= (2/3) W_X. Damit ist das bisher offene Ziel 1/20 für genau diesen Rest geschlossen.",
+        "Die vollständige Schurminimierung ist auf Klassen modulo Basis84 invariant. Der alte W_X-orthogonale Vertreter hat dort die kleinste Norm; P_J^L erhält die ganze Formdomäne. Keine Kopplung oder niedrige Momentkomponente wird weggelassen.",
+        "Für die ursprüngliche Restriktionsinverse gilt A_Z^-1 <= (3/2) I. Zusätzlich gilt A_Z^-1 <= [(1-c)beta]^-1 i* R_L i. Die erste Inversordnung folgt aus der Variationsformel und setzt Restriktion und komprimierte volle Inverse nicht gleich.",
+        "Für vollständige Hilbertresiduen mit Werten in Z84 ist hier der Faktor 3/2 statt 20 verfügbar. Neue Antwortdomänen und der ganze Residualgram einer Anwendung müssen weiterhin geprüft werden.",
+        "Beide unveränderten Tailarchive, 1344 Basisrelationen und alle 574 Pivots sind lokal sowie am PR-Head und Main-Merge frisch geprüft; die Antwort/Common96/Basis-Kette ist direkt gebunden. Die großen Integrationen wurden übernommen."
+      ],
+      "depends_on": [
+        "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR",
+        "A9-DOMAIN-FLOOR-LOCAL-CONTINUATION",
+        "A8-A9-CONDITIONAL-GLOBAL-SCHUR-CLOSURE"
+      ],
+      "supersedes": [],
+      "replaced_by": [],
+      "canonical_commit": "f4442b12dbd869c496c81a6f05642fcbcee1836f",
+      "canonical_proof": "research/x-c1/basis84-tail-closure-2026-10-14/PROOF.md",
+      "proof_sha256": "ce2aa4ea734b35af39f5ec3ae57d4791b8feecccf1b414b11907cea68d4ab045",
+      "negative_claim_boundary": "Die Schranke gilt für den ursprünglichen Basis84-Tail und seine Restriktionsinverse; kein Boden 2/3 auf ganz R12 oder dem ganzen physischen A9-Raum, kein neuer Horizont.",
+      "does_not_claim": [
+        "Kein Nachweis des alten hinreichenden 268-Funktional-Fittests oder eines neuen vollständigen Residualgrams.",
+        "Keine erneute große Integration oder externe mathematische Gesamtbegutachtung.",
+        "Keine weiteren konstruktiven Horizonte, Kofinalität, Konstruktion von Objekt X oder RH."
+      ]
     }
   ],
   "global_status": {
@@ -2864,13 +2921,7 @@
     "discovery": "NEW_RESEARCH_PROOF_DIRECTORIES",
     "format": "JSON_SUBSET_OF_YAML_1_2"
   },
-  "pending_packages": [
-    {
-      "id": "BASIS84-ORIGINAL-TAIL-COMPLEMENT-CLOSURE",
-      "meta_path": "research/x-c1/basis84-tail-closure-2026-10-14/META.yaml",
-      "status": "PENDING_STATUS_REVIEW"
-    }
-  ],
+  "pending_packages": [],
   "transport_status": {
     "p11_fixed_pair_strong_terminal": {
       "mathematical_status": "AUTHOR_DERIVED",
@@ -2888,14 +2939,14 @@
   },
   "current_integration_observation": {
     "observed_at": "2026-10-14",
-    "main_sha": "18b070f6ec920bd847be070c72819bfb757db122",
-    "integrated_research_branch": "research/a9-inverse-integration-2026-10-14",
-    "integrated_research_head": "65c8c9b78d44c155eaee667d512ace240789ad08",
-    "reconciliation_merge": "18b070f6ec920bd847be070c72819bfb757db122",
-    "ci_run_id": 38510474388,
+    "main_sha": "6cf12db7b24b6f4c8d6a811258eac331a5a17952",
+    "integrated_research_branch": "research/basis84-tail-closure-2026-10-14",
+    "integrated_research_head": "f4442b12dbd869c496c81a6f05642fcbcee1836f",
+    "reconciliation_merge": "6cf12db7b24b6f4c8d6a811258eac331a5a17952",
+    "ci_run_id": 38573054627,
     "ci_run_attempt": 1,
-    "ci_head_sha": "18b070f6ec920bd847be070c72819bfb757db122",
-    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/38510474388",
+    "ci_head_sha": "6cf12db7b24b6f4c8d6a811258eac331a5a17952",
+    "ci_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/38573054627",
     "ci_conclusion": "success",
     "mathematical_status_change": false
   }
