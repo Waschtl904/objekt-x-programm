@@ -8,6 +8,17 @@ PACKAGE = REPO/'research/x-c1/basis84-tail-closure-2026-10-14'
 PREVIOUS = REPO/'research/x-c1/a8-a9-global-closure-2026-10-13'
 SCHUR = '65085974657257bd447d93342c5001d29e797b2fa70d876d53d36b587b16c2ba'
 BASIS = 'dd0e30a27d66f38503b217fa3279f62173ee1360eeca06eb5fdb698c7deeaec5'
+SEALED_ARCHIVES = {
+    'author': 'aaa21cb4cbab92f10c128b7709b011ca51b68cb0b53f2738b2eb64597701d818',
+    'countercheck': 'ab90bab116e16cbf4206c7be0dcba52628d4ea7d4b1dd00b0bb77acfcf0dcbac',
+}
+
+
+def check_historical_archives(catalog):
+    rows = list(catalog['archives'].values())
+    require(len(rows) == len(SEALED_ARCHIVES), 'historical archive count differs')
+    require({row['role']: row['sha256'] for row in rows} == SEALED_ARCHIVES,
+            'historical archive identity differs')
 
 
 def check_receipt(actual, full, independent):
@@ -26,6 +37,7 @@ def predecessor_sources(out):
     path = PREVIOUS/'SOURCE_BINDINGS.json'
     require(digest(path) == (PREVIOUS/'SOURCE_BINDINGS.sha256').read_text().split()[0], 'predecessor catalog changed')
     catalog = json.loads(path.read_bytes())
+    check_historical_archives(catalog)
     selected = {}; active = set()
     def include(h):
         require(h not in active, 'cyclic predecessor')

@@ -36,6 +36,16 @@ class TailReplayTests(unittest.TestCase):
     def test_repository_output_rejected(self):
         with self.assertRaisesRegex(ValueError,'output must be new'):
             replay.run(ROOT/'unsafe-tail-output')
+    def test_coordinated_catalog_archive_replacement_rejected(self):
+        catalog={'archives':{'a':{'role':'author','sha256':replay.SEALED_ARCHIVES['author']},
+                             'b':{'role':'countercheck','sha256':replay.SEALED_ARCHIVES['countercheck']}}}
+        replay.check_historical_archives(catalog)
+        catalog['archives']['b']['sha256']='0'*64
+        with self.assertRaisesRegex(ValueError,'historical archive identity'):
+            replay.check_historical_archives(catalog)
+    def test_repeated_attempt_artifacts_have_distinct_names(self):
+        text=(ROOT/'.github/workflows/basis84-tail-closure.yml').read_text(encoding='utf-8')
+        self.assertIn('name: basis84-tail-check-${{ github.run_id }}-${{ github.run_attempt }}',text)
     def test_ci_routing(self):
         wf='.github/workflows/basis84-tail-closure.yml'
         patterns=['research/x-c1/basis84-tail-closure-2026-10-14/**',
