@@ -29,7 +29,7 @@ Die projektintern hergeleiteten Ergebnisse sind zur externen Prüfung offen.
 ## Forschungsstand in Kürze
 
 Die folgende Zusammenfassung bezieht sich auf den integrierten Forschungsstand
-und die Folgepakete bis **13. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
+und die Folgepakete bis **14. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
 die gepinnten Beweisanker verwaltet das
 [Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml).
 
@@ -41,6 +41,7 @@ die gepinnten Beweisanker verwaltet das
 | Ungerade Winkeldiagnose | Gemeinsamer Y-Kernel: central ≤2.933357°, quarter ≤3.070163°, half ≤3.642693°; Endpunktfolge: five_eighths ≤4.933780° | Bedingte Schnitte; Root bleibt `UNRESOLVED` |
 | H₀-Folgeuntersuchung | Exaktes Hindernis für die benannte letzte Drei-Cut-Relaxation | Kein ursprünglicher Operatorgegenzeuge; vollständiges H₀ unentschieden |
 | Konstruktiver Anschluss A8→A9 | [Bedingter globaler Schurabschluss](research/x-c1/a8-a9-global-closure-2026-10-13/README.md): vollständiger Formdualrest und positiver Anschluss auf dem ganzen neuen Raum | Gebundene Operator-, Domänen- und Raumzerlegungsvoraussetzungen; Tailboden 1/20, weitere konstruktive Übergänge und allgemeine Fortsetzung offen |
+| A9-Inverserneuerung | [Gemeinsame A9-Inversmajorante und Boden 2/3 W_X](research/x-c1/a9-inverse-renewal-2026-10-13/README.md) auf dem ganzen neuen hohen Schurrest nach Basis84-Elimination | Neuer Rest; kein alter Tailboden 1/20, keine bereits berechneten nächsten Quellenintegrale |
 | Globales Ziel | Arbeitsdefinition und erforderliche Übergänge sind formuliert | Kofinale positive Familie, globaler Readout, vollständige Weil-Gramidentität und RH bleiben offen |
 
 Die hier zusammengefassten projektinternen Ergebnisse tragen den Status
@@ -53,7 +54,20 @@ Aktuelle Arbeit außerhalb von `main` ist in den
 sichtbar. Für ein Urteil über einen solchen Vorschlag sind dessen eigener
 Commit, Belegumfang und Integrationsstatus anzugeben.
 
-## Neuer Integrationsstand vom 13. Oktober
+## Neuer Integrationsstand vom 14. Oktober
+
+Die [Domänen- und Fortsetzungsherleitung](research/x-c1/a9-domain-continuation-2026-10-13/README.md)
+und die [A9-Inverserneuerung](research/x-c1/a9-inverse-renewal-2026-10-13/README.md)
+sind mit Originalarchiven, Quellenabgleich und automatischen Replays integriert.
+Der ganze neue hohe Schurrest hat nach Aufnahme der 84 Antwortfunktionen
+mindestens 2/3 W_X. Die gemeinsame A9-Inversmajorante liefert eine konkrete
+Ausgangsbasis für neue Kräfte; deren vollständige Integrale bleiben zu berechnen.
+Die gesonderte lokale Fortsetzungsbreite ist praktisch unbrauchbar klein und
+kein A9→A11-Schritt. Externe Begutachtung und die globalen Aufgaben bleiben offen.
+[Paketinventar und Integrationsbelege](00-uebersicht/integrationsnachweise/A9_PAKETABGLEICH_2026-10-14.md)
+zeigen, wo sämtliche 18 lokal versiegelten Ausgangspakete erhalten sind.
+
+## Integrationsstand vom 13. Oktober
 
 Der [bedingte globale Schurabschluss A8→A9](research/x-c1/a8-a9-global-closure-2026-10-13/README.md)
 führt die Arbeiten seit dem 7. Oktober einschließlich aller Originalpakete,

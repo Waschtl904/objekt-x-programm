@@ -4,6 +4,22 @@ Stand 3. Oktober 2026. Arbeitsstrategie auf Grundlage der gelesenen Beweispakete
 
 Fortgeschrieben nach GPT 1s Rückmeldung vom selben Tag. Neu präzisiert sind die vollständige Blockdarstellung in einer unabhängig positiven Hilbertnorm, die gemeinsame Auswertung korrigierter Quellen und eine obere Schranke für die inverse alte Residualenergie. Der zuvor vorgeschlagene isolierte Test des H₀-Blocks (4,5) entfällt aufgrund des übermittelten Grenzberichts; dessen neue Zahlenzertifikate wurden hier nicht erneut reproduziert.
 
+## Fortschreibung vom 14. Oktober
+
+Die [konkrete A9-Inverserneuerung](../research/x-c1/a9-inverse-renewal-2026-10-13/README.md)
+liefert nun eine gemeinsame Majorante für beliebige neue Quellen. Nach
+Schurelimination der 84 Antwortfunktionen besitzt der ganze neue hohe Rest
+mindestens 2/3 W_X, unter den gebundenen Voraussetzungen. Die konkrete
+[Domänenherleitung](../research/x-c1/a9-domain-continuation-2026-10-13/PROOF.md)
+liegt als extern noch zu begutachtender Autorenbeweis vor.
+
+Der nächste Rechenauftrag ist damit die vollständige gemeinsame Quellenenergie
+für A9→A11 gegen diese Majorante: alte Inversenergie, Zwölferanteil, ganzer
+L-Dualgram und 84 endliche Antwortkoordinaten. Alle Kreuzfehler bleiben gemeinsam.
+Eine bloße endliche Projektion genügt nicht. Die allgemeine Wiederholbarkeit
+des Erneuerungsschritts und eine kofinale Horizontfolge bleiben offen.
+Der neue Boden gilt auf einem anderen Rest als der alte offene Tailboden 1/20.
+
 ## Fortschreibung vom 13. Oktober
 
 Der [bedingte globale A8→A9-Schurabschluss](../research/x-c1/a8-a9-global-closure-2026-10-13/README.md)
