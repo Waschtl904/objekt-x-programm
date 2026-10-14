@@ -37,7 +37,6 @@ def predecessor_sources(out):
     path = PREVIOUS/'SOURCE_BINDINGS.json'
     require(digest(path) == (PREVIOUS/'SOURCE_BINDINGS.sha256').read_text().split()[0], 'predecessor catalog changed')
     catalog = json.loads(path.read_bytes())
-    check_historical_archives(catalog)
     selected = {}; active = set()
     def include(h):
         require(h not in active, 'cyclic predecessor')
@@ -62,6 +61,7 @@ def run(out):
     path = PACKAGE/'SOURCE_BINDINGS.json'
     require(digest(path) == (PACKAGE/'SOURCE_BINDINGS.sha256').read_text().split()[0], 'catalog hash differs')
     catalog = json.loads(path.read_bytes())
+    check_historical_archives(catalog)
     for name, row in catalog['archives'].items(): archive(safe(PACKAGE, name), row)
     for name, row in catalog['visible_copies'].items():
         with zipfile.ZipFile(safe(PACKAGE, row['archive'])) as z:
