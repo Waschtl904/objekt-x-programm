@@ -1,0 +1,49 @@
+Objekt X — Gegenprüfung des vollen A9-Bodens und der lokalen Fortsetzung
+13. Oktober 2026
+
+Bitte mit HERLEITUNG.txt beginnen. Dies ist ein neuer analytischer
+Anschluss an das bereits bestätigte globale Schurpaket. Der Neuaufbau
+der großen globalen Integrationen ist für die folgenden neuen Prüfungen
+nicht erforderlich; er wird nicht als ausgeführt behauptet.
+
+Konkrete Prüfpunkte:
+
+1. Der direkte Kern-/Schalenschnitt in Abschnitt2: Sind die positiven
+   abgeschnittenen Energien und die uniforme Carleman-Majorante so
+   kombiniert, dass die volle Formdomäne ohne Dichtezirkel zerfällt?
+   Prüfe anschließend Dilation, Momentkorrektur und Mollifizierung für
+   den Abschluss der ursprünglichen Zwei-Mellin-H1_0-Quellen.
+2. Die Operatordomänenidentifikation in Abschnitt3: Es wird Q nur auf
+   feste stückweise Lipschitz-Funktionen angewandt. Allgemeine Restvektoren
+   bleiben Formvektoren. Die schwache Behandlung logarithmischer alter
+   Antworten aus dem globalen Modell wird nicht ersetzt.
+3. Beide K12_neu-1e-16 I bestehen rational mit zwei getrennten
+   Eliminationsverfahren. K12_neu ist weiterhin in den ursprünglichen
+   physischen Quellenkoordinaten. Prüfe die komplette Rückumrechnung
+   der zwei Quadratergänzungen bis zur physischen L2-Norm in (5.4).
+4. Neue Schale (b,b+h): Prüfe insbesondere den Faktor1/2 in der
+   Gamma-Doppelintegraldarstellung und die beiden äußeren Beiträge
+   für h<=v<=1. Alle sieben Primkanäle einschließlich9 werden mit
+   ihrer vollen Norm bezahlt. Es wird keine kleine Kopplungsnorm aus
+   der schmalen Trägerlänge abgeleitet.
+5. Prüfe die vollständige Momentkorrektur, alte A9-Inverse und die
+   abschließende Normumrechnung (6.5). Das Ergebnis ist ein explizites,
+   extrem kleines Intervall, kein Nachweis A9->A10/A11 und keine Kofinalität.
+
+Schneller Prüflauf aus dem entpackten Paket:
+
+ python reproduce.py
+
+Zusätzlich direkter Abgleich mit dem ursprünglichen Schurarchiv:
+
+ python reproduce.py --schur-package <Pfad/Objekt-X-Globaler-Schurabschluss-A8-A9-2026-10-13.zip>
+
+Das Originalarchiv muss SHA256
+65085974657257bd447d93342c5001d29e797b2fa70d876d53d36b587b16c2ba
+haben. Das Paket enthält die ursprüngliche S-Quelldatei verlustfrei
+gzip-komprimiert; ihr ungepackter SHA256 ist
+185b501de8f218f8b62812631fe52301a47a288f11b9b4e8205229da7f89da82.
+
+Bitte den Status präzise halten: arithmetische Identität und bisherige
+Zertifikatskette bleiben Eingaben; externe mathematische Prüfung offen.
+Alter Tailboden1/20, weitere benannte Horizonte, Objekt X und RH offen.

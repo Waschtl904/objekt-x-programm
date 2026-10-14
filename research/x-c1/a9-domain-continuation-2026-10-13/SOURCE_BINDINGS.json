@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-14",
+  "replay_archive": "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+  "package_root": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13",
+  "archives": {
+    "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip": {
+      "sha256": "f96cd225cd9b894f5a6e132086255699e31efa68a575322b6ae1c053ddfc8efd",
+      "bytes": 2759055,
+      "members": {
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/check.py": {
+          "bytes": 11649,
+          "sha256": "fe15d321819a4512975844c615e49e8eeb46057ba77827b1cf8014ee0a3e0955"
+        },
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/reproduce.py": {
+          "bytes": 1905,
+          "sha256": "df83529a9720b2c5c38acb18e7412f6d7bb3eb98b5cdc3a1b27b34f77248c57a"
+        },
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/BOUND_INPUTS.json": {
+          "bytes": 223164,
+          "sha256": "13c099bc28dcacc012338da953db04669ddb23f8d7861be90fcaf6e8c1737409"
+        },
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/CHECK.json": {
+          "bytes": 2675,
+          "sha256": "ebdf8da2840d2ab77fa01fcdc78c3aabeff23ad8fc59937b1d54da88006dc9b6"
+        },
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/SOURCE_BINDINGS.json": {
+          "bytes": 2631,
+          "sha256": "88152554e752ae0f0b5b78f6ffb6be5fb0624feafc8b59e7fcea231bf203ee1e"
+        },
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/HERLEITUNG.txt": {
+          "bytes": 23771,
+          "sha256": "e6075606f6a26c354f1eb756b568f91cbb7a0b035022b44ef60a0120ae4ea819"
+        },
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/BERICHT.txt": {
+          "bytes": 4485,
+          "sha256": "457a1acda662a55fd25dd9141da33c1796e1047205721c1c8c0b368bcf536ee1"
+        },
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/README.txt": {
+          "bytes": 1556,
+          "sha256": "d431ca7f3d42e1a7af9eaeccd37b80d523cb5bf1c72162bd71b72436b77e00a0"
+        },
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/ANSCHLUSS_GPT1.txt": {
+          "bytes": 2556,
+          "sha256": "9da29ae779800c2af65116a8b5071768f51194907185c892e4fba8c655e5261a"
+        },
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/sources/A8_PROOF_original.txt": {
+          "bytes": 17081,
+          "sha256": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661"
+        },
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/sources/DOMAIN_LEMMATA_2026-10-06.txt": {
+          "bytes": 14174,
+          "sha256": "865b8403bd00d390603eb0a856ee843beea723b194fa488fc78c9422c666d9e1"
+        },
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/sources/half-1536.json.gz": {
+          "bytes": 2667332,
+          "sha256": "a4d5c3c3c26d508dfaa2825441800db7e6f8c65748c138f704de5217e385ca30"
+        },
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/sources/HALF_INVERSE_HERLEITUNG_2026-10-06.txt": {
+          "bytes": 10695,
+          "sha256": "cd13e95a5ce2f50159a90e3df80a79e16950389a6804161db4ebffa475293035"
+        },
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/sources/REMAINDER_BEWEIS_2026-10-05.txt": {
+          "bytes": 19748,
+          "sha256": "1ef4dabd030d86d8883a5eaf07a60a4b72a047bec502d2092df08e89d7dc2dcf"
+        },
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/sources/RESPONSES_PROOF_2026-10-11.txt": {
+          "bytes": 10731,
+          "sha256": "122fabae61dad7d6d6916d899ea8ae8c44a1ead451ac68919e6ce9304f002e61"
+        },
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/sources/SCHUR_HERLEITUNG_2026-10-13.txt": {
+          "bytes": 10678,
+          "sha256": "9860ffca22a64140509fcce2876935473c74f08d8cd587a0b7fcf8e56c1cd167"
+        },
+        "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/MANIFEST.json": {
+          "bytes": 1688,
+          "sha256": "7a6a7053b9f94fe1ef403cea084877820e7ebe811d9ff459db69c59e0d3d36a7"
+        }
+      },
+      "role": "CURRENT_CONDITIONAL_AUTHOR_RESULT"
+    },
+    "archives/Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12.zip": {
+      "sha256": "1e07efa9fb29761412cd0cc7960c7cde306bfa519591c7a1df74e8694f893f53",
+      "bytes": 20595594,
+      "members": {
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/ANSCHLUSS_GPT1.txt": {
+          "bytes": 1548,
+          "sha256": "806554b12f707ec392599d07871fb9fb85a2e2a32bbf5d6e4abc016cf0e797b1"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/audit_exterior.py": {
+          "bytes": 2674,
+          "sha256": "62784e240cc6ca676feca818bbc363e28cd9c33629fe28ef88122989872d6336"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/audit_model_error.py": {
+          "bytes": 5256,
+          "sha256": "ac2f3ae39cfbe9b36740b9bdcb91f051a9e8a30f0266028cf85b6f4362f76006"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/BERICHT.txt": {
+          "bytes": 1347,
+          "sha256": "5cb87898e4ec65133b6c89df4dd31d0205474dbfec5b0be73ca16e01ed90bffa"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/bound_exterior_phi.py": {
+          "bytes": 7508,
+          "sha256": "dfdce85b483673668efeb25ad064e58634b407b73def0624f380372beff75384"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/check_parameters.py": {
+          "bytes": 3166,
+          "sha256": "a0d06f4f0f47a89ae90437399ef6d571fb5bca6ac21834b2e426a1762b95be75"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/data/EXTERIOR_AUDIT_EVEN.json": {
+          "bytes": 884,
+          "sha256": "95f2345dc22c79603a99cfcd1e226d7114dad98355e5e116d652b5e3eb812d7c"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/data/EXTERIOR_AUDIT_ODD.json": {
+          "bytes": 879,
+          "sha256": "7a6d706321616569a6ed8aca813f60e3ff3fee9ceab62a6268b9cefd1bebbf2e"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/data/EXTERIOR_EVEN_3072.json": {
+          "bytes": 88225,
+          "sha256": "e194a152b190c3ed32edb95a382e0ea60a27221b692816316ec56250adfe17cb"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/data/EXTERIOR_EVEN_4096.json": {
+          "bytes": 56364,
+          "sha256": "669743af49beccd3cc5baa484d51b56e688bb03180c08084623d2dd64e708fb8"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/data/EXTERIOR_ODD_3072.json": {
+          "bytes": 88091,
+          "sha256": "6e82a29de140b6e4105a5bfc6dcc602356809acaa4afd2cf5eff5c40bd95eec1"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/data/EXTERIOR_ODD_4096.json": {
+          "bytes": 56203,
+          "sha256": "c40b850bebf7f6fdd974c39d908346a5645a59b1be35d23672c2e7391b238f07"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/data/MODEL_ERROR.json": {
+          "bytes": 37579,
+          "sha256": "7a7ccf21cd686da20a230d68fd64398d8eb7faee64ef02cfc20d964a6b4b4a8d"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/data/PARAMETERS.json": {
+          "bytes": 3541,
+          "sha256": "9da5b2c30fcc0187e69475ae50817757d6796db477da6ba9ab6c542abb5c400c"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/data/RELEASE_REPLAY.json": {
+          "bytes": 3708,
+          "sha256": "8835c12274000db0fd6b8315badbe82d66819259b315f2ab55385ab36ce117f4"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/inputs/Objekt-X-Globale-Funktionsdarstellung-und-glatte-Korrektur-2026-10-12.zip": {
+          "bytes": 12135291,
+          "sha256": "86e510b6d68f5b70345f7ce710491fd09e7d8818cff3be6565fd8254d16581e3"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/interval_helpers.py": {
+          "bytes": 10023,
+          "sha256": "4bc0fc7c7691ff0c98d91b6edde9dd3d9a9a22a924bd00d09c33a95e98d812d0"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/PROOF.txt": {
+          "bytes": 12744,
+          "sha256": "5e67cda7900f49a69f337110a2fd5990674e0f1e4ce409d88cb7e5f2cef74d1a"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/rational_ldl.py": {
+          "bytes": 4450,
+          "sha256": "4bcbdb972117edf0af7b098c2dc00c1c9f921f020e1311ad31495bf1d4b66700"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/README.txt": {
+          "bytes": 1252,
+          "sha256": "0f63d090e510cde16dfeaa68e54be56d297b47fb98307e2fa82caac74fc20567"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/reproduce.py": {
+          "bytes": 5695,
+          "sha256": "ba11cf796fc935491977397c6c3e0777559e49e7ff884210699c175095fbe78c"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/snapshot/work/direct-rest84-2026-10-11/REFINED_COMMON96.json": {
+          "bytes": 3232835,
+          "sha256": "b12c751cbb65dd3e728878797d5edd80a829f9c49cab878024823d442b2a5e53"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/snapshot/work/direct-rest84-2026-10-11/REFINED_INPUT.json": {
+          "bytes": 12380636,
+          "sha256": "7beb100354f6b1223a138426c678c3dc006517d4754717bd7dedd910ddadadfe"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/snapshot/work/galerkin84-2026-10-10/safe_serial.py": {
+          "bytes": 922,
+          "sha256": "85ed2ce2abbcaf51f358a3ebac6bb6102a5b63c4a061415abf8abf1d213107b1"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/snapshot/work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/gamma-low-2026-10-09/SHELL_GAMMA_4096.json": {
+          "bytes": 1978,
+          "sha256": "0b5eec9a08cd3d48cc901c41f861f3122dd94624db9c4af70da2e447bf03e3a5"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/snapshot/work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/remainder-integration-check-v2/originals/weighted-response/inputs/a8_model.json.gz": {
+          "bytes": 4123230,
+          "sha256": "16fd429eedd48c566de323428de77f3167f0e119b5ecae5e2b04aafa04e74c23"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/snapshot/work/inner-log-2026-10-12/COMPOSED_EVEN_3072.json": {
+          "bytes": 393,
+          "sha256": "84e73b42fde7c7ee6b6d345622ed9a53e3fa10d9b0b0b91892227cbf309fc370"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/snapshot/work/inner-log-2026-10-12/COMPOSED_ODD_3072.json": {
+          "bytes": 388,
+          "sha256": "bb64d5afa5fb0686eaac1c4bb9fa08e3361dc06b3df6b838a706bd45c45900a8"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/snapshot/work/inner-log-2026-10-12/TRACES_EVEN_3072.json": {
+          "bytes": 62791,
+          "sha256": "7189343c24d6d0a68a20c2d21f54188bfd5fec245a615c0528e320db2f014e4e"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/snapshot/work/inner-log-2026-10-12/TRACES_ODD_3072.json": {
+          "bytes": 62953,
+          "sha256": "774f4be067b9a015d94aa99c7deb89460589c5e23cedd199ce9a9316a0fa60de"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/snapshot/work/new-responses84-2026-10-11/RESPONSES_EVEN.json": {
+          "bytes": 21790,
+          "sha256": "c0f63d614ed19b89cc0d55459b9df68e0a48b5787ed0fd146523fa81eded6f75"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/snapshot/work/new-responses84-2026-10-11/RESPONSES_ODD.json": {
+          "bytes": 21761,
+          "sha256": "44c6d09a73538d18eaf0a8b81c455684e93a1bad783a721e5e42f365de680110"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/snapshot/work/tail-probe-2026-10-10/vendor/compute_inverse_energy_gate.py": {
+          "bytes": 16602,
+          "sha256": "0c0f288d24710bf8e0a37b625825670ce508835a17e7755909557064535da519"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/snapshot/work/tail-probe-2026-10-10/vendor/compute_source_mixed.py": {
+          "bytes": 13765,
+          "sha256": "2d24184788ad846f6216dcef5a11a761ca4c3f4d4cd56cea3268b67cdbf48df9"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/snapshot/work/tail-probe-2026-10-10/vendor/source_core.py": {
+          "bytes": 13584,
+          "sha256": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/SNAPSHOT_ORIGINS.json": {
+          "bytes": 2939,
+          "sha256": "84249ca3e31109cc08f947c35b2640ba2964557e2a3ebdf0debbf761a3d17aa9"
+        },
+        "Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12/MANIFEST.json": {
+          "bytes": 4280,
+          "sha256": "226a2a90f2d35183329953e7acd199279ccd81c9ae245b460010880b3c205fa2"
+        }
+      },
+      "role": "SUPERSEDED_NOT_USED_IN_PROOF"
+    }
+  },
+  "visible_copies": {
+    "original/check.py": {
+      "archive": "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+      "member": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/check.py"
+    },
+    "original/reproduce.py": {
+      "archive": "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+      "member": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/reproduce.py"
+    },
+    "original/CHECK.json": {
+      "archive": "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+      "member": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/CHECK.json"
+    },
+    "original/SOURCE_BINDINGS.json": {
+      "archive": "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+      "member": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/SOURCE_BINDINGS.json"
+    },
+    "original/HERLEITUNG.txt": {
+      "archive": "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+      "member": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/HERLEITUNG.txt"
+    },
+    "original/BERICHT.txt": {
+      "archive": "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+      "member": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/BERICHT.txt"
+    },
+    "original/README.txt": {
+      "archive": "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+      "member": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/README.txt"
+    },
+    "original/ANSCHLUSS_GPT1.txt": {
+      "archive": "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+      "member": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/ANSCHLUSS_GPT1.txt"
+    },
+    "original/sources/A8_PROOF_original.txt": {
+      "archive": "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+      "member": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/sources/A8_PROOF_original.txt"
+    },
+    "original/sources/DOMAIN_LEMMATA_2026-10-06.txt": {
+      "archive": "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+      "member": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/sources/DOMAIN_LEMMATA_2026-10-06.txt"
+    },
+    "original/sources/HALF_INVERSE_HERLEITUNG_2026-10-06.txt": {
+      "archive": "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+      "member": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/sources/HALF_INVERSE_HERLEITUNG_2026-10-06.txt"
+    },
+    "original/sources/REMAINDER_BEWEIS_2026-10-05.txt": {
+      "archive": "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+      "member": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/sources/REMAINDER_BEWEIS_2026-10-05.txt"
+    },
+    "original/sources/RESPONSES_PROOF_2026-10-11.txt": {
+      "archive": "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+      "member": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/sources/RESPONSES_PROOF_2026-10-11.txt"
+    },
+    "original/sources/SCHUR_HERLEITUNG_2026-10-13.txt": {
+      "archive": "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+      "member": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/sources/SCHUR_HERLEITUNG_2026-10-13.txt"
+    },
+    "original/MANIFEST.json": {
+      "archive": "archives/Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13.zip",
+      "member": "Objekt-X-A9-Gesamtboden-und-Lokale-Fortsetzung-2026-10-13/MANIFEST.json"
+    }
+  },
+  "large_integrations_rerun": false,
+  "historical_originals_unchanged": true
+}

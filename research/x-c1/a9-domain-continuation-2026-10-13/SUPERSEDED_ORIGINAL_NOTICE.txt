@@ -1,0 +1,5 @@
+Die vorläufige Paketfassung ohne v2 ist durch
+Objekt-X-Vollstaendiger-Globaler-Modellfehler-2026-10-12-v2.zip ersetzt.
+Für die Gegenprüfung bitte ausschließlich v2 verwenden.
+Die Schlusskontrolle hat dort einen zusätzlichen low_F-Mittelpunktradius
+ausdrücklich eingeschlossen. Die Gesamtergebnisgrenzen bleiben gleich.

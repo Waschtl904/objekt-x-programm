@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "A9-DOMAIN-FLOOR-LOCAL-CONTINUATION",
+  "date": "2026-10-13",
+  "kind": "CONSTRUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Formdichte, vollständige Kern-/Schalenzerlegung und verwendete Operatordomänen für die konkrete Form; bedingter physischer A9-Boden 10^-207 und lokale Fortsetzung bis log(3)+exp(-10^215) mit Boden 10^-421.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "Die extrem kleine lokale Breite ist kein Übergang A9->A11 und keine kofinale Fortsetzung; die Böden sind konservative Untergrenzen.",
+  "depends_on": [
+    "A8-A9-CONDITIONAL-GLOBAL-SCHUR-CLOSURE"
+  ],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "Kein alter gesonderter Tailboden 1/20.",
+    "Keine erneute große Integration oder externe analytische Begutachtung.",
+    "Kein neuer makroskopischer Horizont, keine Kofinalität, kein fertiges Objekt X oder RH-Beweis."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/a9-domain-continuation-2026-10-13/PROOF.md",
+    "sha256": "904f73b1f7503f2bfe7aa900a0d7fd2695d34ce0b04ad91191cc36ed008a4192"
+  }
+}

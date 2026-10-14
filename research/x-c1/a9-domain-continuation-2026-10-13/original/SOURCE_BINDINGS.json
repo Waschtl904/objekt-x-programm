@@ -1,0 +1,52 @@
+[
+  {
+    "copied_to": "sources/DOMAIN_LEMMATA_2026-10-06.txt",
+    "source_workspace_path": "work/tail64-input-2026-10-10/Objekt-X-Tailarchitektur-und-64er-Lemma-2026-10-09/sources/github_DOMAIN_LEMMATA.txt",
+    "sha256": "865b8403bd00d390603eb0a856ee843beea723b194fa488fc78c9422c666d9e1",
+    "bytes": 14174,
+    "unchanged_historical_document": true
+  },
+  {
+    "copied_to": "sources/REMAINDER_BEWEIS_2026-10-05.txt",
+    "source_workspace_path": "work/tail64-input-2026-10-10/Objekt-X-Tailarchitektur-und-64er-Lemma-2026-10-09/sources/github_REMAINDER_BEWEIS.txt",
+    "sha256": "1ef4dabd030d86d8883a5eaf07a60a4b72a047bec502d2092df08e89d7dc2dcf",
+    "bytes": 19748,
+    "unchanged_historical_document": true
+  },
+  {
+    "copied_to": "sources/A8_PROOF_original.txt",
+    "source_workspace_path": "work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/remainder-integration-check-v2/originals/weighted-response/inputs/A8_PROOF.md",
+    "sha256": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661",
+    "bytes": 17081,
+    "unchanged_historical_document": true
+  },
+  {
+    "copied_to": "sources/HALF_INVERSE_HERLEITUNG_2026-10-06.txt",
+    "source_workspace_path": "work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/remainder-integration-check-v2/originals/half-inverse/HERLEITUNG.txt",
+    "sha256": "cd13e95a5ce2f50159a90e3df80a79e16950389a6804161db4ebffa475293035",
+    "bytes": 10695,
+    "unchanged_historical_document": true
+  },
+  {
+    "copied_to": "sources/RESPONSES_PROOF_2026-10-11.txt",
+    "source_workspace_path": "work/new-responses84-2026-10-11/PROOF.txt",
+    "sha256": "122fabae61dad7d6d6916d899ea8ae8c44a1ead451ac68919e6ce9304f002e61",
+    "bytes": 10731,
+    "unchanged_historical_document": true
+  },
+  {
+    "copied_to": "sources/SCHUR_HERLEITUNG_2026-10-13.txt",
+    "source_workspace_path": "work/schur-review-2026-10-13/Objekt-X-Globaler-Schurabschluss-A8-A9-2026-10-13/HERLEITUNG.txt",
+    "sha256": "9860ffca22a64140509fcce2876935473c74f08d8cd587a0b7fcf8e56c1cd167",
+    "bytes": 10678,
+    "unchanged_historical_document": true
+  },
+  {
+    "copied_to": "sources/half-1536.json.gz",
+    "source_workspace_path": "work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/remainder-integration-check-v2/originals/half-inverse/expected/1536.json",
+    "uncompressed_sha256": "185b501de8f218f8b62812631fe52301a47a288f11b9b4e8205229da7f89da82",
+    "gzip_sha256": "a4d5c3c3c26d508dfaa2825441800db7e6f8c65748c138f704de5217e385ca30",
+    "uncompressed_bytes": 20183801,
+    "gzip_bytes": 2667332
+  }
+]
