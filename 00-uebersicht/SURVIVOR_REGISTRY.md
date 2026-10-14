@@ -1866,3 +1866,70 @@ Does not claim:
 - Die 0,030 % des regularisierten hohen Grams beziehen sich auf dessen eigene Metrik H; sie sind nicht der Prozentwert des gesamten Formdualrests.
 
 Dokumentierte Reproduktion: [SOURCE_BINDINGS.json](https://github.com/Waschtl904/objekt-x-programm/blob/79fefcb5ddefb6c016e2c7fd049500215b4a1d10/research/x-c1/a8-a9-global-closure-2026-10-13/SOURCE_BINDINGS.json), [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/79fefcb5ddefb6c016e2c7fd049500215b4a1d10/research/x-c1/a8-a9-global-closure-2026-10-13/reports/ACCEPTANCE.json), [FULL_CHAIN.json](https://github.com/Waschtl904/objekt-x-programm/blob/79fefcb5ddefb6c016e2c7fd049500215b4a1d10/research/x-c1/a8-a9-global-closure-2026-10-13/reports/FULL_CHAIN.json), [RESERVE_REVIEW.json](https://github.com/Waschtl904/objekt-x-programm/blob/79fefcb5ddefb6c016e2c7fd049500215b4a1d10/research/x-c1/a8-a9-global-closure-2026-10-13/reports/RESERVE_REVIEW.json), [LOCAL_CHECKS.json](https://github.com/Waschtl904/objekt-x-programm/blob/79fefcb5ddefb6c016e2c7fd049500215b4a1d10/research/x-c1/a8-a9-global-closure-2026-10-13/reports/LOCAL_CHECKS.json).
+
+## A9-DOMAIN-FLOOR-LOCAL-CONTINUATION
+
+A9: konkrete Domänenherleitung, Gesamtboden und lokale Fortsetzung
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Formdichte, vollständige Kern-/Schalenzerlegung und verwendete Operatordomänen für die konkrete Form; bedingter physischer A9-Boden 10^-207 und lokale Fortsetzung bis log(3)+exp(-10^215) mit Boden 10^-421.
+- Canonical commit: [00ddd84](https://github.com/Waschtl904/objekt-x-programm/commit/00ddd84cab3e0bd43a7566587cf4e142b7c7ee3d).
+- Canonical proof: [research/x-c1/a9-domain-continuation-2026-10-13/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/00ddd84cab3e0bd43a7566587cf4e142b7c7ee3d/research/x-c1/a9-domain-continuation-2026-10-13/PROOF.md).
+- depends_on: `A8-A9-CONDITIONAL-GLOBAL-SCHUR-CLOSURE`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Die extrem kleine lokale Breite ist kein Übergang A9->A11 und keine kofinale Fortsetzung; die Böden sind konservative Untergrenzen.
+
+Aussage:
+
+- Für die konkret definierte Prim-/Gamma-Form liegen Autorenbeweise der Formdichte, vollständigen Kern-/Schalenzerlegung und tatsächlich benutzten Operatordomänen vor. H0–H3, insbesondere arithmetische Identifikation, alter A8-Boden und gebundene große Integrationen, bleiben Voraussetzungen.
+- Auf dem vollständigen physischen A9-Momentformraum gilt bedingt q_b >= 10^-207 ||.||_2^2. Die bewusst grobe Konstante bezeichnet keine tatsächliche kleinste Eigenzahl.
+- Für alle t in [log(3),log(3)+exp(-10^215)] gilt bedingt q_t >= 10^-421 ||.||_2^2, einschließlich Primkanal 9. Die exakt positive, praktisch unbrauchbar kleine Breite ist kein A9->A11-Schritt.
+- Originalarchive und neue rationale Konstantenprüfungen sind lokal sowie auf PR- und Main-Commit bestätigt; die ursprünglichen Schurfelder werden direkt abgeglichen. Die zusätzlich erhaltene Modellfehlerfassung ohne v2 ist ausdrücklich überholt und kein verwendeter Beweisinput.
+
+Does not claim:
+
+- Kein alter gesonderter Tailboden 1/20.
+- Keine erneute große Integration oder externe analytische Begutachtung.
+- Kein neuer makroskopischer Horizont, keine Kofinalität, kein fertiges Objekt X oder RH-Beweis.
+
+Dokumentierte Reproduktion: [SOURCE_BINDINGS.json](https://github.com/Waschtl904/objekt-x-programm/blob/00ddd84cab3e0bd43a7566587cf4e142b7c7ee3d/research/x-c1/a9-domain-continuation-2026-10-13/SOURCE_BINDINGS.json), [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/00ddd84cab3e0bd43a7566587cf4e142b7c7ee3d/research/x-c1/a9-domain-continuation-2026-10-13/reports/ACCEPTANCE.json), [EXPECTED_SEALED_REPLAY.json](https://github.com/Waschtl904/objekt-x-programm/blob/00ddd84cab3e0bd43a7566587cf4e142b7c7ee3d/research/x-c1/a9-domain-continuation-2026-10-13/reports/EXPECTED_SEALED_REPLAY.json).
+
+## A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR
+
+A9: erneuerte gemeinsame Inversmajorante und ganzer hoher Schurrest
+
+- Mathematical status: `AUTHOR_DERIVED`.
+- Review status: `EXTERNAL_REVIEW_OPEN`.
+- Integration status: `MERGED`.
+- Strategic status: `REUSABLE_COMPONENT`.
+- Reproduction status: `RECORDED_PACKAGE_CHECKS`.
+- Scope: Nach zusätzlicher Elimination der Basis84 gilt für den ganzen neuen L-orthogonalen Schurrest mindestens 2/3 W_X; explizite gemeinsame A9-Inversmajorante aus dem vollständigen globalen Residualvergleich.
+- Canonical commit: [65c8c9b](https://github.com/Waschtl904/objekt-x-programm/commit/65c8c9b78d44c155eaee667d512ace240789ad08).
+- Canonical proof: [research/x-c1/a9-inverse-renewal-2026-10-13/PROOF.md](https://github.com/Waschtl904/objekt-x-programm/blob/65c8c9b78d44c155eaee667d512ace240789ad08/research/x-c1/a9-inverse-renewal-2026-10-13/PROOF.md).
+- depends_on: `A8-A9-CONDITIONAL-GLOBAL-SCHUR-CLOSURE`, `A9-DOMAIN-FLOOR-LOCAL-CONTINUATION`.
+- supersedes: [].
+- replaced_by: [].
+- Claim polarity: `POSITIVE_RESULT`.
+- Negative claim boundary: Der Boden 2/3 bezieht sich auf den neuen Rest nach A8, F12 und Basis84; er beweist nicht den alten gesonderten Tailboden 1/20.
+
+Aussage:
+
+- Der vollständige Residualvergleich liefert H_*^-1 <= (11/10)[beta^-1 R_L+J P_upper J*]. R_L ist die vollständige Forminverse auf T; die feste Basis J ist nicht als orthonormal vorausgesetzt.
+- Je eine neue rationale 84x84-Obermatrix erfüllt P_upper > X E^-1 X*. Zwei vollständige 287x287-Blockzertifikate mit insgesamt 574 positiven LDL-Pivots und direktem ursprünglichem Quellenfeldabgleich sichern die Matrizen.
+- Nach Elimination des gesamten alten A8-Raums, F12 und der 84 Antwortfunktionen gilt für den ganzen neuen L-orthogonalen Rest mindestens (2/3) W_X in beiden Paritäten. Die vollständige Momentreihe und sämtliche Kopplungen sind eingeschlossen.
+- Die gemeinsame physische Majorante W9 erfüllt A9^-1 <= W9 und ist für neue Quellen verwendbar. Auf dem bisherigen T gelten zusätzlich die Böden >W_X/65000 gerade und >W_X/11000 ungerade.
+- Die neue Quellenfamilie für A9->A11 und ihre vollständigen Integrale sind noch nicht berechnet. Die konkrete A9-Inverserneuerung liefert keinen allgemeinen oder kofinalen Renewal-Satz.
+
+Does not claim:
+
+- Kein alter gesonderter Tailboden 1/20.
+- Keine erneute große Integration oder externe analytische Begutachtung.
+- Kein neuer makroskopischer Horizont, keine Kofinalität, kein fertiges Objekt X oder RH-Beweis.
+
+Dokumentierte Reproduktion: [SOURCE_BINDINGS.json](https://github.com/Waschtl904/objekt-x-programm/blob/65c8c9b78d44c155eaee667d512ace240789ad08/research/x-c1/a9-inverse-renewal-2026-10-13/SOURCE_BINDINGS.json), [ACCEPTANCE.json](https://github.com/Waschtl904/objekt-x-programm/blob/65c8c9b78d44c155eaee667d512ace240789ad08/research/x-c1/a9-inverse-renewal-2026-10-13/reports/ACCEPTANCE.json), [EXPECTED_SEALED_REPLAY.json](https://github.com/Waschtl904/objekt-x-programm/blob/65c8c9b78d44c155eaee667d512ace240789ad08/research/x-c1/a9-inverse-renewal-2026-10-13/reports/EXPECTED_SEALED_REPLAY.json).
