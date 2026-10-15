@@ -3,7 +3,7 @@
 > GENERATED FILE — DO NOT EDIT
 > Quelle: [RESEARCH_STATE.yaml](RESEARCH_STATE.yaml). Navigation, keine Satzpromotion.
 
-Stand: 2026-10-14.
+Stand: 2026-10-15.
 
 ## Gemergte kanonische Basis
 
@@ -35,7 +35,7 @@ Historische Integrationsprovenienz des Registry-/Navigations-Syncs: PR #156 inte
 
 ## Zwei aktive Hauptfronten
 
-- **Konstruktive Fortsetzung der gemeinsamen Objekt-X-Geometrie** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Primäres Ziel ist die Konstruktion von Objekt X gemäß Arbeitsdefinition. A8→A9, die konkrete Domänenherleitung und die gemeinsame A9-Inversmajorante liegen unter gebundenen Voraussetzungen als Autorenresultate vor. Der ursprüngliche W_X-orthogonale Basis84-Tail ist jetzt mit Boden 2/3 W_X und Restriktionsinverse höchstens 3/2 I geschlossen; der bisher offene Boden 1/20 ist damit erledigt. Als Nächstes sind die analytischen Beweise extern zu prüfen und neue gemeinsame A9→A11-Kräfte sowie deren vollständige Residualgrame zu berechnen. Die Y-Kernel-/H0-Diagnose bleibt auf Root UNRESOLVED. Weitere konstruktive Horizonte, allgemeine Wiederholbarkeit, Kofinalität, kompatibler Readout und Objekt X bleiben offen.
+- **Konstruktive Fortsetzung der gemeinsamen Objekt-X-Geometrie** — `UNRESTRICTED-HORIZON-AND-PROFILE-CONTINUATION`, OPEN. Primäres Ziel ist die Konstruktion von Objekt X gemäß Arbeitsdefinition. A8→A9, die konkrete Domänenherleitung und die gemeinsame A9-Inversmajorante liegen unter gebundenen Voraussetzungen als Autorenresultate vor. Der ursprüngliche W_X-orthogonale Basis84-Tail ist jetzt mit Boden 2/3 W_X und Restriktionsinverse höchstens 3/2 I geschlossen; der bisher offene Boden 1/20 ist damit erledigt. Als Nächstes dient A9→A11 als Kalibrierungsinstanz einer erneuerbaren vollständigen Zertifikatsklasse: zulässige neue Rohdaten, festgelegte Antwortregel, ganzer gewichteter Residualgram, positive Vergleichsform samt auswertbarer Inverse und vollständige Ausgangsmajorante. Die analytischen Beweise sind extern zu prüfen; Kofinalität wird parallel untersucht. Die Y-Kernel-/H0-Diagnose bleibt auf Root UNRESOLVED. Weitere konstruktive Horizonte, allgemeine Wiederholbarkeit, Kofinalität, kompatibler Readout und Objekt X bleiben offen.
 - **Globale Weil-Testklasse und fensterunabhängiger Readout** — `FULL-WEIL-TEST-CLASS`, OPEN. Testklasse, Normierung und exakte vollständige Gram-Identität gehören bereits zur Konstruktion von Objekt X. Zusammen mit einer kofinal kompatiblen positiven Geometrie ist ein globaler Readout zu begründen. Der mögliche Anschluss an RH wird erst nach erfolgreicher Konstruktion verfolgt.
 
 ## Verwendbare Bausteine

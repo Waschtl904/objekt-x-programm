@@ -67,7 +67,39 @@ Dateien und Datenfelder. Ihre transitive Herkunft wird einer Klasse zugeordnet:
 Die letzte Klasse ist als Recheneingabe ausgeschlossen. Eine Datei mit erlaubten
 und unerlaubten Feldern ist nicht insgesamt freigegeben. Der Generator muss
 explizite Felder und ihren Abhängigkeitsabschluss ausweisen. Im alten Terminalpaket
-darf ausschließlich der gepinnte rohe A9-Teil für A12 verwendet werden.
+darf ausschließlich der gepinnte rohe A9-Teil für die Matrix
+`A_12=Phi_12* A9 Phi_12` verwendet werden. Die 12 bezeichnet ihre Dimension,
+keinen Horizont A12.
+
+Die rollenspezifische Freigabe für diesen Kalibrierungslauf lautet:
+
+- Alte Positivität, Domäne und Inverse: `A8-A9-CONDITIONAL-GLOBAL-SCHUR-CLOSURE`,
+  `A9-DOMAIN-FLOOR-LOCAL-CONTINUATION`, `A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR`
+  und `BASIS84-ORIGINAL-TAIL-COMPLEMENT-CLOSURE`, einschließlich genau ihrer
+  notwendigen alten Beweisabhängigkeiten.
+- Allgemeine analytische Eingaben: physisches Formsystem, rohe Wand- und
+  Quellenidentitäten, Nullfortsetzung sowie das bedingte Inverslemma. Keine
+  A11-positive Spektralzerlegung darf in diesen Teil eingeschleust werden.
+- Roher alter Matrixabgleich: ausschließlich
+  `research/x-c1/chambers-through-a11-2026-09-28/a9/a9_model.json.gz`,
+  SHA-256 `a1cb251d5563cffb01eec3fbbf11c891851b677bd4f4ec7f5fba37164d14ab72`.
+  Zulässig sind `parities.even.A[i][j]` und `parities.odd.A[i][j]` für
+  `0<=i,j<12`, `scale_digits`, `Gamma_kernel_error_exact` sowie die
+  Herkunftsfelder `endpoint`, `active_prime_powers`, `Gamma_degree`, `cutoff`,
+  `generator_sha256` und `bounds_source_sha256`. Diese werden gegen den
+  A9-Generator und dessen Fehlerherleitung geprüft.
+- Neue Funktionsdaten: nach separater Quellen- und Fehlerprüfung
+  `FRESH_A12.json:parities.{even,odd}.{midpoint,whole_Loewner_radius}` und
+  die ganzen D-/F-Funktionsfelder samt Fehlerpreisen in `FUNCTIONS12.json`.
+  Die Herkunft wird durch das unveränderte Funktionsarchiv
+  `Objekt-X-A9-A11-Ganze-Kraftfunktionen-und-D12-2026-10-15.zip`, SHA-256
+  `0a7bda3d2d896801f757c3b658d9ad559529409c64dd489283e656b95710d3d3`, gebunden.
+
+`THIRD-CHAMBER-A11-TERMINAL-POSITIVITY`, der tatsächliche niedrige
+A11-Spektralraum und die davon abhängigen kanonischen Projektor-,
+Resolventen-, Kopplungs- und Maximiererdiagnosen sind ausschließlich
+nachträgliche Vergleiche. Sie bleiben historische Registerresultate, gehören
+aber nicht zur Liste verwendbarer Eingaben dieser Kalibrierung.
 
 Integrationsstatus, mathematischer Beweisstatus und externe Prüfung bleiben
 getrennt. Alte Originale und historische false-Felder werden nicht umgeschrieben.
@@ -147,6 +179,34 @@ Der bekannte nichtkompakte gewichtete Hauptanteil T_p ist gegen die direkte
 reine Schalenform bezahlbar. Hier ist der Metrikwechsel ausdrücklich nötig:
 `O=G_W^(-1/2):X->(X,W)` ist unitär zwischen diesen beiden Hilberträumen.
 T_p und der folgende Hintergrundvergleich leben auf dem rohen X:
+
+Setze `ell_n(x)=sqrt((2n+1)/(2h)) P_n(2(x-a)/h-1)` und
+`H_n=sum_(j=1)^n 1/j`, H_0=0. Diese ell_n bilden die vollständige
+orthonormale Basis von X. Die geschlossene Form D_H hat die Domäne
+`{s: sum_n H_n |<ell_n,s>_X|^2 < infinity}` und genau diese gewichtete
+Summe als Formwert. Für den Operatorbereich steht H_n² statt H_n.
+Die zugehörige unitäre Abbildung vom Referenzraum `L2((-1,1),dt)` nach X
+ist `f(t) -> h^(-1/2) f(2(x-a)/h-1)`.
+
+Der gewichtete Hauptanteil ist ausdrücklich
+
+```text
+delta=18219/10000, c=3log(2)/2, t0=2a-c, Omega=(log(10)-b,b),
+s6=(7/8)log²(2)+log²(3)/3+log²(5)/5+log²(7)/7,
+v=log²(3)/9, e=2log(2)log(5)/sqrt(10),
+(T_p s)(x)=delta^-1 [s6 s(x)+v 1_(t0,b)(x)s(x)
+                     +(-1)^p e 1_Omega(x)s(log(10)-x)].
+```
+
+Seine Identifikation als wesentlicher Anteil der vollständigen Energie
+ist eine geerbte analytische Pflicht. Die Spektralnormschranke
+`0<=T_p< (73/50)I` muss aus der vollständigen Reflexionspaarzerlegung und
+gerichteten Logarithmusdaten geprüft sein. Sie wird nicht aus A11-Positivität
+abgeleitet. Dann gilt wegen `Lplus>=3/2 I` unmittelbar in Formordnung
+`T_p <= (73/75)Lplus` und folglich
+`Bp >= (2/75)Lplus >= (1/25)I`.
+Erst dieser **relative** Vergleich rechtfertigt die folgende Inversordnung;
+der skalare Boden 1/25 allein wäre dafür unzureichend.
 
 ```text
 Lplus = D_H + (1/2)I + Pi0,
