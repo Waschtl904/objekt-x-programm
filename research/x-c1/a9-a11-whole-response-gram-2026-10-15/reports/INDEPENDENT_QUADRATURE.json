@@ -1,0 +1,36 @@
+{
+  "dps": 55,
+  "points_per_panel": 40,
+  "panels": 150,
+  "h": "0.10033534773107558064",
+  "h_below_101_over_1000": true,
+  "s": "0.091329169322069040524",
+  "parities": {
+    "even": {
+      "max_rel_diff_XGram_vs_s_G0": "1.11e-38",
+      "min_eig_G_T_minus_TTstar_numeric": "9.26569e-15",
+      "order_TTstar_le_G_T_numerically_confirmed": true,
+      "T_norm_W_numeric": "6483792.229",
+      "certified_sqrt_tr_G_T": "6838543.046",
+      "tr_TTstar_W_numeric": "4.20402556982e+13",
+      "tr_G_T_certified": "4.67656709888e+13",
+      "TTstar_W_smallest_eigenvalue": "3.19217e-12",
+      "TTstar_W_condition_number": "1.317e+25",
+      "max_abs_moment_lambda_i": "1.308e+5",
+      "metric_factor_g": "1.11289674193"
+    },
+    "odd": {
+      "max_rel_diff_XGram_vs_s_G0": "3.27e-37",
+      "min_eig_G_T_minus_TTstar_numeric": "1.50046e-16",
+      "order_TTstar_le_G_T_numerically_confirmed": true,
+      "T_norm_W_numeric": "684743.7049",
+      "certified_sqrt_tr_G_T": "784133.3124",
+      "tr_TTstar_W_numeric": "468883188171.0",
+      "tr_G_T_certified": "614865051603.0",
+      "TTstar_W_smallest_eigenvalue": "1.5089e-11",
+      "TTstar_W_condition_number": "3.107e+22",
+      "max_abs_moment_lambda_i": "1.074e+4",
+      "metric_factor_g": "1.31479086986"
+    }
+  }
+}

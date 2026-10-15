@@ -1,0 +1,50 @@
+name: A9-A11 whole response Gram and model error replay
+
+on:
+  pull_request:
+    paths:
+      - "research/x-c1/a9-a11-whole-response-gram-2026-10-15/**"
+      - "scripts/replay_whole_response_gram.py"
+      - "scripts/replay_a9_sealed.py"
+      - "tests/test_whole_response_gram_replay.py"
+      - ".github/workflows/a9-a11-whole-response-gram.yml"
+  push:
+    branches: [main]
+    paths:
+      - "research/x-c1/a9-a11-whole-response-gram-2026-10-15/**"
+      - "scripts/replay_whole_response_gram.py"
+      - "scripts/replay_a9_sealed.py"
+      - "tests/test_whole_response_gram_replay.py"
+      - ".github/workflows/a9-a11-whole-response-gram.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sealed-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 1
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Receipt guards, catalog identity and CI routing
+        run: python -B -m unittest discover -s tests -p test_whole_response_gram_replay.py -v
+      - name: Replay sealed whole-response Grams (576 entries, 48 pivots)
+        run: python -u -B scripts/replay_whole_response_gram.py --output "${{ runner.temp }}/whole-response-gram-check"
+      - name: Preserve commit-bound evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: whole-response-gram-check-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/whole-response-gram-check/*.json
+            ${{ runner.temp }}/whole-response-gram-check/*.log
+          if-no-files-found: error
+          retention-days: 90

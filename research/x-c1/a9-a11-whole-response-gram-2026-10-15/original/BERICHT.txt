@@ -1,0 +1,60 @@
+Objekt X — vollständiger Antwortgram und verschärfter Modellfehlertransport
+15. Oktober 2026 — AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ein weiterer konkret abgegrenzter Baustein ist geschlossen: Die gemeinsame
+Größe der festgelegten Antwortfunktionen ist jetzt auf der ganzen physischen
+Schale zertifiziert. Vier rationale 12x12-Obergrame erfassen beide Paritäten
+und beide ausdrücklich getrennten Antwortkandidaten, einschließlich des
+logarithmischen Randes und aller Approximationsfehler.
+
+Die bereits eingefrorene Antwortregel X bleibt unsere Hauptregel. Der vom
+Gegenprüfer vorgeschlagene Kandidat S wurde gesondert nachgerechnet. Für
+beide ergeben sich dieselben einfachen Obergrenzen:
+
+                               Gerade               Ungerade
+ Antwortnorm ||T||              <6 838 544            <784 134
+ Direkter K-Modellfehler        <1.661e-24             <2.183e-26
+ Gewichteter Fehlerfaktor/w     <5.90e-62              <7.75e-64
+
+Die direkte K-Fehlerrechnung verbessert die bisherigen S-Preise um Faktoren
+größer als 6.37e17 bzw. 3.80e15. Ursache ist die vollständige Zusammensetzung
+der Antwortfunktionen vor der Normabschätzung. Auslöschungen bleiben erhalten,
+statt separat große Matrix- und Quellennormen miteinander zu multiplizieren.
+
+Die letzte Tabellenzeile setzt weiterhin eine noch zu beweisende Schranke
+w>=||W9|| voraus. Sie ist keine bereits bezahlte W9-Energie. Für eine später
+zertifizierte positive Fehlermatrix Q_D ist der neue gemeinsame Anschluss
+sogar richtungsabhängig:
+
+  ||(R-R_hat)* W9 (R-R_hat)|| <= tr(Q_D G_T),
+  Q_D >= (D-D_hat)* W9 (D-D_hat),   G_T >= T T*.
+
+Die notwendige exakte Momentprojektion D_hat=Pi_a D_tilde wird übernommen.
+Sie hält die gerundeten Modelle im Definitionsraum von W9 und vergrößert
+ihren globalen L2-Fehler nicht. Ein gerundeter Projektionskoeffizient wird
+nicht als exakte Projektion ausgegeben. Die Begründung des unveränderten
+A12-Radius ist durch die bestätigte Basisgrenze ||Phi12||²<501/500 ergänzt.
+
+Prüfung:
+- Frischer Originalreplay: alle drei ursprünglichen Ergebnisdateien bytegleich.
+- Frische unabhängige Ganzfunktions- und Fehlertransportrechnung.
+- Bei zwei neuen Audit-JSONs nur CRLF/LF verschieden; JSON-Werte identisch.
+  Der vollständige Replay mit expliziter Transportkorrektur besteht.
+- Neue gerichtete Ganzintervallrechnung ohne Abtastung als Beweisgrundlage.
+- Zweite exakte Integralzusammensetzung: 576 gleiche Gram-Einträge.
+- 48 positive Pivots für die neuen rationalen Obergrame.
+- Gegenkontrollen für logarithmische Kreuzterme und Maßfaktor.
+
+Die neue Rechnung ist im Rückgabepaket reproduzierbar; die vollständige
+eingehende Prüfung kann zusätzlich mit --full-input neu ausgeführt werden.
+Große historische Integrationen und die historischen 574 Pivots wurden
+nicht erneut ausgeführt. GitHub und historische Originalarchive blieben
+in diesem Rechenschritt unverändert.
+
+Offen bleiben Q_D, die gesamte Modellenergie R_hat*W9R_hat, der kompakte
+Gate einschließlich -Pi0 und das vollständige erneuerbare A9->A11-Zertifikat.
+Kofinalität, kompatibler exakter Readout, Objekt X und externe Gesamtprüfung
+bleiben offen. Die neuen Aussagen gelten unter den gebundenen Operator-,
+Domänen- und Integrationsvoraussetzungen.
+
+Für die Gegenprüfung mit ANSCHLUSS_GPT1.txt und PROOF.txt beginnen.
