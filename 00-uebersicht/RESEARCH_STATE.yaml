@@ -2904,6 +2904,11 @@
       "id": "CONDITIONAL-HILBERT-INVERSE-PROPAGATION",
       "meta_path": "research/x-c1/conditional-inverse-propagation-2026-10-15/META.yaml",
       "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "RENEWAL-REDUCTION-AND-STRUCTURAL-OBSTRUCTIONS",
+      "meta_path": "research/x-c1/renewal-reduction-and-obstructions-2026-10-15/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
     }
   ],
   "transport_status": {

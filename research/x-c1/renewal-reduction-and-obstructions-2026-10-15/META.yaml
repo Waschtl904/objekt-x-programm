@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "RENEWAL-REDUCTION-AND-STRUCTURAL-OBSTRUCTIONS",
+  "date": "2026-10-15",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Bedingter Reduktionssatz: Zertifikat C_n (Reserve c W^(n), Inversmajorante U_n <= C G_n^-1) plus benannte, nicht bewiesene Hypothese H_n ergibt C_(n+1) mit denselben Konstanten; dazu vier bewiesene strukturelle Lemmata (Klassenkofinalität, Monotonie der eingeschränkten Inversen, Gap-Monotonie, endlicher Rang eines Versagens) und zwei importierte Sätze (Weil/Yoshida, Bombieri 2000).",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Kein Beweis von H_n für irgendein n, kein neuer Horizont, keine Kofinalität, kein Objekt X, kein RH. Satz A und B werden importiert, nicht neu bewiesen; Lemma 1 benötigt Dichtheit in einer Topologie, in der W stetig ist (L2-Dichtheit genügt nicht). Die exakten Kontrollen prüfen nur endliche rationale Modelle ohne Prim-/Gamma-Daten.",
+  "depends_on": [],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL",
+    "NON-SUMMABLE-TRANSPORT",
+    "UNBOUNDED-HORIZON-COMPATIBILITY",
+    "FULL-WEIL-TEST-CLASS"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "Keine arithmetische Statuspromotion; das bedingte Inversfortsetzungslemma (PR 223) wird als nicht integriert zitiert und hier nicht neu bewiesen.",
+    "Keine Aussage, dass die Familie H_n handhabbarer ist als bekannte RH-äquivalente Kriterien (Li, Weil); Korollar 2 zeigt nur, dass sie mindestens RH-stark ist.",
+    "Keine externe mathematische Begutachtung; endliche Kontrollen ersetzen keine Formdomänen- oder Testklassenprüfung."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/renewal-reduction-and-obstructions-2026-10-15/PROOF.md",
+    "sha256": "ecb30a7ef7963cc44adbc4720218463cf82db9c33902f177af600ca691ff1073"
+  }
+}
