@@ -21,12 +21,12 @@
   ],
   "supersedes": [],
   "does_not_claim": [
-    "Keine arithmetische Statuspromotion; das bedingte Inversfortsetzungslemma (PR 223) wird als nicht integriert zitiert und hier nicht neu bewiesen.",
+    "Keine arithmetische Statuspromotion; das bedingte Inversfortsetzungslemma (#223, PENDING_STATUS_REVIEW) wird zitiert und hier nicht neu bewiesen.",
     "Keine Aussage, dass die Familie H_n handhabbarer ist als bekannte RH-äquivalente Kriterien (Li, Weil); Korollar 2 zeigt nur, dass sie mindestens RH-stark ist.",
     "Keine externe mathematische Begutachtung; endliche Kontrollen ersetzen keine Formdomänen- oder Testklassenprüfung."
   ],
   "canonical_proof": {
     "path": "research/x-c1/renewal-reduction-and-obstructions-2026-10-15/PROOF.md",
-    "sha256": "ecb30a7ef7963cc44adbc4720218463cf82db9c33902f177af600ca691ff1073"
+    "sha256": "0a61acb673f1ff411f4e60d022136159c63e4d824a665889f38ff80da35169ce"
   }
 }

@@ -332,5 +332,6 @@ unendlichen Domänen und keine Prim-/Gamma-Daten.
 - Projektintern: `research/x-c1/scalar-gap-restart-summability-barrier-2026-09-19/README.md`,
   `research/x-c1/renewable-low-schur-spectral-2026-09-29/README.md`,
   `research/x-c1/basis84-tail-closure-2026-10-14/README.md`; bedingtes
-  Inversfortsetzungslemma in Pull Request #223 (zum Zeitpunkt dieses
-  Pakets nicht integriert).
+  Inversfortsetzungslemma
+  `research/x-c1/conditional-inverse-propagation-2026-10-15/PROOF.md`
+  (integriert mit #223, Registerstatus PENDING_STATUS_REVIEW).
