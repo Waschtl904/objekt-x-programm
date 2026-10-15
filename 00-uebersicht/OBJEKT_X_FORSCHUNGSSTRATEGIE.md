@@ -4,6 +4,26 @@ Stand 3. Oktober 2026. Arbeitsstrategie auf Grundlage der gelesenen Beweispakete
 
 Fortgeschrieben nach GPT 1s Rückmeldung vom selben Tag. Neu präzisiert sind die vollständige Blockdarstellung in einer unabhängig positiven Hilbertnorm, die gemeinsame Auswertung korrigierter Quellen und eine obere Schranke für die inverse alte Residualenergie. Der zuvor vorgeschlagene isolierte Test des H₀-Blocks (4,5) entfällt aufgrund des übermittelten Grenzberichts; dessen neue Zahlenzertifikate wurden hier nicht erneut reproduziert.
 
+## Fortschreibung vom 15. Oktober: vollständige Zertifikate erneuern
+
+Der [verbindliche A9→A11-Arbeitsauftrag](../research/x-c1/a9-a11-certificate-calibration-2026-10-15/WORK_ORDER.md)
+präzisiert den nächsten Schritt als Kalibrierung einer erneuerbaren vollständigen
+Zertifikatsklasse. Gefordert sind vollständige Residualenergie, eine positive
+Vergleichsform mit auswertbarer Inverse, die neue gemeinsame Inversmajorante
+und ihre nächste Schnittstelle. Die bekannte A11-Positivität darf keine Eingabe
+sein. Eine feste Dimension oder gleichbleibende Reserve ist nicht erforderlich.
+
+Das [bedingte Inversfortsetzungslemma](../research/x-c1/conditional-inverse-propagation-2026-10-15/PROOF.md)
+liefert die analytische Ausgabeformel, wenn die vollständige Bilanz bewiesen ist.
+Es ist als AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN und ausstehende Statusprüfung
+erfasst. Die zwölf Algebra-Kontrollen begründen keinen arithmetischen Erneuerungssatz.
+
+Der Auftrag trennt PASS, CERTIFICATE_FAIL, MATHEMATICAL_FAIL und UNRESOLVED.
+Kofinalität wird parallel untersucht. Exakte Formidentifikation und Readout
+bleiben von einem bloßen positiven Untervergleich getrennt. Vor A11→A13 werden
+Eingaben, Antwortregel, Vergleichsklasse, Fehlerbudget und Abnahme eingefroren.
+Der konstruktive A9→A11-Zertifikatszustand bleibt UNRESOLVED.
+
 ## Fortschreibung vom 14. Oktober: ursprünglicher Tail geschlossen
 
 Der [gemeinsame Tail-Nachtrag](../research/x-c1/basis84-tail-closure-2026-10-14/README.md) schließt den ursprünglichen
