@@ -17,6 +17,9 @@ python -B research/x-c1/conditional-inverse-propagation-2026-10-15/verify.py
 
 Die zwölf neu ausgeführten rationalen Kontrollmodelle prüfen Algebra und
 Fehlerfälle. Sie sind kein Test der tatsächlichen A9→A11-Operatoren.
+Der Prüfer bindet zusätzlich den analytisch gelesenen Beweistext per SHA-256.
+Eine Textänderung erfordert eine neue Prüfung und Aktualisierung dieses
+Ankers; der Hash selbst beweist keine Mathematik.
 
 Verbindlicher Prüfumfang dieser Änderung: Domänen- und Kongruenzprüfung
 des Lemmas, alle zwölf Kontrollmodelle, META-Proofbindung, kanonischer

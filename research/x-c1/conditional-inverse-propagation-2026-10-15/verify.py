@@ -1,6 +1,11 @@
 """Exact finite controls of PROOF.md; no arithmetic horizon certificate."""
 from fractions import Fraction as F
 import json
+import hashlib
+from pathlib import Path
+
+# Analytically reviewed proof snapshot; changing it requires a new review.
+VERIFIED_PROOF_SHA256 = '7ce356d66de49602ddc760f2fd551bf22757865285a948eb6adc9064dafc00af'
 
 
 def mat(rows):
@@ -101,6 +106,8 @@ def successful(name, a, c, p, b, ugap, vgap, slack):
 
 
 def main():
+    proof = Path(__file__).with_name("PROOF.md").read_bytes()
+    assert hashlib.sha256(proof).hexdigest() == VERIFIED_PROOF_SHA256, "Unreviewed proof change"
     cases = []
     for i, (a, c, p, b, ug, vg, sl) in enumerate([
         ([[2]], [[1]], [[F(1,3)]], [[3]], [[1]], [[2]], [[F(1,4)]]),
