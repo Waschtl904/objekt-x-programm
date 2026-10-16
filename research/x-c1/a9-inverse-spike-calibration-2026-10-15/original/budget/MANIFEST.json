@@ -1,0 +1,19 @@
+{
+  "ANSCHLUSS_GPT1.txt": "4c1f461da41af7c1c1cd0e9ae0d6a8c6db7650cdebbef6a09311ecee68b14803",
+  "BERICHT.txt": "bbdd3a0963589cdb15e55fbdc36ffcb2dc7e9a8e4a8a97383516011bdf4b4c85",
+  "BUDGET_CERTIFICATE.json": "ec5dac9e626e7c0f2759713dbc469b0104b6f4033724b89b4f53505587dc8d14",
+  "check_budget_direction.py": "300af562489bc20b86330a4b1fac9bb46087a56ac53020f4029d52d68882c72f",
+  "HERLEITUNG.txt": "30783869acd044bf819fa31fd1e88976c6f6651ae37da3f89b67a1d18aeeb73d",
+  "INDEPENDENT_CHECK.json": "4250a11d84d32e7484b4751574f0b4e38781aeeeec46ab5dea55d1b9849d7033",
+  "independent_direction_check.py": "5575af099bc8c48ad0aa0d0ce1968f60257c6446228ee4896dc1e9ef1c9ef7ed",
+  "inputs/Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13.zip": "a1fa41958d79ab16a7c42b12375c3373f5a86a99993ae2d23c984ff6b3b2e8ae",
+  "inputs/Objekt-X-Neue-Antworten84-und-Residualbudget-2026-10-11.zip": "5b41695ea53cd620210654af0a0389219631484e5f2584404fddd0f5af206fd3",
+  "pr226/PROOF.md": "cc48ab29de6da43a45e0a989ca30158b9cd03091f10c188fe6fcffebfd4a5c7f",
+  "pr226/REDUCTION_PROOF.md": "0a61acb673f1ff411f4e60d022136159c63e4d824a665889f38ff80da35169ce",
+  "pr226/verify.py": "ea0155456a4baedfb94aa66f14100b89d88a69c8879649f2f0f7d85f96bf99c8",
+  "pr226/WITNESSES.json": "0a104d01e7cbdf9c1ba590700a2e1f34b5d786a7ab5865302079ffeb36f39125",
+  "PR226_REPLAY.json": "00c8f86db266a63abad1a5ae5f6029b1a5d6750fa65c3e0d410b5a05c90738dd",
+  "PR_BINDINGS.json": "7b2253353b2d28376c03330c00f72f63d20e3f743d88298d1e32b28d59f7919d",
+  "replay_pr226.py": "c30fe8d9d17a4dac38b44d7efb86ff5e950d4c41884f7a6c94a98f82689fd86f",
+  "verify.py": "c84ee08bea33867a2c0a9ce5e010e10a741f331bfb4cae48b056231ae0d3e881"
+}

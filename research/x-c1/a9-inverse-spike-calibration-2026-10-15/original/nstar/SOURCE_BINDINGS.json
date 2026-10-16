@@ -1,0 +1,37 @@
+{
+  "A9_INVERSE_PROOF.txt": {
+    "local_original": "work/inverse-renewal-2026-10-13/HERLEITUNG.txt",
+    "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7",
+    "historical_text_unchanged": true
+  },
+  "A8_FORM_AND_COORDINATES.txt": {
+    "local_original": "work/inverse-renewal-2026-10-13/sources/A8_PROOF_original.txt",
+    "sha256": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661",
+    "historical_text_unchanged": true
+  },
+  "A9_DOMAIN_PROOF.txt": {
+    "local_original": "work/renewal-a9-a11-2026-10-14/inputs/A9_DOMAIN_HERLEITUNG.txt",
+    "sha256": "e6075606f6a26c354f1eb756b568f91cbb7a0b035022b44ef60a0120ae4ea819",
+    "historical_text_unchanged": true
+  },
+  "RESPONSE84_PROOF.txt": {
+    "local_original": "work/new-responses84-2026-10-11/PROOF.txt",
+    "sha256": "122fabae61dad7d6d6916d899ea8ae8c44a1ead451ac68919e6ce9304f002e61",
+    "historical_text_unchanged": true
+  },
+  "COMMON96_PROOF.txt": {
+    "local_original": "work/direct-rest84-2026-10-11/HERLEITUNG.txt",
+    "sha256": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd",
+    "historical_text_unchanged": true
+  },
+  "HALFINVERSE_BASIS_PROOF.txt": {
+    "local_original": "work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/remainder-integration-check-v2/originals/half-inverse/HERLEITUNG.txt",
+    "sha256": "cd13e95a5ce2f50159a90e3df80a79e16950389a6804161db4ebffa475293035",
+    "historical_text_unchanged": true
+  },
+  "A9_A11_SOURCE_PROOF.txt": {
+    "local_original": "work/renewal-a9-a11-2026-10-14/PROOF.txt",
+    "sha256": "d5c6bf89f6a083716c5346f2f8441cba1684a4eb57f444e405224198398effef",
+    "historical_text_unchanged": true
+  }
+}

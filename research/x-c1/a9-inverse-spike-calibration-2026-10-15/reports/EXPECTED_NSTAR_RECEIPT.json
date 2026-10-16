@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "spike_archive_sha256": "7f7129945b38768a5ec88994b783211db1ceb0810129ffc4ea4ba7db5beb1f5e",
+  "global_source_archive_sha256": "2ca3c682de8a529b12a0d628c2b606fd04df332d1299ccd36dff71ac3e53d80c",
+  "checks": {
+    "positive_K_pivots": 24,
+    "exact_Pv_components": 168,
+    "exact_q_identities": 2,
+    "exact_K_inverse_entries": 288,
+    "exact_K_k_model_equations": 48,
+    "exact_Sstar_Zt_zeros": 32,
+    "Jt_local_interval_coefficients": 384
+  },
+  "full_U8_action_formula_derived": true,
+  "finite_k_models_and_conditional_error_bounds_computed": true,
+  "Nstar_Jt_function_integrals_computed": false,
+  "W9_exclusion_test_computed": false,
+  "A9_A11_closed": false,
+  "inherited_operator_and_integration_hypotheses_retained": true,
+  "historical_574_pivots_replayed": false,
+  "large_integrations_recomputed": false,
+  "current_GitHub_heads_reviewed": false,
+  "external_review_open": true
+}

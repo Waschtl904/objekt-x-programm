@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "manifest_bindings": 17,
+  "exact_Git_blob_bindings": 4,
+  "new_directional_result_fresh_and_byte_equal": true,
+  "separate_check_fresh_and_byte_equal": true,
+  "original_pr226_replay_executed_this_invocation": false,
+  "previous_fresh_original_pr226_replay_bound": true,
+  "full_A9_inverse_claim": false,
+  "A9_A11_closed": false,
+  "external_review_open": true
+}
