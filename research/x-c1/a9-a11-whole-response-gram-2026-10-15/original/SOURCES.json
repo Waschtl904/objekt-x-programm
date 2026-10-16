@@ -1,0 +1,11 @@
+{
+  "incoming_audit_archive_sha256": "20a59d3dc9c7de28bec1db51b77881577b6b372f1c517f8a003aa9c571aff845",
+  "incoming_audit_original_function_archive_sha256": "0a7bda3d2d896801f757c3b658d9ad559529409c64dd489283e656b95710d3d3",
+  "previous_frozen_response_package_sha256": "860749ad514cdc556a3aa2e42e75d84e542cd1f7bbdef39afc76433fb8bce078",
+  "frozen_response_member_sha256": "132959da5d34c0c89471ee15f7c34d8b4a42ad48c641b6c4db5181113d11426a",
+  "frozen_response_member_verified_byte_identical_against_previous_archive": true,
+  "incoming_full_fresh_replay": "incoming-replay/TRANSPORT_RECEIPT.json",
+  "new_mathematical_status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN",
+  "whole_W9_energy_certified": false,
+  "github_modified": false
+}

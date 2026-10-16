@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "A9-A11-WHOLE-RESPONSE-GRAM-AND-DIRECT-MODEL-ERROR",
+  "date": "2026-10-15",
+  "kind": "THEOREM",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Rationale 12x12-Obermatrizen G_T >= T T* für die vollständig zusammengesetzten A9->A11-Antwortfunktionen T = X F_hat in der physischen W-Metrik der ganzen Schale (a,b) einschließlich logarithmischem Rand und allen Modellfehlern, beide Paritäten, Kandidaten X (eingefroren) und S; ||T|| < 6 838 544 / 784 134; direkte K-Modellfehler < 1.661e-24 / 2.183e-26; richtungsabhängiger Anschluss ||(R-R_hat)* W9 (R-R_hat)|| <= tr(Q_D G_T). Kandidat fixed_X = eingefrorene Regel A9_A11_N12_MIDPOINT_INVERSE_60_V1; audit_S getrennt. Versiegelter Replay und Nachtragsreplay (h < 101/1000 ergänzt, Ergebnisdateien bytegleich, 576 exakte Gram-Vergleiche, 48 Pivots) bestanden; direkte Quadratur als numerische Plausibilisierung.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "Keine Schranke für ||W9||, kein Q_D, keine Modellenergie R_hat* W9 R_hat, kein kompakter Gate, kein A9->A11-Zertifikat, keine Kofinalität, kein Readout. Die Fehlerpreise delta_F, delta_A, delta_D und die Operator-, Domänen- und Integrationsvoraussetzungen werden aus dem F12/D12-Audit geerbt. Der gewichtete Fehlerfaktor setzt eine unbewiesene Schranke w >= ||W9|| voraus. Kandidat S ist keine zertifizierte Inverse. Der gewichtete Fehlerfaktor ist ein Koeffizient zu einer unbewiesenen oberen W9-Norm; eine Untergrenze für ||W9|| liefert keine Fehlerobergrenze. Die Rang-eins-Hülle von P_upper (PR #226) ergibt kein unteres Gewicht der vollen W9 auf Jv und keine Dominanz eines Skalars; der korrekte Anschluss verwendet die Quellentransformation N. Keine Aussage über ein Scheitern der N12-Regel. Der Quadratur-Gegencheck ist numerische Plausibilisierung, kein Beweis.",
+  "depends_on": [],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL",
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "Keine arithmetische Statuspromotion und kein Fortschritt bei der A9->A11-Positivität selbst; nur Antwortnorm und Modellfehlertransport.",
+    "Die Modellfehlerverbesserung um Faktoren > 6e17 / 3.8e15 gegenüber den S-Preisen betrifft ungewichtete Transportkonstanten; die gewichtete Fehlerenergie und die offene Energie R_hat* W9 R_hat sind nicht bezahlt.",
+    "Keine externe mathematische Begutachtung; CI-Replay prüft Bindung und versiegelte Rechnung, nicht die geerbten analytischen Voraussetzungen."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/PROOF.md",
+    "sha256": "8219d5e4f544cc42a4808d6d033c56c608939652b4d851cae881a00842ed84e3"
+  }
+}

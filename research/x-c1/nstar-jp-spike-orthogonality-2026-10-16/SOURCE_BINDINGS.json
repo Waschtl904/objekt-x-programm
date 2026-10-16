@@ -502,10 +502,12 @@
     },
     "research/x-c1/a9-inverse-spike-calibration-2026-10-15/archives/Objekt-X-A9-Spike-Artefaktpruefung-und-Korrekter-W9-Anschluss-2026-10-15.zip": {
       "sha256": "7f7129945b38768a5ec88994b783211db1ceb0810129ffc4ea4ba7db5beb1f5e"
+    },
+    "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip": {
+      "sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee"
+    },
+    "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15.zip": {
+      "sha256": "00a66e8584062b8057264b9b0dda48f89a013dc9b3756241a770bb74f2ded0a0"
     }
-  },
-  "repository_dependencies_missing_at_generation": [
-    "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip",
-    "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15.zip"
-  ]
+  }
 }

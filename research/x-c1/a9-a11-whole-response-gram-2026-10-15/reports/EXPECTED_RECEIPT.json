@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "manifest_bindings": 32,
+  "original_function_members_byte_equal": 3,
+  "fixed_response_unchanged": true,
+  "new_energy_JSON_fresh_and_byte_equal": true,
+  "new_separate_check_fresh_and_byte_equal": true,
+  "exact_Gram_entry_comparisons": 576,
+  "positive_upper_Gram_pivots": 48,
+  "incoming_full_replay_rerun_in_this_invocation": false,
+  "incoming_previous_fresh_replay_receipt_bound": true,
+  "exact_D_projection_required": true,
+  "complete_response_Gram_certified_under_inherited_hypotheses": true,
+  "direct_K_model_error_certified_under_inherited_hypotheses": true,
+  "W9_norm_certified": false,
+  "Q_D_certified": false,
+  "whole_W9_residual_energy_certified": false,
+  "new_A9_A11_certificate_closed": false,
+  "external_review_open": true
+}

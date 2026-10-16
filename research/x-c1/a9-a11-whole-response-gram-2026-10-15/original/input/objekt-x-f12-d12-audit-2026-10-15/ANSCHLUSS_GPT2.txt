@@ -1,0 +1,55 @@
+Objekt X — F12/D12-Gegenprüfung und konkreter Fehlertransport
+15. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Der unveränderte neue Originalreplay besteht, alle drei Dateien sind roh
+bytegleich. Eigenständige 300-stellige Ganzzahlarithmetik bestätigt die
+48 ganzen Funktionsspalten, alle 24 Kappas, die globalen Fehlerpreise,
+288 neue Formpaarungen und 24 exakte A12-Pivots. Keine Source-Arithmetik
+wird im unabhängigen Prüfer importiert.
+
+ZUERST DIE MODELLRAUM-PRÄZISIERUNG LESEN (§3 des Berichts):
+Alle 24 separat gerundeten D-Spalten haben nachweislich winzige, aber
+NICHT NULL gleiche alte Momente. D_tilde ist zunächst ein Modell im
+vollen Paritäts-L2, nicht exakt in H_a. Vor W9 muss D_hat=Pi_a D_tilde
+verwendet werden, oder die Erweiterung W_ext durch genau diese Projektion.
+Der Fehler vergrößert sich nicht. Alpha_j ist der EXAKTE Integralwert,
+nicht ein rational gerundeter Intervallmittelpunkt. Die 288 A12-Paarungen
+sind für eine zusätzliche Momentrichtung blind, weil Phi*m=0.
+Ein gerichteter Evaluator für das projizierte Modell ist beigefügt.
+Die Originale bleiben unverändert.
+
+Kleine Beweisergänzung (§4): ||Phi||<2 allein reicht nicht für den
+A12-Modellpreis (22/5)eps. Die tatsächliche Gramform erfüllt unabhängig
+zertifiziert ||Phi||^2<501/500. Damit ist der ursprüngliche Radius gültig;
+keine Änderung der Matrixdaten erforderlich.
+
+Konkreter rationaler Kandidat (§5):
+S=(inverse_lower_Loewner+inverse_upper_Loewner)/2, je Parität.
+P=Phi S F_hat mit dem gespeicherten PHYSISCHEN F-Modell.
+Die S-Matrizen samt 24 weiteren positiven Pivots stehen im Antwortbudget.
+S wird nicht als exakte Inverse ausgegeben. Phi*R ist klein zertifiziert,
+aber nicht gleich null: <2e-22 gerade und <2e-24 ungerade.
+
+NEU KONKRET BEZAHLT (§6):
+Der Modellfehler im DIREKTEN K_P-Teil beträgt für diesen Kandidaten
+  gerade   <1.1e-6,
+  ungerade <9e-11.
+Diese Preise sind KEIN vollständiger Schurrest und kein W9-Residualbudget.
+
+NÄCHSTER GEMEINSAMER ENERGIEAUFTRAG (§7):
+R_hat=C-D_hat S F_hat. C bleibt hier exakt und vollständig.
+Beschaffe Q_D >= (D-D_hat)* W9 (D-D_hat) und
+Gamma_hat >= R_hat* W9 R_hat, jeweils gemeinsam mit allen Kreuztermen.
+Für alpha>0 gilt dann
+  R*W9R <= (1+alpha)Gamma_hat
+         +(1+1/alpha)F_hat* S*Q_D S F_hat.
+Ein neu nachgewiesenes w>=||W9|| gäbe Q_D=w delta_D^2 I.
+Der daraus schon bekannte skalare Faktor ist <3.8e-44*w gerade,
+<3.0e-48*w ungerade. w selbst wurde NICHT bestimmt.
+Nicht A9^-1<=cI fälschlich als W9<=cI verwenden.
+Nicht den 3/2-Faktor auf den ganzen alten A9-Raum übertragen.
+Bei Verwendung des Hintergrundgates J_P-Pi_0 vollständig behalten.
+
+Reproduktion: python -B -X utf8 verify.py --output ../new-unused-directory
+Der vollständige Bericht ist HERLEITUNG_GPT1.md.
+GitHub und historische Dateien blieben unverändert; kein neuer Horizont.

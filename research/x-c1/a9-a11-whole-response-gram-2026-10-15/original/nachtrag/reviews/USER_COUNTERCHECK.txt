@@ -1,0 +1,592 @@
+Prüfergebnis zum Antwortgram-Paket
+Ich habe das Paket entpackt (SHA-256 b8677c0b…41ee), den enthaltenen Prüfer ausgeführt und zusätzlich einen davon unabhängigen Gegencheck gemacht.
+
+Replay
+verify.py --output besteht in 92 s: 32 Manifestbindungen, drei bytegleiche Originalmitglieder, RESPONSE_ENERGY.json und RESPONSE_CHECK.json frisch erzeugt und bytegleich, 576 exakte Gram-Vergleiche, 48 positive Pivots. Die Quittung führt W9_norm_certified, Q_D_certified und whole_W9_residual_energy_certified korrekt als false.
+
+Unabhängiger Gegencheck
+Das Paket beweist über Reihenentwicklungen und drei exakte Momentintegrale. Ich habe die zwölf zusammengesetzten Antwortfunktionen 
+𝑡
+𝑖
+t 
+i
+​
+  stattdessen direkt numerisch integriert (exakter Logarithmus, keine Reihe, gradiertes Gauß-Legendre mit 150 Panels bis 
+2
+−
+150
+2 
+−150
+  an den logarithmischen Rand, 55 Stellen):
+
+gerade	ungerade
+X-Gram numerisch vs. 
+𝑠
+⋅
+𝐺
+0
+s⋅G 
+0
+​
+  zertifiziert	rel. Abweichung 
+1,1
+⋅
+10
+−
+38
+1,1⋅10 
+−38
+ 	
+6
+⋅
+10
+−
+12
+6⋅10 
+−12
+  (nur 30-stelliger Lauf)
+∥
+𝑇
+∥
+𝑊
+∥T∥ 
+W
+​
+  numerisch	6 483 792	684 744
+Schranke 
+tr
+⁡
+𝐺
+𝑇
+trG 
+T
+​
+ 
+​
+ 	6 838 543	784 133
+𝐺
+𝑇
+−
+𝑇
+𝑇
+𝑊
+∗
+G 
+T
+​
+ −TT 
+W
+∗
+​
+  kleinster Eigenwert	
++
+9
+⋅
+10
+−
+15
++9⋅10 
+−15
+ 	positiv
+Die Matrixordnung 
+𝑇
+𝑇
+∗
+≤
+𝐺
+𝑇
+TT 
+∗
+ ≤G 
+T
+​
+  hält also auch gegen eine völlig andere Rechenmethode, und zwar in jeder Richtung. Ein erster 30-stelliger Lauf zeigte 
+−
+1,4
+⋅
+10
+−
+7
+−1,4⋅10 
+−7
+  als kleinsten Eigenwert; das war Quadraturrauschen bei Einträgen der Größe 
+10
+13
+10 
+13
+  und verschwindet bei höherer Präzision. Ich erwähne es, weil es zeigt, wie knapp die Metrikschranke 
+𝑊
+≤
+𝑔
+𝐼
+W≤gI in einer Richtung sitzt: Die Differenz ist dort praktisch null.
+
+Analytische Kette
+Nachgerechnet und in Ordnung: 
+𝜇
+=
+𝑎
+/
+2
++
+2
+/
+3
+μ=a/2+2/3, 
+𝜇
++
+𝜈
+=
+𝑏
+/
+2
++
+5
+/
+(
+2
+11
+)
+μ+ν=b/2+5/(2 
+11
+​
+ ), 
+𝑔
+=
+(
+𝜇
++
+𝜈
+)
+/
+𝜇
+g=(μ+ν)/μ; die Logidentität 
+log
+⁡
+𝑣
++
+1
+𝑣
+−
+1
+=
+−
+log
+⁡
+𝑢
++
+log
+⁡
+2
+𝑠
++
+log
+⁡
+(
+1
++
+𝑠
+2
+𝑢
+)
+log 
+v−1
+v+1
+​
+ =−logu+log 
+s
+2
+​
+ +log(1+ 
+2
+s
+​
+ u) samt Restglied; die Koeffizienten 
+(
+2
+ oder 
+1
+)
+/
+3
+⋅
+(
+ℎ
+/
+2
+)
+𝑘
+/
+𝑘
+!
+(2 oder 1)/ 
+3
+​
+ ⋅(h/2) 
+k
+ /k! aus 
+𝑒
+𝑎
+/
+2
+=
+3
+e 
+a/2
+ = 
+3
+​
+ ; 
+∥
+𝑢
+𝑘
+log
+⁡
+𝑢
+∥
+2
+=
+2
+/
+(
+2
+𝑘
++
+1
+)
+3
+/
+2
+∥u 
+k
+ logu∥ 
+2
+​
+ = 
+2
+​
+ /(2k+1) 
+3/2
+ ; die Maßumrechnung auf genau 
+𝑠
+=
+ℎ
+/
+𝑎
+s=h/a; die 
+𝜌
+ρ-Schranke über Cauchy-Schwarz; die K-Fehlerformel 
+2
+𝛿
+𝐹
+tr
+⁡
+𝐺
+𝑇
++
+𝛿
+𝐴
+tr
+⁡
+𝐺
+𝑇
+2δ 
+F
+​
+  
+trG 
+T
+​
+ 
+​
+ +δ 
+A
+​
+ trG 
+T
+​
+ ; die Spurungleichung 
+tr
+⁡
+(
+𝑄
+𝐷
+𝑇
+𝑇
+∗
+)
+≤
+tr
+⁡
+(
+𝑄
+𝐷
+𝐺
+𝑇
+)
+tr(Q 
+D
+​
+ TT 
+∗
+ )≤tr(Q 
+D
+​
+ G 
+T
+​
+ ) für 
+𝑄
+𝐷
+≥
+0
+Q 
+D
+​
+ ≥0. Die exakte Momentprojektion 
+Π
+𝑎
+Π 
+a
+​
+  ist richtig als Orthogonalprojektion mit Kürzung des Faktors 2 beschrieben.
+
+Drei Anmerkungen
+response_norm.py prüft s < 1/10, aber nicht die für 
+𝑒
+𝑚
+e 
+m
+​
+  tatsächlich benötigte Bedingung 
+ℎ
+<
+101
+/
+1000
+h<101/1000. Sie ist wahr (
+ℎ
+=
+0,10034
+h=0,10034), sollte aber als need(h.high < Q(101,1000)) im Code stehen.
+
+Die Antwortmenge ist extrem schlecht konditioniert: Eigenwerte von 
+𝑇
+𝑇
+𝑊
+∗
+TT 
+W
+∗
+​
+  von 
+3
+⋅
+10
+−
+12
+3⋅10 
+−12
+  bis 
+4
+⋅
+10
+13
+4⋅10 
+13
+ . Die richtungsabhängige Form 
+tr
+⁡
+(
+𝑄
+𝐷
+𝐺
+𝑇
+)
+tr(Q 
+D
+​
+ G 
+T
+​
+ ) ist deshalb nicht nur hübscher, sondern nötig; jede skalare Ersetzung von 
+𝑇
+T durch 
+∥
+𝑇
+∥
+∥T∥ verschenkt bis zu 25 Größenordnungen.
+
+Der Kandidat S verwendet Mittelpunkte der Löwner-Schranken und ist keine zertifizierte Inverse; das steht korrekt im Text, sollte aber bei jeder Weiterverwendung von audit_S mitgeführt werden.
+
+Anschluss an den Spike-Befund
+Hier liegt der eigentliche Punkt. Aus #226 ist bekannt, dass 
+𝑊
+9
+W 
+9
+​
+  auf der Basis84-Richtung 
+𝐽
+𝑣
+Jv mindestens das Gewicht 
+(
+11
+/
+10
+)
+⋅
+56620
+≈
+6,2
+⋅
+10
+4
+(11/10)⋅56620≈6,2⋅10 
+4
+  (gerade) bzw. 
+1,0
+⋅
+10
+4
+1,0⋅10 
+4
+  (ungerade) trägt. Setzt man das als Untergrenze für 
+𝑤
+w ein, wird der gewichtete Modellfehlerfaktor 
+5,9
+⋅
+10
+−
+62
+⋅
+6,2
+⋅
+10
+4
+≈
+4
+⋅
+10
+−
+57
+5,9⋅10 
+−62
+ ⋅6,2⋅10 
+4
+ ≈4⋅10 
+−57
+ . Die Modellfehler sind damit für jede plausible 
+𝑊
+9
+W 
+9
+​
+ -Norm irrelevant. Der gesamte offene Betrag des Schritts steckt in der tatsächlichen Energie 
+𝑅
+^
+∗
+𝑊
+9
+𝑅
+^
+R
+^
+  
+∗
+ W 
+9
+​
+  
+R
+^
+ , und dort nach #226 dominant in dem einen Skalar 
+⟨
+𝐽
+𝑣
+,
+𝑅
+^
+𝑧
+⟩
+⟨Jv, 
+R
+^
+ z⟩ je Parität. Mit 
+∥
+𝑇
+∥
+∼
+6,8
+⋅
+10
+6
+∥T∥∼6,8⋅10 
+6
+  und 
+𝐶
+s
+p
+i
+k
+e
+∼
+6
+⋅
+10
+4
+C 
+spike
+​
+ ∼6⋅10 
+4
+  muss die Kopplung der neuen Quellen an 
+𝐽
+𝑣
+Jv relativ um Größenordnungen unter dem liegen, was die Antwortnorm nahelegt, sonst versagt N12-MIDPOINT-INVERSE-60-v1 als CERTIFICATE_FAIL. Dieses Paket enthält 
+𝐽
+𝑣
+Jv nicht (es lebt auf 
+(
+0
+,
+𝑎
+)
+(0,a) in Basis84-Koordinaten), daher kann ich den Skalar hier nicht berechnen.
+
+Stand und nächste Schritte
+Das Paket ist in seinem erklärten Scope bestätigt: vollständiger Antwortgram und direkter K-Modellfehler unter den geerbten Voraussetzungen, A9→A11 nicht geschlossen. Auf GitHub ist es noch nicht; #226 ist ebenfalls noch offen, nicht gemergt.
+
+Sinnvoll wären aus meiner Sicht, in dieser Reihenfolge: das Paket als Forschungspaket mit Originalarchiv und Bindungen integrieren; dann der Vortest 
+⟨
+𝐽
+𝑣
+,
+𝑅
+^
+𝑧
+⟩
+⟨Jv, 
+R
+^
+ z⟩, wofür die Basis84-Funktionen aus dem Antwortarchiv (SHA f94e8f0e…) und 
+𝑅
+^
+=
+𝐶
+−
+𝐷
+^
+𝑇
+R
+^
+ =C− 
+D
+^
+ T auf 
+(
+0
+,
+𝑎
+)
+(0,a) zusammengeführt werden müssen. Sag mir, ob ich mit der Integration anfangen soll.
