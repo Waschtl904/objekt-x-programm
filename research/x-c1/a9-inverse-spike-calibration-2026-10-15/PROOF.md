@@ -96,8 +96,10 @@ ungerade:  u^T E u / |u|^2  <=  8.3 * 10^-18,     zweite Richtung  <=  3.3 * 10^
 ```
 
 bei maximalem Diagonaleintrag von `E` nahe `1`. Da `E > 0` (A9-Paket),
-ist `lambda_min(E)` positiv, aber höchstens von dieser Größe; die
-Konditionszahl von `E` übersteigt `10^18`. Numerisch (nicht zertifiziert,
+ist `lambda_min(E)` positiv, aber höchstens von dieser Größe. Konditionszahl
+(Korrektur 16. Oktober: die erste Fassung schrieb pauschal „übersteigt
+`10^18`"): gerade über `2 * 10^18`; ungerade nach der vollständigen
+Einschließung des Budgetpakets `1.206 * 10^17 < cond_2(E_odd) < 1.2625 * 10^17`. Numerisch (nicht zertifiziert,
 Kontext in `WITNESSES.json`) liefert die Richtung `u` den Anteil
 `|X_ans u|^2 / lambda_min = 56573` an der Spur `56622` von `P` (gerade)
 bzw. `9364` von `9373` (ungerade); die zweite Richtung liefert `48` bzw.
@@ -200,19 +202,91 @@ schärfer einschließen; beides ohne Rückgriff auf die Zielpositivität. Ob die
 eingefrorene Regel `A9_A11_N12_MIDPOINT_INVERSE_60_V1` scheitert, folgt weder
 aus Satz 1 noch aus einer Antwortnorm; ihr Status bleibt `UNRESOLVED`.
 
-**5e. Zwei Hypothesen zum Ursprung (offen).** `lambda_min(E) ~ 10^-19` kann
-(i) eine echte Fast-Kritikalität des A8->A9-Schurbudgets in dieser Richtung
-oder (ii) ein Artefakt der gerichteten Einschließung sein, bei der `D203` und
-`M_upper` in Richtung `u` bis auf Rundungsreste übereinstimmen. Entscheidbar
-durch getrennte Auswertung von `u^T D203 u` und `u^T M_upper u` aus dem
-Antwortarchiv (nicht im hier gebundenen Zip). Im Fall (ii) ist die Hülle mit
-besserer Einschließung reduzierbar.
+**5e. Ursprung: kein Rundungs- oder Einschließungsartefakt (Nachtrag,
+Abschnitt 7).** Die getrennte Auswertung aus dem gebundenen Budgetpaket
+ergibt für die Richtung `u` (je `/||u||^2`)
+
+```text
+                       gerade              ungerade
+u* D203 u              1.446574323191e-13  4.802798196429e-13
+u* M_upper u           1.446570179788e-13  4.802715290430e-13
+u* E u                 4.143403183543e-19  8.290599939281e-18
+E relativ zu D203      2.864 ppm           17.26 ppm
+analytischer M-Fehler  0.877 % von u*Eu    0.00559 % von u*Eu
+reine Rundung          < 2.5e-37           < 1.2e-38
+```
+
+Bei unverändertem `D203`, unverändertem `X` und der geerbten zweiseitigen
+Fehlerhülle von `M` kann das tatsächliche `M` die Lücke höchstens um
+`1.7549 %` (gerade) bzw. `0.01119 %` (ungerade) vergrößern; die endliche
+Verstärkung bleibt über `55590` bzw. `9362`. Genauere `M`-Daten beseitigen
+den Spike also nicht. Das ist eine Aussage über den festgelegten
+Untervergleich, nicht über die tatsächliche A9-Inverse; Verluste im
+konservativen `D`- oder `U8`-Vergleich bleiben davon getrennt.
 
 **5f. Kofinalität.** Lemma 2 des Reduktionspakets betrifft die tatsächlichen
-eingeschränkten Inversen, nicht eine Majorantenkonstruktion. Ob der Spike in
-späteren Horizonten bestehen bleibt, hängt davon ab, ob er zur tatsächlichen
-Inversen gehört (Fall i) oder zur Einschließung (Fall ii); eine zwingende
-Vererbung von `C_spike` ist hier nicht bewiesen.
+eingeschränkten Inversen, nicht eine Majorantenkonstruktion, und nichtfallend
+heißt nicht unbeschränkt: `Q_n = diag(1/C, 1, ..., 1)` ist eine beliebig lange
+genestete Kette mit konstanter Inversnorm `C` (Budgetpaket, HERLEITUNG §6).
+Eine zwingende Kofinalitätssperre oder die zwingende Aufnahme genau von `Jv`
+in die Antwortbasis folgt aus dem Befund nicht.
+
+## 7. Nachtrag 16. Oktober: gebundene Anschlusspakete
+
+**Rekonsiliation.** Der Nachtrag zu #227 verweist auf
+`Objekt-X-A9-Spike-Artefaktpruefung-und-Korrekter-W9-Anschluss-2026-10-15.zip`
+mit SHA-256 `7f7129945b38768a5ec88994b783211db1ceb0810129ffc4ea4ba7db5beb1f5e`.
+Eine Gegenprüfung konnte zunächst keine Bytes zu diesem Hash finden und bot
+ein anders benanntes Paket (`c6a3bfbf…`) an. Das am 16. Oktober übergebene
+Archiv hat exakt den referenzierten Hash; nur dieses ist hier gebunden
+(`archives/`, `SOURCE_BINDINGS.json`, Abschnitt `identity_reconciliation`).
+
+**Budgetpaket (15. Oktober, `7f712994…`).** Enthält unverändert das
+A9-Inversarchiv (`a1fa4195…`) und das Antwortarchiv
+(`Objekt-X-Neue-Antworten84-und-Residualbudget-2026-10-11.zip`), die
+getrennte `D203`/`M`-Auswertung aus 5e, die `N*`-Formel und `p = P_upper v`,
+`q = v* P_upper v` exakt rational. Zusätzlich beweist es bedingt eine echte
+untere Verstärkung der reduzierten Vergleichsinversen auf der Testrichtung
+`J X u`: `<JXu, H_*^-1 JXu>/||JXu||^2 > 55000` (gerade) bzw. `> 9300`
+(ungerade); ausdrücklich keine Untergrenze für die volle wahre A9-Inverse.
+Frischer Replay: 17 Manifestbindungen, 4 Git-Blob-Bindungen an den
+#226-Head `ed31c343`, 524 exakte Gleichheiten, 8 Cauchy-Kontrollmodelle.
+
+**N*Jp-Paket (16. Oktober, `b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b`).**
+Liefert die vollständigen Funktionsdefinitionen von `J`, `Lambda_T`, `g`,
+`g_F`, `U8`, `a_fin`, `K` und das globale Quellarchiv (`2ca3c682…`). Die
+Basis84 liegt auf der alten Schale `(a8, b9) = (3 log 2 / 2, log 3)`; erst
+`Lambda` hebt sie in den A9-Raum. `U8` ist als ganze Funktionsaktion
+ausgeschrieben (`y = T_h f`, `d = Phi* f - B8 y/delta`,
+`c = C_inv C_inv* d/(1-rho)`, `U8 f = Phi c + T_h*(y - B8* c)/delta`), ohne
+hohen Abschneidegrad. Für `t = v` und `t = P_upper v` je Parität liegen `Jt`
+in 96 lokalen Legendre-Koeffizientenintervallen und die zwölf
+`k = K^-1 a_fin Jt` als Einschließungen des tatsächlichen `k` vor
+(Modell `k0` plus analytischer Fehler in `K`-Norm: `1.965e-8` / `1.113e-3`
+gerade, `7.924e-10` / `7.427e-6` ungerade). Die gesuchte Funktion ist
+
+```text
+chi_t = N* J t = Lambda r - F k - J_old U8 (g r - g_F k),     r = J t,
+chi_t(x) = -lambda(r) m(x)/mu - sum_i F_i(x) k_i - u(x)      (0 < x < a8),
+chi_t(x) = r(x) - sum_i F_i(x) k_i                            (a8 < x < b9),
+ell_t(R z) = <chi_t, C z>_H9 - <chi_t, D12 T z>_H9,
+<R z, W9 R z> >= (11/(10 q)) |ell_p(R z)|^2 .
+```
+
+Die `k`-Koeffizienten sind groß (bis `2.8e11` gerade, `2.5e10` ungerade,
+Intervallbreiten bis `2.1e4` bzw. `68`); Aufhebungen und Fehler müssen
+gemeinsam behandelt werden. Frischer Replay: 24 positive `K`-Pivots, 168
+`p`-Komponenten, 2 `q`-Identitäten, 288 Inverseinträge, 48 `K k0`-Gleichungen,
+32 Nullrelationen, 384 Koeffizientenintervalle; `DIRECTIONS.json` bytegleich.
+
+**Nicht berechnet:** `chi`-Integrale, der untere Ausschlusstest auf den zwölf
+zulässigen `z`, die vollständige `W9`-Energie, A9->A11. Keine Aussage über
+Erfolg oder Scheitern der N12-Regel.
+
+`scripts/replay_spike_budget_nstar.py` bindet beide Archive, die sichtbaren
+Kopien und die eingebetteten Quellarchive, führt beide Prüfer außerhalb des
+Repositories aus und vergleicht die Quittungen mit
+`reports/EXPECTED_BUDGET_RECEIPT.json` und `reports/EXPECTED_NSTAR_RECEIPT.json`.
 
 ## 6. Ergebnisstatus
 
@@ -223,7 +297,9 @@ Vererbung von `C_spike` ist hier nicht bewiesen.
 | Spurzerlegung `56573 / 48 / < 1` | numerisch, Kontext |
 | Korollar Abschnitt 4 | bewiesen, bedingt auf (1.1), (2.4), (3.3) des A9-Pakets |
 | Abschnitt 5a-5f | Konsequenzen und Arbeitsanweisungen, keine neuen Sätze; 5c ist eine elementare Ungleichung |
-| Ursprungshypothesen 5e | offen |
+| Ursprung 5e | kein Artefakt; Untervergleich echt eng (Budgetpaket, bedingt) |
+| untere Verstärkung von `H_*^-1` auf `JXu` > 55000 / 9300 | Budgetpaket, bedingt, nur reduzierter Vergleich |
+| `chi`-Integrale, Ausschlusstest | offen |
 
 ## 7. Exakte Kontrollen
 

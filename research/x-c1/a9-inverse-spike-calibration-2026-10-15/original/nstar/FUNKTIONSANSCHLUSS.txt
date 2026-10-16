@@ -1,0 +1,249 @@
+Objekt X — vollständiger Funktionsanschluss für N*Jv und N*Jp
+16. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Zweck und Prüfumfang
+
+Dieses Zusatzpaket ergänzt das unveränderte Artefaktpaket vom 15. Oktober.
+Es liefert die Funktionsdefinitionen, die gebundenen Quellarchive sowie
+vier endliche Koeffizientenanschlüsse (v und p je Parität). Die Integrale
+der fertigen Funktionen chi und der A9->A11-Ausschlusstest sind noch nicht
+berechnet. Die geerbten Operator-, Domänen- und Integrationsaussagen bleiben
+Voraussetzungen. Die aktuellen Köpfe von #226/#227 wurden hier nicht
+abgerufen oder geprüft; das Artefaktpaket bindet seinen historischen Kopf.
+
+1. Drei Endpunkte auseinanderhalten
+
+Hier gelten a8=3 log(2)/2, b9=log(3), b11=log(11)/2.
+Die alte Basis84 J liegt auf (a8,b9), NICHT bereits auf dem gesamten
+alten Raum (0,b9). Die neue A9->A11-Schale ist dagegen (b9,b11).
+Parität sigma=0/1, m(x)=cosh(x/2)/sinh(x/2), epsilon=(-1)^sigma.
+Positive Halbintervalle tragen stets Maß 2 dx; die Integrale in lambda
+und mu unten tragen dx. Negative Seiten folgen durch Parität, danach
+Nullfortsetzung.
+
+H8={f in L2((0,a8),2dx): integral_0^a8 m f=0},
+H9={f in L2((0,b9),2dx): integral_0^b9 m f=0},
+X=L2((a8,b9),2dx), mu=integral_0^a8 m^2,
+lambda(r)=integral_a8^b9 m r,
+W_X[r]=||r||_X^2+2|lambda(r)|^2/mu.
+
+J_old:H8->H9 ist die Nullfortsetzung.
+Lambda r = r auf (a8,b9), -(lambda(r)/mu)m auf (0,a8).
+Lambda_T ist diese Abbildung eingeschränkt auf den exakten alten Rest T.
+Alle Adjunkte mit T als Raum beziehen sich auf W_X. Ein zusätzlicher
+euklidischer Rieszwechsel darf nicht stillschweigend eingefügt werden.
+
+2. Basis84 als tatsächliche Funktion
+
+h=b9-a8, c=(a8+b9)/2,
+ell_n(x)=sqrt((2n+1)/(2h)) P_n(2(x-c)/h), n=0,...,95.
+Das ist die orthonormale lokale Legendrebasis in X.
+
+Q ist die geerbte EXAKTE W_X-Isometrie vom 92er-Koordinatenraum auf das
+W_X-Komplement der vier alten physischen Schalenprofile im Polynomraum.
+Ihre lokalen Koeffizienten stehen als gerichtete Einschließungen im
+half-inverse/expected/1536.json des mitgelieferten Quellarchivs.
+Die exakte Orientierung ist durch die Konstruktion in
+sources/HALFINVERSE_BASIS_PROOF.txt, Abschnitt 4, festgelegt: Projiziere
+ell_4,...,ell_95 W_X-orthogonal von den vier Schalenprofilen weg und
+normalisiere diese geordnete Spalte mit der positiven Choleskyzerlegung.
+Ist B diese projizierte Spalte und B*W_X B=R*R mit oberem Dreieck R und
+positiver Diagonale, so ist Q=B R^-1. Damit ist Q auch ohne ein numerisches
+Intervallmodell eindeutig als Funktion definiert.
+S=half_inverse_centre_rational_Q_coefficients ist dagegen fest rational.
+Y=QS; D=-(S_top^T)^-1 S_bottom^T; Z=[D;I84]; J=QZ.
+
+Für t in R84 ist somit exakt
+  (Jt)(x)=sum_(n=0)^95 (Q_local Zt)_n ell_n(x).
+
+DIRECTIONS.json enthält Zt exakt und alle 96 Koeffizienten als Intervalle.
+Q-Intervallmittelpunkte definieren NICHT nachträglich ein anderes exaktes J.
+Der neue Prüfer bestätigt S*Zt=0 für alle vier mitgelieferten Richtungen.
+Die vollständige Basisgeometrie ist weiterhin die gebundene Voraussetzung
+I <= J*W_X J < 1.000502 I; die vier Tests ersetzen ihren Beweis nicht.
+
+3. Zwölf physische Quellen F und alte Quelle g
+
+Setze e_n^b(x)=sqrt((2n+1)/(2b9)) P_n(x/b9), |x|<b9,
+z_n=e_n^b-e_sigma^b (integral_0^b9 m e_n^b)/(integral_0^b9 m e_sigma^b).
+Die Reihenfolge ist
+  F=(z_(sigma+2),z_(sigma+4),z_(sigma+6),z_(sigma+8),Lambda Y_1,...,Lambda Y_8).
+Die ersten vier Funktionen sind physische Funktionen auf dem GANZEN
+Intervall; sie sind nicht bloß ihre Schalenrestriktionen.
+
+Eine vollständige Definition des rohen Nichtpoloperators ist
+  Q_l^np=H_Gamma-kappa I-S_l,
+  H_Gamma u=integral_0^infinity k(r)[2u-u(.+r)-u(.-r)]dr,
+  k(r)=exp(-r/2)/(1-exp(-2r)),
+  kappa=log(8 pi)+EulerGamma+pi/2,
+  S_l u=sum_(q<exp(2l)) log(prime(q))/sqrt(q) [u(.+log q)+u(.-log q)].
+Die Summe geht über Primzahlpotenzen. Der Operator ist komprimiert auf
+(-l,l), die Argumentfunktionen sind nullfortgesetzt. Auf den hier
+genutzten stückweise glatten Funktionen sind die bekannten logarithmischen
+Randanteile mitzunehmen. Auf der allgemeinen Domäne gilt die Formfassung.
+
+Pi8 f=f-m (integral_0^a8 m f)/mu.
+Die tatsächlichen Quellen sind
+  g r=Pi8[Q_b9^np Lambda r]|_(0,a8),
+  (g_F)_i=Pi8[Q_b9^np F_i]|_(0,a8).
+
+Für g r kann man die disjunkten Träger explizit auswerten:
+  g r=-Pi8 K_cross r-Pi8 B_cross r-(lambda(r)/mu) h8,
+  K_cross r(x)=integral_a8^b9 [k(y-x)+epsilon k(y+x)]r(y)dy,
+  B_cross r(x)=sum_(q=2,3,4,5,7,8) w_q
+                         [(Sigma r)(x+log q)+(Sigma r)(x-log q)],
+  h8=Pi8[(H_Gamma-S_a8)(m 1_(-a8,a8))]|_(0,a8).
+Hier sind w_q=log(prime(q))/sqrt(q). q=9 ist bei b9 nur Randkontakt,
+q=8 im alten Kern ebenfalls nur Randkontakt. Die Kernintegrale tragen
+dy, nicht 2dy; die Hilbertpaarungen tragen 2dx. Die Momentkorrektur ist
+vollständig vorhanden. Diese Formel folgt unmittelbar aus Q auf den
+disjunkten Trägern und der anschließenden Projektion Pi8.
+
+4. U8 als vollständige Funktionsabbildung, ohne hohen Abschneidegrad
+
+Dies ist die neue gemeinsame A8-Majorante aus Common96. Die alte
+ursprüngliche Kongruenzmatrix darf nicht an ihre Stelle treten.
+OPERATORS.json enthält die neue C_inv, rho, delta=18219/10000 und K.
+
+Auf Hscaled=L2((-1,1),dx/2) gilt U f(x)=sqrt(2a8)f(a8 x),
+e_n=sqrt(2n+1)P_n, e=e_sigma, m_scaled(x)=m(a8 x).
+M x=x-e <m_scaled,x>/<m_scaled,e>, zunächst x orthogonal e.
+E bildet R191 auf die Grade sigma+2,...,sigma+382 ab.
+P_Y projiziert auf ALLE Grade sigma+384,sigma+386,... .
+
+Phi=U^-1 M E,
+T_h f=P_Y M* U f,  T_h* y=U^-1 M y,
+B8* c=P_Y M* (U Q_a8^np U^-1) M E c.
+
+Die letzte Formel ist die vollständige Low/High-Kopplung. B8 ist deren
+Hilbertadjunkt. Alle Momente in M und alle hohen Grade in P_Y bleiben
+erhalten. B8* c ist eine ganze Funktion mit Randlogarithmen und
+Primverschiebungen, keine endliche Koeffizientenliste.
+
+Aus der gebundenen Definition
+  V8=C_inv* (Phi* - B8 T_h/delta),
+  U8=T_h*T_h/delta+V8*V8/(1-rho)
+ergibt sich für eine beliebige Hilbertquelle f in H8 die konkrete Aktion:
+
+  y=T_h f,
+  d=Phi* f-B8 y/delta,
+  c=C_inv C_inv* d/(1-rho),
+  U8 f=Phi c+(1/delta)T_h*(y-B8* c).                 (A)
+
+Beweis: V8*=(Phi-T_h*B8*/delta)C_inv. Einsetzen in U8 und Sammeln der
+Terme liefert (A), ohne Kommutation von Matrizen oder Projektionen.
+Diese Aktion benötigt lediglich vollständige Funktionspaarungen mit
+den 191 Funktionen B8*e_i und Phi_i sowie vollständige Projektionen.
+P_Y kann als Identität minus die endliche niedrige Projektion ausgewertet
+werden; die hohe Funktion wird dabei nicht durch endlich viele hohe
+Legendrekoeffizienten ersetzt. Zugehörigkeit von U8 f zur A8-Operatordomäne
+wird nicht vorausgesetzt oder für den späteren Skalar benötigt.
+
+5. a_fin und seine numerische Einschließung
+
+Für r in T gilt exakt, i=1,...,12,
+  (a_fin r)_i=q_b9^np[F_i,Lambda r]-<g_Fi,U8 g r>_H8.
+K=K12_new_rational ist eine feste positive rationale UNTERmatrix für
+den entsprechenden Zwölferblock. In N wird genau diese Matrix verwendet,
+nicht der Mittelpunkt einer neu geschätzten tatsächlichen Zwölferform.
+
+Das originale Antwortpaket liefert C0=C203x84_model und epsilon_C mit
+  ||D203^-1/2 (A_force J-C0)||<=epsilon_C,
+  D203=diag((1-rho)I191,K).
+Die letzten zwölf Zeilen gehören zu a_fin J. C0 ist ein gerichtetes
+Modell; seine Eintragsradien kommen zum analytischen Fehler hinzu.
+
+Sei Cmid der rationale Mittelpunkt dieser zwölf Zeilen und rad_ij ihr
+Intervallradius. Dann gilt, unter den gebundenen Fehleraussagen,
+  ||K^-1/2(a_fin J-Cmid)||
+    <= epsilon_C + sqrt(tr(K^-1) sum_ij rad_ij^2) =: e.
+
+Der neue Prüfer löst für t=v und t=p exakt rational
+  K k0=Cmid t.
+Mit k=K^-1 a_fin Jt folgt
+  ||k-k0||_K <= e ||t||,
+  |k_i-k0_i| <= sqrt((K^-1)_ii) e ||t||.
+Alle Wurzeln werden durch rationale obere Schranken ersetzt. Somit sind
+die zwölf gelieferten Intervalle Einschließungen des TATSÄCHLICHEN k;
+k0 allein ist lediglich das ausdrücklich bezeichnete Modell.
+
+Diese Fehlergrenze bezahlt noch nicht die gesamte Abweichung einer später
+gerundeten chi-Funktion. Dort müssen die Funktionsoperatoren aus (A),
+g, g_F, F und Lambda mit ihren jeweiligen vollständigen Fehlern transportiert
+werden. Die alten Fehlerbudgets anderer Quellen dürfen nicht ungeprüft
+auf die neuen Kombinationen übertragen werden.
+
+6. Die gesuchte ganze Funktion chi
+
+Für t=v oder t=p setze r=Jt, k=K^-1 a_fin r, u=U8(g r-g_F k).
+Dann ist der physische Rieszvektor auf H9 exakt
+  chi_t=N*Jt=Lambda r-Fk-J_old u.                     (B)
+
+Als positive Halbintervallfunktion:
+  chi_t(x)=-lambda(r)m(x)/mu-sum_i F_i(x)k_i-u(x), 0<x<a8;
+  chi_t(x)=r(x)-sum_i F_i(x)k_i,                  a8<x<b9.
+Die negative Seite folgt aus der Parität. Alle Summanden sind physisch
+momentnull, deshalb ist auch chi_t in H9. Keine weitere Projektion oder
+Faktor-2-Korrektur ist in (B) einzufügen.
+
+Beweis aus der vollständigen Quellentransformation:
+  N=Lambda_T* - g*U8 J_old*
+      -a_fin*K^-1(F* - g_F*U8 J_old*).
+Adjungieren und auf Jt anwenden liefert (B). Diese Herleitung benutzt die
+Selbstadjungiertheit von U8 und K, nicht die Annahme N=I.
+
+7. Anschluss an die feste neue N12-Regel
+
+Für P=Phi12 T, D12=A9 Phi12 und R=C-A9P=C-D12 T gilt
+  ell_t(Rz)=<chi_t,Cz>_H9-<chi_t,D12 Tz>_H9.
+Es wird NICHT A9 chi_t gebildet. Die Zugehörigkeit von chi_t zur
+Operatordomäne ist dafür unnötig.
+
+Für p=P_upper v, q=v*P_upper v>0 gilt
+  <Rz,W9 Rz> >= (11/(10q)) |ell_p(Rz)|^2.
+Eine gerichtete Untergrenze dieser Energie oberhalb einer gerichteten
+Obergrenze des verfügbaren Budgets verwirft genau dieses Zertifikat mit
+der festen W9 und festen Antwortregel. Sie wäre kein negativer Weilzeuge.
+Umgekehrt zertifizieren zwölf erfolgreiche Richtungen keinen globalen
+oberen Energievergleich. Der obere Diagnoseskalar verwendet t=v.
+
+Bei einem eingeschlossenen Skalar [l,u] wird eine untere Betragsgrenze
+als 0 genommen, wenn das Intervall 0 enthält, sonst min(|l|,|u|).
+Eine Untergrenze für ||W9|| darf weiterhin in keinen Fehlerobertest eingehen.
+Die Regel A9_A11_N12_MIDPOINT_INVERSE_60_V1 wird hier nicht geändert.
+
+8. Dateien und Herkunft
+
+Separat beizulegen ist das unveränderte Artefaktpaket vom 15. Oktober:
+SHA256 7f7129945b38768a5ec88994b783211db1ceb0810129ffc4ea4ba7db5beb1f5e.
+Es enthält die ORIGINALEN Antwort- und A9-Inversarchive, p, q, v und
+die frühere Budgetprüfung. Seine alten GitHub-Verweise sind Herkunftsdaten.
+
+Im Unterordner inputs liegt unverändert das vollständige Quellarchiv
+Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13.zip,
+SHA256 2ca3c682de8a529b12a0d628c2b606fd04df332d1299ccd36dff71ac3e53d80c.
+Sein snapshot enthält insbesondere:
+  work/basis-coverage-2026-10-10/BASIS_{EVEN,ODD}.json: exaktes D;
+  work/inherited/.../half-inverse/expected/1536.json: Q-Intervalle und S;
+  work/direct-rest84-2026-10-11/REFINED_COMMON96.json: neue C_inv;
+  work/global-model-2026-10-12/compute_global_model.py: vollständige
+    Kern-/Schalenmodelle, Quellmomente, alte Kopplungen und Primzellen;
+  work/global-gram-2026-10-13/: anschließende Integration und Kontrollen.
+
+SNAPSHOT_ORIGINS.json unterscheidet Originalhash und Hash des ausgewählten
+Snapshots. Der neue Prüfer bindet die Common96-Originalquelle an die
+Originalantworten, prüft alle gelesenen Snapshothashes und gleicht K,
+rho und delta zwischen den Archiven ab. Die physische Geometrie und
+die starke Operatorfassung sind zusätzlich unter sources dokumentiert.
+
+Der historische compute_global_model.py ist ein BAUSTEIN des globalen
+Pakets: seine isolierte raw_residual_model-Ausgabe enthält noch nicht
+die spätere kanonische Momentkorrektur und den gesamten Fehlerabschluss.
+Seine historischen offenen Statusfelder werden nicht umgeschrieben.
+Für (B) gelten die oben expliziten Projektionen und ganzen Operatoren.
+
+Frisch gerechnet: 24 positive K-Pivots, 168 Komponenten p=P_upper v,
+zwei q-Identitäten, 288 Inversprodukt-Einträge, 48 exakte Kk0-Gleichungen,
+32 Nullrelationen und 384 gerichtete lokale Funktionskoeffizienten.
+Kein neuer historischer 574-Pivot-Lauf, keine großen Integrationen,
+kein A9->A11-Abschluss, keine GitHub-Änderung. Externe Gesamtprüfung offen.

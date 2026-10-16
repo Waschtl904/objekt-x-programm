@@ -8,9 +8,9 @@
   "mathematical_status": "AUTHOR_DERIVED",
   "review_status": "EXTERNAL_REVIEW_OPEN",
   "integration_status": "RESEARCH_BRANCH_UNMERGED",
-  "scope": "Exakt rational zertifizierte Rang-eins-Zerlegung der endlichen A9-Inversverstärkung P_upper je Parität (P_upper <= mu v v^T + eps I mit mu = 56620 / 9373, eps = 21/10 / 37/100, Schärfezeugen) und obere Schranken lambda_min(E) <= 4.2e-19 / 8.3e-18 für die gerichtete Budgetlücke; bedingt auf (1.1), (2.4), (3.3) des A9-Pakets folgt H_* >= W_X/4.68 bzw. W_X/2.77 auf dem Komplement eines Vektors Jv je Parität.",
+  "scope": "Exakt rational zertifizierte Rang-eins-Zerlegung der endlichen A9-Inversverstärkung P_upper je Parität (P_upper <= mu v v^T + eps I mit mu = 56620 / 9373, eps = 21/10 / 37/100, Schärfezeugen) und obere Schranken lambda_min(E) <= 4.2e-19 / 8.3e-18 für die gerichtete Budgetlücke; bedingt auf (1.1), (2.4), (3.3) des A9-Pakets folgt H_* >= W_X/4.68 bzw. W_X/2.77 auf dem Komplement eines Vektors Jv je Parität. Nachtrag 16. Oktober: Budgetpaket 7f712994… (getrennte D203/M-Auswertung: kein Artefakt; untere Verstärkung der reduzierten Vergleichsinversen auf JXu > 55000 / 9300, bedingt) und N*Jp-Paket b48e3895… (Funktionsdefinitionen, U8-Aktion, Jt- und k-Einschließungen) gebunden; cond(E_odd) ~ 1.2e17 korrigiert.",
   "claim_polarity": "POSITIVE_RESULT",
-  "negative_claim_boundary": "Keine neue A9-Schranke auf ganz T (65000 / 11000 bleiben), keine A11-Aussage, kein Beweis von H_9, keine Entscheidung, ob lambda_min(E) ~ 1e-19 echte Kritikalität oder ein Einschließungsartefakt ist; die analytischen Voraussetzungen und Metrikkonventionen des A9-Pakets werden übernommen, nicht geprüft. Die Spurzerlegung 56573/48/<1 ist numerischer Kontext, nicht zertifiziert. Die Hülle betrifft nur den Summanden H_*^-1 auf T: kein unteres Gewicht der vollen W9 auf Jv, keine Dominanz eines Skalars für tatsächliche Residuen, keine Aussage über ein Scheitern der N12-Regel, keine bewiesene Vererbung von C_spike an spätere Horizonte (Korrekturvermerk 16. Oktober).",
+  "negative_claim_boundary": "Keine neue A9-Schranke auf ganz T (65000 / 11000 bleiben), keine A11-Aussage, kein Beweis von H_9, keine Entscheidung, ob lambda_min(E) ~ 1e-19 echte Kritikalität oder ein Einschließungsartefakt ist; die analytischen Voraussetzungen und Metrikkonventionen des A9-Pakets werden übernommen, nicht geprüft. Die Spurzerlegung 56573/48/<1 ist numerischer Kontext, nicht zertifiziert. Die Hülle betrifft nur den Summanden H_*^-1 auf T: kein unteres Gewicht der vollen W9 auf Jv, keine Dominanz eines Skalars für tatsächliche Residuen, keine Aussage über ein Scheitern der N12-Regel, keine bewiesene Vererbung von C_spike an spätere Horizonte (Korrekturvermerk 16. Oktober). Die untere Verstärkung betrifft nur den festgelegten reduzierten Untervergleich, nicht die wahre A9-Inverse. chi-Integrale, Ausschlusstest und W9-Energie sind nicht berechnet.",
   "depends_on": [
     "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
   ],
@@ -27,6 +27,6 @@
   ],
   "canonical_proof": {
     "path": "research/x-c1/a9-inverse-spike-calibration-2026-10-15/PROOF.md",
-    "sha256": "0ef179156e5ddc15d7fcb22b6f5d5fe8e3d7500f0561d31baecacec637e174c1"
+    "sha256": "3e0778cf79155925e2e8d03d8baf18dba719848e0f007e19ce6f342ea967d3a9"
   }
 }

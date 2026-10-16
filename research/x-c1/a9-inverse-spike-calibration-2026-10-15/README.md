@@ -35,6 +35,16 @@ Einschließungsartefakt ist, bleibt offen (PROOF.md, 5e). Die erste Fassung
 enthielt hier unbegründete Dominanz- und Vererbungsaussagen; siehe
 Korrekturvermerk in PROOF.md.
 
+## Nachtrag 16. Oktober
+
+Gebunden: Budgetpaket `7f712994…beb1f5e` (Artefaktfrage: kein Artefakt, `u*E u`
+relativ zu `u*D203 u` 2.9 ppm / 17 ppm, M-Fehlerpreis 0.88 % / 0.0056 %;
+untere Verstärkung der reduzierten Vergleichsinversen auf `JXu` > 55000 / 9300)
+und N*Jp-Paket `b48e3895…6d57b` (Funktionsdefinitionen, `U8`-Aktion, `Jt`- und
+`k`-Einschließungen für `t = v`, `P_upper v`). Konditionszahl von `E` korrigiert
+(ungerade `1.2e17`). Replay beider Pakete: `scripts/replay_spike_budget_nstar.py`.
+Offen: `chi`-Integrale und Ausschlusstest.
+
 ## Nicht behauptet
 
 Keine neue A9-Schranke, keine A11-Aussage, kein Beweis von `H_9`, keine

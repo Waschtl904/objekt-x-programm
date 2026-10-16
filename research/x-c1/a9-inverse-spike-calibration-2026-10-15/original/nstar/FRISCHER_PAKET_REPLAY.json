@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "executed_from_freshly_unpacked_archive": true,
+  "three_result_files_byte_identical": true,
+  "result_sha256": {
+    "DIRECTIONS.json": "bb97d37cb0d78dab5dc701d6850711a0332b530a3df26b859194d662f4a2f503",
+    "OPERATORS.json": "b0ae57aab8f603ec8c87a818fb599444dd4ce12ac85d27a07c556ce0b63b1fab",
+    "RECEIPT.json": "d31f35c11b30b7c7ef6e6a340171201be5c5a19894f25454a61cc2deb7f544e5"
+  },
+  "checks": {
+    "positive_K_pivots": 24,
+    "exact_Pv_components": 168,
+    "exact_q_identities": 2,
+    "exact_K_inverse_entries": 288,
+    "exact_K_k_model_equations": 48,
+    "exact_Sstar_Zt_zeros": 32,
+    "Jt_local_interval_coefficients": 384
+  },
+  "full_function_integrals_computed": false,
+  "external_review_open": true
+}
