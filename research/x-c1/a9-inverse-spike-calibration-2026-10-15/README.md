@@ -20,20 +20,20 @@ Bedingt auf die Identitäten (1.1), (2.4), (3.3) des A9-Pakets folgt auf dem
 H_* >= W_X / 4.68 (gerade),   H_* >= W_X / 2.77 (ungerade)
 ```
 
-statt `W_X / 65000` bzw. `W_X / 11000` auf ganz `T`. Die A9-Inversmajorante hat
-also die Gestalt `C_off W_X^-1 + C_spike (Jv)(Jv)^*` mit `C_off < 5` und
-`C_spike ~ 6e4 / 1e4`. Die Uniformitätsforderung (H3) des Reduktionspakets
-betrifft an A9 genau eine Richtung.
+statt `W_X / 65000` bzw. `W_X / 11000` auf ganz `T`. Das ist eine obere Hülle
+des Summanden `H_*^-1` der A9-Majorante, kein unteres Gewicht der vollen `W9`
+(die zusätzlich A8-Energie, Zwölferenergie und Quellentransformation `N`
+enthält).
 
-## Konsequenz für A9->A11
+## Korrekter Anschluss (korrigiert am 16. Oktober)
 
-Der Residualpreis `<Rz, U_9 Rz>` ist durch `C_off ||Rz||^2 + C_spike |<Jv, Rz>|^2`
-beschränkt. Der gesamte Schwierigkeitsgrad von (H1) liegt im Skalar `<Jv, Rz>`
-je Parität; seine Berechnung ist ein billiger Vortest vor den vollständigen
-gemeinsamen Energien. Eine erneuerbare Regel muss `Jv` in die endliche
-Antwortbasis aufnehmen oder die Budgetlücke in dieser Richtung schärfer
-einschließen. Ob `lambda_min(E) ~ 1e-19` echte Kritikalität oder ein
-Einschließungsartefakt ist, bleibt offen (PROOF.md, 5c).
+Oberer Diagnoseskalar `<Jv, N R_hat z>` mit der Quellentransformation `N`;
+unterer Ausschlusstest `R* W9 R >= (11/10) |<Jp, N R z>|^2 / q` mit
+`p = P_upper v`, `q = v* P_upper v`. Keine Aussage über ein Scheitern der
+eingefrorenen N12-Regel. Ob `lambda_min(E) ~ 1e-19` echte Kritikalität oder ein
+Einschließungsartefakt ist, bleibt offen (PROOF.md, 5e). Die erste Fassung
+enthielt hier unbegründete Dominanz- und Vererbungsaussagen; siehe
+Korrekturvermerk in PROOF.md.
 
 ## Nicht behauptet
 

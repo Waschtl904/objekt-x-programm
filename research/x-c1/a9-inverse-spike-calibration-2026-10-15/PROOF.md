@@ -1,7 +1,16 @@
 # A9-Inversspektrum: Ein-Richtungs-Verstärkung und Kalibrierung der Zertifikatsklasse
 
-15. Oktober 2026. **AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN**. Art: DIAGNOSTIK
+15./16. Oktober 2026. **AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN**. Art: DIAGNOSTIK
 mit exakten rationalen Zertifikaten.
+
+**Korrekturvermerk (16. Oktober).** Die erste Fassung las die hier bewiesene
+obere Hülle von `H_*^-1` auf `T` in Abschnitt 4 und 5 als Aussage über die
+volle Majorante `W9` auf dem rohen Vektor `Jv`, folgerte daraus die Dominanz
+des Skalars `<Jv, R z>` im Residualpreis, ein voraussichtliches
+`CERTIFICATE_FAIL` der eingefrorenen N12-Regel und eine zwingende Vererbung
+von `C_spike` an spätere Horizonte. Diese Folgerungen sind zurückgenommen. Die
+exakten Zertifikate (Sätze 1 und 2) und das Korollar über `H_*^-1` auf `T`
+(Abschnitt 4) sind unverändert; Abschnitt 5 ist neu gefasst.
 
 ## 0. Zweck und Nichtanspruch
 
@@ -75,7 +84,9 @@ sondern durch eine einzige Richtung ausgeschöpft.
 Beobachtung (nicht zertifiziert): Die Komponenten von `v_hat` liegen in
 beiden Paritäten nahezu identisch bei `0.559, 0.419, 0.331, 0.271, 0.227,
 0.194, 0.168, ...` auf den Indizes `0, 2, 4, 6, 8, 10, 12, ...` der
-Basis84-Ordnung. Die Richtung ist strukturell, nicht paritätsspezifisch.
+Basis84-Ordnung. Die Richtung ist strukturell, nicht paritätsspezifisch. Die Spuraussage
+betrifft die gespeicherte endliche Matrix `P_upper`, nicht die Verteilung der
+physischen Inversenergie auf tatsächlich vorkommende Residuen.
 
 ## 3. Satz 2: Ursprung in einer fast verschwindenden Budgetlücke (exakt zertifiziert)
 
@@ -130,59 +141,78 @@ H_*  >=  W_X / 4.68   (gerade),        H_*  >=  W_X / 2.77   (ungerade),
 gegenüber `W_X / 65000` bzw. `W_X / 11000` auf ganz `T`. Das Verhältnis
 beträgt `13338` bzw. `3727`.
 
-In der Sprache des Reduktionspakets: Das A9-Zertifikat hat, relativ zur
-physischen Metrik `W_X`, die Gestalt
+In der Sprache des Reduktionspakets: Der Anteil `H_*^-1` der A9-Majorante hat
+auf `T`, relativ zur Metrik `W_X`, eine obere Hülle der Gestalt
 
 ```text
-U_9  <=  C_off * W_X^-1  +  C_spike * (J v)(J v)^*,
+H_*^-1  <=  C_off * W_X^-1  +  C_spike * (J v)(J v)^*,
 C_off ~ 4.7 / 2.8,   C_spike ~ 6.2 * 10^4 / 1.0 * 10^4 .
 ```
 
-Die Uniformitätsforderung (H3) ist deshalb an A9 keine Aussage über
-84 Richtungen, sondern über eine.
+Das ist eine obere Hülle eines Summanden; weder ein unteres Gewicht noch eine
+Aussage über die volle `W9`, die zusätzlich die A8-Energie `<f8, U8 f8>`, die
+Zwölferenergie `v12* K^-1 v12` und die gemeinsame Quellentransformation `N`
+enthält (Abschnitt 5). Für die Uniformitätsforderung (H3) heißt das nur: In
+diesem Summanden ist die Hülle außerhalb einer Richtung von Ordnung eins.
 
-## 5. Folgerungen für `H_9` und den A9->A11-Auftrag
+## 5. Korrekter Anschluss an `W9` und Folgerungen
 
-**5a. Residualpreis.** Für jede Antwortabbildung `P_9` und jedes `z` im
-neuen A11-Raum gilt nach Abschnitt 4
+**5a. Vollständige Majorante.** Nach A9-HERLEITUNG §6 gilt für `f` im
+physischen Raum
 
 ```text
-<R z, U_9 R z>  <=  C_off ||R z||_W_X^2  +  C_spike |<J v, R z>_W_X|^2 .
+f8  = J_old* f,
+v12 = F* f - g_F* U8 f8,
+nu  = N f = Lambda_T* f - g* U8 f8 - a_fin* K^-1 v12,
+<f, W9 f> = <f8, U8 f8> + v12* K^-1 v12
+          + (11/10) [ beta^-1 <nu, R_L nu> + (J* nu)* P_upper (J* nu) ].
 ```
 
-Der erste Term ist mit Konstante unter `5` harmlos. Der gesamte Schwierigkeitsgrad
-von (H1) konzentriert sich im Skalar `<J v, R z>` je Parität. Ein billiger
-Vortest, der vor den vollständigen gemeinsamen Energien des Arbeitsauftrags
-`a9-a11-certificate-calibration-2026-10-15` ausgeführt werden kann, ist die
-Berechnung genau dieser Kopplung der neuen Kanalquellen an `J v`. Liegt sie
-nicht unter `(reserve / C_spike)^(1/2)`, versagt die Regel
-`N12-MIDPOINT-INVERSE-60-v1` als `CERTIFICATE_FAIL`, ohne dass dies etwas
-über die tatsächliche A11-Form aussagt.
+Satz 1 betrifft nur den letzten Summanden und nur als obere Hülle. Die
+Quellentransformation `N` und die ersten beiden Energien verschwinden durch die
+Rang-eins-Kalibrierung nicht.
 
-**5b. Antwortregel.** Eine erneuerbare Regel hat zwei zulässige Auswege,
-beide ohne Rückgriff auf die Zielpositivität: Entweder wird `J v` in die
-endliche Antwortbasis aufgenommen (die Richtung wandert aus dem
-unendlichen Rest in den exakt invertierbaren endlichen Block), oder die
-gerichtete Budgetlücke in Richtung `u` wird mit schärferer Einschließung
-neu bewertet. Die wachsende Zahl kritischer Richtungen ist im Programm
-ausdrücklich zugelassen.
+**5b. Oberer Diagnoseskalar.** Mit `psi = N* J v` ist
+`<psi, R z>_H9 = <J v, N R z>_W_X` der zum Spike gehörende obere
+Diagnoseskalar. Er ist ein Beitrag zu einer zusätzlichen hinreichenden Hülle;
+ein zu großer Wert zeigt nur, dass diese Hülle nicht zum Abschluss reicht, und
+ist kein `CERTIFICATE_FAIL` der ursprünglichen festen Antwortregel.
 
-**5c. Zwei Hypothesen zum Ursprung (offen).** `lambda_min(E) ~ 10^-19`
-kann (i) eine echte Fast-Kritikalität des A8->A9-Schurbudgets in dieser
-Richtung oder (ii) ein Artefakt der gerichteten Einschließung sein, bei der
-`D203` und `M_upper` in Richtung `u` bis auf Rundungsreste übereinstimmen.
-Entscheidbar ist das durch getrennte Auswertung von `u^T D203 u` und
-`u^T M_upper u` aus dem Antwortarchiv; dieses liegt nicht im hier gebundenen
-Zip. Im Fall (ii) ist die Verstärkung mit besserer Einschließung
-reduzierbar; im Fall (i) ist die Richtung ein echter Kandidat für eine
-akkumulierende kritische Familie im Sinn der Kofinalitätsobligation.
+**5c. Unterer Ausschlusstest.** Für `P = P_upper > 0` gilt
+`P >= (P v)(P v)* / (v* P v)` (Cauchy-Schwarz in der `P`-Metrik). Mit
+`p = P_upper v`, `q = v* P_upper v`, `chi = N* J p` folgt
 
-**5d. Kofinalität.** Nach Lemma 2 des Reduktionspakets kann die
-Inversmajorante entlang der Kette nicht fallen. Bleibt die Richtung `J v`
-im unendlichen Rest, erbt jeder spätere Horizont `C_spike >= 6 * 10^4`.
-Eine Erneuerungsregel, die sie nicht in den endlichen Block überführt,
-ist daher strukturell nicht kofinal fortsetzbar, unabhängig von den
-A11-Daten.
+```text
+<f, W9 f> >= (11/10) |<J p, N f>|^2 / q,        R* W9 R >= (11/10) (chi* R)* (chi* R) / q .
+```
+
+Übersteigt eine rigorose Untergrenze hiervon auf einem zulässigen `z` eine
+rigorose Obergrenze von `K_P[z]`, ist der konkrete Vergleich `K_P - R* W9 R`
+negativ: `CERTIFICATE_FAIL` dieses Vergleichs, nicht der tatsächlichen
+A11-Form. Bei Auswertung über `R_hat` sind die Modellfehler im Skalar
+mitzuführen. Die endlichen Daten `p`, `q` sind aus `P_upper` und `v_hat`
+dieses Pakets exakt berechenbar; die skalaren Restfunktionen (`N`, `J` in
+Funktionsdarstellung) liegen hier nicht vor.
+
+**5d. Antwortregel.** Eine erneuerbare Regel kann `J v` in die endliche
+Antwortbasis aufnehmen oder die gerichtete Budgetlücke in Richtung `u`
+schärfer einschließen; beides ohne Rückgriff auf die Zielpositivität. Ob die
+eingefrorene Regel `A9_A11_N12_MIDPOINT_INVERSE_60_V1` scheitert, folgt weder
+aus Satz 1 noch aus einer Antwortnorm; ihr Status bleibt `UNRESOLVED`.
+
+**5e. Zwei Hypothesen zum Ursprung (offen).** `lambda_min(E) ~ 10^-19` kann
+(i) eine echte Fast-Kritikalität des A8->A9-Schurbudgets in dieser Richtung
+oder (ii) ein Artefakt der gerichteten Einschließung sein, bei der `D203` und
+`M_upper` in Richtung `u` bis auf Rundungsreste übereinstimmen. Entscheidbar
+durch getrennte Auswertung von `u^T D203 u` und `u^T M_upper u` aus dem
+Antwortarchiv (nicht im hier gebundenen Zip). Im Fall (ii) ist die Hülle mit
+besserer Einschließung reduzierbar.
+
+**5f. Kofinalität.** Lemma 2 des Reduktionspakets betrifft die tatsächlichen
+eingeschränkten Inversen, nicht eine Majorantenkonstruktion. Ob der Spike in
+späteren Horizonten bestehen bleibt, hängt davon ab, ob er zur tatsächlichen
+Inversen gehört (Fall i) oder zur Einschließung (Fall ii); eine zwingende
+Vererbung von `C_spike` ist hier nicht bewiesen.
 
 ## 6. Ergebnisstatus
 
@@ -192,8 +222,8 @@ A11-Daten.
 | Satz 2 (Fast-Nullrichtung von `E`) | exakt rational zertifiziert (obere Schranke) |
 | Spurzerlegung `56573 / 48 / < 1` | numerisch, Kontext |
 | Korollar Abschnitt 4 | bewiesen, bedingt auf (1.1), (2.4), (3.3) des A9-Pakets |
-| Folgerungen 5a-5d | Konsequenzen und Arbeitsanweisungen, keine neuen Sätze |
-| Ursprungshypothesen 5c | offen |
+| Abschnitt 5a-5f | Konsequenzen und Arbeitsanweisungen, keine neuen Sätze; 5c ist eine elementare Ungleichung |
+| Ursprungshypothesen 5e | offen |
 
 ## 7. Exakte Kontrollen
 

@@ -10,7 +10,7 @@
   "integration_status": "RESEARCH_BRANCH_UNMERGED",
   "scope": "Exakt rational zertifizierte Rang-eins-Zerlegung der endlichen A9-Inversverstärkung P_upper je Parität (P_upper <= mu v v^T + eps I mit mu = 56620 / 9373, eps = 21/10 / 37/100, Schärfezeugen) und obere Schranken lambda_min(E) <= 4.2e-19 / 8.3e-18 für die gerichtete Budgetlücke; bedingt auf (1.1), (2.4), (3.3) des A9-Pakets folgt H_* >= W_X/4.68 bzw. W_X/2.77 auf dem Komplement eines Vektors Jv je Parität.",
   "claim_polarity": "POSITIVE_RESULT",
-  "negative_claim_boundary": "Keine neue A9-Schranke auf ganz T (65000 / 11000 bleiben), keine A11-Aussage, kein Beweis von H_9, keine Entscheidung, ob lambda_min(E) ~ 1e-19 echte Kritikalität oder ein Einschließungsartefakt ist; die analytischen Voraussetzungen und Metrikkonventionen des A9-Pakets werden übernommen, nicht geprüft. Die Spurzerlegung 56573/48/<1 ist numerischer Kontext, nicht zertifiziert.",
+  "negative_claim_boundary": "Keine neue A9-Schranke auf ganz T (65000 / 11000 bleiben), keine A11-Aussage, kein Beweis von H_9, keine Entscheidung, ob lambda_min(E) ~ 1e-19 echte Kritikalität oder ein Einschließungsartefakt ist; die analytischen Voraussetzungen und Metrikkonventionen des A9-Pakets werden übernommen, nicht geprüft. Die Spurzerlegung 56573/48/<1 ist numerischer Kontext, nicht zertifiziert. Die Hülle betrifft nur den Summanden H_*^-1 auf T: kein unteres Gewicht der vollen W9 auf Jv, keine Dominanz eines Skalars für tatsächliche Residuen, keine Aussage über ein Scheitern der N12-Regel, keine bewiesene Vererbung von C_spike an spätere Horizonte (Korrekturvermerk 16. Oktober).",
   "depends_on": [
     "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
   ],
@@ -27,6 +27,6 @@
   ],
   "canonical_proof": {
     "path": "research/x-c1/a9-inverse-spike-calibration-2026-10-15/PROOF.md",
-    "sha256": "cc48ab29de6da43a45e0a989ca30158b9cd03091f10c188fe6fcffebfd4a5c7f"
+    "sha256": "0ef179156e5ddc15d7fcb22b6f5d5fe8e3d7500f0561d31baecacec637e174c1"
   }
 }
