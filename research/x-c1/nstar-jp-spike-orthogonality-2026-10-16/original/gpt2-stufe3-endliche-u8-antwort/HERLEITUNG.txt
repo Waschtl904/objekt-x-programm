@@ -1,0 +1,257 @@
+Objekt X — endlicher Stufe-3-Abschluss und Kernuntergrenze
+16. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis und genaue Reichweite
+
+Die 191 niedrigen Rohkoordinaten der vollständigen U8-Antwort sind für
+t=v, p=P_upper v und e=p-alpha v je Parität gerichtet eingeschlossen.
+Die Modelle werden aus bereits gebundenen GANZEN Quellen und ganzen
+Low/High-Kreuzdaten rekonstruiert. Ihr vollständiger geerbter Modellfehler
+und der gemeinsame Fehler von k sind mitgeführt. Neue 191 Quadraturen
+oder eine neue hohe Abschneidegrenze werden hierfür nicht gebraucht.
+
+Unter den gebundenen Operator-, Domänen- und vollständigen Quellen- und
+Integrationsvoraussetzungen folgt für die tatsächliche ganze Funktion:
+
+  gerade:   ||chi_v||_H9 > 1.34*10^13,
+  ungerade: ||chi_v||_H9 > 1.0219*10^12.
+
+Für die FESTE VOLLSTÄNDIGE MAJORANTE W9 folgt außerdem:
+
+  gerade:   ||W9|| > 1.11*10^31,
+  ungerade: ||W9|| > 1.07*10^28.
+
+Dies sind keine Untergrenzen für die tatsächliche A9-Inverse. Eine große
+Majorantennorm allein verwirft auch keine Antwortregel: Dazu fehlen die
+gerichteten Paarungen mit ihren tatsächlichen Residuen. Die hohe Funktion
+U8 f selbst, der N12-Ausschlusstest und A9->A11 bleiben unberechnet.
+
+1. Festgelegte Räume und Operatoren
+
+Alle Definitionen aus FUNKTIONSANSCHLUSS.txt des gebundenen b48e3895-Pakets
+werden unverändert benutzt. a8=3log(2)/2, b9=log(3). H8 und H9 tragen auf
+positiven Halbintervallen Maß 2dx und die physische Momentnullbedingung.
+Die Formeln sind in reeller Notation geschrieben; die komplexe Fassung
+verwendet die entsprechenden sesquilinearen Paarungen und Konjugationen.
+U f(x)=sqrt(2a8)f(a8 x) ist eine Isometrie nach L2((-1,1),dx/2).
+e_n=sqrt(2n+1)P_n, e=e_sigma, m_s(x)=m(a8 x), m_e=<m_s,e>.
+M x=x-e<m_s,x>/m_e auf e-perp. E umfasst die 191 Grade sigma+2 bis
+sigma+382; Y umfasst ALLE höheren Grade derselben Parität.
+
+Phi=U^-1 M E; T_h=P_Y M* U; T_h*=U^-1 M auf Y.
+B ist die vollständige alte Low/High-Kopplung; C ist die neue rationale
+Kongruenzmatrix C_inv aus Common96, delta=18219/10000, rho wie gebunden.
+
+V=C*(Phi*-B T_h/delta),
+U8=T_h*T_h/delta+V*V/(1-rho).
+
+Für r=Jt und das tatsächliche k=K^-1 a_fin Jt gilt
+psi=Lambda Jt-Fk, f=Pi8[Q_b9^np psi]|core,
+chi=psi-J_old U8 f=N*Jt.
+Der korrigierte Minus-Momentlift aus Stufe 1 wird benutzt. p und v werden
+nicht gleichgesetzt: p=alpha v+e mit dem exakten nichtverschwindenden e.
+
+2. Warum die 191 Koordinaten bereits vollständig bestimmbar sind
+
+Setze y=T_h f, d=Phi*f-B y/delta, v_f=C*d und
+c=C v_f/(1-rho). Dann gilt durch direktes Ausmultiplizieren
+
+  U8 f=Phi c+T_h*(y-B*c)/delta.                         (2.1)
+
+M verändert nur die e_sigma-Koordinate. Für jedes y in Y besitzt M y
+deshalb keine E-Koordinate. Für Phi c sind diese Rohkoordinaten genau c:
+
+  E* U(U8 f)=c.                                       (2.2)
+
+Der noch unbekannte hohe Anteil kann diese 191 Koordinaten nicht ändern.
+Das ist eine Koordinatenidentität auf dem vollständigen Hilbertraum,
+kein Weglassen einer Kopplung und kein endlicher Ersatz für Y.
+
+3. Ganze Quellenmodelle aus den gebundenen Archiven
+
+Aus REFINED_INPUT werden benutzt:
+  c_F = old_certificate.source_c_model,
+  b_F = old_certificate.source_Bh_model,
+  c_J = galerkin.old_low_c_model,
+  b_J = galerkin.old_low_Bh_model.
+Es handelt sich um Modelle von Phi*g_F, B T_h g_F, Phi*gJ und B T_h gJ.
+Die Bh-Daten enthalten die vollständigen hohen Antworten samt gebundenem
+Fehler, nicht nur 24, 61 oder 460 getestete Grade.
+
+Für den festen rationalen Mittelpunkt k0 aus dem b48e3895-Paket rechnen wir
+
+  c_f0=c_J t-c_F k0,
+  b_f0=b_J t-b_F k0,
+  d0=c_f0-b_f0/delta,
+  v0=C*d0, c0=C v0/(1-rho).                           (3.1)
+
+Alle gelieferten Eintragsintervalle bleiben erhalten. Die Rechnung nutzt
+180 Dezimalstellen als feste Ganzzahlskala mit gerichteter Rundung,
+rationale Endpunkte und gerichtete Quadratwurzeln. Fließkommazahlen gehen
+in keine Beweisentscheidung ein.
+
+Ein zweiter gebundener Rechenweg verwendet die bereits zusammengesetzten
+Felder Common96.low_feature_J84_model und INNER_LOG.new_low_F_model:
+  v0 = low_J t-low_F k0.
+Alle 1146 Intervalle überlappen. Dies prüft die Feldzuordnung und die
+Reihenfolge C*, nicht unabhängig nochmals sämtliche historischen Integrale.
+Weitere 1910 Intervallvergleiche prüfen die lineare Relation p=alpha v+e
+in fünf verschiedenen Vektorfeldern.
+
+4. Vollständiger Fehlertransport, einschließlich tatsächlichem k
+
+Schreibe Psi=(T_h/sqrt(delta),V/sqrt(1-rho)) als Featureabbildung auf H8.
+Die vollständigen gebundenen Quellenfehler liefern
+
+  (Delta Psi_F)*(Delta Psi_F) <= E_F,
+  (Delta Psi_J)*(Delta Psi_J) <= E_J I84.
+
+E_F und E_J sind finite_feature_error_gram und tail_feature_error_scalar
+aus Common96. Ihre Herleitung und vollständigen analytischen Quellfehler
+sind übernommene Voraussetzungen. E_J ist eine Operatorfehlergrenze,
+nicht bloß eine Spaltenfehlergrenze. U_F0 ist der erste Zwölferblock des
+ganzen Modellgrams U96_model; K ist die feste rationale Zwölferuntermetrik.
+
+Mit der bereits gerichteten Schranke eta_t >= ||k-k0||_K gilt
+
+  e_fix = sqrt(E_J)||t|| + sqrt(k0* E_F k0),
+  tau_F = tr(K^-1 U_F0), epsilon_F = tr(K^-1 E_F),
+  e_k = (sqrt(tau_F)+sqrt(epsilon_F)) eta_t,
+  ||Psi_actual f - Psi_model f0|| <= e_fix+e_k.        (4.1)
+
+Beweis: Zerlege den Fehler in Delta Psi_J t-Delta Psi_F k0 und
+-Psi_F,actual(k-k0). Für den zweiten Term gilt
+||Psi_F,actual K^-1/2|| <= sqrt(tau_F)+sqrt(epsilon_F).
+Das Normdreieck bezahlt sämtliche Kreuzfehler und benötigt keine
+Unabhängigkeit zwischen k und den Quellen. Aus der niedrigen Komponente
+von (4.1) und c=C Vf/(1-rho) folgt
+
+  ||c-c0|| <= ||C||_HS (e_fix+e_k)/sqrt(1-rho).       (4.2)
+
+Gerichtet erhalten wir für t=v ungefähr:
+
+                 gerade                 ungerade
+||c0||           1.345361021394e13       1.022028928866e12
+Fehlergrenze     5.238132224244e10       8.531208273952e7
+
+Die rationalen Einschließungen stehen in FINITE_ACTION.json; diese
+Dezimalwerte sind nur zur Orientierung gerundet. Der Fehler aus k ist
+hier entscheidend und wurde nicht durch eine Mittelpunktrechnung ersetzt.
+Insbesondere wird KEINE untere W9-Norm als Fehlerobergrenze eingesetzt.
+
+Eine direkte Doppelgenauigkeitsrechnung von (3.1) wich stark ab. Die
+Kongruenzmatrizen haben Hilbert-Schmidt-Normen von etwa 8.83e12 und 3.47e11;
+die starke Auslöschung muss vor der nachfolgenden Verstärkung kontrolliert
+werden. Das verwirft nicht einen schnellen punktweisen f-Evaluator,
+wohl aber eine ungeprüfte Weitergabe seiner relativen Fehler an c.
+
+5. Von den niedrigen Koordinaten zur ganzen chi-Norm
+
+Sei s=psi|Schale und w0=Pi8 psi|core. Da psi momentnull ist,
+
+  psi=Lambda s+J_old w0,
+  chi=Lambda s+J_old(w0-U8 f).
+
+Die beiden Summanden sind orthogonal in H9. Daher gilt vollständig
+
+  ||chi||^2=W_X[s]+||w0-U8 f||^2
+             >= ||E*U w0-c||^2.                     (5.1)
+
+Gerade diese orthogonale Zerlegung ist nötig: Die rohe Kernrestriktion
+von psi allein ist im Allgemeinen nicht momentnull. Ein bloßes Streichen
+ihres Momentträgers wäre nicht zulässig.
+
+Für psi0|core=P(x/a8)+d_m m(x) ist w00=Pi8 P. Schreibe
+P=sum l_n P_n und lambda_P=a8 sum l_n mellin(n,a8). Dann sind für n in E
+
+  (E*U w00)_n=sqrt(2a8)[l_n/sqrt(2n+1)
+       -(lambda_P/mu)sqrt(2n+1)mellin(n,a8)],          (5.2)
+
+wobei l_n=0 oberhalb Grad 9 und alle Momente der Formel vollständig sind.
+Die bekannte Kernfehlergrenze aus Stufe 1 ist durch die Kontraktivität
+von Pi8 zugleich eine Fehlergrenze für w0-w00. Somit folgt aus (5.1)
+
+  ||chi_t|| >= lower(||E*U w00-c0||)
+                  -upper(c_error)-upper(core_error). (5.3)
+
+Alle sechs Werte sind positiv. Die ungekürzten rationalen unteren Grenzen
+stehen im Ergebnis. Näherungswerte der unteren Grenzen:
+
+              gerade                    ungerade
+t=v           1.340123362245979e13      1.021946170029137e12
+t=p           7.587753130887124e17      9.578126661250032e15
+
+6. Aussage über die volle feste W9-Majorante
+
+Die gebundene A9-Inversherleitung liefert mit q=v*P_upper v>0 für alle h
+  <h,W9 h> >= 11/(10q) |<chi_p,h>|^2.
+Für den beschränkten positiven W9 folgt daraus
+  ||W9|| >= 11/(10q) ||chi_p||^2.
+
+Einsetzen der gerichteten (5.3) liefert die sicheren runden Grenzen am
+Anfang. Hier wird p vollständig einschließlich e benutzt. Die Aussage
+betrifft die gewählte obere Majorante. W9 >= A9^-1 impliziert keinerlei
+entsprechende untere Schranke für A9^-1. Auch große ||chi|| oder ||W9||
+erzwingen keine große Paarung mit einer bestimmten Residualfamilie.
+
+7. Neuer direkter Skalaranschluss ohne vollständige U8-Funktionsauswertung
+
+Für eine spätere Residualfunktion h in H9 sei h8=J_old*h=Pi8 h|core.
+Setze a_f=<e_sigma,Uf>, a_h=<e_sigma,Uh8>,
+gamma_m=||m_s||^2/m_e^2=mu/[a8(2sigma+1)mellin(sigma,a8)^2].
+
+Da f,h8 momentnull sind und M*x=x-m_s<e_sigma,x>/m_e, gilt exakt
+
+  <T_h f,T_h h8>
+    = <f,h8>+gamma_m a_f a_h-<Phi*f,Phi*h8>.         (7.1)
+
+Denn M*x liegt in e_sigma-perp; E und Y zerlegen diesen ganzen Raum.
+Beim Ausmultiplizieren von <M*Uf,M*Uh8> verschwinden die beiden gemischten
+Momentterme; der positive gamma_m-Term bleibt. Mit (2.1) folgt
+
+  <chi_t,h> = <psi_t,h>
+    -[<f_t,h8>+gamma_m a_f a_h-<Phi*f_t,Phi*h8>]/delta
+    -<Vf_t,Vh8>/(1-rho).                            (7.2)
+
+Das ist ein vollständiger Skalarweg: Die hohe Legendre-Summe ist durch
+eine ganze L2-Paarung ersetzt, nicht abgeschnitten. Logarithmen, Sprünge
+und alle Kreuzterme bleiben in dieser Paarung enthalten. Die Daten dieses
+Pakets liefern Phi*f_t und Vf_t einschließlich (4.1). Für die konkreten
+C_p- und D12-Funktionen fehlen noch die anderen vollständigen Paarungen
+und ihre gerichteten Fehler. (7.2) ist hier hergeleitet, NICHT numerisch
+für die zwölf N12-Residuen ausgewertet.
+
+Exakte rationale Kontrollmodelle prüfen (2.2), den ganzen U8-Skalar und
+(7.1) für vier Quellenpaare in einer nichtorthogonalen Momentgeometrie. 20 positive
+Identitätstests bestehen; acht Kontrollen verwerfen das Weglassen des
+Moment- oder hohen Terms. Sie kontrollieren Faktoren und Projektionen,
+ersetzen aber keinen analytischen Operatorbeweis.
+
+8. Abgleich mit der eingehenden Stufe 2 und Reproduktion
+
+Die 22 Dateien des eingehenden Diagnosepakets stimmen mit seinem Manifest
+überein. Aus seinen gerundeten Rohkoeffizienten werden die ersten acht
+Phi-Paarungen je Parität zurückgebildet; ihre Abweichungen vom Archivweg
+liegen unter 1.76e-6 absolut. Dieser Abgleich ist diagnostisch, kein
+Fehlerzertifikat für die 468-Punkte-Quadratur. Der mpmath-Evaluator wurde
+hier nicht nochmals auf dem gesamten Netz ausgeführt. Die Diagnose einer
+kleinen Restnorm oberhalb Grad 61 wird nirgends als globale Schranke benutzt.
+
+Die unkomprimierten Originalhashes der beiden großen Quelldateien werden
+gegen SNAPSHOT_ORIGINS des b48e3895/2ca3c682-Quellankers geprüft. Zusätzlich
+werden die verwendeten Snapshot- und Archivhashes, C, delta, rho und alle
+exakten Richtungskoeffizienten abgeglichen. Die Quellen werden unverändert
+gzip-komprimiert beigelegt. Die historischen Statusfelder bleiben erhalten.
+
+Reproduktion mit Python-Standardbibliothek, neues Ausgabeziel erforderlich:
+
+  python -B -X utf8 certify_stage3.py --bridge-archive PATH_TO_B48_ZIP
+      --output PATH_TO_NEW_OUTPUT_DIRECTORY
+
+Benötigtes externes Archiv:
+Objekt-X-Nstar-Jp-Funktionsanschluss-und-Koeffizienten-2026-10-16.zip
+SHA256 b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b
+
+Kein GitHub-Eingriff, keine erneuten großen historischen Integrationen,
+kein neuer Horizontabschluss, keine Konstruktion von Objekt X.
+Die externe mathematische Gesamtprüfung bleibt offen.

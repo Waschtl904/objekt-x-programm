@@ -1,0 +1,15 @@
+{
+  "ANSCHLUSS_GPT1.txt": "bb18d736b23530b468a4c753ec8cdf81fa7bc4b2a3f6df5b66495776be712543",
+  "certify_stage3.py": "272a71b2f3fc37eabb7b3407571e84326c3e2bb731a1531007a814221d74b32b",
+  "exact_coordinate_controls.py": "849ad64cb03a991dafada29e32d7f307ef802ace76b629d7d759472446bd08a8",
+  "expected/FINITE_ACTION.json": "689636e2b11efcc828100f93b512d4375c8bfebfe8c4a37e3c7c1320f31ed551",
+  "expected/RECEIPT.json": "1490cefc5e9a550d2f85031926f83a8cedb6afca442b9ffa20f998b64f132cea",
+  "HERLEITUNG.txt": "04b544786dbf23f05b4c661122c68031702d2308795120eed3b51ff188a35d58",
+  "inputs/Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16.zip": "940cd40e08be5884e6cd2a7e96e2e5815892bfb14a9e9c2d9b04d8aab317dd49",
+  "inputs/Objekt-X-Stufe1v2-Stufe2-Diagnose-2026-10-16.zip": "62e9f6d860ba98f4defc651b465cfc431f891cd058f52ddaf88d54073da18f13",
+  "inputs/REFINED_COMMON96.json.gz": "306acbacf5f4089fe703f655bf4340087f0ae88aeaab416c0282e9e24c1638df",
+  "inputs/REFINED_INPUT.json.gz": "c67a44d7cc052bff32ed2768b81595367c710f9308f0f1716b213a74766b1e64",
+  "sources/COMMON96_HERLEITUNG.txt": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd",
+  "sources/RESPONSE84_PROOF.txt": "122fabae61dad7d6d6916d899ea8ae8c44a1ead451ac68919e6ce9304f002e61",
+  "vendor/source_core.py": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772"
+}

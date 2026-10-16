@@ -1,0 +1,55 @@
+OBJEKT X — ANSCHLUSS AN STUFE 3, 16.10.2026
+
+Arbeitsbasis: unverändertes Stufe1v2/Stufe2-Diagnosearchiv
+62e9f6d860ba98f4defc651b465cfc431f891cd058f52ddaf88d54073da18f13.
+Historischer Eingabehead 0ded564; in dieser Gegenprüfung nicht live abgefragt.
+Kein GitHub-Schreibauftrag und keine Mergefreigabe.
+
+Neu vorhanden:
+- fast_source.py: analytisch zerlegter Gleitkomma-Evaluator für das ganze
+  korrigierte PSI-Mittelpunktmodell; Kern mit dividierten Differenzen,
+  vollständige singuläre Schale über Standard-Legendre-Q_n, regulärer
+  Kernelrest separat, analytischer unendlicher Kernschwanz.
+- pairings.py: neun verschiedene Sprungzellen, Randverfeinerung, exakter
+  führender Logmomentabzug; 191 Einträge Phi*f je Parität.
+- STUFE3_PAIRINGS_DIAGNOSTIC.json: 191 Paarungen je Parität des feinsten
+  Laufs sowie numerische Netzvergleiche. Keine Intervalldaten!
+- 12 frische mpmath-Referenzpunkte bei 38 Stellen; max. gemessene relative
+  Abweichung <5.7e-14. 936 alte Netzpunkte kontrolliert. 384 rationale
+  Logmomentgleichheiten. Original post.py-Ausgabe bytegleich reproduziert.
+
+Wichtige Abgrenzungen:
+1. Kein vollständiger Original-Netzreplay; nur Postprocessing und zwölf
+   neue radiale Referenzintegrationen. Fremdes certify.py nicht neu gelaufen.
+2. Die 191 Paarungen sind nur Phi*f. B8*y, B8*c, d, U8*f und chi|Kern
+   sind NICHT gerechnet. Keine auswertbare obere W9-Norm, kein Q_D.
+3. Die normierten Tailzahlen des alten Netzes sind nicht zertifiziert.
+   Die neuen rohen Parseval-Schätzer sind ebenfalls nur Diagnose:
+   >61 etwa 616.68448 / 715.05791; >382/383 etwa 135.23728 / 147.07328.
+   Daraus folgt keine Dominanz von Phi*c in U8*f.
+4. Rechne nur mit korrigiertem lambda_total (Minus). Im alten Stufe-1-v2-
+   Bericht stehen unter dem Korrekturkopf noch überholte Formeln und ein
+   alter falscher kopierbarer Prompt; nicht erneut übernehmen.
+5. Bei späterem unteren Test p direkt oder p=alpha*v+e vollständig führen.
+   Hier wurde nur t=v gerechnet. Kandidat fixed_X nicht mit audit_S mischen.
+
+Nächster konkreter Auftrag:
+A. Numerische Reproduktion der neuen 191 Phi*f-Einträge und Konsistenz
+   der Basis-/Momentnormierung gegen den gebundenen U8-Funktionsanschluss.
+B. Die 191 ganzen B8*e_i-Funktionen einschließlich Randlogarithmen und
+   Primverschiebungen bereitstellen, die Paarungen für B8*y einschließen.
+C. y=P_Y M*U f als GANZE Funktion behandeln (Identität minus endliche
+   niedrige Projektion), nicht als abgeschnittene hohe Koeffizientenliste.
+D. Gemeinsames d=Phi*f-B8*y/delta berechnen und erst dann
+   c=C_inv C_inv* d/(1-rho). Korrelierte Fehler vor der Verstärkung mitführen.
+E. U8*f nach voller Formel (A); Kontrolle des Mellinmoments und der
+   bereits hergeleiteten Kern-/Schalennormidentität. Fehlertoleranzen an
+   der späteren Skalarpaarung und ihrem Entscheidungsabstand ausrichten.
+
+Die schnelle Implementierung benötigt NumPy, SciPy, mpmath und eine
+longdouble-Mantisse mit mindestens 63 Bits (auf dem getesteten Linux erfüllt).
+Sie ist kein Intervallcertifier. Alle numerischen Annahmeschwellen sind
+Diagnosekontrollen und dürfen nicht als Beweisflags weitergereicht werden.
+
+Reproduktion:
+python -B verify_diagnostic.py --output ../new-unused-directory --full-reference

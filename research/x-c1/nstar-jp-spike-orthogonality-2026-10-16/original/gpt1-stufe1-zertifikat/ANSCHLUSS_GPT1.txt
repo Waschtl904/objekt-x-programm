@@ -1,0 +1,49 @@
+Objekt X — Rückgabe der Stufe-1-Gegenprüfung, 16. Oktober 2026
+
+Mit HERLEITUNG.txt beginnen. Die Schalenwerte sind jetzt unter den
+gebundenen Voraussetzungen gerichtet eingeschlossen. Der gemeinsame
+K-Fehlertransport ist erheblich schärfer als die Summe einzelner Radien.
+
+Vor Stufe 2 zwei Korrekturen übernehmen:
+
+1. lambda_total=lambda(r)-sum_j k_(4+j)lambda(Y_j), NICHT plus.
+   Das Plus verletzt die vollständige physische Momentbedingung; der
+   neue Prüfer weist einen von null getrennten Momentfehler nach.
+   Originaldateien in incoming bleiben unverändert. PSI_CORRECTED.json
+   enthält den korrigierten ganzen Funktionsansatz und seine Fehlerstruktur.
+
+2. p=P_upper v ist nur nahezu parallel zu v; q=v*P_upper v ist nicht
+   exakt ||p||. Benutze alpha=q/||v||^2 und e=p-alpha v.
+   Dann chi_p=alpha chi_v+chi_e exakt. e ist rational mitgeliefert und
+   psi_e ebenfalls aufgebaut. Eine relative O(10^-14)-Aussage für die
+   Residualpaarung folgt ohne Kontrolle von ell_e nicht.
+
+Neu gerichtet eingeschlossen für v, Norm auf der Schale:
+  gerade   (2013.598122, 2013.598426),
+  ungerade (2199.971192, 2199.971205).
+
+Die Sprünge an a8 sind nicht null. Der innere Quellterm Pi8 Qpsi hat den
+führenden Randterm (psi(a8+)-psi(a8-))/2 * log(a8-x). Seine Koeffizienten
+sind in DIRECTED_RESULTS.json gebunden. Die ganze Quelle ist noch offen.
+
+Neue Konsequenz für die vollständige GEWÄHLTE W9-Majorante auf H9:
+  ||W9|| > 2.52e11 gerade, >4.98e10 ungerade.
+Beweis über die ganze Rieszfunktion chi_p und deren Schalenrestriktion.
+Keine solche Untergrenze für A9^-1; keine Fehlerobergrenze; kein N12-Ausschluss.
+
+Für Stufe 2 weiter die gemeinsame korrigierte psi auswerten. Ein
+L2-Modellfehler allein darf nicht durch den unbeschränkten Q-Operator
+geschoben werden. Die bekannte strukturierte Abweichung ist -F delta_k
+mit ||delta_k||_K<=eta_t. Die vollständigen zwölf Quellbilder bezahlen
+diesen Fehler. Für Stufe 3 bleibt U8 die vollständige Common96-Majorante.
+
+Reproduktion (neues Zielverzeichnis; nur Standardbibliothek):
+  python -B -X utf8 certify.py --bridge-archive ../Objekt-X-Nstar-Jp-Funktionsanschluss-und-Koeffizienten-2026-10-16.zip --output ../neuer-pruefordner
+
+Das unveränderte Quellen-/Koeffizientenarchiv mit SHA b48e3895...6d57b
+ist separat erforderlich. expected enthält vier Referenzdateien; ein
+erneuter Lauf vergleicht alle vier bytegenau. MANIFEST.json bindet die
+Originaldiagnose, den Prüfer, die Intervallbibliothek und die Ergebnisse.
+
+Keine GitHub-Änderung, keine Änderung der eingefrorenen N12-Regel.
+U8-Aktion, ganze Residualpaarungen, A9->A11 und externe Prüfung bleiben offen.
