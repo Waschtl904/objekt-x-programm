@@ -1,0 +1,9 @@
+{
+  "original_archive_sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee",
+  "original_response_norm_sha256": "98d1b655ab1e819b2753996a77c0d8e70ff0319e43d2c7d9b334da67e882f255",
+  "patched_response_norm_sha256": "81c2e937af6ea14ec1bd4fd0f06689fa8006bcb90073017a980688bfbcf2be73",
+  "change": "One additional precondition check h.high < 101/1000; no numerical formula or output field changed.",
+  "audit_S_role": "fixed rational response candidate, not a certified inverse",
+  "fixed_X_preserved": true,
+  "weighted_model_error_is_still_conditional": true
+}

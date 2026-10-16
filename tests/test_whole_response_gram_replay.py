@@ -43,6 +43,22 @@ class WholeResponseGramReplayTests(unittest.TestCase):
         c = copy.deepcopy(self.catalog); c['frozen_response_rule']['sha256'] = '0'*64
         with self.assertRaisesRegex(ValueError, 'frozen response rule'): replay.check_catalog(c)
 
+    def test_addendum_receipt_guards(self):
+        exp = json.loads((replay.PACKAGE/'reports/EXPECTED_ADDENDUM_RECEIPT.json').read_bytes())
+        replay.check_addendum_receipt(copy.deepcopy(exp), exp)
+        a = copy.deepcopy(exp); a['lower_norm_substitution_rejected'] = False
+        with self.assertRaises(ValueError): replay.check_addendum_receipt(a, exp)
+        a = copy.deepcopy(exp); a['A9_A11_closed'] = True
+        with self.assertRaisesRegex(ValueError, 'scope promoted'): replay.check_addendum_receipt(a, exp)
+
+    def test_parity_constants(self):
+        out = replay.check_parity_constants()
+        self.assertIn('g_even_enclosure', out); self.assertIn('g_odd_enclosure', out)
+
+    def test_addendum_identity_guarded(self):
+        c = copy.deepcopy(self.catalog); c['archives'][c['addendum_archive']]['embeds_original_archive_sha256'] = '0'*64
+        with self.assertRaisesRegex(ValueError, 'embeds a different original'): replay.check_catalog(c)
+
     def test_catalog_hash_bound(self):
         self.assertEqual(replay.digest(replay.PACKAGE/'SOURCE_BINDINGS.json'),
                          (replay.PACKAGE/'SOURCE_BINDINGS.sha256').read_text().split()[0])

@@ -1,0 +1,27 @@
+Ja: Bitte die Integration des Antwortgram-Pakets im bestätigten Scope
+vorbereiten, mit Originalarchiv und diesem sichtbaren Nachtrag.
+
+Die h-Prüfung ist ergänzt. Der Nachtragsprüfer kontrolliert unabhängig
+h=atanh(1/10)<101/1000 und baut die vier Antwortgrame frisch neu auf.
+Alle mathematischen Ergebnisdateien müssen bytegleich zum Original bleiben.
+audit_S ist weiterhin ausdrücklich ein rationaler Antwortkandidat, keine
+zertifizierte exakte Inverse. fixed_X bleibt die eingefrorene Hauptregel.
+
+Bitte den letzten Spike-Abschnitt deines Prüftextes nicht mit übernehmen:
+- Eine Untergrenze für ||W9|| kann in der oberen Fehlerrechnung k*w keine
+  obere Normschranke ersetzen. Ungefähr 4e-57 ist kein zertifizierter Preis.
+- Der ausgezeichnete Skalar verwendet die transformierte Quelle N R_hat z.
+  Die alte U8-Energie und die Zwölferenergie bleiben zusätzlich zu bezahlen.
+- Ein Scheitern einer groben oberen Spike-Abschätzung ist noch kein
+  CERTIFICATE_FAIL der ursprünglichen festen Antwortregel.
+- Der direkte Quadraturcheck ist ergänzende numerische Evidenz; der Beweis
+  der Matrixordnung bleibt die rationale Rechnung mit vollständigen Resten.
+
+NACHTRAG.txt enthält die vollständige Begründung und den Bezug zum bereits
+ausgegebenen Spike-Artefaktprüfpaket. Dort liegt auch der gültige untere
+Skalarvergleich mit P_upper v vor. Für den nächsten Rechenschritt bitte
+diesen korrigierten Anschluss verwenden, einschließlich Momentprojektion.
+
+Noch nicht behaupten: Q_D, obere W9-Norm, vollständige W9-Residualenergie,
+A9->A11 oder eine externe mathematische Gesamtbegutachtung.
+Originalarchive und historische Ergebnisdateien bleiben unverändert.

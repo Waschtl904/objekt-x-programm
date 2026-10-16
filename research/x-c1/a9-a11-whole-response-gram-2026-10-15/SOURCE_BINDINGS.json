@@ -140,6 +140,48 @@
           "sha256": "cec69b170b12da91f95d8b6cf000c29a3ac6a7b0ed64ef26de5f046854a6016a"
         }
       }
+    },
+    "archives/Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15.zip": {
+      "role": "addendum",
+      "sha256": "00a66e8584062b8057264b9b0dda48f89a013dc9b3756241a770bb74f2ded0a0",
+      "bytes": 22195279,
+      "members": {
+        "Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15/ANSCHLUSS_GPT1.txt": {
+          "bytes": 1682,
+          "sha256": "69fa5ef8f51dcba8fd29ef01faba4c273bcbd81c20bdb10c1bb03d337df52b31"
+        },
+        "Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15/MANIFEST.json": {
+          "bytes": 709,
+          "sha256": "18f3adb2905130ede22b543ca2154c7e7c48d16f3bdf60a557ac557eedddc9ae"
+        },
+        "Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15/NACHTRAG.txt": {
+          "bytes": 5566,
+          "sha256": "aa9fb516c8958d646334efc8dad0037517c7a02cfb5a5a61243eeb019e31f422"
+        },
+        "Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15/originals/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip": {
+          "bytes": 22180599,
+          "sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee"
+        },
+        "Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15/PATCH_BINDING.json": {
+          "bytes": 581,
+          "sha256": "21ef1e57df6a0b499d56aef63a42ad8079a45df1aca5abdf08aa28155cddc9d3"
+        },
+        "Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15/response_norm.py": {
+          "bytes": 7740,
+          "sha256": "81c2e937af6ea14ec1bd4fd0f06689fa8006bcb90073017a980688bfbcf2be73"
+        },
+        "Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15/reviews/USER_COUNTERCHECK.txt": {
+          "bytes": 5925,
+          "sha256": "a747ceed7bfbdab02177802f718d797eeceabd8791ce6a4b69f65692436cf59c"
+        },
+        "Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15/verify.py": {
+          "bytes": 4669,
+          "sha256": "eb48d2d07434ae4e8e8d96e70cf1a14cdd6b5400f9be1138317759fd2c95ab1e"
+        }
+      },
+      "embeds_original_archive_sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee",
+      "patched_response_norm_sha256": "81c2e937af6ea14ec1bd4fd0f06689fa8006bcb90073017a980688bfbcf2be73",
+      "original_response_norm_sha256": "98d1b655ab1e819b2753996a77c0d8e70ff0319e43d2c7d9b334da67e882f255"
     }
   },
   "visible_copies": {
@@ -202,6 +244,34 @@
     "original/input/objekt-x-f12-d12-audit-2026-10-15/README.txt": {
       "archive": "archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip",
       "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/input/objekt-x-f12-d12-audit-2026-10-15/README.txt"
+    },
+    "original/nachtrag/NACHTRAG.txt": {
+      "archive": "archives/Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15.zip",
+      "member": "Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15/NACHTRAG.txt"
+    },
+    "original/nachtrag/ANSCHLUSS_GPT1.txt": {
+      "archive": "archives/Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15.zip",
+      "member": "Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15/ANSCHLUSS_GPT1.txt"
+    },
+    "original/nachtrag/PATCH_BINDING.json": {
+      "archive": "archives/Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15.zip",
+      "member": "Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15/PATCH_BINDING.json"
+    },
+    "original/nachtrag/MANIFEST.json": {
+      "archive": "archives/Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15.zip",
+      "member": "Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15/MANIFEST.json"
+    },
+    "original/nachtrag/response_norm.py": {
+      "archive": "archives/Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15.zip",
+      "member": "Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15/response_norm.py"
+    },
+    "original/nachtrag/verify.py": {
+      "archive": "archives/Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15.zip",
+      "member": "Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15/verify.py"
+    },
+    "original/nachtrag/reviews/USER_COUNTERCHECK.txt": {
+      "archive": "archives/Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15.zip",
+      "member": "Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15/reviews/USER_COUNTERCHECK.txt"
     }
   },
   "replay_archive": "archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip",
@@ -212,6 +282,14 @@
   },
   "frozen_response_rule": {
     "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/inputs/FROZEN_RESPONSE12.json",
-    "sha256": "132959da5d34c0c89471ee15f7c34d8b4a42ad48c641b6c4db5181113d11426a"
+    "sha256": "132959da5d34c0c89471ee15f7c34d8b4a42ad48c641b6c4db5181113d11426a",
+    "rule_id": "A9_A11_N12_MIDPOINT_INVERSE_60_V1"
+  },
+  "addendum_archive": "archives/Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15.zip",
+  "addendum_root": "Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15",
+  "spike_artefact_package_reference": {
+    "name": "Objekt-X-A9-Spike-Artefaktpruefung-und-Korrekter-W9-Anschluss-2026-10-15.zip",
+    "sha256": "7f7129945b38768a5ec88994b783211db1ceb0810129ffc4ea4ba7db5beb1f5e",
+    "status": "referenced in NACHTRAG.txt, not bound here, not executed"
   }
 }

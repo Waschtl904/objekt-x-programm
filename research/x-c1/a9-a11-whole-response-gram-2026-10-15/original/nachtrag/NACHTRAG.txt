@@ -1,0 +1,108 @@
+Objekt X — Nachtrag zur Gegenprüfung des vollständigen Antwortgrams
+15. Oktober 2026 — AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Gültiger Umfang der Bestätigung
+
+Die Gegenprüfung bestätigt den vollständigen Antwortgram und den direkten
+K-Modellfehler im bisherigen bedingten Scope. Die zusätzliche direkte
+Quadratur ist ein wertvoller numerischer Gegencheck. Ohne gerichtete
+Quadraturrestschranke wird ihr kleinster numerischer Eigenwert jedoch nicht
+als weiterer Beweis der Matrixordnung in allen Richtungen verwendet.
+Diese Ordnung folgt weiterhin aus dem rationalen Gram-Nachweis samt
+vollständigen analytischen Resten im Originalpaket.
+
+2. Explizite Voraussetzung der Momentreihe
+
+Die einzige Änderung an response_norm.py ist die zusätzliche Prüfung
+  need(h.high < Q(101,1000),'moment Taylor shell width')
+unmittelbar nach der bisherigen s-Prüfung und vor Bildung des Restpreises.
+Das ursprüngliche Archiv bleibt unverändert und wird vollständig eingebettet.
+Die Änderung wird nur an einer frisch ausgepackten Arbeitskopie angewandt.
+Alle Formeln, Koeffizienten, Antwortregeln und Fehlerpreise bleiben erhalten.
+
+Eine davon unabhängige elementare Schranke ergibt sich aus
+  h=(log(11)-log(9))/2=atanh(1/10).
+Für q=1/10 und jedes N>=1 gilt durch Integration der geometrischen Reihe:
+  sum_(k=0)^(N-1) q^(2k+1)/(2k+1) < h
+  < sum_(k=0)^(N-1) q^(2k+1)/(2k+1)
+      +q^(2N+1)/[(2N+1)(1-q²)].
+Schon N=1 liefert h<1/10+1/2970<101/1000. Der Prüfer verwendet N=40
+und bindet das gerichtete 300-stellige h-Intervall des Generators darin.
+
+3. Unveränderte Regeln für Weiterverwendung
+
+fixed_X bleibt die eingefrorene rationale Antwortregel. audit_S bleibt
+ein gesonderter rationaler Kandidat, definiert als Mittel der gerichteten
+Inversgrenzen. Aus Linv<=A^-1<=Uinv folgt nicht (Linv+Uinv)/2=A^-1.
+Keine der Modellfehlerrechnungen darf deshalb durch eine behauptete exakte
+Galerkin-Inversidentität ersetzt werden. Die allgemeine K_P/R-Identität gilt.
+
+Die richtungsabhängige Schnittstelle bleibt
+  Q_D >= (D-D_hat)* W9 (D-D_hat) >=0,
+  ||(R-R_hat)*W9(R-R_hat)|| <= tr(Q_D G_T).
+Die numerisch berichtete Konditionierung motiviert diese Schnittstelle.
+Ein tatsächlicher Verlust von 25 Größenordnungen bei einer skalaren
+Ersetzung hängt aber von der Ausrichtung des noch unbekannten Q_D ab.
+Er ist aus der Konditionszahl allein weder zwingend noch bereits gemessen.
+
+4. Keine bezahlte W9-Fehlerenergie durch Einsetzen einer Untergrenze
+
+Die ursprünglichen Werte 5.90e-62 und 7.75e-64 sind Koeffizienten k in
+  Fehlerenergie <= k w, vorausgesetzt w>=||W9||.
+Eine UNTERgrenze für ||W9|| darf dort nicht eingesetzt werden. Auch wenn
+||W9||>=62000 bewiesen wäre, ergäbe k*62000 keine obere Fehlerschranke.
+Der Wert ungefähr 4e-57 aus dem Gegenprüftext ist deshalb kein zertifizierter
+Fehlerpreis. Ohne obere W9-Norm oder gerichtetes Q_D bleibt dieser Preis offen.
+
+Exaktes Gegenmodell: Ein Fehleroperator der Norm 10^-31 und W=10^100 I
+haben Energie 10^38. Die wahre Aussage ||W||>=62282 erlaubt nicht die
+falsche Obergrenze 62282*10^-62. Der Prüfer kontrolliert diese Richtung.
+
+5. Richtiger Anschluss an die Spike-Kalibrierung
+
+Die in #226 bewiesene Rang-eins-Obermatrix betrifft zunächst H_*^-1 auf T.
+Sie liefert weder ein entsprechendes unteres Gewicht der vollen W9 auf
+dem rohen Vektor Jv noch die behauptete globale Dominanz eines Skalars.
+Der korrekte volle Anschluss aus A9-HERLEITUNG §6 lautet
+
+ f8=J_old* f,
+ v12=F* f-g_F*U8 f8,
+ nu=Nf=Lambda_T* f-g*U8 f8-a_fin*K^-1 v12,
+ <f,W9 f>=<f8,U8 f8>+v12*K^-1v12
+     +(11/10)[beta^-1<nu,R_L nu>+(J*nu)*P_upper(J*nu)].
+
+Der ausgezeichnete obere Skalar ist daher <Jv,N R_hat z>. Die übrigen
+Energien und ihre gemeinsame Quellentransformation müssen erhalten bleiben.
+Ein zu großer Wert einer zusätzlich gewählten OBERschranke ist noch kein
+CERTIFICATE_FAIL der ursprünglichen festen Antwortregel.
+
+Ein gültiger unterer Skalarvergleich steht im getrennten Spike-Prüfpaket:
+  p=P_upper v, q=v*P_upper v,
+  <f,W9 f> >= (11/10)|<Jp,Nf>|²/q.
+Er folgt aus Cauchy-Schwarz in der P_upper-Metrik. Die endlichen Daten sind
+dort exakt berechnet; die vollständigen skalaren Restfunktionen noch nicht.
+Das Paket ist SHA-256 gebunden als
+  Objekt-X-A9-Spike-Artefaktpruefung-und-Korrekter-W9-Anschluss-2026-10-15.zip
+  7f7129945b38768a5ec88994b783211db1ceb0810129ffc4ea4ba7db5beb1f5e.
+Dieser Hinweis ist ein Anschlussverweis, keine neue Ausführung dieses Pakets.
+
+6. Integration und Reproduktion
+
+Das Antwortgram-Paket kann als Forschungspaket im bestätigten Umfang zur
+Integration vorbereitet werden. Dabei Originalarchiv und Bindungen erhalten,
+diesen Nachtrag als sichtbare Revision aufnehmen und die unbegründeten
+W9-/Spike-Folgerungen des Gegenprüftextes nicht als Resultat übernehmen.
+Der Rechenauftrag für den nächsten Skalarvergleich muss N berücksichtigen.
+
+  python -B -X utf8 verify.py --output ../new-unused-directory
+
+Der Nachtragsprüfer kontrolliert die Originalbindungen, patcht nur seine
+frische Arbeitskopie und erzeugt alle vier Antwortgrame mit dem neuen Guard.
+RESPONSE_ENERGY.json und RESPONSE_CHECK.json müssen bytegleich zum Original
+sein. Die separate Faltungsprüfung kontrolliert erneut 576 Gram-Einträge
+und 48 positive Pivots. Historische Großintegrationen werden nicht wiederholt.
+
+Q_D, obere W9-Norm, vollständige gewichtete Restenergie, A9->A11, Objekt X
+und externe mathematische Gesamtbegutachtung bleiben offen. GitHub wurde
+für diesen Nachtrag nicht verändert; eine Integration oder ein Merge wird
+nicht als bereits erfolgt ausgegeben.
