@@ -1,0 +1,18 @@
+{
+  "original_verifier_sha256": "a7aac58aeb912262d95c33e2316a97ef640aa35a987403f3efd1dd9ef59713fc",
+  "source_modified": false,
+  "comparison_change": "only CRLF to LF in two generated audit JSON comparisons",
+  "full_original_and_independent_calculations_rerun": true,
+  "comparisons": {
+    "INDEPENDENT_FUNCTIONS.json": {
+      "raw_byte_equal": false,
+      "LF_normalized_equal": true,
+      "JSON_equal": true
+    },
+    "RESPONSE_ERROR_BUDGET.json": {
+      "raw_byte_equal": false,
+      "LF_normalized_equal": true,
+      "JSON_equal": true
+    }
+  }
+}

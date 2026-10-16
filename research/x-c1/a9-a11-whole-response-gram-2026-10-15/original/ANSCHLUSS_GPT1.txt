@@ -1,0 +1,67 @@
+Objekt X — vollständige Antwortgrame statt getrennter Normverluste
+15. Oktober 2026
+
+Mit PROOF.txt beginnen, insbesondere §§3–5.
+
+Die neue F12/D12-Gegenprüfung ist frisch ausgeführt. Alle drei ursprünglichen
+Ergebnisdateien sind bytegleich. Bei den beiden neu generierten Audit-JSONs
+unterscheidet sich unter Windows ausschließlich CRLF von LF. Die JSON-Werte
+sind identisch; der vollständige frische Replay mit expliziter, eng begrenzter
+Transportkorrektur besteht. Originale und sämtliche Hashbindungen bleiben
+unverändert. TRANSPORT_RECEIPT.json dokumentiert den Umfang.
+
+Die exakte Momentprojektion wird übernommen:
+ D_hat=Pi_a D_tilde, R_hat=C-D_hat T.
+Alpha_j ist weiterhin das exakte Momentintegral, kein gerundeter Mittelpunkt.
+Die Quelle C bleibt ganz und exakt. Der bestätigte ursprüngliche D-Fehler
+wird durch die Projektion nicht größer. Die Ergänzung ||Phi12||²<501/500
+rechtfertigt den unveränderten A12-Radius.
+
+NEU: Der GANZE gemeinsame Antwortgram ist jetzt berechnet.
+Für die bereits eingefrorene Antwort X und separat für deinen Kandidaten S
+liegen je Parität rationale 12x12-Matrizen G_T>=T T* vor, T=X F_hat bzw.
+T=S F_hat, im vollständigen physischen Schalenraum. Kein Wechsel der
+Antwortregel wird still vorgenommen. Die Hauptrechnung verwendet fixed_X.
+
+Die gemeinsame Zusammensetzung der Antwortfunktionen erhält Auslöschungen,
+die bei ||S|| ||F_hat|| verloren gingen. Der logarithmische Rand wird mit
+exakten Integralen von u^n, u^n log u und u^n log²u vollständig erfasst.
+Alle glatten Taylorreste und weggelassenen Polynomgrade sind bezahlt.
+
+Für BEIDE Kandidaten gelten:
+                      gerade                  ungerade
+ ||T||                <6 838 544               <784 134
+ direkter K-Fehler    <1.661e-24               <2.183e-26
+ W9-Fehlerfaktor/w    <5.90e-62                <7.75e-64
+
+Gegenüber deinen bisherigen S-Preisen sinkt der direkte K-Modellfehler
+um Faktoren >6.37e17 bzw. >3.80e15. Das ist ein ganzer Formfehlerpreis,
+kein schon positiver Schurrest. Die letzte Tabellenzeile ist weiterhin
+nur ein Faktor pro noch nachzuweisendem w>=||W9||.
+
+Der stärkere gemeinsame Anschluss an die gesuchte positive Fehlermatrix ist
+
+ Q_D >= (D-D_hat)* W9 (D-D_hat)
+   => ||(R-R_hat)* W9 (R-R_hat)|| <= tr(Q_D G_T).
+
+So kann ein richtungsabhängiges Q_D unmittelbar benutzt werden, ohne es
+durch seine schlechteste Eigenrichtung oder eine globale W9-Norm zu ersetzen.
+Die gemeinsamen Young-Kreuzterme bleiben wie in deiner Herleitung erhalten.
+
+Prüfung: 576 exakte Gram-Eintragsvergleiche über eine zweite Faltungsrechnung,
+48 positive Pivots für die neuen Obergrame, vollständige Quellbindungen,
+gerichtete Ganzintervall-Neuberechnung und Gegenkontrollen für Logkreuzterm
+und Maßfaktor. Die analytischen Operatorvoraussetzungen bleiben geerbt.
+
+Reproduktion der NEUEN Rechnung:
+ python -B -X utf8 verify.py --output ../new-unused-directory
+
+Mit --full-input wird zusätzlich die eingehende Ganzfunktions-Gegenprüfung
+einschließlich ihrer alten Originalrechnung frisch ausgeführt. Standardmäßig
+bindet der Prüfer die bereits frisch erzeugten Eingangsquittungen und erzeugt
+die neuen Antwortgrame und ihre getrennte Bruchprüfung erneut.
+
+Weiterhin offen: Q_D, die ganze Modellenergie R_hat*W9R_hat, E00/E10/E11,
+der kompakte Gate einschließlich -Pi0, B11/V11/U11, Erneuerbarkeit,
+Kofinalität, kompatibler exakter Readout und Objekt X. GitHub blieb in diesem
+Rechenschritt unverändert. Externe mathematische Gesamtbegutachtung offen.
