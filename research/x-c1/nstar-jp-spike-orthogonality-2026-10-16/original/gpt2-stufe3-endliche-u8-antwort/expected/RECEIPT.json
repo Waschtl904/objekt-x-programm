@@ -1,0 +1,39 @@
+{
+  "status": "PASS_UNDER_BOUND_OPERATOR_DOMAIN_AND_COMPLETE_SOURCE_HYPOTHESES",
+  "provenance": {
+    "bridge_sha256": "b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b",
+    "global_sha256": "2ca3c682de8a529b12a0d628c2b606fd04df332d1299ccd36dff71ac3e53d80c",
+    "REFINED_INPUT.json": {
+      "original_sha256": "7c2a93adb187cc51f03f8083ffd82d4437d155d032da698e138787f90379614b",
+      "original_bytes": 70744137,
+      "snapshot_sha256": "cb8276324be13e0ceae31131903efec4bb2ddc4e690d7baca561180deee6fb5c"
+    },
+    "REFINED_COMMON96.json": {
+      "original_sha256": "18a71ae90f69dc28ecc1a42b7ed865057cdd2a28986abc3a1ac06bb558e23097",
+      "original_bytes": 72826490,
+      "snapshot_sha256": "b12c751cbb65dd3e728878797d5edd80a829f9c49cab878024823d442b2a5e53"
+    },
+    "INNER_LOG_1536_snapshot_sha256": "e211935bfe70bc830b1b36bc1040c64cd0dfaca32455c6436af6da07f2336be3",
+    "stage1_sha256": "940cd40e08be5884e6cd2a7e96e2e5815892bfb14a9e9c2d9b04d8aab317dd49",
+    "stage2_sha256": "62e9f6d860ba98f4defc651b465cfc431f891cd058f52ddaf88d54073da18f13",
+    "stage2_manifest_files_checked": 22
+  },
+  "checks": {
+    "alternate_V_coordinate_intersections": 1146,
+    "exact_direction_components": 384,
+    "linear_direction_identity_intersections": 1910,
+    "exact_coordinate_and_scalar_identities": 20,
+    "omitted_moment_or_high_term_countercontrols_rejected": 8
+  },
+  "whole_191_low_coefficients_for_v_p_e_certified": true,
+  "whole_chi_norm_lower_bounds_certified_conditionally": true,
+  "new_large_integrations": false,
+  "full_U8_function_computed": false,
+  "N12_residual_pairings_computed": false,
+  "N12_excluded": false,
+  "A9_A11_closed": false,
+  "true_A9_inverse_lower_bound_claimed": false,
+  "W9_lower_bound_used_as_error_upper_bound": false,
+  "external_review_open": true,
+  "github_changed": false
+}

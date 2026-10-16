@@ -1,0 +1,257 @@
+Objekt X — gerichtete Stufe-1-Prüfung, Momentkorrektur und vollständige W9-Diagnose
+16. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+0. Ergebnis und Reichweite
+
+Die hochpräzise Schalenrechnung wurde aus den gebundenen Originaldaten
+neu mit gerichteter ganzzahliger Intervallarithmetik aufgebaut. Der
+gesamte endliche Funktionsraum und die vollständige Momentfunktion sind
+enthalten. Zusätzlich zum analytischen k-Fehler werden die Q-Intervalle,
+die Intervallauswertung der Endpunkte, Momente und Normierungen bezahlt.
+Die übernommenen Operator-, Raum- und Integrationszertifikate werden
+dadurch nicht zu extern begutachteten Aussagen.
+
+Je Parität gilt für t=v, in X=L2((a8,b9),2dx), mit nach außen gerundeten
+Anzeigegrenzen:
+
+ gerade:   2013.598122 < ||chi_v|Schale|| < 2013.598426,
+ ungerade: 2199.971192 < ||chi_v|Schale|| < 2199.971205.
+
+Weil J_old U8 nur auf dem Kern lebt, ist dies bereits eine Einschließung
+des tatsächlichen Schalenteils von chi, bedingt auf die Eingabezertifikate.
+Es handelt sich nicht bloß um die Norm eines Mittelpunktmodells.
+
+Zwei Übernahmestellen des eingereichten Stufe-1-Pakets werden korrigiert:
+der Momentkoeffizient auf dem Kern hat ein Minus statt eines Plus vor
+sum k lambda(Y), und die numerische Parallelität p≈qv ist keine Identität.
+Die Originaldateien bleiben im Unterordner incoming unverändert erhalten.
+
+Neu folgt auch eine Untergrenze für die NORM DER VOLLSTÄNDIGEN GEWÄHLTEN
+MAJORANTE W9, ausdrücklich nicht für die wahre A9-Inverse:
+
+       ||W9|| > 252000000000 gerade,
+       ||W9|| >  49800000000 ungerade.                  (0.1)
+
+Diese Untergrenzen sind keine Fehlerobergrenzen und schließen die feste
+N12-Regel nicht aus. Die dafür erforderlichen Residualpaarungen fehlen.
+
+1. Exakte Funktionen und gerichtete Auswertung
+
+Es gelten a8=3log(2)/2, b9=log(3), h=b9-a8, c=(a8+b9)/2,
+m=cosh(x/2) bzw. sinh(x/2), mu=int_0^a8 m^2,
+lambda(s)=int_a8^b9 m s. Positive Halbintervalle tragen Maß 2dx,
+die hier ausdrücklich ausgeschriebenen Momentintegrale dagegen dx.
+
+ell_n=sqrt((2n+1)/(2h)) P_n(2(x-c)/h), n=0,...,95.
+J=QZ, Z=[D;I84]; Y=QS. Q ist die exakte gebundene W_X-Isometrie,
+S und Z sind exakt rational. Die zwölf physischen Quellen sind
+F=(z_(sigma+2),z_(sigma+4),z_(sigma+6),z_(sigma+8),Lambda Y_1,...,Lambda Y_8).
+Die z_n sind die momentkorrigierten globalen Legendrepolynome auf
+(-b9,b9), mit genau den Normalisierungen des Quellenpakets.
+
+Für den festen rationalen Modellvektor k0 werden zuerst exakt rational
+die 92 Koeffizienten Zt-S k0_tail gebildet. Erst danach wird Q eingesetzt:
+
+ w0=Jt-Y k0_tail,
+ psi0|Schale=w0-sum_(i<=4) k0_i z_i|Schale.             (1.1)
+
+Die Umrechnung der vier z-Funktionen auf lokale Legendrekoeffizienten
+erfolgt durch vollständige Polynomintegration; ihr Grad ist höchstens 9.
+Es gibt keinen numerischen Quadraturrest. Die verbleibenden Funktionen
+haben höchstens Grad 95, so dass ihre ganze X-Norm die Summe der 96
+Koeffizientenquadrate ist. Die z-Normen werden zusätzlich direkt als
+Polynomquadrate integriert; beide gerichteten Wege überlappen.
+
+Die Quelle source_core.py ist unverändert aus dem gebundenen globalen
+Archiv übernommen. Ihr Rechenskalenparameter wird auf 180 Dezimalstellen
+gesetzt. Alle Rechenoperationen runden nach außen mit ganzen Zahlen.
+Die Logarithmen benutzen eine Reihe mit vollständigem geometrischem Rest;
+die Mellinreihe enthält ihren ganzen Rest. Die hier ergänzte positive
+Exponentialreihe bis Grad 400 benutzt den Rest
+  next_term/(1-x/402), 0<=x<2.
+Damit sind auch cosh, sinh und mu gerichtet eingeschlossen.
+
+Die Gegenprüfung gegen die eingereichten Diagnosedaten bestätigt alle
+vier Schalenmodellnormen bis auf relativ weniger als 10^-25. Dieser
+Vergleich ist ein Konsistenzcheck; das Zertifikat kommt aus den gerichteten
+Reihen, vollständigen Polynomintegralen und den gebundenen Eingaben.
+
+2. Gemeinsamer Fehlertransport in K-Metrik
+
+Das Quellenpaket liefert für alle t gleichzeitig
+  k=K^-1 a_fin Jt, k0=K^-1 Cfin_mid t,
+  ||k-k0||_K <= eta_t,
+wobei eta_t aus dem vollständigen analytischen Kraftfehler und den
+Intervallradien von Cfin stammt. K ist die feste rationale positive
+Zwölfermetrik; ihre vollständige rationale Inverse liegt gebunden vor.
+
+Für die Schalenrestriktion F_s und ihren ganzen Gram G_s=F_s*F_s gilt
+
+ ||F_s(k-k0)||^2
+ <= ||F_s K^-1/2||^2 eta_t^2
+ <= tr(K^-1 G_s) eta_t^2.                              (2.1)
+
+Hier wird keine Kommutation von K und G_s benutzt. Die letzte Ungleichung
+ist die Operatornorm/Spur-Ungleichung für die positive Matrix
+K^-1/2 G_s K^-1/2, gefolgt von der zyklischen Spuridentität.
+Die Spur wird mit allen Vorzeichen und gerichteten Eintragsintervallen
+ausgewertet. Es werden keine negativen Summanden versehentlich verworfen.
+
+Analog wird der gesamte Kerngram G_c verwendet. Seine Momentanteile sind
+analytisch vollständig; m wird nicht bei einem Legendregrad abgeschnitten:
+
+ (G_c)_ij = 2 int_0^a8 z_i z_j,                    i,j<=4;
+ (G_c)_i,4+j = -2 lambda(Y_j)/mu int_0^a8 m z_i;
+ (G_c)_4+i,4+j = 2 lambda(Y_i)lambda(Y_j)/mu.
+
+Modellnorm minus/plus sqrt(tr(K^-1 G)) eta_t liefert die ausgegebenen
+Normintervalle. Für t=v sind die Schalenfehlerradien kleiner als
+0.000152 gerade und 0.000005776 ungerade. Das ist schärfer als die Summe
+der zwölf einzeln transportierten Koeffizientenradien des Eingangspakets.
+
+Die gleichen K-ellipsoidalen Fehler liefern gerichtete Punktwerte,
+Momentkoeffizienten und Sprünge: für jedes endliche Funktional l gilt
+  |l*(k-k0)| <= sqrt(l* K^-1 l) eta_t.                 (2.2)
+
+Eine L2-Fehlergrenze für psi wird hier NICHT durch den unbeschränkten
+Gammaoperator weitertransportiert. Für Stufe 2 ist die Struktur
+  psi-psi0=-F(k-k0)
+zu behalten; dafür benötigt man die tatsächlichen, vollständigen Bilder
+der zwölf F-Spalten und ihre Fehler. PSI_CORRECTED.json enthält deshalb
+zusätzlich eta_t und die genaue Fehlerstruktur.
+
+3. Vorzeichenfehler der Kernfunktion und exakte Gegenkontrolle
+
+Lambda s hat auf dem Kern den Wert -lambda(s)m/mu. Deshalb folgt aus
+psi=Lambda r-Fk unmittelbar
+
+ psi|Kern = -sum_(i<=4) k_i z_i
+             -[lambda(r)-sum_j k_(4+j)lambda(Y_j)]m/mu. (3.1)
+
+Das Plus im Rechner shell_chi_original.py, Feld lam_total, und in den
+gelieferten PSI-Daten ist falsch. Mit dem richtigen Minus lauten die
+Modellkoeffizienten für v ungefähr
+
+ gerade:   lambda_total=-0.00007143561804605297,
+ ungerade: lambda_total=-0.0001303293497857273.
+
+Die gerichteten Intervalle einschließlich des tatsächlichen k-Fehlers
+stehen in DIRECTED_RESULTS.json und PSI_CORRECTED.json.
+
+Ein von Normen unabhängiger Test ist das GESAMTE Mellinmoment über (0,b9).
+Alle F_i und Lambda r sind physisch momentnull. Für (3.1) verschwindet
+dieses Moment daher exakt für JEDES k. Die getrennte Kern-/Schalen-
+Intervallrechnung bestätigt diese Identität für alle Modellrichtungen.
+
+Mit dem falschen Plus bleibt dagegen exakt
+  int_0^b9 m psi_wrong = -2 sum_j k_(4+j)lambda(Y_j).   (3.2)
+
+Unter Einbezug der gelieferten k-Unsicherheit liegt der Momentfehler für v
+bei etwa -0.000142868929 gerade und -0.000260654547 ungerade. Beide
+Intervalle schließen null aus. Dies ist eine gerichtete Gegenkontrolle;
+das falsche Plus lässt sich nicht durch Rundung oder k-Radien erklären.
+Die ursprüngliche Schalenrechnung bleibt von dieser Korrektur unberührt.
+
+4. Fast parallele Richtungen: exakte Zerlegung statt Gleichsetzung
+
+q=v*P_upper v und p=P_upper v. Der gespeicherte rationale v ist nicht
+exakt normiert, und p ist nicht exakt parallel zu v. Neu exakt berechnet:
+
+             ||v||^2-1                ||e||^2
+ gerade     -8.2051552443e-15         3.5705820760e-19
+ ungerade   -5.5212301290e-16         5.6487726292e-21
+
+Hier sind
+  alpha=q/(v*v), e=p-alpha v, v*e=0.                  (4.1)
+Die zugehörigen Brüche stehen vollständig in PARALLELISM.json.
+||e||/||p|| beträgt etwa 1.0554e-14 bzw. 8.0191e-15, ist aber nicht null.
+Auch q=||p|| ist keine exakte Identität.
+
+Linearität liefert exakt
+  psi_p=alpha psi_v+psi_e,
+  chi_p=alpha chi_v+chi_e,
+  ell_p(Rz)=alpha ell_v(Rz)+ell_e(Rz).                (4.2)
+
+Das Paket baut psi_e zusätzlich mit exakten rationalen Differenzen vor
+der Intervallauswertung auf. Sein Fehler wird durch eta_e=e_C||e||
+bezahlt, nicht durch die Summe der viel größeren separaten p/v-Fehler.
+Dies nutzt die gemeinsame lineare Fehlerabbildung des Quellenzertifikats.
+
+Ohne Kontrolle von chi_e bzw. ell_e folgt aus einem kleinen Koeffizienten-
+winkel keine entsprechende relative Fehlergrenze für die fertige Paarung.
+Insbesondere ist ein multiplikatives 1+O(10^-14) bei kleiner oder nuller
+ell_v nicht gerechtfertigt. Für einen skalaren Test kann man stattdessen
+eine absolute Fehlergrenze E_e benutzen:
+  |ell_p| >= max(0, |alpha| L_v-E_e),
+wenn L_v eine untere Grenze von |ell_v| ist. E_e wurde hier nicht gerechnet.
+
+5. Nichtverschwindender logarithmischer Randterm für Stufe 2
+
+Setze w=r-Y k_tail. Da die vier z_i über a8 hinweg stetig sind, ist der
+Sprung der tatsächlichen psi an a8
+  j_t=psi(a8+)-psi(a8-)=w(a8+)+lambda(w)m(a8)/mu.       (5.1)
+Das Paket schließt ihn mit (2.2) gerichtet ein. Für v:
+
+ gerade:   -2848.129905 < j_v < -2848.129854,
+ ungerade: -2824.085937 < j_v < -2824.085934.
+
+Weil k(r)=1/(2r)+O(1), folgt für x gegen a8 von innen
+  Pi8[Q_b9^np psi](x) = (j_t/2) log(a8-x)+O(1).       (5.2)
+
+Zum Vorzeichen und Halbfaktor: Der rechte Gammaanteil enthält
+(psi(a8-)-psi(a8+)) int_(a8-x)^epsilon dr/(2r).
+Sein logarithmischer Teil ist genau (j_t/2)log(a8-x). Die übrigen
+lokalen Differenzen sind integrierbar, die entfernten Wände haben
+positiven Abstand. Primverschiebungen und der konstante Term sind auf
+jeder Seite beschränkt. Pi8 zieht nur einen glatten Momentträger ab.
+
+Somit ist der logarithmische Randterm tatsächlich nicht null. Eine rein
+glatte Behandlung von Stufe 2 wäre unzulässig. Die vollständige Quelle
+und ihr Projektionsmoment sind durch (5.2) noch nicht ausgewertet.
+
+6. Neue Untergrenze für die vollständige Majorante W9
+
+Aus dem gebundenen vollständigen W9-Anschluss und Cauchy-Schwarz in
+P_upper folgt für alle f im physischen Momentraum H9
+  <f,W9 f> >= (11/(10q)) |<chi_p,f>|^2,
+  chi_p=N*Jp.                                        (6.1)
+
+chi_p liegt in H9: psi_p ist nach (3.1) exakt momentnull, und J_old U8
+hat ebenfalls Werte im alten Momentraum. Als Operator auf H9 ist die
+rechte Seite die positive Rang-eins-Form (11/(10q))chi_p tensor chi_p.
+Folglich
+  ||W9|| >= (11/(10q)) ||chi_p||^2
+         >= (11/(10q)) ||chi_p|Schale||_X^2.          (6.2)
+
+Hier wird NICHT eine bloß auf die Schale eingeschränkte Funktion als
+zulässiger H9-Test eingesetzt. Man verwendet die Existenz der ganzen
+Rieszfunktion chi_p und anschließend die Norm ihrer Restriktion.
+
+Die unteren Schalenintervallenden für p und das exakte q liefern
+252526345969.69... gerade und 49897550760.01... ungerade als rationale
+Untergrenzen, damit die konservativen strikten Aussagen (0.1).
+Die p-Richtung ist separat gerechnet; p=qv wird nirgends vorausgesetzt.
+
+W9 ist eine gewählte OBERmajorante von A9^-1. Eine große Norm von W9
+ist daher keine große untere Normschranke für A9^-1. Ebenso benötigt
+ein Fehlerobertest eine obere Energie-/Normgrenze, nicht (0.1). Ob die
+konkreten Residuen den großen Anteil treffen, bleibt offen.
+
+7. Reproduktionsumfang und offene Arbeit
+
+certify.py benutzt nur die Python-Standardbibliothek und die beigefügte,
+unveränderte ganzzahlige Intervallbibliothek aus dem alten Quellarchiv.
+Das vorausgesetzte Quellen-/Koeffizientenarchiv hat SHA256
+b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b;
+das eingebettete globale Archiv wird zusätzlich vollständig gehasht.
+
+Neu gerechnet: sechs vollständige Schalen-/Kernmodellanschlüsse (v,p,e
+je Parität), gemeinsame K-Fehler, vier unabhängige Diagnoseabgleiche,
+vollständige Moment-Gegenkontrollen, exakte p/v-Zerlegung, gerichtete
+Randsprünge und beide vollen W9-Normuntergrenzen.
+
+Offen: die ganze Pi8 Qpsi-Quelle, ihre vollständigen Integrale, U8-Aktion,
+chi-Kern, Paarungen mit C und D12 T, N12-Test, A9->A11, weitere Horizonte,
+Objekt X und externe Gesamtbegutachtung. Keine neuen großen historischen
+Integrationen, kein Audit des aktuellen GitHub-Heads, keine Änderung von
+GitHub oder der eingefrorenen Antwortregel.

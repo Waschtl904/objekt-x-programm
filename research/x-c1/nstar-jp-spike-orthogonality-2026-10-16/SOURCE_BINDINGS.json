@@ -1,0 +1,511 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "archives": {
+    "archives/Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16.zip": {
+      "sha256": "940cd40e08be5884e6cd2a7e96e2e5815892bfb14a9e9c2d9b04d8aab317dd49",
+      "bytes": 447253,
+      "members": {
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/ANSCHLUSS_GPT1.txt": {
+          "bytes": 2641,
+          "sha256": "a13c73fbfa2458c31b90d9b2dbf8434f70b4d74c201a252d70387c45493ba705"
+        },
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/certify.py": {
+          "bytes": 14300,
+          "sha256": "cf81fbd02e8f01c830a7cfc0139c796cfcac4752f35bd7a526291c959d4c1b70"
+        },
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/expected/DIRECTED_RESULTS.json": {
+          "bytes": 749073,
+          "sha256": "28ad64680c7cbc5147c396d83f9c147c7cd8436be0759e2888bba402298eebf7"
+        },
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/expected/PARALLELISM.json": {
+          "bytes": 40693,
+          "sha256": "7a889ba2c7eb4285f41cd7d2d77691ab25846d378d7625c3702a9986b65d468d"
+        },
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/expected/PSI_CORRECTED.json": {
+          "bytes": 686332,
+          "sha256": "3e1bc5db6114333434891a52bef8f3bf6822779b52d14585d249d67943d8c7a1"
+        },
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/expected/RECEIPT.json": {
+          "bytes": 673,
+          "sha256": "93c16be75c0e79529c031aa75fdff4be78453367d3343aa586926ae78ba9363c"
+        },
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/HERLEITUNG.txt": {
+          "bytes": 12299,
+          "sha256": "7c769dfc67117438fa8d348b429061f728544afaeb4f8e723cf5221572c7bfcb"
+        },
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/incoming/PSI_DEFINITION_original.json": {
+          "bytes": 31228,
+          "sha256": "c341d358002d95d3e642f241a9e09150d85b187b8c83b29783647a9c8b53650a"
+        },
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/incoming/shell_chi_original.py": {
+          "bytes": 9268,
+          "sha256": "e97efcb45b5462aafce7a7c47b41e902e56ee2a8d0da45aa0a3567275ffc1b49"
+        },
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/incoming/STUFE1_BERICHT_original.md": {
+          "bytes": 9717,
+          "sha256": "42e0554c5824b3e0978d3e66e61739e1d4038c1fbfd67d55e829af5abc52e260"
+        },
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/incoming/STUFE1_SHELL_RESULTS_original.json": {
+          "bytes": 51067,
+          "sha256": "b2e033b44454a5b5ad654df326f2801c434be43ac9b5a8cf72b1eb260b6e2408"
+        },
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/INCOMING_BINDINGS.json": {
+          "bytes": 848,
+          "sha256": "900bd3d84e349a3b63dff6c6e2ecd9cd1e0140ac80d01cd7f75545734e46da0d"
+        },
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/MANIFEST.json": {
+          "bytes": 1298,
+          "sha256": "c5c5cf595d487b6d2e830b046357f60acbf6d196b13c1bc3c46ade24f2c6c4df"
+        },
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/vendor/source_core.py": {
+          "bytes": 13584,
+          "sha256": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772"
+        }
+      },
+      "visible_copies": {
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/ANSCHLUSS_GPT1.txt": "original/gpt1-stufe1-zertifikat/ANSCHLUSS_GPT1.txt",
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/certify.py": "original/gpt1-stufe1-zertifikat/certify.py",
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/expected/DIRECTED_RESULTS.json": "original/gpt1-stufe1-zertifikat/expected/DIRECTED_RESULTS.json",
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/expected/PARALLELISM.json": "original/gpt1-stufe1-zertifikat/expected/PARALLELISM.json",
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/expected/PSI_CORRECTED.json": "original/gpt1-stufe1-zertifikat/expected/PSI_CORRECTED.json",
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/expected/RECEIPT.json": "original/gpt1-stufe1-zertifikat/expected/RECEIPT.json",
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/HERLEITUNG.txt": "original/gpt1-stufe1-zertifikat/HERLEITUNG.txt",
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/incoming/PSI_DEFINITION_original.json": "original/gpt1-stufe1-zertifikat/incoming/PSI_DEFINITION_original.json",
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/incoming/shell_chi_original.py": "original/gpt1-stufe1-zertifikat/incoming/shell_chi_original.py",
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/incoming/STUFE1_BERICHT_original.md": "original/gpt1-stufe1-zertifikat/incoming/STUFE1_BERICHT_original.md",
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/incoming/STUFE1_SHELL_RESULTS_original.json": "original/gpt1-stufe1-zertifikat/incoming/STUFE1_SHELL_RESULTS_original.json",
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/INCOMING_BINDINGS.json": "original/gpt1-stufe1-zertifikat/INCOMING_BINDINGS.json",
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/MANIFEST.json": "original/gpt1-stufe1-zertifikat/MANIFEST.json",
+        "Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16/vendor/source_core.py": "original/gpt1-stufe1-zertifikat/vendor/source_core.py"
+      }
+    },
+    "archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip": {
+      "sha256": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52",
+      "bytes": 39013097,
+      "members": {
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/ANSCHLUSS_GPT1.txt": {
+          "bytes": 3013,
+          "sha256": "bb18d736b23530b468a4c753ec8cdf81fa7bc4b2a3f6df5b66495776be712543"
+        },
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/certify_stage3.py": {
+          "bytes": 12609,
+          "sha256": "272a71b2f3fc37eabb7b3407571e84326c3e2bb731a1531007a814221d74b32b"
+        },
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/exact_coordinate_controls.py": {
+          "bytes": 2268,
+          "sha256": "849ad64cb03a991dafada29e32d7f307ef802ace76b629d7d759472446bd08a8"
+        },
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/expected/FINITE_ACTION.json": {
+          "bytes": 5756394,
+          "sha256": "689636e2b11efcc828100f93b512d4375c8bfebfe8c4a37e3c7c1320f31ed551"
+        },
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/expected/RECEIPT.json": {
+          "bytes": 1839,
+          "sha256": "1490cefc5e9a550d2f85031926f83a8cedb6afca442b9ffa20f998b64f132cea"
+        },
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/HERLEITUNG.txt": {
+          "bytes": 11622,
+          "sha256": "04b544786dbf23f05b4c661122c68031702d2308795120eed3b51ff188a35d58"
+        },
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/inputs/Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16.zip": {
+          "bytes": 447253,
+          "sha256": "940cd40e08be5884e6cd2a7e96e2e5815892bfb14a9e9c2d9b04d8aab317dd49"
+        },
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/inputs/Objekt-X-Stufe1v2-Stufe2-Diagnose-2026-10-16.zip": {
+          "bytes": 202746,
+          "sha256": "62e9f6d860ba98f4defc651b465cfc431f891cd058f52ddaf88d54073da18f13"
+        },
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/inputs/REFINED_COMMON96.json.gz": {
+          "bytes": 19087371,
+          "sha256": "306acbacf5f4089fe703f655bf4340087f0ae88aeaab416c0282e9e24c1638df"
+        },
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/inputs/REFINED_INPUT.json.gz": {
+          "bytes": 17938363,
+          "sha256": "c67a44d7cc052bff32ed2768b81595367c710f9308f0f1716b213a74766b1e64"
+        },
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/MANIFEST.json": {
+          "bytes": 1373,
+          "sha256": "ac6b55c46c34b59b7d3b2cbe73325bdba8249dff9323346273b1698f92770823"
+        },
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/sources/COMMON96_HERLEITUNG.txt": {
+          "bytes": 8234,
+          "sha256": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd"
+        },
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/sources/RESPONSE84_PROOF.txt": {
+          "bytes": 10731,
+          "sha256": "122fabae61dad7d6d6916d899ea8ae8c44a1ead451ac68919e6ce9304f002e61"
+        },
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/vendor/source_core.py": {
+          "bytes": 13584,
+          "sha256": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772"
+        }
+      },
+      "visible_copies": {
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/ANSCHLUSS_GPT1.txt": "original/gpt2-stufe3-endliche-u8-antwort/ANSCHLUSS_GPT1.txt",
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/certify_stage3.py": "original/gpt2-stufe3-endliche-u8-antwort/certify_stage3.py",
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/exact_coordinate_controls.py": "original/gpt2-stufe3-endliche-u8-antwort/exact_coordinate_controls.py",
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/expected/FINITE_ACTION.json": "original/gpt2-stufe3-endliche-u8-antwort/expected/FINITE_ACTION.json",
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/expected/RECEIPT.json": "original/gpt2-stufe3-endliche-u8-antwort/expected/RECEIPT.json",
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/HERLEITUNG.txt": "original/gpt2-stufe3-endliche-u8-antwort/HERLEITUNG.txt",
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/MANIFEST.json": "original/gpt2-stufe3-endliche-u8-antwort/MANIFEST.json",
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/sources/COMMON96_HERLEITUNG.txt": "original/gpt2-stufe3-endliche-u8-antwort/sources/COMMON96_HERLEITUNG.txt",
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/sources/RESPONSE84_PROOF.txt": "original/gpt2-stufe3-endliche-u8-antwort/sources/RESPONSE84_PROOF.txt",
+        "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/vendor/source_core.py": "original/gpt2-stufe3-endliche-u8-antwort/vendor/source_core.py"
+      }
+    },
+    "archives/Objekt-X-Stufe1-4-Diagnose-2026-10-16.zip": {
+      "sha256": "88a68c9c51e00fb7024ebaa6db0c72e4dafd5f65a3b98cddb2300dee511ff5df",
+      "bytes": 291233,
+      "members": {
+        "MANIFEST.json": {
+          "bytes": 4061,
+          "sha256": "a901ea57717b1a638f5d69ad6bfcc87ac31d0f21a4a35d02877ea5c6d39579ea"
+        },
+        "stufe3/STUFE3_AUDIT.md": {
+          "bytes": 10310,
+          "sha256": "3f93e4fbf6909db468a7342ec028d07878ebf6804900f29819cf1325c655d344"
+        },
+        "stufe2/post.py": {
+          "bytes": 3000,
+          "sha256": "03f0d91995e7abb1138d0f9ce5c93982cd8ba73f91a1dd8a6ce395d72c8c1711"
+        },
+        "stufe2/STUFE2_RESULTS.json": {
+          "bytes": 6508,
+          "sha256": "6521e2d5cebe11489d63e8cd0ac39e230bd47af476bc95340c1a4a45684982ec"
+        },
+        "stufe2/t4.py": {
+          "bytes": 676,
+          "sha256": "85690f308cd67b7fccf456f64ef42fdf5638a57245c34bc42f114df50037e631"
+        },
+        "stufe2/qnp_psi.py": {
+          "bytes": 5493,
+          "sha256": "1c0a9ccca4d94f31b698799a99100cf1b2697434d65ca2efc6dbdf393c041608"
+        },
+        "stufe2/validate.py": {
+          "bytes": 2370,
+          "sha256": "dc0337e3eb4d8e3dc32edbb2a2c3fb042293293e8711db1c2cd94c8c3c0b94a5"
+        },
+        "stufe2/jumps.py": {
+          "bytes": 1224,
+          "sha256": "8e21e4f8e7c8a8b87d01d830f74703c7c4785be60cbd68f8f241ff84bb52e86a"
+        },
+        "stufe2/MESH_even_upper_v.json": {
+          "bytes": 105218,
+          "sha256": "5aa29de3bdc8433ed77c3d066a55036e6fba16e1030457c33ded2799e7368ace"
+        },
+        "stufe2/run_mesh.py": {
+          "bytes": 897,
+          "sha256": "e9e26c597834241f01f99b3d7f697749d4a680a7c0f7d272cab64accbfd37b61"
+        },
+        "stufe2/MESH_odd_upper_v.json": {
+          "bytes": 104880,
+          "sha256": "3cf298871c3c54a3f5672ef399b7dae6528eab41092e34661e13d64d4f750d09"
+        },
+        "stufe2/STUFE2_BERICHT.md": {
+          "bytes": 12503,
+          "sha256": "f9b09559da36f8cdb641dd8daf6e45f55acdc79d12b1c7b480bb35570f06580c"
+        },
+        "stufe2/STUFE2_JUMPS.json": {
+          "bytes": 4311,
+          "sha256": "f9a6db58f0fe2f468f1cb3d4ab3ae06b12bc143d0e42a8c78fb82a244e928553"
+        },
+        "stufe2/v1_wrong_sign/run_odd.log": {
+          "bytes": 272,
+          "sha256": "087b769dd8831c0f71d4ed1926805b2903ac83387c1dd1c4fba51926dccce86a"
+        },
+        "stufe2/v1_wrong_sign/STUFE2_RESULTS.json": {
+          "bytes": 6446,
+          "sha256": "c5b06faab269d793424336be38ff22173acc455372211100270cb8f0fa3d6348"
+        },
+        "stufe2/v1_wrong_sign/run_even.log": {
+          "bytes": 272,
+          "sha256": "ff0c86b52952cb3f89641e7f7b46efc05685d6b43cd55acd25e780e06470b6ef"
+        },
+        "stufe2/v1_wrong_sign/MESH_even_upper_v.json": {
+          "bytes": 105219,
+          "sha256": "12692af9a5401b3f485f688d57b0135000c8cb21010c694ac97eeed8e8e66aa6"
+        },
+        "stufe2/v1_wrong_sign/MESH_odd_upper_v.json": {
+          "bytes": 104839,
+          "sha256": "70509050c1561dbcd1a686523e9049ecfcca61ba48edb8cc1bddd83b4c796916"
+        },
+        "stufe4/d12_terms.py": {
+          "bytes": 8060,
+          "sha256": "0724fd02f6525f65dd34f298f3b52cbbe41055f51c578f1259ba1529c4423041"
+        },
+        "stufe4/softmode_pairings.py": {
+          "bytes": 6198,
+          "sha256": "bf823d2dbcb753bb0034673f445b8d91a2d2a0d8504a66124aa107c328faca18"
+        },
+        "stufe4/D12_TERMS.json": {
+          "bytes": 183455,
+          "sha256": "0fa5f59c0df747954c00477f3fa9b69569178a8f045bf5eaa1c8f6b9ace1cc46"
+        },
+        "stufe4/STUFE4_DURCHBRUCH.md": {
+          "bytes": 11495,
+          "sha256": "8bcebf7f326843371194b7cf0d8fbf6543c379fb3c61a6560208e736cf37b8dd"
+        },
+        "stufe4/SOFTMODE_PAIRINGS.json": {
+          "bytes": 7744,
+          "sha256": "34a46e1bde994bf7ebb270cbe43b0e2e43cee5418e6a54837f8c54071b3ed6cc"
+        },
+        "stufe1/shell_chi.py": {
+          "bytes": 9438,
+          "sha256": "ab92b756d8257cf877a60ec9d6187b91d4a13543ef496865fb39f4d91830a010"
+        },
+        "stufe1/STUFE1_BERICHT.md": {
+          "bytes": 11753,
+          "sha256": "db1ef98694e22bd375000f49764db7d584dbd58bf76562bcc010a44ae3da2383"
+        },
+        "stufe1/STUFE1_SHELL_RESULTS.json": {
+          "bytes": 51071,
+          "sha256": "f05d5b9a2c79f6c12d4cc040e019f7df1591b7b52e283524643391542e65f58d"
+        },
+        "stufe1/PSI_DEFINITION.json": {
+          "bytes": 31399,
+          "sha256": "b9ea7df388ac38d087ca842cca0c28c93d1b1ea8c113539e601665a49e4e55ba"
+        },
+        "stufe1/profile.py": {
+          "bytes": 1756,
+          "sha256": "5e419cc9e25614dfa62ec11c7a22369d805d051d267e7e5186938cc4283caa43"
+        },
+        "stufe1/checks.py": {
+          "bytes": 3052,
+          "sha256": "38924c8131fad6ca602c5341a03b06a7791a3d98256903b271825b802c9978d3"
+        }
+      },
+      "visible_copies": {}
+    }
+  },
+  "files": {
+    ".gitattributes": {
+      "bytes": 115,
+      "sha256": "3a22be072ea20861bb30094541f96cb7cc82ce974c9af89235686f1f8e8e700a"
+    },
+    "PROOF.md": {
+      "bytes": 8961,
+      "sha256": "323eff5f96154d802b411f7eaaa9213f5d3dc2860b036f058296b0b1ee3e2832"
+    },
+    "README.md": {
+      "bytes": 2845,
+      "sha256": "a9cc9b15eebbc9db67ad24938182dc203ba862f6a3f8ab1ca13a6147400cf84d"
+    },
+    "stufe2/MESH_even_upper_v.json": {
+      "bytes": 105218,
+      "sha256": "5aa29de3bdc8433ed77c3d066a55036e6fba16e1030457c33ded2799e7368ace"
+    },
+    "stufe2/MESH_odd_upper_v.json": {
+      "bytes": 104880,
+      "sha256": "3cf298871c3c54a3f5672ef399b7dae6528eab41092e34661e13d64d4f750d09"
+    },
+    "stufe2/STUFE2_JUMPS.json": {
+      "bytes": 4311,
+      "sha256": "f9a6db58f0fe2f468f1cb3d4ab3ae06b12bc143d0e42a8c78fb82a244e928553"
+    },
+    "stufe2/STUFE2_RESULTS.json": {
+      "bytes": 6508,
+      "sha256": "6521e2d5cebe11489d63e8cd0ac39e230bd47af476bc95340c1a4a45684982ec"
+    },
+    "stufe2/jumps.py": {
+      "bytes": 1224,
+      "sha256": "8e21e4f8e7c8a8b87d01d830f74703c7c4785be60cbd68f8f241ff84bb52e86a"
+    },
+    "stufe2/post.py": {
+      "bytes": 3000,
+      "sha256": "03f0d91995e7abb1138d0f9ce5c93982cd8ba73f91a1dd8a6ce395d72c8c1711"
+    },
+    "stufe2/qnp_psi.py": {
+      "bytes": 5493,
+      "sha256": "1c0a9ccca4d94f31b698799a99100cf1b2697434d65ca2efc6dbdf393c041608"
+    },
+    "stufe2/run_mesh.py": {
+      "bytes": 897,
+      "sha256": "e9e26c597834241f01f99b3d7f697749d4a680a7c0f7d272cab64accbfd37b61"
+    },
+    "stufe2/t4.py": {
+      "bytes": 676,
+      "sha256": "85690f308cd67b7fccf456f64ef42fdf5638a57245c34bc42f114df50037e631"
+    },
+    "stufe2/validate.py": {
+      "bytes": 2370,
+      "sha256": "dc0337e3eb4d8e3dc32edbb2a2c3fb042293293e8711db1c2cd94c8c3c0b94a5"
+    },
+    "original/gpt1-stufe1-zertifikat/ANSCHLUSS_GPT1.txt": {
+      "bytes": 2641,
+      "sha256": "a13c73fbfa2458c31b90d9b2dbf8434f70b4d74c201a252d70387c45493ba705"
+    },
+    "original/gpt1-stufe1-zertifikat/HERLEITUNG.txt": {
+      "bytes": 12299,
+      "sha256": "7c769dfc67117438fa8d348b429061f728544afaeb4f8e723cf5221572c7bfcb"
+    },
+    "original/gpt1-stufe1-zertifikat/INCOMING_BINDINGS.json": {
+      "bytes": 848,
+      "sha256": "900bd3d84e349a3b63dff6c6e2ecd9cd1e0140ac80d01cd7f75545734e46da0d"
+    },
+    "original/gpt1-stufe1-zertifikat/MANIFEST.json": {
+      "bytes": 1298,
+      "sha256": "c5c5cf595d487b6d2e830b046357f60acbf6d196b13c1bc3c46ade24f2c6c4df"
+    },
+    "original/gpt1-stufe1-zertifikat/certify.py": {
+      "bytes": 14300,
+      "sha256": "cf81fbd02e8f01c830a7cfc0139c796cfcac4752f35bd7a526291c959d4c1b70"
+    },
+    "original/gpt1-stufe1-zertifikat/vendor/source_core.py": {
+      "bytes": 13584,
+      "sha256": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772"
+    },
+    "original/gpt1-stufe1-zertifikat/incoming/PSI_DEFINITION_original.json": {
+      "bytes": 31228,
+      "sha256": "c341d358002d95d3e642f241a9e09150d85b187b8c83b29783647a9c8b53650a"
+    },
+    "original/gpt1-stufe1-zertifikat/incoming/STUFE1_BERICHT_original.md": {
+      "bytes": 9717,
+      "sha256": "42e0554c5824b3e0978d3e66e61739e1d4038c1fbfd67d55e829af5abc52e260"
+    },
+    "original/gpt1-stufe1-zertifikat/incoming/STUFE1_SHELL_RESULTS_original.json": {
+      "bytes": 51067,
+      "sha256": "b2e033b44454a5b5ad654df326f2801c434be43ac9b5a8cf72b1eb260b6e2408"
+    },
+    "original/gpt1-stufe1-zertifikat/incoming/shell_chi_original.py": {
+      "bytes": 9268,
+      "sha256": "e97efcb45b5462aafce7a7c47b41e902e56ee2a8d0da45aa0a3567275ffc1b49"
+    },
+    "original/gpt1-stufe1-zertifikat/expected/DIRECTED_RESULTS.json": {
+      "bytes": 749073,
+      "sha256": "28ad64680c7cbc5147c396d83f9c147c7cd8436be0759e2888bba402298eebf7"
+    },
+    "original/gpt1-stufe1-zertifikat/expected/PARALLELISM.json": {
+      "bytes": 40693,
+      "sha256": "7a889ba2c7eb4285f41cd7d2d77691ab25846d378d7625c3702a9986b65d468d"
+    },
+    "original/gpt1-stufe1-zertifikat/expected/PSI_CORRECTED.json": {
+      "bytes": 686332,
+      "sha256": "3e1bc5db6114333434891a52bef8f3bf6822779b52d14585d249d67943d8c7a1"
+    },
+    "original/gpt1-stufe1-zertifikat/expected/RECEIPT.json": {
+      "bytes": 673,
+      "sha256": "93c16be75c0e79529c031aa75fdff4be78453367d3343aa586926ae78ba9363c"
+    },
+    "original/gpt1-stufe2-audit/ANSCHLUSS_PERPLEXITY.txt": {
+      "bytes": 3255,
+      "sha256": "807a14209148d9fdeb016a4876b3bfbde34d208960a097c0a2780a0e5380d5b1"
+    },
+    "original/gpt1-stufe2-audit/AUDIT.json": {
+      "bytes": 5484,
+      "sha256": "65d58f4230c394e0700edbbe7a462269adbf20ee4c4ab7ac7d0b6a7dc4373c46"
+    },
+    "original/gpt1-stufe2-audit/HERLEITUNG.md": {
+      "bytes": 14001,
+      "sha256": "cd0c06e25fe908031af77e60ac4b8a092357505b02ca64036fe3fac3da109fb0"
+    },
+    "original/gpt1-stufe2-audit/STUFE3_PAIRINGS_DIAGNOSTIC.json": {
+      "bytes": 18983,
+      "sha256": "f94588e4286ce8773da28be8dbb6f54042c5559f8550afbaa97b233d5e710e81"
+    },
+    "original/gpt2-stufe3-endliche-u8-antwort/ANSCHLUSS_GPT1.txt": {
+      "bytes": 3013,
+      "sha256": "bb18d736b23530b468a4c753ec8cdf81fa7bc4b2a3f6df5b66495776be712543"
+    },
+    "original/gpt2-stufe3-endliche-u8-antwort/HERLEITUNG.txt": {
+      "bytes": 11622,
+      "sha256": "04b544786dbf23f05b4c661122c68031702d2308795120eed3b51ff188a35d58"
+    },
+    "original/gpt2-stufe3-endliche-u8-antwort/MANIFEST.json": {
+      "bytes": 1373,
+      "sha256": "ac6b55c46c34b59b7d3b2cbe73325bdba8249dff9323346273b1698f92770823"
+    },
+    "original/gpt2-stufe3-endliche-u8-antwort/certify_stage3.py": {
+      "bytes": 12609,
+      "sha256": "272a71b2f3fc37eabb7b3407571e84326c3e2bb731a1531007a814221d74b32b"
+    },
+    "original/gpt2-stufe3-endliche-u8-antwort/exact_coordinate_controls.py": {
+      "bytes": 2268,
+      "sha256": "849ad64cb03a991dafada29e32d7f307ef802ace76b629d7d759472446bd08a8"
+    },
+    "original/gpt2-stufe3-endliche-u8-antwort/vendor/source_core.py": {
+      "bytes": 13584,
+      "sha256": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772"
+    },
+    "original/gpt2-stufe3-endliche-u8-antwort/sources/COMMON96_HERLEITUNG.txt": {
+      "bytes": 8234,
+      "sha256": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd"
+    },
+    "original/gpt2-stufe3-endliche-u8-antwort/sources/RESPONSE84_PROOF.txt": {
+      "bytes": 10731,
+      "sha256": "122fabae61dad7d6d6916d899ea8ae8c44a1ead451ac68919e6ce9304f002e61"
+    },
+    "original/gpt2-stufe3-endliche-u8-antwort/expected/FINITE_ACTION.json": {
+      "bytes": 5756394,
+      "sha256": "689636e2b11efcc828100f93b512d4375c8bfebfe8c4a37e3c7c1320f31ed551"
+    },
+    "original/gpt2-stufe3-endliche-u8-antwort/expected/RECEIPT.json": {
+      "bytes": 1839,
+      "sha256": "1490cefc5e9a550d2f85031926f83a8cedb6afca442b9ffa20f998b64f132cea"
+    },
+    "stufe4/D12_TERMS.json": {
+      "bytes": 183455,
+      "sha256": "0fa5f59c0df747954c00477f3fa9b69569178a8f045bf5eaa1c8f6b9ace1cc46"
+    },
+    "stufe4/SOFTMODE_PAIRINGS.json": {
+      "bytes": 7744,
+      "sha256": "34a46e1bde994bf7ebb270cbe43b0e2e43cee5418e6a54837f8c54071b3ed6cc"
+    },
+    "stufe4/d12_terms.py": {
+      "bytes": 8060,
+      "sha256": "0724fd02f6525f65dd34f298f3b52cbbe41055f51c578f1259ba1529c4423041"
+    },
+    "stufe4/softmode_pairings.py": {
+      "bytes": 6198,
+      "sha256": "bf823d2dbcb753bb0034673f445b8d91a2d2a0d8504a66124aa107c328faca18"
+    },
+    "reports/STUFE1_BERICHT.md": {
+      "bytes": 11753,
+      "sha256": "db1ef98694e22bd375000f49764db7d584dbd58bf76562bcc010a44ae3da2383"
+    },
+    "reports/STUFE2_BERICHT.md": {
+      "bytes": 12503,
+      "sha256": "f9b09559da36f8cdb641dd8daf6e45f55acdc79d12b1c7b480bb35570f06580c"
+    },
+    "reports/STUFE3_AUDIT.md": {
+      "bytes": 10310,
+      "sha256": "3f93e4fbf6909db468a7342ec028d07878ebf6804900f29819cf1325c655d344"
+    },
+    "reports/STUFE4_DURCHBRUCH.md": {
+      "bytes": 11495,
+      "sha256": "8bcebf7f326843371194b7cf0d8fbf6543c379fb3c61a6560208e736cf37b8dd"
+    },
+    "stufe1/PSI_DEFINITION.json": {
+      "bytes": 31399,
+      "sha256": "b9ea7df388ac38d087ca842cca0c28c93d1b1ea8c113539e601665a49e4e55ba"
+    },
+    "stufe1/STUFE1_SHELL_RESULTS.json": {
+      "bytes": 51071,
+      "sha256": "f05d5b9a2c79f6c12d4cc040e019f7df1591b7b52e283524643391542e65f58d"
+    },
+    "stufe1/checks.py": {
+      "bytes": 3052,
+      "sha256": "38924c8131fad6ca602c5341a03b06a7791a3d98256903b271825b802c9978d3"
+    },
+    "stufe1/profile.py": {
+      "bytes": 1756,
+      "sha256": "5e419cc9e25614dfa62ec11c7a22369d805d051d267e7e5186938cc4283caa43"
+    },
+    "stufe1/shell_chi.py": {
+      "bytes": 9438,
+      "sha256": "ab92b756d8257cf877a60ec9d6187b91d4a13543ef496865fb39f4d91830a010"
+    }
+  },
+  "repository_dependencies": {
+    "research/x-c1/a9-inverse-spike-calibration-2026-10-15/archives/Objekt-X-Nstar-Jp-Funktionsanschluss-und-Koeffizienten-2026-10-16.zip": {
+      "sha256": "b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b"
+    },
+    "research/x-c1/a9-inverse-spike-calibration-2026-10-15/archives/Objekt-X-A9-Spike-Artefaktpruefung-und-Korrekter-W9-Anschluss-2026-10-15.zip": {
+      "sha256": "7f7129945b38768a5ec88994b783211db1ceb0810129ffc4ea4ba7db5beb1f5e"
+    }
+  },
+  "repository_dependencies_missing_at_generation": [
+    "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip",
+    "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Antwortgram-Nachtrag-Breitenpruefung-und-W9-Klarstellung-2026-10-15.zip"
+  ]
+}

@@ -1,0 +1,53 @@
+Objekt X — Rückgabe Stufe 3, 16. Oktober 2026
+
+Mit HERLEITUNG.txt beginnen, besonders §§2, 4, 5 und 7.
+
+Der endliche Teil der U8-Aktion ist bereits vollständig aus den gebundenen
+Common96-Ganzfunktionsdaten bestimmbar. Ein neuer Doppelgenauigkeits-
+Evaluator und 191 neue Integrationen sind dafür nicht erforderlich.
+
+Neu bedingt eingeschlossen: alle 191 niedrigen Rohkoordinaten von U8 f_t
+für t=v, p und e=p-alpha v, beide Paritäten. Vollständige Quellenfehler,
+Eintragsradien und der gemeinsame k-Fehler sind berücksichtigt.
+Zwei Rechenanordnungen stimmen in 1146 Intervallen überein.
+
+Der Kern wird nicht klein: ||chi_v|| >1.34e13 gerade bzw. >1.0219e12
+ungerade. Hohe Anteile können diese niedrigen Koordinaten nicht aufheben.
+Aus dem vollständigen p folgt für die feste volle W9-Majorante
+||W9||>1.11e31 bzw. >1.07e28. KEINE Aussage über die Normuntergrenze der
+tatsächlichen A9-Inverse, KEIN N12-Ausschluss und KEINE Fehlerobergrenze!
+
+Bitte besonders prüfen:
+1. U8 ist die neue Common96-Majorante; C und C* nicht vertauschen.
+2. T_h* trägt in den niedrigen Rohkoordinaten ausschließlich e_sigma,
+   nicht die 191 E-Koordinaten. Deshalb ist E*U(U8f)=c exakt.
+3. Die Normuntergrenze benutzt die orthogonale Zerlegung
+   chi=Lambda s+J_old(Pi8 psi_core-U8 f), nicht eine gestrichene Kopplung.
+4. E_F und E_J sind Fehler der vollständigen NORMALISIERTEN Features.
+   Der Faktor 1/sqrt(1-rho) beim Transport zu c ist zu beachten.
+5. Tatsächliches k ist eingeschlossen; k0 allein definiert nur das Modell.
+6. p=alpha v+e; e ist berechnet, nicht stillschweigend nullgesetzt.
+
+Nächster sinnvoller Rechenschritt:
+HERLEITUNG §7 gibt einen exakten Weg zu <chi_t,h> OHNE die vollständige
+hohe U8-Antwort als Funktion auszuwerten. Für h=C_p z oder D12 Tz wird
+h8=Pi8 h_core gebraucht. (7.2) enthält eine ganze L2-Paarung <f_t,h8>,
+zwei niedrige Paarungsvektoren, einen Momentträgerterm und die bereits
+bekannten Vf_t. Alle Randlogarithmen und Sprünge müssen in der ganzen
+Paarung enthalten sein. Die Funktion h8 darf nicht durch 24/61 Grade
+ersetzt werden. Rundungsfehler gegen das tatsächlich gewichtete Skalarziel
+bezahlen; die neue W9-Normuntergrenze ist hierfür weiterhin unbrauchbar.
+
+Zuerst diese Skalaridentität und die Datenzuordnung für die eingefrorene
+Regel A9_A11_N12_MIDPOINT_INVERSE_60_V1 prüfen, dann gerichtete Paarungen
+mit allen zwölf zulässigen z berechnen. Große ||chi|| allein entscheidet
+nicht, ob diese Residuen in der gefährlichen Richtung liegen.
+
+Das neue Paket enthält zwei komprimierte vollständige Quelldateien und
+die unveränderten Stufe-1-/Stufe-2-Pakete. Das b48e3895-Brückenarchiv ist
+separat nötig; certify_stage3.py prüft seinen vollständigen SHA.
+
+Nicht gerechnet: ganze hohe U8-Funktion, N12-Paarungen, Residualenergie,
+neue positive Schurform, A9->A11, weitere Horizonte oder Objekt X.
+Die großen Quellintegrationen und analytischen Operatorvoraussetzungen
+bleiben gebundene Eingaben. Keine GitHub-Änderung; externe Prüfung offen.

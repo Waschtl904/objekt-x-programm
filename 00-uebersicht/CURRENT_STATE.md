@@ -125,5 +125,6 @@ Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getre
 - `CONDITIONAL-HILBERT-INVERSE-PROPAGATION`: PENDING_STATUS_REVIEW — `research/x-c1/conditional-inverse-propagation-2026-10-15/META.yaml`.
 - `RENEWAL-REDUCTION-AND-STRUCTURAL-OBSTRUCTIONS`: PENDING_STATUS_REVIEW — `research/x-c1/renewal-reduction-and-obstructions-2026-10-15/META.yaml`.
 - `A9-INVERSE-SPIKE-ONE-DIRECTION-CALIBRATION`: PENDING_STATUS_REVIEW — `research/x-c1/a9-inverse-spike-calibration-2026-10-15/META.yaml`.
+- `NSTAR-JP-SPIKE-ORTHOGONALITY-STAGES-1-4`: PENDING_STATUS_REVIEW — `research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

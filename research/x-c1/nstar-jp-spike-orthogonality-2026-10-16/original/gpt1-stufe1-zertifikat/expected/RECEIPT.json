@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "bridge_archive_sha256": "b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b",
+  "global_source_archive_sha256": "2ca3c682de8a529b12a0d628c2b606fd04df332d1299ccd36dff71ac3e53d80c",
+  "directed_decimal_digits": 180,
+  "original_shell_diagnostics_match_within_relative_1e_minus_25": true,
+  "wrong_core_moment_sign_rejected": true,
+  "exact_parallelism_rejected": true,
+  "full_W9_norm_lower_certified_under_inherited_hypotheses": true,
+  "inherited_hypotheses_retained": true,
+  "U8_action_computed": false,
+  "residual_pairings_computed": false,
+  "N12_rule_excluded": false,
+  "A9_A11_closed": false,
+  "external_review_open": true
+}

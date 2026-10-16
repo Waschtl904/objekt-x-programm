@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.zip binary
+original/** -text
+reports/** -text
+stufe1/** -text
+stufe2/** -text
+stufe4/** -text

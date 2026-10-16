@@ -1,0 +1,18 @@
+{
+  "shell_chi_original.py": {
+    "original_filename": "shell_chi.py — Stufe-1-Rechner.py",
+    "sha256": "e97efcb45b5462aafce7a7c47b41e902e56ee2a8d0da45aa0a3567275ffc1b49"
+  },
+  "PSI_DEFINITION_original.json": {
+    "original_filename": "PSI_DEFINITION.json — ψ_t = ΛJt − Fk für Stufe 2.json",
+    "sha256": "c341d358002d95d3e642f241a9e09150d85b187b8c83b29783647a9c8b53650a"
+  },
+  "STUFE1_SHELL_RESULTS_original.json": {
+    "original_filename": "STUFE1_SHELL_RESULTS.json — vollständige Stufe-1-Zahlen.json",
+    "sha256": "b2e033b44454a5b5ad654df326f2801c434be43ac9b5a8cf72b1eb260b6e2408"
+  },
+  "STUFE1_BERICHT_original.md": {
+    "original_filename": "Objekt X — Stufe 1  Schalenteil von χ_t und Aufhebungsdiagnose.md",
+    "sha256": "42e0554c5824b3e0978d3e66e61739e1d4038c1fbfd67d55e829af5abc52e260"
+  }
+}

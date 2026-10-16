@@ -1,0 +1,31 @@
+name: N*Jp spike orthogonality stages 1-4
+
+on:
+  pull_request:
+    paths:
+      - 'research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/**'
+      - '.github/workflows/nstar-jp-spike-orthogonality.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/**'
+      - '.github/workflows/nstar-jp-spike-orthogonality.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bindings-and-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Bindings and replay of the two directed certifiers (stage 1 shell, stage 3 finite U8 response)
+        run: python -u -B research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/verify.py
