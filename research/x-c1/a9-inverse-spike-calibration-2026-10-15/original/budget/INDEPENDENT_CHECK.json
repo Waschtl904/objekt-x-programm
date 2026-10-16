@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "separate_method": "integer denominator lifting and triangular interval quadratics",
+  "exact_scalar_and_vector_equalities": 524,
+  "parities": 2,
+  "directions": 4,
+  "lower_inverse_bounds": [
+    55000,
+    9300
+  ],
+  "W9_scalar_Cauchy_controls": 8,
+  "analytic_and_global_residual_hypotheses_inherited": true,
+  "full_A9_A11_closed": false
+}

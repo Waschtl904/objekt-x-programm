@@ -1,0 +1,54 @@
+Objekt X — Rückgabe zur A9-Spike-Kalibrierung, 15. Oktober 2026
+
+Geprüfter Head #226: ed31c343d9870d71b18e65bca1a1fa47cc097a23.
+Die exakten Kernzertifikate bestehen frisch; beide 84er-LDL wurden ausgeführt.
+Bitte vor dem Merge die Schlussfolgerungen in PROOF.md §§4-5 korrigieren,
+als sichtbare Revision gemäß CONTRIBUTING, nicht durch Löschen der Historie.
+
+1. Artefaktfrage beantwortet, unter den bisherigen gebundenen Voraussetzungen:
+   BUDGET_CERTIFICATE.json enthält u*D u, u*M_upper u, u*M0 u und sämtliche
+   getrennten gerichteten Fehlerpreise für u_E_min und u_E_second.
+   Die Rundung ist vernachlässigbar. Der analytische M-Fehlerpreis beträgt
+   nur 0.877444 % bzw. 0.00559109 % von u*E u.
+   Der wirkliche Vergleichsgap Delta erfüllt die Grenzen in HERLEITUNG §2.
+   Mehr Präzision in denselben M-Daten wird den Spike nicht beseitigen.
+
+2. Neuer bedingter Unterbeweis für den reduzierten Vergleich:
+   <JXu,H_*^-1 JXu>/||JXu||² >55000 bzw. >9300.
+   Bitte HERLEITUNG §3 gezielt gegenprüfen: Woodbury, Cauchy in Delta,
+   ||S^-1 Ru||² <= [5/(21 beta)] c u*E u, J*J>=I.
+   Das ist ausdrücklich KEINE Untergrenze für die volle wahre A9-Inverse.
+
+3. H_*^-1 nicht mit W9/U9 identifizieren. Vollständig bleiben
+   <f8,U8f8>, v12*K^-1v12 und nu=Nf aus §6 des A9-Inverspakets erhalten.
+   Der richtige obere Spike ist <Jv,N Rz>. HERLEITUNG §4 gibt den exakten
+   physischen Vektor N*Jv mit allen Subtraktionen und Adjunkten an.
+   Allein der Faktor <5 vor ||nu||² ist kein Beweis, dass dieser Term oder
+   die übrigen Energien gegenüber dem A11-Budget harmlos sind.
+
+4. Für einen tatsächlichen Ausschluss der festen W9-Zertifikatsregel
+   braucht man eine untere Energie und eine obere verfügbare Reserve.
+   Neu beigefügt: p=P_upper v, q=v*P_upper v exakt rational, mit
+   (11/10)|<Jp,Nf>|²/q <= <f,W9f>.
+   Das Scheitern einer zusätzlich groben oberen Rang-eins-Abschätzung ist
+   dagegen noch kein CERTIFICATE_FAIL der ursprünglichen festen Regel.
+
+5. Die Kofinalitätsbehauptung in §5d folgt nicht aus #225 Lemma 2.
+   Eine feste große Konstante C ist mit Monotonie und uniformer Fortsetzung
+   vereinbar; ein exaktes Gegenmodell steht in HERLEITUNG §6.
+   Auch die notwendige Aufnahme genau von Jv in die Antwortbasis folgt nicht.
+
+Nächster Vorschlag: erst die vollständigen skalaren Restfunktionen berechnen,
+dann eine explizit neue, gezielte Antwortkorrektur P_neu konstruieren und
+die direkte Form plus gesamte Hintergrundenergie vergleichen (§7).
+Auch eine Korrektur innerhalb der vorhandenen Antwortbasis ist grundsätzlich
+möglich, sofern ell(A9 Phi12) nicht verschwindet. Die hierfür benötigten
+Zahlen sind noch nicht berechnet; die neue Regel ist nicht als bestanden erklärt.
+
+Reproduktion, nur Python-Standardbibliothek:
+  python -B -X utf8 verify.py --output ../new-unused-directory
+  optional zusätzlich: --full-pr226
+Der Standardlauf rekonstruiert alle neuen Daten und die getrennte Prüfung.
+--full-pr226 führt auch beide bereits frisch bestätigten 84er-LDL erneut aus.
+Große historische Integrationen und die alten 574 Pivots werden nicht gestartet.
+Keine GitHub-Änderung, kein A9->A11-Abschluss, externe Gesamtprüfung offen.

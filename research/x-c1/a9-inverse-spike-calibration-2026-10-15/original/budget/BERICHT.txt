@@ -1,0 +1,78 @@
+Objekt X — Artefaktfrage zum A9-Spike und korrekter W9-Anschluss
+15. Oktober 2026 — bedingt auf die gebundenen Operator- und Residualnachweise
+
+Die Kernrechnung aus PR #226 besteht frisch: zwei exakte 84x84-LDL,
+168 positive Pivots, alle dortigen Rayleigh- und Konstantenkontrollen.
+Die Folgerungen zur vollständigen A9-Majorante und zur Kofinalität müssen
+jedoch vor einem Merge korrigiert werden.
+
+NEU: Die vorgeschlagene getrennte Budgetauswertung ist ausgeführt.
+Das fehlende Antwortarchiv war lokal vorhanden und ist über das
+Inversarchiv eindeutig per SHA gebunden. Für die kritische Richtung u:
+
+                                   Gerade             Ungerade
+ u*D203 u / ||u||²                  1.446574323191e-13  4.802798196429e-13
+ u*M_upper u / ||u||²               1.446570179788e-13  4.802715290430e-13
+ u*E u / ||u||²                     4.143403183543e-19  8.290599939281e-18
+ E relativ zu D203                 2.864286 ppm       17.262020 ppm
+ analytischer M-Fehlerpreis / E    0.877444 %         0.00559109 %
+ reine Rundungszugabe / E         <2.469e-37         <1.208e-38
+
+Die kleine absolute Zahl entsteht teilweise durch die Skalierung der
+Kraftkoordinaten. Zugleich ist der relative Gap des festgelegten Vergleichs
+tatsächlich eng. Die Verstärkung ist kein dominierendes Rundungsartefakt.
+
+Mit Delta=D-A S^-1 A* und e=u*E u folgt aus der vollständigen geerbten
+Residualkontrolle und den neuen Richtungswerten sogar:
+
+ gerade:   0.996 e <= u*Delta u < 1.01755 e,
+ ungerade: 0.9929 e <= u*Delta u < 1.000112 e.
+
+Zusätzlich ist eine echte untere Verstärkung der REDUZIERTEN Vergleichs-
+inversen H_*^-1 auf der expliziten Testrichtung J X u bewiesen:
+
+ gerade >55000; ungerade >9300.
+
+Das ist keine Untergrenze für die tatsächliche volle A9-Inverse. Die
+festgelegte Vergleichsform ist ein Untervergleich der tatsächlichen Form.
+Andere Vergleichsformen oder alte Inversmajoranten können besser sein.
+
+Korrekturen zu #226:
+
+1. H_*^-1 wirkt auf dem reduzierten Rest T. Die volle Majorante W9 enthält
+   zusätzlich die alte U8-Energie, die Zwölferenergie und die transformierte
+   Quelle nu=Nf. Der richtige ausgezeichnete Skalar ist <Jv,N Rz>.
+   C_off<5 für den reduzierten Anteil bedeutet nicht C_off<5 für ganz W9.
+
+2. Eine große OBERschranke widerlegt die feste Antwortregel noch nicht.
+   Für einen echten Ausschlusstest liefern wir jetzt eine untere Energie:
+   mit B=P_upper, p=Bv, q=v*Bv gilt
+       <f,W9 f> >= (11/10)|<Jp,Nf>|²/q.
+   p und q sind exakt berechnet. Die ganzen skalaren Funktionen sind noch
+   auszuwerten. Ein bestandener Skalarvergleich ersetzt keine Gesamtenergie.
+
+3. Nichtfallende Inverse bedeuten nicht notwendig unbeschränkte Inverse.
+   Q_n=diag(1/C,1,...,1) ist eine beliebig lange genestete Kette mit
+   gleichbleibender Inversnorm C. Eine zwingende Kofinalitätssperre oder
+   zwingende Aufnahme genau von Jv folgt aus dem Befund nicht.
+
+Nächster sinnvoller Rechenschritt:
+Die korrekte transformierte skalare Restfunktion samt Fehlerbudget bilden.
+Danach gezielt einen Antwortkandidaten testen, der diese Funktion abfängt.
+Für e in D(A9), ell(A9 e) ungleich null, liefert
+   P_neu=P+e ell(R.)/ell(A9 e)
+exakt ell(R_neu)=0. Ob dieser Kandidat insgesamt günstiger ist, muss mit
+seiner vollständigen direkten Form und W9-Hintergrundenergie geprüft werden.
+Die bisher eingefrorene Antwortregel wird nicht still ersetzt.
+
+Prüfung: Originalreplay von #226; vollständiger E/X-Quellenabgleich;
+vier exakte Richtungsauswertungen; getrennte Ganzzahlrechnung mit
+524 exakten Gleichheiten und acht Cauchy-Kontrollmodellen. Das Rückgabepaket
+enthält beide unveränderten Quellenarchive und reproduzierbare Prüfer.
+
+Nicht neu gerechnet: historische große Integrationen und 574 alte Pivots.
+Offen: skalare Quellintegrationen, volle W9-Energie, A9->A11, H9,
+weitere Horizonte, Objekt X und externe Gesamtbegutachtung.
+GitHub wurde gelesen, weder PR #226 verändert noch gemergt.
+
+Für GPT 1 mit ANSCHLUSS_GPT1.txt und HERLEITUNG.txt beginnen.

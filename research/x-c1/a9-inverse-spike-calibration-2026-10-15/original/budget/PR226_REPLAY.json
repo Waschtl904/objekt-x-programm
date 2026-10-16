@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "source_archive_sha256": "a1fa41958d79ab16a7c42b12375c3373f5a86a99993ae2d23c984ff6b3b2e8ae",
+  "override": "archive path only; original mathematical checks unchanged",
+  "parities": {
+    "even": {
+      "beta": "20209999981781/182190000000000",
+      "mu": "56620",
+      "eps": "21/10",
+      "Z1_inertia_mu_vv_plus_eps_minus_P": [
+        0,
+        0,
+        84
+      ],
+      "Z1_seconds": 166.0,
+      "Z2_rayleigh_v": 56619.810867039734,
+      "Z3_rayleigh_w_orthogonal": 2.044811423047784,
+      "Z4_lambda_min_E_upper_bound": "4.143e-19",
+      "Z4_second_direction_upper_bound": "3.298e-12",
+      "Z4_E_max_diagonal": 0.9999984922945726,
+      "Z5_global_constant_source_3_3": 62317.78127390986,
+      "Z5_offspike_constant": 4.672190229324304,
+      "Z5_spike_weight_on_Jv": 62282.0,
+      "Z5_ratio_global_over_offspike": 13338.02311446602
+    },
+    "odd": {
+      "beta": "20209999981781/182190000000000",
+      "mu": "9373",
+      "eps": "37/100",
+      "Z1_inertia_mu_vv_plus_eps_minus_P": [
+        0,
+        0,
+        84
+      ],
+      "Z1_seconds": 186.1,
+      "Z2_rayleigh_v": 9372.437553121837,
+      "Z3_rayleigh_w_orthogonal": 0.35163683725052364,
+      "Z4_lambda_min_E_upper_bound": "8.291e-18",
+      "Z4_second_direction_upper_bound": "3.254e-11",
+      "Z4_E_max_diagonal": 0.9999980424541932,
+      "Z5_global_constant_source_3_3": 10317.717390473734,
+      "Z5_offspike_constant": 2.768234923324304,
+      "Z5_spike_weight_on_Jv": 10310.3,
+      "Z5_ratio_global_over_offspike": 3727.182726993215
+    }
+  }
+}

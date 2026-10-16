@@ -1,0 +1,226 @@
+Objekt X — Budgetartefakt geklärt und korrekter skalarer W9-Anschluss
+15. Oktober 2026 — AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+0. Umfang
+
+Geprüfter PR #226: ed31c343d9870d71b18e65bca1a1fa47cc097a23.
+Seine Originaldateien und das Reduktionspaket aus #225 sind lokal gebunden.
+Der Originalprüfer von #226 besteht frisch mit beiden exakten 84er-LDL.
+Die mathematischen Prüfoperationen wurden nicht verändert; nur der lokale
+Archivpfad wurde beim Aufruf gesetzt. GitHub wurde nicht verändert.
+
+Die neue Rechnung bindet zusätzlich das vollständige Antwortarchiv vom
+11. Oktober. Dessen SHA ist im Inversarchiv bereits gebunden; beide darin
+benutzten Antwortdateien werden mit response_source_sha256 identifiziert.
+Je Parität werden alle 41209 Identitäten E=D-M_upper und alle 17052
+Antwortkoeffizienten X abgeglichen. Historische Großintegrationen, deren
+analytische Fehlerabschätzungen und der vollständige globale Residualsatz
+bleiben gebundene Voraussetzungen. Die alten 574 Pivots werden hier nicht
+nochmals ausgeführt. Es wird keine Aussage über eine neu berechnete A11-Form
+oder eine externe mathematische Begutachtung gemacht.
+
+1. Exakte Zerlegung der kleinen Budgetlücke
+
+Notation des A9-Inverspakets:
+  D=D203, E=D-M_upper, Z=J X,
+  M=A Z+Z* A* -Z* S Z,
+  R=A*-S Z,
+  Delta=D-A S^-1 A*=D-M-R* S^-1 R.
+Es gelten geerbt S>=beta L, L>=21/5 I und
+  0<=R* S^-1 R<=c E,
+mit c=1/250 gerade und c=71/10000 ungerade.
+
+Der Antwortdatensatz enthält ein Intervallmodell M0 und den vollständigen
+analytischen Fehlerpreis e_M in der D-Metrik:
+  -e_M D <= M-M0 <= e_M D.
+Die feste Obermatrix ist M_upper=M0_upper+e_M D. Der Unterschied zwischen
+M0_upper und M0 enthält gerichtete Matrixrundung und das Polster 10^-55 I.
+
+Für die rationale Richtung u=u_E_min aus #226 berechnen wir getrennt:
+  d=u*D u, m=u*M_upper u, e=u*E u=d-m,
+  [m0_lo,m0_hi] enthält u*M0 u.
+Alle Werte in BUDGET_CERTIFICATE.json sind exakte Brüche; Tabellenwerte
+sind lediglich gerundete Anzeigen. Zusätzlich ist u_E_second ausgewertet.
+
+                         gerade                 ungerade
+ d/||u||²                1.446574323191e-13       4.802798196429e-13
+ m/||u||²                1.446570179788e-13       4.802715290430e-13
+ e/||u||²                4.143403183543e-19       8.290599939281e-18
+ e/d                     2.864286415926e-6        1.726202018116e-5
+ e_M d/e                 0.008774439303          0.000055910856
+ Rundung/e, obere Schr.  <2.469e-37              <1.208e-38
+
+Die absoluten Größen 10^-19 und 10^-18 entstehen somit auch durch sehr
+kleine D-Energien der normierten Kraftkoordinaten. Sie sind keine direkte
+Aussage über einen physischen A9-Eigenwert. Der dimensionslose relative
+Gap beträgt hier 2.864... bzw. 17.262... ppm. Diese beiden Quotienten
+bleiben bei konsistenter Kongruenz/Koordinatenänderung erhalten; die rohe
+Konditionszahl von E tut das nicht.
+
+Die Richtung ist zugleich tatsächlich kritisch FÜR DIESEN VERGLEICH:
+Die Lücke ist nicht durch das gerichtete Rundungspolster entstanden.
+Auch der vollständige analytische M-Fehlerpreis erklärt nur 0.8774439...
+bzw. 0.00559109... Prozent der zertifizierten Lücke. Das betrifft alle
+vom Antwortpaket bezahlten M-Fehler, nicht nur Maschinenrundung.
+
+2. Die wirkliche Lücke Delta des festgelegten Vergleichs bleibt klein
+
+Aus der Residualidentität und den vollständigen übernommenen Schranken:
+  (1-c)e <= u*Delta u <= d-m0_lo+e_M d.
+Die obere Schranke verwirft nur den nichtnegativen echten Residualterm.
+Die untere verwendet den vollständigen globalen Rest, nicht einen
+Galerkin-Test. Die exakte Rechnung ergibt:
+
+ gerade:   0.996 e <= u*Delta u < 1.01755 e,
+ ungerade: 0.9929 e <= u*Delta u < 1.000112 e.
+
+Damit kann selbst das bestmögliche Entfernen sämtlicher hier gebundener
+M-Einschließungsfehler den Gap dieser Richtung höchstens um 1.755 Prozent
+bzw. 0.0112 Prozent über E vergrößern. Zusätzliche Ziffern werden den Spike
+dieses festgehaltenen Vergleichs nicht um Größenordnungen beseitigen.
+
+Dies schließt NICHT aus, dass eine andere alte Inversmajorante, andere
+Vergleichsformen oder ein neu konstruierter endlicher Block wesentlich
+besser wären. Insbesondere wird die tatsächliche Weil-Form nicht mit
+dieser unteren Vergleichsform gleichgesetzt.
+
+3. Neue untere Verstärkung für H_*^-1, mit expliziter Testrichtung
+
+Setze H_*=S-A*D^-1 A, x=Xu, f=Jx=Zu und w=S^-1 A*u.
+Die vollständige Woodbury-Identität liefert für jede Hilbertquelle g:
+  <g,H_*^-1 g> >= |<g,w>|²/(u*Delta u).
+Dies ist Cauchy-Schwarz in der Delta-Metrik, angewandt auf A S^-1 g.
+Außerdem w-f=S^-1 R u und
+  ||w-f||² <= ||S^-1|| <Ru,S^-1 Ru> <= [5/(21 beta)] c e.
+Da J*J>=I, ist ||f||>=||x||. Mit g=f folgt, sofern der Zähler positiv ist:
+
+ <f,H_*^-1 f>/||f||²
+ >= (sqrt(||Xu||²)-sqrt([5/(21 beta)] c e))²/(d-m0_lo+e_M d).
+
+Beide Wurzeln werden gerichtet mit ganzzahligem isqrt eingeschlossen,
+die erste nach unten und die zweite nach oben. Die resultierenden
+EXAKTEN rationalen Untergrenzen sind größer als
+  55554.33... gerade, 9339.06... ungerade;
+als einfache zertifizierte Aussagen benutzen wir >55000 und >9300.
+Die expliziten Koeffizienten x stehen im Ergebnisdatensatz.
+
+Dies betrifft H_*^-1 auf T. Die tatsächliche reduzierte A9-Schurform ist
+größer als H_*; ihre Inverse ist deshalb kleiner. Die neue UNTERgrenze
+für H_*^-1 darf also nicht als Untergrenze für A9^-1 verwendet werden.
+Sie zeigt, dass die Verstärkung innerhalb des festgelegten Vergleichs
+nicht nur ein beliebig großer Überschuss von P_upper ist.
+
+4. Korrektur des Übergangs von H_*^-1 zur vollständigen A9-Majorante
+
+Abschnitt 4 von #226 liefert eine gültige Rang-eins-OBERschranke auf T:
+  H_*^-1 <= K_off I + (11/10) mu_spike (Jv)(Jv)*,
+mit K_off<4.68 bzw. <2.77. Auf dem W_X-Komplement von Jv folgt daraus
+auch der dort behauptete Boden für die Restriktion von H_*: Die Inverse
+der Restriktion liegt unter der komprimierten ganzen Inverse.
+
+Die Gleichsetzung dieser Aussage mit einer solchen Schranke für U9/W9
+auf dem GANZEN alten A9-Raum ist dagegen nicht begründet. Aus Abschnitt
+6.3-6.4 des gebundenen Inverspakets gilt für eine physische Quelle f:
+
+ f8=J_old* f,
+ v12=F* f-g_F*U8 f8,
+ nu=Nf=Lambda_T* f-g*U8 f8-a_fin*K^-1 v12,
+
+ <f,W9 f>=<f8,U8 f8>+v12*K^-1 v12
+           +(11/10)[beta^-1<nu,R_L nu>+(J*nu)*P_upper(J*nu)].
+
+Deshalb lautet der korrekte obere Anschluss aus #226:
+
+ <f,W9 f> <= <f8,U8 f8>+v12*K^-1 v12
+              +K_off||Nf||²+C_spike|<Jv,Nf>|².
+
+Die zwei ersten Energien bleiben vollständig enthalten; Nf ist eine
+gemeinsam transformierte Quelle. Weder Nf=f noch ein globales C_off<5
+für W9 ist bewiesen. Die vollständige Schwierigkeit von (H1) ist daher
+nicht bereits auf einen Skalar reduziert.
+
+Der physische Rieszvektor des ausgezeichneten Funktionals lautet
+psi_+=N*Jv. Mit k=K^-1 a_fin Jv ist explizit
+  psi_+=Lambda_T Jv-Fk-J_old U8(g Jv-g_F k).
+Diese Formel verwendet genau die physischen Adjunkte des Inverspakets.
+Für P_9=Phi12 T, D12=A9 Phi12, lautet die ganze skalare Restfunktion
+  ell_+(Rz)=<psi_+,Cz>-<psi_+,D12 Tz>.
+Hier ist KEINE Anwendung A9 psi_+ erforderlich; dessen Zugehörigkeit
+zur Operatordomäne wird nicht vorausgesetzt.
+
+5. Ein gültiger skalarer Ausschlusstest für die festgelegte Majorante
+
+Ein zu großer Wert einer OBERschranke widerlegt nicht automatisch die
+feste Antwortregel. Für einen echten Ausschlusstest braucht man eine
+UNTERschranke der verwendeten Energie. Diese steht ebenfalls bereit:
+
+ Setze B=P_upper>0, p=Bv und q=v*Bv>0. Dann
+   h*B h >= |p*h|²/q
+ für ALLE h, unmittelbar durch Cauchy-Schwarz in der B-Metrik.
+ Folglich
+   <f,W9 f> >= (11/10)|<Jp,Nf>|²/q.
+
+p und q werden aus dem gebundenen P_upper exakt rational neu berechnet
+und mitgeliefert. Der richtige untere Test benutzt also psi_-=N*Jp.
+Wenn sein gerichteter unterer Energiepreis für ein zulässiges z eine
+gerichtete OBERgrenze von k[z]-b[z] überschreitet, scheitert das konkrete
+Zertifikat mit dieser W9-Majorante. Das ist kein negativer Weilzeuge.
+Ein bestandener Skalarvergleich ersetzt weiterhin keine der anderen
+vollständigen Energien. Die Funktionen ell_+(R.) und ell_-(R.) sind in
+diesem Paket noch nicht integriert; geschlossen ist ihre korrekte
+Operatorform und die endliche rationale Anschlussinformation.
+
+6. Warum der Spike keine Kofinalitätssperre beweist
+
+Lemma 2 von #225 betrifft die wahre komprimierte Inverse; für die dort
+festgelegte Fortsetzungsformel gilt auch U_new>=U_old (+)0. Daraus folgt
+kein notwendiges Wachstum gegen unendlich. Die genestete Kette
+  Q_n=diag(1/C,1,...,1), U_n=Q_n^-1=diag(C,1,...,1)
+ist für jedes feste C>1 unbeschränkt fortsetzbar und uniform durch C
+majorisiert. Die kritische Richtung bleibt stets vorhanden.
+
+Außerdem ist ein großer Eigenwert einer gewählten OBERmajorante allein
+keine entsprechende UNTERschranke der wahren Inverse. Beim festgelegten
+Fortsetzungsalgorithmus kann eine vorhandene Überschätzung konserviert
+werden; eine bessere neu zertifizierte Majorante ist damit nicht verboten.
+Die Aussage aus #226 §5d, eine Regel ohne Aufnahme von Jv sei unabhängig
+von A11-Daten strukturell nicht kofinal fortsetzbar, folgt daher nicht.
+
+7. Konstruktiver nächster Schritt statt einer notwendigen Basisvergrößerung
+
+Zuerst ell(R.) mit ell(f)=<Jv,Nf> oder mit der unteren Testfunktion
+berechnen, einschließlich aller Modellfehler und exakter Momentprojektion.
+Danach lässt sich ein gezielter Antwortkandidat definieren:
+Für e in D(A9) mit ell(A9 e) ungleich null setze
+  P_neu=P+ e ell(R.)/ell(A9 e).
+Dann R_neu=R-A9 e ell(R.)/ell(A9 e), also ell(R_neu)=0 exakt.
+Die neue Antwort ist graphbeschränkt, wenn R beschränkt und e in D(A9).
+Dieser Anschluss verwendet keine vorausgesetzte neue A11-Positivität.
+
+e muss nicht gleich Jv sein und kann schon in der bisherigen Antwortbasis
+liegen. Für e=Phi12 b mit d_i=ell(A9 phi_i) genügt d b ungleich null.
+Falls der exakte alte Galerkinblock A_N>0 verwendet wird, minimiert
+  b=A_N^-1 d*/(d A_N^-1 d*)
+die alte Energie unter der Nebenbedingung d b=1. Diese Regel ist hier
+nur hergeleitet, nicht numerisch ausgewertet. Die eingefrorene N12-Regel
+wird nicht still verändert. Der neue Kandidat muss anschließend mit
+seiner geänderten direkten Form, der ganzen Hintergrundenergie und
+sämtlichen Kreuztermen geprüft werden.
+
+8. Prüfumfang und Status
+
+Frisch ausgeführt: beide exakten 84er-LDL aus #226; vier gerichtete
+Budgetauswertungen; alle E/X-Quellenidentitäten; die neuen unteren
+H_*-Inverspreise; beide Vektoren P_upper v; getrennte Ganzzahlrechnung
+für die entscheidenden Quadratikwerte und Cauchy-Gegenkontrollen.
+
+Neu bedingt geschlossen: Kein dominierendes M-Rundungs-/Modellfehlerartefakt
+in den angegebenen Budgetrichtungen; die konkrete reduzierte Inverse ist
+dort nachweislich stark. Der korrekte vollständige W9-Skalaranschluss und
+eine mögliche gezielte Antwortkorrektur sind hergeleitet.
+
+Offen: tatsächliche skalare Quellintegration, vollständige W9-Energie,
+A9->A11, Hypothese H9, Uniformität über weitere Horizonte, Objekt X und
+externe Gesamtprüfung. Vor einem Merge von #226 sind insbesondere die
+Folgerungen zur vollständigen A9-Majorante, zum Ausschlusstest und zur
+Kofinalität sichtbar zu korrigieren; die rationalen Kernzertifikate bleiben.

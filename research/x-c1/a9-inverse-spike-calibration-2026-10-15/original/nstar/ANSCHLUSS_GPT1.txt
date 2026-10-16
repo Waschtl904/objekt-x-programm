@@ -1,0 +1,60 @@
+Objekt X — Rückgabe: N*Jp, Funktionsquellen und vier Koeffizientenanschlüsse
+16. Oktober 2026
+
+Mit FUNKTIONSANSCHLUSS.txt beginnen, insbesondere Abschnitte 4 bis 7.
+
+1. Das angefragte Artefaktpaket ist vorhanden und unverändert:
+   Objekt-X-A9-Spike-Artefaktpruefung-und-Korrekter-W9-Anschluss-2026-10-15.zip
+   SHA256 7f7129945b38768a5ec88994b783211db1ceb0810129ffc4ea4ba7db5beb1f5e.
+   Bitte separat neben diesem Zusatzpaket bereithalten.
+
+2. Das Zusatzpaket enthält das vollständige gebundene globale Quellarchiv
+   vom 13. Oktober sowie die maßgeblichen Beweistexte. Die Basis84 liegt
+   auf (3 log(2)/2,log(3)); Lambda hebt sie in den ganzen A9-Raum.
+
+3. Neu: U8 ist als ganze Funktionsaktion ausgeschrieben:
+   y=T_h f, d=Phi*f-B8 y/delta,
+   c=C_inv C_inv* d/(1-rho),
+   U8 f=Phi c+T_h*(y-B8*c)/delta.
+   Das Sternchen in T_h* und B8* bedeutet jeweils den Adjunkten.
+   Alle hohen Grade und die Momentkorrekturen bleiben enthalten.
+
+4. Neu gerechnet: Für t=v und t=P_upper v je Parität liegen Jt in lokalen
+   Koeffizienten und k0=K^-1 Cfin_mid t vor. Die tatsächlichen
+   k=K^-1 a_fin Jt sind einschließlich analytischem Fehler eingeschlossen.
+   Die Fehlerobergrenzen in K-Norm betragen, nur zur gerundeten Anzeige:
+                 t=v                 t=P_upper v
+   gerade        1.965e-8            1.113e-3
+   ungerade      7.924e-10           7.427e-6
+   Maßgeblich sind die exakten rationalen Obergrenzen in DIRECTIONS.json.
+   Diese Zahlen sind KEINE Fehlerobergrenze für chi oder für eine W9-Energie.
+
+5. Die ganze gesuchte Funktion lautet
+   chi_t=Lambda Jt-Fk-J_old U8(g Jt-g_F k).
+   Die k-Koeffizienten sind teils groß. Gemeinsame Kombinationen und ihre
+   Aufhebungen müssen in der Integration erhalten bleiben.
+
+6. Nächster Test: Für die feste N12-Regel die gerichteten Paarungen
+   <chi_p,Cz>-<chi_p,D12 Tz> auf den zwölf zulässigen z berechnen und
+   (11/(10q))|.|^2 mit einer OBERgrenze des verfügbaren Budgets vergleichen.
+   Alle neuen Funktions- und Momentmodellfehler vollständig transportieren.
+   Ein Testfehlschlag verwirft dieses Zertifikat, nicht die tatsächliche Form.
+   Ein bestandener Richtungstest ersetzt keine globale obere Energie.
+
+Reproduktion, nur Python-Standardbibliothek; Zielverzeichnis muss neu sein:
+  python -B -X utf8 verify.py --spike-archive ../Objekt-X-A9-Spike-Artefaktpruefung-und-Korrekter-W9-Anschluss-2026-10-15.zip --output ../neuer-pruefordner
+
+Die Dateien unter expected sind die neu erzeugten Ergebnisse. Der Prüfer
+schreibt dieselben mathematischen JSON-Daten unabhängig vom Betriebssystem
+mit LF. MANIFEST.json bindet Quellen, Texte, Prüfer und Ergebnisse.
+
+Frisch geprüft: 24 positive K-Pivots, 168 p-Komponenten, zwei q-Identitäten,
+288 Inversprodukteinträge, 48 Kk0-Gleichungen, 32 Nullrelationen,
+384 gerichtete lokale Funktionskoeffizienten. Ein frischer Paket-Replay
+ist in FRISCHER_PAKET_REPLAY.json dokumentiert.
+
+Nicht berechnet: chi-Integrale, unterer Ausschlusstest, vollständige neue
+W9-Energie, A9->A11. Keine neue historische Großintegration, keine 574
+alten Pivots, kein Audit der aktuellen PR-Köpfe, keine GitHub-Änderung.
+Die geerbten analytischen Voraussetzungen und externe Gesamtprüfung
+bleiben ausdrücklich offen.

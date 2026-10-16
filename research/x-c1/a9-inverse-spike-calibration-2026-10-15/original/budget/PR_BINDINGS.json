@@ -1,0 +1,24 @@
+{
+  "repository": "Waschtl904/objekt-x-programm",
+  "pr": 226,
+  "head": "ed31c343d9870d71b18e65bca1a1fa47cc097a23",
+  "base": "9037647904580ee5588ccfe6fe881f36d67bfd24",
+  "files": {
+    "PROOF.md": {
+      "git_blob_sha": "146ca359ecd4e32138fabaede10636c7bb390bf9",
+      "url": "https://github.com/Waschtl904/objekt-x-programm/blob/ed31c343d9870d71b18e65bca1a1fa47cc097a23/research/x-c1/a9-inverse-spike-calibration-2026-10-15/PROOF.md"
+    },
+    "WITNESSES.json": {
+      "git_blob_sha": "af16a0643ef1215a038a0eb584182488aff1c300",
+      "url": "https://github.com/Waschtl904/objekt-x-programm/blob/ed31c343d9870d71b18e65bca1a1fa47cc097a23/research/x-c1/a9-inverse-spike-calibration-2026-10-15/WITNESSES.json"
+    },
+    "verify.py": {
+      "git_blob_sha": "598933a5dbe858bfe29c52d1789768e839c5745b",
+      "url": "https://github.com/Waschtl904/objekt-x-programm/blob/ed31c343d9870d71b18e65bca1a1fa47cc097a23/research/x-c1/a9-inverse-spike-calibration-2026-10-15/verify.py"
+    },
+    "REDUCTION_PROOF.md": {
+      "git_blob_sha": "824e5a7705f36e160700205c3d1e88e4457794d0",
+      "url": "https://github.com/Waschtl904/objekt-x-programm/blob/ed31c343d9870d71b18e65bca1a1fa47cc097a23/research/x-c1/renewal-reduction-and-obstructions-2026-10-15/PROOF.md"
+    }
+  }
+}
