@@ -1,0 +1,12 @@
+{
+  "status": "PASS_REPLAY_BYTE_EQUAL",
+  "parities": [
+    "even",
+    "odd"
+  ],
+  "input_preparation": "8 hash-verified inputs from 3 original archives",
+  "python_flint": "0.9.0",
+  "precision_bits": 800,
+  "diagnostic_predecessor_commit": "15d1f2132c5e5b396c6265921c70bdf30db37530",
+  "mathematical_review": "AUTHOR_DERIVED_EXTERNAL_REVIEW_OPEN"
+}

@@ -1,0 +1,26 @@
+{
+  "repository_files": {
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe3-endliche-u8-antwort/expected/FINITE_ACTION.json": "689636e2b11efcc828100f93b512d4375c8bfebfe8c4a37e3c7c1320f31ed551",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt1-stufe1-zertifikat/expected/PSI_CORRECTED.json": "3e1bc5db6114333434891a52bef8f3bf6822779b52d14585d249d67943d8c7a1",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/stufe1/PSI_DEFINITION.json": "b9ea7df388ac38d087ca842cca0c28c93d1b1ea8c113539e601665a49e4e55ba",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/expected/COMPLETE_HIGH_RESPONSE.json": "52027262debebfdb5258a7fb74ff5280d98d81b34a347d99a91a83470362a606",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-und-kohaerenter-transport/expected/COHERENT_TRANSPORT_INPUTS.json": "c0c882ba85bf3ee56a433b5c5bf5d5c5c0341f2a9e03e213e6e19c460aba5666",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/stufe5/prepare_inputs.py": "bfa1792d1d19f92a071f2ba86ddffb782352a85de96d15bdef74cf223d394be4",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/SOURCE_BINDINGS.json": "018ee873264d1627c2c72f7b6c600b0bb3045b637a6fe558d12acee1248bbd16"
+  },
+  "prepared_inputs": {
+    "DIRECTIONS.json": "bb97d37cb0d78dab5dc701d6850711a0332b530a3df26b859194d662f4a2f503",
+    "FROZEN_RESPONSE12.json": "132959da5d34c0c89471ee15f7c34d8b4a42ad48c641b6c4db5181113d11426a",
+    "FUNCTIONS12.json": "7c13f08ad85084379249c4a08b7c8bda0813eaea72939ba385cb3756b2801b3c",
+    "HALF_INVERSE_1536.json": "d828be18959b85474419a5e435875c6569bcf6a26c9ea88b3db38820d95aeb46",
+    "INNER_LOG_1536.json": "e211935bfe70bc830b1b36bc1040c64cd0dfaca32455c6436af6da07f2336be3",
+    "stage3/expected/FINITE_ACTION.json": "689636e2b11efcc828100f93b512d4375c8bfebfe8c4a37e3c7c1320f31ed551",
+    "stage3/inputs/REFINED_COMMON96.json.gz": "306acbacf5f4089fe703f655bf4340087f0ae88aeaab416c0282e9e24c1638df",
+    "stage3/inputs/REFINED_INPUT.json.gz": "c67a44d7cc052bff32ed2768b81595367c710f9308f0f1716b213a74766b1e64"
+  },
+  "archive_sha256": {
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52",
+    "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee",
+    "research/x-c1/a9-inverse-spike-calibration-2026-10-15/archives/Objekt-X-Nstar-Jp-Funktionsanschluss-und-Koeffizienten-2026-10-16.zip": "b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b"
+  }
+}
