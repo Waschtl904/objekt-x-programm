@@ -1,0 +1,9 @@
+{
+  "feature_Gram_identities": 6,
+  "Young_matrix_identities": 24,
+  "cross_terms_required": true,
+  "lower_norm_as_upper_rejected": true,
+  "stored_low_map_and_norm_are_insufficient": true,
+  "noncommuting_weights_used": true,
+  "arithmetic_operator_evidence": false
+}
