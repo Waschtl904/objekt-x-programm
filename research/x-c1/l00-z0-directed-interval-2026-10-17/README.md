@@ -17,3 +17,15 @@ python3 research/x-c1/l00-z0-directed-interval-2026-10-17/verify.py
 ```
 
 Pflichtprüfung: Eingabe- und Eigenbindungen, beide vollständigen Intervallläufe, exakte k₀-Zuordnung, Endpunkt- und analytische Quadraturreste, bytegleicher Replay beider Ergebnisdateien. Externe mathematische Prüfung bleibt offen. Die unveränderten Vorgängerzertifikate sind keine neue unabhängige Prüfung ihrer großen Quellenintegrationen.
+
+## Replay-Revision vom 17. Oktober 2026
+
+Die zuvor verwendeten beiden `subprocess.run`-Aufrufe wurden nach dem
+Sourcery-Sicherheitsaudit durch direkte Aufrufe der bestehenden Python-Einstiegspunkte
+ersetzt. Der Replay prüft jetzt zusätzlich das Vorbereitungsskript und dessen
+Quellenbindungen vor dem Import. Er akzeptiert keine externen Skriptpfade,
+startet keine Shell und keinen Kindprozess. `python -O` wird ausdrücklich abgewiesen.
+Der Certifier, die mathematischen Eingaben und beide erwarteten Ergebnisdateien
+bleiben unverändert. Die Abnahme verlangt erneut einen vollständigen bytegleichen
+Replay aus einem frischen Archiv sowie die CI am neuen Head. Der frühere
+Replay-Nachweis bleibt an seinen damaligen Commit gebunden.
