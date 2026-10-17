@@ -20,8 +20,12 @@ def main():
                            env=env, check=True)
             name = f"SHARP_K_{parity}.json"
             assert (Path(td) / name).read_bytes() == (HERE / "expected" / name).read_bytes(), name
+        subprocess.run([sys.executable, "-B", str(HERE / "project_high.py")], env=env, check=True)
+        for parity in ("even", "odd"):
+            name = f"PROJECTED_HIGH_{parity}.json"
+            assert (Path(td) / name).read_bytes() == (HERE / "expected" / name).read_bytes(), name
     subprocess.run([sys.executable, "-B", str(HERE / "audit_correlation.py")], check=True)
-    print("PASS: both actual K_P certificates reproduced byte-for-byte; 24 numerical controls; external review open")
+    print("PASS: four K_P/high-projection certificates reproduced byte-for-byte; 24 numerical controls; external review open")
 
 if __name__ == "__main__":
     main()

@@ -12,7 +12,10 @@
     "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/HERLEITUNG.txt": "85059c5108a708a34e633e71764f238f40374254d4482e2b09d6af19eed3acfd",
     "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/MANIFEST.json": "344a433e9f6aa189c1ad246bc079bbd940fdaff92ee20f3693f6cb40d970edd2",
     "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/expected/RECEIPT.json": "6a3170211ec979214919af22fac0b6c3f86d9286a53d56945014e48705c20e4a",
-    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/verify.py": "9e3f12fe8b15abe9cc7d073a9b62ea0e280b4089e4bc103aa764db1e1d4fde8d"
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/verify.py": "9e3f12fe8b15abe9cc7d073a9b62ea0e280b4089e4bc103aa764db1e1d4fde8d",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/expected/COMPLETE_HIGH_RESPONSE.json": "52027262debebfdb5258a7fb74ff5280d98d81b34a347d99a91a83470362a606",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/HERLEITUNG.txt": "c584f04069f72271728fb4d337e8308f69212ed16cfb76c29221be5f90a0ae83",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/MANIFEST.json": "f30889e34f112141be4d7a669f8dad39318e6fc803b85aa2c8a916d85df27c32"
   },
   "response_archive": {
     "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip",

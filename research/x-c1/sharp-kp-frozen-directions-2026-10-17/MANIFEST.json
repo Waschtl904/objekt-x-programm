@@ -1,12 +1,15 @@
 {
-  "INPUT_BINDINGS.json": "a2080a286531e9ee11c8070af63537c619199e4b2bda4ee1287b1f86e6223ed4",
-  "META.yaml": "b2f9974b91c2fd72eae35b799c447d561a891fd910c3a6cf225b53b635211897",
-  "PROOF.md": "958c4e61a700a4f42c7cb4df2ed069c06bd01ab133e03f4419451a15dd12e24a",
-  "README.md": "cd364f7da0a013ba53b22e82474a19aa58fd04f2401bf4bf50b353e62320bc0f",
+  "INPUT_BINDINGS.json": "54fa6e51c06bd67f7d3d78ee74b27fd03545e38ff45175da06980024363fa2c1",
+  "META.yaml": "b6803535e0d8f6d2bed78fa27a8535c1836c65d42bf49315a7e3601b82189e36",
+  "PROOF.md": "0ef062d456202482dcdbf3301b7bc945d96fdea10ad61de1466565ec415dcc5f",
+  "README.md": "34c4e51b3a11846a85a4350ed7147a13a6a56126257edb93e5a8080b4cf69f99",
   "audit_correlation.py": "6efe97fb441d1484bc911e18b261f0cbfa05556ef2c692520e8c6589bc9874fc",
   "certify.py": "49762f0bb037fc3c1bfdbf22930bb4175682759e1c5d7c121990b9ccb5faaf14",
+  "expected/PROJECTED_HIGH_even.json": "585a1bd448e2550fb44af4b702e440ce3c9f6aef12168b52ea7d3ac8b11ba025",
+  "expected/PROJECTED_HIGH_odd.json": "bd36c232f6a351126c651d7661f08d09d796b8f2f14e0b8be7211ffb0f38af7d",
   "expected/SHARP_K_even.json": "67332794271c32d2ac4b8a334d517cf6f9055ce215141df5a96f3bd8ff06f1fe",
   "expected/SHARP_K_odd.json": "2f699be798952ded396336b07c3c7f2e61398f8d1baec6a504716a04b24a0f01",
+  "project_high.py": "734cbc6838c4f13e8af45f29ae072998c0af82482e7538fc393140bb65213dd9",
   "requirements.txt": "a84bec3b39ff94ed4f52f05c5614afcdd8617ed367aded7070c590fd4139a2fa",
-  "verify.py": "144520c521fd6f20bbcfc2a116f3554afd160310ee3be0a139b6cee354a340d1"
+  "verify.py": "fe7d093ecbffe775830dcaa112abc28f9f92679c840cd3ded9fdb52d59d5aa76"
 }

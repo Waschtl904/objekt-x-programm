@@ -8,9 +8,9 @@
   "mathematical_status": "AUTHOR_DERIVED",
   "review_status": "EXTERNAL_REVIEW_OPEN",
   "integration_status": "RESEARCH_BRANCH_UNMERGED",
-  "scope": "Directed two-sided actual K_P enclosures for exactly two previously frozen W-unit shell directions, from full autocorrelation energy and the response subtraction under the bound operator/domain/source hypotheses. Both sharper sufficient scalar tests are inconclusive with the inherited L intervals.",
+  "scope": "Directed actual K_P enclosures and a sharper high-coordinate pairing budget for exactly two previously frozen W-unit shell directions under the bound operator/domain/source hypotheses. The even sufficient scalar test is inconclusive; the odd test does not exclude the fixed rule.",
   "claim_polarity": "POSITIVE_RESULT",
-  "negative_claim_boundary": "No exclusion or nonexclusion under the sharper thresholds, no N12 result, no rule confirmation, no new candidate selection or whole-space K_P matrix, no Object X or RH conclusion.",
+  "negative_claim_boundary": "No exclusion, no confirmation of the rule or N12 result, no new candidate selection or whole-space K_P matrix, no physical orthogonality of the moment-lifted high response, no Object X or RH conclusion.",
   "depends_on": [
     "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
   ],
@@ -26,6 +26,6 @@
   ],
   "canonical_proof": {
     "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/PROOF.md",
-    "sha256": "958c4e61a700a4f42c7cb4df2ed069c06bd01ab133e03f4419451a15dd12e24a"
+    "sha256": "0ef062d456202482dcdbf3301b7bc945d96fdea10ad61de1466565ec415dcc5f"
   }
 }

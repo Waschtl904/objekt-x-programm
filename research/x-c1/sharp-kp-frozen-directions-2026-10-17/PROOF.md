@@ -2,6 +2,11 @@
 
 17.10.2026 · **AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN**.
 
+**Nachtrag desselben Tages:** §8 verschärft zusätzlich das hohe Paarungsbudget.
+Damit entscheidet sich der ungerade Test als Nichtausschluss; der gerade Test
+bleibt unentschieden. §§1–7 dokumentieren die erste K_P-Rechnung mit den noch
+unveränderten L-Intervallen, deren Resultate und Dateien erhalten bleiben.
+
 ## 1. Aussage und Abgrenzung
 
 Für genau die beiden rational festgelegten, exakt W-normierten Richtungen aus
@@ -250,3 +255,73 @@ jetzt genau eine Archivwurzel und genaue relative Mitgliedsnamen. Es wurden
 keine Ergebnisse dieses abgebrochenen Starts verwendet. Die Zweigauswahl wurde
 vor dem Abnahmelauf von Mittelpunkt-Fließkommavergleichen auf strikt gerichtete
 Vergleiche umgestellt; alle resultierenden Zertifikatsbytes blieben gleich.
+
+## 8. Nachtrag: den hohen Koordinatenanteil des Testresiduums benutzen
+
+Die vier neuen Ergebnisdateien trennen die Schritte: `SHARP_K_*.json` hält
+die K_P-Rechnung und den damaligen Vergleich mit den alten L-Intervallen fest;
+`PROJECTED_HIGH_*.json` enthält den folgenden engeren Vergleich. Die beiden
+Kandidaten, I₀, sämtliche Integrationen und die K_P-Schwellen bleiben unverändert.
+
+Aus der gebundenen Hochantwort-Herleitung, §1, gelten in isometrischen
+Legendrekoordinaten exakt
+
+    Mx=x−e⟨m_s,x⟩/m_e, x∈e⊥,
+    e⊥=ran E ⊕ Y,
+    Φ=U⁻¹ME, T_h=P_Y M*U,
+    u_hi=U⁻¹Mr/δ, r∈Y, δ=18219/10000.
+
+U ist isometrisch, M ist **nicht** isometrisch. Der physische hohe Antwortteil
+u_hi ist deshalb nicht als orthogonal zu ran Φ anzunehmen. Stattdessen erfolgt
+die folgende Subtraktion in den tatsächlich orthogonalen Koordinaten E und Y.
+Der Adjunkt von M nimmt Werte in e⊥ an. Für das bereits eingeschlossene ganze
+Modellresiduum h₈ und ℓ=Φ*h₈ gilt somit
+
+    ||T_h h₈||² = ||M*U h₈||² − ||E*M*U h₈||²
+                = ||M*U h₈||² − ||ℓ||²
+                ≤ γ_m ||h₈||² − ||ℓ||²,
+    γ_m = ||M||² = ||m_s||²/|m_e|².
+
+Die obere Schranke γ_m ist bereits im gebundenen Hochantwortzertifikat als
+`full_M_norm_squared` enthalten. Es handelt sich um die ganze Momentfunktion,
+keine endliche Näherung ihres Trägers. Die 191 Komponenten von ℓ und die Norm
+von h₈ liegen aus der gerichteten Skalarrechnung vor. `project_high.py` bildet
+die rechte Seite vollständig mit Intervallen. Ihr oberes Ende verwendet damit
+eine **untere** Einschließung der subtrahierten Quadratsumme; es wird keine
+untere Normschranke als obere eingesetzt. Beide resultierenden Majoranten sind
+strikt positiv, ungefähr 2,6808611·10⁻⁵ bzw. 0,44533060.
+
+Die tatsächliche ganze Hochantwortnorm in Koordinaten ist durch R_r≥||r||
+gebunden (`actual_high_difference_norm_upper`, Richtung `lower_Pv`). Es folgt
+
+    |⟨u_hi,h₈⟩| = |⟨r,T_h h₈⟩|/δ
+      ≤ (R_r/δ) sqrt(γ_m||h₈||²−||ℓ||²) = R_projected.
+
+Die gebundenen Fehler in r, einschließlich tatsächlichem k, Modell, Quellen
+und B-Kopplung, bleiben vollständig in R_r enthalten. Der Quellenmodellrest
+des Testresiduums wird unverändert separat durch die ganze χ_p-Norm bezahlt.
+Es wird keine neue physische Orthogonalitätsbehauptung und keine kohärente
+Auswertung der zwölf zusätzlichen U₈-Antworten benutzt.
+
+Nach oben gerundet sinkt der hohe Budgetterm auf 4,662438 gerade bzw.
+15,290465 ungerade. Alle anderen Fehlerterme aus §5 des Skalarzertifikats
+bleiben erhalten: kohärenter ψ-k-Fehler, vollständiger endlicher Antwortfehler
+und Quellenmodellrest. Mit demselben ganzen gerichteten I₀ ergibt sich:
+
+| Parität | engeres L, nach außen gerundet | unveränderte neue Schwelle | Entscheidung |
+|---|---:|---:|---|
+| gerade | [−5,961; 8,948] | [3,314249417943; 3,314249417944] | INCONCLUSIVE_FOR_DIRECTION |
+| ungerade | [135,497; 169,560] | [182,550050826232; 182,550050826233] | DOES_NOT_EXCLUDE_FOR_DIRECTION |
+
+Der neue ungerade Abstand sup|L| zur hinreichenden Schwelle ist größer als
+12,990. Das ist weiterhin keine Bestätigung der Regel und kein N12-Abschluss.
+Der gerade Test bleibt ein Überlappungsfall. Seine verbleibenden dominierenden
+Fehler sind der endliche k-Anteil (etwa 2,791419) und die ganze hohe Antwort
+(etwa 4,662438); eine weitere Verkleinerung der K_P-Quadraturreste ist unnötig.
+
+Die Hochantwortdatei und ihre Herleitung werden zusätzlich direkt gebunden;
+ihr Datenhash muss mit dem bereits im Skalarzertifikat verwendeten Hash
+übereinstimmen. Der erweiterte Pflicht-Replay verlangt alle vier Ergebnisdateien
+bytegleich aus einem frischen Archiv und führt die unveränderten 24 numerischen
+Autokorrelationskontrollen aus. Die Registry-/Beweisankerprüfungen bleiben
+verpflichtend. Externe mathematische Prüfung ist weiterhin offen.
