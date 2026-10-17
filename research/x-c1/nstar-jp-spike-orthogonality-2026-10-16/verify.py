@@ -9,7 +9,8 @@ Nur Standardbibliothek. Prueft
        entpackten Archiv gegen das Brueckenarchiv; Ausgaben bytegleich mit expected/,
   (R2) Replay des gerichteten Stufe-3-Pruefers certify_stage3.py (Paket ab7116f7...) analog,
   (R3) Replay des gerichteten Stufe-4-Hochantwort-Pruefers certify.py (Paket 1ccb6be1...) mit den drei
-       Vorgaengerarchiven (b48e3895 aus #226, ab7116f7 aus diesem Paket, b8677c0b aus #227).
+       Vorgaengerarchiven (b48e3895 aus #226, ab7116f7 aus diesem Paket, b8677c0b aus #227),
+  (R4) Replay des Rayleigh-Zeugen-Pruefers verify.py (Paket f0bdfe69...) mit Hochantwort- und Antwortarchiv.
 Die mpmath-Diagnosen (stufe1/, stufe2/, stufe4/) werden nicht neu gerechnet; ihre Dateien sind
 in (B1) hashgebunden. Es wird keine mathematische Aussage ueber den N12-Test, A9->A11 oder
 Objekt X geprueft; der Wrapper zertifiziert Bindung und Reproduzierbarkeit der Pruefer.
@@ -33,6 +34,7 @@ BRIDGE_SHA = "b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b"
 STAGE1 = "archives/Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16.zip"
 STAGE3 = "archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip"
 STAGE4 = "archives/Objekt-X-Vollstaendige-Hochantwort-und-Spike-Skalarfehler-2026-10-16.zip"
+RAYLEIGH = "archives/Objekt-X-Stufe4-Teil2-Gegenpruefung-und-Rayleigh-Zeugen-2026-10-17.zip"
 RESPONSE = ROOT / "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip"
 
 
@@ -65,13 +67,13 @@ def check_bindings(b) -> int:
     return n
 
 
-def replay(archive: Path, script: str, workdir: Path, label: str, extra=()) -> dict:
+def replay(archive: Path, script: str, workdir: Path, label: str, extra=(), bridge=True) -> dict:
     z = zipfile.ZipFile(archive)
     root = z.namelist()[0].split("/")[0]
     z.extractall(workdir)
     pkg = workdir / root
     out = workdir / (label + "-out")
-    cmd = [sys.executable, "-B", "-X", "utf8", str(pkg / script), "--bridge-archive", str(BRIDGE), *extra, "--output", str(out)]
+    cmd = [sys.executable, "-B", "-X", "utf8", str(pkg / script)] + (["--bridge-archive", str(BRIDGE)] if bridge else []) + [*extra, "--output", str(out)]
     p = subprocess.run(cmd, cwd=str(pkg), capture_output=True, text=True)
     if p.returncode != 0:
         raise SystemExit(label + " Replay fehlgeschlagen:\n" + p.stdout[-2000:] + p.stderr[-2000:])
@@ -83,7 +85,8 @@ def replay(archive: Path, script: str, workdir: Path, label: str, extra=()) -> d
         compared += 1
     receipt = json.loads((out / "RECEIPT.json").read_bytes())
     assert receipt.get("status") in ("PASS", "PASS_UNDER_BOUND_OPERATOR_DOMAIN_AND_COMPLETE_SOURCE_HYPOTHESES",
-                                     "PASS_UNDER_BOUND_COMPLETE_SOURCE_GRAM_AND_OPERATOR_HYPOTHESES"), receipt
+                                     "PASS_UNDER_BOUND_COMPLETE_SOURCE_GRAM_AND_OPERATOR_HYPOTHESES",
+                                     "PASS_UNDER_BOUND_OPERATOR_DOMAIN_AND_FULL_MODEL_INTEGRATION_HYPOTHESES"), receipt
     return {"expected_files_bytewise_equal": compared, "receipt_status": receipt["status"]}
 
 
@@ -98,6 +101,8 @@ def main() -> int:
         report["stage3_certify_replay"] = replay(HERE / STAGE3, "certify_stage3.py", tmp / "s3", "stage3")
         report["stage4_high_certify_replay"] = replay(HERE / STAGE4, "certify.py", tmp / "s4", "stage4",
                                                       extra=("--stage3-archive", str(HERE / STAGE3), "--response-archive", str(RESPONSE)))
+        report["rayleigh_witness_replay"] = replay(HERE / RAYLEIGH, "verify.py", tmp / "s5", "rayleigh", bridge=False,
+                                                   extra=("--high-archive", str(HERE / STAGE4), "--response-archive", str(RESPONSE)))
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
     report["scope"] = "binding and replay only; no mathematical claim about N12, A9->A11 or Object X"

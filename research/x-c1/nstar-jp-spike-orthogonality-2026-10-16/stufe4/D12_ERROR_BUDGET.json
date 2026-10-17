@@ -125,7 +125,8 @@
     "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.5295",
     "budget_sum": "0.5719"
    }
-  ]
+  ],
+  "status": "UNGERICHTETE GROESSENORDNUNGSDIAGNOSE: Kernnorm ||h8|| statt ||D_j||_H9 (Untergrenze) im e_psi-Term, keine gerichteten Reste fuer I0, ||C*Phi*h8||, ||y_h||, kein Dhat-Term, H_hi nach unten gerundet. Keine Fehlerobergrenze."
  },
  "odd": {
   "e_Psi": "0.00024590037",
@@ -253,6 +254,7 @@
     "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.008859",
     "budget_sum": "0.01365"
    }
-  ]
+  ],
+  "status": "UNGERICHTETE GROESSENORDNUNGSDIAGNOSE: Kernnorm ||h8|| statt ||D_j||_H9 (Untergrenze) im e_psi-Term, keine gerichteten Reste fuer I0, ||C*Phi*h8||, ||y_h||, kein Dhat-Term, H_hi nach unten gerundet. Keine Fehlerobergrenze."
  }
 }

@@ -5,7 +5,9 @@ A8(Phi c) = [Q^np_{a8} P_c(x/a8) - kappa_c m(x)]/sqrt(2 a8),  P_c = sum_i c_i (e
 Kontrollen: ||B*c||^2 = ||A8Phic||^2 + gamma_m a^2 - sum (Ac)_k^2  vs  c^T G0 c;
             <B*c, y_f> = <A8Phic, f> + gamma_m a a_f - (Ac).Phi*f  vs Archiv <c, B T_h f>;
             (Ac)_k aus a8_model-A vs Quadratur.
-Diagnose (mpmath 50 Stellen Operator, 150 Stellen D_j-Auswertung); kein Zertifikat.
+Diagnose (mpmath 50 Stellen Operator, 150 Stellen D_j-Auswertung); kein Zertifikat. Die Ergebnisse r_vj und
+ell_v(D_j) sind Quadratur-Mittelpunkte ohne gerichteten Rest; die Vergleichsschranke 0.0159*||y_h|| nutzt
+selbst eine ungerichtete Quadraturnorm ||y_h|| und ist nur eine Konsistenzdiagnose (Gegenpruefung 17.10.2026).
 """
 import sys, json, gzip, glob, time
 from fractions import Fraction as Fr
@@ -123,9 +125,11 @@ def main(par):
             core = mp.mpf(T['rows'][j]['<psi_v,D_j>']) - mp.mpf(T['rows'][j]['<c,Phi*h8_j>'])
             ell = core - r
             yh2 = 2*sum(w*hh*hh for w, hh in zip(W, h8)) + gamma_m*a_h**2 - sum(p*p for p in phih)
+            if yh2 <= 0:
+                raise SystemExit(f'fail-closed: Normquadrat des hohen Anteils nicht positiv (j={j}, yh2={yh2})')
             rr = {'j': j, 'degree': row['degree'], '<y_f,y_h>/delta': mp.nstr(bracket, 12), '<B*c,y_h>/delta': mp.nstr(Bc_yh/delta, 12),
                   'r_vj': mp.nstr(r, 10), 'Klammer <psi,D>-<c,Phi*h8>': mp.nstr(core, 10), 'ell_v(D_j) Mittelpunkt': mp.nstr(ell, 10),
-                  'norm_y_h': mp.nstr(mp.sqrt(abs(yh2)), 8), 'norm_h8 vs D12_TERMS reldiff': mp.nstr(abs(mp.sqrt(2*sum(w*hh*hh for w, hh in zip(W, h8)))-mp.mpf(T['rows'][j]['norm_h8_j']))/mp.mpf(T['rows'][j]['norm_h8_j']), 3), 'cert_bound_|r|<=0.0159*gamma^-1/2*norm_y_h': mp.nstr((mp.mpf('0.0159163') if sigma==0 else mp.mpf('0.00244487'))*mp.sqrt(abs(yh2)), 4)}
+                  'norm_y_h': mp.nstr(mp.sqrt(yh2), 8), 'norm_h8 vs D12_TERMS reldiff': mp.nstr(abs(mp.sqrt(2*sum(w*hh*hh for w, hh in zip(W, h8)))-mp.mpf(T['rows'][j]['norm_h8_j']))/mp.mpf(T['rows'][j]['norm_h8_j']), 3), 'cert_bound_|r|<=0.0159*gamma^-1/2*norm_y_h': mp.nstr((mp.mpf('0.0159163') if sigma==0 else mp.mpf('0.00244487'))*mp.sqrt(yh2), 4)}
         res['rows'].append(rr); print(par, rr, flush=True)
         json.dump(res, open(HERE/f'HIGH_PAIRINGS_{par}.json', 'w'), indent=1)
     print(par, 'done %.0fs' % (time.time()-t0))

@@ -4,7 +4,7 @@
    "1.335557299694630709167767e-26",
    "1.335557299694630709167767e-26"
   ],
-  "note": "Obergrenze aus dem tatsaechlichen Modellgram A (a8_model.json.gz, Paket 1ccb6be1...), Intervallendpunkte vorzeichengerecht; Modellfehler von A selbst nicht enthalten",
+  "note": "Obergrenze aus dem tatsaechlichen Modellgram A (a8_model.json.gz, Paket 1ccb6be1...), Intervallendpunkte vorzeichengerecht; Modellfehler von A selbst nicht enthalten Die beiden Endpunkte sind gleich gerundete Dezimalanzeigen, keine vollen Intervallendpunkte.",
   "rows": [
    {
     "degree": 2,
@@ -78,14 +78,15 @@
     "CS_upper_bound": "1.77814e-13",
     "ratio": "0.05268"
    }
-  ]
+  ],
+  "status": "MODELLNIVEAU: u1^T A0 u1 ohne Gamma-Modellfehler e_A=(42/5)eps_Gamma=1.3587e-28; I_j und A12_jj nicht eingeschlossen; gerichteter Rayleigh-Anschluss im Paket f0bdfe69... (zwei rationale Zeugen)."
  },
  "odd": {
   "a_low_u1_directed_interval": [
    "8.531283747051135347483737e-24",
    "8.531283747051135347483737e-24"
   ],
-  "note": "Obergrenze aus dem tatsaechlichen Modellgram A (a8_model.json.gz, Paket 1ccb6be1...), Intervallendpunkte vorzeichengerecht; Modellfehler von A selbst nicht enthalten",
+  "note": "Obergrenze aus dem tatsaechlichen Modellgram A (a8_model.json.gz, Paket 1ccb6be1...), Intervallendpunkte vorzeichengerecht; Modellfehler von A selbst nicht enthalten Die beiden Endpunkte sind gleich gerundete Dezimalanzeigen, keine vollen Intervallendpunkte.",
   "rows": [
    {
     "degree": 3,
@@ -159,6 +160,7 @@
     "CS_upper_bound": "4.16986e-12",
     "ratio": "0.02168"
    }
-  ]
+  ],
+  "status": "MODELLNIVEAU: u1^T A0 u1 ohne Gamma-Modellfehler e_A=(42/5)eps_Gamma=1.3587e-28; I_j und A12_jj nicht eingeschlossen; gerichteter Rayleigh-Anschluss im Paket f0bdfe69... (zwei rationale Zeugen)."
  }
 }

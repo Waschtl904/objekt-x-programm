@@ -8,7 +8,9 @@ def sha(b): return hashlib.sha256(b).hexdigest()
 VIS = {'archives/Objekt-X-Stufe1-Intervallzertifikat-Momentkorrektur-und-W9-Diagnose-2026-10-16.zip': 'original/gpt1-stufe1-zertifikat',
        'archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip': 'original/gpt2-stufe3-endliche-u8-antwort',
        'archives/Objekt-X-Stufe1-4-Diagnose-2026-10-16.zip': None,
-       'archives/Objekt-X-Vollstaendige-Hochantwort-und-Spike-Skalarfehler-2026-10-16.zip': 'original/gpt2-stufe4-hochantwort'}
+       'archives/Objekt-X-Vollstaendige-Hochantwort-und-Spike-Skalarfehler-2026-10-16.zip': 'original/gpt2-stufe4-hochantwort',
+       'archives/Objekt-X-PR229-Gegenpruefung-2026-10-17.zip': 'original/gpt1-pr229-gegenpruefung',
+       'archives/Objekt-X-Stufe4-Teil2-Gegenpruefung-und-Rayleigh-Zeugen-2026-10-17.zip': 'original/gpt2-rayleigh-zeugen'}
 REPO_DEPS = ['research/x-c1/a9-inverse-spike-calibration-2026-10-15/archives/Objekt-X-Nstar-Jp-Funktionsanschluss-und-Koeffizienten-2026-10-16.zip',
              'research/x-c1/a9-inverse-spike-calibration-2026-10-15/archives/Objekt-X-A9-Spike-Artefaktpruefung-und-Korrekter-W9-Anschluss-2026-10-15.zip',
              'research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip',

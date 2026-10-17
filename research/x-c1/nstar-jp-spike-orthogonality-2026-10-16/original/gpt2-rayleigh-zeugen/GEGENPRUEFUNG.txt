@@ -1,0 +1,162 @@
+Objekt X — Gegenprüfung von Stufe 4 Teil 2 und PR #229
+17. Oktober 2026 · geprüfter Kopf 4db05e1a9ff46e00f2058161161eec00fd4f9842
+
+Ergebnis
+
+Die neuen 24 hohen Paarungen sind verwertbare numerische Diagnosedaten.
+Die Korrekturen zu exakter Orthogonalität und Koordinatenartefakten sind
+richtig. Die Angaben "gerichtetes Budget <~0.6 / 0.015" sind jedoch
+weiterhin keine gültigen oberen Fehlergrenzen. Ich empfehle, diese
+Statusformulierungen vor einem Merge zu korrigieren.
+
+Ein anderer offener Punkt konnte in dieser Gegenprüfung tatsächlich
+geschlossen werden: Mit zwei exakt rational festgelegten neuen Zeugen
+und vollständigem Gamma-Modellfehler folgen bedingt für die TATSÄCHLICHE
+A9-Inverse ||A9^-1||>7.4e25 gerade und >1.17e23 ungerade. Der neue
+gerichtete Prüfer und die Herleitung liegen bei. Das bestätigt nicht
+automatisch die ursprünglichen 24 numerischen Paarungsquotienten.
+
+1. Hohe Priorität: D12-Budget nicht als gerichtet ausgeben
+
+Betroffene Stellen:
+  PROOF.md:18; README.md:Kernaussage; META.yaml:scope;
+  reports/STUFE4_TEIL2_HOCHPAARUNGEN.md:42–52;
+  stufe4/D12_ERROR_BUDGET.json.
+
+Die Ausgangsformel des 1ccb6be1-Pakets benötigt e_psi ||h0||_H9,
+hier mit dem ganzen momentprojizierten Dhat_j. Eingesetzt wird jedoch
+||Pi8(D_j|core)||. Diese ist <= der ganzen Norm und liefert damit
+keine obere Abschätzung des benötigten positiven Fehlerterms.
+Die JSON-Datei räumt dies ausdrücklich ein und nennt die Werte Diagnose.
+Die anschließende Schlussfolgerung "Damit ist gerichtet ..." ist ungültig.
+
+Zusätzlich fehlen gerichtete Integrationsreste für I0 und die verwendeten
+Testnormen/Koordinaten. Der Dhat-Modellfehler ist zwar im vorhandenen
+Hochantwortpaket bezahlbar, wurde in dieser Tabelle aber ausgelassen.
+Nach unten gerundete Anzeigen wie H_hi=0.015916304 oder 0.0024448732
+dürfen keine rationalen oberen Zertifikatswerte ersetzen.
+
+Korrektur: Diese Zahlen ausschließlich als ungerichtete Größenordnungs-
+diagnose führen. Ein vollständiges L0 benötigt das ganze h0, gerichtete
+Modellintegrale, korrekt nach oben gerundete Fehler und den tatsächlichen
+k-Transport. Alternativ den gemeinsamen K-Ellipsoid-Transport direkt
+für h=C_pz-Dhat Tz einschließen. Keine O(1)-Empfindlichkeit voraussetzen.
+
+2. Reparierter Matrixansatz richtig, vollständiger A-Fehler fehlte noch
+
+Betroffene Stellen: PROOF.md:13, Teil-2-Bericht:10 und
+stufe4/SOFTMODE_CS_CORRECTED.json.
+
+Die Datei sagt selbst: "Modellfehler von A selbst nicht enthalten".
+A aus a8_model.json.gz enthält den Gamma-Polynommodellgram mit gerichteten
+Integrationsradien. Die originale A8-Herleitung unterscheidet davon die
+tatsächliche Formmatrix und liefert den zweiseitigen Fehler
+
+  e_A=(42/5)epsilon_Gamma=1.358651444920327503...e-28.
+
+Für die weiche gerade Richtung ist dieser Term ungefähr 1.02 Prozent
+der Modellenergie. Die Übereinstimmung mit F+H_B/delta bis 2.5e-33
+ersetzt ihn nicht. Zwei gleich gerundete Dezimalanzeigen in einem JSON-
+Intervall reichen ebenfalls nicht als vollständige gerichtete Endpunkte.
+
+NEU erledigt: Das beigefügte Zertifikat bezahlt diesen Fehler, den
+physischen Momentlift und die Rundungsradien für zwei vollständig
+gespeicherte rationale Zeugen. Es liefert die tatsächlichen Rayleigh-
+Obergrenzen <1.349065e-26 gerade und <8.531393e-24 ungerade sowie die
+oben genannten Inversnorm-Untergrenzen. Die ursprünglichen PR-Integrale
+I_j und ihre Quotienten werden dadurch nicht zertifiziert.
+
+3. Richtungsrest e: die Grenze 88.2 gilt nur ungerade
+
+Betroffene Stelle: Teil-2-Bericht:52.
+
+Das gebundene COMPLETE_HIGH_RESPONSE.json liefert
+  ||chi_e|| <25317.73 gerade,
+  ||chi_e|| <88.2 ungerade.
+
+Die pauschale Verwendung von 88.2 für beide Paritäten unterschätzt den
+geraden Rest stark. In ell_p=alpha ell_v+ell_e muss der tatsächliche
+Rest berücksichtigt werden; alternativ p direkt verwenden. Kleine
+Koordinaten von e beweisen hier keine kleine physische chi_e-Norm.
+
+4. Hohe Paarungen und gespeicherte A8PHIC-Daten richtig einordnen
+
+Aus den abgeholten Zahlen:
+  max |r_vj| =7.261219413e-5 gerade,
+              2.397218623e-4 ungerade;
+  max |ell_v(D_j)| Mittelpunkt =4.522308706e-5 gerade,
+                               2.391777413e-4 ungerade.
+
+Diese Mittelpunkte liegen innerhalb der ausgegebenen Vergleichszahlen.
+Das ist eine Konsistenzdiagnose, kein gerichteter Integrationsnachweis:
+Die norm_y_h-Werte sind selbst Quadraturwerte. Der Code verwendet
+sqrt(abs(yh2)) und gerundete Konstanten. Ein bereits zertifizierter
+Faktor wird durch Multiplikation mit einer ungerichteten Testnorm nicht
+zu einer zertifizierten Gesamtschranke.
+
+Auch die großen globalen Kontrollabweichungen bleiben offen:
+  ||B*c||²: Funktion gegen Archiv etwa 7.556 gerade /100.807 ungerade;
+  <B*c,y_f>: Funktion gegen Archiv etwa -37.514 gerade /-115.814 ungerade.
+Der Autor weist auf die unzureichende Quadraturgenauigkeit dieser
+Kontrollen hin. Diese Abweichungen werden hier nicht als Widerlegung
+der kleinen Einzelpaarungen ausgegeben; sie liefern jedoch keinen
+Nachweis einer absoluten Genauigkeit von 1e-4 oder besser.
+
+validate_a8.py vergleicht neun numerische Testpunkte: Grade 2,3,7 an
+je drei Punkten. Das prüft die Operatorformel sinnvoll, beweist aber
+keine uniforme Fehlergrenze für die große Kombination bis Grad 383
+und ihre nachfolgende Integration.
+
+A8PHIC_even/odd.json speichern jeweils 816 Paarungsknoten und 468
+f-Netzknoten samt Funktionswerten. Das ist keine vollständige gerichtete
+Funktionsdarstellung oder Interpolationshülle. Die Werte können für
+Diagnosen auf denselben Netzen wiederverwendet werden. Neue C_p-
+Paarungen brauchen weiterhin eine passende vollständige Integration
+mit Rest und gegebenenfalls weiteren Auswertungen.
+
+5. Anschluss an den bereits erreichten K_P-Abschluss
+
+Der Teil-2-Bericht nennt K_P[z] noch pauschal offen. Seit dem vorherigen
+Schritt dieses Chats liegt das gebundene Paket
+Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17.zip vor,
+SHA256 87540b07fb22c90867bae4ddcbefcdab66c455f786ec19f50ce0193455ff00d3.
+
+Für fixed_X gilt darin bedingt K_P[s]<29.603644 ||s||_W² auf dem
+ganzen neuen Schalenpolynomraum Grad<=11, s!=0. Für zwölf einzeln
+W-normierte Legendretests gilt K_P[z_n]<28. Für den ersten Test z0
+sind ausreichende Schwellen des vollständigen Modellresidualintervalls
+
+  dist(0,L0_0)>980.113997 gerade,
+  dist(0,L0_0)>398.766496 ungerade.
+
+Der D12-Modellfehler ist darin bereits bezahlt. Diese Budgetgrenzen
+sind keine Berechnung der linken Paarung. Der nächste entscheidende
+Schritt bleibt das GESAMTE gerichtete L0_0 für
+<chi_p,(C_p-Dhat T)z0>, einschließlich C_p, e und kohärentem k-Fehler.
+Die alten zwölf D12-Skalare sollten dabei nicht vorzeitig getrennt
+mit der großen T-Norm abgeschätzt werden.
+
+6. Tatsächlicher Prüf-/GitHub-Umfang
+
+PR #229 ist am geprüften Kopf 4db05e1... offen und nicht gemergt.
+Alle zehn vom Connector zurückgegebenen PR-Workflows sind erfolgreich,
+darunter "N*Jp spike orthogonality stages 1-4" und das A1-Gate.
+Der Connector liefert nur die erste Seite dieser Workflows; damit wird
+nicht behauptet, jede Repository-Schutzregel vollständig geprüft zu haben.
+
+16 abgerufene Quelldateien wurden gegen ihre Git-Blob-IDs geprüft;
+13 davon außerdem gegen die Einträge in SOURCE_BINDINGS.json.
+Die mpmath-Diagnosen und die drei historischen Replays des PR wurden
+in diesem Arbeitsschritt NICHT erneut ausgeführt. Der PR-Wrapper
+selbst erklärt ausdrücklich, die Diagnosen nur zu binden. Grüne CI
+oder 149 Bindungen zertifizieren die neuen Quadraturwerte nicht.
+
+Neu lokal gerechnet: zwei rationale Rayleigh-Zeugen, vollständiger
+Gamma-Rest, physische Normkorrektur, echte Formintervalle und 24
+theoretische CS-Grenzen. Keine große neue Integration. Ein frischer
+ZIP-Replay reproduziert die beiden neuen Ergebnisse bytegleich.
+
+GitHub wurde nicht verändert; keine Kommentare, Reviews oder Nachrichten
+versandt. Der zitierte Merge-Vorschlag wurde nicht als Auftrag übernommen.
+Externe mathematische Gesamtprüfung offen; kein N12-Abschluss,
+kein A9->A11-Abschluss, kein Objekt X und kein RH-Beweis.

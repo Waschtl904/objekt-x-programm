@@ -1,0 +1,112 @@
+{
+  "checked_client_date": "2026-10-17",
+  "pr_url": "https://github.com/Waschtl904/objekt-x-programm/pull/229",
+  "head_sha": "4db05e1a9ff46e00f2058161161eec00fd4f9842",
+  "state": "open",
+  "merged": false,
+  "metadata_only": true,
+  "workflow_runs_returned": [
+    {
+      "id": 39017304040,
+      "name": "Canonical odd structural-open certificates",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 52,
+      "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304040/jobs",
+      "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304040/logs",
+      "workflow_id": 371790658
+    },
+    {
+      "id": 39017304051,
+      "name": "Canonical adaptive odd angle certificates",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 44,
+      "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304051/jobs",
+      "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304051/logs",
+      "workflow_id": 373254977
+    },
+    {
+      "id": 39017304032,
+      "name": "Canonical cross and high response certificates",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 50,
+      "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304032/jobs",
+      "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304032/logs",
+      "workflow_id": 372375947
+    },
+    {
+      "id": 39017304073,
+      "name": "Validate canonical research state",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 503,
+      "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304073/jobs",
+      "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304073/logs",
+      "workflow_id": 362580557
+    },
+    {
+      "id": 39017304034,
+      "name": "Canonical joint maximizer certificates",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 54,
+      "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304034/jobs",
+      "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304034/logs",
+      "workflow_id": 371289218
+    },
+    {
+      "id": 39017304083,
+      "name": "N*Jp spike orthogonality stages 1-4",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 4,
+      "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304083/jobs",
+      "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304083/logs",
+      "workflow_id": 386985502
+    },
+    {
+      "id": 39017304054,
+      "name": "Canonical Y-kernel second-order certificates",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 40,
+      "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304054/jobs",
+      "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304054/logs",
+      "workflow_id": 373754228
+    },
+    {
+      "id": 39017304045,
+      "name": "Canonical direct odd line certificates",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 42,
+      "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304045/jobs",
+      "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304045/logs",
+      "workflow_id": 373355491
+    },
+    {
+      "id": 39017304060,
+      "name": "Canonical full shift and primal dual certificates",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 48,
+      "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304060/jobs",
+      "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304060/logs",
+      "workflow_id": 372824153
+    },
+    {
+      "id": 39017304046,
+      "name": "A1 C-even gated exact certificate",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 153,
+      "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304046/jobs",
+      "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39017304046/logs",
+      "workflow_id": 357894346
+    }
+  ],
+  "workflow_tool_scope": "first page of pull-request-triggered runs; not a proof of every repository-required status",
+  "github_changed": false
+}

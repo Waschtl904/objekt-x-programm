@@ -1,0 +1,108 @@
+{
+  "scope": "Downstream rational check conditional on saved input enclosures; no full replay.",
+  "verified_selected_source_bindings": [
+    "PROOF.md",
+    "README.md",
+    "original/gpt2-stufe4-hochantwort/HERLEITUNG.txt",
+    "original/gpt2-stufe4-hochantwort/MANIFEST.json",
+    "original/gpt2-stufe4-hochantwort/certify.py",
+    "original/gpt2-stufe4-hochantwort/vendor/source_core.py",
+    "original/gpt2-stufe4-hochantwort/sources/generate_a8.py",
+    "original/gpt2-stufe4-hochantwort/expected/COMPLETE_HIGH_RESPONSE.json",
+    "original/gpt2-stufe4-hochantwort/expected/RECEIPT.json",
+    "original/gpt2-stufe4-hochantwort/expected/SPIKE_SCALAR_D_MODEL_ERROR.json",
+    "stufe4/D12_ERROR_BUDGET.json",
+    "stufe4/HIGH_PAIRINGS_even.json",
+    "stufe4/HIGH_PAIRINGS_odd.json",
+    "stufe4/SOFTMODE_CS_CORRECTED.json",
+    "stufe4/a8_operator.py",
+    "stufe4/high_pairings.py",
+    "stufe4/validate_a8.py"
+  ],
+  "parities": {
+    "even": {
+      "upper_v": {
+        "model_r_squared_recomputed": [
+          "2.5147134173835e-06",
+          "2.5147134173835e-06"
+        ],
+        "high_norm_recomputed_upper": "0.015916304129546",
+        "safe_rational_high_bound": "2/125",
+        "D_scalar_model_error_upper": "4.7985791853268e-25",
+        "residual_scalar_model_error_upper": "3.2815290317378e-18"
+      },
+      "lower_Pv": {
+        "model_r_squared_recomputed": [
+          "8061.6757738778",
+          "8061.6757738778"
+        ],
+        "high_norm_recomputed_upper": "901.17812951719",
+        "safe_rational_high_bound": "902",
+        "D_scalar_model_error_upper": "2.7169464590373e-20",
+        "residual_scalar_model_error_upper": "1.857995531317e-13"
+      },
+      "orthogonal_difference": {
+        "model_r_squared_recomputed": [
+          "6.2312254878067e-19",
+          "6.2312254878067e-19"
+        ],
+        "high_norm_recomputed_upper": "4.4259784341952e-10",
+        "safe_rational_high_bound": "443/1000000000000",
+        "D_scalar_model_error_upper": "8.9882674739773e-34",
+        "residual_scalar_model_error_upper": "6.1466654027658e-27"
+      },
+      "diagnostics": {
+        "pair_count": 12,
+        "max_abs_r": "7.261219413e-05",
+        "max_abs_ell_mid": "4.522308706e-05",
+        "Gram_check_difference": "7.5555074144",
+        "cross_check_difference": "-37.5142136458",
+        "whole_residual_squared_using_quadrature_checks": "82.583937220713",
+        "budget_note": "(7.1) ohne den Term chi_upper*||h-h0|| (D_j-Modellfehler) und mit ||h8|| statt ||D_j||_H9 im e_psi-Term; Diagnose der Groessenordnung",
+        "D12_pairings_certified": false
+      }
+    },
+    "odd": {
+      "upper_v": {
+        "model_r_squared_recomputed": [
+          "1.1004985324599e-05",
+          "1.1004985324599e-05"
+        ],
+        "high_norm_recomputed_upper": "0.0024448732494837",
+        "safe_rational_high_bound": "49/20000",
+        "D_scalar_model_error_upper": "3.6289558925412e-26",
+        "residual_scalar_model_error_upper": "2.8455852045433e-20"
+      },
+      "lower_Pv": {
+        "model_r_squared_recomputed": [
+          "966.70636636221",
+          "966.70636636221"
+        ],
+        "high_norm_recomputed_upper": "22.914421856085",
+        "safe_rational_high_bound": "23",
+        "D_scalar_model_error_upper": "3.4012162485875e-22",
+        "residual_scalar_model_error_upper": "2.6670069631669e-16"
+      },
+      "orthogonal_difference": {
+        "model_r_squared_recomputed": [
+          "1.0402696314038e-20",
+          "1.0402696314038e-20"
+        ],
+        "high_norm_recomputed_upper": "5.6032696556224e-11",
+        "safe_rational_high_bound": "561/10000000000000",
+        "D_scalar_model_error_upper": "3.1308933976628e-36",
+        "residual_scalar_model_error_upper": "2.4550378106561e-30"
+      },
+      "diagnostics": {
+        "pair_count": 12,
+        "max_abs_r": "0.0002397218623",
+        "max_abs_ell_mid": "0.0002391777413",
+        "Gram_check_difference": "100.8072853972",
+        "cross_check_difference": "-115.8137833826",
+        "whole_residual_squared_using_quadrature_checks": "332.43486316739",
+        "budget_note": "(7.1) ohne den Term chi_upper*||h-h0|| (D_j-Modellfehler) und mit ||h8|| statt ||D_j||_H9 im e_psi-Term; Diagnose der Groessenordnung",
+        "D12_pairings_certified": false
+      }
+    }
+  }
+}

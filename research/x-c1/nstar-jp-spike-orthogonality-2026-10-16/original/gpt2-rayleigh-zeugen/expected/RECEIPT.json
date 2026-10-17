@@ -1,0 +1,21 @@
+{
+  "status": "PASS_UNDER_BOUND_OPERATOR_DOMAIN_AND_FULL_MODEL_INTEGRATION_HYPOTHESES",
+  "high_archive_sha256": "1ccb6be11c6a8b4e325338b80f2136990b464b4a70e724a02ca7addbe7ba99b0",
+  "response_archive_sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee",
+  "exact_Gamma_error_recomputed": true,
+  "fixed_rational_witnesses_checked": 2,
+  "whole_physical_moment_norm_paid": true,
+  "CS_bounds_for_new_witnesses": 24,
+  "actual_A9_inverse_norm_lower_certified_conditionally": true,
+  "old_PR_pairing_ratios_certified": false,
+  "D12_error_budget_certified": false,
+  "high_pairing_quadratures_replayed": false,
+  "new_large_integrations": false,
+  "new_historical_pivot_replay": false,
+  "N12_excluded": false,
+  "A9_A11_closed": false,
+  "Objekt_X_constructed": false,
+  "RH_proved": false,
+  "external_review_open": true,
+  "github_changed": false
+}
