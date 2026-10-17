@@ -1,5 +1,6 @@
 """Replay both directed scalar enclosures without starting child processes."""
 import hashlib
+import gzip
 import importlib.util
 import json
 import os
@@ -28,6 +29,39 @@ def load_module(name, path):
     return module
 
 
+def check_snapshot_isolation(certify):
+    """Regression: later file edits must not change certified input bytes."""
+    with tempfile.TemporaryDirectory(prefix='objekt-x-snapshot-test-') as td:
+        base = Path(td).resolve()
+        plain, packed = base / 'plain.json', base / 'packed.json.gz'
+        original = b'{"value": 7}'
+        plain.write_bytes(original)
+        packed.write_bytes(gzip.compress(original, mtime=0))
+        bindings = {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+                    for p in (plain, packed)}
+        snapshot = certify.input_snapshot(((base, bindings),))
+        for path in (plain, packed):
+            path.write_bytes(b'changed after hash check')
+        with patch.object(Path, 'read_bytes', side_effect=AssertionError('Unexpected reread')):
+            if json.loads(snapshot[plain]) != {'value': 7}:
+                raise RuntimeError('Plain snapshot was not isolated')
+            if json.loads(gzip.decompress(snapshot[packed])) != {'value': 7}:
+                raise RuntimeError('Compressed snapshot was not isolated')
+        for bad in (bindings, {'../escape.json': '0' * 64}):
+            try:
+                certify.input_snapshot(((base, bad),))
+            except RuntimeError:
+                pass
+            else:
+                raise RuntimeError('Corrupt or escaping input was accepted')
+        try:
+            snapshot[plain] = b'changed'
+        except TypeError:
+            pass
+        else:
+            raise RuntimeError('Input snapshot is mutable')
+
+
 def main():
     if not __debug__:
         raise RuntimeError('Run certificate verification without python -O')
@@ -45,6 +79,7 @@ def main():
         check_hashes(inputs, bindings['prepared_inputs'])
         with patch.dict(os.environ, OBJEKT_X_STAGE5_INPUTS=str(inputs), OBJEKT_X_L00_OUTPUT=str(out)):
             certify = load_module('l00_certify', HERE / 'certify.py')
+            check_snapshot_isolation(certify)
             for par in ('even', 'odd'):
                 certify.main(par)
                 name = f'L00_CERTIFICATE_{par}.json'

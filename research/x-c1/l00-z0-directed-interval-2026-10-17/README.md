@@ -29,3 +29,29 @@ Der Certifier, die mathematischen Eingaben und beide erwarteten Ergebnisdateien
 bleiben unverändert. Die Abnahme verlangt erneut einen vollständigen bytegleichen
 Replay aus einem frischen Archiv sowie die CI am neuen Head. Der frühere
 Replay-Nachweis bleibt an seinen damaligen Commit gebunden.
+
+## Eingabe-Snapshot-Revision vom 17. Oktober 2026
+
+Ein weiterer Sourcery-Befund betrifft den Certifier: Die frühere Fassung prüfte
+Datei-Hashes und öffnete dieselben Eingaben später erneut. Eine gleichzeitige
+Änderung zwischen Prüfung und Verwendung hätte damit ungeprüfte Bytes in die
+Rechnung bringen können. Das ist eine Lücke des Eingabeladers, kein festgestellter
+Fehler der aus frischen Archiven reproduzierten Zahlen.
+
+Der Certifier liest nun jede gebundene Eingabe einmal, prüft den Digest dieser
+Bytes und bewahrt sie in einem unveränderlichen Speicherabbild auf. Sowohl
+JSON-Parsing als auch gzip-Dekompression verwenden ausschließlich dieses
+Abbild. Ungebundene Zugriffe, falsche Hashes und Pfade außerhalb der gebundenen
+Wurzel werden abgewiesen; auch der direkte Certifier lehnt `python -O` ab.
+Ein Regressionstest im Replay verändert JSON- und gzip-Dateien nach dem Einlesen
+und prüft die isolierten Originalbytes, die unveränderliche Abbildung sowie
+Fehlerfälle. Der frühere Revisionsabschnitt beschreibt weiterhin seinen damaligen
+Stand; in dieser Revision wird auch der Eingabelader des Certifiers geändert.
+
+Pflichtabnahme vor Veröffentlichung: Snapshot-Regression, beide vollständigen
+Intervallläufe aus einem frischen Repository-Archiv mit bytegleichem Vergleich
+gegen die unveränderten Ergebnisdateien, Registry-Validator und relevante
+Registry-Tests. Vor dem Merge müssen außerdem alle anwendbaren CI-Prüfungen am
+endgültigen Head erfolgreich abschließen. Formeln, Fehlerbudgets, mathematische
+Eingaben, Ergebnisdateien und `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN` bleiben
+unverändert; die frühere Abnahme ersetzt den neuen Certifier-Replay nicht.

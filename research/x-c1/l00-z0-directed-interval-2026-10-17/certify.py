@@ -6,6 +6,7 @@ and Gauss-Legendre with an explicit Chebyshev-tail remainder on each cell.
 import json, gzip, os, sys, time, hashlib
 from pathlib import Path
 from fractions import Fraction
+from types import MappingProxyType
 from flint import arb, acb, arb_poly, acb_poly, ctx
 
 ctx.prec = 800
@@ -25,7 +26,6 @@ def pad(x,e):return x+arb(0,ub(e))
 def enc(x):return [str(x.lower().fmpq()),str(x.upper().fmpq())]
 def dot(x,y):return sum((a*b for a,b in zip(x,y)),arb(0))
 def norm(x):return dot(x,x).sqrt()
-def load(p):return json.loads(p.read_bytes())
 def abs_poly(p,s):return sum((ub(c)*s**k for k,c in enumerate(p)),arb(0))
 def pint(p,s):return sum((c*s**(k+1)/(k+1) for k,c in enumerate(p)),arb(0))
 def plogint(p,s):return sum((c*s**(k+1)*(s.log()/(k+1)-arb(1)/(k+1)**2) for k,c in enumerate(p)),arb(0))
@@ -43,13 +43,34 @@ def legpolys(n):
     return p[:n]
 
 
+def input_snapshot(groups):
+    """Bind immutable bytes once; all later parsing uses this snapshot."""
+    snapshot = {}
+    for base, bindings in groups:
+        base = base.resolve()
+        for rel, digest in bindings.items():
+            key = Path(os.path.abspath(base / rel))
+            path = key.resolve()
+            if not path.is_relative_to(base):
+                raise RuntimeError(f'Input path escapes its base: {rel}')
+            data = snapshot[key] if key in snapshot else path.read_bytes()
+            if hashlib.sha256(data).hexdigest() != digest:
+                raise RuntimeError(f'Input hash mismatch: {rel}')
+            snapshot[key] = data
+    return MappingProxyType(snapshot)
+
+
 def main(par):
+    if not __debug__:
+        raise RuntimeError('Run certificate generation without python -O')
     assert par in ('even','odd')
-    manifest=load(HERE/'INPUT_BINDINGS.json')
-    for rel,digest in manifest['repository_files'].items():
-        assert hashlib.sha256((ROOT/rel).read_bytes()).hexdigest()==digest,rel
-    for rel,digest in manifest['prepared_inputs'].items():
-        assert hashlib.sha256((INPUTS/rel).read_bytes()).hexdigest()==digest,rel
+    manifest=json.loads((HERE/'INPUT_BINDINGS.json').read_bytes())
+    snapshot=input_snapshot(((ROOT,manifest['repository_files']),
+                             (INPUTS,manifest['prepared_inputs'])))
+    def bound_bytes(path):
+        return snapshot[Path(os.path.abspath(path))]
+    def load(path):
+        return json.loads(bound_bytes(path))
     sigma=0 if par=='even' else 1;eps=(-1)**sigma
     a8=3*arb(2).log()/2;a=arb(3).log();b=arb(11).log()/2;hs=a-a8
     mu8=(a8*eps+a8.sinh())/2;mu=(a*eps+arb(4)/3)/2
@@ -242,7 +263,7 @@ def main(par):
     nh,nh8=nh2.sqrt(),nh82.sqrt()
     I0=2*(pr-mr*pm/mu)-dot(c,phih)
     bf=[2*v for v in accum[196:200]]+[2*(v-lam*mc/mu8) for v,lam in zip(accum[200:208],accum[208:216])]
-    common=json.loads(gzip.decompress((INPUTS/'stage3/inputs/REFINED_COMMON96.json.gz').read_bytes()))['cases'][sigma]
+    common=json.loads(gzip.decompress(bound_bytes(INPUTS/'stage3/inputs/REFINED_COMMON96.json.gz')))['cases'][sigma]
     C=[[arb(int(v))/int(common['inverse_congruence_denominator']) for v in row] for row in common['inverse_congruence_integer_matrix']]
     Cph=[dot(col,phih) for col in zip(*C)]
     cphnorm=norm(Cph)
