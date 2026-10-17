@@ -14,6 +14,7 @@ Paarungen mit den zwölf alten Quellen D_j = A9Φ_j der eingefrorenen N12-Regel.
 | 2 | innere Quelle f_v = Π8[Q^np ψ_v]: ‖f_v‖ = 237738,80 / 268775,54, Log-Randterm, neun Sprünge | Diagnose (mpmath) |
 | 3 | 191 niedrige Koordinaten c der U8-Antwort: ‖c_v‖ = 1,345·10¹³ / 1,022·10¹²; ‖χ_v‖ > 1,34·10¹³ | gerichtet zertifiziert (`ab7116f7…`) |
 | 4 | ℓ_v(D_j) = ⟨χ_v, A9Φ_j⟩: Aufhebung auf 10⁻¹⁰ relativ; hohe Paarungen r_{v,j} ≤ 7,3·10⁻⁵ / 2,4·10⁻⁴ als Quadratur-Mittelpunkte (Teil 2) | Diagnose |
+| 5 | L₀,₀-Mittelpunkt für z₀: I₀ = −3,12 / +4,59, mit hohem Rest −3,36 / +4,84 (Schwellen 980,11 / 398,77); kohärenter F-Anteil des k-Fehlers 3,5·10⁻⁴ / 1,7·10⁻⁵ statt 4751 / 13,4 | Diagnose (Mittelpunkte), kein Ausschluss, kein Zertifikat |
 | 4′ | hoher U8-Anteil ‖u_hi,v‖ < 0,016 / 0,00245; D12-Modellfehler im Rang-eins-Test bezahlbar (`1ccb6be1…`); Rayleigh-Zeugen: ‖A9⁻¹‖ > 7,4·10²⁵ / 1,17·10²³ (`f0bdfe69…`); K_P[z₀] < 18,662828, Schwellen dist(0, L₀,₀) > 980,113997 / 398,766496 (`87540b07…`); exakte G_t = η_t²K⁻¹ (`77b806b1…`) | gerichtet zertifiziert (bedingt, fremde Pakete, Replay PASS) |
 
 Kernaussage (Fassung 2026-10-17): Der transformierte Basis84-Spike χ_v = N*Jv koppelt

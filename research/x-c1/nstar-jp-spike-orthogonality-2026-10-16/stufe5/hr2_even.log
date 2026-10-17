@@ -1,0 +1,13 @@
+even Netz 41 Zellen 984 Knoten
+even Knoten 0 984 1s
+even Knoten 100 984 127s
+even Knoten 200 984 255s
+even Knoten 300 984 381s
+even Knoten 400 984 508s
+even Knoten 500 984 634s
+even Knoten 600 984 761s
+even Knoten 700 984 887s
+even Knoten 800 984 1013s
+even Knoten 900 984 1139s
+even Operator fertig 1244s  kappa_c 21929.2291599  (Teil 2: 21929.22913260 )
+even {'mesh_cells': 41, 'nodes_per_cell': 24, 'norm_h8_this_mesh': '0.338530998188', 'norm_h8_L00_mesh': '0.338530998187945', 'a_h_this_mesh_vs_L00_reldiff': '2.65e-16', 'Phi_star_h8_k<=30_maxreldiff': '8.32e-18', 'norm_y_h': '0.11704029581', 'kappa_c': '21929.229159877', 'a_A8Phic': '-1596.97428315285', '<y_f,y_h>/delta': '2244.23898369928', '<B*c_v,y_h>/delta': '0.277057286406193', 'r_v(h)': '2243.961926', 'Vergleichswert_H_hi,v*||y_h||': '0.00186285', 'alpha': '56619.8108670397', 'alpha*r_v(h)': '127052699.9', '|r_e|<=H_hi,e*||y_h||': '5.18e-11', 'Vergleichswert_H_hi,p*||y_h||': '105.474', 'I0=<psi_p,h>-<c_p,Phi*h8>': '-3.1193801061', 'L00_midpoint=I0-alpha*r_v(h)-r_e(midpoint 0)': '-127052702.986'}

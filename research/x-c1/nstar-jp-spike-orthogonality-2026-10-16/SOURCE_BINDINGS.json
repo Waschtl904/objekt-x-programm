@@ -1038,12 +1038,96 @@
       "sha256": "3a22be072ea20861bb30094541f96cb7cc82ce974c9af89235686f1f8e8e700a"
     },
     "PROOF.md": {
-      "bytes": 14444,
-      "sha256": "79e68e58e3a5f1b7d600efa3ab6a1851bfcd9f9bcf50385264c9f92f78acdf3c"
+      "bytes": 15455,
+      "sha256": "c1a9be0d15b68ea6f454af7eac88a41052524bb5dbe5da11fff64cbbfbc4c2e1"
     },
     "README.md": {
-      "bytes": 4157,
-      "sha256": "41f61256e2225e57194efcff5e3723d761bad112a9ba0bedfb7a30512cfcda26"
+      "bytes": 4424,
+      "sha256": "0539bdc2f4b7427d74c1451680a031caaf92a235df0f1a40b7293fd94854f338"
+    },
+    "stufe5/A8PHIC_hmesh_even.json": {
+      "bytes": 149243,
+      "sha256": "9585afe7b65a2b072f10842c9182b21626e3150d72f6f23bc299887ad92ed4d4"
+    },
+    "stufe5/A8PHIC_hmesh_odd.json": {
+      "bytes": 148734,
+      "sha256": "b2adb15de7b9e7483b59fd8d1b16b0d8053e75df777f1631c99a984d38fe9649"
+    },
+    "stufe5/HIGH_REST_even.json": {
+      "bytes": 1657,
+      "sha256": "b7b5564659d0ac0a4dcf0e4175bfc8861ce1cb03ac24b08308ba2a7f825e79c3"
+    },
+    "stufe5/HIGH_REST_odd.json": {
+      "bytes": 1665,
+      "sha256": "eb9d899cef991413061a3ff2cdcde5bd39008ebd8ace9a5d76ef8101ab79a9d8"
+    },
+    "stufe5/L00_lower_Pv_ERSTFASSUNG.json": {
+      "bytes": 25573,
+      "sha256": "da7fef834b9b0448023e53883fafa3cd88f160636d2de520599d027190a57e46"
+    },
+    "stufe5/L00_lower_Pv_even.json": {
+      "bytes": 13835,
+      "sha256": "4791b3d7333b9b15a8b4905ef919bfde41a2ee027a05d41e357d9953bfdad9f2"
+    },
+    "stufe5/L00_lower_Pv_odd.json": {
+      "bytes": 13873,
+      "sha256": "b5f5799108cb031916f96916b9d18a78cba0373bf9318120222383ac9b779b03"
+    },
+    "stufe5/MESHH_even_upper_v.json": {
+      "bytes": 121561,
+      "sha256": "75c6639d9f419be7c75b8ca48f7ce60763ebb64eb335774f34614f1df8192370"
+    },
+    "stufe5/MESHH_odd_upper_v.json": {
+      "bytes": 121206,
+      "sha256": "8f89cfa22f47fafa1f8f57df9798bbdcf9cc9b7e6b022f746425072c4ad598fc"
+    },
+    "stufe5/MESH_even_lower_Pv.json": {
+      "bytes": 105214,
+      "sha256": "e11bd98aa69bdbdde1b43d34b2b000f5a2564365ce860bdf771cf9cf83df6c05"
+    },
+    "stufe5/MESH_odd_lower_Pv.json": {
+      "bytes": 104845,
+      "sha256": "b3fb41e40fce0383b0497cf257b76c76dbd84d9b59ee95e714ef0e33cb68cb8b"
+    },
+    "stufe5/check_yf.py": {
+      "bytes": 5355,
+      "sha256": "c5cb06cdba1bf74be51903c8dcc6829d0c876051b5c94fba21feb072bc3caaa4"
+    },
+    "stufe5/high_rest2.py": {
+      "bytes": 9509,
+      "sha256": "dc234508d1d9535eac34137ced1f883696421dabb993642302dbeeefd1542c0a"
+    },
+    "stufe5/hr2_even.log": {
+      "bytes": 1068,
+      "sha256": "0a9e106cbbc76e3674e63cb376f8bf1216a31499614e76f66cd13beeabcf3641"
+    },
+    "stufe5/hr2_odd.log": {
+      "bytes": 1058,
+      "sha256": "d3fb0aaf8b9dab80018c3cbe8a7d7d6a9beb3e4336b8b0da79ee788611371013"
+    },
+    "stufe5/l00.py": {
+      "bytes": 18603,
+      "sha256": "f13a0f744708cbce7e738587f9ac3c2ed1efda3db186ee16c46ced72e004a49f"
+    },
+    "stufe5/l00_erstlauf_even.log": {
+      "bytes": 1818,
+      "sha256": "5a7cb0d5c1c0f71d7d7235ac278bf5a722930b7639785a0a6ccc979dc66cf9bf"
+    },
+    "stufe5/l00_erstlauf_odd.log": {
+      "bytes": 1815,
+      "sha256": "835492bdd3fe38d4e58a07c951f549be6add98990ba8ad8d2da10868a01145e4"
+    },
+    "stufe5/l00b_even.log": {
+      "bytes": 2923,
+      "sha256": "ec67a58d8f0d859e03ca0b80fa06fb7590397075bb36fb9a357047a38c849723"
+    },
+    "stufe5/l00b_odd.log": {
+      "bytes": 2919,
+      "sha256": "c64713b42e727daaa8054890909c760e6ba732b0d8c272977d5a870a0dcf5739"
+    },
+    "stufe5/run_mesh_h.py": {
+      "bytes": 1360,
+      "sha256": "c06f4242a4841114739eae8aec6a102056000469a82a8d9d4dd2c280a1700124"
     },
     "stufe2/MESH_even_upper_v.json": {
       "bytes": 105218,
@@ -1564,6 +1648,10 @@
     "reports/STUFE4_TEIL2_HOCHPAARUNGEN.md": {
       "bytes": 16852,
       "sha256": "ee829d391148ba8e2a7457caa66b662463e20db2901f14c5ceedfcd72fe06f51"
+    },
+    "reports/STUFE5_L00_MITTELPUNKT.md": {
+      "bytes": 11262,
+      "sha256": "a9b5c215f1c215352b11671f679e75c1a0c702890ffa803938354754dbf843a6"
     },
     "stufe1/PSI_DEFINITION.json": {
       "bytes": 31399,
