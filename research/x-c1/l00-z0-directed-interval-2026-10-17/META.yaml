@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "L00-Z0-DIRECTED-SCALAR-INTERVAL",
+  "date": "2026-10-17",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Complete directed L00 enclosure for the W-normalized constant shell direction z0, with actual k, exact frozen X_fix, coefficient and quadrature remainders, and a bound on the entire high response. Conditional on the bound operator/domain/source hypotheses. Both intervals lie within the bound scalar exclusion thresholds.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "No N12 exclusion or confirmation, no full residual energy comparison, no completion of other shell directions, A9-to-A11, Object X or RH.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No independent reproduction of the inherited large source integrations.",
+    "No external mathematical review or integration promotion.",
+    "No high-pairing midpoint is used to shift I0."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/l00-z0-directed-interval-2026-10-17/PROOF.md",
+    "sha256": "bceb342e685c5e0e709375d9dfaa03f0efcc6e826f4f50feb80914a176737825"
+  }
+}
