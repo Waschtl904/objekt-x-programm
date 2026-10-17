@@ -1,0 +1,28 @@
+{
+  "head": "92a274b247c1511ef0fe2402273df54887e2fe20",
+  "source_files": [
+    {
+      "path": "PROOF.md",
+      "git_blob_sha": "7dfafb994cb13cb7f2f455ba4fa1efbad6980c0f",
+      "source_binding_checked": true
+    },
+    {
+      "path": "reports/STUFE4_TEIL2_HOCHPAARUNGEN.md",
+      "git_blob_sha": "2060a54b47409c861968b35e0c9a642948429d7e",
+      "source_binding_checked": true
+    },
+    {
+      "path": "verify.py",
+      "git_blob_sha": "8f3ffb57667453495f682b1713d7213afc757fdb",
+      "source_binding_checked": false
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "git_blob_sha": "ca6cc070dc706ef06eff7ab64e8c8feea08b324d",
+      "source_binding_checked": false
+    }
+  ],
+  "two_delivered_archive_hashes_match": true,
+  "all_296_bindings_rechecked": false,
+  "six_replays_repeated": false
+}

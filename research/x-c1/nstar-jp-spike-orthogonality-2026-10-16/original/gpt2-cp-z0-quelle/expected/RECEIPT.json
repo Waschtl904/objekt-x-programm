@@ -1,0 +1,16 @@
+{
+  "status": "PASS_DIRECTED_POINT_EVALUATIONS_UNDER_BOUND_OPERATOR_DEFINITION",
+  "source_archives_checked": 2,
+  "interior_prime_discontinuities": 12,
+  "directed_point_values": 32,
+  "discontinuity_boxes_rejected": 2,
+  "Gamma_inner_quadrature_used": false,
+  "full_pairing_quadrature_remainder_proved": false,
+  "moment_projected_Cp_point_values_computed": false,
+  "Cp_source_representative_modulo_m_constructed": true,
+  "chi_p_residual_pairing_computed": false,
+  "L0_computed": false,
+  "N12_resolved": false,
+  "external_mathematical_review_open": true,
+  "github_changed": false
+}

@@ -12,7 +12,8 @@ Nur Standardbibliothek. Prueft
        Vorgaengerarchiven (b48e3895 aus #226, ab7116f7 aus diesem Paket, b8677c0b aus #227),
   (R4) Replay des Rayleigh-Zeugen-Pruefers verify.py (Paket f0bdfe69...) mit Hochantwort- und Antwortarchiv,
   (R5) Replay des K_P-Budgetpruefers verify.py (Paket 87540b07...) mit den vier Uebergabearchiven,
-  (R6) Replay des Transportdaten-Pruefers verify.py (Paket 77b806b1...) mit Bruecken- und K_P-Archiv.
+  (R6) Replay des Transportdaten-Pruefers verify.py (Paket 77b806b1...) mit Bruecken- und K_P-Archiv,
+  (R7) Replay des C_p z0-Quellpruefers verify.py (Paket 993619be...) mit Bruecken- und Hochantwortarchiv.
 Die mpmath-Diagnosen (stufe1/, stufe2/, stufe4/) werden nicht neu gerechnet; ihre Dateien sind
 in (B1) hashgebunden. Es wird keine mathematische Aussage ueber den N12-Test, A9->A11 oder
 Objekt X geprueft; der Wrapper zertifiziert Bindung und Reproduzierbarkeit der Pruefer.
@@ -39,6 +40,7 @@ STAGE4 = "archives/Objekt-X-Vollstaendige-Hochantwort-und-Spike-Skalarfehler-202
 RAYLEIGH = "archives/Objekt-X-Stufe4-Teil2-Gegenpruefung-und-Rayleigh-Zeugen-2026-10-17.zip"
 KP = "archives/Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17.zip"
 COHERENT = "archives/Objekt-X-KP-Paket-und-kohaerente-Transportdaten-2026-10-17.zip"
+CPZ0 = "archives/Objekt-X-Cp-z0-Elementare-Quelle-und-Randzerlegung-2026-10-17.zip"
 RESPONSE = ROOT / "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip"
 
 
@@ -92,7 +94,8 @@ def replay(archive: Path, script: str, workdir: Path, label: str, extra=(), brid
                                      "PASS_UNDER_BOUND_COMPLETE_SOURCE_GRAM_AND_OPERATOR_HYPOTHESES",
                                      "PASS_UNDER_BOUND_OPERATOR_DOMAIN_AND_FULL_MODEL_INTEGRATION_HYPOTHESES",
                                      "PASS_UNDER_BOUND_SOURCE_OPERATOR_AND_INTEGRATION_HYPOTHESES",
-                                     "PASS_INPUT_PREPARATION_ONLY"), receipt
+                                     "PASS_INPUT_PREPARATION_ONLY",
+                                     "PASS_DIRECTED_POINT_EVALUATIONS_UNDER_BOUND_OPERATOR_DEFINITION"), receipt
     return {"expected_files_bytewise_equal": compared, "receipt_status": receipt["status"]}
 
 
@@ -116,6 +119,8 @@ def main() -> int:
                                             extra=("--archive-dir", str(adir)))
         report["coherent_inputs_replay"] = replay(HERE / COHERENT, "verify.py", tmp / "s7", "coherent", bridge=False,
                                                   extra=("--bridge-archive", str(BRIDGE), "--budget-archive", str(HERE / KP)))
+        report["cp_z0_source_replay"] = replay(HERE / CPZ0, "verify.py", tmp / "s8", "cpz0",
+                                               extra=("--high-archive", str(HERE / STAGE4),))
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
     report["scope"] = "binding and replay only; no mathematical claim about N12, A9->A11 or Object X"

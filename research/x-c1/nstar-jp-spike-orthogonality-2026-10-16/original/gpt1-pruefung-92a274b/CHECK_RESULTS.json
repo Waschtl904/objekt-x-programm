@@ -1,0 +1,45 @@
+{
+  "head": "92a274b247c1511ef0fe2402273df54887e2fe20",
+  "scope": "Exact algebra and scalar budgets from stored inputs; historical operator/source integrations and eta bounds inherited. No S0 reconstruction or full six archive replays.",
+  "source_hashes_checked": {
+    "PROOF.md": "5863c453edec8256df62cf7c692f030e399415692ec78996fa6c784f93f4f62d",
+    "README.md": "850ca6c3fae0cf0116b81721eaf2b04e31b6ede7da2b382994ad681b25d4ea41",
+    "original/gpt2-kp-budgets/HERLEITUNG.txt": "85059c5108a708a34e633e71764f238f40374254d4482e2b09d6af19eed3acfd",
+    "original/gpt2-kp-budgets/expected/BUDGET_BOUNDS.json": "6229acf4bee398d2262c08a086fb36dd8945135ee860bb591e8218551c291613",
+    "original/gpt2-kp-budgets/expected/RECEIPT.json": "6a3170211ec979214919af22fac0b6c3f86d9286a53d56945014e48705c20e4a",
+    "original/gpt2-kp-budgets/verify.py": "9e3f12fe8b15abe9cc7d073a9b62ea0e280b4089e4bc103aa764db1e1d4fde8d",
+    "original/gpt2-kp-und-kohaerenter-transport/ANSCHLUSS.txt": "2ac1c42169d82b5a426e48a74bbc3dbcbf5819c758142ee2e4da5da96e3bb680",
+    "original/gpt2-kp-und-kohaerenter-transport/expected/COHERENT_TRANSPORT_INPUTS.json": "c0c882ba85bf3ee56a433b5c5bf5d5c5c0341f2a9e03e213e6e19c460aba5666",
+    "original/gpt2-kp-und-kohaerenter-transport/expected/RECEIPT.json": "0384198840476351268b7253b5e935ceb069a51c23ba339e212aed9930cab001",
+    "original/gpt2-kp-und-kohaerenter-transport/verify.py": "4bf6f7dc551839f08e2d22c01192173fd7d41fd0f22e8584524fda7e655b493f",
+    "reports/STUFE4_TEIL2_HOCHPAARUNGEN.md": "1836eed5e6e32e527f680cdf12018da61f68d99c4171f782da4c796515d94f98"
+  },
+  "parities": {
+    "even": {
+      "positive_K_pivots": 12,
+      "inverse_product_entries_checked": 288,
+      "metric_entries_checked": 288,
+      "budgets_checked": 13,
+      "thresholds_checked": 12,
+      "z0": {
+        "degree": 0,
+        "K_P_upper_for_W_unit_direction": "4665707/250000",
+        "exclusion_if_model_pairing_distance_exceeds": "980113997/1000000"
+      }
+    },
+    "odd": {
+      "positive_K_pivots": 12,
+      "inverse_product_entries_checked": 288,
+      "metric_entries_checked": 288,
+      "budgets_checked": 13,
+      "thresholds_checked": 12,
+      "z0": {
+        "degree": 0,
+        "K_P_upper_for_W_unit_direction": "4665707/250000",
+        "exclusion_if_model_pairing_distance_exceeds": "12461453/31250"
+      }
+    }
+  },
+  "status": "PASS_SCOPED_INDEPENDENT_ALGEBRA_AND_BUDGET_CHECKS",
+  "L0_computed": false
+}

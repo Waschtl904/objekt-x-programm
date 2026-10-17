@@ -41,14 +41,14 @@ python3 research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/verify.py
 ```
 
 Standardbibliothek; prüft alle Bindungen und spielt die beiden gerichteten Prüfer
-(`certify.py`, `certify_stage3.py`, Hochantwort-`certify.py`, Rayleigh-`verify.py`, K_P-`verify.py`, Transportdaten-`verify.py`) gegen das im Repository gebundene
+(`certify.py`, `certify_stage3.py`, Hochantwort-`certify.py`, Rayleigh-`verify.py`, K_P-`verify.py`, Transportdaten-`verify.py`, C_p z₀-`verify.py`) gegen das im Repository gebundene
 N*Jp-Brückenarchiv bytegenau nach (etwa 10–15 Minuten). Die mpmath-Diagnosen sind hashgebunden
 und werden nicht neu gerechnet.
 
 ## Dateien
 
 - `PROOF.md` kanonischer Text (SHA-gebunden in `META.yaml`); `reports/` die vier Arbeitsberichte
-- `archives/` neun Archive: eigenes Diagnosepaket (Stufen 1–4), Stufe-1-Zertifikat, Stufe-3-Zertifikat, Stufe-4-Hochantwort-Zertifikat (`1ccb6be1…`), Gegenprüfung PR #229 (`94e2bd3b…`), Rayleigh-Zeugen (`f0bdfe69…`), K_P-Budgets (`87540b07…`), Transportdaten G_t = η_t²K⁻¹ (`77b806b1…`), Nachprüfung 3dd6fce (`3dc06c2b…`)
+- `archives/` elf Archive: eigenes Diagnosepaket (Stufen 1–4), Stufe-1-Zertifikat, Stufe-3-Zertifikat, Stufe-4-Hochantwort-Zertifikat (`1ccb6be1…`), Gegenprüfung PR #229 (`94e2bd3b…`), Rayleigh-Zeugen (`f0bdfe69…`), K_P-Budgets (`87540b07…`), Transportdaten G_t = η_t²K⁻¹ (`77b806b1…`), Nachprüfung 3dd6fce (`3dc06c2b…`), Prüfung 92a274b mit Textpatch (`5110a0eb…`), elementare Quelle C_p z₀ (`993619be…`)
 - `original/` sichtbare Kopien der Zertifikatspakete (ohne die 34 MB `inputs/*.gz` des Stufe-3-Pakets) und der Stufe-2-Prüfung (GPT 1)
 - `stufe1/`, `stufe2/`, `stufe4/` Skripte und Ergebnisdateien der Diagnosen
 - `SOURCE_BINDINGS.json` Hashes aller Dateien, Archivmitglieder und Repository-Abhängigkeiten
