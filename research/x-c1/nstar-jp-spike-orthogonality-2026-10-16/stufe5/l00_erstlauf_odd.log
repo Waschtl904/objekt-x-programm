@@ -1,0 +1,9 @@
+odd c_tilde Kontrolle: max|Abw.| an 13 Zellmittelpunkten = 2.07e-116  g(a) Abw. = 1.69e-117
+odd F_hat z0 = ['-0.40458039', '-0.42956953', '-0.26241042', '0.030361455', '-0.022307212', '-0.52995725', '0.075076965', '-0.033304598', '0.12900254', '-0.46451801', '0.24686855', '-0.1538191']
+odd T z0 = ['-14383.433', '36371.353', '-43771.636', '32485.618', '-16220.314', '5560.5936', '-1232.5095', '111.39826', '35.344527', '-18.537985', '4.2965359', '-0.53290968']  |Tz0| = 69257.359
+odd Netze: Kern 4992 Schale 15360
+odd Funktionsauswertung 247s
+odd ||c_tilde|| = 3.150827356  ||Dhat T z0|| = 1.198507255  ||h|| = 0.2947953094  ||h8|| = 0.2934307063  Moment r_tilde = -0.704528
+odd lower_Pv {'<psi,h>': '-33067.1355239052', '<psi,h>_Schale': '267027.489693187', '<f,h8>': '17244678.3464656', 'a_f': '-7319361.45592', '<Phi*f,Phi*h8>': '1055536.52553384', 'bracket/delta': '8885911.85953235', '<c,Phi*h8>': '-33071.7278609749', 'L00_midpoint_ohne_hohen_Rest': '-8885907.26719528', 'hoher_Rest_Schranke_H_hi*norm_h8 (undirected, ||y_h||<=||h8||)': '6.723795', 'Budgetdiagnose_e_psi*norm_h': '13.37125', 'Budgetdiagnose_featmult*norm_Phi_star_h8/sqrt(1-rho)': '0.63334051', 'H_hi': '22.9144', 'e_psi': '45.3577', 'featmult': '2.30469'} 581s
+odd upper_v {'<psi,h>': '-3.5281254568499', '<psi,h>_Schale': '28.4907195358418', '<f,h8>': '1839.93526216897', 'a_f': '-780.9453426', '<Phi*f,Phi*h8>': '112.621345253162', 'bracket/delta': '948.089737506178', '<c,Phi*h8>': '-3.5286154400633', 'L00_midpoint_ohne_hohen_Rest': '-948.089247522965', 'hoher_Rest_Schranke_H_hi*norm_h8 (undirected, ||y_h||<=||h8||)': '0.00071740088', 'Budgetdiagnose_e_psi*norm_h': '0.0014266566', 'Budgetdiagnose_featmult*norm_Phi_star_h8/sqrt(1-rho)': '6.7574791e-5', 'H_hi': '0.00244487', 'e_psi': '0.00483948', 'featmult': '0.0002459'} 620s
+done
