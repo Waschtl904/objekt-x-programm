@@ -1,0 +1,197 @@
+OBJEKT X — GEGENPRÜFUNG PR #229 / STUFE 4 TEIL 2
+17.10.2026 · Head 4db05e1a9ff46e00f2058161161eec00fd4f9842
+
+EMPFEHLUNG
+In diesem Stand noch nicht mergen. Das neue Hochantwort-Ergebnis ist ein
+substanzieller bedingter Fortschritt. Mehrere Aussagen über die konkreten
+D12-Paarungen, deren Fehlerbudget und den Rayleightest gehen jedoch noch
+über den dokumentierten Nachweis hinaus. Die grüne CI löst diese Lücken nicht.
+
+PR #229 war beim Abruf offen; Main unverändert 361d968b519465aaced2ca7a9ddb30284c1de6e2.
+Alle ausgeführten Check-runs waren erfolgreich, zwei Checks übersprungen;
+auch a1-c-even-gate war abgeschlossen und erfolgreich.
+GitHub wurde ausschließlich gelesen.
+
+PRÜFSCOPE
+Gelesen: Teil-2-Bericht, kanonischer Beweis/README/META, Paarungs- und
+Operatorcode, neue Ergebnisdaten und Hochantwort-Prüfer samt Herleitung.
+Ausgewählte Quelldateien sind gegen SOURCE_BINDINGS.json geprüft.
+check_review.py rechnet unabhängig mit Fraction und gerichteter rationaler
+Wurzelobergrenze die Schlussrechnung aus gespeicherten Eingangsintervallen.
+Kein erneuter vollständiger Drei-Archiv-Replay, keine neue große Integration,
+keine Bestätigung aller 149 Bindungen. Archiv 1ccb6be11c6a8b4e325338b80f2136990b464b4a70e724a02ca7addbe7ba99b0
+ist die Repositorybindung; seine ZIP-Bytes wurden hier nicht selbst geladen.
+
+1. WAS TRÄGT
+
+Die analytische hohe Normabschätzung enthält den ganzen Modellgram,
+den richtigen Kreuzterm, das tatsächliche k, die Fehlerfortpflanzung
+und den nichtisometrischen Momentlift. Der Schluss lautet mit
+X=C C*/(1-rho), G0=B0 B0*, r0=y0-B0*c0:
+
+  ||r0||² = Y0 - 2 Re<c0,b0> + c0*G0 c0,
+  ||r|| <= sqrt(upper(||r0||²)) + e_y + e_B||c0||
+                               + sqrt(tr(X H_B)) e_Psi,
+  ||u_hi|| <= sqrt(gamma_m)||r||/delta.
+
+Der gerichtete Faktor sqrt(tr(X H_B)) folgt aus
+||B*C||² <= tr(C*H_B C), H_B >= B B*.
+Er ist mathematisch zulässig und vermeidet die große ungewichtete C-Norm.
+Die Eingangsgram- und Operatorannahmen bleiben geerbt.
+
+Unabhängig nachgerechnete sichere obere Grenzen aus den gespeicherten
+Intervallen (alle Entscheidungen rational, Dezimalanzeigen nur zur Orientierung):
+
+                         gerade                ungerade
+||u_hi,v||               < 0,016                < 0,00245
+||u_hi,p||               < 902                  < 23
+||u_hi,e||               < 4,43e-10             < 5,61e-11
+
+Für p ist der volle D12-Modellfehler im RANG-EINS-Skalartest bezahlbar:
+  ||<chi_p,(R-Rhat)(.)>|| < 1,86e-13 / 2,668e-16.
+Dies folgt aus chi_upper,p * epsilon_R; diese Multiplikation wurde
+ebenfalls rational nachgerechnet. Keine Übertragung auf die volle W9-Energie.
+Für eine einzelne D12-Spalte in Richtung v beträgt der Modellfehlerpreis
+aus chi_upper,v * delta_D weniger als 4,80e-25 / 3,63e-26.
+Er ist also klein, gehört aber in eine vollständige zertifizierte Rechnung.
+
+2. BLOCKER: DAS D12-BUDGET IST KEINE GERICHTETE OBERGRENZE
+
+D12_ERROR_BUDGET.json sagt selbst ausdrücklich:
+  ohne chi_upper*||h-h0|| und mit ||h8|| statt ||D_j||_H9;
+  Diagnose der Größenordnung.
+Der Bericht benennt ||h8|| ausdrücklich als Untergrenze, folgert danach
+aber dennoch ein gerichtetes Budget von ungefähr 0,6 / 0,015.
+
+Mit h8=Pi8(h0|Kern) gilt ||h8|| <= ||h0||_H9. Im positiven Fehlerterm
+e_psi||h0|| darf die rechte Norm nicht durch diese kleinere Norm ersetzt
+werden. Das verkleinert eine mögliche Obergrenze und zerstört ihren Nachweis.
+Auch die eingehenden Integrale I0 und ||C*Phi*h8|| sind noch nicht mit
+gerichteten Quadraturresten eingeschlossen. Das Hochantwort-Paket weist
+diesen offenen Punkt in HERLEITUNG.txt §7 ausdrücklich aus.
+
+Korrektur: 0,6 / 0,015 nur als unvollständige Größenordnungsdiagnose
+bezeichnen, bis volle Normen, gerichtete Modellintegrale und sämtliche
+Fehlerterme vorliegen. Die Behauptung eines gerichteten Gesamtbudgets
+aus PR-Text, README, PROOF und META entfernen bzw. additiv zurücknehmen.
+
+3. BLOCKER: RAYLEIGHTEST NUR AUF MODELLNIVEAU REPARIERT
+
+SOFTMODE_CS_CORRECTED.json vermerkt ausdrücklich:
+  Modellfehler von A selbst nicht enthalten.
+Der Originalgenerator generate_a8.py weist seinerseits darauf hin, dass
+der echte beidseitige Moment-/Gamma-Fehlerlift in PROOF.md/check_a8.py liegt.
+Eine gerichtete Auswertung von u1*A_model*u1 ist nicht ohne diesen
+Fehlertransport eine gerichtete Obergrenze von q8[Phi u1].
+
+Erforderlich für genau die volle verwendete 191er-Richtung:
+  q8[Phi u1] <= upper(u1*A_model*u1) + E_A(u1),
+mit nachgewiesenem E_A(u1), gegebenenfalls zusätzlichem Richtungsfehler.
+Der Vergleich A_model gegen F+H_B/delta bis 2,5e-33 ist hierfür kein Ersatz.
+Ein separater vorhandener direkter Rayleighnachweis kann wiederverwendet
+werden, wenn sein Vektor und alle Fehler exakt an diesen Test angeschlossen sind.
+Auch I_j und A12_jj benötigen Einschließungen für einen gerichteten Test.
+Die in JSON gespeicherten numerischen Verhältnisse sind bisher Diagnose.
+
+4. DIE 24 HOHEN PAARUNGEN SIND BERECHNETE DIAGNOSEN
+
+Die Zahlen sind vorhanden:
+  max |r_v,j| = 7,261219413e-5 / 2,397218623e-4,
+  max |ell_v(D_j)_mid| = 4,522308706e-5 / 2,391777413e-4.
+Sie sind keine gerichteten Intervalle. Dass ein Mittelpunkt innerhalb
+einer anderweitigen Schranke liegt, bestätigt nicht seine Genauigkeit.
+Die in der Vergleichsschranke verwendeten ||y_h,j|| stammen zudem aus
+ungerichteter Quadratur und sind nicht schon durch die Hochantwortnorm
+zertifiziert.
+
+Gespeicherte Kontrollabweichungen (Quadratur minus Archiv):
+                               gerade              ungerade
+||B*c||²                       +7,5555074144        +100,8072853972
+<B*c,y_f>                      -37,5142136458       -115,8137833826
+
+Setzt man diese Quadraturkontrollen in die ganze Restnormidentität ein,
+erhält man etwa 82,58 / 332,43 statt 2,51e-6 / 1,10e-5 aus dem Modellgram.
+Das zeigt, dass diese Quadratur die stark auslöschende globale Identität
+nicht zuverlässig auflöst. Es widerlegt NICHT die einzelnen Paarungen;
+deren Genauigkeit braucht einen separaten Nachweis.
+
+validate_a8.py prüft ausschließlich P2, P3 und P7 an drei inneren Punkten
+und gleicht H_Gamma-kappa ohne Primverschiebungen ab. Dieser Check trägt
+die behauptete Übereinstimmung für diese Tests, aber keine Fehlergrenze
+der vollständigen 191er-Kombination und ihrer Paarungsintegrale.
+
+Fail-closed-Nachbesserung: high_pairings.py verwendet sqrt(abs(yh2)).
+Ein negativer Normquadratausdruck darf nicht auf diese Weise in einen
+positiven Wert umgedeutet werden. Negative bzw. nicht auflösbare Fälle
+müssen aussteigen. Hier wird kein tatsächlich negativer Fall behauptet.
+
+Weitere Zentrierungsfrage: (7.1) des Hochantwort-Pakets ist um
+  I0=<psi0,h0>-<c0,Phi*h8,0>
+zentriert, nicht um I0-r_diag. Wer r_diag abzieht, braucht eine gerichtete
+Schranke für r-r_diag oder muss beim Umzentrieren |r_diag| zusätzlich
+bezahlen. Die hohe Normgrenze allein zertifiziert keinen Quadraturmittelpunkt.
+
+5. KONKRETER KOHÄRENTER K-TRANSPORT
+
+Der nächste sinnvolle Rechenschritt ist die gemeinsame Fortpflanzung
+der k-Abweichung durch den GANZEN physischen Vektor chi.
+
+Bei festen übrigen Operatoren setze
+  H = F - J_old U8 g_F,
+  Delta k = k-k0,
+  eta >= ||K^(1/2) Delta k||.
+Dann exakt:
+  chi(k)-chi(k0) = -H Delta k.
+
+Für h ist folglich
+  |<chi(k)-chi(k0),h>| <= eta sqrt((H*h)* K^-1 (H*h)).
+
+Für den gemeinsamen D12-Block sei B_D=H*D. Definiert man das Fehler-
+Zeilenfunktional e_D(t)=<chi(k)-chi(k0),Dt>, so gilt in Matrixordnung:
+  e_D* e_D <= eta² B_D* K^-1 B_D.
+
+Beweis: e_D(t)=-(Delta k)*B_D t und Cauchy–Schwarz im K-Skalarprodukt.
+Für die feste Antwortmatrix T folgt unmittelbar
+  |e_D(Tz)|² <= eta² z*T* B_D* K^-1 B_D Tz.
+
+Das ist eine unabhängig hergeleitete algebraische Schranke, noch keine
+numerische Zertifizierung von B_D. Dessen Modell-/Integrationsfehler
+müssen ebenfalls gerichtet bezahlt werden. Die Abhängigkeit aller zwölf
+Spalten bleibt erhalten. Einsetzen einer bloß vermuteten O(1)-Energie
+oder Annahme kleiner H*D-Paarungen ist nicht erlaubt.
+
+Wichtig für das neue Fehlerbudget: Zuerst k0 einfrieren und die übrigen
+Modellfehler dafür kontrollieren; anschließend Delta k genau einmal
+über die ganze H-Abbildung transportieren. Der bestehende Hochantwort-
+Fehler enthält k-Änderungen bereits. Ein neues Budget muss offenlegen,
+welche alten k-Anteile ersetzt werden, statt sie unbemerkt doppelt zu zählen.
+
+6. MINIMALE KORREKTUR VOR EINEM MERGE
+
+- D12-Gesamtbudget 0,6 / 0,015 als unvollständige Diagnose kennzeichnen.
+- Rayleightest als Modelltest kennzeichnen oder vollen E_A(u1)-Nachweis binden.
+- r_v,j und ell_v(D_j) ausdrücklich als Quadraturdiagnosen führen.
+- Neues bedingtes Hochantwort-Normzertifikat und Rang-eins-Modellfehler
+  getrennt davon als Fortschritt dokumentieren.
+- Alte 0,8/0,15-Scopeangaben in META als überholt markieren; die noch
+  stehende Behauptung in PROOF §4d, der Spike könne kein Hindernis
+  erzeugen, ebenfalls zurücknehmen. Auch die Beschreibung von u1 als
+  Polynom nur der Grade 2–12 ist keine vollständige Richtungsbeschreibung.
+
+Sichere neue Kernaussage:
+Unter den gebundenen Voraussetzungen ist die ganze hohe U8-Norm für
+v,p,e kontrolliert und der D12-Modellfehler im Rang-eins-Skalartest
+bezahlbar. Die konkreten 24 Paarungen liefern kleine numerische Werte;
+deren vollständige gerichtete Intervalle und die Kombination mit T
+bleiben offen. Die tatsächliche Energieobergrenze für die in Teil 2
+verwendete u1-Richtung erfordert den Modellfehleranschluss.
+
+Kein CERTIFICATE_FAIL der konservativen N12-Regel festgestellt.
+Kein N12-Abschluss, kein A9->A11-Abschluss, kein Objekt X, kein RH-Beweis.
+
+QUELLEN
+https://github.com/Waschtl904/objekt-x-programm/pull/229
+Feste Dateirevision aller Repositorybelege: 4db05e1a9ff46e00f2058161161eec00fd4f9842.
+Paketpfad: research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/
+Belege im Unterordner source; Eingangsbericht unter inputs.
+Rechencheck: python check_review.py; Ausgabe REVIEW_CHECKS.json.

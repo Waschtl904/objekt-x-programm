@@ -1,0 +1,38 @@
+{
+  "status": "PASS_UNDER_BOUND_SOURCE_OPERATOR_AND_INTEGRATION_HYPOTHESES",
+  "rule_id": "A9_A11_N12_MIDPOINT_INVERSE_60_V1",
+  "archive_sha256": {
+    "high": "1ccb6be11c6a8b4e325338b80f2136990b464b4a70e724a02ca7addbe7ba99b0",
+    "bridge": "b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b",
+    "stage3": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52",
+    "response": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee"
+  },
+  "archive_manifest_members_checked": {
+    "high": 12,
+    "bridge": 16,
+    "stage3": 13,
+    "response": 32
+  },
+  "new_positive_pivots": 24,
+  "controls": {
+    "finite_completed_square": true,
+    "wrong_sign_rejected": true,
+    "exact_Legendre_derivative_integrals": 12,
+    "derivative_trace_identity": true,
+    "omitted_derivative_jump_cross_term_rejected": true,
+    "independent_exact_fraction_scalar_enclosures": 26
+  },
+  "new_large_integrations": false,
+  "historical_high_replay_performed_by_this_script": false,
+  "high_certificate_expected_data_hash_bound": true,
+  "whole_budget_on_degree_11_polynomials": true,
+  "twelve_individual_budgets_certified": true,
+  "complete_residual_pairings": false,
+  "N12_success_or_exclusion": false,
+  "whole_W9_energy": false,
+  "A9_A11_closed": false,
+  "Objekt_X_constructed": false,
+  "RH_proved": false,
+  "external_review_open": true,
+  "github_changed": false
+}

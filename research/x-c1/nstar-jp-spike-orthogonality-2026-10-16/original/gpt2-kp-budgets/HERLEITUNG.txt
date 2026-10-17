@@ -1,0 +1,367 @@
+Objekt X — gerichtete obere K_P-Budgets auf der neuen Schale
+17. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis und Reichweite
+
+Für die UNVERÄNDERTE Regel A9_A11_N12_MIDPOINT_INVERSE_60_V1 gilt,
+unter den gebundenen Operator-, Quellenmodell- und Integrationsvoraussetzungen,
+in beiden Paritäten:
+
+  K_P[s] < 29.603644 ||s||_W² < 30 ||s||_W²
+
+für jeden nichtverschwindenden s im gesamten Schalenpolynomraum vom
+Grad höchstens 11 auf (log3, log11/2). Für s=0 gilt Gleichheit 0.
+Das ist eine Form-Obergrenze auf diesem zwölfdimensionalen Raum.
+Sie wird NICHT aus zwölf erfolgreichen Diagonaltests gefolgert.
+
+Für die unten exakt definierten zwölf einzelnen W-normierten lokalen
+Legendretests z_n gilt die schärfere Grenze K_P[z_n]<28, n=0,...,11.
+
+Der neue Abschluss betrifft die BUDGETSEITE des unteren Ausschlusstests.
+Keine tatsächliche Residualpaarung, keine obere W9-Energie und kein
+Erfolg oder Ausschluss der festen Regel werden behauptet. K_P muss
+hierfür weder positiv noch nach unten kontrolliert sein. Auch A11-
+Positivität wird nirgends vorausgesetzt.
+
+1. Räume, genau festgelegte neue Richtungen und übernommene Eingaben
+
+a=log3, b=log11/2, h=b-a. Es geht um die NEUE Schale (a,b), nicht
+um die alte Basis84-Schale (3log2/2,log3).
+Für die Parität sigma=0,1 setze m(x)=cosh(x/2), sinh(x/2) entsprechend,
+
+  mu = integral_0^a m² dx, nu = integral_a^b m² dx,
+  lambda(s) = integral_a^b m s dx,
+  W[s] = 2 integral_a^b |s|² dx + 2|lambda(s)|²/mu,
+  u=Lambda s = s auf (a,b), -lambda(s)m/mu auf (0,a).
+
+u wird mit der gewählten Parität auf negative x und dann durch Null
+fortgesetzt. Die ganze physische Norm auf R erfüllt ||u||²=W[s].
+Die 2dx-Norm auf positiven Halbintervallen und die dx-Norm auf R sind
+damit identisch. Keine zusätzliche Verdopplung ist einzufügen.
+
+Es seien
+
+  ell_n(x)=sqrt((2n+1)/(2h)) P_n(2(x-a)/h-1),
+  lambda_n=integral_a^b m ell_n dx,
+  z_n=ell_n/sqrt(1+2lambda_n²/mu), n=0,...,11.            (1.1)
+
+Das sind exakte Funktionen, keine gerundeten Koeffizienten. Sie haben
+jeweils W-Norm 1, sind untereinander aber nicht notwendig W-orthogonal.
+Die Definition ist pro Parität zu verwenden. Der ganze Raum ist
+S_12=span{ell_0,...,ell_11}; die gemeinsame Schranke gilt auch für
+komplexe Linearkombinationen.
+
+Phi12 ist die ZWÖLFER-Antwortbasis auf H9. Sie wird nicht mit der alten
+191-dimensionalen Common96-Basis auf H8 identifiziert. Die feste Regel
+ist T=X_fix Fhat, P=Phi12 T. Hier ist X_fix die gebundene rationale
+Zwölfermatrix, nicht die alte Common96-Majorante.
+
+Übernommen werden die vollständigen Quellen/Operatoren F, A12, C_p,
+die feste Regel, die korrekten physischen W-Räume und die vollständigen
+Fehler ||F-Fhat||<=delta_F, ||A12-M_A||<=delta_A sowie ||T||²<=G_T_trace
+aus b8677c0b. Übernommen werden ferner q und der schon bezahlte D12-
+Skalarfehler aus b48e3895 und 1ccb6be1. Deren ursprüngliche großen
+Integrationen werden hier nicht nochmals ausgeführt.
+
+2. Warum das direkte Budget trotz großer Antwortmatrix nach oben fällt
+
+Mit d[s]=q_b^np[Lambda s] gilt exakt
+
+  K_P=d-F* T-T* F+T* A12 T.
+
+Setze
+
+  Khat=d-Fhat* T-T* Fhat+T* M_A T,
+  S0=X_fix+X_fix* - X_fix* M_A X_fix.
+
+Dann gilt durch bloßes Einsetzen von T=X_fix Fhat
+
+  Khat=d-Fhat* S0 Fhat.                                (2.1)
+
+NEUE endliche Prüfung: S0 ist in beiden Paritäten strikt positiv.
+Der Prüfer bildet S0 aus den gebundenen rationalen X_fix und M_A mit
+gerichteten Ganzzahlintervallen (180 Dezimalstellen) und bestätigt
+alle 24 positiven Schur-/LDL-Pivots. Die Eingangsmatrizen sind exakt
+symmetrisch. Es wird weder X_fix=M_A^-1 noch irgendeine neue exakte
+Galerkinorthogonalität vorausgesetzt.
+
+Die Modellfehlerabschätzung ist ZWEISEITIG, auch wenn ein früherer
+Bericht nur ihre untere Anwendung benötigte:
+
+  |K_P[s]-Khat[s]|
+    <= (2 delta_F ||T|| + delta_A ||T||²) ||s||_W²
+    <= E_K ||s||_W².                                  (2.2)
+
+Das folgt direkt aus den zwei F-Kreuztermen und dem A12-Fehlerterm.
+Die bereitgestellten Preise E_K werden nochmals gegen die rationale
+rechte Seite mit T_norm_upper und T_norm_squared_upper geprüft.
+Sie sind <1.661e-24 gerade und <2.183e-26 ungerade. Damit
+
+  K_P[s] <= d[s] + E_K ||s||_W²                         (2.3)
+
+auf der ganzen Formdomäne. Nur für die folgende konkrete obere
+Schranke an d wird nun auf S_12 eingeschränkt. audit_S wird nicht benutzt.
+
+3. Die tatsächliche direkte Form: volle Translationsenergie
+
+Die gebundene Nichtpolform am Ziel b ist
+
+  d[s] = E[u] - kappa ||u||² - <u,S_b u>, u=Lambda s,
+  E[u] = integral_0^infinity k(r)||u(.+r)-u(.)||² dr,
+  k(r) = exp(-r/2)/(1-exp(-2r)),
+  kappa=log(8pi)+EulerGamma+pi/2.
+
+Am Ziel sind genau q=2,3,4,5,7,8,9 aktiv. Mit
+w_q=log(prime(q))/sqrt(q) hat der komprimierte Verschiebungsoperator
+die obere Norm 2 sum_q w_q. Der gerichtete Prüfer bestätigt sum w_q<4.
+
+Außerdem kappa>5: pi>3, log24>3 und
+EulerGamma>H_6-log7>1/2. Die letztgenannten zwei Logvergleiche werden
+gerichtet gerechnet. Die elementare Gamma-Untergrenze folgt aus dem
+Integralvergleich für die harmonische Reihe. Daher gilt
+
+  d[s] < E[u]+3||u||² für u!=0.                        (3.1)
+
+Dies ist eine OBERgrenze der tatsächlichen Form, keine untere
+Common96-Energieschranke. Die negativen Konstanten/Primbeiträge werden
+mit ihren richtigen Vorzeichen nach oben bezahlt.
+
+4. Globale Schranken für Ableitungen und Sprünge
+
+Es genügt W[s]=||u||²=1. Dann ist die rohe Schalen-L2-Norm <=1.
+Aus den exakten Geometrieformeln
+
+  mu_even=(4/3+a)/2, mu_odd=(4/3-a)/2,
+  nu_even=(5/sqrt11-4/3+h)/2,
+  nu_odd =(5/sqrt11-4/3-h)/2
+
+bestätigt der Prüfer
+
+  1<a<11/10, 1/10<h<101/1000, 0<nu/mu<1/3.
+
+Cauchy–Schwarz gibt |lambda(s)|²<=nu ||s||_X²/2. Folglich ist der
+Beitrag der glatten Kernableitung zur ganzen L2-Norm höchstens
+
+  (nu/mu²) integral_0^a |m'|² dx <= 1.                 (4.1)
+
+Die Integrale sind mu_der_anderen_Paritaet/4. Der Prüfer bestätigt
+beide Konstanten unmittelbar aus den obigen Intervallen. Ebenso gilt
+für den Betrag des inneren Grenzwerts am Schnitt a
+
+  |lambda(s)m(a)/mu|² <= nu m(a)²/(2mu²) <49/100,      (4.2)
+
+also Betrag <7/10. Hier m_even(a)²=4/3, m_odd(a)²=1/3.
+
+Schreibe A>=||u'_stueckweise||², und E_end als obere Grenze für
+|s(a+)| und |s(b-)|. Es gibt genau die vier möglichen Sprünge bei
+-b,-a,a,b; die Paritätsfortsetzung hat keinen Sprung bei 0. Die Summe
+der Quadrate der Sprunghöhen ist begrenzt durch
+
+  J=2[(E_end+7/10)²+E_end²].                          (4.3)
+
+Für einen einzelnen z_n aus (1.1) reichen, da sein Normierungsfaktor
+mindestens 1 ist und h>1/10, die Konstanten
+
+  A_n=1+200(2n+1)n(n+1), E_end,n=sqrt(5(2n+1)).        (4.4)
+
+Dabei wurde das EXAKTE Integral int_-1^1 (P_n')²=n(n+1) benutzt.
+Der Prüfer bestätigt es für n=0,...,11 unabhängig durch rationale
+Polynomfaltung und Integration. Die ganze physische Schalenableitung
+der unnormalisierten ell_n hat Normquadrat
+2(2n+1)n(n+1)/h². Der Faktor 2dx ist enthalten.
+
+Für den GANZEN Raum S_N und W[s]=1 gilt mit s=sum x_n ell_n zunächst
+sum |x_n|²=||s||_X²<=1. Die Spurnorm der Ableitungsabbildung und die
+Endpunktauswertungen liefern
+
+  A_N=1+100 N²(N²-1), E_end,N=sqrt(5 N²).              (4.5)
+
+Denn sum_(n<N) 2(2n+1)n(n+1)=N²(N²-1) und
+sum_(n<N)(2n+1)=N². Gerade diese Operator-/Spurschranke erfasst
+sämtliche Kreuzterme zwischen verschiedenen ell_n. (4.5) folgt nicht
+aus einzelnen Diagonalbudgets. Es wird N=12 verwendet.
+
+5. Analytische Bezahlung aller Translationen, einschließlich Kreuzterm
+
+Wähle 0<t<=1/10<h. Für 0<r<t sind die Intervalle der Länge r, auf
+denen eine Translation einen der vier Schnitte überschreitet, disjunkt.
+Zerlegt man die Differenz in das Integral der stückweisen Ableitung und
+die Sprungbeiträge, erhält man genau
+
+  ||u(.+r)-u(.)|| <= r sqrt(A)+sqrt(r J).              (5.1)
+
+Der erste Term folgt aus der L2-Faltungsnorm des Indikators [0,r].
+Der zweite ist die exakte L2-Norm der disjunkten Sprungindikatoren.
+Die anschließende Dreiecksungleichung benötigt keine Unabhängigkeit.
+Insbesondere darf der Kreuzterm 2sqrt(AJ)r^(3/2) NICHT entfallen.
+
+Aus exp(2r)>=1+2r folgt k(r)<=1+1/(2r). Die vollständige Integration
+von (5.1) auf (0,t) ergibt deshalb
+
+  E_small <= A(t³/3+t²/4)
+      +2sqrt(AJ)(2t^(5/2)/5+t^(3/2)/3)
+      +J(t²/2+t/2).                                 (5.2)
+
+Für r>=t benutzen wir ||u(.+r)-u(.)||²<=4||u||²=4.
+Die Kernintegration von t bis 1 ist <=1-t+log(1/t)/2. Für r>=1 gilt
+
+  integral_1^infinity k(r) dr
+    <=2exp(-1/2)/(1-exp(-2)) <35/24.                 (5.3)
+
+Hier genügen exp(1/2)>8/5 und exp(2)>7. Beide werden im Prüfer durch
+endliche rationale UNTERsummen der positiven Exponentialreihe geprüft.
+Somit ist
+
+  d[s] < B(A,J,t)
+  := A(t³/3+t²/4)
+     +2sqrt(AJ)(2t^(5/2)/5+t^(3/2)/3)
+     +J(t²/2+t/2)
+     +4[1-t+log(1/t)/2+35/24]+3.                    (5.4)
+
+Dies bezahlt die GESAMTE Translationsenergie auf (0,infinity).
+Es werden weder ein Randstück noch hohe Grade noch der große-r-Rest
+weggelassen. Die Abschätzung zeigt zugleich endliche Formenergie der
+konkreten stückweise glatten Nullfortsetzungen.
+
+Für z_n wird t=1/[10(n+1)²] verwendet. Für den ganzen Raum S_12 gilt
+t=1/[10*12²]=1/1440. Zusammen mit (4.5) ergibt die gerichtete Rechnung
+
+  B_whole in [29.60364377004151797476146...,
+              29.60364377004151797476147...],
+  B_whole+E_K <29.603644<30.                          (5.5)
+
+Die hier angezeigten Zahlen sind abgekürzt. Maßgeblich sind die
+vollständigen rationalen Intervalle in BUDGET_BOUNDS.json und die
+nach oben gerundete rationale Grenze 7400911/250000.
+
+6. Konkrete gerichtete Ausschlussschwellen
+
+Sei L0_n ein noch zu berechnendes GÜLTIGES Intervall für
+
+  <chi_p,(C_p-Dhat T)z_n>, p=P_upper v.
+
+Es muss das tatsächliche k und p einschließlich des Richtungsrests
+e sowie die ganze neue C_p-Kopplung enthalten. Aus dem übernommenen
+Spike-Satz und dem vollständig bezahlten D12-Modellfehler folgt
+
+  <Rz_n,W9 Rz_n> >=11/(10q)
+       max(0,dist(0,L0_n)-epsilon_p)².                (6.1)
+
+Mit q>0 wie in b48e3895, epsilon_p wie in 1ccb6be1 und den NEUEN
+Budgetobergrenzen B_n ist deshalb die Bedingung
+
+  dist(0,L0_n) > sqrt(10q B_n/11)+epsilon_p            (6.2)
+
+hinreichend für einen Ausschluss dieses festen Vergleichs. In der
+folgenden Tabelle sind ALLE Zahlen rational nach oben gerundet.
+Die rechte Schwelle enthält bereits den D12-Modellfehler.
+
+ n    K_P[z_n] obere Grenze    Schwelle gerade     Schwelle ungerade
+ 0       18.662828               980.113997           398.766496
+ 1       22.022446              1064.683789           433.174330
+ 2       23.279578              1094.650340           445.366439
+ 3       24.159464              1115.145438           453.705018
+ 4       24.860609              1131.211330           460.241543
+ 5       25.450069              1144.543615           465.665880
+ 6       25.960779              1155.970430           470.314963
+ 7       26.412187              1165.977169           474.386277
+ 8       26.817029              1174.879147           478.008112
+ 9       27.184210              1182.895073           481.269449
+10       27.520246              1190.183762           484.234905
+11       27.830066              1196.864492           486.953009
+
+Einfachere, etwas gröbere einheitliche Schwellen für diese zwölf Tests
+sind 1201 gerade und 489 ungerade. Das sind HINREICHENDE Schwellen,
+keine notwendigen Schwellen der tatsächlichen Budgetform. Ein kleineres
+Ergebnis entscheidet nichts gegen einen späteren schärferen Test.
+
+Für beliebige s in S_12 gilt (5.5), nicht ohne weiteres die zwölf
+einzelnen Grenzen aus der Tabelle. Ebenso betrifft die Tabelle die
+W-Normierung (1.1), nicht die unnormalisierte ell_n.
+
+KEIN L0_n wurde hier ausgerechnet. Damit ist kein Ausschlusstest
+entschieden. Selbst ein späterer Ausschluss wäre kein negativer Zeuge
+für die tatsächliche Form und kein Beweis gegen A11-Positivität.
+
+7. Anschluss: gemeinsamen k-Fehler vor der Normverstärkung auswerten
+
+Die noch fehlenden Residualintegrale können nun gegen konkrete Budgets
+geplant werden. Für ihre Fehlerrechnung bleibt die ganze Schranke aus
+HERLEITUNG §7 des 1ccb6be1-Pakets gültig. Ihre psi-Fehlermultiplikatoren
+für p sind ungefähr 14026.019 gerade und 45.358 ungerade. Ohne die
+konkreten h0-Normen und Mittelpunktsintegrale folgt daraus NICHT, dass
+der gesamte Weg scheitert oder genügt.
+
+Der kohärente k-Anschluss lässt sich exakt festhalten. Setze
+
+  H=F-J_old U8 g_F,
+  chi_t(k0)=Lambda Jt-J_old U8 gJt-H k0,
+  a(h)=H* h=F* h-g_F* U8 J_old* h.
+
+Dann gilt für Delta k=k-k0 mit ||Delta k||_K<=eta_t
+
+  <chi_t(k)-chi_t(k0),h>=-<H Delta k,h>,
+  |<H Delta k,h>| <= eta_t sqrt(a(h)* K^-1 a(h)).       (7.1)
+
+Diese Identität fasst den gemeinsamen k-Fehler in genau zwölf
+Skalaren zusammen. h muss als GANZES Residuum C_pz-Dhat Tz behandelt
+werden; die beiden großen Beiträge nachträglich einzeln zu begrenzen
+kann die Auslöschung verlieren. Die zwölf a(h)-Skalare sind noch
+nicht gerichtet berechnet. (7.1) ist kein neues numerisches O(1)-Budget.
+Modellfehler des festen-k0-Anteils sind zusätzlich mitzunehmen.
+
+Als erste Richtungen bieten sich die vollständig definierten z_0,
+danach z_1,...,z_11 an. Die neue obere Budgetseite ist für sie fertig.
+Fehlt L0_n oder enthält es 0, ist (6.1) noch kein Ausschluss.
+
+8. Reproduktion, neue Prüfungen und ausdrücklich übernommene Teile
+
+Benötigt: Python-Standardbibliothek, vier UNVERÄNDERTE Archive in einem
+Verzeichnis. Vollständige Namen/Hashes stehen in verify.py (ARCHIVES)
+und expected/RECEIPT.json. Sie entsprechen genau den vier Archiven
+der Übergabe, einschließlich 1ccb6be1, b48e3895, ab7116f7 und b8677c0b.
+
+  python -B -X utf8 verify.py --archive-dir PATH_TO_ARCHIVES
+      --output PATH_TO_NEW_UNUSED_DIRECTORY_OUTSIDE_PACKAGE
+
+Der neue Prüfer kontrolliert alle vier Archivhashes, alle 73 Mitglieder
+der vier obersten Manifeste, die Quellbindungen des Antwortpakets,
+die exakte Regel-ID und q sowie 24 positive Pivots von S0. Er berechnet
+die Geometrie, kleinen und großen Translationsterme, 24 einzelne
+Budget-/Schwellenzeilen und zwei ganze Formobergrenzen gerichtet neu.
+Synthetische rationale Kontrollen prüfen Vorzeichen, Quadratergänzung,
+Ableitungsintegrale und den nötigen Ableitungs-/Sprungkreuzterm.
+Ein zweiter Rechenweg mit exakten Fraction-Summen, eigenen rationalen
+Wurzelobergrenzen und einer separaten Logreihe bestätigt alle 26 nach
+oben gerundeten Budgetgrenzen und alle 24 individuellen Schwellen.
+Er verwendet die Intervall-/Logarithmusimplementierung des ersten
+Wegs nicht. Die analytischen Ungleichungen werden dadurch nicht
+extern oder formal unabhängig begutachtet.
+
+Die neue Rechnung verwendet weder mpmath-Quadraturen noch Perplexity-
+Diagnosezahlen als bewiesene Eingaben. Die ursprünglichen vollständigen
+F/A12/T-Integrationen bleiben übernommene Voraussetzungen. Der neue
+Prüfer bindet die erwarteten hohen Skalarfehler, berechnet ihre
+ursprüngliche Herleitung aber nicht selbst erneut.
+
+Separat wurde in dieser Sitzung der ORIGINALPRÜFER aus dem frisch
+entpackten 1ccb6be1-Paket ausgeführt: PASS, sechs ganze Gramkontrollen,
+1146 Kreuzkoordinatenvergleiche, drei bytegleiche Ergebnisdateien.
+Die tatsächlichen Ausgaben liegen unter upstream-high-replay/.
+Das ist eine Reproduktion des Autorenprüfers, keine unabhängige
+Begutachtung der historischen Integrale oder der gesamten Beweiskette.
+
+Ein frischer Lauf aus dem fertigen neuen ZIP muss expected/BUDGET_BOUNDS.json
+und expected/RECEIPT.json bytegleich reproduzieren. Die abschließende
+Auslieferungsquittung liegt separat neben dem ZIP.
+
+GitHub wurde am 17. Oktober lesend geprüft: #226 und #227 sind beide
+zusammengeführt. Der historische #227-Kopf 5243737 ist nicht aktuell;
+der abgerufene Kopf lautet 7fd64de115c95f6b0777b21342984bfb718ded12.
+Ein Merge bedeutet keine unabhängige mathematische Prüfung. Es gab
+keine GitHub-Änderung durch diesen Arbeitsschritt. Details stehen in
+GITHUB_SNAPSHOT.json.
+
+Offen: gerichtete vollständige Residualpaarung, Erfolg/Ausschluss der
+festen Regel, vollständige W9-Energie, A9->A11, Objekt X und RH.
+Externe Gesamtprüfung weiterhin offen.

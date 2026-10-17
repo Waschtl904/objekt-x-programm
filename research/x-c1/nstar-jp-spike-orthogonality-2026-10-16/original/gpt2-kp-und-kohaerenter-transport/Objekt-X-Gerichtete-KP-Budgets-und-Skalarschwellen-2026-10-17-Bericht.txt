@@ -1,0 +1,68 @@
+Objekt X — neue obere K_P-Budgets und konkrete Ausschlussschwellen
+17. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ein Teil der bisher offenen entscheidenden Gegenüberstellung ist
+bedingt geschlossen: die obere Budgetseite für präzise festgelegte
+neue Schalenrichtungen. Die feste Antwortregel bleibt unverändert.
+
+Neu hergeleitet und gerichtet gerechnet, in beiden Paritäten:
+
+  K_P[s] <29.603644 ||s||_W²
+
+für jedes nichtverschwindende Schalenpolynom vom Grad höchstens 11
+auf (log3,log11/2). Die ganze Raumgrenze enthält alle Kreuzterme.
+Für die zwölf einzeln W-normierten lokalen Legendretests gilt sogar
+K_P[z_n]<28. Exakte Definition und engere Einzelgrenzen: HERLEITUNG §1/§6.
+
+Der entscheidende neue Schritt ist S0=X_fix+X_fix*-X_fix*M_A X_fix>0,
+bestätigt durch 24 gerichtete Pivots. Dadurch ist Khat<=d. Der volle
+zweiseitige Modellfehler wird addiert. Eine analytische obere Grenze
+der tatsächlichen direkten Form d bezahlt anschließend alle Sprünge,
+die stückweise Ableitung, ihren Kreuzterm und die vollständige
+Translationsenergie bis infinity. Keine A11-Positivität vorausgesetzt.
+
+Damit sind konkrete hinreichende Schwellen für ein späteres gültiges
+Intervall L0_n von <chi_p,(C_p-Dhat T)z_n> verfügbar. Für z_0 genügt
+
+  dist(0,L0_0)>980.113997 gerade,
+  dist(0,L0_0)>398.766496 ungerade.
+
+Der D12-Modellfehler ist in diesen Schwellen bereits bezahlt.
+Für alle zwölf Einzeltests reichen einheitlich >1201 bzw. >489;
+HERLEITUNG §6 enthält die jeweils schärfere Schwelle.
+
+Noch offen: KEINES dieser vollständigen Residualintervalle wurde
+hier ausgerechnet. Deshalb gibt es weiterhin weder Erfolg noch
+Ausschluss der Regel. Der nächste konkrete Rechenschritt ist L0_0
+für die exakt W-normierte konstante neue Schalenrichtung, zunächst
+mit der ganzen Residualfunktion und kohärentem k-Fehlertransport.
+Die zwölf dafür relevanten k-Fehlerskalare sind in §7 exakt benannt,
+aber noch nicht eingeschlossen. Ihre Kleinheit wird nicht angenommen.
+
+Tatsächlich geprüft:
+- alle vier Übergabearchivhashes und 73 äußere Manifestdateien;
+- ursprünglicher hoher Prüfer: PASS, sechs ganze Gramkontrollen,
+  1146 Kreuzkoordinatenvergleiche, drei bytegleiche Ergebnisdateien;
+- neuer Budgetprüfer: 24 positive Pivots, gesamte analytische
+  Energieobergrenze, 24 Einzelbudgets und zwei ganze Raumgrenzen;
+- zweiter exakter rationaler Rechenweg für Budgetgrenzen/Schwellen.
+
+Übernommen bleiben insbesondere die ursprünglichen vollständigen
+F/A12/T-Integrationen, Operator-/Domänenidentifikation, Spike-Majorante,
+q und das hohe Fehlerzertifikat. Die Wiederholung des Autorenprüfers
+ist keine unabhängige externe Begutachtung dieser Voraussetzungen.
+Keine neuen großen Integrationen und keine Perplexity-Quadraturen.
+
+GitHub wurde nur gelesen: #226 und #227 sind inzwischen zusammengeführt.
+Das ändert den mathematischen Prüfstatus nicht. Kein GitHub-Eingriff.
+
+Rückgabepaket: HERLEITUNG.txt, ANSCHLUSS.txt, verify.py, gebundene
+Intervallarithmetik, erwartete rationale Ergebnisse, ursprüngliche
+hohe Replay-Ausgaben und aktueller GitHub-Metadatenschnappschuss.
+Zur Reproduktion werden die vier unveränderten Übergabearchive
+benötigt. Die frische ZIP-Auslieferungsprüfung ist separat quittiert.
+
+Nicht gezeigt: vollständige Residualpaarung, N12-Erfolg/-Ausschluss,
+ganze W9-Energie, A9->A11, Objekt X oder RH. Externe Gesamtprüfung offen.
+
+ZIP SHA256: 87540b07fb22c90867bae4ddcbefcdab66c455f786ec19f50ce0193455ff00d3

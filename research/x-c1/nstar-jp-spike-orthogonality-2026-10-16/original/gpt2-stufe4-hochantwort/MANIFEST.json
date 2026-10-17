@@ -1,0 +1,14 @@
+{
+  "ANSCHLUSS_GPT1.txt": "40c9b0c43200876e7745c204153e7564f03eed2fc643efec698c8b9caf9f0ca1",
+  "certify.py": "a0a0ecb3b9b8b275b6eb46e0d8d6bad27d9eea5a91fd1b66bf75b074aef2ee89",
+  "expected/COMPLETE_HIGH_RESPONSE.json": "52027262debebfdb5258a7fb74ff5280d98d81b34a347d99a91a83470362a606",
+  "expected/RECEIPT.json": "94cad1e3bbe6d7b2899f6cd5222255912b032cbd4722cd88ba8ceaaa08bb65e8",
+  "expected/SPIKE_SCALAR_D_MODEL_ERROR.json": "421560e42b2a50fb9391944b7a40952b8e529d215cea70d52081fb496fa4d460",
+  "HERLEITUNG.txt": "c584f04069f72271728fb4d337e8308f69212ed16cfb76c29221be5f90a0ae83",
+  "inputs/a8_model.json.gz": "5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b",
+  "inputs/Objekt-X-Stufe1-4-Diagnose-2026-10-16.zip": "88a68c9c51e00fb7024ebaa6db0c72e4dafd5f65a3b98cddb2300dee511ff5df",
+  "sources/COMMON96_HERLEITUNG.txt": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd",
+  "sources/generate_a8.py": "49de5bdeb80dc618206b34c4db3adcb07c602758fcc343b26498b31b5cfc5213",
+  "sources/RESPONSE_GRAM_PROOF.txt": "8b92da7462796f2ae8eee23467f96e39b98fc70b0147f684dae70080d897e971",
+  "vendor/source_core.py": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772"
+}

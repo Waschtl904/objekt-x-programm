@@ -1,0 +1,204 @@
+Objekt X — vollständiger Antwortgram und verschärfter Modellfehlertransport
+15. Oktober 2026 — AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+1. Ergebnis und feste Eingaben
+
+Die Antwortregel des bereits ausgegebenen Kalibrierungspakets bleibt fest:
+P=Phi12 X F_hat, X=A9_A11_N12_MIDPOINT_INVERSE_60_V1. X ist die rationale
+60-Dezimal-Rundung der Inversen des alten A12-Mittelpunkts. F_hat sind die
+gespeicherten PHYSISCHEN W-Rieszfunktionen. Die exakte ganze Quelle C bleibt
+in allen Residualdefinitionen erhalten. Keine A11-Zielpositivität wird benutzt.
+
+Der im neuen Gegenprüfpaket vorgeschlagene Kandidat S ist gesondert ebenfalls
+gerechnet. Er wird nicht mit X gleichgesetzt und ersetzt die eingefrorene
+Regel nicht. Die unten angegebenen einfachen Schranken gelten für BEIDE.
+Die getrennten rationalen Daten stehen unter fixed_X und audit_S.
+
+NEU sind vollständige rationale 12x12-Obergrame G_T fuer T T*, T=X F_hat
+beziehungsweise T=S F_hat. Sie erfassen den GANZEN Schalenraum (X,W),
+einschließlich des logarithmischen Randes, des physischen Momentglieds,
+aller Kreuzterme und vollständiger Approximationsreste. Es handelt sich
+NICHT um die noch fehlenden Energien unter W9.
+
+Unter den gebundenen Voraussetzungen folgt:
+
+                         gerade                 ungerade
+ ||T||                   < 6 838 544             < 784 134
+ direkter K-Modellfehler  < 1.661e-24             < 2.183e-26
+ W9-Fehlerfaktor pro w    < 5.90e-62              < 7.75e-64
+
+Die letzte Zeile ist ein Faktor pro Einheit einer noch nachzuweisenden
+Schranke w>=||W9||. Sie ist KEINE bereits bezahlte W9-Fehlerenergie.
+Der ganze gewichtete Residualgram, Q_D und der kompakte Gate bleiben offen.
+
+2. Exakte Momentprojektion und Typkorrektur
+
+Die neue Gegenprüfung zeigt bei allen 24 gespeicherten gerundeten D-Spalten
+ein von null verschiedenes altes Moment. Der ursprüngliche Fehlerpreis ist
+ein Preis im gesamten Paritäts-L2-Raum; die gerundeten Spalten selbst sind
+nicht exakt in H_a. Für die folgende Anwendung wird ausdrücklich definiert:
+
+ D_hat=Pi_a D_tilde,
+ Pi_a u=u-m [integral_0^a m(x)u(x)dx]/mu.
+
+Dies ist die exakte orthogonale Projektion in L2((0,a),2dx). Der Faktor zwei
+im Skalarprodukt kürzt sich im Projektionsquotienten. Der Projektionskoeffizient
+ist der EXAKTE Integralwert, kein Mittelpunkt eines rationalen Intervalls.
+Da D=A9 Phi12 bereits in H_a liegt, folgt auf ganz C12:
+
+ ||D-D_hat||=||Pi_a(D-D_tilde)||<=delta_D.
+
+So sind R_hat=C-D_hat T und alle späteren W9-Anwendungen korrekt typisiert.
+Die bisherigen 288 Formpaarungen ändern sich nicht, weil Phi12* m=0.
+Auch die gerichteten A12-Radien bleiben gültig: Die neue Gegenprüfung
+bestätigt ||Phi12||²<501/500 und damit 2a eps ||Phi12||²<(22/5)eps.
+Historische Archive bleiben unverändert; dieser Zusatz korrigiert ihre
+Modellraumformulierung. evaluate_projected_D.py des Eingangs bleibt nutzbar.
+
+3. Ganze Rieszfunktionen der Antworten
+
+Es gelten a=log3, b=log11/2, h=b-a, s=h/a und u=(y-a)/h in (0,1).
+Eine Rieszfunktion der endlichen Antwortzeilen hat die exakte Darstellung
+
+ t_i(y)=[P_i(v)+L_i(v)log((v+1)/(v-1))+c_i m(y)]/sqrt(2a),
+ v=y/a=1+s u.
+
+P_i,L_i,c_i sind die gemeinsamen linearen Kombinationen der gelieferten
+F_hat-Koeffizienten mit derselben rationalen Antwortmatrix. Die Kombination
+geschieht VOR der Normabschätzung. Damit bleiben die wesentlichen
+Auslöschungen erhalten. Die Quelle C wird nicht durch diese Funktionen ersetzt.
+
+Auf der gesamten offenen Schale gilt exakt
+
+ log((v+1)/(v-1))=-log u+log(2/s)+log(1+(s/2)u).
+
+Der letzte Logarithmus wird bis Grad 120 entwickelt. Sein vollständiger
+Rest ist höchstens
+
+ e_log=(s/2)^121/[121(1-s/2)].
+
+Für m(a+h u) verwenden wir Grad 80. Da exp(a/2)=sqrt3, lauten seine
+Koeffizienten exakt
+
+ (2 oder 1)/sqrt3 * (h/2)^k/k!,
+
+mit dem Faktor 2 bei geradem k im geraden Sektor und bei ungeradem k im
+ungeraden Sektor. Für h<101/1000 ist der vollständige uniforme Rest
+
+ e_m <=4(101/2000)^81/81!.
+
+Die geometrische Reihenmajorante des Exponentialrestes rechtfertigt den
+Faktor 4. Alle Operationen an den Geometriekonstanten sind gerichtete
+300-stellige Ganzzahlarithmetik. Die Polynome P_i(1+s u) werden vollständig
+ausgewertet; Grade oberhalb 80 des regulären Gesamtpolynoms werden durch
+die Summe ihrer absoluten Koeffizienten auf GANZ (0,1) bezahlt.
+
+Anschließend werden beide verbleibenden Polynome auf 90 Dezimalstellen
+rational gerundet. Für den regulären Anteil kostet dies die Summe der
+Koeffizientenfehler. Beim Loganteil wird zusätzlich
+||u^k log u||_2=sqrt(2)/(2k+1)^(3/2)<2 benutzt.
+Damit stehen rationale Polynome A_i,L_i und vollständige Preise eps_i mit
+
+ ||b_i-(A_i-L_i log u)||_L2(0,1)<=eps_i,
+
+wobei b_i die exakte ganze Antwortklammer bezeichnet. Alle endlichen
+Polynomgrade, sämtliche Logarithmen und Kreuzterme bleiben entweder exakt
+enthalten oder durch einen vollständigen Rest bezahlt. Kein Randstück wird
+abgeschnitten, keine Punktabtastung wird zum Integralbeweis erklärt.
+
+4. Exakter Gram und physische Matrixordnung
+
+Die drei Integrationsidentitäten sind
+
+ int_0^1 u^n du=1/(n+1),
+ int_0^1 u^n log u du=-1/(n+1)^2,
+ int_0^1 u^n (log u)^2 du=2/(n+1)^3.
+
+Die letzten beiden folgen durch zweimalige Parameterableitung der ersten
+Identität; auf einem kleinen Parameterintervall um jedes n>=0 sind die
+logarithmischen Ableitungen integrierbar. Sie erfassen gerade den ganzen
+singulären Rand. Daraus wird G0, der gemeinsame Gram aller A_i-L_i log u,
+als EXAKTE rationale 12x12-Matrix berechnet.
+
+Setze e²=sum eps_i². Für die ganze Syntheseabbildung folgt
+
+ Gram(b)<=G0+rho I,
+ rho=2 sqrt(tr(G0)*e²)+e²,
+
+weil ihre gemeinsame Fehlernorm höchstens sqrt(e²) und die Modellnorm
+höchstens sqrt(tr(G0)) ist. rho wird rational nach oben gerundet.
+
+Die physische Metrik W=I+(m tensor m)/(2mu) erfüllt
+I<=W<=g I mit g=(mu+nu)/mu. Der Wechsel von dy mit Maß 2dy zur Variablen u
+und der Faktor 1/sqrt(2a) liefern genau s=h/a, keinen zusätzlichen Faktor 2.
+Deshalb gilt als ganze Matrixordnung
+
+ T T* <= s g [G0+rho I] <= G_T,
+
+wobei s g ebenfalls gerichtet rational nach oben gerundet wird. Die rechte
+Matrix ist positiv; ihre Positivität wird zusätzlich mit exakten Pivots
+geprüft. Die abschließende Normschranke ist ||T||²<=tr(G_T).
+
+Eine getrennte Rechnung baut G0 über Polynomfaltungen und die drei
+Momentfolgen erneut auf. Sie vergleicht alle 576 Einträge der vier Grame
+exakt und prüft die 48 Pivots der vier physischen Obergrame mit einer
+anderen LDL-Rekurrenz. Kleine Gegenkontrollen erkennen das Weglassen
+der Log-Kreuzterme und einen falschen Maßfaktor. Dies ist keine externe
+mathematische Begutachtung und kein formalisierter Beweisassistent.
+
+5. Konkrete Modellfehlerpreise
+
+Für den jeweiligen festgelegten Antwortoperator P=Phi12 T gilt exakt
+
+ K_P=d-F* T-T* F+T* A12 T,
+ K_hat=d-F_hat* T-T* F_hat+T* M_A T.
+
+Die vollständige direkte neue Form d bleibt unverändert und wird hier
+nicht neu integriert. Mit den gebundenen GANZEN Fehlern delta_F,delta_A
+folgt
+
+ K_P>=K_hat-[2 delta_F sqrt(tr G_T)+delta_A tr G_T] I.
+
+Die konkreten rationalen Preise sind in RESPONSE_ENERGY.json gespeichert.
+Ihre einfachen Obergrenzen stehen in Abschnitt 1. Die Verbesserung
+gegenüber den bisherigen Preisen des S-Kandidaten beruht allein auf dem
+ganzen gemeinsamen Antwortgram, nicht auf dem Weglassen eines Fehlers.
+
+Außerdem gilt für DeltaD=D-D_hat exakt
+
+ R-R_hat=-DeltaD T,
+ ||R-R_hat||²<=delta_D² tr(G_T).
+
+Sobald eine ganze gerichtete Fehlermatrix Q_D>=DeltaD* W9 DeltaD vorliegt,
+ist sogar die richtungsabhängige Operatornorm bezahlt durch
+
+ ||(R-R_hat)* W9 (R-R_hat)||
+   <= tr(Q_D T T*) <= tr(Q_D G_T).
+
+Hier ist Q_D positiv; deswegen erhält die letzte Spurungleichung die
+Richtung. Für Q_D=w delta_D² I ergibt sich die letzte Zeile von Abschnitt 1.
+Weder w noch Q_D sind in diesem Paket bestimmt. Auch ein oberer Boden für
+die tatsächliche A9-Inverse ist kein solcher oberer Boden für W9.
+
+Der gemeinsame Young-Anschluss bleibt für alpha>0
+
+ R*W9R <=(1+alpha) R_hat*W9R_hat
+          +(1+1/alpha) T*Q_D T.
+
+6. Stand und Reproduzierbarkeit
+
+Die ursprüngliche Antwortregel, die vollständigen Quellen und die gebundenen
+Operator-/Domänenvoraussetzungen bleiben erhalten. Der neue Gegenprüfstand
+bestätigt die Momentprojektion und ergänzt die Begründung der A12-Radien.
+Der ursprüngliche Bytevergleich seiner neuen Quittungen scheitert unter
+Windows ausschließlich an CRLF/LF. replay_transport.py ändert nur diese
+zwei Vergleichsoperationen im Speicher. Hashbindungen und Originaldateien
+bleiben unverändert; JSON-Werte und nach LF normalisierte Bytes stimmen.
+
+Offen bleiben Q_D, die gesamte Energie R_hat*W9R_hat bzw. E00/E10/E11,
+der vollständige kompakte Gate einschließlich -Pi0, B11 und seine Inverse,
+U11, die erneuerbare Schnittstelle, Kofinalität, Readout und Objekt X.
+Die neuen Antwortgrame sind vollständig; die W9-Energie wird ausdrücklich
+nicht aus ihnen abgeleitet. Große historische Integrationen und historische
+574-Pivot-Läufe werden nicht als neu ausgeführt ausgegeben. GitHub bleibt
+in diesem Rechenschritt unverändert. Externe Gesamtbegutachtung bleibt offen.

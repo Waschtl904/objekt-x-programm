@@ -1,0 +1,54 @@
+{
+  "head": "3dd6fce08030554f3fc4b398d92e300e82dcaaf9",
+  "files": [
+    {
+      "path": "PROOF.md",
+      "git_blob_sha1": "27141a2048d475386bd801fc39fb86b2e657016b",
+      "sha256": "ac65af133b4eb684ae6ce2405e8af2b834b4dea400a5b10c43f54c3f832916bf",
+      "source_binding_checked": true
+    },
+    {
+      "path": "README.md",
+      "git_blob_sha1": "ddc1a9aeb09fd064f127a8b5ec480ac8c935e863",
+      "sha256": "e67b27afe1f3a21f8db10c03c4b95ec8e6db7d6983d849f65883a99ae2050ce6",
+      "source_binding_checked": true
+    },
+    {
+      "path": "META.yaml",
+      "git_blob_sha1": "b0252e800077cf8f2871111741c777e098a5dc62",
+      "sha256": "d85e3a70a7a252e6036ea2a94d71de6d55d54bad115ad8d273eaff98840a5fa0",
+      "source_binding_checked": false
+    },
+    {
+      "path": "reports/STUFE4_TEIL2_HOCHPAARUNGEN.md",
+      "git_blob_sha1": "accb535551db81d71050e9a76b834f12347dd0ea",
+      "sha256": "99aa929c5da8b8dda7d837a5a165bbbec31bfed862b7bc53ad6734ca8617126b",
+      "source_binding_checked": true
+    },
+    {
+      "path": "stufe4/D12_ERROR_BUDGET.json",
+      "git_blob_sha1": "41f28a1dc9065dcfd0bd502505dbdf2c90ed6d63",
+      "sha256": "76d01899c96565eea8c5a449483dda8d6e1356ca71fe7f72bf9f874534531a54",
+      "source_binding_checked": true
+    },
+    {
+      "path": "stufe4/high_pairings.py",
+      "git_blob_sha1": "43c306c7569138bcbb5108500d7ff5052bcf5375",
+      "sha256": "09f0d0bc0b029c06d9f0b8cce4419c2033ef37175c243967c56b005bf982e634",
+      "source_binding_checked": true
+    },
+    {
+      "path": "verify.py",
+      "git_blob_sha1": "8b04f869c70931df8e0b31d908c220bd25511e59",
+      "sha256": "3cffc77baf4c838555dac8e29beb0e865e678f432906358b2ecd40238285ed2e",
+      "source_binding_checked": false
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "git_blob_sha1": "b33d25dee2fd433c0998f1e93af5de66ad8d656a",
+      "sha256": "96452edd8223d41d4757349d7cdcb040e2bdc09befc44a07aa1a1eb55e96ef03",
+      "source_binding_checked": false
+    }
+  ],
+  "all_git_blobs_verified": true
+}

@@ -1,0 +1,38 @@
+{
+  "status": "PASS_UNDER_BOUND_COMPLETE_SOURCE_GRAM_AND_OPERATOR_HYPOTHESES",
+  "bridge_sha256": "b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b",
+  "stage3_sha256": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52",
+  "global_sha256": "2ca3c682de8a529b12a0d628c2b606fd04df332d1299ccd36dff71ac3e53d80c",
+  "response_archive_sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee",
+  "incoming_diagnostic_sha256": "88a68c9c51e00fb7024ebaa6db0c72e4dafd5f65a3b98cddb2300dee511ff5df",
+  "source_hashes": {
+    "REFINED_INPUT.json": "7c2a93adb187cc51f03f8083ffd82d4437d155d032da698e138787f90379614b",
+    "REFINED_COMMON96.json": "18a71ae90f69dc28ecc1a42b7ed865057cdd2a28986abc3a1ac06bb558e23097",
+    "a8_model.json.gz": "5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b"
+  },
+  "incoming_manifest_files_checked": 28,
+  "checks": {
+    "whole_y_Gram_vs_U96_identity_intersections": 6,
+    "Bh_model_coordinate_intersections": 1146
+  },
+  "rational_controls": {
+    "complete_Gram_identity": true,
+    "omitted_cross_term_rejected": true,
+    "wrong_sign_Gram_rejected": true,
+    "weighted_C_sensitivity": true,
+    "physical_moment_lift_is_not_an_isometry": true
+  },
+  "complete_high_response_norm_for_v_p_e_certified": true,
+  "whole_chi_norm_upper_for_v_p_e_certified": true,
+  "D_model_error_for_rank_one_spike_test_certified": true,
+  "incoming_quadratures_used_as_bounds": false,
+  "new_large_integrations": false,
+  "D12_pairings_certified": false,
+  "exact_A9_orthogonality_proved": false,
+  "N12_test_done": false,
+  "N12_excluded": false,
+  "full_W9_error_bound": false,
+  "A9_A11_closed": false,
+  "github_changed": false,
+  "external_review_open": true
+}

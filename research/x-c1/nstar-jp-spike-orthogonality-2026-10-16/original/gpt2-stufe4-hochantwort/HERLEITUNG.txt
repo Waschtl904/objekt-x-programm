@@ -1,0 +1,369 @@
+Objekt X — vollständige hohe U8-Antwort und Fehlerpreis des Spike-Skalartests
+16. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis und Reichweite
+
+Unter den gebundenen Operator-, Domänen-, vollständigen Quellenmodell-
+und Integrationsvoraussetzungen ist die Norm des GANZEN hohen Anteils
+der tatsächlichen U8-Antwort jetzt eingeschlossen. Das tatsächliche k,
+alle übernommenen Modellfehler und der physische Momentlift sind enthalten.
+Es wird keine hohe Legendre-Summe abgeschnitten und keine ungerichtete
+Quadratur aus dem eingehenden Diagnosepaket als Fehlerschranke verwendet.
+
+Für u_hi,t in der exakten Zerlegung U8 f_t=Phi c_t+u_hi,t gilt:
+
+  Richtung                        gerade             ungerade
+  v                               <0.016             <0.00245
+  p=P_upper v                     <902               <23
+  e=p-alpha v                     <4.43e-10          <5.61e-11
+
+Die Norm ist jeweils die physische H8-Norm mit Maß 2dx. Die hohen
+Anteile für p und e sind selbst gerechnet; p wird nicht durch alpha v
+ersetzt. Die Koordinatenbezeichnung "hoch" schließt den nötigen
+e_sigma-Momentträger ein. Dieser Anteil ist deshalb nicht einfach die
+orthogonale physische Hochprojektion.
+
+Zusammen mit den gerichteten endlichen Daten erhält man zudem:
+
+  ||chi_v|| <1.352e13 gerade, <1.023e12 ungerade.
+
+Damit wird eine zweite bisher offene Teilfrage geschlossen: Der vollständige
+D12-Funktionsmodellfehler ist im unteren RANG-EINS-Skalartest bezahlbar.
+Für die eingefrorene Antwortregel fixed_X und alle neuen Schalenfunktionen z:
+
+  |<chi_p,(R-Rhat)z>| < epsilon_p ||z||_W,
+  epsilon_even=1.86e-13, epsilon_odd=2.668e-16.
+
+Das ist keine obere Fehlergrenze für die gesamte W9-Energie. Es ersetzt
+auch nicht die noch fehlende gerichtete Auswertung von <chi_p,Rhat z>.
+Exakte A9-Orthogonalität, N12-Erfolg oder -Ausschluss und A9->A11 werden
+nicht behauptet. Die großen ursprünglichen Integrationen sind gebundene
+Eingaben und werden hier nicht nochmals erzeugt.
+
+1. Räume, exakte Operatoren und feste Modelle
+
+Es gelten die Definitionen des b48e3895-Funktionsanschlusses und des
+ab7116f7-Stufe-3-Pakets. a8=3log(2)/2, H8 ist der momentfreie physische
+Raum auf (0,a8), mit Maß 2dx. In isometrischen Paritätskoordinaten stehen
+e_n=sqrt(2n+1)P_n, m_s, e=e_sigma und m_e=<m_s,e>.
+
+  M x=x-e<m_s,x>/m_e, x in e-perp;
+  Phi=U^-1 M E, T_h=P_Y M* U, T_h*=U^-1 M|Y.
+
+E umfasst die 191 Grade sigma+2 bis sigma+382, Y alle höheren Grade
+derselben Parität. B ist die ganze Low/High-Kopplung. C ist die gebundene
+rationale Kongruenzmatrix, delta=18219/10000, rho der gebundene Fehler.
+Für alle Quellen gleichzeitig ist die feste Majorante definiert durch
+
+  V=C*(Phi*-B T_h/delta),
+  U8=T_h*T_h/delta+V*V/(1-rho).
+
+Hier ist X=C C*/(1-rho) eine InversMAJORANTE. Die Behauptung
+C C*=F_neu^-1 ist bei einer gerundeten Kongruenz mit rho!=0 nicht exakt.
+Der Faktor 1/(1-rho) bleibt überall erhalten.
+
+Für t=v,p,e gilt mit dem tatsächlichen k=K^-1 a_fin Jt:
+
+  psi_t=Lambda Jt-Fk, f_t=Pi8[Q_b9^np psi_t]|core,
+  y=T_h f_t, c=C V f_t/(1-rho), r=y-B*c,
+  U8 f_t=Phi c+U^-1 M r/delta,                         (1.1)
+  chi_t=psi_t-J_old U8 f_t.
+
+F in psi_t bezeichnet die zwölf alten physischen Quellen, nicht die
+Schuruntermetrik F_neu. Die Signatur des Momentlifts ist die korrigierte
+Minus-Signatur der Stufe 1. Ein Stern bedeutet den Hilbertadjunkten.
+Die Formeln sind reell notiert; komplex sind Konjugationen mitzunehmen.
+
+2. Ganzer Modellgram statt Quadraturdifferenz oder endlichem Hochraum
+
+Der feste rationale Mittelpunkt k0 sowie die Modelle c0 und b0=B0 y0
+werden aus Stufe 3 übernommen. Für die beiden ganzen Quellenfamilien
+g_F und g_J liefern die geerbten Quellenintegrationen die Modellgrame
+
+  H_F=(T_h g_F,0)*(T_h g_F,0),
+  H_J=(T_h g_J,0)*(T_h g_J,0),
+  H_FJ=(T_h g_F,0)*(T_h g_J,0).
+
+Konkret sind das source_h_gram_model, (91/50)H84_model und
+complete_source_high_cross_model aus REFINED_INPUT.json. 91/50 ist
+der ALTE Skalierungsfaktor des H84-Feldes; die neue U8-Zerlegung benutzt
+delta=18219/10000. Diese Faktoren dürfen nicht gleichgesetzt werden.
+
+Mit y0=(T_h g_J,0)t-(T_h g_F,0)k0 ist exakt
+
+  Y0=||y0||^2=t*H_J t-2 Re(k0*H_FJ t)+k0*H_F k0.      (2.1)
+
+Das alte a8_model.json.gz enthält außerdem G0=B0 B0*, den GANZEN
+Modellgram der hohen Kopplung. Der Originalgenerator generate_a8.py
+bildet vollständige Potential-, Prim- und Kreuzintegrale und subtrahiert
+die niedrige Projektion. Die endliche Stütze der Gamma-Polynomkorrektur
+ist keine Abschneidegrenze der übrigen logarithmischen und stückweisen
+Beiträge. Die ursprünglichen analytischen Restfehler bleiben gebunden.
+
+Für r0=y0-B0*c0 gilt daher exakt
+
+  ||r0||^2=Y0-2 Re(c0*b0)+c0*G0 c0.                  (2.2)
+
+Alle drei Terme werden gemeinsam mit gerichteten rationalen Intervallen
+ausgewertet. Gerundete Anzeigen für t=v:
+
+                              gerade                   ungerade
+  Y0                          18289.12054323348778      21630.55049611881255
+  Re(c0*b0)                   18289.12078583314819      21630.53358183019237
+  c0*G0 c0                    18289.12103094752201      21630.51667854655751
+  ||r0||^2                    2.514713417383529e-6      1.100498532459851e-5
+
+Die rationalen Intervalle im Ergebnis, nicht diese Anzeigen, entscheiden.
+Die hohe Modellnorm ist nur ein Ausgangspunkt. Das tatsächliche k und
+die Quellen-/Kopplungsfehler werden im nächsten Abschnitt bezahlt.
+
+Zwei Kontrollen binden die zusammengesetzten Daten zurück:
+  Y0=delta( w*U96_model w-||v0||^2/(1-rho) ), w=(-k0,t);
+  b0=old_low_Bh_model t-source_Bh_model k0.
+Alle sechs skalaren und 1146 Koordinaten-Intervallvergleiche bestehen.
+Sie kontrollieren die Zusammensetzung; sie sind keine unabhängige neue
+Integration der ursprünglichen Funktionen.
+
+3. Vollständiger Fehlertransport auf r
+
+Schreibe eta_t>=||k-k0||_K. E_hF und eps_hJ sind die gebundenen ganzen
+hohen Quellenfehler: joint_high_source_error_gram und
+high_source_error_norm. K ist die positive rationale Zwölfermetrik.
+Dann ist eine vollständige Normfehlergrenze für y:
+
+  e_y=eps_hJ||t||+sqrt(k0*E_hF k0)
+      +(sqrt(tr(K^-1 H_F))+sqrt(tr(K^-1 E_hF)))eta_t. (3.1)
+
+Das folgt durch Zerlegung in den Fehler bei k0 und die Änderung k-k0.
+Die Frobenius-/Spurschranke gilt für die K-normalisierte ganze Familie.
+Keine Unabhängigkeit der Fehler wird vorausgesetzt.
+
+Aus Stufe 3 wird die vollständige normalisierte Featurefehlergrenze
+
+  || (T_h f/sqrt(delta), Vf/sqrt(1-rho))
+       -(y0/sqrt(delta),v0/sqrt(1-rho)) || <= e_Psi  (3.2)
+
+übernommen. e_Psi ist fixed_k_feature_error_bound plus
+k_change_feature_error_bound, einschließlich des tatsächlichen k.
+Insbesondere ||Vf-v0||<=sqrt(1-rho)e_Psi und
+c-c0=C(Vf-v0)/(1-rho).
+
+Die entscheidende gerichtete Empfindlichkeit ist
+
+  ||B*C||^2 <= tr(C* H_B C), H_B>=BB*.
+
+Mit X=C C*/(1-rho) folgt
+
+  ||B*(c-c0)|| <= sqrt(tr(X H_B)) e_Psi.             (3.3)
+
+Die exakte rationale Spur ist etwa 21.32918409 gerade bzw. 21.36406469
+ungerade, ihre Quadratwurzel jeweils <4.63. Man muss hier nicht die
+riesige ungewichtete C-Norm einsetzen. Die für c selbst nötige große
+Fehlergrenze wird dadurch nicht aufgehoben, sondern in B*c gezielt
+anders transportiert.
+
+Mit e_B>=||B-B0|| ergibt die exakte Differenzidentität
+
+  r-r0=(y-y0)-(B-B0)*c0-B*(c-c0)
+
+die vollständige Schranke
+
+  ||r|| <= sqrt(upper(2.2))+e_y+e_B||c0||
+                                  +sqrt(tr(X H_B))e_Psi.             (3.4)
+
+Auch korrelierte k-, Quellen- und Kopplungsfehler sind durch dieses
+Normdreieck erfasst. Weder ein Kreuzterm noch eine Restrichtung fehlt.
+
+4. Physischer Momentlift und Ergebnis
+
+M ist nicht isometrisch. Auf e-perp gilt exakt
+
+  ||M||^2=1+||P_e-perp m_s||^2/|m_e|^2
+         =||m_s||^2/|m_e|^2
+         =mu/[a8(2sigma+1)mellin(sigma,a8)^2]=gamma_m.                (4.1)
+
+Das verwendet den vollständigen Momentträger, keine endliche Summe.
+Die Konstante ist etwa 1.00154278 gerade und 1.00013584 ungerade.
+Aus (1.1) und (3.4):
+
+  ||u_hi,t|| <= sqrt(gamma_m)||r||/delta.             (4.2)
+
+Für t=v liegen die gerichteten rechten Seiten unter
+0.015916304130 gerade und 0.002444873250 ungerade. Die sicheren runden
+Grenzen am Anfang sowie die entsprechenden p- und e-Grenzen werden
+vom Prüfer explizit mit rationalen Vergleichen bestätigt.
+
+Damit ist die Normfrage des hohen Anteils vollständig beantwortet,
+unter den geerbten Voraussetzungen. Eine punktweise Darstellung der
+191 hohen Kopplungsfunktionen wird dafür nicht benötigt. Gerichtete
+Paarungen mit bestimmten h können allerdings noch schärfere Werte erfordern.
+
+5. Ganze chi-Norm als OBERgrenze
+
+Die Kern- und Schalenrestriktionen von psi haben disjunkte Träger.
+Stufe 1 liefert obere Grenzen P_core,P_shell ihrer tatsächlichen Normen.
+Stufe 3 liefert e_c>=||c-c0||. Mit ||Phi||<=sqrt(gamma_m) folgt
+
+  ||chi_t|| <= sqrt(P_core^2+P_shell^2)
+               +sqrt(gamma_m)(||c0||+e_c)+||u_hi,t||.                (5.1)
+
+Es ist kein Weglassen der Kernmomentkorrektur zulässig; die genannten
+Stufe-1-Normen beziehen sich bereits auf die korrigierte volle psi.
+Alle sechs oberen Grenzen sind positiv und größer als die geerbten
+unteren Normgrenzen. Für p lauten die oberen Anzeigen ungefähr
+7.652967145e17 gerade und 9.580386141e15 ungerade.
+
+6. D12-Modellfehler im unteren Spike-Skalartest
+
+Das b8677c0b-Antwortpaket bindet die ganze momentprojizierte
+D12-Funktionsdarstellung Dhat sowie die feste Regel
+A9_A11_N12_MIDPOINT_INVERSE_60_V1. Nur fixed_X wird verwendet,
+nicht die separat optimierte audit_S-Regel. Für T=X_fix Fhat gilt
+
+  R=C_p-DT, Rhat=C_p-Dhat T,
+  R-Rhat=-(D-Dhat)T.
+
+Die gebundenen ganzen Normgrenzen sind
+||D-Dhat||<=delta_D und ||R-Rhat||<=epsilon_R. Die jeweiligen Räume
+sind C^12 mit euklidischer Norm, H9 mit physischer Norm und die neue
+Schale mit W-Metrik. Das ursprüngliche Paket enthält insbesondere die
+vollständige physische Momentprojektion, keine rohe Modellrestriktion.
+Der neue Prüfer prüft zusätzlich epsilon_R>=delta_D*T_norm_upper.
+X_fix bezeichnet hier die eingefrorene Zwölferantwortmatrix und ist
+nicht die 191er-Majorante X aus Abschnitt 3.
+
+Aus (5.1) und Hilbert-Cauchy--Schwarz folgt für t=v,p,e gleichzeitig:
+
+  || <chi_t,(D-Dhat)(.)> || <= chi_upper,t delta_D,
+  || <chi_t,(R-Rhat)(.)> || <= chi_upper,t epsilon_R. (6.1)
+
+Für t=p liefert die zweite Zeile Werte <1.86e-13 gerade und
+<2.668e-16 ungerade. Das tatsächliche p und dessen vollständige
+chi-Norm werden benutzt. Es gibt hier keine Approximation p=alpha v.
+
+Setze q=v*P_upper v>0 und W_sp=11/(10q) chi_p tensor chi_p.
+Die geerbte Majorante erfüllt W9>=W_sp. Für den MODELLFEHLERGRAM folgt
+
+  (R-Rhat)*W_sp(R-Rhat)
+      <= [11/(10q)](chi_upper,p epsilon_R)^2 I_W,     (6.2)
+
+mit Koeffizienten <6.71e-31 gerade und <8.35e-36 ungerade.
+Dies ist weder eine Schranke für (R-Rhat)*W9(R-Rhat), noch unmittelbar
+für R*W_sp R-Rhat*W_sp Rhat: Bei letzterem wären Kreuzterme zu bezahlen.
+
+Liegt später ein vollständiges gerichtetes Intervall L0 für
+<chi_p,Rhat z> vor, ergibt sich dagegen direkt der sichere Ausschlusstest
+
+  <Rz,W9 Rz> >=11/(10q)
+       max(0,dist(0,L0)-chi_upper,p epsilon_R||z||_W)^2.             (6.3)
+
+Erst der Vergleich mit einer gerichteten oberen Grenze für K_P[z]
+könnte die feste Regel ausschließen. L0 und K_P[z] sind hier unberechnet.
+Ein solcher Ausschluss wäre kein negativer Zeuge der tatsächlichen Form.
+
+7. Praktischer Anschluss ohne hohe Funktionsrekonstruktion
+
+Die neue Normschranke erlaubt einen vollständig bedingten Paarungsweg.
+Für ein festes ganzes Modell h0 in H9, h8,0=Pi8 h0|core und
+
+  I0=<psi0,h0>-<c0,Phi*h8,0>
+
+gilt, sofern diese endlichen/ganzen Modellintegrale gerichtet vorliegen,
+
+  |<chi,h>-I0|
+    <= e_psi||h0||
+       + e_Psi/sqrt(1-rho) ||C*Phi*h8,0||
+       + H_hi||h8,0||
+       + chi_upper||h-h0||.                          (7.1)
+
+e_psi ist die ganze psi-Modellfehlergrenze aus Kern und Schale,
+H_hi die Grenze (4.2). Die niedrige Fehlerzeile folgt aus
+c-c0=C(Vf-v0)/(1-rho). Diese Richtungsauswertung ist besser als
+die pauschale große e_c-Norm, sofern C*Phi*h8,0 klein ist.
+Alle noch nötigen Eingangsgrößen in (7.1) müssen selbst eingeschlossen
+werden. Der eingehende D12_TERMS.json enthält dafür noch keine
+bewiesenen Quadraturreste. Ein kohärenter direkter Transport des
+gemeinsamen k-Fehlers kann (7.1) weiter schärfen; er ist hier nicht
+als O(1)-Energieargument angenommen.
+
+8. Gegenprüfung der eingehenden Interpretation
+
+Die 28 Manifestdateien des eingehenden v4-Pakets sind bytegenau gebunden.
+Seine numerischen D12- und weiche-Mode-Integrationen wurden hier gelesen,
+aber nicht erneut erzeugt. Folgende Präzisierungen sind erforderlich:
+
+a) Eine UNTERgrenze a_low[u]>=L darf nicht als OBERgrenze in
+   |a(u,w)|<=sqrt(a(u,u)a(w,w)) eingesetzt werden. Die in Schritt 1
+   des Diagnoseberichts genannte F+H_B/delta-Grenze allein zertifiziert
+   daher nicht dessen angegebene kleine Cauchy--Schwarz-Schwelle.
+   Dafür ist eine direkte gerichtete Obergrenze der tatsächlichen
+   Form auf genau dem gewählten u nötig. Die numerische Verträglichkeit
+   kann eine nützliche Kontrolle sein, ist aber kein solcher Nachweis.
+
+b) H_B>=BB* ist richtig. Der Normschluss aus einer ungerichteten
+   Quadratur für ||f||^2 bleibt dennoch ungerichtet. Übereinstimmende
+   Quadraturen beweisen die behauptete absolute Restunsicherheit nicht.
+   (2.2)--(4.2) schließen diesen Punkt über ganze gebundene Grame.
+
+c) Die endliche rationale Kongruenz liefert eine Majorante mit rho;
+   C C*=F_neu^-1 ist keine exakte Identität. Der physische hohe Lift
+   benötigt zusätzlich M, siehe (4.1).
+
+d) Kleine numerische Werte von 24 Modellpaarungen sind keine exakte
+   Orthogonalität. Die vollständige tatsächliche chi-Funktion und ihre
+   Zulässigkeit in einer Energieformdomäne dürfen dabei nicht stillschweigend
+   durch ein niedriggradiges Polynom ersetzt werden. Die Hilbertpaarung
+   <chi,A9 Phi_j> benötigt keinen behaupteten neuen Domänennachweis für chi.
+
+e) Die L2-Norm von chi und die Operatornorm von W9 im FESTEN physischen
+   Raum sind unter isometrischen Koordinatenwechseln unverändert. Ihre
+   großen Werte sind damit keine bloßen Darstellungsartefakte. Sie
+   schließen kleine konkrete Residualpaarungen aber auch nicht aus.
+
+f) Selbst kleine alte D12-Paarungen entscheiden nicht die neue
+   C_p-Kopplung. Im Residuum werden sie außerdem mit der großen festen
+   Antwortmatrix T kombiniert. Weder "Spike irrelevant" noch "N12 muss
+   scheitern" folgt aus den vorliegenden Diagnosedaten.
+
+Der neue sichere Fortschritt ist die ganze hohe Normgrenze samt
+vollständiger Fehlerrechnung und der daraus folgende Preis (6.1).
+Die tatsächlich entscheidende vollständige Residualpaarung bleibt offen.
+
+9. Reproduktion und Herkunft
+
+Python-Standardbibliothek; alle Beweisentscheidungen verwenden gerichtete
+Ganzzahlintervalle mit 180 Dezimalstellen und rationale Endpunkte.
+Die ursprüngliche Intervallbibliothek source_core.py ist bytegleich
+mit dem gebundenen globalen Quellarchiv. Vollständige Quelldateien werden
+gegen dessen SNAPSHOT_ORIGINS geprüft, nicht nur gegen neue eigene Hashes.
+Der ganze alte Gram wird zusätzlich gegen REFINED_INPUT abgeglichen.
+
+  python -B -X utf8 certify.py
+      --bridge-archive PATH_TO_B48_ZIP
+      --stage3-archive PATH_TO_AB7116_ZIP
+      --response-archive PATH_TO_B8677_ZIP
+      --output PATH_TO_NEW_OUTPUT_DIRECTORY
+
+Extern benötigte unveränderte Vorgänger:
+  Objekt-X-Nstar-Jp-Funktionsanschluss-und-Koeffizienten-2026-10-16.zip
+    b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b
+  Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip
+    ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52
+  Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip
+    b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee
+
+Ausgaben:
+  COMPLETE_HIGH_RESPONSE.json: ganze hohe Antwort, ganze chi-Obergrenzen,
+                              sämtliche Fehlerterme für v,p,e;
+  SPIKE_SCALAR_D_MODEL_ERROR.json: normierte D12-/Residualmodellpreise;
+  RECEIPT.json: Quellenbindungen, Kontrollen und genaue Statusgrenzen.
+
+Die erwarteten drei Dateien werden beim Replay bytegleich geprüft.
+Synthetische rationale Kontrollen prüfen die ganze Gramzerlegung,
+verwerfen fehlende/falsch signierte Kreuzterme und berücksichtigen die
+nichtisometrische Momentgeometrie. Sie ersetzen keine Operatorbegutachtung.
+
+Kein GitHub-Eingriff und keine aktuelle Prüfung von PR-Heads.
+Keine neue historische 574-Pivot-Rechnung, keine großen Integrationen.
+Kein N12-Abschluss, kein A9->A11-Abschluss, kein Objekt X, kein RH-Beweis.
+Eine externe mathematische Prüfung der vollständigen Kette bleibt offen.

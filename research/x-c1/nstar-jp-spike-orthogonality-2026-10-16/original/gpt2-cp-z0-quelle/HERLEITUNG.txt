@@ -1,0 +1,269 @@
+Objekt X — elementare neue Quelle C_p z0 und logarithmische Randzerlegung
+17. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis und Reichweite
+
+Für den bereits festgelegten konstanten, exakt W-normierten Schalentest
+z0 ist die neue Quelle C_p z0 jetzt als elementare Funktion MODULO DEM
+MELLINTRÄGER hergeleitet. Ihre Auswertung braucht keine innere Gamma-
+Quadratur. Sie enthält den ganzen unendlichen Gamma-Integrationsbereich,
+die Momentkorrektur des Lifts und alle sieben Primkanäle 2,3,4,5,7,8,9.
+
+cp_z0.py wertet diese Funktion mit gerichteten rationalen Intervallen
+aus. Die zwölf inneren Prim-Schnittstellen und die logarithmische
+Randkomponente sind explizit angegeben. Der Prüfer reproduziert 32
+gerichtete Werte, zwei Randkoeffizienten und zwei reguläre Randgrenzwerte.
+Die Funktion ist durch die Formeln definiert, nicht durch diese Stichprobe.
+
+Das ist ein Anschluss für die fehlende C_p-Kopplung, KEIN gerichtetes
+Intervall der Paarung mit chi_p. Die abschließende Integration gegen
+chi_p, H*h, Dhat Tz0 und das gesamte L0 bleiben offen. Die gebundene
+analytische Definition des Quelloperators wird übernommen, nicht durch
+ein neues unabhängiges Gesamtgutachten ersetzt.
+
+1. Exakte Geometrie und physischer Lift
+
+Zur Vermeidung der doppelten Bedeutung von p bezeichnet sigma=0,1
+hier die Parität, epsilon=(-1)^sigma. Der Richtungsvektor p=P_upper v
+ist davon verschieden. C_sigma ist der im bisherigen Text C_p genannte
+Quelloperator für die betreffende Parität.
+
+Setze a=log3, b=log11/2, h=b-a und
+  m_sigma(x)=(exp(x/2)+epsilon exp(-x/2))/2,
+  mu=int_0^a m_sigma² dx=(4/3+epsilon a)/2,
+  L=int_a^b m_sigma dx.
+
+Explizit mit ea=sqrt3 und eb=11^(1/4):
+  L=(eb-epsilon/eb)-(ea-epsilon/ea).
+Die positive äußere Amplitude und die innere Amplitude seien
+  B=1/sqrt(2(h+L²/mu)),
+  A_c=-B L/mu.
+
+Dann ist z0(x)=B auf (a,b). Dies ist genau die Richtung aus dem
+K_P-Paket: ell0=1/sqrt(2h), lambda0=L/sqrt(2h),
+z0=ell0/sqrt(1+2lambda0²/mu).
+Der ganze physische Lift u=Lambda z0 lautet
+  u(y)=A_c m_sigma(y)          für |y|<a,
+  u(y)=B                     für a<y<b,
+  u(y)=epsilon B             für -b<y<-a,
+  u(y)=0                     sonst.
+
+Exakt int_0^b m_sigma u= A_c mu+B L=0 und
+  ||u||²_L2(R)=2B²(h+L²/mu)=1.
+Die Halbintervallnorm enthält den Faktor 2 bereits. Punktwerte an den
+Schnittstellen sind in L2 irrelevant und werden nicht stillschweigend
+als rechts- oder linksseitige Grenzwerte verwendet.
+
+2. Drei vollständige elementare Gamma-Primitive
+
+Für r>0 gilt k(r)=exp(-r/2)/(1-exp(-2r)). Mit v=exp(-r/2) setze
+  Theta(r)=atanh(v)+atan(v).
+Die Substitution v=exp(-r/2) liefert exakt
+  int_r^infinity k(t)dt=2 int_0^v dt/(1-t^4)=Theta(r).       (2.1)
+Der gesamte unendliche Rest ist enthalten.
+
+Definiere außerdem für R>0
+  J_+(R)=int_0^R k(r)(1-exp(r/2))dr+Theta(R),
+  J_-(R)=int_0^R k(r)(1-exp(-r/2))dr+Theta(R).
+Die Integranden sind bei 0 integrierbar. Differenzieren gibt
+  J_+'(R)=-1/(1-exp(-2R)),
+  J_-'(R)=-1/(2sinh R).
+Aus Theta(R)+(1/2)log R -> log2+pi/4 bei R->0 folgt damit
+  J_+(R)=(3/2)log2+pi/4-R-(1/2)log(1-exp(-2R)),
+  J_-(R)=(1/2)log2+pi/4
+                  -(1/2)log((1-exp(-R))/(1+exp(-R))).     (2.2)
+
+Diese Identitäten folgen aus Ableitungen und den angegebenen
+Randkonstanten, nicht aus einer Übereinstimmung von Quadraturen.
+
+3. Ganze Gamma-Wirkung auf den Kernträger
+
+Für f_lambda(y)=exp(lambda y) 1_{|y|<a}, lambda=+/-1/2,
+und 0<x<a zerfallen die zwei Translationsrichtungen getrennt bei
+a-x bzw. a+x. Deshalb ist
+  H_Gamma f_(+1/2)(x)
+    =exp(x/2)[J_+(a-x)+J_-(a+x)],
+  H_Gamma f_(-1/2)(x)
+    =exp(-x/2)[J_-(a-x)+J_+(a+x)].
+Für den Momentträger ergibt sich exakt
+  M_sigma(x):=H_Gamma(m_sigma 1_core)(x)
+    =1/2 {exp(x/2)[J_+(a-x)+J_-(a+x)]
+          +epsilon exp(-x/2)[J_-(a-x)+J_+(a+x)]}.        (3.1)
+
+Die reine äußere Schale verschwindet am alten Punkt x. Ihre Wirkung
+hat das negative Vorzeichen
+  H_Gamma(Sigma z0)(x)=-B T_sigma(x),
+  T_sigma(x)=Theta(a-x)-Theta(b-x)
+               +epsilon[Theta(a+x)-Theta(b+x)].          (3.2)
+
+4. Vollständige neue Quelle modulo Momentträger
+
+Mit d_q=log q, w_q=log(prime(q))/sqrt(q) und der ganzen Liftfunktion
+u aus §1 definiere auf 0<x<a
+  c_tilde_sigma(x)=A_c M_sigma(x)-B T_sigma(x)
+              -sum_{q=2,3,4,5,7,8,9} w_q[u(x+d_q)+u(x-d_q)]. (4.1)
+
+Dann gilt exakt
+  C_sigma z0=Pi_a c_tilde_sigma,
+  Pi_a f=f-m_sigma (int_0^a m_sigma f dx)/mu.             (4.2)
+
+Begründung: Q_b^np=H_Gamma-kappa-S_b auf den tatsächlichen Lift
+anwenden und auf den alten Kern einschränken. Der weggelassene
+Term ist -kappa A_c m_sigma und verschwindet unter Pi_a. Die
+Gamma- und Primterme in (4.1) sind dagegen vollständig enthalten.
+Dies ist die Spezialisierung von (3) in der gebundenen ursprünglichen
+A9_A11_SOURCE_PROOF.txt. Auf dem alten Kernträger ist q=9 inaktiv,
+auf der neuen Schale bleibt der q=9-Kanal ausdrücklich enthalten.
+
+c_tilde ist NICHT punktweise die momentprojizierte Quelle. Es wird
+keine unberechnete Projektionskonstante als null vorausgesetzt.
+Für jeden tatsächlichen momentnullen w in H9 gilt jedoch exakt
+  <w,C_sigma z0>=<w,c_tilde_sigma>.                     (4.3)
+Insbesondere gilt dies für chi_p sowie jede Spalte von
+H=F-J_old U8 g_F. Daher sind für die gesuchten skalaren Integrale
+und H*h-Paarungen keine gesonderten Integrale der Projektionskonstante
+erforderlich. In einem numerisch nicht exakt momentkorrigierten
+Modell wäre sein Momentfehler weiterhin zu bezahlen.
+
+Setze r_tilde=c_tilde_sigma-Dhat Tz0. Weil Dhat vollständig
+momentprojiziert ist, gilt h=(C_sigma-Dhat T)z0=Pi_a r_tilde.
+Bei benötigten Normobergrenzen darf man sicher
+  ||h|| <= ||r_tilde||
+verwenden. Eine kleinere Kernnorm darf weiterhin keine ganze Norm
+ersetzen. Auch Pi8(h|core)=Pi8(r_tilde|core), weil die Restriktion
+des abgezogenen H9-Momentträgers wieder der H8-Momentträger ist.
+
+5. Prim-Schnittstellen und logarithmischer Rand
+
+Im positiven alten Intervall (0,a) gibt es zwölf verschiedene innere
+Prim-Schnittstellen:
+  a-log2, b-log2, b-a;
+  log q-a, log q-b für q=4,5,7,8;
+  2a-b.
+cp_z0.interior_cuts sortiert und trennt sie mit gerichteten Intervallen.
+Zwischen diesen Schnitten sind die Primanteile elementar glatt. Der
+Rechner verwirft Eingabeboxen, die eine Schnittstelle überqueren.
+Die Randpunkte 0 und a haben eigene einseitige Konventionen. Beim
+ungeraden Fall kann die Primwirkung am Ursprung einen Sprung haben;
+ungerade Parität bedeutet keine Stetigkeit oder Null-Grenzwerte dort.
+
+Für t=a-x->0+ besitzen J_+, J_- und Theta denselben singulären Teil
+  -(1/2)log t,
+und nach dessen Abzug denselben Grenzwert c0=log2+pi/4.
+Somit ist auf dem letzten Prim-Teilintervall exakt
+  c_tilde_sigma(x)=g_sigma(x) log(a-x)+R_sigma(x),
+  g_sigma(x)=(B-A_c m_sigma(x))/2,                     (5.1)
+mit einem bis zum rechten Rand regulär fortsetzbaren R_sigma.
+Dasselbe g bleibt nach der vollständigen Momentprojektion erhalten.
+
+Ein expliziter Grenzwert ist
+  M_reg(a-)=m_sigma(a)c0
+      +1/2[ea J_-(2a)+epsilon/ea J_+(2a)],
+  T_reg(a-)=c0-Theta(b-a)
+      +epsilon[Theta(2a)-Theta(a+b)],
+  S_left=sum_{q=2,3,4,5,7,8} w_q A_c m_sigma(a-log q)
+         +w_9 epsilon B,
+  R_sigma(a-)=A_c M_reg(a-)-B T_reg(a-)-S_left.          (5.2)
+Insbesondere liegt bei q=9 der LINKSseitige Grenzwert in der negativen
+neuen Schale. Ein Einsetzen des Kernwerts bei -a wäre hier falsch.
+
+Zur Orientierung (gerundete Anzeigen, keine Intervallendpunkte):
+                     gerade                 ungerade
+  B                  2.11607876508           1.94701904125
+  A_c               -0.204232725671         -1.00966650682
+  g_sigma(a)         1.17595320168           1.26497513538
+  R_sigma(a-)        1.66319155135           0.323572272890
+Die vollständigen gerichteten rationalen Endpunkte stehen im Ergebnis.
+
+Diese Randzerlegung ermöglicht eine analytische Behandlung des Logterms
+in einer späteren Paarung. Noch wird daraus kein globaler gerichteter
+Quadraturrest für Produkte mit chi_p oder Dhat gefolgert.
+
+6. Gerichtete Auswertung und getrennte Kontrolle
+
+Die Ganzzahl-Intervallarithmetik source_core.py ist bytegleich aus
+dem gebundenen Hochantwortarchiv übernommen; hier 120 Dezimalstellen.
+Logarithmen und pi nutzen dessen volle Restschranken.
+Die neue Exponentialauswertung nutzt 256 positive Taylor-Terme und
+  Rest <= nächster_Term/(1-q/258), 0<=q<=6;
+negative Argumente werden durch positive Kehrwerte und allgemeine
+Intervalle über die monotonen Endpunkte behandelt.
+atan(v) nutzt pi/4+atan((v-1)/(v+1)); für 1/4<v<=1 ist der reduzierte
+Betrag <=3/5. Nach 512 Termen wird der ganze Rest durch
+  |t|^1025/[1025(1-|t|²)]
+beidseitig bezahlt. Alle Wurzeln, Divisionen, Normierungen und
+Entscheidungen sind gerichtet; kein Gleitkommawert ist Beweiseingabe.
+
+Neu gerechnet: je ein Wert in allen 13 Prim-Teilintervallen und je
+drei Werte bei a-10^-6, a-10^-12, a-10^-24, in beiden Paritäten.
+Alle 32 Einschließungen sind schmaler als 10^-80. Die beiden
+Randkoeffizienten und regulären Grenzwerte werden ebenfalls gerichtet
+berechnet. Zwei künstlich schnittüberschreitende Boxen werden verworfen.
+
+Zusätzlich führt diagnostic_check.py eine getrennte Gleitkomma-Integration
+des ORIGINALEN Ausdrucks
+  int_0^infinity k(r)[2u(x)-u(x+r)-u(x-r)]dr-S_b u(x)
+durch. Diese verwendet 64 bzw. 128 Gauss-Punkte je Teilstück und eine
+eigene Abbildung des unendlichen Rests; keine neuen Gamma-Primitive.
+An 26 Zellmittelpunkten maximale Abweichung etwa 9.77e-15.
+Dies ist nur eine Diagnose und zertifiziert keinen Quadraturrest.
+Die exakte Funktionsidentifikation stammt aus §§2–4, nicht aus diesem
+numerischen Vergleich. Der Diagnosebericht wird nicht als portable
+byteidentische Gleitkomma-Ausgabe vorausgesetzt.
+
+7. Anschluss für die große Residualrechnung
+
+Die direkte Richtung p ist bereits im Brückenpaket vorhanden:
+DIRECTIONS.json -> even/odd -> directions -> lower_Pv enthält p,
+Jp-Koordinaten, k0_p und eta_p. Der ganze Aufbau lautet linear
+  psi_p(k0)=Lambda Jp-F k0_p,
+  f_p(k0)=g Jp-g_F k0_p,
+  chi_p(k0)=psi_p(k0)-J_old U8 f_p(k0).
+Damit wird der Richtungsrest e nicht ausgelassen, sondern durch das
+tatsächliche p vollständig mitgerechnet. Eine separate grobe Zahlung
+||chi_e|| ||h|| ist nicht erforderlich, wenn dieser direkte Weg benutzt
+wird. Die alternative Zerlegung alpha chi_v+chi_e bleibt exakt, benötigt
+aber die kohärente Paarung des Restes statt bloß seiner großen Norm.
+
+Für den kohärenten k-Fehler aus dem vorherigen Paket:
+  b_h=H*h=H*r_tilde,
+  |Delta ell_p|<=sqrt(b_h*G_p b_h), G_p=eta_p²K^-1.
+Die Beiträge C_sigma z0 und Dhat Tz0 gemeinsam behandeln und k0_p
+einfrieren; Delta k genau einmal bezahlen. Der feste-k0-Modellfehler,
+alle tatsächlichen Integrationsreste und gegebenenfalls ein hoher
+Skalarfehler bleiben zusätzlich einzuschließen.
+
+Erst ein gültiges vollständiges L0_0 wird gegen die bereits vorhandenen
+hinreichenden Schwellen >980.113997 gerade / >398.766496 ungerade
+gestellt. Die D12-Modellabweichung ist dort bereits enthalten.
+Die vorliegende Quelle berechnet weder Tz0 noch diese Residualpaarung.
+
+8. Reproduktion und GitHub-Umfang
+
+Python-Standardbibliothek; aus dem entpackten Paket:
+  python -B -X utf8 verify.py
+    --bridge-archive PATH_TO_B48E3895_ZIP
+    --high-archive PATH_TO_1CCB6BE1_ZIP
+    --output PATH_TO_NEW_UNUSED_DIRECTORY_OUTSIDE_PACKAGE
+Vollständige Archivnamen und SHA256 stehen im Prüfer. Exakte Hashes:
+b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b
+1ccb6be11c6a8b4e325338b80f2136990b464b4a70e724a02ca7addbe7ba99b0
+Die Definition des Quelloperators und die Intervallarithmetik werden
+gegen die tatsächlichen Archivmitglieder geprüft. Frischer ZIP-Replay:
+CP_Z0_SOURCE.json und RECEIPT.json müssen bytegleich sein.
+
+PR #229 wurde am Kopf 92a274b247c1511ef0fe2402273df54887e2fe20 gelesen.
+Vier Dateien wurden gegen ihre Git-Blob-IDs geprüft, davon zwei gegen
+SOURCE_BINDINGS.json. Die Bindungen der beiden ausgelieferten Archive
+87540b07... und 77b806b1... stimmen. Die sechs großen PR-Replays und
+296 Bindungen wurden hier nicht erneut vollständig ausgeführt.
+Die angeforderten wesentlichen Korrekturen sind im neuen Text sichtbar.
+Eine verbliebene Altbezeichnung steht noch in PROOF.md:18:
+"alle 24 innerhalb der zertifizierten Schranke ..." sollte ebenfalls
+"innerhalb des diagnostischen Vergleichswerts ..." heißen; der
+anschließende Text und der PR-Text benennen den Diagnosestatus richtig.
+Das ist keine neue Widerlegung der Paarungswerte.
+
+GitHub blieb unverändert. Keine Nachricht an andere Rechner, kein
+Merge und keine Übergabe an einen weiteren Dienst. Die externe Prüfung
+der ursprünglichen Operator-/Raumidentifikation bleibt offen.

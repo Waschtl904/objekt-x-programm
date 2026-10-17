@@ -1,0 +1,142 @@
+Objekt X — Prüfung von PR #229, Head 92a274b
+17. Oktober 2026
+
+Fester Kopf: 92a274b247c1511ef0fe2402273df54887e2fe20
+https://github.com/Waschtl904/objekt-x-programm/pull/229
+
+ERGEBNIS UND EMPFEHLUNG
+
+Die große L0,0-Rechnung ist jetzt ausreichend konkret festgelegt, um im
+bestehenden Rechenlauf begonnen zu werden. Eine vorgeschaltete allgemeine
+Deep-Research-Runde ist dafür nicht erforderlich. Die unabhängige Prüfung
+soll anschließend das vollständige Ergebnis und seine Reproduktion prüfen.
+Eine numerische L0,0-Einschließung wurde in dieser Nachprüfung nicht erstellt.
+
+Gegen einen Merge als korrigierten Forschungsstand besteht nach Übernahme
+der beigefügten kleinen Textbereinigung und erfolgreicher erforderlicher CI
+aus dieser Prüfung kein weiterer fachlicher Einwand. Das ist keine Aussage,
+dass der N12-Test oder der Horizontübergang geschlossen wäre.
+GitHub wurde ausschließlich gelesen; kein Merge, Kommentar oder Push.
+
+1. EIGENE NACHRECHNUNG
+
+check_inputs.py verwendet Python-Standardbibliothek und exakte Fraction-
+Arithmetik, ohne die Prüfroutinen der beiden neuen Pakete zu importieren.
+
+Bestätigt wurden:
+- 24 positive rationale K-Pivots mittels eigener LDL-Rekursion;
+- K K^-1 = I und K^-1 K = I in insgesamt 576 Einträgen;
+- alle 576 Einträge der vier Matrizen G_t = eta_t^2 K^-1;
+- 24 Einzelbudgets und zwei Raumgrenzen aus der vollständigen analytischen
+  Energieobergrenze, mit eigenen rationalen Wurzel- und Logobergrenzen;
+- 24 Skalarschwellen, einschließlich ihrer strikten hinreichenden Richtung;
+- identische Regel-ID, q, z0-Budget und Schwelle in beiden Paketen;
+- elf gelesene Dateien gegen Hash und Länge in SOURCE_BINDINGS.json.
+
+PASS: CHECK_RESULTS.json.
+
+Unter den gebundenen Voraussetzungen bleiben insbesondere:
+  K_P[z0] < 18,662828;
+  K_P[s] < 29,603644 ||s||_W^2 für 0 != s in S12;
+  hinreichende Abstände: >980,113997 gerade, >398,766496 ungerade.
+
+Die analytische Ableitung bezahlt die ganze Translationsenergie, den
+Ableitungs-/Sprungkreuzterm, den großen-r-Rest und alle sieben aktiven
+Primzahlpotenzen. Der Schluss für den ganzen Raum verwendet eine
+Ableitungsspurschranke und gemeinsame Endpunktauswertungen; er wird
+nicht aus den zwölf Diagonaltests abgeleitet.
+
+Übernommen bleiben die ursprünglichen Operator-/Domänen-/Quellen-
+integrationen, eta-Schranken sowie die Modellfehlerpreise. S0 wurde hier
+nicht neu aus X_fix und M_A aufgebaut; die gespeicherten positiven
+Pivotintervalle wurden geprüft und die Herleitung S0>0 -> Khat<=d gelesen.
+Keine Wiederholung aller 296 Bindungen oder der sechs vollständigen
+Archivreplays. Damit keine vollständige unabhängige Gesamtzertifizierung.
+
+2. VERBLEIBENDE TEXTBEREINIGUNG — KONKRET VORBEREITET
+
+Die wesentlichen Rücknahmen und die nach außen gerundeten Rayleigh-
+Intervalle sind umgesetzt. Drei aktuelle Dateien enthalten noch einzelne
+alte Bezeichnungen:
+- PROOF.md, Absatz "Neu (Teil 2)": "innerhalb der zertifizierten Schranke
+  0,0159...";
+- Bericht §2: verworfener Lauf "verletzte die zertifizierte Schranke"
+  mit demselben nicht nach oben gerundeten Faktor;
+- META.scope: "CS-Test ... in 24 Fällen bestanden" ohne Modellqualifikation.
+
+RESTKORREKTUR.patch enthält fünf genaue Textersetzungen in diesen drei
+Dateien; vorgeschlagene Dateifassungen stehen unter proposed/.
+Zusätzlich wird H_hi=0,0159 im diagnostischen Budget ausdrücklich als
+gerundete Anzeige gekennzeichnet. Keine Zahlenrechnung wird verändert.
+Die source/-Dateien bleiben unveränderte Schnappschüsse des PR-Kopfes.
+Nach Anwendung im Repository sind dessen Quellenbindungen neu zu erzeugen
+und die erforderlichen Prüfungen am neuen Kopf auszuführen.
+Dies ist eine Bereinigung bereits bekannter Darstellungspunkte, kein
+neuer mathematischer Einwand gegen die beiden Pakete.
+
+3. VERBINDLICHE RECHENAUFGABE FÜR L0,0
+
+Regel A9_A11_N12_MIDPOINT_INVERSE_60_V1, tatsächliches p=P_upper v,
+beide Paritäten, neue Schale (a,b)=(log3,(log11)/2).
+Pro Parität die exakte Funktion
+  ell0=1/sqrt(2(b-a)),
+  lambda0=int_a^b m ell0,
+  mu=int_0^a m^2,
+  z0=ell0/sqrt(1+2lambda0^2/mu)
+verwenden. Keine gerundete Normierung als exakte Funktion einsetzen.
+
+Gesucht ist ein gerichtetes Intervall für
+  <chi_p,(C_p-Dhat T)z0>.
+Den Mittelpunkt und die übrigen Modell-/Integrationsreste bei festem k0
+berechnen. Die gemeinsame k-Abweichung anschließend genau einmal mit
+  bvec=H*(C_p-Dhat T)z0, H=F-J_old U8 g_F,
+  E_k <= sqrt(b0*G_p b0)+sqrt(r^T |G_p| r)
+bezahlen, sofern |bvec_i-b0_i|<=r_i gerichtet belegt wurde.
+Die zwölf Komponenten sind vor der Auswertung mit T zu kombinieren.
+Bei nominalem h muss auch der gemischte k-/h-Fehler eingeschlossen sein.
+Der bereits k-haltige alte Hochantwortfehler darf nicht zusätzlich als
+unabhängiger Fehler übernommen oder durch Subtraktion von Obergrenzen
+vermeintlich von seinem k-Anteil befreit werden.
+
+p direkt zu behandeln vermeidet die zusätzliche Aufteilung in alpha v+e.
+Falls diese Aufteilung genutzt wird, müssen alpha und e aus der tatsächlichen
+festen Richtung stammen und <chi_e,h> vollständig mitgerechnet werden.
+Eine kleine v-Paarung und die Normangabe 25317,73 ersetzen diesen Beitrag
+nicht. Die Normangabe darf selbstverständlich als gültige, möglicherweise
+zu grobe Fehlerobergrenze verwendet werden, wenn alle übrigen Faktoren
+ebenfalls nach oben kontrolliert sind.
+
+Der D12-Modellfehler zwischen D und Dhat ist bereits in den genannten
+Schwellen enthalten. Das L0-Intervall betrifft wie definiert Dhat; denselben
+Fehler nicht unbemerkt nochmals als eigenständigen Unsicherheitsanteil
+bezahlen. Fehler beim Auswerten der Dhat-Funktionen selbst bleiben nötig.
+
+Mögliche Rechenvereinfachung, sofern die gebundene Selbstadjungiertheit
+von U8 und die jeweiligen Definitionsbereiche verwendet werden:
+  w=U8 J_old* h,
+  bvec=F* h-g_F* w,
+  <chi_p(k0),h>
+    =<Lambda Jp-F k0,h>-<gJp-g_F k0,w>.
+So kann eine gemeinsame Antwort auf das ganze h sowohl die zwölf
+K-Paarungen als auch den festen Mittelpunkt liefern. Dies ist eine
+algebraische Alternative, kein bereits berechneter oder als günstiger
+zertifizierter numerischer Weg.
+
+Die Ausgabe soll Mittelpunkt, gerichteten Gesamtradius, einzelne
+Fehlerbeiträge, die bvec-Einschließung und alle Eingabehashes enthalten.
+Die gespeicherten Netzwerte dürfen nur zusammen mit einem vollständigen
+Integrationsrest benutzt werden. Ein Vergleich zweier Quadraturen allein
+liefert diesen Rest nicht.
+
+4. WAS DAS ERGEBNIS ENTSCHEIDET
+
+Für L=[l,u] ist dist(0,L)=0 bei l<=0<=u, sonst min(|l|,|u|).
+Überschreitet dieser Abstand die jeweilige sichere Schwelle, ist der
+entsprechende feste konservative Vergleich ausgeschlossen. Das widerlegt
+weder A11-Positivität noch Objekt X.
+Bleibt der Abstand darunter, ist dieser hinreichende Ausschlusstest
+unentschieden. Daraus folgt insbesondere kein Erfolg der Antwortregel.
+
+Letzter CI-Abruf am geprüften Kopf: A1-Matrixaufbau in_progress; alle
+übrigen zurückgegebenen ausführenden Checks erfolgreich, Sourcery skipped.
+Details: GITHUB_STATE.json. Kein Merge in dieser Sitzung.

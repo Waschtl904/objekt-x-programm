@@ -1,0 +1,170 @@
+Objekt X — K_P-Paket und exakte Eingaben für den kohärenten k-Transport
+17. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Das fehlende K_P-Paket liegt diesem Anschluss unverändert unter archives/
+bei. SHA256:
+87540b07fb22c90867bae4ddcbefcdab66c455f786ec19f50ce0193455ff00d3
+Vollständiger Name:
+Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17.zip
+
+Dieses Anschluss-Paket enthält außerdem vier exakt rationale Matrizen
+G_t=eta_t² K^-1 für t=v,p und beide Paritäten. Sie bereiten die nächste
+Rechnung vor; die fehlenden H*h-Paarungen werden dadurch nicht ersetzt.
+Es liegt weiterhin kein vollständiges gerichtetes L0 vor.
+
+1. Erneute Prüfung von PR #229
+
+Geprüfter Kopf: 3dd6fce08030554f3fc4b398d92e300e82dcaaf9.
+Die wesentlichen Rücknahmen stehen in den neuen Absätzen und im
+PR-Text. D12_ERROR_BUDGET.json bezeichnet beide Budgets als ungerichtet.
+high_pairings.py bricht jetzt bei yh2<=0 ab. Der vierte Replay ist im
+Wrapper vorhanden. Acht abgerufene Dateien stimmen mit ihren Git-Blob-
+IDs überein, davon fünf zusätzlich mit SOURCE_BINDINGS.json. Die
+223 gesamten Bindungen und die vier großen Replays wurden hier nicht
+nochmals ausgeführt. Die referenzierte Rayleigh-Archivbindung stimmt
+mit dem ausgelieferten Paket f0bdfe69... überein.
+
+Beim CI-Abruf: neun der zehn zurückgegebenen Workflows erfolgreich,
+A1 noch in_progress. Nur erste Seite der PR-Workflows abgefragt.
+Keine Vollprüfung sämtlicher Branch-Schutzregeln. Kein Merge,
+kein Review-Kommentar, keine Nachricht und keine Änderung an GitHub.
+
+Restkorrekturen im Text (Zeilen beziehen sich auf den festen Kopf):
+
+a) PROOF.md:13 und :60 nennen den Modellwert weiter als reparierte
+   Obergrenze, ohne dort den fehlenden Gamma-Fehler zu nennen. Der
+   neue Absatz erklärt das richtig, die alten Querverweise sollten
+   aber direkt auf "nur Modellniveau; voller Anschluss f0bdfe69..."
+   geändert werden. In :66 steht weiterhin die alte Aussage,
+   entscheidend seien andere Terme, "nicht der Spike". Diesen Satz
+   ebenfalls ausdrücklich zurücknehmen oder durch "offen" ersetzen.
+
+b) reports/STUFE4_TEIL2_HOCHPAARUNGEN.md:9 stellt gekürzte Zahlen als
+   einschließende Intervalle dar. Die oberen Grenzen 1.34906e-26 und
+   8.53139e-24 sind kleiner als die zertifizierten oberen Endpunkte.
+   Aus dem Paket ableitbare, nach außen gerundete Anzeigen sind:
+     gerade   [1.32189e-26, 1.34907e-26],
+     ungerade [8.53112e-24, 8.53140e-24].
+   Alternativ nur die sicheren Obergrenzen 1.349065e-26 und
+   8.531393e-24 nennen. Keine Behauptung, die wahre Energie liege
+   außerhalb der verkürzten Intervalle; deren Einschluss folgt nur
+   nicht aus den vorliegenden Zertifikatsendpunkten.
+
+c) Derselbe Bericht:13 kürzt die hinreichende gerade Schwelle zu
+   980.11. Das rundet nach unten; sie folgt so nicht aus dem Paket.
+   Verwenden: >980.113997 gerade, >398.766496 ungerade.
+   Bei zwei Nachkommastellen wären >980.12 und >398.77 sicher.
+
+d) Die Überschrift :52 heißt weiterhin "Gerichtetes Fehlerbudget";
+   passend wäre "Unvollständige Größenordnungsdiagnose". In :67
+   steht weiterhin "ohne neue Operatorauswertung möglich". Die
+   gespeicherten Netze erlauben Wiederverwendung an diesen Knoten;
+   eine neue gerichtete Paarung benötigt weiterhin einen vollständigen
+   Integrationsrest und gegebenenfalls zusätzliche Funktionswerte.
+
+Dies sind verbleibende Inkonsistenzen bzw. Rundungsfehler der Darstellung.
+Die wesentlichen neuen Rücknahmen sind vorhanden; hier wird kein neues
+Scheitern der numerischen Paarungen festgestellt.
+
+2. Was das K_P-Paket bereits liefert
+
+Regel unverändert A9_A11_N12_MIDPOINT_INVERSE_60_V1; nur fixed_X.
+Neue Schale (a,b)=(log3,log11/2), h=b-a. Pro Parität gilt mit
+m(x)=cosh(x/2) oder sinh(x/2):
+  mu=int_0^a m² dx,
+  ell0=1/sqrt(2h), lambda0=int_a^b m ell0 dx,
+  z0=ell0/sqrt(1+2lambda0²/mu), ||z0||_W=1.
+
+Bedingt K_P[z0]<18.662828. Aus einem vollständigen gerichteten L0_0
+für <chi_p,(C_p-Dhat T)z0> genügen die Abstände
+  dist(0,L0_0)>980.113997 gerade,
+  dist(0,L0_0)>398.766496 ungerade.
+Der D12-Modellfehler ist bereits in diesen Schwellen bezahlt.
+Für den ganzen Schalenpolynomraum Grad<=11 gilt K_P[s]<29.603644||s||_W²
+bei s!=0. Zwölf einzelne Normtests ersetzen diese ganze Raumaussage nicht.
+
+Die vorhandene frische ZIP-Replay-Quittung und der Bericht liegen bei.
+Der Budgetprüfer benötigt die vier unveränderten Übergabearchive:
+1ccb6be1..., b48e3895..., ab7116f7..., b8677c0b... . Vollständige Namen,
+Hashes und die reproduzierbaren Aufrufe stehen im Budgetpaket selbst.
+
+3. Neu vorbereitet: exakte kohärente Fehlermetriken
+
+K ist die feste positive rationale Untermatrix K12_new_rational,
+die in der Definition von N verwendet wird. Sie ist hier kein ungenauer
+Mittelpunkt einer unbekannten Matrix. Die Archive geben eine exakte
+rationale Inverse und eta_t>=||k_t-k0_t||_K.
+
+Mit den tatsächlichen festen Operatoren
+  H=F-J_old U8 g_F,
+  chi_t(k)-chi_t(k0)=-H(k-k0),
+  a(h)=H*h
+folgt exakt
+  |Delta ell_t(h)|² <= a(h)* G_t a(h),
+  G_t=eta_t² K^-1.
+
+verify.py liest beide Originalarchive, prüft ihre vollständigen SHA256,
+bestätigt K>0 durch 24 exakte rationale Pivots und prüft K K^-1=I
+sowie K^-1 K=I (576 Einträge). Die vier G_t-Matrizen sind ebenfalls
+exakt rational. 48 Auswertungen a=K e_j prüfen die Identität
+  a*G_t a=eta_t² K_jj
+mit allen vorzeichenbehafteten Kreuztermen. Festes k0 und die genaue
+Quellrichtung (upper_v bzw. lower_Pv) werden ausdrücklich mitgegeben.
+
+Die geerbten eta-Werte zur Orientierung, keine neuen Integrationen:
+  eta_v ungefähr 1.96432e-8 /7.92397e-10,
+  eta_p ungefähr 1.112194526e-3 /7.426686752e-6.
+Maßgeblich sind die vollständigen rationalen Zahlen in
+expected/COHERENT_TRANSPORT_INPUTS.json.
+
+Für eine gerichtete reelle Paarungsbox |a_i-a0_i|<=r_i, r_i>=0,
+ist eine sichere skalare Schranke
+  E_k <= sqrt(a0*G_t a0)+sqrt(r^T |G_t| r).                 (3.1)
+Beweis: Dreiecksungleichung in der durch G_t induzierten Norm;
+der zweite quadratische Term wird eintragsweise nach oben abgeschätzt.
+Die erste quadratische Form behält sämtliche Kreuzterme. Nur die
+Unsicherheit wird mit Beträgen bezahlt. scalar_error_upper in verify.py
+berechnet (3.1) exakt rational mit nach oben gerundeten Wurzeln.
+Die Funktion erzeugt KEINE Paarungsbox. Deren Gültigkeit ist ein
+separater, noch fehlender Integrations- und Modellfehlernachweis.
+
+4. Konkrete Grenze zwischen Vorbereitung und fehlender Rechnung
+
+Für D12 ist B_D=H*D zu integrieren. Für die neue Kopplung ist B_C=H*C_p
+erforderlich. Für h=(C_p-Dhat T)z0 muss dagegen die Kombination
+  a(h)=B_C z0-B_Dhat Tz0
+vor großen Normabschätzungen erhalten bleiben. Dann lautet die
+k-Fehlerschranke sqrt(a(h)*G_p a(h)). Ein D12-Block allein entscheidet
+die gesamte Residualpaarung nicht. C_p, der tatsächliche Vektor p und
+die feste neue Schalenrichtung dürfen nicht durch v bzw. alte Basis84-
+Schalenfunktionen ersetzt werden.
+
+Für ein korrektes L0 zuerst k0 einfrieren und den Mittelpunkt sowie
+die übrigen Modell-/Integrationsfehler dieser festen Funktion bestimmen.
+Delta k danach genau einmal über G_p bezahlen. Das alte Hochantwort-
+Budget enthält schon k-Anteile; sie dürfen nicht unbemerkt zusätzlich
+als unabhängige Fehler stehen bleiben. Keine Subtraktion zweier bloßer
+Obergrenzen zur vermeintlichen Entfernung dieses Anteils.
+
+Bei Nutzung eines hohen Quadraturmittelpunkts r_diag ist dessen
+Abweichung r-r_diag einzuschließen. Die vorhandene Normgrenze für r
+allein zentriert keine neue Einschließung um r_diag.
+
+Die Vorbereitung liefert keine Kleinheit von H*D oder H*C_p, kein
+gerichtetes D12-Gesamtbudget und kein L0. Die ursprünglichen Operator-,
+Domänen-, Quellenintegrations- und eta-Nachweise bleiben übernommen.
+Keine neue große Integration, kein N12-Erfolg/-Ausschluss, kein
+A9->A11-Abschluss, kein Objekt X und kein RH-Beweis.
+
+5. Reproduktion dieses kleinen Anschlusses
+
+Python-Standardbibliothek, aus dem entpackten Anschluss-Paket:
+  python -B -X utf8 verify.py
+    --bridge-archive PATH_TO_B48E3895_ZIP
+    --budget-archive archives/Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17.zip
+    --output PATH_TO_NEW_UNUSED_DIRECTORY_OUTSIDE_PACKAGE
+
+Ein frischer ZIP-Replay muss COHERENT_TRANSPORT_INPUTS.json und
+RECEIPT.json bytegleich reproduzieren. Dies ist eine Prüfung der festen
+Eingaben und der endlichen rationalen Algebra, keine externe Begutachtung
+der geerbten analytischen Voraussetzungen oder der fehlenden Integrale.
