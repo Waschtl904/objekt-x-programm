@@ -83,6 +83,21 @@ gerechnet werden; der Bericht `reports/STUFE5_L00_MITTELPUNKT.md` dokumentiert
 
 Für die exakt W-normierte konstante Schalenrichtung z₀ ist h = Π_a(c̃_σ − D̂Tz₀) aufgebaut (Tz₀ = X_fix·F̂z₀ mit Komponenten bis 2,6·10⁵, ‖D̂Tz₀‖ = 1,37 / 1,20, ‖h‖ = 0,3387 / 0,2948) und der Mittelpunkt I₀ = ⟨ψ_p, h⟩ − ⟨c_p, Φ*h₈⟩ = −3,1194 (gerade) / +4,5923 (ungerade) berechnet; mit dem hohen Rest α·r_v(h) (r_v(h) = 4,2·10⁻⁶ / −2,6·10⁻⁵ aus A8(Φc_v) auf einem h-angepassten Netz, innerhalb der zertifizierten Faktoren) lautet der L₀,₀-Mittelpunkt −3,36 / +4,84 gegenüber den Schwellen 980,11 / 398,77. Der kohärente F-Anteil des k-Fehlers √(b_F*G_p b_F) = 3,5·10⁻⁴ / 1,7·10⁻⁵ ersetzt die nichtkohärente Schranke e_ψ,p‖h‖ = 4751 / 13,4; verbleibendes undirektes Inventar ≈ 205 / 2,9 (ohne Quadraturreste). Alles Mittelpunkte; kein gerichtetes L₀,₀, kein Zertifikat; Details und eigene Fehler in `reports/STUFE5_L00_MITTELPUNKT.md`.
 
+## 5c. Revision: μ₈-Neuberechnung abgeschlossen (17.10.2026)
+
+Die in §5b angekündigte Neuberechnung liegt jetzt für v und p in beiden
+Paritäten vor: I₀,p = −3,11964479885967344 / +4,59312241695157234.
+`reports/STUFE5_MU8_NEUBERECHNUNG.md` und `stufe5/recomputed_mu8/` sind aktuell;
+die älteren Zahlen bleiben historische Fehlversuche. Die μ-Korrekturidentität
+stimmt auf demselben Netz bis unter 3·10⁻¹⁴¹. Die y_f-Normabweichung wird
+gegen den ganzen Modellgram und dessen fixed-k-Fehler aufgeschlüsselt. Vier
+Quellenwerte werden mit dem gebundenen direkten Gamma-Integrator reproduziert.
+Die grobe Netz-Norm ist keine Obergrenze und wird verworfen; maßgeblich bleibt
+der gebundene gerichtete ganze Modellgram. Der vollständige Budgetansatz
+führt Koeffizienten-, Modell-, k-, Integrations-, Endpunkt- und hohe Fehler
+getrennt auf. Diese Revision bleibt diagnostisch; die gerichtete Zertifizierung
+wird in einem eigenen Folgepaket geführt. N12 wird nicht abgeschlossen.
+
 ## 6. Reproduktion und Dateien
 
 Gegenprüfungen vom 17.10.2026 gebunden: `94e2bd3b…b16f` (GPT 1, BEFUND mit kohärentem K-Transport, `check_review.py`) und `f0bdfe69…8880` (GPT 2, Rayleigh-Zeugen; Replay in `verify.py`). Nachgereicht am 17.10.: K_P-Paket `87540b07…00d3` (bedingt K_P[z₀] < 18,662828; K_P[s] < 29,603644‖s‖²_W auf dem Schalenpolynomraum Grad ≤ 11; hinreichende Schwellen dist(0, L₀,₀) > 980,113997 gerade / > 398,766496 ungerade, D12-Modellfehler enthalten), Anschlusspaket `77b806b1…` mit exakten rationalen Fehlermetriken G_t = η_t²K⁻¹ (t = v, p; beide Paritäten) und Nachprüfung `3dc06c2b…` (GPT 1). Beide Prüfer repliziert (PASS, je zwei Dateien bytegleich); `verify.py` führt sie als fünften und sechsten Replay. Kein L₀ liegt vor. Weiter nachgereicht: Prüfung von 92a274b (`5110a0eb…`, GPT 1: 24 K-Pivots, 576 Inverseinträge, vier G_t, 26 Budgetgrenzen, 24 Schwellen unabhängig bestätigt; Textpatch hier übernommen) und die elementare Darstellung der neuen Quelle C_σ z₀ = Π_a c̃_σ ohne innere Gamma-Quadratur (`993619be…`, GPT 2: drei elementare Gamma-Primitive Θ, J₊, J₋, alle sieben Primkanäle, zwölf innere Schnittstellen, Randzerlegung c̃ = g·log(a−x) + R; 32 gerichtete Punktwerte, Replay PASS, bytegleich). Für momentnulle w gilt exakt ⟨w, C_σ z₀⟩ = ⟨w, c̃_σ⟩; das ist der Baustein für die C_p-Seite von L₀,₀, noch keine Paarung.

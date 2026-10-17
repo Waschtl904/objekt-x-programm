@@ -2,6 +2,13 @@
 
 17. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN · Diagnose (Quadratur-Mittelpunkte), kein gerichtetes Intervall
 
+## Nachtrag: Neuberechnung abgeschlossen
+
+Die folgende Korrekturpassage und die alten Zahlen dokumentieren den Stand vor
+der Neuberechnung. Aktuell ist [STUFE5_MU8_NEUBERECHNUNG.md](STUFE5_MU8_NEUBERECHNUNG.md):
+beide Paritäten neu gerechnet, I₀,p = −3,11964479885967344 / +4,59312241695157234,
+Normabweichung numerisch auf grobe Quadratur zurückgeführt. Dieser PR bleibt diagnostisch.
+
 ## Korrektur vom 17. Oktober 2026: Kernmasse in ψ
 
 **ÜBERHOLT sind die bisherigen Zahlen für ⟨ψ_t,h⟩, I₀,t und die daraus

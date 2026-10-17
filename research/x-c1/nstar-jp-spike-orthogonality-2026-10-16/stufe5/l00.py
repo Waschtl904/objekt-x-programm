@@ -18,13 +18,16 @@ import mpmath.calculus.quadrature as Qd
 
 mp.mp.dps = 150
 HERE = Path(__file__).resolve().parent
-Z3 = next(Path('/home/user/workspace/zip3').glob('Objekt-X-Stufe3*'))
-F12 = Path('/home/user/workspace/r227/inner/objekt-x-whole-functions12-2026-10-15/FUNCTIONS12.json')
-FR12 = Path('/home/user/workspace/r227/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/inputs/FROZEN_RESPONSE12.json')
-PSI = Path('/home/user/workspace/stufe1/PSI_DEFINITION.json')
-MESH = Path('/home/user/workspace/stufe2')
-CPZ0 = Path('/home/user/workspace/zip8/cp-z0-source/expected/CP_Z0_SOURCE.json')
-Z5 = Path('/home/user/workspace/zip5/replay5/COMPLETE_HIGH_RESPONSE.json')
+PACKAGE = HERE.parent
+INPUTS = Path(os.environ.get('OBJEKT_X_STAGE5_INPUTS', HERE / 'inputs')).resolve()
+OUTPUT = Path(os.environ.get('OBJEKT_X_STAGE5_OUTPUT', HERE / 'recomputed_mu8')).resolve()
+Z3 = INPUTS / 'stage3'
+F12 = INPUTS / 'FUNCTIONS12.json'
+FR12 = INPUTS / 'FROZEN_RESPONSE12.json'
+PSI = PACKAGE / 'stufe1/PSI_DEFINITION.json'
+MESH = HERE
+CPZ0 = PACKAGE / 'original/gpt2-cp-z0-quelle/expected/CP_Z0_SOURCE.json'
+Z5 = PACKAGE / 'original/gpt2-stufe4-hochantwort/expected/COMPLETE_HIGH_RESPONSE.json'
 
 def Q2mp(s):
     q = Fr(s); return mp.mpf(q.numerator)/mp.mpf(q.denominator)
@@ -53,6 +56,7 @@ def main(direction='lower_Pv', pars=('even', 'odd')):
     hi = json.load(open(Z5))
     gl = Qd.GaussLegendre(mp.mp)
     nodes = gl.calc_nodes(8, mp.mp.prec)   # 384 Knoten
+    OUTPUT.mkdir(parents=True, exist_ok=True)
     out = {}
     for par in pars:
         sigma = 0 if par == 'even' else 1
@@ -149,10 +153,8 @@ def main(direction='lower_Pv', pars=('even', 'odd')):
         norm_h8 = mp.sqrt(2*sum(w*x*x for w, x in zip(Wc, H8)))
         print(par, '||c_tilde|| =', mp.nstr(norm_c, 10), ' ||Dhat T z0|| =', mp.nstr(norm_DT, 10), ' ||h|| =', mp.nstr(norm_h, 10), ' ||h8|| =', mp.nstr(norm_h8, 10), ' Moment r_tilde =', mp.nstr(mom_a, 6), flush=True)
         # ---------- b_F = F*h  (zwoelf physische Quellen F = (z_{s+2},..,z_{s+8}, Lambda Y_1..Y_8)) und kohaerenter psi-k-Fehler
-        import zipfile
-        zz = zipfile.ZipFile(next(Path('/home/user/workspace/nstar').glob('*/inputs/*.zip')))
-        hb = json.loads(zz.read([x for x in zz.namelist() if x.endswith('half-inverse/expected/1536.json')][0]))
-        Dj = json.load(open(next(Path('/home/user/workspace/nstar').glob('*/expected/DIRECTIONS.json'))))[par]
+        hb = json.load(open(INPUTS / 'HALF_INVERSE_1536.json'))
+        Dj = json.load(open(INPUTS / 'DIRECTIONS.json'))[par]
         # Block-Paritaet ueber Jt = Q Z t (upper_v) identifizieren
         Zt = [Q2mp(x) for x in Dj['directions']['upper_v']['Zt_exact_rational']]
         assert len(Zt) == 92
@@ -183,7 +185,7 @@ def main(direction='lower_Pv', pars=('even', 'odd')):
             bF.append(2*sum(w*zfun(i, x)*hh for w, x, hh in zip(Wc, Xc, Hc)) + 2*sum(w*zfun(i, x)*hh for w, x, hh in zip(Ws, Xs, Hs)))
         for j in range(8):
             bF.append(2*sum(w*y*hh for w, y, hh in zip(Ws, Ys[j], Hs)) - 2*(lamY[j]/mu8)*sum(w*mm_*hh for w, mm_, hh in zip(Wc, MC, Hc)))
-        CT = json.load(open('/home/user/workspace/zip7/coherent-inputs/expected/COHERENT_TRANSPORT_INPUTS.json'))['parities'][par]
+        CT = json.load(open(PACKAGE / 'original/gpt2-kp-und-kohaerenter-transport/expected/COHERENT_TRANSPORT_INPUTS.json'))['parities'][par]
         coh = {}
         for key, dn in (('v', 'upper_v'), ('p', 'lower_Pv')):
             G = [[Q2mp(x) for x in row] for row in CT['directions'][key]['metric_G_equals_eta_squared_K_inverse']]
@@ -204,16 +206,16 @@ def main(direction='lower_Pv', pars=('even', 'odd')):
         a_h = raw[sigma]
         phih = [raw[k] - me[k]*a_h/me[sigma] for k in degs]
         norm_phih = mp.sqrt(sum(p*p for p in phih))
-        res = {'direction': direction, 'delta': mp.nstr(delta, 8), 'rho': mp.nstr(rho, 6), 'gamma_m': mp.nstr(gamma_m, 12),
+        res = {'status': 'RECOMPUTED_MU8_NUMERICAL_DIAGNOSTIC_ONLY', 'historical_results': '../L00_lower_Pv_'+par+'.json', 'direction': direction, 'delta': mp.nstr(delta, 8), 'rho': mp.nstr(rho, 6), 'gamma_m': mp.nstr(gamma_m, 80),
                'z0': {'B': mp.nstr(B, 20), 'A_c': mp.nstr(Ac, 20), 'L': mp.nstr(L, 20), 'mu': mp.nstr(mu, 20)},
                'c_tilde_control_max_dev_13_points': mp.nstr(devmax, 3),
                'F_hat_z0': [mp.nstr(x, 30) for x in Fz0], 'T_z0': [mp.nstr(x, 30) for x in Tz0],
                'norm_c_tilde': mp.nstr(norm_c, 15), 'norm_Dhat_T_z0': mp.nstr(norm_DT, 15), 'norm_h': mp.nstr(norm_h, 15),
                'norm_h8': mp.nstr(norm_h8, 15), 'norm_Phi_star_h8': mp.nstr(norm_phih, 15), 'a_h': mp.nstr(a_h, 15),
-               'moment_r_tilde': mp.nstr(mom_a, 10), 'Phi_star_h8': [mp.nstr(p, 25) for p in phih], **res_bF,
+               'moment_r_tilde': mp.nstr(mom_a, 80), 'moment_h_core': mp.nstr(mom8, 80), 'Phi_star_h8': [mp.nstr(p, 25) for p in phih], **res_bF,
                'h_shell_samples': [[mp.nstr(x, 12), mp.nstr(v, 15)] for x, v in list(zip(Xs, Hs))[::384]],
                'h_core_samples': [[mp.nstr(x, 12), mp.nstr(v, 15)] for x, v in list(zip(Xc, Hc))[::384]]}
-        json.dump({par: res}, open(HERE/f'L00_partial_{par}.json', 'w'), indent=1)
+        json.dump({par: res}, open(OUTPUT/f'L00_partial_{par}.json', 'w'), indent=1)
         # ---------- Richtungen: psi_t, c_t, f_t
         for dname in ([direction] + (['upper_v'] if direction != 'upper_v' else [])):
             dirn = FA[par]['directions'][dname]
@@ -249,6 +251,13 @@ def main(direction='lower_Pv', pars=('even', 'odd')):
             H8f = [x - m(xx)*mom8/mu8 for x, xx in zip(Hf, Xf)]
             f_h8 = 2*sum(w*f*hh for w, f, hh in zip(Wf, fv, H8f))
             yf_yh_over_delta = (f_h8 + gamma_m*a_f*a_h - phif_phih)/delta   # = <y_f,y_h>/delta, Teil des hohen Restes
+            norm_f_squared = 2*sum(w*f*f for w, f in zip(Wf, fv))
+            yf_squared = norm_f_squared + gamma_m*a_f*a_f - sum(fi*fi for fi in phif)
+            assert yf_squared > 0, 'nonpositive high-source diagnostic norm square'
+            psi_core_mu9 = [p + lam_total*mm*(1/mu8-1/mu) for p, mm in zip(PSc, MC)]
+            legacy_psi_h = 2*sum(w*p*x for w, p, x in zip(Wc, psi_core_mu9, Hc)) + psi_h_shell
+            delta_I0 = -2*lam_total*(1/mu8-1/mu)*mom8
+            assert abs((psi_h-legacy_psi_h)-delta_I0) < mp.mpf('1e-120')
             I0 = psi_h - c_phih                                              # Mittelpunkt (7.1): I0 = <psi,h> - <c,Phi*h8>
             hd = hi[par]['directions'][dname]
             H_hi = Q2mp(hd['whole_physical_high_U8_part_norm_upper'][1]); e_psi = Q2mp(hd['whole_psi_model_error_upper'][1])
@@ -257,14 +266,20 @@ def main(direction='lower_Pv', pars=('even', 'odd')):
                    '<Phi*f,Phi*h8>': mp.nstr(phif_phih, 15), '<y_f,y_h>/delta (Teil des hohen Restes r=(1/delta)<y_f-B*c,y_h>, NICHT vom Mittelpunkt abzuziehen)': mp.nstr(yf_yh_over_delta, 15),
                    '<c,Phi*h8>': mp.nstr(c_phih, 15),
                    'psi_core_mass_horizon': 'a8', 'psi_core_mu': mp.nstr(mu8, 60),
-                   'I0_midpoint=<psi,h>-<c,Phi*h8>': mp.nstr(I0, 15),
+                   'I0_midpoint=<psi,h>-<c,Phi*h8>': mp.nstr(I0, 80),
+                   'I0_legacy_mu9_same_grid': mp.nstr(legacy_psi_h-c_phih, 80),
+                   'delta_I0_mu8_minus_mu9': mp.nstr(delta_I0, 80),
+                   'delta_identity_abs_error': mp.nstr(abs((psi_h-legacy_psi_h)-delta_I0), 5),
+                   'norm_y_f_from_mesh': mp.nstr(mp.sqrt(yf_squared), 40),
+                   'norm_y_f_squared_from_mesh': mp.nstr(yf_squared, 60),
+                   'norm_f_squared_from_mesh': mp.nstr(norm_f_squared, 60),
                    'hoher_Rest_Schranke_H_hi*norm_h8 (undirected, ||y_h||<=||h8||)': mp.nstr(H_hi*norm_h8, 8),
                    'Budgetdiagnose_e_psi*norm_h': mp.nstr(e_psi*norm_h, 8), 'Budgetdiagnose_featmult*norm_Phi_star_h8/sqrt(1-rho)': mp.nstr(fm*norm_phih/mp.sqrt(1-rho), 8),
                    'H_hi': mp.nstr(H_hi, 6), 'e_psi': mp.nstr(e_psi, 6), 'featmult': mp.nstr(fm, 6)}
             res['pairing_'+dname] = row
             print(par, dname, row, '%.0fs' % (time.time()-t0), flush=True)
         out[par] = res
-        json.dump({par: res}, open(HERE/f'L00_{direction}_{par}.json', 'w'), indent=1)
+        json.dump({par: res}, open(OUTPUT/f'L00_{direction}_{par}.json', 'w'), indent=1)
     print('done')
 
 if __name__ == '__main__':
