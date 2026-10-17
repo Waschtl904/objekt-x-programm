@@ -1,0 +1,10 @@
+{
+  "INPUT_BINDINGS.json": "c4f3544ca24c62aa3301e0679bd732a84af3a4f2c2668c8de4ba176d1f401ddf",
+  "META.yaml": "d395a454ceed6c3f4e6eef63b76d4cf0265a7eafc79e6d086e8ee5aa462b1a74",
+  "PROOF.md": "491f94c7509f362a75f9066b323d00bbbbf0a99820760533f5efddd369a04a6a",
+  "README.md": "4747e63eea7ee46dbf3f92e99ac1d81b03c334d7a2b7e824d475c7c3b332b924",
+  "certify.py": "217eca932f1a4dcb362e2a6fb0e086ee3fb648a34e68ff824557db9846895bc8",
+  "expected/COHERENT_K_EVEN.json": "d0b832c03a4177fefdac2256ef166f7eeac290e300c20f45555f7c381f7bf4ef",
+  "requirements.txt": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+  "verify.py": "790a5eec7c792710339949d17353c286cbb988ed81ce4780cef0ea7333347ad7"
+}

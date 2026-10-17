@@ -131,5 +131,6 @@ Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getre
 - `SHELL-DEGREE11-DIRECTION-SEARCH`: PENDING_STATUS_REVIEW — `research/x-c1/shell-polynomial-direction-search-2026-10-17/META.yaml`.
 - `FROZEN-SHELL-DIRECTION-SCALAR-CERTIFICATES`: PENDING_STATUS_REVIEW — `research/x-c1/frozen-shell-direction-certificates-2026-10-17/META.yaml`.
 - `SHARP-KP-FROZEN-SHELL-DIRECTIONS`: PENDING_STATUS_REVIEW — `research/x-c1/sharp-kp-frozen-directions-2026-10-17/META.yaml`.
+- `COHERENT-K-FROZEN-EVEN-DIRECTION`: PENDING_STATUS_REVIEW — `research/x-c1/coherent-k-frozen-even-2026-10-17/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

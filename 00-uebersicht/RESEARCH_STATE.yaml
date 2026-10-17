@@ -2944,6 +2944,11 @@
       "id": "SHARP-KP-FROZEN-SHELL-DIRECTIONS",
       "meta_path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/META.yaml",
       "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "COHERENT-K-FROZEN-EVEN-DIRECTION",
+      "meta_path": "research/x-c1/coherent-k-frozen-even-2026-10-17/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
     }
   ],
   "transport_status": {
