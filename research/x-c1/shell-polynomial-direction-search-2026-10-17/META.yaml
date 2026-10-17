@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "SHELL-DEGREE11-DIRECTION-SEARCH",
+  "date": "2026-10-17",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "OPEN",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Exploratory real degree-11 physical W-sphere search, direction-dependent K_P upper majorants, 58 starts per parity and two exactly defined frozen directions. All numerical optimization and map data remain undirected.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "No N12 conclusion or confirmation, no global optimality, no comparison with an unknown exact K_P, no Object X or RH conclusion.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No external mathematical review or status promotion.",
+    "No adaptive selection within the directed certification run."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/PROOF.md",
+    "sha256": "bfbb5a6b6d175559cbe3304d991b2864d797f886021ec04dfa944116ec745465"
+  }
+}
