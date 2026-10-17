@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "COHERENT-K-FROZEN-EVEN-DIRECTION",
+  "date": "2026-10-17",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Directed common-k ellipsoid transport for exactly the previously frozen even W-unit shell direction, using whole source and coupling Grams under bound operator/domain/source hypotheses. The scalar test does not exclude the fixed rule, also against the lower actual K_P endpoint after paying the response-model error.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "No rule confirmation, N12 closure, new direction search, whole-shell certificate, Object X or RH conclusion. No exact high covector or vanishing finite/high cross term is assumed.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No external mathematical review or status promotion.",
+    "No new operator integration; inherited whole source certificates remain assumptions.",
+    "Previous #234 inconclusive interval remains a valid coarser historical result."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/coherent-k-frozen-even-2026-10-17/PROOF.md",
+    "sha256": "491f94c7509f362a75f9066b323d00bbbbf0a99820760533f5efddd369a04a6a"
+  }
+}
