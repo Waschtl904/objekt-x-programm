@@ -1,0 +1,12 @@
+{
+  "INPUT_BINDINGS.json": "d5dd2f875db0eb46a32cc50b6e1a4f71716d60e16d7535c5ec858b2db7299024",
+  "META.yaml": "c4a1319bae00b35c933fad392c1aaae694e35cc6bec17e5b99daf0d43b959609",
+  "PROOF.md": "c66bfa6e9a3697439867534382b08061c3cc34184e15acce3bc4cb8b693aea8b",
+  "README.md": "8140f2e0b13f664b309461bac9f7f346f17dc602d0152ff0fd426b2b221ab24c",
+  "VALIDATION.json": "f659ba7c5c6d191860adc5e6e4c14390600eeb3390ded39410ac0c7f16e9ea04",
+  "certify.py": "5eb45aa92ddfb89649d3a9cfbf9a3ef445cf1c13fb1b83067d0767534aea6121",
+  "expected/FROZEN_CERTIFICATE_even.json": "e6cd3b1df8134d0d75237a6fdd128911de6163bd1e82d127a9b64aeec6282e8a",
+  "expected/FROZEN_CERTIFICATE_odd.json": "8b2fbd7f18a8ae127498b63fa685e29115c9a246fd2cfd80d8628acf9d510776",
+  "requirements.txt": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+  "verify.py": "88be4caa8d24d6f12316aa1ffb53ddcc53e13c69cfffcf11a9162eaf2ae627bd"
+}
