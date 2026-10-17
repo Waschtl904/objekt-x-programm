@@ -25,7 +25,10 @@ def pad(x,e):return x+arb(0,ub(e))
 def enc(x):return [str(x.lower().fmpq()),str(x.upper().fmpq())]
 def dot(x,y):return sum((a*b for a,b in zip(x,y)),arb(0))
 def norm(x):return dot(x,x).sqrt()
-def load(p):return json.loads(p.read_bytes())
+BOUND_INPUTS=None
+def load(p):
+    if BOUND_INPUTS is not None:assert p.resolve() in BOUND_INPUTS,'unbound input: '+str(p)
+    return json.loads(p.read_bytes())
 def abs_poly(p,s):return sum((ub(c)*s**k for k,c in enumerate(p)),arb(0))
 def pint(p,s):return sum((c*s**(k+1)/(k+1) for k,c in enumerate(p)),arb(0))
 def plogint(p,s):return sum((c*s**(k+1)*(s.log()/(k+1)-arb(1)/(k+1)**2) for k,c in enumerate(p)),arb(0))
@@ -45,7 +48,9 @@ def legpolys(n):
 
 def main(par):
     assert par in ('even','odd')
+    global BOUND_INPUTS
     manifest=load(HERE/'INPUT_BINDINGS.json')
+    BOUND_INPUTS={(ROOT/rel).resolve() for rel in manifest['repository_files']}|{(INPUTS/rel).resolve() for rel in manifest['prepared_inputs']}
     for rel,digest in manifest['repository_files'].items():
         assert hashlib.sha256((ROOT/rel).read_bytes()).hexdigest()==digest,rel
     for rel,digest in manifest['prepared_inputs'].items():

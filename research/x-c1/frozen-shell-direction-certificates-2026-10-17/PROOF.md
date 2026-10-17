@@ -134,3 +134,7 @@ Die Auswertung unterscheidet strikt:
 `verify.py` kontrolliert eigene Dateien, gebundene Repository-Eingaben und Originalarchive, extrahiert die acht Recheneingaben frisch und verlangt beide Ergebnisdateien bytegleich. Die Auswahl bleibt von diesem Lauf getrennt. Die unabhängigen numerischen Punktkontrollen der Kandidatenstufe werden für die Zertifikatsgültigkeit nicht vorausgesetzt.
 
 Offen bleiben externe mathematische Prüfung dieser Verallgemeinerung, der übernommenen Quellen-/Domänenvoraussetzungen und der ganzen hohen Antwortschranke. Der Replay bestätigt Determinismus und Eingabebindung, nicht diese externe Begutachtung. Es wird keine gerichtete globale Optimalität der Kandidaten und kein vollständiger N12-Ausgang behauptet.
+
+## Provenienzkorrektur vor Integration
+
+Der isolierte Archivtest der ersten Veröffentlichung fand eine fehlende direkte Bindung von `BUDGET_BOUNDS.json`. Die gelesene Datei war bereits Teil des unveränderten Repository-Bestands, fehlte aber in der eigenen Eingabeliste. Nun sind Budget, zugehörige Herleitung/Prüfer/Quittung sowie der Eingabevorbereiter direkt gebunden; im Kandidatenpaket zusätzlich beide z₀-Kontrollzertifikate. Jeder JSON-Ladevorgang der Rechenprogramme prüft die Bindungsliste. Die Rechendaten und Resultatdateien bleiben bytegleich. Diese Korrektur schließt die Provenienzlücke, ohne die mathematischen Voraussetzungen oder Zahlen zu ändern.

@@ -18,7 +18,10 @@ def q(s):
 def box(v):return q(v[0]).union(q(v[1]))
 def mid(v):return box(v).mid()
 def dot(x,y):return sum((a*b for a,b in zip(x,y)),arb(0))
-def load(p):return json.loads(p.read_bytes())
+BOUND_INPUTS=None
+def load(p):
+ if BOUND_INPUTS is not None:assert p.resolve() in BOUND_INPUTS,'unbound input: '+str(p)
+ return json.loads(p.read_bytes())
 def poly(v):return arb_poly(v)
 def legpolys(n):
  p=[poly([1]),poly([0,1])]
@@ -32,7 +35,9 @@ def mat(v):return [[af(v[i,j]) for j in range(v.ncols())]for i in range(v.nrows(
 def enc(v):return str(v.mid().fmpq())
 
 def main(par,ncore=384):
+ global BOUND_INPUTS
  bindings=load(HERE/'INPUT_BINDINGS.json')
+ BOUND_INPUTS={(HERE.parents[2]/rel).resolve() for rel in bindings['repository_files']}|{(INPUTS/rel).resolve() for rel in bindings['prepared_inputs']}
  for rel,digest in bindings['repository_files'].items():assert hashlib.sha256((HERE.parents[2]/rel).read_bytes()).hexdigest()==digest,rel
  for rel,digest in bindings['prepared_inputs'].items():assert hashlib.sha256((INPUTS/rel).read_bytes()).hexdigest()==digest,rel
  sigma=int(par=='odd');eps=(-1)**sigma

@@ -77,3 +77,7 @@ Der Replay erwartet die vier Matrixdateien bytegleich und die Suche mit Marge-To
 Verworfener Entwicklungsversuch: `arb_series` hatte trotz gewünschtem Grad 360 den globalen Standard-Cap 10 verwendet. Der z₀-Pflichttest stoppte den Lauf; keine damaligen Ergebnisse sind übernommen. Jetzt sind `ctx.cap=362` und eine Präzisionsassertion gesetzt. Die vorhandenen Zertifikate #230/#231 waren davon nicht betroffen.
 
 Nächste fachliche Frage: tatsächliches richtungsabhängiges K_P, insbesondere die bisher verworfene positive Korrektur Fhat*S₀Fhat, und ein gegebenenfalls schärferes Residualzentrum. Mehr Starts oder bloß engere Integrationsreste bei unveränderter grober Schwelle lösen die beobachtete Barriere nicht.
+
+## Provenienzkorrektur vor Integration
+
+Der isolierte Archivtest der ersten Veröffentlichung fand eine fehlende direkte Bindung von `BUDGET_BOUNDS.json`. Die gelesene Datei war bereits Teil des unveränderten Repository-Bestands, fehlte aber in der eigenen Eingabeliste. Nun sind Budget, zugehörige Herleitung/Prüfer/Quittung sowie der Eingabevorbereiter direkt gebunden; im Kandidatenpaket zusätzlich beide z₀-Kontrollzertifikate. Jeder JSON-Ladevorgang der Rechenprogramme prüft die Bindungsliste. Die Rechendaten und Resultatdateien bleiben bytegleich. Diese Korrektur schließt die Provenienzlücke, ohne die mathematischen Voraussetzungen oder Zahlen zu ändern.
