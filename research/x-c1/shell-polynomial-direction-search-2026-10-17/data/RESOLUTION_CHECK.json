@@ -1,0 +1,99 @@
+{
+  "status": "NUMERICAL_CONSISTENCY_ONLY_NOT_AN_INTEGRATION_REMAINDER",
+  "comparisons": {
+    "even": {
+      "I0_row": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "G_W": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "H_gram": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "H8_gram": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "feature_factor": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "psi_k_gram": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "b_F": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "Fhat": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "T": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "derivative_gram": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "jump_gram": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "maximum_exact_I0_midpoint_difference": 1.9172237188630887e-45
+    },
+    "odd": {
+      "I0_row": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "G_W": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "H_gram": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "H8_gram": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "feature_factor": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "psi_k_gram": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "b_F": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "Fhat": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "T": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "derivative_gram": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "jump_gram": {
+        "maximum_absolute_difference": 0.0,
+        "relative_frobenius_difference": 0.0
+      },
+      "maximum_exact_I0_midpoint_difference": 7.948676753158661e-46
+    }
+  }
+}
