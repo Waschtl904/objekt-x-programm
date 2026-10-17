@@ -602,6 +602,244 @@
         "pr229-audit-2026-10-17/vendor/source_core.py": "original/gpt2-rayleigh-zeugen/vendor/source_core.py",
         "pr229-audit-2026-10-17/verify.py": "original/gpt2-rayleigh-zeugen/verify.py"
       }
+    },
+    "archives/Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17.zip": {
+      "sha256": "87540b07fb22c90867bae4ddcbefcdab66c455f786ec19f50ce0193455ff00d3",
+      "bytes": 73185,
+      "members": {
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/ANSCHLUSS.txt": {
+          "bytes": 2966,
+          "sha256": "f1ec9ac82d637c4b9a8c198d76b5fb0b3f957ca8b0fc35f46764976004883cc0"
+        },
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/BERICHT.txt": {
+          "bytes": 3413,
+          "sha256": "e7b940f4a52cd401994d5122478d7e111f3067f76525515e45b5ac575867514a"
+        },
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/expected/BUDGET_BOUNDS.json": {
+          "bytes": 79946,
+          "sha256": "6229acf4bee398d2262c08a086fb36dd8945135ee860bb591e8218551c291613"
+        },
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/expected/RECEIPT.json": {
+          "bytes": 1404,
+          "sha256": "6a3170211ec979214919af22fac0b6c3f86d9286a53d56945014e48705c20e4a"
+        },
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/GITHUB_SNAPSHOT.json": {
+          "bytes": 1233,
+          "sha256": "fd4f92ee498cd2639953398516a78863bbd41fe5e0f5aa38bb41cd7256c01bc8"
+        },
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/HERLEITUNG.txt": {
+          "bytes": 16184,
+          "sha256": "85059c5108a708a34e633e71764f238f40374254d4482e2b09d6af19eed3acfd"
+        },
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/MANIFEST.json": {
+          "bytes": 1086,
+          "sha256": "344a433e9f6aa189c1ad246bc079bbd940fdaff92ee20f3693f6cb40d970edd2"
+        },
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/upstream-high-replay/COMPLETE_HIGH_RESPONSE.json": {
+          "bytes": 86599,
+          "sha256": "52027262debebfdb5258a7fb74ff5280d98d81b34a347d99a91a83470362a606"
+        },
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/upstream-high-replay/RECEIPT.json": {
+          "bytes": 1736,
+          "sha256": "94cad1e3bbe6d7b2899f6cd5222255912b032cbd4722cd88ba8ceaaa08bb65e8"
+        },
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/upstream-high-replay/SPIKE_SCALAR_D_MODEL_ERROR.json": {
+          "bytes": 18752,
+          "sha256": "421560e42b2a50fb9391944b7a40952b8e529d215cea70d52081fb496fa4d460"
+        },
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/vendor/source_core.py": {
+          "bytes": 13584,
+          "sha256": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772"
+        },
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/verify.py": {
+          "bytes": 15116,
+          "sha256": "9e3f12fe8b15abe9cc7d073a9b62ea0e280b4089e4bc103aa764db1e1d4fde8d"
+        }
+      },
+      "visible_copies": {
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/ANSCHLUSS.txt": "original/gpt2-kp-budgets/ANSCHLUSS.txt",
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/BERICHT.txt": "original/gpt2-kp-budgets/BERICHT.txt",
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/expected/BUDGET_BOUNDS.json": "original/gpt2-kp-budgets/expected/BUDGET_BOUNDS.json",
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/expected/RECEIPT.json": "original/gpt2-kp-budgets/expected/RECEIPT.json",
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/GITHUB_SNAPSHOT.json": "original/gpt2-kp-budgets/GITHUB_SNAPSHOT.json",
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/HERLEITUNG.txt": "original/gpt2-kp-budgets/HERLEITUNG.txt",
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/MANIFEST.json": "original/gpt2-kp-budgets/MANIFEST.json",
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/upstream-high-replay/COMPLETE_HIGH_RESPONSE.json": "original/gpt2-kp-budgets/upstream-high-replay/COMPLETE_HIGH_RESPONSE.json",
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/upstream-high-replay/RECEIPT.json": "original/gpt2-kp-budgets/upstream-high-replay/RECEIPT.json",
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/upstream-high-replay/SPIKE_SCALAR_D_MODEL_ERROR.json": "original/gpt2-kp-budgets/upstream-high-replay/SPIKE_SCALAR_D_MODEL_ERROR.json",
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/vendor/source_core.py": "original/gpt2-kp-budgets/vendor/source_core.py",
+        "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17/verify.py": "original/gpt2-kp-budgets/verify.py"
+      }
+    },
+    "archives/Objekt-X-KP-Paket-und-kohaerente-Transportdaten-2026-10-17.zip": {
+      "sha256": "77b806b16add6a833f50e6d0e2b491e6815352743ffdded5fafeb9c1a5a4a0b0",
+      "bytes": 538778,
+      "members": {
+        "coherent-inputs/ANSCHLUSS.txt": {
+          "bytes": 8483,
+          "sha256": "2ac1c42169d82b5a426e48a74bbc3dbcbf5819c758142ee2e4da5da96e3bb680"
+        },
+        "coherent-inputs/archives/Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17.zip": {
+          "bytes": 73185,
+          "sha256": "87540b07fb22c90867bae4ddcbefcdab66c455f786ec19f50ce0193455ff00d3"
+        },
+        "coherent-inputs/expected/COHERENT_TRANSPORT_INPUTS.json": {
+          "bytes": 1667618,
+          "sha256": "c0c882ba85bf3ee56a433b5c5bf5d5c5c0341f2a9e03e213e6e19c460aba5666"
+        },
+        "coherent-inputs/expected/RECEIPT.json": {
+          "bytes": 452,
+          "sha256": "0384198840476351268b7253b5e935ceb069a51c23ba339e212aed9930cab001"
+        },
+        "coherent-inputs/GITHUB_SNAPSHOT.json": {
+          "bytes": 8918,
+          "sha256": "438eccff9419112b96ad2b2190ec72e55bf23a4c06ae886eb03343e4733509ce"
+        },
+        "coherent-inputs/MANIFEST.json": {
+          "bytes": 1872,
+          "sha256": "18b039993f1d0c9c2cc68e6ee4aeb0e5e56dff445816604095004cd0a9860ac9"
+        },
+        "coherent-inputs/Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17-Bericht.txt": {
+          "bytes": 3491,
+          "sha256": "72a4c149996e21f4d58205c3960bcd508d731818d148ff7e817b3d641fbbb3da"
+        },
+        "coherent-inputs/Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17-Pruefquittung.json": {
+          "bytes": 907,
+          "sha256": "8e3e0bd5a5bfc96a290214fcc1ccaa43c4505300e122b8bd6928f43b715086e5"
+        },
+        "coherent-inputs/pr229-snapshot/META.yaml": {
+          "bytes": 4530,
+          "sha256": "d85e3a70a7a252e6036ea2a94d71de6d55d54bad115ad8d273eaff98840a5fa0"
+        },
+        "coherent-inputs/pr229-snapshot/PROOF.md": {
+          "bytes": 12664,
+          "sha256": "ac65af133b4eb684ae6ce2405e8af2b834b4dea400a5b10c43f54c3f832916bf"
+        },
+        "coherent-inputs/pr229-snapshot/README.md": {
+          "bytes": 3745,
+          "sha256": "e67b27afe1f3a21f8db10c03c4b95ec8e6db7d6983d849f65883a99ae2050ce6"
+        },
+        "coherent-inputs/pr229-snapshot/reports/STUFE4_TEIL2_HOCHPAARUNGEN.md": {
+          "bytes": 12437,
+          "sha256": "99aa929c5da8b8dda7d837a5a165bbbec31bfed862b7bc53ad6734ca8617126b"
+        },
+        "coherent-inputs/pr229-snapshot/SOURCE_BINDINGS.json": {
+          "bytes": 50789,
+          "sha256": "96452edd8223d41d4757349d7cdcb040e2bdc09befc44a07aa1a1eb55e96ef03"
+        },
+        "coherent-inputs/pr229-snapshot/stufe4/D12_ERROR_BUDGET.json": {
+          "bytes": 7263,
+          "sha256": "76d01899c96565eea8c5a449483dda8d6e1356ca71fe7f72bf9f874534531a54"
+        },
+        "coherent-inputs/pr229-snapshot/stufe4/high_pairings.py": {
+          "bytes": 9186,
+          "sha256": "09f0d0bc0b029c06d9f0b8cce4419c2033ef37175c243967c56b005bf982e634"
+        },
+        "coherent-inputs/pr229-snapshot/verify.py": {
+          "bytes": 6055,
+          "sha256": "3cffc77baf4c838555dac8e29beb0e865e678f432906358b2ecd40238285ed2e"
+        },
+        "coherent-inputs/PR_FETCH_CHECK.json": {
+          "bytes": 2060,
+          "sha256": "ca535ed078c59824daa9fe1e87acef82a9173044ad51a38bc7394da8a215c8b1"
+        },
+        "coherent-inputs/verify.py": {
+          "bytes": 7471,
+          "sha256": "4bf6f7dc551839f08e2d22c01192173fd7d41fd0f22e8584524fda7e655b493f"
+        }
+      },
+      "visible_copies": {
+        "coherent-inputs/ANSCHLUSS.txt": "original/gpt2-kp-und-kohaerenter-transport/ANSCHLUSS.txt",
+        "coherent-inputs/expected/COHERENT_TRANSPORT_INPUTS.json": "original/gpt2-kp-und-kohaerenter-transport/expected/COHERENT_TRANSPORT_INPUTS.json",
+        "coherent-inputs/expected/RECEIPT.json": "original/gpt2-kp-und-kohaerenter-transport/expected/RECEIPT.json",
+        "coherent-inputs/GITHUB_SNAPSHOT.json": "original/gpt2-kp-und-kohaerenter-transport/GITHUB_SNAPSHOT.json",
+        "coherent-inputs/MANIFEST.json": "original/gpt2-kp-und-kohaerenter-transport/MANIFEST.json",
+        "coherent-inputs/Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17-Bericht.txt": "original/gpt2-kp-und-kohaerenter-transport/Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17-Bericht.txt",
+        "coherent-inputs/Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17-Pruefquittung.json": "original/gpt2-kp-und-kohaerenter-transport/Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17-Pruefquittung.json",
+        "coherent-inputs/PR_FETCH_CHECK.json": "original/gpt2-kp-und-kohaerenter-transport/PR_FETCH_CHECK.json",
+        "coherent-inputs/verify.py": "original/gpt2-kp-und-kohaerenter-transport/verify.py"
+      }
+    },
+    "archives/Objekt-X-PR229-Nachpruefung-3dd6fce-2026-10-17.zip": {
+      "sha256": "3dc06c2b974f4af664f78b4ea4904f9dde14d7ade1a83329eb5412c79d98f3d5",
+      "bytes": 91299,
+      "members": {
+        "pr229-nachpruefung-3dd6fce/BEFUND.txt": {
+          "bytes": 5962,
+          "sha256": "ace896b0ec601d9fa440bc0617cb6cb162821f3aa3a3f207e0cdeb5110e391d5"
+        },
+        "pr229-nachpruefung-3dd6fce/CHECK_RESULTS.json": {
+          "bytes": 2786,
+          "sha256": "a437d785ee8ce31fd107bec8424c769d5d7031bd66ba597c45cc25fc49104c22"
+        },
+        "pr229-nachpruefung-3dd6fce/GITHUB_STATE.json": {
+          "bytes": 93745,
+          "sha256": "fa8b4d35a3aaf852236dcf2e47430e5eace9e88274b4fbc9b7ff999d416cf26b"
+        },
+        "pr229-nachpruefung-3dd6fce/check_rayleigh_summary.py": {
+          "bytes": 4721,
+          "sha256": "568599980f77acde536cdc79807d686144b23be27cb8be3757d6318f8759d166"
+        },
+        "pr229-nachpruefung-3dd6fce/source/META.yaml": {
+          "bytes": 4530,
+          "sha256": "d85e3a70a7a252e6036ea2a94d71de6d55d54bad115ad8d273eaff98840a5fa0"
+        },
+        "pr229-nachpruefung-3dd6fce/source/PROOF.md": {
+          "bytes": 12664,
+          "sha256": "ac65af133b4eb684ae6ce2405e8af2b834b4dea400a5b10c43f54c3f832916bf"
+        },
+        "pr229-nachpruefung-3dd6fce/source/SOURCE_BINDINGS.json": {
+          "bytes": 50789,
+          "sha256": "96452edd8223d41d4757349d7cdcb040e2bdc09befc44a07aa1a1eb55e96ef03"
+        },
+        "pr229-nachpruefung-3dd6fce/source/original/gpt2-rayleigh-zeugen/GEGENPRUEFUNG.txt": {
+          "bytes": 8088,
+          "sha256": "3dae77c2d01d5980549828d49235248f5d38fabf7550613dac3756aaa29077bf"
+        },
+        "pr229-nachpruefung-3dd6fce/source/original/gpt2-rayleigh-zeugen/HERLEITUNG.txt": {
+          "bytes": 8452,
+          "sha256": "00bf9b68ba4bc5a5dbab2329f4f6800e6bcc1cee6474c17cb61a53b33aef5aac"
+        },
+        "pr229-nachpruefung-3dd6fce/source/original/gpt2-rayleigh-zeugen/expected/RAYLEIGH_CERTIFICATE.json": {
+          "bytes": 32631,
+          "sha256": "6cdd6593c30ff6730392d8fda8d463f19ce7c25d63bed30e181f4b97e80db0ad"
+        },
+        "pr229-nachpruefung-3dd6fce/source/original/gpt2-rayleigh-zeugen/expected/RECEIPT.json": {
+          "bytes": 873,
+          "sha256": "91ca229178fe9a8bc9e112e6b9a1a9b4a8be654e11d0985f3a32a0a98dfae07e"
+        },
+        "pr229-nachpruefung-3dd6fce/source/original/gpt2-rayleigh-zeugen/inputs/SOFT_WITNESSES.json": {
+          "bytes": 65379,
+          "sha256": "3298bac05b81c8eeea4beec5f355b9afda83dab5b22735269b8b0adba341f821"
+        },
+        "pr229-nachpruefung-3dd6fce/source/original/gpt2-rayleigh-zeugen/sources/original-a8-PROOF.md": {
+          "bytes": 17081,
+          "sha256": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661"
+        },
+        "pr229-nachpruefung-3dd6fce/source/original/gpt2-rayleigh-zeugen/vendor/rational_bounds.py": {
+          "bytes": 8244,
+          "sha256": "8e9ae5784a341ae3ba4f5db07c6c6ebbdee4fbc375a59a963b071f77c14b7d5c"
+        },
+        "pr229-nachpruefung-3dd6fce/source/original/gpt2-rayleigh-zeugen/verify.py": {
+          "bytes": 6758,
+          "sha256": "fec698e65b8a2fba147637962088b4eae2331973e35b9af6f2e253755f37eae5"
+        },
+        "pr229-nachpruefung-3dd6fce/source/reports/STUFE4_TEIL2_HOCHPAARUNGEN.md": {
+          "bytes": 12437,
+          "sha256": "99aa929c5da8b8dda7d837a5a165bbbec31bfed862b7bc53ad6734ca8617126b"
+        },
+        "pr229-nachpruefung-3dd6fce/MANIFEST.json": {
+          "bytes": 1829,
+          "sha256": "afa0c0f61c879b7b9c4408063691883e368f851ca7feb6aea5cfa8ebdcd1aa32"
+        }
+      },
+      "visible_copies": {
+        "pr229-nachpruefung-3dd6fce/BEFUND.txt": "original/gpt1-nachpruefung-3dd6fce/BEFUND.txt",
+        "pr229-nachpruefung-3dd6fce/CHECK_RESULTS.json": "original/gpt1-nachpruefung-3dd6fce/CHECK_RESULTS.json",
+        "pr229-nachpruefung-3dd6fce/GITHUB_STATE.json": "original/gpt1-nachpruefung-3dd6fce/GITHUB_STATE.json",
+        "pr229-nachpruefung-3dd6fce/check_rayleigh_summary.py": "original/gpt1-nachpruefung-3dd6fce/check_rayleigh_summary.py",
+        "pr229-nachpruefung-3dd6fce/MANIFEST.json": "original/gpt1-nachpruefung-3dd6fce/MANIFEST.json"
+      }
     }
   },
   "files": {
@@ -610,12 +848,12 @@
       "sha256": "3a22be072ea20861bb30094541f96cb7cc82ce974c9af89235686f1f8e8e700a"
     },
     "PROOF.md": {
-      "bytes": 12664,
-      "sha256": "ac65af133b4eb684ae6ce2405e8af2b834b4dea400a5b10c43f54c3f832916bf"
+      "bytes": 13653,
+      "sha256": "5863c453edec8256df62cf7c692f030e399415692ec78996fa6c784f93f4f62d"
     },
     "README.md": {
-      "bytes": 3745,
-      "sha256": "e67b27afe1f3a21f8db10c03c4b95ec8e6db7d6983d849f65883a99ae2050ce6"
+      "bytes": 4044,
+      "sha256": "850ca6c3fae0cf0116b81721eaf2b04e31b6ede7da2b382994ad681b25d4ea41"
     },
     "stufe2/MESH_even_upper_v.json": {
       "bytes": 105218,
@@ -773,6 +1011,26 @@
       "bytes": 18983,
       "sha256": "f94588e4286ce8773da28be8dbb6f54042c5559f8550afbaa97b233d5e710e81"
     },
+    "original/gpt1-nachpruefung-3dd6fce/BEFUND.txt": {
+      "bytes": 5962,
+      "sha256": "ace896b0ec601d9fa440bc0617cb6cb162821f3aa3a3f207e0cdeb5110e391d5"
+    },
+    "original/gpt1-nachpruefung-3dd6fce/CHECK_RESULTS.json": {
+      "bytes": 2786,
+      "sha256": "a437d785ee8ce31fd107bec8424c769d5d7031bd66ba597c45cc25fc49104c22"
+    },
+    "original/gpt1-nachpruefung-3dd6fce/GITHUB_STATE.json": {
+      "bytes": 93745,
+      "sha256": "fa8b4d35a3aaf852236dcf2e47430e5eace9e88274b4fbc9b7ff999d416cf26b"
+    },
+    "original/gpt1-nachpruefung-3dd6fce/MANIFEST.json": {
+      "bytes": 1829,
+      "sha256": "afa0c0f61c879b7b9c4408063691883e368f851ca7feb6aea5cfa8ebdcd1aa32"
+    },
+    "original/gpt1-nachpruefung-3dd6fce/check_rayleigh_summary.py": {
+      "bytes": 4721,
+      "sha256": "568599980f77acde536cdc79807d686144b23be27cb8be3757d6318f8759d166"
+    },
     "original/gpt2-stufe3-endliche-u8-antwort/ANSCHLUSS_GPT1.txt": {
       "bytes": 3013,
       "sha256": "bb18d736b23530b468a4c753ec8cdf81fa7bc4b2a3f6df5b66495776be712543"
@@ -836,6 +1094,90 @@
     "original/gpt1-pr229-gegenpruefung/inputs/STUFE4_TEIL2_EINGANG.md": {
       "bytes": 8784,
       "sha256": "29031255b4515f64dd6cc90523aa278c42b6346fc6d577ac12649640ef709f70"
+    },
+    "original/gpt2-kp-budgets/ANSCHLUSS.txt": {
+      "bytes": 2966,
+      "sha256": "f1ec9ac82d637c4b9a8c198d76b5fb0b3f957ca8b0fc35f46764976004883cc0"
+    },
+    "original/gpt2-kp-budgets/BERICHT.txt": {
+      "bytes": 3413,
+      "sha256": "e7b940f4a52cd401994d5122478d7e111f3067f76525515e45b5ac575867514a"
+    },
+    "original/gpt2-kp-budgets/GITHUB_SNAPSHOT.json": {
+      "bytes": 1233,
+      "sha256": "fd4f92ee498cd2639953398516a78863bbd41fe5e0f5aa38bb41cd7256c01bc8"
+    },
+    "original/gpt2-kp-budgets/HERLEITUNG.txt": {
+      "bytes": 16184,
+      "sha256": "85059c5108a708a34e633e71764f238f40374254d4482e2b09d6af19eed3acfd"
+    },
+    "original/gpt2-kp-budgets/MANIFEST.json": {
+      "bytes": 1086,
+      "sha256": "344a433e9f6aa189c1ad246bc079bbd940fdaff92ee20f3693f6cb40d970edd2"
+    },
+    "original/gpt2-kp-budgets/verify.py": {
+      "bytes": 15116,
+      "sha256": "9e3f12fe8b15abe9cc7d073a9b62ea0e280b4089e4bc103aa764db1e1d4fde8d"
+    },
+    "original/gpt2-kp-budgets/vendor/source_core.py": {
+      "bytes": 13584,
+      "sha256": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772"
+    },
+    "original/gpt2-kp-budgets/upstream-high-replay/COMPLETE_HIGH_RESPONSE.json": {
+      "bytes": 86599,
+      "sha256": "52027262debebfdb5258a7fb74ff5280d98d81b34a347d99a91a83470362a606"
+    },
+    "original/gpt2-kp-budgets/upstream-high-replay/RECEIPT.json": {
+      "bytes": 1736,
+      "sha256": "94cad1e3bbe6d7b2899f6cd5222255912b032cbd4722cd88ba8ceaaa08bb65e8"
+    },
+    "original/gpt2-kp-budgets/upstream-high-replay/SPIKE_SCALAR_D_MODEL_ERROR.json": {
+      "bytes": 18752,
+      "sha256": "421560e42b2a50fb9391944b7a40952b8e529d215cea70d52081fb496fa4d460"
+    },
+    "original/gpt2-kp-budgets/expected/BUDGET_BOUNDS.json": {
+      "bytes": 79946,
+      "sha256": "6229acf4bee398d2262c08a086fb36dd8945135ee860bb591e8218551c291613"
+    },
+    "original/gpt2-kp-budgets/expected/RECEIPT.json": {
+      "bytes": 1404,
+      "sha256": "6a3170211ec979214919af22fac0b6c3f86d9286a53d56945014e48705c20e4a"
+    },
+    "original/gpt2-kp-und-kohaerenter-transport/ANSCHLUSS.txt": {
+      "bytes": 8483,
+      "sha256": "2ac1c42169d82b5a426e48a74bbc3dbcbf5819c758142ee2e4da5da96e3bb680"
+    },
+    "original/gpt2-kp-und-kohaerenter-transport/GITHUB_SNAPSHOT.json": {
+      "bytes": 8918,
+      "sha256": "438eccff9419112b96ad2b2190ec72e55bf23a4c06ae886eb03343e4733509ce"
+    },
+    "original/gpt2-kp-und-kohaerenter-transport/MANIFEST.json": {
+      "bytes": 1872,
+      "sha256": "18b039993f1d0c9c2cc68e6ee4aeb0e5e56dff445816604095004cd0a9860ac9"
+    },
+    "original/gpt2-kp-und-kohaerenter-transport/Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17-Bericht.txt": {
+      "bytes": 3491,
+      "sha256": "72a4c149996e21f4d58205c3960bcd508d731818d148ff7e817b3d641fbbb3da"
+    },
+    "original/gpt2-kp-und-kohaerenter-transport/Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17-Pruefquittung.json": {
+      "bytes": 907,
+      "sha256": "8e3e0bd5a5bfc96a290214fcc1ccaa43c4505300e122b8bd6928f43b715086e5"
+    },
+    "original/gpt2-kp-und-kohaerenter-transport/PR_FETCH_CHECK.json": {
+      "bytes": 2060,
+      "sha256": "ca535ed078c59824daa9fe1e87acef82a9173044ad51a38bc7394da8a215c8b1"
+    },
+    "original/gpt2-kp-und-kohaerenter-transport/verify.py": {
+      "bytes": 7471,
+      "sha256": "4bf6f7dc551839f08e2d22c01192173fd7d41fd0f22e8584524fda7e655b493f"
+    },
+    "original/gpt2-kp-und-kohaerenter-transport/expected/COHERENT_TRANSPORT_INPUTS.json": {
+      "bytes": 1667618,
+      "sha256": "c0c882ba85bf3ee56a433b5c5bf5d5c5c0341f2a9e03e213e6e19c460aba5666"
+    },
+    "original/gpt2-kp-und-kohaerenter-transport/expected/RECEIPT.json": {
+      "bytes": 452,
+      "sha256": "0384198840476351268b7253b5e935ceb069a51c23ba339e212aed9930cab001"
     },
     "original/gpt2-rayleigh-zeugen/FETCH_CHECK.json": {
       "bytes": 3933,
@@ -958,8 +1300,8 @@
       "sha256": "8bcebf7f326843371194b7cf0d8fbf6543c379fb3c61a6560208e736cf37b8dd"
     },
     "reports/STUFE4_TEIL2_HOCHPAARUNGEN.md": {
-      "bytes": 12437,
-      "sha256": "99aa929c5da8b8dda7d837a5a165bbbec31bfed862b7bc53ad6734ca8617126b"
+      "bytes": 14871,
+      "sha256": "1836eed5e6e32e527f680cdf12018da61f68d99c4171f782da4c796515d94f98"
     },
     "stufe1/PSI_DEFINITION.json": {
       "bytes": 31399,

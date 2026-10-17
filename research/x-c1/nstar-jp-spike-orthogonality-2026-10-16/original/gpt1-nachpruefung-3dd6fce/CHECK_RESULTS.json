@@ -1,0 +1,49 @@
+{
+  "scope": "Independent exact rational downstream checks using saved model-form and physical-norm intervals; Gamma bound replay uses bound source code. No recomputation of Gram contractions or physical norms from model; no full package replay.",
+  "head": "3dd6fce08030554f3fc4b398d92e300e82dcaaf9",
+  "source_file_hashes_checked": {
+    "PROOF.md": "ac65af133b4eb684ae6ce2405e8af2b834b4dea400a5b10c43f54c3f832916bf",
+    "original/gpt2-rayleigh-zeugen/GEGENPRUEFUNG.txt": "3dae77c2d01d5980549828d49235248f5d38fabf7550613dac3756aaa29077bf",
+    "original/gpt2-rayleigh-zeugen/HERLEITUNG.txt": "00bf9b68ba4bc5a5dbab2329f4f6800e6bcc1cee6474c17cb61a53b33aef5aac",
+    "original/gpt2-rayleigh-zeugen/expected/RAYLEIGH_CERTIFICATE.json": "6cdd6593c30ff6730392d8fda8d463f19ce7c25d63bed30e181f4b97e80db0ad",
+    "original/gpt2-rayleigh-zeugen/expected/RECEIPT.json": "91ca229178fe9a8bc9e112e6b9a1a9b4a8be654e11d0985f3a32a0a98dfae07e",
+    "original/gpt2-rayleigh-zeugen/inputs/SOFT_WITNESSES.json": "3298bac05b81c8eeea4beec5f355b9afda83dab5b22735269b8b0adba341f821",
+    "original/gpt2-rayleigh-zeugen/sources/original-a8-PROOF.md": "0f6133f4db335f27a998dddc480583bca05cde071f45fbb9b8ac4b7ff45fc661",
+    "original/gpt2-rayleigh-zeugen/vendor/rational_bounds.py": "8e9ae5784a341ae3ba4f5db07c6c6ebbdee4fbc375a59a963b071f77c14b7d5c",
+    "original/gpt2-rayleigh-zeugen/verify.py": "fec698e65b8a2fba147637962088b4eae2331973e35b9af6f2e253755f37eae5",
+    "reports/STUFE4_TEIL2_HOCHPAARUNGEN.md": "99aa929c5da8b8dda7d837a5a165bbbec31bfed862b7bc53ad6734ca8617126b"
+  },
+  "Gamma_error_display_only": "1.61744219633372322E-29",
+  "coordinate_error_display_only": "1.35865144492032750E-28",
+  "parities": {
+    "even": {
+      "true_Rayleigh_interval_display_only": [
+        "1.32189286099432059E-26",
+        "1.34906428816449620E-26"
+      ],
+      "safe_outward_decimal_interval": [
+        "330473/25000000000000000000000000000000",
+        "269813/20000000000000000000000000000000"
+      ],
+      "inverse_lower_display_only": "7.41254518982616824E+25",
+      "safe_strict_inverse_lower": "74000000000000000000000000",
+      "printed_report_interval_not_an_enclosure": true,
+      "old_pairing_ratios_certified": false
+    },
+    "odd": {
+      "true_Rayleigh_interval_display_only": [
+        "8.53112055322565738E-24",
+        "8.53139228264418058E-24"
+      ],
+      "safe_outward_decimal_interval": [
+        "106639/12500000000000000000000000000",
+        "8531393/1000000000000000000000000000000"
+      ],
+      "inverse_lower_display_only": "1.17214162339521983E+23",
+      "safe_strict_inverse_lower": "117000000000000000000000",
+      "printed_report_interval_not_an_enclosure": true,
+      "old_pairing_ratios_certified": false
+    }
+  },
+  "status": "PASS_DOWNSTREAM_CHECKS_ONLY"
+}

@@ -1,0 +1,29 @@
+{
+  "checked_client_date": "2026-10-17",
+  "repository": "Waschtl904/objekt-x-programm",
+  "scope": "PR metadata only; no repository mutation; no mathematical status inferred from merge",
+  "pull_requests": [
+    {
+      "number": 226,
+      "url": "https://github.com/Waschtl904/objekt-x-programm/pull/226",
+      "title": "A9-Inversspektrum: Ein-Richtungs-Verstärkung exakt zertifiziert (2026-10-15; §5 korrigiert, Nachtrag Budget/N*Jp 2026-10-16)",
+      "state": "closed",
+      "merged": true,
+      "merged_at": "2026-10-16T17:38:02Z",
+      "head_sha": "0ded564d5a6eff1c5b64698821a3f7d04b14e68b",
+      "merge_commit_sha": "431e30ccf30f0cfe8edaa3c3955449ae0254606a",
+      "updated_at": "2026-10-16T17:38:03Z"
+    },
+    {
+      "number": 227,
+      "url": "https://github.com/Waschtl904/objekt-x-programm/pull/227",
+      "title": "A9→A11: vollständiger Antwortgram und direkter Modellfehler, versiegeltes Paket mit Nachtrag (2026-10-15/16)",
+      "state": "closed",
+      "merged": true,
+      "merged_at": "2026-10-16T18:21:26Z",
+      "head_sha": "7fd64de115c95f6b0777b21342984bfb718ded12",
+      "merge_commit_sha": "b2595cf0bf9912a30e8f3302fd7363c2469a3250",
+      "updated_at": "2026-10-16T18:21:26Z"
+    }
+  ]
+}

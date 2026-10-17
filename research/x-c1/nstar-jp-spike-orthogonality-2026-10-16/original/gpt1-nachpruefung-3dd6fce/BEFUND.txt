@@ -1,0 +1,123 @@
+PR #229 — Nachprüfung von 3dd6fce
+17. Oktober 2026
+
+Repository: Waschtl904/objekt-x-programm
+Head: 3dd6fce08030554f3fc4b398d92e300e82dcaaf9
+PR: https://github.com/Waschtl904/objekt-x-programm/pull/229
+
+ERGEBNIS
+
+Die zentralen Einwände sind im neuen Korrekturabschnitt sachlich übernommen:
+Das Budget 0,6 / 0,015 ist unvollständig, die hohen Paarungen bleiben
+Quadraturdiagnosen, und die alten CS-Verhältnisse sind kein Zertifikat.
+Die neuen rationalen Rayleigh-Zeugen bezahlen den Gamma-Modellfehler
+und die physische Momentnorm. Sie ersetzen nicht die alten I_j-Paarungen.
+Der kohärente K-Transport und das gesamte gerichtete L0 sind sinnvolle
+nächste Rechenschritte. Ein numerisches L0-Zertifikat liegt hier nicht vor.
+
+Die Nachprüfung hat keine GitHub-Datei geändert und keinen Merge ausgelöst.
+Beim letzten Abruf war der PR offen; a1-c-even-fresh-matrix-build lief,
+die übrigen zurückgegebenen Checks waren erfolgreich.
+
+1. WAS HIER NACHGERECHNET WURDE
+
+check_rayleigh_summary.py verwendet exakte rationale Arithmetik.
+Zehn lokal eingelesene Quelldateien stimmen in Hash und Länge mit
+SOURCE_BINDINGS.json überein. Das ist keine Prüfung aller 223 Bindungen.
+
+Der ursprüngliche gebundene Gamma-Bound-Code wurde erneut ausgeführt:
+  epsilon_Gamma = 1,61744219633372322e-29 (Anzeige gerundet),
+  e_A = (42/5) epsilon_Gamma = 1,35865144492032750e-28 (Anzeige).
+
+Für beide gespeicherten rationalen Zeugen wurden Dimension, Gradliste
+und Koordinatennorm unabhängig nachgerechnet. Ausgehend von den
+gespeicherten Intervallen für Modellenergie und physische Norm wurden
+Fehlerinflation, Normierung und Kehrwert-Untergrenze exakt nachgeprüft.
+Ergebnis: PASS_DOWNSTREAM_CHECKS_ONLY, siehe CHECK_RESULTS.json.
+
+Nach außen gerundete Einschließungen der gespeicherten Rayleigh-Intervalle:
+  gerade:   [1,321892; 1,349065] * 10^-26,
+  ungerade: [8,531120; 8,531393] * 10^-24.
+
+Unter den gebundenen Operator-/Formbereichsvoraussetzungen und der
+Annahme eines positiven invertierbaren A9 folgen weiterhin strikt
+  ||A9^-1|| > 7,4e25 (gerade), > 1,17e23 (ungerade).
+
+Grenze dieser Nachprüfung: Die Gram-Kontraktionen und die physischen
+Normintervalle wurden nicht erneut aus a8_model.json.gz aufgebaut.
+Die vollständigen vier Archivreplays wurden hier nicht wiederholt.
+Auch die 24 neuen CS-Rechtsseiten sind kein Nachweis der alten I_j.
+
+2. VERBLEIBENDE KORREKTUREN AM TEXT
+
+a) PROOF.md, Korrekturen Nr. 2: Der noch vorhandene Satz
+   "Repariert ... gerichtet als Obergrenze ... Verhältnisse ..."
+   muss wie im späteren Absatz ausdrücklich auf das Modellniveau
+   beschränkt werden. Vorschlag:
+   "Auf Modellniveau mit A0 neu gerechnet; ohne Gamma-Modellfehler
+   und gerichtete I_j ist dies kein tatsächlicher CS-Nachweis.
+   Der tatsächliche Rayleigh-Anschluss stammt aus den beiden neuen
+   rationalen Zeugen des Pakets f0bdfe69...; die alten Verhältnisse
+   0,02–0,16 bleiben Diagnose."
+
+b) PROOF.md §4d: "..., nicht der Spike" ist nicht durch die Daten
+   gedeckt. Streichen oder ausdrücklich als zurückgenommen markieren.
+   Der Beitrag im vollständigen Residuum ist weiterhin offen.
+
+c) Bericht §2/§3 und META: "zert. Schranke", "unter der zertifizierten
+   Schranke" und "Gerichtetes Fehlerbudget ... (Größenordnung)"
+   widersprechen dem neuen Status. Vorschläge: "diagnostischer
+   Vergleichswert" bzw. "Unvollständige Budgetdiagnose zu (7.1)".
+   Auch "CS-Test in 24 Fällen bestanden" in META als Modell-Diagnose
+   qualifizieren. Der Faktor 0,0159 darf nicht als nach oben gerundete
+   Schranke geführt werden. Die sichere hohe Normgrenze ist < 0,016;
+   die eingesetzte Quadraturnorm von y_h bleibt trotzdem ungerichtet.
+
+d) Bericht §0 Nr. 2: Die dort mit Intervallklammern geschriebenen
+   oberen Endpunkte 1,34906e-26 / 8,53139e-24 sind nach innen gerundet.
+   Sie liegen unter den gespeicherten oberen Endpunkten
+   1,34906428816449620e-26 / 8,53139228264418058e-24.
+   Die sicheren Intervalle aus Abschnitt 1 einsetzen. Die im PR-Text
+   separat genannten Obergrenzen 1,349065e-26 / 8,531393e-24 sind korrekt.
+
+Diese Punkte erfordern Textbereinigung und erneuerte Quellenbindungen;
+sie widerlegen die neuen Rayleigh-Zeugen nicht.
+
+3. KOHÄRENTER TRANSPORT: GANZES RESIDUUM
+
+Bei festen übrigen Operatoren und festem p gilt mit
+  H = F - J_old U8 g_F,
+  Delta chi = -H Delta k,
+  ||K^(1/2) Delta k|| <= eta,
+für h = (C_p - Dhat T) z0 und b = H* h:
+  |<Delta chi,h>| <= eta sqrt(b* K^-1 b).
+
+Damit bleibt die Korrelation zwischen C_p und allen D12-Spalten erhalten.
+Für den D12-Block allein bleibt B_D = H*D und
+  e_D* e_D <= eta^2 B_D* K^-1 B_D
+die passende gemeinsame Form. Erst nach der Kombination mit T auswerten.
+
+Die Formel ist algebraisch, noch kein numerischer Fehlerwert: H, b und
+die übrigen Modell-/Integrationsreste müssen gerichtet eingeschlossen
+werden. Bei nominalem h0 muss auch der gemischte Fehler Delta chi gegen
+h-h0 bezahlt werden. Ein sicherer Ansatz ist die Zerlegung
+  <chi(k),h> - <chi(k0),h0>
+    = <chi(k0),h-h0> + <chi(k)-chi(k0),h>,
+mit einer gemeinsamen Einschließung des tatsächlichen b = H*h.
+Alte, bereits k-haltige Hochantwortfehler dabei ersetzen oder sauber
+auseinanderlegen; Delta k nicht doppelt bezahlen. Bei p = alpha v + e
+muss e mitgeführt werden; alternativ p direkt rechnen.
+
+4. FEHLENDES K_P-PAKET
+
+Gesucht wurde auch unter dem exakten Namen; das Paket war nicht auffindbar:
+  Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17.zip
+  SHA256 87540b07fb22c90867bae4ddcbefcdab66c455f786ec19f50ce0193455ff00d3
+
+Die Schwellen 980,113997 / 398,766496 sind deshalb hier nur Angaben
+aus der gebundenen Gegenprüfung, keine unabhängig geprüften Ergebnisse.
+Insbesondere 980,11 ist keine sichere Aufrundung von 980,113997.
+Der K-Transport kann ohne dieses Paket bearbeitet werden; der abschließende
+Vergleich mit dessen K_P-Budget benötigt das Original und dessen Bindungen.
+
+Keine Folgerung zu N12-Erfolg oder -Ausschluss, A9->A11, Objekt X oder RH.

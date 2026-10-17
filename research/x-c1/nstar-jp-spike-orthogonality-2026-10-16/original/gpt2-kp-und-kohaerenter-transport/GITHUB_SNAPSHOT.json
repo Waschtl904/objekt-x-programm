@@ -1,0 +1,145 @@
+{
+  "pr": {
+    "url": "https://github.com/Waschtl904/objekt-x-programm/pull/229",
+    "number": 229,
+    "state": "open",
+    "merged": false,
+    "mergeable": true,
+    "draft": false,
+    "body": "## Korrekturen zur Erstfassung (#228)\n\nNach Gegenprüfung durch das Prüfpaket `1ccb6be1…99b0` (vollständige hohe U8-Antwort; Replay PASS, drei Dateien bytegleich) sind folgende Formulierungen als **ÜBERHOLT** markiert und korrigiert (PROOF.md, README.md, META.yaml):\n\n1. „Spike-Richtung ist A9-orthogonal\" → nur: ⟨χ_v, A9Φ_j⟩ ist numerisch sehr klein; keine exakte Orthogonalität.\n2. „Koordinatenartefakte\" → falsch; die Normen sind isometrie-invariant und echt groß (weiche A8-Mode).\n3. „Hoher U8-Anteil ≲ 10⁻³\" aus Quadratur → gerichtet gilt ‖u_hi,v‖ < 0,016 / 0,00245 (Prüfpaket).\n4. „Test kann aus dem D12-Anteil nicht scheitern\" → nicht gefolgert.\n\n## Zweite Korrekturrunde (Gegenprüfungen `94e2bd3b…b16f`, `f0bdfe69…8880`, 17.10.)\n\n5. **Budget 0,6 / 0,015 ist nicht gerichtet.** Der erste Stand dieses PR nannte es „gerichtet\"; im e_ψ-Term wurde die kleinere Kernnorm ‖h8‖ ≤ ‖D_j‖_{H9} eingesetzt, gerichtete Reste für I₀, ‖C*Φ*h8‖, ‖y_h‖ und der D̂-Term fehlen. Jetzt überall als **unvollständige Größenordnungsdiagnose** gekennzeichnet (auch `D12_ERROR_BUDGET.json`).\n6. **Cauchy–Schwarz-Test nur auf Modellniveau** (u₁ᵀA₀u₁ ohne Gamma-Modellfehler e_A = 1,36·10⁻²⁸). Der gerichtete Rayleigh-Anschluss kommt aus dem gebundenen Paket `f0bdfe69…` (zwei rationale Zeugen): tatsächliche Rayleigh-Quotienten < 1,349065·10⁻²⁶ / 8,531393·10⁻²⁴, daraus bedingt ‖A9⁻¹‖ > 7,4·10²⁵ / 1,17·10²³. Meine I_j-Quotienten bleiben Diagnose.\n7. **‖χ_e‖ < 88,2 gilt nur ungerade**; gerade lautet die gebundene Grenze 25317,73.\n8. **Die 24 hohen Paarungen r_{v,j}** (≤ 7,3·10⁻⁵ / 2,4·10⁻⁴) und ℓ_v(D_j) sind Quadratur-Mittelpunkte ohne gerichteten Rest; das Einhalten der Vergleichsschranke ist eine Konsistenzdiagnose, kein Genauigkeitsnachweis. Quadraturkontrollabweichungen (+7,56/−37,5 bzw. +100,8/−115,8) dokumentiert; `high_pairings.py` ist jetzt fail-closed (kein `sqrt(abs(·))`).\n9. PROOF §4d „kein Hindernis\" zurückgenommen; A8PHIC-Dateien als Funktionswerte, nicht als gerichtete Darstellung gekennzeichnet.\n\nBelastbar unter den gebundenen Voraussetzungen bleibt: hohe U8-Norm für v, p, e kontrolliert; D12-Modellfehler im Rang-eins-Skalartest bezahlbar; Rayleigh-Zeugen für ‖A9⁻¹‖. Kohärenter K-Transport für den D12-Block (Herleitung in `94e2bd3b…`) und das gesamte gerichtete L₀ für ⟨χ_p, (C_p − D̂T)z₀⟩ sind die nächsten Rechenschritte; das K_P-Paket `87540b07…` liegt nicht vor und ist nicht gebunden.\n\n## Prüfung\n\n`verify.py`: 223 Bindungen, vier Replays (Stufe 1, Stufe 3, Stufe-4-Hochantwort, Rayleigh-Zeugen) bytegleich. Registry: pending-ID unverändert, Validator und Tests lokal grün. Kein Zertifikat des N12-Tests; ⟨χ_p, Cz⟩, ℓ_e, K_P[z], A9→A11 offen.",
+    "title": "Korrekturen und Stufe 4 Teil 2: hohe Paarungen r_vj, Hochantwort-Zertifikat (2026-10-17)",
+    "base": "main",
+    "base_sha": "361d968b519465aaced2ca7a9ddb30284c1de6e2",
+    "head": "research/nstar-jp-spike-orthogonality-korrektur-2026-10-17",
+    "head_sha": "3dd6fce08030554f3fc4b398d92e300e82dcaaf9",
+    "head_repo_id": 1313037886,
+    "head_repo_full_name": "Waschtl904/objekt-x-programm",
+    "merge_commit_sha": "297d8eb3d7b01735e749404ab064041fbf5f47b3",
+    "user": {
+      "login": "Waschtl904",
+      "name": "Waschtl904",
+      "email": null,
+      "avatar_url": "https://avatars.githubusercontent.com/u/200066161?v=4",
+      "id": 200066161
+    },
+    "requested_reviewers": null,
+    "requested_team_reviewers": null,
+    "diff": null,
+    "comments": null,
+    "created_at": "2026-10-17T08:25:21Z",
+    "updated_at": "2026-10-17T09:51:35Z",
+    "closed_at": null,
+    "merged_at": null,
+    "commits": 2,
+    "changed_files": 50,
+    "additions": 7075,
+    "deletions": 29,
+    "display_url": "https://github.com/Waschtl904/objekt-x-programm/pull/229",
+    "display_title": "Korrekturen und Stufe 4 Teil 2: hohe Paarungen r_vj, Hochantwort-Zertifikat (2026-10-17)"
+  },
+  "workflows": {
+    "workflow_runs": [
+      {
+        "id": 39022689609,
+        "name": "Canonical cross and high response certificates",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 51,
+        "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689609/jobs",
+        "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689609/logs",
+        "workflow_id": 372375947
+      },
+      {
+        "id": 39022689523,
+        "name": "Canonical joint maximizer certificates",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 55,
+        "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689523/jobs",
+        "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689523/logs",
+        "workflow_id": 371289218
+      },
+      {
+        "id": 39022689555,
+        "name": "Validate canonical research state",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 505,
+        "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689555/jobs",
+        "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689555/logs",
+        "workflow_id": 362580557
+      },
+      {
+        "id": 39022689573,
+        "name": "Canonical full shift and primal dual certificates",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 49,
+        "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689573/jobs",
+        "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689573/logs",
+        "workflow_id": 372824153
+      },
+      {
+        "id": 39022689550,
+        "name": "Canonical direct odd line certificates",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 43,
+        "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689550/jobs",
+        "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689550/logs",
+        "workflow_id": 373355491
+      },
+      {
+        "id": 39022689532,
+        "name": "Canonical odd structural-open certificates",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 53,
+        "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689532/jobs",
+        "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689532/logs",
+        "workflow_id": 371790658
+      },
+      {
+        "id": 39022689556,
+        "name": "Canonical adaptive odd angle certificates",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 45,
+        "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689556/jobs",
+        "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689556/logs",
+        "workflow_id": 373254977
+      },
+      {
+        "id": 39022689483,
+        "name": "N*Jp spike orthogonality stages 1-4",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 5,
+        "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689483/jobs",
+        "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689483/logs",
+        "workflow_id": 386985502
+      },
+      {
+        "id": 39022689503,
+        "name": "A1 C-even gated exact certificate",
+        "status": "in_progress",
+        "conclusion": null,
+        "run_number": 154,
+        "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689503/jobs",
+        "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689503/logs",
+        "workflow_id": 357894346
+      },
+      {
+        "id": 39022689492,
+        "name": "Canonical Y-kernel second-order certificates",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 41,
+        "jobs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689492/jobs",
+        "logs_url": "https://api.github.com/repos/Waschtl904/objekt-x-programm/actions/runs/39022689492/logs",
+        "workflow_id": 373754228
+      }
+    ]
+  },
+  "scope": "first returned page of PR workflows; no complete branch protection audit; no mutations"
+}

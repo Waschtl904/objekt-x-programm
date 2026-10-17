@@ -1,0 +1,19 @@
+{
+  "ANSCHLUSS.txt": "2ac1c42169d82b5a426e48a74bbc3dbcbf5819c758142ee2e4da5da96e3bb680",
+  "archives/Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17.zip": "87540b07fb22c90867bae4ddcbefcdab66c455f786ec19f50ce0193455ff00d3",
+  "expected/COHERENT_TRANSPORT_INPUTS.json": "c0c882ba85bf3ee56a433b5c5bf5d5c5c0341f2a9e03e213e6e19c460aba5666",
+  "expected/RECEIPT.json": "0384198840476351268b7253b5e935ceb069a51c23ba339e212aed9930cab001",
+  "GITHUB_SNAPSHOT.json": "438eccff9419112b96ad2b2190ec72e55bf23a4c06ae886eb03343e4733509ce",
+  "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17-Bericht.txt": "72a4c149996e21f4d58205c3960bcd508d731818d148ff7e817b3d641fbbb3da",
+  "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17-Pruefquittung.json": "8e3e0bd5a5bfc96a290214fcc1ccaa43c4505300e122b8bd6928f43b715086e5",
+  "pr229-snapshot/META.yaml": "d85e3a70a7a252e6036ea2a94d71de6d55d54bad115ad8d273eaff98840a5fa0",
+  "pr229-snapshot/PROOF.md": "ac65af133b4eb684ae6ce2405e8af2b834b4dea400a5b10c43f54c3f832916bf",
+  "pr229-snapshot/README.md": "e67b27afe1f3a21f8db10c03c4b95ec8e6db7d6983d849f65883a99ae2050ce6",
+  "pr229-snapshot/reports/STUFE4_TEIL2_HOCHPAARUNGEN.md": "99aa929c5da8b8dda7d837a5a165bbbec31bfed862b7bc53ad6734ca8617126b",
+  "pr229-snapshot/SOURCE_BINDINGS.json": "96452edd8223d41d4757349d7cdcb040e2bdc09befc44a07aa1a1eb55e96ef03",
+  "pr229-snapshot/stufe4/D12_ERROR_BUDGET.json": "76d01899c96565eea8c5a449483dda8d6e1356ca71fe7f72bf9f874534531a54",
+  "pr229-snapshot/stufe4/high_pairings.py": "09f0d0bc0b029c06d9f0b8cce4419c2033ef37175c243967c56b005bf982e634",
+  "pr229-snapshot/verify.py": "3cffc77baf4c838555dac8e29beb0e865e678f432906358b2ecd40238285ed2e",
+  "PR_FETCH_CHECK.json": "ca535ed078c59824daa9fe1e87acef82a9173044ad51a38bc7394da8a215c8b1",
+  "verify.py": "4bf6f7dc551839f08e2d22c01192173fd7d41fd0f22e8584524fda7e655b493f"
+}

@@ -1,0 +1,60 @@
+Objekt X — Anschluss nach dem oberen K_P-Budgetabschluss
+17. Oktober 2026
+
+Mit HERLEITUNG.txt beginnen. Regel unverändert:
+A9_A11_N12_MIDPOINT_INVERSE_60_V1, ausschließlich fixed_X.
+
+NEU BEDINGT GESCHLOSSEN:
+
+K_P[s] <29.603644 ||s||_W² auf dem ganzen neuen Schalenpolynomraum
+Grad <=11, für s!=0, in beiden Paritäten. Für die zwölf einzelnen
+W-normierten lokalen Legendretests z_n nach HERLEITUNG (1.1) gilt
+jeweils K_P[z_n]<28; engere Einzelgrenzen stehen in §6.
+
+Methode:
+1. S0=X_fix+X_fix* - X_fix* M_A X_fix >0 durch 24 gerichtete Pivots.
+2. Khat=d-Fhat* S0 Fhat<=d. Der volle zweiseitige geerbte K-Modellfehler
+   wird addiert; X_fix wird NICHT als exakte Inverse behandelt.
+3. Direkte obere Formschranke aus vollständiger Translationsenergie.
+   Alle vier Sprünge, die stückweise Ableitung, ihr Kreuzterm und
+   das ganze Integral bis infinity sind bezahlt. Kein neuer großer
+   Integrationslauf und keine vorausgesetzte A11-Positivität.
+
+DAMIT IST DER NÄCHSTE ENTSCHEIDENDE EINGANG KLAR:
+
+Ein vollständiges gerichtetes L0_n für <chi_p,(C_p-Dhat T)z_n>,
+mit tatsächlichem p=P_upper v und tatsächlichem k. Die feste Funktion
+z_n liegt auf (log3,log11/2), n=0,...,11, mit W-Norm 1; sie ist NICHT
+eine Basis84-Funktion der alten schmalen Schale.
+
+Hinreichende einfache Ausschlussbedingungen sind
+  dist(0,L0_n)>1201 gerade oder >489 ungerade.
+Für z_0 genügen bereits >980.113997 bzw. >398.766496.
+Die engeren gerichteten Schwellen für alle n stehen in HERLEITUNG §6.
+Sie enthalten den schon bewiesenen D12-Modellfehler epsilon_p.
+Noch wurde KEIN L0_n berechnet. Keine Aussage über Bestehen/Scheitern.
+
+Den hohen Anteil nicht abschneiden. Den kohärenten k-Fehler möglichst
+über H=F-J_old U8 g_F und a(h)=H*h gemeinsam transportieren:
+  |Delta ell|<=eta_p sqrt(a(h)*K^-1 a(h)).
+Die zwölf hierfür nötigen Skalare sind noch zu integrieren; eine
+O(1)-Schranke wird nicht angenommen. Modellfehler bei k0 zusätzlich
+bezahlen. Die ganze Normroute des 1ccb6be1-Pakets bleibt alternativ
+gültig; ihre konkrete Schärfe wurde ohne L0 und h0-Normen nicht entschieden.
+
+Übernommene Voraussetzungen: gebundene Operator-/Domänenidentifikation,
+vollständige F/A12/T-Quellenintegrationen, alte hohe Gramzertifikate,
+q und Spike-Majorante. Externe mathematische Gesamtprüfung bleibt offen.
+
+Frisch geprüft: vier Archivhashes, 73 Manifestdateien; neuer Budgetprüfer;
+außerdem ursprünglicher hoher Prüfer mit sechs ganzen Gramkontrollen,
+1146 Kreuzkoordinatenvergleichen und drei bytegleichen Ausgaben.
+Keine Perplexity-Großrechnung wiederholt. Kein GitHub-Eingriff.
+Live-Metadaten: #226 und #227 inzwischen beide zusammengeführt.
+
+Für die Reproduktion benötigt verify.py die vier Übergabearchive
+in einem Ordner und ein neues Ausgabeziel außerhalb dieses Pakets.
+Alle Namen und Hashes stehen im Prüfer und in expected/RECEIPT.json.
+
+Nicht gezeigt: Residualskalare, N12-Erfolg/-Ausschluss, volle W9-Energie,
+A9->A11, Objekt X oder RH.

@@ -1,0 +1,14 @@
+{
+  "status": "PASS_INPUT_PREPARATION_ONLY",
+  "source_archive_hashes_checked": 2,
+  "positive_K_pivots": 24,
+  "exact_inverse_product_entries_checked": 576,
+  "exact_metric_identities_checked": 48,
+  "coherent_metrics_prepared": 4,
+  "pairing_integrations_performed": 0,
+  "L0_computed": false,
+  "D12_coherent_error_evaluated": false,
+  "upstream_big_replays_repeated": false,
+  "external_mathematical_review_open": true,
+  "github_changed": false
+}

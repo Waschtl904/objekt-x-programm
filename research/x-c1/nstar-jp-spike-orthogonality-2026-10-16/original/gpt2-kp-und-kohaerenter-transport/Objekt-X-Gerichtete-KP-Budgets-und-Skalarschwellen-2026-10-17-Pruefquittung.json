@@ -1,0 +1,25 @@
+{
+  "status": "PASS_FRESH_ZIP_REPLAY",
+  "client_date": "2026-10-17",
+  "archive_name": "Objekt-X-Gerichtete-KP-Budgets-und-Skalarschwellen-2026-10-17.zip",
+  "archive_sha256": "87540b07fb22c90867bae4ddcbefcdab66c455f786ec19f50ce0193455ff00d3",
+  "fresh_budget_outputs": {
+    "BUDGET_BOUNDS.json": {
+      "byte_identical": true,
+      "sha256": "6229acf4bee398d2262c08a086fb36dd8945135ee860bb591e8218551c291613"
+    },
+    "RECEIPT.json": {
+      "byte_identical": true,
+      "sha256": "6a3170211ec979214919af22fac0b6c3f86d9286a53d56945014e48705c20e4a"
+    }
+  },
+  "upstream_high_original_replay_three_outputs_byte_identical": true,
+  "new_rule_positive_pivots": 24,
+  "large_integrations_repeated": false,
+  "conditional_author_derived": true,
+  "external_mathematical_review_open": true,
+  "residual_pairings_computed": false,
+  "N12_excluded": false,
+  "A9_A11_closed": false,
+  "RH_proved": false
+}
