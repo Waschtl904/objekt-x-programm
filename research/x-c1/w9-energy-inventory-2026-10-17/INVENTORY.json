@@ -1,0 +1,235 @@
+{
+  "status": "AUTHOR_DERIVED_CONDITIONAL_INTERFACE_EXTERNAL_REVIEW_OPEN",
+  "full_energy_matrix_computed": false,
+  "N12_decided": false,
+  "old_large_integrations_rerun": false,
+  "parities": {
+    "even": {
+      "K_inverse_exact_entries_checked": 144,
+      "K_floor_positive_pivots": 12,
+      "old_source_shapes": {
+        "old_certificate.source_c_model": [
+          191,
+          12
+        ],
+        "old_certificate.source_Bh_model": [
+          191,
+          12
+        ],
+        "old_certificate.source_h_gram_model": [
+          12,
+          12
+        ],
+        "old_certificate.joint_high_source_error_gram": [
+          12,
+          12
+        ],
+        "galerkin.old_low_c_model": [
+          191,
+          84
+        ],
+        "galerkin.old_low_Bh_model": [
+          191,
+          84
+        ],
+        "galerkin.H84_model": [
+          84,
+          84
+        ],
+        "galerkin.complete_source_high_cross_model": [
+          12,
+          84
+        ]
+      },
+      "stored_new_map_shapes": {
+        "384": {
+          "G_W": [
+            12,
+            12
+          ],
+          "H_gram": [
+            12,
+            12
+          ],
+          "H8_gram": [
+            12,
+            12
+          ],
+          "feature_factor": [
+            191,
+            12
+          ],
+          "b_F": [
+            12,
+            12
+          ],
+          "Fhat": [
+            12,
+            12
+          ],
+          "T": [
+            12,
+            12
+          ]
+        },
+        "512": {
+          "G_W": [
+            12,
+            12
+          ],
+          "H_gram": [
+            12,
+            12
+          ],
+          "H8_gram": [
+            12,
+            12
+          ],
+          "feature_factor": [
+            191,
+            12
+          ],
+          "b_F": [
+            12,
+            12
+          ],
+          "Fhat": [
+            12,
+            12
+          ],
+          "T": [
+            12,
+            12
+          ]
+        }
+      },
+      "U8_norm_upper_decimal_power": "1e27",
+      "high_Schur_inverse_majorant_norm_upper": "65000",
+      "W9_norm_upper_decimal_power": "1e195",
+      "Q_D_scalar_identity_upper_decimal_power": "1e121",
+      "whole_residual_error_energy_upper_decimal_power": "1e134",
+      "coarse_bound_suitable_for_N12_decision": false,
+      "bound_interpretation": "Sufficient upper bounds only; not estimates of actual errors.",
+      "partial_E8_finite_upper_formula": "2 gamma tr(Xi) + 2 gamma tr(Xi HB)/delta^2"
+    },
+    "odd": {
+      "K_inverse_exact_entries_checked": 144,
+      "K_floor_positive_pivots": 12,
+      "old_source_shapes": {
+        "old_certificate.source_c_model": [
+          191,
+          12
+        ],
+        "old_certificate.source_Bh_model": [
+          191,
+          12
+        ],
+        "old_certificate.source_h_gram_model": [
+          12,
+          12
+        ],
+        "old_certificate.joint_high_source_error_gram": [
+          12,
+          12
+        ],
+        "galerkin.old_low_c_model": [
+          191,
+          84
+        ],
+        "galerkin.old_low_Bh_model": [
+          191,
+          84
+        ],
+        "galerkin.H84_model": [
+          84,
+          84
+        ],
+        "galerkin.complete_source_high_cross_model": [
+          12,
+          84
+        ]
+      },
+      "stored_new_map_shapes": {
+        "384": {
+          "G_W": [
+            12,
+            12
+          ],
+          "H_gram": [
+            12,
+            12
+          ],
+          "H8_gram": [
+            12,
+            12
+          ],
+          "feature_factor": [
+            191,
+            12
+          ],
+          "b_F": [
+            12,
+            12
+          ],
+          "Fhat": [
+            12,
+            12
+          ],
+          "T": [
+            12,
+            12
+          ]
+        },
+        "512": {
+          "G_W": [
+            12,
+            12
+          ],
+          "H_gram": [
+            12,
+            12
+          ],
+          "H8_gram": [
+            12,
+            12
+          ],
+          "feature_factor": [
+            191,
+            12
+          ],
+          "b_F": [
+            12,
+            12
+          ],
+          "Fhat": [
+            12,
+            12
+          ],
+          "T": [
+            12,
+            12
+          ]
+        }
+      },
+      "U8_norm_upper_decimal_power": "1e24",
+      "high_Schur_inverse_majorant_norm_upper": "11000",
+      "W9_norm_upper_decimal_power": "1e183",
+      "Q_D_scalar_identity_upper_decimal_power": "1e109",
+      "whole_residual_error_energy_upper_decimal_power": "1e120",
+      "coarse_bound_suitable_for_N12_decision": false,
+      "bound_interpretation": "Sufficient upper bounds only; not estimates of actual errors.",
+      "partial_E8_finite_upper_formula": "2 gamma tr(Xi) + 2 gamma tr(Xi HB)/delta^2"
+    }
+  },
+  "missing_new_residual_features": [
+    "Full y_h^* y_h with y_h=T_h J_old^* Rhat Z (or exact e_sigma moment and H8/Phi Grams)",
+    "B8 y_h: 191x12, required in V8 h8; C_inv^* Phi^* h8 alone is insufficient",
+    "y_F^* y_h: 12x12 and y_J^* y_h: 84x12, with complete high projection",
+    "(Lambda J)^* Rhat Z: 84x12 with exact old-shell geometry",
+    "Whole T-functional nu and its complete R_L dual Gram, including constrained tail",
+    "Useful weighted DeltaD Gram or five common feature-error Grams",
+    "Directed remainders for every newly used integration and joint cross term"
+  ],
+  "decision": "DO_NOT_ASSEMBLE_OR_LABEL_A_FULL_NUMERICAL_W9_GRAM_FROM_CURRENT_MAPS",
+  "next_stage": "Build missing full high cross maps and 84 bare pairings; then full nu/L-dual action, jointly preserving correlations."
+}
