@@ -4,6 +4,19 @@
 
 Dieses Paket setzt den Nachtrag von `a9-inverse-spike-calibration-2026-10-15` fort (Budgetpaket `7f712994…beb1f5e`, N*Jp-Paket `b48e3895…6d57b`) und bindet die Antwortdaten aus `a9-a11-whole-response-gram-2026-10-15` (Archive `b8677c0b…f41ee`, `00a66e85…ed0a0`).
 
+
+## Korrekturen (2026-10-17, nach Gegenprüfung durch Prüfpaket `1ccb6be1…99b0`)
+
+Die folgenden Formulierungen der Erstfassung (PR #228) waren zu weit und gelten als **ÜBERHOLT**; die Details stehen in `reports/STUFE4_TEIL2_HOCHPAARUNGEN.md` §1:
+
+1. „Spike-Richtung ist A9-orthogonal zu den zwölf alten Quellen" → belastbar ist nur: ⟨χ_v, A9Φ_j⟩ ist numerisch sehr klein (Mittelpunkte 10⁻⁷…2,4·10⁻⁴); keine exakte Orthogonalität.
+2. Der Energie-Cauchy–Schwarz-Test in 4a verwendete die **Untergrenze** u₁ᵀ(F + H_B/δ)u₁ als Obergrenze. Repariert mit dem tatsächlichen Modellgram A (`a8_model.json.gz`): u₁ᵀAu₁ = 1,3355573·10⁻²⁶ / 8,5312837·10⁻²⁴ gerichtet als Obergrenze (A = F + H_B/δ bis 2,5·10⁻³³); Verhältnisse weiterhin 0,02–0,16.
+3. „L²-Größen 10¹³/10³¹ sind Koordinatenartefakte" → falsch: die Normen im festen physischen Raum sind isometrie-invariant und echt groß (weiche A8-Mode, bedingt ‖A9⁻¹‖ > 7,4·10²⁵ / 1,17·10²³); sie erzwingen nur keine große Paarung mit einem bestimmten Residuum.
+4. „Hoher U8-Anteil ≲ 10⁻³" aus Quadraturnormen war ungerichtet; gerichtet gilt jetzt ‖u_hi,v‖ < 0,016 / 0,00245 (Prüfpaket 1ccb6be1…, Replay PASS).
+5. „Der untere N12-Test kann aus dem D12-Anteil praktisch nicht scheitern" → nicht gefolgert (Antwortmatrix T mit ‖T‖ < 6,8·10⁶, C_p-Kopplung ungerechnet).
+
+Neu (Teil 2): die zwölf hohen Paarungen r_{v,j} = (1/δ)⟨y_f − B*c, y_{h,j}⟩ sind über die ganze Funktion A8(Φc) berechnet: |r_{v,j}| ≤ 7,3·10⁻⁵ (gerade), ≤ 2,4·10⁻⁴ (ungerade), alle 24 innerhalb der zertifizierten Schranke 0,0159·‖y_h‖ bzw. 0,00245·‖y_h‖. Mittelpunkte ℓ_v(D_j): 10⁻⁷…4,5·10⁻⁵ (gerade), ≤ 2,4·10⁻⁴ (ungerade). Gerichtetes Budget nach (7.1) des Prüfpakets: ≲ 0,6 (gerade, dominiert vom nichtkohärenten ψ-Fehler e_ψ = 0,248) bzw. ≲ 0,015 (ungerade).
+
 ## 0. Gegenstand und Notation
 
 Alte Schale X = L²((a₈,a₉), 2dx) mit a₈ = (3/2) log 2, a₉ = log 3; Kern (0,a₈); H9 physischer Momentnullraum auf (0,a₉); m = cosh(x/2) (gerade) bzw. sinh(x/2) (ungerade); μ = ∫₀^{a₈} m²; λ(s) = ∫_{a₈}^{a₉} m s. Quellen F = (z_{σ+2}, z_{σ+4}, z_{σ+6}, z_{σ+8}, ΛY₁…ΛY₈), U8 die Common96-Majorante, N die Quellentransformation (FUNKTIONSANSCHLUSS.txt §6 des N*Jp-Pakets). Für t ∈ {v, p = P_upper v}:
@@ -42,15 +55,15 @@ Mit c = E*U(U8 f) = C·Cᵀd/(1−ρ), d = Φ*f − B·T_h f/δ, alle Eingaben a
 
 Struktur (eigene SVD-Diagnose): C ist obere Dreiecksmatrix mit größtem Singulärwert 8,83·10¹² (gerade); der Kopf F_neu = (CCᵀ)⁻¹ hat Eigenwert ≈1,28·10⁻²⁶ zur Mode u₁ (Polynom der Grade 2–12), und c liegt zu 99,99 % in u₁. Die Kopplung u₁·d ≈ 1,7·10⁻¹³ ist in doppelter Genauigkeit nicht auflösbar. Min-Max (Rückzugsverträglichkeit): λ_min(A9) ≤ a_low[Φu₁] ≈ 1,34·10⁻²⁶, also ‖A9⁻¹‖ ≳ 7,5·10²⁵ (bedingt; zu prüfen).
 
-## 4. Stufe 4 (Teil 1): Spike-Richtung ist A9-orthogonal zu den zwölf alten Quellen (Diagnose, mpmath 150 Stellen)
+## 4. Stufe 4 (Teil 1): Paarungen der Spike-Richtung mit den zwölf alten Quellen (Diagnose, mpmath 150 Stellen) — **Formulierungen teilweise ÜBERHOLT, siehe Korrekturen**
 
-**4a. Energie-Cauchy–Schwarz-Test der geerbten Kette.** Für D_j = A9Φ_j (FUNCTIONS12.json, Horizont a₉) und Φu₁ (Common96, Horizont a₈) muss |⟨Φu₁, D_j⟩| = |a9[JΦu₁, Φ_j]| ≤ √(a_low[u₁])·√(A12_jj) gelten; a_low[u₁] ≥ u₁ᵀ(F + H_B/δ)u₁ = 1,336·10⁻²⁶ (gerade) / 8,53·10⁻²⁴ (ungerade). Gemessen: I_j ∈ [−1,5·10⁻¹⁴, 9,4·10⁻¹⁵] (gerade), [−4,9·10⁻¹³, −9,0·10⁻¹⁴] (ungerade); Verhältnis zur Schranke 0,02–0,17 in allen 24 Fällen; naive Skala ‖Φu₁‖‖D_j|Kern‖ ≈ 0,4–2,1. Rückzugsverträglichkeit und Positivität sind damit zwischen beiden Horizonten numerisch bestätigt; der u₁-Anteil von ℓ_v(D_j) beträgt ‖c‖·I_j = O(0,1).
+**4a. Energie-Cauchy–Schwarz-Test der geerbten Kette.** Für D_j = A9Φ_j (FUNCTIONS12.json, Horizont a₉) und Φu₁ (Common96, Horizont a₈) muss |⟨Φu₁, D_j⟩| = |a9[JΦu₁, Φ_j]| ≤ √(a_low[u₁])·√(A12_jj) gelten; a_low[u₁] ≥ u₁ᵀ(F + H_B/δ)u₁ = 1,336·10⁻²⁶ (gerade) / 8,53·10⁻²⁴ (ungerade) **[ÜBERHOLT als Schranke: Untergrenze; korrigiert mit u₁ᵀAu₁ als Obergrenze, gleicher Zahlenwert, siehe Korrekturen Nr. 2]**. Gemessen: I_j ∈ [−1,5·10⁻¹⁴, 9,4·10⁻¹⁵] (gerade), [−4,9·10⁻¹³, −9,0·10⁻¹⁴] (ungerade); Verhältnis zur Schranke 0,02–0,17 in allen 24 Fällen; naive Skala ‖Φu₁‖‖D_j|Kern‖ ≈ 0,4–2,1. Rückzugsverträglichkeit und Positivität sind damit zwischen beiden Horizonten numerisch bestätigt; der u₁-Anteil von ℓ_v(D_j) beträgt ‖c‖·I_j = O(0,1).
 
 **4b. Hoher Anteil der U8-Antwort.** Aus H_B ≥ BB* (Common96) exakt: ‖B*c‖² ≤ cᵀH_Bc = 18289,12103 (gerade) / 21630,51668 (ungerade). Unabhängig: ‖y_f‖² = ‖f‖² + γ_m a_f² − ‖Φ*f‖² = 18289,12054 / 21630,55051 und ⟨B*c, y_f⟩ = ⟨c, B·T_h f⟩ = 18289,12079 / 21630,53358 (Archiv). Folglich ‖y_f − B*c‖² ≤ 3,1·10⁻⁶ / 2,6·10⁻⁵ bei exaktem ‖f‖²; wegen der Quadraturgenauigkeit von ‖f‖² (12 übereinstimmende Stellen zweier Evaluatoren, ≈ ±0,6 absolut auf ‖f‖²) konservativ ‖y_f − B*c‖ ≤ 0,8. Der hohe Anteil (y_f − B*c)/δ von U8 f_v ist also ≲ 10⁻³ (konservativ ≲ 0,5) gegen ‖Φc‖ = 1,3·10¹³: U8 f_v ≈ Φc.
 
-**4c. ℓ_v(D_j).** Exakt gilt ℓ_v(D_j) = [⟨ψ_v, D_j⟩ − ⟨c, Φ*h8_j⟩] − ⟨y_f − B*c, y_h⟩/δ mit h8_j = Π8(D_j|Kern), y_h dessen hoher Anteil. Die Klammer besteht aus zwei Zahlen bis 1,75·10⁵, die sich in allen 24 Fällen auf 10⁻¹⁰ relativ aufheben (Differenzen 10⁻⁷ … 5·10⁻⁵); der Rest ist durch ‖y_f − B*c‖·‖y_h‖/δ ≤ 0,04–0,15 beschränkt (‖y_h‖ = 0,07–0,27). Die Spike-Richtung v ist in der A9-Form nahezu orthogonal zu allen zwölf alten Quellen Φ_j — im Einklang mit den Legendrekoeffizienten ~10⁻⁹ von Jv in den niedrigen Graden der alten Schale.
+**4c. ℓ_v(D_j).** Exakt gilt ℓ_v(D_j) = [⟨ψ_v, D_j⟩ − ⟨c, Φ*h8_j⟩] − ⟨y_f − B*c, y_h⟩/δ mit h8_j = Π8(D_j|Kern), y_h dessen hoher Anteil. Die Klammer besteht aus zwei Zahlen bis 1,75·10⁵, die sich in allen 24 Fällen auf 10⁻¹⁰ relativ aufheben (Differenzen 10⁻⁷ … 5·10⁻⁵); der Rest ist durch ‖y_f − B*c‖·‖y_h‖/δ ≤ 0,04–0,15 beschränkt (‖y_h‖ = 0,07–0,27). Die Paarungen ⟨χ_v, A9Φ_j⟩ sind für alle zwölf alten Quellen numerisch sehr klein **[„nahezu orthogonal" ÜBERHOLT, siehe Korrekturen Nr. 1]** — im Einklang mit den Legendrekoeffizienten ~10⁻⁹ von Jv in den niedrigen Graden der alten Schale.
 
-**4d. Deutung.** Die L²-Größen 10¹³ (χ_v) und 10³¹ (W9-Untergrenze) sind Koordinatenartefakte der weichen Mode; in der A9-Energie ist χ_v ein Objekt gewöhnlicher Größe (a8[Φc] = 2,86·10¹⁰ wird von den steifen Moden getragen, die weiche Mode trägt 2,3). Der untere Skalartest kann aus dem D12-Anteil praktisch nicht scheitern; was den konservativen N12-Vergleich entscheidet, sind die übrigen Energieterme von W9 und die Paarungen ⟨χ_p, Cz⟩ mit der neuen Schale, nicht der Spike. Weder U8-Majorante noch K12-Untermatrix erzeugen aus dieser Richtung ein Hindernis.
+**4d. Deutung [ÜBERHOLT in Teilen, siehe Korrekturen Nr. 3 und 5].** Die L²-Größen 10¹³ (χ_v) und 10³¹ (W9-Untergrenze) werden von der weichen Mode getragen (keine Koordinatenartefakte); in der A9-Energie ist χ_v ein Objekt gewöhnlicher Größe (a8[Φc] = 2,86·10¹⁰ wird von den steifen Moden getragen, die weiche Mode trägt 2,3). Ob der untere Skalartest aus dem D12-Anteil scheitern kann, ist nicht entschieden (Antwortmatrix T, C_p-Kopplung offen); was den konservativen N12-Vergleich entscheidet, sind die übrigen Energieterme von W9 und die Paarungen ⟨χ_p, Cz⟩ mit der neuen Schale, nicht der Spike. Weder U8-Majorante noch K12-Untermatrix erzeugen aus dieser Richtung ein Hindernis.
 
 ## 5. Fehler, Grenzen, nicht Behauptetes
 
@@ -60,4 +73,4 @@ Struktur (eigene SVD-Diagnose): C ist obere Dreiecksmatrix mit größtem Singul�
 
 ## 6. Reproduktion und Dateien
 
-`verify.py` prüft die Hashes aller gebundenen Archive und Dateien, führt die beiden gerichteten Prüfer `certify.py` (Stufe 1) und `certify_stage3.py` (Stufe 3) gegen das im Repository gebundene N*Jp-Brückenarchiv aus und vergleicht deren Ausgaben bytegenau mit den beigefügten Sollwerten. Die mpmath-Diagnosen (`stufe1/`, `stufe2/`, `stufe4/`) werden nicht erneut gerechnet (Laufzeit 10–20 Minuten je Skript); ihre Ergebnisdateien sind hashgebunden. Berichte in `reports/` (Stufe-1-Bericht mit ÜBERHOLT-Markierungen der ersten Fassung).
+`verify.py` prüft die Hashes aller gebundenen Archive und Dateien, führt die drei gerichteten Prüfer `certify.py` (Stufe 1), `certify_stage3.py` (Stufe 3) und `certify.py` des Hochantwort-Pakets (Stufe 4, drei Vorgängerarchive) gegen das im Repository gebundene N*Jp-Brückenarchiv aus und vergleicht deren Ausgaben bytegenau mit den beigefügten Sollwerten. Die mpmath-Diagnosen (`stufe1/`, `stufe2/`, `stufe4/`) werden nicht erneut gerechnet (Laufzeit 10–20 Minuten je Skript); ihre Ergebnisdateien sind hashgebunden. Berichte in `reports/` (Stufe-1-Bericht mit ÜBERHOLT-Markierungen der ersten Fassung).

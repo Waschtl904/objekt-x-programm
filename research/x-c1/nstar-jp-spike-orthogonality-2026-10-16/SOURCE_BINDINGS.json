@@ -276,6 +276,77 @@
         }
       },
       "visible_copies": {}
+    },
+    "archives/Objekt-X-Vollstaendige-Hochantwort-und-Spike-Skalarfehler-2026-10-16.zip": {
+      "sha256": "1ccb6be11c6a8b4e325338b80f2136990b464b4a70e724a02ca7addbe7ba99b0",
+      "bytes": 8600868,
+      "members": {
+        "stage4-high-certificate-2026-10-16/ANSCHLUSS_GPT1.txt": {
+          "bytes": 4659,
+          "sha256": "40c9b0c43200876e7745c204153e7564f03eed2fc643efec698c8b9caf9f0ca1"
+        },
+        "stage4-high-certificate-2026-10-16/certify.py": {
+          "bytes": 14408,
+          "sha256": "a0a0ecb3b9b8b275b6eb46e0d8d6bad27d9eea5a91fd1b66bf75b074aef2ee89"
+        },
+        "stage4-high-certificate-2026-10-16/expected/COMPLETE_HIGH_RESPONSE.json": {
+          "bytes": 86599,
+          "sha256": "52027262debebfdb5258a7fb74ff5280d98d81b34a347d99a91a83470362a606"
+        },
+        "stage4-high-certificate-2026-10-16/expected/RECEIPT.json": {
+          "bytes": 1736,
+          "sha256": "94cad1e3bbe6d7b2899f6cd5222255912b032cbd4722cd88ba8ceaaa08bb65e8"
+        },
+        "stage4-high-certificate-2026-10-16/expected/SPIKE_SCALAR_D_MODEL_ERROR.json": {
+          "bytes": 18752,
+          "sha256": "421560e42b2a50fb9391944b7a40952b8e529d215cea70d52081fb496fa4d460"
+        },
+        "stage4-high-certificate-2026-10-16/HERLEITUNG.txt": {
+          "bytes": 16731,
+          "sha256": "c584f04069f72271728fb4d337e8308f69212ed16cfb76c29221be5f90a0ae83"
+        },
+        "stage4-high-certificate-2026-10-16/inputs/a8_model.json.gz": {
+          "bytes": 8243618,
+          "sha256": "5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b"
+        },
+        "stage4-high-certificate-2026-10-16/inputs/Objekt-X-Stufe1-4-Diagnose-2026-10-16.zip": {
+          "bytes": 291233,
+          "sha256": "88a68c9c51e00fb7024ebaa6db0c72e4dafd5f65a3b98cddb2300dee511ff5df"
+        },
+        "stage4-high-certificate-2026-10-16/MANIFEST.json": {
+          "bytes": 1206,
+          "sha256": "f30889e34f112141be4d7a669f8dad39318e6fc803b85aa2c8a916d85df27c32"
+        },
+        "stage4-high-certificate-2026-10-16/sources/COMMON96_HERLEITUNG.txt": {
+          "bytes": 8234,
+          "sha256": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd"
+        },
+        "stage4-high-certificate-2026-10-16/sources/generate_a8.py": {
+          "bytes": 13683,
+          "sha256": "49de5bdeb80dc618206b34c4db3adcb07c602758fcc343b26498b31b5cfc5213"
+        },
+        "stage4-high-certificate-2026-10-16/sources/RESPONSE_GRAM_PROOF.txt": {
+          "bytes": 9112,
+          "sha256": "8b92da7462796f2ae8eee23467f96e39b98fc70b0147f684dae70080d897e971"
+        },
+        "stage4-high-certificate-2026-10-16/vendor/source_core.py": {
+          "bytes": 13584,
+          "sha256": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772"
+        }
+      },
+      "visible_copies": {
+        "stage4-high-certificate-2026-10-16/ANSCHLUSS_GPT1.txt": "original/gpt2-stufe4-hochantwort/ANSCHLUSS_GPT1.txt",
+        "stage4-high-certificate-2026-10-16/certify.py": "original/gpt2-stufe4-hochantwort/certify.py",
+        "stage4-high-certificate-2026-10-16/expected/COMPLETE_HIGH_RESPONSE.json": "original/gpt2-stufe4-hochantwort/expected/COMPLETE_HIGH_RESPONSE.json",
+        "stage4-high-certificate-2026-10-16/expected/RECEIPT.json": "original/gpt2-stufe4-hochantwort/expected/RECEIPT.json",
+        "stage4-high-certificate-2026-10-16/expected/SPIKE_SCALAR_D_MODEL_ERROR.json": "original/gpt2-stufe4-hochantwort/expected/SPIKE_SCALAR_D_MODEL_ERROR.json",
+        "stage4-high-certificate-2026-10-16/HERLEITUNG.txt": "original/gpt2-stufe4-hochantwort/HERLEITUNG.txt",
+        "stage4-high-certificate-2026-10-16/MANIFEST.json": "original/gpt2-stufe4-hochantwort/MANIFEST.json",
+        "stage4-high-certificate-2026-10-16/sources/COMMON96_HERLEITUNG.txt": "original/gpt2-stufe4-hochantwort/sources/COMMON96_HERLEITUNG.txt",
+        "stage4-high-certificate-2026-10-16/sources/generate_a8.py": "original/gpt2-stufe4-hochantwort/sources/generate_a8.py",
+        "stage4-high-certificate-2026-10-16/sources/RESPONSE_GRAM_PROOF.txt": "original/gpt2-stufe4-hochantwort/sources/RESPONSE_GRAM_PROOF.txt",
+        "stage4-high-certificate-2026-10-16/vendor/source_core.py": "original/gpt2-stufe4-hochantwort/vendor/source_core.py"
+      }
     }
   },
   "files": {
@@ -284,12 +355,12 @@
       "sha256": "3a22be072ea20861bb30094541f96cb7cc82ce974c9af89235686f1f8e8e700a"
     },
     "PROOF.md": {
-      "bytes": 8961,
-      "sha256": "323eff5f96154d802b411f7eaaa9213f5d3dc2860b036f058296b0b1ee3e2832"
+      "bytes": 11353,
+      "sha256": "404179420e9f29047262b29e28a4a8cff3b23666aed4ab63da234deee5d7b62a"
     },
     "README.md": {
-      "bytes": 2845,
-      "sha256": "a9cc9b15eebbc9db67ad24938182dc203ba862f6a3f8ab1ca13a6147400cf84d"
+      "bytes": 3250,
+      "sha256": "c13a4d88b9fa11047f96883d60c1cde38e97d9b71677d449724d514f833b86c4"
     },
     "stufe2/MESH_even_upper_v.json": {
       "bytes": 105218,
@@ -387,6 +458,50 @@
       "bytes": 673,
       "sha256": "93c16be75c0e79529c031aa75fdff4be78453367d3343aa586926ae78ba9363c"
     },
+    "original/gpt2-stufe4-hochantwort/ANSCHLUSS_GPT1.txt": {
+      "bytes": 4659,
+      "sha256": "40c9b0c43200876e7745c204153e7564f03eed2fc643efec698c8b9caf9f0ca1"
+    },
+    "original/gpt2-stufe4-hochantwort/HERLEITUNG.txt": {
+      "bytes": 16731,
+      "sha256": "c584f04069f72271728fb4d337e8308f69212ed16cfb76c29221be5f90a0ae83"
+    },
+    "original/gpt2-stufe4-hochantwort/MANIFEST.json": {
+      "bytes": 1206,
+      "sha256": "f30889e34f112141be4d7a669f8dad39318e6fc803b85aa2c8a916d85df27c32"
+    },
+    "original/gpt2-stufe4-hochantwort/certify.py": {
+      "bytes": 14408,
+      "sha256": "a0a0ecb3b9b8b275b6eb46e0d8d6bad27d9eea5a91fd1b66bf75b074aef2ee89"
+    },
+    "original/gpt2-stufe4-hochantwort/vendor/source_core.py": {
+      "bytes": 13584,
+      "sha256": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772"
+    },
+    "original/gpt2-stufe4-hochantwort/sources/COMMON96_HERLEITUNG.txt": {
+      "bytes": 8234,
+      "sha256": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd"
+    },
+    "original/gpt2-stufe4-hochantwort/sources/RESPONSE_GRAM_PROOF.txt": {
+      "bytes": 9112,
+      "sha256": "8b92da7462796f2ae8eee23467f96e39b98fc70b0147f684dae70080d897e971"
+    },
+    "original/gpt2-stufe4-hochantwort/sources/generate_a8.py": {
+      "bytes": 13683,
+      "sha256": "49de5bdeb80dc618206b34c4db3adcb07c602758fcc343b26498b31b5cfc5213"
+    },
+    "original/gpt2-stufe4-hochantwort/expected/COMPLETE_HIGH_RESPONSE.json": {
+      "bytes": 86599,
+      "sha256": "52027262debebfdb5258a7fb74ff5280d98d81b34a347d99a91a83470362a606"
+    },
+    "original/gpt2-stufe4-hochantwort/expected/RECEIPT.json": {
+      "bytes": 1736,
+      "sha256": "94cad1e3bbe6d7b2899f6cd5222255912b032cbd4722cd88ba8ceaaa08bb65e8"
+    },
+    "original/gpt2-stufe4-hochantwort/expected/SPIKE_SCALAR_D_MODEL_ERROR.json": {
+      "bytes": 18752,
+      "sha256": "421560e42b2a50fb9391944b7a40952b8e529d215cea70d52081fb496fa4d460"
+    },
     "original/gpt1-stufe2-audit/ANSCHLUSS_PERPLEXITY.txt": {
       "bytes": 3255,
       "sha256": "807a14209148d9fdeb016a4876b3bfbde34d208960a097c0a2780a0e5380d5b1"
@@ -443,21 +558,57 @@
       "bytes": 1839,
       "sha256": "1490cefc5e9a550d2f85031926f83a8cedb6afca442b9ffa20f998b64f132cea"
     },
+    "stufe4/A8PHIC_even.json": {
+      "bytes": 158025,
+      "sha256": "bf1c299a3f634db6fab6cf6476bd086ffe79d2aa04a17468aaef9b7fa82d3ed7"
+    },
+    "stufe4/A8PHIC_odd.json": {
+      "bytes": 157163,
+      "sha256": "edf6e6a32803bc27135708a138119fdcb5d7d68589485e0dbad69ac70a95da94"
+    },
+    "stufe4/D12_ERROR_BUDGET.json": {
+      "bytes": 6787,
+      "sha256": "03c487d9d0a6c0cfa298e90832942af2a23bbf0506628df65ff3f4cd5d895904"
+    },
     "stufe4/D12_TERMS.json": {
       "bytes": 183455,
       "sha256": "0fa5f59c0df747954c00477f3fa9b69569178a8f045bf5eaa1c8f6b9ace1cc46"
+    },
+    "stufe4/HIGH_PAIRINGS_even.json": {
+      "bytes": 4996,
+      "sha256": "c2ee795c499cb04f4dad0ea5e9e991933883fb193b123c4ad807b3a76504be1c"
+    },
+    "stufe4/HIGH_PAIRINGS_odd.json": {
+      "bytes": 4991,
+      "sha256": "1cb407bb2c38b96198e76ff9874ac9c81347b521302d8356e3d730200f2574c0"
+    },
+    "stufe4/SOFTMODE_CS_CORRECTED.json": {
+      "bytes": 3440,
+      "sha256": "70688827d782a142c886bf2afefc9827555fc85a675ec3e66286e1e1b3732d4f"
     },
     "stufe4/SOFTMODE_PAIRINGS.json": {
       "bytes": 7744,
       "sha256": "34a46e1bde994bf7ebb270cbe43b0e2e43cee5418e6a54837f8c54071b3ed6cc"
     },
+    "stufe4/a8_operator.py": {
+      "bytes": 2327,
+      "sha256": "6b87bcef0c755c40ba50573876feef4721620659b882d56923e92889cb4f9172"
+    },
     "stufe4/d12_terms.py": {
       "bytes": 8060,
       "sha256": "0724fd02f6525f65dd34f298f3b52cbbe41055f51c578f1259ba1529c4423041"
     },
+    "stufe4/high_pairings.py": {
+      "bytes": 8817,
+      "sha256": "1f614880778ac739380da1b2a0292ba6efcbb61599ba458f65b6f2aebd17c959"
+    },
     "stufe4/softmode_pairings.py": {
       "bytes": 6198,
       "sha256": "bf823d2dbcb753bb0034673f445b8d91a2d2a0d8504a66124aa107c328faca18"
+    },
+    "stufe4/validate_a8.py": {
+      "bytes": 764,
+      "sha256": "f2b04ac7c4c6eab3b453fd915c99ee785dca37a80332a5806dfbdc33e3f6da7a"
     },
     "reports/STUFE1_BERICHT.md": {
       "bytes": 11753,
@@ -474,6 +625,10 @@
     "reports/STUFE4_DURCHBRUCH.md": {
       "bytes": 11495,
       "sha256": "8bcebf7f326843371194b7cf0d8fbf6543c379fb3c61a6560208e736cf37b8dd"
+    },
+    "reports/STUFE4_TEIL2_HOCHPAARUNGEN.md": {
+      "bytes": 8784,
+      "sha256": "29031255b4515f64dd6cc90523aa278c42b6346fc6d577ac12649640ef709f70"
     },
     "stufe1/PSI_DEFINITION.json": {
       "bytes": 31399,

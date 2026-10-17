@@ -1,0 +1,258 @@
+{
+ "even": {
+  "e_Psi": "0.0059303561",
+  "H_hi": "0.015916304",
+  "e_psi": "0.24772282",
+  "note": "(7.1) ohne den Term chi_upper*||h-h0|| (D_j-Modellfehler) und mit ||h8|| statt ||D_j||_H9 im e_psi-Term; Diagnose der Groessenordnung",
+  "rows": [
+   {
+    "degree": 2,
+    "ell_v_mid": "-3.21577e-7",
+    "r_vj": "-3.20842e-6",
+    "||C^T Phi*h8||": "0.3939",
+    "low_err": "0.002336",
+    "high_err": "0.006607",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.1028",
+    "budget_sum": "0.1118"
+   },
+   {
+    "degree": 4,
+    "ell_v_mid": "-3.10498e-6",
+    "r_vj": "-9.95019e-7",
+    "||C^T Phi*h8||": "0.564735",
+    "low_err": "0.003349",
+    "high_err": "0.01002",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.156",
+    "budget_sum": "0.1694"
+   },
+   {
+    "degree": 6,
+    "ell_v_mid": "-8.148e-6",
+    "r_vj": "4.448e-6",
+    "||C^T Phi*h8||": "0.766244",
+    "low_err": "0.004544",
+    "high_err": "0.01465",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.2281",
+    "budget_sum": "0.2473"
+   },
+   {
+    "degree": 8,
+    "ell_v_mid": "-1.15904e-5",
+    "r_vj": "9.19042e-6",
+    "||C^T Phi*h8||": "0.787835",
+    "low_err": "0.004672",
+    "high_err": "0.01484",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.231",
+    "budget_sum": "0.2505"
+   },
+   {
+    "degree": 10,
+    "ell_v_mid": "-5.80193e-6",
+    "r_vj": "5.90193e-6",
+    "||C^T Phi*h8||": "0.763153",
+    "low_err": "0.004526",
+    "high_err": "0.01687",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.2626",
+    "budget_sum": "0.284"
+   },
+   {
+    "degree": 12,
+    "ell_v_mid": "6.93308e-6",
+    "r_vj": "-2.93308e-6",
+    "||C^T Phi*h8||": "1.19876",
+    "low_err": "0.007109",
+    "high_err": "0.02825",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.4397",
+    "budget_sum": "0.4751"
+   },
+   {
+    "degree": 14,
+    "ell_v_mid": "1.05666e-5",
+    "r_vj": "-2.56659e-6",
+    "||C^T Phi*h8||": "1.16878",
+    "low_err": "0.006931",
+    "high_err": "0.02394",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.3725",
+    "budget_sum": "0.4034"
+   },
+   {
+    "degree": 16,
+    "ell_v_mid": "3.36028e-5",
+    "r_vj": "-1.94028e-5",
+    "||C^T Phi*h8||": "1.1109",
+    "low_err": "0.006588",
+    "high_err": "0.02519",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.3921",
+    "budget_sum": "0.4238"
+   },
+   {
+    "degree": 18,
+    "ell_v_mid": "7.30017e-6",
+    "r_vj": "1.39998e-5",
+    "||C^T Phi*h8||": "1.02061",
+    "low_err": "0.006053",
+    "high_err": "0.02497",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.3887",
+    "budget_sum": "0.4197"
+   },
+   {
+    "degree": 20,
+    "ell_v_mid": "-3.90997e-5",
+    "r_vj": "6.85697e-5",
+    "||C^T Phi*h8||": "1.36076",
+    "low_err": "0.00807",
+    "high_err": "0.03156",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.4912",
+    "budget_sum": "0.5309"
+   },
+   {
+    "degree": 22,
+    "ell_v_mid": "-3.39122e-5",
+    "r_vj": "7.26122e-5",
+    "||C^T Phi*h8||": "1.08918",
+    "low_err": "0.006459",
+    "high_err": "0.02327",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.3622",
+    "budget_sum": "0.3919"
+   },
+   {
+    "degree": 24,
+    "ell_v_mid": "4.52231e-5",
+    "r_vj": "3.77691e-6",
+    "||C^T Phi*h8||": "1.4211",
+    "low_err": "0.008428",
+    "high_err": "0.03402",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.5295",
+    "budget_sum": "0.5719"
+   }
+  ]
+ },
+ "odd": {
+  "e_Psi": "0.00024590037",
+  "H_hi": "0.0024448732",
+  "e_psi": "0.0048394819",
+  "note": "(7.1) ohne den Term chi_upper*||h-h0|| (D_j-Modellfehler) und mit ||h8|| statt ||D_j||_H9 im e_psi-Term; Diagnose der Groessenordnung",
+  "rows": [
+   {
+    "degree": 3,
+    "ell_v_mid": "5.13788e-5",
+    "r_vj": "-6.58788e-5",
+    "||C^T Phi*h8||": "0.504016",
+    "low_err": "0.0001239",
+    "high_err": "0.001607",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.003181",
+    "budget_sum": "0.004912"
+   },
+   {
+    "degree": 5,
+    "ell_v_mid": "3.35978e-5",
+    "r_vj": "-5.08978e-5",
+    "||C^T Phi*h8||": "0.582912",
+    "low_err": "0.0001433",
+    "high_err": "0.001788",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.00354",
+    "budget_sum": "0.005471"
+   },
+   {
+    "degree": 7,
+    "ell_v_mid": "-3.30837e-5",
+    "r_vj": "1.45837e-5",
+    "||C^T Phi*h8||": "0.641091",
+    "low_err": "0.0001576",
+    "high_err": "0.00204",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.004037",
+    "budget_sum": "0.006234"
+   },
+   {
+    "degree": 9,
+    "ell_v_mid": "-0.000108659",
+    "r_vj": "8.96591e-5",
+    "||C^T Phi*h8||": "0.991316",
+    "low_err": "0.0002438",
+    "high_err": "0.003456",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.006841",
+    "budget_sum": "0.01054"
+   },
+   {
+    "degree": 11,
+    "ell_v_mid": "-2.32074e-5",
+    "r_vj": "6.00744e-6",
+    "||C^T Phi*h8||": "0.810206",
+    "low_err": "0.0001992",
+    "high_err": "0.002412",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.004774",
+    "budget_sum": "0.007386"
+   },
+   {
+    "degree": 13,
+    "ell_v_mid": "0.000224722",
+    "r_vj": "-0.000239722",
+    "||C^T Phi*h8||": "1.27293",
+    "low_err": "0.000313",
+    "high_err": "0.004496",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.008899",
+    "budget_sum": "0.01371"
+   },
+   {
+    "degree": 15,
+    "ell_v_mid": "2.02947e-5",
+    "r_vj": "-3.18947e-5",
+    "||C^T Phi*h8||": "1.26776",
+    "low_err": "0.0003117",
+    "high_err": "0.004026",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.007969",
+    "budget_sum": "0.01231"
+   },
+   {
+    "degree": 17,
+    "ell_v_mid": "-9.04e-5",
+    "r_vj": "8.28e-5",
+    "||C^T Phi*h8||": "0.915643",
+    "low_err": "0.0002252",
+    "high_err": "0.002967",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.005874",
+    "budget_sum": "0.009066"
+   },
+   {
+    "degree": 19,
+    "ell_v_mid": "-0.000218419",
+    "r_vj": "0.000215219",
+    "||C^T Phi*h8||": "1.16069",
+    "low_err": "0.0002854",
+    "high_err": "0.004344",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.008599",
+    "budget_sum": "0.01323"
+   },
+   {
+    "degree": 21,
+    "ell_v_mid": "0.000239178",
+    "r_vj": "-0.000237778",
+    "||C^T Phi*h8||": "1.33072",
+    "low_err": "0.0003272",
+    "high_err": "0.004725",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.009353",
+    "budget_sum": "0.0144"
+   },
+   {
+    "degree": 23,
+    "ell_v_mid": "0.000120764",
+    "r_vj": "-0.000115064",
+    "||C^T Phi*h8||": "1.26917",
+    "low_err": "0.0003121",
+    "high_err": "0.004385",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.008679",
+    "budget_sum": "0.01338"
+   },
+   {
+    "degree": 25,
+    "ell_v_mid": "-0.000176052",
+    "r_vj": "0.000185422",
+    "||C^T Phi*h8||": "1.28299",
+    "low_err": "0.0003155",
+    "high_err": "0.004476",
+    "psi_err_(||D_j|| durch Kernnorm ersetzt)": "0.008859",
+    "budget_sum": "0.01365"
+   }
+  ]
+ }
+}

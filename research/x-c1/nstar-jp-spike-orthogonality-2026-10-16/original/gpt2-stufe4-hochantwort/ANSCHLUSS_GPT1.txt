@@ -1,0 +1,98 @@
+Objekt X — Anschluss nach der Prüfung von Stufe 4 Teil 1
+16. Oktober 2026
+
+Mit HERLEITUNG.txt beginnen, insbesondere §§2--6 und §8.
+
+NEU GESCHLOSSEN, unter den gebundenen ganzen Quellen- und
+Operatorvoraussetzungen:
+
+1. Der vollständige hohe physische Anteil u_hi der U8-Antwort ist für
+   v,p=P_upper v,e=p-alpha v gerichtet eingeschlossen, mit tatsächlichem k:
+
+                  gerade                 ungerade
+   v              <0.016                 <0.00245
+   p              <902                   <23
+   e              <4.43e-10              <5.61e-11
+
+   Hierfür braucht es keine 191 neu ausgewerteten hohen Funktionen.
+   Der ganze Modellgram G0=B0 B0* und die vollständigen Quellen-/Kreuzgrame
+   liegen bereits im gebundenen historischen Datenbestand vor.
+   ||y0-B0*c0||^2=Y0-2<c0,b0>+c0*G0c0.
+   Anschließend werden sämtliche Quellen-, k- und Kopplungsfehler bezahlt.
+   Entscheidend ist ||B*(c-c0)|| <=sqrt(tr(X H_B)) e_Psi mit
+   X=C C*/(1-rho), tr(X H_B)<21.365; nicht die große ungewichtete C-Norm.
+   Der physische Lift kostet zusätzlich sqrt(gamma_m).
+
+2. Die GANZE chi-Norm besitzt nun auch eine obere Schranke. Dadurch ist
+   für die unveränderte fixed_X-Regel der ganze D12-Modellfehler in der
+   RANG-EINS-Unterprüfung bezahlt:
+
+   |<chi_p,(R-Rhat)z>| <=epsilon_p ||z||_W,
+   epsilon_even<1.86e-13, epsilon_odd<2.668e-16.
+
+   Dhat ist vollständig physisch momentprojiziert. C_p bleibt tatsächlich;
+   R-Rhat=-(D-Dhat)T. Das ist KEINE Freigabe der gesamten W9-Modellenergie.
+   Die früher unzulässige Verwendung einer UNTERgrenze von ||W9|| als
+   Fehlerobergrenze wird nirgends benutzt.
+
+KORREKTUREN AM EINGANGSTEXT:
+
+- Die 24 numerischen D12-Paarungen beweisen keine exakte A9-Orthogonalität
+  und keine Irrelevanz des Spike für N12. Die neue C_p-Kopplung, die große
+  Antwortmatrix T, e und der kohärente Fehler bleiben entscheidend.
+- a_low[u]>=u*(F+H_B/delta)u ist eine Untergrenze. Sie darf nicht als
+  Obergrenze in den Energie-Cauchy--Schwarz-Test eingesetzt werden.
+- C C*=F_neu^-1 ist bei rho!=0 nicht exakt. U8 benutzt X=C C*/(1-rho).
+- Die physische hohe Antwort ist U^-1 M(y-B*c)/delta, nicht bloß
+  (y-B*c)/delta mit behaupteter Isometrie.
+- Übereinstimmende Quadraturen belegen keinen gerichteten Rest. Die neue
+  ganze Gramrechnung ersetzt die unsichere Normsubtraktion aus Stufe 2.
+- Große Normen im festen physischen Hilbertraum sind keine bloßen
+  Koordinatenartefakte. Sie erzwingen ebenso wenig große konkrete Paarungen.
+
+NÄCHSTER ENTSCHEIDENDER RECHENSCHRITT:
+
+Die aktuelle feste Regel und die festgelegten neuen Schalentestfunktionen
+beibehalten. Für jede Richtung z die ganze tatsächliche Modellresidual-
+funktion h0=Rhat z=C_pz-Dhat Tz gemeinsam behandeln. Wenn möglich die
+auslöschenden Beiträge vor der abschließenden großen Verstärkung verbinden.
+
+Zunächst gerichtet einschließen:
+  I0=<psi0,h0>-<c0,Phi*Pi8(h0|core)>,
+  ||h0||, ||Pi8(h0|core)||,
+  ||C*Phi*Pi8(h0|core)||.
+Die nun bewiesene hohe Normschranke und HERLEITUNG §7 liefern einen
+vollständigen bedingten Fehlerweg. Er kann zu grob ausfallen; dann den
+hohen Skalar <y-B*c,T_h Pi8(h0|core)> direkt gemeinsam integrieren oder
+den kohärenten k-Fehler enger auswerten. Kein solcher engerer Wert wird
+hier vorweggenommen.
+
+Das tatsächliche p direkt verwenden oder p=alpha v+e MIT e bezahlen.
+Die vorhandenen D12_TERMS.json-Zahlen haben noch keinen zertifizierten
+Integrationsrest und dürfen nicht als exakte Paarungen eingesetzt werden.
+Die hohen neuen C_p-Paarungen sind weiterhin unberechnet.
+
+Liegt ein vollständiges Intervall L0 für <chi_p,Rhat z> vor, gilt
+
+  <Rz,W9 Rz> >= (11/(10q))
+     max(0,dist(0,L0)-epsilon_p||z||_W)^2.
+
+Erst gegen eine gerichtete obere Grenze von K_P[z] vergleichen. Keine
+Schlussfolgerung über N12 vor dieser vollständigen Gegenüberstellung.
+Ein Ausschluss des konservativen Vergleichs widerlegt nicht die echte Form.
+
+REPRODUKTION:
+
+python -B -X utf8 certify.py --bridge-archive PATH_TO_B48_ZIP
+    --stage3-archive PATH_TO_AB7116_ZIP --response-archive PATH_TO_B8677_ZIP
+    --output PATH_TO_NEW_UNUSED_DIRECTORY
+
+Nur Python-Standardbibliothek. Die drei vollständigen Archivnamen und
+Hashes stehen in HERLEITUNG §9. Sie sind unverändert separat nötig.
+Das Eingangspaket v4 ist mit vollständigem Manifest eingebettet.
+Die drei Ergebnisdateien werden beim Replay bytegleich verglichen.
+
+Keine neuen großen Integrationen und kein neuer historischer Pivot-Replay.
+GitHub wurde nicht verändert; aktuelle PR-Heads wurden hier nicht geprüft.
+Keine exakte Orthogonalität, kein N12-Ergebnis, kein A9->A11-Abschluss.
+Externe mathematische Gesamtprüfung bleibt offen.
