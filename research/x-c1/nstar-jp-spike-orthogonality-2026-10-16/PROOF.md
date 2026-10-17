@@ -73,6 +73,14 @@ Struktur (eigene SVD-Diagnose): C ist obere Dreiecksmatrix mit größtem Singul�
 
 ## 5b. Stufe 5 (Teil 1): Mittelpunkt des Residualskalars L₀,₀ (Diagnose)
 
+**Korrektur 17.10.2026 — ÜBERHOLT:** Die im folgenden historischen Absatz
+angezeigten I₀- und L₀,₀-Mittelpunkte verwenden im ψ-Kernlift irrtümlich μ₉
+statt μ₈. `stufe5/l00.py` ist korrigiert und gegen die Stufe-2-Quelle sowie
+die Momentidentität des Lifts geprüft. Die betroffenen Zahlen müssen neu
+gerechnet werden; der Bericht `reports/STUFE5_L00_MITTELPUNKT.md` dokumentiert
+Änderungsformel und Scope. Es liegt weiterhin kein gerichtetes L₀,₀ vor.
+
+
 Für die exakt W-normierte konstante Schalenrichtung z₀ ist h = Π_a(c̃_σ − D̂Tz₀) aufgebaut (Tz₀ = X_fix·F̂z₀ mit Komponenten bis 2,6·10⁵, ‖D̂Tz₀‖ = 1,37 / 1,20, ‖h‖ = 0,3387 / 0,2948) und der Mittelpunkt I₀ = ⟨ψ_p, h⟩ − ⟨c_p, Φ*h₈⟩ = −3,1194 (gerade) / +4,5923 (ungerade) berechnet; mit dem hohen Rest α·r_v(h) (r_v(h) = 4,2·10⁻⁶ / −2,6·10⁻⁵ aus A8(Φc_v) auf einem h-angepassten Netz, innerhalb der zertifizierten Faktoren) lautet der L₀,₀-Mittelpunkt −3,36 / +4,84 gegenüber den Schwellen 980,11 / 398,77. Der kohärente F-Anteil des k-Fehlers √(b_F*G_p b_F) = 3,5·10⁻⁴ / 1,7·10⁻⁵ ersetzt die nichtkohärente Schranke e_ψ,p‖h‖ = 4751 / 13,4; verbleibendes undirektes Inventar ≈ 205 / 2,9 (ohne Quadraturreste). Alles Mittelpunkte; kein gerichtetes L₀,₀, kein Zertifikat; Details und eigene Fehler in `reports/STUFE5_L00_MITTELPUNKT.md`.
 
 ## 6. Reproduktion und Dateien

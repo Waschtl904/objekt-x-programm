@@ -506,7 +506,18 @@
    "Budgetdiagnose_featmult*norm_Phi_star_h8/sqrt(1-rho)": "0.63334051",
    "H_hi": "22.9144",
    "e_psi": "45.3577",
-   "featmult": "2.30469"
+   "featmult": "2.30469",
+   "psi_core_mass_correction": {
+    "status": "RECOMPUTATION_REQUIRED_WRONG_CORE_MASS",
+    "computed_with": "mu9 (incorrect for the core lift)",
+    "required": "mu8 = integral_0^a8 m(x)^2 dx",
+    "affected_fields": [
+     "<psi,h>",
+     "I0_midpoint=<psi,h>-<c,Phi*h8>"
+    ],
+    "derived_L00_midpoint": "superseded; recomputation required",
+    "note": "Historical numerical fields retained unchanged. Source corrected in l00.py; this is not a rerun."
+   }
   },
   "pairing_upper_v": {
    "f_mesh_contains_h_cuts": true,
@@ -523,7 +534,18 @@
    "Budgetdiagnose_featmult*norm_Phi_star_h8/sqrt(1-rho)": "6.7574791e-5",
    "H_hi": "0.00244487",
    "e_psi": "0.00483948",
-   "featmult": "0.0002459"
+   "featmult": "0.0002459",
+   "psi_core_mass_correction": {
+    "status": "RECOMPUTATION_REQUIRED_WRONG_CORE_MASS",
+    "computed_with": "mu9 (incorrect for the core lift)",
+    "required": "mu8 = integral_0^a8 m(x)^2 dx",
+    "affected_fields": [
+     "<psi,h>",
+     "I0_midpoint=<psi,h>-<c,Phi*h8>"
+    ],
+    "derived_L00_midpoint": "superseded; recomputation required",
+    "note": "Historical numerical fields retained unchanged. Source corrected in l00.py; this is not a rerun."
+   }
   }
  }
 }

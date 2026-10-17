@@ -2,7 +2,46 @@
 
 17. Oktober 2026 · AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN · Diagnose (Quadratur-Mittelpunkte), kein gerichtetes Intervall
 
-## 0. Ergebnis in einem Satz
+## Korrektur vom 17. Oktober 2026: Kernmasse in ψ
+
+**ÜBERHOLT sind die bisherigen Zahlen für ⟨ψ_t,h⟩, I₀,t und die daraus
+abgeleiteten L₀,₀-Mittelpunkte in diesem Bericht, für t = v und p und beide
+Paritäten.** Sie wurden mit dem falschen Nenner berechnet. Die historischen
+Zahlen und Logs bleiben als Fehlerbeleg erhalten; eine Neuberechnung steht aus.
+
+In `stufe5/l00.py`, Funktion `psi_core`, stand `-lambda_total*m(x)/mu`, wobei
+`mu = ∫₀ᵃ⁹ m²`. Der Kernlift Λ benötigt jedoch `mu8 = ∫₀ᵃ⁸ m²`, wie in
+`stufe1/PSI_DEFINITION.json` und `stufe2/qnp_psi.py` festgelegt. Der Nenner ist
+auf `mu8` korrigiert. Die Verwendungen von `mu` im z₀-Lift und in Πₐ bleiben
+korrekt und unverändert.
+
+Für unverändertes h lautet die exakte algebraische Änderung
+
+    ΔI₀,t = -2 λ_total,t (1/μ₈ - 1/μ₉) ∫₀ᵃ⁸ m(x)h(x) dx.
+
+Das gespeicherte `moment_r_tilde` ist ein anderes Moment und darf dafür nicht
+eingesetzt werden. Der Vergleich α·I₀,v ≈ I₀,p erkennt den gemeinsamen Fehler
+nicht. Die Funktionen h, h₈, ihre Koordinaten, b_F und die getrennt berechneten
+hohen Reste werden durch diesen Nennerpatch nicht geändert.
+
+`L00_lower_Pv_{even,odd}.json` kennzeichnen die betroffenen Paarungswerte nun
+maschinenlesbar als `RECOMPUTATION_REQUIRED_WRONG_CORE_MASS`; Zahlen wurden
+nicht nachträglich als neu gerechnet ausgegeben. Neue Läufe von `l00.py`
+speichern den verwendeten Kernhorizont und μ₈ bei jeder Paarung.
+
+Pflichtprüfung dieses Fixes: Python-Syntax, Vergleich des tatsächlichen
+`psi_core` mit der Stufe-2-Definition an 24 Punkten (beide Paritäten, beide
+Richtungen) sowie die Momentidentität des Einheitslifts in beiden Paritäten;
+außerdem Hashbindungen und kanonischer Beweisanker. Die Regression
+`python3 stufe5/test_psi_core.py` besteht und schlägt mit dem alten Nenner fehl.
+Diese Prüfung ersetzt weder den vollständigen Diagnoselauf noch gerichtete
+Quadraturreste. Die unveränderten Zertifikatsreplays sind kein Test von I₀.
+
+Die folgenden Abschnitte dokumentieren den historischen Stand. Aus ihren
+alten Mittelpunkten und dem unvollständigen Fehlerinventar folgt derzeit kein
+gerichteter Nichtausschluss und keine Bestätigung der Regel.
+
+## 0. Historisches Ergebnis (Mittelpunkte überholt)
 
 Für die exakt W-normierte konstante Schalenrichtung z₀ auf (log 3, log 11/2) ist der Mittelpunkt des Residualskalars
 L₀,₀ = ⟨χ_p(k₀), h⟩, h = Π_a(c̃_σ − D̂Tz₀), gleich **−3,36 (gerade)** bzw. **+4,84 (ungerade)**, bei natürlicher Skala ‖χ_p‖·‖h‖ ≈ 2,6·10¹⁷ bzw. 2,8·10¹⁵; die hinreichenden Ausschlussschwellen des K_P-Pakets lauten dist(0, L₀,₀) > 980,113997 bzw. > 398,766496. Die geerbten, nichtkohärenten Fehlerkonstanten ergeben ein undirektes Budget von ≈ 4,96·10³ (gerade; dominiert vom k-Fehler durch F) bzw. ≈ 16,2 (ungerade); mit kohärentem F-Anteil (§4) schrumpft es auf ≈ 205 bzw. ≈ 2,9. **Ein Ausschluss der festen Regel A9_A11_N12_MIDPOINT_INVERSE_60_V1 durch z₀ ist damit nicht in Sicht; ungerade liegt selbst das undirekte Budget um den Faktor ≈ 19 unter der Schwelle.** Ein Ergebnis unter der Schwelle bestätigt die Regel nicht; es ist ein Nichtausschluss für diese eine Richtung.

@@ -225,7 +225,8 @@ def main(direction='lower_Pv', pars=('even', 'odd')):
             def psi_core(x):
                 Pb = legendre_all(x/a, max(zdeg)+1)
                 e = lambda n: mp.sqrt(mp.mpf(2*n+1)/(2*a))*Pb[n]
-                return -lam_total*m(x)/mu - sum(kz[i]*(e(zdeg[i]) - e(sigma)*ratios[i]) for i in range(4))
+                # Lambda lifts into (0,a8); its mass is mu8 (PSI_DEFINITION), not the a9 mass mu.
+                return -lam_total*m(x)/mu8 - sum(kz[i]*(e(zdeg[i]) - e(sigma)*ratios[i]) for i in range(4))
             def psi_shell(x):
                 Pl = legendre_all(2*(x-cc)/h89, N)
                 return sum(shell[n]*mp.sqrt(mp.mpf(2*n+1)/(2*h89))*Pl[n] for n in range(N))
@@ -255,6 +256,7 @@ def main(direction='lower_Pv', pars=('even', 'odd')):
             row = {'f_mesh_contains_h_cuts': f_mesh_ok, '<psi,h>': mp.nstr(psi_h, 15), '<psi,h>_Schale': mp.nstr(psi_h_shell, 15), '<f,h8>': mp.nstr(f_h8, 15), 'a_f': mp.nstr(a_f, 12),
                    '<Phi*f,Phi*h8>': mp.nstr(phif_phih, 15), '<y_f,y_h>/delta (Teil des hohen Restes r=(1/delta)<y_f-B*c,y_h>, NICHT vom Mittelpunkt abzuziehen)': mp.nstr(yf_yh_over_delta, 15),
                    '<c,Phi*h8>': mp.nstr(c_phih, 15),
+                   'psi_core_mass_horizon': 'a8', 'psi_core_mu': mp.nstr(mu8, 60),
                    'I0_midpoint=<psi,h>-<c,Phi*h8>': mp.nstr(I0, 15),
                    'hoher_Rest_Schranke_H_hi*norm_h8 (undirected, ||y_h||<=||h8||)': mp.nstr(H_hi*norm_h8, 8),
                    'Budgetdiagnose_e_psi*norm_h': mp.nstr(e_psi*norm_h, 8), 'Budgetdiagnose_featmult*norm_Phi_star_h8/sqrt(1-rho)': mp.nstr(fm*norm_phih/mp.sqrt(1-rho), 8),
