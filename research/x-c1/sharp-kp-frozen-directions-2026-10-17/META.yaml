@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "SHARP-KP-FROZEN-SHELL-DIRECTIONS",
+  "date": "2026-10-17",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Directed two-sided actual K_P enclosures for exactly two previously frozen W-unit shell directions, from full autocorrelation energy and the response subtraction under the bound operator/domain/source hypotheses. Both sharper sufficient scalar tests are inconclusive with the inherited L intervals.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "No exclusion or nonexclusion under the sharper thresholds, no N12 result, no rule confirmation, no new candidate selection or whole-space K_P matrix, no Object X or RH conclusion.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No external mathematical review or status promotion.",
+    "No new scalar pairing integration; inherited directed L intervals remain bound inputs.",
+    "Earlier nonexclusion against explicitly coarse majorants remains a historical result for that test."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/PROOF.md",
+    "sha256": "958c4e61a700a4f42c7cb4df2ed069c06bd01ab133e03f4419451a15dd12e24a"
+  }
+}

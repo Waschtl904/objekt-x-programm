@@ -1,0 +1,21 @@
+{
+  "repository_files": {
+    "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/FROZEN_even.json": "9feba325ee62bd5bb37477c10f3943b1dd7cea902324f6001a64c6000a6ee90d",
+    "research/x-c1/frozen-shell-direction-certificates-2026-10-17/expected/FROZEN_CERTIFICATE_even.json": "e6cd3b1df8134d0d75237a6fdd128911de6163bd1e82d127a9b64aeec6282e8a",
+    "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/FROZEN_odd.json": "b8833f55b9ddf527132d7afe167a4603c344a1329127077c28982f3f947ed8d9",
+    "research/x-c1/frozen-shell-direction-certificates-2026-10-17/expected/FROZEN_CERTIFICATE_odd.json": "8b2fbd7f18a8ae127498b63fa685e29115c9a246fd2cfd80d8628acf9d510776",
+    "research/x-c1/frozen-shell-direction-certificates-2026-10-17/PROOF.md": "4945da1ea9318fd555a3932f079e2767d6dde07cb59a256b3557245921713a9b",
+    "research/x-c1/frozen-shell-direction-certificates-2026-10-17/INPUT_BINDINGS.json": "c34720ca18e754d1b031afae9a6b5d5ebcdf7ea6d04785529eb793dc8134492d",
+    "research/x-c1/frozen-shell-direction-certificates-2026-10-17/MANIFEST.json": "08153f5506264727e7be2b198b8e8fb930b4ce49801bd738e7b9815ed7060123",
+    "research/x-c1/frozen-shell-direction-certificates-2026-10-17/certify.py": "55951736dfbda7719b588e0792b77ae35df61a97be80424e1b7cf2086b9199f8",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/expected/BUDGET_BOUNDS.json": "6229acf4bee398d2262c08a086fb36dd8945135ee860bb591e8218551c291613",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/HERLEITUNG.txt": "85059c5108a708a34e633e71764f238f40374254d4482e2b09d6af19eed3acfd",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/MANIFEST.json": "344a433e9f6aa189c1ad246bc079bbd940fdaff92ee20f3693f6cb40d970edd2",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/expected/RECEIPT.json": "6a3170211ec979214919af22fac0b6c3f86d9286a53d56945014e48705c20e4a",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/verify.py": "9e3f12fe8b15abe9cc7d073a9b62ea0e280b4089e4bc103aa764db1e1d4fde8d"
+  },
+  "response_archive": {
+    "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip",
+    "sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee"
+  }
+}
