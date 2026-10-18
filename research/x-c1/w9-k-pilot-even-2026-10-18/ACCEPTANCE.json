@@ -1,0 +1,31 @@
+{
+  "local_verification_commit": "20a78c725c1b754f2e494ec85eceaf6a3ddde8f8",
+  "archive_sha256": "1a5b0b4627bb95676fde6e7ee9a820bb0c6aacbb0658eebfb0a7ae46266a9e9c",
+  "archive_bytes": 1374341120,
+  "archive_entries": 4182,
+  "archive_and_extract_seconds": 15.378,
+  "replay_returncode": 0,
+  "replay_wall_seconds": 42.652,
+  "status": "PASS_FRESH_FULL_ARCHIVE_REPLAY",
+  "date": "2026-10-18",
+  "first_run_seconds": 51.97,
+  "replay_internal_seconds": 42.454,
+  "time_limit_seconds_per_invocation": 1800,
+  "outputs": {
+    "SCHUR.json.gz": "7beccd20e6b58edd7dd2b31acbcb447381bb25475597007ba368c7278de90784",
+    "RESULT.json": "2fba394c6146868c95d50ad9259864927dcf1d379cff0e0652c055e915465bf0"
+  },
+  "both_outputs_byte_equal": true,
+  "rational_positive_pivots": 287,
+  "registry_validator": "PASS",
+  "generated_views": "PASS",
+  "registry_unit_tests": 60,
+  "diff_check": "PASS",
+  "python_version": "3.12.14",
+  "python_flint_version": "0.9.0",
+  "new_integrations": false,
+  "RL_computed": false,
+  "external_review_open": true,
+  "milestone_4_closed": false,
+  "publication_note": "Final publication adds this receipt and refines candidate-limited metadata only; all calculation, input, proof and output bytes remain exactly those replayed from the listed archive."
+}

@@ -2979,6 +2979,11 @@
       "id": "W9-STRUCTURAL-COMPARISON-PILOT-DECISION",
       "meta_path": "research/x-c1/w9-structural-decision-2026-10-18/META.yaml",
       "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "W9-EVEN-K-PILOT-PARTIAL-COMPARISON",
+      "meta_path": "research/x-c1/w9-k-pilot-even-2026-10-18/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
     }
   ],
   "transport_status": {
