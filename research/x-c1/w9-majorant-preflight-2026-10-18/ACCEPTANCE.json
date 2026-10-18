@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "fresh_full_repository_archive_replay": "BYTE_EQUAL",
+  "local_verification_commit": "627526e21eb5555c348703285c7596ece1d9f18b",
+  "verification_tree": "7a9dcbcf04d88bbed712479247f979b567a410f0",
+  "archive_format": "git archive tar",
+  "archive_sha256": "a12ac613348cd68e68a49035d76633d1906ed11cbce2e6182a3ae77048f10396",
+  "archive_bytes": 1373931520,
+  "replay_seconds": 1.751,
+  "total_archive_and_checks_seconds": 31.562,
+  "replay_manifest_sha256": "ee91be6670710e595b2064b55ae4e1f46b89aa69b6ee3dcb23eb9ca51ab33c83",
+  "expected_sha256": "c82568566b55baaea3bcb98a888d5708edabe72832f2c2b2aafc2e673aa96f13",
+  "program_sha256": "7b5eac69e7d6debd0654cffecad8264ee38d8780c8405edd5e29843f14b832d9",
+  "input_bindings_sha256": "3b65e94991a1e8bb68dafc7d9753ddb19b707695a162888c48ccb498efbf2172",
+  "python_optimized_rejected": true,
+  "modified_bound_input_rejected": true,
+  "registry_validator": "PASS",
+  "generated_views": "CHECK_PASS",
+  "registry_tests": 60,
+  "new_integrations": false,
+  "new_RL_calculation": false,
+  "note": "Receipt added after the replay. Previously replayed package bytes remain unchanged; final MANIFEST additionally binds this receipt. Mathematical external review remains open."
+}
