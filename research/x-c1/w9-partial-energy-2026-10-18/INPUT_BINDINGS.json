@@ -1,0 +1,438 @@
+{
+  "source_commit": "0144b2feeb732c506f9ac19c059b2b849104dc0e",
+  "files": {
+    "stage3_archive": {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip",
+      "sha256": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52",
+      "role": "OLD_A9_CERTIFICATE",
+      "previous_inventory_used_fields": [
+        "selected members below"
+      ]
+    },
+    "renewal_archive": {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/archives/Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13.zip",
+      "sha256": "a1fa41958d79ab16a7c42b12375c3373f5a86a99993ae2d23c984ff6b3b2e8ae",
+      "role": "OLD_A9_CERTIFICATE",
+      "previous_inventory_used_fields": [
+        "selected members below"
+      ]
+    },
+    "response_archive": {
+      "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip",
+      "sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee",
+      "role": "DIRECTED_CERTIFICATE",
+      "previous_inventory_used_fields": [
+        "selected members below"
+      ]
+    },
+    "coherent": {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-und-kohaerenter-transport/expected/COHERENT_TRANSPORT_INPUTS.json",
+      "sha256": "c0c882ba85bf3ee56a433b5c5bf5d5c5c0341f2a9e03e213e6e19c460aba5666",
+      "role": "OLD_A9_CERTIFICATE",
+      "previous_inventory_used_fields": [
+        "parities.*.K_rational",
+        "parities.*.K_inverse_rational"
+      ]
+    },
+    "high_response": {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/expected/COMPLETE_HIGH_RESPONSE.json",
+      "sha256": "52027262debebfdb5258a7fb74ff5280d98d81b34a347d99a91a83470362a606",
+      "role": "DIRECTED_CERTIFICATE",
+      "previous_inventory_used_fields": [
+        "*.tr_X_HB_exact_rational",
+        "*.full_M_norm_squared"
+      ]
+    },
+    "domain_check": {
+      "path": "research/x-c1/a9-domain-continuation-2026-10-13/original/CHECK.json",
+      "sha256": "ebdf8da2840d2ab77fa01fcdc78c3aabeff23ad8fc59937b1d54da88006dc9b6",
+      "role": "OLD_A9_CERTIFICATE",
+      "previous_inventory_used_fields": [
+        "cases.*.K_minus_1e_minus_16_I_positive_pivots"
+      ]
+    },
+    "domain_proof": {
+      "path": "research/x-c1/a9-domain-continuation-2026-10-13/original/HERLEITUNG.txt",
+      "sha256": "e6075606f6a26c354f1eb756b568f91cbb7a0b035022b44ef60a0120ae4ea819",
+      "role": "ANALYTIC_IDENTITY",
+      "previous_inventory_used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "inverse_proof": {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt",
+      "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7",
+      "role": "ANALYTIC_IDENTITY",
+      "previous_inventory_used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "nstar_proof": {
+      "path": "research/x-c1/a9-inverse-spike-calibration-2026-10-15/original/nstar/FUNKTIONSANSCHLUSS.txt",
+      "sha256": "39664818da04df1e7c8253e09d078a16ccf2729b964747fa067807a8f3bb18bb",
+      "role": "ANALYTIC_IDENTITY",
+      "previous_inventory_used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "response_proof": {
+      "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/PROOF.md",
+      "sha256": "8219d5e4f544cc42a4808d6d033c56c608939652b4d851cae881a00842ed84e3",
+      "role": "ANALYTIC_IDENTITY",
+      "previous_inventory_used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "work_order": {
+      "path": "research/x-c1/a9-a11-certificate-calibration-2026-10-15/WORK_ORDER.md",
+      "sha256": "ead51395f495ea5cae0ff08a6726eb2a420668f584e2914f8763cf53b5f4a7e8",
+      "role": "ANALYTIC_IDENTITY",
+      "previous_inventory_used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "search_builder": {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/build_data.py",
+      "sha256": "fd63e0694c85448ec61e8deeae42d43e0dee491ec6fb1d6207bacf3430e16135",
+      "role": "INHERITED_HYPOTHESIS",
+      "previous_inventory_used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "reassessment_proof": {
+      "path": "research/x-c1/shell-search-reassessment-2026-10-17/PROOF.md",
+      "sha256": "db37cda98c73881106e6d860b8526460ed9f0b2c3aa19543382beac0034f70e4",
+      "role": "ANALYTIC_IDENTITY",
+      "previous_inventory_used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "high_derivation": {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/certify.py",
+      "sha256": "a0a0ecb3b9b8b275b6eb46e0d8d6bad27d9eea5a91fd1b66bf75b074aef2ee89",
+      "role": "INHERITED_HYPOTHESIS",
+      "previous_inventory_used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "renewal_audit": {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/AUDIT.json",
+      "sha256": "33456af98d0ba6151639c66729d12ef3f12bc695f14a9e0985c2115ba0e61783",
+      "role": "INHERITED_HYPOTHESIS",
+      "previous_inventory_used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "maps_even_384": {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_even_384.json",
+      "sha256": "5617f0aa24b67584196e066e43c6f4004eff33fb851b6a0eed36fd771cc39c88",
+      "role": "NEW_RAW_DATA",
+      "numerical_status": "EXPLORATORY_NOT_DIRECTED",
+      "previous_inventory_used_fields": [
+        "status",
+        "G_W",
+        "H_gram",
+        "H8_gram",
+        "feature_factor",
+        "b_F",
+        "Fhat",
+        "T"
+      ]
+    },
+    "maps_even_512": {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_even_512.json",
+      "sha256": "19de781646891b4fc57d5f09b9d2d4fb46fb86957151ba253fc747ec5e57085e",
+      "role": "NEW_RAW_DATA",
+      "numerical_status": "EXPLORATORY_NOT_DIRECTED",
+      "previous_inventory_used_fields": [
+        "status",
+        "G_W",
+        "H_gram",
+        "H8_gram",
+        "feature_factor",
+        "b_F",
+        "Fhat",
+        "T"
+      ]
+    },
+    "maps_odd_384": {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_odd_384.json",
+      "sha256": "1f8b22919c542cda123b24c4eb295c7e1e74887a8461debe45fea69835211dc0",
+      "role": "NEW_RAW_DATA",
+      "numerical_status": "EXPLORATORY_NOT_DIRECTED",
+      "previous_inventory_used_fields": [
+        "status",
+        "G_W",
+        "H_gram",
+        "H8_gram",
+        "feature_factor",
+        "b_F",
+        "Fhat",
+        "T"
+      ]
+    },
+    "maps_odd_512": {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_odd_512.json",
+      "sha256": "5b2aa30f093eeb7cca18099363fb36fedc9036e7fa320bf8ea6a29f952aeee21",
+      "role": "NEW_RAW_DATA",
+      "numerical_status": "EXPLORATORY_NOT_DIRECTED",
+      "previous_inventory_used_fields": [
+        "status",
+        "G_W",
+        "H_gram",
+        "H8_gram",
+        "feature_factor",
+        "b_F",
+        "Fhat",
+        "T"
+      ]
+    },
+    "nstar_archive": {
+      "path": "research/x-c1/a9-inverse-spike-calibration-2026-10-15/archives/Objekt-X-Nstar-Jp-Funktionsanschluss-und-Koeffizienten-2026-10-16.zip",
+      "sha256": "b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b",
+      "role": "Previously bound complete old function archive"
+    },
+    "inventory_proof": {
+      "path": "research/x-c1/w9-energy-inventory-2026-10-17/PROOF.md",
+      "sha256": "e625e96aad71bea9a5aa485b9c551525a8db14c78db866269e26c495fe382b0f",
+      "role": "Analytic formula and quadrature provenance"
+    },
+    "sharp_kp_proof": {
+      "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/PROOF.md",
+      "sha256": "0ef062d456202482dcdbf3301b7bc945d96fdea10ad61de1466565ec415dcc5f",
+      "role": "Analytic formula and quadrature provenance"
+    },
+    "common96_builder": {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-direkte-restform-und-positiver-96er-block-2026-10-11/refine_old_majorant.py",
+      "sha256": "9afeec7892426041858a524de3f9e3e9d2b46578876de0e9f1540edfd6012730",
+      "role": "Analytic formula and quadrature provenance"
+    },
+    "previous_maps_code": {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/build_data.py",
+      "sha256": "fd63e0694c85448ec61e8deeae42d43e0dee491ec6fb1d6207bacf3430e16135",
+      "role": "Analytic formula and quadrature provenance"
+    },
+    "previous_interval_code": {
+      "path": "research/x-c1/l00-z0-directed-interval-2026-10-17/certify.py",
+      "sha256": "6927e4090e4575bbdaa06248bd3216cfe0b62f906eb834c68907f0bc1af8585b",
+      "role": "Analytic formula and quadrature provenance"
+    },
+    "kp_budget": {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/expected/BUDGET_BOUNDS.json",
+      "sha256": "6229acf4bee398d2262c08a086fb36dd8945135ee860bb591e8218551c291613",
+      "role": "Analytic formula and quadrature provenance"
+    },
+    "kp_even": {
+      "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/expected/SHARP_K_even.json",
+      "sha256": "67332794271c32d2ac4b8a334d517cf6f9055ce215141df5a96f3bd8ff06f1fe",
+      "role": "Analytic formula and quadrature provenance"
+    },
+    "kp_odd": {
+      "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/expected/SHARP_K_odd.json",
+      "sha256": "2f699be798952ded396336b07c3c7f2e61398f8d1baec6a504716a04b24a0f01",
+      "role": "Analytic formula and quadrature provenance"
+    },
+    "old_candidate_even": {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/FROZEN_even.json",
+      "sha256": "9feba325ee62bd5bb37477c10f3943b1dd7cea902324f6001a64c6000a6ee90d",
+      "role": "Analytic formula and quadrature provenance"
+    },
+    "old_candidate_odd": {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/FROZEN_odd.json",
+      "sha256": "b8833f55b9ddf527132d7afe167a4603c344a1329127077c28982f3f947ed8d9",
+      "role": "Analytic formula and quadrature provenance"
+    },
+    "kp_model_even": {
+      "path": "research/x-c1/shell-search-reassessment-2026-10-17/data/K_MAP_even_128.json",
+      "sha256": "40b687ff0d3ddf302c9c874c126f255c1899ab3732683404ee74734ddbab939d",
+      "role": "Analytic formula and quadrature provenance"
+    },
+    "kp_model_odd": {
+      "path": "research/x-c1/shell-search-reassessment-2026-10-17/data/K_MAP_odd_128.json",
+      "sha256": "a2f746b0fc3bde82aa9a5ef2a7c72b12fb60c3a14986a7c346272e9ea28c72d7",
+      "role": "Analytic formula and quadrature provenance"
+    },
+    "psi": {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt1-stufe1-zertifikat/expected/PSI_CORRECTED.json",
+      "sha256": "3e1bc5db6114333434891a52bef8f3bf6822779b52d14585d249d67943d8c7a1",
+      "role": "Analytic formula and quadrature provenance"
+    },
+    "finite_action": {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe3-endliche-u8-antwort/expected/FINITE_ACTION.json",
+      "sha256": "689636e2b11efcc828100f93b512d4375c8bfebfe8c4a37e3c7c1320f31ed551",
+      "role": "Analytic formula and quadrature provenance"
+    },
+    "l00_even": {
+      "path": "research/x-c1/l00-z0-directed-interval-2026-10-17/expected/L00_CERTIFICATE_even.json",
+      "sha256": "52399adf3016e6691151adaa24a1adfa943e2c543d95e222b85898f82de5d9c8",
+      "role": "Analytic formula and quadrature provenance"
+    },
+    "l00_odd": {
+      "path": "research/x-c1/l00-z0-directed-interval-2026-10-17/expected/L00_CERTIFICATE_odd.json",
+      "sha256": "71c26e4d5b5dc1b662eae79ff244dd3099b51b0370154506b86902224431dff8",
+      "role": "Analytic formula and quadrature provenance"
+    }
+  },
+  "members": {
+    "common": {
+      "archive": "stage3_archive",
+      "member": "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/inputs/REFINED_COMMON96.json.gz",
+      "sha256": "306acbacf5f4089fe703f655bf4340087f0ae88aeaab416c0282e9e24c1638df",
+      "previous_inventory_used_fields": [
+        "cases.*.{delta,rho,inverse_congruence_integer_matrix,inverse_congruence_denominator,finite_cross_C84_new_model}"
+      ]
+    },
+    "old_sources": {
+      "archive": "stage3_archive",
+      "member": "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/inputs/REFINED_INPUT.json.gz",
+      "sha256": "c67a44d7cc052bff32ed2768b81595367c710f9308f0f1716b213a74766b1e64",
+      "previous_inventory_used_fields": [
+        "cases.*.old_certificate.{source_c_model,source_Bh_model,source_h_gram_model,joint_high_source_error_gram}",
+        "cases.*.galerkin.{old_low_c_model,old_low_Bh_model,H84_model,complete_source_high_cross_model}"
+      ]
+    },
+    "response": {
+      "archive": "response_archive",
+      "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/RESPONSE_ENERGY.json",
+      "sha256": "7b247fd48e80bab6b34fe02b771dcdcdb0219efdd385285d9a5b52bca1f469d5",
+      "previous_inventory_used_fields": [
+        "parities.*.fixed_X.{physical_TT_adjoint_upper,T_norm_squared_upper,whole_Hilbert_residual_model_error_upper}"
+      ]
+    },
+    "functions": {
+      "archive": "response_archive",
+      "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/inputs/FUNCTIONS12.json",
+      "sha256": "7c13f08ad85084379249c4a08b7c8bda0813eaea72939ba385cb3756b2801b3c",
+      "previous_inventory_used_fields": [
+        "parities.*.whole_D12_operator_error_upper"
+      ]
+    },
+    "inverse_even": {
+      "archive": "renewal_archive",
+      "member": "Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13/INVERSE_EVEN.json",
+      "sha256": "56d1fbbf7b985debba2bc9e92d404f29adf7985c2779ecf058c841fcc7aded50",
+      "previous_inventory_used_fields": [
+        "P_upper_rational",
+        "candidate_P_upper_trace",
+        "beta"
+      ]
+    },
+    "inverse_odd": {
+      "archive": "renewal_archive",
+      "member": "Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13/INVERSE_ODD.json",
+      "sha256": "5cd91520b6f3c6170d09eee6b0b9aa10d2e707fc13219970d6ebc4b57befb772",
+      "previous_inventory_used_fields": [
+        "P_upper_rational",
+        "candidate_P_upper_trace",
+        "beta"
+      ]
+    },
+    "global_archive": {
+      "archive": "nstar_archive",
+      "member": "Objekt-X-Nstar-Jp-Funktionsanschluss-und-Koeffizienten-2026-10-16/inputs/Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13.zip",
+      "sha256": "2ca3c682de8a529b12a0d628c2b606fd04df332d1299ccd36dff71ac3e53d80c",
+      "role": "Bound old function reconstruction"
+    },
+    "frozen_response": {
+      "archive": "response_archive",
+      "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/inputs/FROZEN_RESPONSE12.json",
+      "sha256": "132959da5d34c0c89471ee15f7c34d8b4a42ad48c641b6c4db5181113d11426a",
+      "role": "Bound old function reconstruction"
+    },
+    "fresh_A12": {
+      "archive": "response_archive",
+      "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/inputs/FRESH_A12.json",
+      "sha256": "c0d9707b267dacae5a73072bf952a267a509f86a9442c89475d6c7407027fdb8",
+      "role": "Bound old function reconstruction"
+    },
+    "a8_model": {
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/remainder-integration-check-v2/originals/weighted-response/inputs/a8_model.json.gz",
+      "sha256": "fb03cbc04183ce3c9032773de4ccde4969e706f835af99c7a6c680fd85e40a75",
+      "role": "Bound old function reconstruction"
+    },
+    "half": {
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/remainder-integration-check-v2/originals/half-inverse/expected/1536.json",
+      "sha256": "d828be18959b85474419a5e435875c6569bcf6a26c9ea88b3db38820d95aeb46",
+      "role": "Bound old function reconstruction"
+    },
+    "basis_even": {
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/basis-coverage-2026-10-10/BASIS_EVEN.json",
+      "sha256": "e223621b70fb4136e6653fae83d47789373c7fc2f883a1aa77f52235a0c667ab",
+      "role": "Bound old function reconstruction"
+    },
+    "basis_odd": {
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/basis-coverage-2026-10-10/BASIS_ODD.json",
+      "sha256": "9dc22c2a0b8417184d174f57ab0a8222ae593ea8091fc19902ec345341c50628",
+      "role": "Bound old function reconstruction"
+    },
+    "frozen_J_even": {
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/galerkin84-2026-10-10/MODEL_RAY_EVEN_3072.json",
+      "sha256": "4ef3417e73b0080f2ce06a71ab85def2525ed1180f4016d4d20be682589fd6be",
+      "role": "Bound old function reconstruction"
+    },
+    "frozen_J_odd": {
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/galerkin84-2026-10-10/MODEL_RAY_ODD_3072.json",
+      "sha256": "38064e460f22532582cb85bc6970670d6b0f584c2c0746e6abe39d8fd31fc535",
+      "role": "Bound old function reconstruction"
+    },
+    "frozen_Y_even": {
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/u00-2026-10-07/CENTRES_EVEN_4096.json",
+      "sha256": "ca822ab0ddf8c30f997d4cd3d45f98551e999a4a2ce59de86cb0982559dd438c",
+      "role": "Bound old function reconstruction"
+    },
+    "frozen_Y_odd": {
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/u00-2026-10-07/CENTRES_ODD_4096.json",
+      "sha256": "f0184e21dc455bb949ff4c9ba6c5a785881cf78992e5ec24f0f0118346eb7873",
+      "role": "Bound old function reconstruction"
+    },
+    "old_global_code": {
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/global-model-2026-10-12/compute_global_model.py",
+      "sha256": "bec0e7c266cb2bae50dfc93e0150786000a55ae89b3effb95d2ba2a06b5c16b4",
+      "role": "Bound old function reconstruction"
+    },
+    "old_source_code": {
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/tail-probe-2026-10-10/vendor/source_core.py",
+      "sha256": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772",
+      "role": "Bound old function reconstruction"
+    },
+    "old_kernel_code": {
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/tail-probe-2026-10-10/vendor/eight_source_refined.py",
+      "sha256": "baac27c2684d7683cdc586032a681a84d1b3f044750b9e2e80378fae7f204501",
+      "role": "Bound old function reconstruction"
+    }
+  },
+  "forbidden_input_class": "FORBIDDEN_TARGET_POSITIVITY",
+  "target_A11_positive_data_used": false,
+  "previous_inventory_source_commit": "27dfebb03dc4bf10265797b575fcbe08a15eb500",
+  "usage_note": "Every listed file/member is bound in full. Previous inventory field lists describe #237 only. Current numerical consumers and complete block roles are specified below and in PROOF.md; inherited derivations are not re-audited.",
+  "current_numerical_consumers": {
+    "common": "G96, U96, D96 lower/upper, a_fin model, finite feature errors, C8, delta, rho",
+    "old_sources": "low and high old F/J source coordinates, source errors and high Grams",
+    "inverse_even/inverse_odd": "P_upper_rational",
+    "coherent": "K_rational and K_inverse_rational",
+    "high_response": "tr_X_HB_exact_rational and full_M_norm_squared",
+    "functions": "all twelve analytic F/D functions and whole_D12_operator_error_upper",
+    "response": "whole_Hilbert_residual_model_error_upper and direct_K_error_upper",
+    "a8_model": "Gamma polynomial and A model intervals",
+    "half": "basis_Q_local_coefficients and half_inverse_centre_rational_Q_coefficients",
+    "basis_even/basis_odd": "D_rational",
+    "frozen_Y_even/frozen_Y_odd": "Y_local_rational_midpoints",
+    "frozen_J_even/frozen_J_odd": "working_basis_midpoints_rational",
+    "frozen_response/fresh_A12": "exact X and A12 model midpoint for the fixed rule",
+    "maps_even_512/maps_odd_512": "feature_factor and b_F, consistency controls only",
+    "psi/finite_action/l00_even/l00_odd": "independent z0 I0 consistency control",
+    "old_candidate_even/old_candidate_odd/kp_even/kp_odd/kp_budget": "previous fixed directions and directed budgets",
+    "kp_model_even/kp_model_odd": "exploratory candidate selection only"
+  }
+}

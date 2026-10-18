@@ -2959,6 +2959,11 @@
       "id": "W9-ENERGY-INVENTORY-WEIGHTED-ERROR-INTERFACE",
       "meta_path": "research/x-c1/w9-energy-inventory-2026-10-17/META.yaml",
       "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "W9-PARTIAL-ENERGY-COMMON-PAIRINGS",
+      "meta_path": "research/x-c1/w9-partial-energy-2026-10-18/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
     }
   ],
   "transport_status": {
