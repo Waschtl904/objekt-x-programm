@@ -137,5 +137,6 @@ Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getre
 - `W9-PARTIAL-ENERGY-COMMON-PAIRINGS`: PENDING_STATUS_REVIEW — `research/x-c1/w9-partial-energy-2026-10-18/META.yaml`.
 - `W9-RESPONSE-MATRIX-BOUNDED-PREFLIGHT`: PENDING_STATUS_REVIEW — `research/x-c1/w9-response-preflight-2026-10-18/META.yaml`.
 - `W9-INVERSE-MAJORANT-BOUNDED-PREFLIGHT`: PENDING_STATUS_REVIEW — `research/x-c1/w9-majorant-preflight-2026-10-18/META.yaml`.
+- `W9-STRUCTURAL-COMPARISON-PILOT-DECISION`: PENDING_STATUS_REVIEW — `research/x-c1/w9-structural-decision-2026-10-18/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).
