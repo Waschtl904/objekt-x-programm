@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "bounded_fresh_package_replay": "BYTE_EQUAL",
+  "python_optimized_rejected": true,
+  "wall_seconds": 1.842,
+  "expected_sha256": "91aa49f5974ecfc361e51c06d18a43945065d0e1ce8ecb08efdc690a7c2256d3",
+  "source_commit": "19d27b12c06500e2b1266e560a13f67974991f1d",
+  "replay_manifest_sha256": "06c85b75c162f837112d446a6183d555e22c8e64d8e482de4907aeda1570ea4b",
+  "program_sha256": "fabe20501bb34a3e610598b879cf08ddd7747649f38aec570b76a40c9c56ca5c",
+  "input_bindings_sha256": "9c9b7be8216c201f7d944df9895cd21c173f7ca7194ff639879907319e50911a",
+  "registry_validator": "PASS",
+  "generated_views": "CHECK_PASS",
+  "registry_tests": 60,
+  "new_quadrature": false,
+  "new_RL_calculation": false,
+  "note": "This receipt was added after the isolated replay. All previously replayed package files are unchanged; final MANIFEST additionally binds this receipt."
+}

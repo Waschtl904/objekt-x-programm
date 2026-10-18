@@ -135,5 +135,6 @@ Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getre
 - `SHELL-SEARCH-COHERENT-TRANSPORT-REASSESSMENT`: PENDING_STATUS_REVIEW — `research/x-c1/shell-search-reassessment-2026-10-17/META.yaml`.
 - `W9-ENERGY-INVENTORY-WEIGHTED-ERROR-INTERFACE`: PENDING_STATUS_REVIEW — `research/x-c1/w9-energy-inventory-2026-10-17/META.yaml`.
 - `W9-PARTIAL-ENERGY-COMMON-PAIRINGS`: PENDING_STATUS_REVIEW — `research/x-c1/w9-partial-energy-2026-10-18/META.yaml`.
+- `W9-RESPONSE-MATRIX-BOUNDED-PREFLIGHT`: PENDING_STATUS_REVIEW — `research/x-c1/w9-response-preflight-2026-10-18/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).
