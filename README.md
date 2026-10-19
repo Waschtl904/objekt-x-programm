@@ -28,8 +28,9 @@ Die projektintern hergeleiteten Ergebnisse sind zur externen Prüfung offen.
 
 ## Forschungsstand in Kürze
 
-Die folgende Zusammenfassung bezieht sich auf den integrierten Forschungsstand
-und die Folgepakete bis **14. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
+Die folgende Zusammenfassung erfasst den veröffentlichten Forschungsbestand
+einschließlich des noch ungemergten Integrationskandidaten #241 bis
+**19. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
 die gepinnten Beweisanker verwaltet das
 [Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml).
 
@@ -41,12 +42,15 @@ die gepinnten Beweisanker verwaltet das
 | Ungerade Winkeldiagnose | Gemeinsamer Y-Kernel: central ≤2.933357°, quarter ≤3.070163°, half ≤3.642693°; Endpunktfolge: five_eighths ≤4.933780° | Bedingte Schnitte; Root bleibt `UNRESOLVED` |
 | H₀-Folgeuntersuchung | Exaktes Hindernis für die benannte letzte Drei-Cut-Relaxation | Kein ursprünglicher Operatorgegenzeuge; vollständiges H₀ unentschieden |
 | Konstruktiver Anschluss A8→A9 | [Bedingter globaler Schurabschluss](research/x-c1/a8-a9-global-closure-2026-10-13/README.md): vollständiger Formdualrest und positiver Anschluss auf dem ganzen neuen Raum | Gebundene Operator-, Domänen- und Raumzerlegungsvoraussetzungen; weitere konstruktive Übergänge und allgemeine Fortsetzung offen; der ursprüngliche Tail ist inzwischen bedingt geschlossen |
-| A9-Inverserneuerung | [Gemeinsame A9-Inversmajorante und Boden 2/3 W_X](research/x-c1/a9-inverse-renewal-2026-10-13/README.md) auf dem ganzen neuen hohen Schurrest nach Basis84-Elimination | Neuer L-orthogonaler Rest; der Anschluss zum ursprünglichen Tail steht im gesonderten Komplementwechsel, nächste Quellenintegrale offen |
-| Ursprünglicher Basis84-Tail | [Komplementwechsel und Gegenprüfung](research/x-c1/basis84-tail-closure-2026-10-14/README.md): tau auf Z84 mindestens 2/3 W_X; Restriktionsinverse höchstens 3/2 I; Ziel 1/20 geschlossen | Bedingt auf die gebundenen Voraussetzungen; kein Boden 2/3 auf ganz A9, kein neuer Residualgram |
+| A9-Inverserneuerung | [Gemeinsame A9-Inversmajorante und Boden 2/3 W_X](research/x-c1/a9-inverse-renewal-2026-10-13/README.md) auf dem ganzen neuen hohen Schurrest nach Basis84-Elimination | Wiederverwendbarer bedingter Baustein; der nachfolgende feste W9-Vergleich scheitert, andere zulässige Vergleiche bleiben offen |
+| Ursprünglicher Basis84-Tail | [Komplementwechsel und Gegenprüfung](research/x-c1/basis84-tail-closure-2026-10-14/README.md): tau auf Z84 mindestens 2/3 W_X; Restriktionsinverse höchstens 3/2 I; Ziel 1/20 geschlossen | Bedingt auf die gebundenen Voraussetzungen; kein Boden 2/3 auf ganz A9; ersetzt keine neue vollständige Residualbilanz |
+| Gerichtete Skalartests | [Konstante Schalenrichtung z0](research/x-c1/l00-z0-directed-interval-2026-10-17/PROOF.md) und [fester gerader Kandidat](research/x-c1/coherent-k-frozen-even-2026-10-17/PROOF.md) liefern keinen Ausschluss | Keine Bestätigung der Antwortregel; die weitere Richtungssuche blieb ohne qualifizierten Kandidaten |
+| Fester K*-Untervergleich | [Gerichtete Formfehlerschärfung](research/x-c1/w9-schur-form-error-even-2026-10-19/PROOF.md) schließt jeden W >= Q_lower,*^-1 beim festen geraden Zeugen, der eingefrorenen Antwortregel und ihrem Budget aus | Andere Unterformen, Antwortregeln und Majoranten der tatsächlichen A9-Inverse bleiben offen; keine negative Weil-Richtung und kein Abschluss von Punkt 4 |
 | Globales Ziel | Arbeitsdefinition und erforderliche Übergänge sind formuliert | Kofinale positive Familie, globaler Readout, vollständige Weil-Gramidentität und RH bleiben offen |
 
 Die hier zusammengefassten projektinternen Ergebnisse tragen den Status
-`AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`. Das bedeutet: projektintern hergeleitet,
+`AUTHOR_DERIVED` beziehungsweise für die benannten Ausschlüsse
+`AUTHOR_DERIVED_NO_GO`, jeweils mit `EXTERNAL_REVIEW_OPEN`. Das bedeutet: projektintern hergeleitet,
 mit angegebenen Beweisen und Zertifikaten; die unabhängige externe Prüfung ist
 offen. Ein erfolgreicher Rechenlauf bestätigt seinen ausgewiesenen Prüfumfang.
 
@@ -54,6 +58,33 @@ Aktuelle Arbeit außerhalb von `main` ist in den
 [offenen Pull Requests](https://github.com/Waschtl904/objekt-x-programm/pulls)
 sichtbar. Für ein Urteil über einen solchen Vorschlag sind dessen eigener
 Commit, Belegumfang und Integrationsstatus anzugeben.
+`PENDING_STATUS_REVIEW` im Register bezeichnet eine ausstehende fachliche
+Statuseinordnung und kann auch für bereits integrierte Pakete gelten.
+Merge, Statuseinordnung und unabhängige externe Prüfung sind getrennte Schritte.
+
+## Arbeitsbilanz und Integration vom 19. Oktober
+
+Die Forschungskette #232–#239 ist über [PR #241](https://github.com/Waschtl904/objekt-x-programm/pull/241)
+als Integrationskandidat zusammengeführt; die Übernahme nach Main steht noch aus.
+Die korrigierten Eingabelader aus #231 bleiben erhalten.
+Der [Integrationsnachweis](00-uebersicht/integrationsnachweise/PR241_2026-10-19.md)
+trennt übernommene große Integrationen, gezielte Replays und die technische
+Reparatur einer historischen Quelltextbindung. Die vorhandene Registerpflege
+aus #240 bildet die Grundlage der aktuellen Variantenbilanz.
+
+Die gemeinsamen Quellen, Paarungen und Fehlergrame bleiben wiederverwendbar.
+Für dieselbe ausgeschlossene K*-Unterform mit derselben Antwortregel und
+demselben Budget werden keine weiteren Obermajorantenverfeinerungen oder
+RL-Rechnungen zur Rettung dieses Vergleichs verfolgt. Ein neuer Ansatz muss
+die geänderte Ausschlussvoraussetzung, übernommene Daten und eine quantitative
+Begründung für einen begrenzten Test benennen. Die Auswahl eines solchen
+Ansatzes ist offen; diese Integration startet keine neue Großrechnung.
+
+Die bereits bewiesene endliche A11-Positivität ist ein bekannter Prüffall.
+Die aktuelle Aufgabe verlangt einen konstruktiven A9→A11-Anschluss, der sie
+nicht voraussetzt und seine vollständigen Zertifikate erneuert. Daher bleiben
+Punkt 4, N12, allgemeine Fortsetzung und Objekt X offen. Erledigte
+Arbeitspakete sind keine Prozentangabe für den fertigen Beweis.
 
 ## Tailabschluss vom 14. Oktober
 

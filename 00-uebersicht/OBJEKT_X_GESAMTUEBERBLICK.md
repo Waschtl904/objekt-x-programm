@@ -1,5 +1,32 @@
 # Objekt X – Gesamtüberblick
 
+**Fortschreibung vom 19. Oktober 2026:** Die Forschungskette #232–#239 ist
+über [PR #241](https://github.com/Waschtl904/objekt-x-programm/pull/241)
+als Integrationskandidat mit den Main-Korrekturen aus #231 zusammengeführt;
+die Übernahme nach Main steht noch aus. Die gerichteten
+[z0-Skalartests](../research/x-c1/l00-z0-directed-interval-2026-10-17/PROOF.md)
+und der [feste gerade Kandidat](../research/x-c1/coherent-k-frozen-even-2026-10-17/PROOF.md)
+liefern keinen Ausschluss. Die anschließende gemeinsame Energiebilanz
+schließt zunächst den festen W9-Vergleich aus. Mit der
+[Formfehlerschärfung](../research/x-c1/w9-schur-form-error-even-2026-10-19/PROOF.md)
+scheitert jeder W >= Q_lower,*^-1 für die festgelegte K*-Unterform,
+eingefrorene Antwortregel und dasselbe Budget am festen geraden Zeugen.
+Das ist keine negative Weil-Richtung und kein Ausschluss anderer Unterformen,
+Antwortregeln oder Majoranten der tatsächlichen A9-Inverse.
+
+Für diesen festgelegten Vergleich sind weitere Obermajorantenverfeinerungen
+oder RL-Rechnungen zur Rettung des Vergleichs erledigt. Die gemeinsamen
+Funktionen, Paarungen und Fehlergrame bleiben verwendbar. Vor einem neuen
+Pilot sind die geänderte Ausschlussvoraussetzung, übernommene Daten und eine
+quantitative Erfolgsaussicht zu begründen. Ein erfolgreicher konstruktiver
+A9→A11-Anschluss ist weiterhin offen. Die frühere einzelne A11-Positivität
+darf dabei keine Eingabe sein. Meilenstein 4, N12 und externe Prüfung bleiben
+offen; eine Anzahl erledigter Untersuchungen misst keinen Beweisfortschritt
+in Prozent. [Aktuelle Aufgaben](NEXT_GATES.md) und
+[Integrationsnachweis](integrationsnachweise/PR241_2026-10-19.md) führen die Belege.
+
+Die folgenden datierten Abschnitte bleiben Entwicklungsgeschichte.
+
 **Fortschreibung vom 14. Oktober 2026:** Der [ursprüngliche Basis84-Tail](../research/x-c1/basis84-tail-closure-2026-10-14/README.md)
 ist unter den gebundenen Voraussetzungen mit Boden 2/3 W_X und Restriktionsinverse
 höchstens 3/2 I geschlossen. Der frühere offene Boden 1/20 ist damit erledigt.
