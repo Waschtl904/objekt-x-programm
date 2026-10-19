@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-19",
+  "status": "PASS_FRESH_FULL_ARCHIVE_REPLAY",
+  "source_published_commit": "35a74079409c2904e89d7628377eb2e5b1c8dcae",
+  "verification_commit": "9cd3d178e56d59dec69e0ffdcea01f5af16c2b35",
+  "verification_tree": "0d4262aa889ee1e7d018a903c5eb3a5f834a1dbf",
+  "archive_sha256": "364acde09078fd10b97aed6ab70f18296fae10f2bdc199905dc78671dbd1ae32",
+  "archive_bytes": 1374474240,
+  "archive_entries": 4208,
+  "replay_internal_seconds": 10.557,
+  "replay_returncode": 0,
+  "refinement_byte_equal": true,
+  "independent_rational_endpoint_audit": "PASS",
+  "local_checks": {
+    "registry": "PASS",
+    "views": "PASS",
+    "registry_tests": "PASS",
+    "diff": "PASS"
+  },
+  "registry_test_count": 60,
+  "registry_context_note": "The first registry call inside the plain archive failed because it has no .git history. The unchanged required validator, views, tests and diff checks all passed in the Git checkout of the exact same verification commit. The successful numerical archive replay was not repeated.",
+  "outcome": "SCHUR_UNDERFORM_COMPARISON_EXCLUDED",
+  "outputs": {
+    "RESULT.json": "69c6a6d84faef12e35a6888b88f188281dc4ce728550676c6e5b7bfe536e7807"
+  },
+  "inherited_test_vector_sha256": "42bbf77a09f2e3f71b4c89cd3ad7c959a8f77fb507d049f3243568b53a2c612b",
+  "inherited_K_P_sha256": "35dd61579fc2db9269947928e438fbf966972378c24511609e1fa40c3ac9de58",
+  "all_other_bounds_unchanged": true,
+  "new_integrations": false,
+  "new_linear_solve": false,
+  "RL_computed": false,
+  "milestone_4_closed": false,
+  "external_review_open": true,
+  "publication_note": "Final publication adds only this acceptance receipt and its manifest binding. All mathematics, inputs, code and result bytes remain those of the fresh archive; public and local commit tree identity is checked separately."
+}

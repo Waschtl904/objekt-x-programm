@@ -1,0 +1,33 @@
+{
+  "source_commit": "35a74079409c2904e89d7628377eb2e5b1c8dcae",
+  "files": {
+    "engine": {
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/engine.py",
+      "sha256": "af84c797f51a14cf36183c676f605f7fa2074149352cdc0058dd5572f74fa878"
+    },
+    "bindings": {
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/INPUT_BINDINGS.json",
+      "sha256": "d07ac96111ec180e2cfdeac1028451292be531acef46ca55b7828bfe04cdc2bd"
+    },
+    "candidate": {
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/CANDIDATE.json",
+      "sha256": "42bbf77a09f2e3f71b4c89cd3ad7c959a8f77fb507d049f3243568b53a2c612b"
+    },
+    "result": {
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/RESULT.json",
+      "sha256": "d49b24d44680a15c7a8ac3e0a0a5bf468a8aecb683effd7779aec02ee92b2807"
+    },
+    "proof": {
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/PROOF.md",
+      "sha256": "051cac056c09ce8ad4e17a315fcd1e90341ca942a9efc2870243e837c4cfd0ea"
+    },
+    "manifest": {
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/MANIFEST.json",
+      "sha256": "8eb4295afad9d6b9d897a5f2d22e469edec295521533be2ea3c3bef26beacb46"
+    },
+    "acceptance": {
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/ACCEPTANCE.json",
+      "sha256": "b4c49a1e1e988725cf394826afe0f1a26f955bbec29c35f456e01dca15663ea1"
+    }
+  }
+}
