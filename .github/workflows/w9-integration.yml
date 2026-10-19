@@ -1,0 +1,46 @@
+name: W9 integration bindings and bounded certificate replays
+
+on:
+  pull_request:
+    paths:
+      - 'research/x-c1/w9-*/**'
+      - 'research/x-c1/l00-z0-directed-interval-2026-10-17/**'
+      - '.github/workflows/w9-integration.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/x-c1/w9-*/**'
+      - 'research/x-c1/l00-z0-directed-interval-2026-10-17/**'
+      - '.github/workflows/w9-integration.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bounded-replays:
+    name: w9-integration-bounded-replays
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          # Match the sealed K-pilot acceptance environment. Python 3.13 changes
+          # gzip's OS header byte, which breaks the required byte-equal replay.
+          python-version: '3.12.14'
+      - name: Install directed arithmetic
+        run: python -m pip install python-flint==0.9.0
+      - name: Check all bound inputs and source-loader regressions
+        run: python -u -B research/x-c1/w9-partial-energy-2026-10-18/verify.py --bindings-only
+      - name: Replay bounded decisions without new function integration
+        run: |
+          python -u -B research/x-c1/w9-response-preflight-2026-10-18/preflight.py --check
+          python -u -B research/x-c1/w9-majorant-preflight-2026-10-18/preflight.py --check
+          python -u -B research/x-c1/w9-structural-decision-2026-10-18/verify.py --check
+          python -u -B research/x-c1/w9-k-pilot-even-2026-10-18/verify.py --check
+          python -u -B research/x-c1/w9-schur-variational-even-2026-10-19/verify.py --check
+          python -u -B research/x-c1/w9-schur-form-error-even-2026-10-19/verify.py --check

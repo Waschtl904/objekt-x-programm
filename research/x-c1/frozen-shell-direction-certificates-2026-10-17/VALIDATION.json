@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-17",
+  "input_repository_head": "59997860870a460fee24a10198c0bf48d5ab1e0a",
+  "replay": "PASS",
+  "replay_log_sha256": "da6d57e79a8ac81483bdcc6019a110baf8d0b1b5c6bac31e8a921e1e9a0497cb",
+  "scope": "Fresh extraction from bound repository archives; no external mathematical review.",
+  "candidate_selection_commit": "a7f59f8e9ec3d3db249d728de0b1f2f3cbff5de9",
+  "candidate_selection_pr": 232
+}

@@ -1,0 +1,248 @@
+{
+  "source_commit": "27dfebb03dc4bf10265797b575fcbe08a15eb500",
+  "files": {
+    "stage3_archive": {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip",
+      "sha256": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52",
+      "role": "OLD_A9_CERTIFICATE",
+      "used_fields": [
+        "selected members below"
+      ]
+    },
+    "renewal_archive": {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/archives/Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13.zip",
+      "sha256": "a1fa41958d79ab16a7c42b12375c3373f5a86a99993ae2d23c984ff6b3b2e8ae",
+      "role": "OLD_A9_CERTIFICATE",
+      "used_fields": [
+        "selected members below"
+      ]
+    },
+    "response_archive": {
+      "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip",
+      "sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee",
+      "role": "DIRECTED_CERTIFICATE",
+      "used_fields": [
+        "selected members below"
+      ]
+    },
+    "coherent": {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-und-kohaerenter-transport/expected/COHERENT_TRANSPORT_INPUTS.json",
+      "sha256": "c0c882ba85bf3ee56a433b5c5bf5d5c5c0341f2a9e03e213e6e19c460aba5666",
+      "role": "OLD_A9_CERTIFICATE",
+      "used_fields": [
+        "parities.*.K_rational",
+        "parities.*.K_inverse_rational"
+      ]
+    },
+    "high_response": {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/expected/COMPLETE_HIGH_RESPONSE.json",
+      "sha256": "52027262debebfdb5258a7fb74ff5280d98d81b34a347d99a91a83470362a606",
+      "role": "DIRECTED_CERTIFICATE",
+      "used_fields": [
+        "*.tr_X_HB_exact_rational",
+        "*.full_M_norm_squared"
+      ]
+    },
+    "domain_check": {
+      "path": "research/x-c1/a9-domain-continuation-2026-10-13/original/CHECK.json",
+      "sha256": "ebdf8da2840d2ab77fa01fcdc78c3aabeff23ad8fc59937b1d54da88006dc9b6",
+      "role": "OLD_A9_CERTIFICATE",
+      "used_fields": [
+        "cases.*.K_minus_1e_minus_16_I_positive_pivots"
+      ]
+    },
+    "domain_proof": {
+      "path": "research/x-c1/a9-domain-continuation-2026-10-13/original/HERLEITUNG.txt",
+      "sha256": "e6075606f6a26c354f1eb756b568f91cbb7a0b035022b44ef60a0120ae4ea819",
+      "role": "ANALYTIC_IDENTITY",
+      "used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "inverse_proof": {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt",
+      "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7",
+      "role": "ANALYTIC_IDENTITY",
+      "used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "nstar_proof": {
+      "path": "research/x-c1/a9-inverse-spike-calibration-2026-10-15/original/nstar/FUNKTIONSANSCHLUSS.txt",
+      "sha256": "39664818da04df1e7c8253e09d078a16ccf2729b964747fa067807a8f3bb18bb",
+      "role": "ANALYTIC_IDENTITY",
+      "used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "response_proof": {
+      "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/PROOF.md",
+      "sha256": "8219d5e4f544cc42a4808d6d033c56c608939652b4d851cae881a00842ed84e3",
+      "role": "ANALYTIC_IDENTITY",
+      "used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "work_order": {
+      "path": "research/x-c1/a9-a11-certificate-calibration-2026-10-15/WORK_ORDER.md",
+      "sha256": "ead51395f495ea5cae0ff08a6726eb2a420668f584e2914f8763cf53b5f4a7e8",
+      "role": "ANALYTIC_IDENTITY",
+      "used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "search_builder": {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/build_data.py",
+      "sha256": "fd63e0694c85448ec61e8deeae42d43e0dee491ec6fb1d6207bacf3430e16135",
+      "role": "INHERITED_HYPOTHESIS",
+      "used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "reassessment_proof": {
+      "path": "research/x-c1/shell-search-reassessment-2026-10-17/PROOF.md",
+      "sha256": "db37cda98c73881106e6d860b8526460ed9f0b2c3aa19543382beac0034f70e4",
+      "role": "ANALYTIC_IDENTITY",
+      "used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "high_derivation": {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/certify.py",
+      "sha256": "a0a0ecb3b9b8b275b6eb46e0d8d6bad27d9eea5a91fd1b66bf75b074aef2ee89",
+      "role": "INHERITED_HYPOTHESIS",
+      "used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "renewal_audit": {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/AUDIT.json",
+      "sha256": "33456af98d0ba6151639c66729d12ef3f12bc695f14a9e0985c2115ba0e61783",
+      "role": "INHERITED_HYPOTHESIS",
+      "used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "maps_even_384": {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_even_384.json",
+      "sha256": "5617f0aa24b67584196e066e43c6f4004eff33fb851b6a0eed36fd771cc39c88",
+      "role": "NEW_RAW_DATA",
+      "used_fields": [
+        "status",
+        "G_W",
+        "H_gram",
+        "H8_gram",
+        "feature_factor",
+        "b_F",
+        "Fhat",
+        "T"
+      ],
+      "numerical_status": "EXPLORATORY_NOT_DIRECTED"
+    },
+    "maps_even_512": {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_even_512.json",
+      "sha256": "19de781646891b4fc57d5f09b9d2d4fb46fb86957151ba253fc747ec5e57085e",
+      "role": "NEW_RAW_DATA",
+      "used_fields": [
+        "status",
+        "G_W",
+        "H_gram",
+        "H8_gram",
+        "feature_factor",
+        "b_F",
+        "Fhat",
+        "T"
+      ],
+      "numerical_status": "EXPLORATORY_NOT_DIRECTED"
+    },
+    "maps_odd_384": {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_odd_384.json",
+      "sha256": "1f8b22919c542cda123b24c4eb295c7e1e74887a8461debe45fea69835211dc0",
+      "role": "NEW_RAW_DATA",
+      "used_fields": [
+        "status",
+        "G_W",
+        "H_gram",
+        "H8_gram",
+        "feature_factor",
+        "b_F",
+        "Fhat",
+        "T"
+      ],
+      "numerical_status": "EXPLORATORY_NOT_DIRECTED"
+    },
+    "maps_odd_512": {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_odd_512.json",
+      "sha256": "5b2aa30f093eeb7cca18099363fb36fedc9036e7fa320bf8ea6a29f952aeee21",
+      "role": "NEW_RAW_DATA",
+      "used_fields": [
+        "status",
+        "G_W",
+        "H_gram",
+        "H8_gram",
+        "feature_factor",
+        "b_F",
+        "Fhat",
+        "T"
+      ],
+      "numerical_status": "EXPLORATORY_NOT_DIRECTED"
+    }
+  },
+  "members": {
+    "common": {
+      "archive": "stage3_archive",
+      "member": "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/inputs/REFINED_COMMON96.json.gz",
+      "sha256": "306acbacf5f4089fe703f655bf4340087f0ae88aeaab416c0282e9e24c1638df",
+      "used_fields": [
+        "cases.*.{delta,rho,inverse_congruence_integer_matrix,inverse_congruence_denominator,finite_cross_C84_new_model}"
+      ]
+    },
+    "old_sources": {
+      "archive": "stage3_archive",
+      "member": "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/inputs/REFINED_INPUT.json.gz",
+      "sha256": "c67a44d7cc052bff32ed2768b81595367c710f9308f0f1716b213a74766b1e64",
+      "used_fields": [
+        "cases.*.old_certificate.{source_c_model,source_Bh_model,source_h_gram_model,joint_high_source_error_gram}",
+        "cases.*.galerkin.{old_low_c_model,old_low_Bh_model,H84_model,complete_source_high_cross_model}"
+      ]
+    },
+    "response": {
+      "archive": "response_archive",
+      "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/RESPONSE_ENERGY.json",
+      "sha256": "7b247fd48e80bab6b34fe02b771dcdcdb0219efdd385285d9a5b52bca1f469d5",
+      "used_fields": [
+        "parities.*.fixed_X.{physical_TT_adjoint_upper,T_norm_squared_upper,whole_Hilbert_residual_model_error_upper}"
+      ]
+    },
+    "functions": {
+      "archive": "response_archive",
+      "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/inputs/FUNCTIONS12.json",
+      "sha256": "7c13f08ad85084379249c4a08b7c8bda0813eaea72939ba385cb3756b2801b3c",
+      "used_fields": [
+        "parities.*.whole_D12_operator_error_upper"
+      ]
+    },
+    "inverse_even": {
+      "archive": "renewal_archive",
+      "member": "Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13/INVERSE_EVEN.json",
+      "sha256": "56d1fbbf7b985debba2bc9e92d404f29adf7985c2779ecf058c841fcc7aded50",
+      "used_fields": [
+        "P_upper_rational",
+        "candidate_P_upper_trace",
+        "beta"
+      ]
+    },
+    "inverse_odd": {
+      "archive": "renewal_archive",
+      "member": "Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13/INVERSE_ODD.json",
+      "sha256": "5cd91520b6f3c6170d09eee6b0b9aa10d2e707fc13219970d6ebc4b57befb772",
+      "used_fields": [
+        "P_upper_rational",
+        "candidate_P_upper_trace",
+        "beta"
+      ]
+    }
+  },
+  "forbidden_input_class": "FORBIDDEN_TARGET_POSITIVITY",
+  "target_A11_positive_data_used": false
+}

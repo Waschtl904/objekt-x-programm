@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "W9-PARTIAL-ENERGY-COMMON-PAIRINGS",
+  "date": "2026-10-18",
+  "kind": "NO_GO",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED_NO_GO",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Conditional directed partial W9 energy of all twelve degree-11 shell residuals, with joint high and 84-by-12 basis pairings and weighted errors. One frozen direction per parity violates the fixed W9 comparison for the unchanged response matrix.",
+  "claim_polarity": "NEGATIVE_FOR_CANDIDATE_CLASS",
+  "negative_claim_boundary": "Only the fixed W9 comparison certificate with the frozen response matrix is excluded. This is not a negative direction of the actual Weil form and does not exclude another inverse majorant, another response rule, or Object X.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No full W9 energy upper bound; the positive RL term remains uncomputed.",
+    "No full N12 conclusion, A9-to-A11 positivity, Object X construction or RH consequence.",
+    "No independent external mathematical review or full replay of inherited large certificates."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-partial-energy-2026-10-18/PROOF.md",
+    "sha256": "2bb4145cc8681219d416bd885e3a31f015c119baf54d85c8f60a836f77e0e5c9"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "source_commit": "5e5462d478cf700797de80dd0a77f7e7d0f20ad7",
+  "files": {
+    "common": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/common.py",
+      "sha256": "037580c8edec75e42aa599e21ff2a073f1308f6ec5746c77f81695ed0169a8eb"
+    },
+    "inherited_inputs": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json",
+      "sha256": "829b4884c64d23d90efc6382abe20f449d6229af8ccf8db4b85d12e5b7e03e28"
+    },
+    "previous_proof": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/PROOF.md",
+      "sha256": "2bb4145cc8681219d416bd885e3a31f015c119baf54d85c8f60a836f77e0e5c9"
+    },
+    "previous_manifest": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/MANIFEST.json",
+      "sha256": "ceeb82f47e0b5d3add5c33a752d3377ce5a154184ea2e95e31eaca00439deee8"
+    },
+    "pairs_even": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/PAIRS_even.json.gz",
+      "sha256": "044d52d8a00f45f36f0591b9d3b51b8468fc94513c24b4fc2b04b797a6969bb8"
+    },
+    "candidate_even": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/CANDIDATE_even.json",
+      "sha256": "49653e4edd76760a054681cbf73e1695622b823d693ce2cbae81fca90edc2427"
+    },
+    "comparison_even": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/COMPARISON_even.json",
+      "sha256": "a4429379e5059d454b01063929371307a787f122fa4e800c48e8f2dbb8b6e7ba"
+    },
+    "kp_even": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/K_P_even.json",
+      "sha256": "35dd61579fc2db9269947928e438fbf966972378c24511609e1fa40c3ac9de58"
+    },
+    "pairs_odd": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/PAIRS_odd.json.gz",
+      "sha256": "85a6e0309caa2272ea2f763653d4382b21d9041f754158401563e5c5a41c9bd4"
+    },
+    "candidate_odd": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/CANDIDATE_odd.json",
+      "sha256": "65a56b31fdcd18567ada8a6f1059c29f1cabf49b31908a1a070766d4a2ce066b"
+    },
+    "comparison_odd": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/COMPARISON_odd.json",
+      "sha256": "a61533b2b6e714287417167ed09f258a9eb4ac3b98595ee6b9eebe682fbef400"
+    },
+    "kp_odd": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/K_P_odd.json",
+      "sha256": "85291b374fb3ee08d0512aa188d0ed541410bd33ffaead38f69b2659926db4f9"
+    },
+    "inverse_derivation": {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt",
+      "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7"
+    },
+    "closure_proof": {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/PROOF.md",
+      "sha256": "9cafdeeaf182488c0ed12b7d0ec90ed8cf22adc95cbcb98c8ff3bef6cee2a9e6"
+    },
+    "closure_acceptance": {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/reports/ACCEPTANCE.json",
+      "sha256": "28ab9e30cf851ce47c12df5e379272a707c9a323d6b1d225d4f2c3b9e0a3594e"
+    },
+    "matrix_preflight_proof": {
+      "path": "research/x-c1/w9-response-preflight-2026-10-18/PROOF.md",
+      "sha256": "3106e399c8fd7fd9998848c51e58f5d0b9cee72350754fb18d9fa577a9ae4878"
+    }
+  }
+}

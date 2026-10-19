@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "W9-INVERSE-MAJORANT-BOUNDED-PREFLIGHT",
+  "date": "2026-10-18",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Admissible diagonal Young reweighting of the renewed A9 inverse majorant with X0 and both #238 directions fixed; directed partial-energy transfer. Genuine Loewner improvement still excludes both; even witness excludes this scalar weight family. No new integrations or RL solve.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Only fixed U8, K, P_upper and source maps with the explicitly derived diagonal Young weights are obstructed by the even witness. No no-go for arbitrary inverse majorants or response matrices, no negative actual Weil direction, no N12 or A9-to-A11 completion.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No full-energy upper bound or completed RL control.",
+    "The odd trade is not proved smaller than W9 and its partial pass does not confirm the rule.",
+    "No independent external review, global Object X construction or status promotion."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-majorant-preflight-2026-10-18/PROOF.md",
+    "sha256": "fa3029fa948ef7a480374f39dbfe5eb4ae175908305419c8b6274b7604ac3b09"
+  }
+}

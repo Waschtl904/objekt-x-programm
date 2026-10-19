@@ -1,0 +1,62 @@
+{
+  "status": "EXPLORATORY_NOT_DIRECTED",
+  "data": {
+    "even": {
+      "K_resolution_W_operator_difference": 1.0485592894552249e-12,
+      "K_frozen_reference_differences": [
+        -1.6458539067211453e-11,
+        -1.6462411213955322e-11
+      ],
+      "old_frozen_I0_difference": -2.4424906541753444e-15,
+      "global_midpoint_ratio_64": 0.918951621978541,
+      "global_midpoint_ratio_128": 0.9189516211965997,
+      "whole_space_support_guard_diagnostic": [
+        {
+          "K_resolution": 64,
+          "positive_weight_rational": "45231193071/500000000000",
+          "whole_space_support_ratio_upper_diagnostic": 0.9985432249822713,
+          "margin_to_one_diagnostic": 0.0014567750177286731,
+          "stress_K_minus_1e_minus_10_G_ratio": 0.9985455873689625
+        },
+        {
+          "K_resolution": 128,
+          "positive_weight_rational": "904623860033/10000000000000",
+          "whole_space_support_ratio_upper_diagnostic": 0.9985432240054174,
+          "margin_to_one_diagnostic": 0.0014567759945826042,
+          "stress_K_minus_1e_minus_10_G_ratio": 0.9985455863924663
+        }
+      ],
+      "certified_whole_space_result": false,
+      "old_frozen_common_radius_difference": -6.244288419665622e-11
+    },
+    "odd": {
+      "K_resolution_W_operator_difference": 1.0480907767549768e-12,
+      "K_frozen_reference_differences": [
+        -2.282618538629322e-13,
+        -3.2862601528904634e-14
+      ],
+      "old_frozen_I0_difference": 2.842170943040401e-14,
+      "global_midpoint_ratio_64": 0.8638903768570853,
+      "global_midpoint_ratio_128": 0.8638903768570592,
+      "whole_space_support_guard_diagnostic": [
+        {
+          "K_resolution": 64,
+          "positive_weight_rational": "46686457921/625000000000",
+          "whole_space_support_ratio_upper_diagnostic": 0.9261094314220965,
+          "margin_to_one_diagnostic": 0.07389056857790355,
+          "stress_K_minus_1e_minus_10_G_ratio": 0.9261094327609374
+        },
+        {
+          "K_resolution": 128,
+          "positive_weight_rational": "373491663367/5000000000000",
+          "whole_space_support_ratio_upper_diagnostic": 0.9261094314221616,
+          "margin_to_one_diagnostic": 0.07389056857783838,
+          "stress_K_minus_1e_minus_10_G_ratio": 0.9261094327609994
+        }
+      ],
+      "certified_whole_space_result": false
+    }
+  },
+  "new_certification_triggered": false,
+  "warning": "No quadrature enclosure for the full matrices. Resolution, calibration and sensitivity tests are not certified error bounds."
+}

@@ -2929,6 +2929,71 @@
       "id": "L00-Z0-DIRECTED-SCALAR-INTERVAL",
       "meta_path": "research/x-c1/l00-z0-directed-interval-2026-10-17/META.yaml",
       "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "SHELL-DEGREE11-DIRECTION-SEARCH",
+      "meta_path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "FROZEN-SHELL-DIRECTION-SCALAR-CERTIFICATES",
+      "meta_path": "research/x-c1/frozen-shell-direction-certificates-2026-10-17/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "SHARP-KP-FROZEN-SHELL-DIRECTIONS",
+      "meta_path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "COHERENT-K-FROZEN-EVEN-DIRECTION",
+      "meta_path": "research/x-c1/coherent-k-frozen-even-2026-10-17/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "SHELL-SEARCH-COHERENT-TRANSPORT-REASSESSMENT",
+      "meta_path": "research/x-c1/shell-search-reassessment-2026-10-17/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "W9-ENERGY-INVENTORY-WEIGHTED-ERROR-INTERFACE",
+      "meta_path": "research/x-c1/w9-energy-inventory-2026-10-17/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "W9-PARTIAL-ENERGY-COMMON-PAIRINGS",
+      "meta_path": "research/x-c1/w9-partial-energy-2026-10-18/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "W9-RESPONSE-MATRIX-BOUNDED-PREFLIGHT",
+      "meta_path": "research/x-c1/w9-response-preflight-2026-10-18/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "W9-INVERSE-MAJORANT-BOUNDED-PREFLIGHT",
+      "meta_path": "research/x-c1/w9-majorant-preflight-2026-10-18/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "W9-STRUCTURAL-COMPARISON-PILOT-DECISION",
+      "meta_path": "research/x-c1/w9-structural-decision-2026-10-18/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "W9-EVEN-K-PILOT-PARTIAL-COMPARISON",
+      "meta_path": "research/x-c1/w9-k-pilot-even-2026-10-18/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "W9-KSTAR-EVEN-VARIATIONAL-SCHUR-LOWER-TEST",
+      "meta_path": "research/x-c1/w9-schur-variational-even-2026-10-19/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "W9-KSTAR-EVEN-SCHUR-FORM-ERROR-REFINEMENT",
+      "meta_path": "research/x-c1/w9-schur-form-error-even-2026-10-19/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
     }
   ],
   "transport_status": {

@@ -128,5 +128,18 @@ Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getre
 - `A9-A11-WHOLE-RESPONSE-GRAM-AND-DIRECT-MODEL-ERROR`: PENDING_STATUS_REVIEW — `research/x-c1/a9-a11-whole-response-gram-2026-10-15/META.yaml`.
 - `NSTAR-JP-SPIKE-ORTHOGONALITY-STAGES-1-4`: PENDING_STATUS_REVIEW — `research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/META.yaml`.
 - `L00-Z0-DIRECTED-SCALAR-INTERVAL`: PENDING_STATUS_REVIEW — `research/x-c1/l00-z0-directed-interval-2026-10-17/META.yaml`.
+- `SHELL-DEGREE11-DIRECTION-SEARCH`: PENDING_STATUS_REVIEW — `research/x-c1/shell-polynomial-direction-search-2026-10-17/META.yaml`.
+- `FROZEN-SHELL-DIRECTION-SCALAR-CERTIFICATES`: PENDING_STATUS_REVIEW — `research/x-c1/frozen-shell-direction-certificates-2026-10-17/META.yaml`.
+- `SHARP-KP-FROZEN-SHELL-DIRECTIONS`: PENDING_STATUS_REVIEW — `research/x-c1/sharp-kp-frozen-directions-2026-10-17/META.yaml`.
+- `COHERENT-K-FROZEN-EVEN-DIRECTION`: PENDING_STATUS_REVIEW — `research/x-c1/coherent-k-frozen-even-2026-10-17/META.yaml`.
+- `SHELL-SEARCH-COHERENT-TRANSPORT-REASSESSMENT`: PENDING_STATUS_REVIEW — `research/x-c1/shell-search-reassessment-2026-10-17/META.yaml`.
+- `W9-ENERGY-INVENTORY-WEIGHTED-ERROR-INTERFACE`: PENDING_STATUS_REVIEW — `research/x-c1/w9-energy-inventory-2026-10-17/META.yaml`.
+- `W9-PARTIAL-ENERGY-COMMON-PAIRINGS`: PENDING_STATUS_REVIEW — `research/x-c1/w9-partial-energy-2026-10-18/META.yaml`.
+- `W9-RESPONSE-MATRIX-BOUNDED-PREFLIGHT`: PENDING_STATUS_REVIEW — `research/x-c1/w9-response-preflight-2026-10-18/META.yaml`.
+- `W9-INVERSE-MAJORANT-BOUNDED-PREFLIGHT`: PENDING_STATUS_REVIEW — `research/x-c1/w9-majorant-preflight-2026-10-18/META.yaml`.
+- `W9-STRUCTURAL-COMPARISON-PILOT-DECISION`: PENDING_STATUS_REVIEW — `research/x-c1/w9-structural-decision-2026-10-18/META.yaml`.
+- `W9-EVEN-K-PILOT-PARTIAL-COMPARISON`: PENDING_STATUS_REVIEW — `research/x-c1/w9-k-pilot-even-2026-10-18/META.yaml`.
+- `W9-KSTAR-EVEN-VARIATIONAL-SCHUR-LOWER-TEST`: PENDING_STATUS_REVIEW — `research/x-c1/w9-schur-variational-even-2026-10-19/META.yaml`.
+- `W9-KSTAR-EVEN-SCHUR-FORM-ERROR-REFINEMENT`: PENDING_STATUS_REVIEW — `research/x-c1/w9-schur-form-error-even-2026-10-19/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

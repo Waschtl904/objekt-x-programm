@@ -1,0 +1,74 @@
+{
+  "source_commit": "19d27b12c06500e2b1266e560a13f67974991f1d",
+  "files": {
+    "common": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/common.py",
+      "sha256": "037580c8edec75e42aa599e21ff2a073f1308f6ec5746c77f81695ed0169a8eb"
+    },
+    "inherited_inputs": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json",
+      "sha256": "829b4884c64d23d90efc6382abe20f449d6229af8ccf8db4b85d12e5b7e03e28"
+    },
+    "weights": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/WEIGHT_BOUNDS.json",
+      "sha256": "09d0b0c89f3a072a3477f2801acf30b382f18355d882b650b8982f941d4d89ed"
+    },
+    "previous_proof": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/PROOF.md",
+      "sha256": "2bb4145cc8681219d416bd885e3a31f015c119baf54d85c8f60a836f77e0e5c9"
+    },
+    "previous_manifest": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/MANIFEST.json",
+      "sha256": "ceeb82f47e0b5d3add5c33a752d3377ce5a154184ea2e95e31eaca00439deee8"
+    },
+    "inventory_proof": {
+      "path": "research/x-c1/w9-energy-inventory-2026-10-17/PROOF.md",
+      "sha256": "e625e96aad71bea9a5aa485b9c551525a8db14c78db866269e26c495fe382b0f"
+    },
+    "response_proof": {
+      "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/PROOF.md",
+      "sha256": "8219d5e4f544cc42a4808d6d033c56c608939652b4d851cae881a00842ed84e3"
+    },
+    "propagation_proof": {
+      "path": "research/x-c1/conditional-inverse-propagation-2026-10-15/PROOF.md",
+      "sha256": "7ce356d66de49602ddc760f2fd551bf22757865285a948eb6adc9064dafc00af"
+    },
+    "pairs_even": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/PAIRS_even.json.gz",
+      "sha256": "044d52d8a00f45f36f0591b9d3b51b8468fc94513c24b4fc2b04b797a6969bb8"
+    },
+    "candidate_even": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/CANDIDATE_even.json",
+      "sha256": "49653e4edd76760a054681cbf73e1695622b823d693ce2cbae81fca90edc2427"
+    },
+    "comparison_even": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/COMPARISON_even.json",
+      "sha256": "a4429379e5059d454b01063929371307a787f122fa4e800c48e8f2dbb8b6e7ba"
+    },
+    "kp_even": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/K_P_even.json",
+      "sha256": "35dd61579fc2db9269947928e438fbf966972378c24511609e1fa40c3ac9de58"
+    },
+    "pairs_odd": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/PAIRS_odd.json.gz",
+      "sha256": "85a6e0309caa2272ea2f763653d4382b21d9041f754158401563e5c5a41c9bd4"
+    },
+    "candidate_odd": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/CANDIDATE_odd.json",
+      "sha256": "65a56b31fdcd18567ada8a6f1059c29f1cabf49b31908a1a070766d4a2ce066b"
+    },
+    "comparison_odd": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/COMPARISON_odd.json",
+      "sha256": "a61533b2b6e714287417167ed09f258a9eb4ac3b98595ee6b9eebe682fbef400"
+    },
+    "kp_odd": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/K_P_odd.json",
+      "sha256": "85291b374fb3ee08d0512aa188d0ed541410bd33ffaead38f69b2659926db4f9"
+    }
+  },
+  "old_inverse_member": {
+    "archive": "response_archive",
+    "name": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/inputs/OLD_A9_N12.json",
+    "sha256": "967f3fc07aea20d10f06a24f29ec02ca968d0a6223b68a438eb680b35579bfb9"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "FROZEN-SHELL-DIRECTION-SCALAR-CERTIFICATES",
+  "date": "2026-10-17",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Directed scalar enclosures for exactly two separately selected W-unit shell polynomials under the bound operator/domain/source hypotheses, including a uniform Gamma model remainder and direction-dependent sufficient thresholds. Both tests do not exclude with the chosen K_P majorant.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "No N12 conclusion or confirmation, no global optimality, no comparison with an unknown exact K_P, no Object X or RH conclusion.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No external mathematical review or status promotion.",
+    "No adaptive selection within the directed certification run."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/frozen-shell-direction-certificates-2026-10-17/PROOF.md",
+    "sha256": "4945da1ea9318fd555a3932f079e2767d6dde07cb59a256b3557245921713a9b"
+  }
+}

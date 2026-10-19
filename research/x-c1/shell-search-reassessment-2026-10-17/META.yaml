@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "SHELL-SEARCH-COHERENT-TRANSPORT-REASSESSMENT",
+  "date": "2026-10-17",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "OPEN",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Exploratory real degree-11 whole-shell K_P and common-k error maps, reassessment of 116 old starts and 145 new starts, no candidate passes the predeclared positive margin gate. Numerical whole-space midpoint and support barriers are not directed certificates.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "No certified whole-space nonexclusion, rule confirmation, N12 closure, new exact direction selection, Object X or RH conclusion. No quadrature error bound inferred from a resolution difference or sensitivity test.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No external mathematical review or status promotion.",
+    "No new expensive directed candidate certification.",
+    "Full W9 residual energy and its weighted model error remain uncomputed."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/shell-search-reassessment-2026-10-17/PROOF.md",
+    "sha256": "db37cda98c73881106e6d860b8526460ed9f0b2c3aa19543382beac0034f70e4"
+  }
+}

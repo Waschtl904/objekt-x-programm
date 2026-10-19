@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "W9-KSTAR-EVEN-SCHUR-FORM-ERROR-REFINEMENT",
+  "date": "2026-10-19",
+  "kind": "NO_GO",
+  "strategic": false,
+  "local_only": true,
+  "mathematical_status": "AUTHOR_DERIVED_NO_GO",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "At the unchanged rational even 84-vector, the existing common feature-error Grams sharpen only the a_fin-square loss. The full one-sided lower bound exceeds the unchanged K_P upper endpoint.",
+  "claim_polarity": "NEGATIVE_FOR_CANDIDATE_CLASS",
+  "negative_claim_boundary": "Only the fixed strengthened lower form, frozen response and even physical witness: all W >= Q_lower_star^-1 fail this unchanged budget. Other lower forms, response rules and majorants of the actual A9 inverse remain open. No negative Weil direction or milestone-4 closure.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "No full inverse-energy upper bound, partial pass or dual reserve.",
+    "No new integration, linear solve, adaptive search or changed witness.",
+    "No exclusion of all response rules, actual Weil inverse majorants or Object X; no N12/milestone-4 closure or external mathematical review."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-schur-form-error-even-2026-10-19/PROOF.md",
+    "sha256": "23583bc127ff376e1508aa195c9438628a2f41256f3247bc4b98dda5c314a1c9"
+  }
+}

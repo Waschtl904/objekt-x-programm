@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "W9-ENERGY-INVENTORY-WEIGHTED-ERROR-INTERFACE",
+  "date": "2026-10-17",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "OPEN",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Bound inventory of all four W9 energy blocks, five-feature weighted model-error interface and exact coarse global norm upper bounds. No new residual energy matrix or N12 decision.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "Missing new cross integrals are not replaced by old scalar maps. Coarse error upper bounds do not estimate actual errors. No certification value assigned to the 0.15 percent numerical reserve.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No full new W9 energy matrix or useful directed model-error budget.",
+    "No rule confirmation, N12 completion, A9-to-A11 continuation, Object X or RH conclusion.",
+    "No independent mathematical review or replay of inherited large integrations."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-energy-inventory-2026-10-17/PROOF.md",
+    "sha256": "e625e96aad71bea9a5aa485b9c551525a8db14c78db866269e26c495fe382b0f"
+  }
+}
