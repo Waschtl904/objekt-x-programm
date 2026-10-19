@@ -13,6 +13,25 @@ from flint import arb, arb_poly, arb_mat, acb, acb_poly
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 
+# Integration revision, 19 October 2026: this historical source is provenance
+# only. Its original binding bytes remain frozen, while the live z0 certifier
+# keeps the immutable-input correction from #231. No mathematical input is
+# substituted; the snapshot must still match the original SHA-256 exactly.
+PROVENANCE_SNAPSHOTS = {
+    ('previous_interval_code',
+     'research/x-c1/l00-z0-directed-interval-2026-10-17/certify.py',
+     '6927e4090e4575bbdaa06248bd3216cfe0b62f906eb834c68907f0bc1af8585b'):
+    'research/x-c1/w9-partial-energy-2026-10-18/provenance/l00-certify-6927e409.py.txt',
+}
+
+
+def source_path(root, alias, entry):
+    """Resolve only an explicitly frozen historical source; never relax hashes."""
+    key = (alias, entry['path'], entry['sha256'])
+    path = (root / PROVENANCE_SNAPSHOTS.get(key, entry['path'])).resolve()
+    need(path.is_relative_to(root), 'Escaping input path')
+    return path
+
 
 def need(ok, message):
     if not ok:
@@ -116,8 +135,7 @@ class Inputs:
         spec = json.loads(raw_spec)
         data = {}
         for alias, entry in spec['files'].items():
-            path = (ROOT/entry['path']).resolve()
-            need(path.is_relative_to(ROOT), 'Escaping input path')
+            path = source_path(ROOT, alias, entry)
             raw = path.read_bytes()
             need(hashlib.sha256(raw).hexdigest() == entry['sha256'], alias)
             data[alias] = raw

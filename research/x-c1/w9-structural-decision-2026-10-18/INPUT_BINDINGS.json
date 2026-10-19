@@ -3,7 +3,7 @@
   "files": {
     "common": {
       "path": "research/x-c1/w9-partial-energy-2026-10-18/common.py",
-      "sha256": "5ed05092e5d4e5deb686b6654da137ca99593256e6d5f4e1353b8f5c01b0fd07"
+      "sha256": "037580c8edec75e42aa599e21ff2a073f1308f6ec5746c77f81695ed0169a8eb"
     },
     "inherited_inputs": {
       "path": "research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json",
@@ -35,7 +35,7 @@
     },
     "previous_manifest": {
       "path": "research/x-c1/w9-partial-energy-2026-10-18/MANIFEST.json",
-      "sha256": "96f367eb55a8f9acdebc9fa9a8d3533b58e3f9aeca9bb73716add1731322ec34"
+      "sha256": "ceeb82f47e0b5d3add5c33a752d3377ce5a154184ea2e95e31eaca00439deee8"
     },
     "majorant_proof": {
       "path": "research/x-c1/w9-majorant-preflight-2026-10-18/PROOF.md",
@@ -47,7 +47,7 @@
     },
     "majorant_manifest": {
       "path": "research/x-c1/w9-majorant-preflight-2026-10-18/MANIFEST.json",
-      "sha256": "cfa04e53a2f35f061b748e231f3a3e4572fd6ed76c146b945a5c84796dde9c8e"
+      "sha256": "98845ad9ec3dcc729237ef0d86f1a9a6eb4efbecffe06f303a4b37577cabb58b"
     },
     "weights": {
       "path": "research/x-c1/w9-partial-energy-2026-10-18/WEIGHT_BOUNDS.json",

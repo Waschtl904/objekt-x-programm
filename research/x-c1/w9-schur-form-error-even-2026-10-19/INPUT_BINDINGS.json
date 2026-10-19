@@ -7,7 +7,7 @@
     },
     "bindings": {
       "path": "research/x-c1/w9-schur-variational-even-2026-10-19/INPUT_BINDINGS.json",
-      "sha256": "d07ac96111ec180e2cfdeac1028451292be531acef46ca55b7828bfe04cdc2bd"
+      "sha256": "6d876166adf1a4651c280e953c2f9144fcf6b60f99c802fd550067c92946498b"
     },
     "candidate": {
       "path": "research/x-c1/w9-schur-variational-even-2026-10-19/CANDIDATE.json",
@@ -23,7 +23,7 @@
     },
     "manifest": {
       "path": "research/x-c1/w9-schur-variational-even-2026-10-19/MANIFEST.json",
-      "sha256": "8eb4295afad9d6b9d897a5f2d22e469edec295521533be2ea3c3bef26beacb46"
+      "sha256": "f6271ded72db10acb0669ae2556210cafa3df7396cf37132af6d1af1b6f1dab2"
     },
     "acceptance": {
       "path": "research/x-c1/w9-schur-variational-even-2026-10-19/ACCEPTANCE.json",

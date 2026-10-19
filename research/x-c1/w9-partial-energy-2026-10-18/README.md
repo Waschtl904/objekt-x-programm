@@ -87,3 +87,27 @@ kein N12-Abschluss und kein A9→A11-Positivitätssatz. Bytegleiche Reproduktion
 prüft den Rechenpfad und seine Bindungen; sie ersetzt keine unabhängige
 mathematische Prüfung. Die verworfenen Entwicklungsläufe sind in
 `PROOF.md` dokumentiert.
+
+## Integrationsrevision vom 19. Oktober 2026
+
+Bei der Zusammenführung mit Main fiel eine Herkunftsbindung auf: Der Alias
+`previous_interval_code` bindet den ursprünglichen z0-Certifier mit SHA-256
+`6927e4090e4575bbdaa06248bd3216cfe0b62f906eb834c68907f0bc1af8585b`.
+Am damaligen Pfad steht inzwischen die korrigierte Fassung aus PR #231.
+Der ursprüngliche Quelltext bleibt deshalb bytegleich als nicht ausführbarer
+Herkunftsbeleg unter `provenance/l00-certify-6927e409.py.txt` erhalten.
+Der Eingabelader löst ausschließlich dieses genaue Tripel aus Alias,
+Originalpfad und Digest zum historischen Beleg auf und prüft dessen Hash
+unverändert. Der Alias wird weder importiert noch für numerische Rechnungen
+verwendet. Alle übrigen Pfade und Hashprüfungen bleiben unverändert.
+
+Das ursprüngliche `INPUT_BINDINGS.json`, sämtliche mathematischen Quellen,
+Kandidaten, Integrale, Ergebnisdateien und Beweistexte bleiben bytegleich.
+Die Eigenbindungen des Eingabeladers und die darauf verweisenden späteren
+Paketbindungen werden nachgeführt. Frühere Abnahmequittungen gelten weiterhin
+für ihre dort genannten Commits; die Integration ist keine erneute große
+Funktionsintegration. Der aktive z0-Prüfer behält die Main-Korrekturen.
+Zusätzliche Kontrollen prüfen den historischen Hash, unveränderten aktiven
+Quelltext sowie Ablehnung beschädigter, falsch benannter und ausbrechender
+Eingaben. Der Integrationsnachweis steht in
+[PR241_2026-10-19](../../../00-uebersicht/integrationsnachweise/PR241_2026-10-19.md).

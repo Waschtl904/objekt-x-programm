@@ -4,14 +4,14 @@
   "INPUT_BINDINGS.json": "829b4884c64d23d90efc6382abe20f449d6229af8ccf8db4b85d12e5b7e03e28",
   "META.yaml": "ad4c0f2e8df42059387bc3ea8af6e9406de03004541e12eb74df42280bc33900",
   "PROOF.md": "2bb4145cc8681219d416bd885e3a31f015c119baf54d85c8f60a836f77e0e5c9",
-  "README.md": "6556d44fbce79473e5b1fbe0f3e578caccf4eddbf845db079ce3190262c1e09e",
+  "README.md": "76c47963177cd08693b9ce061aae61ed4301fb36e0880f3de5969caaf015ef34",
   "SOURCE_CONTROLS.json": "7a0758173743e719274804f373697530a239ceb399e293cbbbd85b2128453379",
   "WEIGHT_BOUNDS.json": "09d0b0c89f3a072a3477f2801acf30b382f18355d882b650b8982f941d4d89ed",
   "assemble.py": "aa6ad9a328ee62bb3e0aaeea36e5b50ee0f6e28ecee323e6a7093cd55cc570dc",
   "bind_inputs.py": "1c1474fc3c6bb71af59427f7a7686a439fde7cf3e700ce2ff85bb152c93d6d50",
   "certify_k.py": "74e3c6b5642bc03f9f60464a8bcecf3db516137990da19550b496710170372cb",
   "checkpoint.py": "e78fe175bf27ca6cca4d57ac57cb10859391dbb033c2aae9890e9ea706f40514",
-  "common.py": "5ed05092e5d4e5deb686b6654da137ca99593256e6d5f4e1353b8f5c01b0fd07",
+  "common.py": "037580c8edec75e42aa599e21ff2a073f1308f6ec5746c77f81695ed0169a8eb",
   "compare_candidate.py": "cde32f32ee09b5f8d7588cd982c35158480fefa388209994fe37e96c64001069",
   "controls.py": "0b0fda737a3011c236b0c8b20dc8fbb2d0e24796ebb66a8de9f3843bf0e422dc",
   "expected/CANDIDATE_even.json": "49653e4edd76760a054681cbf73e1695622b823d693ce2cbae81fca90edc2427",
@@ -34,6 +34,7 @@
   "select_candidate.py": "fa135d4e8ae853478f81f399f1ff81a0e0cbd5d2db0da8b280c6cc99f8da38de",
   "source_bounds.py": "a28a1595b597c051948e57028befb6cacf74b0268bc503753cd9b96b0b27d1c5",
   "source_controls.py": "fe6e8c06d5a3b7106ab292c4e42c5508c02eed6a1aa434115b5682e50d407978",
-  "verify.py": "3b7635b9ecb4978dcf8fa319ae91342590d17e351327f990bbb89152dd9610ba",
-  "weights.py": "6f5e3e2eacda2345dc5d764fa221cbbd36b12eafb32d6cd10dcf0af0edf0bdcd"
+  "verify.py": "2730748499d656d46a7eb61d3360f69498c2cd901b709037893c4e35c3ecc221",
+  "weights.py": "6f5e3e2eacda2345dc5d764fa221cbbd36b12eafb32d6cd10dcf0af0edf0bdcd",
+  "provenance/l00-certify-6927e409.py.txt": "6927e4090e4575bbdaa06248bd3216cfe0b62f906eb834c68907f0bc1af8585b"
 }

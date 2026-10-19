@@ -1,5 +1,6 @@
 """Fresh full replay from checked source snapshots; no subprocess execution."""
 import gc
+import argparse
 import gzip
 import hashlib
 import json
@@ -62,12 +63,54 @@ def input_snapshot_controls(common,InputClass):
     print('PASS: immutable input snapshot, wrong digest and escaping path controls',flush=True)
 
 
+def historical_source_controls(common,InputClass):
+    """A named historical source stays exact without reverting the live file."""
+    original_root=common.ROOT
+    ((alias,old_path,digest),snapshot_path),=common.PROVENANCE_SNAPSHOTS.items()
+    original=(original_root/snapshot_path).read_bytes()
+    require(hashlib.sha256(original).hexdigest()==digest,'Historical source digest')
+    with tempfile.TemporaryDirectory(prefix='w9-provenance-control-')as td:
+        root=Path(td);historical=root/snapshot_path;live=root/old_path
+        historical.parent.mkdir(parents=True);live.parent.mkdir(parents=True)
+        historical.write_bytes(original);live.write_bytes(b'current corrected input loader')
+        entry={'path':old_path,'sha256':digest}
+        def spec(name,item):
+            return json.dumps({'files':{name:item},'members':{}}).encode()
+        common.ROOT=root
+        try:
+            frozen=InputClass(binding_bytes=spec(alias,entry))
+            require(frozen.data[alias]==original,'Historical source not preserved')
+            require(live.read_bytes()==b'current corrected input loader','Live source changed')
+            historical.write_bytes(b'corrupt')
+            for name,item in ((alias,entry),('other',entry),
+                              (alias,dict(entry,sha256='0'*64)),
+                              (alias,dict(entry,path='../escape'))):
+                try:
+                    InputClass(binding_bytes=spec(name,item))
+                except RuntimeError:
+                    pass
+                else:
+                    raise RuntimeError('Invalid historical source binding accepted')
+        finally:
+            common.ROOT=original_root
+    print('PASS: historical source, live loader, corruption, alias and path controls',flush=True)
+
+
 def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--bindings-only',action='store_true',
+                        help='Check immutable inputs and regressions; do not integrate functions')
+    args=parser.parse_args()
     require(__debug__,'Run verification without python -O')
     own=own_snapshot()
     common=checked_module('common',own)
     InputClass=common.Inputs
     input_snapshot_controls(common,InputClass)
+    historical_source_controls(common,InputClass)
+    if args.bindings_only:
+        InputClass(binding_bytes=own['INPUT_BINDINGS.json'])
+        print('PASS: all bound source and archive-member bytes; no integration run',flush=True)
+        return
     # All later callers receive the same checked binding specification. Each
     # instance then parses only its independently hash-checked input bytes.
     common.Inputs=lambda:InputClass(binding_bytes=own['INPUT_BINDINGS.json'])
