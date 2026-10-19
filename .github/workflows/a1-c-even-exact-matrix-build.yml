@@ -34,103 +34,21 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Classify changed paths fail-closed
+      - name: Test certificate reuse and rejection cases
+        run: python -m unittest discover -s tests -p test_a1_certificate_reuse.py -v
+
+      - name: Bind current A1 inputs to the archived successful certificate
         id: classify
         shell: bash
         env:
           EVENT_NAME: ${{ github.event_name }}
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          BASE_REF: ${{ github.event.pull_request.base.ref }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
-          AUDIT_MODE: ${{ inputs.audit }}
         run: |
-          set -u
-
-          emit_heavy() {
-            echo "a1_required=true" >> "$GITHUB_OUTPUT"
-            echo "reason=$1" >> "$GITHUB_OUTPUT"
-          }
-
-          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
-            emit_heavy "manual-${AUDIT_MODE:-unknown}"
-            exit 0
-          fi
-
-          if [[ "$EVENT_NAME" != "pull_request" ]]; then
-            emit_heavy "unknown-event-${EVENT_NAME}"
-            exit 0
-          fi
-
-          if [[ -z "${BASE_SHA:-}" || -z "${HEAD_SHA:-}" ]]; then
-            emit_heavy "missing-base-or-head"
-            exit 0
-          fi
-
-          if ! git cat-file -e "${BASE_SHA}^{commit}" 2>/dev/null; then
-            if [[ -z "${BASE_REF:-}" ]] || ! git fetch --no-tags origin "$BASE_REF"; then
-              emit_heavy "base-fetch-failed"
-              exit 0
-            fi
-            if ! git cat-file -e "${BASE_SHA}^{commit}" 2>/dev/null; then
-              emit_heavy "invalid-base-after-fetch"
-              exit 0
-            fi
-          fi
-          if ! git cat-file -e "${HEAD_SHA}^{commit}" 2>/dev/null; then
-            emit_heavy "invalid-head"
-            exit 0
-          fi
-
-          checked_out="$(git rev-parse HEAD 2>/dev/null || true)"
-          if [[ "$checked_out" != "$HEAD_SHA" ]]; then
-            emit_heavy "checkout-head-mismatch"
-            exit 0
-          fi
-
-          if ! git merge-base "$BASE_SHA" "$HEAD_SHA" >/dev/null 2>&1; then
-            emit_heavy "no-merge-base"
-            exit 0
-          fi
-
-          changed_file="$(mktemp)"
-          if ! git diff --name-only --diff-filter=ACMRD "${BASE_SHA}...${HEAD_SHA}" > "$changed_file"; then
-            emit_heavy "git-diff-failed"
-            exit 0
-          fi
-
-          mapfile -t changed < "$changed_file"
-          rm -f "$changed_file"
-
-          if (( ${#changed[@]} == 0 )); then
-            emit_heavy "empty-diff"
-            exit 0
-          fi
-
-          echo "Changed paths:"
-          printf ' - %s\n' "${changed[@]}"
-
-          # Fast route is intentionally narrow. Only documentation/text surfaces
-          # and the canonical research-state implementation are known-safe here.
-          # Everything else, including this workflow itself, is fail-closed to A1.
-          for path in "${changed[@]}"; do
-            case "$path" in
-              00-uebersicht/RESEARCH_STATE.yaml|\
-              scripts/research_state.py|\
-              scripts/check_research_state.py|\
-              tests/test_research_state.py|\
-              .github/workflows/validate-research-state.yml)
-                ;;
-              *.md|*.tex|*.cff)
-                ;;
-              *)
-                emit_heavy "a1-or-unknown-path:${path}"
-                exit 0
-                ;;
-            esac
-          done
-
-          echo "a1_required=false" >> "$GITHUB_OUTPUT"
-          echo "reason=known-safe-registry-or-docs-only" >> "$GITHUB_OUTPUT"
+          set -euo pipefail
+          python scripts/a1_certificate_reuse.py \
+            --event "$EVENT_NAME" --base "$BASE_SHA" --head "$HEAD_SHA" \
+            --output "$GITHUB_OUTPUT"
 
   exact-matrix-build:
     name: a1-c-even-fresh-matrix-build
@@ -334,7 +252,8 @@ jobs:
               [[ "$BUILD_RESULT" == "skipped" ]]
               [[ "$LDL_RESULT" == "skipped" ]]
               [[ "$EIGEN_RESULT" == "skipped" ]]
-              echo "CERTIFIED: known-safe registry/docs-only PR; A1 recertification not required"
+              [[ "$CLASSIFY_REASON" == "bound-certificate-unchanged" ]]
+              echo "REUSED: unchanged A1 dependencies match the archived successful certificate"
               exit 0
             fi
 

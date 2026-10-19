@@ -1,0 +1,101 @@
+2026-10-19T16:13:12.6096840Z Current runner version: '2.337.0'
+2026-10-19T16:13:12.6122632Z ##[group]Runner Image Provisioner
+2026-10-19T16:13:12.6123929Z Hosted Compute Agent
+2026-10-19T16:13:12.6125238Z Version: 20261012.601
+2026-10-19T16:13:12.6126280Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-19T16:13:12.6127070Z Build Date: 2026-10-12T17:48:21Z
+2026-10-19T16:13:12.6127878Z Worker ID: {2f5ebc60-b2da-4800-a596-6933075fd90f}
+2026-10-19T16:13:12.6128624Z Region: eastus2
+2026-10-19T16:13:12.6129391Z Cloud: Azure
+2026-10-19T16:13:12.6130032Z ##[endgroup]
+2026-10-19T16:13:12.6131634Z ##[group]Operating System
+2026-10-19T16:13:12.6132375Z Ubuntu
+2026-10-19T16:13:12.6132956Z 24.04.5
+2026-10-19T16:13:12.6133466Z LTS
+2026-10-19T16:13:12.6134054Z ##[endgroup]
+2026-10-19T16:13:12.6134619Z ##[group]Runner Image
+2026-10-19T16:13:12.6135268Z Image: ubuntu-24.04
+2026-10-19T16:13:12.6135869Z Version: 20261012.334.1
+2026-10-19T16:13:12.6137241Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-19T16:13:12.6139052Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-19T16:13:12.6140123Z ##[endgroup]
+2026-10-19T16:13:12.6141320Z ##[group]GITHUB_TOKEN Permissions
+2026-10-19T16:13:12.6143560Z Contents: read
+2026-10-19T16:13:12.6144212Z Metadata: read
+2026-10-19T16:13:12.6144793Z ##[endgroup]
+2026-10-19T16:13:12.6147050Z Secret source: Actions
+2026-10-19T16:13:12.6148053Z Cache mode: write
+2026-10-19T16:13:12.6149110Z Prepare workflow directory
+2026-10-19T16:13:12.6493066Z Prepare all required actions
+2026-10-19T16:13:12.6595727Z Complete job name: a1-c-even-gate
+2026-10-19T16:13:12.7417002Z ##[group]Run set -euo pipefail
+2026-10-19T16:13:12.7417876Z [36;1mset -euo pipefail[0m
+2026-10-19T16:13:12.7418473Z [36;1m[0m
+2026-10-19T16:13:12.7419757Z [36;1mecho "event=$EVENT_NAME"[0m
+2026-10-19T16:13:12.7420455Z [36;1mecho "audit=${AUDIT_MODE:-}"[0m
+2026-10-19T16:13:12.7421213Z [36;1mecho "a1_required=$A1_REQUIRED"[0m
+2026-10-19T16:13:12.7422021Z [36;1mecho "reason=$CLASSIFY_REASON"[0m
+2026-10-19T16:13:12.7423061Z [36;1mecho "classify=$CLASSIFY_RESULT build=$BUILD_RESULT ldl=$LDL_RESULT eigen=$EIGEN_RESULT"[0m
+2026-10-19T16:13:12.7424094Z [36;1m[0m
+2026-10-19T16:13:12.7424677Z [36;1m[[ "$CLASSIFY_RESULT" == "success" ]][0m
+2026-10-19T16:13:12.7425573Z [36;1m[[ "$A1_REQUIRED" == "true" || "$A1_REQUIRED" == "false" ]][0m
+2026-10-19T16:13:12.7426393Z [36;1m[0m
+2026-10-19T16:13:12.7427003Z [36;1mif [[ "$EVENT_NAME" == "pull_request" ]]; then[0m
+2026-10-19T16:13:12.7427861Z [36;1m  if [[ "$A1_REQUIRED" == "false" ]]; then[0m
+2026-10-19T16:13:12.7429059Z [36;1m    [[ "$BUILD_RESULT" == "skipped" ]][0m
+2026-10-19T16:13:12.7430351Z [36;1m    [[ "$LDL_RESULT" == "skipped" ]][0m
+2026-10-19T16:13:12.7431524Z [36;1m    [[ "$EIGEN_RESULT" == "skipped" ]][0m
+2026-10-19T16:13:12.7433141Z [36;1m    echo "CERTIFIED: known-safe registry/docs-only PR; A1 recertification not required"[0m
+2026-10-19T16:13:12.7434865Z [36;1m    exit 0[0m
+2026-10-19T16:13:12.7435728Z [36;1m  fi[0m
+2026-10-19T16:13:12.7436322Z [36;1m[0m
+2026-10-19T16:13:12.7436904Z [36;1m  [[ "$BUILD_RESULT" == "success" ]][0m
+2026-10-19T16:13:12.7510287Z [36;1m  [[ "$LDL_RESULT" == "success" ]][0m
+2026-10-19T16:13:12.7511451Z [36;1m  [[ "$EIGEN_RESULT" == "skipped" ]][0m
+2026-10-19T16:13:12.7512979Z [36;1m  echo "CERTIFIED: A1-relevant PR passed fresh build, fingerprint and rigorous LDL"[0m
+2026-10-19T16:13:12.7514511Z [36;1m  exit 0[0m
+2026-10-19T16:13:12.7515100Z [36;1mfi[0m
+2026-10-19T16:13:12.7515550Z [36;1m[0m
+2026-10-19T16:13:12.7516105Z [36;1mif [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then[0m
+2026-10-19T16:13:12.7516808Z [36;1m  [[ "$A1_REQUIRED" == "true" ]][0m
+2026-10-19T16:13:12.7517430Z [36;1m  [[ "$BUILD_RESULT" == "success" ]][0m
+2026-10-19T16:13:12.7518014Z [36;1m[0m
+2026-10-19T16:13:12.7518493Z [36;1m  case "${AUDIT_MODE:-}" in[0m
+2026-10-19T16:13:12.7519391Z [36;1m    ldl)[0m
+2026-10-19T16:13:12.7519911Z [36;1m      [[ "$LDL_RESULT" == "success" ]][0m
+2026-10-19T16:13:12.7520878Z [36;1m      [[ "$EIGEN_RESULT" == "skipped" ]][0m
+2026-10-19T16:13:12.7521618Z [36;1m      echo "CERTIFIED: manual fresh-build LDL audit passed"[0m
+2026-10-19T16:13:12.7522311Z [36;1m      ;;[0m
+2026-10-19T16:13:12.7522771Z [36;1m    eigenvalues)[0m
+2026-10-19T16:13:12.7523317Z [36;1m      [[ "$LDL_RESULT" == "skipped" ]][0m
+2026-10-19T16:13:12.7523960Z [36;1m      [[ "$EIGEN_RESULT" == "success" ]][0m
+2026-10-19T16:13:12.7524747Z [36;1m      echo "CERTIFIED: manual fresh-build eigenvalue audit passed"[0m
+2026-10-19T16:13:12.7525468Z [36;1m      ;;[0m
+2026-10-19T16:13:12.7525912Z [36;1m    *)[0m
+2026-10-19T16:13:12.7526444Z [36;1m      echo "ERROR: unknown manual audit mode" >&2[0m
+2026-10-19T16:13:12.7527077Z [36;1m      exit 1[0m
+2026-10-19T16:13:12.7527541Z [36;1m      ;;[0m
+2026-10-19T16:13:12.7527998Z [36;1m  esac[0m
+2026-10-19T16:13:12.7528439Z [36;1m  exit 0[0m
+2026-10-19T16:13:12.7529138Z [36;1mfi[0m
+2026-10-19T16:13:12.7529578Z [36;1m[0m
+2026-10-19T16:13:12.7530047Z [36;1mecho "ERROR: unsupported event" >&2[0m
+2026-10-19T16:13:12.7530637Z [36;1mexit 1[0m
+2026-10-19T16:13:12.8820359Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-19T16:13:12.8822207Z env:
+2026-10-19T16:13:12.8823027Z   EVENT_NAME: pull_request
+2026-10-19T16:13:12.8823929Z   AUDIT_MODE:
+2026-10-19T16:13:12.8824735Z   CLASSIFY_RESULT: success
+2026-10-19T16:13:12.8825628Z   A1_REQUIRED: true
+2026-10-19T16:13:12.8826772Z   CLASSIFY_REASON: a1-or-unknown-path:.github/workflows/w9-integration.yml
+2026-10-19T16:13:12.8828113Z   BUILD_RESULT: success
+2026-10-19T16:13:12.8829464Z   LDL_RESULT: success
+2026-10-19T16:13:12.8830286Z   EIGEN_RESULT: skipped
+2026-10-19T16:13:12.8831095Z ##[endgroup]
+2026-10-19T16:13:12.9058647Z event=pull_request
+2026-10-19T16:13:12.9059799Z audit=
+2026-10-19T16:13:12.9060618Z a1_required=true
+2026-10-19T16:13:12.9061673Z reason=a1-or-unknown-path:.github/workflows/w9-integration.yml
+2026-10-19T16:13:12.9063166Z classify=success build=success ldl=success eigen=skipped
+2026-10-19T16:13:12.9064787Z CERTIFIED: A1-relevant PR passed fresh build, fingerprint and rigorous LDL
+2026-10-19T16:13:12.9223719Z Cleaning up orphan processes

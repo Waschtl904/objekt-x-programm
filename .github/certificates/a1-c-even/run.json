@@ -1,0 +1,64 @@
+{
+  "capture_note": "GitHub API run/attempt and job results captured 2026-10-19; complete UTF-8 job transcripts archived beside this record (BOM removed, LF line endings, trailing line whitespace removed). No new mathematical review.",
+  "repository": "Waschtl904/objekt-x-programm",
+  "run": {
+    "id": 39272705942,
+    "run_attempt": 1,
+    "head_sha": "250f50e196dee0ea46c31506d7b81efc1b1f3239",
+    "path": ".github/workflows/a1-c-even-exact-matrix-build.yml",
+    "event": "pull_request",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/39272705942"
+  },
+  "jobs": [
+    {
+      "id": 118145932299,
+      "name": "a1-c-even-classify",
+      "run_id": 39272705942,
+      "run_attempt": 1,
+      "head_sha": "250f50e196dee0ea46c31506d7b81efc1b1f3239",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-19T15:24:08Z",
+      "completed_at": "2026-10-19T15:24:33Z",
+      "html_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/39272705942/job/118145932299"
+    },
+    {
+      "id": 118146170091,
+      "name": "a1-c-even-fresh-matrix-build",
+      "run_id": 39272705942,
+      "run_attempt": 1,
+      "head_sha": "250f50e196dee0ea46c31506d7b81efc1b1f3239",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-19T15:24:37Z",
+      "completed_at": "2026-10-19T16:08:39Z",
+      "html_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/39272705942/job/118146170091"
+    },
+    {
+      "id": 118161550547,
+      "name": "a1-c-even-rigorous-ldl",
+      "run_id": 39272705942,
+      "run_attempt": 1,
+      "head_sha": "250f50e196dee0ea46c31506d7b81efc1b1f3239",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-19T16:08:42Z",
+      "completed_at": "2026-10-19T16:13:09Z",
+      "html_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/39272705942/job/118161550547"
+    },
+    {
+      "id": 118163699866,
+      "name": "a1-c-even-gate",
+      "run_id": 39272705942,
+      "run_attempt": 1,
+      "head_sha": "250f50e196dee0ea46c31506d7b81efc1b1f3239",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-19T16:13:11Z",
+      "completed_at": "2026-10-19T16:13:14Z",
+      "html_url": "https://github.com/Waschtl904/objekt-x-programm/actions/runs/39272705942/job/118163699866"
+    }
+  ]
+}
