@@ -9,6 +9,16 @@ Das Repository enthält eine laufende mathematische Untersuchung und ihre
 Entstehungsgeschichte. Für den Einstieg genügt eine kurze Lesestrecke; die
 historischen Dateien werden erst für konkrete Herkunftsfragen benötigt.
 
+**Arbeitsbilanz vom 19. Oktober:** Die W9-Varianten und ihre genaue Stopplinie
+stehen gemeinsam in [NEXT_GATES](NEXT_GATES.md). Der
+[Integrationsnachweis zu #241](integrationsnachweise/PR241_2026-10-19.md)
+trennt übernommene große Rechnungen von neuen Integrationsprüfungen.
+Vor einer neuen Rechnung sind die geänderte Ausschlussvoraussetzung,
+wiederverwendete Ergebnisse und ein begrenztes Entscheidungskriterium zu
+benennen. Historische offene Zwischenstände werden durch ihre datierten
+Nachfolger eingeordnet, nicht still gelöscht. Die Anzahl erledigter
+Arbeitspakete ist keine Prozentangabe für einen fertigen Beweis.
+
 ## Welcher Einstieg passt?
 
 | Ziel | Lesestrecke |

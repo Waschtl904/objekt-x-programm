@@ -1,5 +1,46 @@
 # Forschungsstrategie für die Konstruktion von Objekt X
 
+## Fortschreibung vom 19. Oktober: feste Vergleichsklasse beendet
+
+Die [Formfehlerschärfung am festen geraden Zeugen](../research/x-c1/w9-schur-form-error-even-2026-10-19/PROOF.md)
+liefert eine untere Inversenergie oberhalb des zugehörigen K_P-Budgets.
+Damit scheitert jeder obere Vergleich W >= Q_lower,*^-1 bei genau dieser
+K*-Unterform, eingefrorenen Antwortregel und unverändertem Budget, unter den
+gebundenen Voraussetzungen. Die Forschungskette und die späteren
+Main-Korrekturen sind über [PR #241](https://github.com/Waschtl904/objekt-x-programm/pull/241)
+zusammengeführt und nach Main übernommen; die Variantenbilanz aus #240
+ist im Register erhalten.
+
+Für denselben Vergleich folgt daraus eine Stopplinie: keine weitere
+Obermajorantenverfeinerung, neue Richtungssuche oder RL-Rechnung mit dem Ziel,
+den bereits vorhandenen Gegenzeugen zu beseitigen. Die frühere offene
+Schur-Untergrenze bleibt eine korrekte gröbere Abschätzung; der Nachfolger
+entscheidet ihre offene Frage. Ein konkreter mathematischer oder
+Provenienzeinwand bleibt ein Grund, den Befund erneut zu prüfen.
+
+Vor dem nächsten Rechenauftrag ist festzuhalten:
+
+1. Welche Voraussetzung des Ausschlusses ändert der vorgeschlagene Ansatz?
+2. Welche vorhandenen Quellen, gemeinsamen Paarungen und Fehlergrame werden
+   übernommen, und welche Größen müssen wegen der Änderung erneuert werden?
+3. Welche quantitative Abschätzung rechtfertigt genau einen begrenzten Test,
+   und welches Ergebnis beendet diesen Weg?
+
+Bei einer anderen Antwortregel sind Residuum, K_P-Budget und Fehler gemeinsam
+zu ändern. Eine andere Unterform benötigt ihre eigene Zulässigkeit und
+vollständige Restkontrolle. Andere zulässige Majoranten der tatsächlichen
+A9-Inverse bleiben ebenfalls offen, soweit sie nicht der ausgeschlossenen
+Klasse angehören. Eine bessere Variante wird hier nicht behauptet oder
+automatisch gestartet. Ein positiver vollständiger Anschluss benötigt
+weiterhin beide Paritäten und die gesamte Energie einschließlich Dualterm
+oder einer bewiesenen Ersatzabschätzung.
+
+Die vorhandenen endlichen Positivitätssätze und der konstruktive A8→A9-Anschluss
+bleiben unter ihren Voraussetzungen bestehen. Der neue A9→A11-Anschluss,
+Meilenstein 4, N12, allgemeine Erneuerbarkeit und externe Prüfung bleiben offen.
+[NEXT_GATES](NEXT_GATES.md) ist die operative Aufgabenliste; die folgenden
+datierten Zwischenstände sind als Entwicklungsgeschichte zu lesen.
+
 Stand 3. Oktober 2026. Arbeitsstrategie auf Grundlage der gelesenen Beweispakete und der lokalen Folgeuntersuchungen. Dieses Dokument beweist keine neue Terminalpositivität und verändert keinen mathematischen Registerstatus.
 
 Fortgeschrieben nach GPT 1s Rückmeldung vom selben Tag. Neu präzisiert sind die vollständige Blockdarstellung in einer unabhängig positiven Hilbertnorm, die gemeinsame Auswertung korrigierter Quellen und eine obere Schranke für die inverse alte Residualenergie. Der zuvor vorgeschlagene isolierte Test des H₀-Blocks (4,5) entfällt aufgrund des übermittelten Grenzberichts; dessen neue Zahlenzertifikate wurden hier nicht erneut reproduziert.
