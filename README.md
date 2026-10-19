@@ -192,6 +192,10 @@ erfordert einen Vergleich mit der einschlägigen Literatur.
 
 Für konkrete Einwände bitte Satz, Datei, Commit und Begründung nennen.
 [CONTRIBUTING](CONTRIBUTING.md) beschreibt geeignete Beiträge und regelt ihre Prüfung.
+Die [A1-Prüfsteuerung](00-uebersicht/A1_CI_WIEDERVERWENDUNG.md) erklärt,
+wann der gebundene Matrixnachweis wiederverwendet wird und wann eine neue
+Rechnung erforderlich ist. Ein erfolgreicher kurzer Abgleich ist kein neuer
+mathematischer Nachweis.
 Die [Herkunft des Journals](00-uebersicht/HERKUNFT.md) ist separat dokumentiert.
 
 Zitation und Herkunft: [CITATION.cff](CITATION.cff) · [ATTRIBUTION](ATTRIBUTION.md).

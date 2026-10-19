@@ -1,0 +1,451 @@
+2026-10-19T16:08:43.2020621Z Current runner version: '2.337.0'
+2026-10-19T16:08:43.2045660Z ##[group]Runner Image Provisioner
+2026-10-19T16:08:43.2046556Z Hosted Compute Agent
+2026-10-19T16:08:43.2047139Z Version: 20261012.601
+2026-10-19T16:08:43.2047874Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-19T16:08:43.2048604Z Build Date: 2026-10-12T17:48:21Z
+2026-10-19T16:08:43.2049320Z Worker ID: {6c3d96c5-487e-4f4b-b98b-d77aa45722ae}
+2026-10-19T16:08:43.2050064Z Region: northcentralus
+2026-10-19T16:08:43.2050636Z Cloud: Azure
+2026-10-19T16:08:43.2051242Z ##[endgroup]
+2026-10-19T16:08:43.2052684Z ##[group]Operating System
+2026-10-19T16:08:43.2053301Z Ubuntu
+2026-10-19T16:08:43.2054600Z 24.04.5
+2026-10-19T16:08:43.2055243Z LTS
+2026-10-19T16:08:43.2055925Z ##[endgroup]
+2026-10-19T16:08:43.2056560Z ##[group]Runner Image
+2026-10-19T16:08:43.2057224Z Image: ubuntu-24.04
+2026-10-19T16:08:43.2057918Z Version: 20261012.334.1
+2026-10-19T16:08:43.2059233Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-19T16:08:43.2060896Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-19T16:08:43.2061894Z ##[endgroup]
+2026-10-19T16:08:43.2063070Z ##[group]GITHUB_TOKEN Permissions
+2026-10-19T16:08:43.2065159Z Contents: read
+2026-10-19T16:08:43.2065902Z Metadata: read
+2026-10-19T16:08:43.2066464Z ##[endgroup]
+2026-10-19T16:08:43.2068581Z Secret source: Actions
+2026-10-19T16:08:43.2069560Z Cache mode: write
+2026-10-19T16:08:43.2070365Z Prepare workflow directory
+2026-10-19T16:08:43.2521069Z Prepare all required actions
+2026-10-19T16:08:43.2593699Z Getting action download info
+2026-10-19T16:08:43.5147964Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-10-19T16:08:43.6512376Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-19T16:08:43.7392543Z Download action repository 'actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-10-19T16:08:44.0908733Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-19T16:08:44.3086797Z Complete job name: a1-c-even-rigorous-ldl
+2026-10-19T16:08:44.3935083Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-10-19T16:08:44.3936310Z with:
+2026-10-19T16:08:44.3936823Z   ref: 250f50e196dee0ea46c31506d7b81efc1b1f3239
+2026-10-19T16:08:44.3937496Z   persist-credentials: false
+2026-10-19T16:08:44.3938085Z   repository: Waschtl904/objekt-x-programm
+2026-10-19T16:08:44.3942600Z   token: ***
+2026-10-19T16:08:44.3943073Z   ssh-strict: true
+2026-10-19T16:08:44.3943551Z   ssh-user: git
+2026-10-19T16:08:44.3944210Z   clean: true
+2026-10-19T16:08:44.3944706Z   sparse-checkout-cone-mode: true
+2026-10-19T16:08:44.3945277Z   fetch-depth: 1
+2026-10-19T16:08:44.3945759Z   fetch-tags: false
+2026-10-19T16:08:44.3946234Z   show-progress: true
+2026-10-19T16:08:44.3946724Z   lfs: false
+2026-10-19T16:08:44.3947175Z   submodules: false
+2026-10-19T16:08:44.3947660Z   set-safe-directory: true
+2026-10-19T16:08:44.3948619Z ##[endgroup]
+2026-10-19T16:08:44.4963067Z Syncing repository: Waschtl904/objekt-x-programm
+2026-10-19T16:08:44.4965518Z ##[group]Getting Git version info
+2026-10-19T16:08:44.4966483Z Working directory is '/home/runner/work/objekt-x-programm/objekt-x-programm'
+2026-10-19T16:08:44.4967766Z [command]/usr/bin/git version
+2026-10-19T16:08:44.5018237Z git version 2.55.0
+2026-10-19T16:08:44.5052792Z ##[endgroup]
+2026-10-19T16:08:44.5069359Z Temporarily overriding HOME='/home/runner/work/_temp/377778e2-96a9-46a3-b90c-2ce35c76fa0a' before making global git config changes
+2026-10-19T16:08:44.5072226Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T16:08:44.5077738Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/objekt-x-programm/objekt-x-programm
+2026-10-19T16:08:44.5131893Z Deleting the contents of '/home/runner/work/objekt-x-programm/objekt-x-programm'
+2026-10-19T16:08:44.5136269Z ##[group]Initializing the repository
+2026-10-19T16:08:44.5145266Z [command]/usr/bin/git init /home/runner/work/objekt-x-programm/objekt-x-programm
+2026-10-19T16:08:44.5262682Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-19T16:08:44.5265429Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-19T16:08:44.5268465Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-19T16:08:44.5269876Z hint: call:
+2026-10-19T16:08:44.5270574Z hint:
+2026-10-19T16:08:44.5271501Z hint: 	git config --global init.defaultBranch <name>
+2026-10-19T16:08:44.5272714Z hint:
+2026-10-19T16:08:44.5274053Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-19T16:08:44.5275831Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-19T16:08:44.5277355Z hint:
+2026-10-19T16:08:44.5278150Z hint: 	git branch -m <name>
+2026-10-19T16:08:44.5279024Z hint:
+2026-10-19T16:08:44.5280210Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-19T16:08:44.5282429Z Initialized empty Git repository in /home/runner/work/objekt-x-programm/objekt-x-programm/.git/
+2026-10-19T16:08:44.5289691Z [command]/usr/bin/git remote add origin https://github.com/Waschtl904/objekt-x-programm
+2026-10-19T16:08:44.5334400Z ##[endgroup]
+2026-10-19T16:08:44.5335932Z ##[group]Disabling automatic garbage collection
+2026-10-19T16:08:44.5338668Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-19T16:08:44.5461319Z ##[endgroup]
+2026-10-19T16:08:44.5462968Z ##[group]Setting up auth
+2026-10-19T16:08:44.5464858Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T16:08:44.5469988Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T16:08:44.5779257Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T16:08:44.5820247Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T16:08:44.6068336Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-19T16:08:44.6110295Z ##[endgroup]
+2026-10-19T16:08:44.6111743Z ##[group]Fetching the repository
+2026-10-19T16:08:44.6120278Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin 250f50e196dee0ea46c31506d7b81efc1b1f3239
+2026-10-19T16:09:03.2097131Z From https://github.com/Waschtl904/objekt-x-programm
+2026-10-19T16:09:03.2098088Z  * branch            250f50e196dee0ea46c31506d7b81efc1b1f3239 -> FETCH_HEAD
+2026-10-19T16:09:03.2104135Z ##[endgroup]
+2026-10-19T16:09:03.2105000Z ##[group]Determining the checkout info
+2026-10-19T16:09:03.2106525Z ##[endgroup]
+2026-10-19T16:09:03.2114041Z [command]/usr/bin/git sparse-checkout disable
+2026-10-19T16:09:03.2169660Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-19T16:09:03.2202488Z ##[group]Checking out the ref
+2026-10-19T16:09:03.2207406Z [command]/usr/bin/git checkout --progress --force 250f50e196dee0ea46c31506d7b81efc1b1f3239
+2026-10-19T16:09:04.2527338Z Updating files:  57% (2223/3850)
+2026-10-19T16:09:04.2615107Z Updating files:  58% (2233/3850)
+2026-10-19T16:09:04.3526412Z Updating files:  59% (2272/3850)
+2026-10-19T16:09:04.3555178Z Updating files:  60% (2310/3850)
+2026-10-19T16:09:04.3659228Z Updating files:  61% (2349/3850)
+2026-10-19T16:09:04.3914642Z Updating files:  62% (2387/3850)
+2026-10-19T16:09:04.3960394Z Updating files:  63% (2426/3850)
+2026-10-19T16:09:04.4231976Z Updating files:  64% (2464/3850)
+2026-10-19T16:09:04.5056932Z Updating files:  65% (2503/3850)
+2026-10-19T16:09:04.5386323Z Updating files:  66% (2541/3850)
+2026-10-19T16:09:04.5665177Z Updating files:  67% (2580/3850)
+2026-10-19T16:09:04.5726844Z Updating files:  68% (2618/3850)
+2026-10-19T16:09:04.5797127Z Updating files:  69% (2657/3850)
+2026-10-19T16:09:04.6150936Z Updating files:  70% (2695/3850)
+2026-10-19T16:09:04.6427749Z Updating files:  71% (2734/3850)
+2026-10-19T16:09:04.6699172Z Updating files:  72% (2772/3850)
+2026-10-19T16:09:04.7094969Z Updating files:  73% (2811/3850)
+2026-10-19T16:09:04.7143099Z Updating files:  74% (2849/3850)
+2026-10-19T16:09:04.7195700Z Updating files:  75% (2888/3850)
+2026-10-19T16:09:04.7327966Z Updating files:  76% (2926/3850)
+2026-10-19T16:09:04.7508137Z Updating files:  77% (2965/3850)
+2026-10-19T16:09:04.7549760Z Updating files:  78% (3003/3850)
+2026-10-19T16:09:04.7586013Z Updating files:  79% (3042/3850)
+2026-10-19T16:09:04.7619156Z Updating files:  80% (3080/3850)
+2026-10-19T16:09:04.8132992Z Updating files:  81% (3119/3850)
+2026-10-19T16:09:04.8217926Z Updating files:  82% (3157/3850)
+2026-10-19T16:09:04.8413825Z Updating files:  83% (3196/3850)
+2026-10-19T16:09:04.8468974Z Updating files:  84% (3234/3850)
+2026-10-19T16:09:04.8520465Z Updating files:  85% (3273/3850)
+2026-10-19T16:09:04.8552236Z Updating files:  86% (3311/3850)
+2026-10-19T16:09:04.8609494Z Updating files:  87% (3350/3850)
+2026-10-19T16:09:04.9373771Z Updating files:  88% (3388/3850)
+2026-10-19T16:09:04.9534376Z Updating files:  89% (3427/3850)
+2026-10-19T16:09:04.9559805Z Updating files:  90% (3465/3850)
+2026-10-19T16:09:04.9611349Z Updating files:  91% (3504/3850)
+2026-10-19T16:09:04.9661718Z Updating files:  92% (3542/3850)
+2026-10-19T16:09:04.9688741Z Updating files:  93% (3581/3850)
+2026-10-19T16:09:04.9744184Z Updating files:  94% (3619/3850)
+2026-10-19T16:09:04.9765607Z Updating files:  95% (3658/3850)
+2026-10-19T16:09:04.9788560Z Updating files:  96% (3696/3850)
+2026-10-19T16:09:04.9813396Z Updating files:  97% (3735/3850)
+2026-10-19T16:09:04.9839282Z Updating files:  98% (3773/3850)
+2026-10-19T16:09:04.9864958Z Updating files:  99% (3812/3850)
+2026-10-19T16:09:04.9865444Z Updating files: 100% (3850/3850)
+2026-10-19T16:09:04.9865783Z Updating files: 100% (3850/3850), done.
+2026-10-19T16:09:04.9936835Z Note: switching to '250f50e196dee0ea46c31506d7b81efc1b1f3239'.
+2026-10-19T16:09:04.9937320Z
+2026-10-19T16:09:04.9937552Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-19T16:09:04.9938094Z changes and commit them, and you can discard any commits you make in this
+2026-10-19T16:09:04.9938622Z state without impacting any branches by switching back to a branch.
+2026-10-19T16:09:04.9939063Z
+2026-10-19T16:09:04.9939268Z If you want to create a new branch to retain commits you create, you may
+2026-10-19T16:09:04.9939761Z do so (now or later) by using -c with the switch command. Example:
+2026-10-19T16:09:04.9940118Z
+2026-10-19T16:09:04.9940283Z   git switch -c <new-branch-name>
+2026-10-19T16:09:04.9940478Z
+2026-10-19T16:09:04.9940589Z Or undo this operation with:
+2026-10-19T16:09:04.9940760Z
+2026-10-19T16:09:04.9940853Z   git switch -
+2026-10-19T16:09:04.9940980Z
+2026-10-19T16:09:04.9941216Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-19T16:09:04.9941557Z
+2026-10-19T16:09:04.9941956Z HEAD is now at 250f50e Use the sealed Python 3.12.14 environment for byte-exact W9 replays
+2026-10-19T16:09:05.0102579Z ##[endgroup]
+2026-10-19T16:09:05.0149576Z [command]/usr/bin/git log -1 --format=%H
+2026-10-19T16:09:05.0179903Z 250f50e196dee0ea46c31506d7b81efc1b1f3239
+2026-10-19T16:09:05.0190138Z ##[group]Removing auth
+2026-10-19T16:09:05.0194658Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T16:09:05.0231645Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T16:09:05.0464069Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T16:09:05.0492016Z http.https://github.com/.extraheader
+2026-10-19T16:09:05.0500919Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-19T16:09:05.0540628Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T16:09:05.0764967Z ##[endgroup]
+2026-10-19T16:09:05.1011655Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+2026-10-19T16:09:05.1012080Z with:
+2026-10-19T16:09:05.1012284Z   python-version: 3.13
+2026-10-19T16:09:05.1012512Z   check-latest: false
+2026-10-19T16:09:05.1015423Z   token: ***
+2026-10-19T16:09:05.1015645Z   update-environment: true
+2026-10-19T16:09:05.1015888Z   allow-prereleases: false
+2026-10-19T16:09:05.1016143Z   freethreaded: false
+2026-10-19T16:09:05.1016353Z ##[endgroup]
+2026-10-19T16:09:05.2332774Z ##[group]Installed versions
+2026-10-19T16:09:05.2432416Z (node:2409) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T16:09:05.2434123Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T16:09:05.2434875Z Successfully set up CPython (3.13.16)
+2026-10-19T16:09:05.2440939Z ##[endgroup]
+2026-10-19T16:09:05.2899252Z ##[group]Run set -euo pipefail
+2026-10-19T16:09:05.2899641Z [36;1mset -euo pipefail[0m
+2026-10-19T16:09:05.2899959Z [36;1mpython -m pip install python-flint==0.9.0[0m
+2026-10-19T16:09:05.2900450Z [36;1msudo apt-get update[0m
+2026-10-19T16:09:05.2900839Z [36;1msudo apt-get install -y --no-install-recommends libflint-dev libssl-dev[0m
+2026-10-19T16:09:06.0160679Z shell: /usr/bin/bash -e {0}
+2026-10-19T16:09:06.0161242Z env:
+2026-10-19T16:09:06.0161703Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:06.0162515Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+2026-10-19T16:09:06.0163281Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:06.0164240Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:06.0164943Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:06.0165646Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+2026-10-19T16:09:06.0166278Z ##[endgroup]
+2026-10-19T16:09:08.2941418Z Collecting python-flint==0.9.0
+2026-10-19T16:09:08.3426838Z   Downloading python_flint-0.9.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (23 kB)
+2026-10-19T16:09:08.3639745Z Downloading python_flint-0.9.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.2 MB)
+2026-10-19T16:09:08.4571182Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 133.3 MB/s  0:00:00
+2026-10-19T16:09:08.6199213Z Installing collected packages: python-flint
+2026-10-19T16:09:08.8951730Z Successfully installed python-flint-0.9.0
+2026-10-19T16:09:09.0088780Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-10-19T16:09:09.0402282Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-10-19T16:09:09.1158056Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [618 kB]
+2026-10-19T16:09:09.1321279Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [557 kB]
+2026-10-19T16:09:09.1367382Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-10-19T16:09:09.1389497Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-10-19T16:09:09.1425888Z Get:9 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.4 kB]
+2026-10-19T16:09:09.1491576Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-10-19T16:09:09.1533270Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-10-19T16:09:09.2496538Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1397 kB]
+2026-10-19T16:09:09.2602770Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [308 kB]
+2026-10-19T16:09:09.2629191Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1704 kB]
+2026-10-19T16:09:09.2721565Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [342 kB]
+2026-10-19T16:09:09.2765138Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1805 kB]
+2026-10-19T16:09:09.2859959Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [411 kB]
+2026-10-19T16:09:09.3657275Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1144 kB]
+2026-10-19T16:09:09.3718268Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [231 kB]
+2026-10-19T16:09:09.3744463Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1222 kB]
+2026-10-19T16:09:09.3812728Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [246 kB]
+2026-10-19T16:09:09.4314609Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1713 kB]
+2026-10-19T16:09:09.4406810Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [392 kB]
+2026-10-19T16:09:14.2599943Z Fetched 12.5 MB in 1s (9727 kB/s)
+2026-10-19T16:09:15.1888815Z Reading package lists...
+2026-10-19T16:09:15.2190990Z Reading package lists...
+2026-10-19T16:09:15.4146507Z Building dependency tree...
+2026-10-19T16:09:15.4153900Z Reading state information...
+2026-10-19T16:09:15.5570480Z libssl-dev is already the newest version (3.0.13-0ubuntu3.16).
+2026-10-19T16:09:15.5571089Z The following additional packages will be installed:
+2026-10-19T16:09:15.5574385Z   libflint18t64 libmpfr-dev
+2026-10-19T16:09:15.5580635Z Suggested packages:
+2026-10-19T16:09:15.5583257Z   libmpfr-doc
+2026-10-19T16:09:15.5730680Z The following NEW packages will be installed:
+2026-10-19T16:09:15.5735182Z   libflint-dev libflint18t64 libmpfr-dev
+2026-10-19T16:09:15.5899179Z 0 upgraded, 3 newly installed, 0 to remove and 78 not upgraded.
+2026-10-19T16:09:15.5899663Z Need to get 4501 kB of archives.
+2026-10-19T16:09:15.5900023Z After this operation, 15.0 MB of additional disk space will be used.
+2026-10-19T16:09:15.5900491Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-10-19T16:09:15.6289526Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libflint18t64 amd64 3.0.1-3.1build1 [3989 kB]
+2026-10-19T16:09:15.7547812Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libmpfr-dev amd64 4.2.1-1build1.1 [288 kB]
+2026-10-19T16:09:15.7860621Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libflint-dev amd64 3.0.1-3.1build1 [224 kB]
+2026-10-19T16:09:16.0395831Z Fetched 4501 kB in 0s (21.1 MB/s)
+2026-10-19T16:09:16.0614932Z Selecting previously unselected package libflint18t64:amd64.
+2026-10-19T16:09:16.0896470Z (Reading database ...
+2026-10-19T16:09:16.0897014Z (Reading database ... 5%
+2026-10-19T16:09:16.0897480Z (Reading database ... 10%
+2026-10-19T16:09:16.0897964Z (Reading database ... 15%
+2026-10-19T16:09:16.0898625Z (Reading database ... 20%
+2026-10-19T16:09:16.0899202Z (Reading database ... 25%
+2026-10-19T16:09:16.0899655Z (Reading database ... 30%
+2026-10-19T16:09:16.0900137Z (Reading database ... 35%
+2026-10-19T16:09:16.0900620Z (Reading database ... 40%
+2026-10-19T16:09:16.0901089Z (Reading database ... 45%
+2026-10-19T16:09:16.0901602Z (Reading database ... 50%
+2026-10-19T16:09:16.0947090Z (Reading database ... 55%
+2026-10-19T16:09:16.1968287Z (Reading database ... 60%
+2026-10-19T16:09:16.4445261Z (Reading database ... 65%
+2026-10-19T16:09:16.6101021Z (Reading database ... 70%
+2026-10-19T16:09:16.7969585Z (Reading database ... 75%
+2026-10-19T16:09:16.9993502Z (Reading database ... 80%
+2026-10-19T16:09:17.1474320Z (Reading database ... 85%
+2026-10-19T16:09:17.3420065Z (Reading database ... 90%
+2026-10-19T16:09:17.5145657Z (Reading database ... 95%
+2026-10-19T16:09:17.5146243Z (Reading database ... 100%
+2026-10-19T16:09:17.5146802Z (Reading database ... 203540 files and directories currently installed.)
+2026-10-19T16:09:17.5186212Z Preparing to unpack .../libflint18t64_3.0.1-3.1build1_amd64.deb ...
+2026-10-19T16:09:17.5222379Z Unpacking libflint18t64:amd64 (3.0.1-3.1build1) ...
+2026-10-19T16:09:17.5837790Z Selecting previously unselected package libmpfr-dev:amd64.
+2026-10-19T16:09:17.5961168Z Preparing to unpack .../libmpfr-dev_4.2.1-1build1.1_amd64.deb ...
+2026-10-19T16:09:17.5969039Z Unpacking libmpfr-dev:amd64 (4.2.1-1build1.1) ...
+2026-10-19T16:09:17.6225583Z Selecting previously unselected package libflint-dev.
+2026-10-19T16:09:17.6348359Z Preparing to unpack .../libflint-dev_3.0.1-3.1build1_amd64.deb ...
+2026-10-19T16:09:17.6356572Z Unpacking libflint-dev (3.0.1-3.1build1) ...
+2026-10-19T16:09:17.7007471Z Setting up libmpfr-dev:amd64 (4.2.1-1build1.1) ...
+2026-10-19T16:09:17.7029311Z Setting up libflint18t64:amd64 (3.0.1-3.1build1) ...
+2026-10-19T16:09:17.7048110Z Setting up libflint-dev (3.0.1-3.1build1) ...
+2026-10-19T16:09:17.7072098Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+2026-10-19T16:09:18.3533538Z
+2026-10-19T16:09:18.3534165Z Running kernel seems to be up-to-date.
+2026-10-19T16:09:18.3534684Z
+2026-10-19T16:09:18.3534807Z No services need to be restarted.
+2026-10-19T16:09:18.3535288Z
+2026-10-19T16:09:18.3535408Z No containers need to be restarted.
+2026-10-19T16:09:18.3535610Z
+2026-10-19T16:09:18.3535739Z No user sessions are running outdated binaries.
+2026-10-19T16:09:18.3535955Z
+2026-10-19T16:09:18.3536153Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-10-19T16:09:19.3345863Z ##[group]Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+2026-10-19T16:09:19.3346308Z with:
+2026-10-19T16:09:19.3346534Z   name: a1-c-even-exact-matrix-39272705942
+2026-10-19T16:09:19.3346823Z   path: .
+2026-10-19T16:09:19.3347017Z   merge-multiple: false
+2026-10-19T16:09:19.3347262Z   repository: Waschtl904/objekt-x-programm
+2026-10-19T16:09:19.3347527Z   run-id: 39272705942
+2026-10-19T16:09:19.3347722Z env:
+2026-10-19T16:09:19.3347966Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:19.3348395Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+2026-10-19T16:09:19.3348820Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:19.3349196Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:19.3349579Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:19.3349983Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+2026-10-19T16:09:19.3350348Z ##[endgroup]
+2026-10-19T16:09:19.4849205Z Downloading single artifact
+2026-10-19T16:09:19.5033720Z (node:2883) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T16:09:19.5034878Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T16:09:19.6657694Z Preparing to download the following artifacts:
+2026-10-19T16:09:19.6658732Z - a1-c-even-exact-matrix-39272705942 (ID: 12202980220, Size: 29534299, Expected Digest: sha256:f31f8a8f001375b10fd4f84f97bc7442affa9bdd8f2ebc8ecdce7197679f13c3)
+2026-10-19T16:09:19.8943275Z Redirecting to blob download url: https://productionresultssa2.blob.core.windows.net/actions-results/537c49b3-bf4f-8b91-9198-4fb254214366/workflow-job-run-79adab31-f877-5e33-b7bb-e865f22718da/artifacts/1e58663afdea5ab7c69ad57e00af95a6bcdc44ec1dbf5ced8a266b66d8ec9fb2.zip
+2026-10-19T16:09:19.8946175Z Starting download of artifact to: /home/runner/work/objekt-x-programm/objekt-x-programm
+2026-10-19T16:09:20.0601343Z (node:2883) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-19T16:09:20.9296699Z SHA256 digest of downloaded artifact is f31f8a8f001375b10fd4f84f97bc7442affa9bdd8f2ebc8ecdce7197679f13c3
+2026-10-19T16:09:20.9297341Z Artifact download completed successfully.
+2026-10-19T16:09:20.9297665Z Total of 1 artifact(s) downloaded
+2026-10-19T16:09:20.9301841Z Download artifact has finished successfully
+2026-10-19T16:09:20.9458537Z ##[group]Run set -euo pipefail
+2026-10-19T16:09:20.9458902Z [36;1mset -euo pipefail[0m
+2026-10-19T16:09:20.9459215Z [36;1mpython scripts/a1_c_even_matrix_artifact.py \[0m
+2026-10-19T16:09:20.9459605Z [36;1m  --verify --path a1_c_even_exact_matrix.bin \[0m
+2026-10-19T16:09:20.9459966Z [36;1m  | tee a1_c_even_artifact_reverify.log[0m
+2026-10-19T16:09:20.9460471Z [36;1mgrep -q '^MATRIX_SHA256=97b761e9f89517303f557d3c18061cc1b232c821e5804fcf9071298e17e60183$' \[0m
+2026-10-19T16:09:20.9460982Z [36;1m  a1_c_even_artifact_reverify.log[0m
+2026-10-19T16:09:20.9461426Z [36;1mgrep -q 'CERTIFIED: loaded C-even integer matrix matches frozen fingerprint' \[0m
+2026-10-19T16:09:20.9461892Z [36;1m  a1_c_even_artifact_reverify.log[0m
+2026-10-19T16:09:20.9524972Z shell: /usr/bin/bash -e {0}
+2026-10-19T16:09:20.9525231Z env:
+2026-10-19T16:09:20.9525514Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:20.9526008Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+2026-10-19T16:09:20.9526466Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:20.9526865Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:20.9527255Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:20.9527653Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+2026-10-19T16:09:20.9527982Z ##[endgroup]
+2026-10-19T16:09:24.4868533Z artifact_bytes=32391152
+2026-10-19T16:09:24.4869200Z MATRIX_SHA256=97b761e9f89517303f557d3c18061cc1b232c821e5804fcf9071298e17e60183
+2026-10-19T16:09:24.4870003Z CERTIFIED: loaded C-even integer matrix matches frozen fingerprint
+2026-10-19T16:09:24.5145618Z ##[group]Run set -euo pipefail
+2026-10-19T16:09:24.5145965Z [36;1mset -euo pipefail[0m
+2026-10-19T16:09:24.5146212Z [36;1mgit rev-parse HEAD[0m
+2026-10-19T16:09:24.5146551Z [36;1mgit hash-object scripts/check_a1_c_even_artifact_spd_ldl.c[0m
+2026-10-19T16:09:24.5146938Z [36;1mcc -O3 -std=c11 -Wall -Wextra \[0m
+2026-10-19T16:09:24.5147263Z [36;1m  scripts/check_a1_c_even_artifact_spd_ldl.c \[0m
+2026-10-19T16:09:24.5147608Z [36;1m  -o check_a1_c_even_artifact_spd_ldl \[0m
+2026-10-19T16:09:24.5147951Z [36;1m  -lflint -lmpfr -lgmp -lcrypto -lm -lpthread[0m
+2026-10-19T16:09:24.5211262Z shell: /usr/bin/bash -e {0}
+2026-10-19T16:09:24.5211520Z env:
+2026-10-19T16:09:24.5211799Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:24.5212246Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+2026-10-19T16:09:24.5212689Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:24.5213132Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:24.5213528Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:24.5214217Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+2026-10-19T16:09:24.5214565Z ##[endgroup]
+2026-10-19T16:09:24.5316740Z 250f50e196dee0ea46c31506d7b81efc1b1f3239
+2026-10-19T16:09:24.5332534Z 49f9696c73f3c2e705e5fdfa18e9fd912f15ee69
+2026-10-19T16:09:24.9770947Z ##[group]Run set -euo pipefail
+2026-10-19T16:09:24.9771529Z [36;1mset -euo pipefail[0m
+2026-10-19T16:09:24.9772136Z [36;1m./check_a1_c_even_artifact_spd_ldl a1_c_even_exact_matrix.bin \[0m
+2026-10-19T16:09:24.9772874Z [36;1m  | tee a1_c_even_artifact_spd_ldl.log[0m
+2026-10-19T16:09:24.9774056Z [36;1mgrep -q '^MATRIX_SHA256=97b761e9f89517303f557d3c18061cc1b232c821e5804fcf9071298e17e60183$' \[0m
+2026-10-19T16:09:24.9775010Z [36;1m  a1_c_even_artifact_spd_ldl.log[0m
+2026-10-19T16:09:24.9776037Z [36;1mgrep -q 'CERTIFIED: exact hash-fixed 1075x1075 C-even integer matrix is positive definite by Arb LDL' \[0m
+2026-10-19T16:09:24.9777379Z [36;1m  a1_c_even_artifact_spd_ldl.log[0m
+2026-10-19T16:09:24.9778164Z [36;1mgrep -q 'CERTIFIED: A_e >= 1e-35 I_1075 after the frozen finite-model ledger' \[0m
+2026-10-19T16:09:24.9778957Z [36;1m  a1_c_even_artifact_spd_ldl.log[0m
+2026-10-19T16:09:24.9863271Z shell: /usr/bin/bash -e {0}
+2026-10-19T16:09:24.9863557Z env:
+2026-10-19T16:09:24.9864199Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:24.9864670Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+2026-10-19T16:09:24.9865140Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:24.9865543Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:24.9865963Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:09:24.9866371Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+2026-10-19T16:09:24.9866715Z ##[endgroup]
+2026-10-19T16:09:25.7430589Z ARTIFACT_LOAD elapsed=0.202
+2026-10-19T16:09:25.7431189Z CERTIFIED: decoded matrix is exactly symmetric 1075x1075
+2026-10-19T16:09:25.7431998Z MATRIX_SHA256=97b761e9f89517303f557d3c18061cc1b232c821e5804fcf9071298e17e60183
+2026-10-19T16:09:25.7432757Z HASH_RECOMPUTE elapsed=0.325
+2026-10-19T16:09:25.7433476Z CERTIFIED: C checker reconstructed the frozen exact matrix fingerprint
+2026-10-19T16:09:25.8728970Z LDL_PRECISION=256
+2026-10-19T16:09:26.2784991Z LDL_DONE precision=256 elapsed=0.406 certified=0
+2026-10-19T16:09:26.4250978Z LDL_PRECISION=512
+2026-10-19T16:09:30.5228430Z LDL_DONE precision=512 elapsed=4.098 certified=0
+2026-10-19T16:09:30.6630971Z LDL_PRECISION=768
+2026-10-19T16:09:46.4776553Z LDL_DONE precision=768 elapsed=15.815 certified=0
+2026-10-19T16:09:46.6465487Z LDL_PRECISION=1024
+2026-10-19T16:10:15.2024206Z LDL_DONE precision=1024 elapsed=28.556 certified=0
+2026-10-19T16:10:15.3798611Z LDL_PRECISION=1536
+2026-10-19T16:11:21.3779528Z LDL_DONE precision=1536 elapsed=65.998 certified=0
+2026-10-19T16:11:21.5615427Z LDL_PRECISION=2048
+2026-10-19T16:13:06.1565392Z LDL_DONE precision=2048 elapsed=104.595 certified=1
+2026-10-19T16:13:06.3970923Z CERTIFIED_PRECISION=2048
+2026-10-19T16:13:06.3971792Z CERTIFIED: exact hash-fixed 1075x1075 C-even integer matrix is positive definite by Arb LDL
+2026-10-19T16:13:06.3972836Z CERTIFIED: A_e >= 1e-35 I_1075 after the frozen finite-model ledger
+2026-10-19T16:13:06.4270537Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-19T16:13:06.4270961Z with:
+2026-10-19T16:13:06.4271163Z   name: a1-c-even-ldl-39272705942
+2026-10-19T16:13:06.4271535Z   path: a1_c_even_artifact_reverify.log
+a1_c_even_artifact_spd_ldl.log
+
+2026-10-19T16:13:06.4271906Z   if-no-files-found: warn
+2026-10-19T16:13:06.4272148Z   retention-days: 7
+2026-10-19T16:13:06.4272356Z   compression-level: 6
+2026-10-19T16:13:06.4272579Z   overwrite: false
+2026-10-19T16:13:06.4272799Z   include-hidden-files: false
+2026-10-19T16:13:06.4273030Z env:
+2026-10-19T16:13:06.4273291Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:13:06.4273732Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+2026-10-19T16:13:06.4274353Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:13:06.4274733Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:13:06.4275146Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+2026-10-19T16:13:06.4275530Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+2026-10-19T16:13:06.4275854Z ##[endgroup]
+2026-10-19T16:13:06.5981618Z (node:2954) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T16:13:06.5982367Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T16:13:06.6039053Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-19T16:13:06.6066115Z The least common ancestor is /home/runner/work/objekt-x-programm/objekt-x-programm. This will be the root directory of the artifact
+2026-10-19T16:13:06.6067950Z With the provided path, there will be 2 files uploaded
+2026-10-19T16:13:06.6069782Z Artifact name is valid!
+2026-10-19T16:13:06.6070465Z Root directory input is valid!
+2026-10-19T16:13:06.8731176Z Beginning upload of artifact content to blob storage
+2026-10-19T16:13:06.8947071Z (node:2954) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-19T16:13:06.9821944Z Uploaded bytes 886
+2026-10-19T16:13:07.0299860Z Finished uploading artifact content to blob storage!
+2026-10-19T16:13:07.0300810Z SHA256 digest of uploaded artifact zip is 5f04e5287f45a5b7b6c46a0f6f5079f2685fdf971f7e32b2e74ac34947179e40
+2026-10-19T16:13:07.0302035Z Finalizing artifact upload
+2026-10-19T16:13:07.2994189Z Artifact a1-c-even-ldl-39272705942.zip successfully finalized. Artifact ID 12203065740
+2026-10-19T16:13:07.2995249Z Artifact a1-c-even-ldl-39272705942 has been successfully uploaded! Final size is 886 bytes. Artifact ID is 12203065740
+2026-10-19T16:13:07.3003221Z Artifact download URL: https://github.com/Waschtl904/objekt-x-programm/actions/runs/39272705942/artifacts/12203065740
+2026-10-19T16:13:07.3237014Z Post job cleanup.
+2026-10-19T16:13:07.4507387Z (node:2968) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T16:13:07.4508651Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T16:13:07.4720656Z Post job cleanup.
+2026-10-19T16:13:07.5720718Z [command]/usr/bin/git version
+2026-10-19T16:13:07.5775037Z git version 2.55.0
+2026-10-19T16:13:07.5813695Z Temporarily overriding HOME='/home/runner/work/_temp/ee2d5b13-0123-438c-99ba-214d3f26d9bc' before making global git config changes
+2026-10-19T16:13:07.5815757Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T16:13:07.5819725Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/objekt-x-programm/objekt-x-programm
+2026-10-19T16:13:07.5872109Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T16:13:07.5915950Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T16:13:07.6223435Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T16:13:07.6265079Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T16:13:07.6712618Z Cleaning up orphan processes
+2026-10-19T16:13:07.7139528Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683, actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093, actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
