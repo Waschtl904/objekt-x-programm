@@ -2,8 +2,7 @@
 
 **Fortschreibung vom 19. Oktober 2026:** Die Forschungskette #232–#239 ist
 über [PR #241](https://github.com/Waschtl904/objekt-x-programm/pull/241)
-als Integrationskandidat mit den Main-Korrekturen aus #231 zusammengeführt;
-die Übernahme nach Main steht noch aus. Die gerichteten
+mit den Main-Korrekturen aus #231 zusammengeführt und nach Main übernommen. Die gerichteten
 [z0-Skalartests](../research/x-c1/l00-z0-directed-interval-2026-10-17/PROOF.md)
 und der [feste gerade Kandidat](../research/x-c1/coherent-k-frozen-even-2026-10-17/PROOF.md)
 liefern keinen Ausschluss. Die anschließende gemeinsame Energiebilanz

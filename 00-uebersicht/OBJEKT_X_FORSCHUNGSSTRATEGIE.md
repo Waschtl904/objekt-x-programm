@@ -8,8 +8,8 @@ Damit scheitert jeder obere Vergleich W >= Q_lower,*^-1 bei genau dieser
 K*-Unterform, eingefrorenen Antwortregel und unverändertem Budget, unter den
 gebundenen Voraussetzungen. Die Forschungskette und die späteren
 Main-Korrekturen sind über [PR #241](https://github.com/Waschtl904/objekt-x-programm/pull/241)
-als Integrationskandidat zusammengeführt; die Übernahme nach Main steht noch aus.
-Die Variantenbilanz aus #240 ist in diesem Registerentwurf erhalten.
+zusammengeführt und nach Main übernommen; die Variantenbilanz aus #240
+ist im Register erhalten.
 
 Für denselben Vergleich folgt daraus eine Stopplinie: keine weitere
 Obermajorantenverfeinerung, neue Richtungssuche oder RL-Rechnung mit dem Ziel,

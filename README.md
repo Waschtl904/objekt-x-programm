@@ -28,9 +28,8 @@ Die projektintern hergeleiteten Ergebnisse sind zur externen Prüfung offen.
 
 ## Forschungsstand in Kürze
 
-Die folgende Zusammenfassung erfasst den veröffentlichten Forschungsbestand
-einschließlich des noch ungemergten Integrationskandidaten #241 bis
-**19. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
+Die folgende Zusammenfassung bezieht sich auf den integrierten Forschungsstand
+und die Folgepakete bis **19. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
 die gepinnten Beweisanker verwaltet das
 [Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml).
 
@@ -65,7 +64,7 @@ Merge, Statuseinordnung und unabhängige externe Prüfung sind getrennte Schritt
 ## Arbeitsbilanz und Integration vom 19. Oktober
 
 Die Forschungskette #232–#239 ist über [PR #241](https://github.com/Waschtl904/objekt-x-programm/pull/241)
-als Integrationskandidat zusammengeführt; die Übernahme nach Main steht noch aus.
+zusammengeführt und nach Main übernommen.
 Die korrigierten Eingabelader aus #231 bleiben erhalten.
 Der [Integrationsnachweis](00-uebersicht/integrationsnachweise/PR241_2026-10-19.md)
 trennt übernommene große Integrationen, gezielte Replays und die technische
@@ -80,7 +79,7 @@ die geänderte Ausschlussvoraussetzung, übernommene Daten und eine quantitative
 Begründung für einen begrenzten Test benennen. Die Auswahl eines solchen
 Ansatzes ist offen; diese Integration startet keine neue Großrechnung.
 
-Die bereits bewiesene endliche A11-Positivität ist ein bekannter Prüffall.
+Die vorhandene endliche A11-Positivität unter ihren Voraussetzungen ist ein bekannter Prüffall.
 Die aktuelle Aufgabe verlangt einen konstruktiven A9→A11-Anschluss, der sie
 nicht voraussetzt und seine vollständigen Zertifikate erneuert. Daher bleiben
 Punkt 4, N12, allgemeine Fortsetzung und Objekt X offen. Erledigte
