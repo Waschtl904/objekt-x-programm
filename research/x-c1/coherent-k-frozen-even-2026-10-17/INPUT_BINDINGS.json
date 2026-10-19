@@ -1,0 +1,32 @@
+{
+  "repository_files": {
+    "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/FROZEN_even.json": "9feba325ee62bd5bb37477c10f3943b1dd7cea902324f6001a64c6000a6ee90d",
+    "research/x-c1/frozen-shell-direction-certificates-2026-10-17/expected/FROZEN_CERTIFICATE_even.json": "e6cd3b1df8134d0d75237a6fdd128911de6163bd1e82d127a9b64aeec6282e8a",
+    "research/x-c1/frozen-shell-direction-certificates-2026-10-17/PROOF.md": "4945da1ea9318fd555a3932f079e2767d6dde07cb59a256b3557245921713a9b",
+    "research/x-c1/frozen-shell-direction-certificates-2026-10-17/INPUT_BINDINGS.json": "c34720ca18e754d1b031afae9a6b5d5ebcdf7ea6d04785529eb793dc8134492d",
+    "research/x-c1/frozen-shell-direction-certificates-2026-10-17/MANIFEST.json": "08153f5506264727e7be2b198b8e8fb930b4ce49801bd738e7b9815ed7060123",
+    "research/x-c1/sharp-kp-frozen-directions-2026-10-17/expected/SHARP_K_even.json": "67332794271c32d2ac4b8a334d517cf6f9055ce215141df5a96f3bd8ff06f1fe",
+    "research/x-c1/sharp-kp-frozen-directions-2026-10-17/expected/PROJECTED_HIGH_even.json": "585a1bd448e2550fb44af4b702e440ce3c9f6aef12168b52ea7d3ac8b11ba025",
+    "research/x-c1/sharp-kp-frozen-directions-2026-10-17/PROOF.md": "0ef062d456202482dcdbf3301b7bc945d96fdea10ad61de1466565ec415dcc5f",
+    "research/x-c1/sharp-kp-frozen-directions-2026-10-17/INPUT_BINDINGS.json": "54fa6e51c06bd67f7d3d78ee74b27fd03545e38ff45175da06980024363fa2c1",
+    "research/x-c1/sharp-kp-frozen-directions-2026-10-17/MANIFEST.json": "feccc535ca4150f545e372e96905189f90148b18f8fb121c2c3f3cee21697106",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/expected/COMPLETE_HIGH_RESPONSE.json": "52027262debebfdb5258a7fb74ff5280d98d81b34a347d99a91a83470362a606",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/HERLEITUNG.txt": "c584f04069f72271728fb4d337e8308f69212ed16cfb76c29221be5f90a0ae83",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/certify.py": "a0a0ecb3b9b8b275b6eb46e0d8d6bad27d9eea5a91fd1b66bf75b074aef2ee89",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/MANIFEST.json": "f30889e34f112141be4d7a669f8dad39318e6fc803b85aa2c8a916d85df27c32",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe3-endliche-u8-antwort/expected/FINITE_ACTION.json": "689636e2b11efcc828100f93b512d4375c8bfebfe8c4a37e3c7c1320f31ed551",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe3-endliche-u8-antwort/certify_stage3.py": "272a71b2f3fc37eabb7b3407571e84326c3e2bb731a1531007a814221d74b32b",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe3-endliche-u8-antwort/MANIFEST.json": "ac6b55c46c34b59b7d3b2cbe73325bdba8249dff9323346273b1698f92770823",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt1-stufe1-zertifikat/expected/PSI_CORRECTED.json": "3e1bc5db6114333434891a52bef8f3bf6822779b52d14585d249d67943d8c7a1",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-und-kohaerenter-transport/expected/COHERENT_TRANSPORT_INPUTS.json": "c0c882ba85bf3ee56a433b5c5bf5d5c5c0341f2a9e03e213e6e19c460aba5666",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-und-kohaerenter-transport/MANIFEST.json": "18b039993f1d0c9c2cc68e6ee4aeb0e5e56dff445816604095004cd0a9860ac9",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/HERLEITUNG.txt": "85059c5108a708a34e633e71764f238f40374254d4482e2b09d6af19eed3acfd",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/expected/BUDGET_BOUNDS.json": "6229acf4bee398d2262c08a086fb36dd8945135ee860bb591e8218551c291613"
+  },
+  "stage3_archive": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip",
+  "prepared_sha256": {
+    "REFINED_INPUT.json.gz": "c67a44d7cc052bff32ed2768b81595367c710f9308f0f1716b213a74766b1e64",
+    "REFINED_COMMON96.json.gz": "306acbacf5f4089fe703f655bf4340087f0ae88aeaab416c0282e9e24c1638df"
+  }
+}

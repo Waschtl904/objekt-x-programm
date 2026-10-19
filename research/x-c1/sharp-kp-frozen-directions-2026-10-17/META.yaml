@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "SHARP-KP-FROZEN-SHELL-DIRECTIONS",
+  "date": "2026-10-17",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Directed actual K_P enclosures and a sharper high-coordinate pairing budget for exactly two previously frozen W-unit shell directions under the bound operator/domain/source hypotheses. The even sufficient scalar test is inconclusive; the odd test does not exclude the fixed rule.",
+  "claim_polarity": "POSITIVE_RESULT",
+  "negative_claim_boundary": "No exclusion, no confirmation of the rule or N12 result, no new candidate selection or whole-space K_P matrix, no physical orthogonality of the moment-lifted high response, no Object X or RH conclusion.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No external mathematical review or status promotion.",
+    "No new scalar pairing integration; inherited directed L intervals remain bound inputs.",
+    "Earlier nonexclusion against explicitly coarse majorants remains a historical result for that test."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/PROOF.md",
+    "sha256": "0ef062d456202482dcdbf3301b7bc945d96fdea10ad61de1466565ec415dcc5f"
+  }
+}

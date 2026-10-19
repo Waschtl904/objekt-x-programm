@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "W9-STRUCTURAL-COMPARISON-PILOT-DECISION",
+  "date": "2026-10-18",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Joint U8/K/Schur decision with a directed 12-source K admissibility certificate. Exactly one even K pilot selected; its coherent Schur update is derived but its P matrix and energy are not computed.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "No new energy exclusion or positive transition claim. The admissible K increase does not establish sufficient energy improvement. U8 and non-scalar Schur alternatives remain open.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "Pilot energy, full RL energy, both-parity or whole-shell certification have not been computed.",
+    "No improvement of F-J/a_fin errors from the restricted F-F error certificate.",
+    "No N12 or milestone-4 closure, independent external review or global Object X construction."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-structural-decision-2026-10-18/PROOF.md",
+    "sha256": "fe338a425cb864fa06352c7c4505ee685d053f51c50e8e5b3daae116bd700e2c"
+  }
+}

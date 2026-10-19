@@ -1,0 +1,85 @@
+{
+  "source_commit": "849e4d7f6a2bde34d83c4b1acc8dd2c8213c7b50",
+  "files": {
+    "common": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/common.py",
+      "sha256": "5ed05092e5d4e5deb686b6654da137ca99593256e6d5f4e1353b8f5c01b0fd07"
+    },
+    "inherited_inputs": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json",
+      "sha256": "829b4884c64d23d90efc6382abe20f449d6229af8ccf8db4b85d12e5b7e03e28"
+    },
+    "comparison_even": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/COMPARISON_even.json",
+      "sha256": "a4429379e5059d454b01063929371307a787f122fa4e800c48e8f2dbb8b6e7ba"
+    },
+    "candidate_even": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/CANDIDATE_even.json",
+      "sha256": "49653e4edd76760a054681cbf73e1695622b823d693ce2cbae81fca90edc2427"
+    },
+    "kp_even": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/K_P_even.json",
+      "sha256": "35dd61579fc2db9269947928e438fbf966972378c24511609e1fa40c3ac9de58"
+    },
+    "pairs_even": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/PAIRS_even.json.gz",
+      "sha256": "044d52d8a00f45f36f0591b9d3b51b8468fc94513c24b4fc2b04b797a6969bb8"
+    },
+    "inverse_derivation": {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt",
+      "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7"
+    },
+    "previous_proof": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/PROOF.md",
+      "sha256": "2bb4145cc8681219d416bd885e3a31f015c119baf54d85c8f60a836f77e0e5c9"
+    },
+    "previous_manifest": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/MANIFEST.json",
+      "sha256": "96f367eb55a8f9acdebc9fa9a8d3533b58e3f9aeca9bb73716add1731322ec34"
+    },
+    "majorant_proof": {
+      "path": "research/x-c1/w9-majorant-preflight-2026-10-18/PROOF.md",
+      "sha256": "fa3029fa948ef7a480374f39dbfe5eb4ae175908305419c8b6274b7604ac3b09"
+    },
+    "majorant_expected": {
+      "path": "research/x-c1/w9-majorant-preflight-2026-10-18/EXPECTED.json",
+      "sha256": "c82568566b55baaea3bcb98a888d5708edabe72832f2c2b2aafc2e673aa96f13"
+    },
+    "majorant_manifest": {
+      "path": "research/x-c1/w9-majorant-preflight-2026-10-18/MANIFEST.json",
+      "sha256": "cfa04e53a2f35f061b748e231f3a3e4572fd6ed76c146b945a5c84796dde9c8e"
+    },
+    "weights": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/WEIGHT_BOUNDS.json",
+      "sha256": "09d0b0c89f3a072a3477f2801acf30b382f18355d882b650b8982f941d4d89ed"
+    },
+    "energy_assembler": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/assemble.py",
+      "sha256": "aa6ad9a328ee62bb3e0aaeea36e5b50ee0f6e28ecee323e6a7093cd55cc570dc"
+    },
+    "weight_builder": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/weights.py",
+      "sha256": "6f5e3e2eacda2345dc5d764fa221cbbd36b12eafb32d6cd10dcf0af0edf0bdcd"
+    },
+    "common96_derivation": {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/COMMON96_HERLEITUNG.txt",
+      "sha256": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd"
+    },
+    "response_derivation": {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-neue-antworten84-und-residualbudget-2026-10-11/PROOF.txt",
+      "sha256": "122fabae61dad7d6d6916d899ea8ae8c44a1ead451ac68919e6ce9304f002e61"
+    },
+    "response_compute": {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-neue-antworten84-und-residualbudget-2026-10-11/compute.py",
+      "sha256": "42db7606eb8cd0613d279e298728d258eae7799743f9ab6ce06a96055b50e543"
+    },
+    "response_summary": {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-neue-antworten84-und-residualbudget-2026-10-11/SUMMARY.json",
+      "sha256": "9681be9ce73837ebdc0db85a6fc3277749cd4d307f18b85d720f2134f0b6b6cc"
+    },
+    "common96_generator": {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-direkte-restform-und-positiver-96er-block-2026-10-11/refine_old_majorant.py",
+      "sha256": "9afeec7892426041858a524de3f9e3e9d2b46578876de0e9f1540edfd6012730"
+    }
+  }
+}

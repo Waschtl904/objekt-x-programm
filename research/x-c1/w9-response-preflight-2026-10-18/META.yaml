@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "W9-RESPONSE-MATRIX-BOUNDED-PREFLIGHT",
+  "date": "2026-10-18",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Joint response-change identities and bounded directed transfer at fixed W9 on the two frozen #238 shell directions. Exact midpoint inverse and audit_S retain exclusion; nontrivial response changes remain unresolved. No new quadrature or RL run.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "Only the named unchanged, exact-midpoint-inverse and audit_S matrices at fixed W9 are excluded on the frozen directions. No exclusion of scaled or arbitrary response matrices, no negative actual Weil direction, no N12 or A9-to-A11 closure.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No new whole response integration, full W9 energy upper bound or RL control.",
+    "No optimization of the entire matrix class or improved admissible inverse majorant.",
+    "No independent external review, global Object X construction or mathematical status promotion of inherited results."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-response-preflight-2026-10-18/PROOF.md",
+    "sha256": "3106e399c8fd7fd9998848c51e58f5d0b9cee72350754fb18d9fa577a9ae4878"
+  }
+}

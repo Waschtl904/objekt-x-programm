@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "W9-EVEN-K-PILOT-PARTIAL-COMPARISON",
+  "date": "2026-10-18",
+  "kind": "NO_GO",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED_NO_GO",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "One frozen even K_star pilot with coherent E_star/P_star/nu_star and new weighted partial norm; certified partial energy exceeds the unchanged K_P budget under bound assumptions.",
+  "claim_polarity": "NEGATIVE_FOR_CANDIDATE_CLASS",
+  "negative_claim_boundary": "Excludes only this fixed comparison for this frozen direction. No negative Weil direction, no general K/response/majorant no-go, no milestone-4 or N12 closure.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "Full RL energy or any positive full-energy comparison.",
+    "Any odd pilot or alternate K/matrix/direction search.",
+    "Independent external acceptance or construction of Object X."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-k-pilot-even-2026-10-18/PROOF.md",
+    "sha256": "9978c62a48b452bb2edcde98a8098b71688b5fafc1c8e2b5bb3cd12495ea67ea"
+  }
+}
