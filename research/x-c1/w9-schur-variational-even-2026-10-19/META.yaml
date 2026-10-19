@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "W9-KSTAR-EVEN-VARIATIONAL-SCHUR-LOWER-TEST",
+  "date": "2026-10-19",
+  "kind": "DIAGNOSTIC",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "One fixed rational 84-vector and frozen even physical witness on the strengthened K-star lower form. Directed inverse-energy lower test remains below the budget; no class exclusion, partial pass or dual reserve.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "The test is one-sided and OPEN. It neither confirms the comparison nor excludes all inverse majorants of this lower form. No statement against other lower forms, actual Weil positivity or Object X.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "UNBOUNDED-HORIZON-COMPATIBILITY"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No full inverse-energy upper bound, partial pass or dual reserve.",
+    "No adaptive test-vector search, odd test or new integration.",
+    "No exclusion of the entire K-star inverse-majorant class; no N12/milestone-4 closure or external review."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-schur-variational-even-2026-10-19/PROOF.md",
+    "sha256": "051cac056c09ce8ad4e17a315fcd1e90341ca942a9efc2870243e837c4cfd0ea"
+  }
+}
