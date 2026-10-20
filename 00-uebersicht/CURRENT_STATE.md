@@ -142,5 +142,6 @@ Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getre
 - `W9-KSTAR-EVEN-VARIATIONAL-SCHUR-LOWER-TEST`: PENDING_STATUS_REVIEW — `research/x-c1/w9-schur-variational-even-2026-10-19/META.yaml`.
 - `W9-KSTAR-EVEN-SCHUR-FORM-ERROR-REFINEMENT`: PENDING_STATUS_REVIEW — `research/x-c1/w9-schur-form-error-even-2026-10-19/META.yaml`.
 - `W9-MATRIX-ERROR-K-CANDIDATE-SELECTION`: PENDING_STATUS_REVIEW — `research/x-c1/w9-matrix-error-selection-2026-10-20/META.yaml`.
+- `W9-MATRIX-ERROR-EVEN-PARTIAL-PASS`: PENDING_STATUS_REVIEW — `research/x-c1/w9-matrix-error-pilot-even-2026-10-20/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).

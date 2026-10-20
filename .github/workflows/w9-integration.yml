@@ -48,3 +48,7 @@ jobs:
         run: |
           python -u -B research/x-c1/w9-matrix-error-selection-2026-10-20/verify.py --check
           python -u -B research/x-c1/w9-matrix-error-selection-2026-10-20/audit.py
+      - name: Replay fixed even matrix-error partial-energy pilot
+        run: |
+          python -u -B research/x-c1/w9-matrix-error-pilot-even-2026-10-20/verify.py --check
+          python -u -B research/x-c1/w9-matrix-error-pilot-even-2026-10-20/audit.py

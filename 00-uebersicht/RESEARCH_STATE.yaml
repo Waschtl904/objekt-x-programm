@@ -3005,6 +3005,11 @@
       "id": "W9-MATRIX-ERROR-K-CANDIDATE-SELECTION",
       "meta_path": "research/x-c1/w9-matrix-error-selection-2026-10-20/META.yaml",
       "status": "PENDING_STATUS_REVIEW"
+    },
+    {
+      "id": "W9-MATRIX-ERROR-EVEN-PARTIAL-PASS",
+      "meta_path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/META.yaml",
+      "status": "PENDING_STATUS_REVIEW"
     }
   ],
   "transport_status": {
