@@ -61,85 +61,44 @@ Commit, Belegumfang und Integrationsstatus anzugeben.
 Statuseinordnung und kann auch für bereits integrierte Pakete gelten.
 Merge, Statuseinordnung und unabhängige externe Prüfung sind getrennte Schritte.
 
-## Aktuelle Entscheidung vom 20. Oktober: Restkontrollweg zu grob
+## Bilanz vom 20. Oktober: Kontrollweg beendet, neue Unterform offen
 
-Die [Machbarkeitsprüfung des ganzen Restanschlusses](research/x-c1/w9-rest-feasibility-even-2026-10-20/README.md)
-liefert **UPPER_CONTROL_ROUTE_TOO_COARSE**. F_up liegt mit etwa
-54.475251e-6 schon über Budget_lo von etwa 54.117169e-6. Die exakte
-Antwortdarstellung existiert, aber ihr günstigster E_new-gewichteter
-Transportpreis ist unbrauchbar groß. Ein positiver Formboden wurde
-zertifiziert; mit diesem F_up bleibt die erforderliche Restobergrenze negativ.
+Die Kette **#245–#250** ist als begrenzte Untersuchung abgeschlossen.
+Der vorgeschlagene obere Kontrollweg wird **vorerst nicht weiterverfolgt**.
+Die neue Unterform selbst bleibt mathematisch offen. Diese Konsolidierung
+startet keinen weiteren Rechenauftrag und behauptet keine Main-Integration.
 
-Damit ist auf dieser Grundlage keine neue Integration begründet. Eine große
-Oberabschätzung widerlegt die Unterform nicht. Ein anderer Kontrollweg
-müsste die vollständige F-Hülle und das gemeinsame Residuum quantitativ
-verbessern. Punkt 4, N12 und externe Prüfung bleiben offen.
-Die folgenden Abschnitte halten die vorausgehenden Schritte fest.
-
-## Zusatz vom 20. Oktober: eta-q-Beitrag entschieden, Rest offen
-
-Die [Auswertung am unveränderten Schurtestvektor](research/x-c1/w9-eta-q-even-2026-10-20/README.md)
-schließt eta q[Jw] in [8.78184963678; 8.78184963679]e-10 ein. Der Zusatz
-deckt weniger als 0.095067 % der bisherigen Lücke; auch seine Obergrenze
-reicht bei unveränderten übrigen Grenzen nicht. Die neue gerichtete
-Inversenergie-Untergrenze >53.19429074226e-6 bleibt unter dem Budget.
-**SCHUR_LOWER_TEST_OPEN**, kein Teilpass und keine Reserve.
-
-Offen bleibt die ganze variationale Residualenergie
-||nu_new-H_new Jw||²_(H_new^-1). Vor einer weiteren Rechnung ist ihre
-Kontrollierbarkeit mit vorhandenen vollständigen Dualdaten zu prüfen.
-Keine neue Integration oder Suche wurde begonnen. Der folgende Abschnitt
-hält den Vorgängerbefund fest; Punkt 4 und externe Prüfung bleiben offen.
-
-## Nachtrag vom 20. Oktober: Gewichtsfamilie entschieden, neue Unterform offen
-
-Die [gekoppelte Nachprüfung](research/x-c1/w9-new-k-schur-underform-even-2026-10-20/README.md)
-trennt zwei Fragen: **Alle zulässigen Gewichte der festen Young-Familie
-scheitern** bei unverändertem K_new, P_new_upper, Zeugen und Antwortregel.
-Ihre gerichtete Energieuntergrenze ist >65.23831878691e-6 bei Budget
-<54.11716937864e-6. Weitere Gewichtsexperimente sind damit nicht begründet.
-
-Der variationale Test der tatsächlich geänderten K_new-Unterform liefert
-dagegen nur eine Untergrenze >53.19341255729e-6 und bleibt offen.
-Das ist kein Teilpass, keine Dualreserve und kein Nachweis, dass allein die
-Young-Abschätzung das Hindernis verursacht. Vor einer oberen Großrechnung
-fehlt eine quantitative Kontrolle der bislang nicht eingeschlossenen Beiträge.
-Vorhandene Paarungen und Fehlergrame wurden wiederverwendet; keine neue
-Integration oder Antwortmatrix-Suche. Der Nachtrag ist als Forschungsentwurf
-geführt. Punkt 4, N12 und externe Prüfung bleiben offen.
-
-## Arbeitsbilanz vom 20. Oktober: fester Vergleich entschieden
-
-Die Folgepakete [#245](https://github.com/Waschtl904/objekt-x-programm/pull/245),
-[#246](https://github.com/Waschtl904/objekt-x-programm/pull/246) und
-[#247](https://github.com/Waschtl904/objekt-x-programm/pull/247) bilden einen
-abgeschlossenen Entscheidungstest am selben geraden Zeugen. Sie sind als
-gestapelte Entwürfe veröffentlicht; diese Bilanz behauptet keine Main-Integration.
-
-| Schritt | Ergebnis unter den gebundenen Voraussetzungen |
+| Abgeschlossen unter den gebundenen Voraussetzungen | Weiter offen |
 | --- | --- |
-| #245: neue Unterform und feste Gewichte auswählen | Zulässiger Kandidat; die alte K*-Ausschlussklasse trifft ihn nicht automatisch |
-| #246: Teilenergie einschließlich Fehler kontrollieren | Teilpass; Reserve >2.15037307060e-7 für den noch fehlenden gewichteten Dualterm |
-| #247: vollständigen Vergleich durch Dualuntergrenze prüfen | Gesamtenergie >69.15149379521e-6 bei Budget <54.11716937864e-6; dieser feste Vergleich scheitert |
+| Neue Unterform ausgewählt; Teilpass und anschließender Ausschluss des festen Gesamtvergleichs (#245–#247) | Erfolgreicher vollständiger Vergleich mit der neuen Unterform |
+| Feste Young-Gewichtsfamilie ausgeschlossen (#248) | Andere zulässige Vergleiche und die tatsächliche vollständige Inversenergie |
+| Positiver eta-q-Zusatz ausgewertet und bei unveränderten übrigen Grenzen zu klein (#249) | Gesamter variationaler Rest |
+| Vorgeschlagener oberer Kontrollweg ungeeignet (#250) | Gemeinsamer Restnachweis, der mögliche Aufhebungen erhält |
 
-Der Teilpass bleibt richtig. Der Dualanteil überschreitet den verfügbaren
-Spielraum; der gerichtete Abstand der Gesamtuntergrenze zur Budgetobergrenze
-beträgt >15.03432441658e-6, also rund 27,8 % der Budgetobergrenze.
-Die [gemeinsame Bilanz und Checkliste](00-uebersicht/OBJEKT_X_FORSCHUNGSSTRATEGIE.md#fortschreibung-vom-20-oktober-auswahl-teilpass-und-dualentscheidung)
-verknüpft die unveränderten Beweis- und Abnahmeanker.
+Die [Machbarkeitsprüfung #250](research/x-c1/w9-rest-feasibility-even-2026-10-20/PROOF.md)
+weist **zwei eigenständige Hindernisse** aus:
 
-Für diesen festen Vergleich sind keine obere Dualeinschließung, weitere
-Restintegration oder zusätzliche Präzision nötig. Ein neuer Versuch braucht
-eine konkret geänderte Voraussetzung und eine quantitative Verbesserungsaussicht
-für die **gesamte** Energie samt Budget und Fehlern. Bloße Offenheit anderer
-Gewichte, Unterformen oder Antwortregeln reicht dafür nicht.
+1. Die obere F-Einschließung liegt mit etwa 54.475251e-6 bereits ohne
+   Restenergie über der Budgetuntergrenze von etwa 54.117169e-6.
+2. Der vorhandene E-Transport ist selbst bei optimalen exakten
+   Darstellungskoeffizienten unbrauchbar teuer. Seine kleinste gewichtete
+   Koeffizientenenergie liegt bei etwa 5.78e40. Das ist ein Preis dieser
+   Majorante, keine untere Schranke der tatsächlichen Restenergie.
 
-Ausgeschlossen ist die ausgewählte vollständige Majorante mit ihren festen
-Gewichten, der Antwortregel und dem Budget am festen Zeugen. Die tatsächliche
-A9-Inverse und alle Majoranten der neuen Unterform sind damit nicht ausgeschlossen.
-Punkt 4, N12 und externe Prüfung bleiben offen; der Status bleibt
-`AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`. Die folgende Bilanz vom 19. Oktober
-beschreibt die zuvor integrierte Forschungskette.
+Ein besserer Formboden oder andere Koeffizienten retten diesen Kontrollweg
+nicht. Eine engere D/U-Fehlergrenze würde zunächst nur das erste Hindernis
+bearbeiten. Vor einer Wiederaufnahme braucht es eine konkrete gemeinsame
+Herleitung mit quantitativer Aussicht sowohl für die F-Hülle als auch für
+das vollständige Residuum samt seinen Aufhebungen. Höhere Präzision allein
+begründet keinen neuen Lauf.
+
+Die [gemeinsame Checkliste und Belegkette](00-uebersicht/OBJEKT_X_FORSCHUNGSSTRATEGIE.md#konsolidierung-vom-20-oktober-kontrollweg-beendet-methodenentscheidung-offen)
+hält Ergebnisse, Wiederverwendung und Wiederaufnahmebedingungen zusammen.
+Die bisherigen Beweis- und Abnahmeanker bleiben erhalten.
+**Punkt 4, N12 und externe Prüfung bleiben offen.**
+`AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN` wird durch diese Dokumentation
+nicht geändert. Die abgeschlossenen Prüfaufgaben sind keine Aufwandsquote
+und kein Scheitern von Objekt X.
 
 ## Arbeitsbilanz und Integration vom 19. Oktober
 

@@ -1,5 +1,95 @@
 # Forschungsstrategie für die Konstruktion von Objekt X
 
+## Konsolidierung vom 20. Oktober: Kontrollweg beendet, Methodenentscheidung offen
+
+Diese Revision fasst **#245–#250** zusammen und ersetzt deren frühere
+Folgeaufträge als operative Aufgabenliste. Die Zwischenstände bleiben
+unten als Entwicklungsgeschichte erhalten. Die Beweise, Zertifikate,
+Abnahmequittungen und ihre Bindungen werden unverändert übernommen.
+Die Kette wird hier nicht als Main-Integration oder externe Abnahme ausgegeben.
+
+**Arbeitsentscheidung:** Der untersuchte obere Kontrollweg wird vorerst
+nicht weiterverfolgt. Die neue Unterform und ihre vollständige Inversenergie
+bleiben mathematisch offen; dies ist kein Scheitern von Objekt X.
+
+### Checkliste für die abgeschlossene Untersuchung
+
+- [x] Eine tatsächlich geänderte Unterform und einen begrenzten Pilot festlegen (#245).
+- [x] Teilenergie mit allen betroffenen Fehlern einschließen: Teilpass (#246).
+- [x] Vollständigen festen Vergleich durch die Dualuntergrenze ausschließen (#247).
+- [x] Die feste Young-Gewichtsfamilie ausschließen; neuen gekoppelten Untertest getrennt als offen führen (#248).
+- [x] Positiven eta-q-Anteil am selben Vektor auswerten: bei unveränderten übrigen Grenzen zu klein (#249).
+- [x] F-Obergrenze, exakte Antwortdarstellung und Resttransport auf Machbarkeit prüfen (#250).
+- [x] Die zwei Hindernisse und die Stopplinie gemeinsam dokumentieren.
+- [ ] Eine tragfähige gemeinsame Methode für beide Hindernisse begründen.
+- [ ] Die vollständige Inversenergie für die neue Unterform entscheiden.
+- [ ] Punkt 4, N12 und die externe fachliche Prüfung abschließen.
+
+Die Häkchen zählen abgeschlossene Aufgaben, keine Prozentanteile an
+Objekt X. Ein offener Untertest ist kein Teilpass und liefert keine Reserve.
+Der Teilpass #246 bleibt korrekt, genügt aber wegen #247 nicht für den
+vollständigen festen Vergleich.
+
+### Zwei Hindernisse, eine Voraussetzung für die Wiederaufnahme
+
+| Hindernis aus #250 | Konsequenz |
+| --- | --- |
+| F_up etwa 54.475251e-6 > Budget_lo etwa 54.117169e-6 | Die vorhandene obere Hülle lässt schon ohne Restenergie keinen Spielraum. Ein besserer positiver Formboden behebt dieses Vorzeichenproblem nicht. |
+| Kleinste E_new-Koeffizientenenergie bei exakter Darstellung etwa 5.78e40 | Andere Darstellungskoeffizienten verbessern diesen bereits minimalen Majorantenpreis nicht. Er ist keine Untergrenze des tatsächlichen Residuums. |
+
+Eine engere D/U-Fehlergrenze würde zunächst nur die F-Hülle bearbeiten.
+Ein neuer Ansatz muss **beide Hindernisse gemeinsam** behandeln und mögliche
+Aufhebungen im ganzen Residuum erhalten. Vor einem neuen Rechenauftrag
+müssen vorliegen:
+
+1. Eine konkrete Herleitung für eine brauchbare F-Einschließung **und**
+   einen vollständigen gemeinsamen Restnachweis, einschließlich des
+   unendlichen Anteils und aller betroffenen Fehler.
+2. Eine quantitative Aussicht gegenüber dem zugehörigen Budget.
+   Ein kleinerer Einzelpreis oder höhere Präzision allein genügt nicht.
+3. Ein Inventar der übernommenen Quellen, Paarungen und Fehlergrame sowie
+   der tatsächlich fehlenden gemeinsamen Daten.
+4. Genau ein begrenzter Entscheidungstest mit Aufwandgrenze und vorab
+   festgelegten Erfolgs-, Ausschluss- und Unentschieden-Kriterien.
+
+**Bis dahin kein weiterer automatischer Rechenauftrag:** keine
+Gewichtssuche in der ausgeschlossenen Familie, keine Koeffizientensuche
+zur Rettung derselben E-Majorante, keine weitere eta-q-Nachschärfung und
+keine neue Integration auf diesem Kontrollweg. Es ist kein neuer Kandidat
+ausgewählt. Ein konkreter mathematischer Einwand, Provenienzfehler oder
+reproduzierbarer Zertifikatsfehler bleibt ein Anlass zur gezielten Prüfung.
+
+### Belegkette und wiederverwendbarer Bestand
+
+| Paket | Ergebnis | Gebundener Beleg |
+| --- | --- | --- |
+| #245 | Neue K-Unterform zulässig; alte K*-Ausschlussklasse nicht automatisch übertragbar | [Herleitung a60f760](https://github.com/Waschtl904/objekt-x-programm/blob/a60f7602335f654ca7b42e8362e47af243e20462/research/x-c1/w9-matrix-error-selection-2026-10-20/PROOF.md) |
+| #246 | Gerichteter Teilpass, Dualterm noch offen | [Ergebnis 93cf629](https://github.com/Waschtl904/objekt-x-programm/blob/93cf629d5efdbf93d6a3cfef8cb849134f1f72ff/research/x-c1/w9-matrix-error-pilot-even-2026-10-20/RESULT.json) |
+| #247 | Vollständiger fester Vergleich ausgeschlossen | [Herleitung d7a0a32](https://github.com/Waschtl904/objekt-x-programm/blob/d7a0a327140e51452be6c2dcd8995f7660089e58/research/x-c1/w9-dual-preflight-even-2026-10-20/PROOF.md) |
+| #248 | Feste Young-Familie ausgeschlossen; K_new-Untertest offen | [Herleitung 4e292a1](https://github.com/Waschtl904/objekt-x-programm/blob/4e292a178bc3034049eb7abfa0c915a3c2bf815f/research/x-c1/w9-new-k-schur-underform-even-2026-10-20/PROOF.md) |
+| #249 | eta-q-Zusatz deckt weniger als 0.095067 % der damaligen Lücke | [Herleitung 34aad09](https://github.com/Waschtl904/objekt-x-programm/blob/34aad090a5a05037cae3e783e07c8382fa47f4b6/research/x-c1/w9-eta-q-even-2026-10-20/PROOF.md) |
+| #250 | Vorgeschlagener oberer Kontrollweg zu grob | [Herleitung 2579da8](https://github.com/Waschtl904/objekt-x-programm/blob/2579da81914fddc889a3f498d3426c63841d4320/research/x-c1/w9-rest-feasibility-even-2026-10-20/PROOF.md) |
+
+Die rationalen Antwort- und Schurmatrizen, Quellenmodelle, gemeinsamen
+Paarungen und Fehlergrame bleiben wiederverwendbar. Der alte vollständige
+R-Gramvergleich ist vorhanden; er ersetzt keinen brauchbaren gemeinsamen
+L-dualen Gram der neuen gesamten Differenz. Fehlende neue Daten und
+vorhandene, aber zu grobe Abschätzungen bleiben getrennt.
+
+Die Autorenresultate bleiben `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN` und
+`PENDING_STATUS_REVIEW`. Diese Dokumentationsrevision verschiebt weder
+Beweisanker noch `verified_through` und wiederholt keine Mathematik.
+Abnahme: Diff-, Verweis- und Registerprüfung einschließlich der erzeugten
+Ansichten; die anwendbare CI bleibt erforderlich.
+
+<details>
+<summary>Historischer Verlauf #245–#250: frühere Folgeaufträge sind durch die obige Bilanz ersetzt</summary>
+
+Die folgenden datierten Abschnitte dokumentieren ihre damaligen
+Zwischenstände. Offene Kästchen und „nächste Schritte“ darin sind
+**keine aktuellen Rechenaufträge**; #249 und #250 erledigen die dort
+angekündigten Vorprüfungen.
+
 ## Aktuelle Entscheidung vom 20. Oktober: keine Großrechnung auf diesem Kontrollweg
 
 - [x] Vollständigen oberen Testendpunkt bestimmen: F_up etwa 54.475251e-6
@@ -142,6 +232,8 @@ Dieser Nachtrag ändert keine Eingaben, Zertifikate oder Prüfregeln. Seine
 Abnahme umfasst Diff-, Verweis- und Registerprüfung einschließlich erzeugter
 Ansichten; unveränderte Funktionsintegrationen und Zertifikatsreplays sind
 dafür kein erneuter lokaler Pflichtlauf. Die anwendbare CI bleibt erforderlich.
+
+</details>
 
 ## Fortschreibung vom 19. Oktober: feste Vergleichsklasse beendet
 
