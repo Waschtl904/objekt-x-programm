@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "W9-MATRIX-ERROR-K-CANDIDATE-SELECTION",
+  "date": "2026-10-20",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "One fixed even matrix-error K candidate with rational admissibility and monotone full residual transport; selected Young weights and model diagnostics only. Directed partial energy and dualterm remain open.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "No new energy exclusion or positive transition. The #239 exclusion for K_star remains valid. K_new changes its lower-form premise. Model headroom is not a certified reserve.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No new directed partial-energy certificate or certified P upper matrix.",
+    "No reduction of common F-J errors, no complete RL bound.",
+    "No N12, milestone-4 or Object X closure, and no independent external review."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/PROOF.md",
+    "sha256": "c26cebb43ceb900a1f872a7a4bc938b606462c2167e5cc43e53c6324fd4df338"
+  }
+}

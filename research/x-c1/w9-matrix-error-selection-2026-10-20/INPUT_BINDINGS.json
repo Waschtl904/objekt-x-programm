@@ -1,0 +1,37 @@
+{
+  "source_commit": "2e8e86770c0fde6ef5ea69b0178775eab34d5de4",
+  "files": {
+    "engine": {
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/engine.py",
+      "sha256": "af84c797f51a14cf36183c676f605f7fa2074149352cdc0058dd5572f74fa878"
+    },
+    "bindings": {
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/INPUT_BINDINGS.json",
+      "sha256": "6d876166adf1a4651c280e953c2f9144fcf6b60f99c802fd550067c92946498b"
+    },
+    "common96_proof": {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/COMMON96_HERLEITUNG.txt",
+      "sha256": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd"
+    },
+    "inverse_proof": {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt",
+      "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7"
+    },
+    "old_decision": {
+      "path": "research/x-c1/w9-structural-decision-2026-10-18/PROOF.md",
+      "sha256": "fe338a425cb864fa06352c7c4505ee685d053f51c50e8e5b3daae116bd700e2c"
+    },
+    "exclusion": {
+      "path": "research/x-c1/w9-schur-form-error-even-2026-10-19/PROOF.md",
+      "sha256": "23583bc127ff376e1508aa195c9438628a2f41256f3247bc4b98dda5c314a1c9"
+    },
+    "response_preflight": {
+      "path": "research/x-c1/w9-response-preflight-2026-10-18/PROOF.md",
+      "sha256": "3106e399c8fd7fd9998848c51e58f5d0b9cee72350754fb18d9fa577a9ae4878"
+    },
+    "closure_acceptance": {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/reports/ACCEPTANCE.json",
+      "sha256": "28ab9e30cf851ce47c12df5e379272a707c9a323d6b1d225d4f2c3b9e0a3594e"
+    }
+  }
+}
