@@ -3,7 +3,7 @@
   "id": "W9-RESPONSE-INFORMATION-GATE",
   "date": "2026-10-20",
   "kind": "REDUCTION",
-  "strategic": true,
+  "strategic": false,
   "local_only": true,
   "mathematical_status": "AUTHOR_DERIVED",
   "review_status": "EXTERNAL_REVIEW_OPEN",
