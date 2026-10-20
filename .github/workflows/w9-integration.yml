@@ -56,3 +56,7 @@ jobs:
         run: |
           python -u -B research/x-c1/w9-dual-preflight-even-2026-10-20/verify.py --check
           python -u -B research/x-c1/w9-dual-preflight-even-2026-10-20/audit.py
+      - name: Replay fixed Young-family lemma and coupled K_new Schur lower test
+        run: |
+          python -u -B research/x-c1/w9-new-k-schur-underform-even-2026-10-20/verify.py --check
+          python -u -B research/x-c1/w9-new-k-schur-underform-even-2026-10-20/audit.py

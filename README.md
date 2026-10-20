@@ -61,6 +61,23 @@ Commit, Belegumfang und Integrationsstatus anzugeben.
 Statuseinordnung und kann auch für bereits integrierte Pakete gelten.
 Merge, Statuseinordnung und unabhängige externe Prüfung sind getrennte Schritte.
 
+## Nachtrag vom 20. Oktober: Gewichtsfamilie entschieden, neue Unterform offen
+
+Die [gekoppelte Nachprüfung](research/x-c1/w9-new-k-schur-underform-even-2026-10-20/README.md)
+trennt zwei Fragen: **Alle zulässigen Gewichte der festen Young-Familie
+scheitern** bei unverändertem K_new, P_new_upper, Zeugen und Antwortregel.
+Ihre gerichtete Energieuntergrenze ist >65.23831878691e-6 bei Budget
+<54.11716937864e-6. Weitere Gewichtsexperimente sind damit nicht begründet.
+
+Der variationale Test der tatsächlich geänderten K_new-Unterform liefert
+dagegen nur eine Untergrenze >53.19341255729e-6 und bleibt offen.
+Das ist kein Teilpass, keine Dualreserve und kein Nachweis, dass allein die
+Young-Abschätzung das Hindernis verursacht. Vor einer oberen Großrechnung
+fehlt eine quantitative Kontrolle der bislang nicht eingeschlossenen Beiträge.
+Vorhandene Paarungen und Fehlergrame wurden wiederverwendet; keine neue
+Integration oder Antwortmatrix-Suche. Der Nachtrag ist als Forschungsentwurf
+geführt. Punkt 4, N12 und externe Prüfung bleiben offen.
+
 ## Arbeitsbilanz vom 20. Oktober: fester Vergleich entschieden
 
 Die Folgepakete [#245](https://github.com/Waschtl904/objekt-x-programm/pull/245),

@@ -1,5 +1,34 @@
 # Forschungsstrategie für die Konstruktion von Objekt X
 
+## Nachtrag vom 20. Oktober: Gewichte ausgeschlossen, neue Unterform offen
+
+Der [begrenzte gekoppelte Schurtest](../research/x-c1/w9-new-k-schur-underform-even-2026-10-20/PROOF.md)
+ist abgeschlossen. Die zwei Ergebnisse bleiben getrennt:
+
+- [x] Die ganze feste Young-Gewichtsfamilie mit den rationalen #246/#247-Endpunkten
+  ausschließen: Energie >65.23831878691e-6 gegenüber Budget <54.11716937864e-6.
+- [x] Genau einen rationalen variationalen Testvektor für K_new am unveränderten
+  physischen Zeugen auswerten: Untergrenze >53.19341255729e-6, `SCHUR_LOWER_TEST_OPEN`.
+- [ ] Vor einer oberen Großrechnung die bislang nicht kontrollierten Beiträge
+  quantitativ begrenzen. Der offene Test ist keine Reserve.
+- [ ] Punkt 4 und externe fachliche Prüfung abschließen.
+
+Für unverändertes K_new und P_new_upper sind weitere Gewichtsexperimente
+begründet beendet. Der offene gekoppelte Test beweist weder ein Scheitern
+aller Majoranten von Q_new^-1 noch eine ausreichende Verbesserung durch
+einen engeren oberen Vergleich. Auch die Ursache des Hindernisses ist damit
+noch nicht abschließend lokalisiert. Eine quantitative Vorprüfung müsste den
+ungenutzten eta-q-Gewinn sowie den verbleibenden variationalen Gewinn
+einschließlich des unendlichen Raums und aller Fehler kontrollieren.
+
+Ein einzelner interner Testvektor wurde für die neue Unterform vorab
+eingefroren; der physische Zeuge, die äußere Antwort und das Budget blieben
+gleich. Alle vorhandenen Paarungen und gemeinsamen Fehlergrame wurden
+übernommen. Keine neue Integration, adaptive Richtungssuche, parallele
+Antwortmatrix-Suche oder automatische Nachschärfungsserie.
+Das Autorenresultat bleibt extern offen und ist keine Main-Integration.
+Die folgenden Abschnitte dokumentieren die vorherigen Entscheidungen.
+
 ## Fortschreibung vom 20. Oktober: Auswahl, Teilpass und Dualentscheidung
 
 Der begrenzte Forschungszweig #245–#247 ist unter den gebundenen Voraussetzungen
