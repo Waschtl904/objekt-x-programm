@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "W9-RESPONSE-INFORMATION-GATE",
+  "date": "2026-10-20",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": true,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Fixed even-witness response-update reduction, source/schema audit and exact finite-dimensional information countermodels. No new Object-X energy or candidate matrix.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "No new response-class exclusion; only inability to select a qualified matrix from the stored residual features without the missing weighted response information. Source functions remain available.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "No numerical response optimization or improved candidate.",
+    "No new operator integration, full inverse energy bound or RL calculation.",
+    "No N12, milestone 4, Object X or external-review closure."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-response-information-gate-2026-10-20/PROOF.md",
+    "sha256": "05f30acbcef1235016d83f07a09c6dee1a22b45aa29969f4a3581c9c3397a8e6"
+  }
+}

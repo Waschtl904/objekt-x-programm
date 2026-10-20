@@ -1,0 +1,54 @@
+{
+  "source_commit": "2e8e86770c0fde6ef5ea69b0178775eab34d5de4",
+  "scope": "Published result/data reuse and algebra only; inherited operator proofs and large certifiers are not rerun.",
+  "files": {
+    "work_order": {
+      "path": "research/x-c1/a9-a11-certificate-calibration-2026-10-15/WORK_ORDER.md",
+      "sha256": "ead51395f495ea5cae0ff08a6726eb2a420668f584e2914f8763cf53b5f4a7e8"
+    },
+    "preflight_proof": {
+      "path": "research/x-c1/w9-response-preflight-2026-10-18/PROOF.md",
+      "sha256": "3106e399c8fd7fd9998848c51e58f5d0b9cee72350754fb18d9fa577a9ae4878"
+    },
+    "preflight_result": {
+      "path": "research/x-c1/w9-response-preflight-2026-10-18/EXPECTED.json",
+      "sha256": "91aa49f5974ecfc361e51c06d18a43945065d0e1ce8ecb08efdc690a7c2256d3"
+    },
+    "residual_generator": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/residuals.py",
+      "sha256": "e4670f3f10ca3e358f82d206b572d4d8c426b04791917e03bf4f04abededd23a"
+    },
+    "partial_proof": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/PROOF.md",
+      "sha256": "2bb4145cc8681219d416bd885e3a31f015c119baf54d85c8f60a836f77e0e5c9"
+    },
+    "pairs_even": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/PAIRS_even.json.gz",
+      "sha256": "044d52d8a00f45f36f0591b9d3b51b8468fc94513c24b4fc2b04b797a6969bb8"
+    },
+    "candidate_even": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/CANDIDATE_even.json",
+      "sha256": "49653e4edd76760a054681cbf73e1695622b823d693ce2cbae81fca90edc2427"
+    },
+    "kp_even": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/K_P_even.json",
+      "sha256": "35dd61579fc2db9269947928e438fbf966972378c24511609e1fa40c3ac9de58"
+    },
+    "pilot_result": {
+      "path": "research/x-c1/w9-k-pilot-even-2026-10-18/RESULT.json",
+      "sha256": "2fba394c6146868c95d50ad9259864927dcf1d379cff0e0652c055e915465bf0"
+    },
+    "schur_proof": {
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/PROOF.md",
+      "sha256": "051cac056c09ce8ad4e17a315fcd1e90341ca942a9efc2870243e837c4cfd0ea"
+    },
+    "form_proof": {
+      "path": "research/x-c1/w9-schur-form-error-even-2026-10-19/PROOF.md",
+      "sha256": "23583bc127ff376e1508aa195c9438628a2f41256f3247bc4b98dda5c314a1c9"
+    },
+    "form_result": {
+      "path": "research/x-c1/w9-schur-form-error-even-2026-10-19/RESULT.json",
+      "sha256": "69c6a6d84faef12e35a6888b88f188281dc4ce728550676c6e5b7bfe536e7807"
+    }
+  }
+}

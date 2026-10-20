@@ -1,0 +1,38 @@
+{
+  "scope": "Isolated source-audit and exact-algebra replay only; not a full repository or old certificate replay",
+  "source_commit": "2e8e86770c0fde6ef5ea69b0178775eab34d5de4",
+  "local_verification_snapshot": "0b1e3935742f103093502bcc72bf3bf154cb9c2a",
+  "archive_sha256": "ab512149adbeaf99ee52d87c6d9f8db25901b25702be39ae3a033dc479048497",
+  "archive_paths": [
+    "research/x-c1/w9-response-information-gate-2026-10-20",
+    "research/x-c1/a9-a11-certificate-calibration-2026-10-15/WORK_ORDER.md",
+    "research/x-c1/w9-response-preflight-2026-10-18/PROOF.md",
+    "research/x-c1/w9-response-preflight-2026-10-18/EXPECTED.json",
+    "research/x-c1/w9-partial-energy-2026-10-18/residuals.py",
+    "research/x-c1/w9-partial-energy-2026-10-18/PROOF.md",
+    "research/x-c1/w9-partial-energy-2026-10-18/expected/PAIRS_even.json.gz",
+    "research/x-c1/w9-partial-energy-2026-10-18/expected/CANDIDATE_even.json",
+    "research/x-c1/w9-partial-energy-2026-10-18/expected/K_P_even.json",
+    "research/x-c1/w9-k-pilot-even-2026-10-18/RESULT.json",
+    "research/x-c1/w9-schur-variational-even-2026-10-19/PROOF.md",
+    "research/x-c1/w9-schur-form-error-even-2026-10-19/PROOF.md",
+    "research/x-c1/w9-schur-form-error-even-2026-10-19/RESULT.json"
+  ],
+  "result_sha256": "fc1cc1f922a496aa22ffabe9fe01820c97c93cda6182feab1cc4b3ccf83b4f1c",
+  "replay": "PASS_BYTE_IDENTICAL",
+  "bound_input_tamper": "REJECTED",
+  "python_optimized": "REJECTED",
+  "large_certifiers_rerun": false,
+  "new_quadrature": false,
+  "external_review": "OPEN",
+  "receipt_added_after_replay": true,
+  "unchanged_replayed_files": {
+    "INPUT_BINDINGS.json": "b67c07024d67f7840d301f140afd91dc202657fb877a8404bd5c7f297732819a",
+    "MANIFEST.json": "95c92cb29775a87e7cbae0cc8363b30c12be1557ff428839ae5c69c4b478f72a",
+    "META.yaml": "9ab53fd8f6ca40cd6dc4489e491498775ff22faa9ab87963e83e2c62f14dbe46",
+    "PROOF.md": "05f30acbcef1235016d83f07a09c6dee1a22b45aa29969f4a3581c9c3397a8e6",
+    "README.md": "5104b0280209b2c5785e4d703f512dfb73cb82821de3cc1feafe040abd46a167",
+    "RESULT.json": "fc1cc1f922a496aa22ffabe9fe01820c97c93cda6182feab1cc4b3ccf83b4f1c",
+    "verify.py": "24214913741ecb6199d8eb65e0a40d1c71a2baa53d572d2ad4874bc875e48110"
+  }
+}
