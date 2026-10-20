@@ -1,6 +1,27 @@
 # Forschungsstrategie für die Konstruktion von Objekt X
 
-## Aktueller Zusatz vom 20. Oktober: positiver eta-q-Anteil geprüft
+## Aktuelle Entscheidung vom 20. Oktober: keine Großrechnung auf diesem Kontrollweg
+
+- [x] Vollständigen oberen Testendpunkt bestimmen: F_up etwa 54.475251e-6
+  liegt über Budget_lo etwa 54.117169e-6; gemeinsame D/U-Formfehlerhülle
+  als größten Preis identifiziert.
+- [x] Exakte Antwortdarstellung prüfen: Rang 84, aber bereits ihre
+  günstigste E_new-gewichtete Koeffizientenenergie beträgt etwa 5.78e40.
+- [x] Formboden und erforderlichen Restpreis bestimmen:
+  kappa>3.24380497686e-6; die nötige ganze Restobergrenze ist mit diesem
+  F_up negativ und daher nicht erfüllbar.
+- [ ] Einen anderen gemeinsamen Kontrollweg mit quantitativer Aussicht
+  für F-Hülle und vollständiges Residuum begründen; kein Kandidat ausgewählt.
+- [ ] Punkt 4 und externe fachliche Prüfung abschließen.
+
+Der [Gesamtbericht](../research/x-c1/w9-rest-feasibility-even-2026-10-20/PROOF.md)
+entscheidet die Machbarkeit der vorgeschlagenen Abschätzung:
+**UPPER_CONTROL_ROUTE_TOO_COARSE**. Dies ist kein Ausschluss der Unterform.
+Keine neue Integration und keine Suche nach anderen Koeffizienten zur
+Rettung derselben E-Majorante; deren Mindestpreis ist bereits eingeschlossen.
+Fehlende scharfe gemeinsame L-Dualdaten sind benannt. Kein Folgeauftrag gestartet.
+
+## Zusatz vom 20. Oktober: positiver eta-q-Anteil geprüft
 
 - [x] eta q[Jw] am unveränderten Vektor aus #248 mit vorhandenem direkten
   Formsandwich einschließen: [8.78184963678; 8.78184963679]e-10.

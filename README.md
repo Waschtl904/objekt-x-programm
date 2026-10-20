@@ -61,7 +61,22 @@ Commit, Belegumfang und Integrationsstatus anzugeben.
 Statuseinordnung und kann auch für bereits integrierte Pakete gelten.
 Merge, Statuseinordnung und unabhängige externe Prüfung sind getrennte Schritte.
 
-## Aktueller Zusatz vom 20. Oktober: eta-q-Beitrag entschieden, Rest offen
+## Aktuelle Entscheidung vom 20. Oktober: Restkontrollweg zu grob
+
+Die [Machbarkeitsprüfung des ganzen Restanschlusses](research/x-c1/w9-rest-feasibility-even-2026-10-20/README.md)
+liefert **UPPER_CONTROL_ROUTE_TOO_COARSE**. F_up liegt mit etwa
+54.475251e-6 schon über Budget_lo von etwa 54.117169e-6. Die exakte
+Antwortdarstellung existiert, aber ihr günstigster E_new-gewichteter
+Transportpreis ist unbrauchbar groß. Ein positiver Formboden wurde
+zertifiziert; mit diesem F_up bleibt die erforderliche Restobergrenze negativ.
+
+Damit ist auf dieser Grundlage keine neue Integration begründet. Eine große
+Oberabschätzung widerlegt die Unterform nicht. Ein anderer Kontrollweg
+müsste die vollständige F-Hülle und das gemeinsame Residuum quantitativ
+verbessern. Punkt 4, N12 und externe Prüfung bleiben offen.
+Die folgenden Abschnitte halten die vorausgehenden Schritte fest.
+
+## Zusatz vom 20. Oktober: eta-q-Beitrag entschieden, Rest offen
 
 Die [Auswertung am unveränderten Schurtestvektor](research/x-c1/w9-eta-q-even-2026-10-20/README.md)
 schließt eta q[Jw] in [8.78184963678; 8.78184963679]e-10 ein. Der Zusatz

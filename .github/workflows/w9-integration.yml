@@ -64,3 +64,7 @@ jobs:
         run: |
           python -u -B research/x-c1/w9-eta-q-even-2026-10-20/verify.py --check
           python -u -B research/x-c1/w9-eta-q-even-2026-10-20/audit.py
+      - name: Replay whole-rest feasibility without new function integration
+        run: |
+          python -u -B research/x-c1/w9-rest-feasibility-even-2026-10-20/verify.py --check
+          python -u -B research/x-c1/w9-rest-feasibility-even-2026-10-20/audit.py
