@@ -29,7 +29,7 @@ Die projektintern hergeleiteten Ergebnisse sind zur externen Prüfung offen.
 ## Forschungsstand in Kürze
 
 Die folgende Zusammenfassung bezieht sich auf den integrierten Forschungsstand
-und die Folgepakete bis **19. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
+und die Folgepakete bis **20. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
 die gepinnten Beweisanker verwaltet das
 [Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml).
 
@@ -60,6 +60,39 @@ Commit, Belegumfang und Integrationsstatus anzugeben.
 `PENDING_STATUS_REVIEW` im Register bezeichnet eine ausstehende fachliche
 Statuseinordnung und kann auch für bereits integrierte Pakete gelten.
 Merge, Statuseinordnung und unabhängige externe Prüfung sind getrennte Schritte.
+
+## Arbeitsbilanz vom 20. Oktober: fester Vergleich entschieden
+
+Die Folgepakete [#245](https://github.com/Waschtl904/objekt-x-programm/pull/245),
+[#246](https://github.com/Waschtl904/objekt-x-programm/pull/246) und
+[#247](https://github.com/Waschtl904/objekt-x-programm/pull/247) bilden einen
+abgeschlossenen Entscheidungstest am selben geraden Zeugen. Sie sind als
+gestapelte Entwürfe veröffentlicht; diese Bilanz behauptet keine Main-Integration.
+
+| Schritt | Ergebnis unter den gebundenen Voraussetzungen |
+| --- | --- |
+| #245: neue Unterform und feste Gewichte auswählen | Zulässiger Kandidat; die alte K*-Ausschlussklasse trifft ihn nicht automatisch |
+| #246: Teilenergie einschließlich Fehler kontrollieren | Teilpass; Reserve >2.15037307060e-7 für den noch fehlenden gewichteten Dualterm |
+| #247: vollständigen Vergleich durch Dualuntergrenze prüfen | Gesamtenergie >69.15149379521e-6 bei Budget <54.11716937864e-6; dieser feste Vergleich scheitert |
+
+Der Teilpass bleibt richtig. Der Dualanteil überschreitet den verfügbaren
+Spielraum; der gerichtete Abstand der Gesamtuntergrenze zur Budgetobergrenze
+beträgt >15.03432441658e-6, also rund 27,8 % der Budgetobergrenze.
+Die [gemeinsame Bilanz und Checkliste](00-uebersicht/OBJEKT_X_FORSCHUNGSSTRATEGIE.md#fortschreibung-vom-20-oktober-auswahl-teilpass-und-dualentscheidung)
+verknüpft die unveränderten Beweis- und Abnahmeanker.
+
+Für diesen festen Vergleich sind keine obere Dualeinschließung, weitere
+Restintegration oder zusätzliche Präzision nötig. Ein neuer Versuch braucht
+eine konkret geänderte Voraussetzung und eine quantitative Verbesserungsaussicht
+für die **gesamte** Energie samt Budget und Fehlern. Bloße Offenheit anderer
+Gewichte, Unterformen oder Antwortregeln reicht dafür nicht.
+
+Ausgeschlossen ist die ausgewählte vollständige Majorante mit ihren festen
+Gewichten, der Antwortregel und dem Budget am festen Zeugen. Die tatsächliche
+A9-Inverse und alle Majoranten der neuen Unterform sind damit nicht ausgeschlossen.
+Punkt 4, N12 und externe Prüfung bleiben offen; der Status bleibt
+`AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`. Die folgende Bilanz vom 19. Oktober
+beschreibt die zuvor integrierte Forschungskette.
 
 ## Arbeitsbilanz und Integration vom 19. Oktober
 

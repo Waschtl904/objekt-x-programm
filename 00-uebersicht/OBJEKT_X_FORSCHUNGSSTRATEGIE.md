@@ -1,5 +1,79 @@
 # Forschungsstrategie für die Konstruktion von Objekt X
 
+## Fortschreibung vom 20. Oktober: Auswahl, Teilpass und Dualentscheidung
+
+Der begrenzte Forschungszweig #245–#247 ist unter den gebundenen Voraussetzungen
+entschieden: **FULL_FIXED_COMPARISON_EXCLUDED_BY_DUAL_LOWER**. Die drei Pakete
+sind gestapelte offene Entwürfe, keine hier behauptete Main-Integration.
+Ihr Status bleibt `AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN`; die Einträge bleiben
+`PENDING_STATUS_REVIEW`. Diese Dokumentation übernimmt die veröffentlichten
+Belege und verschiebt weder Beweisanker noch `verified_through`.
+
+| Stufe | Aussage | Gepinnter Beleg |
+| --- | --- | --- |
+| #245, Auswahl | K_new und feste Gewichte sind zulässig; die neue Unterform unterscheidet sich von K_star | [Herleitung auf a60f760](https://github.com/Waschtl904/objekt-x-programm/blob/a60f7602335f654ca7b42e8362e47af243e20462/research/x-c1/w9-matrix-error-selection-2026-10-20/PROOF.md) |
+| #246, Teiltest | Teilenergie in [53.68719767242; 53.90213205365] ×10^-6; gerichtete Reserve >2.15037307060e-7 | [Ergebnis auf 93cf629](https://github.com/Waschtl904/objekt-x-programm/blob/93cf629d5efdbf93d6a3cfef8cb849134f1f72ff/research/x-c1/w9-matrix-error-pilot-even-2026-10-20/RESULT.json) |
+| #247, Gesamtentscheidung | Dualenergie >1.369503316340e-6; Gesamtenergie >69.15149379521e-6 gegenüber Budget <54.11716937864e-6 | [Ergebnis auf d7a0a32](https://github.com/Waschtl904/objekt-x-programm/blob/d7a0a327140e51452be6c2dcd8995f7660089e58/research/x-c1/w9-dual-preflight-even-2026-10-20/EXPECTED.json) und [Herleitung](https://github.com/Waschtl904/objekt-x-programm/blob/d7a0a327140e51452be6c2dcd8995f7660089e58/research/x-c1/w9-dual-preflight-even-2026-10-20/PROOF.md) |
+
+Der gerichtete Abstand ist >15.03432441658e-6, rund 27,8 % der
+Budgetobergrenze. Der Teilpass bleibt bestehen: Er enthielt den Dualterm
+ausdrücklich nicht. Die Gesamtentscheidung betrifft nur die ausgewählte
+vollständige W_new-Majorante mit K_new, den festen Gewichten, der eingefrorenen
+Antwortregel und ihrem Budget am festen geraden Zeugen. Sie ist kein Ausschluss
+der tatsächlichen A9-Inverse, aller Majoranten der neuen Unterform, anderer
+Gewichte oder anderer Antwortregeln und liefert keine negative Weil-Richtung.
+Der ältere K_star-Klassenausschluss aus #239 behält seinen eigenen Scope.
+
+Die korrekte Abbruchregel verwendet die **Gesamtuntergrenze**:
+
+    E_full,lower = E_partial,lower + (a/beta) D_full,lower > K_P,upper.
+
+Eine Dualobergrenze <1.90434988323e-8 wäre hinreichend für Erfolg gewesen.
+Für den Ausschluss ist dagegen eine Dualuntergrenze oberhalb der getrennten
+Schwelle (K_P,upper - E_partial,lower)/(a/beta) maßgeblich, etwa
+3.807788423766e-8. Die nachgewiesene Untergrenze übersteigt diese rund
+36-fach. Eine zu große Obergrenze allein wäre unentschieden geblieben.
+
+Abgeschlossene Aufgaben dieses Zweigs:
+
+- [x] Einen zulässigen Kandidaten und seine Gewichte einfrieren (#245).
+- [x] Teilenergie und alle betroffenen Fehler gemeinsam einschließen (#246).
+- [x] Den vollständigen festen Vergleich durch eine gültige Dualuntergrenze entscheiden (#247).
+- [x] Belege, Wiederverwendung und Stopplinie gemeinsam festhalten.
+- [ ] Externe fachliche Prüfung der gebundenen Kette abschließen.
+- [ ] Punkt 4: vollständigen konstruktiven A9→A11-Anschluss herstellen.
+
+Diese Häkchen zählen erledigte Aufgaben, keine Prozentanteile an Objekt X.
+Für die ausgeschlossene feste Kombination entfallen obere Dualeinschließung,
+neue Restintegration und zusätzliche Präzision als nächste Arbeitsschritte.
+Ein konkreter mathematischer Einwand, Provenienzfehler oder reproduzierbarer
+Zertifikatsfehler bleibt ein Grund, den Befund erneut zu prüfen.
+
+Vor einem neuen Versuch müssen gemeinsam vorliegen:
+
+1. Eine konkrete Änderung der Gewichte, Unterform oder Antwortregel und die
+   genaue Voraussetzung des bisherigen Ausschlusses, die dadurch entfällt.
+2. Eine quantitative Aussicht für die **vollständige** Energie einschließlich
+   Dualterm, zugehörigem K_P-Budget und sämtlichen betroffenen Fehlern. Ein
+   besserer Teilwert allein genügt nach #246–#247 nicht.
+3. Das Inventar unverändert übernommener Quellen, Paarungen und Fehlergrame
+   sowie der wegen der Änderung tatsächlich neu benötigten Größen.
+4. Genau ein begrenzter Entscheidungstest mit Aufwandgrenze, Abnahme- und
+   Stopkriterien; keine automatische Varianten- oder Nachschärfungsserie.
+
+Noch ist kein solcher neuer Kandidat ausgewählt. Die grundsätzliche Offenheit
+anderer Vergleiche ist keine quantitative Begründung für einen weiteren Lauf.
+Meilenstein 4, N12, allgemeine Fortsetzung und Objekt X bleiben offen.
+
+Die bisherigen frischen Paket-Replays werden mit ihren eigenen Rechenankern
+übernommen: [#245-Abnahme](https://github.com/Waschtl904/objekt-x-programm/blob/a60f7602335f654ca7b42e8362e47af243e20462/research/x-c1/w9-matrix-error-selection-2026-10-20/ACCEPTANCE.json),
+[#246-Abnahme](https://github.com/Waschtl904/objekt-x-programm/blob/93cf629d5efdbf93d6a3cfef8cb849134f1f72ff/research/x-c1/w9-matrix-error-pilot-even-2026-10-20/ACCEPTANCE.json),
+[#247-Abnahme](https://github.com/Waschtl904/objekt-x-programm/blob/d7a0a327140e51452be6c2dcd8995f7660089e58/research/x-c1/w9-dual-preflight-even-2026-10-20/ACCEPTANCE.json).
+Dieser Nachtrag ändert keine Eingaben, Zertifikate oder Prüfregeln. Seine
+Abnahme umfasst Diff-, Verweis- und Registerprüfung einschließlich erzeugter
+Ansichten; unveränderte Funktionsintegrationen und Zertifikatsreplays sind
+dafür kein erneuter lokaler Pflichtlauf. Die anwendbare CI bleibt erforderlich.
+
 ## Fortschreibung vom 19. Oktober: feste Vergleichsklasse beendet
 
 Die [Formfehlerschärfung am festen geraden Zeugen](../research/x-c1/w9-schur-form-error-even-2026-10-19/PROOF.md)
