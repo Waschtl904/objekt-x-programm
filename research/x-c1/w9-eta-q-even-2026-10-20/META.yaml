@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "W9-NEW-K-FROZEN-EVEN-ETA-Q",
+  "date": "2026-10-20",
+  "kind": "DIAGNOSTIC",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Directed eta*q[Jw] at the unchanged #248 even vector; all earlier bounds retained; updated lower test remains open.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "The eta contribution alone cannot close the inherited lower-test gap. No exclusion or success of Q_new inverse or actual A9 inverse is claimed.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No partial pass, dual reserve or full inverse-energy upper.",
+    "No new vector, integration, solve or automatic residual computation.",
+    "No N12, milestone-4, Object X closure or external review."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-eta-q-even-2026-10-20/PROOF.md",
+    "sha256": "a375a35001ec40d2b4f68c3ba1edbfa8a1618e8e49f92fbb6fd0feded8851aad"
+  }
+}

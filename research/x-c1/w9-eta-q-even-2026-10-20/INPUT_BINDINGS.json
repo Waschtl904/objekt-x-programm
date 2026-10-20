@@ -1,0 +1,52 @@
+{
+  "source_commit": "4e292a178bc3034049eb7abfa0c915a3c2bf815f",
+  "files": {
+    "source_bindings": {
+      "path": "research\\x-c1\\w9-partial-energy-2026-10-18\\INPUT_BINDINGS.json",
+      "sha256": "829b4884c64d23d90efc6382abe20f449d6229af8ccf8db4b85d12e5b7e03e28"
+    },
+    "stage3_archive": {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip",
+      "sha256": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52"
+    },
+    "previous_result": {
+      "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/RESULT.json",
+      "sha256": "9d00781b9fb2799669fa1138fd6bfba638263c2b2ee3ab3950e87d97f684adcb"
+    },
+    "frozen_vector": {
+      "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/CANDIDATE.json",
+      "sha256": "70e8f72ab0cb8ca1ac0d254392384a2040a9d76d04ebf82587c48771e9f34628"
+    },
+    "previous_proof": {
+      "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/PROOF.md",
+      "sha256": "3e82b37694636a63e89664bb9268aee8d4accb85f4389e5fe6285292917177c9"
+    },
+    "inverse_derivation": {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt",
+      "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7"
+    },
+    "form_identity": {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/RESPONSES_PROOF.txt",
+      "sha256": "122fabae61dad7d6d6916d899ea8ae8c44a1ead451ac68919e6ce9304f002e61"
+    },
+    "direct_form_proof": {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/COMMON96_HERLEITUNG.txt",
+      "sha256": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd"
+    },
+    "sandwich_proof": {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/PROOF.md",
+      "sha256": "2bb4145cc8681219d416bd885e3a31f015c119baf54d85c8f60a836f77e0e5c9"
+    },
+    "direct_generator": {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-direkte-restform-und-positiver-96er-block-2026-10-11/refine_old_majorant.py",
+      "sha256": "9afeec7892426041858a524de3f9e3e9d2b46578876de0e9f1540edfd6012730"
+    }
+  },
+  "used_fields": [
+    "common.cases[0].D96_lower_model[12:,12:]",
+    "common.cases[0].D96_upper_model[12:,12:]",
+    "CANDIDATE.raw_coefficients",
+    "previous RESULT exact endpoints and provenance"
+  ],
+  "no_historical_recomputation": true
+}

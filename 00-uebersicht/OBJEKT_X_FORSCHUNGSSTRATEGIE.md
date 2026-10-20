@@ -1,5 +1,24 @@
 # Forschungsstrategie für die Konstruktion von Objekt X
 
+## Aktueller Zusatz vom 20. Oktober: positiver eta-q-Anteil geprüft
+
+- [x] eta q[Jw] am unveränderten Vektor aus #248 mit vorhandenem direkten
+  Formsandwich einschließen: [8.78184963678; 8.78184963679]e-10.
+- [x] Alte Grenzen unverändert übernehmen und den unteren Gesamtansatz
+  ergänzen: >53.19429074226e-6; weiterhin `SCHUR_LOWER_TEST_OPEN`.
+- [ ] Die Kontrollierbarkeit des ganzen variationalen Restes
+  ||nu_new-H_new Jw||²_(H_new^-1) mit vorhandenen vollständigen Dualdaten
+  und einer zertifizierten Formuntergrenze quantitativ vorprüfen.
+- [ ] Punkt 4 und externe fachliche Prüfung abschließen.
+
+Auch die obere eta-q-Grenze deckt weniger als 0.095067 % der bisherigen
+Lücke. Diesen Term weiter zu verengen ist bei sonst gleichen Grenzen
+keine entscheidende Verbesserung. Die verbleibende Lücke ist keine Reserve.
+Der [Bericht](../research/x-c1/w9-eta-q-even-2026-10-20/PROOF.md)
+nennt die genaue Residualidentität und einen begrenzten Kontrollweg.
+Keine neue Integration, Suche oder automatische Folgerechnung wurde gestartet.
+Die folgenden Abschnitte halten die vorausgehenden Entscheidungen fest.
+
 ## Nachtrag vom 20. Oktober: Gewichte ausgeschlossen, neue Unterform offen
 
 Der [begrenzte gekoppelte Schurtest](../research/x-c1/w9-new-k-schur-underform-even-2026-10-20/PROOF.md)

@@ -61,6 +61,21 @@ Commit, Belegumfang und Integrationsstatus anzugeben.
 Statuseinordnung und kann auch für bereits integrierte Pakete gelten.
 Merge, Statuseinordnung und unabhängige externe Prüfung sind getrennte Schritte.
 
+## Aktueller Zusatz vom 20. Oktober: eta-q-Beitrag entschieden, Rest offen
+
+Die [Auswertung am unveränderten Schurtestvektor](research/x-c1/w9-eta-q-even-2026-10-20/README.md)
+schließt eta q[Jw] in [8.78184963678; 8.78184963679]e-10 ein. Der Zusatz
+deckt weniger als 0.095067 % der bisherigen Lücke; auch seine Obergrenze
+reicht bei unveränderten übrigen Grenzen nicht. Die neue gerichtete
+Inversenergie-Untergrenze >53.19429074226e-6 bleibt unter dem Budget.
+**SCHUR_LOWER_TEST_OPEN**, kein Teilpass und keine Reserve.
+
+Offen bleibt die ganze variationale Residualenergie
+||nu_new-H_new Jw||²_(H_new^-1). Vor einer weiteren Rechnung ist ihre
+Kontrollierbarkeit mit vorhandenen vollständigen Dualdaten zu prüfen.
+Keine neue Integration oder Suche wurde begonnen. Der folgende Abschnitt
+hält den Vorgängerbefund fest; Punkt 4 und externe Prüfung bleiben offen.
+
 ## Nachtrag vom 20. Oktober: Gewichtsfamilie entschieden, neue Unterform offen
 
 Die [gekoppelte Nachprüfung](research/x-c1/w9-new-k-schur-underform-even-2026-10-20/README.md)
