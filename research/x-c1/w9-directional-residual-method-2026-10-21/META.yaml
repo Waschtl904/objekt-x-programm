@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "W9-DIRECTIONAL-F-AND-JOINT-RESIDUAL-METHOD",
+  "date": "2026-10-21",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Fixed even witness and fixed K_new: directional F enclosure, fully paid finite residual leakage, and a conditional whole-L-dual residual target. No full residual integration.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "No exclusion or confirmation of Q_new, no full inverse upper certificate, no N12 or milestone-4 closure. The whole-residual target is not a measured value.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No full residual-energy evaluation or global inverse upper certificate.",
+    "No positive rule confirmation, N12, milestone-4, Object X or RH closure.",
+    "No external mathematical review; inherited certificates remain assumptions."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-directional-residual-method-2026-10-21/PROOF.md",
+    "sha256": "64aec4980e0b1ff21c376097bee60450329f5128538c5d05bbd69d3019387449"
+  }
+}

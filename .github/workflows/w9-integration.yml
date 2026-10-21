@@ -69,3 +69,8 @@ jobs:
         run: |
           python -u -B research/x-c1/w9-rest-feasibility-even-2026-10-20/verify.py --check
           python -u -B research/x-c1/w9-rest-feasibility-even-2026-10-20/audit.py
+      - name: Replay directional F enclosure and finite residual method pilot
+        run: |
+          python -u -B research/x-c1/w9-directional-residual-method-2026-10-21/test_controls.py
+          python -u -B research/x-c1/w9-directional-residual-method-2026-10-21/verify.py --check
+          python -u -B research/x-c1/w9-directional-residual-method-2026-10-21/audit.py
