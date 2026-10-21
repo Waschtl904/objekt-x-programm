@@ -2,7 +2,7 @@
   "source_commit": "4e292a178bc3034049eb7abfa0c915a3c2bf815f",
   "files": {
     "source_bindings": {
-      "path": "research\\x-c1\\w9-partial-energy-2026-10-18\\INPUT_BINDINGS.json",
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json",
       "sha256": "829b4884c64d23d90efc6382abe20f449d6229af8ccf8db4b85d12e5b7e03e28"
     },
     "stage3_archive": {

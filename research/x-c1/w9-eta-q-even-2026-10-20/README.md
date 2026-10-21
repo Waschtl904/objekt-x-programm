@@ -28,3 +28,8 @@ python -B research/x-c1/w9-eta-q-even-2026-10-20/audit.py
 
 [Abnahmeplan](ACCEPTANCE_PLAN.md), [Quittung](ACCEPTANCE.json),
 [Eingabebindungen](INPUT_BINDINGS.json), [exakte Endpunkte](RESULT.json).
+
+Technische Revision vom 21. Oktober 2026: [portable Pfadbehandlung und
+verbindliche Regressionstests](PORTABILITY.md). Die historische Quittung
+bleibt an ihren ursprünglichen Verifikationscommit gebunden. Die neue
+Paketbindung ändert weder mathematische Eingaben noch Ergebnisbytes.

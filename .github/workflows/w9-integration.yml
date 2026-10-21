@@ -62,6 +62,7 @@ jobs:
           python -u -B research/x-c1/w9-new-k-schur-underform-even-2026-10-20/audit.py
       - name: Replay positive eta-q contribution at the unchanged Schur test vector
         run: |
+          python -u -B research/x-c1/w9-eta-q-even-2026-10-20/test_paths.py
           python -u -B research/x-c1/w9-eta-q-even-2026-10-20/verify.py --check
           python -u -B research/x-c1/w9-eta-q-even-2026-10-20/audit.py
       - name: Replay whole-rest feasibility without new function integration

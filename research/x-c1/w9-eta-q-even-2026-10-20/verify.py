@@ -7,7 +7,7 @@ import json
 import subprocess
 import sys
 from fractions import Fraction as Q
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 from types import MappingProxyType
 from zipfile import ZipFile
 
@@ -27,14 +27,27 @@ def sha(raw):
     return hashlib.sha256(raw).hexdigest()
 
 
+def bound_path(root, name):
+    """Read repository-relative bindings identically on Windows and POSIX."""
+    need(isinstance(name, str) and bool(name) and "\x00" not in name,
+         "Invalid input path")
+    relative = PurePosixPath(name.replace("\\", "/"))
+    need(not relative.is_absolute() and not PureWindowsPath(name).drive,
+         "Absolute input path")
+    need(".." not in relative.parts, "Escaping input")
+    root = root.resolve()
+    path = root.joinpath(*relative.parts).resolve()
+    need(path.is_relative_to(root), "Escaping input")
+    return path
+
+
 def snapshot(root, bindings):
     need(__debug__, "Do not use python -O")
     spec = json.loads(bindings)
     need(spec["source_commit"] == BASE, "Frozen base")
     data = {}
     for alias, entry in spec["files"].items():
-        path = (root / entry["path"]).resolve()
-        need(path.is_relative_to(root), "Escaping input")
+        path = bound_path(root, entry["path"])
         raw = path.read_bytes()
         need(sha(raw) == entry["sha256"], "Input hash: " + alias)
         data[alias] = raw
@@ -129,8 +142,7 @@ def checked_package(directory):
     manifest = json.loads((directory / "MANIFEST.json").read_bytes())
     checked = {}
     for name, expected in manifest.items():
-        path = (directory / name).resolve()
-        need(path.is_relative_to(directory), "Escaping package path")
+        path = bound_path(directory, name)
         raw = path.read_bytes()
         need(sha(raw) == expected, "Package hash: " + name)
         checked[name] = raw
