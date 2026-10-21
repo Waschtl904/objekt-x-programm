@@ -69,3 +69,11 @@ jobs:
         run: |
           python -u -B research/x-c1/w9-rest-feasibility-even-2026-10-20/verify.py --check
           python -u -B research/x-c1/w9-rest-feasibility-even-2026-10-20/audit.py
+      - name: Replay residual-centered finite control without a whole-rest claim
+        run: |
+          python -u -B research/x-c1/w9-residual-centered-control-even-2026-10-21/verify.py --check
+          python -u -B research/x-c1/w9-residual-centered-control-even-2026-10-21/test_controls.py
+      - name: Audit the bound complete residual result without repeating integration
+        run: |
+          python -u -B research/x-c1/w9-residual-centered-control-even-2026-10-21/whole_verify.py
+          python -u -B research/x-c1/w9-residual-centered-control-even-2026-10-21/test_whole.py

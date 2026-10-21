@@ -61,6 +61,19 @@ Commit, Belegumfang und Integrationsstatus anzugeben.
 Statuseinordnung und kann auch für bereits integrierte Pakete gelten.
 Merge, Statuseinordnung und unabhängige externe Prüfung sind getrennte Schritte.
 
+## Neuer Vergleich vom 21. Oktober: fester gerader Zeuge besteht
+
+Der [restzentrierte Kontrollweg](research/x-c1/w9-residual-centered-control-even-2026-10-21/PROOF.md)
+liefert unter gebundenen Voraussetzungen eine vollständige obere Energie
+<53.950924907669e-6 bei einer Budgetuntergrenze >54.117169360708e-6.
+Die ganze gemeinsame Restfunktion, Rand- und Modellfehler sind enthalten.
+Das ist ein lokaler Fortschritt gegenüber den beiden Hindernissen aus #250.
+Die äußere Antwortregel und der Zeuge bleiben unverändert. Der gesamte
+Grad-11-Raum, beide Paritäten, Punkt 4 und externe Prüfung bleiben offen.
+Dieser neue Forschungsbranch ist noch nicht integriert; der genaue
+[Reproduktionsstatus](research/x-c1/w9-residual-centered-control-even-2026-10-21/ACCEPTANCE.json)
+und die früheren Ausschlussresultate bleiben getrennt.
+
 ## Bilanz vom 20. Oktober: Kontrollweg beendet, neue Unterform offen
 
 Die Kette **#245–#250** ist als begrenzte Untersuchung abgeschlossen.

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "W9-RESIDUAL-CENTERED-EVEN-COMPARISON",
+  "date": "2026-10-21",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Complete residual-centered upper inverse-energy comparison below the actual K_P lower bound, for one unchanged fixed even witness and K_new. Whole function, endpoint, quadrature, source and model errors included.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "No whole degree-11-space, odd-parity, N12, milestone-4, Object X or external review closure. No reversal of the excluded fixed Young family.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No full residual upper bound obtained from finite coordinates or a mesh difference.",
+    "No changed physical witness, answer rule, K_new or variational vector.",
+    "No external analytic review, integration or whole transition closure."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/PROOF.md",
+    "sha256": "222d6880db1b3d3c70be3bf0d004cbb9ae5c1bcfb1bd0a57796b7ad678c6d624"
+  }
+}
