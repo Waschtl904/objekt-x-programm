@@ -147,5 +147,6 @@ Dokumentierte Checkerläufe sind von externer Prüfung und Git-Integration getre
 - `W9-NEW-K-YOUNG-FAMILY-AND-SCHUR-LOWER-TEST`: PENDING_STATUS_REVIEW — `research/x-c1/w9-new-k-schur-underform-even-2026-10-20/META.yaml`.
 - `W9-NEW-K-FROZEN-EVEN-ETA-Q`: PENDING_STATUS_REVIEW — `research/x-c1/w9-eta-q-even-2026-10-20/META.yaml`.
 - `W9-NEW-K-WHOLE-REST-FEASIBILITY`: PENDING_STATUS_REVIEW — `research/x-c1/w9-rest-feasibility-even-2026-10-20/META.yaml`.
+- `W9-DIRECTIONAL-F-AND-JOINT-RESIDUAL-METHOD`: PENDING_STATUS_REVIEW — `research/x-c1/w9-directional-residual-method-2026-10-21/META.yaml`.
 
 Einstieg: [NEXT_GATES](NEXT_GATES.md) · [Architektur](OBJEKT_X_ARCHITECTURE.md) · [Pflege und Prüfungen](RESEARCH_STATE_MAINTENANCE.md).
