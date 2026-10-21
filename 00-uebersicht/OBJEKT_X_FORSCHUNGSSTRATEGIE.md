@@ -1,5 +1,19 @@
 # Forschungsstrategie für die Konstruktion von Objekt X
 
+## Aktueller Integrationsstand vom 21. Oktober 2026
+
+PR #252 ist durch Merge `4ede0b70e2df1f133c762d7b0e6527338d597874`
+auf main integriert. Der feste gerade Vergleich besteht unter den gebundenen
+Voraussetzungen; Grad-11-Raum, andere Parität, N12 und Punkt 4 bleiben offen.
+Die maßgebliche Wiederaufnahme und ihre Aussagegrenzen stehen in der
+[Ergänzung vom 21. Oktober](#ergänzung-vom-21-oktober-gemeinsamer-restvergleich).
+
+Die folgenden Abschnitte vom 20. Oktober dokumentieren die frühere Stopplinie.
+Ihre offenen Methodenaufgaben sind für den festen geraden Zeugen durch #252
+bearbeitet; die historischen Ausschlüsse bleiben bestehen. Maßgeblich für die
+aktuelle Aufgabenfolge ist [NEXT_GATES](NEXT_GATES.md). Der Merge ändert weder
+Beweisanker noch mathematischen oder externen Prüfstatus.
+
 ## Konsolidierung vom 20. Oktober: Kontrollweg beendet, Methodenentscheidung offen
 
 Diese Revision fasst **#245–#250** zusammen und ersetzt deren frühere
