@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "W9-NEW-K-YOUNG-FAMILY-AND-SCHUR-LOWER-TEST",
+  "date": "2026-10-20",
+  "kind": "DIAGNOSTIC",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "At unchanged K_new, P_new_upper, physical even witness, response and budget: exact Young-family exclusion; one newly frozen variational Schur lower test remains open.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "The fixed Young weight family is excluded. The new Q_new inverse-majorant class is not excluded by this one-sided test. No claim about the actual A9 inverse, other lower forms, or other responses.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No full inverse-energy upper enclosure, partial pass or dual reserve.",
+    "No weight search, adaptive vector search, new integration, or automatic follow-up.",
+    "No N12, milestone-4, Object X closure or independent external review."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/PROOF.md",
+    "sha256": "3e82b37694636a63e89664bb9268aee8d4accb85f4389e5fe6285292917177c9"
+  }
+}

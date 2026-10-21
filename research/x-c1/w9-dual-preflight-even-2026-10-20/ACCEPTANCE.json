@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "outcome": "FULL_FIXED_COMPARISON_EXCLUDED_BY_DUAL_LOWER",
+  "scope": "The full selected W_new comparison with fixed #246 weights, response, witness and budget",
+  "fresh_git_package_archive_replay": "BYTE_EQUAL",
+  "byte_equal_result_files": [
+    "L_UPPER.json",
+    "EXPECTED.json"
+  ],
+  "verification_commit": "b4943e8dbed581379e339edf67a4cf3985af5a9b",
+  "verification_tree": "933bf6da67d4e644736523212dd95d078b8e72b6",
+  "pilot_commit": "93cf629d5efdbf93d6a3cfef8cb849134f1f72ff",
+  "package_archive_sha256": "ccabc1c8aa6d4f48a5cc2ff35721dd3efb948368a93dbbc39a96945b834fc4ec",
+  "manifest_sha256": "a613e073f134ed09f7d381c81e770b5824c8bc1fa33d4b0c0e8e3999ca0c284b",
+  "input_bindings_sha256": "85d13153ecd9577eaa81417299fddda31ca29f60261abe7e66b4fe5c962cab8a",
+  "expected_sha256": "e3534a5ac44ff187c6230ffc6957ec25d973f2695be4c61f86ea0896b515e64d",
+  "L_upper_sha256": "358f210288c3e0013731dfc4363278f14323ebc020bcfec9a66125fb2118063a",
+  "initial_run_seconds": 25.097,
+  "replay_seconds": 36.954,
+  "per_call_timeout_seconds": 300,
+  "independent_rational_endpoint_audit": "PASS",
+  "L_floor_positive_pivots": 84,
+  "exact_null_equations": 672,
+  "optimized_python_rejected": true,
+  "tampered_result_rejected": true,
+  "missing_bound_input_rejected": true,
+  "unsupported_full_upper_rejected": true,
+  "forged_total_lower_rejected": true,
+  "historic_integrations_repeated": false,
+  "full_287_pilot_repeated": false,
+  "new_integrations": false,
+  "infinite_tail_computed": false,
+  "full_dual_enclosure_claimed": false,
+  "milestone_4_closed": false,
+  "N12_closed": false,
+  "external_review": "OPEN",
+  "local_validation": {
+    "research_registry": "PASS",
+    "active_front": "PASS",
+    "registry_tests": 60,
+    "registry_tests_seconds": 81.456,
+    "diff_check": "PASS"
+  },
+  "environment": {
+    "python": "3.13.7",
+    "python_flint": "0.9.0",
+    "directed_precision_bits": 1024,
+    "rational_L_floor_audit_decimal_digits": 120
+  },
+  "repository_ci": "PENDING_AFTER_PUBLICATION",
+  "merge_performed": false
+}

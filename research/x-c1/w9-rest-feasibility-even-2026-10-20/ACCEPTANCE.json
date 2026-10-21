@@ -1,0 +1,94 @@
+{
+  "verification_commit": "b7edfab16e4f43241a65c1674891737388673f87",
+  "source_commit": "34aad090a5a05037cae3e783e07c8382fa47f4b6",
+  "archive_scope": "new package and every bound file dependency; NOT a full repository archive",
+  "archive_pathspecs": [
+    "research/x-c1/a9-inverse-renewal-2026-10-13/archives/Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13.zip",
+    "research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt",
+    "research/x-c1/a9-inverse-renewal-2026-10-13/original/audit.py",
+    "research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/FULL_DUAL_GEOMETRY.txt",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip",
+    "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-und-kohaerenter-transport/expected/COHERENT_TRANSPORT_INPUTS.json",
+    "research/x-c1/w9-dual-preflight-even-2026-10-20/PROOF.md",
+    "research/x-c1/w9-eta-q-even-2026-10-20/PROOF.md",
+    "research/x-c1/w9-eta-q-even-2026-10-20/RESULT.json",
+    "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/PROOF.md",
+    "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/RESULT.json",
+    "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/SCHUR.json",
+    "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/CANDIDATE.json",
+    "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/PROOF.md",
+    "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/RESULT.json",
+    "research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json",
+    "research/x-c1/w9-rest-feasibility-even-2026-10-20"
+  ],
+  "archive_entries": 44,
+  "archive_bytes": 45392722,
+  "archive_sha256": "39d05dde891c540853cc080c9506ab34def31dbe777ca5b9a2fd7e952dfcc95e",
+  "fresh_archive_runs": {
+    "verify.py": {
+      "seconds": 80.4799600999686,
+      "exit_code": 0,
+      "stdout": "F_up = 5.4475250809622924e-05 ; budget margin = -3.580814489144432e-07\nFinite E_new solve and response Gram\nMinimum E cost interval: [5.781174962157435e+40, 5.781174962157435e+40] ; epsilon: 3.2566818970823388e-06 ; Ru price: 2.5356806433340133e+37\nIndependent rational response-rank/transport and floor audits\ncertified pivots 64\ncertified pivots 64\ncertified pivots 128\ncertified pivots 192\nPASS: UPPER_CONTROL_ROUTE_TOO_COARSE",
+      "stderr": ""
+    },
+    "audit.py": {
+      "seconds": 3.4518840999808162,
+      "exit_code": 0,
+      "stdout": "PASS: independent rational endpoints and minimum-cost witness: UPPER_CONTROL_ROUTE_TOO_COARSE",
+      "stderr": ""
+    }
+  },
+  "byte_equal": [
+    "RESULT.json",
+    "FINITE.json"
+  ],
+  "result_hashes": {
+    "RESULT.json": "c5e884f7e30baa2eb33405ea98dbe03b4c35b115f5669dc519b585ccce494527",
+    "FINITE.json": "8e34cb337ac73e777829c0b774f0e7112c6a07ef6edce18982739ad2d28670b5"
+  },
+  "negative_controls_passed": [
+    "omitted_quadratic_error",
+    "false_rest_reserve",
+    "wrong_target_sign",
+    "actual_residual_lower_from_price",
+    "false_underform_exclusion",
+    "false_rank",
+    "false_minimum_cost",
+    "changed_vector",
+    "input_hash",
+    "missing_input",
+    "python_optimized_mode"
+  ],
+  "optimized_mode_rejection": {
+    "seconds": 0.48582529998384416,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "ekt-x-integration-20261019\\research\\x-c1\\w9-rest-feasibility-even-2026-10-20\\verify.py\", line 297, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\sebas\\Documents\\Codex\\2026-10-17\\github-plugin-github-openai-curated-remote\\work\\objekt-x-integration-20261019\\research\\x-c1\\w9-rest-feasibility-even-2026-10-20\\verify.py\", line 279, in main\n    need(__debug__,\"Do not use python -O\")\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\sebas\\Documents\\Codex\\2026-10-17\\github-plugin-github-openai-curated-remote\\work\\objekt-x-integration-20261019\\research\\x-c1\\w9-rest-feasibility-even-2026-10-20\\verify.py\", line 23, in need\n    raise RuntimeError(message)\nRuntimeError: Do not use python -O"
+  },
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "python_flint": "0.9.0",
+  "arb_bits": 1024,
+  "matrix_output_decimal_digits": 200,
+  "independent_rational_audit_decimal_digits": 300,
+  "rational_positive_pivots": {
+    "response_rank_and_minimum_cost": 85,
+    "form_floor": 203
+  },
+  "technical_correction": "Initial 80-digit matrix output / 120-digit audit failed to prove pivot 62. Same inputs at 200/300 digits pass; no direction or mathematical input changed.",
+  "historical_integrations_replayed": false,
+  "status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "registry_validation": "PASS: 71 metadata packages; verified_through and mathematical statuses unchanged",
+  "generated_views": "PASS",
+  "active_front": "PASS",
+  "registry_tests": {
+    "count": 60,
+    "seconds": 113.377,
+    "outcome": "PASS"
+  },
+  "diff_check": "PASS",
+  "package_manifest_sha256": "d774840839dad98cf0b3fe45a99cab3d96813fa6c8e35f6d589c810ffc9e9231",
+  "publication_note": "The publication commit adds only this receipt; calculation, inputs, proof and output bytes match the verified scoped archive.",
+  "ci_status_at_publication": "NOT_YET_OBSERVED",
+  "merge_authorized": false
+}

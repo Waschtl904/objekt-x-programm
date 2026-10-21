@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "outcome": "PILOT_PARTIAL_PASS",
+  "scope": "Directed partial-energy certificate for the frozen even #245 candidate only",
+  "fresh_git_package_archive_replay": "BYTE_EQUAL",
+  "byte_equal_result_files": [
+    "SCHUR.json",
+    "RESULT.json"
+  ],
+  "verification_commit": "fd2a4a31d250728fbdbe36126803c3a4c6a03760",
+  "verification_tree": "ebf7d8604f7e481ff1db6d8629f034a1bcac0333",
+  "selection_commit": "a60f7602335f654ca7b42e8362e47af243e20462",
+  "package_archive_sha256": "145a260bdfc836e70f8a9a258eba89ac4e79580322d80adf4cc4b1086956305d",
+  "manifest_sha256": "b80b6ba7815a3d92f367470cad166fab002e37320db505120c8216d6a2480644",
+  "input_bindings_sha256": "9949f1daca65664f75e6f0c7f4fdccbe398a684c4133a1bc2b8090bbce08bd5a",
+  "result_sha256": "939abcba0d8c7daa720d61424e9a88b152524a82731b79288535d6e99a109f35",
+  "schur_sha256": "c2d6e82c15fc20f38dc22a9edd79b5bce9c1069a64d224abc323dd8e2361ad77",
+  "initial_run_seconds": 96.388,
+  "replay_seconds": 92.751,
+  "per_call_timeout_seconds": 1800,
+  "independent_rational_endpoint_audit": "PASS",
+  "complete_block_positive_pivots": 287,
+  "candidate_admissibility_positive_pivots": 24,
+  "optimized_python_rejected": true,
+  "tampered_result_rejected": true,
+  "missing_bound_input_rejected": true,
+  "forged_reserve_rejected": true,
+  "unsupported_dual_promotion_rejected": true,
+  "inherited_inputs": "Repository bytes read through exact hash bindings; no historical integration replay",
+  "new_integrations": false,
+  "RL_computed": false,
+  "full_energy_upper_claimed": false,
+  "milestone_4_closed": false,
+  "N12_closed": false,
+  "external_review": "OPEN",
+  "local_validation": {
+    "research_registry": "PASS",
+    "active_front": "PASS",
+    "registry_tests": 60,
+    "registry_tests_seconds": 82.371,
+    "diff_check": "PASS"
+  },
+  "environment": {
+    "python": "3.13.7",
+    "python_flint": "0.9.0",
+    "directed_precision_bits": 1024,
+    "rational_block_audit_decimal_digits": 120
+  },
+  "repository_ci": "PENDING_AFTER_PUBLICATION",
+  "merge_performed": false
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "W9-MATRIX-ERROR-EVEN-PARTIAL-PASS",
+  "date": "2026-10-20",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "One frozen even witness: directed partial-energy upper bound below the actual K_P lower bound for the selected K_new and fixed Young weights. Full dualenergy and the whole-space comparison remain open.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "No full-energy pass, no entire degree-11-space certificate, no odd-parity result, no milestone-4 or N12 closure. The old K_star exclusion remains valid.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No complete R_L bound or full energy upper bound.",
+    "No new integration, answer-matrix search, or changed physical witness.",
+    "No independent external review or global Object X construction."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/PROOF.md",
+    "sha256": "c19cc1f8707c84bdaed582c3e0183e2b4c2c0ce53b9d8990a6ba54449597c670"
+  }
+}

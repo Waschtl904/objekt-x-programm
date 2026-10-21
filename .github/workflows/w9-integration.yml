@@ -44,3 +44,28 @@ jobs:
           python -u -B research/x-c1/w9-k-pilot-even-2026-10-18/verify.py --check
           python -u -B research/x-c1/w9-schur-variational-even-2026-10-19/verify.py --check
           python -u -B research/x-c1/w9-schur-form-error-even-2026-10-19/verify.py --check
+      - name: Replay selected matrix-error candidate without energy promotion
+        run: |
+          python -u -B research/x-c1/w9-matrix-error-selection-2026-10-20/verify.py --check
+          python -u -B research/x-c1/w9-matrix-error-selection-2026-10-20/audit.py
+      - name: Replay fixed even matrix-error partial-energy pilot
+        run: |
+          python -u -B research/x-c1/w9-matrix-error-pilot-even-2026-10-20/verify.py --check
+          python -u -B research/x-c1/w9-matrix-error-pilot-even-2026-10-20/audit.py
+      - name: Replay fixed-witness dual lower preflight without tail integration
+        run: |
+          python -u -B research/x-c1/w9-dual-preflight-even-2026-10-20/verify.py --check
+          python -u -B research/x-c1/w9-dual-preflight-even-2026-10-20/audit.py
+      - name: Replay fixed Young-family lemma and coupled K_new Schur lower test
+        run: |
+          python -u -B research/x-c1/w9-new-k-schur-underform-even-2026-10-20/verify.py --check
+          python -u -B research/x-c1/w9-new-k-schur-underform-even-2026-10-20/audit.py
+      - name: Replay positive eta-q contribution at the unchanged Schur test vector
+        run: |
+          python -u -B research/x-c1/w9-eta-q-even-2026-10-20/test_paths.py
+          python -u -B research/x-c1/w9-eta-q-even-2026-10-20/verify.py --check
+          python -u -B research/x-c1/w9-eta-q-even-2026-10-20/audit.py
+      - name: Replay whole-rest feasibility without new function integration
+        run: |
+          python -u -B research/x-c1/w9-rest-feasibility-even-2026-10-20/verify.py --check
+          python -u -B research/x-c1/w9-rest-feasibility-even-2026-10-20/audit.py

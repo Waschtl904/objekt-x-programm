@@ -1,0 +1,11 @@
+{
+  "ACCEPTANCE_PLAN.md": "8bddfafb745e806c9a368c1533b5c2a64f157a97ba54531b27195c645bacb775",
+  "verify.py": "8ed4f70b4a8e311586f5ca9dc008d1481fda5f4c3aff3ec08cbf366be59f120c",
+  "audit.py": "5b7d1ea129dc35c14b8cca808ca84d950bed50900b13f8636af15b2cd21797bf",
+  "INPUT_BINDINGS.json": "4ae46af4940af4137083f210ff65dc336a86dddc64b4e1d2ef2d9ed610a1804a",
+  "EXPECTED.json": "0f6ea5f268fd46fdc4764c9a6c8d1eb9e38ec5b1690ae4154cd0528beceddee8",
+  "PROOF.md": "c26cebb43ceb900a1f872a7a4bc938b606462c2167e5cc43e53c6324fd4df338",
+  "README.md": "155aa06905283888eba7b3141c602ab48bfe4c051af045ee540ea342edde7fec",
+  "requirements.txt": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+  "META.yaml": "e8b7eaf2e076316c11e3d011305cbdd5bf42ac5ab5a5a6a8e58d789d53af5993"
+}

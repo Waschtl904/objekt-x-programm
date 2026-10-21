@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "W9-NEW-K-EVEN-DUAL-LOWER-PREFLIGHT",
+  "date": "2026-10-20",
+  "kind": "NO_GO",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED_NO_GO",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "At the unchanged #246 even witness, a directed finite variational lower bound for the full dualterm makes the entire selected W_new comparison exceed the unchanged budget upper endpoint.",
+  "claim_polarity": "NEGATIVE_FOR_CANDIDATE_CLASS",
+  "negative_claim_boundary": "Only the selected full majorant with its fixed K_new, weights, outer answer and budget. Not all majorants of Q_new, not the actual A9 inverse, not other weights or response rules. The partial pass remains valid.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No full dual-energy upper enclosure or new infinite-rest integration.",
+    "No negative Weil direction or general majorant no-go.",
+    "No N12, milestone-4, Object X closure or independent external review."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/PROOF.md",
+    "sha256": "46956a4f27717a7dd7b05f439b04647872002fe951da16626cd96f021ff45ea5"
+  }
+}

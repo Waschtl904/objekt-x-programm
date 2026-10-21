@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "W9-NEW-K-WHOLE-REST-FEASIBILITY",
+  "date": "2026-10-20",
+  "kind": "DIAGNOSTIC",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "At unchanged even witness and variational vector: full test upper endpoint, minimum-E exact response representation, positive form floor, and signed whole-residual target. The proposed upper-control route is too coarse.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "No exclusion of Q_new, the true A9 inverse, other control methods, or Object X. A lower bound on the E-transport price is not a lower bound on the actual residual energy.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No full residual-energy evaluation or full inverse upper certificate.",
+    "No partial pass, reserve, new physical direction, integration or automatic follow-up.",
+    "No N12, milestone-4, Object X closure or independent external review."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-rest-feasibility-even-2026-10-20/PROOF.md",
+    "sha256": "877fa27fd7b9baac17be1561a1a03d649f1faa636f0e45575a5e238a6cfdb989"
+  }
+}

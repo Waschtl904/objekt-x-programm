@@ -29,7 +29,7 @@ Die projektintern hergeleiteten Ergebnisse sind zur externen Prüfung offen.
 ## Forschungsstand in Kürze
 
 Die folgende Zusammenfassung bezieht sich auf den integrierten Forschungsstand
-und die Folgepakete bis **19. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
+und die Folgepakete bis **20. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
 die gepinnten Beweisanker verwaltet das
 [Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml).
 
@@ -60,6 +60,45 @@ Commit, Belegumfang und Integrationsstatus anzugeben.
 `PENDING_STATUS_REVIEW` im Register bezeichnet eine ausstehende fachliche
 Statuseinordnung und kann auch für bereits integrierte Pakete gelten.
 Merge, Statuseinordnung und unabhängige externe Prüfung sind getrennte Schritte.
+
+## Bilanz vom 20. Oktober: Kontrollweg beendet, neue Unterform offen
+
+Die Kette **#245–#250** ist als begrenzte Untersuchung abgeschlossen.
+Der vorgeschlagene obere Kontrollweg wird **vorerst nicht weiterverfolgt**.
+Die neue Unterform selbst bleibt mathematisch offen. Diese Konsolidierung
+startet keinen weiteren Rechenauftrag und behauptet keine Main-Integration.
+
+| Abgeschlossen unter den gebundenen Voraussetzungen | Weiter offen |
+| --- | --- |
+| Neue Unterform ausgewählt; Teilpass und anschließender Ausschluss des festen Gesamtvergleichs (#245–#247) | Erfolgreicher vollständiger Vergleich mit der neuen Unterform |
+| Feste Young-Gewichtsfamilie ausgeschlossen (#248) | Andere zulässige Vergleiche und die tatsächliche vollständige Inversenergie |
+| Positiver eta-q-Zusatz ausgewertet und bei unveränderten übrigen Grenzen zu klein (#249) | Gesamter variationaler Rest |
+| Vorgeschlagener oberer Kontrollweg ungeeignet (#250) | Gemeinsamer Restnachweis, der mögliche Aufhebungen erhält |
+
+Die [Machbarkeitsprüfung #250](research/x-c1/w9-rest-feasibility-even-2026-10-20/PROOF.md)
+weist **zwei eigenständige Hindernisse** aus:
+
+1. Die obere F-Einschließung liegt mit etwa 54.475251e-6 bereits ohne
+   Restenergie über der Budgetuntergrenze von etwa 54.117169e-6.
+2. Der vorhandene E-Transport ist selbst bei optimalen exakten
+   Darstellungskoeffizienten unbrauchbar teuer. Seine kleinste gewichtete
+   Koeffizientenenergie liegt bei etwa 5.78e40. Das ist ein Preis dieser
+   Majorante, keine untere Schranke der tatsächlichen Restenergie.
+
+Ein besserer Formboden oder andere Koeffizienten retten diesen Kontrollweg
+nicht. Eine engere D/U-Fehlergrenze würde zunächst nur das erste Hindernis
+bearbeiten. Vor einer Wiederaufnahme braucht es eine konkrete gemeinsame
+Herleitung mit quantitativer Aussicht sowohl für die F-Hülle als auch für
+das vollständige Residuum samt seinen Aufhebungen. Höhere Präzision allein
+begründet keinen neuen Lauf.
+
+Die [gemeinsame Checkliste und Belegkette](00-uebersicht/OBJEKT_X_FORSCHUNGSSTRATEGIE.md#konsolidierung-vom-20-oktober-kontrollweg-beendet-methodenentscheidung-offen)
+hält Ergebnisse, Wiederverwendung und Wiederaufnahmebedingungen zusammen.
+Die bisherigen Beweis- und Abnahmeanker bleiben erhalten.
+**Punkt 4, N12 und externe Prüfung bleiben offen.**
+`AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN` wird durch diese Dokumentation
+nicht geändert. Die abgeschlossenen Prüfaufgaben sind keine Aufwandsquote
+und kein Scheitern von Objekt X.
 
 ## Arbeitsbilanz und Integration vom 19. Oktober
 

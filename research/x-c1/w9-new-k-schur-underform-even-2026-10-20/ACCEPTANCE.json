@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "outcomes": [
+    "YOUNG_WEIGHT_FAMILY_EXCLUDED",
+    "SCHUR_LOWER_TEST_OPEN"
+  ],
+  "verification_commit": "3a6efc43da6a41ef7c4019fdd271ec0a3ce48ff6",
+  "verification_tree": "76ca0cf1b83633ad7d12b3fe2ea35372d176cc7b",
+  "selection_commit": "06d4c41cf8b251664e005d7ee2320c1b6aad32f2",
+  "source_commit": "bf9375b26ecb2ad3060c91824501f460c060fc43",
+  "fresh_full_repository_git_archive_replay": "BYTE_EQUAL",
+  "archive_entries": 4275,
+  "archive_bytes": 1235429716,
+  "archive_sha256": "79672464c88915fe5e290b9d2039583e1c2d83ca9652bbac0e3a97c7a801e1a6",
+  "manifest_sha256": "50a3102df5520c531444814450131a5e263664c8d1e5ed525a6ffc32188a9e3e",
+  "input_bindings_sha256": "ddab81c9e718ffa254d26cb80abb75f25818a77235345318629038bde88b3dc5",
+  "byte_equal_result_files": {
+    "WEIGHTS.json": "e3e599244533ee5b08d706f6528923351d085c78a9f7de0d9f4feb5d612b6681",
+    "CANDIDATE.json": "70e8f72ab0cb8ca1ac0d254392384a2040a9d76d04ebf82587c48771e9f34628",
+    "RESULT.json": "9d00781b9fb2799669fa1138fd6bfba638263c2b2ee3ab3950e87d97f684adcb"
+  },
+  "selection_seconds": 13.969,
+  "initial_certificate_seconds": 14.711,
+  "fresh_replay_seconds": 20.156,
+  "per_complete_call_timeout_seconds": 600,
+  "independent_rational_audit": "PASS",
+  "negative_controls": {
+    "optimized_python_rejected": true,
+    "tampered_result_rejected": true,
+    "tampered_bound_input_rejected": true,
+    "missing_bound_input_rejected": true,
+    "unsupported_partial_pass_rejected": true,
+    "forged_lower_endpoint_rejected": true,
+    "false_class_exclusion_rejected": true,
+    "invalid_C_coefficient_rejected": true
+  },
+  "historic_integrations_repeated": false,
+  "full_287_pilot_repeated": false,
+  "new_integrations": false,
+  "weight_search": false,
+  "adaptive_vector_search": false,
+  "physical_witness_changed": false,
+  "full_inverse_energy_upper_claimed": false,
+  "partial_pass": false,
+  "dual_reserve": null,
+  "milestone_4_closed": false,
+  "N12_closed": false,
+  "external_review": "OPEN",
+  "registry_validation": "PASS",
+  "active_front_validation": "PASS",
+  "registry_tests": {
+    "passed": 60,
+    "seconds": 93.393
+  },
+  "generated_views_check": "PASS",
+  "diff_check": "PASS",
+  "note": "This receipt is appended after the verification commit; no proof, input, engine or result changed after the fresh archive replay."
+}
