@@ -1,0 +1,15 @@
+{
+  "status": "INITIAL_COMPLETE_RESULT_PASS_FRESH_COMPLETE_REPLAY_RUNNING",
+  "source_commit": "639d25e38b453f2e10b859553ca49a7a0e4fafdb",
+  "verification_commit": null,
+  "initial_whole_result_sha256": "d5f18aaff2500db4d1058fa134c4459ff025c9f80484d65758bd795f73ae36ca",
+  "finite_fresh_replay": "PASS_BYTE_EQUAL",
+  "both_core_model_caches_fresh_replay": "PASS_BYTE_EQUAL",
+  "all_411_panels_fresh_replay": "RUNNING",
+  "bound_whole_result_audit": "PASS",
+  "finite_control_tests": 9,
+  "whole_control_tests": 8,
+  "external_review": "OPEN",
+  "milestone_4_closed": false,
+  "N12_closed": false
+}

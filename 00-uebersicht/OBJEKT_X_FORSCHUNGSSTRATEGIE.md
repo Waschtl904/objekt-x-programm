@@ -817,3 +817,24 @@ Die allgemeinen Begründungen stehen oben; endliche Beispiele ersetzen sie nicht
 Der erste Arbeitsauftrag ist, für A8→A9 und A9→A11 die zulässigen Eingaben zu bestimmen und eine vorzeichenunabhängige vollständige Blockdarstellung aufzubauen. Anschließend wird die Residualformel auf genau die dabei fehlende relative Abschätzung zugeschnitten. Erst diese Abschätzung legt fest, ob wir bandweise Momentmatrizen, eine engere Richtung, bestimmte neue Operatorinformationen oder eine andere Raumwahl benötigen.
 
 Das würde die Arbeit unmittelbar auf die Konstruktion von Objekt X ausrichten: Jede erfolgreiche Abschätzung soll einen klar benannten Teil seines Readouts oder seiner kompatiblen Erweiterung liefern.
+
+## Ergänzung vom 21. Oktober: gemeinsamer Restvergleich
+
+Der neue [restzentrierte Kontrollweg](../research/x-c1/w9-residual-centered-control-even-2026-10-21/PROOF.md)
+behandelt beide Wiederaufnahmebedingungen aus #250 gemeinsam: Die
+richtungsbezogene D/U-Auswertung senkt F_up unter das Budget, und die ganze
+Funktion nu-H_new Jw wird einschließlich sämtlicher Reste kontrolliert.
+Der feste gerade Zeuge besteht mit >0.166244453040e-6 sicherer Reserve.
+Der genaue Reproduktionsstatus ist im Paket ausgewiesen; externe Prüfung
+und Integration bleiben getrennt.
+
+- [x] Eine quantitativ tragfähige Methode für beide Hindernisse herleiten.
+- [x] Den vollständigen Vergleich an einem unveränderten geraden Zeugen führen.
+- [ ] Den gemeinsamen Vergleich auf den vollständigen Grad-11-Raum übertragen.
+- [ ] Die andere Parität und die übrigen Operatorbedingungen schließen.
+- [ ] Den konstruktiven Gesamtübergang gemäß Punkt 4 abschließen.
+
+Die bisherigen ausgeschlossenen Familien bleiben ausgeschlossen. Ihre
+Prüfungen werden nicht wiederholt. Der neue Einzelzeugenpass ist ein
+positiver lokaler Befund, kein N12- oder Punkt-4-Abschluss und keine
+Prozentangabe für die Konstruktion von Objekt X.
