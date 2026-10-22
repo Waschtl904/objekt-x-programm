@@ -1,0 +1,39 @@
+{
+  "main_binding": "36513b0fad9313906246e835d927b686dbb93174",
+  "original_archive_sha256": "230b539e552da78b8c7f098dadc4dfbf34eef4181f7a2b67d0cd7dbfee0e91da",
+  "original_archive_hashes_checked": 81,
+  "original_selected_panels": 65,
+  "new_selected_panels": 16,
+  "new_panel_receipts": {
+    "0032.json": "718bf560e2ae9877b9e343e89e365116331116d4862c25f8986182ec9573717e",
+    "0033.json": "dc8f6f9c50e747184cb5a264319dcf07fed322a082e112b0c41cef21a06c950c",
+    "0034.json": "d025b771f269c2dcf20c277e520d8c5c4ea432a852d3be3f0256ba5a264c9313",
+    "0035.json": "2f5c915c4042df85759befd4e450926c75a7e8695e9b3c45a2774d30df38dcb4",
+    "0036.json": "5a7a88a184cb634acd7dab79a897a1f31e1330d1c21d50faafdd2059178747f6",
+    "0037.json": "40e49f3df8a0166014c2fb287fd371b4b51339cd634d6b2f2695df0438294b87",
+    "0038.json": "092929d93eae3022b1d0cac38f5334bcf949860b7b988b4236be588b99ee7d09",
+    "0039.json": "0cabebaa14e53b2696e076ddcd57fe1b285cdbc9dcd3419f0e37afd79fbb4eec",
+    "0238.json": "af02c96db47544c391b0ee273989b58367a5260693640ba4d9b4dec3bf800991",
+    "0239.json": "74b6e4b862713d03481b067db462a8e68479f12176fecc71402716279cdd80f9",
+    "0240.json": "7bd1cdbcdb301fb2b72464b05c4cee9cfe999513a90c05bd8a148e03a6286215",
+    "0241.json": "da88578e40d6df3d07d271cd20f6b4dffe11afe26268065d708295ad3ce26f6d",
+    "0242.json": "eace985f807b8249ea29392655a37861c60a49fad279e8c4817365e7e1bb5531",
+    "0243.json": "78121a0301e4ff48e25a3db5410446107087ddf49467c5d1142d0d7ec4abe0ec",
+    "0244.json": "a21dcbd785b0fa3621067e2ac8d7388f7d6687d4ef7329362eef60bdaff14ca7",
+    "0245.json": "5e4555e3b5e6260c80c09927c5f0f4d7d21e0c89f9e600792b30871278d21fef"
+  },
+  "source_bindings": {
+    "MANIFEST.json": "cc1aa64855995f96d0127ea09cec94c59b826fb62a6ce601f0373b2cd5d0b151",
+    "whole/whole_function_probe.py": "ed58da3caacd5ca39de1f910c77920e7079eec905a560b487600c71e97c8df64",
+    "whole/taylor_model.py": "8b7a7234698878fc9aa1c0ef03b8e20de9f29361d151ebe0f3517b0ae74d26e6",
+    "whole/fast_evaluation.py": "ff0645e02fa0dc7a6497fc52f51818b707dd1077f77689e764d599cf9ffab5b2",
+    "whole/ANALYTIC_CAPS.md": "3042c18a998397be63ee81131b121fc4147f1dcbc1a98d0e2277a7e12cc55839",
+    "whole/analytic-caps.json": "3f9a6f591d8272af18e06024b45049abdb9235eafaf50826b99c3896c0241106",
+    "whole/force-results/RESULT.json": "487389cdeeedafe6268c7596b2cf6ebdcf656e120030960ded26d15cb15f45dd",
+    "whole/WHOLE_RESULT.json": "d5f18aaff2500db4d1058fa134c4459ff025c9f80484d65758bd795f73ae36ca"
+  },
+  "model_cache_sha256": "040436a000b91c136d9b6977b859d739773a37fb228dfca076bb953dd80bcfcc",
+  "repository_mutations": false,
+  "push_merge_or_branch_actions": false,
+  "new_physical_direction": false
+}

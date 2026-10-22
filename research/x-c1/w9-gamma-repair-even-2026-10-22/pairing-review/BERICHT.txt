@@ -1,0 +1,159 @@
+OBJEKT X – GEZIELTE GEGENPRÜFUNG DER KERN- UND ANSCHLUSSREPARATUR
+22. Oktober 2026
+
+ERGEBNIS
+Die konkrete Fehlerursache und die bedingte numerische Reparatur am festen
+geraden Zeugen sind jetzt unabhängig gegengeprüft. Die 16 neuen äußeren
+Taylorabschnitte wurden vollständig neu berechnet. Alle 84 vorzeichenbehafteten
+Kernkorrekturen stimmen exakt mit unserem zuvor getrennt hergeleiteten
+Adjunkten-Rechenweg überein. Nach Kern- und innerer Randkorrektur liegen alle
+84 vollständigen arithmetischen Differenzintervalle strikt in ihren jeweils
+begründeten Fehlerhüllen. Es wurde nichts an die beobachteten Differenzen angepasst.
+
+Eine kleine zusätzliche Nachweislücke im NEUEN inneren Randprogramm wurde
+gefunden und in einer separaten Arbeitskopie geschlossen: Die Polynom-
+Konturhülle muss denselben Radius verwenden wie die Cauchy-Restabschätzung.
+Die Nachrechnung mit dieser Anpassung reproduziert alle 84 veröffentlichten
+Endintervalle und Fehlergrenzen zahlenidentisch. Das Originalarchiv bleibt
+unverändert; der zugehörige Ergänzungspatch liegt bei.
+
+Abnahmeumfang: gezielte Rechen- und Reparaturprüfung bestanden, bedingt auf
+die unten genannten geerbten analytischen Voraussetzungen. Keine allgemeine
+mathematische oder externe Abnahme. Kein Nachweis des vollständigen Matrix-
+vergleichs, keiner zweiten Richtung und keines ungeraden Anschlusses.
+
+1. GEGENSTAND UND QUELLENBINDUNG
+Geprüftes Eingangsarchiv:
+Objekt-X-Kernfehler-und-Anschlussreparatur-2026-10-22-Nachweise.zip
+SHA-256: c0fcb730b11b589f5f853a0e17bfd2e49b4fb5c09a05c8ee3f53aa73f5f2e630
+
+Repositorybezug: Waschtl904/objekt-x-programm
+Commit: 36513b0fad9313906246e835d927b686dbb93174
+Paket: research/x-c1/w9-residual-centered-control-even-2026-10-21
+Builder-SHA-256:
+ed58da3caacd5ca39de1f910c77920e7079eec905a560b487600c71e97c8df64
+Cache-SHA-256:
+040436a000b91c136d9b6977b859d739773a37fb228dfca076bb953dd80bcfcc
+
+Geprüft: sämtliche 532 Einträge des internen SHA256SUMS-Verzeichnisses;
+411 eingefrorene Energieabschnitte plus BINDING und SUMMARY gegen das
+Repositorymanifest; alle 65 früheren Paarungsbelege gegen ihre bisherigen
+Hashes; die 16 neuen Eingangsbelege; acht weitere explizite Quellbindungen
+und beide Budgeteingänge. Nach Abschluss sind alle 573 zuvor gebundenen
+lokalen Repositorydateien unverändert. Eine neue Abfrage des aktuellen
+GitHub-Heads war nicht Teil dieser Prüfung; es gab keine GitHub-Schreibaktion.
+
+2. WAS TATSÄCHLICH ERNEUT GERECHNET WURDE
+- Alle 16 neuen äußeren Taylorabschnitte mit 96 Legendre-Momenten je Abschnitt:
+  1536 Momentintervalle sowie sämtliche übrigen numerischen Belegfelder
+  sind exakt reproduziert. Nur die neu gemessenen Laufzeiten unterscheiden sich.
+- Alle 84 Kernkorrekturen mit unserem bereits unabhängig ausgeführten
+  Adjunkten-Weg verglichen: alle exportierten Intervallendpunkte exakt gleich.
+- Fünf definierende Polynomkernintegrale und elf skalare Modellkontrollen
+  des eingegangenen Prüfprogramms erneut ausgeführt; alle bestanden.
+- Innere Randkorrektur samt Restpreis nach Korrektur der Konturhülle erneut
+  berechnet; sämtliche numerischen Felder von core-tail.json reproduziert.
+- Die 81 Abschnittsbeiträge und ihre Fehlerpreise neu zusammengesetzt,
+  unter Verwendung unserer früheren Kernkorrekturen und der neu gerechneten
+  inneren Randkorrekturen. Danach den vollständigen arithmetischen Intervalltest
+  mit exakten rationalen Endpunkten für jede Koordinate wiederholt.
+- Die rationale Budgetprüfung direkt aus den eingegangenen Daten wiederholt.
+  Ihr JSON-Inhalt ist exakt gleich; die Byteabweichung besteht ausschließlich
+  aus CRLF gegenüber LF. Die ganze Energiepreisrechnung wurde zusätzlich
+  mit dem numerischen Kontrollprogramm reproduziert.
+
+Es handelt sich beim Wiederholen der 16 Abschnitte und der Kontrollprogramme
+um einen Ausführungsabgleich desselben Algorithmus, nicht um 16 neue unabhängige
+Integrationsmethoden. Die gesonderte Ableitung der Kernkorrektur, die Quellprüfung
+und die neu geschriebene rational kontrollierte Zusammensetzung ergänzen ihn.
+
+3. KLEINE KONTURKORREKTUR IM NEUEN RANDNACHWEIS
+core_tail.py verwendet ein Taylorpolynom der Ordnung 8 auf dem inneren
+Randstreifen der Länge d = etwa 1.472380613978567e-16. Die normierte
+Taylorvariable hat Halblänge d/2. Für den Rest wird der physische Kreisradius
+0.001 benutzt, somit R = 0.001/(d/2) = etwa 1.3583444260351512e13.
+
+Die importierte Funktion taylor_model.peval begrenzt Polynome dagegen
+fest auf dem normierten Radius 2. Ohne Anpassung liefert diese Funktion
+keinen Nachweis für die beim Rest tatsächlich benutzte große Kontur.
+Dies ist eine Lücke in der dokumentierten Begründung, keine behauptete
+Widerlegung des berechneten h-Wertes oder der tatsächlichen Restgrenze.
+
+Korrektur: Für jedes affine Polynomargument die Koeffizienten c_k nach der
+Transformation bilden und die Konturhülle mit sum_k |c_k| R^k berechnen.
+Diese Hülle wird vor der hjet-Auswertung installiert. Die übrigen komplexen
+Ballauswertungen umschließen denselben Kreis. Dann gilt für |z|<=1:
+
+ |h(z)-h(0)| <= sum_{k=1}^7 |h_k| + M R^(-8)/(1-R^(-1)).
+
+Alte berechnete komplexe Zwischenhülle: etwa 1.939803969903657e17.
+Neue radiusgerechte Zwischenhülle:     etwa 1.9491170132426752e17.
+Neu rational begrenzter Cauchy-Rest:    kleiner als 2e-88.
+Gesamte h-Variation:                   kleiner als 2.452e-17.
+
+Der Rest liegt weit unter der sonstigen Auflösung. Die Neuauswertung ändert
+keine der exportierten 84 Endzeilen oder Fehlergrenzen. Der Patch betrifft
+nur das neue Ergänzungsprogramm core_tail.py, nicht die historischen Pakete.
+Die alte core_quadrature_control_128.py hatte die Radiusanpassung bereits.
+
+4. VOLLSTÄNDIGE DIFFERENZPRÜFUNG
+Mit P_i als signiertem 81-Abschnittsintegral, N_i als endlichem Modell,
+C_i als hergeleiteter Kernkorrektur und H_i als innerer Randkorrektur wurde
+
+ D_i = P_i - N_i + C_i + H_i
+
+als vollständiges arithmetisches Intervall berechnet. Der Test lautet
+max(|inf D_i|, |sup D_i|) <= e_integration,i + e_core,i.
+Er ist stärker als ein bloßer Mittelpunktvergleich oder eine Überlappung.
+Die folgenden Dezimalangaben sind Anzeigen; die exakten rationalen Werte
+stehen in reassembly-audit.json und rational-audit.json.
+
+Bestanden:                             84 von 84
+Maximaler Integrationspreis:            3.785379738480368e-14
+Maximaler Betrag der arithm. Differenz:  2.890759074407901e-14
+Kleinster Abstand zur Fehlerhülle:      3.891952555981309e-15
+Verbleibender Kernfehler in X-Norm:      kleiner als 4.696e-16
+Max. zusätzliche innere Randkorrektur:  etwa 7.415432780334e-14
+
+Die Maxima gehören nicht notwendig zur gleichen Koordinate; der eigentliche
+Test wurde einzeln mit jeder jeweiligen Fehlerhülle durchgeführt.
+
+5. ENERGIE UND FEHLERBUCHUNG
+Die gröbere rohe g-Operatorabschätzung des eingegangenen Berichts ergibt
+13.065241166001625 < 14. Mit dieser Cap, dem direkten Momentpreis und den
+aufgeführten Resten beträgt der zusätzliche Kernkorrekturpreis in X-Norm
+kleiner als 1.058217727912e-5. Daraus folgt bedingt:
+
+ reparierte Ldual-Restenergie <= 1.390221958736304e-10 < 1e-9.
+
+Der weiter mit dem bisherigen Cap 1e-9 gerechnete Gesamtvergleich liegt
+unter 5.395092490766814e-5; die Budgetuntergrenze ist größer als
+5.41171693607084e-5. Der rationale Mindestabstand beträgt mehr als
+1.662444530403505e-7. Der p-Preis wird dabei einmal wie zuvor geführt.
+Die innere Randkorrektur löst einen bereits bezahlten Kernquadraturbeitrag
+auf und erzeugt keinen neuen physischen Fehlerpreis.
+
+Unsere vorherige direkte Integration der ganzen Kernkorrekturfunktion ergab
+eine engere Energiegrenze um 4.632e-11. Der größere Wert dieses Pakets entsteht
+aus der gröberen Operatorabschätzung; darin liegt kein Widerspruch. Für diese
+Gegenprüfung wird ausdrücklich die konservativere Grenze bestätigt.
+
+6. VERBLEIBENDE VORAUSSETZUNGEN UND NÄCHSTER SCHRITT
+Weiter übernommen sind insbesondere die Quellen- und Projektionsfehler,
+die analytischen qm- und Operatorhüllen, die Randhülle A=1e20, die geerbten
+Gamma-/Momentreste, die 411 alten Energiebelege sowie die Brücke der inneren
+Quadraturmodelle. Ihre vollständigen analytischen Herleitungen wurden in
+dieser gezielten Gegenprüfung nicht unabhängig von Grund auf neu bewiesen.
+Ein Hashabgleich ersetzt solche Beweise nicht.
+
+Der früher ungeklärten Größenordnung um 5.18e-9 ist nun eine konkrete
+Implementierungsursache mit abgeleitetem Vorzeichen und allen 84 bestätigten
+Koordinaten zugeordnet. Damit ist die Diagnose wesentlich weiter als die
+frühere Deckung durch eine grobe Gesamtfehlerhülle.
+
+Als nächster konkreter Gegenstand liegt eine abgrenzbare Ergänzungsrevision
+zur externen Prüfung vor: innere Kernformel, vorzeichenbehaftete Überleitung,
+radiusgerechter innerer Randbeleg und einmalige Fehlerbuchung. Diese Revision
+sollte vor einer Erweiterung auf eine zweite Richtung geprüft werden.
+Keine automatische Freigabe der Matrixfortsetzung oder eines Merges.
+Repository, eingefrorene Pakete und mathematische Statusangaben blieben gleich.

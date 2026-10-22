@@ -77,3 +77,7 @@ jobs:
         run: |
           python -u -B research/x-c1/w9-residual-centered-control-even-2026-10-21/whole_verify.py
           python -u -B research/x-c1/w9-residual-centered-control-even-2026-10-21/test_whole.py
+      - name: Replay fixed even Gamma repair with inherited assumptions explicit
+        run: |
+          python -u -B research/x-c1/w9-gamma-repair-even-2026-10-22/verify.py --check
+          python -u -B research/x-c1/w9-gamma-repair-even-2026-10-22/test_controls.py

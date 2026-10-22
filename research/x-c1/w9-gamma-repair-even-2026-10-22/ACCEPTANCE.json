@@ -1,0 +1,45 @@
+{
+  "scope": "Conditional numerical/algebraic repair and integration only; no full analytic/external acceptance",
+  "required_checks_declared_before_acceptance": [
+    "new package and 567 inherited hashes",
+    "exact inner/outer kernel and contour countercontrols",
+    "portable conservative rational 84-hull and budget replay",
+    "independent whole correction norm replay and stronger rational budget",
+    "radius-corrected core-tail replay",
+    "16 new signed outer panels replay for local final acceptance",
+    "negative tests: tamper, optimized Python, removed correction, wrong radius, scope",
+    "registry generated views and applicable CI at exact final head"
+  ],
+  "historical_not_reintegrated": [
+    "65 older signed panels",
+    "411 energy panels",
+    "all inherited analytic source/operator lemmas"
+  ],
+  "reproduction_status": "LOCAL_BOUNDED_REPLAYS_PASS_CONDITIONAL",
+  "mathematical_status": "AUTHOR_DERIVED",
+  "external_review": "EXTERNAL_REVIEW_OPEN",
+  "mathematical_base": "36513b0fad9313906246e835d927b686dbb93174",
+  "witness_changed": false,
+  "second_direction_started": false,
+  "p_price_charged_once": true,
+  "core_tail_price_charged_once": true,
+  "local_final_package_checks": {
+    "status": "BOUND_REPAIR_REPLAY_PASS_CONDITIONAL",
+    "package_files": 98,
+    "inherited_files": 567,
+    "mathematical_status": "AUTHOR_DERIVED",
+    "external_review": "EXTERNAL_REVIEW_OPEN",
+    "complete_model_identification_accepted": false,
+    "all_inherited_analytic_lemmas_reproved": false,
+    "corrected_core_tail_rows": 84,
+    "contour_remainder_upper_cap": "1.682e-88",
+    "new_panels_recomputed": 16,
+    "whole_arithmetic_hulls_inside_errors": 84,
+    "direct_energy_upper_cap": "4.632e-11",
+    "operator_energy_upper_cap": "1.391e-10",
+    "retained_energy_cap": "1e-9"
+  },
+  "local_registry_unit_tests": 60,
+  "local_negative_controls": 6,
+  "final_head_ci": "REQUIRED_BEFORE_MERGE"
+}

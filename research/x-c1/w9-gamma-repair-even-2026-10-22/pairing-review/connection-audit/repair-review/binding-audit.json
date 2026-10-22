@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "source_bindings": 8,
+    "frozen_energy_files": 413,
+    "previous_signed_panel_bindings": 65,
+    "new_signed_panel_bindings": 16,
+    "kernel_correction_intervals_exactly_equal_to_independent_adjoint_route": 84,
+    "kernel_correction_intervals_overlap": 84,
+    "budget_input_bindings": 2,
+    "rational_replay_semantically_exact": true,
+    "rational_replay_only_CRLF_difference": true
+  },
+  "archive_sha256": "c0fcb730b11b589f5f853a0e17bfd2e49b4fb5c09a05c8ee3f53aa73f5f2e630",
+  "original_main_commit": "36513b0fad9313906246e835d927b686dbb93174"
+}

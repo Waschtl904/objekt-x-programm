@@ -1,0 +1,8 @@
+Gezielte unabhängige Prüfung des GPT-2-Reparaturarchivs, 2026-10-22.
+1. Interne Hashes, Quellenbindungen, bestehende 65 und neue 16 Abschnitte prüfen.
+2. Rationale Abnahme aus unveränderten Eingangsdaten wiederholen.
+3. Alle 84 Kernkorrekturen gegen unseren vorherigen unabhängigen Rechenweg prüfen.
+4. Alle 16 neuen Taylor-Abschnitte erneut aus dem gebundenen Modell berechnen.
+5. Neue h-Randkorrektur nach Anpassung der Polynom-Konturhülle an ihren tatsächlichen Radius erneut berechnen. Originalarchiv unverändert lassen.
+6. Alle 84 endgültigen Differenzen samt Fehlerhülle erneut prüfen; keine geerbten analytischen Voraussetzungen als neu bewiesen ausgeben.
+Kein Push, Merge, Branchwechsel oder Eingriff in eingefrorene Repositorydateien.

@@ -15,6 +15,16 @@ an X, einschließlich der vollständigen geeigneten Testklasse, bleiben erhalten
 Weil-Positivität und die vollständige Konstruktion von Objekt X bleiben offen.
 Die projektintern hergeleiteten Ergebnisse sind zur externen Prüfung offen.
 
+## Reparaturhinweis zum festen geraden Zeugen (#252)
+
+Der eingefrorene Ganzfunktions-Builder enthält einen inneren Gamma-Kernfehler.
+Die [gebundene Ergänzungsrevision](research/x-c1/w9-gamma-repair-even-2026-10-22/README.md) dokumentiert die
+Korrektur, den radiusgerechten Randnachweis und beide bedingten Energiegrenzen
+(<1.391e-10 beziehungsweise <4.632e-11, Deckel 1e-9). Das Originalpaket bleibt
+erhalten; für den korrigierten Funktionsanspruch ist die Ergänzung mitzulesen.
+Vollständige Modellidentifikation und externe Gesamtabnahme bleiben offen.
+Die zweite Richtung bleibt bis zur gezielten analytischen Abnahme zurückgestellt.
+
 ## Einstieg
 
 | Ich möchte … | Einstieg |
