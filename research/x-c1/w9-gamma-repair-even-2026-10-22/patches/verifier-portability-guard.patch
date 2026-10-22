@@ -1,0 +1,31 @@
+--- a/verify_package.py
++++ b/verify_package.py
+@@ -2,6 +2,8 @@
+ from pathlib import Path
+ from fractions import Fraction as F
+ import json,hashlib,shutil,tempfile,subprocess,sys
++if not __debug__:
++ raise SystemExit('Verification requires assertions enabled; Python -O/-OO is rejected.')
+ B=Path(__file__).resolve().parent
+ seen=set()
+ for line in (B/'SHA256SUMS.txt').read_text().splitlines():
+@@ -9,7 +11,7 @@
+  assert not Path(rel).is_absolute() and p.resolve().is_relative_to(B.resolve())
+  assert hashlib.sha256(p.read_bytes()).hexdigest()==h,rel
+  seen.add(rel)
+-assert seen=={str(p.relative_to(B))for p in B.rglob('*')if p.is_file()}-{'SHA256SUMS.txt'}
++assert seen=={p.relative_to(B).as_posix()for p in B.rglob('*')if p.is_file()}-{'SHA256SUMS.txt'}
+ A=B/'connection-audit/repair-review'
+ d=json.loads((A/'reassembly-audit.json').read_bytes());assert len(d['rows'])==84
+ for i,r in enumerate(d['rows'],1):
+--- a/Rationale-Pruefung/rational_audit.py
++++ b/Rationale-Pruefung/rational_audit.py
+@@ -3,6 +3,8 @@
+ from fractions import Fraction as Q
+ from math import isqrt
+ import json,hashlib
++if not __debug__:
++ raise SystemExit('Verification requires assertions enabled; Python -O/-OO is rejected.')
+ HERE=Path(__file__).resolve().parent
+ def sqrtup(x):
+  x=Q(x);assert x>=0;s=10**120;scaled=x*s*s;n=isqrt(scaled.numerator//scaled.denominator)

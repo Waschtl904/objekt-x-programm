@@ -1,0 +1,8 @@
+Bound package and external input hashes verified 458 109
+Context ready 6.687 seconds
+status REPLAYED_16_PANELS_AND_RADIUS_REPAIRED_CORE_TAIL_FULL_HULL_CHECK_PASSED_CONDITIONALLY
+all_84_pass True
+minimum_margin 3.891952555981309e-15
+maximum_integration_error 3.785379738480368e-14
+maximum_raw_difference_absolute 2.8907590744079006e-14
+corrected_cauchy_remainder_simple_cap 2e-88

@@ -1,0 +1,3444 @@
+{
+  "commit": "36513b0fad9313906246e835d927b686dbb93174",
+  "all_selected_working_files_equal_pinned_git": true,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "git_blob": "f6552c6736a6ac8b31594074606da4ed6c49f56b",
+      "sha256": "0d1fc5e72f68d4f1a7e8966c4f2e5a343619af8bb04b719a1bc7ae803b052694",
+      "bytes": 1325
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "git_blob": "5a856bc70bb8bf2ea4ba9f1bacccd8127a4a9873",
+      "sha256": "ae82e71e1abfec83d2197923ae899e6741388e72b7c1c2284af727c46fccb3bb",
+      "bytes": 9989
+    },
+    {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-basis84-pruefung-und-l-energie-2026-10-10/PRUEFVERMERK.txt",
+      "git_blob": "03ee9ed536512c84bbb7506d4656d2197e894731",
+      "sha256": "20e62136ae49fd75942ce12d00243230b41c32cfbb74e9ceffdb6138f561c422",
+      "bytes": 5913
+    },
+    {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-basis84-pruefung-und-l-energie-2026-10-10/check_basis_and_build_L.py",
+      "git_blob": "54776abf5d09a94bfc1ce939c731d9ed64eed80b",
+      "sha256": "50d5474c2842628f194a5d4ae4a1e16713fe0b71738b838dfbf308ba0ae6def1",
+      "bytes": 9503
+    },
+    {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-direkte-restform-und-positiver-96er-block-2026-10-11/refine_old_majorant.py",
+      "git_blob": "a690319369017802f05d8032fa34afb2db28d8a3",
+      "sha256": "9afeec7892426041858a524de3f9e3e9d2b46578876de0e9f1540edfd6012730",
+      "bytes": 9424
+    },
+    {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-neue-antworten84-und-residualbudget-2026-10-11/PROOF.txt",
+      "git_blob": "9b1c395308193fc8dd8a9f8c716b8ce6bf2c58f0",
+      "sha256": "122fabae61dad7d6d6916d899ea8ae8c44a1ead451ac68919e6ce9304f002e61",
+      "bytes": 10731
+    },
+    {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-neue-antworten84-und-residualbudget-2026-10-11/SUMMARY.json",
+      "git_blob": "39b3679ce4812d2683ffd2f05ed78ec0a3e5d8df",
+      "sha256": "9681be9ce73837ebdc0db85a6fc3277749cd4d307f18b85d720f2134f0b6b6cc",
+      "bytes": 949
+    },
+    {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-neue-antworten84-und-residualbudget-2026-10-11/compute.py",
+      "git_blob": "51589f0bc8ce0d8a161428582fe94411ab63ab15",
+      "sha256": "42db7606eb8cd0613d279e298728d258eae7799743f9ab6ce06a96055b50e543",
+      "bytes": 9879
+    },
+    {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/reports/ACCEPTANCE.json",
+      "git_blob": "49c01f3e0fae17a9460b8e628bf61718ef385d2d",
+      "sha256": "28ab9e30cf851ce47c12df5e379272a707c9a323d6b1d225d4f2c3b9e0a3594e",
+      "bytes": 17575
+    },
+    {
+      "path": "research/x-c1/a9-a11-certificate-calibration-2026-10-15/WORK_ORDER.md",
+      "git_blob": "4cbdc5a1f72ff3a33225c1558b66e4c0098c5dcb",
+      "sha256": "ead51395f495ea5cae0ff08a6726eb2a420668f584e2914f8763cf53b5f4a7e8",
+      "bytes": 17750
+    },
+    {
+      "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/PROOF.md",
+      "git_blob": "51e0fbfb9ccd26b602aa6409b8edc44b96c32f3e",
+      "sha256": "8219d5e4f544cc42a4808d6d033c56c608939652b4d851cae881a00842ed84e3",
+      "bytes": 12161
+    },
+    {
+      "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip",
+      "git_blob": "de8064c1041c6c70e708325d201a9667cf44bbb0",
+      "sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee",
+      "bytes": 22180599
+    },
+    {
+      "path": "research/x-c1/a9-domain-continuation-2026-10-13/original/CHECK.json",
+      "git_blob": "09c831d08e302d92851911981e763d966e336929",
+      "sha256": "ebdf8da2840d2ab77fa01fcdc78c3aabeff23ad8fc59937b1d54da88006dc9b6",
+      "bytes": 2675
+    },
+    {
+      "path": "research/x-c1/a9-domain-continuation-2026-10-13/original/HERLEITUNG.txt",
+      "git_blob": "63d3a37800ee04578d67f936928fdfdea82c6ece",
+      "sha256": "e6075606f6a26c354f1eb756b568f91cbb7a0b035022b44ef60a0120ae4ea819",
+      "bytes": 23771
+    },
+    {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/archives/Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13.zip",
+      "git_blob": "10199265fdfdeaa7d63944a5b53bec816544d518",
+      "sha256": "a1fa41958d79ab16a7c42b12375c3373f5a86a99993ae2d23c984ff6b3b2e8ae",
+      "bytes": 4884860
+    },
+    {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/AUDIT.json",
+      "git_blob": "954d5663b3cb334995c0bfd5553d008f824ad9dc",
+      "sha256": "33456af98d0ba6151639c66729d12ef3f12bc695f14a9e0985c2115ba0e61783",
+      "bytes": 8538
+    },
+    {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt",
+      "git_blob": "4a1b0ce3b48d0c54986350f33aa25921d76b1543",
+      "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7",
+      "bytes": 22261
+    },
+    {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/audit.py",
+      "git_blob": "d70145378fa418bd9fb11569c39369fab3848341",
+      "sha256": "fb63ed8c9dd33c522f949a6931686860d96bbd8d596facc1a6743b21418348eb",
+      "bytes": 11529
+    },
+    {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/COMMON96_HERLEITUNG.txt",
+      "git_blob": "c4882ded8f3c529274fb9a49d16e6187b7167d35",
+      "sha256": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd",
+      "bytes": 8234
+    },
+    {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/FULL_DUAL_GEOMETRY.txt",
+      "git_blob": "c21c42e6cc957b765113dcef1df550c4ccca0140",
+      "sha256": "3e12959df0cea48e904d9d4f183da82e65677b89a167e78bae8dd7a06ccbe6bd",
+      "bytes": 7729
+    },
+    {
+      "path": "research/x-c1/a9-inverse-spike-calibration-2026-10-15/archives/Objekt-X-Nstar-Jp-Funktionsanschluss-und-Koeffizienten-2026-10-16.zip",
+      "git_blob": "3a0550409ff65d1e0af7cef43f21b81be8a7cc87",
+      "sha256": "b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b",
+      "bytes": 54742910
+    },
+    {
+      "path": "research/x-c1/a9-inverse-spike-calibration-2026-10-15/original/nstar/FUNKTIONSANSCHLUSS.txt",
+      "git_blob": "e1d3cf55b68fa66b1c82d97784f2dc87a0e47a02",
+      "sha256": "39664818da04df1e7c8253e09d078a16ccf2729b964747fa067807a8f3bb18bb",
+      "bytes": 12096
+    },
+    {
+      "path": "research/x-c1/l00-z0-directed-interval-2026-10-17/expected/L00_CERTIFICATE_even.json",
+      "git_blob": "7defbd2ef0d2dabd7f64e8015324c0ef3e855af1",
+      "sha256": "52399adf3016e6691151adaa24a1adfa943e2c543d95e222b85898f82de5d9c8",
+      "bytes": 241605
+    },
+    {
+      "path": "research/x-c1/l00-z0-directed-interval-2026-10-17/expected/L00_CERTIFICATE_odd.json",
+      "git_blob": "6cb3ae8945a88c3943b8c4cfd95072c3f469d1c3",
+      "sha256": "71c26e4d5b5dc1b662eae79ff244dd3099b51b0370154506b86902224431dff8",
+      "bytes": 241573
+    },
+    {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip",
+      "git_blob": "9a8c49de5ec0d4d0a345b556e41eb91be427ec89",
+      "sha256": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52",
+      "bytes": 39013097
+    },
+    {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt1-stufe1-zertifikat/expected/PSI_CORRECTED.json",
+      "git_blob": "612cb10d4b133c15979941997b8f94eff88a3f3c",
+      "sha256": "3e1bc5db6114333434891a52bef8f3bf6822779b52d14585d249d67943d8c7a1",
+      "bytes": 686332
+    },
+    {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/expected/BUDGET_BOUNDS.json",
+      "git_blob": "f9f3be6012a7ff018387ebcf3a1635af2787b9f9",
+      "sha256": "6229acf4bee398d2262c08a086fb36dd8945135ee860bb591e8218551c291613",
+      "bytes": 79946
+    },
+    {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-und-kohaerenter-transport/expected/COHERENT_TRANSPORT_INPUTS.json",
+      "git_blob": "e77be8d420f5c5dd6b2621eba00c888fd0018b96",
+      "sha256": "c0c882ba85bf3ee56a433b5c5bf5d5c5c0341f2a9e03e213e6e19c460aba5666",
+      "bytes": 1667618
+    },
+    {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe3-endliche-u8-antwort/expected/FINITE_ACTION.json",
+      "git_blob": "eb170ae3fb97207d3e6c436a25a4bf133a3625b4",
+      "sha256": "689636e2b11efcc828100f93b512d4375c8bfebfe8c4a37e3c7c1320f31ed551",
+      "bytes": 5756394
+    },
+    {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/certify.py",
+      "git_blob": "5dbf7053a0624a75e701e47541dc403e3dc972d0",
+      "sha256": "a0a0ecb3b9b8b275b6eb46e0d8d6bad27d9eea5a91fd1b66bf75b074aef2ee89",
+      "bytes": 14408
+    },
+    {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/expected/COMPLETE_HIGH_RESPONSE.json",
+      "git_blob": "f4180746a3b5dbadd9f5540a20479786f280f94d",
+      "sha256": "52027262debebfdb5258a7fb74ff5280d98d81b34a347d99a91a83470362a606",
+      "bytes": 86599
+    },
+    {
+      "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/PROOF.md",
+      "git_blob": "52427b4ebf2c84cc9a3758ba9d484b501787b37f",
+      "sha256": "0ef062d456202482dcdbf3301b7bc945d96fdea10ad61de1466565ec415dcc5f",
+      "bytes": 16232
+    },
+    {
+      "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/expected/SHARP_K_even.json",
+      "git_blob": "2d9176cd2e0017d404553f6ced8101dd363b1f0b",
+      "sha256": "67332794271c32d2ac4b8a334d517cf6f9055ce215141df5a96f3bd8ff06f1fe",
+      "bytes": 40195
+    },
+    {
+      "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/expected/SHARP_K_odd.json",
+      "git_blob": "32f6a7f3faa2a08fe4882fb5ef72321d3df546ef",
+      "sha256": "2f699be798952ded396336b07c3c7f2e61398f8d1baec6a504716a04b24a0f01",
+      "bytes": 40233
+    },
+    {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/build_data.py",
+      "git_blob": "5ca4a119030c74e9f58fba9786237f4742158141",
+      "sha256": "fd63e0694c85448ec61e8deeae42d43e0dee491ec6fb1d6207bacf3430e16135",
+      "bytes": 12951
+    },
+    {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/FROZEN_even.json",
+      "git_blob": "43a1a8761c897ed6c03ff9d7968f2323d3e72f99",
+      "sha256": "9feba325ee62bd5bb37477c10f3943b1dd7cea902324f6001a64c6000a6ee90d",
+      "bytes": 1302
+    },
+    {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/FROZEN_odd.json",
+      "git_blob": "65a9a44dd2d3e165d152a5b69f1cff9515743f35",
+      "sha256": "b8833f55b9ddf527132d7afe167a4603c344a1329127077c28982f3f947ed8d9",
+      "bytes": 1294
+    },
+    {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_even_384.json",
+      "git_blob": "7f3927a2122baec55c5f0ae02b2a7e9ea00221d2",
+      "sha256": "5617f0aa24b67584196e066e43c6f4004eff33fb851b6a0eed36fd771cc39c88",
+      "bytes": 110114
+    },
+    {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_even_512.json",
+      "git_blob": "e07aeafdf387758bc4a236699dc907b982eddf5e",
+      "sha256": "19de781646891b4fc57d5f09b9d2d4fb46fb86957151ba253fc747ec5e57085e",
+      "bytes": 110114
+    },
+    {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_odd_384.json",
+      "git_blob": "7d02532d6e4306ee0e7795ae210c9505df7bc406",
+      "sha256": "1f8b22919c542cda123b24c4eb295c7e1e74887a8461debe45fea69835211dc0",
+      "bytes": 110200
+    },
+    {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_odd_512.json",
+      "git_blob": "fc18829bce4edf017b66a06e3387ed3941bc89ae",
+      "sha256": "5b2aa30f093eeb7cca18099363fb36fedc9036e7fa320bf8ea6a29f952aeee21",
+      "bytes": 110202
+    },
+    {
+      "path": "research/x-c1/shell-search-reassessment-2026-10-17/PROOF.md",
+      "git_blob": "a634bf23951f9439f20d27d966d95acad53d37ef",
+      "sha256": "db37cda98c73881106e6d860b8526460ed9f0b2c3aa19543382beac0034f70e4",
+      "bytes": 10625
+    },
+    {
+      "path": "research/x-c1/shell-search-reassessment-2026-10-17/data/K_MAP_even_128.json",
+      "git_blob": "1447f28d95d381495d519c92195f0da70a87fb74",
+      "sha256": "40b687ff0d3ddf302c9c874c126f255c1899ab3732683404ee74734ddbab939d",
+      "bytes": 17162
+    },
+    {
+      "path": "research/x-c1/shell-search-reassessment-2026-10-17/data/K_MAP_odd_128.json",
+      "git_blob": "400a2c511c4735fba87bbb4c8c2e53810add4c69",
+      "sha256": "a2f746b0fc3bde82aa9a5ef2a7c72b12fb60c3a14986a7c346272e9ea28c72d7",
+      "bytes": 17163
+    },
+    {
+      "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/ACCEPTANCE.json",
+      "git_blob": "2296c20eb6d19c14c8d204d65f16ae447b58ebb9",
+      "sha256": "cf7c0da1239a2e34041b916e73a707a55de461c9c6ff6eafefded03f251fc9b9",
+      "bytes": 2058
+    },
+    {
+      "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/EXPECTED.json",
+      "git_blob": "cb8f272f057cbc933f3872c56eb2fc2dd395070f",
+      "sha256": "e3534a5ac44ff187c6230ffc6957ec25d973f2695be4c61f86ea0896b515e64d",
+      "bytes": 18421
+    },
+    {
+      "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/L_UPPER.json",
+      "git_blob": "403a4afcc9eac38d4fec071ebedee13b33d1fdcf",
+      "sha256": "358f210288c3e0013731dfc4363278f14323ebc020bcfec9a66125fb2118063a",
+      "bytes": 890815
+    },
+    {
+      "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/PROOF.md",
+      "git_blob": "eab77b970bea647d0b37feabc38ed09becbc3022",
+      "sha256": "46956a4f27717a7dd7b05f439b04647872002fe951da16626cd96f021ff45ea5",
+      "bytes": 9729
+    },
+    {
+      "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/audit.py",
+      "git_blob": "92389ad26b983199836f0b07e1647adbd74db295",
+      "sha256": "4c1a60d142fd8e3bda83a4ecc5b5c963bac0ab94fd94402c0b18a5e3dec6a5cd",
+      "bytes": 3237
+    },
+    {
+      "path": "research/x-c1/w9-energy-inventory-2026-10-17/PROOF.md",
+      "git_blob": "63d820d92245b9aead8907b25afc0a35f3669ce4",
+      "sha256": "e625e96aad71bea9a5aa485b9c551525a8db14c78db866269e26c495fe382b0f",
+      "bytes": 14658
+    },
+    {
+      "path": "research/x-c1/w9-eta-q-even-2026-10-20/PROOF.md",
+      "git_blob": "991c82ec4e73fbbcea0ce484a4054d83578a0f6c",
+      "sha256": "a375a35001ec40d2b4f68c3ba1edbfa8a1618e8e49f92fbb6fd0feded8851aad",
+      "bytes": 7860
+    },
+    {
+      "path": "research/x-c1/w9-eta-q-even-2026-10-20/RESULT.json",
+      "git_blob": "151a7f8b45c15b4b41a1607524b79be9b21f9ad7",
+      "sha256": "e73e1ae717754cff9fa05232adfac6d67603bd54f3ad88f81d19d29aaf8d2927",
+      "bytes": 6993
+    },
+    {
+      "path": "research/x-c1/w9-k-pilot-even-2026-10-18/ACCEPTANCE.json",
+      "git_blob": "966f18609bf7620dc5c545f46c55e157fe9be231",
+      "sha256": "6758c346b248c24f17188a416fbabf0c15765da10802b6853eb2bd4478e83028",
+      "bytes": 1275
+    },
+    {
+      "path": "research/x-c1/w9-k-pilot-even-2026-10-18/MANIFEST.json",
+      "git_blob": "630ae22a3c34881ea7ad0f7b2a6df89250e73f15",
+      "sha256": "3361b1ca165ecd691f30ba3a61625f80419a3447bc5e505c364bee8b415d5deb",
+      "bytes": 1049
+    },
+    {
+      "path": "research/x-c1/w9-k-pilot-even-2026-10-18/PROOF.md",
+      "git_blob": "50fb5159de604165a7f02bf53825a244ee7ddcd6",
+      "sha256": "9978c62a48b452bb2edcde98a8098b71688b5fafc1c8e2b5bb3cd12495ea67ea",
+      "bytes": 8331
+    },
+    {
+      "path": "research/x-c1/w9-k-pilot-even-2026-10-18/RESULT.json",
+      "git_blob": "66b1c50b9144bdb2de88864933621ea79a558261",
+      "sha256": "2fba394c6146868c95d50ad9259864927dcf1d379cff0e0652c055e915465bf0",
+      "bytes": 52806
+    },
+    {
+      "path": "research/x-c1/w9-k-pilot-even-2026-10-18/SCHUR.json.gz",
+      "git_blob": "b0d4fdc329439286c3e8d20c8411fbf6dfc373f7",
+      "sha256": "7beccd20e6b58edd7dd2b31acbcb447381bb25475597007ba368c7278de90784",
+      "bytes": 240075
+    },
+    {
+      "path": "research/x-c1/w9-k-pilot-even-2026-10-18/pilot_energy.py",
+      "git_blob": "f4abe3fc446c96fea3b21dceae1fabd077c20c02",
+      "sha256": "2e805205567810bf43e658229c7d570b0d0ab0e305c460624d693f7dd4415108",
+      "bytes": 11817
+    },
+    {
+      "path": "research/x-c1/w9-k-pilot-even-2026-10-18/pilot_weights.py",
+      "git_blob": "fe471e8c91fbb1572c8a05de02baa1ab2c3401c5",
+      "sha256": "55284299886166a091c69884cb770075f7329e74f06a886f8b7076af553b9bd8",
+      "bytes": 5691
+    },
+    {
+      "path": "research/x-c1/w9-majorant-preflight-2026-10-18/EXPECTED.json",
+      "git_blob": "f33aa356795b9280387aa00a80dacacefdaff29a",
+      "sha256": "c82568566b55baaea3bcb98a888d5708edabe72832f2c2b2aafc2e673aa96f13",
+      "bytes": 28866
+    },
+    {
+      "path": "research/x-c1/w9-majorant-preflight-2026-10-18/MANIFEST.json",
+      "git_blob": "abee40323315e806dac1f3ffc9f5ce18d686d441",
+      "sha256": "98845ad9ec3dcc729237ef0d86f1a9a6eb4efbecffe06f303a4b37577cabb58b",
+      "bytes": 788
+    },
+    {
+      "path": "research/x-c1/w9-majorant-preflight-2026-10-18/PROOF.md",
+      "git_blob": "36ddfb8eab0eae256c6629360c481116f9f7fb73",
+      "sha256": "fa3029fa948ef7a480374f39dbfe5eb4ae175908305419c8b6274b7604ac3b09",
+      "bytes": 11760
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/ACCEPTANCE.json",
+      "git_blob": "60e5a63046e5f6964bd9b0b023e2c0909ddb12fb",
+      "sha256": "0f56bc2fe707e7cbc22b9287af336de9a890449c7529fb27e8daa8aa84737cb8",
+      "bytes": 2057
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/INPUT_BINDINGS.json",
+      "git_blob": "c5d8031a506f74fde0e04ed1afa3a5dc088bad75",
+      "sha256": "9949f1daca65664f75e6f0c7f4fdccbe398a684c4133a1bc2b8090bbce08bd5a",
+      "bytes": 7167
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/MANIFEST.json",
+      "git_blob": "96263c3deb47aa33e66fbbc6b4a93a22a9872c64",
+      "sha256": "b80b6ba7815a3d92f367470cad166fab002e37320db505120c8216d6a2480644",
+      "bytes": 860
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/PROOF.md",
+      "git_blob": "49ff3c2baec7b8181c2efdcc27e369e8f2ae2a99",
+      "sha256": "c19cc1f8707c84bdaed582c3e0183e2b4c2c0ce53b9d8990a6ba54449597c670",
+      "bytes": 7849
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/RESULT.json",
+      "git_blob": "26582513b4e06b19b8a261014b1d9354a7f7320c",
+      "sha256": "939abcba0d8c7daa720d61424e9a88b152524a82731b79288535d6e99a109f35",
+      "bytes": 53497
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/SCHUR.json",
+      "git_blob": "a9eb6f11726eb48d60af84c2189f4ea8645ea176",
+      "sha256": "c2d6e82c15fc20f38dc22a9edd79b5bce9c1069a64d224abc323dd8e2361ad77",
+      "bytes": 976238
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/audit.py",
+      "git_blob": "4b7f37b4b5f5ffd79cf30babda90f663b29de020",
+      "sha256": "a521feece7beeb30a422ed8090dd58488c8e994f7103d2815c15e8075a2c9cfc",
+      "bytes": 3431
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/verify.py",
+      "git_blob": "b390cbf50ae97a7bdbab6bb9e70cc709a51f9ba4",
+      "sha256": "076f5d76557392bfc38d39f4abbbe275595391c19cad04619fb5b12ef7518e4e",
+      "bytes": 12395
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/ACCEPTANCE.json",
+      "git_blob": "95672a022ccf5fa6dd88d8337293df72349b48fe",
+      "sha256": "de4042c4df9e65ab96fe47fc7eec6d47b681931c12b9a7be7fec9893c0157813",
+      "bytes": 1247
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/EXPECTED.json",
+      "git_blob": "388ceb1be4d1376d4f76da4d7d4b9b5814abafb5",
+      "sha256": "0f6ea5f268fd46fdc4764c9a6c8d1eb9e38ec5b1690ae4154cd0528beceddee8",
+      "bytes": 127535
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/INPUT_BINDINGS.json",
+      "git_blob": "e62d823b0bbb5228a064bf6f7eef395583acd0e6",
+      "sha256": "4ae46af4940af4137083f210ff65dc336a86dddc64b4e1d2ef2d9ed610a1804a",
+      "bytes": 1644
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/MANIFEST.json",
+      "git_blob": "40d511711cc12719fd5eec73826940292265c757",
+      "sha256": "9c8400e0976deca63055b3bf052f5c1436cff2a996d6fd804f9c2459304fc4e6",
+      "bytes": 778
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/PROOF.md",
+      "git_blob": "6743f864e66a982a3e3b2d0297e3f1fce8ef2d7e",
+      "sha256": "c26cebb43ceb900a1f872a7a4bc938b606462c2167e5cc43e53c6324fd4df338",
+      "bytes": 10437
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/audit.py",
+      "git_blob": "e5c2066ece0b870fc0e72975711e001dbb6890ad",
+      "sha256": "5b7d1ea129dc35c14b8cca808ca84d950bed50900b13f8636af15b2cd21797bf",
+      "bytes": 4594
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/verify.py",
+      "git_blob": "28954a4b8d5e69099eecdbc6a72193af5beebff4",
+      "sha256": "8ed4f70b4a8e311586f5ca9dc008d1481fda5f4c3aff3ec08cbf366be59f120c",
+      "bytes": 9201
+    },
+    {
+      "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/CANDIDATE.json",
+      "git_blob": "db659877dadb140ef0d8fbe10882ae91155f2088",
+      "sha256": "70e8f72ab0cb8ca1ac0d254392384a2040a9d76d04ebf82587c48771e9f34628",
+      "bytes": 9733
+    },
+    {
+      "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/INPUT_BINDINGS.json",
+      "git_blob": "851540682f00d7b1bf41231edb6fe1d7c5eaa594",
+      "sha256": "ddab81c9e718ffa254d26cb80abb75f25818a77235345318629038bde88b3dc5",
+      "bytes": 4678
+    },
+    {
+      "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/MANIFEST.json",
+      "git_blob": "f084f7dff89641be38efa51bb5f8a4311b4aa7e2",
+      "sha256": "50a3102df5520c531444814450131a5e263664c8d1e5ed525a6ffc32188a9e3e",
+      "bytes": 1033
+    },
+    {
+      "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/PROOF.md",
+      "git_blob": "4c2a1b0c6928208282580fa1c5c74c8675313c61",
+      "sha256": "3e82b37694636a63e89664bb9268aee8d4accb85f4389e5fe6285292917177c9",
+      "bytes": 9722
+    },
+    {
+      "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/RESULT.json",
+      "git_blob": "0186ce624650dbfc0cd2bc494bb4d710cc10962b",
+      "sha256": "9d00781b9fb2799669fa1138fd6bfba638263c2b2ee3ab3950e87d97f684adcb",
+      "bytes": 22963
+    },
+    {
+      "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/engine.py",
+      "git_blob": "93c3df48d85984da9270bbd61cff9b1d5fcefa04",
+      "sha256": "d0b14347eed42b9c5acb065ef530de1129886a1cb72b0db142e7f32335a56a74",
+      "bytes": 14468
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json",
+      "git_blob": "a57030f51a827598cc41b923b8cfd23410cfd0b2",
+      "sha256": "829b4884c64d23d90efc6382abe20f449d6229af8ccf8db4b85d12e5b7e03e28",
+      "bytes": 21516
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/MANIFEST.json",
+      "git_blob": "3591742f48fc35571a03c52abc0a2de91e5c5657",
+      "sha256": "ceeb82f47e0b5d3add5c33a752d3377ce5a154184ea2e95e31eaca00439deee8",
+      "bytes": 3511
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/PROOF.md",
+      "git_blob": "061bf559237e6241d01475b65671c49a9a0a42f4",
+      "sha256": "2bb4145cc8681219d416bd885e3a31f015c119baf54d85c8f60a836f77e0e5c9",
+      "bytes": 22749
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/WEIGHT_BOUNDS.json",
+      "git_blob": "96443fff29cbb0f02466706aa3a56753e4510a84",
+      "sha256": "09d0b0c89f3a072a3477f2801acf30b382f18355d882b650b8982f941d4d89ed",
+      "bytes": 12138
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/assemble.py",
+      "git_blob": "aeadc048c4928bf739c70a1cbf49b8651cf73544",
+      "sha256": "aa6ad9a328ee62bb3e0aaeea36e5b50ee0f6e28ecee323e6a7093cd55cc570dc",
+      "bytes": 13232
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/common.py",
+      "git_blob": "1a88b1d72daa3fe6aeccee0449ecc6998c466a6f",
+      "sha256": "037580c8edec75e42aa599e21ff2a073f1308f6ec5746c77f81695ed0169a8eb",
+      "bytes": 5032
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/CANDIDATE_even.json",
+      "git_blob": "b9ffb3b1be9337656509572dc43818daf9af4224",
+      "sha256": "49653e4edd76760a054681cbf73e1695622b823d693ce2cbae81fca90edc2427",
+      "bytes": 12826
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/COMPARISON_even.json",
+      "git_blob": "86dbe4424d3e4f27f736d6f0668665ed668d0328",
+      "sha256": "a4429379e5059d454b01063929371307a787f122fa4e800c48e8f2dbb8b6e7ba",
+      "bytes": 6672
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/K_P_even.json",
+      "git_blob": "b0b0be7530f883baf545181219b82e5c39913c5b",
+      "sha256": "35dd61579fc2db9269947928e438fbf966972378c24511609e1fa40c3ac9de58",
+      "bytes": 7403
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/PAIRS_even.json.gz",
+      "git_blob": "6d3326ee9c0e44c8a07b53754c8aaed134a2810a",
+      "sha256": "044d52d8a00f45f36f0591b9d3b51b8468fc94513c24b4fc2b04b797a6969bb8",
+      "bytes": 963155
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/old_fields.py",
+      "git_blob": "761e7b28ceacbee0c4fdc14762b30bf007a0cb5c",
+      "sha256": "e154b4642474813cfcfd6660acd0b5dbd5c80026590917bd94a8bfb74072a984",
+      "bytes": 11188
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/provenance/l00-certify-6927e409.py.txt",
+      "git_blob": "750bbefe74b43fb10282ffe804d765bccb7d1291",
+      "sha256": "6927e4090e4575bbdaa06248bd3216cfe0b62f906eb834c68907f0bc1af8585b",
+      "bytes": 16162
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/residuals.py",
+      "git_blob": "80e63c5573a436f2bc5965435173a97e3f0f0476",
+      "sha256": "e4670f3f10ca3e358f82d206b572d4d8c426b04791917e03bf4f04abededd23a",
+      "bytes": 7324
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/weights.py",
+      "git_blob": "adc250e1a3cf0d842fea94806fdb6bfa5e3a6f95",
+      "sha256": "6f5e3e2eacda2345dc5d764fa221cbbd36b12eafb32d6cd10dcf0af0edf0bdcd",
+      "bytes": 5980
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/.gitattributes",
+      "git_blob": "a4ed9bc0f5d92fd28aa8e59e354b25972ab9f591",
+      "sha256": "c18c0d592ba9caaf7f982a06eccdcbb21e50d2e91cf521a9eb0d1bcbceb78fb4",
+      "bytes": 174
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/ACCEPTANCE.json",
+      "git_blob": "f47aa20b77c6d3a9bb208c16996d3dffd9cb5930",
+      "sha256": "b969112bf5ae6949494910d62dd4715472886a8680c0ee0ef78c3660514debd0",
+      "bytes": 2697
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/AUDIT.json",
+      "git_blob": "d52c3ff63bc80c4b20725d775d0b82c69da56af5",
+      "sha256": "37f75793f2aa7f891a3318f80a0f497d8c1a71516f54f5722280071477ece115",
+      "bytes": 1098
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/DEVELOPMENT_NOTES.md",
+      "git_blob": "e442e089d1242d0ea6028994bc18124a66372163",
+      "sha256": "ad1798abf64a5c5f3aee4cdca0c323308130b607bdedff12bf09d8b2c065e2df",
+      "bytes": 3451
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/INPUT_BINDINGS.json",
+      "git_blob": "3e915d1c66b0eb21cccfd8316bc89267a515f3b9",
+      "sha256": "2e10906cfdf911c72d3bd59a7274f503395307ceee631817ed8834c138a3503b",
+      "bytes": 2442
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/MANIFEST.json",
+      "git_blob": "5d421f7c7b730270810d0b82c57e7aa698d56684",
+      "sha256": "cc1aa64855995f96d0127ea09cec94c59b826fb62a6ce601f0373b2cd5d0b151",
+      "bytes": 51010
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/META.yaml",
+      "git_blob": "a57097093c0d025c5e2c176af90da0fd72d76918",
+      "sha256": "d51f8196351983507224cd505478f6e170df9db6b90781e788260bfe34851cfa",
+      "bytes": 1370
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/PROOF.md",
+      "git_blob": "b099a8b557b9a17a8148365cadd8621e7df7f0d6",
+      "sha256": "222d6880db1b3d3c70be3bf0d004cbb9ae5c1bcfb1bd0a57796b7ad678c6d624",
+      "bytes": 14275
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/README.md",
+      "git_blob": "6a51e72d7ab894103e3fd6117077d81c1a6b5db4",
+      "sha256": "ed9af2a38e06bf70f988b160c515c5c08422058ec35682cde5cdd7a01a4c0449",
+      "bytes": 2563
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/REPLAY_BINDINGS.json",
+      "git_blob": "5328229293c27225eeed822a8d83dd0571a6d624",
+      "sha256": "8138a59476827251de5f22901d9c70da8140e53c78819784555f726faa9c224f",
+      "bytes": 19594
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/RESULT.json",
+      "git_blob": "26a3770eea2d32fd228337d66ce24de8e2c16a30",
+      "sha256": "487389cdeeedafe6268c7596b2cf6ebdcf656e120030960ded26d15cb15f45dd",
+      "bytes": 18150
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/WORK_ORDER.md",
+      "git_blob": "6aeba4068f4d1a4db43754d9c4f4467cb33c2665",
+      "sha256": "ab6b9fdfa7d6d9294824c6e0ec587f1dc00ac58e6682f959e230c3a9ff9d038d",
+      "bytes": 3409
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/audit.py",
+      "git_blob": "e04665e1dd44a250c0d28e2a4a258f598a51ce5a",
+      "sha256": "0472bb427cf490da4a5250748b91bc8954ac85b81fa49da13c11604cc3128600",
+      "bytes": 4224
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/engine.py",
+      "git_blob": "8fc3512e76d77d088a9155355634c33e509cf7ab",
+      "sha256": "017363ca00c21f92101e9ab37757e94cb77a79aced3cd0c686d577033e7e6db5",
+      "bytes": 8217
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/force_control.py",
+      "git_blob": "5f8ad7b47fca6a32ae9d08c1547aa4abbf13ae47",
+      "sha256": "f3212dbed0109c1645c9ab5e417273cdb3c66e7cbaaa8dfc67432cd0b7d2e241",
+      "bytes": 4954
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/requirements.txt",
+      "git_blob": "388b3abf3e5e746b922e1bd1ed888165685786b0",
+      "sha256": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+      "bytes": 20
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/test_controls.py",
+      "git_blob": "5281c2e3fb92c8ff9f909042d0d661f1f2faec2e",
+      "sha256": "7bce1fbb567b32a7ad4cdb4a34212f55296257b442ed094702499f4baa734535",
+      "bytes": 2886
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/test_whole.py",
+      "git_blob": "4ddcbf4c59f8ed627bb364b7d62ad83c5aebe896",
+      "sha256": "c3fdd73f3da02c0e5778910df9960571c35e3ed077879f5f4deb773eb2f01e33",
+      "bytes": 2936
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/verify.py",
+      "git_blob": "32410e18e5e00dbc80d908e4b7c82c56fa1a021a",
+      "sha256": "92c9528fdc38fb9828771ad2d671ce972cc86ae4517eddef432f6879461982cc",
+      "bytes": 2435
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/ANALYTIC_CAPS.md",
+      "git_blob": "6376af658a5486d60f225a503112d4feda184853",
+      "sha256": "3042c18a998397be63ee81131b121fc4147f1dcbc1a98d0e2277a7e12cc55839",
+      "bytes": 9057
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/WHOLE_RESULT.json",
+      "git_blob": "da2d028e0e76953a63e7a37da9f3eff15b1aa386",
+      "sha256": "d5f18aaff2500db4d1058fa134c4459ff025c9f80484d65758bd795f73ae36ca",
+      "bytes": 3993
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/analytic-caps.json",
+      "git_blob": "7be44aa33b49f4b33fd5ca5b4329cceb07def27f",
+      "sha256": "3f9a6f591d8272af18e06024b45049abdb9235eafaf50826b99c3896c0241106",
+      "bytes": 3416
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/analytic_caps.py",
+      "git_blob": "d5ed672b3504c3bfd3004fe8f5ea18f4a593dad1",
+      "sha256": "70f6eedea35af15fca6ac3d6ddfda32cd754e12a5d28c48ea239262bf75732e2",
+      "bytes": 5493
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/core-model-bridge.json",
+      "git_blob": "39862c0f1b422a63d8a7143d71492cdddacce177",
+      "sha256": "1b69e244db0938f0383af388244ca282678e308a35b5c9d10e5c13684301bd02",
+      "bytes": 15518
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/core-quadrature-control-128.json",
+      "git_blob": "c895868d4ea1044a79ac8cb203135ac3092cb521",
+      "sha256": "affafa8812adfe20d66b5abf419a393e54c08a8f209f518810f788adaa35c05b",
+      "bytes": 52514
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/core_model_bridge.py",
+      "git_blob": "7d3b60ce9d265ce5a7f1ed49065e56bd45379198",
+      "sha256": "e360cedf58c51215a090e81d71ae96d564338644aa83728e5cb13477fc52a4cf",
+      "bytes": 3250
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/core_quadrature_control_128.py",
+      "git_blob": "ce5af0fbcf000b74b65937588a51ea2496d74bce",
+      "sha256": "49aa2ed83c4ab5fe6d393a8a6e678239239d1905eea1275417e624dca52d08c1",
+      "bytes": 4118
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/cut-audit.json",
+      "git_blob": "beb0766c978930e24cb0e125022f6618fb873576",
+      "sha256": "b559acf933f5d7443e4e8e831f8610055ad5d835db035dfe58bd3fdab451ee02",
+      "bytes": 1875
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/cut_audit.py",
+      "git_blob": "9c81ba9a74052b732d1d3f560d270616152bf3b5",
+      "sha256": "a7bb62aeef8b5cc5b8cc58b00e741b8257450cf9fb2f0dff954b019ad97973c5",
+      "bytes": 2679
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/endpoint-ingredients.json",
+      "git_blob": "df5423d0656448b915b90ba2516972ef2300d14c",
+      "sha256": "5b0f1485d3fb32f9f6a161b122805d78d1a65a377b1b9e86bdacde89720c0721",
+      "bytes": 7773
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/endpoint_preflight.py",
+      "git_blob": "0034c04ea828ef411590d9ebd5a2fa035c2726d6",
+      "sha256": "70de476ecfb35ba37ba93a0f9cb7b0f8ed908af2fa6b65bcebf7d7937aafab7e",
+      "bytes": 2463
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/fast_evaluation.py",
+      "git_blob": "9b087bd3391391fc471335e633086eedd2374780",
+      "sha256": "ff0645e02fa0dc7a6497fc52f51818b707dd1077f77689e764d599cf9ffab5b2",
+      "bytes": 3876
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/force-results/AUDIT.json",
+      "git_blob": "d52c3ff63bc80c4b20725d775d0b82c69da56af5",
+      "sha256": "37f75793f2aa7f891a3318f80a0f497d8c1a71516f54f5722280071477ece115",
+      "bytes": 1098
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/force-results/RESULT.json",
+      "git_blob": "26a3770eea2d32fd228337d66ce24de8e2c16a30",
+      "sha256": "487389cdeeedafe6268c7596b2cf6ebdcf656e120030960ded26d15cb15f45dd",
+      "bytes": 18150
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/model_cache.py",
+      "git_blob": "6b914a412892dcda9ee0139d9daf83d37c71411e",
+      "sha256": "ec22013fc8f87015b412f2482350a2091a78d412e5d95267c6bbe75cb1af7cd0",
+      "bytes": 1874
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/portable_entry.py",
+      "git_blob": "2520cc718264e41f24f926fb3b9876fce0e52c10",
+      "sha256": "f1a967b9fafdd103292041f5f1d190fce291ac89735c3f957ad88cc1befcef6f",
+      "bytes": 668
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/probe.py",
+      "git_blob": "655a5a0c73c00c6d33628fc9d373f1a331790043",
+      "sha256": "7d1046ae01f0f076c8591bb62bcd56697faf1f4e6a6a373cb2324f3b55e9e992",
+      "bytes": 6552
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0000.json",
+      "git_blob": "51e2486f01fa9c1541b93a1577c20ae2a51f628e",
+      "sha256": "b8245f28b04293c568cde876860d4be19fff7a3110b73f76aadd1c92e69e346a",
+      "bytes": 2781
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0001.json",
+      "git_blob": "47b0aa722a1365f76d048bd856d9cf32dee9b415",
+      "sha256": "cd20b96c638bf03d2369fa487f0e765c08f9492e487e946f4efd475673c917ff",
+      "bytes": 2773
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0002.json",
+      "git_blob": "295cd33abe922624a2f7f0c4cd04bb0b4d6c85a6",
+      "sha256": "7858c4e8966000a25a925a1becfa90626acd64ed862fc44ff638176f89fac259",
+      "bytes": 2763
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0003.json",
+      "git_blob": "2d171794e58d42b0b23ea6251fda3fc8124ed1fb",
+      "sha256": "5eb5d79a43a447f0d4c88980ee3c00cbe77179bf434ffb8d2c66b615ea4b4139",
+      "bytes": 2761
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0004.json",
+      "git_blob": "2b620feaad687ae8d0ebab88b7e4c06f3acb7d2e",
+      "sha256": "3f365dd7847e3aa3e683bd71a699ebc7ecf835fdbe7bd17d621e0ff1a14ae994",
+      "bytes": 2756
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0005.json",
+      "git_blob": "e21987ff7586295abd32d2dce897680a01c3d525",
+      "sha256": "39c2805e630bec949b33a0ab821e7f5a4ee8c8024d206c668d3a0fc03dd23391",
+      "bytes": 2758
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0006.json",
+      "git_blob": "4ca626c0101e88806218c4f5f5a56855f4fe7a69",
+      "sha256": "1bfa8096cc41b5906365925df49a12d5aa516a3e18dcf27b02753fbd2acfa5c2",
+      "bytes": 2752
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0007.json",
+      "git_blob": "8e02fe1cc6edf29a6964033e00c2b013abe6e61a",
+      "sha256": "48cfbdb6c8210e5214bec042f4dcfa9c6784835b81f2f2802eb015f17d87fb73",
+      "bytes": 2759
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0008.json",
+      "git_blob": "7ef61c72355d4c3a331554de7a2306e3bf5a569d",
+      "sha256": "2f672a1ade9035ed69bb77bb5a7435fe119649c41f671ddca5c2122dee4c6853",
+      "bytes": 2774
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0009.json",
+      "git_blob": "4447def45e5653f4d7e33feb35b30224b819117d",
+      "sha256": "4b95177ce35d021cb6a3a386a933cafede4353c943419515bddc422fd0a5661a",
+      "bytes": 2777
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0010.json",
+      "git_blob": "f48be1876b1536863f6ebd87809d512ee9143749",
+      "sha256": "7d2325f1c03edf0c3e5a9c450690dae4b28dfe20383accdcffb2fc8088fa3570",
+      "bytes": 2777
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0011.json",
+      "git_blob": "56a63b32bfa9cfb2945a69a2f07cf3de16c69a8d",
+      "sha256": "5fdce71582f0f9ad319250f5c96efb818d5666e807a613139ce84c476bfccd54",
+      "bytes": 2778
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0012.json",
+      "git_blob": "eae93534dc7847bde4921ec5e0f0004e0e7e2711",
+      "sha256": "30915ddb208d1ec20716b095b29611b12e1699181d29c8821593857c7f0fcb97",
+      "bytes": 2776
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0013.json",
+      "git_blob": "4de75e8b0a2d317a259bb231786440cd15ce9195",
+      "sha256": "55359e058dd5dc979dd96d31dcf21ce18078408e495b3afedaac4fba4f079a55",
+      "bytes": 2770
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0014.json",
+      "git_blob": "0bf905e789ba5b743258142b3f7d6cf9f0d1967d",
+      "sha256": "6dc779dbc973eb65cd33cee86a5a836ac65374346f79fd7adfdbe5756e37fb9d",
+      "bytes": 2778
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0015.json",
+      "git_blob": "d259f1fea23751808b347fa557d3290976bcfe1e",
+      "sha256": "717925eacde25ffeb056edf0b712a230b1adb0fe911404aa3123c6493175bd2b",
+      "bytes": 2778
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0016.json",
+      "git_blob": "3a016a46d49462276b957061d11b9ca87d337c82",
+      "sha256": "86bf779ba37a6cb5509c06de0af1c9d7ee14d775337395e57d29ca44765aa751",
+      "bytes": 2782
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0017.json",
+      "git_blob": "9dbbd4ea93655f0f06f18adf2bd84c0b655b2759",
+      "sha256": "1b9f97944cd0e3aac545d19baf760a387552950d7255d38ea7b22d3b6dd22ba7",
+      "bytes": 2779
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0018.json",
+      "git_blob": "5edcd18afcb7be1088b9ebbd0a736374444f877a",
+      "sha256": "d2ee79de2db51e9c41d0cfb79bd25789e030bc9daf5827be71bd1b4cae4e64d9",
+      "bytes": 2783
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0019.json",
+      "git_blob": "fd90c7496cf2e42a282d0aa68c6f9fc4b67c0359",
+      "sha256": "aca6a1945193a8c107f50db41ece735ff120baf91c8f69c3fb3e2fe2ecd5dd93",
+      "bytes": 2778
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0020.json",
+      "git_blob": "625d73dbd967d111d6cf70792dc6534d8a5bd2d8",
+      "sha256": "134476198ff6aca3c10388b21021a092a48c619fbb9961b134f91e0fd9522e45",
+      "bytes": 2768
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0021.json",
+      "git_blob": "157633c91bfd2158cde26416069e028b611dd114",
+      "sha256": "e42cf6db41dfc835acd8748412fdbd940a88f7b779c48d5f5a5a3a76cb0993a0",
+      "bytes": 2773
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0022.json",
+      "git_blob": "f68a957f5e2cf06c3e992bd30c46dcecfd52a403",
+      "sha256": "d8d5dfcf58f37f02fa62a11c03a92a943d870bd0014bc6d97390cd6424c571dd",
+      "bytes": 2779
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0023.json",
+      "git_blob": "f03880729dbafd1b485340fe08788a08f05f3dec",
+      "sha256": "38a10ac89f8f5ef3b7882e7e73f7408d73b9771a84a36829220a9bca40f78e4a",
+      "bytes": 2778
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0024.json",
+      "git_blob": "7f520d856709e2fc86acfc09422a7c19d3daad0f",
+      "sha256": "0d271b5cd203dae027a27375d8745abdaa1a191583d467ae60c4c4ab0634e250",
+      "bytes": 2775
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0025.json",
+      "git_blob": "5bd04f263a7446c4eb43a9050d3e93bdf5db35bd",
+      "sha256": "bca492d7ecef8a4d9e7b3de1a9cdff51639bfe9b1724d5b7decff3d097a92753",
+      "bytes": 2772
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0026.json",
+      "git_blob": "aecf47b57d6787a0c783000ce54249c6eb2b4bbd",
+      "sha256": "3538a8c0305ab2786ee1c13e2d87a0d47d4a5a79547acf67ef326ac1f5b04cbb",
+      "bytes": 2772
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0027.json",
+      "git_blob": "4de4caae93d4937608ff58fe0a87f29f4ec261f2",
+      "sha256": "b41bb536100e916695ffbf21e602a5b7ced7142faae3b9312ddec08555e30e30",
+      "bytes": 2774
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0028.json",
+      "git_blob": "4742faac7ead2b81442eba3c71a52a639fd05459",
+      "sha256": "9616aeebe029c2829632574f4ee859913f81a607d684e40249eb37e00969e88b",
+      "bytes": 2767
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0029.json",
+      "git_blob": "1d7dd8f90500d9737f32ccf5a1646bf62e4a0901",
+      "sha256": "02e119e3f0a902c07b802bfb4545cde537586dcc1dfe0d44d30092b3b6caca74",
+      "bytes": 2765
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0030.json",
+      "git_blob": "828db19a6fb2307eb9c00ddd7d1d138ae0afaeae",
+      "sha256": "85f13073f38cda9e1e8d4e68ff294cb8f1fab26021aaa824a28bb87cd48c1112",
+      "bytes": 2772
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0031.json",
+      "git_blob": "26b32bcd7e68da67fb07347b01c41856af188b45",
+      "sha256": "481436de2037fcfafbcdd170d3e216c9e79c62e574f5c92565de8e7c70443b84",
+      "bytes": 2774
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0032.json",
+      "git_blob": "6ab0911b538161dee8fa12012ea2f07be3fbb309",
+      "sha256": "58d85bd1f14d0894a158493874f8c876809743d0acd86aaf56194b52904d0248",
+      "bytes": 2777
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0033.json",
+      "git_blob": "333763c83b8f11dd0cc1ec84a9ec0b9263a0f251",
+      "sha256": "7c92d8d6e8e949b60e84e92721f7cfbd37d59b035ce871d3b4001d6757b9bcb7",
+      "bytes": 2770
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0034.json",
+      "git_blob": "f6871e12b0d7f4b8f3974920e0d6e9a63cc45304",
+      "sha256": "453929e4136cc6ec44bdcef84cdc45fd4fecf83066ed6a823904f73349635484",
+      "bytes": 2766
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0035.json",
+      "git_blob": "f684ddb9140ee4ca9249e626b5eb035f4b2b2af3",
+      "sha256": "ba8648f7f9379f5dbe5f33da50dd85faa1923406ce282a295cd6ad81e80c5784",
+      "bytes": 2765
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0036.json",
+      "git_blob": "544ad355f93df9a157a13d3fde6e7c52de7513c7",
+      "sha256": "ef6893e23a111114153917dcb71023a6b0cbb3e55185bb308ec0be8f3af75c7f",
+      "bytes": 2761
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0037.json",
+      "git_blob": "e0593ea420a8791a044a299f56ee24b949eefc96",
+      "sha256": "d6638cee0994e1141140ea5de0c38c99f26b3bcc4fc8072fa5144c857a49e4a9",
+      "bytes": 2756
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0038.json",
+      "git_blob": "45fd7ef97abeb176ef6459834aa12c3fd0609655",
+      "sha256": "c72f961e5e7456a89f004ab728f5dbba721f1b46f909976ddfcdfee02bfb010a",
+      "bytes": 2761
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0039.json",
+      "git_blob": "cf6ffb02c6190f82233cbfcd6af179d10fec201a",
+      "sha256": "52b39dfcfd8612b66951d16b6d6f63834e1ddc574144598a5c888a68f4e4dd4a",
+      "bytes": 2763
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0040.json",
+      "git_blob": "2b5e099122083e309141f389489177c7878d290e",
+      "sha256": "addae241827c3850e7c95894b222f0863777f36ac0e3de1a5b60f304d7d6edb1",
+      "bytes": 2765
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0041.json",
+      "git_blob": "241256f8a2fc13040399b3be2514479887d88669",
+      "sha256": "654bde50b3eb0157d488b973fe919fe9ac4cfc33e735cddbd1e4640eff3f9a05",
+      "bytes": 2771
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0042.json",
+      "git_blob": "32551c5b449ac10fafe4daa0525593c98f0ff828",
+      "sha256": "b86a9ecda53872ec64eadcf368491c7867262ce2508417b6b83ea65d5d7351bf",
+      "bytes": 2758
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0043.json",
+      "git_blob": "0db6fa71265dc26616c28994ee721a205774e7c9",
+      "sha256": "1bd0507986c738f3b8387488cb4276417b14a125fa6221219fe461441a0568f5",
+      "bytes": 2766
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0044.json",
+      "git_blob": "c5e5e7ccc12b8491ec3f22e2eb150a4f1b8d6ff6",
+      "sha256": "f32ed7a03f3636b0e97bd3608ddf1b4e9844179343a9d17ddc93ffc34c31faa0",
+      "bytes": 2772
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0045.json",
+      "git_blob": "a4f355e59c0faf52c87e6f77a8511f96e24eb2e6",
+      "sha256": "72675c7a0037f34e434f3b06dcf6c518297157403bde36a6edb666bdcbd7570d",
+      "bytes": 2768
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0046.json",
+      "git_blob": "e49bdf4e43763ee5fc6e2881249ad26b6dd4a9f3",
+      "sha256": "a9ea8b11a9844ec8571e0a142a0df8d824f74e547f7cf4092f1c103a96308876",
+      "bytes": 2769
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0047.json",
+      "git_blob": "7d11433786adc2e95fd6fcefa7aaa9a5858acf6a",
+      "sha256": "3da930849053ab112eb98958078a7bceed986cedde66c23b45ee14c0d939fd17",
+      "bytes": 2774
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0048.json",
+      "git_blob": "90f2294b873239e4ab02ed63c764cca1b6c1449c",
+      "sha256": "76d14b630f0126e75de0795c890b7fc7f24000fc86071af749e68198712d9bd5",
+      "bytes": 2771
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0049.json",
+      "git_blob": "45707d6b4f63bb83edb999442177ab959a4936ea",
+      "sha256": "4bdc6426cc4037f0ab37bf1536779e67cae050e63e645bde70ff2f3d5f61a985",
+      "bytes": 2767
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0050.json",
+      "git_blob": "18670d58f38721660f5b5d8c5d0f0c323136851b",
+      "sha256": "aae151c9413c0774ab0ec721616f12e3767b2c024befe545558d391d21c1f64a",
+      "bytes": 2772
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0051.json",
+      "git_blob": "e127f26b08cdd0a5e48e32f99f9a700fec3565c2",
+      "sha256": "9920236de17eddd84f0fc366b599cce0da4def831d37f49abb0d415061d9d59a",
+      "bytes": 2767
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0052.json",
+      "git_blob": "ce565d4f710e2122ae6d664315c9726f87419d92",
+      "sha256": "98133e6a3606cd197eb95c5e50f4a639254539d7b9a2b41918d7511f2c33181f",
+      "bytes": 2766
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0053.json",
+      "git_blob": "d7447d2e8264558817563b9431d02d5176a9f6bb",
+      "sha256": "10abd192364969635371a721ff09b74f20c93ffd4f72f424f216ae49742869ab",
+      "bytes": 2775
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0054.json",
+      "git_blob": "34f58a39224eb73a4b141a719523375294d6f2bf",
+      "sha256": "19cdc5cc6dc5b1daaa38f10b0cad4bdf9c8243fffd3091394b9e466ad65aade9",
+      "bytes": 2770
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0055.json",
+      "git_blob": "9ed7350260f3fda4e85a073b7374dd96bc87ff8e",
+      "sha256": "a019324a2712db63aa3669eac54cb06bb3652f0eb0669b3b79fdc92eb9b01d7c",
+      "bytes": 2766
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0056.json",
+      "git_blob": "d7e190e288de609d63b7bfb3131dbc1cd6d273f1",
+      "sha256": "e0b76bc8141c320ee156e33aee6ca51865eef48222ee4984f7700c1ba4069fef",
+      "bytes": 2771
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0057.json",
+      "git_blob": "be8bed915768656a1207fb926141964d74c74b58",
+      "sha256": "fdec4e467d7dbae40a111de6b0133e93b96428c20e77ceb642600f0065978f49",
+      "bytes": 2767
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0058.json",
+      "git_blob": "8c06bd373c3b16ee9efc36014ba1463ab48cf136",
+      "sha256": "893edfaa01aa4385c5f574117f74e2c4e34795378af4802d5b67b8fc9cacff04",
+      "bytes": 2771
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0059.json",
+      "git_blob": "d5e85aeae8d9f3627636b118e585bd68695003e1",
+      "sha256": "605ed6e59d516d70e16ad7ed9698b096353083816c2e340ccec2ed7dfe6b8155",
+      "bytes": 2772
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0060.json",
+      "git_blob": "eeeb5e0fb0ca935e6785af51c050d378e4f1083d",
+      "sha256": "4248df169fc4fd32e8f7aa34c2668abdf4b60e575fa84dd8b4c4e10c6f40b002",
+      "bytes": 2766
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0061.json",
+      "git_blob": "5b88463543387eefa39616f88580898cc8580b18",
+      "sha256": "9bb3c0a2980aed74a45fbd60458ba1babcdc799b3e2af95506e851d07e649eeb",
+      "bytes": 2759
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0062.json",
+      "git_blob": "119b7c4e30a03746ba57040024cb70762bf2567b",
+      "sha256": "fea2dc78ee1f1b706b321fb0ee815bf95f4d7bd890761018c52951cc0b51d796",
+      "bytes": 2764
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0063.json",
+      "git_blob": "bd5b56230d23885cd40d66806edd816f2675331f",
+      "sha256": "8253e259876c335acfcac19e332dc67427d0c44e0722f692cb3db9a0709895cf",
+      "bytes": 2762
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0064.json",
+      "git_blob": "4b12d144b0f59be80bec9be65c28cb3098439113",
+      "sha256": "06b69757f20fcbff61046d12bdd35a890228590a9a0d6cdb1357174b9479cf79",
+      "bytes": 2749
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0065.json",
+      "git_blob": "e853b5f6e5859f4af81842f3f014685aff84661f",
+      "sha256": "d1eb50b2282e0a832297aeb5f8fc9de3de781c452d4ea7c9ec4c1c2f7554e52b",
+      "bytes": 2757
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0066.json",
+      "git_blob": "59374426ebe7d8d6d02de84f3b8a0466141f2bab",
+      "sha256": "09a15ac6d07dce39e217ab0757a7396e5028a04d6bb70c69e96a15c345b0821c",
+      "bytes": 2755
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0067.json",
+      "git_blob": "652181466d3a16ff4ca5ad48830ed963f76d4018",
+      "sha256": "3c9a1606b3a1295d9a908d8bb1e399dbb88d8b7161fc687eb7c7c8cdb92a74fc",
+      "bytes": 2756
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0068.json",
+      "git_blob": "b5aca6b40ef2c5c8707aed706ee6b41540c87fd2",
+      "sha256": "c8932586c7b0425620fcedfdb27b3275247f6bebe8b3abe177e66f48bad35697",
+      "bytes": 2754
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0069.json",
+      "git_blob": "bd824e2ba31c23de5d53d2aceb980d979c1c759d",
+      "sha256": "6cabb29d07add76cc5b3e61f1b91d4e833872370442893e250dbefe27ed27f08",
+      "bytes": 2756
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0070.json",
+      "git_blob": "f519552affb6a350d0bd8253fde1d0a3e173b125",
+      "sha256": "da1cd105994f16291ec965e246a6f9f8065bcbdc7c43cef9ff8d05d6f55cef47",
+      "bytes": 2751
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0071.json",
+      "git_blob": "8504b232e9a48d8dcf454a093cd0ea8c23f5bc76",
+      "sha256": "e129f7a0dc8593973a6f7fa71761c52d0833d79763da38d65441eab21ace3a01",
+      "bytes": 2754
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0072.json",
+      "git_blob": "70836ed38370dfe95d2b6c0e4a5e1a44246ec1de",
+      "sha256": "a0a7d58b2c0b760e4b1f0921286e08d0badab779b618cb0571ed933becb41cf4",
+      "bytes": 2777
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0073.json",
+      "git_blob": "e861f5d5fff78570a6bfdd67f48ead58c4171825",
+      "sha256": "6ad7e7a18cede9b65e8b3e65a1bd8caaf47832fd62ba9b8d135a0e799d9b3994",
+      "bytes": 2774
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0074.json",
+      "git_blob": "bff65eccc0a3170e72a84e211e1fbb6dd6cff1a2",
+      "sha256": "30c720fc58613fabf16c8f1c954492953ab7b15cac07a78ad65aefce01c57635",
+      "bytes": 2770
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0075.json",
+      "git_blob": "f3c5cf2d7a9cadb3478e4f6e8d1fa3562c62c39f",
+      "sha256": "81599bda3f92845b0f20b843c2ce88a10d833e82599f521b64f1c8edcca44a71",
+      "bytes": 2760
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0076.json",
+      "git_blob": "d203cae7d54d0b51a21c2bc47f36899db9524d36",
+      "sha256": "3a1e841efb792a134cc264b86c2bb287bdc61af75573dbfb2014f05dc3e66574",
+      "bytes": 2762
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0077.json",
+      "git_blob": "7078864bd444550d3869f6aa5f82fee58068e386",
+      "sha256": "9b1dbf0cb6d8f148fd640273496fa718d4a264cd6e899b9275ca5c6b940f2938",
+      "bytes": 2756
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0078.json",
+      "git_blob": "ea8191fa4374deabd424b315c56aa1ec191eece6",
+      "sha256": "205f9212d1f7705b054fbf2e00ae342d09caf661c493169572c4ab6de5190204",
+      "bytes": 2763
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0079.json",
+      "git_blob": "546a94d0d5663d8561f140fff49259e02ccfacd8",
+      "sha256": "bc1283753ba715fffa0c6a3a5e9e6728dfece60082f0cd8ca584e0c1bf6d8365",
+      "bytes": 2761
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0080.json",
+      "git_blob": "c6aa8b18d51d801b8e5f91773548ed16c5558a2f",
+      "sha256": "10391af86eee9e24ddf6ee5cd7ea93844ff3e9fdbbcebf8386e1eced568c0262",
+      "bytes": 2763
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0081.json",
+      "git_blob": "623c0d6546b5c5722f8efb6b5bc49109234d9282",
+      "sha256": "03d7d57ca38a2e31de2045c375515f9e21035427b19e858bd79a768ad6de9bc6",
+      "bytes": 2762
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0082.json",
+      "git_blob": "e682efc6b5e0f5bcad25eda429e899fe424fe568",
+      "sha256": "eb0928103fac9556aa330eb08bd6b3f261051657135bf41e401b6b2e0ebbd32a",
+      "bytes": 2759
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0083.json",
+      "git_blob": "5bc784ef225fb8c44471faec4a6be3c4f4838dcc",
+      "sha256": "9f4d9ea4e74731c7685b62cda94d481f7cb73943092a77ba1ec8b068018fe6d0",
+      "bytes": 2760
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0084.json",
+      "git_blob": "45704575c06ad52c49e442c1b856f1da85e867a7",
+      "sha256": "2318074f46bcd4e2739c5c606092a0f25dd3d3c5ca47cdc97686757e4487217d",
+      "bytes": 2759
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0085.json",
+      "git_blob": "0ac747fc6125f066622a7da8e500a0b92c079e95",
+      "sha256": "4e70c769644327270b12f22fb5b4473c80ae74295d9fe53dc77572d8b9318abf",
+      "bytes": 2756
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0086.json",
+      "git_blob": "00746e3bf16ac91a3b10996747caabcb7b7ea79e",
+      "sha256": "9b80b1c39e8228a0c10904ca5a637b214bf3096a5870311ac82ee4c20124ea09",
+      "bytes": 2745
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0087.json",
+      "git_blob": "b297eae2b1791a50aa9f930fccd3e9969ada76bf",
+      "sha256": "173838a3606108c8b2c4cde643beba16ada78b15201e972b94e61ae219a83bd5",
+      "bytes": 2746
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0088.json",
+      "git_blob": "291cce0a05879b79329981347af637b38a3e9e78",
+      "sha256": "9c814d5ad29711e460c298a95bfa76bc2774aa1d2eaa91b7ae3c89c53624c3c7",
+      "bytes": 2748
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0089.json",
+      "git_blob": "b60a30ad59651ca75e69c8452fbb6e11abad09ad",
+      "sha256": "77f6b6871dbd3fe2efd02296c6f0d34a9f65b16da8f14cefcd23b7d20d517638",
+      "bytes": 2754
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0090.json",
+      "git_blob": "de1a38077aefb87806a6494692ff79341c4e75e7",
+      "sha256": "14f1ec1e0ae27128659b63cc79e70eec96e7a24a11955d383588438dcc7b4486",
+      "bytes": 2748
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0091.json",
+      "git_blob": "745abfbe84ef1ba63e4962bb439aeb3512c45685",
+      "sha256": "4e9db940edb3d7b2e1b7b288185c3aac5c058fe5499680cbd32d7962317a972d",
+      "bytes": 2748
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0092.json",
+      "git_blob": "9e0c1ecaa724d7b2eac5f731f6563886533349b9",
+      "sha256": "98141fc10262f12cc8a9574f49eaba119bb93a364d95fa36a5644f08608c48dd",
+      "bytes": 2744
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0093.json",
+      "git_blob": "ce73a48f559d5d8931ee1332e3bc0b8355d152a3",
+      "sha256": "5330b3906bfe165253816e918faac0b0eaf45233d4f2e26e472becac27b715a7",
+      "bytes": 2752
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0094.json",
+      "git_blob": "9111233ed450e54c1c5d7b7f0de3997be6cdc365",
+      "sha256": "25cc7b7f1c5b3e196d7650615c13bf221b8bf2c74cae8b2472f3728379d050c5",
+      "bytes": 2744
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0095.json",
+      "git_blob": "67122a9abfe830f8dd5ce74a35cdc7ee9cd7a362",
+      "sha256": "494850e88b202c14ff8d038bd03aaf120e48c669faf0143440edc2850aa4528f",
+      "bytes": 2746
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0096.json",
+      "git_blob": "16e4e38e7a47e4d1cc75067ff88eb201d63f4b9e",
+      "sha256": "d6bf0c9cf8be1156f77ddf00c34403ce9b391079dfc01f74b588fdfee60671ca",
+      "bytes": 2740
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0097.json",
+      "git_blob": "cfc4faad3d977d20ff9ee7893d76becc5ef9c1d0",
+      "sha256": "2eaa56e18f30267681419ffa3d241844b0835228996e4ddb56683a375f3ea8da",
+      "bytes": 2743
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0098.json",
+      "git_blob": "8477a9a71df288047b397984426e5e8b4849d377",
+      "sha256": "5fd2e8984f3ac758640aea3adddd34d2587431826987b96e167e7232c45952fe",
+      "bytes": 2742
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0099.json",
+      "git_blob": "175661956b795888514cd54f18d00a1eb030b850",
+      "sha256": "67795d60c254d64dff04484782ca1ac50916d8db3ef8411f89008449aabc53b9",
+      "bytes": 2709
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0100.json",
+      "git_blob": "a5d7003de74f75137a72cfa7d2ebb0b21e5b59db",
+      "sha256": "a7116996977a665abe1b7427542ec85280efe47c98ec4de23c0d8b617417dc16",
+      "bytes": 2709
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0101.json",
+      "git_blob": "8bf6727dd641c7a14fa17e63c8d526369d4d89a6",
+      "sha256": "70f0faa869b33cf9017826f280e1750e89ddf2ad1832e097ae4cd15c263ba05b",
+      "bytes": 2703
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0102.json",
+      "git_blob": "a770fa60025560b891e4115796b09c6f7ea1e71f",
+      "sha256": "5908fd46fcf92182263cbd202f3579570ca1d0fb9fe2d3647d4e973ec53eb1ee",
+      "bytes": 2702
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0103.json",
+      "git_blob": "a58ddc6e209b5942d693bb01d451c7c10e63c860",
+      "sha256": "08a8d51f500427663c422bfbf7e889a06b72bddc6b417d1073f6739cfb3b9cc9",
+      "bytes": 2701
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0104.json",
+      "git_blob": "e4e00b2adb1402c6dae89c97241899f7b73cb103",
+      "sha256": "1ddd79d01b24075a3415bc9f27d144034c93c2bae173b618752f6fde61ef7f16",
+      "bytes": 2708
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0105.json",
+      "git_blob": "992457adea51a7ff657728f90674b48f1e5d2cd9",
+      "sha256": "c523023e1eead8facaf4ebfb98cfeff0602129376469920af5efb9defd1c0fa9",
+      "bytes": 2697
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0106.json",
+      "git_blob": "f802154771ea5f7589cb12b123d36ae569d1d007",
+      "sha256": "75c0adad8c97cd52ac913286917e3aad0074cb50ea110f8b41717cd33968dba6",
+      "bytes": 2698
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0107.json",
+      "git_blob": "a3606a1a8b5d97f180a75acf0d9f57ee6de61b4c",
+      "sha256": "8caeec5cf5535c1a80a97fe2345d02108362650e764f94086d713b1938f3fc71",
+      "bytes": 2704
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0108.json",
+      "git_blob": "d8616a61192a69f6f7e6247d43a89fb00ecff0b2",
+      "sha256": "44e612017f9f1abce09a19820ed189bed8de26e88b041f4e272adae14c384f2c",
+      "bytes": 2696
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0109.json",
+      "git_blob": "4a09a0c95537630a79e4a4ab83fb46732ae4c113",
+      "sha256": "bcd0b2c98e43524f7df2a4c6e89189a6bd9599b86ed166ca7d27fbcd9c633ffe",
+      "bytes": 2699
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0110.json",
+      "git_blob": "6321be0f112044ffd9d55ee137650a5c0f570170",
+      "sha256": "d1f2e717773e4fc75104bf346255f01c29d78447aec13d200be4b7e34fbe73f9",
+      "bytes": 2695
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0111.json",
+      "git_blob": "07b59506902c74f5c5e5c30a1a877805431a58b2",
+      "sha256": "fb6f43fb6b9ad3463c5cc794daf2800351e6347cfeb450106c1fd50aa34ddc0f",
+      "bytes": 2696
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0112.json",
+      "git_blob": "c6a12078c3def317c4fba85977c9da7eef2f8d02",
+      "sha256": "258ff24625f52524b54ba299e8e13ca7026f2f726e27fff333fb472371992dfb",
+      "bytes": 2695
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0113.json",
+      "git_blob": "0581afb3011055f6837adb6efb7c4e5bda25eb72",
+      "sha256": "339d1adc2d2d4ada7147d15947ae6c6d0936645d76ec03a2f05af9825a5aa402",
+      "bytes": 2689
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0114.json",
+      "git_blob": "575031e9ccb746bfe9653236c888c79a883b025a",
+      "sha256": "bf16cef4c5ff2b71f31bd35e6146fb4f8fe021320c381da0f63be95448324115",
+      "bytes": 2689
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0115.json",
+      "git_blob": "6cdbf5e79c81909fd25b035db9962a8c5ec5ec52",
+      "sha256": "b46a7d1b7eb0290f6e5d278f976a43f5fd468c32a7637296af89bb10b712c3e3",
+      "bytes": 2686
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0116.json",
+      "git_blob": "222cb83dc19b2f1b24978feb23a2aea74eb4b1ca",
+      "sha256": "3fa13fe9f6797027b3cd02e7a54ffce13c2c92ee58d1d64cac01f555c8266854",
+      "bytes": 2686
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0117.json",
+      "git_blob": "345a20850c9ece8a098f4dd52d6c890f5b7aa2cb",
+      "sha256": "3c7b65e957093780666a1454159bf96fdaf56419686a9db1fff5ff8550bf2ee5",
+      "bytes": 2683
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0118.json",
+      "git_blob": "1c1b20f025a33ab42ed20eaed8b59929958a8656",
+      "sha256": "b7be8f5cb29a6e7ac646a3dc8d7f74e6fda23429617f0097e9b9bf41ed27bbb7",
+      "bytes": 2684
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0119.json",
+      "git_blob": "59828b9c2205e291d35a8a7676508a0259ea2740",
+      "sha256": "15724cee900ea74ff259ec412c64962d47678b0257ac1f14719c79231dd4945b",
+      "bytes": 2688
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0120.json",
+      "git_blob": "21d2488ea7199f2603b735e6e85f11b56ce277ae",
+      "sha256": "c9cc581a1f7e4fc751a7a30db51cd9a2f35a3d904da7b39d4b839ec035a20f62",
+      "bytes": 2684
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0121.json",
+      "git_blob": "5c985388549e2dcac7d9c3f0dccc358994cc6ede",
+      "sha256": "562d745a1ef7954fe0702d256d89177e130e2c82faf34bc3e9879e78b307dc89",
+      "bytes": 2684
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0122.json",
+      "git_blob": "a6468770303e9b06e8d334109089b39b52abb7ff",
+      "sha256": "ffcc90af41ce40dfae334cec1ad4d77236a6863923acb5f0471bc3f850785ff4",
+      "bytes": 2680
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0123.json",
+      "git_blob": "d91ba66bfa43811cf074c92d176ce3af0a984f7b",
+      "sha256": "406f5d3fd127b6b8180b76266c490dda195d2f44c94d18315357cccf1d129f6c",
+      "bytes": 2682
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0124.json",
+      "git_blob": "12398e589fefe8ab36b887792d5d60f6d14ff96b",
+      "sha256": "782974da58bd69ab1b70c680a0a3913d49940c67706a13791945b17b510b0b55",
+      "bytes": 2678
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0125.json",
+      "git_blob": "64cbd57e1625ff2515d31420ae748812db222cf3",
+      "sha256": "7d2d0f21bd383441addb60da15f638d71d6420223d483681d6d07fdbd79c4db8",
+      "bytes": 2680
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0126.json",
+      "git_blob": "d32d04d5c490dc1c34d0b27251e2c0cbd4a15bde",
+      "sha256": "1093e478dbfe374fafcb737f2c2ea4fce0cb7a3cb93652000717f5866aa4b4c0",
+      "bytes": 2670
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0127.json",
+      "git_blob": "0d1f3da2d1b1ea8066bfdbea6f32ecd2a7e70161",
+      "sha256": "b4ba8eb2ef1499ac2eff715cb78cc559dc48d2ac65ab53da37e7f6bc911ee4e2",
+      "bytes": 2677
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0128.json",
+      "git_blob": "c0956a0388e36147bc393421010427fce9bc2e86",
+      "sha256": "fb08e6f2f29503bf37146cc50a1b6b6713fb6ab34b5409743b0c505182de9c4e",
+      "bytes": 2678
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0129.json",
+      "git_blob": "90faaec5ca70a5878a094d4a3fec6372aac33c92",
+      "sha256": "2a2bb938f70bfa1325d8a07cf320010fd4241c639091d866f0ac769a54f9015d",
+      "bytes": 2675
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0130.json",
+      "git_blob": "4bce720f9fb931ccbb6ae50b0c70b7afbb73669a",
+      "sha256": "7d7731979224c4a6857eae20b3df8d2212f0dd2933ac3951ffa94f418782aa91",
+      "bytes": 2675
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0131.json",
+      "git_blob": "a8675fbbd88dde1cb5f12afd3d8496cdeef455a4",
+      "sha256": "7ecd592016020b3d70725fd91fff32827857e776a688a963e7d795c1bb0b960e",
+      "bytes": 2670
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0132.json",
+      "git_blob": "78cbf4c15b59615ba601d13070a68ce7e9210180",
+      "sha256": "2da7d8f3fa0fb229efc8c5670812ee9b17043ea9e7300d7ff2d9eeebe6cfa52c",
+      "bytes": 2670
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0133.json",
+      "git_blob": "fec395df9aa6380328a6f82876fa13e1f4e9c48f",
+      "sha256": "03c66cbe2599428062dbfe6915c760af7a646b124ab6511ba4ab3cfbfca32bdf",
+      "bytes": 2661
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0134.json",
+      "git_blob": "73ae318f08db4dddb8a85f781cba6766ca7361fd",
+      "sha256": "7e73f4f326116176ce9acc96926cc7c52e8dc9409b784d3dfff1de91e7c8a0ec",
+      "bytes": 2668
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0135.json",
+      "git_blob": "946288eb3d3cda9eeebef22d9d5bef36a45994ae",
+      "sha256": "2cc692cc34d9782f03548550f347ddc0ba068456064d8e3d2f2c8cb998e633ff",
+      "bytes": 2667
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0136.json",
+      "git_blob": "7762a7a83a14b60576929ec173d3dba8374a7666",
+      "sha256": "a8a8426b4d38dfbf20233c55234f51320425a6a502f1a6b5fbf84e4469d2070d",
+      "bytes": 2712
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0137.json",
+      "git_blob": "5949ada0b96473c4c1aac0e989bb9ccdcd412e07",
+      "sha256": "547c2860429fe7bc65d8ca61078f2ad96f1f067dea96175d382c40257598718e",
+      "bytes": 2708
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0138.json",
+      "git_blob": "fd89761d590dcb7198dbb242e3d3709ca0e27949",
+      "sha256": "35bda77d30b72cc5dbb94bbf901f4fc83c865c0f26156570a1c86cc659df410c",
+      "bytes": 2704
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0139.json",
+      "git_blob": "bc3e34efca9a2d54c4dda8176e9ae15bd462d611",
+      "sha256": "ee04b65bec3ee761f869a8eb02a14c2aa79014958b2f4e377c9ff0553b556c78",
+      "bytes": 2705
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0140.json",
+      "git_blob": "01667c725f6b7e5375f866be014aee993e648e6a",
+      "sha256": "b1d5ad9399395fdcc798906cbaf1a428d4131bc8caccd7f283b677ec0da409a8",
+      "bytes": 2696
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0141.json",
+      "git_blob": "91617aaf27a5863c61f816972713186e974f9c8b",
+      "sha256": "2204738a4c6d81b30a84722448b13506f6a8760ae2cbab1450760c5d80a495c0",
+      "bytes": 2695
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0142.json",
+      "git_blob": "2e9caf6b67d0958edd4a2455c57dbe2e4d2ca873",
+      "sha256": "726ff31677a75dd6faa1ea0462e266483c2128aca26618c5abc46fb2529334d6",
+      "bytes": 2698
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0143.json",
+      "git_blob": "73e1477646292352b2eebee25d5928dc6fde360e",
+      "sha256": "d28e6b5df3fad8f1264a93c1863ed942d6f78151b2bb7faef92417ba239ca62f",
+      "bytes": 2689
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0144.json",
+      "git_blob": "0ebe49bf518619517f1784d78b1e725661aba081",
+      "sha256": "832fa63da5c91ce6a3a5d7082297e51afaeed5798f94690c2e746a2a4c645f18",
+      "bytes": 2694
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0145.json",
+      "git_blob": "8e554669fcb0435fbbd28701e5c839dcf96a5e17",
+      "sha256": "d9626723f48293211c5f29324216860257411d019d0ea5e9ba370634c430a304",
+      "bytes": 2693
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0146.json",
+      "git_blob": "1d916af9f2866aa3e2f30c699b1e107f287888cd",
+      "sha256": "5bea6ad57089b66165db3d2b9d2f84090214c12013303f8f3a84ebd2b5db1f0a",
+      "bytes": 2695
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0147.json",
+      "git_blob": "32c91ae9e4a7cd25b9f5021b71cbd917a732623c",
+      "sha256": "43b9c2afdc9df2ef16c1e3b9698a883ae443a3f448b070b9c5fc3fbcf326fc63",
+      "bytes": 2700
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0148.json",
+      "git_blob": "05a41036c6c189eedc1a7d1d6521748db9d013a9",
+      "sha256": "761f9d835b4cd0522eb5333a5c58b873fabf1c3bad42fc70b53db1ad23a28d4b",
+      "bytes": 2695
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0149.json",
+      "git_blob": "053aceb42aca9de1cb5b3213711be483fca1c475",
+      "sha256": "e317b454410bab1a4c12f7e847780fa4323ce5348206bb205163b0cb3444f276",
+      "bytes": 2699
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0150.json",
+      "git_blob": "f3f17f126b89b2ad40a7761f69f7ecd31dd823e0",
+      "sha256": "47b1f3f1df9f2a05faa5e632de0d9bfc551829e2c4d3321d5b0c41486a5d1b7c",
+      "bytes": 2698
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0151.json",
+      "git_blob": "ed5cee02f2b084033bd97b44dc196474e08f4fe4",
+      "sha256": "4c93c92c8c0ae13ab0872a192b329113884e961cff190cab56d522fcc7a1190e",
+      "bytes": 2693
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0152.json",
+      "git_blob": "8f768a10b2328492c1342e15e24ae9cf3acfcd78",
+      "sha256": "b29d8cee0c6da5517f2af5746e9a82293283a6b43446c9d669620c483c32aed5",
+      "bytes": 2682
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0153.json",
+      "git_blob": "36eb8bcbc78a0bb5354d47146f05525cedc7cbf5",
+      "sha256": "99c2e59bea0c1623ea0684412cf672624150c8a0febbc91d0321423ad1c83fa0",
+      "bytes": 2688
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0154.json",
+      "git_blob": "b873cd0603e046e1516950e812d467cc57dd7c86",
+      "sha256": "25d9604fdac482dab09994b2509bc3d5b1d634b5d253784cdc22eb887d73bfe3",
+      "bytes": 2689
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0155.json",
+      "git_blob": "0d5870717d60240a3142e4a80a4d61dffb0984a5",
+      "sha256": "288392fae6fc36b48854eb750226d6abe67f09ab8ed958eda7680ec0c6d853c3",
+      "bytes": 2685
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0156.json",
+      "git_blob": "ea811ff05306a93b9f9d38f4da60a2e96bd587ef",
+      "sha256": "0aaa4b36019008d9a210b03660de9d85c2b13cd014cda76b41f3a7ca17810b89",
+      "bytes": 2685
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0157.json",
+      "git_blob": "747b667c35e25318c8f964ea2e8c2c712021b63e",
+      "sha256": "9623cb0843bdfeffa01c335cfae5a0effcb048985c273d9cdaa305ef8296a4c4",
+      "bytes": 2687
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0158.json",
+      "git_blob": "7ef41376d783b3e48ce2b885be66003ea90dd515",
+      "sha256": "62192d757f3f81c7eca201d328d07f6113a760dfa5e71985ed0573dc3351d9e2",
+      "bytes": 2687
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0159.json",
+      "git_blob": "c39baaea5bd3d2ecccad43581fa5fe3b22c6de4d",
+      "sha256": "18fec02a7fb1c5b0363534c7beb785a655c316aeccda22272b540bfde31a3575",
+      "bytes": 2679
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0160.json",
+      "git_blob": "bff236dc6379f478a1e73c5439671f4e9836d4aa",
+      "sha256": "f9d4e680c8a5462a04999999ddf3038d28c4c4a81d39f4de0d14d09743c28f69",
+      "bytes": 2680
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0161.json",
+      "git_blob": "3d4b2f777630744ba28a1ee0e4c8175790747322",
+      "sha256": "2fd22e1691f547a2f0ea6e2c0d289598ba5a20c0fcb1cd7527d03d5a31596e2a",
+      "bytes": 2681
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0162.json",
+      "git_blob": "b6cd0ce08e9bb567db8b080952c1b619a06916de",
+      "sha256": "393f891aa263e673144c6f3ccbb2da02344e14d7d7eba4b779a978a1426fc353",
+      "bytes": 2685
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0163.json",
+      "git_blob": "1777c1b4dd5657de47aacfd75b2e58c4d0875f41",
+      "sha256": "9f9473c4e51d0b2d1a7810336c37fe7ae85863efe9a7ef18e737b8bdb8833a06",
+      "bytes": 2681
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0164.json",
+      "git_blob": "276da916a81a271dbcbb1428664f4a2089a9540a",
+      "sha256": "a02f8ec9b65c429b42fbb6049f39c6c789de259e104cd72e2f124658a8428481",
+      "bytes": 2671
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0165.json",
+      "git_blob": "082b2d69d817fb143f5c3b59cf71e4b6b5270efc",
+      "sha256": "9f4ce1c1152f8cd61a524cc315ec4c51d1e243f67f6db073e4557f88f069fca5",
+      "bytes": 2675
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0166.json",
+      "git_blob": "029f209a6a2f3feec7790509d5fb874dea57e0fe",
+      "sha256": "2dd8a406626dd60b1651678d8f8018327c2498839b899bd5c968b9e1d7329fd4",
+      "bytes": 2671
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0167.json",
+      "git_blob": "d59b7a5d015237f9c6e1483b0e9149a77edce5b7",
+      "sha256": "008d941049366b41c8c17bafb437a94085d5a4d6cbd19e37e3251cd5d99a0e32",
+      "bytes": 2678
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0168.json",
+      "git_blob": "ce2846a3f304ccc0d8d42e871ac94f12116e12be",
+      "sha256": "4c19d6dccaf04a6e11a5bd26c0c50a046bf5393bbfc149852f51810188a665ab",
+      "bytes": 2675
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0169.json",
+      "git_blob": "413f60180c53ac1a14f7104df583c5734c699f9f",
+      "sha256": "c473b67c0dcf34bb2e628057e0d90a9fa0166d96180789f6640b8dc2a98be0de",
+      "bytes": 2667
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0170.json",
+      "git_blob": "5886ea2241c13d3c8e3773b44cf091154134724d",
+      "sha256": "bb21734e4ca90ed260d8c5aba1a75552d59be0b5df490d4fd2a3159db473f592",
+      "bytes": 2670
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0171.json",
+      "git_blob": "787f7e97152c7746e7b89c77e7c42a83789be87b",
+      "sha256": "3637a80ba5bf789890d7d2280faf362828595e2348a25442066da63b1b2239fa",
+      "bytes": 2668
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0172.json",
+      "git_blob": "1dc76e73aa7e0ba4f01717c78ffd1f2de571c470",
+      "sha256": "2288b745da4546bec435fe5cf802332f4b3c2b0b454a2a4e0c8897dd14860363",
+      "bytes": 2660
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0173.json",
+      "git_blob": "40de3e66acb137942ec6be5d60c8f3cd536f5131",
+      "sha256": "fac2d5942878ae30291e6e4086a9db9d8681deec280b404e9911c3fea59610ae",
+      "bytes": 2661
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0174.json",
+      "git_blob": "f547ab8f85052921b10011195486580eca738311",
+      "sha256": "f4baf5460accbece2a0e5369d65c4c5cd94d6ae25fc7abee817195f2f0b624fb",
+      "bytes": 2665
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0175.json",
+      "git_blob": "b8a976995f3c5a448d566a0620c6996a05f35f5a",
+      "sha256": "f5553322cfc63c22ec4d0115341b9fa52c0c625e6c1722c9cc89f0439051bc44",
+      "bytes": 2664
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0176.json",
+      "git_blob": "5217b1c17ae878b92384478bc6e33cf06d4ccfc1",
+      "sha256": "898878662dab3c9ebf341c4f0c82d4cad478bcf237776d380936848ea3869aa9",
+      "bytes": 2661
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0177.json",
+      "git_blob": "ab32d3f6e83689699cdfea520716e8fa6f98de07",
+      "sha256": "986e2e9f23ae5c191673d5fbfba354f7163e9e88defc2b119dbbccb130587256",
+      "bytes": 2664
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0178.json",
+      "git_blob": "d219c28cfba52e53a4ca226d7b5cbb5d1a4486e1",
+      "sha256": "fe97c9cd13a0634232439947b7f6d14e426245888346d4ce426f0aa3eee640e5",
+      "bytes": 2663
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0179.json",
+      "git_blob": "d2385a670f3dd8c50b221dd997ee7094f5ab16e2",
+      "sha256": "15acba8456db6b39d783c14ad4879ebf92cdfba814f075fa53ec30a023ca25b8",
+      "bytes": 2657
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0180.json",
+      "git_blob": "139c6f7768541f04cd771e462521fc33f4b0eb69",
+      "sha256": "c8317f45a19e739021026ba5d1fe1fe743c77a5e61df04d63a2acd3777f19218",
+      "bytes": 2655
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0181.json",
+      "git_blob": "c2ce7b5ab17afb32abbe180099fde5c34e088718",
+      "sha256": "d9a919dc9d6f1c57ce3830c4ae2e9a7b84949c4f281809e0242a3a30adf3be98",
+      "bytes": 2658
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0182.json",
+      "git_blob": "6aa9beb0f184aec83f63d3a6684529befbe4732c",
+      "sha256": "4c7f70a113ba6734d75aaa44197e05f5f72d949e6f5ca00831face5595ed0dda",
+      "bytes": 2657
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0183.json",
+      "git_blob": "f9b34d69e5691a26e1dd49eaffeb1b28b1dacae7",
+      "sha256": "4666a5bb09d13951f6c28333687ed933cf175436f044f70a153183c10ada3fc6",
+      "bytes": 2654
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0184.json",
+      "git_blob": "060f40086d7904992e7478185feb77681b870d2c",
+      "sha256": "8b9c79f7a8f3fed3e468b6a25f8cbdee46f26d47303f564cfc13fe892ca598ad",
+      "bytes": 2641
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0185.json",
+      "git_blob": "b898a39893c61dacc362af3ceda1941a4cdf0257",
+      "sha256": "90ef5ee46765cb0697fb807f26fe8bac90d10c40c250804046d76ec28e2b3a0d",
+      "bytes": 2640
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0186.json",
+      "git_blob": "70edf78ff7032a5d9f7cfa36b45948eb105a6d9f",
+      "sha256": "a6d0c724a24aa7e5589ab3859a0896d102c477f64704745f58194b9632ca70f5",
+      "bytes": 2650
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0187.json",
+      "git_blob": "ee77de50ee875817d3b053ce1f6bf8eb24f69252",
+      "sha256": "5b445ec9c2c6e438371fbf81f3a14236e281e5a3742b783641b7cdcfa24834dd",
+      "bytes": 2644
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0188.json",
+      "git_blob": "fa805d28d90b6db9dafb8650b1ef6f2c7e33e3e9",
+      "sha256": "e5d95e4faad7d1ef913bed54dc7a07c05ed2a25282b80fd6d5885b2227120b6f",
+      "bytes": 2644
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0189.json",
+      "git_blob": "91a0ee28d58c599680d630260c582541f15a378c",
+      "sha256": "1074de28e4a10d52b686262a29b8969acb1c4b940a8c9e82a060efb6c7d2a595",
+      "bytes": 2649
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0190.json",
+      "git_blob": "d79468ee779e891671d346ec40996bb56cbc2c68",
+      "sha256": "609d38b8e54d8246717bcde03939443d14c41644d3cd843520a2ab7c3c01d375",
+      "bytes": 2641
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0191.json",
+      "git_blob": "5f0c071c5bfdb43f4ed3bcf67f9a458ac69ba26b",
+      "sha256": "2b019fb36c7f181cd5dfd8e7ebcdd7efd128889972644e12754bdacd42acafb6",
+      "bytes": 2646
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0192.json",
+      "git_blob": "ec35561bcaea79dd0df6e7b9d95cc0a06b03ee4c",
+      "sha256": "eb0914a8338490e51ac82972a31242d854e47f3d2a04d8ff2e997a196659b2e5",
+      "bytes": 2648
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0193.json",
+      "git_blob": "d9ec2e2e8aa27e9af2f61b5189b211644048d3a7",
+      "sha256": "3527b560e282704b4a1fc2d670957bf8eb4ed036628b0ced221f80c4a4c70911",
+      "bytes": 2640
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0194.json",
+      "git_blob": "c3d56fea3aec01bea2549b9405441f341338da0f",
+      "sha256": "8dbdb9fb518d565074a7cab497bdd3155aced6e847fd15f448430891c11abd5f",
+      "bytes": 2636
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0195.json",
+      "git_blob": "9bc4018286d2e5e87ff4f303ed1afb14d23b313b",
+      "sha256": "57aed8b07f5754a68bc5114b9c52a01277538f9d7b97eefedb9b0b4b5ff00c11",
+      "bytes": 2640
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0196.json",
+      "git_blob": "27d310f2e838d263066484435ac3fb245b2495c6",
+      "sha256": "29486f42dca4ada7b10f6dce7d5e9315ff99f72784b08992de88c3e09417f6e6",
+      "bytes": 2632
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0197.json",
+      "git_blob": "d4cde7d3799f7db0f0bb4260150b04f74d7fb6b3",
+      "sha256": "6b619c1175aae0e65951146975588787bb9aa1cb1aa0ec648b77232025f2c971",
+      "bytes": 2632
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0198.json",
+      "git_blob": "42a33918170e9466557e5b529e6ff79bc10e5217",
+      "sha256": "fd3c7f1f4d27be1f16715ddbb9e0ffb172abcca5bb09ed010feadf53e3bd447d",
+      "bytes": 2636
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0199.json",
+      "git_blob": "9bb5a08d8adfafefdc0e1e8c6cd8d2bccfdcda41",
+      "sha256": "6903e23245fb2e5eb993e63309bcadb0d566dc1f2e64031a78a6144fcd7142fd",
+      "bytes": 2629
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0200.json",
+      "git_blob": "a49713277300d8f20a9e8275679bbeb78aaea753",
+      "sha256": "0e8c49989ad7a896d5108c0540158aeb1afb1a78f2e8ec0580458abb1944a5cd",
+      "bytes": 2695
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0201.json",
+      "git_blob": "536b2f15111c76bcc0a5a0b19cc67d18401324f6",
+      "sha256": "047b5027360cc6c65e701cadcb92ee19545aaf60e90f740f229628c1d083da5b",
+      "bytes": 2690
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0202.json",
+      "git_blob": "19e8aa338c8142ddf3caed85de1cd03aec5d01e7",
+      "sha256": "f8b6a258f0c45ed6120f542accb880575e0def2afe337cd269ff2ac2d9f54202",
+      "bytes": 2689
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0203.json",
+      "git_blob": "8106dd31efbd38256e4d14810a1f37828b10393f",
+      "sha256": "dff19794dfd41a04184687819a3d7c72dff086c2568371770b7d9c4e5d400067",
+      "bytes": 2689
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0204.json",
+      "git_blob": "f6fab1a5b3096f5fd6bbfef1cc1166dd2b9be36c",
+      "sha256": "92b0b993a3c5387cb1c4e732d2217a8b3fdf40d02906ee99b3a7ae7f513c979d",
+      "bytes": 2687
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0205.json",
+      "git_blob": "4400f29e2f03518087be30c1eb12c012aaeaecc2",
+      "sha256": "819b09bae87755685c784072a3925b9ff29244e1b344b22c90e33fa26e1df974",
+      "bytes": 2755
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0206.json",
+      "git_blob": "570d4ef50deceb61e7b084ab04b1ee126beced2c",
+      "sha256": "0530a8466b78120f47e165a40f6e2fee49c9359223cb9280bec8f979d159036a",
+      "bytes": 2756
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0207.json",
+      "git_blob": "e881ceea99c8404f22b13f3d0108fde44c82f27a",
+      "sha256": "6f8f7e25eab923e30df4e1cdfb753be1b1ed065d4237cc0be2fbfcbc3835fa3c",
+      "bytes": 2750
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0208.json",
+      "git_blob": "9d3d3b3fe001560303089cd97bb7c1aa5aa738f5",
+      "sha256": "0bc473b88306b69969c8942a705842e38145028e731d08875bf18baae38c52c9",
+      "bytes": 2750
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0209.json",
+      "git_blob": "2cfd19cc4913c8b03ace692c7f0403bcc630765a",
+      "sha256": "e9d026d881dfaf75ca9049cf49873d07532800d388e44c53a57e1afba323cd50",
+      "bytes": 2744
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0210.json",
+      "git_blob": "a7dadc46ff36fb5b0bc75a7a49af44bb580a8c7b",
+      "sha256": "a254aa0259ad5ab6c46f306d7007dd71104cf9c724126e419c323926dabcca3e",
+      "bytes": 2749
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0211.json",
+      "git_blob": "553dc5af2dd2bcfd7916d27c3817d5fc04ae2bd4",
+      "sha256": "b06a8731b48a9350bd757122e9d7d1bf43e5c01cfaaa94911607643dafc92630",
+      "bytes": 2754
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0212.json",
+      "git_blob": "860011d4ef47f7468f9c543afd9457a5d5fb955a",
+      "sha256": "6f3c1aff387a6fcd08d5786f2100383a5ab147d2bbc33420bffd82813733d028",
+      "bytes": 2757
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0213.json",
+      "git_blob": "41e8e61fbb646b136ad683b71b16bbf219772e97",
+      "sha256": "7bc2e54d375ca4782e97cf416268f531bdfd023231023639c322e38084c36727",
+      "bytes": 2750
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0214.json",
+      "git_blob": "b609c0b975dbfed6db516fbbb19b929e2d103f80",
+      "sha256": "56568670f0fdbbb487afd2407e29dcc4f895577fb1d3a4e4216bd2bcece330e6",
+      "bytes": 2750
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0215.json",
+      "git_blob": "afa18473cf3b3b64118682f591fb2099df480528",
+      "sha256": "699086bf456f943baab7885658eec29bec130a9b9407e026b4a77beb655fe1a2",
+      "bytes": 2744
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0216.json",
+      "git_blob": "ae9ba8b8009d6b7f5ae0b1325c1a562eb262ad33",
+      "sha256": "2b11718ef4a2f7d552a7fcb66996b160b585ff0327e46e2e920e7fda2b9ad988",
+      "bytes": 2758
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0217.json",
+      "git_blob": "4b0d5aba35033d948e3335a7871277d530f9605e",
+      "sha256": "d3dd0b12cd6191e68bb4011ab26766c24c8bcd9bba148f469f3891e7d87716c3",
+      "bytes": 2759
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0218.json",
+      "git_blob": "0cdb652cd044e4914aed81cea7610521b91c201b",
+      "sha256": "1729493d24265c23fead2ead65e6a181e5b3b4be37c3e25b27df0a96aada7eff",
+      "bytes": 2748
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0219.json",
+      "git_blob": "e22edcd02e57113450d8cf5791ba2a0a34820efc",
+      "sha256": "6f5f84d669a70a792f14fe595730f4c58e75e8f313cdc2c032d51b3487d6010f",
+      "bytes": 2752
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0220.json",
+      "git_blob": "2fbe5014b88961321970c1595d2c8e9a34257b5e",
+      "sha256": "dc79d777756aa313f9e4c7ab5128279f1a7456558c427d8d3864f7581ab99a98",
+      "bytes": 2756
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0221.json",
+      "git_blob": "a2fc52c9576244aa2c371cf491f737441be22377",
+      "sha256": "5dddb0865ee9aac65d4bf351885ac0f00da611a6872c120d4c54f48509e8b076",
+      "bytes": 2753
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0222.json",
+      "git_blob": "69efe41769f5c4144e967664f76db78a9a5a2494",
+      "sha256": "c462b1180c605cfa894042eff1f5ac6afaa19668c8ffccd1c7d24456cd0cd193",
+      "bytes": 2757
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0223.json",
+      "git_blob": "3f78364bc8d62a17e12bcef3d23bf44a820735ce",
+      "sha256": "6c04675900a39bd83e960538fd576d6bfcd0c8eb4a618acf8d88302d9b89cb35",
+      "bytes": 2755
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0224.json",
+      "git_blob": "7933605aa584797015e49f759582ff6b32478479",
+      "sha256": "3fdb27888f9146071022cf5e8a0e0261dfba597c3c94d876f762c7c381a3df29",
+      "bytes": 2749
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0225.json",
+      "git_blob": "d46d545c99e11e3579ea7289db34cc09ae0eae4b",
+      "sha256": "1c7026de2f8f1e0e2b4c542c3d4fe850f6216d6c80611eb8b468b7607f867d6d",
+      "bytes": 2748
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0226.json",
+      "git_blob": "e6c737d0faa2d1c1cbd683948d6ad99173404d1a",
+      "sha256": "fdfa5e7a295161acf0c23f43576757fde88eab869eaca208ddd666005c6a98a7",
+      "bytes": 2751
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0227.json",
+      "git_blob": "f2c998a62a32a18412d1e537d26fa8283544f49f",
+      "sha256": "5c5778cac463327f8ee9073d0353e101480544f6179266159dadf60a155703b4",
+      "bytes": 2750
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0228.json",
+      "git_blob": "276a378d2041ca1d32e7d259e0bc87cfd24f4489",
+      "sha256": "d3cf49c29f14eb8a028b83ea7e30699f57eb4ef35c4f5f7c1d077fc55ae90c61",
+      "bytes": 2745
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0229.json",
+      "git_blob": "05aa143243afb80e9a1e7cd58026943544881531",
+      "sha256": "dfbea9bc6e8872cc74c275639b878df1150bae9d2aee23f278d2e95bf5c356cf",
+      "bytes": 2747
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0230.json",
+      "git_blob": "7e848c6cd54af0f8353e12bb06bcc89e339e5eeb",
+      "sha256": "44e0bd976daa9f4397df89da0988912353407d46ea3772d672a8ed6e20c95b19",
+      "bytes": 2748
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0231.json",
+      "git_blob": "4e526a7e8a41d3828cd001fd5e1d462a2a8d9c80",
+      "sha256": "fae8d354d9ef81d2efaa46053c6638f8d31a82b2ac74d42db05614ec95a9985c",
+      "bytes": 2749
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0232.json",
+      "git_blob": "5e31668dc9b974a4a6371cc1779bebd040959bd1",
+      "sha256": "a44427ed9c4a945d3d8aa2ca71cc82ee19fc6b279a48e6a280c4256fe4a3ec49",
+      "bytes": 2750
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0233.json",
+      "git_blob": "a859ea442a834e4b9eb01036dfde0c219981abd6",
+      "sha256": "1866c4f7c3b79aa42a0e759b102557dfbff3950ffb0e339c130836395f78cc60",
+      "bytes": 2741
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0234.json",
+      "git_blob": "1675e091c606a286af230089c5517fb1e53edce1",
+      "sha256": "04c51992318207b3f83d90ab51d74ed8faecdeb101e7be7c99d4d4e94506b4c0",
+      "bytes": 2741
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0235.json",
+      "git_blob": "78279b46db6ce76d45f0eee7c9eb8b1eee7df2f9",
+      "sha256": "99bf23af4c2b56b5f548fae779276d765822b6c5c6e706f8980823ccd79a5d42",
+      "bytes": 2744
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0236.json",
+      "git_blob": "4fe2b537aace5ada37b370b54e304e7e667839c9",
+      "sha256": "cbf772af8a24dba84e2d60f7971a189ef55b1c47ed92c83bcd2f7bfe00689b41",
+      "bytes": 2769
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0237.json",
+      "git_blob": "b6840ee6219907910278f41fffb619a4f51e065e",
+      "sha256": "0b5e8f7334c7050915a02bf77dbbd1adf66995b410c08ee2a579dcf6c0eb08e2",
+      "bytes": 2768
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0238.json",
+      "git_blob": "363b98a10df621bb3df5adc90907ee468fcacf1f",
+      "sha256": "62642b48ac90692348896f0568b314452d4b9730a986a93d6724196437d9a746",
+      "bytes": 2762
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0239.json",
+      "git_blob": "c4fa314818a0f0a07b015b48ee075ba761c60ee8",
+      "sha256": "e20633b9df1bd1bb2fde4c13b2cf57914d637629b5c586763cd9e51ad5b848f4",
+      "bytes": 2762
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0240.json",
+      "git_blob": "b41fc2cdf1c7789cd9dc5a7b2931907800cbda66",
+      "sha256": "033678a1066fa536b78282f79c1009b74fb5c34f0224f1e9d08cecdf4b22efea",
+      "bytes": 2759
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0241.json",
+      "git_blob": "1675643a69d78f9e77776f2b6e49a901cc3b1766",
+      "sha256": "b8ff865c1ecced39be9e91c1b40e484f276ae36789bf47c34039bee7144a51ce",
+      "bytes": 2756
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0242.json",
+      "git_blob": "6208a64eb6f6804245d5f96a66b53c4a1077f8f5",
+      "sha256": "ad1de20ca3e61a35db1196f591d48633f40d0a34c09ca586afeafd21956f0afd",
+      "bytes": 2758
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0243.json",
+      "git_blob": "1e1fe25dd68a496e377d1c8aa0709ad562e88423",
+      "sha256": "e3418b083c50ce6974058905ba5c1af3e01bbabbed2d7229330a78be2f846816",
+      "bytes": 2755
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0244.json",
+      "git_blob": "3c83bc6c32388407c9bcb51e8ca225ac9a09a903",
+      "sha256": "cec6af9a60b7d4a52f594142de31a4bd70ed6c2999ce460b110ee47ba159870e",
+      "bytes": 2754
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0245.json",
+      "git_blob": "e7b23e4b3d73b8090ccf11a8724be216c87a6af0",
+      "sha256": "207f8f1e6750a479260b0a76ebf071a2e82325e4935da6c2a5f720b015202195",
+      "bytes": 2751
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0246.json",
+      "git_blob": "e04b323d239c57170907c2598ec0c366aa18c63f",
+      "sha256": "dd961e52c0009a9310f23d42fdcf0f21a3ad6c7a880837ccf2bc9aef1a7c5b07",
+      "bytes": 2754
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0247.json",
+      "git_blob": "60f62da039b8932b0ed0190bff835331eb54d1de",
+      "sha256": "f308111c5a0af66ec8f338ff81bf77daf650bff1f93be0218363f078b717bab6",
+      "bytes": 2757
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0248.json",
+      "git_blob": "0bc28320a37d8f7d5a22cb7e95c248245ff0f043",
+      "sha256": "e8ba4dc16047c37d0fa4e6bd5744b2d1aa7a15f9e8f96d51bec76c52518ea322",
+      "bytes": 2753
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0249.json",
+      "git_blob": "e53493c165a44e9b80f17bbe85c0987fac7fb313",
+      "sha256": "b2e3289f494d0ee52a791d12fb19c1f76dce12b244225b4050580bd9905e914e",
+      "bytes": 2743
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0250.json",
+      "git_blob": "26e406d654cfa395a1d554bb368f86d321fd5062",
+      "sha256": "86d26461ca17a85794bf3dc2ff0c26a47c4f93eb3fde8b31ab13748a605c4dfe",
+      "bytes": 2748
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0251.json",
+      "git_blob": "78299a212dd4a5f542118c553890a85f800861c2",
+      "sha256": "1b51e9ff83293432cb06e8f001f91f405e42679909a7b0e30ab137031e274d08",
+      "bytes": 2752
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0252.json",
+      "git_blob": "7c5d6159ac1c668f17ade06bc33c7c25a7070420",
+      "sha256": "513b90b7056870eb5d1f09294e24fedcf73cf90b2f5dcda593cc9869cbd15fb3",
+      "bytes": 2751
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0253.json",
+      "git_blob": "38072a9756c68cffc9b1a706340ed9bed2ce2dc0",
+      "sha256": "03da8c7a3801396e7dc2465ba387cccfc9af8536715f7273ceed0f98d9aeec03",
+      "bytes": 2747
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0254.json",
+      "git_blob": "7cb47b1dcda4e0342b293d67d373b298a2f4d987",
+      "sha256": "cb2dd630324a5b61f042a2282f818d881f70d0768453b372e920e52d14d2046d",
+      "bytes": 2742
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0255.json",
+      "git_blob": "663370d0e9711523eae5dba388ef857d07322c77",
+      "sha256": "bdf842ddfaa252ea2431d62ad1249c8f8141e1aa939a128ecf17e223b51ce058",
+      "bytes": 2743
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0256.json",
+      "git_blob": "516be48af3d351df79e68186b1ef0443f85edbfe",
+      "sha256": "a878e048a7008bca4bb96e96ba313ce9fe70f6cbb192051d7ac59fe2ff7d08e1",
+      "bytes": 2744
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0257.json",
+      "git_blob": "82758bffc44da73fd9278597374d1cc31b6d06a9",
+      "sha256": "c04efbcbadac8e71f5916ff9a8cb652d9597c5dfb28d4bd8ded8e9517e0b1682",
+      "bytes": 2735
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0258.json",
+      "git_blob": "3de7e8284f47f3468c9cdb91ee27410bca2b0f16",
+      "sha256": "777657b34ac78298f06870a1c06c94ca7590f1fd6d50e790dfd2f0e26f2fe7bd",
+      "bytes": 2738
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0259.json",
+      "git_blob": "5edf4788e68bded211baca7ba95dabd519540b42",
+      "sha256": "14c531b31f5e289223731a7c4aab8500de9188a4f95a4e26cee198db709cf742",
+      "bytes": 2743
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0260.json",
+      "git_blob": "073ecd08feef3b4cf06c6e8e6a8ae6b18a0fffef",
+      "sha256": "0f2fd5c7969b8e7430b6760c0fcb1bad54ba7d88237c6039a5b60681f6572640",
+      "bytes": 2735
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0261.json",
+      "git_blob": "12f68b211e630aa6228b0b62f7960183c0920c84",
+      "sha256": "1204e3b8f1a29ce1f4e482f09958ba4686fe6dc6334d7aba919fc20486cb6fa0",
+      "bytes": 2736
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0262.json",
+      "git_blob": "53354b93bee6f2cc794158c84bee9c6e38d40218",
+      "sha256": "bfce91515cb06203025fdd5e32d6b045d65bb4cac61fc032580a027b621b342c",
+      "bytes": 2735
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0263.json",
+      "git_blob": "4e47380b1c8f060b07d03c5cfc9ae51e7b032294",
+      "sha256": "12cb7cd9effbda6c3fbd3423e2eca267cc8d61bae896ac52bf0ea963dcc484ae",
+      "bytes": 2738
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0264.json",
+      "git_blob": "f24102eb72d39ec2ec0a8cde6e4ef77454198269",
+      "sha256": "a7dabdd72e469a5d3351d4160e26489054ccb09ca8dcd998b8e0f889b9440695",
+      "bytes": 2733
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0265.json",
+      "git_blob": "a18aabb1c3fcbb8f5ab49fa19e1288e8a5ff762a",
+      "sha256": "32f349c861e7a8692998bfd805cec24ea5ca0be5f9368cf64944d016a76ab7e9",
+      "bytes": 2731
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0266.json",
+      "git_blob": "56ae600357ab1b71c07f3d55d0bec4b831ae4991",
+      "sha256": "7c41dc1e2e7a5074565bff3fab2b0143dd01ca0403a2dc73827e21154179f567",
+      "bytes": 2731
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0267.json",
+      "git_blob": "da32da617bce753d2bcdab324d8fc1c1adc21ade",
+      "sha256": "1ebdf4232c66e9c3b4f6591fd4834c3af0b4b1aac264b014d2d724c8e993ba52",
+      "bytes": 2729
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0268.json",
+      "git_blob": "c1a1aff1d8c0546ce5e10eb1fc6a12f0dfe48115",
+      "sha256": "90828f66677624bb51699e18a45759dfab06d3b3d43262f4aead486210f4c038",
+      "bytes": 2729
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0269.json",
+      "git_blob": "9db35c543e1864f7ca74de963d8dc6c11f3a8660",
+      "sha256": "db872c89f19e14aa0d422b104efce8e9fd7f38a9c315450f82e70cc067357a24",
+      "bytes": 2725
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0270.json",
+      "git_blob": "0d46c077febda2a15529305282705dd517f132d4",
+      "sha256": "fafd98e07790b4de33e35c49ba4cb3a0fc280c5efb55ba01a1b9e1d0c1f4146f",
+      "bytes": 2726
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0271.json",
+      "git_blob": "405f67217464f1b4bc891fb688003d443339a91d",
+      "sha256": "cfc449173041968f450d1ad5fae7ba8be44b0bf48cc5ee2681168cae4775b894",
+      "bytes": 2726
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0272.json",
+      "git_blob": "97cd3f60488150b9705eda0060263e464fb549aa",
+      "sha256": "b1f0be417c0e3ed84e847a18df6a4b9d08c4c29e4c729724d2b91a6cd92482b7",
+      "bytes": 2721
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0273.json",
+      "git_blob": "dcfaeaa30a5a3b1ceafaa238c0c40ba9e05cba11",
+      "sha256": "3ecc1a1f47fa54a73b3eefcdce21eeeda3da108692ce9ea0c2687e3565e97f63",
+      "bytes": 2722
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0274.json",
+      "git_blob": "efe227d9c054df5af6539e293dfd16531f07e9cf",
+      "sha256": "560522f08b5b8f416248de162e22eb485477f0ed70a5261fdbd719a0df59b162",
+      "bytes": 2715
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0275.json",
+      "git_blob": "efc67ea2848410c7e83132ac982794efe47dd629",
+      "sha256": "429e98defc27cdc19c01cd5403e32122a4278766ff361fec8e49f77851d97cd8",
+      "bytes": 2716
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0276.json",
+      "git_blob": "0c6e59a535807f03d1a656a66897d7880e82ceb2",
+      "sha256": "9a2bbc372437811430f07bb4f6154a861b5cef463188ccb761b4949fb17ed4e9",
+      "bytes": 2720
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0277.json",
+      "git_blob": "3abb88a2b5b4f44388013542e559a98f738542c1",
+      "sha256": "32fd64ed2f89fab4a29fdb9eb5cc57ca7df85eab33e8a7065bbf3a085dd69ad8",
+      "bytes": 2727
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0278.json",
+      "git_blob": "72219590a428cd1f1943cb017641c75cfdc9e98a",
+      "sha256": "a0ed8bc47eca4598053675a398cdb6d2b48b68876d63c941497894076c94e53f",
+      "bytes": 2718
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0279.json",
+      "git_blob": "021f28d9982b2c3dabcb4161c711b337625ede38",
+      "sha256": "926770e2270e5f461b22d9654119a1050f2c6123782de0c25685e055371e662f",
+      "bytes": 2717
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0280.json",
+      "git_blob": "9073eb98c71b47db2755c03a6f63ffe0150abc53",
+      "sha256": "21774c7753ba17533235e50faf0170604c6600bf6911e77c503c7291d2362923",
+      "bytes": 2717
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0281.json",
+      "git_blob": "0a22dbc2aa108e55d2f6ca36ab233e7304e414ca",
+      "sha256": "ce7b8dc174fd00f40205b6b04a8eb727268e997ee7a525a2f56abdb0962f8e87",
+      "bytes": 2715
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0282.json",
+      "git_blob": "0deb77b812e5feeeccb9cf8a3d3d6312c8bb53f2",
+      "sha256": "14bcebb3c488489633521e9eb56763ff9f645040e369e2aa21d790ca2aa606e2",
+      "bytes": 2719
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0283.json",
+      "git_blob": "91688c69938758b3c1bcdbee105d6cf4f07c4d44",
+      "sha256": "3f4dac83dbd7509952dc80ec6b4ad3c4075c5a315f2226a5a8e0ccf961cdca8a",
+      "bytes": 2704
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0284.json",
+      "git_blob": "638a1fcc696cef4e7e9a9bbb107a793e56f530d6",
+      "sha256": "fb4f0d169f81d9cc5b1989c2059a7b2a473bd548cc472c961d67c716545e5782",
+      "bytes": 2707
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0285.json",
+      "git_blob": "8458f0abed9dceb13fba1e7de66a8755d71043f4",
+      "sha256": "f1efd051d3b49838faead4fa8c0dadba081d0fb07e22b14313c41284b00bcae0",
+      "bytes": 2710
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0286.json",
+      "git_blob": "38466642f5740a5fa96e24f08daa4925a7f51cdc",
+      "sha256": "e0f39c93c59a2440d48f0684227defcdc4920121d70abbe0cc7ff1498a98e15b",
+      "bytes": 2708
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0287.json",
+      "git_blob": "7b006fbaf6e5102e28e98400a067366e63458de1",
+      "sha256": "0eeec7128b9bf0ea50e692c1066a63b8aa933f8d4005f931612c311066ec9d83",
+      "bytes": 2704
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0288.json",
+      "git_blob": "cdd7fa3b6c375ab2cbd72446503dc001eafb2cf7",
+      "sha256": "1bf3f0d65c9909ca5a7a63b1c535305381f4776699619e46388c9351ab485723",
+      "bytes": 2704
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0289.json",
+      "git_blob": "6b1cedc5c0af50d30ccc26e90bd765757037b26a",
+      "sha256": "33301cab428c3c49ceeb3784d4b1b2e0bff62289aaf35fe27a88d20d2d32ba80",
+      "bytes": 2702
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0290.json",
+      "git_blob": "8c36ca0241fad2ed06b3b81ad7d067f029fdfb86",
+      "sha256": "0e3a22982d739dff7a143fd671053ffb8091783c3fabc9619e2d8ac04fedba50",
+      "bytes": 2708
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0291.json",
+      "git_blob": "5f6f4088b865eab74a5a129dd6f84818476b52f1",
+      "sha256": "439bc64f9362e0176f004d4ff40a1eaf752881038d9bf0df4dd0cd1481081396",
+      "bytes": 2701
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0292.json",
+      "git_blob": "c41b9f2d3be7b3328374c6ca8d7b1a7a511cdc14",
+      "sha256": "20ff0e870c5cacf9fd44cf9374c17cb02c378a8a885a0b86458de7db042fddb0",
+      "bytes": 2704
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0293.json",
+      "git_blob": "4b42d2582797ee00d63e6430d1dacb5d9f67580e",
+      "sha256": "60c125f7f5a3bf1c48638ec8cfbd6d6ac5329bdd3ef77e0a2383cb1228616159",
+      "bytes": 2702
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0294.json",
+      "git_blob": "5a9dd4bc6f39579f85e5261bf74cd0304b1c10d9",
+      "sha256": "1b0699483fd8e721815efc523300ec7d19fb2d06a02f6a1bbb2897fc2fea6dd0",
+      "bytes": 2698
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0295.json",
+      "git_blob": "24ddeaa2885fc02d7d5baaac1c48701af7e7ec27",
+      "sha256": "6775203e8e7054b3671cac5272e952be0458196d0072d38e4c840666c16310b5",
+      "bytes": 2698
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0296.json",
+      "git_blob": "23bd0f46836226b99ddb163bff895927884ab0c4",
+      "sha256": "a07e06985c5f6bccbea146ddc0c581f6723b433ba39172784686f7af600404ec",
+      "bytes": 2691
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0297.json",
+      "git_blob": "de88f85344cab53b3edc3085b47db9fe3ceb76d8",
+      "sha256": "35373fd70fb0e054983fa7176f0d70f4a369c9a4b4a61cd197b43863997b4d11",
+      "bytes": 2690
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0298.json",
+      "git_blob": "51bd6db558edfbdd60f13731d21a2f1786cd61f4",
+      "sha256": "664e53434f4c981a717a7dfce4a0a798d4a223fde26d56514774477cbd53c5a4",
+      "bytes": 2698
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0299.json",
+      "git_blob": "4c3a177f3b24db907c2948ee21ba02a6b38580ba",
+      "sha256": "9cee9a2dfe457371b8407a0bb516e5e6e2ca5fa221c70e84c12e4b4c323fe49f",
+      "bytes": 2694
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0300.json",
+      "git_blob": "57a852c57538da765acd151fb2e24a23623d8f86",
+      "sha256": "25aab26b7d1129f71b16e3c8775ad5953f3dcf39c470ca56225b68e2bd576666",
+      "bytes": 2725
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0301.json",
+      "git_blob": "485aa506eee088cc0d18d9bc15402a7d009d1beb",
+      "sha256": "98ee8f93456d411f8d80f29a1fe7d69263e5349487a6da8c0970cdb0a9b6317b",
+      "bytes": 2715
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0302.json",
+      "git_blob": "bcf5aa55bb35def65ea0da472ca91d6606125f14",
+      "sha256": "b1e8947cc282c6ab7a60e7b8a7aaf0ec9fbff6772750509be18f08a6225df1f3",
+      "bytes": 2719
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0303.json",
+      "git_blob": "35902f9cdeced01ae035bd465a14699e3f65cb53",
+      "sha256": "6f6d855f65bf546552bde4813321a536a4a8c168e3e332ba1197889e6b57cc03",
+      "bytes": 2721
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0304.json",
+      "git_blob": "27ad5aa7f40dac5aa9c9e5a88b3109ddb69d4311",
+      "sha256": "1424a7e5834b1492ced4cd71d1b0cec9d5374aa5963d9b10e261afb415d7c9ff",
+      "bytes": 2712
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0305.json",
+      "git_blob": "b62e4dbac35e300529dd8b91781615c4cf7ec07b",
+      "sha256": "198d75640b2ee177cf71a4dfc6e2bdd382ef53fb16a8130c5f14f23b235f60e0",
+      "bytes": 2711
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0306.json",
+      "git_blob": "05f57ae24b85b26737eed1d0025824564205f845",
+      "sha256": "87256bc5a1c347f6e56870502fae7591f2c98f1a9a3b1d3b1a5edadcb7b0ed07",
+      "bytes": 2718
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0307.json",
+      "git_blob": "8a1543a71e5605a49c5d207f7bc5134fd9ca706b",
+      "sha256": "efcb65c5d276e094e4d3d88d2b7df08b69bd8209efda481a1c1784cc061ec235",
+      "bytes": 2717
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0308.json",
+      "git_blob": "5111615821e6af9ec3d4518faed60d6dbb773d04",
+      "sha256": "a22754710502c913137790d150cdb618b567b6895d2b376fcfbd785a7da348d6",
+      "bytes": 2712
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0309.json",
+      "git_blob": "e12723a8b540580f36bf6f60aa8968bc7586c1fb",
+      "sha256": "56d9c28a90f9046779e2dd346d68cd111231ac51298225d2b73db6403461904d",
+      "bytes": 2703
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0310.json",
+      "git_blob": "6066e7cdd810a8c4e0acb9349a4cb42dee50eed5",
+      "sha256": "4878b4bfb7bb8ab6acf62c96dccd9ffb677e5772d187676bcfe1fd05d93753ce",
+      "bytes": 2714
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0311.json",
+      "git_blob": "dc4af92eece1ed2b9ef6960c7248b1536a5ae95f",
+      "sha256": "0c08a05f6085cca0935eb5b11776cbb2d4f9806c6c9d282da8c3e1978ed0b4b2",
+      "bytes": 2705
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0312.json",
+      "git_blob": "4b8c2b2a8117e14f86a9c5d463793545c1f60fc0",
+      "sha256": "be702eba18369f42f27d6a39bababcf2a42f48c7e139f12c2eaa4b1d85755788",
+      "bytes": 2711
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0313.json",
+      "git_blob": "bd08179e32159335d173c51565e22ba24b5653a7",
+      "sha256": "2c5907850cd3e8f6c0f8883635508e4cf8a2809a4601fa53fffbc9f9689b68c5",
+      "bytes": 2708
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0314.json",
+      "git_blob": "c26041ef10c5f40c152940c24fa667dcc7e42414",
+      "sha256": "53adb67ae6199fb86a4450480289904b0329aaffe236b900f229d882292511f9",
+      "bytes": 2706
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0315.json",
+      "git_blob": "12239965c8753f89cc558bef409cd9625424e6fd",
+      "sha256": "25b6d55fe44ca8345637da8cb687373cf5cbb79f19314010dcd6c95ff19b640a",
+      "bytes": 2702
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0316.json",
+      "git_blob": "2d74c4af5aa7d28a702030a4643d4f97909574e9",
+      "sha256": "21a137a3f1ce8306ecf3d52ea95ec5d1171307e51afdf26b87210ea9e06b294c",
+      "bytes": 2705
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0317.json",
+      "git_blob": "be307405c46d794975d99ad513b659dc3e88ffb0",
+      "sha256": "916b1c2e3fa301fc672441a4420ea74bf7b9dcac3cb7100c6e79c5d2e5834533",
+      "bytes": 2698
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0318.json",
+      "git_blob": "06ed3b1a10d71ddd7404de024ed7479ea9959d27",
+      "sha256": "24084cce66976dab6435a51b76a0035cc3d0e59704a7156f28f6e615e9f6c193",
+      "bytes": 2702
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0319.json",
+      "git_blob": "4dbb19d689839bdbe846ec5cf39718580a2625c1",
+      "sha256": "cd88057c313b2a762b8de6256bb266dedf90c4da88466b483523e88be2c4ed61",
+      "bytes": 2701
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0320.json",
+      "git_blob": "12dae138ee94ccd9ee2558ba01cb2eb575c3871d",
+      "sha256": "c709fa2a903d6ae335e50b249af8c4e7a15b6742dfa99b52a58c0b01bedc9d36",
+      "bytes": 2704
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0321.json",
+      "git_blob": "589131105c712ab6396a3a03a22aca1c3ff785fe",
+      "sha256": "38b61feed323e7a65e3977a16d84b4c2eea3e63a43848c9a1fcc74203f14d1a8",
+      "bytes": 2701
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0322.json",
+      "git_blob": "5c237146f6603c55a1ee91f07a4d0b274233a9f8",
+      "sha256": "1a5823ada58707b6aa6320e0d7bf3d5b380c738a74d4ee8c45a0eee255cff6d5",
+      "bytes": 2700
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0323.json",
+      "git_blob": "85296be4e6bdc9464d4b742ad477ffd80b8abfcc",
+      "sha256": "b0525d8a7ef1dd2d2d2e27bda2a0c3733df9369bf3c5687ba237d4ed42d12b91",
+      "bytes": 2698
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0324.json",
+      "git_blob": "f4102847b73e135bd30be25a5805c9d3cfdcebc7",
+      "sha256": "4c9483064f80a2e0f159f2fdf3ce851e89aa5fc364bb7f01f04e6f675612e041",
+      "bytes": 2694
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0325.json",
+      "git_blob": "96a324f641ed4aa70ca3f156973b893352ab38cf",
+      "sha256": "45d0c943f9d48f7769675ff57ab5b77c714b8b8e9af6ea06561546c9c03a4140",
+      "bytes": 2694
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0326.json",
+      "git_blob": "911aea361e2a68e76189ef866651ff5c87109de6",
+      "sha256": "7e7f06ba2b483fb6390e8f95a9fe891cce0e847134af2b4e38686964b7344f7c",
+      "bytes": 2694
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0327.json",
+      "git_blob": "abbb3a1eb5b2637eef84c97365146a1ac88efa55",
+      "sha256": "7c2a9ddcd6c80f19f642c30eb88f52b7983540ed5d7c52a71b5172d68569258b",
+      "bytes": 2692
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0328.json",
+      "git_blob": "37030ad76d85daa2c9fd1744a8d9999a3234b359",
+      "sha256": "081479f39450d95d2a1e46ef3ca8425e78c0a8e2536eb48208fe42c211b829af",
+      "bytes": 2693
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0329.json",
+      "git_blob": "a192fb1c8aa9cc88b11e05a47548864b01f6fd4e",
+      "sha256": "19fa118b70a52caaa0e38be9d06b40b4e2788329a233e4f8902f3df8d99d1a9a",
+      "bytes": 2689
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0330.json",
+      "git_blob": "54ac64190e979d8146a4a9074f368c793eab18b2",
+      "sha256": "601c6eb1c6ef917c0728f54ae1e6a9eece711afcb57380c73c4d278f4dfc36a4",
+      "bytes": 2689
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0331.json",
+      "git_blob": "2236bd0d8b5886d214720d02d8609475af16a74b",
+      "sha256": "fe0e8dd4d6ac4b6edd210990655dfb8cf388876c3060330eeb9bf588e3dc2e3b",
+      "bytes": 2690
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0332.json",
+      "git_blob": "9449cecc41b7933f59c3a5b8cef920371da5ba3c",
+      "sha256": "255c0d27811bff2c2b08d5d6ff92c4b1fcdbd88373a70cde412de7ceca3d6e64",
+      "bytes": 2680
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0333.json",
+      "git_blob": "b89baae2856aa1c9412703104d9ec5e4eef2fdb5",
+      "sha256": "420aa073112e8064c77fdb96ad9819e2735024307a212c049c2bbeb4879fe414",
+      "bytes": 2684
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0334.json",
+      "git_blob": "edd3e0d4b67aed9c415cf4c7e7d09b6d0f005abe",
+      "sha256": "9eee191341d12dbe35cc35cef9daa29f13c48faf87d8b969c24ee583db0586d8",
+      "bytes": 2682
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0335.json",
+      "git_blob": "4904ce6a1b4229ceb81e38e1b775789444a0a168",
+      "sha256": "147d4885b43868735e61e3d277486dc9abd929b488dcde8ca6b246e12fc29e55",
+      "bytes": 2685
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0336.json",
+      "git_blob": "a00d0267397cd64c9d8e9d2413d5543f44112d1c",
+      "sha256": "392a82f08851c390361ab28b538c997d51da931726135e38214e58bbc8b4428d",
+      "bytes": 2683
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0337.json",
+      "git_blob": "505770403226b0a1ab0244ac67e5c21f54006933",
+      "sha256": "fc50a66ecee3e30d81469616ca81ec9d4c9a1d62c60d78d6fd4d8dec481d5ddb",
+      "bytes": 2682
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0338.json",
+      "git_blob": "2cc86839888f3179a495c679732ca8540d0522c5",
+      "sha256": "d8ec85e20bbeecb41dba9129ca82077d4094d53c58e901b372a1c36b374c86bd",
+      "bytes": 2678
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0339.json",
+      "git_blob": "ef3c5aa76b4eff2c59cf7bde7b7d53b1f6d2a148",
+      "sha256": "1cb5127ec82ff5ede585bd69b80263d7c09639722a49de0190c7754303b3f6a3",
+      "bytes": 2682
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0340.json",
+      "git_blob": "23a028ceb7b43d940f4785f4e407d3b46b814b64",
+      "sha256": "ce831c4911728b278feb9944217b03d706778bda8875b18763f16c877d93bc9c",
+      "bytes": 2679
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0341.json",
+      "git_blob": "78a1850925ed12c0e45ab10a9b2f214a28b73048",
+      "sha256": "19214f29dbf401380f4eb619f67429739ee8dcafe7fd9c4a8af14a169c7103f8",
+      "bytes": 2674
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0342.json",
+      "git_blob": "3025dae4e7baf9dcb897717d30c2605e156f219c",
+      "sha256": "2b2439460b63e9f0b699de5798d341c8a67a7584c9ea632feb6987553c1119ac",
+      "bytes": 2669
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0343.json",
+      "git_blob": "38c8ebad6c0bae697d415d90a6a54564e6d573b4",
+      "sha256": "d19397c5081b7cb7f89db23f02eb57f8c3b43c501a925ef9e325c4aa6b5121c6",
+      "bytes": 2668
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0344.json",
+      "git_blob": "ba00a22a460a49f4784e307097ac4e287b2083cd",
+      "sha256": "6f67765da7fa9e1b52bbf90e9e3e4f8f0e481b38148ad3e273f18386bbd885c9",
+      "bytes": 2672
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0345.json",
+      "git_blob": "1fc9f9da18123c5d111ec4b1c5c4b2251ecea1f5",
+      "sha256": "ab77e6ab8cb2714e01c35ab8c583ae2c5a077504ef837e37b1af8b9f51b91d71",
+      "bytes": 2670
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0346.json",
+      "git_blob": "550c907b4274edf2e0499809e14308f299ba881b",
+      "sha256": "1033416072df296520b3a9e49f7a224b2d59b8f21963da234821f4d4b23670f3",
+      "bytes": 2671
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0347.json",
+      "git_blob": "1fbbbd1e2eeea2fc33b73ea3193e85448f7e192e",
+      "sha256": "7bee4af3cd0f298326f954ca88b18fda6327c757f448f02317cdfde0caff0569",
+      "bytes": 2666
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0348.json",
+      "git_blob": "ce166523d5d58bb10df838413376cb801cc897db",
+      "sha256": "4f637508008d7f0ae9f52442b3514c186308bdc90ec20095c2f130c476bf2691",
+      "bytes": 2668
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0349.json",
+      "git_blob": "0538894b9dc6e060a77b851c119b6e9b189d7559",
+      "sha256": "115839195aefe952f2b3638808c9946f42ef1490aa1bc56d5f914738efb96e7e",
+      "bytes": 2665
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0350.json",
+      "git_blob": "91c94c316c8aaecc3b163db61594b6d26ac2a131",
+      "sha256": "f1d2de13097ffe0b4ba45445d18bccff1183e3a0f6e2dc387994066ddd5e6188",
+      "bytes": 2657
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0351.json",
+      "git_blob": "d4f7b34833243ac2bab3273f39d2541a87745217",
+      "sha256": "8b6fe3eb617914513ef8c320a743d2981f1cd03f4747da55f228e2e6e765a683",
+      "bytes": 2656
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0352.json",
+      "git_blob": "033e0927af7289576c6e8046d61753adcd606c85",
+      "sha256": "62bee59645c36047ca9b004bd7fb51ff5e806ae8965aae1a642a7b86d4343de0",
+      "bytes": 2659
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0353.json",
+      "git_blob": "e52ee11b90d82bd369193987d52151662e4f5d84",
+      "sha256": "c5165742f0ea79344b76e6c8a0e632813e538e07e0d65572f1c5baae5642a39d",
+      "bytes": 2652
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0354.json",
+      "git_blob": "c10c14401edab1681cae281cf240462a82317798",
+      "sha256": "6c718562bc0775ecd1431b73871be11d30a4abfd5b87b552adec63db807ca03c",
+      "bytes": 2655
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0355.json",
+      "git_blob": "be29fa2e8d371510016bbad52746b224d100862d",
+      "sha256": "60f61c55edd36e24f40e1ca3de34e0e7475e022c1d0d8f6f3503ac1cbfacc788",
+      "bytes": 2651
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0356.json",
+      "git_blob": "cc5e030425c03c22f8f2068b6a2177b954e1d921",
+      "sha256": "8ee7ee202addaf96328a41a18b727874aa83bc9b276ce5486964383e1350de9b",
+      "bytes": 2655
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0357.json",
+      "git_blob": "a5cca4e4b4fb346aedca598606b556bf1b35e2a0",
+      "sha256": "969dee8d30d1ab3da0c013097bc306b2c817cbf862430a1b4d7b491d341a7e27",
+      "bytes": 2655
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0358.json",
+      "git_blob": "d1ebc74e77a2336a6a1a9be2e95c22e861e70e1a",
+      "sha256": "58bf30a429c9562615a20e920543c56fb76a9ba880e7aa768e5147151a4076cb",
+      "bytes": 2657
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0359.json",
+      "git_blob": "2c83c1b35a8d7efca37917d8926595881c68e156",
+      "sha256": "743ca7494b66b3d18b5dcdec72346ed9d58835b4d7c719168c743d302cb2ec7e",
+      "bytes": 2654
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0360.json",
+      "git_blob": "bb220a83d2714c6767ed01029d2db95d019dcce7",
+      "sha256": "1cbfbc2bf18d466e9d5ff73782447fb8d45118545f5238d016d5441ea7dcdaa8",
+      "bytes": 2655
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0361.json",
+      "git_blob": "d7cae66724f2eb019ae8664854e27942029d7054",
+      "sha256": "2e14616214b157249ea77dc879f21ce272c0227768e3946c49698af27a50e990",
+      "bytes": 2653
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0362.json",
+      "git_blob": "9edae936e24df2ae8907a3ec3749ec376f6eb88d",
+      "sha256": "3eccaac85c9053ff620dd5d706e6dc2ab2d28c5eb9c588529fed8424eacc715b",
+      "bytes": 2650
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0363.json",
+      "git_blob": "be70aa163beb710c6525ed3d7ca501f80135b838",
+      "sha256": "e6eaca666f29276127a31264b5f0c5ada068cc4c22ec27c1b6295ba11b9ee5b6",
+      "bytes": 2652
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0364.json",
+      "git_blob": "6f12de83c30926f69364c17dbbe8a66d0ecd66e9",
+      "sha256": "ffa64682e68ca7300d034de1f752914cc346f4d212b39c6e574a38d38cb84f17",
+      "bytes": 2706
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0365.json",
+      "git_blob": "601d2050184787f6e5b05fa9e25795530dd0b1d1",
+      "sha256": "28a4c18bceaa32cc503b18139a5f805f03d88cfcca1b123d599bb63c3a17481a",
+      "bytes": 2704
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0366.json",
+      "git_blob": "8c1ca6fd84aca7c0336be6a10c69d0d99fca3176",
+      "sha256": "16c01bcaf9e7a299fdb74dbdce0bc9b04cadb3734bc739bec9aacae330f896d6",
+      "bytes": 2700
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0367.json",
+      "git_blob": "1feb7192260f29bea99ddc5d84735c09d6eca773",
+      "sha256": "dd90dd8d39601ac508ee43b94ace1167091578bda674312f8b8ef21bf6996680",
+      "bytes": 2698
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0368.json",
+      "git_blob": "c23774d360b9b9584470db5a22c22c792878f4d3",
+      "sha256": "eb2ba6cb761cb80f58116ac7bd7f3b6159770be0b572a9bfae3b02a6c03bd947",
+      "bytes": 2700
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0369.json",
+      "git_blob": "1422c1c6992246c67a8d3144bf6e4f6ee1e2139c",
+      "sha256": "1fe1161016f9f24c556b8e455e34ed3ec05956c4a368725f427eb7ab7f63e59c",
+      "bytes": 2702
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0370.json",
+      "git_blob": "02a7007931864bdc5bb429082e37b6708e1b61f7",
+      "sha256": "9a098606cda8541a51d488c19bd6341c0b449233d69f3529675290d71353f0cf",
+      "bytes": 2697
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0371.json",
+      "git_blob": "88e17bc5982013a8b4ff35dcb20be664d619b248",
+      "sha256": "894af3b7214b29b4b5589543728b48ae754a4bf8589d1914c804918b20c1629e",
+      "bytes": 2693
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0372.json",
+      "git_blob": "b23dd4984ad7bea4216d68c52d4d8efad3ff51bd",
+      "sha256": "9de2f15b9e2ec0e9725e75a1de6249e3bb1da81cb08b51ef0603c5223958feed",
+      "bytes": 2695
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0373.json",
+      "git_blob": "14b82bffc7db1dd096633dff5a7854b504a3d834",
+      "sha256": "462dbf4f1cae3b6728f5e3ec3b4e2cccb498859b913e3fa59ff2108b774ac05f",
+      "bytes": 2687
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0374.json",
+      "git_blob": "9031eb702cb616fe9f225169d23067f1f2689050",
+      "sha256": "fa08c132bc0f3ee1d3b9c755e5629c3b0ecabc4da84380805645a1954b96f99f",
+      "bytes": 2689
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0375.json",
+      "git_blob": "412a3b222f6f71fb2212168932142a5381012e4b",
+      "sha256": "d55ef2206b2043352cdce40d9bc50cf4b62aefa2e5d04e0b82f9ee2b0b8fbda2",
+      "bytes": 2690
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0376.json",
+      "git_blob": "2a96f6e3213715527849b1a6fc164857a26b804f",
+      "sha256": "d1f0de5ed3b0f6316451a72b26d22af89462526e08355324ed20fc5a616a05f8",
+      "bytes": 2683
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0377.json",
+      "git_blob": "f2f9febccb97470fa9abbd056ac2f546f2c8e030",
+      "sha256": "59683d2e5254ca25e822faa794ddc8606a247cac5a7f291064f629dfe0960d5d",
+      "bytes": 2686
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0378.json",
+      "git_blob": "5243d6ed912c84442ae866455f790a8f3ad7cb01",
+      "sha256": "2bbda9b9ab3f232826bdbbb9dc0f665eca9af78ce3e083d77a09680346efe27a",
+      "bytes": 2685
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0379.json",
+      "git_blob": "a6a707fc9b8749a1a6857a4df3c5a0ae699fb589",
+      "sha256": "c9d734402d12664242fa2a36b2600c9c4c65c619997524365e9dfefffb64a4f8",
+      "bytes": 2682
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0380.json",
+      "git_blob": "a66ff940232a6c515085de679ff9c20975ce7b8f",
+      "sha256": "4620909d0cf5ac432097be8ce244bb2a3ae8fad54ac3985be34909ea6a9b70ef",
+      "bytes": 2686
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0381.json",
+      "git_blob": "ad5451af74eda5bdef1e60d07727511e210df5d9",
+      "sha256": "c0d6a87297bda442c1a0c69abf68a62e4ec2635892095f40a3d1e6d3a84becbc",
+      "bytes": 2687
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0382.json",
+      "git_blob": "e2d5e0c89d8af3ddaa68aaba110a9660b5546b30",
+      "sha256": "daf90866e76fc8e4831204a171c6b6ecc2a3ef078214ecbec77516d269ab95f1",
+      "bytes": 2685
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0383.json",
+      "git_blob": "fa4284095375c42eace59ddd7d23f79d2e44c039",
+      "sha256": "c137b2628fc9eaf99186a5075b7e5a0a1aa633972d0fe279de6d4d5d84b725ae",
+      "bytes": 2680
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0384.json",
+      "git_blob": "e24cf5f9d07ca296f3cf648eed77bdb042e16614",
+      "sha256": "660a36d27f6fa6f624cf19a183215ee45b8afc5ede94000494ed8e444ad72a47",
+      "bytes": 2674
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0385.json",
+      "git_blob": "1d91d9fffda4127b2e63f34f8081bffe1f5f866c",
+      "sha256": "00845f594aa9ebe21c166b788ed56c540706f26cdfc10575e566f1f5d766f2fa",
+      "bytes": 2678
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0386.json",
+      "git_blob": "b855929a2262bbedd0a1894af8085da51f8a1b32",
+      "sha256": "c27846f0a744225cedc7ed4a3ce255e5b04b3e1721876aa1584fbd201fa13533",
+      "bytes": 2675
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0387.json",
+      "git_blob": "f85b27747e26c6eae42d8a8de38907288db3d102",
+      "sha256": "271580c93f40af53cd13ecaf5c2e1b0861bd391839d57a11e1addaaecbb88792",
+      "bytes": 2671
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0388.json",
+      "git_blob": "be151cd282e2eda3420b3808e8f42d15f0bd0e10",
+      "sha256": "31f31d1be5f90a4c6e4f0b8a3997410e3c527be85720b37d41820a4f1ff780fe",
+      "bytes": 2667
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0389.json",
+      "git_blob": "28cc65453fd924d651928fc4d9a4b2e2157201cd",
+      "sha256": "0a58f84c86525d5b809ecb4bcf9b129f9c6622080b40c224336c3b79346af141",
+      "bytes": 2665
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0390.json",
+      "git_blob": "56c504b7e63cf06329782f8a06547a9f40276073",
+      "sha256": "91dd595d24bbbeff016727dd37fd713805b5584083b6274abb3b12a6971908f0",
+      "bytes": 2666
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0391.json",
+      "git_blob": "9d05aa83cee74eb4ef0e3eb480e61b48dd31c9db",
+      "sha256": "d84a09fa0e48a590dbc730854f5de680df267cc071f52166c4f9e5eaa14161f1",
+      "bytes": 2671
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0392.json",
+      "git_blob": "45ace7fdba04fee216819c8930f9f69d4158e0f8",
+      "sha256": "617207183165b694f5c6b4b005848d893c7721175d5e77f214e2c7f96d793aed",
+      "bytes": 2670
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0393.json",
+      "git_blob": "fdbbe8f53c737bd5212d019bc182a37cf82b18f4",
+      "sha256": "7d20b463643d6e0c24503ded6d43fa91305bb4d7a870f6b939b096bb0a043d1f",
+      "bytes": 2673
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0394.json",
+      "git_blob": "ab639d5bf0d0f09e9253003faf1272fd1e5689ba",
+      "sha256": "e9abbf77a7b6f8546193ed159efdec9210eee6df2058f1f1e992d0ae10a61d78",
+      "bytes": 2662
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0395.json",
+      "git_blob": "8692c77104199add8d6a836babf70a5519fff8bb",
+      "sha256": "8ecab97b88c6345c34dfc4994fa25ee783d5562fb1edd67e73fa3749b7878bbb",
+      "bytes": 2665
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0396.json",
+      "git_blob": "465a7cec0a81744566e8ee9cc6eab313bd5d7cbc",
+      "sha256": "b71a95e7c08c78c6d3faa44b40b229ec78382cbc35dd82c760eb6f642c42d482",
+      "bytes": 2668
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0397.json",
+      "git_blob": "1ca3d8ca8fab655db30b726da4ed21176b6dbbe5",
+      "sha256": "176f5729e9c44088436c6d4be61ac5d7cbe930e42e8d793a37a878827e34db44",
+      "bytes": 2664
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0398.json",
+      "git_blob": "c2ebe4191dad2c758f8351ee84aef6e543d04b54",
+      "sha256": "9c0d010165c44fffa7d3799d3fb4dd7c0848a9c138189f61a0213a6a167e4f7e",
+      "bytes": 2660
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0399.json",
+      "git_blob": "62ad6ae9e16be4ba0d5ac16201345d9ae20c3431",
+      "sha256": "f070334865778774e49c71da21f3aa64e3d183b4d4fd1f3c4e6f2b6c31b286d7",
+      "bytes": 2662
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0400.json",
+      "git_blob": "bba648c6a9daf3aa720713fad13fc768154e591d",
+      "sha256": "8e85d1ebc333470ff64d2ec3c24fe936fce076922825637611bd98b3b17759c1",
+      "bytes": 2666
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0401.json",
+      "git_blob": "ad1f083fcee9d5010c3568287661c7c010d43e8a",
+      "sha256": "0d8e5571e6c8ab43b5749a1314db379736d1e58a8e8984da54194492ebfa6c6f",
+      "bytes": 2663
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0402.json",
+      "git_blob": "23698a445cf7ff1f2c7039e6e21004bb4213230b",
+      "sha256": "fd9a5c3717ee2bdb11bac8d301cbedf39d3d9732edb271485a268f3bf754039f",
+      "bytes": 2654
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0403.json",
+      "git_blob": "688d90be8aa1920bbed75b5d79eaf1d9ae739266",
+      "sha256": "d8a3865eb80d48cc22717ad6baacd112c3a561abe2789d09a46886a69b6bffc4",
+      "bytes": 2661
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0404.json",
+      "git_blob": "b6676f449aaa4afc427e42cb322addf9759d7a46",
+      "sha256": "cb385f2ba3f6a6de468dd9ca062e1e0a4144fa4ecf70a69743c5ee38a04f8171",
+      "bytes": 2656
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0405.json",
+      "git_blob": "828497f3f0dca4bc0f07f704510484fcaa9808bf",
+      "sha256": "80106de644a3d6a7d9d924aad17080a0b1c168c88a99dcdf1d33be8937a5165f",
+      "bytes": 2654
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0406.json",
+      "git_blob": "697e6dfcfa79f8d0d8869ec357eead092efdda60",
+      "sha256": "01381fc6d8f92af63666163f844c6307d1fc99838c4409c6a894f695a7acfd31",
+      "bytes": 2655
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0407.json",
+      "git_blob": "327293866a6f2eed779c3e6d48414249c23cf3c3",
+      "sha256": "3cee05f7346064a33bb8b9b8b23acbcf733634882a740d37d814a3a7662fd9f0",
+      "bytes": 2651
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0408.json",
+      "git_blob": "33a1cae0826c886f8d4e52dae582f6de1e90aa23",
+      "sha256": "046bd540954ca709458d1316774b128a8be23056fa0fbcaa8fd08ee443310650",
+      "bytes": 2646
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0409.json",
+      "git_blob": "8bad343195fe587f76ae2fd6cd466b01494b79a0",
+      "sha256": "25eb8360e95e815900f678eec79b5a72f2c82b55e194c8cb1d977ed1d9542e91",
+      "bytes": 2645
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/0410.json",
+      "git_blob": "cef4e27db836df5d4f65cc59518d3bce104c2300",
+      "sha256": "419fada54256435d7f3b8c2c8e0906f2b9d3756451c631f43cada0ef33430ce9",
+      "bytes": 2651
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/BINDING.json",
+      "git_blob": "81db0977ea8047fcdd97bde4d72f0ef7aed468d2",
+      "sha256": "788e509bdb92d5528b8b931aeba93c2b3af4441fd4cd96aaf9c098af3cbc9012",
+      "bytes": 1790
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor-model-panels-205/SUMMARY.json",
+      "git_blob": "52a4231bef68635cb1bfb5e288cfdbdc3b00b812",
+      "sha256": "149c5a08ddd01d91b75aa28b27d39cb17ebd4cea787a9660bc4415a9056469f9",
+      "bytes": 1331
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor_model.py",
+      "git_blob": "92ce26366b6ec151b5dccf1fb29a02227af9d832",
+      "sha256": "8b7a7234698878fc9aa1c0ef03b8e20de9f29361d151ebe0f3517b0ae74d26e6",
+      "bytes": 7132
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor_whole_model.py",
+      "git_blob": "249e34a0fb80b456ca9fc103e788c346384d65a2",
+      "sha256": "07d7bb0a1d31e3031171ef9ec41ec8e093811a136af68dc89ae72bdc9a562d68",
+      "bytes": 4515
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/vendor/log_integrals.py",
+      "git_blob": "2baa52675d4129af1b88d8983a2dce779f663743",
+      "sha256": "de20f48cc0858a9d7468f32b2f7f69471762618f2b392c71d62c487660bd9811",
+      "bytes": 4565
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/whole-error-ledger.json",
+      "git_blob": "295c5dffd1ff3e8728f28320586a93febf05ca99",
+      "sha256": "eb3eae6d96e8fdb60d06243afa353bd8a35aff5febfde05cdbf24b4b858a2b8c",
+      "bytes": 5367
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/whole-model-36d3f3fcb6cb-n128.json.gz",
+      "git_blob": "aa998e8e371de35e5a4b7e0ac171f5eb8db434e1",
+      "sha256": "0d8dd580d8f151cb6e700507abec0a1398e99d34ed14d266a977af8030a6a459",
+      "bytes": 10529250
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/whole-model-ed58da3caacd.json.gz",
+      "git_blob": "2a96b53b88d3f0cd81d21c100e212cc5e6dcdee6",
+      "sha256": "040436a000b91c136d9b6977b859d739773a37fb228dfca076bb953dd80bcfcc",
+      "bytes": 8099193
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/whole_audit.py",
+      "git_blob": "107ff039532afe956c6237cc2cc17346e1a53080",
+      "sha256": "ca3d04a18c053747b4769cfd5fcf42f463ff703c6c884f54b1d427a07d732f88",
+      "bytes": 5541
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/whole_error_inventory.py",
+      "git_blob": "2e9ce91689995acca12db11d5d3ca9ac89e7d489",
+      "sha256": "d260f5ac7f135ee807bc3449eef3f5103c4eee658b51b94ffa4ef3ec9a935e36",
+      "bytes": 3640
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/whole_function_probe.py",
+      "git_blob": "825718dfe87dcab55a4a1d509eaf7206a4abce1a",
+      "sha256": "ed58da3caacd5ca39de1f910c77920e7079eec905a560b487600c71e97c8df64",
+      "bytes": 14122
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/whole_function_probe_v2.py",
+      "git_blob": "2d96e768cb35886f639b48ee2613975e6a73fcc4",
+      "sha256": "36d3f3fcb6cb360ca200cc6507237ed94e0fe7e4e96c97deec3c3925e2a5fce5",
+      "bytes": 14166
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/whole_model_integrate.py",
+      "git_blob": "491cef852cf6138fc0bd5aa9127589ba45248d5c",
+      "sha256": "fee96435bb1af6444abfb54136e86d41e0744043586ea44df615bb0c71b6c78e",
+      "bytes": 5632
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole_verify.py",
+      "git_blob": "bec0d5f41f15c44e4d4f8f6c41110bc7873af5be",
+      "sha256": "08d8a86ba2f4368d31b5197905428bd6ee35aba08b282990741b777e6ba72bd6",
+      "bytes": 5206
+    },
+    {
+      "path": "research/x-c1/w9-response-preflight-2026-10-18/PROOF.md",
+      "git_blob": "d6dd41a73c11c58c0a0ba200f5c889923b1aa132",
+      "sha256": "3106e399c8fd7fd9998848c51e58f5d0b9cee72350754fb18d9fa577a9ae4878",
+      "bytes": 12339
+    },
+    {
+      "path": "research/x-c1/w9-rest-feasibility-even-2026-10-20/INPUT_BINDINGS.json",
+      "git_blob": "7ae0c74dbf8a119994338922e88c4ab28b7c92a0",
+      "sha256": "0aaa5bd565704bf1da1867743d60829824857e5f9ec432e01f0451ed5e0a2daf",
+      "bytes": 3488
+    },
+    {
+      "path": "research/x-c1/w9-rest-feasibility-even-2026-10-20/PROOF.md",
+      "git_blob": "9925b831122669bde3af98c0664d890f2576f495",
+      "sha256": "877fa27fd7b9baac17be1561a1a03d649f1faa636f0e45575a5e238a6cfdb989",
+      "bytes": 9974
+    },
+    {
+      "path": "research/x-c1/w9-rest-feasibility-even-2026-10-20/RESULT.json",
+      "git_blob": "dd38bc35c6516d32d90ea8ab980efc6f45c5715c",
+      "sha256": "c5e884f7e30baa2eb33405ea98dbe03b4c35b115f5669dc519b585ccce494527",
+      "bytes": 8599
+    },
+    {
+      "path": "research/x-c1/w9-rest-feasibility-even-2026-10-20/verify.py",
+      "git_blob": "be84c6ca5b7fe5cb8f4683c23dbbb557c28a49d4",
+      "sha256": "0b3ca977f478a3b85cd65e67b66790d09760134f8de9e9c1342ba6cd9b678db0",
+      "bytes": 13461
+    },
+    {
+      "path": "research/x-c1/w9-schur-form-error-even-2026-10-19/PROOF.md",
+      "git_blob": "257a2c59367112cfc9cf142db69521f1a4a85020",
+      "sha256": "23583bc127ff376e1508aa195c9438628a2f41256f3247bc4b98dda5c314a1c9",
+      "bytes": 7341
+    },
+    {
+      "path": "research/x-c1/w9-schur-form-error-even-2026-10-19/engine.py",
+      "git_blob": "ed970daa8cfb4046bfc0491d9134d1596d6cd96d",
+      "sha256": "1914104e9a705676e0976fd2326656820e64988717a04948bc98032178adc922",
+      "bytes": 6084
+    },
+    {
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/INPUT_BINDINGS.json",
+      "git_blob": "4a8f73b2b7d42024bfcdd214d87bdbd909705f5a",
+      "sha256": "6d876166adf1a4651c280e953c2f9144fcf6b60f99c802fd550067c92946498b",
+      "bytes": 6698
+    },
+    {
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/PROOF.md",
+      "git_blob": "e9955de88634b8f4db4662203a5efd4447d28eda",
+      "sha256": "051cac056c09ce8ad4e17a315fcd1e90341ca942a9efc2870243e837c4cfd0ea",
+      "bytes": 10159
+    },
+    {
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/engine.py",
+      "git_blob": "3ca686118a4156e361bef29f0b98f211141e65dd",
+      "sha256": "af84c797f51a14cf36183c676f605f7fa2074149352cdc0058dd5572f74fa878",
+      "bytes": 11433
+    },
+    {
+      "path": "research/x-c1/w9-structural-decision-2026-10-18/EXPECTED.json",
+      "git_blob": "72701a4cfe1cce2d1e9ebc1a25cd3430c20471c9",
+      "sha256": "36386126d3a41712abb9415fda96814b9982b71f6d191696b971f0b5a79c908d",
+      "bytes": 14618
+    },
+    {
+      "path": "research/x-c1/w9-structural-decision-2026-10-18/INPUT_BINDINGS.json",
+      "git_blob": "c63e1695f7a2f42d2bfd0dc73aefbdc19ebec14b",
+      "sha256": "229a11acaefd6e6a26b464ee6476dd851eeba512a1e9d7972764a266a5049db9",
+      "bytes": 4229
+    },
+    {
+      "path": "research/x-c1/w9-structural-decision-2026-10-18/PROOF.md",
+      "git_blob": "e324a703f007c4103713473d6755b5f30d321a63",
+      "sha256": "fe338a425cb864fa06352c7c4505ee685d053f51c50e8e5b3daae116bd700e2c",
+      "bytes": 15957
+    },
+    {
+      "path": "research/x-c1/w9-structural-decision-2026-10-18/verify.py",
+      "git_blob": "daa7d00376e0f7bb81606a513ab2dbfba19ebb1b",
+      "sha256": "5c9e57774fad011172d549cf1ab8efa0d4efa7290ad90219b05f8cc155530fb9",
+      "bytes": 9379
+    }
+  ]
+}

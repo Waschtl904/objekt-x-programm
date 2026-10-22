@@ -1,0 +1,2 @@
+# Keep the exact bytes bound by MANIFEST.json on every checkout platform.
+* -text

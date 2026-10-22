@@ -1,0 +1,17 @@
+--- a/Neuberechnung/pairing-refinement/core_tail.py
++++ b/Neuberechnung/pairing-refinement/core_tail.py
+@@ -9,6 +9,14 @@
+ d=(a-ns['edges'][-2])*arb(2)**(-48);center=a-d/2;radius=d/2
+ tm.Jet.N=8;ctx.cap=8;R=q('0.001')/radius
+ xx=tm.Jet(arb_series([center,radius],prec=8),acb(arb(center,q('0.001')),arb(0,q('0.001'))))
++# The tail Cauchy radius R is not 2. Bound every polynomial on the
++# same normalized radius R before using the order-eight Cauchy remainder.
++def peval_R(p,x):
++ x=tm.jet(x);assert x.s.length()<=2
++ co=p(arb_poly([x.s[0],x.s[1]]))
++ bound=arb_poly([abs(v).upper()for v in co])(R).upper()
++ return tm.Jet(arb_series(list(co)[:tm.Jet.N],prec=tm.Jet.N),acb(arb(0,bound),arb(0,bound)))
++tm.peval=peval_R
+ hh=tm.hjet(ns,xx);h0=hh.s[0]
+ variation=sum((abs(hh.s[k]).upper()for k in range(1,8)),arb(0))+abs(hh.b).upper()*R**(-8)/(1-1/R)
+ assert variation<q('1e-10')

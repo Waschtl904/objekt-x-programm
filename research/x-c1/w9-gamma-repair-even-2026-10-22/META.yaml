@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "W9-GAMMA-REPAIR-FIXED-EVEN",
+  "date": "2026-10-22",
+  "kind": "REDUCTION",
+  "strategic": true,
+  "local_only": false,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Conditional Gamma/model pairing repair for one unchanged fixed even witness from #252; full analytic model identification and inherited-lemma acceptance remain open.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "No new physical direction, full degree-11 space, odd parity, N12, milestone 4, Object X or external review closure.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [
+    "MOVING-PROFILE-RESERVE-RENEWAL"
+  ],
+  "supersedes": [],
+  "does_not_claim": [
+    "No whole norm inferred from 84 coordinates.",
+    "No completed analytic identification or independent proof of every inherited error lemma.",
+    "No status promotion or change to the frozen original package."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-gamma-repair-even-2026-10-22/PROOF.md",
+    "sha256": "b00c76f6f7952e9d22a7f1047dbb5e064945f2c71f0f3e50c3bd429fd46b49b7"
+  }
+}

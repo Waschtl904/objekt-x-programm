@@ -852,3 +852,9 @@ Die bisherigen ausgeschlossenen Familien bleiben ausgeschlossen. Ihre
 Prüfungen werden nicht wiederholt. Der neue Einzelzeugenpass ist ein
 positiver lokaler Befund, kein N12- oder Punkt-4-Abschluss und keine
 Prozentangabe für die Konstruktion von Objekt X.
+
+## Reparaturzusatz vom 22. Oktober: fester gerader Gamma-Anschluss
+
+Reparaturzusatz 22. Oktober: Die [Gamma-/Paarungsreparatur](../research/x-c1/w9-gamma-repair-even-2026-10-22/PROOF.md) dokumentiert einen konkreten inneren Gamma-Kernfehler im eingefrorenen Ganzfunktionsmodell aus #252. Mit radiuskorrigiertem innerem Randnachweis bestehen die 84 vollständigen arithmetischen Differenzprüfungen. Ganze Korrektur-X-Norm <3.653e-7; bedingte Restenergie <4.632e-11 über direkte Integration beziehungsweise <1.391e-10 über den konservativen Operatorweg, jeweils unter dem unveränderten Deckel 1e-9. Das Originalpaket bleibt erhalten und ist allein kein Beleg für das korrigierte Modell. Vollständige Quellen-/Funktionsidentifikation und Gesamtabnahme der geerbten analytischen Fehlerlemmata bleiben offen; zuerst diese Pflichten abarbeiten, zweite Richtung zurückgestellt. Fester gerader Scope, AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN; PENDING_STATUS_REVIEW, keine Promotion durch Integration.
+
+Die [endliche Liste offener analytischer Pflichten](../research/x-c1/w9-gamma-repair-even-2026-10-22/OPEN_OBLIGATIONS.md) ist der nächste Auftrag. Die bekannte A11-Positivität bleibt als Eingang ausgeschlossen. #251, #244 und #187 bleiben getrennt.

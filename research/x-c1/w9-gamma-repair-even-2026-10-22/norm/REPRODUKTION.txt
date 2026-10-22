@@ -1,0 +1,61 @@
+OBJEKT X – REPRODUKTION DER GEGENPRÜFUNG
+
+Das Paket enthält den Ergebnisbericht, zwei Prüfer, ihre Resultate und
+19 gebundene Eingangsdateien. Das GPT-1-Originalarchiv bleibt unverändert
+als inputs/GPT1-original.zip enthalten. Enthaltene historische Arbeitspläne
+sind Quellenmaterial und werden von den Prüfern nicht ausgeführt.
+
+Zuerst SHA256SUMS.txt gegen die entpackten Dateien prüfen. Das Manifest
+bindet alle anderen Dateien dieses Pakets; seine externe Bindung erfolgt
+über die separat ausgegebene SHA-256-Summe des gesamten ZIP-Archivs.
+
+1. RATIONALE PRÜFUNG DER AUSGELIEFERTEN RESULTATE
+Voraussetzung: Python 3; ausschließlich Standardbibliothek.
+Im entpackten Verzeichnis:
+
+  python -B rational_cross_audit.py
+
+Dies prüft die 24 Originalhashes des GPT-1-Archivs, die Übereinstimmung
+der extrahierten Eingänge, die 84 Korrekturpaarungen, die Endpunkte der
+191 Quellenkoordinaten der ersten J-Richtung, die stärkeren 84 ganzen
+Differenzhüllen sowie Norm- und Budgetarithmetik aus den gebundenen
+Intervallresultaten. Quadratwurzeln werden rational nach oben gerundet.
+Es schreibt cross-audit.json neu. Die Ausgabe ist bedingt durch die
+analytischen Begründungen der eingesetzten Intervallgrenzen.
+
+2. EIGENE NORMAUSWERTUNG NEU RECHNEN
+Geprüfte Umgebung: Python 3.13.7, python-flint 0.9.0; Arb-Präzision 3072 Bit.
+Die Bibliothek python-flint muss bereits verfügbar sein.
+
+  python -B independent_norm.py
+  python -B rational_cross_audit.py
+
+Bei einer separat abgelegten Installation kann die erste Zeile zusätzlich
+--flint-path PFAD_ZUM_PAKETVERZEICHNIS erhalten. --inputs erlaubt einen
+anderen Ort der unverändert gebundenen Eingänge. Der rationale Prüfer
+erwartet das mitgelieferte inputs-Verzeichnis neben seinem eigenen Skript.
+
+Die Normrechnung braucht keine Internetverbindung und keine Git-Arbeitskopie.
+Sie rekonstruiert die vollständige Korrektur aus unseren zuvor berechneten
+Polynomkoeffizienten, prüft die Darstellung gegen GPT 1s Koeffizienten und
+integriert das Quadrat über elementare Monom-/Log-/Logquadratmomente.
+Die beiden glatten Logarithmen erhalten explizite Reihenrestgrenzen.
+Es wird keine der Logprodukt-Routinen von GPT 1 importiert.
+
+independent-norm.json wird neu erzeugt. Laufzeit und dadurch dessen SHA-256
+ändern sich bei einem erneuten Lauf; die mathematischen Ergebnisfelder
+sollten übereinstimmen. cross-audit.json bindet jeweils das neu erzeugte
+Resultat. Die ausgelieferten Hashsummen beschreiben den Zustand vor einer
+solchen erneuten Ausführung; unveränderte Originale daher separat aufheben.
+
+3. UMFANG DER REPRODUKTION
+Die neue Normberechnung und der rationale Zusammenführungsnachweis sind
+mit diesem Paket reproduzierbar. Die Entstehung sämtlicher alter
+Koeffizienten, Quellenintegrale, Abschnittsbelege und analytischer Schranken
+wird hier nicht komplett neu ausgeführt. Dafür dienen die im Bericht
+genannten eingefrorenen Quellen und das vorherige vollständige Nachweispaket.
+Insbesondere ist die erneute Endpunktprüfung von 191 Quellenkoordinaten
+keine unabhängige Neuerzeugung dieser Quellenintegrale.
+
+Es werden nur lokale Resultatdateien neben den Prüfern geschrieben.
+Repositorydateien, historische Beweispakete und GitHub werden nicht verändert.

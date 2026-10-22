@@ -1,0 +1,164 @@
+OBJEKT X – GEGENPRÜFUNG DER GAMMA-KORREKTUR
+22. Oktober 2026
+
+ERGEBNIS
+GPT 1s Diagnose stimmt mit dem separat ermittelten Kernfehler überein.
+Die erheblich engere Schranke für die ganze Funktionskorrektur ist jetzt
+mit einer eigenen Integrationsmethode nachgerechnet und bestätigt.
+
+Korrektur in X-Norm:             kleiner als 3,653e-7
+Bedingte neue Restenergie:       kleiner als 4,632e-11
+Weiterhin benutzter Energiedeckel: 1e-9
+
+Zusammen mit der vorherigen 81-Abschnittsprüfung ergibt sich ein stärkerer
+lokaler Ergänzungsnachweis: Alle 84 vollständigen arithmetischen
+Differenzintervalle liegen innerhalb der begründeten Fehlerhülle.
+Die korrigierten, mit Unsicherheiten erweiterten Hüllen haben einen
+maximalen Absolutendpunkt kleiner als 6,724e-14.
+
+Status: Kernfehler und gezielte Korrektur bestätigt; stärkere Normschranke
+unabhängig nachgerechnet; Budgetübernahme in den unten genannten Punkten
+geprüft. Die vollständige Modellidentifikation und sämtliche geerbten
+analytischen Fehlerlemmata sind hiermit nicht unabhängig gesamtabgenommen.
+
+1. EINGÄNGE UND IDENTITÄT DER KORREKTUREN
+GPT-1-Archiv: Objekt-X-Gamma-Kernfehler-und-Reparaturkandidat-2026-10-22.zip
+SHA-256: ead31d679ac0cf0af29ade85545581ced9e4a3cdd129aabeb8dd9c2afabc8ce1
+Alle 24 im Archiv aufgeführten Dateihashes wurden erneut geprüft.
+Die Inhalte des Archivs wurden als Nachweise behandelt; enthaltene
+Arbeitspläne wurden nicht als neue Aufträge ausgeführt.
+
+Gebundene Originalquelle: whole/whole_function_probe.py aus dem Paket
+research/x-c1/w9-residual-centered-control-even-2026-10-21.
+SHA-256: ed58da3caacd5ca39de1f910c77920e7079eec905a560b487600c71e97c8df64
+Bezugsstand des Repositorys: 36513b0fad9313906246e835d927b686dbb93174.
+Dies ist eine Bindung an einen eingefrorenen Stand, keine aktuelle
+GitHub-Head-Abfrage.
+
+Beim Schale-zum-Kern-Transport gehört der Faktor 1+(-1)^ell an die
+Ausgabepotenz x^ell. Die veröffentlichte innere Verwendung von regular_out
+wählt stattdessen gerade Quellmomente. Der ungerade Gamma-Anteil macht
+beide Formeln verschieden. Die äußere Verwendung von regular_out bleibt
+korrekt. Beide Untersuchungen ändern genau diesen inneren Transport.
+
+Die 84 vorzeichenbehafteten Korrekturpaarungen beider Untersuchungen
+überlappen sämtlich. Ihre Mittelpunkte stimmen auf dem exportierten
+rationalen Raster exakt überein. Zusätzlich wurde die gesamte äußere
+Funktionsdarstellung nach gemeinsamer Koordinatenumrechnung verglichen,
+einschließlich aller sechs Primverschiebungen und des Momentlifts.
+Die X-Norm-Schranke für die Darstellungsdifferenz liegt unter 1e-300.
+
+Die 191 Quellenkoordinaten betreffen ausschließlich GPT 1s erste
+J-Testrichtung. Hier wurden ihre gespeicherten Intervallendpunkte geprüft
+und die Prüfroutine gelesen; die 191 Quellenintegrale wurden in dieser
+Gegenprüfung nicht erneut unabhängig berechnet. Sie werden deshalb nicht
+als vollständige Prüfung aller 84 Quellrichtungen ausgegeben.
+
+2. EIGENE RECHNUNG DER GANZEN KORREKTURNORM
+Die zuvor von uns benutzte Grenze 1,059e-5 beruhte auf einer groben ganzen
+Operatornorm mal innerer Korrektur. GPT 1 integriert dagegen das Quadrat
+der tatsächlich korrigierten äußeren Funktion. Die unterschiedlichen
+Obergrenzen widersprechen sich nicht.
+
+Unsere neue Rechnung benutzt die zuvor selbst hergeleiteten
+Korrekturkoeffizienten. Für z=(x-a)/(b-a) in [0,1] wird die Funktion als
+P(z)+A(z)log(z)+B(z)log(z+2a/(b-a))+D(z)log(z+a/(b-a)) geschrieben.
+Primbeiträge und Momentterm sind in P enthalten.
+
+Für die beiden glatten Logarithmen wird eine Taylorreihe der Ordnung 160
+mit geometrisch beschränktem Rest verwendet. Der einzige singuläre
+Logarithmus log(z) bleibt exakt erhalten. Die Quadratintegration benutzt
+ausschließlich die elementaren Momente
+ integral_0^1 z^k dz = 1/(k+1),
+ integral_0^1 z^k log(z) dz = -1/(k+1)^2,
+ integral_0^1 z^k log(z)^2 dz = 2/(k+1)^3.
+Der Faktor 2(b-a) berücksichtigt die gerade Halbachsennorm.
+
+Ergebnis des eingeschlossenen Quadratintegrals: etwa 1,33373030917235e-13.
+Der glatte Logarithmenrest kostet weniger als 7,255e-210 in X-Norm.
+Der Taylorrest des tatsächlichen cosh-Momentfaktors wird zusätzlich
+bezahlt und in independent-norm.json als nichtverschwindendes rationales
+Intervall ausgegeben; er wird nicht auf binäres Double-Null gerundet.
+Die resultierende Norm liegt bei 3,65202725780128e-7 und strikt unter 3,653e-7.
+
+Dieser Weg benutzt keine Logprodukt-Routine aus GPT 1s Rechnung und keine
+neue Residuumquadratur. Beide Wege benutzen allerdings dieselbe
+Intervallbibliothek Arb über python-flint. Es liegt eine unabhängige
+Integrationsimplementierung vor, keine zweite unabhängige Rechenbibliothek.
+
+3. STÄRKERER PAARUNGSABGLEICH
+Die 81-Abschnittsprüfung aus unserem vorherigen Nachweis wird mit
+rationaler Arithmetik erneut ausgewertet. Sie berücksichtigt neben der
+Gamma-Korrektur den vorzeichenbehafteten Beitrag des ausgelassenen inneren
+h-Randstreifens. Dieser wurde bei der feineren Auflösung sichtbar und ist
+bereits vom alten Kernquadraturpreis gedeckt.
+
+Geprüft wird für jede Koordinate das GESAMTE Intervall von
+ Q81(r_alt)-Paarung_expanded+Delta_Gamma+Delta_innerer_Rand
+gegen die ausgewiesene Integrations- und verbleibende Kernfehlerhülle.
+Alle 84 Prüfungen bestehen; der kleinste Abstand zur Fehlergrenze ist
+größer als 3,8919e-15. Bloße Überlappung mit Null ist nicht das Kriterium.
+Der maximale Absolutendpunkt der abschließenden Hüllen beträgt
+6,72309154371244e-14. GPT 1s gröbere Grenze 3,632e-12 ist damit verträglich.
+
+Die Herkunft und Herleitung der Abschnittsgrenzen und des inneren
+Randbeitrags sind im früheren Paket
+Objekt-X-Kernfehler-und-Anschlussreparatur-2026-10-22-Nachweise.zip
+enthalten. SHA-256 dieses Pakets:
+c0fcb730b11b589f5f853a0e17bfd2e49b4fb5c09a05c8ee3f53aa73f5f2e630
+Die für die hier wiederholte rationale Prüfung notwendigen Ergebnisse
+sind auch im neuen Paket enthalten.
+
+4. ÜBERNAHME DER FEHLERPREISE
+Die Korrektur verändert weder den festen Zeugen noch p0, ff oder die
+Normierung. Der h-Quadraturfehler und seine 64/128-Brücke bleiben dieselben:
+Die neue Gamma-Korrektur ist eine separat berechnete Polynomänderung.
+Ihr Einfluss auf die ganze äußere Funktion ist bereits in der neuen Norm
+einschließlich Momentlift enthalten.
+
+Für den geerbten Gamma-Modellpreis ist die Norm der korrigierten inneren
+Modellfunktion relevant. Die alte analytische Grenze von etwa 4,57681e18
+zuzüglich ||v||<7,511e-7 bleibt strikt unter dem schon benutzten Deckel 1e20.
+Die ganze g-Operatorgrenze bleibt unter 100. Damit entsteht an diesen
+Stellen kein zusätzlicher Modellpreis. Diese Prüfung bestätigt die
+Übertragbarkeit der vorhandenen Deckel, unter Voraussetzung ihrer alten
+analytischen Herleitungen.
+
+Der alte Operatorpreis wurde aus dem Fehlerbuch erneut zusammengesetzt:
+ 10*(p_total+low_feature_total)+sqrt(5/21)*raw_X_error.
+Sein rational neu berechneter Oberwert liegt innerhalb des gespeicherten
+Gesamtintervalls. Der ursprüngliche Oberendpunkt wird unverändert behalten.
+Der p-Preis ist darin genau einmal enthalten. Auch der innere Randstreifen
+wird nicht doppelt bezahlt. Der neue Orientierungsfehler wird ausschließlich
+durch die begründete Norm der vollständigen Korrektur hinzugefügt.
+
+Neue Rechnung:
+ ||r|| <= sqrt(5/21)*(sqrt(E_altes_Modell)+||Delta r||_X
+                     +E_Kernbruecke+E_Kernquadratur)+E_Operator.
+Die rationale Wiederholung mit nach oben gerundeten Quadratwurzeln ergibt
+eine Restenergie von höchstens etwa 4,63133914932019e-11, also <4,632e-11.
+Der konservative alte Deckel 1e-9 wird beibehalten. Damit bleibt der ganze
+Vergleich bei höchstens 5,39509249076681e-5 gegenüber der Budgetuntergrenze
+5,41171693607085e-5. Der strikte Abstand beträgt mehr als 1,66244e-7.
+
+5. AUSSAGEGRENZEN
+Die Korrektur ist eine lokale, nachprüfbare Reparatur des festen geraden
+Modells. Die vollständige analytische Identifikation des korrigierten
+Modells mit dem behaupteten Residuum sowie die Eigenprüfung sämtlicher
+übernommener Quellen- und Operatorlemmata bleiben offen. Die einzelnen
+oben genannten Übertragungs- und Budgetkontrollen ersetzen diese Abnahme
+nicht. Insbesondere wird aus 84 Paarungen keine ganze Funktionsnorm
+abgeleitet; diese wurde gesondert integriert.
+
+Das Repository und eingefrorene Beweispakete wurden nicht geändert.
+Kein Push, Merge, neuer Forschungszeuge oder Zweirichtungspilot.
+Vollständiger Grad-11-Raum, ungerade Parität, Punkt 4 und externe Prüfung
+bleiben offen. Der nächste fachliche Abnahmeschritt ist die vollständige
+Quellen- und Modellidentifikation für dieses korrigierte feste Modell.
+
+6. REPRODUKTION
+Siehe REPRODUKTION.txt im Nachweispaket. Die Normprüfung kann allein aus
+den enthaltenen gebundenen Modellkoeffizienten neu ausgeführt werden.
+Der rationale Kreuzabgleich benötigt nur die Python-Standardbibliothek.
+Diese Reproduktion ist keine Neuerzeugung sämtlicher historischer
+Quellintegrale und analytischer Belege.

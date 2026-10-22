@@ -1,0 +1,23 @@
+--- a/research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/whole_function_probe.py
++++ b/research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/whole_function_probe.py
+@@ -58,6 +58,11 @@
+     v=[(2*moments[k] if k%2==0 else arb(0))/fac[k]for k in range(225)]
+     co=convker*arb_poly(v)
+     return arb_poly([co[224-k]/fac[k]for k in range(225)])
++def regular_core(moments):
++    # Here x is inside the core and y is on the shell. The two distances
++    # are y-x and y+x, so the parity projector acts on the OUTPUT degree.
++    co=convker*arb_poly([moments[k]/fac[k]for k in range(225)])
++    return arb_poly([co[224-k]/fac[k]*(1+(-1)**k)for k in range(225)])
+ def build_core(qphi,qF,qJ):
+     """Q of the combined old function, with exact logs and prime cells."""
+     g={};ph=arb_poly([]);z=arb_poly([]);ls=[arb(0)]*384
+@@ -79,7 +84,7 @@
+     lm=sum((slocal[k,0]*(hs*(2*k+1)/2).sqrt()*c.mellin(k,hs/2)*((mid/2).cosh()if k%2==0 else(mid/2).sinh())for k in range(96)),arb(0))
+     div=arb_poly([sum((spx[k]*(b**(k-l)-a**(k-l))/(k-l)for k in range(l+1,len(spx))),arb(0))for l in range(len(spx)-1)])(arb_poly([0,a]))
+     ym=[c.pint(spx*arb_poly([0]*k+[1]),a,b)for k in range(225)]
+-    add(g,{None:(div+mirror(div))*(-arb(1)/2)-regular_out(ym)(arb_poly([0,a])),
++    add(g,{None:(div+mirror(div))*(-arb(1)/2)-regular_core(ym)(arb_poly([0,a])),
+            'outer':yc*(-arb(1)/2),'one':yc*(arb(1)/2),
+            'minus_outer':mirror(yc)*(-arb(1)/2),'minus_one':mirror(yc)*(arb(1)/2)})
+     add(g,qm,-lm/mu)

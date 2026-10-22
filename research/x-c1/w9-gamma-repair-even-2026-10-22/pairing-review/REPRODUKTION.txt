@@ -1,0 +1,62 @@
+REPRODUKTION UND UMFANG
+
+Schnelle Prüfung ohne flint und ohne Repository:
+  python verify_package.py
+Dieses Programm prüft das Summenverzeichnis dieses Ergänzungspakets,
+alle 84 rationalen Deckungsungleichungen, die radiusgerechte Cauchy-Grenze
+und führt die beigelegte rationale Budgetprüfung in einem temporären
+Verzeichnis erneut aus. Keine Ausführung eines Programms aus dem Internet.
+Ein Erfolg bestätigt die gebundenen Rechnungen, nicht alle analytischen
+Voraussetzungen ihrer Eingänge.
+
+Vollständige numerische Wiederholung:
+1. Python 3.12 und python-flint 0.9.0 verwenden; gerechnet wurde mit 3072 Bit.
+2. Unter connection-audit/repo das Repository zum Commit
+   36513b0fad9313906246e835d927b686dbb93174 bereitstellen. Alle durch
+   MANIFEST, REPLAY_BINDINGS und INPUT_BINDINGS gebundenen Dateien sind nötig.
+3. Das Original-Eingangsarchiv mit SHA-256
+   c0fcb730b11b589f5f853a0e17bfd2e49b4fb5c09a05c8ee3f53aa73f5f2e630
+   sicher nach connection-audit/repair-review/received entpacken, so dass
+   dort direkt SHA256SUMS.txt, Quellen und Abschnitte liegen. Die beiden
+   Original-Budgeteingänge bleiben unverändert. Das Originalarchiv selbst
+   ist in diesem Ergänzungspaket nicht noch einmal enthalten.
+4. Die hier beigelegten Skripte liegen in ihrer ursprünglichen relativen
+   Verzeichnisstruktur. prepare_review.py erzeugt isolierte Arbeitskopien
+   und Verknüpfungen zu den gebundenen Eingängen. Es ändert keine
+   Repositorydatei. Ein vorhandenes Verzeichnis python09 ist lediglich
+   ein optionales Importziel für python-flint.
+5. Aus dem entpackten Paketverzeichnis nacheinander ausführen:
+   python connection-audit/repair-review/verify_received.py
+   python connection-audit/repair-review/prepare_review.py
+   python connection-audit/repair-review/work/pairing-refinement/core_tail_review.py
+   python connection-audit/repair-review/work/pairing-refinement/add_panels.py
+   python connection-audit/repair-review/work/pairing-refinement/validate_orientation.py --extra
+   python connection-audit/repair-review/reassemble.py
+   python connection-audit/repair-review/final_checks.py
+   Bei Bedarf PYTHONPATH auf eine Installation von python-flint 0.9.0 setzen.
+
+Die Arbeitskopien und Logs des tatsächlich ausgeführten Laufs liegen bei.
+Zur erneuten BERECHNUNG der 16 Abschnitte ist ein frisches Arbeitsverzeichnis
+zu verwenden: add_panels.py überspringt bereits vorhandene Belege. Die 16
+neu gerechneten Belege liegen zur Auswertung unter Replayed-panels, nicht
+am Überspringpfad work/pairing-refinement/extra-panels.
+
+load_context.py prüft vor der Zusammensetzung 458 Paketdateien und 109 externe
+Dateien. final_checks.py prüft danach die 573 ursprünglich ausgewählten
+Repositorydateien. Nicht ausgewählte Repositorydateien wurden nicht geprüft.
+Die 65 älteren signierten Abschnitte und 411 Energieabschnitte werden
+wiederverwendet, ihre vollständige Neuberechnung ist kein behaupteter Teil
+dieses Ergänzungslaufs. check_bindings.py dokumentiert zusätzlich den Abgleich
+mit den im vorherigen Arbeitslauf vorhandenen 65 Paarungsbelegen; diese
+vorherigen Dateien sind nicht nochmals in diesem Paket enthalten.
+
+Historische Quelldateien nicht mit dem Patch überschreiben. Den beiliegenden
+core-tail-contour-fix.patch nur in eine neue Ergänzungsrevision übernehmen.
+Die tatsächliche Gegenrechnung verwendete core_tail_review.py, das dieselbe
+Radiusanpassung plus Diagnoseausgaben enthält. Die Auflösung des Bootstrap-
+ROOT-Pfades dient der korrekten Prüfung von Dateibindungen bei Verknüpfungen;
+der Schutz gegen ausbrechende Eingabepfade wurde nicht entfernt.
+
+Die eingegangene SHA256SUMS-Datei bleibt von unserem neuen SHA256SUMS getrennt.
+Laufzeiten sind Messwerte, keine Reproduktionsbedingung. Die Gesamtlaufzeit
+für den erneuten 16-Abschnittslauf betrug hier etwa 163.26 Sekunden.
