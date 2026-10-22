@@ -70,7 +70,10 @@ Die ganze gemeinsame Restfunktion, Rand- und Modellfehler sind enthalten.
 Das ist ein lokaler Fortschritt gegenüber den beiden Hindernissen aus #250.
 Die äußere Antwortregel und der Zeuge bleiben unverändert. Der gesamte
 Grad-11-Raum, beide Paritäten, Punkt 4 und externe Prüfung bleiben offen.
-Dieser neue Forschungsbranch ist noch nicht integriert; der genaue
+Das Paket ist durch [PR #252](https://github.com/Waschtl904/objekt-x-programm/pull/252)
+auf `main` integriert (Merge `4ede0b70e2df1f133c762d7b0e6527338d597874`).
+Der Merge ändert weder den mathematischen Status noch den externen Prüfstatus.
+Der genaue
 [Reproduktionsstatus](research/x-c1/w9-residual-centered-control-even-2026-10-21/ACCEPTANCE.json)
 und die früheren Ausschlussresultate bleiben getrennt.
 
