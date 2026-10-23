@@ -1,0 +1,53 @@
+{
+  "revision_kind": "INPUT_BINDING_COMPLETENESS_FIX",
+  "base_commit": "beb38c9d1cba666bb3b7ddab9577873e59d854c4",
+  "original_head": "dd644c65f6e10184dea7b64370774e7a40814e89",
+  "original_manifest_sha256": "ce44e7b00cef7c77a19c732ce0eb58b7e137bcb45a9afd85c82e02349f5f3edf",
+  "added_repository_input": "research/x-c1/w9-residual-centered-control-even-2026-10-21/MANIFEST.json",
+  "sha256": "cc1aa64855995f96d0127ea09cec94c59b826fb62a6ce601f0373b2cd5d0b151",
+  "declared_inherited_inputs": 568,
+  "mathematical_results_changed": false,
+  "canonical_proof_changed": false,
+  "old_acceptance_receipt_changed": false,
+  "new_check_status": "ISOLATED_DECLARED_INPUT_REPLAY_PASS_CONDITIONAL",
+  "required_checks": [
+    "reconstruct from package manifest and exactly 568 inherited inputs",
+    "verify.py --replay-panels",
+    "test_controls.py",
+    "absence/tamper of newly declared manifest rejected before numerical work"
+  ],
+  "external_review": "EXTERNAL_REVIEW_OPEN",
+  "complete_model_identification_accepted": false,
+  "fresh_replay": {
+    "status": "BOUND_REPAIR_REPLAY_PASS_CONDITIONAL",
+    "package_files": 100,
+    "inherited_files": 568,
+    "mathematical_status": "AUTHOR_DERIVED",
+    "external_review": "EXTERNAL_REVIEW_OPEN",
+    "complete_model_identification_accepted": false,
+    "all_inherited_analytic_lemmas_reproved": false,
+    "corrected_core_tail_rows": 84,
+    "contour_remainder_upper_cap": "1.682e-88",
+    "new_panels_recomputed": 16,
+    "whole_arithmetic_hulls_inside_errors": 84,
+    "direct_energy_upper_cap": "4.632e-11",
+    "operator_energy_upper_cap": "1.391e-10",
+    "retained_energy_cap": "1e-9"
+  },
+  "new_manifest_negative_controls": [
+    {
+      "case": "missing",
+      "returncode": 1,
+      "rejected_before_numerics": true,
+      "stderr": "REPAIR CHECK FAILED: [Errno 2] No such file or directory: '<isolated-checkout>/research/x-c1/w9-residual-centered-control-even-2026-10-21/MANIFEST.json'"
+    },
+    {
+      "case": "tampered",
+      "returncode": 1,
+      "rejected_before_numerics": true,
+      "stderr": "REPAIR CHECK FAILED: Inherited input hash: research/x-c1/w9-residual-centered-control-even-2026-10-21/MANIFEST.json"
+    }
+  ],
+  "existing_negative_controls_passed": 6,
+  "diagnostic_paths_normalized": true
+}

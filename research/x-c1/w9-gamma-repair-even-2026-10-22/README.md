@@ -23,7 +23,7 @@ python -B research/x-c1/w9-gamma-repair-even-2026-10-22/verify.py --check
 python -B research/x-c1/w9-gamma-repair-even-2026-10-22/test_controls.py
 ```
 
-Der Standardlauf prüft alle neuen und 567 geerbten Dateibindungen, exakte
+Der Standardlauf prüft alle neuen und 568 geerbten Dateibindungen, exakte
 Kernel-/Radiuskontrollen, die portable rationale Hüllen-/Budgetprüfung,
 die unabhängige Normrechnung und den radiuskorrigierten inneren Randbeleg.
 Temporäre Ausgaben liegen außerhalb des gebundenen Pakets. Für die zusätzliche
@@ -50,3 +50,12 @@ Die Pfade des inneren Replays werden aus dem aktuellen Checkout abgeleitet;
 keine Windows-Laufwerksbuchstaben oder Symlinks sind erforderlich.
 Vollständige Quellen-/Modellidentifikation und externe Gesamtabnahme bleiben
 offen. Die zweite Richtung bleibt zurückgestellt.
+
+## Eingangsbindungsrevision vom 22. Oktober 2026
+
+Das historische Manifest aus #252 wird nun zusätzlich als Eingang gebunden.
+Der Rand-Replay liest es; seine bisherige Auslassung in der Eingangsliste
+verhinderte die Rekonstruktion ausschließlich aus deklarierten Eingängen.
+Die numerischen Ergebnisdateien und Beweisanker bleiben bytegleich.
+`ACCEPTANCE.json` dokumentiert weiterhin die ursprüngliche Abnahme;
+`BINDING_REVISION.json` führt die getrennte Revisionsprüfung.
