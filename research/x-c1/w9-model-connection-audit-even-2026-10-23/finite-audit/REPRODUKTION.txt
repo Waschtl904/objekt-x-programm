@@ -1,0 +1,32 @@
+Reproduktion – Python 3.12, python-flint 0.9.0
+
+Alle Berichte und Resultate gehören zum gebundenen Commit
+beb38c9d1cba666bb3b7ddab9577873e59d854c4. Repository und alte Pakete werden
+nicht verändert. Der Nutzer stellt einen vollständigen Checkout dieses
+Commits bereit. Alternativ reichen die 668 exakt gebundenen Dateibytes für
+die neuen Prüfer; der alte endliche --check-Lauf benötigt sein Manifest.
+
+Schnelle Prüfung der ausgelieferten Bindungen und Resultate:
+ python -B check_results.py
+
+Frischer Lauf der neuen Prüfungen aus einem neuen Ausgabeordner:
+ python -B reproduce.py --repo <Checkout> --out <neuer-Ordner>
+Das prüft zuerst alle 668 Dateien; danach Kernhüllen, 5120 Gaußatome,
+den vollständigen n128-Aufbau aus gespeicherten Atomen und den rationalen
+Zusatzpreis. Es werden vorhandene Knoten ausgewertet, keine neue Regel,
+Richtung oder äußere Residuumquadratur erzeugt. Einige Minuten Laufzeit.
+
+Der gemeinsame Eingangs- und Vierdateienfix-Replay kann unabhängig mit
+inputs/Gemeinsame-Gegenpruefung-original.zip und dessen reproduce.py
+ausgeführt werden. Er wurde hier bereits frisch vollständig wiederholt;
+evidence/fresh-joint.log enthält diesen Lauf. Das Originalarchiv bleibt
+bytegleich. Der frühere Modellanschluss samt deterministischer Revision
+liegt separat im zweiten Eingangsarchiv. Dessen alte Laufbelege sind
+historische Belege, keine neu gemessenen Läufe dieses Pakets.
+
+Der ursprüngliche endliche Quellencap-Lauf wurde frisch ausgeführt:
+ python -B research/x-c1/w9-residual-centered-control-even-2026-10-21/verify.py --repository <Checkout> --output-dir <neuer-Ordner> --check
+
+Die neue Gesamtprüfung ist weiterhin bedingt auf den präzisen Aussagen
+P1–P5 im Bericht. Programme und Hashes ersetzen die analytischen Herleitungen
+nicht. Python -O/-OO wird an den neuen zentralen Einstiegen abgewiesen.

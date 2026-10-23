@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "fresh_source_files_checked": 668,
+  "checks": {
+    "component-rebuild.json": {
+      "original_file_sha256": "c3c8be3ca6bdd78fd8e184fbde02cc1ce2b3ca47e03914d25da19b3d23e6d20e",
+      "fresh_file_sha256": "0dbe09f3fe7215445d88dde3a35e0a9b1290f03befd95534cff91454ea53bec0",
+      "all_deterministic_fields_equal": true,
+      "deterministic_fields_sha256": "37ce7f88aced3d43da8980e2bb7dffafd328e5ec4994b88a21de8bafa9bb5766"
+    },
+    "rounding-result.json": {
+      "original_file_sha256": "9484e7a33b0990022791d8b54709f9fac110c2d4bebeecdfaec284846f167b18",
+      "fresh_file_sha256": "9484e7a33b0990022791d8b54709f9fac110c2d4bebeecdfaec284846f167b18",
+      "all_deterministic_fields_equal": true,
+      "deterministic_fields_sha256": "95848355e53b200b689920fcca5223189723def75680f9d19f32eb20f5b398a2"
+    },
+    "audit-result.json": {
+      "original_file_sha256": "c308421200e737c9026d70dd2d1422b1fefb809a47660223775b71baabefc95c",
+      "fresh_file_sha256": "c51d8d42818a821818506435fdd7ad7b5311a5f214ba4bb73e813ad1046ac4a4",
+      "all_deterministic_fields_equal": true,
+      "deterministic_fields_sha256": "80be3872746a4ce4f46a0610c797846abb1b13fa2f4a6a93efe50dbb6ada08b9"
+    }
+  },
+  "only_excluded_fields": [
+    "seconds",
+    "component_rebuild_sha256"
+  ],
+  "fresh_component_seconds": 168.22039820003556,
+  "reproduce_script_sha256": "2d3c2969d6bbeea0d11478d9a11a29313e5b9c789c34a5cae9146de82cda2b3b",
+  "new_quadrature": false
+}

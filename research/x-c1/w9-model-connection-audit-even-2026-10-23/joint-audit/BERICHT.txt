@@ -1,0 +1,101 @@
+OBJEKT X – GEMEINSAME GEGENPRÜFUNG, 23. OKTOBER 2026
+
+Das neue Paket ist unabhängig geprüft. Seine drei fachlichen Zusatzläufe
+reproduzieren sämtliche mathematischen Ergebnisfelder exakt. Der kleine
+Vierdateien-Bindungsfix besteht die isolierte Eingangsprüfung. Zusätzlich
+liegt eine neue Herleitung der ganzen rohen Kern-Schalen-Operatorgrenze vor.
+Die vollständige analytische Gesamtabnahme bleibt offen.
+
+1. Bindungsfix
+
+Der Patch ändert exakt INPUT_BINDINGS.json, README.md, MANIFEST.json und
+die neue BINDING_REVISION.json im Gamma-Reparaturpaket. Die gelieferten
+Ersatzdateien wurden byteweise reproduziert; alle anderen Originaldateien,
+insbesondere Beweis, Zahlenresultate und alte ACCEPTANCE.json, bleiben gleich.
+Die isolierte Kopie enthält genau 100 manifestierte Paketdateien, das
+Manifest selbst und 568 historische Eingänge, also 669 Dateien.
+
+Fehlendes und verändertes altes Manifest werden vor der Zahlenrechnung
+zurückgewiesen. Die sechs vorhandenen Negativkontrollen bestehen ebenfalls.
+Die 16 unveränderten Randabschnitte wurden in dieser Runde nicht erneut
+integriert: Ihre frühere unabhängige Prüfung bleibt am Originalkopf gebunden.
+Der übermittelte neue 16-Abschnitte-Replay ist als fremder Beleg enthalten,
+nicht als neuer eigener Lauf bezeichnet.
+
+Portabilität: Bei isolierter Patch-Anwendung mit der lokalen Windows-
+Zeilenendenkonfiguration entstand die neue JSON-Datei zunächst mit CRLF.
+Ihr Inhalt war identisch, ihr Hash nicht. Mit unveränderten Bytes bzw.
+git -c core.autocrlf=false apply ist der gesamte Vierdateienstand exakt.
+Der Patch selbst musste dafür nicht geändert werden.
+
+2. Frische mathematische Gegenprüfung
+
+Die tatsächliche feste Kombination wurde in allen 191 niedrigen Quellen-
+koordinaten neu ausgewertet. Die gesamte Intervall-Differenznorm beträgt
+weniger als 1.032e-30, bei übernommener Fehlerhülle rund 1.750000823e-15.
+Alle vollen Intervalle und sämtliche mathematischen Felder stimmen exakt
+mit dem gelieferten Ergebnis überein. Laufzeit hier rund 36 Sekunden.
+Dies ist keine ganze Quellnorm und keine Prüfung aller 84 Quellspalten.
+
+Die fünf Schur-/Liftungsmodelle und fünf nichtorthogonalen U8-Modelle mit
+30 Fehlervarianten wurden frisch wiederholt. Die Moment-/Rundungsdiagnostik
+stimmt ebenfalls in allen mathematischen Ergebnisfeldern überein.
+Das Modellmoment um 6.8755e-18 wird nicht auf Null gesetzt; die niedrige
+Leckage und der hybride Gaußübergang behalten ihre eigenen Fehlerpreise.
+
+3. Neuer analytischer Fortschritt
+
+Aus dem exakten reellen Gamma-Kern wird |Gamma(z)|<=41/120<1/2 für den
+benötigten Bereich hergeleitet. Hierfür wird kein geerbter Restpreis eines
+Gamma-Polynoms verwendet. Der ganze Carleman-/Reflexions-/Primtransport,
+Q8m und der adjungierte Momentlift ergeben zusammen
+
+   rohe Kern-Schalen-Operatornorm <11.439 <100,
+   ganze Q8m-Norm <18.282 <100.
+
+Die rohe Schranke gilt auch für niedrige Leckage. Zusätzlich wurde die
+bezeichnete endliche Q-Grenze auf dem Grad-95-Raum geprüft; alle 96 dazu
+benötigten Legendreidentitäten wurden rational kontrolliert.
+Die bisher verwendeten Caps bleiben unverändert. Voraussetzung bleibt die
+Identifikation des physischen Q mit der beanspruchten arithmetischen Form.
+Die neue Herleitung ist in ROHER-OPERATOR.txt vollständig ausgeschrieben.
+
+4. Gemeinsame Kleinstreste
+
+Die alternativen Grenzen beider Sitzungen werden je Ursache durch ihr
+Maximum zusammengeführt, nicht addiert. Enthalten sind w-Rundung samt
+Richtungsfehler-Verschiebung, exakter hoher Momentlift, übernommene Moment-/
+Ableitungshülle der anderen Modellstufen und unser ganzer Korrekturabgleich.
+Alle Preise werden ausdrücklich in die ursprüngliche Quellen-Einheit
+umgerechnet. Ihre gemeinsame rationale Obergrenze ist
+
+   <7.729e-239 <1e-150.
+
+p-Preis und Kernquadratur werden hierfür nicht erneut gebucht. Der letzte
+Vergleich ist bedingt auf den angegebenen Verstärkungsgrenzen. Er beweist
+noch nicht, dass jedes analytisch verwendete kleine Restglied vollständig
+erfasst ist. Die zuvor reproduzierte bedingte Restenergie <4.632e-11 wird
+daher weder erhöht noch zur analytischen Gesamtabnahme aufgewertet.
+
+5. Empfohlene Fortsetzung
+
+Den Vierdateien-Bindungsfix separat als PR führen. Der konkrete Patch und
+ein PR-Entwurf liegen bei. CI muss am tatsächlich veröffentlichten Kopf
+geprüft werden; diese lokale Gegenprüfung behauptet keinen solchen CI-Lauf.
+Die Forschungsergänzung bleibt davon getrennt.
+
+Als nächste analytische Pflicht bleiben insbesondere die gemeinsame
+gewichtete Quellencap 10, korrigierte Modellnorm/Verstärkungsgrenzen,
+Quellen-/Domänenidentifikation, historische Kontur-/Quadraturlemmata und
+der vollständige Restkatalog. Die zweite Richtung bleibt zurückgestellt.
+
+Erneut bestätigter main bei dieser Prüfung:
+beb38c9d1cba666bb3b7ddab9577873e59d854c4.
+Die offene PR-Liste zeigte #251, #244 und #187; kein zusätzlicher Bindungsfix-PR.
+Aus dieser Sitzung erfolgten kein Push, PR, Merge oder Branchwechsel.
+Die Übergabe wurde nicht automatisch an eine andere Sitzung gesendet.
+
+Beide unveränderten Eingangsarchive sind unter inputs/ enthalten. Die
+großen Repositorydaten werden über ihre bisherigen 668 Bindungen bezogen.
+reproduce.py wiederholt die neue Gegenprüfung aus einem lokalen Checkout
+oder einem passenden Snapshot. REPRODUKTION.txt beschreibt den Aufruf.

@@ -1,0 +1,11 @@
+test_optimization_rejected_at_active_entrances (__main__.Controls.test_optimization_rejected_at_active_entrances) ... ok
+test_removed_signed_correction_rejected (__main__.Controls.test_removed_signed_correction_rejected) ... ok
+test_scope_remains_conditional (__main__.Controls.test_scope_remains_conditional) ... ok
+test_tampered_file_rejected (__main__.Controls.test_tampered_file_rejected) ... ok
+test_wrong_contour_radius_is_detected (__main__.Controls.test_wrong_contour_radius_is_detected) ... ok
+test_wrong_geometry_is_detected (__main__.Controls.test_wrong_geometry_is_detected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 3.283s
+
+OK

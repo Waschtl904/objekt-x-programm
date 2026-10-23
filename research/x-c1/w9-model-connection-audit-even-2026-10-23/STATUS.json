@@ -1,0 +1,25 @@
+{
+  "scope": "one unchanged fixed even witness from #252/#254",
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "internal_analytic_acceptance": "CONDITIONAL_NOT_FINISHED",
+  "second_direction_started": false,
+  "L1": {
+    "status": "OPEN",
+    "includes": [
+      "LOW-HIGH-SOURCES",
+      "H-SOURCE",
+      "REST-CATALOGUE"
+    ],
+    "next_subtask": "H-SOURCE",
+    "question": "Do historical eRaw, eLow, feature and h-model prices fully cover the corrected physical source, including high components, answer model, Gamma remainder and frozen T coefficients?",
+    "whole_source_proof_replaced_by_191_coordinates": false
+  },
+  "inherited_prerequisites": [
+    "P1 physical Q/domain identification",
+    "P2 A8/U8/K/response Gram/coercivity",
+    "P3 complete source-error transfer (L1)",
+    "P4 historic quadrature/contour/endpoint and 64/128 bridge",
+    "P5 complete tiny-rest catalogue (L1)"
+  ]
+}

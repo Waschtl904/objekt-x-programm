@@ -1,0 +1,117 @@
+{
+  "status": "CONDITIONAL_ALLOCATION_NOT_EXTERNAL_ACCEPTANCE",
+  "entries": [
+    {
+      "id": "p",
+      "quantity": "K-norm of p-p0",
+      "bound": [
+        "58599278906709202966538150174758436158315682659417131081455969635815078807/100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "58599278906709202966538150174758436158315686688157613721118580246144516687/100000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "transport": "10, once",
+      "source": "whole/whole_error_inventory.py: p_round, p_feature, p_physical, ea_direction",
+      "review": "inherited source/force lemmas open"
+    },
+    {
+      "id": "low_feature",
+      "quantity": "D-normalized low U8 feature at fixed p0",
+      "bound": [
+        "38944548161086447052083226323761601293751864198409227341971996868131/100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "9736137040271611763020806580940400323437966049602306835492999217033/25000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "transport": "10, once",
+      "source": "whole/whole_error_inventory.py: eta0, etaerr",
+      "review": "inherited common-source lemmas open"
+    },
+    {
+      "id": "raw_and_leakage",
+      "quantity": "raw source and low leakage",
+      "bound": [
+        "218750102882751121381275685127954380661921340215597475578742601221/100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "109375051441375560690637842563977190330960670107798737793187182707/50000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "transport": "100/delta, then sqrt(5/21)",
+      "source": "whole/whole_error_inventory.py: rawerror, lowerror, low_round",
+      "review": "inherited physical/source lemmas open"
+    },
+    {
+      "id": "gamma_model",
+      "quantity": "regular Gamma approximation applied to corrected model",
+      "bound": [
+        "3832962382164757454330524873032514716331263104936327003458566878763/100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "958240595541189363582631218258128679082815776234081750864641719691/25000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "transport": "already X units",
+      "source": "whole/ANALYTIC_CAPS.md section 2; #254 transfer check",
+      "review": "Gamma remainder and corrected-model caps conditional"
+    },
+    {
+      "id": "direct_Q",
+      "quantity": "direct Q image and frozen geometry errors",
+      "bound": [
+        "4525476012825762815633807565102155020356440066051726287/100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "282842250801610175977112972818884688772277551790006401/6250000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "transport": "already X units",
+      "source": "whole/whole_error_inventory.py: q_error",
+      "review": "inherited whole finite-degree Q bounds conditional"
+    },
+    {
+      "id": "gamma_repair",
+      "quantity": "whole signed repair function",
+      "bound": "X norm <3.653e-7",
+      "transport": "once in whole energy norm",
+      "source": "#254 norm/independent_norm.py; prior PR254 independent replay",
+      "review": "not recomputed as a new norm in this step"
+    },
+    {
+      "id": "core_quadrature",
+      "quantity": "old core quadrature and resolved inner boundary strip",
+      "bound": "see bound #254 verify.py result",
+      "transport": "existing core price; no second charge for signed boundary resolution",
+      "source": "#254 PROOF.md sections 4-5",
+      "review": "previous replay complete; analytic contours and endpoint lemmas open"
+    },
+    {
+      "id": "post_M",
+      "quantity": "final M on exact high vector",
+      "bound": "9.89853892191731265E-805",
+      "transport": "already conservative X price",
+      "source": "FUNKTIONSANSCHLUSS.txt section 4",
+      "review": "new derivation, inherited fixed-model/source caps"
+    },
+    {
+      "id": "moment160",
+      "quantity": "moment series and inherited amplification",
+      "bound": "4.24203018970626174E-239",
+      "transport": "conservative factor 100 in combined allowance",
+      "source": "whole/ANALYTIC_CAPS.md section 2",
+      "review": "amplification 1e40 remains an inherited condition"
+    },
+    {
+      "id": "whole_model_bridge",
+      "quantity": "whole rebuilt repair minus independent correction",
+      "bound": "6.64700777053134898E-313",
+      "transport": "X price",
+      "source": "rebuild.py, component-rebuild.json",
+      "review": "fresh numerical conditional PASS"
+    },
+    {
+      "id": "canonical_w",
+      "quantity": "H_new J(w-w0) plus directional-error rebase",
+      "bound": "6.19792162850537961E-279",
+      "transport": "L-dual, then X-equivalent for ledger comparison",
+      "source": "rounding.py, rounding-result.json",
+      "review": "fresh numerical PASS under inherited whole caps"
+    },
+    {
+      "id": "shared_small_allowance",
+      "quantity": "post_M + transported moment series + whole bridge + w rounding",
+      "bound": "4.24203018970626174E-237",
+      "transport": "fits existing raw 1e-150 once; existing 100/delta >1 retained",
+      "source": "rounding-result.json",
+      "review": "no use of an unexplained budget reserve"
+    }
+  ],
+  "full_inherited_lemma_audit_complete": false
+}

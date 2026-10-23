@@ -1,0 +1,31 @@
+ÜBERGABE AN DIE FÜHRENDE SITZUNG – NICHT AUTOMATISCH VERSENDET
+
+Basis bleibt main beb38c9d1cba666bb3b7ddab9577873e59d854c4.
+#254 ist integriert; keinen zweiten Reparatur-PR mit denselben Dateien anlegen.
+
+Neue Belege: vollständiger Source->Cache-Replay, ganzfunktionaler Anschluss
+der Gammakorrektur <6.648e-313, ausgeschriebene Schur-/Moment-/U8-Herleitung,
+post-M-Rest und expliziter Transport der kanonischen w-Rundung.
+Die zusätzliche alte Manifestbindung steht in SOURCE_FILES.json.
+
+Als Nächstes ausschließlich die verbleibende Lemmata-Abnahme:
+1. Die termweise Identität in FUNKTIONSANSCHLUSS.txt an den gebundenen
+   Definitionen von nu, H_new, g, g_F, F, U8, K, Lambda_T und J prüfen.
+   Insbesondere W_X-Adjunkte und X-Dichte auseinanderhalten.
+2. Quellen-/Projektionspreise für feste p0/f0, M* und abschließendes M
+   einschließlich modellierter niedriger Leckage bestätigen. Das kleine
+   modellierte Moment ist kein Beweis exakter Momentfreiheit.
+3. ANALYTIC_CAPS.md und force_control.py auf Geltungsbereich prüfen:
+   rohe g-Cap für niedrige und hohe Anteile, ganze finite Q-Bilder,
+   korrigierte Modellnorm, Gamma-/Momentreste und Faktor 1e40.
+4. Kontur-/Randlemmata und sämtliche transportierten Fehlerpreise mit
+   Quelle, Konstante, Norm und Reviewstatus führen. radiuskorrigierter
+   innerer Rand bleibt zwingend; p-Preis und Randquadratur nicht doppeln.
+5. Erst nach diesem Abgleich über einen neuen separaten Ergänzungs-PR
+   entscheiden. Die alten eingefrorenen Pakete erhalten. Die zusätzliche
+   Bindung gehört in die Ergänzung, nicht in eine stille Umschreibung
+   historischer Beweisstände.
+
+Kein Mergeauftrag aus dieser Übergabe, keine zweite Richtung und keine
+Großintegration. Ergebnis soll PASS unter benannten Voraussetzungen,
+UNRESOLVED oder einen konkret belegten Defekt unterscheiden.

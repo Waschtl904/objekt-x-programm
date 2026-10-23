@@ -1,0 +1,126 @@
+OBJEKT X – GANZE ROHE KERN-SCHALEN-GRENZE, 23. OKTOBER 2026
+Autorenherleitung; bedingt auf der angegebenen physischen Q-Identifikation.
+Externe Prüfung offen. Keine Änderung der bisher verwendeten Cap 100.
+
+Diese Herleitung setzt die physische Operatorform aus dem gebundenen
+a9-inverse-spike-calibration-2026-10-15/original/nstar/FUNKTIONSANSCHLUSS.txt
+voraus. Sie beweist nicht erneut deren Identifikation mit der beanspruchten
+arithmetischen Form. Innerhalb dieser Form wird die rohe Grenze hier direkt
+hergeleitet. Insbesondere wird kein endlicher Koordinatenausschnitt als
+Norm der ganzen Kopplung ausgegeben.
+
+1. Exakter reeller Gammakern
+
+Für r>0 gilt mit z=r/2
+ k(r)=exp(-r/2)/(1-exp(-2r))
+     =1/(2r)+Gamma(r/2),
+ Gamma(z)=(sech(z)+csch(z)-1/z)/4.
+Am Ursprung ist Gamma stetig mit Wert 1/4.
+
+Für 0<z<=b=log(3)<11/10 gilt
+ 0<=1/z-csch(z)=(sinh(z)-z)/(z*sinh(z))
+                  <=(sinh(z)-z)/z²<=z*cosh(11/10)/6.
+Die letzte Ungleichung ist Taylors Formel bis Ordnung 2 mit Rest.
+Die gerichtete Auswertung bestätigt cosh(11/10)<2. Daher
+ |Gamma(z)|<=(1+(11/10)*2/6)/4=41/120<1/2.
+Dieser Beleg verwendet keinen Restpreis eines Gamma-Polynoms.
+Die reelle Schranke wird nicht als Schranke auf komplexen Konturen verwendet.
+Die zusätzliche Modellabweichung beim Ersetzen von Gamma durch das
+gespeicherte Polynom bleibt dennoch ein eigener bisheriger Prüfpunkt.
+
+2. Exakte komprimierte Q-Darstellung und Q8m
+
+Mit l als halbem Horizont und Nullfortsetzung lautet die physische Wirkung
+
+ Q_l f(x)=D_l f(x)+V_l(x)f(x)
+           -int_-l^l Gamma(|x-y|/2)f(y)dy-S_l f(x),
+ D_l f(x)=1/2 int_-l^l (f(x)-f(y))/|x-y| dy,
+ V_l(x)=-log(2*pi)-EulerGamma-1/2 log(l²-x²).
+
+Zur Konstante: int_epsilon^infty k(r)dr
+=atanh(exp(-epsilon/2))+atan(exp(-epsilon/2)). Nach zweimaligem
+Auftreten und Abzug von kappa=log(8*pi)+EulerGamma+pi/2 erhält man
+im Grenzübergang die angegebene logarithmische Multiplikation. Damit ist
+hier die Konstante nicht aus einer Polynomapproximation übernommen.
+
+Setze a=3 log(2)/2, m(x)=cosh(x/2), h=b-a und
+ P=2 sum_(n=2,3,4,5,7,8) log(prime(n))/sqrt(n).
+Die Primverschiebungen sind Kontraktionen auf L² der nullfortgesetzten
+Funktionen; die Summe beider Richtungen kostet höchstens P. Der reine
+Randkontakt weiterer Kanäle ändert die L²-Wirkung nicht.
+
+Aus |m'|<=sinh(a/2)/2 folgt |D_a m|<=a*sinh(a/2)/2.
+Ferner sind auf t in (0,1)
+ ||log(1-t)||_2=sqrt(2),  |log(1+t)|<=log(2).
+Mit M=sqrt(2a)*cosh(a/2), c=|-log(2*pi)-EulerGamma-log(a)| und
+einer reellen Gamma-Cap R folgt daher für die ganze Halbintervallnorm
+
+ ||Q8m|| <= sqrt(2a)*a*sinh(a/2)/2
+           +M*(c+sqrt(2)/2+log(2)/2+2a*R+P).
+
+Dies schließt die logarithmischen Endpunkte und sämtliche Primverschiebungen
+ein. Es ist keine nur auf hohen Funktionen gültige Abschätzung.
+Mit R=1/2 liefert die gerichtete Rechnung ||Q8m||<18.282.
+
+3. Ganze disjunkte Kopplung
+
+Der singuläre direkte Anteil besitzt nach Verschiebung an die Schnittstelle
+den Kern 1/(2(s+t)), s,t>0. Der gewichtete Schurtest mit Gewicht t^(-1/2)
+und int_0^infty t^(-1/2)/(s+t)dt=pi*s^(-1/2) gibt Norm <=pi/2.
+Die Einschränkung auf endliche Teilintervalle vergrößert diese Norm nicht.
+
+Beim reflektierten Anteil gilt x+y>=a. Seine Hilbert–Schmidt-Schranke ist
+sqrt(h/a)/2. Die beiden regulären Kerne kosten zusammen 2R*sqrt(a*h).
+Auf beiden Seiten gilt das gleiche Halbintervallmaß 2dx; daraus entsteht
+kein zusätzlicher Faktor 2 in diesen Operatornormen.
+
+Somit ist die ganze ungeprojizierte direkte Kopplung beschränkt durch
+ C_cross=pi/2+sqrt(h/a)/2+2R*sqrt(a*h)+P <8.280.
+
+Die Schalenmomentnorm im Maß 2dx lautet
+ lambda_op=sqrt((h+sinh(b)-sinh(a))/4),
+ mu=int_0^a m² dx=(a+sinh(a))/2.
+Der adjungierte Momentlift hat deshalb Preis
+ lambda_op*||Q8m||/mu.
+
+Für die rohe Auswertung auf einem beliebigen inneren L²-Feld u lautet
+die äußere Funktionaldichte
+ B_raw u=Q_cross u - m_shell/mu * int_0^a (Q8m)(y)u(y)dy.
+Damit gilt
+ ||B_raw|| <= C_cross+lambda_op*||Q8m||/mu <11.439.
+
+Auf dem momentfreien Kern ist dies der X-Dichte-Adjungierte von g.
+Die Formel definiert zugleich eine beschränkte rohe Fortsetzung auf alle
+inneren L²-Felder. Gerade diese Fortsetzung darf für niedrige Leckage
+verwendet werden. Das zwischen Kern und Schale unveränderte L²-Maß und
+der dx-Momentfaktor sind im obigen Rang-eins-Preis enthalten.
+
+Die verwendete Cap 100 ist also für diese ganze rohe Wirkung gültig.
+Zum Abgleich: Mit der älteren, schwächeren Gamma-Cap R=2 ergeben sich
+C_cross<9.023, ||Q8m||<23.401 und die rohe Cap <13.066.
+
+4. Endlicher Grad-95-Raum als eigene, zusätzliche Aussage
+
+Für lokale Legendrepolynome ist D_H P_n=H_n P_n. Aus dem geteilten
+Differenzenquotientenintegral folgt exakt
+ D_H x^k=H_k x^k-sum_(j ungerade, j<k) x^(k-1-j)/(j+1).
+raw_operator.py prüft damit alle 96 tatsächlich benötigten Legendre-
+Identitäten rational. Mit der Legendreorthogonalität folgt Norm <=H_95
+auf diesem endlichen Polynomraum.
+
+Die Auswertungsschranke ||p||_infty<=96*||p||_X/sqrt(2h), die vollständige
+Logpotentialnorm, Reflexion, Gammawirkung, Primverschiebungen und der
+innere Momentlift ergeben zusammen die im Skript ausgeschriebene Grenze
+||Q Lambda p||<189.863*||p||_X. Damit ist auch der bisher verwendete
+grobe Faktor 10000 für diesen genau bezeichneten Grad-95-Raum gedeckt.
+Diese endliche Aussage wird nicht auf beliebige hohe Polynome übertragen.
+
+5. Grenze des neuen Belegs
+
+Neu hergeleitet und numerisch geprüft sind die rohe Cap 100, die vollständige
+Q8m-Cap 100 und die bezeichnete endliche Q-Cap, jeweils unter der physischen
+Q-Identifikation. Die Cap 10 des gemeinsamen gewichteten Quellentransports,
+die korrigierte Modellnorm 1e20, U8-Voraussetzungen, Gamma-Modellfehler,
+Kontur-/Quadraturlemmata und die gemeinsame Vollständigkeit sämtlicher
+Moment-/Ableitungsreste sind dadurch nicht automatisch bewiesen.
+Kein neuer Energiedeckel, keine zweite Richtung und keine Statuspromotion.

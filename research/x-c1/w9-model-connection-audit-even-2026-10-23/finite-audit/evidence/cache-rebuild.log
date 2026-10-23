@@ -1,0 +1,7 @@
+REFERENCE_BOUND 7.5
+N128_SOURCE_BUILT 15.0
+N128_BOUND_ATOMS_0 15.24
+N128_BOUND_ATOMS_16 18.95
+N128_BOUND_ATOMS_32 20.84
+N128_BOUND_ATOMS_48 22.8
+{'scope': 'fresh algebraic reconstruction of n128 cache from its 5120 stored atoms', 'components_exact': {'ustatic': True, 'outerstatic': True, 'upp': True, 'outerreg': True, 'momentR': True}, 'all_exact': True, 'seconds': 94.1627329619987}

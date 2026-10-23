@@ -1,0 +1,7 @@
+OBJEKT X – endliche analytische Restprüfung, 23. Oktober 2026
+Basis beb38c9d1cba666bb3b7ddab9577873e59d854c4; ausschließlich fester gerader Zeuge.
+Pflichtprüfungen: 20 neue Paketbindungen, 668 Repositorybindungen; unveränderte Reproduktion des gemeinsamen Pakets; gebundener endlicher Quellen-Cap-Lauf; analytische Kontrolle seiner Norm-/Gewichtsübergänge; benannte Kontur-/Quadraturabhängigkeiten; einmaliges Fehlerledger und rationale Schlussrechnung.
+Gezielter Zusatz: Cache-Gaußbindungen prüfen. Eine bloße Intervallüberlappung ist keine Identität; gegebenenfalls den vollständigen Rundungsunterschied explizit begrenzen.
+Keine Wiederholung der 411 Energieabschnitte, 65 alten Paarungsabschnitte oder vollständigen 16 neuen Randintegrationen ohne konkreten Befund. Historische Resultate bleiben als übernommen bezeichnet.
+Keine Repositoryänderung, kein Push/PR/Merge, keine zweite Richtung oder Statuspromotion.
+Abschluss: Einträge mit Aussage, Geltungsbereich, Beweisanker, Anwendung, Preis und Status. Eine konkrete interne Lücke nicht durch die Bezeichnung externe Gesamtabnahme ersetzen.

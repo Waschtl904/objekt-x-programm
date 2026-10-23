@@ -1,0 +1,39 @@
+{
+  "status": "FRESH_OUTPUT_DIRECTORY_REPRODUCTION_PASS",
+  "ignored_fields": [
+    "seconds"
+  ],
+  "records": [
+    {
+      "result": "source-caps.json",
+      "mathematical_fields_exact": true,
+      "fresh_sha256": "0d4b971918af8889b1ab524e24c2a45eb5578b5eea2a4598452ee29c93108bf3",
+      "reference_sha256": "eee029de6c966e8be4bc2d40f5691087000939cbf201f3811dbf39e5e298a9e6"
+    },
+    {
+      "result": "cache-atom-audit.json",
+      "mathematical_fields_exact": true,
+      "fresh_sha256": "8a9f617816a36231dd4c84ea13fb2900d34322c77c3f26dd95ff5a53e6f81921",
+      "reference_sha256": "86c204a156ae29117c6dc0ec8131d773f085e3aebad89138499e2faec1d5d1db"
+    },
+    {
+      "result": "cache-rebuild.json",
+      "mathematical_fields_exact": true,
+      "fresh_sha256": "84c5142a42c6c3aa2c91fd70ba2f1ee5ad0415bc75cdff2a86345d94c51e59c6",
+      "reference_sha256": "f95cb8af142030d3f73a7bf1d05ad15296b25fd4cadebe4d589f568be978b489"
+    },
+    {
+      "result": "cache-price.json",
+      "mathematical_fields_exact": true,
+      "fresh_sha256": "fc9ffc9dc6e6ea675177486188b6e014be96742162f0e8b6685cea1551ab203e",
+      "reference_sha256": "fc9ffc9dc6e6ea675177486188b6e014be96742162f0e8b6685cea1551ab203e"
+    }
+  ],
+  "scripts": {
+    "cache_binding_audit.py": "7c02e94a9bd450271358997e485e901ac28e43312f2fe3fe2abe831f34d876bb",
+    "cache_price.py": "72ded2f33e4a2bae2e7d54c5ebb34378695a0d16a3bbee611826d42ea0d43074",
+    "cache_rebuild_128.py": "334cbb793886d9b66c04a294fc97dd96b7ae75b80b3f24dfa6034ca026bd3789",
+    "exact_cache.py": "e89d8726658275729ea0cfe87f00a4de8d75c1e345fedaf870c3aae67572819b",
+    "source_cap_audit.py": "292dad330797ca480244e67ac5970d5f5872c7b51add07e649b809ffee4550d4"
+  }
+}

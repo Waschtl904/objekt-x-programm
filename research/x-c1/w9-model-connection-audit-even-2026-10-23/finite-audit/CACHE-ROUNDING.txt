@@ -1,0 +1,49 @@
+OBJEKT X – VOLLSTÄNDIGE GAUSSATOM-DIFFERENZEN
+23. Oktober 2026. Ergänzungsbeleg, keine neue Quadraturregel.
+
+core_quadrature_control_128.py prüft gespeicherte Knoten und h-Gewichte mit
+overlaps. Überlappung allein beweist weder Gleichheit noch Einschluss.
+Der neue Lauf wertet alle 5120 vorhandenen Knoten und Gewichte mit der
+ursprünglichen h-Funktionsform erneut aus. 634 Knoten- und vier Gewichts-
+intervalle enthalten die neue Intervallauswertung nicht vollständig;
+alle überlappen. Das ist kein Nachweis falscher Zahlen, aber ein Anlass,
+die volle Differenz zu bezahlen statt Identität zu behaupten.
+
+Die vollständigen Differenzintervalle liefern
+ sum |Delta(weight)| <5.989e-904,
+ sum |Delta(node)| <1.514e-920.
+Der maximale Knotendifferenzbetrag wird gesondert verwendet. Alle Knoten
+liegen in ihren gebundenen Zellen, deren Abstand zur äußeren Schale über
+1e-16 liegt. Die Gesamtvariation des gespeicherten Maßes ist frisch <1
+geprüft. Ein zusätzlicher Aufbau aus den 5120 gespeicherten Atomen
+reproduziert ustatic, outerstatic, upp, outerreg und momentR exakt.
+
+Seien W die Summe der Gewichts-Differenzbeträge, D die größte Knoten-
+differenz und g=1e-16. Für den direkten und reflektierten Cauchykern
+zusammen gilt |K|<=1/g und |d_y K|<=1/g². Da sqrt(2(b-a))<1, kostet die
+gesamte X-Norm höchstens W/g+D/g². Der reguläre Polynomkernel hat Betrag
+<4 und Ableitung<1e6, ebenfalls frisch aus den Koeffizienten geprüft;
+sein Preis ist <4W+1e6D. Der durch die Gesamtmasse veränderte Mittelwert-
+lift kostet <200W, mit der ganzen rohen Cap 100.
+
+Für qm=Q8m160 gelten auf |x/a|<=1.2 die frisch geprüften Preise
+|qm_poly|<100, |m160|<3. Auf einem Kreis vom Radius g/2 um jeden Knoten
+bleiben die beiden Randlogarithmen im rechten Halbraum; der fest gewählte
+Primzellenzweig wird analytisch fortgesetzt. Beide verglichenen reellen
+Knoten bleiben in dieser Zelle. Die logarithmische Hülle 1e6(1+|log(g/2)|)
+ist <1e9. Cauchy liefert |qm'|<2e25. Die h-Momentdifferenz kostet deshalb
+2W+D, die qm*h-Momentdifferenz höchstens 1e9 W+2e25 D. Der äußere
+Momentfaktor ist <2; delta>1 und mu>1 erlauben, Nenner wegzulassen.
+
+Der konservative Gesamtpreis lautet
+ W/g+D/g²+4W+1e6D+200W+2(2W+D+1e9W+2e25D)
+und ist rational <5.989e-888<1e-886 in X-Norm. Er ist ein Zusatzpreis für
+die endliche Maßdarstellung, keine erneute Zahlung des physikalischen
+h-Modellfehlers, der inneren Randquadratur oder des p-Wechsels.
+
+Sein Quellen-Budgetäquivalent ist delta/100 mal der X-Preis. Zusammen mit
+den gebundenen bereits identifizierten Kleinresten bleibt die Summe
+<7.729e-239<1e-150. Das bezeichnet Budgetäquivalente, keine rückwärts
+aus einer L-Dualnorm hergeleitete X-Norm einer unbekannten Funktion.
+Die allgemeinen Kontur-/Quadraturlemmata werden durch diese rationale
+Zahlenprüfung nicht automatisch abgenommen.

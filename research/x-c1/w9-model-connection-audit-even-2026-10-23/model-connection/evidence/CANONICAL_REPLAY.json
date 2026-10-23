@@ -1,0 +1,37 @@
+{
+  "status": "CANONICAL_SUMMATION_TWO_FULL_REPLAYS_PASS_CONDITIONAL",
+  "python": "3.12.14",
+  "python_flint": "0.9.0",
+  "platform": "Linux",
+  "PYTHONHASHSEED": [
+    0,
+    1
+  ],
+  "replays": [
+    {
+      "file": "component-rebuild.json",
+      "all_deterministic_fields_equal": true
+    },
+    {
+      "file": "rounding-result.json",
+      "all_deterministic_fields_equal": true
+    },
+    {
+      "file": "audit-result.json",
+      "all_deterministic_fields_equal": true
+    }
+  ],
+  "allowed_nondeterministic_fields": [
+    "seconds",
+    "component_rebuild_sha256"
+  ],
+  "canonical_bounds_differing_from_received": [
+    "old_cache_ustatic_X",
+    "new_old_outerstatic_minus_du_X"
+  ],
+  "core_components_exact": true,
+  "whole_correction_bound_identical": true,
+  "mathematical_thresholds_changed": false,
+  "old_failure_retained": true,
+  "external_acceptance": false
+}

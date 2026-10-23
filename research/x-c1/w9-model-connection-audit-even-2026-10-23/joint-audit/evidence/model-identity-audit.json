@@ -1,0 +1,130 @@
+{
+  "status": "EXACT_ALGEBRA_AND_BOUND_SOURCE_MAP_PASS_CONDITIONAL",
+  "repository_base": "beb38c9d1cba666bb3b7ddab9577873e59d854c4",
+  "original_builder_sha256": "ed58da3caacd5ca39de1f910c77920e7079eec905a560b487600c71e97c8df64",
+  "corrected_source_sha256": "5075a3b796d44291a258691046942b0309b0b8101b5d635464559c3f4b64a31d",
+  "bound_source_equations": {
+    "(g, prime, *_)": "build_core(-ff, -pv, w)",
+    "(gpsi, primepsi, sp, spx, lm, slocal)": "build_core(zero, pv, -(1 - eta) * w)",
+    "alpha": "(intg - hmom[0]) * scale / me",
+    "momentR": "hm + a * mqpsi + a * uq - hq / delta",
+    "physical_mom": "[a ** (k + 1) * v - hmom[k] / delta for k, v in enumerate(um)]",
+    "ustatic[None]": "ustatic.get(None, arb_poly([])) + phif - (plow + alpha * mc) * (1 / delta)",
+    "outerstatic[None]": "outerstatic[None] - mc * (lm / mu)"
+  },
+  "prime_channels": [
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      8,
+      2
+    ]
+  ],
+  "schur_fixtures": [
+    {
+      "fixture": 1,
+      "schur_to_physical_density": true,
+      "moment_adjoint": true,
+      "WX_Riesz_conversion": true,
+      "Ldual_density_bound": true,
+      "p_telescope_once": true,
+      "negative_controls_detected": 4
+    },
+    {
+      "fixture": 2,
+      "schur_to_physical_density": true,
+      "moment_adjoint": true,
+      "WX_Riesz_conversion": true,
+      "Ldual_density_bound": true,
+      "p_telescope_once": true,
+      "negative_controls_detected": 4
+    },
+    {
+      "fixture": 3,
+      "schur_to_physical_density": true,
+      "moment_adjoint": true,
+      "WX_Riesz_conversion": true,
+      "Ldual_density_bound": true,
+      "p_telescope_once": true,
+      "negative_controls_detected": 4
+    },
+    {
+      "fixture": 4,
+      "schur_to_physical_density": true,
+      "moment_adjoint": true,
+      "WX_Riesz_conversion": true,
+      "Ldual_density_bound": true,
+      "p_telescope_once": true,
+      "negative_controls_detected": 4
+    },
+    {
+      "fixture": 5,
+      "schur_to_physical_density": true,
+      "moment_adjoint": true,
+      "WX_Riesz_conversion": true,
+      "Ldual_density_bound": true,
+      "p_telescope_once": true,
+      "negative_controls_detected": 4
+    }
+  ],
+  "old_U8_fixtures": [
+    {
+      "fixture": 1,
+      "U8_factorization_identity": true,
+      "oblique_alpha_and_low_projection": true,
+      "exact_high_moment_lift": true,
+      "negative_controls_detected": 2
+    },
+    {
+      "fixture": 2,
+      "U8_factorization_identity": true,
+      "oblique_alpha_and_low_projection": true,
+      "exact_high_moment_lift": true,
+      "negative_controls_detected": 2
+    },
+    {
+      "fixture": 3,
+      "U8_factorization_identity": true,
+      "oblique_alpha_and_low_projection": true,
+      "exact_high_moment_lift": true,
+      "negative_controls_detected": 2
+    },
+    {
+      "fixture": 4,
+      "U8_factorization_identity": true,
+      "oblique_alpha_and_low_projection": true,
+      "exact_high_moment_lift": true,
+      "negative_controls_detected": 2
+    },
+    {
+      "fixture": 5,
+      "U8_factorization_identity": true,
+      "oblique_alpha_and_low_projection": true,
+      "exact_high_moment_lift": true,
+      "negative_controls_detected": 2
+    }
+  ],
+  "physical_research_witnesses_added": 0,
+  "finite_fixtures_replace_general_proof": false,
+  "all_inherited_analytic_lemmas_reproved": false,
+  "complete_numerical_error_allocation_accepted": false,
+  "external_acceptance": false
+}

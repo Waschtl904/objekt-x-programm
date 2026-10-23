@@ -1,0 +1,26 @@
+Titel: Fix: fehlende Manifestbindung im Gamma-Replay ergänzen
+
+Der Rand-Replay des Gamma-Reparaturpakets liest das historische Manifest
+aus #252. Dieser Eingang fehlte in INPUT_BINDINGS.json; eine Rekonstruktion
+ausschließlich aus den deklarierten Dateien war daher unvollständig.
+
+Der Vierdateienfix ergänzt die Bindung, dokumentiert sie in README und
+BINDING_REVISION.json und aktualisiert das Paketmanifest. Jetzt sind
+568 historische Eingänge deklariert. Beweis, mathematische Resultate,
+Status und ursprüngliche ACCEPTANCE.json bleiben bytegleich.
+
+Änderungsklasse: Bindung der mathematischen Reproduktionskette, keine reine
+Sprachkorrektur. Es wird keine mathematische Statuspromotion beantragt.
+
+Prüfung: Patch gegen beb38c9d1cba666bb3b7ddab9577873e59d854c4 angewandt,
+exakt vier Ersatzdateien reproduziert, vollständige isolierte Dateimenge
+geprüft, fehlendes/manipuliertes Manifest vor Numerik abgewiesen, sechs
+bestehende Negativkontrollen bestanden. Die beigefügte BINDING_REVISION.json
+dokumentiert den separat erfolgten vollständigen 16-Randabschnitte-Replay.
+Eine zusätzliche Gegenprüfung vom 23. Oktober hat die Bindungsänderung
+isoliert geprüft; mathematisch unveränderte Randintegrale wurden dort
+nicht nochmals gerechnet. Keine alten CI-Ergebnisse dem neuen Head zuordnen.
+
+Offen: CI am endgültigen PR-Head, gesonderte Mergeentscheidung und die
+analytische Gesamtabnahme. Die 191er-Quellenprüfung und neue Operatorherleitung
+gehören nicht zum vorgesehenen Vierdateien-Diff. Kein Auto-Merge.

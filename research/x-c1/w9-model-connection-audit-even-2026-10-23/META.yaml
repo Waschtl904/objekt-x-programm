@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "W9-MODEL-CONNECTION-AUDIT-FIXED-EVEN",
+  "date": "2026-10-23",
+  "kind": "DIAGNOSTIC",
+  "strategic": false,
+  "local_only": true,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "Versioned model-connection and bounded analytic audit for the unchanged fixed even witness; full historical source-error transfer L1 remains open.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "No second direction, degree-11, odd parity, N12, milestone 4, Object X or external acceptance claim.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "No completed L1 source-error transfer or complete analytic acceptance.",
+    "No historical proof/acceptance replacement or status promotion."
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-model-connection-audit-even-2026-10-23/PROOF.md",
+    "sha256": "92b46250ee9e450554509601dfd5dad302d87d32f7fd0be990ed377ab4e9bc65"
+  }
+}

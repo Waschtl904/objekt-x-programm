@@ -1,0 +1,23 @@
+{
+  "BERICHT.txt": "1c8f0723e49df84260e79e53e750fe29db07bd782b9f6a97ae46fa91025a30b0",
+  "FEHLERBUCH.json": "c52162d9f73ea72eebfa7521f0cefea5e9510664d86ffc2efa25716b4298bb20",
+  "FUNKTIONSANSCHLUSS.txt": "1da97b46138a8a9440ade78f0693120fe2fd14e50e814cab4dfa21cdd1479a6b",
+  "PLAN.txt": "01a13da4c4fa4a9c790c564fb2c051027652247bcc84c727b2101dbe9ecf8637",
+  "REPRODUKTION.txt": "7c5576905d2d8e8c6e3a980ced6bbc7a0a4fc26c0055fac9558a78b20817566a",
+  "REVISION-2026-10-23.txt": "4c6e562d1da23639bf8fa31598a8659f9802a61ea660f34533edc3d0e9b53904",
+  "SOURCE_FILES.json": "5f7fe284f5c3a1b10ea5652d5f4811d2bf6064c9ef06abb45022dedd93ec48af",
+  "UEBERGABE.txt": "f7cf8bb2652d4fb0f4db18f0da59a403f1b19e8a63663edbfe350c7666b8de83",
+  "evidence/CANONICAL_REPLAY.json": "2a45cba6378397d04754c94d22083486e000082748373216b2ff8684c18694fe",
+  "evidence/PORTABLE_REPLAY.json": "589035c54c7f38b5e3e7cdb6ae065cce374706a111c2c8b42846361ba493244b",
+  "evidence/REMOTE_STATE.json": "c51cb3642fb8e1207175bce4d2c849d2331b050b0cf3683b9ae9440cc9f42986",
+  "evidence/audit-result.json": "3654096b5b64d2f5e7b08090ec830a2405b189f14ba1550794a319960bbe45a2",
+  "evidence/component-rebuild.json": "063762c5987f9c5dc41d0bef6d4d498013d67de608608d36d2fac7601052ec84",
+  "evidence/first-independent-interval-diagnostic.json": "2735b7a61175d1bc84ccae2c58b83afd73b3df124b253f0f93388ea20c960257",
+  "evidence/projection-allowance.json": "05445c20694cccdd8492d0a25a53e50289c72642d023c57f0b635bc4ff66613d",
+  "evidence/rounding-result.json": "066c851bbfd4ca036067febf0fbfae4546556cd4aeaa879c7ac2270c291b18f9",
+  "reproduce.py": "2d3c2969d6bbeea0d11478d9a11a29313e5b9c789c34a5cae9146de82cda2b3b",
+  "scripts/audit.py": "92b1009d3bb90d51ef31be13d21ef8fa3c83afd16c83cd925301350c8f722025",
+  "scripts/exact_cache.py": "e89d8726658275729ea0cfe87f00a4de8d75c1e345fedaf870c3aae67572819b",
+  "scripts/rebuild.py": "7ddf51ed108fd9bcc2671918987d6c02e7e559c23b90d60c14fd18be01373754",
+  "scripts/rounding.py": "4cc7e9b5220cd69f5c85172e9df62be14210143d250dbb41639ced7a45dae839"
+}
