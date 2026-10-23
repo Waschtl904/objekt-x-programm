@@ -1,0 +1,107 @@
+--- a/research/x-c1/w9-gamma-repair-even-2026-10-22/INPUT_BINDINGS.json
++++ b/research/x-c1/w9-gamma-repair-even-2026-10-22/INPUT_BINDINGS.json
+@@ -100,6 +100,7 @@
+     "research/x-c1/w9-residual-centered-control-even-2026-10-21/AUDIT.json": "37f75793f2aa7f891a3318f80a0f497d8c1a71516f54f5722280071477ece115",
+     "research/x-c1/w9-residual-centered-control-even-2026-10-21/DEVELOPMENT_NOTES.md": "ad1798abf64a5c5f3aee4cdca0c323308130b607bdedff12bf09d8b2c065e2df",
+     "research/x-c1/w9-residual-centered-control-even-2026-10-21/INPUT_BINDINGS.json": "2e10906cfdf911c72d3bd59a7274f503395307ceee631817ed8834c138a3503b",
++    "research/x-c1/w9-residual-centered-control-even-2026-10-21/MANIFEST.json": "cc1aa64855995f96d0127ea09cec94c59b826fb62a6ce601f0373b2cd5d0b151",
+     "research/x-c1/w9-residual-centered-control-even-2026-10-21/PROOF.md": "222d6880db1b3d3c70be3bf0d004cbb9ae5c1bcfb1bd0a57796b7ad678c6d624",
+     "research/x-c1/w9-residual-centered-control-even-2026-10-21/REPLAY_BINDINGS.json": "8138a59476827251de5f22901d9c70da8140e53c78819784555f726faa9c224f",
+     "research/x-c1/w9-residual-centered-control-even-2026-10-21/RESULT.json": "487389cdeeedafe6268c7596b2cf6ebdcf656e120030960ded26d15cb15f45dd",
+--- a/research/x-c1/w9-gamma-repair-even-2026-10-22/README.md
++++ b/research/x-c1/w9-gamma-repair-even-2026-10-22/README.md
+@@ -23,7 +23,7 @@
+ python -B research/x-c1/w9-gamma-repair-even-2026-10-22/test_controls.py
+ ```
+ 
+-Der Standardlauf prüft alle neuen und 567 geerbten Dateibindungen, exakte
++Der Standardlauf prüft alle neuen und 568 geerbten Dateibindungen, exakte
+ Kernel-/Radiuskontrollen, die portable rationale Hüllen-/Budgetprüfung,
+ die unabhängige Normrechnung und den radiuskorrigierten inneren Randbeleg.
+ Temporäre Ausgaben liegen außerhalb des gebundenen Pakets. Für die zusätzliche
+@@ -50,3 +50,12 @@
+ keine Windows-Laufwerksbuchstaben oder Symlinks sind erforderlich.
+ Vollständige Quellen-/Modellidentifikation und externe Gesamtabnahme bleiben
+ offen. Die zweite Richtung bleibt zurückgestellt.
++
++## Eingangsbindungsrevision vom 22. Oktober 2026
++
++Das historische Manifest aus #252 wird nun zusätzlich als Eingang gebunden.
++Der Rand-Replay liest es; seine bisherige Auslassung in der Eingangsliste
++verhinderte die Rekonstruktion ausschließlich aus deklarierten Eingängen.
++Die numerischen Ergebnisdateien und Beweisanker bleiben bytegleich.
++`ACCEPTANCE.json` dokumentiert weiterhin die ursprüngliche Abnahme;
++`BINDING_REVISION.json` führt die getrennte Revisionsprüfung.
+--- /dev/null
++++ b/research/x-c1/w9-gamma-repair-even-2026-10-22/BINDING_REVISION.json
+@@ -0,0 +1,53 @@
++{
++  "revision_kind": "INPUT_BINDING_COMPLETENESS_FIX",
++  "base_commit": "beb38c9d1cba666bb3b7ddab9577873e59d854c4",
++  "original_head": "dd644c65f6e10184dea7b64370774e7a40814e89",
++  "original_manifest_sha256": "ce44e7b00cef7c77a19c732ce0eb58b7e137bcb45a9afd85c82e02349f5f3edf",
++  "added_repository_input": "research/x-c1/w9-residual-centered-control-even-2026-10-21/MANIFEST.json",
++  "sha256": "cc1aa64855995f96d0127ea09cec94c59b826fb62a6ce601f0373b2cd5d0b151",
++  "declared_inherited_inputs": 568,
++  "mathematical_results_changed": false,
++  "canonical_proof_changed": false,
++  "old_acceptance_receipt_changed": false,
++  "new_check_status": "ISOLATED_DECLARED_INPUT_REPLAY_PASS_CONDITIONAL",
++  "required_checks": [
++    "reconstruct from package manifest and exactly 568 inherited inputs",
++    "verify.py --replay-panels",
++    "test_controls.py",
++    "absence/tamper of newly declared manifest rejected before numerical work"
++  ],
++  "external_review": "EXTERNAL_REVIEW_OPEN",
++  "complete_model_identification_accepted": false,
++  "fresh_replay": {
++    "status": "BOUND_REPAIR_REPLAY_PASS_CONDITIONAL",
++    "package_files": 100,
++    "inherited_files": 568,
++    "mathematical_status": "AUTHOR_DERIVED",
++    "external_review": "EXTERNAL_REVIEW_OPEN",
++    "complete_model_identification_accepted": false,
++    "all_inherited_analytic_lemmas_reproved": false,
++    "corrected_core_tail_rows": 84,
++    "contour_remainder_upper_cap": "1.682e-88",
++    "new_panels_recomputed": 16,
++    "whole_arithmetic_hulls_inside_errors": 84,
++    "direct_energy_upper_cap": "4.632e-11",
++    "operator_energy_upper_cap": "1.391e-10",
++    "retained_energy_cap": "1e-9"
++  },
++  "new_manifest_negative_controls": [
++    {
++      "case": "missing",
++      "returncode": 1,
++      "rejected_before_numerics": true,
++      "stderr": "REPAIR CHECK FAILED: [Errno 2] No such file or directory: '<isolated-checkout>/research/x-c1/w9-residual-centered-control-even-2026-10-21/MANIFEST.json'"
++    },
++    {
++      "case": "tampered",
++      "returncode": 1,
++      "rejected_before_numerics": true,
++      "stderr": "REPAIR CHECK FAILED: Inherited input hash: research/x-c1/w9-residual-centered-control-even-2026-10-21/MANIFEST.json"
++    }
++  ],
++  "existing_negative_controls_passed": 6,
++  "diagnostic_paths_normalized": true
++}
+--- a/research/x-c1/w9-gamma-repair-even-2026-10-22/MANIFEST.json
++++ b/research/x-c1/w9-gamma-repair-even-2026-10-22/MANIFEST.json
+@@ -1,11 +1,12 @@
+ {
+   ".gitattributes": "609bc2562a9e30610597040af01eb35a4d20a815874ee171dc8fa416961212ba",
+   "ACCEPTANCE.json": "66ae36f5901e02484ab9b89e89d7022621cd9c704fddba211f06acb7c2b0f863",
+-  "INPUT_BINDINGS.json": "4cf06f0aca5d293adb3e6d0229b5b1cb88540b22c5f197be9cee576560805c11",
++  "BINDING_REVISION.json": "57d8bdb5739b2181d65f241e219929a87dad598a491c476f1781ae0c81c88c8c",
++  "INPUT_BINDINGS.json": "a3889d37ca7953e5faad720393e8f6b76727a50ee4a570b54df3b025d7c3749a",
+   "META.yaml": "8c7e11c3c176fc6a8e863db853d74db44d29da2407044c5be3b6642e478923c1",
+   "OPEN_OBLIGATIONS.md": "5bc8221e38f31a7f5e119235d2a50d3ad731e7cb074c2efd0758068ae0d2b071",
+   "PROOF.md": "b00c76f6f7952e9d22a7f1047dbb5e064945f2c71f0f3e50c3bd429fd46b49b7",
+-  "README.md": "c6cb250b20fe890d069836afce372f15eb8ebcdf0ebf52900b0035dd1fc915d2",
++  "README.md": "e6ff15e0497ddca34252d9ddf8c4bc64c55a21b201c0b312165c6dd66493bfa5",
+   "corrected_builder.py": "5ae839b30d3fea958a3e3ad888d85492b614dd75e00e05b32beb2db58e827eb1",
+   "kernel_geometry.py": "efbdaae3fcef0699f7de5b6602a80b5dd4a1b9c46ec7de500dd9703de8a20f00",
+   "norm/BERICHT.txt": "9cd3e8f8ba91f56e1c1c0ca7cbf1f2c632e576078405baefdb0280a5e2027aad",

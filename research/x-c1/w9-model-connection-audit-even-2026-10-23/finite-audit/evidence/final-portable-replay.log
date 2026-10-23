@@ -1,0 +1,36 @@
+PASS: package bindings, exact caps and bounded bookkeeping; H-SOURCE remains open.
+{
+  "continuous_corrected_u_norm": "[3.23963602199533e+17 +/- 4.92e+2]",
+  "continuous_alpha_cap": "[4.11541560327112e+17 +/- 2.93e+2]",
+  "explicit_moment_chain_factor": "[2.02000040000000e+22 +/- 1.02e+5]",
+  "explicit_moment_chain_X": "[8.56890268001872e-257 +/- 4.64e-272]"
+}
+PANELS 0 ATOMS 128 SECONDS 10.7
+PANELS 8 ATOMS 1152 SECONDS 24.5
+PANELS 16 ATOMS 2112 SECONDS 37.8
+PANELS 24 ATOMS 2624 SECONDS 45.9
+PANELS 32 ATOMS 3136 SECONDS 54.2
+PANELS 40 ATOMS 3648 SECONDS 61.4
+PANELS 48 ATOMS 4160 SECONDS 68.0
+PANELS 56 ATOMS 4672 SECONDS 74.6
+RESULT 5120 4486 5116 DX [1.51346548889e-920 +/- 2.51e-933] DW [5.98809257978e-904 +/- 4.50e-916]
+REFERENCE_BOUND 7.76
+N128_SOURCE_BUILT 15.18
+N128_BOUND_ATOMS_0 15.42
+N128_BOUND_ATOMS_16 19.16
+N128_BOUND_ATOMS_32 21.2
+N128_BOUND_ATOMS_48 23.25
+{'scope': 'fresh algebraic reconstruction of n128 cache from its 5120 stored atoms', 'components_exact': {'ustatic': True, 'outerstatic': True, 'upp': True, 'outerreg': True, 'momentR': True}, 'all_exact': True, 'seconds': 95.96195764100048}
+{
+  "complete_difference_X_display": "5.98881418321883130E-888",
+  "new_joint_raw_display": "7.72855480262583826E-239",
+  "noncontainment_counts": {
+    "nodes": 634,
+    "weights": 4
+  },
+  "negative_controls": [
+    "node_displacement",
+    "weight_displacement"
+  ]
+}
+PASS: new deterministic fields reproduced; analytic prerequisites remain as listed.

@@ -1,0 +1,12 @@
+{
+  "scope": "fresh algebraic reconstruction of n128 cache from its 5120 stored atoms",
+  "components_exact": {
+    "ustatic": true,
+    "outerstatic": true,
+    "upp": true,
+    "outerreg": true,
+    "momentR": true
+  },
+  "all_exact": true,
+  "seconds": 94.1627329619987
+}

@@ -1,0 +1,28 @@
+{
+  "status": "BOUNDED_PUBLICATION_CHECK_PASS_CONDITIONAL",
+  "manifest_entries": 87,
+  "base": "beb38c9d1cba666bb3b7ddab9577873e59d854c4",
+  "L1": "OPEN",
+  "external_review": "EXTERNAL_REVIEW_OPEN",
+  "replay": {
+    "pinned_sources": 668,
+    "model_hash_seeds": [
+      0,
+      1
+    ],
+    "joint_review_reproduced": true,
+    "source_caps_reproduced": true,
+    "historic_panels_reintegrated": false,
+    "cache_recomputed_in_this_replay": false,
+    "cache_evidence": "finite-audit/evidence/PORTABLE_REPLAY.json"
+  },
+  "tested_program_sha256": {
+    "verify.py": "cfff9e6d43f2471fa684cbcf7765a265c599c8a56e18d120b9304bcce4931055",
+    "test_controls.py": "b01ac608d3000c24d89ca848cc709d43eb4eb81e1942181319f6359940b46ae3"
+  },
+  "historical_packages_byte_preserved": true,
+  "publication_layer_negative_tests_passed": 8,
+  "active_local_links_checked": 67,
+  "metadata_checked_without_status_promotion": true,
+  "prior_manifest_entry_count_note": "The bounded replay started with 87 entries; subsequent byte-preservation attributes and this receipt do not change its programs or mathematical inputs."
+}

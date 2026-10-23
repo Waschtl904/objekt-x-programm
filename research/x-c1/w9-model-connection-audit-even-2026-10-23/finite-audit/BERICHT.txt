@@ -1,0 +1,108 @@
+OBJEKT X – ENDLICHE ANALYTISCHE RESTPRÜFUNG
+23. Oktober 2026
+
+Ergebnis: Die neue Gegenprüfung ist reproduziert. Zwei bisher pauschal
+geführte Caps und eine konkrete Cache-Bindung sind jetzt näher begründet.
+Die gesamte interne analytische Abnahme bleibt bedingt. Der nächste
+Einzelauftrag ist H-SOURCE, nicht eine Wiederholung des ganzen Vergleichs.
+
+Ein vollständiger zusätzlicher Lauf aus einem frischen Ausgabeordner
+reproduziert sämtliche deterministischen Ergebnisfelder der neuen Prüfer.
+Nur Laufzeiten sind ausgenommen; siehe evidence/PORTABLE_REPLAY.json.
+
+Neu ausgeführt und bestanden:
+* 20 Dateibindungen des Eingangsarchivs und alle 668 Repositorybindungen.
+* Vollständige Reproduktion des gemeinsamen Pakets: isolierter Vierdateien-
+  fix, 568 historische Eingänge, zwei fehlende/manipulierte Eingänge,
+  sechs vorhandene Negativtests, 191 Quellenkoordinaten, Modellidentitäten
+  mit 30 Fehlervarianten, Momentdiagnostik und ganze rohe Operatornorm.
+* Gebundener endlicher Quellenlauf: RESULT und AUDIT bytegleich. Die
+  gemeinsame D-gewichtete Wirkung aller 203 Quellen ist <6.051<10,
+  unter den expliziten Antwort-, Gram- und Koerzivitätsvoraussetzungen.
+* Quellenpolynome und ihre physischen Supnormen frisch rekonstruiert.
+  Daraus folgt für die korrigierte kontinuierliche Kernmodellfunktion
+  ||u0||<3.240e17<1e20. Kein Gaußmaß wurde als L²-Funktion behandelt.
+* Für die bezeichnete Grad-160-Momentkette: Verstärkung<2.021e22 und
+  zusätzlicher X-Preis<8.570e-257. Die größere bisherige Hülle bleibt stehen.
+* Alle 5120 vorhandenen Gaußatome frisch ausgewertet. Alle fünf daraus
+  gebildeten Cache-Komponenten exakt rekonstruiert. Die vollständigen
+  Atomdifferenzen kosten <5.989e-888 in X. Bloße Überlappung wird nicht
+  als Identität verwendet. Zwei künstlich vergrößerte Differenzen werden
+  vom neuen Preisprüfer abgewiesen.
+* Rationale Endrechnung und alle 84 ganzen arithmetischen Fehlerhüllen
+  erneut geprüft. Bedingte Energie: 4.631339149320193e-11 <4.632e-11.
+
+Einordnung der neuen Atomprüfung:
+634 Knotenintervalle und vier Gewichtsintervalle enthalten die jeweilige
+Neuauswertung nicht vollständig; sie überlappen. Das allein widerlegt
+keine gespeicherte Zahl. Der neue Beleg ergänzt die bisher zu schwache
+Identitätsprüfung um einen vollen Differenzpreis und einen tatsächlichen
+Aufbau aus den gebundenen Atomen. Die historische Quadratur wird nicht
+rückwirkend als neuer Lauf ausgegeben.
+
+Einmalige Buchung:
+Der neue Atompreis passt zusammen mit den bereits identifizierten
+Kleinresten in <7.729e-239 Quellen-Budgeteinheiten, gegenüber 1e-150.
+Alternativen für dieselbe Ursache werden durch ihr Maximum verbunden.
+p_total bleibt einmal mit Cap 10 gebucht; der innere h-Rand bleibt Teil
+der alten Kernquadratur. Die Gamma-Orientierung wird einmal als ganze
+Funktionskorrektur bezahlt. Die Energiegrenze wird dadurch nicht erhöht.
+Budgetäquivalente sind keine Umkehrung der X-zu-L-Dualnorm-Ungleichung.
+
+Verbleibende, endlich benannte Voraussetzungen:
+P1: Physische Operator-/Quelldomänen und Identifikation der verwendeten
+    Q-Darstellung mit der arithmetischen Form.
+P2: Alte A8/U8-, K-, Antwort-/Residualgram- und L-Koerzivitätslemmata
+    einschließlich ihrer gemeinsamen Quellenfehler, auf genau diesem Raum.
+P3: Vollständige alte Quellenfehler, insbesondere H-SOURCE:
+    answer_model_Hilbert + new_Gamma_Hilbert + frozen_T_Hilbert aus
+    assemble.Energy.residual_errors; außerdem die benannten alten hohen/
+    niedrigen F-/J-/Phi-Fehler und Koordinatenfehler.
+P4: Gültigkeit der gebundenen historischen Energie-, Kontur-, Taylor-,
+    Rand- und 64/128-Brückenbelege auf ihren angegebenen Zellen.
+    Die 411 alten Energieabschnitte wurden diesmal nicht neu integriert.
+P5: Vollständige Zuordnung der 1e-200-Posten in eRawF/eRawJ und der
+    1e-150-Reserve: Basis-/w-Rundung, hoher Nachlift, mc-Kette und die
+    getrennt gebuchte T-Frierung. Die mc-Kette ist jetzt konkret begrenzt;
+    ihre historische Einbettung bleibt ein benannter Anwendungspunkt.
+Die einzelnen Aussagen, Preise und Quellen stehen in PFLICHTEN.json.
+
+Bedingter Satz:
+Wenn P1–P5 für die in SOURCE_BINDINGS.json gebundenen Daten und den festen
+geraden Zeugen mit Kandidatenhash
+70e8f72ab0cb8ca1ac0d254392384a2040a9d76d04ebf82587c48771e9f34628 gelten,
+dann hat das korrigiert identifizierte Residuum r=nu-H_new Jw im vollständigen
+L-Dualraum dieses festen Einsatzes Restenergie <4.632e-11; die konservative
+Schranke <1.391e-10 und der bisherige Deckel 1e-9 bleiben gültig, ohne
+zusätzliche p-Buchung oder neue Forschungsrichtung.
+
+Nächster eng begrenzter Auftrag:
+H-SOURCE: die drei oben bezeichneten Summanden bis zu ihren ursprünglichen
+Herleitungen verfolgen; die genaue physische h-Quelle, T-Frierung,
+Normierung und zulässigen Domänen vergleichen; anschließend ihre einmalige
+Verwendung in low_feature_physical, p_physical und raw_X_error bestätigen.
+Die drei Auftritte gehören zu verschiedenen Fehlertransporten und dürfen
+nicht pauschal als Doppelzählung entfernt werden. Die 191 Koordinaten sind
+kein Ersatz für diesen ganzen Quellenbeleg. Bei einem Fehler genau den
+betroffenen Summanden korrigieren; andernfalls diese Einzelpflicht schließen.
+Diese offene Anwendung ist kein bereits nachgewiesener falscher Summand.
+
+Integration:
+main wurde über GitHub auf beb38c9d1cba666bb3b7ddab9577873e59d854c4
+abgeglichen. Die Repositorydateien blieben unverändert. Kein Push, PR,
+Merge, Branchwechsel oder neue CI. Der Vierdateienfix und PR-Entwurf liegen
+unverändert bei; seine Veröffentlichung ist getrennt von diesem Audit.
+568 historische Fix-Eingänge und 668 gesamte Audit-Quellen sind verschiedene
+Inventare: 100 ursprüngliche Paketdateien einschließlich Manifest plus 568
+Historieneingänge. Nach dem Fix kommt eine neue Paketdatei hinzu: 669 Dateien.
+
+Die zweite Richtung bleibt zurückgestellt. AUTHOR_DERIVED und
+EXTERNAL_REVIEW_OPEN bleiben erhalten. Externe Begutachtung und interne
+Anwendungskontrolle werden nicht miteinander gleichgesetzt.
+
+Methodische Zusatzgrenze:
+Alle Arb-Läufe benutzen python-flint 0.9.0; unterschiedliche Prüfer sind
+keine zweite unabhängige Intervallbibliothek. Das frühere deterministische
+Summationsproblem ist im beigefügten Vorbeleg erhalten. Der neue gemeinsame
+Replay führt dessen alten vollständigen Rebuild nicht erneut aus und
+behauptet deshalb keine rückwirkende plattformunabhängige Identität dafür.

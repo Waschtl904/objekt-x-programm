@@ -1,0 +1,13 @@
+Reproduktionsrevision vom 23. Oktober 2026.
+
+Der Originaleingang und seine Berichte bleiben im begleitenden Archiv erhalten.
+Diese abgeleitete Kopie ersetzt allein die ungeordnete Mengeniteration in
+scripts/rebuild.py durch eine feste Schluesselreihenfolge. Die daraus frisch
+erzeugten drei Ergebnisdateien stehen in evidence/. Beide vollstaendigen
+Wiederholungen mit PYTHONHASHSEED=0 und 1 haben identische mathematische Felder.
+Die urspruenglichen BERICHT.txt und PORTABLE_REPLAY.json beschreiben historische
+Laeufe; der neue Laufnachweis ist CANONICAL_REPLAY.json. Keine Toleranz gelockert,
+keine Quelle oder mathematische Definition geaendert. Pruefung auf Linux,
+Python 3.12.14 und python-flint 0.9.0; kein neuer Windows-Lauf behauptet.
+Die SOURCE_FILES.json bindet weiterhin den Originalstand beb38c9d und alle 668
+Eingaenge. Kein Repository-Patch, Push, Merge oder Statuswechsel ausgefuehrt.

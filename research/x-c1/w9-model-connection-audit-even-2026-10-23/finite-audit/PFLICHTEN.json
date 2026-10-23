@@ -1,0 +1,288 @@
+{
+  "base": "beb38c9d1cba666bb3b7ddab9577873e59d854c4",
+  "scope": "fester gerader Zeuge",
+  "overall": "CONDITIONAL_INTERNAL_ANALYTIC_REVIEW_NOT_FINISHED",
+  "external_review": "EXTERNAL_REVIEW_OPEN",
+  "next_single_obligation": "H-SOURCE",
+  "entries": [
+    {
+      "id": "BINDING",
+      "aussage": "Historisches Manifest explizit als Eingang binden",
+      "geltungsbereich": "Vierdateienfix; keine mathematische Änderung",
+      "quelle_beweisanker": [
+        "manifest-binding-fix.patch",
+        "evidence/binding-patch-result.json"
+      ],
+      "anwendung": "Frischer isolierter Replay; fehlende/manipulierte Datei abgewiesen; 669 Dateien insgesamt",
+      "fehlerbeitrag": "0",
+      "ergebnis": "für diesen Einsatz nachvollzogen",
+      "voraussetzungen": []
+    },
+    {
+      "id": "Q-DOMAIN",
+      "aussage": "Physische Q-Darstellung, gerade Fortsetzung, Domänen und Quellen stimmen mit arithmetischer Form überein",
+      "geltungsbereich": "Genau a8,a9, feste Quelle; keine A11-Positivität",
+      "quelle_beweisanker": [
+        "research/x-c1/a9-inverse-spike-calibration-2026-10-15/original/nstar/FUNKTIONSANSCHLUSS.txt",
+        "research/x-c1/a9-domain-continuation-2026-10-13/original/HERLEITUNG.txt"
+      ],
+      "anwendung": "Als P1 übernommen; Schur-/Dichtemodell ersetzt keine arithmetische Identifikation",
+      "fehlerbeitrag": "Strukturelle Voraussetzung",
+      "ergebnis": "benannte übernommene Voraussetzung",
+      "voraussetzungen": []
+    },
+    {
+      "id": "MODEL",
+      "aussage": "Schurresiduum, Korrekturgeometrie und ganze Funktionsdichte identifiziert",
+      "geltungsbereich": "Fester gerader Zeuge; Quellen gleich; X-Dichte nicht W_X-Rieszvektor",
+      "quelle_beweisanker": [
+        "inputs/Fruehere-Modellgegenpruefung-original.zip",
+        "inputs/Gemeinsame-Gegenpruefung-original.zip",
+        "research/x-c1/w9-gamma-repair-even-2026-10-22/corrected_builder.py"
+      ],
+      "anwendung": "Gebundene frühere ganze Rekonstruktion plus frisch wiederholte Modellfixtures; keine neue Behauptung des gesamten alten Rebuilds",
+      "fehlerbeitrag": "Korrektur <3.653e-7 X separat; algebraischer Anschluss <6.648e-313 historisch",
+      "ergebnis": "für diesen Einsatz nachvollzogen",
+      "voraussetzungen": [
+        "Q-DOMAIN"
+      ]
+    },
+    {
+      "id": "RAW-OP",
+      "aussage": "Rohe Kern-Schalen-Norm einschließlich Momentlift gilt auch für niedrige Leckage",
+      "geltungsbereich": "Ganzes L² des Kerns",
+      "quelle_beweisanker": [
+        "SOURCE-CAPS.txt",
+        "inputs/Gemeinsame-Gegenpruefung-original.zip: ROHER-OPERATOR.txt",
+        "evidence/raw-operator-result.json"
+      ],
+      "anwendung": "Exakter reeller Gamma-Kern; Carleman, Reflexion, Primtranslationen, Q8m",
+      "fehlerbeitrag": "Norm <11.439; beibehaltene Cap 100",
+      "ergebnis": "für diesen Einsatz nachvollzogen",
+      "voraussetzungen": [
+        "Q-DOMAIN"
+      ]
+    },
+    {
+      "id": "FORCE-203",
+      "aussage": "Gemeinsamer D-gewichteter Quellentransport ist <10",
+      "geltungsbereich": "Alle 203 Quellen; keine endliche Teilnorm als ganze Norm",
+      "quelle_beweisanker": [
+        "research/x-c1/w9-residual-centered-control-even-2026-10-21/PROOF.md §6",
+        "research/x-c1/w9-residual-centered-control-even-2026-10-21/force_control.py",
+        "SOURCE-CAPS.txt §6",
+        "evidence/finite-RESULT.json"
+      ],
+      "anwendung": "Frischer gebundener Lauf bytegleich; HS-Abschätzung aus ganzer Antwortidentität",
+      "fehlerbeitrag": "<6.051; p_total und low_feature_total jeweils einmal mit 10",
+      "ergebnis": "für diesen Einsatz nachvollzogen",
+      "voraussetzungen": [
+        "Q-DOMAIN",
+        "FORM-INPUTS"
+      ]
+    },
+    {
+      "id": "FORM-INPUTS",
+      "aussage": "A8/U8, positives D/K, Antwort-/Residualgram und Koerzivität",
+      "geltungsbereich": "R_L vollständige Forminverse auf exaktem T",
+      "quelle_beweisanker": [
+        "research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt",
+        "research/x-c1/w9-residual-centered-control-even-2026-10-21/PROOF.md §6",
+        "research/x-c1/w9-partial-energy-2026-10-18/weights.py build",
+        "research/x-c1/w9-rest-feasibility-even-2026-10-20/PROOF.md"
+      ],
+      "anwendung": "Benannte ursprüngliche Operatorlemmata; endlicher Replay prüft ihre Zahlenverwendung",
+      "fehlerbeitrag": "c=1977/500000, beta=20209999981781/182190000000000, h=16198/18219",
+      "ergebnis": "benannte übernommene Voraussetzung",
+      "voraussetzungen": []
+    },
+    {
+      "id": "SOURCE-HULLS",
+      "aussage": "Ganze reelle Hüllen der tatsächlich gebundenen g- und h-Modelle",
+      "geltungsbereich": "0<y<a8 bzw. 0<x<a9; physische Schalen für fortgesetzte Polynome",
+      "quelle_beweisanker": [
+        "SOURCE-CAPS.txt §§1–3",
+        "scripts/source_cap_audit.py",
+        "evidence/source-caps.json",
+        "research/x-c1/w9-partial-energy-2026-10-18/residuals.py"
+      ],
+      "anwendung": "Polynomquadratintegrale, absolute Legendrekoeffizienten und direkte Log-/Primabschätzungen",
+      "fehlerbeitrag": "g<4e15(1+|log(a8-y)|); h0<1e17(1+|log(a9-x)|)",
+      "ergebnis": "für diesen Einsatz nachvollzogen",
+      "voraussetzungen": [
+        "Q-DOMAIN"
+      ]
+    },
+    {
+      "id": "MODEL-NORM",
+      "aussage": "Korrigierte kontinuierliche Kernmodellnorm unter Cap",
+      "geltungsbereich": "Kontinuierliche Modellstufe vor Gaußersetzung; wahre und polynomiale Momentprojektion",
+      "quelle_beweisanker": [
+        "SOURCE-CAPS.txt §4",
+        "evidence/source-caps.json"
+      ],
+      "anwendung": "M*-Norm und ganze Quellenhüllen; keine Verwendung diskreter TV als L²-Norm",
+      "fehlerbeitrag": "||u0||<3.240e17<1e20; |alpha|<1e18",
+      "ergebnis": "für diesen Einsatz nachvollzogen",
+      "voraussetzungen": [
+        "SOURCE-HULLS"
+      ]
+    },
+    {
+      "id": "MOMENT-160",
+      "aussage": "Expliziter Transport der Grad-160-mc-Kette",
+      "geltungsbereich": "Festes p0,ff,low,w; g,gpsi,qm,alpha,outerstatic,mqpsi/uq/hq",
+      "quelle_beweisanker": [
+        "SOURCE-CAPS.txt §5",
+        "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/whole_function_probe.py",
+        "evidence/source-caps.json"
+      ],
+      "anwendung": "Teleskopfolge mit tatsächlicher Modellnorm, Alpha und Qpsi-Cap; gemischte Terme enthalten",
+      "fehlerbeitrag": "X-Preis <8.570e-257; größere historische Buchung bleibt",
+      "ergebnis": "für diesen Einsatz nachvollzogen",
+      "voraussetzungen": [
+        "MODEL-NORM",
+        "RAW-OP",
+        "FORM-INPUTS"
+      ]
+    },
+    {
+      "id": "LOW-HIGH-SOURCES",
+      "aussage": "Alte niedrige und hohe Quellenfehler sowie Koordinatenfehler gelten gemeinsam",
+      "geltungsbereich": "F,J,Phi; gemeinsame Grammetriken, nicht nur 191 Koordinaten",
+      "quelle_beweisanker": [
+        "research/x-c1/w9-partial-energy-2026-10-18/assemble.py Energy.__init__ eLJ/ELF/eRawA/eLowA/eRawF/eRawJ",
+        "research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json: old_sources, functions, a8_model",
+        "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/whole_error_inventory.py"
+      ],
+      "anwendung": "191 Koordinaten frisch; ganze Quellen- und Gramfehler als P3 übernommen",
+      "fehlerbeitrag": "EJ, EF, eRawF/J/A, eLowA, eBareF/J gemäß gebundenem Ledger",
+      "ergebnis": "benannte übernommene Voraussetzung",
+      "voraussetzungen": []
+    },
+    {
+      "id": "H-SOURCE",
+      "aussage": "Ganzer Fehler h_phys-h0 ist durch ed+ec+et begrenzt",
+      "geltungsbereich": "Tatsächliche feste Quelle, echte Hilbertnorm, richtige Normierung",
+      "quelle_beweisanker": [
+        "research/x-c1/w9-partial-energy-2026-10-18/assemble.py Energy.residual_errors",
+        "research/x-c1/w9-partial-energy-2026-10-18/residuals.py T_enclosure/T und Gamma360",
+        "research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json: response/functions",
+        "research/x-c1/a9-a11-whole-response-gram-2026-10-15/PROOF.md"
+      ],
+      "anwendung": "Nächste offene Anwendungskontrolle: ed=answer_model_Hilbert, ec=new_Gamma_Hilbert, et=frozen_T_Hilbert bis zur physischen Quelle verfolgen",
+      "fehlerbeitrag": "Als e.eResidual+Normierungsfehler in den getrennten low/p/raw-Transporten übernommen",
+      "ergebnis": "konkrete offene Lücke",
+      "voraussetzungen": [
+        "Q-DOMAIN",
+        "LOW-HIGH-SOURCES"
+      ]
+    },
+    {
+      "id": "QUAD-RULE",
+      "aussage": "Gaußfehler 8 L M 2^(-2n), Taylor-/Lograndformeln",
+      "geltungsbereich": "Holomorphe Zelle mit angegebener Kontur; positive Gaußgewichte",
+      "quelle_beweisanker": [
+        "inputs/Fruehere-Modellgegenpruefung-original.zip: ANALYTISCHER-TEILAUDIT.txt §7",
+        "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/taylor_model.py"
+      ],
+      "anwendung": "Elementare Regelbeweise von konkreten Konturhüllen getrennt",
+      "fehlerbeitrag": "Kein zusätzlicher physischer Preis",
+      "ergebnis": "für diesen Einsatz nachvollzogen",
+      "voraussetzungen": []
+    },
+    {
+      "id": "HISTORIC-PANELS",
+      "aussage": "411 Energieabschnitte, alte Integrationsabschnitte und Brücke gelten auf ihren tatsächlichen Zellen",
+      "geltungsbereich": "Ganze äußere Schale plus beide Endstücke; keine ausgelassene Fläche",
+      "quelle_beweisanker": [
+        "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/ANALYTIC_CAPS.md §§3–5",
+        "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/core_quadrature_control_128.py",
+        "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/core_model_bridge.py",
+        "research/x-c1/w9-residual-centered-control-even-2026-10-21/WHOLE_RESULT.json"
+      ],
+      "anwendung": "Hashbindungen und Schlussarithmetik erneut; 411 alte Abschnitte diesmal nicht integriert; konkrete Konturbelege übernommen",
+      "fehlerbeitrag": "E_old, e_core, e_bridge aus gebundenen Belegen",
+      "ergebnis": "benannte übernommene Voraussetzung",
+      "voraussetzungen": [
+        "QUAD-RULE",
+        "SOURCE-HULLS"
+      ]
+    },
+    {
+      "id": "CACHE-ATOMS",
+      "aussage": "Endliche 128/64-Gaußmaßdarstellung ist durch volle Unterschiede gebunden",
+      "geltungsbereich": "5120 vorhandene Atome und fünf Funktionskomponenten",
+      "quelle_beweisanker": [
+        "CACHE-ROUNDING.txt",
+        "evidence/cache-atom-audit.json",
+        "evidence/cache-rebuild.json",
+        "evidence/cache-price.json"
+      ],
+      "anwendung": "Frische Knoten-/Gewichtsauswertung; fünf Komponenten exakt aus Atomen; Überlappung nicht als Gleichheit benutzt",
+      "fehlerbeitrag": "Zusätzlicher X-Preis <5.989e-888; zwei Negativkontrollen",
+      "ergebnis": "für diesen Einsatz nachvollzogen",
+      "voraussetzungen": [
+        "SOURCE-HULLS",
+        "RAW-OP"
+      ]
+    },
+    {
+      "id": "X-L",
+      "aussage": "X-Dichte liefert L-Dualnormobergrenze",
+      "geltungsbereich": "Beschränkung auf exaktes T; positive Form L",
+      "quelle_beweisanker": [
+        "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/ANALYTIC_CAPS.md §5",
+        "research/x-c1/w9-residual-centered-control-even-2026-10-21/PROOF.md"
+      ],
+      "anwendung": "L>=21/5 W_X>=21/5 X impliziert ||ell_r||Ldual<=sqrt(5/21)||rho||X; nicht umkehrbar",
+      "fehlerbeitrag": "Faktor sqrt(5/21)",
+      "ergebnis": "für diesen Einsatz nachvollzogen",
+      "voraussetzungen": [
+        "FORM-INPUTS"
+      ]
+    },
+    {
+      "id": "REST-CATALOGUE",
+      "aussage": "Vollständigkeit aller kleinen Reststellen in historischen Quellstufen",
+      "geltungsbereich": "eRawF/eRawJ 1e-200; ganze 1e-150-Reserve; Basis, w, hoher Nachlift, mc-Kette, T-Frierung",
+      "quelle_beweisanker": [
+        "research/x-c1/w9-partial-energy-2026-10-18/assemble.py",
+        "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/whole_error_inventory.py",
+        "evidence/reconciliation-result.json",
+        "SOURCE-CAPS.txt §5"
+      ],
+      "anwendung": "Neue mc-Kette und Cachepreis konkret; allgemeine historische Restvollständigkeit P5; T-Frierung im Auftrag H-SOURCE",
+      "fehlerbeitrag": "Identifizierte gemeinsame Summe <7.729e-239<1e-150, als Budgetäquivalente",
+      "ergebnis": "benannte übernommene Voraussetzung",
+      "voraussetzungen": [
+        "H-SOURCE",
+        "LOW-HIGH-SOURCES",
+        "MOMENT-160",
+        "CACHE-ATOMS"
+      ]
+    },
+    {
+      "id": "BUDGET",
+      "aussage": "Einmalige p-/Rand-/Gamma-Buchung und rationale Energieformel",
+      "geltungsbereich": "Nur fester gerader Zeuge",
+      "quelle_beweisanker": [
+        "evidence/rational-cross-audit.json",
+        "evidence/cache-price.json",
+        "research/x-c1/w9-gamma-repair-even-2026-10-22/norm/rational_cross_audit.py",
+        "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/whole-error-ledger.json"
+      ],
+      "anwendung": "Rationale Rechnung frisch; p einmal, innerer Rand Teil Kernquadratur, neue Atomrundung innerhalb vorhandener Reserve",
+      "fehlerbeitrag": "E<4.632e-11; konservativ <1.391e-10; Deckel 1e-9",
+      "ergebnis": "für diesen Einsatz nachvollzogen",
+      "voraussetzungen": [
+        "Q-DOMAIN",
+        "FORM-INPUTS",
+        "LOW-HIGH-SOURCES",
+        "H-SOURCE",
+        "HISTORIC-PANELS",
+        "REST-CATALOGUE"
+      ]
+    }
+  ]
+}

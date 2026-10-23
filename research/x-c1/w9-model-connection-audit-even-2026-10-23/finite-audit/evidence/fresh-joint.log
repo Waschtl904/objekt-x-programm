@@ -1,0 +1,59 @@
+PASS: distribution hashes, 191 full difference intervals and norm, conditional tiny remainders, replay receipts and scope. Analytic total acceptance remains open.
+{
+  "status": "PATCH_AND_ISOLATED_BINDINGS_PASS",
+  "isolated_files": 669,
+  "package_files": 100,
+  "inherited_files": 568,
+  "new_negative_controls": [
+    {
+      "case": "missing",
+      "exit_code": 1,
+      "rejected_before_numerics": true
+    },
+    {
+      "case": "changed",
+      "exit_code": 1,
+      "rejected_before_numerics": true
+    }
+  ],
+  "existing_controls_passed": 6
+}
+STATUS FIXED_COMBINATION_LOW_SOURCE_CHECK_PASS_CONDITIONAL NORM [1.031118834191200e-30 +/- 4.22e-46] CAP [1.750000823064528e-15 +/- 4.70e-31] SECONDS 14.158895548000146
+PASS: bound source map, 5 Schur/W_X fixtures, 5 nonorthogonal U8 fixtures, 30 failing-mutation controls. Analytic total acceptance remains open.
+{
+  "corrected_core_mean": "[-73113923021.03084 +/- 4.05e-6]",
+  "raw_high_mean_after_subtracting_Phi_ff": "[+/- 2.46e-33]",
+  "corrected_core_moment_against_m160": "[6.87552715613196e-18 +/- 7.23e-33]",
+  "cosh160_sup_remainder": "[1.287136850494006e-335 +/- 2.47e-351]",
+  "candidate_w_midpoint_difference_norm": "[4.063964147340171e-309 +/- 1.13e-325]",
+  "J_X_operator_norm_upper_including_inherited_rounding": "[1.000307591387554 +/- 1.56e-16]",
+  "conditional_whole_w_rounding_Ldual_upper": "[3.102059775066942e-279 +/- 4.95e-295]",
+  "a_action_HS_error_included": "[7.865905825424893e-8 +/- 4.95e-24]",
+  "conditional_raw_high_lift_Ldual_upper": "[3.447271931203264e-294 +/- 3.38e-310]",
+  "inherited_U8_norm_upper": "[1.562754873714557e+26 +/- 6.28e+8]"
+}
+SECONDS 9.14925198399942
+{
+  "status": "RAW_OPERATOR_CAP_DERIVED_AND_CHECKED_CONDITIONAL_ON_PHYSICAL_Q",
+  "half_cap_values": {
+    "cross": "[8.27983976016851 +/- 2.93e-15]",
+    "Q8_m": "[18.2814705685851 +/- 3.60e-14]",
+    "raw_g_and_density_adjoint": "[11.4383817418504 +/- 4.71e-14]",
+    "local_degree95_Q": "[189.862921157007 +/- 1.87e-13]"
+  },
+  "legacy_two_values": {
+    "cross": "[9.02218510352990 +/- 1.28e-15]",
+    "Q8_m": "[23.4009903436070 +/- 3.80e-14]",
+    "raw_g_and_density_adjoint": "[13.0652411660016 +/- 2.48e-14]",
+    "local_degree95_Q": "[190.337215912324 +/- 4.43e-13]"
+  }
+}
+{
+  "status": "REPLAYS_AND_LISTED_SMALL_REMAINDER_SUM_PASS_CONDITIONAL",
+  "three_fresh_replays_match": true,
+  "191_norm_upper": "1.03111883419120042E-30",
+  "norm_to_cap_ratio": "5.89210485275971536E-16",
+  "joint_raw_source_upper": "7.72855480262583826E-239",
+  "completeness_remains_open": true
+}
+PASS: all deterministic review results reproduced. Full analytic acceptance remains open.

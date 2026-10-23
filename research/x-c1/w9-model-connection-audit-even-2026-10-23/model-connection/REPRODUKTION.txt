@@ -1,0 +1,35 @@
+REPRODUKTION DES NEUEN MODELLANSCHLUSSES
+
+Getestet: Python 3.13.7, python-flint 0.9.0, Windows, Arb-Präzision 3072 Bit
+nach dem unverändert bei 1024 Bit initialisierten gebundenen Probe-Eingang.
+Keine Optimierung mit -O/-OO; Assertions müssen aktiv bleiben.
+
+Voraussetzung: lokaler Git-Checkout mit Commit
+beb38c9d1cba666bb3b7ddab9577873e59d854c4 und dessen Git-Objekten.
+Der Checkout darf auf einem anderen Branch stehen und wird nicht verändert.
+
+python -u -B reproduce.py --repo PFAD_ZUM_CHECKOUT --run-dir NEUER_ORDNER
+
+Alternativ: --snapshot PFAD_ZUM_EXPORTIERTEN_REPOSITORY_ROOT statt --repo.
+Mit --stage-only werden ausschließlich 668 gebundene Dateien kopiert und
+geprüft. Der Zielordner muss noch nicht existieren. Eine lokale Installation
+von python-flint 0.9.0 muss für denselben Python-Interpreter verfügbar sein.
+
+Das Programm prüft zuerst dieses Liefermanifest. Danach erzeugt es im
+Zielordner pr254-review/ und model-identification/, exportiert die gehashten
+Git-Blobs bzw. kopiert passende Snapshot-Dateien und startet:
+  rebuild.py, rounding.py, audit.py.
+Es verwendet kein Netzwerk und führt keine neue Quellenquadratur durch.
+Die 2560 gebundenen alten Gaußatome werden wiederverwendet. Laufzeit für
+den numerischen Hauptlauf hier etwa drei Minuten, zuzüglich Datenexport.
+
+Alle deterministischen Ergebnisfelder werden mit den gelieferten Belegen
+verglichen. Laufzeit und der davon abhängige frische Ergebnisdatei-Hash
+werden beim Vergleich ausgelassen; der Audit bindet seinen tatsächlichen
+frischen Ergebnisdatei-Hash. Kein anderer Ergebniswert wird ausgeklammert.
+
+Die erste grobe Intervall-Differenzdiagnose ist dokumentiert, aber bewusst
+kein erwarteter PASS. Der exakte Loader stoppt bei einem Runtimeverhalten,
+mit dem die archivierten Mittelpunkte/Radien nicht exakt reproduzierbar sind.
+Es wird weder ein neuer größerer Toleranzwert noch ein alternatives Modell
+stillschweigend akzeptiert.

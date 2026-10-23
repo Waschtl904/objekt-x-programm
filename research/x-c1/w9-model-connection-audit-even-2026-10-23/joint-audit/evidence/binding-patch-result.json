@@ -1,0 +1,43 @@
+{
+  "status": "PATCH_AND_ISOLATED_BINDINGS_PASS",
+  "base": "beb38c9d1cba666bb3b7ddab9577873e59d854c4",
+  "archive_sha256": "a2976b68b8693cf3bb5cda068eae16b8b8d34b3f87d4125d89dd9349a7f599e6",
+  "exact_changed_files": {
+    "research/x-c1/w9-gamma-repair-even-2026-10-22/BINDING_REVISION.json": "57d8bdb5739b2181d65f241e219929a87dad598a491c476f1781ae0c81c88c8c",
+    "research/x-c1/w9-gamma-repair-even-2026-10-22/INPUT_BINDINGS.json": "a3889d37ca7953e5faad720393e8f6b76727a50ee4a570b54df3b025d7c3749a",
+    "research/x-c1/w9-gamma-repair-even-2026-10-22/MANIFEST.json": "77827f32e9498cf850688674ce2598e952eba4608c018be3b14e9121a58453fb",
+    "research/x-c1/w9-gamma-repair-even-2026-10-22/README.md": "e6ff15e0497ddca34252d9ddf8c4bc64c55a21b201c0b312165c6dd66493bfa5"
+  },
+  "isolated_files": 669,
+  "package_files": 100,
+  "inherited_files": 568,
+  "original_acceptance_unchanged": true,
+  "all_other_original_files_unchanged": true,
+  "binding_check": {
+    "status": "BOUND_REPAIR_REPLAY_PASS_CONDITIONAL",
+    "package_files": 100,
+    "inherited_files": 568,
+    "mathematical_status": "AUTHOR_DERIVED",
+    "external_review": "EXTERNAL_REVIEW_OPEN",
+    "complete_model_identification_accepted": false,
+    "all_inherited_analytic_lemmas_reproved": false
+  },
+  "new_negative_controls": [
+    {
+      "case": "missing",
+      "exit_code": 1,
+      "rejected_before_numerics": true
+    },
+    {
+      "case": "changed",
+      "exit_code": 1,
+      "rejected_before_numerics": true
+    }
+  ],
+  "existing_controls_passed": 6,
+  "new_16_panel_integration_performed_here": false,
+  "reason": "Mathematical files unchanged; earlier independent 16-panel replay retained at original head.",
+  "git_apply_core_autocrlf": false,
+  "portability_note": "An isolated patch application with the ambient Windows autocrlf setting wrote the new revision JSON as CRLF; its JSON content was identical but its manifest hash differed. Apply with core.autocrlf=false or copy the supplied exact bytes.",
+  "remote_changes": false
+}

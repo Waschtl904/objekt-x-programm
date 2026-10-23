@@ -1,0 +1,39 @@
+REPRODUKTION
+
+Getestet mit Python 3.13.7 und python-flint 0.9.0 unter Windows.
+Die übermittelte Referenz nennt Python 3.12.14 und ebenfalls python-flint 0.9.0;
+alle mathematischen Ergebnisfelder waren hier dennoch exakt identisch.
+
+Nur Lieferbestand und die beiden ZIP-Integritäten prüfen:
+ python -B reproduce.py --validate-only
+
+Vollständiger neuer Gegenprüflauf aus einem Git-Checkout mit dem Commit
+beb38c9d1cba666bb3b7ddab9577873e59d854c4:
+ python -u -B reproduce.py --repo CHECKOUT --run-dir NEUER_ORDNER
+Alternativ --snapshot REPOSITORY_EXPORT statt --repo verwenden.
+
+Der Zielordner muss noch nicht existieren. Der bestehende Checkout wird
+nur gelesen. Unter dem neuen Ordner werden die beiden Eingangspakete
+entpackt, 668 gebundene Repositorydateien bereitgestellt und eine zweite
+isolierte Kopie für den Vierdateienfix angelegt. Dafür sind ungefähr
+340 MB freier Speicher zuzüglich der Ergebnisse nötig.
+
+Geprüft werden Eingangs-/Lieferhashes, Patch und Dateimenge, Negativkontrollen,
+191 feste Quellenkoordinaten, Schur/U8-Modelle, Moment-/Rundungsdiagnose,
+die neue ganze Operatorgrenze und die gemeinsame rationale Kleinrestsumme.
+Die Quelle h und die 16/65/411 historischen Abschnitte werden nicht neu
+integriert. Kein Netzwerkzugriff, Push, Merge oder Branchwechsel.
+
+Die vollständigen mathematischen Ergebnisfelder werden verglichen.
+Laufzeiten und davon abhängige frische Ergebnisdatei-Hashes sind ausgenommen.
+Alle Formeln, Schranken, Statusfelder und Dateibindungen bleiben im Vergleich.
+
+Einzelner Bindungsfix unter Windows: zur bytegetreuen isolierten Anwendung
+ git -c core.autocrlf=false apply --check manifest-binding-fix.patch
+ git -c core.autocrlf=false apply manifest-binding-fix.patch
+oder die vier gebundenen Ersatzdateien aus dem unveränderten Eingangsarchiv
+binär kopieren. Die Hashprüfung ist maßgeblich, nicht nur JSON-Inhaltsgleichheit.
+
+Die unabhängige Rohoperatorherleitung ist ein Autorenbeleg unter der physischen
+Q-Identifikation. Sie ersetzt weder externe Prüfung noch die Gesamtabnahme
+aller Quellen-, Domänen-, Verstärkungs- und Quadraturvoraussetzungen.

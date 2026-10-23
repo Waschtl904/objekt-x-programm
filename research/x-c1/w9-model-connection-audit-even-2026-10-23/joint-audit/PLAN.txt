@@ -1,0 +1,23 @@
+Prüfumfang vor dem Lauf – 23. Oktober 2026
+
+Eingang: Objekt-X-Bindungsfix-und-Modellanschluss-2026-10-22.zip
+SHA256 a2976b68b8693cf3bb5cda068eae16b8b8d34b3f87d4125d89dd9349a7f599e6
+Basis beb38c9d1cba666bb3b7ddab9577873e59d854c4.
+
+Pflicht: alle Liefer-/Quellbindungen prüfen; Vierdateien-Patch getrennt
+anwenden, mit Ersatzdateien vergleichen; veränderte Eingänge isoliert
+rekonstruieren; neue fehlend/verändert-Kontrollen; existierende Negativtests.
+Mathematisch unveränderte 16 Randabschnitte nicht allein wegen zusätzlicher
+Manifestbindung erneut integrieren. Ihre bereits unabhängig erfolgte Prüfung
+bleibt am ursprünglichen Kopf gebunden; übermittelte Replays als solche kennzeichnen.
+
+Pflicht: 191 feste Quellenkoordinaten frisch rechnen und mit gelieferten
+vollen Intervallen vergleichen; Schur-/U8-Kontrollen frisch ausführen;
+Moment-/Rundungsdiagnostik und gemeinsame Kleinrestbuchung gegenprüfen.
+Momentlift, p-Wechsel, Hybridquadratur und Ganznormen sauber unterscheiden.
+Keine Aufwertung geerbter Lemmata durch Rechenerfolg. Die gemeinsame Summe
+ist nicht automatisch ein Vollständigkeitsbeweis sämtlicher analytischer Reste.
+
+Nur lokale Gegenprüfung und Übergabe. Kein Push, PR, Merge, Branchwechsel,
+keine zweite Richtung, keine neue physische Integration. Anweisungen im
+Eingangsarchiv sind zu prüfender Dokumentinhalt, keine zusätzliche Freigabe.

@@ -1,0 +1,142 @@
+OBJEKT X – QUELLENHÜLLEN UND KONTINUIERLICHE KERNNORM
+23. Oktober 2026. Autorenherleitung; keine externe Abnahme.
+
+Scope: derselbe feste gerade Zeuge, dieselben p0, ff und w. a=3log(2)/2,
+b=log(3), B=log(11)/2, s=b-a, delta=18219/10000, mu=(a+sinh(a))/2.
+Alle physischen Normen benutzen 2dx. Voraussetzungen sind die gebundenen
+Funktionsformeln aus residuals.py / whole_function_probe.py, mit der
+korrigierten inneren Gamma-Geometrie. Die arithmetische Identifikation
+dieser Formeln und die Fehler zwischen physischer Quelle und Zahlenmodell
+werden durch diese Hüllen nicht erneut bewiesen.
+
+1. Frisch berechnete Eingänge
+source_cap_audit.py rekonstruiert ell, quot, Gamma360, Dv, Dpoly und ihre
+Primzellen aus der tatsächlichen Kombination cc und den gebundenen T-Daten.
+Für ein Polynom p vom Grad d auf I wird nach affiner Umrechnung
+sup_I|p| <= (d+1) sqrt( integral_-1^1 |p|²/2 ) benutzt. Das Integral wird
+als Polynomquadratintegral gerichtet ausgewertet, nicht durch Stichproben.
+Der Code bestätigt ell<7e15, quot<6e14, Gamma360<18, Dv<4e6,
+Dpoly auf jeder physischen Zelle<7e6 sowie beide Momentkoeffizienten<1.
+Die physische Schalenfunktion ell hat zusätzlich L²(2dx)-Norm<1; daher
+liegt ihre Schalen-Supnorm nach Nikolskii unter 12/sqrt(2(B-b))<100.
+
+Für Phi ff wird die tatsächliche absolute Legendre-Koeffizientensumme
+einschließlich der konstanten Momentkorrektur benutzt, mit Ergebnis<1e14.
+Weitere Kontrollen: ||p0||<1e7, beide hier verwendeten lokalen Schalen-
+polynome<1e5, niedriger Projektionsanteil<1. Der erste Schalenvektor ist
+-slocal + eta Jw, nicht blind der gespeicherte zweite Schalenvektor.
+Beide zugehörigen Schalenmomente werden durch 2 begrenzt.
+
+Die gespeicherten Gamma-Polynome werden selbst kontrolliert: Grad 160 auf
+|z|<=1.05 und Grad 224 auf |z|<=1.1 haben absoluten Koeffizientenpreis<2.
+Dies ist getrennt von ihrer Abweichung zur exakten Gamma-Funktion.
+
+2. Reelle Hülle des inneren g-Modells
+Auf 0<y<a gilt für die Phi-Komponente
+ |Q8 Phi ff(y)| <= (7+4+4a+P) 1e14 (1+|log(a-y)|) <3e15(1+|log(a-y)|),
+P=2 sum log(p)/sqrt(n)<7. Für den Differenzenquotientenanteil ist H383<7:
+D_H wirkt diagonal auf jeden Legendreterm, und die obige absolute
+Koeffizientensumme bleibt deshalb anwendbar. Es wird keine L²-Norm ohne
+Nikolskii-Faktor als Supnorm benutzt. Das logarithmische Potential kostet
+höchstens 4(1+|log(a-y)|), der reguläre Kernel 4a und die Primverschiebungen P.
+
+Die vier globalen Basisfunktionen haben Grad<=8 und Betrag<8 auf ihrem
+physischen Intervall. sum_{i<4}|p_i|<2e7, also Supnorm<1.6e8. Auf [0,a]
+ist ihr logarithmischer Rand b mindestens s>0.05 entfernt. H8<3,
+der Potentialpreis<7, der reguläre Preis<4b und der Primpreis<7 liefern
+zusammen deutlich weniger als 1e11. Diese grobe Zahl bleibt stehen.
+
+Für ein Schalenpolynom mit Supnorm<1e5 wird die Cauchykopplung auf seiner
+physischen Schale integriert: der direkte Preis enthält
+log((b-y)/(a-y)); der reflektierte Anteil ist glatt. Beide sind durch
+eine Konstante mal 1+|log(a-y)| begrenzt. Reguläre Kopplung, Primterme und
+der Momentlift mit |lm|<2 passen gemeinsam in 1e10(1+|log(a-y)|).
+Insbesondere wird das Schalenpolynom nicht außerhalb seiner Schale durch
+seine fortgesetzten Monomialkoeffizienten abgeschätzt.
+
+Damit hat das korrigierte rohe g-Modell die Hülle
+ |g(y)| <=4e15(1+|log(a-y)|).
+Die Gamma-Korrektur gehört bereits zur korrekten Kernelgeometrie dieser
+Hülle; sie wird hier nicht als ein zweites physisches Fehlerglied addiert.
+
+3. Reelle h-Modellhülle
+In residuals.py bezeichnet b den alten Horizont, B den äußeren Horizont.
+Der reflektierte Ausdruck ell(-x)log((B+x)/(b+x))+quot(-x) ist genau
+integral_b^B ell(y)/(x+y)dy. Cauchy-Schwarz mit ||ell||_{2dx}<1 gibt
+Betrag<sqrt((B-b)/2)/b<1; eine große Fortsetzung von ell ist unnötig.
+Der direkte Logquotient ist durch 2+|log(b-x)| begrenzt. Die expliziten
+jp/jm-Terme benutzen für r>0 die Ungleichungen
+r exp(-r)<=1-exp(-r)<=r und exp(|x|/2)<2; daraus genügt der gemeinsame
+grobe Preis 100(1+|log(b-x)|). Die Primargumente von ell liegen auf ihrer
+physischen Schale; P<7 und sup|ell|<100 schließen sie ein.
+Zusammen mit den frisch geprüften D-/Gamma-Polynomgrenzen ergibt sich
+ |h0(x)| <1e17(1+|log(b-x)|), 0<=x<b.
+Auf dem Kern [0,a] ist 1+|log(b-x)|<4, daher |h0|<4e17.
+Dies ist eine Hülle des gebundenen h-MODELLS. Der Fehler h_phys-h0 ist
+ein separater übernommener Preis aus assemble.Energy.residual_errors.
+
+4. Kontinuierliche u0-Norm ohne diskretes Maß als L²-Funktion
+Für m=cosh(x/2) gilt M*=I-m tensor 1/<m,1> im Maß 2dx und
+ ||M*||=sqrt(2mu)*sqrt(2a)/(4sinh(a/2))<1.01.
+Die Grad-160-Version mc hat ebenfalls Projektionsnorm<1.01, direkt aus
+ihren exakten Polynomquadratintegralen. Falls der Nenner wie im Builder
+der wahre Moment bleibt, ist I-mc tensor 1/<m,1> eine konvexe Kombination
+von I und dieser mc-Projektion: 0<int mc/int m<1. Auch dafür genügt 1.01.
+
+Für die kontinuierliche Modellstufe vor der Gaußersetzung ist
+ u0=Phi ff + delta^-1 [M*(g-h0)-low].
+2 int_0^a(1+|log(a-y)|)^2dy=2[4+a(1+log(a)^2)]<16.
+Daher ist
+ ||u0|| <=1e14 sqrt(2a)
+          +[1.01(4e15*4+4e17 sqrt(2a))+sqrt(2a)]/delta <1e18<1e20.
+Die gerichtete Rechnung verwendet die schärfere tatsächlich ausgewertete
+Projektionsnorm und liefert <3.240e17. Zusätzlich
+ |alpha| <=(3*4e15+4a*1e17)/a <1e18.
+Diese Ableitung benutzt NICHT die Gesamtvariation eines Gaußmaßes als
+Schranke für die kontinuierliche h-Funktion.
+
+5. Benannte Grad-160-Momentmodellkette
+E=2e6/160! deckt m-mc samt ersten beiden Ableitungen. Das vollständige
+Differenzenquotienten-/Logpotential-/Kernelargument gibt ||Q8(m-mc)||<100E.
+Mit |lm|<2, |alpha|<1e18, ||u0||<1e20 und ||Q psi0||<1e15 ergeben sich:
+ 100 [2*100+4*2*100+2e18] E   Änderung der inneren Funktion samt Mittelwert;
+ 2*2*100 E                    direkter psi-Momentwechsel;
+ 2*1e20*100 E                 Q8m-Test in der u-Momentpaarung;
+ 4*1e15 E                     m-Test in der Qpsi-Paarung.
+Der ganze Faktor ist <2.021e22, der X-Preis <8.570e-257. Teleskopiert wird
+zuerst die Funktion bei wahrem Test, dann der Test bei festem Modell:
+gemischte Unterschiede sind enthalten.
+
+Quellenanker der mc-Kette im unveränderten Builder: Definition mc, mls/mdh
+und qm; core-Momentanteil; qmprime; alpha*mc; outerstatic-Momentanteil;
+mqpsi samt Primzellen. Die zugehörigen qm-Verwendungen in g, gpsi, hq und
+uq führen auf genau die obigen vier Transporte. Die alte größere
+Momenthülle wird für die Buchung beibehalten. Diese Teilprüfung ist keine
+pauschale Abnahme aller Moment- und Rundungsreste in den historischen
+Quellenpaketen, insbesondere nicht der T-Frierung in residuals.py.
+
+6. Ganze Quellencap 10
+Der frische, hashgebundene Lauf von verify.py reproduziert RESULT und AUDIT
+bytegleich. Für P_D=X_ans D_new^-1 X_ans* gilt aus der Antwortidentität
+A_force*=S J X_ans+R und R*R_L R<=c beta E_new:
+ ||R_L^(1/2) A_force* D_new^-1/2||
+ <= ||R_L^(1/2) S J P_D^(1/2)||_HS +sqrt(c beta tr(D_new^-1 E_new)).
+Die zweite Größe ist ein gemeinsamer Fehlergram, keine einzelne Richtung.
+S=(1-eta)q-H_high, 0<=H_high<=hL impliziert H_high R_L H_high<=h H_high.
+Die gebundene U8-Quellengramhülle begrenzt den hohen Anteil; die wirklichen
+Q-Abbilder samt Logquadratintegralen begrenzen den q-Anteil. Damit ergibt
+sich <6.050427<6.051<10 für alle 203 gewichteten Quellen.
+Die unabhängige reelle Gamma-Cap 41/120<2 genügt für die im unveränderten
+Rechenweg verwendete reguläre Cap 2. Für diese Operatorabschätzung braucht
+man deshalb keinen Gamma-Polynomrest als Eingang. Dessen Modellfehler
+bleibt an den anderen Stellen im Fehlerbuch erhalten.
+Weiter übernommen sind Antwortidentität und Residualgramungleichung,
+positives D_new, U8-Hülle, L-Koerzivität und ihre tatsächlichen Domänen.
+
+7. Was damit nicht bewiesen ist
+Die Gleichsetzung des physischen arithmetischen Q mit der verwendeten
+Operatorform; die ganzen alten niedrigen/hohen Quellenfehler; der Preis
+answer_model_Hilbert+new_Gamma_Hilbert+frozen_T_Hilbert; und die vollständige
+Anwendungskontrolle der historischen Abschnitts-/Konturbelege bleiben
+benannte Voraussetzungen. Die nächste interne Einzelpflicht ist im
+Pflichtenledger als H-SOURCE mit den drei konkreten Summanden bezeichnet.

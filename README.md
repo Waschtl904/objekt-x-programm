@@ -25,6 +25,12 @@ erhalten; für den korrigierten Funktionsanspruch ist die Ergänzung mitzulesen.
 Vollständige Modellidentifikation und externe Gesamtabnahme bleiben offen.
 Die zweite Richtung bleibt bis zur gezielten analytischen Abnahme zurückgestellt.
 
+Die [Modellanschluss- und Analytikergänzung vom 23. Oktober](research/x-c1/w9-model-connection-audit-even-2026-10-23/README.md)
+veröffentlicht den bedingten ganzen Funktionsabgleich und die deterministische
+Prüferrevision. **L1 bleibt offen:** Der vollständige Transfer der historischen
+Quellenfehler auf die korrigierte feste Funktion ist noch nicht abgenommen.
+Die Restenergiegrenze und die externe Abnahme bleiben entsprechend bedingt bzw. offen.
+
 ## Einstieg
 
 | Ich möchte … | Einstieg |

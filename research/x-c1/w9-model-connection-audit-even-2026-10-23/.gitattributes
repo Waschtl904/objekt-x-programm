@@ -1,0 +1,4 @@
+# Preserve exact received bytes under every checkout newline setting.
+finite-audit/** -text
+joint-audit/** -text
+model-connection/** -text

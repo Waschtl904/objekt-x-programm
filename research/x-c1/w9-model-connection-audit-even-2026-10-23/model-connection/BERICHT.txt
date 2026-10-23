@@ -1,0 +1,80 @@
+OBJEKT X – MODELLANSCHLUSS UND ÜBERGABE, 22. OKTOBER 2026
+
+Der gebundene Rechenanschluss der Gammareparatur ist jetzt auch auf der
+Ebene der ganzen Funktionsdarstellung geprüft. Die vollständige analytische
+Gesamtabnahme und externe Prüfung bleiben offen.
+
+NEUE ERGEBNISSE
+
+1. Den alten und korrigierten Funktionsaufbau tatsächlich neu ausgeführt,
+   mit den unveränderten 2560 Gaußatomen aus 64 Abschnitten. Der ursprüngliche
+   Aufbau reproduziert alle fünf geprüften Funktionskomponenten und
+   26 gemeinsame Grunddaten exakt aus dem Archiv. Laufzeit etwa 172 Sekunden.
+2. Die Differenz aus den tatsächlichen korrigierten Quellen durch alle
+   äußeren Anteile und den Momentlift transportiert. Die X-Norm gegenüber
+   dem unabhängigen Korrekturbeleg ist <6.648e-313. Dieser Test umfasst
+   ganze Koeffizientenfunktionen und ihre Normen, nicht nur 84 Paarungen.
+3. Schurresiduum, U8-Projektionen, innere/äußere Gammageometrie, sämtliche
+   Primterme und Momentlift termweise zugeordnet. Die X-Funktionaldichte
+   wird ausdrücklich vom W_X-Rieszvektor unterschieden.
+4. Den Rest der abschließenden Momentprojektion hergeleitet und den
+   Übergang vom rationalen Testvektor zu seinem Zahlenmodell bezahlt.
+   Alle hier ergänzten Kleinstreste zusammen sind in X-Einheiten
+   <4.243e-237 und passen in den bestehenden Quellenrest 1e-150.
+   Der p-Modellfehler bleibt genau einmal gebucht.
+5. Sechs gezielte Gegenkontrollen bestanden: falsches p-Vorzeichen,
+   falsches Momentvorzeichen, zusätzlicher Faktor 2, falsche Quellenbindung,
+   veränderter Dateninhalt und unbekanntes Cache-Format werden erkannt.
+
+Der vollständige Probelauf aus einem frischen Arbeitsordner besteht ebenfalls:
+Alle deterministischen Ergebnisfelder stimmen mit den gelieferten Belegen
+überein. Der Nachweis steht in evidence/PORTABLE_REPLAY.json.
+
+Die zuvor geprüfte bedingte Restenergie <4.632e-11 wird durch diese innerhalb
+des vorhandenen Ansatzes liegenden Preise nicht erhöht. Das ist keine neue
+unabhängige Prüfung sämtlicher geerbter analytischer Fehlerlemmata.
+
+METHODISCHER BEFUND
+
+Ein naiver Vergleich unabhängig behandelter Intervallkopien war mit rund
+1.565e-29 zu grob für die festgelegte Schwelle 1e-150. Die Diagnose ist
+beigefügt. Der erfolgreiche Vergleich nutzt algebraisch identische gemeinsame
+Terme und hebt diese vor der Fehlerfortpflanzung auf; die Schwelle bleibt
+unverändert. Der genaue Cache-Leser prüft alle archivierten Mittelpunkte
+und Radien. Eine zusätzliche äußere Rundung des bisherigen Lesers wurde
+nicht als mathematischer Defekt ausgegeben. Maßgeblich sind die exakten
+rationalen Endpunkte der JSON-Dateien, nicht unterlaufende float-Anzeigen.
+
+VERBLEIBENDE ABNAHME
+
+Die neue Herleitung ist ein Autorenbeleg. Die maßgeblichen Quellen-,
+Domänen-, Projektions-, Kontur-, Rand- und Operatorlemmata müssen weiterhin
+mit ihrem genauen Geltungsbereich geprüft werden. Insbesondere bleiben
+die übernommenen Verstärkungsfaktoren und vollständigen rohen Operatorcaps
+Voraussetzungen. Die zweite Richtung bleibt bis zu dieser gezielten
+Abnahme zurückgestellt. Weder Punkt 4 noch das Gesamtprogramm wird hier
+als geschlossen bezeichnet.
+
+INTEGRATION UND HERKUNFT
+
+PR #254 ist bereits integriert. Erneut bestätigter main:
+beb38c9d1cba666bb3b7ddab9577873e59d854c4.
+Diese Gegenprüfung hat nichts gepusht, gemergt oder im Repository geändert.
+Sie behauptet keinen neuen CI-Lauf. Die Dateien sind eine lokale Übergabe.
+Das zuvor fehlende alte Manifest ist in dieser Ergänzung ausdrücklich
+gebunden; die eingefrorenen Originalpakete werden nicht überschrieben.
+
+Die 668 Quell-/Datendateien werden mit Commit und SHA-256 in SOURCE_FILES.json
+bezeichnet. Sie sind aus Platzgründen nicht erneut im ZIP enthalten.
+reproduce.py erstellt aus einem lokalen Checkout oder einem exportierten
+Snapshot einen neuen Arbeitsordner, prüft alle Hashes und wiederholt die
+Kontrollen. REPRODUKTION.txt enthält die Einzelheiten.
+
+ENTHALTEN
+
+FUNKTIONSANSCHLUSS.txt: vollständige neue Herleitung und Aussagegrenzen.
+FEHLERBUCH.json: einmalige Zuordnung einschließlich neuer Kleinstreste.
+UEBERGABE.txt: genau abgegrenzte nächste Prüfpunkte für die führende Sitzung.
+scripts/: ausführbare Prüfer; evidence/: Resultate und erste fehlgeschlagene
+Diagnose. PLAN.txt: vorab festgelegter Prüfumfang. MANIFEST.json: Hashes
+aller ausgelieferten Dateien außer dem Manifest selbst.

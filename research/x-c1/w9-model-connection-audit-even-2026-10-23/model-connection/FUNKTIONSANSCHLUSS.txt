@@ -1,0 +1,231 @@
+OBJEKT X – KORRIGIERTER FUNKTIONSANSCHLUSS, 22. OKTOBER 2026
+AUTHOR_DERIVED / INHERITED_LEMMA_AUDIT_OPEN / EXTERNAL_REVIEW_OPEN
+
+Gegenstand: unveränderter fester gerader Zeuge aus #252, Reparatur aus #254.
+Basis: beb38c9d1cba666bb3b7ddab9577873e59d854c4.
+Dies ist eine lokale Ergänzung zur Gegenprüfung; keine Änderung der Registry.
+
+1. Räume, adjungierte Abbildungen und tatsächliches Residuum
+
+Es gelten a=3 log(2)/2, b=log(3), m(x)=cosh(x/2),
+mu=int_0^a m² dx, lambda(s)=int_a^b m s dx und X=L²((a,b),2dx).
+Lambda s ist s auf der Schale und -lambda(s)m/mu auf dem Kern.
+H8 ist der momentfreie Kernraum. J_old verlängert H8 durch Null.
+T trägt W_X. Alle Sternsymbole mit T beziehen sich auf diese Geometrie.
+Quelle: a9-inverse-spike-calibration-2026-10-15/original/nstar/
+FUNKTIONSANSCHLUSS.txt, Abschnitte 1–5; in SOURCE_FILES.json gebunden.
+
+Q bezeichnet hier den rohen Nichtpoloperator, nicht die anderswo ebenfalls
+Q genannte endliche Basisisometrie. F enthält die zwölf festen physischen
+Quellen. f ist die feste ganze Residualquelle des Zeugen; h=J_old* f.
+Bei Verwendung des unprojizierten inneren Funktionsteils h0 werden seine
+Momentanteile durch die unten angegebenen M*- und Phi*-Abbildungen entfernt.
+
+Mit t=Jw, g=J_old* Q Lambda_T und g_F=J_old* QF gilt
+
+ a_fin = F* Q Lambda_T - g_F* U8 g,
+ v = F* f - g_F* U8 h,
+ nu = Lambda_T* f - g* U8 h - a_fin* K^-1 v,
+ H_new = (1-eta) Lambda_T* Q Lambda_T - g* U8 g - a_fin* K^-1 a_fin,
+ p = K^-1(a_fin t-v), eta=1e-10.
+
+Einsetzen und Sammeln liefert ohne Vertauschung nichtkommutierender Faktoren
+
+ r = nu-H_new t
+   = Lambda_T* f -(1-eta)Lambda_T* Q Lambda_T t
+     + Lambda_T* Q Fp + g* U8(g t-h-g_F p).
+
+Setze u=U8(g t-h-g_F p), psi=Fp-(1-eta)Lambda_T t und
+R=f+Q(psi+J_old u). Dann ist r=Lambda_T* R als Funktional.
+Eine X-Dichte dieses Funktionals lautet
+
+ r_X(x)=R_shell(x)-m(x)/mu * int_0^a m(y)R_core(y)dy.
+
+Denn 2 int_a^b r_X s = <R,Lambda s> für alle s in T. Diese Dichte ist
+nicht stillschweigend der W_X-Rieszvektor. Die Faktoren 2 der Hilbertnorm
+und die dx-Momente in lambda und mu sind damit eindeutig festgelegt.
+audit.py prüft die nichtkommutative Schuridentität in einem rationalen
+Modell mit tatsächlichem Momentlift und nichttrivialem W_X. Falsches
+p-Vorzeichen, falsches Momentvorzeichen und ein zusätzlicher Faktor 2
+werden dort erkannt. Dieser endliche Kontrollfall ersetzt keinen
+unendlichdimensionalen Domänenbeweis.
+
+2. Zuordnung zu den tatsächlich ausgeführten Quellen
+
+Der ursprüngliche Builder hat SHA-256
+ed58da3caacd5ca39de1f910c77920e7079eec905a560b487600c71e97c8df64.
+Die korrigierte Fassung wird ausschließlich durch corrected_builder.py
+des gebundenen #254-Pakets erzeugt. Dessen Manifest hat SHA-256
+ce44e7b00cef7c77a19c732ce0eb58b7e137bcb45a9afd85c82e02349f5f3edf.
+
+In whole_function_probe.py gilt bei festen Zahlenmodellen p0, f0 und w0:
+
+ g, prime = build_core(-f0,-p0,w0): Q(Jw0-Fp0-Phi f0) im Kern;
+ gpsi, primepsi = build_core(0,p0,-(1-eta)w0): Q(Fp0-(1-eta)Lambda Jw0);
+ slocal = Y p0_tail -(1-eta)Jw0;
+ sp und spx: dieselbe Schalenfunktion in lokaler bzw. physischer Koordinate;
+ lm: ihr Schalenmoment;
+ ustatic = Phi f0 + (g-low-alpha*m)/delta;
+ upp = prime/delta;
+ u_model = ustatic+upp-h0/delta;
+ outerstatic = ustatic-lm*m/mu.
+
+Die ersten vier globalen F-Quellen werden über zp und zglobal auf dem
+ganzen Intervall ausgewertet. Sie werden nicht auf die Schale reduziert.
+Die lokalen Schalenanteile, beide Cauchyanteile, der reguläre Gammakern
+und alle Primverschiebungen sind im äußeren Ausdruck vorhanden.
+
+Für den Momentlift benutzt der Code die Symmetrie von Q8:
+
+ momentR = int m h0 + int m Q psi + int u_model Q8 m.
+
+Dies entspricht hm+a*mqpsi+a*uq-hq/delta; die Integrale in der normierten
+Kernkoordinate erhalten den Faktor a. Jede aktive Primzelle gehört sowohl
+zur Quellenfunktion als auch zum entsprechenden Momentprodukt. Der äußere
+Ausdruck zieht m(x)*momentR/mu ab.
+
+Die fehlende innere Gamma-Geometrie wird ausschließlich am Schale->Kern-
+Aufruf ersetzt. Der korrekte Kern->Schale-Aufruf regular_out bleibt erhalten.
+Für dG und dPsi aus den tatsächlichen alten und korrigierten Quellfunktionen:
+
+ dAlpha = int_0^1 dG(a t) dt / int_0^1 m(a t) dt,
+ du = (dG-dAlpha*m)/delta,
+ dMoment = int_0^a m*dPsi + int_0^a du*Q8m.
+
+Der zweite Summand umfasst alle Primzellen. Die reguläre äußere Änderung
+folgt aus sämtlichen 225 physischen Momenten von du. Die Cauchy- und
+Primanteile folgen linear aus derselben ganzen du-Funktion.
+
+3. Frischer vollständiger Rechenanschluss
+
+rebuild.py verifiziert 99 Dateien des #254-Manifests und 568 historische
+Eingänge. Die zusätzliche Datei ist das zuvor nicht explizit gebundene
+alte MANIFEST.json; eingefrorene Pakete werden nicht bearbeitet.
+
+Der ursprüngliche Aufbau wird bis ustatic, outerstatic, upp, outerreg und
+momentR neu ausgeführt. Dafür werden die 2560 gebundenen Gaußatome in den
+ursprünglichen 64 Abschnitten verwendet. Es wird kein neues Integralnetz
+berechnet. Alle fünf Komponenten und alle 26 geprüften gemeinsamen
+Grunddaten stimmen mit dem Archiv exakt als gespeicherte Intervallwerte
+überein. Die Quellen g und gpsi werden unabhängig neu aufgebaut.
+
+Die gewöhnliche Arb-Konstruktion erweitert beim Laden manche archivierten
+Radien nochmals nach außen. exact_cache.py akzeptiert eine Rekonstruktion
+nur, wenn Mittelpunkt und Radius exakt ihren gespeicherten dyadischen
+Ganzzahlen und Exponenten entsprechen. Anschließend wird die vollständige
+serialisierte Struktur verglichen. Es wird kein Intervall gegenüber dem
+Archiv verengt. Die bisherige äußere Rundung ist kein mathematischer Fehler.
+
+Eine erste Subtraktion voneinander unabhängig behandelter Intervallkopien
+ergab nur eine Schranke von etwa 1.565e-29 und bestand die vorab festgelegte
+Schwelle 1e-150 nicht. Dieser Versuch bleibt als Diagnose enthalten.
+Der erfolgreiche Weg hebt die gemeinsamen h-Atome, niedrigen Projektionen,
+festen Quellen und direkten Schalenanteile durch die obigen Identitäten
+auf, bevor die Differenz propagiert wird. Die gemeinsame Herkunft und die
+Identität der festen Daten werden geprüft; eine bloße Intervallüberlappung
+wird nicht verwendet. Die Schwelle 1e-150 bleibt unverändert.
+
+Für die verbleibende ganze Funktionsdifferenz gilt:
+
+ ||du_rebuild-du_reference||_L²((0,a),2dx) < 5.140e-314,
+ ||regular_rebuild-regular_reference||_X < 5.928e-315,
+ ||momentlift_rebuild-momentlift_reference||_X < 2.460e-313,
+ ||C_rebuild-C_reference||_X < 6.648e-313.
+
+Die letzte Schranke benutzt den ganzen Carleman-/Reflexions-/Primpreis
+pi/2+sqrt((b-a)/a)/2+2 sum log(p)/sqrt(n), zusätzlich regulären Teil und
+Momentlift. Koeffizientensummen begrenzen ganze Polynomnormen; logarithmische
+Terme erhalten ihre vollständigen L²-Preise. Das Ergebnis folgt weder aus
+84 Koordinaten noch aus Punktproben. Der Lauf dauerte rund 172 Sekunden.
+
+4. Die letzte Momentprojektion im vollständigen U8
+
+Auf dem geraden skalierten Raum ist e=1, c=<m_scaled,e>,
+M=I-e tensor m_scaled/c und M*=I-m_scaled tensor e/c.
+E enthält Grade 2,...,382, P_Y enthält alle geraden Grade ab 384.
+
+ Phi=U^-1 M E, T_h=P_Y M* U, T_h*=U^-1 M P_Y,
+ U8 s=Phi f+(1/delta)T_h*(T_h s-B8* f).
+
+Das M* am Eingang erklärt den alpha*m-Abzug; der niedrige Abzug entspricht
+E E*. Das abschließende M entfernt außerdem den konstanten Anteil
+e*<m_scaled,v>/c eines exakten hohen Vektors v. Dieser Anteil darf nicht
+allein wegen hoher Parität oder eines kleinen numerischen Moments entfallen.
+
+Da c>=1 und v in range(P_Y) liegt, ist sein Normpreis höchstens
+||P_Y m_scaled|| ||v||. Mit a/2<1 wird die cosh-Reihe bis Grad 382 durch
+
+ ||P_Y m_scaled|| <= 2/384!
+
+begrenzt. Für den festen modellierten hohen Anteil verwenden wir unter den
+übernommenen ganzen Modell-/Quellenabschätzungen
+
+ ||v|| <= 1e20+2e14+1 <1e21.
+
+Hier bezeichnet 1e20 die Cap der korrigierten festen Modellfunktion,
+nicht die Norm des Operators U8. Der separate U8-Operatorpreis ist viel
+größer und wird beim Rundungstransport aus der gebundenen Quelle geladen.
+Der post-M-Preis ist somit <9.899e-807 im Kern und nach dem konservativen
+rohen Transportfaktor 100 <9.899e-805 in X.
+
+Die tatsächlich modellierte hohe Funktion ist wegen Modellleckage und
+Quadratur nicht als exakt hoch oder exakt momentfrei anzusehen. Ihr
+nachgerechnetes Moment beträgt etwa 6.8756e-18 (vor der Gammareparatur
+2.1528e-8). Dieses Moment wird nicht auf Null gesetzt und nicht durch die
+winzige reine post-M-Schranke ersetzt. Die niedrige Leckage und Quellen-
+abweichung bleiben in den dafür bestehenden ganzen Fehlerpreisen.
+
+Die bereits übernommene Grad-160-Momenthülle wird als
+(2e6/160!)*1e40 = 4.2420301897...e-239 rekonstruiert. Ihr Verstärkungsfaktor
+1e40 ist weiterhin eine übernommene analytische Voraussetzung aus
+whole/ANALYTIC_CAPS.md §2 und wird durch diese Arithmetik nicht neu bewiesen.
+
+5. Kanonischer Testvektor und Zahlenmodell
+
+Der feste rationale w aus CANDIDATE.json unterscheidet sich in 84 Einträgen
+vom eingefrorenen Mittelpunktmodell w0. Exakt rational ist die Norm der
+Differenz <4.064e-309. Der Zeuge wird nicht neu gewählt.
+
+rounding.py transportiert diesen Unterschied durch das ganze H_new:
+ ||H_new J dw||_Ldual
+ <= [sqrt(5/21)*((1+eta)*200000+20000*||U8||)
+     +10*||K^-1/2 a_fin J||] ||dw||.
+
+Hier werden ||J||<2, die rohe g-Cap 100, die geerbte endliche Q-Cap und
+||Lambda||<2 verwendet. Die a_fin-Norm wird aus dem gebundenen Modell
+und der gemeinsamen D/U-Quellenfehlerformel eingeschlossen. Zusätzlich
+wird die Verschiebung der im Altprogramm vor der Mittelpunktsetzung
+berechneten Richtungsfehlergrenze durch 10*e_a*||dw|| bezahlt.
+
+Geladen wird die tatsächliche gerade U8-Cap von rund 1.563e26. Eine
+vorläufig angenommene Cap 2e20 war zu klein und wurde verworfen; der
+Operator wurde nicht mit der 1e20-Cap des einzelnen Modells gleichgesetzt.
+Der endgültige Rundungspreis bleibt <6.198e-279 in L-Dualnorm.
+
+6. Einmalige Buchung und Aussagegrenzen
+
+Die p-Änderung wird als a_fin*(p-p0) genau einmal mit der vollständigen
+D-normierten Quellencap 10 transportiert. Die niedrige Featureabweichung
+wird bei festem p0 berechnet; der p-Preis wird nicht nochmals in sie
+hineingerechnet. Roher Quellenrest, niedrige Leckage, direkter Q-Modellfehler,
+Gamma-Modellfehler, Kernquadratur und die ganze Gammakorrektur behalten
+ihre getrennten bisherigen Buchungen. Der aufgelöste innere Rand gehört
+weiterhin zum bestehenden Quadraturpreis.
+
+Die neuen, ausdrücklich identifizierten Kleinstreste – post-M, Momenthülle,
+Quellaufbauabgleich und w-Rundung – ergeben nach konservativer Umrechnung
+in X-Einheiten gemeinsam <4.243e-237. Sie passen strikt in den bestehenden
+rohen Quellenrest 1e-150. Dessen bisheriger äußerer Transport 100/delta>1
+bleibt stehen. Es wird keine Budgetreserve als ungeklärter Fehlerpreis benutzt.
+Der bisherige bedingte Energiedeckel <4.632e-11 wird dadurch nicht erhöht.
+
+Neu geschlossen ist der gebundene Rechenanschluss des alten Aufbaus und
+der vollständigen Gammakorrektur. Die vorliegende termweise Herleitung und
+die ergänzte Fehlerzuordnung sind Autorenbelege. Offen bleibt die gezielte
+Abnahme der geerbten Quellen-, Domänen-, Projektions-, Kontur-, Rand- und
+Operatorlemmata einschließlich ihrer Verstärkungsfaktoren. Diese Datei
+erklärt daher nicht die vollständige analytische Gesamtabnahme für erledigt.
+
+Keine zweite Forschungsrichtung, keine Promotion von Punkt 4, N12, Objekt X
+oder RH. Repository, eingefrorene Pakete und mathematische Registry bleiben
+durch diese lokale Gegenprüfung unverändert.

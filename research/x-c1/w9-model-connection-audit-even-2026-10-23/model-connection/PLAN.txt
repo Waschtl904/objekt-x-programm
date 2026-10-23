@@ -1,0 +1,22 @@
+OBJEKT X – BEGRENZTE MODELLIDENTIFIKATION, 22.10.2026
+Basis: PR254 dd644c65, bytegleich integriert bei beb38c9d.
+Kein Push, Merge, keine zweite Richtung und keine neue Restquadratur.
+
+Vorab festgelegter Prüfbedarf:
+1. Alle verwendeten Quellen und Eingänge binden; auch das im PR fehlende alte Manifest.
+2. Schurresiduum algebraisch zerlegen, Normierung und Momentlift eindeutig zuordnen.
+3. Originalen und korrigierten Builder bis zur vollständigen Funktionsdarstellung
+   ausführen, mit den unveränderten gespeicherten Gaußpunkten/-gewichten.
+4. Alten Aufbau gegen den gebundenen Cache vergleichen; korrigierten Aufbau
+   gegen Cache plus unabhängige Korrektur. Ganze Koeffizienten/Domänen vergleichen,
+   keine 84-Koordinaten- oder Stichprobenabnahme.
+5. U8-Projektionsfolge M*, P_Y, M explizit auflösen. Einen eventuell ausgelassenen
+   Nachprojektionsrest herleiten und begrenzen, bevor ein vorhandener Preis benutzt wird.
+6. Jeden Modell-/Projektions-/Gamma-/Momentfehler genau einmal einer Quelle und
+   einem bereits vorhandenen oder begründeten neuen Preis zuordnen.
+7. Ein Fehlschlag bleibt Fehlschlag/UNRESOLVED. Keine automatische Erleichterung.
+
+Numerische Brückenobergrenzen müssen gegenüber dem vorhandenen Restpreis 1e-150
+vernachlässigbar und durch ganze Funktionsnormen gedeckt sein; bloße Intervall-
+überlappung genügt nicht. Die übernommene analytische Gültigkeit von Quellen,
+Formdomänen, Operatorcaps und externem Review wird nicht automatisch geschlossen.
