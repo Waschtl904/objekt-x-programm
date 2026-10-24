@@ -1,0 +1,23 @@
+{
+  "review_archive_sha256": "ba3b9d36390c6d62347fab544cb517f1792e3300e19c8587c7c1e0fb30cba4ae",
+  "review_archive_bytes": 642385,
+  "result": "PASS_TARGETED_L1_APPLICATION_UNDER_H1_H4",
+  "independently_recomputed": [
+    "25425 formal Gamma coefficient-weight identities",
+    "bilinear mixed-term negative control",
+    "conservative five-family raw allowance <1e-264 <1e-150",
+    "received T endpoint times whole D norm below historical price",
+    "R15 reported input hashes against historical bindings"
+  ],
+  "reviewed_from_checker_and_result": [
+    "3072-bit T construction",
+    "8832 exact Y/J cache-entry comparison"
+  ],
+  "not_reexecuted": [
+    "full portable 30-input author replay",
+    "tight R2 numerical endpoints",
+    "historical quadrature and inherited lemmas"
+  ],
+  "external_review": "OPEN",
+  "repository_status_promotion": false
+}

@@ -1,5 +1,22 @@
 # Forschungsstrategie für die Konstruktion von Objekt X
 
+## Ergänzung vom 24. Oktober: L1-Anwendung lokal geschlossen
+
+Die [L1-Ergänzung](../research/x-c1/w9-l1-source-chain-even-2026-10-24/README.md)
+schließt den Quellen-/Fehleranschluss für den korrigierten festen geraden Zeugen
+lokal unter H1–H4. Historische Voraussetzungen und externe Prüfung bleiben offen;
+die Restenergie bleibt bedingt `<4.632e-11`. Originalbeleg, gezielte Gegenprüfung
+und späterer endlicher Replay werden getrennt erhalten.
+
+Der nächste Forschungsauftrag ist die ganze zweite Restfunktion mit eigenem
+richtungsabhängigem Fehlerledger. Der separate lokale Zweirichtungsvorlauf ist
+eine Entscheidungshilfe; er ersetzt keinen ganzen Residualnachweis. Richtungen,
+gemeinsame lineare Testabbildung und äußere Antwort bleiben eingefroren. GPT 2
+entwickelt den Restnachweis, GPT 1 prüft die fertige Lieferung. Dieser L1-Zusatz
+publiziert keinen Zweiraum-PASS und löst keine automatische Großrechnung aus.
+
+Die folgenden datierten Abschnitte bleiben unveränderte historische Belege.
+
 ## Aktueller Integrationsstand vom 21. Oktober 2026
 
 PR #252 ist durch Merge `4ede0b70e2df1f133c762d7b0e6527338d597874`

@@ -1,0 +1,202 @@
+{
+  "date": "2026-10-24",
+  "status": "CONDITIONAL_L1_APPLICATION_CLOSED_LOCAL_TARGETED_REVIEW_PASS",
+  "review": "GEGENPRUEFUNG.txt",
+  "final_status": "ABSCHLUSS.json",
+  "proof": "L1-BEWEIS.txt",
+  "families": [
+    {
+      "id": "F",
+      "exact_source": "Vier globale physische z-Funktionen und acht Lambda(Q_basis S)-Spalten",
+      "model": "Globale z unverändert; gebundene lokale Y0-Koeffizienten; Gamma224; m160",
+      "whole_error": "eRawF=2 log(3) epsilon224*16+1000 eBareF; Builder-m160 durch R2. E_LF und E_F aus gebundenen historischen ganzen Quellenzertifikaten.",
+      "projection_weighting": "Pi8, Theta=P_Y M*U; K^-1 und P erst nach gemeinsamer Quellenkombination",
+      "transport": "raw/low: 100/delta; Feature-/p-Wirkung: gemeinsame Kraftcap 10; direktes äußeres Bild: q_error",
+      "ledger": [
+        "raw_source_and_low_leakage",
+        "low_feature_sources",
+        "p_feature",
+        "q_image_model_error"
+      ],
+      "dependencies": [
+        "H1",
+        "H2",
+        "H3"
+      ],
+      "proof_sections": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "id": "J",
+      "exact_source": "84 Spalten Lambda(Q_basis[D;I84]) mit gebundener Nebenbedingung",
+      "model": "Gebundene J0-Mittelpunkte vor Monomumrechnung; Gamma224; m160",
+      "whole_error": "eRawJ=2 log(3) epsilon224 sqrt(1.000502)+1000 eBareJ; eLJ=sqrt(gamma)e_source,J; ganzer E_J-Operatorpreis; Builder-m160 durch R2.",
+      "projection_weighting": "Pi8, ganzes P_Y, gemeinsame F/J-Fehlermetrik einschließlich Kreuztermen",
+      "transport": "raw/low: 100/delta; eta_source und ea_direction bei festem p0; q_error separat",
+      "ledger": [
+        "raw_source_and_low_leakage",
+        "low_feature_sources",
+        "p_total",
+        "q_image_model_error"
+      ],
+      "dependencies": [
+        "H1",
+        "H2",
+        "H3"
+      ],
+      "proof_sections": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "id": "Phi",
+      "exact_source": "191 Spalten U^-1 M E mit exakten Mellin-Momentquotienten",
+      "model": "Derselbe endliche Basisraum, Gamma160 für Q8 Phi; gespeicherte A-Intervalle",
+      "whole_error": "eRawA=2 a epsilon160 sqrt(gamma); eLowA=8 a epsilon160 gamma; A-Radien und low_round bleiben enthalten.",
+      "projection_weighting": "Theta auf ganzem hohen Raum, Phi*, B und C*",
+      "transport": "raw/low: 100/delta; eBy=eRawA(||h||+gamma|e_h|)+eLowA||ell_h||; eWh=||C||eBy/(delta sqrt(1-rho))",
+      "ledger": [
+        "raw_source_and_low_leakage",
+        "low_feature_sources",
+        "low_model_interval_placement"
+      ],
+      "dependencies": [
+        "H1",
+        "H2",
+        "H3"
+      ],
+      "proof_sections": [
+        1,
+        2,
+        3,
+        8
+      ]
+    },
+    {
+      "id": "H-SOURCE",
+      "exact_source": "Pi9(C-D X_fix Fhat)c, exakt W-normalisierter fester Koeffizientenvektor",
+      "model": "Pi9(C360-Dtilde T0)c0; dieselbe physische Fhat-Antwortregel",
+      "whole_error": "eps_h=ed+ec+et+normalization_error; ed=delta_D sqrt(tr G_T), ec=sqrt(48 A(B-A))epsilon360, et=Dnorm||T_ex-T0||HS.",
+      "projection_weighting": "Raw-Vertreter nur unter identischen momentvernichtenden Abbildungen; exakte Pi9/Pi8; sqrt(U8)- und v-Featuregewichtung",
+      "transport": "eps_h in unterschiedlichen Summanden: raw,low,eta_physical,p_physical,direkte äußere Dichte. Keine zweite p-Buchung.",
+      "ledger": [
+        "witness_normalization_Hilbert_error",
+        "low_feature_physical",
+        "p_physical",
+        "raw_source_and_low_leakage",
+        "raw_X_error"
+      ],
+      "dependencies": [
+        "H1",
+        "H3"
+      ],
+      "proof_sections": [
+        4,
+        8
+      ]
+    }
+  ],
+  "model_replacements": [
+    {
+      "id": "R01",
+      "cause": "Y/J-Basisfreeze",
+      "charge": "eBareF/J, 1000 eBareF/J, 100000(eBareJ||w||+eBareF||p0||)"
+    },
+    {
+      "id": "R02",
+      "cause": "Gamma160/224/360",
+      "charge": "eRawA/F/J, eLowA, g_error,q_error,ec"
+    },
+    {
+      "id": "R03",
+      "cause": "Builder m -> m160, sämtliche Kreuzterme",
+      "charge": "R2: 7.983055689603853686756e-267 X; alte alternative Momentpauschale ersetzt"
+    },
+    {
+      "id": "R04",
+      "cause": "canonical w und Richtungsneubasierung",
+      "charge": "canonical_w_and_directional_rebase"
+    },
+    {
+      "id": "R05",
+      "cause": "p-Platzierung",
+      "charge": "p_round; danach p_total genau einmal"
+    },
+    {
+      "id": "R06",
+      "cause": "ff-Platzierung",
+      "charge": "eta_round"
+    },
+    {
+      "id": "R07",
+      "cause": "low-Platzierung",
+      "charge": "low_round einschließlich A-Intervallradien"
+    },
+    {
+      "id": "R08",
+      "cause": "c-Normierung und Freeze",
+      "charge": "normalization_error in eps_h"
+    },
+    {
+      "id": "R09",
+      "cause": "D-Modell und T-Freeze",
+      "charge": "ed+et; ec separat"
+    },
+    {
+      "id": "R10",
+      "cause": "Modellierter hoher Nachlift",
+      "charge": "exact_high_moment_lift"
+    },
+    {
+      "id": "R11",
+      "cause": "Gemeinsamer Funktions-/Korrekturanschluss",
+      "charge": "whole_correction_source_bridge"
+    },
+    {
+      "id": "R12",
+      "cause": "Kontinuierliche h-Funktion / Quadraturmodelle",
+      "charge": "e_core+e_bridge; gesondert, kein nochmaliger Kleinstrest"
+    },
+    {
+      "id": "R13",
+      "cause": "Gespeicherte Gaußatome",
+      "charge": "existing_cache_assignment_64 und _128"
+    },
+    {
+      "id": "R14",
+      "cause": "Intervallarithmetik und endliche Umrechnungen",
+      "charge": "Gerichtete Modell- und Ergebnisradien; keine ungeprüfte Mittelpunktgleichsetzung"
+    },
+    {
+      "id": "R15",
+      "cause": "Erneutes midmat auf rationalen Y0/J0-Koeffizienten",
+      "charge": "Exakt null: alle 8832 gespeicherten dyadischen Koeffizienten stimmen mit den Originaleingängen überein."
+    }
+  ],
+  "small_pool": {
+    "causes": [
+      "R03",
+      "R04",
+      "R10",
+      "R11",
+      "R13"
+    ],
+    "raw_upper_display": "1.454432916091297421807e-268",
+    "existing_allocation": "1e-150",
+    "complete_catalogue_argument": "Proof section 7; numerical smallness alone is not used as completeness proof.",
+    "unused_floors": "The two 1e-200 eRawF/J floors are retained numerical slack, not a second causal charge for builder m160."
+  },
+  "external_review": "OPEN",
+  "github_writes": false
+}

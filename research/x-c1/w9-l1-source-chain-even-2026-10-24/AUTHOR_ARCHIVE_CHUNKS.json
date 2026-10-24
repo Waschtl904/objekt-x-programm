@@ -1,0 +1,68 @@
+{
+  "original_path": "author/Objekt-X-L1-Anwendungskette-2026-10-24.zip",
+  "bytes": 47074898,
+  "sha256": "6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b",
+  "chunks": [
+    {
+      "path": "archive-chunks/6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b/000.bin",
+      "bytes": 4194303,
+      "sha256": "710e8e6cdea03241f057797c5ee0397d66b09528d1ccadc300897ab3d4e309fd"
+    },
+    {
+      "path": "archive-chunks/6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b/001.bin",
+      "bytes": 4194303,
+      "sha256": "983fba7357eb6880148e884c484d122675af062606df7834b05dba0183fbd05c"
+    },
+    {
+      "path": "archive-chunks/6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b/002.bin",
+      "bytes": 4194303,
+      "sha256": "77c561f8849f2ef99f0d0ae9708c0ec0d90b319c1129ff2ac9ed25e8eb879012"
+    },
+    {
+      "path": "archive-chunks/6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b/003.bin",
+      "bytes": 4194303,
+      "sha256": "f7e47b3ec4499fc1722e4104a549361a1102dda09f261211044f76af0ab2b61c"
+    },
+    {
+      "path": "archive-chunks/6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b/004.bin",
+      "bytes": 4194303,
+      "sha256": "14a9eab05a47fc31e65f45b3a0081aa82c46f87798647282b2943d03ee5faf6c"
+    },
+    {
+      "path": "archive-chunks/6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b/005.bin",
+      "bytes": 4194303,
+      "sha256": "29e4da86e47f3770c9b600d62dbe836816af247816169dba8bbb7dab93def905"
+    },
+    {
+      "path": "archive-chunks/6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b/006.bin",
+      "bytes": 4194303,
+      "sha256": "d7b253f2a7cd1554f30533d441762162493bd8b7e4f22bbbd74929607d2cf497"
+    },
+    {
+      "path": "archive-chunks/6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b/007.bin",
+      "bytes": 4194303,
+      "sha256": "7a188f28344d3f6949058982f15909f5263bb97d0ed7b9af2db5eeab8a84aff2"
+    },
+    {
+      "path": "archive-chunks/6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b/008.bin",
+      "bytes": 4194303,
+      "sha256": "e9f9a1b8b7b404d5207323fd809b59d62c6e18e7eed2275c8fa9e0e9300a087a"
+    },
+    {
+      "path": "archive-chunks/6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b/009.bin",
+      "bytes": 4194303,
+      "sha256": "b6e1ed91392495db25f104d396b66626a5e04767000f73443f3c6952f2629dad"
+    },
+    {
+      "path": "archive-chunks/6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b/010.bin",
+      "bytes": 4194303,
+      "sha256": "9a91ee58cd98838dbafa048ec029ba23e05c6d4f89b286e27d1bde4fb4f8d3f6"
+    },
+    {
+      "path": "archive-chunks/6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b/011.bin",
+      "bytes": 937565,
+      "sha256": "8654a76bbc7cba7534178a5c9fb8dc36d2e16610f8b4497beda04a970f96dd3e"
+    }
+  ],
+  "method": "Exact ordered byte concatenation; no decompression or repacking"
+}

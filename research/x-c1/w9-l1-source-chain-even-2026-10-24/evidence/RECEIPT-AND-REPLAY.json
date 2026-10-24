@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-24",
+  "reviewer": "GPT 1",
+  "event": "Receipt and bounded finite replay after the earlier targeted review",
+  "author_archive": {
+    "name": "Objekt-X-L1-Anwendungskette-2026-10-24.zip",
+    "size_bytes": 47074898,
+    "sha256": "6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b",
+    "zip_members": 53,
+    "internal_manifest_entries_passed": 52,
+    "bytes_preserved": true,
+    "historical_statuses_preserved": true
+  },
+  "prepared_against": "9ef0784f2cddbfa0c9804312a44b59306a351832",
+  "original_finite_checker_sha256": "b0c5e22826a01fd9726870d73580399beaa8d9738def83872230dbf13f7e40a1",
+  "source_bindings_sha256": "963fab5b4528cb13bba1327d2141a50bc0b4b0980b1f7bc8918d07b2291646b7",
+  "original_result_sha256": "bffa60ebfbd97024b6dbb2112182c3ab5790a5e69e394688badf05c7bd4695f3",
+  "fresh_result_sha256": "23e37379230a057aeae885911fc3f488953319536465dcb6c7368c7105e49ec8",
+  "all_parsed_result_fields_identical": true,
+  "newly_replayed_inputs": 30,
+  "formal_gamma_coefficients": 25425,
+  "exact_YJ_cache_entries": 8832,
+  "author_internal_negative_controls": 5,
+  "independently_recomputed_now": [
+    "All 30 input hashes",
+    "25425 formal Gamma identities",
+    "All 8832 cached dyadics against original rational Y/J inputs",
+    "Rational recombination of imported R2 endpoints and full final energy ledger"
+  ],
+  "not_regenerated": [
+    "Analytic R2 source hulls and their tight input endpoints",
+    "3072-bit T construction",
+    "Historical quadrature",
+    "Historical analytic lemmas"
+  ],
+  "no_new_quadrature": true,
+  "prior_review_scope_is_historical": "REVIEW_SCOPE.json and review/Objekt-X-L1-Gegenpruefung-2026-10-24.zip",
+  "status_promotion_from_replay": false
+}

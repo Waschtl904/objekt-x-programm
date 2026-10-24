@@ -1,0 +1,103 @@
+{
+  "status": "HISTORICAL_PROVENANCE_AND_NEGATIVE_CONTROLS_PASS",
+  "historical_basis": "beb38c9d1cba666bb3b7ddab9577873e59d854c4",
+  "archive_members": {
+    "common": {
+      "archive_alias": "stage3_archive",
+      "archive_origin": {
+        "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip",
+        "sha256": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52",
+        "role": "OLD_A9_CERTIFICATE",
+        "previous_inventory_used_fields": [
+          "selected members below"
+        ]
+      },
+      "archive_sha256": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52",
+      "member": "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/inputs/REFINED_COMMON96.json.gz",
+      "member_sha256": "306acbacf5f4089fe703f655bf4340087f0ae88aeaab416c0282e9e24c1638df",
+      "local_original_sha256": "18a71ae90f69dc28ecc1a42b7ed865057cdd2a28986abc3a1ac06bb558e23097",
+      "exact_bytes": true
+    },
+    "old_sources": {
+      "archive_alias": "stage3_archive",
+      "archive_origin": {
+        "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip",
+        "sha256": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52",
+        "role": "OLD_A9_CERTIFICATE",
+        "previous_inventory_used_fields": [
+          "selected members below"
+        ]
+      },
+      "archive_sha256": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52",
+      "member": "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/inputs/REFINED_INPUT.json.gz",
+      "member_sha256": "c67a44d7cc052bff32ed2768b81595367c710f9308f0f1716b213a74766b1e64",
+      "local_original_sha256": "7c2a93adb187cc51f03f8083ffd82d4437d155d032da698e138787f90379614b",
+      "exact_bytes": true
+    },
+    "functions": {
+      "archive_alias": "response_archive",
+      "archive_origin": {
+        "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip",
+        "sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee",
+        "role": "DIRECTED_CERTIFICATE",
+        "previous_inventory_used_fields": [
+          "selected members below"
+        ]
+      },
+      "archive_sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee",
+      "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/inputs/FUNCTIONS12.json",
+      "member_sha256": "7c13f08ad85084379249c4a08b7c8bda0813eaea72939ba385cb3756b2801b3c",
+      "local_original_sha256": "7c13f08ad85084379249c4a08b7c8bda0813eaea72939ba385cb3756b2801b3c",
+      "exact_bytes": true
+    },
+    "response": {
+      "archive_alias": "response_archive",
+      "archive_origin": {
+        "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip",
+        "sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee",
+        "role": "DIRECTED_CERTIFICATE",
+        "previous_inventory_used_fields": [
+          "selected members below"
+        ]
+      },
+      "archive_sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee",
+      "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/RESPONSE_ENERGY.json",
+      "member_sha256": "7b247fd48e80bab6b34fe02b771dcdcdb0219efdd385285d9a5b52bca1f469d5",
+      "local_original_sha256": "7b247fd48e80bab6b34fe02b771dcdcdb0219efdd385285d9a5b52bca1f469d5",
+      "exact_bytes": true
+    },
+    "old_global_code": {
+      "archive_alias": "global_archive",
+      "archive_origin": {
+        "archive": "nstar_archive",
+        "member": "Objekt-X-Nstar-Jp-Funktionsanschluss-und-Koeffizienten-2026-10-16/inputs/Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13.zip",
+        "sha256": "2ca3c682de8a529b12a0d628c2b606fd04df332d1299ccd36dff71ac3e53d80c",
+        "role": "Bound old function reconstruction"
+      },
+      "archive_sha256": "2ca3c682de8a529b12a0d628c2b606fd04df332d1299ccd36dff71ac3e53d80c",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/global-model-2026-10-12/compute_global_model.py",
+      "member_sha256": "bec0e7c266cb2bae50dfc93e0150786000a55ae89b3effb95d2ba2a06b5c16b4",
+      "local_original_sha256": "bec0e7c266cb2bae50dfc93e0150786000a55ae89b3effb95d2ba2a06b5c16b4",
+      "exact_bytes": true
+    }
+  },
+  "previous_R2_files_unchanged": 6,
+  "additional_pairing_source": {
+    "path": "research/x-c1/w9-partial-energy-2026-10-18/integrate.py",
+    "sha256": "f0d75476760f0cfb278fe128d3df6448e1a1467b597f7f91a585102a1439f466",
+    "pinned_git_bytes_equal": true
+  },
+  "negative_controls": {
+    "changed_hash": {
+      "exit": 1,
+      "error": "ValueError: Source changed: whole_builder",
+      "rejected": true
+    },
+    "missing_input": {
+      "exit": 1,
+      "error": "KeyError: 'whole_builder'",
+      "rejected": true
+    }
+  },
+  "GitHub_writes": false
+}
