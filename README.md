@@ -22,14 +22,22 @@ Die [gebundene Ergänzungsrevision](research/x-c1/w9-gamma-repair-even-2026-10-2
 Korrektur, den radiusgerechten Randnachweis und beide bedingten Energiegrenzen
 (<1.391e-10 beziehungsweise <4.632e-11, Deckel 1e-9). Das Originalpaket bleibt
 erhalten; für den korrigierten Funktionsanspruch ist die Ergänzung mitzulesen.
-Vollständige Modellidentifikation und externe Gesamtabnahme bleiben offen.
-Die zweite Richtung bleibt bis zur gezielten analytischen Abnahme zurückgestellt.
+Der frühere offene Modell-/Quellenanschluss wird durch die unten verlinkte L1-Ergänzung
+für diesen festen Zeugen bedingt geschlossen. Die externe Gesamtabnahme bleibt offen.
 
 Die [Modellanschluss- und Analytikergänzung vom 23. Oktober](research/x-c1/w9-model-connection-audit-even-2026-10-23/README.md)
-veröffentlicht den bedingten ganzen Funktionsabgleich und die deterministische
-Prüferrevision. **L1 bleibt offen:** Der vollständige Transfer der historischen
-Quellenfehler auf die korrigierte feste Funktion ist noch nicht abgenommen.
-Die Restenergiegrenze und die externe Abnahme bleiben entsprechend bedingt bzw. offen.
+bleibt als historischer Zwischenstand erhalten. Die
+[L1-Ergänzung vom 24. Oktober](research/x-c1/w9-l1-source-chain-even-2026-10-24/README.md)
+schließt die konkrete Quellen-/Fehleranwendung für den unveränderten festen geraden
+Zeugen **lokal unter H1–H4**. Die bedingte Restenergie bleibt `<4.632e-11`.
+Die externe Gesamtprüfung bleibt offen. Eigene Gegenrechnungen, anhand gebundener
+Prüfer nachvollzogene Läufe und nicht wiederholte Rechnungen sind getrennt dokumentiert.
+
+Als Nächstes wird für einen begrenzten geraden Zweiraumvergleich die zweite
+ganze Restfunktion einschließlich ihres eigenen richtungsabhängigen Fehlerledgers
+untersucht. Richtungen, gemeinsamer linearer Test und physische Antwort bleiben
+eingefroren. Der separate lokale Matrixvorlauf ersetzt diesen Restnachweis nicht;
+die vorliegende L1-Ergänzung enthält keinen Zweiraum-PASS.
 
 ## Einstieg
 

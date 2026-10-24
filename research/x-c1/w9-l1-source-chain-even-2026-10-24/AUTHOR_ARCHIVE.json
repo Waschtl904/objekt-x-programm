@@ -1,0 +1,16 @@
+{
+  "name": "Objekt-X-L1-Anwendungskette-2026-10-24.zip",
+  "size_bytes": 47074898,
+  "sha256": "6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b",
+  "zip_members": 53,
+  "internal_manifest_entries_passed": 52,
+  "bytes_preserved": true,
+  "historical_statuses_preserved": true,
+  "path": "author/Objekt-X-L1-Anwendungskette-2026-10-24.zip",
+  "original_received": true,
+  "math_source_commit": "beb38c9d1cba666bb3b7ddab9577873e59d854c4",
+  "prepared_against": "9ef0784f2cddbfa0c9804312a44b59306a351832",
+  "original_bytes_unchanged": true,
+  "repository_storage": "AUTHOR_ARCHIVE_CHUNKS.json",
+  "original_bytes_reconstructed_by": "ordered byte concatenation"
+}

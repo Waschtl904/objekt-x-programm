@@ -1,0 +1,23 @@
+REPRODUKTION
+Die 30 unmittelbar gelesenen Eingänge sind vollständig enthalten.
+Python 3.13.7; nur Standardbibliothek. Neues Ausgabeziel verwenden:
+
+python -B verify_chain.py --bindings SOURCE_BINDINGS.json --output NEW-RESULT.json
+
+Der portable Replay wurde tatsächlich ausgeführt und stimmt feldweise exakt
+mit RESULT.json überein. Die Prüfung kontrolliert Quellenbytes, die ganze
+Kernelpolynomidentität, endliche Kontrollen der Hochraum-/Kreuztermalgebra,
+H-SOURCE-Transport, R2-Summe und Endenergie. Der analytische Nachweis steht
+separat in L1-BEWEIS.txt; die endlichen Tests beweisen ihn nicht allein.
+
+PROVENANCE.json dokumentiert den zusätzlich ausgeführten Vergleich von fünf
+Originalen mit den hashgebundenen historischen (teils verschachtelten) Archiven
+und des Integrationsprogramms mit seinem Git-Blob auf beb38c9d. Diese großen
+Quellarchive werden nicht ein zweites Mal beigelegt. Ihre exakten Pfade,
+Mitglieder und Hashes stehen dort und in inputs/input_bindings.json.
+
+prior-evidence bewahrt den früheren R2-Beleg, dessen unabhängige Prüfung
+und den vorläufigen 26-Eingangs-Replay. Maßgeblich ist der abschließende
+30-Eingangs-Replay PORTABLE-REPLAY-FINAL.json im Paketwurzelverzeichnis.
+Er wurde für diese Runde nicht neu integriert oder inhaltlich umgeschrieben.
+Keine GitHub-Schreibaktion und keine Statusänderung im Forschungsregister.

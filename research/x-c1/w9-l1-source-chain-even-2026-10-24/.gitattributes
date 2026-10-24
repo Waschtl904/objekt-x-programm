@@ -1,0 +1,2 @@
+# Hash-bound original bytes and readable copies must survive Windows checkout.
+* -text

@@ -1,0 +1,429 @@
+OBJEKT X – L1-ANWENDUNGSKETTE DES KORRIGIERTEN FESTEN ZEUGEN
+24. Oktober 2026 · lokale Ableitung durch GPT 2
+
+Geltung und Status
+------------------
+Dieser Text schließt die konkrete Anwendungskette unter den unten benannten
+historischen Voraussetzungen. Die gezielte Gegenprüfung durch GPT 1 ist
+mit PASS abgeschlossen; Umfang und Grenzen stehen in GEGENPRUEFUNG.txt.
+Die endlichen Kontrollen allein sind kein analytischer Beweis.
+Keine externe Abnahme, keine zweite Richtung, keine neue Repositoryrevision.
+
+Integration: main = 9ef0784f2cddbfa0c9804312a44b59306a351832; normaler Merge
+von #256 über #255. Der Tree 9193ab9fe01bf49459e48f17f02c2b69913ada07 und
+zehn erfolgreiche Push-Workflows sind lesend bestätigt. Die mathematischen
+Originale bleiben am Snapshot beb38c9d1cba666bb3b7ddab9577873e59d854c4 gebunden.
+Der vorliegende L1-Text und R2 sind KEIN Bestandteil dieser beiden Merges.
+
+0. Präzise historische Voraussetzungen
+--------------------------------------
+H1: Die physische Q-Darstellung, Nullfortsetzungen, Symmetrie und zulässigen
+Domänen/Paarungen gelten für die definierten Legendre-, Log- und Momentquellen.
+Anker: domain_proof, inverse_proof und nstar_proof aus INPUT_BINDINGS.json.
+Insbesondere gelten die verwendeten Momentadjungierten. Keine Gesamtpositivität
+und keine A11-Positivität werden vorausgesetzt.
+
+H2: Die historischen ganzen Quellenzertifikate gelten für ihre URSPRÜNGLICH
+definierten Quellen und Modelle: F=(z_2,z_4,z_6,z_8,Lambda Y_1,...,Lambda Y_8),
+J=Q_basis[D;I_84], Y=Q_basis S und Phi=U^-1 M E. Die zugehörigen gebundenen
+Modelle c_F,c_J,Bh_F,Bh_J, ihre ganzen hohen Grame, E_LF,e_LJ,E_F,E_J und
+die Low/High-Kopplung stammen aus REFINED_INPUT und REFINED_COMMON96.
+Die Fehlergrame sind Operator-/Grammajoranten für ALLE Koeffizienten dieser
+festen endlichen Quellfamilien, keine bloßen Einzelspalten- oder Tailtests.
+Die historischen Integrations- und analytischen Beweise dieser Majoranten
+werden übernommen, nicht durch ihre numerische Positivität neu bewiesen.
+Ihre konkrete Anwendbarkeit auf den korrigierten Builder wird unten gezeigt;
+sie wird ausdrücklich NICHT als zusätzliche Voraussetzung formuliert.
+
+H3: Die gebundenen Form-, Invers-, Antwortgram- und Koerzivitätszertifikate
+gelten: U8, K, D, P, gemeinsame Kraftabbildung mit Cap 10 und L>=21/5 W_X.
+Die feste Antwortregel ist Phi12 X_fix Fhat, nicht der alternative Kandidat S.
+Die ganze D-Modellgrenze gilt in Paritäts-L2, vor und nach exakter Projektion.
+
+H4: Die schon geprüften historischen Modellenergie-, Kernquadratur- und
+Brückenbelege gelten mit ihren gebundenen Endpunkten. Die analytischen
+Quellenhüllen, R2-Grundhüllen und Cache-/Momentnachweise bleiben in genau
+ihrem dokumentierten Umfang übernommen. Hier werden keine Konturen und
+keine Integrationsnetze neu gerechnet.
+
+Diese Liste übernimmt definierte historische Zertifikate. Sie enthält weder
+die pauschale Aussage »L1 gilt« noch eine angenommene Vollständigkeit eines
+unbenannten Restkatalogs. Die konkrete Liste der Modellwechsel steht in §7.
+
+1. Quellen und Orientierung als ganze Funktionen
+------------------------------------------------
+Setze a=3log(2)/2, b=log(3), h=b-a. H8 hat Normquadrat 2 int_0^a |f|².
+Alle Funktionen werden gerade fortgesetzt. m(x)=cosh(x/2),
+mu=int_0^a m², Lambda v=(-m/mu int_a^b m v, v).
+Die vier globalen z-Funktionen gehören physisch zum ganzen H9 und sind
+nicht durch ihre Schalenrestriktionen zu ersetzen.
+
+Die Modelle benutzen genau die gebundenen rationalen lokalen Mittelpunkte
+Y0,J0. Ihre Abstände zu Q_basis S beziehungsweise Q_basis[D;I] werden vor
+der Monomumrechnung in der orthonormalen lokalen Basis gemessen.
+Der Builder benutzt für F die ersten vier globalen Funktionen plus Y0,
+für J die 84 Spalten von J0 und für Phi die 191 momentkorrigierten Grade.
+Dies sind dieselben Definitionen wie in OldFields und im historischen
+compute_global_model.py, mit den dort benannten Modellwechseln.
+
+Für Gamma224(z)=sum gamma_n z^n und beliebige Schalenmomente mu_j gilt
+auf dem GANZEN inneren Intervall exakt:
+
+ int_a^b [Gamma224((y-x)/2)+Gamma224((y+x)/2)]v(y)dy
+ = sum_{n=0}^224 sum_{k=0}^n
+     gamma_n 2^-n binom(n,k) [1+(-1)^k] x^k mu_(n-k).
+
+Der korrigierte Faltungskoeffizient co[224-k]/k! [1+(-1)^k] ist genau
+dieser Ausdruck. OldFields verwendet co[224-k]/k! [(-1)^k+eps], eps=1;
+compute_global_model.py verwendet die direkte doppelte Summe. Die freie
+Momentidentität gilt für jede Spalte und jede gemeinsame Kombination.
+25 425 rationale Koeffizienten wurden geprüft. Die umgekehrte Richtung
+mit Parität am Momentindex n-k scheitert bereits bei n=1,k=0.
+
+Singulärer Cauchyanteil, logarithmische Randteile, sämtliche sechs
+Primkanäle und die Momentliftdefinition werden von der Reparatur nicht
+geändert. QPhi benutzt weiterhin Gamma160; die vier globalen z und die
+Schalenquellen benutzen Gamma224. Diese Zuordnung ist im gebundenen
+Builder und OldFields sichtbar. Damit ist nach der Korrektur dieselbe GANZE
+physische Quellfamilie mit dem richtig orientierten regulären Modellkernel
+identifiziert, nicht nur ein Modell mit gleichen 191 Paarungen.
+Unterschiedliche historische Näherungsstände werden nicht pauschal als
+dieselbe Funktion ausgegeben: Die alten Low-/Featuremodelle behalten ihre
+Fehler zur tatsächlichen Quelle; der neue ganze Raw-Builder erhält seine
+eigenen eRaw- und Momentgrenzen zu genau dieser Quelle. Alte interne
+Moment-/Lambda-Trunkierungen bleiben in den alten Zertifikatspreisen.
+Die Momentträgerwechsel des aktuellen Builders werden in §6 behandelt.
+
+2. Ganze Raw-/Low-Fehler und hohe Anteile
+----------------------------------------
+U sei die physische Isometrie, e der normierte konstante Modus,
+M=I-e tensor m_s/<m_s,e>, E die isometrische Einbettung der 191 niedrigen
+Grade und P_Y die orthogonale Projektion auf ALLE höheren Grade.
+Phi=U^-1 M E, Theta=P_Y M* U, ||M||=||M*||=sqrt(gamma).
+M*U s ist für jede ganze Quelle s orthogonal zu e. Daher gilt exakt
+
+ c_s=Phi* s,   Theta s=M*U s-E c_s.
+
+Für das unprojizierte ganze Quellenmodell s0 und das gespeicherte Modell
+c0 folgt
+
+ ||Theta s-(M*U s0-E c0)||
+ <=sqrt(gamma)||s-s0||+||c_s-c0||.                    (2.1)
+
+Das ist eine Identität mit dem unendlichen P_Y. Kein hoher Modenabschnitt
+wird weggelassen. Gleiche 191 Koordinaten allein würden (2.1) nicht liefern;
+die Negativkontrolle enthält einen Fehler ausschließlich im hohen Anteil.
+
+Die uniformen reellen Restgrenzen epsilon160,epsilon224 sind durch den
+vorhandenen rationalen Gamma-Teilbeleg an dieselben Kernelkoeffizienten
+gebunden. Auf dem ganzen H8/H9 hat der entsprechende reguläre Restoperator
+Norm <=2a epsilon160 beziehungsweise <=2b epsilon224. Das folgt unmittelbar
+aus der Integralkern-/Hilbert-Schmidt-Schranke. Spiegelung ist enthalten.
+Eine hohe Projektion vergrößert diese Norm nicht.
+
+Für Phi gilt ||Phi||<=sqrt(gamma), also eRawA=2a epsilon160 sqrt(gamma).
+Der niedrige Preis eLowA=8a epsilon160 gamma ist konservativ gegenüber
+||Phi*(Q8-Q8,160)Phi||<=2a epsilon160 gamma. Die gebundenen A-Intervallradien
+werden zusätzlich nicht weggelassen; low_round vergleicht mit diesen
+Intervallen, nicht mit einem unbezahlt eingesetzten Mittelpunkt.
+
+Für F und J gelten historisch ||F||<16 und ||Lambda J||<=sqrt(1.000502).
+Daher reichen für den regulären Anteil 2b epsilon224*16 beziehungsweise
+2b epsilon224*sqrt(1.000502). Die Rohquellen können durch ihre anschließende
+momentorthogonale Projektion nur kleiner werden.
+
+Die Teleskopreihenfolge ist dabei fest: zuerst physischer Gamma-Kern zu
+Q_K auf der tatsächlichen Quelle, danach Basisfreeze unter Q_K, zuletzt
+der m160-Wechsel. Die Norm 16 wird somit nicht ungeprüft auf F0 übertragen.
+Der Gamma-mal-Basisfehler steckt in der ganzen Q_K-Cap des zweiten Schritts;
+Gamma-mal-Momentfehler stecken im konsistenten endlichen Kernel des R2-Schritts.
+
+Die zusätzlichen Koordinatenfehler heißen
+ eBareF=sqrt(mu9/mu8)||Y-Y0||_HS,
+ eBareJ=sqrt(mu9/mu8)||J-J0||_HS.
+Der rohe Schale-Kern-Transport einschließlich des inneren Momentlifts
+ist auf diesen Fehlern beschränkt: Kernkopplung <17 plus
+||Q8 m||<60 und ||lambda||/mu<1/2 geben <47. Die beibehaltene Cap 1000
+ist deshalb auch für diese ganzen Quellendifferenzen ausreichend.
+Es wird KEINE unbeschränkte Q-Norm auf beliebigem L2 durch 1000 ersetzt.
+
+Damit genügen eRawF=2b epsilon224*16+1000 eBareF+1e-200 und analog eRawJ.
+Die beiden 1e-200-Terme bleiben numerische Reserve; der konkrete m160-Wechsel
+des Builders wird in dieser Zuordnung vollständig und einmal durch R2
+gedeckt. Man kann sie in der Beweisbilanz auf null setzen und erhält
+weiterhin eine kleinere Schranke als den unveränderten gespeicherten Preis.
+
+Die niedrigen F-/J-Modelle c_F,c_J sind dieselben alten Modellfelder wie
+vor der fehlerhaften whole-Implementierung. Ihre Preise sind
+ ||Delta c_F p0||<=sqrt(p0*E_LF p0),
+ ||Delta c_J w||<=sqrt(gamma) e_source,J ||w|| = eLJ ||w||.
+Unter H2 sind das ganze Quellenaussagen mit niedriger Projektion am Ende.
+Die Orientierungskorrektur macht den Funktionsbuilder mit diesen Quellen
+identisch; sie verändert weder H2s Quellen noch seine Fehlermetriken.
+
+Für s=Q9(Lambda J w-F p0-Phi ff)-h ergeben (2.1) und das Normdreieck
+
+ raw = sqrt(gamma)(eRawJ||w||+eRawF||p0||+eRawA||ff||+eps_h),
+ low = eLJ||w||+sqrt(p0*E_LF p0)+eLowA||ff||+sqrt(gamma)eps_h,
+ source = raw+low+low_round+small_raw.
+
+Nach Theta* und der äußeren Kopplung reicht die gebundene Cap 100:
+die ganze rohe Kopplung kostet <47, der zusätzliche M-Faktor <1.001.
+Die benutzte Schranke 100 gilt deshalb auch für niedrige Modellleckage.
+
+3. Gemeinsame Featurefehler, Gewichtung und Kreuzterme
+------------------------------------------------------
+Die historische gemeinsame Featureabbildung besteht aus Theta/sqrt(delta)
+und C*(Phi*-B Theta/delta)/sqrt(1-rho), delta=18219/10000.
+E_F und E_J aus Common96 enthalten ganze hohe Antworten und den endlichen
+Featureanteil. H2 behauptet keine abgeschnittene 191er-Aussage.
+Die spätere konservative Vergrößerung um die hohen Fehler und Faktor 2
+bleibt zulässig. Der Faktor 2 in der gemeinsamen Blockmajorante bezahlt
+unbekannte F-/J-Kreuzfehler; keine statistische Unabhängigkeit wird benutzt.
+
+Bei festem p0 gilt für die niedrige Featurekomponente unmittelbar
+ ||Delta V_J w-Delta V_F p0||
+ <=sqrt(EJ)||w||+sqrt(p0*EF p0).
+Gleichzeitige Fehlerabhängigkeiten an Basis, Gamma und Momenten sind erlaubt.
+Für gekoppelte Produkte gilt stets
+ Delta(A*B)=Delta A*B0+A0*Delta B+Delta A*Delta B;
+der letzte Term steckt in den normierten (Modellnorm+Fehler)-Faktoren.
+Gewichtungen K^-1 und P treten erst danach als feste positive Metriken auf.
+Einzelne Spaltencaps würden diese gemeinsame Aussage nicht ersetzen.
+
+Für den h-Featureanteil wird die ganze Hochpaarungsidentität benutzt:
+ <Theta g,Theta h>=<g,h>+gamma conj(e_g)e_h-ell_g*ell_h.
+Die Fehler von QPhi und seinem Low-Modell geben
+ eBy=eRawA(||h||+gamma|e_h|)+eLowA||ell_h||,
+ eWh=||C||_HS eBy/(delta sqrt(1-rho)).
+Damit ist eta_source=sqrt(EJ)||w||+sqrt(p0*EF p0)+eWh.
+Der physische h-Wechsel wird gesondert mit sqrt(||U8||)eps_h transportiert.
+eta_round kontrolliert die tatsächliche eingefrorene ff-Platzierung.
+
+Der p-Wechsel wird ZUERST als eine gemeinsame Kraft a_fin*(p-p0)
+transportiert. Seine vier Beiträge ea_direction,p_feature,p_physical,p_round
+bilden p_total. Erst danach gelten die obigen Quellenabschätzungen bei FESTEM
+p0. Keine weitere Addition des ganzen p-Modellpreises zur Kernkorrektur.
+Das schließt eine benötigte Kreuzkorrektur nicht aus: ea_direction und die
+gemeinsamen Featuremetriken enthalten die Produktfehler bereits.
+
+4. H-SOURCE und Normierung
+--------------------------
+GPT 1s Nachricht H-SOURCE wurde als separater Teilbeleg übernommen und gegen
+die gebundenen lokalen Quellen geprüft. Ein erneuter Download seines ZIPs
+wird damit nicht behauptet. Die Quellenarchive dieses Checkouts sind gebunden.
+Für A=log3, B=log11/2 und zwölf physisch L2-normalisierte Schalenpolynome
+gilt G_W>=I; der exakt W-normalisierte Koeffizientenvektor c erfüllt ||c||<=1.
+T_ex=X_fix Fhat ist die festgelegte Antwort. T0 sind ihre eingefrorenen Werte.
+
+Mit demselben RAW-Vertreter für C in beiden Ständen gilt die Teleskopierung
+ (C-D T_ex)c-(C360-Dtilde T0)c
+ =(C-C360)c-(D-Dtilde)T_ex c-Dtilde(T_ex-T0)c.
+Die physische Quelle ist jeweils die exakte Pi9-Projektion des Vertreters.
+Alternativ sind alle nachfolgenden Abbildungen auf dem Quotienten nach dem
+exakten Momentträger zu lesen. Das ist wesentlich: Ein gerundetes Dtilde
+oder ein raw C-Modell ist nicht automatisch momentnull.
+
+Hierfür gelten exakt M*U m=0, Phi* m=0 und Lambda8* m9=0. Ein identischer
+Momentanteil darf deshalb gemeinsam aufgehoben werden. m160 ist nicht m;
+sein Unterschied bleibt in R2. Die historische Integration bildet H8 und
+H9 ausdrücklich als 2(Hraw-mc*mc/mu) und e_h mit dem exakten Momentabzug;
+das folgt aus integrate.py, Zeilen um 292–300. Keine Intervallmitte wird als
+exakte Projektion behandelt.
+
+Die ganze Fehlernorm ist durch
+ ed+ec+et = delta_D sqrt(tr G_T)
+          +sqrt(48 A(B-A)) epsilon360
+          +Dnorm ||T_ex-T0||_HS
+begrenzt. delta_D stammt aus dem ganzen D12-Funktionsbeweis, nicht aus zwölf
+Probeauswertungen. Frisch rational geprüft: delta_D² tr(G_T)<=ed², mit
+delta_D≈3.55018701616e-38 und ed≈2.42781067305e-31.
+
+Dtilde wird mit 1/sqrt(2A) bei t=x/A ausgewertet. Daher ist die physische
+Norm genau die L2(0,1)-Norm der Klammer. Monomnormen <=1,
+||-log(1-t²)/2||_2<=1/sqrt(2)<2, Momentträger <=exp(A/2) und alle Shift-
+Indikatoren sind Kontraktionen. Die verwendete absolute Spaltensumme Dnorm
+ist folglich eine ganze Hilbert-Schmidt-Majorante, einschließlich aller
+hohen Anteile. Der Gamma-Hilbert-Schmidt-Preis enthält alle zwölf Spalten.
+
+Der neue 3072-Bit-T-Mittelpunkt ist NICHT der historische 800-Bit-Mittelpunkt.
+Der bereits unabhängig geprüfte frische Abstand zum analytischen T_ex ist
+kleiner als der alte bezahlte Abstand. Genau diese Ungleichung wird erneut
+kontrolliert; es wird keine unzulässige Gleichsetzung der beiden Matrizen
+benötigt. Hinzu kommt der explizite Koeffizienten-Normierungsfehler:
+ eps_h=eResidual+||c-c0|| (sqrt(tr H9)+eResidual).
+Die mehreren eps_h-Vorkommen in raw,low,eta,p und direkter Dichte betreffen
+verschiedene Summanden der linear zerlegten Residualabbildung.
+
+5. Äußere Gamma- und Koordinatenmodelle
+---------------------------------------
+Die äußere Gamma224-Kopplung auf dem kontinuierlichen u0 kostet höchstens
+100 epsilon224 ||u0||. Die nachgewiesene ganze Norm liegt weit unter 1e20;
+auch der hier kontrollierte Momentwechsel erschöpft diesen Abstand nicht.
+Für das direkte Bild von Lambda Jw-Fp0 genügen
+100 epsilon224 (||w||+16||p0||). Die Faktoren enthalten die endlichen
+Intervalllängen, Spiegelbeiträge und die Momentadjungierten.
+
+Für Basisrundungen muss Q auf dem lokalen Grad-95-Raum kontrolliert werden,
+nicht auf beliebigem L2. In der normierten lokalen Legendrebasis gilt
+||f||_sup<=96/sqrt(2h)||coeff||, H95<6, |log(pi h)+Euler|<4.
+Das logarithmische Potential hat normierte L2-Norm <1; sein Preis ist <=96.
+Regulärer Selbst-/Spiegelkern kostet <2, reflektierter singulärer Teil <1,
+die zwölf Primtranslationen zusammen <12. Daher kostet die reine äußere
+Q-Schalenwirkung weniger als H95+4+96+2+1+12.
+Der innere Anteil des gelifteten Fehlers kostet <47; seine Rückwirkung
+auf die Schale ist <60. Die äußere Momentadjungierte hat Norm <2.
+Die im Checker rational ausgewertete gemeinsame Cap bleibt <455 und
+damit deutlich unter der beibehaltenen Cap 100000. Die vier globalen
+z-Polynome werden an dieser Stelle gar nicht eingefroren.
+
+Das begründet q_error als ganzen Funktionspreis. Eine zufällig kleine
+Koeffizientennorm nach schlecht konditionierter Monomumrechnung wird
+nirgends als physische Fehlernorm eingesetzt.
+
+6. Momentträger: ein gemeinsamer Transfer mit allen Kreuztermen
+---------------------------------------------------------------
+Hier gilt unverändert der gebundene R2-Beweis. d=m-m160 erfüllt
+||d||_sup,||d'||_sup<=epsilon=2/160!, und für den tatsächlich benutzten
+polynomialen Q8-Kern ||Q8,K d||_H<=100 epsilon.
+Lambda1,Lambda2,A,U und Qpsi sind die dort gebundenen ganzen Hüllen.
+
+Die beiden entscheidenden EXAKTEN Umgruppierungen sind
+ Delta u=delta^-1(Delta g-Delta alpha*m-alpha160*d),
+ <u*,Qm*>-<u0,Qm0>=<Delta u,Qm*>+<u0,Qd>.
+Delta alpha*d beziehungsweise <Delta u,Qd> sind somit enthalten.
+Für das ganze äußere Residuum folgt
+ Delta r=B_K(Delta u+Delta psi_core)
+          -m_shell/mu [int d Qpsi0+int u0 Q8,K d].
+Der gemischte direkte Primteil des wirklichen Builders benutzt exaktes m
+statt m160 und wird zusätzlich mit 24 Lambda2 epsilon bezahlt.
+
+Der vollständige Preis lautet
+ E_m,X=epsilon[100(300 Lambda1+2A+2 Lambda2)
+                  +2 Qpsi+100 U+24 Lambda2]
+      =7.983055689603853686756...e-267 <7.984e-267.
+Die direkte bilineare Gegenkontrolle verwirft das Weglassen des Kreuzterms.
+Das ist kein zusätzlicher p-, Gamma-, h- oder Quadraturpreis.
+
+7. Vollständiger Modellwechselkatalog dieses Builders
+----------------------------------------------------
+Jede mathematisch nicht identische Ersetzung im festgelegten Rechenweg hat
+einen der folgenden Plätze. Algebraische Neuordnung und exakte rationale
+Festlegung eines Hilfsmodells sind keine unentgeltlich approximierten Quellen.
+
+R01  Q-Basis zu Y0,J0: eBareF/J, raw-Kopplung 1000 und äußere Wirkung
+     100000; niedrige/Featuremodelle behalten ihre historischen eigenen Preise.
+R02  Physischer Gamma-Kern zu Grad160/224/360: eRawA/F/J,eLowA,g_error,
+     q_error,ec; die Orientierung wird korrigiert, nicht mit einem Tailpreis
+     versteckt. H2s Low-/Featurepreise betreffen die gleichen Quellen.
+R03  Exakter Momentträger zu m160 im Builder: vollständiger R2-Preis,
+     einschließlich erster/zweiter Kernquelle, alpha, outerstatic, mqpsi,
+     uq, hq und gemischtem direktem Primteil. Letzter äußerer Faktor ist exakt.
+R04  Canonical w zu gespeichertem w und Richtungsneubasierung:
+     canonical_w_and_directional_rebase; bereits eigener gebundener Teilbeleg.
+R05  p0 als gewählter Mittelpunkt: p_round plus die getrennten physikalischen
+     und Feature-/a-Fehler; der p-Wechsel wird genau einmal transportiert.
+R06  ff als gewählter Mittelpunkt: eta_round; die Quellenfehler sind zusätzlich
+     eta_source,eta_physical, weil sie andere Differenzen beschreiben.
+R07  low als gewählter Mittelpunkt: low_round gegen den eingeschlossenen
+     Ausdruck c_J w-ell_h c-c_F p0-A ff; alle A-Radien bleiben darin.
+R08  c zu c0: witness_normalization_Hilbert_error in eps_h.
+R09  Ganze Antwort D zu Dtilde und T_ex zu tatsächlichem T0: ed+et;
+     eigene Gamma360-Quellenabweichung ec. Historische Fhat bleibt per Definition
+     Teil der Antwortregel; kein zweiter F_actual-Fhat-Wechsel im Residuum.
+R10  Hoher Nachlift / modellierte Momentnullheit: exact_high_moment_lift;
+     alternative frühere Schranken derselben Ursache werden maximiert.
+R11  Korrekturbeleg zur gemeinsamen rekonstruierten Funktion:
+     whole_correction_source_bridge; identische gemeinsame Terme werden nur
+     bei identischen Quellenbindungen aufgehoben.
+R12  Kontinuierliche h-Auswertung zu 128er Quadratur, 128er zu 64er Modell:
+     die separaten historischen e_core und e_bridge, einschließlich Ränder.
+     Ihre Restteile werden nicht nochmals im Kleinstrestposten gebucht.
+R13  Gespeicherte Gaußatome zu ihren eingeschlossenen Knoten/Gewichten:
+     existing_cache_assignment_64 und _128; bestehende separate Auditbelege.
+R14  Intervallarithmetik, endliche Polynomumrechnung und Integralsummen:
+     gerichtete Radien der gebundenen Modell- und Resultatintervalle. Die
+     Cacheform bewahrt Mittelpunkt UND Radius. Die deterministische Revision
+     ändert nur die Summationsreihenfolge, keine Genauigkeit oder Toleranz.
+R15  Erneutes midmat auf den rationalen Y0-/J0-Eingängen: Dieser Schritt
+     darf nicht allein durch R14 als Intervallrechnung behandelt werden.
+     Frisch exakt geprüft wurden alle 768 Y- und 8064 J-Koeffizienten:
+     Die gespeicherten dyadischen Mittelpunkte sind exakt gleich den
+     gebundenen rationalen Eingängen. Der zusätzliche Fehler ist exakt null.
+     DYADIC-BASIS.json bindet das ganze ursprüngliche Cache, beide originalen
+     Archiveingänge und den vollständigen rationalen Vergleich.
+
+Diese Liste folgt den tatsächlichen Ersetzungen im Programm, einschließlich
+beider build_core-Aufrufe und outer_value. Logarithmen, Prim-Indikatoren,
+unendliche Hochprojektion und Cauchyoperator werden nicht durch eine weitere
+endliche Modellfamilie ersetzt. Die nur zur Fehlerauswertung verwendeten
+Taylor-/Quadraturapproximationen haben R12–R14 als eigenen Belegumfang.
+Die Gamma-Korrektur selbst ist schon in der Modellnorm als C berücksichtigt.
+
+Im Kleinstrestposten verbleiben damit genau R03,R04,R10,R11,R13.
+Der vorherige pauschale Momentterm mit Verstärkung 1e40 wird durch R03
+ERSETZT. Die 1e-200-Floors in eRawF/J bleiben ungenutzte konservative Reserve
+für dieselbe Ursache; sie werden nicht zur Begründung von R03 erneut benutzt.
+Alle anderen Posten haben die oben ausdrücklich benannten Ledgerplätze.
+
+Die gemeinsame exakte rationale Summe der fünf Familien in rohen Einheiten
+(X-Preis mal delta/100) ist
+  1.454432916091297421807...e-268 <1.455e-268 <1e-150.
+Das beweist zusammen mit dem Modellwechselkatalog die Anwendung des
+Kleinstrestpostens. Die kleine Summe allein würde die Vollständigkeit nicht
+beweisen. Die Endvergleichsreserve wird für keinen unerklärten Rest benutzt.
+
+8. Durchgehendes Fehlerledger und bedingter Satz
+------------------------------------------------
+F: physische z/Lambda Y -> Y0 und Gamma224/m160 -> ganze eRawF und E_LF/EF
+   -> Theta, C*, K^-1/P -> raw/low, eta_source, p_feature und q_error.
+J: physische Lambda Q_basis[D;I] -> J0 und Gamma224/m160 -> eRawJ,eLJ,EJ
+   -> gleiche gemeinsame Projektion/Gewichtung -> raw/low, eta_source,
+   ea_direction und q_error. Ganze hohe Antworten bleiben eingeschlossen.
+Phi: U^-1 M E -> Gamma160-Modell -> eRawA,eLowA -> ganzer Theta-/B-Anschluss
+   -> raw/low und eWh. Niedrige Modellleckage wird mit Cap 100 transportiert.
+h: exakte projizierte feste Antwortquelle -> C360,Dtilde,T0,c0 -> eps_h
+   -> Pi9/Pi8, Theta und gemeinsame Metriken -> eta_physical,p_physical,
+   raw/low und direkte äußere Dichte. Kein high-tail wird abgeschnitten.
+Moment/Basis/Arithmetik: R01–R15 -> jeweils genannter eigener Preis; nur die
+genau aufgelisteten kleinen Familien -> small_raw<=1e-150.
+
+Die feste Bilanz lautet unverändert
+ X_raw=100*source/delta+g_error+q_error+2 eps_h,
+ e_operator=10(p_total+etaerr)+sqrt(5/21) X_raw.
+Die rohe Cap 100 ist kein Ersatz für die D-gewichtete Kraftcap 10.
+
+Unter H1–H4 und der oben bewiesenen Anwendungskette gilt für genau den
+unveränderten festen geraden Zeugen mit eta=1e-10:
+
+ ||r||_Ldual <= sqrt(5/21)(sqrt(E_alt)+||C||_X+e_bridge+e_core)+e_operator,
+ ||r||_Ldual² <= 4.631339149320193045752...e-11 <4.632e-11 <1e-9.
+
+Die angegebenen Dezimalwerte sind Anzeigen; der Checker verwendet rationale
+Endpunkte und behält die alten größeren Ledger-Endpunkte bei. Eine neue
+physische Genauigkeit von 1e-313 wird nicht behauptet.
+
+Ergebnis dieses Autorenpasses: Die frühere pauschale L1-Anwendungsvoraussetzung
+ist durch die obige explizite Quellen-/Modell-/Transportkette ersetzt.
+Die gezielte Gegenprüfung dieser neuen Kette ist mit PASS abgeschlossen.
+Die historischen Grundlagen H1–H4 und ihre externe Begutachtung bleiben
+ausdrücklich offen.
+Keine Aussage zum ganzen Grad-11-Raum, ungerader Parität, Punkt 4 oder Objekt X.
+
+Abschluss der gezielten Gegenprüfung, 24. Oktober 2026
+-----------------------------------------------------
+GPT 1 meldet für die Anwendung unter H1–H4 kein konkretes internes Finding.
+Eigenständig wiederholt wurden die 25.425 formalen Gamma-Koeffizienten,
+eine Kreuzterm-Gegenkontrolle und ein konservativer Kleinstrestvergleich
+unter 1e-264 gegenüber 1e-150. Der T-Preis wurde aus dem nachgereichten
+Endpunkt und einer eigenen ganzen D-Normschranke rational kontrolliert:
+unter 1.988e-124, innerhalb des historischen Preises.
+T-Neuaufbau und R15 wurden anhand von Prüfer, Ergebnis und Quellenbindungen
+nachvollzogen, durch GPT 1 jedoch nicht erneut ausgeführt. Das portable
+30-Eingangs-Paket und die engen R2-Endpunkte wurden von GPT 2 ausgeführt,
+in dieser Gegenprüfung nicht noch einmal vollständig wiederholt.
+Die Gegenprüfung bestätigt ausdrücklich, dass H2 die neue Anwendbarkeit
+nicht zirkulär voraussetzt: historische Modelle und neuer Builder sind
+über dieselben physischen Quellen verbunden, nicht pauschal gleichgesetzt.
+Diese lokale Ergänzung ist nicht im Repository veröffentlicht. Ein weiterhin
+offener L1-Eintrag dort wird durch diesen Text nicht automatisch geändert.

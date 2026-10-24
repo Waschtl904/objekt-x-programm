@@ -1,0 +1,40 @@
+L1-ERGÄNZUNG: BEGRENZTE REPRODUKTION
+
+Python 3.12 oder neuer, ausschließlich Standardbibliothek. Keine Installation
+von Arb/python-flint nötig. Keine Netzwerkzugriffe und keine neue Quadratur.
+
+Aus dem Repositorywurzelverzeichnis:
+  python -B research/x-c1/w9-l1-source-chain-even-2026-10-24/verify.py
+  python -B research/x-c1/w9-l1-source-chain-even-2026-10-24/verify.py --replay --report /tmp/l1-fresh.json
+  python -B research/x-c1/w9-l1-source-chain-even-2026-10-24/test_controls.py
+
+Die paketlokale .gitattributes deaktiviert Zeilenendenumwandlung für alle
+hashgebundenen Dateien, einschließlich der bytegleichen lesbaren Autorenkopien.
+Unter Windows den Reportpfad durch einen neuen Pfad außerhalb des Pakets ersetzen.
+Vorhandene Ergebnisdateien werden nicht überschrieben. -O/-OO werden abgewiesen.
+
+verify.py prüft zuerst Paketmanifest, Größe/SHA-256 der unveränderten Original-ZIP,
+alle 52 internen Dateibindungen, 30 Quellen und die bytegleichen lesbaren Kopien.
+--replay entpackt in einen frischen temporären Ordner und führt den unveränderten
+verify_chain.py aus. Sämtliche JSON-Ergebnisfelder müssen dem Original entsprechen.
+Die fünf mathematischen Gegenkontrollen sind Bestandteil dieses Originalprüfers.
+test_controls.py prüft zusätzlich fehlende/manipulierte Quelle, geänderte ZIP,
+abweichende lesbare Kopie, falsches Ergebnis, unsichere Pfade, Überschreiben von
+Belegen und optimierten Python-Modus. Es ändert keine gebundenen Originaldateien.
+
+Das Autorenarchiv enthält seine damaligen Statusvermerke. Der spätere Empfang und
+GPT 1s neuer endlicher Replay stehen separat unter evidence/. REVIEW_SCOPE.json
+bleibt der damalige Umfang der früheren Gegenprüfung, nicht der heutige Replayumfang.
+
+Nicht Bestandteil: Neuerzeugung der historischen Quellintegrale/Quadratur,
+der engen analytischen R2-Eingangshüllen, der 3072-Bit-T-Konstruktion oder externer
+Abnahme. Das endliche Replay allein ist kein analytischer Gesamtbeweis.
+
+Vor späterer Veröffentlichung: Diff gegen den dokumentierten Main-Stand prüfen.
+Nach Veröffentlichung: den neuen W9-L1-Workflow, kanonische Registry-Prüfung und
+alle weiteren anwendbaren Workflows am tatsächlichen PR-Head abwarten. Lokale
+Tests sind keine Behauptung eines bereits erfolgten CI-Laufs oder einer Mergefreigabe.
+
+Archivtransport: AUTHOR_ARCHIVE_CHUNKS.json nennt die geordneten Binärteile.
+verify.py prüft Teilgrößen/-hashes und die exakt zusammengesetzten Originalbytes.
+Es wird weder entpackt und neu gepackt noch ein Ersatz-Archivhash verwendet.

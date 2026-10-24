@@ -1,0 +1,13 @@
+{
+  "L1_application": "CLOSED_LOCALLY_UNDER_H1_H4",
+  "scope": "Only the unchanged corrected fixed even witness; F/J/Phi and its fixed h response.",
+  "mathematical_status": "AUTHOR_DERIVED",
+  "external_review": "EXTERNAL_REVIEW_OPEN",
+  "second_direction_certified": false,
+  "full_degree_11_certified": false,
+  "historical_lemmas_reproved": false,
+  "energy_cap": "4.632e-11",
+  "conservative_energy_cap": "1.391e-10",
+  "retained_budget_cap": "1e-9",
+  "historical_author_statuses_preserved": true
+}

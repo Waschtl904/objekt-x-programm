@@ -1,0 +1,21 @@
+LOCAL PUBLICATION COMPLETION – 2026-10-24
+
+Mandatory checks fixed before the replay:
+1. Original size and SHA256, safe ZIP inventory, full internal manifests.
+2. Read the supplied finite checker, then run its self-contained 30-input
+   standard-library replay and compare every RESULT.json field. No integration.
+3. Preserve the original archives and historical acceptance files byte-for-byte.
+   Record the new receipt/replay in a separate dated evidence file.
+4. Bind readable proof, H1–H4, source ledger, canonical proof and META.
+5. Package wrapper: hash checks, deterministic finite replay; rejection of a
+   missing or modified input and an altered result. No tolerance changes.
+6. Registry schema, generated views, META/proof hashes, historical active-file
+   body preservation, links and exact-base diff checks; test new CI definition.
+7. Replay publication package from a fresh extracted preparation artifact.
+
+Optional limited supplement: use the now received pilot raw outputs to close
+the earlier file-receipt boundary and run its rational gate only. This is not
+pilot development and not a repeat of the new budget integrations.
+
+No remote branch, PR, push, merge, deletion, whole residual integration or
+blanket L1 analytic re-audit. External review and full-space status unchanged.

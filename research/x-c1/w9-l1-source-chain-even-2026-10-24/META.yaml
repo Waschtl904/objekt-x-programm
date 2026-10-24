@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "W9-L1-SOURCE-CHAIN-FIXED-EVEN",
+  "date": "2026-10-24",
+  "kind": "DIAGNOSTIC",
+  "strategic": false,
+  "local_only": true,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "L1 application of historical whole-source error bounds to the unchanged corrected fixed even witness, conditional on H1–H4.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "No external or unconditional analytic acceptance, no second-direction certificate or whole-space claim.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Historical H1–H4 independently re-proved",
+    "Second whole residual or two-dimensional pass",
+    "Complete degree-11 space or odd parity",
+    "Point 4 or Object X constructed"
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-l1-source-chain-even-2026-10-24/PROOF.md",
+    "sha256": "0f3d89c176c093e842b0b44e4f72eb751983a3bc1f11c6cb4fe7a5e8f756edcf"
+  }
+}

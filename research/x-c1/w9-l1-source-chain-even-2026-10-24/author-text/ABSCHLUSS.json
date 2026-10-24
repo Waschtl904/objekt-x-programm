@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-24",
+  "status": "CONDITIONAL_L1_APPLICATION_CLOSED_LOCAL_TARGETED_REVIEW_PASS",
+  "scope": "Unveränderter korrigierter fester gerader Zeuge; ganze F-/J-/Phi-Quellen und feste h-Antwortquelle.",
+  "premises": [
+    "H1: Operator-/Domänenidentifikation und exakte Momentadjungierte",
+    "H2: Historische ganze Quellen-/Featuremajoranten für ihre originalen Quellen und Modelle",
+    "H3: Form-, Invers-, Antwort- und Koerzivitätszertifikate",
+    "H4: Historische Energie-, Quadratur-, Brücken- und Restbelege"
+  ],
+  "proof": "L1-BEWEIS.txt",
+  "source_ledger": "QUELLENKETTEN.json",
+  "unresolved_internal_application_findings": [],
+  "retained_conditional_energy_cap": "4.632e-11",
+  "threshold": "1e-9",
+  "local_checks": {
+    "direct_bound_inputs": 30,
+    "formal_gamma_coefficients": 25425,
+    "exact_YJ_entries": 8832,
+    "internal_negative_controls": 5,
+    "portable_replay": "PASS, field-exact equality",
+    "missing_and_mutated_input_controls": "REJECTED",
+    "source_provenance": "PROVENANCE.json"
+  },
+  "targeted_review": {
+    "status": "PASS",
+    "reviewer": "GPT 1",
+    "source": "GEGENPRUEFUNG.txt",
+    "thread_id": "01a15f35-2930-70d3-834e-08521934d067",
+    "turn_id": "01a16d2f-26d9-77e2-b0c4-9e4ccf5027d9",
+    "independently_recomputed": [
+      "25425 formal Gamma identities",
+      "Cross-term negative control",
+      "Conservative joint small remainder <1e-264",
+      "Rational T-price <1.988e-124 using supplied T endpoint and independent whole D bound"
+    ],
+    "reviewed_without_rerunning": [
+      "T rebuild program/results/bindings",
+      "Full 8832-entry R15 equality program/results/bindings"
+    ],
+    "not_repeated": [
+      "Entire portable 30-input package",
+      "Tight R2 endpoints"
+    ]
+  },
+  "integration": {
+    "main": "9ef0784f2cddbfa0c9804312a44b59306a351832",
+    "pr255_merge": "325eee80aa069e18dd58cf3f791d5d019ec3f58b",
+    "pr256_merge": "9ef0784f2cddbfa0c9804312a44b59306a351832",
+    "pr256_head": "0179e667344d6f9f99c46e61aa82e5214b992087",
+    "main_last_observed_utc": "2026-10-24 09:40:23 UTC",
+    "successful_main_push_workflows": 10,
+    "ci_scope": "Integrated repository revision, not this new local L1 proof"
+  },
+  "publication": {
+    "github_writes": false,
+    "push": false,
+    "merge": false,
+    "registry_promotion": false,
+    "L1_package_in_merged_PRs": false
+  },
+  "external_full_acceptance": "OPEN",
+  "second_direction": "NOT_STARTED",
+  "historical_originals_modified": false,
+  "new_large_integration": false,
+  "note": "Numerical RESULT.json preserves its original before-review status. This document records the later analytic and targeted-review conclusion; no numerical result field was rewritten."
+}

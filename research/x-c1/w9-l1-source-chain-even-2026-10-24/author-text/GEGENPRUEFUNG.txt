@@ -1,0 +1,15 @@
+OBJEKT X – GEZIELTE L1-GEGENPRÜFUNG DURCH GPT 1
+24. Oktober 2026
+
+Quelle: bestehender GPT-1-Chat 01a15f35-2930-70d3-834e-08521934d067
+Prüfturn: 01a16d2f-26d9-77e2-b0c4-9e4ccf5027d9
+Abschluss: 2026-10-24T09:38:06.000Z
+
+Die folgende Rückmeldung ist wörtlich aus der Abschlussmeldung übernommen.
+Das dort erwähnte separate Gegenprüfungs-ZIP wurde dieser lokalen Lieferung
+nicht beigelegt und hier nicht unabhängig geöffnet. Der tatsächliche Umfang
+von Wiederholung, Belegprüfung und übernommenen Voraussetzungen steht in
+der Rückmeldung selbst. Das lokale 30-Eingangs-Paket wurde durch GPT 2 geprüft.
+
+PASS für die gezielte L1-Anwendungsgegenprüfung unter H1–H4. Nach den Klarstellungen und den nachgereichten T-/R15-Belegen bleibt im geprüften Umfang kein konkretes internes Anwendungsfinding offen. Der Prüfumfang ist klar getrennt: Eigenständig nachgerechnet: 25.425 formale Gamma-Koeffizientenidentitäten, Kreuzterm-Gegenkontrolle und konservative gemeinsame Kleinstrestsumme unter (10^{-264}) gegenüber dem Ansatz (10^{-150}). Der nachgereichte T-Endpunkt ergibt mit meiner ganzen D-Normschranke einen Preis unter (1{,}988\cdot10^{-124}), deutlich innerhalb des historischen Ansatzes. Anhand von Prüfer, Ergebnis und Quellenbindungen nachvollzogen: T-Neuaufbau und R15 mit 8.832 exakt gleichen Y/J-Einträgen. Cacheformat und gemeldete Eingangshashes passen zu den historischen Quellen. Diese beiden Läufe habe ich nicht selbst erneut ausgeführt. Nicht vollständig wiederholt: das neue portable 30-Eingangs-Paket und die engeren R2-Endpunkte. Das Gesamtarchiv lag mir hier nicht vor. H2 setzt die Anwendung nicht zirkulär voraus: Alte Low-/Featuremodelle und neuer Raw-Builder werden über dieselben physischen Quellen verbunden. Die Kreuzterme, exakte Momentprojektion und einmalige Fehlerbuchung sind in der ergänzten Fassung nachvollziehbar. Übernommen bleiben ausdrücklich H1 Operator- und Domänenidentifikation, H2 historische ganze Quellenmajoranten, H3 Form-, Invers-, Antwort- und Koerzivitätszertifikate sowie H4 historische Energie-, Quadratur-, Brücken- und Restbelege. Unter diesen Voraussetzungen trägt die geprüfte Anwendungskette weiterhin [ |r|_{L^\ast}^{2}<4{,}632\cdot10^{-11}<10^{-9}. ] Externe Gesamtabnahme und zweite Richtung bleiben offen. Keine GitHub-Schreibaktion erfolgt. Objekt-X-L1-Gegenpruefung-2026-10-24.zip
+
