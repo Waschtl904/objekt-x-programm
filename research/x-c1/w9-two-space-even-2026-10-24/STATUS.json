@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-24",
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "local_mathematical_review": "CONDITIONAL_TWO_DIMENSIONAL_REAL_EVEN_PASS_UNDER_H1_H4",
+  "technical_review": "GPT2_EXACT_REVISION_COUNTERREVIEW_PASS",
+  "technical_review_evidence": {
+    "path": "archives/Objekt-X-Zweiraum-Prueferschutz-Gegenpruefung-GPT2-2026-10-24.zip",
+    "bytes": 11956,
+    "sha256": "e025e3e83972eba94baa63b843db9e7011014cb8fd8c3db282caeccece2d0e1b",
+    "role": "GPT2 exact technical counterreview, received separately"
+  },
+  "publication_status": "DRAFT_PUBLICATION_NOT_INTEGRATED",
+  "new_math_or_integrations_in_this_assembly": false,
+  "scope": "All real linear combinations of the two frozen even directions only",
+  "D22_strict_upper": "2.492e-6",
+  "physical_margin_strict_lower": "5.1450e-8",
+  "retained_physical_margin_strict_lower": "4.0252e-8",
+  "full_degree11_closed": false,
+  "odd_parity_closed": false,
+  "point4_closed": false,
+  "historical_pending_fields_unchanged": true
+}

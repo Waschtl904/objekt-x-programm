@@ -1,0 +1,42 @@
+{
+  "status": "GPT2_EXACT_TECHNICAL_REVISION_COUNTERREVIEW_PASS",
+  "artifacts": [
+    {
+      "filename": "Objekt-X-Zweiraum-Prueferschutz-v1-2026-10-24-Delta.zip",
+      "bytes": 25394,
+      "sha256": "a36ab5d2783ea92ed1d0bbb247075c163363b80824a2b27fb9420f2ef73085f9"
+    },
+    {
+      "filename": "Objekt-X-Zweiraum-Prueferschutz-v1-2026-10-24.patch",
+      "bytes": 152539,
+      "sha256": "2939f86b103123ac6fa26e8629579f8200b366199e52a6dd96143a3ebdf7672e"
+    },
+    {
+      "filename": "Objekt-X-Zweiraum-Prueferschutz-v1-2026-10-24.zip",
+      "bytes": 11442481,
+      "sha256": "8d364fd430d68ce6ec9da29d33fb23aac3d480e489515e1aaa959ae8f93c02f8"
+    }
+  ],
+  "revision_files_sha256": "44548030928c0d76dad91d19e055fc2ddd899795fdf816cf722794eaad68c9c5",
+  "revision_manifest_sha256": "8dcb0dcb963eececf430d4a2e040fa4b5c5b734a755695c3bbc2d4fc60c6d884",
+  "original_archive_sha256": "e1911ce244aa51062f6b06bb767f945922199112380022b59846de4ec7f0e89d",
+  "original_archive_unchanged": true,
+  "original_python_sources_bound": 40,
+  "protected_entries": 43,
+  "provided_suite_executed_by_GPT2": {
+    "optimized_calls": 258,
+    "normal_calls": 11,
+    "additional_failure_cases": 3,
+    "historical_negative_cases": 5
+  },
+  "independent_optimized_calls": 258,
+  "independent_extra_modes": [
+    "-S -O",
+    "-S -OO"
+  ],
+  "result_sha256": "c732a8f556fc7c8b79a5c040ae98da2a79b048974a0a71ad66a6e4716c976b5c",
+  "mathematical_fields_unchanged": true,
+  "new_numerical_integrations": 0,
+  "github_writes": false,
+  "mathematical_scope": "Unchanged conditional two-dimensional real even comparison under H1-H4; external acceptance and point 4 remain open."
+}

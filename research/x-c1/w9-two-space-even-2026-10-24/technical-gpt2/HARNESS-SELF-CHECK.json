@@ -1,0 +1,21 @@
+{
+  "scope": "Reviewer harness only; not substitute patch",
+  "harness_sha256": "2d8e77ec4fe51db92905e6a1ac466239ef6e974d7a22d28efe430c92c45beedd",
+  "cases": [
+    {
+      "fixture": "guard",
+      "correctly_classified": true,
+      "exit_code": 0
+    },
+    {
+      "fixture": "import_error",
+      "correctly_classified": true,
+      "exit_code": 1
+    },
+    {
+      "fixture": "false_success",
+      "correctly_classified": true,
+      "exit_code": 1
+    }
+  ]
+}

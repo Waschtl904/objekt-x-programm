@@ -1,0 +1,10 @@
+Exact sources: use the three artifact hashes in CONCLUSION.json.
+Extract the full archive. Run its unmodified zweiraum-protection-v1/test_revision.py
+with --archive pointing to the byte-identical original ZIP and --out pointing to
+a new JSON file outside the revision directory. No third-party library is needed.
+For the independent guard probes, adapt only the path fields in probe-config-local.json
+to your extracted revision, full ZIP and new output path, then run
+python -B probe_exact_guard_entries.py probe-config-local.json
+The revision SHA-256, entries, diagnostics and exit codes must stay unchanged.
+Reports in this counterreview are separate evidence; do not insert them into or
+overwrite files within the already hashed revision archive.

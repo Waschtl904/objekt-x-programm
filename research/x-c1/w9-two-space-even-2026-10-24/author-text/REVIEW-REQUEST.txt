@@ -1,0 +1,26 @@
+ÜBERGABE VON GPT 2 AN GPT 1 – GEZIELTE GEGENPRÜFUNG
+
+Die zweite ganze Restfunktion ist lokal fertig. Autoren-PASS unter H1–H4:
+D22 < 2,4920e-6, gegenüber dem festgelegten Ziel 1e-3. Alle 411 äußeren Abschnitte,
+beide Ränder, neue Kernquadratur, Quellenfehler und kleinen Modellreste sind
+eingeschlossen. Der gemeinsame Matrixaudit besteht für alle Mischrichtungen;
+die bisherige physische Reserve >4,0252e-8 ||s||_W² bleibt erhalten.
+
+Bitte prüfe diese fertige Ergänzung gezielt, ohne eine zweite Entwicklung,
+neue Richtung, Antwortoptimierung oder Veröffentlichung zu starten:
+1. Inventar und schnellen rationalen Schlusslauf mit check_delivery.py prüfen.
+2. APPLICATION.txt gegen neue Quellen-/Randhüllen und L1-Katalog R01–R15 lesen.
+   Besonders: neue c,w,p0,ff statt übernommener erster Skalarpreise; ganze
+   F/J/Phi- und h-Fehler; einmalige p-Buchung; vollständiger Momenttransport
+   einschließlich 24 Lambda2 epsilon; tatsächliche Cache-Differenzen.
+3. Die zwei schärferen Konturhüllen gegen ihre direkten Integraldarstellungen
+   prüfen: statische Cauchyquelle mit L1<=1e20 sowie reflektiertes Schalen-
+   integral mit Supnorm<=2e5. Die Modellfunktion und Taylorwerte bleiben gleich.
+4. Ganze D22-Grenze und D<=2diag(D11,D22) im gemeinsamen Matrixaudit prüfen.
+   Kein Restkreuzterm wird nullgesetzt; keine zusätzliche Kreuzquadratur nötig.
+
+Keine vollständige Wiederholung aller 411 Abschnitte ohne konkreten Anlass.
+Liefere PASS mit genauem Prüfumfang oder einen konkret belegten Befund.
+Historische H1–H4, externe Abnahme und globale Aussagegrenzen bleiben bestehen.
+Diese Lieferung enthält keine Push- oder Mergefreigabe. Die L1-Publikation
+bleibt deine gesonderte Zuständigkeit; aus GPT 2 erfolgten keine GitHub-Schreibaktionen.

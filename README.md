@@ -33,11 +33,14 @@ Zeugen **lokal unter H1–H4**. Die bedingte Restenergie bleibt `<4.632e-11`.
 Die externe Gesamtprüfung bleibt offen. Eigene Gegenrechnungen, anhand gebundener
 Prüfer nachvollzogene Läufe und nicht wiederholte Rechnungen sind getrennt dokumentiert.
 
-Als Nächstes wird für einen begrenzten geraden Zweiraumvergleich die zweite
-ganze Restfunktion einschließlich ihres eigenen richtungsabhängigen Fehlerledgers
-untersucht. Richtungen, gemeinsamer linearer Test und physische Antwort bleiben
-eingefroren. Der separate lokale Matrixvorlauf ersetzt diesen Restnachweis nicht;
-die vorliegende L1-Ergänzung enthält keinen Zweiraum-PASS.
+Die [Zweiraum-Ergänzung](research/x-c1/w9-two-space-even-2026-10-24/README.md)
+sichert nun den gemeinsamen Vergleich für **alle reellen Mischrichtungen der zwei
+festgelegten geraden Richtungen unter H1–H4**. Die zweite tatsächliche Restdualenergie
+ist `<2.492e-6`; die physische Formreserve ist `>5.1450e-8 ||s||_W²`.
+Mathematische Gegenprüfung und geprüfte Schutzrevision v1 sind getrennt gebunden.
+Externe Gesamtprüfung, vollständiger Grad-11-Raum und Punkt 4 bleiben offen.
+Nach einer gesonderten Integrationsentscheidung ist eine günstige Machbarkeitsanalyse
+des verbleibenden geraden Raums vorgesehen; dieser Zusatz startet keine weitere Richtung.
 
 ## Einstieg
 

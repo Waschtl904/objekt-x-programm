@@ -1,0 +1,138 @@
+OBJEKT X – ANWENDUNG AUF DIE ZWEITE FESTE RICHTUNG
+24. Oktober 2026. Bedingter Autorenbeleg, externe Abnahme offen.
+
+1. Unveränderter Bezug
+Die ursprünglichen ZIPs L1-Anwendungskette und Zweirichtungsvorlauf bleiben
+bytegleich erhalten. DIRECTIONS.json bindet s1, s2 und T. Die zweite Richtung
+ist e0/sqrt(e0*G_W*e0); w2 ist der bereits eingefrorene rationale Testvektor.
+Eine neue Antwort, ein erneutes Lösen für einzelne Mischrichtungen oder ein
+geänderter Zeuge wird nicht eingeführt. H1–H4 aus L1 bleiben Voraussetzungen.
+Die Quellenformeln und Fehlermajoranten beziehen sich auf den gemeinsamen
+endlichen F-/J-/Phi-Quellraum mit GANZEM Funktionsbild, nicht nur 191 Moden.
+
+2. Quellenidentifikation und Fehlerketten
+Der neue Modellaufbau benutzt dieselben gebundenen F, J, Phi und denselben
+X_fix-Fhat-Antwortoperator. Lediglich die Spaltenkoeffizienten c,w,p0,ff
+werden neu aus der zweiten Richtung gebildet. Der Schale-zum-Kern-Kernel
+hat von Beginn an den korrigierten Faktor (1+(-1)^k). Die formale Identität
+aus L1 ist eine Koeffizientenidentität in FREIEN Quellmomenten und gilt
+deshalb für diese neue Linearkombination. Sie ist keine Folgerung aus dem
+Erfolg des ersten Zeugen. Die gemeinsamen ganzen eRaw-/eLow-/Featurehüllen
+werden mit den NEUEN Koeffizientennormen bzw. Gramformen ausgewertet.
+
+F: dieselben globalen und gehobenen Schalenfunktionen -> Y0/Gamma224/m160
+-> eRawF, E_LF, EF -> gemeinsamer Hoch-/Niedrigtransport -> raw, eta, p.
+J: dieselben 84 gehobenen Testfunktionen -> J0/Gamma224/m160 -> eRawJ,eLJ,EJ
+-> dieselben ganzen Projektionen -> raw, eta, a-Aktion und Q-Abbildpreis.
+Phi: dieselbe 191-dimensionale Eingangsabbildung mit GANZEM hohen Bild
+-> Gamma160 -> eRawA/eLowA -> raw/low und eWh. Kein hoher Rest wird abgeschnitten.
+h: (C-D X_fix Fhat)c -> C360,Dtilde,T0,c0 -> eps_h. H-SOURCE liefert eine
+gemeinsame Operatorhülle auf allen zwölf Eingangskoordinaten. ||c||_W=1 und
+||c||_2<1 werden neu geprüft; die Hülle ist nicht nur am ersten Zeugen gültig.
+Der tatsächliche neue Normierungswechsel c-c0 wird gesondert addiert.
+Die T-Frierungsgrenze ist eine ganze Matrixnormgrenze auf denselben Quellen.
+
+3. Ganze Fehlersumme
+LEDGER.json berechnet alle folgenden Größen mit den neuen c,w,p0,ff:
+ etaerr = eta_round + sqrt(EJ)||w0|| + sqrt(p0*EF*p0) + eWh + eta_physical,
+ p_total = ea_direction + p_feature(c) + p_physical + p_round,
+ source = sqrt(gamma)(eRawJ||w0||+eRawF||p0||+eRawA||ff||+eps_h)
+        + eLJ||w0||+sqrt(p0*ELF*p0)+eLowA||ff||+sqrt(gamma)eps_h
+        + low_round + small_raw,
+ X_raw =100*source/delta + g_error + q_error +2 eps_h,
+ dual_only =10*(p_total+etaerr).
+Die Cap 10 ist die unveränderte gemeinsame gewichtete Kraftschranke, die
+Cap 100 die ganze rohe Transportgrenze einschließlich Momentlift. Beide
+sind Operatorgrenzen, keine vom ersten Zeugen kopierten skalaren Fehler.
+Gemeinsame Quellenabhängigkeiten werden durch Dreiecks-/Gramabschätzungen
+getragen; keine Unabhängigkeit der Fehler wird unterstellt. Der p-Wechsel
+wird einmal transportiert. Die Gamma-Reparatur ist im neuen Modell enthalten
+und wird nicht nochmals als additive Korrektur verrechnet.
+
+4. Neue reelle Hüllen
+source-caps.json bestätigt frisch: Phi-Sup <5e14, ||p0||<1.6e7, beide
+Schalenpolynome <2e5, niedrige Modellprojektion <12, beide Schalenmomente <2.
+Für h werden ell, quot, Gamma360, Dv und alle tatsächlichen Primzellen
+neu kombiniert. Die daraus hergeleitete Hülle ist <1e17(1+|log(b-x)|).
+Die alte Quellencap am ersten Zeugen wurde nicht ungeprüft übernommen.
+Mit a=3log(2)/2, b=log(3) gilt für das korrigierte g auf 0<y<a
+ |g(y)| <=2e16(1+|log(a-y)|).
+Die Begründung ist SOURCE-CAPS §§1–4 mit den neuen numerischen Eingängen:
+H383<7, Gamma160/224<2 auf den benannten Domänen; globale Polynome Grad<=8
+und Schalenpolynome werden nur auf ihrem physischen Intervall geschätzt.
+Der kontinuierliche u0-Preis ist <3.561e16<1e20. Es wird kein diskretes
+Gaußmaß als L2-Funktion behandelt.
+
+Für den statischen äußeren Cauchyquellenteil F(t)=outerstatic(t)+upp_cell(t)
+gilt aus Phi, M*g, low, dem diskreten h-Mittelwert und Momentlift:
+ ||F||_{L2(2dy)} <=5e14 sqrt(2a)
+  +[1.01||g||+12 sqrt(2a)+3 V_h sqrt(2a)/a]/delta+6 sqrt(2a).
+Dabei ist V_h die tatsächlich geprüfte Gesamtvariation der neuen Atome,
+hier <2. Also integral_0^1 |F(t)|dt <=||F||/sqrt(2a)<1e20.
+
+5. Konturen und schnellere Auswertung
+Die Taylor-Koeffizienten und ausgewertete Modellfunktion sind unverändert.
+Nur zwei Konturmajoranten werden durch unmittelbare Integralabschätzungen
+ersetzt. Für einen komplexen Punkt z mit Abstand d>0 von [0,1] gilt
+ |integral_0^1 F(t)/(z-t)dt| <=1e20/d.
+Das wird mit dem reellen Abstand der gesamten verwendeten Rechteckhülle
+geprüft. Für die reflektierte Schalenkopplung gilt bei Re x>0
+ |integral_a^b spx(y)/(x+y)dy| <=2e5*(b-a)/(Re x+a).
+Die großen fortgesetzten Polynome bei -x werden deshalb nicht einzeln
+als endgültige Hülle verwendet. Die exakten Taylorreihen bleiben dieselben.
+Die ursprünglichen und neuen sechs Abschnittsbelege bleiben getrennt.
+Alle Logarithmen/Konturabstände werden durch dieselben strikten Tests im
+Taylorprogramm geprüft. Float-Sortierung schlägt nur die Reihenfolge vor;
+die gerichteten strikten Abstände der unterschiedlichen äußeren Grenzen
+werden danach geprüft. Die Geometrie ist dieselbe wie im alten Cut-Audit.
+
+6. Rand, Quadratur, Modellwechselkatalog
+Die 411 Modellabschnitte werden vollständig summiert. Die beiden ausgelassenen
+Randstücke werden mit 1e20(1+log(v)^2) integriert; APPLICATION-CHECKS.json
+weist die Anwendung dieser Hülle auf die neuen Koeffizienten nach. Der Preis
+ist 2e40*d*(29+28t+14t²+4t³+t⁴), t=-log d, für jedes Randstück.
+Das neue Modell verwendet direkt 128 Hauptknoten und 64 Knoten auf den
+geometrischen Kernrändern. Die kontinuierliche Kernquadratur wird separat
+gerichtet kontrolliert. Eine alte 64/128-Brücke wird nicht übernommen.
+
+R01,R02,R05-R09: neue F/J/Phi/h- und p-/eta-/low-Preise im Ledger.
+R03: neuer vollständiger m->m160-Transport, <8.569e-257 in X-Norm,
+     mit neu geprüften |lambda|<2, |alpha|<1e18, ||u0||<1e20, ||Qpsi||<1e15.
+     Bilineare Differenzen werden bei wahrem Test und dann festem Modell
+     teleskopiert; gemischte Terme sind enthalten.
+     Expliziter Abgleich mit der vollständigen L1-Formel (§6): Für
+     epsilon=2/160! wird
+       epsilon[100(300 Lambda1+2A+2 Lambda2)+2 Qpsi+100 U+24 Lambda2]
+     mit Lambda1,Lambda2<=2, A<=1e18, U<=1e20, Qpsi<=1e15 geprüft.
+     Der letzte Summand bezahlt den gemischten direkten Primteil mit exaktem
+     m. Die beibehaltene größere Momenthülle überdeckt auch diese GANZE Formel.
+     Die Qpsi-Hülle folgt hier neu aus den globalen und Schalenbeiträgen:
+     ||Qpsi0|| <=4(1e11+2e10)+200 sqrt(2a)<1e15. Die logarithmische
+     Norm ist <4; die Momentkoeffizienten sind <2 und ||Qm160||<100.
+     Gemeint ist die Kernnorm dieser ganzen Quelle, kein 191er-Ausschnitt.
+R04: tatsächlicher rationaler w2 -> gespeicherter dyadischer w0. Neu exakt
+     berechnet und mit der gemeinsamen D/U/a-Aktionshülle transportiert,
+     einschließlich Neubasierung der bei w2 bestimmten a-Fehlerhülle.
+R10: hoher Momentnachlift; ||u0||+||Phi ff||<1e21 wird neu geprüft.
+R11: keine alte-Korrektur-plus-Modell-Brücke benutzt; neuer korrigierter
+     Builder direkt. Die ganze Kernelidentität gilt formal für freie Momente.
+R12: neue kontinuierliche Kernquadratur und äußere Taylor-/Randintegration.
+R13: neue Cacheatome werden durch Differenzen, nicht bloße Überlappung,
+     mit der erneuten Knoten-/Gewichts-/h-Auswertung verglichen. Ihr Preis
+     geht separat zur Kernquadratur, nicht zusätzlich in small_raw.
+R14: gerichtete Arithmetik einschließlich aller Cache-Radien; die kleinen
+     Restpreise werden mit vollständigen rationalen Endpunkten gespeichert.
+R15: alle 8832 tatsächlichen Y-/J-Koeffizienten sind erneut exakt mit den
+     kanonischen rationalen Quellen verglichen, Zusatzfehler null.
+Damit enthält small_raw genau R03,R04,R10 und bleibt unter 1e-150.
+Eine Budgetreserve dient nicht zur Deckung eines unerklärten Restes.
+
+7. Abschließende Annahmebedingung
+Erst nach vollständiger Modellintegration gilt unter H1–H4:
+ ||r2||_Ldual <=sqrt(5/21)*(sqrt(E_model)+e_core+e_cache+X_raw)+dual_only.
+Der unabhängige rationale Schlussprüfer quadriert diese gesamte positive
+Summe nach außen. Er verlangt <=1e-3 und setzt erst dann die vollständige
+D-Grammajorante aus dem gegengeprüften Vorlauf ein. Der Restkreuzterm ist
+durch D<=2diag(D11,D22) eingeschlossen. Keine separate Kreuzintegration.
+Eine erfolgreiche zweite Einzelintegration allein wird nicht als gemeinsamer
+Matrixvergleich ausgegeben; die positive Matrixreserve wird erneut geprüft.

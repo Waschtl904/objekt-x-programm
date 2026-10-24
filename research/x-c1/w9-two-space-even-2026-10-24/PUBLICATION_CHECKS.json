@@ -1,0 +1,23 @@
+{
+  "status": "PASS_BOUNDED_TWO_SPACE_PUBLICATION",
+  "L1_head": "898711c85fc188b38d7fb1129800d7f5a282ad4c",
+  "revision_archive_sha256": "8d364fd430d68ce6ec9da29d33fb23aac3d480e489515e1aaa959ae8f93c02f8",
+  "original_archive_sha256": "e1911ce244aa51062f6b06bb767f945922199112380022b59846de4ec7f0e89d",
+  "replay_performed": true,
+  "fresh_integrated_panels": 0,
+  "fresh_numerical_generators": false,
+  "external_review": "EXTERNAL_REVIEW_OPEN",
+  "technical_suite_summary": {
+    "guarded_python_files": 43,
+    "optimization_cases": 258,
+    "new_assert_statements": 0,
+    "fresh_numerical_integrations": 0,
+    "fresh_Arb_source_generation": false,
+    "original_bytes_unchanged": true
+  },
+  "normal_replays": 11,
+  "normal_failure_controls": 3,
+  "historical_negative_cases": 5,
+  "new_publication_control_tests": 6,
+  "scope": "Publication replay of unchanged revision v1. No fresh generator or panel integration. Original historical test statuses are preserved."
+}

@@ -1,5 +1,11 @@
 # Forschungsstrategie für die Konstruktion von Objekt X
 
+## Ergänzung: bedingter reeller Zweiraumnachweis
+
+Zweiraum-Ergänzung 24. Oktober: Der [gemeinsame Vergleich](../research/x-c1/w9-two-space-even-2026-10-24/README.md) gilt lokal unter H1–H4 für sämtliche reellen Linearkombinationen der zwei eingefrorenen geraden Richtungen. Die zweite tatsächliche Restdualenergie ist <2.492e-6 einschließlich eigenem Quellen-/Fehlerledger; die physische Formreserve ist >5.1450e-8 ||s||_W². D<=2diag(D11,D22) deckt den Restkreuzterm. Die bytegleiche Schutzrevision v1 und die gezielte mathematische sowie technische Gegenprüfung sind getrennt gebunden. Die 411 historischen Abschnittsbelege werden im begrenzten Replay nicht frisch integriert. Vollständiger Grad-11-Raum, ungerade Parität, Punkt 4 und externe Gesamtprüfung bleiben offen. Nach gesonderter Integration ist eine günstige Machbarkeitsanalyse des verbleibenden geraden Grad-11-Raums der nächste mögliche Auftrag; keine automatische Vollintegration oder Antwortoptimierung.
+
+Die nachfolgenden datierten Zwischenstände bleiben historische Belege.
+
 ## Ergänzung vom 24. Oktober: L1-Anwendung lokal geschlossen
 
 Die [L1-Ergänzung](../research/x-c1/w9-l1-source-chain-even-2026-10-24/README.md)

@@ -1,0 +1,21 @@
+{
+  "status": "GPT2_COUNTERREVIEW_RECEIVED_AND_BOUND",
+  "date": "2026-10-24",
+  "archive": {
+    "path": "archives/Objekt-X-Zweiraum-Prueferschutz-Gegenpruefung-GPT2-2026-10-24.zip",
+    "bytes": 11956,
+    "sha256": "e025e3e83972eba94baa63b843db9e7011014cb8fd8c3db282caeccece2d0e1b",
+    "role": "GPT2 exact technical counterreview, received separately"
+  },
+  "internal_manifest_bindings_checked": 8,
+  "internal_inventory_exact": true,
+  "reviewed_artifacts_checked_against_local_bytes": 3,
+  "revision_full_manifest_bindings_checked": 60,
+  "protocol_counts_and_outcomes_read": true,
+  "received_GPT2_verdict": "GPT2_EXACT_TECHNICAL_REVISION_COUNTERREVIEW_PASS",
+  "own_work_this_receipt": "Archive size/SHA-256, complete internal manifest, review subject binding, protocol structure/outcomes and publication assembly only. GPT2 technical executions are attributed to GPT2; no new mathematical review or integration.",
+  "transcription": "A local Base64 transcription error was rejected; only bytes matching the sender original size and full SHA-256 were accepted.",
+  "original_archives_unchanged": true,
+  "new_publication_wrapper_only": true,
+  "GitHub_writes": false
+}

@@ -1,0 +1,44 @@
+{
+  "archives/Objekt-X-Zweiraum-Prueferschutz-v1-2026-10-24.zip": {
+    "sha256": "8d364fd430d68ce6ec9da29d33fb23aac3d480e489515e1aaa959ae8f93c02f8",
+    "bytes": 11442481,
+    "chunks": [
+      {
+        "path": "archive-chunks/8d364fd430d68ce6ec9da29d33fb23aac3d480e489515e1aaa959ae8f93c02f8/000.bin",
+        "bytes": 4194303,
+        "sha256": "6cf12d8ccc2b4eb4de192dd70cb9b7b1f658204946ab01e0cd9e23372326c3e8"
+      },
+      {
+        "path": "archive-chunks/8d364fd430d68ce6ec9da29d33fb23aac3d480e489515e1aaa959ae8f93c02f8/001.bin",
+        "bytes": 4194303,
+        "sha256": "3b4bf70dfd04101647eeb10efcb905518f5dc0d79b440a509753984290e13602"
+      },
+      {
+        "path": "archive-chunks/8d364fd430d68ce6ec9da29d33fb23aac3d480e489515e1aaa959ae8f93c02f8/002.bin",
+        "bytes": 3053875,
+        "sha256": "74e4cd1bf4907c9294bcf82530358f45f9acd53d469889b2a259487c17137a0a"
+      }
+    ]
+  },
+  "archives/Objekt-X-Zweiraum-Gegenpruefung-2026-10-24.zip": {
+    "sha256": "48ab63d06792e5ce1cbf406ac512a2eae6ec808a7f8e0afa7612e56a125cbf7a",
+    "bytes": 11768394,
+    "chunks": [
+      {
+        "path": "archive-chunks/48ab63d06792e5ce1cbf406ac512a2eae6ec808a7f8e0afa7612e56a125cbf7a/000.bin",
+        "bytes": 4194303,
+        "sha256": "a3363cd99384e55aeb199d70df95469683a75e157e7997eb470b5a0faa17f402"
+      },
+      {
+        "path": "archive-chunks/48ab63d06792e5ce1cbf406ac512a2eae6ec808a7f8e0afa7612e56a125cbf7a/001.bin",
+        "bytes": 4194303,
+        "sha256": "20641e3022f00014f23d33c4d217140698989ce1d9750d42ad66b443b4f4ac6f"
+      },
+      {
+        "path": "archive-chunks/48ab63d06792e5ce1cbf406ac512a2eae6ec808a7f8e0afa7612e56a125cbf7a/002.bin",
+        "bytes": 3379788,
+        "sha256": "7a34956a763fab8fc2762291b33cfaa6a90a748d3d7d67cb1fd573b264c6e462"
+      }
+    ]
+  }
+}

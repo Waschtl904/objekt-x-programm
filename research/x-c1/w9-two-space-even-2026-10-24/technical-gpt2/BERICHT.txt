@@ -1,0 +1,80 @@
+OBJEKT X – GPT-2-GEGENPRÜFUNG DER EXAKTEN SCHUTZREVISION v1
+24. Oktober 2026
+
+VOTUM: TECHNISCHER PASS für GPT 1s endgültige, unveränderte Revision.
+Keine eigene ähnliche Reparatur wurde an ihrer Stelle eingesetzt.
+
+Gegenstand
+Vollarchiv: Objekt-X-Zweiraum-Prueferschutz-v1-2026-10-24.zip
+11.442.481 Byte
+SHA-256: 8d364fd430d68ce6ec9da29d33fb23aac3d480e489515e1aaa959ae8f93c02f8
+Delta: 25.394 Byte
+SHA-256: a36ab5d2783ea92ed1d0bbb247075c163363b80824a2b27fb9420f2ef73085f9
+Exakter UTF-8-Patch: 152.539 Byte
+SHA-256: 2939f86b103123ac6fa26e8629579f8200b366199e52a6dd96143a3ebdf7672e
+
+Empfang und Bindung
+Das Delta wurde aus drei tatsächlich erhaltenen Byteblöcken rekonstruiert.
+Bytezahl und Hash stimmen exakt. Der unveränderte Additionspatch wurde mit
+git -c core.autocrlf=false apply angewandt. Sämtliche 53 Revisionsdateien
+wurden gegen ihr Manifest geprüft. Der lokale deterministische Aufbau
+ergab exakt den oben genannten Vollarchivhash. Aus diesem Vollarchiv wurden
+die Tests frisch entpackt; alle 60 Bindungen des Vollarchivs bestehen.
+
+Quellprüfung
+Alle 40 ursprünglichen Python-Dateien sind mit denselben Quellhashes erfasst.
+Hinzu kommen drei geschützte Revisionsprogramme, insgesamt 43 Einstiege.
+Jede neue Python-Datei enthält vor nachfolgenden Importen/Aktionen denselben
+expliziten Optimierungsschutz. Keine neue Gültigkeits- oder Testauswertung
+beruht auf assert. Der Kindprozess wird explizit mit optimize=0 gestartet
+und kontrolliert. Die ursprünglichen Programme liegen unverändert im
+historischen Originalarchiv; zur Abnahme gelten die geschützten Einstiege.
+
+Eigene ausgeführte Kontrollen
+1. Der mitgelieferte Testlauf wurde hier unter Windows/Python 3.13.7 selbst
+   ausgeführt: 258 Optimierungsfälle, elf erfolgreiche Normalaufrufe sowie
+   drei zusätzliche Fehlerfälle bestehen. Die fünf historischen Negativfälle
+   greifen in beiden Normalmodi. Optimierung umfasst -O, -OO, die Werte 1/2
+   von PYTHONOPTIMIZE sowie -O mit env=0 und -OO mit env=1.
+2. Ein getrennt geschriebener Prüflauf kontrolliert alle 43 Einstiege nochmals
+   in sechs Modi: -O, -OO, PYTHONOPTIMIZE=1/2 sowie -S -O und -S -OO.
+   Alle 258 Fälle liefern exakt Exit 78, leeres stdout und die vorgesehene
+   Schutzdiagnose. Es gibt keine Import-/Pfadfehler als Ersatz für den Guard.
+   Weder die Revision noch das leere Arbeitsverzeichnis wurden verändert.
+3. Das eigene Prüfwerkzeug wurde zusätzlich mit synthetischen Gegenfällen
+   kontrolliert: echte Schutzabweisung erkannt; Importfehler trotz enthaltener
+   Markerzeichenfolge und falsche Erfolgsausgabe zurückgewiesen.
+
+Ausgeführte Normalaufrufe
+check_delivery, final_audit, negative_controls, finish_local_checks und gate
+jeweils ohne Optimierung und mit PYTHONOPTIMIZE=0; zusätzlich der allgemeine
+Dispatcher mit final_audit. Manipuliertes Original mit entferntem Dualpreis,
+fehlendes Original und geänderte Revisionsquelle werden zurückgewiesen.
+Ein fehlendes Original ist dabei ein eigener normaler Fehlerfall; keiner
+der Optimierungstests wird allein aufgrund eines fehlenden Pfads akzeptiert.
+
+Ergebnisidentität
+RESULT.json bleibt bytegleich, SHA-256:
+c732a8f556fc7c8b79a5c040ae98da2a79b048974a0a71ad66a6e4716c976b5c
+Auch APPLICATION-CHECKS.json und GATE.json sind im hiesigen Windows-Lauf
+bytegleich. GPT 1s dokumentierte Linux-Abweichung betrifft nur CRLF/LF;
+die Revision verlangt weiterhin gleiche Texte nach Zeilenenden-Normierung
+und exakt gleiche JSON-Felder. Im Negativbericht dürfen nur Diagnosefelder
+abweichen; die Prüffälle, Rückweisungen und stabilen Felder bleiben gleich.
+Originalarchiv, mathematische Daten, Toleranzen und Grenzen sind unverändert.
+
+Prüfgrenzen und Verwendung
+Keine neue Abschnittsintegration, Quellen-/Atomrechnung oder mathematische
+Abnahmerunde. Größere Generatoren und Hilfsmodule wurden auf den frühen Guard
+geprüft; historische Referenzskripte sind keine aktiven Normal-Abnahmewege.
+Der bedingte mathematische PASS unter H1–H4 wird weder erweitert noch ersetzt.
+Externe Gesamtprüfung, Vollraum und Punkt 4 bleiben offen.
+
+Die mitgelieferte Testdatei nennt in ihrem unveränderten Statusstring noch
+GPT1/PENDING; sie wurde durch GPT 2 ausgeführt. Das vorliegende gesonderte,
+hashgebundene Votum dokumentiert die danach abgeschlossene Gegenprüfung.
+
+GPT 1 kann diesen Beleg mit Original, mathematischer Gegenprüfung und exakt
+dieser Schutzrevision im Zweiraumpaket zusammenführen; L1 bleibt ein getrenntes
+Veröffentlichungspaket. Kein zusätzlicher Fix-PR, keine Push-/Mergefreigabe.
+Aus dieser Sitzung erfolgten keine GitHub-Schreibaktionen.

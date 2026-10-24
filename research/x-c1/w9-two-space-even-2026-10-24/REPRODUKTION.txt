@@ -1,0 +1,38 @@
+BEGRENZTE REPRODUKTION – KEINE NEUE QUADRATUR
+
+1. Die drei Archive aus ARCHIVES.json zuerst auf Größe und SHA-256 prüfen.
+   Das Vollarchiv der Schutzrevision in einen frischen Arbeitsordner entpacken.
+   Seine 60 Dateien gegen FULL-MANIFEST.json prüfen.
+2. Im entpackten Vollarchiv liegt das bytegleiche Original unter originals/.
+   Den folgenden geschützten Einstieg benutzen (Standardbibliothek genügt):
+
+   python -B zweiraum-protection-v1/r2-whole-2026-10-24/check_delivery.py --archive originals/Objekt-X-Zweiraum-Ganzrest-und-Matrixvergleich-2026-10-24.zip --report /neuer/Pfad/delivery.json
+
+3. Für den vollständigen kleinen technischen Testlauf:
+
+   python -B zweiraum-protection-v1/test_revision.py --archive originals/Objekt-X-Zweiraum-Ganzrest-und-Matrixvergleich-2026-10-24.zip --out /neuer/Pfad/technical-test.json
+
+4. GPT 2s eigenständiger Guard-Prüfer liegt unverändert in dessen Gegenprüfungs-ZIP.
+   REPRODUCE.txt dort beschreibt die ausschließlich lokalen Pfadanpassungen.
+   Revisionshash, Einstiegsliste und erwartete Schutzdiagnose bleiben fest.
+
+Optimierte Revisionseinstiege: exakt Exit 78, leeres stdout, Diagnose
+OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0
+Kein Import-/Pfadfehler ersetzt diese Schutzbedingung. ENTRYPOINTS.json im
+Revisionsarchiv enthält die vollständigen 40 Originalpfade und drei neuen Einstiege.
+Historische ungeschützte Prüfer nicht als aktuelle Abnahmewege verwenden.
+
+Die Linux-Zeilenendenregel für APPLICATION-CHECKS und GATE betrifft ausschließlich
+CRLF/LF bei identischem Text und identischen JSON-Feldern. RESULT bleibt bytegleich.
+Keine historischen Archive, Manifeste oder Statusvermerke überschreiben.
+
+Diese Befehle wiederholen gespeicherte Endpunkt- und technische Prüfungen.
+Sie erzeugen keine neuen Integrationsabschnitte und ersetzen keine analytischen
+Voraussetzungen. Die bisherigen Läufe und ihre Grenzen sind in den Reviewtexten
+getrennt von dieser Zusammenstellung dokumentiert.
+
+Veröffentlichungsanschluss: ARCHIVE_CHUNKS.json bindet die großen ZIPs als
+geordnete Binärteile. verify.py setzt exakt die Originalbytes zusammen; keine
+Neu-Verpackung, keine Änderung der Schutzrevision oder ihrer Testprotokolle.
+L1_REFERENCE.json bindet den benötigten Draft #258 an seinen vollständigen Head.
+Begrenzter Paket-/Replaytest: python -B research/x-c1/w9-two-space-even-2026-10-24/verify.py --replay
