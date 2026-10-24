@@ -1,0 +1,22 @@
+{
+  "base_commit": "9608f8f8d3233eeae82d8e6784c481a6e054ee06",
+  "repository_inputs": [
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/wall/PROOF.md",
+      "blob_sha": "aaf741b47268f52d622f61725bf8a8855656c223"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/wall/CHECK_RESULTS.json",
+      "blob_sha": "7689f80f3dafec43d46b85affe6cdbd81a9ead4f"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/PROOF.md",
+      "blob_sha": "e0faeb28404596c151062e8f4d8c0bb22221a5a0"
+    },
+    {
+      "path": "research/x-c1/chambers-through-a11-2026-09-28/a11/common_reserve.json",
+      "blob_sha": "b10fc5e55c0f53281157de3be39daaeddae12d68"
+    }
+  ],
+  "note": "Git blob SHAs bind the exact main inputs used by this preliminary q11 wall package."
+}
