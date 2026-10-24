@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "W9-TWO-SPACE-EVEN",
+  "date": "2026-10-24",
+  "kind": "DIAGNOSTIC",
+  "strategic": false,
+  "local_only": true,
+  "mathematical_status": "AUTHOR_DERIVED",
+  "review_status": "EXTERNAL_REVIEW_OPEN",
+  "integration_status": "RESEARCH_BRANCH_UNMERGED",
+  "scope": "All real linear combinations of the two frozen even directions only; conditional on H1–H4 and the bound whole-source/integration evidence.",
+  "claim_polarity": "EQUIVALENCE_OR_REDUCTION",
+  "negative_claim_boundary": "No whole degree-11, odd-parity, point-4 or unconditional/external acceptance.",
+  "depends_on": [
+    "A9-INVERSE-RENEWAL-FULL-HIGH-SCHUR"
+  ],
+  "closes": [],
+  "opens": [],
+  "supersedes": [],
+  "does_not_claim": [
+    "Historical H1–H4 independently re-proved",
+    "Whole degree-11 space",
+    "Odd parity",
+    "Point 4 or Object X constructed"
+  ],
+  "canonical_proof": {
+    "path": "research/x-c1/w9-two-space-even-2026-10-24/PROOF.md",
+    "sha256": "0c153dcafe7e9796f5b3c1c5029b25dee8e4655b6a2ac710285a0736b74c2b38"
+  }
+}

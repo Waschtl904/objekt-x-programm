@@ -1,0 +1,201 @@
+OBJEKT X – GEZIELTE GEGENPRÜFUNG DES GANZEN ZWEIRAUMVERGLEICHS
+GPT 1 · 24. Oktober 2026
+
+VOTUM
+
+PASS für die hier geprüfte mathematische Anwendung und den gemeinsamen
+gerichteten Vergleich auf dem eingefrorenen geraden Zweiraum, unter H1–H4.
+Kein konkreter mathematischer Gegenbefund in diesem gezielten Prüfumfang.
+Die vollständige zweite Restdualenergie ist <2,492e-6; das vorab festgelegte
+Ziel 1e-3 wird einschließlich aller ausgewiesenen Fehler eingehalten.
+
+Separater technischer Befund: Die beiden abschließenden Originalprüfer
+akzeptieren bei deaktivierten Python-Assertions eine manipulierte Lieferung.
+Dieser Befund verhindert ein uneingeschränktes technisches Veröffentlichungs-
+votum für diese Prüferfassung. Ein separat getesteter Schutzvorschlag liegt bei.
+Die Aussage über die unveränderten, im normalen Modus geprüften Zahlen bleibt
+davon getrennt. Originalarchive und historische Statusdateien sind unverändert.
+
+1. EMPFANG UND BINDUNG
+
+Original: Objekt-X-Zweiraum-Ganzrest-und-Matrixvergleich-2026-10-24.zip
+Größe: 11.129.155 Byte, unabhängig bestätigt.
+SHA-256: e1911ce244aa51062f6b06bb767f945922199112380022b59846de4ec7f0e89d
+Alle 520 internen Manifestbindungen geprüft; 521 ZIP-Dateieinträge einschließlich
+Manifest, keine doppelten Namen oder unsicheren Pfade. Das Original liegt in
+diesem Reviewpaket unter inputs/ bytegleich bei.
+
+Die Richtungsdatei ist bytegleich mit dem eingefrorenen Vorlauf. s1, s2, w1,
+w2, die gemeinsame lineare Testabbildung und die äußere Antwort bleiben fest.
+Die neue Builder-/Cache-/Taylorbindung sowie Ausführungs- und Setupbindungen
+wurden geprüft. Das neue Modell verwendet die korrigierte innere Gammaformel;
+eine alte Gamma-Korrekturfunktion wird nicht nochmals addiert.
+
+2. TATSÄCHLICH AUSGEFÜHRTE GEGENKONTROLLEN
+
+Eigenständig gerechnet:
+- Originalarchiv, Manifest und Quellenbindungen des gelieferten Pakets.
+- Autoren-Schlusslauf im normalen Pythonmodus; RESULT.json bleibt bytegleich.
+- Alle fünf mitgelieferten Negativkontrollen: fehlender Abschnitt, veränderte
+  Richtung, veränderte Abschnittsdaten, ausgelassener Fehlerpreis und zu hohe
+  Modellenergie werden zurückgewiesen.
+- Separater Prüfer independent_audit.py mit ausschließlich Standardbibliothek,
+  rationalen Zahlen und expliziten Fehlerausnahmen statt assert-Abnahmen.
+- Alle 8.832 Y-/J-Koeffizienten aus dem tatsächlichen Cache als exakte Dyadische
+  gegen die ursprünglich gebundenen rationalen Quellen. Sämtliche Radien null,
+  sämtliche Werte identisch; keine bezahlte Rundung wird dadurch unterschlagen.
+- Tatsächliche zweite Schalenquelle aus Y, J, pv und w in allen 96 Koordinaten;
+  erste Quelle durch die feste lineare Identität mit eta=1e-10.
+- Neue ganze Schalenhüllen über die orthonormale Legendrebasis, neue Phi-Hülle
+  über eine positiv majorisierte Mellinreihe, neue p-/w-/low-Normen und exakter
+  rationaler w2-zu-Cache-Rundungsabstand.
+- Rekombination aller 411 gespeicherten Abschnittsenergien aus Polynomenergie,
+  Abschnittsbreite und Taylorrest; kein bloßes Addieren ihrer Mittelpunkte.
+- Rationale Teleskopierung der normierten Randteilung. Beide logarithmischen
+  Randpreise nochmals durch eine rationale Logarithmusreihe eingeschlossen.
+- Vollständige Momentformel einschließlich gemischtem direkten Primterm,
+  Kleinstrestsumme, vollständige positive Dualnormsumme und Matrixabschluss.
+
+Dabei wurden keine der 411 Taylorintegrationen neu erzeugt. Die historischen
+Lemma-Beweise, die komplette Arb-Erzeugung der neuen Quellen-/Featurematrizen,
+der h-Antwortpolynome und der 5.120 Knoten-/Gewichtswerte wurden nicht erneut
+ausgeführt. Ihre gebundenen Programme und Anwendungsformeln wurden gelesen;
+ihre Ergebnisintervalle und H1–H4 bleiben benannte Eingänge. Das ist eine
+gezielte Gegenprüfung, kein zweiter vollständiger Integrationslauf.
+
+3. NEUE QUELLENANWENDUNG UND GANZE HÜLLEN
+
+probe.py und ledger.py verwenden die neue normalisierte zweite Richtung,
+den festen w2 und die tatsächlichen pv-, ff- und low-Modelle. Die physische
+Normierung, p-/eta-/low-Platzierung, eRaw/eLow/Featurepreise und h-Modellfehler
+werden damit neu ausgewertet. Die Operatorcaps 10, 100 und die beschränkten
+Quellen-/Basisoperatoren sind gemeinsame historische Schranken; sie werden
+nicht durch vom ersten Zeugen kopierte skalare Fehlersummen ersetzt.
+
+Meine unabhängigen, bewusst etwas gröberen Quellenhüllen ergeben:
+  erste Schale Sup     <189.535 <200.000
+  zweite Schale Sup    <189.535 <200.000
+  ganze Phi ff Sup     <4,583e14 <5e14
+  niedrige Projektion  <11,697 <12
+  ||pv||              <1,591e7 <1,6e7
+  ||w||               <2,881 <3.
+Die Schalenabschätzung erfolgt vor einer schlecht konditionierten
+Monomumrechnung. Gleiche niedrige Paarungen werden nicht als ganze Quellnorm
+ausgegeben. Die h-Polynom-/Antwortdaten bleiben hier gebundene Autorenrechnungen;
+die neue Anwendung der historischen reellen Hüllen wurde daran nachvollzogen.
+
+Die H1–H4-Voraussetzungen stehen vollständig im unveränderten Original unter
+two-direction-2026-10-24/l1-frozen/L1-BEWEIS.txt §0. Übernommen werden die dort
+bezeichneten physischen Operator-/Domänenidentitäten, ursprünglichen ganzen
+Quellenmajoranten, Form-/Invers-/Antwortzertifikate und analytischen Integrations-
+und Brückenlemmata. Daraus wird keine externe Abnahme dieser Grundlagen.
+
+4. BEIDE DIREKTEN KONTURHÜLLEN
+
+Die statische Cauchyquelle F=outerstatic+upp ist eine Funktion, das endliche
+h-Gaußmaß ein eigener Term. Ihre L1-Hülle folgt aus der ganzen Phi-Hülle,
+M*g, low und dem diskreten h-Mittelwert; das Gaußmaß wird nicht als L2-Funktion
+behandelt. Eine eigene gröbere Rechnung liefert integral_0^1 |F|<3,126e16,
+somit <1e20. Auf der gesamten verwendeten Rechteckhülle ist der reelle Abstand
+d von [0,1] strikt positiv. Deshalb gilt |C_F(z)|<=1e20/d.
+
+Die reflektierte Schalenform ist exakt integral_a^b spx(y)/(x+y)dy.
+Die unabhängig bestätigte physische Supnorm <2e5 liefert bei Re x+a>0
+den Preis 2e5*(b-a)/(Re x+a). Hier wird die Polynomfortsetzung bei -x nicht
+als physische Quellenhülle missverstanden. In beiden Änderungen bleiben die
+Taylorreihen .s stehen; ersetzt wird nur die analytische Konturmajorante .b.
+Die Radius-2-Kontur und die getrennte atomare geometrische Restserie bleiben
+bezahlt. Diese Zuordnung ist analytisch und im Code nachvollzogen; die 411
+Konturauswertungen selbst wurden nicht neu gerechnet.
+
+5. FEHLERBUCHUNG
+
+Die abschließende positive Summe lautet
+ sqrt(5/21)*(sqrt(E_model)+e_core+e_cache+X_raw)+dual_only.
+
+Gebundene obere Anzeigen:
+  E_model                         1,036186341116024e-5
+  e_core (neue Kernquadratur)      1,986422722043649e-8
+  e_cache                         2,004487372114547e-858, nicht null
+  X_raw                           7,695051025000016e-13
+  dual_only                       7,872356887582110e-6.
+
+Die 0,0042-Schwelle wird nicht auf eine unbezahlte Modellfunktion angewendet.
+Die tatsächliche Dualenergie enthält alle vier positiven Fehleradditionsterme.
+
+Der p-Wechsel steckt einmal in 10*(p_total+eta_total). Die vorab eingefrorene
+Antwort bleibt unverändert. Die neue Gammaorientierung ist im Builder enthalten.
+Die neue direkte 128-Knoten-Kernquadratur ersetzt hier die alte 64/128-Brücke;
+die alte Brücke wird nicht zusätzlich gebucht. Der Cachepreis basiert auf
+Differenzen, nicht nur überlappenden Knotenintervallen, und wird einmal separat
+zur Kernquadratur addiert. Seine nichtverschwindenden rationalen Endpunkte
+bleiben erhalten. Für den Cachetransport wird die ganze Knoten-/Gewichtsabbildung
+mit der nachgewiesenen Kernrandlücke beschränkt.
+
+Die vollständige m160-Formel enthält
+ epsilon*[100*(300 Lambda1+2A+2 Lambda2)+2 Qpsi+100 U+24 Lambda2].
+Die neue größere Allokation deckt diese Formel einschließlich beider Liftungen,
+bilinearer Kreuzterme und des gemischten exakten Primterms. R03, R04 und R10
+sind die hier verbleibenden Kleinstrestfamilien; ihre Summe bleibt <1e-150 in
+rohen Einheiten. R13 steht separat im Cachepreis, R15 hat nach exaktem Vergleich
+Preis null. Die allgemeine Restreserve ersetzt keine Zuordnung dieser Ursachen.
+
+6. GEMEINSAMER ZWEIRAUMSATZ
+
+Die eigene rationale Schlussrechnung gibt
+  D22 <= 0,000002491933194060428475952 <2,492e-6 <1e-3.
+Die letzte angezeigte Dezimalstelle ist nach oben gewählt. Maßgeblich ist der
+Bruch in INDEPENDENT-RESULT.json. Die separate Rand-/Wurzelrundung ist minimal
+gröber als die Autorenrechnung; beide erfüllen dieselben strengen Grenzen.
+
+Für den tatsächlichen positiven Gram D gilt für jedes reelle x:
+ x*D x <= (sqrt(D11)|x1|+sqrt(D22)|x2|)^2
+        <= 2 D11*x1^2+2 D22*x2^2.
+Ein Kreuzterm wird damit eingeschlossen, nicht auf null gesetzt. Das feste
+Young-Lemma überführt den Rest in aD*D+aZ*Z. Die gerichteten K-/F-Formmatrizen
+und Z_plus stammen aus dem unveränderten, bereits gegengeprüften Vorlauf.
+Ihre neue gemeinsame Subtraktion hat positive rationale Hauptminoren; auch
+die um die behauptete Reserve verschobene Matrix ist positiv definit.
+Der physische Richtungsgram ist positiv und <=2I.
+
+Somit gilt unter H1–H4, den gebundenen Quellen-/Integrationsbelegen und der
+hier nachvollzogenen neuen Anwendung für jede reelle Linearkombination s
+des festgelegten geraden Zweiraums:
+  K_P[s]-E[s] >5,1450e-8 ||s||_W^2.
+Die konservative, vorab festgelegte Reserve >4,0252e-8 ||s||_W^2 bleibt
+ebenfalls gültig. Eine zusätzliche Kreuzquadratur oder ein Quartiktest ist
+für diesen ausreichenden Vergleich nicht nötig. Keine Aussage zum ganzen
+Grad-11-Raum, zur ungeraden Parität, zu Punkt 4 oder zum Gesamtprogramm.
+
+7. KONKRETER TECHNISCHER BEFUND UND SEPARATER VORSCHLAG
+
+In einer frischen Kopie wurde nur LEDGER.json verändert:
+ values.dual_only_error = ["0","0"]. Das Manifest blieb unverändert.
+Normaler Lauf: korrekte Zurückweisung wegen falschem Hash.
+PYTHONOPTIMIZE=1: check_delivery.py meldet trotzdem
+ DELIVERY_MANIFEST_AND_EXACT_RESULT_REPLAY_PASS
+und final_audit.py erzeugt einen neuen scheinbaren Autoren-PASS mit der
+unzulässig verkleinerten Dualenergie etwa 2,467140786143223e-6.
+
+Ursache: Sicherheits-/Vollständigkeitsbedingungen, Hashprüfungen, Unterprozess-
+Status und Ergebnisgleichheit werden mit assert geprüft. Optimiertes Python
+entfernt sie. Dies ist ein reproduzierter Fehler der technischen Prüferabnahme,
+kein Gegenbeispiel zur unveränderten mathematischen Rechnung unter normalem Python.
+
+optimization-guards-proposal.diff ergänzt in check_delivery.py und final_audit.py
+je einen expliziten Abbruch bei sys.flags.optimize. Getestet wurden normaler
+Lauf mit bytegleichem RESULT, -O, -OO und PYTHONOPTIMIZE=1 an beiden Einstiegen
+sowie weiterhin die Manipulationsablehnung im normalen Modus. Die Probekopie
+erhielt eigene aktualisierte Manifestwerte. Der Patch ist ein Vorschlag;
+er ist weder ins Original eingearbeitet noch veröffentlicht. Eine spätere
+versionierte Veröffentlichung muss diese neuen Prüferbytes neu binden.
+
+8. REPRODUKTION UND STATUS
+
+Siehe REPRODUKTION.txt in diesem separaten Reviewpaket. Es enthält den
+unveränderten Eingang, die unabhängigen Prüfer, Ergebnisse und Negativbefunde.
+Die Originalmeldungen PENDING im Autorenpaket bleiben historische Zustände;
+dieser Text ist der nachfolgende, gesonderte Gegenprüfbeleg.
+
+Kein Push, kein PR, kein Merge, keine neue Richtung oder Antwortoptimierung.
+L1-Veröffentlichung und externe Gesamtabnahme bleiben getrennte Vorgänge.

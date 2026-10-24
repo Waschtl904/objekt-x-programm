@@ -1,0 +1,2076 @@
+{
+  "revision_sha256": "8d364fd430d68ce6ec9da29d33fb23aac3d480e489515e1aaa959ae8f93c02f8",
+  "entry_count": 43,
+  "case_count": 258,
+  "files_unchanged": true,
+  "empty_working_directory_unchanged": true,
+  "all_guards_verified": true,
+  "assert_statements_in_this_harness": 0,
+  "new_numerical_integrations": 0,
+  "cases": [
+    {
+      "entry": "build_full.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "build_full.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "build_full.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "build_full.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "build_full.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "build_full.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "historical-references/source_cap_audit.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "historical-references/source_cap_audit.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "historical-references/source_cap_audit.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "historical-references/source_cap_audit.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "historical-references/source_cap_audit.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "historical-references/source_cap_audit.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "historical-references/whole_function_probe.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "historical-references/whole_function_probe.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "historical-references/whole_function_probe.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "historical-references/whole_function_probe.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "historical-references/whole_function_probe.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "historical-references/whole_function_probe.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/build.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/build.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/build.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/build.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/build.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/build.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/cache_atoms.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/cache_atoms.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/cache_atoms.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/cache_atoms.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/cache_atoms.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/cache_atoms.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/check_delivery.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/check_delivery.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/check_delivery.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/check_delivery.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/check_delivery.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/check_delivery.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/core_quadrature_control_128.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/core_quadrature_control_128.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/core_quadrature_control_128.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/core_quadrature_control_128.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/core_quadrature_control_128.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/core_quadrature_control_128.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/endpoint_preflight.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/endpoint_preflight.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/endpoint_preflight.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/endpoint_preflight.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/endpoint_preflight.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/endpoint_preflight.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/fast_evaluation.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/fast_evaluation.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/fast_evaluation.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/fast_evaluation.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/fast_evaluation.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/fast_evaluation.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/final_audit.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/final_audit.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/final_audit.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/final_audit.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/final_audit.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/final_audit.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/finish_local_checks.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/finish_local_checks.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/finish_local_checks.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/finish_local_checks.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/finish_local_checks.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/finish_local_checks.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_direct.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_direct.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_direct.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_direct.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_direct.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_direct.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_physical.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_physical.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_physical.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_physical.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_physical.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_physical.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/ledger.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/ledger.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/ledger.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/ledger.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/ledger.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/ledger.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/load_model.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/load_model.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/load_model.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/load_model.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/load_model.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/load_model.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/log_integrals.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/log_integrals.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/log_integrals.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/log_integrals.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/log_integrals.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/log_integrals.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/model_cache.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/model_cache.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/model_cache.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/model_cache.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/model_cache.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/model_cache.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/negative_controls.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/negative_controls.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/negative_controls.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/negative_controls.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/negative_controls.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/negative_controls.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partial_partition.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partial_partition.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partial_partition.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partial_partition.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partial_partition.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partial_partition.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partition_audit.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partition_audit.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partition_audit.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partition_audit.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partition_audit.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partition_audit.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/probe.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/probe.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/probe.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/probe.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/probe.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/probe.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/run_stage.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/run_stage.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/run_stage.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/run_stage.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/run_stage.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/run_stage.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/small_remainders.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/small_remainders.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/small_remainders.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/small_remainders.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/small_remainders.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/small_remainders.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/source_caps.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/source_caps.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/source_caps.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/source_caps.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/source_caps.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/source_caps.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_direct.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_direct.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_direct.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_direct.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_direct.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_direct.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_physical.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_physical.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_physical.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_physical.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_physical.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_physical.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/verify_sources.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/verify_sources.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/verify_sources.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/verify_sources.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/verify_sources.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/verify_sources.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/whole_function_r2.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/whole_function_r2.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/whole_function_r2.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/whole_function_r2.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/whole_function_r2.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/whole_function_r2.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/write_report.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/write_report.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/write_report.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/write_report.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/write_report.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "r2-whole-2026-10-24/write_report.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "revision_runner.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "revision_runner.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "revision_runner.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "revision_runner.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "revision_runner.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "revision_runner.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "test_revision.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "test_revision.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "test_revision.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "test_revision.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "test_revision.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "test_revision.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/bind_sources.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/bind_sources.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/bind_sources.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/bind_sources.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/bind_sources.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/bind_sources.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/budget.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/budget.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/budget.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/budget.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/budget.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/budget.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/finite_residual.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/finite_residual.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/finite_residual.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/finite_residual.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/finite_residual.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/finite_residual.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/freeze.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/freeze.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/freeze.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/freeze.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/freeze.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/freeze.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/gate.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/gate.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/gate.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/gate.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/gate.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/gate.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/load_env.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/load_env.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/load_env.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/load_env.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/load_env.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/load_env.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/package.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/package.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/package.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/package.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/package.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/package.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/preflight.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/preflight.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/preflight.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/preflight.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/preflight.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/preflight.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/prepare_review.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/prepare_review.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/prepare_review.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/prepare_review.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/prepare_review.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/prepare_review.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/reproduce.py",
+      "mode": "-O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/reproduce.py",
+      "mode": "-OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/reproduce.py",
+      "mode": "PYTHONOPTIMIZE=1",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/reproduce.py",
+      "mode": "PYTHONOPTIMIZE=2",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/reproduce.py",
+      "mode": "-S -O",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    },
+    {
+      "entry": "two-direction-2026-10-24/reproduce.py",
+      "mode": "-S -OO",
+      "returncode": 78,
+      "guard_verified": true,
+      "stdout": "",
+      "stderr": "OBJEKT_X_OPTIMIZED_PYTHON_REJECTED: zweiraum-protection-v1 requires optimize=0\n"
+    }
+  ]
+}

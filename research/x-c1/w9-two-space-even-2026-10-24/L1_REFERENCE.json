@@ -1,0 +1,15 @@
+{
+  "separate_publication": "Objekt-X-L1-Publikation-fertig-2026-10-24.zip",
+  "bytes": 47870056,
+  "sha256": "1d28a084f20c648c222c53c5e31f18f0e7c26ebe811fc36f7265e4a90313f6d2",
+  "author_archive_sha256": "6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b",
+  "frozen_hypotheses_source": "premises/L1-BEWEIS.txt section 0",
+  "new_r2_application": "author-text/APPLICATION.txt",
+  "L1_fixed_witness_bound_not_silently_reused_for_r2": true,
+  "publication_pr": "https://github.com/Waschtl904/objekt-x-programm/pull/258",
+  "publication_head": "898711c85fc188b38d7fb1129800d7f5a282ad4c",
+  "repository_package": "research/x-c1/w9-l1-source-chain-even-2026-10-24",
+  "publication_manifest_sha256": "4cb8d6239bc30fdfbfe8d382e1aff2d85f070e25935c0774f1421efe575dabb5",
+  "dependency_status": "DRAFT_NOT_MERGED",
+  "ordered_exact_original_reconstruction": true
+}

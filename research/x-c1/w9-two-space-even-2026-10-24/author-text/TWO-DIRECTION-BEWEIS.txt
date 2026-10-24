@@ -1,0 +1,190 @@
+OBJEKT X – GERICHTETER GERADER ZWEIRICHTUNGSVORLAUF
+24. Oktober 2026 · Autorenableitung, gezielte Gegenprüfung ausstehend
+
+0. Geltung
+L1 und H1–H4 sind im unveränderten Paket l1-frozen/ festgehalten. Die externe
+Gesamtabnahme bleibt offen. Die bisherige vollständige Restenergiegrenze
+gilt ausschließlich für s1. Für s2 wird kein solcher Nachweis behauptet.
+Der aktuelle Vorlauf verwendet die ganzen ursprünglichen Quellen-/Feature-
+und Antwortmajoranten in ihrem gemeinsamen endlichen Quellraum. Die neue
+ganze Residualfunktion benötigt zusätzlich ihre eigene vollständige Anwendung
+des Quellen-/Modellfehlerledgers. Sie wird nicht aus niedrigen Koordinaten
+oder aus dem Erfolg an s1 abgeleitet.
+
+1. Festgelegte Richtungen und gemeinsame Testabbildung
+PLAN.txt wurde vor den neuen Vergleichswerten geschrieben. Die erste Richtung
+s1=v/N mit N²=v*G_W v ist exakt der bisherige physische W-Einheitszeuge.
+Sein rationaler Testvektor w1 ist unverändert, Datei-SHA
+70e8f72ab0cb8ca1ac0d254392384a2040a9d76d04ebf82587c48771e9f34628.
+Die zweite Richtung ist s2=e0/M, M²=e0*G_W e0. Auswahlregel: erster
+Basisindex, dessen Vektor rational unabhängig von v ist. v[1] ist ungleich
+null, e0[1]=0; das beweist die Unabhängigkeit ohne numerische Rangschwelle.
+Beide Funktionen tragen dieselbe gerade Fortsetzung und exakte Momenthebung.
+Es wurde keine günstige Eigenrichtung ausgewählt.
+
+Der rationale w2 entsteht einmalig durch die bereits bestehende innere
+Mittelpunktregel H0_mid*w2_mid=(nu0*s2)_mid und Rundung auf 50 Dezimalstellen.
+H0=(D0-U)_JJ-a0*Ki*a0; K_new, Ki und die äußere Antwort bleiben unverändert.
+Dies ist die vorab definierte Auswahl eines inneren Testvektors, keine Suche
+nach einer neuen physischen Antwort. DIRECTIONS.json wurde vor PREFLIGHT.json
+eingefroren. Es gilt auf V=span{s1,s2} exakt
+  T(alpha*s1+beta*s2)=alpha*w1+beta*w2.
+Die darin angegebene lineare Erweiterung auf zwölf äußere Koeffizienten
+zeigt insbesondere T(s1)=w1 algebraisch exakt. Nicht für jede Kombination
+wird neu gelöst, gerundet, normiert oder optimiert.
+
+2. Gemeinsame variationale Form
+Für C=[s1,s2] und T=[w1,w2] setzen wir
+  H=H_new,  r_i=nu(s_i)-H Jw_i,
+  F=C*B_base C+T*nu C+C*nu* T-T*H T.
+Die variationale Identität lautet für jeden reellen Koeffizientenvektor x:
+  E(x)=x*F x+<r(x),H^-1 r(x)>,  r(x)=x1*r1+x2*r2.
+F allein ist deshalb kein vollständiger Energieobervergleich.
+
+PREFLIGHT.json trennt die Modellmatrix F0 von den gerichteten F-Intervallen.
+Die skalaren Einschließungen folgen der historischen gebundenen Schurprüfung:
+ganze Basisenergie einschließlich physischem h-Modellfehler, alle gemeinsamen
+F-/J-Paarungsfehler, a_fin-Kreuzpreis und positiver quadratischer a_fin-Fehler.
+Der D-/U-Formpreis wird jeweils richtungsbezogen ausgewertet:
+  e_U(w)=2 sqrt((w*U_JJ w) E_J||w||²)+E_J||w||²,
+  e_D(w)=w*((D_plus-D_minus)/2)_JJ w.
+eta*q wird beidseitig aus D_minus/D_plus eingeschlossen. Es wird weder
+weggelassen noch zweimal gezählt.
+
+Für s1±s2 werden die physischen Fehlerschranken homogen mit ||s1±s2||_W
+skaliert. Die Summen werden nicht stillschweigend als W-Einheitsvektoren
+behandelt. Der tatsächliche Kreuzterm folgt durch Polarisation:
+  F12=(F(s1+s2,T(s1+s2))-F(s1-s2,T(s1-s2)))/4.
+Damit umfasst die gemeinsame Intervallmatrix sämtliche Fehlerabhängigkeiten.
+Gemeinsame Quellenfehler werden nicht als unabhängig vorausgesetzt. Der
+erneute F11-Wert stimmt mit dem alten gerichteten Intervall überein.
+
+3. Gerichtetes äußeres Budget
+Das historische K_MAP ist nur Modell und wird ausschließlich als solches
+angezeigt. Für K11 wird der alte direkte Budgetbeleg unverändert übernommen.
+Die direkte Formprüfung certify_k.py wurde zusätzlich genau zweimal mit
+128 Gaußknoten und je 55 Abschnitten ausgeführt: für e0 und v+e0.
+Das ist keine vollständige Restintegration. Laufzeiten: etwa 1,80 s und
+4,87 s für die neuen Auswertungen; einschließlich Eingangsaufbau etwa 19,35 s.
+Ihre analytischen Rand-, Kontur- und Modellpreise bleiben enthalten.
+Die Geltung dieser historischen direkten Formprüfung bleibt eine ausdrücklich
+übernommene Voraussetzung. Eine neue Konturherleitung ist nicht behauptet.
+
+Mit S²=(v+e0)*G_W(v+e0) ergibt sich exakt
+  K12=(S²*K[(v+e0)/S]-N²*K11-M²*K22)/(2NM).
+Die Rechnung verwendet gerichtete Intervalle für N,M,S und sämtliche K-Werte.
+Die beiden Ergebnisse und alle Preise stehen in BUDGET-two.json und
+BUDGET-raw_sum.json; BUDGET.json enthält die gemeinsame Matrix.
+
+Konservative Anzeigen der gerichteten Einträge:
+  K11 in [0.00005411716936070, 0.00005411716937864]
+  K12 in [0.0005411126322887, 0.0005411126323037]
+  K22 in [0.19801165253363, 0.19801165253365]
+  F11 in [0.00005372788759767, 0.00005394165395422]
+  F12 in [0.0006175018963304, 0.0006180911977001]
+  F22 in [0.11484117270903, 0.11484212294950].
+Die rationalen Endpunkte in den JSON-Dateien sind maßgeblich.
+
+4. Von Eintragsintervallen zu gerichteten Formmatrizen
+Sei A in einem symmetrischen Intervallkasten mit Mittelpunkt M und Radien
+r11,r12,r22. Für jedes t>0 gilt wegen
+  2*r12*|x1*x2| <= r12/t*x1²+r12*t*x2²:
+  M-diag(r11+r12/t,r22+t*r12) <= A
+  <= M+diag(r11+r12/t,r22+t*r12).
+Hier wird t=1000 als rationale Fehleraufteilung gewählt. Es verändert weder
+Richtungen noch Testabbildung oder äußere Antwort. Ein ungewichteter
+Zeilensummenpreis wäre wegen der verschiedenen Diagonalgrößen unnötig grob.
+GATE.json enthält die rationalen K_minus und F_plus. Ihr Unterschied ist
+positiv definit; die positive Determinante ist exakt rational geprüft.
+Ein Koeffizientenboden ist größer als 1.0426e-7. Das ist nur die Reserve
+vor dem vollständigen Restpreis, kein abgeschlossener Matrixpilot.
+
+5. Gemeinsames endliches Restfeature
+Für n_i=nu0*s_i-H0*w_i+eta*D0_JJ*w_i wird Z0=N*P*N gerichtet ausgewertet.
+P ist die unveränderte zertifizierte rationale Obermatrix. Je Spalte wird
+die ganze Abweichung zu P^(1/2)J*r_i mit den bestehenden gemeinsamen Preisen
+begrenzt: nu-Quellen-/Hilbertfehler, D-Aktion, U-Aktion, a_fin-Quadrat samt
+sämtlichen gemischten Produktfehlern. FINITE-RESIDUAL.json zeigt alle Summanden.
+Es gilt konservativ z1<9.956e-6 und z2<3.123e-5.
+
+Sind die Fehlernormen e1,e2, so gilt gemeinsam
+  Delta*Delta <= 2 diag(e1²,e2²),
+  Z=(N0+Delta)*(N0+Delta) <= 2 Z0+4 diag(e1²,e2²).
+Hier ist N0 der in die P-Featuremetrik überführte Modelloperator. Die
+zusätzlichen Intervallradien von Z0 werden ebenfalls bezahlt. Der Faktor 2
+deckt gerade die unbekannte gemeinsame Abhängigkeit beider Fehler ab.
+Er bedeutet keine verschwindende Kreuzpaarung. Die rationale Matrix Z_plus
+ist in FINITE-RESIDUAL.json und GATE.json abgelegt.
+
+6. Genügender gemeinsamer Restnachweis ohne Quartiktest
+Setze D_ij=<r_i,R_L r_j>, Z_ij=<J*r_i,P J*r_j>. D ist ein tatsächlicher
+positiv semidefiniter Gram. Das unveränderte restzentrierte Inverslemma gibt
+für jeden Koeffizientenvektor x
+  E_rest(x) <= [(x*D x)/beta+x*Z x
+                  +2 sqrt(c/beta) sqrt(x*D x) sqrt(x*Z x)]/(1-c).
+Mit dem festen Young-Parameter eps=1/10 folgt als gemeinsame Formordnung
+  E_rest <= a_D D+a_Z Z,
+  a_D=(1+eps)/(beta*(1-c)), a_Z=(1+c/eps)/(1-c),
+  c=1977/500000, beta=20209999981781/182190000000000.
+Dies ist eine einfache gerichtete Matrixabschätzung; ein Quartiktest ist
+hier nicht erforderlich.
+
+L1 liefert D11<4.632e-11. Noch offen ist D22. Wenn die NEUE ganze zweite
+Restfunktion einschließlich ihres vollständigen Fehlerledgers D22<=1e-3
+erfüllt, dann gilt ohne Unabhängigkeitsannahme für alle x
+  x*D x <= (sqrt(D11)|x1|+sqrt(D22)|x2|)^2
+          <=2 D11*x1²+2 D22*x2².
+Also ist D <= diag(9.264e-11,0.002). Der tatsächliche Kreuzterm wird durch
+Cauchy–Schwarz vollständig eingeschlossen, nicht auf null gesetzt.
+
+Der exakte rationale Audit ergibt für
+  M=K_minus-F_plus-a_Z Z_plus-a_D diag(9.264e-11,0.002)
+positive LDL-Pivots und Determinante. Es gilt M>8.0504e-8 I. Da s1,s2
+W-Einheitsvektoren sind, hat ihr gemeinsamer W-Gram Norm höchstens 2.
+Somit wäre für ALLE Linearkombinationen die physische Reserve
+  K_P[s]-E[s] >4.0252e-8 ||s||_W²
+gesichert, SOFERN der genannte neue vollständige D22-Nachweis erbracht wird.
+Die positive Reserve ist konditional, D22 wurde hier nicht integriert.
+Innerhalb genau dieser Hülle liegt die theoretische D22-Grenze bei etwa
+0.00246390; als robuster Arbeitswert bleibt unverändert 0.001 festgelegt.
+
+7. Genau fehlender Beleg und kleinster Folgeblock
+Ein numerisch enger R12-Wert ist für diesen ausreichenden Vergleich nicht
+zwingend: die gemeinsame Grammajorante oben reicht bereits. Benötigt wird
+ein neuer ganzer Nachweis für r2 mit D22<=1e-3. Aus L>=21/5 W_X genügt
+  ||r2||_X² <=21/5000 = 0.0042.
+Dies muss für die tatsächliche korrigierte Funktion gelten, einschließlich
+hoher Anteile, exaktem Momentlift, Modell-/Quellenwechseln, Randgliedern,
+Quadratur und gerichteter Arithmetik. Eine Modellnorm allein genügt nicht.
+
+Kleinster sinnvoller Folgeblock:
+1. Nur r2 als zusätzliche Spalte aus den eingefrorenen Daten rekonstruieren.
+   L1-Katalog R01–R15 einsetzen; richtungsabhängige Preise neu auswerten,
+   keine alten skalarisierten s1-Caps stillschweigend kopieren.
+2. Vollständige X-Norm von r2 gerichtet einschließen. Bestehende Zerlegung,
+   analytische Lograndbehandlung und gültige Konturpreise wiederverwenden.
+   Es ist keine neue Integration aller zwölf Richtungen oder 84 Paarungen
+   erforderlich. Ein gemeinsamer direkter R12-Lauf bleibt optional, falls
+   die konservative Cauchy-Hülle wider Erwarten nicht genügt.
+3. Den hier gelieferten rationalen Matrixaudit mit dem bewiesenen D22-Wert
+   wiederholen. Nur dann ist ein bedingter Zweiraum-PASS möglich.
+
+Aufwand: zuerst 5–10 repräsentative Abschnitte mit höchstens zehn Minuten
+Laufzeit zur Messung von Modellaufbau, Randkosten und erreichbarer Schranke.
+Erst daraus die Laufzeit des ganzen Einspaltenblocks prognostizieren. Der
+alte vollständige Restlauf benötigt laut gebundener Anleitung über eine
+Stunde; eine feste Beschleunigung für r2 wird nicht versprochen. Die neuen
+kleinen Budgetläufe dauerten unter sieben Sekunden; sie sind keine Prognose
+für die vollständige Restintegration.
+
+Abbruch-/Entscheidungsregeln:
+- Fehlende Quellenbindung oder Widerspruch zur festen linearen Definition:
+  stoppen und genau diesen Befund untersuchen.
+- Gültige Gesamtobergrenze <=0.0042: Nachweis vorhanden, Matrixaudit ausführen.
+- Obergrenze >0.0042 bei Untergrenze darunter: UNRESOLVED; höchstens eine
+  begründete Verbesserung des dominanten Fehlers vorschlagen, keine Suche.
+- Gerichtete Untergrenze >0.0042: der gewählte Arbeitswert ist verfehlt,
+  aber dies allein ist kein Gegenbeweis zur Form oder zum Matrixvergleich.
+- Technische Zehnminutengrenze: Zwischenstand und belastbare Prognose liefern.
+Keine automatische Großquadratur, Antwortänderung, Veröffentlichung oder
+mathematische Statuspromotion wird durch diesen Vorlauf ausgelöst.

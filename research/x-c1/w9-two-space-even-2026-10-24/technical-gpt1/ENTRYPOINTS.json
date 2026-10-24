@@ -1,0 +1,290 @@
+{
+  "original_python_files": {
+    "historical-references/source_cap_audit.py": {
+      "source_sha256": "292dad330797ca480244e67ac5970d5f5872c7b51add07e649b809ffee4550d4",
+      "protected_entry": "historical-references/source_cap_audit.py",
+      "role": "historical_reference",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "historical-references/whole_function_probe.py": {
+      "source_sha256": "ed58da3caacd5ca39de1f910c77920e7079eec905a560b487600c71e97c8df64",
+      "protected_entry": "historical-references/whole_function_probe.py",
+      "role": "historical_reference",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/build.py": {
+      "source_sha256": "07e183f53dd20df947295940191e31a18ca82c455de0c6b59f36352d46143aa9",
+      "protected_entry": "r2-whole-2026-10-24/build.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/cache_atoms.py": {
+      "source_sha256": "ce878827b0c78288d5433eda577583122dec960af99b34f752ff21745d33e396",
+      "protected_entry": "r2-whole-2026-10-24/cache_atoms.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/check_delivery.py": {
+      "source_sha256": "82fd69aeb856298a51c8bf26d3280f4cebef5c31b556b40553b996ea2e83b796",
+      "protected_entry": "r2-whole-2026-10-24/check_delivery.py",
+      "role": "portable_acceptance",
+      "normal_replay_in_this_review": true,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/core_quadrature_control_128.py": {
+      "source_sha256": "a5f487ceb5c5d399a933f19b272c5072251dd2fff8d5d23b173ee5562a253ec9",
+      "protected_entry": "r2-whole-2026-10-24/core_quadrature_control_128.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/endpoint_preflight.py": {
+      "source_sha256": "e02d7444bf45094812373e1ab16a0a4993d6c6a5b718d925afbfee3c2f891af8",
+      "protected_entry": "r2-whole-2026-10-24/endpoint_preflight.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/fast_evaluation.py": {
+      "source_sha256": "ff0645e02fa0dc7a6497fc52f51818b707dd1077f77689e764d599cf9ffab5b2",
+      "protected_entry": "r2-whole-2026-10-24/fast_evaluation.py",
+      "role": "support_module",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/final_audit.py": {
+      "source_sha256": "24801b2e2c805c0e22ddb97ae865c16a959b4e25eddaa2f6634cbb7ffdbaad2c",
+      "protected_entry": "r2-whole-2026-10-24/final_audit.py",
+      "role": "portable_acceptance",
+      "normal_replay_in_this_review": true,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/finish_local_checks.py": {
+      "source_sha256": "761814e1a4dd4ac6a63a949a8b600237fc4b892b1bfea8eb6c5f62b744f63289",
+      "protected_entry": "r2-whole-2026-10-24/finish_local_checks.py",
+      "role": "portable_acceptance",
+      "normal_replay_in_this_review": true,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/integrate.py": {
+      "source_sha256": "22989dbdf4e0e658547e9547ab3419548c1972b40db116d140f053b7e368c773",
+      "protected_entry": "r2-whole-2026-10-24/integrate.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/integrate_direct.py": {
+      "source_sha256": "be9613425a7034a99117e81335b35c0fe747e407b61fcf8fd77ebc2e862a18a7",
+      "protected_entry": "r2-whole-2026-10-24/integrate_direct.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/integrate_physical.py": {
+      "source_sha256": "a3653b989a0b62b8b86f27e14945fbbc05b0697986c69e6a7236d8b49d989af7",
+      "protected_entry": "r2-whole-2026-10-24/integrate_physical.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/ledger.py": {
+      "source_sha256": "0d035b17dff0b690186431fe70eb209ed12aa6fe711c326771d89199b21db140",
+      "protected_entry": "r2-whole-2026-10-24/ledger.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/load_model.py": {
+      "source_sha256": "c7ff08be3792e675d09810e5397dafd2b8a434bd9484c6c553ed278485105b37",
+      "protected_entry": "r2-whole-2026-10-24/load_model.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/log_integrals.py": {
+      "source_sha256": "de20f48cc0858a9d7468f32b2f7f69471762618f2b392c71d62c487660bd9811",
+      "protected_entry": "r2-whole-2026-10-24/log_integrals.py",
+      "role": "support_module",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/model_cache.py": {
+      "source_sha256": "ec22013fc8f87015b412f2482350a2091a78d412e5d95267c6bbe75cb1af7cd0",
+      "protected_entry": "r2-whole-2026-10-24/model_cache.py",
+      "role": "support_module",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/negative_controls.py": {
+      "source_sha256": "9c35b95d57ad7c18b58d43ffb02a6d6a1c521a53229e478336320c60ee25e586",
+      "protected_entry": "r2-whole-2026-10-24/negative_controls.py",
+      "role": "portable_acceptance",
+      "normal_replay_in_this_review": true,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/partial_partition.py": {
+      "source_sha256": "845855667a5e1d3fe3afb89264f9fff5f34213d0485154973ec2df685526ba34",
+      "protected_entry": "r2-whole-2026-10-24/partial_partition.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/partition_audit.py": {
+      "source_sha256": "349af279946848cfac70dda0005a7ce86ce77fa2b9f82c15a0301a87662784be",
+      "protected_entry": "r2-whole-2026-10-24/partition_audit.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/probe.py": {
+      "source_sha256": "6480784aa78db08f3c031d4e3d690ebcb112b7db0c5ae98e42f0a4259eec6cb4",
+      "protected_entry": "r2-whole-2026-10-24/probe.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/run_stage.py": {
+      "source_sha256": "8ac313a96f8910e3a120648bf78556906831804e119b40a81f634a17bb75a116",
+      "protected_entry": "r2-whole-2026-10-24/run_stage.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/small_remainders.py": {
+      "source_sha256": "ab2845578ff97b1366b0d204ee4b0c4884a7696dca59187a3c8d61329f8e1ee8",
+      "protected_entry": "r2-whole-2026-10-24/small_remainders.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/source_caps.py": {
+      "source_sha256": "4f5b2dc41e0351d4ecdb126e4b1d6d22e4f9f7c4ab53a2b31dd586e4bb4c1aa0",
+      "protected_entry": "r2-whole-2026-10-24/source_caps.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/taylor_model.py": {
+      "source_sha256": "8b7a7234698878fc9aa1c0ef03b8e20de9f29361d151ebe0f3517b0ae74d26e6",
+      "protected_entry": "r2-whole-2026-10-24/taylor_model.py",
+      "role": "support_module",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/taylor_model_direct.py": {
+      "source_sha256": "1bb76e3b7734a763b13ae8a7a57f200da53c56b56b90d5457b0d83f69a3f7562",
+      "protected_entry": "r2-whole-2026-10-24/taylor_model_direct.py",
+      "role": "support_module",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/taylor_model_physical.py": {
+      "source_sha256": "f1e18de4032e358f20cc25a5bd2654b3b6db466cd1687ec367e41e135f61e0a0",
+      "protected_entry": "r2-whole-2026-10-24/taylor_model_physical.py",
+      "role": "support_module",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/verify_sources.py": {
+      "source_sha256": "1f5e721c9ea940808dae46711e15bc4c12df92a35623c3f08452cfe048f0e232",
+      "protected_entry": "r2-whole-2026-10-24/verify_sources.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/whole_function_r2.py": {
+      "source_sha256": "01dbc0e743acc2743cc76462bba1b45cc00ec59d1cd6f9d475f43982bcb620ad",
+      "protected_entry": "r2-whole-2026-10-24/whole_function_r2.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "r2-whole-2026-10-24/write_report.py": {
+      "source_sha256": "8121af7f488d7fce98d95306a05fb76f625b31aa7ba596ac06b017d073579cac",
+      "protected_entry": "r2-whole-2026-10-24/write_report.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "two-direction-2026-10-24/bind_sources.py": {
+      "source_sha256": "5e3ce5fe7d54da0e9064c78fe3d2557986f0ab68279fc55ce78f1aa2141dc8cb",
+      "protected_entry": "two-direction-2026-10-24/bind_sources.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "two-direction-2026-10-24/budget.py": {
+      "source_sha256": "75dc370886960c0745aa5554fa2cf6a776571b081863c9a1ad1105b3370d7a84",
+      "protected_entry": "two-direction-2026-10-24/budget.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "two-direction-2026-10-24/finite_residual.py": {
+      "source_sha256": "962ff40dd540e79cdfacef36a712729a4287e651a1ec42213b5936c67f7a8c5e",
+      "protected_entry": "two-direction-2026-10-24/finite_residual.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "two-direction-2026-10-24/freeze.py": {
+      "source_sha256": "95ba6bdf1219f7470e091e3fb28e25d4890ae1606b5da4c729c4ed0a122744dc",
+      "protected_entry": "two-direction-2026-10-24/freeze.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "two-direction-2026-10-24/gate.py": {
+      "source_sha256": "06819834db906bc6705955bbc70c45605886daa501177efd36172a274a950cb3",
+      "protected_entry": "two-direction-2026-10-24/gate.py",
+      "role": "portable_acceptance",
+      "normal_replay_in_this_review": true,
+      "optimized_modes_tested": true
+    },
+    "two-direction-2026-10-24/load_env.py": {
+      "source_sha256": "8bf6e328f1787fca8e318940cd40372d9fe3dce0bf69c3f9d9981af6a1bcd4b3",
+      "protected_entry": "two-direction-2026-10-24/load_env.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "two-direction-2026-10-24/package.py": {
+      "source_sha256": "823499af34888db62f50b402f232cacb699e7913db71ace58c957b78bc7c8252",
+      "protected_entry": "two-direction-2026-10-24/package.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "two-direction-2026-10-24/preflight.py": {
+      "source_sha256": "d067177bc09a35c4797bb8932e27035fff4d640f1505fbed3feb6983c9f126ce",
+      "protected_entry": "two-direction-2026-10-24/preflight.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "two-direction-2026-10-24/prepare_review.py": {
+      "source_sha256": "6a1566ede4c6aa5f2c1d23fed3ab5d971bba5d88ed894cd4d0cd7fd3eb4ff10a",
+      "protected_entry": "two-direction-2026-10-24/prepare_review.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    },
+    "two-direction-2026-10-24/reproduce.py": {
+      "source_sha256": "cf6c4eb37b9ce4fa28d7212baa266334ced61a3884c994f35cf7bdc8bcc391d9",
+      "protected_entry": "two-direction-2026-10-24/reproduce.py",
+      "role": "source_or_numerical_replay",
+      "normal_replay_in_this_review": false,
+      "optimized_modes_tested": true
+    }
+  },
+  "new_protected_entries": [
+    "revision_runner.py",
+    "test_revision.py",
+    "build_full.py"
+  ],
+  "early_guard_scope": "Every delivered Python file, including helper paths and negative-test evaluation. Historical-reference execution is forbidden in normal mode."
+}

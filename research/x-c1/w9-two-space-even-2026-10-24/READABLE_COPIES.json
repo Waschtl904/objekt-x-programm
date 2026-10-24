@@ -1,0 +1,104 @@
+[
+  {
+    "path": "author-text/APPLICATION.txt",
+    "archive_sha256": "e1911ce244aa51062f6b06bb767f945922199112380022b59846de4ec7f0e89d",
+    "member": "r2-whole-2026-10-24/APPLICATION.txt",
+    "sha256": "17328713d25c7d4eb09d007ba662158caf3564bd20507aecfbd55295ceb9301f"
+  },
+  {
+    "path": "author-text/RESULT.json",
+    "archive_sha256": "e1911ce244aa51062f6b06bb767f945922199112380022b59846de4ec7f0e89d",
+    "member": "r2-whole-2026-10-24/RESULT.json",
+    "sha256": "c732a8f556fc7c8b79a5c040ae98da2a79b048974a0a71ad66a6e4716c976b5c"
+  },
+  {
+    "path": "author-text/REVIEW-REQUEST.txt",
+    "archive_sha256": "e1911ce244aa51062f6b06bb767f945922199112380022b59846de4ec7f0e89d",
+    "member": "r2-whole-2026-10-24/REVIEW-REQUEST.txt",
+    "sha256": "b3a71a06751ec940d6c38f802e70841739a49eae4a4f7c2a04643e9fef16d30f"
+  },
+  {
+    "path": "author-text/TWO-DIRECTION-BEWEIS.txt",
+    "archive_sha256": "e1911ce244aa51062f6b06bb767f945922199112380022b59846de4ec7f0e89d",
+    "member": "two-direction-2026-10-24/BEWEIS.txt",
+    "sha256": "601107165284c0bd8c0507fcd1e9fe4ac7a8d9a62d1d6da6fed9be2d59a09c91"
+  },
+  {
+    "path": "author-text/DIRECTIONS.json",
+    "archive_sha256": "e1911ce244aa51062f6b06bb767f945922199112380022b59846de4ec7f0e89d",
+    "member": "two-direction-2026-10-24/DIRECTIONS.json",
+    "sha256": "cda42935b7e0268ebb377aec7b0739a2c5befc94cc63eca7db3f1da5982afaac"
+  },
+  {
+    "path": "premises/L1-BEWEIS.txt",
+    "archive_sha256": "e1911ce244aa51062f6b06bb767f945922199112380022b59846de4ec7f0e89d",
+    "member": "two-direction-2026-10-24/l1-frozen/L1-BEWEIS.txt",
+    "sha256": "8ec71f9f232e27337488eb1f7133a48a8fa0e6f6b803d416d913860ff7501260"
+  },
+  {
+    "path": "technical-gpt1/ENTRYPOINTS.json",
+    "archive_sha256": "8d364fd430d68ce6ec9da29d33fb23aac3d480e489515e1aaa959ae8f93c02f8",
+    "member": "zweiraum-protection-v1/ENTRYPOINTS.json",
+    "sha256": "c5dab2e2cf6dbdc637062376ff3a374efc43857ba9854abe1e5ff8921b6fc2ea"
+  },
+  {
+    "path": "technical-gpt1/REVISION_FILES.json",
+    "archive_sha256": "8d364fd430d68ce6ec9da29d33fb23aac3d480e489515e1aaa959ae8f93c02f8",
+    "member": "zweiraum-protection-v1/REVISION_FILES.json",
+    "sha256": "44548030928c0d76dad91d19e055fc2ddd899795fdf816cf722794eaad68c9c5"
+  },
+  {
+    "path": "technical-gpt1/TEST-REPORT.json",
+    "archive_sha256": "8d364fd430d68ce6ec9da29d33fb23aac3d480e489515e1aaa959ae8f93c02f8",
+    "member": "zweiraum-protection-v1/TEST-REPORT.json",
+    "sha256": "2ad7b3763f82e82c01baea844f3831481d7b57db40457fc309d18454d796711b"
+  },
+  {
+    "path": "mathematical-gpt1/GEGENPRUEFUNG.txt",
+    "archive_sha256": "48ab63d06792e5ce1cbf406ac512a2eae6ec808a7f8e0afa7612e56a125cbf7a",
+    "member": "GEGENPRUEFUNG.txt",
+    "sha256": "dc4ce70a4ea8bb6d5eeef428fea53ad22ac5c623a797f7b6329167cf315913df"
+  },
+  {
+    "path": "mathematical-gpt1/INDEPENDENT-RESULT.json",
+    "archive_sha256": "48ab63d06792e5ce1cbf406ac512a2eae6ec808a7f8e0afa7612e56a125cbf7a",
+    "member": "INDEPENDENT-RESULT.json",
+    "sha256": "d3614264c37371f0270c2b37a2c0b58c94f8d1c7aace6ac46ab2c965e1f4dd11"
+  },
+  {
+    "path": "technical-gpt2/BERICHT.txt",
+    "archive_sha256": "e025e3e83972eba94baa63b843db9e7011014cb8fd8c3db282caeccece2d0e1b",
+    "member": "BERICHT.txt",
+    "sha256": "4da263ccb1762c698ca2d0bf4a176fa22becd93b97654647ec96c73e9a1114eb"
+  },
+  {
+    "path": "technical-gpt2/CONCLUSION.json",
+    "archive_sha256": "e025e3e83972eba94baa63b843db9e7011014cb8fd8c3db282caeccece2d0e1b",
+    "member": "CONCLUSION.json",
+    "sha256": "eb1d780cd23572b3a7bea8335e0373500deb9b610dc70b72dfdbfad11ed9830d"
+  },
+  {
+    "path": "technical-gpt2/GPT2-INDEPENDENT-GUARDS.json",
+    "archive_sha256": "e025e3e83972eba94baa63b843db9e7011014cb8fd8c3db282caeccece2d0e1b",
+    "member": "GPT2-INDEPENDENT-GUARDS.json",
+    "sha256": "aa05ab1322f90b0c46529352ab247f2d1888606e02f5129bd73d43ebf42a7547"
+  },
+  {
+    "path": "technical-gpt2/GPT2-REVISION-SUITE.json",
+    "archive_sha256": "e025e3e83972eba94baa63b843db9e7011014cb8fd8c3db282caeccece2d0e1b",
+    "member": "GPT2-REVISION-SUITE.json",
+    "sha256": "b3928c7aabe2739e409e1a0f2ee86a6e0a779dd29d432e4ee979ac6e269b71b1"
+  },
+  {
+    "path": "technical-gpt2/HARNESS-SELF-CHECK.json",
+    "archive_sha256": "e025e3e83972eba94baa63b843db9e7011014cb8fd8c3db282caeccece2d0e1b",
+    "member": "HARNESS-SELF-CHECK.json",
+    "sha256": "88356b09185b8de8bd768d9c1155b279d69f040907f5bcac51c3103536aebbec"
+  },
+  {
+    "path": "technical-gpt2/REPRODUCE.txt",
+    "archive_sha256": "e025e3e83972eba94baa63b843db9e7011014cb8fd8c3db282caeccece2d0e1b",
+    "member": "REPRODUCE.txt",
+    "sha256": "d5436085f3eb24215d393cffd075945ef87e6c091baf8bd6dd6a54a843b8862f"
+  }
+]

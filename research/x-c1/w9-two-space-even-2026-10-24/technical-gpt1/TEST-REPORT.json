@@ -1,0 +1,2225 @@
+{
+  "status": "GPT1_TECHNICAL_REVISION_PASS_GPT2_REVIEW_PENDING",
+  "revision_id": "OBJEKT-X-ZWEIRAUM-PRUEFERSCHUTZ-v1-2026-10-24",
+  "revision_files_sha256": "44548030928c0d76dad91d19e055fc2ddd899795fdf816cf722794eaad68c9c5",
+  "original": {
+    "filename": "Objekt-X-Zweiraum-Ganzrest-und-Matrixvergleich-2026-10-24.zip",
+    "bytes": 11129155,
+    "sha256": "e1911ce244aa51062f6b06bb767f945922199112380022b59846de4ec7f0e89d"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "guarded_python_files": 43,
+  "optimization_cases": 258,
+  "optimization_results": [
+    {
+      "entry": "build_full.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "build_full.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "build_full.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "build_full.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "build_full.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "build_full.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "historical-references/source_cap_audit.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "historical-references/source_cap_audit.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "historical-references/source_cap_audit.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "historical-references/source_cap_audit.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "historical-references/source_cap_audit.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "historical-references/source_cap_audit.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "historical-references/whole_function_probe.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "historical-references/whole_function_probe.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "historical-references/whole_function_probe.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "historical-references/whole_function_probe.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "historical-references/whole_function_probe.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "historical-references/whole_function_probe.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/build.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/build.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/build.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/build.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/build.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/build.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/cache_atoms.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/cache_atoms.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/cache_atoms.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/cache_atoms.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/cache_atoms.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/cache_atoms.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/check_delivery.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/check_delivery.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/check_delivery.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/check_delivery.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/check_delivery.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/check_delivery.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/core_quadrature_control_128.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/core_quadrature_control_128.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/core_quadrature_control_128.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/core_quadrature_control_128.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/core_quadrature_control_128.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/core_quadrature_control_128.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/endpoint_preflight.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/endpoint_preflight.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/endpoint_preflight.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/endpoint_preflight.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/endpoint_preflight.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/endpoint_preflight.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/fast_evaluation.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/fast_evaluation.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/fast_evaluation.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/fast_evaluation.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/fast_evaluation.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/fast_evaluation.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/final_audit.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/final_audit.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/final_audit.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/final_audit.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/final_audit.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/final_audit.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/finish_local_checks.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/finish_local_checks.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/finish_local_checks.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/finish_local_checks.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/finish_local_checks.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/finish_local_checks.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_direct.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_direct.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_direct.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_direct.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_direct.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_direct.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_physical.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_physical.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_physical.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_physical.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_physical.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/integrate_physical.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/ledger.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/ledger.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/ledger.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/ledger.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/ledger.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/ledger.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/load_model.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/load_model.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/load_model.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/load_model.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/load_model.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/load_model.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/log_integrals.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/log_integrals.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/log_integrals.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/log_integrals.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/log_integrals.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/log_integrals.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/model_cache.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/model_cache.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/model_cache.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/model_cache.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/model_cache.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/model_cache.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/negative_controls.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/negative_controls.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/negative_controls.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/negative_controls.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/negative_controls.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/negative_controls.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partial_partition.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partial_partition.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partial_partition.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partial_partition.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partial_partition.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partial_partition.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partition_audit.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partition_audit.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partition_audit.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partition_audit.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partition_audit.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/partition_audit.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/probe.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/probe.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/probe.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/probe.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/probe.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/probe.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/run_stage.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/run_stage.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/run_stage.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/run_stage.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/run_stage.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/run_stage.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/small_remainders.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/small_remainders.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/small_remainders.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/small_remainders.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/small_remainders.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/small_remainders.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/source_caps.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/source_caps.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/source_caps.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/source_caps.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/source_caps.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/source_caps.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_direct.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_direct.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_direct.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_direct.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_direct.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_direct.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_physical.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_physical.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_physical.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_physical.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_physical.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/taylor_model_physical.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/verify_sources.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/verify_sources.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/verify_sources.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/verify_sources.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/verify_sources.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/verify_sources.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/whole_function_r2.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/whole_function_r2.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/whole_function_r2.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/whole_function_r2.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/whole_function_r2.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/whole_function_r2.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/write_report.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/write_report.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/write_report.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/write_report.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/write_report.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "r2-whole-2026-10-24/write_report.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "revision_runner.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "revision_runner.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "revision_runner.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "revision_runner.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "revision_runner.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "revision_runner.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "test_revision.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "test_revision.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "test_revision.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "test_revision.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "test_revision.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "test_revision.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/bind_sources.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/bind_sources.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/bind_sources.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/bind_sources.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/bind_sources.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/bind_sources.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/budget.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/budget.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/budget.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/budget.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/budget.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/budget.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/finite_residual.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/finite_residual.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/finite_residual.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/finite_residual.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/finite_residual.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/finite_residual.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/freeze.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/freeze.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/freeze.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/freeze.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/freeze.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/freeze.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/gate.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/gate.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/gate.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/gate.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/gate.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/gate.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/load_env.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/load_env.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/load_env.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/load_env.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/load_env.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/load_env.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/package.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/package.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/package.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/package.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/package.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/package.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/preflight.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/preflight.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/preflight.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/preflight.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/preflight.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/preflight.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/prepare_review.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/prepare_review.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/prepare_review.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/prepare_review.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/prepare_review.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/prepare_review.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/reproduce.py",
+      "mode": "-O",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/reproduce.py",
+      "mode": "-OO",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/reproduce.py",
+      "mode": "env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/reproduce.py",
+      "mode": "env=2",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/reproduce.py",
+      "mode": "-O/env=0",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    },
+    {
+      "entry": "two-direction-2026-10-24/reproduce.py",
+      "mode": "-OO/env=1",
+      "exit_code": 78,
+      "exact_guard_diagnostic": true,
+      "stdout_empty": true,
+      "files_unchanged": true
+    }
+  ],
+  "normal_replays": [
+    {
+      "entry": "r2-whole-2026-10-24/check_delivery.py",
+      "mode": "normal",
+      "exit_code": 0,
+      "mathematical_result_fields_unchanged": true,
+      "output_equivalence": "byte_identical",
+      "RESULT_sha256": "c732a8f556fc7c8b79a5c040ae98da2a79b048974a0a71ad66a6e4716c976b5c",
+      "bound_files_changed": [],
+      "original_negative_tests": 0
+    },
+    {
+      "entry": "r2-whole-2026-10-24/check_delivery.py",
+      "mode": "env=0",
+      "exit_code": 0,
+      "mathematical_result_fields_unchanged": true,
+      "output_equivalence": "byte_identical",
+      "RESULT_sha256": "c732a8f556fc7c8b79a5c040ae98da2a79b048974a0a71ad66a6e4716c976b5c",
+      "bound_files_changed": [],
+      "original_negative_tests": 0
+    },
+    {
+      "entry": "r2-whole-2026-10-24/final_audit.py",
+      "mode": "normal",
+      "exit_code": 0,
+      "mathematical_result_fields_unchanged": true,
+      "output_equivalence": "byte_identical",
+      "RESULT_sha256": "c732a8f556fc7c8b79a5c040ae98da2a79b048974a0a71ad66a6e4716c976b5c",
+      "bound_files_changed": [],
+      "original_negative_tests": 0
+    },
+    {
+      "entry": "r2-whole-2026-10-24/final_audit.py",
+      "mode": "env=0",
+      "exit_code": 0,
+      "mathematical_result_fields_unchanged": true,
+      "output_equivalence": "byte_identical",
+      "RESULT_sha256": "c732a8f556fc7c8b79a5c040ae98da2a79b048974a0a71ad66a6e4716c976b5c",
+      "bound_files_changed": [],
+      "original_negative_tests": 0
+    },
+    {
+      "entry": "r2-whole-2026-10-24/negative_controls.py",
+      "mode": "normal",
+      "exit_code": 0,
+      "mathematical_result_fields_unchanged": true,
+      "output_equivalence": "identical_negative_controls_except_error_diagnostic_text",
+      "RESULT_sha256": "c732a8f556fc7c8b79a5c040ae98da2a79b048974a0a71ad66a6e4716c976b5c",
+      "bound_files_changed": [
+        "r2-whole-2026-10-24/NEGATIVE-CONTROLS.json"
+      ],
+      "original_negative_tests": 5
+    },
+    {
+      "entry": "r2-whole-2026-10-24/negative_controls.py",
+      "mode": "env=0",
+      "exit_code": 0,
+      "mathematical_result_fields_unchanged": true,
+      "output_equivalence": "identical_negative_controls_except_error_diagnostic_text",
+      "RESULT_sha256": "c732a8f556fc7c8b79a5c040ae98da2a79b048974a0a71ad66a6e4716c976b5c",
+      "bound_files_changed": [
+        "r2-whole-2026-10-24/NEGATIVE-CONTROLS.json"
+      ],
+      "original_negative_tests": 5
+    },
+    {
+      "entry": "r2-whole-2026-10-24/finish_local_checks.py",
+      "mode": "normal",
+      "exit_code": 0,
+      "mathematical_result_fields_unchanged": true,
+      "output_equivalence": "identical_fields_and_text_except_CRLF_LF",
+      "RESULT_sha256": "c732a8f556fc7c8b79a5c040ae98da2a79b048974a0a71ad66a6e4716c976b5c",
+      "bound_files_changed": [
+        "r2-whole-2026-10-24/APPLICATION-CHECKS.json"
+      ],
+      "original_negative_tests": 0
+    },
+    {
+      "entry": "r2-whole-2026-10-24/finish_local_checks.py",
+      "mode": "env=0",
+      "exit_code": 0,
+      "mathematical_result_fields_unchanged": true,
+      "output_equivalence": "identical_fields_and_text_except_CRLF_LF",
+      "RESULT_sha256": "c732a8f556fc7c8b79a5c040ae98da2a79b048974a0a71ad66a6e4716c976b5c",
+      "bound_files_changed": [
+        "r2-whole-2026-10-24/APPLICATION-CHECKS.json"
+      ],
+      "original_negative_tests": 0
+    },
+    {
+      "entry": "two-direction-2026-10-24/gate.py",
+      "mode": "normal",
+      "exit_code": 0,
+      "mathematical_result_fields_unchanged": true,
+      "output_equivalence": "identical_fields_and_text_except_CRLF_LF",
+      "RESULT_sha256": "c732a8f556fc7c8b79a5c040ae98da2a79b048974a0a71ad66a6e4716c976b5c",
+      "bound_files_changed": [
+        "two-direction-2026-10-24/GATE.json"
+      ],
+      "original_negative_tests": 0
+    },
+    {
+      "entry": "two-direction-2026-10-24/gate.py",
+      "mode": "env=0",
+      "exit_code": 0,
+      "mathematical_result_fields_unchanged": true,
+      "output_equivalence": "identical_fields_and_text_except_CRLF_LF",
+      "RESULT_sha256": "c732a8f556fc7c8b79a5c040ae98da2a79b048974a0a71ad66a6e4716c976b5c",
+      "bound_files_changed": [
+        "two-direction-2026-10-24/GATE.json"
+      ],
+      "original_negative_tests": 0
+    },
+    {
+      "entry": "revision_runner.py --entry final_audit",
+      "mode": "normal",
+      "exit_code": 0
+    }
+  ],
+  "normal_failure_controls": [
+    {
+      "case": "mutated_original",
+      "exit_code": 1,
+      "diagnostic": "OBJEKT_X_PROTECTION_CHECK_FAILED: ORIGINAL_SIZE_MISMATCH",
+      "stdout_empty": true
+    },
+    {
+      "case": "missing_original",
+      "exit_code": 1,
+      "diagnostic": "OBJEKT_X_PROTECTION_CHECK_FAILED: [Errno 2] No such file or directory: '<temporary>/missing.zip'",
+      "stdout_empty": true
+    },
+    {
+      "case": "changed_revision_source",
+      "exit_code": 1,
+      "diagnostic": "OBJEKT_X_PROTECTION_CHECK_FAILED: REVISION_HASH_MISMATCH: r2-whole-2026-10-24/final_audit.py",
+      "stdout_empty": true
+    }
+  ],
+  "new_assert_statements": 0,
+  "fresh_numerical_integrations": 0,
+  "fresh_Arb_source_generation": false,
+  "original_bytes_unchanged": true,
+  "normal_scope": "Five bounded standard-library checks, explicit dispatcher; larger archived generators are guard-tested only, no fresh source/atom/panel integrations.",
+  "external_GPT2_review": "PENDING",
+  "github_writes": false
+}
