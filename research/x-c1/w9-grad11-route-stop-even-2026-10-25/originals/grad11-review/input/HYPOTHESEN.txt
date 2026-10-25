@@ -1,0 +1,41 @@
+H1–H4: WORTLAUT AUS DEM UNVERÄNDERTEN AUTORENARCHIV
+Quelle: author-text/L1-BEWEIS.txt, §0; Archivbindung in AUTHOR_ARCHIVE.json.
+Die Abschnittsverweise gehören zum vollständigen Originalbeweis.
+
+0. Präzise historische Voraussetzungen
+--------------------------------------
+H1: Die physische Q-Darstellung, Nullfortsetzungen, Symmetrie und zulässigen
+Domänen/Paarungen gelten für die definierten Legendre-, Log- und Momentquellen.
+Anker: domain_proof, inverse_proof und nstar_proof aus INPUT_BINDINGS.json.
+Insbesondere gelten die verwendeten Momentadjungierten. Keine Gesamtpositivität
+und keine A11-Positivität werden vorausgesetzt.
+
+H2: Die historischen ganzen Quellenzertifikate gelten für ihre URSPRÜNGLICH
+definierten Quellen und Modelle: F=(z_2,z_4,z_6,z_8,Lambda Y_1,...,Lambda Y_8),
+J=Q_basis[D;I_84], Y=Q_basis S und Phi=U^-1 M E. Die zugehörigen gebundenen
+Modelle c_F,c_J,Bh_F,Bh_J, ihre ganzen hohen Grame, E_LF,e_LJ,E_F,E_J und
+die Low/High-Kopplung stammen aus REFINED_INPUT und REFINED_COMMON96.
+Die Fehlergrame sind Operator-/Grammajoranten für ALLE Koeffizienten dieser
+festen endlichen Quellfamilien, keine bloßen Einzelspalten- oder Tailtests.
+Die historischen Integrations- und analytischen Beweise dieser Majoranten
+werden übernommen, nicht durch ihre numerische Positivität neu bewiesen.
+Ihre konkrete Anwendbarkeit auf den korrigierten Builder wird unten gezeigt;
+sie wird ausdrücklich NICHT als zusätzliche Voraussetzung formuliert.
+
+H3: Die gebundenen Form-, Invers-, Antwortgram- und Koerzivitätszertifikate
+gelten: U8, K, D, P, gemeinsame Kraftabbildung mit Cap 10 und L>=21/5 W_X.
+Die feste Antwortregel ist Phi12 X_fix Fhat, nicht der alternative Kandidat S.
+Die ganze D-Modellgrenze gilt in Paritäts-L2, vor und nach exakter Projektion.
+
+H4: Die schon geprüften historischen Modellenergie-, Kernquadratur- und
+Brückenbelege gelten mit ihren gebundenen Endpunkten. Die analytischen
+Quellenhüllen, R2-Grundhüllen und Cache-/Momentnachweise bleiben in genau
+ihrem dokumentierten Umfang übernommen. Hier werden keine Konturen und
+keine Integrationsnetze neu gerechnet.
+
+Diese Liste übernimmt definierte historische Zertifikate. Sie enthält weder
+die pauschale Aussage »L1 gilt« noch eine angenommene Vollständigkeit eines
+unbenannten Restkatalogs. Die konkrete Liste der Modellwechsel steht in §7.
+
+
+Quellen und Geltungsbereiche: HYPOTHESEN_QUELLEN.json; die konkrete Anwendung auf den festen Zeugen steht in PROOF.md und im Originalbeweis.

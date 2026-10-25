@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "copies": [
+    {
+      "copy_path": "research/x-c1/w9-grad11-route-stop-even-2026-10-25/originals/grad11-review/input/references/research/x-c1/w9-new-k-schur-underform-even-2026-10-20/PROOF.md",
+      "role": "ARCHIVED_REFERENCE_ONLY",
+      "source": {
+        "commit": "4ede0b70e2df1f133c762d7b0e6527338d597874",
+        "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/PROOF.md",
+        "sha256": "3e82b37694636a63e89664bb9268aee8d4accb85f4389e5fe6285292917177c9"
+      }
+    },
+    {
+      "copy_path": "research/x-c1/w9-grad11-route-stop-even-2026-10-25/originals/grad11-review/input/references/research/x-c1/w9-residual-centered-control-even-2026-10-21/PROOF.md",
+      "role": "ARCHIVED_REFERENCE_ONLY",
+      "source": {
+        "commit": "4ede0b70e2df1f133c762d7b0e6527338d597874",
+        "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/PROOF.md",
+        "sha256": "222d6880db1b3d3c70be3bf0d004cbb9ae5c1bcfb1bd0a57796b7ad678c6d624"
+      }
+    }
+  ]
+}

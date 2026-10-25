@@ -1,0 +1,14 @@
+--- input/analyze.py
++++ replay/analyze.py
+@@ -6,9 +6,9 @@
+ sys.dont_write_bytecode=True
+ sys.path.insert(0,str(HERE/'deps'))
+ from flint import arb,arb_mat,ctx
+-PRIOR=Path(r'C:\Users\sebas\Documents\Codex\2026-10-21\github-plugin-github-openai-curated-remote\work')
++PRIOR=HERE.parent
+ ROOT=PRIOR/'repo'
+-ARCHIVE=PRIOR/'guard-review-2026-10-24/fresh/originals/Objekt-X-Zweiraum-Ganzrest-und-Matrixvergleich-2026-10-24.zip'
++ARCHIVE=PRIOR/'inherited/Objekt-X-Zweiraum-Ganzrest-und-Matrixvergleich-2026-10-24.zip'
+ def sha(b): return hashlib.sha256(b).hexdigest()
+ def need(ok,msg):
+     if not ok: raise RuntimeError(msg)

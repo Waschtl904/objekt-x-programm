@@ -486,6 +486,233 @@ class RepositoryTests(unittest.TestCase):
         self.assertFalse((self.root / 'research/frozen/META.yaml').exists())
         self.assertEqual(rs.validate(self.root)['new_metadata_packages'], 0)
 
+    def reference_copy(self, path='research/archive/references/PROOF.md'):
+        source = self.s['results'][0]
+        ref = {'commit': source['canonical_commit'], 'path': source['canonical_proof'],
+               'sha256': source['proof_sha256']}
+        self.put(path, rs.git_blob(self.root, ref['commit'], ref['path']))
+        document = {'schema_version': 1, 'copies': [
+            {'copy_path': path, 'role': 'ARCHIVED_REFERENCE_ONLY', 'source': ref}]}
+        self.put(rs.REFERENCE_COPIES, rs.encoded(document))
+        return document
+
+    def test_bound_reference_copy_requires_no_meta_and_changes_no_status(self):
+        self.reference_copy()
+        before = (self.root / rs.STATE).read_bytes()
+        result = rs.validate(self.root, self.initial_commit)
+        self.assertEqual(result['archived_reference_copies'], 1)
+        self.assertEqual(result['new_metadata_packages'], 0)
+        self.assertEqual((self.root / rs.STATE).read_bytes(), before)
+
+    def test_changed_reference_copy_and_adjusted_hash_are_rejected(self):
+        document = self.reference_copy()
+        entry = document['copies'][0]
+        changed = b'Changed proof, with a newly advertised hash.\r\n'
+        self.put(entry['copy_path'], changed)
+        with self.assertRaisesRegex(rs.StateError, 'bytes differ'):
+            rs.validate(self.root)
+        entry['source']['sha256'] = hashlib.sha256(changed).hexdigest()
+        self.put(rs.REFERENCE_COPIES, rs.encoded(document))
+        with self.assertRaisesRegex(rs.StateError, 'source hash mismatch'):
+            rs.validate(self.root)
+
+    def test_reference_copy_line_endings_are_bound(self):
+        document = self.reference_copy()
+        path = self.root / document['copies'][0]['copy_path']
+        path.write_bytes(path.read_bytes().replace(b'\n', b'\r\n'))
+        with self.assertRaisesRegex(rs.StateError, 'bytes differ'):
+            rs.validate(self.root)
+
+    def test_reference_registry_schema_and_paths_are_strict(self):
+        original = self.reference_copy()
+        mutations = [
+            lambda d: d.update(schema_version=True),
+            lambda d: d.update(unknown=True),
+            lambda d: d.update(copies={}),
+            lambda d: d['copies'][0].update(role='ACTIVE_PROOF'),
+            lambda d: d['copies'][0].update(copy_path='../outside/PROOF.md'),
+            lambda d: d['copies'][0].update(copy_path='research/*/PROOF.md'),
+            lambda d: d['copies'][0]['source'].update(path='research/?/PROOF.md'),
+            lambda d: d['copies'][0]['source'].update(commit='1234567'),
+            lambda d: d['copies'][0]['source'].update(sha256='short'),
+            lambda d: d['copies'].append(deepcopy(d['copies'][0])),
+        ]
+        for i, mutate in enumerate(mutations):
+            with self.subTest(case=i):
+                document = deepcopy(original)
+                mutate(document)
+                self.put(rs.REFERENCE_COPIES, rs.encoded(document))
+                with self.assertRaises(rs.StateError):
+                    rs.validate(self.root)
+        self.put(rs.REFERENCE_COPIES, b'{"schema_version":1,"schema_version":1,"copies":[]}')
+        with self.assertRaisesRegex(rs.StateError, 'Duplicate key'):
+            rs.validate(self.root)
+
+    def test_reference_source_must_exist_and_match_hash(self):
+        original = self.reference_copy()
+        for key, value, message in [('path', 'research/missing/PROOF.md', 'Missing reference-copy Git source'),
+                                    ('sha256', '0' * 64, 'source hash mismatch'),
+                                    ('commit', '0' * 40, 'Git check failed')]:
+            with self.subTest(key=key):
+                document = deepcopy(original)
+                document['copies'][0]['source'][key] = value
+                self.put(rs.REFERENCE_COPIES, rs.encoded(document))
+                with self.assertRaisesRegex(rs.StateError, message):
+                    rs.validate(self.root)
+
+    def test_reference_source_must_be_in_recorded_integration_not_head(self):
+        document = self.reference_copy()
+        document['copies'][0]['source']['commit'] = self.initial_commit
+        self.put(rs.REFERENCE_COPIES, rs.encoded(document))
+        with self.assertRaisesRegex(rs.StateError, 'outside registered integration snapshot'):
+            rs.validate(self.root)
+        # Updating the observation in the same diff does not bypass the base anchor.
+        self.s['current_integration_observation'].update(
+            main_sha=self.initial_commit, ci_head_sha=self.initial_commit)
+        self.save_state()
+        with self.assertRaisesRegex(rs.StateError, 'outside registered integration snapshot'):
+            rs.validate(self.root, self.initial_commit)
+
+    def test_reference_source_from_unrelated_history_is_rejected(self):
+        document = self.reference_copy()
+        tree = rs.git(self.root, 'rev-parse', 'HEAD^{tree}').stdout.decode().strip()
+        unrelated = rs.git(self.root, 'commit-tree', tree, '-m', 'unrelated source').stdout.decode().strip()
+        document['copies'][0]['source']['commit'] = unrelated
+        self.put(rs.REFERENCE_COPIES, rs.encoded(document))
+        with self.assertRaisesRegex(rs.StateError, 'outside registered integration snapshot'):
+            rs.validate(self.root)
+
+    def test_folder_names_and_undeclared_neighbors_grant_no_exemption(self):
+        for folder in ('originals', 'references'):
+            with self.subTest(folder=folder):
+                self.reference_copy('research/' + folder + '/PROOF.md')
+                (self.root / rs.REFERENCE_COPIES).unlink()
+                with self.assertRaisesRegex(rs.StateError, 'requires META.yaml'):
+                    rs.validate(self.root)
+                (self.root / ('research/' + folder + '/PROOF.md')).unlink()
+        document = self.reference_copy()
+        raw = (self.root / document['copies'][0]['copy_path']).read_bytes()
+        self.put('research/archive/references/neighbor/PROOF.md', raw)
+        with self.assertRaisesRegex(rs.StateError, 'requires META.yaml'):
+            rs.validate(self.root)
+
+    def test_empty_declaration_does_not_exempt_a_copy(self):
+        self.reference_copy()
+        self.put(rs.REFERENCE_COPIES, rs.encoded({'schema_version': 1, 'copies': []}))
+        with self.assertRaisesRegex(rs.StateError, 'requires META.yaml'):
+            rs.validate(self.root)
+
+    def test_missing_reference_target_is_rejected(self):
+        document = self.reference_copy()
+        (self.root / document['copies'][0]['copy_path']).unlink()
+        with self.assertRaisesRegex(rs.StateError, 'Untracked or missing reference copy'):
+            rs.validate(self.root)
+
+    def test_reference_copy_cannot_be_active_pending_or_have_meta(self):
+        document = self.reference_copy()
+        path = document['copies'][0]['copy_path']
+        meta = str(Path(path).parent / 'META.yaml')
+        self.s['pending_packages'] = [{'id': 'COPY', 'meta_path': meta,
+                                      'status': 'PENDING_STATUS_REVIEW'}]
+        self.save_state()
+        with self.assertRaisesRegex(rs.StateError, 'also an active or META package'):
+            rs.validate(self.root)
+        self.s['pending_packages'] = []
+        self.save_state()
+        self.put(meta, b'{}')
+        with self.assertRaisesRegex(rs.StateError, 'also an active or META package'):
+            rs.validate(self.root)
+        (self.root / meta).unlink()
+        document['copies'][0]['copy_path'] = self.s['results'][0]['canonical_proof']
+        self.put(rs.REFERENCE_COPIES, rs.encoded(document))
+        with self.assertRaisesRegex(rs.StateError, 'also an active or META package'):
+            rs.validate(self.root)
+
+    def test_self_binding_and_copy_chains_are_rejected(self):
+        document = self.reference_copy()
+        first = document['copies'][0]
+        first['source']['path'] = first['copy_path']
+        self.put(rs.REFERENCE_COPIES, rs.encoded(document))
+        with self.assertRaisesRegex(rs.StateError, 'self-binding or copy chain'):
+            rs.validate(self.root)
+        second = deepcopy(first)
+        second['copy_path'] = 'research/second-copy/PROOF.md'
+        first['source']['path'] = second['copy_path']
+        document['copies'].append(second)
+        self.put(rs.REFERENCE_COPIES, rs.encoded(document))
+        with self.assertRaisesRegex(rs.StateError, 'self-binding or copy chain'):
+            rs.validate(self.root)
+
+    def test_historically_declared_copy_cannot_be_used_as_source(self):
+        document = self.reference_copy()
+        old_path = document['copies'][0]['copy_path']
+        historical = self.commit('fixture historical reference copy')
+        document['copies'][0].update(copy_path='research/later-copy/PROOF.md')
+        document['copies'][0]['source'].update(commit=historical, path=old_path)
+        self.put('research/later-copy/PROOF.md', (self.root / old_path).read_bytes())
+        self.put(rs.REFERENCE_COPIES, rs.encoded(document))
+        self.s['current_integration_observation']['main_sha'] = historical
+        with self.assertRaisesRegex(rs.StateError, 'historical copy chain'):
+            rs.validate_reference_copies(self.root, self.s, rs.all_paths(self.root))
+
+    def test_symlink_file_parent_and_registry_are_rejected(self):
+        document = self.reference_copy()
+        path = self.root / document['copies'][0]['copy_path']
+        source = self.root / document['copies'][0]['source']['path']
+        path.unlink()
+        path.symlink_to(source)
+        with self.assertRaisesRegex(rs.StateError, 'symlink component'):
+            rs.validate(self.root)
+        path.unlink()
+        directory = path.parent
+        real = directory.with_name('real-directory')
+        directory.rename(real)
+        (real / 'PROOF.md').write_bytes(source.read_bytes())
+        directory.symlink_to(real, target_is_directory=True)
+        # Track the logical path as well: ls-files does not traverse symlink dirs.
+        paths = rs.all_paths(self.root) | {document['copies'][0]['copy_path']}
+        with self.assertRaisesRegex(rs.StateError, 'symlink component'):
+            rs.validate_reference_copies(self.root, self.s, paths)
+        registry = self.root / rs.REFERENCE_COPIES
+        real_registry = registry.with_name('actual-copies.json')
+        registry.rename(real_registry)
+        registry.symlink_to(real_registry)
+        with self.assertRaisesRegex(rs.StateError, 'symlink component'):
+            rs.validate(self.root)
+
+    def test_nonregular_target_is_rejected(self):
+        import os
+        document = self.reference_copy()
+        path = self.root / document['copies'][0]['copy_path']
+        path.unlink()
+        os.mkfifo(path)
+        paths = rs.all_paths(self.root) | {document['copies'][0]['copy_path']}
+        with self.assertRaisesRegex(rs.StateError, 'not a regular file/directory'):
+            rs.validate_reference_copies(self.root, self.s, paths)
+
+    def test_git_source_mode_must_be_regular_even_when_bytes_match(self):
+        document = self.reference_copy()
+        entry = document['copies'][0]
+        # All modes use exactly the same blob; only regular Git files may pass.
+        blob = rs.git(self.root, 'rev-parse', entry['source']['commit'] + ':'
+                      + entry['source']['path']).stdout.decode().strip()
+        for mode in ('100644', '100755', '120000'):
+            with self.subTest(mode=mode):
+                rs.git(self.root, 'update-index', '--add', '--cacheinfo',
+                       mode + ',' + blob + ',research/mode-source/PROOF.md')
+                tree = rs.git(self.root, 'write-tree').stdout.decode().strip()
+                commit = rs.git(self.root, 'commit-tree', tree, '-p', self.initial_commit,
+                                '-m', 'source mode fixture').stdout.decode().strip()
+                entry['source'].update(commit=commit, path='research/mode-source/PROOF.md')
+                self.put(rs.REFERENCE_COPIES, rs.encoded(document))
+                self.s['current_integration_observation']['main_sha'] = commit
+                if mode == '120000':
+                    with self.assertRaisesRegex(rs.StateError, 'Git source is not a regular file'):
+                        rs.validate_reference_copies(self.root, self.s, rs.all_paths(self.root))
+                else:
+                    self.assertEqual(rs.validate_reference_copies(self.root, self.s, rs.all_paths(self.root)),
+                                     {entry['copy_path']})
+
     def test_new_proof_requires_metadata(self):
         self.put('research/new-package/PROOF.md', b'New proof.\n')
         with self.assertRaisesRegex(rs.StateError, 'requires META.yaml'):

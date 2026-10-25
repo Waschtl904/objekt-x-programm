@@ -1,0 +1,10 @@
+{
+  "status": "PASS_EXACT_ENDPOINT_RECOMBINATION",
+  "strict_gap": 1.0476849518513616e-06,
+  "outside_old_two_space": true,
+  "error_radii": {
+    "base_interval_radius": 7.94803538278474e-08,
+    "twice_pairing_interval_radius": 1.9716313603979074e-07,
+    "H_interval_radius": 1.9237292941025886e-08
+  }
+}

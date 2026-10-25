@@ -1,0 +1,26 @@
+{
+  "schema": "objekt-x-ordered-original-archive-parts-v1",
+  "original_filename": "Objekt-X-Grad11-Gegenpruefung-GPT1-2026-10-25.zip",
+  "original_bytes": 12838318,
+  "original_sha256": "9fa36e19fcacc2f0392149d9b8c0f29b9b47a0987ce77be6631a4fcc437c0ca7",
+  "representation": "ordered consecutive binary slices; concatenate without modification; no archive repacking",
+  "parts": [
+    {
+      "path": "archives/Objekt-X-Grad11-Gegenpruefung-GPT1-2026-10-25.zip.parts/part-001.bin",
+      "offset": 0,
+      "bytes": 7864320,
+      "sha256": "c7c30e69c2ddac6c28c1fcd44225641f08348ddb1d5582fcf22cce788a15cbf3"
+    },
+    {
+      "path": "archives/Objekt-X-Grad11-Gegenpruefung-GPT1-2026-10-25.zip.parts/part-002.bin",
+      "offset": 7864320,
+      "bytes": 4973998,
+      "sha256": "b196abfc02cfcb4bd5c1d914a284d8d88acaa6937323e7b2cba47443b5eb3c34"
+    }
+  ],
+  "embedded_author_archive": {
+    "member": "upload/Objekt-X-Grad11-Machbarkeitsanalyse-GPT2-2026-10-25.zip",
+    "bytes": 875069,
+    "sha256": "be2b1ab43514454cfec95dd1283d81e8d2f34745f4cf1554ecfd2d6811888e93"
+  }
+}

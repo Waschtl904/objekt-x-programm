@@ -5,13 +5,14 @@ The .yaml inputs use the JSON subset of YAML 1.2, parsed with Python's
 standard library. Duplicate keys and non-finite numeric values are rejected.
 """
 from __future__ import annotations
-import hashlib, json, os, re, subprocess
+import hashlib, json, os, re, stat, subprocess
 import posixpath
 from datetime import date
 from pathlib import Path, PurePosixPath
 from urllib.error import URLError
 from urllib.request import Request, urlopen
 STATE = '00-uebersicht/RESEARCH_STATE.yaml'
+REFERENCE_COPIES = '00-uebersicht/REFERENCE_COPIES.json'
 GENERATED = ('00-uebersicht/CURRENT_STATE.md', '00-uebersicht/NEXT_GATES.md', '00-uebersicht/SURVIVOR_REGISTRY.md')
 SHA = re.compile('^[0-9a-f]{40}$')
 DIGEST = re.compile('^[0-9a-f]{64}$')
@@ -95,6 +96,96 @@ def tree_paths(root, sha):
 
 def proof_paths(paths):
     return {str(PurePosixPath(p).parent) for p in paths if p.startswith('research/') and p.endswith('/PROOF.md')}
+
+def regular_worktree_file(root, path):
+    """Reject symlinks in every component, including the final file."""
+    parts = PurePosixPath(relative(path)).parts
+    current = Path(root)
+    for i, part in enumerate(parts):
+        current = current / part
+        try:
+            mode = current.lstat().st_mode
+        except OSError as e:
+            raise StateError('Missing reference-copy path: ' + path) from e
+        require(not stat.S_ISLNK(mode), 'Reference-copy symlink component: ' + path)
+        require(stat.S_ISREG(mode) if i == len(parts) - 1 else stat.S_ISDIR(mode),
+                'Reference-copy path is not a regular file/directory: ' + path)
+    return current
+
+def reference_copy_entries(document):
+    fields(document, ('schema_version', 'copies'), 'reference copies')
+    require(type(document['schema_version']) is int and document['schema_version'] == 1,
+            'Unsupported reference-copy schema')
+    require(isinstance(document['copies'], list), 'Reference copies must be a list')
+    targets = set()
+    for entry in document['copies']:
+        fields(entry, ('copy_path', 'role', 'source'), 'reference copy')
+        relative(entry['copy_path'])
+        require(entry['role'] == 'ARCHIVED_REFERENCE_ONLY', 'Invalid reference-copy role')
+        ref_fields(entry['source'], 'reference-copy source')
+        for path in (entry['copy_path'], entry['source']['path']):
+            require(path.startswith('research/') and path.endswith('/PROOF.md')
+                    and not any(c in path for c in '*?[]'),
+                    'Reference copy requires an exact research PROOF.md path: ' + path)
+        require(entry['copy_path'] not in targets, 'Duplicate reference-copy target')
+        targets.add(entry['copy_path'])
+    return document['copies']
+
+def validate_reference_copies(root, s, paths, base_ref=None):
+    """Byte provenance only; exempt exact archived copies from the META gate."""
+    if REFERENCE_COPIES not in paths and not os.path.lexists(root / REFERENCE_COPIES):
+        return set()
+    registry = regular_worktree_file(root, REFERENCE_COPIES)
+    entries = reference_copy_entries(load(registry))
+    targets = {entry['copy_path'] for entry in entries}
+    active = {r['canonical_proof'] for r in s['results']}
+    active |= {str(PurePosixPath(p['meta_path']).parent / 'PROOF.md')
+               for p in s['pending_packages']}
+    snapshots = {s['current_integration_observation']['main_sha']}
+    if base_ref:
+        require(isinstance(base_ref, str) and SHA.fullmatch(base_ref),
+                'base-ref must be a full commit SHA')
+        previous = git_blob(root, base_ref, STATE, missing_ok=True)
+        if previous is not None:
+            old = json.loads(previous, object_pairs_hook=unique_object)
+            # A simultaneous observation update cannot admit a new source.
+            snapshots.add(old['current_integration_observation']['main_sha'])
+    historical_targets = {}
+    for entry in entries:
+        path, source = entry['copy_path'], entry['source']
+        require(path in paths, 'Untracked or missing reference copy: ' + path)
+        require(path not in active and
+                str(PurePosixPath(path).parent / 'META.yaml') not in paths,
+                'Reference copy is also an active or META package: ' + path)
+        require(source['path'] not in targets, 'Reference-copy self-binding or copy chain')
+        current = regular_worktree_file(root, path)
+        commit = source['commit']
+        git(root, 'cat-file', '-e', commit + '^{commit}')
+        for snapshot in sorted(snapshots):
+            require(ancestor(root, commit, snapshot),
+                    'Reference-copy source outside registered integration snapshot: ' + path)
+        if commit not in historical_targets:
+            raw_registry = git_blob(root, commit, REFERENCE_COPIES, missing_ok=True)
+            historical_targets[commit] = ({e['copy_path'] for e in reference_copy_entries(
+                json.loads(raw_registry, object_pairs_hook=unique_object))}
+                if raw_registry is not None else set())
+        require(source['path'] not in historical_targets[commit],
+                'Reference-copy source is a historical copy chain: ' + path)
+        # cat-file alone accepts symlink blobs; inspect the exact Git mode too.
+        records = git(root, 'ls-tree', '-z', commit, '--',
+                      ':(literal)' + source['path']).stdout.rstrip(b'\0').split(b'\0')
+        require(len(records) == 1 and b'\t' in records[0],
+                'Missing reference-copy Git source: ' + source['path'])
+        info, name = records[0].split(b'\t', 1)
+        mode, kind, _ = info.split()
+        require(mode in (b'100644', b'100755') and kind == b'blob'
+                and name == source['path'].encode('utf-8'),
+                'Reference-copy Git source is not a regular file: ' + source['path'])
+        raw = git_blob(root, commit, source['path'])
+        require(hashlib.sha256(raw).hexdigest() == source['sha256'],
+                'Reference-copy source hash mismatch: ' + path)
+        require(current.read_bytes() == raw, 'Reference-copy bytes differ: ' + path)
+    return targets
 
 def pinned_link(state, ref, label):
     return '[' + label + '](https://github.com/' + state['repository'] + '/blob/' + ref['commit'] + '/' + ref['path'] + ')'
@@ -486,9 +577,12 @@ def validate(root, base_ref=None):
         require(e['path'] in paths, 'Missing navigation exception path')
     before = proof_paths(tree_paths(root, s['metadata_policy']['enforced_after']))
     now = proof_paths(paths)
+    reference_copies = validate_reference_copies(root, s, paths, base_ref)
     pending = {p['id']: p for p in s['pending_packages']}
     meta_ids = set()
     for directory in sorted(now - before):
+        if directory + '/PROOF.md' in reference_copies:
+            continue
         path = directory + '/META.yaml'
         require(path in paths and (root / path).is_file(), 'New research package requires META.yaml: ' + directory)
         meta = load(root / path)
@@ -506,4 +600,4 @@ def validate(root, base_ref=None):
             require(old['metadata_policy']['enforced_after'] == s['metadata_policy']['enforced_after'], 'Cannot reset metadata enforcement to grandfather new packages')
         generated_changed = any((git_blob(root, base_ref, p, missing_ok=True) != (root / p).read_bytes() for p in GENERATED))
         require(not generated_changed or previous != (root / STATE).read_bytes(), 'Generated Markdown changed without a state change')
-    return {'results': len(s['results']), 'evidence_refs': len(refs), 'historical_banners': len(historical), 'new_metadata_packages': len(meta_ids), 'verified_through': s['verified_research_snapshot']['verified_through']}
+    return {'results': len(s['results']), 'evidence_refs': len(refs), 'historical_banners': len(historical), 'new_metadata_packages': len(meta_ids), 'archived_reference_copies': len(reference_copies), 'verified_through': s['verified_research_snapshot']['verified_through']}
