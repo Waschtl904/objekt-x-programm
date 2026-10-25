@@ -132,15 +132,62 @@ laut GPT2 im Paket. `FAMILY.json` wurde mit SHA-256
 `e8b821e1d523cd8427b748c2c830bd2c5d0a4aea90bcbb1b7e0906b53b7afd9a`
 vor der Lückenauswertung gemeldet. Keine eigene ZIP-Byteprüfung wird behauptet.
 
+## Nachtrag nach #261: gesamte F_o-Reichweite im Modell
+
+Dieser Nachtrag dokumentiert den anschließend übermittelten Abschlussbericht
+von GPT2. Arbeitsreferenz ist der Dokumentationsmerge
+[`c1db2e3de8b9d4d12afde3189214b9b0c5829ede`](https://github.com/Waschtl904/objekt-x-programm/commit/c1db2e3de8b9d4d12afde3189214b9b0c5829ede).
+Die oben genannten Archive enthalten frühere Blöcke; ihre Hashes werden nicht
+als Bindung dieser späteren Reichweitenrechnung verwendet. Für diesen Nachtrag
+liegen hier weder ein neues Originalarchiv noch ausgeführter Code oder
+rationale Ergebnisdateien vor. Es ist ein berichteter Modellabschluss, kein
+neuer kanonischer Satzanker und keine eigene numerische GPT1-Abnahme.
+
+Nach vorheriger analytischer Formel- und Reichweitenprüfung durch GPT1 wurde
+laut GPT2 einmal das Maximum über alle Korrekturbilder F_o x am eingefrorenen
+W-Einheitszeugen ausgewertet. F_o bezeichnet die zwölf alten Quellen aus vier z
+und acht Lambda Y. Ursprüngliches Q_new, innerer Test und Zeuge bleiben fest;
+Budget und Quelle werden gemeinsam aus der Antwortkorrektur gebildet. Der
+Vergleich betrifft die gesamte F_o-Klasse im gebundenen Mittelpunktmodell,
+nicht lediglich den zuvor ausgewählten Rang-eins-Parameter.
+
+Gemeldetes Ergebnis: **MODEL_FO_MAX_NEGATIVE_STOP**.
+Das normierte Maximum beträgt rund −1.217157386433852e-6, der maximale Gewinn
+rund 1.264526494679595e-7 (9.411410014 %). Laut GPT2 wurden die rational fixierten
+Modellmatrizen K, Delta und K_B jeweils exakt per LDL als positiv definit vom
+Rang 12 geprüft, ohne Spektralabschneiden. Die Lösung von K_B x_* = K y,
+die Identität M x_* = Delta y, die quadratische Ergänzung am früheren
+Korrekturwert und beide Parallel-Summen-Rekombinationen wurden laut GPT2
+exakt rational bestätigt. GPT1 hat diese numerischen Prüfungen nicht wiederholt.
+
+Der zusätzliche Modellgewinn gegenüber dem früheren Korrekturwert beträgt
+laut GPT2 innerhalb derselben Differenzidentität nur etwa 5.07015394784e-22.
+Die Abweichung der Anschlussrekombination vom früher gespeicherten Direktwert
+beträgt etwa 2.81737688725e-22. Sie ist die bereits bekannte
+Rekombinationsabweichung und **keine physische Fehlergrenze**.
+
+Gemeldete Laufzeit: 18.61 s. Keine neue innere J-Testlösung, keine Quadratur,
+keine volle Schalenmatrix und keine weitere Suche. Der eigene GPT1-Beitrag ist
+die analytische Formel-/Reichweitenprüfung einschließlich singulärem Delta
+ohne dessen Inversion; er ist kein eigener Modellreplay.
+**Die tatsächliche F_o-Vergleichsklasse bleibt ohne gerichteten Fehlertransport
+UNRESOLVED.** Andere Unterformen, Antwortkorrekturen außerhalb dieser Klasse
+und die tatsächliche Weil-Form werden nicht ausgeschlossen.
+
 ## Aktuelle Entscheidung und Stopplinien
 
-- Die Grad-11-Voranalyse, C1–C3 und die einzelne Antwortfamilie sind erledigte
-  Untersuchungsblöcke, keine noch auszuführenden Folgeaufträge.
+- Die Grad-11-Voranalyse, C1–C3, die einzelne Antwortfamilie und die gesamte
+  F_o-Reichweitenrechnung sind erledigte Untersuchungsblöcke, keine noch
+  auszuführenden Folgeaufträge.
 - Für die gerichtet ausgeschlossene feste Route keine weiteren
   Ganzrestintegrationen und keine bloße Verbesserung des inneren Tests.
 - C1–C3 und die untersuchte Antwortfamilie nach ihren Modellgates nicht weiter
   verfolgen. Ihre Modellentscheidungen nicht zu gerichteten Ausschlüssen
   anderer Unterformen, Antworten oder der tatsächlichen Weil-Form erweitern.
+- Auch für die gesamte F_o-Klasse keine weitere Suche im unveränderten
+  Mittelpunktmodell; dessen negatives Maximum ist ein berichtetes Modellvotum.
+  Ein tatsächlicher Klassenausschluss verlangt einen gerichteten oberen
+  Maximalwert einschließlich aller physischen Fehlertransporte.
 - Die nächste Methodenentscheidung ist offen. Vor einem neuen Rechenauftrag
   sind eine konkret geänderte Voraussetzung, ihr zulässiger Wirkmechanismus,
   verfügbare gemeinsame Daten und ein begrenzter Entscheidungstest zu benennen.

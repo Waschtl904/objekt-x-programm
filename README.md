@@ -15,6 +15,45 @@ an X, einschließlich der vollständigen geeigneten Testklasse, bleiben erhalten
 Weil-Positivität und die vollständige Konstruktion von Objekt X bleiben offen.
 Die projektintern hergeleiteten Ergebnisse sind zur externen Prüfung offen.
 
+## Aktueller Stand vom 25. Oktober 2026
+
+**Checkliste 3/10 im dokumentierten bedingten Umfang. Punkt 4, der konstruktive
+A9→A11-Anschluss und Objekt X bleiben offen.** Die Checkliste misst keine
+Fertigstellungsquote oder Erfolgswahrscheinlichkeit.
+
+L1 und der gemeinsame reelle Zweiraumnachweis sind unter H1–H4 integriert.
+Die anschließende Grad-11-Machbarkeitsanalyse ist ebenfalls abgeschlossen:
+Der [gerichtete Routenausschluss aus #260](research/x-c1/w9-grad11-route-stop-even-2026-10-25/README.md)
+zeigt an einem zulässigen eingefrorenen Zeugen
+`E_fix >= F_T > K_P`, mit `F_lo - K_hi > 1.0476e-6`.
+Damit scheitert der volle Vergleich mit **dieser festen äußeren Antwort und
+Q_new**. Das ist keine negative tatsächliche Weil-Richtung; L1 und Zweiraum
+bleiben in ihrem bisherigen Umfang gültig.
+
+Davon getrennt sind die **lokal berichteten Modellentscheidungen**: C1–C3
+und die einzelne Rang-eins-Antwortfamilie werden nicht weiterverfolgt.
+Die danach einmal berechnete gesamte F_o-Korrekturklasse erreicht laut GPT2
+im gebundenen Mittelpunktmodell am Stopzeugen ebenfalls nur ein negatives
+Maximum, etwa `-1.2171573864e-6` (`MODEL_FO_MAX_NEGATIVE_STOP`). F_o ist der
+vorhandene alte Zwölferraum aus vier z- und acht Lambda-Y-Quellen; Unterform
+und innerer Test bleiben fest. Der tatsächliche Vergleich dieser Klasse bleibt
+ohne gerichteten Fehlertransport **UNRESOLVED**. Das ist kein weiterer
+gerichteter Ausschluss und kein Ausschluss anderer Unterformen oder Antworten
+außerhalb dieser Klasse.
+
+Die [Forschungsbilanz](00-uebersicht/FORSCHUNGSBILANZ_2026-10-25.md) trennt
+integrierte Originalbelege, übermittelte lokale Ergebnisse und eigene
+Prüfleistungen. Die lokalen Folgearchive sind hier nicht veröffentlicht oder
+von GPT1 bytegeprüft. Keine weiteren Ganzrestintegrationen für die gerichtet
+ausgeschlossene feste Route und keine weitere Suche innerhalb der erledigten
+Modellblöcke. Die nächste begründete Methodenentscheidung ist offen.
+
+Maßgeblich sind [CURRENT_STATE](00-uebersicht/CURRENT_STATE.md),
+[NEXT_GATES](00-uebersicht/NEXT_GATES.md) und das
+[Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml).
+Die nachfolgenden datierten Rückblicke dokumentieren die Entwicklung;
+damalige Folgeaufträge sind keine neuen Rechenaufträge.
+
 ## Reparaturhinweis zum festen geraden Zeugen (#252)
 
 Der eingefrorene Ganzfunktions-Builder enthält einen inneren Gamma-Kernfehler.
@@ -39,8 +78,8 @@ festgelegten geraden Richtungen unter H1–H4**. Die zweite tatsächliche Restdu
 ist `<2.492e-6`; die physische Formreserve ist `>5.1450e-8 ||s||_W²`.
 Mathematische Gegenprüfung und geprüfte Schutzrevision v1 sind getrennt gebunden.
 Externe Gesamtprüfung, vollständiger Grad-11-Raum und Punkt 4 bleiben offen.
-Nach einer gesonderten Integrationsentscheidung ist eine günstige Machbarkeitsanalyse
-des verbleibenden geraden Raums vorgesehen; dieser Zusatz startet keine weitere Richtung.
+Die damals vorgeschlagene Machbarkeitsanalyse des verbleibenden geraden Raums
+ist durch den oben genannten Routenausschluss aus #260 erledigt.
 
 ## Einstieg
 
@@ -50,13 +89,15 @@ des verbleibenden geraden Raums vorgesehen; dieser Zusatz startet keine weitere 
 | Die weitere Forschungsrichtung verstehen | [Strategie für Objekt X](00-uebersicht/OBJEKT_X_FORSCHUNGSSTRATEGIE.md) |
 | Das Projekt kritisch begutachten | [Leitfaden für externe Begutachtung](00-uebersicht/EXTERNE_BEGUTACHTUNG.md) |
 | Den integrierten Stand und offene Aufgaben prüfen | [Aktueller Stand](00-uebersicht/CURRENT_STATE.md) · [Nächste Aufgaben](00-uebersicht/NEXT_GATES.md) |
+| Integrierte Belege und lokale Modellberichte auseinanderhalten | [Forschungsbilanz vom 25. Oktober](00-uebersicht/FORSCHUNGSBILANZ_2026-10-25.md) |
 | Einen konkreten Satz und seine Belege finden | [Ergebnisregister](00-uebersicht/SURVIVOR_REGISTRY.md) |
 | Dateien, Manuskripte oder ältere Ansätze einordnen | [Dokumentationswegweiser](00-uebersicht/DOKUMENTATIONSWEGWEISER.md) |
 
 ## Forschungsstand in Kürze
 
 Die folgende Zusammenfassung bezieht sich auf den integrierten Forschungsstand
-und die Folgepakete bis **20. Oktober 2026**. Den operativen Status, die genauen Voraussetzungen und
+bis **25. Oktober 2026**. Die späteren lokalen Modellberichte sind oben gesondert
+ausgewiesen. Den operativen Status, die genauen Voraussetzungen und
 die gepinnten Beweisanker verwaltet das
 [Forschungsregister](00-uebersicht/RESEARCH_STATE.yaml).
 
@@ -72,6 +113,8 @@ die gepinnten Beweisanker verwaltet das
 | Ursprünglicher Basis84-Tail | [Komplementwechsel und Gegenprüfung](research/x-c1/basis84-tail-closure-2026-10-14/README.md): tau auf Z84 mindestens 2/3 W_X; Restriktionsinverse höchstens 3/2 I; Ziel 1/20 geschlossen | Bedingt auf die gebundenen Voraussetzungen; kein Boden 2/3 auf ganz A9; ersetzt keine neue vollständige Residualbilanz |
 | Gerichtete Skalartests | [Konstante Schalenrichtung z0](research/x-c1/l00-z0-directed-interval-2026-10-17/PROOF.md) und [fester gerader Kandidat](research/x-c1/coherent-k-frozen-even-2026-10-17/PROOF.md) liefern keinen Ausschluss | Keine Bestätigung der Antwortregel; die weitere Richtungssuche blieb ohne qualifizierten Kandidaten |
 | Fester K*-Untervergleich | [Gerichtete Formfehlerschärfung](research/x-c1/w9-schur-form-error-even-2026-10-19/PROOF.md) schließt jeden W >= Q_lower,*^-1 beim festen geraden Zeugen, der eingefrorenen Antwortregel und ihrem Budget aus | Andere Unterformen, Antwortregeln und Majoranten der tatsächlichen A9-Inverse bleiben offen; keine negative Weil-Richtung und kein Abschluss von Punkt 4 |
+| L1 und reeller Zweiraum | [L1](research/x-c1/w9-l1-source-chain-even-2026-10-24/README.md) schließt die Quellen-/Fehleranwendung des korrigierten festen Zeugen; der [Zweiraumvergleich](research/x-c1/w9-two-space-even-2026-10-24/README.md) gilt für alle reellen Mischrichtungen der beiden eingefrorenen Richtungen | Lokal unter H1–H4; kein vollständiger Grad-11-Abschluss |
+| Feste Grad-11-Route mit Q_new | [Gerichteter Stopzeuge](research/x-c1/w9-grad11-route-stop-even-2026-10-25/README.md): F_lo − K_hi > 1.0476e-6; #260 integriert | Ausschließlich die feste äußere Antwort mit Q_new unter H1–H4 ausgeschlossen; keine negative tatsächliche Weil-Richtung |
 | Globales Ziel | Arbeitsdefinition und erforderliche Übergänge sind formuliert | Kofinale positive Familie, globaler Readout, vollständige Weil-Gramidentität und RH bleiben offen |
 
 Die hier zusammengefassten projektinternen Ergebnisse tragen den Status
@@ -80,9 +123,11 @@ Die hier zusammengefassten projektinternen Ergebnisse tragen den Status
 mit angegebenen Beweisen und Zertifikaten; die unabhängige externe Prüfung ist
 offen. Ein erfolgreicher Rechenlauf bestätigt seinen ausgewiesenen Prüfumfang.
 
-Aktuelle Arbeit außerhalb von `main` ist in den
+Veröffentlichte Arbeit außerhalb von `main` ist in den
 [offenen Pull Requests](https://github.com/Waschtl904/objekt-x-programm/pulls)
-sichtbar. Für ein Urteil über einen solchen Vorschlag sind dessen eigener
+sichtbar. Lokal berichtete Folgeblöcke stehen gesondert in der Forschungsbilanz;
+sie sind nicht allein durch einen Bericht oder einen Archivnamen veröffentlicht.
+Für ein Urteil über einen solchen Vorschlag sind dessen eigener
 Commit, Belegumfang und Integrationsstatus anzugeben.
 `PENDING_STATUS_REVIEW` im Register bezeichnet eine ausstehende fachliche
 Statuseinordnung und kann auch für bereits integrierte Pakete gelten.

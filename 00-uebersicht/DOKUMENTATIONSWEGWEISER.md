@@ -9,7 +9,16 @@ Das Repository enthält eine laufende mathematische Untersuchung und ihre
 Entstehungsgeschichte. Für den Einstieg genügt eine kurze Lesestrecke; die
 historischen Dateien werden erst für konkrete Herkunftsfragen benötigt.
 
-**Arbeitsbilanz vom 19. Oktober:** Die W9-Varianten und ihre genaue Stopplinie
+**Aktuelle Lesestrecke vom 25. Oktober:** Die
+[Forschungsbilanz](FORSCHUNGSBILANZ_2026-10-25.md) trennt die integrierten
+L1-/Zweiraum-/Stopbelege (#258–#260) von den lokal berichteten Modellblöcken
+C1–C3, Rang-eins-Antwortfamilie und gesamter F_o-Reichweite. Die letzten
+Modellentscheidungen sind keine gerichteten tatsächlichen Ausschlüsse.
+Originalarchive, eigene Gegenprüfung und lediglich übermittelte Ergebnisse
+haben jeweils ihren ausgewiesenen Belegstatus. Die nächsten Aufgaben stehen
+in [NEXT_GATES](NEXT_GATES.md); frühere datierte Aufträge sind historisch.
+
+**Historische Arbeitsbilanz vom 19. Oktober:** Die W9-Varianten und ihre genaue Stopplinie
 stehen gemeinsam in [NEXT_GATES](NEXT_GATES.md). Der
 [Integrationsnachweis zu #241](integrationsnachweise/PR241_2026-10-19.md)
 trennt übernommene große Rechnungen von neuen Integrationsprüfungen.
@@ -26,6 +35,7 @@ Arbeitspakete ist keine Prozentangabe für einen fertigen Beweis.
 | Erster Überblick | [README](../README.md) → [Gesamtüberblick](OBJEKT_X_GESAMTUEBERBLICK.md) |
 | Fachliche Begutachtung | [Reviewleitfaden](EXTERNE_BEGUTACHTUNG.md) → [Arbeitsdefinition](OBJEKT_X_AKTUELLE_ARBEITSDEFINITION.md) → [Architektur](OBJEKT_X_ARCHITECTURE.md) → Beweispakete |
 | Aktuellen Stand prüfen | [CURRENT_STATE](CURRENT_STATE.md) → [SURVIVOR_REGISTRY](SURVIVOR_REGISTRY.md) → [RESEARCH_STATE](RESEARCH_STATE.yaml) |
+| Jüngste Befunde und Prüfgrenzen vergleichen | [Forschungsbilanz vom 25. Oktober](FORSCHUNGSBILANZ_2026-10-25.md) → dort bezeichnete Originalbelege oder lokale Berichte |
 | Forschung fortsetzen | [NEXT_GATES](NEXT_GATES.md) → betroffene Quellen → [CONTRIBUTING](../CONTRIBUTING.md) |
 | Ein Ergebnis reproduzieren | Ergebnis im Register wählen → Paket-README → Beweis, Quellenbindungen und Reproduktionsanleitung |
 | Entwicklung nachvollziehen | [Archiveinstieg](ARCHIVE_INDEX.md) → datiertes Original und zugehörige Korrekturen |
