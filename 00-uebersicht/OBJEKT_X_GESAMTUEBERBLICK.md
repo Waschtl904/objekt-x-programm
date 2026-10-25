@@ -1,5 +1,22 @@
 # Objekt X – Gesamtüberblick
 
+**Aktuelle Orientierung vom 25. Oktober 2026:** L1 und der reelle Zweiraum
+sind unter H1–H4 integriert. Der anschließende
+[gerichtete Grad-11-Stopzeuge](../research/x-c1/w9-grad11-route-stop-even-2026-10-25/README.md)
+schließt den vollen Vergleich mit der festen äußeren Antwort und Q_new bedingt
+aus, ohne eine negative tatsächliche Weil-Richtung zu behaupten.
+Die lokalen Verstärkungen C1–C3, eine Rang-eins-Antwortfamilie und die spätere
+gesamte F_o-Reichweitenrechnung sind als **berichtete Modellentscheidungen**
+beendet. Das gemeldete negative Modellmaximum der F_o-Klasse ist kein
+gerichteter Ausschluss ihrer tatsächlichen Vergleichsenergie; diese bleibt
+UNRESOLVED. [Forschungsbilanz](FORSCHUNGSBILANZ_2026-10-25.md),
+[CURRENT_STATE](CURRENT_STATE.md) und [NEXT_GATES](NEXT_GATES.md) trennen
+Belege, Prüfumfang und offene Methodenentscheidung. Checkliste 3/10,
+Punkt 4, externe Begutachtung und Objekt X bleiben offen.
+
+Die folgenden datierten Fortschreibungen bleiben historische Darstellungen.
+Ihre damaligen Folgeaufträge werden durch die aktuelle Orientierung eingeordnet.
+
 **Fortschreibung vom 19. Oktober 2026:** Die Forschungskette #232–#239 ist
 über [PR #241](https://github.com/Waschtl904/objekt-x-programm/pull/241)
 mit den Main-Korrekturen aus #231 zusammengeführt und nach Main übernommen. Die gerichteten

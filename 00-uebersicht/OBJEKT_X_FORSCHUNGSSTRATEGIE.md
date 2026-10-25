@@ -20,6 +20,16 @@ Vergleich bleibt UNRESOLVED. Gemeldete lokale ZIP-Identitäten sind keine eigene
 GPT1-Byteprüfung und werden durch diese Übersicht nicht zu veröffentlichten
 Originalbelegen.
 
+Nach der Dokumentationsintegration #261 wurde die Reichweite **aller**
+F_o-Korrekturbilder am selben Stopzeugen einmal im gebundenen Mittelpunktmodell
+berechnet. GPT2 meldet MODEL_FO_MAX_NEGATIVE_STOP mit einem Maximum von rund
+−1.2171573864e-6 bei unverändertem Q_new und innerem Test. GPT1 prüfte die
+allgemeine Formel und die Reichweite analytisch, nicht den numerischen Lauf.
+Weitere Suche in dieser Modellklasse ist damit erledigt; die tatsächliche
+Klasse bleibt ohne gerichteten Fehlertransport UNRESOLVED. Andere Unterformen,
+Antworten außerhalb von F_o und die tatsächliche Weil-Form sind nicht
+ausgeschlossen. Details und Prüfgrenzen stehen im Nachtrag der Forschungsbilanz.
+
 Die nächste Methodenentscheidung ist offen. Ein neuer Rechenblock benötigt
 einen konkret begründeten Mechanismus, zulässige Eingaben, gemeinsame
 Budget-/Quellen- und Fehlerbuchung sowie einen begrenzten Vorabtest. Die
