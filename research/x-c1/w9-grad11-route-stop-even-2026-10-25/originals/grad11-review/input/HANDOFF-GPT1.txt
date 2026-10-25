@@ -1,0 +1,35 @@
+GPT 1 – gezielter Gegenprüfauftrag zur Grad-11-Voranalyse von GPT 2
+
+Referenz: main 137940b4e8ea391af408992ae17fb4eebbd6d7c7.
+Die alten L1-/Zweiraumresultate bleiben geschlossen und unverändert.
+
+Neuer Befund: Eine vor der gerichteten Auswertung eingefrorene rationale
+Grad-11-Richtung außerhalb des Zweiraums erfüllt unter übernommenen H1–H4
+F_lo-K_P,hi > 1.0476e-6. Damit scheitert der vollständige Vergleich mit der
+festen äußeren Antwort und Q_new bereits am variationalen Untertest.
+Die Richtung, die vollständigen Endpunkte und Fehlerpreise liegen bei.
+
+Bitte nur den neuen Befund gezielt prüfen:
+1. Eingabezulässigkeit einschließlich Feldherkunft, physische G_W-Metrik,
+   Momentlift und unveränderte Definition von T, K_new und äußerer Antwort.
+2. Anwendbarkeit der gemeinsamen ganzen Quellen-/Formfehler auf diesen
+   neuen physischen Koeffizientenvektor und T(s), einschließlich Homogenität.
+   Kein Übertragen eines einzelnen L1- oder R2-Restpreises wurde verwendet.
+3. F-Untergrenze und direktes K-P-Intervall sowie exakte Differenz.
+4. Variationale Aussage E_fix>=F und ihre begrenzte Folgerung für diese
+   Vergleichsroute, ohne eine negative tatsächliche Weil-Richtung zu behaupten.
+
+Kleinster numerischer Replay: eine F-Auswertung, eine K-P-Auswertung
+(55 Abschnitte, je 128 Knoten), rationale Endpunktrekombination.
+Gemessen: rund 25 s samt Eingangsaufbau, davon rund 6 s für K-P.
+Zehn Minuten pro Lauf als technische Stopplinie; die analytische Prüfung
+hat dadurch keine vorweggenommene Zeit- oder Ergebniszusage.
+
+Erfolg: bestätigtes F_lo>K_hi bei zulässigen Eingängen. Dann keine neuen
+Ganzrestintegrationen für die unveränderte Route beauftragen. Ein konkreter
+Bindungs-/Anwendungsfehler öffnet nur den betroffenen neuen Befund.
+Unentschiedene Endpunkte oder technische Abbrüche als UNRESOLVED melden.
+Keine neue Antwort-/Unterformsuche ohne gesonderten Forschungsauftrag.
+
+Dies ist eine lokal vorbereitete Übergabe. Keine Nachricht wurde an einen
+anderen Chat gesendet; keine Veröffentlichung oder Integration beauftragt.

@@ -1,0 +1,11 @@
+--- input/endpoint_audit.py
++++ replay/endpoint_audit.py
+@@ -22,7 +22,7 @@
+ need(Fdisplay[0]<=F[0] and F[1]<=Fdisplay[1],'F display')
+ src=json.loads((H/'DIAGNOSTIC-DIRECTION.json').read_bytes())
+ need(hashlib.sha256((H/'DIAGNOSTIC-DIRECTION.json').read_bytes()).hexdigest()==d['diagnostic_direction_sha256'],'Frozen direction binding')
+-archive=Path(r'C:\Users\sebas\Documents\Codex\2026-10-21\github-plugin-github-openai-curated-remote\work\guard-review-2026-10-24\fresh\originals\Objekt-X-Zweiraum-Ganzrest-und-Matrixvergleich-2026-10-24.zip')
++archive=H.parent/'inherited/Objekt-X-Zweiraum-Ganzrest-und-Matrixvergleich-2026-10-24.zip'
+ with zipfile.ZipFile(archive)as z:directions=json.loads(z.read('two-direction-2026-10-24/DIRECTIONS.json'))
+ v=list(map(Q,directions['v1_rational']));q=list(map(Q,src['raw_coefficients']))
+ remaining=[q[j]-q[1]*v[j]/v[1]for j in range(2,12)]

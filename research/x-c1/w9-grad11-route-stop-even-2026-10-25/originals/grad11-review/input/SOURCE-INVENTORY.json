@@ -1,0 +1,1267 @@
+{
+  "scope": "All 94 archived source-file bindings checked. Detailed numerical fields below; inherited JSON member/field inventories retained separately.",
+  "files_checked": [
+    {
+      "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/INPUT_BINDINGS.json",
+      "sha256": "ddab81c9e718ffa254d26cb80abb75f25818a77235345318629038bde88b3dc5",
+      "role": "binding manifest",
+      "alias": null
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/verify.py",
+      "sha256": "076f5d76557392bfc38d39f4abbbe275595391c19cad04619fb5b12ef7518e4e",
+      "role": "bound historical input or program",
+      "alias": "pilot_verify"
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/INPUT_BINDINGS.json",
+      "sha256": "9949f1daca65664f75e6f0c7f4fdccbe398a684c4133a1bc2b8090bbce08bd5a",
+      "role": "binding manifest",
+      "alias": null
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/RESULT.json",
+      "sha256": "939abcba0d8c7daa720d61424e9a88b152524a82731b79288535d6e99a109f35",
+      "role": "bound historical input or program",
+      "alias": "pilot_result"
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/SCHUR.json",
+      "sha256": "c2d6e82c15fc20f38dc22a9edd79b5bce9c1069a64d224abc323dd8e2361ad77",
+      "role": "bound historical input or program",
+      "alias": "pilot_schur"
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/MANIFEST.json",
+      "sha256": "b80b6ba7815a3d92f367470cad166fab002e37320db505120c8216d6a2480644",
+      "role": "bound historical input or program",
+      "alias": "pilot_manifest"
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/ACCEPTANCE.json",
+      "sha256": "0f56bc2fe707e7cbc22b9287af336de9a890449c7529fb27e8daa8aa84737cb8",
+      "role": "bound historical input or program",
+      "alias": "pilot_acceptance"
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/PROOF.md",
+      "sha256": "c19cc1f8707c84bdaed582c3e0183e2b4c2c0ce53b9d8990a6ba54449597c670",
+      "role": "bound historical input or program",
+      "alias": "pilot_proof"
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/audit.py",
+      "sha256": "a521feece7beeb30a422ed8090dd58488c8e994f7103d2815c15e8075a2c9cfc",
+      "role": "bound historical input or program",
+      "alias": "pilot_audit"
+    },
+    {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt",
+      "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7",
+      "role": "ANALYTIC_IDENTITY",
+      "alias": "inverse_proof"
+    },
+    {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/FULL_DUAL_GEOMETRY.txt",
+      "sha256": "3e12959df0cea48e904d9d4f183da82e65677b89a167e78bae8dd7a06ccbe6bd",
+      "role": "bound historical input or program",
+      "alias": "dual_geometry"
+    },
+    {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-basis84-pruefung-und-l-energie-2026-10-10/check_basis_and_build_L.py",
+      "sha256": "50d5474c2842628f194a5d4ae4a1e16713fe0b71738b838dfbf308ba0ae6def1",
+      "role": "bound historical input or program",
+      "alias": "basis_energy_builder"
+    },
+    {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-basis84-pruefung-und-l-energie-2026-10-10/PRUEFVERMERK.txt",
+      "sha256": "20e62136ae49fd75942ce12d00243230b41c32cfbb74e9ceffdb6138f561c422",
+      "role": "bound historical input or program",
+      "alias": "basis_energy_proof"
+    },
+    {
+      "path": "research/x-c1/w9-energy-inventory-2026-10-17/PROOF.md",
+      "sha256": "e625e96aad71bea9a5aa485b9c551525a8db14c78db866269e26c495fe382b0f",
+      "role": "Analytic formula and quadrature provenance",
+      "alias": "inventory_proof"
+    },
+    {
+      "path": "research/x-c1/w9-k-pilot-even-2026-10-18/PROOF.md",
+      "sha256": "9978c62a48b452bb2edcde98a8098b71688b5fafc1c8e2b5bb3cd12495ea67ea",
+      "role": "bound historical input or program",
+      "alias": "original_partial_error_proof"
+    },
+    {
+      "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/EXPECTED.json",
+      "sha256": "e3534a5ac44ff187c6230ffc6957ec25d973f2695be4c61f86ea0896b515e64d",
+      "role": "bound historical input or program",
+      "alias": "dual_result"
+    },
+    {
+      "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/PROOF.md",
+      "sha256": "46956a4f27717a7dd7b05f439b04647872002fe951da16626cd96f021ff45ea5",
+      "role": "bound historical input or program",
+      "alias": "dual_proof"
+    },
+    {
+      "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/audit.py",
+      "sha256": "4c1a60d142fd8e3bda83a4ecc5b5c963bac0ab94fd94402c0b18a5e3dec6a5cd",
+      "role": "bound historical input or program",
+      "alias": "dual_audit"
+    },
+    {
+      "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/L_UPPER.json",
+      "sha256": "358f210288c3e0013731dfc4363278f14323ebc020bcfec9a66125fb2118063a",
+      "role": "bound historical input or program",
+      "alias": "dual_matrix"
+    },
+    {
+      "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/ACCEPTANCE.json",
+      "sha256": "cf7c0da1239a2e34041b916e73a707a55de461c9c6ff6eafefded03f251fc9b9",
+      "role": "bound historical input or program",
+      "alias": "dual_acceptance"
+    },
+    {
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/engine.py",
+      "sha256": "af84c797f51a14cf36183c676f605f7fa2074149352cdc0058dd5572f74fa878",
+      "role": "bound historical input or program",
+      "alias": "variational_engine"
+    },
+    {
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/PROOF.md",
+      "sha256": "051cac056c09ce8ad4e17a315fcd1e90341ca942a9efc2870243e837c4cfd0ea",
+      "role": "bound historical input or program",
+      "alias": "variational_proof"
+    },
+    {
+      "path": "research/x-c1/w9-schur-form-error-even-2026-10-19/engine.py",
+      "sha256": "1914104e9a705676e0976fd2326656820e64988717a04948bc98032178adc922",
+      "role": "bound historical input or program",
+      "alias": "refinement_engine"
+    },
+    {
+      "path": "research/x-c1/w9-schur-form-error-even-2026-10-19/PROOF.md",
+      "sha256": "23583bc127ff376e1508aa195c9438628a2f41256f3247bc4b98dda5c314a1c9",
+      "role": "bound historical input or program",
+      "alias": "refinement_proof"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/common.py",
+      "sha256": "037580c8edec75e42aa599e21ff2a073f1308f6ec5746c77f81695ed0169a8eb",
+      "role": "bound historical input or program",
+      "alias": "common"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json",
+      "sha256": "829b4884c64d23d90efc6382abe20f449d6229af8ccf8db4b85d12e5b7e03e28",
+      "role": "binding manifest",
+      "alias": null
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/COMPARISON_even.json",
+      "sha256": "a4429379e5059d454b01063929371307a787f122fa4e800c48e8f2dbb8b6e7ba",
+      "role": "bound historical input or program",
+      "alias": "comparison_even"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/CANDIDATE_even.json",
+      "sha256": "49653e4edd76760a054681cbf73e1695622b823d693ce2cbae81fca90edc2427",
+      "role": "bound historical input or program",
+      "alias": "candidate_even"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/K_P_even.json",
+      "sha256": "35dd61579fc2db9269947928e438fbf966972378c24511609e1fa40c3ac9de58",
+      "role": "bound historical input or program",
+      "alias": "kp_even"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/PAIRS_even.json.gz",
+      "sha256": "044d52d8a00f45f36f0591b9d3b51b8468fc94513c24b4fc2b04b797a6969bb8",
+      "role": "bound historical input or program",
+      "alias": "pairs_even"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/PROOF.md",
+      "sha256": "2bb4145cc8681219d416bd885e3a31f015c119baf54d85c8f60a836f77e0e5c9",
+      "role": "bound historical input or program",
+      "alias": "previous_proof"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/MANIFEST.json",
+      "sha256": "ceeb82f47e0b5d3add5c33a752d3377ce5a154184ea2e95e31eaca00439deee8",
+      "role": "bound historical input or program",
+      "alias": "previous_manifest"
+    },
+    {
+      "path": "research/x-c1/w9-majorant-preflight-2026-10-18/PROOF.md",
+      "sha256": "fa3029fa948ef7a480374f39dbfe5eb4ae175908305419c8b6274b7604ac3b09",
+      "role": "bound historical input or program",
+      "alias": "majorant_proof"
+    },
+    {
+      "path": "research/x-c1/w9-majorant-preflight-2026-10-18/EXPECTED.json",
+      "sha256": "c82568566b55baaea3bcb98a888d5708edabe72832f2c2b2aafc2e673aa96f13",
+      "role": "bound historical input or program",
+      "alias": "majorant_expected"
+    },
+    {
+      "path": "research/x-c1/w9-majorant-preflight-2026-10-18/MANIFEST.json",
+      "sha256": "98845ad9ec3dcc729237ef0d86f1a9a6eb4efbecffe06f303a4b37577cabb58b",
+      "role": "bound historical input or program",
+      "alias": "majorant_manifest"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/WEIGHT_BOUNDS.json",
+      "sha256": "09d0b0c89f3a072a3477f2801acf30b382f18355d882b650b8982f941d4d89ed",
+      "role": "bound historical input or program",
+      "alias": "weights"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/assemble.py",
+      "sha256": "aa6ad9a328ee62bb3e0aaeea36e5b50ee0f6e28ecee323e6a7093cd55cc570dc",
+      "role": "directly used historical program or reference",
+      "alias": null
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/weights.py",
+      "sha256": "6f5e3e2eacda2345dc5d764fa221cbbd36b12eafb32d6cd10dcf0af0edf0bdcd",
+      "role": "directly used historical program or reference",
+      "alias": null
+    },
+    {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/COMMON96_HERLEITUNG.txt",
+      "sha256": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd",
+      "role": "bound historical input or program",
+      "alias": "common96_derivation"
+    },
+    {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-neue-antworten84-und-residualbudget-2026-10-11/PROOF.txt",
+      "sha256": "122fabae61dad7d6d6916d899ea8ae8c44a1ead451ac68919e6ce9304f002e61",
+      "role": "bound historical input or program",
+      "alias": "response_derivation"
+    },
+    {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-neue-antworten84-und-residualbudget-2026-10-11/compute.py",
+      "sha256": "42db7606eb8cd0613d279e298728d258eae7799743f9ab6ce06a96055b50e543",
+      "role": "bound historical input or program",
+      "alias": "response_compute"
+    },
+    {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-neue-antworten84-und-residualbudget-2026-10-11/SUMMARY.json",
+      "sha256": "9681be9ce73837ebdc0db85a6fc3277749cd4d307f18b85d720f2134f0b6b6cc",
+      "role": "bound historical input or program",
+      "alias": "response_summary"
+    },
+    {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-direkte-restform-und-positiver-96er-block-2026-10-11/refine_old_majorant.py",
+      "sha256": "9afeec7892426041858a524de3f9e3e9d2b46578876de0e9f1540edfd6012730",
+      "role": "Analytic formula and quadrature provenance",
+      "alias": "common96_builder"
+    },
+    {
+      "path": "research/x-c1/w9-structural-decision-2026-10-18/verify.py",
+      "sha256": "5c9e57774fad011172d549cf1ab8efa0d4efa7290ad90219b05f8cc155530fb9",
+      "role": "bound historical input or program",
+      "alias": "decision_verifier"
+    },
+    {
+      "path": "research/x-c1/w9-structural-decision-2026-10-18/INPUT_BINDINGS.json",
+      "sha256": "229a11acaefd6e6a26b464ee6476dd851eeba512a1e9d7972764a266a5049db9",
+      "role": "bound historical input or program",
+      "alias": "decision_inputs"
+    },
+    {
+      "path": "research/x-c1/w9-structural-decision-2026-10-18/EXPECTED.json",
+      "sha256": "36386126d3a41712abb9415fda96814b9982b71f6d191696b971f0b5a79c908d",
+      "role": "bound historical input or program",
+      "alias": "decision_expected"
+    },
+    {
+      "path": "research/x-c1/w9-structural-decision-2026-10-18/PROOF.md",
+      "sha256": "fe338a425cb864fa06352c7c4505ee685d053f51c50e8e5b3daae116bd700e2c",
+      "role": "bound historical input or program",
+      "alias": "decision_proof"
+    },
+    {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/audit.py",
+      "sha256": "fb63ed8c9dd33c522f949a6931686860d96bbd8d596facc1a6743b21418348eb",
+      "role": "bound historical input or program",
+      "alias": "rational_auditor"
+    },
+    {
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/reports/ACCEPTANCE.json",
+      "sha256": "28ab9e30cf851ce47c12df5e379272a707c9a323d6b1d225d4f2c3b9e0a3594e",
+      "role": "bound historical input or program",
+      "alias": "closure_acceptance"
+    },
+    {
+      "path": "research/x-c1/w9-k-pilot-even-2026-10-18/pilot_weights.py",
+      "sha256": "55284299886166a091c69884cb770075f7329e74f06a886f8b7076af553b9bd8",
+      "role": "bound historical input or program",
+      "alias": "pilot_weights"
+    },
+    {
+      "path": "research/x-c1/w9-k-pilot-even-2026-10-18/pilot_energy.py",
+      "sha256": "2e805205567810bf43e658229c7d570b0d0ab0e305c460624d693f7dd4415108",
+      "role": "bound historical input or program",
+      "alias": "pilot_energy"
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/EXPECTED.json",
+      "sha256": "0f6ea5f268fd46fdc4764c9a6c8d1eb9e38ec5b1690ae4154cd0528beceddee8",
+      "role": "bound historical input or program",
+      "alias": "selection_expected"
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/audit.py",
+      "sha256": "5b7d1ea129dc35c14b8cca808ca84d950bed50900b13f8636af15b2cd21797bf",
+      "role": "bound historical input or program",
+      "alias": "selection_audit"
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/verify.py",
+      "sha256": "8ed4f70b4a8e311586f5ca9dc008d1481fda5f4c3aff3ec08cbf366be59f120c",
+      "role": "bound historical input or program",
+      "alias": "selection_verifier"
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/PROOF.md",
+      "sha256": "c26cebb43ceb900a1f872a7a4bc938b606462c2167e5cc43e53c6324fd4df338",
+      "role": "bound historical input or program",
+      "alias": "selection_proof"
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/INPUT_BINDINGS.json",
+      "sha256": "4ae46af4940af4137083f210ff65dc336a86dddc64b4e1d2ef2d9ed610a1804a",
+      "role": "bound historical input or program",
+      "alias": "selection_inputs"
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/MANIFEST.json",
+      "sha256": "9c8400e0976deca63055b3bf052f5c1436cff2a996d6fd804f9c2459304fc4e6",
+      "role": "bound historical input or program",
+      "alias": "selection_manifest"
+    },
+    {
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/ACCEPTANCE.json",
+      "sha256": "de4042c4df9e65ab96fe47fc7eec6d47b681931c12b9a7be7fec9893c0157813",
+      "role": "bound historical input or program",
+      "alias": "selection_acceptance"
+    },
+    {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip",
+      "sha256": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52",
+      "role": "OLD_A9_CERTIFICATE",
+      "alias": "stage3_archive"
+    },
+    {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/archives/Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13.zip",
+      "sha256": "a1fa41958d79ab16a7c42b12375c3373f5a86a99993ae2d23c984ff6b3b2e8ae",
+      "role": "OLD_A9_CERTIFICATE",
+      "alias": "renewal_archive"
+    },
+    {
+      "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip",
+      "sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee",
+      "role": "DIRECTED_CERTIFICATE",
+      "alias": "response_archive"
+    },
+    {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-und-kohaerenter-transport/expected/COHERENT_TRANSPORT_INPUTS.json",
+      "sha256": "c0c882ba85bf3ee56a433b5c5bf5d5c5c0341f2a9e03e213e6e19c460aba5666",
+      "role": "OLD_A9_CERTIFICATE",
+      "alias": "coherent"
+    },
+    {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/expected/COMPLETE_HIGH_RESPONSE.json",
+      "sha256": "52027262debebfdb5258a7fb74ff5280d98d81b34a347d99a91a83470362a606",
+      "role": "DIRECTED_CERTIFICATE",
+      "alias": "high_response"
+    },
+    {
+      "path": "research/x-c1/a9-domain-continuation-2026-10-13/original/CHECK.json",
+      "sha256": "ebdf8da2840d2ab77fa01fcdc78c3aabeff23ad8fc59937b1d54da88006dc9b6",
+      "role": "OLD_A9_CERTIFICATE",
+      "alias": "domain_check"
+    },
+    {
+      "path": "research/x-c1/a9-domain-continuation-2026-10-13/original/HERLEITUNG.txt",
+      "sha256": "e6075606f6a26c354f1eb756b568f91cbb7a0b035022b44ef60a0120ae4ea819",
+      "role": "ANALYTIC_IDENTITY",
+      "alias": "domain_proof"
+    },
+    {
+      "path": "research/x-c1/a9-inverse-spike-calibration-2026-10-15/original/nstar/FUNKTIONSANSCHLUSS.txt",
+      "sha256": "39664818da04df1e7c8253e09d078a16ccf2729b964747fa067807a8f3bb18bb",
+      "role": "ANALYTIC_IDENTITY",
+      "alias": "nstar_proof"
+    },
+    {
+      "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/PROOF.md",
+      "sha256": "8219d5e4f544cc42a4808d6d033c56c608939652b4d851cae881a00842ed84e3",
+      "role": "ANALYTIC_IDENTITY",
+      "alias": "response_proof"
+    },
+    {
+      "path": "research/x-c1/a9-a11-certificate-calibration-2026-10-15/WORK_ORDER.md",
+      "sha256": "ead51395f495ea5cae0ff08a6726eb2a420668f584e2914f8763cf53b5f4a7e8",
+      "role": "ANALYTIC_IDENTITY",
+      "alias": "work_order"
+    },
+    {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/build_data.py",
+      "sha256": "fd63e0694c85448ec61e8deeae42d43e0dee491ec6fb1d6207bacf3430e16135",
+      "role": "Analytic formula and quadrature provenance",
+      "alias": "previous_maps_code"
+    },
+    {
+      "path": "research/x-c1/shell-search-reassessment-2026-10-17/PROOF.md",
+      "sha256": "db37cda98c73881106e6d860b8526460ed9f0b2c3aa19543382beac0034f70e4",
+      "role": "ANALYTIC_IDENTITY",
+      "alias": "reassessment_proof"
+    },
+    {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/certify.py",
+      "sha256": "a0a0ecb3b9b8b275b6eb46e0d8d6bad27d9eea5a91fd1b66bf75b074aef2ee89",
+      "role": "INHERITED_HYPOTHESIS",
+      "alias": "high_derivation"
+    },
+    {
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/AUDIT.json",
+      "sha256": "33456af98d0ba6151639c66729d12ef3f12bc695f14a9e0985c2115ba0e61783",
+      "role": "INHERITED_HYPOTHESIS",
+      "alias": "renewal_audit"
+    },
+    {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_even_384.json",
+      "sha256": "5617f0aa24b67584196e066e43c6f4004eff33fb851b6a0eed36fd771cc39c88",
+      "role": "NEW_RAW_DATA",
+      "alias": "maps_even_384"
+    },
+    {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_even_512.json",
+      "sha256": "19de781646891b4fc57d5f09b9d2d4fb46fb86957151ba253fc747ec5e57085e",
+      "role": "NEW_RAW_DATA",
+      "alias": "maps_even_512"
+    },
+    {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_odd_384.json",
+      "sha256": "1f8b22919c542cda123b24c4eb295c7e1e74887a8461debe45fea69835211dc0",
+      "role": "NEW_RAW_DATA",
+      "alias": "maps_odd_384"
+    },
+    {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_odd_512.json",
+      "sha256": "5b2aa30f093eeb7cca18099363fb36fedc9036e7fa320bf8ea6a29f952aeee21",
+      "role": "NEW_RAW_DATA",
+      "alias": "maps_odd_512"
+    },
+    {
+      "path": "research/x-c1/a9-inverse-spike-calibration-2026-10-15/archives/Objekt-X-Nstar-Jp-Funktionsanschluss-und-Koeffizienten-2026-10-16.zip",
+      "sha256": "b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b",
+      "role": "Previously bound complete old function archive",
+      "alias": "nstar_archive"
+    },
+    {
+      "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/PROOF.md",
+      "sha256": "0ef062d456202482dcdbf3301b7bc945d96fdea10ad61de1466565ec415dcc5f",
+      "role": "Analytic formula and quadrature provenance",
+      "alias": "sharp_kp_proof"
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/provenance/l00-certify-6927e409.py.txt",
+      "sha256": "6927e4090e4575bbdaa06248bd3216cfe0b62f906eb834c68907f0bc1af8585b",
+      "role": "Analytic formula and quadrature provenance",
+      "alias": "previous_interval_code"
+    },
+    {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/expected/BUDGET_BOUNDS.json",
+      "sha256": "6229acf4bee398d2262c08a086fb36dd8945135ee860bb591e8218551c291613",
+      "role": "Analytic formula and quadrature provenance",
+      "alias": "kp_budget"
+    },
+    {
+      "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/expected/SHARP_K_even.json",
+      "sha256": "67332794271c32d2ac4b8a334d517cf6f9055ce215141df5a96f3bd8ff06f1fe",
+      "role": "Analytic formula and quadrature provenance",
+      "alias": "kp_even"
+    },
+    {
+      "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/expected/SHARP_K_odd.json",
+      "sha256": "2f699be798952ded396336b07c3c7f2e61398f8d1baec6a504716a04b24a0f01",
+      "role": "Analytic formula and quadrature provenance",
+      "alias": "kp_odd"
+    },
+    {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/FROZEN_even.json",
+      "sha256": "9feba325ee62bd5bb37477c10f3943b1dd7cea902324f6001a64c6000a6ee90d",
+      "role": "Analytic formula and quadrature provenance",
+      "alias": "old_candidate_even"
+    },
+    {
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/FROZEN_odd.json",
+      "sha256": "b8833f55b9ddf527132d7afe167a4603c344a1329127077c28982f3f947ed8d9",
+      "role": "Analytic formula and quadrature provenance",
+      "alias": "old_candidate_odd"
+    },
+    {
+      "path": "research/x-c1/shell-search-reassessment-2026-10-17/data/K_MAP_even_128.json",
+      "sha256": "40b687ff0d3ddf302c9c874c126f255c1899ab3732683404ee74734ddbab939d",
+      "role": "Analytic formula and quadrature provenance",
+      "alias": "kp_model_even"
+    },
+    {
+      "path": "research/x-c1/shell-search-reassessment-2026-10-17/data/K_MAP_odd_128.json",
+      "sha256": "a2f746b0fc3bde82aa9a5ef2a7c72b12fb60c3a14986a7c346272e9ea28c72d7",
+      "role": "Analytic formula and quadrature provenance",
+      "alias": "kp_model_odd"
+    },
+    {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt1-stufe1-zertifikat/expected/PSI_CORRECTED.json",
+      "sha256": "3e1bc5db6114333434891a52bef8f3bf6822779b52d14585d249d67943d8c7a1",
+      "role": "Analytic formula and quadrature provenance",
+      "alias": "psi"
+    },
+    {
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe3-endliche-u8-antwort/expected/FINITE_ACTION.json",
+      "sha256": "689636e2b11efcc828100f93b512d4375c8bfebfe8c4a37e3c7c1320f31ed551",
+      "role": "Analytic formula and quadrature provenance",
+      "alias": "finite_action"
+    },
+    {
+      "path": "research/x-c1/l00-z0-directed-interval-2026-10-17/expected/L00_CERTIFICATE_even.json",
+      "sha256": "52399adf3016e6691151adaa24a1adfa943e2c543d95e222b85898f82de5d9c8",
+      "role": "Analytic formula and quadrature provenance",
+      "alias": "l00_even"
+    },
+    {
+      "path": "research/x-c1/l00-z0-directed-interval-2026-10-17/expected/L00_CERTIFICATE_odd.json",
+      "sha256": "71c26e4d5b5dc1b662eae79ff244dd3099b51b0370154506b86902224431dff8",
+      "role": "Analytic formula and quadrature provenance",
+      "alias": "l00_odd"
+    },
+    {
+      "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/engine.py",
+      "sha256": "d0b14347eed42b9c5acb065ef530de1129886a1cb72b0db142e7f32335a56a74",
+      "role": "directly used historical program or reference",
+      "alias": null
+    },
+    {
+      "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/CANDIDATE.json",
+      "sha256": "70e8f72ab0cb8ca1ac0d254392384a2040a9d76d04ebf82587c48771e9f34628",
+      "role": "directly used historical program or reference",
+      "alias": null
+    },
+    {
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/certify_k.py",
+      "sha256": "74e3c6b5642bc03f9f60464a8bcecf3db516137990da19550b496710170372cb",
+      "role": "directly used historical program or reference",
+      "alias": null
+    },
+    {
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/RESULT.json",
+      "sha256": "487389cdeeedafe6268c7596b2cf6ebdcf656e120030960ded26d15cb15f45dd",
+      "role": "directly used historical program or reference",
+      "alias": null
+    }
+  ],
+  "transitive_binding_specs": {
+    "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/INPUT_BINDINGS.json": {
+      "source_commit": "bf9375b26ecb2ad3060c91824501f460c060fc43",
+      "files": {
+        "pilot_verify": {
+          "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/verify.py",
+          "sha256": "076f5d76557392bfc38d39f4abbbe275595391c19cad04619fb5b12ef7518e4e"
+        },
+        "pilot_inputs": {
+          "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/INPUT_BINDINGS.json",
+          "sha256": "9949f1daca65664f75e6f0c7f4fdccbe398a684c4133a1bc2b8090bbce08bd5a"
+        },
+        "pilot_result": {
+          "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/RESULT.json",
+          "sha256": "939abcba0d8c7daa720d61424e9a88b152524a82731b79288535d6e99a109f35"
+        },
+        "pilot_schur": {
+          "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/SCHUR.json",
+          "sha256": "c2d6e82c15fc20f38dc22a9edd79b5bce9c1069a64d224abc323dd8e2361ad77"
+        },
+        "pilot_manifest": {
+          "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/MANIFEST.json",
+          "sha256": "b80b6ba7815a3d92f367470cad166fab002e37320db505120c8216d6a2480644"
+        },
+        "pilot_acceptance": {
+          "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/ACCEPTANCE.json",
+          "sha256": "0f56bc2fe707e7cbc22b9287af336de9a890449c7529fb27e8daa8aa84737cb8"
+        },
+        "pilot_proof": {
+          "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/PROOF.md",
+          "sha256": "c19cc1f8707c84bdaed582c3e0183e2b4c2c0ce53b9d8990a6ba54449597c670"
+        },
+        "pilot_audit": {
+          "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/audit.py",
+          "sha256": "a521feece7beeb30a422ed8090dd58488c8e994f7103d2815c15e8075a2c9cfc"
+        },
+        "inverse_geometry": {
+          "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt",
+          "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7"
+        },
+        "dual_geometry": {
+          "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/FULL_DUAL_GEOMETRY.txt",
+          "sha256": "3e12959df0cea48e904d9d4f183da82e65677b89a167e78bae8dd7a06ccbe6bd"
+        },
+        "basis_energy_builder": {
+          "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-basis84-pruefung-und-l-energie-2026-10-10/check_basis_and_build_L.py",
+          "sha256": "50d5474c2842628f194a5d4ae4a1e16713fe0b71738b838dfbf308ba0ae6def1"
+        },
+        "basis_energy_proof": {
+          "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-basis84-pruefung-und-l-energie-2026-10-10/PRUEFVERMERK.txt",
+          "sha256": "20e62136ae49fd75942ce12d00243230b41c32cfbb74e9ceffdb6138f561c422"
+        },
+        "inventory_proof": {
+          "path": "research/x-c1/w9-energy-inventory-2026-10-17/PROOF.md",
+          "sha256": "e625e96aad71bea9a5aa485b9c551525a8db14c78db866269e26c495fe382b0f"
+        },
+        "original_partial_error_proof": {
+          "path": "research/x-c1/w9-k-pilot-even-2026-10-18/PROOF.md",
+          "sha256": "9978c62a48b452bb2edcde98a8098b71688b5fafc1c8e2b5bb3cd12495ea67ea"
+        },
+        "dual_result": {
+          "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/EXPECTED.json",
+          "sha256": "e3534a5ac44ff187c6230ffc6957ec25d973f2695be4c61f86ea0896b515e64d"
+        },
+        "dual_proof": {
+          "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/PROOF.md",
+          "sha256": "46956a4f27717a7dd7b05f439b04647872002fe951da16626cd96f021ff45ea5"
+        },
+        "dual_audit": {
+          "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/audit.py",
+          "sha256": "4c1a60d142fd8e3bda83a4ecc5b5c963bac0ab94fd94402c0b18a5e3dec6a5cd"
+        },
+        "dual_matrix": {
+          "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/L_UPPER.json",
+          "sha256": "358f210288c3e0013731dfc4363278f14323ebc020bcfec9a66125fb2118063a"
+        },
+        "dual_acceptance": {
+          "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/ACCEPTANCE.json",
+          "sha256": "cf7c0da1239a2e34041b916e73a707a55de461c9c6ff6eafefded03f251fc9b9"
+        },
+        "variational_engine": {
+          "path": "research/x-c1/w9-schur-variational-even-2026-10-19/engine.py",
+          "sha256": "af84c797f51a14cf36183c676f605f7fa2074149352cdc0058dd5572f74fa878"
+        },
+        "variational_proof": {
+          "path": "research/x-c1/w9-schur-variational-even-2026-10-19/PROOF.md",
+          "sha256": "051cac056c09ce8ad4e17a315fcd1e90341ca942a9efc2870243e837c4cfd0ea"
+        },
+        "refinement_engine": {
+          "path": "research/x-c1/w9-schur-form-error-even-2026-10-19/engine.py",
+          "sha256": "1914104e9a705676e0976fd2326656820e64988717a04948bc98032178adc922"
+        },
+        "refinement_proof": {
+          "path": "research/x-c1/w9-schur-form-error-even-2026-10-19/PROOF.md",
+          "sha256": "23583bc127ff376e1508aa195c9438628a2f41256f3247bc4b98dda5c314a1c9"
+        }
+      }
+    },
+    "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/INPUT_BINDINGS.json": {
+      "source_commit": "a60f7602335f654ca7b42e8362e47af243e20462",
+      "files": {
+        "common": {
+          "path": "research/x-c1/w9-partial-energy-2026-10-18/common.py",
+          "sha256": "037580c8edec75e42aa599e21ff2a073f1308f6ec5746c77f81695ed0169a8eb"
+        },
+        "inherited_inputs": {
+          "path": "research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json",
+          "sha256": "829b4884c64d23d90efc6382abe20f449d6229af8ccf8db4b85d12e5b7e03e28"
+        },
+        "comparison_even": {
+          "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/COMPARISON_even.json",
+          "sha256": "a4429379e5059d454b01063929371307a787f122fa4e800c48e8f2dbb8b6e7ba"
+        },
+        "candidate_even": {
+          "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/CANDIDATE_even.json",
+          "sha256": "49653e4edd76760a054681cbf73e1695622b823d693ce2cbae81fca90edc2427"
+        },
+        "kp_even": {
+          "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/K_P_even.json",
+          "sha256": "35dd61579fc2db9269947928e438fbf966972378c24511609e1fa40c3ac9de58"
+        },
+        "pairs_even": {
+          "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/PAIRS_even.json.gz",
+          "sha256": "044d52d8a00f45f36f0591b9d3b51b8468fc94513c24b4fc2b04b797a6969bb8"
+        },
+        "inverse_derivation": {
+          "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt",
+          "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7"
+        },
+        "previous_proof": {
+          "path": "research/x-c1/w9-partial-energy-2026-10-18/PROOF.md",
+          "sha256": "2bb4145cc8681219d416bd885e3a31f015c119baf54d85c8f60a836f77e0e5c9"
+        },
+        "previous_manifest": {
+          "path": "research/x-c1/w9-partial-energy-2026-10-18/MANIFEST.json",
+          "sha256": "ceeb82f47e0b5d3add5c33a752d3377ce5a154184ea2e95e31eaca00439deee8"
+        },
+        "majorant_proof": {
+          "path": "research/x-c1/w9-majorant-preflight-2026-10-18/PROOF.md",
+          "sha256": "fa3029fa948ef7a480374f39dbfe5eb4ae175908305419c8b6274b7604ac3b09"
+        },
+        "majorant_expected": {
+          "path": "research/x-c1/w9-majorant-preflight-2026-10-18/EXPECTED.json",
+          "sha256": "c82568566b55baaea3bcb98a888d5708edabe72832f2c2b2aafc2e673aa96f13"
+        },
+        "majorant_manifest": {
+          "path": "research/x-c1/w9-majorant-preflight-2026-10-18/MANIFEST.json",
+          "sha256": "98845ad9ec3dcc729237ef0d86f1a9a6eb4efbecffe06f303a4b37577cabb58b"
+        },
+        "weights": {
+          "path": "research/x-c1/w9-partial-energy-2026-10-18/WEIGHT_BOUNDS.json",
+          "sha256": "09d0b0c89f3a072a3477f2801acf30b382f18355d882b650b8982f941d4d89ed"
+        },
+        "energy_assembler": {
+          "path": "research/x-c1/w9-partial-energy-2026-10-18/assemble.py",
+          "sha256": "aa6ad9a328ee62bb3e0aaeea36e5b50ee0f6e28ecee323e6a7093cd55cc570dc"
+        },
+        "weight_builder": {
+          "path": "research/x-c1/w9-partial-energy-2026-10-18/weights.py",
+          "sha256": "6f5e3e2eacda2345dc5d764fa221cbbd36b12eafb32d6cd10dcf0af0edf0bdcd"
+        },
+        "common96_derivation": {
+          "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/COMMON96_HERLEITUNG.txt",
+          "sha256": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd"
+        },
+        "response_derivation": {
+          "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-neue-antworten84-und-residualbudget-2026-10-11/PROOF.txt",
+          "sha256": "122fabae61dad7d6d6916d899ea8ae8c44a1ead451ac68919e6ce9304f002e61"
+        },
+        "response_compute": {
+          "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-neue-antworten84-und-residualbudget-2026-10-11/compute.py",
+          "sha256": "42db7606eb8cd0613d279e298728d258eae7799743f9ab6ce06a96055b50e543"
+        },
+        "response_summary": {
+          "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-neue-antworten84-und-residualbudget-2026-10-11/SUMMARY.json",
+          "sha256": "9681be9ce73837ebdc0db85a6fc3277749cd4d307f18b85d720f2134f0b6b6cc"
+        },
+        "common96_generator": {
+          "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-direkte-restform-und-positiver-96er-block-2026-10-11/refine_old_majorant.py",
+          "sha256": "9afeec7892426041858a524de3f9e3e9d2b46578876de0e9f1540edfd6012730"
+        },
+        "decision_verifier": {
+          "path": "research/x-c1/w9-structural-decision-2026-10-18/verify.py",
+          "sha256": "5c9e57774fad011172d549cf1ab8efa0d4efa7290ad90219b05f8cc155530fb9"
+        },
+        "decision_inputs": {
+          "path": "research/x-c1/w9-structural-decision-2026-10-18/INPUT_BINDINGS.json",
+          "sha256": "229a11acaefd6e6a26b464ee6476dd851eeba512a1e9d7972764a266a5049db9"
+        },
+        "decision_expected": {
+          "path": "research/x-c1/w9-structural-decision-2026-10-18/EXPECTED.json",
+          "sha256": "36386126d3a41712abb9415fda96814b9982b71f6d191696b971f0b5a79c908d"
+        },
+        "decision_proof": {
+          "path": "research/x-c1/w9-structural-decision-2026-10-18/PROOF.md",
+          "sha256": "fe338a425cb864fa06352c7c4505ee685d053f51c50e8e5b3daae116bd700e2c"
+        },
+        "rational_auditor": {
+          "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/audit.py",
+          "sha256": "fb63ed8c9dd33c522f949a6931686860d96bbd8d596facc1a6743b21418348eb"
+        },
+        "closure_acceptance": {
+          "path": "research/x-c1/a8-a9-global-closure-2026-10-13/reports/ACCEPTANCE.json",
+          "sha256": "28ab9e30cf851ce47c12df5e379272a707c9a323d6b1d225d4f2c3b9e0a3594e"
+        },
+        "pilot_weights": {
+          "path": "research/x-c1/w9-k-pilot-even-2026-10-18/pilot_weights.py",
+          "sha256": "55284299886166a091c69884cb770075f7329e74f06a886f8b7076af553b9bd8"
+        },
+        "pilot_energy": {
+          "path": "research/x-c1/w9-k-pilot-even-2026-10-18/pilot_energy.py",
+          "sha256": "2e805205567810bf43e658229c7d570b0d0ab0e305c460624d693f7dd4415108"
+        },
+        "selection_expected": {
+          "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/EXPECTED.json",
+          "sha256": "0f6ea5f268fd46fdc4764c9a6c8d1eb9e38ec5b1690ae4154cd0528beceddee8"
+        },
+        "selection_audit": {
+          "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/audit.py",
+          "sha256": "5b7d1ea129dc35c14b8cca808ca84d950bed50900b13f8636af15b2cd21797bf"
+        },
+        "selection_verifier": {
+          "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/verify.py",
+          "sha256": "8ed4f70b4a8e311586f5ca9dc008d1481fda5f4c3aff3ec08cbf366be59f120c"
+        },
+        "selection_proof": {
+          "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/PROOF.md",
+          "sha256": "c26cebb43ceb900a1f872a7a4bc938b606462c2167e5cc43e53c6324fd4df338"
+        },
+        "selection_inputs": {
+          "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/INPUT_BINDINGS.json",
+          "sha256": "4ae46af4940af4137083f210ff65dc336a86dddc64b4e1d2ef2d9ed610a1804a"
+        },
+        "selection_manifest": {
+          "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/MANIFEST.json",
+          "sha256": "9c8400e0976deca63055b3bf052f5c1436cff2a996d6fd804f9c2459304fc4e6"
+        },
+        "selection_acceptance": {
+          "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/ACCEPTANCE.json",
+          "sha256": "de4042c4df9e65ab96fe47fc7eec6d47b681931c12b9a7be7fec9893c0157813"
+        }
+      }
+    },
+    "research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json": {
+      "source_commit": "0144b2feeb732c506f9ac19c059b2b849104dc0e",
+      "files": {
+        "stage3_archive": {
+          "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip",
+          "sha256": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52",
+          "role": "OLD_A9_CERTIFICATE",
+          "previous_inventory_used_fields": [
+            "selected members below"
+          ]
+        },
+        "renewal_archive": {
+          "path": "research/x-c1/a9-inverse-renewal-2026-10-13/archives/Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13.zip",
+          "sha256": "a1fa41958d79ab16a7c42b12375c3373f5a86a99993ae2d23c984ff6b3b2e8ae",
+          "role": "OLD_A9_CERTIFICATE",
+          "previous_inventory_used_fields": [
+            "selected members below"
+          ]
+        },
+        "response_archive": {
+          "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip",
+          "sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee",
+          "role": "DIRECTED_CERTIFICATE",
+          "previous_inventory_used_fields": [
+            "selected members below"
+          ]
+        },
+        "coherent": {
+          "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-und-kohaerenter-transport/expected/COHERENT_TRANSPORT_INPUTS.json",
+          "sha256": "c0c882ba85bf3ee56a433b5c5bf5d5c5c0341f2a9e03e213e6e19c460aba5666",
+          "role": "OLD_A9_CERTIFICATE",
+          "previous_inventory_used_fields": [
+            "parities.*.K_rational",
+            "parities.*.K_inverse_rational"
+          ]
+        },
+        "high_response": {
+          "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/expected/COMPLETE_HIGH_RESPONSE.json",
+          "sha256": "52027262debebfdb5258a7fb74ff5280d98d81b34a347d99a91a83470362a606",
+          "role": "DIRECTED_CERTIFICATE",
+          "previous_inventory_used_fields": [
+            "*.tr_X_HB_exact_rational",
+            "*.full_M_norm_squared"
+          ]
+        },
+        "domain_check": {
+          "path": "research/x-c1/a9-domain-continuation-2026-10-13/original/CHECK.json",
+          "sha256": "ebdf8da2840d2ab77fa01fcdc78c3aabeff23ad8fc59937b1d54da88006dc9b6",
+          "role": "OLD_A9_CERTIFICATE",
+          "previous_inventory_used_fields": [
+            "cases.*.K_minus_1e_minus_16_I_positive_pivots"
+          ]
+        },
+        "domain_proof": {
+          "path": "research/x-c1/a9-domain-continuation-2026-10-13/original/HERLEITUNG.txt",
+          "sha256": "e6075606f6a26c354f1eb756b568f91cbb7a0b035022b44ef60a0120ae4ea819",
+          "role": "ANALYTIC_IDENTITY",
+          "previous_inventory_used_fields": [
+            "inventory/proof anchor; no numerical execution"
+          ]
+        },
+        "inverse_proof": {
+          "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt",
+          "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7",
+          "role": "ANALYTIC_IDENTITY",
+          "previous_inventory_used_fields": [
+            "inventory/proof anchor; no numerical execution"
+          ]
+        },
+        "nstar_proof": {
+          "path": "research/x-c1/a9-inverse-spike-calibration-2026-10-15/original/nstar/FUNKTIONSANSCHLUSS.txt",
+          "sha256": "39664818da04df1e7c8253e09d078a16ccf2729b964747fa067807a8f3bb18bb",
+          "role": "ANALYTIC_IDENTITY",
+          "previous_inventory_used_fields": [
+            "inventory/proof anchor; no numerical execution"
+          ]
+        },
+        "response_proof": {
+          "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/PROOF.md",
+          "sha256": "8219d5e4f544cc42a4808d6d033c56c608939652b4d851cae881a00842ed84e3",
+          "role": "ANALYTIC_IDENTITY",
+          "previous_inventory_used_fields": [
+            "inventory/proof anchor; no numerical execution"
+          ]
+        },
+        "work_order": {
+          "path": "research/x-c1/a9-a11-certificate-calibration-2026-10-15/WORK_ORDER.md",
+          "sha256": "ead51395f495ea5cae0ff08a6726eb2a420668f584e2914f8763cf53b5f4a7e8",
+          "role": "ANALYTIC_IDENTITY",
+          "previous_inventory_used_fields": [
+            "inventory/proof anchor; no numerical execution"
+          ]
+        },
+        "search_builder": {
+          "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/build_data.py",
+          "sha256": "fd63e0694c85448ec61e8deeae42d43e0dee491ec6fb1d6207bacf3430e16135",
+          "role": "INHERITED_HYPOTHESIS",
+          "previous_inventory_used_fields": [
+            "inventory/proof anchor; no numerical execution"
+          ]
+        },
+        "reassessment_proof": {
+          "path": "research/x-c1/shell-search-reassessment-2026-10-17/PROOF.md",
+          "sha256": "db37cda98c73881106e6d860b8526460ed9f0b2c3aa19543382beac0034f70e4",
+          "role": "ANALYTIC_IDENTITY",
+          "previous_inventory_used_fields": [
+            "inventory/proof anchor; no numerical execution"
+          ]
+        },
+        "high_derivation": {
+          "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/certify.py",
+          "sha256": "a0a0ecb3b9b8b275b6eb46e0d8d6bad27d9eea5a91fd1b66bf75b074aef2ee89",
+          "role": "INHERITED_HYPOTHESIS",
+          "previous_inventory_used_fields": [
+            "inventory/proof anchor; no numerical execution"
+          ]
+        },
+        "renewal_audit": {
+          "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/AUDIT.json",
+          "sha256": "33456af98d0ba6151639c66729d12ef3f12bc695f14a9e0985c2115ba0e61783",
+          "role": "INHERITED_HYPOTHESIS",
+          "previous_inventory_used_fields": [
+            "inventory/proof anchor; no numerical execution"
+          ]
+        },
+        "maps_even_384": {
+          "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_even_384.json",
+          "sha256": "5617f0aa24b67584196e066e43c6f4004eff33fb851b6a0eed36fd771cc39c88",
+          "role": "NEW_RAW_DATA",
+          "numerical_status": "EXPLORATORY_NOT_DIRECTED",
+          "previous_inventory_used_fields": [
+            "status",
+            "G_W",
+            "H_gram",
+            "H8_gram",
+            "feature_factor",
+            "b_F",
+            "Fhat",
+            "T"
+          ]
+        },
+        "maps_even_512": {
+          "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_even_512.json",
+          "sha256": "19de781646891b4fc57d5f09b9d2d4fb46fb86957151ba253fc747ec5e57085e",
+          "role": "NEW_RAW_DATA",
+          "numerical_status": "EXPLORATORY_NOT_DIRECTED",
+          "previous_inventory_used_fields": [
+            "status",
+            "G_W",
+            "H_gram",
+            "H8_gram",
+            "feature_factor",
+            "b_F",
+            "Fhat",
+            "T"
+          ]
+        },
+        "maps_odd_384": {
+          "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_odd_384.json",
+          "sha256": "1f8b22919c542cda123b24c4eb295c7e1e74887a8461debe45fea69835211dc0",
+          "role": "NEW_RAW_DATA",
+          "numerical_status": "EXPLORATORY_NOT_DIRECTED",
+          "previous_inventory_used_fields": [
+            "status",
+            "G_W",
+            "H_gram",
+            "H8_gram",
+            "feature_factor",
+            "b_F",
+            "Fhat",
+            "T"
+          ]
+        },
+        "maps_odd_512": {
+          "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_odd_512.json",
+          "sha256": "5b2aa30f093eeb7cca18099363fb36fedc9036e7fa320bf8ea6a29f952aeee21",
+          "role": "NEW_RAW_DATA",
+          "numerical_status": "EXPLORATORY_NOT_DIRECTED",
+          "previous_inventory_used_fields": [
+            "status",
+            "G_W",
+            "H_gram",
+            "H8_gram",
+            "feature_factor",
+            "b_F",
+            "Fhat",
+            "T"
+          ]
+        },
+        "nstar_archive": {
+          "path": "research/x-c1/a9-inverse-spike-calibration-2026-10-15/archives/Objekt-X-Nstar-Jp-Funktionsanschluss-und-Koeffizienten-2026-10-16.zip",
+          "sha256": "b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b",
+          "role": "Previously bound complete old function archive"
+        },
+        "inventory_proof": {
+          "path": "research/x-c1/w9-energy-inventory-2026-10-17/PROOF.md",
+          "sha256": "e625e96aad71bea9a5aa485b9c551525a8db14c78db866269e26c495fe382b0f",
+          "role": "Analytic formula and quadrature provenance"
+        },
+        "sharp_kp_proof": {
+          "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/PROOF.md",
+          "sha256": "0ef062d456202482dcdbf3301b7bc945d96fdea10ad61de1466565ec415dcc5f",
+          "role": "Analytic formula and quadrature provenance"
+        },
+        "common96_builder": {
+          "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-direkte-restform-und-positiver-96er-block-2026-10-11/refine_old_majorant.py",
+          "sha256": "9afeec7892426041858a524de3f9e3e9d2b46578876de0e9f1540edfd6012730",
+          "role": "Analytic formula and quadrature provenance"
+        },
+        "previous_maps_code": {
+          "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/build_data.py",
+          "sha256": "fd63e0694c85448ec61e8deeae42d43e0dee491ec6fb1d6207bacf3430e16135",
+          "role": "Analytic formula and quadrature provenance"
+        },
+        "previous_interval_code": {
+          "path": "research/x-c1/l00-z0-directed-interval-2026-10-17/certify.py",
+          "sha256": "6927e4090e4575bbdaa06248bd3216cfe0b62f906eb834c68907f0bc1af8585b",
+          "role": "Analytic formula and quadrature provenance"
+        },
+        "kp_budget": {
+          "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/expected/BUDGET_BOUNDS.json",
+          "sha256": "6229acf4bee398d2262c08a086fb36dd8945135ee860bb591e8218551c291613",
+          "role": "Analytic formula and quadrature provenance"
+        },
+        "kp_even": {
+          "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/expected/SHARP_K_even.json",
+          "sha256": "67332794271c32d2ac4b8a334d517cf6f9055ce215141df5a96f3bd8ff06f1fe",
+          "role": "Analytic formula and quadrature provenance"
+        },
+        "kp_odd": {
+          "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/expected/SHARP_K_odd.json",
+          "sha256": "2f699be798952ded396336b07c3c7f2e61398f8d1baec6a504716a04b24a0f01",
+          "role": "Analytic formula and quadrature provenance"
+        },
+        "old_candidate_even": {
+          "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/FROZEN_even.json",
+          "sha256": "9feba325ee62bd5bb37477c10f3943b1dd7cea902324f6001a64c6000a6ee90d",
+          "role": "Analytic formula and quadrature provenance"
+        },
+        "old_candidate_odd": {
+          "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/FROZEN_odd.json",
+          "sha256": "b8833f55b9ddf527132d7afe167a4603c344a1329127077c28982f3f947ed8d9",
+          "role": "Analytic formula and quadrature provenance"
+        },
+        "kp_model_even": {
+          "path": "research/x-c1/shell-search-reassessment-2026-10-17/data/K_MAP_even_128.json",
+          "sha256": "40b687ff0d3ddf302c9c874c126f255c1899ab3732683404ee74734ddbab939d",
+          "role": "Analytic formula and quadrature provenance"
+        },
+        "kp_model_odd": {
+          "path": "research/x-c1/shell-search-reassessment-2026-10-17/data/K_MAP_odd_128.json",
+          "sha256": "a2f746b0fc3bde82aa9a5ef2a7c72b12fb60c3a14986a7c346272e9ea28c72d7",
+          "role": "Analytic formula and quadrature provenance"
+        },
+        "psi": {
+          "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt1-stufe1-zertifikat/expected/PSI_CORRECTED.json",
+          "sha256": "3e1bc5db6114333434891a52bef8f3bf6822779b52d14585d249d67943d8c7a1",
+          "role": "Analytic formula and quadrature provenance"
+        },
+        "finite_action": {
+          "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe3-endliche-u8-antwort/expected/FINITE_ACTION.json",
+          "sha256": "689636e2b11efcc828100f93b512d4375c8bfebfe8c4a37e3c7c1320f31ed551",
+          "role": "Analytic formula and quadrature provenance"
+        },
+        "l00_even": {
+          "path": "research/x-c1/l00-z0-directed-interval-2026-10-17/expected/L00_CERTIFICATE_even.json",
+          "sha256": "52399adf3016e6691151adaa24a1adfa943e2c543d95e222b85898f82de5d9c8",
+          "role": "Analytic formula and quadrature provenance"
+        },
+        "l00_odd": {
+          "path": "research/x-c1/l00-z0-directed-interval-2026-10-17/expected/L00_CERTIFICATE_odd.json",
+          "sha256": "71c26e4d5b5dc1b662eae79ff244dd3099b51b0370154506b86902224431dff8",
+          "role": "Analytic formula and quadrature provenance"
+        }
+      },
+      "members": {
+        "common": {
+          "archive": "stage3_archive",
+          "member": "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/inputs/REFINED_COMMON96.json.gz",
+          "sha256": "306acbacf5f4089fe703f655bf4340087f0ae88aeaab416c0282e9e24c1638df",
+          "previous_inventory_used_fields": [
+            "cases.*.{delta,rho,inverse_congruence_integer_matrix,inverse_congruence_denominator,finite_cross_C84_new_model}"
+          ]
+        },
+        "old_sources": {
+          "archive": "stage3_archive",
+          "member": "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/inputs/REFINED_INPUT.json.gz",
+          "sha256": "c67a44d7cc052bff32ed2768b81595367c710f9308f0f1716b213a74766b1e64",
+          "previous_inventory_used_fields": [
+            "cases.*.old_certificate.{source_c_model,source_Bh_model,source_h_gram_model,joint_high_source_error_gram}",
+            "cases.*.galerkin.{old_low_c_model,old_low_Bh_model,H84_model,complete_source_high_cross_model}"
+          ]
+        },
+        "response": {
+          "archive": "response_archive",
+          "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/RESPONSE_ENERGY.json",
+          "sha256": "7b247fd48e80bab6b34fe02b771dcdcdb0219efdd385285d9a5b52bca1f469d5",
+          "previous_inventory_used_fields": [
+            "parities.*.fixed_X.{physical_TT_adjoint_upper,T_norm_squared_upper,whole_Hilbert_residual_model_error_upper}"
+          ]
+        },
+        "functions": {
+          "archive": "response_archive",
+          "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/inputs/FUNCTIONS12.json",
+          "sha256": "7c13f08ad85084379249c4a08b7c8bda0813eaea72939ba385cb3756b2801b3c",
+          "previous_inventory_used_fields": [
+            "parities.*.whole_D12_operator_error_upper"
+          ]
+        },
+        "inverse_even": {
+          "archive": "renewal_archive",
+          "member": "Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13/INVERSE_EVEN.json",
+          "sha256": "56d1fbbf7b985debba2bc9e92d404f29adf7985c2779ecf058c841fcc7aded50",
+          "previous_inventory_used_fields": [
+            "P_upper_rational",
+            "candidate_P_upper_trace",
+            "beta"
+          ]
+        },
+        "inverse_odd": {
+          "archive": "renewal_archive",
+          "member": "Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13/INVERSE_ODD.json",
+          "sha256": "5cd91520b6f3c6170d09eee6b0b9aa10d2e707fc13219970d6ebc4b57befb772",
+          "previous_inventory_used_fields": [
+            "P_upper_rational",
+            "candidate_P_upper_trace",
+            "beta"
+          ]
+        },
+        "global_archive": {
+          "archive": "nstar_archive",
+          "member": "Objekt-X-Nstar-Jp-Funktionsanschluss-und-Koeffizienten-2026-10-16/inputs/Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13.zip",
+          "sha256": "2ca3c682de8a529b12a0d628c2b606fd04df332d1299ccd36dff71ac3e53d80c",
+          "role": "Bound old function reconstruction"
+        },
+        "frozen_response": {
+          "archive": "response_archive",
+          "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/inputs/FROZEN_RESPONSE12.json",
+          "sha256": "132959da5d34c0c89471ee15f7c34d8b4a42ad48c641b6c4db5181113d11426a",
+          "role": "Bound old function reconstruction"
+        },
+        "fresh_A12": {
+          "archive": "response_archive",
+          "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/inputs/FRESH_A12.json",
+          "sha256": "c0d9707b267dacae5a73072bf952a267a509f86a9442c89475d6c7407027fdb8",
+          "role": "Bound old function reconstruction"
+        },
+        "a8_model": {
+          "archive": "global_archive",
+          "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/remainder-integration-check-v2/originals/weighted-response/inputs/a8_model.json.gz",
+          "sha256": "fb03cbc04183ce3c9032773de4ccde4969e706f835af99c7a6c680fd85e40a75",
+          "role": "Bound old function reconstruction"
+        },
+        "half": {
+          "archive": "global_archive",
+          "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/remainder-integration-check-v2/originals/half-inverse/expected/1536.json",
+          "sha256": "d828be18959b85474419a5e435875c6569bcf6a26c9ea88b3db38820d95aeb46",
+          "role": "Bound old function reconstruction"
+        },
+        "basis_even": {
+          "archive": "global_archive",
+          "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/basis-coverage-2026-10-10/BASIS_EVEN.json",
+          "sha256": "e223621b70fb4136e6653fae83d47789373c7fc2f883a1aa77f52235a0c667ab",
+          "role": "Bound old function reconstruction"
+        },
+        "basis_odd": {
+          "archive": "global_archive",
+          "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/basis-coverage-2026-10-10/BASIS_ODD.json",
+          "sha256": "9dc22c2a0b8417184d174f57ab0a8222ae593ea8091fc19902ec345341c50628",
+          "role": "Bound old function reconstruction"
+        },
+        "frozen_J_even": {
+          "archive": "global_archive",
+          "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/galerkin84-2026-10-10/MODEL_RAY_EVEN_3072.json",
+          "sha256": "4ef3417e73b0080f2ce06a71ab85def2525ed1180f4016d4d20be682589fd6be",
+          "role": "Bound old function reconstruction"
+        },
+        "frozen_J_odd": {
+          "archive": "global_archive",
+          "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/galerkin84-2026-10-10/MODEL_RAY_ODD_3072.json",
+          "sha256": "38064e460f22532582cb85bc6970670d6b0f584c2c0746e6abe39d8fd31fc535",
+          "role": "Bound old function reconstruction"
+        },
+        "frozen_Y_even": {
+          "archive": "global_archive",
+          "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/u00-2026-10-07/CENTRES_EVEN_4096.json",
+          "sha256": "ca822ab0ddf8c30f997d4cd3d45f98551e999a4a2ce59de86cb0982559dd438c",
+          "role": "Bound old function reconstruction"
+        },
+        "frozen_Y_odd": {
+          "archive": "global_archive",
+          "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/u00-2026-10-07/CENTRES_ODD_4096.json",
+          "sha256": "f0184e21dc455bb949ff4c9ba6c5a785881cf78992e5ec24f0f0118346eb7873",
+          "role": "Bound old function reconstruction"
+        },
+        "old_global_code": {
+          "archive": "global_archive",
+          "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/global-model-2026-10-12/compute_global_model.py",
+          "sha256": "bec0e7c266cb2bae50dfc93e0150786000a55ae89b3effb95d2ba2a06b5c16b4",
+          "role": "Bound old function reconstruction"
+        },
+        "old_source_code": {
+          "archive": "global_archive",
+          "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/tail-probe-2026-10-10/vendor/source_core.py",
+          "sha256": "31a760f1937f4b604c722b4d27a30c176c0b4c84341fdd819bc3dc2575b18772",
+          "role": "Bound old function reconstruction"
+        },
+        "old_kernel_code": {
+          "archive": "global_archive",
+          "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/tail-probe-2026-10-10/vendor/eight_source_refined.py",
+          "sha256": "baac27c2684d7683cdc586032a681a84d1b3f044750b9e2e80378fae7f204501",
+          "role": "Bound old function reconstruction"
+        }
+      },
+      "forbidden_input_class": "FORBIDDEN_TARGET_POSITIVITY",
+      "target_A11_positive_data_used": false,
+      "previous_inventory_source_commit": "27dfebb03dc4bf10265797b575fcbe08a15eb500",
+      "usage_note": "Every listed file/member is bound in full. Previous inventory field lists describe #237 only. Current numerical consumers and complete block roles are specified below and in PROOF.md; inherited derivations are not re-audited.",
+      "current_numerical_consumers": {
+        "common": "G96, U96, D96 lower/upper, a_fin model, finite feature errors, C8, delta, rho",
+        "old_sources": "low and high old F/J source coordinates, source errors and high Grams",
+        "inverse_even/inverse_odd": "P_upper_rational",
+        "coherent": "K_rational and K_inverse_rational",
+        "high_response": "tr_X_HB_exact_rational and full_M_norm_squared",
+        "functions": "all twelve analytic F/D functions and whole_D12_operator_error_upper",
+        "response": "whole_Hilbert_residual_model_error_upper and direct_K_error_upper",
+        "a8_model": "Gamma polynomial and A model intervals",
+        "half": "basis_Q_local_coefficients and half_inverse_centre_rational_Q_coefficients",
+        "basis_even/basis_odd": "D_rational",
+        "frozen_Y_even/frozen_Y_odd": "Y_local_rational_midpoints",
+        "frozen_J_even/frozen_J_odd": "working_basis_midpoints_rational",
+        "frozen_response/fresh_A12": "exact X and A12 model midpoint for the fixed rule",
+        "maps_even_512/maps_odd_512": "feature_factor and b_F, consistency controls only",
+        "psi/finite_action/l00_even/l00_odd": "independent z0 I0 consistency control",
+        "old_candidate_even/old_candidate_odd/kp_even/kp_odd/kp_budget": "previous fixed directions and directed budgets",
+        "kp_model_even/kp_model_odd": "exploratory candidate selection only"
+      }
+    }
+  },
+  "numerical_field_roles": {
+    "DIRECTIONS.json.v1_rational,v2_rational,w1_rational,w2_rational": "INHERITED_FIXED_SELECTION; no alteration",
+    "PAIRS_even.G_W,H8_Gram,H9_Gram,e_h,Phi_star_h,high_cross_models,bare_F_J_pairs,high_Gram,Fhat,T,T_enclosure": "NEW_RAW_DATA with inherited directed integration/model-error certificates",
+    "K_MAP_even_128.K_P_model": "NEW_RAW_DATA / EXPLORATORY_NOT_DIRECTED; direction discovery only",
+    "REFINED_COMMON96.cases[0].D96_lower_model,D96_upper_model,U96_model,finite_feature_error_gram,tail_feature_error_scalar and shared force coefficients": "DIRECTED_CERTIFICATE / INHERITED_HYPOTHESIS; complete common F/J families",
+    "REFINED_INPUT.cases[0].old_certificate and galerkin source coordinates, high and low Grams, full-source errors": "OLD_A9_CERTIFICATE / INHERITED_HYPOTHESIS; all coefficient combinations",
+    "SCHUR.K_new_rational,P_new_upper_rational and pilot.RESULT.P_weight": "DIRECTED_CERTIFICATE / old fixed admissible comparison",
+    "FROZEN_RESPONSE12.parities.even.X; FRESH_A12.parities.even.midpoint": "fixed outer response and raw old A9 form; no new selection",
+    "RESPONSE_ENERGY.parities.even.fixed_X.whole_Hilbert_residual_model_error_upper,direct_K_error_upper": "DIRECTED_CERTIFICATE / global operator error; not a transferred scalar witness price",
+    "FUNCTIONS12.parities.even.functions[].D": "NEW_RAW_DATA / whole physical response functions",
+    "bound inverse, domain, response and variational proof anchors": "ANALYTIC_IDENTITY / INHERITED_HYPOTHESIS",
+    "historical candidates, paired-source controls, previous K certificate": "bindings and consistency controls, no new replay or target-positive input"
+  },
+  "forbidden_target_positivity_used": false,
+  "new_odd_parity_calculations": false,
+  "qualification": "This is GPT2 input inventory for GPT1 review; it is not an independent proof of inherited analytic hypotheses."
+}

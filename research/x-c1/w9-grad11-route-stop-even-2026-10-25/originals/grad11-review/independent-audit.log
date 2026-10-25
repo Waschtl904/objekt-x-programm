@@ -1,0 +1,13 @@
+{
+  "status": "GPT1_TARGETED_CONDITIONAL_OBSTRUCTION_CONFIRMED",
+  "manifest_files": 33,
+  "bound_files": 94,
+  "bound_nested_members": 20,
+  "git_blob_references": 9,
+  "gap_decimal": "0.0000010476849518513615480310432618919713432344491143260827617341137315",
+  "independent_G_W_entries_contained": 144,
+  "runtime_seconds": {
+    "total": 11.21514792400012,
+    "K": 2.8636811950000265
+  }
+}

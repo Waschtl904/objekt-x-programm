@@ -1,0 +1,235 @@
+OBJEKT X – GEZIELTE GPT1-GEGENPRÜFUNG DER GRAD-11-VORANALYSE
+25. Oktober 2026
+
+VOTUM: BEDINGTES STOPPERGEBNIS BESTÄTIGT.
+Die feste Vergleichsroute mit unveränderter äußerer Antwort und Q_new
+scheitert bereits an einem zulässigen geraden Grad-11-Zeugen. Weitere
+Ganzrestintegrationen für diesen unveränderten Vergleich sind nicht sinnvoll.
+Ergebnisstatus des Vergleichs: CERTIFICATE_FAIL, unter übernommenen H1–H4.
+AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN bleibt bestehen. Dies ist eine gezielte
+Gegenprüfung der neuen Anwendung, keine externe Gesamtbegutachtung.
+
+1. Bezug und Unverändertheit
+
+Lesend bestätigter Main und lokaler Referenzcheckout:
+137940b4e8ea391af408992ae17fb4eebbd6d7c7
+Tree: 6b9d0fbf4850b80ab92092ddd8238049e7dba701.
+
+Die ursprüngliche GPT2-Lieferung hat 875.069 Byte und SHA-256
+be2b1ab43514454cfec95dd1283d81e8d2f34745f4cf1554ecfd2d6811888e93.
+Alle 33 im neuen Manifest gebundenen Dateien stimmen.
+Die 94 historischen Dateibindungen stimmen mit dem Referenzcheckout;
+alle 20 verschachtelten Archivmitglieder wurden zusätzlich direkt gehasht.
+Die neun aufgezeichneten Git-Blob-Referenzen, einschließlich certify_k.py,
+stimmen mit dem Referenzcommit. Dabei werden Git-Blob-Identität und die
+lokale Textdarstellung der beigefügten Referenzkopien getrennt behandelt.
+
+Das ursprüngliche Zweiraumarchiv wurde unverändert übernommen:
+11.129.155 Byte, SHA-256
+e1911ce244aa51062f6b06bb767f945922199112380022b59846de4ec7f0e89d.
+preflight.py, DIRECTIONS.json, PLAN.txt, SOURCE_BINDINGS.json und BEWEIS.txt
+der neuen Lieferung sind bytegleich mit ihren ursprünglichen Archivmitgliedern.
+Die vorherigen L1-/Zweiraumresultate wurden nicht erneut geöffnet.
+Keine GitHub-Schreibaktion, keine Veröffentlichung, keine Nachricht an andere Chats.
+
+2. Eingabezulässigkeit und fester physischer Zeuge
+
+Der neue rationale Rohvektor q ist ausschließlich der zwölfkomponentige
+Vektor aus DIAGNOSTIC-DIRECTION.json, SHA-256
+47960f93f812be200874e7f907eed05056fe00e6d106b6fef275d91c35fbee33.
+Er wurde für den Replay unverändert übernommen. Hashkette Plan–Modell–
+Spektraldiagnose–Richtung und die deklarierte rationale Rundung wurden
+abgeglichen. Eine unabhängige Zeitstempelattestation der historischen
+Erstellungsreihenfolge liegt nicht vor. Für die Gültigkeit des konkreten
+gerichteten Zeugen ist keine spektrale Optimalität erforderlich.
+
+Die verwendeten ell_n, n=0,...,11, sind auf (a,b) mit a=log(3),
+b=log(11)/2 bezüglich 2 dx orthonormal. Für m(x)=cosh(x/2),
+mu=int_0^a m(x)^2 dx und lambda_i=int_a^b ell_i(x)m(x) dx gilt:
+
+ G_W = I + (2/mu) lambda lambda^T,
+ W[z] = sum_i z_i^2 + 2 lambda(z)^2/mu,
+ Lift auf (0,a): -m(x) lambda(z)/mu.
+
+Diese Formel wurde unabhängig aus dem exakten Momentlift hergeleitet und
+mit 1024-Bit-Arb ausgewertet. Die Momente wurden über die Legendre-Rekursion
+und eine integrierte cosh-Taylorreihe bis Grad 160 mit explizitem vollständigem
+Rest bestimmt. Alle 144 unabhängigen Eintragseinschließungen liegen innerhalb
+der gebundenen G_W-Intervalle. G_W ist durch I plus positive Rang-eins-Form
+positiv. Der Lift erfüllt mu*(-lambda/mu)+lambda=0.
+
+Die Normierung s=q/sqrt(q^T G_W q) stimmt mit beiden Rechnungen F und K_P
+überein; auch die unabhängig berechnete Norm ist von ihrer Einschließung
+erfasst. Die Autokorrelation bei null enthält 1. Das Feld physical_W_norm
+im F-Ergebnis ist eine konservative Normobergrenze, nicht das Intervall der
+exakten Norm: seine Endpunkte liegen hier um 1e-80 bzw. 2e-80 über 1.
+Dies ist korrekte Fehlerüberdeckung, keine abweichende Normierung.
+
+Die unveränderte gemeinsame Testabbildung lautet mit s1=v/N, s2=e0/M:
+
+ alpha(z)=N z[1]/v[1],
+ beta(z)=M (z[0]-v[0]z[1]/v[1]),
+ T(z)=alpha(z)w1+beta(z)w2.
+
+Einsetzen gibt exakt T(s1)=w1, T(s2)=w2 und T(e_j)=0 für j=2,...,11.
+Der neue Test T(s) ist eine endliche reelle Linearkombination der gleichen
+84er-Testfunktionen. Deren Formdomäne ist linear; Rationalität der beiden
+Einzelvektoren wird nicht als Beschränkung des Variationsprinzips benötigt.
+Die rationalen Größen q[j]-q[1]v[j]/v[1], j=2,...,11, sind nicht alle null.
+Somit liegt s außerhalb des bisherigen Zweiraums.
+
+K_new bleibt über den kanonischen Hash
+89ded551059d1279c646bc17e3b5ab3e2a7f7a261d1c239ac752b7f0d35467a8
+gebunden. Der historische Loader prüft ihn beim Aufbau. Die äußere Antwort
+bleibt fixed_X=Phi12 X_fix Fhat. Der alternative Kandidat audit_S wird nicht
+verwendet. FRESH_A12 enthält hier den rohen alten A9-Matrixblock; die Zahl 12
+ist seine Dimension. Bekannte A11-Positivität und daraus gewonnene Spektral-
+oder Inversdaten werden nicht als Eingang benutzt. K_MAP dient ausschließlich
+der Modellwahl des Zeugen; im gerichteten Schluss ersetzt es kein K_P-Zertifikat.
+
+3. Anwendbarkeit und gemeinsame Fehlerbuchung
+
+Der gesamte Wortlaut von H1–H4 und die Quellenkarte sind in der unveränderten
+GPT2-Lieferung enthalten. Die historische Gültigkeit dieser Grundlagen wird
+übernommen; ihre Anwendung auf die neuen Koeffizienten wurde gezielt geprüft.
+
+Die maßgeblichen Herleitungen sind insbesondere:
+ - w9-partial-energy-2026-10-18/PROOF.md, §§2–5:
+   gemeinsame zwölf Residuen, ganze hohe Paarungen und Fehlergramme;
+ - w9-schur-variational-even-2026-10-19/PROOF.md, §§4–6:
+   Rang-eins-Spezialisierung der Paarungsfehler und variationale Vorzeichen;
+ - w9-new-k-schur-underform-even-2026-10-20/PROOF.md, §§3–5:
+   unveränderte Q_new-Unterform und richtungsabhängiger a_fin-Preis;
+ - w9-residual-centered-control-even-2026-10-21/PROOF.md, §§2–4:
+   gerichtete D/U-Formfehler und vollständige variationale Identität;
+ - a9-a11-whole-response-gram-2026-10-15/PROOF.md, §§0–2:
+   ganze Antwortoperatorfehler und direkter K-Modellpreis auf der W-Einheitssphäre.
+
+Der unveränderte eval_form-Auswerter wurde aus dem Originalquelltext per
+Syntaxbaum übernommen, ohne den alten Zweiraum-Vorlauf auszuführen.
+Die mathematische Kontrolle ergibt:
+
+ a) Basisenergie: E_base=<h,U8 h>+v^T K_new^-1 v. Ihr Modell umfasst
+    den ganzen hohen und endlichen U8-Anteil. Die Normfehler eWh und ev
+    werden vor dem Quadrieren gemeinsam bezahlt; der ganze physische
+    Antwort-/Gamma-/Freezefehler wird über eine echte Operatorobergrenze
+    und ||s||_W transportiert. Keine bloße niedrige Koordinatennorm.
+
+ b) Paarung: bare-, raw-, low-, low/high-, Feature-, a_fin- und physische
+    Residualmodellpreise werden mit den neuen c=s und w=T(s) ausgewertet.
+    Die gemeinsamen Differenzen werden vor der Energie gebildet. Der
+    a_fin-Paarungspreis bezahlt auch den Fehler von v; unbekannte gemeinsame
+    Fehler werden durch Dreiecks-/Gramabschätzungen eingeschlossen.
+
+ c) Form: Delta_U(w)=2 sqrt((w^T U_JJ w) E_J ||w||^2)+E_J ||w||^2,
+    Delta_D(w)=w^T ((D_plus-D_minus)/2)_JJ w. E_J behält sowohl den Faktor
+    zwei als auch die hohe Fehlerüberdeckung. Die richtungsbezogene
+    a_fin-Kreuzschranke und der positive quadratische Zusatz für die obere
+    a_fin-Quadratgrenze bleiben enthalten. eta*q wird mit D_minus/D_plus
+    beidseitig eingeschlossen, genau einmal.
+
+ d) Homogenität: Die Quellenfehler eWh, ev, ||h||, ||f|| und ||Phi*h||
+    sind homogen in c. Alle Paarungspreise sind bilinear-homogen in den
+    Normen von c und w, alle Formpreise quadratisch in w. Der volle
+    physische Modellfehler wird ausdrücklich mit ||c||_W skaliert.
+    Damit ist die Anwendung auf T(s) keine Übertragung eines skalaren
+    Fehlers des ersten oder zweiten alten Zeugen.
+
+ e) K_P: certify_k.py integriert die tatsächliche neue Schalenpolynom-
+    richtung mit ihrem Momentlift. Nahe Null, äußeres Integral, Prim-
+    korrelationen und feste Antwortkorrektur werden vollständig geführt.
+    Der direkte Antwortmodellpreis ist eine gebundene Operatorgrenze auf
+    der ganzen W-Einheitssphäre. Die historischen analytischen Quadratur-
+    und Kernelherleitungen bleiben H4; ihre Netze werden nicht als Beweis
+    aus Konvergenz interpretiert.
+
+Keine Übernahme von D11, D22, einer einzelnen L1-Restenergie oder einem
+richtungsspezifischen R2-Preis wurde für dieses neue Stoppergebnis benötigt.
+Das große Restintegrationsprogramm und die 411 Ganzrestabschnitte wurden
+nicht ausgeführt.
+
+4. Tatsächlicher Replay und unabhängige Rekombination
+
+Umgebung: Python 3.12, python-flint 0.9.0, Arb-Präzision 1024 Bit,
+Python ohne Optimierungsmodus. Eine F-Auswertung und ein K_P-Lauf mit
+55 Abschnitten und je 128 Gaußknoten; technische Grenze 600 Sekunden.
+Gemessene Laufzeit: 11.215 s einschließlich Eingangskonstruktion,
+davon 2.864 s für K_P. Dies ist keine Prognose für andere Rechner.
+
+Alle mathematischen Ergebnisfelder sind exakt mit GPT2 identisch.
+Nur budget_seconds und total_seconds unterscheiden sich.
+Die Originale wurden nicht überschrieben. An den Replayprogrammen wurden
+nur lokale Eingabepfade angepasst; die beiden Diffs sind beigefügt.
+
+Unabhängig mit fractions.Fraction neu kombiniert:
+
+ F_lo = B_lo + 2 pairing_lo - H_hi,
+ F_hi = B_hi + 2 pairing_hi - H_lo.
+
+Nach außen gerundete Anzeigen:
+ K_P[s] in [0.0327864990425293; 0.0327864990425388],
+ F_T[s] in [0.0327875467274905; 0.0327881384890562].
+
+Die EXAKTE Differenz der rationalen Zertifikatsendpunkte ist
+
+ 209536990370272309606208652378394268646889822865216552346822746300298714440843845311
+ / 200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+ = 0.00000104768495185136154803104326189197134323444911432608...
+ > 1.0476e-6.
+
+Der gesamte F-Intervallradius ist etwa 2.9588078281e-7:
+ Basisenergie: 7.9480353828e-8,
+ doppelte Paarung: 1.9716313604e-7,
+ H-Form: 1.9237292941e-8.
+Die rationalen Endpunkte und vollständigen Einzelpreise stehen im
+unveränderten bzw. frisch erzeugten DIRECTED-DIAGNOSTIC.json.
+
+Der eigenständige GPT1-Audit bestätigt außerdem die Dateibindungen,
+verschachtelten Mitglieder, Vorzeichen der Rekombination, Anzeigehüllen,
+Normierung, Momentlift-Metrik und Nichtzugehörigkeit zum alten Zweiraum.
+Der reine mitgelieferte Endpunktaudit wurde ebenfalls erfolgreich ausgeführt.
+
+5. Mathematische Folgerung und genaue Grenze
+
+Unter H1–H4 ist H_new positiv; für jedes zulässige Jw gilt auf dem
+vollständigen Formraum die quadratische Ergänzung
+
+ E_fix[s]=<f(s),Q_new^-1 f(s)>
+         =F_T[s]+<nu(s)-H_new Jw,H_new^-1(nu(s)-H_new Jw)>.
+
+Der letzte Term ist nichtnegativ. Daher folgt am geprüften W-Einheitszeugen
+
+ K_P[s]-E_fix[s] < -1.0476e-6.
+
+Somit scheitert der positive Vergleich auf dem ganzen geraden Grad-11-Raum
+mit dieser festen äußeren Antwort und Q_new. Jede noch größere Majorante
+W>=Q_new^-1 scheitert dort ebenfalls. Ein verbesserter innerer Test T
+allein kann E_fix nicht verkleinern; er verändert nur dessen variationale
+Zerlegung. Eine Ganzrestobergrenze, eine Kreuzquadratur oder eine schärfere
+Young-Hülle kann diesen festen Vergleich nicht retten.
+
+Q_new<=A9 liefert A9^-1<=Q_new^-1. Eine zu große Energie der rechten
+Vergleichsinverse beweist deshalb KEINE negative tatsächliche Weil-Richtung.
+Andere Unterformen, andere äußere Antworten und andere Majoranten der
+tatsächlichen A9-Inverse werden nicht ausgeschlossen.
+
+Die Darstellung, dass erst die 2+10-Mischkopplung das Hindernis hervorruft,
+bleibt eine Erklärung aus der Modelldiagnose. Neu gerichtet bestätigt ist
+der konkrete Zeuge unter voller Kopplung. Es wurde kein separater gerichteter
+Positivitätsnachweis des Zehnerblocks oder aller übrigen Raumrichtungen erstellt.
+Ebenso ist F_hi keine Obergrenze der vollständigen Energie E_fix.
+
+6. Konsequenz für die Arbeit
+
+Die gezielte GPT1-Gegenprüfung ist für diesen neuen Befund abgeschlossen.
+Keine weitere Ganzrestintegration für die unveränderte Route beauftragen.
+Eine neue Antwort-/Unterformsuche wurde nicht gestartet und benötigt einen
+gesonderten Forschungsauftrag. Eine Veröffentlichung wurde nicht beauftragt.
+L1 und der bisherige reelle Zweiraumnachweis bleiben in ihrem bedingten Scope
+gültig. Die Checkliste bleibt 3/10; Punkt 4, vollständiger A9→A11-Anschluss,
+Objekt X und externe Gesamtbegutachtung bleiben offen.
+
+Quellen: Referenzcommit und die oben genannten Repositorypfade; die genaue
+Byteprovenienz steht in SOURCE_BINDINGS.json und REMOTE-REFERENCES.json der
+unveränderten GPT2-Lieferung. Eigene Prüfdaten: INDEPENDENT-AUDIT.json.

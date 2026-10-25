@@ -1,0 +1,33 @@
+OBJEKT X – GPT2: begrenzte Grad-11-Machbarkeitsanalyse, 25. Oktober 2026
+
+Referenz: main 137940b4e8ea391af408992ae17fb4eebbd6d7c7,
+Tree 6b9d0fbf4850b80ab92092ddd8238049e7dba701.
+Vor numerischer Auswertung festgelegt.
+
+Physischer Raum: zwölf gerade fortgesetzte Schalenpolynome ell_0,...,ell_11
+mit exaktem Momentlift und G_W. Die äußere Antwort, K_new und P bleiben fest.
+Verwendet wird die in DIRECTIONS.json veröffentlichte lineare Fortsetzung:
+alpha=N*z[1]/v[1], beta=M*(z[0]-v[0]*z[1]/v[1]),
+T(z)=alpha*w1+beta*w2. Keine neuen Testlösungen und keine Antwortoptimierung.
+Basis für die Analyse: [v/N,e0/M,e2,...,e11]. Die letzten zehn Vektoren
+liegen im Kern dieser Fortsetzung. Alle gemischten Blöcke bleiben erhalten.
+
+1. Vorhandene gebundene Matrizen G_W, K_P (exploratives Modell), B_base,
+nu, H0 und D0_JJ zusammenstellen. F=B_base+T*nu+nu*T-T*H_new*T.
+Numerische Eigenwerte sind nur Modelle; keine Zertifizierung durch Netz-
+konvergenz, geringe Intervallradien oder bekannte A11-Positivität.
+2. Kritische Richtungen, 2+10-Blockkopplung und günstige / ungünstige
+Vergleichsmargen erfassen. Die Wirkung des festen T nicht mit dem tatsächlichen
+gesamten Residualpreis verwechseln. D und Z nicht aus Einzelzeugencaps übertragen.
+3. Falls ein klares negatives Modellbudget bereits ohne Restpreis auftritt,
+höchstens eine rationale Diagnoserichtung einfrieren und die kleinen
+gerichteten K/F-Prüfungen darauf auswerten. Das wäre eine gezielte Diagnose
+der festen Vergleichsroute, keine Vollintegration. Andernfalls den kleinsten
+fehlenden gerichteten Matrix- oder Restblock mit Erfolgskriterium beschreiben.
+4. Quellenrollen, tatsächliche Felder, Hashes, Fehlerabhängigkeiten und
+fehlende Einträge dokumentieren. H1–H4 bleiben übernommen, externe Prüfung offen.
+
+Grenzen: keine ganzen Restquadraturen, kein Zweiraum-Replay, keine zweite
+Testabbildung, keine GitHub-Schreibaktionen. Ein Rechenlauf höchstens zehn Minuten.
+Kein Grad-11-, Punkt-4-, Objekt-X- oder RH-Abschluss. GPT1s Gegenprüfung folgt
+erst am fertigen Bericht und wird hier nicht vorweggenommen.

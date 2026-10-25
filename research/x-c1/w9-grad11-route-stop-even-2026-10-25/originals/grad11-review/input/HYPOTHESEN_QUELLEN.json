@@ -1,0 +1,246 @@
+{
+  "scope": "Source map for H1–H4; inherited proofs are not re-proved by these bindings",
+  "binding_file": {
+    "path": "research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json",
+    "ref": "9ef0784f2cddbfa0c9804312a44b59306a351832",
+    "sha256": "829b4884c64d23d90efc6382abe20f449d6229af8ccf8db4b85d12e5b7e03e28",
+    "git_blob": "a57030f51a827598cc41b923b8cfd23410cfd0b2"
+  },
+  "alias_groups": {
+    "H1": [
+      "domain_proof",
+      "inverse_proof",
+      "nstar_proof"
+    ],
+    "H2": [
+      "old_sources",
+      "common",
+      "frozen_Y_even",
+      "frozen_J_even",
+      "a8_model"
+    ],
+    "H3": [
+      "inverse_proof",
+      "coherent",
+      "high_response",
+      "response",
+      "response_proof",
+      "frozen_response"
+    ],
+    "H4": [
+      "inventory_proof"
+    ]
+  },
+  "aliases_and_recursive_archives": {
+    "domain_proof": {
+      "kind": "files",
+      "path": "research/x-c1/a9-domain-continuation-2026-10-13/original/HERLEITUNG.txt",
+      "sha256": "e6075606f6a26c354f1eb756b568f91cbb7a0b035022b44ef60a0120ae4ea819",
+      "role": "ANALYTIC_IDENTITY",
+      "previous_inventory_used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "inverse_proof": {
+      "kind": "files",
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt",
+      "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7",
+      "role": "ANALYTIC_IDENTITY",
+      "previous_inventory_used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "nstar_proof": {
+      "kind": "files",
+      "path": "research/x-c1/a9-inverse-spike-calibration-2026-10-15/original/nstar/FUNKTIONSANSCHLUSS.txt",
+      "sha256": "39664818da04df1e7c8253e09d078a16ccf2729b964747fa067807a8f3bb18bb",
+      "role": "ANALYTIC_IDENTITY",
+      "previous_inventory_used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "old_sources": {
+      "kind": "members",
+      "archive": "stage3_archive",
+      "member": "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/inputs/REFINED_INPUT.json.gz",
+      "sha256": "c67a44d7cc052bff32ed2768b81595367c710f9308f0f1716b213a74766b1e64",
+      "previous_inventory_used_fields": [
+        "cases.*.old_certificate.{source_c_model,source_Bh_model,source_h_gram_model,joint_high_source_error_gram}",
+        "cases.*.galerkin.{old_low_c_model,old_low_Bh_model,H84_model,complete_source_high_cross_model}"
+      ]
+    },
+    "stage3_archive": {
+      "kind": "files",
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip",
+      "sha256": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52",
+      "role": "OLD_A9_CERTIFICATE",
+      "previous_inventory_used_fields": [
+        "selected members below"
+      ]
+    },
+    "common": {
+      "kind": "members",
+      "archive": "stage3_archive",
+      "member": "Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16/inputs/REFINED_COMMON96.json.gz",
+      "sha256": "306acbacf5f4089fe703f655bf4340087f0ae88aeaab416c0282e9e24c1638df",
+      "previous_inventory_used_fields": [
+        "cases.*.{delta,rho,inverse_congruence_integer_matrix,inverse_congruence_denominator,finite_cross_C84_new_model}"
+      ]
+    },
+    "frozen_Y_even": {
+      "kind": "members",
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/u00-2026-10-07/CENTRES_EVEN_4096.json",
+      "sha256": "ca822ab0ddf8c30f997d4cd3d45f98551e999a4a2ce59de86cb0982559dd438c",
+      "role": "Bound old function reconstruction"
+    },
+    "global_archive": {
+      "kind": "members",
+      "archive": "nstar_archive",
+      "member": "Objekt-X-Nstar-Jp-Funktionsanschluss-und-Koeffizienten-2026-10-16/inputs/Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13.zip",
+      "sha256": "2ca3c682de8a529b12a0d628c2b606fd04df332d1299ccd36dff71ac3e53d80c",
+      "role": "Bound old function reconstruction"
+    },
+    "nstar_archive": {
+      "kind": "files",
+      "path": "research/x-c1/a9-inverse-spike-calibration-2026-10-15/archives/Objekt-X-Nstar-Jp-Funktionsanschluss-und-Koeffizienten-2026-10-16.zip",
+      "sha256": "b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b",
+      "role": "Previously bound complete old function archive"
+    },
+    "frozen_J_even": {
+      "kind": "members",
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/galerkin84-2026-10-10/MODEL_RAY_EVEN_3072.json",
+      "sha256": "4ef3417e73b0080f2ce06a71ab85def2525ed1180f4016d4d20be682589fd6be",
+      "role": "Bound old function reconstruction"
+    },
+    "a8_model": {
+      "kind": "members",
+      "archive": "global_archive",
+      "member": "Objekt-X-Globaler-Gram-und-vollstaendige-Projektion-2026-10-13/snapshot/work/inherited/Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/remainder-integration-check-v2/originals/weighted-response/inputs/a8_model.json.gz",
+      "sha256": "fb03cbc04183ce3c9032773de4ccde4969e706f835af99c7a6c680fd85e40a75",
+      "role": "Bound old function reconstruction"
+    },
+    "coherent": {
+      "kind": "files",
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-und-kohaerenter-transport/expected/COHERENT_TRANSPORT_INPUTS.json",
+      "sha256": "c0c882ba85bf3ee56a433b5c5bf5d5c5c0341f2a9e03e213e6e19c460aba5666",
+      "role": "OLD_A9_CERTIFICATE",
+      "previous_inventory_used_fields": [
+        "parities.*.K_rational",
+        "parities.*.K_inverse_rational"
+      ]
+    },
+    "high_response": {
+      "kind": "files",
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/expected/COMPLETE_HIGH_RESPONSE.json",
+      "sha256": "52027262debebfdb5258a7fb74ff5280d98d81b34a347d99a91a83470362a606",
+      "role": "DIRECTED_CERTIFICATE",
+      "previous_inventory_used_fields": [
+        "*.tr_X_HB_exact_rational",
+        "*.full_M_norm_squared"
+      ]
+    },
+    "response": {
+      "kind": "members",
+      "archive": "response_archive",
+      "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/RESPONSE_ENERGY.json",
+      "sha256": "7b247fd48e80bab6b34fe02b771dcdcdb0219efdd385285d9a5b52bca1f469d5",
+      "previous_inventory_used_fields": [
+        "parities.*.fixed_X.{physical_TT_adjoint_upper,T_norm_squared_upper,whole_Hilbert_residual_model_error_upper}"
+      ]
+    },
+    "response_archive": {
+      "kind": "files",
+      "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip",
+      "sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee",
+      "role": "DIRECTED_CERTIFICATE",
+      "previous_inventory_used_fields": [
+        "selected members below"
+      ]
+    },
+    "response_proof": {
+      "kind": "files",
+      "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/PROOF.md",
+      "sha256": "8219d5e4f544cc42a4808d6d033c56c608939652b4d851cae881a00842ed84e3",
+      "role": "ANALYTIC_IDENTITY",
+      "previous_inventory_used_fields": [
+        "inventory/proof anchor; no numerical execution"
+      ]
+    },
+    "frozen_response": {
+      "kind": "members",
+      "archive": "response_archive",
+      "member": "Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15/inputs/FROZEN_RESPONSE12.json",
+      "sha256": "132959da5d34c0c89471ee15f7c34d8b4a42ad48c641b6c4db5181113d11426a",
+      "role": "Bound old function reconstruction"
+    },
+    "inventory_proof": {
+      "kind": "files",
+      "path": "research/x-c1/w9-energy-inventory-2026-10-17/PROOF.md",
+      "sha256": "e625e96aad71bea9a5aa485b9c551525a8db14c78db866269e26c495fe382b0f",
+      "role": "Analytic formula and quadrature provenance"
+    }
+  },
+  "additional_repository_anchors": {
+    "H2": [
+      {
+        "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe3-endliche-u8-antwort/sources/COMMON96_HERLEITUNG.txt",
+        "ref": "9ef0784f2cddbfa0c9804312a44b59306a351832",
+        "git_blob": "c4882ded8f3c529274fb9a49d16e6187b7167d35"
+      },
+      {
+        "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe3-endliche-u8-antwort/HERLEITUNG.txt",
+        "ref": "9ef0784f2cddbfa0c9804312a44b59306a351832",
+        "git_blob": "87642a412c6be1cc753e089990a8e9d30a14cbbb"
+      }
+    ],
+    "H3": [
+      {
+        "path": "research/x-c1/w9-model-connection-audit-even-2026-10-23/finite-audit/SOURCE-CAPS.txt",
+        "ref": "9ef0784f2cddbfa0c9804312a44b59306a351832",
+        "git_blob": "cd2e16d283d492e982024eef628a0b7fcdc93bfc"
+      }
+    ],
+    "H4": [
+      {
+        "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/PROOF.md",
+        "ref": "9ef0784f2cddbfa0c9804312a44b59306a351832",
+        "git_blob": "b099a8b557b9a17a8148365cadd8621e7df7f0d6"
+      },
+      {
+        "path": "research/x-c1/w9-gamma-repair-even-2026-10-22/PROOF.md",
+        "ref": "9ef0784f2cddbfa0c9804312a44b59306a351832",
+        "git_blob": "1e5b883085cc4cc2716f98497b28a6067403c8fc"
+      },
+      {
+        "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/core-model-bridge.json",
+        "ref": "9ef0784f2cddbfa0c9804312a44b59306a351832",
+        "git_blob": "39862c0f1b422a63d8a7143d71492cdddacce177"
+      },
+      {
+        "path": "research/x-c1/w9-model-connection-audit-even-2026-10-23/finite-audit/CACHE-ROUNDING.txt",
+        "ref": "9ef0784f2cddbfa0c9804312a44b59306a351832",
+        "git_blob": "9f544001818c3f6bd3559e9aefc2b630a897fe53"
+      },
+      {
+        "path": "research/x-c1/w9-model-connection-audit-even-2026-10-23/finite-audit/SOURCE-CAPS.txt",
+        "ref": "9ef0784f2cddbfa0c9804312a44b59306a351832",
+        "git_blob": "cd2e16d283d492e982024eef628a0b7fcdc93bfc"
+      }
+    ]
+  },
+  "final_author_inventory": {
+    "path": "author-text/SOURCE_BINDINGS.json",
+    "sha256": "963fab5b4528cb13bba1327d2141a50bc0b4b0980b1f7bc8918d07b2291646b7",
+    "input_count": 30,
+    "relative_paths_resolve_inside_original_archive": true,
+    "full_provenance": "author-text/PROVENANCE.json"
+  },
+  "scope_by_hypothesis": {
+    "H1": "Physische Q-Identifikation, Nullfortsetzung, Domänen/Paarungen und Momentadjungierte für die definierten Legendre-, Log- und Momentquellen.",
+    "H2": "Ganze historische F-/J-/Phi-Quellfamilien mit gemeinsamen Low/High- und Featuremajoranten für alle Koeffizienten; keine bloßen 191-Koordinaten-Tests.",
+    "H3": "Gebundene U8/K/D/P-, Antwort- und Koerzivitätszertifikate, gemeinsame Kraftcap 10 und festes Phi12 X_fix Fhat; keine Antwortoptimierung.",
+    "H4": "Historische Modellenergie-, Kernquadratur-, Brücken-, Quellenhüllen-, R2- und Cache-/Momentbelege jeweils in ihrem ursprünglichen Geltungsbereich."
+  }
+}

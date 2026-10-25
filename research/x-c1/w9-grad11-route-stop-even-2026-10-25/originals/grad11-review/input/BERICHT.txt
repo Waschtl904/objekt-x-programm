@@ -1,0 +1,203 @@
+OBJEKT X – GPT 2: MACHBARKEIT DES VERBLEIBENDEN GERADEN GRAD-11-RAUMS
+25. Oktober 2026
+
+ERGEBNIS: BEDINGTES HINDERNIS FÜR DIE FESTE VERGLEICHSROUTE.
+Keine zusätzliche ganze Restintegration empfehlen. Die günstigere
+Einrichtungsdiagnose wurde bereits ausgeführt und liefert eine strikt
+negative Vergleichsreserve. Gezielte Gegenprüfung durch GPT 1 steht aus.
+
+1. Genaue Aussage
+
+Für eine neu eingefrorene rationale Schalenrichtung q und den dazugehörigen
+W-Einheitsvektor s=q/sqrt(q*G_W*q) ergeben sich unter den übernommenen H1–H4
+folgende nach außen gerundete Einschließungen:
+
+ K_P[s] in [0.0327864990425293, 0.0327864990425388]
+ F_T[s] in [0.0327875467274905, 0.0327881384890562].
+
+Die exakten rationalen Endpunkte stehen in DIRECTED-DIAGNOSTIC.json.
+Insbesondere gilt
+
+ F_T[s] - K_P[s] > 1.0476e-6.
+
+Der gebundene variationale Satz liefert
+
+ E_fix[s] := <f(s),Q_new^-1 f(s)> >= F_T[s],
+ E_fix[s] = F_T[s] + <r(s),H_new^-1 r(s)>.
+
+Deshalb ist K_P[s]-E_fix[s] < -1.0476e-6. Eine weitere Abschätzung des
+nichtnegativen Restpreises kann den Vergleich auf dem ganzen Grad-11-Raum
+bei dieser äußeren Antwort und dieser Unterform Q_new nicht schließen.
+Auch ein besserer innerer Test allein ändert E_fix nicht; er zerlegt dieselbe
+Energie anders. Der Befund ist stärker als das Verfehlen eines gewählten
+D- oder Young-Budgets.
+
+Dies ist kein negativer Wert der tatsächlichen Weil-Form: Q_new ist eine
+feste positive Unterform von A9, ihre Inverse eine Vergleichsmajorante.
+Andere Unterformen oder äußere Antworten werden hier nicht ausgeschlossen.
+Keine solche Änderung wurde untersucht oder optimiert.
+Status: AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN; interne Endpunktkontrolle
+bestanden, GPT1-Gegenprüfung offen. Kein Grad-11-Abschluss und kein Fortschritt
+von Punkt 4 auf erledigt. Der abgeschlossene Zweiraumnachweis bleibt gültig.
+
+2. Referenz, übernommene Belege und neue Arbeit
+
+Main wurde am 25. Oktober lesend als
+137940b4e8ea391af408992ae17fb4eebbd6d7c7 bestätigt.
+Tree: 6b9d0fbf4850b80ab92092ddd8238049e7dba701.
+Eltern: 0da6c6aea970ba426e216470c1b2f073ae46c4f6 und
+bc9c86ff4b2a523f6848e1b0ff1fd5decfafd423.
+Die erfolgreichen Integrationsläufe werden aus der Nutzerübergabe übernommen;
+in diesem Forschungsauftrag wurde keine neue vollständige CI-Prüfrunde gestartet.
+
+Das unveränderte ursprüngliche Zweiraumarchiv wurde an SHA-256
+e1911ce244aa51062f6b06bb767f945922199112380022b59846de4ec7f0e89d gebunden.
+Sein SOURCE_BINDINGS.json stimmt für alle 94 erfassten lokalen Quelldateien.
+Der historische Loader prüft zusätzlich seine Datei- und Archivmitglieder.
+Das ist eine Eingangsbindung, keine erneute mathematische Begutachtung.
+Die Main-Verweise und Originaltexte stehen in REMOTE-REFERENCES.json.
+HYPOTHESEN.txt und HYPOTHESEN_QUELLEN.json sind wortgleich beigefügt.
+
+Neu ausgeführt:
+ - Zusammenstellung der vollständigen kleinen Modellmatrizen bei festem T;
+ - spektrale Modelldiagnose einschließlich aller 2+10-Mischblöcke;
+ - Einfrieren genau einer neuen rationalen Diagnoserichtung;
+ - ein gerichteter K_P-Lauf: 55 Abschnitte mit je 128 Gaußknoten;
+ - eine gerichtete F-Auswertung mit den ganzen vorhandenen Fehlermajoranten;
+ - unabhängige rationale Rekombination der ausgegebenen Endpunkte und
+   Prüfung, dass die Richtung außerhalb des alten Zweiraums liegt.
+
+Keine der 411 historischen Ganzrestabschnitte wurde neu integriert.
+Keine zweite T-Lösung, kein Zweiraum-Replay, keine GitHub-Schreibaktion.
+
+3. Feste Abbildung und kritische Richtung
+
+Die zwölf Basisfunktionen ell_n, n=0,...,11, werden gerade fortgesetzt und
+tragen den exakten bisherigen Momentlift. Dies sind zwölf Schalenkoordinaten;
+die Parität reduziert ihre Zahl nicht auf sechs.
+Mit s1=v/N, s2=e0/M, N²=v*G_W*v, M²=e0*G_W*e0 verwenden wir exakt die
+veröffentlichte Fortsetzung aus DIRECTIONS.json:
+
+ alpha(z)=N*z[1]/v[1],
+ beta(z)=M*(z[0]-v[0]*z[1]/v[1]),
+ T(z)=alpha(z)*w1+beta(z)*w2.
+
+So gelten T(s1)=w1 und T(s2)=w2 algebraisch exakt. Auf e2,...,e11 ist T=0.
+Die Basis [s1,s2,e2,...,e11] ist vollständig, aber nicht W-orthogonal.
+Alle Spektraldiagnosen verwenden deshalb G_W beziehungsweise dessen
+kongruent transformierten Gram. Es wurden keine Mischterme gestrichen.
+
+Die neue Richtung ist der kleinste verallgemeinerte Modelleigenvektor von
+K_model-F_model, auf 12 Dezimalstellen rational gerundet und vor der
+gerichteten Auswertung eingefroren. Ihre normierten Rohkoordinaten sind
+ungefähr
+ (-0.625018, 0.684419, -0.269332, -0.077135, 0.118433, -0.005923,
+  -0.056413, 0.040936, -0.011183, -0.001304, 0.002220, -0.000869).
+Maßgeblich sind ausschließlich die zwölf Rationalzahlen in
+DIAGNOSTIC-DIRECTION.json und die gerichtete Normierung.
+Ihr Test ist ungefähr 1.01111235324*w1-0.05264249014*w2.
+Rationale Restkoordinaten gegenüber dem alten Zweiraum sind nicht null.
+Die Auswahl ist eine Diagnose der festen Form, keine Antwortoptimierung.
+Bekannte A11-Positivität oder davon abgeleitete Spektraldaten wurden nicht benutzt.
+
+4. Was das Modell zeigt – ausdrücklich kein Zertifikat
+
+Bei vollständigen Kopplungen hat G_W^-1(K_model-F_model) als kleinsten
+verallgemeinerten Eigenwert ungefähr -1.34361004e-6; der nächste ist
+2.60211163e-8. Dagegen sind separat die zwei alten Richtungen mit kleinstem
+Modellwert 2.11937127e-7 und der zehnfache T-Kern mit 3.85767454e-8 positiv.
+Die negative Richtung entsteht erst unter Einschluss ihrer Kopplung.
+Positive Einzelblöcke oder Diagonalen hätten diesen Befund übersehen.
+
+Auch der endliche Z-Modellpreis ist auf dem zusätzlichen Block groß:
+seine Diagonalen reichen ungefähr von 0.0419 bis 1.3510. Mit dem bisherigen
+a_Z würde bereits K-F-a_Z*Z im Modell etwa -0.05016 erreichen. Dafür wurde
+keine vollständige gerichtete 12x12-Z-Majorante erzeugt. Dieser zweite
+Modellbefund ist für das Stoppergebnis nicht erforderlich; der gerichtete
+F-Untertest entscheidet bereits vor jedem zusätzlichen Restpreis.
+
+5. Gerichtete Fehlersummen am neuen Zeugen
+
+Die bestehende Funktion eval_form aus dem hashgebundenen Vorlauf wurde
+unverändert auf (s,T(s)) angewandt. Sie skaliert die ganzen physischen
+Fehler mit ||s||_W und behält die gemeinsamen F/J-Quellenfehler, Low/High-
+Kopplung, a_fin-Kreuzfehler, D/U-Formfehler, positive quadratische a_fin-
+Kosten sowie eta*q. Es wird keine Fehlerunabhängigkeit angenommen.
+
+Radius des ausgegebenen F-Intervalls: etwa 2.95880783e-7, zerlegt in
+ - Basisenergieradius:               7.94803538e-8;
+ - doppelter Paarungsradius:         1.97163136e-7;
+ - H-Formradius:                    1.92372929e-8.
+Dominant in der Paarung ist a_fin_common mit etwa 9.85529251e-8, vor
+Verdopplung. Der a_fin-Formkreuzpreis beträgt etwa 1.92357466e-8.
+Der D/U-Preis ist nur etwa 3.51110304e-14.
+Das äußere K-Budget hat Radius etwa 4.661e-15; sein Preis nahe Null liegt
+unter 9.322e-15, die Quadraturresthülle unter 2.268e-38 und der zusätzliche
+K-Modellpreis unter 1.661e-24.
+
+Der negative Abstand bleibt nach sämtlichen ausgewiesenen Fehlern strikt.
+Eine Verfeinerung der äußeren Quadratur ist daher kein sinnvoller nächster
+Block. Die numerischen Eigenwerte dienen nur zur Wahl des Zeugen; der
+gerichtete Einrichtungsnachweis benutzt weder ihre Genauigkeit noch ihr Vorzeichen.
+
+6. Inventar des noch nicht abgeschlossenen positiven Raumvergleichs
+
+In der Basis [s1,s2,e2,...,e11] hat jede symmetrische 12x12-Form 78 Einträge.
+Die fehlenden 75 Einträge außerhalb eines bekannten 2x2-Blocks zerfallen in
+20 gemischte Einträge und 55 Einträge des zusätzlichen Zehnerblocks.
+
+G_W: vollständig aus den gebundenen physischen Daten vorhanden.
+K_P: vollständiges exploratives Modell; drei gerichtete Zweiraumeinträge
+vorhanden, außerdem alte grobe Einzelrichtungsobergrenzen. Eine vollständige
+gerichtete 12x12-Budgetmatrix fehlt. Der neue einzelne quadratische Wert
+ersetzt ihre fehlenden Einträge nicht.
+F: vollständiges Modell und gemeinsame Quellen-/Formfehlerregeln vorhanden;
+die drei Zweiraumeinträge und jetzt der neue skalare F-Wert sind ausgewertet.
+Die restlichen 75 Einträge wurden nicht zu einer gemeinsamen gerichteten
+12x12-Matrix zusammengestellt.
+Z: gemeinsames gerichtetes 2x2-Featuremajorant vorhanden, vollständiges
+12x12-Modell hier zusammengestellt; 75 weitere gerichtete Einträge fehlen.
+D: die beiden bisherigen Diagonalen sind unter H1–H4 gebunden, ihr Kreuzterm
+wird bereits durch die Zweiraum-Cauchyhülle bezahlt. Für zehn zusätzliche
+Richtungen fehlen ganze Diagonalpreise und die Kontrolle von 20 neuen
+gemischten plus 45 inneren Kreuztermen. Für einen positiven Gesamtabschluss
+wäre eine gemeinsame Grammajorante nötig; D12=0 darf nicht angenommen und
+der alte Faktor 2 nicht unverändert auf zwölf Richtungen übertragen werden.
+Eine grobe zwölfdimensionale Cauchyhülle wäre D<=12 diag(Dii), sofern alle
+zwölf tatsächlichen Diagonalen gültig eingeschlossen sind. Sie ist hier
+nicht verfügbar und würde das bereits negative F-Budget ohnehin nicht retten.
+
+Die genannten Lücken bleiben dokumentiert. Ihr vollständiges Schließen ist
+für das festgestellte Hindernis weder nötig noch wirtschaftlich sinnvoll.
+
+7. Kleinster sinnvoller Folgeblock, Aufwand und Stopplinie
+
+Der kleinste numerische Entscheidungsblock war die eine gerichtete K/F-
+Diagnose; er ist erledigt. Die Matrixzusammenstellung brauchte etwa 18.80 s,
+der neue gerichtete Lauf samt Eingangsaufbau etwa 24.54 s, davon die
+K-Auswertung etwa 5.87 s. Diese lokalen Messwerte sind keine Zusage für
+andere Rechner oder eine vollständige Gegenprüfung.
+
+Nächster Block für GPT 1: gezielte Gegenprüfung genau dieses Zeugen und
+seiner Anwendungsgrenzen. Prüfen: Eingabeherkunft ohne A11-Zielpositivität,
+feste T-Definition, Normierung und Momentlift, Geltung der gemeinsamen
+Fehlermajoranten für diese Linearkombination, K-Unter/Obereinschließung,
+F-Untergrenze und die variationale Folgerung für Q_new.
+Numerisch genügt zunächst derselbe Einrichtungsblock; Arbeitsgrenze zehn
+Minuten pro numerischem Lauf. Analytische Prüfzeit wird nicht aus diesen
+Laufzeiten hochgerechnet. Keine zusätzliche ganze Restquadratur beauftragen.
+
+Erfolgskriterium: eigenständig bestätigtes F_lo>K_hi unter den genannten
+Voraussetzungen. Dann ist die feste Vergleichsroute für den ganzen geraden
+Grad-11-Raum ausgeschlossen, bei unverändert gültigem Zweiraumergebnis.
+Bei konkretem Bindungs-/Anwendungsfehler nur dessen Wirkung prüfen.
+Bei überlappenden Intervallen UNRESOLVED; bei technischem Abbruch ebenfalls
+UNRESOLVED. Keine automatische Änderung von T, Q_new, K_new oder äußerer
+Antwort und keine neue Such-/Integrationsserie. Ein anderer konstruktiver
+Ansatz benötigt einen gesonderten Forschungsauftrag.
+
+QUELLEN
+https://github.com/Waschtl904/objekt-x-programm/commit/137940b4e8ea391af408992ae17fb4eebbd6d7c7
+https://github.com/Waschtl904/objekt-x-programm/blob/137940b4e8ea391af408992ae17fb4eebbd6d7c7/research/x-c1/w9-two-space-even-2026-10-24/PROOF.md
+https://github.com/Waschtl904/objekt-x-programm/blob/137940b4e8ea391af408992ae17fb4eebbd6d7c7/research/x-c1/w9-new-k-schur-underform-even-2026-10-20/PROOF.md
+https://github.com/Waschtl904/objekt-x-programm/blob/137940b4e8ea391af408992ae17fb4eebbd6d7c7/research/x-c1/w9-residual-centered-control-even-2026-10-21/PROOF.md

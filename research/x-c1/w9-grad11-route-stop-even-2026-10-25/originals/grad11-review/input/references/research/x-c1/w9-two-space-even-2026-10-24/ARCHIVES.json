@@ -1,0 +1,39 @@
+{
+  "archives": [
+    {
+      "path": "archives/Objekt-X-Zweiraum-Prueferschutz-v1-2026-10-24.zip",
+      "bytes": 11442481,
+      "sha256": "8d364fd430d68ce6ec9da29d33fb23aac3d480e489515e1aaa959ae8f93c02f8",
+      "role": "reviewed protection revision; contains unchanged original"
+    },
+    {
+      "path": "archives/Objekt-X-Zweiraum-Gegenpruefung-2026-10-24.zip",
+      "bytes": 11768394,
+      "sha256": "48ab63d06792e5ce1cbf406ac512a2eae6ec808a7f8e0afa7612e56a125cbf7a",
+      "role": "GPT1 targeted mathematical review and original technical finding"
+    },
+    {
+      "path": "archives/Objekt-X-Zweiraum-Prueferschutz-Gegenpruefung-GPT2-2026-10-24.zip",
+      "bytes": 11956,
+      "sha256": "e025e3e83972eba94baa63b843db9e7011014cb8fd8c3db282caeccece2d0e1b",
+      "role": "GPT2 exact technical counterreview, received separately"
+    }
+  ],
+  "historical_original_nested_in_revision": {
+    "member": "originals/Objekt-X-Zweiraum-Ganzrest-und-Matrixvergleich-2026-10-24.zip",
+    "bytes": 11129155,
+    "sha256": "e1911ce244aa51062f6b06bb767f945922199112380022b59846de4ec7f0e89d"
+  },
+  "exact_patch_and_delta": [
+    {
+      "filename": "Objekt-X-Zweiraum-Prueferschutz-v1-2026-10-24-Delta.zip",
+      "bytes": 25394,
+      "sha256": "a36ab5d2783ea92ed1d0bbb247075c163363b80824a2b27fb9420f2ef73085f9"
+    },
+    {
+      "filename": "Objekt-X-Zweiraum-Prueferschutz-v1-2026-10-24.patch",
+      "bytes": 152539,
+      "sha256": "2939f86b103123ac6fa26e8629579f8200b366199e52a6dd96143a3ebdf7672e"
+    }
+  ]
+}

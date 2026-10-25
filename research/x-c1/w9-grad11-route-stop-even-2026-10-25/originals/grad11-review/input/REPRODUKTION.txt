@@ -1,0 +1,45 @@
+Reproduktion und gezielte Gegenprüfung
+
+Dieses Paket enthält den neuen Plan, sämtliche neu erzeugten Ergebnisdateien,
+den rationalen Zeugen, die benutzten Originalhypothesen, Quellbindungen sowie
+die neuen Programme. Es enthält nicht erneut die großen historischen Archive.
+
+Erforderliche gebundene Eingänge:
+ - ursprüngliches Zweiraumarchiv, SHA-256
+   e1911ce244aa51062f6b06bb767f945922199112380022b59846de4ec7f0e89d;
+ - lokale Quellen gemäß sources/SOURCE_BINDINGS.json (94 Dateien),
+   einschließlich der darin und in INPUT_BINDINGS.json verschachtelten Archive;
+ - python-flint 0.9.0; für die reine spektrale Modelldiagnose NumPy.
+
+Die ausgeführten Programme verwenden die vorhandenen Windows-Arbeitsbereiche
+in analyze.py. Für einen anderen Rechner sind ausschließlich ROOT/ARCHIVE und
+der Bibliothekspfad anzupassen; Änderungen an einem Prüfprogramm mitführen.
+Berechnungen werden ausschließlich in dessen eigenem Arbeitsordner gespeichert.
+Die eingefrorene DIAGNOSTIC-DIRECTION.json für eine Gegenprüfung übernehmen,
+nicht aus einer neuen Eigenwertrechnung erneut auswählen.
+
+Minimaler mathematisch relevanter Replay:
+  python -B directed_diagnostic.py
+  python -B endpoint_audit.py
+
+directed_diagnostic.py lädt die hashgebundenen ursprünglichen Daten, extrahiert
+aus dem Originalarchiv ausschließlich die Funktion eval_form per Syntaxbaum
+und wendet sie auf den neuen Zeugen mit dem unveränderten T an. Anschließend
+läuft certify_k.py einmal auf dieser Richtung. Keine alte Vorlaufdatei wird
+ausgeführt oder überschrieben. Die Zehnminutenbegrenzung ist aktiv.
+endpoint_audit.py verwendet nur Standardbibliothek und rationale Arithmetik.
+
+Optionaler, für den Ausschluss nicht benötigter Modellteil:
+  python -B analyze.py
+  python -B spectrum.py
+
+freeze_diagnostic.py dokumentiert die bereits erfolgte Auswahlregel. Es
+verweigert das Überschreiben der eingefrorenen Richtung. Ein erneuter Lauf ist
+für die Gegenprüfung weder erforderlich noch gewünscht.
+
+Wichtig: Die mathematische Anwendbarkeit der historischen ganzen
+Quellenmajoranten und der variationalen Identität muss GPT 1 separat prüfen.
+Ein technischer Replay allein ersetzt diese Prüfung nicht.
+Ein Erfolg dieses Replays ist keine externe fachliche Begutachtung.
+
+Kein GitHub-Schreib- oder Veröffentlichungsauftrag.

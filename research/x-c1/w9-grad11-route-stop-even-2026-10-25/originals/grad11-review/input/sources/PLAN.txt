@@ -1,0 +1,54 @@
+OBJEKT X – VORAB FESTGELEGTER GERADER ZWEIRICHTUNGSVORLAUF
+24. Oktober 2026. Dieser Plan wird vor den neuen Vergleichswerten festgelegt.
+
+Voraussetzung ist das abgeschlossene lokale L1-Paket mit H1–H4, SHA-256
+6a4a713e931f5db5d43931ed730caaa97ac6fbe83fd646a89e4cac2115cb4d8b.
+Keine Wiederöffnung geschlossener Punkte ohne konkreten Widerspruch.
+Die Übertragung neuer Richtungsfehler ist gesondert auszuweisen; die einzelne
+L1-Restenergiegrenze gilt nicht automatisch für den neuen Zweiraum.
+
+1. Physischer Raum, Zeuge und zweite Richtung
+Die zwölf vorhandenen Schalenbasisfunktionen ell_n, n=0,...,11, werden gerade
+fortgesetzt und mit dem bisherigen exakten Momentlift versehen. Ihre Metrik
+ist G_W. s1 ist exakt der bisherige rationale Kandidat v, normiert durch
+N=sqrt(v*G_W v). Sein bisheriger rationaler 84-Testvektor w1 bleibt exakt.
+s2 ist die erste Basisfunktion ell_j in aufsteigender Indexfolge, deren
+Koeffizientenvektor e_j rational unabhängig von v ist, normiert durch
+M=sqrt(e_j*G_W e_j). Es wird keine Richtung nach einem Ergebnis ausgetauscht.
+Keine Orthogonalisierung oder Vorzeichenauswahl nach Vergleichswerten.
+
+2. Gemeinsame lineare innere Testabbildung
+Übernommen wird die bereits verwendete feste innere Mittelpunkt-Löseregel:
+H0 = (D0-U)_JJ - a0* K_new^-1 a0, eta*q beim Auswählen weggelassen.
+Für s2 wird H0_mid w2_mid = (nu0 s2)_mid einmal gelöst und jede Koordinate
+auf 50 Dezimalstellen gerundet (nächster Wert, Bindung nach oben).
+Anschließend ist w2 rational eingefroren. Kein Suchlauf, keine Gewichtssuche,
+keine Anpassung der äußeren Antwort Phi12 X_fix Fhat oder von K_new/P.
+Die gemeinsame Abbildung auf V=span{s1,s2} ist T(a s1+b s2)=a w1+b w2.
+Damit ist T(s1)=w1 algebraisch exakt, nicht bloß innerhalb einer Toleranz.
+Dies ist die einmalige Fortsetzung der inneren Testregel, keine Optimierung
+der physischen Antwort. Ein singuläres Mittelpunktproblem wird gemeldet.
+
+3. Verbindliche Auswertung
+- Hashbindungen, Unabhängigkeit, Normierungen und T(s1)=w1 prüfen.
+- Vorhandene ganze Budget- und Variationsdaten einschließlich Kreuzterm
+  zuerst verwenden. Explorative K_P-Modellmatrix klar vom gerichteten
+  Budget unterscheiden. Fehlende gerichtete Kreuzdaten ausdrücklich melden.
+- F=B_base+T*nu+nu*T-T*H_new*T als gemeinsame symmetrische 2x2-Form.
+- Modell, numerische Intervallradien und analytische Formfehler getrennt.
+- Symmetrische rationale Loewner-Unter-/Obermatrizen aus gemeinsamen
+  Fehlerhüllen bilden; beide Diagonalen allein reichen nicht.
+- Prüfen, ob Budget minus bezahlte Variationsform positiv sein kann, bevor
+  irgendeine neue vollständige Restintegration begonnen wird.
+- Fehlende gemeinsame Rest-, Feature- und Modellfehlergrame benennen;
+  kleinsten sinnvollen Folgeblock, Aufwand und Abbruchkriterien festlegen.
+
+4. Grenzen und Abbruch
+Keine neue Großquadratur, keine zweite Antwortregel, keine Veröffentlichung.
+Vorhandene Matrixalgebra ist erlaubt. Ein Lauf maximal 10 Minuten; technische
+Abbrüche sind UNRESOLVED und kein mathematischer Gegenbefund.
+Falls ein gerichteter negativer Vergleich bereits bei Restpreis null folgt,
+keine teure Restintegration empfehlen. Bei nur fehlenden Budgetdaten diese
+zuerst schließen. Ein günstiger Modell-/Formvorlauf ist kein Zertifikat.
+Keine A11-Zielpositivität oder davon abgeleitete Spektraldaten als Eingabe.
+GPT 1 prüft erst die fertige Lieferung; keine parallele Pilotentwicklung.

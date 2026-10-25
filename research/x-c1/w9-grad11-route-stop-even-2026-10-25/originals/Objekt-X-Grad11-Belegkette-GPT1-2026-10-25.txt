@@ -1,0 +1,179 @@
+OBJEKT X – BELEGKETTE DER GRAD-11-VORANALYSE UND GPT1-GEGENPRÜFUNG
+25. Oktober 2026
+
+Zweck: Die bereits geprüften, eingefrorenen Originaldateien eindeutig
+verbinden und zur Einsicht bereitstellen. Dieser Nachtrag verändert keine
+Forschungsdatei und erhöht keinen mathematischen Status. In diesem Schritt
+wurden ausschließlich Archivbytes, Bindungen und der Main-Verweis gelesen;
+keine F/K-Auswertung und keine Ganzrestintegration wurden erneut ausgeführt.
+
+1. IDENTITÄT DER BEIDEN UNVERÄNDERTEN ZIP-DATEIEN
+
+GPT2-Autorenpaket:
+Dateiname: Objekt-X-Grad11-Machbarkeitsanalyse-GPT2-2026-10-25.zip
+Größe in Byte: 875069
+SHA-256: be2b1ab43514454cfec95dd1283d81e8d2f34745f4cf1554ecfd2d6811888e93
+
+GPT1-Gegenprüfpaket:
+Dateiname: Objekt-X-Grad11-Gegenpruefung-GPT1-2026-10-25.zip
+Größe in Byte: 12838318
+SHA-256: 9fa36e19fcacc2f0392149d9b8c0f29b9b47a0987ce77be6631a4fcc437c0ca7
+
+Das GPT1-Gegenprüfpaket enthält das vollständige GPT2-Originalarchiv unter:
+upload/Objekt-X-Grad11-Machbarkeitsanalyse-GPT2-2026-10-25.zip
+
+Erneuter direkter Bytevergleich am 25.10.2026: identisch.
+Alle 33 Einträge des Autorenmanifests und alle 54 Einträge des GPT1-
+Paketmanifests stimmen. Zusätzlich sind sämtliche 35 Dateimitglieder des
+Autorenarchivs mit ihren Kopien unter grad11-review/input/ bytegleich.
+PACKAGE-MANIFEST.json bindet alle übrigen Dateimitglieder des GPT1-Pakets;
+die äußeren ZIP-Identitäten werden durch die obenstehenden Hashes gebunden.
+Es wurde keines der beiden ZIPs neu verpackt.
+
+2. GEPRÜFTE REFERENZ UND PRÜFSTATUS
+
+Repository: https://github.com/Waschtl904/objekt-x-programm
+Referenzcommit: 137940b4e8ea391af408992ae17fb4eebbd6d7c7
+Referenztree: 6b9d0fbf4850b80ab92092ddd8238049e7dba701
+Main-Verweis am 25.10.2026 erneut ausschließlich lesend über GitHub bestätigt:
+137940b4e8ea391af408992ae17fb4eebbd6d7c7.
+
+Der bereits abgeschlossene GPT1-Prüflauf bestätigt die neue Anwendung:
+Eingabeherkunft, gemeinsame ganze Fehlerbuchung einschließlich Homogenität,
+unabhängige physische G_W-Einschließung aller 144 Einträge, Momentlift,
+W-Normierung und Lage des Zeugen außerhalb des bisherigen Zweiraums.
+Er umfasste genau eine neue F-Auswertung und eine direkte K_P-Auswertung
+mit 55 Abschnitten zu je 128 Knoten sowie unabhängige rationale Rekombination.
+Alle mathematischen Ergebnisfelder stimmten exakt mit GPT2 überein.
+Der Umfang der historischen Übernahmen bleibt im Prüfbericht ausgewiesen.
+
+Status: bedingter Routenausschluss, projektintern gezielt gegengeprüft;
+AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN. H1–H4 werden im vollständigen
+Wortlaut der gebundenen Lieferung übernommen. Keine externe Gesamtabnahme.
+Keine Veröffentlichung oder Integration dieses neuen Befunds beauftragt.
+
+3. ERGEBNIS UND AUSSCHLUSSREICHWEITE
+
+Nach außen gerundete Anzeigen für den geprüften W-Einheitszeugen s:
+K_P[s] in [0.0327864990425293; 0.0327864990425388]
+F_T[s] in [0.0327875467274905; 0.0327881384890562]
+
+Die exakte rationale Differenz der vollständigen Zertifikatsendpunkte ist:
+209536990370272309606208652378394268646889822865216552346822746300298714440843845311
+/
+200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+= 0.00000104768495185136154803104326189197134323444911432608...
+> 1.0476e-6.
+
+Unter H1–H4 gilt E_fix[s] >= F_T[s] > K_P[s]. Der nichtnegative
+Restterm kann diesen Vergleich nicht retten. Ausgeschlossen ist der
+positive Vergleich auf dem gesamten vorgesehenen geraden Grad-11-Raum
+mit der unveränderten äußeren Antwort fixed_X und Q_new.
+Eine bloße Änderung des inneren Tests T ändert diese feste Energie nicht.
+
+Stopplinie: keine weiteren Ganzrestintegrationen und keine bloße Verbesserung
+des inneren Tests für dieselbe äußere Antwort und Q_new. Eine neue Antwort-
+oder Unterformsuche setzt einen gesonderten Forschungsauftrag voraus.
+
+Nicht ausgeschlossen sind andere äußere Antworten, andere Unterformen oder
+andere Majoranten der tatsächlichen A9-Inverse. Es wird keine negative
+tatsächliche Weil-Richtung behauptet. Die Mischterm-Erklärung bleibt eine
+getrennte Modelldiagnose. L1 und der bisherige Zweiraumnachweis bleiben
+unverändert gültig unter ihren Voraussetzungen. Checkliste 3/10; Punkt 4,
+A9→A11, Objekt X und externe Gesamtbegutachtung bleiben offen.
+
+4. DIREKTE BELEGANKER IM GPT1-ZIP
+
+grad11-review/GPT1-GEGENPRUEFUNG.txt
+SHA-256: b66facc2f3f0811b43c2bb9f706c93d15813549d025ef40ebe876b3dc1974bfe
+
+grad11-review/INDEPENDENT-AUDIT.json
+SHA-256: 42c7049d0fef1a60be3899510c1e8940e35de03de8b1226251828156fa0b683c
+
+grad11-review/REPRODUKTION-GPT1.txt
+SHA-256: 65b51d0ea2c5e20a7d6d31e25892f080f5102614d3712b38f379092cd7338a17
+
+grad11-review/input/DIAGNOSTIC-DIRECTION.json
+SHA-256: 47960f93f812be200874e7f907eed05056fe00e6d106b6fef275d91c35fbee33
+
+grad11-review/input/DIRECTED-DIAGNOSTIC.json
+SHA-256: 7d6757a12f2179c3ee4da57e80a7aaddb954d43e780a4c86df19b98225e84761
+
+grad11-review/replay/DIRECTED-DIAGNOSTIC.json
+SHA-256: 90731366420bfea9e7603f1000c9fc8c57b20939c18188cd24998c9eeea24af1
+
+Die originale neue Richtung bleibt eingefroren. Es wurde keine neue
+Richtungsfolge erzeugt. Die unabhängige historische Zeitstempelattestation
+ist nicht Bestandteil der Gegenprüfung; der konkrete Zeugenbefund benötigt
+keine spektrale Optimalität.
+
+5. REPRODUKTIONSBEFEHLE – UNVERÄNDERTE ANLEITUNG AUS DEM GEPRÜFTEN PAKET
+
+Der folgende Text wird byteinhaltlich als UTF-8-Text aus
+grad11-review/REPRODUKTION-GPT1.txt übernommen. Er dokumentiert eine mögliche Reproduktion;
+in diesem Sicherungsschritt wurde sie nicht neu gestartet.
+
+REPRODUKTION DER GEZIELTEN GPT1-GEGENPRÜFUNG
+
+Das beigefügte GPT1-GEGENPRUEFUNG.txt ist das Votum zum tatsächlich erfolgten
+Lauf. INDEPENDENT-AUDIT.json enthält eigene Bindungs-, Endpunkt- und
+Momentliftprüfungen. Der neue F/K-Lauf reproduzierte die ursprünglichen
+mathematischen Ergebnisfelder exakt. Die historische Gesamtanalytik bleibt
+übernommen; eine weitere Ausführung ersetzt keine externe Begutachtung.
+
+Verzeichnisstruktur nach dem Entpacken beibehalten. Die ursprüngliche neue
+GPT2-Lieferung liegt unverändert unter upload/. Ihre entpackten Inhalte liegen
+unter grad11-review/input/. Das ursprüngliche Zweiraumarchiv liegt unter
+grad11-review/inherited/. Die Git-Repositories und Python-Abhängigkeiten sind
+nicht mitgepackt. Keine Datei des Autorenpakets wurde für die Gegenprüfung
+überschrieben. replay/ enthält die separat erzeugten Ausgaben.
+
+Eingänge aus dem gepinnten Repository bereitstellen (Shell im Paketwurzelordner):
+
+ git init grad11-review/repo
+ git -C grad11-review/repo remote add origin https://github.com/Waschtl904/objekt-x-programm.git
+ git -C grad11-review/repo fetch --depth 1 --filter=blob:none origin 137940b4e8ea391af408992ae17fb4eebbd6d7c7
+ git -C grad11-review/repo sparse-checkout set --no-cone --stdin < grad11-review/sparse-paths.txt
+ git -C grad11-review/repo checkout --detach 137940b4e8ea391af408992ae17fb4eebbd6d7c7
+
+Es werden nur die in sparse-paths.txt bezeichneten Eingänge ausgecheckt.
+Der Loader verwirft jede abweichende Dateibindung vor der Auswertung.
+Die Git-Befehle lesen das Remote; sie veröffentlichen nichts.
+
+ Python 3.12 wurde hier benutzt; python-flint 0.9.0:
+ python -m pip install --target grad11-review/deps python-flint==0.9.0
+
+Reproduktion:
+ python -B grad11-review/run_replay.py
+
+run_replay.py ergänzt nur den lokalen Importpfad und ruft danach die
+portierten Originalprogramme sowie den eigenständigen Audit auf.
+Die mathematisch unveränderten Originalprogramme wurden im tatsächlichen
+Lauf einzeln gestartet; die portable Aufrufhülle wurde syntaktisch geprüft.
+Die beiden *.portability.patch-Dateien dokumentieren sämtliche Anpassungen
+an analyze.py und endpoint_audit.py: ausschließlich lokale Eingabepfade.
+
+Der gerichtete Replay hat eine eingebaute 600-Sekunden-Grenze. Bei Timeout
+keinen Erfolg aus alten Ergebnisdateien ableiten: Exitcode, frische Ausgaben
+und Endpunktaudit prüfen. Auf Linux kann zusätzlich timeout 600s verwendet
+werden. Die eigenständige Auditdatei läuft ohne weitere F/K-Auswertungen.
+
+Nicht erforderlich und hier nicht erneut ausgeführt:
+ - analyze.py / spectrum.py als Modelldiagnose;
+ - freeze_diagnostic.py (es darf keine neue Richtung gewählt werden);
+ - historische Ganzrest- oder Zweiraumreplays;
+ - irgendwelche GitHub-Schreibaktionen.
+
+PACKAGE-MANIFEST.json im Wurzelordner bindet sämtliche Paketmitglieder
+außer sich selbst. Das äußere ZIP ist ein neues Gegenprüfpaket; die darin
+enthaltenen ursprünglichen ZIP-Bytes bleiben unverändert.
+
+6. DOWNLOADREFERENZEN
+
+GPT2-Autorenpaket:
+https://chatgpt.com/library?file_id=libfile_cb3cc64eb28081918e097850f16a9378&account_id=personal
+
+GPT1-Gegenprüfpaket:
+https://chatgpt.com/library?file_id=libfile_90f5d78aeeec81919db720bc7984426c&account_id=personal
+
+Keine GitHub-Schreibaktion und keine Nachricht an andere Chats ausgeführt.

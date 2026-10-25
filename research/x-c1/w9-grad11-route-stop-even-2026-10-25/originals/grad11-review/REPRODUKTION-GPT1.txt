@@ -1,0 +1,54 @@
+REPRODUKTION DER GEZIELTEN GPT1-GEGENPRÜFUNG
+
+Das beigefügte GPT1-GEGENPRUEFUNG.txt ist das Votum zum tatsächlich erfolgten
+Lauf. INDEPENDENT-AUDIT.json enthält eigene Bindungs-, Endpunkt- und
+Momentliftprüfungen. Der neue F/K-Lauf reproduzierte die ursprünglichen
+mathematischen Ergebnisfelder exakt. Die historische Gesamtanalytik bleibt
+übernommen; eine weitere Ausführung ersetzt keine externe Begutachtung.
+
+Verzeichnisstruktur nach dem Entpacken beibehalten. Die ursprüngliche neue
+GPT2-Lieferung liegt unverändert unter upload/. Ihre entpackten Inhalte liegen
+unter grad11-review/input/. Das ursprüngliche Zweiraumarchiv liegt unter
+grad11-review/inherited/. Die Git-Repositories und Python-Abhängigkeiten sind
+nicht mitgepackt. Keine Datei des Autorenpakets wurde für die Gegenprüfung
+überschrieben. replay/ enthält die separat erzeugten Ausgaben.
+
+Eingänge aus dem gepinnten Repository bereitstellen (Shell im Paketwurzelordner):
+
+ git init grad11-review/repo
+ git -C grad11-review/repo remote add origin https://github.com/Waschtl904/objekt-x-programm.git
+ git -C grad11-review/repo fetch --depth 1 --filter=blob:none origin 137940b4e8ea391af408992ae17fb4eebbd6d7c7
+ git -C grad11-review/repo sparse-checkout set --no-cone --stdin < grad11-review/sparse-paths.txt
+ git -C grad11-review/repo checkout --detach 137940b4e8ea391af408992ae17fb4eebbd6d7c7
+
+Es werden nur die in sparse-paths.txt bezeichneten Eingänge ausgecheckt.
+Der Loader verwirft jede abweichende Dateibindung vor der Auswertung.
+Die Git-Befehle lesen das Remote; sie veröffentlichen nichts.
+
+ Python 3.12 wurde hier benutzt; python-flint 0.9.0:
+ python -m pip install --target grad11-review/deps python-flint==0.9.0
+
+Reproduktion:
+ python -B grad11-review/run_replay.py
+
+run_replay.py ergänzt nur den lokalen Importpfad und ruft danach die
+portierten Originalprogramme sowie den eigenständigen Audit auf.
+Die mathematisch unveränderten Originalprogramme wurden im tatsächlichen
+Lauf einzeln gestartet; die portable Aufrufhülle wurde syntaktisch geprüft.
+Die beiden *.portability.patch-Dateien dokumentieren sämtliche Anpassungen
+an analyze.py und endpoint_audit.py: ausschließlich lokale Eingabepfade.
+
+Der gerichtete Replay hat eine eingebaute 600-Sekunden-Grenze. Bei Timeout
+keinen Erfolg aus alten Ergebnisdateien ableiten: Exitcode, frische Ausgaben
+und Endpunktaudit prüfen. Auf Linux kann zusätzlich timeout 600s verwendet
+werden. Die eigenständige Auditdatei läuft ohne weitere F/K-Auswertungen.
+
+Nicht erforderlich und hier nicht erneut ausgeführt:
+ - analyze.py / spectrum.py als Modelldiagnose;
+ - freeze_diagnostic.py (es darf keine neue Richtung gewählt werden);
+ - historische Ganzrest- oder Zweiraumreplays;
+ - irgendwelche GitHub-Schreibaktionen.
+
+PACKAGE-MANIFEST.json im Wurzelordner bindet sämtliche Paketmitglieder
+außer sich selbst. Das äußere ZIP ist ein neues Gegenprüfpaket; die darin
+enthaltenen ursprünglichen ZIP-Bytes bleiben unverändert.

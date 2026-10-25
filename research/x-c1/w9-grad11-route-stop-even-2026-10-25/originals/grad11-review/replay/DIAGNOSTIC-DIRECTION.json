@@ -1,0 +1,23 @@
+{
+  "status": "FROZEN_DIAGNOSTIC_DIRECTION_BEFORE_DIRECTED_EVALUATION",
+  "selection": "Smallest generalized model eigenvector of K_model-F for the fixed published T; 12-decimal rational rounding, nearest, ties upward.",
+  "source_sha256": "1c9a9371986aa823a5dadb0021da16165d39f2ee6d2d2799714ca891a9dd1d6a",
+  "raw_coefficients": [
+    "-9765901687/15625000000",
+    "342209675929/500000000000",
+    "-269331770557/1000000000000",
+    "-77134899289/1000000000000",
+    "2368656529/20000000000",
+    "-5922618713/1000000000000",
+    "-14103368097/250000000000",
+    "10234112529/250000000000",
+    "-11182543473/1000000000000",
+    "-260870359/200000000000",
+    "443938877/200000000000",
+    "-434636503/500000000000"
+  ],
+  "response_changed": false,
+  "inner_T_changed": false,
+  "role": "diagnostic physical direction, not an optimized response",
+  "claim_before_directed_evaluation": "MODEL_ONLY"
+}
