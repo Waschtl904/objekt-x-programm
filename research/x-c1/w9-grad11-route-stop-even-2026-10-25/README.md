@@ -1,6 +1,6 @@
 # Grad-11: bedingter Ausschluss der festen Vergleichsroute
 
-**Neue Veröffentlichungsbegleitung vom 25. Oktober 2026.** Dieser Forschungsbranch stellt die bereits eingefrorene GPT2-Lieferung, die abgeschlossene gezielte GPT1-Gegenprüfung und ihre Belegkette als Draft zur Einsicht bereit. Veröffentlichung und mathematische Abnahme bleiben getrennt; ein Merge ist nicht freigegeben.
+**Erstveröffentlichungsstand vom 25. Oktober 2026; technische Ergänzung siehe unten.** Dieser Forschungsbranch stellt die bereits eingefrorene GPT2-Lieferung, die abgeschlossene gezielte GPT1-Gegenprüfung und ihre Belegkette als Draft zur Einsicht bereit. Veröffentlichung und mathematische Abnahme bleiben getrennt; ein Merge ist nicht freigegeben.
 
 Referenz: [`137940b4e8ea391af408992ae17fb4eebbd6d7c7`](https://github.com/Waschtl904/objekt-x-programm/commit/137940b4e8ea391af408992ae17fb4eebbd6d7c7), Tree `6b9d0fbf4850b80ab92092ddd8238049e7dba701`.
 
@@ -71,3 +71,16 @@ python3 research/x-c1/w9-grad11-route-stop-even-2026-10-25/verify_publication.py
 ```
 
 Das Veröffentlichungsmanifest bindet alle übrigen Dateien dieses Verzeichnisses mit Größe, SHA-256 und Herkunft; sich selbst bindet es über den Git-Commit. Der tatsächliche nachgelagerte Abgleich des veröffentlichten Heads wird in der Draft-PR-Beschreibung mit vollständigem Head- und Tree-SHA dokumentiert. Grüne CI wäre keine zusätzliche mathematische Abnahme und keine Mergefreigabe.
+
+
+## Technische Ergänzung: gebundene historische Referenzkopien
+
+Diese neue Begleitnotiz ergänzt den Erstveröffentlichungsstand `a8d69b04f683e34a7bb3c33b35959e1f3bda4e14`. Die dortige Draft-/Freigabeangabe und das Feld `scope` des Veröffentlichungsmanifests beschreiben den damaligen Veröffentlichungsauftrag. Für den technischen Folgecommit wurde gesondert die begrenzte Reparatur mit anschließendem normalem Merge freigegeben, sofern sämtliche vereinbarten Prüfungen und die PR-CI bestehen, der Diff im freigegebenen Umfang bleibt und Main weiterhin auf der oben genannten Referenz steht. Ein CI-Erfolg allein erteilt keine Freigabe. Der tatsächliche Integrationsstand wird in PR #260 dokumentiert; diese Notiz behauptet keinen bereits erfolgten Merge.
+
+Die neue [Referenzdeklaration](../../../00-uebersicht/REFERENCE_COPIES.json) benennt ausschließlich die beiden historischen `PROOF.md`-Kopien aus `w9-new-k-schur-underform-even-2026-10-20` und `w9-residual-centered-control-even-2026-10-21` unter `originals/grad11-review/input/references/research/x-c1/`. Beide sind bytegleich mit ihren ursprünglichen Repositorypfaden am bereits registrierten Integrationscommit `4ede0b70e2df1f133c762d7b0e6527338d597874`. Diese zusätzliche Herkunftsbindung ersetzt keine Quellenverweise in den eingefrorenen Originalen.
+
+Der [Validator](../../../scripts/research_state.py) behält die vollständige `proof_paths()`-Erkennung bei. Nur exakt deklarierte, validierte Kopien mit Rolle `ARCHIVED_REFERENCE_ONLY` werden von der eigenen `META.yaml`-Pflicht ausgenommen. Er prüft striktes Schema, eindeutige sichere Einzelpfade, reguläre Zieldateien ohne Symlinks in sämtlichen Pfadkomponenten, reguläre Git-Quelldateien (`100644` oder `100755`), vollständige Quellcommits innerhalb des registrierten Integrationsstands, SHA-256 und vollständige Bytegleichheit. Beim Basisvergleich muss die Quelle auch im zuvor registrierten Integrationsstand liegen; dessen gleichzeitige Fortschreibung darf eine neue Quelle nicht legitimieren. Selbstbindungen, deklarierte aktuelle oder historische Kopienketten sowie die gleichzeitige Ausweisung als kanonischer Beweis, Pending- oder META-Paket werden abgewiesen. Ordnernamen wie `originals` und `references` gewähren keine Ausnahme.
+
+Die [Regressionstests](../../../tests/test_research_state.py) decken gültige Kopien und die genannten Manipulationen ab; sie sind zusätzlich unter optimiertem Python auszuführen. Alle neuen Ablehnungen verwenden explizite Prüfungen, keine wegoptimierbaren `assert`-Anweisungen. Der vollständige Validator mit Basisvergleich, die generierten Ansichten und der Veröffentlichungs-/Byteabgleich bleiben Pflichtprüfungen. Tatsächliche Befehle, Ergebnisse und commitgebundene PR-CI werden in der PR-Beschreibung protokolliert.
+
+Der technische Folgecommit betrifft genau fünf Dateien: Validator, Tests, neue Referenzdeklaration, diese README und deren Eintrag in `PUBLICATION_MANIFEST.json`. Der gesamte PR ist damit nicht mehr ausschließlich eine additive Veröffentlichung im Paketpfad. Das historische [Veröffentlichungsprotokoll](PUBLICATION_CHECK.md) bleibt unverändert auf seinen damaligen Umfang bezogen. Originalarchive, Originalkopien, sämtliche übrigen Manifestbindungen, historische Anker und mathematische Statusangaben bleiben unverändert. Die Herkunftsprüfung ist keine mathematische Neuprüfung oder Statusaufwertung.
