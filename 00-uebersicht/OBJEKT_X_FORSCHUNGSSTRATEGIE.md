@@ -1,5 +1,38 @@
 # Forschungsstrategie für die Konstruktion von Objekt X
 
+## Aktuelle Orientierung vom 25. Oktober 2026
+
+Die [Forschungsbilanz vom 25. Oktober](FORSCHUNGSBILANZ_2026-10-25.md)
+trennt den integrierten Stand nach #258–#260 von den anschließend lokal
+übermittelten Modellentscheidungen. L1 und der reelle Zweiraumnachweis bleiben
+unter H1–H4 gültig. Die Grad-11-Voranalyse ist erledigt: Der
+[gerichtete Stopzeuge](../research/x-c1/w9-grad11-route-stop-even-2026-10-25/README.md)
+schließt den vollen Vergleich mit der festen äußeren Antwort und Q_new bedingt
+aus. Keine weiteren Ganzrestintegrationen oder bloße innere Testverbesserung
+für dieselbe Route.
+
+Die Verstärkungen C1–C3 und genau eine äußere Rang-eins-Antwortfamilie werden
+nach ihren Modellgates nicht weiterverfolgt. GPT1s analytische und statische
+Prüfungen sowie die rationale Endpunktrekombination sind in der Bilanz nach
+ihrem tatsächlichen Umfang getrennt.
+Die Antwortfamilie endet mit WITNESS_MODEL_GATE_FAIL; der tatsächliche neue
+Vergleich bleibt UNRESOLVED. Gemeldete lokale ZIP-Identitäten sind keine eigene
+GPT1-Byteprüfung und werden durch diese Übersicht nicht zu veröffentlichten
+Originalbelegen.
+
+Die nächste Methodenentscheidung ist offen. Ein neuer Rechenblock benötigt
+einen konkret begründeten Mechanismus, zulässige Eingaben, gemeinsame
+Budget-/Quellen- und Fehlerbuchung sowie einen begrenzten Vorabtest. Die
+Definition wird nicht abgeschwächt; Checkliste 3/10, Punkt 4, A9→A11, externe
+Begutachtung und Objekt X bleiben offen. Operative Quelle ist
+[RESEARCH_STATE.yaml](RESEARCH_STATE.yaml), mit der erzeugten Ansicht
+[NEXT_GATES](NEXT_GATES.md).
+
+Die nachfolgenden datierten Abschnitte bleiben historische Strategiestände.
+Ihre damaligen Folgeaufträge werden durch die aktuelle Orientierung ersetzt,
+soweit die oben genannten Untersuchungsblöcke inzwischen erledigt sind.
+
+
 ## Ergänzung: bedingter reeller Zweiraumnachweis
 
 Zweiraum-Ergänzung 24. Oktober: Der [gemeinsame Vergleich](../research/x-c1/w9-two-space-even-2026-10-24/README.md) gilt lokal unter H1–H4 für sämtliche reellen Linearkombinationen der zwei eingefrorenen geraden Richtungen. Die zweite tatsächliche Restdualenergie ist <2.492e-6 einschließlich eigenem Quellen-/Fehlerledger; die physische Formreserve ist >5.1450e-8 ||s||_W². D<=2diag(D11,D22) deckt den Restkreuzterm. Die bytegleiche Schutzrevision v1 und die gezielte mathematische sowie technische Gegenprüfung sind getrennt gebunden. Die 411 historischen Abschnittsbelege werden im begrenzten Replay nicht frisch integriert. Vollständiger Grad-11-Raum, ungerade Parität, Punkt 4 und externe Gesamtprüfung bleiben offen. Nach gesonderter Integration ist eine günstige Machbarkeitsanalyse des verbleibenden geraden Grad-11-Raums der nächste mögliche Auftrag; keine automatische Vollintegration oder Antwortoptimierung.
