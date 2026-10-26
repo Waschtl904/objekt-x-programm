@@ -1,0 +1,127 @@
+Objekt X — Reproduktion und getrennte Prüfstufen
+
+Die Befehle setzen eine entpackte Arbeitskopie des Pakets voraus. Den
+unveränderten Beleg getrennt aufbewahren. Alle Forschungsbefehle arbeiten
+lokal; kein GitHub-Zugriff und kein Workflow werden benötigt.
+
+1. Dateibindungen, keine Forschungsrechnung
+
+Mit Python 3.13 (nur Standardbibliothek):
+  python -B verify_handoff.py --zip PFAD_ZUM_ZIP
+
+Der separat mitgelieferte Pruefer.py ist dieselbe Datei wie
+workspace/work/breakthrough-2026-10-25/verify_handoff.py im Paket.
+Der ZIP-Prüfer liest alle Mitglieder und prüft Größe, SHA-256 und Vollständigkeit.
+
+2. Rationale Nachrechnung gespeicherter Zertifikate
+
+  python -B verify_handoff.py --directory PFAD_ZUM_ENTPACKTEN_PAKET
+
+Dieser Aufruf prüft zuerst die Dateibindungen und führt danach
+joint_rest_budget.py mit einem separaten temporären Ausgabepfad aus.
+Er summiert alle gerichteten Zellobergrenzen neu, ersetzt beide Randstücke
+jeder Richtung durch rationale Loghüllen, setzt die ganzen Fehlerpreise
+zusammen und berechnet theta mit allen Mischtermen. Die Schlüsselwerte
+müssen mit dem gelieferten Ergebnis exakt übereinstimmen. Das Paket wird
+dabei nicht geändert. Dies ist kein frischer F/K- oder Integrationsreplay.
+
+Zusätzlich lassen sich in einer Arbeitskopie die exakten endlichen Prüfungen
+ausführen (Arbeitsverzeichnis workspace/work/breakthrough-2026-10-25):
+  python -B audit_closed_source_gap.py
+  python -B verify_joint_rest_lemma.py
+  python -B audit_core_geometry.py
+  python -B audit_whole_kernel_bindings.py
+
+Diese Prüfer erzeugen ihre Ergebnisdateien erneut; Laufzeitfelder können die
+Dateiidentität ändern. Nach solchen Aufrufen gehört die Kopie nicht mehr zum
+unveränderten Manifest. Die mathematischen Ergebnisfelder sind zu vergleichen.
+
+3. Native gerichtete Rechnungen
+
+Die verwendete Laufzeit ist Python 3.13.7 mit python-flint 0.9.0; siehe
+RUNTIME.json. Die Laufzeit ist nicht Bestandteil des Forschungsarchivs.
+Der Starthelfer run_reproduction.py setzt OBJX_REPOSITORY auf den Ordner
+repository des entpackten Pakets und leitet genau den alten Archivpfad aus
+LOW_INPUT_RECEIPT.json auf die byteidentische Kopie unter evidence um.
+Er prüft zuerst deren Größe und SHA-256. Die Originalquelle wird nicht editiert.
+OBJX_FLINT_PATH ist nur nötig, wenn flint nicht regulär importierbar ist.
+Keine Pfade aus den ursprünglichen absoluten Herkunftsbelegen übernehmen.
+
+PowerShell-Beispiel aus dem entpackten Paketordner:
+  $env:OBJX_REPOSITORY = (Resolve-Path 'repository').Path
+  Set-Location 'workspace/work/breakthrough-2026-10-25'
+
+Ein gerichteter Replay einer gewählten ganzen Modellrichtung benutzt denselben
+eingefrorenen inneren Cache. Für eine frische äußere Integration muss in der
+Arbeitskopie der entsprechende Ordner directed-whole-Txx zunächst unter einem
+anderen Namen aufbewahrt werden. Sonst werden die bereits gebundenen
+Zwischenergebnisse bewusst wiederverwendet.
+
+T00, Kernordnung 128:
+  python -B run_reproduction.py directed_whole_T00.py --max-cells 600 --max-seconds 7000
+
+Beispiel T01, Kernordnung 64:
+  $env:OBJX_DIRECTION = '1'
+  $env:OBJX_CORE_NODES = '64'
+  python -B run_reproduction.py directed_whole_direction.py --max-cells 600 --max-seconds 7000
+
+Für die übrigen Richtungen OBJX_DIRECTION entsprechend 2 bis 11 setzen.
+Für einen kleinen Vorabtest genügt --max-cells 1; dieser ist ausdrücklich
+kein vollständiger Richtungsbeleg. Teilabdeckungen erhalten keinen Pass.
+Die vollständigen Läufe dauerten auf dem benutzten Rechner je Richtung
+mehrere zehn Minuten. Nicht mehr als drei native Arbeiter zugleich verwenden.
+
+4. Kern- und physische Komponenten getrennt nachrechnen
+
+T00: OBJX_DIRECTION='0', OBJX_CORE_NODES='128'. T01–T11: entsprechende
+Richtung und OBJX_CORE_NODES='64'. Die folgenden Quellen lesen den gebundenen
+Cache und rechnen die wesentlichen Fehlerbausteine frisch; jeweils mit
+python -B run_reproduction.py DATEINAME starten:
+  core_tail_variation.py
+  retained_core_quadrature.py             (T00)
+  retained_core_quadrature_R2875.py        (T01–T11)
+  whole_physical_error_closed.py          (T00–T03)
+  whole_physical_error_dynamic.py         (T04–T11)
+  new_small_model_changes.py
+
+Für die richtungsabhängigen neuen Kontur- und Endpunkthüllen dokumentiert
+certify_direction_components.py die vollständige gemeinsame Ausführung.
+Es behält vorhandene Komponentendateien und Belege. Eine frische Rechnung
+setzt voraus, die gewünschten Ausgaben in der Arbeitskopie vorher gesondert
+aufzubewahren. Für T01–T03 ist außerdem die exakt ausgeführte v1-Quelle erhalten.
+
+5. Endliche Quelle, Metrik und direkte K-Matrix
+
+Die eigenständigen Einstiegspunkte und ihre Reihenfolge sind:
+  certify_low_matrix.py
+  gamma_reserve.py
+  directed_K_matrix.py
+  refine_near_zero.py
+  audit_K_gate.py REFINED_K
+  direct_D_transport.py
+  source_block_ledger.py --gamma-reserve
+  source_arithmetic_closure.py
+  audit_closed_source_gap.py
+
+Auch diese Quellen mit python -B run_reproduction.py DATEINAME starten.
+Die alten Modellmatrizen und die gewählten Basisrichtungen im Paket sind
+feste Eingaben, keine noch auszuführende Optimierung. directed_K_matrix.py
+verwendet vorhandene 78 exakt gebundene Polarisationsbelege weiter. Für eine
+frische K-Integration gilt dieselbe Regel wie bei den äußeren Restordnern:
+K_MATRIX_CELLS in der Arbeitskopie gesondert aufbewahren und neu erzeugen.
+
+Eine Neuerzeugung ändert Laufzeiten und dadurch manche SHA-Bindungen. Sie
+darf nicht mit einem unveränderten Bytevergleich verwechselt werden. Die
+eingefrorenen Tests und Rohmodelle bleiben eine zulässige feste Testwahl;
+eine erneute Optimierung ist für ihre Prüfung nicht erforderlich.
+
+6. Analytische Prüfung
+
+Keine dieser Rechenstufen ersetzt die Prüfung der neuen Anwendungskette.
+COMPARISON_THEOREM.txt verbindet den endlichen und den ganzen Vergleich.
+Der Prüfgegenstand ist konkret in FULL_FORM_ORDER.txt,
+SOURCE_INTERFACE_CHAIN.txt, WHOLE_SOURCE_APPLICATION.txt,
+NEW_CONTOUR_APPLICATION.txt, JOINT_REST_LEMMA.txt, DIRECT_D_APPLICATION.txt
+und NEAR_ZERO_PROOF.txt
+beschrieben. Historische Originale und Voraussetzungen H1–H4 liegen bei.
+AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN bleibt der ausgewiesene Status.

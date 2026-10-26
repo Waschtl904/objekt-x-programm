@@ -1,0 +1,115 @@
+Objekt X — gemeinsame Quellenkette des neuen endlichen Vergleichs
+25. Oktober 2026. Autorenherleitung; gesonderte Gegenprüfung und externe
+Begutachtung offen. Diese Kette schließt keinen unendlichen Rest ein.
+
+1. Bedeutung der Eingänge
+
+Die geordnete Familie besteht aus F12, J84 und h12. F und J sind genau
+die geerbten physischen globalen beziehungsweise gehobenen Funktionen,
+nicht lediglich ihre Schalenrestriktionen. h ist die projizierte Quelle
+zur unveränderten äußeren Ausgangsantwort. Keine h-Spalte wird durch eine
+angenommene A11-Positivität bestimmt. Die neue gemeinsame Testabbildung
+ist ein endlicher rational fixierter Hilfsoperator.
+
+H2 übernimmt die ursprünglichen ganzen Modelle c_F,c_J,Bh_F,Bh_J,
+deren niedrige Fehlergrame und ganze hohe Fehlermajoranten. Für die hohe
+J-Gramform wird ausdrücklich die historische Normierung 91/50 benutzt;
+delta1 ersetzt diesen Normierungsfaktor nicht. H-SOURCE übernimmt die
+gemeinsame Zwölferhülle eResidual bezüglich G_W einschließlich Antwort-,
+Gamma360- und T-Frierungsabweichung. H3 liefert die tatsächliche ganze
+Kopplung B und ||B-B0||<=eB. Sämtliche Originaldateien bleiben unverändert.
+
+Die L1-Identität gilt für freie Quellmomente und beliebige Koeffizienten:
+ c_f=Phi* f, Theta f=M*U f-E c_f,
+ ||Theta f-(M*U f0-E c0)||<=sqrt(gamma)||f-f0||+||c_f-c0||.
+Theta enthält den gesamten unendlichen hohen Raum. Die innere Gamma-
+Orientierung ist die bereits veröffentlichte korrigierte Orientierung.
+
+2. Schärferer Preis derselben ersten vier Quellen
+
+Die alte logarithmische Potentialapproximation hat Grad 1280. Ihr Rest
+auf dem Kern erfüllt für t=x/a8 und r=a8/a9
+ 0<=R(t)<=r^1282 t^1282/[1282(1-r²)].
+Für beliebige vier Koeffizienten xi folgt punktweise
+ |R(t) sum xi_i f_i(a8 t)|²
+ <=tail² t^2564 |sum xi_i f_i(a8 t)|².
+Integration gibt die vollständige positive Vierer-Grammajorante EV;
+alle gemischten Polynomintegrale bleiben enthalten. Das zusätzliche
+Gamma224-Quellenbild wird durch EG=(2a9 epsilon224)² Wz bezahlt.
+Die Majorante 2(EV+EG), die Momentkarten-Norm gamma und der schon
+vorhandene Faktor zwei zur Zusammenführung mit Y8 bleiben enthalten.
+Es wird die Fehlermajorante desselben Quellmodells geändert, nicht
+das Modellpolynom und nicht die tatsächliche Quelle.
+
+3. Ganze hohe Gramform
+
+Für alte 96 Modellspalten g0 mit gemeinsamen hohen Gram HG0 und ganzen
+Fehlergram Ehigh=2 diag(EhF,EhJ) gilt für jeden Vektor t
+ | ||g t||²-||g0 t||² |
+ <=2 sqrt(t*HG0 t) sqrt(t*Ehigh t)+t*Ehigh t.
+Der Code ersetzt das Produkt durch lambda HG0+Ehigh/lambda mit einem
+anschließend exakt festgehaltenen positiven dyadischen lambda.
+Damit sind auch die unbekannten F/J-Kreuzfehler eingeschlossen.
+Für h wird derselbe Satz mit gamma eResidual² G_W benutzt.
+
+Die gemischten F-h/J-h-Einträge haben eine andere Modellherkunft und
+werden deshalb gesondert angeschlossen. Ihre Raw-Fehler werden mit
+2(H8+gamma² e_h*e_h) majorisiert, ihre niedrigen Projektionsfehler mit
+ell_h*ell_h. Die physische h-Abweichung wird gegen die tatsächliche alte
+hohe Quelle geschätzt; dafür genügt 2(HG0+Ehigh). Diese drei Beiträge
+entsprechen der geerbten Paarungskette Raw -> Low -> physisches h.
+Ein bloß identischer Mittelpunkt wird an keiner dieser Stellen benutzt.
+
+4. Gemeinsame niedrige inverse Energie
+
+Für v=c-Bh/delta1 und feste sichere Metrik X1 gilt
+ Delta(v*X1 v)=2 Re((X1 v0)*Delta v)+Delta v*X1 Delta v.
+Die Modellantwort X1 v0 wird vor der Abschätzung gebildet. Für alte
+F/J-Spalten wird die Differenz exakt in
+ Delta c - B Delta h/delta1 -(B-B0)h0/delta1
+zerlegt. Der Mischterm (B-B0)Delta h ist damit im tatsächlichen B Delta h
+enthalten; er wird nicht ausgelassen. BB*<=HB1 begrenzt dessen Wirkung.
+Bei h werden die gebundenen QPhi-Raw- und A160-Low-Paarungspreise für
+Bh benutzt, zusätzlich zur physischen h-Änderung.
+
+Jeder erste Kreuzterm erhält lambda A+B/lambda auf derselben gemeinsamen
+108er Familie. Für die Summe sämtlicher Fehlervektoren folgt der
+quadratische Rest aus ||sum v_i||²<=N sum||v_i||². X1 wird dort durch
+seine positive Spur nach oben begrenzt. Die benötigten c-/Bh-Integrations-
+radien sind ebenfalls eigene Fehlervektoren. Es wird weder stochastische
+Unabhängigkeit noch eine diagonale Quellenstruktur vorausgesetzt.
+
+5. Direkte Paarungen, Matrixintervalle und Vorzeichen
+
+Die F/J-h-Paarungen tragen ihre gerichteten Integrationsradien, die
+ganzen Basis-Koordinatenpreise und zusätzlich die physische h-Änderung.
+Die benutzten physischen Normcaps sind ||F||<=16 und
+||Lambda J||²<=1.000502 in den geerbten Geltungsbereichen.
+Die vollständige strukturierte D-Majorante bleibt separat enthalten.
+Die neue K-Untergrenze kommt aus der gerichteten gemeinsamen K-Matrix,
+einschließlich ihrer physikalischen und Nahnull-Fehlerpreise.
+
+Die Kreuztermungleichungen gelten mit beiden Vorzeichen. Daher ist der
+zusammengesetzte Fehler E108 eine zweiseitige Loewnermajorante für den
+gemeinsamen endlichen Vergleich, bevor irgendein Block eliminiert wird.
+SOURCE_ARITHMETIC_CLOSURE.json bezahlt anschließend alle verbliebenen
+Mittelpunktsetzungen ausdrücklich: Lraw>=(1-alpha)Lmid, die daraus
+folgende inverse Energievergrößerung und sämtliche Eintragsradien des
+gemeinsamen Blocks. Die L-Rundung wird somit nicht stillschweigend null
+gesetzt. Der abschließende rationale Prüfer arbeitet an den gespeicherten
+äußeren Endpunkten und an einer oberen physischen G_W-Matrix.
+
+6. Aussage und verbleibender Umfang
+
+Unter den konkret übernommenen Quellen- und Formlemmata ergibt diese
+gemeinsame Fehlerkette eine positive endliche 108er Matrix. Ihr unterer
+12er Schurblock ist nach gerichteter Arithmetik größer als
+5.0937e-19 G_W; der unabhängige rationale Prüfbeleg hält konservativ
+4e-19 G_W fest. Das ist eine Autorenableitung auf den gebundenen
+historischen Grundlagen; eine separate Prüfung dieser neuen Kombination
+steht aus.
+
+Der unendliche Rest, seine ganze Modellfunktion, die behaltenen inneren
+Quadraturfehler, beide äußeren Ränder, neue Quellen-/Krafttransporte und
+die gemeinsame Zwölferaussage über diese Restenergie sind hier ausdrücklich
+nicht geschlossen. Die Matrixreserve darf keinen dieser Posten verdecken.

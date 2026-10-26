@@ -1,0 +1,80 @@
+{
+  "status": "ALL_WHOLE_KERNEL_AND_PARAMETER_BINDINGS_PASS",
+  "directions": [
+    {
+      "label": "T00",
+      "gamma_coefficients_bound": 225,
+      "delta_exact": "1.84298",
+      "delta_radius_below": "1e-800"
+    },
+    {
+      "label": "T01",
+      "gamma_coefficients_bound": 225,
+      "delta_exact": "1.84298",
+      "delta_radius_below": "1e-800"
+    },
+    {
+      "label": "T02",
+      "gamma_coefficients_bound": 225,
+      "delta_exact": "1.84298",
+      "delta_radius_below": "1e-800"
+    },
+    {
+      "label": "T03",
+      "gamma_coefficients_bound": 225,
+      "delta_exact": "1.84298",
+      "delta_radius_below": "1e-800"
+    },
+    {
+      "label": "T04",
+      "gamma_coefficients_bound": 225,
+      "delta_exact": "1.84298",
+      "delta_radius_below": "1e-800"
+    },
+    {
+      "label": "T05",
+      "gamma_coefficients_bound": 225,
+      "delta_exact": "1.84298",
+      "delta_radius_below": "1e-800"
+    },
+    {
+      "label": "T06",
+      "gamma_coefficients_bound": 225,
+      "delta_exact": "1.84298",
+      "delta_radius_below": "1e-800"
+    },
+    {
+      "label": "T07",
+      "gamma_coefficients_bound": 225,
+      "delta_exact": "1.84298",
+      "delta_radius_below": "1e-800"
+    },
+    {
+      "label": "T08",
+      "gamma_coefficients_bound": 225,
+      "delta_exact": "1.84298",
+      "delta_radius_below": "1e-800"
+    },
+    {
+      "label": "T09",
+      "gamma_coefficients_bound": 225,
+      "delta_exact": "1.84298",
+      "delta_radius_below": "1e-800"
+    },
+    {
+      "label": "T10",
+      "gamma_coefficients_bound": 225,
+      "delta_exact": "1.84298",
+      "delta_radius_below": "1e-800"
+    },
+    {
+      "label": "T11",
+      "gamma_coefficients_bound": 225,
+      "delta_exact": "1.84298",
+      "delta_radius_below": "1e-800"
+    }
+  ],
+  "same_historical_inputs_all_directions": true,
+  "Gamma_correction_sha256": "a3e5aee7e589d4fcbf6e14cbe08b0bff791bc66cb1c9be14b9a7146bf2020966",
+  "scope": "Exact rational membership checks; continuous analytic Gamma remainders are handled by the separate coefficient and application proofs."
+}

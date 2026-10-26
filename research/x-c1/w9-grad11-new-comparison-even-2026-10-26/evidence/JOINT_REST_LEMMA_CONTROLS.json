@@ -1,0 +1,8 @@
+{
+  "status": "EXACT_NEGATIVE_CONTROLS_PASS",
+  "individual_success_joint_failure_detected": true,
+  "inverse_metric_mixed_terms_required": true,
+  "second_example_diagonal_only": "25/38",
+  "second_example_complete_budget": "5/4",
+  "scope": "Algebraic gate controls, not a replay of physical research data."
+}

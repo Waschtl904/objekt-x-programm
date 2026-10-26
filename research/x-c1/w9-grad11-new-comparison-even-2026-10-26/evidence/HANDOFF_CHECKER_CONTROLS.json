@@ -1,0 +1,27 @@
+{
+  "status": "HANDOFF_VERIFIER_CORRUPTION_CONTROLS_PASS",
+  "synthetic_data_only": true,
+  "cases": {
+    "valid_synthetic": {
+      "accepted": true,
+      "expected_accepted": true
+    },
+    "changed_payload": {
+      "accepted": false,
+      "expected_accepted": false
+    },
+    "missing_member": {
+      "accepted": false,
+      "expected_accepted": false
+    },
+    "duplicate_member": {
+      "accepted": false,
+      "expected_accepted": false
+    },
+    "unsafe_path": {
+      "accepted": false,
+      "expected_accepted": false
+    }
+  },
+  "verifier_sha256": "fdc67b30df9172f3e679e676321c3bcd87efda970d482e5046f96bc4f9ccac4b"
+}

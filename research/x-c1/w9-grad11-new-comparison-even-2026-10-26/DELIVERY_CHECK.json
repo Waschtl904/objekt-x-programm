@@ -1,0 +1,14 @@
+{
+  "status": "FINAL_DELIVERY_BYTES_AND_RATIONAL_RECOMBINATION_PASS",
+  "archive": "Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip",
+  "bytes": 360325509,
+  "sha256": "024f20f0c6086aefabb6e3d759f91aaa466906a864c673c0c0b467f3ee627946",
+  "manifest_files": 5263,
+  "all_twelve_whole_directions": true,
+  "directed_cells": 4704,
+  "rational_recombination_replayed": true,
+  "fresh_native_integrations_replayed_in_this_delivery_check": false,
+  "independent_analytic_review_complete": false,
+  "result_sha256": "84058fab114f92b91d5380fa56334caac7cedd71dc13dd25f9248bdee612f09e",
+  "seconds": 78.90447059995495
+}

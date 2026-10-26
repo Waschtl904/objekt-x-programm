@@ -1,0 +1,51 @@
+Objekt X -- strukturierte Ursprungszone der Translationsenergie
+25. Oktober 2026 -- AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Sei u die tatsächliche momentgeliftete, kompakt getragene Schalenfunktion,
+stückweise H1. A=||u'_pw||_2^2 und J=sum|Sprung u|^2 sind genau die
+Felder derivative_square und jump_square des gebundenen K-Prüfers.
+Für 0<r<c=(log(11)/2-log(3))*2^-64 sind die Sprungintervalle disjunkt.
+Die Differenz tau_r u-u zerfällt in die Sprungrechtecke mit Normquadrat
+J*r und den Integralanteil des stückweisen Ableitungsfeldes mit Norm
+höchstens r*sqrt(A). Deshalb gilt ohne Vorzeichenannahme an u:
+
+ | ||tau_r u-u||^2 - J*r | <= 2 sqrt(A*J) r^(3/2)+A*r^2.
+
+Für k(r)=exp(-r/2)/(1-exp(-2r)) gelten auf 0<r<c<1:
+ k(r)<=1+1/(2r),  r*k(r)>=1/2-r/4.
+Die obere Schranke ist dieselbe wie in der übernommenen K-Herleitung;
+die untere folgt aus exp(-r/2)>=1-r/2 und 1-exp(-2r)<=2r.
+Somit |integral_0^c r*k(r) dr-c/2|<=c^2/2 und
+
+ | integral_0^c k(r)||tau_r u-u||^2 dr - J*c/2 |
+ <= 2 sqrt(A*J)(2c^(5/2)/5+c^(3/2)/3)
+    +A(c^3/3+c^2/4)+J*c^2/2.
+
+Die Gram-Matrizen A und J werden durch die zwölf Basisrichtungen und
+ihre 66 Paarpolarisierungen gerichtet rekonstruiert. Sie sind keine
+skalaren Ersatzmodelle: insbesondere bleibt die gemeinsame führende
+Matrix J*c/2 vollständig erhalten. Mit gerichteten Spurobergrenzen
+A<=a_max G_W, J<=j_max G_W ergibt die rechte Seite epsilon*G_W.
+Der neue Fehler liegt unter 2.05e-26 relativ zur tatsächlichen W-Metrik.
+Die vollständigen Intervalle dieser Metrik bleiben bei der Rücknahme
+der Normierung erhalten. Der geerbte physische K-Modellfehler wird
+zusätzlich und genau einmal als err*G_W bezahlt.
+
+Wiederverwendung vorhandener Zellrechnungen:
+Der ursprüngliche Prüfer bildet den Fernanteil plus das Arb-Intervall
+[0,N], N=near.upper(). Für seine gespeicherten äußeren Endpunkte l,h
+liefert deshalb [l,h-N_lower] eine Einschließung des Fernanteils. Dabei
+bleiben alle bei Addition und Rundung entstandenen zusätzlichen Breiten
+erhalten; es wird weder ein Intervallradius willkürlich verkleinert noch
+ein unbekannter mathematischer Nahanteil subtrahiert. Nach Rücknahme
+der positiven W-Normierung wird mindestens N_lower*n2_lower vom oberen
+Endpunkt abgezogen. Der neue tatsächliche Nahanteil wird dann durch
+J*c/2 und die oben bewiesene beidseitige Restschranke ersetzt.
+
+Zwei frische Fernrechnungen ohne Addition von [0,N] kontrollieren diese
+Endpunktrekonstruktion für e0 und e0+e11. Diese Kontrolle ersetzt nicht
+die analytische Intervallbegründung. Die 78 ursprünglichen Rechnungen
+und sämtliche Knoten, Abschnitte und alten Fehler bleiben nachvollziehbar.
+
+Dies betrifft ausschließlich das K-Budget. Eine volle obere neue
+Inversenergie oder ein Grad-11-Abschluss folgt daraus nicht.

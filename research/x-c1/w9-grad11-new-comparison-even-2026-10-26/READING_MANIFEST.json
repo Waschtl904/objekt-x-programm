@@ -1,0 +1,375 @@
+{
+  "status": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN",
+  "scope": "Byte-identical reading extracts; full reproducibility requires the original release archive.",
+  "archive": {
+    "archive": "Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip",
+    "bytes": 360325509,
+    "sha256": "024f20f0c6086aefabb6e3d759f91aaa466906a864c673c0c0b467f3ee627946",
+    "manifest_sha256": "3a388b3051f65b502db718b72c4e690c73c4fbf4a649360ca9afeb66b85389f2",
+    "files": 5263,
+    "whole_bound_source_sha256": "84058fab114f92b91d5380fa56334caac7cedd71dc13dd25f9248bdee612f09e",
+    "qualification": "AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN; inherited H1-H4; targeted independent review of this new route remains open."
+  },
+  "files": [
+    {
+      "path": "AUTHOR_RESULT.txt",
+      "bytes": 6856,
+      "sha256": "7cb2d249ecaa8a0835846a6e75ebaaedd43853622c73aac8fd64d12af780be8c",
+      "git_blob": "7be4b0111446ee829b7a7d305b3b19aa73c3401d",
+      "origin": "unchanged_archive_member",
+      "archive_member": "AUTHOR_RESULT.txt"
+    },
+    {
+      "path": "READ_ME.txt",
+      "bytes": 2394,
+      "sha256": "e3eb5dc5d128f1fb745ebf3773f887042587585168fdd7a578c47905c829ffaa",
+      "git_blob": "4c4bb46ab11ec04d7d6ee0ec221ef42add97dcb9",
+      "origin": "unchanged_archive_member",
+      "archive_member": "READ_ME.txt"
+    },
+    {
+      "path": "REPRODUCE.txt",
+      "bytes": 6235,
+      "sha256": "5c6053a02e5708d8f5cee36552c7e1aeeb0ac38ead65d892af17db3a562dddb9",
+      "git_blob": "9f29aa900286234f5aff602281fcbe231c421ca7",
+      "origin": "unchanged_archive_member",
+      "archive_member": "REPRODUCE.txt"
+    },
+    {
+      "path": "ARCHIVE_MANIFEST.json",
+      "bytes": 1067839,
+      "sha256": "3a388b3051f65b502db718b72c4e690c73c4fbf4a649360ca9afeb66b85389f2",
+      "git_blob": "1dd1e6f78b078c79298489d7d501197fe131cbdb",
+      "origin": "unchanged_archive_member",
+      "archive_member": "MANIFEST.json"
+    },
+    {
+      "path": "proofs/COMPARISON_THEOREM.txt",
+      "bytes": 4967,
+      "sha256": "59935d5ede18d860b1e230c05ec5f39a09a90e8417d8de48cead9383e26447ea",
+      "git_blob": "822134d30513862e4207c728ea43ae07e1e29054",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/COMPARISON_THEOREM.txt"
+    },
+    {
+      "path": "proofs/FULL_FORM_ORDER.txt",
+      "bytes": 4976,
+      "sha256": "a9d6dbd2d2403e4885bf6581243e5d0d75fd816046ce17589f3b171e79060a43",
+      "git_blob": "bad9caea7c3ac23046dfacf46bca8b3a30e356c6",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/FULL_FORM_ORDER.txt"
+    },
+    {
+      "path": "proofs/SOURCE_INTERFACE_CHAIN.txt",
+      "bytes": 6186,
+      "sha256": "f1757bdab86699ba461846bb57b53f4ba0faf0888620a60dda720f3c053ef1b5",
+      "git_blob": "ef84c30f2f753bcb65f601c510da6efb9cfaacfb",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/SOURCE_INTERFACE_CHAIN.txt"
+    },
+    {
+      "path": "proofs/DIRECT_D_APPLICATION.txt",
+      "bytes": 3053,
+      "sha256": "e1df6a98b2790252660e7f1095c8c4c7a56a4f12745ad7ff636d8445344d1bff",
+      "git_blob": "10fa90d24702c0ba199f918a71ffa54abf51eb8b",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/DIRECT_D_APPLICATION.txt"
+    },
+    {
+      "path": "proofs/WHOLE_SOURCE_APPLICATION.txt",
+      "bytes": 8092,
+      "sha256": "e90e934837a8537a0c8de098862dfa38113e6ec08e8fb95ffe6ee33c9aea3cec",
+      "git_blob": "152adde0ad70002f0695eb44be2b1b2fe33e11af",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/WHOLE_SOURCE_APPLICATION.txt"
+    },
+    {
+      "path": "proofs/NEW_CONTOUR_APPLICATION.txt",
+      "bytes": 7616,
+      "sha256": "9b91563b983ac1aa35976c66edda573b903f1cd9a9b11678e3d8220eb445d15f",
+      "git_blob": "0b104412a66a3f4e4560b14844a23a46948b5cb2",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/NEW_CONTOUR_APPLICATION.txt"
+    },
+    {
+      "path": "proofs/JOINT_REST_LEMMA.txt",
+      "bytes": 2774,
+      "sha256": "87e34c1b632d53d1946e27f5501f2ee78cc8fc4ce5c079d67534d260d951dd77",
+      "git_blob": "bd3a31d0e00e9c2f0e6864534880bc8411827a3d",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/JOINT_REST_LEMMA.txt"
+    },
+    {
+      "path": "proofs/NEAR_ZERO_PROOF.txt",
+      "bytes": 2761,
+      "sha256": "8c0bc971139559b687a9514050813ce36bda54c60ba2c77f813dd74e3463b6aa",
+      "git_blob": "7f6d29a613cdc67f14abcb435de0ef960712244a",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/NEAR_ZERO_PROOF.txt"
+    },
+    {
+      "path": "evidence/JOINT_REST_BUDGET.json",
+      "bytes": 53905,
+      "sha256": "84058fab114f92b91d5380fa56334caac7cedd71dc13dd25f9248bdee612f09e",
+      "git_blob": "04eff68adbe282f43bee2ebf5dfcca7f4ac178c8",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/JOINT_REST_BUDGET.json"
+    },
+    {
+      "path": "evidence/SOURCE_ARITHMETIC_CLOSURE.json",
+      "bytes": 54043,
+      "sha256": "abe242bbb0eecb45612bca70faba10ff9931b273bc4e40c93e26b711b972a512",
+      "git_blob": "13f11154c94951164419eebf71376ed44ca7dfc2",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/SOURCE_ARITHMETIC_CLOSURE.json"
+    },
+    {
+      "path": "evidence/SOURCE_CLOSED_GAP_EXACT_AUDIT.json",
+      "bytes": 15413,
+      "sha256": "b7618cc35c07a76acdd2b2095a14de5b30ed0c8984170a28c9a004f62a3361c2",
+      "git_blob": "f00abe778f11e5c7d96a238fa09d96839b7be790",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/SOURCE_CLOSED_GAP_EXACT_AUDIT.json"
+    },
+    {
+      "path": "evidence/COMMON_TEST_MAP_EXACT.json",
+      "bytes": 274170,
+      "sha256": "f45fb0f09bf71ab9cc1148b2dc4754e0ee260a6e4194e312d9f2ee68da4238f8",
+      "git_blob": "23e235e36b6083c55274638cef6f634afe454ddd",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/COMMON_TEST_MAP_EXACT.json"
+    },
+    {
+      "path": "evidence/JOINT_TAIL_GEOMETRY.json",
+      "bytes": 913397,
+      "sha256": "e80f8d9d2c73e9bcc7ed1a8d082c7209c84a1be6551c46dcfa08e19ebac111ae",
+      "git_blob": "9b1afbe8766d5abcbc6b4f1f33c4beb791240e0b",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/JOINT_TAIL_GEOMETRY.json"
+    },
+    {
+      "path": "evidence/JOINT_REST_LEMMA_CONTROLS.json",
+      "bytes": 320,
+      "sha256": "32c19cfbb7ed1eda5b9a066f6ad370dd8a5d347974859d0c1412b9d998ebb2a0",
+      "git_blob": "9929699ca46ef482f1b0600a4a662a09f24c12fa",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/JOINT_REST_LEMMA_CONTROLS.json"
+    },
+    {
+      "path": "evidence/GAMMA_RESERVE.json",
+      "bytes": 2042,
+      "sha256": "aeab0cfeae35097aebd74cf604ce266847cf652eb2f2cc1116af9aed14beda73",
+      "git_blob": "2a1376d0e75fd629ac8d410bebc1ee96845e23d5",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/GAMMA_RESERVE.json"
+    },
+    {
+      "path": "evidence/GAMMA_COEFFICIENT_EXACT_AUDIT.json",
+      "bytes": 408,
+      "sha256": "eea8fab5b7d3e1296a1cfcdfd435cd2e03a750ba765c02a3b7758bf7826f5f03",
+      "git_blob": "d87e802cbd1b0b5157796c36cd5852c3cca03e33",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/GAMMA_COEFFICIENT_EXACT_AUDIT.json"
+    },
+    {
+      "path": "evidence/CORE_GEOMETRY_EXACT_AUDIT.json",
+      "bytes": 26298,
+      "sha256": "71910abbacbb1cdb18c05c4848396745a114a6cc4386833d1dec13178d82ccaa",
+      "git_blob": "217c9f3f52ca291a31cdb6b71a75214ae0d8e70f",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/CORE_GEOMETRY_EXACT_AUDIT.json"
+    },
+    {
+      "path": "evidence/WHOLE_KERNEL_BINDINGS.json",
+      "bytes": 2176,
+      "sha256": "ed2fe988b796ed78c79d4e2f3fbfb0f72c284b6cfd23367e6eb66b77b2d108a3",
+      "git_blob": "298633c8e90d48f169233f4dc1ec714588c60c7b",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/WHOLE_KERNEL_BINDINGS.json"
+    },
+    {
+      "path": "evidence/DIRECT_D_TRANSPORT.json",
+      "bytes": 587264,
+      "sha256": "230f239b7470550bbe7e0a46525b051547d2eb771831cbb2299b2335aa0d08eb",
+      "git_blob": "986d27972002bc3c6d3d841cd702fcad35eff61f",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/DIRECT_D_TRANSPORT.json"
+    },
+    {
+      "path": "evidence/REPRODUCTION_INPUTS.json",
+      "bytes": 33817,
+      "sha256": "66370cdbcf3fe33496f7734d6dd6be0dcb4327b4efe121992bc694c50501bc47",
+      "git_blob": "8a1538f5e3ce916c2f140adb4e0c0d94fde2d857",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/REPRODUCTION_INPUTS.json"
+    },
+    {
+      "path": "evidence/LOW_INPUT_RECEIPT.json",
+      "bytes": 1489,
+      "sha256": "db64fba28f6cbb975223aaf3fca2e21c15612a5ccd74b67137c98d234521e4df",
+      "git_blob": "8600535ffd83b1aff6f8014ec06a09a80ad7d81d",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/LOW_INPUT_RECEIPT.json"
+    },
+    {
+      "path": "evidence/RUNTIME.json",
+      "bytes": 376,
+      "sha256": "ba82cbafb97b1e23947ca6aabb26b39e06d9eb4f6509e8a25f63d3c1d196b865",
+      "git_blob": "d7f9a7b6085ad732e4bc467d97722783e77c51ad",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/RUNTIME.json"
+    },
+    {
+      "path": "evidence/HANDOFF_CHECKER_CONTROLS.json",
+      "bytes": 668,
+      "sha256": "03437bb3d58e3b1b76574b23612f05923521916bf10edfd9596d331e81e9e361",
+      "git_blob": "431ecdff3006beffc3557f5610957ebe40132199",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/HANDOFF_CHECKER_CONTROLS.json"
+    },
+    {
+      "path": "evidence/PORTABLE_CHECK_RECEIPT.json",
+      "bytes": 665,
+      "sha256": "3536a23f851ffba0691efb8d775bafe04a37d19322b0c2727b9067cf2c55f901",
+      "git_blob": "4954b9391cc0945667d16a51c6a0b5b2952bc045",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/PORTABLE_CHECK_RECEIPT.json"
+    },
+    {
+      "path": "checkers/verify_handoff.py",
+      "bytes": 3065,
+      "sha256": "fdc67b30df9172f3e679e676321c3bcd87efda970d482e5046f96bc4f9ccac4b",
+      "git_blob": "37c32fc00883b55720a119c376c87f0e223ca126",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/verify_handoff.py"
+    },
+    {
+      "path": "checkers/joint_rest_budget.py",
+      "bytes": 6578,
+      "sha256": "5ca58c1617b3d9a52775d88e2546e26a9dfd9ad16664baadf0094681f71a9068",
+      "git_blob": "71c20b23931d5991887bb8118dd671ccfe357c91",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/joint_rest_budget.py"
+    },
+    {
+      "path": "checkers/audit_closed_source_gap.py",
+      "bytes": 502,
+      "sha256": "8d74f1f9cfaad56c7328a51163bad0c93d9c197ba0845b9af790e4faa58727a4",
+      "git_blob": "318c6b6a54bc61598c2acc4b8e7dc078b628b66c",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/audit_closed_source_gap.py"
+    },
+    {
+      "path": "checkers/audit_source_gap.py",
+      "bytes": 1792,
+      "sha256": "72854f05cf4a058ab8ae9885c37bc3860ea5fc8e1e4c5c5bd8f2ccab2f497886",
+      "git_blob": "b8cf4c61418e1a5ec7103da53fdcc9828777e4a9",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/audit_source_gap.py"
+    },
+    {
+      "path": "checkers/verify_joint_rest_lemma.py",
+      "bytes": 1288,
+      "sha256": "3de9b4cb706f263dfeb80fba86d992bdc515519dd8ffda27f515381ad1ea2686",
+      "git_blob": "d8078ef782bde38e8cbdace53a428cf3c12a6924",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/verify_joint_rest_lemma.py"
+    },
+    {
+      "path": "checkers/audit_core_geometry.py",
+      "bytes": 3085,
+      "sha256": "d875bb149eda36bd086263f1d7a799fe980cb43641bd8fe59568310ef30b8350",
+      "git_blob": "5f13ec74947d3e38fca96eeb76a6f97e273c061e",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/audit_core_geometry.py"
+    },
+    {
+      "path": "checkers/audit_whole_kernel_bindings.py",
+      "bytes": 1792,
+      "sha256": "9c485afa1f067be76dbe56cfc1ab1fe54fed36f3871def50be0b688650ca08e2",
+      "git_blob": "ae2cd69e0242824bc1db5263563b190549d9bdc1",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/audit_whole_kernel_bindings.py"
+    },
+    {
+      "path": "checkers/run_reproduction.py",
+      "bytes": 1256,
+      "sha256": "a82e3bcf2c36d7b7deb0c0a03ffe8920891471637b15ae8b1e354ce0315c5264",
+      "git_blob": "3152e2aa42c954b76a35e96cd74353af7e97c1a2",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/run_reproduction.py"
+    },
+    {
+      "path": "historical/HYPOTHESEN.txt",
+      "bytes": 2501,
+      "sha256": "2f4ca612ba610dacdf56e0b5954e73fa0ba6b2c65a3ab63cbe2f584457da0ae1",
+      "git_blob": "be44efd8dcaf564c0cca5bec5a4c91dc62a1feff",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/fo-response-reach-2026-10-25/frozen/HYPOTHESEN.txt"
+    },
+    {
+      "path": "historical/HYPOTHESEN_QUELLEN.json",
+      "bytes": 11127,
+      "sha256": "9c88e4a543376a7e9506e70c04e513a397ee70b264d412802e3063abd2cedc0b",
+      "git_blob": "e65d5ec1ba774e45ef6e29a38593bfdd1d27ffaf",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/fo-response-reach-2026-10-25/frozen/HYPOTHESEN_QUELLEN.json"
+    },
+    {
+      "path": "historical/SOURCE_BINDINGS.json",
+      "bytes": 34241,
+      "sha256": "864056c0655b4b5f4fbafc6d23e2ea50ab7cb8a8de59144a43409f01d1f8bc25",
+      "git_blob": "c676c57c93afff83f453f6ab2b2cc1723ce9c664",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/fo-response-reach-2026-10-25/frozen/SOURCE_BINDINGS.json"
+    },
+    {
+      "path": "historical/high-floor/BERICHT.txt",
+      "bytes": 14257,
+      "sha256": "9e5587fe24994cf408db1c1dc99da1de4d94e8ec5249d2ed57662607242efbb7",
+      "git_blob": "0190e8d0bd034860aa8087f23a4a4c4fce069c1c",
+      "origin": "unchanged_archive_member",
+      "archive_member": "historical-high-floor/BERICHT.txt"
+    },
+    {
+      "path": "historical/high-floor/GPT1-ANALYTISCHE-PRUEFUNG.txt",
+      "bytes": 4145,
+      "sha256": "14f7d00d77722eae07bab0bac74a8d3ad9910d4ba4f89d532435036315378ed5",
+      "git_blob": "bdd7646b0f1100e16ab0ba24c84a76f26275c136",
+      "origin": "unchanged_archive_member",
+      "archive_member": "historical-high-floor/GPT1-ANALYTISCHE-PRUEFUNG.txt"
+    },
+    {
+      "path": "historical/high-floor/MANIFEST.json",
+      "bytes": 2740,
+      "sha256": "1dcdaf7f762d8cae7d4d48500c30f9d0d177240a3b22dc6451d6feff4a1f7e2c",
+      "git_blob": "d473d7b3f70a6b82dec50be51b7c76a194d29569",
+      "origin": "unchanged_archive_member",
+      "archive_member": "historical-high-floor/MANIFEST.json"
+    },
+    {
+      "path": "ARCHIVE_IDENTITY.json",
+      "bytes": 525,
+      "sha256": "543a0b51bba7a6a52f6619893c62cc5c2ab62948666cf681538b6123fadd9ac6",
+      "git_blob": "c74569bbf42f3a637a8d886724528fbcef97d6df",
+      "origin": "unchanged_delivery_sidecar",
+      "source_file": "Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26-Beleg.json"
+    },
+    {
+      "path": "DELIVERY_CHECK.json",
+      "bytes": 627,
+      "sha256": "e36cf375f80f58d046c944daf87d5fe69a2720f0f8830ca028921846ae6b627c",
+      "git_blob": "98e5344c545e423fe070c31ce2db7d488ce95d8b",
+      "origin": "unchanged_delivery_sidecar",
+      "source_file": "Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26-Auslieferungscheck.json"
+    },
+    {
+      "path": "checkers/joint_tail_geometry.py",
+      "bytes": 3079,
+      "sha256": "0ccee62c73ebf75526f7511195c9dd386163b591a70b49f4859270be0f292bab",
+      "git_blob": "233e4d116f90945bd21b465997b6da10fcf1d079",
+      "origin": "unchanged_archive_member",
+      "archive_member": "workspace/work/breakthrough-2026-10-25/joint_tail_geometry.py"
+    }
+  ]
+}

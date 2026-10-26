@@ -1,0 +1,7 @@
+{
+  "status": "EXACT_FROZEN_GAMMA224_COEFFICIENT_IDENTITY_PASS",
+  "coefficients_compared": 225,
+  "correction_sha256": "a3e5aee7e589d4fcbf6e14cbe08b0bff791bc66cb1c9be14b9a7146bf2020966",
+  "high_floor_rational_margin": "199999307851/50000000000000000",
+  "scope": "Algebraic coefficient identity and rational constant check; inherited analytic domain and high-floor estimates are not regenerated."
+}

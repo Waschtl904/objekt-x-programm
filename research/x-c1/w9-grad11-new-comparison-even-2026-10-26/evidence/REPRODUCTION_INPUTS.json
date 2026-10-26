@@ -1,0 +1,839 @@
+{
+  "status": "ACTUAL_READ_ONLY_REPRODUCTION_INPUT_INVENTORY",
+  "roots": {
+    "repository": "C:\\Users\\sebas\\Documents\\Codex\\2026-10-21\\github-plugin-github-openai-curated-remote\\work\\repo",
+    "workspace": "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote"
+  },
+  "files": [
+    {
+      "root": "repository",
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-basis84-pruefung-und-l-energie-2026-10-10/check_basis_and_build_L.py",
+      "bytes": 9503,
+      "sha256": "50d5474c2842628f194a5d4ae4a1e16713fe0b71738b838dfbf308ba0ae6def1"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-basis84-pruefung-und-l-energie-2026-10-10/PRUEFVERMERK.txt",
+      "bytes": 5913,
+      "sha256": "20e62136ae49fd75942ce12d00243230b41c32cfbb74e9ceffdb6138f561c422"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-direkte-restform-und-positiver-96er-block-2026-10-11/refine_old_majorant.py",
+      "bytes": 9424,
+      "sha256": "9afeec7892426041858a524de3f9e3e9d2b46578876de0e9f1540edfd6012730"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-neue-antworten84-und-residualbudget-2026-10-11/compute.py",
+      "bytes": 9879,
+      "sha256": "42db7606eb8cd0613d279e298728d258eae7799743f9ab6ce06a96055b50e543"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-neue-antworten84-und-residualbudget-2026-10-11/PROOF.txt",
+      "bytes": 10731,
+      "sha256": "122fabae61dad7d6d6916d899ea8ae8c44a1ead451ac68919e6ce9304f002e61"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-neue-antworten84-und-residualbudget-2026-10-11/SUMMARY.json",
+      "bytes": 949,
+      "sha256": "9681be9ce73837ebdc0db85a6fc3277749cd4d307f18b85d720f2134f0b6b6cc"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a8-a9-global-closure-2026-10-13/reports/ACCEPTANCE.json",
+      "bytes": 17575,
+      "sha256": "28ab9e30cf851ce47c12df5e379272a707c9a323d6b1d225d4f2c3b9e0a3594e"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a9-a11-certificate-calibration-2026-10-15/WORK_ORDER.md",
+      "bytes": 17750,
+      "sha256": "ead51395f495ea5cae0ff08a6726eb2a420668f584e2914f8763cf53b5f4a7e8"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/archives/Objekt-X-Vollstaendiger-Antwortgram-und-Scharfer-Modellfehler-2026-10-15.zip",
+      "bytes": 22180599,
+      "sha256": "b8677c0bb085f40052e52953ec39112894fbaa0f9f5d9997df8ae546238f41ee"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a9-a11-whole-response-gram-2026-10-15/PROOF.md",
+      "bytes": 12161,
+      "sha256": "8219d5e4f544cc42a4808d6d033c56c608939652b4d851cae881a00842ed84e3"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a9-domain-continuation-2026-10-13/original/CHECK.json",
+      "bytes": 2675,
+      "sha256": "ebdf8da2840d2ab77fa01fcdc78c3aabeff23ad8fc59937b1d54da88006dc9b6"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a9-domain-continuation-2026-10-13/original/HERLEITUNG.txt",
+      "bytes": 23771,
+      "sha256": "e6075606f6a26c354f1eb756b568f91cbb7a0b035022b44ef60a0120ae4ea819"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/archives/Objekt-X-A9-Inverserneuerung-und-Hoher-Schurrest-2026-10-13.zip",
+      "bytes": 4884860,
+      "sha256": "a1fa41958d79ab16a7c42b12375c3373f5a86a99993ae2d23c984ff6b3b2e8ae"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/AUDIT.json",
+      "bytes": 8538,
+      "sha256": "33456af98d0ba6151639c66729d12ef3f12bc695f14a9e0985c2115ba0e61783"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/audit.py",
+      "bytes": 11529,
+      "sha256": "fb63ed8c9dd33c522f949a6931686860d96bbd8d596facc1a6743b21418348eb"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt",
+      "bytes": 22261,
+      "sha256": "d221c870fccf8e8ab4298e53c7beff35b63bd704f5a6d0782864b51e93ce83d7"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/COMMON96_HERLEITUNG.txt",
+      "bytes": 8234,
+      "sha256": "60357475b7ae462aed1f4eed73d23662ec883608c7227e05509a618824c345bd"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/DOMAIN_HERLEITUNG.txt",
+      "bytes": 23771,
+      "sha256": "e6075606f6a26c354f1eb756b568f91cbb7a0b035022b44ef60a0120ae4ea819"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/FULL_DUAL_GEOMETRY.txt",
+      "bytes": 7729,
+      "sha256": "3e12959df0cea48e904d9d4f183da82e65677b89a167e78bae8dd7a06ccbe6bd"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a9-inverse-spike-calibration-2026-10-15/archives/Objekt-X-Nstar-Jp-Funktionsanschluss-und-Koeffizienten-2026-10-16.zip",
+      "bytes": 54742910,
+      "sha256": "b48e3895d57cc5cc2c11ca170e32d6af5fbdfcde9948b4db7c370d3376b6d57b"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/a9-inverse-spike-calibration-2026-10-15/original/nstar/FUNKTIONSANSCHLUSS.txt",
+      "bytes": 12096,
+      "sha256": "39664818da04df1e7c8253e09d078a16ccf2729b964747fa067807a8f3bb18bb"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/conditional-inverse-propagation-2026-10-15/PROOF.md",
+      "bytes": 5865,
+      "sha256": "7ce356d66de49602ddc760f2fd551bf22757865285a948eb6adc9064dafc00af"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/l00-z0-directed-interval-2026-10-17/expected/L00_CERTIFICATE_even.json",
+      "bytes": 241605,
+      "sha256": "52399adf3016e6691151adaa24a1adfa943e2c543d95e222b85898f82de5d9c8"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/l00-z0-directed-interval-2026-10-17/expected/L00_CERTIFICATE_odd.json",
+      "bytes": 241573,
+      "sha256": "71c26e4d5b5dc1b662eae79ff244dd3099b51b0370154506b86902224431dff8"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/archives/Objekt-X-Stufe3-Endliche-U8-Antwort-und-Skalaranschluss-2026-10-16.zip",
+      "bytes": 39013097,
+      "sha256": "ab7116f74c9d81b877bec28ac547cc275ca142033a0004ffc3c699c63dd96b52"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt1-stufe1-zertifikat/expected/PSI_CORRECTED.json",
+      "bytes": 686332,
+      "sha256": "3e1bc5db6114333434891a52bef8f3bf6822779b52d14585d249d67943d8c7a1"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-budgets/expected/BUDGET_BOUNDS.json",
+      "bytes": 79946,
+      "sha256": "6229acf4bee398d2262c08a086fb36dd8945135ee860bb591e8218551c291613"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-kp-und-kohaerenter-transport/expected/COHERENT_TRANSPORT_INPUTS.json",
+      "bytes": 1667618,
+      "sha256": "c0c882ba85bf3ee56a433b5c5bf5d5c5c0341f2a9e03e213e6e19c460aba5666"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe3-endliche-u8-antwort/expected/FINITE_ACTION.json",
+      "bytes": 5756394,
+      "sha256": "689636e2b11efcc828100f93b512d4375c8bfebfe8c4a37e3c7c1320f31ed551"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/certify.py",
+      "bytes": 14408,
+      "sha256": "a0a0ecb3b9b8b275b6eb46e0d8d6bad27d9eea5a91fd1b66bf75b074aef2ee89"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/nstar-jp-spike-orthogonality-2026-10-16/original/gpt2-stufe4-hochantwort/expected/COMPLETE_HIGH_RESPONSE.json",
+      "bytes": 86599,
+      "sha256": "52027262debebfdb5258a7fb74ff5280d98d81b34a347d99a91a83470362a606"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/expected/SHARP_K_even.json",
+      "bytes": 40195,
+      "sha256": "67332794271c32d2ac4b8a334d517cf6f9055ce215141df5a96f3bd8ff06f1fe"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/expected/SHARP_K_odd.json",
+      "bytes": 40233,
+      "sha256": "2f699be798952ded396336b07c3c7f2e61398f8d1baec6a504716a04b24a0f01"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/sharp-kp-frozen-directions-2026-10-17/PROOF.md",
+      "bytes": 16232,
+      "sha256": "0ef062d456202482dcdbf3301b7bc945d96fdea10ad61de1466565ec415dcc5f"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/build_data.py",
+      "bytes": 12951,
+      "sha256": "fd63e0694c85448ec61e8deeae42d43e0dee491ec6fb1d6207bacf3430e16135"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/FROZEN_even.json",
+      "bytes": 1302,
+      "sha256": "9feba325ee62bd5bb37477c10f3943b1dd7cea902324f6001a64c6000a6ee90d"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/FROZEN_odd.json",
+      "bytes": 1294,
+      "sha256": "b8833f55b9ddf527132d7afe167a4603c344a1329127077c28982f3f947ed8d9"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_even_384.json",
+      "bytes": 110114,
+      "sha256": "5617f0aa24b67584196e066e43c6f4004eff33fb851b6a0eed36fd771cc39c88"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_even_512.json",
+      "bytes": 110114,
+      "sha256": "19de781646891b4fc57d5f09b9d2d4fb46fb86957151ba253fc747ec5e57085e"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_odd_384.json",
+      "bytes": 110200,
+      "sha256": "1f8b22919c542cda123b24c4eb295c7e1e74887a8461debe45fea69835211dc0"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/shell-polynomial-direction-search-2026-10-17/data/MAPS_odd_512.json",
+      "bytes": 110202,
+      "sha256": "5b2aa30f093eeb7cca18099363fb36fedc9036e7fa320bf8ea6a29f952aeee21"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/shell-search-reassessment-2026-10-17/data/K_MAP_even_128.json",
+      "bytes": 17162,
+      "sha256": "40b687ff0d3ddf302c9c874c126f255c1899ab3732683404ee74734ddbab939d"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/shell-search-reassessment-2026-10-17/data/K_MAP_odd_128.json",
+      "bytes": 17163,
+      "sha256": "a2f746b0fc3bde82aa9a5ef2a7c72b12fb60c3a14986a7c346272e9ea28c72d7"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/shell-search-reassessment-2026-10-17/PROOF.md",
+      "bytes": 10625,
+      "sha256": "db37cda98c73881106e6d860b8526460ed9f0b2c3aa19543382beac0034f70e4"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/ACCEPTANCE.json",
+      "bytes": 2058,
+      "sha256": "cf7c0da1239a2e34041b916e73a707a55de461c9c6ff6eafefded03f251fc9b9"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/audit.py",
+      "bytes": 3237,
+      "sha256": "4c1a60d142fd8e3bda83a4ecc5b5c963bac0ab94fd94402c0b18a5e3dec6a5cd"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/EXPECTED.json",
+      "bytes": 18421,
+      "sha256": "e3534a5ac44ff187c6230ffc6957ec25d973f2695be4c61f86ea0896b515e64d"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/L_UPPER.json",
+      "bytes": 890815,
+      "sha256": "358f210288c3e0013731dfc4363278f14323ebc020bcfec9a66125fb2118063a"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-dual-preflight-even-2026-10-20/PROOF.md",
+      "bytes": 9729,
+      "sha256": "46956a4f27717a7dd7b05f439b04647872002fe951da16626cd96f021ff45ea5"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-energy-inventory-2026-10-17/PROOF.md",
+      "bytes": 14658,
+      "sha256": "e625e96aad71bea9a5aa485b9c551525a8db14c78db866269e26c495fe382b0f"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-k-pilot-even-2026-10-18/pilot_energy.py",
+      "bytes": 11817,
+      "sha256": "2e805205567810bf43e658229c7d570b0d0ab0e305c460624d693f7dd4415108"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-k-pilot-even-2026-10-18/pilot_weights.py",
+      "bytes": 5691,
+      "sha256": "55284299886166a091c69884cb770075f7329e74f06a886f8b7076af553b9bd8"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-k-pilot-even-2026-10-18/PROOF.md",
+      "bytes": 8331,
+      "sha256": "9978c62a48b452bb2edcde98a8098b71688b5fafc1c8e2b5bb3cd12495ea67ea"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-majorant-preflight-2026-10-18/EXPECTED.json",
+      "bytes": 28866,
+      "sha256": "c82568566b55baaea3bcb98a888d5708edabe72832f2c2b2aafc2e673aa96f13"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-majorant-preflight-2026-10-18/MANIFEST.json",
+      "bytes": 788,
+      "sha256": "98845ad9ec3dcc729237ef0d86f1a9a6eb4efbecffe06f303a4b37577cabb58b"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-majorant-preflight-2026-10-18/PROOF.md",
+      "bytes": 11760,
+      "sha256": "fa3029fa948ef7a480374f39dbfe5eb4ae175908305419c8b6274b7604ac3b09"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/ACCEPTANCE.json",
+      "bytes": 2057,
+      "sha256": "0f56bc2fe707e7cbc22b9287af336de9a890449c7529fb27e8daa8aa84737cb8"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/audit.py",
+      "bytes": 3431,
+      "sha256": "a521feece7beeb30a422ed8090dd58488c8e994f7103d2815c15e8075a2c9cfc"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/INPUT_BINDINGS.json",
+      "bytes": 7167,
+      "sha256": "9949f1daca65664f75e6f0c7f4fdccbe398a684c4133a1bc2b8090bbce08bd5a"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/MANIFEST.json",
+      "bytes": 860,
+      "sha256": "b80b6ba7815a3d92f367470cad166fab002e37320db505120c8216d6a2480644"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/PROOF.md",
+      "bytes": 7849,
+      "sha256": "c19cc1f8707c84bdaed582c3e0183e2b4c2c0ce53b9d8990a6ba54449597c670"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/RESULT.json",
+      "bytes": 53497,
+      "sha256": "939abcba0d8c7daa720d61424e9a88b152524a82731b79288535d6e99a109f35"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/SCHUR.json",
+      "bytes": 976238,
+      "sha256": "c2d6e82c15fc20f38dc22a9edd79b5bce9c1069a64d224abc323dd8e2361ad77"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-matrix-error-pilot-even-2026-10-20/verify.py",
+      "bytes": 12395,
+      "sha256": "076f5d76557392bfc38d39f4abbbe275595391c19cad04619fb5b12ef7518e4e"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/ACCEPTANCE.json",
+      "bytes": 1247,
+      "sha256": "de4042c4df9e65ab96fe47fc7eec6d47b681931c12b9a7be7fec9893c0157813"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/audit.py",
+      "bytes": 4594,
+      "sha256": "5b7d1ea129dc35c14b8cca808ca84d950bed50900b13f8636af15b2cd21797bf"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/EXPECTED.json",
+      "bytes": 127535,
+      "sha256": "0f6ea5f268fd46fdc4764c9a6c8d1eb9e38ec5b1690ae4154cd0528beceddee8"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/INPUT_BINDINGS.json",
+      "bytes": 1644,
+      "sha256": "4ae46af4940af4137083f210ff65dc336a86dddc64b4e1d2ef2d9ed610a1804a"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/MANIFEST.json",
+      "bytes": 778,
+      "sha256": "9c8400e0976deca63055b3bf052f5c1436cff2a996d6fd804f9c2459304fc4e6"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/PROOF.md",
+      "bytes": 10437,
+      "sha256": "c26cebb43ceb900a1f872a7a4bc938b606462c2167e5cc43e53c6324fd4df338"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-matrix-error-selection-2026-10-20/verify.py",
+      "bytes": 9201,
+      "sha256": "8ed4f70b4a8e311586f5ca9dc008d1481fda5f4c3aff3ec08cbf366be59f120c"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/__pycache__/engine.cpython-313.pyc",
+      "bytes": 27431,
+      "sha256": "1d5fc64ed458032a4dea12ed546795145738745e9d611160c60a6e8f64ebfc27"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/CANDIDATE.json",
+      "bytes": 9733,
+      "sha256": "70e8f72ab0cb8ca1ac0d254392384a2040a9d76d04ebf82587c48771e9f34628"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/engine.py",
+      "bytes": 14468,
+      "sha256": "d0b14347eed42b9c5acb065ef530de1129886a1cb72b0db142e7f32335a56a74"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-new-k-schur-underform-even-2026-10-20/INPUT_BINDINGS.json",
+      "bytes": 4678,
+      "sha256": "ddab81c9e718ffa254d26cb80abb75f25818a77235345318629038bde88b3dc5"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/assemble.py",
+      "bytes": 13232,
+      "sha256": "aa6ad9a328ee62bb3e0aaeea36e5b50ee0f6e28ecee323e6a7093cd55cc570dc"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/certify_k.py",
+      "bytes": 7371,
+      "sha256": "74e3c6b5642bc03f9f60464a8bcecf3db516137990da19550b496710170372cb"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/common.py",
+      "bytes": 5032,
+      "sha256": "037580c8edec75e42aa599e21ff2a073f1308f6ec5746c77f81695ed0169a8eb"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/CANDIDATE_even.json",
+      "bytes": 12826,
+      "sha256": "49653e4edd76760a054681cbf73e1695622b823d693ce2cbae81fca90edc2427"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/COMPARISON_even.json",
+      "bytes": 6672,
+      "sha256": "a4429379e5059d454b01063929371307a787f122fa4e800c48e8f2dbb8b6e7ba"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/K_P_even.json",
+      "bytes": 7403,
+      "sha256": "35dd61579fc2db9269947928e438fbf966972378c24511609e1fa40c3ac9de58"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/expected/PAIRS_even.json.gz",
+      "bytes": 963155,
+      "sha256": "044d52d8a00f45f36f0591b9d3b51b8468fc94513c24b4fc2b04b797a6969bb8"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/INPUT_BINDINGS.json",
+      "bytes": 21516,
+      "sha256": "829b4884c64d23d90efc6382abe20f449d6229af8ccf8db4b85d12e5b7e03e28"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/MANIFEST.json",
+      "bytes": 3511,
+      "sha256": "ceeb82f47e0b5d3add5c33a752d3377ce5a154184ea2e95e31eaca00439deee8"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/old_fields.py",
+      "bytes": 11188,
+      "sha256": "e154b4642474813cfcfd6660acd0b5dbd5c80026590917bd94a8bfb74072a984"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/PROOF.md",
+      "bytes": 22749,
+      "sha256": "2bb4145cc8681219d416bd885e3a31f015c119baf54d85c8f60a836f77e0e5c9"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/provenance/l00-certify-6927e409.py.txt",
+      "bytes": 16162,
+      "sha256": "6927e4090e4575bbdaa06248bd3216cfe0b62f906eb834c68907f0bc1af8585b"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/residuals.py",
+      "bytes": 7324,
+      "sha256": "e4670f3f10ca3e358f82d206b572d4d8c426b04791917e03bf4f04abededd23a"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/WEIGHT_BOUNDS.json",
+      "bytes": 12138,
+      "sha256": "09d0b0c89f3a072a3477f2801acf30b382f18355d882b650b8982f941d4d89ed"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-partial-energy-2026-10-18/weights.py",
+      "bytes": 5980,
+      "sha256": "6f5e3e2eacda2345dc5d764fa221cbbd36b12eafb32d6cd10dcf0af0edf0bdcd"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/RESULT.json",
+      "bytes": 18150,
+      "sha256": "487389cdeeedafe6268c7596b2cf6ebdcf656e120030960ded26d15cb15f45dd"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/fast_evaluation.py",
+      "bytes": 3876,
+      "sha256": "ff0645e02fa0dc7a6497fc52f51818b707dd1077f77689e764d599cf9ffab5b2"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/model_cache.py",
+      "bytes": 1874,
+      "sha256": "ec22013fc8f87015b412f2482350a2091a78d412e5d95267c6bbe75cb1af7cd0"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-residual-centered-control-even-2026-10-21/whole/whole_function_probe_v2.py",
+      "bytes": 14166,
+      "sha256": "36d3f3fcb6cb360ca200cc6507237ed94e0fe7e4e96c97deec3c3925e2a5fce5"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-schur-form-error-even-2026-10-19/engine.py",
+      "bytes": 6084,
+      "sha256": "1914104e9a705676e0976fd2326656820e64988717a04948bc98032178adc922"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-schur-form-error-even-2026-10-19/PROOF.md",
+      "bytes": 7341,
+      "sha256": "23583bc127ff376e1508aa195c9438628a2f41256f3247bc4b98dda5c314a1c9"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/engine.py",
+      "bytes": 11433,
+      "sha256": "af84c797f51a14cf36183c676f605f7fa2074149352cdc0058dd5572f74fa878"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-schur-variational-even-2026-10-19/PROOF.md",
+      "bytes": 10159,
+      "sha256": "051cac056c09ce8ad4e17a315fcd1e90341ca942a9efc2870243e837c4cfd0ea"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-structural-decision-2026-10-18/EXPECTED.json",
+      "bytes": 14618,
+      "sha256": "36386126d3a41712abb9415fda96814b9982b71f6d191696b971f0b5a79c908d"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-structural-decision-2026-10-18/INPUT_BINDINGS.json",
+      "bytes": 4229,
+      "sha256": "229a11acaefd6e6a26b464ee6476dd851eeba512a1e9d7972764a266a5049db9"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-structural-decision-2026-10-18/PROOF.md",
+      "bytes": 15957,
+      "sha256": "fe338a425cb864fa06352c7c4505ee685d053f51c50e8e5b3daae116bd700e2c"
+    },
+    {
+      "root": "repository",
+      "path": "research/x-c1/w9-structural-decision-2026-10-18/verify.py",
+      "bytes": 9379,
+      "sha256": "5c9e57774fad011172d549cf1ab8efa0d4efa7290ad90219b05f8cc155530fb9"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/constant_core_tail.py",
+      "bytes": 1842,
+      "sha256": "332ed76903620d7e3b473dd1c8be51d6314435f1d21ee10465cfa23472217225"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/core_regular_fix.py",
+      "bytes": 1437,
+      "sha256": "64672a60e87f1f43e3bc5c5ea48eee52adcb54e85a16be4bdde962869d75e2b2"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/DIRECT_D_TRANSPORT.json",
+      "bytes": 587264,
+      "sha256": "230f239b7470550bbe7e0a46525b051547d2eb771831cbb2299b2335aa0d08eb"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/GAMMA_RESERVE.json",
+      "bytes": 2042,
+      "sha256": "aeab0cfeae35097aebd74cf604ce266847cf652eb2f2cc1116af9aed14beda73"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/joint_sources.py",
+      "bytes": 4135,
+      "sha256": "57ad8baf79a497d8f245404b56d461a4f55c61cf0a809a5d1f125aad26bffa8c"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/JOINT_SPECTRUM.json",
+      "bytes": 71411,
+      "sha256": "b100e06402edf04d205e96a332d473546df2b30f3f6a13bdf7752e4545837959"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/load_direction_namespace.py",
+      "bytes": 964,
+      "sha256": "d875f6973e079296f5b90edb0bcfd8a87416207869cafec61178b88cfebd1c2f"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/LOW_SCHUR_CERTIFICATE.json",
+      "bytes": 10919441,
+      "sha256": "0eabf4ef1a1141db3b7bb0157ec6a4d14ac127b1e06c50df40e00bc24de85d4c"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/REFINED_K_MODEL_GATE.json",
+      "bytes": 229849,
+      "sha256": "f724b2789db6b4202b40450e53ff82ece6050926842bd250d87bbbd04f409a97"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/restored_low_p16_high_eta_MATRICES.json",
+      "bytes": 17828688,
+      "sha256": "21457b695307a49f9906b79ff2a17e40e514f31668d01bdb5951dfeda82b6580"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/scalar_source_adapter.py",
+      "bytes": 570,
+      "sha256": "2c7b18ac86b5739b48414fc6a8ef76767ca2e1a865904fa76803614515ba2333"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/shared_log_moments.py",
+      "bytes": 1390,
+      "sha256": "8613335e3e83f202a17a8f9c2830c3aba23849680af3e0881dce7d02d501c003"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/T00_MODEL_BINDING.json",
+      "bytes": 1317,
+      "sha256": "a4a4f8ddcb9b1653d10900187fc9d8b9802373d8f56347d9b7993fa67ccb2a9b"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/whole-model-358daedad00a-n128.json.gz",
+      "bytes": 10523349,
+      "sha256": "21ecc2d8642ce7a975d03442cd1767c65905fa5a544180890556fdbd0fbde518"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/whole_candidate_probe.py",
+      "bytes": 3871,
+      "sha256": "ce1721e75ec6ad9d2862e6da843c94e32256d689aa697613effe8270bfe10a04"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/WHOLE_CANDIDATE_T00.json",
+      "bytes": 186591,
+      "sha256": "ba1563ffbed1e86ae5b2574f67e3542899ffce1b9dee26deb896041349471296"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/whole_direction_probe_shared.py",
+      "bytes": 3006,
+      "sha256": "038a2d665aef6436589d60e5a8a62883eefdb887272ee361c7d24a1bf7c6a559"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/whole_direction_probe_tail.py",
+      "bytes": 1034,
+      "sha256": "6455ede87437e16a1c0a1babe0601fa02565e23ac7d2985f46a93b51fe60c198"
+    },
+    {
+      "root": "workspace",
+      "path": "work/breakthrough-2026-10-25/whole_gate_integrate.py",
+      "bytes": 5910,
+      "sha256": "9ca4a54afc60675b824a05b952bd01b4b52ebc683c719d6a5127fd6aa33a425d"
+    },
+    {
+      "root": "workspace",
+      "path": "work/fo-response-reach-2026-10-25/bound_loader.py",
+      "bytes": 1650,
+      "sha256": "b0c615b9afe64a338313373d73322e6530d9575c2860d835d3e86270d1f130a8"
+    },
+    {
+      "root": "workspace",
+      "path": "work/fo-response-reach-2026-10-25/frozen/DIAGNOSTIC-DIRECTION.json",
+      "bytes": 926,
+      "sha256": "47960f93f812be200874e7f907eed05056fe00e6d106b6fef275d91c35fbee33"
+    },
+    {
+      "root": "workspace",
+      "path": "work/fo-response-reach-2026-10-25/frozen/DIRECTED-DIAGNOSTIC.json",
+      "bytes": 16545,
+      "sha256": "7d6757a12f2179c3ee4da57e80a7aaddb954d43e780a4c86df19b98225e84761"
+    },
+    {
+      "root": "workspace",
+      "path": "work/fo-response-reach-2026-10-25/frozen/DIRECTIONS.json",
+      "bytes": 21458,
+      "sha256": "cda42935b7e0268ebb377aec7b0739a2c5befc94cc63eca7db3f1da5982afaac"
+    },
+    {
+      "root": "workspace",
+      "path": "work/fo-response-reach-2026-10-25/frozen/HYPOTHESEN.txt",
+      "bytes": 2501,
+      "sha256": "2f4ca612ba610dacdf56e0b5954e73fa0ba6b2c65a3ab63cbe2f584457da0ae1"
+    },
+    {
+      "root": "workspace",
+      "path": "work/fo-response-reach-2026-10-25/frozen/HYPOTHESEN_QUELLEN.json",
+      "bytes": 11127,
+      "sha256": "9c88e4a543376a7e9506e70c04e513a397ee70b264d412802e3063abd2cedc0b"
+    },
+    {
+      "root": "workspace",
+      "path": "work/fo-response-reach-2026-10-25/frozen/MODEL.json",
+      "bytes": 3638581,
+      "sha256": "284d7e13220f5ae853f70065d600eb5a36ad616b2ba2e25843be50c50a1047fc"
+    },
+    {
+      "root": "workspace",
+      "path": "work/fo-response-reach-2026-10-25/frozen/SOURCE_BINDINGS.json",
+      "bytes": 34241,
+      "sha256": "864056c0655b4b5f4fbafc6d23e2ea50ab7cb8a8de59144a43409f01d1f8bc25"
+    },
+    {
+      "root": "workspace",
+      "path": "work/fo-response-reach-2026-10-25/FROZEN_BINDINGS.json",
+      "bytes": 2256,
+      "sha256": "d75f21598dad0c39cd5c2cb088a1d5e47fcdc4b3c117966abebbaee1afe068fc"
+    },
+    {
+      "root": "workspace",
+      "path": "work/fo-response-reach-2026-10-25/MAIN_TREE.json",
+      "bytes": 730262,
+      "sha256": "f12ac55eb27aa9adfe6753d630d0f0936fda1ae6a5bfecd4b961d86b34f3ea68"
+    },
+    {
+      "root": "workspace",
+      "path": "work/fo-response-reach-2026-10-25/previous_family.py",
+      "bytes": 8300,
+      "sha256": "494ccac0d371976a8bb91d0ad868f2fea87e340e044252f52340595664d7cd63"
+    },
+    {
+      "root": "workspace",
+      "path": "work/grad11-feasibility-2026-10-25/deps/flint/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 3399,
+      "sha256": "4409b072004422ca962c67bb8d776aa1eb05a8a74162b03770fa51a5275c13e2"
+    },
+    {
+      "root": "workspace",
+      "path": "work/grad11-feasibility-2026-10-25/deps/flint/flint_base/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 190,
+      "sha256": "97c42bcbf50e4e231b51a43666b64172e850266cb824aa9e46b583c56ac1a454"
+    },
+    {
+      "root": "workspace",
+      "path": "work/grad11-feasibility-2026-10-25/deps/flint/functions/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 189,
+      "sha256": "91c9d4383ee92104cef5f5fb4272effa22b1066c35edd6573f8dcb32293929f6"
+    },
+    {
+      "root": "workspace",
+      "path": "work/grad11-feasibility-2026-10-25/deps/flint/types/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 185,
+      "sha256": "966237163e82875e461d7098e11ebbc6488d4d0cec2cef84b7262bee8e8bc111"
+    },
+    {
+      "root": "workspace",
+      "path": "work/grad11-feasibility-2026-10-25/deps/flint/utils/__pycache__/__init__.cpython-313.pyc",
+      "bytes": 185,
+      "sha256": "e6f80bc4ba71fc80a7c7d2ecfb693e4a0f0f806e643edd92015a37034be80a13"
+    },
+    {
+      "root": "workspace",
+      "path": "work/grad11-feasibility-2026-10-25/deps/flint/utils/__pycache__/flint_exceptions.cpython-313.pyc",
+      "bytes": 1591,
+      "sha256": "c2699d0b772af2d71e7523354023eb83530ea8b0c91b792aa66a2167a6b71ee7"
+    }
+  ],
+  "scope": "Actual file reads of the complete joint finite build and signed-strip whole-model load. Author proofs and later cell records are added separately to the handoff.",
+  "seconds": 82.13576809992082
+}

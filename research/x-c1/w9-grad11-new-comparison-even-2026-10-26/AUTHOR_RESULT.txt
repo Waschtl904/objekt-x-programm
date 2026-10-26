@@ -1,0 +1,119 @@
+Objekt X — neuer gemeinsamer Vergleich auf dem geraden Grad-11-Raum
+GPT 2, 26. Oktober 2026
+AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN; historische Voraussetzungen H1–H4.
+
+ERGEBNIS UND REICHWEITE
+
+Die neue Vergleichsroute besteht den ganzen gemeinsamen Zwölfervergleich
+unter der im Paket ausgeschriebenen Autorenherleitung und H1–H4. Alle zwölf
+Restbilder sind vollständig eingeschlossen; ihre Mischterme sind bezahlt.
+Es handelt sich um einen konstruktiven Fortschritt gegenüber der zuvor
+ausgeschlossenen festen Route, nicht um einen Abschluss von Objekt X oder
+der tatsächlichen Weil-Positivität auf dem gesamten vorgesehenen Funktionsraum.
+
+Die äußere Antwort P0 bleibt unverändert. Geändert wird die Vergleichsunterform:
+Young-Parameter der ganzen niedrigen Kopplungsmajorante 1e-16 statt 1e-10,
+hoher Boden delta1=1.84298, vollständiger tatsächlicher Fo-Block, eta=0 und
+eine bezahlte niedrige Reserve 1e-40 I aus der schärferen Restschranke desselben
+Gamma224-Polynoms. Der negative Young-Gegenterm bleibt enthalten.
+
+Die Herleitung ergibt global Aeff0 <= Aeff1 <= A8 und 0 < Qold <= Q1 <= A9.
+Die Fehlerrechnung benutzt die tatsächliche Kopplung mit BB* <= HB1. Sie
+ersetzt BB* nicht durch einen endlichen Modellgram. Die neue Testabbildung
+y(c)=Y B^-1 c ist einmal exakt rational festgelegt, mit 96 Testkoeffizienten
+für jede der zwölf Eingaberichtungen. Modelldiagnostik diente der Basiswahl;
+externe Zielspektraldaten und angenommene A11-Positivität wurden nicht benutzt.
+
+ENDLICHE RESERVE UND GANZER REST
+
+Der gemeinsame 108er Quellenblock umfasst F12, J84 und h12. Gerichtete
+K-Paarungen, strukturierte D-Fehler, Quellenfehler und verbleibende
+Arithmetikradien sind vor der Elimination gebucht. Ein gesonderter exakter
+rationaler LDL-Prüfer bestätigt für den verbleibenden Zwölferblock
+
+    Gp >= 4e-19 G_W.
+
+Sei C=B*GpB und A=C^-1. C besitzt zwölf exakt positive rationale LDL-Pivots;
+C A=I wurde exakt geprüft. Für die ganzen Restnormen n_i gilt einschließlich
+aller Mischterme der gemeinsame Preis
+
+    theta = Summe_ij |A_ij| n_i n_j <= 0.002403782 < 1.
+
+Diese angegebene Dezimalzahl ist eine nach oben gerundete rationale Schranke.
+Die exakten ungerundeten Werte stehen in JOINT_REST_BUDGET.json. Damit folgt
+für den neuen ganzen Vergleich
+
+    K_P[c] - <h_c,Q1^-1 h_c> >= 3.990384872E-19 G_W[c].
+
+Die positive Differenz folgt aus dem endlichen Variationsvergleich und dem
+Abzug der vollständigen Restenergie. Die gemeinsame Abschätzung verwendet
+die Spur des positiven, mit C normierten Restgrams. Sie setzt keine
+Orthogonalität der Restbilder voraus. Zwei exakte Negativkontrollen zeigen,
+dass Einzelrichtungsprüfungen oder das Weglassen von Restmischtermen einen
+fehlerhaften Schluss erlauben würden; der verwendete Prüfer weist dies ab.
+
+VOLLSTÄNDIGE RICHTUNGSBELEGE
+
+T00: 411/411 Abschnitte; n_i <= 2.11677373120E-11; A_ii*n_i^2 ungefähr 0.00087965561
+T01: 413/413 Abschnitte; n_i <= 1.79616829308E-8; A_ii*n_i^2 ungefähr 0.00105487017
+T02: 409/409 Abschnitte; n_i <= 1.86477389127E-7; A_ii*n_i^2 ungefähr 0.000258949428
+T03: 399/399 Abschnitte; n_i <= 0.00000213982600001; A_ii*n_i^2 ungefähr 3.86426271e-05
+T04: 395/395 Abschnitte; n_i <= 0.0000190920838483; A_ii*n_i^2 ungefähr 1.00553158e-05
+T05: 397/397 Abschnitte; n_i <= 0.000212745807150; A_ii*n_i^2 ungefähr 3.61486142e-05
+T06: 391/391 Abschnitte; n_i <= 0.000450764596698; A_ii*n_i^2 ungefähr 4.22532652e-06
+T07: 383/383 Abschnitte; n_i <= 0.00239964726253; A_ii*n_i^2 ungefähr 4.5402852e-06
+T08: 367/367 Abschnitte; n_i <= 0.00256667724313; A_ii*n_i^2 ungefähr 2.50850385e-06
+T09: 379/379 Abschnitte; n_i <= 0.00309245509554; A_ii*n_i^2 ungefähr 2.99319004e-06
+T10: 383/383 Abschnitte; n_i <= 0.00344944070044; A_ii*n_i^2 ungefähr 3.86226166e-06
+T11: 377/377 Abschnitte; n_i <= 0.0195359146082; A_ii*n_i^2 ungefähr 9.40685005e-05
+
+Insgesamt 4704 gerichtete äußere Abschnitte, zusätzlich beide analytisch
+bezahlten Randstücke jeder Richtung. Die Normen enthalten Kernquadratur,
+Cacheatom-Abweichungen, den inneren Streifen, Quellen-/Metrikfehler und den
+endlichen Fo-Rest. Die Einzelpreise dienen der Orientierung; entscheidend
+ist theta mit sämtlichen Kreuzgewichten. Tabellenwerte mit „ungefähr“ sind
+Darstellungswerte, keine zusätzlichen exakten Zertifikatsendpunkte.
+
+WESENTLICHE KONTROLLEN UND PRÜFGRENZEN
+
+Die ganze äußere Modellfunktion wurde mit gerichteter Arb-Arithmetik
+integriert. Jeder Abschnitt trägt einen Taylorrest und einen separaten
+Mittelpunktvergleich zweier Auswertungen. Der abschließende rationale Prüfer
+summiert sämtliche gespeicherten Abschnitte erneut und verwendet für die
+äußeren Randstücke eine eigene rationale logarithmische Hülle.
+
+Alle 2700 Gamma224-Koeffizienten der zwölf Caches sind an die ursprünglichen
+rationalen Koeffizienten gebunden. Die Kernknoten und Produktkonturen wurden
+für alle zwölf Richtungen mit rationalen Abständen geprüft. Die verwendete
+historische Python-Bytecodekopie wurde auf exakte Übereinstimmung ihres
+Codeobjekts mit der gebundenen Quelldatei geprüft.
+
+Diese Kontrollen sind eigene Autorenrechnungen mit getrennten algorithmischen
+Prüfwegen. Sie sind weder eine neue Gegenprüfung durch GPT 1 noch eine externe
+Begutachtung. Besonders zu prüfen sind die globale Formordnung, der neue
+gemeinsame Quellentransport, die ganze Fo-plus-T-Fehleranwendung, die neuen
+Kontur-/Endpunkthüllen und die Zuordnung zur physischen Zielaussage.
+
+Die bedingten analytischen Voraussetzungen werden nicht durch erfolgreiche
+Arithmetik ersetzt. Die große Checkliste bleibt bei 3/10 und Punkt 4 offen,
+bis der dafür zuständige gesonderte Prüf- und Integrationsschritt erfolgt.
+Es gab keine GitHub-Schreibaktion, Veröffentlichung, neue CI oder Nachricht
+an GPT 1. Ein aktueller Main-Stand wurde für diese lokale Forschung nicht
+erneut behauptet. Originalarchive und gebundene Originalquellen sind erhalten.
+
+BELEGKETTE
+
+Einstieg: READ_ME.txt und REPRODUCE.txt im ZIP.
+Gesamtschluss: COMPARISON_THEOREM.txt.
+Neue Herleitungen: FULL_FORM_ORDER.txt, SOURCE_INTERFACE_CHAIN.txt,
+WHOLE_SOURCE_APPLICATION.txt, NEW_CONTOUR_APPLICATION.txt,
+JOINT_REST_LEMMA.txt, DIRECT_D_APPLICATION.txt sowie NEAR_ZERO_PROOF.txt.
+Ergebnis: workspace/work/breakthrough-2026-10-25/JOINT_REST_BUDGET.json.
+SHA-256 dieser Ergebnisdatei:
+84058fab114f92b91d5380fa56334caac7cedd71dc13dd25f9248bdee612f09e
+
+Der externe Beleg neben dem ZIP enthält dessen tatsächliche Bytegröße,
+SHA-256 und Manifestbindung. Der mitgelieferte Prüfer kontrolliert alle
+Archivmitglieder; nach dem Entpacken kann er auch die rationale gemeinsame
+Restrechnung erneut ausführen. Das ist klar von einer frischen Integration
+und einer analytischen Gegenprüfung getrennt.

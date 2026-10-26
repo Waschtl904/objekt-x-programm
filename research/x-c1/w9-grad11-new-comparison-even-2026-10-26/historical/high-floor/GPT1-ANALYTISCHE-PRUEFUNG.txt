@@ -1,0 +1,90 @@
+**C2 ist unter den übernommenen Voraussetzungen analytisch zulässig; damit auch C3.** Der Hochkoordinatenanschluss und die behauptete Blockordnung tragen. Main steht unverändert auf `344c1f4787900003dc57203987222bad91828fe3`. Ein Modell- oder Energievotum ist damit noch nicht verbunden.
+
+**1. Die schärfere Hochraumkonstante ist begründet.**
+
+Die vorhandenen drei Bereichsabschätzungen erlauben unmittelbar
+\[
+V-S_a\succeq-\frac{2229}{1000}I.
+\]
+Damit beträgt der rohe Boden tatsächlich
+\[
+\frac{6529}{1000}-\frac{491}{200}
+-\frac{2229}{1000}-\frac1{500}
+=\frac{1843}{1000}.
+\]
+
+Für \(\varepsilon=10^{-6}\) und \(\delta_1=92149/50000=1{,}84298\) ergibt die exakte rationale Konstantenprüfung
+\[
+\frac{1843}{1000}-16\varepsilon-12\varepsilon^2
+-\delta_1(1+\varepsilon^2)
+=\frac{199999307851}{50000000000000000}>0.
+\]
+Es werden dieselben vollständigen Momentpreise verwendet. Eine neue Integralrechnung ist hierfür nicht erforderlich. [Historische Herleitung, §§3–4](https://github.com/Waschtl904/objekt-x-programm/blob/344c1f4787900003dc57203987222bad91828fe3/research/x-c1/a8-a9-global-closure-2026-10-13/packages/objekt-x-alte-hohe-reserve-2026-10-08/HERLEITUNG.txt)
+
+**2. Der Anschluss betrifft die rohe hohe Koordinate.**
+
+In der vollständigen alten Zerlegung
+\[
+w=\mathcal J_8(c,y)
+=U_a^{-1}M(Ec+y)
+\]
+ist \(y=y_8(w)\) im hohen Legendre-Raum zu messen, mit Norm aus \(L^2((-1,1),dx/2)\). Die Momentkorrektur fügt nur den niedrigen Momentträger hinzu. Deshalb gilt
+\[
+\|My\|^2\ge\|y\|^2,
+\qquad
+A_{\mathrm{high}}[y]
+=q_a[U_a^{-1}My]\ge\delta_1\|y\|^2.
+\]
+
+Die primale Koordinate \(y_8(w)\) darf dabei nicht mit dem dualen Quellenoperator \(T_h\) gleichgesetzt werden. Die Koordinatenabbildung ist ein beschränkter Isomorphismus, keine vorausgesetzte Isometrie. [Koordinatenherleitung](https://github.com/Waschtl904/objekt-x-programm/blob/344c1f4787900003dc57203987222bad91828fe3/research/x-c1/a9-inverse-renewal-2026-10-13/original/sources/A8_PROOF_original.txt)
+
+**3. Die Blockordnung folgt mit unverändertem \(\delta_0\) im niedrigen Block.**
+
+Als zurückgezogene Form in diesen Koordinaten gilt
+\[
+\mathcal J_8^*U_8^{-1}\mathcal J_8
+=
+\begin{pmatrix}
+F_0+\delta_0^{-1}B_8B_8^*&B_8\\
+B_8^*&\delta_0I
+\end{pmatrix}.
+\]
+Hier müssen \(F_0,C_{\mathrm{inv}},\rho,F_8\) genau zum aktuell gebundenen \(U_8\) mit \(\delta_0=1{,}8219\) gehören.
+
+Aus
+\[
+F_0\preceq F_8\preceq A_{\mathrm{low}}
+-\delta_0^{-1}B_8B_8^*
+\]
+und dem neuen Hochboden folgt nach Abzug
+\[
+\mathcal J_8^*(A8-U_8^{-1})\mathcal J_8
+\succeq
+\begin{pmatrix}0&0\\0&(\delta_1-\delta_0)I\end{pmatrix}.
+\]
+Die Kreuzblöcke verschwinden hier durch **exakte Subtraktion derselben tatsächlichen Kopplung \(B_8\)**. Ein Ersatz durch \(B_{8,0}\) wäre ohne Fehlerzahlung unzulässig. [Inversherleitung, §6](https://github.com/Waschtl904/objekt-x-programm/blob/344c1f4787900003dc57203987222bad91828fe3/research/x-c1/a9-inverse-renewal-2026-10-13/original/HERLEITUNG.txt)
+
+Damit ist
+\[
+C2=Q_{\mathrm{new}}+\frac{527}{25000}\|y_8(w)\|^2
+\]
+zulässig. Der Zusatz ist eine beschränkte nichtnegative Form; Geschlossenheit, Domäne und Koerzivität von \(Q_{\mathrm{new}}\) bleiben erhalten. Zusammen mit der separat verfügbaren \(\eta q[r]\)-Reserve folgt
+\[
+0<Q_{\mathrm{new}}\preceq C2\preceq C3\preceq A9.
+\]
+
+**Wichtige Vorgabe für die anschließende Modellrechnung:** Die exakte Inverse des verstärkten alten Blocks verwendet
+\[
+F_1=F_0+
+\left(\delta_0^{-1}-\delta_1^{-1}\right)B_8B_8^*,
+\]
+und für duale Koordinaten \((\ell,h)\)
+\[
+\delta_1^{-1}\|h\|^2+
+(\ell-\delta_1^{-1}B_8h)^*
+F_1^{-1}
+(\ell-\delta_1^{-1}B_8h).
+\]
+**Nur \(\delta\) auszutauschen und \(F_0^{-1}\) beizubehalten ergibt keine exakte Auswertung von C2.** Auch eine erneute A9-Schurzerlegung muss sämtliche dadurch geänderten gemeinsamen Blöcke konsistent mitführen.
+
+**Prüfstatus:** Konstantenrechnung und Blockfolgerung hergeleitet; historische Operator-, Domänen- und Quellenannahmen übernommen. Modellnutzen, neue gewichtete Fehlerpreise und gerichtete Energieentscheidung offen. Kein gerichteter Replay, keine Veröffentlichung und keine weitere Kandidatenentwicklung ausgeführt.

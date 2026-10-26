@@ -1,0 +1,146 @@
+Objekt X — neue ganze Restabbildung, Autorenanwendung
+25. Oktober 2026. AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN; H1–H4.
+
+Dieser Text ergänzt FULL_FORM_ORDER.txt und SOURCE_INTERFACE_CHAIN.txt.
+Er ist eine neue Autorenherleitung. Er behauptet weder eine gezielte
+Gegenprüfung durch GPT 1 noch einen bereits abgeschlossenen Zwölfernachweis.
+
+1. Rest auf Fo und T; kein Weglassen der endlichen Komponente
+
+Sei y=(-p,w) der exakt festgelegte rationale Schalentest, c die gewählte
+Quellenrichtung und u=U1(h_c-B_shell y) die exakte zugehörige Kernantwort.
+Der ganze Test (u,y) hat bezüglich Q1 verschwindenden Kernrest. Sein
+verbleibender Rest r=(r_F,r_T) wirkt auf den vollständigen Schalenraum.
+Die alte inverse Form darf wegen Qold<=Q1 zur Majorisierung benutzt werden.
+Nach Elimination ihres Kernblocks ist ihre Fo/T-Schurform
+ [[Knew,a],[a*,D_T]], L=D_T-a* Knew^-1 a.
+Die Blockinverse gibt exakt
+
+ ||r||²_Qold* = ||r_F||²_Knew^-1
+             +||r_T-a* Knew^-1 r_F||²_L*.
+
+Die historische gemeinsame Fo-Kraftcap 10 und das Dreieck in der direkten
+Hilbertsumme liefern
+ ||r||_Qold* <= ||r_T||_L* +sqrt(101)||r_F||_Knew^-1.
+Die T-Komponente ist eine Beschränkung des ganzen Funktionals. Die rohe
+Paritäts-L2-Norm X des gespeicherten äußeren Modells majorisiert nach der
+historischen T-/Momentprojektion seine W_X-Dualnorm. Mit beta=5/21 folgt
+ ||r_model,T||_L*<=sqrt(beta)||r_model||_X.
+Die endliche Fo-Komponente wird also zusätzlich bezahlt und nicht als Teil
+einer nur auf T gültigen Koerzivitätsaussage ausgegeben.
+
+2. Niedrige Antwort und neue Kraftcap
+
+Schreibe Lraw=C*(A0-HB1/delta1)C und X1=C Lraw^-1 C*.
+Die tatsächliche niedrige Quellenantwort lautet X1(c_s-B h_s/delta1).
+Alle niedrigen Quellenfehler werden wie in SOURCE_INTERFACE_CHAIN in
+Delta c -B Delta h/delta1 -(B-B0)h0/delta1 aufgeteilt. Der volle B-Term
+enthält auch den Produktfehler. h erhält zusätzlich seinen QPhi-Raw-/Low-
+Preis und die physische H-SOURCE-Abweichung.
+
+Die für die alte Kraftcap verwendete Norm einer niedrigen Antwortabweichung
+f ist eta=sqrt(1-rho)||C^-1 f||. Die neue äußere Kraft unterscheidet sich
+von der alten genau durch
+ (1/delta0-1/delta1) G*Theta*B*f.
+Die in L1 §2 begründete rohe ganze Kopplungscap 100 gilt auf diesem Bild
+(einschließlich Theta* und Momentkarte), nicht als Q-Norm auf beliebigem L2.
+BB*<=HB1 gibt deshalb die neue L-Dualcap
+
+ c_low=10+sqrt(beta)(1/delta0-1/delta1)100
+                 sqrt(tr(C*HB1 C)/(1-rho)).
+
+Sie beträgt nach gerichteter Auswertung weniger als 11.415. Eine alte
+Fehlerzahl wird hier nicht unverändert auf die neue Antwort übertragen.
+
+Lraw>=(1-alpha)Lmid mit alpha aus SOURCE_ARITHMETIC_CLOSURE. Die Quellfehler
+erhalten deshalb Ncap/(1-alpha), N=sqrt(1-rho)Lmid^-1 C*. Die Abweichung
+der modellierten inversen Antwort selbst ist höchstens
+ sqrt(1-rho)alpha/(1-alpha)tr(Lmid^-1)||C*v_model||.
+Hinzu kommt der direkt eingeschlossene Abstand des gewählten ff von der
+Modellantwort. Somit sind Quellenänderung, inverse Metrik und ff-Platzierung
+verschiedene bezahlte Summanden.
+Für die genannte euklidische Normschranke wird zusätzlich die tatsächlich
+verwendete Definition alpha>=||Delta L|| tr(Lmid^-1) benutzt: Die Identität
+ Lraw^-1=(I+Lmid^-1 Delta L)^-1 Lmid^-1
+und die Neumann-Normschranke liefern den Faktor 1/(1-alpha) auch vor dem
+rechts stehenden C*. Eine reine Loewnerordnung allein würde diesen
+Normvergleich für nichtkommutierende Matrizen nicht rechtfertigen.
+
+3. Ganze Fo-Fehler aus derselben gemeinsamen Majorante
+
+Setze t=(-y,c). E_R enthält die ganze gemeinsame Quellenmajorante, die
+strukturierte D-Majorante im 96er Block sowie die obere skalare Hülle aller
+Matrix- und Inversrundungen. Für die relevante gemeinsame Differenz gilt
+ -E_R<=Delta M<=E_R. Die zugehörige bilineare Cauchy-Ungleichung ergibt
+ ||(Delta M t)_F||²_Knew^-1
+ <=tr(Knew^-1 E_R,FF) (t*E_R t).
+Dies erhält sämtliche gemischten Abhängigkeiten. Der kleine modellierte
+Fo-Rest b c-(S+E_D)y wird außerdem direkt berechnet. Knew^-1 bleibt die
+historische sichere Metrik; es wird kein neuer numerischer Inverswert als
+physischer K-Befund angenommen.
+In Delta M wird der untere direkte K-Baustein auf beiden Seiten festgehalten:
+Betrachtet werden nur gemeinsame Quellen-/Paarungsfehler und der direkte
+96er D-Fehler. Die erste Fo-Zeile dieses Operators ist genau der benötigte
+Residualfehler. Ein zweiseitiger Fehler vom gerichteten Klo zur tatsächlichen
+K-Form wird hier weder gebraucht noch aus einer einseitigen Schranke abgeleitet.
+
+4. Ganze Raw-Quelle, Basis, Gamma und Moment
+
+Die Quellenfamilien und ihre Orientierung sind dieselben wie in L1 §§1–2.
+Die neuen Koeffizienten werden in die dortige Raw-/Low-Kette eingesetzt;
+für die ersten vier F-Quellen gilt die neu hergeleitete räumliche Fehlergram-
+Majorante desselben Grad-1280-Modells. low_round vergleicht mit der ganzen
+A160-Intervallmatrix. Die zusätzlich eingesetzten c-Mittelpunkte werden
+mit ihrem eigenen Radiuspreis berücksichtigt. Die äußeren Gamma- und
+Basispreise behalten ihre dort begründeten Operatorbereiche.
+
+Die beiden Momentliftkoeffizienten haben denselben Betrag, weil die zwei
+build_core-Aufrufe dieselben F/J-Quellen mit entgegengesetzten Vorzeichen
+und eta=0 verwenden. Phi ff ist bereits momentkorrigiert. Aus lm, den
+frischen reellen Hüllen F,hcap und den unveränderten Log-L2-Lemmata folgen
+ Lambda1,Lambda2<=2|lm|,
+ |alpha|<=10(F+hcap+1), ||u0||<=100(F+hcap+1),
+ ||Qpsi0||<=100(40Z+20S+1000|lm|+1).
+Hier ist Z=32||p|| und S die frische Supremumschranke des Schalenpolynoms.
+Diese Normen betreffen ganze Funktionen, keine endlichen Projektionslisten.
+Bei größeren Richtungen sind die früheren Hilfszahlen A<1e18 und U<1e20
+teilweise überschritten. Die R2-Formel benutzt dann die frisch berechneten
+größeren Werte. Ebenso ersetzt der äußere Gamma-Transport seine frühere
+Normzahl 1e20 durch max(1e20,U). WHOLE_PHYSICAL_ERROR_DYNAMIC dokumentiert
+diesen Preis ausdrücklich. Es wird keine größere Norm unbezahlt zugelassen.
+NEW_SMALL_MODEL_CHANGES setzt sie in die vollständige R2-Formel ein und
+bezahlt zusätzlich 1000 epsilon160(||u0||+||Phi ff||+1) für den hohen
+Momentnachlift. Die bilinearen Momentdifferenzen werden wie in L1 §6
+teleskopiert, so dass die gemischten Fehler enthalten bleiben.
+Für den zusätzlichen Nachlift genügt direkt die Differenz der beiden
+Momentprojektionen: ||m-m160|| und der zugehörige Momentfehler sind durch
+epsilon160 begrenzt, die Normierungsnenner sind >1. Die Projektionsdifferenz
+kostet <10 epsilon160; die ganze äußere Transportcap 100 liefert den
+verwendeten Faktor 1000. Dies benutzt keine alte skalare Nachliftzahl.
+
+Die rationalen Tests y,c sind hier frei gewählt. Es gibt daher keinen
+zusätzlichen Wechsel zu einer vorgeschriebenen kanonischen Lösung w.
+Eine alte-Korrektur-plus-Modell-Brücke wird nicht verwendet. Die Y-/J-
+Eingangskoeffizienten sind dieselben gebundenen exakt darstellbaren
+rationalen Mittelpunkte wie im R15-Beleg; die aktuelle Präzision ist höher.
+Neue Cacheatom-Differenzen und Kernquadratur werden separat bezahlt.
+Damit verbleiben im Kleinstrest genau der neue Momenttransport und der
+neue hohe Nachlift; ihre exakten Schranken werden gegen 1e-150 geprüft.
+
+5. Gesamte Richtungsschranke und noch fehlender gemeinsamer Abschluss
+
+Für jede vollständig kontrollierte Richtung ist nach allen separaten
+Modellintegrationen die folgende Summe zu quadrieren:
+
+ sqrt(beta)(sqrt(E_model)+e_core_quad+e_core_atoms+e_strip)
+ + c_low e_eta +sqrt(beta)e_raw_X +sqrt(101)e_Fo.
+
+Kein Summand wird erst nach dem Quadrieren addiert. Die positive endliche
+Schurreserve steht nach der gemeinsamen Quellen-/D-/K-/Arithmetikbuchung
+zur Verfügung. Ihr Minimum darf für einen frei gewählten Test benutzt
+werden: die endliche quadratische Form am Test ist das Schurminimum plus
+eine nichtnegative Antwortabweichung.
+
+Erst eine Kontrolle der ganzen Restabbildung auf allen zwölf Richtungen,
+einschließlich ihrer Mischterme, erlaubt einen Satz für den Zwölferraum.
+Einzelne erfolgreiche Richtungen oder reine Modellwerte ersetzen dies nicht.
