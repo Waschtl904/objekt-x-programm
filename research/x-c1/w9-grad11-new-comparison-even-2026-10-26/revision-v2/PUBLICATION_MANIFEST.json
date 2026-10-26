@@ -1,0 +1,671 @@
+{
+  "schema": 1,
+  "purpose": "Original reading copies and new publication companions; no mathematical replay",
+  "v1_publication_commit": "20a4c6392fa17f6b1dc5527ae223b32415244190",
+  "base_main_observed": "9a9e0e554508d308e96f10983a307f980d5c3b04",
+  "files": [
+    {
+      "path": "CURRENT_REVIEW.md",
+      "bytes": 1026,
+      "sha256": "15782f0737d16727ad3657ff9dc19398217f75766b82f114848b155dfd79b127",
+      "git_blob": "f470ba11a8fa24a09301267b68c04a20e385da34",
+      "role": "NEW_PUBLICATION_COMPANION_NOT_FROZEN_ORIGINAL"
+    },
+    {
+      "path": "revision-v2/.gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+      "git_blob": "fa1385d99a319b43c06f5309d1aae9fdd3adea46",
+      "role": "NEW_PUBLICATION_COMPANION_NOT_FROZEN_ORIGINAL"
+    },
+    {
+      "path": "revision-v2/ARCHIVES.json",
+      "bytes": 1567,
+      "sha256": "5811adaa8e30eba0e9a9967173b918deed3a20d101526fce570e76cad6683ce0",
+      "git_blob": "b6906cafe796c1f07ab0a1c7da9bc56b23471684",
+      "role": "NEW_PUBLICATION_COMPANION_NOT_FROZEN_ORIGINAL"
+    },
+    {
+      "path": "revision-v2/README.md",
+      "bytes": 7114,
+      "sha256": "ea8f279ba6c8d086edd7f59687606d1962015f4512de2fe54116005af4c2335f",
+      "git_blob": "74878d595787f543324a1be650a789c312f8a723",
+      "role": "NEW_PUBLICATION_COMPANION_NOT_FROZEN_ORIGINAL"
+    },
+    {
+      "path": "revision-v2/author/REVISION_MANIFEST.json",
+      "bytes": 11333,
+      "sha256": "e8d2156c40691b4efb4b2eaad01c501865c2d596c202349f9fb2ce33e3a330a5",
+      "git_blob": "c6797bb532c470d28081148433e4a8c66f4d7751",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "REVISION_MANIFEST.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/results/JOINT_REST_BUDGET_V2.json",
+      "bytes": 54132,
+      "sha256": "a025b49d4e13919c67d74f5f2f8598d34cd74fe304f3e103bae6be907d0ffc6e",
+      "git_blob": "ab3aa903b9f5edac920332987f618f17b9af77f6",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "workspace/work/breakthrough-2026-10-25/revision_v2/JOINT_REST_BUDGET_V2.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/results/SOURCE_ARITHMETIC_CLOSURE_V2.json",
+      "bytes": 54043,
+      "sha256": "ef1b8f932533cc40e76eeee33a0b5f6f7f7406a1f234fe40e8db8668787105d5",
+      "git_blob": "2aa5e63f01774ee07de66d5334d72bece71c5734",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "workspace/work/breakthrough-2026-10-25/revision_v2/SOURCE_ARITHMETIC_CLOSURE_V2.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/results/SOURCE_CLOSED_GAP_EXACT_AUDIT_V2.json",
+      "bytes": 15773,
+      "sha256": "4f47448bf63c8b8367c2d26e3cf2766572825800a088a239ee1e89d7cb50dfe4",
+      "git_blob": "69e14588fe0e9123f473aa9700523e7d4965f2b1",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "workspace/work/breakthrough-2026-10-25/revision_v2/SOURCE_CLOSED_GAP_EXACT_AUDIT_V2.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/results/WHOLE_PHYSICAL_ERROR_V2_T00.json",
+      "bytes": 6596,
+      "sha256": "e134ac6fa19305b8777a9a064994b1bb7734145b30e612b85caa2c618f455183",
+      "git_blob": "e0816559bb2aa55229ec116916f4408a16ffe0e4",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T00.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/results/WHOLE_PHYSICAL_ERROR_V2_T01.json",
+      "bytes": 6706,
+      "sha256": "e3eb92235d80f46f25ee22bdc5859cc3be68964411608002b20da93519a523b6",
+      "git_blob": "adbf40aed4a968e68677fbdb83722adfa450d8ed",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T01.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/results/WHOLE_PHYSICAL_ERROR_V2_T02.json",
+      "bytes": 6711,
+      "sha256": "8683615364413f17b57c1fbacb3a85cdf6c839f34ae39633450637bf025bcb8f",
+      "git_blob": "61302435328fca6181e5e0b3f1e5ddc051f84b9d",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T02.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/results/WHOLE_PHYSICAL_ERROR_V2_T03.json",
+      "bytes": 6738,
+      "sha256": "6c2a39225e06b1ed71ecc58e6d84e22d58a25a5bafb3336083471013f2843bb9",
+      "git_blob": "331540ba5aeb849210e980ce74871d00821def87",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T03.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/results/WHOLE_PHYSICAL_ERROR_V2_T04.json",
+      "bytes": 7288,
+      "sha256": "e4ba9e31e7a67336ae2a36af5bce5271bf89b2e5bb8007a3698a48b0f4b290c5",
+      "git_blob": "3ed42b9462e768f25266be4d410abd1385a0999e",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T04.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/results/WHOLE_PHYSICAL_ERROR_V2_T05.json",
+      "bytes": 7639,
+      "sha256": "a7615d783074b412d9aaf36365d0fb3269f89b55b4db9a8b87e64ba2f8435ad3",
+      "git_blob": "ad632ff176d98b6c622bfb77765ef8dbe09ac221",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T05.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/results/WHOLE_PHYSICAL_ERROR_V2_T06.json",
+      "bytes": 7646,
+      "sha256": "4fed3ea30d92228281b000ee24447c09eac472176c2cef6904cc8a0af76a41f0",
+      "git_blob": "45ee4bd846fd49c93f38b70ecf3e14ba1cfe8259",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T06.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/results/WHOLE_PHYSICAL_ERROR_V2_T07.json",
+      "bytes": 7652,
+      "sha256": "4aab1c4c1d50a8980c5d6169613406fc0d45630a79eeeeca9c53a426237be309",
+      "git_blob": "af8b25d318083049ce0ce102a12ed989d351ac28",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T07.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/results/WHOLE_PHYSICAL_ERROR_V2_T08.json",
+      "bytes": 7291,
+      "sha256": "bb4013ddcc2c59c3074db124de9e9d155ab04bcadec503deb066a2ccdb34b8be",
+      "git_blob": "01406ea5ce98f03fd7acb8ea2a3277f0e152606c",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T08.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/results/WHOLE_PHYSICAL_ERROR_V2_T09.json",
+      "bytes": 7624,
+      "sha256": "7a046bb0d99264188090281101c58f51ac751201e19b01f610eb3c4a2e761c72",
+      "git_blob": "239def374a264daad28e5a8a08a7bdeb38c36f52",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T09.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/results/WHOLE_PHYSICAL_ERROR_V2_T10.json",
+      "bytes": 7630,
+      "sha256": "9ed07a7c68f1762e51e3d27b13117dfc9f22d498a18833d01e35f28779a72d10",
+      "git_blob": "fb924348a6239d6421557467b8ad7008e1ec9c15",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T10.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/results/WHOLE_PHYSICAL_ERROR_V2_T11.json",
+      "bytes": 7575,
+      "sha256": "f40d4965f1afb048daa3f690241db7856f9fd00463dfc3568dcdf37ff8c0558f",
+      "git_blob": "9fdc50a8b56cc8921814e9b62ef692ce527b534c",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "workspace/work/breakthrough-2026-10-25/revision_v2/WHOLE_PHYSICAL_ERROR_V2_T11.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/revision_review/BERICHT_V2.txt",
+      "bytes": 13789,
+      "sha256": "aed4a52d0d77d850e0da603d7cb1a5ee0d63aed7339cec86bb591f63de42d62b",
+      "git_blob": "d201281b13bc965375b34127e7030ed255e5a6bc",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "revision_review/BERICHT_V2.txt"
+      }
+    },
+    {
+      "path": "revision-v2/author/revision_review/CHECKER_CONTROLS_V2.json",
+      "bytes": 33378,
+      "sha256": "e29f906256bc0c3e338a3f69d9093e1275c1b6a4319cbe6569e91bb101e41961",
+      "git_blob": "7ad7c86ae40e45a4911c54018888a4095f64894e",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "revision_review/CHECKER_CONTROLS_V2.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/revision_review/DIFF_V1_V2.txt",
+      "bytes": 20699,
+      "sha256": "3935a6daf28a9f0d525b2d7c3de4369d71942bcafa24898733f9a8a735715168",
+      "git_blob": "20b8bed2aca8f0c7926947d6c9aa9f488f029bc0",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "revision_review/DIFF_V1_V2.txt"
+      }
+    },
+    {
+      "path": "revision-v2/author/revision_review/ERGEBNIS_V2.json",
+      "bytes": 27578,
+      "sha256": "86d010fc1a3d7f846f627e8fd205a0fa11dbde166fa63420d0585f09a4081662",
+      "git_blob": "8c33a680a7373ef0caf2112214ed91e5e8345665",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "revision_review/ERGEBNIS_V2.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/revision_review/INITIAL_AND_LEGACY_CONTROLS.json",
+      "bytes": 14884,
+      "sha256": "e21da72ddfc539e84e401adc8347cff616e4689e879f0cfeb5633fae1f311a53",
+      "git_blob": "e29e90da5f7c28097feb829c280c5b36a55fec28",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "revision_review/INITIAL_AND_LEGACY_CONTROLS.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/revision_review/RATIONAL_AUDIT_V2.json",
+      "bytes": 11889,
+      "sha256": "a8d693a8a4c3d9fc4533332c112bad81d7c194009640132e48dc494767420dfd",
+      "git_blob": "37f24ea5d543c0470c57bd651363de7d00cf5b14",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "revision_review/RATIONAL_AUDIT_V2.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/revision_review/REUSE_AUDIT_V2.json",
+      "bytes": 5290,
+      "sha256": "37a221ac9e070b61c0a02620c3e445f7ca4d94ca51f6233cb39a69c93fb509db",
+      "git_blob": "8124540b37d8868b497f236d19ead39533670e6b",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "revision_review/REUSE_AUDIT_V2.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/revision_review/V1_PUBLICATION_RECEIPT_UNCHANGED.json",
+      "bytes": 2331,
+      "sha256": "91788ef1fe23661c485980bde53bb2038ad37b659a406f6038b5bbd695c6adaf",
+      "git_blob": "550a43c460d5cf0ac8c3790e007b26d6f7ed31c8",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "revision_review/V1_PUBLICATION_RECEIPT_UNCHANGED.json"
+      }
+    },
+    {
+      "path": "revision-v2/author/verify_revision_v2.py",
+      "bytes": 11048,
+      "sha256": "639e8c189b3ea5c840752669c2d24f009f5253a78fe6f17adf5a00b1bc33850a",
+      "git_blob": "c38032536df393bf26573273877e98543cb1f62c",
+      "source": {
+        "archive": "v2",
+        "nested_members": [],
+        "member": "verify_revision_v2.py"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/overall/ANALYTIC_SOURCE_BINDINGS.json",
+      "bytes": 18468,
+      "sha256": "74a1d55fbbc851b92c3a916edcc28f84b87e85044a2de94a76fe3705f41feba6",
+      "git_blob": "c1f7fc7392a8212cbdbf43dac0a747e5d4aa4340",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [],
+        "member": "ANALYTIC_SOURCE_BINDINGS.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/overall/APPLICATION_BINDINGS.json",
+      "bytes": 27166,
+      "sha256": "dcc246d752234e36162401ed72f95f73000120f50966bc7fcbd8111fd681c5f4",
+      "git_blob": "fa35b21ee11a6778bdceb29bb2a5c8574f7a1721",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [],
+        "member": "APPLICATION_BINDINGS.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/overall/GPT1-GESAMTVOTUM.txt",
+      "bytes": 20774,
+      "sha256": "4423c33c8774e8ab91c25fe38e4c50e5e9c8d9cabdf181969c992c5dc093148e",
+      "git_blob": "a5f2c6718f1481c5b3470401efb4775729b01f9f",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [],
+        "member": "GPT1-GESAMTVOTUM.txt"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/overall/HYPOTHESEN.txt",
+      "bytes": 2501,
+      "sha256": "2f4ca612ba610dacdf56e0b5954e73fa0ba6b2c65a3ab63cbe2f584457da0ae1",
+      "git_blob": "be44efd8dcaf564c0cca5bec5a4c91dc62a1feff",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [],
+        "member": "HYPOTHESEN.txt"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/overall/HYPOTHESEN_QUELLEN.json",
+      "bytes": 11127,
+      "sha256": "9c88e4a543376a7e9506e70c04e513a397ee70b264d412802e3063abd2cedc0b",
+      "git_blob": "e65d5ec1ba774e45ef6e29a38593bfdd1d27ffaf",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [],
+        "member": "HYPOTHESEN_QUELLEN.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/overall/MANIFEST.json",
+      "bytes": 2182,
+      "sha256": "db4afa7c8025d7706ee80b8eae67ee69c008bbca9e596b9f79b4f6a4384becab",
+      "git_blob": "e2e5d441b21a18e72c101a25130f45301dfad4b6",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [],
+        "member": "MANIFEST.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/overall/NEW_FORM_ORDER_ANCHORS.json",
+      "bytes": 8478,
+      "sha256": "e68b9eab2bdf767390d6adb92f3d85b3b1957f2322958e378cd0c9007a1a2bbd",
+      "git_blob": "ba212f9f28353574108cd4d2005ad0dbe2aa1858",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [],
+        "member": "NEW_FORM_ORDER_ANCHORS.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/overall/OVERALL_REVIEW_STATUS.json",
+      "bytes": 1496,
+      "sha256": "6f6ee9c21fe6285c31d3cf28083d4c33075afb371119670dccb027696757376e",
+      "git_blob": "fe13b7698983f607766c7b991baf1f34b3345658",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [],
+        "member": "OVERALL_REVIEW_STATUS.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/overall/REPRODUCE.txt",
+      "bytes": 1810,
+      "sha256": "d3dd1af01a95297de82f3b4600402b3471c346178d42f165aef073bf5b89a3ba",
+      "git_blob": "a280e3f3e3b8d13ebfd8703d5f0b82d80bf36361",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [],
+        "member": "REPRODUCE.txt"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/overall/REVIEW_IDENTITIES.json",
+      "bytes": 1142,
+      "sha256": "ce174389fc6bb9e5fd187089b1fe45f371bd5e464dbac3bd557b69b3cc5497a4",
+      "git_blob": "963652e0ada868e67097a2e1d69258f7c69305be",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [],
+        "member": "REVIEW_IDENTITIES.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/overall/check_application_bindings.py",
+      "bytes": 4150,
+      "sha256": "761d3e1a7b7554e97b8768f98acab46cff7e99220d4240d845b5aa555f59f79c",
+      "git_blob": "2cccfe763a13e6838b971dcdf0f3402f43e7c93c",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [],
+        "member": "check_application_bindings.py"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/overall/check_new_form_order_anchors.py",
+      "bytes": 5065,
+      "sha256": "6f93cdb93e8ac2b8d1eb323b01c9c3a4118e0760f15cbb8b74ffe55f0bb9b7a7",
+      "git_blob": "614b08a3336618d2fe98d7cbd8465c9c86ea764d",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [],
+        "member": "check_new_form_order_anchors.py"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/AUTHOR_CHECKER_FRESH.json",
+      "bytes": 12426,
+      "sha256": "d08d596ddd3ff4f0ca7c1635c6c14b679b78b70465c1598d75a3d4b0b65ce02b",
+      "git_blob": "901b83417ff55fb38190ceb128f2790f4c08bdf2",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "AUTHOR_CHECKER_FRESH.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/FINITE_REPLAY_EXECUTION.json",
+      "bytes": 4944,
+      "sha256": "f00b65b790fa15503a793fc76e5a7af2be38f9072a38a3a29ce567fe16cdd5b8",
+      "git_blob": "abdf7e896364c02948a75f535ad5f05e287569e5",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "FINITE_REPLAY_EXECUTION.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/GPT1-REVISION-V2-GEGENPRUEFUNG.txt",
+      "bytes": 15609,
+      "sha256": "37c82ce528a231bdf5fe4667496644910d02649c0e4ce013957d59ecaf3eead7",
+      "git_blob": "415ccb94169d5838fffd19b00dc936240220a007",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "GPT1-REVISION-V2-GEGENPRUEFUNG.txt"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/INDEPENDENT_CHECKER_CONTROLS.json",
+      "bytes": 11749,
+      "sha256": "0706d12401c17e3d8b90cd1bc70b94942364a16ebd5bd9b4a487293b63e4c231",
+      "git_blob": "4215da56293c760a133adf4e4b2a6c74cb186cc7",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "INDEPENDENT_CHECKER_CONTROLS.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/INDEPENDENT_EXACT_AUDIT.json",
+      "bytes": 18759,
+      "sha256": "ac41a50da7f5a6afa95543e4da00f93d825b312f758c02819c47814748465c0c",
+      "git_blob": "b50699b4316b6d508b1983bf8bfdfcb39ce4e4c3",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "INDEPENDENT_EXACT_AUDIT.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/INDEPENDENT_RADIUS_AUDIT.json",
+      "bytes": 203984,
+      "sha256": "25a48095828b68a79fc1b8b251c70243959f7874323033be6cceb60fa69b8a79",
+      "git_blob": "ee0cd7c2721978a64dcd2fcd7cf71d59d1feab80",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "INDEPENDENT_RADIUS_AUDIT.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/INDEPENDENT_REUSE_AUDIT.json",
+      "bytes": 3484,
+      "sha256": "92fe666602a64044eb9f011a9755df1dfa38d9d9b80c1d310edc599c3055a142",
+      "git_blob": "ad1f0594060c574c9e13558f2d085a867633086f",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "INDEPENDENT_REUSE_AUDIT.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/MANIFEST.json",
+      "bytes": 3001,
+      "sha256": "408427dd85e1a155ad39e92cf24746b19eda3589fe02ed6f9c342fedf2065663",
+      "git_blob": "23b56b3a509adbea231e2bad288c117c72fa1677",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "MANIFEST.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/REPLAY_DIFFERENCES.json",
+      "bytes": 15707,
+      "sha256": "c69ea4a223d28e1323dd0ba4ba7c9d4df8387a4c4d5dd966206ef85b77056eef",
+      "git_blob": "4f53b73faa4cc1014e3a0482c0aaf16660a79083",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "REPLAY_DIFFERENCES.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/RESULT_COMPARISON.json",
+      "bytes": 44456,
+      "sha256": "d3629d6fcf8e3cd91225159a55cdfbfe25b3b680113b545d583c2be14d38c730",
+      "git_blob": "4ad2876c7d4325eda3ddc560d8601a095a512a9a",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "RESULT_COMPARISON.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/REVIEW_IDENTITIES.json",
+      "bytes": 713,
+      "sha256": "1ea8b72b45cc4770fa556ec7251e1dd1431d943e739b0080ba9165656f180495",
+      "git_blob": "5e035d624c815cfd1f9f69a5a1c071f9b1133670",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "REVIEW_IDENTITIES.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/REVIEW_STATUS.json",
+      "bytes": 825,
+      "sha256": "2917192485b4eebc4f91415ccdc107130009f264a450ee73e6e64cc94aedf911",
+      "git_blob": "ecb37bab95fec9b48d014925d4bc58d2b4cfd456",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "REVIEW_STATUS.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/author-controls-fresh/CONTROLS.json",
+      "bytes": 30494,
+      "sha256": "33f4c1fc158b49690e54a5884cf448d2bd6c5d8e14c648e0ec9db718416bab5b",
+      "git_blob": "e17d814f127ba163b12d18bf4da266cef8b19e1a",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "author-controls-fresh/CONTROLS.json"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/independent_checker_controls.py",
+      "bytes": 4219,
+      "sha256": "05fdd12ad1ca4bdbc6b6256d9ed9827c3479c1b9fd72c96c94d228bb47b516ef",
+      "git_blob": "fda65d59fee6ecf66eebb580201655e1de702f1d",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "independent_checker_controls.py"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/independent_exact_audit_v2.py",
+      "bytes": 9223,
+      "sha256": "6aaa990d06ba07ec2574fd32bfed627cd8e457d6066e3224adbb9d91cc7b25c5",
+      "git_blob": "ac070c94066c8902e045f636572eb04a9e51bc01",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "independent_exact_audit_v2.py"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/independent_radius_audit.py",
+      "bytes": 5375,
+      "sha256": "e441d5c9cf146d86f66766e94a83f491b3748ff341970d422134ea355288d409",
+      "git_blob": "ca8c58b94914e9a67dc2b92daf0462627fbd829c",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "independent_radius_audit.py"
+      }
+    },
+    {
+      "path": "revision-v2/gpt1/targeted/run_finite_replays_gpt1.py",
+      "bytes": 1583,
+      "sha256": "47c2bf1f0a019c4b99b5b53cbe48ecdee0070d7c6f1b1395b193ea8547d5e165",
+      "git_blob": "3baeded593477e1f32f05d59664cb4e0d49fe848",
+      "source": {
+        "archive": "gpt1",
+        "nested_members": [
+          "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+        ],
+        "member": "run_finite_replays_gpt1.py"
+      }
+    },
+    {
+      "path": "revision-v2/verify_publication.py",
+      "bytes": 5374,
+      "sha256": "5efe4b7320759702078f946970b543f6d5212f7cc84e360f28b78d9977dfa74e",
+      "git_blob": "b784afa761dabfc1255f16ca86cf446f45a09f8d",
+      "role": "NEW_PUBLICATION_COMPANION_NOT_FROZEN_ORIGINAL"
+    }
+  ]
+}

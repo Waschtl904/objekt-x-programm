@@ -1,0 +1,28 @@
+[
+  {
+    "local_cache": "C:\\Users\\sebas\\Documents\\Codex\\2026-10-09\\github-plugin-github-openai-curated-remote\\work\\loss-balance-fresh-replay\\Objekt-X-Gemeinsame-Verlustbilanz-2026-10-10\\work\\inherited\\Objekt-X-Unendlicher-Rest-Vergleich-2026-10-09\\inputs\\Objekt-X-Endlicher-Schuranschluss-2026-10-09.zip",
+    "bytes": 50800393,
+    "sha256": "884cf43ebb157187e5a54039cdc7be352eda4d8369f24d36196724d7981c6b71",
+    "repository_catalog": "research/x-c1/a8-a9-global-closure-2026-10-13/SOURCE_BINDINGS.json"
+  },
+  {
+    "name": "Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/gamma-low-2026-10-09/CERTIFICATE_EVEN_gamma224_tight_4096.json",
+    "bytes": 11584981,
+    "sha256": "75fff4846678bc52829279b4ff1403cd224e3325aa1f70b79111a56fe8adb4cd"
+  },
+  {
+    "name": "Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/gamma-low-2026-10-09/CORRECTION_4096.json",
+    "bytes": 29618929,
+    "sha256": "a3e5aee7e589d4fcbf6e14cbe08b0bff791bc66cb1c9be14b9a7146bf2020966"
+  },
+  {
+    "name": "Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/gamma-low-2026-10-09/INPUT_EXACT.json",
+    "bytes": 11595,
+    "sha256": "95c46fe092588ca9aa8499c1d74b5ea5dba8dfa0fd868f3e0dabf58bcc49f888"
+  },
+  {
+    "name": "Objekt-X-Endlicher-Schuranschluss-2026-10-09/work/remainder-integration-check-v2/originals/weighted-response/inputs/a8_model.json.gz",
+    "bytes": 8243618,
+    "sha256": "5f8935d53f8518540ef25e6f2d511955bad688cf5905cb63e8d89f03aae2474b"
+  }
+]

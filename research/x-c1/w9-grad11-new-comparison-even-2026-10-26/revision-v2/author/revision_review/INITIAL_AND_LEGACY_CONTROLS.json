@@ -1,0 +1,343 @@
+{
+  "status": "V2_OPTIMIZATION_GUARDS_AND_NEGATIVE_CONTROLS_PASS",
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "supported_mode": "ordinary Python only; all optimization modes explicitly rejected before any success message",
+  "legacy_unchanged_vulnerability_reproduced": [
+    {
+      "flags": [],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\revised\\workspace\\work\\breakthrough-2026-10-25\\verify_handoff.py\", line 28, in <module>\n    assert set(names)==expected,'Unexpected or absent archive member'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: Unexpected or absent archive member\n"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"HANDOFF_BYTES_AND_STORED_RESULT_PASS\",\n  \"files\": 0,\n  \"bytes\": 0,\n  \"rational_recombination_replayed\": false,\n  \"fresh_native_integrations_replayed\": false,\n  \"independent_analytic_review_complete\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "flags": [
+        "-OO"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"HANDOFF_BYTES_AND_STORED_RESULT_PASS\",\n  \"files\": 0,\n  \"bytes\": 0,\n  \"rational_recombination_replayed\": false,\n  \"fresh_native_integrations_replayed\": false,\n  \"independent_analytic_review_complete\": false\n}\n",
+      "stderr": ""
+    }
+  ],
+  "verifier_cases": [
+    {
+      "mode": "normal",
+      "input": "valid_v1_archive",
+      "args": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-B",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\revised\\workspace\\work\\breakthrough-2026-10-25\\verify_handoff_v2.py",
+        "--zip",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\outputs\\Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"HANDOFF_BYTES_AND_STORED_RESULT_PASS\",\n  \"files\": 5263,\n  \"bytes\": 446401855,\n  \"rational_recombination_replayed\": false,\n  \"fresh_native_integrations_replayed\": false,\n  \"independent_analytic_review_complete\": false,\n  \"v1_total_mathematical_review\": \"UNRESOLVED_B1_GRAM_RADII\",\n  \"optimized_execution_supported\": false\n}\n",
+      "stderr": "",
+      "expected_behavior_verified": true
+    },
+    {
+      "mode": "normal",
+      "input": "invalid_gpt1_miniarchive",
+      "args": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-B",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\revised\\workspace\\work\\breakthrough-2026-10-25\\verify_handoff_v2.py",
+        "--zip",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\controls\\gpt1-negative-control.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\revised\\workspace\\work\\breakthrough-2026-10-25\\verify_handoff_v2.py\", line 31, in <module>\n    assert set(names)==expected,'Unexpected or absent archive member'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: Unexpected or absent archive member\n",
+      "expected_behavior_verified": true
+    },
+    {
+      "mode": "-O",
+      "input": "valid_v1_archive",
+      "args": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-B",
+        "-O",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\revised\\workspace\\work\\breakthrough-2026-10-25\\verify_handoff_v2.py",
+        "--zip",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\outputs\\Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "expected_behavior_verified": true
+    },
+    {
+      "mode": "-O",
+      "input": "invalid_gpt1_miniarchive",
+      "args": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-B",
+        "-O",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\revised\\workspace\\work\\breakthrough-2026-10-25\\verify_handoff_v2.py",
+        "--zip",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\controls\\gpt1-negative-control.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "expected_behavior_verified": true
+    },
+    {
+      "mode": "-OO",
+      "input": "valid_v1_archive",
+      "args": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-B",
+        "-OO",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\revised\\workspace\\work\\breakthrough-2026-10-25\\verify_handoff_v2.py",
+        "--zip",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\outputs\\Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "expected_behavior_verified": true
+    },
+    {
+      "mode": "-OO",
+      "input": "invalid_gpt1_miniarchive",
+      "args": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-B",
+        "-OO",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\revised\\workspace\\work\\breakthrough-2026-10-25\\verify_handoff_v2.py",
+        "--zip",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\controls\\gpt1-negative-control.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "expected_behavior_verified": true
+    },
+    {
+      "mode": "PYTHONOPTIMIZE=1",
+      "input": "valid_v1_archive",
+      "args": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-B",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\revised\\workspace\\work\\breakthrough-2026-10-25\\verify_handoff_v2.py",
+        "--zip",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\outputs\\Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "expected_behavior_verified": true
+    },
+    {
+      "mode": "PYTHONOPTIMIZE=1",
+      "input": "invalid_gpt1_miniarchive",
+      "args": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-B",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\revised\\workspace\\work\\breakthrough-2026-10-25\\verify_handoff_v2.py",
+        "--zip",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\controls\\gpt1-negative-control.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "expected_behavior_verified": true
+    },
+    {
+      "mode": "PYTHONOPTIMIZE=2",
+      "input": "valid_v1_archive",
+      "args": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-B",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\revised\\workspace\\work\\breakthrough-2026-10-25\\verify_handoff_v2.py",
+        "--zip",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\outputs\\Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "expected_behavior_verified": true
+    },
+    {
+      "mode": "PYTHONOPTIMIZE=2",
+      "input": "invalid_gpt1_miniarchive",
+      "args": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-B",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\revised\\workspace\\work\\breakthrough-2026-10-25\\verify_handoff_v2.py",
+        "--zip",
+        "C:\\Users\\sebas\\Documents\\Codex\\2026-10-24\\github-plugin-github-openai-curated-remote\\work\\grad11-revision-2026-10-26\\controls\\gpt1-negative-control.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n",
+      "expected_behavior_verified": true
+    }
+  ],
+  "all_new_entrypoint_guards": [
+    {
+      "file": "audit_closed_source_gap_v2.py",
+      "mode": "-O",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "audit_closed_source_gap_v2.py",
+      "mode": "-OO",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "batch_physical_errors_v2.py",
+      "mode": "-O",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "batch_physical_errors_v2.py",
+      "mode": "-OO",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "gram_enclosures_v2.py",
+      "mode": "-O",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "gram_enclosures_v2.py",
+      "mode": "-OO",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "joint_rest_budget_v2.py",
+      "mode": "-O",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "joint_rest_budget_v2.py",
+      "mode": "-OO",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "joint_tail_geometry_v2.py",
+      "mode": "-O",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "joint_tail_geometry_v2.py",
+      "mode": "-OO",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "run_reproduction_v2.py",
+      "mode": "-O",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "run_reproduction_v2.py",
+      "mode": "-OO",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "source_arithmetic_closure_v2.py",
+      "mode": "-O",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "source_arithmetic_closure_v2.py",
+      "mode": "-OO",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "source_block_ledger_v2.py",
+      "mode": "-O",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "source_block_ledger_v2.py",
+      "mode": "-OO",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "verify_handoff_v2.py",
+      "mode": "-O",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "verify_handoff_v2.py",
+      "mode": "-OO",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "whole_physical_error_v2.py",
+      "mode": "-O",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "file": "whole_physical_error_v2.py",
+      "mode": "-OO",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    }
+  ],
+  "rational_radius_controls": {
+    "normal_radius": {
+      "actual": "1089/400",
+      "old": "1047/400",
+      "additional": "21/200",
+      "corrected": "1089/400"
+    },
+    "inverse_parameter_radius": {
+      "actual": "4",
+      "old": "19/5",
+      "additional": "1/5",
+      "corrected": "4"
+    },
+    "scope": "Exact general inequality controls, not negative directions for Objekt X."
+  },
+  "original_archive_sha256": "024f20f0c6086aefabb6e3d759f91aaa466906a864c673c0c0b467f3ee627946"
+}

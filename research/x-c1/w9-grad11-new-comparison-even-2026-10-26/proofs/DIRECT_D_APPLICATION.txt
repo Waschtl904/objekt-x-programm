@@ -1,0 +1,57 @@
+Objekt X — strukturierte direkte D-Majorante der neuen Kombination
+26. Oktober 2026. Autorenanwendung unter den übernommenen Zertifikaten.
+
+Die Ordnung ist z4,Y8,J84. Historischer Anker ist HERLEITUNG.txt, §6,
+im Paket objekt-x-direkte-restform-und-positiver-96er-block-2026-10-11;
+refine_old_majorant.py konstruiert genau die verwendeten D96-Grenzen.
+Die ursprüngliche physische Viererform und sämtliche Integrationsradien
+werden beibehalten. Nur die anschließende gemeinsame Fehlerbuchung wird
+aufgeschlüsselt; ein unbekannter Rest wird nicht von einer bloß fertigen
+Obergrenze abgezogen.
+
+1. Der z-Y-Mittelpunkt ist C_U_centre+U_ref,zY. Hier ist U_ref die feste
+gespeicherte rationale Matrix old_energy_upper, kein neu als exakt
+eingesetzter physischer Inversoperator. Der historische direkte Fehler E
+erfüllt ||M^-1/2 E||<=epsilon. Für z in R4 und y in R8 folgt
+
+  2|z*Ey| <= epsilon (lambda_zY z*M z + ||y||²/lambda_zY).
+
+Die alte Buchung verwendet lambda_zY=1. DIRECT_D_TRANSPORT wählt einen
+anderen positiven, anschließend exakt rational festgelegten Parameter.
+Die Ungleichung gilt für beide Vorzeichen und alle gemeinsamen Koeffizienten.
+
+2. Die z-J-Direktkreuze haben die übernommene Eintragsfehlergrenze
+e=1e-25. Für ihren 4x84-Fehlerblock gilt daher ||E_zJ||<=sqrt(336)e und
+
+  2|z*E_zJ j| <= sqrt(336)e
+       (lambda_zJ ||z||² + ||j||²/lambda_zJ).
+
+Der übrige 92er Block (Y8,J84) erhält weiterhin 92e I92. Der reine z4-Block
+besitzt bereits seine gesonderten physischen rationalen Unter-/Obergrenzen;
+der alte zusätzliche Eintragspreis war dort ausdrücklich konservativ.
+z-Y trägt seine vollständige eigene epsilon-Majorante aus Punkt 1.
+
+3. Die gespeicherte ursprüngliche halbe D96-Spanne enthält den separaten
+z4-Preis, die Buchung epsilon diag(M,I8,0) und 96e I96. Dies ist im gebundenen
+Erzeuger explizit zu sehen. Der Code entfernt nur diese zwei identifizierten
+Buchungen, bildet eine gerichtete obere Matrixhülle für den verbleibenden
+Preis und addiert die unter 1–2 bewiesenen vollständigen Ersatzbuchungen.
+Alle bei den Differenzen verbleibenden Eintragsradien werden erneut durch
+eine symmetrische Diagonalmajorante getragen.
+
+Die resultierende Matrix E_D erfüllt damit für den unveränderten direkten
+Modellmittelpunkt D0 die beidseitige Formschranke
+
+  -E_D <= D_physical-D0 <= E_D.
+
+Sie wird auf dem gesamten gemeinsamen 96er Block vor der Elimination
+benutzt. Die mit einem Modell ausgewählten Young-Parameter begründen keine
+Positivität; entscheidend sind ihre positive rationale Festlegung, die obigen
+für jeden Parameter gültigen Ungleichungen und der nachfolgende gerichtete
+Schur-/Quellenabschluss. Die tatsächliche neue Inversmetrik U1 und sämtliche
+Quellenfehler werden separat angeschlossen.
+
+Der Code und die zugehörigen gespeicherten Matrizen heißen
+direct_D_transport.py und DIRECT_D_TRANSPORT.json. Die neue Kombination ist
+AUTHOR_DERIVED; die historische Geltung der direkten Paarungszertifikate
+bleibt Voraussetzung, die gezielte Gegenprüfung dieser Anwendung offen.

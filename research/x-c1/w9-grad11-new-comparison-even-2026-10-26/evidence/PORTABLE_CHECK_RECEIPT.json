@@ -1,0 +1,13 @@
+{
+  "status": "PORTABLE_BOUND_INPUTS_AND_ARCHIVE_RESOLUTION_PASS",
+  "source_ledger_sha256": "a30a18715985f82fabc6776de3f6244c1d8504256d19713af3d8d260fb2436d5",
+  "loaded_direction": "T01",
+  "fresh_integrations": 0,
+  "source_polynomial_degree": 1280,
+  "seconds": 103.93157190002967,
+  "verified_sources": {
+    "run_reproduction.py": "a82e3bcf2c36d7b7deb0c0a03ffe8920891471637b15ae8b1e354ce0315c5264",
+    "portable_read_smoke.py": "8a63774f4c40de60204c4ba9e1316b14391d971ebf10836ec44e8a0f72740c5b"
+  },
+  "scope": "Isolated partial handoff layout; same frozen research inputs, archive and T01 model. No fresh integration and no analytic review."
+}

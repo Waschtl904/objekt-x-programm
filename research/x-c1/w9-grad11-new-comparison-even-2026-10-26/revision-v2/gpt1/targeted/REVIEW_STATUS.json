@@ -1,0 +1,20 @@
+{
+  "status": "PASS_TARGETED_V2_REVISION_UNDER_STATED_PREMISES",
+  "B1_Gram_radius_transport": "PASS",
+  "B2_optimized_checker_rejection": "PASS",
+  "finite_and_residual_rational_recombination": "PASS",
+  "unchanged_original_files": 5263,
+  "reused_sections": 4704,
+  "new_integrations": 0,
+  "native_repricing_stages": 7,
+  "mathematical_result_json_files_reproduced": 19,
+  "required_assumptions": "H1-H4 and the explicitly named physical form/source/quadrature applications of v1; see report section 7",
+  "blanket_independent_analytic_approval_of_all_v1_applications": false,
+  "external_review_open": true,
+  "checklist": "3/10",
+  "point4": "OPEN",
+  "publication_performed": false,
+  "integration_performed": false,
+  "final_lower_bound": "3.99038487528413e-19",
+  "bound_relation": "rho_v2 > final_lower_bound > 0"
+}

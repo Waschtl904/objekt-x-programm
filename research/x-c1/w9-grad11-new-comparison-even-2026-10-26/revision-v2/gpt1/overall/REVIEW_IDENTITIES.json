@@ -1,0 +1,33 @@
+{
+  "Objekt-X-Grad11-Revision-v2-2026-10-26.zip": {
+    "bytes": 11873565,
+    "sha256": "aa5d5df0a068991972ba7eb5f60de9106f865cc53a891330394847666251e4fa"
+  },
+  "Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip": {
+    "bytes": 360325509,
+    "sha256": "024f20f0c6086aefabb6e3d759f91aaa466906a864c673c0c0b467f3ee627946"
+  },
+  "v2_manifest": {
+    "bytes": 11333,
+    "sha256": "e8d2156c40691b4efb4b2eaad01c501865c2d596c202349f9fb2ce33e3a330a5"
+  },
+  "v1_manifest": {
+    "bytes": 1067839,
+    "sha256": "3a388b3051f65b502db718b72c4e690c73c4fbf4a649360ca9afeb66b85389f2"
+  },
+  "new_joint_result": {
+    "bytes": 54132,
+    "sha256": "a025b49d4e13919c67d74f5f2f8598d34cd74fe304f3e103bae6be907d0ffc6e"
+  },
+  "prior_targeted_GPT1_v2_archive": {
+    "bytes": 123141,
+    "sha256": "a225fba6d6f8a2cc40931ab138f6ca4e0299517c3596719fb8087db5ee4db734",
+    "path_in_this_package": "prior/Objekt-X-Grad11-Revision-v2-GPT1-Gegenpruefung-2026-10-26.zip"
+  },
+  "separate_author_v2_receipt": {
+    "name": "Objekt-X-Grad11-Revision-v2-Beleg-2026-10-26.json",
+    "status": "NOT_PROVIDED_NOT_VERIFIED",
+    "bytes": null,
+    "sha256": null
+  }
+}

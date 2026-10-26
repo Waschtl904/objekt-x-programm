@@ -1,0 +1,253 @@
+{
+  "status": "GPT1_INDEPENDENT_NEGATIVE_CONTROLS_PASS",
+  "cases": [
+    {
+      "label": "original_GPT1_invalid_miniarchive",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py",
+        "--zip",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/original_gpt1_invalid_miniarchive.zip"
+      ],
+      "environment_PYTHONOPTIMIZE": null,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py\", line 31, in <module>\n    assert set(names)==expected,'Unexpected or absent archive member'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: Unexpected or absent archive member\n"
+    },
+    {
+      "label": "valid_v2",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/verify_revision_v2.py",
+        "--base",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip",
+        "--revision",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Grad11-Revision-v2-2026-10-26.zip",
+        "--revision-sha256",
+        "aa5d5df0a068991972ba7eb5f60de9106f865cc53a891330394847666251e4fa",
+        "--directory",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged"
+      ],
+      "environment_PYTHONOPTIMIZE": null,
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"REVISION_BYTES_AND_RATIONAL_ARITHMETIC_PASS\",\n  \"overall_mathematical_review\": \"UNRESOLVED_PENDING_GPT1_TARGETED_REVIEW\",\n  \"author_derived\": true,\n  \"external_review_open\": true,\n  \"fresh_integrations\": false,\n  \"original_files_unchanged\": 5263,\n  \"additive_files\": 53,\n  \"base_archive_sha256\": \"024f20f0c6086aefabb6e3d759f91aaa466906a864c673c0c0b467f3ee627946\",\n  \"revision_archive_sha256\": \"aa5d5df0a068991972ba7eb5f60de9106f865cc53a891330394847666251e4fa\",\n  \"optimized_python_supported\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "original_GPT1_invalid_miniarchive",
+      "mode": "-O",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-O",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py",
+        "--zip",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/original_gpt1_invalid_miniarchive.zip"
+      ],
+      "environment_PYTHONOPTIMIZE": null,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "label": "valid_v2",
+      "mode": "-O",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-O",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/verify_revision_v2.py",
+        "--base",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip",
+        "--revision",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Grad11-Revision-v2-2026-10-26.zip",
+        "--revision-sha256",
+        "aa5d5df0a068991972ba7eb5f60de9106f865cc53a891330394847666251e4fa",
+        "--directory",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged"
+      ],
+      "environment_PYTHONOPTIMIZE": null,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "label": "original_GPT1_invalid_miniarchive",
+      "mode": "-OO",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-OO",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py",
+        "--zip",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/original_gpt1_invalid_miniarchive.zip"
+      ],
+      "environment_PYTHONOPTIMIZE": null,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "label": "valid_v2",
+      "mode": "-OO",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-OO",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/verify_revision_v2.py",
+        "--base",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip",
+        "--revision",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Grad11-Revision-v2-2026-10-26.zip",
+        "--revision-sha256",
+        "aa5d5df0a068991972ba7eb5f60de9106f865cc53a891330394847666251e4fa",
+        "--directory",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged"
+      ],
+      "environment_PYTHONOPTIMIZE": null,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "label": "original_GPT1_invalid_miniarchive",
+      "mode": "env1",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py",
+        "--zip",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/original_gpt1_invalid_miniarchive.zip"
+      ],
+      "environment_PYTHONOPTIMIZE": "1",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "label": "valid_v2",
+      "mode": "env1",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/verify_revision_v2.py",
+        "--base",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip",
+        "--revision",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Grad11-Revision-v2-2026-10-26.zip",
+        "--revision-sha256",
+        "aa5d5df0a068991972ba7eb5f60de9106f865cc53a891330394847666251e4fa",
+        "--directory",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged"
+      ],
+      "environment_PYTHONOPTIMIZE": "1",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "label": "original_GPT1_invalid_miniarchive",
+      "mode": "env2",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/workspace/work/breakthrough-2026-10-25/verify_handoff_v2.py",
+        "--zip",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/original_gpt1_invalid_miniarchive.zip"
+      ],
+      "environment_PYTHONOPTIMIZE": "2",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "label": "valid_v2",
+      "mode": "env2",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/verify_revision_v2.py",
+        "--base",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip",
+        "--revision",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Grad11-Revision-v2-2026-10-26.zip",
+        "--revision-sha256",
+        "aa5d5df0a068991972ba7eb5f60de9106f865cc53a891330394847666251e4fa",
+        "--directory",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged"
+      ],
+      "environment_PYTHONOPTIMIZE": "2",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "OPTIMIZED_PYTHON_REJECTED: use ordinary Python; no certificate was checked.\n"
+    },
+    {
+      "label": "omitted_radius_formula",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/verify_revision_v2.py",
+        "--base",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip",
+        "--revision",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/own-negative-controls-portable/omitted_radius_formula.zip",
+        "--revision-sha256",
+        "7bfbddfb28117f63f521eed06349977aa77ad6750c919c30022b6ec274558737",
+        "--destination",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/own-negative-controls-portable/omitted_radius_formula-extracted"
+      ],
+      "environment_PYTHONOPTIMIZE": null,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "REVISION_REJECTED: Radius price formula\n"
+    },
+    {
+      "label": "unpaid_h_coordinate",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/verify_revision_v2.py",
+        "--base",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip",
+        "--revision",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/own-negative-controls-portable/unpaid_h_coordinate.zip",
+        "--revision-sha256",
+        "11a91c938d99d4f589f4e18f7e71149255ef07ef5f08fbe43acee438c8d91a19",
+        "--destination",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/own-negative-controls-portable/unpaid_h_coordinate-extracted"
+      ],
+      "environment_PYTHONOPTIMIZE": null,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "REVISION_REJECTED: Unpaid radius coordinate\n"
+    },
+    {
+      "label": "forged_final_result",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/merged/verify_revision_v2.py",
+        "--base",
+        "/workspace/scratch/da84280488bf/upload/Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip",
+        "--revision",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/own-negative-controls-portable/forged_final_result.zip",
+        "--revision-sha256",
+        "aed60ad89c7705808743cfea24c7a00b69950435e5dd1f6e95ab2e0fd26d3015",
+        "--destination",
+        "/workspace/scratch/da84280488bf/revision-v2-review-2026-10-26/own-negative-controls-portable/forged_final_result-extracted"
+      ],
+      "environment_PYTHONOPTIMIZE": null,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "REVISION_REJECTED: Rest replay mismatch: relative_rest_upper\n"
+    }
+  ],
+  "changed_originals": false
+}

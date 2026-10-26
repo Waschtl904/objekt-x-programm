@@ -1,0 +1,302 @@
+Objekt X — gezielte GPT1-Abnahme der lokalen Revision v2
+26. Oktober 2026
+
+VOTUM: PASS im beauftragten Revisionsumfang, unter den unten benannten
+Voraussetzungen. Die konkreten Beanstandungen B1 und B2 sind geschlossen.
+Die zusätzliche Fehlerbuchung, ihr Transport, die erneuerte rationale
+Schlussrechnung und die Prüfer-Negativkontrollen sind bestanden.
+
+Das bisherige UNRESOLVED wegen dieser beiden Beanstandungen entfällt damit
+für die Revision. Dieser PASS ist keine pauschale unabhängige Abnahme aller
+übrigen neuen v1-Anwendungslemmata und keine externe Gesamtbegutachtung.
+AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN, H1–H4, Checkliste 3/10 und Punkt 4
+offen bleiben bestehen. Keine Veröffentlichung oder Integration ausgeführt.
+
+1. Geprüfte Identitäten
+
+Original v1:
+Objekt-X-Neuer-Vergleich-Grad11-GPT2-2026-10-26.zip
+360325509 Byte
+SHA-256 024f20f0c6086aefabb6e3d759f91aaa466906a864c673c0c0b467f3ee627946
+Originalmanifest:
+3a388b3051f65b502db718b72c4e690c73c4fbf4a649360ca9afeb66b85389f2
+
+Revision v2, tatsächlich empfangen und selbst gehasht:
+Objekt-X-Grad11-Revision-v2-2026-10-26.zip
+11873565 Byte
+SHA-256 aa5d5df0a068991972ba7eb5f60de9106f865cc53a891330394847666251e4fa
+Revisionsmanifest:
+e8d2156c40691b4efb4b2eaad01c501865c2d596c202349f9fb2ce33e3a330a5
+53 additive Nutzdateien, zusätzlich REVISION_MANIFEST.json.
+Kein Revisionspfad überschreibt einen Originalpfad.
+
+Neues JOINT_REST_BUDGET_V2.json:
+a025b49d4e13919c67d74f5f2f8598d34cd74fe304f3e103bae6be907d0ffc6e
+
+Meine vorausgehende Prüfung bleibt separat erhalten:
+Objekt-X-Neuer-Vergleich-GPT1-Pruefung-2026-10-26.zip,
+21105 Byte, SHA-256
+9dfbbdaf653ded4df9668c2933a55cfca9a15b62149d68c49395639fb27d299f.
+Die v2-Abnahme korrigiert oder überschreibt weder diesen historischen
+Prüfbericht noch die historischen Autorenstatusfelder.
+
+2. B1: mathematischer Radiusnachtrag
+
+Sei G der tatsächliche Gram derselben Modellfunktionen, M der symmetrische
+Teil seines gespeicherten Mittelpunktes und -R <= G-M <= R. Bei einem
+Quellenfehler mit Gram <= E gilt für lambda>0
+
+  G_phys <= (1+lambda) M + (1+1/lambda) E + (1+lambda) R.
+
+Wenn der direkte Modellwechsel R schon bezahlt ist, verbleibt zusätzlich
+lambda R. Bei einem Gram auf der zweiten Seite der Young-Ungleichung
+lambda A+B/lambda ist der zusätzliche Preis R/lambda. Diese Beiträge
+sind Formmajoranten, keine weiteren unabhängigen Fehlervektoren.
+
+Die vier verwendeten Blöcke sind F12, J84, h12 und der gemeinsame alte
+F/J-Block old96. J behält die historische Normierung 91/50. Ich habe alle
+exakten rationalen Rohmittelpunkte, Radien, symmetrischen Schnitte und
+Zeilensummenpreise unabhängig geprüft. Für einen symmetrischen Fehler
+mit Eintragsbeträgen <= e_ij majorisiert diag(sum_j e_ij) seine beiden
+Vorzeichen; dies folgt direkt aus 2|x_i x_j|<=|x_i|²+|x_j|².
+
+Beim h-Block sind die rohen Eintragsmittelpunkte nicht exakt symmetrisch.
+v2 benutzt den Schnitt der beiden Intervalle für denselben tatsächlichen
+symmetrischen Eintrag und begrenzt ihn um den symmetrisierten Mittelpunkt.
+Alle verwendeten Radiusdiagonalen überdecken diese exakten Zeilensummen.
+Der antisymmetrische Mittelpunktanteil trägt zur reellen quadratischen
+Form nichts bei. Die erweiterten Dezimal-Anzeigeintervalle werden dabei
+nicht irrtümlich als die engere maßgebliche Rohballmenge ausgegeben.
+
+Mit delta=92149/50000, e_B als ganzer Kopplungsfehler und X als bisheriger
+positiver endlicher Modellmetrik sind genau folgende Nachträge bezahlt:
+
+  old96: lambda_old96 R_old96 / delta;
+  h:     lambda_h R_h / delta;
+  F-h:   2 lambda_Fphysical R_F / delta;
+  J-h:   2 lambda_Jphysical R_J / delta;
+  F-B:   e_B² R_F / (delta² lambda_FoldB);
+  J-B:   e_B² R_J / (delta² lambda_JoldB);
+  zweite Variation:
+         11 tr(X) e_B² / delta² mal (eingebettetes R_F+R_J).
+
+Die letzte Position ist im rationalen Kontrollformat in zwei Zeilen
+aufgeteilt. Es sind sieben mathematische Positionen und acht Formelzeilen.
+Alle 108 Koordinaten der insgesamt bezahlten Zusatzdiagonale überdecken
+die eigenständig mit rationalen oberen e_B- und tr(X)-Werten berechneten
+Preise. Die ursprünglichen Young-Parameter sind unverändert. Die gesamte
+alte Ledger-Komponente stimmt mit v1 überein; kein alter Preis wurde zum
+Ausgleich der neuen Positionen entfernt.
+
+Die Zahl 11 bleibt sachlich richtig: sechs niedrige/hohe Quellfehler,
+zwei alte B-Fehler, ein neuer h-B-Paarungsfehler und zwei Quadraturfehler.
+Ein Radiusnachtrag verändert die Majorante eines dieser Fehlervektoren;
+er erzeugt keinen zwölften Vektor. Die gemeinsame old96-Hülle enthält
+die F/J-Mischblöcke. Weitere Kreuzwirkungen werden nicht null gesetzt.
+
+Die genaue Transportkette wurde im Code verfolgt und frisch ausgeführt:
+Zusatz zu Etotal vor der gemeinsamen 108er Blockrechnung; Übernahme in Es;
+erneute obere Inversrundungshülle alpha/(1-alpha)*Ucap; erneute gemeinsame
+Matrixradien; positiver 96er Block und Schurrest; rationale untere Matrix
+Gp; unveränderte Kongruenz B; neues C und C^-1. Die 191er inverse Metrik
+und das Integrationsmodell werden dabei nicht durch eine neue Route ersetzt.
+
+Die ursprüngliche skalare Gegenkontrolle liefert weiterhin
+  tatsächlicher Wert 1089/400, alter Preis 1047/400;
+  Nachtrag lambda R=21/200, korrigierter Preis exakt 1089/400.
+Die zusätzliche inverse Kontrolle liefert
+  tatsächlicher Wert 4, alter Preis 19/5;
+  Nachtrag R/lambda=1/5, korrigierter Preis exakt 4.
+Beide Kontrollen wurden eigenständig ausgeführt.
+
+3. Ganze Restnormen und frische Reproduktion
+
+In der physischen Restanwendung wird die zuvor ungesicherte Mittelpunktnorm
+durch die obere Formhülle ersetzt:
+
+ sqrt(pv^T (M_F+R_F) pv) + sqrt(w^T (M_J+R_J) w).
+
+Die Verwendung dieser Hülle ist durch dieselben tatsächlichen Modellgrame
+begründet. Die neuen Es- und Arithmetikpreise werden außerdem in der ganzen
+Fo-Fehlerhülle ER benutzt. Damit erreicht der Nachtrag sowohl die niedrige
+Antwortabweichung als auch den Fo-plus-T-Resttransport. Die alten CLOSED-
+Regeln T00–T03 und die größeren DYNAMIC-Gamma-Kappen T04–T11 bleiben aktiv.
+Alle zwölf neuen oberen physischen Restpreise sind gegenüber v1 nicht
+kleiner. Die zwölf korrigierten Gramnormen wurden gesondert verglichen.
+
+In einer getrennten Kopie wurden diese sieben Stufen frisch ausgeführt:
+
+ python -B run_reproduction_v2.py source_block_ledger_v2.py --gamma-reserve
+ python -B run_reproduction_v2.py source_arithmetic_closure_v2.py
+ python -B run_reproduction_v2.py record_exact_gram_radii_v2.py
+ python -B audit_closed_source_gap_v2.py
+ python -B joint_tail_geometry_v2.py
+ python -B run_reproduction_v2.py batch_physical_errors_v2.py
+ python -B joint_rest_budget_v2.py
+
+Alle sieben bestanden. Laufzeit hier insgesamt ungefähr 144 Sekunden;
+Python 3.12.14 und python-flint 0.9.0, zehn Minuten Stopplinie pro Stufe.
+Es wurde keine Integrationsroutine aufgerufen.
+
+Alle mathematischen Felder der 19 neu erzeugten JSON-Ergebnisdateien sind
+mit der gelieferten v2 identisch. Die tatsächlichen Abweichungen betreffen
+nur seconds und die hierdurch veränderten Folgehashes. Beide Hashketten
+wurden gegen ihre jeweiligen tatsächlichen Dateien geprüft. Die zwölf
+erzeugten PHYSICAL_EXPANDED-Protokolle stimmen nach ausschließlicher
+Zeilenenden-Normalisierung textlich überein. Das ist eine Feststellung
+über die getrennte Arbeitskopie; keine Originaldatei wurde normalisiert.
+
+4. Unabhängige rationale Schlussrechnung
+
+Mein eigener rationaler Prüfer, auf der vorherigen GPT1-Implementierung
+aufbauend und an die neuen v2-Eingänge angeschlossen, bestätigt:
+
+ - positive rationale Gp- und obere physische G_W-Matrix;
+ - zwölf positive LDL-Pivots von Gp-4e-19 G_W mit exakter Rekonstruktion;
+ - dieselbe gemeinsame rationale Basis B und dieselben 1152 Testkoeffizienten;
+ - C=B^T Gp B, zwölf positive rationale LDL-Pivots und C C^-1=I exakt;
+ - alle 2700 Gamma224-Koeffizientenzuordnungen in den unveränderten Caches;
+ - alle 4704 Abschnittsindizes, Bindungen und gespeicherten Summanden;
+ - 24 rationale logarithmische Randrekombinationen;
+ - alle zwölf ganzen Restnormen und sämtliche 144 Kreuzgewichte.
+
+Die exakten Brüche stehen in INDEPENDENT_EXACT_AUDIT.json und
+RESULT_COMPARISON.json. Ihre Dezimaldarstellung lautet:
+
+ theta_v2 = 0.002403781178965734069320387422806509041804016677516...
+ rho_v2   = (1-theta_v2)*4e-19
+          = 3.990384875284137063722718450308773963832783933289935...e-19.
+
+Insbesondere ist rho_v2 > 3.99038487528413e-19 > 0 exakt bestätigt.
+Der Schwellenwert 4e-19 wurde an der korrigierten Matrix neu geprüft;
+er wurde nicht allein aus dem alten PASS übernommen.
+
+Gegenüber den UNGERUNDETEN v1-Daten steigt theta um ungefähr
+4.24062211081242222598e-42; rho sinkt um ungefähr 1.69624884432496889039e-60.
+Die neue längere Dezimalanzeige ist kein mathematischer Reservegewinn
+gegenüber v1. Die frühere kürzere öffentliche Anzeige war konservativer
+abgerundet. Auch 3.990384872e-19 bleibt als schwächere Anzeige zulässig.
+
+Der Schluss aus gültigen physischen Zertifikaten bleibt derselbe:
+Für den tatsächlichen positiven Restgram H, gültige n_i und A=C^-1 gilt
+|H_ij|<=n_i n_j und tr(AH)<=theta. Positivität liefert H<=theta C.
+Zusammen mit der endlichen Variationsreserve und Qold<=Q1 folgt daher
+
+  K_P[c]-<h_c,Q1^-1 h_c> >= rho_v2 G_W[c].
+
+Dieser algebraische Schluss ist für die gemeinsame lineare Testabbildung
+gültig; er unterstellt keine Orthogonalität der Restbilder.
+
+5. Wiederverwendung sämtlicher Abschnitte
+
+Alle 5263 v1-Manifestdateien wurden in der unveränderten zusammengeführten
+Auspackung und nach den sieben Läufen auch in der Arbeitskopie vollständig
+gegen v1 geprüft: kein Byteunterschied. Dazu gehören alle Modellquellen,
+zwölf Caches, gemeinsame Basis und Testabbildung, Gamma-Koeffizienten,
+Quadratur- und Kontureingänge sowie alle 4704 Abschnittsdateien.
+
+Wiederverwendbar sind genau:
+ T00 411; T01 413; T02 409; T03 399; T04 395; T05 397;
+ T06 391; T07 383; T08 367; T09 379; T10 383; T11 377.
+Summe 4704, dazu beide analytischen Randstücke jeder Richtung.
+
+Begründung: v2 ändert die äußeren integrierten Modellfunktionen, Eingaben,
+festgelegten Tests und Konturen nicht. Sie ergänzt obere Fehlerpreise und
+erneuert die endliche Reserve und deren Restgewichtung. Genau dieser
+Unterschied erlaubt die Wiederverwendung. Die gespeicherten Abschnitte
+wurden erneut rekombiniert, nicht neu integriert. Ein Byteabgleich allein
+wird nicht als neue Herleitung der jeweiligen Taylor-/Konturhülle ausgegeben.
+
+6. B2: Prüfersicherheit
+
+Die neuen ausführbaren v2-Einstiege weisen optimierten Python-Betrieb vor
+Fachimporten, Rechenarbeiten und Erfolgsmeldungen explizit zurück. Die
+Ablehnung benutzt keine entfernbare assert-Anweisung. Exitcode ist 1 mit
+OPTIMIZED_PYTHON_REJECTED; ausschließlich gewöhnliches Python ist unterstützt.
+Die alten v1-Prüfer bleiben aus Archivgründen unverändert und sind weiterhin
+kein zugelassener optimierter Ersatz für die v2-Prüfer.
+
+Frisch ausgeführte Autorenkontrollen: zehn gültige/ungültige Archivfälle
+unter normalem Python, -O, -OO, PYTHONOPTIMIZE=1 und =2; dazu 48 frühe
+Abweisungen der zwölf neuen Einstiegspunkte in vier optimierten Betriebsarten.
+
+Eigene unabhängige Kontrollen: weitere 13 Fälle. Das originale GPT1-
+Miniarchiv wird in allen fünf Betriebsarten abgewiesen. Das vollständige
+v2-Paket wird normal akzeptiert und in allen vier optimierten Modi vorab
+abgewiesen. Zusätzlich werden drei absichtlich verfälschte Revisionspakete
+unter normalem Python verworfen, obwohl ihre ZIP- und Manifestbindungen
+für die verfälschten Bytes jeweils neu berechnet wurden:
+
+ - fehlende h-Radiusformel: Radius price formula;
+ - auf null gesetzter bezahlter h-Koordinatenpreis: Unpaid radius coordinate;
+ - theta=2 und negative Endreserve: Rest replay mismatch.
+
+Alle Ausgaben wurden frisch erfasst. Kein abgewiesener Fall meldet PASS.
+Die Fehlpakete sind isolierte Kontrollen; Autoren-v1 und -v2 wurden nicht
+verändert. Die Negativkontrollen behaupten keine vollständige Prüfung
+beliebiger Eingriffe in beliebigen Python-Code.
+
+7. Voraussetzungen und Grenze dieser Abnahme
+
+Übernommen bleiben H1–H4 in ihrem vollständigen gebundenen Wortlaut:
+physische Domänen/Momentkarten; historische ganze Quellen-/Featuregrenzen;
+Form-, inverse und Koerzivitätszertifikate; gebundene historische Modell-,
+Quadratur-, Brücken-, Cache- und Momentbelege. Die Kurzfassung hier ersetzt
+deren ursprüngliche Quellenanker nicht.
+
+Für den physischen Vergleich werden außerdem weiterhin die in v1 konkret
+ausgeschriebenen neuen Anwendungen benötigt: tatsächliche Kopplung BB*<=HB1
+und Formordnung, strukturierte direkte D-/K-Paarungspreise, ganze Quellen-
+und Fo-plus-T-Transporte sowie die Kontur-/Quadratur-/Endpunkthüllen.
+Ihre algebraischen Anschlüsse sind von der rein numerischen Reproduktion
+zu unterscheiden. Diese Revision bearbeitet den konkreten offenen
+Gramradiusanschluss und die Prüferlücke. Sie erhebt die übrigen v1-Texte
+nicht allein durch Integration oder bestandene Arithmetik zu vollständig
+unabhängig begutachteten Sätzen.
+
+Deshalb sind sauber zu trennen:
+  B1/B2 und v2-Schlussrekombination: gezielter projektinterner PASS;
+  bedingte positive Reserve aus den genannten Zertifikaten: bestätigt;
+  pauschale analytische Gesamtbegutachtung: nicht Gegenstand dieses PASS;
+  externe Begutachtung, A9->A11-Gesamtanschluss, Objekt X: weiterhin offen.
+Es gibt in der geprüften Revision keinen neuen konkreten Gegenbefund.
+Die alten L1-, Zweiraum- und Routenausschlussresultate werden nicht geöffnet.
+
+8. Veröffentlichungsklarstellung
+
+Der neue Autorenbericht ordnet die frühere Veröffentlichung ausdrücklich
+der GPT2-Sitzung zu und dokumentiert als Nutzerfreigabe die Antwort
+"dann mach das" auf das Angebot der GitHub-Übermittlung. Der unveränderte
+Veröffentlichungsbeleg ist Bestandteil der Revision. Dies ist nun die
+vorliegende Autorenauskunft zur zuvor offenen Zuständigkeitsfrage; ich habe
+den ursprünglichen anderen Chat nicht selbst eingesehen. Daraus wird weder
+eine unautorisierte Veröffentlichung behauptet noch eine neue v2-
+Veröffentlichungsfreigabe abgeleitet. In dieser Prüfung wurde GitHub weder
+beschrieben noch erneut live abgeglichen.
+
+9. Reproduktion der GPT1-Prüfung
+
+Dieses Prüf-ZIP enthält eigene Programme, Berichte und frische Protokolle,
+keine neu gepackten Kopien der v1- oder v2-Autorenarchive.
+
+Entpacken Sie dieses GPT1-Paket in revision-v2-review-2026-10-26. Die beiden
+unveränderten Autoren-ZIPs liegen als Geschwister unter upload/ mit den oben
+genannten Namen. Mit dem gelieferten v2-Prüfer zuerst v1+v2 in den NEUEN
+Unterordner merged auspacken und verifizieren. Dann:
+
+ python -B independent_radius_audit.py
+ python -B independent_exact_audit_v2.py
+ python -B independent_checker_controls.py
+
+Die letzte Kontrolle legt einen neuen Ordner own-negative-controls-portable
+an. Bereits vorhandene Kontrollverzeichnisse werden nicht überschrieben.
+Für die native Reproduktion merged nach replay kopieren. Der mitgelieferte
+Treiber run_finite_replays_gpt1.py verwendet die vorhandene FLINT-Installation
+im Geschwisterpfad grad11-review/deps; diesen lokalen Abhängigkeitspfad bei
+Bedarf anpassen. Die sieben ursprünglichen Befehle stehen oben. Für jeden
+Lauf gilt eine Stopplinie von zehn Minuten, ohne Integrationsaufruf.
+
+Die exakten Ausführungsbefehle und tatsächlichen Ausgaben dieser Prüfung
+sind in FINITE_REPLAY_EXECUTION.json und INDEPENDENT_CHECKER_CONTROLS.json
+enthalten. REPLAY_DIFFERENCES.json führt sämtliche zulässigen Laufzeit-,
+Folgehash- und Zeilenendenabweichungen einzeln auf.

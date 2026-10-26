@@ -1,0 +1,132 @@
+Objekt X — Konturen, ganze Funktionen und Quadratur der neuen Route
+25. Oktober 2026. Neue Autorenanwendung unter H1–H4, externe Prüfung offen.
+
+1. Frische reelle Größen statt alter Zahlenwerte
+
+ENDPOINT_INGREDIENTS_Txx enthält für jede Richtung P (die absolute
+Legendre-Summenmajorante von Phi ff), ||p||, das Schalenpolynom-Supremum S,
+die niedrige Projektionsnorm, lm, die Gesamtvariation V der neuen Kernatome,
+ihre Cauchysumme und den tatsächlich integrierten Momentterm. Für h werden
+ell, quot, Gamma, Dv und sämtliche aktiven D-Primzellen neu eingeschlossen.
+Die Polynomsuprema folgen aus dem gerichteten Quadratintegral und der
+Nikolskii-Ungleichung; sie sind keine Stichprobenmaxima.
+
+Es gelten dieselben geometrischen und Kernel-Lemmata wie in den gebundenen
+ANALYTIC_CAPS und der gegengeprüften Zweiraum-Anwendung. Insbesondere sind
+1<a<b<1.1, mu>1, H383<7, die regulären Kernelcaps <2, und die sechs
+Primgewichte summieren sich zu weniger als 7. Die neue Zahl delta1 ist >1.
+Die Quelle hat dieselben Grade und dieselben tatsächlichen Trennstellen.
+
+Mit Z=32||p|| reicht auf dem Kern für Q(-Phi ff-Fp+Jw)
+ g=40P+40Z+20S+1000|lm|
+als Koeffizient von 1+|log(a-y)|. P majorisiert bereits die absolute
+Legendre-Summe, also auch deren Multiplikation mit H_n<=7. Die globalen
+Polynome haben Grad <=8 und Abstand >0.05 zu ihrem äußeren Rand.
+Die Schale-Kern-Cauchyterme werden auf der tatsächlichen Schale integriert:
+ S int_a^b (y-x)^-1 dy, nicht als getrennte große Monomialfortsetzungen.
+Der Momentanteil benutzt das unveränderte Qm-Lemma mit Cap 1000.
+
+Der skalare Mittelabzug alpha ist durch 3g plus den neuen h-Atommassenpreis
+begrenzt. Aus der expliziten Formel für ustatic und m160<2 folgt deshalb
+ F=P+10g+low+3V+3|h0|d+3|lm|
+für seinen logarithmischen Koeffizienten, einschließlich äußerem Momentlift.
+Hier sind h0 und d der neu hinzugefügte konstante innere Streifen.
+Die elementare Integration der Loghülle liefert int_0^1 |Fstatic(t)|dt<=3F.
+
+Für h gilt die in ANALYTIC_CAPS erklärte reflektierte Integralidentität:
+ell(-x)log((B+x)/(b+x))+quot(-x) wird zusammen als reflektiertes Integral
+begrenzt. Die fortgesetzten Polynome bei -x werden nicht getrennt durch
+das nur auf positiven x geprüfte ell-Supremum abgeschätzt.
+Auf der physischen neuen Schale folgt aus ||c||_2<1 und Grad<=11 die
+Schranke <100. Sämtliche Primargumente liegen auf dieser Schale; der
+reflektierte Term kostet <1. Bei |ac|,|dm|<1 reicht deshalb
+ hcap=2 ell_sup+quot_sup+Gamma_sup+1000+Dpoly_sup+2 Dv_sup+100
+als Koeffizient von 1+|log(b-x)|. Diese kleinen Koeffizientenbedingungen
+werden für jede Richtung in CAPS_APPLICATION_CHECK_Txx erneut geprüft.
+
+2. Komplexe Majoranten ohne Änderung der Taylorpolynome
+
+Die komplexe Kern-Cauchyfunktion erfüllt für Abstand d_z von [0,1]
+ |int_0^1 Fstatic(t)/(z-t)dt|<=3F/d_z.
+Die reflektierte Schalenfunktion ist durch S(b-a)/(Re x+a) begrenzt.
+Beide Integralidentitäten sind exakt; nur ihre Konturhüllen werden ersetzt.
+
+Für die inneren Prim-Auswertungen wird außerdem der Schale-Kern-Cauchyterm
+algebraisch aus ustatic herausgenommen. Sein definierendes Integral kostet
+ S(b-a)/(2 delta1)[1/(a-Re x)+1/(a+Re x)].
+Der Rest bleibt das identische Polynomial-/Logmodell. Alle Nennerabstände
+werden positiv geprüft. Der Polynompreis auf einer Radius-2-Rechteckhülle
+wird dort sogar mit Kreisradius sqrt(8) gebildet. In allen anderen Jet-
+Polynomen reicht der angegebene Kreisradius: gebraucht wird die tatsächliche
+Cauchykontur, nicht die ganze umgebende Rechteckfläche. Die Logarithmen
+werden konservativ auf der Rechteckhülle eingeschlossen.
+
+Der unterschriebene konstante innere Streifen wird in der äußeren Funktion
+und in derselben Taylorreihe durch die exakten logarithmischen Cauchy-
+Integrale ergänzt. Sein regulärer Beitrag, Momentabzug und Qm-Moment sind
+ebenfalls Bestandteil des gespeicherten Modells. Kein Quadraturatom wird
+hier als kontinuierliche L2-Funktion interpretiert.
+
+3. Äußere Enden und vollständige Abschnittssumme
+
+Für x=a+v und t=-log(v) gilt das unveränderte elementare Integral-Lemma
+ int_0^a (1+|log u|)/(v+u)du<=3+2t+t²/2.
+Die Primargumente haben entweder Randabstand v oder einen festen Abstand
+>1e-6. Auf den ausgelassenen Streifen wird t>100 frisch geprüft.
+Der zusätzliche innere konstante Streifen kostet höchstens |h0|(1+t)
+im singulären Teil; seine anderen Beiträge stehen bereits in F und momentR.
+Mit der Summe der frischen Größen ist
+ E=100(F+hcap+Z+S+CauchyAtomCap+|momentR|+|h0|+1)
+an beiden Enden eine Majorante für den Koeffizienten von 1+log(v)^2.
+Die Faktoren aus dem Integral-Lemma, den sechs Primkanälen, Spiegelung,
+regulärer Faltung und den Momenten sind kleiner als dieser Faktor 100.
+Die parallele Einschließung am rechten Ende benutzt den positiven Abstand
+des Kern-Cauchyoperators und die dortigen h-/Schalenlogarithmen.
+
+Die Paritäts-X-Energie eines ausgelassenen Streifens der Länge d ist damit
+ <=2 E² d(29+28t+14t²+4t³+t⁴), t=-log(d).
+Dies ist ein bewusst vergrößertes exaktes Log-Quadratintegral. Jede übrige
+Zelle wird durch das Quadrat ihres Taylorpolynoms und die Cauchyrestgrenze
+integriert. Die endliche Gaußmaßreihe erhält ihren eigenen geometrischen
+Reihenrest. Der unabhängige Mittelpunktvergleich kontrolliert die Identität
+zweier Implementationen, ersetzt aber keinen dieser Restpreise.
+
+4. Neue Kernquadratur und Cacheatome
+
+Für die n-Punkt-Gaußregel auf einer glatten Zelle und eine analytische
+Kontur mit normalisiertem Radius R>1 gilt konservativ
+ error<=4 Länge M R^(-2n)/(1-1/R).
+Für R=2 ist dies genau der alte Preis 8 Länge M 2^(-2n). Die 64/32-Modelle
+verwenden auf den letzten 48 dyadischen Kernzellen R=23/8. Die Singularität
+a liegt dort bei normalisiertem Radius 3; 23/8 liegt strikt darunter.
+Der Preis wird auf dem ganzen Produkt mit Cauchy-/Qm-Kern angewendet.
+Eine bloße bessere Analytizität von h allein würde hierfür nicht reichen.
+Alle Konturabstände und die unveränderte Qm-Domäne werden frisch geprüft.
+
+Die L2-Cauchymajorante folgt aus int_0^s(u+g)^-2 du<=1/g. Der reguläre
+Kernel, das Momentfunktional und Qm erhalten die geerbten ganzen Caps
+4, 100 bzw. 1e6(1+|log g|). Die ausgeschriebene Summe im Prüfer transportiert
+alle diese Funktionen und Mittelabzüge gleichzeitig in die äußere X-Norm.
+
+Jeder neue Knoten und gewichtete h-Wert wird frisch gerechnet und mit
+dem gespeicherten Intervall durch einen Betrag der Differenz verglichen.
+Für einen Atomunterschied (dx,dw) genügt der zusätzliche Preis
+ 1e9(1+|log g|)(1+g^-2)(dw+|w_saved|dx).
+Begründung: Cauchykern und seine Knotenableitung kosten weniger als
+2(1+g^-2) in X; die regulären Kernel und Ableitungen sind auf dieser
+kompakten Domäne <1e6, ebenso die Qm-Ableitung nach zusätzlichem
+(1+|log g|)(1+g^-1). Die Momentfaktoren und äußeren L2-Längen kosten <100.
+Damit überdeckt 1e9 die gemeinsame Summe einschließlich alpha und momentR.
+Der Verbindungsweg liegt im geprüften Knotenintervall, mit Abstand >=g.
+
+Der ausgelassene innere Streifen wird nicht mit einer alten Grobhülle
+abgeschnitten: sein konstanter Wert ist Bestandteil des Modells. Nur die
+verbleibende Variation wird auf einem frischen Radius-0.001-Kreis für h
+geprüft und durch die vollständigen Cauchy-/regulären-/Momentpreise getragen.
+
+5. Reichweite
+
+Diese Anwendung ist pro Richtung gebunden. Erst vollständige äußere
+Abdeckung, Kern-, Quellen-, Metrik- und Fo-Preise und eine gemeinsame
+Matrixabschätzung der zwölf Restbilder ergeben einen ganzen Raumvergleich.
+Die externe Begutachtung und die historischen Voraussetzungen bleiben offen.

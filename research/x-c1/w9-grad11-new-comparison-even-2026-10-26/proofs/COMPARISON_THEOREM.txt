@@ -1,0 +1,114 @@
+Objekt X — algebraischer Schluss vom gemeinsamen Test zum Raumvergleich
+26. Oktober 2026. Autorenherleitung unter H1–H4; Gegenprüfung offen.
+
+Die Aussage dieses Textes gilt erst, wenn sämtliche zwölf Richtungsschranken
+vollständig sind und JOINT_REST_BUDGET.json theta<1 bestätigt. Ein Teilstand
+genügt nicht. Die neu benötigten analytischen Anwendungen sind in den fünf
+zugehörigen Herleitungstexten ausgeschrieben; sie werden durch diesen
+algebraischen Schluss weder erweitert noch unabhängig nachgeprüft.
+
+1. Genaue Form des endlichen Variationsvergleichs
+
+Für die neue Form Q1 sei U1 die inverse Kernmetrik, G die tatsächliche
+Kern-Schalen-Kopplung und D der tatsächliche direkte Schalenblock. Die
+physische Residualquelle h_c zur unveränderten äußeren Antwort zerlege sich
+in h_core,c und h_shell,c. In den 96 festen Schalenkoordinaten setze
+
+  S = D - G*U1G,
+  b c = h_shell,c - G*U1 h_core,c,
+  E_core[c] = <h_core,c,U1 h_core,c>.
+
+Hier bezeichnet b die eingeschränkte gemeinsame Quellenabbildung, nicht
+den geometrischen Intervallrand gleichen Namens in einzelnen Programmen.
+Für jeden frei gewählten Schalentest y und die zugehörige exakte Kernantwort
+
+  u = U1(h_core,c-G y),   v=(u,y)
+
+gilt durch Einsetzen in die quadratische Form
+
+  2<h_c,v>-Q1[v] = E_core[c]+2<b c,y>-S[y].
+
+Daher wird der endliche Abstand zum unveränderten äußeren Budget K_P durch
+die gemeinsame 108er Matrix
+
+  M = [[S, b], [b*, K_P-E_core]]
+
+am Vektor (-y,c) dargestellt. SOURCE_INTERFACE_CHAIN.txt begründet die
+gemeinsame, zweiseitige Quellenmajorante. D- und K-Paarungen sowie sämtliche
+Mittelpunktsetzungen sind in SOURCE_ARITHMETIC_CLOSURE.json bezahlt.
+Für die dortige untere Matrix P gilt M>=P. Ihr oberer 96er Block Sp ist
+positiv; mit bp und kp für die anderen Blöcke ist ihr Schurblock
+
+  gp = kp - bp* Sp^-1 bp.
+
+Die gespeicherten Intervalle für gp werden zusätzlich rational nach unten
+abgeschlossen: Gp ist ihre symmetrische Mittelpunktmatrix abzüglich der
+Diagonalmajorante aus den Zeilensummen der Radien. Genau diese Gp benutzt
+JOINT_TAIL_GEOMETRY.json. Der getrennte rationale LDL-Prüfer bestätigt
+
+  Gp >= 4e-19 G_W.
+
+Die Schuridentität liefert für jeden Test y
+
+  P[(-y,c)] = gp[c] + Sp[-y+Sp^-1 bp c] >= Gp[c].
+
+Somit ist unabhängig von der Nähe des gewählten y zum Minimierer
+
+  K_P[c] - (2<h_c,v>-Q1[v]) >= Gp[c].                 (1)
+
+2. Warum die ganze Restenergie abgezogen werden darf
+
+FULL_FORM_ORDER.txt begründet 0<Qold<=Q1<=A9 als Formordnung mit den
+erforderlichen Domänen. Der endliche Schalentest und seine exakte Kernantwort
+sind in der Formdomäne von Q1 zulässig. Für r_c=h_c-Q1 v liefert die
+Variationsidentität im koerziven Formraum
+
+  <h_c,Q1^-1 h_c> = 2<h_c,v>-Q1[v] + ||r_c||²_Q1*.
+
+Wegen Qold<=Q1 gilt ||r_c||²_Q1*<=||r_c||²_Qold*. Der Kernrest verschwindet
+exakt. Der verbleibende Rest enthält aber sowohl Fo als auch den ganzen
+komplementären Schalenraum T. WHOLE_SOURCE_APPLICATION.txt bezahlt beide
+Komponenten und ihre Kopplung. NEW_CONTOUR_APPLICATION.txt beschreibt die
+neue ganze Modellintegration, Quadratur-, Streifen- und Randpreise.
+
+Die gespeicherten ff-/low-Modelle sind Hilfsfunktionen zur Einschließung von
+r_c. Der eigentliche Test benutzt die exakte lineare Kernantwort U1. Ihre
+Differenzen zu den Hilfsmodellen sind separat bezahlt. Es wird keine Folge
+von Quadraturatomen als zulässige L2-Kernantwort eingesetzt.
+
+3. Eine Testabbildung und sämtliche Restmischterme
+
+B ist die exakt rationale invertierbare Matrix der zwölf Eingaberichtungen;
+Y enthält ihre genau festgelegten 96 Schalentestkoeffizienten. Es gilt eine
+einzige Abbildung y(c)=Y B^-1 c. Die exakte Kernantwort und damit auch
+c -> r_c sind linear. Für c=Bz setze
+
+  C=B*GpB,  A=C^-1,  H_ij=<r_(B e_i),r_(B e_j)>_Qold*.
+
+Die zwölf positiven rationalen LDL-Pivots von C und C A=I sind gespeichert
+und exakt geprüft. Der tatsächliche Restgram H ist positiv semidefinit.
+Für vollständige Richtungsschranken ||r_(B e_i)||_Qold*<=n_i gilt
+
+  |H_ij|<=n_i n_j,
+  tr(AH)<=theta:=Summe_ij |A_ij| n_i n_j.
+
+Die positive Matrix C^-1/2 H C^-1/2 hat größte Eigenzahl höchstens ihrer
+Spur. Daher H<=theta C und für jeden c
+
+  ||r_c||²_Qold* <= theta Gp[c].                    (2)
+
+4. Folgerung und Aussagegrenze
+
+Aus (1), (2) und der Variationsidentität folgt bei theta<1
+
+  K_P[c]-<h_c,Q1^-1 h_c>
+      >= (1-theta) Gp[c]
+      >= (1-theta) 4e-19 G_W[c] > 0                 (c ungleich 0).
+
+Die inverse Formordnung A9^-1<=Q1^-1 erlaubt außerdem denselben unteren
+Abstand für die tatsächliche A9-Inversenergie der festgelegten Quelle.
+Die Aussage betrifft den hier festgelegten zwölfdimensionalen Eingaberaum
+und die übernommenen historischen Voraussetzungen. Sie ist weder eine
+Vollständigkeitsbehauptung für andere Grade/Räume noch ein Abschluss von
+Objekt X. Die neue analytische Anwendungskette ist AUTHOR_DERIVED;
+gezielte unabhängige Gegenprüfung und externe Begutachtung bleiben offen.

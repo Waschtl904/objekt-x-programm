@@ -1,0 +1,282 @@
+Objekt X — GPT2: stärkere A9-Unterform bei fester äußerer Antwort
+25. Oktober 2026
+AUTHOR_DERIVED / EXTERNAL_REVIEW_OPEN
+
+Ergebnis und Entscheidung
+
+Es gibt eine konkret begründbare Verstärkung: Die alte Hochraumschranke
+enthält eine bislang abgerundete Reserve. Sie erlaubt den Boden 1,84298
+statt 1,8219. Auch der bislang abgezogene positive eta*q-Anteil kann
+zurückgenommen werden. Diese beiden Schritte und ihre Kombination sind
+unter den übernommenen Voraussetzungen als stärkere A9-Unterformen
+hergeleitet. GPT1 hat die analytische Zulässigkeit gezielt gegengeprüft.
+
+Die drei vorab festgelegten Kandidaten verfehlen jedoch schon am
+eingefrorenen Stopzeugen das Modellgate. Die stärkste Kombination C3
+verbessert den festen Variationsuntertest dort nur um 1,8323125907023e-9.
+Der verbleibende Modellabstand K_P-F_T ist -1,3417777233111e-6.
+Im vollständigen zwölfdimensionalen geraden Schalenmodell bleibt ebenfalls
+eine negative Richtung. Empfehlung: Diese drei Kandidaten für den
+angestrebten ganzen Raumabschluss in diesem Forschungsblock VERWERFEN.
+Kein Kandidat wird für einen gerichteten Folgetest ausgewählt.
+
+Das ist eine begründete Auswahlentscheidung auf Modellbasis, KEIN neuer
+gerichteter Ausschlusssatz für C1, C2 oder C3. Die tatsächlichen neuen
+Inversenergien sind nicht eingeschlossen; ihr Vorzeichenvergleich bleibt
+UNRESOLVED. Der bereits gerichtete Ausschluss der alten festen Route
+bleibt davon unberührt. Auch die tatsächliche Weil-Positivität und Objekt X
+werden durch diese Modellergebnisse nicht ausgeschlossen.
+
+Arbeitsbasis und eingefrorene Größen
+
+Main wurde lesend abgeglichen:
+344c1f4787900003dc57203987222bad91828fe3
+Tree: 9eac0a62f3c79cc5040d2e6e13966048935f962f.
+
+98 historische Quellen-/Beweisdateien wurden auf identische Git-Blobs
+dieses Main geprüft; die bestehende Eingabekette prüft zusätzlich ihre
+SHA-256-Bindungen. Sieben eingefrorene Dateien aus dem integrierten
+Stop-Paket sind separat mit dessen Main-Blobs verbunden. Dazu gehören
+MODEL.json, DIAGNOSTIC-DIRECTION.json, DIRECTIONS.json, SOURCE_BINDINGS.json
+und die vollständigen H1–H4-Dateien. FROZEN_BINDINGS.json und MODELS.json
+enthalten die einzelnen Identitäten. MAIN_TREE.json hält die gelesene
+GitHub-Baumantwort in reduzierter Form fest.
+
+Unverändert sind die äußere Antwort, die physische Residualquellenabbildung,
+das äußere K_P-Budget, der normierte Stopzeuge, die physische W-Metrik und
+die veröffentlichte lineare innere Testabbildung T_raw. Die neuen Eigenvektoren
+in SPECTRA.json dienen ausschließlich zur Diagnose der vollständigen Matrix;
+sie wurden weder als neue Forschungszeugen noch als neue Tests verwendet.
+
+Verfügbare positive Beiträge
+
+Die gebundene Inversherleitung, §6, liefert in den festen Koordinaten
+u=J_old*w+F*z+Lambda*r exakt
+
+ A9[u]-Qnew[u] = (A8-U8^-1)[w] + (K_B-Knew)[z] + eta*q[r],
+ eta=10^-10, K_B=(D-G*U8G)_FF.
+
+Alle drei Summanden sind unter den übernommenen Voraussetzungen
+nichtnegativ. Ihre bloße Nichtnegativität liefert noch keinen bezifferten
+nützlichen Zusatz.
+
+1. eta*q[r] ist ausdrücklich verfügbar und benötigt keine neue Quelle.
+2. K_B-Knew ist nichtnegativ. Knew schöpft die bisherige feste
+   Matrix-Young-Untergrenze bereits bis auf deren dokumentierten
+   Rundungsabstand aus. Ein nennenswerter neuer Zwölferzusatz müsste durch
+   eine strengere gemeinsame Untergrenze belegt werden. Ein Modellabstand
+   zu K_B oder eine Verringerung alter Fehlerpreise ist dafür kein Beweis.
+   In diesem Block wurde deshalb kein weiterer K-Kandidat erfunden.
+3. A8-U8^-1 ist nichtnegativ. Ein konkret nutzbarer Teil wird nachfolgend
+   aus der bestehenden vollständigen Hochraumherleitung gewonnen.
+   Die sonstigen tatsächlichen A8-Reserven, etwa nicht ausgenutzte
+   ortsabhängige Potential-/Primbeiträge und die höhere Legendre-Energie,
+   sind keine hier bereits quantitativ gebundenen neuen Unterformen.
+
+Herleitung des stärkeren alten Hochraumbodens
+
+Die historische Herleitung vom 8.10., §§3–4, beweist für das Randpotential
+V und die Prime-Verschiebungssumme S_a drei Bereichspreise:
+1,617; 2,193; 2,929-0,7=2,229. Sie schwächt deren Maximum anschließend auf
+9/4=2,25 ab. Schon aus denselben bewiesenen Bereichsschranken folgt
+
+ V-S_a >= -(2229/1000) I.
+
+Mit den unveränderten Preisen H384>6529/1000, -q0<491/200 und
+Gamma-Hochraumverlust <1/500 folgt auf dem ganzen rohen hohen Raum
+
+ 6529/1000 - 491/200 - 2229/1000 - 1/500 = 1843/1000.
+
+Die alten Momentpreise bleiben vollständig enthalten: epsilon=10^-6,
+16*epsilon für den Mischterm, 12*epsilon² für den Träger. Für
+delta1=92149/50000=1,84298 ist exakt
+
+ 1843/1000 - 16*epsilon - 12*epsilon² - delta1*(1+epsilon²)
+ = 199999307851/50000000000000000 > 0.
+
+Damit gilt A_high[y]>=delta1*||y||² für die alte rohe hohe Koordinate
+y im vollständigen Legendre-Raum. Ihre Norm stammt aus L²((-1,1),dx/2).
+Die physische Momentkorrektur erfüllt ||My||²>=||y||². Diese primale
+Koordinate y8(w) wird nicht mit dem dualen Quellenoperator T_h verwechselt.
+
+Die Formordnung — einschließlich Kopplungen
+
+Seien delta0=18219/10000, C die gebundene rationale Inverskongruenz,
+rho ihr Restpreis und F0=(1-rho) C^{-*} C^-1. Nach Rückzug in die alten
+191 niedrigen und unendlich vielen hohen Koordinaten hat U8^-1 den Block
+
+ [ F0+B8 B8*/delta0     B8          ]
+ [ B8*                  delta0 I   ].
+
+B8 ist die tatsächliche vollständige Kopplung. Aus der gebundenen Kette
+F0<=F8<=A_low-B8B8*/delta0 und A_high>=delta1 I folgt
+
+ A8-U8^-1 >= diag(0,(delta1-delta0)I).
+
+Die Kreuzblöcke heben sich auf, weil dieselbe tatsächliche Kopplung
+subtrahiert wird. Hier wird kein Modell B0 für B8 als exakt ausgegeben.
+
+Vor der Modellauswertung wurden genau drei Kandidaten festgelegt:
+
+ C1 = Qnew + eta*q[r].
+ C2 = Qnew + (527/25000)||y8(w)||².
+ C3 = Qnew + eta*q[r] + (527/25000)||y8(w)||².
+
+Damit gelten 0<Qnew<=C1<=C3<=A9 und 0<Qnew<=C2<=C3<=A9.
+Für C2 ist der Zusatz eine beschränkte positive Form auf dem alten
+Produkthilbertraum; Geschlossenheit und Koerzivität bleiben erhalten.
+Bei eta*q gilt die positive Formsumme auf der gemeinsamen Formdomäne
+(insbesondere r in D(q)); die tatsächliche A9-Domäne liegt darin.
+Die geerbten Form-/Koordinatensätze und die global begründete Positivität
+von Qnew werden übernommen, nicht aus einem endlichen Modell bewiesen.
+Die inverse Formordnung ergibt C3^-1<=C1^-1,C2^-1<=Qnew^-1 und
+A9^-1<=C_i^-1. Keine A11-Zielpositivität geht ein.
+
+Gemeinsame neue Schurzerlegung und Modellrechnung
+
+Für den durch C2 geänderten alten Block ist die exakte endliche Metrik
+
+ F1=F0+(1/delta0-1/delta1) B8B8*,
+ X1=C [(1-rho)I+(1/delta0-1/delta1) C*B8B8*C]^-1 C*.
+
+Für duale alte Koordinaten (ell,h) lautet dessen inverse Energie
+
+ U1[ell,h]=||h||²/delta1
+          +(ell-B8h/delta1)*X1(ell-B8h/delta1).
+
+Die 191er-Blockelimination wird mit den vorhandenen Modellpaarungen für
+F12, J84 und die zwölf festen äußeren Residualquellen gemeinsam ausgeführt.
+Nur delta in der alten Endformel auszutauschen wäre falsch.
+
+Setze U0=U8 und DeltaU=U0-U1. Mit festem ausmultipliziertem z-Diagonalblock
+und festen direkten Kreuzblöcken werden konsistent gebildet:
+
+ Kc=Knew+DeltaU_FF,
+ ac=a0+DeltaU_FJ,
+ vc=v0+DeltaU_Fh,
+ nuc=f_J-U1_Jh-ac* Kc^-1 vc,
+ Hc=D_JJ-U1_JJ-ac* Kc^-1 ac-eta_c*q_JJ,
+ Bc=U1_hh+vc* Kc^-1 vc.
+
+eta_c ist eta bei C2 und null bei C3; C1 verwendet weiterhin U0.
+Der feste Test lautet F_T,c=Bc+T*nu_c+nu_c*T-T*Hc*T.
+Die jeweilige wahre Inversenergie ist mindestens F_T,c. F_T,c ist keine
+Inversobergrenze. Eine positive Differenz K_P-F_T,c würde deshalb für sich
+allein keinen positiven Inversvergleich beweisen.
+
+Es wurde kein System Hc*w=nu_c zur Wahl einer neuen Testabbildung gelöst.
+Die 191er- und 12er-Inversen gehören zur algebraischen Elimination der
+geänderten Unterform. Sie sind keine Optimierung der äußeren Antwort.
+
+Die Eingabe old_raw_coupling_gram besitzt Integerendpunkte mit Nenner
+10^100, wie im gebundenen audit_full.py dokumentiert. Die neue Rechnung
+berücksichtigt dieses Raster ausdrücklich und kontrolliert den daraus
+rekonstruierten Kopplungsgram gegen den alten HB-Block. U0 wird zugleich
+aus den gemeinsamen Paarungen erneut zusammengesetzt: alle U96- und
+Uhh-Intervalle überlappen ihre gebundenen Vorgänger; das Ausgangs-F wird
+reproduziert. Dies sind Anschlusskontrollen, keine neuen Integrationen.
+
+Die neuen Kandidatenmatrizen verwenden Mittelpunkte der analytischen
+Modelldaten und Arb-Matrixarithmetik bei 1024 Bit. Die rationalen
+Ausgabeintervalle in MODELS.json schließen diese Modellarithmetik ein;
+sie sind KEINE neuen physikalischen Energiezertifikate. Der neue
+Fehlertransport wurde nicht nachträglich in den Modellwert hineingelesen.
+Die verallgemeinerten Eigenwerte wurden separat mit NumPy und Cholesky-
+Normierung der vollständigen physischen W-Metrik berechnet.
+
+Modellergebnisse
+
+                           K_P-F_T am Stopzeugen   kleinster W-Eigenwert
+ alte Referenz             -1,343610035902e-6     -1,343610034898e-6
+ C1: eta*q zurück           -1,342452348987e-6     -1,342452473908e-6
+ C2: höherer alter Boden    -1,342935410226e-6     -1,342936851597e-6
+ C3: Kombination            -1,341777723311e-6     -1,341780070971e-6
+
+Jede vollständige 12x12-Matrix besitzt genau einen negativen Modelleigenwert.
+Alle Mischterme bleiben enthalten. Die W-Metrik wurde nicht durch die
+Einheitsmatrix ersetzt; ihre größte Modelleigenzahl ist etwa1,112897.
+Die numerischen Eigenpaarresiduen liegen unter1,6e-15; das ist ein
+Diagnosecheck und kein gerichteter Spektralnachweis.
+
+Am Stopzeugen beträgt die Verbesserung von F_T durch C1 etwa1,1576869144e-9,
+durch C2 etwa6,7462567626e-10, durch C3 etwa1,8323125907e-9. Der C3-Gewinn
+beträgt nur rund0,1364 Prozent des bisherigen Modellfehlbetrags. Diese
+Zahlen beschreiben die Änderung des festen Variationsuntertests, nicht
+einen bereits zertifizierten Gewinn der vollständigen Inversenergie.
+
+In anderen Raumrichtungen fällt der höhere alte Boden im Modell deutlich
+stärker ins Gewicht. Das hilft dem verpflichtenden Stopzeugen jedoch nicht
+ausreichend. Auch eine Verbesserung abseits der kritischen Richtung kann
+den negativen vollständigen Modellbefund nicht ersetzen.
+
+Fehlerbuchung: was bleibt, was neu wäre
+
+Unverändert übernehmbar sind die Definitionen von f, K_P und W sowie
+historische Fehler der tatsächlichen Quellenmodelle in ihrem ursprünglichen
+ungewichteten Umfang. Der alte gerichtete K_P-Zeugenwert bleibt derselbe.
+Die alte vollständige W9-Majorante bleibt durch Inversordnung eine
+konservative Obermajorante auch für C_i^-1; sie liefert dadurch noch
+keinen verbesserten quantitativen Vergleich.
+
+Für C1 wäre eta*q[J*T] zusätzlich mit den vorhandenen direkten
+Formintervallen einzuschließen. Die übrigen tatsächlichen Paarungen sind
+unverändert; eine neue obere Restkontrolle müsste trotzdem sauber an die
+geänderte H-Form angebunden werden.
+
+Für C2/C3 fehlen vor einer gerichteten neuen Energieaussage insbesondere:
+- eingeschlossene tatsächliche191er-Metrik F1 und ihre inverse Ober-/
+  Unterkontrolle einschließlich B8-B0 und des Gramfehlers;
+- gemeinsamer Transport der bestehenden niedrigen/hohen Quellenfehler
+  durch delta1,X1 auf sämtliche F-,J- und h-Kombinationen;
+- neue gemeinsame F-F-,F-J-,J-J- und h-Kreuzfehler für Kc,ac,vc,nuc,Hc;
+- bezahlte Kc-Inversion und Rückwirkung ihrer Fehler auf alle gekoppelten
+  Terme, plus eine gültige Normmajorante für den vollständigen festen
+  Residualmodellfehler.
+
+Die alten gewichteten EF/EJ- oder nu-Preise gelten nicht automatisch mit
+vertauschter Metrik. Kein alter Fehlerpreis wurde kleiner gesetzt.
+Die vorhandenen Rohgrame und Quellenbindungen machen eine solche gezielte
+Neubuchung grundsätzlich denkbar; sie ersetzen ihre Herleitung nicht.
+
+Kleinster weiterer Rechenblock und Stopplinie
+
+Im jetzigen Auftrag ist der kleinste sinnvolle zusätzliche gerichtete
+Rechenblock: KEINER. C3 ist zwar analytisch zulässig und unter diesen drei
+Kandidaten am stärksten, verfehlt aber sowohl das Stopzeugen- als auch das
+vollständige Modellgate. Ein neuer gerichteter Vorabtest würde die
+festgelegte Auswahlregel umgehen. Es gibt daher auch keinen Auftrag für
+eine erneute Restintegration oder eine neue Antwort-/Testsuche.
+
+Nur für die Abgrenzung: Ein später begründeter anderer Zusatz müsste als
+positive Form R<=A9-Qnew auf der richtigen vollständigen Domäne konstruiert
+sein, am festen Stopzeugen einen ausreichend großen inversen Vergleichs-
+gewinn erwarten lassen und anschließend das ganze W-Modell bestehen.
+Eine frei gewählte positive Matrixkorrektur oder ein neuer Fehlerabschlag
+erfüllt diese Voraussetzung nicht. Ein solcher anderer Kandidat wurde in
+diesem Block weder ausgewählt noch berechnet.
+
+Ausführung, Gegenprüfung und Reproduktion
+
+Die erfolgreiche portable Modellrechnung benötigte lokal28,4 Sekunden;
+die12er-Spektraldiagnose etwa1 Sekunde. Frühere Entwicklungsläufe dienten
+der Datenformat-/Anschlusskorrektur. Dabei wurde insbesondere die
+historische10^-100-Gramskalierung ausdrücklich ergänzt und kontrolliert.
+Nur die abschließend gebundene Auswertung ist Forschungsresultat.
+Neue Quadraturen:0. Ganzrestintegrationen:0. Neue T-/Antwortsuchen:0.
+GitHub-Schreibaktionen:0.
+
+GPT1-ANALYTISCHE-PRUEFUNG.txt enthält GPT1s tatsächlich eingesehenes
+Zulässigkeitsvotum. GPT1-C3-CODEVOTUM.txt enthält seine anschließend
+abgeschlossene statische Codegegenprüfung: Blockerneuerung, Gramskalierung,
+gekoppelte Erneuerung, feste Testabbildung und Interpretation des Untertests
+bestätigt. Auch sein Votum lautet, C3 nach den berichteten Modellwerten
+in diesem Block nicht weiterzuverfolgen. Er hat die Zahlen nicht unabhängig
+numerisch reproduziert; diese Grenze ist ausdrücklich dokumentiert.
+Es wurde kein solcher Replay bei GPT1 beauftragt, weil die Modellgates
+nicht erfüllt sind. Die ursprünglichen H1–H4 bleiben übernommen;
+externe fachliche Gesamtprüfung bleibt offen. Checkliste3/10 im
+dokumentierten bedingten Umfang, Punkt4 weiterhin offen.
+
+REPRODUKTION.txt beschreibt den portablen Lauf gegen einen lokalen Checkout
+der angegebenen Main-Basis. MANIFEST.json bindet die ausgelieferten Dateien.
+Die Main-Quellen und eingefrorenen Originale wurden nicht verändert.

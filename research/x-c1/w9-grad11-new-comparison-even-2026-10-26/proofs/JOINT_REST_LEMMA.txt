@@ -1,0 +1,50 @@
+Gemeinsamer Restschluss ohne Weglassen von Mischtermen
+26. Oktober 2026. Autorenherleitung unter den gebundenen Voraussetzungen.
+
+Sei Gp die rationale untere 12er-Matrix aus dem arithmetisch geschlossenen
+endlichen Vergleich. Der frühere exakte Prüfer bestätigt Gp>=4e-19 G_W.
+Sei B die Matrix der zwölf jetzt tatsächlich gewählten rationalen Richtungen.
+Ihre Koeffizienten werden aus den Modellcaches als eindeutige Punkte des
+10^-100-Rasters rekonstruiert; jedes gespeicherte Intervall enthält den
+rekonstruierten Wert und hat Radius <10^-150. Es werden nicht gerundete
+Spektralbeschriftungen als mathematisch exakte Eigenvektoren benutzt.
+
+Der neue rationale Prüfer bildet C=B*Gp B, bestätigt zwölf positive
+LDL-Pivots und prüft die exakte Identität C A=I für A=C^-1. Damit ist
+zugleich B invertierbar. Eine nahezu orthogonale Diagnostik wird nicht
+anstelle dieses Nachweises verwendet.
+
+Die zwölf Schalentests definieren eine einzige lineare Abbildung auf der
+Basis B. Ihre exakte Kernantwort entsteht mit demselben linearen U1.
+Folglich bilden auch die tatsächlichen ganzen Residuen eine lineare
+Abbildung R in den einen Hilbertraum mit Qold-Dualnorm. Sei r_i=R B e_i
+und seien n_i sichere obere Schranken für ||r_i||. Diese n_i müssen jeweils
+die vollständige Modellfunktion, beide äußeren Enden, Kernquadratur,
+Kernstreifen, sämtliche Quellen-/Metrikfehler und die Fo-Komponente enthalten.
+
+Der unbekannte gemeinsame Residualgram H=(<r_i,r_j>) ist positiv
+semidefinit und erfüllt |H_ij|<=n_i n_j. Deshalb gilt exakt
+
+ tr(C^-1 H)<=theta:=sum_i,j |A_ij| n_i n_j.
+
+Die positive Matrix C^-1/2 H C^-1/2 hat größte Eigenzahl höchstens ihrer
+Spur. Also H<=theta C. Für theta<1 folgt
+
+ Gp-R*R >=(1-theta)Gp >=(1-theta)4e-19 G_W,
+
+wobei die erste Schreibweise nach Rücktransport mit B zu verstehen ist.
+Alle Restmischterme sind durch Cauchy-Schwarz und den Spurpreis getragen.
+Auch bei diagonalem C wäre die Summe der zwölf Einzelpreise erforderlich:
+zwölf einzeln erfolgreiche Tests beweisen ohne gemeinsamen Preis nichts.
+
+JOINT_REST_BUDGET setzt jedes Quadratwurzelargument nach oben rational
+fort. Es summiert alle gespeicherten Zellobergrenzen erneut und ersetzt
+die äußeren Endstücke zusätzlich durch eine unabhängige rationale Hülle:
+aus d>=2^-k folgt -log(d)<k. Die Bedingung d<2^-150 garantiert t>100.
+Alle Dateibindungen und jede Zellenidentität werden vor dem Schluss geprüft.
+Ein unvollständiger Richtungsbeleg lässt whole_joint_pass stets falsch.
+
+Dieser Schluss ist ein bedingter Autorenbeleg. Er ersetzt weder die
+analytische Prüfung seiner neuen Anwendungskette noch die externe Prüfung
+der historischen Voraussetzungen und ist keine Aussage zur gesamten
+Weil-Positivität oder zu allen Forschungszielen von Objekt X.

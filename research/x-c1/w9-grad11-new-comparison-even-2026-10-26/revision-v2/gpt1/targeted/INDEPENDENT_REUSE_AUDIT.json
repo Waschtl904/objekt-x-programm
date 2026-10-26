@@ -1,0 +1,77 @@
+{
+  "status": "GPT1_EXACT_REUSE_PASS",
+  "v1_files_checked_in_merged_and_replay": 5263,
+  "original_file_mismatches": [],
+  "v1_manifest_sha256": "3a388b3051f65b502db718b72c4e690c73c4fbf4a649360ca9afeb66b85389f2",
+  "v2_manifest_sha256": "e8d2156c40691b4efb4b2eaad01c501865c2d596c202349f9fb2ce33e3a330a5",
+  "section_count": 4704,
+  "section_manifest_sha256": "de2a3007f97447227530302a148537c9f938e0e7a2585cc33c603302f1290db9",
+  "model_caches": [
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/whole-model-358daedad00a-n128.json.gz",
+      "bytes": 10523349,
+      "sha256": "21ecc2d8642ce7a975d03442cd1767c65905fa5a544180890556fdbd0fbde518"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/whole-model-11d06f997fe3-n64.json.gz",
+      "bytes": 8092779,
+      "sha256": "378b0943b7081dd8bb2f22a0ad8293c0f42f677aedc470911e6f485c1d2838e3"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/whole-model-8295add03423-n64.json.gz",
+      "bytes": 8092252,
+      "sha256": "ce8550d4ca7864fbb074507767d0a0da7b23f544e934b38b0c121b922cff3f08"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/whole-model-88efc6b532f9-n64.json.gz",
+      "bytes": 8093836,
+      "sha256": "ce1175a012951a81275950c4191e39516d9df2267f81c7d81c39d7aafeb9e345"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/whole-model-8c37a69de0bc-n64.json.gz",
+      "bytes": 8094217,
+      "sha256": "21859d3e99d5d2569e49abccbf3992eccce51d7da99f19a53aa8e61352ac2e4b"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/whole-model-66fd1594d714-n64.json.gz",
+      "bytes": 8093732,
+      "sha256": "a4c12633fcc7772b8d3c8fda97cd22423f0afb51cae632126493ae76692f0761"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/whole-model-c92f3b564032-n64.json.gz",
+      "bytes": 8094198,
+      "sha256": "9fe811b108c8770fc40ae3e551f289a5dad48adccbee4a7b5fba61dee22ea964"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/whole-model-29591fcf3020-n64.json.gz",
+      "bytes": 8094529,
+      "sha256": "9d932609a26eefb826cfaa25e82d93837bf3efd1743d4ef6fceeefcb722a2448"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/whole-model-f4c0bf7d1fc8-n64.json.gz",
+      "bytes": 8094105,
+      "sha256": "cbd685c9f234c2a6fb0aec5e64a1b025cc78dee3181cbffb566826df8c1500fd"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/whole-model-7043ac90c74d-n64.json.gz",
+      "bytes": 8093720,
+      "sha256": "c8d66905aaa19c2747de0d3a64acde13c5f6a425624d7eedaaa068da77b1cb73"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/whole-model-7b71ce395ac7-n64.json.gz",
+      "bytes": 8095065,
+      "sha256": "5e7fd1e8d14e30990b1dec1ccf0e52453b5275a230b0df149af462544b535e57"
+    },
+    {
+      "path": "workspace/work/breakthrough-2026-10-25/whole-model-6755ef8ccd09-n64.json.gz",
+      "bytes": 8093648,
+      "sha256": "9bc22fbb9ff3d0c71630458d1a44e0fbe6a89641f9c10fe30db9195232ad29d8"
+    }
+  ],
+  "common_test_map_sha256": "f45fb0f09bf71ab9cc1148b2dc4754e0ee260a6e4194e312d9f2ee68da4238f8",
+  "section_certificates_freshly_recombined": 4704,
+  "analytic_endpoint_pieces_recombined": 24,
+  "native_integrations_rerun": 0,
+  "model_functions_and_integral_inputs_changed": false,
+  "why_reusable": "All original source, cache, basis, test, quadrature, contour and section bytes unchanged. Only upper error prices, finite reserve and resulting rest weights are revised."
+}
